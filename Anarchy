@@ -1,9 +1,21 @@
-//Replaces Boneshredder with Anarchy from BL1
+########
+By Aaron0000
+Features;
+4 Projectiles
+2 Ammo per shot consumption (Says 3 but it doesn't)
+Very high fire rate
+Low accuracy
+Spread pattern is a skull and crossbones.
+
+Replaces the Bone Shredder.
+########
+
+
 set GD_Weap_SMG.Barrel.SMG_Barrel_Bandit_BoneShredder CustomFiringModeDefinition FiringModeDefinition 'GD_Orchid_BossWeapons.FiringModes.Bullet_Shotgun_JollyRoger'
 
 set GD_Weap_SMG.Name.Title.Title__Unique_BoneShredder PartName Anarchy
 
-set GD_Weap_SMG.Name.Title.Title__Unique_BoneShredder:AttributePresentationDefinition_8 NoConstraintText ANARCHY FOREVERRRR!!! AND EVERRRR!!!
+set GD_Weap_SMG.Name.Title.Title__Unique_BoneShredder:AttributePresentationDefinition_8 NoConstraintText "ANARCHY FOREVERRRR!!! AND EVERRRR!!!"
 
 set GD_Weap_SMG.Barrel.SMG_Barrel_Bandit_BoneShredder WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Bandit',InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Bandit',InitializationDefinition=None,BaseValueScaleConstant=0.35680)))
 
