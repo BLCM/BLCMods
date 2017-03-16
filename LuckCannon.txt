@@ -1,0 +1,28 @@
+########
+By Aaron0000
+Features;
+Statistically identical to the Luck Cannon from Pre-Sequel (outside of damage scaling)(Does not have Money Shot effect, but rounds do explode upon impact.)
+
+Replaces the Rex.
+########
+
+
+set GD_Sage_Weapons.Pistols.Pistol_Barrel_Jakobs_Rex CustomFiringModeDefinition FiringModeDefinition 'GD_Iris_Weapons.FiringModes.Bullet_Sniper_Cobra'
+
+set GD_Sage_Weapons.Pistols.Pistol_Barrel_Jakobs_Rex WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponPerShotAccuracyImpulse',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Jakobs',InitializationDefinition=None,BaseValueScaleConstant=-0.300000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-99999.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectileSpeedMultiplier',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+set GD_Sage_Weapons.Pistols.Pistol_Barrel_Jakobs_Rex AttributeSlotUpgrades ((SlotName="WeaponSpread",GradeIncrease=25,bActivateSlot=True),(SlotName="AccuracyMin",GradeIncrease=50,bActivateSlot=True),(SlotName="WeaponDamage",GradeIncrease=6,bActivateSlot=True),(SlotName="WeaponAccuracyImpulse",GradeIncrease=-10,bActivateSlot=True),(SlotName="WeaponFireRate",GradeIncrease=-12,bActivateSlot=True),(SlotName="WeaponZoomFOV",GradeIncrease=2,bActivateSlot=True))
+
+set GD_Sage_Weapons.Name.Title.Title_Unique_Rex PartName Luck Cannon
+
+set GD_Sage_Weapons.Name.Title.Title_Unique_Rex:AttributePresentationDefinition_8 NoConstraintText Better lucky than good!
+
+set GD_Sage_Weapons.Pistols.Pistol_Barrel_Jakobs_Rex rarity (basevalueattribute=none)
+
+set GD_Sage_Weapons.Pistols.Pistol_Barrel_Jakobs_Rex rarity (BaseValueConstant=5)
+
+set Sage_GunMaterials.Materials.Pistol.Mati_JakobsUniquePistol_Rex VectorParameterValues ((ParameterName="p_AColorHilight",ParameterValue=(R=0.046000,G=0.027000,B=0.010000,A=1.000000),ExpressionGUID=(A=170714760,B=1132476783,C=-275668290,D=655702143)),(ParameterName="p_AColorMidtone",ParameterValue=(R=0.030000,G=0.015000,B=0.007000,A=1.000000),ExpressionGUID=(A=473594356,B=1338758895,C=824823946,D=864253813)),(ParameterName="p_AColorShadow",ParameterValue=(R=0.015000,G=0.007500,B=0.004000,A=1.000000),ExpressionGUID=(A=-429590341,B=1156435294,C=-1015192901,D=687313413)),(ParameterName="p_BColorHilight",ParameterValue=(R=0.014000,G=0.030000,B=0.050000,A=1.000000),ExpressionGUID=(A=170714760,B=1132476783,C=-275668290,D=655702143)),(ParameterName="p_BColorMidtone",ParameterValue=(R=0.006400,G=0.021000,B=0.038000,A=1.000000),ExpressionGUID=(A=473594356,B=1338758895,C=824823946,D=864253813)),(ParameterName="p_BColorShadow",ParameterValue=(R=0.004250,G=0.014600,B=0.028000,A=1.000000),ExpressionGUID=(A=-429590341,B=1156435294,C=-1015192901,D=687313413)),(ParameterName="p_CColorHilight",ParameterValue=(R=0.270000,G=0.120000,B=0.076000,A=1.000000),ExpressionGUID=(A=170714760,B=1132476783,C=-275668290,D=655702143)),(ParameterName="p_CColorMidtone",ParameterValue=(R=0.220000,G=0.097000,B=0.065000,A=1.000000),ExpressionGUID=(A=473594356,B=1338758895,C=824823946,D=864253813)),(ParameterName="p_CColorShadow",ParameterValue=(R=0.16000,G=0.080000,B=0.054000,A=1.000000),ExpressionGUID=(A=-429590341,B=1156435294,C=-1015192901,D=687313413)))
+
+set Sage_GunMaterials.Materials.Pistol.Mati_JakobsUniquePistol_Rex VectorParameterValues ((ParameterName="p_DecalChannel",ParameterValue=(R=0.000000,G=0.000000,B=0.000000,A=0.000000)),ExpressionGUID=(A=1869386622,B=1303200947,C=-1616405849,D=714558284)))
+
+set Sage_GunMaterials.Materials.Pistol.Mati_JakobsUniquePistol_Rex Parent Common_GunMaterials.Materials.Pistol.Mati_JakobsLegendaryPistol_Maggie
