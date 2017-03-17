@@ -1,0 +1,32 @@
+########
+By Aaron0000
+Features;
+Tripled projectile count.
+Decreased accuracy.
+Magazine size is always 4, regardless of variants.
++50% Critical Hit damage.
+Decreased reload speed.
+Dramatically decreased fire rate.
+
+Replaces the Hydra.
+########
+
+set GD_Sage_Weapons.Shotgun.SG_Barrel_Bandit_Hydra CustomFiringModeDefinition None
+
+set GD_Sage_Weapons.Shotgun.SG_Barrel_Bandit_Hydra GestaltModeSkeletalMeshName SG_Barrel_Torgue
+
+set GD_Sage_Weapons.Name.Title.Title_Unique_Hydra PartName Punter
+
+set GD_Sage_Weapons.Name.Title.Title_Unique_Hydra:AttributePresentationDefinition_8 NoConstraintText One and done.
+
+set GD_Sage_Weapons.Shotgun.SG_Barrel_Bandit_Hydra AttributeSlotUpgrades ((SlotName="WeaponReloadSpeed",GradeIncrease=-16,bActivateSlot=True),(SlotName="WeaponFireRate",GradeIncrease=-650,bActivateSlot=True),(SlotName="WeaponSpread",GradeIncrease=-19,bActivateSlot=True))
+
+set GD_Sage_Weapons.Shotgun.SG_Barrel_Bandit_Hydra WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.GameplayAttributes.PlayerCriticalHitBonus',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=2.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=46.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Jakobs',InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-99999.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=4.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+set Sage_GunMaterials.Materials.Shotgun.Mati_JakobsUnique_SG_Hydra VectorParameterValues ((ParameterName="p_AColorHilight",ParameterValue=(R=0.200000,G=0.010000,B=0.050000,A=1.000000),ExpressionGUID=(A=170714760,B=1132476783,C=-275668290,D=655702143)),(ParameterName="p_AColorMidtone",ParameterValue=(R=0.100000,G=0.005000,B=0.025000,A=1.000000),ExpressionGUID=(A=473594356,B=1338758895,C=824823946,D=864253813)),(ParameterName="p_AColorShadow",ParameterValue=(R=0.050000,G=0.002000,B=0.012500,A=1.000000),ExpressionGUID=(A=-429590341,B=1156435294,C=-1015192901,D=687313413)),(ParameterName="p_BColorHilight",ParameterValue=(R=0.270000,G=0.300000,B=0.900000,A=1.000000),ExpressionGUID=(A=170714760,B=1132476783,C=-275668290,D=655702143)),(ParameterName="p_BColorMidtone",ParameterValue=(R=0.150000,G=0.160000,B=0.500000,A=1.000000),ExpressionGUID=(A=473594356,B=1338758895,C=824823946,D=864253813)),(ParameterName="p_BColorShadow",ParameterValue=(R=0.027000,G=0.035000,B=0.100000,A=1.000000),ExpressionGUID=(A=-429590341,B=1156435294,C=-1015192901,D=687313413)),(ParameterName="p_CColorHilight",ParameterValue=(R=0.270000,G=0.300000,B=0.900000,A=1.000000),ExpressionGUID=(A=170714760,B=1132476783,C=-275668290,D=655702143)),(ParameterName="p_CColorMidtone",ParameterValue=(R=0.150000,G=0.160000,B=0.500000,A=1.000000),ExpressionGUID=(A=473594356,B=1338758895,C=824823946,D=864253813)),(ParameterName="p_CColorShadow",ParameterValue=(R=0.027000,G=0.035000,B=0.100000,A=1.000000),ExpressionGUID=(A=-429590341,B=1156435294,C=-1015192901,D=687313413)))
+
+set Sage_GunMaterials.Materials.Shotgun.Mati_JakobsUnique_SG_Hydra VectorParameterValues ((ParameterName="p_DecalChannel",ParameterValue=(R=0.000000,G=0.000000,B=0.000000,A=0.000000)),ExpressionGUID=(A=1869386622,B=1303200947,C=-1616405849,D=714558284)))
+
+
+
+
