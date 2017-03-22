@@ -1,24 +1,18 @@
 ########
 By Aaron0000
 
-Replaces the bayonet (melee) accessory of Shotguns. Changes it to boost movement speed instead of melee damage, as well as remove the blade from the gun.
+Replaces the shotgun shell accessory of Shotguns. Changes it to boost movement speed instead of general boosts to stats.
 
 Comes with custom prefixes: Jakobs = Stallion's, Hyperion = Expedient, Torgue = Slick, Bandit = haul ass, Tediore = Fast.
 ########
 
-set GD_Weap_Shotgun.Accessory.SG_Accessory_Bayonet_2 GestaltModeSkeletalMeshName GD_Weap_Shotgun.Accessory.SG_Accessory_MoonClip
-set GD_Weap_Shotgun.Accessory.SG_Accessory_Bayonet_2 ExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.GameplayAttributes.FootSpeed',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.350000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.DamageSourceModifiers.InstigatedMeleeDamageModifier',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
-set GD_Weap_Shotgun.Accessory.SG_Accessory_Bayonet_2 bUseWeaponMelee False
+set GD_Weap_Shotgun.Accessory.SG_Accessory_ShotgunShell ExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.GameplayAttributes.FootSpeed',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.350000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.DamageSourceModifiers.InstigatedMeleeDamageModifier',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
 
+set GD_Weap_Shotgun.Accessory.SG_Accessory_ShotgunShell AttributeSlotUpgrades ((SlotName="WeaponDamage",GradeIncrease=0,bActivateSlot=True),(SlotName="WeaponReloadSpeed",GradeIncrease=0,bActivateSlot=True),(SlotName="WeaponMagSize",GradeIncrease=0,bActivateSlot=True),(SlotName="WeaponFireRate",GradeIncrease=0,bActivateSlot=True))
 
-set GD_Weap_Shotgun.Accessory.SG_Accessory_Bayonet_1 GestaltModeSkeletalMeshName GD_Weap_Shotgun.Accessory.SG_Accessory_MoonClip
-set GD_Weap_Shotgun.Accessory.SG_Accessory_Bayonet_1 ExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.GameplayAttributes.FootSpeed',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.350000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.DamageSourceModifiers.InstigatedMeleeDamageModifier',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
-set GD_Weap_Shotgun.Accessory.SG_Accessory_Bayonet_1 bUseWeaponMelee False
-
-
-set GD_Weap_Shotgun.Name.Prefix_Bandit.Prefix_Bayonet_2 PartName haul ass
-set GD_Weap_Shotgun.Name.Prefix_Torgue.Prefix_Bayonet_2 PartName Slick
-set GD_Weap_Shotgun.Name.Prefix_Hyperion.Prefix_Bayonet_1 PartName Expedient
-set GD_Weap_Shotgun.Name.Prefix_Jakobs.Prefix_Bayonet_1 PartName Stallion's
-set GD_Weap_Shotgun.Name.Prefix_Tediore.Prefix_Bayonet_1 PartName Fast
+set GD_Weap_Shotgun.Name.Prefix_Bandit.Prefix_ShotgunShell_GeneralBoost PartName haul ass
+set GD_Weap_Shotgun.Name.Prefix_Torgue.Prefix_ShotgunShell_GeneralBoost PartName Slick
+set GD_Weap_Shotgun.Name.Prefix_Hyperion.Prefix_ShotgunShell_GeneralBoost PartName Expedient
+set GD_Weap_Shotgun.Name.Parefix_Jakobs.Prefix_ShotgunShell_GeneralBoost PartName Stallion's
+set GD_Weap_Shotgun.Name.Prefix_Tediore.Prefix_ShotgunShell_GeneralBoost PartName Fast
 
