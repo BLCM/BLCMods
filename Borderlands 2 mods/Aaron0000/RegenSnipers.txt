@@ -1,0 +1,17 @@
+########
+By Aaron0000
+
+Replaces the accuracy accessory of Sniper Rifles. Changes it to slowly regenerate ammo instead of increasing accuracy.
+
+Comes with custom prefixes: Jakobs = Bountiful, Dahl =Munitional, Hyperion = Rational, Maliwan = Prepared, Vladof = Production.
+########
+
+set GD_Weap_SniperRifles.Accessory.Sniper_Accessory_Bipod1_Accuracy ExternalAttributeEffects ((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Sniper_Rifle.Ammo_Sniper_Rifle_RegenerationRate',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0.400000)))
+
+set GD_Weap_SniperRifles.Accessory.Sniper_Accessory_Bipod1_Accuracy AttributeSlotUpgrades ((SlotName="WeaponAccuracyImpulse",GradeIncrease=0,bActivateSlot=False),(SlotName="AccuracyMin",GradeIncrease=0,bActivateSlot=False),(SlotName="WeaponSpread",GradeIncrease=0,bActivateSlot=False))
+
+set GD_Weap_SniperRifles.Name.Prefix_Dahl.Prefix_Bipod1_Accuracy PartName Munitioning
+set GD_Weap_SniperRifles.Name.Prefix_Hyperion.Prefix_Bipod1_Accuracy PartName Rational
+set GD_Weap_SniperRifles.Name.Prefix_Jakobs.Prefix_Bipod1_Accuracy PartName Bountiful
+set GD_Weap_SniperRifles.Name.Prefix_Maliwan.Prefix_Bipod1_Accuracy PartName Prepared
+set GD_Weap_SniperRifles.Name.Prefix_Vladof.Prefix_Bipod1_Accuracy PartName Production
