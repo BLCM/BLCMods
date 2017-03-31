@@ -18,5 +18,4 @@ for /f "tokens=*" %%f in ('dir /b *.*') do (
   move "%%f" "!newname!"
 )
 xcopy "%BUF%" "%INS%" /y
-cd %BUF%
 del *.* /Q
