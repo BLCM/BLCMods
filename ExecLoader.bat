@@ -15,7 +15,7 @@ cd %BUF%
 SETLOCAL ENABLEDELAYEDEXPANSION
 for /f "tokens=*" %%f in ('dir /b *.*') do (
   SET newname=%%~nf
-  echo "exec !newname!" >>Autorun
+  echo exec !newname! >>Autorun
   move "%%f" "!newname!"
 )
 xcopy "%BUF%" "%INS%" /y
