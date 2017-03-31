@@ -20,3 +20,11 @@ for /f "tokens=*" %%f in ('dir /b *.*') do (
 )
 xcopy "%BUF%" "%INS%" /y
 del *.* /Q
+cd %INS%
+for /f "tokens=1,* delims=¶" %%A in ( '"type Autorun"') do (
+SET string=%%A
+SET modified=!string:"=!
+echo !modified! >> ar_temp
+)
+del Autorun
+rename ar_temp Autorun
