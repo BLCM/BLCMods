@@ -15,13 +15,14 @@ cd %BUF%
 SETLOCAL ENABLEDELAYEDEXPANSION
 for /f "tokens=*" %%f in ('dir /b *.*') do (
   SET newname=%%~nf
-  echo exec !newname! >>Autorun
+  SET newname=!newname: =!
+  echo "exec !newname!" >>Autorun
   move "%%f" "!newname!"
 )
 xcopy "%BUF%" "%INS%" /y
 del *.* /Q
 cd %INS%
-for /f "tokens=1,* delims=Â¶" %%A in ( '"type Autorun"') do (
+for /f "tokens=1,* delims=¶" %%A in ( '"type Autorun"') do (
 SET string=%%A
 SET modified=!string:"=!
 echo !modified! >> ar_temp
