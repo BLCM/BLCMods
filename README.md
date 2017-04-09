@@ -18,6 +18,9 @@ If you are part of BL2CP you do not need to fork or pull request.
 
 Installing these files follows the same process as for the BL2 Community Patch using the [Patcher](https://github.com/AnotherBugworm/Borderlands2Patcher)
 
-Or, if you wish to keep your `.exe` unchanged and you are running Windows, you can use a [Cheat Engine Table](https://github.com/MagicGonads/Borderlands-Cheat-Tables)
+Or, if you wish to keep your `.exe` unchanged and you are running Windows, you can use a [Cheat Engine Table](https://github.com/MagicGonads/Borderlands-Cheat-Tables).  
+Go to `[Enable][Scripts]` and check `Disable Console Say` and `Unlock Set Utility`.
+Every instruction that doesn't involve editing the `.exe` will still need to be followed.
 
-For windows users `ExecLoader.bat` will automatically create an `Autorun` file which will execute multiple files at once for convenience, read the instructions.
+For windows users `ExecLoader.bat` will automatically create an `Autorun` file which will execute multiple files at once for convenience.
+The file must still be executed through the console but it will significantly reduce the number of manual commands.
