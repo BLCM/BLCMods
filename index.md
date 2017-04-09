@@ -1,6 +1,7 @@
 # Hello Vault Hunter!
 
-This repository is for the people at [Shadow's Evil Hideout](https://discord.gg/0YjZxbVBS9b3bXUS)
+This repository is for the people at [Shadow's Evil Hideout](https://discord.gg/0YjZxbVBS9b3bXUS)  
+Home of the [Unofficial Community Patch](https://www.youtube.com/watch?v=qB094xOJa10)
 
 A [Wiki](https://github.com/BL2CP/BLCMods/wiki) has been established! Share and gain modding knowledge
 
