@@ -10,7 +10,7 @@ If your mod has specific considerations you should make it clear how to install.
 If you are not part of BL2CP, to contribute a mod:
 - `Fork` the repository (top right).
 - `Commit` files to the respective folders. (either `Borderlands 2 mods` or `Pre Sequel Mods`)
-- Send a Pull Request to Compare merge your fork to the `master` branch.
+- Send a `Pull Request` to `Compare` merge your fork to the `master` branch.
 
 If you are part of BL2CP you do not need to fork or pull request.
 
