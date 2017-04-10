@@ -1,0 +1,41 @@
+########
+By Aaron0000
+
+Turns the Teeth of Terramorphous into the Borderlands 1 Friendly Fire.
+
+Features;
+Slightly increased damage.
+Increased projectile count.
+Increased critical hit damage.
+Consumes three ammo per shot.
+Increased status effect damage.
+Spread is in the shape of a smiley face.
+########
+
+
+set GD_Iris_Weapons.FiringModes.Bullet_Assault_Kitten BasePatternSpread 2.50000
+
+set GD_Weap_Shotgun.Name.Title.Title__Unique_Teeth PartName Friendly Fire
+
+set GD_Weap_Shotgun.Name.Title.Title__Unique_Teeth:AttributePresentationDefinition_8 NoConstraintText : )
+
+set GD_Weap_Shotgun.Barrel.SG_Barrel_Torgue_Teeth rarity (basevalueattribute=none)
+
+set GD_Weap_Shotgun.Barrel.SG_Barrel_Torgue_Teeth rarity (BaseValueConstant=5)
+
+set GD_Weap_Shotgun.Barrel.SG_Barrel_Torgue_Teeth CustomFiringModeDefinition FiringModeDefinition'GD_Iris_Weapons.FiringModes.Bullet_Assault_Kitten'
+
+set GD_Weap_Shotgun.Barrel.SG_Barrel_Torgue_Teeth GestaltModeSkeletalMeshName SG_Barrel_Bandit
+
+
+set GD_Weap_Shotgun.Barrel.SG_Barrel_Torgue_Teeth WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Bandit',InitializationDefinition=None,BaseValueScaleConstant=0.100000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=10.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=2.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.GameplayAttributes.PlayerCriticalHitBonus',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=0.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponStatusEffectDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))))
+
+
+set Common_GunMaterials.Materials.Shotgun.Mati_BanditUniqueSG_Teeth TextureParameterValues ((ParameterName="p_Decal",ParameterValue=Texture2D'Common_GunMaterials.Logos.FacePaint_SirenBanditCommon',ExpressionGUID=(A=-923052711,B=1309861752,C=584229786,D=-1229888527)),(ParameterName="p_Pattern",ParameterValue=Texture2D'Common_GunMaterials.MasterMaterials.Jakobs.MasterMati_JakobsLegendary',ExpressionGUID=(A=534250533,B=1202550002,C=1578302861,D=-717876416)))
+
+set Common_GunMaterials.Materials.Shotgun.Mati_BanditUniqueSG_Teeth VectorParameterValues ((ParameterName="p_AColorHilight",ParameterValue=(R=0.500000,G=0.500000,B=0.000000,A=1.000000),ExpressionGUID=(A=384292798,B=1221323751,C=-2145405772,D=1872194118)),(ParameterName="p_AColorMidtone",ParameterValue=(R=0.240000,G=0.240000,B=0.000000,A=1.000000),ExpressionGUID=(A=1102826245,B=1256298978,C=-1429881438,D=-507521102)),(ParameterName="p_AColorShadow",ParameterValue=(R=0.036000,G=0.360000,B=0.000000,A=1.000000),ExpressionGUID=(A=1481234158,B=1129012376,C=-688827739,D=-2119135160)),(ParameterName="p_BColorHilight",ParameterValue=(R=0.100000,G=0.100000,B=0.100000,A=1.000000),ExpressionGUID=(A=759765673,B=1280874949,C=257367956,D=-932702788)),(ParameterName="p_BColorMidtone",ParameterValue=(R=0.010000,G=0.010000,B=0.010000,A=1.000000),ExpressionGUID=(A=110180441,B=1232792373,C=-1232281417,D=-1030626065)),(ParameterName="p_BColorShadow",ParameterValue=(R=0.001000,G=0.001000,B=0.001000,A=1.000000),ExpressionGUID=(A=716329441,B=1214803259,C=-238071112,D=-1004122047)),(ParameterName="p_CColorHilight",ParameterValue=(R=0.100000,G=0.1000000,B=0.1000000,A=1.000000),ExpressionGUID=(A=759765673,B=1280874949,C=257367956,D=-932702788)),(ParameterName="p_CColorMidtone",ParameterValue=(R=0.010000,G=0.010000,B=0.010000,A=1.000000),ExpressionGUID=(A=110180441,B=1232792373,C=-1232281417,D=-1030626065)),(ParameterName="p_CColorShadow",ParameterValue=(R=0.001000,G=0.001000,B=0.001000,A=1.000000),ExpressionGUID=(A=716329441,B=1214803259,C=-238071112,D=-1004122047)),(ParameterName="p_DecalScalePosition",ParameterValue=(R=16.000000,G=16.000000,B=0.690000,A=0.555000),ExpressionGUID=(A=395540170,B=1243133493,C=-1264190552,D=123075385)),(ParameterName="p_PatternScalePosition",ParameterValue=(R=5.000000,G=5.000000,B=0.500000,A=0.500000),ExpressionGUID=(A=-2005018406,B=1132497243,C=-39915121,D=208423616)),(ParameterName="p_DecalChannel",ParameterValue=(R=1.000000,G=0.000000,B=0.000000,A=1.000000),ExpressionGUID=(A=1757499073,B=1097055033,C=-1266029657,D=1038353636)),(ParameterName="p_PatternChannelScale",ParameterValue=(R=1.000000,G=1.000000,B=1.000000,A=0.000000),ExpressionGUID=(A=439432319,B=1091149893,C=-1991909502,D=1816944627)),(ParameterName="p_PatternColor",ParameterValue=(R=2.207219,G=2.207219,B=2.207219,A=1.000000),ExpressionGUID=(A=676539706,B=1125682796,C=1871983293,D=-2049503601)),(ParameterName="p_DecalColor",ParameterValue=(R=0.001000,G=0.001000,B=0.0010000,A=1.000000),ExpressionGUID=(A=1691998600,B=1239094551,C=2074257317,D=1844701893)))
+
+
+
+
+
