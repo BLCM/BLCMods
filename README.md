@@ -18,4 +18,6 @@ If you are part of [BL2CP](https://github.com/BL2CP) you do not need to fork or 
 
 ## Installation
 
+To download the files click the green `Clone or Download` button in the top right.
+
 Installing these files follows the same process as for the BL2 Community Patch using the [Patcher](https://github.com/AnotherBugworm/Borderlands2Patcher)
