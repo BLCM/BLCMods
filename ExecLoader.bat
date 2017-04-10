@@ -17,7 +17,6 @@ for /f "tokens=*" %%f in ('dir /b *.*') do (
   SET newname=%%~nf
   SET newname=!newname: =!
   SET newname=!newname:`=!
-  SET newname=!newname:~=!
   echo "exec !newname!" >>Autorun
   move "%%f" "!newname!"
 )
