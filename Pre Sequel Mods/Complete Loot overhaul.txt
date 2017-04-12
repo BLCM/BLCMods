@@ -9,6 +9,9 @@
 # It also Makes ALL Unobtainable Unique gear (such as most moxxie weapons,fibber,lady fist to quest rewards from fitting quests 
 # 		
 #		Change Log
+# 1.2 Added Moonstone Auto Pick Up
+#     Changed EOS Fast Travel to be Two Way
+#     Buffed Excalibastard to 200% Mellee Dmg (ITS A FREAKING EXCALIBUR)
 # 1.1 Fixed a bug with badass Torks.
 #     Fixed Lazlo to actually Drop the Shooterang
 #	    Removed Hail From Iwajira. It can be found on the 5th round of SlaughterDome instead.
@@ -111,8 +114,17 @@
 # eleser Due to the quest reward changes)
 #This should Also encourage Even Less Grinder Usage for all those who don't like the grinder.
 ####################################################################################################################################
+### Moonstone AutoPickUp
+set GD_Currency.A_Item.MoonstoneCluster bAutomaticallyPickup True
+set GD_Currency.A_Item.Moonstone bAutomaticallyPickup True
+### Enables EOS Fast Travel
+set GD_Ma_FastTravelStations.Ma_FinalBoss_FT bSendOnly False 
+#
+### Buffs Excalibastard
+set GD_Cork_Weap_Lasers.Barrel.Laser_Barrel_Hyperion_Excalibastard ExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.DamageSourceModifiers.InstigatedMeleeDamageModifier',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.500000)))
+#
 ###CODE For Quest Rewards
-
+#
 ### A new direction Black Snake and boss Nova
 Set GD_Co_Chapter04.M_Co_Chapter04 Reward (ExperienceRewardPercentage=(BaseValueConstant=0.100000,BaseValueAttribute=AttributeDefinition'GD_MissionRewardBalance.XP.XPReward_05_Largest',InitializationDefinition=None,BaseValueScaleConstant=1.000000),BadassRanksReward=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),CurrencyRewardType=CURRENCY_Credits,CreditRewardMultiplier=(BaseValueConstant=1.000000,BaseValueAttribute=AttributeDefinition'GD_MissionRewardBalance.Cash.CashReward_05_Largest',InitializationDefinition=None,BaseValueScaleConstant=1.000000),OtherCurrencyReward=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),RewardItems=(WeaponBalanceDefinition'GD_Cypressure_Weapons.A_Weapons_Unique.AR_Bandit_3_BossNova',WeaponBalanceDefinition'GD_Cork_Weap_SMG.A_Weapons_Unique.SMG_Old_Hyperion_BlackSnake'),RewardItemPools=)
 
