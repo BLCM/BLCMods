@@ -1,0 +1,90 @@
+CREAMOPHOBIA
+// created by Kazy
+// Swaps the Creamer (Torgue) with the Pyrophobia (Maliwan), and vice-versa
+// Clayton will now drop the Torgue Pyrophobia
+// Creature Slaughter Round 5 will award you with the Maliwan Creamer
+// Stats not 100% identical, but should be quite close to their original counterparts
+
+################################################################
+##  MALIWAN CREAMER                                           ##
+################################################################
+
+##########################
+#   DISPLAY NAME
+##########################
+set GD_Weap_Launchers.Barrel.L_Barrel_Maliwan_Pyrophobia TitleList (WeaponNamePartDefinition'GD_Weap_Launchers.Name.Title.Title__Unique_Creamer')
+set GD_Weap_Launchers.Barrel.L_Barrel_Maliwan_Pyrophobia PrefixList (WeaponNamePartDefinition'GD_Weap_Launchers.Name.Prefix.Prefix__MissMoxxis')
+
+##########################
+#   RARITY
+##########################
+set GD_Weap_Launchers.Barrel.L_Barrel_Maliwan_Pyrophobia MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'
+set GD_Weap_Launchers.Barrel.L_Barrel_Maliwan_Pyrophobia Rarity (BaseValueConstant=-1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+
+##########################
+#   WEAPON CARD
+##########################
+set GD_Weap_Launchers.A_Weapons_Legendary.RL_Maliwan_5_Pyrophobia:WeaponPartListCollectionDefinition_65 ElementalPartData ((bEnabled=True,WeightedParts=((Part=WeaponPartDefinition'GD_Weap_Launchers.elemental.RL_Elemental_None',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=3),(Part=WeaponPartDefinition'GD_Weap_Launchers.elemental.RL_Elemental_Fire',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=4,MaxGameStageIndex=1,DefaultWeightIndex=5),(Part=WeaponPartDefinition'GD_Weap_Launchers.elemental.RL_Elemental_Corrosive',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=6,MaxGameStageIndex=1,DefaultWeightIndex=5),(Part=WeaponPartDefinition'GD_Weap_Launchers.elemental.RL_Elemental_Shock',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=7,MaxGameStageIndex=1,DefaultWeightIndex=5))
+
+##########################
+#   WEAPON EFFECTS
+##########################
+set GD_Weap_Launchers.Barrel.L_Barrel_Maliwan_Pyrophobia AttributeSlotUpgrades ((SlotName="WeaponSpread",GradeIncrease=2,bActivateSlot=True),(SlotName="AccuracyMax",GradeIncrease=2,bActivateSlot=True))
+set GD_Weap_Launchers.Barrel.L_Barrel_Maliwan_Pyrophobia CustomFiringModeDefinition FiringModeDefinition'GD_Weap_Launchers.FiringModes.FM_Rocket_Torgue_Creamer'
+set GD_Weap_Launchers.Barrel.L_Barrel_Maliwan_Pyrophobia ExternalAttributeEffects((AttributeToModify=AttributeDefinition'D_Attributes.DamageEnhancementModifiers.PlayerConvertDamageToHealingPercent',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.020000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+set GD_Weap_Launchers.Barrel.L_Barrel_Maliwan_Pyrophobia WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.350000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+##########################
+#   APPEARANCE
+##########################
+set GD_Weap_Launchers.ManufacturerMaterials.Mat_Maliwan_5_Legendary Material MaterialInstanceConstant'Common_GunMaterials.Materials.Launcher.Mati_TorgueUniqueRL_Creamer'
+
+##########################
+#   LOOTPOOL
+##########################
+set GD_Z2_CreatureSlaughter.M_CreatureSlaughter_5 Reward (ExperienceRewardPercentage=(BaseValueConstant=0.100000,BaseValueAttribute=AttributeDefinition'GD_MissionRewardBalance.XP.XPReward_02_Small',InitializationDefinition=None,BaseValueScaleConstant=1.000000),CurrencyRewardType=CURRENCY_Credits,CreditRewardMultiplier=(BaseValueConstant=1.000000,BaseValueAttribute=AttributeDefinition'GD_MissionRewardBalance.Cash.CashReward_04_Large',InitializationDefinition=None,BaseValueScaleConstant=1.000000),OtherCurrencyReward=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),RewardItems=(WeaponBalanceDefinition'GD_Weap_Launchers.A_Weapons_Legendary.RL_Maliwan_5_Pyrophobia'),RewardItemPools=)
+
+##########################
+
+
+################################################################
+##  TORGUE PYROPHOBIA                                         ##
+################################################################
+
+##########################
+#   DISPLAY NAME
+##########################
+set GD_Weap_Launchers.Barrel.L_Barrel_Maliwan_Creamer TitleList (WeaponNamePartDefinition'GD_Weap_Launchers.Name.Title_Maliwan.Title_Legendary_Pyrophobia')
+set GD_Weap_Launchers.Barrel.L_Barrel_Maliwan_Creamer PrefixList ()
+
+##########################
+#   RARITY
+##########################
+set GD_Weap_Launchers.Barrel.L_Barrel_Maliwan_Creamer MonetaryValueMod InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity5_Legendary'
+set GD_Weap_Launchers.Barrel.L_Barrel_Maliwan_Creamer Rarity (BaseValueConstant=0.000000,BaseValueAttribute=InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity5_Legendary',InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+
+##########################
+#   WEAPON CARD
+##########################
+set GD_Weap_Launchers.A_Weapons_Unique.RL_Torgue_3_Creamer:WeaponPartListCollectionDefinition_72 ElementalPartData (bEnabled=True,WeightedParts=((Part=WeaponPartDefinition'GD_Weap_Launchers.elemental.RL_Elemental_None',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=3),(Part=WeaponPartDefinition'GD_Weap_Launchers.elemental.RL_Elemental_Fire',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=4,MaxGameStageIndex=1,DefaultWeightIndex=5)))
+
+
+##########################
+#   WEAPON EFFECTS
+##########################
+set GD_Weap_Launchers.Barrel.L_Barrel_Maliwan_Creamer CustomFiringModeDefinition FiringModeDefinition'GD_Weap_Launchers.FiringModes.FM_Rocket_Maliwan_Pyrophobia'
+set GD_Weap_Launchers.Barrel.L_Barrel_Maliwan_Creamer ExternalAttributeEffects()
+set GD_Weap_Launchers.Barrel.L_Barrel_Maliwan_Creamer WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Torgue',InitializationDefinition=None,BaseValueScaleConstant=0.100000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponBaseStatusEffectChanceModifier',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Torgue',InitializationDefinition=None,BaseValueScaleConstant=0.100000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Torgue',InitializationDefinition=None,BaseValueScaleConstant=-0.300000)))
+set GD_Weap_Launchers.Barrel.L_Barrel_Maliwan_Creamer AttributeSlotUpgrades ((SlotName="WeaponSpread",GradeIncrease=2,bActivateSlot=True),(SlotName="AccuracyMax",GradeIncrease=2,bActivateSlot=True),(SlotName="WeaponDamage",GradeIncrease=4,bActivateSlot=True),(SlotName="WeaponReloadSpeed",GradeIncrease=3,bActivateSlot=True))
+
+##########################
+#   APPEARANCE
+##########################
+set GD_Weap_Launchers.ManufacturerMaterials.Mat_Torgue_3_Creamer Material MaterialInstanceConstant'Common_GunMaterials.Materials.Launcher.Mati_MaliwanLegendaryRL'
+
+##########################
+#   LOOTPOOL
+##########################
+set GD_Itempools.Runnables.Pool_Clayton BalancedItems (ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_Launchers.A_Weapons_Unique.RL_Torgue_3_Creamer',Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',BaseValueScaleConstant=1.000000),bDropOnDeath=True)
+
+##########################
