@@ -1,0 +1,73 @@
+########
+By Aaron0000
+
+Spruces up the Gearbox guns and the Basic Repeater.
+
+Features;
+Changes the rarity of the Gearbox weapons to Blue.
+Buffs the stats of the Gearbox guns (and the Basic Repeater to a lesser degree).
+Gearbox Assault Rifle now fires an additional bullet every fifth shot.
+Gearbox SMG behaves similarly to the Bitch (minus the bonus crit dmage).
+Gearbox Sniper Rifle has increased projectile speed.
+Basic Repeater has a burst-fire of five rounds.
+
+########
+GD_Weap_Pistol.Barrel.Pistol_Barrel_Bandit_CrappyStarter
+GD_Weap_AssaultRifle.Body.AR_Body_Gearbox_1
+GD_Weap_SMG.Body.SMG_Body_Gearbox_1
+GD_Weap_SniperRifles.Body.SR_Body_Gearbox
+
+
+
+set GD_Weap_AssaultRifle.Body.AR_Body_Gearbox_1 rarity (basevalueattribute=none)
+
+set GD_Weap_AssaultRifle.Body.AR_Body_Gearbox_1 rarity (BaseValueConstant=3)
+
+set GD_Weap_AssaultRifle.Body.AR_Body_Gearbox_1 WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.00000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponExtraShotChance',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.200000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+set GD_Weap_AssaultRifle.Body.AR_Body_Gearbox_1 AttributeSlotUpgrades ((SlotName="WeaponDamage",GradeIncrease=12,bActivateSlot=True),(SlotName="WeaponMagSize",GradeIncrease=4,bActivateSlot=True),(SlotName="WeaponSpread",GradeIncrease=4,bActivateSlot=True))
+
+
+
+
+
+
+set GD_Weap_SMG.Body.SMG_Body_Gearbox_1 rarity (basevalueattribute=none)
+
+set GD_Weap_SMG.Body.SMG_Body_Gearbox_1 rarity (BaseValueConstant=3)
+
+set GD_Weap_SMG.Body.SMG_Body_Gearbox_1 WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponPerShotAccuracyImpulse',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Hyperion',InitializationDefinition=None,BaseValueScaleConstant=-1.000000)))
+
+set GD_Weap_SMG.Body.SMG_Body_Gearbox_1 ExternalAttributeEffects ((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AccuracyResourcePool.AccuracyMaxValue',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AccuracyResourcePool.AccuracyOnIdleRegenerationRate',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+set GD_Weap_SMG.Body.SMG_Body_Gearbox_1 AttributeSlotUpgrades ((SlotName="WeaponDamage",GradeIncrease=12,bActivateSlot=True),(SlotName="WeaponMagSize",GradeIncrease=4,bActivateSlot=True),(SlotName="WeaponSpread",GradeIncrease=4,bActivateSlot=True))
+
+
+
+
+
+
+set GD_Weap_SniperRifles.Body.SR_Body_Gearbox rarity (basevalueattribute=none)
+
+set GD_Weap_SniperRifles.Body.SR_Body_Gearbox rarity (BaseValueConstant=3)
+
+set GD_Weap_SniperRifles.Body.SR_Body_Gearbox WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.900000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectileSpeedMultiplier',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+set GD_Weap_SniperRifles.Body.SR_Body_Gearbox AttributeSlotUpgrades ((SlotName="WeaponDamage",GradeIncrease=12,bActivateSlot=True),(SlotName="WeaponMagSize",GradeIncrease=4,bActivateSlot=True),(SlotName="WeaponSpread",GradeIncrease=4,bActivateSlot=True))
+
+
+
+
+
+
+set GD_Weap_Pistol.Barrel.Pistol_Barrel_Bandit_CrappyStarter WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0.000000)))
+
+set GD_Weap_Pistol.Barrel.Pistol_Barrel_Bandit_CrappyStarter ZoomWeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponAutomaticBurstCount',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=3.000000)))
+
+set GD_Weap_Pistol.Barrel.Pistol_Barrel_Bandit_CrappyStarter AttributeSlotUpgrades ((SlotName="WeaponDamage",GradeIncrease=6,bActivateSlot=True),(SlotName="WeaponMagSize",GradeIncrease=2,bActivateSlot=True),(SlotName="WeaponSpread",GradeIncrease=2,bActivateSlot=True))
+
+
+
+
+
+
