@@ -22,6 +22,9 @@ To download the files click the green `Clone or Download` button in the top righ
 
 Installing these files follows the same process as for the BL2 Community Patch using the [Patcher](https://github.com/AnotherBugworm/Borderlands2Patcher)
 
+*Derch*'s Tutorial:    
+[![Derch's Install Tutorial](http://img.youtube.com/vi/HT79s6_KXqQ/0.jpg)](https://youtu.be/HT79s6_KXqQ)
+
 ## Requirements
 
 These mods can only be installed on PC and will never be ported to consoles due to technical and legal limitations.    
