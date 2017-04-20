@@ -20,7 +20,10 @@ If you are part of [BL2CP](https://github.com/BL2CP) you do not need to fork or 
 
 To download the files click the green `Clone or Download` button in the top right.
 
-Installing these files follows the same process as for the BL2 Community Patch using the [Patcher](https://github.com/AnotherBugworm/Borderlands2Patcher)
+Installing the files follows methods discussed on the [Wiki](https://github.com/BL2CP/BLCMods/wiki/Tutorial-01:-Accessing-Console)
+
+*Derch*'s Tutorial:    
+[![Derch's Install Tutorial](http://img.youtube.com/vi/HT79s6_KXqQ/0.jpg)](https://youtu.be/HT79s6_KXqQ)
 
 ## Requirements
 
