@@ -1,0 +1,23 @@
+########
+By Aaron0000
+
+Changes the Stinkpot from a Cannon into a Gatling Gun. Also makes it only consume two ammo per shot instead of three.
+
+Credit to Exotek for showing me how to make the barrels spin.
+########
+
+set GD_Orchid_BossWeapons.AssaultRifle.AR_Barrel_Torgue_Stinkpot CustomFiringModeDefinition None
+
+set GD_Orchid_BossWeapons.AssaultRifle.AR_Barrel_Torgue_Stinkpot GestaltModeSkeletalMeshName AR_Barrel_Vladof
+
+set GD_Orchid_BossWeapons.AssaultRifle.AR_Barrel_Torgue_Stinkpot WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Jakobs',InitializationDefinition=None,BaseValueScaleConstant=2.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Jakobs',InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Jakobs',InitializationDefinition=None,BaseValueScaleConstant=2.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponPerShotAccuracyImpulse',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Jakobs',InitializationDefinition=None,BaseValueScaleConstant=2.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponBarrelSpinDownDuration',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Jakobs',InitializationDefinition=None,BaseValueScaleConstant=8.000000)))
+
+
+set GD_Orchid_BossWeapons.AssaultRifle.AR_Barrel_Torgue_Stinkpot AttributeSlotUpgrades ((SlotName="WeaponSpread",GradeIncrease=-2,bActivateSlot=True),(SlotName="WeaponFireRate",GradeIncrease=10,bActivateSlot=True),(SlotName="WeaponAccuracyImpulse",GradeIncrease=10,bActivateSlot=True),(SlotName="WeaponMagSize",GradeIncrease=12,bActivateSlot=True))
+
+set GD_Orchid_BossWeapons.AssaultRifle.AR_Barrel_Torgue_Stinkpot NumPhysicalBarrelsToFireFrom 3
+set GD_Orchid_BossWeapons.AssaultRifle.AR_Barrel_Torgue_Stinkpot BoneControllers ((BoneName="Barrel_Spinner",ControlType=WEAP_BONE_CONTROL_BarrelSpinner,bUseInFirstPerson=True,bUseInThirdPerson=True,ControlTemplate=WillowSkelControl_RotateWeaponBoneFromFiring'GD_Weap_AssaultRifle.Barrel.AR_Barrel_Vladof_Minigun:WillowSkelControl_RotateWeaponBoneFromFiring_0'))
+set GD_Orchid_BossWeapons.AssaultRifle.AR_Barrel_Torgue_Stinkpot bIsSpinningEnabled True
+set GD_Orchid_BossWeapons.AssaultRifle.AR_Barrel_Torgue_Stinkpot (BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+set GD_Orchid_BossWeapons.AssaultRifle.AR_Barrel_Torgue_Stinkpot (BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+set GD_Orchid_BossWeapons.AssaultRifle.AR_Barrel_Torgue_Stinkpot StartingSpinUpFireIntervalMultiplier 3.000000

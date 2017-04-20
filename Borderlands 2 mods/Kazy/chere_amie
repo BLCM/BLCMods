@@ -1,0 +1,27 @@
+==========================================
+=  Moxxi's Chère-amie Adjustment         =
+==========================================
+//created by Kazy
+// Vanilla Changes:
+// • Removed the healing orbs from the Chère-amie
+// • Increasing the Damge-to-Healing from 2% to 5%
+// • Chère-amie projectile gained Splash Damage
+==================
+// Shadowevil1996's Community Patch Note:
+// • Damage-to-Healing dropped from 12%, but is still quite viable
+
+==================
+= Appearance
+==================
+set GD_Weap_SniperRifles.Barrel.SR_Barrel_Hyperion_ChereAmie GestaltModeSkeletalMeshName SR_Barrel_Maliwan
+
+==================
+= Projectile
+==================
+set GD_Weap_SniperRifles.Barrel.SR_Barrel_Hyperion_ChereAmie CustomFiringModeDefinition FiringModeDefinition'GD_Weap_SniperRifles.FiringModes.Bullet_Sniper_Volcano'
+
+==================
+= Weapon Attributes
+==================
+set GD_Weap_SniperRifles.Barrel.SR_Barrel_Hyperion_ChereAmie ExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.GameplayAttributes.PlayerCriticalHitBonus',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.400000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.DamageEnhancementModifiers.PlayerConvertDamageToHealingPercent',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.050000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+

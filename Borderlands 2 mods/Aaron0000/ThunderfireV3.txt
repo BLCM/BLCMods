@@ -1,0 +1,106 @@
+########
+By Aaron0000
+
+Brings back the Thunderfire in the form of a Plasma Caster
+
+Features;
+Stats similar in scale to the Thunderfire
+
+Dual element - Shock bullet, fire splash
+
+Increased projectile speed
+
+
+
+(Thanks to SirUnmei for fixing the fins not moving and the dots not applying correctly.)
+
+Replaces the Hellfire.
+
+########
+
+
+set GD_Weap_SMG.Barrel.SMG_Barrel_Maliwan_HellFire CustomFiringModeDefinition FiringModeDefinition'GD_Aster_RaidWeapons.SMGs.Bullet_SMG_Plasma_Florentine'
+
+
+
+set GD_Weap_SMG.Barrel.SMG_Barrel_Maliwan_HellFire GestaltModeSkeletalMeshName SMG_Barrel_Alien
+
+set GD_Weap_SMG.Name.Title_Maliwan.Title_Legendary_HellFire PartName Thunderfire
+
+set GD_Weap_SMG.Name.Title_Maliwan.Title_Legendary_HellFire:AttributePresentationDefinition_8 NoConstraintText Light 'em up.
+
+
+
+set GD_Aster_RaidWeapons.SMGs.Bullet_SMG_Plasma_Florentine:Behavior_Explode_5 DamageRadiusFormula (BaseValueScaleConstant=1.000000)
+
+
+set GD_Aster_RaidWeapons.SMGs.Bullet_SMG_Plasma_Florentine:Behavior_Explode_5 StatusEffectDamage (BaseValueConstant=1.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.Weapon.WeaponStatusEffectDamage',InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+
+
+
+set GD_Weap_SMG.Barrel.SMG_Barrel_Maliwan_HellFire WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponStatusEffectChanceModifier',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=-0.120000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.449000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponStatusEffectDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.300000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectileSpeedMultiplier',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponReloadSpeed',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0.60000)))
+
+
+
+set GD_Weap_SMG.Barrel.SMG_Barrel_Maliwan_HellFire WeaponCardAttributes (Attribute=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',PriorityIncrease=0.500000)
+
+
+
+set GD_Weap_SMG.Barrel.SMG_Barrel_Maliwan_HellFire BoneControllers ((BoneName="AlienBarrelFin_LT",ControlType=WEAP_BONE_CONTROL_Flap,bUseInFirstPerson=True,bUseInThirdPerson=False,ControlTemplate=WillowSkelControl_RotateFlapFromFiring'GD_Aster_RaidWeapons.SMGs.SMG_Barrel_Alien_Florentine:WillowSkelControl_RotateFlapFromFiring_0'),(BoneName="AlienBarrelFin_RT",ControlType=WEAP_BONE_CONTROL_Flap,bUseInFirstPerson=True,bUseInThirdPerson=False,ControlTemplate=WillowSkelControl_RotateFlapFromFiring'GD_Aster_RaidWeapons.SMGs.SMG_Barrel_Alien_Florentine:WillowSkelControl_RotateFlapFromFiring_1'),(BoneName="AlienBarrelFin_LB",ControlType=WEAP_BONE_CONTROL_Flap,bUseInFirstPerson=True,bUseInThirdPerson=False,ControlTemplate=WillowSkelControl_RotateFlapFromFiring'GD_Aster_RaidWeapons.SMGs.SMG_Barrel_Alien_Florentine:WillowSkelControl_RotateFlapFromFiring_2'),(BoneName="AlienBarrelFin_RB",ControlType=WEAP_BONE_CONTROL_Flap,bUseInFirstPerson=True,bUseInThirdPerson=False,ControlTemplate=WillowSkelControl_RotateFlapFromFiring'GD_Aster_RaidWeapons.SMGs.SMG_Barrel_Alien_Florentine:WillowSkelControl_RotateFlapFromFiring_3'))
+
+
+set GD_Weap_SMG.Barrel.SMG_Barrel_Maliwan_HellFire FlapsExpandDuration (BaseValueConstant=2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+
+
+set GD_Weap_SMG.Barrel.SMG_Barrel_Maliwan_Hellfire FlapsCollapseDuration (BaseValueConstant=0.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+
+
+set GD_Weap_SMG.Barrel.SMG_Barrel_Maliwan_Hellfire bFlapsEnabled True
+
+
+set GD_Weap_SMG.Barrel.SMG_Barrel_Maliwan_Hellfire MuzzleFlashPSTemplates EffectCollectionDefinition'GD_Weap_SMG.Effects.SMG_ETech_MuzzleFlashes'
+
+
+
+
+
+set Common_GunMaterials.Materials.SMG.Mati_Maliwan_Legendary_Hellfire VectorParameterValues ((ParameterName="p_AColorHilight",ParameterValue=(R=0.700000,G=0.350000,B=0.050000,A=1.000000),ExpressionGUID=(A=170714760,B=1132476783,C=-275668290,D=655702143)),(ParameterName="p_AColorMidtone",ParameterValue=(R=0.350000,G=0.180000,B=0.020000,A=1.000000),ExpressionGUID=(A=473594356,B=1338758895,C=824823946,D=864253813)),(ParameterName="p_AColorShadow",ParameterValue=(R=0.010000,G=0.005000,B=0.001000,A=1.000000),ExpressionGUID=(A=-429590341,B=1156435294,C=-1015192901,D=687313413)),(ParameterName="p_BColorHilight",ParameterValue=(R=0.100000,G=0.050000,B=0.050000,A=1.000000),ExpressionGUID=(A=170714760,B=1132476783,C=-275668290,D=655702143)),(ParameterName="p_BColorMidtone",ParameterValue=(R=0.050000,G=0.025000,B=0.025000,A=1.000000),ExpressionGUID=(A=473594356,B=1338758895,C=824823946,D=864253813)),(ParameterName="p_BColorShadow",ParameterValue=(R=0.025000,G=0.012500,B=0.0125000,A=1.000000),ExpressionGUID=(A=-429590341,B=1156435294,C=-1015192901,D=687313413)))
+
+
+
+set Common_GunMaterials.Materials.SMG.Mati_Maliwan_Legendary_Hellfire TextureParameterValues ((ParameterName="p_Pattern",ParameterValue=Texture2D'Common_GunMaterials.Patterns.Pattern_Jakobs_CaseHardened',ExpressionGUID=(A=534250533,B=1202550002,C=1578302861,D=-717876416)),(ParameterName="p_Decal",ParameterValue=Texture2D'Common_GunMaterials.Patterns.Patter_MaliwanFire',ExpressionGUID=(A=-923052711,B=1309861752,C=584229786,D=-1229888527)),(ParameterName="p_Masks",ParameterValue=Texture2D'Weap_SMG.Tex.Weap_SMG_Comp',ExpressionGUID=(A=-330624041,B=1167251458,C=-335191907,D=-166684394)),(ParameterName="p_NormalScopesEmissive",ParameterValue=Texture2D'Weap_SMG.Tex.Weap_SMG_Nrm',ExpressionGUID=(A=-1743872746,B=1126171774,C=119496871,D=-1952271718)),(ParameterName="p_Diffuse",ParameterValue=Texture2D'Common_GunMaterials.CompTextures.Weap_AssaultSubSniper_Comp',ExpressionGUID=(A=1757607260,B=1326539502,C=-317215581,D=-565807463)))
+
+
+set Common_GunMaterials.Materials.SMG.Mati_Maliwan_Legendary_Hellfire VectorParameterValues ((ParameterName="p_PatternScalePosition",ParameterValue=(R=2.000000,G=2.000000,B=0.326784,A=0.250000),ExpressionGUID=(A=-2005018406,B=1132497243,C=-39915121,D=208423616)),(ParameterName="p_PatternChannelScale",ParameterValue=(R=1.000000,G=0.000000,B=0.000000,A=0.000000),ExpressionGUID=(A=439432319,B=1091149893,C=-1991909502,D=1816944627)),(ParameterName="p_PatternColor",ParameterValue=(R=1.283675,G=0.624799,B=0.308602,A=1.000000),ExpressionGUID=(A=676539706,B=1125682796,C=1871983293,D=-2049503601)),(ParameterName="p_CColorShadow",ParameterValue=(R=0.182314,G=0.182314,B=0.182314,A=1.000000),ExpressionGUID=(A=716329441,B=1214803259,C=-238071112,D=-1004122047)),(ParameterName="p_CColorHilight",ParameterValue=(R=0.855387,G=0.555008,B=0.231592,A=1.000000),ExpressionGUID=(A=759765673,B=1280874949,C=257367956,D=-932702788)),(ParameterName="p_CColorMidtone",ParameterValue=(R=0.646385,G=0.379141,B=0.360700,A=1.000000),ExpressionGUID=(A=110180441,B=1232792373,C=-1232281417,D=-1030626065)),(ParameterName="p_DColor",ParameterValue=(R=1.000000,G=0.237985,B=0.000000,A=0.000000),ExpressionGUID=(A=696455109,B=1155878830,C=-1741888361,D=802120528)),(ParameterName="p_DecalScalePosition",ParameterValue=(R=5.000000,G=5.000000,B=0.492800,A=0.535900),ExpressionGUID=(A=395540170,B=1243133493,C=-1264190552,D=123075385)))
+
+
+
+set Common_GunMaterials.Materials.SMG.Mati_Maliwan_Legendary_Hellfire LightmassSettings (DistanceFieldPenumbraScale=1.000000,bCastShadowAsMasked=False,bOverrideCastShadowAsMasked=False,bOverrideEmissiveBoost=False,bOverrideDiffuseBoost=False,bOverrideSpecularBoost=False,bOverrideExportResolutionScale=False,bOverrideDistanceFieldPenumbraScale=False)
+
+
+
+set Common_GunMaterials.Materials.SMG.Mati_Maliwan_Legendary_Hellfire Parent 'Common_GunMaterials.MasterMaterials.Dahl.MasterMati_DahlLegendary'
+
+
+
+set Common_GunMaterials.Materials.SMG.Mati_Maliwan_Legendary_Hellfire VectorParameterValues ((ParameterName="p_DecalChannel",ParameterValue=(R=0.500000,G=0.00000,B=0.500000,A=1.000000)),ExpressionGUID=(A=1869386622,B=1303200947,C=-1616405849,D=714558284)))
+
+
+
+set Common_GunMaterials.Materials.SMG.Mati_Maliwan_Legendary_Hellfire TextureParameterValues ((ParameterName="p_Decal",ParameterValue=Texture2D'Common_GunMaterials.Patterns.Patter_MaliwanFire',ExpressionGUID=(A=-923052711,B=1309861752,C=584229786,D=-1229888527)))
+
+
+
+set Common_GunMaterials.Materials.SMG.Mati_Maliwan_Legendary_Hellfire VectorParameterValues ((ParameterName="p_DecalColor",ParameterValue=(R=3.300000,G=1.500000,B=0.500000,A=1.000000),ExpressionGUID=(A=1691998600,B=1239094551,C=2074257317,D=1844701893)))
+
+
+
+
+
+
+
+
+
+
+
+
