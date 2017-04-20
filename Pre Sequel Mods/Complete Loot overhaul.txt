@@ -4,11 +4,18 @@
 # Complete Loot Overhaul (CLO)
 #
 # This Makes so all Legendary Base game Guns have a source.
+# Adds MOONSTONES AUTOPICKUP
+# Added Fast travel Option To EOS
+# Buffs Excalibastards Melle Dmg
+# 
 # Will work on claptastic Voyage next
 #
 # It also Makes ALL Unobtainable Unique gear (such as most moxxie weapons,fibber,lady fist to quest rewards from fitting quests 
 # 		
 #		Change Log
+# 1.2.1 Fixed a Bug with Red not dropping his assigned items.
+#       Fixed A bug with Excalibastard Being Nerfed in the critical value. 
+#       Removed Skins From XSTLK23 he should drop eridian Vanquishers more often now.
 # 1.2 Added Moonstone Auto Pick Up
 #     Changed EOS Fast Travel to be Two Way
 #     Buffed Excalibastard to 200% Mellee Dmg (ITS A FREAKING EXCALIBUR)
@@ -178,7 +185,7 @@ Set GD_Itempools.Runnables.Pool_RK5 BalancedItems ((ItmPoolDefinition=None,InvBa
 #CODE FOR LOOT SOURCE CHANGES################################################################################
 
 ###Red badaboom and Big Thummper Removed Black Snake added as mission reward
-set GD_Itempools.Runnables.Pool_Red_Rare BalancedItems ((ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'GD_Cork_Weap_Launchers.A_Weapons_Legendary.RL_Bandit_5_BadaBoom',Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=None,InvBalanceDefinition=InventoryBalanceDefinition'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Roid_05_Legendary',Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',BaseValueScaleConstant=1.000000),bDropOnDeath=True))
+set GD_Itempools.Runnables.Pool_Red BalancedItems ((ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'GD_Cork_Weap_Launchers.A_Weapons_Legendary.RL_Bandit_5_BadaBoom',Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=None,InvBalanceDefinition=InventoryBalanceDefinition'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Roid_05_Legendary',Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',BaseValueScaleConstant=1.000000),bDropOnDeath=True))
 
 ###Belly Fabled Tortoise and Striker 
 set GD_Itempools.Runnables.Pool_Belly BalancedItems ((ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'GD_Cork_Weap_Shotgun.A_Weapons_Legendary.SG_Jakobs_5_Striker',Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=None,InvBalanceDefinition=InventoryBalanceDefinition'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Juggernaut_05_Legendary',Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',BaseValueScaleConstant=1.000000),bDropOnDeath=True))
@@ -255,3 +262,6 @@ set GD_Itempools.Runnables.Pool_GiantCryoHive BalancedItems ((ItmPoolDefinition=
 
 ###Lazlo Freezeasy and  Shooterang
 set GD_Itempools.Runnables.Pool_Lazlo BalancedItems ((ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'GD_Cork_Weap_Lasers.A_Weapons_Unique.Laser_Maliwan_3_Blizzard',Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'GD_Cork_Weap_Pistol.A_Weapons_Legendary.Pistol_Tediore_5_Shooterang',Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',BaseValueScaleConstant=1.000000),bDropOnDeath=True))
+
+###Removes Skins From XSTLK23
+set GD_Itempools.Runnables.Pool_XSTLK23 BalancedItems ((ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ClassModPools.Pool_ClassMods_06_Celestial',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',BaseValueScaleConstant=1.000000),bDropOnDeath=True))
