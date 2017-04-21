@@ -1,0 +1,13 @@
+//By NIKITAzed
+//Turns Badaboom into a rocket jumping launcher
+
+set GD_Currency.A_Item.Moonstone bAutomaticallyPickup True
+set GD_Currency.A_Item.MoonstoneCluster bAutomaticallyPickup True
+
+
+set GD_Cork_Weap_Launchers.Barrel.L_Barrel_Bandit_BadaBoom WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-100.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=3.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=6.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+set GD_Cork_Weap_Launchers.Barrel.L_Barrel_Bandit_BadaBoom AttributeSlotUpgrades ((SlotName="WeaponReloadSpeed",GradeIncrease=100,bActivateSlot=True))
+set GD_Cork_Weap_Launchers.Name.Title_Legendary_Badaboom PartName Rocket Jumper
+set GD_Cork_Weap_Launchers.Name.Title_Legendary_Badaboom:AttributePresentationDefinition_8 NoConstraintText One small step for man, one giant leap for mankind.
+
+say Badaboom changed into Rocket Jumper
