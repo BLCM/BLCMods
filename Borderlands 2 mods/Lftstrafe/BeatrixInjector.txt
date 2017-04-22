@@ -1,0 +1,42 @@
+#################################################
+# Beatrix Injector from Battleborn	
+#################################################
+# How does it work?			
+# - Aiming down sights increases damage but lowers fire rate			
+# - High elemental damage with 100% effect chance			
+# - Maintains the life steal
+#################################################
+# Created by Lftstrafe			
+#################################################
+# Replaces the Chere-amie			
+#################################################
+
+set GD_Weap_SniperRifles.Name.Title.Title__Unique_Chere-amie PartName Incistyx Injection
+
+set GD_Weap_SniperRifles.Barrel.SR_Barrel_Hyperion_ChereAmie rarity (BaseValueConstant=501)
+
+set GD_Weap_SniperRifles.Name.Title.Title__Unique_Chere-amie:AttributePresentationDefinition_8 NoConstraintText Precise. Deadly. Obsessively hygienic.
+
+set GD_Weap_SniperRifles.Name.Prefix_Maliwan.Prefix_Mount3_Damage PartName Beatrix's
+set GD_Weap_SniperRifles.Name.Prefix.Prefix__MissMoxxis PartName Beatrix's
+set GD_Weap_SniperRifles.Name.Prefix_Maliwan.Prefix_Elemental_Incendiary PartName Beatrix's
+set GD_Weap_SniperRifles.Name.Prefix_Maliwan.Prefix_Elemental_Shock PartName Beatrix's
+set GD_Weap_SniperRifles.Name.Prefix_Maliwan.Prefix_Elemental_Slag PartName Beatrix's
+set GD_Weap_SniperRifles.Name.Prefix_Maliwan.Prefix_Bayonet1 PartName Beatrix's
+set GD_Weap_SniperRifles.Name.Prefix_Maliwan.Prefix_Bipod1_Accuracy PartName Beatrix's
+set GD_Weap_SniperRifles.Name.Prefix_Maliwan.Prefix_Bipod2_Critical PartName Beatrix's
+set GD_Weap_SniperRifles.Name.Prefix_Maliwan.Prefix_Foregrip_Stability PartName Beatrix's
+set GD_Weap_SniperRifles.Name.Prefix_Maliwan.Prefix_Mount1_Mag PartName Beatrix's
+set GD_Weap_SniperRifles.Name.Prefix_Maliwan.Prefix_Mount2_FireRate PartName Beatrix's
+
+//Projectile
+set GD_Weap_SniperRifles.Barrel.SR_Barrel_Hyperion_ChereAmie CustomFiringModeDefinition FiringModeDefinition'GD_Weap_Pistol.FiringModes.Bullet_Pistol_Dahl_Teapot'
+
+//External Attriubtes
+set GD_Weap_SniperRifles.Barrel.SR_Barrel_Hyperion_ChereAmie ExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.DamageEnhancementModifiers.PlayerConvertDamageToHealingPercent',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.080000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+//Weapon Attributes
+set GD_Weap_SniperRifles.Barrel.SR_Barrel_Hyperion_ChereAmie WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-0.280000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.277777,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponStatusEffectChanceModifier',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=2.200000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponReloadSpeed',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-0.170000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponStatusEffectDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=3.788888,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=5.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponPerShotAccuracyImpulse',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-6.333333,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+//Zoom Attributes
+set GD_Weap_SniperRifles.Barrel.SR_Barrel_Hyperion_ChereAmie ZoomExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.320000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.599999,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
