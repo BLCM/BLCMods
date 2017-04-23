@@ -1,13 +1,15 @@
 ########
 By Aaron0000
-Features;
+
 Recreates the Bastard Legendary Torgue Assault Rifle from Borderlands 1.
+
 Features;
 Does not use Gyro Jets
-High fire rate, considerable damage.
+High fire rate, large splash radius, moderate damage.
+Does not require spin-up, unlike the Ogre.
 Inaccurate.
 
-Replaces the Boom Puppy,
+Replaces the Boom Puppy.
 ########
 
 set GD_Iris_Weapons.FiringModes.Bullet_Sniper_Cobra:Behavior_Explode_5 DamageSource Class'WillowGame.WillowDmgSource_Grenade'
@@ -24,7 +26,21 @@ set GD_Iris_Weapons.AssaultRifles.AR_Barrel_Torgue_BoomPuppy rarity (basevalueat
 
 set GD_Iris_Weapons.AssaultRifles.AR_Barrel_Torgue_BoomPuppy rarity (BaseValueConstant=5)
 
-set GD_Iris_Weapons.AssaultRifles.AR_Barrel_Torgue_BoomPuppy WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0.126300)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=-0.130000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=20.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.400000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponReloadSpeed',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.120000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.250000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0.100000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.800000)))
+
+
+
+set GD_Iris_Weapons.FiringModes.FM_Rocket_Grenade_BoomPuppy DamageTypeDefinition WillowDamageTypeDefinition'GD_Explosive.DamageType.DmgType_Explosive_Impact'
+set GD_Iris_Weapons.FiringModes.FM_Rocket_Grenade_BoomPuppy PartSysTemplate ParticleSystem'FX_WEP_Trails.Particles.Part_Tracer_Bullet_Projectile'
+set GD_Iris_Weapons.FiringModes.FM_Rocket_Grenade_BoomPuppy ConditionalPartSysTemplate EffectCollectionDefinition'FX_WEP_Trails.Particles.Part_Wep_Tracer_Explosive'
+set GD_Iris_Weapons.FiringModes.FM_Rocket_Grenade_BoomPuppy Speed 20000.000000
+set GD_Iris_Weapons.FiringModes.FM_Rocket_Grenade_BoomPuppy ProjectileDefinition None
+
+
+
+
+
+set GD_Iris_Weapons.AssaultRifles.AR_Barrel_Torgue_BoomPuppy WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-0.100000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=-0.130000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=20.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.400000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponReloadSpeed',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.120000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.250000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0.100000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.800000)))
+
 
 
 set Iris_GunMaterials.Materials.AssaultRifle.Mati_TorgueUnique_BoomPuppy Parent Common_GunMaterials.MasterMaterials.Jakobs.MasterMati_JakobsEpic
