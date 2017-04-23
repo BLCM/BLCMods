@@ -1,0 +1,32 @@
+#########################################################################################
+      ___           ___           ___           ___                      _____                
+     /  /\         /  /\         /__/\         /__/\        ___         /  /::\         ___   
+    /  /:/_       /  /:/         \  \:\       |  |::\      /  /\       /  /:/\:\       /  /\  
+   /  /:/ /\     /  /:/           \__\:\      |  |:|:\    /  /:/      /  /:/  \:\     /  /:/  
+  /  /:/ /::\   /  /:/  ___   ___ /  /::\   __|__|:|\:\  /__/::\     /__/:/ \__\:|   /  /:/   
+ /__/:/ /:/\:\ /__/:/  /  /\ /__/\  /:/\:\ /__/::::| \:\ \__\/\:\__  \  \:\ /  /:/  /  /::\   
+ \  \:\/:/~/:/ \  \:\ /  /:/ \  \:\/:/__\/ \  \:\~~\__\/    \  \:\/\  \  \:\  /:/  /__/:/\:\  
+  \  \::/ /:/   \  \:\  /:/   \  \::/       \  \:\           \__\::/   \  \:\/:/   \__\/  \:\ 
+   \__\/ /:/     \  \:\/:/     \  \:\        \  \:\          /__/:/     \  \::/         \  \:\
+     /__/:/       \  \::/       \  \:\        \  \:\         \__\/       \__\/           \__\/
+     \__\/         \__\/         \__\/         \__\/                                          
+#############################################################################################
+//Scrapped project, first mod
+//inspired by HAL9000
+// Attempt at a lazer shotgun
+// Ideal would be high damage, low firerate but spins up like spinnigun, high max firerate, low accuracy, rewards up close fighting
+set GD_Weap_Shotgun.Barrel.SG_Barrel_Tediore_Shotgun1340 CustomFiringModeDefinition FiringModeDefinition'GD_Weap_SniperRifles.FiringModes.Bullet_RailGun'
+
+set GD_Weap_Shotgun.Barrel.SG_Barrel_Tediore_Shotgun1340 rarity (BaseValueConstant=168.000000)
+
+set Common_GunMaterials.Materials.Shotgun.Mati_HyperionRare_SG Parent Common_GunMaterials.Materials.Shotgun.Mati_HyperionLegendary_SG_ConferenceCall
+
+set GD_Weap_Shotgun.Name.Title.Title__Unique_Shotgun1340 PartName HAL 9001
+
+set GD_Weap_Shotgun.Name.Title.Title__Unique_Shotgun1340:AttributePresentationDefinition_8 NoConstraintText I'm Sorry Krieg, I can't let you do that
+
+set GD_Weap_Shotgun.Barrel.SG_Barrel_Tediore_Shotgun1340 GestaltModeSkeletalMeshName SG_Barrel_Hyperion
+
+set GD_Weap_Shotgun.Barrel.SG_Barrel_Tediore_Shotgun1340 WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=3.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.700000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=2.000000)
+
+set Common_GunMaterials.Materials.Shotgun.Mati_HyperionLegendary_SG_ConferenceCall VectorParameterValues ((ParameterName="p_AColorHilight",ParameterValue=(R=0.800000,G=0.800000,B=0.800000,A=1.000000),ExpressionGUID=(A=170714760,B=1132476783,C=-275668290,D=655702143)),(ParameterName="p_AColorMidtone",ParameterValue=(R=1.000000,G=1.000000,B=1.000000,A=1.000000),ExpressionGUID=(A=473594356,B=1338758895,C=824823946,D=864253813)),(ParameterName="p_AColorShadow",ParameterValue=(R=0.600000,G=0.000000,B=0.000000,A=1.000000),ExpressionGUID=(A=-429590341,B=1156435294,C=-1015192901,D=687313413)),(ParameterName="p_CColorHilight",ParameterValue=(R=0.355000,G=0.000000,B=0.000000,A=1.000000),ExpressionGUID=(A=170714760,B=1132476783,C=-275668290,D=655702143)),(ParameterName="p_CColorMidtone",ParameterValue=(R=0.455000,G=0.000000,B=0.000000,A=1.000000),ExpressionGUID=(A=473594356,B=1338758895,C=824823946,D=864253813)),(ParameterName="p_CColorShadow",ParameterValue=(R=0.555000,G=0.000000,B=0.000000,A=1.000000),ExpressionGUID=(A=-429590341,B=1156435294,C=-1015192901,D=687313413)),(ParameterName="p_BColorHilight",ParameterValue=(R=0.800000,G=0.800000,B=0.800000,A=1.000000),ExpressionGUID=(A=170714760,B=1132476783,C=-275668290,D=655702143)),(ParameterName="p_BColorMidtone",ParameterValue=(R=0.900000,G=0.900000,B=0.900000,A=1.000000),ExpressionGUID=(A=473594356,B=1338758895,C=824823946,D=864253813)),(ParameterName="p_BColorShadow",ParameterValue=(R=1.000000,G=1.000000,B=1.000000,A=1.000000),ExpressionGUID=(A=-429590341,B=1156435294,C=-1015192901,D=687313413),(ParameterName="p_CColorShadow",ParameterValue=(R=0.000000,G=1.000000,B=0.000000,A=1.000000),ExpressionGUID=(A=-429590341,B=1156435294,C=-1015192901,D=687313413)))

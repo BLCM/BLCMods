@@ -1,0 +1,77 @@
+#Property dump for object 'StructProperty WillowGame.FiringModeDefinition:ImpactResponses.ImpactResponses'
+
+#Outer=ArrayProperty'WillowGame.FiringModeDefinition:ImpactResponses'
+
+#Accommodator 2.0 (AR version)#
+#Turns the Lead Storm into the Accommodator!
+#The Accommodator is an adaptive assault rifle, meaning it always matches elements with your targets weakness.
+#Shoot flesh and it does fire damage, shoot shields for shock, and shoot armor for corrosive.
+#It also has the ability to slag enemies, it truly has everything you need!
+
+#!!Note that this is a WIP. Not every damage surface (flesh,shield etc) has been implemented yet because i have yet to find a list of all of them. The skin is also just a placeholder until i figure out how to make a better one. The gun for now is functional enough to play with though. It is also quite powerful atm. I am aware that the damage is a bit high but i will balance this out when i got the gun working, and looking, fully the way i want it to!!
+
+#Card#
+set GD_Sage_RaidWeapons.Name.Title.Sage_Seraph_LeadStorm_Title PartName Accommodator
+set GD_Sage_RaidWeapons.Name.Title.Sage_Seraph_LeadStorm_Title:AttributePresentationDefinition_8 NoConstraintText Always has exactly what you need!
+
+#Material#
+set GD_Sage_RaidWeapons.ManufacturerMaterials.Mat_Vladof_1_Leadstorm Material MaterialInstanceConstant'Common_GunMaterials.Materials.sniper.Mati_MaliwanLegendarySRVolcano'
+
+#Barrel#
+set GD_Sage_RaidWeapons.AssaultRifle.AR_Barrel_LeadStorm WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.GameplayAttributes.PlayerCriticalHitBonus',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.230000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.400000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponPerShotAccuracyImpulse',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.100000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponExtraShotChance',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=10.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.700000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponReloadSpeed',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+set GD_Sage_RaidWeapons.AssaultRifle.AR_Barrel_LeadStorm NumPhysicalBarrelsToFireFrom 0
+set GD_Sage_RaidWeapons.AssaultRifle.AR_Barrel_LeadStorm BoneControllers None
+set GD_Sage_RaidWeapons.AssaultRifle.AR_Barrel_LeadStorm bIsSpinningEnabled False
+set GD_Sage_RaidWeapons.AssaultRifle.AR_Barrel_LeadStorm bFlapsEnabled True
+set GD_Sage_RaidWeapons.AssaultRifle.AR_Barrel_LeadStorm SpinUpDuration (BaseValueConstant=0.000000)
+set GD_Sage_RaidWeapons.AssaultRifle.AR_Barrel_LeadStorm SpinDownDuration (BaseValueConstant=0.000000)
+set GD_Sage_RaidWeapons.AssaultRifle.AR_Barrel_LeadStorm StartingSpinUpFireIntervalMultiplier 0.000000
+set GD_Sage_RaidWeapons.AssaultRifle.AR_Barrel_LeadStorm FlapsExpandDuration (BaseValueConstant=1.000000)
+set GD_Sage_RaidWeapons.AssaultRifle.AR_Barrel_LeadStorm FlapsCollapseDuration (BaseValueConstant=2.000000)
+set GD_Sage_RaidWeapons.AssaultRifle.AR_Barrel_LeadStorm ManufacturerDefinitionForScopeMovie ManufacturerDefinition'GD_Manufacturers.Manufacturers.Maliwan'
+set GD_Sage_RaidWeapons.AssaultRifle.AR_Barrel_LeadStorm GestaltModeSkeletalMeshName AR_Barrel_Dahl
+set GD_Sage_RaidWeapons.AssaultRifle.AR_Barrel_LeadStorm AttributeSlotUpgrades (SlotName="WeaponFireRate",GradeIncrease=0,bActivateSlot=True)
+
+#Bullet#
+set GD_Sage_RaidWeapons.AssaultRifle.AR_Barrel_LeadStorm CustomFiringModeDefinition FiringModeDefinition'GD_Sage_RaidWeapons.FiringModes.Bullet_Assault_LeadStorm'
+
+set GD_Sage_RaidWeapons.FiringModes.Bullet_Assault_LeadStorm Speed 6000.000000
+set GD_Sage_RaidWeapons.FiringModes.Bullet_Assault_LeadStorm Acceleration (Z=0.000000)
+set GD_Sage_RaidWeapons.FiringModes.Bullet_Assault_LeadStorm TimerEvents (Time=0.000000,Response=(SplitNum=0,SplitAngle=0.000000,SplitAngleOffset=0.000000,SplitDistance=0.000000,SplitFire=FiringModeDefinition'GD_Sage_RaidWeapons.FiringModes.Bullet_Assault_LeadStorm_Child',NewSpeed=0.000000,bDetonate=True,bRespawnTracer=True,bUpdateBeamSourceLocation=False,Behaviors=))
+set GD_Sage_RaidWeapons.FiringModes.Bullet_Assault_LeadStorm FiringPatternLines (StartPoint=(Pitch=0,Yaw=0,Roll=0),EndPoint=(Pitch=0,Yaw=0,Roll=0),bUseStartPointOnly=True,CustomWaveMotion=(bUseCustomWaveMotion=False,WaveFreq=(X=0.000000,Y=0.000000,Z=0.000000),WaveAmp=(X=0.000000,Y=0.000000,Z=0.000000),WavePhase=(X=0.000000,Y=0.000000,Z=0.000000)))
+
+#Bullet - Adaptive#
+set GD_Sage_RaidWeapons.FiringModes.Bullet_Assault_LeadStorm ImpactResponses ((DamageSurfaceType=DMGSURFACE_Flesh,bDisableRegularBulletDamage=True,Behaviors=(Behavior_Explode'GD_Weap_SMG.FiringModes.Bullet_SMG_Chulainn:Behavior_Explode_5',Behavior_Explode'GD_Weap_Pistol.FiringModes.Bullets_Pistol_Bandit_Tinderbox:Behavior_Explode_5')),(DamageSurfaceType=DMGSURFACE_Armor,bDisableRegularBulletDamage=True,Behaviors=(Behavior_Explode'GD_Weap_SMG.FiringModes.Bullet_SMG_Chulainn:Behavior_Explode_5',Behavior_Explode'GD_Sage_RaidWeapons.FiringModes.Bullet_Pistol_Maliwan_Infection:Behavior_Explode_5')),(DamageSurfaceType=DMGSURFACE_Shield,bDisableRegularBulletDamage=True,Behaviors=(Behavior_Explode'GD_Weap_SMG.FiringModes.Bullet_SMG_Chulainn:Behavior_Explode_5',Behavior_Explode'GD_Sage_Weapons.FiringModes.Bullet_Shotgun_Twister:Behavior_Explode_5')))
+
+#Slag Explosion#
+set GD_Weap_SMG.FiringModes.Bullet_SMG_Chulainn:Behavior_Explode_5 DamageFormula (BaseValueScaleConstant=0.000000)
+set GD_Weap_SMG.FiringModes.Bullet_SMG_Chulainn:Behavior_Explode_5 DamageRadiusFormula (BaseValueConstant=100.000000)
+set GD_Weap_SMG.FiringModes.Bullet_SMG_Chulainn:Behavior_Explode_5 Definition ExplosionDefinition'GD_Explosions.Slag.Explosion_SlagMaster'
+set GD_Weap_SMG.FiringModes.Bullet_SMG_Chulainn:Behavior_Explode_5 StatusEffectDamage (BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0.000000)
+set GD_Weap_SMG.FiringModes.Bullet_SMG_Chulainn:Behavior_Explode_5 StatusEffectChance (BaseValueConstant=300.000000)
+set GD_Weap_SMG.FiringModes.Bullet_SMG_Chulainn:Behavior_Explode_5 InstigatorSelfDamageScale 0.000000
+
+#Fire Explosion#
+set GD_Weap_Pistol.FiringModes.Bullets_Pistol_Bandit_Tinderbox:Behavior_Explode_5 DamageFormula (BaseValueScaleConstant=2.000000)
+set GD_Weap_Pistol.FiringModes.Bullets_Pistol_Bandit_Tinderbox:Behavior_Explode_5 DamageRadiusFormula (BaseValueConstant=100.000000)
+set GD_Weap_Pistol.FiringModes.Bullets_Pistol_Bandit_Tinderbox:Behavior_Explode_5 Definition ExplosionDefinition'GD_Explosions.Incendiary.Explosion_IncendiaryMaster'
+set GD_Weap_Pistol.FiringModes.Bullets_Pistol_Bandit_Tinderbox:Behavior_Explode_5 StatusEffectDamage (BaseValueConstant=2.000000)
+set GD_Weap_Pistol.FiringModes.Bullets_Pistol_Bandit_Tinderbox:Behavior_Explode_5 StatusEffectChance (BaseValueScaleConstant=2.000000)
+set GD_Weap_Pistol.FiringModes.Bullets_Pistol_Bandit_Tinderbox:Behavior_Explode_5 InstigatorSelfDamageScale 0.000000
+
+#Corrosive Explosion# 
+set GD_Sage_RaidWeapons.FiringModes.Bullet_Pistol_Maliwan_Infection:Behavior_Explode_5 DamageFormula (BaseValueScaleConstant=2.000000)
+set GD_Sage_RaidWeapons.FiringModes.Bullet_Pistol_Maliwan_Infection:Behavior_Explode_5 DamageRadiusFormula (BaseValueConstant=100.000000)
+set GD_Sage_RaidWeapons.FiringModes.Bullet_Pistol_Maliwan_Infection:Behavior_Explode_5 Definition ExplosionDefinition'GD_Explosions.Corrosive.Explosion_CorrosiveMaster'
+set GD_Sage_RaidWeapons.FiringModes.Bullet_Pistol_Maliwan_Infection:Behavior_Explode_5 StatusEffectDamage (BaseValueConstant=2.000000)
+set GD_Sage_RaidWeapons.FiringModes.Bullet_Pistol_Maliwan_Infection:Behavior_Explode_5 StatusEffectChance (BaseValueScaleConstant=2.000000)
+set GD_Sage_RaidWeapons.FiringModes.Bullet_Pistol_Maliwan_Infection:Behavior_Explode_5 InstigatorSelfDamageScale 0.000000
+
+#Shock Explosion#
+set GD_Sage_Weapons.FiringModes.Bullet_Shotgun_Twister:Behavior_Explode_5 DamageFormula (BaseValueScaleConstant=2.000000)
+set GD_Sage_Weapons.FiringModes.Bullet_Shotgun_Twister:Behavior_Explode_5 DamageRadiusFormula (BaseValueConstant=100.000000)
+set GD_Sage_Weapons.FiringModes.Bullet_Shotgun_Twister:Behavior_Explode_5 StatusEffectDamage (BaseValueConstant=2.000000)
+set GD_Sage_Weapons.FiringModes.Bullet_Shotgun_Twister:Behavior_Explode_5 StatusEffectChance (BaseValueScaleConstant=2.000000)
+set GD_Sage_Weapons.FiringModes.Bullet_Shotgun_Twister:Behavior_Explode_5 InstigatorSelfDamageScale 0.000000
+############################################################################################################

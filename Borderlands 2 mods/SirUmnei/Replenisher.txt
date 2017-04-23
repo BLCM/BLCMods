@@ -1,0 +1,17 @@
+#####################################################
+The Replenisher
+Changes the Afterburner Relic to Regenerate Ammo (excluding rocket launchers).
+
++2.7 Ammo Regeneration
+
+Original code by Aaron0000, tweaked by SirUmnei.
+Enjoy!
+#####################################################
+
+set GD_Artifacts.A_Item_Unique.Artifact_Afterburner AttributeSlotEffects ((SlotName="Effect1",bExternalSlot=True,bRunEffectsAsSkill=False,AttributeToModify=AttributeDefinition'D_Attributes.GameplayAttributes.PlayerCurrentWeaponAmmoRegenerationMultiplier',ConstraintAttribute=None,ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Artifacts.BalanceAttributes.Init_ModifierBase_Linear',BaseValueScaleConstant=0.030000),PerGradeUpgrade=(BaseValueConstant=0.030000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bIncludeInFunStats=False,bIncludeAlliesAsTarget=False,bEnforceMinimumGrade=False,bEnforceMaximumGrade=False,MinimumGrade=0,MaximumGrade=12,TargetInstanceDataName=)))
+
+set GD_Artifacts.A_Item_Unique.Artifact_Afterburner UIStatList ((bDisplayAsModifierOnly=True,AttributeStyle=ATTRSTYLE_ModifierText,SupplementalAttributeStyle=ATTRSTYLE_JustNumber,StatCombinationMethod=SCM_Multiply,Attribute=AttributeDefinition'D_Attributes.GameplayAttributes.PlayerCurrentWeaponAmmoRegenerationMultiplier',ConstraintAttribute=None,SupplementalAttributeExpression=(AttributeOperand1=None,ComparisonOperator=OPERATOR_EqualTo,Operand2Usage=OPERAND_PreferAttribute,AttributeOperand2=None,ConstantOperand2=0.000000),SupplementalAttributeToAppend=None))
+
+set GD_Artifacts.Body.Body_Afterburner:AttributePresentationDefinition_0 Description Increases [skill]ammo regeneration[-skill].
+
+set GD_Artifacts.A_Item_Unique.Artifact_Afterburner ItemName The Replenisher

@@ -1,0 +1,83 @@
+#Turns the Chere-Amie (sniper) into the Acid Rain
+#The Acid Rain is a corrosive Maliwan sniper meant to compliment the Volcano and the Storm
+#Shoots Teapot bullets with big splash for added awesomeness
+#It has high status chance at ~74% and has 100% splash damage
+#
+#Buffs for the Storm and Volcano are also included, but optional
+#Both of them had their damage, status chance and DoT buffed significantly
+#The storm got a bit more damage then the Volcano to compensate for not having splash
+#The Storm's child projectiles have better targeting range so enemies dont have to be right on top of them anymore
+#Both of them are also +100% edgier
+##################################################################################################################
+
+
+#Acid Rain#
+set GD_Weap_SniperRifles.Name.Title.Title__Unique_Chere-amie PartName Acid Rain
+
+set GD_Weap_SniperRifles.Name.Title.Title__Unique_Chere-amie:AttributePresentationDefinition_8 NoConstraintText As death rained from the sky, the world went silent..
+
+set GD_Weap_SniperRifles.ManufacturerMaterials.Material_Maliwan_3_ChereAmie Material MaterialInstanceConstant'Common_GunMaterials.Materials.sniper.Mati_VladofLegendarySRLyudmila'
+
+set GD_Weap_SniperRifles.Barrel.SR_Barrel_Hyperion_ChereAmie CustomFiringModeDefinition FiringModeDefinition'GD_Weap_Pistol.FiringModes.Bullet_Pistol_Dahl_Teapot'
+
+set GD_Weap_Pistol.FiringModes.Bullet_Pistol_Dahl_Teapot Speed 45000
+
+set GD_Weap_Pistol.FiringModes.Bullet_Pistol_Dahl_Teapot:Behavior_Explode_5 DamageFormula (BaseValueScaleConstant=1.000000)
+set GD_Weap_Pistol.FiringModes.Bullet_Pistol_Dahl_Teapot:Behavior_Explode_5 DamageRadiusFormula (BaseValueConstant=280.000000)
+set GD_Weap_Pistol.FiringModes.Bullet_Pistol_Dahl_Teapot:Behavior_Explode_5 InstigatorSelfDamageScale 0.500000
+
+set GD_Weap_SniperRifles.Barrel.SR_Barrel_Hyperion_ChereAmie ManufacturerDefinitionForScopeMovie ManufacturerDefinition'GD_Manufacturers.Manufacturers.Maliwan'
+
+set GD_Weap_SniperRifles.Barrel.SR_Barrel_Hyperion_ChereAmie ExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.GameplayAttributes.PlayerCriticalHitBonus',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.DamageEnhancementModifiers.PlayerConvertDamageToHealingPercent',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0.000000)))
+
+set GD_Weap_SniperRifles.Barrel.SR_Barrel_Hyperion_ChereAmie WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.150000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Maliwan',InitializationDefinition=None,BaseValueScaleConstant=-0.300000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponStatusEffectDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.800000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponStatusEffectChanceModifier',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Maliwan',InitializationDefinition=None,BaseValueScaleConstant=0.900000)))
+
+set GD_Weap_SniperRifles.Barrel.SR_Barrel_Hyperion_ChereAmie AttributeSlotUpgrades ((SlotName="WeaponDamage",GradeIncrease=10,bActivateSlot=True),(SlotName="WeaponAccuracyImpulse",GradeIncrease=10,bActivateSlot=True))
+
+#Extra bullet effect#
+set GD_Weap_Pistol.FiringModes.Bullet_Pistol_Dahl_Teapot OnAnyImpact (Behavior_Explode'GD_Weap_Pistol.FiringModes.Bullet_Pistol_Dahl_Teapot:Behavior_Explode_5',Behavior_SpawnProjectile'GD_Weap_Pistol.FiringModes.Bullet_Pistol_Maliwan_ThunderballFists:Behavior_SpawnProjectile_0')
+
+set GD_Weap_Pistol.Projectiles.Projectile_ThunderballFistsCHild InFlightEffects ParticleSystem'FX_WEP_Trails.Particles.Part_Wep_Tracer_Wavy_Corrosive'
+#FX_WEP_Trails.Particles.Part_Wep_Tracer_Wavy_Corrosive
+set GD_Weap_Pistol.Projectiles.Projectile_ThunderballFistsCHild bIsWeaponFire True
+set GD_Weap_Pistol.Projectiles.Projectile_ThunderballFistsCHild GravityScaling 0.300000
+
+
+################################################################################
+
+#Storm#
+
+set GD_Gladiolus_Weapons.Name.Title.Title_Pearlescent_Storm:AttributePresentationDefinition_8 NoConstraintText Thence lightning tore the world asunder..
+
+set GD_Gladiolus_Weapons.Projectiles.Projectile_Storm_Launcher MaxLifeSpan 6
+set GD_Gladiolus_Weapons.Projectiles.Projectile_Storm_Launcher SearchRadius 32768
+
+set GD_Gladiolus_Weapons.sniper.SR_Barrel_Maliwan_Storm WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.800000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Maliwan',InitializationDefinition=None,BaseValueScaleConstant=-0.300000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponStatusEffectDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.800000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponStatusEffectChanceModifier',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Maliwan',InitializationDefinition=None,BaseValueScaleConstant=0.900000)))
+################################################################################
+
+#Volcano#
+
+set GD_Weap_SniperRifles.Name.Title_Maliwan.Title_Legendary_Volcano:AttributePresentationDefinition_8 NoConstraintText Blacken the sky.. Scorch the earth.. Make them go extinct..
+
+set GD_Weap_SniperRifles.Barrel.SR_Barrel_Maliwan_Volcano WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.150000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Maliwan',InitializationDefinition=None,BaseValueScaleConstant=-0.300000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponStatusEffectDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.800000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponStatusEffectChanceModifier',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Maliwan',InitializationDefinition=None,BaseValueScaleConstant=0.900000)))
+################################################################################
+
+#Desolation#
+
+#Red text = All fear the wastelands, where life cannot exist..#
+
+
+GD_Aster_Shields.A_Item.Aster_Seraph_Antagonist_Shield
+GD_Aster_ItemGrades.Shields.Aster_Seraph_Antagonist_Shield_Balance
+
+GD_Aster_Shields.Accessory.Accessory_Antagonist
+
+
+
+
+
+
+
+
+
+ 

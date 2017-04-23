@@ -1,0 +1,22 @@
+//turns the patriot into a maliwan rakehell
+//sanity check doesnt like this, so be careful to execute the patch BEFORE you load your save file
+//normal gibbed codes for the patriot won't work, so use this instead: BL2(hwAAAABJ+QGDCAIAEQGFioJhAGMCsAXMBBgbMGRg/v/PAXwEgwLw) that's a fire one, but its pretty easy to mess around with elements and parts
+
+set GD_Orchid_RaidWeapons.sniper.Patriot.Orchid_Seraph_Patriot_Balance:WeaponPartListCollectionDefinition_286 AssociatedWeaponType WeaponTypeDefinition'GD_Weap_SniperRifles.A_Weapons.WeaponType_Maliwan_Sniper'
+set GD_Orchid_RaidWeapons.sniper.Patriot.Orchid_Seraph_Patriot_Balance:WeaponPartListCollectionDefinition_286 BodyPartData (bEnabled=True,WeightedParts=((Part=WeaponPartDefinition'GD_Weap_SniperRifles.Body.SR_Body_Maliwan_4',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=2)))
+set GD_Orchid_RaidWeapons.sniper.Patriot.Orchid_Seraph_Patriot_Balance:WeaponPartListCollectionDefinition_286 ElementalPartData (bEnabled=True,WeightedParts=((Part=WeaponPartDefinition'GD_Weap_SniperRifles.elemental.SR_Elemental_Fire',Manufacturers=,MinGameStageIndex=3,MaxGameStageIndex=1,DefaultWeightIndex=2),(Part=WeaponPartDefinition'GD_Weap_SniperRifles.elemental.SR_Elemental_Shock',Manufacturers=,MinGameStageIndex=4,MaxGameStageIndex=1,DefaultWeightIndex=2),(Part=WeaponPartDefinition'GD_Weap_SniperRifles.elemental.SR_Elemental_Corrosive',Manufacturers=,MinGameStageIndex=5,MaxGameStageIndex=1,DefaultWeightIndex=2),(Part=WeaponPartDefinition'GD_Weap_SniperRifles.elemental.SR_Elemental_Slag',Manufacturers=,MinGameStageIndex=6,MaxGameStageIndex=1,DefaultWeightIndex=2)))
+
+set GD_Orchid_RaidWeapons.sniper.Patriot.Orchid_Seraph_Patriot_Balance BaseDefinition WeaponBalanceDefinition'GD_Weap_SniperRifles.A_Weapons.Sniper_Maliwan_4_VeryRare'
+
+set GD_Orchid_RaidWeapons.sniper.Patriot.Orchid_Seraph_Patriot_Balance:PartList BodyPartData (bEnabled=True,WeightedParts=((Part=WeaponPartDefinition'GD_Weap_SniperRifles.Body.SR_Body_Maliwan_4',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=2)))
+
+set GD_Orchid_RaidWeapons.sniper.Patriot.Orchid_Seraph_Patriot_Balance rarity (basevalueattribute=none)
+set GD_Orchid_RaidWeapons.sniper.Patriot.Orchid_Seraph_Patriot_Balance rarity (BaseValueConstant=501)
+
+set GD_Orchid_RaidWeapons.sniper.Patriot.Orchid_Seraph_Patriot_Barrel WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=7.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.750000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponReloadSpeed',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.300000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+set GD_Orchid_RaidWeapons.sniper.Patriot.Orchid_Seraph_Patriot_Barrel AttributeSlotUpgrades ((SlotName="WeaponFireRate",GradeIncrease=13,bActivateSlot=True))
+
+
+
+
+
