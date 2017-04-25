@@ -2,7 +2,7 @@
 By Aaron0000
 
 Features;
-Overhauls the Darts into a more useful form, and replaces Spikers with a new type of weapon (Plasma Pistol). Also turns the Logan's Gun, Dahlminator, and Wanderlust into special plasma pistols.
+Overhauls the Darts into a more useful form, and replaces Spikers with a new type of weapon (Plasma Pistol). Also turns the Logan's Gun and Dahlminator into plasma pistols, and the Wanderlust into a hybrid of spiker and plasma pistol.
 
 
 PLASMA PISTOLS;
@@ -197,6 +197,7 @@ set GD_Weap_Pistol.FiringModes.Bullet_Pistol_LogansGun BeamTraceNumSteps 6.00000
 
 ----------
 WANDERLUST
+Acts like a fusion between darts and plasma pistols.
 Charged Shot has significantly less delay.
 Slightly increased Damage.
 Charged shots cost one less ammo.
@@ -211,28 +212,6 @@ set GD_Lobelia_Weapons.Pistol.Pistol_Barrel_Alien_Homing_Wanderlust ZoomExternal
 set GD_Lobelia_Weapons.Pistol.Pistol_Barrel_Alien_Homing_Wanderlust WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Maliwan',InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Maliwan',InitializationDefinition=None,BaseValueScaleConstant=-0.750000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Maliwan',InitializationDefinition=None,BaseValueScaleConstant=1.400000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponReloadSpeed',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.300000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Maliwan',InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Maliwan',InitializationDefinition=None,BaseValueScaleConstant=19.500000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponPerShotAccuracyImpulse',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Maliwan',InitializationDefinition=None,BaseValueScaleConstant=-1.750000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponStatusEffectChanceModifier',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Maliwan',InitializationDefinition=None,BaseValueScaleConstant=0.750000)))
 
 
-
-set GD_Lobelia_Weapons.FiringModes.Bullet_Pistol_Homing_Wanderlust FireType EWWFT_Bullet
-
-set GD_Lobelia_Weapons.FiringModes.Bullet_Pistol_Homing_Wanderlust ExplosionOverrideDefinition ExplosionCollectionDefinition'GD_Weap_SMG.Explosions.Plasma_Elemental_Explosions'
-
-set GD_Lobelia_Weapons.FiringModes.Bullet_Pistol_Homing_Wanderlust ExplosionOverideInstanceDataName ExplosionOverride
-
-set GD_Lobelia_Weapons.FiringModes.Bullet_Pistol_Homing_Wanderlust PartSysTemplate ParticleSystem'FX_WEP_Trails.Particles.Alien.Part_Wep_Tracer_Alien_SMG'
-
-set GD_Lobelia_Weapons.FiringModes.Bullet_Pistol_Homing_Wanderlust ConditionalPartSysTemplate EffectCollectionDefinition'GD_Weap_SMG.Effects.SMG_ETech_Tracers'
-
-set GD_Lobelia_Weapons.FiringModes.Bullet_Pistol_Homing_Wanderlust OnAnyImpact (Behavior_Explode'GD_Weap_SMG.FiringModes.Bullet_Plasma_Default:Behavior_Explode_5')
-
-set GD_Lobelia_Weapons.FiringModes.Bullet_Pistol_Homing_Wanderlust Speed 12000.000000
-
-set GD_Lobelia_Weapons.FiringModes.Bullet_Pistol_Homing_Wanderlust SoundDefinition FiringModeSoundDefinition'GD_Weap_SMG.FiringModes.PlasmaSoundDefinition'
-
-set GD_Lobelia_Weapons.FiringModes.Bullet_Pistol_Homing_Wanderlust Lifetime 5.000000
-
-set GD_Lobelia_Weapons.FiringModes.Bullet_Pistol_Homing_Wanderlust TraceInterval 0.200000
-
-set GD_Lobelia_Weapons.FiringModes.Bullet_Pistol_Homing_Wanderlust BeamTraceNumSteps 6.000000
 
 
 
