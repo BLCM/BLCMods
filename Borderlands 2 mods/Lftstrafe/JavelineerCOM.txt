@@ -1,30 +1,39 @@
-#
+################################################################################################################################
+ __    ____  ____  ___  ____  ____    __    ____  ____ 
+(  )  ( ___)(_  _)/ __)(_  _)(  _ \  /__\  ( ___)( ___)
+ )(__  )__)   )(  \__ \  )(   )   / /(__)\  )__)  )__) 
+(____)(__)   (__) (___/ (__) (_)\_)(__)(__)(__)  (____)
 
-Created by Lftstrafe with help from ShadowEvil 
+Class Mod: Legendary Javelineer
+Replaces: Legendary Psycho
 
-Legendary Javelineer COM (Replaces Legendary Psycho)
+Effects:
 
-+25% Explosive Damage
-+25% Launcher Magazine Size
+	- 25% Explosive Damage
+	- 25% Launcher Magazine Size
+	- Regenerates Launcher Ammo
+	- +5 Blood-filled Guns
+	- +5 Blood Bath
+	- +5 Feed the Meat
+	- +5 Strip the Flesh
+	- +5 Nervous Blood
 
-+5 Feed the Meat
-+5 Blood-filled Guns 
-+5 Blood Bath
-+5 Strip The Flesh
-+5 Nervous Blood
+Content:
 
-Rocket Launcher ammo regeneration, it's around 1 per second.
+Custom Class Mod Exhibit: Legendary Javelineer - https://youtu.be/QpNpYCn2aIA (Legacine)
 
-#
+If you've made content and wish for it to be included here, then please message me on Twitter, YouTube or Discord.
+
+################################################################################################################################
+
+set GD_Lilac_ClassMods.Prefix_Psycho.Prefix_Z_00_LengendaryPsycho PartName Legendary Javelineer
+set GD_Lilac_ClassMods.A_Item_Lilac.ClassMod_Psycho_Z_LengendaryPsycho:AttributePresentationDefinition_3 Description "HOW DOES THIS THING WORK?" <br> <font color="#ffffff">Regenerates Rocket Launcher ammo.</font>
+set GD_Lilac_ClassMods.Att_Presentations.AttrPresent_TasteOfBlood Description Nervous Blood Skill
+
+# Class Mod UI
 
 set GD_Lilac_ClassMods.A_Item_Lilac.ClassMod_Psycho_Z_LengendaryPsycho UIStatList ((bDisplayAsModifierOnly=True,AttributeStyle=ATTRSTYLE_ModifierText,SupplementalAttributeStyle=ATTRSTYLE_JustNumber,StatCombinationMethod=SCM_Multiply,Attribute=AttributeDefinition'D_Attributes.DamageTypeModifers.InstigatedExplosiveDamageModifier',ConstraintAttribute=None,SupplementalAttributeExpression=(AttributeOperand1=None,ComparisonOperator=OPERATOR_EqualTo,Operand2Usage=OPERAND_PreferAttribute,AttributeOperand2=None,ConstantOperand2=0.000000),SupplementalAttributeToAppend=None),(bDisplayAsModifierOnly=True,AttributeStyle=ATTRSTYLE_ModifierText,SupplementalAttributeStyle=ATTRSTYLE_JustNumber,StatCombinationMethod=SCM_Multiply,Attribute=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ConstraintAttribute=AttributeDefinition'D_Attributes.WeaponType.Weapon_Is_RocketLauncher',SupplementalAttributeExpression=(AttributeOperand1=None,ComparisonOperator=OPERATOR_EqualTo,Operand2Usage=OPERAND_PreferAttribute,AttributeOperand2=None,ConstantOperand2=0.000000),SupplementalAttributeToAppend=None),(bDisplayAsModifierOnly=True,AttributeStyle=ATTRSTYLE_ModifierText,SupplementalAttributeStyle=ATTRSTYLE_JustNumber,StatCombinationMethod=SCM_Multiply,Attribute=AttributeDefinition'D_Attributes.AmmoResource_Rocket_Launcher.Ammo_Rocket_Launcher_RegenerationRate',ConstraintAttribute=None,SupplementalAttributeExpression=(AttributeOperand1=None,ComparisonOperator=OPERATOR_EqualTo,Operand2Usage=OPERAND_PreferAttribute,AttributeOperand2=None,ConstantOperand2=0.000000),SupplementalAttributeToAppend=None))
 
+# Class Mod Attributes
+
 set GD_Lilac_ClassMods.A_Item_Lilac.ClassMod_Psycho_Z_LengendaryPsycho AttributeSlotEffects ((SlotName="PrimaryStatBonus",bExternalSlot=True,bRunEffectsAsSkill=False,AttributeToModify=AttributeDefinition'D_Attributes.DamageTypeModifers.InstigatedExplosiveDamageModifier',ConstraintAttribute=None,ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_ClassMods.Misc.Init_StatBonus_Medium',BaseValueScaleConstant=0.420000),PerGradeUpgrade=(BaseValueConstant=0.100000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0.100000),bIncludeInFunStats=False,bIncludeAlliesAsTarget=False,bEnforceMinimumGrade=False,bEnforceMaximumGrade=False,MinimumGrade=0,MaximumGrade=0,TargetInstanceDataName=),(SlotName="PrimaryStatBonus02",bExternalSlot=True,bRunEffectsAsSkill=True,AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ConstraintAttribute=AttributeDefinition'D_Attributes.WeaponType.Weapon_Is_RocketLauncher',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_ClassMods.Misc.Init_StatBonus_Weak',BaseValueScaleConstant=0.480000),PerGradeUpgrade=(BaseValueConstant=0.100000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0.100000),bIncludeInFunStats=False,bIncludeAlliesAsTarget=False,bEnforceMinimumGrade=True,bEnforceMaximumGrade=False,MinimumGrade=0,MaximumGrade=0,TargetInstanceDataName=),(SlotName="StatPenalty",bExternalSlot=True,bRunEffectsAsSkill=True,AttributeToModify=AttributeDefinition'D_Attributes.AmmoResource_Rocket_Launcher.Ammo_Rocket_Launcher_RegenerationRate',ConstraintAttribute=None,ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_ClassMods.Misc.Init_StatBonus_AmmoRegen',BaseValueScaleConstant=0.090000),PerGradeUpgrade=(BaseValueConstant=0.100000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0.100000),bIncludeInFunStats=False,bIncludeAlliesAsTarget=True,bEnforceMinimumGrade=True,bEnforceMaximumGrade=False,MinimumGrade=0,MaximumGrade=0,TargetInstanceDataName=),(SlotName="Skill1",bExternalSlot=True,bRunEffectsAsSkill=True,AttributeToModify=InventoryAttributeDefinition'GD_Lilac_ClassMods.SkillGradeModifiers.BloodfilledGuns',ConstraintAttribute=None,ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_ClassMods.Misc.Init_BaseSkillPointCalculation',BaseValueScaleConstant=1.000000),PerGradeUpgrade=(BaseValueConstant=0.340000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bIncludeInFunStats=True,bIncludeAlliesAsTarget=False,bEnforceMinimumGrade=True,bEnforceMaximumGrade=False,MinimumGrade=0,MaximumGrade=0,TargetInstanceDataName=),(SlotName="Skill2",bExternalSlot=True,bRunEffectsAsSkill=True,AttributeToModify=InventoryAttributeDefinition'GD_Lilac_ClassMods.SkillGradeModifiers.BloodBath',ConstraintAttribute=None,ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_ClassMods.Misc.Init_BaseSkillPointCalculation',BaseValueScaleConstant=1.000000),PerGradeUpgrade=(BaseValueConstant=0.340000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bIncludeInFunStats=True,bIncludeAlliesAsTarget=False,bEnforceMinimumGrade=True,bEnforceMaximumGrade=False,MinimumGrade=0,MaximumGrade=0,TargetInstanceDataName=),(SlotName="Skill3",bExternalSlot=True,bRunEffectsAsSkill=True,AttributeToModify=InventoryAttributeDefinition'GD_Lilac_ClassMods.SkillGradeModifiers.FeedTheMeat',ConstraintAttribute=None,ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_ClassMods.Misc.Init_BaseSkillPointCalculation',BaseValueScaleConstant=1.000000),PerGradeUpgrade=(BaseValueConstant=0.340000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bIncludeInFunStats=True,bIncludeAlliesAsTarget=False,bEnforceMinimumGrade=True,bEnforceMaximumGrade=False,MinimumGrade=0,MaximumGrade=0,TargetInstanceDataName=),(SlotName="Skill4",bExternalSlot=True,bRunEffectsAsSkill=True,AttributeToModify=InventoryAttributeDefinition'GD_Lilac_ClassMods.SkillGradeModifiers.StripTheFlesh',ConstraintAttribute=None,ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_ClassMods.Misc.Init_BaseSkillPointCalculation',BaseValueScaleConstant=1.000000),PerGradeUpgrade=(BaseValueConstant=0.340000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bIncludeInFunStats=True,bIncludeAlliesAsTarget=False,bEnforceMinimumGrade=True,bEnforceMaximumGrade=False,MinimumGrade=0,MaximumGrade=0,TargetInstanceDataName=),(SlotName="Skill5",bExternalSlot=True,bRunEffectsAsSkill=True,AttributeToModify=InventoryAttributeDefinition'GD_Lilac_ClassMods.SkillGradeModifiers.TasteOfBlood',ConstraintAttribute=None,ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_ClassMods.Misc.Init_BaseSkillPointCalculation',BaseValueScaleConstant=1.000000),PerGradeUpgrade=(BaseValueConstant=0.340000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bIncludeInFunStats=True,bIncludeAlliesAsTarget=False,bEnforceMinimumGrade=True,bEnforceMaximumGrade=False,MinimumGrade=0,MaximumGrade=0,TargetInstanceDataName=))
-
-set GD_Lilac_ClassMods.Att_Presentations.AttrPresent_TasteOfBlood Description Nervous Blood Skill
-
-set GD_Lilac_ClassMods.SkillGradeModifiers.TasteOfBlood:SkillAttributeContextResolver_0 AssociatedSkillPathName (PathComponentNames[3] = "GD_Lilac_Skills_Bloodlust",PathComponentNames[5] = "NervousBlood")
-
-set GD_Lilac_ClassMods.A_Item_Lilac.ClassMod_Psycho_Z_LengendaryPsycho:AttributePresentationDefinition_3 Description "HOW DOES THIS THING WORK?" <br> <font color="#ffffff">Regenerates Rocket Launcher ammo.</font>
-
-set GD_Lilac_ClassMods.Prefix_Psycho.Prefix_Z_00_LengendaryPsycho PartName Legendary Javelineer
