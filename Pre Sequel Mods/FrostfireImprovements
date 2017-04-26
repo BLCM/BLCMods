@@ -1,0 +1,32 @@
+Changes:
+Removed self-freeze mechanic..
+Slight stat buffs.
+Changed rarity colour to Legendary.
+Increased price to reflect the new rarity colour.
+
+Disclaimer:
+I am still inexperienced with modding, though I was excited to be able to remove the self-freeze by myself and I wanted to share it.
+If somebody with more knowledge can give the Frostfire SMG some of their attention and love, they could make it great and viable at level 70. 
+
+
+
+set GD_Weap_SMG.Barrel.SMG_Barrel_Frostfire WeaponSlotEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponStatusEffectChanceModifier',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.200000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=4.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+set GD_Weap_SMG.Barrel.SMG_Barrel_Frostfire AttributeSlotUpgrades ((SlotName="WeaponDamage",GradeIncrease=11,bActivateSlot=True),(SlotName="WeaponFireRate",GradeIncrease=8,bActivateSlot=True),(SlotName="WeaponReloadSpeed",GradeIncrease=7,bActivateSlot=True),(SlotName="WeaponMagSize",GradeIncrease=9,bActivateSlot=True))
+
+##### Disable self-freeze
+set GD_Weap_SMG.Skills.Skill_Frostfire:BehaviorProviderDefinition_0.Behavior_AttemptStatusEffect_373 StatusEffect None
+
+##### Price and rarity
+set GD_Weap_SMG.Barrel.SMG_Barrel_Frostfire MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'
+set GD_Weap_SMG.Barrel.SMG_Barrel_Frostfire Rarity (BaseValueConstant=5.000000)
+
+##### Subjective flavour text change. Can be disabled if you want.
+set GD_Weap_SMG.Name.Title.Title__Unique_Frostfire:AttributePresentationDefinition_8 NoConstraintText Ymir's breath, captured in a gun.
+
+##### Rarity Colours. Added a couple new ones to the end, changed a few in the middle that the game doesn't already use for anything. 
+##### Can be disabled if you want but then you don't get my lovely Limescent green colour (it is the level 507 one, second from last).
+set WillowGame.GlobalsDefinition RarityLevelColors ((MinLevel=0,MaxLevel=0,Color=(B=175,G=193,R=205,A=0),DropLifeSpanType=DROP_ShortLived,RarityRating=RARITY_Unknown),(MinLevel=1,MaxLevel=1,Color=(B=255,G=255,R=255,A=255),DropLifeSpanType=DROP_ShortLived,RarityRating=RARITY_Common),(MinLevel=2,MaxLevel=2,Color=(B=11,G=210,R=61,A=255),DropLifeSpanType=DROP_LongLived,RarityRating=RARITY_Uncommon),(MinLevel=3,MaxLevel=3,Color=(B=255,G=142,R=60,A=255),DropLifeSpanType=DROP_LiveForever,RarityRating=RARITY_Rare),(MinLevel=4,MaxLevel=4,Color=(B=229,G=63,R=168,A=255),DropLifeSpanType=DROP_LiveForever,RarityRating=RARITY_VeryRare),(MinLevel=5,MaxLevel=5,Color=(B=0,G=180,R=255,A=255),DropLifeSpanType=DROP_LiveForever,RarityRating=RARITY_Legendary),(MinLevel=6,MaxLevel=6,Color=(B=168,G=0,R=202,A=255),DropLifeSpanType=DROP_LiveForever,RarityRating=RARITY_VeryRare),(MinLevel=7,MaxLevel=10,Color=(B=0,G=180,R=255,A=255),DropLifeSpanType=DROP_LiveForever,RarityRating=RARITY_Legendary),(MinLevel=11,MaxLevel=11,Color=(B=147,G=112,R=219,A=255),DropLifeSpanType=DROP_LiveForever,RarityRating=RARITY_Unknown),(MinLevel=12,MaxLevel=12,Color=(B=180,G=180,R=0,A=0),DropLifeSpanType=DROP_LiveForever,RarityRating=RARITY_Unknown),(MinLevel=13,MaxLevel=170,Color=(B=50,G=0,R=230,A=0),DropLifeSpanType=DROP_LiveForever,RarityRating=RARITY_Unknown),(MinLevel=171,MaxLevel=175,Color=(B=71,G=71,R=207,A=255),DropLifeSpanType=DROP_ShortLived,RarityRating=RARITY_Unknown),(MinLevel=176,MaxLevel=180,Color=(B=167,G=199,R=255,A=0),DropLifeSpanType=DROP_ShortLived,RarityRating=RARITY_Unknown),(MinLevel=181,MaxLevel=499,Color=(B=13,G=255,R=255,A=0),DropLifeSpanType=DROP_ShortLived,RarityRating=RARITY_Unknown),(MinLevel=500,MaxLevel=500,Color=(B=255,G=255,R=0,A=0),DropLifeSpanType=DROP_LiveForever,RarityRating=RARITY_Unknown),(MinLevel=501,MaxLevel=501,Color=(B=231,G=164,R=255,A=255),DropLifeSpanType=DROP_LiveForever,RarityRating=RARITY_Seraph),(MinLevel=502,MaxLevel=502,Color=(B=255,G=255,R=255,A=0),DropLifeSpanType=DROP_LiveAsLongAsLevel,RarityRating=RARITY_Unknown),(MinLevel=503,MaxLevel=503,Color=(B=200,G=50,R=145,A=255),DropLifeSpanType=DROP_LiveForever,RarityRating=RARITY_Unknown),(MinLevel=504,MaxLevel=504,Color=(B=191,G=243,R=73,A=0),DropLifeSpanType=DROP_LiveAsLongAsLevel,RarityRating=RARITY_Unknown),(MinLevel=505,MaxLevel=505,Color=(B=255,G=189,R=157,A=0),DropLifeSpanType=DROP_VeryShortLived,RarityRating=RARITY_Unknown),(MinLevel=506,MaxLevel=506,Color=(B=0,G=180,R=255,A=255),DropLifeSpanType=DROP_LiveForever,RarityRating=RARITY_Unknown),(MinLevel=507,MaxLevel=507,Color=(B=0,G=255,R=215,A=255),DropLifeSpanType=DROP_LiveForever,RarityRating=RARITY_Unknown),(MinLevel=508,MaxLevel=508,Color=(B=155,G=180,R=155,A=255),DropLifeSpanType=DROP_LiveForever,RarityRating=RARITY_Unknown))
+
+
+Created by berylmantra.
