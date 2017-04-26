@@ -1,0 +1,42 @@
+//AjaxOgre - Based off of Lftstrafe's old AjaxOgre File
+		//Title
+		set GD_Weap_AssaultRifle.Name.Title.Title_Unique_Scorpio PartName Ogre
+
+		//Prefix
+		set GD_Weap_AssaultRifle.Name.Prefix_Dahl.Prefix_BanditClamp_Damage PartName AR590
+		set GD_Weap_AssaultRifle.Name.Prefix_Dahl.Prefix_BanditClamp_Wild PartName AR147
+		set GD_Weap_AssaultRifle.Name.Prefix_Dahl.Prefix_Bayonet_2 PartName AR424
+		set GD_Weap_AssaultRifle.Name.Prefix_Dahl.Prefix_Box_BulletSpeed PartName AR455
+		set GD_Weap_AssaultRifle.Name.Prefix_Dahl.Prefix_Foregrip_Stability PartName AR298
+		set GD_Weap_AssaultRifle.Name.Prefix_Dahl.Prefix_Shroud1_MagSize PartName AR354
+		set GD_Weap_AssaultRifle.Name.Prefix_Dahl.Prefix_Shroud2_Accuracy PartName AR242
+
+		//Red Text
+		set GD_Weap_AssaultRifle.Name.Title.Title_Unique_Scorpio:AttributePresentationDefinition_8 NoConstraintText <font color="#FFFF00">Chance to cause explosions<br><font color="#FFFFFF">•<font color="#C14242"> Ogre SMASH!
+
+		//Rarity
+		set GD_Weap_AssaultRifle.Barrel.AR_Barrel_Jakobs_Scorpio rarity (BaseValueConstant=7)
+
+		//Damage Type (?)
+		set GD_Weap_AssaultRifle.Barrel.AR_Barrel_Jakobs_Scorpio CustomDamageTypeDefinition GD_Explosive.DamageType.DmgType_Explosive_Impact
+
+		//Firing Mode
+		//set GD_Weap_AssaultRifle.Barrel.AR_Barrel_Jakobs_Scorpio CustomFiringModeDefinition FiringModeDefinition'GD_Iris_Weapons.FiringModes.Bullet_Sniper_Cobra'
+		set GD_Weap_AssaultRifle.Barrel.AR_Barrel_Jakobs_Scorpio CustomFiringModeDefinition FiringModeDefinition'GD_Iris_Weapons.FiringModes.Bullet_Sniper_Cobra'
+
+		//External Attributes
+		set GD_Weap_AssaultRifle.Barrel.AR_Barrel_Jakobs_Scorpio ExternalAttributeEffects ()
+
+		//Weapon Attributes
+		set GD_Weap_AssaultRifle.Barrel.AR_Barrel_Jakobs_Scorpio WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.0000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0.030000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Dahl',InitializationDefinition=None,BaseValueScaleConstant=0.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=5.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=4.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-0.092200,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=14.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponReloadSpeed',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-0.100000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectileSpeedMultiplier',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=100.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=2.000000)))
+
+		//Zoom Attributes
+		set GD_Weap_AssaultRifle.Barrel.AR_Barrel_Jakobs_Scorpio ZoomWeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponAutomaticBurstCount',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Dahl',InitializationDefinition=None,BaseValueScaleConstant=-4.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.0922000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+		//Elemental Part
+		set GD_Weap_AssaultRifle.A_Weapons_Unique.AR_Dahl_3_Scorpio:WeaponPartListCollectionDefinition_41 ElementalPartData (bEnabled=True,WeightedParts=((Part=WeaponPartDefinition'GD_Weap_AssaultRifle.elemental.AR_Elemental_None',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=3)))
+
+		//Skin
+		set Common_GunMaterials.Materials.AssaultRifle.Mati_Dahl_Scorpio VectorParameterValues ((ParameterName="p_ReflectColor",ParameterValue=(R=0.0500000,G=0.0500000,B=0.0500000,A=1.000000),ExpressionGUID=(A=295058103,B=1318551573,C=-2045449573,D=-547597976)),(ParameterName="p_ReflectionChannelScale",ParameterValue=(R=0.0500000,G=0.0500000,B=0.0500000,A=1.000000),ExpressionGUID=(A=295058103,B=1318551573,C=-2045449573,D=-547597976)),(ParameterName="p_PatternColor",ParameterValue=(R=0.0500000,G=0.0500000,B=0.0500000,A=1.000000),ExpressionGUID=(A=676539706,B=1125682796,C=1871983293,D=-2049503601)),(ParameterName="p_PatternScalePosition",ParameterValue=(R=0.0500000,G=0.0500000,B=0.0500000,A=1.000000),ExpressionGUID=(A=-2005018406,B=1132497243,C=-39915121,D=208423616)),(ParameterName="p_PatternChannelScale",ParameterValue=(R=0.0500000,G=0.0500000,B=0.0500000,A=0.000000),ExpressionGUID=(A=439432319,B=1091149893,C=-1991909502,D=1816944627)),(ParameterName="p_EmissiveColor",ParameterValue=(R=0.0500000,G=0.0500000,B=0.0500000,A=1.000000),ExpressionGUID=(A=-2074486426,B=1296399582,C=-2021314681,D=-350758005)),(ParameterName="p_CColorHilight",ParameterValue=(R=0.0500000,G=0.0500000,B=0.0500000,A=1.000000),ExpressionGUID=(A=170714760,B=1132476783,C=-275668290,D=655702143)),(ParameterName="p_CColorMidtone",ParameterValue=(R=0.0500000,G=0.0500000,B=0.0500000,A=1.000000),ExpressionGUID=(A=473594356,B=1338758895,C=824823946,D=864253813)),(ParameterName="p_CColorShadow",ParameterValue=(R=0.0500000,G=0.0500000,B=0.0500000,A=1.000000),ExpressionGUID=(A=-429590341,B=1156435294,C=-1015192901,D=687313413)),(ParameterName="p_BColorHilight",ParameterValue=(R=0.90000,G=0.300000,B=0.050000,A=1.000000),ExpressionGUID=(A=170714760,B=1132476783,C=-275668290,D=655702143)),(ParameterName="p_BColorMidtone",ParameterValue=(R=0.900000,G=0.300000,B=0.0500000,A=0.000000),ExpressionGUID=(A=473594356,B=1338758895,C=824823946,D=864253813)),(ParameterName="p_BColorShadow",ParameterValue=(R=0.900000,G=0.300000,B=0.0500000,A=1.000000),ExpressionGUID=(A=-429590341,B=1156435294,C=-1015192901,D=687313413)),(ParameterName="p_AColorHilight",ParameterValue=(R=0.0500000,G=0.0500000,B=0.0500000,A=1.000000),ExpressionGUID=(A=170014760,B=1132076783,C=-275608290,D=650702143)),(ParameterName="p_AColorMidtone",ParameterValue=(R=0.0500000,G=0.0500000,B=0.0500000,A=1.000000),ExpressionGUID=(A=473504356,B=1338058895,C=824823046,D=864253013)),(ParameterName="p_AColorShadow",ParameterValue=(R=0.0500000,G=0.0500000,B=0.0500000,A=1.000000),ExpressionGUID=(A=-429590041,B=1156405294,C=-1015192900,D=687313410)),(ParameterName="p_DecalColor",ParameterValue=(R=0.0500000,G=0.0500000,B=0.0500000,A=1.000000),ExpressionGUID=(A=1691998600,B=1239094551,C=2074257317,D=1844701893)),(ParameterName="p_DecalScalePosition",ParameterValue=(R=10.500000,G=10.500000,B=0.660000,A=0.518000),ExpressionGUID=(A=395540170,B=1243133493,C=-1264190552,D=123075385)),(ParameterName="p_DecalChannel",ParameterValue=(R=1.000000,G=0.600000,B=0.0500000,A=2.000000),ExpressionGUID=(A=1869386622,B=1303200947,C=-1616405849,D=714558284)))
+		
+		set GD_Weap_AssaultRifle.Barrel.AR_Barrel_Jakobs_Scorpio GestaltModeSkeletalMeshName AR_Barrel_Bandit
