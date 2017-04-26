@@ -1,4 +1,4 @@
-############################################
+#############################################
 The Pre Sequel Patch 
 Version Alpha 1
 Made By           ___         ___         ___         ___                 _____             
@@ -66,18 +66,20 @@ and
 # 14 Reduces the mag size of the IVF cause its too good with double the babies (PRONE TO REVERSION VIA FEEDBACK)
 # 15 Speeds up jack o cannon projectile and gives more projectiles
 # 16 Buffed Hyperion Sniper Rifles FireRate
+# 17 Made Boxxy gun Ricochet More often.
+# 18 Buffed the CyberEagle By 20%
 #
 # LUNESHINE Changes. 
-# 17 Buffs Serenity Luneshine to Make players feel like Claptrap when having it (its about 96% reduction of O2 rate)
-# 18 Buffs Punisher Luneshine to +20% Critical DMG From 10%
-# 19 Buffs Oxygenator Luneshine to steal 10 O2 per Hit (System Purge Combo for Bee like effect but not quite)
-# 20 Buffs HardenUp Luneshine to 15% Shield Capacity From 3% 
-# 21 Buffs FastLearner Luneshine MAJORLY to 40% per kill from 1-3%. This will help those who want to level up faster on UVHM
-# 22 Buffs Boominator Luneshine To Actual 10%. Card said 5% but it was actually about 2.8-3% before.
-# 23 Buffs Safeguard Luneshine to 10% Shield Restoration per Kill from 3% 
-# 24 Piercing Rounds are Unchanged yet as it already feels good enough. Might buff it to 50% in the Future.
+# 19 Buffs Serenity Luneshine to Make players feel like Claptrap when having it (its about 96% reduction of O2 rate)
+# 20 Buffs Punisher Luneshine to +20% Critical DMG From 10%
+# 21 Buffs Oxygenator Luneshine to steal 10 O2 per Hit (System Purge Combo for Bee like effect but not quite)
+# 22 Buffs HardenUp Luneshine to 15% Shield Capacity From 3% 
+# 23 Buffs FastLearner Luneshine MAJORLY to 40% per kill from 1-3%. This will help those who want to level up faster on UVHM
+# 24 Buffs Boominator Luneshine To Actual 10%. Card said 5% but it was actually about 2.8-3% before.
+# 25 Buffs Safeguard Luneshine to 10% Shield Restoration per Kill from 3% 
+# 26 Piercing Rounds are Unchanged yet as it already feels good enough. Might buff it to 50% in the Future.
 # 
-# 25 Fixed Cryo element Maliwan Pistols to Spawn. Basiccaly Those could never spawn Including the Probe. Now they can!
+# 27 Fixed Cryo element Maliwan Pistols to Spawn. Basiccaly Those could never spawn Including the Probe. Now they can!
 ####################################################################################################################################
 ####################################################################################################################################
 # Borderlands The Pre-Sequel Loot Changes 
@@ -85,10 +87,7 @@ and
 # Complete Loot Overhaul (CLO)
 #
 # This Makes so all Legendary Base game Guns have a source.
-# Adds MOONSTONES AUTOPICKUP
-# Added Fast travel Option To EOS
-# Buffs Excalibastards Melle Dmg
-# 
+## 
 # Will work on claptastic Voyage next
 #
 # It also Makes ALL Unobtainable Unique gear (such as most moxxie weapons,fibber,lady fist to quest rewards from fitting quests 
@@ -124,11 +123,11 @@ and
 #Oxidizer		    	RoosterBooster (unchaged)
 #WTF			      	NotSoCuteBadassTork
 #Flakker		    	NotSoCuteBadassTork (unchanged)
-#Boomacorn		  	Outcast (Outcast Canyon)
-#Wet week		    	Outcast
-#Ol painfull   		        Outcast
-#Jack o cannon 		        Outcast
-#The Machine		        Outcast		
+#Boomacorn		  	SwagMan-Outcast 
+#Wet week		    	SwagMan-Outcast
+#Ol painfull   		        SwagMan-Outcast
+#Jack o cannon 		        SwagMan-Outcast
+#The Machine		        SwagMan-Outcast		
 #Fabled Tortoise	        Belly
 #Striker			Belly (Unchanged)
 #Badaboom			Red
@@ -274,6 +273,7 @@ Set GD_Itempools.Runnables.Pool_RK5 BalancedItems ((ItmPoolDefinition=None,InvBa
 ###CODE FOR LOOT SOURCE CHANGES################################################################################
 
 ###Red badaboom and Big Thummper Removed Black Snake added as mission reward
+set GD_Itempools.Runnables.Pool_Red_Rare BalancedItems ((ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'GD_Cork_Weap_Launchers.A_Weapons_Legendary.RL_Bandit_5_BadaBoom',Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=None,InvBalanceDefinition=InventoryBalanceDefinition'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Roid_05_Legendary',Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',BaseValueScaleConstant=1.000000),bDropOnDeath=True))
 set GD_Itempools.Runnables.Pool_Red BalancedItems ((ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'GD_Cork_Weap_Launchers.A_Weapons_Legendary.RL_Bandit_5_BadaBoom',Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=None,InvBalanceDefinition=InventoryBalanceDefinition'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Roid_05_Legendary',Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',BaseValueScaleConstant=1.000000),bDropOnDeath=True))
 
 ###Belly Fabled Tortoise and Striker 
@@ -354,6 +354,7 @@ set GD_Itempools.Runnables.Pool_Lazlo BalancedItems ((ItmPoolDefinition=None,Inv
 
 ###Removes Skins From XSTLK23
 set GD_Itempools.Runnables.Pool_XSTLK23 BalancedItems ((ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ClassModPools.Pool_ClassMods_06_Celestial',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',BaseValueScaleConstant=1.000000),bDropOnDeath=True))
+#########################END OF LOOT OVERHAUL ########################################################################################
 
 ***moonstones auto pickup***
 
@@ -381,16 +382,16 @@ set GD_Cork_Weap_Pistol.Barrel.Pistol_Barrel_Jakobs_Smasher WeaponAttributeEffec
 set GD_Cork_Weap_Shotgun.Barrel.SG_Barrel_Jakobs_TooScoops WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.700000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-1000.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=4.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponPerShotAccuracyImpulse',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Jakobs',InitializationDefinition=None,BaseValueScaleConstant=-0.150000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Jakobs',InitializationDefinition=None,BaseValueScaleConstant=-0.150000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectileSpeedMultiplier',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=7.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
 
 ***Makes the Blowfly Spawn in All Elements, Renames it to FruitFly***
-set GD_Cork_Weap_Pistol.A_Weapons_Legendary.Pistol_Dahl_5_Blowfly:WeaponPartListCollectionDefinition_90 ElementalPartData (bEnabled=True,WeightedParts=((bDisabled=False,Part=WeaponPartDefinition'GD_Weap_Pistol.elemental.Pistol_Elemental_None',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=3),(bDisabled=False,Part=WeaponPartDefinition'GD_Weap_Pistol.elemental.Pistol_Elemental_Fire',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=4,MaxGameStageIndex=1,DefaultWeightIndex=2),(bDisabled=False,Part=WeaponPartDefinition'GD_Weap_Pistol.elemental.Pistol_Elemental_Corrosive',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=5,MaxGameStageIndex=1,DefaultWeightIndex=2),(bDisabled=False,Part=WeaponPartDefinition'GD_Weap_Pistol.elemental.Pistol_Elemental_Shock',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=4,MaxGameStageIndex=1,DefaultWeightIndex=2),(bDisabled=False,Part=WeaponPartDefinition'GD_Weap_Pistol.elemental.Pistol_Elemental_Ice',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=6,MaxGameStageIndex=1,DefaultWeightIndex=2)))
+set GD_Cork_Weap_Pistol.A_Weapons_Legendary.Pistol_Dahl_5_Blowfly:WeaponPartListCollectionDefinition_90 ElementalPartData (bEnabled=True,WeightedParts=((bDisabled=False,Part=WeaponPartDefinition'GD_Weap_Pistol.elemental.Pistol_Elemental_None',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=3),(bDisabled=False,Part=WeaponPartDefinition'GD_Weap_Pistol.elemental.Pistol_Elemental_Fire',Manufacturers=,MinGameStageIndex=4,MaxGameStageIndex=1,DefaultWeightIndex=2),(bDisabled=False,Part=WeaponPartDefinition'GD_Weap_Pistol.elemental.Pistol_Elemental_Corrosive',Manufacturers=,MinGameStageIndex=5,MaxGameStageIndex=1,DefaultWeightIndex=2),(bDisabled=False,Part=WeaponPartDefinition'GD_Weap_Pistol.elemental.Pistol_Elemental_Shock',Manufacturers=,MinGameStageIndex=4,MaxGameStageIndex=1,DefaultWeightIndex=2),(bDisabled=False,Part=WeaponPartDefinition'GD_Weap_Pistol.elemental.Pistol_Elemental_Ice',Manufacturers=,MinGameStageIndex=6,MaxGameStageIndex=1,DefaultWeightIndex=2)))
 set GD_Cork_Weap_Pistol.Name.Title_Dahl.Title_Legendary_Blowfly PartName FruitFly
 set GD_Cork_Weap_Pistol.Name.Title_Dahl.Title_Legendary_Blowfly:AttributePresentationDefinition_8 NoConstraintText Now In Four New Flavours!
 %%% Potential Skin Change%%%
 
 ***Makes the Viral Marketer Spawn in all elements***
-set GD_Cork_Weap_Shotgun.A_Weapons_Legendary.SG_Hyperion_5_ConferenceCall:WeaponPartListCollectionDefinition_117 ElementalPartData (bEnabled=True,WeightedParts=((bDisabled=False,Part=WeaponPartDefinition'GD_Weap_Shotgun.elemental.Shotgun_Elemental_None',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=3),(bDisabled=False,Part=WeaponPartDefinition'GD_Weap_Shotgun.elemental.Shotgun_Elemental_Fire',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=4,MaxGameStageIndex=1,DefaultWeightIndex=2),(bDisabled=False,Part=WeaponPartDefinition'GD_Weap_Shotgun.elemental.Shotgun_Elemental_Corrosive',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=5,MaxGameStageIndex=1,DefaultWeightIndex=2),(bDisabled=False,Part=WeaponPartDefinition'GD_Weap_Shotgun.elemental.Shotgun_Elemental_Shock',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=4,MaxGameStageIndex=1,DefaultWeightIndex=2),(bDisabled=False,Part=WeaponPartDefinition'GD_Weap_Shotgun.elemental.Shotgun_Elemental_Ice',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=6,MaxGameStageIndex=1,DefaultWeightIndex=2)))
+set GD_Cork_Weap_Shotgun.A_Weapons_Legendary.SG_Hyperion_5_ConferenceCall:WeaponPartListCollectionDefinition_117 ElementalPartData (bEnabled=True,WeightedParts=((bDisabled=False,Part=WeaponPartDefinition'GD_Weap_Shotgun.elemental.Shotgun_Elemental_None',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=3),(bDisabled=False,Part=WeaponPartDefinition'GD_Weap_Shotgun.elemental.Shotgun_Elemental_Fire',Manufacturers=,MinGameStageIndex=4,MaxGameStageIndex=1,DefaultWeightIndex=2),(bDisabled=False,Part=WeaponPartDefinition'GD_Weap_Shotgun.elemental.Shotgun_Elemental_Corrosive',Manufacturers=,MinGameStageIndex=5,MaxGameStageIndex=1,DefaultWeightIndex=2),(bDisabled=False,Part=WeaponPartDefinition'GD_Weap_Shotgun.elemental.Shotgun_Elemental_Shock',Manufacturers=,MinGameStageIndex=4,MaxGameStageIndex=1,DefaultWeightIndex=2),(bDisabled=False,Part=WeaponPartDefinition'GD_Weap_Shotgun.elemental.Shotgun_Elemental_Ice',Manufacturers=,MinGameStageIndex=6,MaxGameStageIndex=1,DefaultWeightIndex=2)))
 
 ***replaces Fremingtons Edge with custom body shot sniper, special thanks to nikita on this one***
-set GD_Weap_SniperRifles.Barrel.SR_Barrel_Dahl_FremingtonsEdge ExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.GameplayAttributes.PlayerCriticalHitBonus',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-4.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+set GD_Weap_SniperRifles.Barrel.SR_Barrel_Dahl_FremingtonsEdge ExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.GameplayAttributes.PlayerCriticalHitBonus',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-9999.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.GameplayAttributes.PlayerCriticalHitBonus',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=0.850000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
 
 set GD_Weap_SniperRifles.Barrel.SR_Barrel_Dahl_FremingtonsEdge WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=5.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
 
@@ -502,7 +503,7 @@ set GD_Cork_Weap_SniperRifles.A_Weapons_Legendary.Sniper_Vladof_5_Longnail:Weapo
 &&&Subject to change if this makes the gun worse&&&
 
 ***Fatale in all elements***
-set GD_Cork_Weap_SMG.A_Weapons_Legendary.SMG_Hyperion_5_Bitch:WeaponPartListCollectionDefinition_145 ElementalPartData (bEnabled=True,WeightedParts=((bDisabled=False,Part=WeaponPartDefinition'GD_Weap_SMG.elemental.SMG_Elemental_None',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=3),(bDisabled=False,Part=WeaponPartDefinition'GD_Weap_SMG.elemental.SMG_Elemental_Fire',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=4,MaxGameStageIndex=1,DefaultWeightIndex=2),(bDisabled=False,Part=WeaponPartDefinition'GD_Weap_SMG.elemental.SMG_Elemental_Corrosive',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=5,MaxGameStageIndex=1,DefaultWeightIndex=2),(bDisabled=False,Part=WeaponPartDefinition'GD_Weap_SMG.elemental.SMG_Elemental_Shock',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=4,MaxGameStageIndex=1,DefaultWeightIndex=2),(bDisabled=False,Part=WeaponPartDefinition'GD_Weap_SMG.elemental.SMG_Elemental_Ice',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=6,MaxGameStageIndex=1,DefaultWeightIndex=2)))
+set GD_Cork_Weap_SMG.A_Weapons_Legendary.SMG_Hyperion_5_Bitch:WeaponPartListCollectionDefinition_145 ElementalPartData (bEnabled=True,WeightedParts=((bDisabled=False,Part=WeaponPartDefinition'GD_Weap_SMG.elemental.SMG_Elemental_None',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=3),(bDisabled=False,Part=WeaponPartDefinition'GD_Weap_SMG.elemental.SMG_Elemental_Fire',Manufacturers=,MinGameStageIndex=4,MaxGameStageIndex=1,DefaultWeightIndex=2),(bDisabled=False,Part=WeaponPartDefinition'GD_Weap_SMG.elemental.SMG_Elemental_Corrosive',Manufacturers=,MinGameStageIndex=5,MaxGameStageIndex=1,DefaultWeightIndex=2),(bDisabled=False,Part=WeaponPartDefinition'GD_Weap_SMG.elemental.SMG_Elemental_Shock',Manufacturers=,MinGameStageIndex=4,MaxGameStageIndex=1,DefaultWeightIndex=2),(bDisabled=False,Part=WeaponPartDefinition'GD_Weap_SMG.elemental.SMG_Elemental_Ice',Manufacturers=,MinGameStageIndex=6,MaxGameStageIndex=1,DefaultWeightIndex=2)))
 
 ####################################################################################################################################
 ### Luneshine Buffs
@@ -559,11 +560,13 @@ set GD_Weap_Pistol.A_Weapons.Pistol_Maliwan_4_VeryRare:WeaponPartListCollectionD
 ***Credit to nikitaZed***
 set GD_Cork_Weap_Shotgun.Barrel.SG_Barrel_Jakobs_Sledges WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify'D_Attributes.WeaponAutomaticBurstCount',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleCOnstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-15.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=5.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponPerShotAccuracyImpulse',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-7.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.750000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-5.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
 
-set GD_Weap_Shotgun.Name.Title_Bandit.Title_Legendary_Shotgun PartName RoadRunner
+set GD_Weap_Shotgun.Name.Title_Bandit.Title_Legendary_Shotgun PartName Roadrunner
 
-set GD_Weap_Shotgun.Name.Title_Bandit.Title_Legendary_Shotgun:AttributePresentationDefinition_8 NoConstraintText Meep Meep
+set GD_Weap_Shotgun.Name.Title_Bandit.Title_Legendary_Shotgun:AttributePresentationDefinition_8 NoConstraintText Meep Meep!
 
-set GD_Cork_Weap_Shotgun.A_Weapons_Legendary.SG_Bandit_5_SledgesShotgun:WeaponPartListCollectionDefinition_113 Accessory1PartData (bEnabled=True,WeightedParts=((bDisabled=False,Part=WeaponPartDefinition'GD_Weap_Shotgun.Accessory.SG_Accessory_None',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=7),(bDisabled=False,Part=WeaponPartDefinition'GD_Weap_Shotgun.Accessory.SG_Accessory_Bayonet_2',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=3),(bDisabled=False,Part=WeaponPartDefinition'GD_Weap_Shotgun.Accessory.SG_Accessory_MoonClip',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=3),(bDisabled=False,Part=WeaponPartDefinition'GD_Weap_Shotgun.Accessory.SG_Accessory_ShotgunShell',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=3),(bDisabled=False,Part=WeaponPartDefinition'GD_Weap_Shotgun.Accessory.SG_Accessory_Tech_1',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=3),(bDisabled=False,Part=WeaponPartDefinition'GD_Weap_Shotgun.Accessory.SG_Accessory_Tech_2',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=3),(bDisabled=False,Part=WeaponPartDefinition'GD_Weap_Shotgun.Accessory.SG_Accessory_Tech_3',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=3),(bDisabled=False,Part=WeaponPartDefinition'GD_Weap_Shotgun.Accessory.SG_Accessory_VerticalGrip',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=3)))
+set GD_Cork_Weap_Shotgun.Barrel.SG_Barrel_Jakobs_Sledges PrefixList (WeaponNamePartDefinition'GD_Weap_Shotgun.Name.Prefix_Bandit.Prefix_Barrel_Jakobs_DoubleBarrel')
+
+set GD_Cork_Weap_Shotgun.A_Weapons_Legendary.SG_Bandit_5_SledgesShotgun:WeaponPartListCollectionDefinition_113 Accessory1PartData (bEnabled=True,WeightedParts=((bDisabled=False,Part=WeaponPartDefinition'GD_Weap_Shotgun.Accessory.SG_Accessory_Bayonet_2',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex1,DefaultWeightIndex=1),(bDisabled=False,Part=WeaponPartDefinition'GD_Weap_Shotgun.Accessory.SG_Accessory_MoonClip',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=1),(bDisabled=False,Part=WeaponPartDefinition'GD_Weap_Shotgun.Accessory.SG_Accessory_ShotgunShell',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=1),(bDisabled=False,Part=WeaponPartDefinition'GD_Weap_Shotgun.Accessory.SG_Accessory_Tech_1',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=1),(bDisabled=False,Part=WeaponPartDefinition'GD_Weap_Shotgun.Accessory.SG_Accessory_Tech_2',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=1),(bDisabled=False,Part=WeaponPartDefinition'GD_Weap_Shotgun.Accessory.SG_Accessory_Tech_3',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=1),(bDisabled=False,Part=WeaponPartDefinition'GD_Weap_Shotgun.Accessory.SG_Accessory_VerticalGrip',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=1)))
 
 ***Replaces Striker with the Penetrator***
 set GD_Cork_Weap_Shotgun.Barrel.SG_Barrel_Hyperion_Striker CustomFiringModeDefinition FiringModeDefinition 'GD_Cork_Weap_Lasers.FiringModes.Beam_Laser_Hyperion'
@@ -577,6 +580,5 @@ set GD_Cork_Weap_Shotgun.Barrel.SG_Barrel_Hyperion_Striker ZoomWeaponAttributeEf
 set GD_Cork_Weap_Shotgun.Name.Title_Jakobs.Title_Legendary_Striker PartName Penetrator
 
 set GD_Cork_Weap_Shotgun.Name.Title_Jakobs.Title_Legendary_Striker:AttributePresentationDefinition_8 NoConstraintText <font color="#e50026">Almost as good as the real thing.</font><br><font color="#FFFFFF">•</font><font color="#e500a4"> No Pants Required </font><br><font color="#FFFFFF">
-
 
 
