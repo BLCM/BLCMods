@@ -1,17 +1,20 @@
-//By NIKITAzed
-//Turns Sledge's Shotgun into a hammer, I couldn't think of an original name so ker blam
-//can now spawn with all accessories, except the regular blade, instead of that it has the sledge blade
+##By NIKITAzed
+##Turns Sledge's Shotgun into a Sledgehammer, name by youtube person Diver Down
 
-//IT BE IN BL2 NAO
+##IT BE IN BL2 NAO
 
-//Altered the skin a little bit
+##Altered the skin a little bit
 
-set GD_Weap_Shotgun.Barrel.SG_Barrel_Jakobs_Sledges WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify'D_Attributes.WeaponAutomaticBurstCount',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleCOnstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-7.250000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=5.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponPerShotAccuracyImpulse',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-7.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.750000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-5.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+##changed how the fire rate is altered because somehow vertical grip was giving it 1.7 fire rate boost, which is not what I intended
+
+set GD_Weap_Shotgun.Barrel.SG_Barrel_Jakobs_Sledges WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify'D_Attributes.WeaponAutomaticBurstCount',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleCOnstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=5.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponPerShotAccuracyImpulse',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-7.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.750000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-5.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
 set GD_Weap_Shotgun.Name.Title_Bandit.Title_Legendary_Shotgun PartName Sledgehammer
 set GD_Weap_Shotgun.Name.Title_Bandit.Title_Legendary_Shotgun:AttributePresentationDefinition_8 NoConstraintText The best of both worlds.
 set GD_Weap_Shotgun.Barrel.SG_Barrel_Jakobs_Sledges PrefixList (WeaponNamePartDefinition'GD_Weap_Shotgun.Name.Prefix_Bandit.Prefix_Barrel_Jakobs_DoubleBarrel')
+set GD_Weap_Shotgun.Barrel.SG_Barrel_Jakobs_Sledges AttributeSlotUpgrades ((SlotName="WeaponSpread",GradeIncrease=-10,bActivateSlot=True),(SlotName="WeaponFireRate",GradeIncrease=180,bActivateSlot=True),(SlotName="AccuracyMin",GradeIncrease=-5,bActivateSlot=True),(SlotName="WeaponDamage",GradeIncrease=-3,bActivateSlot=True),(SlotName="WeaponAccuracyImpulse",GradeIncrease=-5,bActivateSlot=True))
 
-say Sledge's Shotgun changed into Sledgehammer, can now spawn with all prefixes except original Sledge blade, sanity check is a thing
+
+say Sledge's Shotgun changed into Sledgehammer
 
 
 
