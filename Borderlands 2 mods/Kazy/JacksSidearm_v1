@@ -1,0 +1,43 @@
+########################
+#  Jack's Sidearm
+########################
+//created by Kazy
+____________________
+Replaces the Logan's Gun
+_____________________
+- Near-perfect Accuracy for a Hyperion
+- Increased Critical Hit Damage
+- Small Magazine (~6)
+- Fast Reload Speed (~1.5)
+
+#####
+Name
+#####
+set GD_Weap_Pistol.Name.Title_Hyperion.Title_Legendary_LogansGun PartName Jack's Sidearm
+set GD_Weap_Pistol.Name.Title_Hyperion.Title_Legendary_LogansGun:AttributePresentationDefinition_8 NoConstraintText 'Sup?
+
+#####
+Rarity
+#####
+set GD_Weap_Pistol.Barrel.Pistol_Barrel_Hyperion_LogansGun rarity (BaseValueConstant=-1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+
+#####
+Firing
+#####
+set GD_Weap_Pistol.Barrel.Pistol_Barrel_Hyperion_LogansGun CustomFiringModeDefinition none
+set GD_Weap_Pistol.Barrel.Pistol_Barrel_Hyperion_LogansGun WeaponCardAttributes none
+set GD_Weap_Pistol.Barrel.Pistol_Barrel_Hyperion_LogansGun WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.300000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=-0.000100,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.00000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponPerShotAccuracyImpulse',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Hyperion',InitializationDefinition=None,BaseValueScaleConstant=-0.200000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.300000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Hyperion',InitializationDefinition=None,BaseValueScaleConstant=0.150000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-13.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.GameplayAttributes.PlayerCriticalHitBonus',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=15.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+set GD_Weap_Pistol.Barrel.Pistol_Barrel_Hyperion_LogansGun ExternalAttributeEffects ((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AccuracyResourcePool.AccuracyMinValue',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=2.000000)),(AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AccuracyResourcePool.AccuracyMaxValue',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=10.000000)))
+set GD_Weap_Pistol.Barrel.Pistol_Barrel_Hyperion_LogansGun AttributeSlotUpgrades ()
+
+#####
+Killed Jack
+#####
+set GD_Episode17.M_Ep17_KillJack Reward (ExperienceRewardPercentage=(BaseValueConstant=0.100000,BaseValueAttribute=AttributeDefinition'GD_MissionRewardBalance.XP.XPReward_05_Largest',InitializationDefinition=None,BaseValueScaleConstant=1.500000),CurrencyRewardType=CURRENCY_Eridium,CreditRewardMultiplier=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),OtherCurrencyReward=(BaseValueConstant=4.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),RewardItems=(WeaponBalanceDefinition'GD_Weap_Pistol.A_Weapons_Legendary.Pistol_Hyperion_5_LogansGun'),RewardItemPools=)
+
+#####
+Appearance
+#####
+set Common_GunMaterials.Materials.Pistol.Mati_HyperionLegendaryPistol_Logan ScalarParameterValues ((ParameterName="p_HighlightsIntensity",ParameterValue=1.000000,ExpressionGUID=(A=-1257568432,B=1277066486,C=-723473993,D=-1144384173)),(ParameterName="p_ShadowsIntensity",ParameterValue=2.000000,ExpressionGUID=(A=437293753,B=1205147708,C=-775723903,D=1480014964)),(ParameterName="p_UseFullColorDecal",ParameterValue=0.600000,ExpressionGUID=(A=-1064329812,B=1077705328,C=339664807,D=1869745420)),(ParameterName="p_ReplaceDecal",ParameterValue=1.000000,ExpressionGUID=(A=85863466,B=1257609701,C=-728575820,D=1337098176)))
+set Common_GunMaterials.Materials.Pistol.Mati_HyperionLegendaryPistol_Logan TextureParameterValues ((ParameterName="p_Masks",ParameterValue=Texture2D'Weap_Pistol.Tex.Weap_Pistols_Comp',ExpressionGUID=(A=-330624041,B=1167251458,C=-335191907,D=-166684394)),(ParameterName="p_Diffuse",ParameterValue=Texture2D'Common_GunMaterials.CompTextures.Weap_LauncherShotgunPistol_Comp',ExpressionGUID=(A=1757607260,B=1326539502,C=-317215581,D=-565807463)),(ParameterName="p_NormalScopesEmissive",ParameterValue=Texture2D'Weap_Pistol.Tex.Weap_Pistols_Nrm',ExpressionGUID=(A=-1743872746,B=1126171774,C=119496871,D=-1952271718)),(ParameterName="P_SimpleReflect",ParameterValue=Texture2D'Common_GunMaterials.Env.Chrome',ExpressionGUID=(A=-858148940,B=1327945772,C=148462268,D=1899047224)),(ParameterName="p_Pattern",ParameterValue=Texture2D'Common_GunMaterials.Patterns.Pattern_HyperionStripeUncommon',ExpressionGUID=(A=-923052711,B=1309861752,C=584229786,D=-1229888527)))
+set Common_GunMaterials.Materials.Pistol.Mati_HyperionLegendaryPistol_Logan VectorParameterValues ((ParameterName="p_AColorHilight",ParameterValue=(R=0.900000,G=0.747455,B=0.412985,A=1.000000),ExpressionGUID=(A=384292798,B=1221323751,C=-2145405772,D=1872194118)),(ParameterName="p_AColorMidtone",ParameterValue=(R=0.835294,G=0.473452,B=0.357079,A=1.000000),ExpressionGUID=(A=1102826245,B=1256298978,C=-1429881438,D=-507521102)),(ParameterName="p_AColorShadow",ParameterValue=(R=0.089498,G=0.949166,B=0.042756,A=1.000000),ExpressionGUID=(A=1481234158,B=1129012376,C=-688827739,D=-2119135160)),(ParameterName="p_BColorHilight",ParameterValue=(R=1.007092,G=1.178774,B=1.182999,A=1.000000),ExpressionGUID=(A=170714760,B=1132476783,C=-275668290,D=655702143)),(ParameterName="p_BColorMidtone",ParameterValue=(R=1.114824,G=1.127499,B=1.340724,A=1.000000),ExpressionGUID=(A=473594356,B=1338758895,C=824823946,D=864253813)),(ParameterName="p_BColorShadow",ParameterValue=(R=0.428599,G=0.501228,B=0.592843,A=1.000000),ExpressionGUID=(A=-429590341,B=1156435294,C=-1015192901,D=687313413)),(ParameterName="p_CColorHilight",ParameterValue=(R=2.000000,G=2.599000,B=0.707503,A=1.000000),ExpressionGUID=(A=759765673,B=1280874949,C=257367956,D=-932702788)),(ParameterName="p_CColorMidtone",ParameterValue=(R=1.080870,G=1.000000,B=0.000000,A=1.000000),ExpressionGUID=(A=110180441,B=1232792373,C=-1232281417,D=-1030626065)),(ParameterName="p_CColorShadow",ParameterValue=(R=0.026701,G=0.020000,B=0.000000,A=1.000000),ExpressionGUID=(A=716329441,B=1214803259,C=-238071112,D=-1004122047)),(ParameterName="p_ReflectColor",ParameterValue=(R=1.602685,G=1.892820,B=1.479317,A=1.000000),ExpressionGUID=(A=295058103,B=1318551573,C=-2045449573,D=-547597976)),(ParameterName="p_ReflectionChannelScale",ParameterValue=(R=1.000000,G=1.000000,B=1.000000,A=1.000000),ExpressionGUID=(A=1869386622,B=1303200947,C=-1616405849,D=714558284)),(ParameterName="p_PatternScalePosition",ParameterValue=(R=24.298660,G=31.746038,B=0.535500,A=0.508300),ExpressionGUID=(A=395540170,B=1243133493,C=-1264190552,D=123075385)),(ParameterName="p_PatternColor",ParameterValue=(R=0.667735,G=0.300000,B=0.100000,A=1.000000),ExpressionGUID=(A=1691998600,B=1239094551,C=2074257317,D=1844701893)),(ParameterName="p_DecalColor",ParameterValue=(R=0.167735,G=0.100000,B=0.100000,A=1.000000),ExpressionGUID=(A=1691998600,B=1239094551,C=2074257317,D=1844701893)),(ParameterName="p_DColor",ParameterValue=(R=6.077345,G=6.077345,B=6.077345,A=1.000000),ExpressionGUID=(A=696455109,B=1155878830,C=-1741888361,D=802120528)),(ParameterName="p_DecalChannel",ParameterValue=(R=0.000000,G=0.000000,B=0.000000,A=0.000000),ExpressionGUID=(A=1757499073,B=1097055033,C=-1266029657,D=1038353636)))
