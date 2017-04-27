@@ -1,0 +1,25 @@
+#BUG ZAPPER
+#This weapon is the closest we'll get to a Maliwan-barrel laser in BL2. (Maybe, idk, Dave is a wizard, as are some of the other modders) Instead of firing a boring ol' bullet, this gun shoots a shock tesla beam!
+#This mod overhauls the Commerce, but I don't think anyone will miss that thing lol. 
+# Here is a Commerce gibbed code for those of you that don't already have a Commerce (ergo, probably all of you) BL2(hwAAAAAAUwBCyANBDAGFdmI5wdKMZQGLCpYHLBRY/v8rY/HBgo3l)
+#Also, despite having an Alien Barrel, I can't for the life of me get the flaps to work.
+#Lastly, there are a good amount of bullet skills that this doesn't work with. I playtested this gun on Maya, so I know CR doesn't work. Which is a shame. Chain lightning raves would've been cool. Anyway, I assume that by extention, it can't B0re nor benefit from Nth Degree.
+
+set GD_Weap_SMG.Name.Title.Title__Unique_Commerce PartName Bug Zapper
+
+set GD_Weap_SMG.Barrel.SMG_Barrel_Tediore_Commerce CustomFiringModeDefinition FiringModeDefinition 'GD_GrenadeMods.FiringModes.FiringModeDef_TeslaGrenadeBeam'
+
+set GD_Weap_SMG.Barrel.SMG_Barrel_Tediore_Commerce AttributeSlotUpgrades ((SlotName="WeaponDamage",GradeIncrease=220,bActivateSlot=True),(SlotName="WeaponReloadSpeed",GradeIncrease=5,bActivateSlot=True),(SlotName="WeaponFireRate",GradeIncrease=20,bActivateSlot=True),(SlotName="WeaponMagSize",GradeIncrease=20,bActivateSlot=True)
+
+set GD_Weap_SMG.Name.Title.Title__Unique_Commerce:AttributePresentationDefinition_8 NoConstraintText <font color="#e50026">Electrify!</font><br><font color="#B411D1"> Rather than shooting bullets, this gun fires a shock laser! <br>
+
+set GD_Weap_SMG.Barrel.SMG_Barrel_Tediore_Commerce GestaltModeSkeletalMeshName SMG_Barrel_Alien
+
+set GD_Weap_SMG.Barrel.SMG_Barrel_Tediore_Commerce bFlapsEnabled True
+
+set GD_Weap_SMG.Barrel.SMG_Barrel_Tediore_Commerce ((BoneName="AlienBarrelFin_FL",ControlType=WEAP_BONE_CONTROL_Flap,bUseInFirstPerson=True,bUseInThirdPerson=False,ControlTemplate=WillowSkelControl_RotateFlapFromFiring'GD_Weap_SMG.Barrel.SMG_Barrel_Alien:WillowSkelControl_RotateFlapFromFiring_0'),(BoneName="AlienBarrelFin_BL",ControlType=WEAP_BONE_CONTROL_Flap,bUseInFirstPerson=True,bUseInThirdPerson=False,ControlTemplate=WillowSkelControl_RotateFlapFromFiring'GD_Weap_SMG.Barrel.SMG_Barrel_Alien:WillowSkelControl_RotateFlapFromFiring_1'),(BoneName="AlienBarrelFin_FR",ControlType=WEAP_BONE_CONTROL_Flap,bUseInFirstPerson=True,bUseInThirdPerson=False,ControlTemplate=WillowSkelControl_RotateFlapFromFiring'GD_Weap_SMG.Barrel.SMG_Barrel_Alien:WillowSkelControl_RotateFlapFromFiring_2'),(BoneName="AlienBarrelFin_BR",ControlType=WEAP_BONE_CONTROL_Flap,bUseInFirstPerson=True,bUseInThirdPerson=False,ControlTemplate=WillowSkelControl_RotateFlapFromFiring'GD_Weap_SMG.Barrel.SMG_Barrel_Alien:WillowSkelControl_RotateFlapFromFiring_3')))
+
+set GD_Weap_SMG.Barrel.SMG_Barrel_Tediore_Commerce FlapsExpandDuration (BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueConstant=1.000000)
+
+set GD_Weap_SMG.Barrel.SMG_Barrel_Tediore_Commerce FlapsCollapseDuration (BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueConstant=1.000000)
+	
