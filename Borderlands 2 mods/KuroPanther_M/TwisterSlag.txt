@@ -1,0 +1,19 @@
+#########|*|SLAG TWISTER|*|#########|Made by KuroPanther|
+
+// |!|WARNING|!| Make sure to execute this file before loading a save, otherwise the weapons/items modified by this mod will be
+// |!|WARNING|!| deleted from your inventory. Be careful and enjoy!
+//
+// Replaces the shock twister with a slag one.
+//
+// The shock twister will be deleted from your inventory (if you have one), so use the gibbed code below to get the slag one
+// Gibbed code >> BL2(hwAAAADkqgQACIEJB4FErkBRg4KBEgEKG5QMKBJQ/v9noByDcoHy)
+//
+// If you want the shock twister back, just change its element on gibbed before entering the game and, obviously, not execute this.
+//
+// |!|WARNING|!| You can only have one element at a time do not execute this with the other versions (fire/corrosive).
+__________________________________________________________________________________________________________________________________
+#########|*|CODE|*|#########
+
+set GD_Sage_Weapons.Shotgun.SG_Jakobs_3_Twister:WeaponPartListCollectionDefinition_305 ElementalPartData (bEnabled=True,WeightedParts=((Part=WeaponPartDefinition'GD_Weap_Shotgun.elemental.Shotgun_Elemental_Slag',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=8,MaxGameStageIndex=1,DefaultWeightIndex=3)))
+
+set GD_Sage_Weapons.FiringModes.Bullet_Shotgun_Twister:Behavior_Explode_5 Definition GD_Explosions.Slag.Explosion_SlagMaster
