@@ -1,0 +1,106 @@
+#Crisis Management#
+Replaces the 12 pounder
+
+#Launcher Mode - Hip-fire#
+5 ammo per shot
+Slow fire rate
+
+#Assault Rifle Mode - Zoomed#
+Rapid-fires rockets
+Reduced damage
+
+#General#
+Increased clip size (20)
+Increases max rocket capacity when held (400)
+Rocket Launcher ammo regeneration (10)
+
+#Name/RedText#
+set GD_Orchid_BossWeapons.Name.Title.Title__Unique_12Pounder PartName Crisis Management
+set GD_Orchid_BossWeapons.Name.Title.Title__Unique_12Pounder:AttributePresentationDefinition_8 NoConstraintText <font color="#ff0235">Fight through it!<font color="#FFFFFF"><br>•<font color="#fce919"> Heavy <font color="#FFFFFF">shots when <font color="#fce919">hip-firing.<font color="#FFFFFF"><br>• <font color="#ce9561">Rapid-fire <font color="#FFFFFF">barrage when <font color="#ce9561">zoomed.<font color="#FFFFFF"><br>• Grants<font color="#fceaa4"> rocket capacity<font color="#FFFFFF"> and<font color="#fceaa4"> rocket<br>  regeneration<font color="#FFFFFF"> when held.<br>• <font color="#ff0235">Approved by MR.TORGUE!<font color="#FFFFFF">
+
+#Skin#
+set GD_Orchid_BossWeapons.ManufacturerMaterials.Mat_Torgue_3_12Pounder Material MaterialInstanceConstant'Common_GunMaterials.Materials.Launcher.Mati_VladofLegendaryRL'
+
+#Barrel#
+set GD_Orchid_BossWeapons.Launcher.L_Barrel_Torgue_12Pounder ExternalAttributeEffects ((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Rocket_Launcher.Ammo_Rocket_Launcher_RegenerationRate',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Rocket_Launcher.Ammo_Rocket_Launcher_MaxValue',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=367.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+set GD_Orchid_BossWeapons.Launcher.L_Barrel_Torgue_12Pounder WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.600000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=-3.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=20.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.600000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=4.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+set GD_Orchid_BossWeapons.Launcher.L_Barrel_Torgue_12Pounder ZoomWeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=-3.800000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=-6.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=-4.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponPerShotAccuracyImpulse',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=-100.000000)))
+
+set GD_Orchid_BossWeapons.Launcher.L_Barrel_Torgue_12Pounder ((SlotName="WeaponAccuracyImpulse",GradeIncrease=-10,bActivateSlot=True),(SlotName="WeaponAccuracyMin",GradeIncrease=-10,bActivateSlot=True),(SlotName="WeaponAccuracyMax",GradeIncrease=-10,bActivateSlot=True))
+
+set GD_Orchid_BossWeapons.Launcher.L_Barrel_Torgue_12Pounder GestaltModeSkeletalMeshName L_Barrel_Tediore
+
+#Bullet#
+set GD_Orchid_BossWeapons.FiringModes.FM_Rocket_12Pounder ProjectileDefinition ProjectileDefinition'GD_Aster_RaidWeapons.AssaultRifles.Projectile_Seeker_Homing'
+set GD_Orchid_BossWeapons.FiringModes.FM_Rocket_12Pounder bSuppressWeaponSpread True 
+
+#Rarity#
+set GD_Orchid_BossWeapons.Launcher.L_Barrel_Torgue_12Pounder rarity (BaseValueConstant=55.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+
+set WillowGame.GlobalsDefinition RarityLevelColors ((MinLevel=0,MaxLevel=0,Color=(B=175,G=193,R=205,A=0),DropLifeSpanType=DROP_ShortLived,RarityRating=RARITY_Unknown),(MinLevel=1,MaxLevel=1,Color=(B=255,G=255,R=255,A=255),DropLifeSpanType=DROP_ShortLived,RarityRating=RARITY_Common),(MinLevel=2,MaxLevel=2,Color=(B=11,G=210,R=61,A=255),DropLifeSpanType=DROP_LongLived,RarityRating=RARITY_Uncommon),(MinLevel=3,MaxLevel=3,Color=(B=255,G=142,R=60,A=255),DropLifeSpanType=DROP_LiveForever,RarityRating=RARITY_Rare),(MinLevel=4,MaxLevel=4,Color=(B=229,G=63,R=168,A=255),DropLifeSpanType=DROP_LiveForever,RarityRating=RARITY_VeryRare),(MinLevel=5,MaxLevel=5,Color=(B=0,G=180,R=255,A=255),DropLifeSpanType=DROP_LiveForever,RarityRating=RARITY_Legendary),(MinLevel=6,MaxLevel=6,Color=(B=168,G=0,R=202,A=255),DropLifeSpanType=DROP_LiveForever,RarityRating=RARITY_VeryRare),(MinLevel=7,MaxLevel=10,Color=(B=0,G=180,R=255,A=255),DropLifeSpanType=DROP_LiveForever,RarityRating=RARITY_Legendary),(MinLevel=12,MaxLevel=15,Color=(B=50,G=0,R=230,A=255),DropLifeSpanType=DROP_LiveForever,RarityRating=RARITY_Unknown),(MinLevel=41,MaxLevel=50,Color=(B=255,G=28,R=149,A=255),DropLifeSpanType=DROP_LiveForever,RarityRating=RARITY_Legendary),(MinLevel=51,MaxLevel=60,Color=(B=242,G=87,R=26,A=255),DropLifeSpanType=DROP_LiveForever,RarityRating=RARITY_VeryRare),(MinLevel=61,MaxLevel=70,Color=(B=37,G=35,R=178,A=255),DropLifeSpanType=DROP_LiveForever,RarityRating=RARITY_VeryRare),(MinLevel=171,MaxLevel=175,Color=(B=71,G=71,R=207,A=255),DropLifeSpanType=DROP_ShortLived,RarityRating=RARITY_Unknown),(MinLevel=176,MaxLevel=180,Color=(B=167,G=199,R=255,A=0),DropLifeSpanType=DROP_ShortLived,RarityRating=RARITY_Unknown),(MinLevel=181,MaxLevel=499,Color=(B=13,G=255,R=255,A=0),DropLifeSpanType=DROP_ShortLived,RarityRating=RARITY_Unknown),(MinLevel=500,MaxLevel=500,Color=(B=255,G=255,R=0,A=0),DropLifeSpanType=DROP_LiveForever,RarityRating=RARITY_Unknown),(MinLevel=501,MaxLevel=501,Color=(B=184,G=154,R=255,A=0),DropLifeSpanType=DROP_LiveForever,RarityRating=RARITY_Seraph),(MinLevel=502,MaxLevel=502,Color=(B=255,G=255,R=255,A=0),DropLifeSpanType=DROP_LiveAsLongAsLevel,RarityRating=RARITY_Unknown),(MinLevel=503,MaxLevel=503,Color=(B=200,G=50,R=145,A=255),DropLifeSpanType=DROP_LiveForever,RarityRating=RARITY_Unknown),(MinLevel=504,MaxLevel=504,Color=(B=255,G=255,R=0,A=0),DropLifeSpanType=DROP_VeryShortLived,RarityRating=RARITY_Unknown))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
