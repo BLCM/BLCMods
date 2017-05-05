@@ -14,6 +14,10 @@ SirUmnei (Helping with balancing the weapon)
 Dave (Skin guide & referencing of off his weapons)
 Aaron (Referencing of off his weapons)
 
+Changelog:
+
+v2: Fixed healing on zoom
+
 Note:
 
 Please leave constructive criticism if u make a vid / contact me on Shadow's Discord (Mike on Discord), any critique would be appreciated as this is just my 1st weapon. Enjoy!
@@ -30,7 +34,7 @@ set GD_Weap_SMG.Name.Title.Title__Unique_Lascaux PartName Moonsight
 set GD_Weap_SMG.Barrel.SMG_Barrel_Bandit_Lascaux WeaponCardAttributes (AttributeDefinition'D_Attributes.GameplayAttributes.PlayerCriticalHitBonus',PriorityIncrease=10.000000))
 set GD_Weap_SMG.Barrel.SMG_Barrel_Bandit_Lascaux rarity (BaseValueConstant=3.000000)
 
-set GD_Weap_SMG.Name.Title.Title__Unique_Lascaux:AttributePresentationDefinition_8 NoConstraintText <font color="#ff0235">Possessed by unknown sources...<br><font color="#ffffff">• <font color="#ff0235">Crit <font color="#ffffff">boosted by a small amount<br><font color="#ffffff">• <font color="#ff0235">Healing <font color="#ffffff">on damage dealt when zoomed in
+set GD_Weap_SMG.Name.Title.Title__Unique_Lascaux:AttributePresentationDefinition_8 NoConstraintText <font color="#ff0235">Possessed by unknown sources...<br><font color="#ffffff">â€¢ <font color="#ff0235">Crit <font color="#ffffff">boosted by a small amount<br><font color="#ffffff">â€¢ <font color="#ff0235">Healing <font color="#ffffff">on damage dealt when zoomed in
 
 # FIRING
 
@@ -38,7 +42,7 @@ set GD_Weap_SMG.Barrel.SMG_Barrel_Bandit_Lascaux CustomFiringModeDefinition Firi
 
 # WEAPON ATTRIBUTES // STATS
 
-set GD_Weap_SMG.Barrel.SMG_Barrel_Bandit_Lascaux ZoomAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.DamageEnhancementModifiers.PlayerConvertDamageToHealingPercent',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.100000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))
+set GD_Weap_SMG.Barrel.SMG_Barrel_Bandit_Lascaux ZoomExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.DamageEnhancementModifiers.PlayerConvertDamageToHealingPercent',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=0.30000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))
 set GD_Weap_SMG.Barrel.SMG_Barrel_Bandit_Lascaux ExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.GameplayAttributes.PlayerCriticalHitBonus',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.100000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
 set GD_Weap_SMG.Barrel.SMG_Barrel_Bandit_Lascaux WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=15.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))
 set GD_Weap_SMG.Barrel.SMG_Barrel_Bandit_Lascaux AttributeSlotUpgrades ((SlotName="AccuracyMin",GradeIncrease=150,bActivateSlot=True),(SlotName="AccuracyMax",GradeIncrease=150,bActivateSlot=True)
