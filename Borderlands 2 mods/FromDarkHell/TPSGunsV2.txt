@@ -9,7 +9,6 @@ set GD_Weap_Pistol.Name.Title_Dahl.Title_Legendary_Hornet:AttributePresentationD
 set GD_Weap_Pistol.Barrel.Pistol_Barrel_Dahl_Hornet CustomFiringModeDefinition FiringModeDefinition 'FM_Rocket_Maliwan_TheHive'
 
 ## Tinderbox/Party Popper - Effect credit goes to MegaCyber151 - Add Name/Red-Text
-
 ## Firing Mode
 set GD_Weap_Pistol.Barrel.Pistol_Barrel_Dahl_Tinderbox CustomFiringModeDefinition GD_Weap_Shotgun.FiringModes.Bullets_Shotgun_Torgue_Landscaper
 set GD_Weap_Shotgun.FiringModes.Bullets_Shotgun_Torgue_Landscaper damagetypedefinition none
@@ -72,9 +71,9 @@ set GD_Weap_Pistol.Name.Title_Torgue.Title_Legendary_Calla PartName 88 Fragnum
 ## Harold Red-Text
 set GD_Weap_Pistol.Name.Title_Torgue.Title_Legendary_Calla:AttributePresentationDefinition_8 NoConstraintText  It'll blow your head clean off.
 
-## Fastball/Snowball *Fun for the whole family.* WIP
-
-## Three Horns Divide
+## Gwen's Head/Gwen's Other Head
+set GD_Weap_Pistol.Name.Title.Title__Unique_GwensHead PartName Gwen's Other Head
+set GD_Weap_Pistol.Name.Title.Title__Unique_GwensHead:AttributePresentationDefinition_8 NoConstraintText Gwen is kind of a strange girl.
 
 ## Hammerbuster/Hammerbuster II
 ## Hammerbuster II Name
@@ -97,6 +96,39 @@ set GD_Weap_AssaultRifle.Name.Title_Dahl.Title_Legendary_Veruc PartName Major To
 ## Red-Text
 set GD_Weap_AssaultRifle.Name.Title_Dahl.Title_Legendary_Veruc:AttributePresentationDefinition_8 NoConstraintText  Destroy the martian spiders!
 
+## Baby Maker/IVF
+set GD_Weap_SMG.Name.Title_Tediore.Title_Legendary_BabyMaker PartName IVF
+set GD_Weap_SMG.Name.Title_Tediore.Title_Legendary_BabyMaker:AttributePresentationDefinition_8 NoConstraintText OMG! TWINS!
+
+## Logan's Gun/T4s-R
+
+set GD_Weap_Pistol.Name.Title_Hyperion.Title_Legendary_LogansGun PartName T4s-R
+set GD_Weap_Pistol.Name.Title_Hyperion.Title_Legendary_LogansGun:AttributePresentationDefinition_8 NoConstraintText I politely request you do not T4s-R me, good sir.
+set GD_Weap_Pistol.Barrel.Pistol_Barrel_Hyperion_LogansGun CustomFiringModeDefinition FiringModeDefinition 'GD_Weap_SMG.FiringModes.Bullet_Plasma_Default.Name'
+set GD_Weap_Pistol.A_Weapons_Legendary.Pistol_Hyperion_5_LogansGun:WeaponPartListCollectionDefinition_102 ElementalPartData (bEnabled=True,WeightedParts=((Part=WeaponPartDefinition'GD_Weap_Pistol.elemental.Pistol_Elemental_Slag',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=2),(Part=WeaponPartDefinition'GD_Weap_Pistol.elemental.Pistol_Elemental_Corrosive',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=2),(Part=WeaponPartDefinition'GD_Weap_Pistol.elemental.Pistol_Elemental_Fire',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=2),(Part=WeaponPartDefinition'GD_Weap_Pistol.elemental.Pistol_Elemental_Shock',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=2)))
+set GD_Weap_Pistol.Barrel.Pistol_Barrel_Hyperion_LogansGun WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponStatusEffectChanceModifier',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-5.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-0.5,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+## Shotgun1340/Bullpup - Credit Aaron0000
+
+set GD_Weap_Shotgun.Barrel.SG_Barrel_Tediore_Shotgun1340 CustomFiringModeDefinition None
+
+set GD_Weap_Shotgun.Barrel.SG_Barrel_Tediore_Shotgun1340 WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponReloadSpeed',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-0.300000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=10.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+set GD_Weap_Shotgun.Barrel.SG_Barrel_Tediore_Shotgun1340 AttributeSlotUpgrades ((SlotName="WeaponDamage",GradeIncrease=0,bActivateSlot=True),(SlotName="WeaponSpread",GradeIncrease=3,bActivateSlot=True),(AttributeSlotUpgrades(2)=(SlotName="AccuracyRegen",GradeIncrease=2,bActivateSlot=True))
+
+set GD_Weap_Shotgun.Name.Title.Title__Unique_Shotgun1340 PartName Bullpup
+
+set GD_Weap_Shotgun.Name.Title.Title__Unique_Shotgun1340:AttributePresentationDefinition_8 NoConstraintText One bad pup!
+
+set GD_Weap_Shotgun.Barrel.SG_Barrel_Tediore_Shotgun1340 BehaviorProviderDefinition None
+
+set GD_Weap_Shotgun.Barrel.SG_Barrel_Tediore_Shotgun1340 GestaltModeSkeletalMeshName SG_Barrel_Hyperion
+
+set Common_GunMaterials.Materials.Shotgun.Mati_HyperionRare_SG Parent Common_GunMaterials.Materials.Shotgun.Mati_TedioreEpic_SG
+
+set Common_GunMaterials.Materials.Shotgun.Mati_HyperionRare_SG VectorParameterValues ((ParameterName="p_DecalChannel",ParameterValue=(R=0.000000,G=0.000000,B=0.000000,A=0.000000)),ExpressionGUID=(A=1869386622,B=1303200947,C=-1616405849,D=714558284)),(ParameterName="p_AColorHilight",ParameterValue=(R=0.100000,G=0.100000,B=0.100000,A=1.000000),ExpressionGUID=(A=170714760,B=1132476783,C=-275668290,D=655702143)),(ParameterName="p_AColorMidtone",ParameterValue=(R=0.050000,G=0.050000,B=0.050000,A=1.000000),ExpressionGUID=(A=473594356,B=1338758895,C=824823946,D=864253813)),(ParameterName="p_AColorShadow",ParameterValue=(R=0.025000,G=0.025000,B=0.025000,A=1.000000),ExpressionGUID=(A=-429590341,B=1156435294,C=-1015192901,D=687313413)),(ParameterName="p_BColorHilight",ParameterValue=(R=0.250000,G=0.000000,B=0.000000,A=1.000000),ExpressionGUID=(A=170714760,B=1132476783,C=-275668290,D=655702143)),(ParameterName="p_BColorMidtone",ParameterValue=(R=0.175000,G=0.000000,B=0.000000,A=1.000000),ExpressionGUID=(A=473594356,B=1338758895,C=824823946,D=864253813)),(ParameterName="p_BColorShadow",ParameterValue=(R=0.100000,G=0.000000,B=0.000000,A=1.000000),ExpressionGUID=(A=-429590341,B=1156435294,C=-1015192901,D=687313413)),(ParameterName="p_CColorHilight",ParameterValue=(R=0.100000,G=0.100000,B=0.100000,A=1.000000),ExpressionGUID=(A=170714760,B=1132476783,C=-275668290,D=655702143)),(ParameterName="p_CColorMidtone",ParameterValue=(R=0.050000,G=0.050000,B=0.050000,A=1.000000),ExpressionGUID=(A=473594356,B=1338758895,C=824823946,D=864253813)),(ParameterName="p_CColorShadow",ParameterValue=(R=0.025000,G=0.025000,B=0.025000,A=1.000000),ExpressionGUID=(A=-429590341,B=1156435294,C=-1015192901,D=687313413)))
+
+set Common_GunMaterials.Materials.Shotgun.Mati_HyperionRare_SG TextureParameterValues ((ParameterName="p_NormalScopesEmissive",ParameterValue=Texture2D'Weap_Shotguns.Tex.Weap_Shotgun_Nor',ExpressionGUID=(A=-1743872746,B=1126171774,C=119496871,D=-1952271718)),(ParameterName="p_Diffuse",ParameterValue=Texture2D'Common_GunMaterials.CompTextures.Weap_LauncherShotgunPistol_Comp',ExpressionGUID=(A=1757607260,B=1326539502,C=-317215581,D=-565807463)),(ParameterName="p_Masks",ParameterValue=Texture2D'Weap_Shotguns.Tex.Weap_Shotgun_Comp',ExpressionGUID=(A=-330624041,B=1167251458,C=-335191907,D=-166684394)))
 
 ## Gub/Zim
 ## Name
@@ -104,11 +136,10 @@ set GD_Weap_Pistol.Name.Title_Bandit.Title_Legendary_Gub PartName Zim
 ## Red Text
 set GD_Weap_Pistol.Name.Title_Bandit.Title_Legendary_Gub:AttributePresentationDefinition_8 NoConstraintText  Would you like to know more?
 
-## Gunerang/Shooterange
+## Gunerang/Shooterang
 set GD_Weap_Pistol.Name.Title_Tediore.Title_Legendary_Gunerang PartName Shooterang
 ## Red-Text
 set GD_Weap_Pistol.Name.Title_Tediore.Title_Legendary_Gunerang:AttributePresentationDefinition_8 NoConstraintText You little ripper.
-
 
 ## Skullmasher/Skullmasher
 ## Skullmasher Redtext
@@ -145,16 +176,36 @@ set GD_Weap_Pistol.Barrel.Pistol_Barrel_Maliwan_Rubi AttributeSlotUpgrades ((Slo
 ## Rubi Red Text
 set GD_Weap_Pistol.Name.Title.Title__Unique_Rubi:AttributePresentationDefinition_8 NoConstraintText  Why not turn me on?
 
-
-## Rubi ??
-set GD_Weap_Pistol.Barrel.Pistol_Barrel_Maliwan_Rubi ((BoneName="AlienBarrelFin_FL",ControlType=WEAP_BONE_CONTROL_Flap,bUseInFirstPerson=True,bUseInThirdPerson=False,ControlTemplate=WillowSkelControl_RotateFlapFromFiring'GD_Weap_SMG.Barrel.SMG_Barrel_Alien:WillowSkelControl_RotateFlapFromFiring_0'),(BoneName="AlienBarrelFin_BL",ControlType=WEAP_BONE_CONTROL_Flap,bUseInFirstPerson=True,bUseInThirdPerson=False,ControlTemplate=WillowSkelControl_RotateFlapFromFiring'GD_Weap_SMG.Barrel.SMG_Barrel_Alien:WillowSkelControl_RotateFlapFromFiring_1'),(BoneName="AlienBarrelFin_FR",ControlType=WEAP_BONE_CONTROL_Flap,bUseInFirstPerson=True,bUseInThirdPerson=False,ControlTemplate=WillowSkelControl_RotateFlapFromFiring'GD_Weap_SMG.Barrel.SMG_Barrel_Alien:WillowSkelControl_RotateFlapFromFiring_2'),(BoneName="AlienBarrelFin_BR",ControlType=WEAP_BONE_CONTROL_Flap,bUseInFirstPerson=True,bUseInThirdPerson=False,ControlTemplate=WillowSkelControl_RotateFlapFromFiring'GD_Weap_SMG.Barrel.SMG_Barrel_Alien:WillowSkelControl_RotateFlapFromFiring_3')))
-
 ## Rubi Effects
 set GD_Weap_Pistol.Barrel.Pistol_Barrel_Maliwan_Rubi WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=14.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponStatusEffectChanceModifier',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=5.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-2.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),((AttributeToModify=AttributeDefinition'D_Attributes.DamageEnhancementModifiers.PlayerConvertDamageToHealingPercent',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-25.0000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=15.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))
 
 # Rubi Element  #
 set  GD_Weap_Pistol.A_Weapons_Unique.Pistol_Maliwan_3_Rubi ElementalPartData (bEnabled=True,WeightedParts=((Part=WeaponPartDefinition'GD_Weap_Pistol.elemental.Pistol_Elemental_Shock,Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=2)))
 
+## BoneShredder/Meat Grinder
+set GD_Weap_SMG.Name.Title.Title__Unique_BoneShredder PartName Meat Grinder
+set GD_Weap_SMG.Name.Title.Title__Unique_BoneShredder:AttributePresentationDefinition_8 NoConstraintText The lead rain falls!
+
+## Flayer - Credit to Shadowevil1996
+
+set GD_Weap_Shotgun.Barrel.SG_Barrel_Jakobs_TidalWave CustomFiringModeDefinition None
+
+set GD_Weap_Shotgun.Barrel.SG_Barrel_Jakobs_TidalWave WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=4.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Jakobs',InitializationDefinition=None,BaseValueScaleConstant=0.100000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Jakobs',InitializationDefinition=None,BaseValueScaleConstant=4.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponPerShotAccuracyImpulse',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Jakobs',InitializationDefinition=None,BaseValueScaleConstant=-0.200000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Jakobs',InitializationDefinition=None,BaseValueScaleConstant=-0.200000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=4.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+set GD_Weap_Shotgun.Barrel.SG_Barrel_Jakobs_TidalWave AttributeSlotUpgrades ((SlotName="WeaponSpread",GradeIncrease=-8,bActivateSlot=True),(SlotName="AccuracyMin",GradeIncrease=-2,bActivateSlot=True),(SlotName="WeaponAccuracyImpulse",GradeIncrease=-10,bActivateSlot=True),(SlotName="WeaponDamage",GradeIncrease=4,bActivateSlot=True),(SlotName="WeaponAccuracyImpulse",GradeIncrease=-5,bActivateSlot=True),(SlotName="WeaponFireRate",GradeIncrease=-5,bActivateSlot=True),(SlotName="WeaponMagSize",GradeIncrease=1,bActivateSlot=True))
+
+set GD_Weap_Shotgun.Name.Title.Title__Unique_TidalWave PartName Flayer
+
+set GD_Weap_Shotgun.Name.Title.Title__Unique_TidalWave:AttributePresentationDefinition_8 NoConstraintText OMG, what's it doing to Sanchez?!
+
+## Viral Marketer/Conference Call
+set GD_Weap_Shotgun.Name.Title_Hyperion.Title_Legendary_ConferenceCall PartName Viral Marketer
+set GD_Weap_Shotgun.Name.Title_Hyperion.Title_Legendary_ConferenceCall:AttributePresentationDefinition_8 NoConstraintText Fwd: Fwd: Fwd: Lol check this out guys
+set GD_Weap_Shotgun.Barrel.SG_Barrel_Hyperion_ConferenceCall CustomFiringModeDefinition FiringModeDefinition'GD_Weap_SniperRifles.FiringModes.Bullet_RailGun'
+set GD_Weap_Shotgun.Barrel.SG_Barrel_Hyperion_ConferenceCall WeaponAttributeEffects (AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=56.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))
+## Volcano/Magma
+set GD_Weap_SniperRifles.Name.Title_Maliwan.Title_Legendary_Volcano PartName Magma
+set GD_Weap_SniperRifles.Name.Title_Maliwan.Title_Legendary_Volcano:AttributePresentationDefinition_8 NoConstraintText Liquid hot.
 ## DLC 
 ## Rex/LuckCannon - Credit to Aaron0000
 set GD_Sage_Weapons.Pistols.Pistol_Barrel_Jakobs_Rex CustomFiringModeDefinition FiringModeDefinition 'GD_Iris_Weapons.FiringModes.Bullet_Sniper_Cobra'
@@ -182,3 +233,4 @@ set Sage_GunMaterials.Materials.Pistol.Mati_JakobsUniquePistol_Rex VectorParamet
 ## Greed / Cyber-Eagle - Credit to FabledSaiko
 set GD_Orchid_BossWeapons.Pistol.Pistol_Barrel_ScarletsGreed CustomFiringModeDefinition FiringModeDefinition'GD_Weap_SniperRifles.FiringModes.Bullet_RailGun'
 set GD_Orchid_BossWeapons.Pistol.Pistol_Barrel_ScarletsGreed AttributeSlotUpgrades ((SlotName=WeaponFireRate,GradeIncrease=-3,bActivateSlot=true),(SlotName=WeaponReloadSpeed,GradeIncrease=-5,bActivateSlot=true),(SlotName=WeaponDamage,GradeIncrease=8,bActivateSlot=true),(SlotName=WeaponZoomFOV,GradeIncrease=2,bActivateSlot=true),(SlotName=WeaponAccuracyImpulse,GradeIncrease=100000,bActivateSlot=true),(SlotName=WeaponSpread,GradeIncrease=100000,bActivateSlot=true),(SlotName=AccuracyMax,GradeIncrease=100000,bActivateSlot=true),(SlotName=AccuracyMin,GradeIncrease=100000,bActivateSlot=true))
+set GD_Orchid_BossWeapons.Pistol.Pistol_Jakobs_ScarletsGreed:WeaponPartListCollectionDefinition_277 ElementalPartData (bEnabled=True,WeightedParts=((Part=WeaponPartDefinition'GD_Weap_Pistol.elemental.Pistol_Elemental_Shock,Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=2)))
