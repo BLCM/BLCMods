@@ -10,11 +10,7 @@ Atlas Weapons have been globally rebalanced. The stats should be above average i
 Most special weapons have been replaced or adjusted. Details down below.
 Atlas weapons have the feature of increasing action skill cooldown while held.
 
-
-Other notes;
-If your reticle disappears when using Atlas weapons, you may try removing the Atlas logos from item cards and see if that helps. Find this line down in the file and disable it (remove the word that comes before this line):
-GD_Manufacturers.Manufacturers.Vladof FlashLabelName Atlas
-
+Notes;
 Already encorporates the GemstoneFixes mod for Vladof weapons.
 If using the community patch, load this file after the community patch. In general, load this file last.
 Chimera modifies the splash behavior of the Tinderbox, Little Evie, and Teapot to achieve the desired effect. Little Evie and the Teapot have been adjusted in damage accordingly to compensate.
@@ -496,6 +492,7 @@ PISTOLS
 set GD_Weap_Pistol.A_Weapons.WeaponType_Vladof_Pistol InstantHitDamage (BaseValueConstant=20.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance_HealthAndDamage.HealthAndDamage.Init_WeaponDamage',BaseValueScaleConstant=1.700000)
 set GD_Weap_Pistol.A_Weapons.WeaponType_Vladof_Pistol NormalizedInstantHitDamage (BaseValueConstant=1.700000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
 
+
 set GD_Weap_Pistol.A_Weapons.WeaponType_Vladof_Pistol Spread 1.000000
 set GD_Weap_Pistol.A_Weapons.WeaponType_Vladof_Pistol PerShotAccuracyImpulse 1.875000
 
@@ -803,6 +800,8 @@ set GD_Weap_Pistol.Barrel.Pistol_Barrel_Vladof_Infinity GestaltModeSkeletalMeshN
 set GD_Weap_Pistol.Barrel.Pistol_Barrel_Vladof_Infinity NumPhysicalBarrelsToFireFrom 0
 set GD_Weap_Pistol.Barrel.Pistol_Barrel_Vladof_Infinity bIsSpinningEnabled False
 
+set GD_Weap_Pistol.Barrel.Pistol_Barrel_Vladof_Infinity ManufacturerDefinitionForScopeMovie ManufacturerDefinition'GD_Manufacturers.Manufacturers.Jakobs'
+
 
 Elemental block
 set GD_Weap_Pistol.A_Weapons_Legendary.Pistol_Vladof_5_Infinity:WeaponPartListCollectionDefinition_107 ElementalPartData (bEnabled=True,WeightedParts=((Part=WeaponPartDefinition'GD_Weap_Pistol.elemental.Pistol_Elemental_None',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=WeaponPartDefinition'GD_Weap_Pistol.elemental.Pistol_Elemental_Fire',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=0,DefaultWeightIndex=0),(Part=WeaponPartDefinition'GD_Weap_Pistol.elemental.Pistol_Elemental_Shock',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=0,DefaultWeightIndex=0),(Part=WeaponPartDefinition'GD_Weap_Pistol.elemental.Pistol_Elemental_Corrosive',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=0,DefaultWeightIndex=0)))
@@ -871,6 +870,7 @@ set GD_Weap_AssaultRifle.Barrel.AR_Barrel_Vladof_Shredifier GestaltModeSkeletalM
 set GD_Weap_AssaultRifle.Barrel.AR_Barrel_Vladof_Shredifier NumPhysicalBarrelsToFireFrom 0
 set GD_Weap_AssaultRifle.Barrel.AR_Barrel_Vladof_Shredifier bIsSpinningEnabled False
 
+set GD_Weap_AssaultRifle.Barrel.AR_Barrel_Vladof_Shredifier ManufacturerDefinitionForScopeMovie ManufacturerDefinition'GD_Manufacturers.Manufacturers.Dahl'
 
 set GD_Weap_AssaultRifle.Barrel.AR_Barrel_Vladof_Shredifier WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Vladof',InitializationDefinition=None,BaseValueScaleConstant=0.373000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-0.150000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Vladof',InitializationDefinition=None,BaseValueScaleConstant=9.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponPerShotAccuracyImpulse',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-0.150000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponReloadSpeed',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=-0.200000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-0.041000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
 
@@ -901,6 +901,9 @@ set GD_Weap_SniperRifles.Name.Title_Vladof.Title_Legendary_Lyudmila:AttributePre
 set GD_Weap_SniperRifles.Barrel.SR_Barrel_Vladof_Lyudmila WeaponCardAttributes ((Attribute=AttributeDefinition'D_Attributes.Weapon.WeaponZoomEndFOV',PriorityIncrease=0.300000),(Attribute=AttributeDefinition'D_Attributes.GameplayAttributes.PlayerCriticalHitBonus',PriorityIncrease=0.000000))
 set GD_Weap_SniperRifles.Barrel.SR_Barrel_Vladof_Lyudmila GestaltModeSkeletalMeshName SR_Barrel_Jakobs
 set GD_Weap_SniperRifles.Barrel.SR_Barrel_Vladof_Lyudmila bIsSpinningEnabled False
+
+set GD_Weap_SniperRifles.Barrel.SR_Barrel_Vladof_Lyudmila ManufacturerDefinitionForScopeMovie ManufacturerDefinition'GD_Manufacturers.Manufacturers.Hyperion'
+
 
 set GD_Weap_SniperRifles.A_Weapons_Legendary.Sniper_Vladof_5_Lyudmila:WeaponPartListCollectionDefinition_206 SightPartData (bEnabled=True,WeightedParts=((Part=WeaponPartDefinition'GD_Weap_SniperRifles.Sight.Sniper_Sight_Dahl',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=0,DefaultWeightIndex=0),(Part=WeaponPartDefinition'GD_Weap_SniperRifles.Sight.Sniper_Sight_Vladof',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=0,DefaultWeightIndex=0),(Part=WeaponPartDefinition'GD_Weap_SniperRifles.Sight.Sniper_Sight_Maliwan',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=0,DefaultWeightIndex=0),(Part=WeaponPartDefinition'GD_Weap_SniperRifles.Sight.Sniper_Sight_Jakobs',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=0,DefaultWeightIndex=0),(Part=WeaponPartDefinition'GD_Weap_SniperRifles.Sight.Sniper_Sight_Hyperion',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0)))
 
@@ -946,6 +949,8 @@ set GD_Weap_Launchers.Name.Title_Vladof.Title_Legendary_Mongol:AttributePresenta
 
 set GD_Weap_Launchers.Barrel.L_Barrel_Vladof_Mongol:AttributePresentationDefinition_4 NoConstraintText Fires in a horizontal spread.
 
+set GD_Weap_Launchers.Barrel.L_Barrel_Vladof_Mongol ManufacturerDefinitionForScopeMovie ManufacturerDefinition'GD_Manufacturers.Manufacturers.Maliwan'
+
 
 set GD_Weap_Launchers.FiringModes.FM_Rocket_Mongol FiringPatternLines ((StartPoint=(Pitch=0,Yaw=0,Roll=0),EndPoint=(Pitch=0,Yaw=0,Roll=0),bUseStartPointOnly=True,CustomWaveMotion=(bUseCustomWaveMotion=False,WaveFreq=(X=0.000000,Y=0.000000,Z=0.000000),WaveAmp=(X=0.000000,Y=0.000000,Z=0.000000),WavePhase=(X=0.000000,Y=0.000000,Z=0.000000))),(StartPoint=(Pitch=0,Yaw=637,Roll=0),EndPoint=(Pitch=0,Yaw=0,Roll=0),bUseStartPointOnly=True,CustomWaveMotion=(bUseCustomWaveMotion=False,WaveFreq=(X=0.000000,Y=0.000000,Z=0.000000),WaveAmp=(X=0.000000,Y=0.000000,Z=0.000000),WavePhase=(X=0.000000,Y=0.000000,Z=0.000000))),(StartPoint=(Pitch=0,Yaw=-637,Roll=0),EndPoint=(Pitch=0,Yaw=0,Roll=0),bUseStartPointOnly=True,CustomWaveMotion=(bUseCustomWaveMotion=False,WaveFreq=(X=0.000000,Y=0.000000,Z=0.000000),WaveAmp=(X=0.000000,Y=0.000000,Z=0.000000),WavePhase=(X=0.000000,Y=0.000000,Z=0.000000))),(StartPoint=(Pitch=0,Yaw=1274,Roll=0),EndPoint=(Pitch=0,Yaw=0,Roll=0),bUseStartPointOnly=True,CustomWaveMotion=(bUseCustomWaveMotion=False,WaveFreq=(X=0.000000,Y=0.000000,Z=0.000000),WaveAmp=(X=0.000000,Y=0.000000,Z=0.000000),WavePhase=(X=0.000000,Y=0.000000,Z=0.000000))),(StartPoint=(Pitch=0,Yaw=-1274,Roll=0),EndPoint=(Pitch=0,Yaw=0,Roll=0),bUseStartPointOnly=True,CustomWaveMotion=(bUseCustomWaveMotion=False,WaveFreq=(X=0.000000,Y=0.000000,Z=0.000000),WaveAmp=(X=0.000000,Y=0.000000,Z=0.000000),WavePhase=(X=0.000000,Y=0.000000,Z=0.000000))))
 
@@ -977,6 +982,8 @@ set GD_Aster_RaidWeapons.Pistols.Aster_Seraph_Stinger_Title:AttributePresentatio
 set GD_Aster_RaidWeapons.Pistols.Pistol_Barrel_Vladof_Stinger GestaltModeSkeletalMeshName Pistol_Barrel_Bandit
 set GD_Aster_RaidWeapons.Pistols.Pistol_Barrel_Vladof_Stinger NumPhysicalBarrelsToFireFrom 0
 set GD_Aster_RaidWeapons.Pistols.Pistol_Barrel_Vladof_Stinger bIsSpinningEnabled False
+
+set GD_Aster_RaidWeapons.Pistols.Pistol_Barrel_Vladof_Stinger ManufacturerDefinitionForScopeMovie ManufacturerDefinition'GD_Manufacturers.Manufacturers.Jakobs'
 
 
 set GD_Aster_RaidWeapons.Pistols.Pistol_Barrel_Vladof_Stinger WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Vladof',InitializationDefinition=None,BaseValueScaleConstant=0.086001)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponBarrelSpinUpDuration',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Vladof',InitializationDefinition=None,BaseValueScaleConstant=0.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Vladof',InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponAdditionalRicochets',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectileSpeedMultiplier',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-0.050000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponPerShotAccuracyImpulse',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-0.050000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponReloadSpeed',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=-0.050000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-0.007500,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
@@ -1011,6 +1018,8 @@ ARGUS (Patriot)
 set GD_Orchid_RaidWeapons.sniper.Patriot.Orchid_Seraph_Patriot_Title PartName Argus
 set GD_Orchid_RaidWeapons.sniper.Patriot.Orchid_Seraph_Patriot_Title:AttributePresentationDefinition_8 NoConstraintText Big brother Argus is watching.
 
+set GD_Orchid_RaidWeapons.sniper.Patriot.Orchid_Seraph_Patriot_Barrel ManufacturerDefinitionForScopeMovie ManufacturerDefinition'GD_Manufacturers.Manufacturers.Hyperion'
+
 
 set GD_Orchid_RaidWeapons.sniper.Patriot.Orchid_Seraph_Patriot_Barrel WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0.744900)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectileSpeedMultiplier',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.400000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=10.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponReloadSpeed',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.090000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=5.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.140000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
 
@@ -1042,11 +1051,12 @@ set Orchid_GunMaterials.Materials.sniper.Mati_VladofCommonSR_Patriot ScalarParam
 
 
 
-
 OGRE (Lead Storm)
 
 set GD_Sage_RaidWeapons.Name.Title.Sage_Seraph_LeadStorm_Title PartName Ogre
 set GD_Sage_RaidWeapons.Name.Title.Sage_Seraph_LeadStorm_Title:AttributePresentationDefinition_8 NoConstraintText All Star.
+
+set GD_Sage_RaidWeapons.AssaultRifle.AR_Barrel_LeadStorm ManufacturerDefinitionForScopeMovie ManufacturerDefinition'GD_Manufacturers.Manufacturers.Dahl'
 
 
 set GD_Sage_RaidWeapons.AssaultRifle.Sage_Seraph_LeadStorm_Balance:WeaponPartListCollectionDefinition_298 ElementalPartData (bEnabled=True,WeightedParts=((Part=WeaponPartDefinition'GD_Weap_AssaultRifle.elemental.AR_Elemental_None',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=WeaponPartDefinition'GD_Weap_AssaultRifle.elemental.AR_Elemental_Fire',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=0,DefaultWeightIndex=0),(Part=WeaponPartDefinition'GD_Weap_AssaultRifle.elemental.AR_Elemental_Corrosive',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=0,DefaultWeightIndex=04),(Part=WeaponPartDefinition'GD_Weap_AssaultRifle.elemental.AR_Elemental_Shock',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=0,DefaultWeightIndex=0),(Part=WeaponPartDefinition'GD_Weap_AssaultRifle.elemental.AR_Elemental_Slag',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=0,DefaultWeightIndex=0)))
@@ -1099,6 +1109,8 @@ set GD_Gladiolus_Weapons.Name.Title.Title_Pearlescent_Stalker:AttributePresentat
 
 set GD_Gladiolus_Weapons.Pistol.Pistol_Barrel_Stalker GestaltModeSkeletalMeshName Pistol_Barrel_Jakobs
 
+set GD_Gladiolus_Weapons.Pistol.Pistol_Barrel_Stalker ManufacturerDefinitionForScopeMovie ManufacturerDefinition'GD_Manufacturers.Manufacturers.Jakobs'
+
 
 set GD_Gladiolus_Weapons.Pistol.Pistol_Vladof_6_Stalker:WeaponPartListCollectionDefinition_260 ElementalPartData (bEnabled=True,WeightedParts=((Part=WeaponPartDefinition'GD_Weap_Pistol.elemental.Pistol_Elemental_None',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=0,DefaultWeightIndex=0),(Part=WeaponPartDefinition'GD_Weap_Pistol.elemental.Pistol_Elemental_Fire',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=0,DefaultWeightIndex=0),(Part=WeaponPartDefinition'GD_Weap_Pistol.elemental.Pistol_Elemental_Shock',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=WeaponPartDefinition'GD_Weap_Pistol.elemental.Pistol_Elemental_Corrosive',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=0,DefaultWeightIndex=0)))
 
@@ -1145,6 +1157,8 @@ set GD_Orchid_BossWeapons.Name.Title.Title__Unique_Cutlass PartName Ajax's Spear
 
 set GD_Orchid_BossWeapons.Name.Title.Title__Unique_Cutlass:AttributePresentationDefinition_0 NoConstraintText Perfect for beating Hector's bitch ass.
 
+set GD_Orchid_BossWeapons.AssaultRifle.AR_Barrel_Bandit_Rapier ManufacturerDefinitionForScopeMovie ManufacturerDefinition'GD_Manufacturers.Manufacturers.Dahl'
+
 set GD_Orchid_BossWeapons.AssaultRifle.AR_Barrel_Bandit_Rapier WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.400000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponPerShotAccuracyImpulse',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-0.021000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=7.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))
 
 set GD_Orchid_BossWeapons.AssaultRifle.AR_Barrel_Bandit_Rapier ExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.GameplayAttributes.PlayerCriticalHitBonus',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AccuracyResourcePool.AccuracyMinValue',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-1.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AccuracyResourcePool.AccuracyMaxValue',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-0.400000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
@@ -1172,6 +1186,8 @@ ERINYES (Veritas)
 set GD_Weap_Pistol.Name.Title.Title__Unique_Veritas PartName Erinyes
 
 set GD_Weap_Pistol.Name.Title.Title__Unique_Veritas:AttributePresentationDefinition_8 NoConstraintText Fast and furious.
+
+set GD_Weap_Pistol.Barrel.Pistol_Barrel_Hyperion_Veritas ManufacturerDefinitionForScopeMovie ManufacturerDefinition'GD_Manufacturers.Manufacturers.Jakobs'
 
 set GD_Weap_Pistol.Barrel.Pistol_Barrel_Hyperion_Veritas WeaponCardAttributes (Attribute=AttributeDefinition'D_Attributes.GameplayAttributes.PlayerCriticalHitBonus',PriorityIncrease=0.000000)
 
@@ -1241,7 +1257,7 @@ set GD_Iris_Weapons.FiringModes.Bullet_Assault_Kitten FiringPatternLines ((Start
 
 set GD_Iris_Weapons.AssaultRifles.AR_Barrel_Vladof_Kitten WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponPerShotAccuracyImpulse',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=10.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
 
-
+set GD_Iris_Weapons.AssaultRifles.AR_Barrel_Vladof_Kitten ManufacturerDefinitionForScopeMovie ManufacturerDefinition'GD_Manufacturers.Manufacturers.Dahl'
 
 
 
