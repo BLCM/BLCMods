@@ -3,7 +3,8 @@ By Aaron0000
 
 Replaces the accuracy accessory of Sniper Rifles. Changes it to slowly regenerate ammo instead of increasing accuracy.
 
-Comes with custom prefixes: Jakobs = Bountiful, Dahl =Munitional, Hyperion = Rational, Maliwan = Prepared, Vladof = Production.
+Comes with custom prefixes: Jakobs = Bountiful, Dahl = Munitional, Hyperion = Rational, Maliwan = Prepared, Vladof = Production.
+Atlas Reborn also has an optional prefix located at the bottom. Activate this file after Atlas Reborn to enable the prefix properly.
 ########
 
 set GD_Weap_SniperRifles.Accessory.Sniper_Accessory_Bipod1_Accuracy ExternalAttributeEffects ((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Sniper_Rifle.Ammo_Sniper_Rifle_RegenerationRate',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0.40000)),(AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Sniper_Rifle.Ammo_Sniper_Rifle_RegenerationRate',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Vladof',InitializationDefinition=None,BaseValueScaleConstant=0.250000)),(AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Sniper_Rifle.Ammo_Sniper_Rifle_RegenerationRate',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Jakobs',InitializationDefinition=None,BaseValueScaleConstant=-0.150000)))
@@ -15,3 +16,9 @@ set GD_Weap_SniperRifles.Name.Prefix_Hyperion.Prefix_Bipod1_Accuracy PartName Ra
 set GD_Weap_SniperRifles.Name.Prefix_Jakobs.Prefix_Bipod1_Accuracy PartName Bountiful
 set GD_Weap_SniperRifles.Name.Prefix_Maliwan.Prefix_Bipod1_Accuracy PartName Prepared
 set GD_Weap_SniperRifles.Name.Prefix_Vladof.Prefix_Bipod1_Accuracy PartName Production
+
+
+Atlas Prefix:
+Replace the # with an s to enable.
+
+#et GD_Weap_SniperRifles.Name.Prefix_Vladof.Prefix_Bipod1_Accuracy PartName Creation
