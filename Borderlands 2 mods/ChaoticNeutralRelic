@@ -1,0 +1,23 @@
+########
+By Nytimz inspired by Aaron0000's original AmmoRegen modifications.
+
+Renames The Afterburner relic to The Chaotic Neutral relic and: 
+1) Increases Fire rate upto +33%
+2) Increases Magazine ClipSize upto +45%
+3) Regenerates Ammo (excluding rocket launchers)
+
+Similar to equipping a Chaotic Neutral COM but in Relic form. As a bonus, adds Ammo Regen capabilities!
+Why did I choose The Afterburner relic to mod? It was one of the few with more than one Effect slot (has 3), along with The Deputy (5) and The Sheriff (5).
+Next project will be to mod The Deputy relic to act more like the Commando or Ogre COM for Shotguns from BL1.
+
+########
+
+set GD_Artifacts.A_Item_Unique.Artifact_Afterburner ItemName The Chaotic Neutral
+
+
+set GD_Artifacts.A_Item_Unique.Artifact_Afterburner AttributeSlotEffects ((SlotName="Effect1",bExternalSlot=True,bRunEffectsAsSkill=True,AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ConstraintAttribute=None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Artifacts.BalanceAttributes.Init_ModifierBase_Linear',BaseValueScaleConstant=-0.333333),PerGradeUpgrade=(BaseValueConstant=-0.0151515,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.0000000),bIncludeInFunStats=False,bIncludeAlliesAsTarget=False,bEnforceMinimumGrade=False,bEnforceMaximumGrade=False,MinimumGrade=0,MaximumGrade=11,TargetInstanceDataName=),(SlotName="Effect2",bExternalSlot=True,bRunEffectsAsSkill=True,AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ConstraintAttribute=None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Artifacts.BalanceAttributes.Init_ModifierBase_Linear',BaseValueScaleConstant=0.350000),PerGradeUpgrade=(BaseValueConstant=0.0090909,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.0000000),bIncludeInFunStats=False,bIncludeAlliesAsTarget=False,bEnforceMinimumGrade=False,bEnforceMaximumGrade=False,MinimumGrade=0,MaximumGrade=11,TargetInstanceDataName=),(SlotName="Effect3",bExternalSlot=True,bRunEffectsAsSkill=False,AttributeToModify=AttributeDefinition'D_Attributes.GameplayAttributes.PlayerCurrentWeaponAmmoRegenerationMultiplier',ConstraintAttribute=None,ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Artifacts.BalanceAttributes.Init_ModifierBase_Linear',BaseValueScaleConstant=0.040000),PerGradeUpgrade=(BaseValueConstant=0.020000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=20.0000000),bIncludeInFunStats=False,bIncludeAlliesAsTarget=False,bEnforceMinimumGrade=False,bEnforceMaximumGrade=False,MinimumGrade=0,MaximumGrade=11,TargetInstanceDataName=))
+
+set GD_Artifacts.A_Item_Unique.Artifact_Afterburner UIStatList ((bDisplayAsModifierOnly=True,AttributeStyle=ATTRSTYLE_ModifierText,SupplementalAttributeStyle=ATTRSTYLE_JustNumber,StatCombinationMethod=SCM_Multiply,Attribute=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ConstraintAttribute=None,SupplementalAttributeExpression=(AttributeOperand1=None,ComparisonOperator=OPERATOR_EqualTo,Operand2Usage=OPERAND_PreferAttribute,AttributeOperand2=None,ConstantOperand2=0.000000),SupplementalAttributeToAppend=None),(bDisplayAsModifierOnly=True,AttributeStyle=ATTRSTYLE_ModifierText,SupplementalAttributeStyle=ATTRSTYLE_JustNumber,StatCombinationMethod=SCM_Multiply,Attribute=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ConstraintAttribute=None,SupplementalAttributeExpression=(AttributeOperand1=None,ComparisonOperator=OPERATOR_EqualTo,Operand2Usage=OPERAND_PreferAttribute,AttributeOperand2=None,ConstantOperand2=0.000000),SupplementalAttributeToAppend=None),(bDisplayAsModifierOnly=True,AttributeStyle=ATTRSTYLE_ModifierText,SupplementalAttributeStyle=ATTRSTYLE_JustNumber,StatCombinationMethod=SCM_Multiply,Attribute=AttributeDefinition'D_Attributes.GameplayAttributes.PlayerCurrentWeaponAmmoRegenerationMultiplier',ConstraintAttribute=None,SupplementalAttributeExpression=(AttributeOperand1=None,ComparisonOperator=OPERATOR_EqualTo,Operand2Usage=OPERAND_PreferAttribute,AttributeOperand2=None,ConstantOperand2=0.000000),SupplementalAttributeToAppend=None))
+
+set GD_Artifacts.Body.Body_Afterburner:AttributePresentationDefinition_0 Description Increases: [skill] Firerate, mag size & ammo regeneration[-skill].
+
