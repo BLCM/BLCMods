@@ -4,21 +4,13 @@ Slight stat buffs.
 Changed rarity colour to Legendary.
 Increased price to reflect the new rarity colour.
 
-Disclaimer:
-I am still inexperienced with modding, though I was excited to be able to remove the self-freeze by myself and I wanted to share it.
-If somebody with more knowledge can give the Frostfire SMG some of their attention and love, they could make it great and viable at level 70. 
-
-
 set GD_Weap_SMG.Barrel.SMG_Barrel_Frostfire AttributeSlotUpgrades ((SlotName="WeaponDamage",GradeIncrease=12,bActivateSlot=True),(SlotName="WeaponFireRate",GradeIncrease=8,bActivateSlot=True),(SlotName="WeaponReloadSpeed",GradeIncrease=7,bActivateSlot=True),(SlotName="WeaponMagSize",GradeIncrease=9,bActivateSlot=True))
 
-##### Disable self-freeze
 set GD_Weap_SMG.Skills.Skill_Frostfire:BehaviorProviderDefinition_0.Behavior_AttemptStatusEffect_373 StatusEffect None
 
-##### Price and rarity
 set GD_Weap_SMG.Barrel.SMG_Barrel_Frostfire MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'
 set GD_Weap_SMG.Barrel.SMG_Barrel_Frostfire Rarity (BaseValueConstant=5.000000)
 
-##### Subjective flavour text change. Can be disabled if you want.
-set GD_Weap_SMG.Name.Title.Title__Unique_Frostfire:AttributePresentationDefinition_8 NoConstraintText Ymir's final exhale, captured and preserved in a gun.
+set GD_Weap_SMG.Name.Title.Title__Unique_Frostfire:AttributePresentationDefinition_8 NoConstraintText Ymir's requiem.
 
 Created by berylmantra.
