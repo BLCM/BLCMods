@@ -1,0 +1,149 @@
+########
+By Aaron0000
+
+Turns the Tidal Wave into the Moonface from Pre-Sequel (within limitations). Also turns the Striker into the Flayer, since otherwise the Community Patch's Flayer would be replaced with the Moonface.
+
+Features;
+Projectiles fire in a smiley face pattern, with low velocity and a lazy sine oscillation trajectory through the air. 
+Pellets deal non-elemental damage, with 50% explosive splash on impact.
+
+
+########
+
+set GD_Weap_Shotgun.Name.Title.Title__Unique_TidalWave PartName Moonface
+
+set GD_Weap_Shotgun.Name.Title.Title__Unique_TidalWave:AttributePresentationDefinition_8 NoConstraintText What a BOOMING smile you have.
+
+set GD_Weap_Shotgun.Barrel.SG_Barrel_Jakobs_TidalWave  GestaltModeSkeletalMeshName SG_Barrel_Torgue
+
+
+
+set GD_Weap_Shotgun.Barrel.SG_Barrel_Jakobs_TidalWave CustomFiringModeDefinition FiringModeDefinition'GD_Weap_Shotgun.FiringModes.Bullet_Shotgun_TidalWave'
+
+set GD_Weap_Shotgun.Barrel.SG_Barrel_Jakobs_TidalWave WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Jakobs',InitializationDefinition=None,BaseValueScaleConstant=0.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Jakobs',InitializationDefinition=None,BaseValueScaleConstant=0.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponPerShotAccuracyImpulse',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Jakobs',InitializationDefinition=None,BaseValueScaleConstant=0.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Jakobs',InitializationDefinition=None,BaseValueScaleConstant=0.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0.000000)))
+
+set GD_Weap_Shotgun.Barrel.SG_Barrel_Jakobs_TidalWave AttributeSlotUpgrades ((SlotName="WeaponFireRate",GradeIncrease=-3,bActivateSlot=True),(SlotName="WeaponReloadSpeed",GradeIncrease=-5,bActivateSlot=True),(SlotName="WeaponDamage",GradeIncrease=8,bActivateSlot=True),(SlotName="WeaponAccuracyImpulse",GradeIncrease=-5,bActivateSlot=True),(SlotName="WeaponFireInterval",GradeIncrease=-20,bActivateSlot=True),(SlotName="ProjectilesPerShot",GradeIncrease=5,bActivateSlot=True),(SlotName="WeaponMagSize",GradeIncrease=0,bActivateSlot=True),(SlotName="AccuracyMin",GradeIncrease=0,bActivateSlot=True),(SlotName="WeaponSpread",GradeIncrease=0,bActivateSlot=True))
+
+set Common_GunMaterials.Materials.Shotgun.Mati_JakobsUniqueSG_Wave AttributeSlotUpgrades ((SlotName="WeaponDamage",GradeIncrease=16,bActivateSlot=True),(SlotName="WeaponMagSize",GradeIncrease=5,bActivateSlot=True),(SlotName="WeaponSpread",GradeIncrease=5,bActivateSlot=True))
+
+
+
+set Common_GunMaterials.Materials.Shotgun.Mati_JakobsUniqueSG_Wave Parent Common_GunMaterials.Materials.Shotgun.Mati_JakobsLegendary_SG_Striker
+
+set Common_GunMaterials.Materials.Shotgun.Mati_JakobsUniqueSG_Wave TextureParameterValues ((ParameterName="P_SimpleReflect",ParameterValue=Texture2D'Common_GunMaterials.Env.SkySand',ExpressionGUID=(A=-858148940,B=1327945772,C=148462268,D=1899047224)),(ParameterName="p_Decal",ParameterValue=Texture2D'Common_GunMaterials.Patterns.Pattern_JakobsEpic_SpaltedMaple',ExpressionGUID=(A=-923052711,B=1309861752,C=584229786,D=-1229888527)),(ParameterName="p_Pattern",ParameterValue=Texture2D'Common_GunMaterials.Patterns.Pattern_Jakobs_CaseHardened',ExpressionGUID=(A=534250533,B=1202550002,C=1578302861,D=-717876416)),(ParameterName="p_Diffuse",ParameterValue=Texture2D'Common_GunTextures.CompTextures.Weap_LauncherShotgunPistol_Comp',ExpressionGUID=(A=2024732779,B=1159440301,C=1487416485,D=-2018014041)),(ParameterName="p_Masks",ParameterValue=Texture2D'Weap_Shotguns.Tex.Weap_Shotgun_Comp',ExpressionGUID=(A=-330624041,B=1167251458,C=-335191907,D=-166684394)),(ParameterName="p_NormalScopesEmissive",ParameterValue=Texture2D'Weap_Shotguns.Tex.Weap_Shotgun_Nor',ExpressionGUID=(A=-1743872746,B=1126171774,C=119496871,D=-1952271718)))
+
+
+set Common_GunMaterials.Materials.Shotgun.Mati_JakobsUniqueSG_Wave VectorParameterValues ((ParameterName="p_AColorHilight",ParameterValue=(R=1.000000,G=1.000000,B=1.000000,A=1.000000),ExpressionGUID=(A=384292798,B=1221323751,C=-2145405772,D=1872194118)),(ParameterName="p_AColorMidtone",ParameterValue=(R=0.722672,G=0.673049,B=0.673049,A=1.000000),ExpressionGUID=(A=1102826245,B=1256298978,C=-1429881438,D=-507521102)),(ParameterName="p_AColorShadow",ParameterValue=(R=0.106222,G=0.118770,B=0.160215,A=1.000000),ExpressionGUID=(A=1481234158,B=1129012376,C=-688827739,D=-2119135160)),(ParameterName="p_BColorHilight",ParameterValue=(R=0.083511,G=0.096653,B=0.099444,A=1.000000),ExpressionGUID=(A=170714760,B=1132476783,C=-275668290,D=655702143)),(ParameterName="p_BColorMidtone",ParameterValue=(R=0.015018,G=0.017417,B=0.022099,A=1.000000),ExpressionGUID=(A=473594356,B=1338758895,C=824823946,D=864253813)),(ParameterName="p_BColorShadow",ParameterValue=(R=0.028876,G=0.029326,B=0.060771,A=1.000000),ExpressionGUID=(A=-429590341,B=1156435294,C=-1015192901,D=687313413)),(ParameterName="p_CColorHilight",ParameterValue=(R=1.967321,G=1.680665,B=1.423428,A=1.000000),ExpressionGUID=(A=759765673,B=1280874949,C=257367956,D=-932702788)),(ParameterName="p_CColorMidtone",ParameterValue=(R=1.152664,G=1.282338,B=1.381660,A=1.000000),ExpressionGUID=(A=110180441,B=1232792373,C=-1232281417,D=-1030626065)),(ParameterName="p_CColorShadow",ParameterValue=(R=0.740341,G=0.831503,B=1.000000,A=1.000000),ExpressionGUID=(A=716329441,B=1214803259,C=-238071112,D=-1004122047)),(ParameterName="p_DColor",ParameterValue=(R=0.034413,G=0.088566,B=0.220986,A=1.000000),ExpressionGUID=(A=696455109,B=1155878830,C=-1741888361,D=802120528)),(ParameterName="p_ReflectColor",ParameterValue=(R=1.290632,G=1.290632,B=1.290632,A=1.000000),ExpressionGUID=(A=295058103,B=1318551573,C=-2045449573,D=-547597976)),(ParameterName="p_ReflectionChannelScale",ParameterValue=(R=1.000000,G=1.000000,B=1.000000,A=0.000000),ExpressionGUID=(A=1869386622,B=1303200947,C=-1616405849,D=714558284)),(ParameterName="p_DecalScalePosition",ParameterValue=(R=16.000000,G=40.000000,B=0.538500,A=0.539200),ExpressionGUID=(A=395540170,B=1243133493,C=-1264190552,D=123075385)),(ParameterName="p_DecalColor",ParameterValue=(R=1.693511,G=1.693511,B=2.2015643,A=1.000000),ExpressionGUID=(A=1691998600,B=1239094551,C=2074257317,D=1844701893)),(ParameterName="p_DecalChannel",ParameterValue=(R=1.000000,G=0.000000,B=1.000000,A=0.000000),ExpressionGUID=(A=1757499073,B=1097055033,C=-1266029657,D=1038353636)),(ParameterName="p_PatternScalePosition",ParameterValue=(R=8.000000,G=8.000000,B=2.427300,A=0.464700),ExpressionGUID=(A=-2005018406,B=1132497243,C=-39915121,D=208423616)),(ParameterName="p_PatternChannelScale",ParameterValue=(R=0.900000,G=0.500000,B=1.000000,A=0.000000),ExpressionGUID=(A=439432319,B=1091149893,C=-1991909502,D=1816944627)),(ParameterName="p_PatternColor",ParameterValue=(R=1.067563,G=1.067563,B=1.3878319,A=1.000000),ExpressionGUID=(A=676539706,B=1125682796,C=1871983293,D=-2049503601)))
+
+
+set Common_GunMaterials.Materials.Shotgun.Mati_JakobsUniqueSG_Wave ScalarParameterValues ((ParameterName="p_HighlightsIntensity",ParameterValue=0.500000,ExpressionGUID=(A=-1257568432,B=1277066486,C=-723473993,D=-1144384173)),(ParameterName="p_ShadowsIntensity",ParameterValue=3.000000,ExpressionGUID=(A=437293753,B=1205147708,C=-775723903,D=1480014964)),(ParameterName="p_ReplacePattern",ParameterValue=0.000000,ExpressionGUID=(A=-2084339847,B=1096440125,C=439008937,D=45433490)),(ParameterName="p_UseFullColorDecal",ParameterValue=0.000000,ExpressionGUID=(A=-1064329812,B=1077705328,C=339664807,D=1869745420)),(ParameterName="p_ReplaceDecal",ParameterValue=0.500000,ExpressionGUID=(A=85863466,B=1257609701,C=-728575820,D=1337098176)))
+
+
+
+
+
+FIRINGMODEBEHAVIOR
+
+set GD_Weap_Shotgun.FiringModes.Bullet_Shotgun_TidalWave FireType=EWWFT_Bullet
+set GD_Weap_Shotgun.FiringModes.Bullet_Shotgun_TidalWave BeamLockBehavior=LBL_LockOn
+set GD_Weap_Shotgun.FiringModes.Bullet_Shotgun_TidalWave DamageTypeDefinition=None
+set GD_Weap_Shotgun.FiringModes.Bullet_Shotgun_TidalWave ProjectileDefinition=None
+set GD_Weap_Shotgun.FiringModes.Bullet_Shotgun_TidalWave ExplosionOverrideDefinition ExplosionCollectionDefinition'GD_Weap_Shotgun.Explosions.Splat_Elemental_Explosions'
+set GD_Weap_Shotgun.FiringModes.Bullet_Shotgun_TidalWave ExplosionOverideInstanceDataName ExplosionOverride
+set GD_Weap_Shotgun.FiringModes.Bullet_Shotgun_TidalWave PartSysTemplate ParticleSystem'FX_WEP_Trails.Particles.Part_Wep_Tracer_Wavy'
+set GD_Weap_Shotgun.FiringModes.Bullet_Shotgun_TidalWave ConditionalPartSysTemplate None
+set GD_Weap_Shotgun.FiringModes.Bullet_Shotgun_TidalWave FirstPersonConditionalPartSysTemplate None
+set GD_Weap_Shotgun.FiringModes.Bullet_Shotgun_TidalWave OnAnyImpact (Behavior_Explode'GD_Weap_SMG.FiringModes.Bullet_Plasma_Default:Behavior_Explode_5')
+set GD_Weap_Shotgun.FiringModes.Bullet_Shotgun_TidalWave Lifetime 5.000000
+set GD_Weap_Shotgun.FiringModes.Bullet_Shotgun_TidalWave TraceInterval 0.200000
+set GD_Weap_Shotgun.FiringModes.Bullet_Shotgun_TidalWave bSuppressImpactEffects False
+set GD_Weap_Shotgun.FiringModes.Bullet_Shotgun_TidalWave bPenetratePawn False
+set GD_Weap_Shotgun.FiringModes.Bullet_Shotgun_TidalWave bParameterizedSourceLocation False
+set GD_Weap_Shotgun.FiringModes.Bullet_Shotgun_TidalWave bBeamCorrectForRotation False
+set GD_Weap_Shotgun.FiringModes.Bullet_Shotgun_TidalWave bBeamChooseRandomBone False
+set GD_Weap_Shotgun.FiringModes.Bullet_Shotgun_TidalWave bFireRandomlyFromPattern False
+set GD_Weap_Shotgun.FiringModes.Bullet_Shotgun_TidalWave bResetPatternAfterEachShot False
+set GD_Weap_Shotgun.FiringModes.Bullet_Shotgun_TidalWave bSuppressWeaponSpread True
+set GD_Weap_Shotgun.FiringModes.Bullet_Shotgun_TidalWave bScalePatternByWeaponSpread True
+set GD_Weap_Shotgun.FiringModes.Bullet_Shotgun_TidalWave OverchargedImpactTemplate None
+set GD_Weap_Shotgun.FiringModes.Bullet_Shotgun_TidalWave NumRicochets 0
+set GD_Weap_Shotgun.FiringModes.Bullet_Shotgun_TidalWave Speed 3200.000000
+set GD_Weap_Shotgun.FiringModes.Bullet_Shotgun_TidalWave Acceleration (X=0.000000,Y=0.000000,Z=0.000000)
+set GD_Weap_Shotgun.FiringModes.Bullet_Shotgun_TidalWave WaveFreq (X=0.000000,Y=0.000000,Z=0.000000)
+set GD_Weap_Shotgun.FiringModes.Bullet_Shotgun_TidalWave WaveAmp (X=0.000000,Y=0.000000,Z=0.000000)
+set GD_Weap_Shotgun.FiringModes.Bullet_Shotgun_TidalWave WavePhase (X=0.000000,Y=0.000000,Z=0.000000)
+set GD_Weap_Shotgun.FiringModes.Bullet_Shotgun_TidalWave RicochetFriction 0.000000
+set GD_Weap_Shotgun.FiringModes.Bullet_Shotgun_TidalWave AirFriction 0.000000
+set GD_Weap_Shotgun.FiringModes.Bullet_Shotgun_TidalWave RicochetResponse (SplitNum=0,SplitAngle=0.000000,SplitAngleOffset=0.000000,SplitDistance=0.000000,SplitFire=None,NewSpeed=0.000000,bDetonate=False,bRespawnTracer=False,bUpdateBeamSourceLocation=False,Behaviors=)
+set GD_Weap_Shotgun.FiringModes.Bullet_Shotgun_TidalWave TraceExtent (X=0.000000,Y=0.000000,Z=0.000000)
+set GD_Weap_Shotgun.FiringModes.Bullet_Shotgun_TidalWave LightProjectileSourceLocationName SourceLocation
+set GD_Weap_Shotgun.FiringModes.Bullet_Shotgun_TidalWave ConditionalImpactPartSysTemplate None
+set GD_Weap_Shotgun.FiringModes.Bullet_Shotgun_TidalWave BeamMaxLockOnDistance 5000.000000
+set GD_Weap_Shotgun.FiringModes.Bullet_Shotgun_TidalWave BeamMaxLength 7500.000000
+set GD_Weap_Shotgun.FiringModes.Bullet_Shotgun_TidalWave BeamSourceTangentStrengthOverDistance 1.500000
+set GD_Weap_Shotgun.FiringModes.Bullet_Shotgun_TidalWave BeamTargetTangentStrengthOverDistance 0.250000
+set GD_Weap_Shotgun.FiringModes.Bullet_Shotgun_TidalWave BeamApproxRepUpdateTime 1.000000
+set GD_Weap_Shotgun.FiringModes.Bullet_Shotgun_TidalWave BeamTraceNumSteps 6
+set GD_Weap_Shotgun.FiringModes.Bullet_Shotgun_TidalWave BeamSourceLocationName SourceLocation
+set GD_Weap_Shotgun.FiringModes.Bullet_Shotgun_TidalWave BeamSourceTangentName SourceTangent
+set GD_Weap_Shotgun.FiringModes.Bullet_Shotgun_TidalWave BeamSourceStrengthName SourceStrength
+set GD_Weap_Shotgun.FiringModes.Bullet_Shotgun_TidalWave BeamTargetLocationName TargetLocation
+set GD_Weap_Shotgun.FiringModes.Bullet_Shotgun_TidalWave BeamTargetTangentName TargetTangent
+set GD_Weap_Shotgun.FiringModes.Bullet_Shotgun_TidalWave BeamTargetStrengthName TargetStrength
+set GD_Weap_Shotgun.FiringModes.Bullet_Shotgun_TidalWave BeamDirectionName Direction
+set GD_Weap_Shotgun.FiringModes.Bullet_Shotgun_TidalWave BeamChainDelay 1.000000
+set GD_Weap_Shotgun.FiringModes.Bullet_Shotgun_TidalWave BeamChainNum 3
+set GD_Weap_Shotgun.FiringModes.Bullet_Shotgun_TidalWave BeamChainMaxDistance 4000.000000
+set GD_Weap_Shotgun.FiringModes.Bullet_Shotgun_TidalWave BeamRandomBoneTimeMin 1.000000
+set GD_Weap_Shotgun.FiringModes.Bullet_Shotgun_TidalWave BeamRandomBoneTimeMax 2.000000
+set GD_Weap_Shotgun.FiringModes.Bullet_Shotgun_TidalWave SoundDefinition FiringModeSoundDefinition'GD_Weap_Bullet_Tech_Sounds.Sound_Definitions.Default_Bullet'
+set GD_Weap_Shotgun.FiringModes.Bullet_Shotgun_TidalWave FiringPatternLines ((StartPoint=(Pitch=0,Yaw=-273,Roll=0),EndPoint=(Pitch=0,Yaw=0,Roll=0),bUseStartPointOnly=True,CustomWaveMotion=(bUseCustomWaveMotion=True,WaveFreq=(X=0.000000,Y=360.000000,Z=360.000000),WaveAmp=(X=0.000000,Y=0.000000,Z=100.000000),WavePhase=(X=0.000000,Y=0.000000,Z=0.000000))),(StartPoint=(Pitch=0,Yaw=273,Roll=0),EndPoint=(Pitch=0,Yaw=0,Roll=0),bUseStartPointOnly=True,CustomWaveMotion=(bUseCustomWaveMotion=True,WaveFreq=(X=0.000000,Y=360.000000,Z=360.000000),WaveAmp=(X=0.000000,Y=0.000000,Z=100.000000),WavePhase=(X=0.000000,Y=0.000000,Z=0.000000))),(StartPoint=(Pitch=-364,Yaw=-728,Roll=0),EndPoint=(Pitch=0,Yaw=0,Roll=0),bUseStartPointOnly=True,CustomWaveMotion=(bUseCustomWaveMotion=True,WaveFreq=(X=0.000000,Y=360.000000,Z=360.000000),WaveAmp=(X=0.000000,Y=0.000000,Z=80.000000),WavePhase=(X=0.000000,Y=0.000000,Z=0.000000))),(StartPoint=(Pitch=-546,Yaw=-364,Roll=0),EndPoint=(Pitch=0,Yaw=0,Roll=0),bUseStartPointOnly=True,CustomWaveMotion=(bUseCustomWaveMotion=True,WaveFreq=(X=0.000000,Y=360.000000,Z=360.000000),WaveAmp=(X=0.000000,Y=0.000000,Z=80.000000),WavePhase=(X=0.000000,Y=0.000000,Z=0.000000))),(StartPoint=(Pitch=-546,Yaw=364,Roll=0),EndPoint=(Pitch=0,Yaw=0,Roll=0),bUseStartPointOnly=True,CustomWaveMotion=(bUseCustomWaveMotion=True,WaveFreq=(X=0.000000,Y=360.000000,Z=360.000000),WaveAmp=(X=0.000000,Y=0.000000,Z=80.000000),WavePhase=(X=0.000000,Y=0.000000,Z=0.000000))),(StartPoint=(Pitch=-364,Yaw=728,Roll=0),EndPoint=(Pitch=0,Yaw=0,Roll=0),bUseStartPointOnly=True,CustomWaveMotion=(bUseCustomWaveMotion=True,WaveFreq=(X=0.000000,Y=360.000000,Z=360.000000),WaveAmp=(X=0.000000,Y=0.000000,Z=80.000000),WavePhase=(X=0.000000,Y=0.000000,Z=0.000000))),(StartPoint=(Pitch=-637,Yaw=0,Roll=0),EndPoint=(Pitch=0,Yaw=0,Roll=0),bUseStartPointOnly=True,CustomWaveMotion=(bUseCustomWaveMotion=True,WaveFreq=(X=0.000000,Y=360.000000,Z=360.000000),WaveAmp=(X=0.000000,Y=0.000000,Z=80.000000),WavePhase=(X=0.000000,Y=0.000000,Z=0.000000))))
+set GD_Weap_Shotgun.FiringModes.Bullet_Shotgun_TidalWave BasePatternSpread 7.000000
+set GD_Weap_Shotgun.FiringModes.Bullet_Shotgun_TidalWave MinPatternScale 0.500000
+
+
+
+
+
+
+
+######
+FLAYER
+
+set GD_Weap_Shotgun.Name.Title_Jakobs.Title_Legendary_Striker PartName Flayer
+
+set GD_Weap_Shotgun.Name.Title_Jakobs.Title_Legendary_Striker:AttributePresentationDefinition_8 NoConstraintText OMG, what's it doing to Sanchez?!
+
+set GD_Weap_Shotgun.Barrel.SG_Barrel_Hyperion_Striker GestaltModeSkeletalMeshName SG_Barrel_Jakobs
+
+set GD_Weap_Shotgun.Barrel.SG_Barrel_Hyperion_Striker WeaponCardAttributes ((Attribute=AttributeDefinition'D_Attributes.GameplayAttributes.PlayerCriticalHitBonus',PriorityIncrease=0.000000),(Attribute=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',PriorityIncrease=0.500000))
+
+
+
+set GD_Weap_Shotgun.Barrel.SG_Barrel_Hyperion_Striker CustomFiringModeDefinition None
+
+set GD_Weap_Shotgun.Barrel.SG_Barrel_Hyperion_Striker WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=4.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Jakobs',InitializationDefinition=None,BaseValueScaleConstant=0.100000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Jakobs',InitializationDefinition=None,BaseValueScaleConstant=4.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponPerShotAccuracyImpulse',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Jakobs',InitializationDefinition=None,BaseValueScaleConstant=-0.200000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Jakobs',InitializationDefinition=None,BaseValueScaleConstant=-0.200000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=4.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0.000000)))
+
+set GD_Weap_Shotgun.Barrel.SG_Barrel_Hyperion_Striker ExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.GameplayAttributes.PlayerCriticalHitBonus',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))
+
+set GD_Weap_Shotgun.Barrel.SG_Barrel_Hyperion_Striker AttributeSlotUpgrades ((SlotName="WeaponSpread",GradeIncrease=-10,bActivateSlot=True),(SlotName="AccuracyMin",GradeIncrease=-2,bActivateSlot=True),(SlotName="WeaponAccuracyImpulse",GradeIncrease=-10,bActivateSlot=True),(SlotName="WeaponDamage",GradeIncrease=2,bActivateSlot=True),(SlotName="WeaponAccuracyImpulse",GradeIncrease=-5,bActivateSlot=True),(SlotName="WeaponFireRate",GradeIncrease=-5,bActivateSlot=True),,(SlotName="WeaponZoomFOV",GradeIncrease=0,bActivateSlot=True))
+
+
+
+
+##TEXTURE
+set Common_GunMaterials.Materials.Shotgun.Mati_JakobsLegendary_SG_Striker TextureParameterValues ((ParameterName="p_NormalScopesEmissive",ParameterValue=Texture2D'Weap_Shotguns.Tex.Weap_Shotgun_Nor',ExpressionGUID=(A=-1743872746,B=1126171774,C=119496871,D=-1952271718)),(ParameterName="p_Diffuse",ParameterValue=Texture2D'Common_GunMaterials.CompTextures.Weap_LauncherShotgunPistol_Comp',ExpressionGUID=(A=1757607260,B=1326539502,C=-317215581,D=-565807463)),(ParameterName="p_Masks",ParameterValue=Texture2D'Weap_Shotguns.Tex.Weap_Shotgun_Comp',ExpressionGUID=(A=-330624041,B=1167251458,C=-335191907,D=-166684394)),(ParameterName="P_SimpleReflect",ParameterValue=Texture2D'Common_GunMaterials.Env.Gold',ExpressionGUID=(A=-858148940,B=1327945772,C=148462268,D=1899047224)),(ParameterName="p_Pattern",ParameterValue=Texture2D'Char_BugMorph.Textures.Bugmorph_Dif',ExpressionGUID=(A=534250533,B=1202550002,C=1578302861,D=-717876416)),(ParameterName="p_Decal",ParameterValue=Texture2D'Char_BugMorph.Textures.Bugmorph_Dif',ExpressionGUID=(A=-923052711,B=1309861752,C=584229786,D=-1229888527)),(ParameterName="P_SimpleReflect",ParameterValue=Texture2D'Common_GunMaterials.Env.Gold',ExpressionGUID=(A=-858148940,B=1327945772,C=148462268,D=1899047224)))
+##VECTOR
+set Common_GunMaterials.Materials.Shotgun.Mati_JakobsLegendary_SG_Striker VectorParameterValues ((ParameterName="p_AColorHilight",ParameterValue=(R=2.550000,G=1.330000,B=1.330000,A=1.000000),ExpressionGUID=(A=170014760,B=1132076783,C=-275608290,D=650702143)),(ParameterName="p_AColorMidtone",ParameterValue=(R=2.550000,G=1.330000,B=1.330000,A=1.000000),ExpressionGUID=(A=473504356,B=1338058895,C=824823046,D=864253013)),(ParameterName="p_AColorShadow",ParameterValue=(R=0.255000,G=0.133000,B=0.133000,A=1.000000),ExpressionGUID=(A=-429590041,B=1156405294,C=-1015192900,D=687313410)),(ParameterName="p_BColorHilight",ParameterValue=(R=2.550000,G=1.330000,B=1.330000,A=1.000000),ExpressionGUID=(A=170714760,B=1132476783,C=-275668290,D=655702143)),(ParameterName="p_BColorMidtone",ParameterValue=(R=0.255000,G=0.133000,B=0.133000,A=1.000000),ExpressionGUID=(A=473594356,B=1338758895,C=824823946,D=864253813)),(ParameterName="p_BColorShadow",ParameterValue=(R=0.020000,G=0.010000,B=0.010000,A=1.000000),ExpressionGUID=(A=-429590341,B=1156435294,C=-1015192901,D=687313413)),(ParameterName="p_CColorHilight",ParameterValue=(R=2.550000,G=1.330000,B=1.330000,A=1.000000),ExpressionGUID=(A=170714760,B=1132476783,C=-275668290,D=655702143)),(ParameterName="p_CColorMidtone",ParameterValue=(R=0.255000,G=0.133000,B=0.133000,A=1.000000),ExpressionGUID=(A=473594356,B=1338758895,C=824823946,D=864253813)),(ParameterName="p_CColorShadow",ParameterValue=(R=0.020000,G=0.010000,B=0.010000,A=1.000000),ExpressionGUID=(A=-429590341,B=1156435294,C=-1015192901,D=687313413)),(ParameterName="p_DColor",ParameterValue=(R=2.000000,G=2.000000,B=2.000000,A=1.000000),ExpressionGUID=(A=696455109,B=1155878830,C=-1741888361,D=802120528)),(ParameterName="p_PatternColor",ParameterValue=(R=2.050000,G=1.130000,B=1.630000,A=1.000000),ExpressionGUID=(A=676539706,B=1125682796,C=1871983293,D=-2049503601)),(ParameterName="p_PatternScalePosition",ParameterValue=(R=4.550000,G=6.330000,B=1.230000,A=1.000000),ExpressionGUID=(A=-2005018406,B=1132497243,C=-39915121,D=208423616)),(ParameterName="p_PatternChannelScale",ParameterValue=(R=0.800000,G=1.880000,B=0.800000,A=1.000000),ExpressionGUID=(A=439432319,B=1091149893,C=-1991909502,D=1816944627)),(ParameterName="p_DecalChannel",ParameterValue=(R=0.820000,G=0.995000,B=0.800000,A=1.000000),ExpressionGUID=(A=1869386622,B=1303200947,C=-1616405849,D=714558284)),(ParameterName="p_DecalScalePosition",ParameterValue=(R=1.100000,G=4.100000,B=-1.360000,A=-1.100000),ExpressionGUID=(A=395540170,B=1243133493,C=-1264190552,D=123075385)),(ParameterName="p_DecalColor",ParameterValue=(R=0.300000,G=0.030000,B=0.100000,A=1.000000),ExpressionGUID=(A=1691998600,B=1239094551,C=2074257317,D=1844701893)),(ParameterName="p_ReflectColor",ParameterValue=(R=18.550000,G=6.330000,B=8.330000,A=1.000000),ExpressionGUID=(A=295058103,B=1318551573,C=-2045449573,D=-547597976)),
+(ParameterName="p_ReflectionChannelScale",ParameterValue=(R=0.450000,G=1.00000,B=0.000000,A=1.000000),ExpressionGUID=(A=295058103,B=1318551573,C=-2045449573,D=-547597976)))
+##SCALE
+set Common_GunMaterials.Materials.Shotgun.Mati_JakobsLegendary_SG_Striker ScalarParameterValues ((ParameterName="p_UseFullColorDecal",ParameterValue=0.990000,ExpressionGUID=(A=-1064329812,B=1077705328,C=339664807,D=1869745420)),(ParameterName="p_DecalRotate",ParameterValue=0.000000,ExpressionGUID=(A=-276527909,B=1298581551,C=856978878,D=743944047)),(ParameterName="p_ShadowsIntensity",ParameterValue=0.800000,ExpressionGUID=(A=437293753,B=1205147708,C=-775723903,D=1480014964)),(ParameterName="p_HighlightsIntensity",ParameterValue=1.450000,ExpressionGUID=(A=-1257568432,B=1277066486,C=-723473993,D=-1144384173)))
+
+
+
+
+
+
+
+
+
