@@ -1,0 +1,133 @@
+########
+By Aaron0000
+
+Turns the Longbow into the Omnicannon from Pre-Sequel.
+
+Features;
+Deals bonus explosive damage.
+Very low initial scope sway for a Hyperion rifle. 
+Reduced damage and magazine size...not. Increased damage instead.
+
+WARNINGS;
+This mod makes it so that the Longbow can spawn with scopes. If you start a game with a Longbow that has a sight without having this mod active, return the sight back to the Longbow sight with Gibbed, or prepare to have your weapon deleted.
+This mod makes it so that the Longbow can spawn with all typical sniper accessories. If you start a game with a Longbow that has a Damage, Magazine, or Fire Rate accessory without having this mod active, turn the accessory into a different one with Gibbed, or prepare to have your weapon deleted.
+This mod also makes it so that it spawns in non-elemental instead of incendiary. Although if you do start a game without the mod active, the weapon won't be deleted (assuming the only thing different is the element). Return it to incendiary in Gibbed or re-farm a proper fire one.
+
+########
+
+set GD_Weap_SniperRifles.Name.Title.Title__Unique_Longbow PartName Omni-Cannon
+
+set GD_Weap_SniperRifles.Name.Title.Title__Unique_Longbow:AttributePresentationDefinition_8 NoConstraintText State of the art. Bang bang.
+
+set GD_Weap_SniperRifles.Barrel.SR_Barrel_Alien_Longbow GestaltModeSkeletalMeshName SR_Barrel_Hyperion
+
+set GD_Weap_SniperRifles.Barrel.SR_Barrel_Alien_Longbow BoneControllers ()
+
+set GD_Weap_SniperRifles.Barrel.SR_Barrel_Alien_Longbow bFlapsEnabled False
+
+set GD_Weap_SniperRifles.Barrel.SR_Barrel_Alien_Longbow rarity (BaseValueConstant=5.000000)
+
+set GD_Weap_SniperRifles.Barrel.SR_Barrel_Alien_Longbow rarity (basevalueattribute=none)
+
+
+
+
+set GD_Weap_SniperRifles.A_Weapons_Unique.Sniper_Hyperion_3_Longbow:WeaponPartListCollectionDefinition_210 SightPartData (bEnabled=True,WeightedParts=((Part=WeaponPartDefinition'GD_Weap_SniperRifles.Sight.Sniper_Sight_Dahl',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=2),(Part=WeaponPartDefinition'GD_Weap_SniperRifles.Sight.Sniper_Sight_Vladof',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=2),(Part=WeaponPartDefinition'GD_Weap_SniperRifles.Sight.Sniper_Sight_Maliwan',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=2),(Part=WeaponPartDefinition'GD_Weap_SniperRifles.Sight.Sniper_Sight_Jakobs',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=2),(Part=WeaponPartDefinition'GD_Weap_SniperRifles.Sight.Sniper_Sight_Hyperion',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=2),(Part=WeaponPartDefinition'GD_Weap_SniperRifles.Sight.Sniper_Sight_None_Longbow',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=2)))
+
+set GD_Weap_SniperRifles.A_Weapons_Unique.Sniper_Hyperion_3_Longbow:WeaponPartListCollectionDefinition_210 ElementalPartData (bEnabled=True,WeightedParts=((Part=WeaponPartDefinition'GD_Weap_SniperRifles.elemental.SR_Elemental_None',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=2),(Part=WeaponPartDefinition'GD_Weap_SniperRifles.elemental.SR_Elemental_Fire',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=0,DefaultWeightIndex=0)))
+
+set GD_Weap_SniperRifles.A_Weapons_Unique.Sniper_Hyperion_3_Longbow:WeaponPartListCollectionDefinition_210 Accessory1PartData (bEnabled=True,WeightedParts=((Part=WeaponPartDefinition'GD_Weap_SniperRifles.Accessory.Sniper_Accessory_Bayonet1',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=2),(Part=WeaponPartDefinition'GD_Weap_SniperRifles.Accessory.Sniper_Accessory_Bipod1_Accuracy',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=2),(Part=WeaponPartDefinition'GD_Weap_SniperRifles.Accessory.Sniper_Accessory_Bipod2_Critical',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=2),(Part=WeaponPartDefinition'GD_Weap_SniperRifles.Accessory.Sniper_Accessory_Foregrip_Stability',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=2),(Part=WeaponPartDefinition'GD_Weap_SniperRifles.Accessory.Sniper_Accessory_Mount1_Mag',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=2),(Part=WeaponPartDefinition'GD_Weap_SniperRifles.Accessory.Sniper_Accessory_Mount2_FireRate',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=2),(Part=WeaponPartDefinition'GD_Weap_SniperRifles.Accessory.Sniper_Accessory_Mount3_Damage',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=2)))
+
+
+
+
+set GD_Weap_SniperRifles.Barrel.SR_Barrel_Alien_Longbow WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.300000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.200000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponPerShotAccuracyImpulse',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Hyperion',InitializationDefinition=None,BaseValueScaleConstant=0.200000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Hyperion',InitializationDefinition=None,BaseValueScaleConstant=-2.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponReloadSpeed',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.150000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponStatusEffectChanceModifier',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+
+set GD_Weap_SniperRifles.Barrel.SR_Barrel_Alien_Longbow ExternalAttributeEffects ((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AccuracyResourcePool.AccuracyMinValue',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-3.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AccuracyResourcePool.AccuracyMaxValue',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-3.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AccuracyResourcePool.AccuracyMinValue',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-0.400000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.GameplayAttributes.PlayerCriticalHitBonus',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+
+set GD_Weap_SniperRifles.Barrel.SR_Barrel_Alien_Longbow AttributeSlotUpgrades ((SlotName="WeaponSpread",GradeIncrease=5,bActivateSlot=True),(SlotName="AccuracyMin",GradeIncrease=3,bActivateSlot=True),(SlotName="WeaponMagSize",GradeIncrease=0,bActivateSlot=True),(SlotName="WeaponDamage",GradeIncrease=3,bActivateSlot=True),(SlotName="WeaponAccuracyImpulse",GradeIncrease=2,bActivateSlot=True))
+
+
+
+
+
+set Common_GunMaterials.Materials.sniper.Mati_HyperionUniqueSR_Longbow ScalarParameterValues ((ParameterName="p_ReplacePattern",ParameterValue=1.000000,ExpressionGUID=(A=-2084339847,B=1096440125,C=439008937,D=45433490)))
+
+set Common_GunMaterials.Materials.sniper.Mati_HyperionUniqueSR_Longbow TextureParameterValues ((ParameterName="p_NormalScopesEmissive",ParameterValue=Texture2D'Weap_SniperRifles.Tex.Weap_SniperRifle_Nrm',ExpressionGUID=(A=-1685713219,B=1198583295,C=1500684677,D=295812567)),(ParameterName="p_Masks",ParameterValue=Texture2D'Weap_SniperRifles.Tex.Weap_SniperRifle_Comp',ExpressionGUID=(A=-330624041,B=1167251458,C=-335191907,D=-166684394)),(ParameterName="p_Diffuse",ParameterValue=Texture2D'Common_GunTextures.CompTextures.Weap_AssaultSubSniper_Comp',ExpressionGUID=(A=2024732779,B=1159440301,C=1487416485,D=-2018014041)),(ParameterName="p_Pattern",ParameterValue=None,ExpressionGUID=(A=534250533,B=1202550002,C=1578302861,D=-717876416)),(ParameterName="P_SimpleReflect",ParameterValue=Texture2D'Common_GunMaterials.Env.GlossyB',ExpressionGUID=(A=-858148940,B=1327945772,C=148462268,D=1899047224)))
+
+set Common_GunMaterials.Materials.sniper.Mati_HyperionUniqueSR_Longbow VectorParameterValues ((ParameterName="p_DecalScalePosition",ParameterValue=(R=10.298660,G=38.896099,B=0.540800,A=0.526100),ExpressionGUID=(A=395540170,B=1243133493,C=-1264190552,D=123075385)),(ParameterName="p_DecalChannel",ParameterValue=(R=1.000000,G=0.000000,B=0.000000,A=0.000000),ExpressionGUID=(A=1757499073,B=1097055033,C=-1266029657,D=1038353636)),(ParameterName="p_DecalColor",ParameterValue=(R=1.416961,G=1.508305,B=1.358313,A=1.000000),ExpressionGUID=(A=1691998600,B=1239094551,C=2074257317,D=1844701893)),(ParameterName="p_CColorShadow",ParameterValue=(R=0.313879,G=0.390244,B=0.624286,A=1.000000),ExpressionGUID=(A=716329441,B=1214803259,C=-238071112,D=-1004122047)),(ParameterName="p_CColorHilight",ParameterValue=(R=1.846881,G=1.846881,B=1.846881,A=1.000000),ExpressionGUID=(A=759765673,B=1280874949,C=257367956,D=-932702788)),(ParameterName="p_CColorMidtone",ParameterValue=(R=0.430923,G=0.352360,B=0.376375,A=1.000000),ExpressionGUID=(A=110180441,B=1232792373,C=-1232281417,D=-1030626065)),(ParameterName="p_BColorShadow",ParameterValue=(R=0.303856,G=0.165905,B=0.256251,A=1.000000),ExpressionGUID=(A=-429590341,B=1156435294,C=-1015192901,D=687313413)),(ParameterName="p_BColorHilight",ParameterValue=(R=0.749407,G=0.842450,B=1.055171,A=1.000000),ExpressionGUID=(A=170714760,B=1132476783,C=-275668290,D=655702143)),(ParameterName="p_BColorMidtone",ParameterValue=(R=0.493570,G=0.530751,B=0.850797,A=1.000000),ExpressionGUID=(A=473594356,B=1338758895,C=824823946,D=864253813)),(ParameterName="p_AColorShadow",ParameterValue=(R=0.110493,G=0.093958,B=0.095783,A=1.000000),ExpressionGUID=(A=1481234158,B=1129012376,C=-688827739,D=-2119135160)),(ParameterName="p_AColorHilight",ParameterValue=(R=0.303856,G=0.303856,B=0.303856,A=1.000000),ExpressionGUID=(A=384292798,B=1221323751,C=-2145405772,D=1872194118)),(ParameterName="p_AColorMidtone",ParameterValue=(R=0.000000,G=0.000000,B=0.000000,A=1.000000),ExpressionGUID=(A=1102826245,B=1256298978,C=-1429881438,D=-507521102)),(ParameterName="p_DColor",ParameterValue=(R=0.077345,G=0.077345,B=0.077345,A=1.000000),ExpressionGUID=(A=696455109,B=1155878830,C=-1741888361,D=802120528)),(ParameterName="p_ReflectColor",ParameterValue=(R=1.716298,G=1.774459,B=1.704893,A=1.000000),ExpressionGUID=(A=295058103,B=1318551573,C=-2045449573,D=-547597976)),(ParameterName="p_ReflectionChannelScale",ParameterValue=(R=1.000000,G=1.000000,B=1.000000,A=1.000000),ExpressionGUID=(A=1869386622,B=1303200947,C=-1616405849,D=714558284)),(ParameterName="p_EmissiveColor",ParameterValue=(R=0.000000,G=0.000000,B=0.000000,A=0.000000),ExpressionGUID=(A=-2074486426,B=1296399582,C=-2021314681,D=-350758005)),(ParameterName="p_PatternScalePosition",ParameterValue=(R=0.000000,G=0.000000,B=0.000000,A=0.000000),ExpressionGUID=(A=-2005018406,B=1132497243,C=-39915121,D=208423616)),(ParameterName="p_PatternChannelScale",ParameterValue=(R=0.000000,G=0.000000,B=0.000000,A=0.000000),ExpressionGUID=(A=439432319,B=1091149893,C=-1991909502,D=1816944627)),(ParameterName="p_PatternColor",ParameterValue=(R=0.000000,G=0.000000,B=0.000000,A=1.000000),ExpressionGUID=(A=676539706,B=1125682796,C=1871983293,D=-2049503601)))
+
+set Common_GunMaterials.Materials.sniper.Mati_HyperionUniqueSR_Longbow Parent Common_Co_Materials.Weapons.Master_Gun
+
+
+
+
+
+set GD_Weap_SniperRifles.FiringModes.Bullet_Sniper_Longbow FireType EWWFT_Bullet
+set GD_Weap_SniperRifles.FiringModes.Bullet_Sniper_Longbow BeamLockBehavior LBL_LockOn
+set GD_Weap_SniperRifles.FiringModes.Bullet_Sniper_Longbow DamageTypeDefinition None
+set GD_Weap_SniperRifles.FiringModes.Bullet_Sniper_Longbow ProjectileDefinition None
+set GD_Weap_SniperRifles.FiringModes.Bullet_Sniper_Longbow ExplosionOverrideDefinition None
+set GD_Weap_SniperRifles.FiringModes.Bullet_Sniper_Longbow ExplosionOverideInstanceDataName None
+set GD_Weap_SniperRifles.FiringModes.Bullet_Sniper_Longbow PartSysTemplate ParticleSystem'FX_WEP_Trails.Particles.Part_Wep_Tracer_Ricochet_Bounce'
+set GD_Weap_SniperRifles.FiringModes.Bullet_Sniper_Longbow ConditionalPartSysTemplate EffectCollectionDefinition'GD_Weap_Shared_Effects.Default_Tracers'
+set GD_Weap_SniperRifles.FiringModes.Bullet_Sniper_Longbow FirstPersonConditionalPartSysTemplate None
+set GD_Weap_SniperRifles.FiringModes.Bullet_Sniper_Longbow OnAnyImpact (Behavior_Explode'GD_Weap_SniperRifles.FiringModes.Bullet_Sniper_Maliwan:Behavior_Explode_5')
+set GD_Weap_SniperRifles.FiringModes.Bullet_Sniper_Longbow Lifetime 5.000000
+set GD_Weap_SniperRifles.FiringModes.Bullet_Sniper_Longbow TraceInterval 0.200000
+set GD_Weap_SniperRifles.FiringModes.Bullet_Sniper_Longbow bSuppressImpactEffects False
+set GD_Weap_SniperRifles.FiringModes.Bullet_Sniper_Longbow bPenetratePawn False
+set GD_Weap_SniperRifles.FiringModes.Bullet_Sniper_Longbow bParameterizedSourceLocation False
+set GD_Weap_SniperRifles.FiringModes.Bullet_Sniper_Longbow bBeamCorrectForRotation False
+set GD_Weap_SniperRifles.FiringModes.Bullet_Sniper_Longbow bBeamChooseRandomBone False
+set GD_Weap_SniperRifles.FiringModes.Bullet_Sniper_Longbow bFireRandomlyFromPattern False
+set GD_Weap_SniperRifles.FiringModes.Bullet_Sniper_Longbow bResetPatternAfterEachShot False
+set GD_Weap_SniperRifles.FiringModes.Bullet_Sniper_Longbow bSuppressWeaponSpread False
+set GD_Weap_SniperRifles.FiringModes.Bullet_Sniper_Longbow bScalePatternByWeaponSpread False
+set GD_Weap_SniperRifles.FiringModes.Bullet_Sniper_Longbow OverchargedImpactTemplate None
+set GD_Weap_SniperRifles.FiringModes.Bullet_Sniper_Longbow NumRicochets 0
+set GD_Weap_SniperRifles.FiringModes.Bullet_Sniper_Longbow Speed 45000.000000
+set GD_Weap_SniperRifles.FiringModes.Bullet_Sniper_Longbow Acceleration (X=0.000000,Y=0.000000,Z=0.000000)
+set GD_Weap_SniperRifles.FiringModes.Bullet_Sniper_Longbow WaveFreq (X=0.000000,Y=0.000000,Z=0.000000)
+set GD_Weap_SniperRifles.FiringModes.Bullet_Sniper_Longbow WaveAmp (X=0.000000,Y=0.000000,Z=0.000000)
+set GD_Weap_SniperRifles.FiringModes.Bullet_Sniper_Longbow WavePhase (X=0.000000,Y=0.000000,Z=0.000000)
+set GD_Weap_SniperRifles.FiringModes.Bullet_Sniper_Longbow RicochetFriction 0.000000
+set GD_Weap_SniperRifles.FiringModes.Bullet_Sniper_Longbow AirFriction 0.000000
+set GD_Weap_SniperRifles.FiringModes.Bullet_Sniper_Longbow RicochetResponse (SplitNum=0,SplitAngle=0.000000,SplitAngleOffset=0.000000,SplitDistance=0.000000,SplitFire=None,NewSpeed=0.000000,bDetonate=False,bRespawnTracer=True,bUpdateBeamSourceLocation=False,Behaviors=)
+set GD_Weap_SniperRifles.FiringModes.Bullet_Sniper_Longbow TraceExtent (X=0.000000,Y=0.000000,Z=0.000000)
+set GD_Weap_SniperRifles.FiringModes.Bullet_Sniper_Longbow LightProjectileSourceLocationName SourceLocation
+set GD_Weap_SniperRifles.FiringModes.Bullet_Sniper_Longbow ConditionalImpactPartSysTemplate None
+set GD_Weap_SniperRifles.FiringModes.Bullet_Sniper_Longbow BeamMaxLockOnDistance 5000.000000
+set GD_Weap_SniperRifles.FiringModes.Bullet_Sniper_Longbow BeamMaxLength 7500.000000
+set GD_Weap_SniperRifles.FiringModes.Bullet_Sniper_Longbow BeamSourceTangentStrengthOverDistance 1.500000
+set GD_Weap_SniperRifles.FiringModes.Bullet_Sniper_Longbow BeamTargetTangentStrengthOverDistance 0.250000
+set GD_Weap_SniperRifles.FiringModes.Bullet_Sniper_Longbow BeamApproxRepUpdateTime 1.000000
+set GD_Weap_SniperRifles.FiringModes.Bullet_Sniper_Longbow BeamTraceNumSteps 6
+set GD_Weap_SniperRifles.FiringModes.Bullet_Sniper_Longbow BeamSourceLocationName SourceLocation
+set GD_Weap_SniperRifles.FiringModes.Bullet_Sniper_Longbow BeamSourceTangentName SourceTangent
+set GD_Weap_SniperRifles.FiringModes.Bullet_Sniper_Longbow BeamSourceStrengthName SourceStrength
+set GD_Weap_SniperRifles.FiringModes.Bullet_Sniper_Longbow BeamTargetLocationName TargetLocation
+set GD_Weap_SniperRifles.FiringModes.Bullet_Sniper_Longbow BeamTargetTangentName TargetTangent
+set GD_Weap_SniperRifles.FiringModes.Bullet_Sniper_Longbow BeamTargetStrengthName TargetStrength
+set GD_Weap_SniperRifles.FiringModes.Bullet_Sniper_Longbow BeamDirectionName Direction
+set GD_Weap_SniperRifles.FiringModes.Bullet_Sniper_Longbow BeamChainDelay 1.000000
+set GD_Weap_SniperRifles.FiringModes.Bullet_Sniper_Longbow BeamChainNum 3
+set GD_Weap_SniperRifles.FiringModes.Bullet_Sniper_Longbow BeamChainMaxDistance 4000.000000
+set GD_Weap_SniperRifles.FiringModes.Bullet_Sniper_Longbow BeamRandomBoneTimeMin 1.000000
+set GD_Weap_SniperRifles.FiringModes.Bullet_Sniper_Longbow BeamRandomBoneTimeMax 2.000000
+set GD_Weap_SniperRifles.FiringModes.Bullet_Sniper_Longbow SoundDefinition FiringModeSoundDefinition'GD_Weap_Launchers.FiringModes.FiringModeSoundDef_Missile'
+set GD_Weap_SniperRifles.FiringModes.Bullet_Sniper_Longbow BasePatternSpread 1.000000
+set GD_Weap_SniperRifles.FiringModes.Bullet_Sniper_Longbow MinPatternScale 0.000000
+
+
+
+
+
+
+
+
+
+
+
