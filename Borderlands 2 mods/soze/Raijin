@@ -14,6 +14,7 @@ Weapon:
  - Name: Raijin
  - Replaces: Chére-amie
  - Breaks: Morningstar, Thunderball Fist & Orphan Maker
+ - Note: I know a "TING" plays everytime u do an activity, but that's because it uses the morningstar behavior and sounds, I'd rather hear a TING than an annoying shit talking to me.
 
 Weapon behavior:
 
@@ -22,8 +23,10 @@ Weapon behavior:
  - Healing upon crit
  - Zoomed in shoots 3 shots at once.
  - Reduces shield and increases HP on zoom in.
- 
- In-game: http://prnt.sc/f5vhha
+
+Changelog:
+
+v1.5: Reduced healing on crit.
 
 # CARD
 
@@ -37,7 +40,7 @@ set GD_Weap_SniperRifles.Name.Title.Title__Unique_Chere-amie:AttributePresentati
 
 set GD_Weap_SniperRifles.Barrel.SR_Barrel_Hyperion_ChereAmie BehaviorProviderDefinition BehaviorProviderDefinition'GD_Weap_SniperRifles.Barrel.SR_Barrel_Maliwan_Morningstar:BehaviorProviderDefinition_14'
 
-set GD_Weap_SniperRifles.Skills.Skill_Morningstar:BehaviorProviderDefinition_0.Behavior_AttributeEffect_0.SkillDefinition_0 SkillEffectDefinitions ((AttributeToModify=AttributeDefinition'D_Attributes.DamageEnhancementModifiers.PlayerConvertDamageToHealingPercent',bIncludeDuelingTargets=False,bIncludeSelfAsTarget=True,bOnlyEffectTargetsInRange=False,bExcludeNonPlayerCharacters=False,EffectTarget=TARGET_None,TargetInstanceDataName=,TargetCriteria=CRITERIA_None,ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.080000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),GradeToStartApplyingEffect=0,PerGradeUpgradeInterval=1,PerGradeUpgrade=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),BonusUpgradeList=))
+set GD_Weap_SniperRifles.Skills.Skill_Morningstar:BehaviorProviderDefinition_0.Behavior_AttributeEffect_0.SkillDefinition_0 SkillEffectDefinitions ((AttributeToModify=AttributeDefinition'D_Attributes.DamageEnhancementModifiers.PlayerConvertDamageToHealingPercent',bIncludeDuelingTargets=False,bIncludeSelfAsTarget=True,bOnlyEffectTargetsInRange=False,bExcludeNonPlayerCharacters=False,EffectTarget=TARGET_None,TargetInstanceDataName=,TargetCriteria=CRITERIA_None,ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.020000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),GradeToStartApplyingEffect=0,PerGradeUpgradeInterval=1,PerGradeUpgrade=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),BonusUpgradeList=))
 
 set GD_Weap_SniperRifles.Skills.Skill_Morningstar:BehaviorProviderDefinition_0.Behavior_AttributeEffect_0.SkillDefinition_0 InitialDuration 10.000000
 set GD_Weap_SniperRifles.Skills.Skill_Morningstar:BehaviorProviderDefinition_0.Behavior_AttributeEffect_0.SkillDefinition_0 bDoNotShiftPastCurrentTime False
