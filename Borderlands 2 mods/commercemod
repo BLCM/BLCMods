@@ -1,0 +1,44 @@
+## THE LIGHTNING BOLT
+//BY BL0C
+//BETA
+//Replaces the Commerce.   
+//Changes the barrel to Hyperion, increases magazine size, adds a second projectile, fires e-tech projectiles, and now it comes in all elements. 
+//Gibbed codes included. 
+//Note* many assets are borrowed from other acutally talented modders, please don't sue me...:). (Anyone want to make custom skin?)
+
+## Name
+set GD_Weap_SMG.Name.Title.Title__Unique_Commerce:AttributePresentationDefinition_8 NoConstraintText Speed. I Am Speed! <font color="#FFFF00"><br>• Has a bigger mag size<br>• X2 Multiplier<br>• Shoots Lazers !!
+
+
+set GD_Weap_SMG.Name.Title.Title__Unique_Commerce PartName Lightning Bolt
+
+
+
+
+## Elements
+set GD_Weap_SMG.A_Weapons_Unique.SMG_Hyperion_3_Commerce:WeaponPartListCollectionDefinition_179 ElementalPartData (bEnabled=True,WeightedParts=((bDisabled=False,Part=WeaponPartDefinition'GD_Weap_SMG.elemental.SMG_Elemental_None',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(bDisabled=False,Part=WeaponPartDefinition'GD_Weap_SMG.elemental.SMG_Elemental_Fire',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(bDisabled=False,Part=WeaponPartDefinition'GD_Weap_SMG.elemental.SMG_Elemental_Corrosive',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(bDisabled=False,Part=WeaponPartDefinition'GD_Weap_SMG.elemental.SMG_Elemental_Shock',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(bDisabled=False,Part=WeaponPartDefinition'GD_Weap_SMG.elemental.SMG_Elemental_Slag',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0)))
+
+## Barrel
+set GD_Weap_SMG.Barrel.SMG_Barrel_Tediore_Commerce GestaltModeSkeletalMeshName SMG_Barrel_Hyperion 
+
+## Mag Size 
+set GD_Weap_SMG.Grip.SMG_Grip_Tediore GD_Weap_SMG.Grip.SMG_Grip_Maliwan GD_Weap_SMG.Grip.SMG_Grip_Hyperion GD_Weap_SMG.Grip.SMG_Grip_Bandit GD_Weap_SMG.Grip.SMG_Grip_Dahl WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.200000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=14.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))
+
+
+## Second Projectile
+set GD_Weap_SMG.Barrel.SMG_Barrel_Tediore_Commerce WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000))
+
+BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Hyperion',InitializationDefinition=None,BaseValueScaleConstant=5.100000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000))
+
+## Custom Firing 
+set GD_Weap_SMG.A_Weapons_Unique.SMG_Hyperion_3_Commerce WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=3.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.700000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=2.000000)
+
+set GD_Weap_SMG.Barrel.SMG_Barrel_Tediore_Commerce CustomFiringModeDefinition FiringModeDefinition'GD_Weap_SniperRifles.FiringModes.Bullet_RailGun'
+  
+
+
+## Gibbed Codes
+Fire: BL2(hwAAAAAytwBCyANBDAGFdmI5wdKMZQELC5YGLBRY/v8rY/HBgo3l)
+Shock: BL2(hwAAAABOzgBCyANBDAGFdmI5wdKMZQELC5YHLBRY/v8rY/HBgo3l)
+Corrosive: BL2(hwAAAADw8gBCyANBDAGFdmI5wdKMZQELCxYHLBRY/v8rY/HBgo3l)
+Slag: BL2(hwAAAAASkABCyANBDAGFdmI5wdKMZQELCxYILBRY/v8rY/HBgo3l)
