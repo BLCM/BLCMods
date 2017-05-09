@@ -22,7 +22,8 @@ v2.6: Lowered the saturation & reduced the black to a bit more gray to make the 
 v2.7: Fixed the glow being removed from the weapon, should now have a blue / purplish glow.
 v3: Lowered the burst fire rate from 9 bullets to 6, this change was made after player feedback.
 v3.1: Made the description more clear and gave Credit to the original skin creator.
- 
+v3.2: Reduced healing on zoom in after played feedback.
+
 Note:
 
 Please leave constructive criticism if u make a vid / contact me on Shadow's Discord (Mike on Discord), any critique would be appreciated as this is just my 1st weapon. Enjoy!
@@ -48,7 +49,7 @@ set GD_Weap_SMG.Barrel.SMG_Barrel_Bandit_Lascaux CustomFiringModeDefinition Firi
 # WEAPON ATTRIBUTES // STATS
 
 set GD_Weap_SMG.Barrel.SMG_Barrel_Bandit_Lascaux AttributeSlotUpgrades ((SlotName="WeaponSpread",GradeIncrease=9999,bActivateSlot=True),(SlotName="AccuracyMin",GradeIncrease=10,bActivateSlot=True),(SlotName="AccuracyMax",GradeIncrease=20,bActivateSlot=True),(SlotName="AccuracyRegen",GradeIncrease=10,bActivateSlot=True)))
-set GD_Weap_SMG.Barrel.SMG_Barrel_Bandit_Lascaux ZoomExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.DamageEnhancementModifiers.PlayerConvertDamageToHealingPercent',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=0.30000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponAutomaticBurstCount',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-3.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+set GD_Weap_SMG.Barrel.SMG_Barrel_Bandit_Lascaux ZoomExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.DamageEnhancementModifiers.PlayerConvertDamageToHealingPercent',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=0.05000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponAutomaticBurstCount',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-3.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
 set GD_Weap_SMG.Barrel.SMG_Barrel_Bandit_Lascaux ExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.GameplayAttributes.PlayerCriticalHitBonus',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.100000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
 set GD_Weap_SMG.Barrel.SMG_Barrel_Bandit_Lascaux WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=15.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
 
