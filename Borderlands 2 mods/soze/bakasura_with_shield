@@ -1,0 +1,41 @@
+About the weapon:
+Buffed Sawbar
+Introduces a new skin
+New weapon attributes. (Check card in-game.)
+
+How to remove the shield penalty: 
+
+1. Remove the following lines: ((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.ShieldResourcePool.ShieldCurrentValue',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-1000000.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=100.000000)),(AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.ShieldResourcePool.ShieldMaxValue',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-1000000.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=100.000000)),(AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.ShieldResourcePool.ShieldMaxValue',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-1000.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=100.000000)),(AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Combat_Rifle.Ammo_Combat_Rifle_RegenerationRate',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.75,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+2. Add the following to ExternalAttributeEffects: ((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Combat_Rifle.Ammo_Combat_Rifle_RegenerationRate',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.75,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+Credit:
+
+Thank you CMD_Obvious for the skin
+Thank you Gabe "The Glueman" Degrossi for fixing my ammo regen!
+Thank you Dashiku for giving me general knowledge about weapons and helping me out with this weapon
+Thank you the_Nocturni for fixing some syntax errors in my code and playtesting / testing things for my weapon to make it function properly.
+
+
+# CARD
+
+set GD_Gladiolus_Weapons.Name.Title.Title_Pearlescent_Sawbar PartName Bakasura
+set GD_Gladiolus_Weapons.Name.Title.Title_Pearlescent_Sawbar:AttributePresentationDefinition_8 NoConstraintText <font color="#ff0235">Two heads are tastier than one!<br><font color="#ffffff">- The <font color="#3eae40">bullet <font color="#ffffff">now splits up at a closer range.<br><font color="#ffffff">- <font color="#fceaa4">Ricochet <font color="#ffffff">bullets.<br><font color="#ffffff">- 100% accuracy when zoomed in.<br>- Shield gets <font color="#fceaa4">nullified<font color="#ffffff"> when holding weapon.<font color="#ffffff"><br>- Gains <font color="#fceaa4">ammo regen <font color="#ffffff">when holding.<br>- Effective against <font color="#ff8c00">flesh<font color="#ffffff">.<font color="#FeFFFF"test
+
+# FIRING
+
+set GD_Gladiolus_Weapons.FiringModes.Bullet_Assault_Sawbar TimerEvents ((Time=0.050000,Response=(SplitNum=3,SplitAngle=12.000000,SplitAngleOffset=0.000000,SplitDistance=0.000000,SplitFire=FiringModeDefinition'GD_Gladiolus_Weapons.FiringModes.Bullet_Assault_Sawbar_Child',NewSpeed=0.000000,bDetonate=False,bRespawnTracer=False,bUpdateBeamSourceLocation=False,Behaviors=)))
+set GD_Gladiolus_Weapons.FiringModes.Bullet_Assault_Sawbar NumRicochets 3
+
+# ATTRIBUTES
+
+set GD_Gladiolus_Weapons.AssaultRifle.AR_Barrel_Jakobs_Sawbar AttributeSlotUpgrades ((SlotName="WeaponSpread",GradeIncrease=9999,bActivateSlot=True),(SlotName="AccuracyMin",GradeIncrease=10,bActivateSlot=True),(SlotName="AccuracyMax",GradeIncrease=20,bActivateSlot=True),(SlotName="AccuracyRegen",GradeIncrease=10,bActivateSlot=True)))
+set GD_Gladiolus_Weapons.AssaultRifle.AR_Barrel_Jakobs_Sawbar ExternalAttributeEffects ((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.ShieldResourcePool.ShieldCurrentValue',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-1000000.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=100.000000)),(AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.ShieldResourcePool.ShieldMaxValue',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-1000000.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=100.000000)),(AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.ShieldResourcePool.ShieldMaxValue',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-1000.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=100.000000)),(AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Combat_Rifle.Ammo_Combat_Rifle_RegenerationRate',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.75,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+set GD_Gladiolus_Weapons.AssaultRifle.AR_Barrel_Jakobs_Sawbar WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.20000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=15.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+# SKIN
+
+set GD_Gladiolus_Weapons.AssaultRifle.AR_Barrel_Jakobs_Sawbar GestaltModeSkeletalMeshName AR_Barrel_Dahl
+
+set Gladiolus_GunMaterials.Materials.AssaultRifle.Mati_Bandit_6_Sawbar VectorParameterValues ((ParameterName="p_AColorHilight",ParameterValue=(R=0.110430,G=0.001039,B=0.001039,A=1.000000),ExpressionGUID=(A=384292798,B=1221323751,C=-2145405772,D=1872194118)),(ParameterName="p_AColorMidtone",ParameterValue=(R=0.110430,G=0.004039,B=0.004039,A=1.000000),ExpressionGUID=(A=1102826245,B=1256298978,C=-1429881438,D=-507521102)),(ParameterName="p_AColorShadow",ParameterValue=(R=0.110430,G=0.004039,B=0.004039,A=1.000000),ExpressionGUID=(A=1481234158,B=1129012376,C=-688827739,D=-2119135160)),(ParameterName="p_BColorHilight",ParameterValue=(R=0.010000,G=0.010000,B=0.010000,A=1.000000),ExpressionGUID=(A=170714760,B=1132476783,C=-275668290,D=655702143)),(ParameterName="p_BColorMidtone",ParameterValue=(R=0.005000,G=0.005000,B=0.005000,A=1.000000),ExpressionGUID=(A=473594356,B=1338758895,C=824823946,D=864253813)),(ParameterName="p_BColorShadow",ParameterValue=(R=0.003000,G=0.003000,B=0.003000,A=1.000000),ExpressionGUID=(A=-429590341,B=1156435294,C=-1015192901,D=687313413)),(ParameterName="p_CColorHilight",ParameterValue=(R=0.00000,G=0.000000,B=0.000000,A=1.000000),ExpressionGUID=(A=170714760,B=1132476783,C=-275668290,D=655702143)),(ParameterName="p_CColorMidtone",ParameterValue=(R=0.000000,G=0.000000,B=0.000000,A=1.000000),ExpressionGUID=(A=473594356,B=1338758895,C=824823946,D=864253813)),(ParameterName="p_CColorShadow",ParameterValue=(R=0.000000,G=0.000000,B=0.000000,A=1.000000),ExpressionGUID=(A=-429590341,B=1156435294,C=-1015192901,D=687313413)),(ParameterName="p_DecalChannel",ParameterValue=(R=5.100000,G=0.000000,B=0.700000,A=1.000000),ExpressionGUID=(A=1757499073,B=1097055033,C=-1266029657,D=1038353636)),(ParameterName="p_PatternChannelScale",ParameterValue=(R=5.50000,G=1.000000,B=0.800000,A=0.513500),ExpressionGUID=(A=439432319,B=1091149893,C=-1991909502,D=1816944627)),(ParameterName="p_PatternScalePosition",ParameterValue=(R=1.520000,G=2.573196,B=0.6509700,A=0.513500),ExpressionGUID=(A=-2005018406,B=1132497243,C=-39915121,D=208423616)))
+
+set Gladiolus_GunMaterials.Materials.AssaultRifle.Mati_Bandit_6_Sawbar ScalarParameterValues (ParameterName="p_ReflectColorScale",ParameterValue=1.000000,ExpressionGUID=(A=1875785607,B=1186033550,C=-1822263113,D=-1465755701))
