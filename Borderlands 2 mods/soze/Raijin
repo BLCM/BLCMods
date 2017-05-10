@@ -27,6 +27,7 @@ Weapon behavior:
 Changelog:
 
 v1.5: Reduced healing on crit.
+v1.6: Fixed a weird issue that made this gun shoot in a cone.
 
 # CARD
 
@@ -59,10 +60,11 @@ set GD_Weap_Pistol.Projectiles.Projectile_ThunderballFistsCHild:BehaviorProvider
 set GD_Weap_SniperRifles.Barrel.SR_Barrel_Hyperion_ChereAmie CustomFiringModeDefinition FiringModeDefinition'GD_Orchid_BossWeapons.FiringModes.Bullet_Shotgun_OrphanMaker'
 
 set GD_Orchid_BossWeapons.FiringModes.Bullet_Shotgun_OrphanMaker OnAnyImpact (Behavior_Explode'GD_Iris_Weapons.FiringModes.Bullet_Sniper_Cobra:Behavior_Explode_5',Behavior_SpawnProjectile'GD_Weap_Pistol.FiringModes.Bullet_Pistol_Maliwan_ThunderballFists:Behavior_SpawnProjectile_0')
+set GD_Orchid_BossWeapons.FiringModes.Bullet_Shotgun_OrphanMaker FiringPatternLines ()
 
 # ATTRIBUTES
 
-set GD_Weap_SniperRifles.Barrel.SR_Barrel_Hyperion_ChereAmie ExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.DamageEnhancementModifiers.PlayerConvertDamageToHealingPercent',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.00000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+set GD_Weap_SniperRifles.Barrel.SR_Barrel_Hyperion_ChereAmie ExternalAttributeEffects ((SlotName="WeaponSpread",GradeIncrease=9999,bActivateSlot=True),(SlotName="AccuracyMin",GradeIncrease=100000,bActivateSlot=True),(SlotName="AccuracyMax",GradeIncrease=100000,bActivateSlot=True),(SlotName="AccuracyRegen",GradeIncrease=10,bActivateSlot=True)))
 set GD_Weap_SniperRifles.Barrel.SR_Barrel_Hyperion_ChereAmie WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponStatusEffectChanceModifier',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=10000.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
 set GD_Weap_SniperRifles.Barrel.SR_Barrel_Hyperion_ChereAmie ZoomWeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponAutomaticBurstCount',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=3.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-100.0000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.HealthResourcePool.HealthMaxValue',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.400000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance_HealthAndDamage.HealthAndDamage.Init_HealthBonusFromShields_Formula',BaseValueScaleConstant=0.40000)),(AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.ShieldResourcePool.ShieldMaxValue',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-0.025000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=100.000000))
 set GD_Weap_SniperRifles.Barrel.SR_Barrel_Hyperion_ChereAmie AttributeSlotUpgrades ((SlotName="WeaponSpread",GradeIncrease=9999,bActivateSlot=True),(SlotName="AccuracyMin",GradeIncrease=10,bActivateSlot=True),(SlotName="AccuracyMax",GradeIncrease=100000,bActivateSlot=True),(SlotName="AccuracyRegen",GradeIncrease=10,bActivateSlot=True),(SlotName="WeaponMagSize",GradeIncrease=12,bActivateSlot=True)))
