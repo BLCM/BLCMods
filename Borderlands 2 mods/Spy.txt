@@ -1,0 +1,22 @@
+######################
+The Spy
+by kunelsanders
+Small tweak to Commerce
++35% Crit Bonus
+100% Accuracy
+###################
+
+set GD_Weap_SMG.Name.Title.Title__Unique_Commerce PartName Spy
+set GD_Weap_SMG.Name.Title.Title__Unique_Commerce:AttributePresentationDefinition_8 NoConstraintText I spy with my little eye...
+
+set GD_Weap_SMG.A_Weapons_Unique.SMG_Hyperion_3_Commerce:WeaponPartListCollectionDefinition_179 ElementalPartData (bEnabled=True,WeightedParts=((bDisabled=False,Part=WeaponPartDefinition'GD_Weap_SMG.elemental.SMG_Elemental_None',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(bDisabled=False,Part=WeaponPartDefinition'GD_Weap_SMG.elemental.SMG_Elemental_Fire',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(bDisabled=False,Part=WeaponPartDefinition'GD_Weap_SMG.elemental.SMG_Elemental_Corrosive',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(bDisabled=False,Part=WeaponPartDefinition'GD_Weap_SMG.elemental.SMG_Elemental_Shock',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(bDisabled=False,Part=WeaponPartDefinition'GD_Weap_SMG.elemental.SMG_Elemental_Slag',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0)))
+
+//set GD_Weap_SMG.A_Weapons_Unique.SMG_Hyperion_3_Commerce:WeaponPartListCollectionDefinition_??? SightPartData (bEnabled=True,WeightedParts=((Part=WeaponPartDefinition'GD_Weap_SMG.Sight.SMG_Sight_Bandit',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=2)))
+
+set GD_Weap_SMG.Barrel.SMG_Barrel_Tediore_Commerce ExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.GameplayAttributes.PlayerCriticalHitBonus',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.350000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+set GD_Weap_SMG.Barrel.SMG_Barrel_Tediore_Commerce WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=8.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+set GD_Weap_SMG.Barrel.SMG_Barrel_Tediore_Commerce AttributeSlotUpgrades ((SlotName="WeaponSpread",GradeIncrease=9999,bActivateSlot=True),(SlotName="AccuracyMin",GradeIncrease=10,bActivateSlot=True),(SlotName="AccuracyMax",GradeIncrease=20,bActivateSlot=True),(SlotName="AccuracyRegen",GradeIncrease=10,bActivateSlot=True))) 
+
+set GD_Weap_SMG.Barrel.SMG_Barrel_Tediore_Commerce WeaponCardAttributes ((Attribute=AttributeDefinition'D_Attributes.GameplayAttributes.PlayerCriticalHitBonus',PriorityIncrease=0.500000))
