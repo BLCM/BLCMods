@@ -1,0 +1,39 @@
+A patch made by:                            |
+  _    _  _____  _   _  _    _  _    _      |
+ | |  | || ____|| | | || |  | || |  | |     |
+ | |  | || | __ | \_/ || |  | || |  | |     |
+ | |  | || ||_ | \   / | |  | || |  | |     |
+ | |__| || |_| |  | |  | |__| || |__| |  _  |
+ |______||_____|  |_|  |______||______| |_| |
+                                            |
+        With help of the community.         |
+____________________________________________|
+
+Turns the Torguemada into the Dolos Shotgun! It's like the Punter, but not as well.
+Inspired by GrimmJow / Tha Campin Dutchman's Dolos Shotgun in Borderlands 1.
+
+Features:
+
+     - 30 Minimum Projectile Count
+     - Lowered damage.
+     - 50% Critical Hit Damage bonus
+     - Recoil Reduction
+     - Decent Fire Rate and high Clip Size
+     - SLOW Projectiles. Just find out yourself.
+     - A skin, when it is possible in the future
+
+Issues:
+     - Bullets fade away and become invisible after a short period of time, but are still there as bullets until hitting something.
+
+set GD_Cork_Weap_Shotgun.Barrel.SG_Barrel_Bandit_Torgemada GestaltModeSkeletalMeshName SG_Barrel_Hyperion
+
+set GD_Cork_Weap_Shotgun.Barrel.SG_Barrel_Bandit_Torgemada CustomFiringModeDefinition FiringModeDefinition'GD_Cork_Weap_Pistol.FiringModes.Bullet_Pistol_Hyperion_Fibber_1'
+
+set GD_Cork_Weap_Shotgun.Barrel.SG_Barrel_Bandit_Torgemada WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0.45000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0.095000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=25.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=1.00000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=7.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectileSpeedMultiplier',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.700000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=2.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.WeaponBullet.WeaponBulletSpeed',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=-2.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponKnockback',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=-0.500000)))
+
+set GD_Cork_Weap_Shotgun.Barrel.SG_Barrel_Bandit_Torgemada WeaponCardAttributes ((Attribute=AttributeDefinition'D_Attributes.GameplayAttributes.PlayerCriticalHitBonus',PriorityIncrease=2.00000)))
+
+set GD_Cork_Weap_Shotgun.Barrel.SG_Barrel_Bandit_Torgemada ExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.GameplayAttributes.PlayerCriticalHitBonus',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-1.200000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=-0.420000)))
+
+set GD_Cork_Weap_Shotgun.Name.Titles.Title__Unique_Torgemada PartName Dolos
+set GD_Cork_Weap_Shotgun.Name.Titles.Title__Unique_Torgemada:AttributePresentationDefinition_8 NoConstraintText You've activated my trapcard!
