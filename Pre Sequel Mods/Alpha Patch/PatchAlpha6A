@@ -879,13 +879,136 @@ set GD_MoonItems.Body.Body_Acrobat:AttributePresentationDefinition_0 Description
 ### Snowball Freeze on command
 set GD_GrenadeMods.A_Item_Custom.GrenadeMod_Snowball AttributeSlotEffects ((SlotName="Damage",bExternalSlot=False,bRunEffectsAsSkill=False,AttributeToModify=AttributeDefinition'D_Attributes.GrenadeMod.GrenadeDamage',ConstraintAttribute=None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),PerGradeUpgrade=(BaseValueConstant=0.040000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bIncludeInFunStats=False,bIncludeAlliesAsTarget=False,bEnforceMinimumGrade=False,bEnforceMaximumGrade=False,MinimumGrade=0,MaximumGrade=0,TargetInstanceDataName=),(SlotName="DamageRadius",bExternalSlot=False,bRunEffectsAsSkill=False,AttributeToModify=AttributeDefinition'D_Attributes.GrenadeMod.BlastRadius',ConstraintAttribute=None,ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),PerGradeUpgrade=(BaseValueConstant=15.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bIncludeInFunStats=False,bIncludeAlliesAsTarget=False,bEnforceMinimumGrade=True,bEnforceMaximumGrade=False,MinimumGrade=-1,MaximumGrade=0,TargetInstanceDataName=),(SlotName="FuseTime",bExternalSlot=False,bRunEffectsAsSkill=False,AttributeToModify=AttributeDefinition'D_Attributes.GrenadeMod.FuseTime',ConstraintAttribute=None,ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.600000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),PerGradeUpgrade=(BaseValueConstant=0.600000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bIncludeInFunStats=False,bIncludeAlliesAsTarget=False,bEnforceMinimumGrade=True,bEnforceMaximumGrade=False,MinimumGrade=0,MaximumGrade=0,TargetInstanceDataName=),(SlotName="IsIce",bExternalSlot=False,bRunEffectsAsSkill=False,AttributeToModify=AttributeDefinition'D_Attributes.GrenadeMod.GrenadeDamage',ConstraintAttribute=None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),PerGradeUpgrade=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bIncludeInFunStats=False,bIncludeAlliesAsTarget=False,bEnforceMinimumGrade=True,bEnforceMaximumGrade=False,MinimumGrade=0,MaximumGrade=0,TargetInstanceDataName=),(SlotName="StatusEffectChanceModifier_Ice",bExternalSlot=False,bRunEffectsAsSkill=False,AttributeToModify=AttributeDefinition'D_Attributes.GrenadeMod.GrenadeModStatusEffectChanceModifier',ConstraintAttribute=AttributeDefinition'D_Attributes.GrenadeMod.GrenadeModIsIce',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1000000.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=100000.000000),PerGradeUpgrade=(BaseValueConstant=1000000.100000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=10000.000000),bIncludeInFunStats=False,bIncludeAlliesAsTarget=False,bEnforceMinimumGrade=False,bEnforceMaximumGrade=False,MinimumGrade=0,MaximumGrade=0,TargetInstanceDataName=),(SlotName="StatusEffectDamage_Ice",bExternalSlot=False,bRunEffectsAsSkill=False,AttributeToModify=AttributeDefinition'D_Attributes.GrenadeMod.GrenadeModStatusEffectDamage',ConstraintAttribute=AttributeDefinition'D_Attributes.GrenadeMod.GrenadeModIsIce',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance_HealthAndDamage.HealthAndDamage.Init_GrenadeModStatusEffectDamage',BaseValueScaleConstant=1.000000),PerGradeUpgrade=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance_HealthAndDamage.HealthAndDamage.Init_GrenadeModStatusEffectDamage',BaseValueScaleConstant=0.050000),bIncludeInFunStats=True,bIncludeAlliesAsTarget=False,bEnforceMinimumGrade=False,bEnforceMaximumGrade=False,MinimumGrade=0,MaximumGrade=0,TargetInstanceDataName=))
 
-### More stuff drop in early levels. Shields Grenades
-set GD_Itempools.Scheduling.Gamestage_07:ConstantAttributeValueResolver_0 ConstantValue 1
-set GD_Itempools.Scheduling.Gamestage_03:ConstantAttributeValueResolver_0 ConstantValue 1
+### More stuff drop in early levels. Shields Grenades and all rarities of them are avaliable as soon as that type starts appearing not only after lv7
+####################################### 		LV1			###########################################
+
 set GD_Itempools.Scheduling.Gamestage_02:ConstantAttributeValueResolver_0 ConstantValue 1
-set GD_Itempools.Scheduling.Gamestage_08:ConstantAttributeValueResolver_0 ConstantValue 1
-set GD_Itempools.Scheduling.Gamestage_10:ConstantAttributeValueResolver_0 ConstantValue 1
-set GD_Itempools.Scheduling.Gamestage_16:ConstantAttributeValueResolver_0 ConstantValue 1
+
+
+##### 		 SMGS
+set GD_Itempools.WeaponPools.Pool_Weapons_SMG_01_Common MinGameStageRequirement AttributeDefinition'GD_Itempools.Scheduling.Gamestage_02'
+set GD_Itempools.WeaponPools.Pool_Weapons_SMG_02_Uncommon MinGameStageRequirement AttributeDefinition'GD_Itempools.Scheduling.Gamestage_02'
+set GD_Itempools.WeaponPools.Pool_Weapons_SMG_04_Rare MinGameStageRequirement AttributeDefinition'GD_Itempools.Scheduling.Gamestage_02'
+set GD_Itempools.WeaponPools.Pool_Weapons_SMG_05_VeryRare MinGameStageRequirement AttributeDefinition'GD_Itempools.Scheduling.Gamestage_02'
+set GD_Itempools.WeaponPools.Pool_Weapons_SMG_06_Legendary MinGameStageRequirement AttributeDefinition'GD_Itempools.Scheduling.Gamestage_02'
+set GD_Itempools.WeaponPools.Pool_Weapons_SMG_Moonstone MinGameStageRequirement AttributeDefinition'GD_Itempools.Scheduling.Gamestage_02'
+set GD_Ma_ItemPools.WeaponPoolsUnweighted.Pool_Weapons_SMG_06_Legendary_Unweighted MinGameStageRequirement AttributeDefinition'GD_Itempools.Scheduling.Gamestage_02'
+set GD_Ma_ItemPools.WeaponPoolsWeighted.Pool_Weapons_SMG_06_Legendary_Weighted MinGameStageRequirement AttributeDefinition'GD_Itempools.Scheduling.Gamestage_02'
+
+
+#####		 ASSAULT RIFLES
+set GD_Itempools.WeaponPools.Pool_Weapons_AssaultRifles_01_Common MinGameStageRequirement AttributeDefinition'GD_Itempools.Scheduling.Gamestage_02'
+set GD_Itempools.WeaponPools.Pool_Weapons_AssaultRifles_02_Uncommon MinGameStageRequirement AttributeDefinition'GD_Itempools.Scheduling.Gamestage_02'
+set GD_Itempools.WeaponPools.Pool_Weapons_AssaultRifles_04_Rare MinGameStageRequirement AttributeDefinition'GD_Itempools.Scheduling.Gamestage_02'
+set GD_Itempools.WeaponPools.Pool_Weapons_AssaultRifles_05_VeryRare MinGameStageRequirement AttributeDefinition'GD_Itempools.Scheduling.Gamestage_02'
+set GD_Itempools.WeaponPools.Pool_Weapons_AssaultRifles_06_Legendary MinGameStageRequirement AttributeDefinition'GD_Itempools.Scheduling.Gamestage_02'
+set GD_Ma_ItemPools.WeaponPoolsUnweighted.Pool_Weapons_AssaultRifles_06_Legendary_Unweighted MinGameStageRequirement AttributeDefinition'GD_Itempools.Scheduling.Gamestage_02'
+set GD_Ma_ItemPools.WeaponPoolsWeighted.Pool_Weapons_AssaultRifles_06_Legendary_Weighted MinGameStageRequirement AttributeDefinition'GD_Itempools.Scheduling.Gamestage_02'
+
+
+#####		SNIPER RIFLES
+set GD_Itempools.WeaponPools.Pool_Weapons_SniperRifles_01_Common MinGameStageRequirement AttributeDefinition'GD_Itempools.Scheduling.Gamestage_02'
+set GD_Itempools.WeaponPools.Pool_Weapons_SniperRifles_02_Uncommon MinGameStageRequirement AttributeDefinition'GD_Itempools.Scheduling.Gamestage_02'
+set GD_Itempools.WeaponPools.Pool_Weapons_SniperRifles_04_Rare MinGameStageRequirement AttributeDefinition'GD_Itempools.Scheduling.Gamestage_02'
+set GD_Itempools.WeaponPools.Pool_Weapons_SniperRifles_05_VeryRare MinGameStageRequirement AttributeDefinition'GD_Itempools.Scheduling.Gamestage_02'
+set GD_Itempools.WeaponPools.Pool_Weapons_SniperRifles_06_Legendary MinGameStageRequirement AttributeDefinition'GD_Itempools.Scheduling.Gamestage_02'
+set GD_Ma_ItemPools.WeaponPoolsUnweighted.Pool_Weapons_SniperRifles_06_Legendary_Unweighted MinGameStageRequirement AttributeDefinition'GD_Itempools.Scheduling.Gamestage_02'
+set GD_Ma_ItemPools.WeaponPoolsWeighted.Pool_Weapons_SniperRifles_06_Legendary_Weighted MinGameStageRequirement AttributeDefinition'GD_Itempools.Scheduling.Gamestage_02'
+
+
+#####		SHOTGUNS
+set GD_Itempools.WeaponPools.Pool_Weapons_Shotguns MinGameStageRequirement AttributeDefinition'GD_Itempools.Scheduling.Gamestage_02'
+set GD_Itempools.WeaponPools.Pool_Weapons_Shotguns_01_Common MinGameStageRequirement AttributeDefinition'GD_Itempools.Scheduling.Gamestage_02'
+set GD_Itempools.WeaponPools.Pool_Weapons_Shotguns_02_Uncommon MinGameStageRequirement AttributeDefinition'GD_Itempools.Scheduling.Gamestage_02'
+set GD_Itempools.WeaponPools.Pool_Weapons_Shotguns_04_Rare MinGameStageRequirement AttributeDefinition'GD_Itempools.Scheduling.Gamestage_02'
+set GD_Itempools.WeaponPools.Pool_Weapons_Shotguns_05_VeryRare MinGameStageRequirement AttributeDefinition'GD_Itempools.Scheduling.Gamestage_02'
+set GD_Itempools.WeaponPools.Pool_Weapons_Shotguns_06_Legendary MinGameStageRequirement AttributeDefinition'GD_Itempools.Scheduling.Gamestage_02'
+set GD_Ma_ItemPools.WeaponPoolsUnweighted.Pool_Weapons_Shotguns_06_Legendary_Unweighted MinGameStageRequirement AttributeDefinition'GD_Itempools.Scheduling.Gamestage_02'
+set GD_Ma_ItemPools.WeaponPoolsWeighted.Pool_Weapons_Shotguns_06_Legendary_Weighted MinGameStageRequirement AttributeDefinition'GD_Itempools.Scheduling.Gamestage_02'
+
+
+#####		SPIKE SHIELDS
+set GD_Itempools.ShieldPools.Pool_Shields_SpikeShields_All_01_Common MinGameStageRequirement AttributeDefinition'GD_Itempools.Scheduling.Gamestage_02'
+set GD_Itempools.ShieldPools.Pool_Shields_SpikeShields_All_02_Uncommon MinGameStageRequirement AttributeDefinition'GD_Itempools.Scheduling.Gamestage_02'
+set GD_Itempools.ShieldPools.Pool_Shields_SpikeShields_All_04_Rare MinGameStageRequirement AttributeDefinition'GD_Itempools.Scheduling.Gamestage_02'
+set GD_Itempools.ShieldPools.Pool_Shields_SpikeShields_All_05_VeryRare MinGameStageRequirement AttributeDefinition'GD_Itempools.Scheduling.Gamestage_02'
+set GD_Itempools.ShieldPools.Pool_Shields_SpikeShields_All_06_Legendary MinGameStageRequirement AttributeDefinition'GD_Itempools.Scheduling.Gamestage_02'
+
+
+#####		 MOONSTONES
+set GD_Itempools.AmmoAndResourcePools.Pool_Moonstone MinGameStageRequirement AttributeDefinition'GD_Itempools.Scheduling.Gamestage_02'
+set GD_Itempools.AmmoAndResourcePools.Pool_Moonstone_Cluster MinGameStageRequirement AttributeDefinition'GD_Itempools.Scheduling.Gamestage_02'
+
+
+############################		LV3			###################################
+
+
+##### 		RARE ALL SHIELDS
+set GD_Itempools.ShieldPools.Pool_Shields_All_04_Rare MinGameStageRequirement AttributeDefinition'GD_Itempools.Scheduling.Gamestage_03'
+set GD_Itempools.ShieldPools.Pool_Shields_All_05_VeryRare MinGameStageRequirement AttributeDefinition'GD_Itempools.Scheduling.Gamestage_03'
+set GD_Itempools.ShieldPools.Pool_Shields_All_06_Legendary MinGameStageRequirement AttributeDefinition'GD_Itempools.Scheduling.Gamestage_03'
+
+
+##### 		RARE TEDIORE SHIELDS 
+set GD_Itempools.ShieldPools.Pool_Shields_Standard MinGameStageRequirement AttributeDefinition'GD_Itempools.Scheduling.Gamestage_03'
+set GD_Itempools.ShieldPools.Pool_Shields_Standard_04_Rare MinGameStageRequirement AttributeDefinition'GD_Itempools.Scheduling.Gamestage_03'
+set GD_Itempools.ShieldPools.Pool_Shields_Standard_05_VeryRare MinGameStageRequirement AttributeDefinition'GD_Itempools.Scheduling.Gamestage_03'
+set GD_Itempools.ShieldPools.Pool_Shields_Standard_06_Legendary MinGameStageRequirement AttributeDefinition'GD_Itempools.Scheduling.Gamestage_03'
+
+
+
+###########################		LV4			#######################################
+
+
+#####		OZ KITS
+set GD_Itempools.MoonItemPools.Pool_MoonItem_02_Uncommon MinGameStageRequirement AttributeDefinition'GD_Itempools.Scheduling.Gamestage_04'
+set GD_Itempools.MoonItemPools.Pool_MoonItem_Duality_02_Uncommon MinGameStageRequirement AttributeDefinition'GD_Itempools.Scheduling.Gamestage_04'
+set GD_Itempools.MoonItemPools.Pool_MoonItem_TwoFace_02_Uncommon MinGameStageRequirement AttributeDefinition'GD_Itempools.Scheduling.Gamestage_04'
+set GD_Itempools.MoonItemPools.Pool_MoonItem_04_Rare MinGameStageRequirement AttributeDefinition'GD_Itempools.Scheduling.Gamestage_04'
+set GD_Itempools.MoonItemPools.Pool_MoonItem_Duality_03_Rare MinGameStageRequirement AttributeDefinition'GD_Itempools.Scheduling.Gamestage_04'
+set GD_Itempools.MoonItemPools.Pool_MoonItem_TwoFace_03_Rare MinGameStageRequirement AttributeDefinition'GD_Itempools.Scheduling.Gamestage_04'
+set GD_Itempools.MoonItemPools.Pool_MoonItem_05_VeryRare MinGameStageRequirement AttributeDefinition'GD_Itempools.Scheduling.Gamestage_04'
+set GD_Itempools.MoonItemPools.Pool_MoonItem_Duality_04_VeryRare MinGameStageRequirement AttributeDefinition'GD_Itempools.Scheduling.Gamestage_04'
+set GD_Itempools.MoonItemPools.Pool_MoonItem_TwoFace_04_VeryRare MinGameStageRequirement AttributeDefinition'GD_Itempools.Scheduling.Gamestage_04'
+set GD_Itempools.MoonItemPools.Pool_MoonItem_06_Legendary MinGameStageRequirement AttributeDefinition'GD_Itempools.Scheduling.Gamestage_04'
+
+
+###########################		LV5			#######################################
+
+
+##### 		RARE GRENADE MODS
+set GD_Itempools.GrenadeModPools.Pool_GrenadeMods_05_VeryRare MinGameStageRequirement AttributeDefinition'GD_Itempools.Scheduling.Gamestage_05'
+set GD_Itempools.GrenadeModPools.Pool_GrenadeMods_04_Rare MinGameStageRequirement AttributeDefinition'GD_Itempools.Scheduling.Gamestage_05'
+set GD_Itempools.GrenadeModPools.Pool_GrenadeMods_06_Legendary MinGameStageRequirement AttributeDefinition'GD_Itempools.Scheduling.Gamestage_05'
+
+
+##### 		RARE SHOTGUNS
+set GD_Itempools.WeaponPools.Pool_Weapons_Shotguns_NoTorgue_04_Rare MinGameStageRequirement AttributeDefinition'GD_Itempools.Scheduling.Gamestage_05'
+set GD_Itempools.WeaponPools.Pool_Weapons_Shotguns_NoTorgue_05_VeryRare MinGameStageRequirement AttributeDefinition'GD_Itempools.Scheduling.Gamestage_05'
+
+
+#####		 RARE LASERS
+set GD_Itempools.WeaponPools.Pool_Weapons_Lasers_01_Common MinGameStageRequirement AttributeDefinition'GD_Itempools.Scheduling.Gamestage_05'
+set GD_Itempools.WeaponPools.Pool_Weapons_Lasers_02_Uncommon MinGameStageRequirement AttributeDefinition'GD_Itempools.Scheduling.Gamestage_05'
+set GD_Itempools.WeaponPools.Pool_Weapons_Lasers_04_Rare MinGameStageRequirement AttributeDefinition'GD_Itempools.Scheduling.Gamestage_05'
+set GD_Itempools.WeaponPools.Pool_Weapons_Lasers_05_VeryRare MinGameStageRequirement AttributeDefinition'GD_Itempools.Scheduling.Gamestage_05'
+set GD_Itempools.WeaponPools.Pool_Weapons_Lasers_06_Legendary MinGameStageRequirement AttributeDefinition'GD_Itempools.Scheduling.Gamestage_05'
+set GD_Ma_ItemPools.WeaponPoolsUnweighted.Pool_Weapons_Lasers_06_Legendary_Unweighted MinGameStageRequirement AttributeDefinition'GD_Itempools.Scheduling.Gamestage_05'
+set GD_Ma_ItemPools.WeaponPoolsWeighted.Pool_Weapons_Lasers_06_Legendary_Weighted MinGameStageRequirement AttributeDefinition'GD_Itempools.Scheduling.Gamestage_05'
+set GD_Quince_Itempools.WeaponPools.Pool_Weapons_Lasers_06_Legendary MinGameStageRequirement AttributeDefinition'GD_Itempools.Scheduling.Gamestage_05'
+
+
+#############################			COMS		###########################
+set GD_Itempools.Scheduling.LootSchedule_ClassMod_02_Uncommon:ConstantAttributeValueResolver_0 ConstantValue 9
+set GD_Itempools.Scheduling.LootSchedule_ClassMod_03_Rare:ConstantAttributeValueResolver_0 ConstantValue 11
+set GD_Itempools.Scheduling.LootSchedule_ClassMod_04_VeryRare:ConstantAttributeValueResolver_0 ConstantValue 14
+set GD_Itempools.Scheduling.LootSchedule_ClassMod_05_Legendary:ConstantAttributeValueResolver_0 ConstantValue 16
+
+
+#####			Fix Purple spike shields to count as purple and replaces the purple in the legendary loot pool with flying maiden
+set GD_Itempools.ShieldPools.Pool_Shields_SpikeShields_All_06_Legendary BalancedItems ((ItmPoolDefinition=None,InvBalanceDefinition=InventoryBalanceDefinition'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Spike_Acid_05_Legendary',Probability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True))
+set GD_Cork_Itempools.ShieldPools.Pool_Shields_SpikeShields_Ice_05_VeryRare BalancedItems ((ItmPoolDefinition=None,InvBalanceDefinition=InventoryBalanceDefinition'GD_Cork_ItemGrades.Shields.ItemGrade_Gear_Shield_Spike_Ice_05_Legendary',Probability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True))
+
 
 ### all Togue Barreled AR now get buffed by grenade boosts.
 set GD_Cork_Weap_AssaultRifle.Projectiles.Projectile_Rocket_KerBoom:BehaviorproviderDefinition_0.Behavior_Explode_1 DamageSource Class'WillowGame.WillowDmgSource_Grenade'
