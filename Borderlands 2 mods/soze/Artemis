@@ -19,6 +19,7 @@ Weapon behavior:
  - 250% Crit boost on hip fire.
  - When zoomed in, your fire rate gets reset to normal and crit bonus is reduced to 0%
  - When zooming in, it increases ur mag size by 4 and reloads 4 bullets on zoom in.
+ - Longbow Projectile
 
 CHANGELOG:
 
@@ -29,6 +30,7 @@ v3: I just removed the projectile and removed some crit damage since the x7 now 
 v3.1: Skin improvements
 v3.2: Skin improvements. (Stock & Grip now have the pattern & a brighter color)
 v3.3: Actually fixed the skin, it was completely fucked.
+v3.5: Added back the longbow projectile because I want it to have a skill gap instead of making it skill-less.
 
 # CARD
 
@@ -40,6 +42,8 @@ set GD_Weap_Shotgun.Name.Title_Jakobs.Title_Legendary_Striker PartName Artemis
 set GD_Weap_Shotgun.Name.Title_Jakobs.Title_Legendary_Striker:AttributePresentationDefinition_8 NoConstraintText <font color="#ff0235">You'll leave this battle with more holes than you started with...<font color="#ffffff"><br>-<font color="#ff0235"> Critical <font color="#ffffff">hit gets boosted to 250% on hipfire.<br>- When zoomed in, your <font color="#a777f4">fire rate<font color="#ffffff"> gets reset to standard and<font color="#ff0235"> crit<font color="#ffffff"> bonus gets reduced to 0%<font color="#ffefff"><br>- When <font color="#ff8c00">zoomed<font color="#ffffff"> in, your last bullet has the 250% <font color="#ff0235">crit<font color="#ffffff"> bonus.<br>- When <font color="#ff8c00">zoomed<font color="#ffffff"> in, your mag size is <font color="#fce919">increased<font color="#ffffff"> by 4 and gets 4 bullets<font color="#771010"> reloaded<font color="#ffffff"> on zoom in.<font color="#ffefff"k
 
 # ATTRIBUTES
+
+set GD_Weap_Shotgun.Barrel.SG_Barrel_Hyperion_Striker CustomFiringModeDefinition FiringModeDefinition'GD_Weap_SniperRifles.FiringModes.Bullet_Sniper_Longbow'
 
 set GD_Weap_Shotgun.Barrel.SG_Barrel_Hyperion_Striker WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.3000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.00000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
 set GD_Weap_Shotgun.Barrel.SG_Barrel_Hyperion_Striker ExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.DamageSourceModifiers.InstigatedMeleeDamageModifier',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=2.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.GameplayAttributes.PlayerCriticalHitBonus',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=5.00000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
