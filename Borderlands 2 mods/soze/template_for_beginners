@@ -1,0 +1,34 @@
+- Template for beginner weapons.
+- Check out Dave's Resources Folder on GitHub to find certain things. https://github.com/BL2CP/BLCMods/tree/master/Borderlands%202%20mods/Dave/Resources
+- I won't explain how to make your own skin, I'd recommend going to Dave's Guide. https://github.com/BL2CP/BLCMods/blob/master/Borderlands%202%20mods/Dave/DAVE'S%20BL2%20SKIN%20MODDING%20GUIDE.pdf.
+- Delete my text if you want to use this template (You could also copy-paste lines and put them in your own folder.)
+- Always have gibbed open with the weapon you want to replace so you can copy paste lines like Barrel & Title in the .txt you're working on.
+- Note: The attribute effects have been copy pasted from my own custom weapon, change the 1st BaseValueConstant to buff / nerf your weapon. (You have to use negative numbers to nerf, unless it's for certain things like FireInterval)
+
+# Card
+
+set (title) PartName (name)
+set (title):AttributePresentationDefinition_8 NoConstraintText (red text) (Note: You can add <br> to add a new line, you can't have unlimited lines, you can also have font colors by putting <font color="(hex value)">)
+
+set (barrel) rarity (BaseValueConstant=50.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000) (Note: This is needed for custom rarity, Dave's Rarities are Recommended)
+
+# Firing // Attributes
+
+set (barrel) CustomFiringModeDefinition FiringModeDefinition'(insert firing mode)' (Note: Search for Dave and go to his RESOURCES folder with Firing Mode. Just a quick heads-up, firing mode doesn't give you attributes like Infinity's Firing Mode giving you unlimited bullets, all it does is give the firing pattern.)
+
+
+set (barrel) WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.0000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.00000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectileSpeedMultiplier',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=2.0000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+set (barrel) ExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.DamageSourceModifiers.InstigatedMeleeDamageModifier',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=3.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.GameplayAttributes.PlayerCriticalHitBonus',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=10.00000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+set (barrel) AttributeSlotUpgrades ((SlotName="WeaponSpread",GradeIncrease=9999,bActivateSlot=True),(SlotName="AccuracyMin",GradeIncrease=10,bActivateSlot=True),(SlotName="AccuracyMax",GradeIncrease=100000,bActivateSlot=True),(SlotName="AccuracyRegen",GradeIncrease=10,bActivateSlot=True),(SlotName="WeaponMagSize",GradeIncrease=40,bActivateSlot=True)))
+
+set (barrel) ZoomExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.GameplayAttributes.PlayerCriticalHitBonus',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-10.75000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-4.0000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=4.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponBulletsRemainingInClip',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=4.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Combat_Shotgun.Ammo_Combat_Shotgun_CurrentValue',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+(Notes: WeaponFireInterval needs positive numbers to reduce and negative to increase. Everything with D_Attributes.Weapon. needs to go in either WeaponAttributeEffects or ZoomExternalAttributeEffects)
+(To find all the attributes, go to Dave's github and go to his resource folder named Attributes)
+(ALWAYS start with 2 ('s. If you add more effects only end with 1 ), if you want to end the line completely use 3 )'s.)
+
+# Model
+
+set (barrel) GestaltModeSkeletalMeshName (barrel) (Note: This changes barrel, don't give it a different UNIQUE barrel, all you need is the standard barrel. Ex: SG_Barrel_Jakobs <- Shotgun)
