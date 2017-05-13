@@ -1,9 +1,24 @@
-Replaces Lascaux
 
-Increased Crit Damage
-Small healing on damage dealt
-Higher base damage than a regular E-Tech 
-Custom skin
+      ____     ___    _____  _____ 
+     / ___|   / _ \  |__  / | ____|
+     \___ \  | | | |   / /  |  _|  
+      ___) | | |_| |  / /_  | |___ 
+     |____/   \___/  /____| |_____|
+                                   
+
+
+Weapon:
+
+ - Name: Moonsight
+ - Replaces: Lascaux
+ - Completely new skin
+
+Weapon behavior:
+
+ - Increased Crit Damage
+ - Small healing on damage dealt
+ - Higher base damage than a regular E-Tech
+ - Shoots lasers
 
 Credits: 
 
@@ -21,6 +36,8 @@ v2.5: Updated description of the weapon, fixed accuracy & healing on zoom in.
 v2.6: Lowered the saturation & reduced the black to a bit more gray to make the colors more pleasing to the eye.
 v2.7: Fixed the glow being removed from the weapon, should now have a blue / purplish glow.
 v3: Lowered the burst fire rate from 9 bullets to 6, this change was made after player feedback.
+v3.1: Made the description more clear and gave Credit to the original skin creator.
+v3.2: Lowered the damage.
  
 Note:
 
@@ -29,7 +46,7 @@ Please leave constructive criticism if u make a vid / contact me on Shadow's Dis
 
 # ELEMENT
 
-set GD_Weap_SMG.A_Weapons_Unique.SMG_Dahl_3_Lascaux:WeaponPartListCollectionDefinition_176 ElementalPartData (bEnabled=True,WeightedParts=((bDisabled=False,Part=WeaponPartDefinition'GD_Weap_SMG.elemental.SMG_Elemental_None',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(bDisabled=False,Part=WeaponPartDefinition'GD_Weap_SMG.elemental.SMG_Elemental_Fire',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(bDisabled=False,Part=WeaponPartDefinition'GD_Weap_SMG.elemental.SMG_Elemental_Corrosive',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(bDisabled=False,Part=WeaponPartDefinition'GD_Weap_SMG.elemental.SMG_Elemental_Shock',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(bDisabled=False,Part=WeaponPartDefinition'GD_Weap_SMG.elemental.SMG_Elemental_Slag',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0)))
+set GD_Weap_SMG.A_Weapons_Unique.SMG_Dahl_3_Lascaux:WeaponPartListCollectionDefinition_176 ElementalPartData (bEnabled=True,WeightedParts=((bDisabled=False,Part=WeaponPartDefinition'GD_Weap_SMG.elemental.SMG_Elemental_None',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=3),(bDisabled=False,Part=WeaponPartDefinition'GD_Weap_SMG.elemental.SMG_Elemental_Fire',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(bDisabled=False,Part=WeaponPartDefinition'GD_Weap_SMG.elemental.SMG_Elemental_Corrosive',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(bDisabled=False,Part=WeaponPartDefinition'GD_Weap_SMG.elemental.SMG_Elemental_Shock',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(bDisabled=False,Part=WeaponPartDefinition'GD_Weap_SMG.elemental.SMG_Elemental_Slag',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0)))
 
 # CARD
 
@@ -38,7 +55,7 @@ set GD_Weap_SMG.Name.Title.Title__Unique_Lascaux PartName Moonsight
 set GD_Weap_SMG.Barrel.SMG_Barrel_Bandit_Lascaux WeaponCardAttributes (AttributeDefinition'D_Attributes.GameplayAttributes.PlayerCriticalHitBonus',PriorityIncrease=10.000000))
 set GD_Weap_SMG.Barrel.SMG_Barrel_Bandit_Lascaux rarity (BaseValueConstant=3.000000)
 
-set GD_Weap_SMG.Name.Title.Title__Unique_Lascaux:AttributePresentationDefinition_8 NoConstraintText <font color="#ff0235">Possessed by unknown sources...<br><font color="#ffffff">- Comes in all <font color="#951cff">elements<font color="#ffffff">.<br>- <font color="#ff0235">Crit <font color="#ffffff">boosted by a small amount<br><font color="#ffffff">- <font color="#ff0235">Healing <font color="#ffffff">on damage dealt when zoomed in<br><font color="#ffffff">- 100% Accurate when zoomed in.<br>- Fires a 6 round burst.<font color="#ffefff"lftstrafeisbae
+set GD_Weap_SMG.Name.Title.Title__Unique_Lascaux:AttributePresentationDefinition_8 NoConstraintText <font color="#ff0235">Possessed by unknown sources...<br><font color="#ffffff">- Comes in all <font color="#951cff">elements<font color="#ffffff">.<br>- <font color="#ff0235">Crit <font color="#ffffff">boosted by a small amount<br><font color="#ffffff">- <font color="#ff0235">Healing <font color="#ffffff">on damage dealt when zoomed in<br><font color="#ffffff">- 100% Accurate when zoomed in.<br>- Fires a 6 round burst.<br> <br>Credit: Thank you <font color="#0047AB">CMD_Obvious <font color="#ffefff">for the beautiful skin!<font color="#ffefff"lftstrafeisbae
 
 # FIRING
 
@@ -46,12 +63,13 @@ set GD_Weap_SMG.Barrel.SMG_Barrel_Bandit_Lascaux CustomFiringModeDefinition Firi
 
 # WEAPON ATTRIBUTES // STATS
 
+set GD_Weap_SMG.Barrel.SMG_Barrel_Bandit_Lascaux WeaponAttributeEffects (AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-0.30000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
 set GD_Weap_SMG.Barrel.SMG_Barrel_Bandit_Lascaux AttributeSlotUpgrades ((SlotName="WeaponSpread",GradeIncrease=9999,bActivateSlot=True),(SlotName="AccuracyMin",GradeIncrease=10,bActivateSlot=True),(SlotName="AccuracyMax",GradeIncrease=20,bActivateSlot=True),(SlotName="AccuracyRegen",GradeIncrease=10,bActivateSlot=True)))
-set GD_Weap_SMG.Barrel.SMG_Barrel_Bandit_Lascaux ZoomExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.DamageEnhancementModifiers.PlayerConvertDamageToHealingPercent',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=0.30000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponAutomaticBurstCount',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-3.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+set GD_Weap_SMG.Barrel.SMG_Barrel_Bandit_Lascaux ZoomExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.DamageEnhancementModifiers.PlayerConvertDamageToHealingPercent',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=0.05000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponAutomaticBurstCount',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-3.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
 set GD_Weap_SMG.Barrel.SMG_Barrel_Bandit_Lascaux ExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.GameplayAttributes.PlayerCriticalHitBonus',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.100000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
 set GD_Weap_SMG.Barrel.SMG_Barrel_Bandit_Lascaux WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=15.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
 
-//////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////
 # MODEL
 
 set GD_Weap_SMG.Barrel.SMG_Barrel_Bandit_Lascaux GestaltModeSkeletalMeshName SMG_Barrel_Alien
