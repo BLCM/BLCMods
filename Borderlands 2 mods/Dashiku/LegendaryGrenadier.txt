@@ -1,0 +1,44 @@
+#Legendary Grenadier - Replaces 
+
+#Explosive Damage   +30%
+#Grenade Damage     +30%
+#Grenade Ammo Regen +0.2
+
+#Willing      +5
+#Grenadier    +5
+#Steady       +5
+#Battlefront  +5
+#Quick Charge +5
+################
+
+set GD_Lobelia_ClassMods.Prefix_Soldier.Prefix_LegendaryPointman PartName Legendary Grenadier
+
+set GD_Lobelia_ClassMods.Prefix_Soldier.Prefix_LegendaryPointman ManufacturerOverride GD_Manufacturers.Manufacturers.Torgue
+
+set GD_Lobelia_ClassMods.A_Item_Soldier.ClassMod_Soldier_LegendaryPointman:AttributePresentationDefinition_0 Description "Catch This!"
+
+set GD_Lobelia_ClassMods.A_Item_Soldier.ClassMod_Soldier_LegendaryPointman UIStatList ((bDisplayAsModifierOnly=True,AttributeStyle=ATTRSTYLE_ModifierText,SupplementalAttributeStyle=ATTRSTYLE_JustNumber,StatCombinationMethod=SCM_Multiply,Attribute=AttributeDefinition'D_Attributes.DamageSourceModifiers.InstigatedGrenadeDamageModifier',ConstraintAttribute=None,SupplementalAttributeExpression=(AttributeOperand1=None,ComparisonOperator=OPERATOR_EqualTo,Operand2Usage=OPERAND_PreferAttribute,AttributeOperand2=None,ConstantOperand2=0.000000),SupplementalAttributeToAppend=None),(bDisplayAsModifierOnly=True,AttributeStyle=ATTRSTYLE_ModifierText,SupplementalAttributeStyle=ATTRSTYLE_JustNumber,StatCombinationMethod=SCM_Multiply,Attribute=AttributeDefinition'D_Attributes.DamageTypeModifers.InstigatedExplosiveDamageModifier',ConstraintAttribute=None,SupplementalAttributeExpression=(AttributeOperand1=None,ComparisonOperator=OPERATOR_EqualTo,Operand2Usage=OPERAND_PreferAttribute,AttributeOperand2=None,ConstantOperand2=0.000000),SupplementalAttributeToAppend=None),(bDisplayAsModifierOnly=True,AttributeStyle=ATTRSTYLE_ModifierText,SupplementalAttributeStyle=ATTRSTYLE_JustNumber,StatCombinationMethod=SCM_Multiply,Attribute=AttributeDefinition'D_Attributes.Ammo_Grenade_Protean.Ammo_Grenade_ProteanActiveRegenerationRate',ConstraintAttribute=None,SupplementalAttributeExpression=(AttributeOperand1=None,ComparisonOperator=OPERATOR_EqualTo,Operand2Usage=OPERAND_PreferAttribute,AttributeOperand2=None,ConstantOperand2=0.000000),SupplementalAttributeToAppend=None))
+
+set GD_Lobelia_ClassMods.A_Item_Soldier.ClassMod_Soldier_LegendaryPointman AttributeSlotEffects ((SlotName="PrimaryStatBonus",bExternalSlot=True,bRunEffectsAsSkill=False,AttributeToModify=AttributeDefinition'D_Attributes.DamageSourceModifiers.InstigatedGrenadeDamageModifier',ConstraintAttribute=None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_ClassMods.Misc.Init_StatBonus_Weak',BaseValueScaleConstant=0.600000),PerGradeUpgrade=(BaseValueConstant=0.010000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bIncludeInFunStats=False,bIncludeAlliesAsTarget=False,bEnforceMinimumGrade=True,bEnforceMaximumGrade=False,MinimumGrade=0,MaximumGrade=0,TargetInstanceDataName=),(SlotName="PrimaryStatBonus02",bExternalSlot=True,bRunEffectsAsSkill=False,AttributeToModify=AttributeDefinition'D_Attributes.DamageTypeModifers.InstigatedExplosiveDamageModifier',ConstraintAttribute=None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_ClassMods.Misc.Init_StatBonus_Weak',BaseValueScaleConstant=0.600000),PerGradeUpgrade=(BaseValueConstant=0.010000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bIncludeInFunStats=False,bIncludeAlliesAsTarget=False,bEnforceMinimumGrade=False,bEnforceMaximumGrade=False,MinimumGrade=0,MaximumGrade=0,TargetInstanceDataName=),(SlotName="PrimaryStatBonus03",bExternalSlot=True,bRunEffectsAsSkill=False,AttributeToModify=AttributeDefinition'D_Attributes.Ammo_Grenade_Protean.Ammo_Grenade_ProteanActiveRegenerationRate',ConstraintAttribute=None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=10.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_ClassMods.Misc.Init_StatBonus_Weak',BaseValueScaleConstant=1.000000),PerGradeUpgrade=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bIncludeInFunStats=False,bIncludeAlliesAsTarget=False,bEnforceMinimumGrade=False,bEnforceMaximumGrade=False,MinimumGrade=0,MaximumGrade=0,TargetInstanceDataName=),(SlotName="Skill1",bExternalSlot=True,bRunEffectsAsSkill=False,AttributeToModify=InventoryAttributeDefinition'GD_Soldier_Skills.SkillGradeModifiers.Grenadier',ConstraintAttribute=None,ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_ClassMods.Misc.Init_BaseSkillPointCalculation',BaseValueScaleConstant=1.000000),PerGradeUpgrade=(BaseValueConstant=0.340000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bIncludeInFunStats=True,bIncludeAlliesAsTarget=False,bEnforceMinimumGrade=True,bEnforceMaximumGrade=False,MinimumGrade=0,MaximumGrade=0,TargetInstanceDataName=),(SlotName="Skill2",bExternalSlot=True,bRunEffectsAsSkill=False,AttributeToModify=InventoryAttributeDefinition'GD_Soldier_Skills.SkillGradeModifiers.Steady',ConstraintAttribute=None,ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_ClassMods.Misc.Init_BaseSkillPointCalculation',BaseValueScaleConstant=1.000000),PerGradeUpgrade=(BaseValueConstant=0.340000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bIncludeInFunStats=True,bIncludeAlliesAsTarget=False,bEnforceMinimumGrade=True,bEnforceMaximumGrade=False,MinimumGrade=0,MaximumGrade=0,TargetInstanceDataName=),(SlotName="Skill3",bExternalSlot=True,bRunEffectsAsSkill=False,AttributeToModify=InventoryAttributeDefinition'GD_Soldier_Skills.SkillGradeModifiers.Battlefront',ConstraintAttribute=None,ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_ClassMods.Misc.Init_BaseSkillPointCalculation',BaseValueScaleConstant=1.000000),PerGradeUpgrade=(BaseValueConstant=0.340000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bIncludeInFunStats=True,bIncludeAlliesAsTarget=False,bEnforceMinimumGrade=True,bEnforceMaximumGrade=False,MinimumGrade=0,MaximumGrade=0,TargetInstanceDataName=),(SlotName="Skill4",bExternalSlot=True,bRunEffectsAsSkill=True,AttributeToModify=InventoryAttributeDefinition'GD_Soldier_Skills.SkillGradeModifiers.Preparation',ConstraintAttribute=None,ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_ClassMods.Misc.Init_BaseSkillPointCalculation',BaseValueScaleConstant=1.000000),PerGradeUpgrade=(BaseValueConstant=0.340000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bIncludeInFunStats=True,bIncludeAlliesAsTarget=False,bEnforceMinimumGrade=True,bEnforceMaximumGrade=False,MinimumGrade=0,MaximumGrade=0,TargetInstanceDataName=),(SlotName="Skill5",bExternalSlot=True,bRunEffectsAsSkill=True,AttributeToModify=InventoryAttributeDefinition'GD_Soldier_Skills.SkillGradeModifiers.QuickCharge',ConstraintAttribute=None,ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_ClassMods.Misc.Init_BaseSkillPointCalculation',BaseValueScaleConstant=1.000000),PerGradeUpgrade=(BaseValueConstant=0.340000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bIncludeInFunStats=True,bIncludeAlliesAsTarget=False,bEnforceMinimumGrade=True,bEnforceMaximumGrade=False,MinimumGrade=0,MaximumGrade=0,TargetInstanceDataName=))
+
+set GD_Lobelia_ClassMods.A_Item_Soldier.ClassMod_Soldier_LegendaryPointman AttributeSlotUpgrades ((SlotName="PrimaryStatBonus",GradeIncrease=0,bActivateSlot=True),(SlotName="PrimaryStatBonus02",GradeIncrease=0,bActivateSlot=True),(SlotName="PrimaryStatBonus03",GradeIncrease=0,bActivateSlot=True),(SlotName="Skill1",GradeIncrease=3,bActivateSlot=True),(SlotName="Skill2",GradeIncrease=3,bActivateSlot=True),(SlotName="Skill3",GradeIncrease=3,bActivateSlot=True),(SlotName="Skill4",GradeIncrease=3,bActivateSlot=True),(SlotName="Skill5",GradeIncrease=3,bActivateSlot=True))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
