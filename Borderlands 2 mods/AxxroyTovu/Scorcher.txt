@@ -6,6 +6,7 @@ The Scorcher
 Replaces the Tinderbox
 +10,000% knockback
 1 mag size
+Now Jakobs!
 
 Need to figure out a skin for this...
 
@@ -16,6 +17,16 @@ set GD_Weap_Pistol.Name.Title.Title__Unique_Tinderbox PartName Scorcher
 set GD_Weap_Pistol.Name.Title.Title__Unique_Tinderbox:AttributePresentationDefinition_8 NoConstraintText Mmmh, mmh!
 
 set GD_Weap_Pistol.Barrel.Pistol_Barrel_Dahl_Tinderbox WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponKnockback',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=100.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponKnockback',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=100.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponPerShotAccuracyImpulse',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-99999.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+## Change to Jakobs
+
+set GD_Weap_Pistol.A_Weapons_Unique.Pistol_Bandit_3_Tenderbox:WeaponPartListCollectionDefinition_15 BodyPartData (bEnabled=True,WeightedParts=((Part=WeaponPartDefinition'GD_Weap_Pistol.Body.Pistol_Body_Jakobs_3',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=2)))
+
+set GD_Weap_Pistol.A_Weapons_Unique.Pistol_Bandit_3_Tenderbox:WeaponPartListCollectionDefinition_15 AssociatedWeaponType WeaponTypeDefinition'GD_Weap_Pistol.A_Weapons.WeaponType_Jakobs_Pistol'
+
+set GD_Weap_Pistol.A_Weapons_Unique.Pistol_Bandit_3_Tenderbox:PartList BodyPartData (bEnabled=True,WeightedParts=((Part=WeaponPartDefinition'GD_Weap_Pistol.Body.Pistol_Body_Jakobs_3',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=2)))
+
+## Skin TBD
 
 #et Common_GunMaterials.Materials.Pistol.Mati_BanditUniquePistol_Tenderbox Parent Common_GunMaterials.MasterMaterials.Jakobs.MasterMati_JakobsLegendary
 
