@@ -1,0 +1,56 @@
+#####################################################################################################
+##############  The Irradiator - Replaces the Hornet Pistol.                           ############## 
+##############  Slightly affects the Spiker bullet tracer (makes it invisible).        ############## 
+##############  "Be sure to use sunscreen." - Makes the Hornet into a Ray-gun.	       ############## 
+##############  Infects additional enemies around the original target (Teapot effect). ############## 
+##############  Reduced Accuracy and Fire-rate. 				       ############## 
+##############	Now fires a beam-like projectile made of 3 rounds (Costs 2 to fire)    ##############
+#####################################################################################################
+
+
+#######################################################################################
+############## None of this would be possible without the help of Dave,  ##############
+############## thank you so much for your guide and resources, you've    ##############
+############## helped me get into something I really enjoy. Also thank   ##############
+############## you Lftstrafe for your fantastic videos that pointed me   ##############
+############## in this direction in the first place! 			 ##############
+#######################################################################################
+
+
+############## Naming and Rarity ##############
+
+set GD_Weap_Pistol.Name.Title_Dahl.Title_Legendary_Hornet PartName Irradiator
+
+set GD_Weap_Pistol.Name.Title_Dahl.Title_Legendary_Hornet:AttributePresentationDefinition_8 NoConstraintText Be sure to use sunscreen.
+
+set GD_Weap_Pistol.Barrel.Pistol_Barrel_Dahl_Hornet CustomPresentations (AttributePresentationDefinition'GD_Weap_Pistol.Barrel.Fibber.Pistol_Barrel_Bandit_Fibber_3:AttributePresentationDefinition_0')
+
+set AttributePresentationDefinition'GD_Weap_Pistol.Barrel.Fibber.Pistol_Barrel_Bandit_Fibber_3:AttributePresentationDefinition_0' NoConstraintText Consumes 2 ammo per shot. 
+
+set GD_Weap_Pistol.Name.Title_Dahl.Title_Legendary_Hornet rarity (BaseValueConstant=1)
+
+############## Bullets ##############
+
+set GD_Weap_Pistol.A_Weapons_Legendary.Pistol_Dahl_5_Hornet ElementalPartData (bEnabled=True,WeightedParts=((Part=WeaponPartDefinition'GD_Weap_Pistol.elemental.Pistol_Elemental_Corrosive',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=2)))
+
+set GD_Weap_Pistol.Barrel.Pistol_Barrel_Dahl_Hornet CustomFiringModeDefinition FiringModeDefinition'GD_Weap_Pistol.FiringModes.Bullet_Pistol_Dahl_Teapot'
+
+set GD_Weap_Pistol.FiringModes.Bullet_Pistol_Dahl_Teapot PartSysTemplate ParticleSystem'FX_WEP_Alien.Particles.Part_Pistol_Alien_Corrosive_MuzzleFlash'
+
+set GD_Weap_Pistol.FiringModes.Bullet_Pistol_Dahl_Teapot SoundDefinition FiringModeSoundDefinition'GD_Weap_SniperRifles.FiringModes.RailSoundDefinition' 
+
+set GD_Weap_Pistol.FiringModes.Bullet_Pistol_Dahl_Teapot PartSysTemplate ParticleSystem'FX_WEP_Trails_Alien.Particles.Part_Sniper_Alien_Corrosive_Tracer'
+
+############## Statistics ##############
+
+set GD_Weap_Pistol.Barrel.Pistol_Barrel_Dahl_Hornet ExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.40000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AccuracyResourcePool.AccuracyMaxValue',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=10.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+set GD_Weap_Pistol.Barrel.Pistol_Barrel_Dahl_Hornet WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.90000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.GameplayAttributes.PlayerCriticalHitBonus',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.3750000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponStatusEffectDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.25000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponStatusEffectChanceModifier',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=3.11100,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.00000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectileSpeedMultiplier',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.00000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.00000,BaseValueAttribute=None,InitializationDefinASition=None,BaseValueScaleConstant=1.000000)))
+
+############## Skin ##############
+
+set Common_GunMaterials.Materials.Pistol.Mati_DahlLegendaryPistol_Hornet VectorParameterValues ((ParameterName="p_AColorHilight",ParameterValue=(R=0.1000000,G=2.0000000,B=0.1000000,A=1.000000),ExpressionGUID=(A=170014760,B=1132076783,C=-275608290,D=650702143)),(ParameterName="p_AColorMidtone",ParameterValue=(R=1.000000,G=1.5000000,B=1.000000,A=1.000000),ExpressionGUID=(A=473504356,B=1338058895,C=824823046,D=864253013)),(ParameterName="p_AColorShadow",ParameterValue=(R=0.0500000,G=0.0500000,B=0.0500000,A=1.000000),ExpressionGUID=(A=-429590041,B=1156405294,C=-1015192900,D=687313410)),(ParameterName="p_BColorHilight",ParameterValue=(R=0.000001,G=0.000001,B=0.000001,A=1.000000),ExpressionGUID=(A=170714760,B=1132476783,C=-275668290,D=655702143)),(ParameterName="p_BColorMidtone",ParameterValue=(R=0.050000,G=0.050000,B=0.050000,A=1.000000),ExpressionGUID=(A=473594356,B=1338758895,C=824823946,D=864253813)),(ParameterName="p_BColorShadow",ParameterValue=(R=0.005000,G=0.005000,B=0.005000,A=1.000000),ExpressionGUID=(A=-429590341,B=1156435294,C=-1015192901,D=687313413)),(ParameterName="p_CColorHilight",ParameterValue=(R=4.000000,G=34.000000,B=44.000000,A=1.000000),ExpressionGUID=(A=170714760,B=1132476783,C=-275668290,D=655702143)),(ParameterName="p_CColorMidtone",ParameterValue=(R=1.000000,G=25.000000,B=1.000000,A=1.000000),ExpressionGUID=(A=473594356,B=1338758895,C=824823946,D=864253813)),(ParameterName="p_CColorShadow",ParameterValue=(R=1.000000,G=1.000000,B=1.000000,A=1.000000),ExpressionGUID=(A=-429590341,B=1156435294,C=-1015192901,D=687313413)),(ParameterName="p_DColor",ParameterValue=(R=0.020000,G=15.020000,B=0.020000,A=1.000000),ExpressionGUID=(A=696455109,B=1155878830,C=-1741888361,D=802120528)),(ParameterName="p_EmissiveColor",ParameterValue=(R=0.000000,G=1.000000,B=0.000000,A=1.000000),ExpressionGUID=(A=-2074486426,B=1296399582,C=-2021314681,D=-350758005)),(ParameterName="p_ReflectColor",ParameterValue=(R=34.000000,G=217.000000,B=68.00000,A=1.000000),ExpressionGUID=(A=295058103,B=1318551573,C=-2045449573,D=-547597976)),(ParameterName="p_ReflectionChannelScale",ParameterValue=(R=0.100000,G=0.100000,B=1.000000,A=1.000000),ExpressionGUID=(A=295058103,B=1318551573,C=-2045449573,D=-547597976)),(ParameterName="p_PatternColor",ParameterValue=(R=0.200000,G=3.50000,B=0.400000,A=1.000000),ExpressionGUID=(A=676539706,B=1125682796,C=1871983293,D=-2049503601)),(ParameterName="p_PatternScalePosition",ParameterValue=(R=30.000000,G=30.000000,B=6.300000,A=0.300000),ExpressionGUID=(A=-2005018406,B=1132497243,C=-39915121,D=208423616)),(ParameterName="p_PatternChannelScale",ParameterValue=(R=0.000000,G=0.000000,B=1.000000,A=1.000000),ExpressionGUID=(A=439432319,B=1091149893,C=-1991909502,D=1816944627)),(ParameterName="p_DecalColor",ParameterValue=(R=0.0500000,G=0.7500000,B=0.05000000,A=1.000000),ExpressionGUID=(A=295058103,B=1318551573,C=-2045449573,D=-547597976)),(ParameterName="p_DecalScalePosition",ParameterValue=(R=20.00000,G=20.00000,B=0.40000,A=0.100000),ExpressionGUID=(A=295058103,B=1318551573,C=-2045449573,D=-547597976)),(ParameterName="p_DecalChannel",ParameterValue=(R=1.000000,G=0.000000,B=0.000000,A=1.000000),ExpressionGUID=(A=295058103,B=1318551573,C=-2045449573,D=-547597976)))
+
+set Common_GunMaterials.Materials.Pistol.Mati_DahlLegendaryPistol_Hornet TextureParameterValues ((ParameterName="p_NormalScopesEmissive",ParameterValue=Texture2D'Weap_Pistol.Tex.Weap_Pistols_Nrm',ExpressionGUID=(A=-1743872746,B=1126171774,C=119496871,D=-1952271718)),(ParameterName="p_Diffuse",ParameterValue=Texture2D'Common_GunMaterials.CompTextures.Weap_LauncherShotgunPistol_Comp',ExpressionGUID=(A=1757607260,B=1326539502,C=-317215581,D=-565807463)),(ParameterName="p_Masks",ParameterValue=Texture2D'Weap_Pistol.Tex.Weap_Pistols_Comp',ExpressionGUID=(A=-330624041,B=1167251458,C=-335191907,D=-166684394)),(ParameterName="P_SimpleReflect",ParameterValue=Texture2D'Common_GunMaterials.Env.Gold',ExpressionGUID=(A=-858148940,B=1327945772,C=148462268,D=1899047224)),(ParameterName="p_Pattern",ParameterValue=Texture2D'Common_GunMaterials.Patterns.Pattern_JacobsCommonMetal',ExpressionGUID=(A=534250533,B=1202550002,C=1578302861,D=-717876416)),(ParameterName="p_Decal",ParameterValue=Texture2D'Orchid_GunMaterials.Orchin_GunLogos.PirateStripes',ExpressionGUID=(A=923052711,B=1309861752,C=584229786,D=-1229888527)))
+
+set Common_GunMaterials.Materials.Pistol.Mati_DahlLegendaryPistol_Hornet ScalarParameterValues ((ParameterName="p_HighlightsIntensity",ParameterValue=0.00000,ExpressionGUID=(A=-1257568432,B=1277066486,C=-723473993,D=-1144384173)),(ParameterName="p_EmissiveScale",ParameterValue=0.000000,ExpressionGUID=(A=-1257568432,B=1277066486,C=-723473993,D=-1144384173)),(ParameterName="p_ShadowsIntensity",ParameterValue=1.000000,ExpressionGUID=(A=437293753,B=1205147708,C=-775723903,D=1480014964)),(ParameterName="p_ReflectColorScale",ParameterValue=1.000000,ExpressionGUID=(A=1875785607,B=1186033550,C=-1822263113,D=-1465755701)),(ParameterName="p_ReplacePattern",ParameterValue=0.000000,ExpressionGUID=(A=-2084339847,B=1096440125,C=439008937,D=45433490)),(ParameterName="p_DecalRotate",ParameterValue=0.100000,ExpressionGUID=(A=-276527909,B=1298581551,C=856978878,D=743944047)))
