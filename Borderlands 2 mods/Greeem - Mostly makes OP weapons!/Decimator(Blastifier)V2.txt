@@ -11,9 +11,10 @@
 ##Added a few more projectiles.
 ##Ramped up the damage.
 ##Increased Clip Size.
-##Might be OP as shit.
+##OP as shit.
 ##E-Tech flaps still WIP, and the damage is subject to change as I test it against raid bosses.
-##Also, expect an Infinity Mod soon ;)
+##Heavily edited from the original gun. Very OP, I am aware of that.
+##My brokeninfinity.txt is even more OP, just a heads up.
 
 //Barrel
 set GD_Weap_AssaultRifle.Barrel.AR_Barrel_Vladof_Shredifier GestaltModeSkeletalMeshName AR_Barrel_Alien
@@ -48,8 +49,8 @@ set Common_GunMaterials.Materials.AssaultRifle.Mati_VladofLegendary VectorParame
 
 set set Common_GunMaterials.Materials.AssaultRifle.Mati_VladofLegendary ScalarParameterValues ((ParameterName="p_HighlightsIntensity",ParameterValue=0.200000,ExpressionGUID=(A=-1257568432,B=1277066486,C=-723473993,D=-1144384173)),(ParameterName="p_ShadowsIntensity",ParameterValue=1.000000,ExpressionGUID=(A=437293753,B=1205147708,C=-775723903,D=1480014964)),(ParameterName="p_ReflectColorScale",ParameterValue=1.000000,ExpressionGUID=(A=1875785607,B=1186033550,C=-1822263113,D=-1465755701)),(ParameterName="p_ReplacePattern",ParameterValue=1.000000,ExpressionGUID=(A=-2084339847,B=1096440125,C=439008937,D=45433490)),(ParameterName="p_DecalRotate",ParameterValue=0.200000,ExpressionGUID=(A=-276527909,B=1298581551,C=856978878,D=743944047)),(ParameterName="p_ReplaceDecal",ParameterValue=1.000000,ExpressionGUID=(A=85863466,B=1257609701,C=-728575820,D=1337098176)),(ParameterName="p_UseFullColorDecal",ParameterValue=0.000000,ExpressionGUID=(A=-1064329812,B=1077705328,C=339664807,D=1869745420)))
 
-//Bullets
-set GD_Weap_AssaultRifle.Barrel.AR_Barrel_Vladof_Shredifier WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=2.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=3.750000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=4.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=9.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+//Bullet Behaviour
+set GD_Weap_AssaultRifle.Barrel.AR_Barrel_Vladof_Shredifier WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=2.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=3.750000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=4.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=9.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-20000.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=100.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponReloadSpeed',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-0.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponAdditionalRicochets',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
 
 
 
