@@ -1,0 +1,14 @@
+Changes:
+Removed self-freeze mechanic.
+Slight stat buffs.
+Changed rarity colour to Legendary.
+Increased price to reflect the new rarity colour.
+
+set GD_Weap_SMG.Barrel.SMG_Barrel_Frostfire AttributeSlotUpgrades ((SlotName="WeaponDamage",GradeIncrease=11,bActivateSlot=True),(SlotName="WeaponFireRate",GradeIncrease=8,bActivateSlot=True),(SlotName="WeaponReloadSpeed",GradeIncrease=7,bActivateSlot=True),(SlotName="WeaponMagSize",GradeIncrease=9,bActivateSlot=True))
+
+set GD_Weap_SMG.Skills.Skill_Frostfire:BehaviorProviderDefinition_0.Behavior_AttemptStatusEffect_373 StatusEffect None
+
+set GD_Weap_SMG.Barrel.SMG_Barrel_Frostfire MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'
+set GD_Weap_SMG.Barrel.SMG_Barrel_Frostfire Rarity (BaseValueConstant=5.000000)
+
+set GD_Weap_SMG.Name.Title.Title__Unique_Frostfire:AttributePresentationDefinition_8 NoConstraintText Ymir's requiem.

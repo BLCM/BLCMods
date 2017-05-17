@@ -1,0 +1,41 @@
+
+      ____     ___    _____  _____ 
+     / ___|   / _ \  |__  / | ____|
+     \___ \  | | | |   / /  |  _|  
+      ___) | | |_| |  / /_  | |___ 
+     |____/   \___/  /____| |_____|
+                                   
+
+
+Weapon:
+
+ - Name: Skadi
+ - Replaces: Pitchfork
+ - Note: This is Cryo / Ice only, gib this with any other element and it gets deleted.
+
+Weapon behavior:
+
+ - 100% crit boost
+ - Shoots lasers
+ - Freezes enemey if you hit a crit when zoomed in.
+ - 3-shot burst on zoom in.
+
+# CARD
+
+set GD_Cork_Weap_SniperRifles.Name.Title_Dahl.Title_Legendary_Pitchfork PartName Skadi
+set GD_Cork_Weap_SniperRifles.Name.Title_Dahl.Title_Legendary_Pitchfork:AttributePresentationDefinition_8 NoConstraintText <font color="#ff0235">Delicate as a snowflake.<font color="#ffffff"><br>- Hitting a <font color="#ff0235">critical<font color="#ffffff"> when zoomed in <font color="#3ac3d6">freezes<font color="#ffffff"> enemies guaranteed.<br>- <font color="#fceaa4">Burst fire<font color="#ffffff"> while zoomed in.<br> - 100% <font color="#ff0235">Critical<font color="#ffffff"> hit boost.<font color="#ffffff"ugyuubae
+
+# ELEMENT
+
+set GD_Cork_Weap_SniperRifles.A_Weapons_Legendary.Sniper_Dahl_5_Pitchfork:WeaponPartListCollectionDefinition_167 ElementalPartData (bEnabled=True,WeightedParts=((Part=WeaponPartDefinition'GD_Weap_SniperRifles.elemental.SR_Elemental_Ice',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1))
+
+# FIRING
+
+set GD_Cork_Weap_SniperRifles.Barrel.SR_Barrel_Dahl_Pitchfork CustomFiringModeDefinition FiringModeDefinition'GD_Ma_Weapons.FiringModes.FM_Rocket_Tediore_KanedasLaser'
+
+set GD_Cork_Weap_SniperRifles.Barrel.SR_Barrel_Dahl_Pitchfork WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponStatusEffectChanceModifier',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-100.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.30000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+set GD_Cork_Weap_SniperRifles.Barrel.SR_Barrel_Dahl_Pitchfork ZoomExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponAutomaticBurstCount',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponStatusEffectChanceModifier',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=10000.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.GameplayAttributes.PlayerCriticalHitBonus',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=2.00000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+# MODEL
+
+set GD_Cork_Weap_SniperRifles.Barrel.SR_Barrel_Dahl_Pitchfork GestaltModeSkeletalMeshName SR_Barrel_Hyperion
