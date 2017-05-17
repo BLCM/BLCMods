@@ -5,7 +5,7 @@
 //Consumes 1 ammo per shot,
 //Not parts locked whatsoever :)
 //If you want a sight, put a # in front of the //Sight section. If you want a different sight than the one you have, switch "none" to a manufacturer's name. (Not Tediore, Hyperion, Or Maliwan.)
-//Created by Greeem (Thanks Shadowevil for the skin)
+//Created by Greeem (Thanks Aaron0000 for the skin)
 //##CHANGELOG##\\
 ##Changed the skin.
 ##Added a few more projectiles.
@@ -15,47 +15,51 @@
 ##E-Tech flaps still WIP, and the damage is subject to change as I test it against raid bosses.
 ##Heavily edited from the original gun. Very OP, I am aware of that.
 ##My brokeninfinity.txt is even more OP, just a heads up.
+##This is the final version. Aaron, if you want me to use a different skin, I will. I really like this skin so I used it. C:
 
-//Barrel
+#---Barrel
 set GD_Weap_AssaultRifle.Barrel.AR_Barrel_Vladof_Shredifier GestaltModeSkeletalMeshName AR_Barrel_Alien
 
-//Sight
-set GD_Weap_AssaultRifle.Sight.AR_Sight_Bandit GestaltModeSkeletalMeshName AR_Sight_None
-
+#---Sight
 set GD_Weap_AssaultRifle.Sight.AR_Sight_Vladof GestaltModeSkeletalMeshName AR_Sight_None
 
-set GD_Weap_AssaultRifle.Sight.AR_Sight_Dahl GestaltModeSkeletalMeshName AR_Sight_None
-
-set GD_Weap_AssaultRifle.Sight.AR_Sight_Jakobs GestaltModeSkeletalMeshName AR_Sight_None
-
-set GD_Weap_AssaultRifle.Sight.AR_Sight_Torgue GestaltModeSkeletalMeshName AR_Sight_None
-
-//Firing Mode
+#---E-Tech bullets
 set GD_Weap_AssaultRifle.Barrel.AR_Barrel_Vladof_Shredifier CustomFiringModeDefinition FiringModeDefinition 'GD_Weap_AssaultRifle.FiringModes.Bullet_Blaster_Default'
 
-//Rarity
+#---Rarity
 set GD_Weap_AssaultRifle.Barrel.AR_Barrel_Vladof_Shredifier rarity (basevalueattribute=none)
 
 set GD_Weap_AssaultRifle.Barrel.AR_Barrel_Vladof_Shredifier rarity (BaseValueConstant=497)
 
-//E-Tech flaps (WIP)
-set GD_Weap_AssaultRifle.Barrel.AR_Barrel_Vladof_Shredifier FlapsExpandDuration (BaseValueConstant=2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
-
-set GD_Weap_AssaultRifle.Barrel.AR_Barrel_Vladof_Shredifier FlapsCollapseDuration (BaseValueConstant=0.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
-
+#---E-Tech flaps (WIP (still))
 set GD_Weap_AssaultRifle.Barrel.AR_Barrel_Vladof_Shredifier bFlapsEnabled True
 
-//Weapon Name/Red Text
+set GD_Weap_AssaultRifle.Barrel.AR_Barrel_Vladof_Shredifier BoneControllers ((BoneName="AlienBarrelFin_Top",ControlType=WEAP_BONE_CONTROL_Flap,bUseInFirstPerson=True,bUseInThirdPerson=False,ControlTemplate=WillowSkelControl_RotateFlapFromFiring'GD_Weap_AssaultRifle.Barrel.AR_Barrel_Alien:WillowSkelControl_RotateFlapFromFiring_0'),(BoneName="AlienBarrelFin_L",ControlType=WEAP_BONE_CONTROL_Flap,bUseInFirstPerson=True,bUseInThirdPerson=False,ControlTemplate=WillowSkelControl_RotateFlapFromFiring'GD_Weap_AssaultRifle.Barrel.AR_Barrel_Alien:WillowSkelControl_RotateFlapFromFiring_1'),(BoneName="AlienBarrelFin_R",ControlType=WEAP_BONE_CONTROL_Flap,bUseInFirstPerson=True,bUseInThirdPerson=False,ControlTemplate=WillowSkelControl_RotateFlapFromFiring'GD_Weap_AssaultRifle.Barrel.AR_Barrel_Alien:WillowSkelControl_RotateFlapFromFiring_2'),(BoneName="Barrel",ControlType=WEAP_BONE_CONTROL_BarrelSpinner,bUseInFirstPerson=True,bUseInThirdPerson=True,ControlTemplate=WillowSkelControlLerpSingleBone'GD_Weap_AssaultRifle.Barrel.AR_Barrel_Alien:WillowSkelControlLerpSingleBone_0'))
+
+set GD_Weap_AssaultRifle.Barrel.AR_Barrel_Vladof_Shredifier FlapsExpandDuration (BaseValueConstant=0.250000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+
+set GD_Weap_AssaultRifle.Barrel.AR_Barrel_Vladof_Shredifier FlapsCollapseDuration (BaseValueConstant=5.80000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+
+
+#---Weapon Name/Red Text
 set GD_Weap_AssaultRifle.Name.Title_Vladof.Title_Legendary_Shredifier PartName Decimator
 
 set GD_Weap_AssaultRifle.Name.Title_Vladof.Title_Legendary_Shredifier:AttributePresentationDefinition_8 NoConstraintText <font color="#ff0235">When you have no other options.<font color="#FFFFFF">
 
-//Weapon Skin (Uses the Sawbar Skin from shadowevil's Community Patch 3.0)
-set Common_GunMaterials.Materials.AssaultRifle.Mati_VladofLegendary TextureParameterValues ((ParameterName="P_SimpleReflect",ParameterValue=Texture2D'Common_GunMaterials.Patterns.Pattern_Lightning',ExpressionGUID=(A=-858148940,B=1327945772,C=148462268,D=1899047224)),(ParameterName="p_Pattern",ParameterValue=Texture2D'Common_GunMaterials.Patterns.Pattern_JakobsUncommonWood',ExpressionGUID=(A=534250533,B=1202550002,C=1578302861,D=-717876416)),(ParameterName="p_NormalScopesEmissive",ParameterValue=Texture2D'Weap_AssaultRifles.Tex.Weap_AssaultRifle_Nrm',ExpressionGUID=(A=-1743872746,B=1126171774,C=119496871,D=-1952271718)),(ParameterName="p_Diffuse",ParameterValue=Texture2D'Common_GunMaterials.CompTextures.Weap_AssaultSubSniper_Comp',ExpressionGUID=(A=1757607260,B=1326539502,C=-317215581,D=-565807463)),(ParameterName="p_Masks",ParameterValue=Texture2D'Weap_AssaultRifles.Tex.Weap_AssaultRifle_Comp',ExpressionGUID=(A=-330624041,B=1167251458,C=-335191907,D=-166684394)),(ParameterName="p_Decal",ParameterValue=Texture2D'Common_GunMaterials.Patterns.Pattern_JacobsCommonMetal',ExpressionGUID=(A=-923052711,B=1309861752,C=584229786,D=-1229888527)))
+#---Weapon Damage, Clip Size, Projectile Count, Accuracy, Reload Speed, and Firerate. 
+set GD_Weap_AssaultRifle.Barrel.AR_Barrel_Vladof_Shredifier WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=2.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=3.750000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=4.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=9.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-20000.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=100.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponReloadSpeed',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-0.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
 
-set Common_GunMaterials.Materials.AssaultRifle.Mati_VladofLegendary VectorParameterValues ((ParameterName="p_ReflectColor",ParameterValue=(R=10.000000,G=8.000000,B=1.000000,A=1.000000),ExpressionGUID=(A=295058103,B=1318551573,C=-2045449573,D=-547597976)),(ParameterName="p_ReflectionChannelScale",ParameterValue=(R=1.000000,G=1.000000,B=1.000000,A=1.000000),ExpressionGUID=(A=295058103,B=1318551573,C=-2045449573,D=-547597976)),(ParameterName="p_PatternColor",ParameterValue=(R=1.000000,G=1.100000,B=1.200000,A=1.000000),ExpressionGUID=(A=676539706,B=1125682796,C=1871983293,D=-2049503601)),(ParameterName="p_PatternScalePosition",ParameterValue=(R=15.000000,G=15.000000,B=1.000000,A=1.300000),ExpressionGUID=(A=-2005018406,B=1132497243,C=-39915121,D=208423616)),(ParameterName="p_PatternChannelScale",ParameterValue=(R=1.000000,G=0.000000,B=0.000000,A=0.000000),ExpressionGUID=(A=439432319,B=1091149893,C=-1991909502,D=1816944627)),(ParameterName="p_EmissiveColor",ParameterValue=(R=0.000000,G=0.000000,B=0.000000,A=1.000000),ExpressionGUID=(A=-2074486426,B=1296399582,C=-2021314681,D=-350758005)),(ParameterName="p_CColorHilight",ParameterValue=(R=0.200000,G=0.200000,B=0.100000,A=1.000000),ExpressionGUID=(A=170714760,B=1132476783,C=-275668290,D=655702143)),(ParameterName="p_CColorMidtone",ParameterValue=(R=0.600000,G=0.400000,B=0.200000,A=1.000000),ExpressionGUID=(A=473594356,B=1338758895,C=824823946,D=864253813)),(ParameterName="p_CColorShadow",ParameterValue=(R=0.200000,G=0.000000,B=0.000000,A=1.000000),ExpressionGUID=(A=-429590341,B=1156435294,C=-1015192901,D=687313413)),(ParameterName="p_BColorHilight",ParameterValue=(R=3.000000,G=3.000000,B=3.000000,A=1.000000),ExpressionGUID=(A=170714760,B=1132476783,C=-275668290,D=655702143)),(ParameterName="p_BColorMidtone",ParameterValue=(R=2.500000,G=2.900000,B=2.000000,A=1.000000),ExpressionGUID=(A=473594356,B=1338758895,C=824823946,D=864253813)),(ParameterName="p_BColorShadow",ParameterValue=(R=1.3300000,G=1.030000,B=1.000000,A=1.000000),ExpressionGUID=(A=-429590341,B=1156435294,C=-1015192901,D=687313413)),(ParameterName="p_AColorHilight",ParameterValue=(R=0.020000,G=0.020000,B=0.020000,A=1.000000),ExpressionGUID=(A=170014760,B=1132076783,C=-275608290,D=650702143)),(ParameterName="p_AColorMidtone",ParameterValue=(R=0.010000,G=0.010000,B=0.010000,A=1.000000),ExpressionGUID=(A=473504356,B=1338058895,C=824823046,D=864253013)),(ParameterName="p_AColorShadow",ParameterValue=(R=0.005000,G=0.005000,B=0.005000,A=1.000000),ExpressionGUID=(A=-429590041,B=1156405294,C=-1015192900,D=687313410)),(ParameterName="p_DecalColor",ParameterValue=(R=0.010000,G=0.250000,B=0.300000,A=1.000000),ExpressionGUID=(A=1691998600,B=1239094551,C=2074257317,D=1844701893)),(ParameterName="p_DecalScalePosition",ParameterValue=(R=6.500000,G=6.500000,B=0.660000,A=0.518000),ExpressionGUID=(A=395540170,B=1243133493,C=-1264190552,D=123075385)),(ParameterName="p_DecalChannel",ParameterValue=(R=0.000000,G=1.000000,B=0.000000,A=1.000000),ExpressionGUID=(A=1869386622,B=1303200947,C=-1616405849,D=714558284)))
+#---Weapon Skin
 
-set set Common_GunMaterials.Materials.AssaultRifle.Mati_VladofLegendary ScalarParameterValues ((ParameterName="p_HighlightsIntensity",ParameterValue=0.200000,ExpressionGUID=(A=-1257568432,B=1277066486,C=-723473993,D=-1144384173)),(ParameterName="p_ShadowsIntensity",ParameterValue=1.000000,ExpressionGUID=(A=437293753,B=1205147708,C=-775723903,D=1480014964)),(ParameterName="p_ReflectColorScale",ParameterValue=1.000000,ExpressionGUID=(A=1875785607,B=1186033550,C=-1822263113,D=-1465755701)),(ParameterName="p_ReplacePattern",ParameterValue=1.000000,ExpressionGUID=(A=-2084339847,B=1096440125,C=439008937,D=45433490)),(ParameterName="p_DecalRotate",ParameterValue=0.200000,ExpressionGUID=(A=-276527909,B=1298581551,C=856978878,D=743944047)),(ParameterName="p_ReplaceDecal",ParameterValue=1.000000,ExpressionGUID=(A=85863466,B=1257609701,C=-728575820,D=1337098176)),(ParameterName="p_UseFullColorDecal",ParameterValue=0.000000,ExpressionGUID=(A=-1064329812,B=1077705328,C=339664807,D=1869745420)))
+Uses Aaron0000's GemstonesRedux Alexanderite skin. You can find his mod here https://goo.gl/cShvfU, I did not make the skin.
 
-//Bullet Behaviour
-set GD_Weap_AssaultRifle.Barrel.AR_Barrel_Vladof_Shredifier WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=2.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=3.750000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=4.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=9.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-20000.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=100.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponReloadSpeed',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-0.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponAdditionalRicochets',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+set Common_GunMaterials.Materials.AssaultRifle.Mati_VladofLegendary Parent MaterialInstanceConstant'Common_GunMaterials.MasterMaterials.Vladof.MasterMati_VladofEpic'
+
+set Common_GunMaterials.Materials.AssaultRifle.Mati_VladofLegendary TextureParameterValues ((ParameterName="p_Pattern",ParameterValue=Texture2D'Aster_GunMaterials.Materials.FacetColor',ExpressionGUID=(A=534250533,B=1202550002,C=1578302861,D=-717876416)),(ParameterName="P_SimpleReflect",ParameterValue=Texture2D'Aster_GunMaterials.Materials.FacetColor',ExpressionGUID=(A=-858148940,B=1327945772,C=148462268,D=1899047224)),(ParameterName="p_Decal",ParameterValue=None,ExpressionGUID=(A=-923052711,B=1309861752,C=584229786,D=-1229888527)),(ParameterName="p_Masks",ParameterValue=Texture2D'Weap_AssaultRifles.Tex.Weap_AssaultRifle_Comp',ExpressionGUID=(A=-330624041,B=1167251458,C=-335191907,D=-166684394)),(ParameterName="p_NormalScopesEmissive",ParameterValue=Texture2D'Weap_AssaultRifles.Tex.Weap_AssaultRifle_Nrm',ExpressionGUID=(A=-1743872746,B=1126171774,C=119496871,D=-1952271718)),(ParameterName="p_Diffuse",ParameterValue=Texture2D'Common_GunMaterials.CompTextures.Weap_AssaultSubSniper_Comp',ExpressionGUID=(A=1757607260,B=1326539502,C=-317215581,D=-565807463)))
+
+set Common_GunMaterials.Materials.AssaultRifle.Mati_VladofLegendary ScalarParameterValues ((ParameterName="p_ReflectColorScale",ParameterValue=0.750000,ExpressionGUID=(A=1875785607,B=1186033550,C=-1822263113,D=-1465755701)),(ParameterName="p_ReplacePattern",ParameterValue=0.000000,ExpressionGUID=(A=-2084339847,B=1096440125,C=439008937,D=45433490)),(ParameterName="p_UseFullColorDecal",ParameterValue=0.000000,ExpressionGUID=(A=-1064329812,B=1077705328,C=339664807,D=1869745420)),(ParameterName="p_ReplaceDecal",ParameterValue=0.000000,ExpressionGUID=(A=85863466,B=1257609701,C=-728575820,D=1337098176)),
+
+set Common_GunMaterials.Materials.AssaultRifle.Mati_VladofLegendary VectorParameterValues ((ParameterName="p_AColorHilight",ParameterValue=(R=2.291030,G=2.291030,B=2.291030,A=1.000000),ExpressionGUID=(A=384292798,B=1221323751,C=-2145405772,D=1872194118)),(ParameterName="p_AColorMidtone",ParameterValue=(R=0.000000,G=0.328176,B=0.246132,A=1.000000),ExpressionGUID=(A=1102826245,B=1256298978,C=-1429881438,D=-507521102)),(ParameterName="p_AColorShadow",ParameterValue=(R=0.036794,G=0.039809,B=0.193363,A=1.000000),ExpressionGUID=(A=1481234158,B=1129012376,C=-688827739,D=-2119135160)),(ParameterName="p_BColorHilight",ParameterValue=(R=1.292843,G=1.292843,B=1.292843,A=1.000000),ExpressionGUID=(A=170714760,B=1132476783,C=-275668290,D=655702143)),(ParameterName="p_BColorMidtone",ParameterValue=(R=0.000000,G=0.328176,B=0.246132,A=1.000000),ExpressionGUID=(A=473594356,B=1338758895,C=824823946,D=864253813)),(ParameterName="p_BColorShadow",ParameterValue=(R=0.035614,G=0.038473,B=0.190463,A=1.000000),ExpressionGUID=(A=-429590341,B=1156435294,C=-1015192901,D=687313413)),(ParameterName="p_ReflectColor",ParameterValue=(R=1.064661,G=0.000000,B=0.361984,A=1.000000),ExpressionGUID=(A=295058103,B=1318551573,C=-2045449573,D=-547597976)),(ParameterName="p_ReflectionChannelScale",ParameterValue=(R=0.600000,G=0.600000,B=0.6000000,A=1.000000),ExpressionGUID=(A=1869386622,B=1303200947,C=-1616405849,D=714558284)),(ParameterName="p_PatternChannelScale",ParameterValue=(R=1.000000,G=1.000000,B=1.000000,A=0.000000),ExpressionGUID=(A=439432319,B=1091149893,C=-1991909502,D=1816944627)),(ParameterName="p_PatternColor",ParameterValue=(R=0.000000,G=0.352197,B=0.469596,A=1.000000),ExpressionGUID=(A=676539706,B=1125682796,C=1871983293,D=-2049503601)),(ParameterName="p_PatternScalePosition",ParameterValue=(R=8.000000,G=8.000000,B=0.385300,A=0.646000),ExpressionGUID=(A=-2005018406,B=1132497243,C=-39915121,D=208423616)))
+
+
+
