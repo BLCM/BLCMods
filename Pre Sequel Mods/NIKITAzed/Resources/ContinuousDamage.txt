@@ -1,0 +1,22 @@
+##################################### Gives the increasing continuous damage to the weapon ###############################
+
+set <Weapon Type> ContinuousDamagePoolDefinition ResourcePoolDefinition'D_Resourcepools.WeaponPools.ContinuousDamagePool_Increasing'
+
+example GD_Cork_Weap_Lasers.A_Weapons.WT_Maliwan_Laser
+
+
+
+set <Weapon Barrel> ExternalAttributeEffects 
+(
+	(AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.WeaponContinuousDamageResourcePool.ContinuousDamage_OnIdleRegenerationDelay',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.200000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),
+	(AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.WeaponContinuousDamageResourcePool.ContinuousDamage_OnIdleRegenerationRate',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-0.300000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),
+	(AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.WeaponContinuousDamageResourcePool.ContinuousDamage_MaxValue',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=999.750000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))
+)
+
+
+
+set <Weapon Barrel> WeaponAttributeEffects 
+(
+	(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponContinuousDamageScale',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.050000,BaseValueAttribute=None,InitalizationDefinition=None,BaseValueScaleConstant=1.000000))
+)
+

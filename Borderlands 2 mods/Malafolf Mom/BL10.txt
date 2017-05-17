@@ -1,0 +1,40 @@
+########## BL-10 Replacement for the Mongol #######
+###################################################
+
+## GUN INFO:
+##
+## MASSIVELY INCREASED DAMAGE
+## ROCKET REPLACED WITH SLOW, ARCING BULLET
+## JAKOB'S SNIPER CRIT STATS
+## DECREASED ROF
+## MINIMAL ACCURACY
+## PINPOINT ACCURACY WHILE ADS
+## VERY LARGE MAG SIZE
+##
+
+## FURTHER NOTES
+## This gun was inspired by the actual BL-10 gun that was on the Soviet Assault Gun, the ISU-152
+## The ISU-152 is in the game World of Tanks, and is known as the Trollcannon
+
+######## NAME ###
+
+set GD_Weap_Launchers.Name.Title_Vladof.Title_Legendary_Mongol PartName BL-10
+set GD_Weap_Launchers.Name.Title_Vladof.Title_Legendary_Mongol:AttributePresentationDefinition_8 NoConstraintText <font color="#e50026">Have you sacrificed enough dissidents?<font color="#FFFFFF">
+
+######## ATTRIBUTES ###
+set GD_Weap_Launchers.Barrel.L_Barrel_Vladof_Mongol BehaviorProviderDefinition None
+
+set GD_Weap_Launchers.A_Weapons_Legendary.RL_Vladof_5_Mongol:WeaponPartListCollectionDefinition_68 ElementalPartData (bEnabled=True,WeightedParts=((bDisabled=False,Part=WeaponPartDefinition'GD_Weap_Launchers.elemental.RL_Elemental_None',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0))
+set GD_Weap_Launchers.Name.Title_Vladof.Title_Legendary_Mongol AttributeSlotUpgrades ((SlotName="WeaponReloadSpeed",GradeIncrease=-22,bActivateSlot=True),(SlotName="WeaponFireRate",GradeIncrease=-88,bActivateSlot=True),(SlotName="WeaponDamage",GradeIncrease=196,bActivateSlot=True))
+set GD_Weap_Launchers.Barrel.L_Barrel_Vladof_Mongol ExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.GameplayAttributes.PlayerCriticalHitBonus',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.GameplayAttributes.PlayerCriticalHitBonus',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=2.000000)))
+set GD_Weap_Launchers.Barrel.L_Barrel_Vladof_Mongol WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=2.800000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.750000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-200.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=-0.020000)))
+set GD_Weap_Launchers.Barrel.L_Barrel_Vladof_Mongol ZoomWeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=-10.000000)))
+
+######## SORCEROUS GRIMOIRE ###
+
+set GD_Weap_Launchers.Barrel.L_Barrel_Vladof_Mongol CustomFiringModeDefinition FiringModeDefinition'GD_Weap_Pistol.FiringModes.Bullets_Pistol_Bandit_Tinderbox'
+set GD_Weap_Pistol.FiringModes.Bullets_Pistol_Bandit_Tinderbox OnAnyImpact Behavior_Explode'GD_Iris_Weapons.FiringModes.Bullet_Sniper_Cobra:Behavior_Explode_5'
+
+######## APPERANCE ###
+
+set GD_Weap_Launchers.Barrel.L_Barrel_Vladof_Mongol GestaltModeSkeletalMeshName L_Barrel_Torgue

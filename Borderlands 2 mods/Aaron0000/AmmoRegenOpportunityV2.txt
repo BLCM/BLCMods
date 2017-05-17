@@ -1,0 +1,16 @@
+########
+By Aaron0000
+Features;
+Changes the Lucrative Opportunity relic to regenerate ammo (excluding rocket launchers and grenades).
+
+########
+
+set GD_Artifacts.A_Item_Unique.Artifact_Opportunity AttributeSlotEffects ((SlotName="Effect1",bExternalSlot=True,bRunEffectsAsSkill=False,AttributeToModify=AttributeDefinition'D_Attributes.GameplayAttributes.PlayerCurrentWeaponAmmoRegenerationMultiplier',ConstraintAttribute=None,ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Artifacts.BalanceAttributes.Init_ModifierBase_Linear',BaseValueScaleConstant=0.010000),PerGradeUpgrade=(BaseValueConstant=0.020000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.0000000),bIncludeInFunStats=False,bIncludeAlliesAsTarget=False,bEnforceMinimumGrade=False,bEnforceMaximumGrade=False,MinimumGrade=0,MaximumGrade=12,TargetInstanceDataName=)))
+
+
+set GD_Artifacts.Body.Body_Opportunity:AttributePresentationDefinition_0 Description Increases [skill]ammo regeneration[-skill].
+
+
+
+set GD_Artifacts.A_Item_Unique.Artifact_Opportunity UIStatList ((bDisplayAsModifierOnly=True,AttributeStyle=ATTRSTYLE_ModifierText,SupplementalAttributeStyle=ATTRSTYLE_JustNumber,StatCombinationMethod=SCM_Multiply,Attribute=AttributeDefinition'D_Attributes.GameplayAttributes.PlayerCurrentWeaponAmmoRegenerationMultiplier',ConstraintAttribute=None,SupplementalAttributeExpression=(AttributeOperand1=None,ComparisonOperator=OPERATOR_EqualTo,Operand2Usage=OPERAND_PreferAttribute,AttributeOperand2=None,ConstantOperand2=0.000000),SupplementalAttributeToAppend=None))
+

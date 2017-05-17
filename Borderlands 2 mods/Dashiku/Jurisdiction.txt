@@ -1,0 +1,67 @@
+#Jurisdiction - replaces Maggie#
+#!!Breaks the Sandhawk and the Thunderball Fist!!
+#Meant to represent Nisha
+
+#Shots plant explosive bombs inside enemies. (The Unforgiven)(Not Grenade, gets Reaper)
+#Shots deal bonus explosive damage. The closer the enemy the more damage it deals. (Short Fused)(Not Grenade, gets Reaper)
+#Has 9 shots in the mag (Magnificent Six+Fistful of Bullets)
+#Has a chance to shoot twice (20%)(Hell's Comin' With Me!)
+#Increased accuracy and recoil reduction (Snap Shot)
+
+#Name/Card#
+set GD_Weap_Pistol.Name.Title_Jakobs.Title_Legendary_Maggie PartName Jurisdiction
+set GD_Weap_Pistol.Name.Title_Jakobs.Title_Legendary_Maggie:AttributePresentationDefinition_8 NoConstraintText <font color="#ff0235">Bringin' the law!<font color="#FFFFFF"><br>• Shots plant <font color="#fce919">explosive bombs<font color="#FFFFFF"> on<br>  impact.<br>• Shots deal bonus <font color="#fce919">explosive <font color="#FFFFFF">damage.<br>  The closer the enemy the more<br>  damage it deals.<br>• Has a small chance to fire an <font color="#fceaa4">extra<br>  shot<font color="#FFFFFF">.<font color="#FeFFFF">
+
+#Barrel#
+set GD_Weap_Pistol.Barrel.Pistol_Barrel_Jakobs_Maggie CustomFiringModeDefinition FiringModeDefinition'GD_Orchid_BossWeapons.FiringModes.Bullet_SMG_SandHawk'
+set GD_Weap_Pistol.Barrel.Pistol_Barrel_Jakobs_Maggie WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-1.800000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-1000.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=9.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponExtraShotChance',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.200000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+set GD_Weap_Pistol.Barrel.Pistol_Barrel_Jakobs_Maggie AttributeSlotUpgrades ((SlotName="WeaponSpread",GradeIncrease=10,bActivateSlot=True),(SlotName="AccuracyMax",GradeIncrease=10,bActivateSlot=True),(SlotName="AccuracyRegen",GradeIncrease=10,bActivateSlot=True),(SlotName="WeaponAccuracyImpulse",GradeIncrease=10,bActivateSlot=True),(SlotName="WeaponFireRate",GradeIncrease=-12,bActivateSlot=True))
+
+#Bullet 1 - Non-Elemental#
+set GD_Orchid_BossWeapons.FiringModes.Bullet_SMG_SandHawk OnAnyImpact (Behavior_SpawnProjectile'GD_Weap_Pistol.FiringModes.Bullet_Pistol_Maliwan_ThunderballFists:Behavior_SpawnProjectile_0')
+set GD_Orchid_BossWeapons.FiringModes.Bullet_SMG_SandHawk speed 27000
+set GD_Orchid_BossWeapons.FiringModes.Bullet_SMG_SandHawk bSuppressWeaponSpread True
+set GD_Orchid_BossWeapons.FiringModes.Bullet_SMG_SandHawk TimerEvents ((Time=0.000001,Response=(SplitNum=1,SplitAngle=0.000000,SplitAngleOffset=0.000000,SplitDistance=0.000000,SplitFire=FiringModeDefinition'GD_Orchid_BossWeapons.FiringModes.Bullet_SMG_SandHawk_Child0',NewSpeed=0.000000,bDetonate=False,bRespawnTracer=False,bUpdateBeamSourceLocation=False,Behaviors=)),(Time=0.000001,Response=(SplitNum=1,SplitAngle=0.000000,SplitAngleOffset=0.000000,SplitDistance=0.000000,SplitFire=FiringModeDefinition'GD_Orchid_BossWeapons.FiringModes.Bullet_SMG_SandHawk_Child1',NewSpeed=0.000000,bDetonate=False,bRespawnTracer=False,bUpdateBeamSourceLocation=False,Behaviors=)),(Time=0.000001,Response=(SplitNum=1,SplitAngle=0.000000,SplitAngleOffset=0.000000,SplitDistance=0.000000,SplitFire=FiringModeDefinition'GD_Orchid_BossWeapons.FiringModes.Bullet_SMG_SandHawk_Child2',NewSpeed=0.000000,bDetonate=False,bRespawnTracer=False,bUpdateBeamSourceLocation=False,Behaviors=)),(Time=0.000001,Response=(SplitNum=1,SplitAngle=0.000000,SplitAngleOffset=0.000000,SplitDistance=0.000000,SplitFire=FiringModeDefinition'GD_Orchid_BossWeapons.FiringModes.Bullet_SMG_SandHawk_Child3',NewSpeed=0.000000,bDetonate=False,bRespawnTracer=False,bUpdateBeamSourceLocation=False,Behaviors=)))
+
+#Explosive Child Bullets#
+set GD_Orchid_BossWeapons.FiringModes.Bullet_SMG_SandHawk_Child0 DamageTypeDefinition WillowDamageTypeDefinition'GD_Explosive.DamageType.DmgType_Explosive_Impact'
+set GD_Orchid_BossWeapons.FiringModes.Bullet_SMG_SandHawk_Child0 speed 27000
+set GD_Orchid_BossWeapons.FiringModes.Bullet_SMG_SandHawk_Child0 bSuppressWeaponSpread True
+set GD_Orchid_BossWeapons.FiringModes.Bullet_SMG_SandHawk_Child0 Lifetime 5.000000
+
+set GD_Orchid_BossWeapons.FiringModes.Bullet_SMG_SandHawk_Child1 DamageTypeDefinition WillowDamageTypeDefinition'GD_Explosive.DamageType.DmgType_Explosive_Impact'
+set GD_Orchid_BossWeapons.FiringModes.Bullet_SMG_SandHawk_Child1 speed 27000
+set GD_Orchid_BossWeapons.FiringModes.Bullet_SMG_SandHawk_Child1 bSuppressWeaponSpread True
+set GD_Orchid_BossWeapons.FiringModes.Bullet_SMG_SandHawk_Child1 Lifetime 2.500000
+
+set GD_Orchid_BossWeapons.FiringModes.Bullet_SMG_SandHawk_Child2 DamageTypeDefinition WillowDamageTypeDefinition'GD_Explosive.DamageType.DmgType_Explosive_Impact'
+set GD_Orchid_BossWeapons.FiringModes.Bullet_SMG_SandHawk_Child2 speed 27000
+set GD_Orchid_BossWeapons.FiringModes.Bullet_SMG_SandHawk_Child2 bSuppressWeaponSpread True
+set GD_Orchid_BossWeapons.FiringModes.Bullet_SMG_SandHawk_Child2 Lifetime 0.300000
+
+set GD_Orchid_BossWeapons.FiringModes.Bullet_SMG_SandHawk_Child3 DamageTypeDefinition WillowDamageTypeDefinition'GD_Explosive.DamageType.DmgType_Explosive_Impact'
+set GD_Orchid_BossWeapons.FiringModes.Bullet_SMG_SandHawk_Child3 speed 27000
+set GD_Orchid_BossWeapons.FiringModes.Bullet_SMG_SandHawk_Child3 bSuppressWeaponSpread True
+set GD_Orchid_BossWeapons.FiringModes.Bullet_SMG_SandHawk_Child3 Lifetime 0.100000
+
+#Delayed Explosive Splash (Thanks Dave)#
+set GD_Weap_Pistol.Projectiles.Projectile_ThunderballFistsCHild SpeedFormula (BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+set GD_Weap_Pistol.Projectiles.Projectile_ThunderballFistsCHild GravityScaling 0.000000
+set GD_Weap_Pistol.Projectiles.Projectile_ThunderballFistsCHild InFlightEffectsScale 0.200000
+set GD_Weap_Pistol.Projectiles.Projectile_ThunderballFistsCHild InFlightEffects ParticleSystem'FX_WEP_Assault.Particles.Part_Assault_MuzzleFlash_Explosive'
+set GD_Weap_Pistol.Projectiles.Projectile_ThunderballFistsCHild AmbientAkEvent Ake_Wep_Grenades.Grenade_Classes.Ak_Play_Wep_Grenade_Longbow_Teleport_Out
+set GD_Weap_Pistol.Projectiles.Projectile_ThunderballFistsCHild bIsWeaponFire True
+
+set GD_Weap_Pistol.Projectiles.Projectile_ThunderballFistsCHild:BehaviorProviderDefinition_0.Behavior_Explode_32 DamageFormula (BaseValueConstant=1000000.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=5.000000)
+set GD_Weap_Pistol.Projectiles.Projectile_ThunderballFistsCHild:BehaviorProviderDefinition_0.Behavior_Explode_32 DamageRadiusFormula (BaseValueConstant=70.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+set GD_Weap_Pistol.Projectiles.Projectile_ThunderballFistsCHild:BehaviorProviderDefinition_0.Behavior_Explode_32 StatusEffectDamage (BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+set GD_Weap_Pistol.Projectiles.Projectile_ThunderballFistsCHild:BehaviorProviderDefinition_0.Behavior_Explode_32 DamageSource Class'WillowGame.WillowDmgSource_Pistol'
+set GD_Weap_Pistol.Projectiles.Projectile_ThunderballFistsCHild:BehaviorProviderDefinition_0.Behavior_Explode_32 InstigatorSelfDamageScale 0.000000
+
+set GD_Weap_Pistol.FiringModes.Bullet_Pistol_Maliwan_ThunderballFists:Behavior_SpawnProjectile_0 bAttachToContext True
+
+#Rarity#
+set GD_Weap_Pistol.Barrel.Pistol_Barrel_Jakobs_Maggie rarity (BaseValueConstant=95.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+
+set WillowGame.GlobalsDefinition RarityLevelColors ((MinLevel=0,MaxLevel=0,Color=(B=175,G=193,R=205,A=0),DropLifeSpanType=DROP_ShortLived,RarityRating=RARITY_Unknown),(MinLevel=1,MaxLevel=1,Color=(B=255,G=255,R=255,A=255),DropLifeSpanType=DROP_ShortLived,RarityRating=RARITY_Common),(MinLevel=2,MaxLevel=2,Color=(B=11,G=210,R=61,A=255),DropLifeSpanType=DROP_LongLived,RarityRating=RARITY_Uncommon),(MinLevel=3,MaxLevel=3,Color=(B=255,G=142,R=60,A=255),DropLifeSpanType=DROP_LiveForever,RarityRating=RARITY_Rare),(MinLevel=4,MaxLevel=4,Color=(B=229,G=63,R=168,A=255),DropLifeSpanType=DROP_LiveForever,RarityRating=RARITY_VeryRare),(MinLevel=5,MaxLevel=5,Color=(B=0,G=180,R=255,A=255),DropLifeSpanType=DROP_LiveForever,RarityRating=RARITY_Legendary),(MinLevel=6,MaxLevel=6,Color=(B=168,G=0,R=202,A=255),DropLifeSpanType=DROP_LiveForever,RarityRating=RARITY_VeryRare),(MinLevel=7,MaxLevel=10,Color=(B=0,G=180,R=255,A=255),DropLifeSpanType=DROP_LiveForever,RarityRating=RARITY_Legendary),(MinLevel=12,MaxLevel=15,Color=(B=50,G=0,R=230,A=255),DropLifeSpanType=DROP_LiveForever,RarityRating=RARITY_Unknown),(MinLevel=41,MaxLevel=50,Color=(B=255,G=28,R=149,A=255),DropLifeSpanType=DROP_LiveForever,RarityRating=RARITY_Legendary),(MinLevel=51,MaxLevel=60,Color=(B=242,G=87,R=26,A=255),DropLifeSpanType=DROP_LiveForever,RarityRating=RARITY_VeryRare),(MinLevel=61,MaxLevel=70,Color=(B=37,G=35,R=178,A=255),DropLifeSpanType=DROP_LiveForever,RarityRating=RARITY_VeryRare),(MinLevel=71,MaxLevel=80,Color=(B=4,G=4,R=209,A=255),DropLifeSpanType=DROP_LiveForever,RarityRating=RARITY_VeryRare),(MinLevel=81,MaxLevel=90,Color=(B=57,G=112,R=40,A=255),DropLifeSpanType=DROP_LiveForever,RarityRating=RARITY_VeryRare),(MinLevel=91,MaxLevel=100,Color=(B=247,G=128,R=205,A=255),DropLifeSpanType=DROP_LiveForever,RarityRating=RARITY_VeryRare),(MinLevel=171,MaxLevel=175,Color=(B=71,G=71,R=207,A=255),DropLifeSpanType=DROP_ShortLived,RarityRating=RARITY_Unknown),(MinLevel=176,MaxLevel=180,Color=(B=167,G=199,R=255,A=0),DropLifeSpanType=DROP_ShortLived,RarityRating=RARITY_Unknown),(MinLevel=181,MaxLevel=499,Color=(B=13,G=255,R=255,A=0),DropLifeSpanType=DROP_ShortLived,RarityRating=RARITY_Unknown),(MinLevel=500,MaxLevel=500,Color=(B=255,G=255,R=0,A=0),DropLifeSpanType=DROP_LiveForever,RarityRating=RARITY_Unknown),(MinLevel=501,MaxLevel=501,Color=(B=184,G=154,R=255,A=0),DropLifeSpanType=DROP_LiveForever,RarityRating=RARITY_Seraph),(MinLevel=502,MaxLevel=502,Color=(B=255,G=255,R=255,A=0),DropLifeSpanType=DROP_LiveAsLongAsLevel,RarityRating=RARITY_Unknown),(MinLevel=503,MaxLevel=503,Color=(B=200,G=50,R=145,A=255),DropLifeSpanType=DROP_LiveForever,RarityRating=RARITY_Unknown),(MinLevel=504,MaxLevel=504,Color=(B=255,G=255,R=0,A=0),DropLifeSpanType=DROP_VeryShortLived,RarityRating=RARITY_Unknown))

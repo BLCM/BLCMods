@@ -1,0 +1,23 @@
+#####################################################
+Refactored Hoarder COM
+I decided to refactor the Hoarder mod so it's a little more useful in terms of money shot chains... 5 Shots or 6 doesn't really work too well with Inconceivable, and I decided that Filled to the Brim wasn't all that used/useful in my builds. Just Got Real is probably more useful than an 80% chance to not consume a large magazine.
+If anyone can make a +1/+2/+3 Green-Purple-Blue mod for Inconceivable using the formula's below, feel free to modify it. - Foreststrike
+
++Team Ammo Regen
+
++4-6 Lay Waste
++4-6 Just Got Real
++1/+3 Inconceivable
+
+#####################################################
+
+
+set GD_ClassMods.A_Item_Merc.ClassMod_Merc_Hoarder UIStatList ((bDisplayAsModifierOnly=True,AttributeStyle=ATTRSTYLE_ModifierText,SupplementalAttributeStyle=ATTRSTYLE_JustNumber,StatCombinationMethod=SCM_Multiply,Attribute=AttributeDefinition'D_Attributes.GameplayAttributes.PlayerCurrentWeaponAmmoRegenerationMultiplier',ConstraintAttribute=AttributeDefinition'GD_ClassMods.Misc.Att_TeamConstraint',SupplementalAttributeExpression=(AttributeOperand1=None,ComparisonOperator=OPERATOR_EqualTo,Operand2Usage=OPERAND_PreferAttribute,AttributeOperand2=None,ConstantOperand2=0.000000),SupplementalAttributeToAppend=None))
+
+set GD_ClassMods.A_Item_Merc.ClassMod_Merc_Hoarder AttributeSlotEffects ((SlotName="PrimaryStatBonus",bExternalSlot=True,bRunEffectsAsSkill=True,AttributeToModify=AttributeDefinition'D_Attributes.GameplayAttributes.PlayerCurrentWeaponAmmoRegenerationMultiplier',ConstraintAttribute=AttributeDefinition'GD_ClassMods.Misc.Att_TeamConstraint',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_ClassMods.Misc.Init_StatBonus_AmmoRegen',BaseValueScaleConstant=1.000000),PerGradeUpgrade=(BaseValueConstant=0.100000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bIncludeInFunStats=False,bIncludeAlliesAsTarget=True,bEnforceMinimumGrade=True,bEnforceMaximumGrade=False,MinimumGrade=0,MaximumGrade=0,TargetInstanceDataName=),(SlotName="Skill1",bExternalSlot=True,bRunEffectsAsSkill=True,AttributeToModify=InventoryAttributeDefinition'GD_Mercenary_Skills.SkillGradeModifiers.LayWaste',ConstraintAttribute=None,ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_ClassMods.Misc.Init_BaseSkillPointCalculation',BaseValueScaleConstant=1.000000),PerGradeUpgrade=(BaseValueConstant=0.340000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bIncludeInFunStats=True,bIncludeAlliesAsTarget=False,bEnforceMinimumGrade=True,bEnforceMaximumGrade=False,MinimumGrade=0,MaximumGrade=0,TargetInstanceDataName=),(SlotName="Skill2",bExternalSlot=True,bRunEffectsAsSkill=True,AttributeToModify=InventoryAttributeDefinition'GD_Mercenary_Skills.SkillGradeModifiers.Inconceivable',ConstraintAttribute=None,ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_ClassMods.Misc.Init_BaseSkillPointCalculation',BaseValueScaleConstant=0.000000),PerGradeUpgrade=(BaseValueConstant=1.00000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0.600000),bIncludeInFunStats=True,bIncludeAlliesAsTarget=False,bEnforceMinimumGrade=False,bEnforceMaximumGrade=False,MinimumGrade=0,MaximumGrade=0,TargetInstanceDataName=),(SlotName="Skill3",bExternalSlot=True,bRunEffectsAsSkill=True,AttributeToModify=InventoryAttributeDefinition'GD_Mercenary_Skills.SkillGradeModifiers.JustGotReal',ConstraintAttribute=None,ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_ClassMods.Misc.Init_BaseSkillPointCalculation',BaseValueScaleConstant=1.000000),PerGradeUpgrade=(BaseValueConstant=0.340000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bIncludeInFunStats=True,bIncludeAlliesAsTarget=False,bEnforceMinimumGrade=True,bEnforceMaximumGrade=False,MinimumGrade=0,MaximumGrade=0,TargetInstanceDataName=))
+
+set GD_ClassMods.Prefix_Merc.Prefix_Hoarder_01_UnhingedHoarder PartName Unhinged Hoarder
+
+set GD_ClassMods.Prefix_Merc.Prefix_Hoarder_02_LuckyHoarder PartName Lucky Hoarder
+
+set GD_ClassMods.Prefix_Merc.Prefix_Hoarder_03_LoadedHoarder PartName Savage Hoarder
