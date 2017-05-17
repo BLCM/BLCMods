@@ -9,6 +9,9 @@ Consumes three ammo per shot.
 Increased status effect chance.
 Has splash damage (85%).
 Spread is in the shape of a smiley face.
+
+NOTE:
+If using S&S Forever, there is a compatibility fix at the bottom.
 ########
 
 
@@ -55,3 +58,10 @@ set Common_GunMaterials.Materials.Shotgun.Mati_BanditUniqueSG_Teeth VectorParame
 
 
 
+S&S COMPATIBILITY FIX
+---------------------
+Replace the # in "#et" with an s to enable the fix.
+
+#et GD_Weap_Shotgun.Barrel.SG_Barrel_Torgue_Teeth WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.410000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=10.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponStatusEffectChanceModifier',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.660000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0.180000)))
+
+#et GD_Weap_Shotgun.Name.Title.Title__Unique_Teeth ExternalAttributeEffects ((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Combat_Shotgun.Ammo_Combat_Shotgun_RegenerationRate',ConstraintAttribute=None,ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-2.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.AmmoResource_Combat_Shotgun.Ammo_Combat_Shotgun_RegenerationRate',ConstraintAttribute=None,ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Artifacts.BalanceAttributes.Init_ModifierBase_Linear',BaseValueScaleConstant=-0.010000),PerGradeUpgrade=(BaseValueConstant=0.005000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=-1.000000),bIncludeInFunStats=False,bIncludeAlliesAsTarget=False,bEnforceMinimumGrade=False,bEnforceMaximumGrade=False,MinimumGrade=0,MaximumGrade=12,TargetInstanceDataName=)))
