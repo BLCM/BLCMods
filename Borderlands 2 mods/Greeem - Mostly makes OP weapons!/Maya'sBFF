@@ -1,0 +1,40 @@
+##Replaces the Lascaux.
+##FEATURES:
+##  E-Tech Barrel
+##  E-Tech Projectiles
+##  Projectile Multiplier
+##  Ramped up damage and Firerate
+##  100 Accuracy
+##  Pearlescent Rarity
+##  Uses the Bandit Quartz skin from Tiny Tina's Assault on Dragon Keep. 
+##  (Looks different if you use Aaron0000's GemstonesRedux mod.)
+##  Different name and red text.
+
+##CODE: 
+
+##Clip, Damage, Firerate, Accuracy
+
+set GD_Weap_SMG.Barrel.SMG_Barrel_Bandit_Lascaux WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=9.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=2.500000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=4.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-4.666666,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-100.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=10.000000)))
+
+##Barrel and Firing Mode
+
+set GD_Weap_SMG.Barrel.SMG_Barrel_Bandit_Lascaux GestaltModeSkeletalMeshName SMG_Barrel_Alien
+
+set GD_Weap_SMG.Barrel.SMG_Barrel_Bandit_Lascaux CustomFiringModeDefinition FiringModeDefinition 'GD_Weap_SMG.FiringModes.Bullet_Plasma_Default'
+
+##Name and Red Text
+
+set GD_Weap_SMG.Name.Title.Title__Unique_Lascaux PartName Maya's BFF
+
+set GD_Weap_SMG.Name.Title.Title__Unique_Lascaux:AttributePresentationDefinition_8 NoConstraintText <font color="#ff0235">Like seriously use Legendary Cat with this shit.....<font color="#FFFFFF">
+
+##Skin
+
+set GD_Weap_SMG.ManufacturerMaterials.Mat_Dahl_3_Lascaux Material MaterialInstanceConstant 'Aster_GunMaterials.Materials.SMG.Mati_Bandit_Quartz_SMG'
+
+##Rarity
+
+set GD_Weap_SMG.Barrel.SMG_Barrel_Bandit_Lascaux rarity (basevalueattribute=none)
+
+set GD_Weap_SMG.Barrel.SMG_Barrel_Bandit_Lascaux rarity (BaseValueConstant=497)
+
