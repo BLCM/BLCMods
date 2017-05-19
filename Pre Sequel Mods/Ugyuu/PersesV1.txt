@@ -1,0 +1,33 @@
+A patch made by:                            |
+  _    _  _____  _   _  _    _  _    _      |
+ | |  | || ____|| | | || |  | || |  | |     |
+ | |  | || | __ | \_/ || |  | || |  | |     |
+ | |  | || ||_ | \   / | |  | || |  | |     |
+ | |__| || |_| |  | |  | |__| || |__| |  _  |
+ |______||_____|  |_|  |______||______| |_| |
+                                            |
+        With help of the community.         |
+____________________________________________|
+
+
+Turn the Moonscaper into the Perses, a good old Carnage shotgun from Borderlands 1, with a bit more boom.
+
+Features:
+
+     - Shoots 9 Rockets (Holy Crap!), rockets similar to a carnage.
+     - Low accuracy.
+     - Lowered shot cost to 1, was 2 on Moonscaper.
+     - Higher fire rate.
+     - Slow reload speed.
+     - Lowered damage.
+     - Custom rarity? (Pearl sadly doesn't work)
+
+
+set GD_Cypressure_Weapons.A_Weapons_Unique.SG_Barrel_Jakobs_Landscaper2 CustomFiringModeDefinition FiringModeDefinition'GD_Weap_AssaultRifle.FiringModes.FM_Rocket_Torgue'
+
+set GD_Cypressure_Weapons.A_Weapons_Unique.SG_Barrel_Jakobs_Landscaper2 AttributeSlotUpgrades ((SlotName="WeaponFireRate",GradeIncrease=-3,bActivateSlot=True)),((SlotName="WeaponDamage",GradeIncrease=8,bActivateSlot=True)),((SlotName="WeaponAccuracyImpulse",GradeIncrease=5,bActivateSlot=True)))
+
+set GD_Cypressure_Weapons.A_Weapons_Unique.SG_Barrel_Jakobs_Landscaper2 WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.25000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0.450000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponReloadSpeed',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=3.900000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=4.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=1.00000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=3.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectileSpeedMultiplier',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.250000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0.850000)),(AttributeToModify=AttributeDefinition'D_Attributes.WeaponBullet.WeaponBulletSpeed',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=-1.500000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponKnockback',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0.500000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=2.000000)))
+
+set GD_Cypressure_Weapons.Name.Title.Title__Unique_Landscaper2 PartName Perses
+set GD_Cypressure_Weapons.Name.Title.Title__Unique_Landscaper2:AttributePresentationDefinition_8 NoConstraintText <font color="#ff0235">Poor mortals we who crave to have it so - our grief to be deathless when we are dead.<font color="#ffffff"><br>Holy crap! It shoots rockets!<font color="#ffffff">
