@@ -1,0 +1,21 @@
+set GD_Weap_Shotgun.Name.Title.Title__Unique_Shotgun1340 PartName T-2000 [CONCEPT] Prototype Laser Shotgun
+
+set GD_Weap_Shotgun.Barrel.SG_Barrel_Tediore_Shotgun1340 CustomFiringModeDefinition FiringModeDefinition'GD_Weap_SniperRifles.FiringModes.Bullet_RailGun'
+
+set GD_Weap_Shotgun.Barrel.SG_Barrel_Tediore_Shotgun1340 WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Hyperion',InitializationDefinition=None,BaseValueScaleConstant=6.100000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponPerShotAccuracyImpulse',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=100.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=100.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000002,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectileSpeedMultiplier',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000002,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=2.000002)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.100000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0.000000))))))))
+
+set GD_Weap_Shotgun.Barrel.SG_Barrel_Tediore_Shotgun1340 ExternalAttributeEffects ((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Combat_Shotgun.Ammo_Combat_Shotgun_RegenerationRate',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.203703,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+set GD_Weap_Shotgun.ManufacturerMaterials.Mat_Hyperion_3_1340 Material MaterialInstanceConstant'Sage_GunMaterials.Materials.Pistol.Mati_JakobsUniquePistol_Rex'
+
+set GD_Weap_Shotgun.Name.Title.Title__Unique_Shotgun1340:AttributePresentationDefinition_8 NoConstraintText <font color="#D80C0C"> You Cannot Simply Steal Tech From Hyperion And Get Away With it. <font color="#FFE000"><br>. This Is An Expiramental Weapon Manufactured By Hyperion, And Is The First Laser Shotgun To Work On Pandora,Caused By Pandora's Gravity And Atmosphere,Elpis's Typical Lasers Dont Work on Pandora,This Is A Revolutionary New Laser,This Laser Will Ricochet Multiple times, And Can Deal Massive/Crowd Damage In Small Spaces.<font color="#FFFFFF"><br>. This Laser Is Also Useful In Parties.
+
+set GD_Weap_Shotgun.Barrel.SG_Barrel_Tediore_Shotgun1340 Rarity (BaseValueConstant=6.000000)
+
+set GD_Weap_Shotgun.Barrel.SG_Barrel_Tediore_Shotgun1340 AttributeSlotUpgrades ((SlotName="AccuracyMax",GradeIncrease=400,bActivateSlot=True),(SlotName="AccuracyMin",GradeIncrease=-10,bActivateSlot=True)
+
+set GD_Weap_SniperRifles.FiringModes.Bullet_RailGun NumRicochets 20
+
+set GD_Weap_SniperRifles.FiringModes.Bullet_RailGun RicochetResponse (SplitNum=0,SplitAngle=3.000000,SplitAngleOffset=2.000000,SplitDistance=100.000000,SplitFire=None,NewSpeed=0.000000,bDetonate=False,bRespawnTracer=True,bUpdateBeamSourceLocation=False,Behaviors=)
+
+set GD_Weap_SniperRifles.FiringModes.Bullet_RailGun bPenetratePawn True
