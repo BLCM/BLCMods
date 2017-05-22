@@ -1,0 +1,18 @@
+####### John's Boom Puppy Mod ###### (Makes the Boom Puppy totally viable and usefull at OP8)
+# This mod is different than the Boom Puppy mod in ShadowEvil's UCP You must replace the existing Boom Puppy lines in the UCP with the lines below.
+# Adds Grenade Damage to projos
+# Slight Base Damage Boost
+# Slight Mag size increse
+# FR increase 
+# Removes self damage
+
+set GD_Iris_Weapons.Projectiles.Projectile_Grenade_BoomPuppy:BehaviorProviderDefinition_0.Behavior_Explode_19 DamageSource Class'WillowGame.WillowDmgSource_Grenade'
+
+set GD_Iris_Weapons.Projectiles.Projectile_Grenade_BoomPuppy:BehaviorProviderDefinition_0.Behavior_Explode_18 DamageSource Class'WillowGame.WillowDmgSource_Grenade'
+
+set GD_Iris_Weapons.Projectiles.Projectile_Grenade_BoomPuppy:BehaviorProviderDefinition_0.Behavior_Explode_18 InstigatorSelfDamageScale 0.000000
+
+set GD_Iris_Weapons.Projectiles.Projectile_Grenade_BoomPuppy:BehaviorProviderDefinition_0.Behavior_Explode_19 InstigatorSelfDamageScale 0.000000
+
+set GD_Iris_Weapons.AssaultRifles.AR_Barrel_Torgue_BoomPuppy WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=8.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.700000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
