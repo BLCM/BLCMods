@@ -1,0 +1,48 @@
+Deus Ex Arma: Maliwan's ultimate SMG. Based on Dashiku's ruin.
+
+set GD_Weap_SMG.Barrel.SMG_Barrel_Chulainn rarity (basevalueattribute=none)
+
+set GD_Weap_SMG.Barrel.SMG_Barrel_Chulainn rarity (BaseValueConstant=497)
+
+set GD_Weap_SMG.Barrel.SMG_Barrel_Chulainn GestaltModeSkeletalMeshName SMG_Barrel_Maliwan
+
+set GD_Weap_SMG.Name.Title.Title__Unique_Chulainn PartName Deus Ex Arma
+set GD_Weap_SMG.Name.Title.Title__Unique_Chulainn:AttributePresentationDefinition_8 NoConstraintText Mother Nature's been showing her muscle
+
+set GD_Weap_SMG.Barrel.SMG_Barrel_Chulainn ExternalAttributeEffects ()
+
+set GD_Weap_SMG.FiringModes.Bullet_SMG_Chulainn ExplosionOverrideDefinition None
+set GD_Weap_SMG.FiringModes.Bullet_SMG_Chulainn ExplosionOverideInstanceDataName None
+set GD_Weap_SMG.FiringModes.Bullet_SMG_Chulainn OnAnyImpact (Behavior_Explode'GD_Aster_Weapons.FiringModes.Bullet_Pistol_Maliwan_GrogNozzle:Behavior_Explode_5',Behavior_Explode'GD_Weap_SMG.FiringModes.Bullet_SMG_HellFire:Behavior_Explode_5',Behavior_Explode'GD_Sage_Weapons.FiringModes.Bullet_Shotgun_Twister:Behavior_Explode_5',Behavior_Explode'GD_Sage_RaidWeapons.FiringModes.Bullet_Pistol_Maliwan_Infection:Behavior_Explode_5')
+
+#
+set GD_Aster_Weapons.FiringModes.Bullet_Pistol_Maliwan_GrogNozzle:Behavior_Explode_5 DamageSource Class'WillowGame.WillowDmgSource_SubMachineGun'
+set GD_Aster_Weapons.FiringModes.Bullet_Pistol_Maliwan_GrogNozzle:Behavior_Explode_5 Definition ExplosionDefinition'GD_Explosions.Slag.Explosion_SlagMaster'
+
+#Fire Explosion#
+set GD_Weap_SMG.FiringModes.Bullet_SMG_HellFire:Behavior_Explode_5 DamageSource Class'WillowGame.WillowDmgSource_SubMachineGun'
+set GD_Weap_SMG.FiringModes.Bullet_SMG_HellFire:Behavior_Explode_5 DamageFormula (BaseValueScaleConstant=0.800000)
+set GD_Weap_SMG.FiringModes.Bullet_SMG_HellFire:Behavior_Explode_5 DamageRadiusFormula (BaseValueConstant=100.000000)
+set GD_Weap_SMG.FiringModes.Bullet_SMG_HellFire:Behavior_Explode_5 Definition ExplosionDefinition'GD_Explosions.Incendiary.Explosion_IncendiaryMaster'
+set GD_Weap_SMG.FiringModes.Bullet_SMG_HellFire:Behavior_Explode_5 StatusEffectChance (BaseValueScaleConstant=2.000000)
+set GD_Weap_SMG.FiringModes.Bullet_SMG_HellFire:Behavior_Explode_5 InstigatorSelfDamageScale 0.000000
+
+#Corrosive Explosion# 
+set GD_Sage_RaidWeapons.FiringModes.Bullet_Pistol_Maliwan_Infection:Behavior_Explode_5 DamageSource Class'WillowGame.WillowDmgSource_SubMachineGun'
+set GD_Sage_RaidWeapons.FiringModes.Bullet_Pistol_Maliwan_Infection:Behavior_Explode_5 DamageFormula (BaseValueScaleConstant=0.800000)
+set GD_Sage_RaidWeapons.FiringModes.Bullet_Pistol_Maliwan_Infection:Behavior_Explode_5 DamageRadiusFormula (BaseValueConstant=100.000000)
+set GD_Sage_RaidWeapons.FiringModes.Bullet_Pistol_Maliwan_Infection:Behavior_Explode_5 Definition ExplosionDefinition'GD_Explosions.Corrosive.Explosion_CorrosiveMaster'
+set GD_Sage_RaidWeapons.FiringModes.Bullet_Pistol_Maliwan_Infection:Behavior_Explode_5 StatusEffectChance (BaseValueScaleConstant=2.000000)
+set GD_Sage_RaidWeapons.FiringModes.Bullet_Pistol_Maliwan_Infection:Behavior_Explode_5 InstigatorSelfDamageScale 0.000000
+
+#Shock Explosion#
+set GD_Sage_Weapons.FiringModes.Bullet_Shotgun_Twister:Behavior_Explode_5 DamageSource Class'WillowGame.WillowDmgSource_SubMachineGun'
+set GD_Sage_Weapons.FiringModes.Bullet_Shotgun_Twister:Behavior_Explode_5 DamageFormula (BaseValueScaleConstant=0.800000)
+set GD_Sage_Weapons.FiringModes.Bullet_Shotgun_Twister:Behavior_Explode_5 DamageRadiusFormula (BaseValueConstant=100.000000)
+set GD_Sage_Weapons.FiringModes.Bullet_Shotgun_Twister:Behavior_Explode_5 StatusEffectDamage (BaseValueConstant=2.000000)
+set GD_Sage_Weapons.FiringModes.Bullet_Shotgun_Twister:Behavior_Explode_5 StatusEffectChance (BaseValueScaleConstant=2.000000)
+set GD_Sage_Weapons.FiringModes.Bullet_Shotgun_Twister:Behavior_Explode_5 InstigatorSelfDamageScale 0.000000
+
+set Common_GunMaterials.Materials.SMG.Mati_MaliwanSMGUnique_Chulain VectorParameterValues ((ParameterName="p_AColorHilight",ParameterValue=(R=0.750000,G=0.000000,B=0.000000,A=1.000000),ExpressionGUID=(A=170014760,B=1132076783,C=-275608290,D=650702143)),(ParameterName="p_AColorMidtone",ParameterValue=(R=1.000000,G=0.000000,B=0.000000,A=1.000000),ExpressionGUID=(A=473504356,B=1338058895,C=824823046,D=864253013)),(ParameterName="p_AColorShadow",ParameterValue=(R=0.500000,G=0.000000,B=0.000000,A=1.000000),ExpressionGUID=(A=-429590041,B=1156405294,C=-1015192900,D=687313410)),(ParameterName="p_BColorHilight",ParameterValue=(R=0.009600,G=0.009600,B=0.009600,A=1.000000),ExpressionGUID=(A=170714760,B=1132476783,C=-275668290,D=655702143)),(ParameterName="p_BColorMidtone",ParameterValue=(R=0.009600,G=0.009600,B=0.009600,A=1.000000),ExpressionGUID=(A=473594356,B=1338758895,C=824823946,D=864253813)),(ParameterName="p_BColorShadow",ParameterValue=(R=0.009600,G=0.009600,B=0.009600,A=1.000000),ExpressionGUID=(A=-429590341,B=1156435294,C=-1015192901,D=687313413)),(ParameterName="p_CColorHilight",ParameterValue=(R=6.000000,G=6.000000,B=6.000000,A=1.000000),ExpressionGUID=(A=170714760,B=1132476783,C=-275668290,D=655702143)),(ParameterName="p_CColorMidtone",ParameterValue=(R=4.000000,G=4.000000,B=4.000000,A=1.000000),ExpressionGUID=(A=473594356,B=1338758895,C=824823946,D=864253813)),(ParameterName="p_CColorShadow",ParameterValue=(R=2.000000,G=2.000000,B=2.000000,A=1.000000),ExpressionGUID=(A=-429590341,B=1156435294,C=-1015192901,D=687313413)),(ParameterName="p_DColor",ParameterValue=(R=0.009600,G=0.009600,B=0.009600,A=1.000000),ExpressionGUID=(A=696455109,B=1155878830,C=-1741888361,D=802120528)))
+
+set GD_Weap_SMG.Barrel.SMG_Barrel_Chulainn WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=3.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponReloadSpeed',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.150000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000001,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))

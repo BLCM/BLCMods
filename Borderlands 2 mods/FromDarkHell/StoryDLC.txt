@@ -1,0 +1,117 @@
+						## Change Log:
+## • Increased Stinkpot Damage
+## • Elementally Unlock Little Evie
+## • Buff Little Evie
+## • Made the 12Pounder have more ammo/damage but slower reload
+## • Made the Orphan Maker heal for ~0.078125%(5/64th) of the damage dealt
+## • Made the Otto Idol regen ammo
+## • Jolly Rodger fires faster/has more damage
+## • Greed can be any element
+## • Increased Greed Damage
+## • Hyperious quest gives a Norfleet
+## • Gee quest gives an Ahab
+## • Buff Pocket Rocket {1.5% Higher Weapon Damage - 1.5% Higher Fire Rate - 5 Projectiles per shot}
+## • Buff Cobra {4.5% Higher Damage - 2% higher fire rate}
+## • Buff Boom Puppy {4.5% Higher Damage - 2% higher fire rate}
+## • Give Hornet/Pyrophobia for Pete quest
+## • Increase Damned Cowboy's fire rate/damage
+## • Increase Elephant Gun's fire rate/damage
+## • Increase Hydra's fire rate/damage
+## • Increase Rex's fire rate
+## • Elementally Unlock Yellow Jacket
+## • Increase Yellow Jacket Damage
+## • Reward Interfacer for completing Vorac Quest
+## • Elementally Unlock Grog Nozzle
+## • Elementally Unlock Crit
+## • Reward Ogre on Dragon's Completion
+## •
+
+## Scarlett DLC
+
+## Stinkpot - http://borderlands.wikia.com/wiki/Stinkpot - BL2(hwAAAAAsAQGCZoEDBwEFmGIoxHCB8ABDIoYHDBUY/v9jIPw=)
+set GD_Orchid_BossWeapons.AssaultRifle.AR_Barrel_Torgue_Stinkpot WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=15.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+## 12 Pounder - http://borderlands.wikia.com/wiki/12_Pounder - BL2(hwAAAADKrgFBB4IDCQEFLKAQQ3GCsACFGwoIFBoo/v+nIPw=)
+set GD_Orchid_BossWeapons.Name.Title.Title__Unique_12Pounder PartName Cannon
+set GD_Orchid_BossWeapons.Launcher.L_Barrel_Torgue_12Pounder WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=3.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponReloadSpeed',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=7.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+## Orphan Maker - http://borderlands.wikia.com/wiki/Orphan_Maker - BL2(hwAAAABh3AEAiIIDBwEFrEBRg8KCsACKG5T//xJQ/v+3IPw=)
+set GD_Orchid_BossWeapons.Name.Title.Title__Unique_OrphanMaker:AttributePresentationDefinition_2 NoConstraintText Makes Orphans Often <br><font color="#FFFFFF">&#8226; Shots add <font color="#FF0000">health
+set GD_Orchid_BossWeapons.Shotgun.SG_Barrel_Jakobs_OrphanMaker ExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.DamageEnhancementModifiers.PlayerConvertDamageToHealingPercent',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.078125,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))
+
+## Otto Idol - http://borderlands.wikia.com/wiki/Captain_Blade's_Otto_Idol - BL2(BwAAAAA1pgEBAQMIMBFQAACABsD//////////wBhBMA=)
+set GD_Orchid_Artifacts.A_Item_Unique.Artifact_Blade AttributeSlotEffects ((SlotName="Effect1",bExternalSlot=True,bRunEffectsAsSkill=False,AttributeToModify=AttributeDefinition'D_Attributes.GameplayAttributes.PlayerCurrentWeaponAmmoRegenerationMultiplier',ConstraintAttribute=None,ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Artifacts.BalanceAttributes.Init_ModifierBase_Linear',BaseValueScaleConstant=0.030000),PerGradeUpgrade=(BaseValueConstant=0.030000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bIncludeInFunStats=False,bIncludeAlliesAsTarget=False,bEnforceMinimumGrade=False,bEnforceMaximumGrade=False,MinimumGrade=0,MaximumGrade=12,TargetInstanceDataName=)))
+
+set GD_Orchid_Artifacts.A_Item_Unique.Artifact_Blade UIStatList ((bDisplayAsModifierOnly=True,AttributeStyle=ATTRSTYLE_ModifierText,SupplementalAttributeStyle=ATTRSTYLE_JustNumber,StatCombinationMethod=SCM_Multiply,Attribute=AttributeDefinition'D_Attributes.GameplayAttributes.PlayerCurrentWeaponAmmoRegenerationMultiplier',ConstraintAttribute=None,SupplementalAttributeExpression=(AttributeOperand1=None,ComparisonOperator=OPERATOR_EqualTo,Operand2Usage=OPERAND_PreferAttribute,AttributeOperand2=None,ConstantOperand2=0.000000),SupplementalAttributeToAppend=None))
+
+set GD_Orchid_Artifacts.Body.Body_Blade:AttributePresentationDefinition_1 Description Increases [skill]ammo regeneration[-skill].
+
+## Jolly Roger - http://borderlands.wikia.com/wiki/Jolly_Roger - BL2(hwAAAADMvwEByIEDAwEFnEBJgxKCsACKG5QLKBJQ/v+LIPw=) - Makes it more Dog like
+set GD_Orchid_BossWeapons.Shotgun.SG_Barrel_Bandit_JollyRoger WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=15.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-0.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+## Greed - http://borderlands.wikia.com/wiki/Greed - BL2(hwAAAADfXgGHR4EDBwEFQMNohVGB8P////8JGBow/v9bIPw=)
+set GD_Orchid_BossWeapons.Pistol.Pistol_Jakobs_ScarletsGreed:WeaponPartListCollectionDefinition_277 ElementalPartData (bEnabled=True,WeightedParts=((Part=WeaponPartDefinition'GD_Weap_Pistol.elemental.Pistol_Elemental_Slag',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=2),(Part=WeaponPartDefinition'GD_Weap_Pistol.elemental.Pistol_Elemental_Corrosive',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=2),(Part=WeaponPartDefinition'GD_Weap_Pistol.elemental.Pistol_Elemental_Fire',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=2),(Part=WeaponPartDefinition'GD_Weap_Pistol.elemental.Pistol_Elemental_Shock',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=2),(Part=WeaponPartDefinition'GD_Weap_Pistol.elemental.Pistol_Elemental_None',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=2)))
+set GD_Orchid_BossWeapons.Pistol.Pistol_Barrel_ScarletsGreed WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=15.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+## Hyperius the Invincible *Quest* - http://borderlands.wikia.com/wiki/Hyperius_the_Invincible_(mission)
+set GD_Orchid_Raid.M_Orchid_Raid1 Reward (ExperienceRewardPercentage=(BaseValueConstant=0.100000,BaseValueAttribute=AttributeDefinition'GD_MissionRewardBalance.XP.XPReward_02_Large',InitializationDefinition=None,BaseValueScaleConstant=1.000000),CurrencyRewardType=CURRENCY_Credits,CreditRewardMultiplier=(BaseValueConstant=1.000000,BaseValueAttribute=AttributeDefinition'GD_MissionRewardBalance.Cash.CashRebward_04_Large',InitializationDefinition=None,BaseValueScaleConstant=1.000000),OtherCurrencyReward=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),RewardItems=(WeaponBalanceDefinition'GD_Weap_Launchers.A_Weapons_Unique.RL_Maliwan_Alien_Norfleet'),RewardItemPools=)
+
+## Master Gee the Invincible *Quest* - http://borderlands.wikia.com/wiki/Master_Gee_the_Invincible_(mission) 
+set GD_Orchid_Raid.M_Orchid_Raid3 Reward (ExperienceRewardPercentage=(BaseValueConstant=0.100000,BaseValueAttribute=AttributeDefinition'GD_MissionRewardBalance.XP.XPReward_02_Large',InitializationDefinition=None,BaseValueScaleConstant=1.000000),CurrencyRewardType=CURRENCY_Credits,CreditRewardMultiplier=(BaseValueConstant=1.000000,BaseValueAttribute=AttributeDefinition'GD_MissionRewardBalance.Cash.CashReward_04_Large',InitializationDefinition=None,BaseValueScaleConstant=1.000000),OtherCurrencyReward=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),RewardItems=(WeaponBalanceDefinition'GD_Orchid_RaidWeapons.RPG.Ahab.Orchid_Seraph_Ahab_Balance'),RewardItemPools=)
+
+## Little Evie
+set GD_Orchid_BossWeapons.Pistol.Pistol_Maliwan_3_LittleEvie:WeaponPartListCollectionDefinition_279 ElementalPartData (bEnabled=True,WeightedParts=((Part=WeaponPartDefinition'GD_Weap_Pistol.elemental.Pistol_Elemental_Slag',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=2),(Part=WeaponPartDefinition'GD_Weap_Pistol.elemental.Pistol_Elemental_Corrosive',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=2),(Part=WeaponPartDefinition'GD_Weap_Pistol.elemental.Pistol_Elemental_Fire',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=2),(Part=WeaponPartDefinition'GD_Weap_Pistol.elemental.Pistol_Elemental_Shock',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=2)))
+set GD_Orchid_BossWeapons.Pistol.Pistol_Barrel_Vladof_Evie WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=4.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-0.200000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+## Torgue DLC
+
+## Pocket Rocket
+set GD_Iris_Weapons.Pistols.Pistol_Barrel_Torgue_PocketRocket WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-1.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-1.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=5.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+## Cobra
+set GD_Iris_Weapons.SniperRifles.SR_Barrel_Dahl_Cobra WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=4.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-0.200000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+## Boom Puppy
+set GD_Iris_Weapons.AssaultRifles.AR_Barrel_Torgue_BoomPuppy WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=4.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-0.200000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+## Pete the Invincible
+set GD_IrisRaidBoss.M_Iris_RaidPete Reward (ExperienceRewardPercentage=(BaseValueConstant=0.100000,BaseValueAttribute=AttributeDefinition'GD_MissionRewardBalance.XP.XPReward_02_Small',InitializationDefinition=None,BaseValueScaleConstant=1.000000),CurrencyRewardType=CURRENCY_Credits,CreditRewardMultiplier=(BaseValueConstant=1.000000,BaseValueAttribute=AttributeDefinition'GD_MissionRewardBalance.Cash.CashReward_04_Large',InitializationDefinition=None,BaseValueScaleConstant=1.000000),OtherCurrencyReward=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),RewardItems=(WeaponBalanceDefinition'GD_Weap_Launchers.A_Weapons_Legendary.RL_Maliwan_5_Pyrophobia'),RewardItemPools=)
+
+## Hammerlock DLC
+
+## Damned Cowboy
+set GD_Sage_Weapons.AssaultRifle.AR_Barrel_Bandit_DamnedCowboy WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=40.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-40.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+## Elephant Gun
+set GD_Sage_Weapons.SniperRifles.SR_Barrel_Hyperion_ElephantGun WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=4.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-2.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+## Hydra
+set GD_Sage_Weapons.Shotgun.SG_Barrel_Bandit_Hydra  WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=10.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=4.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+## Rex
+set GD_Sage_Weapons.Pistols.Pistol_Barrel_Jakobs_Rex WeaponAttributeEffects ((AtributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-15.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=20.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+## Yellow Jacket
+set GD_Sage_Weapons.SMG.SMG_Hyperion_3_YellowJacket:WeaponPartListCollectionDefinition_304 ElementalPartData (bEnabled=True,WeightedParts=((Part=WeaponPartDefinition'GD_Weap_SMG.elemental.SMG_Elemental_Slag',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=2),(Part=WeaponPartDefinition'GD_Weap_SMG.elemental.SMG_Elemental_Corrosive',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=2),(Part=WeaponPartDefinition'GD_Weap_SMG.elemental.SMG_Elemental_Fire',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=2),(Part=WeaponPartDefinition'GD_Weap_SMG.elemental.SMG_Elemental_Shock',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=2)))
+set GD_Sage_Weapons.SMG.SMG_Barrel_Alien_YellowJacket WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=20.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+## Vorac Reward
+set GD_Sage_Raid.M_Sage_Raid Reward (ExperienceRewardPercentage=(BaseValueConstant=0.100000,BaseValueAttribute=AttributeDefinition'GD_MissionRewardBalance.XP.XPReward_02_Small',InitializationDefinition=None,BaseValueScaleConstant=1.000000),CurrencyRewardType=CURRENCY_Credits,CreditRewardMultiplier=(BaseValueConstant=1.000000,BaseValueAttribute=AttributeDefinition'GD_MissionRewardBalance.Cash.CashReward_04_Large',InitializationDefinition=None,BaseValueScaleConstant=1.000000),OtherCurrencyReward=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),RewardItems=(WeaponBalanceDefinition'GD_Sage_RaidWeapons.Shotgun.Sage_Seraph_Interfacer_Balance'),RewardItemPools=)
+
+## Tiny Tina DLC
+
+## Omen
+set GD_Aster_RaidWeapons.Shotguns.SG_Barrel_Alien_Omen WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=15.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+## Seeker
+set GD_Aster_RaidWeapons.AssaultRifles.AR_Barrel_Vladof_Seeker WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=20.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+## Crit
+set GD_Aster_Weapons.SMGs.SMG_Maliwan_3_Crit:WeaponPartListCollectionDefinition_223 ElementalPartData (bEnabled=True,WeightedParts=((Part=WeaponPartDefinition'GD_Weap_SMG.elemental.SMG_Elemental_Slag',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=2),(Part=WeaponPartDefinition'GD_Weap_SMG.elemental.SMG_Elemental_Corrosive',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=2),(Part=WeaponPartDefinition'GD_Weap_SMG.elemental.SMG_Elemental_Fire',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=2),(Part=WeaponPartDefinition'GD_Weap_SMG.elemental.SMG_Elemental_Shock',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=2)))
+set GD_Aster_Weapons.SMGs.SMG_Barrel_Hyperion_Crit ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=20.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+## Grog 
+set GD_Aster_Weapons.Pistols.Pistol_Maliwan_3_GrogNozzle:WeaponPartListCollectionDefinition_222 ElementalPartData (bEnabled=True,WeightedParts=((Part=WeaponPartDefinition'GD_Weap_Pistol.elemental.Pistol_Elemental_Slag',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=2),(Part=WeaponPartDefinition'GD_Weap_Pistol.elemental.Pistol_Elemental_Corrosive',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=2),(Part=WeaponPartDefinition'GD_Weap_Pistol.elemental.Pistol_Elemental_Fire',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=2),(Part=WeaponPartDefinition'GD_Weap_Pistol.elemental.Pistol_Elemental_Shock',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=2)))
+set GD_Aster_Weapons.Pistols.Pistol_Barrel_Bandit_GrogNozzle ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=20.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+## Dragons Quest
+set GD_Aster_RaidBoss.M_Aster_RaidBoss Reward (ExperienceRewardPercentage=(BaseValueConstant=0.100000,BaseValueAttribute=AttributeDefinition'GD_MissionRewardBalance.XP.XPReward_02_Small',InitializationDefinition=None,BaseValueScaleConstant=1.000000),CurrencyRewardType=CURRENCY_Credits,CreditRewardMultiplier=(BaseValueConstant=1.000000,BaseValueAttribute=AttributeDefinition'GD_MissionRewardBalance.Cash.CashReward_04_Large',InitializationDefinition=None,BaseValueScaleConstant=1.000000),OtherCurrencyReward=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),RewardItems=(WeaponBalanceDefinition'GD_Aster_Weapons.AssaultRifles.AR_Bandit_3_Ogre'),RewardItemPools=)

@@ -1,0 +1,31 @@
+This is a mortar.
+Should only be used in mid to long range.
+Best used as a support weapon, with someone/something else distracting enemies.
+Can do devastating damage, but you could be vulnerable while using this.
+Should never be used indoors.
+You simply cannot aim this motar like a usual rocket launcher
+Deadly only if use correctly.
+
+Slow ammo regeneration.
+Very high damage.
+Very Heavy.
+Slow Reload.
+High Fire Rate.
+
+Replaces Mongol with Atomic Mortar
+[The MKII mortar is out, but has major diffirences compared to the Atomic Mortar]
+####################################################################################
+
+set GD_Weap_Launchers.Barrel.L_Barrel_Vladof_Mongol CustomFiringModeDefinition FiringModeDefinition'GD_Weap_Launchers.FiringModes.FM_Rocket_Torgue_Nukem'
+
+set GD_Weap_Launchers.FiringModes.FM_Rocket_Torgue_Nukem FiringPatternLines ((StartPoint=(Pitch=5369,Yaw=0,Roll=0),EndPoint=(Pitch=0,Yaw=0,Roll=0),bUseStartPointOnly=True,CustomWaveMotion=(bUseCustomWaveMotion=False,WaveFreq=(X=0.000000,Y=0.000000,Z=0.000000),WaveAmp=(X=0.000000,Y=0.000000,Z=0.000000),WavePhase=(X=0.000000,Y=0.000000,Z=0.000000))))	
+
+set GD_Weap_Launchers.Barrel.L_Barrel_Vladof_Mongol AttributeSlotUpgrades ((SlotName="WeaponMagSize",GradeIncrease=-10,bActivateSlot=True))
+
+set GD_Weap_Launchers.Barrel.L_Barrel_Vladof_Mongol WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=6.400000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=10.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponPerShotAccuracyImpulse',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=100.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponReloadSpeed',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Vladof',InitializationDefinition=None,BaseValueScaleConstant=7.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0.000000))))
+
+set GD_Weap_Launchers.Barrel.L_Barrel_Vladof_Mongol ExternalAttributeEffects ((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Rocket_Launcher.Ammo_Rocket_Launcher_RegenerationRate',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.230555,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.GameplayAttributes.FootSpeed',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-100.400000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.DamageSourceShieldPenetration.PercentChanceInstigatedBulletDmgIgnoresShields',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=100.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+set GD_Weap_Launchers.Name.Title_Vladof.Title_Legendary_Mongol PartName Atomic Mortar
+
+set GD_Weap_Launchers.Name.Title_Vladof.Title_Legendary_Mongol:AttributePresentationDefinition_8 NoConstraintText <font color="#FFFFFF">The Triple Barrel Atomic Mortar, Faster, Better, And More Deadly.<br><br>. Fires Small Nukes<br>. High Damage.<br>. Ammo Regenerates Slowly.<br>. This Mortar Is Very, Very Heavy.<br><br>Made by Tsunami.

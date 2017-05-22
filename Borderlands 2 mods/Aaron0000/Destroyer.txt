@@ -1,0 +1,47 @@
+########
+By Aaron0000
+
+Turns the Actualizer into an interpretation of the Borderlands 1 Destroyer assault rifle.
+
+Features;
+Increased damage.
+Burst-fires the entire magazine when aiming-down-sight and firing.
+Burst-fire has a +150% fire-rate increase.
+Extremely tight bullet spread.
+Marginally decreased hip-fire accuracy.
+Slightly decreased fire-rate.
+Slower reload speed.
+
+########
+
+set GD_Orchid_RaidWeapons.SMG.Actualizer.Orchid_Seraph_Actualizer_Title PartName Destroyer
+
+set GD_Orchid_RaidWeapons.SMG.Actualizer.Orchid_Seraph_Actualizer_Title:AttributePresentationDefinition_8 NoConstraintText Gozer's back.
+
+set GD_Orchid_RaidWeapons.ManufacturerMaterials.Mat_Hyperion_1_Actualizer WeaponCardAttributes ((Attribute=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',PriorityIncrease=0.000000),(Attribute=AttributeDefinition'D_Attributes.Weapon.WeaponPerShotAccuracyImpulse',PriorityIncrease=0.000000))
+
+
+
+set GD_Orchid_RaidWeapons.SMG.Actualizer.Orchid_Seraph_Actualizer_Barrel WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.659300,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectileSpeedMultiplier',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.240000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.090000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponReloadSpeed',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.660000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.170000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponPerShotAccuracyImpulse',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Hyperion',InitializationDefinition=None,BaseValueScaleConstant=-0.537360)))
+
+set GD_Orchid_RaidWeapons.SMG.Actualizer.Orchid_Seraph_Actualizer_Barrel ExternalAttributeEffects ((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AccuracyResourcePool.AccuracyMaxValue',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AccuracyResourcePool.AccuracyOnIdleRegenerationRate',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AccuracyResourcePool.AccuracyMinValue',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+set GD_Orchid_RaidWeapons.SMG.Actualizer.Orchid_Seraph_Actualizer_Barrel ZoomWeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponAutomaticBurstCount',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Hyperion',InitializationDefinition=None,BaseValueScaleConstant=9999.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-1.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+set GD_Orchid_RaidWeapons.SMG.Actualizer.Orchid_Seraph_Actualizer_Barrel ZoomExternalAttributeEffects ((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AccuracyResourcePool.AccuracyMaxValue',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-10.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AccuracyResourcePool.AccuracyMaxValue',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.050000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Hyperion',InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+set GD_Orchid_RaidWeapons.SMG.Actualizer.Orchid_Seraph_Actualizer_Barrel AttributeSlotUpgrades ((SlotName="AccuracyRegen",GradeIncrease=0,bActivateSlot=True),(SlotName="AccuracyMin",GradeIncrease=5,bActivateSlot=True))
+
+
+
+
+
+set Orchid_GunMaterials.Materials.SMG.Mati_HyperionCommonSMG_Actualizer ScalarParameterValues ((ParameterName="p_ReplacePattern",ParameterValue=1.000000,ExpressionGUID=(A=-2084339847,B=1096440125,C=439008937,D=45433490)),(ParameterName="p_UseFullColorDecal",ParameterValue=0.000000,ExpressionGUID=(A=-1064329812,B=1077705328,C=339664807,D=1869745420)),(ParameterName="p_ReplaceDecal",ParameterValue=0.500000,ExpressionGUID=(A=85863466,B=1257609701,C=-728575820,D=1337098176)))
+
+
+set Orchid_GunMaterials.Materials.SMG.Mati_HyperionCommonSMG_Actualizer TextureParameterValues ((ParameterName="p_Masks",ParameterValue=Texture2D'Weap_SMG.Tex.Weap_SMG_Comp',ExpressionGUID=(A=-330624041,B=1167251458,C=-335191907,D=-166684394)),(ParameterName="p_NormalScopesEmissive",ParameterValue=Texture2D'Weap_SMG.Tex.Weap_SMG_Nrm',ExpressionGUID=(A=-1743872746,B=1126171774,C=119496871,D=-1952271718)),(ParameterName="P_SimpleReflect",ParameterValue=Texture2D'Common_GunMaterials.Env.GlossyC',ExpressionGUID=(A=-858148940,B=1327945772,C=148462268,D=1899047224)),(ParameterName="p_Decal",ParameterValue=Texture2D'Common_GunMaterials.Patterns.Pattern_HyperionStripeCommon',ExpressionGUID=(A=-923052711,B=1309861752,C=584229786,D=-1229888527)),(ParameterName="p_Pattern",ParameterValue=Texture2D'Common_GunMaterials.Patterns.Pattern_RedSpectrum',ExpressionGUID=(A=534250533,B=1202550002,C=1578302861,D=-717876416)))
+
+
+
+set Orchid_GunMaterials.Materials.SMG.Mati_HyperionCommonSMG_Actualizer VectorParameterValues ((ParameterName="p_AColorHilight",ParameterValue=(R=0.812125,G=0.757561,B=0.736639,A=1.000000),ExpressionGUID=(A=384292798,B=1221323751,C=-2145405772,D=1872194118)),(ParameterName="p_AColorMidtone",ParameterValue=(R=0.364627,G=0.224470,B=0.169227,A=1.000000),ExpressionGUID=(A=1102826245,B=1256298978,C=-1429881438,D=-507521102)),(ParameterName="p_AColorShadow",ParameterValue=(R=0.116018,G=0.061629,B=0.012182,A=1.000000),ExpressionGUID=(A=1481234158,B=1129012376,C=-688827739,D=-2119135160)),(ParameterName="p_BColorHilight",ParameterValue=(R=0.139000,G=0.135000,B=0.110000,A=1.000000),ExpressionGUID=(A=170714760,B=1132476783,C=-275668290,D=655702143)),(ParameterName="p_BColorMidtone",ParameterValue=(R=0.169000,G=0.141000,B=0.075000,A=1.000000),ExpressionGUID=(A=473594356,B=1338758895,C=824823946,D=864253813)),(ParameterName="p_BColorShadow",ParameterValue=(R=0.028000,G=0.012000,B=0.009000,A=1.000000),ExpressionGUID=(A=-429590341,B=1156435294,C=-1015192901,D=687313413)),(ParameterName="p_CColorHilight",ParameterValue=(R=0.096000,G=0.084000,B=0.068000,A=1.000000),ExpressionGUID=(A=759765673,B=1280874949,C=257367956,D=-932702788)),(ParameterName="p_CColorMidtone",ParameterValue=(R=0.026000,G=0.013000,B=0.013000,A=1.000000),ExpressionGUID=(A=110180441,B=1232792373,C=-1232281417,D=-1030626065)),(ParameterName="p_CColorShadow",ParameterValue=(R=0.012000,G=0.009000,B=0.008800,A=1.000000),ExpressionGUID=(A=716329441,B=1214803259,C=-238071112,D=-1004122047)),(ParameterName="p_EmissiveColor",ParameterValue=(R=4.414079,G=4.383806,B=3.267924,A=1.000000),ExpressionGUID=(A=-2074486426,B=1296399582,C=-2021314681,D=-350758005)),(ParameterName="p_ReflectColor",ParameterValue=(R=3.934357,G=3.553454,B=2.999843,A=1.000000),ExpressionGUID=(A=295058103,B=1318551573,C=-2045449573,D=-547597976)),(ParameterName="p_DecalScalePosition",ParameterValue=(R=4.020000,G=189.047501,B=0.500400,A=0.519700),ExpressionGUID=(A=395540170,B=1243133493,C=-1264190552,D=123075385)),(ParameterName="p_DecalColor",ParameterValue=(R=6.032216,G=6.032216,B=6.032216,A=1.000000),ExpressionGUID=(A=1691998600,B=1239094551,C=2074257317,D=1844701893)),(ParameterName="p_PatternScalePosition",ParameterValue=(R=3.185000,G=5.000000,B=0.371500,A=0.000000),ExpressionGUID=(A=-2005018406,B=1132497243,C=-39915121,D=208423616)),(ParameterName="p_PatternChannelScale",ParameterValue=(R=1.000000,G=0.600000,B=0.600000,A=0.000000),ExpressionGUID=(A=439432319,B=1091149893,C=-1991909502,D=1816944627)),(ParameterName="p_PatternColor",ParameterValue=(R=0.500000,G=0.025000,B=0.025000,A=1.000000),ExpressionGUID=(A=676539706,B=1125682796,C=1871983293,D=-2049503601))
+

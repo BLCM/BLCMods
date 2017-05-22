@@ -1,0 +1,19 @@
+#########|*|FIRE TWISTER|*|#########|Made by KuroPanther|
+
+// |!|WARNING|!| Make sure to execute this file before loading a save, otherwise the weapons/items modified by this mod will be
+// |!|WARNING|!| deleted from your inventory. Be careful and enjoy!
+//
+// Replaces the shock twister with a fire one.
+//
+// The shock twister will be deleted from your inventory (if you have one), so use the gibbed code below to get the fire one
+// Gibbed code >> BL2(hwAAAACVmwQACIEJB4FErkBRg4KBEgEKGxQLKBJQ/v9noByDcoHy)
+//
+// If you want the shock twister back, just change its element on gibbed before entering the game and, obviously, not execute this.
+//
+// |!|WARNING|!| You can only have one element at a time do not execute this with the other versions (corrosive/slag).
+__________________________________________________________________________________________________________________________________
+#########|*|CODE|*|#########
+
+set GD_Sage_Weapons.Shotgun.SG_Jakobs_3_Twister:WeaponPartListCollectionDefinition_305 ElementalPartData (bEnabled=True,WeightedParts=((Part=WeaponPartDefinition'GD_Weap_Shotgun.elemental.Shotgun_Elemental_Fire',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=5,MaxGameStageIndex=1,DefaultWeightIndex=3)))
+
+set GD_Sage_Weapons.FiringModes.Bullet_Shotgun_Twister:Behavior_Explode_5 Definition GD_Explosions.Incendiary.Explosion_IncendiaryMaster

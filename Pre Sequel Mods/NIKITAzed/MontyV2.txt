@@ -1,0 +1,16 @@
+##By NIKITAzed
+##Turns a Maggie into a Monty
+## Work In Progress 
+
+
+set GD_Currency.A_Item.Moonstone bAutomaticallyPickup True
+set GD_Currency.A_Item.MoonstoneCluster bAutomaticallyPickup True
+
+
+Set GD_Cork_Weap_Pistol.Barrel.Pistol_Barrel_Jakobs_Maggie ExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.DamageSourceShieldPenetration.PercentChanceInstigatedBulletDmgIgnoresShields',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=100.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+Set GD_Cork_Weap_Pistol.Barrel.Pistol_Barrel_Jakobs_Maggie WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=15.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponReloadSpeed',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=2.300000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=7.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+Set GD_Cork_Weap_Pistol.Name.Title_Jakobs.Title_Legendary_Maggie PartName Monty
+Set GD_Cork_Weap_Pistol.Name.Title_Jakobs.Title_Legendary_Maggie:AttributePresentationDefinition_8 NoConstraintText If it took more than one shot, you weren't using a Jakobs.
+
+
+Say Maggie changed into Monty

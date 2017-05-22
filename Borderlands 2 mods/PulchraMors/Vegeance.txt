@@ -1,0 +1,46 @@
+####################################
+##  VENGEANCE [replaces VERITAS]  ##
+####################################
+// created by PulchraMors
+##########################
+#   DISPLAY NAME
+##########################
+set GD_Weap_Pistol.Name.Title.Title__Unique_Veritas PartName Vengeance
+
+##########################
+#   RED TEXT
+##########################
+set GD_Weap_Pistol.Name.Title.Title__Unique_Veritas:AttributePresentationDefinition_8 NoConstraintText Vengeance is Yours
+
+##########################
+#   RARITY
+##########################
+set GD_Weap_Pistol.Barrel.Pistol_Barrel_Hyperion_Veritas Rarity (BaseValueAttribute = none)
+
+set GD_Weap_Pistol.Barrel.Pistol_Barrel_Hyperion_Veritas Rarity (BaseValueConstant = 5.000000)
+
+##########################
+#   WEAPON CARD
+##########################
+
+
+##########################
+#   WEAPON EFFECTS
+##########################
+set GD_Weap_Pistol.Barrel.Pistol_Barrel_Hyperion_Veritas ExternalAttributeEffects ((AttributeToModify=DesignerAttributeDefinition'GD_Shields.Attributes.Attr_AequitasEquipped',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.DamageSourceShieldPenetration.PercentChanceInstigatedBulletDmgIgnoresShields',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=100.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+set GD_Weap_Pistol.Barrel.Pistol_Barrel_Hyperion_Veritas WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-0.03000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.00000)),
+(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.600000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+##########################
+#   APPEARANCE
+##########################
+set GD_Weap_Pistol.Barrel.Pistol_Barrel_Hyperion_Veritas GestaltModeSkeletalMeshName Pistol_Barrel_Dahl
+
+##DISABLED## set GD_Weap_Pistol.Body.Pistol_Body_Vladof_4 GestaltModeSkeletalMeshName Pistol_Body_Tediore_4
+
+set Common_GunMaterials.Materials.Pistol.Mati_VladofUniquePistol_Verates VectorParameterValues ((ParameterName="p_DecalChannel",ParameterValue=(R=0.000000,G=0.000000,B=0.000000,A=0.000000)),ExpressionGUID=(A=1869386622,B=1303200947,C=-1616405849,D=714558284)))
+
+set Common_GunMaterials.Materials.Pistol.Mati_VladofUniquePistol_Verates VectorParameterValues ((ParameterName="p_AColorHilight",ParameterValue=(R=0.100000,G=0.100000,B=0.100000,A=1.000000),ExpressionGUID=(A=170714760,B=1132476783,C=-275668290,D=655702143)))
+
+##########################

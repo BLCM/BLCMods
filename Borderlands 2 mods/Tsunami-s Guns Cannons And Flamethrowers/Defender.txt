@@ -1,0 +1,18 @@
+The shots fired from this gun moves very, very slow
+Used as a barrier of explosives
+High damage, low accuracy, ammo regenerates slowly
+Usually for when you're running away from something, or to defend yourself from melee enemies
+Replaces Omen with Barrier Defender
+####################################################################
+
+set GD_Aster_RaidWeapons.Shotguns.Aster_Seraph_Omen_Title PartName Barrier Defender
+
+set GD_Aster_RaidWeapons.Shotguns.SG_Barrel_Alien_Omen CustomFiringModeDefinition FiringModeDefinition'GD_Weap_AssaultRifle.FiringModes.FM_Rocket_Kerblaster'
+
+set GD_Aster_RaidWeapons.Shotguns.SG_Barrel_Alien_Omen WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Tediore',InitializationDefinition=None,BaseValueScaleConstant=6.100000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=3.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectileSpeedMultiplier',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-200.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.200000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=100.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.100000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0.000000)))))))
+
+set GD_Aster_RaidWeapons.Shotguns.SG_Barrel_Alien_Omen ExternalAttributeEffects ((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Combat_Shotgun.Ammo_Combat_Shotgun_RegenerationRate',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.203703,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+set GD_Aster_RaidWeapons.Shotguns.Aster_Seraph_Omen_Title:AttributePresentationDefinition_8 NoConstraintText <font color="#D80C0C"> Dare To Come Over Here?<font color="#FFFFFF"><br>. The Perfect Aggresive Defensive Weapon<br>. Shots Fired Moves Very Slowly<br>. Ammo Regenrates Over Time.
+
+set GD_Aster_RaidWeapons.ManufacturerMaterials.Mat_Tediore_5_Omen Material MaterialInstanceConstant'Sage_GunMaterials.Materials.Pistol.Mati_JakobsUniquePistol_Rex'

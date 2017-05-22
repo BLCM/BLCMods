@@ -1,0 +1,104 @@
+########
+By Aaron0000
+
+Turns the Bunny into a port of the Kaneda's Laser from Pre-Sequel.
+
+Features;
+Uses explosive lasers instead of regular rockets.
+Very high accuracy for a launcher.
+Can inflict critical hits.
+
+Notes:
+Dave's is a hand-made replication of the Kaneda's Laser, while mine is basically a direct-port within limitations. Pick your poison (although Dave's will crash the game when used with the Violator mod.)
+This version won't delete elemental versions of the Kaneda's Laser, but don't expect elemental versions to work 100% right (The laser will be the weapon's element, but will still have explosive splash).
+Modifies the unused Harpoon Gun firing mode for the vast majority of the behavior, as well as a slight amount of the Cobra's explosion. As long as there isn't a mod that modifies the Harpoon Gun, there should be no problems.
+########
+
+
+
+
+Title/Flavor Text
+-----------------
+set GD_Weap_Launchers.Name.Title_Tediore.Title_Legendary_Bunny PartName Kaneda's Laser
+set GD_Weap_Launchers.Name.Title_Tediore.Title_Legendary_Bunny:AttributePresentationDefinition_8 NoConstraintText If somebody's gonna kill him, it should be us!
+
+
+Statistics
+-----------
+set GD_Weap_Launchers.Barrel.L_Barrel_Tediore_Bunny CustomFiringModeDefinition FiringModeDefinition'GD_Sage_HarpoonGun.Projectile.Sage_HarpoonGun_FireMode'
+set GD_Weap_Launchers.Barrel.L_Barrel_Tediore_Bunny BehaviorProviderDefinition None
+
+set GD_Weap_Launchers.Barrel.L_Barrel_Tediore_Bunny WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.400000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponReloadSpeed',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-1.250000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectileSpeedMultiplier',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=50.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.700000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+set GD_Weap_Launchers.Barrel.L_Barrel_Tediore_Bunny WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-0.400000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponPerShotAccuracyImpulse',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Tediore',InitializationDefinition=None,BaseValueScaleConstant=-0.700000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=3.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.150000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-5.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+set GD_Weap_Launchers.Barrel.L_Barrel_Tediore_Bunny ExternalAttributeEffects ((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AccuracyResourcePool.AccuracyMaxValue',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AccuracyResourcePool.AccuracyMinValue',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+
+
+
+Visuals
+-------
+set Common_GunMaterials.Materials.Launcher.Mati_TedioreLegendaryRL Parent Common_GunMaterials.MasterMaterials.Torgue.MasterMati_TorgueLegendary
+
+set Common_GunMaterials.Materials.Launcher.Mati_TedioreLegendaryRL TextureParameterValues ((ParameterName="p_Decal",ParameterValue=None,ExpressionGUID=(A=-923052711,B=1309861752,C=584229786,D=-1229888527)),(ParameterName="P_SimpleReflect",ParameterValue=Texture2D'Common_GunMaterials.Env.GlossyB',ExpressionGUID=(A=-858148940,B=1327945772,C=148462268,D=1899047224)),(ParameterName="p_NormalScopesEmissive",ParameterValue=Texture2D'Weap_Launchers.Tex.Weap_Launchers_Nrm',ExpressionGUID=(A=-1685713219,B=1198583295,C=1500684677,D=295812567)),(ParameterName="p_Masks",ParameterValue=Texture2D'Weap_Launchers.Tex.Weap_Launchers_Comp',ExpressionGUID=(A=-330624041,B=1167251458,C=-335191907,D=-166684394)),(ParameterName="p_Diffuse",ParameterValue=Texture2D'Common_GunMaterials.CompTextures.Weap_LauncherShotgunPistol_Comp',ExpressionGUID=(A=2024732779,B=1159440301,C=1487416485,D=-2018014041)),(ParameterName="p_Pattern",ParameterValue=Texture2D'Common_GunMaterials.Patterns.Pattern_Hornet',ExpressionGUID=(A=534250533,B=1202550002,C=1578302861,D=-717876416)))
+
+set Common_GunMaterials.Materials.Launcher.Mati_TedioreLegendaryRL ScalarParameterValues ((ParameterName="p_DecalRotate",ParameterValue=0.000000,ExpressionGUID=(A=-276527909,B=1298581551,C=856978878,D=743944047)))
+
+set Common_GunMaterials.Materials.Launcher.Mati_TedioreLegendaryRL VectorParameterValues ((ParameterName="p_PatternScalePosition",ParameterValue=(R=3.695315,G=27.299612,B=6.667828,A=0.233500),ExpressionGUID=(A=-2005018406,B=1132497243,C=-39915121,D=208423616)),(ParameterName="p_DecalScalePosition",ParameterValue=(R=2.000000,G=21.000000,B=0.398000,A=0.550000),ExpressionGUID=(A=395540170,B=1243133493,C=-1264190552,D=123075385)),(ParameterName="p_DecalChannel",ParameterValue=(R=0.000000,G=0.000000,B=0.000000,A=0.000000),ExpressionGUID=(A=1757499073,B=1097055033,C=-1266029657,D=1038353636)),(ParameterName="p_DecalColor",ParameterValue=(R=1.905200,G=0.234603,B=0.069060,A=1.000000),ExpressionGUID=(A=1691998600,B=1239094551,C=2074257317,D=1844701893)),(ParameterName="p_PatternChannelScale",ParameterValue=(R=0.998131,G=0.996261,B=1.000000,A=0.000000),ExpressionGUID=(A=439432319,B=1091149893,C=-1991909502,D=1816944627)),(ParameterName="p_PatternColor",ParameterValue=(R=0.229375,G=0.492613,B=1.000000,A=1.000000),ExpressionGUID=(A=676539706,B=1125682796,C=1871983293,D=-2049503601)),(ParameterName="p_CColorShadow",ParameterValue=(R=0.298332,G=0.098895,B=0.088406,A=1.000000),ExpressionGUID=(A=716329441,B=1214803259,C=-238071112,D=-1004122047)),(ParameterName="p_CColorHilight",ParameterValue=(R=1.885355,G=1.539897,B=1.295754,A=1.000000),ExpressionGUID=(A=759765673,B=1280874949,C=257367956,D=-932702788)),(ParameterName="p_CColorMidtone",ParameterValue=(R=3.290632,G=1.873898,B=0.490971,A=1.000000),ExpressionGUID=(A=110180441,B=1232792373,C=-1232281417,D=-1030626065)),(ParameterName="p_BColorShadow",ParameterValue=(R=0.711947,G=0.745829,B=0.678066,A=1.000000),ExpressionGUID=(A=-429590341,B=1156435294,C=-1015192901,D=687313413)),(ParameterName="p_BColorHilight",ParameterValue=(R=0.200924,G=0.823174,B=0.502753,A=1.000000),ExpressionGUID=(A=170714760,B=1132476783,C=-275668290,D=655702143)),(ParameterName="p_BColorMidtone",ParameterValue=(R=0.099947,G=0.494081,B=0.545421,A=1.000000),ExpressionGUID=(A=473594356,B=1338758895,C=824823946,D=864253813)),(ParameterName="p_AColorShadow",ParameterValue=(R=0.154607,G=0.192490,B=0.325380,A=1.000000),ExpressionGUID=(A=1481234158,B=1129012376,C=-688827739,D=-2119135160)),(ParameterName="p_AColorHilight",ParameterValue=(R=0.125406,G=0.143863,B=0.238924,A=1.000000),ExpressionGUID=(A=384292798,B=1221323751,C=-2145405772,D=1872194118)),(ParameterName="p_AColorMidtone",ParameterValue=(R=0.124741,G=0.141980,B=0.238828,A=1.000000),ExpressionGUID=(A=1102826245,B=1256298978,C=-1429881438,D=-507521102)),(ParameterName="p_DColor",ParameterValue=(R=1.000000,G=1.000000,B=1.000000,A=1.000000),ExpressionGUID=(A=696455109,B=1155878830,C=-1741888361,D=802120528)),(ParameterName="p_ReflectColor",ParameterValue=(R=0.515385,G=3.231877,B=0.607874,A=1.000000),ExpressionGUID=(A=295058103,B=1318551573,C=-2045449573,D=-547597976)),(ParameterName="p_ReflectionChannelScale",ParameterValue=(R=1.000000,G=0.200000,B=1.000000,A=0.000000),ExpressionGUID=(A=1869386622,B=1303200947,C=-1616405849,D=714558284)))
+
+
+Elemental Block
+---------------
+set GD_Weap_Launchers.A_Weapons_Legendary.RL_Tediore_5_Bunny:WeaponPartListCollectionDefinition_66 ElementalPartData (bEnabled=True,WeightedParts=((Part=WeaponPartDefinition'GD_Weap_Launchers.elemental.RL_Elemental_None',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=3),(Part=WeaponPartDefinition'GD_Weap_Launchers.elemental.RL_Elemental_Fire',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=0,DefaultWeightIndex=0),(Part=WeaponPartDefinition'GD_Weap_Launchers.elemental.RL_Elemental_Corrosive',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=0,DefaultWeightIndex=0),(Part=WeaponPartDefinition'GD_Weap_Launchers.elemental.RL_Elemental_Shock',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=0,DefaultWeightIndex=0),(Part=WeaponPartDefinition'GD_Weap_Launchers.elemental.RL_Elemental_Slag',Manufacturers=),MinGameStageIndex=0,MaxGameStageIndex=0,DefaultWeightIndex=0)))
+
+
+
+Behavior Modifications
+-----------------------
+set GD_Sage_HarpoonGun.Projectile.Sage_HarpoonGun_FireMode FireType EWWFT_Bullet
+set GD_Sage_HarpoonGun.Projectile.Sage_HarpoonGun_FireMode BeamLockBehavior LBL_LockOn
+set GD_Sage_HarpoonGun.Projectile.Sage_HarpoonGun_FireMode DamageTypeDefinition None
+set GD_Sage_HarpoonGun.Projectile.Sage_HarpoonGun_FireMode ProjectileDefinition None
+set GD_Sage_HarpoonGun.Projectile.Sage_HarpoonGun_FireMode OnAnyImpact (Behavior_Explode'GD_Iris_Weapons.FiringModes.Bullet_Sniper_Cobra:Behavior_Explode_5')
+set GD_Sage_HarpoonGun.Projectile.Sage_HarpoonGun_FireMode ConditionalPartSysTemplate EffectCollectionDefinition'GD_Weap_SniperRifles.Effects.SR_ETech_Tracers'
+set GD_Sage_HarpoonGun.Projectile.Sage_HarpoonGun_FireMode PartSysTemplate ParticleSystem'FX_WEP_Trails.Particles.Alien.Part_Wep_Tracer_Alien_Sniper'
+set GD_Sage_HarpoonGun.Projectile.Sage_HarpoonGun_FireMode SoundDefinition FiringModeSoundDefinition'GD_Weap_SniperRifles.FiringModes.RailSoundDefinition'
+set GD_Sage_HarpoonGun.Projectile.Sage_HarpoonGun_FireMode Speed 90000.000000
+set GD_Sage_HarpoonGun.Projectile.Sage_HarpoonGun_FireMode TraceInterval 0.200000
+set GD_Sage_HarpoonGun.Projectile.Sage_HarpoonGun_FireMode bSuppressImpactEffects=False
+set GD_Sage_HarpoonGun.Projectile.Sage_HarpoonGun_FireMode bPenetratePawn=False
+set GD_Sage_HarpoonGun.Projectile.Sage_HarpoonGun_FireMode bParameterizedSourceLocation=True
+set GD_Sage_HarpoonGun.Projectile.Sage_HarpoonGun_FireMode NumRicochets 0
+set GD_Sage_HarpoonGun.Projectile.Sage_HarpoonGun_FireMode Acceleration (X=0.000000,Y=0.000000,Z=0.000000)
+set GD_Sage_HarpoonGun.Projectile.Sage_HarpoonGun_FireMode RicochetFriction 0.000000
+set GD_Sage_HarpoonGun.Projectile.Sage_HarpoonGun_FireMode AirFriction 0.000000
+set GD_Sage_HarpoonGun.Projectile.Sage_HarpoonGun_FireMode RicochetResponse (SplitNum=0,SplitAngle=0.000000,SplitAngleOffset=0.000000,SplitDistance=0.000000,SplitFire=None,NewSpeed=0.000000,bDetonate=False,bRespawnTracer=False,bUpdateBeamSourceLocation=False,Behaviors=)
+set GD_Sage_HarpoonGun.Projectile.Sage_HarpoonGun_FireMode BeamMaxLockOnDistance 5000.000000
+set GD_Sage_HarpoonGun.Projectile.Sage_HarpoonGun_FireMode BeamMaxLength 7500.000000
+set GD_Sage_HarpoonGun.Projectile.Sage_HarpoonGun_FireMode BeamSourceTangentStrengthOverDistance 3.000000
+set GD_Sage_HarpoonGun.Projectile.Sage_HarpoonGun_FireMode BeamTargetTangentStrengthOverDistance 1.000000
+set GD_Sage_HarpoonGun.Projectile.Sage_HarpoonGun_FireMode BeamApproxRepUpdateTime 1.000000
+set GD_Sage_HarpoonGun.Projectile.Sage_HarpoonGun_FireMode BeamTraceNumSteps 1
+set GD_Sage_HarpoonGun.Projectile.Sage_HarpoonGun_FireMode BeamSourceLocationName SourceLocation
+set GD_Sage_HarpoonGun.Projectile.Sage_HarpoonGun_FireMode BeamSourceTangentName SourceTangent
+set GD_Sage_HarpoonGun.Projectile.Sage_HarpoonGun_FireMode BeamSourceStrengthName SourceStrength
+set GD_Sage_HarpoonGun.Projectile.Sage_HarpoonGun_FireMode BeamTargetLocationName TargetLocation
+set GD_Sage_HarpoonGun.Projectile.Sage_HarpoonGun_FireMode BeamTargetTangentName TargetTangent
+set GD_Sage_HarpoonGun.Projectile.Sage_HarpoonGun_FireMode BeamTargetStrengthName TargetStrength
+set GD_Sage_HarpoonGun.Projectile.Sage_HarpoonGun_FireMode BeamDirectionName=Direction
+set GD_Sage_HarpoonGun.Projectile.Sage_HarpoonGun_FireMode BeamChainDelay=1.000000
+set GD_Sage_HarpoonGun.Projectile.Sage_HarpoonGun_FireMode BeamChainNum=3
+set GD_Sage_HarpoonGun.Projectile.Sage_HarpoonGun_FireMode BeamChainMaxDistance=4000.000000
+set GD_Sage_HarpoonGun.Projectile.Sage_HarpoonGun_FireMode BeamRandomBoneTimeMin=1.000000
+set GD_Sage_HarpoonGun.Projectile.Sage_HarpoonGun_FireMode BeamRandomBoneTimeMax=2.000000
+
+
+set GD_Iris_Weapons.FiringModes.Bullet_Sniper_Cobra:Behavior_Explode_5 DamageRadiusFormula (BaseValueConstant=250.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+set GD_Iris_Weapons.FiringModes.Bullet_Sniper_Cobra:Behavior_Explode_5 DamageFormula (BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+set GD_Iris_Weapons.FiringModes.Bullet_Sniper_Cobra:Behavior_Explode_5 MomentumFormula (BaseValueConstant=1000.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+
+
+
+
+

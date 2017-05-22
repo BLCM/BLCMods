@@ -1,0 +1,22 @@
+########
+By Aaron0000
+Ported By Jim Raven (ALL CREDITS GO TO ORIGINAL CREATOR I DID NOTHIN MORE THAN PORT EM TO TPS VIA CHANGING WHATEVER WAS NEEDED OR NOT NEEDED FOR TPS. NO BALANCE CHANGES)
+Features;
+Turns the Volt Thrower into the Quake Rocket Launcher (more or less).
+Decent damage.
+Large projectile count, increased damage.
+Effective for both combat AND rocket jumping.
+
+########
+
+set GD_Cork_Weap_Launchers.Barrel.L_Barrel_Tediore_Rocketeer CustomFiringModeDefinition FiringModeDefinition'GD_Weap_Launchers.FiringModes.FM_Rocket_Tediore'
+
+set GD_Cork_Weap_Launchers.Barrel.L_Barrel_Tediore_Rocketeer GestaltModeSkeletalMeshName L_Barrel_Torgue
+
+set GD_Cork_Weap_Launchers.Barrel.L_Barrel_Tediore_Rocketeer WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=17.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=-6.50000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=-4.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectileSpeedMultiplier',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.500000)))
+
+set GD_Cork_Weap_Launchers.Barrel.L_Barrel_Tediore_Rocketeer ExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.DamageSourceModifiers.InstigatedRocketDamageModifier',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Artifacts.BalanceAttributes.Init_ModifierBase_Linear',BaseValueScaleConstant=-0.150000)))
+
+
+set GD_Cork_Weap_Launchers.Name.Title.Title__Unique_Rocketeer PartName Quaker
+set GD_Cork_Weap_Launchers.Name.Title.Title__Unique_Rocketeer:AttributePresentationDefinition_8 NoConstraintText Stairs are for chumps
