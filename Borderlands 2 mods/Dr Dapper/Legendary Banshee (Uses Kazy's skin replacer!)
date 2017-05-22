@@ -1,0 +1,110 @@
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| LEGENDARY BANSHEE                                                                                                                                                                                                                                               |
+| This class mod replaces the Honey Hive hovercraft skin. Yes, thats a thing now. Here's a gibbed code (BL2(BwAAAAAKFwFBFYPYEBBQ6A==)), but if you want to farm it instead, I made it drop from Wilhelm                                                           |
+| Be sure this mod is enabled before you go into a game. If you don't, sanity check will delete this item. As a rule of thumb, don't enter a game without your mods enabled in general                                                                            |
+| STATS:                                                                                                                                                                                                                                                          |
+| - Reload Speed +33%                                                                                                                                                                                                                                             |
+| - Fire Rate +28%                                                                                                                                                                                                                                                |
+| - Max Health -289417                                                                                                                                                                                                                                            |
+| +5 Fleet                                                                                                                                                                                                                                                        |
+| +5 Accelerate                                                                                                                                                                                                                                                   |
+| +5 Quicken                                                                                                                                                                                                                                                      |
+| +5 Wreck                                                                                                                                                                                                                                                        |
+| +5 Foresight                                                                                                                                                                                                                                                    |
+| Huge shoutout to Kazy for figuring out how to turn skins into COMs, as well as providing a template. Furthermore, shoutout to Aaron and his ClassModRedux mod, as this Legendary Banshee is based on the changes he made to the regular Banshee COM in that mod.|
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+===================
+||Base Components||
+===================
+set GD_Hovercraft_Items_Orchid.Hovercraft.Skin_HexOrng ItemName Legendary Banshee
+set GD_Hovercraft_Items_Orchid.Hovercraft.Skin_HexOrng CustomPresentations AttributePresentationDefinition'GD_Hovercraft_Items_Orchid.AttributePresentation_Fanboat'
+
+set GD_Hovercraft_Items_Orchid.Hovercraft.Skin_HexOrng AlphaParts GD_ClassMods.Specialization.Spec_Legendary
+
+set GD_Hovercraft_Items_Orchid.Hovercraft.Skin_HexOrng OverrideMaterial MaterialInstanceConstant'Item_ClassMods.Mat.Mati_ClassMod_Siren_Legendary'
+
+set GD_Hovercraft_Items_Orchid.Hovercraft.Skin_HexOrng BaseRarity (BaseValueConstant=5.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+set GD_Hovercraft_Items_Orchid.Hovercraft.Skin_HexOrng MonetaryValue (BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Economy.PriceCalc.Init_ClassMods_Standard_PriceCalculator',BaseValueScaleConstant=1.000000)
+set GD_Hovercraft_Items_Orchid.Hovercraft.Skin_HexOrng BaseMonetaryValueModifier=1.000000
+set GD_Hovercraft_Items_Orchid.Hovercraft.Skin_HexOrng UIStatList ((bDisplayAsModifierOnly=True,AttributeStyle=ATTRSTYLE_ModifierText,SupplementalAttributeStyle=ATTRSTYLE_JustNumber,StatCombinationMethod=SCM_Multiply,Attribute=AttributeDefinition'D_Attributes.Weapon.WeaponReloadSpeed',ConstraintAttribute=None,SupplementalAttributeExpression=(AttributeOperand1=None,ComparisonOperator=OPERATOR_EqualTo,Operand2Usage=OPERAND_PreferAttribute,AttributeOperand2=None,ConstantOperand2=0.000000),SupplementalAttributeToAppend=None),(bDisplayAsModifierOnly=True,AttributeStyle=ATTRSTYLE_ModifierText,SupplementalAttributeStyle=ATTRSTYLE_JustNumber,StatCombinationMethod=SCM_Multiply,Attribute=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ConstraintAttribute=None,SupplementalAttributeExpression=(AttributeOperand1=None,ComparisonOperator=OPERATOR_EqualTo,Operand2Usage=OPERAND_PreferAttribute,AttributeOperand2=None,ConstantOperand2=0.000000),SupplementalAttributeToAppend=None),(bDisplayAsModifierOnly=True,AttributeStyle=ATTRSTYLE_ModifierText,SupplementalAttributeStyle=ATTRSTYLE_JustNumber,StatCombinationMethod=SCM_Multiply,Attribute=ResourcePoolAttributeDefinition'D_Attributes.HealthResourcePool.HealthMaxValue_Player',ConstraintAttribute=None,SupplementalAttributeExpression=(AttributeOperand1=None,ComparisonOperator=OPERATOR_EqualTo,Operand2Usage=OPERAND_PreferAttribute,AttributeOperand2=None,ConstantOperand2=0.000000),SupplementalAttributeToAppend=None))
+
+set GD_Hovercraft_Items_Orchid.Hovercraft.Skin_HexOrng AttributeSlotEffects ((SlotName="PrimaryStatBonus",bExternalSlot=True,bRunEffectsAsSkill=True,AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponReloadSpeed',ConstraintAttribute=None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-0.350000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_ClassMods.Misc.Init_StatBonus_Medium_Negative',BaseValueScaleConstant=1.000000),PerGradeUpgrade=(BaseValueConstant=-0.010000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bIncludeInFunStats=False,bIncludeAlliesAsTarget=False,bEnforceMinimumGrade=True,bEnforceMaximumGrade=False,MinimumGrade=0,MaximumGrade=0,TargetInstanceDataName=),(SlotName="PrimaryStatBonus02",bExternalSlot=True,bRunEffectsAsSkill=True,AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ConstraintAttribute=None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_ClassMods.Misc.Init_StatBonus_Weak_Negative',BaseValueScaleConstant=0.950000),PerGradeUpgrade=(BaseValueConstant=0.013000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bIncludeInFunStats=False,bIncludeAlliesAsTarget=False,bEnforceMinimumGrade=False,bEnforceMaximumGrade=False,MinimumGrade=0,MaximumGrade=0,TargetInstanceDataName=),(SlotName="StatPenalty",bExternalSlot=True,bRunEffectsAsSkill=False,AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.HealthResourcePool.HealthMaxValue_Player',ConstraintAttribute=None,ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance_HealthAndDamage.HealthAndDamage.Init_HealthBonusFromClassMods_Formula',BaseValueScaleConstant=-0.200000),PerGradeUpgrade=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance_HealthAndDamage.HealthAndDamage.Init_HealthBonusFromClassMods_Formula',BaseValueScaleConstant=-0.005000),bIncludeInFunStats=False,bIncludeAlliesAsTarget=False,bEnforceMinimumGrade=False,bEnforceMaximumGrade=False,MinimumGrade=0,MaximumGrade=0,TargetInstanceDataName=),(SlotName="Skill1",bExternalSlot=True,bRunEffectsAsSkill=True,AttributeToModify=InventoryAttributeDefinition'GD_Siren_Skills.SkillGradeModifiers.Accelerate',ConstraintAttribute=None,ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_ClassMods.Misc.Init_BaseSkillPointCalculation',BaseValueScaleConstant=1.000000),PerGradeUpgrade=(BaseValueConstant=0.340000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bIncludeInFunStats=True,bIncludeAlliesAsTarget=False,bEnforceMinimumGrade=True,bEnforceMaximumGrade=False,MinimumGrade=0,MaximumGrade=0,TargetInstanceDataName=),(SlotName="Skill2",bExternalSlot=True,bRunEffectsAsSkill=True,AttributeToModify=InventoryAttributeDefinition'GD_Siren_Skills.SkillGradeModifiers.Fleet',ConstraintAttribute=None,ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_ClassMods.Misc.Init_BaseSkillPointCalculation',BaseValueScaleConstant=1.000000),PerGradeUpgrade=(BaseValueConstant=0.340000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bIncludeInFunStats=True,bIncludeAlliesAsTarget=False,bEnforceMinimumGrade=True,bEnforceMaximumGrade=False,MinimumGrade=0,MaximumGrade=0,TargetInstanceDataName=),(SlotName="Skill3",bExternalSlot=True,bRunEffectsAsSkill=True,AttributeToModify=InventoryAttributeDefinition'GD_Siren_Skills.SkillGradeModifiers.Quicken',ConstraintAttribute=None,ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_ClassMods.Misc.Init_BaseSkillPointCalculation',BaseValueScaleConstant=1.000000),PerGradeUpgrade=(BaseValueConstant=0.340000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bIncludeInFunStats=True,bIncludeAlliesAsTarget=False,bEnforceMinimumGrade=True,bEnforceMaximumGrade=False,MinimumGrade=0,MaximumGrade=0,TargetInstanceDataName=),(SlotName="Skill4",bExternalSlot=True,bRunEffectsAsSkill=True,AttributeToModify=InventoryAttributeDefinition'GD_Siren_Skills.SkillGradeModifiers.Wreck',ConstraintAttribute=None,ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_ClassMods.Misc.Init_BaseSkillPointCalculation',BaseValueScaleConstant=1.000000),PerGradeUpgrade=(BaseValueConstant=0.340000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bIncludeInFunStats=True,bIncludeAlliesAsTarget=False,bEnforceMinimumGrade=True,bEnforceMaximumGrade=False,MinimumGrade=0,MaximumGrade=0,TargetInstanceDataName=),(SlotName="Skill5",bExternalSlot=True,bRunEffectsAsSkill=True,AttributeToModify=InventoryAttributeDefinition'GD_Siren_Skills.SkillGradeModifiers.Foresight',ConstraintAttribute=None,ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_ClassMods.Misc.Init_BaseSkillPointCalculation',BaseValueScaleConstant=1.000000),PerGradeUpgrade=(BaseValueConstant=0.340000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bIncludeInFunStats=True,bIncludeAlliesAsTarget=False,bEnforceMinimumGrade=True,bEnforceMaximumGrade=False,MinimumGrade=0,MaximumGrade=0,TargetInstanceDataName=)
+
+set GD_Hovercraft_Items_Orchid.Hovercraft.Skin_HexOrng AttributeSlotUpgrades ((SlotName="PrimaryStatBonus",GradeIncrease=1,bActivateSlot=True),(SlotName="PrimaryStatBonus02",GradeIncrease=1,bActivateSlot=True),(SlotName="StatPenalty",GradeIncrease=1,bActivateSlot=True),(SlotName="Skill1",GradeIncrease=5,bActivateSlot=True),(SlotName="Skill2",GradeIncrease=5,bActivateSlot=True),(SlotName="Skill3",GradeIncrease=5,bActivateSlot=True),(SlotName="Skill4",GradeIncrease=5,bActivateSlot=True),(SlotName="Skill5",GradeIncrease=5,bActivateSlot=True))
+
+=====================
+||Skin to COM stuff||
+=====================
+set GD_Hovercraft_Items_Orchid.Hovercraft.Skin_HexOrng DisplayClassModAtBeginningOfName 0
+
+
+set GD_Hovercraft_Items_Orchid.Hovercraft.Skin_HexOrng OverridePool None
+set GD_Hovercraft_Items_Orchid.Hovercraft.Skin_HexOrng CustomizationDef None
+set GD_Hovercraft_Items_Orchid.Hovercraft.Skin_HexOrng CustomPresentations ()
+set GD_Hovercraft_Items_Orchid.Hovercraft.Skin_HexOrng PrimaryColor (R=0.000000,G=0.000000,B=0.000000,A=0.000000)
+set GD_Hovercraft_Items_Orchid.Hovercraft.Skin_HexOrng SecondaryColor (R=0.000000,G=0.000000,B=0.000000,A=0.000000)
+set GD_Hovercraft_Items_Orchid.Hovercraft.Skin_HexOrng TertiaryColor (R=0.000000,G=0.000000,B=0.000000,A=0.000000)
+set GD_Hovercraft_Items_Orchid.Hovercraft.Skin_HexOrng ItemCardTopStatString None
+
+
+set GD_Hovercraft_Items_Orchid.Hovercraft.Skin_HexOrng bPlayerUseItemOnPickup None
+set GD_Hovercraft_Items_Orchid.Hovercraft.Skin_HexOrng bUsesPlayerLevelRequirement True
+set GD_Hovercraft_Items_Orchid.Hovercraft.Skin_HexOrng bAIUseItemOnPickup None
+set GD_Hovercraft_Items_Orchid.Hovercraft.Skin_HexOrng bUseCoopRange None
+set GD_Hovercraft_Items_Orchid.Hovercraft.Skin_HexOrng UsedStatId None
+
+
+set GD_Hovercraft_Items_Orchid.Hovercraft.Skin_HexOrng DroppedImpact WillowImpactDefinition'GD_Impacts.Loot.Loot_Drop_Ammo'
+set GD_Hovercraft_Items_Orchid.Hovercraft.Skin_HexOrng TitleList ("GD_ClassMods.Title.Title_ClassMod")
+set GD_Hovercraft_Items_Orchid.Hovercraft.Skin_HexOrng PrefixList ()
+
+set GD_Hovercraft_Items_Orchid.Hovercraft.Skin_HexOrng bItemNameIsFullName True
+set GD_Hovercraft_Items_Orchid.Hovercraft.Skin_HexOrng NonCompositeStaticMesh None
+
+set GD_Hovercraft_Items_Orchid.Hovercraft.Skin_HexOrng AlphaParts GD_ClassMods.Specialization.Spec_Legendary
+set GD_Hovercraft_Items_Orchid.Hovercraft.Skin_HexOrng BetaParts ItemPartListDefinition'GD_ClassMods.StatPrimary.Z_PartsList_PrimaryStatParts'
+set GD_Hovercraft_Items_Orchid.Hovercraft.Skin_HexOrng GammaParts ItemPartListDefinition'GD_ClassMods.StatPrimary02.Z_PartsList_PrimaryStat02Parts'
+set GD_Hovercraft_Items_Orchid.Hovercraft.Skin_HexOrng MaterialParts ItemPartListDefinition'GD_ClassMods.StatPenalty.Z_PartsList_StatPenaltyParts'
+
+
+set GD_Hovercraft_Items_Orchid.Hovercraft.Skin_HexOrng InventoryClass Class'WillowGame.WillowClassMod'
+set GD_Hovercraft_Items_Orchid.Hovercraft.Skin_HexOrng bIsConsumable False
+set GD_Hovercraft_Items_Orchid.Hovercraft.Skin_HexOrng PickupFlagIcon Texture2D'fx_shared_items.Textures.CommDeck_Dif'
+set GD_Hovercraft_Items_Orchid.Hovercraft.Skin_HexOrng PickupSounds ((Event=AkEvent'Ake_Obj_Pickup.Obj_Pickup.Ak_Play_Obj_Pickup_Class_Mod',Cue=None,Expressions=))
+
+set GD_Hovercraft_Items_Orchid.Hovercraft.Skin_HexOrng PlayerUseLevelBonus (BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance_Inventory.LevelRequirement.Init_BaseGearLevelRequirementBonus',BaseValueScaleConstant=1.000000)
+
+set GD_Hovercraft_Items_Orchid.Hovercraft.Skin_HexOrng Presentation InventoryCardPresentationDefinition'GD_InventoryPresentations.Definitions.CommDeck'
+
+
+set GD_Hovercraft_Items_Orchid.Hovercraft.Skin_HexOrng Class Class'WillowGame.ClassModDefinition'
+set GD_Hovercraft_Items_Orchid.Hovercraft.Skin_HexOrng ObjectArchetype ClassModDefinition'WillowGame.Default__ClassModDefinition'
+set GD_Hovercraft_Items_Orchid.BalanceDefs.Hovercraft_Skin_HexOrng ClassModDefinitions ClassModDefinition'GD_Hovercraft_Items_Orchid.Hovercraft.Skin_HexOrng'
+
+set GD_Hovercraft_Items_Orchid.BalanceDefs.Hovercraft_Skin_HexOrng ItemPartListDefinition'GD_ClassMods.StatPrimary.Z_PartsList_PrimaryStatParts'
+set GD_Hovercraft_Items_Orchid.BalanceDefs.Hovercraft_Skin_HexOrng GammaParts ItemPartListDefinition'GD_ClassMods.StatPrimary02.Z_PartsList_PrimaryStat02Parts'
+set GD_Hovercraft_Items_Orchid.BalanceDefs.Hovercraft_Skin_HexOrng MaterialParts ItemPartListDefinition'GD_ClassMods.StatPenalty.Z_PartsList_StatPenaltyParts'
+
+====================
+|Maya Specific Code|
+====================
+set GD_Hovercraft_Items_Orchid.BalanceDefs.Hovercraft_Skin_HexOrng ItemPartListCollection GD_ItemGrades.ClassMods.BalDef_ClassMod_Siren_05_Legendary:PartList
+set GD_Hovercraft_Items_Orchid.Hovercraft.Skin_HexOrng RequiredPlayerClass PlayerClassIdentifierDefinition'GD_PlayerClassId.Siren'
+set GD_Hovercraft_Items_Orchid.Hovercraft.Skin_HexOrng UIMeshRotation (Pitch=0,Yaw=20936,Roll=3644)
+set GD_Hovercraft_Items_Orchid.Hovercraft.Skin_HexOrng PhysicsAsset PhysicsAsset'Item_ClassMods.Meshes.SirenClassMod01_Physics'
+set GD_Hovercraft_Items_Orchid.Hovercraft.Skin_HexOrng NonCompositeSkeletalMesh SkeletalMesh'Item_ClassMods.Meshes.SirenClassMod01'
+
+=============================
+|Sets Manufacturer to Bandit|
+=============================
+set GD_Hovercraft_Items_Orchid.Hovercraft.Skin_HexOrng ManufacturerOverride ManufacturerDefinition'GD_Manufacturers.Manufacturers.Bandit'
+set GD_Hovercraft_Items_Orchid.BalanceDefs.Hovercraft_Skin_HexOrng Manufacturers ((Manufacturer=ManufacturerDefinition'GD_Manufacturers.Manufacturers.Bandit',Grades=((GradeModifiers=(ExpLevel=1,CustomInventoryDefinition=None),GameStageRequirement=(MinGameStage=0,MaxGameStage=100),MinSpawnProbabilityModifier=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),MaxSpawnProbabilityModifier=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))))
+
+=====================
+|No Damage Type Icon|
+=====================
+set GD_Hovercraft_Items_Orchid.Hovercraft.Skin_HexOrng DamageTypeIcon DAMAGE_TYPE_Unknown
+
+set GD_Itempools.Runnables.Pool_Wilhelm BalancedItems ((ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_Pistol.A_Weapons_Legendary.Pistol_Hyperion_5_LogansGun',Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=None,InvBalanceDefinition=InventoryBalanceDefinition'GD_GrenadeMods.A_Item_Legendary.GM_RollingThunder',Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=None,InvBalanceDefinition=InventoryBalanceDefinition'GD_GrenadeMods.A_Item_Legendary.GM_BouncingBonny',Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=None,InvBalanceDefinition=InventoryBalanceDefinition'GD_Hovercraft_Items_Orchid.Hovercraft.Skin_HexOrng',Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',BaseValueScaleConstant=1.000000),bDropOnDeath=True))
+
+say Legendary Banshee now added to Wilhelm's loot pool.
