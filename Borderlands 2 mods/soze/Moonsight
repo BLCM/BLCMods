@@ -39,6 +39,7 @@ v3: Lowered the burst fire rate from 9 bullets to 6, this change was made after 
 v3.1: Made the description more clear and gave Credit to the original skin creator.
 v3.2: Fixed the issue where the skin didnt want to load.
 v3.5: Major rebalance; healing on zoom in has been reduced, gun damage has been lowered, burst fire has been fixed to 6 bullets instead of 7.
+v4: Fixed an issue where EVERY E-Tech gun using the RailGun FiringMode was only showing a green-blue rail instead of the supposedly railguns getting a different color decided by the element.
  
 Note:
 
@@ -61,6 +62,8 @@ set GD_Weap_SMG.Name.Title.Title__Unique_Lascaux:AttributePresentationDefinition
 # FIRING
 
 set GD_Weap_SMG.Barrel.SMG_Barrel_Bandit_Lascaux CustomFiringModeDefinition FiringModeDefinition'GD_Weap_SniperRifles.FiringModes.Bullet_RailGun'
+set GD_Weap_SniperRifles.FiringModes.Bullet_RailGun ConditionalPartSysTemplate EffectCollectionDefinition'GD_Weap_SniperRifles.Effects.SR_ETech_Tracers'
+set GD_Weap_SniperRifles.FiringModes.Bullet_RailGun PartSysTemplate ParticleSystem'FX_WEP_Trails.Particles.Alien_Part_Wep_Tracer_Alien_Sniper'
 
 # WEAPON ATTRIBUTES // STATS
 
