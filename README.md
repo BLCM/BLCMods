@@ -20,7 +20,7 @@ If you are part of [BL2CP](https://github.com/BL2CP) you do not need to fork or 
 
 To download the files click the green `Clone or Download` button in the top right.
 
-Installing the files follows methods discussed on the [Wiki](https://github.com/BL2CP/BLCMods/wiki/Tutorial-01:-Accessing-Console)
+Installing the files follows methods discussed on the [Wiki](https://github.com/BL2CP/BLCMods/wiki/Tutorial:-Installation)
 
 *Derch*'s Tutorial:    
 [![Derch's Install Tutorial](http://img.youtube.com/vi/HT79s6_KXqQ/0.jpg)](https://youtu.be/HT79s6_KXqQ)
