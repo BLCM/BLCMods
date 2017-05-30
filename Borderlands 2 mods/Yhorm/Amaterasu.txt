@@ -1,0 +1,40 @@
+REPLACES THE TEETH OF TERRA
+Changelog: 
+
+No changes to firing patterns, or anything like that
+Removed Splash
+BUFF to fire rate, damage AND mag size.
+Lower DoT damage
+Heals just like hail, grog nozzle and rubi
+based on level, regens your ammo.
+CREDITS:
+Mike/Soze for feedback on making this gun a bit balanced
+
+
+
+#### Name and Text ####
+set GD_Weap_Shotgun.Name.Title.Title__Unique_Teeth:AttributePresentationDefinition_8 NoConstraintText <font color="#ff0235">Ferocity of a wolf, radiant as the sun<font color="#FFFFFF"><br>- <font color="#ff355e">Heals<font color="#ffffff"> you for % damage dealt.<br>- As fast as a wolf when firing.<br>- Bigger mag, better <font color="#ff8c00">flame<font color="#f2f2f2">!<br>- No splash.
+set GD_Weap_Shotgun.Name.Title.Title__Unique_Teeth PartName Solar Amaterasu
+
+####ATTRIBUTES###
+set GD_Weap_Shotgun.FiringModes.Bullet_Shotgun_Teeth OnAnyImpact ()  
+
+set GD_Weap_Shotgun.Barrel.SG_Barrel_Torgue_Teeth ExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.DamageEnhancementModifiers.PlayerConvertDamageToHealingPercent',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.450000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+
+set GD_Weap_Shotgun.Barrel.SG_Barrel_Torgue_Teeth AttributeSlotUpgrades ((SlotName="WeaponDamage",GradeIncrease=16,bActivateSlot=True),(SlotName="WeaponFireRate",GradeIncrease=40,bActivateSlot=True))
+
+set GD_Weap_Shotgun.Barrel.SG_Barrel_Torgue_Teeth WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=40.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=14.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponStatusEffectChanceModifier',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponStatusEffectDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-0.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+set GD_weap_Shotgun.Barrel.SG_Barrel_Torgue_Teeth ExternalAttributeEffects ((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Combat_Shotgun.Ammo_Combat_Shotgun_RegenerationRate',ConstraintAttribute=None,ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.250000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.AmmoResource_Combat_Shotgun.Ammo_Combat_Shotgun_RegenerationRate',ConstraintAttribute=None,ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Artifacts.BalanceAttributes.Init_ModifierBase_Linear',BaseValueScaleConstant=0.010000),PerGradeUpgrade=(BaseValueConstant=0.002000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=-1.000000),bIncludeInFunStats=False,bIncludeAlliesAsTarget=False,bEnforceMinimumGrade=False,bEnforceMaximumGrade=False,MinimumGrade=0,MaximumGrade=12,TargetInstanceDataName=))) 
+
+####SKIN####
+
+set Common_GunMaterials.Materials.Shotgun.Mati_BanditUniqueSG_Teeth TextureParameterValues ((ParameterName="p_Masks",ParameterValue=Texture2D'Weap_Shotguns.Tex.Weap_Shotgun_Comp',ExpressionGUID=(A=-330624041,B=1167251458,C=-335191907,D=-166684394)),(ParameterName="p_Diffuse",ParameterValue=Texture2D'Common_GunMaterials.CompTextures.Weap_LauncherShotgunPistol_Comp',ExpressionGUID=(A=1757607260,B=1326539502,C=-317215581,D=-565807463)),(ParameterName="p_NormalScopesEmissive",ParameterValue=Texture2D'Weap_Shotguns.Tex.Weap_Shotgun_Nor',ExpressionGUID=(A=-1743872746,B=1126171774,C=119496871,D=-1952271718)),(ParameterName="p_Pattern",ParameterValue=Texture2D'Common_GunMaterials.Logos.BanditEpicDecal',ExpressionGUID=(A=534250533,B=1202550002,C=1578302861,D=-717876416)))
+
+set Common_GunMaterials.Materials.Shotgun.Mati_BanditUniqueSG_Teeth VectorParameterValues ((ParameterName="p_AColorHilight",ParameterValue=(R=1.000000,G=1.000000,B=1.000000,A=1.000000),ExpressionGUID=(A=759765673,B=1280874949,C=257367956,D=-932702788)),(ParameterName="p_AColorMidtone",ParameterValue=(R=2.000000,G=2.000000,B=2.000000,A=1.000000),ExpressionGUID=(A=110180441,B=1232792373,C=-1232281417,D=-1030626065)),(ParameterName="p_AColorShadow",ParameterValue=(R=1.000000,G=1.000000,B=1.000000,A=1.000000),ExpressionGUID=(A=716329441,B=1214803259,C=-238071112,D=-1004122047)),(ParameterName="p_BColorHilight",ParameterValue=(R=1.292843,G=0.045414,B=0.000000,A=1.000000),ExpressionGUID=(A=384292798,B=1221323751,C=-2145405772,D=1872194118)),(ParameterName="p_BColorMidtone",ParameterValue=(R=4.000000,G=4.000000,B=4.000000,A=1.000000),ExpressionGUID=(A=1102826245,B=1256298978,C=-1429881438,D=-507521102)),(ParameterName="p_BColorShadow",ParameterValue=(R=1.000000,G=1.000000,B=1.000000,A=1.000000),ExpressionGUID=(A=1481234158,B=1129012376,C=-688827739,D=-2119135160)),(ParameterName="p_CColorHilight",ParameterValue=(R=2.500000,G=2.500000,B=2.500000,A=1.000000),ExpressionGUID=(A=759765673,B=1280874949,C=257367956,D=-932702788)),(ParameterName="p_CColorMidtone",ParameterValue=(R=0.146911,G=0.000000,B=0.000178,A=1.000000),ExpressionGUID=(A=110180441,B=1232792373,C=-1232281417,D=-1030626065)),(ParameterName="p_CColorShadow",ParameterValue=(R=0.001678,G=0.006916,B=0.050797,A=1.000000),ExpressionGUID=(A=716329441,B=1214803259,C=-238071112,D=-1004122047)),(ParameterName="p_PatternScalePosition",ParameterValue=(R=0.000000,G=0.000000,B=0.000000,A=3.643300),ExpressionGUID=(A=-2005018406,B=1132497243,C=-39915121,D=208423616))
+
+
+
+
+
