@@ -1,8 +1,8 @@
 
 This folder contains mods that are related to Krieg
 
- 1. Mods to mess around with(aka they may be unbalanced and/or broken)
- ------
+ ##1. Mods to mess around with(aka they may be unbalanced and/or broken)
+
 
 	HH.txt- makes it so that Hellfire Halitosis is affected by melee damage
 
@@ -13,9 +13,9 @@ This folder contains mods that are related to Krieg
 	increases the final explosion damage by twice, and the thrown dynamite by 3.6 times but its also changed to rocket splash instead of grenade splash. also increases the thrown dynamite's radius by a bit
 	
 	intended for non-explosive Kriegs who still want to have some fun, using this with an Explosive Krieg will most likely be broken/op
-	
- 2. Krieg Tweaks(fixes?)
- ------
+
+ ##2. Krieg Tweaks(fixes?)
+ 
  
 	StV.txt- Included in Community Patch 3.0!
 	
@@ -60,12 +60,12 @@ This folder contains mods that are related to Krieg
 	
 	and no Im not stealing anything because Im the one who brought it back in the first place :P
  
- 2-1. Krieg Skins
- ------
+ ##2-1. Krieg Skins
+
  
-	⋅⋅* DarkLeaksOuttaMe
+	DarkLeaksOuttaMe
 	
-	⋅⋅* PickTheScav
+	PickTheScav
 	
 	makes each have a similar color scheme to Black As Day skin
 	
