@@ -1,0 +1,44 @@
+//Buffs the seeker. We should all use this gun. It fucking sucks in the vanilla game and you know it. 
+//Fires normal projectiles with a multiplier. 
+//Changes listed below.
+//REQUIRES DRAGON KEEP DLC.
+##CHANGES:
+##	Increased firerate.
+##	Different (not new, don't mix those up) skin
+##	increased magsize.
+##	awful accuracy but that allows you to hit more enemies because of the 20x projectiles
+##	amped damage
+##	new name
+##	fixed red text colour
+##	Actually worth seraph crystals now.
+##	If I could fix the seeking projectiles, I would. Unfortunately I'm not that skilled at making mods yet.
+##Use this Gibbed code for best results ;): BL2(hwAAAAA50wmDRoALCQEF1GIgxEAAMAHDIYb///////8rANRAMgDw)
+##END OF CHANGELOG##
+
+-##CODE
+
+##WEAPON BEHAVIOUR
+set GD_Aster_RaidWeapons.AssaultRifles.AR_Barrel_Vladof_Seeker WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=4.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=3.750000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=4.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=19.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=10.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponReloadSpeed',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-2.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-5.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+##NAME AND RED TEXT
+set GD_Aster_RaidWeapons.AssaultRifles.Aster_Seraph_Seeker_Title PartName mister fister
+
+set GD_Aster_RaidWeapons.AssaultRifles.Aster_Seraph_Seeker_Title:AttributePresentationDefinition_8 NoConstraintText <font color="#ff0235">Oh, yeah, that's fair...<font color="#FFFFFF">
+
+##SKIN
+set GD_Aster_RaidWeapons.ManufacturerMaterials.Mat_Torgue_5_Seeker Material MaterialInstanceConstant 'Aster_GunMaterials.Materials.AssaultRifle.Mati_Vladof_Garnet_AR'
+
+##FIRING MODE
+set GD_Aster_RaidWeapons.AssaultRifles.AR_Barrel_Vladof_Seeker CustomFiringModeDefinition FiringModeDefinition 'GD_Aster_RaidWeapons.AssaultRifles.Bullet_Pistol_Seeker_Homing'
+
+##RARITY
+set GD_Aster_RaidWeapons.AssaultRifles.AR_Barrel_Vladof_Seeker rarity (basevalueattribute=none)
+
+set GD_Aster_RaidWeapons.AssaultRifles.AR_Barrel_Vladof_Seeker rarity (BaseValueConstant=496)
+
+##BARREL
+set GD_Aster_RaidWeapons.AssaultRifles.AR_Barrel_Vladof_Seeker GestaltModeSkeletalMeshName AR_Barrel_Alien
+
+##PREFIX WITH THE GIBBED CODE
+set GD_Weap_Shared_Names.Name.Prefix_Torgue.Prefix_Grip_Torgue PartName thicc
+
