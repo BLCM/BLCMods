@@ -4,7 +4,6 @@ This folder contains mods that are related to Krieg
  1. Mods to mess around with(aka they may be unbalanced and/or broken)
 
 	HH.txt- makes it so that Hellfire Halitosis is affected by melee damage
-	
 	kinda broken on Mania Hellborn, but Bloodlust Hellborn shouldnt be affected that much
 
 	LtF.txt- with Community patch 3.0 this will not work!
