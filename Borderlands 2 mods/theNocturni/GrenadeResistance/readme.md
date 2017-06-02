@@ -8,5 +8,5 @@
   
 	Saturn.txt, Constructor.txt, and Raidboss.txt removes the grenade resistance of Saturn, Constructors, and Terra/Vermi respectively
 	
-  All.txt removes it for all of them.
+	All.txt removes it for all of them.
   
