@@ -12,12 +12,12 @@ Increased reload speed.
 Increased fire rate.
 Increased accuracy.
 Projectiles no longer difficult to manage.
-May or may not drive you insane.
 
 Paintjob reminiscent of scribbles inside of an asylum room.
 
 NOTE:
 If using S&S Forever, activate this file after S&S Forever if you want to use this weapon instead of the S&S "Serpens".
+There is an option to enable the Bane's SFX on the Madhous at the bottom.
 ########
 
 set GD_Weap_AssaultRifle.Name.Title_Bandit.Title_Legendary_Madhouse PartName Madhous!
@@ -30,10 +30,6 @@ set GD_Weap_AssaultRifle.FiringModes.Bullet_Assault_Bandit_Madhouse BeamTraceNum
 set GD_Weap_AssaultRifle.FiringModes.Bullet_Assault_Bandit_Madhouse NumRicochets 2
 set GD_Weap_AssaultRifle.FiringModes.Bullet_Assault_Bandit_Madhouse Speed 25000.000000
 set GD_Weap_AssaultRifle.FiringModes.Bullet_Assault_Bandit_Madhouse BasePatternSpread 0.000000
-
-
-set GD_Weap_AssaultRifle.Barrel.AR_Barrel_Bandit_Madhouse BehaviorProviderDefinition BehaviorProviderDefinition'GD_Weap_SMG.Barrel.SMG_Barrel_Dahl_Bane:BehaviorProviderDefinition_20'
-set GD_Weap_AssaultRifle.FiringModes.Bullet_Assault_Bandit_Madhouse SoundDefinition FiringModeSoundDefinition'GD_Weap_SMG.FiringModes.TheBane_SoundDefinition'
 
 
 
@@ -66,10 +62,22 @@ set Common_GunMaterials.Materials.AssaultRifle.Mati_BanditLegendaryAR ScalarPara
 
 
 
-----------
+
 
 set GD_Weap_AssaultRifle.Name.Title_Bandit.Title_Legendary_Madhouse PartName Madhous!
 
 set GD_Weap_AssaultRifle.Name.Title_Bandit.Title_Legendary_Madhouse:AttributePresentationDefinition_8 NoConstraintText It's a madhouse! A MADHOUSE!!!
 
 set GD_Weap_AssaultRifle.A_Weapons_Legendary.AR_Bandit_5_Madhouse:WeaponPartListCollectionDefinition_35 ElementalPartData (bEnabled=True,WeightedParts=((Part=WeaponPartDefinition'GD_Weap_AssaultRifle.elemental.AR_Elemental_None',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=3),(Part=WeaponPartDefinition'GD_Weap_AssaultRifle.elemental.AR_Elemental_Fire',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=4,MaxGameStageIndex=1,DefaultWeightIndex=5),(Part=WeaponPartDefinition'GD_Weap_AssaultRifle.elemental.AR_Elemental_Corrosive',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=6,MaxGameStageIndex=1,DefaultWeightIndex=5),(Part=WeaponPartDefinition'GD_Weap_AssaultRifle.elemental.AR_Elemental_Shock',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=7,MaxGameStageIndex=1,DefaultWeightIndex=5),(Part=WeaponPartDefinition'GD_Weap_AssaultRifle.elemental.AR_Elemental_Slag',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=8,MaxGameStageIndex=1,DefaultWeightIndex=5)))
+
+
+
+
+---------
+BANE SFX
+
+Replace the # in "#et" with an s to enable.
+
+
+#et GD_Weap_AssaultRifle.Barrel.AR_Barrel_Bandit_Madhouse BehaviorProviderDefinition BehaviorProviderDefinition'GD_Weap_SMG.Barrel.SMG_Barrel_Dahl_Bane:BehaviorProviderDefinition_20'
+#et GD_Weap_AssaultRifle.FiringModes.Bullet_Assault_Bandit_Madhouse SoundDefinition FiringModeSoundDefinition'GD_Weap_SMG.FiringModes.TheBane_SoundDefinition'
