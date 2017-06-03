@@ -1,0 +1,1 @@
+This is a file for my many JavaScript programs I make. I really don't give a shit if you redistribute them as your own. I'm sure they've been made before. Anyways, Enjoy!
