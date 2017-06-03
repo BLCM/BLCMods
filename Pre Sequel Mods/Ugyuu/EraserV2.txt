@@ -23,6 +23,13 @@ I need testing to know if the Eraser actually spawns in all elements. With the C
      - Higher fire rate.
      - Slightly decreased mag size.
      - Increased chance to proc DoT (Damage Over Time)
+     - HP Regen. (It's not that high.)
+
+[Changelog]
+
+V2.0 Changed red text, added HP Regeneration.
+
+V1.0 Initial release.
 
 [Codes]
 
@@ -31,7 +38,9 @@ set GD_Weap_Pistol.A_Weapons_Legendary.Pistol_Hyperion_5_LogansGun:WeaponPartLis
 set GD_Weap_Pistol.Barrel.Pistol_Barrel_Hyperion_LogansGun AttributeSlotUpgrades ((SlotName="WeaponFireRate",GradeIncrease=27,bActivateSlot=True))
 set GD_Weap_Pistol.Barrel.Pistol_Barrel_Hyperion_LogansGun WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.200000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0.800000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.510000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=1.00000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=-6.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponStatusEffectChanceModifier',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0.670000)))
 
+set GD_Weap_Pistol.Barrel.Pistol_Barrel_Hyperion_LogansGun ExternalAttributeEffects ((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.HealthResourcePool.HealthPassiveRegenerationRate',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.075000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance_HealthAndDamage.Shields.Init_ShieldItem_BaseRegenRatePercentage',BaseValueScaleConstant=0.075000)))
+
 set GD_Weap_Pistol.Barrel.Pistol_Barrel_Hyperion_LogansGun CustomFiringModeDefinition FiringModeDefinition'GD_Shields.Misc.Bullet_Laser_Dahl_Sunshine'
 
 set GD_Weap_Pistol.Name.Title_Hyperion.Title_Legendary_LogansGun PartName Eraser
-set GD_Weap_Pistol.Name.Title_Hyperion.Title_Legendary_LogansGun:AttributePresentationDefinition_8 NoConstraintText <font color="#ff2853">Erases things. Often.<font color="#ffffff">
+set GD_Weap_Pistol.Name.Title_Hyperion.Title_Legendary_LogansGun:AttributePresentationDefinition_8 NoConstraintText <font color="#D80C0C">For removing things quickly.<font color="#ffffff">
