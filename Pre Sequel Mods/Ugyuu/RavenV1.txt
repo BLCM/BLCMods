@@ -1,0 +1,46 @@
+A patch made by:                            |
+  _    _  _____  _   _  _    _  _    _      |
+ | |  | || ____|| | | || |  | || |  | |     |
+ | |  | || | __ | \_/ || |  | || |  | |     |
+ | |  | || ||_ | \   / | |  | || |  | |     |
+ | |__| || |_| |  | |  | |__| || |__| |  _  |
+ |______||_____|  |_|  |______||______| |_| |
+                                            |
+        With help of the community.         |
+____________________________________________|
+
+Turns the Major Tom into the Raven; an old classic Dahl combat rifle from Borderlands 1.
+
+[Notes]
+
+I've only seen a major increase in fire rate when zoomed, on Raven assault rifles with a fire rate of 11.0 or higher, when compared to a 10.3 fire rate zoomed. The highest is currently 11.9, and this one has the highest burst fire rate when zoomed.
+
+I need feedback from you guys to see if it is actually too low on damage. I myself think it's a bit low in terms of DPS.
+
+[Features]
+
+     - Slightly boosted damage. (Raven with an element does a little more than a purple non-elemental now)
+     - No more wacky x3 projectile pattern from the Major Tom!
+     - Very high fire rate.
+     - Burst fires 5 rounds (with an increased fire rate when zoomed.)
+     - Slightly better reload speed.
+     - Decreased clip size.
+     - Slightly decreased clip size.
+     - Low recoil!
+
+[Changelog]
+
+V1.0 Initial release.
+
+[Codes]
+
+set gd_cork_weap_assaultrifle.Barrel.AR_Barrel_Dahl_MajorTom GestaltModeSkeletalMeshName AR_Barrel_Jakobs
+
+set gd_cork_weap_assaultrifle.Barrel.AR_Barrel_Dahl_MajorTom AttributeSlotUpgrades ((SlotName="WeaponFireRate",GradeIncrease=15,bActivateSlot=True)),((SlotName="WeaponReloadSpeed",GradeIncrease=8,bActivateSlot=True)))
+
+set gd_cork_weap_assaultrifle.FiringModes.Bullet_Assault_Dahl_MajorTom FiringPatternLines ()
+set gd_cork_weap_assaultrifle.Barrel.AR_Barrel_Dahl_MajorTom ZoomWeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=3.400000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponAutomaticBurstCount',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=-3.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponBurstInterval',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.150000,BaseValueAttribute=None',InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+set gd_cork_weap_assaultrifle.Barrel.AR_Barrel_Dahl_MajorTom WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=-0.30000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=1.00000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueConstant=-8.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0.550000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0.850000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponAutomaticBurstCount',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=5.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponBurstInterval',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.100000,BaseValueAttribute=None',InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+set gd_cork_weap_assaultrifle.Name.Title_Dahl.Title_Legendary_MajorTom PartName Raven
+set gd_cork_weap_assaultrifle.Name.Title_Dahl.Title_Legendary_MajorTom:AttributePresentationDefinition_8 NoConstraintText <font color="#ff0235">2 more bullets make all the difference<font color="#efd1a5"><br>- Burst fires<font color="#ffffff"> 5 bullets.<br>Increased<font color="#ebefa5"> fire rate<font color="ffffff"> when zoomed.<font color="ffffff"
