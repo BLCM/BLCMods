@@ -1,0 +1,156 @@
+#Locked and Loaded - replaces the Stalker and the Grog Nozzle respectively
+#Twin pistols meant to represent Salvador
+
+#!!Due to technical limitations (Butcher effect has to go on a Pearl) i had to replace the Stalker to make Locked. I can't put a custom rarity color on this sadly since for some reason changing a Pearl color makes it go white. Once i know how this can be fixed it will have the same color as Loaded!!
+
+#!!Not a Sal player at all so this really needs feedback if possible!! 
+
+#Main gun = Locked (Main weapon for all Vault Hunters)
+#Secondary gun = Loaded (Bonus weapon specifically made for Salavador's Gunzerk)
+
+#Locked#
+#Overal increased stats (Left tree)
+#Increased magazine size (Filled to the Brim)
+#Has a chance to add ammo to the clip when shooting (5 Shots or 6)
+#Low recoil (Steady as She Goes)
+#Gains fire rate the longer you hold the trigger (Keep Firing)(Reaches max after 15 seconds)
+#Grants 10% health regen (Right tree) 
+
+#Loaded#
+#Has 12 ammo in the clip, shoots 11 to have 1 left in the clip (Moneyshot)
+#Increased crit damage (Quick Draw)
+#Increased melee damage (100%)(All in the Reflexes)
+#Grants 20% cooldown reduction (I'm Already Ready)
+#Grants 20% lifesteal (Grog Nozzle replacement)
+
+###########################
+##        Locked         ##
+###########################
+
+#Locked - Name/Card#
+set GD_Gladiolus_Weapons.Name.Title.Title_Pearlescent_Stalker PartName Locked
+set GD_Gladiolus_Weapons.Name.Title.Title_Pearlescent_Stalker:AttributePresentationDefinition_8 NoConstraintText <font color="#ff0235">B IS FOR BULLETS!<font color="#FFFFFF"><br>• Has a chance to <font color="#f2e8ba">add ammo<font color="#FFFFFF"> to the<br>  clip when <font color="#f2e8ba">shooting<font color="#FFFFFF">.<br>• Gains <font color="#f2e8ba">fire rate<font color="#FFFFFF"> the longer you <font color="#f2e8ba">hold<br>  the trigger<font color="#FFFFFF">.<br>• Grants constant <font color="#ff355e">health regen<font color="#FeFFFF">.
+
+#Parts - No scopes since sal can't ADS when in gunzerk#
+set GD_Gladiolus_Weapons.Pistol.Pistol_Vladof_6_Stalker:WeaponPartListCollectionDefinition_260 SightPartData (bEnabled=True,WeightedParts=((Part=WeaponPartDefinition'GD_Weap_Pistol.Sight.Pistol_Sight_None',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=3)))
+
+#Locked - Barrel#
+set GD_Gladiolus_Weapons.Pistol.Pistol_Barrel_Stalker PrefixList ()
+
+set GD_Gladiolus_Weapons.Pistol.Pistol_Barrel_Stalker ExternalAttributeEffects ((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.HealthResourcePool.HealthPassiveRegenerationRate',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance_HealthAndDamage.Shields.Init_ShieldItem_BaseRegenRatePercentage',BaseValueScaleConstant=0.080000))
+
+set GD_Gladiolus_Weapons.Pistol.Pistol_Barrel_Stalker WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.400000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponStatusEffectChanceModifier',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.400000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=-1.000000)))
+
+set GD_Gladiolus_Weapons.Pistol.Pistol_Barrel_Stalker WeaponCardAttibutes ()
+set GD_Gladiolus_Weapons.Pistol.Pistol_Barrel_Stalker BoneControllers ()
+set GD_Gladiolus_Weapons.Pistol.Pistol_Barrel_Stalker bIsSpinningEnabled True
+set GD_Gladiolus_Weapons.Pistol.Pistol_Barrel_Stalker SpinUpDuration (BaseValueConstant=15.000000)
+set GD_Gladiolus_Weapons.Pistol.Pistol_Barrel_Stalker StartingSpinUpFireIntervalMultiplier 3.500000
+set GD_Gladiolus_Weapons.Pistol.Pistol_Barrel_Stalker SpinDownDuration (BaseValueConstant=7.000000)
+set GD_Gladiolus_Weapons.Pistol.Pistol_Barrel_Stalker GestaltModeSkeletalMeshName Pistol_Barrel_Bandit
+
+set GD_Gladiolus_Weapons.Pistol.Pistol_Barrel_Stalker AttributeSlotUpgrades ((SlotName="WeaponSpread",GradeIncrease=10,bActivateSlot=True),(SlotName="AccuracyMax",GradeIncrease=100,bActivateSlot=True),(SlotName="AccuracyMin",GradeIncrease=100,bActivateSlot=True),(SlotName="AccuracyRegen",GradeIncrease=10,bActivateSlot=True),(SlotName="WeaponAccuracyImpulse",GradeIncrease=100,bActivateSlot=True))
+
+set GD_Gladiolus_Weapons.Pistol.Pistol_Barrel_Stalker BehaviorProviderDefinition BehaviorProviderDefinition'GD_Gladiolus_Weapons.Shotgun.SG_Barrel_Torgue_Butcher:BehaviorProviderDefinition_1'
+
+#Locked - Bullet#
+set GD_Gladiolus_Weapons.FiringModes.Bullet_Pistol_Stalker OnAnyImpact ()
+set GD_Gladiolus_Weapons.FiringModes.Bullet_Pistol_Stalker bSuppressWeaponSpread True
+set GD_Gladiolus_Weapons.FiringModes.Bullet_Pistol_Stalker NumRicochets 0
+set GD_Gladiolus_Weapons.FiringModes.Bullet_Pistol_Stalker Speed 20000
+
+#Locked - Rarity#
+
+#Locked - Skin#
+set GD_Gladiolus_Weapons.ManufacturerMaterials.Mat_Vladof_6_Stalker Material MaterialInstanceConstant'Sage_GunMaterials.Materials.Pistol.Mati_JakobsUniquePistol_Rex'
+
+###########################
+##        Loaded         ##
+###########################
+
+#Loaded - Name/Card#
+set GD_Aster_Weapons.Name.Title.Title__Unique_GrogNozzle PartName Loaded
+set GD_Aster_Weapons.Name.Title.Title__Unique_GrogNozzle:AttributePresentationDefinition_8 NoConstraintText <font color="#ff0235">DOUBLE THE GODDAMN FUN!<font color="#FeFFFF"><br>• <font color="#ff355e">Heals<font color="#FeFFFF"> based on <font color="#e5d6a7">damage<font color="#FeFFFF"> dealt.
+
+#Parts - No scopes since sal can't ADS when in gunzerk#
+set GD_Aster_Weapons.Pistols.Pistol_Maliwan_3_GrogNozzle:WeaponPartListCollectionDefinition_222 SightPartData (bEnabled=True,WeightedParts=((Part=WeaponPartDefinition'GD_Weap_Pistol.Sight.Pistol_Sight_None',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=3)))
+
+#Loaded - Barrel#
+set GD_Aster_Weapons.Pistols.Pistol_Barrel_Bandit_GrogNozzle PrefixList ()
+
+set GD_Aster_Weapons.Pistols.Pistol_Barrel_Bandit_GrogNozzle ExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.GameplayAttributes.PlayerCriticalHitBonus',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=4.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.DamageEnhancementModifiers.PlayerConvertDamageToHealingPercent',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.200000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.DamageSourceModifiers.InstigatedMeleeDamageModifier',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=2.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.ActiveSkillCooldownResource.ActiveSkillCooldownConsumptionRate',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.500000)))
+
+set GD_Aster_Weapons.Pistols.Pistol_Barrel_Bandit_GrogNozzle WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponStatusEffectChanceModifier',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponReloadSpeed',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=-1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponPerShotAccuracyImpulse',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=-1000.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=12.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=9.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+set GD_Aster_Weapons.Pistols.Pistol_Barrel_Bandit_GrogNozzle BehaviorProviderDefinition None
+
+#Loaded - Bullet#
+set GD_Aster_Weapons.FiringModes.Bullet_Pistol_Maliwan_GrogNozzle OnAnyImpact (Behavior_Explode'GD_Aster_Weapons.FiringModes.Bullet_Pistol_Maliwan_GrogNozzle:Behavior_Explode_5')
+set GD_Aster_Weapons.FiringModes.Bullet_Pistol_Maliwan_GrogNozzle Speed 15000 
+set GD_Aster_Weapons.FiringModes.Bullet_Pistol_Maliwan_GrogNozzle TimerEvents ()
+
+#Loaded - Rarity#
+set GD_Aster_Weapons.Pistols.Pistol_Barrel_Bandit_GrogNozzle rarity (BaseValueConstant=55.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+
+#Loaded - Skin#
+set GD_Aster_Weapons.ManufacturerMaterials.Mat_Maliwan_3_GrogNozzle Material MaterialInstanceConstant'Lobelia_GunMaterials.Materials.Pistol.Mati_Maliwan_Pearl_Wanderlust'
+
+#Rarity List#
+set WillowGame.GlobalsDefinition RarityLevelColors ((MinLevel=0,MaxLevel=0,Color=(B=175,G=193,R=205,A=0),DropLifeSpanType=DROP_ShortLived,RarityRating=RARITY_Unknown),(MinLevel=1,MaxLevel=1,Color=(B=255,G=255,R=255,A=255),DropLifeSpanType=DROP_ShortLived,RarityRating=RARITY_Common),(MinLevel=2,MaxLevel=2,Color=(B=11,G=210,R=61,A=255),DropLifeSpanType=DROP_LongLived,RarityRating=RARITY_Uncommon),(MinLevel=3,MaxLevel=3,Color=(B=255,G=142,R=60,A=255),DropLifeSpanType=DROP_LiveForever,RarityRating=RARITY_Rare),(MinLevel=4,MaxLevel=4,Color=(B=229,G=63,R=168,A=255),DropLifeSpanType=DROP_LiveForever,RarityRating=RARITY_VeryRare),(MinLevel=5,MaxLevel=5,Color=(B=0,G=180,R=255,A=255),DropLifeSpanType=DROP_LiveForever,RarityRating=RARITY_Legendary),(MinLevel=6,MaxLevel=6,Color=(B=168,G=0,R=202,A=255),DropLifeSpanType=DROP_LiveForever,RarityRating=RARITY_VeryRare),(MinLevel=7,MaxLevel=10,Color=(B=0,G=180,R=255,A=255),DropLifeSpanType=DROP_LiveForever,RarityRating=RARITY_Legendary),(MinLevel=12,MaxLevel=15,Color=(B=50,G=0,R=230,A=255),DropLifeSpanType=DROP_LiveForever,RarityRating=RARITY_Unknown),(MinLevel=21,MaxLevel=30,Color=(B=57,G=112,R=40,A=255),DropLifeSpanType=DROP_LiveForever,RarityRating=RARITY_Seraph),(MinLevel=31,MaxLevel=40,Color=(B=255,G=28,R=149,A=255),DropLifeSpanType=DROP_LiveForever,RarityRating=RARITY_Seraph),(MinLevel=41,MaxLevel=50,Color=(B=2,G=19,R=206,A=255),DropLifeSpanType=DROP_LiveForever,RarityRating=RARITY_Seraph),(MinLevel=51,MaxLevel=60,Color=(B=0,G=131,R=255,A=255),DropLifeSpanType=DROP_LiveForever,RarityRating=RARITY_Seraph),(MinLevel=61,MaxLevel=70,Color=(B=242,G=87,R=26,A=255),DropLifeSpanType=DROP_LiveForever,RarityRating=RARITY_Seraph),(MinLevel=71,MaxLevel=80,Color=(B=37,G=35,R=178,A=255),DropLifeSpanType=DROP_LiveForever,RarityRating=RARITY_Seraph),(MinLevel=81,MaxLevel=90,Color=(B=4,G=4,R=209,A=255),DropLifeSpanType=DROP_LiveForever,RarityRating=RARITY_Seraph),(MinLevel=91,MaxLevel=100,Color=(B=247,G=128,R=205,A=255),DropLifeSpanType=DROP_LiveForever,RarityRating=RARITY_Seraph),(MinLevel=101,MaxLevel=110,Color=(B=0,G=206,R=144,A=255),DropLifeSpanType=DROP_LiveForever,RarityRating=RARITY_Seraph),(MinLevel=111,MaxLevel=120,Color=(B=6,G=214,R=229,A=255),DropLifeSpanType=DROP_LiveForever,RarityRating=RARITY_Seraph),(MinLevel=171,MaxLevel=175,Color=(B=71,G=71,R=207,A=255),DropLifeSpanType=DROP_ShortLived,RarityRating=RARITY_Unknown),(MinLevel=176,MaxLevel=180,Color=(B=167,G=199,R=255,A=0),DropLifeSpanType=DROP_ShortLived,RarityRating=RARITY_Unknown),(MinLevel=181,MaxLevel=499,Color=(B=13,G=255,R=255,A=0),DropLifeSpanType=DROP_ShortLived,RarityRating=RARITY_Unknown),(MinLevel=500,MaxLevel=500,Color=(B=255,G=255,R=0,A=0),DropLifeSpanType=DROP_LiveForever,RarityRating=RARITY_Unknown),(MinLevel=501,MaxLevel=501,Color=(B=184,G=154,R=255,A=0),DropLifeSpanType=DROP_LiveForever,RarityRating=RARITY_Seraph),(MinLevel=502,MaxLevel=502,Color=(B=255,G=255,R=255,A=0),DropLifeSpanType=DROP_LiveAsLongAsLevel,RarityRating=RARITY_Unknown),(MinLevel=503,MaxLevel=503,Color=(B=200,G=50,R=145,A=255),DropLifeSpanType=DROP_LiveForever,RarityRating=RARITY_Unknown),(MinLevel=504,MaxLevel=504,Color=(B=255,G=255,R=0,A=0),DropLifeSpanType=DROP_VeryShortLived,RarityRating=RARITY_Unknown))
+
+21-30 Axton    (MinLevel=21,MaxLevel=30,Color=(B=57,G=112,R=40,A=255),DropLifeSpanType=DROP_LiveForever,RarityRating=RARITY_Seraph)
+31-40 Maya     (MinLevel=31,MaxLevel=40,Color=(B=255,G=28,R=149,A=255),DropLifeSpanType=DROP_LiveForever,RarityRating=RARITY_Seraph)
+41-50 Zero     (MinLevel=41,MaxLevel=50,Color=(B=2,G=19,R=206,A=255),DropLifeSpanType=DROP_LiveForever,RarityRating=RARITY_Seraph)
+51-60 Salvador (MinLevel=51,MaxLevel=60,Color=(B=0,G=131,R=255,A=255),DropLifeSpanType=DROP_LiveForever,RarityRating=RARITY_Seraph)
+61-70 Gaige    (MinLevel=61,MaxLevel=70,Color=(B=242,G=87,R=26,A=255),DropLifeSpanType=DROP_LiveForever,RarityRating=RARITY_Seraph)
+71-80 Krieg    (MinLevel=71,MaxLevel=80,Color=(B=37,G=35,R=178,A=255),DropLifeSpanType=DROP_LiveForever,RarityRating=RARITY_Seraph)
+
+81-90 Athena     (MinLevel=81,MaxLevel=90,Color=(B=4,G=4,R=209,A=255),DropLifeSpanType=DROP_LiveForever,RarityRating=RARITY_Seraph)
+91-100 Nisha     (MinLevel=91,MaxLevel=100,Color=(B=247,G=128,R=205,A=255),DropLifeSpanType=DROP_LiveForever,RarityRating=RARITY_Seraph)
+101-110 Wilhelm  (MinLevel=101,MaxLevel=110,Color=(B=0,G=206,R=144,A=255),DropLifeSpanType=DROP_LiveForever,RarityRating=RARITY_Seraph)
+111-120 Claptrap (MinLevel=111,MaxLevel=120,Color=(B=6,G=214,R=229,A=255),DropLifeSpanType=DROP_LiveForever,RarityRating=RARITY_Seraph)
+121-130 Jack     (MinLevel=121,MaxLevel=130,Color=(B=6,G=214,R=229,A=255),DropLifeSpanType=DROP_LiveForever,RarityRating=RARITY_Seraph)
+131-140 Aurelia  (MinLevel=131,MaxLevel=140,Color=(B=6,G=214,R=229,A=255),DropLifeSpanType=DROP_LiveForever,RarityRating=RARITY_Seraph)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
