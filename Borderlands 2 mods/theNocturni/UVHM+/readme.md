@@ -47,6 +47,7 @@ description of each module:
       -(hopefully) increases enemy accuracy
       -reduces enemy gun damage and DoT damage a bit to compensate for much better guns and more frequent DoTs
       -Improves world drop lootpool so that youd have a better chance for blue/purple/legendary, and less whites
+      -improves the homing capability of Impaler
 
     2.UVHM+(Speed).txt
       -whats in UVHM+.txt
