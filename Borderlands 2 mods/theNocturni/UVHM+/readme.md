@@ -1,6 +1,14 @@
 how to install in installation.txt
 
-description of each module: 
+###pre-made files###
+
+PatchExtreme is community patch 3.0 merged with EnemyEnhancerExtreme,BadassifyExtreme,and Vendor+
+
+PatchRegular is community patch 3.0 merged with EnemyEnhancer,Badassify,and Vendor+
+     
+with these, you only need to choose which version of uvhm+.txt you want to use, and execute both(uvhm+.txt should be executed after the patchfile) in the console
+
+###description of each module###
 
 #Enemy Enhancer (hotfix)
 
