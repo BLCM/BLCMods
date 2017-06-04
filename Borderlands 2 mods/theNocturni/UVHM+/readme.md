@@ -1,6 +1,6 @@
 how to install in installation.txt
 
-###pre-made files###
+###pre-merged files###
 
 PatchExtreme is community patch 3.0 merged with EnemyEnhancerExtreme,BadassifyExtreme,and Vendor+
 
