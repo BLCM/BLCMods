@@ -1,6 +1,6 @@
 #Gears
 
-currently contains 2 custom weapons and 1 existing gear change
+currently contains 2 custom weapons and 2 existing gear change
 
 
 -custom weapons
@@ -25,3 +25,7 @@ currently contains 2 custom weapons and 1 existing gear change
 	  makes regular boosters and Big Boom Blaster booster auto-pickup, but halves the shield regen to make up for it
   
 	  WTF now shoots out two boosters instead of one to compensate for lessened shield regen(you still cant auto-pick up WTF boosters as itd prevent it from shooting out the shock grenades)
+	  
+	2. LessBlindingFotFH.txt
+	
+	  lessens the nova effects of FotFH-will most likely affect all Fire Novas unfortunately
