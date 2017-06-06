@@ -1,0 +1,224 @@
+* Property dump for object 'ShieldDefinition GD_Shields.A_Item.Shield_Chimera' ***
+= ShieldDefinition properties ===
+ShieldType=SHT_Chimera
+ShieldPrimeMechanism=SPM_PrimedWhenNotEmpty
+ShieldTypeFlashFrameName=chimera
+PrimedFlashFrameName=chimera
+ShieldPhysicalMaterial=PhysicalMaterial'GD_PhysicalMaterial_Shield.PhysicalMaterials.PhysMat_GenericShield'
+= EquipableItemDefinition properties ===
+DamageTypeIcon=DAMAGE_TYPE_Unknown
+= ItemDefinition properties ===
+VfTable_IIBehaviorProvider=
+VfTable_IIConstructObject=
+DroppedImpact=WillowImpactDefinition'GD_Impacts.Loot.Loot_Drop_Ammo'
+UseFailureCharacterMessage=You must be a %s to use this item.
+ItemName=Orb Shield
+bItemNameIsFullName=False
+bUseMeshCompositing=True
+NonCompositeStaticMesh=None
+NonCompositeSkeletalMesh=None
+OverrideMaterial=None
+GestaltMesh=GestaltSkeletalMeshDefinition'Item_Shields.Gestalt.GestaltDef_Shields'
+AlphaParts=ItemPartListDefinition'GD_Shields.Body.PartsList_Body_Chimera'
+BetaParts=ItemPartListDefinition'GD_Shields.Battery.PartsList_Battery_Standard'
+GammaParts=ItemPartListDefinition'GD_Shields.Capacitor.PartsList_Capacitor_Chimera'
+DeltaParts=ItemPartListDefinition'GD_Shields.Accessory.PartsList_Accessory_Chimera'
+EpsilonParts=None
+ZetaParts=None
+EtaParts=None
+ThetaParts=None
+MaterialParts=ItemPartListDefinition'GD_Shields.Material.PartsList_Materials_Chimera'
+BehaviorProviderDefinition=BehaviorProviderDefinition'GD_Shields.A_Item.Shield_Chimera:BehaviorProviderDefinition_5'
+Behaviors=(OnUsed=)
+ExternalAttributeEffects(0)=(AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.ShieldResourcePool.ShieldMaxValue',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance_HealthAndDamage.Shields.Init_ShieldItem_CapacityMaxValue',BaseValueScaleConstant=1.000000))
+ExternalAttributeEffects(1)=(AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.ShieldResourcePool.ShieldOnIdleRegenerationDelay',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'GD_Shields.Misc.Att_UniversalShieldBaseDelayConstant',InitializationDefinition=None,BaseValueScaleConstant=1.000000))
+ExternalAttributeEffects(2)=(AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.ShieldResourcePool.ShieldOnIdleRegenerationRate',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance_HealthAndDamage.Shields.Init_ShieldItem_BaseRegenRatePercentage',BaseValueScaleConstant=1.000000))
+CustomPresentations(0)=AttributePresentationDefinition'GD_Shields.A_Item.Shield_Chimera:AttributePresentationDefinition_0'
+RequiredPlayerClass=None
+PickupIconOverride=None
+= WillowInventoryDefinition properties ===
+InventoryClass=Class'WillowGame.WillowShield'
+bAutomaticallyPickup=False
+bPickupInBulk=False
+bDisallowAIFromGrabbingPickup=False
+bDuplicatePickupJustAddsQuantity=False
+bSuppressPickupCard=False
+bTorque=False
+bNeverDisplayPickupMessage=False
+bShopsHaveInfiniteQuantity=False
+bCanCompare=True
+bUsesPlayerLevelRequirement=True
+bUIMeshRotationNeedsTransformFixup=False
+bIsConsumable=False
+bAllowInventoryDefToModifyPartWeight=False
+PlayerDroppability=EPD_Droppable
+FormOfCurrency=CURRENCY_Credits
+OnUseConstraintsMode=EXPRMODE_And
+AttributeSlotEffectMode=ATTRSLOTEFFECTMODE_Default
+PickupLifeSpan=0.000000
+PickupFlagScale=1.000000
+PickupFlagIcon=Texture2D'fx_shared_items.Textures.ItemCards.Shield'
+PickupFlagOffset=(X=0.000000,Y=9.000000,Z=-4.000000)
+Torque=(X=0.000000,Y=0.000000,Z=0.000000)
+ThirdPersonMeshScale=1.000000
+PickupSounds(0)=(Event=AkEvent'Ake_Obj_Pickup.Obj_Pickup.Ak_Play_Obj_Pickup_Shield',Cue=None,Expressions=)
+MaterialClass=Class'Engine.MaterialInstanceConstant'
+PhysicsAsset=PhysicsAsset'Item_Shields.Physics.Phat_Shield'
+PickupMessage=Acquired a Basic Orb Shield
+UseFailureLevelMessage=You must be at least level %d to use this item.
+UseFailureConstraintsMessage=You cannot use this item.
+NoManufacturerName=Generic
+BaseRarity=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+MonetaryValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Economy.PriceCalc.Init_Shields_Chimera_PriceCalculator',BaseValueScaleConstant=1.000000)
+BaseMonetaryValueModifier=1.000000
+PlayerUseLevelBonus=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance_Inventory.LevelRequirement.Init_BaseGearLevelRequirementBonus',BaseValueScaleConstant=1.000000)
+UIStatList(0)=(bDisplayAsModifierOnly=False,AttributeStyle=ATTRSTYLE_JustNumber,SupplementalAttributeStyle=ATTRSTYLE_JustNumber,StatCombinationMethod=SCM_Multiply,Attribute=ResourcePoolAttributeDefinition'D_Attributes.ShieldResourcePool.ShieldMaxValue',ConstraintAttribute=None,SupplementalAttributeExpression=(AttributeOperand1=None,ComparisonOperator=OPERATOR_EqualTo,Operand2Usage=OPERAND_PreferAttribute,AttributeOperand2=None,ConstantOperand2=0.000000),SupplementalAttributeToAppend=None)
+UIStatList(1)=(bDisplayAsModifierOnly=False,AttributeStyle=ATTRSTYLE_JustNumber,SupplementalAttributeStyle=ATTRSTYLE_JustNumber,StatCombinationMethod=SCM_Multiply,Attribute=ResourcePoolAttributeDefinition'D_Attributes.ShieldResourcePool.ShieldOnIdleRegenerationRate',ConstraintAttribute=None,SupplementalAttributeExpression=(AttributeOperand1=None,ComparisonOperator=OPERATOR_EqualTo,Operand2Usage=OPERAND_PreferAttribute,AttributeOperand2=None,ConstantOperand2=0.000000),SupplementalAttributeToAppend=None)
+UIStatList(2)=(bDisplayAsModifierOnly=False,AttributeStyle=ATTRSTYLE_JustNumber,SupplementalAttributeStyle=ATTRSTYLE_JustNumber,StatCombinationMethod=SCM_Multiply,Attribute=ResourcePoolAttributeDefinition'D_Attributes.ShieldResourcePool.ShieldOnIdleRegenerationDelay',ConstraintAttribute=None,SupplementalAttributeExpression=(AttributeOperand1=None,ComparisonOperator=OPERATOR_EqualTo,Operand2Usage=OPERAND_PreferAttribute,AttributeOperand2=None,ConstantOperand2=0.000000),SupplementalAttributeToAppend=None)
+UIStatList(3)=(bDisplayAsModifierOnly=False,AttributeStyle=ATTRSTYLE_ModifierText,SupplementalAttributeStyle=ATTRSTYLE_JustNumber,StatCombinationMethod=SCM_Multiply,Attribute=DesignerAttributeDefinition'GD_Shields.Misc.Att_ChimeraShield_Resistance',ConstraintAttribute=None,SupplementalAttributeExpression=(AttributeOperand1=None,ComparisonOperator=OPERATOR_EqualTo,Operand2Usage=OPERAND_PreferAttribute,AttributeOperand2=None,ConstantOperand2=0.000000),SupplementalAttributeToAppend=None)
+UIStatList(4)=(bDisplayAsModifierOnly=False,AttributeStyle=ATTRSTYLE_ModifierText,SupplementalAttributeStyle=ATTRSTYLE_JustNumber,StatCombinationMethod=SCM_Multiply,Attribute=ResourcePoolAttributeDefinition'D_Attributes.HealthResourcePool.HealthMaxValue',ConstraintAttribute=None,SupplementalAttributeExpression=(AttributeOperand1=None,ComparisonOperator=OPERATOR_EqualTo,Operand2Usage=OPERAND_PreferAttribute,AttributeOperand2=None,ConstantOperand2=0.000000),SupplementalAttributeToAppend=None)
+UIMeshRotation=(Pitch=0,Yaw=32768,Roll=32768)
+Presentation=InventoryCardPresentationDefinition'GD_InventoryPresentations.Definitions.Shield'
+CalloutDefinition=None
+PickedUpStatID=None
+PurchasedStatID=STAT_PLAYER_SHIELD_PURCHASED
+FocusRadius=55.000000
+FocusOffset=(X=-0.400000,Y=-0.075000,Z=0.000000)
+AttributeSlotEffectSkillDuration=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+AttributeSlotBaseGrade=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+AttributeSlotMaxActivated=19
+AttributeSlotEffects(0)=(SlotName="Capacity",bExternalSlot=True,bRunEffectsAsSkill=False,AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.ShieldResourcePool.ShieldMaxValue',ConstraintAttribute=None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),PerGradeUpgrade=(BaseValueConstant=0.030000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bIncludeInFunStats=False,bIncludeAlliesAsTarget=False,bEnforceMinimumGrade=False,bEnforceMaximumGrade=False,MinimumGrade=0,MaximumGrade=0,TargetInstanceDataName=)
+AttributeSlotEffects(1)=(SlotName="RechargeRate",bExternalSlot=True,bRunEffectsAsSkill=False,AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.ShieldResourcePool.ShieldOnIdleRegenerationRate',ConstraintAttribute=None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),PerGradeUpgrade=(BaseValueConstant=0.030000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bIncludeInFunStats=False,bIncludeAlliesAsTarget=False,bEnforceMinimumGrade=False,bEnforceMaximumGrade=False,MinimumGrade=0,MaximumGrade=0,TargetInstanceDataName=)
+AttributeSlotEffects(2)=(SlotName="RechargeDelay",bExternalSlot=True,bRunEffectsAsSkill=False,AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.ShieldResourcePool.ShieldOnIdleRegenerationDelay',ConstraintAttribute=None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),PerGradeUpgrade=(BaseValueConstant=-0.040000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bIncludeInFunStats=False,bIncludeAlliesAsTarget=False,bEnforceMinimumGrade=False,bEnforceMaximumGrade=False,MinimumGrade=0,MaximumGrade=0,TargetInstanceDataName=)
+AttributeSlotEffects(3)=(SlotName="Special01",bExternalSlot=True,bRunEffectsAsSkill=False,AttributeToModify=DesignerAttributeDefinition'GD_Shields.Misc.Att_ChimeraShield_Resistance',ConstraintAttribute=None,ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=-0.250000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),PerGradeUpgrade=(BaseValueConstant=-0.013000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bIncludeInFunStats=False,bIncludeAlliesAsTarget=False,bEnforceMinimumGrade=True,bEnforceMaximumGrade=False,MinimumGrade=-15,MaximumGrade=0,TargetInstanceDataName=)
+AttributeSlotEffects(4)=(SlotName="Special02",bExternalSlot=True,bRunEffectsAsSkill=True,AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.HealthResourcePool.HealthMaxValue',ConstraintAttribute=None,ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance_HealthAndDamage.HealthAndDamage.Init_HealthBonusFromShields_Formula',BaseValueScaleConstant=0.200000),PerGradeUpgrade=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance_HealthAndDamage.HealthAndDamage.Init_HealthBonusFromShields_Formula',BaseValueScaleConstant=0.011000),bIncludeInFunStats=False,bIncludeAlliesAsTarget=False,bEnforceMinimumGrade=True,bEnforceMaximumGrade=False,MinimumGrade=-15,MaximumGrade=0,TargetInstanceDataName=)
+AttributeSlotUpgrades(0)=(SlotName="Capacity",GradeIncrease=0,bActivateSlot=True)
+AttributeSlotUpgrades(1)=(SlotName="RechargeRate",GradeIncrease=0,bActivateSlot=True)
+AttributeSlotUpgrades(2)=(SlotName="RechargeDelay",GradeIncrease=0,bActivateSlot=True)
+AttributeSlotUpgrades(3)=(SlotName="Special01",GradeIncrease=0,bActivateSlot=True)
+AttributeSlotUpgrades(4)=(SlotName="Special02",GradeIncrease=0,bActivateSlot=True)
+AttributeSlotUpgrades(5)=(SlotName="MaxHealth",GradeIncrease=0,bActivateSlot=False)
+LootBeamColorOverride=(B=0,G=0,R=0,A=0)
+= Object properties ===
+VfTableObject=
+HashNext=
+ObjectFlags=
+HashOuterNext=
+StateFrame=
+Linker=None
+LinkerIndex=
+ObjectInternalInteger=109988
+NetIndex=3641
+Outer=Package'GD_Shields.A_Item'
+Name=Shield_Chimera
+Class=Class'WillowGame.ShieldDefinition'
+ObjectArchetype=ShieldDefinition'WillowGame.Default__ShieldDefinition'
+
+* Property dump for object 'BehaviorProviderDefinition GD_Shields.A_Item.Shield_Chimera:BehaviorProviderDefinition_5' ***
+= BehaviorProviderDefinition properties ===
+CurrentVersion=10
+BehaviorSequences(0)=(BehaviorSequenceName="Default",bEnabledOnSpawn=True,bSequenceEnabledMutex=False,CustomEnableCondition=None,EventData=,EventData2=((UserData=(EventName="OnDamageResistanceTypeChanged",bEnabled=True,bReplicate=False,MaxTriggerCount=0,ReTriggerDelay=0.000000,FilterObject=None),OutputVariables=(ArrayIndexAndLength=196610),OutputLinks=(ArrayIndexAndLength=65537))),BehaviorData=,BehaviorData2=((Behavior=Behavior_SetShieldTriggeredState'GD_Shields.A_Item.Shield_Chimera:BehaviorProviderDefinition_5.Behavior_SetShieldTriggeredState_6',LinkedVariables=(ArrayIndexAndLength=1),OutputLinks=(ArrayIndexAndLength=0)),(Behavior=Behavior_CompareObject'GD_Shields.A_Item.Shield_Chimera:BehaviorProviderDefinition_5.Behavior_CompareObject_2',LinkedVariables=(ArrayIndexAndLength=65538),OutputLinks=(ArrayIndexAndLength=1))),VariableData=((Name=,Type=BVAR_Object),(Name=,Type=BVAR_Object),(Name=,Type=BVAR_Object)),ConsolidatedOutputLinkData=((LinkIdAndLinkedBehavior=16777216,ActivateDelay=0.000000),(LinkIdAndLinkedBehavior=1,ActivateDelay=0.000000)),ConsolidatedVariableLinkData=((PropertyName="Context",VariableLinkType=BVARLINK_Context,ConnectionIndex=0,LinkedVariables=(ArrayIndexAndLength=1),CachedProperty=None),(PropertyName="ObjectA",VariableLinkType=BVARLINK_Input,ConnectionIndex=0,LinkedVariables=(ArrayIndexAndLength=65537),CachedProperty=None),(PropertyName="ObjectB",VariableLinkType=BVARLINK_Input,ConnectionIndex=0,LinkedVariables=(ArrayIndexAndLength=131073),CachedProperty=None),(PropertyName="ShieldOwner",VariableLinkType=BVARLINK_Output,ConnectionIndex=0,LinkedVariables=(ArrayIndexAndLength=196609),CachedProperty=None),(PropertyName="NewDamageResistanceType",VariableLinkType=BVARLINK_Output,ConnectionIndex=1,LinkedVariables=(ArrayIndexAndLength=262145),CachedProperty=None)),ConsolidatedLinkedVariables=(0,1,2,0,1))
+= Object properties ===
+VfTableObject=
+HashNext=
+ObjectFlags=
+HashOuterNext=
+StateFrame=
+Linker=None
+LinkerIndex=
+ObjectInternalInteger=113802
+NetIndex=1102
+Outer=ShieldDefinition'GD_Shields.A_Item.Shield_Chimera'
+Name=BehaviorProviderDefinition_5
+Class=Class'GearboxFramework.BehaviorProviderDefinition'
+ObjectArchetype=BehaviorProviderDefinition'GearboxFramework.Default__BehaviorProviderDefinition'
+
+* Property dump for object 'ShieldPartDefinition GD_Shields.Accessory.Accessory5_Chimera' ***
+= ItemPartDefinition properties ===
+VfTable_IIBehaviorProvider=
+PartType=IP_Delta
+TitleList(0)=ItemNamePartDefinition'GD_Shields.Titles.Title_Chimera01_ChimeraShield'
+PrefixList(0)=ItemNamePartDefinition'GD_Shields.Prefixes.Prefix_Capacity_Anshin01'
+PrefixList(1)=ItemNamePartDefinition'GD_Shields.Prefixes.Prefix_Capacity_Anshin02'
+PrefixList(2)=ItemNamePartDefinition'GD_Shields.Prefixes.Prefix_Capacity_Anshin03'
+PrefixList(3)=ItemNamePartDefinition'GD_Shields.Prefixes.Prefix_Capacity_Anshin04'
+PrefixList(4)=ItemNamePartDefinition'GD_Shields.Prefixes.Prefix_Capacity_Anshin05'
+PrefixList(5)=ItemNamePartDefinition'GD_Shields.Prefixes.Prefix_Rate_Anshin01'
+PrefixList(6)=ItemNamePartDefinition'GD_Shields.Prefixes.Prefix_Rate_Anshin02'
+PrefixList(7)=ItemNamePartDefinition'GD_Shields.Prefixes.Prefix_Rate_Anshin03'
+PrefixList(8)=ItemNamePartDefinition'GD_Shields.Prefixes.Prefix_Rate_Anshin04'
+PrefixList(9)=ItemNamePartDefinition'GD_Shields.Prefixes.Prefix_Rate_Anshin05'
+PrefixList(10)=ItemNamePartDefinition'GD_Shields.Prefixes.Prefix_Delay_Anshin01'
+PrefixList(11)=ItemNamePartDefinition'GD_Shields.Prefixes.Prefix_Delay_Anshin02'
+PrefixList(12)=ItemNamePartDefinition'GD_Shields.Prefixes.Prefix_Delay_Anshin03'
+PrefixList(13)=ItemNamePartDefinition'GD_Shields.Prefixes.Prefix_Delay_Anshin04'
+PrefixList(14)=ItemNamePartDefinition'GD_Shields.Prefixes.Prefix_Delay_Anshin05'
+PrefixList(15)=ItemNamePartDefinition'GD_Shields.Prefixes.Prefix_Balanced_Anshin'
+PrefixList(16)=ItemNamePartDefinition'GD_Shields.Prefixes.Prefix_Special_Anshin01'
+PrefixList(17)=ItemNamePartDefinition'GD_Shields.Prefixes.Prefix_Special_Anshin02'
+PrefixList(18)=ItemNamePartDefinition'GD_Shields.Prefixes.Prefix_Special_Anshin03'
+PrefixList(19)=ItemNamePartDefinition'GD_Shields.Prefixes.Prefix_Special_Anshin04'
+PrefixList(20)=ItemNamePartDefinition'GD_Shields.Prefixes.Prefix_Special_Anshin05'
+BehaviorProviderDefinition=BehaviorProviderDefinition'GD_Shields.Accessory.Accessory5_Chimera:BehaviorProviderDefinition_0'
+CustomPresentations(0)=AttributePresentationDefinition'GD_Shields.Accessory.Accessory5_Chimera:AttributePresentationDefinition_0'
+= WillowInventoryPartDefinition properties ===
+Material=None
+bIsGestaltMode=True
+GestaltModeSkeletalMeshName=Shield_Body_Anshin
+NongestaltSkeletalMesh=None
+AdditionalGestaltModeSkeletalMeshNames[0]=None
+AdditionalGestaltModeSkeletalMeshNames[1]=None
+MonetaryValueMod=None
+Rarity=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+= Object properties ===
+VfTableObject=
+HashNext=
+ObjectFlags=
+HashOuterNext=
+StateFrame=
+Linker=None
+LinkerIndex=
+ObjectInternalInteger=110059
+NetIndex=3690
+Outer=Package'GD_Shields.Accessory'
+Name=Accessory5_Chimera
+Class=Class'WillowGame.ShieldPartDefinition'
+ObjectArchetype=ShieldPartDefinition'WillowGame.Default__ShieldPartDefinition'
+
+* Property dump for object 'BehaviorProviderDefinition GD_Shields.Accessory.Accessory5_Chimera:BehaviorProviderDefinition_0' ***
+= BehaviorProviderDefinition properties ===
+CurrentVersion=10
+BehaviorSequences(0)=(BehaviorSequenceName="Default",bEnabledOnSpawn=True,bSequenceEnabledMutex=False,CustomEnableCondition=None,EventData=,EventData2=((UserData=(EventName="OnUnequipped",bEnabled=True,bReplicate=False,MaxTriggerCount=0,ReTriggerDelay=0.000000,FilterObject=None),OutputVariables=(ArrayIndexAndLength=0),OutputLinks=(ArrayIndexAndLength=1)),(UserData=(EventName="OnEquipped",bEnabled=True,bReplicate=False,MaxTriggerCount=0,ReTriggerDelay=0.000000,FilterObject=None),OutputVariables=(ArrayIndexAndLength=0),OutputLinks=(ArrayIndexAndLength=65537))),BehaviorData=,BehaviorData2=((Behavior=Behavior_ActivateSkill'GD_Shields.Accessory.Accessory5_Chimera:BehaviorProviderDefinition_0.Behavior_ActivateSkill_59',LinkedVariables=(ArrayIndexAndLength=0),OutputLinks=(ArrayIndexAndLength=0)),(Behavior=Behavior_DeactivateSkill'GD_Shields.Accessory.Accessory5_Chimera:BehaviorProviderDefinition_0.Behavior_DeactivateSkill_78',LinkedVariables=(ArrayIndexAndLength=0),OutputLinks=(ArrayIndexAndLength=0))),VariableData=,ConsolidatedOutputLinkData=((LinkIdAndLinkedBehavior=1,ActivateDelay=0.000000),(LinkIdAndLinkedBehavior=0,ActivateDelay=0.000000)),ConsolidatedVariableLinkData=,ConsolidatedLinkedVariables=)
+= Object properties ===
+VfTableObject=
+HashNext=
+ObjectFlags=
+HashOuterNext=
+StateFrame=
+Linker=None
+LinkerIndex=
+ObjectInternalInteger=110792
+NetIndex=1152
+Outer=ShieldPartDefinition'GD_Shields.Accessory.Accessory5_Chimera'
+Name=BehaviorProviderDefinition_0
+Class=Class'GearboxFramework.BehaviorProviderDefinition'
+ObjectArchetype=BehaviorProviderDefinition'GearboxFramework.Default__BehaviorProviderDefinition'
+
+* Property dump for object 'BehaviorProviderDefinition GD_Shields.Accessory.Accessory5_Chimera:BehaviorProviderDefinition_0' ***
+= BehaviorProviderDefinition properties ===
+CurrentVersion=10
+BehaviorSequences(0)=(BehaviorSequenceName="Default",bEnabledOnSpawn=True,bSequenceEnabledMutex=False,CustomEnableCondition=None,EventData=,EventData2=((UserData=(EventName="OnUnequipped",bEnabled=True,bReplicate=False,MaxTriggerCount=0,ReTriggerDelay=0.000000,FilterObject=None),OutputVariables=(ArrayIndexAndLength=0),OutputLinks=(ArrayIndexAndLength=1)),(UserData=(EventName="OnEquipped",bEnabled=True,bReplicate=False,MaxTriggerCount=0,ReTriggerDelay=0.000000,FilterObject=None),OutputVariables=(ArrayIndexAndLength=0),OutputLinks=(ArrayIndexAndLength=65537))),BehaviorData=,BehaviorData2=((Behavior=Behavior_ActivateSkill'GD_Shields.Accessory.Accessory5_Chimera:BehaviorProviderDefinition_0.Behavior_ActivateSkill_59',LinkedVariables=(ArrayIndexAndLength=0),OutputLinks=(ArrayIndexAndLength=0)),(Behavior=Behavior_DeactivateSkill'GD_Shields.Accessory.Accessory5_Chimera:BehaviorProviderDefinition_0.Behavior_DeactivateSkill_78',LinkedVariables=(ArrayIndexAndLength=0),OutputLinks=(ArrayIndexAndLength=0))),VariableData=,ConsolidatedOutputLinkData=((LinkIdAndLinkedBehavior=1,ActivateDelay=0.000000),(LinkIdAndLinkedBehavior=0,ActivateDelay=0.000000)),ConsolidatedVariableLinkData=,ConsolidatedLinkedVariables=)
+= Object properties ===
+VfTableObject=
+HashNext=
+ObjectFlags=
+HashOuterNext=
+StateFrame=
+Linker=None
+LinkerIndex=
+ObjectInternalInteger=110792
+NetIndex=1152
+Outer=ShieldPartDefinition'GD_Shields.Accessory.Accessory5_Chimera'
+Name=BehaviorProviderDefinition_0
+Class=Class'GearboxFramework.BehaviorProviderDefinition'
+ObjectArchetype=BehaviorProviderDefinition'GearboxFramework.Default__BehaviorProviderDefinition'

@@ -1,0 +1,282 @@
+*** Property dump for object 'ShieldDefinition GD_Shields.A_Item.Shield_Standard' ***
+= ShieldDefinition properties ===
+ShieldType=SHT_Standard
+ShieldPrimeMechanism=SPM_NoPrime
+ShieldTypeFlashFrameName=Generic
+PrimedFlashFrameName=
+ShieldPhysicalMaterial=PhysicalMaterial'GD_PhysicalMaterial_Shield.PhysicalMaterials.PhysMat_GenericShield'
+= EquipableItemDefinition properties ===
+DamageTypeIcon=DAMAGE_TYPE_Unknown
+= ItemDefinition properties ===
+VfTable_IIBehaviorProvider=
+VfTable_IIConstructObject=
+DroppedImpact=WillowImpactDefinition'GD_Impacts.Loot.Loot_Drop_Ammo'
+UseFailureCharacterMessage=You must be a %s to use this item.
+ItemName=Orb Shield
+bItemNameIsFullName=False
+bUseMeshCompositing=True
+TitleList(0)=ItemNamePartDefinition'GD_Shields.Titles.Title_Shield'
+NonCompositeStaticMesh=None
+NonCompositeSkeletalMesh=None
+OverrideMaterial=None
+GestaltMesh=GestaltSkeletalMeshDefinition'Item_Shields.Gestalt.GestaltDef_Shields'
+AlphaParts=ItemPartListDefinition'GD_Shields.Body.PartsList_Body_Standard'
+BetaParts=ItemPartListDefinition'GD_Shields.Battery.PartsList_Battery_Standard'
+GammaParts=ItemPartListDefinition'GD_Shields.Capacitor.PartsList_Capacitor_Standard'
+DeltaParts=ItemPartListDefinition'GD_Shields.Accessory.PartsList_Accessory_Standard'
+EpsilonParts=None
+ZetaParts=None
+EtaParts=None
+ThetaParts=None
+MaterialParts=ItemPartListDefinition'GD_Shields.Material.PartsList_Materials_NoSpecials'
+BehaviorProviderDefinition=None
+Behaviors=(OnUsed=)
+ExternalAttributeEffects(0)=(AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.ShieldResourcePool.ShieldMaxValue',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance_HealthAndDamage.Shields.Init_ShieldItem_CapacityMaxValue',BaseValueScaleConstant=1.000000))
+ExternalAttributeEffects(1)=(AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.ShieldResourcePool.ShieldOnIdleRegenerationDelay',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'GD_Shields.Misc.Att_UniversalShieldBaseDelayConstant',InitializationDefinition=None,BaseValueScaleConstant=1.000000))
+ExternalAttributeEffects(2)=(AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.ShieldResourcePool.ShieldOnIdleRegenerationRate',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance_HealthAndDamage.Shields.Init_ShieldItem_BaseRegenRatePercentage',BaseValueScaleConstant=1.000000))
+RequiredPlayerClass=None
+PickupIconOverride=None
+= WillowInventoryDefinition properties ===
+InventoryClass=Class'WillowGame.WillowShield'
+bAutomaticallyPickup=False
+bPickupInBulk=False
+bDisallowAIFromGrabbingPickup=False
+bDuplicatePickupJustAddsQuantity=False
+bSuppressPickupCard=False
+bTorque=False
+bNeverDisplayPickupMessage=False
+bShopsHaveInfiniteQuantity=False
+bCanCompare=True
+bUsesPlayerLevelRequirement=True
+bUIMeshRotationNeedsTransformFixup=False
+bIsConsumable=False
+bAllowInventoryDefToModifyPartWeight=False
+PlayerDroppability=EPD_Droppable
+FormOfCurrency=CURRENCY_Credits
+OnUseConstraintsMode=EXPRMODE_And
+AttributeSlotEffectMode=ATTRSLOTEFFECTMODE_Default
+PickupLifeSpan=0.000000
+PickupFlagScale=1.000000
+PickupFlagIcon=Texture2D'fx_shared_items.Textures.ItemCards.Shield'
+PickupFlagOffset=(X=0.000000,Y=9.000000,Z=-4.000000)
+Torque=(X=0.000000,Y=0.000000,Z=0.000000)
+ThirdPersonMeshScale=1.000000
+PickupSounds(0)=(Event=AkEvent'Ake_Obj_Pickup.Obj_Pickup.Ak_Play_Obj_Pickup_Shield',Cue=None,Expressions=)
+MaterialClass=Class'Engine.MaterialInstanceConstant'
+PhysicsAsset=PhysicsAsset'Item_Shields.Physics.Phat_Shield'
+PickupMessage=Acquired a Basic Orb Shield
+UseFailureLevelMessage=You must be at least level %d to use this item.
+UseFailureConstraintsMessage=You cannot use this item.
+NoManufacturerName=Generic
+BaseRarity=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+MonetaryValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Economy.PriceCalc.Init_Shields_Standard_PriceCalculator',BaseValueScaleConstant=1.000000)
+BaseMonetaryValueModifier=1.000000
+PlayerUseLevelBonus=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance_Inventory.LevelRequirement.Init_BaseGearLevelRequirementBonus',BaseValueScaleConstant=1.000000)
+UIStatList(0)=(bDisplayAsModifierOnly=False,AttributeStyle=ATTRSTYLE_JustNumber,SupplementalAttributeStyle=ATTRSTYLE_JustNumber,StatCombinationMethod=SCM_Multiply,Attribute=ResourcePoolAttributeDefinition'D_Attributes.ShieldResourcePool.ShieldMaxValue',ConstraintAttribute=None,SupplementalAttributeExpression=(AttributeOperand1=None,ComparisonOperator=OPERATOR_EqualTo,Operand2Usage=OPERAND_PreferAttribute,AttributeOperand2=None,ConstantOperand2=0.000000),SupplementalAttributeToAppend=None)
+UIStatList(1)=(bDisplayAsModifierOnly=False,AttributeStyle=ATTRSTYLE_JustNumber,SupplementalAttributeStyle=ATTRSTYLE_JustNumber,StatCombinationMethod=SCM_Multiply,Attribute=ResourcePoolAttributeDefinition'D_Attributes.ShieldResourcePool.ShieldOnIdleRegenerationRate',ConstraintAttribute=None,SupplementalAttributeExpression=(AttributeOperand1=None,ComparisonOperator=OPERATOR_EqualTo,Operand2Usage=OPERAND_PreferAttribute,AttributeOperand2=None,ConstantOperand2=0.000000),SupplementalAttributeToAppend=None)
+UIStatList(2)=(bDisplayAsModifierOnly=False,AttributeStyle=ATTRSTYLE_JustNumber,SupplementalAttributeStyle=ATTRSTYLE_JustNumber,StatCombinationMethod=SCM_Multiply,Attribute=ResourcePoolAttributeDefinition'D_Attributes.ShieldResourcePool.ShieldOnIdleRegenerationDelay',ConstraintAttribute=None,SupplementalAttributeExpression=(AttributeOperand1=None,ComparisonOperator=OPERATOR_EqualTo,Operand2Usage=OPERAND_PreferAttribute,AttributeOperand2=None,ConstantOperand2=0.000000),SupplementalAttributeToAppend=None)
+UIMeshRotation=(Pitch=0,Yaw=32768,Roll=32768)
+Presentation=InventoryCardPresentationDefinition'GD_InventoryPresentations.Definitions.Shield'
+CalloutDefinition=None
+PickedUpStatID=None
+PurchasedStatID=STAT_PLAYER_SHIELD_PURCHASED
+FocusRadius=55.000000
+FocusOffset=(X=-0.400000,Y=-0.075000,Z=0.000000)
+AttributeSlotEffectSkillDuration=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+AttributeSlotBaseGrade=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+AttributeSlotMaxActivated=19
+AttributeSlotEffects(0)=(SlotName="Capacity",bExternalSlot=True,bRunEffectsAsSkill=False,AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.ShieldResourcePool.ShieldMaxValue',ConstraintAttribute=None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),PerGradeUpgrade=(BaseValueConstant=0.030000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bIncludeInFunStats=False,bIncludeAlliesAsTarget=False,bEnforceMinimumGrade=False,bEnforceMaximumGrade=False,MinimumGrade=0,MaximumGrade=0,TargetInstanceDataName=)
+AttributeSlotEffects(1)=(SlotName="RechargeRate",bExternalSlot=True,bRunEffectsAsSkill=False,AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.ShieldResourcePool.ShieldOnIdleRegenerationRate',ConstraintAttribute=None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),PerGradeUpgrade=(BaseValueConstant=0.030000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bIncludeInFunStats=False,bIncludeAlliesAsTarget=False,bEnforceMinimumGrade=False,bEnforceMaximumGrade=False,MinimumGrade=0,MaximumGrade=0,TargetInstanceDataName=)
+AttributeSlotEffects(2)=(SlotName="RechargeDelay",bExternalSlot=True,bRunEffectsAsSkill=False,AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.ShieldResourcePool.ShieldOnIdleRegenerationDelay',ConstraintAttribute=None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),PerGradeUpgrade=(BaseValueConstant=-0.040000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bIncludeInFunStats=False,bIncludeAlliesAsTarget=False,bEnforceMinimumGrade=False,bEnforceMaximumGrade=False,MinimumGrade=0,MaximumGrade=0,TargetInstanceDataName=)
+AttributeSlotEffects(3)=(SlotName="FireResist",bExternalSlot=True,bRunEffectsAsSkill=False,AttributeToModify=AttributeDefinition'D_Attributes.StatusEffectModifiers.IgniteChanceResistanceModifier',ConstraintAttribute=None,ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),PerGradeUpgrade=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bIncludeInFunStats=False,bIncludeAlliesAsTarget=False,bEnforceMinimumGrade=False,bEnforceMaximumGrade=False,MinimumGrade=0,MaximumGrade=0,TargetInstanceDataName=)
+AttributeSlotEffects(4)=(SlotName="ShockResist",bExternalSlot=True,bRunEffectsAsSkill=False,AttributeToModify=AttributeDefinition'D_Attributes.StatusEffectModifiers.ShockChanceResistanceModifier',ConstraintAttribute=None,ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),PerGradeUpgrade=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bIncludeInFunStats=False,bIncludeAlliesAsTarget=False,bEnforceMinimumGrade=False,bEnforceMaximumGrade=False,MinimumGrade=0,MaximumGrade=0,TargetInstanceDataName=)
+AttributeSlotEffects(5)=(SlotName="CorrosiveResist",bExternalSlot=True,bRunEffectsAsSkill=False,AttributeToModify=AttributeDefinition'D_Attributes.StatusEffectModifiers.CorrosiveChanceResistanceModifier',ConstraintAttribute=None,ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),PerGradeUpgrade=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bIncludeInFunStats=False,bIncludeAlliesAsTarget=False,bEnforceMinimumGrade=False,bEnforceMaximumGrade=False,MinimumGrade=0,MaximumGrade=0,TargetInstanceDataName=)
+AttributeSlotEffects(6)=(SlotName="ExplosiveDamageResistance",bExternalSlot=True,bRunEffectsAsSkill=False,AttributeToModify=DesignerAttributeDefinition'GD_Shields.Misc.Att_Shield_ExplosiveDamageResistance',ConstraintAttribute=None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),PerGradeUpgrade=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bIncludeInFunStats=False,bIncludeAlliesAsTarget=False,bEnforceMinimumGrade=False,bEnforceMaximumGrade=False,MinimumGrade=0,MaximumGrade=0,TargetInstanceDataName=)
+AttributeSlotEffects(7)=(SlotName="MaxHealth",bExternalSlot=True,bRunEffectsAsSkill=False,AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.HealthResourcePool.HealthMaxValue',ConstraintAttribute=None,ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),PerGradeUpgrade=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance_HealthAndDamage.HealthAndDamage.Init_HealthBonusFromShields_Formula',BaseValueScaleConstant=0.030000),bIncludeInFunStats=False,bIncludeAlliesAsTarget=False,bEnforceMinimumGrade=False,bEnforceMaximumGrade=False,MinimumGrade=0,MaximumGrade=0,TargetInstanceDataName=)
+AttributeSlotEffects(8)=(SlotName="Special01",bExternalSlot=False,bRunEffectsAsSkill=False,AttributeToModify=None,ConstraintAttribute=None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),PerGradeUpgrade=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bIncludeInFunStats=False,bIncludeAlliesAsTarget=False,bEnforceMinimumGrade=True,bEnforceMaximumGrade=False,MinimumGrade=0,MaximumGrade=0,TargetInstanceDataName=)
+AttributeSlotEffects(9)=(SlotName="Special02",bExternalSlot=False,bRunEffectsAsSkill=False,AttributeToModify=None,ConstraintAttribute=None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),PerGradeUpgrade=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bIncludeInFunStats=False,bIncludeAlliesAsTarget=False,bEnforceMinimumGrade=True,bEnforceMaximumGrade=False,MinimumGrade=0,MaximumGrade=0,TargetInstanceDataName=)
+AttributeSlotUpgrades(0)=(SlotName="Capacity",GradeIncrease=0,bActivateSlot=True)
+AttributeSlotUpgrades(1)=(SlotName="RechargeRate",GradeIncrease=0,bActivateSlot=True)
+AttributeSlotUpgrades(2)=(SlotName="RechargeDelay",GradeIncrease=0,bActivateSlot=True)
+AttributeSlotUpgrades(3)=(SlotName="Special01",GradeIncrease=0,bActivateSlot=False)
+AttributeSlotUpgrades(4)=(SlotName="Special02",GradeIncrease=0,bActivateSlot=False)
+LootBeamColorOverride=(B=0,G=0,R=0,A=0)
+= Object properties ===
+VfTableObject=
+HashNext=
+ObjectFlags=
+HashOuterNext=
+StateFrame=
+Linker=None
+LinkerIndex=
+ObjectInternalInteger=130353
+NetIndex=3664
+Outer=Package'GD_Shields.A_Item'
+Name=Shield_Standard
+Class=Class'WillowGame.ShieldDefinition'
+ObjectArchetype=ShieldDefinition'WillowGame.Default__ShieldDefinition'
+
+* Property dump for object 'ItemPartListDefinition GD_Shields.Body.PartsList_Body_Standard' ***
+= ItemPartListDefinition properties ===
+VfTable_IIConstructObject=
+WeightedParts(0)=(Part=ShieldPartDefinition'GD_Shields.Body.Body1_Tediore',Manufacturers=((Manufacturer=None,DefaultWeightIndex=3)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=2)
+WeightedParts(1)=(Part=ShieldPartDefinition'GD_Shields.Body.Body2_Bandit',Manufacturers=((Manufacturer=None,DefaultWeightIndex=3)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=2)
+WeightedParts(2)=(Part=ShieldPartDefinition'GD_Shields.Body.Body3_Vladof',Manufacturers=((Manufacturer=None,DefaultWeightIndex=3)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=2)
+WeightedParts(3)=(Part=ShieldPartDefinition'GD_Shields.Body.Body4_Dahl',Manufacturers=((Manufacturer=None,DefaultWeightIndex=3)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=2)
+WeightedParts(4)=(Part=ShieldPartDefinition'GD_Shields.Body.Body5_Anshin',Manufacturers=((Manufacturer=None,DefaultWeightIndex=3)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=2)
+WeightedParts(5)=(Part=ShieldPartDefinition'GD_Shields.Body.Body5_Maliwan',Manufacturers=((Manufacturer=None,DefaultWeightIndex=3)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=4)
+WeightedParts(6)=(Part=ShieldPartDefinition'GD_Shields.Body.Body6_Torgue',Manufacturers=((Manufacturer=None,DefaultWeightIndex=3)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=2)
+WeightedParts(7)=(Part=ShieldPartDefinition'GD_Shields.Body.Body7_Hyperion',Manufacturers=((Manufacturer=None,DefaultWeightIndex=3)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=2)
+WeightedParts(8)=(Part=ShieldPartDefinition'GD_Shields.Body.Body8_Pangolin',Manufacturers=((Manufacturer=None,DefaultWeightIndex=3)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=2)
+ConsolidatedAttributeInitData(0)=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+ConsolidatedAttributeInitData(1)=(BaseValueConstant=100.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+ConsolidatedAttributeInitData(2)=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',BaseValueScaleConstant=1.000000)
+ConsolidatedAttributeInitData(3)=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+ConsolidatedAttributeInitData(4)=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_2_Uncommon',BaseValueScaleConstant=1.000000)
+= Object properties ===
+VfTableObject=
+HashNext=
+ObjectFlags=
+HashOuterNext=
+StateFrame=
+Linker=None
+LinkerIndex=
+ObjectInternalInteger=131735
+NetIndex=2329
+Outer=Package'GD_Shields.Body'
+Name=PartsList_Body_Standard
+Class=Class'WillowGame.ItemPartListDefinition'
+ObjectArchetype=ItemPartListDefinition'WillowGame.Default__ItemPartListDefinition'
+
+* Property dump for object 'ItemPartListDefinition GD_Shields.Battery.PartsList_Battery_Standard' ***
+= ItemPartListDefinition properties ===
+VfTable_IIConstructObject=
+WeightedParts(0)=(Part=ShieldPartDefinition'GD_Shields.Battery.Battery1_Tediore',Manufacturers=((Manufacturer=None,DefaultWeightIndex=3)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=2)
+WeightedParts(1)=(Part=ShieldPartDefinition'GD_Shields.Battery.Battery2_Bandit',Manufacturers=((Manufacturer=None,DefaultWeightIndex=3)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=2)
+WeightedParts(2)=(Part=ShieldPartDefinition'GD_Shields.Battery.Battery3_Vladof',Manufacturers=((Manufacturer=None,DefaultWeightIndex=3)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=2)
+WeightedParts(3)=(Part=ShieldPartDefinition'GD_Shields.Battery.Battery4_Dahl',Manufacturers=((Manufacturer=None,DefaultWeightIndex=3)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=2)
+WeightedParts(4)=(Part=ShieldPartDefinition'GD_Shields.Battery.Battery5_Anshin',Manufacturers=((Manufacturer=None,DefaultWeightIndex=3)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=2)
+WeightedParts(5)=(Part=ShieldPartDefinition'GD_Shields.Battery.Battery5_Maliwan',Manufacturers=((Manufacturer=None,DefaultWeightIndex=3)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=4)
+WeightedParts(6)=(Part=ShieldPartDefinition'GD_Shields.Battery.Battery6_Torgue',Manufacturers=((Manufacturer=None,DefaultWeightIndex=3)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=2)
+WeightedParts(7)=(Part=ShieldPartDefinition'GD_Shields.Battery.Battery7_Hyperion',Manufacturers=((Manufacturer=None,DefaultWeightIndex=3)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=2)
+WeightedParts(8)=(Part=ShieldPartDefinition'GD_Shields.Battery.Battery8_Pangolin',Manufacturers=((Manufacturer=None,DefaultWeightIndex=3)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=2)
+ConsolidatedAttributeInitData(0)=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+ConsolidatedAttributeInitData(1)=(BaseValueConstant=100.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+ConsolidatedAttributeInitData(2)=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',BaseValueScaleConstant=1.000000)
+ConsolidatedAttributeInitData(3)=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+ConsolidatedAttributeInitData(4)=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_2_Uncommon',BaseValueScaleConstant=1.000000)
+= Object properties ===
+VfTableObject=
+HashNext=
+ObjectFlags=
+HashOuterNext=
+StateFrame=
+Linker=None
+LinkerIndex=
+ObjectInternalInteger=131707
+NetIndex=2310
+Outer=Package'GD_Shields.Battery'
+Name=PartsList_Battery_Standard
+Class=Class'WillowGame.ItemPartListDefinition'
+ObjectArchetype=ItemPartListDefinition'WillowGame.Default__ItemPartListDefinition'
+
+* Property dump for object 'ItemPartListDefinition GD_Shields.Capacitor.PartsList_Capacitor_Standard' ***
+= ItemPartListDefinition properties ===
+VfTable_IIConstructObject=
+WeightedParts(0)=(Part=ShieldPartDefinition'GD_Shields.Capacitor.Capacitor1_Tediore',Manufacturers=((Manufacturer=None,DefaultWeightIndex=3)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=2)
+WeightedParts(1)=(Part=ShieldPartDefinition'GD_Shields.Capacitor.Capacitor2_Bandit',Manufacturers=((Manufacturer=None,DefaultWeightIndex=3)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=2)
+WeightedParts(2)=(Part=ShieldPartDefinition'GD_Shields.Capacitor.Capacitor3_Vladof',Manufacturers=((Manufacturer=None,DefaultWeightIndex=3)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=2)
+WeightedParts(3)=(Part=ShieldPartDefinition'GD_Shields.Capacitor.Capacitor4_Dahl',Manufacturers=((Manufacturer=None,DefaultWeightIndex=3)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=2)
+WeightedParts(4)=(Part=ShieldPartDefinition'GD_Shields.Capacitor.Capacitor5_Anshin',Manufacturers=((Manufacturer=None,DefaultWeightIndex=3)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=2)
+WeightedParts(5)=(Part=ShieldPartDefinition'GD_Shields.Capacitor.Capacitor5_Maliwan_CorrosiveRes',Manufacturers=((Manufacturer=None,DefaultWeightIndex=3)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=4)
+WeightedParts(6)=(Part=ShieldPartDefinition'GD_Shields.Capacitor.Capacitor5_Maliwan_FireRes',Manufacturers=((Manufacturer=None,DefaultWeightIndex=3)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=4)
+WeightedParts(7)=(Part=ShieldPartDefinition'GD_Shields.Capacitor.Capacitor5_Maliwan_ShockRes',Manufacturers=((Manufacturer=None,DefaultWeightIndex=3)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=4)
+WeightedParts(8)=(Part=ShieldPartDefinition'GD_Shields.Capacitor.Capacitor6_Torgue_ExplosiveRes',Manufacturers=((Manufacturer=None,DefaultWeightIndex=3)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=4)
+WeightedParts(9)=(Part=ShieldPartDefinition'GD_Shields.Capacitor.Capacitor7_Hyperion',Manufacturers=((Manufacturer=None,DefaultWeightIndex=3)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=2)
+WeightedParts(10)=(Part=ShieldPartDefinition'GD_Shields.Capacitor.Capacitor8_Pangolin',Manufacturers=((Manufacturer=None,DefaultWeightIndex=3)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=2)
+ConsolidatedAttributeInitData(0)=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+ConsolidatedAttributeInitData(1)=(BaseValueConstant=100.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+ConsolidatedAttributeInitData(2)=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',BaseValueScaleConstant=1.000000)
+ConsolidatedAttributeInitData(3)=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+ConsolidatedAttributeInitData(4)=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_2_Uncommon',BaseValueScaleConstant=1.000000)
+= Object properties ===
+VfTableObject=
+HashNext=
+ObjectFlags=
+HashOuterNext=
+StateFrame=
+Linker=None
+LinkerIndex=
+ObjectInternalInteger=131763
+NetIndex=2352
+Outer=Package'GD_Shields.Capacitor'
+Name=PartsList_Capacitor_Standard
+Class=Class'WillowGame.ItemPartListDefinition'
+ObjectArchetype=ItemPartListDefinition'WillowGame.Default__ItemPartListDefinition'
+
+* Property dump for object 'ItemPartListDefinition GD_Shields.Accessory.PartsList_Accessory_Standard' ***
+= ItemPartListDefinition properties ===
+VfTable_IIConstructObject=
+WeightedParts(0)=(Part=ShieldPartDefinition'GD_Shields.Accessory.Accessory0_None',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=2)
+ConsolidatedAttributeInitData(0)=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+ConsolidatedAttributeInitData(1)=(BaseValueConstant=100.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+ConsolidatedAttributeInitData(2)=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',BaseValueScaleConstant=1.000000)
+= Object properties ===
+VfTableObject=
+HashNext=
+ObjectFlags=
+HashOuterNext=
+StateFrame=
+Linker=None
+LinkerIndex=
+ObjectInternalInteger=131682
+NetIndex=2297
+Outer=Package'GD_Shields.Accessory'
+Name=PartsList_Accessory_Standard
+Class=Class'WillowGame.ItemPartListDefinition'
+ObjectArchetype=ItemPartListDefinition'WillowGame.Default__ItemPartListDefinition'
+
+*** Property dump for object 'ShieldPartDefinition GD_Shields.Accessory.Accessory0_None' ***
+= ItemPartDefinition properties ===
+VfTable_IIBehaviorProvider=
+PartType=IP_Delta
+PrefixList(0)=ItemNamePartDefinition'GD_Shields.Prefixes.Prefix_Capacity_Tediore01'
+PrefixList(1)=ItemNamePartDefinition'GD_Shields.Prefixes.Prefix_Capacity_Tediore02'
+PrefixList(2)=ItemNamePartDefinition'GD_Shields.Prefixes.Prefix_Capacity_Tediore03'
+PrefixList(3)=ItemNamePartDefinition'GD_Shields.Prefixes.Prefix_Capacity_Tediore04'
+PrefixList(4)=ItemNamePartDefinition'GD_Shields.Prefixes.Prefix_Capacity_Tediore05'
+PrefixList(5)=ItemNamePartDefinition'GD_Shields.Prefixes.Prefix_Rate_Tediore01'
+PrefixList(6)=ItemNamePartDefinition'GD_Shields.Prefixes.Prefix_Rate_Tediore02'
+PrefixList(7)=ItemNamePartDefinition'GD_Shields.Prefixes.Prefix_Rate_Tediore03'
+PrefixList(8)=ItemNamePartDefinition'GD_Shields.Prefixes.Prefix_Rate_Tediore04'
+PrefixList(9)=ItemNamePartDefinition'GD_Shields.Prefixes.Prefix_Rate_Tediore05'
+PrefixList(10)=ItemNamePartDefinition'GD_Shields.Prefixes.Prefix_Delay_Tediore01'
+PrefixList(11)=ItemNamePartDefinition'GD_Shields.Prefixes.Prefix_Delay_Tediore02'
+PrefixList(12)=ItemNamePartDefinition'GD_Shields.Prefixes.Prefix_Delay_Tediore03'
+PrefixList(13)=ItemNamePartDefinition'GD_Shields.Prefixes.Prefix_Delay_Tediore04'
+PrefixList(14)=ItemNamePartDefinition'GD_Shields.Prefixes.Prefix_Delay_Tediore05'
+PrefixList(15)=ItemNamePartDefinition'GD_Shields.Prefixes.Prefix_Balanced_Tediore'
+BehaviorProviderDefinition=None
+= WillowInventoryPartDefinition properties ===
+Material=None
+bIsGestaltMode=True
+GestaltModeSkeletalMeshName=Shield_Body_Tediore
+NongestaltSkeletalMesh=None
+AdditionalGestaltModeSkeletalMeshNames[0]=None
+AdditionalGestaltModeSkeletalMeshNames[1]=None
+MonetaryValueMod=None
+Rarity=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+= Object properties ===
+VfTableObject=
+HashNext=
+ObjectFlags=
+HashOuterNext=
+StateFrame=
+Linker=None
+LinkerIndex=
+ObjectInternalInteger=131683
+NetIndex=3671
+Outer=Package'GD_Shields.Accessory'
+Name=Accessory0_None
+Class=Class'WillowGame.ShieldPartDefinition'
+ObjectArchetype=ShieldPartDefinition'WillowGame.Default__ShieldPartDefinition'
