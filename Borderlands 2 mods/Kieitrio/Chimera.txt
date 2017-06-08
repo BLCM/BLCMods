@@ -1,0 +1,46 @@
+#THIS WILL SANITY CHECK ALL ELEMENTAL INFINTIES!
+Gibbed code for a working Infinity: BL2(hwAAAAAqSgCE5wRACgGF6sNohYEQAwLG/38JGB4w/v8rxGiDgRHj)
+
+#Weapon Card
+set GD_Weap_Pistol.Name.Title_Vladof.Title_Legendary_Infinity PartName Chimera
+set GD_Weap_Pistol.Name.Title_Vladof.Title_Legendary_Infinity:AttributePresentationDefinition_8 NoConstraintText The Lord will keep you free from every disease. <br>Deals equal parts <font color="#ff8c00">fire<font color="#FFFFFF">, <font color="#007fff">shock<font color="#FFFFFF">, <font color="#1bc646"><br>  corrosive<font color="#FFFFFF">, and <font color="#951cff">slag <font color="#FFFFFF">damage.<br>Spawns <font color="#ff0235">healing trails<font color="#FFFFFF"> on hit
+
+#Rarity
+set GD_Weap_Pistol.Barrel.Pistol_Barrel_Vladof_Infinity rarity (BaseValueConstant=500.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+
+#Slag
+set GD_Aster_RaidWeapons.SMGs.Bullet_SMG_Plasma_Florentine:Behavior_Explode_5 DamageSource Class'WillowGame.WillowDmgSource_SubMachineGun'
+set GD_Aster_RaidWeapons.SMGs.Bullet_SMG_Plasma_Florentine:Behavior_Explode_5 Definition ExplosionDefinition'GD_Explosions.Slag.Explosion_SlagMaster'
+
+#Shock
+set GD_Sage_Weapons.FiringModes.Bullet_Shotgun_Twister:Behavior_Explode_5 DamageSource Class'WillowGame.WillowDmgSource_SubMachineGun'
+set GD_Sage_Weapons.FiringModes.Bullet_Shotgun_Twister:Behavior_Explode_5 DamageFormula (BaseValueScaleConstant=0.800000)
+set GD_Sage_Weapons.FiringModes.Bullet_Shotgun_Twister:Behavior_Explode_5 DamageRadiusFormula (BaseValueConstant=100.000000)
+set GD_Sage_Weapons.FiringModes.Bullet_Shotgun_Twister:Behavior_Explode_5 StatusEffectDamage (BaseValueConstant=2.000000)
+set GD_Sage_Weapons.FiringModes.Bullet_Shotgun_Twister:Behavior_Explode_5 StatusEffectChance (BaseValueScaleConstant=2.000000)
+set GD_Sage_Weapons.FiringModes.Bullet_Shotgun_Twister:Behavior_Explode_5 InstigatorSelfDamageScale 0.000000
+
+#Corrosion
+set GD_Sage_RaidWeapons.FiringModes.Bullet_Pistol_Maliwan_Infection:Behavior_Explode_5 DamageSource Class'WillowGame.WillowDmgSource_SubMachineGun'
+set GD_Sage_RaidWeapons.FiringModes.Bullet_Pistol_Maliwan_Infection:Behavior_Explode_5 DamageFormula (BaseValueScaleConstant=0.1 00000)
+set GD_Sage_RaidWeapons.FiringModes.Bullet_Pistol_Maliwan_Infection:Behavior_Explode_5 DamageRadiusFormula (BaseValueConstant=100.000000)
+set GD_Sage_RaidWeapons.FiringModes.Bullet_Pistol_Maliwan_Infection:Behavior_Explode_5 Definition ExplosionDefinition'GD_Explosions.Corrosive.Explosion_CorrosiveMaster'
+set GD_Sage_RaidWeapons.FiringModes.Bullet_Pistol_Maliwan_Infection:Behavior_Explode_5 StatusEffectChance (BaseValueScaleConstant=60.000000)
+set GD_Sage_RaidWeapons.FiringModes.Bullet_Pistol_Maliwan_Infection:Behavior_Explode_5 InstigatorSelfDamageScale 0.000000
+
+#Fire
+set GD_Weap_Pistol.FiringModes.Bullets_Pistol_Bandit_Tinderbox:Behavior_Explode_5 DamageSource Class'WillowGame.WillowDmgSource_SubMachineGun'
+set GD_Weap_Pistol.FiringModes.Bullets_Pistol_Bandit_Tinderbox:Behavior_Explode_5 DamageFormula (BaseValueScaleConstant=0.100000)
+set GD_Weap_Pistol.FiringModes.Bullets_Pistol_Bandit_Tinderbox:Behavior_Explode_5 DamageRadiusFormula (BaseValueConstant=100.000000)
+set GD_Weap_Pistol.FiringModes.Bullets_Pistol_Bandit_Tinderbox:Behavior_Explode_5 Definition ExplosionDefinition'GD_Explosions.Incendiary.Explosion_IncendiaryMaster'
+set GD_Weap_Pistol.FiringModes.Bullets_Pistol_Bandit_Tinderbox:Behavior_Explode_5 StatusEffectChance (BaseValueScaleConstant=60.000000)
+set GD_Weap_Pistol.FiringModes.Bullets_Pistol_Bandit_Tinderbox:Behavior_Explode_5 InstigatorSelfDamageScale 0.000000
+
+
+#Transfusion Effect
+set GD_Weap_Pistol.FiringModes.Bullet_Pistol_Infinity DamageTypeDefinition DamageTypeDefinition'GD_Healing.DamageType.DmgType_Healing_Impact_NoDoT'
+set GD_Weap_Pistol.FiringModes.Bullet_Pistol_Infinity ExplosionOverrideDefinition None
+set GD_Weap_Pistol.FiringModes.Bullet_Pistol_Infinity ExplosionOverideInstanceDataName None
+set GD_Weap_Pistol.FiringModes.Bullet_Pistol_Infinity OnAnyImpact (Behavior_Explode'GD_Aster_RaidWeapons.SMGs.Bullet_SMG_Plasma_Florentine:Behavior_Explode_5',Behavior_Explode'GD_Weap_Pistol.FiringModes.Bullets_Pistol_Bandit_Tinderbox:Behavior_Explode_5',Behavior_Explode'GD_Sage_Weapons.FiringModes.Bullet_Shotgun_Twister:Behavior_Explode_5',Behavior_Explode'GD_Sage_RaidWeapons.FiringModes.Bullet_Pistol_Maliwan_Infection:Behavior_Explode_5',Behavior_SpawnProjectile'GD_Weap_SniperRifles.FiringModes.Bullet_Sniper_ChereAmie:Behavior_SpawnProjectile_2')
+
+set GD_Weap_Pistol.A_Weapons_Legendary.Pistol_Vladof_5_Infinity:WeaponPartListCollectionDefinition_107 ElementalPartData (bEnabled=True,WeightedParts=((Part=WeaponPartDefinition'GD_Weap_Pistol.elemental.SR_Elemental_None',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1))
