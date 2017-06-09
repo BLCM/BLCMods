@@ -1,0 +1,76 @@
+######################
+Plasma Cutter
+by kunelsanders
+Commerce edit
+It just spews bullets with 100% accuracy, crit boost and melee boost
+I locked the parts as they are because it looks cool imo
+###################
+
+set GD_Weap_SMG.Name.Title.Title__Unique_Commerce PartName Plasma Cutter
+set GD_Weap_SMG.Name.Title.Title__Unique_Commerce:AttributePresentationDefinition_8 NoConstraintText It cuts like plasma!
+set GD_Weap_SMG.Name.Title.Title__Unique_Commerce rarity (BaseValueConstant=500)
+
+set GD_Weap_SMG.A_Weapons_Unique.SMG_Hyperion_3_Commerce:WeaponPartListCollectionDefinition_179 GripPartData 
+
+(bEnabled=True,WeightedParts=
+
+((Part=WeaponPartDefinition'GD_Weap_SMG.Grip.SMG_Grip_Bandit',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultW
+
+eightIndex=2)))
+set GD_Weap_SMG.A_Weapons_Unique.SMG_Hyperion_3_Commerce:WeaponPartListCollectionDefinition_179 SightPartData 
+
+(bEnabled=True,WeightedParts=
+
+((Part=WeaponPartDefinition'GD_Weap_SMG.Sight.SMG_Sight_None',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultW
+
+eightIndex=2)))
+set GD_Weap_SMG.A_Weapons_Unique.SMG_Hyperion_3_Commerce:WeaponPartListCollectionDefinition_179 StockPartData 
+
+(bEnabled=True,WeightedParts=
+
+((Part=WeaponPartDefinition'GD_Weap_SMG.Stock.SMG_Stock_Maliwan',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,Defau
+
+ltWeightIndex=2)))
+set GD_Weap_SMG.A_Weapons_Unique.SMG_Hyperion_3_Commerce:WeaponPartListCollectionDefinition_179 Accessory1PartData 
+
+(bEnabled=True,WeightedParts=
+
+((Part=WeaponPartDefinition'GD_Weap_SMG.Accessory.SMG_Accessory_Bayonet_1',Manufacturers=,MinGameStageIndex=0,MaxGameStageInd
+
+ex=1,DefaultWeightIndex=2)))
+
+set GD_Weap_SMG.Barrel.SMG_Barrel_Tediore_Commerce ExternalAttributeEffects 
+
+((AttributeToModify=AttributeDefinition'D_Attributes.GameplayAttributes.PlayerCriticalHitBonus',ModifierType=MT_Scale,BaseMod
+
+ifierValue=
+
+(BaseValueConstant=1.00000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),
+
+(AttributeToModify=AttributeDefinition'D_Attributes.DamageSourceModifiers.InstigatedMeleeDamageModifier',ModifierType=MT_Scal
+
+e,BaseModifierValue=
+
+(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.00000)))
+
+set GD_Weap_SMG.Barrel.SMG_Barrel_Tediore_Commerce WeaponAttributeEffects 
+
+((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_PreAdd,BaseModifierValue=
+
+(BaseValueConstant=8.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),
+
+(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_PreAdd,BaseModifierValue=
+
+(BaseValueConstant=-0.070000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+set GD_Weap_SMG.Barrel.SMG_Barrel_Tediore_Commerce AttributeSlotUpgrades 
+
+((SlotName="WeaponSpread",GradeIncrease=9999,bActivateSlot=True),
+
+(SlotName="AccuracyMin",GradeIncrease=10,bActivateSlot=True),(SlotName="AccuracyMax",GradeIncrease=20,bActivateSlot=True),
+
+(SlotName="AccuracyRegen",GradeIncrease=10,bActivateSlot=True))) 
+
+set GD_Weap_SMG.Barrel.SMG_Barrel_Tediore_Commerce WeaponCardAttributes 
+
+((Attribute=AttributeDefinition'D_Attributes.GameplayAttributes.PlayerCriticalHitBonus',PriorityIncrease=0.500000))
