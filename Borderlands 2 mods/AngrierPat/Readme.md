@@ -15,29 +15,29 @@ In anycase, enjoy my creations and have fun vault hunting!
  #2. Candy Bag
  
 	Jaques now drops a booster shield that drops the Candies located in his bossfight arena!
-	Can be seen [here](https://cdn.discordapp.com/attachments/288382606288879629/323296633783844865/unknown.png)
+Can be seen [here](https://cdn.discordapp.com/attachments/288382606288879629/323296633783844865/unknown.png)
 
  #3. Heart Stopper
  
 	Moxxi upped the girth on her favorite shotgun as a gift for the Newly Wed Goliaths so it could hit home a little harder.
-	Can be seen [here](https://cdn.discordapp.com/attachments/297567136363315201/323320513839628288/unknown.png)
+Can be seen [here](https://cdn.discordapp.com/attachments/297567136363315201/323320513839628288/unknown.png)
 	
  #4. Newfoundlands
  
 	Ever wanted to hunt with the big dogs? Take down the Waddle Gobbler to lead the pack!
-	Can be seen [here](https://cdn.discordapp.com/attachments/297567136363315201/323315318111862795/unknown.png)
+Can be seen [here](https://cdn.discordapp.com/attachments/297567136363315201/323315318111862795/unknown.png)
 	
  #5. Stone Mask
  
 	Reject your humanity for the oportunity to be among Pillar Men. Only Sparky stands in your way of such an oportunity.
-	Can be seen [here](https://cdn.discordapp.com/attachments/297567136363315201/323314945787822080/unknown.png)
+Can be seen [here](https://cdn.discordapp.com/attachments/297567136363315201/323314945787822080/unknown.png)
 	
  #6. Tingling Sensation
  
 	Moxxi is at it again with a shockingly good time. Make sure to stay grounded in reality, however.
-	Can be seen [here](https://cdn.discordapp.com/attachments/297567136363315201/323320656160751616/unknown.png)
+Can be seen [here](https://cdn.discordapp.com/attachments/297567136363315201/323320656160751616/unknown.png)
 	
  #7. YippeeKiYay
  
 	Snowman has a Machine gun. Ho Ho Ho. You should kill him for it.
-	Can be seen [here](https://cdn.discordapp.com/attachments/297567136363315201/323320759407869952/unknown.png)
+Can be seen [here](https://cdn.discordapp.com/attachments/297567136363315201/323320759407869952/unknown.png)
