@@ -34,4 +34,4 @@ In anycase, enjoy my creations and have fun vault hunting!
 	
  #7. YippeeKiYay
  
-	(awaiting improvements, still has an awesome skin tho)
+	Snowman has a Machine gun. Ho Ho Ho. You should kill him for it.
