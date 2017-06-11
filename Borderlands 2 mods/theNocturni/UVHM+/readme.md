@@ -87,9 +87,6 @@ guns- every red text gear EXCEPT for the following:
     ERROR MESSAGE
     Boom
     
-    Teeth of Terramorphous
-    Orphan Maker
-    
     Hawkeye
 
 shields-
@@ -103,4 +100,6 @@ shields-
     Deadly Bloom
     Rough Rider
     1340 Shield
+    Hide of Terramorphous
+    Manly Man Shield
     
