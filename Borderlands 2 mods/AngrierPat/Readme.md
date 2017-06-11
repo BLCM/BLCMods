@@ -1,5 +1,5 @@
-Hello! Pat here, if youre interested in my custom weapons/shields/relics youll need to have the Head Hunter packs for Borderlands 2
-If you do not have the Head Hunter packs, then you can disable the loot pool changes at the bottom of the files with a '#' before the 'set' command
+Hello! Pat here, if youre interested in my custom weapons/shields/relics youll need to have the Head Hunter packs for Borderlands 2.
+If you do not have the Head Hunter packs, then you can disable the loot pool changes at the bottom of the files with a '#' before the 'set' command.
 If you do not farm for items in Borderlands 2 anymore, then feel free to use Gibbed save editor to give yourself the item that mod replaces.
 The intent behind these mods is to add value and flavor to the Head Hunter packs, because I believe that they are fun tidbits of content.
 In anycase, enjoy my creations and have fun vault hunting! 
