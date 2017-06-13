@@ -22,6 +22,7 @@ If using the community patch, load this file after the community patch. In gener
 
 NOTE:
 It is highly recommended to use this with the "GemstoneFixes" patch. Otherwise Citrine, Emerald, and Garnet weapons will look improper.
+In order to make it more compatible with mods that may alter the Wanderlust, the Perseids now uses the firing mode of Dart e-tech pistols, which have been given the projectile of the Wanderlust. Basically, Darts now explode on impact.
 
 Credit to Exotek for letting me use some of his code to make the Serpens slither side-to-side.
 ################################################################################################################################################################
@@ -1335,8 +1336,9 @@ set Common_GunMaterials.Materials.SMG.Mati_BanditLegendary_Slagga VectorParamete
 
 THE PERSEIDS (Sledge's Shotgun)
 
+set GD_Weap_Pistol.FiringModes.Bullet_Pistol_Spiker_Homing ProjectileDefinition ProjectileDefinition'GD_Lobelia_Weapons.Projectiles.Projectile_Homing_Wanderlust'
 
-set GD_Weap_Shotgun.Barrel.SG_Barrel_Jakobs_Sledges CustomFiringModeDefinition FiringModeDefinition'GD_Lobelia_Weapons.FiringModes.Bullet_Pistol_Homing_Wanderlust'
+set GD_Weap_Shotgun.Barrel.SG_Barrel_Jakobs_Sledges CustomFiringModeDefinition FiringModeDefinition'GD_Weap_Pistol.FiringModes.Bullet_Pistol_Spiker_Homing'
 
 set GD_Weap_Shotgun.Barrel.SG_Barrel_Jakobs_Sledges GestaltModeSkeletalMeshName SG_Barrel_Alien
 set GD_Weap_Shotgun.Name.Prefix_Bandit.Prefix_Legendary_Sledges PartName The
