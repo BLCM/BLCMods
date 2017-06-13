@@ -1,0 +1,20 @@
+###################################################################################################################################################################
+# The Moon Jumper                                                                                                                                                 #
+# Features : For all your MOON JUMPING Needs . 20 Rockets per trigger pull Extremely low Damage . Unique Fire Rate for Launcher AND 0 Ammo Consumption            #
+# Replaces Vault Thrower. Makes it so new ones spawn as Explosive only. If you have a shock one here is the gibbed code for a none elemental one LVL 70           #
+# BLOZ(igAAAAAtpgCCC4A8BmMEcED6gAQApQFSCqT//wWQ/v8HQCGDxADl)                                                                                                      # 
+###################################################################################################################################################################
+
+
+
+set GD_Cork_Weap_Launchers.Barrel.L_Barrel_Tediore_Rocketeer WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-1000.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=3.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=19.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-0.670000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+set GD_Cork_Weap_Launchers.Barrel.L_Barrel_Tediore_Rocketeer AttributeSlotUpgrades ((SlotName="WeaponReloadSpeed",GradeIncrease=100,bActivateSlot=True))
+
+set GD_Cork_Weap_Launchers.Name.Title.Title__Unique_Rocketeer PartName Moon Jumper
+
+set GD_Cork_Weap_Launchers.Name.Title.Title__Unique_Rocketeer:AttributePresentationDefinition_8 NoConstraintText Huston we got a problem. Get That Damn Vault Hunter down from the sky!
+
+set GD_Cork_Weap_Launchers.Barrel.L_Barrel_Tediore_Rocketeer CustomFiringModeDefinition FiringModeDefinition'GD_Cork_Weap_Launchers.FiringModes.FM_Rocket_Bandit_BadaBoom'
+
+set GD_Cork_Weap_Launchers.A_Weapons_Unique.RL_Tediore_3_Rocketeer:WeaponPartListCollectionDefinition_81 ElementalPartData (bEnabled=True,WeightedParts=((bDisabled=False,Part=WeaponPartDefinition'GD_Weap_Launchers.elemental.RL_Elemental_None',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(bDisabled=False,Part=WeaponPartDefinition'GD_Weap_Launchers.elemental.RL_Elemental_Shock',Manufacturers=,MinGameStageIndex=99,MaxGameStageIndex=1,DefaultWeightIndex=200)))
