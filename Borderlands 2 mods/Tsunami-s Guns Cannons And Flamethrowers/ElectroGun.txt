@@ -1,0 +1,23 @@
+A shocking weapon simular to the flamethrower.
+
+Lower damage.
+Faster projectiles.
+Slower ammo regeneration.
+Heavy resistance to shock bullets.
+Replaces Crit
+####################################################
+
+set GD_Aster_Weapons.Name.Title.Title__Unique_Crit PartName Electro-Gun
+
+set GD_Aster_Weapons.SMGs.SMG_Barrel_Hyperion_Crit CustomFiringModeDefinition FiringModeDefinition'GD_Weap_Shotgun.FiringModes.Bullets_Splatgun'
+
+set GD_Aster_Weapons.SMGs.SMG_Barrel_Hyperion_Crit ExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.DamageTypeModifers.ShockImpactDamageModifier',ConstraintAttribute=None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-0.999999,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Patrol_SMG.Ammo_Patrol_SMG_RegenerationRate',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+set GD_Aster_Weapons.SMGs.SMG_Barrel_Hyperion_Crit WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=3.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Maliwan',InitializationDefinition=None,BaseValueScaleConstant=2.100000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=5.000002,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectileSpeedMultiplier',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.100000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0.000000))))))
+
+set GD_Aster_Weapons.SMGs.SMG_Barrel_Hyperion_Crit AttributeSlotUpgrades ((SlotName="WeaponFireRate",GradeIncrease=30,bActivateSlot=True)),(SlotName="WeaponAccuracyImpulse",GradeIncrease=10,bActivateSlot=True)
+
+set GD_Aster_Weapons.Name.Title.Title__Unique_Crit:AttributePresentationDefinition_8 NoConstraintText <font color="#D80C0C"> What a shocker...<font color="#FFFFFF"><br>. Heavy shock resistance.<br>. Consumes ammo insanely fast.<br>. Ammo regenrates very fast.
+
+set GD_Aster_Weapons.SMGs.SMG_Barrel_Hyperion_Crit Rarity (BaseValueConstant=6.000000)
+

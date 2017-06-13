@@ -1,0 +1,29 @@
+The Terminator
+
+Triples movement speed
+3 round burst when zoomed
+Shots home to enemies
+
+This is quite a weird hybird weapon, 
+its a assault rifle, 
+that fires homing shots, 
+which is also explosive, 
+and also has a 3 round burst when zoomed.
+Replaces Stomper
+####################################################################
+
+set GD_Weap_AssaultRifle.Barrel.AR_Barrel_Jakobs_Stomper CustomFiringModeDefinition FiringModeDefinition'GD_Aster_RaidWeapons.AssaultRifles.Bullet_Pistol_Seeker_Homing'
+
+set GD_Weap_AssaultRifle.Name.Title_Jakobs.Title_Unique_Stomper PartName Terminator
+
+set GD_Weap_AssaultRifle.Barrel.AR_Barrel_Jakobs_Stomper WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.400000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=10.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectileSpeedMultiplier',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponPerShotAccuracyImpulse',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=100.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponReloadSpeed',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-1.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Jakobs',InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))))
+
+set GD_Weap_AssaultRifle.Barrel.AR_Barrel_Jakobs_Stomper ExternalAttributeEffects ((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Combat_Rifle.Ammo_Combat_Rifle_RegenerationRate',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=2.003703,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.GameplayAttributes.FootSpeed',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+set GD_Weap_AssaultRifle.Name.Title_Jakobs.Title_Unique_Stomper:AttributePresentationDefinition_8 NoConstraintText <font color="#FFFFFF">Achieve Your Goal, No Matter What It Takes, Act Fast, No Time To Lose.<br><br>. Shots Chases Enemies<br>. Consumes 2 Ammo Per Shot.<br>. Triples Movement Speed.<br>. 3 Round Burst When Zoomed.<br><br>Made by Tsunami.
+
+set GD_Weap_AssaultRifle.Barrel.AR_Barrel_Jakobs_Stomper ZoomWeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponAutomaticBurstCount',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=3.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))
+
+set GD_Weap_AssaultRifle.Barrel.AR_Barrel_Jakobs_Stomper Rarity (BaseValueConstant=6.000000)
+
+set GD_Weap_AssaultRifle.Barrel.AR_Barrel_Jakobs_Stomper AttributeSlotUpgrades ((SlotName="WeaponMagSize",GradeIncrease=20,bActivateSlot=True))

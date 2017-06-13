@@ -11,7 +11,9 @@ Check out the [Wiki](https://github.com/BL2CP/BLCMods/wiki)
 
 If you are not part of BL2CP, to contribute a mod:
 - `Fork` the repository (top right).
-- `Commit` files to the respective folders. (either `Borderlands 2 mods` or `Pre Sequel Mods`)
+- `Commit` files to the respective folders. (either `Borderlands 2 mods` or `Pre Sequel Mods`)    
+  under a personal folder that shares your github username    
+  E.g. (`Borderlands 2 mods/SomeDude/mod.txt`)
 - Send a `Pull Request` to `Compare` merge your fork to the `master` branch.
 
 If you are part of [BL2CP](https://github.com/BL2CP) you do not need to fork or pull request.
@@ -20,7 +22,7 @@ If you are part of [BL2CP](https://github.com/BL2CP) you do not need to fork or 
 
 To download the files click the green `Clone or Download` button in the top right.
 
-Installing the files follows methods discussed on the [Wiki](https://github.com/BL2CP/BLCMods/wiki/Tutorial-01:-Accessing-Console)
+Installing the files follows methods discussed on the [Wiki](https://github.com/BL2CP/BLCMods/wiki/Tutorial:-Installation)
 
 *Derch*'s Tutorial:    
 [![Derch's Install Tutorial](http://img.youtube.com/vi/HT79s6_KXqQ/0.jpg)](https://youtu.be/HT79s6_KXqQ)

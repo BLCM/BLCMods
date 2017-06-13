@@ -1,0 +1,22 @@
+Its the reloader, it wasen't before
+This gun, has a completly broken firing mechanism
+(no, its not "Broken" as in its overpowered, its broken, it literally cannot fire)
+
+but still, even though that you can do massive damage with this, it can quickly consume all your supply of ammo.
+if you want to kill with this, because of the explosion's small blast radius, you'll have to master your gun throwing skills
+Though this gun with its massive damage could be useful against single enemies/bosses, 
+its not recommended to use this at places like lynchwood, washburn refinery.
+
+
+This gun cannot fire
+Slow ammo regeneration
+High ammo consumption
+Replaces babymaker
+
+set GD_Weap_SMG.Name.Title_Tediore.Title_Legendary_BabyMaker PartName Reloader
+
+set GD_Weap_SMG.Name.Title_Tediore.Title_Legendary_BabyMaker:AttributePresentationDefinition_8 NoConstraintText Lock n' Load, Be ready to throw...
+
+set GD_Weap_SMG.Barrel.SMG_Barrel_Tediore_BabyMaker WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=10.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectileSpeedMultiplier',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-10000.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=5.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))))
+
+set GD_Weap_SMG.Barrel.SMG_Barrel_Tediore_BabyMaker ExternalAttributeEffects ((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Patrol_SMG.Ammo_Patrol_SMG_RegenerationRate',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
