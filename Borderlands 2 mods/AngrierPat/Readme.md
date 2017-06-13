@@ -4,6 +4,7 @@ If you do not farm for items in Borderlands 2 anymore, then feel free to use Gib
 The intent behind these mods is to add value and flavor to the Head Hunter packs, because I believe that they are fun tidbits of content.
 In anycase, enjoy my creations and have fun vault hunting! 
 
+All of these Mods include Filter Tool support for your convenience!
 
   "Pat, I dont understand your naming conventions." Well look no further for an explination!
   More detailed descriptions in the mods themselves.
