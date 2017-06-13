@@ -21,7 +21,7 @@ The Candy Bag can be seen [here](https://cdn.discordapp.com/attachments/28838260
  #3. Heart Stopper
  
 	Moxxi upped the girth on her favorite shotgun as a gift for the Newly Wed Goliaths so it could hit home a little harder.
-The Heart Stopper can be seen [here](https://cdn.discordapp.com/attachments/297567136363315201/323320513839628288/unknown.png)
+The Heart Stopper has 2 skins, [Light](https://images.discordapp.net/attachments/231501901194067969/323953462847209472/unknown.png) and [Dark](https://images.discordapp.net/attachments/231501901194067969/323953607613480963/unknown.png)
 
 
  #4. Newfoundlands
