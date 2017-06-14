@@ -47,3 +47,9 @@ The Tingling Sensation can be seen [here](https://cdn.discordapp.com/attachments
  
 	Snowman has a Machine gun. Ho Ho Ho. You should kill him for it.
 The Yippee Ki Yay can be seen [here](https://cdn.discordapp.com/attachments/297567136363315201/323320759407869952/unknown.png).
+
+
+ #8. Electro
+ 
+	Sparky forgot to leave his favorite spiderman villan model at home! Kill him and gain your own Electro action figure
+The Electro can be seen [here](https://cdn.discordapp.com/attachments/297567136363315201/324454338565242881/unknown.png).
