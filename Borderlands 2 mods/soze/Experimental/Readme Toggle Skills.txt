@@ -5,4 +5,5 @@
 ### AXTON CANT USE DOUBLE TURRET WITH THIS MOD ###
 ### KUNAI BREAKS WITH THIS MOD ###
 
+(Big thanks to Nocturni for helping me out with this project & providing the Deathtrap code!)
 ( RE-EXECUTE IS ONLY FOR NORMAL )
