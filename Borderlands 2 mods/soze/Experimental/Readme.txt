@@ -1,0 +1,2 @@
+All of the files with (normal) means you have to execute them every time you save & quit and it'll say the class is unrecognized if you execute it in the main menu, this is because the character isn't loaded in.
+(Hotfix does not have these issues, Hotfix works 100% but has a different installing method)

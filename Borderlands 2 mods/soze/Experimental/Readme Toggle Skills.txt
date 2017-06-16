@@ -4,7 +4,5 @@
 
 ### AXTON CANT USE DOUBLE TURRET WITH THIS MOD ###
 ### KUNAI BREAKS WITH THIS MOD ###
-### SALVADOR'S COME AT ME BRO SKILL BREAKS (this shouldn't be an issue, who uses this skill anyways.) ###
 
-(Big thanks to Nocturni for helping me out with this project & providing the Deathtrap code!)
-( RE-EXECUTE IS ONLY FOR NORMAL 
+( RE-EXECUTE IS ONLY FOR NORMAL )
