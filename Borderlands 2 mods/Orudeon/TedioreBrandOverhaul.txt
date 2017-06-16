@@ -1,0 +1,475 @@
+#<TedioreOverhaul>
+
+#<Description>
+
+##########
+
+All Tediore weapons have received a redesign and combat tweaks. In addition to improving general combat usage of all four weapon types, all Tediore products (including grenades and rocket launchers) now innately have ammo regeneration that scales with rarity thanks to Tediore's digistruct technology. (Thank you to Aaron0000 for permission to incorporate Tediore REGENdaries.)
+
+Additionally, Aaron0000's Splitter Retcher is included by default. Please note that you must pick a graphical effect for it in the Filter Tool or by commenting out the one you don't want to use with a # at the front. At extremely high fire rates, you may experience game performance issues.
+
+##########
+
+#</Description>
+
+#<TedioreReloadBuff>
+
+#<Description>
+
+Buffs the on-reload damage explosion of all Tediore weapons. In general, Tediore weapons are now more worth chucking unless you can regularly get critical hits. This boost is roughly 1.55x more damage (there's an element of random variance involved that makes an exact increase impossible to pin down). (Thank you to AngrierPat for nailing down this formula's workings.)
+
+#</Description>
+
+#<Buffs>
+
+set gd_balance_healthanddamage.healthanddamage.init_tediorereloaddamage valueformula (bEnabled=True,Multiplier=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.Weapon.WeaponBulletsRemainingInClip',InitializationDefinition=None,BaseValueScaleConstant=1.00000),Level=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'GD_Balance_HealthAndDamage.HealthAndDamage.Init_TedioreReloadDamage:AttributeDefinition_8',InitializationDefinition=None,BaseValueScaleConstant=1.8500000),Power=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),Offset=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))
+
+#</Buffs>
+
+#</TedioreReloadBuff>
+
+#<SMGs>
+
+#<Description>
+
+SMGs
+
+Slightly buffs base damage of Tediore SMGs at the Type-level and buffs sustained fire accuracy.
+
+#</Description>
+
+#<Buffs>
+
+set GD_Weap_SMG.A_Weapons.WT_SMG_Tediore PerShotAccuracyImpulse 1.7
+
+set GD_Weap_SMG.A_Weapons.WT_SMG_Tediore InstantHitDamage (BaseValueConstant=20.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance_HealthAndDamage.HealthAndDamage.Init_WeaponDamage',BaseValueScaleConstant=0.880000)
+
+#</Buffs>
+
+#<SMGsRegen>
+
+#<White>
+
+set GD_Weap_SMG.ManufacturerMaterials.Mat_Tedior_1 ExternalAttributeEffects ((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Patrol_SMG.Ammo_Patrol_SMG_RegenerationRate',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.750000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+#</White>
+
+#<GreenRegen>
+
+set GD_Weap_SMG.ManufacturerMaterials.Mat_Tedior_2 ExternalAttributeEffects ((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Patrol_SMG.Ammo_Patrol_SMG_RegenerationRate',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+#</GreenRegen>
+
+#<BlueRegen>
+
+set GD_Weap_SMG.ManufacturerMaterials.Mat_Tedior_3 ExternalAttributeEffects ((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Patrol_SMG.Ammo_Patrol_SMG_RegenerationRate',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=2.250000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+#</BlueRegen>
+
+#<PurpleRegen>
+
+set GD_Weap_SMG.ManufacturerMaterials.Mat_Tedior_4 ExternalAttributeEffects ((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Patrol_SMG.Ammo_Patrol_SMG_RegenerationRate',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=3.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+#</PurpleRegen>
+
+#<LegendaryRegen>
+
+set GD_Weap_SMG.ManufacturerMaterials.Mat_Tedior_5_Legendary ExternalAttributeEffects ((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Patrol_SMG.Ammo_Patrol_SMG_RegenerationRate',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=5.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+#</LegendaryRegen>
+
+#<GemstoneRegen>
+
+set GD_Aster_Weapons.ManufacturerMaterials.Mat_Tediore_4_CubicZerconia_SMG ExternalAttributeEffects ((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Patrol_SMG.Ammo_Patrol_SMG_RegenerationRate',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=3.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+#</GemstoneRegen>
+
+#<AvengerRegen>
+
+#<Description>
+
+The Avenger naturally regenerates ammo, but Aaron0000's Tediore REGENDaries mod introduces an intriguing alteration: the Avenger regenerates all ammunition (including rockets, but excluding grenades) while held. It is included baseline with permission. Thank you to Aaron0000 for this code.
+
+#</Description>
+
+#<Regen>
+
+set GD_Gladiolus_Weapons.SMG.SMG_Barrel_Hyperion_Avenger ExternalAttributeEffects ((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Patrol_SMG.Ammo_Patrol_SMG_RegenerationRate',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=7.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Combat_Rifle.Ammo_Combat_Rifle_RegenerationRate',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=3.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Repeater_Pistol.Ammo_Repeater_Pistol_RegenerationRate',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Combat_Shotgun.Ammo_Combat_Shotgun_RegenerationRate',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.300000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Sniper_Rifle.Ammo_Sniper_Rifle_RegenerationRate',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.200000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Rocket_Launcher.Ammo_Rocket_Launcher_RegenerationRate',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.020000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+#</Regen>
+
+#</AvengerRegen>
+
+#<ItemCardDescription>
+
+set GD_Weap_SMG.A_Weapons.WT_SMG_Tediore:AttributePresentationDefinition_0 NoConstraintText Explodes like a [skill]grenade[-skill] when [skill]reloaded[-skill] and slowly [skill]regenerates ammo[-skill].
+
+#</ItemCardDescription>
+
+#</SMGsRegen>
+
+#</SMGs>
+
+#<RocketLaunchers>
+
+#<Description>
+
+##########
+
+Rocket Launchers
+
+Buff all non-E-Tech rocket launcher barrels to provide a damage boost to Tediore rocket launchers and adds one to clip size.
+
+##########
+
+#</Description>
+
+#<Buffs>
+
+set GD_Weap_Launchers.A_Weapons.WT_Tediore_Launcher ClipSize 3
+
+set GD_Weap_Launchers.Barrel.L_Barrel_Tediore WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Tediore',InitializationDefinition=None,BaseValueScaleConstant=0.250000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponPerShotAccuracyImpulse',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Tediore',InitializationDefinition=None,BaseValueScaleConstant=-0.700000)))
+
+set GD_Weap_Launchers.Barrel.L_Barrel_Bandit WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Bandit',InitializationDefinition=None,BaseValueScaleConstant=0.050000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponPerShotAccuracyImpulse',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Bandit',InitializationDefinition=None,BaseValueScaleConstant=-0.700000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Tediore',InitializationDefinition=None,BaseValueScaleConstant=0.200000)))
+
+set GD_Weap_Launchers.Barrel.L_Barrel_Torgue WeaponAttributeEffects
+((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Torgue',InitializationDefinition=None,BaseValueScaleConstant=1.000000)),WeaponAttributeEffects(1)=(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Torgue',InitializationDefinition=None,BaseValueScaleConstant=-0.050000)),WeaponAttributeEffects(2)=(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Torgue',InitializationDefinition=None,BaseValueScaleConstant=0.200000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Tediore',InitializationDefinition=None,BaseValueScaleConstant=0.200000)))
+
+set GD_Weap_Launchers.Barrel.L_Barrel_Vladof WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Vladof',InitializationDefinition=None,BaseValueScaleConstant=0.100000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponBarrelSpinUpDuration',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Vladof',InitializationDefinition=None,BaseValueScaleConstant=-0.250000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponBarrelSpinUpDuration',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Bandit',InitializationDefinition=None,BaseValueScaleConstant=2.500000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Vladof',InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Tediore',InitializationDefinition=None,BaseValueScaleConstant=0.200000)))
+
+set GD_Weap_Launchers.Barrel.L_Barrel_Maliwan WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Maliwan',InitializationDefinition=None,BaseValueScaleConstant=0.100000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponBaseStatusEffectChanceModifier',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Maliwan',InitializationDefinition=None,BaseValueScaleConstant=0.100000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Maliwan',InitializationDefinition=None,BaseValueScaleConstant=-0.300000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Tediore',InitializationDefinition=None,BaseValueScaleConstant=0.200000)))
+
+#</Buffs>
+
+#<RLsRegen>
+
+#<WhiteRegen>
+
+set GD_Weap_Launchers.ManufacturerMaterials.Mat_Tediore_1 ExternalAttributeEffects ((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Rocket_Launcher.Ammo_Rocket_Launcher_RegenerationRate',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.022222,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+#</WhiteRegen>
+
+#<GreenRegen>
+
+set GD_Weap_Launchers.ManufacturerMaterials.Mat_Tediore_2 ExternalAttributeEffects ((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Rocket_Launcher.Ammo_Rocket_Launcher_RegenerationRate',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.025000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+#</GreenRegen>
+
+#<BlueRegen>
+
+set GD_Weap_Launchers.ManufacturerMaterials.Mat_Tediore_3 ExternalAttributeEffects ((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Rocket_Launcher.Ammo_Rocket_Launcher_RegenerationRate',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.028571,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+#</BlueRegen>
+
+#<PurpleRegen>
+
+set GD_Weap_Launchers.ManufacturerMaterials.Mat_Tediore_4 ExternalAttributeEffects ((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Rocket_Launcher.Ammo_Rocket_Launcher_RegenerationRate',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.033333,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+#</PurpleRegen>
+
+#<LegendaryRegen>
+
+set GD_Weap_Launchers.ManufacturerMaterials.Mat_Tediore_5_Legendary ExternalAttributeEffects ((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Rocket_Launcher.Ammo_Rocket_Launcher_RegenerationRate',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.0666667,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+#</LegendaryRegen>
+
+#<ItemCardDescription>
+
+set GD_Weap_Launchers.A_Weapons.WT_Tediore_Launcher:AttributePresentationDefinition_0 NoConstraintText Explodes like a [skill]grenade[-skill] when [skill]reloaded[-skill] and slowly [skill]regenerates ammo[-skill].
+
+#</ItemCardDescription>
+
+#</RLsRegen>
+
+#</RocketLaunchers>
+
+#<Shotguns>
+
+#<Description>
+
+##########
+
+Shotguns
+
+Buff baseline shotgun projectile count, clip size, fire rate, sustained fire accuracy. Tediore barrel now grants +1 projectile and 5% damage for brand match, 15% reload speed and 10% tighter spread to all shotguns.
+
+##########
+
+#</Description>
+
+#<Buffs>
+
+set GD_Weap_Shotgun.A_Weapons.WT_Tediore_Shotgun ProjectilesPerShot 7
+
+set GD_Weap_Shotgun.A_Weapons.WT_Tediore_Shotgun ClipSize 7
+
+set GD_Weap_Shotgun.A_Weapons.WT_Tediore_Shotgun PerShotAccuracyImpulse 7.00000
+
+set GD_Weap_Shotgun.A_Weapons.WT_Tediore_Shotgun FireRate 0.560000
+
+set GD_Weap_Shotgun.Barrel.SG_Barrel_Tediore WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Tediore',InitializationDefinition=None,BaseValueScaleConstant=0.05000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Tediore',InitializationDefinition=None,BaseValueScaleConstant=1.00000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponReloadSpeed',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-0.150000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-0.100000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.00000)))
+
+set GD_Weap_Shotgun.Barrel.SG_Barrel_Tediore_Deliverance WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.300000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Tediore',InitializationDefinition=None,BaseValueScaleConstant=1.00000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-0.100000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.00000)))
+
+#</Buffs>
+
+#<Retcher>
+
+#<Description>
+
+##########
+
+Retcher (by Aaron0000)
+
+With permission from Aaron0000, the Retcher modifications from his Splitters mod has been incorporated. It is the opinion of the mod author that the Splitter version is what splatguns should have been. The Retcher now rapidly fires a cone of high-damage directed energy beams.
+
+Code used with permission from Splittersv5.
+
+Important note: If the energy beams causes performance issues, please toggle the firing effect to assault rifle pellets.
+
+##########
+
+#</Description>
+
+#<Buffs>
+
+set GD_Orchid_RaidWeapons.Shotgun.Spitter.Orchid_Seraph_Spitter_Barrel WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.100000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=3.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=4.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponStatusEffectChanceModifier',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-0.033000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.354200,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponReloadSpeed',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.800000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=-1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.900000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+#</Buffs>
+
+#<VisualEffects>
+
+set GD_Orchid_RaidWeapons.Shotgun.Spitter.Orchid_Seraph_Spitter_Barrel WeaponCardAttributes ((Attribute=AttributeDefinition'D_Attributes.Weapon.WeaponReloadSpeed',PriorityIncrease=-3.000000))
+
+set GD_Orchid_RaidWeapons.Shotgun.Spitter.Orchid_Seraph_Spitter_Barrel:BehaviorProviderDefinition_1 BehaviorSequences ((BehaviorSequenceName="Default",bEnabledOnSpawn=True,bSequenceEnabledMutex=False,CustomEnableCondition=None,EventData=,EventData2=,BehaviorData=,BehaviorData2=,VariableData=,ConsolidatedOutputLinkData=,ConsolidatedVariableLinkData=,ConsolidatedLinkedVariables=))
+
+set GD_Orchid_RaidWeapons.Shotgun.Spitter.Orchid_Seraph_Spitter_Barrel MuzzleFlashPSTemplates EffectCollectionDefinition'GD_Weap_Shotgun.Effects.SG_Default_MuzzleFlashes'
+
+set GD_Orchid_RaidWeapons.Shotgun.Spitter.Orchid_Seraph_Spitter_FireMode FireType EWWFT_Bullet
+set GD_Orchid_RaidWeapons.Shotgun.Spitter.Orchid_Seraph_Spitter_FireMode ProjectileDefinition None
+set GD_Orchid_RaidWeapons.Shotgun.Spitter.Orchid_Seraph_Spitter_FireMode ExplosionOverrideDefinition None
+set GD_Orchid_RaidWeapons.Shotgun.Spitter.Orchid_Seraph_Spitter_FireMode ExplosionOverideInstanceDataName None
+set GD_Orchid_RaidWeapons.Shotgun.Spitter.Orchid_Seraph_Spitter_FireMode PartSysTemplate ParticleSystem'FX_WEP_Trails.Particles.Alien.Part_Wep_Tracer_Alien_AR'
+set GD_Orchid_RaidWeapons.Shotgun.Spitter.Orchid_Seraph_Spitter_FireMode ConditionalPartSysTemplate EffectCollectionDefinition'GD_Weap_AssaultRifle.Effects.AR_ETech_Tracers'
+set GD_Orchid_RaidWeapons.Shotgun.Spitter.Orchid_Seraph_Spitter_FireMode Lifetime 5.000000
+set GD_Orchid_RaidWeapons.Shotgun.Spitter.Orchid_Seraph_Spitter_FireMode TraceInterval 0.200000
+set GD_Orchid_RaidWeapons.Shotgun.Spitter.Orchid_Seraph_Spitter_FireMode Speed 18000.000000
+set GD_Orchid_RaidWeapons.Shotgun.Spitter.Orchid_Seraph_Spitter_FireMode Acceleration (X=0.000000,Y=0.000000,Z=0.000000)
+set GD_Orchid_RaidWeapons.Shotgun.Spitter.Orchid_Seraph_Spitter_FireMode RicochetResponse (SplitNum=0,SplitAngle=0.000000,SplitAngleOffset=0.000000,SplitDistance=0.000000,SplitFire=None,NewSpeed=0.000000,bDetonate=False,bRespawnTracer=True,bUpdateBeamSourceLocation=False,Behaviors=)
+set GD_Orchid_RaidWeapons.Shotgun.Spitter.Orchid_Seraph_Spitter_FireMode BeamTraceNumSteps 6.000000
+set GD_Orchid_RaidWeapons.Shotgun.Spitter.Orchid_Seraph_Spitter_FireMode BeamMaxLockOnDistance 5000.000000
+set GD_Orchid_RaidWeapons.Shotgun.Spitter.Orchid_Seraph_Spitter_FireMode BeamMaxLength 7500.000000
+set GD_Orchid_RaidWeapons.Shotgun.Spitter.Orchid_Seraph_Spitter_FireMode BeamSourceTangentStrengthOverDistance 1.500000
+set GD_Orchid_RaidWeapons.Shotgun.Spitter.Orchid_Seraph_Spitter_FireMode BeamTargetTangentStrengthOverDistance 0.250000
+set GD_Orchid_RaidWeapons.Shotgun.Spitter.Orchid_Seraph_Spitter_FireMode BeamApproxRepUpdateTime 1.000000
+set GD_Orchid_RaidWeapons.Shotgun.Spitter.Orchid_Seraph_Spitter_FireMode NumRicochets 0
+
+#</VisualEffects>
+
+#<BulletTracer><MUT>
+
+#<Energy Beam Effect (Enable only one)>
+
+set GD_Orchid_RaidWeapons.Shotgun.Spitter.Orchid_Seraph_Spitter_FireMode PartSysTemplate ParticleSystem'FX_WEP_Trails.Particles.Alien.Part_Wep_Tracer_Alien_Sniper'
+set GD_Orchid_RaidWeapons.Shotgun.Spitter.Orchid_Seraph_Spitter_FireMode ConditionalPartSysTemplate EffectCollectionDefinition'GD_Weap_SniperRifles.Effects.SR_ETech_Tracers'
+
+#</Energy Beam Effect (Enable only one)>
+
+#<Blaster Pellet Effect (Enable only one)>
+
+set GD_Weap_Shotgun.FiringModes.Bullets_Splatgun_Hyperion PartSysTemplate ParticleSystem'FX_WEP_Trails.Particles.Alien.Part_Wep_Tracer_Alien_AR'
+set GD_Weap_Shotgun.FiringModes.Bullets_Splatgun_Hyperion ConditionalPartSysTemplate EffectCollectionDefinition'GD_Weap_AssaultRifle.Effects.AR_ETech_Tracers'
+
+#</Blaster Pellet Effect (Enable only one)>
+
+#</BulletTracer>
+
+#</Retcher>
+
+#<SGsRegen>
+
+#<Description>
+
+##########
+
+Grant all Tediore shotguns baseline ammo regeneration. (Thank you to Aaron0000 for permission to adapt his code.)
+
+##########
+
+#</Description>
+
+#<WhiteRegen>
+
+set GD_Weap_Shotgun.ManufacturerMaterials.Mat_Tediore_1 ExternalAttributeEffects ((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Combat_Shotgun.Ammo_Combat_Shotgun_RegenerationRate',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+#</WhiteRegen>
+
+#<GreenRegen>
+
+set GD_Weap_Shotgun.ManufacturerMaterials.Mat_Tediore_2 ExternalAttributeEffects ((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Combat_Shotgun.Ammo_Combat_Shotgun_RegenerationRate',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.3,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+#</GreenRegen>
+
+#<BlueRegen>
+
+set GD_Weap_Shotgun.ManufacturerMaterials.Mat_Tediore_3 ExternalAttributeEffects ((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Combat_Shotgun.Ammo_Combat_Shotgun_RegenerationRate',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.5,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+#</BlueRegen>
+
+#<PurpleRegen>
+
+set GD_Weap_Shotgun.ManufacturerMaterials.Mat_Tediore_4 ExternalAttributeEffects ((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Combat_Shotgun.Ammo_Combat_Shotgun_RegenerationRate',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.7,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+#</PurpleRegen>
+
+#<LegendaryRegen>
+
+set GD_Weap_Shotgun.ManufacturerMaterials.Mat_Tediore_5_Legendary ExternalAttributeEffects ((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Combat_Shotgun.Ammo_Combat_Shotgun_RegenerationRate',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.9,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+#</LegendaryRegen>
+
+#<GemstoneRegen>
+
+set GD_Aster_Weapons.ManufacturerMaterials.Mat_Tediore_4_CubicZerconia_SG ExternalAttributeEffects ((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Combat_Shotgun.Ammo_Combat_Shotgun_RegenerationRate',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.7,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+#</GemstoneRegen>
+
+#<UniqueRegen>
+
+set GD_Weap_Shotgun.ManufacturerMaterials.Mat_Tediore_3_Octo ExternalAttributeEffects ((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Combat_Shotgun.Ammo_Combat_Shotgun_RegenerationRate',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.7,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+set GD_Weap_Shotgun.ManufacturerMaterials.Mat_Tediore_3_Blockhead ExternalAttributeEffects ((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Combat_Shotgun.Ammo_Combat_Shotgun_RegenerationRate',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.7,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+#</UniqueRegen>
+
+#<SeraphRegen>
+
+set GD_Aster_RaidWeapons.ManufacturerMaterials.Mat_Tediore_5_Omen ExternalAttributeEffects ((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Combat_Shotgun.Ammo_Combat_Shotgun_RegenerationRate',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.9,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+set GD_Orchid_RaidWeapons.ManufacturerMaterials.Mat_Tediore_1_Spitter ExternalAttributeEffects ((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Combat_Shotgun.Ammo_Combat_Shotgun_RegenerationRate',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.9,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+#</SeraphRegen>
+
+#</SGsRegen>
+
+#<ItemCardDescription>
+
+set GD_Weap_Shotgun.A_Weapons.WT_Tediore_Shotgun:AttributePresentationDefinition_2 NoConstraintText Explodes like a [skill]grenade[-skill] when [skill]reloaded[-skill] and slowly [skill]regenerates ammo[-skill].
+
+#</ItemCardDescription>
+
+#</Shotguns>
+
+#<Handguns>
+
+#<Description>
+
+##########
+
+Slightly buff pistol accuracy, spread, and damage.
+
+##########
+
+#</Description>
+
+#<Buffs>
+
+set GD_Weap_Pistol.A_Weapons.WeaponType_Tediore_Pistol PerShotAccuracyImpulse 2.1
+
+set GD_Weap_Pistol.A_Weapons.WeaponType_Tediore_Pistol Spread 1.8
+
+set GD_Weap_Pistol.A_Weapons.WeaponType_Tediore_Pistol InstantHitDamage (BaseValueConstant=20.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance_HealthAndDamage.HealthAndDamage.Init_WeaponDamage',BaseValueScaleConstant=1.420000)
+
+#</Buffs>
+
+#<HandgunsRegen>
+
+#<Description>
+
+Grant all Tediore pistols baseline ammo regeneration. (Thank you to Aaron0000 for permission to adapt his code.)
+
+#</Description>
+
+#<WhiteRegen>
+
+set GD_Weap_Pistol.ManufacturerMaterials.Mat_Tediore_1 ExternalAttributeEffects ((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Repeater_Pistol.Ammo_Repeater_Pistol_RegenerationRate',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.20,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+#</WhiteRegen>
+
+#<GreenRegen>
+
+set GD_Weap_Pistol.ManufacturerMaterials.Mat_Tediore_2 ExternalAttributeEffects ((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Repeater_Pistol.Ammo_Repeater_Pistol_RegenerationRate',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.5,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+#</GreenRegen>
+
+#<BlueRegen>
+
+set GD_Weap_Pistol.ManufacturerMaterials.Mat_Tediore_3 ExternalAttributeEffects ((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Repeater_Pistol.Ammo_Repeater_Pistol_RegenerationRate',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+#</BlueRegen>
+
+#<PurpleRegen>
+
+set GD_Weap_Pistol.ManufacturerMaterials.Mat_Tediore_4 ExternalAttributeEffects ((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Repeater_Pistol.Ammo_Repeater_Pistol_RegenerationRate',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.5,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+#</PurpleRegen>
+
+#<LegendaryRegen>
+
+set GD_Weap_Pistol.ManufacturerMaterials.Mat_Tediore_5_Legendary ExternalAttributeEffects ((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Repeater_Pistol.Ammo_Repeater_Pistol_RegenerationRate',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=2,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+#</LegendaryRegen>
+
+#<GemstoneRegen>
+
+set GD_Aster_Weapons.ManufacturerMaterials.Mat_Tediore_4_CubicZerconia_Pistol ExternalAttributeEffects ((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Repeater_Pistol.Ammo_Repeater_Pistol_RegenerationRate',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.5,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+#</GemstoneRegen>
+
+#<ItemCardDescription>
+
+set GD_Weap_Pistol.A_Weapons.WeaponType_Tediore_Pistol:AttributePresentationDefinition_2 NoConstraintText Explodes like a [skill]grenade[-skill] when [skill]reloaded[-skill] and slowly [skill]regenerates ammo[-skill].
+
+#</ItemCardDescription>
+
+#</HandgunsRegen>
+
+#</Handguns>
+
+#<Grenades>
+
+#<Description>
+
+Tediore grenades now replenish over time, starting at one every twenty seconds for whites, going all the way to one every ten seconds for purples. Tediore regrets to inform you the Fastball is incompatible with this technology.
+
+Due to lack of custom presentation attached to Tediore-brand grenades, the regeneration effect cannot be displayed without breaking something else in the game to usurp presentation data.
+
+#</Description>
+
+#<WhiteRegen>
+
+set GD_GrenadeMods.Material.Material_Tedior ExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Ammo_Grenade_Protean.Ammo_Grenade_ProteanActiveRegenerationRate',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.05,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))
+
+#</WhiteRegen>
+
+#<GreenRegen>
+
+set GD_GrenadeMods.Material.Material_Tedior_2_Uncommon ExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Ammo_Grenade_Protean.Ammo_Grenade_ProteanActiveRegenerationRate',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.0625,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))
+
+#</GreenRegen>
+
+#<BlueRegen>
+
+set GD_GrenadeMods.Material.Material_Tedior_3_Rare ExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Ammo_Grenade_Protean.Ammo_Grenade_ProteanActiveRegenerationRate',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.0769231,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))
+
+#</BlueRegen>
+
+#<PurpleRegen>
+
+set GD_GrenadeMods.Material.Material_Tedior_4_VeryRare ExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Ammo_Grenade_Protean.Ammo_Grenade_ProteanActiveRegenerationRate',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))
+
+#</PurpleRegen>
+
+#</Grenades>
+
+#</TedioreOverhaul>
