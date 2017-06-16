@@ -1,0 +1,34 @@
+The 420 BLAZE
+
+SMOKE WEED AND FART NOVAS!
+now you can Blaze n' Blitz, through the map
+
+
+Grants Super dank snoop dog speed
+Fires shots that doesn't move and continuesly releases novas
+Restores 0.05% damage to health (Believe me, its enough to restore your health)
+Should only be fired when running at Super dank snoop dog speed (So your nova farts don't kill yourself)
+If you get stuck while running and farting novas, you're likly to hit yourself with your farts and you die
+Will lose second wind instantly when you get one with this weapon
+High firerate
+High magazine size
+High damage
+High chance to kill yourself
+
+Replaces emperor and adds a broken skin
+############################################################################
+
+
+set GD_Weap_SMG.Barrel.SMG_Barrel_Dahl_Emperor CustomFiringModeDefinition FiringModeDefinition'GD_Weap_Launchers.FiringModes.FM_Rocket_Maliwan_Pyrophobia'
+
+set GD_Weap_SMG.Barrel.SMG_Barrel_Dahl_Emperor WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Dahl',InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=6.400000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.00000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectileSpeedMultiplier',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-20000.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))))
+
+set GD_Weap_SMG.Barrel.SMG_Barrel_Dahl_Emperor ExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.GameplayAttributes.FootSpeed',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=5.400000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.DamageEnhancementModifiers.PlayerConvertDamageToHealingPercent',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.050000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+set GD_Weap_SMG.Barrel.SMG_Barrel_Dahl_Emperor AttributeSlotUpgrades ((SlotName="WeaponMagSize",GradeIncrease=30,bActivateSlot=True),(SlotName="WeaponFireRate",GradeIncrease=10,bActivateSlot=True),(SlotName="WeaponAccuracyImpulse",GradeIncrease=100,bActivateSlot=True),
+
+set GD_Weap_SMG.Name.Title.Title_Legendary_Dahl_Emperor PartName 420 BLAZE!!!!!
+
+set GD_Weap_SMG.Name.Title.Title_Legendary_Dahl_Emperor:AttributePresentationDefinition_8 NoConstraintText <font color="#D80C0C">Super dank snoop dog, ACTIVATED!!!!!<font color="#FFFFFF"><br>SMOKE WEED AND FART NOVAS!!!
+
+set GD_Weap_SMG.ManufacturerMaterials.Mat_Dahl_5_Legendary Material MaterialInstanceConstant'Sage_GunMaterials.Materials.Pistol.Mati_JakobsUniquePistol_Rex'
