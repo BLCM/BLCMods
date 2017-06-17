@@ -9,14 +9,14 @@ Check out the [Wiki](https://github.com/BL2CP/BLCMods/wiki)
 
 ## Contribution
 
-If you are not part of BL2CP, to contribute a mod:
+If you are not part of BLCM, to contribute a mod:
 - `Fork` the repository (top right).
 - `Commit` files to the respective folders. (either `Borderlands 2 mods` or `Pre Sequel Mods`)    
   under a personal folder that shares your github username    
   E.g. (`Borderlands 2 mods/SomeDude/mod.txt`)
 - Send a `Pull Request` to `Compare` merge your fork to the `master` branch.
 
-If you are part of [BL2CP](https://github.com/BL2CP) you do not need to fork or pull request.
+If you are part of [BLCM](https://github.com/BLCM) you do not need to fork or pull request.
 
 ## Installation
 
