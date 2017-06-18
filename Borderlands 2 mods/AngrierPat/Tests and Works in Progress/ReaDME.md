@@ -4,6 +4,8 @@ Hia! Pat here to tell you about my Projects and Proofs of Concepts.
       The goal with this weapon was to understand how a gun that scales with your level would function.
       My friend also wanted something OP to get themselves through UVHM easier
       And I made it pretty
+      
+      
     Gemstone Glitches
       The goal here was to port Glitch weapons from TPS to BL2
       So far Ive hammered out the buffs the Glitches give,
