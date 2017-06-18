@@ -1,0 +1,65 @@
+The 00Messiah00
+
+this is the 4th gun thats named after someone
+this is now officially the weapon with the most coding involved, the coding in this mod is almost double the amount of code in 
+"Nukem mortar MKII", which was the mod with the most coding before this mod.
+
+This is a Spinigun/Laser rifle/Shotgun/Machine gun/Laser megacannon
+5 in 1, who doesn't want that XD
+
+High damage
+High projectile count
+Insane (MAX) firerate
+No recoil
+Takes two minutes for it to fire at max speed
+Fast ammo regeneration
+50% Damage impact damage resistance
+100% Status damage resistance
+Doesn't stop spinning when it starts spining (Unless you unenquip it)
+Slow enquip and unenquip time
+Slows movement speed when enquiped
+Laser cannon while scoped
+Consumes 15 ammo per shot while scoped
+High recoil while scoped
+3000% damage while scoped
+Increased velocity while scoped
+Shots ricochets 35 times
+Shots split into 10 on every ricochet
+Shots pierces enemies
+Shots bypasses shields
+
+Replaces Lead Storm
+
+########################################################################################################################
+set GD_Sage_RaidWeapons.AssaultRifle.AR_Barrel_LeadStorm SpinUpDuration (BaseValueConstant=120.750000,BaseValueAttribute=None,InitializationDefinition=None)
+
+set GD_Sage_RaidWeapons.AssaultRifle.AR_Barrel_LeadStorm SpinDownDuration (BaseValueConstant=9999999.000000,BaseValueAttribute=None,InitializationDefinition=None)
+
+set GD_Sage_RaidWeapons.Name.Title.Sage_Seraph_LeadStorm_Title PartName 00Messiah00
+
+set GD_Sage_RaidWeapons.AssaultRifle.AR_Barrel_LeadStorm WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Vladof',InitializationDefinition=None,BaseValueScaleConstant=10.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.400000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.00000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Vladof',InitializationDefinition=None,BaseValueScaleConstant=0.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponEquipTime',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponPutDownTime',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))))))
+
+set GD_Sage_RaidWeapons.Name.Title.Sage_Seraph_LeadStorm_Title:AttributePresentationDefinition_8 NoConstraintText <font color="#D80C0C">Welcome!
+
+set GD_Sage_RaidWeapons.AssaultRifle.AR_Barrel_LeadStorm AttributeSlotUpgrades ((SlotName="WeaponMagSize",GradeIncrease=190,bActivateSlot=True),(SlotName="AccuracyMax",GradeIncrease=10000,bActivateSlot=True),(SlotName="AccuracyMin",GradeIncrease=300000,bActivateSlot=True),(SlotName="WeaponFireRate",GradeIncrease=166,bActivateSlot=True),(SlotName="WeaponAccuracyImpulse",GradeIncrease=1000,bActivateSlot=True),
+
+set GD_Sage_RaidWeapons.ManufacturerMaterials.Mat_Vladof_1_Leadstorm Material MaterialInstanceConstant'Sage_GunMaterials.Materials.Pistol.Mati_JakobsUniquePistol_Rex'
+
+set GD_Sage_RaidWeapons.ManufacturerMaterials.Mat_Vladof_1_Leadstorm ExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.DamageSourceShieldPenetration.PercentChanceInstigatedBulletDmgIgnoresShields',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=100.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Combat_Rifle.Ammo_Combat_Rifle_RegenerationRate',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=3.330555,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.GameplayAttributes.FootSpeed',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-0.400000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.GameplayAttributes.Sprinting',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=3.400000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.DamageTypeModifers.IncendiaryImpactDamageModifier',ConstraintAttribute=None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-0.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.DamageTypeModifers.ShockImpactDamageModifier',ConstraintAttribute=None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-0.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.DamageTypeModifers.CorrosiveImpactDamageModifier',ConstraintAttribute=None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-0.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.DamageTypeModifers.ExplosiveImpactDamageModifier',ConstraintAttribute=None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-0.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.DamageTypeModifers.AmpImpactDamageModifier',ConstraintAttribute=None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-0.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AteDefinition'D_Attributes.DamageTypeModifers.NormalImpactDamageModifier',ConstraintAttribute=None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-0.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AteDefinition'D_Attributes.DamageTypeModifers.AmpStatusEffectDamageModifier',ConstraintAttribute=None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AteDefinition'D_Attributes.DamageTypeModifers.CorrosiveStatusEffectDamageModifier',ConstraintAttribute=None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AteDefinition'D_Attributes.DamageTypeModifers.IncendiaryStatusEffectDamageModifier',ConstraintAttribute=None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AteDefinition'D_Attributes.DamageTypeModifers.NormalStatusEffectDamageModifier',ConstraintAttribute=None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AteDefinition'D_Attributes.DamageTypeModifers.ShockStatusEffectDamageModifier',ConstraintAttribute=None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.HealthResourcePool.HealthMaxValue',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-10000.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=10.000000),(AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.ShieldResourcePool.ShieldMaxValue',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=100.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=100.000000)))
+
+set GD_Sage_RaidWeapons.ManufacturerMaterials.Mat_Vladof_1_Leadstorm ZoomExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.DamageSourceShieldPenetration.PercentChanceInstigatedBulletDmgIgnoresShields',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=100000.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Combat_Rifle.Ammo_Combat_Rifle_RegenerationRate',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=3.330555,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.GameplayAttributes.FootSpeed',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.400000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+set GD_Sage_RaidWeapons.ManufacturerMaterials.Mat_Vladof_1_Leadstorm ZoomWeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=8.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectileSpeedMultiplier',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=10.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=30.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponPerShotAccuracyImpulse',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=300.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponReloadSpeed',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Vladof',InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=14.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Vladof',InitializationDefinition=None,BaseValueScaleConstant=29.000000)))))))
+
+set GD_Sage_RaidWeapons.AssaultRifle.AR_Barrel_LeadStorm CustomFiringModeDefinition FiringModeDefinition'GD_Weap_SniperRifles.FiringModes.Bullet_RailGun'
+
+set GD_Weap_SniperRifles.FiringModes.Bullet_RailGun RicochetResponse (SplitNum=10,SplitAngle=5.000000,SplitAngleOffset=2.000000,SplitDistance=100.000000,SplitFire=None,NewSpeed=0.000000,bDetonate=False,bRespawnTracer=True,bUpdateBeamSourceLocation=False,Behaviors=)
+
+set GD_Weap_SniperRifles.FiringModes.Bullet_RailGun bPenetratePawn True
+
+set GD_Weap_SniperRifles.FiringModes.Bullet_RailGun Lifetime 99999999.000000
+
+set GD_Weap_SniperRifles.FiringModes.Bullet_RailGun NumRicochets 35
+
+
+
