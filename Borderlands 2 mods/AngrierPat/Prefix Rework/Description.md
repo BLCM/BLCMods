@@ -8,7 +8,7 @@
     Mag prefix given slight Reload Speed bonus instead of downside.
     Remove damage nerf to fire rate prefix.
 
-   # AR
+   # ARs
 
     Stability and Accuracy Combined on Stability.
     Mag Accessory given slight Reload Speed bonus instead of downside.
@@ -23,14 +23,14 @@
     Tech3 Accessory buffed mag and reload speed, more reload than MoonClip
     Tech1 Accessory significantly reduce the damage penalty and slightly increased fire rate.
     
-  # SMG
+  # SMGs
 
     Stability Accessory combined with Accuracy Accessory and slightly buffed.
     Change the accuracy accessory to a crit accessory.
     Buff to the fire rate accessory by a slight amount and a slight damage buff.
     Buff to reload accessory to have a larger mag size bonus and a slightly more reload speed.
 
-  # Launcher
+  # Launchers
 
     Gave Accuracy Accessory Rocket Regen.
     Buff to reload accessory by a slight amount.
