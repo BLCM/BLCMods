@@ -69,7 +69,7 @@ set GD_Weap_AssaultRifle.Name.Prefix_Vladof.Prefix_Shroud2_Accuracy PartName Sev
 
 #<Bullet Speed Accessory added a small amount of Ammo Regen>
 
-set GD_Weap_AssaultRifle.Accessory.AR_Accessory_Box_BulletSpeed WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.GameplayAttributes.PlayerCurrentWeaponAmmoRegenerationMultiplier',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Artifacts.BalanceAttributes.Init_ModifierBase_Linear',BaseValueScaleConstant=0.030000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectileSpeedMultiplier',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+set GD_Weap_AssaultRifle.Accessory.AR_Accessory_Box_BulletSpeed ExternalAttributeEffects ((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Combat_Rifle.Ammo_Combat_Rifle_RegenerationRate',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=3.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
 
 set GD_Weap_AssaultRifle.Accessory.AR_Accessory_Box_BulletSpeed WeaponCardAttributes ((Attribute=AttributeDefinition'D_Attributes.GameplayAttributes.PlayerCurrentWeaponAmmoRegenerationMultiplier',PriorityIncrease=0.500000))
 
@@ -161,7 +161,7 @@ set GD_Weap_SMG.Accessory.SMG_Accessory_Stock2_Reload AttributeSlotUpgrades ((Sl
 
 #<Give Accuracy Accessory Rocket Regen>
 
-set GD_Weap_Launchers.Accessory.RL_Accessory_BodyMod_2_Acc WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.GameplayAttributes.PlayerCurrentWeaponAmmoRegenerationMultiplier',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Artifacts.BalanceAttributes.Init_ModifierBase_Linear',BaseValueScaleConstant=0.005000)))
+set GD_Weap_Launchers.Accessory.RL_Accessory_BodyMod_2_Acc ExternalAttributeEffects ((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Rocket_Launcher.Ammo_Rocket_Launcher_RegenerationRate',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.066667,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
 
 set GD_Weap_Launchers.Name.Prefix_Bandit.Prefix_BodyMod2_Accuracy PartName mOAR
 set GD_Weap_Launchers.Name.Prefix_Maliwan.Prefix_BodyMod2_Accuracy PartName Composed
