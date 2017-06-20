@@ -1,0 +1,25 @@
+
+Name
+_________________________________________________________
+
+set GD_Weap_AssaultRifle.Name.Title_Dahl.Title_Legendary_Veruc:AttributePresentationDefinition_8 NoConstraintText Stable fire
+set GD_Weap_AssaultRifle.Name.Title_Dahl.Title_Legendary_Veruc PartName Ajax 
+
+_________________________________________________________
+
+Attributes 
+_________________________________________________________
+
+set GD_Weap_AssaultRifle.Barrel.AR_Barrel_Dahl_Veruc WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponPerShotAccuracyImpulse',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0.000000)),((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-90.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=5.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))
+
+set GD_Weap_AssaultRifle.Barrel.AR_Barrel_Dahl_Veruc ExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.GameplayAttributes.PlayerCriticalHitBonus',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=5.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=2.000000)),((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))
+
+set GD_Weap_AssaultRifle.Barrel.AR_Barrel_Dahl_Veruc ZoomWeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponCurrentBurstShotCount',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=3.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=5.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))
+
+set GD_Weap_AssaultRifle.Barrel.AR_Barrel_Dahl_Veruc ZoomExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.GameplayAttributes.PlayerCriticalHitBonus',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))
+
+_________________________________________________________
+Making the gun shoot 
+_________________________________________________________
+
+set GD_Weap_AssaultRifle.Barrel.AR_Barrel_Dahl_Veruc CustomFiringModeDefinition FiringModeDefinition'GD_Aster_RaidWeapons.Shotguns.Bullet_Shotgun_Omen'
