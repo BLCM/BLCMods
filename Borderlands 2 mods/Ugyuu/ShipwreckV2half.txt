@@ -20,8 +20,11 @@ Future update: elemental unlocks. (Not good with sanity checks.)
 
 Again this works best with the community patch. All mods do.
 
+>>> There is a part for the grenade that gives it 1 child grenade. >> AVOID IT AT ALL COSTS. <<
+
 [Changelog]
 
+V2.5 Made the explosion hit through walls, better for enemies but not you. also one part on the grenade gives it 1 child grenade now..
 V2.0 Multiple changes, including red text and curse text changes (thank you The_Nocturni)
      Buffed damage by quite alot, lowered blast radius
 [Codes]
@@ -32,14 +35,10 @@ set GD_Orchid_GrenadeMods.Delivery.Delivery_Blade:AttributePresentationDefinitio
 set GD_Orchid_GrenadeMods.Delivery.Delivery_Blade:AttributePresentationDefinition_1 Description 
 set GD_Orchid_GrenadeMods.Delivery.Delivery_Blade:AttributePresentationDefinition_1 NoConstraintText Curse of the Pyromaniac!
 
-set GD_Orchid_GrenadeMods.A_Item_Custom.GrenadeMod_Blade BehaviorProviderDefinition BehaviorProviderDefinition'GD_GrenadeMods.A_Item.GrenadeMod_Standard:BehaviorProviderDefinition_1'
-
-set GD_GrenadeMods.ChildCount.ChildCount_Grade5 AttributeSlotUpgrades ((SlotName="ChildCount",GradeIncrease=-2,bActivateSlot=True))
-set GD_GrenadeMods.ChildCount.ChildCount_Grade4 AttributeSlotUpgrades ((SlotName="ChildCount",GradeIncrease=-1,bActivateSlot=True))
-set GD_GrenadeMods.ChildCount.ChildCount_Grade3 AttributeSlotUpgrades ((SlotName="ChildCount",GradeIncrease=-2,bActivateSlot=True))
-
 set GD_Orchid_GrenadeMods.A_Item_Custom.GrenadeMod_Blade WeaponCardAttributes ((Attribute=AttributeDefinition'D_Attributes.GrenadeMod.NumberOfChildProjectiles',PriorityIncrease=-99.00000))
 
 set GD_Orchid_GrenadeMods.Delivery.Delivery_Blade ExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Ammo_Grenade_Protean.Ammo_Grenade_ProteanActiveRegenerationRate',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0.066667)))
 
-set GD_Orchid_GrenadeMods.A_Item_Custom.GrenadeMod_Blade ItemAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.GrenadeMod.GrenadeDamage',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance_HealthAndDamage.HealthAndDamage.Init_GrenadeModDamage',BaseValueScaleConstant=7.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.GrenadeMod.BlastRadius',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1500.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.500000)),(AttributeToModify=AttributeDefinition'D_Attributes.GrenadeMod.NumberOfChildProjectiles',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.GrenadeMod.GrenadeModBaseStatusEffectChanceModifier',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.GrenadeMod.GrenadeModStatusEffectChanceModifier',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+set GD_Orchid_GrenadeMods.Projectiles.Grenade_Blade:BehaviorProviderDefinition_1.Behavior_Explode_92 bSkipTraceTest True
+
+set GD_Orchid_GrenadeMods.A_Item_Custom.GrenadeMod_Blade ItemAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.GrenadeMod.GrenadeDamage',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance_HealthAndDamage.HealthAndDamage.Init_GrenadeModDamage',BaseValueScaleConstant=7.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.GrenadeMod.BlastRadius',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1500.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.500000)),(AttributeToModify=AttributeDefinition'D_Attributes.GrenadeMod.NumberOfChildProjectiles',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-9999.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.GrenadeMod.GrenadeModBaseStatusEffectChanceModifier',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.GrenadeMod.GrenadeModStatusEffectChanceModifier',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
