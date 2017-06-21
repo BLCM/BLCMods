@@ -1,0 +1,88 @@
+# by Zma
+# - Doctor> Replaces BearCat
+#    Change: Hornet, Florentine,Tinderbox, Twister
+
+# BEFORE u install this mode read "RECOMENDATION"
+# - all elemental damage
+# - ADS bonuses
+# - 25% move speed
+# - 25% max life
+# - Unlisted Explosions!
+# - tried to ballance it long time, looking for suggestions
+
+#   stats screenshot:    http://i.imgur.com/nNH3gpS.jpg
+#   ethical screenshot: http://i.imgur.com/1JzPJqE.jpg
+
+#RECOMENDATION:
+# 1. Only Non. Elemental version!
+# 2. Sight  - Torgue
+# 3. Stock - Dahl
+# 4. Grip - Torgue
+# 5. Accessory - Wild
+
+# GIBBED LINK:     BL2(hwAAAADfaAiBBgEABQGFhgAkxGABcAHDIYYGDBYY/v9zAMTCUAHw)
+
+#TiTle
+
+set GD_Gladiolus_Weapons.Name.Title.Title_Pearlescent_Bearcat PartName Doctor
+
+set GD_Gladiolus_Weapons.Name.Title.Title_Pearlescent_Bearcat:AttributePresentationDefinition_8 NoConstraintText <font color="#ff4500">Doctor Who?<font color="#ffffff"><br>• <font color="#009900">Healing like a Doctor<font color="#ffffff"> <font color="#ffff00">when ADS.<font color="#ffffff"><br>•<font color="#ffff00"> Firing <font color="#ff7f24">EXPLOSIVE<font color="#ffffff"> <font color="#ffff00">bullets with<font color="#ffffff"> <font color="#ff4500">Fire<font color="#ffffff"><font color="#ffff00">,<font color="#ffffff"> <font color="#00ffff">Shock<font color="#ffffff"><font color="#ffff00">,<font color="#ffffff"> <font color="#f009900">Corrosive<font color="#ffffff"><font color="#ffff00"> and<font color="#ffffff"> <font color="#9A32CD">Slag<font color="#ffffff"> <font color="#ffff00">aftershock.<font color="#ffffff"><br>•<font color="#ffff00"> Shots<font color="#ffffff"> <font color="#ff4500">creates 3 additional explosions<font color="#ffffff"> <font color="#ffff00">at middle range.<font color="#ffffff"><br>•<font color="#ffff00"> While you aim down sights:<font color="#ffffff"><br>• <font color="#FF6A6A">••• 25% More damage.<font color="#ffffff"><br>•<font color="#FF6A6A"> ••• 25% Fire Rate.<font color="#ffffff"><br>•<font color="#FF6A6A"> ••• 5% Damage Leech as life.<font color="#ffffff"><br>•<font color="#ffff00"> +25%<font color="#ffffff"> <font color="#009900">Maximum health<font color="#ffffff"><br>•<font color="#ffff00"> +35%<font color="#ffffff"> <font color="#ff3399">Movement speed.<font color="#ffffff"><br>•<font color="#ffff00"> Gains<font color="#ffffff"> <font color="#951cff">Ammo<font color="#ffffff"> <font color="#ffff00">regeneration.<font color="#ffffff"><br>•<font color="#ffff00"> Chance randomly<font color="#ffffff"> <font color="#951cff">Refill Ammo into magazine<font color="#ffffff"><br>•<font color="#ff4500"> ALLONS-Y!<font color="#ffffff"><br><font color="#ffefff"ok
+
+
+
+#ATTR
+
+set GD_Gladiolus_Weapons.AssaultRifle.AR_Barrel_Torgue_Dahl_Bearcat WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponStatusEffectChanceModifier',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-0.000001,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-0.003001,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-0.286374,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.003036)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-20.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=6.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectileSpeedMultiplier',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponReloadSpeed',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-0.570000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+set GD_Gladiolus_Weapons.AssaultRifle.AR_Barrel_Torgue_Dahl_Bearcat ExternalAttributeEffects ((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Combat_Rifle.Ammo_Combat_Rifle_RegenerationRate',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.50,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.GameplayAttributes.PlayerCriticalHitBonus',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.GameplayAttributes.FootSpeed',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.350000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.HealthResourcePool.HealthMaxValue',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.250000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AccuracyResourcePool.AccuracyMinValue',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.200000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AccuracyResourcePool.AccuracyMaxValue',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-7.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+set GD_Gladiolus_Weapons.AssaultRifle.AR_Barrel_Torgue_Dahl_Bearcat ZoomWeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponAutomaticBurstCount',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-1000.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+set GD_Gladiolus_Weapons.AssaultRifle.AR_Barrel_Torgue_Dahl_Bearcat ZoomExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.DamageEnhancementModifiers.PlayerConvertDamageToHealingPercent',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=0.050000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+set GD_Gladiolus_Weapons.AssaultRifle.AR_Barrel_Torgue_Dahl_Bearcat AttributeSlotUpgrades ((SlotName="WeaponSpread",GradeIncrease=10,bActivateSlot=True),(SlotName="AccuracyMax",GradeIncrease=100,bActivateSlot=True),(SlotName="AccuracyMin",GradeIncrease=50,bActivateSlot=True),(SlotName="AccuracyRegen",GradeIncrease=10,bActivateSlot=True),(SlotName="WeaponAccuracyImpulse",GradeIncrease=100,bActivateSlot=True))
+
+#FIRING
+
+set GD_Gladiolus_Weapons.AssaultRifle.AR_Barrel_Torgue_Dahl_Bearcat CustomFiringModeDefinition FiringModeDefinition 'GD_Gladiolus_Weapons.FiringModes.Bullet_Assault_Sawbar'
+set GD_Gladiolus_Weapons.FiringModes.Bullet_Assault_Sawbar DamageTypeDefinition WillowDamageTypeDefinition'GD_Explosive.DamageType.DmgType_Explosive_Impact'
+set GD_Gladiolus_Weapons.FiringModes.Bullet_Assault_Sawbar OnAnyImpact (Behavior_Explode'GD_Aster_RaidWeapons.SMGs.Bullet_SMG_Plasma_Florentine:Behavior_Explode_5',Behavior_Explode'GD_Weap_Pistol.FiringModes.Bullet_Pistol_Dahl_Hornet:Behavior_Explode_5',Behavior_Explode'GD_Sage_Weapons.FiringModes.Bullet_Shotgun_Twister:Behavior_Explode_5',Behavior_Explode'GD_Weap_Shotgun.FiringModes.Bullet_Shotgun_Teeth:Behavior_Explode_5')
+set GD_Gladiolus_Weapons.FiringModes.Bullet_Assault_Sawbar Speed 2500.000000
+set GD_Gladiolus_Weapons.FiringModes.Bullet_Assault_Sawbar_Child Speed 1250
+
+set GD_Gladiolus_Weapons.FiringModes.Bullet_Assault_Sawbar DamageSource Class'WillowGame.WillowDmgSource_Grenade'
+set GD_Gladiolus_Weapons.FiringModes.Bullet_Assault_Sawbar_Child:Behavior_Explode_5 DamageSource Class'WillowGame.WillowDmgSource_Grenade'
+set GD_Gladiolus_Weapons.FiringModes.Bullet_Assault_Sawbar_Child DamageTypeDefinition WillowDamageTypeDefinition'GD_Explosive.DamageType.DmgType_Explosive_Impact'
+set GD_Gladiolus_Weapons.FiringModes.Bullet_Assault_Sawbar_Child DamageFormula (BaseValueScaleConstant=0.0000001)
+set GD_Gladiolus_Weapons.FiringModes.Bullet_Assault_Sawbar_Child DamageRadiusFormula (BaseValueConstant=0.000001)
+
+set GD_Weap_Pistol.FiringModes.Bullet_Pistol_Dahl_Hornet:Behavior_Explode_5 DamageFormula (BaseValueScaleConstant=0.250000)
+set GD_Weap_Pistol.FiringModes.Bullet_Pistol_Dahl_Hornet:Behavior_Explode_5 DamageRadiusFormula (BaseValueConstant=0.000001)
+set GD_Weap_Pistol.FiringModes.Bullet_Pistol_Dahl_Hornet:Behavior_Explode_5 Definition ExplosionDefinition'GD_Explosions.Corrosive.Explosion_CorrosiveMaster'
+set GD_Weap_Pistol.FiringModes.Bullet_Pistol_Dahl_Hornet:Behavior_Explode_5 StatusEffectDamage (BaseValueConstant=3.000000)
+set GD_Weap_Pistol.FiringModes.Bullet_Pistol_Dahl_Hornet:Behavior_Explode_5 StatusEffectChance (BaseValueScaleConstant=0.000000)
+set GD_Weap_Pistol.FiringModes.Bullet_Pistol_Dahl_Hornet:Behavior_Explode_5 InstigatorSelfDamageScale 0.000000
+
+set GD_Aster_RaidWeapons.SMGs.Bullet_SMG_Plasma_Florentine:Behavior_Explode_5 DamageFormula (BaseValueScaleConstant=0.250000)
+set GD_Aster_RaidWeapons.SMGs.Bullet_SMG_Plasma_Florentine:Behavior_Explode_5 DamageRadiusFormula (BaseValueConstant=0.000001)
+set GD_Aster_RaidWeapons.SMGs.Bullet_SMG_Plasma_Florentine:Behavior_Explode_5 Definition ExplosionDefinition'GD_Explosions.Slag.Explosion_SlagMaster'
+set GD_Aster_RaidWeapons.SMGs.Bullet_SMG_Plasma_Florentine:Behavior_Explode_5 StatusEffectDamage (BaseValueScaleConstant=3.000000)
+set GD_Aster_RaidWeapons.SMGs.Bullet_SMG_Plasma_Florentine:Behavior_Explode_5 StatusEffectChance (BaseValueScaleConstant=100.000000)
+set GD_Aster_RaidWeapons.SMGs.Bullet_SMG_Plasma_Florentine:Behavior_Explode_5 InstigatorSelfDamageScale 0.000000
+
+set GD_Sage_Weapons.FiringModes.Bullet_Shotgun_Twister:Behavior_Explode_5 DamageFormula (BaseValueScaleConstant=0.2500000)
+set GD_Sage_Weapons.FiringModes.Bullet_Shotgun_Twister:Behavior_Explode_5 DamageRadiusFormula (BaseValueConstant=0.000001)
+set GD_Sage_Weapons.FiringModes.Bullet_Shotgun_Twister:Behavior_Explode_5 StatusEffectDamage (BaseValueScaleConstant=0.000000)
+set GD_Sage_Weapons.FiringModes.Bullet_Shotgun_Twister:Behavior_Explode_5 StatusEffectChance (BaseValueScaleConstant=5.000000)
+set GD_Sage_Weapons.FiringModes.Bullet_Shotgun_Twister:Behavior_Explode_5 InstigatorSelfDamageScale 0.000000
+
+set GD_Weap_Shotgun.FiringModes.Bullet_Shotgun_Teeth:Behavior_Explode_5 DamageFormula (BaseValueScaleConstant=0.250000)
+set GD_Weap_Shotgun.FiringModes.Bullet_Shotgun_Teeth:Behavior_Explode_5 DamageRadiusFormula (BaseValueConstant=0.000001)
+set GD_Weap_Shotgun.FiringModes.Bullet_Shotgun_Teeth:Behavior_Explode_5 Definition ExplosionDefinition'GD_Explosions.Incendiary.Explosion_IncendiaryMaster'
+set GD_Weap_Shotgun.FiringModes.Bullet_Shotgun_Teeth:Behavior_Explode_5 StatusEffectDamage (BaseValueConstant=0.000000)
+set GD_Weap_Shotgun.FiringModes.Bullet_Shotgun_Teeth:Behavior_Explode_5 StatusEffectChance (BaseValueScaleConstant=0.000000)
+set GD_Weap_Shotgun.FiringModes.Bullet_Shotgun_Teeth:Behavior_Explode_5 InstigatorSelfDamageScale 0.000000
+
+
+#Magicooo
+set GD_Gladiolus_Weapons.AssaultRifle.AR_Barrel_Torgue_Dahl_Bearcat BehaviorProviderDefinition BehaviorProviderDefinition'GD_Gladiolus_Weapons.Shotgun.SG_Barrel_Torgue_Butcher:BehaviorProviderDefinition_1'
