@@ -1,0 +1,90 @@
+# by Zma
+
+# - Dalek, replace Bekah
+#    Change: Hornet, Florentine,Tinderbox, Twister
+
+# BEFORE u install this mode read "RECOMENDATION"
+# - all elemental damage
+# - 25% move speed
+# - 200%  melee damage
+# - Unlisted projectiles, hello Bee!
+# - Always Pierce!
+# - tried to ballance it long time, looking for suggestions
+
+#RECOMENDATION:
+#  1. Only Non. Elemental version!  
+#  2. Really recommended - Bayonet (for 200% melee boost, u dont need another accessory!)
+#  3. Sight - Jakobs (ethical). Scoping looks like a dalek's eye
+#  4. Stock - Dahl                   
+#  5. Grip - Torgue
+  
+# GIBBED LINK:   BL2(hwAAAADAEwqCRoAABwGFJgAkxHAAkAHDIYb//x0Y/v8jAMzCYADw)
+# Ethical screenshot:   http://i.imgur.com/HVVWHTb.jpg
+# Stats screenshot:      http://i.imgur.com/ppNkX7t.jpg
+
+
+# FIRING 
+
+set GD_Lobelia_Weapons.AssaultRifles.AR_Barrel_Bandit_Bekah CustomFiringModeDefinition FiringModeDefinition'GD_Lobelia_Weapons.FiringModes.Bullet_Assault_Bekah'
+set GD_Lobelia_Weapons.FiringModes.Bullet_Assault_Bekah DamageTypeDefinition WillowDamageTypeDefinition'GD_Explosive.DamageType.DmgType_Explosive_Impact'
+set GD_Lobelia_Weapons.FiringModes.Bullet_Assault_Bekah OnAnyImpact (Behavior_Explode'GD_Aster_RaidWeapons.SMGs.Bullet_SMG_Plasma_Florentine:Behavior_Explode_5',Behavior_Explode'GD_Weap_Pistol.FiringModes.Bullet_Pistol_Dahl_Hornet:Behavior_Explode_5',Behavior_Explode'GD_Sage_Weapons.FiringModes.Bullet_Shotgun_Twister:Behavior_Explode_5',Behavior_Explode'GD_Weap_Pistol.FiringModes.Bullets_Pistol_Bandit_Tinderbox:Behavior_Explode_5')
+set GD_Lobelia_Weapons.FiringModes.Bullet_Assault_Bekah Speed 2750.000000
+set GD_Lobelia_Weapons.FiringModes.Bullet_Assault_Bekah_Ch1 Speed 750.00000
+
+set GD_Lobelia_Weapons.FiringModes.Bullet_Assault_Bekah bPenetratePawn True
+set GD_Lobelia_Weapons.FiringModes.Bullet_Assault_Bekah_Ch1 bPenetratePawn True
+set GD_Lobelia_Weapons.FiringModes.Bullet_Assault_Bekah DamageSource Class'WillowGame.WillowDmgSource_Grenade'
+set GD_Lobelia_Weapons.FiringModes.Bullet_Assault_Bekah_Ch1 DamageSource Class'WillowGame.WillowDmgSource_Grenade'
+set GD_Lobelia_Weapons.FiringModes.Bullet_Assault_Bekah_Ch1 DamageTypeDefinition WillowDamageTypeDefinition'GD_Explosive.DamageType.DmgType_Explosive_Impact'
+#set GD_Lobelia_Weapons.FiringModes.Bullet_Assault_Bekah_Ch1 OnAnyImpact ()
+set GD_Lobelia_Weapons.FiringModes.Bullet_Assault_Bekah DamageFormula (BaseValueScaleConstant=0.0000001)
+set GD_Lobelia_Weapons.FiringModes.Bullet_Assault_Bekah DamageRadiusFormula (BaseValueConstant=0.000001)
+
+set GD_Weap_Pistol.FiringModes.Bullet_Pistol_Dahl_Hornet:Behavior_Explode_5 DamageFormula (BaseValueScaleConstant=0.250000)
+set GD_Weap_Pistol.FiringModes.Bullet_Pistol_Dahl_Hornet:Behavior_Explode_5 DamageRadiusFormula (BaseValueConstant=0.000001)
+set GD_Weap_Pistol.FiringModes.Bullet_Pistol_Dahl_Hornet:Behavior_Explode_5 Definition ExplosionDefinition'GD_Explosions.Corrosive.Explosion_CorrosiveMaster'
+set GD_Weap_Pistol.FiringModes.Bullet_Pistol_Dahl_Hornet:Behavior_Explode_5 StatusEffectDamage (BaseValueConstant=3.000000)
+set GD_Weap_Pistol.FiringModes.Bullet_Pistol_Dahl_Hornet:Behavior_Explode_5 StatusEffectChance (BaseValueScaleConstant=0.000000)
+set GD_Weap_Pistol.FiringModes.Bullet_Pistol_Dahl_Hornet:Behavior_Explode_5 InstigatorSelfDamageScale 0.000000
+
+set GD_Aster_RaidWeapons.SMGs.Bullet_SMG_Plasma_Florentine:Behavior_Explode_5 DamageFormula (BaseValueScaleConstant=0.250000)
+set GD_Aster_RaidWeapons.SMGs.Bullet_SMG_Plasma_Florentine:Behavior_Explode_5 DamageRadiusFormula (BaseValueConstant=0.000001)
+set GD_Aster_RaidWeapons.SMGs.Bullet_SMG_Plasma_Florentine:Behavior_Explode_5 Definition ExplosionDefinition'GD_Explosions.Slag.Explosion_SlagMaster'
+set GD_Aster_RaidWeapons.SMGs.Bullet_SMG_Plasma_Florentine:Behavior_Explode_5 StatusEffectDamage (BaseValueScaleConstant=3.000000)
+set GD_Aster_RaidWeapons.SMGs.Bullet_SMG_Plasma_Florentine:Behavior_Explode_5 StatusEffectChance (BaseValueScaleConstant=100.000000)
+set GD_Aster_RaidWeapons.SMGs.Bullet_SMG_Plasma_Florentine:Behavior_Explode_5 InstigatorSelfDamageScale 0.000000
+
+set GD_Sage_Weapons.FiringModes.Bullet_Shotgun_Twister:Behavior_Explode_5 DamageFormula (BaseValueScaleConstant=0.2500000)
+set GD_Sage_Weapons.FiringModes.Bullet_Shotgun_Twister:Behavior_Explode_5 DamageRadiusFormula (BaseValueConstant=0.000001)
+set GD_Sage_Weapons.FiringModes.Bullet_Shotgun_Twister:Behavior_Explode_5 StatusEffectDamage (BaseValueScaleConstant=0.000000)
+set GD_Sage_Weapons.FiringModes.Bullet_Shotgun_Twister:Behavior_Explode_5 StatusEffectChance (BaseValueScaleConstant=5.000000)
+set GD_Sage_Weapons.FiringModes.Bullet_Shotgun_Twister:Behavior_Explode_5 InstigatorSelfDamageScale 0.000000
+
+set GD_Weap_Pistol.FiringModes.Bullets_Pistol_Bandit_Tinderbox:Behavior_Explode_5 ExplosionOverrideDefinition None
+set GD_Weap_Pistol.FiringModes.Bullets_Pistol_Bandit_Tinderbox:Behavior_Explode_5 ExplosionOverideInstanceDataName None
+set GD_Weap_Pistol.FiringModes.Bullets_Pistol_Bandit_Tinderbox:Behavior_Explode_5 DamageFormula (BaseValueScaleConstant=0.250000)
+set GD_Weap_Pistol.FiringModes.Bullets_Pistol_Bandit_Tinderbox:Behavior_Explode_5 DamageRadiusFormula (BaseValueConstant=0.000001)
+set GD_Weap_Pistol.FiringModes.Bullets_Pistol_Bandit_Tinderbox:Behavior_Explode_5 Definition ExplosionDefinition'GD_Explosions.Incendiary.Explosion_IncendiaryMaster'
+set GD_Weap_Pistol.FiringModes.Bullets_Pistol_Bandit_Tinderbox:Behavior_Explode_5 StatusEffectDamage (BaseValueConstant=0.000000)
+set GD_Weap_Pistol.FiringModes.Bullets_Pistol_Bandit_Tinderbox:Behavior_Explode_5 StatusEffectChance (BaseValueScaleConstant=0.000000)
+set GD_Weap_Pistol.FiringModes.Bullets_Pistol_Bandit_Tinderbox:Behavior_Explode_5 InstigatorSelfDamageScale 0.000000
+
+#TiTLE
+
+set GD_Lobelia_Weapons.Name.Title.Title_Pearlescent_Bekah PartName Dalek
+set GD_Lobelia_Weapons.Name.Title.Title_Pearlescent_Bekah:AttributePresentationDefinition_8 NoConstraintText <font color="#ff4500">EXTERMINATE!<font color="#ffffff"><br>•<font color="#ffff00"> Shots<font color="#ffffff"> <font color="#FF00FF">split <font color="#ffff00">into<font color="#ffffff"> <font color="#FF00FF">3 additional Horizontal projectiles.<font color="#ffffff"><br>•<font color="#00BFFF"> Projectiles always piercing.<font color="#ffffff"><br>•<font color="#ffff00"> Main projectail deals <font color="#ff7f24">EXPLOSIVE<font color="#ffffff"> <font color="#ffff00">dmg. with<font color="#ffffff"> <font color="#ff4500">Fire<font color="#ffffff"><font color="#ffff00">,<font color="#ffffff"> <font color="#00ffff">Shock<font color="#ffffff"><font color="#ffff00">,<font color="#ffffff"> <font color="#f009900">Corrosive<font color="#ffffff"><font color="#ffff00"> and<font color="#ffffff"> <font color="#9A32CD">Slag<font color="#ffffff"> <font color="#ffff00">aftershock.<font color="#ffffff"><br>•<font color="#228B22"> Automatic while Hip Fire.<font color="#ffffff"><br>•<font color="#ffff00"> While you aim down sights:<font color="#ffffff"><br>• <font color="#FF6A6A">••• 25% More damage.<font color="#ffffff"><br>•<font color="#FF6A6A"> ••• 50% Critical hit damage.<font color="#ffffff"><br>•<font color="#FF6A6A"> ••• Semi automatic: burst 3 rounds.<font color="#ffffff"><br>•<font color="#ffff00"> +25%<font color="#ffffff"> <font color="#ff3399">Movement speed.<font color="#ffffff"><br>•<font color="#f009900"> Health<font color="#ffffff"> <font color="#ffff00">and<font color="#ffffff"> <font color="#00ffff">Shield<font color="#ffffff"> <font color="#ffff00">regeneration.<font color="#ffffff"><br>•<font color="#ffff00"> Gains<font color="#ffffff"> <font color="#951cff">Ammo<font color="#ffffff"> <font color="#ffff00">regeneration.<font color="#ffffff"><br>•<font color="#f994c00"> Increased<font color="#ffffff"> <font color="#ffff00">Melee damade to 200%<font color="#ffffff"><br>•<font color="#ff4500"> Are you a Doctor?!<font color="#ffffff"><br><font color="#ffefff"ok
+
+# ATTRIBUTES
+set GD_Lobelia_Weapons.AssaultRifles.AR_Barrel_Bandit_Bekah AttributeSlotUpgrades ((SlotName="AccuracyRegen",GradeIncrease=1000,bActivateSlot=True),(SlotName="WeaponAccuracyImpulse",GradeIncrease=1000,bActivateSlot=True))
+
+set GD_Lobelia_Weapons.AssaultRifles.AR_Barrel_Bandit_Bekah WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponStatusEffectChanceModifier',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-0.700001,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.073000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-1.295776,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-20.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=22.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectileSpeedMultiplier',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponReloadSpeed',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-0.670000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponAutomaticBurstCount',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-10.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponPerShotAccuracyImpulse',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-20.800001,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+set GD_Lobelia_Weapons.AssaultRifles.AR_Barrel_Bandit_Bekah ExternalAttributeEffects ((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Combat_Rifle.Ammo_Combat_Rifle_RegenerationRate',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.50,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.GameplayAttributes.FootSpeed',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.250000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.HealthResourcePool.HealthPassiveRegenerationRate',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.003000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance_HealthAndDamage.Shields.Init_ShieldItem_BaseRegenRatePercentage',BaseValueScaleConstant=0.250000)),(AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.ShieldResourcePool.ShieldPassiveRegenerationRate',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance_HealthAndDamage.Shields.Init_ShieldItem_BaseRegenRatePercentage',BaseValueScaleConstant=0.250000)),(AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.ShieldResourcePool.ShieldMaxValue',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.280000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AccuracyResourcePool.AccuracyMinValue',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-0.200000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AccuracyResourcePool.AccuracyMaxValue',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-12.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.DamageSourceModifiers.InstigatedMeleeDamageModifier',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=3.000000)))
+
+set GD_Lobelia_Weapons.AssaultRifles.AR_Barrel_Bandit_Bekah ZoomWeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponAutomaticBurstCount',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=12.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponBurstInterval',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.250000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+set GD_Lobelia_Weapons.AssaultRifles.AR_Barrel_Bandit_Bekah ZoomExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.GameplayAttributes.PlayerCriticalHitBonus',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+# SKIN 
+#Not needed, Bekah has coolest skin, in my opinion
+
