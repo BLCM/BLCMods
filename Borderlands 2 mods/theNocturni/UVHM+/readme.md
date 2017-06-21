@@ -1,10 +1,11 @@
 how to install in installation.txt
 
 ###pre-merged files###
+PatchVendor is Community Patch 3.0 merged with Vendor+ for people who just want the better vendors
 
-PatchExtreme is community patch 3.0 merged with EnemyEnhancerExtreme,BadassifyExtreme,and Vendor+
+PatchExtreme is Community Patch 3.0 merged with EnemyEnhancerExtreme,BadassifyExtreme,and Vendor+
 
-PatchRegular is community patch 3.0 merged with EnemyEnhancer,Badassify,and Vendor+
+PatchRegular is Community Patch 3.0 merged with EnemyEnhancer,Badassify,and Vendor+
      
 with these, you only need to choose which version of uvhm+.txt you want to use, and execute both(uvhm+.txt should be executed after the patchfile) in the console
 
