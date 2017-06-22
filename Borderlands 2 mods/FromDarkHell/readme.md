@@ -4,7 +4,7 @@
 	
  #2. BL1V1.txt
  
-  Changes Weapons from BL2 into weapons from BL1
+  	Changes Weapons from BL2 into weapons from BL1
 
  #3. EveryLoot.txt
  
@@ -12,7 +12,7 @@
 
  #4. GlitchFest.txt
  
- A Jakobs gun that is modified to run like a gun using the Evil Smasher Glitch, Axton Super Speed Glitch, Infinite Ammo Glitch, Crit Stacking Glitch
+ 	A Jakobs gun that is modified to run like a gun using the Evil Smasher Glitch, Axton Super Speed Glitch, Infinite Ammo Glitch, Crit Stacking Glitch
 	
  #5. GunUnlocker.txt
  
@@ -28,12 +28,12 @@
   
  #8. HyperionGlitchFest.txt
  
-  A Hyperion gun that is modified to run like a gun using the Evil Smasher Glitch, Axton Super Speed Glitch, Infinite Ammo Glitch, Crit Stacking Glitch
+  	A Hyperion gun that is modified to run like a gun using the Evil Smasher Glitch, Axton Super Speed Glitch, Infinite Ammo Glitch, Crit Stacking Glitch
 
 #9. LootHunt.txt
 
-  Creates/Modifies loot pools for enemies to drop items like the $1000 Loot Hunt
+  	Creates/Modifies loot pools for enemies to drop items like the $1000 Loot Hunt
   
 #10. TPSGunsV2.txt
 
-  Replaces guns from BL2 into weapons from Borderlands: The Pre-Sequel
+  	Replaces guns from BL2 into weapons from Borderlands: The Pre-Sequel
