@@ -1,0 +1,64 @@
+# Heart of the T.A.R.D.I.S  relic (Replaces: Blood of the Seraphs)
+# by Zma
+
+# STATS:
+# -    +45% Explosive damage
+# -    +25% FIre Rate
+# -   +50% Cooldown Rate
+# -    up tp 3% damage Leech as Life
+# -    Ammo regeneration        1/2 sec
+# -    Grenade regeneration    1/20 sec
+# -    Extra Shot chance.
+
+# GIBBED LINK:  BL2(BwAAAAAYmQEAAQEIMBFQqADh////////////PwBhAOE=)
+
+#TiTle
+
+set GD_Orchid_Artifacts.A_Item_Unique.Artifact_SeraphBloodRelic ItemName Heart of the T.A.R.D.I.S
+
+set GD_Orchid_Artifacts.Body.Body_SeraphBloodRelic:AttributePresentationDefinition_2 Description Through time and space like never before!
+
+
+set GD_Orchid_Artifacts.Body.Body_SeraphBloodRelic:AttributePresentationDefinition_3 Description [skill]Extra Shot chance.[-skill]
+
+set GD_Orchid_Artifacts.Body.Body_SeraphBloodRelic:AttributePresentationDefinition_0 Description Gains [skill]Grenade & Ammo regeneration.[-skill]
+
+
+
+#ATTR.
+
+set GD_Orchid_Artifacts.A_Item_Unique.Artifact_SeraphBloodRelic UIStatList ((bDisplayAsModifierOnly=True,AttributeStyle=ATTRSTYLE_ModifierText,SupplementalAttributeStyle=ATTRSTYLE_JustNumber,StatCombinationMethod=SCM_Multiply,Attribute=AttributeDefinition'D_Attributes.DamageTypeModifers.InstigatedExplosiveDamageModifier',ConstraintAttribute=None,SupplementalAttributeExpression=(AttributeOperand1=None,ComparisonOperator=OPERATOR_EqualTo,Operand2Usage=OPERAND_PreferAttribute,AttributeOperand2=None,ConstantOperand2=0.000000),SupplementalAttributeToAppend=None),(bDisplayAsModifierOnly=True,AttributeStyle=ATTRSTYLE_ModifierText,SupplementalAttributeStyle=ATTRSTYLE_JustNumber,StatCombinationMethod=SCM_Multiply,Attribute=DesignerAttributeDefinition'GD_Artifacts.BalanceAttributes.Attribute_WeaponFireRateProxy',ConstraintAttribute=None,SupplementalAttributeExpression=(AttributeOperand1=None,ComparisonOperator=OPERATOR_EqualTo,Operand2Usage=OPERAND_PreferAttribute,AttributeOperand2=None,ConstantOperand2=0.000000),SupplementalAttributeToAppend=None),(bDisplayAsModifierOnly=True,AttributeStyle=ATTRSTYLE_ModifierText,SupplementalAttributeStyle=ATTRSTYLE_JustNumber,StatCombinationMethod=SCM_Multiply,Attribute=AttributeDefinition'D_Attributes.ActiveSkillCooldownResource.ActiveSkillCooldownConsumptionRate',ConstraintAttribute=None,SupplementalAttributeExpression=(AttributeOperand1=None,ComparisonOperator=OPERATOR_EqualTo,Operand2Usage=OPERAND_PreferAttribute,AttributeOperand2=None,ConstantOperand2=0.000000),SupplementalAttributeToAppend=None),(bDisplayAsModifierOnly=True,AttributeStyle=ATTRSTYLE_ModifierText,SupplementalAttributeStyle=ATTRSTYLE_JustNumber,StatCombinationMethod=SCM_Multiply,Attribute=AttributeDefinition'D_Attributes.DamageEnhancementModifiers.PlayerConvertDamageToHealingPercent',ConstraintAttribute=None,SupplementalAttributeExpression=(AttributeOperand1=None,ComparisonOperator=OPERATOR_EqualTo,Operand2Usage=OPERAND_PreferAttribute,AttributeOperand2=None,ConstantOperand2=0.000000),SupplementalAttributeToAppend=None))
+
+
+
+set GD_Orchid_Artifacts.A_Item_Unique.Artifact_SeraphBloodRelic AttributeSlotEffects ((SlotName="Effect5",bExternalSlot=True,bRunEffectsAsSkill=True,AttributeToModify=AttributeDefinition'D_Attributes.DamageTypeModifers.InstigatedExplosiveDamageModifier',ConstraintAttribute=None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Artifacts.BalanceAttributes.Init_ModifierBase_Linear',BaseValueScaleConstant=0.005100),PerGradeUpgrade=(BaseValueConstant=0.001000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bIncludeInFunStats=False,bIncludeAlliesAsTarget=False,bEnforceMinimumGrade=False,bEnforceMaximumGrade=False,MinimumGrade=0,MaximumGrade=12,TargetInstanceDataName=),(SlotName="Effect2",bExternalSlot=False,bRunEffectsAsSkill=False,AttributeToModify=DesignerAttributeDefinition'GD_Artifacts.BalanceAttributes.Attribute_WeaponFireRateProxy',ConstraintAttribute=None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000001,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0.002525),PerGradeUpgrade=(BaseValueConstant=0.002505,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0.500000),bIncludeInFunStats=False,bIncludeAlliesAsTarget=False,bEnforceMinimumGrade=False,bEnforceMaximumGrade=False,MinimumGrade=0,MaximumGrade=12,TargetInstanceDataName=),(SlotName="Effect3",bExternalSlot=True,bRunEffectsAsSkill=True,AttributeToModify=AttributeDefinition'D_Attributes.ActiveSkillCooldownResource.ActiveSkillCooldownConsumptionRate',ConstraintAttribute=None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Artifacts.BalanceAttributes.Init_ModifierBase_Linear',BaseValueScaleConstant=0.005098),PerGradeUpgrade=(BaseValueConstant=0.002500,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bIncludeInFunStats=False,bIncludeAlliesAsTarget=False,bEnforceMinimumGrade=False,bEnforceMaximumGrade=False,MinimumGrade=0,MaximumGrade=12,TargetInstanceDataName=),(SlotName="Effect6",bExternalSlot=True,bRunEffectsAsSkill=True,AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ConstraintAttribute=None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'GD_Artifacts.BalanceAttributes.Attribute_SlotGrade_Effect2',InitializationDefinition=None,BaseValueScaleConstant=-0.006975),PerGradeUpgrade=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bIncludeInFunStats=False,bIncludeAlliesAsTarget=False,bEnforceMinimumGrade=True,bEnforceMaximumGrade=False,MinimumGrade=0,MaximumGrade=0,TargetInstanceDataName=),(SlotName="Effect8",bExternalSlot=True,bRunEffectsAsSkill=True,AttributeToModify=AttributeDefinition'D_Attributes.DamageEnhancementModifiers.PlayerConvertDamageToHealingPercent',ConstraintAttribute=None,ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Artifacts.BalanceAttributes.Init_ModifierBase_Linear',BaseValueScaleConstant=0.000325),PerGradeUpgrade=(BaseValueConstant=0.010000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0.001000),bIncludeInFunStats=False,bIncludeAlliesAsTarget=False,bEnforceMinimumGrade=True,bEnforceMaximumGrade=False,MinimumGrade=0,MaximumGrade=0,TargetInstanceDataName=),(SlotName="Effect11",bExternalSlot=True,bRunEffectsAsSkill=True,AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponExtraShotChance',ConstraintAttribute=None,ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=0.150000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Artifacts.BalanceAttributes.Init_ModifierBase_Linear',BaseValueScaleConstant=0.003000),PerGradeUpgrade=(BaseValueConstant=0.030000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bIncludeInFunStats=False,bIncludeAlliesAsTarget=False,bEnforceMinimumGrade=False,bEnforceMaximumGrade=False,MinimumGrade=0,MaximumGrade=12,TargetInstanceDataName=),(SlotName="Effect10",bExternalSlot=True,bRunEffectsAsSkill=False,AttributeToModify=AttributeDefinition'D_Attributes.Ammo_Grenade_Protean.Ammo_Grenade_ProteanActiveRegenerationRate',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.05,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bIncludeInFunStats=False,bIncludeAlliesAsTarget=False,bEnforceMinimumGrade=False,bEnforceMaximumGrade=False,MinimumGrade=0,MaximumGrade=12,TargetInstanceDataName=),(SlotName="Effect12",bExternalSlot=True,bRunEffectsAsSkill=False,AttributeToModify=AttributeDefinition'D_Attributes.GameplayAttributes.PlayerCurrentWeaponAmmoRegenerationMultiplier',ConstraintAttribute=None,ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=0.50,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bIncludeInFunStats=False,bIncludeAlliesAsTarget=False,bEnforceMinimumGrade=False,bEnforceMaximumGrade=False,MinimumGrade=0,MaximumGrade=12,TargetInstanceDataName=)))
+
+
+
+set GD_Orchid_Artifacts.A_Item_Unique.Artifact_SeraphBloodRelic AttributeSlotUpgrades ((SlotName="Effect1",GradeIncrease=0,bActivateSlot=True),(SlotName="Effect2",GradeIncrease=0,bActivateSlot=True),(SlotName="Effect3",GradeIncrease=0,bActivateSlot=True),(SlotName="Effect4",GradeIncrease=0,bActivateSlot=True),(SlotName="Effect5",GradeIncrease=0,bActivateSlot=True),(SlotName="Effect6",GradeIncrease=0,bActivateSlot=True),(SlotName="Effect7",GradeIncrease=0,bActivateSlot=True),(SlotName="Effect8",GradeIncrease=0,bActivateSlot=True),(SlotName="Effect9",GradeIncrease=0,bActivateSlot=True),(SlotName="Effect10",GradeIncrease=0,bActivateSlot=True),(SlotName="Effect11",GradeIncrease=0,bActivateSlot=True),(SlotName="Effect12",GradeIncrease=0,bActivateSlot=True),(SlotName="Effect13",GradeIncrease=0,bActivateSlot=True))
+
+
+
+
+set GD_AttributePresentation.Damage.AttrPresent_InstigatedIncendiaryStatusChanceModifier Attribute AttributeDefinition'D_Attributes.DamageEnhancementModifiers.PlayerConvertDamageToHealingPercent'
+
+
+set GD_AttributePresentation.Damage.AttrPresent_InstigatedIncendiaryStatusChanceModifier Description •••Life Leech
+
+
+set GD_AttributePresentation.Damage.AttrPresent_InstigatedIncendiaryStatusChanceModifier bIncludeSuffixInTranslation False
+
+
+set GD_AttributePresentation.Damage.AttrPresent_InstigatedIncendiaryStatusChanceModifier bIncludePrefixInTranslation False
+
+
+set GD_AttributePresentation.Damage.AttrPresent_InstigatedIncendiaryStatusChanceModifier bDisplayAsPercentage True
+
+
+set GD_AttributePresentation.Damage.AttrPresent_InstigatedIncendiaryStatusChanceModifier bDontDisplayNumber True
+
+
+set GD_AttributePresentation.Damage.AttrPresent_InstigatedIncendiaryStatusChanceModifier bDontDisplayPlusSign False
+
+
+set GD_AttributePresentation.Damage.AttrPresent_InstigatedIncendiaryStatusChanceModifier bEnableTextColor False
