@@ -2,15 +2,17 @@
 #Replaces the Maggie
 #Adds the Storm affect
 #Uses Storm skin from Community patch 3.0 (Credit to ShadowEvil and Dave)
-#Gibbed code 
 #Gibbed code for Maggie (For those lazy people) BL2(hwAAAAA0lQCHRwVABgGFssOIhSEQAwLG/////xow/v8PxCiCURHj)
 
 #FiringMode
 set GD_Weap_Pistol.Barrel.Pistol_Barrel_Jakobs_Maggie CustomFiringModeDefinition FiringModeDefinition'GD_Gladiolus_Weapons.FiringModes.Bullet_Sniper_Maliwan_Storm'
 
+#Barrel Effects
+set GD_Weap_Pistol.Barrel.Pistol_Barrel_Jakobs_Maggie ExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.GameplayAttributes.PlayerCurrentWeaponAmmoRegenerationMultiplier',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=3.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)), (AttributeToModify=AttributeDefinition'D_Attributes.GameplayAttributes.FootSpeed',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.350000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))
+
 #Name & Definition
 set GD_Weap_Pistol.Name.Title_Jakobs.Title_Legendary_Maggie PartName Fortis
-set GD_Weap_Pistol.Name.Title_Jakobs.Title_Legendary_Maggie:AttributePresentationDefinition_8 NoConstraintText A storm is coming...<br> <font color="#007dff"> Made by: Kieitrio </font>
+set GD_Weap_Pistol.Name.Title_Jakobs.Title_Legendary_Maggie:AttributePresentationDefinition_8 NoConstraintText Shock and AAAGGGGHHH!<br> <font color="#7FFFD4"> + <font color="#0F6B0C">Gains movement speed. <br> <font color="#7FFFD4"> +<font color="#951cff"> Gains ammo regen. <br> <font color="#007dff"> Made by: Kieitrio </font>
 
 #Rarity
 set GD_Weap_Pistol.Barrel.Pistol_Barrel_Jakobs_Maggie rarity (basevalueattribute=none)
@@ -25,3 +27,4 @@ set Gladiolus_GunMaterials.Materials.sniper.Mati_Maliwan_6_Storm VectorParameter
 set Gladiolus_GunMaterials.Materials.sniper.Mati_Maliwan_6_Storm ScalarParameterValues ((ParameterName="p_HighlightsIntensity",ParameterValue=0.050000,ExpressionGUID=(A=-1257568432,B=1277066486,C=-723473993,D=-1144384173)),(ParameterName="p_ShadowsIntensity",ParameterValue=1.000000,ExpressionGUID=(A=437293753,B=1205147708,C=-775723903,D=1480014964)),(ParameterName="p_ReflectColorScale",ParameterValue=1.000000,ExpressionGUID=(A=1875785607,B=1186033550,C=-1822263113,D=-1465755701)),(ParameterName="p_ReplacePattern",ParameterValue=1.500000,ExpressionGUID=(A=-2084339847,B=1096440125,C=439008937,D=45433490)),(ParameterName="p_DecalRotate",ParameterValue=0.120000,ExpressionGUID=(A=-276527909,B=1298581551,C=856978878,D=743944047)),(ParameterName="p_ReplaceDecal",ParameterValue=0.000000,ExpressionGUID=(A=85863466,B=1257609701,C=-728575820,D=1337098176)),(ParameterName="p_UseFullColorDecal",ParameterValue=1.0000000,ExpressionGUID=(A=-1064329812,B=1077705328,C=339664807,D=1869745420)),(ParameterName="p_EmissiveScale",ParameterValue=1.000000,ExpressionGUID=(A=-1257568432,B=1277066486,C=-723473993,D=-1144384173)))
 
 set GD_Weap_Pistol.ManufacturerMaterials.Mat_Jakobs_5_Legendary Material MaterialInstanceConstant 'Gladiolus_GunMaterials.Materials.sniper.Mati_Maliwan_6_Storm'
+
