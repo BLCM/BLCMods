@@ -70,7 +70,8 @@ Credits and Thanks go to:
     shadowevil1996 and his team for figuring out how to mod bl2 via console
     once again shadowevil1996 and his team for creating the community patch
     Adudney for creating the hotfix tool, giving a lot of advice, and figuring out a lot of stuff
-    Zububu, AngrierPat, SirUmnei for giving suggestions/advice and playtesting the WIP version of this mod
+    AngrierPat,SirUmnei,Zububu for giving suggestions/advice and playtesting the WIP version of this mod
+    LightChaosman,MediEvilHero,Mike for giving suggestions/advice for the post-release version of this mod
 
 #####Red text gears that enemies can currently spawn with#####
 
