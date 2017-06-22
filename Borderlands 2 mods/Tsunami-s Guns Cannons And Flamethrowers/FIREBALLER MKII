@@ -1,0 +1,41 @@
+The Silver Fireballar MKII
+
+Replaces hellfire
+this is the MKII of the original Flamethrower
+but of course, MKII doesn't mean stronger, its simular, but the MKII works in a diffirent way
+
+Slow firerate
+High ignite chance
+High elemental damage
+High base damage
+High blast radius
+Slow ammo regen
+Silver skin instead of gold
+High velocity
+High damage
+No recoil
+Pinpoint accuracy
+
+#################################################################
+
+set GD_Weap_SMG.Name.Title_Maliwan.Title_Legendary_HellFire PartName Tsunami's Silver Fireballer MKII
+
+set GD_Weap_SMG.Barrel.SMG_Barrel_Maliwan_HellFire CustomFiringModeDefinition FiringModeDefinition'GD_Weap_Shotgun.FiringModes.Bullets_Splatgun'
+
+
+
+set GD_Weap_SMG.Barrel.SMG_Barrel_Maliwan_HellFire WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Maliwan',InitializationDefinition=None,BaseValueScaleConstant=0.100000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=37.000002,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),,(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponStatusEffectChanceModifier',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=100.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectileSpeedMultiplier',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=3.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponStatusEffectDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=13.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.100000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0.000000))))))))
+
+set GD_Weap_SMG.Name.Title_Maliwan.Title_Legendary_HellFire:AttributePresentationDefinition_8 NoConstraintText <font color="#D80C0C"> WOW!, WTF!, OMG!, Thats what this is.<font color="#FFFFFF"><br>The MKII of the original flamethrower.<br>Consumes ammo not so insanely fast<br>Ammo regenrates slowly over time.
+
+set GD_Weap_SMG.ManufacturerMaterials.Mat_Maliwan_5_Legendary Material MaterialInstanceConstant'Orchid_GunMaterials.Materials.AssaultRifle.Mati_DahlCommonAR_Seraphim'
+
+set ExplosionScale ((ExplosionPSTemplate=ParticleSystem'FX_BulletImpacts_Alien.Particles.Part_Shotgun_Alien_Incediary_Impact',MinRadius=0,MaxRadius=1920,MinParticleScale=0.000000,MaxParticleScale=1.000000,ExplosionAkEvent=AkEvent'Ake_Exp_Elemental.Exp_Incendiary.Ak_Play_Exp_Elemental_Incendiary_SM',CameraAnim=CameraAnim'Anim_CameraAnimations.Explosions.Canim_Explosion_Minor',MinCameraEffectDistance=0.000000,MaxCameraEffectDistance=180.000000,FFWaveform=ForceFeedbackWaveform'GD_Explosions.Incendiary.Explosion_AlienSplat_IncendiaryMaster:ForceFeedbackWaveform_973',ImpactEffect=WillowExplosionImpactDefinition'GD_Impacts.ExplosiveImpacts.ExplosiveImpactIncendiary128',bDamageOverPeriodOfTime=True,MaxDamageDuration=100.000000,DamageInterval=1.000000,bDamageEachTargetOnlyOnce=False,bExpandRadiusOverTime=True),(ExplosionPSTemplate=ParticleSystem'FX_WEP_Explosions.Particles.Incendiary.Part_Incendiary_Medium_Burst',MinRadius=1930,MaxRadius=3840,MinParticleScale=0.500000,MaxParticleScale=1.100000,ExplosionAkEvent=AkEvent'Ake_Exp_Elemental.Exp_Incendiary.Ak_Play_Exp_Elemental_Incendiary_MED',CameraAnim=CameraAnim'Anim_CameraAnimations.Explosions.Canim_Explosion_Medium',MinCameraEffectDistance=150.000000,MaxCameraEffectDistance=650.000000,FFWaveform=ForceFeedbackWaveform'GD_Explosions.Incendiary.Explosion_AlienSplat_IncendiaryMaster:ForceFeedbackWaveform_974',ImpactEffect=WillowExplosionImpactDefinition'GD_Impacts.ExplosiveImpacts.ExplosiveImpactIncendiary256',bDamageOverPeriodOfTime=True,MaxDamageDuration=100.000000,DamageInterval=1.000000,bDamageEachTargetOnlyOnce=False,bExpandRadiusOverTime=True),(ExplosionPSTemplate=ParticleSystem'FX_WEP_Explosions.Particles.Incendiary.Part_Incendiary_Large_Burst',MinRadius=3850,MaxRadius=20480,MinParticleScale=0.650000,MaxParticleScale=2.000000,ExplosionAkEvent=AkEvent'Ake_Exp_Elemental.Exp_Incendiary.Ak_Play_Exp_Elemental_Incendiary_LG',CameraAnim=CameraAnim'Anim_CameraAnimations.Explosions.Canim_Explosion_Large',MinCameraEffectDistance=300.000000,MaxCameraEffectDistance=1200.000000,FFWaveform=ForceFeedbackWaveform'GD_Explosions.Incendiary.Explosion_AlienSplat_IncendiaryMaster:ForceFeedbackWaveform_975',ImpactEffect=WillowExplosionImpactDefinition'GD_Impacts.ExplosiveImpacts.ExplosiveImpactIncendiary512',bDamageOverPeriodOfTime=True,MaxDamageDuration=100.000000,DamageInterval=1.000000,bDamageEachTargetOnlyOnce=False,bExpandRadiusOverTime=True))
+
+set GD_Weap_Shotgun.Projectiles.Projectile_SplatBall:BehaviorProviderDefinition_0.Behavior_Explode_5 DamageRadiusFormula (BaseValueConstant=700.000000)
+
+set GD_Weap_SMG.Barrel.SMG_Barrel_Maliwan_HellFire AttributeSlotUpgrades ((SlotName="WeaponMagSize",GradeIncrease=101,bActivateSlot=True),(SlotName="AccuracyMax",GradeIncrease=10000,bActivateSlot=True),(SlotName="AccuracyMin",GradeIncrease=300000,bActivateSlot=True),(SlotName="WeaponMagSize",GradeIncrease=20,bActivateSlot=True),(SlotName="WeaponFireRate",GradeIncrease=-52,bActivateSlot=True),(SlotName="WeaponAccuracyImpulse",GradeIncrease=100,bActivateSlot=True),
+
+set GD_Weap_SMG.Barrel.SMG_Barrel_Maliwan_HellFire ExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.DamageSourceShieldPenetration.PercentChanceInstigatedBulletDmgIgnoresShields',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=100.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.DamageTypeModifers.IncendiaryImpactDamageModifier',ConstraintAttribute=None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AteDefinition'D_Attributes.DamageTypeModifers.IncendiaryStatusEffectDamageModifier',ConstraintAttribute=None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Patrol_SMG.Ammo_Patrol_SMG_RegenerationRate',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.300000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+
