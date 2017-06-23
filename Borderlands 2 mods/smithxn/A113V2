@@ -1,0 +1,12 @@
+// THE IDEA OF THIS WAS NOT MINE!!!!
+// WHAT I HAVE DONE HERE IS RECREATE/FIX THE A113 THAT 00Schmidt IS WORKING ON.
+// THIS IS WHAT I ASSUME HE WAS TRYING TO CREATE
+// Assault rifle
+// WIP replacement of stomper
+set GD_Weap_AssaultRifle.Barrel.AR_Barrel_Jakobs_Stomper CustomFiringModeDefinition FiringModeDefinition'GD_Weap_SniperRifles.FiringModes.Bullet_RailGun'
+
+set GD_Weap_AssaultRifle.Barrel.AR_Barrel_Jakobs_Stomper WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponExtraShotChance',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Jakobs',InitializationDefinition=None,BaseValueScaleConstant=0.50000)),(Attribute=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',PriorityIncrease=0.500000),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.800000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+set GD_Weap_AssaultRifle.Barrel.AR_Barrel_Jakobs_Stomper GestaltModeSkeletalMeshName AR_Barrel_Alien
+
+set GD_Weap_AssaultRifle.ManufacturerMaterials.Mat_Jakobs_3_Stomper Material MaterialInstanceConstant'Common_GunMaterials.Materials.SMG.Mati_Tediore_Legendary_Babymaker'
