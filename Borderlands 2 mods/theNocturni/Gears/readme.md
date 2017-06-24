@@ -18,7 +18,7 @@ currently contains 2 custom weapons and 2 existing gear change
   
       my attempts to make some not-so-popular grenades better
         currently improves:
-          -Contraband Skyrocket: makes it scale to OP8
+          -Contraband Skyrocket: makes it scale to OP8, and child explosions deal 50% self damage to you
           -Breath of Terramorphous: slight singularity effect on initial explosion, doubled the projectiles
           -Nasty Surprise: x2 grenades per drop, child grenades explode as soon as they spawn, increased status effect chance
           -Rolling Thunder: 50% increase radius for bounce explosions and bounce explosions will not harm you, while staggering enemies
