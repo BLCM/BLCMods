@@ -15,5 +15,7 @@ changelog
 
 	v2-2017/06/25
 	
-	removed Warden, the Constructor from 1340 quest, and Jack's grenade resistance
+	-removed Warden, the Constructor from 1340 quest, and Jack's grenade resistance
+	-added Filter Tool support
+
   
