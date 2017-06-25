@@ -6,7 +6,14 @@
   
 	this removes grenade resistance from enemies
   
-	Saturn.txt, Constructor.txt, and Raidboss.txt removes the grenade resistance of Saturn, Constructors, and Terra/Vermi respectively
+	Saturn.txt, Constructor.txt, Jack.txt, and Raidboss.txt removes the grenade resistance of Saturn, Constructors, Jack, and Terra/Vermi respectively
 	
 	All.txt removes it for all of them.
+	
+	
+changelog
+
+	v2-2017/06/25
+	
+	removed Warden, the Constructor from 1340 quest, and Jack's grenade resistance
   
