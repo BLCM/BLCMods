@@ -1,0 +1,46 @@
+This is a new weapon seires, not a weapon pack, i am making and releasing guns one by one, I am not sure how many weapons this series might have
+
+This series is focused on weapons of war, ranging from medical lasers, pistols, to weapons of mass destruction.
+
+First weapons with proper skins are in this series
+
+Replaces Law
+
+M.S.P AKA Magnum Sniper Pistol
+
+Used against special targets, big structures, enemes weak to shock.
+
+######################################################################################################################################
+
+
+Weap code needed:BL2(hwAAAABb7gCHRwJABgEFQMOIhUEQ4////////9Iw/v9Pw/j/jw3j)
+
+Could be a good weapon for Zer0, Gaige
+
+Fires shock/explosive shots
+High damage
+High firerate
+High recoil
+Slow accuracy recovery
++1600% Melee damage
+Shots bypasses shields
+Fires bloody red bullets
+
+#############################
+set GD_Weap_Pistol.Barrel.Pistol_Barrel_Maliwan_ThunderballFists WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.DamageSourceModifiers.InstigatedMeleeDamageModifier',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=15.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Jakobs',InitializationDefinition=None,BaseValueScaleConstant=10.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponReloadSpeed',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-2.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Jakobs',InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=12.700000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=3.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))))))
+
+set GD_Weap_Pistol.Barrel.Pistol_Barrel_Maliwan_ThunderballFists AttributeSlotUpgrades ((SlotName="WeaponMagSize",GradeIncrease=5,bActivateSlot=True),(SlotName="AccuracyMax",GradeIncrease=-500,bActivateSlot=True),(SlotName="AccuracyMin",GradeIncrease=3000,bActivateSlot=True),(SlotName="WeaponFireRate",GradeIncrease=15,bActivateSlot=True),(SlotName="WeaponAccuracyImpulse",GradeIncrease=-60,bActivateSlot=True),
+
+set GD_Weap_Pistol.Name.Title.Title__Unique_Law PartName M.S.P
+
+set GD_Weap_Pistol.Name.Title.Title__Unique_Law:AttributePresentationDefinition_8 NoConstraintText <font color="#D80C0C">What just happened?<font color="#FFFFFF"><br>The M.S.P, Magnum Sniper Pistol.<br><br>It's just a magnum sniper pistol, what else did you expect?<br><br>+1600% Melee Damage
+
+set GD_Weap_Pistol.Barrel.Pistol_Barrel_Maliwan_ThunderballFists Rarity (BaseValueConstant=4.000000)
+
+set GD_Weap_Pistol.A_Weapons_Unique.Pistol_Jakobs_3_Law:WeaponPartListCollectionDefinition_114 BarrelPartData (bEnabled=True,WeightedParts=((Part=WeaponPartDefinition'GD_Weap_Pistol.Barrel.Pistol_Barrel_Maliwan_ThunderballFists',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=2))
+
+set GD_Weap_Pistol.Barrel.Pistol_Barrel_Maliwan_ThunderballFists ExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.DamageSourceShieldPenetration.PercentChanceInstigatedBulletDmgIgnoresShields',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=100.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))
+
+set GD_Weap_Pistol.ManufacturerMaterials.Mat_Jakobs_3_Law Material MaterialInstanceConstant'Common_GunMaterials.Materials.Pistol.Mati_DahlUniquePistol_Dahlminator'
+##########################################
+
