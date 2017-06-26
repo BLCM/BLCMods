@@ -8,6 +8,22 @@ All Tediore weapons have received a redesign and combat tweaks. In addition to i
 
 Additionally, Aaron0000's Splitter Retcher is included by default. Please note that you must pick a graphical effect for it in the Filter Tool or by commenting out the one you don't want to use with a # at the front. At extremely high fire rates, you may experience game performance issues.
 
+Changelog: 
+
+v1.2
+Converted Rocket Launcher code to a simpler version that only buffs Type. E-Tech barrel has a counter-nerf attached to keep relative damage the same.
+Buffed Bunny damage on OP8 by approximately 28%.
+Buffed Purple damage on OP8 by approximately 2.3%.
+Buffed E-tech launcher damage on OP8 by approximately 0.87%.
+ 
+v1.1a
+Shotgun bonus baseline pellet reverted. Tediore shotgun barrel brand match bonus unchanged.
+
+v1.1
+Reduced Tediore reload buff formula from 1.85 to 1.70
+Reduced SMG ammo regeneration to make it a more compelling resource.
+Reduced Shotgun ammo regeneration to make it a more compelling resource.
+
 ##########
 
 #</Description>
@@ -132,7 +148,7 @@ set GD_Weap_SMG.A_Weapons.WT_SMG_Tediore:AttributePresentationDefinition_0 NoCon
 
 Rocket Launchers
 
-Buff all non-E-Tech rocket launcher barrels to provide a damage boost to Tediore rocket launchers and adds one to clip size.
+Buff baseline Rocket Launcher damage and lowers E-Tech Launcher damage to compensate. Adds one to clip size.
 
 ##########
 
@@ -142,16 +158,11 @@ Buff all non-E-Tech rocket launcher barrels to provide a damage boost to Tediore
 
 set GD_Weap_Launchers.A_Weapons.WT_Tediore_Launcher ClipSize 3
 
-set GD_Weap_Launchers.Barrel.L_Barrel_Tediore WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Tediore',InitializationDefinition=None,BaseValueScaleConstant=0.250000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponPerShotAccuracyImpulse',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Tediore',InitializationDefinition=None,BaseValueScaleConstant=-0.700000)))
+set GD_Weap_Launchers.A_Weapons.WT_Tediore_Launcher InstantHitDamage (BaseValueConstant=20.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance_HealthAndDamage.HealthAndDamage.Init_WeaponDamage',BaseValueScaleConstant=29.000000)
 
-set GD_Weap_Launchers.Barrel.L_Barrel_Bandit WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Bandit',InitializationDefinition=None,BaseValueScaleConstant=0.050000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponPerShotAccuracyImpulse',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Bandit',InitializationDefinition=None,BaseValueScaleConstant=-0.700000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Tediore',InitializationDefinition=None,BaseValueScaleConstant=0.200000)))
+set GD_Weap_Launchers.Barrel.L_Barrel_Tediore_Bunny WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Tediore',InitializationDefinition=None,BaseValueScaleConstant=0.200000)))
 
-set GD_Weap_Launchers.Barrel.L_Barrel_Torgue WeaponAttributeEffects
-((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Torgue',InitializationDefinition=None,BaseValueScaleConstant=1.000000)),WeaponAttributeEffects(1)=(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Torgue',InitializationDefinition=None,BaseValueScaleConstant=-0.050000)),WeaponAttributeEffects(2)=(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Torgue',InitializationDefinition=None,BaseValueScaleConstant=0.200000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Tediore',InitializationDefinition=None,BaseValueScaleConstant=0.200000)))
-
-set GD_Weap_Launchers.Barrel.L_Barrel_Vladof WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Vladof',InitializationDefinition=None,BaseValueScaleConstant=0.100000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponBarrelSpinUpDuration',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Vladof',InitializationDefinition=None,BaseValueScaleConstant=-0.250000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponBarrelSpinUpDuration',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Bandit',InitializationDefinition=None,BaseValueScaleConstant=2.500000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Vladof',InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Tediore',InitializationDefinition=None,BaseValueScaleConstant=0.200000)))
-
-set GD_Weap_Launchers.Barrel.L_Barrel_Maliwan WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Maliwan',InitializationDefinition=None,BaseValueScaleConstant=0.100000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponBaseStatusEffectChanceModifier',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Maliwan',InitializationDefinition=None,BaseValueScaleConstant=0.100000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Maliwan',InitializationDefinition=None,BaseValueScaleConstant=-0.300000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Tediore',InitializationDefinition=None,BaseValueScaleConstant=0.200000)))
+set GD_Weap_Launchers.Barrel.L_Barrel_Alien WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.800000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Tediore',InitializationDefinition=None,BaseValueScaleConstant=-0.150000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponStatusEffectChanceModifier',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.200000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
 
 #</Buffs>
 
@@ -205,7 +216,7 @@ set GD_Weap_Launchers.A_Weapons.WT_Tediore_Launcher:AttributePresentationDefinit
 
 Shotguns
 
-Buff baseline shotgun projectile count, clip size, fire rate, sustained fire accuracy. Tediore barrel now grants +1 projectile and 5% damage for brand match, 15% reload speed and 10% tighter spread to all shotguns.
+Buff baseline shotgun clip size, fire rate, and sustained fire accuracy. Tediore barrel now grants +1 projectile and 5% damage for brand match, 15% reload speed and 10% tighter spread to all shotguns.
 
 ##########
 
@@ -253,7 +264,7 @@ set GD_Orchid_RaidWeapons.Shotgun.Spitter.Orchid_Seraph_Spitter_Barrel WeaponAtt
 
 set GD_Orchid_RaidWeapons.Shotgun.Spitter.Orchid_Seraph_Spitter_Barrel WeaponCardAttributes ((Attribute=AttributeDefinition'D_Attributes.Weapon.WeaponReloadSpeed',PriorityIncrease=-3.000000))
 
-set GD_Orchid_RaidWeapons.Shotgun.Spitter.Orchid_Seraph_Spitter_Barrel:BehaviorProviderDefinition_1 BehaviorSequences ((BehaviorSequenceName="Default",bEnabledOnSpawn=True,bSequenceEnabledMutex=False,CustomEnableCondition=None,EventData=,EventData2=,BehaviorData=,BehaviorData2=,VariableData=,ConsolidatedOutputLinkData=,ConsolidatedVariableLinkData=,ConsolidatedLinkedVariables=))
+#et GD_Orchid_RaidWeapons.Shotgun.Spitter.Orchid_Seraph_Spitter_Barrel:BehaviorProviderDefinition_1 BehaviorSequences ((BehaviorSequenceName="Default",bEnabledOnSpawn=True,bSequenceEnabledMutex=False,CustomEnableCondition=None,EventData=,EventData2=,BehaviorData=,BehaviorData2=,VariableData=,ConsolidatedOutputLinkData=,ConsolidatedVariableLinkData=,ConsolidatedLinkedVariables=))
 
 set GD_Orchid_RaidWeapons.Shotgun.Spitter.Orchid_Seraph_Spitter_Barrel MuzzleFlashPSTemplates EffectCollectionDefinition'GD_Weap_Shotgun.Effects.SG_Default_MuzzleFlashes'
 
