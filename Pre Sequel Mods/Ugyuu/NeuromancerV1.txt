@@ -1,0 +1,46 @@
+A patch made by:                            |
+  _    _  _____  _   _  _    _  _    _      |
+ | |  | || ____|| | | || |  | || |  | |     |
+ | |  | || | __ | \_/ || |  | || |  | |     |
+ | |  | || ||_ | \   / | |  | || |  | |     |
+ | |__| || |_| |  | |  | |__| || |__| |  _  |
+ |______||_____|  |_|  |______||______| |_| |
+                                            |
+        With help of the community.         |
+____________________________________________|
+
+Turns the Probe into something even better: The Neuromancer.
+
+[Notes]
+
+Actually not useful on Aurelia due to fire explosion. You can disable that.
+Best used on maelstrom Athena, if you have a shock Neuromancer. (Probably very OP on Maelstrom Athena)
+
+[Features]
+
+- Slightly increased damage, reload speed and clip size.
+- Shots can ricochet once, and if they do create a bigger elemental explosion, matching your weapon element, if they hit something.
+- Shots explode into a Fire and Explosive nova, along with a nova with the element your Neuromancer currently has.
+- Not elemental locked!
+- Burst fires 3 rounds with increased damage when aiming down sights.
+- Damage still heals you, because it is a moxxi weapon.
+
+[Changelog]
+
+V1.0 Initial release.
+
+[Codes]
+
+set GD_Cork_Weap_Pistol.Barrel.Pistol_Barrel_Scav_Moxxis_Probe GestaltModeSkeletalMeshName Pistol_Barrel_Maliwan
+
+set GD_Cork_Weap_Pistol.Barrel.Pistol_Barrel_Scav_Moxxis_Probe AttributeSlotUpgrades ((SlotName="WeaponReloadSpeed",GradeIncrease=8,bActivateSlot=True)))
+
+set GD_Cork_Weap_Pistol.Barrel.Pistol_Barrel_Scav_Moxxis_Probe ZoomWeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=-0.250000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponAutomaticBurstCount',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=3.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponBurstInterval',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.150000,BaseValueAttribute=None',InitializationDefinition=None,BaseValueScaleConstant=0.150000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0.150000)))
+set GD_Cork_Weap_Pistol.Barrel.Pistol_Barrel_Scav_Moxxis_Probe WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=1.00000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueConstant=5.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0.250000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0.000000)))
+
+set GD_Cork_Weap_Pistol.FiringModes.Bullet_Pistol_Maliwan_MoxxisProbe NumRicochets 1
+set GD_Cork_Weap_Pistol.FiringModes.Bullet_Pistol_Maliwan_MoxxisProbe RicochetResponse (SplitNum=1,SplitAngle=2.000000,SplitAngleOffset=0.000000,SplitDistance=0.000000,SplitFire=GD_Ma_Weapons.FiringModes.Bullet_Pistol_Maliwan_HardReboot,NewSpeed=0.000000,bDetonate=False,bRespawnTracer=False,bUpdateBeamSourceLocation=False,Behaviors=)
+set GD_Cork_Weap_Pistol.FiringModes.Bullet_Pistol_Maliwan_MoxxisProbe OnAnyImpact (Behavior_Explode'GD_Cork_Weap_Pistol.FiringModes.Bullet_Pistol_Dahl_Blowfly:Behavior_Explode_5',Behavior_Explode'GD_Ma_Weapons.FiringModes.Bullet_Laser_Dahl_Thunderfire:Behavior_Explode_5',Behavior_Explode'GD_Cork_Weap_Shotgun.FiringModes.Bullets_Shotgun_Torgue_Flakker_Child:Behavior_Explode_14',Behavior_Explode'GD_Cork_Weap_Shotgun.FiringModes.Bullets_Shotgun_Torgue_Flakker_Child:Behavior_Explode_38',Behavior_Explode'GD_Cork_Weap_Shotgun.FiringModes.Bullets_Shotgun_Torgue_Flakker_Child_2:Behavior_Explode_39')
+
+set GD_Cork_Weap_Pistol.Name.Title.Title__Unique_Moxxis_Probe PartName Neuromancer
+set GD_Cork_Weap_Pistol.Name.Title.Title__Unique_Moxxis_Probe:AttributePresentationDefinition_8 NoConstraintText <font color="#ff0235">Rave through the apocalypse..<font color="#ffffff">
