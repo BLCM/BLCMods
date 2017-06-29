@@ -37,3 +37,5 @@
 #10. [TPSGunsV2.txt](https://raw.githubusercontent.com/BLCM/BLCMods/master/Borderlands%202%20mods/FromDarkHell/TPSGunsV2.txt)
 
   	Replaces guns from BL2 into weapons from Borderlands: The Pre-Sequel
+#11. [ScopelessSnipers.txt](https://raw.githubusercontent.com/BLCM/BLCMods/master/Borderlands%202%20mods/FromDarkHell/ScopelessSnipers.txt)
+	Allows every sniper to spawn with the buffalo scope
