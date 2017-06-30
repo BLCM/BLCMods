@@ -1,8 +1,9 @@
-!!!Caution: This wepaon will break regular Torgue pistols, the Hornet, and will slightly break the Teeth of Terramophus (Your screen will shake if you shoot it.)
+!!!Caution: This weapon might break Torgue assault rifles, the Infection, and the Blockhead
 #---------------------------- Change Log ----------------------------#
+	#v2 - Nerfed Damage to make it slightly more reasonable. It's still OP, Because it's THE HULK, but its not SuperMegaUltra OP, you know what I'm saying?
+		# - Change the explosion Definitions again. It will still behave the same way though so don't worry. I'm just doing this so that all my weapons will be compatible when I combined them eventually into one mod pack.
 	#v1.1 - Had to change the Explosion definitions. Original I used the explosion from Axton's Turret Nuke skill, but you can only see that explosion while playing as Axton. Now uses an explosion that all Characters can see.
 	#v1 - Initial release
-
 #-------------------- Weapon Information --------------------#
 #Replaces the Badaboom Rocket Launcher
 #Made to represent Marvel's The Hulk (I will have a seperate weapon in the future for Bruce Banner)
@@ -19,14 +20,14 @@
 #Slight colour tweaks to all rarities to make them more distingishable from each other.
 
 #Stats
-set GD_Weap_Launchers.Barrel.L_Barrel_Bandit_BadaBoom WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=2.950000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=5.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponReloadSpeed',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.800000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=4.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+set GD_Weap_Launchers.Barrel.L_Barrel_Bandit_BadaBoom WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=5.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponReloadSpeed',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.800000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=4.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
 
 #Name and GREEN Text
 set GD_Weap_Launchers.Name.Title_Bandit.Title_Legendary_Badaboom PartName Incredible Hulk
 set GD_Weap_Launchers.Name.Title_Bandit.Title_Legendary_Badaboom:AttributePresentationDefinition_8 NoConstraintText <font color="#94ff00">HULK SMASH!!!<br><font color="#FFFFFF">. Shooting causes an <font color="#FFEA0A">earthquake!<br><font color="#FFFFFF">. Greatly Increases your jump height<br>. 50% bonus to movement speed<br>. Projectiles deal both<font color="#94ff00"> Corrosive<font color="#FFFFFF"> and<font color="#FFEA0A"> Explosive<font color="#FFFFFF"> Damage
 
 #Movement speed, Jump Bonus, Melee Damage, Ammo Regen
-set GD_Weap_Launchers.Barrel.L_Barrel_Bandit_BadaBoom ExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.GameplayAttributes.FootSpeed',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.SkillAttributes.RevivalHealthMultiplier',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=600.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Rocket_Launcher.Ammo_Rocket_Launcher_RegenerationRate',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.400000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.DamageSourceModifiers.InstigatedMeleeDamageModifier',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=2.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+set GD_Weap_Launchers.Barrel.L_Barrel_Bandit_BadaBoom ExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.GameplayAttributes.FootSpeed',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.SkillAttributes.RevivalHealthMultiplier',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=600.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Rocket_Launcher.Ammo_Rocket_Launcher_RegenerationRate',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.250000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.DamageSourceModifiers.InstigatedMeleeDamageModifier',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=2.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
 
 set D_Attributes.SkillAttributes.RevivalHealthMultiplier:ObjectpropertyAttributeValueResolver_20 PropertyName JumpZ
 set D_Attributes.Injured.RevivedHealthAmount:SimpleMathValueResolver_0 Argument (BaseValueScaleConstant=0.000000)
@@ -39,32 +40,36 @@ set WillowGame.GlobalsDefinition RarityLevelColors ((MinLevel=0,MaxLevel=0,Color
 set GD_Weap_Launchers.Barrel.L_Barrel_Bandit_BadaBoom rarity (BaseValueConstant=182.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
 
 #Firingmode
-set GD_Weap_Launchers.Barrel.L_Barrel_Bandit_BadaBoom CustomFiringModeDefinition FiringModeDefinition 'GD_Weap_Pistol.FiringModes.Bullets_Pistol_Torgue_GyroJet'
-set GD_Weap_Pistol.FiringModes.Bullets_Pistol_Torgue_GyroJet OnAnyImpact (Behavior_Explode'GD_Weap_Pistol.FiringModes.Bullet_Pistol_Dahl_Hornet:Behavior_Explode_5',Behavior_Explode'GD_Weap_Shotgun.FiringModes.Bullet_Shotgun_Teeth:Behavior_Explode_5',Behavior_Explode'GD_Weap_Pistol.FiringModes.Bullets_Pistol_Torgue_GyroJet:Behavior_Explode_5')
+set GD_Weap_Launchers.Barrel.L_Barrel_Bandit_BadaBoom CustomFiringModeDefinition FiringModeDefinition 'GD_Weap_AssaultRifle.FiringModes.Bullets_Assault_Torgue_GyroJet'
+set GD_Weap_AssaultRifle.FiringModes.Bullets_Assault_Torgue_GyroJet OnAnyImpact (Behavior_Explode'GD_Sage_RaidWeapons.FiringModes.Bullet_Pistol_Maliwan_Infection:Behavior_Explode_5',Behavior_Explode'GD_Weap_Shotgun.FiringModes.Bullet_Shotgun_Blockhead:Behavior_Explode_5',Behavior_Explode'GD_Weap_AssaultRifle.FiringModes.Bullets_Assault_Torgue_GyroJet:Behavior_Explode_5')
  
-set GD_Weap_Pistol.FiringModes.Bullets_Pistol_Torgue_GyroJet:Behavior_Explode_5 DamageFormula (BaseValueScaleConstant=100.000000)
-set GD_Weap_Pistol.FiringModes.Bullets_Pistol_Torgue_GyroJet:Behavior_Explode_5 DamageRadiusFormula (BaseValueConstant=1500.000000)
-set GD_Weap_Pistol.FiringModes.Bullets_Pistol_Torgue_GyroJet:Behavior_Explode_5 Definition ExplosionDefinition'GD_LoaderEXP.Explosion.Explosion_LoaderEXP_512'
-set GD_Weap_Pistol.FiringModes.Bullets_Pistol_Torgue_GyroJet:Behavior_Explode_5 InstigatorSelfDamageScale 0.000000
+set GD_Weap_AssaultRifle.FiringModes.Bullets_Assault_Torgue_GyroJet:Behavior_Explode_5 DamageFormula (BaseValueScaleConstant=100.000000)
+set GD_Weap_AssaultRifle.FiringModes.Bullets_Assault_Torgue_GyroJet:Behavior_Explode_5 DamageRadiusFormula (BaseValueConstant=100.000000)
+set GD_Weap_AssaultRifle.FiringModes.Bullets_Assault_Torgue_GyroJet:Behavior_Explode_5 Definition ExplosionDefinition'GD_Explosions.explosive.Explosion_ExplosiveMaster_ShieldNova'
+set GD_Weap_AssaultRifle.FiringModes.Bullets_Assault_Torgue_GyroJet:Behavior_Explode_5 InstigatorSelfDamageScale 0.000000
 
-set GD_Weap_Pistol.FiringModes.Bullet_Pistol_Dahl_Hornet:Behavior_Explode_5 DamageFormula (BaseValueScaleConstant=100.000000)
-set GD_Weap_Pistol.FiringModes.Bullet_Pistol_Dahl_Hornet:Behavior_Explode_5 DamageRadiusFormula (BaseValueConstant=1500.000000)
-set GD_Weap_Pistol.FiringModes.Bullet_Pistol_Dahl_Hornet:Behavior_Explode_5 Definition ExplosionDefinition'GD_Explosions.corrosive.Explosion_CorrosiveMaster_ShieldNova'
-set GD_Weap_Pistol.FiringModes.Bullet_Pistol_Dahl_Hornet:Behavior_Explode_5 StatusEffectDamage (BaseValueConstant=2.000000)
-set GD_Weap_Pistol.FiringModes.Bullet_Pistol_Dahl_Hornet:Behavior_Explode_5 StatusEffectChance (BaseValueScaleConstant=0.800000)
-set GD_Weap_Pistol.FiringModes.Bullet_Pistol_Dahl_Hornet:Behavior_Explode_5 InstigatorSelfDamageScale 0.000000
+set GD_Sage_RaidWeapons.FiringModes.Bullet_Pistol_Maliwan_Infection:Behavior_Explode_5 DamageFormula (BaseValueScaleConstant=100.000000)
+set GD_Sage_RaidWeapons.FiringModes.Bullet_Pistol_Maliwan_Infection:Behavior_Explode_5 MomentumFormula (BaseValueScaleConstant=100.000000)
+set GD_Sage_RaidWeapons.FiringModes.Bullet_Pistol_Maliwan_Infection:Behavior_Explode_5 DamageRadiusFormula (BaseValueConstant=1500.000000)
+set GD_Sage_RaidWeapons.FiringModes.Bullet_Pistol_Maliwan_Infection:Behavior_Explode_5 Definition ExplosionDefinition'GD_Explosions.corrosive.Explosion_CorrosiveMaster_ShieldNova'
+set GD_Sage_RaidWeapons.FiringModes.Bullet_Pistol_Maliwan_Infection:Behavior_Explode_5 StatusEffectDamage (BaseValueConstant=2.000000)
+set GD_Sage_RaidWeapons.FiringModes.Bullet_Pistol_Maliwan_Infection:Behavior_Explode_5 StatusEffectChance (BaseValueScaleConstant=0.800000)
+set GD_Sage_RaidWeapons.FiringModes.Bullet_Pistol_Maliwan_Infection:Behavior_Explode_5 InstigatorSelfDamageScale 0.000000
 
-set GD_Weap_Shotgun.FiringModes.Bullet_Shotgun_Teeth:Behavior_Explode_5 DamageFormula (BaseValueScaleConstant=0.000000)
-set GD_Weap_Shotgun.FiringModes.Bullet_Shotgun_Teeth:Behavior_Explode_5 DamageRadiusFormula (BaseValueConstant=400.000000)
-set GD_Weap_Shotgun.FiringModes.Bullet_Shotgun_Teeth:Behavior_Explode_5 Definition ExplosionDefinition'GD_Explosions.Special.Explosion_WarriorEarthquake'
-set GD_Weap_Shotgun.FiringModes.Bullet_Shotgun_Teeth:Behavior_Explode_5 InstigatorSelfDamageScale 0.000000
+set GD_Weap_Shotgun.FiringModes.Bullet_Shotgun_Blockhead:Behavior_Explode_5 DamageFormula (BaseValueScaleConstant=0.000000)
+set GD_Weap_Shotgun.FiringModes.Bullet_Shotgun_Blockhead:Behavior_Explode_5 DamageRadiusFormula (BaseValueConstant=400.000000)
+set GD_Weap_Shotgun.FiringModes.Bullet_Shotgun_Blockhead:Behavior_Explode_5 Definition ExplosionDefinition'GD_Explosions.Special.Explosion_WarriorEarthquake'
+set GD_Weap_Shotgun.FiringModes.Bullet_Shotgun_Blockhead:Behavior_Explode_5 InstigatorSelfDamageScale 0.000000
 
 #FX
-set GD_Weap_Launchers.FiringModes.FM_Rocket_Bandit_BadaBoom ConditionalPartSysTemplate EffectCollectionDefinition'GD_Weap_SniprRifles.Effects.SR_ETech_Tracers'
-set GD_Weap_Launchers.FiringModes.FM_Rocket_Bandit_BadaBoom PartSysTemplate ParticleSystem'FX_WEP_Trails_Alien.Particles.Part_Sniper_Alien_Corrosive_Tracer'
+set GD_Weap_AssaultRifle.FiringModes.Bullets_Assault_Torgue_GyroJet ConditionalPartSysTemplate EffectCollectionDefinition'GD_Weap_SniprRifles.Effects.SR_ETech_Tracers'
+set GD_Weap_AssaultRifle.FiringModes.Bullets_Assault_Torgue_GyroJet PartSysTemplate ParticleSystem'FX_WEP_Trails_Alien.Particles.Part_Sniper_Alien_Corrosive_Tracer'
 
 #Corrosive Lock
 set GD_Weap_Launchers.A_Weapons_Legendary.RL_Bandit_5_BadaBoom:WeaponPartListCollectionDefinition_64 ElementalPartData (bEnabled=True,WeightedParts=((Part=WeaponPartDefinition'GD_Weap_Launchers.elemental.RL_Elemental_Corrosive',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1))
+
+#Common_GunMaterials.Patterns.Pattern_Hornet
+#Common_GunMaterials.Logos.Logo_Logan5th
 
 #Skin
 set Common_GunMaterials.Materials.Launcher.Mati_BanditLegendaryRL TextureParameterValues ((ParameterName="p_NormalScopesEmissive",ParameterValue=Texture2D'Weap_Launchers.Tex.Weap_Launchers_Nrm',ExpressionGUID=(A=-1743872746,B=1126171774,C=119496871,D=-1952271718)),(ParameterName="p_Diffuse",ParameterValue=Texture2D'Common_GunMaterials.CompTextures.Weap_LauncherShotgunPistol_Comp',ExpressionGUID=(A=1757607260,B=1326539502,C=-317215581,D=-565807463)),(ParameterName="p_Masks",ParameterValue=Texture2D'Weap_Launchers.Tex.Weap_Launchers_Comp',ExpressionGUID=(A=-330624041,B=1167251458,C=-335191907,D=-166684394)),(ParameterName="P_SimpleReflect",ParameterValue=Texture2D'Common_GunMaterials.Patterns.Pattern_Lightning',ExpressionGUID=(A=-858148940,B=1327945772,C=148462268,D=1899047224)),(ParameterName="p_Pattern",ParameterValue=Texture2D'Common_GunMaterials.Patterns.Pattern_Hornet',ExpressionGUID=(A=534250533,B=1202550002,C=1578302861,D=-717876416)),(ParameterName="p_Decal",ParameterValue=Texture2D'Common_GunMaterials.Logos.Logo_Logan5th',ExpressionGUID=(A=-923052711,B=1309861752,C=584229786,D=-1229888527)))
