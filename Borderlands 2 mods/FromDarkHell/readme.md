@@ -40,3 +40,10 @@
 #11. [ScopelessSnipers.txt](https://raw.githubusercontent.com/BLCM/BLCMods/master/Borderlands%202%20mods/FromDarkHell/ScopelessSnipers.txt)
 
 	Allows every sniper to spawn with the buffalo scope
+#12. [Gundropper.txt](https://raw.githubusercontent.com/BLCM/BLCMods/master/Borderlands%202%20mods/FromDarkHell/Gundropper.txt)
+
+	A booster shield that instead of dropping boosters drops weapons
+	
+#13. [GrenadeUnlocker.txt](https://raw.githubusercontent.com/BLCM/BLCMods/master/Borderlands%202%20mods/FromDarkHell/GrenadeUnlocker.txt)
+
+	Allows every grenade to have every element - Credit to Aaron0000
