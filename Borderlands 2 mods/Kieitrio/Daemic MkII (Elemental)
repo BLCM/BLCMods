@@ -1,10 +1,12 @@
+*I plan on doing similar versions of this weapon for each element
+*Hopefully fixed issue where enemies were shooting novas
+#WILL SANITY CHECK ALL ELEMENTAL PITCHFORKS
 #WILL SANITY CHECK ALL ELEMENTAL PITCHFORKS
 #Made by: Kieitrio
 #First skin that I've 100% made
 #Replaces the Pitchfork
 #Deals Explosive, Shock, corrosive, and fire Novas
-#Regenerates Sniper Rifle ammo (Not shown on card)
-#Has alot of knockback
+#Regenerates Sniper Rifle ammo (Not shown on card) & Increased movement speed
 #Gibbed code BL2(hwAAAADRcACBiINBBAGFdoJJAIMKpgUMBRguMGBg/v+ngsEDcwvm)
 
 
@@ -15,14 +17,17 @@ set GD_Weap_SniperRifles.Barrel.SR_Barrel_Dahl_Pitchfork rarity (BaseValueConsta
 set GD_Weap_SniperRifles.A_Weapons_Legendary.Sniper_Dahl_5_Pitchfork:WeaponPartListCollectionDefinition_202 ElementalPartData (bEnabled=True,WeightedParts=((Part=WeaponPartDefinition'GD_Weap_SniperRifles.elemental.SR_Elemental_None',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1))
 
 #Attributes
-set GD_Weap_SniperRifles.Barrel.SR_Barrel_Dahl_Pitchfork ExternalAttributeEffects ((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Sniper_Rifle.Ammo_Sniper_Rifle_RegenerationRate',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=3.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+set GD_Weap_SniperRifles.Barrel.SR_Barrel_Dahl_Pitchfork ExternalAttributeEffects ((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Sniper_Rifle.Ammo_Sniper_Rifle_RegenerationRate',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=3.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.GameplayAttributes.FootSpeed',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
 set GD_Weap_SniperRifles.Barrel.SR_Barrel_Dahl_Pitchfork ZoomWeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponAutomaticBurstCount',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
 set GD_Weap_SniperRifles.Barrel.SR_Barrel_Dahl_Pitchfork WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=6.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))
 
+#Novas
+set GD_Weap_SniperRifles.FiringModes.Bullet_Sniper_Volcano ExplosionOverrideDefinition None
+set GD_Weap_SniperRifles.Barrel.SR_Barrel_Dahl_Pitchfork CustomFiringModeDefinition FiringModeDefinition 'GD_Weap_SniperRifles.FiringModes.Bullet_Sniper_Volcano'
+set GD_Weap_SniperRifles.FiringModes.Bullet_Sniper_Volcano DamageTypeDefinition WillowDamageTypeDefinition'GD_Explosive.DamageType.DmgType_Explosive_Impact'
+set GD_Weap_SniperRifles.FiringModes.Bullet_Sniper_Volcano OnAnyImpact (Behavior_Explode'GD_Sage_Weapons.FiringModes.Bullet_Shotgun_Twister:Behavior_Explode_5',Behavior_Explode'GD_Sage_RaidWeapons.FiringModes.Bullet_Pistol_Maliwan_Infection:Behavior_Explode_5',Behavior_Explode'GD_Weap_Pistol.FiringModes.Bullets_Pistol_Bandit_Tinderbox:Behavior_Explode_5')
 
-set GD_Weap_SniperRifles.Barrel.SR_Barrel_Dahl_Pitchfork CustomFiringModeDefinition FiringModeDefinition 'GD_Aster_Weapons.FiringModes.Bullet_Assault_Ogre'
-set GD_Aster_Weapons.FiringModes.Bullet_Assault_Ogre OnAnyImpact (Behavior_Explode'GD_Sage_Weapons.FiringModes.Bullet_Shotgun_Twister:Behavior_Explode_5',Behavior_Explode'GD_Sage_RaidWeapons.FiringModes.Bullet_Pistol_Maliwan_Infection:Behavior_Explode_5',Behavior_Explode'GD_Weap_Pistol.FiringModes.Bullets_Pistol_Bandit_Tinderbox:Behavior_Explode_5',Behavior_Explode'GD_Aster_RaidWeapons.SMGs.Bullet_SMG_Plasma_Florentine:Behavior_Explode_5',Behavior_Explode'GD_Weap_Shotgun.FiringModes.Bullet_Shotgun_Blockhead:Behavior_Explode_5',Behavior_Explode'GD_Aster_Weapons.FiringModes.Bullet_Assault_Ogre:Behavior_Explode_5')
-
+#Corrosive
 set GD_Sage_RaidWeapons.FiringModes.Bullet_Pistol_Maliwan_Infection:Behavior_Explode_5 DamageFormula (BaseValueScaleConstant=100.000000)
 set GD_Sage_RaidWeapons.FiringModes.Bullet_Pistol_Maliwan_Infection:Behavior_Explode_5 MomentumFormula (BaseValueScaleConstant=100.000000)
 set GD_Sage_RaidWeapons.FiringModes.Bullet_Pistol_Maliwan_Infection:Behavior_Explode_5 DamageRadiusFormula (BaseValueConstant=1500.000000)
@@ -31,6 +36,7 @@ set GD_Sage_RaidWeapons.FiringModes.Bullet_Pistol_Maliwan_Infection:Behavior_Exp
 set GD_Sage_RaidWeapons.FiringModes.Bullet_Pistol_Maliwan_Infection:Behavior_Explode_5 StatusEffectChance (BaseValueScaleConstant=0.800000)
 set GD_Sage_RaidWeapons.FiringModes.Bullet_Pistol_Maliwan_Infection:Behavior_Explode_5 InstigatorSelfDamageScale 0.000000
 
+#Shock
 set GD_Sage_Weapons.FiringModes.Bullet_Shotgun_Twister:Behavior_Explode_5 DamageFormula (BaseValueScaleConstant=100.000000)
 set GD_Sage_Weapons.FiringModes.Bullet_Shotgun_Twister:Behavior_Explode_5 MomentumFormula (BaseValueScaleConstant=100.000000)
 set GD_Sage_Weapons.FiringModes.Bullet_Shotgun_Twister:Behavior_Explode_5 DamageRadiusFormula (BaseValueConstant=1500.000000)
@@ -39,6 +45,7 @@ set GD_Sage_Weapons.FiringModes.Bullet_Shotgun_Twister:Behavior_Explode_5 Status
 set GD_Sage_Weapons.FiringModes.Bullet_Shotgun_Twister:Behavior_Explode_5 StatusEffectChance (BaseValueScaleConstant=0.800000)
 set GD_Sage_Weapons.FiringModes.Bullet_Shotgun_Twister:Behavior_Explode_5 InstigatorSelfDamageScale 0.000000
 
+#Fire
 set GD_Weap_Pistol.FiringModes.Bullets_Pistol_Bandit_Tinderbox:Behavior_Explode_5 DamageFormula (BaseValueScaleConstant=100.000000)
 set GD_Weap_Pistol.FiringModes.Bullets_Pistol_Bandit_Tinderbox:Behavior_Explode_5 MomentumFormula (BaseValueScaleConstant=100.000000)
 set GD_Weap_Pistol.FiringModes.Bullets_Pistol_Bandit_Tinderbox:Behavior_Explode_5 DamageRadiusFormula (BaseValueConstant=1500.000000)
@@ -47,13 +54,6 @@ set GD_Weap_Pistol.FiringModes.Bullets_Pistol_Bandit_Tinderbox:Behavior_Explode_
 set GD_Weap_Pistol.FiringModes.Bullets_Pistol_Bandit_Tinderbox:Behavior_Explode_5 StatusEffectChance (BaseValueScaleConstant=0.800000)
 set GD_Weap_Pistol.FiringModes.Bullets_Pistol_Bandit_Tinderbox:Behavior_Explode_5 InstigatorSelfDamageScale 0.000000
 
-set GD_Aster_RaidWeapons.SMGs.Bullet_SMG_Plasma_Florentine:Behavior_Explode_5 DamageFormula (BaseValueScaleConstant=100.000000)
-set GD_Aster_RaidWeapons.SMGs.Bullet_SMG_Plasma_Florentine:Behavior_Explode_5 MomentumFormula (BaseValueScaleConstant=100.000000)
-set GD_Aster_RaidWeapons.SMGs.Bullet_SMG_Plasma_Florentine:Behavior_Explode_5 DamageRadiusFormula (BaseValueConstant=1500.000000)
-set GD_Aster_RaidWeapons.SMGs.Bullet_SMG_Plasma_Florentine:Behavior_Explode_5 Definition ExplosionDefinition'GD_Explosions.explosive.Explosion_ExplosiveMaster_ShieldNova'
-set GD_Aster_RaidWeapons.SMGs.Bullet_SMG_Plasma_Florentine:Behavior_Explode_5 StatusEffectDamage (BaseValueConstant=2.000000)
-set GD_Aster_RaidWeapons.SMGs.Bullet_SMG_Plasma_Florentine:Behavior_Explode_5 StatusEffectChance (BaseValueScaleConstant=0.800000)
-set GD_Aster_RaidWeapons.SMGs.Bullet_SMG_Plasma_Florentine:Behavior_Explode_5 InstigatorSelfDamageScale 0.000000
 
 #Skin
 set Common_GunMaterials.Materials.sniper.Mati_DahlLegendarySRPitchfork ScalarParameterValues ((ParameterName="p_ShadowsIntensity",ParameterValue=3.000000,ExpressionGUID=(A=437293753,B=1205147708,C=-775723903,D=1480014964)),(ParameterName="p_DecalRotate",ParameterValue=0.000000,ExpressionGUID=(A=-276527909,B=1298581551,C=856978878,D=743944047)),(ParameterName="p_ReplacePattern",ParameterValue=0.000000,ExpressionGUID=(A=-2084339847,B=1096440125,C=439008937,D=45433490)),(ParameterName="p_ReplaceDecal",ParameterValue=1.000000,ExpressionGUID=(A=85863466,B=1257609701,C=-728575820,D=1337098176)),(ParameterName="p_UseFullColorDecal",ParameterValue=0.0000000,ExpressionGUID=(A=-1064329812,B=1077705328,C=339664807,D=1869745420)))
