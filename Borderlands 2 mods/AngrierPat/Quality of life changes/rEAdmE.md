@@ -21,6 +21,11 @@
     Dont you hate that your mission list is a mile long with those greyed out "Mission Not yet Found" tags?
     Well this gets rid of those from your menu.
 
+  # Less Death Cost
+
+    Lowers the cost of being revived after death to 1% of current money from 7%.
+    
+
   # Throw Grendades in FFYL
 
     Umm, whats to explain here?
