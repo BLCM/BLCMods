@@ -11,7 +11,11 @@
 
     The easist way to merge hotfixes is to use LightChaosman's Filter Tool
     I also have a video on my youtube channel that shows you how to manually combine hotfixes
+    
+ # Cleaner Shock and AUGH
 
+    So that all those reloads dont blind you.
+    
  # God Mode
 
     Never take damage, for any reason. You are a God now, this is your kingdom.
