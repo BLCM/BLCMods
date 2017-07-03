@@ -21,7 +21,7 @@ currently contains 2 custom weapons and 2 existing gear change
           -Contraband Skyrocket: makes it scale to OP8, and child explosions deal 50% self damage to you
           -Breath of Terramorphous: slight singularity effect on initial explosion, doubled the projectiles
           -Nasty Surprise: x2 grenades per drop, child grenades explode as soon as they spawn, increased status effect chance
-          -Rolling Thunder: x2.25'ed increase radius for bounce explosions and bounce explosions will not harm you, while staggering enemies
+          -Rolling Thunder: increased radius for bounce explosions(x2.25) and bounce explosions will not harm you, while staggering enemies. Additionally, gave it a 30% damage buff
           -Homing Grenades: x2 homing speed
     
 
