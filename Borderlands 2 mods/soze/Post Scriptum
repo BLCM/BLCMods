@@ -1,0 +1,101 @@
+# Post Scriptum
+# Replaces Pitchfork
+# Gibbed code: BL2(hwAAAABVgwCBiINBBAGFdoJJAIMKZgXMBBguMF5g/v+ngnEDcwvm)
+# It's locked to No-Element and Bayonet, you can change the rest :)
+
+# The name is based off of the_Nocturni, great guy and wanted to re-pay him the favor for being so helpful.
+# Definitely the biggest project I've worked on, and I'm super proud of it :D
+
+# Full Automatic
+# +150% Melee Damage
+# Passive shield regen when zoomed in
+# You take 0.5x more damage when zoomed in (so be fast)
+# Only the 1st bullet pierces through shields.
+
+### COMPLICATED PART EXPLAINED DOWN BELOW ###
+
+# The 1st bullet will have an explosive splash if you hit your enemy.
+# The 2nd bullet will have a shock splash if you hit the ground or an shielded enemy.
+# The 3rd bullet will have a transfusion heal on flesh and armor.
+
+# The 2nd bullet comes after a small distance.
+# The 3rd bullet comes after a decent distance.
+
+# The 2nd and 3rd bullet are slower than the 1st bullet, but the 2nd and 3rd bullet are the same speed.
+
+# The 2nd bullet goes to the right
+# The 3rd bullet goes to the left.
+
+# Then 2nd & 3rd bullet share the same particles, the 1st bullet has a different particle.
+
+# Card
+
+set GD_Weap_SniperRifles.Barrel.SR_Barrel_Dahl_Pitchfork Rarity (BaseValueScaleConstant=0.000000)
+set GD_Weap_SniperRifles.Name.Title_Dahl.Title_Legendary_Pitchfork PartName Post Scriptum
+set GD_Weap_SniperRifles.Name.Title_Dahl.Title_Legendary_Pitchfork:AttributePresentationDefinition_8 NoConstraintText <font color="#a83fe5">*evil laugh*<font color="#fffffff"><br><font color="#a83fe5">-<font color="#ffffff"> Hitting an enemy grants a <font color="#a83fe5">explosive<font color="#ffffff"> splash<br><br><font color="#a83fe5">-<font color="#ffffff"> After a distance a <font color="#a83fe5">2nd bullet<font color="#ffffff"> spawns, this bullet has a <font color="#a83fe5">shock<font color="#ffffff"> splash when you hit the <font color="#a83fe5">ground<font color="#ffffff"> and <font color="#a83fe5">shielded<font color="#ffffff"> enemies.<br><br><font color="#a83fe5">-<font color="#ffffff"> After a distance a <font color="#a83fe5">3rd bullet<font color="#ffffff"> spawns, this bullet grants a <font color="#a83fe5">transfusion heal<font color="#ffffff"> on <font color="#a83fe5">flesh<font color="#ffffff"> and <font color="#a83fe5">armor<font color="#ffffff"><font color="#FFFFFF"tpainhasagodlyvoice
+
+# Extra
+
+set GD_Weap_SniperRifles.A_Weapons_Legendary.Sniper_Dahl_5_Pitchfork:WeaponPartListCollectionDefinition_202 Accessory1PartData (bEnabled=True,WeightedParts=((Part=WeaponPartDefinition'GD_Weap_SniperRifles.Accessory.Sniper_Accessory_Bayonet1',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1))
+set GD_Weap_SniperRifles.A_Weapons_Legendary.Sniper_Dahl_5_Pitchfork:WeaponPartListCollectionDefinition_202 ElementalPartData (bEnabled=True,WeightedParts=((Part=WeaponPartDefinition'GD_Weap_SniperRifles.elemental.SR_Elemental_None',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1))
+
+# Bullet 1
+
+set GD_Weap_SniperRifles.FiringModes.Bullet_Sniper_Pitchfork ImpactResponses ((DamageSurfaceType=DMGSURFACE_Flesh,bDisableRegularBulletDamage=False,Behaviors=(Behavior_Explode'GD_Weap_Pistol.FiringModes.Bullets_Pistol_Bandit_Tinderbox:Behavior_Explode_5')),(DamageSurfaceType=DMGSURFACE_Armor,bDisableRegularBulletDamage=False,Behaviors=(Behavior_Explode'GD_Weap_Pistol.FiringModes.Bullets_Pistol_Bandit_Tinderbox:Behavior_Explode_5')),(DamageSurfaceType=DMGSURFACE_Shield,bDisableRegularBulletDamage=False,Behaviors=(Behavior_Explode'GD_Weap_Pistol.FiringModes.Bullets_Pistol_Bandit_Tinderbox:Behavior_Explode_5')))
+set GD_Weap_SniperRifles.FiringModes.Bullet_Sniper_Pitchfork RicochetResponse 
+set GD_Weap_SniperRifles.FiringModes.Bullet_Sniper_Pitchfork Acceleration (X=0.000000,Y=0.000000,Z=0.000000)
+set GD_Weap_SniperRifles.FiringModes.Bullet_Sniper_Pitchfork FiringPatternLines ()
+set GD_Weap_SniperRifles.FiringModes.Bullet_Sniper_Pitchfork Speed 10000
+set GD_Weap_SniperRifles.FiringModes.Bullet_Sniper_Pitchfork TraceInterval 0.000000
+set GD_Weap_SniperRifles.FiringModes.Bullet_Sniper_Pitchfork bSupressImpactEffect True
+set GD_Weap_SniperRifles.FiringModes.Bullet_Sniper_Pitchfork bPenetratePawn True
+set GD_Weap_SniperRifles.FiringModes.Bullet_Sniper_Pitchfork PartSysTemplate ParticleSystem'FX_WEP_Trails_Alien.Particles.Part_Pistol_Homing_Incendiary_Tracer'
+set GD_Weap_SniperRifles.FiringModes.Bullet_Sniper_Pitchfork ConditionalPartSysTemplate EffectCollectionDefinition'GD_Flax_Items.Effects.Part_CandyGlow'
+set GD_Weap_SniperRifles.FiringModes.Bullet_Sniper_Pitchfork TimerEvents ((Time=0.050000,Response=(SplitNum=1,SplitAngle=0.000000,SplitAngleOffset=0.000000,SplitDistance=0.000000,SplitFire=FiringModeDefinition'GD_Weap_SniperRifles.FiringModes.Bullet_Sniper_Pitchfork_Child',NewSpeed=0.000000,bDetonate=False,bRespawnTracer=False,bUpdateBeamSourceLocation=False,Behaviors=)),(Time=0.200000,Response=(SplitNum=1,SplitAngle=0.000000,SplitAngleOffset=0.000000,SplitDistance=0.000000,SplitFire=FiringModeDefinition'GD_Weap_SniperRifles.FiringModes.Bullet_Sniper_Pitchfork_Child_2',NewSpeed=0.000000,bDetonate=False,bRespawnTracer=False,bUpdateBeamSourceLocation=False,Behaviors=)))
+set GD_Weap_SniperRifles.Barrel.SR_Barrel_Dahl_Pitchfork MuzzleFlashPSTemplates EffectCollectionDefinition'GD_Weap.Pistol.Effects.Pistol_ETech_Homing_Tracers'
+
+# Bullet 2
+
+set GD_Weap_SniperRifles.FiringModes.Bullet_Sniper_Pitchfork_Child ImpactResponses ((DamageSurfaceType=DMGSURFACE_Shield,bDisableRegularBulletDamage=False,Behaviors=(Behavior_Explode'GD_Sage_Weapons.FiringModes.Bullet_Shotgun_Twister:Behavior_Explode_5')),(DamageSurfaceType=DMGSURFACE_Generic,bDisableRegularBulletDamage=False,Behaviors=(Behavior_Explode'GD_Sage_Weapons.FiringModes.Bullet_Shotgun_Twister:Behavior_Explode_5')))
+set GD_Weap_SniperRifles.FiringModes.Bullet_Sniper_Pitchfork_Child Acceleration (X=90.000000,Y=0.000000,Z=0.000000)
+set GD_Weap_SniperRifles.FiringModes.Bullet_Sniper_Pitchfork_Child FiringPatternLines ()
+set GD_Weap_SniperRifles.FiringModes.Bullet_Sniper_Pitchfork_Child Speed 7500
+set GD_Weap_SniperRifles.FiringModes.Bullet_Sniper_Pitchfork_Child TraceInterval 0.000000
+set GD_Weap_SniperRifles.FiringModes.Bullet_Sniper_Pitchfork_Child bSupressImpactEffect True
+set GD_Weap_SniperRifles.FiringModes.Bullet_Sniper_Pitchfork_Child TimerEvents ()
+set GD_Weap_SniperRifles.FiringModes.Bullet_Sniper_Pitchfork_Child PartSysTemplate ParticleSystem'FX_WEP_Trails.Particles.Part_Wep_Tracer_Wavy_Incendiary'
+set GD_Weap_SniperRifles.FiringModes.Bullet_Sniper_Pitchfork_Child ConditionalPartSysTemplate EffectCollectionDefinition'GD_Flax_Items.Effects.Part_CandyGlow'
+
+# Bullet 3
+
+set GD_Weap_SniperRifles.FiringModes.Bullet_Sniper_Pitchfork_Child_2 ImpactResponses ((DamageSurfaceType=DMGSURFACE_Flesh,bDisableRegularBulletDamage=False,Behaviors=(Behavior_SpawnProjectile'GD_Weap_SniperRifles.FiringModes.Bullet_Sniper_ChereAmie:Behavior_SpawnProjectile_1')),(DamageSurfaceType=DMGSURFACE_Armor,bDisableRegularBulletDamage=False,Behaviors=(Behavior_SpawnProjectile'GD_Weap_SniperRifles.FiringModes.Bullet_Sniper_ChereAmie:Behavior_SpawnProjectile_1')))
+set GD_Weap_SniperRifles.FiringModes.Bullet_Sniper_Pitchfork_Child_2 Acceleration (X=-90.000000,Y=0.000000,Z=0.000000)
+set GD_Weap_SniperRifles.FiringModes.Bullet_Sniper_Pitchfork_Child_2 FiringPatternLines ()
+set GD_Weap_SniperRifles.FiringModes.Bullet_Sniper_Pitchfork_Child_2 Speed 7500
+set GD_Weap_SniperRifles.FiringModes.Bullet_Sniper_Pitchfork_Child_2 TraceInterval 0.000000
+set GD_Weap_SniperRifles.FiringModes.Bullet_Sniper_Pitchfork_Child_2 bSupressImpactEffect True
+set GD_Weap_SniperRifles.FiringModes.Bullet_Sniper_Pitchfork_Child_2 TimerEvents ()
+set GD_Weap_SniperRifles.FiringModes.Bullet_Sniper_Pitchfork_Child_2 PartSysTemplate ParticleSystem'FX_WEP_Trails.Particles.Part_Wep_Tracer_Wavy_Incendiary'
+set GD_Weap_SniperRifles.FiringModes.Bullet_Sniper_Pitchfork_Child_2 ConditionalPartSysTemplate EffectCollectionDefinition'GD_Flax_Items.Effects.Part_CandyGlow'
+
+# Model
+
+set GD_Weap_SniperRifles.Barrel.SR_Barrel_Dahl_Pitchfork bIsSpinningEnabled False
+set GD_Weap_SniperRifles.Barrel.SR_Barrel_Dahl_Pitchfork GestaltModeSkeletalMeshName SR_Barrel_Dahl
+set GD_Weap_SniperRifles.Barrel.SR_Barrel_Dahl_Pitchfork AdditionalGestaltModeSkeletalMeshNames SR_Barrel_None
+
+set Common_GunMaterials.Materials.sniper.Mati_DahlLegendarySRPitchfork TextureParameterValues ((ParameterName="p_NormalScopesEmissive",ParameterValue=Texture2D'Weap_SniperRifles.Tex.Weap_SniperRifle_Nrm',ExpressionGUID=(A=-1743872746,B=1126171774,C=119496871,D=-1952271718)),(ParameterName="p_Diffuse",ParameterValue=Texture2D'Common_GunMaterials.CompTextures.Weap_AssaultSubSniper_Comp',ExpressionGUID=(A=1757607260,B=1326539502,C=-317215581,D=-565807463)),(ParameterName="p_Masks",ParameterValue=Texture2D'Weap_SniperRifles.Tex.Weap_SniperRifle_Comp',ExpressionGUID=(A=-330624041,B=1167251458,C=-335191907,D=-166684394)),(ParameterName="P_SimpleReflect",ParameterValue=Texture2D'Common_GunMaterials.Env.GlossyB',ExpressionGUID=(A=-858148940,B=1327945772,C=148462268,D=1899047224)),(ParameterName="p_Pattern",ParameterValue=Texture2D'Common_GunMaterials.Patterns.Pattern_BanditUncommon',ExpressionGUID=(A=534250533,B=1202550002,C=1578302861,D=-717876416)),(ParameterName="p_Decal",ParameterValue=Texture2D'FX_Shared_Explosions.Textures.Tex_Barrel_Explosion_Corrosive',ExpressionGUID=(A=-923052711,B=1309861752,C=584229786,D=-1229888527)))
+
+set Common_GunMaterials.Materials.sniper.Mati_DahlLegendarySRPitchfork VectorParameterValues ((ParameterName="p_AColorHilight",ParameterValue=(R=0.00100000,G=0.00100000,B=0.00100000,A=1.000000),ExpressionGUID=(A=170014760,B=1132076783,C=-275608290,D=650702143)),(ParameterName="p_AColorMidtone",ParameterValue=(R=0.0030000,G=0.0030000,B=0.0030000,A=1.000000),ExpressionGUID=(A=473504356,B=1338058895,C=824823046,D=864253013)),(ParameterName="p_AColorShadow",ParameterValue=(R=.000000,G=.000000,B=.000000,A=1.000000),ExpressionGUID=(A=-429590041,B=1156405294,C=-1015192900,D=687313410)),(ParameterName="p_BColorHilight",ParameterValue=(R=0.01000000,G=0.01000000,B=0.01000000,A=1.000000),ExpressionGUID=(A=170714760,B=1132476783,C=-275668290,D=655702143)),(ParameterName="p_BColorMidtone",ParameterValue=(R=0.025000000,G=0.025000000,B=0.025000000,A=1.000000),ExpressionGUID=(A=473594356,B=1338758895,C=824823946,D=864253813)),(ParameterName="p_BColorShadow",ParameterValue=(R=.0100000,G=.0100000,B=0.0100000,A=1.000000),ExpressionGUID=(A=-429590341,B=1156435294,C=-1015192901,D=687313413)),(ParameterName="p_CColorHilight",ParameterValue=(R=0.0010000,G=0.0010000,B=0.0010000,A=1.000000),ExpressionGUID=(A=170714760,B=1132476783,C=-275668290,D=655702143)),(ParameterName="p_CColorMidtone",ParameterValue=(R=0.0010000,G=0.0010000,B=0.0010000,A=1.000000),ExpressionGUID=(A=473594356,B=1338758895,C=824823946,D=864253813)),(ParameterName="p_CColorShadow",ParameterValue=(R=.000000,G=.000000,B=.000000,A=1.000000),ExpressionGUID=(A=-429590341,B=1156435294,C=-1015192901,D=687313413)),(ParameterName="p_DColor",ParameterValue=(R=0.05000000,G=0.000000,B=0.000000,A=1.000000),ExpressionGUID=(A=696455109,B=1155878830,C=-1741888361,D=802120528)),(ParameterName="p_EmissiveColor",ParameterValue=(R=0.2000000,G=0.000000,B=0.0000000,A=1.000000),ExpressionGUID=(A=-2074486426,B=1296399582,C=-2021314681,D=-350758005)),(ParameterName="p_ReflectColor",ParameterValue=(R=10.000000,G=10.000000,B=10.00000,A=1.000000),ExpressionGUID=(A=295058103,B=1318551573,C=-2045449573,D=-547597976)),(ParameterName="p_ReflectionChannelScale",ParameterValue=(R=1.000000,G=1.000000,B=0.900000,A=1.000000),ExpressionGUID=(A=295058103,B=1318551573,C=-2045449573,D=-547597976)),(ParameterName="p_PatternColor",ParameterValue=(R=5.000000,G=5.000000,B=5.000000,A=1.000000),ExpressionGUID=(A=676539706,B=1125682796,C=1871983293,D=-2049503601)),(ParameterName="p_PatternScalePosition",ParameterValue=(R=5.000000,G=5.000000,B=1.000000,A=1.000000),ExpressionGUID=(A=-2005018406,B=1132497243,C=-39915121,D=208423616)),(ParameterName="p_PatternChannelScale",ParameterValue=(R=1.000000,G=0.000000,B=0.000000,A=1.000000),ExpressionGUID=(A=439432319,B=1091149893,C=-1991909502,D=1816944627)),(ParameterName="p_DecalColor",ParameterValue=(R=1.00000,G=0.0000000,B=0.0000000,A=1.000000),ExpressionGUID=(A=1691998600,B=1239094551,C=2074257317,D=1844701893)),(ParameterName="p_DecalScalePosition",ParameterValue=(R=1.000000,G=1.100000,B=1.6800000,A=.57000),ExpressionGUID=(A=395540170,B=1243133493,C=-1264190552,D=123075385)),(ParameterName="p_DecalChannel",ParameterValue=(R=1.000000,G=1.000000,B=0.000000,A=1.000000),ExpressionGUID=(A=1869386622,B=1303200947,C=-1616405849,D=714558284)))
+
+set Common_GunMaterials.Materials.sniper.Mati_DahlLegendarySRPitchfork ScalarParameterValues ((ParameterName="p_HighlightsIntensity",ParameterValue=0.450000,ExpressionGUID=(A=-1257568432,B=1277066486,C=-723473993,D=-1144384173)),(ParameterName="p_ShadowsIntensity",ParameterValue=1.000000,ExpressionGUID=(A=437293753,B=1205147708,C=-775723903,D=1480014964)),(ParameterName="p_ReflectColorScale",ParameterValue=1.000000,ExpressionGUID=(A=1875785607,B=1186033550,C=-1822263113,D=-1465755701)),(ParameterName="p_ReplacePattern",ParameterValue=0.000000,ExpressionGUID=(A=-2084339847,B=1096440125,C=439008937,D=45433490)),(ParameterName="p_DecalRotate",ParameterValue=0.0100000,ExpressionGUID=(A=-276527909,B=1298581551,C=856978878,D=743944047)),(ParameterName="p_ReplaceDecal",ParameterValue=0.000000,ExpressionGUID=(A=85863466,B=1257609701,C=-728575820,D=1337098176)),(ParameterName="p_UseFullColorDecal",ParameterValue=0.000000,ExpressionGUID=(A=-1064329812,B=1077705328,C=339664807,D=1869745420)))
+
+# Attributes
+
+set GD_Weap_SniperRifles.Barrel.SR_Barrel_Dahl_Pitchfork ZoomExternalAttributeEffects ((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AccuracyResourcePool.AccuracyMaxValue',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-10.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AccuracyResourcePool.AccuracyMaxValue',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.050000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.ShieldResourcePool.ShieldOnIdleRegenerationRate',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance_HealthAndDamage.Shields.Init_ShieldItem_BaseRegenRatePercentage',BaseValueScaleConstant=0.5000000)),(AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.ShieldResourcePool.ShieldOnIdleRegenerationDelay',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=AttributeDefinition'GD_Shields.Misc.Att_UniversalShieldBaseDelayConstant',InitializationDefinition=None,BaseValueScaleConstant=-9999.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.DamageSourceModifiers.ReceivedAmplifyDamageModifier',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.50000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.DamageSourceModifiers.ReceivedBulletDamageModifier',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.50000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.DamageSourceModifiers.ReceivedGrenadeDamageModifier',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.50000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.DamageSourceModifiers.ReceivedMeleeDamageModifier',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.50000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.DamageSourceModifiers.ReceivedRocketDamageModifier',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.50000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.DamageSourceModifiers.ReceivedSkillDamageModifier',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.50000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.DamageSourceModifiers.ReceivedStatusEffectDamageModifier',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.50000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.DamageTypeModifers.NormalStatusEffectDamageModifier',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-0.05000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+set GD_Weap_SniperRifles.Barrel.SR_Barrel_Dahl_Pitchfork ExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.DamageSourceModifiers.InstigatedMeleeDamageModifier',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+set GD_Weap_SniperRifles.Barrel.SR_Barrel_Dahl_Pitchfork ZoomWeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponAutomaticBurstCount',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-4.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+set GD_Weap_SniperRifles.Barrel.SR_Barrel_Dahl_Pitchfork WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponAutomaticBurstCount',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-0.10000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-1.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.10000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.090000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponPerShotAccuracyImpulse',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=-1.0000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-1.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+set GD_Weap_SniperRifles.Barrel.SR_Barrel_Dahl_Pitchfork AttributeSlotUpgrades ((SlotName="WeaponSpread",GradeIncrease=1,bActivateSlot=True),(SlotName="AccuracyMin",GradeIncrease=15,bActivateSlot=True),(SlotName="AccuracyMax",GradeIncrease=16,bActivateSlot=True),(SlotName="AccuracyRegen",GradeIncrease=0,bActivateSlot=True),(SlotName="WeaponAccuracyImpulse",GradeIncrease=100000000,bActivateSlot=True),(SlotName="WeaponZoomFOV",GradeIncrease=10,bActivateSlot=True)))
+
+
