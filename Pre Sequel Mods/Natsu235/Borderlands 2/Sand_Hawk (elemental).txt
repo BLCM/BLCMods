@@ -1,0 +1,146 @@
+ ###########################################################
+#                                                           #
+#   Replace "Fridgia" with "Sand Hawk" from Borderlands 2   #
+#                                                           #
+ ###########################################################
+
+
+# NOTE 1: Bullets got Elemental color but no Wavy pattern #
+
+# NOTE 2: Sometimes the Hawk pattern can't be seen but act like it was #
+
+# NOTE 3: Replace "Globber" Firing Mode Definition #
+
+# NOTE 4: Replace "Fibber" Firing Mode Definition #
+
+
+set GD_Weap_SMG.Name.Title.Title__Unique_Fridgia PartName Sand Hawk
+
+set GD_Weap_SMG.Name.Title.Title__Unique_Fridgia:AttributePresentationDefinition_8 NoConstraintText In. Not unlike Errol.
+
+set GD_Weap_SMG.A_Weapons_Unique.SMG_Dahl_3_Fridgia:WeaponPartListCollectionDefinition_207 ElementalPartData (bEnabled=True,WeightedParts=((bDisabled=False,Part=WeaponPartDefinition'GD_Weap_SMG.Elemental.SMG_Elemental_None',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=2),(bDisabled=False,Part=WeaponPartDefinition'GD_Weap_SMG.Elemental.SMG_Elemental_Fire',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=3,MaxGameStageIndex=1,DefaultWeightIndex=4),(bDisabled=False,Part=WeaponPartDefinition'GD_Weap_SMG.Elemental.SMG_Elemental_Corrosive',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=5,MaxGameStageIndex=1,DefaultWeightIndex=4),(bDisabled=False,Part=WeaponPartDefinition'GD_Weap_SMG.Elemental.SMG_Elemental_Shock',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=3,MaxGameStageIndex=1,DefaultWeightIndex=4),(bDisabled=False,Part=WeaponPartDefinition'GD_Weap_SMG.Elemental.SMG_Elemental_Ice',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=6,MaxGameStageIndex=1,DefaultWeightIndex=4)))
+
+set GD_Weap_SMG.A_Weapons_Unique.SMG_Dahl_3_Fridgia:WeaponPartListCollectionDefinition_207 ConsolidatedAttributeInitData ((BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),(BaseValueConstant=100.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',BaseValueScaleConstant=1.000000),(BaseValueConstant=7.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_2_Uncommon',BaseValueScaleConstant=1.000000),(BaseValueConstant=13.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),(BaseValueConstant=11.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),(BaseValueConstant=15.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_0_VeryCommon',BaseValueScaleConstant=1.000000))
+
+
+set GD_Weap_SMG.Barrel.SMG_Barrel_Bandit_Fridgia ExternalAttributeEffects ()
+
+set GD_Weap_SMG.Barrel.SMG_Barrel_Bandit_Fridgia WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-0.100000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.250000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponBurstInterval',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.100000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+set GD_Weap_SMG.Barrel.SMG_Barrel_Bandit_Fridgia ZoomWeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-0.200000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+set GD_Weap_SMG.Barrel.SMG_Barrel_Bandit_Fridgia AttributeSlotUpgrades ((SlotName="WeaponSpread",GradeIncrease=-3,bActivateSlot=True),(SlotName="AccuracyMin",GradeIncrease=-3,bActivateSlot=True),(SlotName="WeaponDamage",GradeIncrease=2,bActivateSlot=True))
+
+
+set GD_Weap_SMG.ManufacturerMaterials.Mat_Dahl_3_Fridgia WeaponCardAttributes ((Attribute=AttributeDefinition'D_Attributes.Weapon.WeaponReloadSpeed',PriorityIncrease=3.000000))
+
+set GD_Weap_SMG.ManufacturerMaterials.Mat_Dahl_3_Fridgia ManufacturerDefinitionForScopeMovie ManufacturerDefinition'GD_Manufacturers.Manufacturers.Tediore'
+
+set GD_Weap_SMG.ManufacturerMaterials.Mat_Dahl_3_Fridgia Material MaterialInstanceConstant'Common_GunMaterials.Materials.SMG.Mati_BanditUniqueSMG_Boneshredder'
+
+
+set GD_Weap_SMG.FiringModes.Bullet_SMG_Fridgia PartSysTemplate ParticleSystem'FX_WEP_Trails.Particles.Part_Wep_Tracer_Wavy'
+
+set GD_Weap_SMG.FiringModes.Bullet_SMG_Fridgia ConditionalPartSysTemplate EffectCollectionDefinition'GD_Weap_Shared_Effects.Default_Tracers'
+
+set GD_Weap_SMG.FiringModes.Bullet_SMG_Fridgia bFireRandomlyFromPattern False
+
+set GD_Weap_SMG.FiringModes.Bullet_SMG_Fridgia bSuppressWeaponSpread False
+
+set GD_Weap_SMG.FiringModes.Bullet_SMG_Fridgia bScalePatternByWeaponSpread False
+
+set GD_Weap_SMG.FiringModes.Bullet_SMG_Fridgia Speed 2000.000000
+
+set GD_Weap_SMG.FiringModes.Bullet_SMG_Fridgia TimerEvents ((Time=0.050000,Response=(SplitNum=1,SplitAngle=0.000000,SplitAngleOffset=-90.000000,SplitDistance=8.000000,SplitFire=FiringModeDefinition'GD_Cork_Weap_Pistol.FiringModes.Bullets_Pistol_Globber',NewSpeed=0.000000,bDetonate=False,bRespawnTracer=False,bUpdateBeamSourceLocation=False,Behaviors=)),(Time=0.050000,Response=(SplitNum=2,SplitAngle=0.000000,SplitAngleOffset=0.000000,SplitDistance=16.000000,SplitFire=FiringModeDefinition'GD_Cork_Weap_Pistol.FiringModes.Bullet_Pistol_Hyperion_Fibber_1',NewSpeed=0.000000,bDetonate=False,bRespawnTracer=False,bUpdateBeamSourceLocation=False,Behaviors=)),(Time=0.050000,Response=(SplitNum=2,SplitAngle=0.000000,SplitAngleOffset=0.000000,SplitDistance=32.000000,SplitFire=FiringModeDefinition'GD_Cork_Weap_Pistol.FiringModes.Bullet_Pistol_Hyperion_Fibber_2',NewSpeed=0.000000,bDetonate=False,bRespawnTracer=False,bUpdateBeamSourceLocation=False,Behaviors=)),(Time=0.050000,Response=(SplitNum=2,SplitAngle=0.000000,SplitAngleOffset=0.000000,SplitDistance=48.000000,SplitFire=FiringModeDefinition'GD_Cork_Weap_Pistol.FiringModes.Bullet_Pistol_Hyperion_Fibber_3',NewSpeed=0.000000,bDetonate=False,bRespawnTracer=False,bUpdateBeamSourceLocation=False,Behaviors=)))
+
+set GD_Weap_SMG.FiringModes.Bullet_SMG_Fridgia FiringPatternLines ()
+
+set GD_Weap_SMG.FiringModes.Bullet_SMG_Fridgia BasePatternSpread 0.000000
+
+set GD_Weap_SMG.FiringModes.Bullet_SMG_Fridgia MinPatternScale 0.000000
+
+
+set GD_Cork_Weap_Pistol.FiringModes.Bullets_Pistol_Globber ExplosionOverrideDefinition ExplosionCollectionDefinition'GD_Weap_Shared_Effects.Default_Elemental_Explosions'
+
+set GD_Cork_Weap_Pistol.FiringModes.Bullets_Pistol_Globber ExplosionOverideInstanceDataName ExplosionOverride
+
+set GD_Cork_Weap_Pistol.FiringModes.Bullets_Pistol_Globber PartSysTemplate ParticleSystem'FX_WEP_Trails.Particles.Part_Wep_Tracer_Wavy'
+
+set GD_Cork_Weap_Pistol.FiringModes.Bullets_Pistol_Globber ConditionalPartSysTemplate EffectCollectionDefinition'GD_Weap_Shared_Effects.Default_Tracers'
+
+set GD_Cork_Weap_Pistol.FiringModes.Bullets_Pistol_Globber NumRicochets 0
+
+set GD_Cork_Weap_Pistol.FiringModes.Bullets_Pistol_Globber Speed 2000.000000
+
+set GD_Cork_Weap_Pistol.FiringModes.Bullets_Pistol_Globber Acceleration (X=0.000000,Y=0.000000,Z=0.000000)
+
+set GD_Cork_Weap_Pistol.FiringModes.Bullets_Pistol_Globber RicochetFriction 0.000000
+
+set GD_Cork_Weap_Pistol.FiringModes.Bullets_Pistol_Globber FiringPatternLines ()
+
+set GD_Cork_Weap_Pistol.FiringModes.Bullets_Pistol_Globber BasePatternSpread 0.000000
+
+
+set GD_Cork_Weap_Pistol.FiringModes.Bullet_Pistol_Hyperion_Fibber_1 ExplosionOverrideDefinition ExplosionCollectionDefinition'GD_Weap_Shared_Effects.Default_Elemental_Explosions'
+
+set GD_Cork_Weap_Pistol.FiringModes.Bullet_Pistol_Hyperion_Fibber_1 ExplosionOverideInstanceDataName ExplosionOverride
+
+set GD_Cork_Weap_Pistol.FiringModes.Bullet_Pistol_Hyperion_Fibber_1 PartSysTemplate ParticleSystem'FX_WEP_Trails.Particles.Part_Wep_Tracer_Wavy'
+
+set GD_Cork_Weap_Pistol.FiringModes.Bullet_Pistol_Hyperion_Fibber_1 ConditionalPartSysTemplate EffectCollectionDefinition'GD_Weap_Shared_Effects.Default_Tracers'
+
+set GD_Cork_Weap_Pistol.FiringModes.Bullet_Pistol_Hyperion_Fibber_1 Lifetime 5.000000
+
+set GD_Cork_Weap_Pistol.FiringModes.Bullet_Pistol_Hyperion_Fibber_1 Speed 2000.000000
+
+set GD_Cork_Weap_Pistol.FiringModes.Bullet_Pistol_Hyperion_Fibber_1 WaveFreq (X=0.000000,Y=0.000000,Z=300.000000)
+
+set GD_Cork_Weap_Pistol.FiringModes.Bullet_Pistol_Hyperion_Fibber_1 WaveAmp (X=0.000000,Y=0.000000,Z=12.000000)
+
+
+set GD_Cork_Weap_Pistol.FiringModes.Bullet_Pistol_Hyperion_Fibber_2 ExplosionOverrideDefinition ExplosionCollectionDefinition'GD_Weap_Shared_Effects.Default_Elemental_Explosions'
+
+set GD_Cork_Weap_Pistol.FiringModes.Bullet_Pistol_Hyperion_Fibber_2 ExplosionOverideInstanceDataName ExplosionOverride
+
+set GD_Cork_Weap_Pistol.FiringModes.Bullet_Pistol_Hyperion_Fibber_2 PartSysTemplate ParticleSystem'FX_WEP_Trails.Particles.Part_Wep_Tracer_Wavy'
+
+set GD_Cork_Weap_Pistol.FiringModes.Bullet_Pistol_Hyperion_Fibber_2 ConditionalPartSysTemplate EffectCollectionDefinition'GD_Weap_Shared_Effects.Default_Tracers'
+
+set GD_Cork_Weap_Pistol.FiringModes.Bullet_Pistol_Hyperion_Fibber_2 bPenetratePawn False
+
+set GD_Cork_Weap_Pistol.FiringModes.Bullet_Pistol_Hyperion_Fibber_2 NumRicochets 0
+
+set GD_Cork_Weap_Pistol.FiringModes.Bullet_Pistol_Hyperion_Fibber_2 Speed 2000.000000
+
+set GD_Cork_Weap_Pistol.FiringModes.Bullet_Pistol_Hyperion_Fibber_2 WaveFreq (X=0.000000,Y=0.000000,Z=300.000000)
+
+set GD_Cork_Weap_Pistol.FiringModes.Bullet_Pistol_Hyperion_Fibber_2 WaveAmp (X=0.000000,Y=0.000000,Z=20.000000)
+
+set GD_Cork_Weap_Pistol.FiringModes.Bullet_Pistol_Hyperion_Fibber_2 WavePhase (X=0.000000,Y=0.000000,Z=-20.000000)
+
+set GD_Cork_Weap_Pistol.FiringModes.Bullet_Pistol_Hyperion_Fibber_2 RicochetResponse (SplitNum=0,SplitAngle=0.000000,SplitAngleOffset=0.000000,SplitDistance=0.000000,SplitFire=None,NewSpeed=0.000000,bDetonate=False,bRespawnTracer=False,bUpdateBeamSourceLocation=False,Behaviors=)
+
+
+set GD_Cork_Weap_Pistol.FiringModes.Bullet_Pistol_Hyperion_Fibber_3 ExplosionOverrideDefinition ExplosionCollectionDefinition'GD_Weap_Shared_Effects.Default_Elemental_Explosions'
+
+set GD_Cork_Weap_Pistol.FiringModes.Bullet_Pistol_Hyperion_Fibber_3 ExplosionOverideInstanceDataName ExplosionOverride
+
+set GD_Cork_Weap_Pistol.FiringModes.Bullet_Pistol_Hyperion_Fibber_3 ConditionalPartSysTemplate EffectCollectionDefinition'GD_Weap_Shared_Effects.Default_Tracers'
+
+set GD_Cork_Weap_Pistol.FiringModes.Bullet_Pistol_Hyperion_Fibber_3 Lifetime 5.000000
+
+set GD_Cork_Weap_Pistol.FiringModes.Bullet_Pistol_Hyperion_Fibber_3 NumRicochets 0
+
+set GD_Cork_Weap_Pistol.FiringModes.Bullet_Pistol_Hyperion_Fibber_3 Speed 2000.000000
+
+set GD_Cork_Weap_Pistol.FiringModes.Bullet_Pistol_Hyperion_Fibber_3 Acceleration (X=0.000000,Y=0.000000,Z=0.000000)
+
+set GD_Cork_Weap_Pistol.FiringModes.Bullet_Pistol_Hyperion_Fibber_3 WaveFreq (X=0.000000,Y=0.000000,Z=300.000000)
+
+set GD_Cork_Weap_Pistol.FiringModes.Bullet_Pistol_Hyperion_Fibber_3 WaveAmp (X=0.000000,Y=0.000000,Z=24.000000)
+
+set GD_Cork_Weap_Pistol.FiringModes.Bullet_Pistol_Hyperion_Fibber_3 WavePhase (X=0.000000,Y=0.000000,Z=-30.000000)
+
+set GD_Cork_Weap_Pistol.FiringModes.Bullet_Pistol_Hyperion_Fibber_3 RicochetFriction 0.000000
+
+set GD_Cork_Weap_Pistol.FiringModes.Bullet_Pistol_Hyperion_Fibber_3 TraceExtent (X=0.000000,Y=0.000000,Z=0.000000)
