@@ -7,6 +7,8 @@
     Accuracy Accessory turned into Crit Accessory.
     Mag prefix given slight Reload Speed bonus instead of downside.
     Remove damage nerf to fire rate prefix.
+    Lessened the downsides of the Double Prefix.
+    Changed how the Fire Rate Prefix affects Jakobs, Adds burst to simulate Fire Rate Boost.
 
    # ARs
 
@@ -15,6 +17,7 @@
     Accuracy Accessory turned into Crit Accessory.
     Bullet Speed Accessory added a small amount of Ammo Regen
     Wild Accessory significantly buffed to have less of a downside, has a slight Fire Rate & Damage nerf to compensate.
+    Changed how Wild affects Jakobs, Adds an extra shot of burst at a cost of damage and mag.
 
   # Shotguns
 
@@ -40,4 +43,4 @@
 
     Stability accessory combined with accuracy accessory and accessory has been buffed by a slight amount.
     Aaron's sniper regen replaces the accuracy accessory.
-    Mag Accesory buffed and given reload speed.
+    Mag Accesory changed into a general stat boost with a large empisis on Mag size.

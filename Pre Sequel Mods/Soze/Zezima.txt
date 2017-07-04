@@ -1,0 +1,39 @@
+# Zezima
+# Replaces Maggie
+
+# Card:
+# Lifesteal
+# Health drain on zoom
+# Burst hipfire
+# Fires as fast as you can pull trigger when zoomed
+# +100% Critical Hit Damage
+# Fire Rate reduced on zoom
+# +400% Crit Hit Damage when zoomed in
+
+# Card
+
+set GD_Cork_Weap_Pistol.Barrel.Pistol_Barrel_Jakobs_Maggie rarity (BaseValueConstant=150.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+
+set WillowGame.GlobalsDefinition RarityLevelColors ((MinLevel=0,MaxLevel=0,Color=(B=175,G=193,R=205,A=0),DropLifeSpanType=DROP_ShortLived,RarityRating=RARITY_Unknown),(MinLevel=1,MaxLevel=1,Color=(B=255,G=255,R=255,A=255),DropLifeSpanType=DROP_ShortLived,RarityRating=RARITY_Common),(MinLevel=2,MaxLevel=2,Color=(B=11,G=210,R=61,A=255),DropLifeSpanType=DROP_LongLived,RarityRating=RARITY_Uncommon),(MinLevel=3,MaxLevel=3,Color=(B=255,G=142,R=60,A=255),DropLifeSpanType=DROP_LiveForever,RarityRating=RARITY_Rare),(MinLevel=4,MaxLevel=4,Color=(B=229,G=63,R=168,A=255),DropLifeSpanType=DROP_LiveForever,RarityRating=RARITY_VeryRare),(MinLevel=5,MaxLevel=5,Color=(B=0,G=180,R=255,A=255),DropLifeSpanType=DROP_LiveForever,RarityRating=RARITY_Legendary),(MinLevel=6,MaxLevel=6,Color=(B=168,G=0,R=202,A=255),DropLifeSpanType=DROP_LiveForever,RarityRating=RARITY_VeryRare),(MinLevel=7,MaxLevel=10,Color=(B=0,G=180,R=255,A=255),DropLifeSpanType=DROP_LiveForever,RarityRating=RARITY_Legendary),(MinLevel=12,MaxLevel=170,Color=(B=50,G=0,R=230,A=255),DropLifeSpanType=DROP_LiveForever,RarityRating=RARITY_Unknown),(MinLevel=171,MaxLevel=175,Color=(B=71,G=71,R=207,A=255),DropLifeSpanType=DROP_ShortLived,RarityRating=RARITY_Unknown),(MinLevel=176,MaxLevel=180,Color=(B=0,G=150,R=25,A=0),DropLifeSpanType=DROP_ShortLived,RarityRating=RARITY_Unknown),(MinLevel=181,MaxLevel=499,Color=(B=13,G=255,R=255,A=0),DropLifeSpanType=DROP_ShortLived,RarityRating=RARITY_Unknown),(MinLevel=500,MaxLevel=500,Color=(B=255,G=255,R=0,A=0),DropLifeSpanType=DROP_LiveForever,RarityRating=RARITY_Unknown),(MinLevel=501,MaxLevel=501,Color=(B=184,G=154,R=255,A=0),DropLifeSpanType=DROP_LiveForever,RarityRating=RARITY_Seraph),(MinLevel=502,MaxLevel=502,Color=(B=255,G=255,R=255,A=0),DropLifeSpanType=DROP_LiveAsLongAsLevel,RarityRating=RARITY_Unknown),(MinLevel=503,MaxLevel=503,Color=(B=200,G=50,R=145,A=255),DropLifeSpanType=DROP_LiveForever,RarityRating=RARITY_Unknown),(MinLevel=504,MaxLevel=504,Color=(B=255,G=255,R=0,A=0),DropLifeSpanType=DROP_VeryShortLived,RarityRating=RARITY_Unknown))
+
+set GD_Cork_Weap_Pistol.Name.Title_Jakobs.Title_Legendary_Maggie PartName Zezima
+set GD_Cork_Weap_Pistol.Name.Title_Jakobs.Title_Legendary_Maggie:AttributePresentationDefinition_8 NoConstraintText <font color="#ff0235">#1<font color="#FFFFFF"><br><br><font color="#ff0235">-<font color="#ffffff"> Lifesteal<br><font color="#ff0235">-<font color="#ffffff"> Health <font color="#ff0235">drains<font color="#ffffff"> when zoomed in<br><font color="#ff0235">-<font color="#FFFFFF"> Burst fire on <font color="#ff0235">hipfire<font color="#ffffff"><br><font color="#ff0235">-<font color="#ffffff"> Fires as fast as you can <font color="#ff0235">pull the trigger<font color="#ffffff"> when zoomed in<br><font color="#ff0235">-<font color="#ffffff"> +100% <font color="#ff0235">Critical<font color="#ffffff"> Hit Damage<br><font color="#ff0235">-<font color="#ffffff"> Fire rate reduced on zoom in<br><font color="#ff0235">-<font color="#ffffff"> +400% <font color="#ff0235">Critical<font color="#ffffff"> Hit Damage when <font color="#ff0235">zoomed<font color="#ffffff"> in<br><font color="#ff0235"ok
+
+# Attributes
+-1.8
+
+set GD_Cork_Weap_Pistol.Barrel.Pistol_Barrel_Jakobs_Maggie ZoomExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.GameplayAttributes.PlayerCriticalHitBonus',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=6.0000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.HealthResourcePool.HealthOnIdleRegenerationRate',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-1.50000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1000.000000)))
+set GD_Cork_Weap_Pistol.Barrel.Pistol_Barrel_Jakobs_Maggie ExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.GameplayAttributes.PlayerCriticalHitBonus',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=2.0000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.DamageEnhancementModifiers.PlayerConvertDamageToHealingPercent',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.0500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+set GD_Cork_Weap_Pistol.Barrel.Pistol_Barrel_Jakobs_Maggie ZoomWeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=3.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponAutomaticBurstCount',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-2.5000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+set GD_Cork_Weap_Pistol.Barrel.Pistol_Barrel_Jakobs_Maggie WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.5000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponAutomaticBurstCount',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=2.5000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.5000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-0.400000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+set GD_Cork_Weap_Pistol.Barrel.Pistol_Barrel_Jakobs_Maggie AttributeSlotUpgrades ((SlotName="WeaponSpread",GradeIncrease=0,bActivateSlot=True),(SlotName="AccuracyMin",GradeIncrease=1000,bActivateSlot=True),(SlotName="AccuracyMax",GradeIncrease=2000,bActivateSlot=True),(SlotName="AccuracyRegen",GradeIncrease=50,bActivateSlot=True),(SlotName="WeaponAccuracyImpulse",GradeIncrease=10,bActivateSlot=True),(SlotName="WeaponZoomFOV",GradeIncrease=10,bActivateSlot=True)))
+
+# Firing
+
+set GD_Cork_Weap_Pistol.Barrel.Pistol_Barrel_Jakobs_Maggie CustomFiringModeDefinition FiringModeDefinition'GD_Cork_Weap_SniperRifles.FiringModes.Bullet_Sniper_Pitchfork_Child_2'
+set GD_Cork_Weap_SniperRifles.FiringModes.Bullet_Sniper_Pitchfork_Child_2 FiringPatternLines ()
+set GD_Cork_Weap_SniperRifles.FiringModes.Bullet_Sniper_Pitchfork_Child_2 TimerEvents ()
+set GD_Cork_Weap_SniperRifles.FiringModes.Bullet_Sniper_Pitchfork_Child_2 SoundDefinition FiringModeSoundDefinition'GD_Cork_Weap_Lasers.FiringModes.FiringModeSoundDef_Beam_Laser_Dahl'
+set GD_Cork_Weap_SniperRifles.FiringModes.Bullet_Sniper_Pitchfork_Child_2 Speed 10000
+set GD_Cork_Weap_SniperRifles.FiringModes.Bullet_Sniper_Pitchfork_Child_2 bPenetratePawn True
+set GD_Cork_Weap_SniperRifles.FiringModes.Bullet_Sniper_Pitchfork_Child_2 bSuppressWeaponSpread True

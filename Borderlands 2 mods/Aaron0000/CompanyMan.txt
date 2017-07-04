@@ -1,12 +1,15 @@
 ########
 By Aaron0000
+
+Turns the Shotgun 1340 into the Pre-Sequel Company Man.
+
 Features;
-Statistically identical to the Company Man from Pre-Sequel (outside of damage scaling.)
+Statistically identical to the Company Man from Pre-Sequel.
 
-Replaces the Shotgun 1340.
-
-If you want the talking robot sounds to return, add some #'s in front of set GD_Weap_Shotgun.Barrel.SG_Barrel_Tediore_Shotgun1340 BehaviorProviderDefinition None
-Due to how the Shotgun 1340 is set up, using the custom skin will replace all blue hyperion shotguns as well. If you want the texture of blue hyperion shotguns to go back to normal, remove the last two lines at the bottom
+NOTES;
+If you want the talking robot sounds to return, remove or disable the line containing "GD_Weap_Shotgun.Barrel.SG_Barrel_Tediore_Shotgun1340 BehaviorProviderDefinition None".
+Due to how the Shotgun 1340 is set up, using the custom skin will replace all blue hyperion shotguns as well. If you want the texture of blue hyperion shotguns to go back to normal, remove the last two lines at the bottom.
+If using the Quadtastic mod, and you want to make the Company Man a Quad-barreled shotgun, there is a fix at the bottom. Run the fix after running Company Man and Quadtastic.
 ########
 
 set GD_Weap_Shotgun.Barrel.SG_Barrel_Tediore_Shotgun1340 CustomFiringModeDefinition None
@@ -30,4 +33,25 @@ set Common_GunMaterials.Materials.Shotgun.Mati_HyperionRare_SG Parent Common_Gun
 set Common_GunMaterials.Materials.Shotgun.Mati_HyperionRare_SG VectorParameterValues ((ParameterName="p_PatternChannelScale",ParameterValue=(R=0.000000,G=1.000000,B=0.000000,A=0.000000),ExpressionGUID=(A=439432319,B=1091149893,C=-1991909502,D=1816944627)),(ParameterName="p_CColorShadow",ParameterValue=(R=0.292135,G=0.000000,B=0.008354,A=1.000000),ExpressionGUID=(A=716329441,B=1214803259,C=-238071112,D=-1004122047)),(ParameterName="p_CColorHilight",ParameterValue=(R=1.846881,G=0.361546,B=0.124509,A=1.000000),ExpressionGUID=(A=759765673,B=1280874949,C=257367956,D=-932702788)),(ParameterName="p_CColorMidtone",ParameterValue=(R=1.425174,G=0.000000,B=0.000000,A=1.000000),ExpressionGUID=(A=110180441,B=1232792373,C=-1232281417,D=-1030626065)),(ParameterName="p_BColorShadow",ParameterValue=(R=0.119177,G=0.127910,B=0.179775,A=1.000000),ExpressionGUID=(A=-429590341,B=1156435294,C=-1015192901,D=687313413)),(ParameterName="p_BColorHilight",ParameterValue=(R=3.468941,G=3.522867,B=3.548687,A=1.000000),ExpressionGUID=(A=170714760,B=1132476783,C=-275668290,D=655702143)),(ParameterName="p_BColorMidtone",ParameterValue=(R=0.576632,G=0.594877,B=0.814607,A=1.000000),ExpressionGUID=(A=473594356,B=1338758895,C=824823946,D=864253813)),(ParameterName="p_AColorShadow",ParameterValue=(R=0.034296,G=0.034087,B=0.067416,A=1.000000),ExpressionGUID=(A=1481234158,B=1129012376,C=-688827739,D=-2119135160)),(ParameterName="p_AColorHilight",ParameterValue=(R=0.808989,G=0.808989,B=0.808989,A=1.000000),ExpressionGUID=(A=384292798,B=1221323751,C=-2145405772,D=1872194118)),(ParameterName="p_AColorMidtone",ParameterValue=(R=0.511236,G=0.511236,B=0.511236,A=1.000000),ExpressionGUID=(A=1102826245,B=1256298978,C=-1429881438,D=-507521102)),(ParameterName="p_ReflectionChannelScale",ParameterValue=(R=0.200000,G=1.000000,B=1.000000,A=1.000000),ExpressionGUID=(A=1869386622,B=1303200947,C=-1616405849,D=714558284)))
 
 set Common_GunMaterials.Materials.Shotgun.Mati_HyperionRare_SG TextureParameterValues (ParameterName="p_NormalScopesEmissive",ParameterValue=Texture2D'Weap_Shotguns.Tex.Weap_Shotgun_Nor',ExpressionGUID=(A=-1685713219,B=1198583295,C=1500684677,D=295812567)),(ParameterName="p_Pattern",ParameterValue=Texture2D'Common_GunMaterials.Patterns.Pattern_HexScrollGrunge_Comp',ExpressionGUID=(A=534250533,B=1202550002,C=1578302861,D=-717876416)),(ParameterName="p_Masks",ParameterValue=Texture2D'Weap_Shotguns.Tex.Weap_Shotgun_Comp',ExpressionGUID=(A=-330624041,B=1167251458,C=-335191907,D=-166684394)),(ParameterName="p_Diffuse",ParameterValue=Texture2D'Common_GunTextures.CompTextures.Weap_LauncherShotgunPistol_Comp',ExpressionGUID=(A=2024732779,B=1159440301,C=1487416485,D=-2018014041)))
+
+
+
+
+-------------------------------
+QUADTASTIC FIX
+
+
+#et GD_Weap_Shotgun.Barrel.SG_Barrel_Tediore_Shotgun1340 GestaltModeSkeletalMeshName SG_Barrel_Torgue
+
+#et GD_Weap_Shotgun.Barrel.SG_Barrel_Tediore_Shotgun1340 WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=3.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=11.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=20.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Torgue',InitializationDefinition=None,BaseValueScaleConstant=-0.050000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Torgue',InitializationDefinition=None,BaseValueScaleConstant=0.200000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.150000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-0.100000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponPerShotAccuracyImpulse',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.200000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+#et GD_Weap_Shotgun.Barrel.SG_Barrel_Tediore_Shotgun1340 WeaponCardAttributes ((Attribute=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',PriorityIncrease=0.500000))
+
+#et GD_Weap_Shotgun.Barrel.SG_Barrel_Tediore_Shotgun1340 AttributeSlotUpgrades ((SlotName="WeaponSpread",GradeIncrease=-24,bActivateSlot=True),(SlotName="AccuracyMin",GradeIncrease=1,bActivateSlot=True),(SlotName="WeaponDamage",GradeIncrease=2,bActivateSlot=True),(SlotName="WeaponAccuracyImpulse",GradeIncrease=-16,bActivateSlot=True),(SlotName="WeaponFireRate",GradeIncrease=-12,bActivateSlot=True),(SlotName="WeaponZoomFOV",GradeIncrease=0,bActivateSlot=True))
+
+
+
+
+
+
 

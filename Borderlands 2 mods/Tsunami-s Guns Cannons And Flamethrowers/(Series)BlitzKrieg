@@ -1,0 +1,162 @@
+This is a new weapon seires, not a weapon pack, i am making and releasing guns one by one, I am not sure how many weapons this series might have
+
+This series is focused on weapons of war, ranging from medical lasers, pistols, to weapons of mass destruction.
+
+First weapons with proper skins are in this series
+
+
+UPDATE: 2017/7/1: Added 2 LandKreuzer Weapons
+#############################################################################################
+
+Replaces Law
+
+M.S.P AKA Magnum Sniper Pistol
+
+Used against special targets, big structures, enemes weak to shock.
+
+Weap code needed:BL2(hwAAAABb7gCHRwJABgEFQMOIhUEQ4////////9Iw/v9Pw/j/jw3j)
+
+Could be a good weapon for Zer0, Gaige
+
+Fires shock/explosive shots
+High damage
+High firerate
+High recoil
+Slow accuracy recovery
++1600% Melee damage
+Shots bypasses shields
+Fires bloody red bullets
+
+#############################
+set GD_Weap_Pistol.Barrel.Pistol_Barrel_Maliwan_ThunderballFists WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.DamageSourceModifiers.InstigatedMeleeDamageModifier',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=15.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Jakobs',InitializationDefinition=None,BaseValueScaleConstant=10.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponReloadSpeed',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-2.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Jakobs',InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=12.700000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=3.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))))))
+
+set GD_Weap_Pistol.Barrel.Pistol_Barrel_Maliwan_ThunderballFists AttributeSlotUpgrades ((SlotName="WeaponMagSize",GradeIncrease=5,bActivateSlot=True),(SlotName="AccuracyMax",GradeIncrease=-500,bActivateSlot=True),(SlotName="AccuracyMin",GradeIncrease=3000,bActivateSlot=True),(SlotName="WeaponFireRate",GradeIncrease=15,bActivateSlot=True),(SlotName="WeaponAccuracyImpulse",GradeIncrease=-60,bActivateSlot=True),
+
+set GD_Weap_Pistol.Name.Title.Title__Unique_Law PartName M.S.P
+
+set GD_Weap_Pistol.Name.Title.Title__Unique_Law:AttributePresentationDefinition_8 NoConstraintText <font color="#D80C0C">What just happened?<font color="#FFFFFF"><br>The M.S.P, Magnum Sniper Pistol.<br><br>It's just a magnum sniper pistol, what else did you expect?<br><br>+1600% Melee Damage
+
+set GD_Weap_Pistol.Barrel.Pistol_Barrel_Maliwan_ThunderballFists Rarity (BaseValueConstant=4.000000)
+
+set GD_Weap_Pistol.A_Weapons_Unique.Pistol_Jakobs_3_Law:WeaponPartListCollectionDefinition_114 BarrelPartData (bEnabled=True,WeightedParts=((Part=WeaponPartDefinition'GD_Weap_Pistol.Barrel.Pistol_Barrel_Maliwan_ThunderballFists',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=2))
+
+set GD_Weap_Pistol.Barrel.Pistol_Barrel_Maliwan_ThunderballFists ExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.DamageSourceShieldPenetration.PercentChanceInstigatedBulletDmgIgnoresShields',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=100.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))
+
+set GD_Weap_Pistol.ManufacturerMaterials.Mat_Jakobs_3_Law Material MaterialInstanceConstant'Common_GunMaterials.Materials.Pistol.Mati_DahlUniquePistol_Dahlminator'
+##########################################
+
+
+Replaces Jolly Roger
+
+Releaser HEGGL AKA High Explosive Gas Grenade Launcher
+
+Used against armored vehicles, enemies behind cover, supressing large crowds, and to clear entire areas
+
+######################################
+set GD_Orchid_BossWeapons.Shotgun.SG_Barrel_Bandit_JollyRoger CustomFiringModeDefinition FiringModeDefinition'GD_Weap_Shotgun.FiringModes.Bullets_Splatgun'
+
+set GD_Weap_Shotgun.Projectiles.Projectile_SplatBall:BehaviorProviderDefinition_0.Behavior_Explode_5 DamageRadiusFormula (BaseValueConstant=900.000000)
+
+set GD_Orchid_BossWeapons.Shotgun.SG_Barrel_Bandit_JollyRoger WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Bandit',InitializationDefinition=None,BaseValueScaleConstant=-4.100000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-2000000.000002,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponStatusEffectChanceModifier',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=100.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponStatusEffectDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=23.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=3.100000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectileSpeedMultiplier',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))))))))
+
+set GD_Orchid_BossWeapons.Shotgun.SG_Barrel_Bandit_JollyRoger AttributeSlotUpgrades ((SlotName="AccuracyMax",GradeIncrease=10000,bActivateSlot=True),(SlotName="WeaponMagSize",GradeIncrease=-5,bActivateSlot=True),(SlotName="WeaponFireRate",GradeIncrease=-22,bActivateSlot=True),(SlotName="WeaponAccuracyImpulse",GradeIncrease=-10,bActivateSlot=True),
+
+set ExplosionScale ((ExplosionPSTemplate=ParticleSystem'FX_BulletImpacts_Alien.Particles.Part_Shotgun_Alien_Incediary_Impact',MinRadius=0,MaxRadius=1920,MinParticleScale=0.000000,MaxParticleScale=1.000000,ExplosionAkEvent=AkEvent'Ake_Exp_Elemental.Exp_Incendiary.Ak_Play_Exp_Elemental_Incendiary_SM',CameraAnim=CameraAnim'Anim_CameraAnimations.Explosions.Canim_Explosion_Minor',MinCameraEffectDistance=0.000000,MaxCameraEffectDistance=180.000000,FFWaveform=ForceFeedbackWaveform'GD_Explosions.Incendiary.Explosion_AlienSplat_IncendiaryMaster:ForceFeedbackWaveform_973',ImpactEffect=WillowExplosionImpactDefinition'GD_Impacts.ExplosiveImpacts.ExplosiveImpactIncendiary128',bDamageOverPeriodOfTime=True,MaxDamageDuration=100.000000,DamageInterval=1.000000,bDamageEachTargetOnlyOnce=False,bExpandRadiusOverTime=True),(ExplosionPSTemplate=ParticleSystem'FX_WEP_Explosions.Particles.Incendiary.Part_Incendiary_Medium_Burst',MinRadius=1930,MaxRadius=3840,MinParticleScale=0.500000,MaxParticleScale=1.100000,ExplosionAkEvent=AkEvent'Ake_Exp_Elemental.Exp_Incendiary.Ak_Play_Exp_Elemental_Incendiary_MED',CameraAnim=CameraAnim'Anim_CameraAnimations.Explosions.Canim_Explosion_Medium',MinCameraEffectDistance=150.000000,MaxCameraEffectDistance=650.000000,FFWaveform=ForceFeedbackWaveform'GD_Explosions.Incendiary.Explosion_AlienSplat_IncendiaryMaster:ForceFeedbackWaveform_974',ImpactEffect=WillowExplosionImpactDefinition'GD_Impacts.ExplosiveImpacts.ExplosiveImpactIncendiary256',bDamageOverPeriodOfTime=True,MaxDamageDuration=100.000000,DamageInterval=1.000000,bDamageEachTargetOnlyOnce=False,bExpandRadiusOverTime=True),(ExplosionPSTemplate=ParticleSystem'FX_WEP_Explosions.Particles.Incendiary.Part_Incendiary_Large_Burst',MinRadius=3850,MaxRadius=20480,MinParticleScale=0.650000,MaxParticleScale=2.000000,ExplosionAkEvent=AkEvent'Ake_Exp_Elemental.Exp_Incendiary.Ak_Play_Exp_Elemental_Incendiary_LG',CameraAnim=CameraAnim'Anim_CameraAnimations.Explosions.Canim_Explosion_Large',MinCameraEffectDistance=300.000000,MaxCameraEffectDistance=1200.000000,FFWaveform=ForceFeedbackWaveform'GD_Explosions.Incendiary.Explosion_AlienSplat_IncendiaryMaster:ForceFeedbackWaveform_975',ImpactEffect=WillowExplosionImpactDefinition'GD_Impacts.ExplosiveImpacts.ExplosiveImpactIncendiary512',bDamageOverPeriodOfTime=True,MaxDamageDuration=100.000000,DamageInterval=1.000000,bDamageEachTargetOnlyOnce=False,bExpandRadiusOverTime=True))
+
+set GD_Orchid_BossWeapons.ManufacturerMaterials.Mat_Bandit_3_JollyRoger Material MaterialInstanceConstant'Aster_GunMaterials.Materials.Shotgun.Mati_Tediore_Seraph_Omen'
+
+set GD_Orchid_BossWeapons.Name.Title.Title__Unique_JollyRoger PartName Releaser H.E.G.G.L
+
+set GD_Orchid_BossWeapons.Name.Title.Title__Unique_JollyRoger:AttributePresentationDefinition_8 NoConstraintText <font color="#D80C0C">Smoke em'! literally.<font color="#FFFFFF"><br>^^^ Never listen to what red text says, they're all crazy bastards, listen to me instead.
+######################################
+
+
+Replaces Dahlminator
+
+Transfusion laser
+
+Could be useful for gunzerking
+
+Very low base damage
+Very high elemental damage
+Small elemental effect chance
+Converts 100% of all damage dealt to health
+Slow ammo regeneration
+#########################################
+
+set GD_Weap_Pistol.A_Weapons_Unique.Pistol_Dahl_3_Dahlminator:WeaponPartListCollectionDefinition_108 ElementalPartData (bEnabled=True,WeightedParts=((Part=WeaponPartDefinition'GD_Weap_Pistol.elemental.Pistol_Elemental_None',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=4),(Part=WeaponPartDefinition'GD_Weap_Pistol.elemental.Pistol_Elemental_Fire',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=5,MaxGameStageIndex=1,DefaultWeightIndex=3),(Part=WeaponPartDefinition'GD_Weap_Pistol.elemental.Pistol_Elemental_Shock',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=6,MaxGameStageIndex=1,DefaultWeightIndex=3),(Part=WeaponPartDefinition'GD_Weap_Pistol.elemental.Pistol_Elemental_Corrosive',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=7,MaxGameStageIndex=1,DefaultWeightIndex=3),(Part=WeaponPartDefinition'GD_Weap_Pistol.elemental.Pistol_Elemental_Slag',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=8,MaxGameStageIndex=1,DefaultWeightIndex=3)))
+
+set GD_Weap_Pistol.Barrel.Pistol_Barrel_Alien_Homing_Dahlminator CustomFiringModeDefinition FiringModeDefinition'GD_Weap_SniperRifles.FiringModes.Bullet_RailGun'
+
+set GD_Weap_Pistol.Barrel.Pistol_Barrel_Alien_Homing_Dahlminator AttributeSlotUpgrades ((SlotName="WeaponMagSize",GradeIncrease=100,bActivateSlot=True),(SlotName="AccuracyMax",GradeIncrease=10000,bActivateSlot=True),(SlotName="AccuracyMin",GradeIncrease=300000,bActivateSlot=True),(SlotName="WeaponFireRate",GradeIncrease=22,bActivateSlot=True),(SlotName="WeaponAccuracyImpulse",GradeIncrease=100,bActivateSlot=True),
+
+set GD_Weap_Pistol.Barrel.Pistol_Barrel_Alien_Homing_Dahlminator ZoomWeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponAutomaticBurstCount',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=4.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))
+
+set GD_Weap_Pistol.Barrel.Pistol_Barrel_Alien_Homing_Dahlminator WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-220.400000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponStatusEffectChanceModifier',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-0.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponStatusEffectDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=35.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))))
+
+set GD_Weap_Pistol.Barrel.Pistol_Barrel_Alien_Homing_Dahlminator ExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.GameplayAttributes.FootSpeed',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Repeater_Pistol.Ammo_Repeater_Pistol_RegenerationRate',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.233333,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.DamageEnhancementModifiers.PlayerConvertDamageToHealingPercent',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=100.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+set GD_Weap_Pistol.Name.Title.Title__Unique_Dahlminator PartName Transfusion Laser
+
+set GD_Weap_Pistol.Name.Title.Title__Unique_Dahlminator:AttributePresentationDefinition_8 NoConstraintText <font color="#D80C0C">No worries...<font color="#FFFFFF"><br>Has a small chance to deal devastating elemental damage.<br><br>Converts 100% damage dealt to health
+#########################################
+
+Replaces Nukem
+
+LandKreuzer P.1000 Primary Weapon
+
+Bigger than the big bertha.
+Should be used with the secondary weapon
+
++10000% Shield Capasity
++2500% Recharge Delay
++2000% Recharge Rate
+Slow ammo regeneration
+High recoil
+High blast radius
+Consumes 8 ammo per shot
+
+#########################################
+set GD_Weap_Launchers.Projectiles.Projectile_Rocket_Torgue_Nukem:BehaviorProviderDefinition_0.Behavior_Explode_6 DamageRadiusFormula (BaseValueConstant=1500.000000)
+
+set GD_Explosions.explosive.Explosion_Nukem ExplosionScale ((ExplosionPSTemplate=ParticleSystem'FX_WEP_Launchers.Particles.Part_RL_Nuke',MinRadius=0,MaxRadius=192,MinParticleScale=0.000000,MaxParticleScale=0.750000,ExplosionAkEvent=AkEvent'Ake_Exp_Elemental.Exp_Explosive.Ak_Play_Exp_Elemental_Explosive_SM',CameraAnim=CameraAnim'Anim_CameraAnimations.Explosions.Canim_Explosion_Minor',MinCameraEffectDistance=0.000000,MaxCameraEffectDistance=180.000000,FFWaveform=ForceFeedbackWaveform'GD_Explosions.explosive.Explosion_Nukem:ForceFeedbackWaveform_3',ImpactEffect=WillowExplosionImpactDefinition'GD_Impacts.ExplosiveImpacts.ExplosiveImpactNormal128',bDamageOverPeriodOfTime=False,MaxDamageDuration=0.000000,DamageInterval=0.000000,bDamageEachTargetOnlyOnce=False,bExpandRadiusOverTime=False),(ExplosionPSTemplate=ParticleSystem'FX_WEP_Launchers.Particles.Part_RL_Nuke',MinRadius=193,MaxRadius=384,MinParticleScale=0.400000,MaxParticleScale=0.800000,ExplosionAkEvent=AkEvent'Ake_Exp_Elemental.Exp_Explosive.Ak_Play_Exp_Elemental_Explosive_MED',CameraAnim=CameraAnim'Anim_CameraAnimations.Explosions.Canim_Explosion_Medium',MinCameraEffectDistance=150.000000,MaxCameraEffectDistance=650.000000,FFWaveform=ForceFeedbackWaveform'GD_Explosions.explosive.Explosion_Nukem:ForceFeedbackWaveform_4',ImpactEffect=WillowExplosionImpactDefinition'GD_Impacts.ExplosiveImpacts.ExplosiveImpactNormal256',bDamageOverPeriodOfTime=False,MaxDamageDuration=0.000000,DamageInterval=0.000000,bDamageEachTargetOnlyOnce=False,bExpandRadiusOverTime=False),(ExplosionPSTemplate=ParticleSystem'FX_WEP_Launchers.Particles.Part_RL_Nuke',MinRadius=385,MaxRadius=15000,MinParticleScale=0.500000,MaxParticleScale=15.000000,ExplosionAkEvent=AkEvent'Ake_Exp_Elemental.Exp_Explosive.Ak_Play_Exp_Elemental_Explosive_LG',CameraAnim=CameraAnim'Anim_CameraAnimations.Explosions.Canim_Explosion_Large',MinCameraEffectDistance=300.000000,MaxCameraEffectDistance=1200.000000,FFWaveform=ForceFeedbackWaveform'GD_Explosions.explosive.Explosion_Nukem:ForceFeedbackWaveform_0',ImpactEffect=WillowExplosionImpactDefinition'GD_Impacts.ExplosiveImpacts.ExplosiveImpactNormal512',bDamageOverPeriodOfTime=False,MaxDamageDuration=0.000000,DamageInterval=0.000000,bDamageEachTargetOnlyOnce=False,bExpandRadiusOverTime=False))
+
+set GD_Weap_Launchers.Barrel.L_Barrel_Torgue_Nukem WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=60.400000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectileSpeedMultiplier',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=5.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponReloadSpeed',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=20.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Torgue',InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=8.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponEquipTime',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=6.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponPutDownTime',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))))))
+
+set GD_Weap_Launchers.Barrel.L_Barrel_Torgue_Nukem ExternalAttributeEffects ((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.ShieldResourcePool.ShieldMaxValue',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=100.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.ShieldResourcePool.ShieldOnIdleRegenerationDelay',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=25.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.ShieldResourcePool.ShieldOnIdleRegenerationRate',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=100.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Rocket_Launcher.Ammo_Rocket_Launcher_RegenerationRate',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.530555,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+set GD_Weap_Launchers.Barrel.L_Barrel_Torgue_Nukem AttributeSlotUpgrades ((SlotName="WeaponMagSize",GradeIncrease=-5,bActivateSlot=True),(SlotName="AccuracyMax",GradeIncrease=10000,bActivateSlot=True),(SlotName="AccuracyMin",GradeIncrease=300000,bActivateSlot=True),(SlotName="WeaponAccuracyImpulse",GradeIncrease=-100,bActivateSlot=True),
+
+set GD_Weap_Launchers.ManufacturerMaterials.Mat_Torgue_5_Legendary Material MaterialInstanceConstant'Common_GunMaterials.Materials.Launcher.Mati_VladofEpicRL'
+
+set GD_Weap_Launchers.Name.Title_Torgue.Title_Legendary_Nukem PartName LandKreuzer P.1000 Naval Artillery
+
+set GD_Weap_Launchers.Name.Title_Torgue.Title_Legendary_Nukem:AttributePresentationDefinition_8 NoConstraintText <font color="#D80C0C">Bigger than the big bertha.<font color="#FFFFFF"><br>The primary weapon of LandKreuzer P.1000
+#############################################
+
+
+Replaces Madhouse
+
+LandKreuzer P.1000 Secondary Weapon
+
++10000% Shield Capasity
++2500% Recharge Delay
++2000% Recharge Rate
+Slow ammo regeneration
+Low recoil
+
+##########################################
+set GD_Weap_AssaultRifle.Name.Title_Bandit.Title_Legendary_Madhouse PartName LandKreuzer P.1000 Machine Minicannon
+
+set GD_Weap_AssaultRifle.Barrel.AR_Barrel_Bandit_Madhouse CustomFiringModeDefinition FiringModeDefinition'GD_Aster_Weapons.FiringModes.Bullet_Assault_Ogre'
+
+set GD_Weap_AssaultRifle.Barrel.AR_Barrel_Bandit_Madhouse AttributeSlotUpgrades ((SlotName="AccuracyMax",GradeIncrease=10000,bActivateSlot=True),(SlotName="AccuracyMin",GradeIncrease=300000,bActivateSlot=True),(SlotName="WeaponMagSize",GradeIncrease=1,bActivateSlot=True),(SlotName="WeaponFireRate",GradeIncrease=-40,bActivateSlot=True),(SlotName="WeaponAccuracyImpulse",GradeIncrease=-10,bActivateSlot=True),
+
+set GD_Weap_AssaultRifle.Barrel.AR_Barrel_Bandit_Madhouse WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.900000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=10.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectileSpeedMultiplier',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=10.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponReloadSpeed',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Bandit',InitializationDefinition=None,BaseValueScaleConstant=3.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponEquipTime',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponPutDownTime',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))))))
+
+set GD_Weap_AssaultRifle.Barrel.AR_Barrel_Bandit_Madhouse ExternalAttributeEffects ((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Combat_Rifle.Ammo_Combat_Rifle_RegenerationRate',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.230555,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.ShieldResourcePool.ShieldMaxValue',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=100.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.ShieldResourcePool.ShieldOnIdleRegenerationDelay',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=25.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.ShieldResourcePool.ShieldOnIdleRegenerationRate',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=100.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+set GD_Weap_AssaultRifle.Name.Title_Bandit.Title_Legendary_Madhouse:AttributePresentationDefinition_8 NoConstraintText <font color="#D80C0C">One for Fourty <font color="#FFFFFF"><br>Secondary weapon of LandKreuzer P.1000
+
+set GD_Weap_AssaultRifle.ManufacturerMaterials.Mat_BanditMade_5_Legendary Material MaterialInstanceConstant'Orchid_GunMaterials.Materials.AssaultRifle.Mati_DahlCommonAR_Seraphim'
+############################################

@@ -1,0 +1,45 @@
+A weapon made by:                           |
+  _    _  _____  _   _  _    _  _    _      |
+ | |  | || ____|| | | || |  | || |  | |     |
+ | |  | || | __ | \_/ || |  | || |  | |     |
+ | |  | || ||_ | \   / | |  | || |  | |     |
+ | |__| || |_| |  | |  | |__| || |__| |  _  |
+ |______||_____|  |_|  |______||______| |_| |
+                                            |
+        With help of the community.         |
+____________________________________________|
+
+Turns the Viral Marketer into a mix of the Borderlands 1 and 2 Butcher: The Pre-Sequel version of the Butcher.
+
+[Notes]
+
+Due to the elements Fire, Shock, Cryo and None now being able to spawn with this Butcher, watch out with sanity checks. If you enter a game with a non-Corrosive Butcher without having this enabled, it will be deleted by a sanity check.
+I might want to give this a better name and red text.
+I have yet to figure out how to make this have a 34% chance to not consume ammo, but so far i only think it works with specific characters loaded.
+
+
+[Features]
+- 5 shot burst fire, with very high fire rate and low burst delay.
+- 34% chance to penetrate shields.
+- 25% movement speed increase.
+- Boosted damage, projectile count is 4 though. (6 with vertical grip)
+- Shots fired ricochet off surfaces. (Original Viral Marketer effect.)
+- Elements other than corrosive are now unlocked.
+
+[Changelog]
+[Codes]
+
+set GD_Cork_Weap_Shotgun.A_Weapons_Legendary.SG_Hyperion_5_ConferenceCall:WeaponPartListCollectionDefinition_117 ElementalPartData (bEnabled=True,WeightedParts=((bDisabled=False,Part=WeaponPartDefinition'GD_Weap_Shotgun.elemental.Shotgun_Elemental_None',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=3),(bDisabled=False,Part=WeaponPartDefinition'GD_Weap_Shotgun.elemental.Shotgun_Elemental_Fire',Manufacturers=,MinGameStageIndex=4,MaxGameStageIndex=1,DefaultWeightIndex=2),(bDisabled=False,Part=WeaponPartDefinition'GD_Weap_Shotgun.elemental.Shotgun_Elemental_Corrosive',Manufacturers=,MinGameStageIndex=5,MaxGameStageIndex=1,DefaultWeightIndex=2),(bDisabled=False,Part=WeaponPartDefinition'GD_Weap_Shotgun.elemental.Shotgun_Elemental_Shock',Manufacturers=,MinGameStageIndex=4,MaxGameStageIndex=1,DefaultWeightIndex=2),(bDisabled=False,Part=WeaponPartDefinition'GD_Weap_Shotgun.elemental.Shotgun_Elemental_Ice',Manufacturers=,MinGameStageIndex=6,MaxGameStageIndex=1,DefaultWeightIndex=2)))
+
+
+set GD_Cork_Weap_Shotgun.Barrel.SG_Barrel_Hyperion_ConferenceCall GestaltModeSkeletalMeshName SG_Barrel_Torgue
+
+set GD_Cork_Weap_Shotgun.Barrel.SG_Barrel_Hyperion_ConferenceCall AttributeSlotUpgrades ((SlotName="WeaponSpread",GradeIncrease=-1,bActiveSlot=True),(SlotName="AccuracyMin",GradeIncrease=8,bActivateSlot=True),(SlotName="WeaponAccuracyImpulse",GradeIncrease=3,bActivateSlot=True),(SlotName="WeaponFireRate",GradeIncrease=10,bActivateSlot=True),(SlotName="WeaponDamage",GradeIncrease=30,bActivateSlot=True))
+
+set GD_Cork_Weap_Shotgun.Barrel.SG_Barrel_Hyperion_ConferenceCall ExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.DamageSourceShieldPenetration.PercentChanceInstigatedBulletDmgIgnoresShields',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0.340000)),(AttributeToModify=AttributeDefinition'D_Attributes.GameplayAttributes.FootSpeed',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.250000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+set GD_Cork_Weap_Shotgun.Barrel.SG_Barrel_Hyperion_ConferenceCall WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=-1.075000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponPerShotAccuracyImpulse',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0.500000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=-2.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponAutomaticBurstCount',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=5.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponBurstInterval',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.050000,BaseValueAttribute=None',InitializationDefinition=None,BaseValueScaleConstant=0.050000)))
+
+set GD_Cork_Weap_Shotgun.FiringModes.Bullet_Shotgun_ConferenceCall RicochetResponse (SplitNum=3,SplitAngle=5.000000,SplitAngleOffset=0.000000,SplitDistance=5.000000,SplitFire=None,NewSpeed=0.000000,bDetonate=False,bRespawnTracer=False,bUpdateBeamSourceLocation=False,Behaviors=)
+
+set GD_Cork_Weap_Shotgun.Name.Title_Hyperion.Title_Legendary_ConferenceCall PartName Butcher
+set GD_Cork_Weap_Shotgun.Name.Title_Hyperion.Title_Legendary_ConferenceCall:AttributePresentationDefinition_8 NoConstraintText <font color="#ff0235">Finally.. Fresh meat.<font color="#ffffff"><br>+500% <font color="#efa7b5">Burst-Fire <font color="#ffffff">Count<br>+34% Chance to penetrate <font color="#84e4ed">Shields.<font color="#ffffff"><br>+25% <font color="#c2ead0">Movement Speed.<font color="#ffffff"><br>+ <font color="#efdfa7">Bullets <font color="#ffffff">fired ricochet off surfaces.

@@ -1,0 +1,60 @@
+A patch made by:                            |
+  _    _  _____  _   _  _    _  _    _      |
+ | |  | || ____|| | | || |  | || |  | |     |
+ | |  | || | __ | \_/ || |  | || |  | |     |
+ | |  | || ||_ | \   / | |  | || |  | |     |
+ | |__| || |_| |  | |  | |__| || |__| |  _  |
+ |______||_____|  |_|  |______||______| |_| |
+                                            |
+        With help of the community.         |
+____________________________________________| Small credit to RavenJim for helping out a bit!
+
+Turns the Marek's Mouth into the BoomFetti! This is a weapon i made in honor of my birthday that is june 17th.
+
+[Notes]
+
+Breaks the Black Snake. in a good way.
+
+[Features]
+     
+     - Boosted damage and reload speed.
+     - Fires 2 projectiles that ricochet. Each single ricochet projectile splits into another projectile.
+     - Split projectiles explode into fireworks upon hitting a ceiling, wall, floor or enemy.
+     - The fireworks might hurt you, but only a little bit.
+     - Decreased mag size and fire rate.
+     - Available in all elements!
+     - Luneshine fix (Originally, this was very confusing. Now it should be easier to know what it does.)
+     - Yellow rarity!
+
+>>>>>- Marek's Mouth original effect: has a chance to proc elemental damage over time of a different element than the gun you are using currently has.<<<<<
+
+[Changelog]
+
+V2.0 Changed firingmode from the conference call to something else. >>Now breaks BlackSnake<<
+     Removed Penetrating bullets.
+
+V1.0 Initial release.
+
+[Codes]
+
+set GD_Cork_Weap_SMG.Barrel.SMG_Barrel_Bandit_MareksMouth Rarity (BaseValueConstant=200.000000)
+
+set GD_Cork_Weap_SMG.A_Weapons_Unique.SMG_Bandit_3_MareksMouth:WeaponPartListCollectionDefinition_155 ElementalPartData (bEnabled=True,WeightedParts=((Part=WeaponPartDefinition'GD_Weap_SMG.elemental.SMG_Elemental_Corrosive',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=2),(Part=WeaponPartDefinition'GD_Weap_SMG.elemental.SMG_Elemental_Fire',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=2),(Part=WeaponPartDefinition'GD_Weap_SMG.elemental.SMG_Elemental_Ice',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=2),(Part=WeaponPartDefinition'GD_Weap_SMG.elemental.SMG_Elemental_Shock',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=2)))
+
+set GD_Cork_Weap_SMG.Barrel.SMG_Barrel_Bandit_MareksMouth WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0.525000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=1.00000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueConstant=-76.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.510000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.490000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.250000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponReloadSpeed',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=-0.600000)))
+
+set GD_Cork_Weap_SMG.Barrel.SMG_Barrel_Bandit_MareksMouth GestaltModeSkeletalMeshName SMG_Barrel_Dahl
+set GD_Cork_Weap_SMG.Barrel.SMG_Barrel_Bandit_MareksMouth CustomFiringModeDefinition FiringModeDefinition'GD_Cork_Weap_SMG.FiringModes.Bullet_SMG_BlackSnake'
+
+set GD_Cork_Weap_SMG.FiringModes.Bullet_SMG_BlackSnake NumRicochets 1
+set GD_Cork_Weap_SMG.FiringModes.Bullet_SMG_BlackSnake RicochetResponse (SplitNum=2,SplitAngle=5.000000,SplitAngleOffset=0.000000,SplitDistance=0.000000,SplitFire=GD_Petunia_Weapons.FiringModes.Bullet_Shotgun_Tediore_PartyLine,NewSpeed=0.000000,bDetonate=False,bRespawnTracer=True,bUpdateBeamSourceLocation=False,Behaviors=)
+set GD_Cork_Weap_SMG.FiringModes.Bullet_SMG_BlackSnake Speed 6000.000000
+set GD_Petunia_Weapons.FiringModes.Bullet_Shotgun_Tediore_PartyLine Speed 4000.000000
+
+#et GD_Cork_Weap_Shotgun.FiringModes.Bullet_Shotgun_ConferenceCall OnAnyImpact (Behavior_Explode'GD_Petunia_Weapons.FiringModes.Bullet_Shotgun_Tediore_PartyLine:Behavior_SpawnProjectile_0')
+
+set GD_Weap_Accessories.Moonstone_Unique.Moonstone_Attachment_MareksMouth:AttributePresentationDefinition_0 Description
+set GD_Weap_Accessories.Moonstone_Unique.Moonstone_Attachment_MareksMouth:AttributePresentationDefinition_0 NoConstraintText Luneshine: Better loot drops!<font color="#ffffff">
+set GD_Cork_Weap_SMG.Name.Prefix.Prefix__MareksMouth PartName Ugyuu's
+set GD_Cork_Weap_SMG.Name.Title.Title__Unique_MareksMouth PartName BoomFetti
+set GD_Cork_Weap_SMG.Name.Title.Title__Unique_MareksMouth:AttributePresentationDefinition_8 NoConstraintText <font color="#f74278">Great for birthday parties!<font color="#ffffff">

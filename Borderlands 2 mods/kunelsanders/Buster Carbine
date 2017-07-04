@@ -1,0 +1,24 @@
+################
+Buster Carbine
+Scorpio edit by kunelsanders
+Nothing too fancy, just wanted the scorpio to be a bit more useful for me
+Locked to non-elemental and uses Hellfire firing mode for explosive splash
+High accuracy, 3 round burst on ADS
+################
+
+set GD_Weap_AssaultRifle.Name.Title.Title_Unique_Scorpio PartName Buster Carbine
+set GD_Weap_AssaultRifle.Name.Title.Title_Unique_Scorpio:AttributePresentationDefinition_8 NoConstraintText The Marshalls' secret weapon.
+set GD_Weap_AssaultRifle.Barrel.AR_Barrel_Jakobs_Scorpio rarity (BaseValueConstant=500)
+
+set GD_Weap_AssaultRifle.Barrel.AR_Barrel_Jakobs_Scorpio CustomFiringModeDefinition FiringModeDefinition'GD_Weap_SMG.FiringModes.Bullet_SMG_HellFire'
+
+set GD_Weap_AssaultRifle.A_Weapons_Unique.AR_Dahl_3_Scorpio:WeaponPartListCollectionDefinition_41 ElementalPartData (bEnabled=True,WeightedParts=((Part=WeaponPartDefinition'GD_Weap_AssaultRifle.elemental.AR_Elemental_None',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1))
+set GD_Weap_AssaultRifle.A_Weapons_Unique.AR_Dahl_3_Scorpio:WeaponPartListCollectionDefinition_41 SightPartData (bEnabled=True,WeightedParts=((Part=WeaponPartDefinition'GD_Weap_AssaultRifle.Sight.None',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=2)))
+
+set GD_Weap_AssaultRifle.Barrel.AR_Barrel_Jakobs_Scorpio WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=2.00000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=-0.200000)))
+
+set GD_Weap_AssaultRifle.Barrel.AR_Barrel_Jakobs_Scorpio ZoomWeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponBurstInterval',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+set GD_Weap_AssaultRifle.Barrel.AR_Barrel_Jakobs_Scorpio AttributeSlotUpgrades ((SlotName="WeaponSpread",GradeIncrease=10,bActivateSlot=True),(SlotName="AccuracyMax",GradeIncrease=100,bActivateSlot=True),(SlotName="AccuracyMin",GradeIncrease=100,bActivateSlot=True),(SlotName="AccuracyRegen",GradeIncrease=10,bActivateSlot=True),(SlotName="WeaponAccuracyImpulse",GradeIncrease=100,bActivateSlot=True))
+
+set Common_GunMaterials.Materials.AssaultRifle.Mati_Dahl_Scorpio Parent Orchid_GunMaterials.Materials.AssaultRifle.Mati_VladofUncommonAR_Rapier
