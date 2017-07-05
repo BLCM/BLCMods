@@ -1,0 +1,24 @@
+//Buffs the Devastator. Gives it 3x projectiles whenever it spawns, buffs the firerate, damage, magazine size, and makes it fire Unkempt Harold shots, so it's an actual replacement for Salvador.
+
+//Bullets
+
+set GD_Orchid_RaidWeapons.Pistol.Devastator.Orchid_Seraph_Devastator_Barrel CustomFiringModeDefinition FiringModeDefinition 'GD_Weap_Pistol.FiringModes.Bullets_Pistol_Torgue_Calla'
+
+//Projectiles, Damage, Firerate, and Magazine buffs.
+
+set GD_Orchid_RaidWeapons.Pistol.Devastator.Orchid_Seraph_Devastator_Barrel WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.250000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=3.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-1.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+
+//Makes it Pearlescent Rarity. Put a # in front of these lines to keep it as Seraph.
+
+set GD_Orchid_RaidWeapons.Pistol.Devastator.Orchid_Seraph_Devastator_Barrel rarity (basevalueattribute=none)
+
+set GD_Orchid_RaidWeapons.Pistol.Devastator.Orchid_Seraph_Devastator_Barrel rarity (BaseValueConstant=496)
+
+//Sets the skin to look like the Wanderlust.
+
+set GD_Orchid_RaidWeapons.ManufacturerMaterials.Mat_Torgue_1_Devastator Material MaterialInstanceConstant 'Lobelia_GunMaterials.Materials.Pistol.Mati_Maliwan_Pearl_Wanderlust'
+
+
+
+//Enjoy!
