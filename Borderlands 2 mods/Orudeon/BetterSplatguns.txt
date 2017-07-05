@@ -292,4 +292,17 @@ set GD_Weap_Shotgun.Projectiles.Projectile_SplatBall_Hyperion:BehaviorProviderDe
 #</Splash>
 #</Splash Format>
 #</Hyperion Barrel>
+
+#<Tediore Reload Behavior>
+
+Alters Tediore Splatgun and Retcher reload behavior by lowering child grenade velocity and increasing the child grenades to three.
+
+#<Code>
+set GD_Weap_Shotgun.Projectiles.Projectile_TedioreReloadShotgun_Alien:BehaviorProviderDefinition_0.Behavior_SpawnProjectile_114 NumProjectilesFormula (BaseValueConstant=3.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+
+set GD_Weap_Shotgun.Projectiles.Projectile_SplatBall_TedioreReload UpwardVelocityBonus 250.000000
+
+set GD_Weap_Shotgun.Projectiles.Projectile_SplatBall_TedioreReload SpeedFormula (BaseValueConstant=250.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+#</Code>
+#</Tediore Reload Behavior>
 #</Better Splatguns>
