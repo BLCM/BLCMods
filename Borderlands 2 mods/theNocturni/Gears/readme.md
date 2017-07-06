@@ -30,7 +30,7 @@ currently contains 2 custom weapons and 2 existing gear change
     
 	4. Splash.txt
 	
-	reduces the visual pollution of explosion effects by
+	   reduces the visual pollution of explosion effects by
 		-halving the effect size
 		-removing some particle effects
     
