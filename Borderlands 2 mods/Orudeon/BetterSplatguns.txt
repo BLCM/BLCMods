@@ -6,15 +6,34 @@ This mod is incompatible with Aaron0000's Splitters. This mod contains compatibi
 
 Coded by Orudeon with major assistance from the_Nocturni. It is highly recommended you use LightChaosman's Filter Tool to install this.
 
-Version 1.05: Added missing compatibility code for generic and Hyperion barrels.
+Changelog:
+
+V1.1
+Move all self-damage to its own category for easy toggling.
+
+V1.05
+Added missing compatibility code for generic and Hyperion barrels.
+
+#<Self-Damage>
+
+Eliminates all Splatgun self-damage. This is presented as its own category in case your build (e.g. Backdraft Maya) depends on self-damage.
+
+set GD_Orchid_RaidWeapons.Shotgun.Spitter.Orchid_Seraph_Spitter_Projectile:BehaviorProviderDefinition_0.Behavior_Explode_8 InstigatorSelfDamageScale 0.000000
+
+set GD_Iris_Weapons.Projectiles.Projectile_SplatBall_SlowHand:BehaviorProviderDefinition_0.Behavior_Explode_5 InstigatorSelfDamageScale 0.00000
+
+set GD_Weap_Shotgun.Projectiles.Projectile_SplatBall_Hyperion:BehaviorProviderDefinition_0.Behavior_Explode_97 InstigatorSelfDamageScale 0.0000
+set GD_Weap_Shotgun.Projectiles.Projectile_SplatBall_Hyperion:BehaviorProviderDefinition_0.Behavior_Explode_98 InstigatorSelfDamageScale 0.0000
+
+set GD_Weap_Shotgun.Projectiles.Projectile_SplatBall:BehaviorProviderDefinition_0.Behavior_Explode_5  InstigatorSelfDamageScale 0.00000
+
+#</Self-Damage>
 
 #<Retcher>
 
 Eliminate Retcher self-damage and gravity. Increases status chance to bring it in line with other Splatguns. Disables spawning of Tech 2 (Critical) accessory. Bayonets On Slot 2 compatibility code included.
 
 #<Buffs>
-
-set GD_Orchid_RaidWeapons.Shotgun.Spitter.Orchid_Seraph_Spitter_Projectile:BehaviorProviderDefinition_0.Behavior_Explode_8 InstigatorSelfDamageScale 0.000000
 
 set GD_Orchid_RaidWeapons.Shotgun.Spitter.Orchid_Seraph_Spitter_Projectile PhysicsMode PHYS_Projectile
 
@@ -83,8 +102,6 @@ Slightly redesigns the Slow Hand to be suitable for bleeding enemies to death wi
 
 #<Code>
 
-set GD_Iris_Weapons.Projectiles.Projectile_SplatBall_SlowHand:BehaviorProviderDefinition_0.Behavior_Explode_5 InstigatorSelfDamageScale 0.00000
-
 set GD_Iris_Weapons.Shotguns.SG_Barrel_Alien_SlowHand WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.300000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-3.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=5.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponStatusEffectChanceModifier',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=5.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-4.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponStatusEffectDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
 
 #</Code>
@@ -141,8 +158,6 @@ Eliminates self-damage and gravity, and increases projectile speed of Bandit and
 Compatibility code for Jakobs and Torgue E-Techs by Aaron0000 included below.
 
 #<Code>
-
-set GD_Weap_Shotgun.Projectiles.Projectile_SplatBall:BehaviorProviderDefinition_0.Behavior_Explode_5  InstigatorSelfDamageScale 0.00000
 
 set GD_Weap_Shotgun.Projectiles.Projectile_SplatBall PhysicsMode PHYS_Projectile
 
@@ -227,9 +242,6 @@ set GD_Iris_Weapons.Projectiles.Projectile_SplatBall_SlowHand:BehaviorProviderDe
 Eliminates self-damage and gravity, and increases fire rate and projectile count of Hyperion Splatguns.
 
 #<Code>
-
-set GD_Weap_Shotgun.Projectiles.Projectile_SplatBall_Hyperion:BehaviorProviderDefinition_0.Behavior_Explode_97 InstigatorSelfDamageScale 0.0000
-set GD_Weap_Shotgun.Projectiles.Projectile_SplatBall_Hyperion:BehaviorProviderDefinition_0.Behavior_Explode_98 InstigatorSelfDamageScale 0.0000
 
 set GD_Weap_Shotgun.Projectiles.Projectile_SplatBall_Hyperion PhysicsMode PHYS_Projectile
 
