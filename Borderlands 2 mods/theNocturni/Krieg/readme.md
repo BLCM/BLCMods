@@ -9,11 +9,11 @@ This folder contains mods that are related to Krieg
 	   kinda broken on Mania Hellborn, but Bloodlust Hellborn shouldnt be affected that much
 		
 
-	2. LtF.txt- with Community patch 3.0 this will not work!
+	2. LtF.txt
 	
-	   increases the final explosion damage by twice, and the thrown dynamite by 3.6 times but its also changed to rocket splash instead of grenade splash. also increases the thrown dynamite's radius by a bit
+	   makes LtF scale to OP8, and also increases the thrown dynamite's radius by 33%
 	
-	   intended for non-explosive Kriegs who still want to have some fun, using this with an Explosive Krieg will most likely be broken/op
+	   you may want to disable the community patch's buff of LtF when using this.
 
  #2. Krieg Tweaks(fixes?)
  
