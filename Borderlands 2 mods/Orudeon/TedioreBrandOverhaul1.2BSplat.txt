@@ -11,6 +11,10 @@ This version of Tediore Brand Overhaul does not require compatibility code for B
 
 Changelog: 
 
+v1.2b
+Added optional Element Fix code for Rocket Launchers.
+Increased child grenades and lowered child grenade velocity of Splatgun reload behavior.
+
 v1.2
 Converted Rocket Launcher code to a simpler version that only buffs Type. E-Tech barrel has a counter-nerf attached to keep relative damage the same.
 Buffed Bunny damage on OP8 by approximately 28%.
@@ -74,50 +78,29 @@ set GD_Weap_SMG.Barrel.SMG_Barrel_Tediore_BabyMaker WeaponAttributeEffects ((Att
 #</Nerfs>
 
 #<SMGsRegen>
-
 #<White>
 
 set GD_Weap_SMG.ManufacturerMaterials.Mat_Tedior_1 ExternalAttributeEffects ((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Patrol_SMG.Ammo_Patrol_SMG_RegenerationRate',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.50000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
-
 #</White>
-
 #<GreenRegen>
-
 set GD_Weap_SMG.ManufacturerMaterials.Mat_Tedior_2 ExternalAttributeEffects ((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Patrol_SMG.Ammo_Patrol_SMG_RegenerationRate',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
-
 #</GreenRegen>
-
 #<BlueRegen>
-
 set GD_Weap_SMG.ManufacturerMaterials.Mat_Tedior_3 ExternalAttributeEffects ((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Patrol_SMG.Ammo_Patrol_SMG_RegenerationRate',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.50000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
-
 #</BlueRegen>
-
 #<PurpleRegen>
-
 set GD_Weap_SMG.ManufacturerMaterials.Mat_Tedior_4 ExternalAttributeEffects ((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Patrol_SMG.Ammo_Patrol_SMG_RegenerationRate',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
-
 #</PurpleRegen>
-
 #<LegendaryRegen>
-
 set GD_Weap_SMG.ManufacturerMaterials.Mat_Tedior_5_Legendary ExternalAttributeEffects ((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Patrol_SMG.Ammo_Patrol_SMG_RegenerationRate',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=2.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
-
 #</LegendaryRegen>
-
 #<GemstoneRegen>
-
 set GD_Aster_Weapons.ManufacturerMaterials.Mat_Tediore_4_CubicZerconia_SMG ExternalAttributeEffects ((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Patrol_SMG.Ammo_Patrol_SMG_RegenerationRate',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
-
 #</GemstoneRegen>
 
 #<AvengerRegen>
 
-#<Description>
-
 The Avenger naturally regenerates ammo, but Aaron0000's Tediore REGENDaries mod introduces an intriguing alteration: the Avenger regenerates all ammunition (including rockets, but excluding grenades) while held. It is included baseline with permission. Thank you to Aaron0000 for this code.
-
-#</Description>
 
 #<Regen>
 
@@ -132,24 +115,12 @@ set GD_Gladiolus_Weapons.SMG.SMG_Barrel_Hyperion_Avenger ExternalAttributeEffect
 set GD_Weap_SMG.A_Weapons.WT_SMG_Tediore:AttributePresentationDefinition_0 NoConstraintText Explodes like a [skill]grenade[-skill] when [skill]reloaded[-skill] and slowly [skill]regenerates ammo[-skill].
 
 #</ItemCardDescription>
-
 #</SMGsRegen>
-
 #</SMGs>
 
 #<RocketLaunchers>
 
-#<Description>
-
-##########
-
-Rocket Launchers
-
 Buff baseline Rocket Launcher damage and lowers E-Tech Launcher damage to compensate. Adds one to clip size.
-
-##########
-
-#</Description>
 
 #<Buffs>
 
@@ -163,57 +134,54 @@ set GD_Weap_Launchers.Barrel.L_Barrel_Alien WeaponAttributeEffects ((AttributeTo
 
 #</Buffs>
 
+#<Element Fix><MUT>
+
+This code changes Tediore rocket launcher reload explosions to inherit the element of the parent weapon. This code defaults to OFF in case your build depends on explosive reload.
+
+#<Fix Active>
+
+set GD_Weap_Launchers.Projectiles.Projectile_TedioreReloadLauncher DamageTypeOverrideContext (InstancedDataContextName="Owner",ContextObject=None,BehaviorContext=BCONTEXT_Self,bSupportsDefaultOutputLink=0)
+set GD_Weap_Launchers.Projectiles.Projectile_TedioreReloadLauncher_Bunny DamageTypeOverrideContext (InstancedDataContextName="Owner",ContextObject=None,BehaviorContext=BCONTEXT_Self,bSupportsDefaultOutputLink=0)
+
+set GD_Weap_Launchers.Projectiles.Projectile_TedioreReloadLauncher DamageTypeOverrideName DamageTypeOverride
+set GD_Weap_Launchers.Projectiles.Projectile_TedioreReloadLauncher_Bunny DamageTypeOverrideName DamageTypeOverride
+
+#</Fix Active>
+
+#<Fix Inactive (Default)>
+
+set GD_Weap_Launchers.Projectiles.Projectile_TedioreReloadLauncher DamageTypeOverrideContext (InstancedDataContextName=,ContextObject=None,BehaviorContext=BCONTEXT_Self,bSupportsDefaultOutputLink=0)
+set GD_Weap_Launchers.Projectiles.Projectile_TedioreReloadLauncher_Bunny DamageTypeOverrideContext (InstancedDataContextName=,ContextObject=None,BehaviorContext=BCONTEXT_Self,bSupportsDefaultOutputLink=0)
+set GD_Weap_Launchers.Projectiles.Projectile_TedioreReloadLauncher DamageTypeOverrideName None
+set GD_Weap_Launchers.Projectiles.Projectile_TedioreReloadLauncher_Bunny DamageTypeOverrideName None
+
+#</Fix Inactive (Default)>
+
 #<RLsRegen>
-
 #<WhiteRegen>
-
 set GD_Weap_Launchers.ManufacturerMaterials.Mat_Tediore_1 ExternalAttributeEffects ((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Rocket_Launcher.Ammo_Rocket_Launcher_RegenerationRate',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.022222,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
-
 #</WhiteRegen>
-
 #<GreenRegen>
-
 set GD_Weap_Launchers.ManufacturerMaterials.Mat_Tediore_2 ExternalAttributeEffects ((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Rocket_Launcher.Ammo_Rocket_Launcher_RegenerationRate',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.025000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
-
 #</GreenRegen>
-
 #<BlueRegen>
-
 set GD_Weap_Launchers.ManufacturerMaterials.Mat_Tediore_3 ExternalAttributeEffects ((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Rocket_Launcher.Ammo_Rocket_Launcher_RegenerationRate',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.028571,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
-
 #</BlueRegen>
-
 #<PurpleRegen>
-
 set GD_Weap_Launchers.ManufacturerMaterials.Mat_Tediore_4 ExternalAttributeEffects ((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Rocket_Launcher.Ammo_Rocket_Launcher_RegenerationRate',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.033333,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
-
 #</PurpleRegen>
-
 #<LegendaryRegen>
-
 set GD_Weap_Launchers.ManufacturerMaterials.Mat_Tediore_5_Legendary ExternalAttributeEffects ((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Rocket_Launcher.Ammo_Rocket_Launcher_RegenerationRate',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.0666667,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
-
 #</LegendaryRegen>
-
 #<ItemCardDescription>
-
 set GD_Weap_Launchers.A_Weapons.WT_Tediore_Launcher:AttributePresentationDefinition_0 NoConstraintText Explodes like a [skill]grenade[-skill] when [skill]reloaded[-skill] and slowly [skill]regenerates ammo[-skill].
-
 #</ItemCardDescription>
-
 #</RLsRegen>
-
 #</RocketLaunchers>
 
 #<Shotguns>
 
-#<Description>
-
-Shotguns
-
 Buff baseline shotgun clip size, fire rate, and sustained fire accuracy. Tediore barrel now grants +1 projectile and 5% damage for brand match, 15% reload speed and 10% tighter spread to all shotguns.
-
-#</Description>
 
 #<Buffs>
 
@@ -231,11 +199,7 @@ set GD_Weap_Shotgun.Barrel.SG_Barrel_Tediore_Deliverance WeaponAttributeEffects 
 
 #<SGsRegen>
 
-#<Description>
-
 Grant all Tediore shotguns baseline ammo regeneration. (Thank you to Aaron0000 for permission to adapt his code.)
-
-#</Description>
 
 #<WhiteRegen>
 
@@ -297,15 +261,23 @@ set GD_Weap_Shotgun.A_Weapons.WT_Tediore_Shotgun:AttributePresentationDefinition
 
 #</ItemCardDescription>
 
+#<Tediore Reload Behavior>
+
+Alters Tediore Splatgun and Retcher reload behavior by lowering child grenade velocity and increasing the child grenades to three.
+
+#<Code>
+set GD_Weap_Shotgun.Projectiles.Projectile_TedioreReloadShotgun_Alien:BehaviorProviderDefinition_0.Behavior_SpawnProjectile_114 NumProjectilesFormula (BaseValueConstant=3.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+
+set GD_Weap_Shotgun.Projectiles.Projectile_SplatBall_TedioreReload UpwardVelocityBonus 250.000000
+
+set GD_Weap_Shotgun.Projectiles.Projectile_SplatBall_TedioreReload SpeedFormula (BaseValueConstant=250.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+#</Code>
+#</Tediore Reload Behavior>
 #</Shotguns>
 
 #<Handguns>
 
-#<Description>
-
 Slightly buff pistol accuracy, spread, and damage.
-
-#</Description>
 
 #<Buffs>
 
