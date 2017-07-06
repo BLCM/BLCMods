@@ -2,13 +2,16 @@
 
 #<Description>
 
-##########
-
 All Tediore weapons have received a redesign and combat tweaks. In addition to improving general combat usage of all four weapon types, all Tediore products (including grenades and rocket launchers) now innately have ammo regeneration that scales with rarity thanks to Tediore's digistruct technology. (Thank you to Aaron0000 for permission to incorporate Tediore REGENdaries.)
 
-Additionally, Aaron0000's Splitter Retcher is included by default. Please note that you must pick a graphical effect for it in the Filter Tool or by commenting out the one you don't want to use with a # at the front. At extremely high fire rates, you may experience game performance issues.
+Additionally, Aaron0000's Splitter Retcher is included by default. Please note that you must pick a graphical effect for it in the Filter Tool or by commenting out the one you don't want to use with a # at the front. At extremely high fire rates, you may experience game performance issues. If you want to use the Splitter Retcher and Better Splatguns at the same time, you must disable the Retcher portion of Better Splatguns.
+
+Coded by: Orudeon
+Designed by: Orudeon, Zububu, AngrierPat, the_Nocturni, et al.
 
 Changelog: 
+
+v1.3
 
 v1.2
 Converted Rocket Launcher code to a simpler version that only buffs Type. E-Tech barrel has a counter-nerf attached to keep relative damage the same.
@@ -23,8 +26,6 @@ v1.1
 Reduced Tediore reload buff formula from 1.85 to 1.70
 Reduced SMG ammo regeneration to make it a more compelling resource.
 Reduced Shotgun ammo regeneration to make it a more compelling resource.
-
-##########
 
 #</Description>
 
@@ -51,8 +52,6 @@ set gd_balance_healthanddamage.healthanddamage.init_tediorereloaddamage valuefor
 #<SMGs>
 
 #<Description>
-
-SMGs
 
 Slightly buffs base damage of Tediore SMGs at the Type-level and buffs sustained fire accuracy. Reduces the Baby Maker's Weapon Damage multiplier to counter the increased damage from reloading.
 
@@ -212,13 +211,9 @@ set GD_Weap_Launchers.A_Weapons.WT_Tediore_Launcher:AttributePresentationDefinit
 
 #<Description>
 
-##########
-
 Shotguns
 
 Buff baseline shotgun clip size, fire rate, and sustained fire accuracy. Tediore barrel now grants +1 projectile and 5% damage for brand match, 15% reload speed and 10% tighter spread to all shotguns.
-
-##########
 
 #</Description>
 
@@ -240,8 +235,6 @@ set GD_Weap_Shotgun.Barrel.SG_Barrel_Tediore_Deliverance WeaponAttributeEffects 
 
 #<Description>
 
-##########
-
 Retcher (by Aaron0000)
 
 With permission from Aaron0000, the Retcher modifications from his Splitters mod has been incorporated. It is the opinion of the mod author that the Splitter version is what splatguns should have been. The Retcher now rapidly fires a cone of high-damage directed energy beams.
@@ -249,8 +242,6 @@ With permission from Aaron0000, the Retcher modifications from his Splitters mod
 Code used with permission from Splittersv5.
 
 Important note: If the energy beams causes performance issues, please toggle the firing effect to assault rifle pellets.
-
-##########
 
 #</Description>
 
@@ -314,11 +305,7 @@ set GD_Weap_Shotgun.FiringModes.Bullets_Splatgun_Hyperion ConditionalPartSysTemp
 
 #<Description>
 
-##########
-
 Grant all Tediore shotguns baseline ammo regeneration. (Thank you to Aaron0000 for permission to adapt his code.)
-
-##########
 
 #</Description>
 
@@ -382,17 +369,26 @@ set GD_Weap_Shotgun.A_Weapons.WT_Tediore_Shotgun:AttributePresentationDefinition
 
 #</ItemCardDescription>
 
+#<Tediore Reload Behavior>
+
+Alters Tediore Splatgun and Retcher reload behavior by lowering child grenade velocity and increasing the child grenades to three.
+
+#<Code>
+set GD_Weap_Shotgun.Projectiles.Projectile_TedioreReloadShotgun_Alien:BehaviorProviderDefinition_0.Behavior_SpawnProjectile_114 NumProjectilesFormula (BaseValueConstant=3.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+
+set GD_Weap_Shotgun.Projectiles.Projectile_SplatBall_TedioreReload UpwardVelocityBonus 250.000000
+
+set GD_Weap_Shotgun.Projectiles.Projectile_SplatBall_TedioreReload SpeedFormula (BaseValueConstant=250.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+#</Code>
+#</Tediore Reload Behavior>
+
 #</Shotguns>
 
 #<Handguns>
 
 #<Description>
 
-##########
-
 Slightly buff pistol accuracy, spread, and damage.
-
-##########
 
 #</Description>
 
