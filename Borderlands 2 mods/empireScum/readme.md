@@ -1,0 +1,3 @@
+The scimitar replaces the rapier. The scimitar deals +100% melee damage and cannot be shot. When equipped, it heals the wielder at the rate of 30% of all damage done. The curse of the porcelain fist is still intact.
+
+The grog nozzle is a contraversial weapon due to it's healing power. However, melee characters (Kreig and Zer0) rely upon it to health gate. This weapon is meant to alleviate some of the problems introduced by the Grog Nozzle, while allowing heroes that depend upon it to continue with their schtick.
