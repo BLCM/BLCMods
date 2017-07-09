@@ -47,3 +47,7 @@
 #13. [GrenadeUnlocker.txt](https://raw.githubusercontent.com/BLCM/BLCMods/master/Borderlands%202%20mods/FromDarkHell/GrenadeUnlocker.txt)
 
 	Allows every grenade to have every element - Credit to Aaron0000
+
+#14. [Brick.txt](https://raw.githubusercontent.com/BLCM/BLCMods/master/Borderlands%202%20mods/FromDarkHell/Brick.txt)
+
+	Changes Krieg's skills to have skills like Brick from BL1
