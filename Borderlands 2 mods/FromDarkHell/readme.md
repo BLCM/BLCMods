@@ -6,7 +6,7 @@
  
   	Changes Weapons from BL2 into weapons from BL1
 
- #3. [EveryLoot.txt](https://raw.githubusercontent.com/BLCM/BLCMods/master/Borderlands%202%20mods/FromDarkHell/EveryLoot.txt)
+ #3. [EveryLoot.txt](https://www.dropbox.com/s/f1or67psc8rkzwu/EveryLoot.txt?dl=0)
  
 	Puts every item into every loot pool but they drop like white weapons
 
