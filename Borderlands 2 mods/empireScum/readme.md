@@ -8,4 +8,4 @@ Special thanks to zububu for the idea.
 #2: Singularity Unf0reseen
 *Replaces the shock damage of Unf0reseen with non-elemental damage and a singularity effect*
 
-Special thanks to Mike and everybody else who pointed me in the right direction
+Special thanks to Mike for letting me "borrow" and modify his code for Slag Unf0reseen
