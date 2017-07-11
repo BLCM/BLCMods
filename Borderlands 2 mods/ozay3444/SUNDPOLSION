@@ -1,0 +1,45 @@
+=======================================
+DO NOT USE IF YOU SUFFER FROM EPILEPSY!
+=======================================
+replace the logbow
+
+brake e-tech bandit luncher and probobly some singularity grenades
+
+My favorite gun so far...THE SUNSPOLSION!
+
+Can be OP if you swap weapons  and shot so....dont do it
+
+Creat a very big expolision the melt every thin
+
+has infinite ammo
+
+if you want to survive you need grande resistan,a lot! (you can use my testing relice)
+
+created by ozay (or oz youhay)
+
+HF
+
+=======================================
+##shots##
+set GD_Weap_SniperRifles.Barrel.SR_Barrel_Alien_Longbow CustomFiringModeDefinition FiringModeDefinition'GD_Weap_Launchers.FiringModes.FM_Alien_Bandit'
+
+set GD_Weap_Launchers.Projectiles.Projectile_Alien_Bandit_Plasma GravityScaling -0.002000
+
+set GD_Weap_Launchers.Projectiles.Projectile_Alien_Bandit_Plasma:BehaviorProviderDefinition_0.Behavior_SpawnProjectile_20 ProjectileDefinition ProjectileDefinition'GD_GrenadeMods.Projectiles.Grenade_SingularityChild'
+
+set GD_Weap_Launchers.Projectiles.Projectile_Alien_Bandit_Plasma SpeedFormula (BaseValueConstant=50.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+set GD_Weap_Launchers.Projectiles.Projectile_Alien_Bandit_Plasma InFlightEffectsScale 9.000000
+set GD_Weap_Launchers.Projectiles.Projectile_Alien_Bandit_Plasma MaxLifeSpan 55.000000
+
+set GD_Weap_Launchers.Projectiles.Projectile_Alien_Bandit_Plasma DamageRadius (BaseValueConstant=100000.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+set GD_Weap_Launchers.Projectiles.Projectile_Alien_Bandit_Plasma Damage (BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+
+set GD_GrenadeMods.Projectiles.Grenade_SingularityChild InFlightEffects ParticleSystem'FX_WEP_Grenades_Px.Particles.Part_SingularityAttraction_Px'
+set GD_GrenadeMods.Projectiles.Grenade_SingularityChild InFlightEffectsScale 8.000000
+
+set GD_GrenadeMods.Projectiles.Grenade_SingularityChild AmbientAkEvent Ake_Wep_Grenades.Grenade_Classes.Ak_Play_Wep_Grenade_Singularity_Charge
+##stats##
+set GD_Weap_SniperRifles.Barrel.SR_Barrel_Alien_Longbow WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=49.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.GrenadeMod.BlastRadius',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=10000000.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0.050000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectileSpeedMultiplier',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-12.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0.050000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=100.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponExtraShotChance',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-10.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=100.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+##name##
+set GD_Weap_SniperRifles.Name.Title.Title__Unique_Longbow PartName THE SUNSPOLSION!
+set GD_Weap_SniperRifles.Name.Title.Title__Unique_Longbow:AttributePresentationDefinition_8 NoConstraintText A big big sun.
