@@ -1,0 +1,253 @@
+#<Better Splatguns>
+
+    Alters Splatguns to have bonus projectiles, bonus velocity, bonus fire rate, no self-damage, and no gravity. This mod eliminates the spawn chance of Tech 2 (Critical) from all Splatguns due to it being useless. Please note this does not despawn existing Tech 2. Additionally, all Splatguns allow you to pick whether Splatguns do Reaper, Rocket, or Grenade splash. Please choose carefully, as these are not inter-compatible.
+
+    This mod is incompatible with Aaron0000's Splitters. This mod contains compatibility code for Bayonets On Slot 2 and Jakobs/Torgue Etech compatibility code is included in the Generic barrel section. Enable this after JTET if you use it.
+
+    Coded by Orudeon with major assistance from the_Nocturni. It is highly recommended you use LightChaosman's Filter Tool to install this.
+
+    Changelog:
+	V1.2
+    Reorganized all configuration data to make it much easier to configure things in LightChaosman's Filter Tool.
+	
+    V1.1	
+    Move all self-damage to its own category for easy toggling.
+
+    V1.05
+    Added missing compatibility code for generic and Hyperion barrels.
+
+    #<Self-Damage>
+
+        Eliminates all Splatgun self-damage. Disable this if your build (e.g. Backdraft Maya) depends on self-damage.
+
+        set GD_Orchid_RaidWeapons.Shotgun.Spitter.Orchid_Seraph_Spitter_Projectile:BehaviorProviderDefinition_0.Behavior_Explode_8 InstigatorSelfDamageScale 0.000000
+
+        set GD_Iris_Weapons.Projectiles.Projectile_SplatBall_SlowHand:BehaviorProviderDefinition_0.Behavior_Explode_5 InstigatorSelfDamageScale 0.00000
+
+        set GD_Weap_Shotgun.Projectiles.Projectile_SplatBall_Hyperion:BehaviorProviderDefinition_0.Behavior_Explode_97 InstigatorSelfDamageScale 0.0000
+
+        set GD_Weap_Shotgun.Projectiles.Projectile_SplatBall_Hyperion:BehaviorProviderDefinition_0.Behavior_Explode_98 InstigatorSelfDamageScale 0.0000
+
+        set GD_Weap_Shotgun.Projectiles.Projectile_SplatBall:BehaviorProviderDefinition_0.Behavior_Explode_5  InstigatorSelfDamageScale 0.00000
+
+    #</Self-Damage>
+
+    #<Splash Format>
+
+        Allows you to pick the kind of splash Splatguns do based on barrel. Defaults to Reaper if not configured.
+
+        #<General Barrel><MUT>
+
+            #<Grenade>
+
+                set GD_Iris_Weapons.Projectiles.Projectile_SplatBall_SlowHand:BehaviorProviderDefinition_0.Behavior_Explode_5  DamageSource Class'WillowGame.WillowDmgSource_Grenade'
+
+            #</Grenade>
+
+            #<Rocket>
+
+                set GD_Iris_Weapons.Projectiles.Projectile_SplatBall_SlowHand:BehaviorProviderDefinition_0.Behavior_Explode_5  DamageSource Class'WillowGame.WillowDmgSource_Rocket'
+
+            #</Rocket>
+
+            #<Shotgun (Reaper)>
+
+                set GD_Iris_Weapons.Projectiles.Projectile_SplatBall_SlowHand:BehaviorProviderDefinition_0.Behavior_Explode_5  DamageSource Class'WillowGame.WillowDmgSource_Shotgun'
+
+            #</Shotgun (Reaper)>
+
+        #</General Barrel>
+
+        #<Hyperion><MUT>
+
+            #<Grenade>
+
+                set GD_Weap_Shotgun.Projectiles.Projectile_SplatBall_Hyperion:BehaviorProviderDefinition_0.Behavior_Explode_97 DamageSource Class'WillowGame.WillowDmgSource_Grenade'
+
+                set GD_Weap_Shotgun.Projectiles.Projectile_SplatBall_Hyperion:BehaviorProviderDefinition_0.Behavior_Explode_98 DamageSource Class'WillowGame.WillowDmgSource_Grenade'
+
+            #</Grenade>
+
+            #<Rocket>
+
+                set GD_Weap_Shotgun.Projectiles.Projectile_SplatBall_Hyperion:BehaviorProviderDefinition_0.Behavior_Explode_97 DamageSource Class'WillowGame.WillowDmgSource_Rocket'
+
+                set GD_Weap_Shotgun.Projectiles.Projectile_SplatBall_Hyperion:BehaviorProviderDefinition_0.Behavior_Explode_98 DamageSource Class'WillowGame.WillowDmgSource_Rocket'
+
+            #</Rocket>
+
+            #<Shotgun (Reaper)>
+
+                set GD_Weap_Shotgun.Projectiles.Projectile_SplatBall_Hyperion:BehaviorProviderDefinition_0.Behavior_Explode_97 DamageSource Class'WillowGame.WillowDmgSource_Shotgun'
+
+                set GD_Weap_Shotgun.Projectiles.Projectile_SplatBall_Hyperion:BehaviorProviderDefinition_0.Behavior_Explode_98 DamageSource Class'WillowGame.WillowDmgSource_Shotgun'
+
+            #</Shotgun (Reaper)>
+
+        #</Hyperion>
+
+        #<Slow Hand><MUT>
+
+            #<Grenade>
+
+                set GD_Iris_Weapons.Projectiles.Projectile_SplatBall_SlowHand:BehaviorProviderDefinition_0.Behavior_Explode_5  DamageSource Class'WillowGame.WillowDmgSource_Grenade'
+
+            #</Grenade>
+
+            #<Rocket>
+
+                set GD_Iris_Weapons.Projectiles.Projectile_SplatBall_SlowHand:BehaviorProviderDefinition_0.Behavior_Explode_5  DamageSource Class'WillowGame.WillowDmgSource_Rocket'
+
+            #</Rocket>
+
+            #<Shotgun (Reaper)>
+
+                set GD_Iris_Weapons.Projectiles.Projectile_SplatBall_SlowHand:BehaviorProviderDefinition_0.Behavior_Explode_5  DamageSource Class'WillowGame.WillowDmgSource_Shotgun'
+
+            #</Shotgun (Reaper)>
+
+        #</Slow Hand>
+
+        #<Retcher><MUT>
+
+            #<Grenade>
+
+                #set GD_Orchid_RaidWeapons.Shotgun.Spitter.Orchid_Seraph_Spitter_Projectile:BehaviorProviderDefinition_0.Behavior_Explode_8 DamageSource Class'WillowGame.WillowDmgSource_Grenade'<off>
+
+            #</Grenade>
+
+            #<Rocket>
+
+                #set GD_Orchid_RaidWeapons.Shotgun.Spitter.Orchid_Seraph_Spitter_Projectile:BehaviorProviderDefinition_0.Behavior_Explode_8 DamageSource Class'WillowGame.WillowDmgSource_Rocket'<off>
+
+            #</Rocket>
+
+            #<Shotgun (Reaper)>
+
+                set GD_Orchid_RaidWeapons.Shotgun.Spitter.Orchid_Seraph_Spitter_Projectile:BehaviorProviderDefinition_0.Behavior_Explode_8 DamageSource Class'WillowGame.WillowDmgSource_Shotgun'
+
+            #</Shotgun (Reaper)>
+
+        #</Retcher>
+
+    #</Splash Format>
+
+    #<Accessory Spawning><MUT>
+
+        #Please enable the version of this that your mod usage requires. Defaults to Bayonets on slot 2 if not configured.<off>
+
+        #<No Compatibility Needed>
+
+            #set GD_Orchid_RaidWeapons.Shotgun.Spitter.Orchid_Seraph_Spitter_Balance:WeaponPartListCollectionDefinition_283 Accessory1PartData (bEnabled=True,WeightedParts=((Part=WeaponPartDefinition'GD_Weap_Shotgun.Accessory.SG_Accessory_Bayonet_1',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=3),(Part=WeaponPartDefinition'GD_Weap_Shotgun.Accessory.SG_Accessory_MoonClip',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=3),(Part=WeaponPartDefinition'GD_Weap_Shotgun.Accessory.SG_Accessory_ShotgunShell',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=3),(Part=WeaponPartDefinition'GD_Weap_Shotgun.Accessory.SG_Accessory_Tech_1',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=3),(Part=WeaponPartDefinition'GD_Weap_Shotgun.Accessory.SG_Accessory_Tech_2',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=0,DefaultWeightIndex=0),(Part=WeaponPartDefinition'GD_Weap_Shotgun.Accessory.SG_Accessory_Tech_3',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=3),(Part=WeaponPartDefinition'GD_Weap_Shotgun.Accessory.SG_Accessory_VerticalGrip',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=3)))<off>
+
+        #</No Compatibility Needed>
+
+        #<Bayonets On Slot 2-Compatible>
+
+            set GD_Orchid_RaidWeapons.Shotgun.Spitter.Orchid_Seraph_Spitter_Balance:WeaponPartListCollectionDefinition_283 Accessory1PartData (bEnabled=True,WeightedParts=((Part=WeaponPartDefinition'GD_Weap_Shotgun.Accessory.SG_Accessory_Bayonet_1',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=0,DefaultWeightIndex=0),(Part=WeaponPartDefinition'GD_Weap_Shotgun.Accessory.SG_Accessory_MoonClip',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=3),(Part=WeaponPartDefinition'GD_Weap_Shotgun.Accessory.SG_Accessory_ShotgunShell',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=3),(Part=WeaponPartDefinition'GD_Weap_Shotgun.Accessory.SG_Accessory_Tech_1',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=3),(Part=WeaponPartDefinition'GD_Weap_Shotgun.Accessory.SG_Accessory_Tech_2',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=0,DefaultWeightIndex=0),(Part=WeaponPartDefinition'GD_Weap_Shotgun.Accessory.SG_Accessory_Tech_3',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=3),(Part=WeaponPartDefinition'GD_Weap_Shotgun.Accessory.SG_Accessory_VerticalGrip',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=3)))
+
+        #</Bayonets On Slot 2-Compatible>
+
+    #</Accessory Spawning>
+
+    #<Common E-Techs>
+
+        Eliminates self-damage and gravity, and increases projectile count and speed of common Splatguns
+
+        Compatibility code for Jakobs and Torgue E-Techs by Aaron0000 included below.
+
+        #<Code>
+
+            set GD_Weap_Shotgun.Projectiles.Projectile_SplatBall_Hyperion PhysicsMode PHYS_Projectile
+
+            set GD_Weap_Shotgun.Projectiles.Projectile_SplatBall_Hyperion UpwardVelocityBonus 0
+
+            set GD_Weap_Shotgun.Projectiles.Projectile_SplatBall_Hyperion GravityScaling 1
+
+            set GD_Weap_Shotgun.Projectiles.Projectile_SplatBall_Hyperion SpeedFormula (BaseValueConstant=4200.000000)
+
+            set GD_Weap_Shotgun.Barrel.SG_Barrel_Alien_Hyperion WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.200000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=5.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponStatusEffectChanceModifier',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-3.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+            set GD_Weap_Shotgun.Projectiles.Projectile_SplatBall PhysicsMode PHYS_Projectile
+
+            set GD_Weap_Shotgun.Projectiles.Projectile_SplatBall UpwardVelocityBonus 0
+
+            set GD_Weap_Shotgun.Projectiles.Projectile_SplatBall GravityScaling 1
+
+            set GD_Weap_Shotgun.Projectiles.Projectile_SplatBall SpeedFormula (BaseValueConstant=4200.000000)
+
+        #</Code>
+
+        #<Barrel Stats><MUT>
+
+            #Please enable the version of this that your mod usage requires. Defaults to Jakobs and Torgue E-Tech if not configured.<off>
+
+            Please enable the version of this that your mod usage requires. Defaults to Jakobs and Torgue E-Tech if not selected.
+
+            #<Jakobs and Torgue E-Techs-Compatible>
+
+                set GD_Weap_Shotgun.Barrel.SG_Barrel_Alien WeaponAttributeEffects((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=4.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponStatusEffectChanceModifier',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-3.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Bandit',InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Bandit',InitializationDefinition=None,BaseValueScaleConstant=3.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Bandit',InitializationDefinition=None,BaseValueScaleConstant=4.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Bandit',InitializationDefinition=None,BaseValueScaleConstant=2.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Bandit',InitializationDefinition=None,BaseValueScaleConstant=0.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=2.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Torgue',InitializationDefinition=None,BaseValueScaleConstant=2.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=2.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Jakobs',InitializationDefinition=None,BaseValueScaleConstant=2.000000)))
+
+            #</Jakobs and Torgue E-Techs-Compatible>
+
+            #<No Compatibility Needed>
+
+                set GD_Weap_Shotgun.Barrel.SG_Barrel_Alien WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=4.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponStatusEffectChanceModifier',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-3.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Bandit',InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Bandit',InitializationDefinition=None,BaseValueScaleConstant=3.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Bandit',InitializationDefinition=None,BaseValueScaleConstant=4.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Bandit',InitializationDefinition=None,BaseValueScaleConstant=2.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Bandit',InitializationDefinition=None,BaseValueScaleConstant=0.000000)))
+
+            #</No Compatibility Needed>
+
+        #</Barrel Stats>
+
+    #</Common E-Techs>
+
+    #<Tediore Reload Behavior>
+
+        Alters Tediore Splatgun and Retcher reload behavior by lowering child grenade velocity and increasing the child grenades to three.
+
+        set GD_Weap_Shotgun.Projectiles.Projectile_TedioreReloadShotgun_Alien:BehaviorProviderDefinition_0.Behavior_SpawnProjectile_114 NumProjectilesFormula (BaseValueConstant=3.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+
+        set GD_Weap_Shotgun.Projectiles.Projectile_SplatBall_TedioreReload UpwardVelocityBonus 250.000000
+
+        set GD_Weap_Shotgun.Projectiles.Projectile_SplatBall_TedioreReload SpeedFormula (BaseValueConstant=250.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+
+        #<Code>
+
+            set GD_Weap_Shotgun.Projectiles.Projectile_TedioreReloadShotgun_Alien:BehaviorProviderDefinition_0.Behavior_SpawnProjectile_114 NumProjectilesFormula (BaseValueConstant=3.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+
+            set GD_Weap_Shotgun.Projectiles.Projectile_SplatBall_TedioreReload UpwardVelocityBonus 250.000000
+
+            set GD_Weap_Shotgun.Projectiles.Projectile_SplatBall_TedioreReload SpeedFormula (BaseValueConstant=250.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+
+        #</Code>
+
+    #</Tediore Reload Behavior>
+
+    #<Retcher>
+
+        Eliminate Retcher self-damage and gravity. Increases status chance to bring it in line with other Splatguns. Disables spawning of Tech 2 (Critical) accessory. Bayonets On Slot 2 compatibility code included.
+
+        set GD_Orchid_RaidWeapons.Shotgun.Spitter.Orchid_Seraph_Spitter_Projectile PhysicsMode PHYS_Projectile
+
+        set GD_Orchid_RaidWeapons.Shotgun.Spitter.Orchid_Seraph_Spitter_Projectile UpwardVelocityBonus 0
+
+        set GD_Orchid_RaidWeapons.Shotgun.Spitter.Orchid_Seraph_Spitter_Projectile GravityScaling 1.000000
+
+        set GD_Orchid_RaidWeapons.Shotgun.Spitter.Orchid_Seraph_Spitter_Projectile SpeedFormula (BaseValueConstant=3000.000000)
+
+        set GD_Orchid_RaidWeapons.Shotgun.Spitter.Orchid_Seraph_Spitter_FireMode SoundDefinition FiringModeSoundDefinition'GD_Weap_Shotgun.FiringModes.SplatGunSoundDefinition'
+
+        set GD_Orchid_RaidWeapons.Shotgun.Spitter.Orchid_Seraph_Spitter_Projectile:BehaviorProviderDefinition_0.Behavior_Explode_8 MomentumFormula (BaseValueConstant=500.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+
+        set GD_Orchid_RaidWeapons.Shotgun.Spitter.Orchid_Seraph_Spitter_Barrel WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=4.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-0.200000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=7.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponReloadSpeed',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.350000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponStatusEffectChanceModifier',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+    #</Retcher>
+
+    #<Slow Hand>
+
+        Slightly redesigns the Slow Hand to be suitable for bleeding enemies to death with elemental damage. It now has two projectiles and doubled elemental damage to take advantage of its innate healing and high elemental chance.
+
+        set GD_Iris_Weapons.Shotguns.SG_Barrel_Alien_SlowHand WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.300000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-3.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=5.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponStatusEffectChanceModifier',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=5.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-4.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponStatusEffectDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+    #</Slow Hand>
+
+#</Better Splatguns>
