@@ -1,0 +1,30 @@
+============================================================================
+replace the Lew
+
+this is a Knife
+
+this pistol cant shot but he can melee, 500% melee daemge,dot shot any projactils and give you speed boost
+
+creatad by ozay (or oz yohay)
+============================================================================
+##stats##
+
+set GD_Weap_Pistol.Barrel.Pistol_Barrel_Dahl_Law WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-999.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=999.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponReloadSpeed',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.100000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.DamageSourceModifiers.InstigatedMeleeDamageModifier',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=5.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))
+
+##speeed Boost##
+
+set GD_Weap_Pistol.Barrel.Pistol_Barrel_Dahl_Law ExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.GameplayAttributes.FootSpeed',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),
+
+##skin##
+
+set GD_Weap_Pistol.ManufacturerMaterials.Mat_Jakobs_3_Law Material MaterialInstanceConstant 'Common_GunMaterials.Materials.Pistol.Mati_DahlUniquePistol_GwensHead'
+
+##name##
+
+set GD_Weap_Pistol.Name.Title.Title__Unique_Law PartName Knife
+set GD_Weap_Pistol.Name.Title.Title__Unique_Law:AttributePresentationDefinition_8 NoConstraintText how need guns.
+
+##rearity##
+
+set GD_Weap_Pistol.Barrel.Pistol_Barrel_Dahl_Law rarity (basevalueattribute=none)
+set GD_Weap_Pistol.Barrel.Pistol_Barrel_Dahl_Law rarity (BaseValueConstant=7)
