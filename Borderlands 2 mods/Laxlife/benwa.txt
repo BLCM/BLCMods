@@ -2,9 +2,9 @@
 By Laxlife
 Ha aHaHaHa Sorry...Ha... Sorry Sorry I was laughing at your name.
 
-This mod changes the SlowHand so that it can be used in place of the Grog and the Rubi, because they are just so boring to use. (Does not remove/change either)
+This mod changes the Slowhand so that it can be used in place of the Grog and the Rubi, because they are just so boring to use. (Does not remove/change either)
 
-Designed to Slag and Healthgate, this mod also makes the SlowHand fun to rocket jump (with a low level of course) and regenerate shotgun ammo. It also can mob decently well, having no trouble running through any map on UVHM+ extreme, but do note if used exclusively to mob, the SlowHand can run into ammo issues similar to that of the Interfacer.
+Designed to Slag and Healthgate, this mod also makes the Slowhand fun to rocket jump (with a low level of course) and regenerate shotgun ammo. It also can mob decently well, having no trouble running through any map on UVHM+ extreme, but do note if used exclusively to mob, the Slowhand can run into ammo issues similar to that of the Interfacer.
 
 Add some life (and an Archer reference) to your dedicated healing and slagging weapon!
 
@@ -14,14 +14,16 @@ This is my first Borderlands Mod, so feed back is appreciated and there's more s
 Features;
 Increased Mag Capacity - 30
 Reduced Ammo per Shot - Consumes 1 per shot
-Reduced Damage
+Reduced Gun Damage
 Increased Fire-Rate
 Increased Healing - 10%
 Increased Projectiles
+Increased weapon equip and unequip speed (by alot)
+Slowly regens shotgun ammo (also using a low level + sham will give shotgun ammo)
 
 Credit;
-Mike: For the amazing skin.
-Dankmeimes <3: Helping me field test and hone this mod.
+Mike: For the AMAZING skin.
+Dankmeimes <3: Helping me field test and balance this mod.
 
 
 #######
@@ -33,14 +35,12 @@ set GD_Iris_Weapons.Name.Title.Title_Unique_SlowHand Partname Benoit
 
 set GD_Iris_Weapons.Name.Title.Title_Unique_SlowHand:AttributePresentationDefinition_8 NoConstraintText <font color="#C14242">I mean. You know what it sounds like right? Sounds like Ben Wa Balls... Benoit... Balls!<br><font color="#FFFFFF">�<font color="#FFFF00"> Nailed it!
 
-
 //Barrel
 
 set GD_Iris_Weapons.Shotguns.SG_Barrel_Alien_SlowHand ExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.DamageEnhancementModifiers.PlayerConvertDamageToHealingPercent',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.100000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Combat_Shotgun.Ammo_Combat_Shotgun_RegenerationRate',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.75,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
 
 set GD_Iris_Weapons.Shotguns.SG_Barrel_Alien_SlowHand WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-.5000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=6.00000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-99999.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=30.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponReloadSpeed',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-0.250000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponStatusEffectChanceModifier',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=5.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.100000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponStatusEffectDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponEquipTime',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponPutDownTime',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
 
-//Firing effect
 
 //Reskin
 
