@@ -1,0 +1,226 @@
+#<Better Grenades>
+
+    #<Skyrocket>
+
+        #<makes it scale to OP8>
+
+            set GD_GrenadeMods.BalanceAttributes.Init_SkyRocketDamage ValueFormula (bEnabled=True,Multiplier=(BaseValueConstant=120.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),Level=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'GD_Balance_HealthAndDamage.HealthAndDamage.Att_UniversalBalanceScaler',InitializationDefinition=None,BaseValueScaleConstant=1.000000),Power=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'GD_Lobelia_GameStages.Attributes.GameStageViaGetGameStage',InitializationDefinition=None,BaseValueScaleConstant=1.000000),Offset=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))
+
+        #</makes it scale to OP8>
+
+        #<50% self damage>
+
+            set GD_GrenadeMods.Projectiles.Grenade_SkyRocketChild:BehaviorProviderDefinition_1.Behavior_Explode_2 InstigatorSelfDamageScale 0.250000
+
+        #</50% self damage>
+
+    #</Skyrocket>
+
+    #<Breath of Terra>
+
+        #<Double Projectiles>
+
+            set GD_GrenadeMods.Projectiles.Grenade_FlameSpurt:BehaviorProviderDefinition_1.Behavior_SpawnProjectile_194 NumProjectilesFormula (BaseValueConstant=2.000000)
+
+            set GD_GrenadeMods.Projectiles.Grenade_FlameSpurt:BehaviorProviderDefinition_1.Behavior_SpawnProjectile_69 NumProjectilesFormula (BaseValueConstant=2.000000)
+
+            set GD_GrenadeMods.Projectiles.Grenade_FlameSpurt:BehaviorProviderDefinition_1.Behavior_SpawnProjectile_65 NumProjectilesFormula (BaseValueConstant=2.000000)
+
+            set GD_GrenadeMods.Projectiles.Grenade_FlameSpurt:BehaviorProviderDefinition_1.Behavior_SpawnProjectile_62 NumProjectilesFormula (BaseValueConstant=2.000000)
+
+            set GD_GrenadeMods.Projectiles.Grenade_FlameSpurt:BehaviorProviderDefinition_1.Behavior_SpawnProjectile_61 NumProjectilesFormula (BaseValueConstant=2.000000)
+
+            set GD_GrenadeMods.Projectiles.Grenade_FlameSpurt:BehaviorProviderDefinition_1.Behavior_SpawnProjectile_8 NumProjectilesFormula (BaseValueConstant=2.000000)
+
+            set GD_GrenadeMods.Projectiles.Grenade_FlameSpurtChild:BehaviorProviderDefinition_1.Behavior_SpawnProjectile_10 NumProjectilesFormula (BaseValueConstant=2.000000)
+
+        #</Double Projectiles>
+
+        #<"Quake" effect>
+
+            set GD_GrenadeMods.Projectiles.Grenade_FlameSpurt:BehaviorProviderDefinition_1.Behavior_CauseDamage_0 MomentumFormula (BaseValueConstant=-110000.000000)
+
+        #</"Quake" effect>
+
+        #<initial explosion deals no self damage>
+
+            set GD_GrenadeMods.Projectiles.Grenade_Longbow:BehaviorProviderDefinition_1.Behavior_SpawnProjectile_119 bInflictRadiusDamageOnOwner False
+
+            set GD_GrenadeMods.Projectiles.Grenade_Homing:BehaviorProviderDefinition_1.Behavior_SpawnProjectile_1 bInflictRadiusDamageOnOwner False
+
+            set GD_GrenadeMods.Projectiles.Grenade_Lob:BehaviorProviderDefinition_1.Behavior_SpawnProjectile_47 bInflictRadiusDamageOnOwner False
+
+            set GD_GrenadeMods.Projectiles.Grenade_Rubberized:BehaviorProviderDefinition_1.Behavior_SpawnProjectile_160 bInflictRadiusDamageOnOwner False
+
+        #</initial explosion deals no self damage>
+
+    #</Breath of Terra>
+
+    #<Nasty Surprise>
+
+        #<Increase Status Effect Chance>
+
+            set GD_GrenadeMods.Projectiles.Grenade_NastySurprise:BehaviorProviderDefinition_1.Behavior_SpawnProjectile_38 ChildProjectileBaseValues ((Attribute=AttributeDefinition'D_Attributes.Projectile.ProjectileDamage',BaseValue=(BaseValueConstant=100.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.Projectile.ProjectileDamage',InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(Attribute=AttributeDefinition'D_Attributes.Projectile.ProjectileMomentumTransfer',BaseValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.Projectile.ProjectileMomentumTransfer',InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(Attribute=AttributeDefinition'D_Attributes.Projectile.ProjectileStatusEffectDamage',BaseValue=(BaseValueConstant=80.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.Projectile.ProjectileStatusEffectDamage',InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(Attribute=AttributeDefinition'D_Attributes.Projectile.ProjectileStatusEffectChanceModifier',BaseValue=(BaseValueConstant=1.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.Projectile.ProjectileStatusEffectChanceModifier',InitializationDefinition=None,BaseValueScaleConstant=1.300000)),(Attribute=AttributeDefinition'D_Attributes.Projectile.ProjectileDamageRadius',BaseValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.Projectile.ProjectileDamageRadius',InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(Attribute=AttributeDefinition'D_Attributes.Projectile.FuseTime',BaseValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.Projectile.FuseTime',InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(Attribute=AttributeDefinition'D_Attributes.Projectile.NumberOfChildProjectiles',BaseValue=(BaseValueConstant=5.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.Projectile.NumberOfChildProjectiles',InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+            set GD_GrenadeMods.Projectiles.Grenade_NastySurprise:BehaviorProviderDefinition_1.Behavior_SpawnProjectile_40 ChildProjectileBaseValues ((Attribute=AttributeDefinition'D_Attributes.Projectile.ProjectileDamage',BaseValue=(BaseValueConstant=100.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.Projectile.ProjectileDamage',InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(Attribute=AttributeDefinition'D_Attributes.Projectile.ProjectileMomentumTransfer',BaseValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.Projectile.ProjectileMomentumTransfer',InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(Attribute=AttributeDefinition'D_Attributes.Projectile.ProjectileStatusEffectDamage',BaseValue=(BaseValueConstant=80.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.Projectile.ProjectileStatusEffectDamage',InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(Attribute=AttributeDefinition'D_Attributes.Projectile.ProjectileStatusEffectChanceModifier',BaseValue=(BaseValueConstant=1.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.Projectile.ProjectileStatusEffectChanceModifier',InitializationDefinition=None,BaseValueScaleConstant=1.300000)),(Attribute=AttributeDefinition'D_Attributes.Projectile.ProjectileDamageRadius',BaseValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.Projectile.ProjectileDamageRadius',InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(Attribute=AttributeDefinition'D_Attributes.Projectile.FuseTime',BaseValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.Projectile.FuseTime',InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(Attribute=AttributeDefinition'D_Attributes.Projectile.NumberOfChildProjectiles',BaseValue=(BaseValueConstant=5.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.Projectile.NumberOfChildProjectiles',InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+            set GD_GrenadeMods.Projectiles.Grenade_NastySurprise:BehaviorProviderDefinition_1.Behavior_SpawnProjectile_42 ChildProjectileBaseValues ((Attribute=AttributeDefinition'D_Attributes.Projectile.ProjectileDamage',BaseValue=(BaseValueConstant=100.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.Projectile.ProjectileDamage',InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(Attribute=AttributeDefinition'D_Attributes.Projectile.ProjectileMomentumTransfer',BaseValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.Projectile.ProjectileMomentumTransfer',InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(Attribute=AttributeDefinition'D_Attributes.Projectile.ProjectileStatusEffectDamage',BaseValue=(BaseValueConstant=80.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.Projectile.ProjectileStatusEffectDamage',InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(Attribute=AttributeDefinition'D_Attributes.Projectile.ProjectileStatusEffectChanceModifier',BaseValue=(BaseValueConstant=1.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.Projectile.ProjectileStatusEffectChanceModifier',InitializationDefinition=None,BaseValueScaleConstant=1.300000)),(Attribute=AttributeDefinition'D_Attributes.Projectile.ProjectileDamageRadius',BaseValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.Projectile.ProjectileDamageRadius',InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(Attribute=AttributeDefinition'D_Attributes.Projectile.FuseTime',BaseValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.Projectile.FuseTime',InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(Attribute=AttributeDefinition'D_Attributes.Projectile.NumberOfChildProjectiles',BaseValue=(BaseValueConstant=5.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.Projectile.NumberOfChildProjectiles',InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+            set GD_GrenadeMods.Projectiles.Grenade_NastySurprise:BehaviorProviderDefinition_1.Behavior_SpawnProjectile_44 ChildProjectileBaseValues ((Attribute=AttributeDefinition'D_Attributes.Projectile.ProjectileDamage',BaseValue=(BaseValueConstant=100.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.Projectile.ProjectileDamage',InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(Attribute=AttributeDefinition'D_Attributes.Projectile.ProjectileMomentumTransfer',BaseValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.Projectile.ProjectileMomentumTransfer',InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(Attribute=AttributeDefinition'D_Attributes.Projectile.ProjectileStatusEffectDamage',BaseValue=(BaseValueConstant=80.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.Projectile.ProjectileStatusEffectDamage',InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(Attribute=AttributeDefinition'D_Attributes.Projectile.ProjectileStatusEffectChanceModifier',BaseValue=(BaseValueConstant=1.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.Projectile.ProjectileStatusEffectChanceModifier',InitializationDefinition=None,BaseValueScaleConstant=1.300000)),(Attribute=AttributeDefinition'D_Attributes.Projectile.ProjectileDamageRadius',BaseValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.Projectile.ProjectileDamageRadius',InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(Attribute=AttributeDefinition'D_Attributes.Projectile.FuseTime',BaseValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.Projectile.FuseTime',InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(Attribute=AttributeDefinition'D_Attributes.Projectile.NumberOfChildProjectiles',BaseValue=(BaseValueConstant=5.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.Projectile.NumberOfChildProjectiles',InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+        #</Increase Status Effect Chance>
+
+        #<Double Grenades>
+
+            set GD_GrenadeMods.Projectiles.Grenade_NastySurprise:BehaviorProviderDefinition_1.Behavior_SpawnProjectile_38 NumProjectilesFormula (BaseValueConstant=2.000000)
+
+            set GD_GrenadeMods.Projectiles.Grenade_NastySurprise:BehaviorProviderDefinition_1.Behavior_SpawnProjectile_40 NumProjectilesFormula (BaseValueConstant=2.000000)
+
+            set GD_GrenadeMods.Projectiles.Grenade_NastySurprise:BehaviorProviderDefinition_1.Behavior_SpawnProjectile_42 NumProjectilesFormula (BaseValueConstant=2.000000)
+
+            set GD_GrenadeMods.Projectiles.Grenade_NastySurprise:BehaviorProviderDefinition_1.Behavior_SpawnProjectile_44 NumProjectilesFormula (BaseValueConstant=2.000000)
+
+        #</Double Grenades>
+
+        #<Less Fuse Time>
+
+            set GD_GrenadeMods.Delivery.Delivery_NastySurprise AttributeSlotUpgrades ((SlotName="FuseTime",GradeIncrease=-2,bActivateSlot=True))
+
+        #</Less Fuse Time>
+
+    #</Nasty Surprise>
+
+    #<Rolling Thunder>
+
+        #<Bounce explosion radius increase & no self damage>
+
+            set GD_GrenadeMods.Projectiles.Grenade_Rubberized:BehaviorProviderDefinition_1.Behavior_Explode_44 DamageRadiusFormula (BaseValueConstant=819.000000)
+
+            set GD_GrenadeMods.Projectiles.Grenade_Rubberized:BehaviorProviderDefinition_1.Behavior_Explode_44 InstigatorSelfDamageScale 0.000000
+
+        #</Bounce explosion radius increase & no self damage>
+
+        #<Damage Increase>
+
+            set GD_GrenadeMods.Delivery.Delivery_RollingThunder ItemAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.GrenadeMod.GrenadeDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.300000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+        #</Damage Increase>
+
+    #</Rolling Thunder>
+
+    #<Homing>
+
+        #<Double projectile speed>
+
+            set GD_GrenadeMods.Projectiles.Grenade_homing speedformula (Basevalueconstant=1400.000000)
+
+        #</Double projectile speed>
+
+    #</Homing>
+
+    #<Kiss of Death>
+
+        set GD_GrenadeMods.Projectiles.Grenade_Homing:BehaviorProviderDefinition_1.Behavior_CauseDamage_2 DamageFormula (BaseValueScaleConstant=2.000000)
+
+        set GD_GrenadeMods.Payload.Payload_KissOfDeath ItemAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.GrenadeMod.BlastRadius',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-0.800000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.GrenadeMod.GrenadeDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-0.400000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.GrenadeMod.FuseTime',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=10.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+    #</Kiss of Death>
+
+    #<MIRV>
+
+        set GD_GrenadeMods.Projectiles.Grenade_MirvChild UpwardVelocityBonus -50.000000
+
+        set GD_GrenadeMods.Projectiles.Grenade_MirvChild GravityScaling 1.000000
+
+    #</MIRV>
+
+    #<Orudeon's GrenadeTweaks>
+
+        Enhances most common grenade types to improve usability or brand differentiation. This mod is designed for use with the_Nocturni's Better Grenades but may be used standalone. You may load them in any order, however any mod that alters ExternalAttributeEffects or AttributeSlotUpgrades on grenade materials is incompatible with this mod.
+
+        Coded by: Orudeon
+
+        #<Bandit>
+
+            Bandit grenades increase grenade capacity (+1 for Green, +2 for Blue/Fustercluck, +3 for Purple)
+
+            set GD_GrenadeMods.Material.Material_Bandit_2_Uncommon ExternalAttributeEffects ((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.Ammo_Grenade_Protean.Ammo_Grenade_ProteanMaxValue',ConstraintAttribute=None,ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+            set GD_GrenadeMods.Material.Material_Bandit_3_Rare ExternalAttributeEffects ((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.Ammo_Grenade_Protean.Ammo_Grenade_ProteanMaxValue',ConstraintAttribute=None,ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=2.000000)))
+
+            set GD_GrenadeMods.Material.Material_Bandit_4_VeryRare ExternalAttributeEffects ((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.Ammo_Grenade_Protean.Ammo_Grenade_ProteanMaxValue',ConstraintAttribute=None,ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=3.000000)))
+
+        #</Bandit>
+
+        #<Dahl>
+
+            Increases common Dahl grenade damage by half a rarity.
+
+            set GD_GrenadeMods.Material.Material_Dahl_4_VeryRare AttributeSlotUpgrades (SlotName="Damage",GradeIncrease=4,bActivateSlot=False)
+
+            set GD_GrenadeMods.Material.Material_Dahl_3_Rare AttributeSlotUpgrades (SlotName="Damage",GradeIncrease=4,bActivateSlot=False)
+
+            set GD_GrenadeMods.Material.Material_Dahl_2_Uncommon AttributeSlotUpgrades (SlotName="Damage",GradeIncrease=4,bActivateSlot=False)
+
+            set GD_GrenadeMods.Material.Material_Dahl AttributeSlotUpgrades (SlotName="Damage",GradeIncrease=4,bActivateSlot=False)
+
+        #</Dahl>
+
+        #<Torgue>
+
+            Increases common Torgue grenade child count by one, to a total of three over similar-part Bandit grenades..
+
+            set GD_GrenadeMods.Material.Material_Torgue AttributeSlotUpgrades ((SlotName="ChildCount",GradeIncrease=3,bActivateSlot=False))
+
+            set GD_GrenadeMods.Material.Material_Torgue_2_Uncommon AttributeSlotUpgrades ((SlotName="ChildCount",GradeIncrease=3,bActivateSlot=False))
+
+            set GD_GrenadeMods.Material.Material_Torgue_3_Rare AttributeSlotUpgrades ((SlotName="ChildCount",GradeIncrease=3,bActivateSlot=False))
+
+            set GD_GrenadeMods.Material.Material_Torgue_4_VeryRare AttributeSlotUpgrades ((SlotName="ChildCount",GradeIncrease=3,bActivateSlot=False))
+
+        #</Torgue>
+
+        #<Tediore>
+
+            Tediore grenades replenish over time, starting at one every twenty seconds for whites, going all the way to one every ten seconds for purples. This data is included from Tediore Brand Overhaul.
+
+            set GD_GrenadeMods.Material.Material_Tedior ExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Ammo_Grenade_Protean.Ammo_Grenade_ProteanActiveRegenerationRate',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.05,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))
+
+            set GD_GrenadeMods.Material.Material_Tedior_2_Uncommon ExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Ammo_Grenade_Protean.Ammo_Grenade_ProteanActiveRegenerationRate',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.0625,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))
+
+            set GD_GrenadeMods.Material.Material_Tedior_3_Rare ExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Ammo_Grenade_Protean.Ammo_Grenade_ProteanActiveRegenerationRate',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.0769231,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))
+
+            set GD_GrenadeMods.Material.Material_Tedior_4_VeryRare ExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Ammo_Grenade_Protean.Ammo_Grenade_ProteanActiveRegenerationRate',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))
+
+        #</Tediore>
+
+        #<Maliwan>
+
+            Increases the O-Negative's Child Grenade count by five (to a range of eleven to thirteen) while reverting the fuse timer change introduced in the Unofficial Community Patch to counter the child grenade and power increase. This data is included from Maliwan Brand Tweaks.
+
+            #<Fuse Timer>
+
+                set GD_Iris_SeraphItems.ONegative.Iris_Seraph_GrenadeMod_ONegative_Part_Damage7 AttributeSlotUpgrades ((SlotName="Damage",GradeIncrease=7,bActivateSlot=True))
+
+                set GD_Iris_SeraphItems.ONegative.Iris_Seraph_GrenadeMod_ONegative_Part_Damage6 AttributeSlotUpgrades ((SlotName="Damage",GradeIncrease=6,bActivateSlot=True))
+
+            #</Fuse Timer>
+
+            #<Child Grenades>
+
+                set GD_Iris_SeraphItems.ONegative.Iris_Seraph_GrenadeMod_ONegative AttributeSlotEffects ((SlotName="Damage",bExternalSlot=False,bRunEffectsAsSkill=False,AttributeToModify=AttributeDefinition'D_Attributes.GrenadeMod.GrenadeDamage',ConstraintAttribute=None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.100000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),PerGradeUpgrade=(BaseValueConstant=0.030000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bIncludeInFunStats=False,bIncludeAlliesAsTarget=False,bEnforceMinimumGrade=False,bEnforceMaximumGrade=False,MinimumGrade=0,MaximumGrade=0,TargetInstanceDataName=),(SlotName="DamageRadius",bExternalSlot=False,bRunEffectsAsSkill=False,AttributeToModify=AttributeDefinition'D_Attributes.GrenadeMod.BlastRadius',ConstraintAttribute=None,ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),PerGradeUpgrade=(BaseValueConstant=120.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bIncludeInFunStats=False,bIncludeAlliesAsTarget=False,bEnforceMinimumGrade=True,bEnforceMaximumGrade=False,MinimumGrade=-1,MaximumGrade=0,TargetInstanceDataName=),(SlotName="ChildCount",bExternalSlot=False,bRunEffectsAsSkill=False,AttributeToModify=AttributeDefinition'D_Attributes.GrenadeMod.NumberOfChildProjectiles',ConstraintAttribute=None,ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=5.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),PerGradeUpgrade=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bIncludeInFunStats=True,bIncludeAlliesAsTarget=False,bEnforceMinimumGrade=True,bEnforceMaximumGrade=False,MinimumGrade=0,MaximumGrade=0,TargetInstanceDataName=),(SlotName="FuseTime",bExternalSlot=False,bRunEffectsAsSkill=False,AttributeToModify=AttributeDefinition'D_Attributes.GrenadeMod.FuseTime',ConstraintAttribute=None,ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.600000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.050000),PerGradeUpgrade=(BaseValueConstant=0.600000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bIncludeInFunStats=False,bIncludeAlliesAsTarget=False,bEnforceMinimumGrade=True,bEnforceMaximumGrade=False,MinimumGrade=0,MaximumGrade=0,TargetInstanceDataName=),(SlotName="IsExplosive",bExternalSlot=False,bRunEffectsAsSkill=False,AttributeToModify=AttributeDefinition'D_Attributes.GrenadeMod.GrenadeDamage',ConstraintAttribute=None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),PerGradeUpgrade=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bIncludeInFunStats=False,bIncludeAlliesAsTarget=False,bEnforceMinimumGrade=True,bEnforceMaximumGrade=False,MinimumGrade=0,MaximumGrade=0,TargetInstanceDataName=),(SlotName="IsIncendiary",bExternalSlot=False,bRunEffectsAsSkill=False,AttributeToModify=AttributeDefinition'D_Attributes.GrenadeMod.GrenadeDamage',ConstraintAttribute=None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),PerGradeUpgrade=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bIncludeInFunStats=False,bIncludeAlliesAsTarget=False,bEnforceMinimumGrade=True,bEnforceMaximumGrade=False,MinimumGrade=0,MaximumGrade=0,TargetInstanceDataName=),(SlotName="IsCorrosive",bExternalSlot=False,bRunEffectsAsSkill=False,AttributeToModify=AttributeDefinition'D_Attributes.GrenadeMod.GrenadeDamage',ConstraintAttribute=None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),PerGradeUpgrade=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bIncludeInFunStats=False,bIncludeAlliesAsTarget=False,bEnforceMinimumGrade=True,bEnforceMaximumGrade=False,MinimumGrade=0,MaximumGrade=0,TargetInstanceDataName=),(SlotName="IsShock",bExternalSlot=False,bRunEffectsAsSkill=False,AttributeToModify=AttributeDefinition'D_Attributes.GrenadeMod.GrenadeDamage',ConstraintAttribute=None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),PerGradeUpgrade=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bIncludeInFunStats=False,bIncludeAlliesAsTarget=False,bEnforceMinimumGrade=True,bEnforceMaximumGrade=False,MinimumGrade=0,MaximumGrade=0,TargetInstanceDataName=),(SlotName="IsSlag",bExternalSlot=False,bRunEffectsAsSkill=False,AttributeToModify=AttributeDefinition'D_Attributes.GrenadeMod.GrenadeDamage',ConstraintAttribute=None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),PerGradeUpgrade=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bIncludeInFunStats=False,bIncludeAlliesAsTarget=False,bEnforceMinimumGrade=True,bEnforceMaximumGrade=False,MinimumGrade=0,MaximumGrade=0,TargetInstanceDataName=),(SlotName="StatusEffectChanceModifier_Incendiary",bExternalSlot=False,bRunEffectsAsSkill=False,AttributeToModify=AttributeDefinition'D_Attributes.GrenadeMod.GrenadeModStatusEffectChanceModifier',ConstraintAttribute=AttributeDefinition'D_Attributes.GrenadeMod.GrenadeModIsIncendiary',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),PerGradeUpgrade=(BaseValueConstant=0.130000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bIncludeInFunStats=False,bIncludeAlliesAsTarget=False,bEnforceMinimumGrade=False,bEnforceMaximumGrade=False,MinimumGrade=-1,MaximumGrade=0,TargetInstanceDataName=),(SlotName="StatusEffectChanceModifier_Corrosive",bExternalSlot=False,bRunEffectsAsSkill=False,AttributeToModify=AttributeDefinition'D_Attributes.GrenadeMod.GrenadeModStatusEffectChanceModifier',ConstraintAttribute=AttributeDefinition'D_Attributes.GrenadeMod.GrenadeModIsCorrosive',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),PerGradeUpgrade=(BaseValueConstant=0.115000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bIncludeInFunStats=False,bIncludeAlliesAsTarget=False,bEnforceMinimumGrade=False,bEnforceMaximumGrade=False,MinimumGrade=-1,MaximumGrade=0,TargetInstanceDataName=),(SlotName="StatusEffectChanceModifier_Shock",bExternalSlot=False,bRunEffectsAsSkill=False,AttributeToModify=AttributeDefinition'D_Attributes.GrenadeMod.GrenadeModStatusEffectChanceModifier',ConstraintAttribute=AttributeDefinition'D_Attributes.GrenadeMod.GrenadeModIsShock',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),PerGradeUpgrade=(BaseValueConstant=0.130000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bIncludeInFunStats=False,bIncludeAlliesAsTarget=False,bEnforceMinimumGrade=False,bEnforceMaximumGrade=False,MinimumGrade=-1,MaximumGrade=0,TargetInstanceDataName=),(SlotName="StatusEffectChanceModifier_Slag",bExternalSlot=False,bRunEffectsAsSkill=False,AttributeToModify=AttributeDefinition'D_Attributes.GrenadeMod.GrenadeModStatusEffectChanceModifier',ConstraintAttribute=AttributeDefinition'D_Attributes.GrenadeMod.GrenadeModIsSlag',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),PerGradeUpgrade=(BaseValueConstant=0.150000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bIncludeInFunStats=False,bIncludeAlliesAsTarget=False,bEnforceMinimumGrade=False,bEnforceMaximumGrade=False,MinimumGrade=-1,MaximumGrade=0,TargetInstanceDataName=),(SlotName="StatusEffectDamage_Incendiary",bExternalSlot=False,bRunEffectsAsSkill=False,AttributeToModify=AttributeDefinition'D_Attributes.GrenadeMod.GrenadeModStatusEffectDamage',ConstraintAttribute=AttributeDefinition'D_Attributes.GrenadeMod.GrenadeModIsIncendiary',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance_HealthAndDamage.HealthAndDamage.Init_GrenadeModStatusEffectDamage',BaseValueScaleConstant=1.050000),PerGradeUpgrade=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance_HealthAndDamage.HealthAndDamage.Init_GrenadeModStatusEffectDamage',BaseValueScaleConstant=0.050000),bIncludeInFunStats=True,bIncludeAlliesAsTarget=False,bEnforceMinimumGrade=False,bEnforceMaximumGrade=False,MinimumGrade=-1,MaximumGrade=0,TargetInstanceDataName=),(SlotName="StatusEffectDamage_Corrosive",bExternalSlot=False,bRunEffectsAsSkill=False,AttributeToModify=AttributeDefinition'D_Attributes.GrenadeMod.GrenadeModStatusEffectDamage',ConstraintAttribute=AttributeDefinition'D_Attributes.GrenadeMod.GrenadeModIsCorrosive',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance_HealthAndDamage.HealthAndDamage.Init_GrenadeModStatusEffectDamage',BaseValueScaleConstant=1.050000),PerGradeUpgrade=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance_HealthAndDamage.HealthAndDamage.Init_GrenadeModStatusEffectDamage',BaseValueScaleConstant=0.060000),bIncludeInFunStats=True,bIncludeAlliesAsTarget=False,bEnforceMinimumGrade=False,bEnforceMaximumGrade=False,MinimumGrade=-1,MaximumGrade=0,TargetInstanceDataName=),(SlotName="StatusEffectDamage_Shock",bExternalSlot=False,bRunEffectsAsSkill=False,AttributeToModify=AttributeDefinition'D_Attributes.GrenadeMod.GrenadeModStatusEffectDamage',ConstraintAttribute=AttributeDefinition'D_Attributes.GrenadeMod.GrenadeModIsShock',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance_HealthAndDamage.HealthAndDamage.Init_GrenadeModStatusEffectDamage',BaseValueScaleConstant=1.050000),PerGradeUpgrade=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance_HealthAndDamage.HealthAndDamage.Init_GrenadeModStatusEffectDamage',BaseValueScaleConstant=0.070000),bIncludeInFunStats=True,bIncludeAlliesAsTarget=False,bEnforceMinimumGrade=False,bEnforceMaximumGrade=False,MinimumGrade=-1,MaximumGrade=0,TargetInstanceDataName=))
+
+                #</ChildGrenades>
+
+                #</Maliwan>
+
+                #</Grenade Tweaks>
+
+            #</Child Grenades>
+
+        #</Maliwan>
+
+    #</Orudeon's GrenadeTweaks>
+
+#</Better Grenades>
+
