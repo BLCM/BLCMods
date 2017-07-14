@@ -11,6 +11,10 @@ This version of Tediore Brand Overhaul does not require compatibility code for B
 
 Changelog: 
 
+V1.3a
+Introduced Better Splatguns base compatibility
+Fixed gemstone material bullet deflection
+
 v1.2b
 Added optional Element Fix code for Rocket Launchers.
 Increased child grenades and lowered child grenade velocity of Splatgun reload behavior.
@@ -95,7 +99,8 @@ set GD_Weap_SMG.ManufacturerMaterials.Mat_Tedior_4 ExternalAttributeEffects ((At
 set GD_Weap_SMG.ManufacturerMaterials.Mat_Tedior_5_Legendary ExternalAttributeEffects ((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Patrol_SMG.Ammo_Patrol_SMG_RegenerationRate',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=2.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
 #</LegendaryRegen>
 #<GemstoneRegen>
-set GD_Aster_Weapons.ManufacturerMaterials.Mat_Tediore_4_CubicZerconia_SMG ExternalAttributeEffects ((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Patrol_SMG.Ammo_Patrol_SMG_RegenerationRate',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+set GD_Aster_Weapons.ManufacturerMaterials.Mat_Tediore_4_CubicZerconia_SMG ExternalAttributeEffects ((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Patrol_SMG.Ammo_Patrol_SMG_RegenerationRate',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.GameplayAttributes.PlayerCriticalHitBonus',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=0.150000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.BulletReflection.BulletReflectionOffSelfChance',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=0.150000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.BulletReflection.BulletReflectedOffSelfDamageTakenScale',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=-0.800000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.BulletReflection.BulletReflectedOffSelfDamageScale',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=-0.300000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
 #</GemstoneRegen>
 
 #<AvengerRegen>
@@ -107,7 +112,6 @@ The Avenger naturally regenerates ammo, but Aaron0000's Tediore REGENDaries mod 
 set GD_Gladiolus_Weapons.SMG.SMG_Barrel_Hyperion_Avenger ExternalAttributeEffects ((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Patrol_SMG.Ammo_Patrol_SMG_RegenerationRate',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=5.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Combat_Rifle.Ammo_Combat_Rifle_RegenerationRate',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=3.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Repeater_Pistol.Ammo_Repeater_Pistol_RegenerationRate',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Combat_Shotgun.Ammo_Combat_Shotgun_RegenerationRate',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.300000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Sniper_Rifle.Ammo_Sniper_Rifle_RegenerationRate',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.200000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Rocket_Launcher.Ammo_Rocket_Launcher_RegenerationRate',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.020000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
 
 #</Regen>
-
 #</AvengerRegen>
 
 #<ItemCardDescription>
@@ -235,7 +239,7 @@ set GD_Weap_Shotgun.ManufacturerMaterials.Mat_Tediore_5_Legendary ExternalAttrib
 
 #<GemstoneRegen>
 
-set GD_Aster_Weapons.ManufacturerMaterials.Mat_Tediore_4_CubicZerconia_SG ExternalAttributeEffects ((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Combat_Shotgun.Ammo_Combat_Shotgun_RegenerationRate',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.4,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+set GD_Aster_Weapons.ManufacturerMaterials.Mat_Tediore_4_CubicZerconia_SG ExternalAttributeEffects ((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Combat_Shotgun.Ammo_Combat_Shotgun_RegenerationRate',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.4,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.GameplayAttributes.PlayerCriticalHitBonus',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=0.150000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.BulletReflection.BulletReflectionOffSelfChance',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=0.150000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.BulletReflection.BulletReflectedOffSelfDamageTakenScale',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=-0.800000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.BulletReflection.BulletReflectedOffSelfDamageScale',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=-0.300000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
 
 #</GemstoneRegen>
 
@@ -331,7 +335,8 @@ set GD_Weap_Pistol.ManufacturerMaterials.Mat_Tediore_5_Legendary ExternalAttribu
 
 #<GemstoneRegen>
 
-set GD_Aster_Weapons.ManufacturerMaterials.Mat_Tediore_4_CubicZerconia_Pistol ExternalAttributeEffects ((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Repeater_Pistol.Ammo_Repeater_Pistol_RegenerationRate',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.5,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+set GD_Aster_Weapons.ManufacturerMaterials.Mat_Tediore_4_CubicZerconia_Pistol ExternalAttributeEffects ((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Repeater_Pistol.Ammo_Repeater_Pistol_RegenerationRate',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.5,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.GameplayAttributes.PlayerCriticalHitBonus',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=0.150000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.BulletReflection.BulletReflectionOffSelfChance',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=0.150000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.BulletReflection.BulletReflectedOffSelfDamageTakenScale',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=-0.800000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.BulletReflection.BulletReflectedOffSelfDamageScale',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=-0.300000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
 
 #</GemstoneRegen>
 
