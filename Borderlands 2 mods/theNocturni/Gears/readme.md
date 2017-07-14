@@ -27,6 +27,12 @@ currently contains 2 custom weapons and 2 existing gear change
 	  -O Negative: reverts the community patch's buff of lessening its fuse time, but adds 5 more child grenades to it to compensate(once again Thanks to Orudeon for allowing me to incorporate this from his MaliwanBrandTweaks!)
 	  -MIRVs: makes the child grenades shoot up less, reducing the term between the two explosions while making it less spread out.
 	  -Kiss of Death: Increases fuse time to 10 seconds(this makes it so that the grenade will damage enemies for longer), and increases the damage it does while attached by 100%
+	
+	
+	3-1.BetterGrenadeTweaks.txt
+		
+		BetterGrenades combined with Orudeon's GrenadeTweak.
+		thanks to Orudeon for allowing the merge.
     
 	4. Splash.txt
 	
