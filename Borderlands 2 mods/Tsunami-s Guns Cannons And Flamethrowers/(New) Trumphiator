@@ -1,0 +1,39 @@
+The Trumphiator
+Replaces Conference call
+
+
+Quick ammo regen
+No self damage
+High projectile count
+High recoil
+Low accuracy
+10 round mag
+Very high damage
+Great for some carpet style bombing
+Comes in all elementals
+100% Elemental effect chance
+High elemental status damage
+Skin exists
+
+Complimantary quote from President Donald Trump :D
+
+
+###########################################################
+set GD_Weap_Shotgun.Barrel.SG_Barrel_Hyperion_ConferenceCall CustomFiringModeDefinition FiringModeDefinition'GD_Weap_Shotgun.FiringModes.Bullets_Splatgun'
+
+set GD_Weap_Shotgun.Barrel.SG_Barrel_Hyperion_ConferenceCall WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Hyperion',InitializationDefinition=None,BaseValueScaleConstant=24.100000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=15.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponStatusEffectDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=3.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponStatusEffectChanceModifier',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=100.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectileSpeedMultiplier',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.700000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=100.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.100000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0.000000)))))))))
+
+set GD_Weap_Shotgun.Projectiles.Projectile_SplatBall GravityScaling 1
+
+set GD_Weap_Shotgun.Barrel.SG_Barrel_Hyperion_ConferenceCall ExternalAttributeEffects ((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Combat_Shotgun.Ammo_Combat_Shotgun_RegenerationRate',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=2.203703,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+set GD_Weap_Shotgun.Barrel.SG_Barrel_Hyperion_ConferenceCall AttributeSlotUpgrades ((SlotName="WeaponAccuracyImpulse",GradeIncrease=-30,bActivateSlot=True))
+
+set GD_Weap_Shotgun.Name.Title_Hyperion.Title_Legendary_ConferenceCall PartName Trumphiator
+
+set GD_Weap_Shotgun.Name.Title_Hyperion.Title_Legendary_ConferenceCall:AttributePresentationDefinition_8 NoConstraintText <font color="#D80C0C">We're gonna bomb the shit out of them.
+
+set GD_Weap_Shotgun.Projectiles.Projectile_SplatBall:BehaviorProviderDefinition_0.Behavior_Explode_5 InstigatorSelfDamageScale 0.000000
+
+set GD_Weap_Shotgun.ManufacturerMaterials.Mat_Hyperion_5_Legendary Material MaterialInstanceConstant'Common_GunMaterials.Materials.Shotgun.Mati_HyperionEpic_SG'
+############################################################
