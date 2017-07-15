@@ -7,3 +7,6 @@ Special thanks to zububu for the *sweet* idea.
 >Replaces the shock damage of Unf0reseen with non-elemental damage and a singularity effect
 
 Special thanks to Mike for letting me *borrow* and modify his code for Slag Unf0reseen
+
+#3: Legendary Vendors
+>This mod replaces all loot in the vendor at Uncle Teddy's with legendary loot
