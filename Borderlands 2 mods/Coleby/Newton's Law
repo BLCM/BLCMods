@@ -1,14 +1,18 @@
 #<Newton's Law>
 
-    #Made by Coleby (NOTE: If using the UCP Patch, please disable the Sloth re-skin on the Cosmetic section (use the UCP Filter Tool), or the skin will look bad)
+    Made by Coleby (NOTE: If using the UCP Patch, please disable the Sloth re-skin on the Cosmetic section (use the UCP Filter Tool), or the skin will look bad)
 
-    #Replaces the Sloth
+    Automatic Sniper Rifle with a relatively low fire rate (2.9 default, can be increased with the fire rate accessory)
 
-    #Uses a custom Tinderbox firing mode to re-create bullet drop
+    Replaces the Sloth
+
+    Uses a custom Tinderbox firing mode to re-create bullet drop
+
+    +25% Base Damage (based off of Contraband Sky Rocket's damage formula, meaning that this 25% damage boost will be based off of your level)
 
     #<Name and Weapon Card Description>
 
-        set GD_Weap_SniperRifles.Name.Title.Title__Unique_Sloth:AttributePresentationDefinition_8 NoConstraintText <font color = "#ff0000">Fg=G.m1m2/r2<font color = "#ffffff"><br>While holding/aiming:<br><font color = "#ff0000">Bypass<font color = "#ffffff"> enemies' shields<br><font color = "#ff0000">Heals<font color = "#ffffff"> 1% of damage dealt<br><font color = "#ff0000">Regenerates<font color = "#ffffff"> sniper rifle ammo
+        set GD_Weap_SniperRifles.Name.Title.Title__Unique_Sloth:AttributePresentationDefinition_8 NoConstraintText <font color = "#ff0000">Fg=G.m1m2/r2<font color = "#ffffff"><br>+25% <font color = "#ff0000">Base Damage<font color = "#ffffff"><br><font color = "#ff0000">Bypass<font color = "#ffffff"> enemies' shields<br><font color = "#ff0000">Heals<font color = "#ffffff"> 1% of damage dealt<br><font color = "#ff0000">Regenerates<font color = "#ffffff"> sniper rifle ammo
 
         set GD_Weap_SniperRifles.Name.Title.Title__Unique_Sloth Partname Newton's Law
 
@@ -26,9 +30,9 @@
 
     #<Weapon Attributes>
 
-        set GD_Weap_SniperRifles.Barrel.SR_Barrel_Dahl_Sloth WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_GrenadeMods.BalanceAttributes.Init_SkyRocketDamage',BaseValueScaleConstant=0.075)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)))
+        set GD_Weap_SniperRifles.Barrel.SR_Barrel_Dahl_Sloth WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_GrenadeMods.BalanceAttributes.Init_SkyRocketDamage',BaseValueScaleConstant=0.25)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=10,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.30,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)))
 
-        set GD_Weap_SniperRifles.Barrel.SR_Barrel_Dahl_Sloth ZoomWeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponAutomaticBurstCount',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-2,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponPerShotAccuracyImpulse',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-2,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)))
+        set GD_Weap_SniperRifles.Barrel.SR_Barrel_Dahl_Sloth ZoomWeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponAutomaticBurstCount',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-3,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponPerShotAccuracyImpulse',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-4,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)))
 
         set GD_Weap_SniperRifles.Barrel.SR_Barrel_Dahl_Sloth ExternalAttributeEffects ((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Sniper_Rifle.Ammo_Sniper_Rifle_RegenerationRate',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)),(AttributeToModify=AttributeDefinition'D_Attributes.DamageSourceShieldPenetration.PercentChanceInstigatedBulletDmgIgnoresShields',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=100,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)))
 
