@@ -1,0 +1,56 @@
+<Mod>
+
+	<Description>
+	
+		LOGO
+		
+		this is a description.
+		fill it in with whatever you like.
+		
+	</Description>
+	
+	<Code>
+	
+		<Barrel>
+		
+			set {Barrel from Gibbed} GestaltModeSkeletalMeshName {WeaponType}_Barrel_{Manufacturer}
+			
+		</Barrel>
+		
+		<Attributes>
+		
+			set {Barrel from Gibbed} WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=6.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=3.750000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=5.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponReloadSpeed',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-5.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponAdditionalRicochets',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))) #MODIFY THESE VALUES OTHERWISE IT'LL END UP SOMETHING LIKE MY DECIMATOR MOD!
+			
+		</Attributes>
+		
+		<Skin>
+		
+			set {Material from gibbed} Material MaterialInstanceConstant {Material from my resources} 
+			
+			set {Material ID from my resources} VectorParameterValues ((skin here))
+			
+			set {Material ID from my resources} TextureParameterValues ((skin here))
+			
+			set {Material ID from my resources} ScalarParameterValues ((skin here))
+			
+		</Skin>
+		
+		<Weapon Name and Red Text>
+		
+			set {Title from Gibbed} PartName {your name}
+			
+			set {Title from Gibbed}:AttributePresentationDefinition_8 NoConstraintText <font color="ff0000">Your Red Text here, you could also change the colour by modifying the "ff0000" value.<font color="FFFFFF">
+			
+		</Weapon Name and Red Text>
+		
+		<Rarity>
+		
+		set {Barrel from Gibbed} rarity (basevalueattribute=none)
+		
+		set {Barrel from Gibbed} rarity (BaseValueConstant={value}) # 5 is legendary; 496 is pearl. idk the rest.
+		
+		</Rarity>
+		
+	</Code>
+	
+</Mod>
