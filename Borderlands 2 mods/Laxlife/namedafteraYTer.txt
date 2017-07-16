@@ -1,0 +1,79 @@
+#butcher mod
+#RUN AFTER THE PATCH IT(THE PATCH) INTERFERES WITH THIS
+
+
+#What is does:
+#Increases Movement Speed
+#Changes to OCTO Firing Pattern
+#Increases DMG taken by 150% and 200% ADS
+#Lifesteal = 2%
+#Speedy Equip and Unequip
+#80% crit on hip fire and 150% crit on ADS
+#Slags and does element
+
+#To-DO's
+#Make a motherfuckin Badass skin (or rip one from mike)
+#Red color title and Red shaded item box
+#Either morningstar or smasher to get skills
+#Specific Bane voicelines (if possible)
+#Blue text reminding about increased dmg
+#Fix jump mod interfering with gun footspeed
+#Change screen to warp and be bloody (if possible)
+
+
+
+
+
+set GD_Gladiolus_Weapons.Name.Title.Title_Pearlescent_Butcher Partname Beserker
+set GD_Gladiolus_Weapons.Name.Title.Title_Pearlescent_Butcher:AttributePresentationDefinition_8 NoConstraintText <font color="#660000">Your Prince of Justice and Genocide<font color="#1a1a1a"><br>-<font color="#b30000">There is no mee, there is no youu<font color="#1a1a1a"><br>-<font color="#b30000">There is only the never ending spitt and bile of COMBAT!<font color="#1a1a1a"><br>-<font color="#b30000">The twenty-four hour murder spree of SHINING METAL!<font color="#1a1a1a"><br>-<font color="#b30000">I know what I have become: I AMM the IINSIIDE OF THIS WORLD<font color="#1a1a1a"><br>-<font color="#b30000">I taste the GORE and I smell the CRYING! AND I WANT MORE!<font color="#1a1a1a"><br>-<font color="#b30000">I WANT TO BATH IN YOURR FLESSH<font color="#1a1a1a"><br>-<font color="#b30000">I WANT TO SAVORR YOUR FFFEARR<font color="#1a1a1a"><br>-<font color="#b30000">BECAUSE   I   AM   A   MONSTERR!!!!!
+
+#barrel
+
+Set GD_Gladiolus_Weapons.Shotgun.SG_Barrel_Torgue_Butcher CustomFiringModeDefinition FiringModeDefinition'GD_Weap_Shotgun.FiringModes.Bullet_Shotgun_Octo'
+
+#Attributes
+
+set GD_Gladiolus_Weapons.Shotgun.SG_Barrel_Torgue_Butcher WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-5.700000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.00000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=3.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-0.120000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponEquipTime',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponPutDownTime',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.HealthResourcePool.HealthMaxValue',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.00000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+set GD_Gladiolus_Weapons.Shotgun.SG_Barrel_Torgue_Butcher ExternalAttributeEffects ((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Combat_Shotgun.Ammo_Combat_Shotgun_RegenerationRate',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.700000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.DamageEnhancementModifiers.PlayerConvertDamageToHealingPercent',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.025000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.GameplayAttributes.FootSpeed',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.55000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.GameplayAttributes.PlayerCriticalHitBonus',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.800000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.DamageSourceModifiers.ReceivedAmplifyDamageModifier',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.50000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.DamageSourceModifiers.ReceivedBulletDamageModifier',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.50000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.DamageSourceModifiers.ReceivedGrenadeDamageModifier',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.50000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.DamageSourceModifiers.ReceivedMeleeDamageModifier',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.50000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.DamageSourceModifiers.ReceivedRocketDamageModifier',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.50000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.DamageSourceModifiers.ReceivedStatusEffectDamageModifier',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.50000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.DamageTypeModifers.NormalStatusEffectDamageModifier',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-0.05000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.HealthResourcePool.HealthPassiveRegenerationRate',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.0150000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance_HealthAndDamage.Shields.Init_ShieldItem_BaseRegenRatePercentage',BaseValueScaleConstant=0.00750000)))
+
+
+set GD_Gladiolus_Weapons.Shotgun.SG_Barrel_Torgue_Butcher ZoomExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.DamageSourceModifiers.ReceivedAmplifyDamageModifier',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=2.0000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.DamageSourceModifiers.ReceivedBulletDamageModifier',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=2.0000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.DamageSourceModifiers.ReceivedGrenadeDamageModifier',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=2.0000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.DamageSourceModifiers.ReceivedMeleeDamageModifier',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=2.0000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.DamageSourceModifiers.ReceivedRocketDamageModifier',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=2.0000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.DamageSourceModifiers.ReceivedStatusEffectDamageModifier',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=2.0000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.DamageTypeModifers.NormalStatusEffectDamageModifier',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-0.05000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.GameplayAttributes.PlayerCriticalHitBonus',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+#ammo regen for testing
+####((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Combat_Shotgun.Ammo_Combat_Shotgun_RegenerationRate',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=60.330555,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0.100000))
+
+
+#Bullets
+
+set GD_Weap_Shotgun.FiringModes.Bullet_Shotgun_Octo ExplosionOverrideDefinition None
+set GD_Weap_Shotgun.FiringModes.Bullet_Shotgun_Octo ExplosionOverideInstanceDataName none
+set GD_Weap_Shotgun.FiringModes.Bullet_Shotgun_Octo Speed 4400
+set GD_Weap_Shotgun.FiringModes.Bullet_Shotgun_Octo OnAnyImpact (Behavior_Explode'GD_Aster_RaidWeapons.SMGs.Bullet_SMG_Plasma_Florentine:Behavior_Explode_5')
+
+
+##set GD_Weap_Shotgun.FiringModes.Bullet_Shotgun_Octo RicochetResponse (SplitNum=1,SplitAngle=1.000000,SplitAngleOffset=2.000000,SplitDistance=1.000000,SplitFire=None,NewSpeed=1000,bDetonate=False,bRespawnTracer=True,bUpdateBeamSourceLocation=False,Behaviors=)
+#et GD_Weap_Shotgun.FiringModes.Bullet_Shotgun_Octo Lifetime 99999999.000000
+#et GD_Weap_Shotgun.FiringModes.Bullet_Shotgun_Octo NumRicochets 3
+
+
+#Behavior_Explode'GD_Weap_Shotgun.FiringModes.Bullet_Shotgun_Octo:Behavior_Explode_5'
+
+#et FiringModeDefinition GD_Weap_Shotgun.FiringModes.Bullet_Shotgun_Octo ImpactResponses ((DamageSurfaceType=DMGSURFACE_Flesh,bDisableRegularBulletDamage=False,Behaviors=(Behavior_Explode'GD_Weap_Pistol.FiringModes.Bullets_Pistol_Bandit_Tinderbox:Behavior_Explode_5')),(DamageSurfaceType=DMGSURFACE_Armor,bDisableRegularBulletDamage=False,Behaviors=(Behavior_Explode'GD_Weap_Pistol.FiringModes.Bullets_Pistol_Bandit_Tinderbox:Behavior_Explode_5')),(DamageSurfaceType=DMGSURFACE_Shield,bDisableRegularBulletDamage=False,Behaviors=(Behavior_Explode'GD_Weap_Pistol.FiringModes.Bullets_Pistol_Bandit_Tinderbox:Behavior_Explode_5')))
+
+
+#((DamageSurfaceType=DMGSURFACE_Flesh,bDisableRegularBulletDamage=False,Behaviors=(Behavior_Explode'GD_Weap_Pistol.FiringModes.Bullets_Pistol_Bandit_Tinderbox:Behavior_Explode_5')),(DamageSurfaceType=DMGSURFACE_Armor,bDisableRegularBulletDamage=False,Behaviors=(Behavior_Explode'GD_Sage_RaidWeapons.FiringModes.Bullet_Pistol_Maliwan_Infection:Behavior_Explode_5')),(DamageSurfaceType=DMGSURFACE_Shield,bDisableRegularBulletDamage=False,Behaviors=(Behavior_Explode'GD_Sage_Weapons.FiringModes.Bullet_Shotgun_Twister:Behavior_Explode_5')),(DamageSurfaceType=DMGSURFACE_Generic,bDisableRegularBulletDamage=False,Behaviors=(Behavior_Explode'GD_Iris_Weapons.FiringModes.Bullet_Sniper_Cobra:Behavior_Explode_5')))
+
+#Slag
+set GD_Aster_RaidWeapons.SMGs.Bullet_SMG_Plasma_Florentine:Behavior_Explode_5 DamageSource Class'WillowGame.WillowDmgSource_SubMachineGun'
+set GD_Aster_RaidWeapons.SMGs.Bullet_SMG_Plasma_Florentine:Behavior_Explode_5 Definition ExplosionDefinition'GD_Explosions.Slag.Explosion_SlagMaster'
+
+
+
+
+
+#jump interferes with movement speed ffor some reason ugh
+
+#et D_Attributes.SkillAttributes.RevivalHealthMultiplier:ObjectpropertyAttributeValueResolver_20 PropertyName JumpZ
+#et D_Attributes.Injured.RevivedHealthAmount:SimpleMathValueResolver_0 Argument (BaseValueScaleConstant=0.000000)
+#et GD_Gladiolus_Weapons.Shotgun.SG_Barrel_Torgue_Butcher ExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.SkillAttributes.RevivalHealthMultiplier',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=100.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
