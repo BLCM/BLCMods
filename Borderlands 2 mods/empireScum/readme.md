@@ -4,7 +4,7 @@
 Special thanks to zububu for the *sweet* idea.
 
 #2: Singularity Unf0reseen
->Adds a singularity effect to Unf0reseen that scales with the number of expended skill points 
+>Adds a singularity effect to Unf0reseen that scales with the number of invested skill points 
 
 Special thanks to Mike for letting me *borrow* and modify his Slag Unf0reseen code and to the_Nocturni for helping me with scaling the singularity radius.
 
