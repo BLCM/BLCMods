@@ -1,11 +1,13 @@
-!!!Caution: This weapon might break regular Torgue Shotguns, the Twister, and the Little Evie
+!!!Caution: This weapon might break The Volcano, the Twister, and the Little Evie
 #---------------------------- Change Log ----------------------------#
+	#v2.2 - Messiah pointed out that the accuracy on this wasn't behaving correctly, so with a little investigation, I went and fixed it.
+		# - It was beacause I was using torgue shotgun projectiles. It uses the Volcano firing mode now. All fixed.
 	#v2.1 - Damage decreased again for balancing
 		# - Fixed the Tracer - It should be the Minecraft arrow tracer now.
 	#v2 - Decreased Damage Slightly.
 		# - Fixed the elements so it sould actually slag things now.
 	#v1.2 - Minor Text Fixes
-	#v1.1 - Tiny change because I misplaced a value and crit damage was way to high
+	#v1.1 - Tiny change because I misplaced a value and crit damage was way to0 high
 	#v1 - Initial Release
 #-------------------- Weapon Information --------------------#
 #Replaces the Longbow Sniper
@@ -30,7 +32,11 @@
 		#Jakobs Sight: BL2(hwAAAADp4gCAaIRBDIFEFoBRAAMNxgUMBZgcMGBg/v8zg8kDQw3m)
 
 #Stats
-set GD_Weap_SniperRifles.Barrel.SR_Barrel_Alien_Longbow WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.150000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.900000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectileSpeedMultiplier',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=100.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponPerShotAccuracyImpulse',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-4.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=10.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=-100.000000)))
+set GD_Weap_SniperRifles.Barrel.SR_Barrel_Alien_Longbow WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.150000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.900000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectileSpeedMultiplier',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=100.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponPerShotAccuracyImpulse',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-4.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponPerShotAccuracyImpulse',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-4.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+set GD_Weap_SniperRifles.Barrel.SR_Barrel_Alien_Longbow AttributeSlotUpgrades ((SlotName="WeaponSpread",GradeIncrease=10000,bActivateSlot=True),(SlotName="WeaponZoomFOV",GradeIncrease=4,bActivateSlot=True)))
+set GD_Weap_SniperRifles.FiringModes.Bullet_Sniper_Longbow FiringPatternLines None
+set GD_Weap_SniperRifles.FiringModes.Bullet_Sniper_Volcano FiringPatternLines None
 
 #Ammo Regeneration, Sheild Ignore, Crit Bonus
 set GD_Weap_SniperRifles.Barrel.SR_Barrel_Alien_Longbow ExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.GameplayAttributes.PlayerCriticalHitBonus',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.180000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Sniper_Rifle.Ammo_Sniper_Rifle_RegenerationRate',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),
@@ -44,8 +50,8 @@ set GD_Weap_SniperRifles.Name.Title.Title__Unique_Longbow PartName Marksmen
 set GD_Weap_SniperRifles.Name.Title.Title__Unique_Longbow:AttributePresentationDefinition_8 NoConstraintText <font color="#ff0235">You and I remember Budapest very differently. <br><font color="#FFFFFF">. Deals both<font color="#cc0099">Slag <font color="#FFFFFF">and <font color="#00b6ff">Shock <font color="#FFFFFF">damage.<br>. Completly Ignores enemy shields<br>. Regenerates Ammo over time.
 
 #Firingmode
-set GD_Weap_SniperRifles.Barrel.SR_Barrel_Alien_Longbow CustomFiringModeDefinition FiringModeDefinition 'GD_Weap_Shotgun.FiringModes.Bullets_Shotgun_Torgue_GyroJet'
-set GD_Weap_Shotgun.FiringModes.Bullets_Shotgun_Torgue_GyroJet OnAnyImpact (Behavior_Explode'GD_Sage_Weapons.FiringModes.Bullet_Shotgun_Twister:Behavior_Explode_5',Behavior_Explode'GD_Orchid_BossWeapons.FiringModes.Bullet_Pistol_Maliwan_Evie:Behavior_Explode_5')
+set GD_Weap_SniperRifles.Barrel.SR_Barrel_Alien_Longbow CustomFiringModeDefinition FiringModeDefinition 'GD_Weap_SniperRifles.FiringModes.Bullet_Sniper_Volcano'
+set GD_Weap_SniperRifles.FiringModes.Bullet_Sniper_Volcano OnAnyImpact (Behavior_Explode'GD_Sage_Weapons.FiringModes.Bullet_Shotgun_Twister:Behavior_Explode_5',Behavior_Explode'GD_Orchid_BossWeapons.FiringModes.Bullet_Pistol_Maliwan_Evie:Behavior_Explode_5')
 
 set GD_Sage_Weapons.FiringModes.Bullet_Shotgun_Twister:Behavior_Explode_5 DamageFormula (BaseValueScaleConstant=100.000000)
 set GD_Sage_Weapons.FiringModes.Bullet_Shotgun_Twister:Behavior_Explode_5 DamageRadiusFormula (BaseValueConstant=600.000000)
