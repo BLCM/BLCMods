@@ -4,9 +4,9 @@
 Special thanks to zububu for the *sweet* idea.
 
 #2: Singularity Unf0reseen
->Replaces the shock damage of Unf0reseen with non-elemental damage and a singularity effect
+>Adds a singularity effect to Unf0reseen that scales with the number of expended skill points 
 
-Special thanks to Mike for letting me *borrow* and modify his code for Slag Unf0reseen
+Special thanks to Mike for letting me *borrow* and modify his Slag Unf0reseen code and to the_Nocturni for helping me with scaling the singularity radius.
 
 #3: Legendary Vendors
 >This mod replaces all loot in the vendor at Uncle Teddy's with legendary loot
