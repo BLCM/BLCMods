@@ -1,0 +1,217 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Borderlands 2 Skill Calculator: Assassin</title>
+	<link href='main.css' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Homenaje' rel='stylesheet' type='text/css'>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+	<script src="skillManager.js"></script>
+</head>
+<body>
+
+<div class="header">
+	<div class="links"><a class="reset" href="index.html">&lt; go back</a> | <a href="Zer0.html" class="reset">reset</a></div>
+	<h1>Borderlands<em>2</em> skill calculator</h1>
+	<h2>Zer0</h2>
+	<h3>Level <span class="charLevel">5</span> Assassin</h3>
+</div>
+<img unselectable="on" class="portrait" src="http://bl2skills.com/assassinPortrait.png">
+<div class="treeCollection">
+<div class="treewrapper green">
+	<div class="bglayer gray"></div>
+	<div class="bglayer color"></div>
+	<div class="tree">
+		<div class="tier" data-level="0" data-invested="0" data-total="0">
+			<div class="skill" data-points="0" data-max="5"><img src="http://bl2skills.com/icons/assassin-sniping-0.png">
+				<div class="description"><h2>HeadSh0t</h2><em data-base="+4"></em>% Critical Hit Damage<span class="perLevel"> per level</span>.</div>
+				<div class="points"></div>
+			</div>
+			<div class="skill push1" data-points="0" data-max="5"><img src="http://bl2skills.com/icons/assassin-sniping-1.png">
+				<div class="description"><h2>0ptics</h2><em data-base="+3"></em>% Zoom, <em data-base="+14"></em>% Aim Steadiness. and <em data-base="+14"></em>% Aim Speed (reduces aim disruption when taking damage)<span class="perLevel"> per level</span>.</div>
+				<div class="points"></div>
+			</div>
+		</div>
+		<div class="tier" data-level="1" data-invested="0" data-total="0">
+			<div class="skill" data-points="0" data-max="5"><img src="http://bl2skills.com/icons/assassin-sniping-2.png">
+				<div class="description"><h2>Killer</h2>Kill Skill. Killing an enemy gives you <em data-base="+10"></em>% Critical Hit Damage and <em data-base="+15"></em>% Reload Speed<span class="perLevel"> per level</span> for a few seconds.</div>
+				<div class="points"></div>
+			</div>
+			<div class="skill push1" data-points="0" data-max="5"><img src="http://bl2skills.com/icons/assassin-sniping-3.png">
+				<div class="description"><h2>Precisi0n</h2><em data-base="+5"></em>% Accuracy<span class="perLevel"> per level</span>.</div>
+				<div class="points"></div>
+			</div>
+		</div>
+		<div class="tier" data-level="2" data-invested="0" data-total="0">
+			<div class="skill" data-points="0" data-max="5"><img src="http://bl2skills.com/icons/assassin-sniping-4.png">
+				<div class="description"><h2>0ne Sh0t 0ne Kill</h2>The first shot from a fully loaded magazine deals <em data-base="+12"></em>% Damage<span class="perLevel"> per level</span>.</div>
+				<div class="points"></div>
+			</div>
+			<div class="skill" data-points="0" data-max="1"><img src="http://bl2skills.com/icons/assassin-sniping-5.png">
+				<div class="description"><h2>B0re</h2>Shots pierce through enemies, gaining <em data-base="+100"></em>% damage per enemy pierced. Enemy crit locations highlighted in Decepti0n.</div>
+				<div class="points"></div>
+			</div>
+			<div class="skill" data-points="0" data-max="5"><img src="http://bl2skills.com/icons/assassin-sniping-6.png">
+				<div class="description"><h2>Vel0city</h2><em data-base="+20"></em>% Bullet Speed, <em data-base="+3"></em>% Critical Hit Damage, and <em data-base="+2"></em>% Gun Damage<span class="perLevel"> per level</span>.</div>
+				<div class="points"></div>
+			</div>
+		</div>
+		<div class="tier" data-level="3" data-invested="0" data-total="0">
+			<div class="skill push1" data-points="0" data-max="5"><img src="http://bl2skills.com/icons/assassin-sniping-7.png">
+				<div class="description"><h2>Kill C0nfirmed</h2>Up to <em data-base="+8"></em>% Critical Hit Damage<span class="perLevel"> per level</span> depending on how long you aim down the sights.</div>
+				<div class="points"></div>
+			</div>
+		</div>
+		<div class="tier" data-level="4" data-invested="0" data-total="0">
+			<div class="skill push1" data-points="0" data-max="5"><img src="http://bl2skills.com/icons/assassin-sniping-8.png">
+				<div class="description"><h2>At 0ne with the Gun</h2><em data-base="+25"></em>% Hip-Shot accuracy, <em data-base="+10"></em>% Reload Speed, and <em data-base="+1"></em> Magazine Size with Sniper Rifles<span class="perLevel"> per level</span>.</div>
+				<div class="points"></div>
+			</div>
+		</div>
+		<div class="tier" data-level="5" data-invested="0" data-total="0">
+			<div class="skill push1" data-points="0" data-max="1"><img src="http://bl2skills.com/icons/assassin-sniping-9.png">
+				<div class="description"><h2>Critical Ascensi0n</h2>Scoring a Critical Hit with a Sniper Rifle gives you <em data-base="+6"></em>% Critical Hit Damage and <em data-base="+5"></em>% Damage with Sniper Rifles. Can stack up to 999 times. Stacks begin to decay if you haven't scored a critical hit in a while. </div>
+				<div class="points"></div>
+			</div>
+		</div>
+		<div class="totalPoints">
+			<span class="totalPoints">0</span>
+		</div>
+		<legend>Sniping</legend>
+	</div>
+</div>
+<div class="treewrapper blue">
+	<div class="bglayer gray"></div>
+	<div class="bglayer color"></div>
+	<div class="tree">
+		<div class="tier" data-level="0" data-invested="0" data-total="0">
+			<div class="skill" data-points="0" data-max="5"><img src="http://bl2skills.com/icons/assassin-cunning-0.png">
+				<div class="description"><h2>Fast Hands</h2><em data-base="+5"></em>% Reload Speed and <em data-base="+10"></em>% Weapon Swap Speed<span class="perLevel"> per level</span>.</div>
+				<div class="points"></div>
+			</div>
+			<div class="skill push1" data-points="0" data-max="5"><img src="http://bl2skills.com/icons/assassin-cunning-1.png">
+				<div class="description"><h2>C0unter Strike</h2>After getting hit, your next melee attack has a chance to deal <em data-base="+50"></em>% damage<span class="perLevel"> per level</span>.</div>
+				<div class="points"></div>
+			</div>
+		</div>
+		<div class="tier" data-level="1" data-invested="0" data-total="0">
+			<div class="skill" data-points="0" data-max="5"><img src="http://bl2skills.com/icons/assassin-bloodshed-2.png">
+				<div class="description"><h2>Grim</h2>Kill Skill. Killing an enemy regenerates <em data-base="+0.7"></em>% of your shield per second and gives <em data-base="+4"></em>% Action Skill cooldown rate<span class="perLevel"> per level</span> for a few seconds.</div>
+				<div class="points"></div>
+			</div>
+			<div class="skill push1" data-points="0" data-max="5"><img src="http://bl2skills.com/icons/assassin-cunning-3.png">
+				<div class="description"><h2>Ambush</h2><em data-base="+4"></em>% damage<span class="perLevel"> per level</span> when attacking enemies from behind or when attacking an enemy who is targeting someone other than you.</div>
+				<div class="points"></div>
+			</div>
+		</div>
+		<div class="tier" data-level="2" data-invested="0" data-total="0">
+			<div class="skill" data-points="0" data-max="5"><img src="http://bl2skills.com/icons/assassin-cunning-4.png">
+				<div class="description"><h2>Rising Sh0t</h2>Each successful ranged or melee attack gives you <em data-base="+2"></em>% Gun Damage and <em data-base="+1.8"></em>% Melee Damage<span class="perLevel"> per level</span> for a short time. This bonus can stack up to 5 times. Faster weapons can gain stacks more quickly, but slower weapons retain stacks for a longer period of time.</div>
+				<div class="points"></div>
+			</div>
+			<div class="skill" data-points="0" data-max="1"><img src="http://bl2skills.com/icons/assassin-cunning-5.png">
+				<div class="description"><h2>Death Mark</h2>Dealing melee damage marks a target for 8 seconds. Marked targets take <em data-base="+20"></em>% additional damage from all sources.</div>
+				<div class="points"></div>
+			</div>
+			<div class="skill" data-points="0" data-max="5"><img src="http://bl2skills.com/icons/assassin-cunning-6.png">
+				<div class="description"><h2>Unf0rseen</h2>Your holographic decoy explodes when you become visible again, causing shock damage to nearby enemies. Damage increases<span class="perLevel"> per level</span>.</div>
+				<div class="points"></div>
+			</div>
+		</div>
+		<div class="tier" data-level="3" data-invested="0" data-total="0">
+			<div class="skill push1" data-points="0" data-max="5"><img src="http://bl2skills.com/icons/assassin-cunning-7.png">
+				<div class="description"><h2>Innervate</h2>While Decepti0n is active you gain <em data-base="+4"></em>% Status Effects Duration Reduction, <em data-base="+7"></em>% Movement Speed, and regenerate <em data-base="+1.0"></em>% of your Maximum Health per second<span class="perLevel"> per level</span>.</div>
+				<div class="points"></div>
+			</div>
+		</div>
+		<div class="tier" data-level="4" data-invested="0" data-total="0">
+			<div class="skill push1" data-points="0" data-max="5"><img src="http://bl2skills.com/icons/assassin-cunning-8.png">
+				<div class="description"><h2>Tw0 Fang</h2>Every time you fire you have a <em data-base="6"></em>% chance<span class="perLevel"> per level</span> to fire twice.</div>
+				<div class="points"></div>
+			</div>
+		</div>
+		<div class="tier" data-level="5" data-invested="0" data-total="0">
+			<div class="skill push1" data-points="0" data-max="1"><img src="http://bl2skills.com/icons/assassin-cunning-9.png">
+				<div class="description"><h2>Death Bl0ss0m</h2>Action Skill Augment. Throws a handful of Kunai knives. Has a random elemental effect. Does not take character out of Decepti0n. Can be used five times per cooldown. Can apply Death Mark. </div>
+				<div class="points"></div>
+			</div>
+		</div>
+		<div class="totalPoints">
+			<span class="totalPoints">0</span>
+		</div>
+		<legend>Cunning</legend>
+	</div>
+</div>
+<div class="treewrapper red">
+	<div class="bglayer gray"></div>
+	<div class="bglayer color"></div>
+	<div class="tree">
+		<div class="tier" data-level="0" data-invested="0" data-total="0">
+			<div class="skill" data-points="0" data-max="5"><img src="http://bl2skills.com/icons/assassin-bloodshed-0.png">
+				<div class="description"><h2>Killing Bl0w</h2><em data-base="+100"></em>% Melee Damage<span class="perLevel"> per level</span> against enemies with low health.</div>
+				<div class="points"></div>
+			</div>
+			<div class="skill push1" data-points="0" data-max="5"><img src="http://bl2skills.com/icons/assassin-bloodshed-1.png">
+				<div class="description"><h2>Ir0n Hand</h2><em data-base="+3"></em>% Melee Damage and Damage Reduction<span class="perLevel"> per level</span>.</div>
+				<div class="points"></div>
+			</div>
+		</div>
+		<div class="tier" data-level="1" data-invested="0" data-total="0">
+			<div class="skill" data-points="0" data-max="5"><img src="http://bl2skills.com/icons/assassin-cunning-2.png">
+				<div class="description"><h2>Fearless</h2><em data-base="+5"></em>% Fire Rate and <em data-base="+0.3"></em>% Health Regeneration<span class="perLevel"> per level</span> when your shield is depleted.</div>
+				<div class="points"></div>
+			</div>
+			<div class="skill push1" data-points="0" data-max="5"><img src="http://bl2skills.com/icons/assassin-bloodshed-3.png">
+				<div class="description"><h2>Be Like Water</h2>Shooting an enemy gives <em data-base="+6"></em>% damage<span class="perLevel"> per level</span> to your next melee attack. Melee Attacks give <em data-base="+4"></em>% damage<span class="perLevel"> per level</span> to your next gun attack.</div>
+				<div class="points"></div>
+			</div>
+		</div>
+		<div class="tier" data-level="2" data-invested="0" data-total="0">
+			<div class="skill" data-points="0" data-max="5"><img src="http://bl2skills.com/icons/assassin-bloodshed-4.png">
+				<div class="description"><h2>F0ll0wthr0ugh</h2>Kill Skill. Killing an enemy gives <em data-base="+8"></em>% Movement Speed, <em data-base="+6"></em>% Gun Damage, and <em data-base="+8"></em>% Melee Damage<span class="perLevel"> per level</span> for a few seconds.</div>
+				<div class="points"></div>
+			</div>
+			<div class="skill" data-points="0" data-max="1"><img src="http://bl2skills.com/icons/assassin-bloodshed-5.png">
+				<div class="description"><h2>Execute</h2>Melee Override Skill. While Decepti0n is active and a target is under your crosshairs, melee to dash forward a short distance and perform a special melee attack. Has a range of 3 meters.</div>
+				<div class="points"></div>
+			</div>
+			<div class="skill" data-points="0" data-max="5"><img src="http://bl2skills.com/icons/assassin-bloodshed-6.png">
+				<div class="description"><h2>Backstab</h2>Your melee attacks deal <em data-base="+8"></em>% damage<span class="perLevel"> per level</span> when hitting an enemy in the back, dealing massive damage.</div>
+				<div class="points"></div>
+			</div>
+		</div>
+		<div class="tier" data-level="3" data-invested="0" data-total="0">
+			<div class="skill push1" data-points="0" data-max="5"><img src="http://bl2skills.com/icons/assassin-bloodshed-7.png">
+				<div class="description"><h2>Resurgence</h2>Killing an enemy with a melee attack restores up to <em data-base="+6"></em>% of your health<span class="perLevel"> per level</span> depending on how low your health is.</div>
+				<div class="points"></div>
+			</div>
+		</div>
+		<div class="tier" data-level="4" data-invested="0" data-total="0">
+			<div class="skill push1" data-points="0" data-max="5"><img src="http://bl2skills.com/icons/assassin-bloodshed-8.png">
+				<div class="description shortTier4Description"><h2>Like The Wind</h2><em data-base="+3"></em>% Gun, Melee Damage, and <em data-base="+5"></em>% chance to dodge bullets<span class="perLevel"> per level</span> when moving.</div>
+				<div class="points"></div>
+			</div>
+		</div>
+		<div class="tier" data-level="5" data-invested="0" data-total="0">
+			<div class="skill push1" data-points="0" data-max="1"><img src="http://bl2skills.com/icons/assassin-bloodshed-9.png">
+				<div class="description"><h2>Many Must Fall</h2>Killing an enemy with a Melee Attack during Decepti0n deploys an additional holographic decoy and extends the duration of Decepti0n instead of ending it. </div>
+				<div class="points"></div>
+			</div>
+		</div>
+		<div class="totalPoints">
+			<span class="totalPoints">0</span>
+		</div>
+		<legend>Bloodshed</legend>
+	</div>
+</div>
+</div>
+
+<div class="summary">
+	<h2>List of Skills:</h2>
+	<div class="descriptionContainer"></div>
+	<!--#include virtual="./footer.txt"-->
+</div>
+
+</body>
+</html>
