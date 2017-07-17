@@ -10,3 +10,6 @@ Special thanks to Mike for letting me *borrow* and modify his Slag Unf0reseen co
 
 #3: Legendary Vendors
 >This mod replaces all loot in the vendor at Uncle Teddy's with legendary loot
+
+#4: Skill Calculator
+>A skill calculator for community patch V1.3. Not exactly a mod, but probably useful.
