@@ -10,6 +10,3 @@ Special thanks to Mike for letting me *borrow* and modify his Slag Unf0reseen co
 
 #3: Legendary Vendors
 >This mod replaces all loot in the vendor at Uncle Teddy's with legendary loot
-
-#4: Skill calculator in the same vein/format as that of bl2skills.com
->Shows the skills with changes as of the most recent community patch, 3.1
