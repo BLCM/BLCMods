@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Borderlands 2 Skill Calculator: Siren</title>
+	<link href='main.css' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Homenaje' rel='stylesheet' type='text/css'>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+	<script src="skillManager.js"></script>
+</head>
+<body>
+
+<div class="header">
+	<div class="links"><a class="reset" href="index.html">&lt; go back</a> | <a href="Maya.html" class="reset">reset</a></div>
+	<h1>Borderlands<em>2</em> skill calculator</h1>
+	<h2>Maya</h2>
+	<h3>Level <span class="charLevel">5</span> Siren</h3>
+</div>
+<img unselectable="on" class="portrait" src="http://bl2skills.com/sirenPortrait.png">
+<div class="treeCollection">
+<div class="treewrapper green">
+	<div class="bglayer gray"></div>
+	<div class="bglayer color"></div>
+	<div class="tree">
+		<div class="tier" data-level="0" data-invested="0" data-total="0">
+			<div class="skill" data-points="0" data-max="5"><img src="http://bl2skills.com/icons/siren-motion-0.png">
+				<div class="description"><h2>Ward</h2><em data-base="+5"></em>% Shield Capacity and <em data-base="-8"></em>% Shield Recharge Delay<span class="perLevel"> per level</span>.</div>
+				<div class="points"></div>
+			</div>
+			<div class="skill push1" data-points="0" data-max="5"><img src="http://bl2skills.com/icons/siren-motion-1.png">
+				<div class="description"><h2>Accelerate</h2><em data-base="+3"></em>% Gun Damage and <em data-base="+4"></em>% Bullet Speed<span class="perLevel"> per level</span>.</div>
+				<div class="points"></div>
+			</div>
+		</div>
+		<div class="tier" data-level="1" data-invested="0" data-total="0">
+			<div class="skill" data-points="0" data-max="5"><img src="http://bl2skills.com/icons/siren-motion-2.png">
+				<div class="description"><h2>Suspension</h2>Increases the duration of Phaselock by <em data-base="+0.5"></em>s<span class="perLevel"> per level</span>.</div>
+				<div class="points"></div>
+			</div>
+			<div class="skill push1" data-points="0" data-max="5"><img src="http://bl2skills.com/icons/siren-motion-3.png">
+				<div class="description"><h2>Kinetic Reflection</h2>Kill Skill. Killing an enemy causes you to deflect bullets against nearby enemies, reducing damage to you by <em data-base="10"></em>% and dealing <em data-base="20"></em>% damage<span class="perLevel"> per level</span> for a short time.</div>
+				<div class="points"></div>
+			</div>
+		</div>
+		<div class="tier" data-level="2" data-invested="0" data-total="0">
+			<div class="skill" data-points="0" data-max="5"><img src="http://bl2skills.com/icons/siren-motion-4.png">
+				<div class="description"><h2>Fleet</h2>Your Movement Speed increases by <em data-base="+10"></em>%<span class="perLevel"> per level</span> while your shields are depleted.</div>
+				<div class="points"></div>
+			</div>
+			<div class="skill" data-points="0" data-max="1"><img src="http://bl2skills.com/icons/siren-motion-5.png">
+				<div class="description"><h2>Converge</h2>Your Phaselock ability now also pulls nearby enemies toward the original target.</div>
+				<div class="points"></div>
+			</div>
+			<div class="skill" data-points="0" data-max="5"><img src="http://bl2skills.com/icons/siren-motion-6.png">
+				<div class="description"><h2>Inertia</h2>Kill Skill. Killing an enemy regenerates <em data-base="+0.8"></em>% of your Shield per second and increases your Reload Speed by <em data-base="+10"></em>%<span class="perLevel"> per level</span> for a short time.</div>
+				<div class="points"></div>
+			</div>
+		</div>
+		<div class="tier" data-level="3" data-invested="0" data-total="0">
+			<div class="skill push1" data-points="0" data-max="5"><img src="http://bl2skills.com/icons/siren-motion-7.png">
+				<div class="description"><h2>Quicken</h2>Increases the Cooldown Rate of your Phaselock's Ability by <em data-base="6"></em>%<span class="perLevel"> per level</span>.</div>
+				<div class="points"></div>
+			</div>
+		</div>
+		<div class="tier" data-level="4" data-invested="0" data-total="0">
+			<div class="skill push1" data-points="0" data-max="5"><img src="http://bl2skills.com/icons/siren-motion-8.png">
+				<div class="description"><h2>Sub-Sequence</h2>When an enemy dies under the effects of Phaselock, there is a chance for your Phaselock to seek out and affect another target (<em data-base="20"></em>% chance<span class="perLevel"> per level</span>).</div>
+				<div class="points"></div>
+			</div>
+		</div>
+		<div class="tier" data-level="5" data-invested="0" data-total="0">
+			<div class="skill push1" data-points="0" data-max="1"><img src="http://bl2skills.com/icons/siren-motion-9.png">
+				<div class="description"><h2>Thoughtlock</h2>Phaselock causes enemies to switch allegiance and fight amongst themselves. Additionally, Phaselock's duration is increased by 4s. </div>
+				<div class="points"></div>
+			</div>
+		</div>
+		<div class="totalPoints">
+			<span class="totalPoints">0</span>
+		</div>
+		<legend>Motion</legend>
+	</div>
+</div>
+
+<div class="treewrapper blue">
+	<div class="bglayer gray"></div>
+	<div class="bglayer color"></div>
+	<div class="tree">
+		<div class="tier" data-level="0" data-invested="0" data-total="0">
+			<div class="skill" data-points="0" data-max="5"><img src="http://bl2skills.com/icons/siren-harmony-0.png">
+				<div class="description"><h2>Mind's Eye</h2><em data-base="+5"></em>% Critical Hit Damage and <em data-base="+5"></em>% Accuracy<span class="perLevel"> per level</span>.</div>
+				<div class="points"></div>
+			</div>
+			<div class="skill push1" data-points="0" data-max="5"><img src="http://bl2skills.com/icons/siren-harmony-1.png">
+				<div class="description"><h2>Sweet Release</h2>Killing an enemy who is currently Phaselocked creates <em data-base="1"></em> Life Orb<span class="perLevel"> per level</span> which automatically seeks out and heals you and your friends. The healing is stronger when you or your friend's health is low (up to 15% per Orb).</div>
+				<div class="points"></div>
+			</div>
+		</div>
+		<div class="tier" data-level="1" data-invested="0" data-total="0">
+			<div class="skill" data-points="0" data-max="5"><img src="http://bl2skills.com/icons/siren-harmony-2.png">
+				<div class="description"><h2>Restoration</h2><em data-base="+3"></em>% Maximum Health and attack allies to heal them for <em data-base="6"></em>% of the attack damage<span class="perLevel"> per level</span>.</div>
+				<div class="points"></div>
+			</div>
+			<div class="skill push1" data-points="0" data-max="5"><img src="http://bl2skills.com/icons/siren-harmony-3.png">
+				<div class="description"><h2>Wreck</h2><em data-base="+10"></em>% Fire Rate and <em data-base="+6"></em>% Damage with guns<span class="perLevel"> per level</span> while you have an enemy Phaselocked.</div>
+				<div class="points"></div>
+			</div>
+		</div>
+		<div class="tier" data-level="2" data-invested="0" data-total="0">
+			<div class="skill" data-points="0" data-max="5"><img src="http://bl2skills.com/icons/siren-harmony-4.png">
+				<div class="description"><h2>Elated</h2>You and your friends regenerate <em data-base="+1"></em>% health per second<span class="perLevel"> per level</span> while you have an enemy Phaselocked.</div>
+				<div class="points"></div>
+			</div>
+			<div class="skill" data-points="0" data-max="1"><img src="http://bl2skills.com/icons/siren-harmony-5.png">
+				<div class="description"><h2>Res</h2>You can instantly revive a friend in Fight for Your Life by using Phaselock on him/her. +35% Fight For your Life time</div>
+				<div class="points"></div>
+			</div>
+			<div class="skill" data-points="0" data-max="5"><img src="http://bl2skills.com/icons/siren-harmony-6.png">
+				<div class="description"><h2>Recompense</h2>Taking Health damage has a <em data-base="10"></em>% chance<span class="perLevel"> per level</span> of dealing an equal amount of damage to your attacker.</div>
+				<div class="points"></div>
+			</div>
+		</div>
+		<div class="tier" data-level="3" data-invested="0" data-total="0">
+			<div class="skill push1" data-points="0" data-max="5"><img src="http://bl2skills.com/icons/siren-harmony-7.png">
+				<div class="description"><h2>Sustenance</h2>Regenerate <em data-base="+0.4"></em>% of your missing Health per second<span class="perLevel"> per level</span>.</div>
+				<div class="points"></div>
+			</div>
+		</div>
+		<div class="tier" data-level="4" data-invested="0" data-total="0">
+			<div class="skill push1" data-points="0" data-max="5"><img src="http://bl2skills.com/icons/siren-harmony-8.png">
+				<div class="description"><h2>Life Tap</h2>Kill Skill. Killing an enemy gives you <em data-base="+1.2"></em>% Life Steal<span class="perLevel"> per level</span> for a short while.</div>
+				<div class="points"></div>
+			</div>
+		</div>
+		<div class="tier" data-level="5" data-invested="0" data-total="0">
+			<div class="skill push1" data-points="0" data-max="1"><img src="http://bl2skills.com/icons/siren-harmony-9.png">
+				<div class="description"><h2>Scorn</h2>Melee Override. Press [melee] to throw an Orb of Slag that constantly damages enemies near it. This ability has a 10 second cooldown. Pressing [melee] when Scorn is on cooldown will perform a regular melee attack.</div>
+				<div class="points"></div>
+			</div>
+		</div>
+		<div class="totalPoints">
+			<span class="totalPoints">0</span>
+		</div>
+		<legend>Harmony</legend>
+	</div>
+</div>
+
+<div class="treewrapper red">
+	<div class="bglayer gray"></div>
+	<div class="bglayer color"></div>
+	<div class="tree">
+		<div class="tier" data-level="0" data-invested="0" data-total="0">
+			<div class="skill" data-points="0" data-max="5"><img src="http://bl2skills.com/icons/siren-cataclysm-0.png">
+				<div class="description"><h2>Flicker</h2><em data-base="+6"></em>% Elemental Effect Chance<span class="perLevel"> per level</span>.</div>
+				<div class="points"></div>
+			</div>
+			<div class="skill push1" data-points="0" data-max="5"><img src="http://bl2skills.com/icons/siren-cataclysm-1.png">
+				<div class="description"><h2>Foresight</h2>Increases Magazine Size and Reload Speed with all weapon types. <em data-base="+4"></em>% Magazine Size and <em data-base="+5"></em>% Reload Speed<span class="perLevel"> per level</span>.</div>
+				<div class="points"></div>
+			</div>
+		</div>
+		<div class="tier" data-level="1" data-invested="0" data-total="0">
+			<div class="skill" data-points="0" data-max="5"><img src="http://bl2skills.com/icons/siren-cataclysm-2.png">
+				<div class="description"><h2>Immolate</h2>Adds <em data-base="+10"></em>% Damage<span class="perLevel"> per level</span> as Fire Damage to all shots fired when in Fight For Your Life.</div>
+				<div class="points"></div>
+			</div>
+			<div class="skill push1" data-points="0" data-max="5"><img src="http://bl2skills.com/icons/siren-cataclysm-3.png">
+				<div class="description"><h2>Helios</h2>Phaselocking an enemy causes a fiery explosion, damaging all nearby enemies. <em data-base="1"></em> Helios Damage Rank<span class="perLevel"> per level</span>.</div>
+				<div class="points"></div>
+			</div>
+		</div>
+		<div class="tier" data-level="2" data-invested="0" data-total="0">
+			<div class="skill" data-points="0" data-max="5"><img src="http://bl2skills.com/icons/siren-cataclysm-4.png">
+				<div class="description"><h2>Chain Reaction</h2>While you have an enemy Phaselocked all of your bullets that hit enemies have a <em data-base="8"></em>% chance<span class="perLevel"> per level</span> to ricochet and hit another nearby enemy.</div>
+				<div class="points"></div>
+			</div>
+			<div class="skill" data-points="0" data-max="1"><img src="http://bl2skills.com/icons/siren-cataclysm-5.png">
+				<div class="description"><h2>Cloud Kill</h2>Shooting an enemy creates a lingering Acid Cloud, which lasts for 5 seconds, dealing constant Corrosive Damage to enemies who touch it. Only one Acid Cloud can be active at a time.</div>
+				<div class="points"></div>
+			</div>
+			<div class="skill" data-points="0" data-max="5"><img src="http://bl2skills.com/icons/siren-cataclysm-6.png">
+				<div class="description"><h2>Backdraft</h2>Your melee attacks deal additional Fire Damage. Also, when your shields become depleted you create a fiery explosion, damaging nearby enemies. Your shields must fully recharge between explosions. <em data-base="1"></em> Backdraft Damage Rank<span class="perLevel"> per level</span>.</div>
+				<div class="points"></div>
+			</div>
+		</div>
+		<div class="tier" data-level="3" data-invested="0" data-total="0">
+			<div class="skill push1" data-points="0" data-max="5"><img src="http://bl2skills.com/icons/siren-cataclysm-7.png">
+				<div class="description"><h2>Reaper</h2>You deal <em data-base="+8"></em>% increased Gun Damage<span class="perLevel"> per level</span> to any enemy who has more than 50% of his health remaining.</div>
+				<div class="points"></div>
+			</div>
+		</div>
+		<div class="tier" data-level="4" data-invested="0" data-total="0">
+			<div class="skill push1" data-points="0" data-max="5"><img src="http://bl2skills.com/icons/siren-cataclysm-8.png">
+				<div class="description"><h2>Blight Phoenix</h2>Kill Skill. Killing an enemy causes you to deal constant Fire and Corrosive Damage to nearby enemies for a short time. The damage is based on your Level and the Level of the Blight Phoenix.</div>
+				<div class="points"></div>
+			</div>
+		</div>
+		<div class="tier" data-level="5" data-invested="0" data-total="0">
+			<div class="skill push1" data-points="0" data-max="1"><img src="http://bl2skills.com/icons/siren-cataclysm-9.png">
+				<div class="description"><h2>Ruin</h2>Action Skill Augmentation. Phaselock now slags, corrodes and electrocutes all nearby enemies.</div>
+				<div class="points"></div>
+			</div>
+		</div>
+		<div class="totalPoints">
+			<span class="totalPoints">0</span>
+		</div>
+		<legend>Cataclysm</legend>
+	</div>
+</div>
+</div>
+
+<div class="summary">
+	<h2>List of Skills:</h2>
+	<div class="descriptionContainer"></div>
+	<!--#include virtual="./footer.txt"-->
+</div>
+
+</body>
+</html>
+
+<!--
+find:
+^(.+) \t[0-9]+ \t([0-9]+) \t(.+)$
+replace:
+\t\t<div class="skill" data-points="0" data-max="\2"><img src="icons/class-tree-\i(0)">\n\t\t\t<div class="description"><h2>\1</h2>\3</div>\n\t\t\t<div class="points"></div>\n\t\t</div>
+-->

@@ -1,0 +1,282 @@
+html,body { height: 100%; margin: 0; padding: 0; }
+html {overflow-y: scroll;}
+body {
+	background: #333 url("http://bl2skills.com/background.jpg") no-repeat fixed center center;
+	background-size: cover;
+	color: #eee;
+	font: 15pt/17pt Homenaje, Impact, sans-serif;
+	cursor: default;
+	text-align: center;
+}
+::-moz-selection { color: black; background: #FBB406; }
+::selection { color: black; background: #FBB406; }
+h1, h2, h3 {
+	margin: 0;
+	font-weight: normal;
+}
+em {
+	font-style: normal;
+}
+.header {
+	font-size: 24pt;
+	text-transform: uppercase;
+	line-height: 1;
+	padding-bottom: 10px;
+	margin-bottom: 10px;
+}
+body.choicePage {
+	display: table;
+	width: 100%;
+}
+body.choicePage .wrapper {
+	display: table-cell;
+	width: 100%;
+	vertical-align: middle;
+}
+.header *
+{
+	position: relative;
+	z-index: 11;
+}
+.header .links {
+	text-align: center;
+	line-height: 1.2;
+	font-size: 50%;
+	z-index: 20;
+}
+.header a.permalink {
+	color: white;
+	padding: 0.5em 0;
+	-moz-user-select: text;
+	-webkit-user-select: text;
+	-ms-user-select: text;
+	-o-user-select: text;
+	user-select: text;
+}
+.header a.reset {
+	color: red;
+}
+.header, .summary {
+	background-color: rgba(0,0,0,0.5);
+}
+.header h1 {
+	color: #FFDE09;
+	font-size: 140%;
+}
+.header h1 em {
+	font-style: normal;
+	font-size: 200%;
+	position: relative;
+	top: 0.15em;
+}
+.header h2 {
+	color: #FBB406;
+	font-size: 150%;
+}
+.header h3 {
+	font-size: 80%;
+}
+.treeCollection {
+	text-align: center;
+	width: 741px;
+	height: 396px;
+	margin: 20px auto 30px auto;
+	position: relative;
+	z-index: 20;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+}
+.treewrapper {
+	float: left;
+	width: 247px;
+	height: 396px;
+}
+.tree {
+	width: 174px;
+	text-align: center;
+	margin: 20px auto 0;
+}
+.bglayer {
+	position: absolute;
+	height: 396px;
+	width: 247px;
+}
+.bglayer.color {
+	height: 80px;
+}
+
+.green .gray { background: url("http://bl2skills.com/skill_bg_green_gray.png") transparent; }
+.blue .gray { background: url("http://bl2skills.com/skill_bg_blue_gray.png") transparent; }
+.red .gray { background: url("http://bl2skills.com/skill_bg_red_gray.png") transparent; }
+.green .color { background: url("http://bl2skills.com/skill_bg_green.png") transparent; }
+.blue .color { background: url("http://bl2skills.com/skill_bg_blue.png") transparent; }
+.red .color { background: url("http://bl2skills.com/skill_bg_red.png") transparent; }
+
+.skill {
+	padding: 3px;
+	width: 52px;
+	height: 53px;
+	cursor: pointer;
+	position: relative;
+	float: left;
+}
+.skill>img {
+	width: 52px;
+	height: 53px;
+}
+
+.points {
+	visibility: hidden;
+	position: absolute;
+	width: 35px;
+	height: 21px;
+	line-height: 21px;
+	bottom: 0; right: 0;
+	padding: 0 2px;
+	background: url("http://bl2skills.com/icons/points_overlay.png") transparent;
+	color: white;
+}
+.skill.partial .points { color: #F80; }
+.skill.full .points { color: #0B0; }
+
+.tier, div.totalPoints, legend {
+	clear: both;
+}
+div.totalPoints {
+	text-align: right;
+}
+legend, span.totalPoints {
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 22pt;
+	color: white;
+	text-shadow: black 0 0 4px;
+	position: absolute;
+	display: block;
+	width: 174px;
+}
+legend {
+	width: 150px;
+	text-align: left;
+}
+.push1 { margin-left: 58px; }
+.skill.partial .perLevel, .skill.full .perLevel  { display: none; }
+
+.tree .description {
+	display: none;
+	position: absolute;
+	top: 0;
+	width: 200px;
+	z-index: 20;
+	background-color: #111;
+	color: white;
+	padding: 0 0.25em 0.5em;
+	text-align: center;
+}
+.green .description, .blue .description {
+	left: 110%;
+}
+.red .description {
+	right: 110%;
+}
+.tier[data-level='4'] .description {
+	top: auto;
+	bottom: -59px;
+}
+.tier[data-level='4'] .description.shortTier4Description {
+	top: 0;
+	bottom: auto;
+}
+.tier[data-level='5'] .description {
+	top: auto;
+	bottom: 0;
+}
+.tree .description h2 {
+	padding: 0.15em 0;
+	margin-bottom: 0.15em;
+	font-size: 125%;
+	border-bottom: 1px solid gray;
+}
+.summary {
+	position: relative;
+	margin: 10px 0 0;
+	padding: 8px 0;
+	line-height: 1.1;
+	z-index: 10;
+}
+.descriptionContainer {
+	max-width: 700px;
+	margin: 0 auto;
+}
+.descriptionContainer div.skillText {
+	clear: both;
+	border-top: 1px solid white;
+	text-align: left;
+}
+.descriptionContainer strong {
+	display: block;
+	font-weight: normal;
+	font-size: 120%;
+	float: left;
+	clear: left;
+	width: 220px;
+	margin-right: -220px;
+	text-align: right;
+}
+.descriptionContainer div.descriptionText {
+	margin: 4px 0 4px 230px;
+	padding: 0;
+}
+.descriptionContainer .perLevel {
+	display: none;
+}
+.footer {
+	margin-top: 100px;
+	text-align: center;
+	font-size: 70%;
+	color: white;
+	color: rgba(255,255,255,0.5);
+}
+.footer a { color: white; color: rgba(255,255,255,0.5); }
+.footer a:hover { color: red; }
+.skill.partial .description em {
+	color: #F80;
+}
+.skill.full .description em {
+	color: #0B0;
+}
+.skill:hover .description {
+	display: block;
+}
+.skill:hover .description:hover {
+	display: none;
+}
+.green legend { color: #41974D; }
+.blue legend { color: #2A87C7; }
+.red legend { color: #A93640; }
+a.biglink {
+	display: inline-block;
+	color: inherit;
+	padding: 1em;
+	margin: 10px;
+	background: rgba(0,0,0,0.5);
+	border: 2px solid white;
+	text-decoration: none;
+}
+a.biglink:hover {
+	background: black;
+	text-decoration: underline;
+}
+a.unavailable { cursor: not-allowed; }
+a.unavailable:hover { text-decoration: none; }
+img.portrait {
+	position: absolute;
+	position: fixed;
+	height: 95%;
+	left: 0;
+	bottom: 0;
+	z-index: 0;
+}
