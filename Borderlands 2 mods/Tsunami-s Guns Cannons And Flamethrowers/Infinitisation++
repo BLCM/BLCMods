@@ -1,0 +1,33 @@
+The Infinitisation++
+Changes the infinity
+
+Horrible accuracy (better with gaige and close enough)
+Explosive shots (Also causes earth quakes)
+
+
+########################################################################
+set GD_Weap_Pistol.Barrel.Pistol_Barrel_Vladof_Infinity CustomFiringModeDefinition FiringModeDefinition'GD_Weap_SniperRifles.FiringModes.Bullet_RailGun'
+
+set GD_Weap_SniperRifles.FiringModes.Bullet_RailGun FiringPatternLines ()
+
+set GD_Weap_Pistol.Barrel.Pistol_Barrel_Vladof_Infinity WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Vladof',InitializationDefinition=None,BaseValueScaleConstant=14.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.170000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponReloadSpeed',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=6.200000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectileSpeedMultiplier',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-0.200000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-0.010000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))))))
+
+set GD_Weap_Pistol.Barrel.Pistol_Barrel_Vladof_Infinity AttributeSlotUpgrades ((SlotName="AccuracyMax",GradeIncrease=30000,bActivateSlot=True),(SlotName="WeaponMagSize",GradeIncrease=42,bActivateSlot=True),(SlotName="WeaponAccuracyImpulse",GradeIncrease=20,bActivateSlot=True),(SlotName="AccuracyMin",GradeIncrease=-690,bActivateSlot=True),(SlotName="WeaponFireRate",GradeIncrease=6,bActivateSlot=True),
+
+set GD_Weap_SniperRifles.FiringModes.Bullet_RailGun OnAnyImpact (Behavior_Explode'GD_Sage_Weapons.FiringModes.Bullet_Shotgun_Twister:Behavior_Explode_5',Behavior_Explode'GD_Orchid_BossWeapons.FiringModes.Bullet_Pistol_Maliwan_Evie:Behavior_Explode_5')
+
+set GD_Sage_Weapons.FiringModes.Bullet_Shotgun_Twister:Behavior_Explode_5 Definition ExplosionDefinition'GD_Explosions.Special.Explosion_WarriorEarthquake'
+
+set GD_Orchid_BossWeapons.FiringModes.Bullet_Pistol_Maliwan_Evie:Behavior_Explode_5 Definition ExplosionDefinition'GD_Explosions.Slag.Explosion_SlagMaster_MaliwanNova'
+
+set GD_Orchid_BossWeapons.FiringModes.Bullet_Pistol_Maliwan_Evie:Behavior_Explode_5 DamageRadiusFormula (BaseValueConstant=80.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+
+set GD_Weap_SniperRifles.FiringModes.Bullet_RailGun NumRicochets 0
+
+set GD_Weap_Pistol.Name.Title_Vladof.Title_Legendary_Infinity PartName Infinitisation++
+
+set GD_Weap_Pistol.Barrel.Pistol_Barrel_Vladof_Infinity BehaviorProviderDefinition BehaviorProviderDefinition'GD_Gladiolus_Weapons.Shotgun.SG_Barrel_Torgue_Butcher:BehaviorProviderDefinition_1'
+
+set GD_Weap_Pistol.ManufacturerMaterials.Mat_Vladof_5_Legendary Material MaterialInstanceConstant 'Aster_GunMaterials.Materials.Pistol.Mati_Bandit_Quartz_Pistol'
+
+set GD_Weap_Pistol.Name.Title_Vladof.Title_Legendary_Infinity:AttributePresentationDefinition_8 NoConstraintText <font color="#D80C0C">Infinite + Laser + Boom = 8
