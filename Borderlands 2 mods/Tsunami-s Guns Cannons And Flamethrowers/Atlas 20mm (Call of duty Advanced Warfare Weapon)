@@ -1,0 +1,39 @@
+Atlas 20mm (Call of duty Advanced Warfare Weapon)
+Replaces Patriot
+This weapon was suggested by Articfreezi
+This is a Super Heavy Sniper Rifle
+
+Made to be used at long range
+
+Horrible accuracy on hipfire 
+But can have pinpoint accuracy when scoped (scope will constantly shake)
+Insanely high damage
+Slow reload
+Slow firerate
+High recoil
+6 Round magazine
+Regenerates 1 ammo every 4 seconds
+Shots pierces enemies
+Shots pierces shields
+3 Seconds to enquip
+2 Seconds to unenquip
+#########################################################################
+set GD_Orchid_RaidWeapons.sniper.Patriot.Orchid_Seraph_Patriot_Barrel WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponEquipTime',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponPutDownTime',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=200.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Vladof',InitializationDefinition=None,BaseValueScaleConstant=0.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.150000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponReloadSpeed',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=6.400000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectileSpeedMultiplier',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=4.200000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-0.010000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))))))))
+
+set GD_Orchid_RaidWeapons.sniper.Patriot.Orchid_Seraph_Patriot_Barrel AttributeSlotUpgrades ((SlotName="AccuracyMax",GradeIncrease=30000,bActivateSlot=True),(SlotName="WeaponMagSize",GradeIncrease=-19,bActivateSlot=True),(SlotName="WeaponAccuracyImpulse",GradeIncrease=-200,bActivateSlot=True),(SlotName="AccuracyMin",GradeIncrease=-300,bActivateSlot=True),(SlotName="WeaponFireRate",GradeIncrease=-250,bActivateSlot=True),
+
+set GD_Orchid_RaidWeapons.sniper.Patriot.Orchid_Seraph_Patriot_Barrel CustomFiringModeDefinition FiringModeDefinition'GD_Weap_SniperRifles.FiringModes.Bullet_RailGun'
+
+set GD_Weap_SniperRifles.FiringModes.Bullet_RailGun PenetratePawn True
+
+set GD_Weap_SniperRifles.FiringModes.Bullet_RailGun OnAnyImpact ()
+
+set GD_Orchid_RaidWeapons.sniper.Patriot.Orchid_Seraph_Patriot_Barrel ExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.DamageSourceShieldPenetration.PercentChanceInstigatedBulletDmgIgnoresShields',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=100.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.GameplayAttributes.FootSpeed',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-0.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Sniper_Rifle.Ammo_Sniper_Rifle_RegenerationRate',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.250000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+set GD_Orchid_RaidWeapons.ManufacturerMaterials.Material_Vladof_1_Patriot MaterialInstanceConstant Common_GunMaterials.Materials.sniper.Mati_VladofRareSR
+
+set GD_Orchid_RaidWeapons.sniper.Patriot.Orchid_Seraph_Patriot_Title PartName Atlas 20mm
+
+set GD_Orchid_RaidWeapons.sniper.Patriot.Orchid_Seraph_Patriot_Title:AttributePresentationDefinition_8 NoConstraintText <font color="#D80C0C">Semi-automatic. Shoulder mounted with no hipfire. Best in class damage.
+
+set GD_Orchid_RaidWeapons.sniper.Patriot.Orchid_Seraph_Patriot_Barrel rarity (BaseValueConstant=25.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
