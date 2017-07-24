@@ -1,0 +1,26 @@
+##############################################################################################
+# 
+# By Jim Raven
+# Makes Farming A lot Less tedious and A ALOT FASTER
+# You should only use this when you are farming for Best parts or really wanna exp fast 
+# As it does affect spawnrates of enemies as well
+# Features 1000% drop rate. THAT DOESNT MEAN ENEMIES WILL DROP 10 STUFF JUST THAT IT WILL ALWAY
+# DROP ON KILL	
+# Respawn of all enemies after 5 seconds.
+# Vendors Will have legendaries "Almost" All the time
+##############################################################################################
+
+#Makes Drop Rate for most Legendaries and Blues To 1000% from the normal 10-33%
+set GD_Itempools.DropWeights.DropODDs_BossUniques:ConstantAttributeValueResolver_0 ConstantValue 10
+set GD_Itempools.DropWeights.DropODDs_BossUniqueRares:ConstantAttributeValueResolver_0 ConstantValue 10
+
+#Makes Respawn Timer of Bosses and enemies to 5 seconds instead of 25 Minutes
+set globals RespawnDelayInSeconds 5.000000
+
+
+#makes vendors have legendaries Almost all the time.
+set GD_ItemPools_Shop.Misc.Att_IOTD_Weighting_03_Uncommon:ConstantAttributeValueResolver_1 ConstantValue 0
+set GD_ItemPools_Shop.Misc.Att_IOTD_Weighting_04_Rare:ConstantAttributeValueResolver_0 ConstantValue 0
+set GD_ItemPools_Shop.Misc.Att_IOTD_Weighting_05_VeryRare:ConstantAttributeValueResolver_0 ConstantValue 0.01
+set GD_ItemPools_Shop.Misc.Att_IOTD_Weighting_06_Legendary:ConstantAttributeValueResolver_0 ConstantValue 1
+
