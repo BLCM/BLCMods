@@ -1,0 +1,35 @@
+
+This project was started at 2017/05/19
+
+
+Weapon code: BL2(hwAAAADRxwCDyIFBEAFFXoJZABMJ5v+/BZgbMP////9Lgvn/Xwnm)
+
+#######################################################################################
+set GD_Weap_SniperRifles.A_Weapons_Unique.Sniper_Maliwan_3_ChereAmie:WeaponPartListCollectionDefinition_214 SightPartData (bEnabled=True,WeightedParts=((Part=WeaponPartDefinition'None',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=2))
+
+set GD_Weap_SniperRifles.Barrel.SR_Barrel_Hyperion_ChereAmie CustomFiringModeDefinition FiringModeDefinition'GD_Weap_SMG.FiringModes.Bullet_Plasma_Default'
+
+set GD_Weap_SniperRifles.Barrel.SR_Barrel_Hyperion_ChereAmie WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponPerShotAccuracyImpulse',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=25.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponReloadSpeed',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.400000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectileSpeedMultiplier',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-1.200000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=4.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Maliwan',InitializationDefinition=None,BaseValueScaleConstant=59.000000))))))
+
+set GD_Weap_SMG.FiringModes.Bullet_Plasma_Default:Behavior_Explode_5 Definition ExplosionDefinition'GD_Explosions.shock.Explosion_AlienSplat_ShockMaster'
+
+set GD_Weap_SMG.FiringModes.Bullet_Plasma_Default:Behavior_Explode_5 DamageRadiusFormula (BaseValueConstant=250.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+
+set GD_Weap_SMG.FiringModes.Bullet_Plasma_Default:Behavior_Explode_5 DamageFormula (BaseValueConstant=250.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.Projectile.ProjectileDamage',InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+
+set ExplosionScale ((ExplosionPSTemplate=ParticleSystem'FX_WEP_Explosions.Particles.shock.Part_WEP_ShockExplosionSmall',MinRadius=0,MaxRadius=1920,MinParticleScale=0.000000,MaxParticleScale=999.000000,ExplosionAkEvent=AkEvent'Ake_Exp_Elemental.Exp_Shock.Ak_Play_Exp_Elemental_Shock_SM',CameraAnim=CameraAnim'Anim_CameraAnimations.Explosions.Canim_Explosion_Minor',MinCameraEffectDistance=0.000000,MaxCameraEffectDistance=180.000000,FFWaveform=ForceFeedbackWaveform'GD_Explosions.shock.Explosion_AlienSplat_ShockMaster:ForceFeedbackWaveform_1005',ImpactEffect=WillowExplosionImpactDefinition'GD_Impacts.ExplosiveImpacts.ExplosiveImpactNormal128',bDamageOverPeriodOfTime=False,MaxDamageDuration=0.000000,DamageInterval=0.000000,bDamageEachTargetOnlyOnce=False,bExpandRadiusOverTime=False),(ExplosionPSTemplate=ParticleSystem'FX_WEP_Explosions.Particles.shock.Part_WEP_ShockExplosionLarge',MinRadius=1930,MaxRadius=3840,MinParticleScale=1000.000000,MaxParticleScale=9999.000000,ExplosionAkEvent=AkEvent'Ake_Exp_Elemental.Exp_Shock.Ak_Play_Exp_Elemental_Shock_MED',CameraAnim=CameraAnim'Anim_CameraAnimations.Explosions.Canim_Explosion_Medium',MinCameraEffectDistance=150.000000,MaxCameraEffectDistance=650.000000,FFWaveform=ForceFeedbackWaveform'GD_Explosions.shock.Explosion_AlienSplat_ShockMaster:ForceFeedbackWaveform_1006',ImpactEffect=WillowExplosionImpactDefinition'GD_Impacts.ExplosiveImpacts.ExplosiveImpactNormal256',bDamageOverPeriodOfTime=False,MaxDamageDuration=0.000000,DamageInterval=0.000000,bDamageEachTargetOnlyOnce=False,bExpandRadiusOverTime=False),(ExplosionPSTemplate=ParticleSystem'FX_WEP_Explosions.Particles.shock.Part_WEP_ShockExplosionLarge',MinRadius=3850,MaxRadius=10240,MinParticleScale=10000.000000,MaxParticleScale=99999.000000,ExplosionAkEvent=AkEvent'Ake_Exp_Elemental.Exp_Shock.Ak_Play_Exp_Elemental_Shock_LG',CameraAnim=CameraAnim'Anim_CameraAnimations.Explosions.Canim_Explosion_Large',MinCameraEffectDistance=300.000000,MaxCameraEffectDistance=1200.000000,FFWaveform=ForceFeedbackWaveform'GD_Explosions.shock.Explosion_AlienSplat_ShockMaster:ForceFeedbackWaveform_1007',ImpactEffect=WillowExplosionImpactDefinition'GD_Impacts.ExplosiveImpacts.ExplosiveImpactNormal512',bDamageOverPeriodOfTime=False,MaxDamageDuration=0.000000,DamageInterval=0.000000,bDamageEachTargetOnlyOnce=False,bExpandRadiusOverTime=False))
+
+set GD_Weap_SMG.FiringModes.Bullet_Plasma_Default NumRicochets 0
+
+set GD_Weap_SniperRifles.Barrel.SR_Barrel_Hyperion_ChereAmie AttributeSlotUpgrades ((SlotName="WeaponMagSize",GradeIncrease=-14,bActivateSlot=True),(SlotName="AccuracyMax",GradeIncrease=10000,bActivateSlot=True),(SlotName="AccuracyMin",GradeIncrease=300000,bActivateSlot=True),(SlotName="WeaponFireRate",GradeIncrease=8,bActivateSlot=True),
+
+
+
+
+
+
+
+
+
+
+

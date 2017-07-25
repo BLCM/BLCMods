@@ -1,0 +1,35 @@
+Eye Of Helios
+Replaces Devastator
+
+Wait, wasn't the eye sucked into a black hole? well no, that was a portal, torgue corporation stole the eye, and placed it into the barrel of this gun
+Even though it's smaller, but it's stil powerful enough to unleash a BIG A** F****** EXPLOSION OR ELSE WHY WOULD WE WANT IT
+
+Consumes 300 ammo per shot (But can stil fire even if you only have 1 ammo)
+Insane damage
+Very high blast radius
+Chance to slag enemies
+Causes earthquakes when you shoot this
+
+############################################################################
+set GD_Orchid_RaidWeapons.Pistol.Devastator.Orchid_Seraph_Devastator_Barrel CustomFiringModeDefinition FiringModeDefinition'GD_Weap_SniperRifles.FiringModes.Bullet_RailGun'
+
+set GD_Weap_SniperRifles.FiringModes.Bullet_RailGun NumRicochets 0
+
+set GD_Weap_SniperRifles.FiringModes.Bullet_RailGun OnAnyImpact (Behavior_Explode'GD_Sage_Weapons.FiringModes.Bullet_Shotgun_Twister:Behavior_Explode_5',Behavior_Explode'GD_Orchid_BossWeapons.FiringModes.Bullet_Pistol_Maliwan_Evie:Behavior_Explode_5')
+
+set GD_Sage_Weapons.FiringModes.Bullet_Shotgun_Twister:Behavior_Explode_5 Definition ExplosionDefinition'GD_Explosions.Special.Explosion_WarriorEarthquake'
+
+set GD_Orchid_BossWeapons.FiringModes.Bullet_Pistol_Maliwan_Evie:Behavior_Explode_5 Definition ExplosionDefinition'GD_Explosions.Slag.Explosion_SlagMaster_MaliwanNova'
+
+set GD_Orchid_BossWeapons.FiringModes.Bullet_Pistol_Maliwan_Evie:Behavior_Explode_5 DamageRadiusFormula (BaseValueConstant=950.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+
+set ExplosionScale ((ExplosionPSTemplate=ParticleSystem'FX_WEP_Explosions.Particles.Novas.Part_Slag_Nova_Maliwan_Explosion',MinRadius=0,MaxRadius=2000,MinParticleScale=0.000000,MaxParticleScale=100.750000,ExplosionAkEvent=AkEvent'Ake_Exp_Elemental.Exp_Slag.Ak_Play_Exp_Elemental_Slag_SM',CameraAnim=CameraAnim'Anim_CameraAnimations.Explosions.Canim_Explosion_Minor',MinCameraEffectDistance=0.000000,MaxCameraEffectDistance=180.000000,FFWaveform=ForceFeedbackWaveform'GD_Explosions.Slag.Explosion_SlagMaster_MaliwanNova:ForceFeedbackWaveform_915',ImpactEffect=WillowExplosionImpactDefinition'GD_Impacts.ExplosiveImpacts.ExplosiveImpactEridian128',bDamageOverPeriodOfTime=False,MaxDamageDuration=0.000000,DamageInterval=0.000000,bDamageEachTargetOnlyOnce=True,bExpandRadiusOverTime=False),(ExplosionPSTemplate=ParticleSystem'FX_WEP_Explosions.Particles.Novas.Part_Slag_Nova_Maliwan_Explosion',MinRadius=2000,MaxRadius=4000,MinParticleScale=100.750000,MaxParticleScale=300.500000,ExplosionAkEvent=AkEvent'Ake_Exp_Elemental.Exp_Slag.Ak_Play_Exp_Elemental_Slag_MED',CameraAnim=CameraAnim'Anim_CameraAnimations.Explosions.Canim_Explosion_Medium',MinCameraEffectDistance=150.000000,MaxCameraEffectDistance=650.000000,FFWaveform=ForceFeedbackWaveform'GD_Explosions.Slag.Explosion_SlagMaster_MaliwanNova:ForceFeedbackWaveform_916',ImpactEffect=WillowExplosionImpactDefinition'GD_Impacts.ExplosiveImpacts.ExplosiveImpactEridian256',bDamageOverPeriodOfTime=False,MaxDamageDuration=0.000000,DamageInterval=0.000000,bDamageEachTargetOnlyOnce=True,bExpandRadiusOverTime=False),(ExplosionPSTemplate=ParticleSystem'FX_WEP_Explosions.Particles.Novas.Part_Slag_Nova_Maliwan_Explosion',MinRadius=4000,MaxRadius=12000,MinParticleScale=300.500000,MaxParticleScale=1000.500000,ExplosionAkEvent=AkEvent'Ake_Exp_Elemental.Exp_Slag.Ak_Play_Exp_Elemental_Slag_LG',CameraAnim=CameraAnim'Anim_CameraAnimations.Explosions.Canim_Explosion_Large',MinCameraEffectDistance=300.000000,MaxCameraEffectDistance=1200.000000,FFWaveform=ForceFeedbackWaveform'GD_Explosions.Slag.Explosion_SlagMaster_MaliwanNova:ForceFeedbackWaveform_917',ImpactEffect=WillowExplosionImpactDefinition'GD_Impacts.ExplosiveImpacts.ExplosiveImpactEridian512',bDamageOverPeriodOfTime=False,MaxDamageDuration=0.000000,DamageInterval=0.000000,bDamageEachTargetOnlyOnce=True,bExpandRadiusOverTime=False))
+
+set GD_Orchid_RaidWeapons.Pistol.Devastator.Orchid_Seraph_Devastator_Barrel WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Torgue',InitializationDefinition=None,BaseValueScaleConstant=4.100000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=500.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectileSpeedMultiplier',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponReloadSpeed',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=17.600000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=296.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))))))))
+
+set GD_Orchid_RaidWeapons.Pistol.Devastator.Orchid_Seraph_Devastator_Barrel AttributeSlotUpgrades ((SlotName="WeaponMagSize",GradeIncrease=590,bActivateSlot=True),(SlotName="WeaponFireRate",GradeIncrease=-480,bActivateSlot=True),
+
+--- GD_Orchid_RaidWeapons.Pistol.Devastator.Orchid_Seraph_Devastator_Barrel ExternalAttributeEffects ((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Repeater_Pistol.Ammo_Repeater_Pistol_RegenerationRate',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.100000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))
+
+
+

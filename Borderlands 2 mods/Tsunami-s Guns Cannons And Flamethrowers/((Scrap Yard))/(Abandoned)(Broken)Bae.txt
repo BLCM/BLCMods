@@ -1,0 +1,22 @@
+
+GD_Gladiolus_Weapons.sniper.SR_Barrel_Maliwan_Storm
+
+set GD_Gladiolus_Weapons.sniper.SR_Barrel_Maliwan_Storm CustomFiringModeDefinition FiringModeDefinition'GD_Weap_Shotgun.FiringModes.Bullets_Splatgun'
+
+set GD_Weap_Shotgun.FiringModes.Bullets_Splatgun TimerEvents ((Time=0.000001,Response=(SplitNum=1,SplitAngle=0.000000,SplitAngleOffset=0.000000,SplitDistance=0.000000,SplitFire=True,NewSpeed=0.000000,bDetonate=False,bRespawnTracer=False,bUpdateBeamSourceLocation=False,Behaviors=(Behavior_Explode'GD_Weap_Shotgun.Projectiles.Projectile_SplatBall:BehaviorProviderDefinition_0.Behavior_Explode_5'))))
+
+set GD_Weap_Shotgun.Projectiles.Projectile_SplatBall:BehaviorProviderDefinition_0.Behavior_Explode_5 DamageRadiusFormula (BaseValueConstant=700.000000)
+
+set GD_Gladiolus_Weapons.sniper.SR_Barrel_Maliwan_Storm WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Maliwan',InitializationDefinition=None,BaseValueScaleConstant=0.100000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-2000000.000002,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),,(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponStatusEffectChanceModifier',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=100.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectileSpeedMultiplier',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=300.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponStatusEffectDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=13.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.100000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0.000000))))))))
+
+set GD_Gladiolus_Weapons.sniper.SR_Barrel_Maliwan_Storm AttributeSlotUpgrades ((SlotName="AccuracyMax",GradeIncrease=10000,bActivateSlot=True),(SlotName="WeaponMagSize",GradeIncrease=-5,bActivateSlot=True),(SlotName="WeaponFireRate",GradeIncrease=-22,bActivateSlot=True),(SlotName="WeaponAccuracyImpulse",GradeIncrease=-10,bActivateSlot=True),
+
+set Gladiolus_GunMaterials.Materials.sniper.Mati_Maliwan_6_Storm ScalarParameterValues ((ParameterName="p_ReflectColorScale",ParameterValue=1.100000,ExpressionGUID=(A=1875785607,B=1186033550,C=-1822263113,D=-1465755701)),(ParameterName="p_DecalRotate",ParameterValue=0.200000,ExpressionGUID=(A=-276527909,B=1298581551,C=856978878,D=743944047)),(ParameterName="p_HighlightsIntensity",ParameterValue=0.450000,ExpressionGUID=(A=-1257568432,B=1277066486,C=-723473993,D=-1144384173)),(ParameterName="p_ReplacePattern",ParameterValue=5.000000,ExpressionGUID=(A=-2084339847,B=1096440125,C=439008937,D=45433490)))
+
+
+
+
+GD_Gladiolus_Weapons.FiringModes.Bullet_Sniper_Maliwan_Storm
+
+
+Common_GunMaterials.Patterns.Pattern_Lightning

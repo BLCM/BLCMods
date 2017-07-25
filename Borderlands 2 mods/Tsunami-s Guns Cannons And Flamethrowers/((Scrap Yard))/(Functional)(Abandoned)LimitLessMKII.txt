@@ -1,0 +1,37 @@
+LimitLessMKII
+
+Weapon Code Needed: BL2(hwAAAAA07wGBZgEABQFFamIYxOABMAHDIYb////////HAfz//wHw)
+
+This is supposedd to be a wall breaker sniper
+####################################################################################
+set GD_Orchid_RaidWeapons.sniper.Patriot.Orchid_Seraph_Patriot_Barrel ZoomWeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponAutomaticBurstCount',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))
+
+set GD_Orchid_RaidWeapons.sniper.Patriot.Orchid_Seraph_Patriot_Barrel CustomFiringModeDefinition FiringModeDefinition'GD_Weap_SniperRifles.FiringModes.Bullet_RailGun'
+
+set GD_Weap_SniperRifles.FiringModes.Bullet_RailGun bPenetratePawn True
+
+set GD_Weap_SniperRifles.FiringModes.Bullet_RailGun Lifetime 99999999.000000
+
+set GD_Weap_SniperRifles.FiringModes.Bullet_RailGun NumRicochets 30
+
+set GD_Weap_SniperRifles.FiringModes.Bullet_RailGun OnAnyImpact (Behavior_Explode'GD_Sage_Weapons.FiringModes.Bullet_Shotgun_Twister:Behavior_Explode_5',Behavior_Explode'GD_Orchid_BossWeapons.FiringModes.Bullet_Pistol_Maliwan_Evie:Behavior_Explode_5')
+
+set GD_Sage_Weapons.FiringModes.Bullet_Shotgun_Twister:Behavior_Explode_5 Definition ExplosionDefinition'GD_Explosions.Special.Explosion_WarriorEarthquake'
+
+set GD_Orchid_BossWeapons.FiringModes.Bullet_Pistol_Maliwan_Evie:Behavior_Explode_5 Definition ExplosionDefinition'GD_Explosions.Slag.Explosion_SlagMaster_MaliwanNova'
+
+set GD_Orchid_BossWeapons.FiringModes.Bullet_Pistol_Maliwan_Evie:Behavior_Explode_5 DamageRadiusFormula (BaseValueConstant=150.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+
+set GD_Weap_SniperRifles.FiringModes.Bullet_RailGun RicochetResponse (SplitNum=1,SplitAngle=0.000000,SplitAngleOffset=0.000000,SplitDistance=0.000000,SplitFire=None,NewSpeed=0.000000,bDetonate=True,bRespawnTracer=True,bUpdateBeamSourceLocation=False,Behaviors=Behavior_Explode'GD_Orchid_BossWeapons.FiringModes.Bullet_Pistol_Maliwan_Evie:Behavior_Explode_5')
+
+set GD_Orchid_RaidWeapons.AssaultRifle.Seraphim.Orchid_Seraph_Seraphim_Barrel ExternalAttributeEffects ((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Combat_Rifle.Ammo_Combat_Rifle_RegenerationRate',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.203703,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+set GD_Orchid_RaidWeapons.sniper.Patriot.Orchid_Seraph_Patriot_Title PartName LimitLess MKII
+
+set GD_Orchid_RaidWeapons.sniper.Patriot.Orchid_Seraph_Patriot_Title:AttributePresentationDefinition_8 NoConstraintText Play unfair.<font color="#FFFFFF"><br><br>MKII of LimitBreak
+
+set GD_Orchid_RaidWeapons.sniper.Patriot.Orchid_Seraph_Patriot_Barrel AttributeSlotUpgrades ((SlotName="AccuracyMax",GradeIncrease=0,bActivateSlot=True),(SlotName="AccuracyMin",GradeIncrease=150,bActivateSlot=True),(SlotName="WeaponAccuracyImpulse",GradeIncrease=-10,bActivateSlot=True),(SlotName="WeaponFireRate",GradeIncrease=58,bActivateSlot=True),
+
+set GD_Orchid_RaidWeapons.sniper.Patriot.Orchid_Seraph_Patriot_Barrel WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=12.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+set GD_Orchid_RaidWeapons.sniper.Patriot.Orchid_Seraph_Patriot_Barrel Rarity (BaseValueConstant=7.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)

@@ -1,0 +1,13 @@
+set GD_Weap_Launchers.FiringModes.FM_Rocket_Torgue_Nukem FiringPatternLines ((StartPoint=(Pitch=15369,Yaw=0,Roll=0),EndPoint=(Pitch=0,Yaw=0,Roll=0),bUseStartPointOnly=True,CustomWaveMotion=(bUseCustomWaveMotion=False,WaveFreq=(X=0.000000,Y=0.000000,Z=0.000000),WaveAmp=(X=0.000000,Y=0.000000,Z=0.000000),WavePhase=(X=0.000000,Y=0.000000,Z=0.000000))))
+
+set GD_Iris_Weapons.AssaultRifles.AR_Barrel_Vladof_Kitten CustomFiringModeDefinition FiringModeDefinition'GD_Weap_Launchers.FiringModes.FM_Rocket_Torgue_Nukem'	
+
+set GD_Iris_Weapons.AssaultRifles.AR_Barrel_Vladof_Kitten ExternalAttributeEffects ((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Combat_Rifle.Ammo_Combat_Rifle_RegenerationRate',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.203703,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.GameplayAttributes.FootSpeed',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-1.400000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+set GD_Iris_Weapons.AssaultRifles.AR_Barrel_Vladof_Kitten AttributeSlotUpgrades ((SlotName="WeaponDamage",GradeIncrease=43,bActivateSlot=True),(SlotName="WeaponFireRate",GradeIncrease=8,bActivateSlot=True),(SlotName="WeaponSpread",GradeIncrease=180,bActivateSlot=True),(SlotName="WeaponMagSize",GradeIncrease=12,bActivateSlot=True))
+
+set GD_Iris_Weapons.AssaultRifles.AR_Barrel_Vladof_Kitten WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=4.400000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=10.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectileSpeedMultiplier',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))))
+
+set GD_Iris_Weapons.Name.Title.Title_Unique_Kitten PartName Aerostrike Mortar MKIII
+
+set GD_Iris_Weapons.Name.Title.Title_Unique_Kitten:AttributePresentationDefinition_8 NoConstraintText <font color="#FFFFFF">The Sweeper Mortar MKIII, The Mark 3 of the mortar series, Lower velocity, More shots, Smaller explosive power and damage. Lower accuracy, for when you need to clear an area.<br>. Fires high powered small explosives<br>. Lower Damage.<br>. Ammo regenerates slowly.<br>. This mortar is slightly lighter than the last.
