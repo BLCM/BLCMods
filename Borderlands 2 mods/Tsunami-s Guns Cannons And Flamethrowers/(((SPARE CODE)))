@@ -1,0 +1,74 @@
+Don't mind this file
+
+
+#############
+rainbow text
+<font color="#FFD100"><font color="#FFB200"><font color="#FF8F00"><font color="#FF7000"><font color="#FF3200"><font color="#FF0000">
+
+########
+
+
+
+ ((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Repeater_Pistol.Ammo_Repeater_Pistol_RegenerationRate',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.833333,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+
+
+ ((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Patrol_SMG.Ammo_Patrol_SMG_RegenerationRate',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+
+
+ ((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Combat_Shotgun.Ammo_Combat_Shotgun_RegenerationRate',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.203703,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+
+
+ ((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Rocket_Launcher.Ammo_Rocket_Launcher_RegenerationRate',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.030555,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+
+
+ ((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Patrol_SMG.Ammo_Patrol_SMG_RegenerationRate',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Combat_Rifle.Ammo_Combat_Rifle_RegenerationRate',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.166666,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Repeater_Pistol.Ammo_Repeater_Pistol_RegenerationRate',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.833333,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Combat_Shotgun.Ammo_Combat_Shotgun_RegenerationRate',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.203703,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Sniper_Rifle.Ammo_Sniper_Rifle_RegenerationRate',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.122222,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Rocket_Launcher.Ammo_Rocket_Launcher_RegenerationRate',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.030555,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+ ((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Sniper_Rifle.Ammo_Sniper_Rifle_RegenerationRate',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+
+
+#################
+blast radius
+
+set [PART CODE] WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.GrenadeMod.BlastRadius',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=10000000.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0.050000)),
+
+
+set <Weapon Type> ContinuousDamagePoolDefinition ResourcePoolDefinition'D_Resourcepools.WeaponPools.ContinuousDamagePool_Increasing'
+
+
+((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.WeaponContinuousDamageResourcePool.ContinuousDamage_OnIdleRegenerationDelay',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.200000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),
+	(AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.WeaponContinuousDamageResourcePool.ContinuousDamage_OnIdleRegenerationRate',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-0.300000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),
+	(AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.WeaponContinuousDamageResourcePool.ContinuousDamage_MaxValue',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=999.750000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+
+
+
+((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponContinuousDamageScale',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.050000,BaseValueAttribute=None,InitalizationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+
+
+########################################
+Movement Speed
+
+set GD_Orchid_RaidWeapons.SMG.Tattler.Orchid_Seraph_Tattler_Barrel ExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.GameplayAttributes.FootSpeed',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.400000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+
+########################################
+
+ AttributeSlotUpgrades ((SlotName="WeaponDamage",GradeIncrease=12,bActivateSlot=True),(SlotName="WeaponFireRate",GradeIncrease=8,bActivateSlot=True),(SlotName="WeaponReloadSpeed",GradeIncrease=7,bActivateSlot=True),(SlotName="WeaponMagSize",GradeIncrease=9,bActivateSlot=True))
+
+
+
+MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'
+Rarity (BaseValueConstant=5.000000)
+
+
+#########################
+ricochet
+
+set GD_Weap_Shotgun.FiringModes.Bullets_Splatgun NumRicochets 0
+set GD_Weap_Shotgun.FiringModes.Bullets_Splatgun RicochetResponse (SplitNum=0,SplitAngle=0.000000,SplitAngleOffset=0.000000,SplitDistance=0.000000,SplitFire=None,NewSpeed=0.000000,bDetonate=False,bRespawnTracer=True,bUpdateBeamSourceLocation=False,Behaviors=)
