@@ -1,0 +1,23 @@
+//Replaces the bane smg 
+//It uses the wanderlust bullets
+//Very low fire rate when hip firing
+//When zooming it has high fire rate, high damage, but it also drains your health 
+
+#<Evil Bane>
+
+set GD_Weap_SMG.Name.Title.Title__Unique_Bane PartName Devil deal
+set GD_Weap_SMG.Name.Title.Title__Unique_Bane:AttributePresentationDefinition_8 NoConstraintText a contract so sign...<br>...with blood.<br>
+
+
+set GD_Weap_SMG.Barrel.SMG_Barrel_Dahl_Bane rarity (BaseValueConstant=5)
+set GD_Weap_SMG.FiringModes.Bullet_SMG_TheBane SoundDefinition FiringModeSoundDefinition'GD_Weap_Bullet_Tech_Sounds_Definition.Default_Bullet'
+set GD_Weap_SMG.Barrel.SMG_Barrel_Dahl_Bane BehaviorProviderDefinition None
+set GD_Weap_SMG.Barrel.SMG_Barrel_Dahl_Bane CustomFiringModeDefinition FiringModeDefinition 'GD_Lobelia_Weapons.FiringModes.Bullet_Pistol_Homing_Wanderlust'
+
+set GD_Weap_SMG.Barrel.SMG_Barrel_Dahl_Bane ExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.DamageEnhancementModifiers.PlayerConvertDamageToHealingPercent',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.0100000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0.600000)))
+
+set GD_Weap_SMG.Barrel.SMG_Barrel_Dahl_Bane WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.400000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.400000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=55.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+set GD_Weap_SMG.Barrel.SMG_Barrel_Dahl_Bane ZoomExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=8.800000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.GameplayAttributes.FootSpeed',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-100.400000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.HealthResourcePool.HealthOnIdleRegenerationRate',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-1.50000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=300000.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-50.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+#</Evil Bane>
