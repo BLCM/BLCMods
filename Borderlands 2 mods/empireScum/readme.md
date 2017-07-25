@@ -12,4 +12,4 @@ Special thanks to Mike for letting me *borrow* and modify his Slag Unf0reseen co
 >This mod replaces all loot in the vendor at Uncle Teddy's with legendary loot
 
 #4: Skill Calculator
->A skill calculator for community patch V1.3. Not exactly a mod, but probably useful.
+>A skill calculator for community patch V1.3. Not exactly a mod, but probably useful. You can find it at <a>https://empirescum.github.io/BL2-Skills-Calculator-Community-Patch-/</a>
