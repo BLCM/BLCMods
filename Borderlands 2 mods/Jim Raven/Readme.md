@@ -30,3 +30,7 @@ A really simple Mod. it ups the exp you get when you are Below the enemy's you k
  Removes Strenght of Five Gorillas And Replaces Preshrunk Cyberpunk on the Legendary Anarchist Class mod.
  A melee Boost made no sense to that CoM so i gave it an Actual anarchy skill
  UI WONT SHOW IT BUT THE SKILL IS INDEED BUFFED IF YOU GO TO SKILL LIST
+ 
+ # GrogNozzleMissionReward
+ Litteraly my second mod :P i had forgotten to upload it in since... forever so here it is now.
+ Makes the grog a mission reward from the Beard makes the wizard.
