@@ -11,6 +11,11 @@ Ups the Quantity of Grenade vendors items as it was a Random Number from 3 to 6
 Vendors Now have a 10% chance at a LEGENDARY Item of the Day and 90% at Purple
 HEAVILLY RECCOMENDED TO INSTALL WITH LIGHT'S TOOL AS IT EDITS HOTFIX THUS UNLESS YOU KNOW HOW TO MERGE USE THE TOOL!!!
 
+# Refill Vendors
+A mod that makes the ammo vendor Refill your ammo on Purchase. For example if you are playing a grenade axton build with 20/20 grenades
+and you reach 0/20 instead of having to buy grenades 7 times you only buy once to get back full. Customaziable. Install with filter tool unless you you know how to merge hotfixes yourself
+Compatible with #MakeVendorsGreatAgain2017
+
 # EXP+
 A really simple Mod. it ups the exp you get when you are Below the enemy's you kill level making it so you can just rush Normal Mode and TVHM without having to worry about doing sides.
 
