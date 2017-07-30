@@ -12,11 +12,7 @@ Special thanks to Mike for letting me *borrow* and modify his Slag Unf0reseen co
 >This mod replaces all loot in the vendor at Uncle Teddy's with legendary loot
 
 #4: Skill Calculator
-<<<<<<< HEAD
 >A skill calculator for community patch V1.3. Not exactly a mod, but probably useful.
 
 #5: Butt Stallion
 >Butt Stallion will no longer drop ammo or money. In addition, he will no longer drop guns of rarity below blue. Also slightly increases the chances of gemstone poops and barfs.
-=======
->A skill calculator for community patch V1.3. Not exactly a mod, but probably useful. You can find it at <a>https://empirescum.github.io/BL2-Skills-Calculator-Community-Patch-/</a>
->>>>>>> 695e52515b1737147a58567c4a8ac857a6cee9e7
