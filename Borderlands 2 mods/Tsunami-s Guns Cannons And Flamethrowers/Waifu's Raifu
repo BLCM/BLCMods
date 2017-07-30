@@ -1,0 +1,51 @@
+The Waifu's Raifu
+Replaces Longbow
+
+This is a Assault/Sniper Blaster Rifle
+
+
+100% Accuracy
+Zero recoil
+Low firerate
+Above average damage
+Below average reload speed
+15 Round magazine
+Slow ammo regeneration
+Shots bypasses shields
+Never has a scope
+Shoots a big charged shot when zoomed (Consumes 15 ammo and does x30 damage)
+Slow charged shot velocity
+Charged shot does no critical damage
+Charged shot does not bypasses shields
+Silver skin
+
+Weapon Code needed: BL2(hwAAAAD7UgCAaIRBDAEFFIBRAAMNhhcMBZj///////8zg2FBQg3m)
+
+
+This gun is a lot stronger than what the weapon card says
+
+###############################################################
+set GD_Weap_SniperRifles.Barrel.SR_Barrel_Alien_Longbow CustomFiringModeDefinition FiringModeDefinition'GD_Weap_SMG.FiringModes.Bullet_Plasma_Default'
+
+set GD_Weap_SniperRifles.Barrel.SR_Barrel_Alien_Longbow AttributeSlotUpgrades ((SlotName="WeaponMagSize",GradeIncrease=14,bActivateSlot=True),(SlotName="AccuracyMax",GradeIncrease=10000,bActivateSlot=True),(SlotName="AccuracyMin",GradeIncrease=300000,bActivateSlot=True),(SlotName="WeaponFireRate",GradeIncrease=8,bActivateSlot=True),
+
+set GD_Weap_SniperRifles.A_Weapons_Unique.Sniper_Hyperion_3_Longbow:WeaponPartListCollectionDefinition_210 ElementalPartData (bEnabled=True,WeightedParts=((Part=WeaponPartDefinition'GD_Weap_SniperRifles.elemental.SR_Elemental_None',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=2))
+
+set GD_Weap_SniperRifles.Barrel.SR_Barrel_Alien_Longbow WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Hyperion',InitializationDefinition=None,BaseValueScaleConstant=0.100000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponReloadSpeed',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-0.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectileSpeedMultiplier',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-1.700000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.100000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0.000000)))))))
+
+set GD_Weap_SMG.FiringModes.Bullet_Plasma_Default Lifetime 99999999.000000
+
+set GD_Weap_SMG.FiringModes.Bullet_Plasma_Default NumRicochets 15
+
+set GD_Weap_SniperRifles.Barrel.SR_Barrel_Alien_Longbow ExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.DamageSourceShieldPenetration.PercentChanceInstigatedBulletDmgIgnoresShields',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=100.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Sniper_Rifle.Ammo_Sniper_Rifle_RegenerationRate',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.800000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+set GD_Weap_SniperRifles.Barrel.SR_Barrel_Alien_Longbow ZoomExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.GameplayAttributes.PlayerCriticalHitBonus',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=-2000.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))
+
+set GD_Weap_SniperRifles.Barrel.SR_Barrel_Alien_Longbow ZoomWeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponPerShotAccuracyImpulse',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=250.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectileSpeedMultiplier',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-2.200000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=14.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Hyperion',InitializationDefinition=None,BaseValueScaleConstant=30.000000)))))
+
+set GD_Weap_SniperRifles.ManufacturerMaterials.Material_Hyperion_3_Longbow Material MaterialInstanceConstant'Aster_GunMaterials.Materials.sniper.Mati_Hyperion_Diamond_Sniper'
+
+set GD_Weap_SniperRifles.Name.Title.Title__Unique_Longbow PartName Waifu's Raifu
+
+set GD_Weap_SniperRifles.Name.Title.Title__Unique_Longbow:AttributePresentationDefinition_8 NoConstraintText <font color="#D80C0C">I'm Baa~~~ck!
+###############################################################

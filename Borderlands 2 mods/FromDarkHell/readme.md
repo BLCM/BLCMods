@@ -51,3 +51,20 @@
 #14. [Brick.txt](https://raw.githubusercontent.com/BLCM/BLCMods/master/Borderlands%202%20mods/FromDarkHell/Brick.txt)
 
 	Changes Krieg's skills to have skills like Brick from BL1
+	
+#15. [AllKillSkills.txt](https://raw.githubusercontent.com/BLCM/BLCMods/master/Borderlands%202%20mods/FromDarkHell/AllKillSkills.txt)
+
+	Turns every skill into kill skills
+
+#16. [CarAnywhere.txt](https://raw.githubusercontent.com/BLCM/BLCMods/master/Borderlands%202%20mods/FromDarkHell/CarAnywhere.txt)
+
+	Allows you to have a car anywhere, excluding fast travels and Tiny Tina DLC 
+	
+#17. [CarReplacements.txt](https://raw.githubusercontent.com/BLCM/BLCMods/master/Borderlands%202%20mods/FromDarkHell/CarReplacements.txt)
+
+	Replaces the Machine Gun Light Runner with a Sandskiff, and the Hammerlock DLC Fanboats with the Barrel Technical, Sandskiff, and Light Runner. Lastly it replaces the Sawblade Sandskiff with a Catapult Technical. The skins for the replaced vehicles are broken
+	
+#18. [CatapultFirst.txt](https://raw.githubusercontent.com/BLCM/BLCMods/master/Borderlands%202%20mods/FromDarkHell/CatapultFirst.txt)
+	
+	Puts the catapult technical first in the vehicle select menu
+

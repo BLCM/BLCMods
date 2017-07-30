@@ -1,0 +1,42 @@
+#Stungun - replaces the Thunderball Fists#
+
+#Original idea by Teyru
+
+#Just a quick project, needs improvements when i have more time.
+
+#Specifications#
+ - Melee range (very close)
+ - Staggers enemies when they get hit
+ - Very low damage
+
+#Name/Card#
+set GD_Weap_Pistol.Name.Title_Maliwan.Title_Legendary_ThunderballFists PartName Stungun
+set GD_Weap_Pistol.Name.Title_Maliwan.Title_Legendary_ThunderballFists:AttributePresentationDefinition_8 NoConstraintText <font color="#ff0235">Stone cold!<font color="#FFFFFF"><br>• Stuns enemies on hit<br>• Increases weapon swap speed<font color="#6d1f91">
+
+#Barrel#
+set GD_Weap_Pistol.Barrel.Pistol_Barrel_Maliwan_ThunderballFists WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0.000001)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponSwapTimeMultiplier',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=10.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=100.000000)))
+
+set GD_Weap_Pistol.Barrel.Pistol_Barrel_Maliwan_ThunderballFists GestaltModeSkeletalMeshName Pistol_Barrel_Tediore
+
+#Bullet#
+set GD_Weap_Pistol.FiringModes.Bullet_Pistol_Maliwan_ThunderballFists DamageTypeDefinition WillowDamageTypeDefinition'GD_Explosive.DamageType.DmgType_Explosive_Impact_ForceFlinch'
+set GD_Weap_Pistol.FiringModes.Bullet_Pistol_Maliwan_ThunderballFists OnAnyImpact (Behavior_Explode'GD_Weap_Pistol.FiringModes.Bullet_Pistol_Maliwan_ThunderballFists:Behavior_Explode_0')
+set GD_Weap_Pistol.FiringModes.Bullet_Pistol_Maliwan_ThunderballFists Speed 3000
+set GD_Weap_Pistol.FiringModes.Bullet_Pistol_Maliwan_ThunderballFists Lifetime 0.100000
+
+#Stun explosion#
+set GD_Weap_Pistol.FiringModes.Bullet_Pistol_Maliwan_ThunderballFists:Behavior_Explode_0 Definition ExplosionDefinition'GD_Explosions.shock.Explosion_ShockMaster'
+set GD_Weap_Pistol.FiringModes.Bullet_Pistol_Maliwan_ThunderballFists:Behavior_Explode_0 DamageFormula (BaseValueScaleConstant=0.000000)
+set GD_Weap_Pistol.FiringModes.Bullet_Pistol_Maliwan_ThunderballFists:Behavior_Explode_0 InstigatorSelfDamageScale 0.000000
+
+
+
+
+
+
+
+
+
+
+
+

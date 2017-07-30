@@ -1,0 +1,69 @@
+Homing Missile Pod Zoomy
+Replaces Mongol
+
+Infinite ammo
+Slow reload
+Horrible accuracy (But who needs accuracy when you're firing homing missiles)
+High firerate
+No self damage
+Slow projectiles
+Big blast radius
+10 Round magazine
++2000% Shield capasity
++5000% Shield recharge delay
++2000% Shield regeneration rate
+Grants Zoomy Zommy Zoom Zoom speed
+Fires upwards and homes towards enemies
+Infinite home range (Can home to and hit targets accross the map)
+
+How to use: Just aim at the general direction, and OPEN FIRE!
+
+########################################################################################
+set GD_Weap_Launchers.Barrel.L_Barrel_Vladof_Mongol CustomFiringModeDefinition FiringModeDefinition'GD_Aster_RaidWeapons.AssaultRifles.Bullet_Pistol_Seeker_Homing'
+
+set GD_Aster_RaidWeapons.AssaultRifles.Projectile_Seeker_Homing:BehaviorProviderDefinition_0.Behavior_Explode_0 DamageRadiusFormula (BaseValueConstant=500.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+
+set GD_Aster_RaidWeapons.AssaultRifles.Projectile_Seeker_Homing:BehaviorProviderDefinition_0.Behavior_Explode_0 DamageFormula (BaseValueConstant=500.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.Projectile.ProjectileDamage',InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+
+set GD_Aster_RaidWeapons.AssaultRifles.Projectile_Seeker_Homing:BehaviorProviderDefinition_0.Behavior_Explode_0 InstigatorSelfDamageScale 0.000000
+
+set GD_Weap_Launchers.Barrel.L_Barrel_Vladof_Mongol WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Vladof',InitializationDefinition=None,BaseValueScaleConstant=7.100000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=5.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectileSpeedMultiplier',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.150000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=100.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponReloadSpeed',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=8.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-3.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0.000000)))))))))
+
+set GD_Aster_RaidWeapons.AssaultRifles.Bullet_Pistol_Seeker_Homing FiringPatternLines ((StartPoint=(Pitch=7500,Yaw=0,Roll=0),EndPoint=(Pitch=0,Yaw=0,Roll=0),bUseStartPointOnly=True,CustomWaveMotion=(bUseCustomWaveMotion=False,WaveFreq=(X=0.000000,Y=0.000000,Z=0.000000),WaveAmp=(X=0.000000,Y=0.000000,Z=0.000000),WavePhase=(X=0.000000,Y=0.000000,Z=0.000000))))	
+
+set GD_Weap_Launchers.Barrel.L_Barrel_Vladof_Mongol AttributeSlotUpgrades ((SlotName="WeaponMagSize",GradeIncrease=15,bActivateSlot=True),(SlotName="WeaponAccuracyImpulse",GradeIncrease=1000,bActivateSlot=True),(SlotName="WeaponFireRate",GradeIncrease=58,bActivateSlot=True),
+
+set GD_Weap_Launchers.Barrel.L_Barrel_Vladof_Mongol ExternalAttributeEffects ((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.ShieldResourcePool.ShieldMaxValue',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=20.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.GameplayAttributes.FootSpeed',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=5.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.ShieldResourcePool.ShieldOnIdleRegenerationDelay',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=50.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.ShieldResourcePool.ShieldOnIdleRegenerationRate',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=20.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Rocket_Launcher.Ammo_Rocket_Launcher_RegenerationRate',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=20.230555,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+set GD_Aster_RaidWeapons.AssaultRifles.Projectile_Seeker_Homing SearchRadius 40000096.000000
+
+set GD_Aster_RaidWeapons.AssaultRifles.Projectile_Seeker_Homing TurningRadius 2500000.000000
+
+set GD_Aster_RaidWeapons.AssaultRifles.Projectile_Seeker_Homing TurnThresholdTight 0.000000
+
+set GD_Aster_RaidWeapons.AssaultRifles.Projectile_Seeker_Homing TurnThresholdWide 0.000000
+
+set GD_Aster_RaidWeapons.AssaultRifles.Projectile_Seeker_Homing HomingRollAmt 163840000.000000
+
+set GD_Aster_RaidWeapons.AssaultRifles.Projectile_Seeker_Homing HomingRollSpeed 10000.000000
+
+set GD_Aster_RaidWeapons.AssaultRifles.Projectile_Seeker_Homing HomingRotationRate ((Pitch=163840000,Yaw=163840000,Roll=163840000))
+
+set GD_Aster_RaidWeapons.AssaultRifles.Projectile_Seeker_Homing bHomingCollisionAvoidance True
+
+set GD_Aster_RaidWeapons.AssaultRifles.Bullet_Pistol_Seeker_Homing TraceInterval -999.000000
+
+set GD_Aster_RaidWeapons.AssaultRifles.Projectile_Seeker_Homing:BehaviorProviderDefinition_0.ProjectileBehavior_FindHomingTarget_0 TargetSearchFOVAngle 36000.000000
+
+set GD_Aster_RaidWeapons.AssaultRifles.Projectile_Seeker_Homing:BehaviorProviderDefinition_0.ProjectileBehavior_FindHomingTarget_0 TargetSearchRange 400000.000000
+
+set GD_Aster_RaidWeapons.AssaultRifles.Projectile_Seeker_Homing SpeedFormula (BaseValueConstant=2000.000000)
+
+set GD_Weap_Launchers.Name.Title_Vladof.Title_Legendary_Mongol PartName Homing Missile Pod Zoomy
+
+set GD_Weap_Launchers.Name.Title_Vladof.Title_Legendary_Mongol:AttributePresentationDefinition_8 NoConstraintText <font color="#D80C0C">Zoomy Zoomy Zoom Zoom!
+
+set GD_Weap_Launchers.ManufacturerMaterials.Mat_Vladof_5_Legendary Material MaterialInstanceConstant 'Common_GunMaterials.Materials.Launcher.Mati_VladofEpicRL'
+
+set GD_Weap_Launchers.Barrel.L_Barrel_Vladof_Mongol rarity (BaseValueConstant=-25.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+########################################################################################

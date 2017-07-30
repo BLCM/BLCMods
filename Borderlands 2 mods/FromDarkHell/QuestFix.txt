@@ -1,0 +1,154 @@
+#<Quest Fixes>
+
+    #<Base Game>
+
+        #<Untimed Arms Dealing>
+
+            set GD_Z2_ArmsDealer.M_ArmsDealer SecondsToComplete 0
+
+        #</Untimed Arms Dealing>
+
+        #<Untimed Neither Ran Nor Sleet Nor Skags>
+
+            set GD_Z3_NeitherRainSleet.M_NeitherRainSleetSkags SecondsToComplete 0
+
+        #</Untimed Neither Ran Nor Sleet Nor Skags>
+
+        #<Untimed Customer Service>
+
+            set GD_Z3_CustomerService.M_CustomerService SecondsToComplete 0
+
+        #</Untimed Customer Service>
+
+        #<Lower Monster Mash Skrakk Count>
+
+            set GD_Z3_MonsterMash3.M_MonsterMash3:KillMonster1 ObjectiveCount 10
+
+        #</Lower Monster Mash Skrakk Count>
+
+        #<Lower Medical Mystery Bandit Count>
+
+            set GD_Z3_MedicalMystery2.M_MedicalMystery2:KillBandits ObjectiveCount 15
+
+        #</Lower Medical Mystery Bandit Count>
+
+        #<Lower Hyperion Contract Kills>
+
+            set GD_Z3_HyperionContract873.M_HyperionContract873:Kill100Bandits ObjectiveCount 50
+
+            set GD_Z3_HyperionContract873.M_HyperionContract873:Kill100BanditsWithFire ObjectiveCount 10
+
+            set GD_Z3_HyperionContract873.M_HyperionContract873:Killbanditswithcorrosion ObjectiveCount 10
+
+            set GD_Z3_HyperionContract873.M_HyperionContract873:Killbanditswithshock ObjectiveCount 10
+
+            set GD_Z3_HyperionContract873.M_HyperionContract873:Killbanditswithexplosive ObjectiveCount 10
+
+        #</Lower Hyperion Contract Kills>
+
+    #</Base Game>
+
+    #<Torgue DLC>
+
+        #<Increase Death Race Time / Untime Story Death Race>
+
+            set GD_IrisEpisode04_Battle.M_IrisEp4Battle_Race4 SecondsToComplete 105
+
+            set GD_IrisEpisode04_Battle.M_IrisEp4Battle_RaceR4 SecondsToComplete 105
+
+            set GD_IrisEpisode04_Battle.M_IrisEp4Battle_Race SecondsToComplete 0
+
+        #</Increase Death Race Time / Untime Story Death Race>
+
+    #</Torgue DLC>
+
+    #<Scarlett DLC>
+
+        #<Lower Ye Scurvy Dogs Fruit Count>
+
+            set GD_Orchid_SM_Scurvy.M_Orchid_ScurvyDogs:CollectFood ObjectiveCount 10
+
+        #</Lower Ye Scurvy Dogs Fruit Count>
+
+        #<Untimed Faster Than the Speed of Love>
+
+            set GD_Orchid_SM_Race.M_Orchid_Race SecondsToComplete 0
+
+        #</Untimed Faster Than the Speed of Love>
+
+        #<Repeatable Ending>
+
+            set GD_Orchid_SM_EndGameClone.M_Orchid_EndGame bRepeatable True
+
+        #</Repeatable Ending>
+
+    #</Scarlett DLC>
+
+    #<Hammerlock DLC>
+
+        #<Reduce I Like My Monster Rare Kill Count>
+
+            set GD_Sage_SM_RareSpawns.M_Sage_RareSpawns:KillBoroks ObjectiveCount 4
+
+            set GD_Sage_SM_RareSpawns.M_Sage_RareSpawns:KillSpores ObjectiveCount 4
+
+            set GD_Sage_SM_RareSpawns.M_Sage_RareSpawns:KillSkags ObjectiveCount 3
+
+            set GD_Sage_SM_RareSpawns.M_Sage_RareSpawns:KillScaylions ObjectiveCount 4
+
+            set GD_Sage_SM_RareSpawns.M_Sage_RareSpawns:KillDrifters ObjectiveCount 3
+
+        #</Reduce I Like My Monster Rare Kill Count>
+        
+        #<Lower Egg On Your Face Egg Count> 
+        
+            set GD_Sage_SM_EggOnFace.M_Sage_EggOnFace:CollectEggs ObjectiveCount 12
+            
+        #</Lower Egg On Your Face Egg Count>
+
+        #<Repeatable Ending>
+
+            set GD_Sage_Ep5.M_Sage_Mission05 bRepeatable True
+
+        #</Repeatable Ending>
+
+    #</Hammerlock DLC>
+
+    #<Change Grandma Torgue to not have Dialogue>
+
+        #<Normal Version>
+
+            set GD_Allium_GrandmaFlexington.M_ListenToGrandma ObjectiveDefs (MissionObjectiveDefinition'GD_Allium_GrandmaFlexington.M_ListenToGrandma:TakeRweard')
+
+            set GD_Allium_GrandmaFlexington.M_ListenToGrandma ObjectiveSetDefs (MissionObjectiveSetDefinition'GD_Allium_GrandmaFlexington.M_ListenToGrandma:MissionObjectiveSetDefinition_0')
+
+            set GD_Allium_GrandmaFlexington.M_ListenToGrandma:MissionObjectiveSetDefinition_0 ObjectiveDefinitions (MissionObjectiveDefinition'GD_Allium_GrandmaFlexington.M_ListenToGrandma:TakeRweard')
+
+            set GD_Allium_GrandmaFlexington.M_ListenToGrandma:MissionObjectiveSetDefinition_0 bCanCompleteMission True
+
+        #</Normal Version>
+
+        #<Raid Version>
+
+            set GD_Allium_Side_GrandmaRaid.M_ListenToGrandmaRaid ObjectiveDefs (MissionObjectiveDefinition'GD_Allium_Side_GrandmaRaid.M_ListenToGrandmaRaid:KillGrandmaTributes')
+
+            set GD_Allium_Side_GrandmaRaid.M_ListenToGrandmaRaid ObjectiveSetDefs (MissionObjectiveSetDefinition'GD_Allium_Side_GrandmaRaid.M_ListenToGrandmaRaid:MissionObjectiveSetDefinition_3')
+
+            set GD_Allium_Side_GrandmaRaid.M_ListenToGrandmaRaid:MissionObjectiveSetDefinition_3 ObjectiveDefinitions (MissionObjectiveDefinition'GD_Allium_Side_GrandmaRaid.M_ListenToGrandmaRaid:KillGrandmaTributes')
+
+            set GD_Allium_Side_GrandmaRaid.M_ListenToGrandmaRaid:MissionObjectiveSetDefinition_3 bCanCompleteMission True
+
+            set GD_Allium_Side_GrandmaRaid.M_ListenToGrandmaRaid:MissionObjectiveSetDefinition_3 NextSet None
+
+            set GD_Allium_Side_GrandmaRaid.M_ListenToGrandmaRaid:MissionObjectiveSetDefinition_3 bAutoEnableNextSet False
+
+            set GD_Allium_Side_GrandmaRaid.M_ListenToGrandmaRaid bCanBeFailed False
+
+            set GD_Allium_Side_GrandmaRaid.M_ListenToGrandmaRaid Reward (ExperienceRewardPercentage=(BaseValueConstant=0.030000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),CurrencyRewardType=CURRENCY_Credits,CreditRewardMultiplier=(BaseValueConstant=0.3000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),OtherCurrencyReward=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),RewardItems=,RewardItemPools=(ItemPoolDefinition'GD_Iris_ItemPools.TorgueTokenVendor.Shoppool_FeaturedItem_WeaponMachine'))
+
+        #</Raid Version>
+
+    #</Change Grandma Torgue to not have Dialogue>
+
+#</Quest Fixes>
+
