@@ -1,0 +1,88 @@
+#<Torgue Brand Tweaks 1.0>
+
+    Alters Torgue weapons to improve quality of life issues.
+
+    #<Projectiles>
+
+        #<Speed>
+
+            Doubles projectile speed of all common Torgue guns.
+
+            set GD_Weap_Pistol.FiringModes.Bullets_Pistol_Torgue_GyroJet Speed 1600
+
+            set GD_Weap_Shotgun.FiringModes.Bullets_Shotgun_Torgue_GyroJet Speed 1200
+
+            set GD_Weap_AssaultRifle.FiringModes.Bullets_Assault_Torgue_GyroJet Speed 2000
+
+        #</Speed>
+
+        #<Pistols>
+
+            Increases explosion radius by 50%.
+
+            set GD_Weap_Pistol.FiringModes.Bullets_Pistol_Torgue_GyroJet:Behavior_Explode_5 DamageRadiusFormula (BaseValueConstant=90.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.250000)
+
+        #</Pistols>
+
+    #</Projectiles>
+
+    #<SWORDSPLOSION!!!>
+
+        Gives the SWORDSPLOSION!!! three projectiles irrespective of accessory.
+
+        set GD_Aster_Weapons.Shotguns.SG_Barrel_Alien_Swordsplosion WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-3.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=5.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-9999.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=3.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+    #</SWORDSPLOSION!!!>
+
+    #<Pocket Rocket>
+
+        Removes the Pocket Rocket's shot cost increase.
+
+        set GD_Iris_Weapons.Pistols.Pistol_Barrel_Torgue_PocketRocket WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=6.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Torgue',InitializationDefinition=None,BaseValueScaleConstant=-0.050000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.800000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+    #</Pocket Rocket>
+
+    #<12 Pounder>
+
+        Gives the 12 Pounder two additional rockets in its magazine.
+
+        set GD_Orchid_BossWeapons.Launcher.L_Barrel_Torgue_12Pounder WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+    #</12 Pounder>
+
+    #<Assault Rifle Damage Type><MUT>
+
+        Alters all Torgue-barreled Assault Rifles to offer a choice of splash damage type. Defaults to Grenade.
+
+        #<Rocket (Vanilla)>
+
+            #set GD_Weap_AssaultRifle.Projectiles.Projectile_Rocket_Torgue:BehaviorProviderDefinition_0.Behavior_Explode_1 DamageSource Class'Willow.WillowDmgSource_Rocket'<off>
+
+            #set GD_Weap_AssaultRifle.Projectiles.Projectile_Dahl_Grenade:BehaviorProviderDefinition_0.Behavior_Explode_11 DamageSource Class'Willow.WillowDmgSource_Rocket'<off>
+
+            #set GD_Weap_AssaultRifle.Projectiles.Projectile_Jakobs_Cannonball:BehaviorProviderDefinition_0.Behavior_Explode_0 DamageSource Class'Willow.WillowDmgSource_Rocket'<off>
+
+            #set GD_Weap_AssaultRifle.Projectiles.Projectile_Rocket_Bandit:BehaviorProviderDefinition_0.Behavior_Explode_53 DamageSource Class'Willow.WillowDmgSource_Rocket'<off>
+
+            #set GD_Weap_AssaultRifle.Projectiles.Projectile_Rocket_Vladof:BehaviorProviderDefinition_0.Behavior_Explode_9 DamageSource Class'Willow.WillowDmgSource_Rocket'<off>
+
+        #</Rocket (Vanilla)>
+
+        #<Grenade>
+
+            set GD_Weap_AssaultRifle.Projectiles.Projectile_Rocket_Bandit:BehaviorProviderDefinition_0.Behavior_Explode_53 DamageSource Class'Willow.WillowDmgSource_Grenade'
+
+            set GD_Weap_AssaultRifle.Projectiles.Projectile_Rocket_Torgue:BehaviorProviderDefinition_0.Behavior_Explode_1 DamageSource Class'Willow.WillowDmgSource_Grenade'
+
+            set GD_Weap_AssaultRifle.Projectiles.Projectile_Dahl_Grenade:BehaviorProviderDefinition_0.Behavior_Explode_11 DamageSource Class'Willow.WillowDmgSource_Grenade'
+
+            set GD_Weap_AssaultRifle.Projectiles.Projectile_Jakobs_Cannonball:BehaviorProviderDefinition_0.Behavior_Explode_0 DamageSource Class'Willow.WillowDmgSource_Grenade'
+
+            set GD_Weap_AssaultRifle.Projectiles.Projectile_Rocket_Vladof:BehaviorProviderDefinition_0.Behavior_Explode_9 DamageSource Class'Willow.WillowDmgSource_Grenade'
+
+        #</Grenade>
+
+    #</Assault Rifle Damage Type>
+
+#</Torgue Brand Tweaks 1.0>
+
