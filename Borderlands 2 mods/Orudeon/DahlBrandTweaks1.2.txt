@@ -1,0 +1,166 @@
+#<Dahl Brand Tweaks 1.2>
+
+    Standardizes Dahl burst count among common weapons to reduce part dependency and buffs underperforming gun types.
+
+    Coded by: Orudeon
+
+    Changelog:
+
+    V1.2
+
+    Added the Torrent (coded by AngrierPat)
+
+    V1.1
+
+    Added Scorpio (Thank you to AngrierPat)
+
+    #<Pistols>
+
+        Normalizes common Dahl Pistols to 3-shot bursts.
+
+        #<Burst Count>
+
+            set GD_Weap_Pistol.A_Weapons.WeaponType_Dahl_Pistol ZoomWeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponAutomaticBurstCount',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+            set GD_Weap_Pistol.Barrel.Pistol_Barrel_Dahl_Hornet ZoomWeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponAutomaticBurstCount',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=3.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+            set GD_Weap_Pistol.Barrel.Pistol_Barrel_Hyperion_GwensHead ZoomWeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponPerShotAccuracyImpulse',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=10.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponAutomaticBurstCount',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=4.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+            set GD_Weap_Pistol.Barrel.Pistol_Barrel_Dahl ZoomWeaponAttributeEffects ()
+
+        #</Burst Count>
+
+    #</Pistols>
+
+    #<Assault Rifles>
+
+        Normalizes common and E-Tech assault rifles to five-shot burst and removes Dahl E-Tech unique firing mode. All assault rifles are now more accurate for longer and can burst slightly sooner.
+
+        #<Buffs>
+
+            set GD_Weap_AssaultRifle.A_Weapons.WT_Dahl_AssaultRifle BurstInterval 0.4
+
+            set GD_Weap_AssaultRifle.A_Weapons.WT_Dahl_AssaultRifle PerShotAccuracyImpulse 2.100000
+
+            set GD_Weap_AssaultRifle.A_Weapons.WT_Dahl_AssaultRifle Spread 1.7
+
+            set GD_Weap_AssaultRifle.A_Weapons.WT_Dahl_AssaultRifle FireRate 0.14
+
+        #</Buffs>
+
+        #<Burst Count>
+
+            set GD_Weap_AssaultRifle.A_Weapons.WT_Dahl_AssaultRifle ZoomWeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-0.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-0.060000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponPerShotAccuracyImpulse',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=3.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponAutomaticBurstCount',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=5.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+            set GD_Weap_AssaultRifle.Barrel.AR_Barrel_Dahl ZoomWeaponAttributeEffects ()
+
+            set GD_Weap_AssaultRifle.Barrel.AR_Barrel_Dahl_Veruc ZoomWeaponAttributeEffects ()
+
+        #</Burst Count>
+
+        #<Blasters>
+
+            set GD_Weap_AssaultRifle.Barrel.AR_Barrel_Alien_Dahl CustomFiringModeDefinition FiringModeDefinition'GD_Weap_AssaultRifle.FiringModes.Bullet_Blaster_Default'
+
+            set GD_Weap_AssaultRifle.Barrel.AR_Barrel_Alien_Dahl ZoomWeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-0.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+        #</Blasters>
+
+        #<Pearls and Seraphs>
+
+            Undoes the burst count increase on the Bearcat and Seraphim to keep their relative power stationary.
+
+            #<Bearcat>
+
+                set GD_Gladiolus_Weapons.AssaultRifle.AR_Barrel_Torgue_Dahl_Bearcat ZoomWeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-0.600000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponAutomaticBurstCount',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+            #</Bearcat>
+
+            #<Seraphim>
+
+                set GD_Orchid_RaidWeapons.AssaultRifle.Seraphim.Orchid_Seraph_Seraphim_Barrel WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=2.400000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectileSpeedMultiplier',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-0.400000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponAutomaticBurstCount',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+            #</Seraphim>
+
+        #</Pearls and Seraphs>
+
+        #<Scorpio>
+
+            Increases the Scorpio's damage and burst count. Equalizes element probability and forbids slag spawning. Thank you to AngrierPat for coding this.
+
+            set GD_Weap_AssaultRifle.A_Weapons_Unique.AR_Dahl_3_Scorpio:WeaponPartListCollectionDefinition_41 ElementalPartData (bEnabled=True,WeightedParts=((Part=WeaponPartDefinition'GD_Weap_AssaultRifle.elemental.AR_Elemental_None',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=4),(Part=WeaponPartDefinition'GD_Weap_AssaultRifle.elemental.AR_Elemental_Fire',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=4),(Part=WeaponPartDefinition'GD_Weap_AssaultRifle.elemental.AR_Elemental_Corrosive',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=4),(Part=WeaponPartDefinition'GD_Weap_AssaultRifle.elemental.AR_Elemental_Shock',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=4),(Part=WeaponPartDefinition'GD_Weap_AssaultRifle.elemental.AR_Elemental_Slag',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=0,DefaultWeightIndex=0)))
+
+            set GD_Weap_AssaultRifle.Barrel.AR_Barrel_Jakobs_Scorpio WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.400000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponExtraShotChance',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.300000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=6.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+        #</Scorpio>
+
+    #</Assault Rifles>
+
+    #<Sniper Rifles>
+
+        Normalizes common and E-Tech sniper rifles to three-shot burst and adds three to magazine size.
+
+        #<Buffs and Burst Count>
+
+            set GD_Weap_SniperRifles.A_Weapons.WeaponType_Dahl_Sniper ClipSize 9
+
+            set GD_Weap_SniperRifles.Barrel.SR_Barrel_Dahl ZoomWeaponAttributeEffects ()
+
+            set GD_Weap_SniperRifles.Stock.SR_Stock_Dahl ZoomWeaponAttributeEffects ()
+
+            set GD_Weap_SniperRifles.Barrel.SR_Barrel_Dahl_Pitchfork ZoomWeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponAutomaticBurstCount',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Dahl',InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+        #</Buffs and Burst Count>
+
+    #</Sniper Rifles>
+
+    #<SMGs>
+
+        Normalizes common and E-Tech SMGs to five-shot bursts.
+
+        #<Burst Count>
+
+            set GD_Weap_SMG.A_Weapons.WT_SMG_Dahl ZoomWeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-0.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-0.070000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponPerShotAccuracyImpulse',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponAutomaticBurstCount',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=5.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+            set GD_Weap_SMG.Barrel.SMG_Barrel_Dahl ZoomWeaponAttributeEffects ()
+
+            set GD_Weap_SMG.Stock.SMG_Stock_Dahl ZoomWeaponAttributeEffects ()
+
+            set GD_Weap_SMG.Barrel.SMG_Barrel_Dahl_Emperor ZoomWeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponAutomaticBurstCount',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Dahl',InitializationDefinition=None,BaseValueScaleConstant=1.000000))
+
+            set GD_Weap_SMG.Barrel.SMG_Barrel_Bandit_Lascaux ZoomWeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponAutomaticBurstCount',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+            set GD_Orchid_BossWeapons.SMG.SMG_Barrel_Bandit_SandHawk ZoomWeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-0.200000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponAutomaticBurstCount',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-2.00000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+        #</Burst Count>
+
+        #<Torrent (Replaces Emperor)>
+
+            The Torrent from UCP 1.0 returns, courtesy of AngrierPat. Please note that the Torrent does not spawn with a scope but will not despawn existing scopes. Contains optional element code that is disabled by default.
+
+            set GD_Weap_SMG.Barrel.SMG_Barrel_Dahl_Emperor WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.200000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Dahl',InitializationDefinition=None,BaseValueScaleConstant=0.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Dahl',InitializationDefinition=None,BaseValueScaleConstant=-0.200000)))
+
+            set GD_Weap_SMG.Barrel.SMG_Barrel_Dahl_Emperor ZoomWeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponAutomaticBurstCount',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Dahl',InitializationDefinition=None,BaseValueScaleConstant=2.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponBurstShotAccuracyImpulseScale',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Dahl',InitializationDefinition=None,BaseValueScaleConstant=0.200000)))
+
+            set GD_Weap_SMG.Barrel.SMG_Barrel_Dahl_Emperor AttributeSlotUpgrades ((SlotName="WeaponDamage",GradeIncrease=10,bActivateSlot=True),(SlotName="WeaponFireRate",GradeIncrease=15,bActivateSlot=True),(SlotName="WeaponSpread",GradeIncrease=-10,bActivateSlot=True),(SlotName="WeaponMagSize",GradeIncrease=8,bActivateSlot=True),(SlotName="AccuracyMax",GradeIncrease=0,bActivateSlot=True),(SlotName="WeaponAccuracyImpulse",GradeIncrease=-5,bActivateSlot=True),(SlotName="WeaponBurstImpulse",GradeIncrease=2,bActivateSlot=True),(SlotName="WeaponReloadSpeed",GradeIncrease=7,bActivateSlot=True))
+
+            set GD_Weap_SMG.Name.Title.Title_Legendary_Dahl_Emperor PartName Torrent
+
+            set GD_Weap_SMG.Name.Title.Title_Legendary_Dahl_Emperor:AttributePresentationDefinition_8 NoConstraintText Spray it to slay it.
+
+            set GD_Weap_SMG.A_Weapons_Legendary.SMG_Dahl_5_Emperor:WeaponPartListCollectionDefinition_171 SightPartData (bEnabled=True,WeightedParts=((Part=None,Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=2),(Part=WeaponPartDefinition'GD_Weap_SMG.Sight.SMG_Sight_Tedior',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=0,DefaultWeightIndex=0),(Part=WeaponPartDefinition'GD_Weap_SMG.Sight.SMG_Sight_Bandit',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=0,DefaultWeightIndex=0),(Part=WeaponPartDefinition'GD_Weap_SMG.Sight.SMG_Sight_Dahl',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=0,DefaultWeightIndex=0),(Part=WeaponPartDefinition'GD_Weap_SMG.Sight.SMG_Sight_Maliwan',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=0,DefaultWeightIndex=0),(Part=WeaponPartDefinition'GD_Weap_SMG.Sight.SMG_Sight_Hyperion',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=0,DefaultWeightIndex=0)))
+
+            #<Element Part Data>
+
+                #Optional component that equalizes element spawn probabilities. Forbids slag.<off>
+
+                #set GD_Weap_SMG.A_Weapons_Legendary.SMG_Dahl_5_Emperor:WeaponPartListCollectionDefinition_171 ElementalPartData (bEnabled=True,WeightedParts=((Part=WeaponPartDefinition'GD_Weap_SMG.elemental.SMG_Elemental_None',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=3),(Part=WeaponPartDefinition'GD_Weap_SMG.elemental.SMG_Elemental_Fire',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=3),(Part=WeaponPartDefinition'GD_Weap_SMG.elemental.SMG_Elemental_Corrosive',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=3),(Part=WeaponPartDefinition'GD_Weap_SMG.elemental.SMG_Elemental_Shock',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=3),(Part=WeaponPartDefinition'GD_Weap_SMG.elemental.SMG_Elemental_Slag',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=0,DefaultWeightIndex=0)))<off>
+
+            #</Element Part Data>
+
+        #</Torrent (Replaces Emperor)>
+
+    #</SMGs>
+
+#</Dahl Brand Tweaks 1.2>
+
