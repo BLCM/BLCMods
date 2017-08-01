@@ -8,6 +8,10 @@
 #Mustang: BL2(hwAAAAAQ2QCBxwRABAGFmsNwheEP4////////x0w/v//w/CCMRHj)
 #Sally: BL2(hwAAAACGawCBBwZABAGF7sRwhdEU4////////x0w/v/fxPCCQRTj)
 
+#CHANGELOG#
+V1.0 Initial Release
+V2.0 Nerfed Explosive Damage & Reduced Movement speed for Mustang
+
 
 #Name & Description
 set GD_Weap_Pistol.Name.Title_Dahl.Title_Legendary_Hornet PartName Mustang
@@ -24,8 +28,8 @@ set GD_Weap_Pistol.Barrel.Pistol_Barrel_Dahl_Hornet CustomFiringModeDefinition F
 set GD_Weap_Pistol.Barrel.Pistol_Barrel_Tediore_Teapot CustomFiringModeDefinition FiringModeDefinition 'GD_Weap_AssaultRifle.FiringModes.Bullets_Assault_Torgue_GyroJet'
 
 set GD_Weap_AssaultRifle.FiringModes.Bullets_Assault_Torgue_GyroJet OnAnyImpact (Behavior_Explode'GD_Weap_AssaultRifle.FiringModes.Bullets_Assault_Torgue_GyroJet:Behavior_Explode_5')
- 
-set GD_Weap_AssaultRifle.FiringModes.Bullets_Assault_Torgue_GyroJet:Behavior_Explode_5 DamageFormula (BaseValueScaleConstant=20.000000)
+
+set GD_Weap_AssaultRifle.FiringModes.Bullets_Assault_Torgue_GyroJet:Behavior_Explode_5 DamageFormula (BaseValueScaleConstant=10.000000)
 
 set GD_Weap_AssaultRifle.FiringModes.Bullets_Assault_Torgue_GyroJet:Behavior_Explode_5 DamageRadiusFormula (BaseValueConstant=100.000000)
 
@@ -52,7 +56,7 @@ set GD_Weap_Pistol.Barrel.Pistol_Barrel_Tediore_Teapot ExternalAttributeEffects 
 
 set GD_Weap_Pistol.Barrel.Pistol_Barrel_Tediore_Teapot ZoomWeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponAutomaticBurstCount',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
 
-set GD_Weap_Pistol.Barrel.Pistol_Barrel_Dahl_Hornet ExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.GameplayAttributes.FootSpeed',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.400000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+set GD_Weap_Pistol.Barrel.Pistol_Barrel_Dahl_Hornet ExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.GameplayAttributes.FootSpeed',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
 
 set GD_Weap_Pistol.Barrel.Pistol_Barrel_Dahl_Hornet ZoomWeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponAutomaticBurstCount',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
 
