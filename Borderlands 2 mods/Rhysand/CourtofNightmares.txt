@@ -23,9 +23,6 @@ set GD_Weap_SniperRifles.Barrel.SR_Barrel_Dahl_Pitchfork WeaponAttributeEffects 
 ## Removal of Burst
 set GD_Weap_SniperRifles.Barrel.SR_Barrel_Dahl_Pitchfork ZoomWeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponBurstInterval',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-1000.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponAutomaticBurstCount',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-1000.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
 
-## VERY slow ammo regen
-set GD_Weap_SniperRifles.Barrel.SR_Barrel_Dahl_Pitchfork ExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.GameplayAttributes.PlayerCurrentWeaponAmmoRegenerationMultiplier',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
-
 ## Projectile
 set GD_Weap_SniperRifles.FiringModes.Bullet_Sniper_Pitchfork TimerEvents ((Time=0.010000,Response=(SplitNum=11,SplitAngle=0.000000,SplitAngleOffset=0.000000,SplitDistance=33.000000,SplitFire=FiringModeDefinition'GD_Weap_SniperRifles.FiringModes.Bullet_Sniper_Pitchfork_Child',NewSpeed=0.000000,bDetonate=False,bRespawnTracer=False,bUpdateBeamSourceLocation=False,Behaviors=)),(Time=0.100000,Response=(SplitNum=5,SplitAngle=15.000000,SplitAngleOffset=0.000000,SplitDistance=0.000000,SplitFire=FiringModeDefinition'GD_Gladiolus_Weapons.FiringModes.Bullet_Assault_Sawbar_Child',NewSpeed=0.000000,bDetonate=True,bRespawnTracer=True,bUpdateBeamSourceLocation=True,Behaviors=)))
 set GD_Gladiolus_Weapons.FiringModes.Bullet_Assault_Sawbar_Child DamageTypeDefinition WillowDamageTypeDefinition 'GD_Explosive.DamageType.DmgType_Explosive_Impact_ForceFlinch'
