@@ -4,21 +4,17 @@
 
     Replaces the Teapot
 
-    25% Damage buff
-
-    Heals 2.5% of the damage dealt
+    Buffed Weapon Damage
 
     Highly accurate, low recoil (sway)
 
-    Always comes without a sight
+    Always comes without an element
 
-    Elementally Unlocked
+    Always comes without a scope/sight
 
     #<Attributes>
 
         set GD_Weap_Pistol.Barrel.Pistol_Barrel_Tediore_Teapot WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.050000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.250000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
-
-        set GD_Weap_Pistol.Barrel.Pistol_Barrel_Tediore_Teapot ExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.DamageEnhancementModifiers.PlayerConvertDamageToHealingPercent',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.025000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
 
         set GD_Weap_Pistol.Barrel.Pistol_Barrel_Tediore_Teapot ZoomWeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponAutomaticBurstCount',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
 
@@ -44,17 +40,17 @@
 
     #</Title Card>
 
-    #<Remove the sight>
+    #<Remove the scope/sight>
 
-        set GD_Weap_Pistol.A_Weapons_Unique.Pistol_Dahl_3_Teapot:WeaponPartListCollectionDefinition_110 SightPartData (bEnabled=True,WeightedParts=((Part=None,Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=3),(Part=WeaponPartDefinition'GD_Weap_Pistol.Sight.Pistol_Sight_Bandit',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=0,DefaultWeightIndex=0),(Part=WeaponPartDefinition'GD_Weap_Pistol.Sight.Pistol_Sight_Tediore',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=0,DefaultWeightIndex=0),(Part=WeaponPartDefinition'GD_Weap_Pistol.Sight.Pistol_Sight_Vladof',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=0,DefaultWeightIndex=0),(Part=WeaponPartDefinition'GD_Weap_Pistol.Sight.Pistol_Sight_Dahl',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=0,DefaultWeightIndex=0),(Part=WeaponPartDefinition'GD_Weap_Pistol.Sight.Pistol_Sight_Torgue',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=0,DefaultWeightIndex=0),(Part=WeaponPartDefinition'GD_Weap_Pistol.Sight.Pistol_Sight_Maliwan',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=0,DefaultWeightIndex=0),(Part=WeaponPartDefinition'GD_Weap_Pistol.Sight.Pistol_Sight_Jakobs',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=0,DefaultWeightIndex=0),(Part=WeaponPartDefinition'GD_Weap_Pistol.Sight.Pistol_Sight_Hyperion',Manufacturers,MinGameStageIndex=0,MaxGameStageIndex=0,DefaultWeightIndex=0)))
+        set GD_Weap_Pistol.A_Weapons_Unique.Pistol_Dahl_3_Teapot:WeaponPartListCollectionDefinition_110 SightPartData (bEnabled=True,WeightedParts=((Part=None,Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=3)))
 
-    #</Remove the sight>
+    #</Remove the scope/sight>
 
-    #<Elementally Unlocked>
+    #<Remove the elemental attribute>
 
-        set GD_Weap_Pistol.A_Weapons_Unique.Pistol_Dahl_3_Teapot:WeaponPartListCollectionDefinition_110 ElementalPartData (bEnabled=True,WeightedParts=((Part=WeaponPartDefinition'GD_Weap_Pistol.elemental.Pistol_Elemental_None',Manufacturers=,MinGameStageIndex=1,MaxGameStageIndex=1,DefaultWeightIndex=5),(Part=WeaponPartDefinition'GD_Weap_Pistol.elemental.Pistol_Elemental_Fire',Manufacturers=,MinGameStageIndex=1,MaxGameStageIndex=1,DefaultWeightIndex=5),(Part=WeaponPartDefinition'GD_Weap_Pistol.elemental.Pistol_Elemental_Shock',Manufacturers=,MinGameStageIndex=1,MaxGameStageIndex=1,DefaultWeightIndex=5),(Part=WeaponPartDefinition'GD_Weap_Pistol.elemental.Pistol_Elemental_Corrosive',Manufacturers=,MinGameStageIndex=1,MaxGameStageIndex=1,DefaultWeightIndex=5),(Part=WeaponPartDefinition'GD_Weap_Pistol.elemental.Pistol_Elemental_Slag',Manufacturers=,MinGameStageIndex=1,MaxGameStageIndex=1,DefaultWeightIndex=5)))
+        set GD_Weap_Pistol.A_Weapons_Unique.Pistol_Dahl_3_Teapot:WeaponPartListCollectionDefinition_110 ElementalPartData (bEnabled=True,WeightedParts=((Part=WeaponPartDefinition'GD_Weap_Pistol.elemental.Pistol_Elemental_None',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=3)))
 
-    #</Elementally Unlocked>
+    #</Remove the elemental attribute>
 
     #<Default Pistol Firing Mode>
 
