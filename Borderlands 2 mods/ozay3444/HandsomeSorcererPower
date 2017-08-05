@@ -1,0 +1,47 @@
+======================================================
+replace the slagga
+
+The Handsome Sorcerer Power!
+
+shots 15 bullets,every one of tham spawn a magic missile
+
+graet for slag 
+
+created by ozay (oz yohay)
+
+HF
+======================================================
+
+##shots##
+
+set GD_Weap_SMG.Barrel.SMG_Barrel_Bandit_Slagga CustomFiringModeDefinition FiringModeDefinition 'GD_Weap_Shotgun.FiringModes.Bullets_Shotgun_Torgue_Landscaper'
+
+##magic##
+
+set GD_Weap_Shotgun.FiringModes.Bullets_Shotgun_Torgue_Landscaper:Behavior_SpawnProjectile_0 ProjectileDefinition GD_Aster_GrenadeMods.Projectiles.Grenade_MagicMissile
+
+set GD_Weap_Shotgun.FiringModes.Bullets_Shotgun_Torgue_Landscaper:Behavior_SpawnProjectile_0 SpawnDirection DIRECTION_Random
+
+set GD_Weap_Shotgun.FiringModes.Bullets_Shotgun_Torgue_Landscaper:Behavior_SpawnProjectile_0 DirectionConeMinSize 0.000000
+
+set GD_Weap_Shotgun.FiringModes.Bullets_Shotgun_Torgue_Landscaper:Behavior_SpawnProjectile_0 DirectionConeSize 1.000000
+
+set GD_Weap_Shotgun.FiringModes.Bullets_Shotgun_Torgue_Landscaper Speed 20000.000000
+
+set GD_Weap_Shotgun.FiringModes.Bullets_Shotgun_Torgue_Landscaper firingpatternlines ()
+
+##stats##
+
+set GD_Weap_SMG.Barrel.SMG_Barrel_Bandit_Slagga WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-10.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=12.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeTo
+Modify=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponReloadSpeed',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponPerShotAccuracyImpulse',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+##parts##
+
+SET GD_Weap_SMG.Barrel.SMG_Barrel_Bandit_Slagga GestaltModeSkeletalMeshName SMG_Barrel_Dahl
+
+##name##
+
+
+set GD_Weap_SMG.Name.Title_Bandit.Title_Legendary_Slagga PartName Handsome Sorcerer Power!
+
+set GD_Weap_SMG.Name.Title_Bandit.Title_Legendary_Slagga:AttributePresentationDefinition_8 NoConstraintText SUPER SUPER SUPER SUPER SUPER SUPER SUPER SUPER SUPER SUPER SUPER SLAGER!
