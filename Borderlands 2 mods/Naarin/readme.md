@@ -3,7 +3,7 @@ Readme
 
 Experience Multiplier (FilterTool)
 
-  **You can chosse between _2x, 4x, 8x, 16x, 512x_**
+  **You can choose between 2x, 4x, 8x, 16x, 512x**
 
 
 Gearbox Software Hot Fixes (FilterTool)
@@ -19,4 +19,4 @@ Can be
 
 Simulate More Vault Hunters (FilterTool)
 
-  **Needs to be _exec_ while in-game.**
+**Needs to be _exec_ while in-game.**
