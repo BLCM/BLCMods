@@ -1,19 +1,19 @@
 Readme
 =============
 
-Experience Multiplier (FilterTool)
+Experience Multiplier
 
-**You can choose between 2x, 4x, 8x, 16x, 512x**
+**You can choose between 2x, 4x, 8x, 16x, 512x. (O_O)**
 
-Gearbox Software Hot Fixes (FilterTool)
+Gearbox Software Hot Fixes
 
 **List of all the hotfixes released to date (present in the UCP more or less)**
 
-Golden Chest Needs Eridium (FilterTool)
+Golden Chest Needs Eridium
 
 **It costs 10 Eridium to open.**
 
-Golden Chest is Free (FilterTool)
+Golden Chest is Free
 
 **Free.**
 
