@@ -13,13 +13,13 @@ All the hotfixes released to date (present in the UCP more or less).
 
 **Golden Chest Needs Eridium**
 
-**It costs 10 Eridium to open.**
+It costs 10 Eridium to open.
 
     set GD_Balance_Treasure.InteractiveObjects.InteractiveObj_TreasureChest_Golden:BehaviorProviderDefinition_1.Behavior_SetUsabilityCost_10 CostAmount 10
 
 **Golden Chest is Free**
 
-**Free.**
+Free.
 
 **Simulate More Vault Hunters**
 
