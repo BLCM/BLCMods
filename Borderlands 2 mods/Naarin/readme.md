@@ -3,7 +3,7 @@ Readme
 
 Experience Multiplier
 
-**You can choose between 2x, 4x, 8x, 16x, 512x. (O_O)**
+**You can choose between 2x / 4x / 8x / 16x / 512x.**
 
 Gearbox Software Hot Fixes
 
