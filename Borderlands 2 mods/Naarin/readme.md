@@ -3,11 +3,11 @@ Readme
 
 Experience Multiplier
 
-**You can choose between 2x 4x 8x 16x and 512x.**
+You can choose between 2x 4x 8x 16x and 512x.
 
 Gearbox Software Hot Fixes
 
-**List of all the hotfixes released to date (present in the UCP more or less)**
+All the hotfixes released to date (present in the UCP more or less).
 
 Golden Chest Needs Eridium
 
@@ -19,4 +19,4 @@ Golden Chest is Free
 
 Simulate More Vault Hunters
 
-**Needs to be _exec_ while in-game.**
+**Needs to be _exec_ while in-game.** You can use it with FilterTool to check/uncheck.
