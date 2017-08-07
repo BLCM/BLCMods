@@ -1,7 +1,8 @@
 ########
 By Aaron0000
 Features;
-Statistically identical to the Shield of Ages from Pre-Sequel (outside of capacity scaling, also not locked into parts.)
+Statistically identical to the Shield of Ages from Pre-Sequel (outside of scaling, also not locked into parts.)
+Health penalty adjusted to compensate for Overpowered levels.
 
 Replaces the 1340 Shield.
 
@@ -22,7 +23,9 @@ set GD_Shields.A_Item.Shield_Absorption_1340 BehaviorProviderDefinition GD_Shiel
 
 set GD_Shields.Accessory.Accessory3_Absorption_1340 BehaviorProviderDefinition None
 
-set GD_Shields.A_Item.Shield_Absorption_1340 AttributeSlotUpgrades ((SlotName="Capacity",GradeIncrease=65,bActivateSlot=True),(SlotName="RechargeRate",GradeIncrease=35,bActivateSlot=True),(SlotName="RechargeDelay",GradeIncrease=0,bActivateSlot=True),(SlotName="Special01",GradeIncrease=-10,bActivateSlot=True),(SlotName="Special02",GradeIncrease=0,bActivateSlot=False),(SlotName="MaxHealth",GradeIncrease=-25,bActivateSlot=True))
+set GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Absorption_1340 Manufacturers ((Manufacturer=ManufacturerDefinition'GD_Manufacturers.Manufacturers.Hyperion',Grades=((GradeModifiers=(ExpLevel=1,CustomInventoryDefinition=None),GameStageRequirement=(MinGameStage=1,MaxGameStage=100),MinSpawnProbabilityModifier=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),MaxSpawnProbabilityModifier=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))))
+
+set GD_Shields.A_Item.Shield_Absorption_1340 AttributeSlotUpgrades ((SlotName="Capacity",GradeIncrease=65,bActivateSlot=True),(SlotName="RechargeRate",GradeIncrease=35,bActivateSlot=True),(SlotName="RechargeDelay",GradeIncrease=0,bActivateSlot=True),(SlotName="Special01",GradeIncrease=-10,bActivateSlot=True),(SlotName="Special02",GradeIncrease=0,bActivateSlot=False),(SlotName="MaxHealth",GradeIncrease=-12,bActivateSlot=True))
 
 set GD_Shields.A_Item.Shield_Absorption_1340 UIStatList ((bDisplayAsModifierOnly=False,AttributeStyle=ATTRSTYLE_JustNumber,SupplementalAttributeStyle=ATTRSTYLE_JustNumber,StatCombinationMethod=SCM_Multiply,Attribute=ResourcePoolAttributeDefinition'D_Attributes.ShieldResourcePool.ShieldMaxValue',ConstraintAttribute=None,SupplementalAttributeExpression=(AttributeOperand1=None,ComparisonOperator=OPERATOR_EqualTo,Operand2Usage=OPERAND_PreferAttribute,AttributeOperand2=None,ConstantOperand2=0.000000),SupplementalAttributeToAppend=None),(bDisplayAsModifierOnly=False,AttributeStyle=ATTRSTYLE_JustNumber,SupplementalAttributeStyle=ATTRSTYLE_JustNumber,StatCombinationMethod=SCM_Multiply,Attribute=ResourcePoolAttributeDefinition'D_Attributes.ShieldResourcePool.ShieldOnIdleRegenerationRate',ConstraintAttribute=None,SupplementalAttributeExpression=(AttributeOperand1=None,ComparisonOperator=OPERATOR_EqualTo,Operand2Usage=OPERAND_PreferAttribute,AttributeOperand2=None,ConstantOperand2=0.000000),SupplementalAttributeToAppend=None),(bDisplayAsModifierOnly=False,AttributeStyle=ATTRSTYLE_JustNumber,SupplementalAttributeStyle=ATTRSTYLE_JustNumber,StatCombinationMethod=SCM_Multiply,Attribute=ResourcePoolAttributeDefinition'D_Attributes.ShieldResourcePool.ShieldOnIdleRegenerationDelay',ConstraintAttribute=None,SupplementalAttributeExpression=(AttributeOperand1=None,ComparisonOperator=OPERATOR_EqualTo,Operand2Usage=OPERAND_PreferAttribute,AttributeOperand2=None,ConstantOperand2=0.000000),SupplementalAttributeToAppend=None),(bDisplayAsModifierOnly=False,AttributeStyle=ATTRSTYLE_ModifierText,SupplementalAttributeStyle=ATTRSTYLE_JustNumber,StatCombinationMethod=SCM_Multiply,Attribute=ResourcePoolAttributeDefinition'D_Attributes.HealthResourcePool.HealthMaxValue',ConstraintAttribute=None,SupplementalAttributeExpression=(AttributeOperand1=None,ComparisonOperator=OPERATOR_EqualTo,Operand2Usage=OPERAND_PreferAttribute,AttributeOperand2=None,ConstantOperand2=0.000000),SupplementalAttributeToAppend=None)))
 
