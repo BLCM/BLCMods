@@ -13,7 +13,7 @@ List of all the Gearbox hotfixes.
 
 **Golden Chest Needs Eridium (FilterTool)**
 
-10 Eridium needed.
+10 Eridium needed, mod the value inside at will.
 
 **Golden Chest is Free (FilterTool)**
 
@@ -21,11 +21,11 @@ Free.
 
 **HUD.txt**
 
-This mod allows to show/hide some HUD elements.
+This mod allows to show/hide some HUD elements, mod the value inside at will.
 
 **Melee_Enhancement.txt**
 
 
 **Simulate_More_Vault_Hunters.txt**
 
-This mod allows to edit the number of Vault Hunters in-game.
+This mod allows to edit the number of Vault Hunters in-game, mod the value inside at will.
