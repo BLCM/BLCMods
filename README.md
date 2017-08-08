@@ -5,7 +5,7 @@ This is a repository for Community Mods made for the Borderlands series, specifi
 These mods should use the `set` command in the Unreal console to change in-game variables.
 If your mod has specific considerations you should make it clear how to install.
 
-Check out the [Wiki](https://github.com/BL2CP/BLCMods/wiki)
+Check out the [Wiki](https://github.com/BL2CP/BLCMods/wiki). If you want to find specific mods by category, check [repository with sorted mods](https://github.com/BLCM/ModCabinet/wiki)
 
 ## Contribution
 
