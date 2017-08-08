@@ -1,4 +1,4 @@
-Hello Vault Hunters
+EXPLOSIONS!!!
 =
 
 ![alt text](https://github.com/BLCM/BLCMods/blob/master/Borderlands%202%20mods/Naarin/lobo.jpg?raw=true)
