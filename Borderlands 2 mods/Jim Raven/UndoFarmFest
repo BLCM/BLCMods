@@ -1,0 +1,48 @@
+#<RevertFarmFest>
+
+    #<Introduction>
+
+        By Jim Raven
+
+        This is a mod that does nothing by itself. Its a mod Supposed to be used 
+
+        when you want to turn off FarmFest.
+
+        Features : Reverts Drop Rates to Normal Rates
+
+        Reverts Vendors Item of the Day rates to the normal
+
+        Reverts Respawn Time of Mobs to 1500 sec as is the default
+        
+        Normally go to Main menu and exec this mod to revert the Farmfest mod.
+
+    #</Introduction>
+
+    #<Reverts Drop Rates of enemies>
+
+        set GD_Itempools.DropWeights.DropODDs_BossUniques:ConstantAttributeValueResolver_0 ConstantValue 0.100000
+
+        set GD_Itempools.DropWeights.DropODDs_BossUniqueRares:ConstantAttributeValueResolver_0 ConstantValue 0.330000
+
+    #</Reverts Drop Rates of enemies>
+
+    #<Reverts Respawns>
+
+        set globals RespawnDelayInSeconds 1500.000000
+
+    #</Reverts Respawns>
+
+    #<Reverts Vendors IOTD>
+
+        set GD_ItemPools_Shop.Misc.Att_IOTD_Weighting_03_Uncommon:ConstantAttributeValueResolver_1 ConstantValue 4.000000
+
+        set GD_ItemPools_Shop.Misc.Att_IOTD_Weighting_04_Rare:ConstantAttributeValueResolver_0 ConstantValue 1.200000
+
+        set GD_ItemPools_Shop.Misc.Att_IOTD_Weighting_05_VeryRare:ConstantAttributeValueResolver_0 ConstantValue 0.200000
+
+        set GD_ItemPools_Shop.Misc.Att_IOTD_Weighting_06_Legendary:ConstantAttributeValueResolver_0 ConstantValue 0.005500
+
+    #</Reverts Vendors IOTD>
+
+#</RevertFarmFest>
+
