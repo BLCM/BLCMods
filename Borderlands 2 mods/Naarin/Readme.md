@@ -1,6 +1,8 @@
 Hello Vault Hunters
 =
 
+![alt text](https://github.com/BLCM/BLCMods/blob/master/Borderlands%202%20mods/Naarin/lobo.jpg?raw=true)
+
 **Badass_Points_and_Tokens.txt**
 
 **Experience_Multiplier.txt**
