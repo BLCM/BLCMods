@@ -30,4 +30,4 @@ This mod allows to show/hide some HUD elements, mod the value inside at will.
 
 **Simulate_More_Vault_Hunters.txt**
 
-This mod allows to edit the number of Vault Hunters in-game, mod the value inside at will.
+This mod allows to edit the number of Vault Hunters, mod the value inside at will.
