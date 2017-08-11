@@ -8,8 +8,8 @@ If you want to add me on Steam, click this [link](http://steamcommunity.com/id/g
 Click [here](https://www.youtube.com/channel/UCc0sqBDDpS2MI1QWq0NMM5A) to vist my channel.
 
 Here's some of the Borderlands (Mods) videos I've made.
- > [Eridium Hurricane](https://youtu.be/UI9DWv1JTNs)|
- > [Damage Cap Assault Rifle vs. Unbalanced Tiny Tina Tree](https://youtu.be/bQmpbkCU2c4)|
+ > [Eridium Hurricane](https://youtu.be/UI9DWv1JTNs) |
+ > [Damage Cap Assault Rifle vs. Unbalanced Tiny Tina Tree](https://youtu.be/bQmpbkCU2c4) |
  > [skag.exe has stopped working.](https://youtu.be/r_VsFbVoglg)
 
 
