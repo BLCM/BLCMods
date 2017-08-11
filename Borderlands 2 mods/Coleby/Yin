@@ -8,11 +8,13 @@
 
     Heals 2,5% of the damage dealt
 
-    Moderate damage
+    Shoots 3 projectiles with the cost of 1
+
+    Buffed damage (+35%)
 
     High accuracy
 
-    More useful when paired with the Yang (Yin - Slag + Explosive) + (Yang - Fire + Shock + Corrosive)
+    More useful when paired with the Yang, for the ultimate destruction (Yin - Slag + Explosive) + (Yang - Fire + Shock + Corrosive)
 
     #<Aesthetics>
 
@@ -36,29 +38,29 @@
 
     #<Attributes>
 
-        set GD_Weap_SMG.Barrel.SMG_Barrel_Bandit_Lascaux WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-0.300000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponPerShotAccuracyImpulse',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+        set GD_Weap_SMG.Barrel.SMG_Barrel_Bandit_Lascaux WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.350000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-0.300000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponPerShotAccuracyImpulse',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
 
         set GD_Weap_SMG.Barrel.SMG_Barrel_Bandit_Lascaux ZoomWeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponAutomaticBurstCount',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-5.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.075000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
 
         set GD_Weap_SMG.Barrel.SMG_Barrel_Bandit_Lascaux ExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.DamageEnhancementModifiers.PlayerConvertDamageToHealingPercent',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=0.025000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AccuracyResourcePool.AccuracyMinValue',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-1.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
 
-        set GD_Weap_SMG.Barrel.SMG_Barrel_Bandit_Lascaux AttributeSlotUpgrades ((SlotName="WeaponDamage",GradeIncrease=5,bActivateSlot=True),(SlotName="AccuracyMin",GradeIncrease=20,bActivateSlot=True))
+        set GD_Weap_SMG.Barrel.SMG_Barrel_Bandit_Lascaux AttributeSlotUpgrades ((SlotName="AccuracyMin",GradeIncrease=20,bActivateSlot=True))
 
     #</Attributes>
 
     #<Firing Mode>
 
-        set GD_Weap_SMG.FiringModes.Bullet_SMG_Lascaux FiringPatternLines ()
+        set GD_Weap_SMG.FiringModes.Bullet_SMG_Lascaux FiringPatternLines () 
 
-        set GD_Weap_SMG.FiringModes.Bullet_SMG_Lascaux bSuppressWeaponSpread False
+        set GD_Weap_SMG.FiringModes.Bullet_SMG_Lascaux bSuppressWeaponSpread False 
 
-        set GD_Weap_SMG.FiringModes.Bullet_SMG_Lascaux PartSysTemplate ParticleSystem'FX_WEP_Trails.Particles.Alien.Part_Wep_Tracer_Alien_SMG'
+        set GD_Weap_SMG.FiringModes.Bullet_SMG_Lascaux PartSysTemplate ParticleSystem'FX_WEP_Trails.Particles.Alien.Part_Wep_Tracer_Alien_SMG' 
 
-        set GD_Weap_SMG.FiringModes.Bullet_SMG_Lascaux ConditionalPartSysTemplate EffectCollectionDefinition'GD_Weap_SMG.Effects.SMG_ETech_Tracers'
+        set GD_Weap_SMG.FiringModes.Bullet_SMG_Lascaux ConditionalPartSysTemplate EffectCollectionDefinition'GD_Weap_SMG.Effects.SMG_ETech_Tracers' 
 
         set GD_Weap_SMG.FiringModes.Bullet_SMG_Lascaux OnAnyImpact (Behavior_Explode'GD_Weap_Shotgun.FiringModes.Bullets_Shotgun_Torgue_GyroJet:Behavior_Explode_5')
 
-        set GD_Weap_SMG.FiringModes.Bullet_SMG_Lascaux SoundDefinition FiringModeSoundDefinition'GD_Weap_SMG.FiringModes.PlasmaSoundDefinition'
+        set GD_Weap_SMG.FiringModes.Bullet_SMG_Lascaux SoundDefinition FiringModeSoundDefinition'GD_Weap_SMG.FiringModes.PlasmaSoundDefinition' 
 
         set GD_Weap_SMG.Barrel.SMG_Barrel_Bandit_Lascaux MuzzleFlashPSTemplates EffectCollectionDefinition'GD_Weap_SMG.Effects.SMG_ETech_MuzzleFlashes'
 
@@ -76,7 +78,7 @@
 
         set GD_Weap_SMG.Name.Title.Title__Unique_Lascaux PartName Yin
 
-        set GD_Weap_SMG.Name.Title.Title__Unique_Lascaux:AttributePresentationDefinition_8 NoConstraintText <font color = "#666161">Yin: The Negative/Passive/Female principle in nature.<br><font color = "#ffffff">==============================================<br> <font color = "#F44747">Heals<font color = "#FFFFFF"> 2.5% of the damage dealt<br> Deals <font color = "#C021C1">Slag<font color = "#FFFFFF"> + <font color = "#FFF400">Explosive<font color = "#FFFFFF"> damage
+        set GD_Weap_SMG.Name.Title.Title__Unique_Lascaux:AttributePresentationDefinition_8 NoConstraintText <font color = "#666161">Yin: The Negative/Passive/Female principle in nature.<br><font color = "#ffffff">==============================================<br>• <font color = "#F44747">Heals<font color = "#FFFFFF"> 2.5% of the damage dealt<br>• Deals <font color = "#C021C1">Slag<font color = "#FFFFFF"> + <font color = "#FFF400">Explosive<font color = "#FFFFFF"> damage
 
     #</Title Card Description>
 
