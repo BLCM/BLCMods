@@ -1,0 +1,64 @@
+===========================================================================
+the katana
+
+replace the raiper
+
+1000% melee damage
+
+shots grog nozel shots
+
+grate as a gun, grate as a sword. you can chose!
+
+****************************************************************************
+
+make sure on the card thet it says "1000% melee damage'
+
+if not switch the gun to other gun from the inventory, and switch back agine
+
+****************************************************************************
+
+created by ozay (or oz yohay)
+============================================================================
+##name##
+
+
+
+set GD_Orchid_BossWeapons.Name.Title.Title__Unique_Cutlass PartName Katana
+
+set GD_Orchid_BossWeapons.Name.Title.Title__Unique_Cutlass:AttributePresentationDefinition_0 NoConstraintText The dragon becomes me! 
+
+##stats##
+
+
+
+
+set GD_Orchid_BossWeapons.AssaultRifle.AR_Barrel_Bandit_Rapier WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=10.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.DamageSourceModifiers.InstigatedMeleeDamageModifier',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=10.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectileSpeedMultiplier',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-990.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponReloadSpeed',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponPerShotAccuracyImpulse',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-100.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+
+
+##Shots##
+
+
+
+set GD_Orchid_BossWeapons.AssaultRifle.AR_Barrel_Bandit_Rapier CustomFiringModeDefinition FiringModeDefinition 'GD_Aster_Weapons.FiringModes.Bullet_Pistol_Maliwan_GrogNozzle'
+
+##parts##
+
+
+
+set GD_Orchid_BossWeapons.AssaultRifle.AR_Barrel_Bandit_Rapier GestaltModeSkeletalMeshName AR_Barrel_Alien
+
+
+##skin##
+
+set GD_Orchid_BossWeapons.ManufacturerMaterials.Mat_Vladof_2_Rapier Material MaterialInstanceConstant 'Common_GunMaterials.Materials.AssaultRifle.Mati_JakobsEpicAR'
+
+##rearity##
+
+set GD_Orchid_BossWeapons.AssaultRifle.AR_Barrel_Bandit_Rapier rarity (basevalueattribute=none)
+set GD_Orchid_BossWeapons.AssaultRifle.AR_Barrel_Bandit_Rapier rarity (BaseValueConstant=7)
+
+
+set WillowGame.GlobalsDefinition RarityLevelColors ((MinLevel=0,MaxLevel=0,Color=(B=175,G=193,R=205,A=0),DropLifeSpanType=DROP_ShortLived,RarityRating=RARITY_Unknown),(MinLevel=1,MaxLevel=1,Color=(B=255,G=255,R=255,A=255),DropLifeSpanType=DROP_ShortLived,RarityRating=RARITY_Common),(MinLevel=2,MaxLevel=2,Color=(B=11,G=210,R=61,A=255),DropLifeSpanType=DROP_LongLived,RarityRating=RARITY_Uncommon),(MinLevel=3,MaxLevel=3,Color=(B=255,G=142,R=60,A=255),DropLifeSpanType=DROP_LiveForever,RarityRating=RARITY_Rare),(MinLevel=4,MaxLevel=4,Color=(B=229,G=63,R=168,A=255),DropLifeSpanType=DROP_LiveForever,RarityRating=RARITY_VeryRare),(MinLevel=5,MaxLevel=5,Color=(B=0,G=180,R=255,A=255),DropLifeSpanType=DROP_LiveForever,RarityRating=RARITY_Legendary),(MinLevel=6,MaxLevel=6,Color=(B=168,G=0,R=202,A=255),DropLifeSpanType=DROP_LiveForever,RarityRating=RARITY_VeryRare),(MinLevel=7,MaxLevel=10,Color=(B=0,G=180,R=255,A=255),DropLifeSpanType=DROP_LiveForever,RarityRating=RARITY_Legendary),(MinLevel=12,MaxLevel=15,Color=(B=50,G=0,R=230,A=255),DropLifeSpanType=DROP_LiveForever,RarityRating=RARITY_Unknown),(MinLevel=21,MaxLevel=30,Color=(B=57,G=112,R=40,A=255),DropLifeSpanType=DROP_LiveForever,RarityRating=RARITY_Seraph),(MinLevel=31,MaxLevel=40,Color=(B=255,G=28,R=149,A=255),DropLifeSpanType=DROP_LiveForever,RarityRating=RARITY_Seraph),(MinLevel=41,MaxLevel=50,Color=(B=2,G=19,R=206,A=255),DropLifeSpanType=DROP_LiveForever,RarityRating=RARITY_Seraph),(MinLevel=51,MaxLevel=60,Color=(B=0,G=131,R=255,A=255),DropLifeSpanType=DROP_LiveForever,RarityRating=RARITY_Seraph),(MinLevel=61,MaxLevel=70,Color=(B=242,G=87,R=26,A=255),DropLifeSpanType=DROP_LiveForever,RarityRating=RARITY_Seraph),(MinLevel=71,MaxLevel=80,Color=(B=37,G=35,R=178,A=255),DropLifeSpanType=DROP_LiveForever,RarityRating=RARITY_Seraph),(MinLevel=81,MaxLevel=90,Color=(B=4,G=4,R=209,A=255),DropLifeSpanType=DROP_LiveForever,RarityRating=RARITY_Seraph),(MinLevel=91,MaxLevel=100,Color=(B=247,G=128,R=205,A=255),DropLifeSpanType=DROP_LiveForever,RarityRating=RARITY_Seraph),(MinLevel=101,MaxLevel=110,Color=(B=0,G=206,R=144,A=255),DropLifeSpanType=DROP_LiveForever,RarityRating=RARITY_Seraph),(MinLevel=111,MaxLevel=120,Color=(B=6,G=214,R=229,A=255),DropLifeSpanType=DROP_LiveForever,RarityRating=RARITY_Seraph),(MinLevel=141,MaxLevel=150,Color=(B=137,G=60,R=109,A=255),DropLifeSpanType=DROP_LiveForever,RarityRating=RARITY_Unknown),(MinLevel=171,MaxLevel=175,Color=(B=71,G=71,R=207,A=255),DropLifeSpanType=DROP_ShortLived,RarityRating=RARITY_Unknown),(MinLevel=176,MaxLevel=180,Color=(B=167,G=199,R=255,A=0),DropLifeSpanType=DROP_ShortLived,RarityRating=RARITY_Unknown),(MinLevel=181,MaxLevel=499,Color=(B=13,G=255,R=255,A=0),DropLifeSpanType=DROP_ShortLived,RarityRating=RARITY_Unknown),(MinLevel=500,MaxLevel=500,Color=(B=255,G=255,R=0,A=0),DropLifeSpanType=DROP_LiveForever,RarityRating=RARITY_Unknown),(MinLevel=501,MaxLevel=501,Color=(B=184,G=154,R=255,A=0),DropLifeSpanType=DROP_LiveForever,RarityRating=RARITY_Seraph),(MinLevel=502,MaxLevel=502,Color=(B=255,G=255,R=255,A=0),DropLifeSpanType=DROP_LiveAsLongAsLevel,RarityRating=RARITY_Unknown),(MinLevel=503,MaxLevel=503,Color=(B=200,G=50,R=145,A=255),DropLifeSpanType=DROP_LiveForever,RarityRating=RARITY_Unknown),(MinLevel=504,MaxLevel=504,Color=(B=255,G=255,R=0,A=0),DropLifeSpanType=DROP_VeryShortLived,RarityRating=RARITY_Unknown))
+
+
