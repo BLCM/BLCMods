@@ -1,0 +1,66 @@
+===================================================================================================================
+replace the Infection
+
+the Terminator
+
+shots Fire,Corosive and slag shots
+
+shots 3 blaster projectils
+
+new model and skin
+
++fire rate
+
+-damage
+
++++elemant damage
+
++++elemant chances
+
+++clip size
+
+created by ozay (or oz yohay)
+===================================================================================================================
+##skin##
+
+set GD_Sage_RaidWeapons.ManufacturerMaterials.Mat_Maliwan_1_Infection Material MaterialInstanceConstant 'Common_GunMaterials.Materials.Pistol.Mati_DahlCommon'
+
+##name##
+
+
+
+set GD_Sage_RaidWeapons.Name.Title.Sage_Seraph_Infection_Title PartName Terminator
+
+set GD_Sage_RaidWeapons.Name.Title.Sage_Seraph_Infection_Title:AttributePresentationDefinition_8 NoConstraintText I will come back
+
+##stats##
+
+
+
+
+set GD_Sage_RaidWeapons.Pistol.Pistol_Barrel_Infection WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-2.300000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-0.800000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-10.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponReloadSpeed',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=-1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponPerShotAccuracyImpulse',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-19990.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+
+
+##Shots##
+
+
+
+set GD_Sage_RaidWeapons.Pistol.Pistol_Barrel_Infection CustomFiringModeDefinition FiringModeDefinition 'GD_Weap_AssaultRifle.FiringModes.Bullet_Blaster_Dahl'
+
+set GD_Weap_AssaultRifle.FiringModes.Bullet_Blaster_Dahl OnAnyImpact (Behavior_Explode'GD_Aster_Weapons.FiringModes.Bullet_Pistol_Maliwan_GrogNozzle:Behavior_Explode_5',Behavior_Explode'GD_Weap_SMG.FiringModes.Bullet_SMG_HellFire:Behavior_Explode_5')
+
+set GD_Aster_Weapons.FiringModes.Bullet_Pistol_Maliwan_GrogNozzle:Behavior_Explode_5 Definition ExplosionDefinition'GD_Explosions.Slag.Explosion_SlagMaster'
+
+set GD_Aster_Weapons.FiringModes.Bullet_Pistol_Maliwan_GrogNozzle:Behavior_Explode_5 DamageFormula (BaseValueScaleConstant=0.500000)
+
+set GD_Weap_SMG.FiringModes.Bullet_SMG_HellFire:Behavior_Explode_5 Definition ExplosionDefinition'GD_Explosions.Incendiary.Explosion_IncendiaryMaster'
+
+set GD_Weap_SMG.FiringModes.Bullet_SMG_HellFire:Behavior_Explode_5 DamageFormula (BaseValueScaleConstant=0.500000)
+
+##parts##
+
+
+set GD_Sage_RaidWeapons.Pistol.Pistol_Barrel_Infection GestaltModeSkeletalMeshName Pistol_Barrel_Vladof
+
+==================================================================================================================
