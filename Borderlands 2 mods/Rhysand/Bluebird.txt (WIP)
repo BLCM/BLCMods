@@ -1,0 +1,28 @@
+########## Bluebird - The ultimate slaging utility weapon. Meant to compete with/replace the Grog Nozzle. ##########
+## 99.9% slag chance
+## 60% faster swap speed to and from it.
+## 85% life steal.
+## A 250% type B critical hit bonus for Gunzerkers.
+## 1 bullet richochet to help out Gaige.
+## A VERY large slag splash radius.
+## Replaces the Chulainn
+## By Rhysand
+
+
+## Name and Description
+set GD_Weap_SMG.Name.Title.Title__Unique_Chulainn PartName Bluebird
+set GD_Weap_SMG.Name.Title.Title__Unique_Chulainn:AttributePresentationDefinition_8 NoConstraintText I will never leave you, not in a million years.
+set GD_Weap_SMG.ManufacturerMaterials.Mat_Maliwan_3_Chulainn WeaponCardAttributes ((Attribute=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',PriorityIncrease=3.000000),(Attribute=AttributeDefinition'D_Attributes.Weapon.WeaponStatusEffectChanceModifier',PriorityIncrease=3.000000),(Attribute=AttributeDefinition'D_Attributes.DamageEnhancementModifiers.PlayerConvertDamageToHealingPercent',PriorityIncrease=1.50000),(Attribute=AttributeDefinition'D_Attributes.GameplayAttributes.PlayerCriticalHitBonus',PriorityIncrease=2.50000))
+
+
+## Weapon Changes
+set GD_Weap_SMG.Barrel.SMG_Barrel_Chulainn WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponAdditionalRicochets',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponStatusEffectChanceModifier',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=4.172000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+## Healing, Critical Bonus, Weapon Swap Speed
+set GD_Weap_SMG.Barrel.SMG_Barrel_Chulainn ExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.DamageEnhancementModifiers.PlayerConvertDamageToHealingPercent',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.850000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.GameplayAttributes.PlayerCriticalHitBonus',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=5.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'WeaponSwapTimeMultiplier',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-0.600000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+## Large slag splash explosions
+set GD_Weap_SMG.FiringModes.Bullet_SMG_Chulainn DamageTypeDefinition WillowDamageTypeDefinition None
+set GD_Weap_SMG.FiringModes.Bullet_SMG_Chulainn OnAnyImpact (Behavior_Explode'GD_Weap_SMG.FiringModes.Bullet_SMG_Chulainn:Behavior_Explode_5')
+set GD_Weap_SMG.FiringModes.Bullet_SMG_Chulainn:Behavior_Explode_5 DamageRadiusFormula (BaseValueConstant=200.000000)
+set GD_Weap_SMG.FiringModes.Bullet_SMG_Chulainn:Behavior_Explode_5 DamageFormula (BaseValueScaleConstant=1.000000)
