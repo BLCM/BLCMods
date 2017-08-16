@@ -1583,6 +1583,9 @@ set GD_Orchid_BossWeapons.Shotgun.SG_Barrel_Bandit_JollyRoger WeaponCardAttribut
 
 set GD_Orchid_BossWeapons.Shotgun.SG_Barrel_Bandit_JollyRoger WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=3.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=-1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.496700,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=-2.000000)))
 set GD_Orchid_BossWeapons.Shotgun.SG_Barrel_Bandit_JollyRoger ExternalAttributeEffects ((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AccuracyResourcePool.AccuracyMinValue',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=-1.000000)))
+set GD_Orchid_BossWeapons.Shotgun.SG_Barrel_Bandit_JollyRoger AttributeSlotUpgrades ((SlotName="AccuracyMin",GradeIncrease=10,bActivateSlot=True),(SlotName="WeaponAccuracyImpulse",GradeIncrease=12,bActivateSlot=True),(SlotName="WeaponFireRate",GradeIncrease=-10,bActivateSlot=True))
+
+
 set GD_Orchid_BossWeapons.FiringModes.Bullet_Shotgun_JollyRoger DamageTypeDefinition WillowDamageTypeDefinition'GD_Explosive.DamageType.DmgType_Explosive_Impact'
 set GD_Orchid_BossWeapons.FiringModes.Bullet_Shotgun_JollyRoger OnAnyImpact (Behavior_Explode'GD_Weap_Shotgun.FiringModes.Bullets_Shotgun_Torgue_GyroJet:Behavior_Explode_5')
 set GD_Orchid_BossWeapons.FiringModes.Bullet_Shotgun_JollyRoger bSuppressWeaponSpread True
