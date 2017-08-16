@@ -6,7 +6,7 @@
 
     <Overhauls the entire Jakobs non-unique lineup of guns by giving them entirely new skins>
 
-    <Most of the stuff present here comes from Aaron0000s BL1Colors and AtlasReborn mods, and release this with my full respect and thanks to him.>
+    <Most of the stuff present is heavily inspired or based on Aaron0000s BL1Colors and AtlasReborn mods, and release this with my full respect and thanks to him.>
 
     #<Shotguns>
 
@@ -318,7 +318,23 @@
 
         #</Godfinger with E-Tech barrel>
 
-        #<Shinier Citrines&Hawkeye>
+        #<Skullmasher with E-tech barrel>
+
+            #set GD_Weap_SniperRifles.Barrel.SR_Barrel_Jakobs_Skullmasher GestaltModeSkeletalMeshName SR_Barrel_Alien<off>
+
+            #set GD_Weap_SniperRifles.Barrel.SR_Barrel_Jakobs_Skullmasher BoneControllers ((BoneName="Alien_Top_L_Flap",ControlType=WEAP_BONE_CONTROL_Flap,bUseInFirstPerson=True,bUseInThirdPerson=False,ControlTemplate=WillowSkelControl_RotateFlapFromFiring'GD_Weap_SniperRifles.Barrel.SR_Barrel_Alien_RailGun:WillowSkelControl_RotateFlapFromFiring_0'),(BoneName="Alien_Top_R_Flap",ControlType=WEAP_BONE_CONTROL_Flap,bUseInFirstPerson=True,bUseInThirdPerson=False,ControlTemplate=WillowSkelControl_RotateFlapFromFiring'GD_Weap_SniperRifles.Barrel.SR_Barrel_Alien_RailGun:WillowSkelControl_RotateFlapFromFiring_1'),(BoneName="Alien_Bottom_L_Flap",ControlType=WEAP_BONE_CONTROL_Flap,bUseInFirstPerson=True,bUseInThirdPerson=False,ControlTemplate=WillowSkelControl_RotateFlapFromFiring'GD_Weap_SniperRifles.Barrel.SR_Barrel_Alien_RailGun:WillowSkelControl_RotateFlapFromFiring_2'),(BoneName="Alien_Bottom_R_Flap",ControlType=WEAP_BONE_CONTROL_Flap,bUseInFirstPerson=True,bUseInThirdPerson=False,ControlTemplate=WillowSkelControl_RotateFlapFromFiring'GD_Weap_SniperRifles.Barrel.SR_Barrel_Alien_RailGun:WillowSkelControl_RotateFlapFromFiring_3'))<off>
+
+            #set GD_Weap_SniperRifles.Barrel.SR_Barrel_Jakobs_Skullmasher bFlapsEnabled True<off>
+
+            #set GD_Weap_SniperRifles.Barrel.SR_Barrel_Jakobs_Skullmasher FlapsExpandDuration (BaseValueConstant=0.250000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)<off>
+
+            #set GD_Weap_SniperRifles.Barrel.SR_Barrel_Jakobs_Skullmasher FlapsCollapseDuration (BaseValueConstant=0.850000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)<off>
+
+            #set GD_Weap_SniperRifles.Barrel.SR_Barrel_Jakobs_Skullmasher CustomFiringModeDefinition FiringModeDefinition'GD_Weap_SniperRifles.FiringModes.Bullet_RailGun'<off>
+
+        #</Skullmasher with E-tech barrel>
+
+        #<Shinier Citrines&Hawkeye&Skullmasher>
 
             #set Sage_GunMaterials.Materials.sniper.Mati_JakobsRaidSR_HawkEye TextureParameterValues ((ParameterName="p_NormalScopesEmissive",ParameterValue=Texture2D'Weap_SniperRifles.Tex.Weap_SniperRifle_Nrm',ExpressionGUID=(A=-1743872746,B=1126171774,C=119496871,D=-1952271718)),(ParameterName="p_Diffuse",ParameterValue=Texture2D'Common_GunMaterials.CompTextures.Weap_AssaultSubSniper_Comp',ExpressionGUID=(A=1757607260,B=1326539502,C=-317215581,D=-565807463)),(ParameterName="p_Masks",ParameterValue=Texture2D'Weap_SniperRifles.Tex.Weap_SniperRifle_Comp',ExpressionGUID=(A=-330624041,B=1167251458,C=-335191907,D=-166684394)),(ParameterName="P_SimpleReflect",ParameterValue=Texture2D'Common_GunMaterials.Env.GlossyC',ExpressionGUID=(A=-858148940,B=1327945772,C=148462268,D=1899047224)))<off>
 
@@ -330,7 +346,9 @@
 
             #set Aster_GunMaterials.Materials.Shotgun.Mati_Jakobs_Citrine_SG TextureParameterValues ((ParameterName="p_NormalScopesEmissive",ParameterValue=Texture2D'Weap_Shotguns.Tex.Weap_Shotgun_Nor',ExpressionGUID=(A=-1743872746,B=1126171774,C=119496871,D=-1952271718)),(ParameterName="p_Diffuse",ParameterValue=Texture2D'Common_GunMaterials.CompTextures.Weap_LauncherShotgunPistol_Comp',ExpressionGUID=(A=1757607260,B=1326539502,C=-317215581,D=-565807463)),(ParameterName="p_Masks",ParameterValue=Texture2D'Weap_Shotguns.Tex.Weap_Shotgun_Comp',ExpressionGUID=(A=-330624041,B=1167251458,C=-335191907,D=-166684394)),(ParameterName="P_SimpleReflect",ParameterValue=Texture2D'Common_GunMaterials.Env.GlossyC',ExpressionGUID=(A=-858148940,B=1327945772,C=148462268,D=1899047224)))<off>
 
-        #</Shinier Citrines&Hawkeye>
+            #set Common_GunMaterials.Materials.sniper.Mati_JakobsLegendarySRSkullmasher TextureParameterValues ((ParameterName="p_NormalScopesEmissive",ParameterValue=Texture2D'Weap_SniperRifles.Tex.Weap_SniperRifle_Nrm',ExpressionGUID=(A=-1743872746,B=1126171774,C=119496871,D=-1952271718)),(ParameterName="p_Diffuse",ParameterValue=Texture2D'Common_GunMaterials.CompTextures.Weap_AssaultSubSniper_Comp',ExpressionGUID=(A=1757607260,B=1326539502,C=-317215581,D=-565807463)),(ParameterName="p_Masks",ParameterValue=Texture2D'Weap_SniperRifles.Tex.Weap_SniperRifle_Comp',ExpressionGUID=(A=-330624041,B=1167251458,C=-335191907,D=-166684394)),(ParameterName="P_SimpleReflect",ParameterValue=Texture2D'Common_GunMaterials.Env.GlossyC',ExpressionGUID=(A=-858148940,B=1327945772,C=148462268,D=1899047224)))<off>
+
+        #</Shinier Citrines&Hawkeye&Skullmasher>
 
     #</Options>
 
