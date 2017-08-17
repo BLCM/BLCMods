@@ -19,3 +19,6 @@ Special thanks to Mike for letting me *borrow* and modify his Slag Unf0reseen co
 
 #6: Flicker
 >Changes flicker to add directly onto elemental chance.
+
+#6: More Pep
+>Changes more pep to add directly onto elemental chance.
