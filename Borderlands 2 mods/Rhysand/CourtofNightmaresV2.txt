@@ -1,4 +1,4 @@
-########## Court of Nightmares - Pitchfork Replacement ##########
+########## Court of Nightmares - ##########
 ## EXECUTE THIS FILE *AFTER* THE COMMUNITY PATCH AND ANY OTHER MODS THAT CHANGE THE PITCHFORK, OR EXECUTE IT LAST TO BE SAFE.
 ## The Court of Nightmares is meant to directly compete with the Court of Dreams.
 ## The snipers will have identical stats when they are the same level with perfect parts.
@@ -7,14 +7,18 @@
 ## It is quite powerful, but remember that this sniper is meant to compete with the Court of Dreams/Pimpernel, and is balanced as such.
 ## Fires in a circular, sun-like pattern; 5 additional projectiles split off and explode after a moment.
 ## The 5 explosions benefit from grenade damage boosts, the main projectile does not.
+## Replaces the Pitchfork - Can only be farmed from Terramorphous the Invincible. I suggest gibbed for this one.
+## Perfect Gibbed Code: BL2(hwAAAAAfKQCBiINBBAGFdoJJAIMKZgXMBBgbMGRg/v+ngmEEcwvm) - Fire
 ## By Rhysand
-## Once again, if you get the reference we need to talk about books. Lots.
 
-
+##### Changelog #####
+# V1: Create Court of Nightmares
+# V2: Made projectile explosions match element of main weapon, instead of explosive. Updated card and increased explosion radius.
 
 ## Name/Card
 set GD_Weap_SniperRifles.Name.Title_Dahl.Title_Legendary_Pitchfork PartName Court of Nightmares
 set GD_Weap_SniperRifles.Name.Title_Dahl.Title_Legendary_Pitchfork:AttributePresentationDefinition_8 NoConstraintText You bow to no one.
+set GD_Weap_SniperRifles.ManufacturerMaterials.Material_Dahl_5_Legendary WeaponCardAttributes ((Attribute=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',PriorityIncrease=3.000000))
 
 ## Weapon Attributes
 set GD_Weap_SniperRifles.Barrel.SR_Barrel_Dahl_Pitchfork WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-0.374333,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-0.400000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=3.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.550000,BaseValueAttribute=none,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponPerShotAccuracyImpulse',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-9.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=2.900000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponStatusEffectDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.0000015,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponStatusEffectChanceModifier',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.435000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
@@ -23,9 +27,13 @@ set GD_Weap_SniperRifles.Barrel.SR_Barrel_Dahl_Pitchfork WeaponAttributeEffects 
 set GD_Weap_SniperRifles.Barrel.SR_Barrel_Dahl_Pitchfork ZoomWeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponBurstInterval',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-1000.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponAutomaticBurstCount',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-1000.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
 
 ## Projectile
-set GD_Weap_SniperRifles.FiringModes.Bullet_Sniper_Pitchfork TimerEvents ((Time=0.010000,Response=(SplitNum=11,SplitAngle=0.000000,SplitAngleOffset=0.000000,SplitDistance=33.000000,SplitFire=FiringModeDefinition'GD_Weap_SniperRifles.FiringModes.Bullet_Sniper_Pitchfork_Child',NewSpeed=0.000000,bDetonate=False,bRespawnTracer=False,bUpdateBeamSourceLocation=False,Behaviors=)),(Time=0.100000,Response=(SplitNum=5,SplitAngle=15.000000,SplitAngleOffset=0.000000,SplitDistance=0.000000,SplitFire=FiringModeDefinition'GD_Gladiolus_Weapons.FiringModes.Bullet_Assault_Sawbar_Child',NewSpeed=0.000000,bDetonate=True,bRespawnTracer=True,bUpdateBeamSourceLocation=True,Behaviors=)))
-set GD_Gladiolus_Weapons.FiringModes.Bullet_Assault_Sawbar_Child DamageTypeDefinition WillowDamageTypeDefinition 'GD_Explosive.DamageType.DmgType_Explosive_Impact_ForceFlinch'
+set GD_Weap_SniperRifles.FiringModes.Bullet_Sniper_Pitchfork TimerEvents ((Time=0.010000,Response=(SplitNum=11,SplitAngle=0.000000,SplitAngleOffset=0.000000,SplitDistance=33.000000,SplitFire=FiringModeDefinition'GD_Weap_SniperRifles.FiringModes.Bullet_Sniper_Pitchfork_Child',NewSpeed=0.000000,bDetonate=False,bRespawnTracer=False,bUpdateBeamSourceLocation=False,Behaviors=)),(Time=0.100000,Response=(SplitNum=5,SplitAngle=15.000000,SplitAngleOffset=0.000000,SplitDistance=0.000000,SplitFire=FiringModeDefinition'GD_Gladiolus_Weapons.FiringModes.Bullet_Assault_Sawbar_Child',NewSpeed=0.000000,bDetonate=False,bRespawnTracer=False,bUpdateBeamSourceLocation=False,Behaviors=)),(Time=0.100000,Response=(SplitNum=1,SplitAngle=0.000000,SplitAngleOffset=0.000000,SplitDistance=0.000000,SplitFire=FiringModeDefinition'GD_Weap_SniperRifles.FiringModes.Bullet_Sniper_Pitchfork_Child',NewSpeed=0.000000,bDetonate=False,bRespawnTracer=False,bUpdateBeamSourceLocation=False,Behaviors=)))
+set GD_Weap_SniperRifles.FiringModes.Bullet_Sniper_Pitchfork ExplosionOverrideDefinition ExplosionCollectionDefinition'GD_Weap_Shared_Effects.Default_Elemental_Explosions'
+set GD_Weap_SniperRifles.FiringModes.Bullet_Sniper_Pitchfork ExplosionOverideInstanceDataName ExplosionOverride
 set GD_Gladiolus_Weapons.FiringModes.Bullet_Assault_Sawbar_Child:Behavior_Explode_5 DamageSource Class'WillowGame.WillowDmgSource_Grenade'
+set GD_Gladiolus_Weapons.FiringModes.Bullet_Assault_Sawbar_Child:Behavior_Explode_5 DamageRadiusFormula (BaseValueConstant=250.000000)
+set GD_Gladiolus_Weapons.FiringModes.Bullet_Assault_Sawbar_Child:Behavior_Explode_1 DamageRadiusFormula (BaseValueConstant=250.000000)
+set GD_Gladiolus_Weapons.FiringModes.Bullet_Assault_Sawbar_Child:Behavior_Explode_1 DamageFormula (BaseValueScaleConstant=1.5)
 
 ## Skin
 

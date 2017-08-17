@@ -1,0 +1,36 @@
+#<patch>
+
+    Replaces Darts with Laser Pistols, which deal extra damage, have 25% additive critical damage, pierce enemies, and bounce off surfaces once (twice if Hyperion).
+
+    Not compatible with other Dart-altering mods and only changes common E-Techs.
+
+    Coded by: Orudeon
+
+    Features:
+
+    Dahl: Shotgun mode when ADS
+
+    Hyperion: Extra surface bounce. Also extra crit when combined with Gear Overhaul
+
+    Maliwan: High DoT chance and damage
+
+    Bandit: Extra shot chance when combined with Gear Overhaul
+
+    Vladof: It fires fast I guess
+
+    Tediore: Regenerates ammo when combined with Gear overhaul
+
+    set GD_Weap_Pistol.Name.Title.Title_Dart PartName Laser Pistol 
+
+    set GD_Weap_Pistol.Name.Title.Title_Dart WeaponCardAttributes ((Attribute=AttributeDefinition'D_Attributes.GameplayAttributes.PlayerCriticalHitBonus',PriorityIncrease=0.50000))
+
+    set WeaponPartDefinition'GD_Weap_Pistol.Barrel.Pistol_Barrel_Alien_Homing' CustomFiringModeDefinition FiringModeDefinition'GD_Weap_SniperRifles.FiringModes.Bullet_RailGun' 
+
+    set WeaponPartDefinition'GD_Weap_Pistol.Barrel.Pistol_Barrel_Alien_Homing' WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=2.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponStatusEffectChanceModifier',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.200000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.800000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Maliwan',InitializationDefinition=None,BaseValueScaleConstant=-1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponStatusEffectChanceModifier',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Maliwan',InitializationDefinition=None,BaseValueScaleConstant=1.200000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponStatusEffectDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Maliwan',InitializationDefinition=None,BaseValueScaleConstant=4.0000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponAdditionalRicochets',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Hyperion',InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+    set WeaponPartDefinition'GD_Weap_Pistol.Barrel.Pistol_Barrel_Alien_Homing' ExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.GameplayAttributes.PlayerCriticalHitBonus',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.250000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+    set WeaponPartDefinition'GD_Weap_Pistol.Barrel.Pistol_Barrel_Alien_Homing' ZoomWeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.00000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Dahl',,InitializationDefinition=None,BaseValueScaleConstant=-100.0)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponBurstInterval',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.0000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Dahl',,InitializationDefinition=None,BaseValueScaleConstant=50.0000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.00000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Dahl',,InitializationDefinition=None,BaseValueScaleConstant=0.20000)))
+
+#</patch>
+
