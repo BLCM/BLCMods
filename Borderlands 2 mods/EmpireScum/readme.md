@@ -16,3 +16,6 @@ Special thanks to Mike for letting me *borrow* and modify his Slag Unf0reseen co
 
 #5: Butt Stallion
 >Butt Stallion will no longer drop ammo or money. In addition, he will no longer drop guns of rarity below blue. Also slightly increases the chances of gemstone poops and barfs.
+
+#6: Flicker
+>Changes flicker to add directly onto elemental chance.
