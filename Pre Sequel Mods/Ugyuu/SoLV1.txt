@@ -1,0 +1,45 @@
+A weapon made by:                           |
+  _    _  _____  _   _  _    _  _    _      |
+ | |  | || ____|| | | || |  | || |  | |     |
+ | |  | || | __ | \_/ || |  | || |  | |     |
+ | |  | || ||_ | \   / | |  | || |  | |     |
+ | |__| || |_| |  | |  | |__| || |__| |  _  |
+ |______||_____|  |_|  |______||______| |_| |
+                                            |
+        With help of the community.         |
+____________________________________________|
+
+Turns the Skullmasher into the Speed Of Link, bonus brownies if you get the refference.
+
+[Features]
+
+- Very high projectile speed; Hitscanning can pretty much be done with this sniper.
+- Low fire rate, but not as low as pre-patch hyperion snipers.
+- Very high accuracy, though not perfect if you fire quickly.
+- Slightly quicker reload speed.
+- Bullets penetrate shields.
+- Deals additional explosive damage to armor. (This counts critical hits as well)
+- Low clip size. (5)
+
+[Changelog]
+
+[Codes]
+
+set GD_Cork_Weap_SniperRifles.Barrel.SR_Barrel_Jakobs_Skullmasher GestaltModeSkeletalMeshName SR_Barrel_Hyperion
+
+set GD_Cork_Weap_SniperRifles.Barrel.SR_Barrel_Jakobs_Skullmasher AttributeSlotUpgrades ((SlotName="AccuracyMin",GradeIncrease=1234,bActivateSlot=True),(SlotName="AccuracyMax",GradeIncrease=5,bActivateSlot=True),(SlotName="WeaponSpread",GradeIncrease=1111,bActivateSlot=True),(SlotName="WeaponZoomFOV",GradeIncrease=10,bActivateSlot=True))
+set GD_Cork_Weap_SniperRifles.Barrel.SR_Barrel_Jakobs_Skullmasher ExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.DamageSourceShieldPenetration.PercentChanceInstigatedBulletDmgIgnoresShields',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=100.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+set GD_Cork_Weap_SniperRifles.Barrel.SR_Barrel_Jakobs_Skullmasher WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.175000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0.500000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=2.100000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.00000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=-9999.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=1.00000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=5.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponReloadSpeed',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=-0.500000)))
+
+set GD_Cork_Weap_SniperRifles.Barrel.SR_Barrel_Jakobs_Skullmasher WeaponCardAttributes ((Attribute=AttributeDefinition'D_Attributes.DamageSourceShieldPenetration.PercentChanceInstigatedBulletDmgIgnoresShields',PriorityIncrease=1.000000))
+
+set GD_Cork_Weap_Pistol.FiringModes.Bullet_Pistol_Smasher Speed 80000.000000
+set GD_Cork_Weap_Pistol.FiringModes.Bullet_Pistol_Smasher FiringPatternLines ()
+set GD_Cork_Weap_Pistol.FiringModes.Bullet_Pistol_Smasher ImpactResponses ((DamageSurfaceType=DMGSURFACE_Armor,bDisableRegularBulletDamage=False,Behaviors=(Behavior_Explode'GD_Cork_Weap_Shotgun.FiringModes.Bullet_Shotgun_Moonface:Behavior_Explode_1')))
+set GD_Cork_Weap_SniperRifles.Barrel.SR_Barrel_Jakobs_Skullmasher CustomFiringModeDefinition FiringModeDefinition'GD_Cork_Weap_Pistol.FiringModes.Bullet_Pistol_Smasher'
+
+set GD_Cork_Weap_SniperRifles.Barrel.SR_Barrel_Jakobs_Skullmasher Rarity (BaseValueConstant=None)
+set GD_Cork_Weap_SniperRifles.Barrel.SR_Barrel_Jakobs_Skullmasher Rarity (BaseValueConstant=497.000000)
+
+set GD_Cork_Weap_SniperRifles.Name.Title_Legendary_Skullmasher PartName Speed of Link
+set GD_Cork_Weap_SniperRifles.Name.Title_Legendary_Skullmasher:AttributePresentationDefinition_8 NoConstraintText <font color="#f13b63">Don't stop the beat.. Turning up speed..<font color="#ffffff"><br>[funstat] +100% <font color="#f2e3a7">Hitscan<font color="#ffffff"><br>[funstat] Bullets ignore <font color="#88e5ef">shields.<font color="#ffffff"><br>[funstat] Hits your target <font color="#ffb7ca">as fast as possible.<font color="#ffffff">
