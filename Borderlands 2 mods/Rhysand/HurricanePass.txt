@@ -1,10 +1,21 @@
-########## Waterfall - Epic Awesomeness ##########
+########## Hurricane Pass ##########
+## EXECUTE AFTER COMMUNITY PATCH.
+## Spawns ONLY in shock - don't worry, it is designed with this in mind, and damage has been increased to compensate.
+## Fires a vertical pattern of 8 unlisted projectiles.
+## On Impact: Spawns Thunderball Fists, Swordsplosion, and ChereAmie healing child projectiles. Everything is shock.
+## Strong but not overpowered without Bee. STUPIDLY overpowered when used with the Bee (at or above the level of a Sandhawk).
+## No self-damage on SWordsplosion and Thunderball Fists child projectile explosions.
+## +115% critical damage, +30% weapon damage, +Slowish Ammo Regeneration, 2 ammo per shot.
+## Replaces Commerce - If you elementally unlock it and forget to execute that mod, sanity check will delete the gun.
+## I chose to leave it in shock so that does not happen to any unfortunate souls; it would be op in other elements anyways. 
+## Perfect Gibbed Code: 
+## By Rhysand
 
 
 ## Name & Card
 set GD_Weap_SMG.Name.Title.Title__Unique_Commerce PartName Hurricane Pass
 set GD_Weap_SMG.Name.Title.Title__Unique_Commerce:AttributePresentationDefinition_8 NoConstraintText Good luck getting over this one.
-set GD_Weap_SMG.ManufacturerMaterials.Mat_Hyperion_3_Commerce WeaponCardAttributes ((Attribute=AttributeDefinition'D_Attributes.GameplayAttributes.PlayerCriticalHitBonus',PriorityIncrease=3.500000),(Attribute=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',PriorityIncrease=3.500000),(Attribute=AttributeDefinition'D_Attributes.GameplayAttributes.PlayerCurrentWeaponAmmoRegenerationMultiplier',PriorityIncrease=3.500000))
+set GD_Weap_SMG.ManufacturerMaterials.Mat_Hyperion_3_Commerce WeaponCardAttributes ((Attribute=AttributeDefinition'D_Attributes.GameplayAttributes.PlayerCriticalHitBonus',PriorityIncrease=3.500000),(Attribute=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',PriorityIncrease=3.500000),(Attribute=AttributeDefinition'D_Attributes.GameplayAttributes.PlayerCurrentWeaponAmmoRegenerationMultiplier',PriorityIncrease=3.500000),(Attribute=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',PriorityIncrease=3.500000))
 
 ## Weapon Attributes
 set GD_Weap_SMG.Barrel.SMG_Barrel_Tediore_Commerce ExternalAttributeEffects ((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AccuracyResourcePool.AccuracyMaxValue',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AccuracyResourcePool.AccuracyOnIdleRegenerationRate',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.GameplayAttributes.PlayerCriticalHitBonus',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.150000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.GameplayAttributes.PlayerCurrentWeaponAmmoRegenerationMultiplier',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
