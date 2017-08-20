@@ -1,0 +1,50 @@
+A patch made by:                            |
+  _    _  _____  _   _  _    _  _    _      |
+ | |  | || ____|| | | || |  | || |  | |     |
+ | |  | || | __ | \_/ || |  | || |  | |     |
+ | |  | || ||_ | \   / | |  | || |  | |     |
+ | |__| || |_| |  | |  | |__| || |__| |  _  |
+ |______||_____|  |_|  |______||______| |_| |
+                                            |
+        With help of the community.         |
+____________________________________________|
+
+Turns the Probe into something even better: The neuromancer of the moon: Miss Moxxi's Lunar Dancer.
+
+[Notes]
+
+Not useful on Aurelia due to a fire explosion. If you still want to use it on her, it is best to remove the fire explosion.
+(,Behavior_Explode'GD_Ma_Weapons.FiringModes.Bullet_Laser_Dahl_Thunderfire:Behavior_Explode_5' is what you would remove)
+
+Best used on maelstrom Athena, if you have a shock Lunar Dancer. (Very OP on Maelstrom Athena)
+
+[Features]
+
+- Slightly increased damage and clip size with decreased reload speed.
+- Shots can ricochet once, and if they do create a bigger elemental explosion, matching your weapon element, if they hit something.
+- Shots explode into a Fire and Explosive nova, along with a nova matching the element yours currently has.
+- Not elemental locked!
+- Burst fires 3 rounds with increased (only a little) damage when aiming down sights.
+- Damage still heals you, because it is a moxxi weapon.
+
+[Where To Obtain]
+
+Can be obtained from the Shock Drop Slaughter Pit when using the Community Patch.
+
+[Changelog]
+
+V1.5 Fixed typos, i was way too sleepy when i uploaded this, that i forgot to change some names. This was originally called the Neuromancer.
+
+[Codes]
+
+set GD_Cork_Weap_Pistol.Barrel.Pistol_Barrel_Scav_Moxxis_Probe GestaltModeSkeletalMeshName Pistol_Barrel_Maliwan
+
+set GD_Cork_Weap_Pistol.Barrel.Pistol_Barrel_Scav_Moxxis_Probe ZoomWeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=-0.250000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponAutomaticBurstCount',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=3.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponBurstInterval',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.150000,BaseValueAttribute=None',InitializationDefinition=None,BaseValueScaleConstant=0.150000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0.150000)))
+set GD_Cork_Weap_Pistol.Barrel.Pistol_Barrel_Scav_Moxxis_Probe WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=1.00000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueConstant=5.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponReloadSpeed',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0.800000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0.250000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0.000000)))
+
+set GD_Cork_Weap_Pistol.FiringModes.Bullet_Pistol_Maliwan_MoxxisProbe NumRicochets 1
+set GD_Cork_Weap_Pistol.FiringModes.Bullet_Pistol_Maliwan_MoxxisProbe RicochetResponse (SplitNum=1,SplitAngle=2.000000,SplitAngleOffset=0.000000,SplitDistance=0.000000,SplitFire=GD_Ma_Weapons.FiringModes.Bullet_Pistol_Maliwan_HardReboot,NewSpeed=0.000000,bDetonate=False,bRespawnTracer=False,bUpdateBeamSourceLocation=False,Behaviors=)
+set GD_Cork_Weap_Pistol.FiringModes.Bullet_Pistol_Maliwan_MoxxisProbe OnAnyImpact (Behavior_Explode'GD_Cork_Weap_Pistol.FiringModes.Bullet_Pistol_Dahl_Blowfly:Behavior_Explode_5',Behavior_Explode'GD_Ma_Weapons.FiringModes.Bullet_Laser_Dahl_Thunderfire:Behavior_Explode_5',Behavior_Explode'GD_Cork_Weap_Shotgun.FiringModes.Bullets_Shotgun_Torgue_Flakker_Child:Behavior_Explode_14',Behavior_Explode'GD_Cork_Weap_Shotgun.FiringModes.Bullets_Shotgun_Torgue_Flakker_Child:Behavior_Explode_38',Behavior_Explode'GD_Cork_Weap_Shotgun.FiringModes.Bullets_Shotgun_Torgue_Flakker_Child_2:Behavior_Explode_39')
+
+set GD_Cork_Weap_Pistol.Name.Title.Title__Unique_Moxxis_Probe PartName Lunar Dancer
+set GD_Cork_Weap_Pistol.Name.Title.Title__Unique_Moxxis_Probe:AttributePresentationDefinition_8 NoConstraintText <font color="#ff0235">Rave through the apocalypse..<font color="#ffffff">
