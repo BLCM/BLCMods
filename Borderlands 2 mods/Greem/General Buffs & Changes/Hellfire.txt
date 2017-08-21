@@ -1,0 +1,35 @@
+#<Hellfire>
+
+  #<Description>
+  
+    ____ ____ ____ ____ ____ _  _ 
+    | __ |__/ |___ |___ |___ |\/| 
+    |__] |  \ |___ |___ |___ |  | 
+    
+    This mod doubles the Hellfire's damage, gives it an E-tech barrel (WORKING FLAPS :D), and projectiles. Also lowers recoil (I think)
+    
+    Enjoy!
+    
+  #</Description>
+  
+  #<Codey codey xd>
+
+    set GD_Weap_SMG.Barrel.SMG_Barrel_Maliwan_HellFire GestaltModeSkeletalMeshName SMG_Barrel_Alien
+
+    set GD_Weap_SMG.Barrel.SMG_Barrel_Maliwan_HellFire CustomFiringModeDefinition FiringModeDefinition 'GD_Weap_SMG.FiringModes.Bullet_Plasma_Default'
+
+    set GD_Weap_SMG.Barrel.SMG_Barrel_Maliwan_HellFire BoneControllers ((BoneName="AlienBarrelFin_LT",ControlType=WEAP_BONE_CONTROL_Flap,bUseInFirstPerson=True,bUseInThirdPerson=False,ControlTemplate=WillowSkelControl_RotateFlapFromFiring'GD_Weap_SMG.Barrel.SMG_Barrel_Alien:WillowSkelControl_RotateFlapFromFiring_0'),(BoneName="AlienBarrelFin_RT",ControlType=WEAP_BONE_CONTROL_Flap,bUseInFirstPerson=True,bUseInThirdPerson=False,ControlTemplate=WillowSkelControl_RotateFlapFromFiring'GD_Weap_SMG.Barrel.SMG_Barrel_Alien:WillowSkelControl_RotateFlapFromFiring_1'),(BoneName="AlienBarrelFin_LB",ControlType=WEAP_BONE_CONTROL_Flap,bUseInFirstPerson=True,bUseInThirdPerson=False,ControlTemplate=WillowSkelControl_RotateFlapFromFiring'GD_Weap_SMG.Barrel.SMG_Barrel_Alien:WillowSkelControl_RotateFlapFromFiring_2'),(BoneName="AlienBarrelFin_RB",ControlType=WEAP_BONE_CONTROL_Flap,bUseInFirstPerson=True,bUseInThirdPerson=False,ControlTemplate=WillowSkelControl_RotateFlapFromFiring'GD_Weap_SMG.Barrel.SMG_Barrel_Alien:WillowSkelControl_RotateFlapFromFiring_3'))
+
+    set GD_Weap_SMG.Barrel.SMG_Barrel_Maliwan_HellFire FlapsExpandDuration (BaseValueConstant=2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+
+    set GD_Weap_SMG.Barrel.SMG_Barrel_Maliwan_Hellfire FlapsCollapseDuration (BaseValueConstant=0.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+
+    set GD_Weap_SMG.Barrel.SMG_Barrel_Maliwan_Hellfire bFlapsEnabled True
+
+    set GD_Weap_SMG.Barrel.SMG_Barrel_Maliwan_Hellfire MuzzleFlashPSTemplates EffectCollectionDefinition'GD_Weap_SMG.Effects.SMG_ETech_MuzzleFlashes'
+
+    set GD_Weap_SMG.Barrel.SMG_Barrel_Maliwan_HellFire WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.400000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponPerShotAccuracyImpulse',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectileSpeedMultiplier',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+    
+  #</Codey codey xd>
+
+#</Hellfire>
