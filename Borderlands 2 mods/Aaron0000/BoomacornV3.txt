@@ -12,7 +12,7 @@ Should only spawn with Jakobs parts and no accessory (but won't remove existing 
 Comes with an option for colors; Purple on the body of the gun, or the hot pink of the unicorn decal from Pre-Sequel.
 
 Note;
-To achieve the multi-element effect, the Boomacorn uses the splash damage of the Blockhead, Twister, Hornet, and Grog Nozzle. Any mods that affect those splashes in particular will affect this one.
+To achieve the multi-element effect, the Boomacorn uses the splash damage of the Blockhead, Twister, Hornet, and Torgue Pistols. Any mods that affect those splashes in particular will affect this one.
 ########
 
 
@@ -83,10 +83,10 @@ set GD_Weap_Shotgun.A_Weapons_Unique.SG_Jakobs_3_Triquetra:WeaponPartListCollect
 
 
 
-set GD_Weap_Shotgun.FiringModes.Bullet_Shotgun_Triquetra OnAnyImpact (Behavior_Explode'GD_Weap_Shotgun.FiringModes.Bullet_Shotgun_Blockhead:Behavior_Explode_5',Behavior_Explode'GD_Sage_Weapons.FiringModes.Bullet_Shotgun_Twister:Behavior_Explode_5',Behavior_Explode'GD_Weap_Pistol.FiringModes.Bullet_Pistol_Dahl_Hornet:Behavior_Explode_5',Behavior_Explode'GD_Aster_Weapons.FiringModes.Bullet_Pistol_Maliwan_GrogNozzle:Behavior_Explode_5')
+set GD_Weap_Shotgun.FiringModes.Bullet_Shotgun_Triquetra OnAnyImpact (Behavior_Explode'GD_Weap_Shotgun.FiringModes.Bullet_Shotgun_Blockhead:Behavior_Explode_5',Behavior_Explode'GD_Sage_Weapons.FiringModes.Bullet_Shotgun_Twister:Behavior_Explode_5',Behavior_Explode'GD_Weap_Pistol.FiringModes.Bullet_Pistol_Dahl_Hornet:Behavior_Explode_5',Behavior_Explode'GD_Weap_Pistol.FiringModes.Bullets_Pistol_Torgue_GyroJet:Behavior_Explode_5')
 set GD_Weap_Shotgun.FiringModes.Bullet_Shotgun_Triquetra FiringPatternLines ()
 set GD_Weap_Shotgun.FiringModes.Bullet_Shotgun_Triquetra BeamLockBehavior LBL_LockOn
-set GD_Weap_Shotgun.FiringModes.Bullet_Shotgun_Triquetra DamageTypeDefinition WillowDamageTypeDefinition'GD_Explosive.DamageType.DmgType_Explosive_Impact'
+set GD_Weap_Shotgun.FiringModes.Bullet_Shotgun_Triquetra DamageTypeDefinition WillowDamageTypeDefinition'GD_Amp.DamageType.DmgType_Amp_Impact'
 set GD_Weap_Shotgun.FiringModes.Bullet_Shotgun_Triquetra Lifetime 5.000000
 set GD_Weap_Shotgun.FiringModes.Bullet_Shotgun_Triquetra TraceInterval 0.200000
 set GD_Weap_Shotgun.FiringModes.Bullet_Shotgun_Triquetra bSuppressImpactEffects False
@@ -138,12 +138,6 @@ set GD_Weap_Shotgun.FiringModes.Bullet_Shotgun_Triquetra MinPatternScale 0.00000
 
 
 
-set GD_Aster_Weapons.FiringModes.Bullet_Pistol_Maliwan_GrogNozzle:Behavior_Explode_5 DamageRadiusFormula (BaseValueConstant=110.000000)
-set GD_Aster_Weapons.FiringModes.Bullet_Pistol_Maliwan_GrogNozzle:Behavior_Explode_5 Definition ExplosionDefinition'GD_Explosions.Slag.Explosion_SlagMaster'
-set GD_Aster_Weapons.FiringModes.Bullet_Pistol_Maliwan_GrogNozzle:Behavior_Explode_5 DamageFormula (BaseValueScaleConstant=0.500000)
-(Behavior_Explode'GD_Aster_Weapons.FiringModes.Bullet_Pistol_Maliwan_GrogNozzle:Behavior_Explode_5')
-
-
 set GD_Weap_Shotgun.FiringModes.Bullet_Shotgun_Blockhead:Behavior_Explode_5 DamageFormula (BaseValueScaleConstant=1.000000)
 set GD_Weap_Shotgun.FiringModes.Bullet_Shotgun_Blockhead:Behavior_Explode_5 DamageRadiusFormula (BaseValueConstant=110.000000)
 set GD_Weap_Shotgun.FiringModes.Bullet_Shotgun_Blockhead:Behavior_Explode_5 Definition ExplosionDefinition'GD_Explosions.Incendiary.Explosion_IncendiaryMaster'
@@ -158,3 +152,5 @@ set GD_Weap_Pistol.FiringModes.Bullet_Pistol_Dahl_Hornet:Behavior_Explode_5 Dama
 set GD_Weap_Pistol.FiringModes.Bullet_Pistol_Dahl_Hornet:Behavior_Explode_5 DamageRadiusFormula (BaseValueConstant=110.000000)
 set GD_Weap_Pistol.FiringModes.Bullet_Pistol_Dahl_Hornet:Behavior_Explode_5 Definition ExplosionDefinition'GD_Explosions.Corrosive.Explosion_CorrosiveMaster'
 
+set GD_Weap_Pistol.FiringModes.Bullets_Pistol_Torgue_GyroJet:Behavior_Explode_5 DamageFormula (BaseValueScaleConstant=1.000000)
+set GD_Weap_Pistol.FiringModes.Bullets_Pistol_Torgue_GyroJet:Behavior_Explode_5 DamageRadiusFormula (BaseValueConstant=110.000000)
