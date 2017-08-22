@@ -1,0 +1,70 @@
+########
+By Aaron0000
+
+Turns the Landscaper into a recreation of the Borderlands 1 Hammer.
+
+Features;
+Increased projectile count.
+Tightened spread.
+Extremely high fire rate (for a shotgun).
+Very high magazine size.
+Decreased reload speed.
+Fires a spread in the shape of a hammer.
+
+########
+
+
+set GD_Weap_Shotgun.Barrel.SG_Barrel_Jakobs_Landscaper GestaltModeSkeletalMeshName SG_Barrel_Hyperion
+
+set GD_Weap_Shotgun.Name.Title.Title__Unique_Landscaper PartName Hammer
+
+set GD_Weap_Shotgun.Name.Title.Title__Unique_Landscaper:AttributePresentationDefinition_8 NoConstraintText Drop 'em.
+
+set GD_Weap_Shotgun.Barrel.SG_Barrel_Jakobs_Landscaper rarity (basevalueattribute=none)
+
+set GD_Weap_Shotgun.Barrel.SG_Barrel_Jakobs_Landscaper rarity (BaseValueConstant=5)
+
+
+
+
+set GD_Weap_Shotgun.FiringModes.Bullets_Shotgun_Torgue_Landscaper ImpactResponses ()
+
+set GD_Weap_Shotgun.FiringModes.Bullets_Shotgun_Torgue_Landscaper bSuppressWeaponSpread True
+
+set GD_Weap_Shotgun.FiringModes.Bullets_Shotgun_Torgue_Landscaper ExplosionOverrideDefinition ExplosionCollectionDefinition'GD_Weap_Shared_Effects.Default_Elemental_Explosions'
+set GD_Weap_Shotgun.FiringModes.Bullets_Shotgun_Torgue_Landscaper ExplosionOverideInstanceDataName ExplosionOverride
+
+set GD_Weap_Shotgun.FiringModes.Bullets_Shotgun_Torgue_Landscaper Speed 600.000000
+
+set GD_Weap_Shotgun.FiringModes.Bullets_Shotgun_Torgue_Landscaper DamageTypeDefinition WillowDamageTypeDefinition'GD_Explosive.DamageType.DmgType_Explosive_Impact'
+
+set GD_Weap_Shotgun.FiringModes.Bullets_Shotgun_Torgue_Landscaper ProjectileDefinition None
+
+set GD_Weap_Shotgun.FiringModes.Bullets_Shotgun_Torgue_Landscaper OnAnyImpact (Behavior_Explode'GD_Weap_Shotgun.FiringModes.Bullets_Shotgun_Torgue_GyroJet:Behavior_Explode_5')
+
+set GD_Weap_Shotgun.FiringModes.Bullets_Shotgun_Torgue_Landscaper AirFriction -6
+
+set GD_Weap_Shotgun.FiringModes.Bullets_Shotgun_Torgue_Landscaper FiringModeSoundDefinition'GD_Weap_Bullet_Tech_Sounds.Sound_Definitions.Gyrojet_Projectile'
+
+set GD_Weap_Shotgun.FiringModes.Bullets_Shotgun_Torgue_Landscaper FiringPatternLines ((StartPoint=(Pitch=-18,Yaw=102,Roll=0),EndPoint=(Pitch=0,Yaw=0,Roll=0),bUseStartPointOnly=True,CustomWaveMotion=(bUseCustomWaveMotion=False,WaveFreq=(X=0.000000,Y=0.000000,Z=0.000000),WaveAmp=(X=0.000000,Y=0.000000,Z=0.000000),WavePhase=(X=0.000000,Y=0.000000,Z=0.000000))),(StartPoint=(Pitch=-330,Yaw=470,Roll=0),EndPoint=(Pitch=0,Yaw=0,Roll=0),bUseStartPointOnly=True,CustomWaveMotion=(bUseCustomWaveMotion=False,WaveFreq=(X=0.000000,Y=0.000000,Z=0.000000),WaveAmp=(X=0.000000,Y=0.000000,Z=0.000000),WavePhase=(X=0.000000,Y=0.000000,Z=0.000000))),(StartPoint=(Pitch=15,Yaw=810,Roll=0),EndPoint=(Pitch=0,Yaw=0,Roll=0),bUseStartPointOnly=True,CustomWaveMotion=(bUseCustomWaveMotion=False,WaveFreq=(X=0.000000,Y=0.000000,Z=0.000000),WaveAmp=(X=0.000000,Y=0.000000,Z=0.000000),WavePhase=(X=0.000000,Y=0.000000,Z=0.000000))),(StartPoint=(Pitch=327,Yaw=490,Roll=0),EndPoint=(Pitch=0,Yaw=0,Roll=0),bUseStartPointOnly=True,CustomWaveMotion=(bUseCustomWaveMotion=False,WaveFreq=(X=0.000000,Y=0.000000,Z=0.000000),WaveAmp=(X=0.000000,Y=0.000000,Z=0.000000),WavePhase=(X=0.000000,Y=0.000000,Z=0.000000))),(StartPoint=(Pitch=609,Yaw=159,Roll=0),EndPoint=(Pitch=0,Yaw=0,Roll=0),bUseStartPointOnly=True,CustomWaveMotion=(bUseCustomWaveMotion=False,WaveFreq=(X=0.000000,Y=0.000000,Z=0.000000),WaveAmp=(X=0.000000,Y=0.000000,Z=0.000000),WavePhase=(X=0.000000,Y=0.000000,Z=0.000000))),(StartPoint=(Pitch=252,Yaw=-243,Roll=0),EndPoint=(Pitch=0,Yaw=0,Roll=0),bUseStartPointOnly=True,CustomWaveMotion=(bUseCustomWaveMotion=False,WaveFreq=(X=0.000000,Y=0.000000,Z=0.000000),WaveAmp=(X=0.000000,Y=0.000000,Z=0.000000),WavePhase=(X=0.000000,Y=0.000000,Z=0.000000))),(StartPoint=(Pitch=-243,Yaw=-141,Roll=0),EndPoint=(Pitch=0,Yaw=0,Roll=0),bUseStartPointOnly=True,CustomWaveMotion=(bUseCustomWaveMotion=False,WaveFreq=(X=0.000000,Y=0.000000,Z=0.000000),WaveAmp=(X=0.000000,Y=0.000000,Z=0.000000),WavePhase=(X=0.000000,Y=0.000000,Z=0.000000))),(StartPoint=(Pitch=-450,Yaw=-393,Roll=0),EndPoint=(Pitch=0,Yaw=0,Roll=0),bUseStartPointOnly=True,CustomWaveMotion=(bUseCustomWaveMotion=False,WaveFreq=(X=0.000000,Y=0.000000,Z=0.000000),WaveAmp=(X=0.000000,Y=0.000000,Z=0.000000),WavePhase=(X=0.000000,Y=0.000000,Z=0.000000))))
+
+
+
+
+set GD_Weap_Shotgun.Barrel.SG_Barrel_Jakobs_Landscaper WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=3.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=-0.77000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponReloadSpeed',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.060000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=12.00000)))
+
+set GD_Weap_Shotgun.Barrel.SG_Barrel_Jakobs_Landscaper ExternalAttributeEffects ((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AccuracyResourcePool.AccuracyMaxValue',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-0.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+set GD_Weap_Shotgun.Barrel.SG_Barrel_Jakobs_Landscaper AttributeSlotUpgrades ((SlotName="WeaponReloadSpeed",GradeIncrease=0,bActivateSlot=True),(SlotName="WeaponFireRate",GradeIncrease=0,bActivateSlot=True),(SlotName="WeaponDamage",GradeIncrease=8,bActivateSlot=True),(SlotName="WeaponAccuracyImpulse",GradeIncrease=-5,bActivateSlot=True))
+
+set GD_Weap_Shotgun.Barrel.SG_Barrel_Jakobs_Landscaper WeaponCardAttributes ((Attribute=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',PriorityIncrease=-3.000000))
+
+
+
+set Common_GunMaterials.Materials.Shotgun.Mati_TorgueUniqueSG_Landscaper VectorParameterValues ((ParameterName="p_AColorHilight",ParameterValue=(R=0.400000,G=0.100000,B=0.000000,A=1.000000),ExpressionGUID=(A=170714760,B=1132476783,C=-275668290,D=655702143)),(ParameterName="p_AColorMidtone",ParameterValue=(R=0.800000,G=0.200000,B=0.000000,A=1.000000),ExpressionGUID=(A=473594356,B=1338758895,C=824823946,D=864253813)),(ParameterName="p_AColorShadow",ParameterValue=(R=0.400000,G=0.100000,B=0.000000,A=1.000000),ExpressionGUID=(A=-429590341,B=1156435294,C=-1015192901,D=687313413)),(ParameterName="p_BColorHilight",ParameterValue=(R=0.124000,G=0.124000,B=0.195000,A=1.000000),ExpressionGUID=(A=759765673,B=1280874949,C=257367956,D=-932702788)),(ParameterName="p_BColorMidtone",ParameterValue=(R=0.054000,G=0.054000,B=0.065000,A=1.000000),ExpressionGUID=(A=110180441,B=1232792373,C=-1232281417,D=-1030626065)),(ParameterName="p_BColorShadow",ParameterValue=(R=0.043000,G=0.043000,B=0.050000,A=1.000000),ExpressionGUID=(A=716329441,B=1214803259,C=-238071112,D=-1004122047)),(ParameterName="p_CColorHilight",ParameterValue=(R=0.130653,G=0.130653,B=0.130653,A=1.000000),ExpressionGUID=(A=759765673,B=1280874949,C=257367956,D=-932702788)),(ParameterName="p_CColorMidtone",ParameterValue=(R=0.027780,G=0.027780,B=0.027780,A=1.000000),ExpressionGUID=(A=110180441,B=1232792373,C=-1232281417,D=-1030626065)),(ParameterName="p_CColorShadow",ParameterValue=(R=0.028813,G=0.028813,B=0.028813,A=1.000000),ExpressionGUID=(A=716329441,B=1214803259,C=-238071112,D=-1004122047)),(ParameterName="p_ReflectColor",ParameterValue=(R=2.350533,G=2.125330,B=1.896026,A=1.000000),ExpressionGUID=(A=295058103,B=1318551573,C=-2045449573,D=-547597976)),(ParameterName="p_ReflectionChannelScale",ParameterValue=(R=1.000000,G=1.000000,B=1.000000,A=0.000000),ExpressionGUID=(A=1869386622,B=1303200947,C=-1616405849,D=714558284)),(ParameterName="p_DecalColor",ParameterValue=(R=3.067563,G=3.067563,B=3.067563,A=2.000000),ExpressionGUID=(A=1691998600,B=1239094551,C=2074257317,D=1844701893)),(ParameterName="p_PatternScalePosition",ParameterValue=(R=7.000000,G=7.000000,B=0.000000,A=0.000000),ExpressionGUID=(A=-2005018406,B=1132497243,C=-39915121,D=208423616)),(ParameterName="p_DColor",ParameterValue=(R=0.345884,G=0.147185,B=0.072869,A=1.000000),ExpressionGUID=(A=696455109,B=1155878830,C=-1741888361,D=802120528)),(ParameterName="p_PatternChannelScale",ParameterValue=(R=0.800000,G=0.000000,B=0.000000,A=0.000000),ExpressionGUID=(A=439432319,B=1091149893,C=-1991909502,D=1816944627)),(ParameterName="p_PatternColor",ParameterValue=(R=1.000000,G=1.000000,B=1.000000,A=1.000000),ExpressionGUID=(A=676539706,B=1125682796,C=1871983293,D=-2049503601)),(ParameterName="p_DecalScalePosition",ParameterValue=(R=19.000000,G=19.000000,B=0.460000,A=0.552500),ExpressionGUID=(A=395540170,B=1243133493,C=-1264190552,D=123075385)),(ParameterName="p_DecalChannel",ParameterValue=(R=1.000000,G=0.000000,B=0.000000,A=0.000000),ExpressionGUID=(A=1757499073,B=1097055033,C=-1266029657,D=1038353636)))
+
+set Common_GunMaterials.Materials.Shotgun.Mati_TorgueUniqueSG_Landscaper ScalarParameterValues ((ParameterName="p_DecalRotate",ParameterValue=0.000000,ExpressionGUID=(A=-276527909,B=1298581551,C=856978878,D=743944047)),(ParameterName="p_HighlightsIntensity",ParameterValue=3.000000,ExpressionGUID=(A=-1257568432,B=1277066486,C=-723473993,D=-1144384173)),(ParameterName="p_ShadowsIntensity",ParameterValue=4.000000,ExpressionGUID=(A=437293753,B=1205147708,C=-775723903,D=1480014964)),(ParameterName="p_UseFullColorDecal",ParameterValue=1.000000,ExpressionGUID=(A=-1064329812,B=1077705328,C=339664807,D=1869745420)),(ParameterName="p_ReplaceDecal",ParameterValue=1.000000,ExpressionGUID=(A=85863466,B=1257609701,C=-728575820,D=1337098176)),(ParameterName="p_ReplacePattern",ParameterValue=0.000000,ExpressionGUID=(A=-2084339847,B=1096440125,C=439008937,D=45433490)))
+
+set Common_GunMaterials.Materials.Shotgun.Mati_TorgueUniqueSG_Landscaper TextureParameterValues ((ParameterName="P_SimpleReflect",ParameterValue=Texture2D'Common_GunMaterials.Env.Gold',ExpressionGUID=(A=-858148940,B=1327945772,C=148462268,D=1899047224)),(ParameterName="p_Decal",ParameterValue=Texture2D'Common_GunMaterials.Logos.Logo_VladofColor',ExpressionGUID=(A=-923052711,B=1309861752,C=584229786,D=-1229888527)),(ParameterName="p_Pattern",ParameterValue=Texture2D'Common_GunMaterials.Patterns.Pattern_Jakobs_CaseHardened',ExpressionGUID=(A=534250533,B=1202550002,C=1578302861,D=-717876416)),(ParameterName="p_NormalScopesEmissive",ParameterValue=Texture2D'Weap_Shotguns.Tex.Weap_Shotgun_Nor',ExpressionGUID=(A=-1743872746,B=1126171774,C=119496871,D=-1952271718)),(ParameterName="p_Diffuse",ParameterValue=Texture2D'Common_GunMaterials.CompTextures.Weap_LauncherShotgunPistol_Comp',ExpressionGUID=(A=1757607260,B=1326539502,C=-317215581,D=-565807463)),(ParameterName="p_Masks",ParameterValue=Texture2D'Weap_Shotguns.Tex.Weap_Shotgun_Comp',ExpressionGUID=(A=-330624041,B=1167251458,C=-335191907,D=-166684394)))
+
+
