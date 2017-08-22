@@ -5,13 +5,16 @@ Minor increase in accuracy.
 Increased elemental chance.
 Tighter minimum accuracy spread.
 25% chance to fire an extra shot.
-Dual element - Element of choice, slag splash.
+Dual element - Element of choice, shock splash.
 Aiming down sights and shooting will burst fire the entire magazine.
 Spread pattern is in the shape of a diamond.
 
 Replaces the "Shotgun" Fibber. Barrel will look like a Dahl barrel.
 
 If you don't want to use the visuals or name/red text, disable them down below.
+
+Note;
+Uses the splash of the Twister to achieve the shock splash regardless of element. Any mod that modifies the splash of thw Twister will end up modifying this mod too.
 
 ########
 NAME, RED TEXT, AND BARREL
@@ -47,11 +50,11 @@ set GD_Weap_Pistol.Barrel.Fibber.Pistol_Barrel_Bandit_Fibber_1:BehaviorProviderD
 
 set GD_Weap_Pistol.FiringModes.Bullet_Pistol_Hyperion_Fibber_1 Speed 20000.000000
 
-set GD_Weap_Pistol.FiringModes.Bullet_Pistol_Hyperion_Fibber_1 OnAnyImpact (Behavior_Explode'GD_Aster_Weapons.FiringModes.Bullet_Pistol_Maliwan_GrogNozzle:Behavior_Explode_5')
+set GD_Weap_Pistol.FiringModes.Bullet_Pistol_Hyperion_Fibber_1 OnAnyImpact (Behavior_Explode'GD_Sage_Weapons.FiringModes.Bullet_Shotgun_Twister:Behavior_Explode_5')
 
-set GD_Aster_Weapons.FiringModes.Bullet_Pistol_Maliwan_GrogNozzle:Behavior_Explode_5 Definition ExplosionDefinition'GD_Explosions.Slag.Explosion_SlagMaster'
-
-set GD_Aster_Weapons.FiringModes.Bullet_Pistol_Maliwan_GrogNozzle:Behavior_Explode_5 DamageFormula (BaseValueScaleConstant=0.500000)
+set GD_Sage_Weapons.FiringModes.Bullet_Shotgun_Twister:Behavior_Explode_5 DamageFormula (BaseValueScaleConstant=1.000000)
+set GD_Sage_Weapons.FiringModes.Bullet_Shotgun_Twister:Behavior_Explode_5 DamageRadiusFormula (BaseValueConstant=110.000000)
+set GD_Sage_Weapons.FiringModes.Bullet_Shotgun_Twister:Behavior_Explode_5 Definition ExplosionDefinition'GD_Explosions.Shock.Explosion_ShockMaster'
 
 set GD_Weap_Pistol.FiringModes.Bullet_Pistol_Hyperion_Fibber_1 bSuppressWeaponSpread True
 
