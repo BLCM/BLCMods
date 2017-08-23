@@ -1,0 +1,97 @@
+#<Description>
+
+Mod by B33P B00P JOE
+
+***WARNING***
+Based on code by the awesome Aaron0000
+Meant to be used with Weapon X and X-23
+*************
+
+
+Replacing the Order, the Feral Rage allows it's wearer to tap into their more animalistic nature!
+Meant to emulate the Berserker Rage that Wolverine and X-23 can fly into mid combat, this shield has no capacity but increases max HP as well as allow you to heal with melee attacks if you are wielding either Weapon X or X-23.
+
++Less healing than the normal Law+Order combo due to the Mutant Healing Factors of both guns
++Now works with more than just the Law (Triquerta / Weapon X)
++Based on Aaron0000's Jakobs Shield, this is indentical except for lowered healing abilities + a new name.
+
+
+
+#</Description>
+
+#<Feral Rage (Order)>
+
+    #<code>########</code><on>
+
+    #<code>By Aaron0000</code><on>
+
+    #<code>Converts the Order into a Jakobs Roid shield.</code><on>
+
+    #<code>Features;</code><on>
+
+    #<code>No shield capacity, boosts health instead (and does not have damage resistance).</code><on>
+
+    #<code>Spawns as a Jakobs shield instead of Vladof.</code><on>
+
+    #<code>Existing Orders will remain Vladof.</code><on>
+
+    #<code>Can spawn with elemental capacitors, unlike the Rough Rider.</code><on>
+
+    #<code>########</code><on>
+
+    #<code>set GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Roid_Order Manufacturers ((Manufacturer=ManufacturerDefinition'GD_Manufacturers.Manufacturers.Jakobs',Grades=((GradeModifiers=(ExpLevel=1,CustomInventoryDefinition=None),GameStageRequirement=(MinGameStage=1,MaxGameStage=100),MinSpawnProbabilityModifier=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),MaxSpawnProbabilityModifier=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))))</code><on>
+
+    #<code>set GD_Shields.A_Item.Shield_Roid_Order ExternalAttributeEffects ((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.ShieldResourcePool.ShieldMaxValue',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=100.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.ShieldResourcePool.ShieldOnIdleRegenerationDelay',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'GD_Shields.Misc.Att_UniversalShieldBaseDelayConstant',InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.ShieldResourcePool.ShieldOnIdleRegenerationRate',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance_HealthAndDamage.Shields.Init_ShieldItem_BaseRegenRatePercentage',BaseValueScaleConstant=1.000000)),(AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.ShieldResourcePool.ShieldConsumptionRate',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=100000.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))</code><on>
+
+    #<code>set GD_Shields.A_Item.Shield_Roid_Order AttributeSlotEffects ((SlotName="Capacity",bExternalSlot=True,bRunEffectsAsSkill=False,AttributeToModify=AttributeDefinition'GD_Sage_Shields.Attributes.Attr_BucklerShieldCapacityProxy',ConstraintAttribute=None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),PerGradeUpgrade=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bIncludeInFunStats=False,bIncludeAlliesAsTarget=False,bEnforceMinimumGrade=False,bEnforceMaximumGrade=False,MinimumGrade=0,MaximumGrade=0,TargetInstanceDataName=),(SlotName="RechargeRate",bExternalSlot=True,bRunEffectsAsSkill=False,AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.ShieldResourcePool.ShieldOnIdleRegenerationRate',ConstraintAttribute=None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),PerGradeUpgrade=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bIncludeInFunStats=False,bIncludeAlliesAsTarget=False,bEnforceMinimumGrade=False,bEnforceMaximumGrade=False,MinimumGrade=0,MaximumGrade=0,TargetInstanceDataName=),(SlotName="RechargeDelay",bExternalSlot=True,bRunEffectsAsSkill=False,AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.ShieldResourcePool.ShieldOnIdleRegenerationDelay',ConstraintAttribute=None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),PerGradeUpgrade=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bIncludeInFunStats=False,bIncludeAlliesAsTarget=False,bEnforceMinimumGrade=False,bEnforceMaximumGrade=False,MinimumGrade=0,MaximumGrade=0,TargetInstanceDataName=),(SlotName="Special01",bExternalSlot=False,bRunEffectsAsSkill=False,AttributeToModify=AttributeDefinition'D_Attributes.Shield.RoidMeleeDamage',ConstraintAttribute=None,ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance_HealthAndDamage.HealthAndDamage.Init_ShieldDamage',BaseValueScaleConstant=1.000000),PerGradeUpgrade=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance_HealthAndDamage.HealthAndDamage.Init_ShieldDamage',BaseValueScaleConstant=0.080000),bIncludeInFunStats=False,bIncludeAlliesAsTarget=False,bEnforceMinimumGrade=True,bEnforceMaximumGrade=False,MinimumGrade=-10,MaximumGrade=0,TargetInstanceDataName=),(SlotName="Special02",bExternalSlot=True,bRunEffectsAsSkill=True,AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.HealthResourcePool.HealthMaxValue',ConstraintAttribute=None,ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance_HealthAndDamage.HealthAndDamage.Init_HealthBonusFromShields_Formula',BaseValueScaleConstant=0.350000),PerGradeUpgrade=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance_HealthAndDamage.HealthAndDamage.Init_HealthBonusFromShields_Formula',BaseValueScaleConstant=0.011000),bIncludeInFunStats=False,bIncludeAlliesAsTarget=False,bEnforceMinimumGrade=True,bEnforceMaximumGrade=False,MinimumGrade=-10,MaximumGrade=0,TargetInstanceDataName=))</code><on>
+
+    #<code>set GD_Shields.A_Item.Shield_Roid_Order AttributeSlotUpgrades ((SlotName="Capacity",GradeIncrease=0,bActivateSlot=True),(SlotName="RechargeRate",GradeIncrease=0,bActivateSlot=True),(SlotName="RechargeDelay",GradeIncrease=0,bActivateSlot=True),(SlotName="Special01",GradeIncrease=0,bActivateSlot=True),(SlotName="Special02",GradeIncrease=0,bActivateSlot=True),(SlotName="MaxHealth",GradeIncrease=0,bActivateSlot=False))</code><on>
+
+    #<code>set GD_Shields.A_Item.Shield_Roid_Order UIStatList ((bDisplayAsModifierOnly=False,AttributeStyle=ATTRSTYLE_JustNumber,SupplementalAttributeStyle=ATTRSTYLE_JustNumber,StatCombinationMethod=SCM_Multiply,Attribute=AttributeDefinition'GD_Sage_Shields.Attributes.Attr_BucklerShieldCapacityProxy',ConstraintAttribute=None,SupplementalAttributeExpression=(AttributeOperand1=None,ComparisonOperator=OPERATOR_EqualTo,Operand2Usage=OPERAND_PreferAttribute,AttributeOperand2=None,ConstantOperand2=0.000000),SupplementalAttributeToAppend=None),(bDisplayAsModifierOnly=False,AttributeStyle=ATTRSTYLE_ModifierText,SupplementalAttributeStyle=ATTRSTYLE_JustNumber,StatCombinationMethod=SCM_Multiply,Attribute=AttributeDefinition'D_Attributes.Shield.RoidMeleeDamage',ConstraintAttribute=None,SupplementalAttributeExpression=(AttributeOperand1=None,ComparisonOperator=OPERATOR_EqualTo,Operand2Usage=OPERAND_PreferAttribute,AttributeOperand2=None,ConstantOperand2=0.000000),SupplementalAttributeToAppend=None),(bDisplayAsModifierOnly=False,AttributeStyle=ATTRSTYLE_ModifierText,SupplementalAttributeStyle=ATTRSTYLE_JustNumber,StatCombinationMethod=SCM_Multiply,Attribute=ResourcePoolAttributeDefinition'D_Attributes.HealthResourcePool.HealthMaxValue',ConstraintAttribute=None,SupplementalAttributeExpression=(AttributeOperand1=None,ComparisonOperator=OPERATOR_EqualTo,Operand2Usage=OPERAND_PreferAttribute,AttributeOperand2=None,ConstantOperand2=0.000000),SupplementalAttributeToAppend=None)))</code><on>
+
+    #<code>set GD_Shields.A_Item.Shield_Roid_Order CustomPresentations (AttributePresentationDefinition'GD_Sage_Shields.A_Item_Custom.Shield_Buckler:AttributePresentationDefinition_0')</code><on>
+
+    #<code>set GD_Shields.Titles.Title_Roid05_Order:AttributePresentationDefinition_0 Description Berserker Barrage! </code><inProfile = Test1><on>
+
+    #<code>set GD_Shields.Titles.Title_Roid05_Order:AttributePresentationDefinition_1 Description When [skill]Weapon X or X-23[-skill] are in your hands, any melee damage dealt also [health]heals you[-health].</code><inProfile = Test1><on>
+
+    #<code>set GD_Shields.Titles.Title_Roid05_Order PartName Feral Rage</code><inProfile = Test1><on>
+
+    #<code>set GD_Shields.Skills.Roid_Shield_Skill_Order:BehaviorProviderDefinition_0.Behavior_CauseDamage_17 DamageFormula (BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0.550000)</code><inProfile = Test1><on>
+
+#</Feral Rage (Order)>
+
+By Aaron0000
+
+Converts the Order into a Jakobs Roid shield.
+
+Features;
+
+No shield capacity, boosts health instead (and does not have damage resistance).
+
+Spawns as a Jakobs shield instead of Vladof.
+
+Existing Orders will remain Vladof.
+
+Can spawn with elemental capacitors, unlike the Rough Rider.
+
+set GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Roid_Order Manufacturers ((Manufacturer=ManufacturerDefinition'GD_Manufacturers.Manufacturers.Jakobs',Grades=((GradeModifiers=(ExpLevel=1,CustomInventoryDefinition=None),GameStageRequirement=(MinGameStage=1,MaxGameStage=100),MinSpawnProbabilityModifier=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),MaxSpawnProbabilityModifier=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))))
+
+set GD_Shields.A_Item.Shield_Roid_Order ExternalAttributeEffects ((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.ShieldResourcePool.ShieldMaxValue',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=100.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.ShieldResourcePool.ShieldOnIdleRegenerationDelay',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'GD_Shields.Misc.Att_UniversalShieldBaseDelayConstant',InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.ShieldResourcePool.ShieldOnIdleRegenerationRate',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance_HealthAndDamage.Shields.Init_ShieldItem_BaseRegenRatePercentage',BaseValueScaleConstant=1.000000)),(AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.ShieldResourcePool.ShieldConsumptionRate',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=100000.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+set GD_Shields.A_Item.Shield_Roid_Order AttributeSlotEffects ((SlotName="Capacity",bExternalSlot=True,bRunEffectsAsSkill=False,AttributeToModify=AttributeDefinition'GD_Sage_Shields.Attributes.Attr_BucklerShieldCapacityProxy',ConstraintAttribute=None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),PerGradeUpgrade=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bIncludeInFunStats=False,bIncludeAlliesAsTarget=False,bEnforceMinimumGrade=False,bEnforceMaximumGrade=False,MinimumGrade=0,MaximumGrade=0,TargetInstanceDataName=),(SlotName="RechargeRate",bExternalSlot=True,bRunEffectsAsSkill=False,AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.ShieldResourcePool.ShieldOnIdleRegenerationRate',ConstraintAttribute=None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),PerGradeUpgrade=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bIncludeInFunStats=False,bIncludeAlliesAsTarget=False,bEnforceMinimumGrade=False,bEnforceMaximumGrade=False,MinimumGrade=0,MaximumGrade=0,TargetInstanceDataName=),(SlotName="RechargeDelay",bExternalSlot=True,bRunEffectsAsSkill=False,AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.ShieldResourcePool.ShieldOnIdleRegenerationDelay',ConstraintAttribute=None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),PerGradeUpgrade=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bIncludeInFunStats=False,bIncludeAlliesAsTarget=False,bEnforceMinimumGrade=False,bEnforceMaximumGrade=False,MinimumGrade=0,MaximumGrade=0,TargetInstanceDataName=),(SlotName="Special01",bExternalSlot=False,bRunEffectsAsSkill=False,AttributeToModify=AttributeDefinition'D_Attributes.Shield.RoidMeleeDamage',ConstraintAttribute=None,ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance_HealthAndDamage.HealthAndDamage.Init_ShieldDamage',BaseValueScaleConstant=1.000000),PerGradeUpgrade=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance_HealthAndDamage.HealthAndDamage.Init_ShieldDamage',BaseValueScaleConstant=0.080000),bIncludeInFunStats=False,bIncludeAlliesAsTarget=False,bEnforceMinimumGrade=True,bEnforceMaximumGrade=False,MinimumGrade=-10,MaximumGrade=0,TargetInstanceDataName=),(SlotName="Special02",bExternalSlot=True,bRunEffectsAsSkill=True,AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.HealthResourcePool.HealthMaxValue',ConstraintAttribute=None,ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance_HealthAndDamage.HealthAndDamage.Init_HealthBonusFromShields_Formula',BaseValueScaleConstant=0.350000),PerGradeUpgrade=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance_HealthAndDamage.HealthAndDamage.Init_HealthBonusFromShields_Formula',BaseValueScaleConstant=0.011000),bIncludeInFunStats=False,bIncludeAlliesAsTarget=False,bEnforceMinimumGrade=True,bEnforceMaximumGrade=False,MinimumGrade=-10,MaximumGrade=0,TargetInstanceDataName=))
+
+set GD_Shields.A_Item.Shield_Roid_Order AttributeSlotUpgrades ((SlotName="Capacity",GradeIncrease=0,bActivateSlot=True),(SlotName="RechargeRate",GradeIncrease=0,bActivateSlot=True),(SlotName="RechargeDelay",GradeIncrease=0,bActivateSlot=True),(SlotName="Special01",GradeIncrease=0,bActivateSlot=True),(SlotName="Special02",GradeIncrease=0,bActivateSlot=True),(SlotName="MaxHealth",GradeIncrease=0,bActivateSlot=False))
+
+set GD_Shields.A_Item.Shield_Roid_Order UIStatList ((bDisplayAsModifierOnly=False,AttributeStyle=ATTRSTYLE_JustNumber,SupplementalAttributeStyle=ATTRSTYLE_JustNumber,StatCombinationMethod=SCM_Multiply,Attribute=AttributeDefinition'GD_Sage_Shields.Attributes.Attr_BucklerShieldCapacityProxy',ConstraintAttribute=None,SupplementalAttributeExpression=(AttributeOperand1=None,ComparisonOperator=OPERATOR_EqualTo,Operand2Usage=OPERAND_PreferAttribute,AttributeOperand2=None,ConstantOperand2=0.000000),SupplementalAttributeToAppend=None),(bDisplayAsModifierOnly=False,AttributeStyle=ATTRSTYLE_ModifierText,SupplementalAttributeStyle=ATTRSTYLE_JustNumber,StatCombinationMethod=SCM_Multiply,Attribute=AttributeDefinition'D_Attributes.Shield.RoidMeleeDamage',ConstraintAttribute=None,SupplementalAttributeExpression=(AttributeOperand1=None,ComparisonOperator=OPERATOR_EqualTo,Operand2Usage=OPERAND_PreferAttribute,AttributeOperand2=None,ConstantOperand2=0.000000),SupplementalAttributeToAppend=None),(bDisplayAsModifierOnly=False,AttributeStyle=ATTRSTYLE_ModifierText,SupplementalAttributeStyle=ATTRSTYLE_JustNumber,StatCombinationMethod=SCM_Multiply,Attribute=ResourcePoolAttributeDefinition'D_Attributes.HealthResourcePool.HealthMaxValue',ConstraintAttribute=None,SupplementalAttributeExpression=(AttributeOperand1=None,ComparisonOperator=OPERATOR_EqualTo,Operand2Usage=OPERAND_PreferAttribute,AttributeOperand2=None,ConstantOperand2=0.000000),SupplementalAttributeToAppend=None)))
+
+set GD_Shields.A_Item.Shield_Roid_Order CustomPresentations (AttributePresentationDefinition'GD_Sage_Shields.A_Item_Custom.Shield_Buckler:AttributePresentationDefinition_0')
+
+set GD_Shields.Titles.Title_Roid05_Order:AttributePresentationDefinition_0 Description Berserker Barrage! 
+
+set GD_Shields.Titles.Title_Roid05_Order:AttributePresentationDefinition_1 Description When [skill]Weapon X or X-23[-skill] are in your hands, any melee damage dealt also [health]heals you[-health].
+
+set GD_Shields.Titles.Title_Roid05_Order PartName Feral Rage
+
+set GD_Shields.Skills.Roid_Shield_Skill_Order:BehaviorProviderDefinition_0.Behavior_CauseDamage_17 DamageFormula (BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0.550000)
+
