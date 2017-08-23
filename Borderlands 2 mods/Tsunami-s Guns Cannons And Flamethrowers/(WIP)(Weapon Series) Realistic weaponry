@@ -1,13 +1,22 @@
 In WIP and more to be released
 
 Not 100% real, But pretty real
+Some of pandora's guns are pretty weak, imports from earth are superior
+(Even though earth doesn't have spaceships flying everywhere, our guns are better)
+About all of these weapons are buffed in damage, and based of real weapons.
+(Because it's just unreal to take ten hits from a shotgun to kill a unshielded bandit)
+You should not change parts on the weapon after you paste the weapon code
+#####################################################
 
 
 
 
 M134D-HM Minigun (AKA Mini-Minigun)
 
-Weapon code required: BL2(hwAAAAChDACABgM/AgEFxGIIxBCMAQGDIYb////////rYgBAoozh)
+Link to Wiki page on the Minigun: https://en.wikipedia.org/wiki/Minigun
+
+Weapon code required: BL2(hwAAAADkXACABgM/AgEFxGIIxBCMAQGDIYb////////rYvj/r4zh)
+
 
 
 10000 Max ammo
@@ -25,9 +34,11 @@ Regenerates 20 rounds per second
 #######################################################
 set GD_Weap_AssaultRifle.A_Weapons_Legendary.AR_Bandit_5_Madhouse:WeaponPartListCollectionDefinition_35 BarrelPartData (bEnabled=True,WeightedParts=((Part=WeaponPartDefinition'GD_Weap_AssaultRifle.Barrel.AR_Barrel_Vladof_Shredifier',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=2)))
 
+set GD_Weap_AssaultRifle.A_Weapons_Legendary.AR_Bandit_5_Madhouse:WeaponPartListCollectionDefinition_35 PrefixPartData (bEnabled=True,WeightedParts=((Part=WeaponPartDefinition'None',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=2)))
+
 set GD_Weap_AssaultRifle.Barrel.AR_Barrel_Vladof_Shredifier ExternalAttributeEffects ((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Combat_Rifle.Ammo_Combat_Rifle_RegenerationRate',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=20.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Combat_Rifle.Ammo_Combat_Rifle_MaxValue',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=9440.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.GameplayAttributes.FootSpeed',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
 
-set GD_Weap_AssaultRifle.Barrel.AR_Barrel_Vladof_Shredifier WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponEquipTime',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=4.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponPutDownTime',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=4.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),,(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponReloadSpeed',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=5.200000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=20.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-5.00000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1190.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))))))
+set GD_Weap_AssaultRifle.Barrel.AR_Barrel_Vladof_Shredifier WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponEquipTime',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=4.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponPutDownTime',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=4.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),,(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponReloadSpeed',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=5.200000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=40.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-5.00000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1190.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))))))
 
 set GD_Weap_AssaultRifle.Barrel.AR_Barrel_Vladof_Shredifier SpinUpDuration (BaseValueConstant=3.000000,BaseValueAttribute=None,InitializationDefinition=None)
 
@@ -50,19 +61,22 @@ set GD_Weap_AssaultRifle.Barrel.AR_Barrel_Vladof_Shredifier rarity (BaseValueCon
 
 AA-12 (Automatic Assault Shotgun)
 
-Weapon code needed:BL2(BwAAAAAv/AAWEWqgwxBQ6AHEBEQHBFfE//////////9WxA3EWsQ=)
+Link to wiki page on the AA-12: https://en.wikipedia.org/wiki/Atchisson_Assault_Shotgun
+
+Weapon code needed:BL2(hwAAAAAZ2AAB6IJAAgEFiEI5gwIL5f9/G5T///////+3Qvn/nwvl)
 
 
 High accuracy (for a shotgun)
 Accuracy decreases slowly with continues fire
-32 round mag
-5.0 firerate
-high damage
-low recoil
+32 Round drum mag
+5.0 Firerate
+High damage
+Low recoil
+Black Skin
 ########################################################
 set GD_Weap_Shotgun.A_Weapons_Legendary.SG_Bandit_5_SledgesShotgun:WeaponPartListCollectionDefinition_135 BarrelPartData (bEnabled=True,WeightedParts=((Part=WeaponPartDefinition'GD_Weap_Shotgun.Barrel.SG_Barrel_Hyperion_Striker',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=2)))
 
-set GD_Weap_Shotgun.Barrel.SG_Barrel_Hyperion_Striker WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponReloadSpeed',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-10.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponKnockback',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=100.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=20.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-3.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=10.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))))))
+set GD_Weap_Shotgun.Barrel.SG_Barrel_Hyperion_Striker WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponReloadSpeed',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-10.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponKnockback',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=100.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=30.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-3.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=10.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))))))
 
 set GD_Weap_Shotgun.Barrel.SG_Barrel_Hyperion_Striker AttributeSlotUpgrades ((SlotName="WeaponAccuracyImpulse",GradeIncrease=300,bActivateSlot=True),(SlotName="AccuracyMax",GradeIncrease=17,bActivateSlot=True),
 
@@ -73,4 +87,51 @@ set GD_Weap_Shotgun.Name.Title_Jakobs.Title_Legendary_Striker PartName AA-12
 set GD_Weap_Shotgun.Name.Title_Jakobs.Title_Legendary_Striker:AttributePresentationDefinition_8 NoConstraintText Automatic Assault Shotgun <br><br>Developed by Military Police Systems, Inc.<br><br>Manufacturer: Maxwell Atchisson
 
 set GD_Weap_Shotgun.Barrel.SG_Barrel_Hyperion_Striker rarity (BaseValueConstant=25.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+#########################################################
+
+
+
+
+Heavy Revolver
+
+Link to wiki page on the Heavy Revolver: http://gta.wikia.com/wiki/Heavy_Revolver
+
+Weapon code required:BL2(hwAAAADYXQSHJ4AJBwEFQMNwhVGA8v///////9Iw/v8boPz/f4Dy)
+
+Very high damage
+1.8 firerate
+Shots penetrates enemies
+Shots penetrates shields
+Does heavy melee damage
+6 Round magazine
+Slower reload
+Grey-ish Skin
+#########################################################
+set GD_Sage_Weapons.Pistols.Pistol_Barrel_Jakobs_Rex CustomFiringModeDefinition FiringModeDefinition'GD_Weap_Pistol.FiringModes.Bullets_Pistol_Bandit_Tinderbox'
+
+set GD_Sage_Weapons.Pistols.Pistol_Jakobs_3_Rex:WeaponPartListCollectionDefinition_299 Accessory1PartData (bEnabled=True,WeightedParts=((Part=WeaponPartDefinition'GD_Weap_Pistol.Accessory.Pistol_Accessory_Bayonet_1_Law',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=2)))
+
+set GD_Sage_Weapons.Pistols.Pistol_Jakobs_3_Rex:WeaponPartListCollectionDefinition_299 PrefixPartData (bEnabled=True,WeightedParts=((Part=WeaponPartDefinition'None',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=2)))
+
+set GD_Sage_Weapons.Pistols.Pistol_Barrel_Jakobs_Rex WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponReloadSpeed',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectileSpeedMultiplier',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=10.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=90.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=8.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))))))
+
+set GD_Sage_Weapons.ManufacturerMaterials.Mat_Jakobs_2_Rex Material MaterialInstanceConstant 'Common_GunMaterials.Materials.Pistol.Mati_JakobsUncommonPistol'
+
+set GD_Sage_Weapons.Name.Title.Title_Unique_Rex PartName Heavy Revolver
+
+set GD_Weap_Pistol.FiringModes.Bullets_Pistol_Bandit_Tinderbox PenetratePawn True
+
+set GD_Weap_Pistol.FiringModes.Bullets_Pistol_Bandit_Tinderbox OnAnyImpact ()
+
+set GD_Sage_Weapons.Pistols.Pistol_Barrel_Jakobs_Rex AttributeSlotUpgrades ((SlotName="WeaponAccuracyImpulse",GradeIncrease=0,bActivateSlot=True),(SlotName="AccuracyMax",GradeIncrease=30,bActivateSlot=True),
+
+set GD_Sage_Weapons.Name.Title.Title_Unique_Rex:AttributePresentationDefinition_8 NoConstraintText A handgun with enough stopping power to drop a crazed rhino, and heavy enough to beat it to death if you're out of ammo.<br><br>Ammu-Nation.
+
+set GD_Sage_Weapons.Pistols.Pistol_Barrel_Jakobs_Rex ExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.DamageSourceShieldPenetration.PercentChanceInstigatedBulletDmgIgnoresShields',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=100.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.GameplayAttributes.FootSpeed',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+set GD_Weap_Pistol.Accessory.Pistol_Accessory_Bayonet_1_Law WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.DamageSourceModifiers.InstigatedMeleeDamageModifier',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1000.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=10.000000))
+
+set GD_Weap_Pistol.FiringModes.Bullets_Pistol_Bandit_Tinderbox FiringPatternLines ()
+
+set GD_Sage_Weapons.Pistols.Pistol_Barrel_Jakobs_Rex rarity (BaseValueConstant=25.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
 #########################################################

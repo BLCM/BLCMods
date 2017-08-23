@@ -5,7 +5,7 @@ replace the elafant gun
 
 shots skull
 
-slag and fire weapon
+All elament shots
 
 70 projectils
 
@@ -17,6 +17,7 @@ slag and fire weapon
 
 created by ozay (or oz yohay)
 ===================================================================================================================
+
 ##skin##
 
 set GD_Sage_Weapons.ManufacturerMaterials.Material_Jakobs_2_ElephantGun Material MaterialInstanceConstant 'Common_GunMaterials.Materials.Launcher.Mati_TedioreEpicRL'
@@ -34,7 +35,7 @@ set GD_Sage_Weapons.Name.Title.Title_Unique_ElephantGun:AttributePresentationDef
 
 
 
-set GD_Sage_Weapons.SniperRifles.SR_Barrel_Hyperion_ElephantGun WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-35.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=69.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponReloadSpeed',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponPerShotAccuracyImpulse',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-100.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+set GD_Sage_Weapons.SniperRifles.SR_Barrel_Hyperion_ElephantGun WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-37.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=69.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponReloadSpeed',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponPerShotAccuracyImpulse',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-100.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
 
 
 
@@ -46,19 +47,29 @@ set GD_Sage_Weapons.SniperRifles.SR_Barrel_Hyperion_ElephantGun CustomFiringMode
 
 set GD_Orchid_BossWeapons.FiringModes.Bullet_Shotgun_JollyRoger Speed 10000.000000
 
-set GD_Orchid_BossWeapons.FiringModes.Bullet_Shotgun_JollyRoger OnAnyImpact (Behavior_Explode'GD_Aster_Weapons.FiringModes.Bullet_Pistol_Maliwan_GrogNozzle:Behavior_Explode_5',Behavior_Explode'GD_Weap_SMG.FiringModes.Bullet_SMG_HellFire:Behavior_Explode_5',Behavior_Explode'GD_Weap_Pistol.FiringModes.Bullet_Pistol_Dahl_Hornet:Behavior_Explode_5')
+set GD_Orchid_BossWeapons.FiringModes.Bullet_Shotgun_JollyRoger OnAnyImpact (Behavior_Explode'GD_Aster_Weapons.FiringModes.Bullet_Pistol_Maliwan_GrogNozzle:Behavior_Explode_5',Behavior_Explode'GD_Weap_SMG.FiringModes.Bullet_SMG_HellFire:Behavior_Explode_5',Behavior_Explode'GD_Sage_Weapons.FiringModes.Bullet_Shotgun_Twister:Behavior_Explode_5',Behavior_Explode'GD_Sage_RaidWeapons.FiringModes.Bullet_Pistol_Maliwan_Infection:Behavior_Explode_5',Behavior_SpawnProjectile'GD_Weap_SniperRifles.FiringModes.Bullet_Sniper_ChereAmie:Behavior_SpawnProjectile_2')
+
+#Slag Explosion#
 
 set GD_Aster_Weapons.FiringModes.Bullet_Pistol_Maliwan_GrogNozzle:Behavior_Explode_5 Definition ExplosionDefinition'GD_Explosions.Slag.Explosion_SlagMaster'
 
 set GD_Aster_Weapons.FiringModes.Bullet_Pistol_Maliwan_GrogNozzle:Behavior_Explode_5 DamageFormula (BaseValueScaleConstant=0.500000)
 
+#Fire Explosion#
+
+set GD_Weap_SMG.FiringModes.Bullet_SMG_HellFire:Behavior_Explode_5 DamageFormula (BaseValueScaleConstant=1.000000)
+
 set GD_Weap_SMG.FiringModes.Bullet_SMG_HellFire:Behavior_Explode_5 Definition ExplosionDefinition'GD_Explosions.Incendiary.Explosion_IncendiaryMaster'
 
-set GD_Weap_SMG.FiringModes.Bullet_SMG_HellFire:Behavior_Explode_5 DamageFormula (BaseValueScaleConstant=0.500000)
+#Corrosive Explosion# 
 
-set GD_Weap_Pistol.FiringModes.Bullet_Pistol_Dahl_Hornet:Behavior_Explode_5 Definition ExplosionDefinition'GD_Explosions.Incendiary.Explosion_IncendiaryMaster'
+set GD_Sage_RaidWeapons.FiringModes.Bullet_Pistol_Maliwan_Infection:Behavior_Explode_5 DamageFormula (BaseValueScaleConstant=1.000000)
 
-set GD_Weap_Pistol.FiringModes.Bullet_Pistol_Dahl_Hornet:Behavior_Explode_5 DamageFormula (BaseValueScaleConstant=0.500000)
+set GD_Sage_RaidWeapons.FiringModes.Bullet_Pistol_Maliwan_Infection:Behavior_Explode_5 Definition ExplosionDefinition'GD_Explosions.Corrosive.Explosion_CorrosiveMaster'
+
+#Shock Explosion#
+
+set GD_Sage_Weapons.FiringModes.Bullet_Shotgun_Twister:Behavior_Explode_5 DamageFormula (BaseValueScaleConstant=1.000000)
 
 ##parts##
 
