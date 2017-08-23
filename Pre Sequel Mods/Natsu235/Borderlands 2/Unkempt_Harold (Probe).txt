@@ -1,0 +1,40 @@
+ ###################################################################
+#                                                                   #
+#   Replace "88 Fragnum" with "Unkempt Harold" from Borderlands 2   #
+#                                                                   #
+ ###################################################################
+
+
+
+# NOTE: Replace "Probe" Firing Mode Definition #
+
+
+
+set GD_Cork_Weap_Pistol.Name.Title_Torgue.Title_Legendary_88Fragnum PartName Unkempt Harold
+
+set GD_Cork_Weap_Pistol.Name.Title_Torgue.Title_Legendary_88Fragnum:AttributePresentationDefinition_8 NoConstraintText Did I fire six shots, or only five? Three? Seven. Whatever.
+
+
+set GD_Cork_Weap_Pistol.Barrel.Pistol_Barrel_Torgue_88Fragnum WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=4.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Torgue',InitializationDefinition=None,BaseValueScaleConstant=-0.050000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Torgue',InitializationDefinition=None,BaseValueScaleConstant=0.200000)))
+
+
+set GD_Cork_Weap_Pistol.FiringModes.Bullets_Pistol_Torgue_88Fragnum TimerEvents ((Time=0.100000,Response=(SplitNum=2,SplitAngle=3.000000,SplitAngleOffset=0.000000,SplitDistance=0.000000,SplitFire=FiringModeDefinition'GD_Cork_Weap_Pistol.FiringModes.Bullet_Pistol_Maliwan_MoxxisProbe',NewSpeed=0.000000,bDetonate=False,bRespawnTracer=False,bUpdateBeamSourceLocation=False,Behaviors=)),(Time=0.200000,Response=(SplitNum=2,SplitAngle=6.000000,SplitAngleOffset=0.000000,SplitDistance=0.000000,SplitFire=FiringModeDefinition'GD_Cork_Weap_Pistol.FiringModes.Bullet_Pistol_Maliwan_MoxxisProbe',NewSpeed=0.000000,bDetonate=False,bRespawnTracer=False,bUpdateBeamSourceLocation=False,Behaviors=)),(Time=0.300000,Response=(SplitNum=2,SplitAngle=10.000000,SplitAngleOffset=0.000000,SplitDistance=0.000000,SplitFire=FiringModeDefinition'GD_Cork_Weap_Pistol.FiringModes.Bullet_Pistol_Maliwan_MoxxisProbe',NewSpeed=0.000000,bDetonate=False,bRespawnTracer=False,bUpdateBeamSourceLocation=False,Behaviors=)))
+
+set GD_Cork_Weap_Pistol.FiringModes.Bullets_Pistol_Torgue_88Fragnum RicochetResponse (SplitNum=0,SplitAngle=0.000000,SplitAngleOffset=0.000000,SplitDistance=0.000000,SplitFire=None,NewSpeed=0.000000,bDetonate=False,bRespawnTracer=False,bUpdateBeamSourceLocation=False,Behaviors=)
+
+
+set GD_Cork_Weap_Pistol.FiringModes.Bullet_Pistol_Maliwan_MoxxisProbe DamageTypeDefinition WillowDamageTypeDefinition'GD_Explosive.DamageType.DmgType_Explosive_Impact'
+
+set GD_Cork_Weap_Pistol.FiringModes.Bullet_Pistol_Maliwan_MoxxisProbe ExplosionOverrideDefinition None
+
+set GD_Cork_Weap_Pistol.FiringModes.Bullet_Pistol_Maliwan_MoxxisProbe ExplosionOverideInstanceDataName None
+
+set GD_Cork_Weap_Pistol.FiringModes.Bullet_Pistol_Maliwan_MoxxisProbe PartSysTemplate ParticleSystem'FX_WEP_Trails.Particles.Part_Gyrojet_Tracer_Default'
+
+set GD_Cork_Weap_Pistol.FiringModes.Bullet_Pistol_Maliwan_MoxxisProbe OnAnyImpact (Behavior_Explode'GD_Cork_Weap_Pistol.FiringModes.Bullets_Pistol_Torgue_88Fragnum:Behavior_Explode_5')
+
+set GD_Cork_Weap_Pistol.FiringModes.Bullet_Pistol_Maliwan_MoxxisProbe Speed 700.000000
+
+set GD_Cork_Weap_Pistol.FiringModes.Bullet_Pistol_Maliwan_MoxxisProbe AirFriction -4.000000
+
+set GD_Cork_Weap_Pistol.FiringModes.Bullet_Pistol_Maliwan_MoxxisProbe SoundDefinition FiringModeSoundDefinition'GD_Weap_Bullet_Tech_Sounds.Sound_Definitions.Incendiary_Bullet_SM'
