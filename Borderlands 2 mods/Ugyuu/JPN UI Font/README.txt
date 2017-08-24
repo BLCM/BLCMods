@@ -6,6 +6,8 @@ Make sure you are not running the game while doing this. It's for safety.
 
 Make a backup of your existing GFxUI.INT before doing this! (It's in Borderlands 2/WillowGame/Localization/INT) Put it somewhere safe.
 
+Download the new GFxUI.INT and save it as; All Files. If you don't select All Files, it will save as a TXT, and you don't want that.
+
 Copy the new GFxUI.INT to Borderlands 2/WillowGame/Localization/INT and Paste it in that folder. If it notifies you that there already is a file with this name, choose to replace it instead.
 
 Reload your game and the font will be changed to the different one. 
