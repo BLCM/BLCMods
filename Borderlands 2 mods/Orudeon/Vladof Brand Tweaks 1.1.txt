@@ -1,10 +1,16 @@
-#<Vladof Brand Tweaks>
+#<Vladof Brand Tweaks 1.1>
 
     Rebalances several guns in the Vladof brand to make them more competitive or more reasonable.
 
+    Changelog:
+
+    V1.1
+
+    Eliminated the Mongol's shot cost increase.
+
     #<Stalker>
 
-        Alters the Stalker to use Railgun firing mode tracers (because it's cool) and forbids slag spawning. Thank you to zububu for the slag restriction code.
+        Alters the Stalker to use Railgun firing mode tracers and forbids slag spawning. Thank you to zububu for the slag restriction code.
 
         set GD_Gladiolus_Weapons.Pistol.Pistol_Barrel_Stalker ExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.GameplayAttributes.PlayerCriticalHitBonus',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.250000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
 
@@ -66,5 +72,13 @@
 
     #</Sponge>
 
-#</Vladof Brand Tweaks>
+    #<Mongol>
+
+        Eliminates shot cost increase.
+
+        set WeaponPartDefinition'GD_Weap_Launchers.Barrel.L_Barrel_Vladof_Mongol' WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.200000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+    #</Mongol>
+
+#</Vladof Brand Tweaks 1.1>
 

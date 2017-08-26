@@ -24,11 +24,13 @@ Inspired by GrimmJow / Tha Campin Dutchman's Dolos Shotgun in Borderlands 1.
 
 [Changelog]
 
-V2.0 Fixed bullet speed in the wrong place, also made bullets slow, but accelerate after a short while, should be a little bit improved.
+v3.0 Slightly increased projectile speed.
+V2.0 Fixed firing mode with disappearing bullets, should be a little bit improved.
      Actually decreased damage, i don't think it was decreased before
      Made it compatible with my black death shotgun because it used the fibber projectile, which the black death uses as well.     
 
-V1.5 Buffed fire rate and reload speed.
+V1.5 Buffed stats on fire rate and reload speed.
+V1.0 Initial Release.
 
 [Codes]
 
@@ -36,18 +38,14 @@ set GD_Cork_Weap_Shotgun.Barrel.SG_Barrel_Bandit_Torgemada GestaltModeSkeletalMe
 
 set GD_Cork_Weap_Shotgun.Barrel.SG_Barrel_Bandit_Torgemada Rarity (BaseValueConstant=4.000000)
 
-set GD_Cork_Weap_Shotgun.Barrel.SG_Barrel_Bandit_Torgemada WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=-0.150000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=25.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=1.00000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=7.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=2.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponKnockback',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=-0.500000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0.45000)))
-
-set GD_Cork_Weap_Shotgun.Barrel.SG_Barrel_Bandit_Torgemada ExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectileSpeedMultiplier',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+set GD_Cork_Weap_Shotgun.Barrel.SG_Barrel_Bandit_Torgemada WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.900000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=-0.150000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=25.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=1.00000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=7.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=2.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponKnockback',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=-0.500000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0.45000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectileSpeedMultiplier',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
 
 set GD_Cork_Weap_Shotgun.FiringModes.Bullet_Shotgun_Torgemada ImpactResponses ()
 set GD_Cork_Weap_Shotgun.FiringModes.Bullet_Shotgun_Torgemada FiringPatternLines ()
 set GD_Cork_Weap_Shotgun.FiringModes.Bullet_Shotgun_Torgemada bSuppressWeaponSpread False
-set GD_Cork_Weap_Shotgun.FiringModes.Bullet_Shotgun_Torgemada Speed 100.00000
-set GD_Cork_Weap_Shotgun.FiringModes.Bullet_Shotgun_Torgemada LifeTime 20.000000
+set GD_Cork_Weap_Shotgun.FiringModes.Bullet_Shotgun_Torgemada Speed 125.00000
 set GD_Cork_Weap_Shotgun.FiringModes.Bullet_Shotgun_Torgemada bScalePatternByWeaponSpread False
-set GD_Cork_Weap_Shotgun.FiringModes.Bullet_Shotgun_Torgemada AirFriction -1.50000
-
+set GD_Cork_Weap_Shotgun.FiringModes.Bullet_Shotgun_Torgemada AirFriction -1.40000
 
 set GD_Cork_Weap_Shotgun.Barrel.SG_Barrel_Bandit_Torgemada WeaponCardAttributes ((Attribute=AttributeDefinition'D_Attributes.GameplayAttributes.PlayerCriticalHitBonus',PriorityIncrease=2.00000)))
 

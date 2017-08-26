@@ -1,4 +1,4 @@
-#<TedioreOverhaul>
+#<Tediore Brand Overhaul 1.3c>
 
     #<Description>
 
@@ -11,6 +11,14 @@
         This version of Tediore Brand Overhaul does not require compatibility code for Better Splatguns.
 
         Changelog:
+
+        v1.3c
+
+        Disables the Bunny's self-damage.
+
+        v1.3b
+
+        Give Tediore pistol barrels a 5% damage and 15% reload speed brand match buff.
 
         v1.2b
 
@@ -148,7 +156,7 @@
 
     #<RocketLaunchers>
 
-        Buff baseline Rocket Launcher damage and lowers E-Tech Launcher damage to compensate. Adds one to clip size.
+        Buff baseline Rocket Launcher damage and lowers E-Tech Launcher damage to compensate. Adds one to clip size. Disables all of the Bunny's self-damage.
 
         #<Buffs>
 
@@ -159,6 +167,10 @@
             set GD_Weap_Launchers.Barrel.L_Barrel_Tediore_Bunny WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Tediore',InitializationDefinition=None,BaseValueScaleConstant=0.200000)))
 
             set GD_Weap_Launchers.Barrel.L_Barrel_Alien WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.800000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Tediore',InitializationDefinition=None,BaseValueScaleConstant=-0.150000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponStatusEffectChanceModifier',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.200000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+            set GD_Weap_Launchers.Projectiles.Projectile_TedioreReloadLauncher_Bunny:BehaviorProviderDefinition_0.Behavior_Explode_2 InstigatorSelfDamageScale 0.000000
+
+            set GD_Weap_Launchers.Projectiles.Projectile_Bunny_Grenade:BehaviorProviderDefinition_0.Behavior_Explode_1 InstigatorSelfDamageScale 0.000000
 
         #</Buffs>
 
@@ -438,5 +450,5 @@
 
     #</Grenades>
 
-#</TedioreOverhaul>
+#</Tediore Brand Overhaul 1.3c>
 

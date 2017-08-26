@@ -5,24 +5,62 @@
  #################################################################
 
 
-# WIP: Can't replace skin #
+
+# NOTE 1: No "PartListCollection" and "BehaviorProviderDefinition" available #
+
+# NOTE 2: The shield skin will revert back at every loading #
+
 
 
 set GD_Ma_Shields.Titles.Title_Juggernaut_03_ShieldOfAges PartName Blockade
 
 set GD_Ma_Shields.Titles.Title_Juggernaut_03_ShieldOfAges:AttributePresentationDefinition_1 Description Am I living or am I dying?
 
+
+set GD_Ma_Shields.A_Item_Unique.Shield_Juggernaut_03_ShieldOfAges ShieldType SHT_Absorption
+
+set GD_Ma_Shields.A_Item_Unique.Shield_Juggernaut_03_ShieldOfAges ShieldPrimeMechanism SPM_PrimeOnFull
+
+set GD_Ma_Shields.A_Item_Unique.Shield_Juggernaut_03_ShieldOfAges ShieldTypeFlashFrameName absorb
+
+set GD_Ma_Shields.A_Item_Unique.Shield_Juggernaut_03_ShieldOfAges PrimedFlashFrameName absorb
+
+set GD_Ma_Shields.A_Item_Unique.Shield_Juggernaut_03_ShieldOfAges DroppedImpact WillowImpactDefinition'GD_Impacts.Loot.Loot_Drop_Ammo'
+
+set GD_Ma_Shields.A_Item_Unique.Shield_Juggernaut_03_ShieldOfAges AlphaParts ItemPartListDefinition'GD_Shields.Body.PartsList_Body_Standard'
+
+#set GD_Ma_Shields.A_Item_Unique.Shield_Juggernaut_03_ShieldOfAges BetaParts None
+
+#set GD_Ma_Shields.A_Item_Unique.Shield_Juggernaut_03_ShieldOfAges GammaParts None
+
+#set GD_Ma_Shields.A_Item_Unique.Shield_Juggernaut_03_ShieldOfAges DeltaParts None
+
+#set GD_Ma_Shields.A_Item_Unique.Shield_Juggernaut_03_ShieldOfAges MaterialParts None
+
+set GD_Ma_Shields.A_Item_Unique.Shield_Juggernaut_03_ShieldOfAges MonetaryValue (BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Economy.PriceCalc.Init_Shields_Impact_PriceCalculator',BaseValueScaleConstant=1.000000)
+
+set GD_Ma_Shields.A_Item_Unique.Shield_Juggernaut_03_ShieldOfAges UIStatList ((bDisplayAsModifierOnly=False,AttributeStyle=ATTRSTYLE_JustNumber,SupplementalAttributeStyle=ATTRSTYLE_JustNumber,StatCombinationMethod=SCM_Multiply,Attribute=ResourcePoolAttributeDefinition'D_Attributes.ShieldResourcePool.ShieldMaxValue',ConstraintAttribute=None,SupplementalAttributeExpression=(AttributeOperand1=None,ComparisonOperator=OPERATOR_EqualTo,Operand2Usage=OPERAND_PreferAttribute,AttributeOperand2=None,ConstantOperand2=0.000000),SupplementalAttributeToAppend=None),(bDisplayAsModifierOnly=False,AttributeStyle=ATTRSTYLE_JustNumber,SupplementalAttributeStyle=ATTRSTYLE_JustNumber,StatCombinationMethod=SCM_Multiply,Attribute=ResourcePoolAttributeDefinition'D_Attributes.ShieldResourcePool.ShieldOnIdleRegenerationRate',ConstraintAttribute=None,SupplementalAttributeExpression=(AttributeOperand1=None,ComparisonOperator=OPERATOR_EqualTo,Operand2Usage=OPERAND_PreferAttribute,AttributeOperand2=None,ConstantOperand2=0.000000),SupplementalAttributeToAppend=None),(bDisplayAsModifierOnly=False,AttributeStyle=ATTRSTYLE_JustNumber,SupplementalAttributeStyle=ATTRSTYLE_JustNumber,StatCombinationMethod=SCM_Multiply,Attribute=ResourcePoolAttributeDefinition'D_Attributes.ShieldResourcePool.ShieldOnIdleRegenerationDelay',ConstraintAttribute=None,SupplementalAttributeExpression=(AttributeOperand1=None,ComparisonOperator=OPERATOR_EqualTo,Operand2Usage=OPERAND_PreferAttribute,AttributeOperand2=None,ConstantOperand2=0.000000),SupplementalAttributeToAppend=None))
+
+set GD_Ma_Shields.A_Item_Unique.Shield_Juggernaut_03_ShieldOfAges AttributeSlotEffects ((SlotName="Capacity",bExternalSlot=True,bRunEffectsAsSkill=False,AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.ShieldResourcePool.ShieldMaxValue',ConstraintAttribute=None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),PerGradeUpgrade=(BaseValueConstant=0.030000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bIncludeInFunStats=False,bIncludeAlliesAsTarget=False,bEnforceMinimumGrade=False,bEnforceMaximumGrade=False,MinimumGrade=0,MaximumGrade=0,TargetInstanceDataName=),(SlotName="RechargeRate",bExternalSlot=True,bRunEffectsAsSkill=False,AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.ShieldResourcePool.ShieldOnIdleRegenerationRate',ConstraintAttribute=None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),PerGradeUpgrade=(BaseValueConstant=0.030000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bIncludeInFunStats=False,bIncludeAlliesAsTarget=False,bEnforceMinimumGrade=False,bEnforceMaximumGrade=False,MinimumGrade=0,MaximumGrade=0,TargetInstanceDataName=),(SlotName="RechargeDelay",bExternalSlot=True,bRunEffectsAsSkill=False,AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.ShieldResourcePool.ShieldOnIdleRegenerationDelay',ConstraintAttribute=None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),PerGradeUpgrade=(BaseValueConstant=-0.040000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bIncludeInFunStats=False,bIncludeAlliesAsTarget=False,bEnforceMinimumGrade=False,bEnforceMaximumGrade=False,MinimumGrade=0,MaximumGrade=0,TargetInstanceDataName=),(SlotName="NormalDamageResist",bExternalSlot=True,bRunEffectsAsSkill=True,AttributeToModify=AttributeDefinition'D_Attributes.DamageTypeModifers.NormalImpactDamageModifier',ConstraintAttribute=None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Aster_Shields.Misc.Init_Blockade_Resistance_Minor',BaseValueScaleConstant=1.000000),PerGradeUpgrade=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bIncludeInFunStats=False,bIncludeAlliesAsTarget=False,bEnforceMinimumGrade=False,bEnforceMaximumGrade=False,MinimumGrade=0,MaximumGrade=0,TargetInstanceDataName=),(SlotName="FireDamageResist",bExternalSlot=True,bRunEffectsAsSkill=True,AttributeToModify=AttributeDefinition'D_Attributes.DamageTypeModifers.IncendiaryImpactDamageModifier',ConstraintAttribute=None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Aster_Shields.Misc.Init_Blockade_Resistance_Minor',BaseValueScaleConstant=1.000000),PerGradeUpgrade=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bIncludeInFunStats=False,bIncludeAlliesAsTarget=False,bEnforceMinimumGrade=False,bEnforceMaximumGrade=False,MinimumGrade=0,MaximumGrade=0,TargetInstanceDataName=),(SlotName="ShockDamageResist",bExternalSlot=True,bRunEffectsAsSkill=True,AttributeToModify=AttributeDefinition'D_Attributes.DamageTypeModifers.ShockImpactDamageModifier',ConstraintAttribute=None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Aster_Shields.Misc.Init_Blockade_Resistance_Minor',BaseValueScaleConstant=1.000000),PerGradeUpgrade=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bIncludeInFunStats=False,bIncludeAlliesAsTarget=False,bEnforceMinimumGrade=False,bEnforceMaximumGrade=False,MinimumGrade=0,MaximumGrade=0,TargetInstanceDataName=),(SlotName="CorrosiveDamageResist",bExternalSlot=True,bRunEffectsAsSkill=True,AttributeToModify=AttributeDefinition'D_Attributes.DamageTypeModifers.CorrosiveImpactDamageModifier',ConstraintAttribute=None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Aster_Shields.Misc.Init_Blockade_Resistance_Minor',BaseValueScaleConstant=1.000000),PerGradeUpgrade=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bIncludeInFunStats=False,bIncludeAlliesAsTarget=False,bEnforceMinimumGrade=False,bEnforceMaximumGrade=False,MinimumGrade=0,MaximumGrade=0,TargetInstanceDataName=),(SlotName="ExplosiveDamageResist",bExternalSlot=True,bRunEffectsAsSkill=True,AttributeToModify=AttributeDefinition'D_Attributes.DamageTypeModifers.ExplosiveImpactDamageModifier',ConstraintAttribute=None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Aster_Shields.Misc.Init_Blockade_Resistance_Minor',BaseValueScaleConstant=1.000000),PerGradeUpgrade=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bIncludeInFunStats=False,bIncludeAlliesAsTarget=False,bEnforceMinimumGrade=False,bEnforceMaximumGrade=False,MinimumGrade=0,MaximumGrade=0,TargetInstanceDataName=),(SlotName="IceDamageResist",bExternalSlot=True,bRunEffectsAsSkill=True,AttributeToModify=AttributeDefinition'D_Attributes.DamageTypeModifers.IceImpactDamageModifier',ConstraintAttribute=None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Aster_Shields.Misc.Init_Blockade_Resistance_Minor',BaseValueScaleConstant=1.000000),PerGradeUpgrade=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bIncludeInFunStats=False,bIncludeAlliesAsTarget=False,bEnforceMinimumGrade=False,bEnforceMaximumGrade=False,MinimumGrade=0,MaximumGrade=0,TargetInstanceDataName=))
+
+set GD_Ma_Shields.A_Item_Unique.Shield_Juggernaut_03_ShieldOfAges AttributeSlotUpgrades ((SlotName="Capacity",GradeIncrease=20,bActivateSlot=True),(SlotName="RechargeRate",GradeIncrease=20,bActivateSlot=True),(SlotName="RechargeDelay",GradeIncrease=0,bActivateSlot=True),(SlotName="NormalDamageResist",GradeIncrease=0,bActivateSlot=True),(SlotName="FireDamageResist",GradeIncrease=0,bActivateSlot=True),(SlotName="ShockDamageResist",GradeIncrease=0,bActivateSlot=True),(SlotName="CorrosiveDamageResist",GradeIncrease=0,bActivateSlot=True),(SlotName="ExplosiveDamageResist",GradeIncrease=0,bActivateSlot=True),(SlotName="SlagDamageResist",GradeIncrease=0,bActivateSlot=True))
+
+
 set GD_Ma_Shields.A_Item_Unique.Shield_Juggernaut_03_ShieldOfAges:AttributePresentationDefinition_3 Description Provides [skill]major damage resistance[-skill] when fully charged, and [skill]moderate damage resistance[-skill] when not fully charged.
 
-set GD_Ma_Shields.A_Item_Unique.Shield_Juggernaut_03_ShieldOfAges AttributeSlotUpgrades ((SlotName="Capacity",GradeIncrease=0,bActivateSlot=True),(SlotName="RechargeRate",GradeIncrease=0,bActivateSlot=True),(SlotName="RechargeDelay",GradeIncrease=0,bActivateSlot=True),(SlotName="Special01",GradeIncrease=0,bActivateSlot=False),(SlotName="Special02",GradeIncrease=0,bActivateSlot=False))
 
-set GD_Ma_Shields.A_Item_Unique.Shield_Juggernaut_03_ShieldOfAges ShieldTypeFlashFrameName ()
+set GD_Ma_Shields.A_Item_Unique.ItemGrade_Gear_Shield_Juggernaut_03_ShieldOfAges Manufacturers ((Manufacturer=ManufacturerDefinition'GD_Manufacturers.Manufacturers.Anshin',Grades=((GradeModifiers=(ExpLevel=1,CustomInventoryDefinition=None),GameStageRequirement=(MinGameStage=1,MaxGameStage=100),MinSpawnProbabilityModifier=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),MaxSpawnProbabilityModifier=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))))
 
-set GD_Ma_Shields.Material.Material3_Rare_ShieldOfAges AttributeSlotUpgrades ((SlotName="Capacity",GradeIncrease=20,bActivateSlot=True),(SlotName="RechargeRate",GradeIncrease=20,bActivateSlot=True),(SlotName="RechargeDelay",GradeIncrease=0,bActivateSlot=True),(SlotName="Special01",GradeIncrease=0,bActivateSlot=False),(SlotName="Special02",GradeIncrease=0,bActivateSlot=False))
+set GD_Ma_Shields.A_Item_Unique.ItemGrade_Gear_Shield_Juggernaut_03_ShieldOfAges PartListCollection ItemPartListCollectionDefinition'GD_Aster_Shields.A_Item.Shield_Blockade_PartList'
 
-# This command replace the texture but doesn't seems to work... #
-set GD_Ma_Shields.Material.Material3_Rare_ShieldOfAges Material Item_Shields.Materials.Mati_ShieldAnshinEpic
 
-set GD_Ma_Shields.Material.Material3_Rare_ShieldOfAges Rarity (BaseValueConstant=501.000000)
+set GD_Ma_Shields.Accessory.Accessory8_Juggernaut_ShieldOfAges BehaviorProviderDefinition BehaviorProviderDefinition'GD_Aster_Shields.Accessory.Accessory_Blockade:BehaviorProviderDefinition_0'
 
-set GD_Ma_Shields.Material.Material3_Rare_ShieldOfAges Rarity (BaseValueAttribute=None)
+
+set GD_Ma_Shields.Material.Material3_Rare_ShieldOfAges Material MaterialInstanceConstant'Item_Shields.Materials.Mati_ShieldAnshinEpic'
+
+set GD_Ma_Shields.Material.Material3_Rare_ShieldOfAges AttributeSlotUpgrades ((SlotName="Capacity",GradeIncrease=0,bActivateSlot=False),(SlotName="RechargeDelay",GradeIncrease=0,bActivateSlot=False))
+
+set GD_Ma_Shields.Material.Material3_Rare_ShieldOfAges MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'
+
+set GD_Ma_Shields.Material.Material3_Rare_ShieldOfAges Rarity (BaseValueConstant=501.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
