@@ -1,0 +1,86 @@
+|||||||||||||||||||||||||||||||||||||||||||||
+|                                           |
+|            Created by CzRSpecV            |
+|                                           |
+|    Turns the Hellfire into the Hades      |
+|                                           |
+|||||||||||||||||||||||||||||||||||||||||||||
+
+## Hellfire > Hades ##
+
+ Locked into 2 Accessories: Stability in Accessory 1 and Damage in Accessory 2
+ Still locked into Fire
+ 
+ ## NOTE THIS WILL DELETE ANY EXISTING HELLFIRE'S ##
+ ## BELOW IS THE GIBBED CODE TO SPAWN IN THE CORRECT VERSION, OR FARM IT YOURSELF ##
+ ## BL2(hwAAAADL6QBDKANBEAGFrmIxwYKLRQHLCpYGLBZYKLDkYlnCIozl) ##
+ 
+ Fire and Explosive Splash
+ Re-done Skin
+ 
+##
+
+## SIDE NOTES ##
+
+ This uses attributes from the Pocket Rocket
+ Any mod that changes it will affect this mod
+
+##
+
+-- Rename and Red Text --
+
+set GD_Weap_SMG.Name.Title_Maliwan.Title_Legendary_HellFire PartName Hades
+
+set GD_Weap_SMG.Name.Title_Maliwan.Title_Legendary_HellFire:AttributePresentationDefinition_8 NoConstraintText <font color="#e50026">Hell hath no fury like the flames of Hades.<font color="#ffffff"><br>- <font color="#e50026">Fire <font color="#ffffff">and <font color="#ece946">Explosive <font color="#ffffff">splash
+
+-- General Attributes --
+
+set GD_Weap_SMG.Barrel.SMG_Barrel_Maliwan_HellFire WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-0.03000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+set GD_Weap_SMG.Barrel.SMG_Barrel_Maliwan_HellFire ExternalAttributeEffects 
+
+set GD_Weap_SMG.Barrel.SMG_Barrel_Maliwan_HellFire ZoomWeaponAttributeEffects 
+
+set GD_Weap_SMG.Barrel.SMG_Barrel_Maliwan_HellFire ZoomExternalAttributeEffects
+
+set GD_Weap_SMG.FiringModes.Bullet_SMG_HellFire OnAnyImpact (Behavior_Explode'GD_Iris_Weapons.FiringModes.Bullets_Pistol_Torgue_PocketRocket:Behavior_Explode_5',Behavior_Explode'GD_Weap_SMG.FiringModes.Bullet_SMG_HellFire:Behavior_Explode_5')
+
+-- Pocket Rocket FiringMode --
+
+set GD_Iris_Weapons.FiringModes.Bullets_Pistol_Torgue_PocketRocket:Behavior_Explode_5 DamageSource Class'WillowGame.WillowDmgSource_Grenade'
+
+set GD_Iris_Weapons.FiringModes.Bullets_Pistol_Torgue_PocketRocket:Behavior_Explode_5 Definition ExplosionDefinition'GD_Explosions.explosive.Explosion_ExplosiveMaster'
+
+set GD_Iris_Weapons.FiringModes.Bullets_Pistol_Torgue_PocketRocket:Behavior_Explode_5 DamageRadiusFormula (BaseValueConstant=100.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+
+set GD_Iris_Weapons.FiringModes.Bullets_Pistol_Torgue_PocketRocket:Behavior_Explode_5 DamageFormula (BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',InitializationDefinition=None,BaseValueScaleConstant=0.500000)
+
+set GD_Iris_Weapons.FiringModes.Bullets_Pistol_Torgue_PocketRocket:Behavior_Explode_5 StatusEffectDamage (BaseValueConstant=1.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.Weapon.WeaponStatusEffectDamage',InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+
+-- Hellfire FiringMode --
+
+set GD_Weap_SMG.FiringModes.Bullet_SMG_HellFire:Behavior_Explode_5 DamageSource Class'WillowGame.WillowDmgSource_Grenade'
+
+set GD_Weap_SMG.FiringModes.Bullet_SMG_HellFire:Behavior_Explode_5 Definition ExplosionDefinition'GD_Explosions.incendiary.Explosion_IncendiaryMaster'
+
+set GD_Weap_SMG.FiringModes.Bullet_SMG_HellFire:Behavior_Explode_5 DamageRadiusFormula (BaseValueConstant=100.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+
+set GD_Weap_SMG.FiringModes.Bullet_SMG_HellFire:Behavior_Explode_5 DamageFormula (BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',InitializationDefinition=None,BaseValueScaleConstant=0.500000)
+
+set GD_Weap_SMG.FiringModes.Bullet_SMG_HellFire:Behavior_Explode_5 StatusEffectDamage (BaseValueConstant=1.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.Weapon.WeaponStatusEffectDamage',InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+
+-- Part Lock --
+
+set GD_Weap_SMG.A_Weapons_Legendary.SMG_Maliwan_5_HellFire:WeaponPartListCollectionDefinition_173 ConsolidatedAttributeInitData ((BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),(BaseValueConstant=100.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_2_Uncommon',BaseValueScaleConstant=1.000000),(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',BaseValueScaleConstant=1.000000))
+
+set GD_Weap_SMG.A_Weapons_Legendary.SMG_Maliwan_5_HellFire:WeaponPartListCollectionDefinition_173 Accessory1PartData (bEnabled=True,WeightedParts=((Part=WeaponPartDefinition'GD_Weap_SMG.Accessory.SMG_Accessory_Stock1_Stabilized',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=3)))
+
+set GD_Weap_SMG.A_Weapons_Legendary.SMG_Maliwan_5_HellFire:WeaponPartListCollectionDefinition_173 Accessory2PartData (bEnabled=True,WeightedParts=((Part=WeaponPartDefinition'GD_Weap_SMG.Accessory.SMG_Accessory_Body2_Damage',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=3)))
+
+-- Skin --
+
+set GD_Weap_SMG.Barrel.SMG_Barrel_Maliwan_HellFire GestaltModeSkeletalMeshName SMG_Barrel_Bandit
+
+set Common_GunMaterials.Materials.SMG.Mati_Maliwan_Legendary_Hellfire TextureParameterValues ((ParameterName="p_NormalScopesEmissive",ParameterValue=Texture2D'Weap_SMG.Tex.Weap_SMG_Nrm',ExpressionGUID=(A=-1743872746,B=1126171774,C=119496871,D=-1952271718)),(ParameterName="p_Diffuse",ParameterValue=Texture2D'Common_GunMaterials.CompTextures.Weap_AssaultSubSniper_Comp',ExpressionGUID=(A=1757607260,B=1326539502,C=-317215581,D=-565807463)),(ParameterName="p_Masks",ParameterValue=Texture2D'Weap_SMG.Tex.Weap_SMG_Comp',ExpressionGUID=(A=-330624041,B=1167251458,C=-335191907,D=-166684394)),(ParameterName="P_SimpleReflect",ParameterValue=Texture2D'Common_GunMaterials.Env.Chrome',ExpressionGUID=(A=-858148940,B=1327945772,C=148462268,D=1899047224)),(ParameterName="p_Pattern",ParameterValue=Texture2D'Common_GunMaterials.Patterns.Pattern_RedSpectrum',ExpressionGUID=(A=534250533,B=1202550002,C=1578302861,D=-717876416)))
+
+set Common_GunMaterials.Materials.SMG.Mati_Maliwan_Legendary_Hellfire VectorParameterValues ((ParameterName="p_BColorHilight",ParameterValue=(R=1.000000,G=1.000000,B=1.000000,A=1.000000),ExpressionGUID=(A=170014760,B=1132076783,C=-275608290,D=650702143)),(ParameterName="p_BColorMidtone",ParameterValue=(R=0.500000,G=0.500000,B=0.500000,A=1.000000),ExpressionGUID=(A=170014760,B=1132076783,C=-275608290,D=650702143)),(ParameterName="p_BColorShadow",ParameterValue=(R=0.250000,G=0.250000,B=0.250000,A=1.000000),ExpressionGUID=(A=170014760,B=1132076783,C=-275608290,D=650702143)),(ParameterName="p_CColorHilight",ParameterValue=(R=8.000000,G=0.100000,B=0.000000,A=1.000000),ExpressionGUID=(A=170014760,B=1132076783,C=-275608290,D=650702143)),(ParameterName="p_CColorMidtone",ParameterValue=(R=4.000000,G=0.050000,B=0.000000,A=1.000000),ExpressionGUID=(A=170014760,B=1132076783,C=-275608290,D=650702143)),(ParameterName="p_CColorShadow",ParameterValue=(R=0.000000,G=0.000000,B=0.000000,A=1.000000),ExpressionGUID=(A=170014760,B=1132076783,C=-275608290,D=650702143)),(ParameterName="p_DColor",ParameterValue=(R=2.000000,G=2.000000,B=2.000000,A=1.000000),ExpressionGUID=(A=696455109,B=1155878830,C=-1741888361,D=802120528)),(ParameterName="p_ReflectColor",ParameterValue=(R=4.000000,G=0.050000,B=0.000000,A=1.000000),ExpressionGUID=(A=295058103,B=1318551573,C=-2045449573,D=-547597976)),(ParameterName="p_PatternColor",ParameterValue=(R=8.000000,G=0.10000,B=0.000000,A=1.000000),ExpressionGUID=(A=295058103,B=1318551573,C=-2045449573,D=-547597976)),(ParameterName="p_PatternScalePosition",ParameterValue=(R=4.010000,G=4.010000,B=0.060000,A=2.010000),ExpressionGUID=(A=295058103,B=1318551573,C=-2045449573,D=-547597976)),(ParameterName="p_PatternChannelScale",ParameterValue=(R=1.000000,G=0.000000,B=0.000000,A=1.000000),ExpressionGUID=(A=295058103,B=1318551573,C=-2045449573,D=-547597976)),(ParameterName="p_DecalChannel",ParameterValue=(R=0.000000,G=0.000000,B=0.000000,A=1.000000),ExpressionGUID=(A=295058103,B=1318551573,C=-2045449573,D=-547597976)))
