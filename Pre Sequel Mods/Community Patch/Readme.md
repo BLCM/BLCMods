@@ -1,4 +1,5 @@
 Hello Folks Jim Raven here for a quick update time.
+
 For starters i am indeed working on Version 2.0. i Am kinda alone in that proccess tho so it takes longer than expected.
 Especially with Destiny2 Xcom War of the Chosen and some more games coming out.
 
