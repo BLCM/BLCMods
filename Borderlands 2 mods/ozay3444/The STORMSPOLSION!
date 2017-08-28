@@ -1,0 +1,61 @@
+=======================================
+DO NOT USE IF YOU SUFFER FROM EPILEPSY!
+=======================================
+
+replace the crit
+
+the STORMSPOLSION!
+
+use my no self deamge mod to survive
+
+brake e-tech bandit luncher
+
+OP if you swap weapons  and shot so....dont do it
+
+to much changes to right it all
+
+shots singularity grenades (kind of)
+
+created by ozay (or oz youhay)
+
+HF
+
+=======================================
+
+##skin##
+
+set GD_Aster_Weapons.ManufacturerMaterials.Mat_Maliwan_3_Crit Material MaterialInstanceConstant 'Common_GunMaterials.Materials.SMG.Mati_Hyperion_UniqueSMG_Commerce'
+
+set GD_Aster_Weapons.SMGs.SMG_Barrel_Hyperion_Crit BehaviorProviderDefinition ()
+
+##shots##
+
+set GD_Aster_Weapons.SMGs.SMG_Barrel_Hyperion_Crit CustomFiringModeDefinition FiringModeDefinition'GD_Weap_Launchers.FiringModes.FM_Alien_Bandit'
+
+##MAGIC##
+
+set GD_Weap_Launchers.Projectiles.Projectile_Alien_Bandit_Plasma GravityScaling -0.002000
+
+set GD_Weap_Launchers.Projectiles.Projectile_Alien_Bandit_Plasma:BehaviorProviderDefinition_0.Behavior_SpawnProjectile_20 ProjectileDefinition ProjectileDefinition'GD_GrenadeMods.Projectiles.Grenade_SingularityChild'
+
+set GD_Weap_Launchers.Projectiles.Projectile_Alien_Bandit_Plasma SpeedFormula (BaseValueConstant=50.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+set GD_Weap_Launchers.Projectiles.Projectile_Alien_Bandit_Plasma InFlightEffectsScale 9.000000
+set GD_Weap_Launchers.Projectiles.Projectile_Alien_Bandit_Plasma MaxLifeSpan 55.000000
+
+set GD_Weap_Launchers.Projectiles.Projectile_Alien_Bandit_Plasma DamageRadius (BaseValueConstant=100000.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+set GD_Weap_Launchers.Projectiles.Projectile_Alien_Bandit_Plasma Damage (BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+
+set GD_GrenadeMods.Projectiles.Grenade_SingularityChild InFlightEffects ParticleSystem'FX_WEP_Grenades_Px.Particles.Part_SingularityAttraction_Px'
+set GD_GrenadeMods.Projectiles.Grenade_SingularityChild InFlightEffectsScale 8.000000
+
+set GD_GrenadeMods.Projectiles.Grenade_SingularityChild AmbientAkEvent Ake_Wep_Grenades.Grenade_Classes.Ak_Play_Wep_Grenade_Singularity_Charge
+
+##stats##
+
+set GD_Aster_Weapons.SMGs.SMG_Barrel_Hyperion_Crit WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=40.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-1000.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=999999.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=15.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.GrenadeMod.BlastRadius',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=10000000.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0.050000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectileSpeedMultiplier',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-12.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0.050000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=100.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponReloadSpeed',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-50.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+##name##
+
+set GD_Aster_Weapons.Name.Title.Title__Unique_Crit PartName STORMSPOLSION!
+
+set GD_Aster_Weapons.Name.Title.Title__Unique_Crit:AttributePresentationDefinition_8 NoConstraintText TZZZZZ
