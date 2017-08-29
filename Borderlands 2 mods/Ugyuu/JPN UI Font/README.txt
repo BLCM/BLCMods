@@ -2,6 +2,8 @@ This file contains the font replacement for the English version of Borderlands 2
 
 >>> This works for The Pre-Sequel as well! <<<
 
+**NOTE:** When gunzerking, the ammo displays incorrectly. i don't believe i can fix this.
+
 [HOW TO INSTALL]
 
 Make sure you are not running the game while doing this. It's for safety.

@@ -1,0 +1,77 @@
+########
+By Aaron0000
+
+Turns the elemental_none part for the various weapon types into Explosive parts (they lack splash damage though. Otherwise they'd override a lot of firing modes on unique guns.)
+
+Features;
+Explosive impact damage.
+20% increase in damage instead of loss.
+20% decrease in fire rate.
+
+NOTES;
+A lot of non-elemental weapons (pretty much anything that isn't white) will probably end up as explosive. If you want a non-elemental version, you will likely need to use Gibbed Save Editor and manually remove the element by setting it to "None".
+Jakobs, Torgue, and Maliwan weapons are unaffected.
+########
+
+
+
+
+set GD_Weap_Pistol.elemental.Pistol_Elemental_None WeaponImpact WillowImpactDefinition'GD_Impacts.Bullets.Bullet_LargeCalibur'
+
+set GD_Weap_Pistol.elemental.Pistol_Elemental_None WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.200000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.200000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))))
+
+set GD_Weap_Pistol.elemental.Pistol_Elemental_None CustomDamageTypeDefinition WillowDamageTypeDefinition'GD_Explosive.DamageType.DmgType_Explosive_Impact'
+
+set GD_Weap_Pistol.elemental.Pistol_Elemental_None MaterialVectorParameterValues ((ParameterName="p_EmissiveColor",ParameterValue=(R=3.480000,G=1.450000,B=0.230000,A=0.000000),ExpressionGUID=(A=0,B=0,C=0,D=0))
+
+
+
+
+set GD_Weap_AssaultRifle.elemental.AR_Elemental_None WeaponImpact WillowImpactDefinition'GD_Impacts.Bullets.Bullet_LargeCalibur'
+
+set GD_Weap_AssaultRifle.elemental.AR_Elemental_None WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.200000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.200000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))))
+
+set GD_Weap_AssaultRifle.elemental.AR_Elemental_None CustomDamageTypeDefinition WillowDamageTypeDefinition'GD_Explosive.DamageType.DmgType_Explosive_Impact'
+
+set GD_Weap_AssaultRifle.elemental.AR_Elemental_None MaterialVectorParameterValues ((ParameterName="p_EmissiveColor",ParameterValue=(R=3.480000,G=1.450000,B=0.230000,A=0.000000),ExpressionGUID=(A=0,B=0,C=0,D=0))
+
+
+
+
+
+set GD_Weap_SMG.elemental.SMG_Elemental_None WeaponImpact WillowImpactDefinition'GD_Impacts.Bullets.Bullet_LargeCalibur'
+
+set GD_Weap_SMG.elemental.SMG_Elemental_None WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.200000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.200000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))))
+
+set GD_Weap_SMG.elemental.SMG_Elemental_None CustomDamageTypeDefinition WillowDamageTypeDefinition'GD_Explosive.DamageType.DmgType_Explosive_Impact'
+
+set GD_Weap_SMG.elemental.SMG_Elemental_None MaterialVectorParameterValues ((ParameterName="p_EmissiveColor",ParameterValue=(R=3.480000,G=1.450000,B=0.230000,A=0.000000),ExpressionGUID=(A=0,B=0,C=0,D=0))
+
+
+
+
+
+set GD_Weap_Shotgun.elemental.Shotgun_Elemental_None WeaponImpact WillowImpactDefinition'GD_Impacts.Bullets.Bullet_LargeCalibur'
+
+set GD_Weap_Shotgun.elemental.Shotgun_Elemental_None WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.200000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.200000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))))
+
+set GD_Weap_Shotgun.elemental.Shotgun_Elemental_None CustomDamageTypeDefinition WillowDamageTypeDefinition'GD_Explosive.DamageType.DmgType_Explosive_Impact'
+
+set GD_Weap_Shotgun.elemental.Shotgun_Elemental_None MaterialVectorParameterValues ((ParameterName="p_EmissiveColor",ParameterValue=(R=3.480000,G=1.450000,B=0.230000,A=0.000000),ExpressionGUID=(A=0,B=0,C=0,D=0))
+
+
+
+
+
+set GD_Weap_SniperRifles.elemental.SR_Elemental_None WeaponImpact WillowImpactDefinition'GD_Impacts.Bullets.Bullet_LargeCalibur'
+
+set GD_Weap_SniperRifles.elemental.SR_Elemental_None WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.200000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.200000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))))
+
+set GD_Weap_SniperRifles.elemental.SR_Elemental_None CustomDamageTypeDefinition WillowDamageTypeDefinition'GD_Explosive.DamageType.DmgType_Explosive_Impact'
+
+set GD_Weap_SniperRifles.elemental.SR_Elemental_None MaterialVectorParameterValues ((ParameterName="p_EmissiveColor",ParameterValue=(R=3.480000,G=1.450000,B=0.230000,A=0.000000),ExpressionGUID=(A=0,B=0,C=0,D=0))
+
+
+
+
+

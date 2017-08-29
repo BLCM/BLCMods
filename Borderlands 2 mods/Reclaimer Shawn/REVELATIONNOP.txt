@@ -1,0 +1,54 @@
+#Gibbed Code For The Gun
+BL2(hwAAAAADhQiD6AAAEQGFlgBkAGMCsAWMBZj//2Rg/v+DAHwEMwHw)
+#
+
+#Instructions On How To Use The Gun
+THE REVELATION starts out with the Chain Lightning projectile and if you aim at anywhere but the ground, you have a high chance of killing yourself.
+If you're good at aiming at people's feet, you can wreak havok. If you want to change the gun to the Fire Storm projectile, click the "8" button on your keyboard. Click "7" to change the gun's projectile back to the Chain Lightning. If you want to make it so the gun's misfiring has no chance of killing you, click the "9" button (this also makes ever other form of self damage unable to kill you. Finally, hit both the "Shift" and "9" buttons at the same time to turn self-damage back on. THE REVELATION (REVELATION.txt) one hits anything, and will do considerable amounts of damage to enemies about a hundred levels higher than you without BAR. The other version of this gun, THE REVELATION Not-Overpowered (REVELATIONNOP.txt), does not insta-kill
+#
+
+#Sets Weapon Card Information#
+set GD_Weap_SniperRifles.Name.Prefix_Maliwan.Prefix_Mount3_Damage PartName THE
+set GD_Gladiolus_Weapons.Name.Title.Title_Pearlescent_Storm PartName REVELATION
+set GD_Gladiolus_Weapons.Name.Title.Title_Pearlescent_Storm:AttributePresentationDefinition_8 NoConstraintText <font color="#4286f4"> "And out of the throne proceeded lightnings and voices: <font color="#4286f4"> <font color="#fc4300">and there were seven lamps of fire burning before the throne, which are the seven <font color="#fc4300"> <font color="#ffffff">Spirits of God."<font color="#fffffff">
+
+#Sets FiringMode to be compatible with new projectile#
+set GD_Gladiolus_Weapons.sniper.SR_Barrel_Maliwan_Storm CustomFiringModeDefinition FiringModeDefinition 'GD_Weap_AssaultRifle.FiringModes.FM_Rocket_Dahl_Grenade'
+set GD_Weap_AssaultRifle.FiringModes.FM_Rocket_Dahl_Grenade ProjectileDefinition GD_Aster_GrenadeMods.Projectiles.Grenade_LightningBolt
+
+#Makes it so you don't kill yourself#
+set GD_Globals.General.Globals SelfInflictedDamageMultiplier 0.000000
+
+#Toggling Between Projectiles#
+set PlayerInput Bindings ((Name="seven",Command="set GD_Weap_AssaultRifle.FiringModes.FM_Rocket_Dahl_Grenade ProjectileDefinition GD_Aster_GrenadeMods.Projectiles.Grenade_LightningBolt",Control=false,Shift=false,Alt=false,LeftTrigger=false,RightTrigger=false,bIgnoreCtrl=false,bIgnoreShift=false,bIgnoreAlt=false),(Name="eight",Command="set GD_Weap_AssaultRifle.FiringModes.FM_Rocket_Dahl_Grenade ProjectileDefinition GD_Aster_GrenadeMods.Projectiles.Grenade_FireStorm",Control=false,Shift=false,Alt=false,LeftTrigger=false,RightTrigger=false,bIgnoreCtrl=false,bIgnoreShift=false,bIgnoreAlt=false),(Name="nine",Command="set GD_Globals.General.Globals SelfInflictedDamageMultiplier 0.000000",Control=false,Shift=false,Alt=false,LeftTrigger=false,RightTrigger=false,bIgnoreCtrl=false,bIgnoreShift=false,bIgnoreAlt=false),(Name="nine",Command="set GD_Globals.General.Globals SelfInflictedDamageMultiplier 1.000000",Control=false,Shift=true,Alt=false,LeftTrigger=false,RightTrigger=false,bIgnoreCtrl=false,bIgnoreShift=false,bIgnoreAlt=false))
+
+#Weapon Shot Cost#
+set GD_Gladiolus_Weapons.sniper.SR_Barrel_Maliwan_Storm WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=100.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-25.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+#Weapon Rarity#
+set GD_Gladiolus_Weapons.sniper.SR_Barrel_Maliwan_Storm rarity (basevalueattribute=none)
+set GD_Gladiolus_Weapons.sniper.SR_Barrel_Maliwan_Storm rarity (BaseValueConstant=700)
+
+#Skin#
+#RGB Channels#
+set Gladiolus_GunMaterials.Materials.sniper.Mati_Maliwan_6_Storm VectorParameterValues  ((ParameterName="p_AColorHilight",ParameterValue=(R=232.000000,G=225.000000,B=225.000000,A=1.000000),ExpressionGUID=(A=170014760,B=1132076783,C=-275608290,D=650702143)),
+(ParameterName="p_AColorMidtone",ParameterValue=(R=232.000000,G=225.000000,B=225.000000,A=1.000000),ExpressionGUID=(A=473504356,B=1338058895,C=824823046,D=864253013)),
+(ParameterName="p_AColorShadow",ParameterValue=(R=232.000000,G=225.000000,B=225.000000,A=1.000000)ExpressionGUID=(A=-429590041,B=1156405294,C=-1015192900,D=687313410)),
+(ParameterName="p_BColorHilight",ParameterValue=(R=232.000000,G=225.000000,B=225.000000,A=1.000000),ExpressionGUID=(A=170714760,B=1132476783,C=-275668290,D=655702143)),
+(ParameterName="p_BColorMidtone",ParameterValue=(R=232.000000,G=225.000000,B=225.000000,A=1.000000),ExpressionGUID=(A=473594356,B=1338758895,C=824823946,D=864253813)),
+(ParameterName="p_BColorShadow",ParameterValue=(R=232.000000,G=225.000000,B=225.000000,A=1.000000),ExpressionGUID=(A=-429590341,B=1156435294,C=-1015192901,D=687313413)),
+(ParameterName="p_CColorHilight",ParameterValue=(R=232.000000,G=225.000000,B=225.000000,A=1.000000),ExpressionGUID=(A=170714760,B=1132476783,C=-275668290,D=655702143)),
+(ParameterName="p_CColorMidtone",ParameterValue=(R=232.000000,G=225.000000,B=225.000000,A=1.000000),ExpressionGUID=(A=473594356,B=1338758895,C=824823946,D=864253813)),
+(ParameterName="p_CColorShadow",ParameterValue=(R=232.000000,G=225.000000,B=225.000000,A=1.000000),ExpressionGUID=(A=-429590341,B=1156435294,C=-1015192901,D=687313413)),
+(ParameterName="p_DColor",ParameterValue=(R=232.000000,G=225.000000,B=225.000000,A=1.000000),ExpressionGUID=(A=696455109,B=1155878830,C=-1741888361,D=802120528)),
+(ParameterName="p_EmissiveColor",ParameterValue=(R=232.000000,G=225.000000,B=225.000000,A=1.000000),ExpressionGUID=(A=-2074486426,B=1296399582,C=-2021314681,D=-350758005)),
+(ParameterName="p_ReflectColor",ParameterValue=(R=-127000.000000,G=-127000.000000,B=-127000.000000,A=1.000000),ExpressionGUID=(A=295058103,B=1318551573,C=-2045449573,D=-547597976)),
+(ParameterName="p_ReflectionChannelScale",ParameterValue=(R=1.000000,G=1.000000,B=0.900000,A=1.000000),ExpressionGUID=(A=295058103,B=1318551573,C=-2045449573,D=-547597976)),
+(ParameterName="p_PatternColor",ParameterValue=(R=232.000000,G=225.000000,B=225.000000,A=1.000000)),ExpressionGUID=(A=676539706,B=1125682796,C=1871983293,D=-2049503601)),
+(ParameterName="p_PatternScalePosition",ParameterValue=(R=1000.000000,G=1000.000000,B=6.000000,A=1.000000),ExpressionGUID=(A=-2005018406,B=1132497243,C=-39915121,D=208423616)),
+(ParameterName="p_PatternChannelScale",ParameterValue=(R=1.000000,G=1.000000,B=1.000000,A=1.000000),ExpressionGUID=(A=439432319,B=1091149893,C=-1991909502,D=1816944627)),
+(ParameterName="p_DecalColor",ParameterValue=(R=0.000000,G=0.000000,B=255.000000,A=1.000000)),ExpressionGUID=(A=1691998600,B=1239094551,C=2074257317,D=1844701893)),
+(ParameterName="p_DecalScalePosition",ParameterValue=(R=17.100000,G=24.100000,B=0.400000,A=.500000),ExpressionGUID=(A=395540170,B=1243133493,C=-1264190552,D=123075385)),
+(ParameterName="p_DecalChannel",ParameterValue=(R=1.000000,G=1.000000,B=1.000000,A=1.000000),ExpressionGUID=(A=1869386622,B=1303200947,C=-1616405849,D=714558284)))
+#Material Settings#
+set Gladiolus_GunMaterials.Materials.sniper.Mati_Maliwan_6_Storm ScalarParameterValues ((ParameterName="p_ReplacePattern",ParameterValue=0.000000,ExpressionGUID=(A=-2084339847,B=1096440125,C=439008937,D=45433490)),(ParameterName="p_DecalRotate",ParameterValue=0.000000,ExpressionGUID=(A=-276527909,B=1298581551,C=856978878,D=743944047)),(ParameterName="p_ReplaceDecal",ParameterValue=1.000000,ExpressionGUID=(A=85863466,B=1257609701,C=-728575820,D=1337098176)),(ParameterName="p_UseFullColorDecal",ParameterValue=0.000000,ExpressionGUID=(A=-1064329812,B=1077705328,C=339664807,D=1869745420)))

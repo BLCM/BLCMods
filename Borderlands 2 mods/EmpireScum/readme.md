@@ -15,7 +15,7 @@ Special thanks to Mike for letting me *borrow* and modify his Slag Unf0reseen co
 >A skill calculator for community patch V1.3. Not exactly a mod, but probably useful. You can find it at <a>https://empirescum.github.io/BL2-Skills-Calculator-Community-Patch-/</a>
 
 #5: Butt Stallion
->Butt Stallion will no longer drop ammo or money. In addition, he will no longer drop guns of rarity below blue. Also slightly increases the chances of gemstone poops and barfs.
+>Butt Stallion will no longer drop ammo or money. There are two options in this file. Guarenteed gemstone or blue rarity and higher. Choose between them using the filtertool.
 
 #6: Flicker
 >Changes flicker to add directly onto elemental chance.
