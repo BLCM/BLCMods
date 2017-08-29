@@ -1,0 +1,47 @@
+  /////////////////////////////////////////
+//Ogre Accessory from BL1                  //
+//                                         //
+//Replaces Damage Accessory for ARs        //
+//                                         //
+//I'm trying to add explosive damage to    //
+//the damage accessory, but it isn't       //
+//working out too well.  If anybody would  //
+//want to help out, that would be cool :D  //
+//                                         //
+//I want the explosive damage to only      //
+//happen when the accessory is on, and     //
+//if the gun spawns with another element,  //
+//it doesn't need to do both explosive and //
+//the other element, it could just do the  //
+//other element. Or both, whichever is     //
+//easier.                                  //
+  /////////////////////////////////////////
+  
+//Names
+		set GD_Weap_AssaultRifle.Name.Prefix_Vladof.Prefix_BanditClamp_Damage PartName Ogre
+		
+		set GD_Weap_AssaultRifle.Name.Prefix_Bandit.Prefix_BanditClamp_Damage PartName Ogre
+		
+		set GD_Weap_AssaultRifle.Name.Prefix_Dahl.Prefix_BanditClamp_Damage PartName Ogre
+		
+		set GD_Weap_AssaultRifle.Name.Prefix_Torgue.Prefix_BanditClamp_Damage PartName Ogre
+		
+		set GD_Weap_AssaultRifle.Name.Prefix_Jakobs.Prefix_BanditClamp_Damage PartName Ogre
+		
+//Rarity
+		set GD_Weap_AssaultRifle.Accessory.AR_Accessory_BanditClamp_Damage GestaltModeSkeletalMeshName None
+		
+		set GD_Weap_AssaultRifle.Accessory.AR_Accessory_BanditClamp_Damage rarity (basevalueattribute=none)
+		
+		set GD_Weap_AssaultRifle.Accessory.AR_Accessory_BanditClamp_Damage rarity (basevalueconstant=5)
+
+//Thing that makes this op & (hopefully) gives it explosive damage (eventually)
+		set GD_Weap_AssaultRifle.Accessory.AR_Accessory_BanditClamp_Damage WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=5.00000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-0.280000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+		
+		
+		
+		
+		
+		
+		
