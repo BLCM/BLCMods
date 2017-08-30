@@ -1,0 +1,245 @@
+====================================
+YOU DO NOT NEED TO COPY THIS SECTION
+------------------------------------
+S&S MUNITIONS CRUX ASSAULT SHOTGUN V 1.1
+• Added Compatibility Patch for Aaron0000's Weapon Rarity Emissive Effect Mod
+  • Added both Legendary variant and Blue Rarity Variant
+    • Note: Using the Blue Rarity Emissive Effect will give Sledge's Shotgun the Blue Rarity Emissive Effect as well
+• Kept mission reward drop, and added to Wilhelm's Lootpool.
+  • Added Compatibility Patch for Kazy's The Right-Hand of Corporate Asphyxia [UNRELEASED]
+• Added Compatibility Patch with vanilla Hammer Buster
+  • Changed to Mystique, to flow more "consistently" with its Firing Mode
+    • Added new red text to reflect this change
+
+S&S MUNITIONS CRUX ASSAULT SHOTGUN V 1.0
+Released Crux
+  • Re-Creates the S&S Munitions Crux Shotgun as a Hyperion Shotgun. Replaces the 1340 Shotgun
+  • Element Unlocked (Previously locked to Non-Elemental)
+  • Silenced quotes from 1340. Quotes can be re-enabled, however.
+  • Higher Damage and Pellet Count
+  • Decreased Accuracy, Fire Rate, and Reload Speed
+  • Massive Magazine Size, at the cost of consuming 2 ammo per shot
+  • Cross (+) shaped Firing Pattern
+  • Deals Explosive Damage
+    • with Explosive Emissive Effect as seen on Torgue weaponry
+  • Obtained via the 1340 Side Mission by giving 1340 to Marcus.
+  ------------------------------------
+======================================
+
+#<S&S Crux (BL1)>
+
+    //By Kazy (Sheep)
+
+    Re-Creates the S&S Munitions Crux Shotgun as a Hyperion Shotgun.
+
+    #<Details>
+
+        #<Replaces the 1340 Shotgun.>
+
+            Element Unlocked (Previously locked to Non-Elemental)
+
+            Silenced quotes from 1340. Quotes can be re-enabled, however.
+
+        #</Replaces the 1340 Shotgun.>
+
+        #<Red Text: "Cross their heart, hope they die.">
+
+            Red Text Features (Compared to a Thinking (Hyperion-Barrelled Hyperion) Shotgun):
+
+            * Higher Damage and Pellet Count
+
+            * Decreased Accuracy, Fire Rate, and Reload Speed
+
+            * Massive Magazine Size, at the cost of consuming 2 ammo per shot
+
+            * Cross (+) shaped Firing Pattern
+
+            * Deals Explosive Damage (with Explosive Emissive Effect as seen on Torgue weaponry)
+
+        #</Red Text: "Cross their heart, hope they die.">
+
+        Obtained via the 1340 Side Mission by giving 1340 to Marcus, or dropped from Wilhelm.
+
+        #<Uses the Hammer Buster's Firing Mode>
+
+            #<* For any mods that the HammerBuster's FiringMode is used, the HammerBuster will get a rename>
+
+                HammerBuster's Firing Mode is used.
+
+                HammerBuster renamed to Mystique.
+
+                #<Red Text: They say she can imitate anybody.>
+
+                    Red Text Effect: Gains the effect of the last mod that uses the HammerBuster's Firing Mode.
+
+                #</Red Text: They say she can imitate anybody.>
+
+            #</* For any mods that the HammerBuster's FiringMode is used, the HammerBuster will get a rename>
+
+        #</Uses the Hammer Buster's Firing Mode>
+
+    #</Details>
+
+    #<Code>
+
+        #<Crux Code>
+
+            #<Appearance>
+
+                set GD_Weap_Shotgun.Barrel.SG_Barrel_Tediore_Shotgun1340 GestaltModeSkeletalMeshName SG_Barrel_Hyperion
+
+                set GD_Weap_Shotgun.ManufacturerMaterials.Mat_Hyperion_3_1340 Material MaterialInstanceConstant'Common_GunMaterials.Materials.Shotgun.Mati_BanditLegendarySGSledge'
+
+                #<Card Display>
+
+                    set GD_Weap_Shotgun.Name.Title.Title__Unique_Shotgun1340 PartName Crux
+
+                    set GD_Weap_Shotgun.Name.Title.Title__Unique_Shotgun1340:AttributePresentationDefinition_8 NoConstraintText Cross their heart, hope they die.
+
+                    set GD_Weap_Shotgun.ManufacturerMaterials.Mat_Hyperion_3_1340 WeaponCardAttributes ((Attribute=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',PriorityIncrease=3.000000),(Attribute=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',PriorityIncrease=0.500000))
+
+                #</Card Display>
+
+                #<Emissive Effect - [EXPLOSIVE] by Default>
+
+                    #<[NO] Emissive Effect>
+
+                        set Common_GunMaterials.Materials.Shotgun.Mati_BanditLegendarySGSledge VectorParameterValues ((ParameterName="p_EmissiveColor",ParameterValue=(R=0,G=0,B=0,A=0),ExpressionGUID=(A=0,B=0,C=0,D=0)))
+
+                    #</[NO] Emissive Effect>
+
+                    #<[COMPATIBILITY PATCH]>
+
+                        #<Aaron0000's Weapon Rarity Emissive Effect - [LEGENDARY/ORANGE] by Default>
+
+                            #<[RARE/BLUE] Emissive Effect>
+
+                                set Common_GunMaterials.Materials.Shotgun.Mati_BanditLegendarySGSledge VectorParameterValues ((ParameterName="p_EmissiveColor",ParameterValue=(R=0.050000,G=0.350000,B=1.270000,A=1.000000),ExpressionGUID=(A=1475816242,B=1139906328,C=-187360584,D=-1825963319)))
+
+                            #</[RARE/BLUE] Emissive Effect>
+
+                            #<[LEGENDARY/ORANGE] Emissive Effect>
+
+                                set Common_GunMaterials.Materials.Shotgun.Mati_BanditLegendarySGSledge VectorParameterValues ((ParameterName="p_EmissiveColor",ParameterValue=(R=2.550000,G=1.200000,B=0.000000,A=1.000000),ExpressionGUID=(A=1475816242,B=1139906328,C=-187360584,D=-1825963319)))
+
+                            #</[LEGENDARY/ORANGE] Emissive Effect>
+
+                        #</Aaron0000's Weapon Rarity Emissive Effect - [LEGENDARY/ORANGE] by Default>
+
+                    #</[COMPATIBILITY PATCH]>
+
+                    #<[EXPLOSIVE] Emissive Effect>
+
+                        set Common_GunMaterials.Materials.Shotgun.Mati_BanditLegendarySGSledge VectorParameterValues ((ParameterName="p_EmissiveColor",ParameterValue=(R=3.480000,G=1.450000,B=0.230000,A=0.000000),ExpressionGUID=(A=0,B=0,C=0,D=0)))
+
+                    #</[EXPLOSIVE] Emissive Effect>
+
+                #</Emissive Effect - [EXPLOSIVE] by Default>
+
+            #</Appearance>
+
+            #<Drops>
+
+                #<Droppable Location - [WILHELM]>
+
+                    set GD_Itempools.Runnables.Pool_Wilhelm BalancedItems ((ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_Pistol.A_Weapons_Legendary.Pistol_Hyperion_5_LogansGun',Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=None,InvBalanceDefinition=InventoryBalanceDefinition'GD_GrenadeMods.A_Item_Legendary.GM_RollingThunder',Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=None,InvBalanceDefinition=InventoryBalanceDefinition'GD_Weap_Shotgun.A_Weapons_Unique.SG_Hyperion_3_Shotgun1340',Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',BaseValueScaleConstant=1.000000),bDropOnDeath=True))
+
+                    #<[COMPATIBILITY PATCH]>
+
+                        #<This removes The Right-Hand of Corporate Asphyxia (Logan's Gun) from Wilhelm's lootpool.>
+
+                            set GD_Itempools.Runnables.Pool_Wilhelm BalancedItems ((ItmPoolDefinition=None,InvBalanceDefinition=InventoryBalanceDefinition'GD_GrenadeMods.A_Item_Legendary.GM_RollingThunder',Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=None,InvBalanceDefinition=InventoryBalanceDefinition'GD_Weap_Shotgun.A_Weapons_Unique.SG_Hyperion_3_Shotgun1340',Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',BaseValueScaleConstant=1.000000),bDropOnDeath=True))
+
+                        #</This removes The Right-Hand of Corporate Asphyxia (Logan's Gun) from Wilhelm's lootpool.>
+
+                    #</[COMPATIBILITY PATCH]>
+
+                #</Droppable Location - [WILHELM]>
+
+                #<Elemental Unlock>
+
+                    set GD_Weap_Shotgun.A_Weapons_Unique.SG_Hyperion_3_Shotgun1340:WeaponPartListCollectionDefinition_144 ElementalPartData (bEnabled=True,WeightedParts=((Part=WeaponPartDefinition'GD_Weap_Shotgun.elemental.Shotgun_Elemental_None',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=4),(Part=WeaponPartDefinition'GD_Weap_Shotgun.elemental.Shotgun_Elemental_Fire',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=5,MaxGameStageIndex=1,DefaultWeightIndex=3),(Part=WeaponPartDefinition'GD_Weap_Shotgun.elemental.Shotgun_Elemental_Corrosive',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=6,MaxGameStageIndex=1,DefaultWeightIndex=3),(Part=WeaponPartDefinition'GD_Weap_Shotgun.elemental.Shotgun_Elemental_Shock',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=7,MaxGameStageIndex=1,DefaultWeightIndex=3),(Part=WeaponPartDefinition'GD_Weap_Shotgun.elemental.Shotgun_Elemental_Slag',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=8,MaxGameStageIndex=1,DefaultWeightIndex=3)))
+
+                    set GD_Weap_Shotgun.A_Weapons_Unique.SG_Hyperion_3_Shotgun1340:PartList ElementalPartData (bEnabled=False,WeightedParts=())
+
+                #</Elemental Unlock>
+
+            #</Drops>
+
+            #<Weapon Attributes>
+
+                set GD_Weap_Shotgun.Barrel.SG_Barrel_Tediore_Shotgun1340 WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.300000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.080000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-0.400000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=2.7700000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponReloadSpeed',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.900000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponPerShotAccuracyImpulse',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-1.500000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Hyperion',InitializationDefinition=None,BaseValueScaleConstant=-1.000000)))
+
+                set GD_Weap_Shotgun.Barrel.SG_Barrel_Tediore_Shotgun1340 ExternalAttributeEffects ((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AccuracyResourcePool.AccuracyMinValue',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-0.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AccuracyResourcePool.AccuracyMaxValue',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+                #<Firing Pattern>
+
+                    set GD_Weap_Shotgun.Barrel.SG_Barrel_Tediore_Shotgun1340 CustomFiringModeDefinition FiringModeDefinition'GD_Weap_AssaultRifle.FiringModes.Bullet_Assault_Hammerbuster' 
+
+                    set GD_Weap_AssaultRifle.FiringModes.Bullet_Assault_Hammerbuster ExplosionOverrideDefinition ExplosionCollectionDefinition'GD_Weap_Shared_Effects.Default_Elemental_Explosions' 
+
+                    set GD_Weap_AssaultRifle.FiringModes.Bullet_Assault_Hammerbuster OnAnyImpact (Behavior_Explode'GD_Weap_Pistol.FiringModes.Bullet_Pistol_Maliwan:Behavior_Explode_5')
+
+                    set GD_Weap_AssaultRifle.FiringModes.Bullet_Assault_Hammerbuster bResetPatternAfterEachShot True
+
+                    set GD_Weap_AssaultRifle.FiringModes.Bullet_Assault_Hammerbuster FiringPatternLines ((StartPoint=(Pitch=0,Yaw=0,Roll=0),EndPoint=(Pitch=0,Yaw=0,Roll=0),bUseStartPointOnly=True,CustomWaveMotion=(bUseCustomWaveMotion=False,WaveFreq=(X=0.000000,Y=0.000000,Z=0.000000),WaveAmp=(X=0.000000,Y=0.000000,Z=0.000000),WavePhase=(X=0.000000,Y=0.000000,Z=0.000000))),(StartPoint=(Pitch=0,Yaw=-536,Roll=0),EndPoint=(Pitch=0,Yaw=0,Roll=0),bUseStartPointOnly=True,CustomWaveMotion=(bUseCustomWaveMotion=False,WaveFreq=(X=0.000000,Y=0.000000,Z=0.000000),WaveAmp=(X=0.000000,Y=0.000000,Z=0.000000),WavePhase=(X=0.000000,Y=0.000000,Z=0.000000))),(StartPoint=(Pitch=0,Yaw=804,Roll=0),EndPoint=(Pitch=0,Yaw=0,Roll=0),bUseStartPointOnly=True,CustomWaveMotion=(bUseCustomWaveMotion=False,WaveFreq=(X=0.000000,Y=0.000000,Z=0.000000),WaveAmp=(X=0.000000,Y=0.000000,Z=0.000000),WavePhase=(X=0.000000,Y=0.000000,Z=0.000000))),(StartPoint=(Pitch=0,Yaw=-804,Roll=0),EndPoint=(Pitch=0,Yaw=0,Roll=0),bUseStartPointOnly=True,CustomWaveMotion=(bUseCustomWaveMotion=False,WaveFreq=(X=0.000000,Y=0.000000,Z=0.000000),WaveAmp=(X=0.000000,Y=0.000000,Z=0.000000),WavePhase=(X=0.000000,Y=0.000000,Z=0.000000))),(StartPoint=(Pitch=0,Yaw=-670,Roll=0),EndPoint=(Pitch=0,Yaw=0,Roll=0),bUseStartPointOnly=True,CustomWaveMotion=(bUseCustomWaveMotion=False,WaveFreq=(X=0.000000,Y=0.000000,Z=0.000000),WaveAmp=(X=0.000000,Y=0.000000,Z=0.000000),WavePhase=(X=0.000000,Y=0.000000,Z=0.000000))),(StartPoint=(Pitch=0,Yaw=670,Roll=0),EndPoint=(Pitch=0,Yaw=0,Roll=0),bUseStartPointOnly=True,CustomWaveMotion=(bUseCustomWaveMotion=False,WaveFreq=(X=0.000000,Y=0.000000,Z=0.000000),WaveAmp=(X=0.000000,Y=0.000000,Z=0.000000),WavePhase=(X=0.000000,Y=0.000000,Z=0.000000))),(StartPoint=(Pitch=0,Yaw=536,Roll=0),EndPoint=(Pitch=0,Yaw=0,Roll=0),bUseStartPointOnly=True,CustomWaveMotion=(bUseCustomWaveMotion=False,WaveFreq=(X=0.000000,Y=0.000000,Z=0.000000),WaveAmp=(X=0.000000,Y=0.000000,Z=0.000000),WavePhase=(X=0.000000,Y=0.000000,Z=0.000000))),(StartPoint=(Pitch=0,Yaw=-402,Roll=0),EndPoint=(Pitch=0,Yaw=0,Roll=0),bUseStartPointOnly=True,CustomWaveMotion=(bUseCustomWaveMotion=False,WaveFreq=(X=0.000000,Y=0.000000,Z=0.000000),WaveAmp=(X=0.000000,Y=0.000000,Z=0.000000),WavePhase=(X=0.000000,Y=0.000000,Z=0.000000))),(StartPoint=(Pitch=0,Yaw=402,Roll=0),EndPoint=(Pitch=0,Yaw=0,Roll=0),bUseStartPointOnly=True,CustomWaveMotion=(bUseCustomWaveMotion=False,WaveFreq=(X=0.000000,Y=0.000000,Z=0.000000),WaveAmp=(X=0.000000,Y=0.000000,Z=0.000000),WavePhase=(X=0.000000,Y=0.000000,Z=0.000000))),(StartPoint=(Pitch=0,Yaw=-268,Roll=0),EndPoint=(Pitch=0,Yaw=0,Roll=0),bUseStartPointOnly=True,CustomWaveMotion=(bUseCustomWaveMotion=False,WaveFreq=(X=0.000000,Y=0.000000,Z=0.000000),WaveAmp=(X=0.000000,Y=0.000000,Z=0.000000),WavePhase=(X=0.000000,Y=0.000000,Z=0.000000))),(StartPoint=(Pitch=0,Yaw=268,Roll=0),EndPoint=(Pitch=0,Yaw=0,Roll=0),bUseStartPointOnly=True,CustomWaveMotion=(bUseCustomWaveMotion=False,WaveFreq=(X=0.000000,Y=0.000000,Z=0.000000),WaveAmp=(X=0.000000,Y=0.000000,Z=0.000000),WavePhase=(X=0.000000,Y=0.000000,Z=0.000000))),(StartPoint=(Pitch=-182,Yaw=0,Roll=0),EndPoint=(Pitch=0,Yaw=0,Roll=0),bUseStartPointOnly=True,CustomWaveMotion=(bUseCustomWaveMotion=False,WaveFreq=(X=0.000000,Y=0.000000,Z=0.000000),WaveAmp=(X=0.000000,Y=0.000000,Z=0.000000),WavePhase=(X=0.000000,Y=0.000000,Z=0.000000))),(StartPoint=(Pitch=182,Yaw=0,Roll=0),EndPoint=(Pitch=0,Yaw=0,Roll=0),bUseStartPointOnly=True,CustomWaveMotion=(bUseCustomWaveMotion=False,WaveFreq=(X=0.000000,Y=0.000000,Z=0.000000),WaveAmp=(X=0.000000,Y=0.000000,Z=0.000000),WavePhase=(X=0.000000,Y=0.000000,Z=0.000000))),(StartPoint=(Pitch=0,Yaw=-182,Roll=0),EndPoint=(Pitch=0,Yaw=0,Roll=0),bUseStartPointOnly=True,CustomWaveMotion=(bUseCustomWaveMotion=False,WaveFreq=(X=0.000000,Y=0.000000,Z=0.000000),WaveAmp=(X=0.000000,Y=0.000000,Z=0.000000),WavePhase=(X=0.000000,Y=0.000000,Z=0.000000))),(StartPoint=(Pitch=0,Yaw=182,Roll=0),EndPoint=(Pitch=0,Yaw=0,Roll=0),bUseStartPointOnly=True,CustomWaveMotion=(bUseCustomWaveMotion=False,WaveFreq=(X=0.000000,Y=0.000000,Z=0.000000),WaveAmp=(X=0.000000,Y=0.000000,Z=0.000000),WavePhase=(X=0.000000,Y=0.000000,Z=0.000000))),(StartPoint=(Pitch=536,Yaw=0,Roll=0),EndPoint=(Pitch=0,Yaw=0,Roll=0),bUseStartPointOnly=True,CustomWaveMotion=(bUseCustomWaveMotion=False,WaveFreq=(X=0.000000,Y=0.000000,Z=0.000000),WaveAmp=(X=0.000000,Y=0.000000,Z=0.000000),WavePhase=(X=0.000000,Y=0.000000,Z=0.000000))),(StartPoint=(Pitch=-268,Yaw=0,Roll=0),EndPoint=(Pitch=0,Yaw=0,Roll=0),bUseStartPointOnly=True,CustomWaveMotion=(bUseCustomWaveMotion=False,WaveFreq=(X=0.000000,Y=0.000000,Z=0.000000),WaveAmp=(X=0.000000,Y=0.000000,Z=0.000000),WavePhase=(X=0.000000,Y=0.000000,Z=0.000000))),(StartPoint=(Pitch=402,Yaw=0,Roll=0),EndPoint=(Pitch=0,Yaw=0,Roll=0),bUseStartPointOnly=True,CustomWaveMotion=(bUseCustomWaveMotion=False,WaveFreq=(X=0.000000,Y=0.000000,Z=0.000000),WaveAmp=(X=0.000000,Y=0.000000,Z=0.000000),WavePhase=(X=0.000000,Y=0.000000,Z=0.000000))),(StartPoint=(Pitch=402,Yaw=0,Roll=0),EndPoint=(Pitch=0,Yaw=0,Roll=0),bUseStartPointOnly=True,CustomWaveMotion=(bUseCustomWaveMotion=False,WaveFreq=(X=0.000000,Y=0.000000,Z=0.000000),WaveAmp=(X=0.000000,Y=0.000000,Z=0.000000),WavePhase=(X=0.000000,Y=0.000000,Z=0.000000))),(StartPoint=(Pitch=-536,Yaw=0,Roll=0),EndPoint=(Pitch=0,Yaw=0,Roll=0),bUseStartPointOnly=True,CustomWaveMotion=(bUseCustomWaveMotion=False,WaveFreq=(X=0.000000,Y=0.000000,Z=0.000000),WaveAmp=(X=0.000000,Y=0.000000,Z=0.000000),WavePhase=(X=0.000000,Y=0.000000,Z=0.000000))),(StartPoint=(Pitch=-536,Yaw=0,Roll=0),EndPoint=(Pitch=0,Yaw=0,Roll=0),bUseStartPointOnly=True,CustomWaveMotion=(bUseCustomWaveMotion=False,WaveFreq=(X=0.000000,Y=0.000000,Z=0.000000),WaveAmp=(X=0.000000,Y=0.000000,Z=0.000000),WavePhase=(X=0.000000,Y=0.000000,Z=0.000000))),(StartPoint=(Pitch=670,Yaw=0,Roll=0),EndPoint=(Pitch=0,Yaw=0,Roll=0),bUseStartPointOnly=True,CustomWaveMotion=(bUseCustomWaveMotion=False,WaveFreq=(X=0.000000,Y=0.000000,Z=0.000000),WaveAmp=(X=0.000000,Y=0.000000,Z=0.000000),WavePhase=(X=0.000000,Y=0.000000,Z=0.000000))),(StartPoint=(Pitch=-670,Yaw=0,Roll=0),EndPoint=(Pitch=0,Yaw=0,Roll=0),bUseStartPointOnly=True,CustomWaveMotion=(bUseCustomWaveMotion=False,WaveFreq=(X=0.000000,Y=0.000000,Z=0.000000),WaveAmp=(X=0.000000,Y=0.000000,Z=0.000000),WavePhase=(X=0.000000,Y=0.000000,Z=0.000000))),(StartPoint=(Pitch=804,Yaw=0,Roll=0),EndPoint=(Pitch=0,Yaw=0,Roll=0),bUseStartPointOnly=True,CustomWaveMotion=(bUseCustomWaveMotion=False,WaveFreq=(X=0.000000,Y=0.000000,Z=0.000000),WaveAmp=(X=0.000000,Y=0.000000,Z=0.000000),WavePhase=(X=0.000000,Y=0.000000,Z=0.000000))),(StartPoint=(Pitch=-804,Yaw=0,Roll=0),EndPoint=(Pitch=0,Yaw=0,Roll=0),bUseStartPointOnly=True,CustomWaveMotion=(bUseCustomWaveMotion=False,WaveFreq=(X=0.000000,Y=0.000000,Z=0.000000),WaveAmp=(X=0.000000,Y=0.000000,Z=0.000000),WavePhase=(X=0.000000,Y=0.000000,Z=0.000000))))
+
+                    set GD_Weap_AssaultRifle.FiringModes.Bullet_Assault_Hammerbuster BasePatternSpread -75.000000 
+
+                    set GD_Weap_AssaultRifle.FiringModes.Bullet_Assault_Hammerbuster bSuppressWeaponSpread True
+
+                    set GD_Weap_AssaultRifle.FiringModes.Bullet_Assault_Hammerbuster bFireRandomlyFromPattern True
+
+                #</Firing Pattern>
+
+                #<Rarity Change - [BLUE] by Default>
+
+                    #<[Legendary] Rarity>
+
+                        set GD_Weap_Shotgun.Barrel.SG_Barrel_Tediore_Shotgun1340 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'
+
+                        set GD_Weap_Shotgun.Barrel.SG_Barrel_Tediore_Shotgun1340 Rarity (BaseValueConstant=0.000000,BaseValueAttribute=InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity5_Legendary',InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+
+                    #</[Legendary] Rarity>
+
+                    #<[BLUE] Rarity>
+
+                        set GD_Weap_Shotgun.Barrel.SG_Barrel_Tediore_Shotgun1340 MonetaryValueMod None 
+
+                        set GD_Weap_Shotgun.Barrel.SG_Barrel_Tediore_Shotgun1340 Rarity (BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+
+                    #</[BLUE] Rarity>
+
+                #</Rarity Change - [BLUE] by Default>
+
+                #<Silent 1340 - [SILENCED] by Default>
+
+                    #<[SILENCED] 1340>
+
+                        set GD_Weap_Shotgun.Barrel.SG_Barrel_Tediore_Shotgun1340 BehaviorProviderDefinition None
+
+                    #</[SILENCED] 1340>
+
+                    #<[UNSILENCED] 1340>
+
+                        set GD_Weap_Shotgun.Barrel.SG_Barrel_Tediore_Shotgun1340 BehaviorProviderDefinition BehaviorProviderDefinition'GD_Weap_Shotgun.Barrel.SG_Barrel_Tediore_Shotgun1340:BehaviorProviderDefinition_2'
+
+                    #</[UNSILENCED] 1340>
+
+                #</Silent 1340 - [SILENCED] by Default>
+
+            #</Weapon Attributes>
+
+        #</Crux Code>
+
+        #<HammerBuster Adjustment>
+
+            set GD_Weap_AssaultRifle.Name.Title_Jakobs.Title_Legendary_HammerBuster PartName Mystique 
+
+            set GD_Weap_AssaultRifle.Name.Title_Jakobs.Title_Legendary_HammerBuster:AttributePresentationDefinition_8 NoConstraintText They say she can imitate anybody.
+
+        #</HammerBuster Adjustment>
+
+    #</Code>
+
+#</S&S Crux (BL1)>
