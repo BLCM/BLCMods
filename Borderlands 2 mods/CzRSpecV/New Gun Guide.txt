@@ -1,0 +1,146 @@
+
+## Breif Introduction ##
+
+ Hello, and welcome to my guide on starting to make your own guns for the UCP!
+
+ In this guide, I will cover over the links to resources you will need, as well as
+the structure of your code and what it does.
+
+## Resources you will Need ##
+
+ Weapon Parts List - https://tinyurl.com/UCP-Parts
+ 
+ Weapon Attributes List - https://tinyurl.com/UCP-Attributes
+ 
+ Rarity Colors List - https://tinyurl.com/UCP-RarityColor
+ 
+## Additional Resources ##
+
+ Gibbed Save Editor ( If you don't already have it ) - https://tinyurl.com/BL2-Gibbed
+	
+	NOTE: This is a straight download link to the source, if you choose not to trust it, just search "BL2 Gibbed Save Editor"
+
+ LightChaosman's Filter Tool ( If you don't already have it ) - https://www.youtube.com/watch?v=zJ4qI4U_lE0
+ 
+ Weapon Part Guide - https://tinyurl.com/BL2-PartGuide
+
+ Weapon Materials List - https://tinyurl.com/UCP-Materials
+ 
+ Dave's Blank Skin - https://tinyurl.com/UCP-BlankSkin
+ 
+ Dave's Skin Guide - https://tinyurl.com/UCP-SkinGuide
+ 
+## Starting Off ##
+
+ To start your gun you can use the BasicNewGun.txt file included with this guide.
+ 
+1) Rename and Red Text - This section is used to replace the name of the weapon with
+	whatever you want to call it, as well as changing the weapon card text. To achieve this you'll need to:
+
+ - Replace <WeaponTitle> with the weapons title part [ Found in Weapon Part List Link ]
+    ( Example: GD_Weap_AssaultRifle.Name.Title.Title_Unique_Scorpio )
+	
+ - After 'PartName' you'll want to put whatever you want the title of your gun to be.
+ 
+ - After 'NoConstraintText' you'll want to put whatever text you want in the weapon card
+	
+	You can make text colored in here by using hex color values, to make the red text
+	you can use <font color="#e50026">Hey Look! Red Text!<font color="#ffffff">
+	
+	This will make that block of text on the weapon card into red text. Don't be afraid
+	to play around with other hex colors to do some funky stuff!
+	
+2) Rarity of Weapon Change - Lets say you are working on a Unique, but you want to change
+	the rarity of it to legendary, well this is where you can achieve that.
+	
+ - Replace <WeaponBarrel> with the weapon barrel of the gun that you are modding
+	[ Found in Weapon Part List Link ] ( Example: GD_Weap_AssaultRifle.Barrel.AR_Barrel_Jakobs_Scorpio )
+	
+ - Look for "BaseValueConstant" and you can change the value of the number that follows with any number
+	that is in the Rarity Colors list. [ Found in Rarity Colors List Link ]
+	
+	Lets say you want to turn the Scorpio into a legendary, you you find "Legendary" line, and replace it with the value
+	In this case it is 5, so your line would look like this:
+	
+		set GD_Weap_AssaultRifle.Barrel.AR_Barrel_Jakobs_Scorpio rarity (BaseValueConstant=5.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+		
+	This would make the Scorpio into a Legendary weapon.
+	
+	Note: Some guns ( Mainly Pearls ) often have rarity tied to 2 parts of their gun, if this is the case then find both of the special parts
+		and make both of their rarity half of what you are trying to achieve.
+		
+3) General Attributes - This is where all the performance of the gun changes happen.
+
+ - Replace <WeaponBarrel> with the weapon barrel of the gun that you are modding
+	[ Found in Weapon Part List Link ] ( Example: GD_Weap_AssaultRifle.Barrel.AR_Barrel_Jakobs_Scorpio )
+	
+ - WeaponAttributeEffects: This is where you put all direct changing attributes for the weapon. ( Firerate, Projectile Count, Reload Speed, ect. )
+ 
+ - ExternalAttributeEffects: This is where you put all passives that are behind the scenes for the wepaon. ( Lifesteal, Ammo Regen, Crit Damage Bonus, ect. )
+ 
+ - ZoomWeaponAttributeEffects: This is the same as "WeaponAttributeEffects" except it ONLY affects the gun when you are aiming.
+	( So if you wanted a gun to fire faster while aiming down the sight, you would increase the firerate in this section. )
+	
+ - ZoomExternalAttributeEffects: Again, this is the same as "ExternalAttributeEffects" but only affects the weapon while aiming.
+	( If you wanted the gun to lifesteal while you are aiming down the sight, this is where you would add it. )
+	
+ - Adding Attributes to each subsection: Now that you know what each AttributeEffect does, this is where you learn to add attributes.
+	To add an attribute, go inside the () and add the following:
+		
+		(AttributeToModify=AttributeDefinition'ATTRIBUTE',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.00000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))
+		
+	Now, you can replace the word ATTRIBUTE in this line with any attribute you like. [ Found in Weapon Attributes List Link ]
+		After you replace ATTRIBUTE with what you want to change, you'll need to change the value to reflect how much you want.
+		Lets say you wanted to change how many projectiles the gun shoots per bullet fired, you would want to change the "BaseValueConstant=0.00000" to "BaseValueConstant=X.00000"
+		Where X is how many bullets you want it to fire per trigger pull.
+		
+	After each new attribute you add on the same line, you will need a comma in between the 2nd and 3rd final bracket. Your attributes line should look like this:
+		
+		((AttributeToModify=AttributeDefinition'ATTRIBUTE',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.00000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'ATTRIBUTE',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.00000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+		
+	Note: There are certain things that have to be in specific sections and putting them in the wrong place will affect other guns. Just be weary.
+	
+4) Elemental Unlocking / Locking - ( OPTIONAL ) - This is a very tricky part, You use this to unlock and / or lock specific elemental game restrictions on weapons.
+	Lets say you want your Hive to spawn with any element, this is where you can change that.
+	
+ - Finding the GUN:WeaponPartListCollectionDefinition_XXX: For this part you'll need LightChaosman's Filter Tool to search for your gun and gibbed for the Guns Balance.
+	When you have the FilterTool running, Navigate your way to the top bar, and click on "MiscTools", then click on "Object Explorer"
+	From here you will want to copy the Balance of your gun from gibbed (Example: GD_Weap_Launchers.A_Weapons_Unique.RL_Maliwan_3_TheHive ) then press Enter.
+	A list will pop up with relevent code for the weapon of your choice, find the "RuntimePartListCollection=WeaponPartListCollectionDefinition" line ( Should be the 4th Line )
+	Here you copy any of the yellow text on that line mines the first and last ' ( Example: GD_Weap_Launchers.A_Weapons_Unique.RL_Maliwan_3_TheHive:WeaponPartListCollectionDefinition_70 )
+	
+ - Unlocking or Locking Elemental Parts: Replace <WeaponTypeElementalNone>, <WeaponTypeElementalFire>, <WeaponTypeElementalCorrosive>, <WeaponTypeElementalShock> and <WeaponTypeElementalSlag>
+	with that weapons specific types of elements. ( Example if we were doing a Rocket Launcher: <WeaponTypeElementalNone> would become GD_Weap_Launchers.elemental.RL_Elemental_None and <WeaponTypeElementalFire> would become GD_Weap_Launchers.elemental.RL_Elemental_Fire ect.)
+	
+	To block elements, just find the "b_Disabled=False" section just before every element you don't want and turn "False" to "True"
+	
+5) Visual Barrel Change - ( OPTIONAL ) - Don't like the barrel that the weapon uses? Think it would look better as a different barrel? 
+	This is where you can make that a reality.
+	
+ - Replace <WeaponBarrel> with the weapon barrel of the gun that you are modding
+	[ Found in Weapon Part List Link ] ( Example: GD_Weap_AssaultRifle.Barrel.AR_Barrel_Jakobs_Scorpio )
+	
+ - After "GestaltModeSkeletalMeshName" you add a Basic Barrel for how you want it to look [ Found in Weapon Part List Link ]
+	Lets say you dislike the barrel on the Scorpio's default barrel being Jakobs, and you want it to be Dahl, this is what it would look like:
+	
+		set GD_Weap_AssaultRifle.Barrel.AR_Barrel_Jakobs_Scorpio GestaltModeSkeletalMeshName AR_Barrel_Dahl
+		
+	Note: Please use all of the basic barrels, Example for AR's: AR_Barrel_Dahl, AR_Barrel_Jakobs, AR_Barrel_Bandit, so on for whichever gun type you are using.
+	
+6) Skin - ( OPTIONAL ) - Want to change how your gun looks in game? Want to personalize it your liking? This is where all that magic happens!
+
+ - Replace <WeaponMaterial> with the Weapon Skin of the gun you are changing
+	[ Found in Weapon Materials List Link ] ( Example: Common_GunMaterials.Materials.AssaultRifle.Mati_Dahl_Scorpio )
+
+ - Dave has done a wonderful guide on how to do this, so I'm not going to go over it here.
+ 
+	Links to Dave's Guide - https://tinyurl.com/UCP-SkinGuide
+	Link to Dave's Blank Skin - https://tinyurl.com/UCP-BlankSkin
+	
+## End Notes ##
+
+ Well, there you have it, you are on your way to making your own weapons for BL2!
+ Don't be afraid to play around and try different things, this is just a basic guide, you can do so much more when you learn the methods.
+ Good luck, and enjoy!
+ 
+~ CzRSpecV
