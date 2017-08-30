@@ -1,0 +1,18 @@
+#<Phaselock in FFYL>
+
+    #<hotfix><key>"SparkOnDemandPatchEntry-FFYLPhaselock1"</key><value>"GD_Siren_Streaming,GD_Siren_Skills.Phaselock.Skill_Phaselock,SkillConstraints,,((bApplyConstraintOnActivatation=False,bApplyConstraintWhileActive=False,bApplyConstraintWhilePaused=False,OnFailure=SKILL_Deactivated,Evaluator=WeaponActionAvailableExpressionEvaluator'GD_Siren_Skills.Phaselock.Skill_Phaselock:WeaponActionAvailableExpressionEvaluator_0',EvaluatorDefinitions=),(bApplyConstraintOnActivatation=True,bApplyConstraintWhileActive=True,bApplyConstraintWhilePaused=True,OnFailure=SKILL_Deactivated,Evaluator=None,EvaluatorDefinitions=(SkillExpressionEvaluatorDefinition'GD_PlayerShared.SkillConstraints.SkillConstraint_OnFootOrRidingInBack')))"</value><on>
+
+    #<hotfix><key>"SparkOnDemandPatchEntry-FFYLPhaselock2"</key><value>"GD_Siren_Streaming,GD_Input.Contexts.InputContext_Injured,InputActions,,(InputActionDefinition'GD_Input.Actions.InputAction_ActionSkill')"</value><on>
+
+#</Phaselock in FFYL>
+
+set Transient.SparkServiceConfiguration_0 ServiceName Micropatch
+
+set Transient.SparkServiceConfiguration_0 ConfigurationGroup Default
+
+set Transient.SparkServiceConfiguration_0 Keys ("SparkOnDemandPatchEntry-FFYLPhaselock1","SparkOnDemandPatchEntry-FFYLPhaselock2")
+
+set Transient.SparkServiceConfiguration_0 Values ("GD_Siren_Streaming,GD_Siren_Skills.Phaselock.Skill_Phaselock,SkillConstraints,,((bApplyConstraintOnActivatation=False,bApplyConstraintWhileActive=False,bApplyConstraintWhilePaused=False,OnFailure=SKILL_Deactivated,Evaluator=WeaponActionAvailableExpressionEvaluator'GD_Siren_Skills.Phaselock.Skill_Phaselock:WeaponActionAvailableExpressionEvaluator_0',EvaluatorDefinitions=),(bApplyConstraintOnActivatation=True,bApplyConstraintWhileActive=True,bApplyConstraintWhilePaused=True,OnFailure=SKILL_Deactivated,Evaluator=None,EvaluatorDefinitions=(SkillExpressionEvaluatorDefinition'GD_PlayerShared.SkillConstraints.SkillConstraint_OnFootOrRidingInBack')))","GD_Siren_Streaming,GD_Input.Contexts.InputContext_Injured,InputActions,,(InputActionDefinition'GD_Input.Actions.InputAction_ActionSkill')")
+
+set Transient.GearboxAccountData_1 Services (Transient.SparkServiceConfiguration_0)
+

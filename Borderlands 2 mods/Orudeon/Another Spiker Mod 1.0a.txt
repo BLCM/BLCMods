@@ -1,0 +1,58 @@
+#<AnotherSpikerMod>
+
+    Redesigns Spikers (E-Tech pistols) into hand-held micro-rocket launchers. All spikers deal heavily increased damage, explode sooner, and now deal your choice of Reaper, Grenade, or Rocket (vanilla) splash.
+
+    To compensate for this dramatic increase in damage, Bandit, Dahl, and Vladof Spikers have higher recoil, higher burst delay, and lower fire rate (respectively) to keep them in line with other brands while retaining their brand signature.
+
+    Additionally, Maliwan spikers have massively increased elemental chance and damage at the expense of lower DPS.
+
+    A very special thank you to LightChaosman for coding the zero-delay detonation code.
+
+    You must install this with LightChaosman's Filter Tool or manually merge the hotfixes at the end of the document. Includes Jakobs and Torgue E-Tech compatibility baseline.
+
+    #<Detonation Code (Required)>
+
+        #<hotfix><key>"SparkLevelPatchEntry-NoDelaySpikers1"</key><value>",GD_Weap_Pistol.Projectiles.Projectile_Spiker:BehaviorProviderDefinition_0,BehaviorSequences[0].BehaviorData2,,((Behavior=ProjectileBehavior_SetStickyGrenade'GD_Weap_Pistol.Projectiles.Projectile_Spiker:BehaviorProviderDefinition_0.ProjectileBehavior_SetStickyGrenade_6',LinkedVariables=(ArrayIndexAndLength=0),OutputLinks=(ArrayIndexAndLength=0)),(Behavior=Behavior_DebugMessage'GD_Weap_Pistol.Projectiles.Projectile_Spiker:BehaviorProviderDefinition_0.Behavior_DebugMessage_6',LinkedVariables=(ArrayIndexAndLength=196610),OutputLinks=(ArrayIndexAndLength=0)),(Behavior=ProjectileBehavior_Detonate'GD_Weap_Pistol.Projectiles.Projectile_Spiker:BehaviorProviderDefinition_0.ProjectileBehavior_Detonate_6',LinkedVariables=(ArrayIndexAndLength=0),OutputLinks=(ArrayIndexAndLength=65537)),(Behavior=Behavior_ChangeInstanceDataSwitch'GD_Weap_Pistol.Projectiles.Projectile_Spiker:BehaviorProviderDefinition_0.Behavior_ChangeInstanceDataSwitch_4',LinkedVariables=(ArrayIndexAndLength=0),OutputLinks=(ArrayIndexAndLength=0)),(Behavior=ProjectileBehavior_Attach'GD_Weap_Pistol.Projectiles.Projectile_Spiker:BehaviorProviderDefinition_0.ProjectileBehavior_Attach_6',LinkedVariables=(ArrayIndexAndLength=327683),OutputLinks=(ArrayIndexAndLength=65537)),(Behavior=Behavior_Delay'GD_Weap_Pistol.Projectiles.Projectile_Spiker:BehaviorProviderDefinition_0.Behavior_Delay_15',LinkedVariables=(ArrayIndexAndLength=524289),OutputLinks=(ArrayIndexAndLength=0)),(Behavior=Behavior_Explode'GD_Weap_Pistol.Projectiles.Projectile_Spiker:BehaviorProviderDefinition_0.Behavior_Explode_6',LinkedVariables=(ArrayIndexAndLength=0),OutputLinks=(ArrayIndexAndLength=65537)),(Behavior=ProjectileBehavior_Attach'GD_Weap_Pistol.Projectiles.Projectile_Spiker:BehaviorProviderDefinition_0.ProjectileBehavior_Attach_7',LinkedVariables=(ArrayIndexAndLength=589828),OutputLinks=(ArrayIndexAndLength=65537)))"</value><on>
+
+    #</Detonation Code (Required)>
+
+    #<Splash Format><MUT>
+
+        #<Grenade>
+
+            set GD_Weap_Pistol.Projectiles.Projectile_Spiker:BehaviorProviderDefinition_0.Behavior_Explode_6 DamageSource Class'WillowGame.WillowDmgSource_Grenade'
+
+        #</Grenade>
+
+        #<Rocket (Vanilla)>
+
+            set GD_Weap_Pistol.Projectiles.Projectile_Spiker:BehaviorProviderDefinition_0.Behavior_Explode_6 DamageSource Class'WillowGame.WillowDmgSource_Rocket'
+
+        #</Rocket (Vanilla)>
+
+        #<Pistol (Reaper)>
+
+            set GD_Weap_Pistol.Projectiles.Projectile_Spiker:BehaviorProviderDefinition_0.Behavior_Explode_6 DamageSource Class'WillowGame.WillowDmgSource_Pistol'
+
+        #</Pistol (Reaper)>
+
+    #</Splash Format>
+
+    #<Barrel>
+
+        set GD_Weap_Pistol.Barrel.Pistol_Barrel_Alien WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=4.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponStatusEffectChanceModifier',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponStatusEffectDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.4000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Maliwan',InitializationDefinition=None,BaseValueScaleConstant=-1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponStatusEffectChanceModifier',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Maliwan',InitializationDefinition=None,BaseValueScaleConstant=1.200000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponStatusEffectDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Maliwan',InitializationDefinition=None,BaseValueScaleConstant=4.0000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Vladof',InitializationDefinition=None,BaseValueScaleConstant=-0.15000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Dahl',InitializationDefinition=None,BaseValueScaleConstant=-0.15000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponBurstInterval',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Dahl',InitializationDefinition=None,BaseValueScaleConstant=0.2000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Vladof',InitializationDefinition=None,BaseValueScaleConstant=0.20000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponPerShotAccuracyImpulse',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Bandit',InitializationDefinition=None,BaseValueScaleConstant=0.30000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Torgue',InitializationDefinition=None,BaseValueScaleConstant=3.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Torgue',InitializationDefinition=None,BaseValueScaleConstant=-0.300000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Jakobs',InitializationDefinition=None,BaseValueScaleConstant=-0.300000)))
+
+    #</Barrel>
+
+    #<Radius>
+
+        set GD_Weap_Pistol.Projectiles.Projectile_Spiker:BehaviorProviderDefinition_0.Behavior_Explode_6 DamageRadiusFormula (BaseValueConstant=150.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+
+    #</Radius>
+
+#</AnotherSpikerMod>
+
+set Transient.SparkServiceConfiguration_6 Keys ("SparkLevelPatchEntry-NoDelaySpikers1")
+
+set Transient.SparkServiceConfiguration_6 Values (",GD_Weap_Pistol.Projectiles.Projectile_Spiker:BehaviorProviderDefinition_0,BehaviorSequences[0].BehaviorData2,,((Behavior=ProjectileBehavior_SetStickyGrenade'GD_Weap_Pistol.Projectiles.Projectile_Spiker:BehaviorProviderDefinition_0.ProjectileBehavior_SetStickyGrenade_6',LinkedVariables=(ArrayIndexAndLength=0),OutputLinks=(ArrayIndexAndLength=0)),(Behavior=Behavior_DebugMessage'GD_Weap_Pistol.Projectiles.Projectile_Spiker:BehaviorProviderDefinition_0.Behavior_DebugMessage_6',LinkedVariables=(ArrayIndexAndLength=196610),OutputLinks=(ArrayIndexAndLength=0)),(Behavior=ProjectileBehavior_Detonate'GD_Weap_Pistol.Projectiles.Projectile_Spiker:BehaviorProviderDefinition_0.ProjectileBehavior_Detonate_6',LinkedVariables=(ArrayIndexAndLength=0),OutputLinks=(ArrayIndexAndLength=65537)),(Behavior=Behavior_ChangeInstanceDataSwitch'GD_Weap_Pistol.Projectiles.Projectile_Spiker:BehaviorProviderDefinition_0.Behavior_ChangeInstanceDataSwitch_4',LinkedVariables=(ArrayIndexAndLength=0),OutputLinks=(ArrayIndexAndLength=0)),(Behavior=ProjectileBehavior_Attach'GD_Weap_Pistol.Projectiles.Projectile_Spiker:BehaviorProviderDefinition_0.ProjectileBehavior_Attach_6',LinkedVariables=(ArrayIndexAndLength=327683),OutputLinks=(ArrayIndexAndLength=65537)),(Behavior=Behavior_Delay'GD_Weap_Pistol.Projectiles.Projectile_Spiker:BehaviorProviderDefinition_0.Behavior_Delay_15',LinkedVariables=(ArrayIndexAndLength=524289),OutputLinks=(ArrayIndexAndLength=0)),(Behavior=Behavior_Explode'GD_Weap_Pistol.Projectiles.Projectile_Spiker:BehaviorProviderDefinition_0.Behavior_Explode_6',LinkedVariables=(ArrayIndexAndLength=0),OutputLinks=(ArrayIndexAndLength=65537)),(Behavior=ProjectileBehavior_Attach'GD_Weap_Pistol.Projectiles.Projectile_Spiker:BehaviorProviderDefinition_0.ProjectileBehavior_Attach_7',LinkedVariables=(ArrayIndexAndLength=589828),OutputLinks=(ArrayIndexAndLength=65537)))")
+
