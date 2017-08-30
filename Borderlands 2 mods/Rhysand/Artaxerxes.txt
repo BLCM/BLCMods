@@ -1,9 +1,9 @@
-########## Artaxerxes ##########
-## Splash?
-## Firing Mode creativity
-## Meant to compete with Sandhawk
-## Weapon Card set up with - reload speed, reduced recoil, fire rate/spread perhaps. Add ammo regen, it eats ammo like crazy. 
-## Steal ammo regen from Hurricane Pass.
+########## Artaxerxes - meant to compete with Sandhawk. ##########
+## Splash? Test against sandhawk and see if it needs it.
+## +65% Critical Hit Damage
+## +Ammo Regen
+## 
+## It may seem overpowered, but remember that it is meant to compete with the Sandhawk, and is balanced as such.
 ## Artaxerxes was one of the greatest Persian Kings.
 ## Replaces Emperor (fitting huh?) - Farmed from the Assassins in Southpaw Steam & Power.
 ## Perfect Gibbed Code:
@@ -14,9 +14,12 @@ set GD_Weap_SMG.Name.Title.Title_Legendary_Dahl_Emperor PartName Artaxerxes
 
 set GD_Weap_SMG.Name.Title.Title_Legendary_Dahl_Emperor:AttributePresentationDefinition_8 NoConstraintText So ends the pitiful reign of men.
 
-## WeaponCardAttributes ((Attribute=AttributeDefinition'D_Attributes.Weapon.WeaponPerShotAccuracyImpulse',PriorityIncrease=3.500000),(Attribute=AttributeDefinition'D_Attributes.Weapon.WeaponReloadSpeed',PriorityIncrease=3.500000),(Attribute=AttributeDefinition'D_Attributes.Weapon.WeaponAutomaticBurstCount',PriorityIncrease=3.500000))
+## WeaponCardAttributes ((Attribute=AttributeDefinition'D_Attributes.Weapon.WeaponPerShotAccuracyImpulse',PriorityIncrease=3.500000),(Attribute=AttributeDefinition'D_Attributes.Weapon.WeaponReloadSpeed',PriorityIncrease=3.500000),(Attribute=AttributeDefinition'D_Attributes.Weapon.WeaponAutomaticBurstCount',PriorityIncrease=3.000000),(Attribute=AttributeDefinition'D_Attributes.GameplayAttributes.PlayerCurrentWeaponAmmoRegenerationMultiplier',PriorityIncrease=3.500000),(Attribute=AttributeDefinition'D_Attributes.GameplayAttributes.PlayerCriticalHitBonus',PriorityIncrease=3.500000))
 
 ## Weapon Stuff
+
+set GD_Weap_SMG.Barrel.SMG_Barrel_Dahl_Emperor ExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.GameplayAttributes.PlayerCurrentWeaponAmmoRegenerationMultiplier',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=1.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.GameplayAttributes.PlayerCriticalHitBonus',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.650000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
 set GD_Weap_SMG.Barrel.SMG_Barrel_Dahl_Emperor WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponPerShotAccuracyImpulse',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-5.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-0.950000,BaseValueAttribute=none,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponReloadSpeed',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-0.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-0.660000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
 
 set GD_Weap_SMG.Barrel.SMG_Barrel_Dahl_Emperor ZoomWeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponBurstInterval',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponAutomaticBurstCount',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-1000.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponAutomaticBurstCount',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=3.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponPerShotAccuracyImpulse',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-5.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
