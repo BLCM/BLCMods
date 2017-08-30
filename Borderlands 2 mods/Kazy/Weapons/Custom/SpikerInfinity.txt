@@ -1,0 +1,68 @@
+#<eTech Infinity>
+
+    //by Kazy
+
+    A simple mod that turns the Infinity into an eTech Spiker pistol.
+
+    Why, you ask? Why not!
+
+    #<Code>
+
+        #<eTech Barrel & Muzzle Flash>
+
+            set GD_Weap_Pistol.Barrel.Pistol_Barrel_Vladof_Infinity MuzzleFlashPSTemplates EffectCollectionDefinition'GD_Weap_Pistol.Effects.Pistol_ETech_MuzzleFlashes'
+
+            set GD_Weap_Pistol.Barrel.Pistol_Barrel_Vladof_Infinity GestaltModeSkeletalMeshName Pistol_Barrel_Alien
+
+        #</eTech Barrel & Muzzle Flash>
+
+        #<Firing Mode - eTech>
+
+            set GD_Weap_Pistol.FiringModes.Bullet_Pistol_Infinity FireType EWWFT_Rocket
+
+            set GD_Weap_Pistol.FiringModes.Bullet_Pistol_Infinity ProjectileDefinition ProjectileDefinition'GD_Weap_Pistol.Projectiles.Projectile_Spiker'
+
+            set GD_Weap_Pistol.FiringModes.Bullet_Pistol_Infinity ExplosionOverrideDefinition ExplosionCollectionDefinition'GD_Weap_Pistol.Explosions.Spiker_Elemental_Explosions'
+
+            set GD_Weap_Pistol.FiringModes.Bullet_Pistol_Infinity ExplosionOverideInstanceDataName ExplosionOverride
+
+            set GD_Weap_Pistol.FiringModes.Bullet_Pistol_Infinity PartSysTemplate None
+
+            set GD_Weap_Pistol.FiringModes.Bullet_Pistol_Infinity ConditionalPartSysTemplate EffectCollectionDefinition'GD_Weap_Pistol.Effects.Pistol_ETech_Tracers'
+
+            set GD_Weap_Pistol.FiringModes.Bullet_Pistol_Infinity SoundDefinition FiringModeSoundDefinition'GD_Weap_Pistol.FiringModes.SpikerSoundDefinition'
+
+        #</Firing Mode - eTech>
+
+        #<Bones>
+
+            #<Spinning Barrel - Default [ON]>
+
+                #<[OFF] Spinning Barrel>
+
+                    set GD_Weap_Pistol.Barrel.Pistol_Barrel_Vladof_Infinity bIsSpinningEnabled False
+
+                #</[OFF] Spinning Barrel>
+
+                #<[ON] Spinning Barrel>
+
+                    set GD_Weap_Pistol.Barrel.Pistol_Barrel_Vladof_Infinity bIsSpinningEnabled True
+
+                #</[ON] Spinning Barrel>
+
+            #</Spinning Barrel - Default [ON]>
+
+            set GD_Weap_Pistol.Barrel.Pistol_Barrel_Vladof_Infinity bFlapsEnabled True
+
+            set GD_Weap_Pistol.Barrel.Pistol_Barrel_Vladof_Infinity BoneControllers ((BoneName="Barrel",ControlType=WEAP_BONE_CONTROL_BarrelSpinner,bUseInFirstPerson=True,bUseInThirdPerson=True,ControlTemplate=WillowSkelControlLerpSingleBone'GD_Weap_Pistol.Barrel.Pistol_Barrel_Vladof_Infinity:WillowSkelControlLerpSingleBone_0'),(BoneName="AlienBarrelFin_L_Front",ControlType=WEAP_BONE_CONTROL_Flap,bUseInFirstPerson=True,bUseInThirdPerson=True,ControlTemplate=WillowSkelControl_RotateFlapFromFiring'GD_Weap_Pistol.Barrel.Pistol_Barrel_Alien:WillowSkelControl_RotateFlapFromFiring_0'),(BoneName="AlienBarrelFin_L_Middle",ControlType=WEAP_BONE_CONTROL_Flap,bUseInFirstPerson=True,bUseInThirdPerson=True,ControlTemplate=WillowSkelControl_RotateFlapFromFiring'GD_Weap_Pistol.Barrel.Pistol_Barrel_Alien:WillowSkelControl_RotateFlapFromFiring_4'),(BoneName="AlienBarrelFin_L_Back",ControlType=WEAP_BONE_CONTROL_Flap,bUseInFirstPerson=True,bUseInThirdPerson=True,ControlTemplate=WillowSkelControl_RotateFlapFromFiring'GD_Weap_Pistol.Barrel.Pistol_Barrel_Alien:WillowSkelControl_RotateFlapFromFiring_5'),(BoneName="AlienBarrelFin_R_Front",ControlType=WEAP_BONE_CONTROL_Flap,bUseInFirstPerson=True,bUseInThirdPerson=True,ControlTemplate=WillowSkelControl_RotateFlapFromFiring'GD_Weap_Pistol.Barrel.Pistol_Barrel_Alien:WillowSkelControl_RotateFlapFromFiring_6'),(BoneName="AlienBarrelFin_R_Middle",ControlType=WEAP_BONE_CONTROL_Flap,bUseInFirstPerson=True,bUseInThirdPerson=True,ControlTemplate=WillowSkelControl_RotateFlapFromFiring'GD_Weap_Pistol.Barrel.Pistol_Barrel_Alien:WillowSkelControl_RotateFlapFromFiring_7'),(BoneName="AlienBarrelFin_R_Back",ControlType=WEAP_BONE_CONTROL_Flap,bUseInFirstPerson=True,bUseInThirdPerson=True,ControlTemplate=WillowSkelControl_RotateFlapFromFiring'GD_Weap_Pistol.Barrel.Pistol_Barrel_Alien:WillowSkelControl_RotateFlapFromFiring_8'),(BoneName="AlienBarrelFin_L_Bottom",ControlType=WEAP_BONE_CONTROL_Flap,bUseInFirstPerson=True,bUseInThirdPerson=True,ControlTemplate=WillowSkelControl_RotateFlapFromFiring'GD_Weap_Pistol.Barrel.Pistol_Barrel_Alien:WillowSkelControl_RotateFlapFromFiring_9'),(BoneName="AlienBarrelFin_R_Bottom",ControlType=WEAP_BONE_CONTROL_Flap,bUseInFirstPerson=True,bUseInThirdPerson=True,ControlTemplate=WillowSkelControl_RotateFlapFromFiring'GD_Weap_Pistol.Barrel.Pistol_Barrel_Alien:WillowSkelControl_RotateFlapFromFiring_10'))
+
+            set GD_Weap_Pistol.Barrel.Pistol_Barrel_Vladof_Infinity FlapsExpandDuration (BaseValueConstant=2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+
+            set GD_Weap_Pistol.Barrel.Pistol_Barrel_Vladof_Infinity FlapsCollapseDuration (BaseValueConstant=0.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+
+        #</Bones>
+
+    #</Code>
+
+#</eTech Infinity>
+
