@@ -1,0 +1,73 @@
+#<Florentine 2.0>
+
+#<Description>
+
+Mod by B33P B00P JOE
+
+***WARNING***
+Edits the splash damage of:
+Infection (Change to always Corrosive)
+Evie (Always Shock)
+Evie Splash also has it's damage type set to Grenade Damage
+Hellfire (Always Fire)
+Hellfire also has it's splash damage increased to 80% of gun damage, like the other splashes
+Hellfire +Radius included from the Community Patch
+*************
+
+
+The Florentine I always felt was just sort of a better Chulain, which while nice is sort of unfair to the Chulain since with the UCP they share the same "niche".
+This patch upgrades the Florentine into an adaptive weapon! It still is primarily slag, but now has the following properties:
+
++Shooting a surface causes Explosive Splash
++Shooting Flesh causes Fire Splash
++Shooting Armor causes Corrosive Splash
++Shooting Shields causes Shock Splash
+
+Given these changes, the FLorentine now stands out a bit more as something clearly different than the Chulain. To compensate, it has also had the following tweaks:
+
+-Damage Bonus = 0.250000 (down from a 0.900000 bonus in vanilla)
+-Ammo Cost = 3 (Up from 2 in vanilla)
+
+Also comes with a new coat of paint with a shiny color and new decal!
+
+
+#</Description>
+
+#<Code>
+
+set GD_Aster_RaidWeapons.SMGs.Aster_Seraph_Florentine_Title:AttributePresentationDefinition_0 Description Deals [slag]Slag[-slag] and [incendiary]Ad[-incendiary][explosive]ap[-explosive][corrosive]ti[-corrosive][shock]ve[-shock] damage.
+
+set GD_Aster_RaidWeapons.SMGs.Bullet_SMG_Plasma_Florentine DamageTypeDefinition WillowDamageTypeDefinition 'GD_Amp.DamageType.DmgType_Amp_Impact'
+
+set GD_Aster_RaidWeapons.SMGs.SMG_Barrel_Alien_Florentine WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.250000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+set GD_Aster_RaidWeapons.SMGs.Bullet_SMG_Plasma_Florentine ExplosionOverrideDefinition None 
+
+set GD_Aster_RaidWeapons.SMGs.Bullet_SMG_Plasma_Florentine OnAnyImpact ()
+
+set GD_Aster_RaidWeapons.SMGs.Bullet_SMG_Plasma_Florentine ImpactResponses ((DamageSurfaceType=DMGSURFACE_Flesh,bDisableRegularBulletDamage=False,Behaviors=(Behavior_Explode'GD_Weap_SMG.FiringModes.Bullet_SMG_HellFire:Behavior_Explode_5')),(DamageSurfaceType=DMGSURFACE_Armor,bDisableRegularBulletDamage=False,Behaviors=(Behavior_Explode'GD_Sage_RaidWeapons.FiringModes.Bullet_Pistol_Maliwan_Infection:Behavior_Explode_5')),(DamageSurfaceType=DMGSURFACE_Shield,bDisableRegularBulletDamage=False,Behaviors=(Behavior_Explode'GD_Orchid_BossWeapons.FiringModes.Bullet_Pistol_Maliwan_Evie:Behavior_Explode_5')),(DamageSurfaceType=DMGSURFACE_Generic,bDisableRegularBulletDamage=False,Behaviors=(Behavior_Explode'GD_Weap_Pistol.FiringModes.Bullets_Pistol_Torgue_Calla:Behavior_Explode_5')))
+
+set GD_Sage_RaidWeapons.FiringModes.Bullet_Pistol_Maliwan_Infection:Behavior_Explode_5 Definition ExplosionDefinition 'GD_Explosions.Corrosive.Explosion_CorrosiveMaster'
+
+set GD_Orchid_BossWeapons.FiringModes.Bullet_Pistol_Maliwan_Evie:Behavior_Explode_5 Definition ExplosionDefinition 'GD_Explosions.Shock.Explosion_ShockMaster'
+
+set GD_Orchid_BossWeapons.FiringModes.Bullet_Pistol_Maliwan_Evie:Behavior_Explode_5 DamageSource Class 'WillowGame.WillowDmgSource_Grenade'
+
+set GD_Weap_SMG.FiringModes.Bullet_SMG_HellFire:Behavior_Explode_5 Definition ExplosionDefinition 'GD_Explosions.Incendiary.Explosion_AlienPlasma_IncendiaryMaster'
+
+set GD_Weap_SMG.FiringModes.Bullet_SMG_HellFire:Behavior_Explode_5 DamageRadiusFormula (BaseValueConstant=170.000000)
+
+set GD_Weap_SMG.FiringModes.Bullet_SMG_HellFire:Behavior_Explode_5 DamageFormula (BaseValueScaleConstant=0.800000)
+
+set Aster_GunMaterials.Materials.SMG.Mati_Maliwan_Seraph_Florentine ScalarParameterValues ((ParameterName="p_DecalRotate",ParameterValue=0.700000,ExpressionGUID=(A=-276527909,B=1298581551,C=856978878,D=743944047)),(ParameterName="p_ReplacePattern",ParameterValue=-0.500000,ExpressionGUID=(A=-2084339847,B=1096440125,C=439008937,D=45433490)),(ParameterName="p_UseFullColorDecal",ParameterValue=1.000000,ExpressionGUID=(A=-1064329812,B=1077705328,C=339664807,D=1869745420)),(ParameterName="p_ReplaceDecal",ParameterValue=0.250000,ExpressionGUID=(A=85863466,B=1257609701,C=-728575820,D=1337098176)),(ParameterName="p_EmissiveScale",ParameterValue=5.000000,ExpressionGUID=(A=-1585388516,B=1089964715,C=308554175,D=-1500922158)))
+
+set Aster_GunMaterials.Materials.SMG.Mati_Maliwan_Seraph_Florentine TextureParameterValues ((ParameterName="p_Masks",ParameterValue=Texture2D'Weap_SMG.Tex.Weap_SMG_Comp',ExpressionGUID=(A=-330624041,B=1167251458,C=-335191907,D=-166684394)),(ParameterName="p_NormalScopesEmissive",ParameterValue=Texture2D'Weap_SMG.Tex.Weap_SMG_Nrm',ExpressionGUID=(A=-1743872746,B=1126171774,C=119496871,D=-1952271718)),(ParameterName="p_Decal",ParameterValue=Texture2D'FX_CREA_Hyperion.Textures.Motion_Ring_Dif',ExpressionGUID=(A=-923052711,B=1309861752,C=584229786,D=-1229888527)),(ParameterName="p_Pattern",ParameterValue=Texture2D'Common_GunMaterials.Patterns.Pattern_HexScrollGrunge_Comp',ExpressionGUID=(A=534250533,B=1202550002,C=1578302861,D=-717876416)),(ParameterName="p_Diffuse",ParameterValue=Texture2D'Common_GunMaterials.CompTextures.Weap_AssaultSubSniper_Comp',ExpressionGUID=(A=1757607260,B=1326539502,C=-317215581,D=-565807463)))
+
+set Aster_GunMaterials.Materials.SMG.Mati_Maliwan_Seraph_Florentine VectorParameterValues ((ParameterName="p_DecalScalePosition",ParameterValue=(R=10.880000,G=10.880000,B=0.391600,A=0.511000),ExpressionGUID=(A=395540170,B=1243133493,C=-1264190552,D=123075385)),(ParameterName="p_PatternScalePosition",ParameterValue=(R=21.000000,G=21.000000,B=1.000000,A=0.000000),ExpressionGUID=(A=-2005018406,B=1132497243,C=-39915121,D=208423616)),(ParameterName="p_DecalChannel",ParameterValue=(R=0.750000,G=0.000000,B=0.750000,A=0.950000),ExpressionGUID=(A=1757499073,B=1097055033,C=-1266029657,D=1038353636)),(ParameterName="p_PatternChannelScale",ParameterValue=(R=1.950000,G=0.000000,B=0.000000,A=0.000000),ExpressionGUID=(A=439432319,B=1091149893,C=-1991909502,D=1816944627)),(ParameterName="p_PatternColor",ParameterValue=(R=0.700000,G=0.600000,B=0.600000,A=1.000000),ExpressionGUID=(A=676539706,B=1125682796,C=1871983293,D=-2049503601)),(ParameterName="p_DecalColor",ParameterValue=(R=50.000000,G=1.000000,B=50.000000,A=0.000000),ExpressionGUID=(A=1691998600,B=1239094551,C=2074257317,D=1844701893)))
+
+#</Code>
+
+#</Florentine 2.0>
+
+
+
