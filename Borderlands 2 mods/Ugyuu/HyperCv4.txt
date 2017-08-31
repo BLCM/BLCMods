@@ -30,7 +30,8 @@ Might or might not break with Vel0city and Accelerate, when boosted beyond 10/5.
 - Low clip size. (5)
 
 [Changelog]
-V3: Improvements on the accuracy.
+
+v3 and v4: Critical accuracy fix.
 V2: +150% damage boost, instead of +180%.
 
 [Codes]
@@ -38,7 +39,7 @@ V2: +150% damage boost, instead of +180%.
 set GD_Weap_SniperRifles.Barrel.SR_Barrel_Hyperion_Tresspasser GestaltModeSkeletalMeshName SR_Barrel_Hyperion
 
 set GD_Weap_SniperRifles.Barrel.SR_Barrel_Hyperion_Tresspasser ExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.DamageSourceShieldPenetration.PercentChanceInstigatedBulletDmgIgnoresShields',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=100.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
-set GD_Weap_SniperRifles.Barrel.SR_Barrel_Hyperion_Tresspasser AttributeSlotUpgrades ((SlotName="AccuracyMin",GradeIncrease=4444,bActivateSlot=True),(SlotName="AccuracyMax",GradeIncrease=8,bActivateSlot=True),(SlotName="WeaponSpread",GradeIncrease=2222,bActivateSlot=True),(SlotName="WeaponZoomFOV",GradeIncrease=5,bActivateSlot=True))
+set GD_Weap_SniperRifles.Barrel.SR_Barrel_Hyperion_Tresspasser AttributeSlotUpgrades ((SlotName="AccuracyMin",GradeIncrease=4444,bActivateSlot=True),(SlotName="AccuracyMax",GradeIncrease=333,bActivateSlot=True),(SlotName="WeaponSpread",GradeIncrease=2222,bActivateSlot=True),(SlotName="WeaponZoomFOV",GradeIncrease=5,bActivateSlot=True))
 set GD_Weap_SniperRifles.Barrel.SR_Barrel_Hyperion_Tresspasser WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-0.001000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.0000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=-0.550000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.00000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=-9999.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=1.00000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=5.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponReloadSpeed',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
 
 set GD_Weap_SniperRifles.Barrel.SR_Barrel_Hyperion_Tresspasser WeaponCardAttributes ((Attribute=AttributeDefinition'D_Attributes.GameplayAttributes.PlayerCriticalHitBonus',PriorityIncrease=1.000000))
@@ -47,6 +48,9 @@ set GD_Aster_Weapons.FiringModes.Bullet_SMG_Orc_Child Speed 88888.000000
 set GD_Aster_Weapons.FiringModes.Bullet_SMG_Orc_Child FiringPatternLines ((StartPoint=(Pitch=0,Yaw=0,Roll=0),EndPoint=(Pitch=0,Yaw=0,Roll=0),bUseStartPointOnly=True,CustomWaveMotion=(bUseCustomWaveMotion=False,WaveFreq=(X=0.000000,Y=0.000000,Z=0.000000),WaveAmp=(X=0.000000,Y=0.000000,Z=0.000000),WavePhase=(X=0.000000,Y=0.000000,Z=0.000000))))
 set GD_Aster_Weapons.FiringModes.Bullet_SMG_Orc_Child ImpactResponses ((DamageSurfaceType=DMGSURFACE_Armor,bDisableRegularBulletDamage=False,Behaviors=(Behavior_Explode'GD_Iris_Weapons.FiringModes.Bullet_Sniper_Cobra:Behavior_Explode_5')))
 set GD_Weap_SniperRifles.Barrel.SR_Barrel_Hyperion_Tresspasser CustomFiringModeDefinition FiringModeDefinition'GD_Aster_Weapons.FiringModes.Bullet_SMG_Orc_Child'
+set GD_Aster_Weapons.FiringModes.Bullet_SMG_Orc_Child bSuppressWeaponSpread True
+set GD_Aster_Weapons.FiringModes.Bullet_SMG_Orc_Child bFireRandomlyFromPattern False
+set GD_Aster_Weapons.FiringModes.Bullet_SMG_Orc_Child bScalePatternByWeaponSpread True
 
 set GD_Weap_SniperRifles.Barrel.SR_Barrel_Hyperion_Tresspasser Rarity (BaseValueConstant=None)
 set GD_Weap_SniperRifles.Barrel.SR_Barrel_Hyperion_Tresspasser Rarity (BaseValueConstant=3.000000)

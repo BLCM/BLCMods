@@ -27,14 +27,11 @@ Breaks the Smasher, but not in a bad way. It basically has hitscan speed as well
 
 [Changelog]
 
-V3: Improvements on the accuracy.
-V2: nerfed damage.
-
 [Codes]
 
 set GD_Cork_Weap_SniperRifles.Barrel.SR_Barrel_Jakobs_Skullmasher GestaltModeSkeletalMeshName SR_Barrel_Hyperion
 
-set GD_Cork_Weap_SniperRifles.Barrel.SR_Barrel_Jakobs_Skullmasher AttributeSlotUpgrades ((SlotName="AccuracyMin",GradeIncrease=1234,bActivateSlot=True),(SlotName="AccuracyMax",GradeIncrease=5,bActivateSlot=True),(SlotName="WeaponSpread",GradeIncrease=1111,bActivateSlot=True),(SlotName="WeaponZoomFOV",GradeIncrease=10,bActivateSlot=True))
+set GD_Cork_Weap_SniperRifles.Barrel.SR_Barrel_Jakobs_Skullmasher AttributeSlotUpgrades ((SlotName="AccuracyMin",GradeIncrease=1234,bActivateSlot=True),(SlotName="AccuracyMax",GradeIncrease=333,bActivateSlot=True),(SlotName="WeaponSpread",GradeIncrease=1111,bActivateSlot=True),(SlotName="WeaponZoomFOV",GradeIncrease=10,bActivateSlot=True))
 set GD_Cork_Weap_SniperRifles.Barrel.SR_Barrel_Jakobs_Skullmasher ExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.DamageSourceShieldPenetration.PercentChanceInstigatedBulletDmgIgnoresShields',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=100.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
 set GD_Cork_Weap_SniperRifles.Barrel.SR_Barrel_Jakobs_Skullmasher WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.175000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0.500000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=2.100000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.00000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=-9999.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=1.00000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=5.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponReloadSpeed',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=-0.500000)))
 
@@ -44,6 +41,9 @@ set GD_Cork_Weap_Pistol.FiringModes.Bullet_Pistol_Smasher Speed 80000.000000
 set GD_Cork_Weap_Pistol.FiringModes.Bullet_Pistol_Smasher FiringPatternLines ((StartPoint=(Pitch=0,Yaw=0,Roll=0),EndPoint=(Pitch=0,Yaw=0,Roll=0),bUseStartPointOnly=True,CustomWaveMotion=(bUseCustomWaveMotion=False,WaveFreq=(X=0.000000,Y=0.000000,Z=0.000000),WaveAmp=(X=0.000000,Y=0.000000,Z=0.000000),WavePhase=(X=0.000000,Y=0.000000,Z=0.000000))))
 set GD_Cork_Weap_Pistol.FiringModes.Bullet_Pistol_Smasher ImpactResponses ((DamageSurfaceType=DMGSURFACE_Armor,bDisableRegularBulletDamage=False,Behaviors=(Behavior_Explode'GD_Cork_Weap_Shotgun.FiringModes.Bullet_Shotgun_Moonface:Behavior_Explode_1')))
 set GD_Cork_Weap_SniperRifles.Barrel.SR_Barrel_Jakobs_Skullmasher CustomFiringModeDefinition FiringModeDefinition'GD_Cork_Weap_Pistol.FiringModes.Bullet_Pistol_Smasher'
+set GD_Aster_Weapons.FiringModes.Bullet_SMG_Orc_Child bSuppressWeaponSpread True
+set GD_Aster_Weapons.FiringModes.Bullet_SMG_Orc_Child bFireRandomlyFromPattern False
+set GD_Aster_Weapons.FiringModes.Bullet_SMG_Orc_Child bScalePatternByWeaponSpread True
 
 set GD_Cork_Weap_SniperRifles.Barrel.SR_Barrel_Jakobs_Skullmasher Rarity (BaseValueConstant=None)
 set GD_Cork_Weap_SniperRifles.Barrel.SR_Barrel_Jakobs_Skullmasher Rarity (BaseValueConstant=497.000000)
