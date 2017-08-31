@@ -1,0 +1,100 @@
+===================================================================================================================
+
+Replace the Seraphim
+
+The Mega Shaek
+
+Ricochets bullets
+
+Fire+Adaptive Bullets
+
+Adaptive Bullets: when shoting an enemy know what elament to use
+
+3 Projectiles pre shot
+
+!!!!!!!!!!!!!!!!!!!!!!!
+Break the Commerce
+!!!!!!!!!!!!!!!!!!!!!!!
+
+-damage
+
++fire rate
+
+created by ozay (or oz yohay)
+
+===================================================================================================================
+##skin##
+
+set GD_Orchid_RaidWeapons.ManufacturerMaterials.Mat_Dahl_1_Seraphim Material MaterialInstanceConstant 'Aster_GunMaterials.Materials.AssaultRifle.Mati_BanditUniqueAR_Ogre'
+
+##name##
+
+
+
+set GD_Orchid_RaidWeapons.AssaultRifle.Seraphim.Orchid_Seraph_Seraphim_Title PartName Mega Shaek
+set GD_Orchid_RaidWeapons.AssaultRifle.Seraphim.Orchid_Seraph_Seraphim_Title:AttributePresentationDefinition_8 NoConstraintText The only weapon you will need
+
+##stats##
+
+
+
+
+set GD_Orchid_RaidWeapons.AssaultRifle.Seraphim.Orchid_Seraph_Seraphim_Barrel WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponReloadSpeed',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponPerShotAccuracyImpulse',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+
+
+##Shots##
+
+
+
+set GD_Orchid_RaidWeapons.AssaultRifle.Seraphim.Orchid_Seraph_Seraphim_Barrel CustomFiringModeDefinition FiringModeDefinition 'GD_Weap_SMG.FiringModes.Bullet_SMG_Commerce'
+
+set GD_Weap_SMG.FiringModes.Bullet_SMG_Commerce bSuppressImpactEffects False
+
+set GD_Weap_SMG.FiringModes.Bullet_SMG_Commerce NumRicochets 3
+
+set GD_Weap_SMG.FiringModes.Bullet_SMG_Commerce Speed 6000.000000
+
+set GD_Weap_SMG.FiringModes.Bullet_SMG_Commerce RicochetFriction 0.200000
+
+set GD_Weap_SMG.FiringModes.Bullet_SMG_Commerce RicochetResponse (SplitNum=0,SplitAngle=0.000000,SplitAngleOffset=0.000000,SplitDistance=0.000000,SplitFire=GD_Weap_SMG.FiringModes.Bullet_SMG_Commerce,NewSpeed=3000.000000,bDetonate=False,bRespawnTracer=False,bUpdateBeamSourceLocation=False,Behaviors=)
+
+##Adaptive Bullet 1##
+
+set GD_Weap_SMG.FiringModes.Bullet_SMG_Commerce ImpactResponses ((DamageSurfaceType=DMGSURFACE_Flesh,bDisableRegularBulletDamage=False,Behaviors=(Behavior_Explode'GD_Weap_SniperRifles.FiringModes.Bullet_Sniper_Volcano:Behavior_Explode_5')),(DamageSurfaceType=DMGSURFACE_Armor,bDisableRegularBulletDamage=False,Behaviors=(Behavior_Explode'GD_Weap_Pistol.FiringModes.Bullet_Pistol_Dahl_Teapot:Behavior_Explode_5')),(DamageSurfaceType=DMGSURFACE_Shield,bDisableRegularBulletDamage=False,Behaviors=(Behavior_Explode'GD_Orchid_BossWeapons.FiringModes.Bullet_Pistol_Maliwan_Evie:Behavior_Explode_5')),(DamageSurfaceType=DMGSURFACE_Generic,bDisableRegularBulletDamage=False,Behaviors=(Behavior_Explode'GD_Weap_Pistol.FiringModes.Bullets_Pistol_Torgue_Calla:Behavior_Explode_5')))
+
+##Adaptive Bullet 1##
+
+set GD_Weap_SMG.FiringModes.Bullet_SMG_Commerce ImpactResponses ((DamageSurfaceType=DMGSURFACE_Flesh,bDisableRegularBulletDamage=False,Behaviors=(Behavior_Explode'GD_Weap_Pistol.FiringModes.Bullets_Pistol_Bandit_Tinderbox:Behavior_Explode_5')),(DamageSurfaceType=DMGSURFACE_Armor,bDisableRegularBulletDamage=False,Behaviors=(Behavior_Explode'GD_Sage_RaidWeapons.FiringModes.Bullet_Pistol_Maliwan_Infection:Behavior_Explode_5')),(DamageSurfaceType=DMGSURFACE_Shield,bDisableRegularBulletDamage=False,Behaviors=(Behavior_Explode'GD_Sage_Weapons.FiringModes.Bullet_Shotgun_Twister:Behavior_Explode_5')),(DamageSurfaceType=DMGSURFACE_Generic,bDisableRegularBulletDamage=False,Behaviors=(Behavior_Explode'GD_Iris_Weapons.FiringModes.Bullet_Sniper_Cobra:Behavior_Explode_5')))
+
+##parts##
+
+
+set GD_Orchid_RaidWeapons.AssaultRifle.Seraphim.Orchid_Seraph_Seraphim_Barrel WeaponCardAttributes ()
+
+set GD_Orchid_RaidWeapons.AssaultRifle.Seraphim.Orchid_Seraph_Seraphim_Barrel bIsSpinningEnabled True
+
+set GD_Orchid_RaidWeapons.AssaultRifle.Seraphim.Orchid_Seraph_Seraphim_Barrel SpinUpDuration (BaseValueConstant=5.000000)
+
+set GD_Orchid_RaidWeapons.AssaultRifle.Seraphim.Orchid_Seraph_Seraphim_Barrel SpinDownDuration (BaseValueConstant=20.000000)
+
+set GD_Orchid_RaidWeapons.AssaultRifle.Seraphim.Orchid_Seraph_Seraphim_Barrel StartingSpinUpFireIntervalMultiplier 2.000000
+
+set GD_Orchid_RaidWeapons.AssaultRifle.Seraphim.Orchid_Seraph_Seraphim_Barrel bFlapsEnabled True
+
+set GD_Orchid_RaidWeapons.AssaultRifle.Seraphim.Orchid_Seraph_Seraphim_Barrel FlapsExpandDuration (BaseValueConstant=-30.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+
+set GD_Orchid_RaidWeapons.AssaultRifle.Seraphim.Orchid_Seraph_Seraphim_Barrel FlapsCollapseDuration (BaseValueConstant=990.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+
+set GD_Orchid_RaidWeapons.AssaultRifle.Seraphim.Orchid_Seraph_Seraphim_Barrel BoneControllers ((BoneName="AlienBarrelFlapTL1",ControlType=WEAP_BONE_CONTROL_Flap,bUseInFirstPerson=True,bUseInThirdPerson=False,ControlTemplate=WillowSkelControl_RotateFlapFromFiring'GD_Weap_AssaultRifle.Barrel.AR_Barrel_Alien:WillowSkelControl_RotateFlapFromFiring_4'),(BoneName="AlienBarrelFlapTL2",ControlType=WEAP_BONE_CONTROL_Flap,bUseInFirstPerson=True,bUseInThirdPerson=False,ControlTemplate=WillowSkelControl_RotateFlapFromFiring'GD_Weap_AssaultRifle.Barrel.AR_Barrel_Alien:WillowSkelControl_RotateFlapFromFiring_3'),(BoneName="AlienBarrelFlapTL3",ControlType=WEAP_BONE_CONTROL_Flap,bUseInFirstPerson=True,bUseInThirdPerson=False,ControlTemplate=WillowSkelControl_RotateFlapFromFiring'GD_Weap_AssaultRifle.Barrel.AR_Barrel_Alien:WillowSkelControl_RotateFlapFromFiring_5'),(BoneName="AlienBarrelFlapTL4",ControlType=WEAP_BONE_CONTROL_Flap,bUseInFirstPerson=True,bUseInThirdPerson=False,ControlTemplate=WillowSkelControl_RotateFlapFromFiring'GD_Weap_AssaultRifle.Barrel.AR_Barrel_Alien:WillowSkelControl_RotateFlapFromFiring_8'),(BoneName="AlienBarrelFlapTR1",ControlType=WEAP_BONE_CONTROL_Flap,bUseInFirstPerson=True,bUseInThirdPerson=False,ControlTemplate=WillowSkelControl_RotateFlapFromFiring'GD_Weap_AssaultRifle.Barrel.AR_Barrel_Alien:WillowSkelControl_RotateFlapFromFiring_1'),(BoneName="AlienBarrelFlapTR2",ControlType=WEAP_BONE_CONTROL_Flap,bUseInFirstPerson=True,bUseInThirdPerson=False,ControlTemplate=WillowSkelControl_RotateFlapFromFiring'GD_Weap_AssaultRifle.Barrel.AR_Barrel_Alien:WillowSkelControl_RotateFlapFromFiring_2'),(BoneName="AlienBarrelFlapTR3",ControlType=WEAP_BONE_CONTROL_Flap,bUseInFirstPerson=True,bUseInThirdPerson=False,ControlTemplate=WillowSkelControl_RotateFlapFromFiring'GD_Weap_AssaultRifle.Barrel.AR_Barrel_Alien:WillowSkelControl_RotateFlapFromFiring_6'),(BoneName="AlienBarrelFlapTR4",ControlType=WEAP_BONE_CONTROL_Flap,bUseInFirstPerson=True,bUseInThirdPerson=False,ControlTemplate=WillowSkelControl_RotateFlapFromFiring'GD_Weap_AssaultRifle.Barrel.AR_Barrel_Alien:WillowSkelControl_RotateFlapFromFiring_7'),(BoneName="AlienBarrelFlapBL",ControlType=WEAP_BONE_CONTROL_Flap,bUseInFirstPerson=True,bUseInThirdPerson=False,ControlTemplate=WillowSkelControl_RotateFlapFromFiring'GD_Weap_AssaultRifle.Barrel.AR_Barrel_Alien:WillowSkelControl_RotateFlapFromFiring_0'),(BoneName="AlienBarrelFlapBR",ControlType=WEAP_BONE_CONTROL_Flap,bUseInFirstPerson=True,bUseInThirdPerson=False,ControlTemplate=WillowSkelControl_RotateFlapFromFiring'GD_Weap_AssaultRifle.Barrel.AR_Barrel_Alien:WillowSkelControl_RotateFlapFromFiring_9'))
+
+set GD_Orchid_RaidWeapons.AssaultRifle.Seraphim.Orchid_Seraph_Seraphim_Barrel bScoped True
+
+set GD_Orchid_RaidWeapons.AssaultRifle.Seraphim.Orchid_Seraph_Seraphim_Barrel BehaviorProviderDefinition BehaviorProviderDefinition'GD_Orchid_BossWeapons.Pistol.Pistol_Barrel_Vladof_Evie:BehaviorProviderDefinition_3'
+
+set GD_Orchid_RaidWeapons.AssaultRifle.Seraphim.Orchid_Seraph_Seraphim_Barrel GestaltModeSkeletalMeshName AR_Barrel_Alien
+
+set GD_Orchid_RaidWeapons.AssaultRifle.Seraphim.Orchid_Seraph_Seraphim_Barrel AttributeSlotUpgrades ((SlotName="WeaponSpread",GradeIncrease=10,bActivateSlot=True),(SlotName="AccuracyMax",GradeIncrease=100,bActivateSlot=True),(SlotName="AccuracyMin",GradeIncrease=100,bActivateSlot=True),(SlotName="AccuracyRegen",GradeIncrease=10,bActivateSlot=True),(SlotName="WeaponAccuracyImpulse",GradeIncrease=100,bActivateSlot=True))
+
+
+==================================================================================================================
