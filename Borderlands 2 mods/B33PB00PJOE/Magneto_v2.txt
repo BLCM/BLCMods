@@ -1,3 +1,5 @@
+#<Swagneto>
+
 #<Description>
 
 Mod by B33P B00P JOE
@@ -20,42 +22,13 @@ While just as good as a regular old, shock Morningstar vs Flesh, if Shields or A
 +On impact with Armor or Robots, the magnetic forces also create a Singularity as well as an Explosion
 +Features a new paint job
 
-
+v2 Changes:
+Reformatted text/code.
 
 
 #</Description>
 
-#<Swagneto>
-
-    #<code>set GD_Weap_SniperRifles.Barrel.SR_Barrel_Maliwan_Morningstar BehaviorProviderDefinition None</code><inProfile = Test1><on>
-
-    #<code>set GD_Weap_SniperRifles.Barrel.SR_Barrel_Maliwan_Morningstar CustomFiringModeDefinition FiringModeDefinition'GD_Weap_AssaultRifle.FiringModes.Bullet_Blaster_Dahl'</code><inProfile = Test1><on>
-
-    #<code>set GD_Weap_Pistol.FiringModes.Bullet_Pistol_Maliwan_ThunderballFists:Behavior_SpawnProjectile_0 ProjectileDefinition ProjectileDefinition 'GD_GrenadeMods.Projectiles.Grenade_SingularityChild' </code><inProfile = Test1><on>
-
-    #<code>set GD_Weap_AssaultRifle.FiringModes.Bullet_Blaster_Dahl ImpactResponses ((DamageSurfaceType=DMGSURFACE_Armor,bDisableRegularBulletDamage=False,Behaviors=(Behavior_SpawnProjectile'GD_Weap_Pistol.FiringModes.Bullet_Pistol_Maliwan_ThunderballFists:Behavior_SpawnProjectile_0',Behavior_Explode'GD_Weap_Pistol.FiringModes.Bullet_Pistol_Maliwan_ThunderballFists:Behavior_Explode_0')),(DamageSurfaceType=DMGSURFACE_Shield,bDisableRegularBulletDamage=False,Behaviors=(Behavior_Explode'GD_Weap_Pistol.FiringModes.Bullet_Pistol_Maliwan_ThunderballFists:Behavior_Explode_0')),)</code><inProfile = Test1><on>
-
-    #<code>set GD_Weap_AssaultRifle.FiringModes.Bullet_Blaster_Dahl FiringPatternLines (StartPoint=(Pitch=0,Yaw=0,Roll=0),EndPoint=(Pitch=0,Yaw=0,Roll=0),bUseStartPointOnly=True,CustomWaveMotion=(bUseCustomWaveMotion=False,WaveFreq=(X=0.000000,Y=0.000000,Z=0.000000),WaveAmp=(X=0.000000,Y=0.000000,Z=0.000000),WavePhase=(X=0.000000,Y=0.000000,Z=0.000000)))</code><inProfile = Test1><on>
-
-    #<code>set GD_Weap_AssaultRifle.FiringModes.Bullet_Blaster_Dahl ConditionalPartSysTemplate EffectCollectionDefinition 'GD_Weap_Launchers.Effects.L_ETech_Tracers' </code><inProfile = Test1><on>
-
-    #<code>set GD_Weap_AssaultRifle.FiringModes.Bullet_Blaster_Dahl Speed 6000.000000</code><inProfile = Test1><on>
-
-    #<code>set GD_Weap_AssaultRifle.FiringModes.Bullet_Blaster_Dahl PartSysTemplate ParticleSystem'FX_WEP_Grenades_Px.Particles.Part_SingularityAttraction_Px'</code><inProfile = Test1><on>
-
-    #<code>set GD_GrenadeMods.Projectiles.Grenade_SingularityChild Damage (BaseValueConstant=1.000000,BaseValueAttribute=D_Attributes.Weapon.WeaponDamage,InitializationDefinition=GD_Balance_HealthAndDamage.HealthAndDamage.Init_ProjectileDamage,BaseValueScaleConstant=1.000000)</code><inProfile = Test1><on>
-
-    #<code>set GD_GrenadeMods.Projectiles.Grenade_SingularityChild DamageTypeOverrideName DamageTypeOverride</code><inProfile = Test1><on>
-
-    #<code>set GD_Weap_SniperRifles.Name.Title.Title__Unique_Morningstar PartName Magneto</code><inProfile = Test1><on>
-
-    #<code>set GD_Weap_SniperRifles.Name.Title.Title__Unique_Morningstar:AttributePresentationDefinition_8 NoConstraintText You dare face the Master of Magnetism with metal bones?</code><inProfile = Test1><on>
-
-    #<code>set Common_GunMaterials.Materials.sniper.Mati_HyperionUniqueSR_Morningstar VectorParameterValues ((ParameterName="p_AColorHilight",ParameterValue=(R=0.0620430,G=0.0310392,B=0.0260241,A=1.000000),ExpressionGUID=(A=384292798,B=1221323751,C=-2145405772,D=1872194118)),(ParameterName="p_AColorMidtone",ParameterValue=(R=0.0337004,G=0.0221238,B=0.0155651,A=1.000000),ExpressionGUID=(A=1102826245,B=1256298978,C=-1429881438,D=-507521102)),(ParameterName="p_AColorShadow",ParameterValue=(R=0.0110493,G=0.0110016,B=0.0093433,A=1.000000),ExpressionGUID=(A=1481234158,B=1129012376,C=-688827739,D=-2119135160)),(ParameterName="p_BColorHilight",ParameterValue=(R=0.400000,G=0.200000,B=0.200000,A=1.000000),ExpressionGUID=(A=170714760,B=1132476783,C=-275668290,D=655702143)),(ParameterName="p_BColorMidtone",ParameterValue=(R=0.100000,G=0.100000,B=0.100000,A=1.000000),ExpressionGUID=(A=473594356,B=1338758895,C=824823946,D=864253813)),(ParameterName="p_BColorShadow",ParameterValue=(R=0.010000,G=0.010000,B=0.010000,A=1.000000),ExpressionGUID=(A=-429590341,B=1156435294,C=-1015192901,D=687313413)),(ParameterName="p_DecalChannel",ParameterValue=(R=0.300000,G=0.000000,B=0.000000,A=1.000000),ExpressionGUID=(A=1757499073,B=1097055033,C=-1266029657,D=1038353636)),(ParameterName="p_PatternChannelScale",ParameterValue=(R=5.00000,G=0.000000,B=1.800000,A=0.513500),ExpressionGUID=(A=439432319,B=1091149893,C=-1991909502,D=1816944627)),(ParameterName="p_PatternColor",ParameterValue=(R=10.392288,G=0.392288,B=1.392288,A=0.101000),ExpressionGUID=(A=676539706,B=1125682796,C=1871983293,D=-204950360)),(ParameterName="p_PatternScalePosition",ParameterValue=(R=0.020000,G=0.073196,B=0.6509700,A=0.513500),ExpressionGUID=(A=-2005018406,B=1132497243,C=-39915121,D=208423616)),(ParameterName="p_DecalColor",ParameterValue=(R=1.000000,G=0.000000,B=0.000000,A=1.000000),ExpressionGUID=(A=1691998600,B=1239094551,C=2074257317,D=1844701893)),(ParameterName="p_DecalScalePosition",ParameterValue=(R=15.000000,G=15.000000,B=0.510000,A=0.515000),ExpressionGUID=(A=395540170,B=1243133493,C=-1264190552,D=123075385)),(ParameterName="p_ReflectColor",ParameterValue=(R=0.578977,G=1.382258,B=1.905200,A=1.000000),ExpressionGUID=(A=295058103,B=1318551573,C=-2045449573,D=-547597976)),(ParameterName="p_EmissiveColor",ParameterValue=(R=0.000000,G=0.000000,B=0.000000,A=1.000000),ExpressionGUID=(A=-2074486426,B=1296399582,C=-2021314681,D=-350758005)))</code><inProfile = Test1><on>
-
-    #<code>set GD_Weap_SniperRifles.A_Weapons_Unique.Sniper_Hyperion_3_Morningstar:PartList ElementalPartData (bEnabled=True,WeightedParts=((Part=WeaponPartDefinition'GD_Weap_SniperRifles.elemental.SR_Elemental_Shock',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=2)))</code><inProfile = Test1><on>
-
-#</Swagneto>
+#<Code>
 
 set GD_Weap_SniperRifles.Barrel.SR_Barrel_Maliwan_Morningstar BehaviorProviderDefinition None
 
@@ -85,3 +58,6 @@ set Common_GunMaterials.Materials.sniper.Mati_HyperionUniqueSR_Morningstar Vecto
 
 set GD_Weap_SniperRifles.A_Weapons_Unique.Sniper_Hyperion_3_Morningstar:PartList ElementalPartData (bEnabled=True,WeightedParts=((Part=WeaponPartDefinition'GD_Weap_SniperRifles.elemental.SR_Elemental_Shock',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=2)))
 
+#</Code>
+
+#</Swagneto>
