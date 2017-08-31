@@ -1,4 +1,4 @@
-This file contains the INT file that replaces the loading screen hits on the English version of Borderlands 2.
+This file contains the INT file that replaces the loading screen hints on the English version of Borderlands 2.
 
 [NOTES]
 
