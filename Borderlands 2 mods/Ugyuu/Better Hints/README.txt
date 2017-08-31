@@ -11,6 +11,8 @@ Close your game before doing this. It is best that you do this or your game migh
 
 Make a backup of your existing Subtitles.INT file before doing this. (It's in Borderlands 2/WillowGame/Localization/INT) Put it somewhere safe.
 
+Download the new Subtitles.INT and save it as; All Files. If you don't select All Files, it will save as a TXT, and you don't want that.
+
 Copy the Subtitles.INT file included in this to Borderlands 2/WillowGame/Localization/INT and paste it there.If it notifies you that there already is a file with this name, choose to replace it instead.
 
 Reload your game and witness the better loading screen hints!
