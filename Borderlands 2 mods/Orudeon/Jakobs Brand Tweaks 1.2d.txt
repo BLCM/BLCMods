@@ -1,10 +1,18 @@
-#<Jakobs Brand Tweaks 1.2a>
+#<Jakobs Brand Tweaks 1.2d>
 
     Improves competitiveness of several Jakobs guns. Gives assault rifles full-auto. Hammerlock guns now sport perfect accuracy, high crit bonuses, and DPS similar to a full Jakobs Muckamuck to give them a unified Sniper theme.
 
     Coded by Orudeon
 
     Changelog:
+
+    V1.2d
+
+    Full Auto assault rifles now disabled by default. Lowered Striker damage by 3.3%.
+
+    V1.2c
+
+    Added compatibility code for Prefix Rework's wild accessory. Configure normally.
 
     V1.2:
 
@@ -50,14 +58,14 @@
 
         #<Full Auto>
 
-            set GD_Weap_AssaultRifle.A_Weapons.WT_Jakobs_AssaultRifle AutomaticBurstCount 0
+            #set GD_Weap_AssaultRifle.A_Weapons.WT_Jakobs_AssaultRifle AutomaticBurstCount 0<off>
 
-            set GD_Weap_AssaultRifle.A_Weapons.WT_Jakobs_AssaultRifle FireRate 0.150000
+            #set GD_Weap_AssaultRifle.A_Weapons.WT_Jakobs_AssaultRifle FireRate 0.150000<off>
 
-            set AttributePresentationDefinition'GD_Weap_AssaultRifle.A_Weapons.WT_Jakobs_AssaultRifle:AttributePresentationDefinition_3' NoConstraintText [skill]Fully automatic.[-skill]
+            #set AttributePresentationDefinition'GD_Weap_AssaultRifle.A_Weapons.WT_Jakobs_AssaultRifle:AttributePresentationDefinition_3' Description [skill]Fully automatic.[-skill]<off>
 
-            set GD_Weap_AssaultRifle.Accessory.AR_Accessory_BanditClamp_Wild WeaponAttributeEffects ()
-        
+            #set GD_Weap_AssaultRifle.Accessory.AR_Accessory_BanditClamp_Wild WeaponAttributeEffects ()<off>
+
         #</Full Auto>
 
         #<Damned Cowboy><MUT>
@@ -74,9 +82,9 @@
 
             #<Use this version if you don't use Full Auto Jakobs>
 
-                #set GD_Sage_Weapons.AssaultRifle.AR_Barrel_Bandit_DamnedCowboy ExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.GameplayAttributes.PlayerCriticalHitBonus',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))<off>
+                set GD_Sage_Weapons.AssaultRifle.AR_Barrel_Bandit_DamnedCowboy ExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.GameplayAttributes.PlayerCriticalHitBonus',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
 
-                #set GD_Sage_Weapons.AssaultRifle.AR_Barrel_Bandit_DamnedCowboy WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=3.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.310000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponReloadSpeed',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.200000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponPerShotAccuracyImpulse',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-3.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectileSpeedMultiplier',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-3.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))<off>
+                set GD_Sage_Weapons.AssaultRifle.AR_Barrel_Bandit_DamnedCowboy WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=3.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.310000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponReloadSpeed',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.200000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponPerShotAccuracyImpulse',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-3.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectileSpeedMultiplier',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-3.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
 
             #</Use this version if you don't use Full Auto Jakobs>
 
@@ -118,7 +126,7 @@
 
             set GD_Weap_Shotgun.Barrel.SG_Barrel_Hyperion_Striker AttributeSlotUpgrades ((SlotName="WeaponSpread",GradeIncrease=7,bActivateSlot=True),(SlotName="AccuracyMin",GradeIncrease=5,bActivateSlot=True),(SlotName="WeaponDamage",GradeIncrease=0,bActivateSlot=True),(SlotName="WeaponAccuracyImpulse",GradeIncrease=2,bActivateSlot=True),(SlotName="WeaponZoomFOV",GradeIncrease=5,bActivateSlot=True))
 
-            set GD_Weap_Shotgun.Barrel.SG_Barrel_Hyperion_Striker WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-5.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.50,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=-1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-9999.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=13.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+            set GD_Weap_Shotgun.Barrel.SG_Barrel_Hyperion_Striker WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-5.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-0.55,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-9999.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=13.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
 
         #</Striker>
 
@@ -142,5 +150,5 @@
 
     #</Shotguns>
 
-#</Jakobs Brand Tweaks 1.2a>
+#</Jakobs Brand Tweaks 1.2d>
 
