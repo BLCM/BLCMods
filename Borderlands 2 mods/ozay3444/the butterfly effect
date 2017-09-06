@@ -1,0 +1,89 @@
+===================================================================================================================
+the butterfly effect
+
+replace the  Lead Storm
+
+braek the ConferenceCall
+
+very cool skin
+
+shots wird leser
+
++damage
+
++fire rate
+
+100% accuracy
+
+created by ozay (or oz yohay)
+===================================================================================================================
+##skin##
+
+set GD_Sage_RaidWeapons.ManufacturerMaterials.Mat_Vladof_1_Leadstorm Material MaterialInstanceConstant 'Prop_Iris_Pickups.Materials.Mati_CrystaliskPink'
+
+##name##
+
+
+
+set GD_Sage_RaidWeapons.Name.Title.Sage_Seraph_LeadStorm_Title PartName Butterfly Effect
+
+set GD_Sage_RaidWeapons.Name.Title.Sage_Seraph_LeadStorm_Title:AttributePresentationDefinition_8 NoConstraintText
+
+##stats##
+
+
+
+
+set GD_Sage_RaidWeapons.AssaultRifle.AR_Barrel_LeadStorm WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.400000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-4.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-222.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponReloadSpeed',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=-2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponPerShotAccuracyImpulse',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-2222.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+
+
+##Shots##
+
+
+
+set GD_Sage_RaidWeapons.AssaultRifle.AR_Barrel_LeadStorm CustomFiringModeDefinition FiringModeDefinition 'GD_Weap_Shotgun.FiringModes.Bullet_Shotgun_ConferenceCall'
+
+set GD_Weap_Shotgun.FiringModes.Bullet_Shotgun_ConferenceCall DamageTypeDefinition WillowDamageTypeDefinition'GD_Shock.DamageType.DmgType_Shock_Impact'
+set GD_Weap_Shotgun.FiringModes.Bullet_Shotgun_ConferenceCall PartSysTemplate ParticleSystem'FX_WEP_Trails.Particles.Alien.Part_Wep_Tracer_Alien_Sniper'
+set GD_Weap_Shotgun.FiringModes.Bullet_Shotgun_ConferenceCall ConditionalPartSysTemplate EffectCollectionDefinition'GD_Weap_SniperRifles.Effects.SR_ETech_Tracers'
+set GD_Weap_Shotgun.FiringModes.Bullet_Shotgun_ConferenceCall Speed 20000.000000
+
+set GD_Weap_Shotgun.FiringModes.Bullet_Shotgun_ConferenceCall_Child DamageTypeDefinition WillowDamageTypeDefinition'GD_Shock.DamageType.DmgType_Shock_Impact'
+set GD_Weap_Shotgun.FiringModes.Bullet_Shotgun_ConferenceCall_Child PartSysTemplate ParticleSystem'FX_WEP_Trails.Particles.Alien.Part_Wep_Tracer_Alien_Sniper'
+set GD_Weap_Shotgun.FiringModes.Bullet_Shotgun_ConferenceCall_Child ConditionalPartSysTemplate EffectCollectionDefinition'GD_Weap_SniperRifles.Effects.SR_ETech_Tracers'
+set GD_Weap_Shotgun.FiringModes.Bullet_Shotgun_ConferenceCall_Child Speed 20000.000000
+
+##parts##
+
+
+
+
+
+set GD_Sage_RaidWeapons.AssaultRifle.AR_Barrel_LeadStorm WeaponCardAttributes ()
+
+set GD_Sage_RaidWeapons.AssaultRifle.AR_Barrel_LeadStorm bIsSpinningEnabled True
+
+set GD_Sage_RaidWeapons.AssaultRifle.AR_Barrel_LeadStorm SpinUpDuration (BaseValueConstant=-20.000000)
+
+set GD_Sage_RaidWeapons.AssaultRifle.AR_Barrel_LeadStorm SpinDownDuration (BaseValueConstant=-20.000000)
+
+set GD_Sage_RaidWeapons.AssaultRifle.AR_Barrel_LeadStorm StartingSpinUpFireIntervalMultiplier 2.000000
+
+set GD_Sage_RaidWeapons.AssaultRifle.AR_Barrel_LeadStorm bFlapsEnabled True
+
+set GD_Sage_RaidWeapons.AssaultRifle.AR_Barrel_LeadStorm FlapsExpandDuration (BaseValueConstant=-30.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+
+set GD_Sage_RaidWeapons.AssaultRifle.AR_Barrel_LeadStorm FlapsCollapseDuration (BaseValueConstant=-20.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+
+set GD_Sage_RaidWeapons.AssaultRifle.AR_Barrel_LeadStorm BoneControllers ((BoneName="AlienBarrelFlapTL1",ControlType=WEAP_BONE_CONTROL_Flap,bUseInFirstPerson=True,bUseInThirdPerson=False,ControlTemplate=WillowSkelControl_RotateFlapFromFiring'GD_Weap_AssaultRifle.Barrel.AR_Barrel_Alien:WillowSkelControl_RotateFlapFromFiring_4'),(BoneName="AlienBarrelFlapTL2",ControlType=WEAP_BONE_CONTROL_Flap,bUseInFirstPerson=True,bUseInThirdPerson=False,ControlTemplate=WillowSkelControl_RotateFlapFromFiring'GD_Weap_AssaultRifle.Barrel.AR_Barrel_Alien:WillowSkelControl_RotateFlapFromFiring_3'),(BoneName="AlienBarrelFlapTL3",ControlType=WEAP_BONE_CONTROL_Flap,bUseInFirstPerson=True,bUseInThirdPerson=False,ControlTemplate=WillowSkelControl_RotateFlapFromFiring'GD_Weap_AssaultRifle.Barrel.AR_Barrel_Alien:WillowSkelControl_RotateFlapFromFiring_5'),(BoneName="AlienBarrelFlapTL4",ControlType=WEAP_BONE_CONTROL_Flap,bUseInFirstPerson=True,bUseInThirdPerson=False,ControlTemplate=WillowSkelControl_RotateFlapFromFiring'GD_Weap_AssaultRifle.Barrel.AR_Barrel_Alien:WillowSkelControl_RotateFlapFromFiring_8'),(BoneName="AlienBarrelFlapTR1",ControlType=WEAP_BONE_CONTROL_Flap,bUseInFirstPerson=True,bUseInThirdPerson=False,ControlTemplate=WillowSkelControl_RotateFlapFromFiring'GD_Weap_AssaultRifle.Barrel.AR_Barrel_Alien:WillowSkelControl_RotateFlapFromFiring_1'),(BoneName="AlienBarrelFlapTR2",ControlType=WEAP_BONE_CONTROL_Flap,bUseInFirstPerson=True,bUseInThirdPerson=False,ControlTemplate=WillowSkelControl_RotateFlapFromFiring'GD_Weap_AssaultRifle.Barrel.AR_Barrel_Alien:WillowSkelControl_RotateFlapFromFiring_2'),(BoneName="AlienBarrelFlapTR3",ControlType=WEAP_BONE_CONTROL_Flap,bUseInFirstPerson=True,bUseInThirdPerson=False,ControlTemplate=WillowSkelControl_RotateFlapFromFiring'GD_Weap_AssaultRifle.Barrel.AR_Barrel_Alien:WillowSkelControl_RotateFlapFromFiring_6'),(BoneName="AlienBarrelFlapTR4",ControlType=WEAP_BONE_CONTROL_Flap,bUseInFirstPerson=True,bUseInThirdPerson=False,ControlTemplate=WillowSkelControl_RotateFlapFromFiring'GD_Weap_AssaultRifle.Barrel.AR_Barrel_Alien:WillowSkelControl_RotateFlapFromFiring_7'),(BoneName="AlienBarrelFlapBL",ControlType=WEAP_BONE_CONTROL_Flap,bUseInFirstPerson=True,bUseInThirdPerson=False,ControlTemplate=WillowSkelControl_RotateFlapFromFiring'GD_Weap_AssaultRifle.Barrel.AR_Barrel_Alien:WillowSkelControl_RotateFlapFromFiring_0'),(BoneName="AlienBarrelFlapBR",ControlType=WEAP_BONE_CONTROL_Flap,bUseInFirstPerson=True,bUseInThirdPerson=False,ControlTemplate=WillowSkelControl_RotateFlapFromFiring'GD_Weap_AssaultRifle.Barrel.AR_Barrel_Alien:WillowSkelControl_RotateFlapFromFiring_9'))
+
+set GD_Sage_RaidWeapons.AssaultRifle.AR_Barrel_LeadStorm bScoped False
+
+set GD_Sage_RaidWeapons.AssaultRifle.AR_Barrel_LeadStorm BehaviorProviderDefinition BehaviorProviderDefinition'GD_Orchid_BossWeapons.Pistol.Pistol_Barrel_Vladof_Evie:BehaviorProviderDefinition_3'
+
+set GD_Sage_RaidWeapons.AssaultRifle.AR_Barrel_LeadStorm GestaltModeSkeletalMeshName AR_Barrel_Alien
+
+set GD_Sage_RaidWeapons.AssaultRifle.AR_Barrel_LeadStorm AttributeSlotUpgrades ((SlotName="WeaponSpread",GradeIncrease=10,bActivateSlot=True),(SlotName="AccuracyMax",GradeIncrease=100,bActivateSlot=True),(SlotName="AccuracyMin",GradeIncrease=100,bActivateSlot=True),(SlotName="AccuracyRegen",GradeIncrease=10,bActivateSlot=True),(SlotName="WeaponAccuracyImpulse",GradeIncrease=100,bActivateSlot=True))
+
+==================================================================================================================

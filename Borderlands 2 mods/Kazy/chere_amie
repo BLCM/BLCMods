@@ -1,8 +1,45 @@
-==========================================
-=  Moxxi's Chère-amie Adjustment         =
-==========================================
+##############################
+##   CHÈRE-AMIE ADJUSTMENTS ##
+##############################
 //created by Kazy
+##########################
+#   DISPLAY NAME
+##########################
+
+
+##########################
+#   RED TEXT
+##########################
+
+
+##########################
+#   RARITY
+##########################
+
+
+##########################
+#   WEAPON CARD
+##########################
+
+
+##########################
+#   WEAPON EFFECTS
+##########################
+set GD_Weap_SniperRifles.Barrel.SR_Barrel_Hyperion_ChereAmie CustomFiringModeDefinition FiringModeDefinition'GD_Weap_SniperRifles.FiringModes.Bullet_Sniper_Volcano'
+set GD_Weap_SniperRifles.Barrel.SR_Barrel_Hyperion_ChereAmie ExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.GameplayAttributes.PlayerCriticalHitBonus',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.400000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.DamageEnhancementModifiers.PlayerConvertDamageToHealingPercent',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.050000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+set GD_Weap_SniperRifles.Barrel.SR_Barrel_Hyperion_ChereAmie CustomFiringModeDefinition None
+set GD_Z2_Rakkaholics.M_Rakkaholics Reward (ExperienceRewardPercentage=(BaseValueConstant=0.100000,BaseValueAttribute=AttributeDefinition'GD_MissionRewardBalance.XP.XPReward_03_Medium',InitializationDefinition=None,BaseValueScaleConstant=1.000000),CurrencyRewardType=CURRENCY_Credits,CreditRewardMultiplier=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),OtherCurrencyReward=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),RewardItems=(WeaponBalanceDefinition'GD_Weap_SniperRifles.A_Weapons_Unique.Sniper_Maliwan_3_ChereAmie'),RewardItemPools=)
+
+##########################
+#   APPEARANCE
+##########################
+set GD_Weap_SniperRifles.Barrel.SR_Barrel_Hyperion_ChereAmie GestaltModeSkeletalMeshName SR_Barrel_Maliwan
+
+##########################
+#   APPEARANCE
+##########################
 // Vanilla Changes:
+// • Replaced the Sloth as Mordecai's reward for Rakkaholics Anonymous
 // • Removed the healing orbs from the Chère-amie
 // • Increasing the Damge-to-Healing from 2% to 5%
 // • Chère-amie projectile gained Splash Damage
@@ -10,18 +47,4 @@
 // Shadowevil1996's Community Patch Note:
 // • Damage-to-Healing dropped from 12%, but is still quite viable
 
-==================
-= Appearance
-==================
-set GD_Weap_SniperRifles.Barrel.SR_Barrel_Hyperion_ChereAmie GestaltModeSkeletalMeshName SR_Barrel_Maliwan
-
-==================
-= Projectile
-==================
-set GD_Weap_SniperRifles.Barrel.SR_Barrel_Hyperion_ChereAmie CustomFiringModeDefinition FiringModeDefinition'GD_Weap_SniperRifles.FiringModes.Bullet_Sniper_Volcano'
-
-==================
-= Weapon Attributes
-==================
-set GD_Weap_SniperRifles.Barrel.SR_Barrel_Hyperion_ChereAmie ExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.GameplayAttributes.PlayerCriticalHitBonus',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.400000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.DamageEnhancementModifiers.PlayerConvertDamageToHealingPercent',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.050000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
-
+##########################
