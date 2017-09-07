@@ -1,0 +1,93 @@
+|||||||||||||||||||||||||||||||||||||||||||||||||
+|                                               |
+|              Created by CzRSpecV              |
+|                                               |
+| Updates the Error Message into the Error Code |
+|                                               |
+|||||||||||||||||||||||||||||||||||||||||||||||||
+
+## IMPORTANT NOTE ##
+
+ This WILL buff Master Gee because he uses this weapon, however the changes aren't enough to make the fight much harder
+ 
+ This also slightly changes Purple Tediore Rocket Launchers because Gearbox doesn't have a seperate skin for the Error Message
+ 
+ Adds the Error Code to the Legendary Loot Pool of Gee, while removing the Gub
+ 
+##
+
+## Gibbed Code ##
+
+	BL2(hwAAAABGZgFB54IDCQGFTiAkQ0GBsACFGwoIFBwo/v9roshBgoPw)
+	
+##
+
+## Error Message > Error Code ##
+
+	Gun Changes:
+	
+		Accessory Enabled
+		Sight Enabled
+		No Delay on Explosion
+		
+	Projectile Changes:
+	
+		Faster Rocket
+		Increased Blast Radius
+		AI Cannot Dodge the Projectile ( They won't roll out of the way )
+		Increased the Rockets Lifetime ( Goes farther )
+		
+	Visual Changes:
+	
+		New Skin
+		New Name
+		New Red-Text
+		Changed Barrel from Maliwan to Torgue
+		
+	Drop Location:
+	
+		Master Gee
+
+##
+
+-- Rename and Red Text --
+
+set GD_Orchid_BossWeapons.Name.Title.Title__Unique_ERRORMESSAGE PartName Error Code
+
+set GD_Orchid_BossWeapons.Name.Title.Title__Unique_ERRORMESSAGE:AttributePresentationDefinition_8 NoConstraintText <font color="#79f146">01000101 01110010 01110010 01101111 01110010 00100000 00110100 00110000 00110100<font color="#ffffff"><font color="#ffffff"><br>[funstat]<font color="#e50026">Dodge this!<font color="#ffffff"><font color="#ffffff">
+
+-- Parts Unlock --
+
+set GD_Orchid_BossWeapons.RPG.Ahab.Orchid_Boss_Ahab_Balance_NODROP:WeaponPartListCollectionDefinition_288 Accessory1PartData (bEnabled=True,WeightedParts=((Part=WeaponPartDefinition'GD_Weap_Launchers.Accessory.RL_Accessory_BodyMod_1_Mag',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=2),(Part=WeaponPartDefinition'GD_Weap_Launchers.Accessory.RL_Accessory_BodyMod_2_Acc',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=2),(Part=WeaponPartDefinition'GD_Weap_Launchers.Accessory.RL_Accessory_Gripper_Reload',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=2),(Part=WeaponPartDefinition'GD_Weap_Launchers.Accessory.RL_Accessory_Handle_SwapSpeed',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=2),(Part=WeaponPartDefinition'GD_Weap_Launchers.Accessory.RL_Accessory_None',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=2),(Part=WeaponPartDefinition'GD_Weap_Launchers.Accessory.RL_Accessory_StockCover_RocketSpeed',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=2),(Part=WeaponPartDefinition'GD_Weap_Launchers.Accessory.RL_Accessory_StockTube_FireRate',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=2),(Part=WeaponPartDefinition'GD_Weap_Launchers.Accessory.RL_Accessory_TipCover_Damage',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=2)))
+
+set GD_Orchid_BossWeapons.RPG.Ahab.Orchid_Boss_Ahab_Balance_NODROP:WeaponPartListCollectionDefinition_288 SightPartData (bEnabled=True,WeightedParts=((Part=WeaponPartDefinition'GD_Weap_Launchers.Sight.RL_Sight_Bandit',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=2),(Part=WeaponPartDefinition'GD_Weap_Launchers.Sight.RL_Sight_Tediore',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=2),(Part=WeaponPartDefinition'GD_Weap_Launchers.Sight.RL_Sight_Vladof',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=2),(Part=WeaponPartDefinition'GD_Weap_Launchers.Sight.RL_Sight_Maliwan',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=2),(Part=WeaponPartDefinition'GD_Weap_Launchers.Sight.RL_Sight_Torgue',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=2)))
+
+set GD_Orchid_BossWeapons.RPG.Ahab.Orchid_Boss_Ahab_Balance_NODROP:WeaponPartListCollectionDefinition_288 ElementalPartData (bEnabled=True,WeightedParts=((Part=WeaponPartDefinition'GD_Weap_Launchers.elemental.RL_Elemental_None',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=2)))
+
+-- Projectile Change --
+
+set GD_Orchid_BossWeapons.RPG.Ahab.Orchid_Boss_Ahab_Projectile:BehaviorProviderDefinition_0.Behavior_Explode_77 Definition ExplosionDefinition'GD_Explosions.explosive.Explosion_ExplosiveMaster'
+
+set GD_Orchid_BossWeapons.RPG.Ahab.Orchid_Boss_Ahab_Projectile:BehaviorProviderDefinition_0.Behavior_Explode_77 DamageRadiusFormula (BaseValueConstant=750.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+
+set GD_Orchid_BossWeapons.RPG.Ahab.Orchid_Boss_Ahab_Projectile SpeedFormula (BaseValueConstant=1000.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=2.000000)
+
+set GD_Orchid_BossWeapons.RPG.Ahab.Orchid_Boss_Ahab_Projectile bAICanAvoid False
+
+set GD_Orchid_BossWeapons.RPG.Ahab.Orchid_Boss_Ahab_Projectile StickyChildSpawnCollisionIgnoreTime 0.000000
+
+set GD_Orchid_BossWeapons.RPG.Ahab.Orchid_Boss_Ahab_FireMode Lifetime 20.000000
+
+-- Drop Location --
+
+set GD_Orchid_ItemPools.Raid.Pool_Orchid_Raid3_Legendary BalancedItems ((ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Impact_05_Legendary',Probability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'GD_GrenadeMods.A_Item_Legendary.GM_StormFront',Probability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_Shotgun.A_Weapons_Legendary.SG_Jakobs_5_Striker',Probability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=None,InvBalanceDefinition=InventoryBalanceDefinition'GD_Weap_SniperRifles.A_Weapons_Legendary.Sniper_Dahl_5_Pitchfork',Probability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_SMG.A_Weapons_Legendary.SMG_Hyperion_5_Bitch',Probability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'GD_Orchid_BossWeapons.RPG.Ahab.Orchid_Boss_Ahab_Balance_NODROP',Probability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True))
+
+-- Skin --
+
+set Common_GunMaterials.Materials.Launcher.Mati_TedioreEpicRL TextureParameterValues ((ParameterName="p_NormalScopesEmissive",ParameterValue=Texture2D'Weap_Launchers.Tex.Weap_Launchers_Nrm',ExpressionGUID=(A=-1743872746,B=1126171774,C=119496871,D=-1952271718)),(ParameterName="p_Diffuse",ParameterValue=Texture2D'Common_GunMaterials.CompTextures.Weap_LauncherShotgunPistol_Comp',ExpressionGUID=(A=1757607260,B=1326539502,C=-317215581,D=-565807463)),(ParameterName="p_Masks",ParameterValue=Texture2D'Weap_Launchers.Tex.Weap_Launchers_Comp',ExpressionGUID=(A=-330624041,B=1167251458,C=-335191907,D=-166684394)),(ParameterName="P_SimpleReflect",ParameterValue=Texture2D'Common_GunMaterials.Patterns.Pattern_Lightning',ExpressionGUID=(A=-858148940,B=1327945772,C=148462268,D=1899047224)),(ParameterName="p_Decal",ParameterValue=Texture2D'FX_Shared_Energy.Textures.Assassin_Dash_Screen_Tex',ExpressionGUID=(A=-923052711,B=1309861752,C=584229786,D=-1229888527)))
+
+set Common_GunMaterials.Materials.Launcher.Mati_TedioreEpicRL VectorParameterValues ((ParameterName="p_CColorHilight",ParameterValue=(R=1.000000,G=1.000000,B=1.000000,A=1.000000),ExpressionGUID=(A=170014760,B=1132076783,C=-275608290,D=650702143)),(ParameterName="p_CColorMidtone",ParameterValue=(R=0.000000,G=0.000000,B=0.000000,A=1.000000),ExpressionGUID=(A=170014760,B=1132076783,C=-275608290,D=650702143)),(ParameterName="p_CColorShadow",ParameterValue=(R=1.000000,G=1.000000,B=1.000000,A=1.000000),ExpressionGUID=(A=170014760,B=1132076783,C=-275608290,D=650702143)),(ParameterName="p_PatternChannelScale",ParameterValue=(R=1.000000,G=0.000000,B=0.000000,A=1.000000),ExpressionGUID=(A=295058103,B=1318551573,C=-2045449573,D=-547597976)),(ParameterName="p_ReflectionChannelScale",ParameterValue=(R=0.000000,G=1.000000,B=1.000000,A=1.000000),ExpressionGUID=(A=295058103,B=1318551573,C=-2045449573,D=-547597976)),(ParameterName="p_ReflectColor",ParameterValue=(R=4.000000,G=4.000000,B=4.000000,A=1.000000),ExpressionGUID=(A=295058103,B=1318551573,C=-2045449573,D=-547597976)),(ParameterName="p_DecalColor",ParameterValue=(R=1.000000,G=1.000000,B=1.000000,A=1.000000),ExpressionGUID=(A=295058103,B=1318551573,C=-2045449573,D=-547597976)),(ParameterName="p_DecalChannel",ParameterValue=(R=0.000000,G=1.000000,B=0.000000,A=01.000000),ExpressionGUID=(A=295058103,B=1318551573,C=-2045449573,D=-547597976)))
+
+-- Barrel Visual Change --
+
+set GD_Orchid_BossWeapons.RPG.Ahab.Orchid_Boss_Ahab_Barrel GestaltModeSkeletalMeshName L_Barrel_Torgue
