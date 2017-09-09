@@ -16,8 +16,7 @@ This shotgun can be used without the ricochet due to it's high damage, kind of m
 
 [Notes]
 
-This shotgun can spawn with the Vertical Grip accesory, but don't use it for safety reasons. See below.
-Due to the shotgun bullets splitting and ricocheting into more bullets, BEWARE OF PERFORMANCE ISSUES. If you have a low spec computer, you might not want to use this.
+Due to the shotgun bullets splitting and ricocheting into more, BEWARE OF PERFORMANCE ISSUES. If you have a low spec computer, you might not want to use this.
 >>> BREAKS THE FIBBER, OCTO AND BOXXY! <<< (You can still use them, but they will behave differently) 
 
 [Features]
@@ -34,6 +33,8 @@ Due to the shotgun bullets splitting and ricocheting into more bullets, BEWARE O
 
 
 
+V4: Made the shotgun pellets a fixed number of 7 projectiles, regardless of if it has vertical grip or not.
+
 v3: Bullets now actually pierce targets.
     Buffed damage.
     Pearlescent rarity.
@@ -48,7 +49,7 @@ set GD_Cork_Weap_Shotgun.Barrel.SG_Barrel_Hyperion_Bullpup GestaltModeSkeletalMe
 set GD_Cork_Weap_Shotgun.Barrel.SG_Barrel_Hyperion_Bullpup CustomFiringModeDefinition FiringModeDefinition'GD_Cork_Weap_Pistol.FiringModes.Bullet_Pistol_Hyperion_Fibber_2'
 
 set GD_Cork_Weap_Shotgun.Barrel.SG_Barrel_Hyperion_Bullpup ExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.GameplayAttributes.PlayerCriticalHitBonus',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
-set GD_Cork_Weap_Shotgun.Barrel.SG_Barrel_Hyperion_Bullpup WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0.500000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.340000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponReloadSpeed',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0.200000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.510000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.00000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=-9999.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=1.00000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=8.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.AccuracyResourcePool.AccuracyMaxValue',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.200000)))
+set GD_Cork_Weap_Shotgun.Barrel.SG_Barrel_Hyperion_Bullpup WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0.500000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.340000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponReloadSpeed',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0.200000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-9999.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=7.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.00000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=-9999.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=1.00000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=8.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.AccuracyResourcePool.AccuracyMaxValue',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.200000)))
 
 set GD_Cork_Weap_Pistol.FiringModes.Bullet_Pistol_Hyperion_Fibber_2 NumRicochets 1
 set GD_Cork_Weap_Pistol.FiringModes.Bullet_Pistol_Hyperion_Fibber_2 RicochetResponse (SplitNum=2,SplitAngle=50.000000,SplitAngleOffset=0.000000,SplitDistance=100.000000,SplitFire=GD_Cork_Weap_Pistol.FiringModes.Bullet_Pistol_Hyperion_Fibber_1,NewSpeed=0.000000,bDetonate=False,bRespawnTracer=True,bUpdateBeamSourceLocation=False,Behaviors=)
@@ -79,4 +80,4 @@ set GD_Cork_Weap_Shotgun.Barrel.SG_Barrel_Hyperion_Bullpup rarity (BaseValueCons
 set GD_Cork_Weap_Shotgun.Barrel.SG_Barrel_Hyperion_Bullpup rarity (BaseValueConstant=497)
 
 set GD_Cork_Weap_Shotgun.Name.Titles.Title__Unique_Bullpup PartName Black Death
-set GD_Cork_Weap_Shotgun.Name.Titles.Title__Unique_Bullpup:AttributePresentationDefinition_8 NoConstraintText <font color="#ff0235">Death Brings Hope<font color="#ffffff"><br>[funstat]+100% [skill]Ricochet madness![-skill]<font color="#ffffff">
+set GD_Cork_Weap_Shotgun.Name.Titles.Title__Unique_Bullpup:AttributePresentationDefinition_8 NoConstraintText <font color="#ff0235">Death Brings Hope<font color="#ffffff"><br>[funstat]+100% [skill]Ricochet madness.[-skill]<font color="#ffffff">
