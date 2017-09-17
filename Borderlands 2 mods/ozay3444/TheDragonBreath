@@ -1,0 +1,67 @@
+==================================================================================================================
+replace the Volcano (hate it!)
+
+the Dragon Breath
+
+shot COOL flams (Ba Dum Tss!)
+
+6 burst (aim or not)
+
+braek the Madhouse
+
+hurd to aim!!!
+
++damage
+
++fire rate
+
+created by ozay (or oz yohay)
+===================================================================================================================
+##skin##
+
+set GD_Weap_SniperRifles.ManufacturerMaterials.Material_Maliwan_5_Legendary Material MaterialInstanceConstant 'Aster_GunMaterials.Materials.sniper.Mati_Vladof_Garnet_Sniper'
+
+##name##
+
+
+
+set GD_Weap_SniperRifles.Name.Title_Maliwan.Title_Legendary_Volcano PartName Dragon Breath
+
+set GD_Weap_SniperRifles.Name.Title_Maliwan.Title_Legendary_Volcano:AttributePresentationDefinition_8 NoConstraintText Burn, EVERY THING!
+
+##stats##
+
+
+
+
+set GD_Weap_SniperRifles.Barrel.SR_Barrel_Maliwan_Volcano WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-3.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponReloadSpeed',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponPerShotAccuracyImpulse',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponAutomaticBurstCount',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=6.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+
+set GD_Weap_SniperRifles.Barrel.SR_Barrel_Maliwan_Volcano ZoomWeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponAutomaticBurstCount',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=6.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))
+
+
+
+
+
+##Shots##
+
+
+set GD_Weap_SniperRifles.Barrel.SR_Barrel_Maliwan_Volcano CustomFiringModeDefinition FiringModeDefinition 'GD_Weap_AssaultRifle.FiringModes.Bullet_Assault_Bandit_Madhouse'
+
+set GD_Weap_AssaultRifle.FiringModes.Bullet_Assault_Bandit_Madhouse FireType EWWFT_Bullet
+
+set GD_Weap_AssaultRifle.FiringModes.Bullet_Assault_Bandit_Madhouse PartSysTemplate ParticleSystem 'FX_WEP_Trails_Alien.Particles.Part_Shotgun_Alien_Incendiary_Tracer'
+
+set GD_Weap_AssaultRifle.FiringModes.Bullet_Assault_Bandit_Madhouse Lifetime 9999.000000
+
+set GD_Weap_AssaultRifle.FiringModes.Bullet_Assault_Bandit_Madhouse OnAnyImpact ()
+
+set GD_Weap_AssaultRifle.FiringModes.Bullet_Assault_Bandit_Madhouse bSuppressImpactEffects True
+
+set GD_Weap_AssaultRifle.FiringModes.Bullet_Assault_Bandit_Madhouse FiringPatternLines ()
+
+set GD_Weap_AssaultRifle.FiringModes.Bullet_Assault_Bandit_Madhouse NumRicochets 0
+
+set GD_Weap_AssaultRifle.FiringModes.Bullet_Assault_Bandit_Madhouse bPenetratePawn True
+
+==================================================================================================================
