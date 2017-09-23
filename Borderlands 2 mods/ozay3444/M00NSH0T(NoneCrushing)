@@ -1,0 +1,45 @@
+========================================================================
+THE ORIGINAL WILL BREAK THE GAME IF YOU HAVE TO MUCH MODS, THIS ONE NOT!
+
+replace the bunny
+
+THE MOONSHOT!!!
+
+This weapon is for kiling everythin thet can move
+
+something coll is thet every elemant is like new weapon: fire looks like DOOM, explosive shots novas in all elemant and more!
+
+shoots explosive laser with infanet ammo
+
+created by ozay (or oz yohay)
+
+(00Themessiah00 pls do a vido on this :D)
+==========================================================================
+##name##
+
+set GD_Weap_Launchers.Name.Title_Tediore.Title_Legendary_Bunny PartName M00NSH0T
+set GD_Weap_Launchers.Name.Title_Tediore.Title_Legendary_Bunny:AttributePresentationDefinition_8 NoConstraintText BadAss
+
+##skin##
+set Common_GunMaterials.Materials.Launcher.Mati_TedioreLegendaryRL Parent Common_GunMaterials.Materials.Launcher.Mati_VladofUncommonRL
+
+##shots##
+
+set GD_Weap_Launchers.Barrel.L_Barrel_Tediore_Bunny CustomFiringModeDefinition FiringModeDefinition 'GD_Weap_SMG.FiringModes.Bullet_SMG_HellFire'
+
+set GD_Weap_SMG.FiringModes.Bullet_SMG_HellFire DamageTypeDefinition WillowDamageTypeDefinition'GD_Shock.DamageType.DmgType_Shock_Impact'
+set GD_Weap_SMG.FiringModes.Bullet_SMG_HellFire:Behavior_Explode_5 DamageFormula (BaseValueScaleConstant=0.850000)
+set GD_Weap_SMG.FiringModes.Bullet_SMG_HellFire:Behavior_Explode_5 DamageRadiusFormula (BaseValueConstant=150.000000)
+set GD_Weap_SMG.FiringModes.Bullet_SMG_HellFire:Behavior_Explode_5 StatusEffectDamage (BaseValueConstant=1.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.Weapon.WeaponStatusEffectDamage',InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+set GD_Weap_SMG.FiringModes.Bullet_SMG_HellFire PartSysTemplate ParticleSystem'FX_WEP_Trails.Particles.Alien.Part_Wep_Tracer_Alien_Sniper'
+set GD_Weap_SMG.FiringModes.Bullet_SMG_HellFire ConditionalPartSysTemplate EffectCollectionDefinition'GD_Weap_SniperRifles.Effects.SR_ETech_Tracers'
+set GD_Weap_SMG.FiringModes.Bullet_SMG_HellFire Speed 20000.000000
+
+##stats##
+
+
+set GD_Weap_Launchers.Barrel.L_Barrel_Tediore_Bunny ExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.GameplayAttributes.FootSpeed',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.SkillAttributes.RevivalHealthMultiplier',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=1000.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=2.000000)))
+
+set D_Attributes.SkillAttributes.RevivalHealthMultiplier:ObjectpropertyAttributeValueResolver_20 PropertyName JumpZ
+set D_Attributes.Injured.RevivedHealthAmount:SimpleMathValueResolver_0 Argument (BaseValueScaleConstant=0.000000)
+set GD_Weap_Launchers.Barrel.L_Barrel_Tediore_Bunny WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-30.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=10.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponReloadSpeed',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=-2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponPerShotAccuracyImpulse',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-100.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))

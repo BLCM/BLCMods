@@ -1,0 +1,92 @@
+#<Double Anarchy>
+
+    #<Description>
+
+        By Aaron0000
+
+        Features:
+
+        Changes the accuracy accessory of SMGs into the Double Accessory from Borderlands 1.
+
+        Changes Bandit barrels to be similar to the Anarchy barrels from Borderlands 1.
+
+        Together they form Double Anarchies.
+
+        Prefixes changed to match Pistol double accesory prefix.
+
+        NOTES:
+
+        If using S&S Forever/S&S Lite, these is a fix for each of them at the bottom.
+
+        If using Old Hyperion, these is a fix for it at the bottom.
+
+    #</Description>
+
+    #<Code>
+
+        #<Double Accessory>
+
+            set GD_Weap_SMG.Accessory.SMG_Accessory_Body1_Accurate WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.550000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Hyperion',InitializationDefinition=None,BaseValueScaleConstant=0.150000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.200000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.200000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponPerShotAccuracyImpulse',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Hyperion',InitializationDefinition=None,BaseValueScaleConstant=-1.200000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponPerShotAccuracyImpulse',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.200000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+            set GD_Weap_SMG.Accessory.SMG_Accessory_Body1_Accurate AttributeSlotUpgrades ((SlotName="AccuracyMin",GradeIncrease=-5,bActivateSlot=True),(SlotName="WeaponSpread",GradeIncrease=-7,bActivateSlot=True),(SlotName="WeaponFireRate",GradeIncrease=-10,bActivateSlot=True),(SlotName="WeaponMagSize",GradeIncrease=4,bActivateSlot=True),(SlotName="WeaponDamage",GradeIncrease=-10,bActivateSlot=True),(SlotName="WeaponReloadSpeed",GradeIncrease=-5,bActivateSlot=True))
+
+            set GD_Weap_SMG.Accessory.SMG_Accessory_Body1_Accurate WeaponCardAttributes ((Attribute=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',PriorityIncrease=-3.000000),(Attribute=AttributeDefinition'D_Attributes.Weapon.WeaponReloadSpeed',PriorityIncrease=-3.000000),(Attribute=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',PriorityIncrease=-3.000000),(Attribute=AttributeDefinition'D_Attributes.Weapon.WeaponPerShotAccuracyImpulse',PriorityIncrease=-3.000000),(Attribute=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',PriorityIncrease=0.500000))
+
+        #</Double Accessory>
+
+        #<Anarchy Barrel>
+
+            set GD_Weap_SMG.Barrel.SMG_Barrel_Bandit WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Hyperion',InitializationDefinition=None,BaseValueScaleConstant=0.200000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-0.700000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.300000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+            set GD_Weap_SMG.Barrel.SMG_Barrel_Bandit AttributeSlotUpgrades ((SlotName="WeaponFireRate",GradeIncrease=5,bActivateSlot=True),(SlotName="AccuracyMin",GradeIncrease=-4,bActivateSlot=True),(SlotName="AccuracyMax",GradeIncrease=15,bActivateSlot=True),(SlotName="WeaponSpread",GradeIncrease=-30,bActivateSlot=True))
+
+            set GD_Weap_SMG.Barrel.SMG_Barrel_Bandit WeaponCardAttributes ((Attribute=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',PriorityIncrease=-3.000000),(Attribute=AttributeDefinition'D_Attributes.Weapon.WeaponReloadSpeed',PriorityIncrease=-3.000000),(Attribute=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',PriorityIncrease=-3.000000),(Attribute=AttributeDefinition'D_Attributes.Weapon.WeaponPerShotAccuracyImpulse',PriorityIncrease=-3.000000))
+
+        #</Anarchy Barrel>
+
+        #<Prefixes>
+
+            set GD_Weap_SMG.Name.Prefix.Prefix_Body1_Accurate PartName Double
+
+            set GD_Weap_SMG.Name.Prefix_Bandit.Prefix_Body1_Accurate PartName Dubble
+
+            set GD_Weap_SMG.Name.Prefix_Dahl.Prefix_Body1_Accurate PartName Twin
+
+            set GD_Weap_SMG.Name.Prefix_Hyperion.Prefix_Body1_Accurate PartName Redundant
+
+            set GD_Weap_SMG.Name.Prefix_Maliwan.Prefix_Body1_Accurate PartName Binary
+
+            set GD_Weap_SMG.Name.Prefix_Tediore.Prefix_Body1_Accurate PartName Two for One
+
+        #</Prefixes>
+
+    #</Code>
+
+    #<Fixes>
+
+        #<S&S Forever Fix>
+
+            #set GD_Weap_SMG.Name.Prefix_Bandit.Prefix_Body1_Accurate PartName Paired<off>
+
+            #set GD_Weap_SMG.Name.Prefix_Bandit.Prefix_Body1_Accurate ExternalAttributeEffects ((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Patrol_SMG.Ammo_Patrol_SMG_RegenerationRate',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.500000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Bandit',InitializationDefinition=None,BaseValueScaleConstant=1.000000)))<off>
+
+        #</S&S Forever Fix>
+
+        #<S&S Lite Fix>
+
+            #set GD_Weap_SMG.Name.Prefix_Bandit.Prefix_Body1_Accurate PartName Paired<off>
+
+        #</S&S Lite Fix>
+
+        #<Old Hyperion Fix>
+
+            #set GD_Weap_SMG.Accessory.SMG_Accessory_Body1_Accurate WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.550000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.200000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.200000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponPerShotAccuracyImpulse',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Hyperion',InitializationDefinition=None,BaseValueScaleConstant=-1.200000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponPerShotAccuracyImpulse',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.200000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))<off>
+
+            #set GD_Weap_SMG.Barrel.SMG_Barrel_Bandit WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-0.700000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.300000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))<off>
+
+        #</Old Hyperion Fix>
+
+    #</Fixes>
+
+#</Double Anarchy>
+
