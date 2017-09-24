@@ -1,3 +1,5 @@
+Celestial Aristocrat - Celestial com for contract/servant Aurelia. I made this com EXTREMELY powerful (4 team stat boosts &  +5 points on 8 skills) because it requires co-op.
+
 Celestial Blademaster - Celestial com for melee Athena.
 
 Celestial Huntress - Celestial com for sniper Aurelia.
