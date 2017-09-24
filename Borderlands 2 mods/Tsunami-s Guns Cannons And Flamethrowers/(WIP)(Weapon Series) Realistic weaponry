@@ -32,6 +32,7 @@ Regenerates 20 rounds per second
 -50% Movement speed
 5 Seconds to enquip
 5 Seconds to unenquip
+Scope
 
 #######################################################
 set GD_Weap_AssaultRifle.A_Weapons_Legendary.AR_Bandit_5_Madhouse:WeaponPartListCollectionDefinition_35 BarrelPartData (bEnabled=True,WeightedParts=((Part=WeaponPartDefinition'GD_Weap_AssaultRifle.Barrel.AR_Barrel_Vladof_Shredifier',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=2)))
@@ -75,6 +76,7 @@ Accuracy decreases slowly with continues fire
 High damage per shot
 Low recoil
 Black Skin
+Iron-Sight
 ########################################################
 set GD_Weap_Shotgun.A_Weapons_Legendary.SG_Bandit_5_SledgesShotgun:WeaponPartListCollectionDefinition_135 BarrelPartData (bEnabled=True,WeightedParts=((Part=WeaponPartDefinition'GD_Weap_Shotgun.Barrel.SG_Barrel_Hyperion_Striker',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=2)))
 
@@ -101,12 +103,14 @@ Link to wiki page on the Heavy Revolver: http://gta.wikia.com/wiki/Heavy_Revolve
 Weapon code required:BL2(hwAAAADYXQSHJ4AJBwEFQMNwhVGA8v///////9Iw/v8boPz/f4Dy)
 
 Very high damage per shot
-1.8 firerate
+Slightly slow firerate
 Shots penetrates enemies
 Shots penetrates shields
 Does heavy melee damage
+Suitable for Med range
 6 Round magazine
 Slower reload
+Iron-Sight
 #########################################################
 set GD_Sage_Weapons.Pistols.Pistol_Barrel_Jakobs_Rex CustomFiringModeDefinition FiringModeDefinition'GD_Weap_Pistol.FiringModes.Bullets_Pistol_Bandit_Tinderbox'
 
@@ -145,12 +149,15 @@ Link to wiki page: http://gta.wikia.com/wiki/Mini_SMG
 
 Weapon Code required: BL2(hwAAAACABACE5wRACgEF6MNYhQEQ4/////////////8rxPj/jxHj)
 
-Low damage per shot compared to other weapons
+Less damage per shot compared to other weapons
 11 Firerate
 But can do a lot of damage very fast
 30 round mag (can run out of ammo fast)
 Slightly faster reload than other weapons
-
+Lower velocity
+Suitable for Short to Med range
+Small but a storm of bullets
+Iron-Sight
 ###########################################################
 set GD_Weap_Pistol.Barrel.Pistol_Barrel_Hyperion_LogansGun CustomFiringModeDefinition FiringModeDefinition'None'
 
@@ -162,9 +169,9 @@ set GD_Weap_Pistol.ManufacturerMaterials.Mat_Vladof_5_Legendary Material Materia
 	
 set GD_Weap_Pistol.Name.Title_Vladof.Title_Legendary_Infinity PartName Mini SMG
 
-set GD_Weap_Pistol.Name.Title_Vladof.Title_Legendary_Infinity:AttributePresentationDefinition_8 NoConstraintText Increasingly popular since the marketing team looked beyond spec ops units and started caring about the little guys in low income areas.<br><br>Ammu-Nation.<br><br><font color="#FFFFFF">Accesories: Extended Clip
+set GD_Weap_Pistol.Name.Title_Vladof.Title_Legendary_Infinity:AttributePresentationDefinition_8 NoConstraintText Increasingly popular since the marketing team looked beyond spec ops units and started caring about the little guys in low income areas.<br><br>Ammu-Nation.<br><br><font color="#FFFFFF">Accesories: <br>Extended Clip
 
-set GD_Weap_Pistol.Barrel.Pistol_Barrel_Hyperion_LogansGun WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponReloadSpeed',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.100000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=35.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.010000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.500000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Vladof',InitializationDefinition=None,BaseValueScaleConstant=0.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectileSpeedMultiplier',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=10.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))))))))
+set GD_Weap_Pistol.Barrel.Pistol_Barrel_Hyperion_LogansGun WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponReloadSpeed',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.100000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=35.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.010000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.500000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Vladof',InitializationDefinition=None,BaseValueScaleConstant=0.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectileSpeedMultiplier',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))))))))
 
 set GD_Weap_Pistol.Barrel.Pistol_Barrel_Hyperion_LogansGun AttributeSlotUpgrades ((SlotName="WeaponMagSize",GradeIncrease=-6,bActivateSlot=True),(SlotName="WeaponFireRate",GradeIncrease=13,bActivateSlot=True),(SlotName="AccuracyMax",GradeIncrease=30,bActivateSlot=True),(SlotName="AccuracyMin",GradeIncrease=999999,bActivateSlot=True),(SlotName="WeaponAccuracyImpulse",GradeIncrease=50,bActivateSlot=True),
 
@@ -174,11 +181,102 @@ set GD_Weap_Pistol.Barrel.Pistol_Barrel_Hyperion_LogansGun rarity (BaseValueCons
 
 
 
+Double-Shot Incendiary Rocket Launcher
+
+Weapon code required: BL2(hwAAAAAv3gBDh4M/AgEFAKAIQ5GLQgDFGooIFBko/v/bovj/P4zi)
+
+Lower damage
+Suitable for Short to Med range
+Good accuracy
+Double-Shot magazine
+Quick-Load magazine
+Scope
+Slows your mobility by half
+Rockets have 100% chance burn enemies in blast range
+Rockets have high burn damage
+Rockets have small blast radius
+############################################################
+set GD_Weap_Launchers.A_Weapons_Unique.RL_Bandit_3_Roaster:WeaponPartListCollectionDefinition_69 MaterialPartData (bEnabled=True,WeightedParts=((Part=WeaponPartDefinition'GD_Weap_Launchers.ManufacturerMaterials.Mat_BanditMade_3_Roaster',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=2)))
+
+set GD_Weap_Launchers.A_Weapons_Unique.RL_Bandit_3_Roaster:WeaponPartListCollectionDefinition_69 ElementalPartData (bEnabled=True,WeightedParts=((Part=WeaponPartDefinition'GD_Weap_Launchers.elemental.RL_Elemental_Fire',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=2)))
+
+set GD_Weap_Launchers.A_Weapons_Unique.RL_Bandit_3_Roaster:WeaponPartListCollectionDefinition_69 PrefixPartData (bEnabled=True,WeightedParts=((Part=WeaponPartDefinition'None',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=2)))
+
+set GD_Weap_Shotgun.Projectiles.Projectile_SplatBall:BehaviorProviderDefinition_0.Behavior_Explode_5 DamageRadiusFormula (BaseValueConstant=350.000000)
+
+set GD_Weap_Launchers.Barrel.L_Barrel_Tediore_Roaster CustomFiringModeDefinition FiringModeDefinition'GD_Weap_Shotgun.FiringModes.Bullets_Splatgun'
+
+set GD_Weap_Launchers.Barrel.L_Barrel_Tediore_Roaster WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponReloadSpeed',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponStatusEffectDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=100.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponStatusEffectChanceModifier',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=100.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=30.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Bandit',InitializationDefinition=None,BaseValueScaleConstant=-2.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectileSpeedMultiplier',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))))))))
+
+set GD_Weap_Launchers.Barrel.L_Barrel_Tediore_Roaster AttributeSlotUpgrades ((SlotName="WeaponMagSize",GradeIncrease=-20,bActivateSlot=True),(SlotName="AccuracyMin",GradeIncrease=100,bActivateSlot=True),
+
+set GD_Weap_Launchers.Name.Title.Title__Unique_Roaster PartName Double-Shot Incendiary Rocket Launcher
+
+set GD_Weap_Launchers.Name.Title.Title__Unique_Roaster:AttributePresentationDefinition_8 NoConstraintText For burning down groups of unarmored enemies, hellfire packed in small rockets.<br><br><font color="#FFFFFF">Incendiary Rounds<br><br>Accessories: <br>Quick-Load magazine. <br>Double-Shot magazine.
+
+set GD_Weap_Launchers.Barrel.L_Barrel_Tediore_Roaster rarity (BaseValueConstant=25.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+
+set GD_Weap_Launchers.Barrel.L_Barrel_Tediore_Roaster ExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.GameplayAttributes.FootSpeed',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))
+
+set Common_GunMaterials.Materials.Launcher.Mati_BanditUniqueRL_Roaster TextureParameterValues ((ParameterName="p_NormalScopesEmissive",ParameterValue=Texture2D'Weap_Launchers.Tex.Weap_Launchers_Nrm',ExpressionGUID=(A=-1743872746,B=1126171774,C=119496871,D=-1952271718)),(ParameterName="p_Diffuse",ParameterValue=Texture2D'Common_GunMaterials.CompTextures.Weap_LauncherShotgunPistol_Comp',ExpressionGUID=(A=1757607260,B=1326539502,C=-317215581,D=-565807463)),(ParameterName="p_Masks",ParameterValue=Texture2D'Weap_Launchers.Tex.Weap_Launchers_Comp',ExpressionGUID=(A=-330624041,B=1167251458,C=-335191907,D=-166684394)),(ParameterName="P_SimpleReflect",ParameterValue=Texture2D'Common_GunMaterials.Env.Gold',ExpressionGUID=(A=-858148940,B=1327945772,C=148462268,D=1899047224)),(ParameterName="p_Pattern",ParameterValue=Texture2D'Common_GunMaterials.Patterns.Patter_MaliwanFire',ExpressionGUID=(A=534250533,B=1202550002,C=1578302861,D=-717876416)),(ParameterName="p_Decal",ParameterValue=Texture2D'Common_GunMaterials.Patterns.Pattern_JakobsEpic_SpaltedMaple',ExpressionGUID=(A=-923052711,B=1309861752,C=584229786,D=-1229888527)))
+
+set Common_GunMaterials.Materials.Launcher.Mati_BanditUniqueRL_Roaster VectorParameterValues ((ParameterName="p_AColorHilight",ParameterValue=(R=0.050000,G=0.050000,B=0.050000,A=1.000000),ExpressionGUID=(A=170014760,B=1132076783,C=-275608290,D=650702143)),(ParameterName="p_AColorMidtone",ParameterValue=(R=0.050000,G=0.050000,B=0.050000,A=1.000000),ExpressionGUID=(A=473504356,B=1338058895,C=824823046,D=864253013)),(ParameterName="p_AColorShadow",ParameterValue=(R=0.050000,G=0.050000,B=0.050000,A=1.000000),ExpressionGUID=(A=-429590041,B=1156405294,C=-1015192900,D=687313410)),(ParameterName="p_BColorHilight",ParameterValue=(R=0.050000,G=0.050000,B=0.050000,A=1.000000),ExpressionGUID=(A=170714760,B=1132476783,C=-275668290,D=655702143)),(ParameterName="p_BColorMidtone",ParameterValue=(R=0.050000,G=0.050000,B=0.050000,A=1.000000),ExpressionGUID=(A=473594356,B=1338758895,C=824823946,D=864253813)),(ParameterName="p_BColorShadow",ParameterValue=(R=0.050000,G=0.050000,B=0.050000,A=1.000000),ExpressionGUID=(A=-429590341,B=1156435294,C=-1015192901,D=687313413)),(ParameterName="p_CColorHilight",ParameterValue=(R=0.050000,G=0.050000,B=0.050000,A=1.000000),ExpressionGUID=(A=170714760,B=1132476783,C=-275668290,D=655702143)),(ParameterName="p_CColorMidtone",ParameterValue=(R=0.050000,G=0.050000,B=0.050000,A=1.000000),ExpressionGUID=(A=473594356,B=1338758895,C=824823946,D=864253813)),(ParameterName="p_CColorShadow",ParameterValue=(R=0.050000,G=0.050000,B=0.050000,A=1.000000),ExpressionGUID=(A=-429590341,B=1156435294,C=-1015192901,D=687313413)),(ParameterName="p_DColor",ParameterValue=(R=2.000000,G=2.000000,B=2.000000,A=1.000000),ExpressionGUID=(A=696455109,B=1155878830,C=-1741888361,D=802120528)),(ParameterName="p_EmissiveColor",ParameterValue=(R=0.000000,G=0.000000,B=0.000000,A=1.000000),ExpressionGUID=(A=-2074486426,B=1296399582,C=-2021314681,D=-350758005)),(ParameterName="p_ReflectColor",ParameterValue=(R=16.000000,G=16.000000,B=16.300000,A=1.000000),ExpressionGUID=(A=295058103,B=1318551573,C=-2045449573,D=-547597976)),(ParameterName="p_ReflectionChannelScale",ParameterValue=(R=1.000000,G=1.000000,B=0.900000,A=1.000000),ExpressionGUID=(A=295058103,B=1318551573,C=-2045449573,D=-547597976)),(ParameterName="p_PatternColor",ParameterValue=(R=2.000000,G=2.000000,B=2.000000,A=1.000000),ExpressionGUID=(A=676539706,B=1125682796,C=1871983293,D=-2049503601)),(ParameterName="p_PatternScalePosition",ParameterValue=(R=12.000000,G=8.000000,B=6.000000,A=1.000000),ExpressionGUID=(A=-2005018406,B=1132497243,C=-39915121,D=208423616)),(ParameterName="p_PatternChannelScale",ParameterValue=(R=1.000000,G=1.000000,B=1.000000,A=1.000000),ExpressionGUID=(A=439432319,B=1091149893,C=-1991909502,D=1816944627)),(ParameterName="p_DecalColor",ParameterValue=(R=0.800000,G=1.600000,B=1.600000,A=1.000000),ExpressionGUID=(A=1691998600,B=1239094551,C=2074257317,D=1844701893)),(ParameterName="p_DecalScalePosition",ParameterValue=(R=17.100000,G=24.100000,B=0.400000,A=.500000),ExpressionGUID=(A=395540170,B=1243133493,C=-1264190552,D=123075385)),(ParameterName="p_DecalChannel",ParameterValue=(R=1.000000,G=1.000000,B=1.000000,A=1.000000),ExpressionGUID=(A=1869386622,B=1303200947,C=-1616405849,D=714558284)))
+
+set Common_GunMaterials.Materials.Launcher.Mati_BanditUniqueRL_Roaster ScalarParameterValues ((ParameterName="p_HighlightsIntensity",ParameterValue=0.450000,ExpressionGUID=(A=-1257568432,B=1277066486,C=-723473993,D=-1144384173)),(ParameterName="p_ShadowsIntensity",ParameterValue=1.000000,ExpressionGUID=(A=437293753,B=1205147708,C=-775723903,D=1480014964)),(ParameterName="p_ReflectColorScale",ParameterValue=1.000000,ExpressionGUID=(A=1875785607,B=1186033550,C=-1822263113,D=-1465755701)),(ParameterName="p_ReplacePattern",ParameterValue=0.000000,ExpressionGUID=(A=-2084339847,B=1096440125,C=439008937,D=45433490)),(ParameterName="p_DecalRotate",ParameterValue=0.000000,ExpressionGUID=(A=-276527909,B=1298581551,C=856978878,D=743944047)),(ParameterName="p_ReplaceDecal",ParameterValue=0.000000,ExpressionGUID=(A=85863466,B=1257609701,C=-728575820,D=1337098176)),(ParameterName="p_UseFullColorDecal",ParameterValue=1.000000,ExpressionGUID=(A=-1064329812,B=1077705328,C=339664807,D=1869745420)))
+############################################################
 
 
 
+
+Antique Prototype Magnum ATR (Anti-Tank Rifle)
+
+Extremely high damage per shot
+Very good accuracy (Not pin-point)
+Incredibly high velocity (Almost a aim and shoot rifle)
+Very high recoil and hard to handle
+Iron-Sight
+Shots pierces heavy armor and shields
+Shots pierces multiple enemies
+Very high caliber
+Bolt-Action
+Slow firerate
+Slow reload
+Suitable for long range
+############################################################
+set GD_Iris_Weapons.SniperRifles.Sniper_Jakobs_3_Cobra:WeaponPartListCollectionDefinition_269 BarrelPartData (bEnabled=True,WeightedParts=((Part=WeaponPartDefinition'GD_Weap_SniperRifles.Barrel.SR_Barrel_Jakobs_Skullmasher',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=2)))
+
+set GD_Iris_Weapons.SniperRifles.Sniper_Jakobs_3_Cobra:WeaponPartListCollectionDefinition_269 PrefixPartData (bEnabled=True,WeightedParts=((Part=WeaponPartDefinition'None',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=2)))
+
+set GD_Weap_SniperRifles.Barrel.SR_Barrel_Jakobs_Skullmasher AttributeSlotUpgrades ((SlotName="WeaponFireRate",GradeIncrease=-30,bActivateSlot=True),(SlotName="AccuracyMax",GradeIncrease=15,bActivateSlot=True),(SlotName="AccuracyMin",GradeIncrease=-10,bActivateSlot=True),(SlotName="WeaponAccuracyImpulse",GradeIncrease=-60,bActivateSlot=True),
+
+set GD_Weap_SniperRifles.Name.Title_Jakobs.Title_Legendary_Skullmasher PartName Antique Prototype Magnum ATR
+
+set GD_Weap_SniperRifles.Barrel.SR_Barrel_Jakobs_Skullmasher WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponReloadSpeed',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=400.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Jakobs',InitializationDefinition=None,BaseValueScaleConstant=0.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectileSpeedMultiplier',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=100.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))))))
+
+set GD_Weap_SniperRifles.Name.Title_Jakobs.Title_Legendary_Skullmasher:AttributePresentationDefinition_8 NoConstraintText A Post-WWII experimental light-weight infantry weapon developed piercing through heavily armored tanks, and more than enough to kill ten men with one shot.<br><br><font color="#FFFFFF">Bolt-Action<br>Iron-Sight<br>Armor-Piercing Rounds
+
+set GD_Weap_SniperRifles.Barrel.SR_Barrel_Jakobs_Skullmasher CustomFiringModeDefinition FiringModeDefinition'GD_Weap_Pistol.FiringModes.Bullets_Pistol_Bandit_Tinderbox'
+
+set GD_Weap_Pistol.FiringModes.Bullets_Pistol_Bandit_Tinderbox FiringPatternLines ()
+
+set GD_Weap_Pistol.FiringModes.Bullets_Pistol_Bandit_Tinderbox PenetratePawn True
+
+set GD_Weap_Pistol.FiringModes.Bullets_Pistol_Bandit_Tinderbox OnAnyImpact ()
+
+set Iris_GunMaterials.Materials.sniper.Mati_JakobsUniqueSR_Cobra TextureParameterValues ((ParameterName="p_NormalScopesEmissive",ParameterValue=Texture2D'Weap_SniperRifles.Tex.Weap_SniperRifle_Nrm',ExpressionGUID=(A=-1743872746,B=1126171774,C=119496871,D=-1952271718)),(ParameterName="p_Diffuse",ParameterValue=Texture2D'Common_GunMaterials.CompTextures.Weap_AssaultSubSniper_Comp',ExpressionGUID=(A=1757607260,B=1326539502,C=-317215581,D=-565807463)),(ParameterName="p_Masks",ParameterValue=Texture2D'Weap_SniperRifles.Tex.Weap_SniperRifle_Comp',ExpressionGUID=(A=-330624041,B=1167251458,C=-335191907,D=-166684394)),(ParameterName="P_SimpleReflect",ParameterValue=Texture2D'Common_GunMaterials.Env.Gold',ExpressionGUID=(A=-858148940,B=1327945772,C=148462268,D=1899047224)),(ParameterName="p_Pattern",ParameterValue=Texture2D'Common_GunMaterials.Patterns.Patter_MaliwanFire',ExpressionGUID=(A=534250533,B=1202550002,C=1578302861,D=-717876416)),(ParameterName="p_Decal",ParameterValue=Texture2D'Common_GunMaterials.Patterns.Pattern_JakobsEpic_SpaltedMaple',ExpressionGUID=(A=-923052711,B=1309861752,C=584229786,D=-1229888527)))
+
+set Iris_GunMaterials.Materials.sniper.Mati_JakobsUniqueSR_Cobra VectorParameterValues ((ParameterName="p_AColorHilight",ParameterValue=(R=0.000000,G=0.000000,B=0.000000,A=1.000000),ExpressionGUID=(A=170014760,B=1132076783,C=-275608290,D=650702143)),(ParameterName="p_AColorMidtone",ParameterValue=(R=1.040000,G=0.430000,B=0.430000,A=1.000000),ExpressionGUID=(A=473504356,B=1338058895,C=824823046,D=864253013)),(ParameterName="p_AColorShadow",ParameterValue=(R=0.000000,G=0.000000,B=0.000000,A=1.000000),ExpressionGUID=(A=-429590041,B=1156405294,C=-1015192900,D=687313410)),(ParameterName="p_BColorHilight",ParameterValue=(R=0.000000,G=0.000000,B=0.000000,A=1.000000),ExpressionGUID=(A=170714760,B=1132476783,C=-275668290,D=655702143)),(ParameterName="p_BColorMidtone",ParameterValue=(R=0.000000,G=0.000000,B=0.000000,A=1.000000),ExpressionGUID=(A=473594356,B=1338758895,C=824823946,D=864253813)),(ParameterName="p_BColorShadow",ParameterValue=(R=0.000000,G=0.000000,B=0.000000,A=1.000000),ExpressionGUID=(A=-429590341,B=1156435294,C=-1015192901,D=687313413)),(ParameterName="p_CColorHilight",ParameterValue=(R=0.000000,G=0.000000,B=0.000000,A=1.000000),ExpressionGUID=(A=170714760,B=1132476783,C=-275668290,D=655702143)),(ParameterName="p_CColorMidtone",ParameterValue=(R=1.560000,G=1.490000,B=1.490000,A=1.000000),ExpressionGUID=(A=473594356,B=1338758895,C=824823946,D=864253813)),(ParameterName="p_CColorShadow",ParameterValue=(R=0.000000,G=0.000000,B=0.000000,A=1.000000),ExpressionGUID=(A=-429590341,B=1156435294,C=-1015192901,D=687313413)),(ParameterName="p_DColor",ParameterValue=(R=0.000000,G=0.000000,B=0.000000,A=1.000000),ExpressionGUID=(A=696455109,B=1155878830,C=-1741888361,D=802120528)),(ParameterName="p_EmissiveColor",ParameterValue=(R=0.000000,G=0.000000,B=0.000000,A=1.000000),ExpressionGUID=(A=-2074486426,B=1296399582,C=-2021314681,D=-350758005)),(ParameterName="p_ReflectColor",ParameterValue=(R=16.000000,G=16.000000,B=16.300000,A=1.000000),ExpressionGUID=(A=295058103,B=1318551573,C=-2045449573,D=-547597976)),(ParameterName="p_ReflectionChannelScale",ParameterValue=(R=0.010000,G=0.010000,B=0.010000,A=1.000000),ExpressionGUID=(A=295058103,B=1318551573,C=-2045449573,D=-547597976)),(ParameterName="p_PatternColor",ParameterValue=(R=2.000000,G=2.000000,B=2.000000,A=1.000000),ExpressionGUID=(A=676539706,B=1125682796,C=1871983293,D=-2049503601)),(ParameterName="p_PatternScalePosition",ParameterValue=(R=12.000000,G=8.000000,B=6.000000,A=1.000000),ExpressionGUID=(A=-2005018406,B=1132497243,C=-39915121,D=208423616)),(ParameterName="p_PatternChannelScale",ParameterValue=(R=0.000000,G=0.000000,B=0.000000,A=1.000000),ExpressionGUID=(A=439432319,B=1091149893,C=-1991909502,D=1816944627)),(ParameterName="p_DecalColor",ParameterValue=(R=0.800000,G=1.600000,B=1.600000,A=1.000000),ExpressionGUID=(A=1691998600,B=1239094551,C=2074257317,D=1844701893)),(ParameterName="p_DecalScalePosition",ParameterValue=(R=17.100000,G=24.100000,B=0.400000,A=.500000),ExpressionGUID=(A=395540170,B=1243133493,C=-1264190552,D=123075385)),(ParameterName="p_DecalChannel",ParameterValue=(R=1.000000,G=1.000000,B=1.000000,A=1.000000),ExpressionGUID=(A=1869386622,B=1303200947,C=-1616405849,D=714558284)))
+
+set Iris_GunMaterials.Materials.sniper.Mati_JakobsUniqueSR_Cobra ScalarParameterValues ((ParameterName="p_HighlightsIntensity",ParameterValue=0.450000,ExpressionGUID=(A=-1257568432,B=1277066486,C=-723473993,D=-1144384173)),(ParameterName="p_ShadowsIntensity",ParameterValue=1.000000,ExpressionGUID=(A=437293753,B=1205147708,C=-775723903,D=1480014964)),(ParameterName="p_ReflectColorScale",ParameterValue=1.000000,ExpressionGUID=(A=1875785607,B=1186033550,C=-1822263113,D=-1465755701)),(ParameterName="p_ReplacePattern",ParameterValue=0.000000,ExpressionGUID=(A=-2084339847,B=1096440125,C=439008937,D=45433490)),(ParameterName="p_DecalRotate",ParameterValue=0.000000,ExpressionGUID=(A=-276527909,B=1298581551,C=856978878,D=743944047)),(ParameterName="p_ReplaceDecal",ParameterValue=0.000000,ExpressionGUID=(A=85863466,B=1257609701,C=-728575820,D=1337098176)),(ParameterName="p_UseFullColorDecal",ParameterValue=1.000000,ExpressionGUID=(A=-1064329812,B=1077705328,C=339664807,D=1869745420)))
 
 ############################################################
+
+
+
+
+
+
+
 DO NOT USE: this is my failed attempt at making the most realistic flamethrower
 
 Type-93 FlameThrower
