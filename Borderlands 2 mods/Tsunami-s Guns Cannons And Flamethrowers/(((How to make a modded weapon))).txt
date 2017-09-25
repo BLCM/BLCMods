@@ -1,0 +1,436 @@
+Hello, this is tsunami, if you like Borderlands 2 weapon mods you might know me, this is a guide, 
+containing about all basic and essential things on modding.
+
+1.
+How to use mods (if you already know how to use mods, skip this part)
+
+Link to a guide for the Unofficial Community Patch
+
+https://mentalmars.com/game-news/borderlands-2-unofficial-community-patch/#install
+
+
+
+
+2.
+You know how to use mods, Now to start modding.
+You should also have Gibbed, The borderlands 2 save editor, it makes somethings alot easier
+
+
+
+###Choosing a weapon###
+
+It is advised, to use a unique weapon, Unique, Leagendary, Pearlscent, ETC.
+
+Why? because they have unique barrels, when you mod a gun, such as damage, you mod the barrel
+Other non unique guns, would share the same barrel, such as a white dahl pistol
+if you change something on a white DAHL pistol, all white dahl pistols would be changed.
+
+So you use a unique weapon, such as the hornet, the hornet has a special barrel no other gun uses, so whatever changes
+you do to that barrel won't affect anything else.
+
+###Modding Basics###
+How to mod?
+1. Create a txt file (example test.txt)
+2. Open the txt file and write whatever code and/or command you want
+3. Save the txt file
+4. Open the console in the game menu
+5. Use the exec command and execute your txt file (example "exec test.txt")
+6. Then continue into the game, and your changes will be applied
+
+How to dump things?
+Open the console, and type obj dump [your code here]
+
+
+###set###
+All codes begin with "set" no matter what you're modding
+
+
+
+###Capitalisation###
+
+it's very important, if you forgot to use caps somewhere, the entire line of code might not work
+
+
+
+###Setting a custom weapon name###
+This is a simple thing to do
+
+set [Title Code] [Whatever you want it to say]
+
+You can take the title code of a unique weapon, which can be found in Gibbed.
+
+For example, if you want to rename the Logan's gun, to "Hyperion Pistol"
+
+You just do [set GD_Weap_Pistol.Name.Title_Hyperion.Title_Legendary_LogansGun PartName Hyperion Pistol]
+
+When you apply the txt the logan's gun's name will be shown as Hyperion Pistol instead
+
+And if you want to rename another gun, you just replace the Logan's gun's title code with another gun's title code
+
+
+
+###Setting a custom weapon description###
+Sometimes you see a red text under the weapon card, that's the description
+
+This is how you change the description to whatever you want
+
+set [AttributePresentationDefinition] [NoConstraintText] [Your description here]
+
+You take an AttributePresentationDefinition code of whatever weapon you want to change, and do as shown above
+
+NoConstraintText should always be after AttributePresentationDefinition code, remenber to put a space between them
+
+Usually, on 95% of weapons, you just add :AttributePresentationDefinition_8 behind your title code, 
+and you get your AttributePresentationDefinition code (remenber no spaces between :AttributePresentationDefinition_8 and title code)
+
+Example of a AttributePresentationDefition code [GD_Weap_Launchers.Name.Title_Vladof.Title_Legendary_Mongol:AttributePresentationDefinition_8]
+that was the mongol's AttributePresentationDefinition Code.
+
+
+Example of changing a weapon description: [set GD_Weap_Launchers.Name.Title_Vladof.Title_Legendary_Mongol:AttributePresentationDefinition_8 NoConstraintText Boom Boom!]
+
+That code will replace mongol's original red text, with "Boom Boom!"
+
+And if you wanna have text on the next line you use <br>
+
+Boom<br>Boom!
+
+will display like this on the weapon description
+Boom
+Boom!
+
+You can also change colors of your texts, by adding a color code.
+
+By default, all description are red
+
+but you can add <font color="#FFFFFF"> before a text, to change all text's colors behind the code.
+
+the code #FFFFFF is white, you can change the code, to change text to other colors
+
+here's a web based helper for colors
+
+Link: http://www.rapidtables.com/web/color/RGB_Color.htm
+
+you can pick a color, and the color code will display on the webpage.
+
+and of course, you can have multiple color codes, for multi-colored texts
+
+you just do: He<font color="#FFFFFF">ll<font color="#6D9269">o
+
+the first part "He" will be red by default, "ll" will be white, and "o" will be green.
+
+You can have diffirent colors on every character, and rainbow text is possible.
+
+
+
+#########Weapon Attributes#########
+
+Finally, let's start talking about changing the stats on a weapon
+
+Most attributes is applied to the barrel, and will only work that way
+
+
+There's a lot of attributes, and five types of attributes
+
+WeaponAttributesEffects
+ExternalAttributeEffects
+ZoomWeaponAttributeEffects
+ZoomExternalAttributeEffects
+AttributeSlotUpgrades
+
+
+###Now WeaponAttributeEffects are for the most common attributes (Damage, Firerate, Recoil, ETC)###
+
+
+This is what an attribute looks like
+D_Attributes.Weapon.WeaponDamage
+
+The attribute above is for weapon damage, the base damage (not bonus explosive, or elemental)
+
+
+###Values and scale###
+these are the numbers that you change on the attribute
+example
+
+((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))
+
+
+In the example, the BaseValueConstant is set to 2.000000, that means it will +200% weapon damage on the weapon you apply it to, multiplying the damage by two.
+
+and BaseValueScaleConstant is set to 1.000000, BaseValueScaleConstant multiplies the BaseValueConstant, if BaseValueScaleConstant set to 1, and BaseValueConstant is set to 2, 2x1=2, if BaseValueScaleConstant is set to 5, it would be 5x2=10
+and the BaseValueConstant would be multiplied to 10 instead.
+
+You can also use negative values, such as -0.500000 to to lower a weapon's damage by half
+
+
+###Balancing Brackets###
+
+(( and )), all weapon attributes have them. if you have them unbalanced, example having (( in the front and ) in the back, the code won't work.
+
+
+
+###Full Example and format###
+
+Example of a full single WeaponAttributeEffects applied to a weapon.
+
+set GD_Weap_Launchers.Barrel.L_Barrel_Vladof_Mongol WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))
+
+That example above multiplies the Mongol's base damage by 200%
+
+
+Example of adding multiple WeaponAttributeEffects on a weapon
+
+set GD_Weap_Launchers.Barrel.L_Barrel_Vladof_Mongol WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponReloadSpeed',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-3.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+That example above multiplies the Mongol's base damage 200%, and lowers the reload time by 3 seconds.
+
+notice the format change, it's important
+
+for one attributes, the format is : set [barrel code] WeaponAttributeEffects ((attribute here))
+
+and for multiple attribute, the format is: set [barrel code] WeaponAttributeEffects ((attribute here)),(attribute here)))
+
+all attribute after the first one goes like this (attribute here))
+
+you also have to add one , between every attribute
+
+and for every attribute you add, you need one more ) at the end of the last attribute
+
+for one attribute, it's ))
+ 
+two attributes, )))
+
+three attributes ))))
+
+this applies ONLY to WeaponAttributeEffects and ZoomWeaponAttributeEffects.
+
+
+
+
+###ZoomExternalAttributeEffects and ExternalAttributeEffects###
+
+These attributes are slightly less common, and have a slightly diffirent format.
+
+
+###Example for an ExternalAttributeEffects###
+
+set GD_Weap_Launchers.Barrel.L_Barrel_Vladof_Mongol ExternalAttributeEffects ((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Rocket_Launcher.Ammo_Rocket_Launcher_RegenerationRate',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.200000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+that example applies ammo regeneration to Mongol, the BaseValueConstant is set to 0.2, so it regenerates 0.2 ammo per second
+
+not percent, just 0.2 ammo per second, that means it will regenerate one shot, every 5 seconds.
+
+
+
+###Example for multiple ExternalAttributeEffects###
+
+set GD_Weap_Launchers.Barrel.L_Barrel_Vladof_Mongol ExternalAttributeEffects ((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Rocket_Launcher.Ammo_Rocket_Launcher_RegenerationRate',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.200000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.GameplayAttributes.FootSpeed',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+and that example above still regenerates 0.2 ammo a second, whild +100% doubling the player's movement speed.
+
+
+Notice the format diffirence between single attribute, and multiple
+
+the format for one ExternalAttributeEffects OR ZoomExternalAttributeEffects is like this:
+
+set [barrel code] ExternalAttributeEffects ((attribute here)))
+
+and the format for multiple ExternalAttributeEffects OR ZoomExternalAttributeEffects is like this:
+
+set [barrel code] ExternalAttributeEffects ((attribute here)),(attribute here)))
+
+although the format seems the same as WeaponAttributeEffects
+
+the diffirence is, no matter how many ExternalAttributeEffects OR ZoomExternalAttributeEffects you have
+you always have ))) at the very end on the last attribute.
+
+
+
+
+
+The coding format for WeaponAttributeEffects, and ZoomWeaponAttributeEffects, are the same
+
+
+and the coding format for ExternalAttributeEffects, and ZoomExternalAttributeEffects, are the same
+
+
+
+
+
+###AttributeSlotUpgrades###
+
+
+This is the most simple type of attributes, shortest, and somewhat inaccurate
+
+###Example###
+set GD_Weap_Launchers.Barrel.L_Barrel_Torgue_Nukem AttributeSlotUpgrades ((SlotName="WeaponMagSize",GradeIncrease=20,bActivateSlot=True))
+
+
+That example above increases the nukem's magazine size
+
+but why did i say inaccurate? because how it does things is quite weird, i don't know exactly how much is increased,you have to test it
+
+Also, you can't use numbers like 0.500000 like you can do with other attribute types, only full numbers, 1,2,3 ETC.
+And if you're trying to make things perfect, like making a magazine size exactly 50, you may get stuck between 51 and 49
+
+
+###Format:###
+
+for one AttributeSlotUpgrades, its: set [barrel code] AttributeSlotUpgrades ((Attribute here))
+
+for multiple, such as three:
+
+set [barrel code] AttributeSlotUpgrades ((Attribute here),(Attribute here),(Attribute here))
+
+
+you can also see the format diffirence with other types of attributes
+
+
+
+
+
+
+###What are Zoom Attributes?###
+
+It's very simple ZoomWeaponAttributeEffects and ZoomExternalAttributeEffects
+
+are attributes only applied when you're Zooming in/Aiming down sights with the weapon
+
+
+
+But normal attributes, when applied will effect the weapon, even while zooming in
+
+you can counter attributes by setting an exact opposict zoom attribute
+
+such as +200% damage with WeaponAttributeEffects
+and -200% damage with ZoomWeaponAttributeEffects
+
+and when you zoom in, the weapon's damage will be back to normal, because you countered it with the Zoom attribute
+
+it works also for ExternalAttributeEffects
+
+
+Note than you can't do zoom attributes with AttributeSlotUpgrades
+
+
+###We're coming to an end on the attributes, and here's a few final notes###
+
+.Never use an attribute from WeaponAttributeEffects on ExternalAttributeEffects, or vice versa, they may look simular
+but they can't work with eachother
+
+.Most of attributes, you just change BaseValueConstant, but on some very few, such as ProjectilesPerShot, you change the BaseValueScaleConstant instead.
+
+.If you want to apply something on an attribute, the Scale and the Value both has to have a value or a negative value, if you set Value to 1, and ScaleValue to 0
+1x0=0! and you get nothing.
+
+.To add multiple attributes on one part, use one line of code! with two the second will overwrite the first line.
+
+
+
+
+
+########Adjusting Parts on a weapon#########
+
+
+Some weapon's Parts are locked, like, you cannot get a bandit grip on a infinity pistol, because the game will delete it.
+
+by TXT modding, you can loosen up somethings, but you still won't be able to put a shotgun barrel on a pistol.
+
+
+
+###Example###
+
+set GD_Weap_Pistol.A_Weapons_Legendary.Pistol_Vladof_5_Infinity:WeaponPartListCollectionDefinition_107 GripPartData (bEnabled=True,WeightedParts=((Part=WeaponPartDefinition'GD_Weap_Pistol.Grip.Pistol_Grip_Bandit',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=2)))
+
+See on the example above, it allows the infinity to have a Bandit grip, because it's editing grips, you put GripPartData there, if it's barrel it's BarrelPartData there
+same goes for all parts, except that you can't change the body and material, or put parts from other types of weapons (such as shotgun) on the pistol.
+
+Also there's only one grip in that example, that means it will also disallow all other grips, that means it will DELETE existing infinitys with other grips,
+and allow only the bandit grips.
+
+So how do you allow more grips? you just add more behind the first one,
+
+the format is: set [CollectionDefinition code] ((Grip code here),(Grip code here),(Grip code here)))
+
+again, always ))) at the very end of the last part code.
+
+
+###What about other parts?###
+
+Well you can't put two diffirent types of parts in one line
+the format is same, say if you want to change sights allowed you just switch GripPartData with SightPartData, and put sight codes instead of grip codes behind it
+
+same goes for every part, and again, you can't change the body and material.
+
+
+###The PartListCollectionDefinition code, how do you get this?###
+
+you dump the balance code, which you can find in a weapon, in gibbed.
+
+every weapon has a diffirent one, so if you don't have it already, you have to dump it and find that code in the dump.
+
+
+
+
+
+
+#########Skins#########
+
+
+There are multiple ways to have a diffirent skin on your weapon
+
+Skins are all about the material codes
+
+the first and most simple method is setting a parent
+
+###Example###
+
+set Common_GunMaterials.Materials.Shotgun.Mati_HyperionRare_SG Parent Common_GunMaterials.Materials.Shotgun.Mati_HyperionLegendary_SG_ConferenceCall
+
+That example above sets the Conference call skin as the skin for a rare hyperion shotgun, which will kinda mix the two skins together.
+
+
+###Wait, what are these "Common_GunMaterials" code?###
+
+they're not the material codes you find directly in gibbed, you get them by dumping the material code in gibbed, the "GunMaterials" code is inside the dump.
+
+
+
+
+
+And the second method, which is replacing the entire material with another, instead of mixing the two
+
+Now this method is somewhat more limited
+
+
+###Example###
+
+set GD_Weap_Launchers.ManufacturerMaterials.Mat_Vladof_5_Legendary Material MaterialInstanceConstant'Common_GunMaterials.Materials.Launcher.Mati_VladofEpicRL'
+Note that you use the material code for the one you wanna replace, and GunMaterials code for the one you wanna replace with
+
+That example above replaces the mongol's skin with a Vladof Epic RL
+
+and that would work out very well, because it's the same weapon type from the same manufacturer.
+
+but if you apply a skin from a DAHL SMG to mongol, a rocket launcher, it would work very badly, 
+the skin would be messed up, and you might have a hard time identifying what it is
+
+here's how good skins would work applied on another weapon:
+
+Diffirent weapon type = very badly
+Same weapon type, diffirent manufacturer = somewhat ok
+Same weapon type, same manufacturer = good
+
+
+there's also the third way, the most free and complex method, custom skins, you can see the detailed custom skin guide, by Dave
+
+Link: https://github.com/BLCM/BLCMods/blob/master/Borderlands%202%20mods/Dave/DAVE'S%20BL2%20SKIN%20MODDING%20GUIDE.pdf
+
+
+
+
+And that's about all the basics and essentials you need for your first weapon mod, have fun, and keep modding!
+
+-Tsunami
+
+Have any questions? add me on discord, @Tsunami7900
