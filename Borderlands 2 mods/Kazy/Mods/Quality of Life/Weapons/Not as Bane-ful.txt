@@ -1,0 +1,43 @@
+#<Not as Bane-ful>
+
+//by Kazy
+
+Makes the Bane more bearable, while keeping (most) of its negatives.
+
+• Screaming when firing removed, and can be muted by game volume
+
+• Movement Speed now improved to only 33% slower than most weapons (rather than 500% slower)!
+
+• Accuracy and Spread not as atrocious, and gains accuracy slightly quicker
+
+• Gained some Critical Hit damage boosts because the poor thing kinda needs it :c
+
+#<Coding>
+
+#<Shut up, Bane>
+
+set GD_Weap_SMG.FiringModes.Bullet_SMG_TheBane SoundDefinition FiringModeSoundDefinition'GD_Weap_Bullet_Tech_Sounds.Sound_Definitions.Default_Bullet'
+
+set GD_Weap_SMG.Skills.Skill_Bane SkillEffectDefinitions (())
+
+#</Shut up, Bane>
+
+#<Less Bane-ful to Use>
+
+set GD_Weap_SMG.Barrel.SMG_Barrel_Dahl_Bane ExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.GameplayAttributes.FootSpeed',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-0.330000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AccuracyResourcePool.AccuracyMaxValue',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-1.750000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AccuracyResourcePool.AccuracyOnIdleRegenerationRate',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-1.640000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.GameplayAttributes.PlayerCriticalHitBonus',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.750000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+#<Bane-ful to use in UVHM and OP Levels>
+
+#set GD_Weap_SMG.Barrel.SMG_Barrel_Dahl_Bane ExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.GameplayAttributes.FootSpeed',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-0.330000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AccuracyResourcePool.AccuracyMaxValue',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-1.750000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AccuracyResourcePool.AccuracyOnIdleRegenerationRate',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-1.640000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))<off>
+
+#</Bane-ful to use in UVHM and OP Levels>
+
+set GD_Weap_SMG.Barrel.SMG_Barrel_Dahl_Bane WeaponAttributeEffects (AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.300000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=14.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.0000000,BaseValueAttribute=None,InitializationDefinition=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Hyperion',BaseValueScaleConstant=-0.105000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponPerShotAccuracyImpulse',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Hyperion',InitializationDefinition=None,BaseValueScaleConstant=-0.750000)))
+
+set GD_Weap_SMG.Barrel.SMG_Barrel_Dahl_Bane ZoomExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.GameplayAttributes.FootSpeed',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-2.750000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+#</Less Bane-ful to Use>
+
+#</Coding>
+
+#</Not as Bane-ful>
