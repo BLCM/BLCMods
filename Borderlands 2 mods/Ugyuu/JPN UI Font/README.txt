@@ -2,19 +2,24 @@ This file contains the font replacement for the English version of Borderlands 2
 
 >>> This works for The Pre-Sequel as well! <<<
 
-**NOTE:** When gunzerking, the ammo displays incorrectly. i don't believe i can fix this.
+**NOTE:** When gunzerking, the ammo displays incorrectly. The only way i could "fix" this is if I revert the number changes, which would break the compact weapon card numbers as well. 
 
 [HOW TO INSTALL]
 
-Make sure you are not running the game while doing this. It's for safety.
+Do not have the game running while doing this, or it will crash.
 
 Make a backup of your existing GFxUI.INT before doing this! (It's in Borderlands 2/WillowGame/Localization/INT) Put it somewhere safe.
 
-Download the new GFxUI.INT and save it as; All Files. If you don't select All Files, it will save as a TXT, and you don't want that.
+Open the GFxUI.INT file in this github folder, then click on Raw.
 
-Copy the new GFxUI.INT to Borderlands 2/WillowGame/Localization/INT and Paste it in that folder. If it notifies you that there already is a file with this name, choose to replace it instead.
+Highlight everything with CTRL + A, then Right click and click "Save As.."
 
-Reload your game and the font will be changed to the different one. 
+Make sure to change what it saves to, from .txt to "All Files". If you don't do this, it will save as a TXT and the next step won't work.
+
+Copy the new GFxUI.INT to 'Borderlands 2/WillowGame/Localization/INT' and Paste it in that folder. If it notifies you that there already is a file with this name, choose to replace it instead.
+
+Load your game and the font will be changed to the japanese font.
+
 
 Enjoy!
 
