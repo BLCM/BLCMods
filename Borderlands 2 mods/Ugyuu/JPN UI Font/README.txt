@@ -2,7 +2,11 @@ This file contains the font replacement for the English version of Borderlands 2
 
 >>> This works for The Pre-Sequel as well! <<<
 
-**NOTE:** When gunzerking, the ammo displays incorrectly. The only way i could "fix" this is if I revert the number changes, which would break the compact weapon card numbers as well. 
+[Notes] 
+
+When gunzerking, the ammo displays incorrectly. The only way i could "fix" this is if I revert the number changes, which would break the compact weapon card numbers as well. 
+
+The changes to the fonts will revert if you verify the integrity of the game cache through Steam. If this changed back to normal for you, you'll have to redownload it.
 
 [HOW TO INSTALL]
 
