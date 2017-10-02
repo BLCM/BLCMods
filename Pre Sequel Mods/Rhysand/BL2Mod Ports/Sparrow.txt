@@ -1,0 +1,15 @@
+########## Kerboom Buff ##########
+## Gives the same buffs that the BL2 Sparrow gives. Just without the skin which cannot be ported.
+## 2 Ammo per shot, effectively doubles magazine
+## X2 projectiles fired per shot.
+## No self-damage on the rocket or the grenade.
+
+## Name & Flavor Text
+set gd_cork_weap_assaultrifle.Name.Title_Torgue.Title_Legendary_KerBoom PartName Sparrow
+set gd_cork_weap_assaultrifle.Name.Title_Torgue.Title_Legendary_KerBoom:AttributePresentationDefinition_8 NoConstraintText Not all treasure is silver and gold, mate.
+set GD_Weap_AssaultRifle.ManufacturerMaterials.Mat_Torgue_5_Legendary WeaponCardAttributes ((Attribute=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',PriorityIncrease=3.000000),(Attribute=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',PriorityIncrease=3.000000))
+
+## Damage Buffs & No Self Damage
+set gd_cork_weap_assaultrifle.Barrel.AR_Barrel_Torgue_KerBoom WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=6.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=4.300000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+set gd_cork_weap_assaultrifle.Projectiles.Projectile_Rocket_KerBoom:BehaviorProviderDefinition_0.Behavior_Explode_1 InstigatorSelfDamageScale 0.000000
+set gd_cork_weap_assaultrifle.Projectiles.Projectile_KerBoom_Grenade:BehaviorProviderDefinition_0.Behavior_Explode_4 InstigatorSelfDamageScale 0.000000
