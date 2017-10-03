@@ -1,0 +1,84 @@
+===================================================================================================================
+the 319
+
+replace the Tattler
+
+custom shots
+
+custom skin
+
+badass
+
+use 169+- smg ammo for shot deadly wird laser
+
+just try it,NOW!
+
+i cant tell how cool it is
+
+trust me,try it
+
+created by ozay (or oz yohay)
+===================================================================================================================
+##skin##
+
+set GD_Orchid_RaidWeapons.ManufacturerMaterials.Mat_Bandit_1_Tattler Material MaterialInstanceConstant 'GD_Aster_GrenadeMods.Materials.Mati_Fireball'
+
+##name##
+
+
+
+set GD_Orchid_RaidWeapons.SMG.Tattler.Orchid_Seraph_Tattler_Title PartName 319
+
+set GD_Orchid_RaidWeapons.SMG.Tattler.Orchid_Seraph_Tattler_Title:AttributePresentationDefinition_8 NoConstraintText This is perfectly legal if this i what wondering!
+
+##stats##
+
+
+
+
+set GD_Orchid_RaidWeapons.SMG.Tattler.Orchid_Seraph_Tattler_Barrel WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=500.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-50.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-1000.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponReloadSpeed',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponPerShotAccuracyImpulse',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-999.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponAutomaticBurstCount',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=10000.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+
+
+set GD_Orchid_RaidWeapons.SMG.Tattler.Orchid_Seraph_Tattler_Barrel ExternalAttributeEffects ((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Patrol_SMG.Ammo_Patrol_SMG_RegenerationRate',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=10.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+
+
+##Shots##
+
+
+
+set GD_Orchid_RaidWeapons.SMG.Tattler.Orchid_Seraph_Tattler_Barrel CustomFiringModeDefinition FiringModeDefinition 'GD_GrenadeMods.FiringModes.FiringModeDef_BouncingBettyBeam'
+
+set GD_GrenadeMods.FiringModes.FiringModeDef_BouncingBettyBeam FireType EWWFT_Bullet
+
+set GD_GrenadeMods.FiringModes.FiringModeDef_BouncingBettyBeam PartSysTemplate ParticleSystem 'FX_CHAR_Shared_Shield.Particles.Part_PC_ShieldHit_Matrix'
+
+set GD_GrenadeMods.FiringModes.FiringModeDef_BouncingBettyBeam Lifetime 9999.000000
+
+set GD_GrenadeMods.FiringModes.FiringModeDef_BouncingBettyBeam OnAnyImpact ()
+
+set GD_GrenadeMods.FiringModes.FiringModeDef_BouncingBettyBeam bSuppressImpactEffects True
+
+set GD_GrenadeMods.FiringModes.FiringModeDef_BouncingBettyBeam FiringPatternLines ()
+
+set GD_GrenadeMods.FiringModes.FiringModeDef_BouncingBettyBeam NumRicochets 0
+
+set GD_GrenadeMods.FiringModes.FiringModeDef_BouncingBettyBeam bPenetratePawn True
+
+
+##parts##
+
+
+set GD_Orchid_RaidWeapons.SMG.Tattler.Orchid_Seraph_Tattler_Barrel GestaltModeSkeletalMeshName SMG_Barrel_Alien
+
+set GD_Orchid_RaidWeapons.SMG.Tattler.Orchid_Seraph_Tattler_Barrel bFlapsEnabled True
+
+set GD_Orchid_RaidWeapons.SMG.Tattler.Orchid_Seraph_Tattler_Barrel BoneControllers ((BoneName="AlienBarrelFin_LT",ControlType=WEAP_BONE_CONTROL_Flap,bUseInFirstPerson=True,bUseInThirdPerson=False,ControlTemplate=WillowSkelControl_RotateFlapFromFiring'GD_Weap_SMG.Barrel.SMG_Barrel_Alien:WillowSkelControl_RotateFlapFromFiring_0'),(BoneName="AlienBarrelFin_RT",ControlType=WEAP_BONE_CONTROL_Flap,bUseInFirstPerson=True,bUseInThirdPerson=False,ControlTemplate=WillowSkelControl_RotateFlapFromFiring'GD_Weap_SMG.Barrel.SMG_Barrel_Alien:WillowSkelControl_RotateFlapFromFiring_1'),(BoneName="AlienBarrelFin_LB",ControlType=WEAP_BONE_CONTROL_Flap,bUseInFirstPerson=True,bUseInThirdPerson=False,ControlTemplate=WillowSkelControl_RotateFlapFromFiring'GD_Weap_SMG.Barrel.SMG_Barrel_Alien:WillowSkelControl_RotateFlapFromFiring_2'),(BoneName="AlienBarrelFin_RB",ControlType=WEAP_BONE_CONTROL_Flap,bUseInFirstPerson=True,bUseInThirdPerson=False,ControlTemplate=WillowSkelControl_RotateFlapFromFiring'GD_Weap_SMG.Barrel.SMG_Barrel_Alien:WillowSkelControl_RotateFlapFromFiring_3'))
+
+set GD_Orchid_RaidWeapons.SMG.Tattler.Orchid_Seraph_Tattler_Barrel FlapsExpandDuration (BaseValueConstant=0.250000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+
+set GD_Orchid_RaidWeapons.SMG.Tattler.Orchid_Seraph_Tattler_Barrel FlapsCollapseDuration (BaseValueConstant=1.250000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+
+
+==================================================================================================================

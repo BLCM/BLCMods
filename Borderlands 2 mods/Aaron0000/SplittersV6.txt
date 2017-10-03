@@ -1,0 +1,264 @@
+#<Splitters>
+
+    #<Description>
+
+        By Aaron0000
+
+        Re-imagines Splat Guns into Splitters from Pre-Sequel. Also turns the Slow Hand and Retcher into Splitters (On by default).
+
+        Splitters are not quite the same as they were in Pre-Sequel; they have quite a few more projectiles than before. Stats should be similar otherwise.
+
+        NOTES;
+
+        If using the Jakobs & Torgue E-techs mod, activate this file after it.
+
+        S&S Forever/Lite and Old Hyperion fixes are at the bottom. Activate this file after S&S and/or Old Hyperion.
+
+        Credits to Exotek for showing me how to change the crosshair back to default crosshairs.
+
+    #</Description>
+
+    #<Code>
+
+        #<Titles>
+
+            set GD_Weap_Shotgun.Name.Title_Alien.Title__Splatgun PartName Splitter
+
+            set GD_Weap_Shotgun.Name.Title_Bandit.Title__Splatgun PartName Splity Shoty
+
+            set GD_Weap_Shotgun.Name.Title_Torgue.Title__Splatgun PartName Splitter
+
+        #</Titles>
+
+        #<Hyperion Splat Guns>
+
+            set GD_Weap_Shotgun.Barrel.SG_Barrel_Alien_Hyperion WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=6.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponStatusEffectChanceModifier',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-0.033000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+            set GD_Weap_Shotgun.Barrel.SG_Barrel_Alien_Hyperion AttributeSlotUpgrades ((SlotName="WeaponSpread",GradeIncrease=-12,bActivateSlot=True),(SlotName="AccuracyMin",GradeIncrease=-2,bActivateSlot=True),(SlotName="WeaponDamage",GradeIncrease=3,bActivateSlot=True),(SlotName="WeaponAccuracyImpulse",GradeIncrease=-7,bActivateSlot=True),(SlotName="WeaponFireRate",GradeIncrease=-6,bActivateSlot=True),(SlotName="WeaponMagSize",GradeIncrease=10,bActivateSlot=True))
+
+            set GD_Weap_Shotgun.Barrel.SG_Barrel_Alien_Hyperion WeaponCardAttributes ((Attribute=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',PriorityIncrease=-3.000000),(Attribute=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',PriorityIncrease=0.600000))
+
+            set GD_Weap_Shotgun.Barrel.SG_Barrel_Alien_Hyperion MuzzleFlashPSTemplates EffectCollectionDefinition'GD_Weap_Shotgun.Effects.SG_Default_MuzzleFlashes'
+
+            set GD_Weap_Shotgun.Barrel.SG_Barrel_Alien_Hyperion:BehaviorProviderDefinition_1 BehaviorSequences ((BehaviorSequenceName="Default",bEnabledOnSpawn=True,bSequenceEnabledMutex=False,CustomEnableCondition=None,EventData=,EventData2=,BehaviorData=,BehaviorData2=,VariableData=,ConsolidatedOutputLinkData=,ConsolidatedVariableLinkData=,ConsolidatedLinkedVariables=))
+
+            set GD_Weap_Shotgun.FiringModes.Bullets_Splatgun_Hyperion FireType EWWFT_Bullet
+
+            set GD_Weap_Shotgun.FiringModes.Bullets_Splatgun_Hyperion ProjectileDefinition None
+
+            set GD_Weap_Shotgun.FiringModes.Bullets_Splatgun_Hyperion ExplosionOverrideDefinition None
+
+            set GD_Weap_Shotgun.FiringModes.Bullets_Splatgun_Hyperion ExplosionOverideInstanceDataName None
+
+            set GD_Weap_Shotgun.FiringModes.Bullets_Splatgun_Hyperion PartSysTemplate ParticleSystem'FX_WEP_Trails.Particles.Alien.Part_Wep_Tracer_Alien_AR'
+
+            set GD_Weap_Shotgun.FiringModes.Bullets_Splatgun_Hyperion ConditionalPartSysTemplate EffectCollectionDefinition'GD_Weap_AssaultRifle.Effects.AR_ETech_Tracers'
+
+            set GD_Weap_Shotgun.FiringModes.Bullets_Splatgun_Hyperion Lifetime 5.000000
+
+            set GD_Weap_Shotgun.FiringModes.Bullets_Splatgun_Hyperion TraceInterval 0.200000
+
+            set GD_Weap_Shotgun.FiringModes.Bullets_Splatgun_Hyperion Speed 23000.000000
+
+            set GD_Weap_Shotgun.FiringModes.Bullets_Splatgun_Hyperion Acceleration (X=0.000000,Y=0.000000,Z=0.000000)
+
+            set GD_Weap_Shotgun.FiringModes.Bullets_Splatgun_Hyperion RicochetResponse (SplitNum=0,SplitAngle=0.000000,SplitAngleOffset=0.000000,SplitDistance=0.000000,SplitFire=None,NewSpeed=0.000000,bDetonate=False,bRespawnTracer=True,bUpdateBeamSourceLocation=False,Behaviors=)
+
+            set GD_Weap_Shotgun.FiringModes.Bullets_Splatgun_Hyperion BeamTraceNumSteps 6.000000
+
+            set GD_Weap_Shotgun.FiringModes.Bullets_Splatgun_Hyperion BeamMaxLockOnDistance 5000.000000
+
+            set GD_Weap_Shotgun.FiringModes.Bullets_Splatgun_Hyperion BeamMaxLength 22000.000000
+
+            set GD_Weap_Shotgun.FiringModes.Bullets_Splatgun_Hyperion BeamSourceTangentStrengthOverDistance 1.500000
+
+            set GD_Weap_Shotgun.FiringModes.Bullets_Splatgun_Hyperion BeamTargetTangentStrengthOverDistance 0.250000
+
+            set GD_Weap_Shotgun.FiringModes.Bullets_Splatgun_Hyperion BeamApproxRepUpdateTime 1.000000
+
+            set GD_Weap_Shotgun.FiringModes.Bullets_Splatgun_Hyperion NumRicochets 0
+
+        #</Hyperion Splat Guns>
+
+        #<Common Splat Guns>
+
+            set GD_Weap_Shotgun.Barrel.SG_Barrel_Alien WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=6.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponStatusEffectChanceModifier',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-0.033000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+            set GD_Weap_Shotgun.Barrel.SG_Barrel_Alien AttributeSlotUpgrades ((SlotName="WeaponSpread",GradeIncrease=-12,bActivateSlot=True),(SlotName="AccuracyMin",GradeIncrease=-2,bActivateSlot=True),(SlotName="WeaponDamage",GradeIncrease=3,bActivateSlot=True),(SlotName="WeaponAccuracyImpulse",GradeIncrease=-7,bActivateSlot=True),(SlotName="WeaponFireRate",GradeIncrease=10,bActivateSlot=True),(SlotName="WeaponMagSize",GradeIncrease=10,bActivateSlot=True))
+
+            set GD_Weap_Shotgun.Barrel.SG_Barrel_Alien MuzzleFlashPSTemplates EffectCollectionDefinition'GD_Weap_Shotgun.Effects.SG_Default_MuzzleFlashes'
+
+            set GD_Weap_Shotgun.Barrel.SG_Barrel_Alien:BehaviorProviderDefinition_1 BehaviorSequences ((BehaviorSequenceName="Default",bEnabledOnSpawn=True,bSequenceEnabledMutex=False,CustomEnableCondition=None,EventData=,EventData2=,BehaviorData=,BehaviorData2=,VariableData=,ConsolidatedOutputLinkData=,ConsolidatedVariableLinkData=,ConsolidatedLinkedVariables=))
+
+            set GD_Weap_Shotgun.FiringModes.Bullets_Splatgun FireType EWWFT_Bullet
+
+            set GD_Weap_Shotgun.FiringModes.Bullets_Splatgun ProjectileDefinition None
+
+            set GD_Weap_Shotgun.FiringModes.Bullets_Splatgun ExplosionOverrideDefinition None
+
+            set GD_Weap_Shotgun.FiringModes.Bullets_Splatgun ExplosionOverideInstanceDataName None
+
+            set GD_Weap_Shotgun.FiringModes.Bullets_Splatgun PartSysTemplate ParticleSystem'FX_WEP_Trails.Particles.Alien.Part_Wep_Tracer_Alien_AR'
+
+            set GD_Weap_Shotgun.FiringModes.Bullets_Splatgun ConditionalPartSysTemplate EffectCollectionDefinition'GD_Weap_AssaultRifle.Effects.AR_ETech_Tracers'
+
+            set GD_Weap_Shotgun.FiringModes.Bullets_Splatgun Lifetime 5.000000
+
+            set GD_Weap_Shotgun.FiringModes.Bullets_Splatgun TraceInterval 0.200000
+
+            set GD_Weap_Shotgun.FiringModes.Bullets_Splatgun Speed 18000.000000
+
+            set GD_Weap_Shotgun.FiringModes.Bullets_Splatgun Acceleration (X=0.000000,Y=0.000000,Z=0.000000)
+
+            set GD_Weap_Shotgun.FiringModes.Bullets_Splatgun RicochetResponse (SplitNum=0,SplitAngle=0.000000,SplitAngleOffset=0.000000,SplitDistance=0.000000,SplitFire=None,NewSpeed=0.000000,bDetonate=False,bRespawnTracer=True,bUpdateBeamSourceLocation=False,Behaviors=)
+
+            set GD_Weap_Shotgun.FiringModes.Bullets_Splatgun BeamTraceNumSteps 6.000000
+
+            set GD_Weap_Shotgun.FiringModes.Bullets_Splatgun BeamMaxLockOnDistance 5000.000000
+
+            set GD_Weap_Shotgun.FiringModes.Bullets_Splatgun BeamMaxLength 7500.000000
+
+            set GD_Weap_Shotgun.FiringModes.Bullets_Splatgun BeamSourceTangentStrengthOverDistance 1.500000
+
+            set GD_Weap_Shotgun.FiringModes.Bullets_Splatgun BeamTargetTangentStrengthOverDistance 0.250000
+
+            set GD_Weap_Shotgun.FiringModes.Bullets_Splatgun BeamApproxRepUpdateTime 1.000000
+
+            set GD_Weap_Shotgun.FiringModes.Bullets_Splatgun NumRicochets 0
+
+        #</Common Splat Guns>
+
+        #<Slow Hand>
+
+            set GD_Iris_Weapons.Shotguns.SG_Barrel_Alien_SlowHand ExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.DamageEnhancementModifiers.PlayerConvertDamageToHealingPercent',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.010000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+            set GD_Iris_Weapons.Shotguns.SG_Barrel_Alien_SlowHand WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=6.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponStatusEffectChanceModifier',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-0.033000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+            set GD_Iris_Weapons.Shotguns.SG_Barrel_Alien_SlowHand AttributeSlotUpgrades ((SlotName="WeaponSpread",GradeIncrease=-12,bActivateSlot=True),(SlotName="AccuracyMin",GradeIncrease=-2,bActivateSlot=True),(SlotName="WeaponDamage",GradeIncrease=3,bActivateSlot=True),(SlotName="WeaponAccuracyImpulse",GradeIncrease=-7,bActivateSlot=True),(SlotName="WeaponMagSize",GradeIncrease=10,bActivateSlot=True))
+
+            set GD_Iris_Weapons.Shotguns.SG_Barrel_Alien_SlowHand WeaponCardAttributes ((Attribute=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',PriorityIncrease=0.600000),(Attribute=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',PriorityIncrease=-3.000000))
+
+            set GD_Iris_Weapons.Shotguns.SG_Barrel_Alien_SlowHand MuzzleFlashPSTemplates EffectCollectionDefinition'GD_Weap_Shotgun.Effects.SG_Default_MuzzleFlashes'
+
+            set GD_Iris_Weapons.FiringModes.Bullets_Splatgun_SlowHand FireType EWWFT_Bullet
+
+            set GD_Iris_Weapons.FiringModes.Bullets_Splatgun_SlowHand ProjectileDefinition None
+
+            set GD_Iris_Weapons.FiringModes.Bullets_Splatgun_SlowHand ExplosionOverrideDefinition None
+
+            set GD_Iris_Weapons.FiringModes.Bullets_Splatgun_SlowHand ExplosionOverideInstanceDataName None
+
+            set GD_Iris_Weapons.FiringModes.Bullets_Splatgun_SlowHand PartSysTemplate ParticleSystem'FX_WEP_Trails.Particles.Alien.Part_Wep_Tracer_Alien_AR'
+
+            set GD_Iris_Weapons.FiringModes.Bullets_Splatgun_SlowHand ConditionalPartSysTemplate EffectCollectionDefinition'GD_Weap_AssaultRifle.Effects.AR_ETech_Tracers'
+
+            set GD_Iris_Weapons.FiringModes.Bullets_Splatgun_SlowHand Lifetime 5.000000
+
+            set GD_Iris_Weapons.FiringModes.Bullets_Splatgun_SlowHand TraceInterval 0.200000
+
+            set GD_Iris_Weapons.FiringModes.Bullets_Splatgun_SlowHand Speed 21000.000000
+
+            set GD_Iris_Weapons.FiringModes.Bullets_Splatgun_SlowHand Acceleration (X=0.000000,Y=0.000000,Z=0.000000)
+
+            set GD_Iris_Weapons.FiringModes.Bullets_Splatgun_SlowHand RicochetResponse (SplitNum=0,SplitAngle=0.000000,SplitAngleOffset=0.000000,SplitDistance=0.000000,SplitFire=None,NewSpeed=0.000000,bDetonate=False,bRespawnTracer=True,bUpdateBeamSourceLocation=False,Behaviors=)
+
+            set GD_Iris_Weapons.FiringModes.Bullets_Splatgun_SlowHand BeamTraceNumSteps 6.000000
+
+            set GD_Iris_Weapons.FiringModes.Bullets_Splatgun_SlowHand BeamMaxLockOnDistance 5000.000000
+
+            set GD_Iris_Weapons.FiringModes.Bullets_Splatgun_SlowHand BeamMaxLength 7500.000000
+
+            set GD_Iris_Weapons.FiringModes.Bullets_Splatgun_SlowHand BeamSourceTangentStrengthOverDistance 1.500000
+
+            set GD_Iris_Weapons.FiringModes.Bullets_Splatgun_SlowHand BeamTargetTangentStrengthOverDistance 0.250000
+
+            set GD_Iris_Weapons.FiringModes.Bullets_Splatgun_SlowHand BeamApproxRepUpdateTime 1.000000
+
+            set GD_Iris_Weapons.FiringModes.Bullets_Splatgun_SlowHand NumRicochets 0
+
+        #</Slow Hand>
+
+        #<Retcher>
+
+            set GD_Orchid_RaidWeapons.Shotgun.Spitter.Orchid_Seraph_Spitter_Barrel WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=6.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponStatusEffectChanceModifier',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-0.033000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponExtraShotChance',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.350000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponAutomaticBurstCount',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=100.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+            set GD_Orchid_RaidWeapons.Shotgun.Spitter.Orchid_Seraph_Spitter_Barrel AttributeSlotUpgrades ((SlotName="WeaponSpread",GradeIncrease=-16,bActivateSlot=True),(SlotName="AccuracyMin",GradeIncrease=0,bActivateSlot=True),(SlotName="WeaponDamage",GradeIncrease=5,bActivateSlot=True),(SlotName="WeaponAccuracyImpulse",GradeIncrease=-5,bActivateSlot=True),(SlotName="WeaponFireRate",GradeIncrease=30,bActivateSlot=True),(SlotName="WeaponMagSize",GradeIncrease=17,bActivateSlot=True))
+
+            set GD_Orchid_RaidWeapons.Shotgun.Spitter.Orchid_Seraph_Spitter_Barrel WeaponCardAttributes ((Attribute=AttributeDefinition'D_Attributes.Weapon.WeaponReloadSpeed',PriorityIncrease=-3.000000),(Attribute=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',PriorityIncrease=0.600000))
+
+            set GD_Orchid_RaidWeapons.Shotgun.Spitter.Orchid_Seraph_Spitter_Barrel:BehaviorProviderDefinition_1 BehaviorSequences ((BehaviorSequenceName="Default",bEnabledOnSpawn=True,bSequenceEnabledMutex=False,CustomEnableCondition=None,EventData=,EventData2=,BehaviorData=,BehaviorData2=,VariableData=,ConsolidatedOutputLinkData=,ConsolidatedVariableLinkData=,ConsolidatedLinkedVariables=))
+
+            set GD_Orchid_RaidWeapons.Shotgun.Spitter.Orchid_Seraph_Spitter_Barrel MuzzleFlashPSTemplates EffectCollectionDefinition'GD_Weap_Shotgun.Effects.SG_Default_MuzzleFlashes'
+
+            set GD_Orchid_RaidWeapons.Shotgun.Spitter.Orchid_Seraph_Spitter_FireMode FireType EWWFT_Bullet
+
+            set GD_Orchid_RaidWeapons.Shotgun.Spitter.Orchid_Seraph_Spitter_FireMode ProjectileDefinition None
+
+            set GD_Orchid_RaidWeapons.Shotgun.Spitter.Orchid_Seraph_Spitter_FireMode ExplosionOverrideDefinition None
+
+            set GD_Orchid_RaidWeapons.Shotgun.Spitter.Orchid_Seraph_Spitter_FireMode ExplosionOverideInstanceDataName None
+
+            set GD_Orchid_RaidWeapons.Shotgun.Spitter.Orchid_Seraph_Spitter_FireMode PartSysTemplate ParticleSystem'FX_WEP_Trails.Particles.Alien.Part_Wep_Tracer_Alien_AR'
+
+            set GD_Orchid_RaidWeapons.Shotgun.Spitter.Orchid_Seraph_Spitter_FireMode ConditionalPartSysTemplate EffectCollectionDefinition'GD_Weap_AssaultRifle.Effects.AR_ETech_Tracers'
+
+            set GD_Orchid_RaidWeapons.Shotgun.Spitter.Orchid_Seraph_Spitter_FireMode Lifetime 5.000000
+
+            set GD_Orchid_RaidWeapons.Shotgun.Spitter.Orchid_Seraph_Spitter_FireMode TraceInterval 0.200000
+
+            set GD_Orchid_RaidWeapons.Shotgun.Spitter.Orchid_Seraph_Spitter_FireMode Speed 18000.000000
+
+            set GD_Orchid_RaidWeapons.Shotgun.Spitter.Orchid_Seraph_Spitter_FireMode Acceleration (X=0.000000,Y=0.000000,Z=0.000000)
+
+            set GD_Orchid_RaidWeapons.Shotgun.Spitter.Orchid_Seraph_Spitter_FireMode RicochetResponse (SplitNum=0,SplitAngle=0.000000,SplitAngleOffset=0.000000,SplitDistance=0.000000,SplitFire=None,NewSpeed=0.000000,bDetonate=False,bRespawnTracer=True,bUpdateBeamSourceLocation=False,Behaviors=)
+
+            set GD_Orchid_RaidWeapons.Shotgun.Spitter.Orchid_Seraph_Spitter_FireMode BeamTraceNumSteps 6.000000
+
+            set GD_Orchid_RaidWeapons.Shotgun.Spitter.Orchid_Seraph_Spitter_FireMode BeamMaxLockOnDistance 5000.000000
+
+            set GD_Orchid_RaidWeapons.Shotgun.Spitter.Orchid_Seraph_Spitter_FireMode BeamMaxLength 7500.000000
+
+            set GD_Orchid_RaidWeapons.Shotgun.Spitter.Orchid_Seraph_Spitter_FireMode BeamSourceTangentStrengthOverDistance 1.500000
+
+            set GD_Orchid_RaidWeapons.Shotgun.Spitter.Orchid_Seraph_Spitter_FireMode BeamTargetTangentStrengthOverDistance 0.250000
+
+            set GD_Orchid_RaidWeapons.Shotgun.Spitter.Orchid_Seraph_Spitter_FireMode BeamApproxRepUpdateTime 1.000000
+
+            set GD_Orchid_RaidWeapons.Shotgun.Spitter.Orchid_Seraph_Spitter_FireMode NumRicochets 0
+
+            set GD_Orchid_RaidWeapons.Shotgun.Spitter.Orchid_Seraph_Spitter_FireMode SoundDefinition FiringModeSoundDefinition'GD_Weap_Shotgun.FiringModes.SplatGunSoundDefinition'
+
+        #</Retcher>
+
+    #</Code>
+
+    #<Fixes>
+
+        #<S&S Fixes><MUT>
+
+            #<S&S Lite Splitter Name Fix>
+
+                #set GD_Weap_Shotgun.Name.Title_Bandit.Title__Splatgun PartName Splitter<off>
+
+            #</S&S Lite Splitter Name Fix>
+
+            #<S&S Forever Compatibility Fix>
+
+                #set GD_Weap_Shotgun.Name.Title_Bandit.Title__Splatgun PartName Splitter<off>
+
+                #set GD_Weap_Shotgun.Name.Title_Bandit.Title__Splatgun WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=-1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))<off>
+
+            #</S&S Forever Compatibility Fix>
+
+        #</S&S Fixes>
+
+        #<Old Hyperion Compatibility Fix>
+
+            #set GD_Weap_Shotgun.Barrel.SG_Barrel_Alien_Hyperion AttributeSlotUpgrades ((SlotName="WeaponSpread",GradeIncrease=-4,bActivateSlot=True),(SlotName="AccuracyMin",GradeIncrease=-2,bActivateSlot=True),(SlotName="WeaponDamage",GradeIncrease=3,bActivateSlot=True),(SlotName="WeaponAccuracyImpulse",GradeIncrease=-7,bActivateSlot=True),(SlotName="WeaponFireRate",GradeIncrease=-6,bActivateSlot=True),(SlotName="WeaponMagSize",GradeIncrease=10,bActivateSlot=True))<off>
+
+        #</Old Hyperion Compatibility Fix>
+
+    #</Fixes>
+
+#</Splitters>
+
