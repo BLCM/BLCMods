@@ -1,0 +1,36 @@
+|||||||||||||||||||||||||||||||||||||||||||||
+|                                           |
+|            Created by CzRSpecV            |
+|                                           |
+|     Replaces the Reduced Ammo Gimmick     |
+|                                           |
+|||||||||||||||||||||||||||||||||||||||||||||
+
+## Vladof Launcher Gimmick Rework ##
+
+	This mod changes the Gimmick from reduced ammo per shot to burst fire rockets (Similar to BL1)
+	This affects all Vladof Launchers of all rarities, with balance to each rarity.
+
+##
+
+# White #
+set GD_Weap_Launchers.Body.L_Body_Vladof WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.05000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponAutomaticBurstCount',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=2.00000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+set GD_Weap_Launchers.Body.L_Body_Vladof:AttributePresentationDefinition_0 NoConstraintText <font color="#ffffff">+100% Burst Count<font color="#ffffff"><font color="#ffffff">
+
+# Green #
+set GD_Weap_Launchers.Body.L_Body_Vladof_2 WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-0.10000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponAutomaticBurstCount',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=3.00000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+set GD_Weap_Launchers.Body.L_Body_Vladof_2:AttributePresentationDefinition_1 NoConstraintText <font color="#ffffff">+200% Burst Count<font color="#ffffff"><font color="#ffffff">
+
+# Blue #
+set GD_Weap_Launchers.Body.L_Body_Vladof_3 WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-0.15000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponAutomaticBurstCount',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=4.00000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+set GD_Weap_Launchers.Body.L_Body_Vladof_3:AttributePresentationDefinition_2 NoConstraintText <font color="#ffffff">+300% Burst Count<font color="#ffffff"><font color="#ffffff">
+
+# Purple / E-Tech / Legendary #
+set GD_Weap_Launchers.Body.L_Body_Vladof_4 WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-0.25000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponAutomaticBurstCount',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=5.00000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+set GD_Weap_Launchers.Body.L_Body_Vladof_4:AttributePresentationDefinition_3 NoConstraintText <font color="#ffffff">+400% Burst Count<font color="#ffffff"><font color="#ffffff">
+
+# Mongol Weapon Card #
+set GD_Weap_Launchers.Barrel.L_Barrel_Vladof_Mongol:AttributePresentationDefinition_4 NoConstraintText <font color="#ffffff">Yes, you read that right.<font color="#ffffff"><font color="#ffffff">
+
+# Remove Old Gimmick #
+set GD_Weap_Launchers.A_Weapons.WT_Vladof_Launcher BehaviorProviderDefinition ()
