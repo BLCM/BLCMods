@@ -94,7 +94,7 @@ Modpack Contents (for extended descriptions, open the modpack with the Filter To
   TPS Skills (By adudney) (Not to be confused with TPSkills)
   Technically does the same thing as TPSkills but without the skilltree layout changes. Also has support for Gaige and Maya.
 
------Aaron0000-----
+-----Aaron0000 (https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/Aaron0000)-----
 
   Seraph Skins DLC 1 Style
   Changes the visuals of the Hawk Eye, Infection, Interfacer, Lead Storm, and Devastator to be in line with the rest of the Seraph weapons.
@@ -174,7 +174,7 @@ Modpack Contents (for extended descriptions, open the modpack with the Filter To
   Whitefork
   Makes the Pitchfork white. That's it.
 
------AngrierPat-----
+-----AngrierPat (https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/AngrierPat)-----
 
   Deputy Badge
   Makes the Deputy Badge dropable from Deputy Winger.
@@ -185,12 +185,12 @@ Modpack Contents (for extended descriptions, open the modpack with the Filter To
   Unofficial Gaige Patch
   Gives Gaige a nice rework. More info can be found here https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/AngrierPat/Skill%20Changes
 
------B33PB00PJOE-----
+-----B33PB00PJOE (https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/B33PB00PJOE)-----
 
   Salvador Overhaul
   Tries to rebalance Salvador with skill changes and skill swaps while still keeping his strength and increasing his fun. If using TPSkills, there is a fix in the file which HAS TO BE ENABLED.
 
------FromDarkHell-----
+-----FromDarkHell (https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/FromDarkHell)-----
 
   CatapultFirst
   Makes the Catapult Technical the default choice in the Catch-A-Ride.
@@ -198,7 +198,7 @@ Modpack Contents (for extended descriptions, open the modpack with the Filter To
   QuestFix
   Makes lots of quests less annoying, for example timed and collecting quests.
 
------Hemaxhu-----
+-----Hemaxhu (https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/Hemaxhu)-----
 
   Better Roland's Armory Chest
   Roland's chest has a chance to give you any legendary/pearl now.
@@ -227,22 +227,22 @@ Modpack Contents (for extended descriptions, open the modpack with the Filter To
   World Spawn Loot Midgets
   Chance to meet any loot midget (Only where Loaders can appear).
 
------Hydrattler-----
+-----Hydrattler (https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/Hydrattler)-----
 
   All the drops
   Gives Farm locations for most of the otherwise one per playthrough. Also makes a couple quests repeatable.
 
------IK4MS-----
+-----IK4MS (https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/IK4MS)-----
 
   Volcano Reskin
   Gives the Volcano a new skin and changes its barrel visually to the Dahl barrel.
 
------Jim Raven-----
+-----Jim Raven (https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/Jim%20Raven)-----
 
   Make Vendors Great Again and Refill Vendors COMBOBREAKER
   Allows refilling ammo with only one click. Changes white items to blue items and green items to purple items AND adds relics to Grenade Vendors (disabled in the KPack by default). Also increases legendary chance for the IOTD (1% chance in the KPack).
 
------Kazy (Sheep)-----
+-----Kazy (Sheep) (https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/Kazy)-----
 
   Legendary COM Reskin
   Changes the Digistruct Peak Class Mods' appearances to resemble their non-legendary counterparts.
@@ -264,7 +264,7 @@ Modpack Contents (for extended descriptions, open the modpack with the Filter To
   Revolver Law
   Changes the Law's barrel visually to the Jakobs barrel and gives it a new skin. Also supports the Revolvers mod by Aaron0000.
 
------soze (Mike)-----
+-----soze (Mike) (https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/soze)-----
 
   StV Blindness
   Removes the blinding effect from Krieg's Silence the Voices.
@@ -272,7 +272,7 @@ Modpack Contents (for extended descriptions, open the modpack with the Filter To
   Fuck Reload Messages
   Removes the annoying "[R] RELOAD" message from the HUD.
 
------theNocturni-----
+-----theNocturni (https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/theNocturni)-----
 
   Axton Tweaks
   Allows throwing out your turret in FFYL and allows you to recall your turret by holding F from any place.
