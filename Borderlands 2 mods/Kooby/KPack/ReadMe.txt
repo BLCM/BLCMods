@@ -5,14 +5,14 @@ c0dycode for his multitool
 Zububu for being a turtle
 Aaron0000, adudney, AngrierPat, B33PB00PJOE, FromDarkHell, Hemaxhu, IK4MS, JimRaven, Kazy(Sheep), Mike, Orudeon, soze(Mike) and theNocturni for making these wonderful mods and allowing me to make and publish this modpack.
 
-------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------
 
 !!!WARNING!!!
 Some mods in this modpack violate sanity checks. 
 This means loading into the game without the modpack enabled will remove existing items which violate sanity checks like weapons which have an accessory + melee attachment.
 Use c0dycode's multitool to disable sanity checks ( https://github.com/c0dycode/BL2ModStuff/blob/master/Hexediting/BL2%20Hex-Multitool%20Dark%20Mode.zip ) or make sure to always load the modpack first before entering the game.
 
-------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------
 
 Modpack FAQ
 
@@ -28,7 +28,7 @@ Modpack FAQ
 "When I execute the modpack I get an error with Maliwan Aquamarine Snipers!"
   This is normal, blame Gearbox or something.
 
-------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------
 
 Modpack Contents (for extended descriptions, open the modpack with the Filter Tool and look at the mods yourself):
 
