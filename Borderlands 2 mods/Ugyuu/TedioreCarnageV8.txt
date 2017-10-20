@@ -2,9 +2,9 @@
 
     #<Description>
 
-        A patch made by:                            |
+        A patch made by:
 
-        _    _  _____  _   _  _    _  _    _      |
+        ._    _  _____  _   _  _    _  _    _      |
 
         | |  | || ____|| | | || |  | || |  | |     |
 
@@ -24,17 +24,15 @@
 
         Turns the tediore barrels on shotguns into a carnage barrel; the old classic carnage from Borderlands 1 is back!
 
-        You NEED to use this with the community patch if you want the pearlescent to work.
-
         Ported from The Pre-Sequel to Borderlands 2!
 
         #<Notes>
 
-            Rockets can still hurt you, and this makes it so enemies can have a carnage too.
+            Rockets can still hurt you if you fire them too close to you.
 
-            Gives the KerBlaster a Firing Pattern. Use with caution.
+            Enemies with shotguns have a chance to spawn their shotguns with a Tediore barrel, giving them a carnage shotgun. Beware!
 
-            Execute the community patch, then this mod.
+            Execute the community patch, then this mod, if you happen to be using it.
 
         #</Notes>
 
@@ -57,18 +55,24 @@
         #</Features>
 
         #<Changelog>
+           
+            V7 No longer needs the community patch for the pearlescent "BFC" Carnage to work.
+
+               Minor damage buff to the BFC.
+
+            V6 Minor changes.
             
-            V5.0 Changed FiringMode of the BFC. If you have a mod that uses the KerBlaster, this will break.
+            V5 Changed FiringMode of the BFC. If you have a mod that uses the KerBlaster, this will break.
 
             Gave the BFC a little more shiny skin. (Very minor tweak.)
              
-            V4.0 Nerfed damage, added pearlescent carnage change.
+            V4 Nerfed damage, added pearlescent carnage change.
 
             Due to a bug with changing the pearl carnage firingmode, the tediore barreled carnage shotguns now use the Tediore launcher firingmode.
 
-            V3.0 Fixed vertical grip to never add projectiles on a carnage weapon, but still adds them on other weapons.
+            V3 Fixed vertical grip to never add projectiles on a carnage weapon, but still adds them on other weapons.
 
-            V2.0 Increased ammo consumption to 2 per shot, increased clip size to help compensate.
+            V2 Increased ammo consumption to 2 per shot, increased clip size to help compensate.
 
             13th of June 2017 Release + Ported over to Borderlands 2.
 
@@ -102,8 +106,9 @@
 
         set GD_Lobelia_Weapons.Shotguns.SG_Barrel_Torgue_Carnage CustomFiringModeDefinition FiringModeDefinition'GD_Weap_AssaultRifle.FiringModes.FM_Rocket_KerBlaster'
 
-        set GD_Lobelia_Weapons.Shotguns.SG_Barrel_Torgue_Carnage WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-5.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=-1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=5.249000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.450000)))
+        set GD_Lobelia_Weapons.Shotguns.SG_Barrel_Torgue_Carnage WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-5.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=-1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=5.339000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.450000)))
         
+        set GD_Lobelia_Weapons.Shotguns.SG_Accessory_VerticalGrip_Carnage WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=4.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=3.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
         
         set GD_Weap_AssaultRifle.FiringModes.FM_Rocket_KerBlaster FiringPatternLines ((StartPoint=(Pitch=0,Yaw=0,Roll=0),EndPoint=(Pitch=0,Yaw=0,Roll=0),bUseStartPointOnly=True,CustomWaveMotion=(bUseCustomWaveMotion=False,WaveFreq=(X=0.000000,Y=0.000000,Z=0.000000),WaveAmp=(X=0.000000,Y=0.000000,Z=0.000000),WavePhase=(X=0.000000,Y=0.000000,Z=0.000000))),(StartPoint=(Pitch=550,Yaw=0,Roll=0),EndPoint=(Pitch=0,Yaw=0,Roll=0),bUseStartPointOnly=True,CustomWaveMotion=(bUseCustomWaveMotion=False,WaveFreq=(X=0.000000,Y=0.000000,Z=0.000000),WaveAmp=(X=0.000000,Y=0.000000,Z=0.000000),WavePhase=(X=0.000000,Y=0.000000,Z=0.000000))),(StartPoint=(Pitch=-400,Yaw=-550,Roll=0),EndPoint=(Pitch=0,Yaw=0,Roll=0),bUseStartPointOnly=True,CustomWaveMotion=(bUseCustomWaveMotion=False,WaveFreq=(X=0.000000,Y=0.000000,Z=0.000000),WaveAmp=(X=0.000000,Y=0.000000,Z=0.000000),WavePhase=(X=0.000000,Y=0.000000,Z=0.000000))),(StartPoint=(Pitch=-400,Yaw=550,Roll=0),EndPoint=(Pitch=0,Yaw=0,Roll=0),bUseStartPointOnly=True,CustomWaveMotion=(bUseCustomWaveMotion=False,WaveFreq=(X=0.000000,Y=0.000000,Z=0.000000),WaveAmp=(X=0.000000,Y=0.000000,Z=0.000000),WavePhase=(X=0.000000,Y=0.000000,Z=0.000000)))
 
