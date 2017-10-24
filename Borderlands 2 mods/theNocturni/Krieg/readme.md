@@ -38,9 +38,9 @@ This folder contains mods that are related to Krieg
 	   makes it so that Blood Bath and Fuel the Fire are displayed in separate slots, thus preventing their overlapping each other.
  
 	5. EtP.txt 
-	   Embrace the Pain doesnt affect the fire rate of your thrown buzzaxes. The reason is that it is set to be deactivated when youre in Blood Axe Rampage
+	   Embrace the Pain doesnt affect the fire rate of your thrown buzzaxes. The reason is that it is set to be deactivated when you're in Blood Axe Rampage
 	
-	   this makes it so that Embrace the Pain stays on while youre in Blood Axe Rampage, thus keeping your roid shield delay long and giving you faster buzz axe throwing speed
+	   this makes it so that Embrace the Pain stays on while you're in Blood Axe Rampage, thus keeping your roid shield delay long and giving you faster buzz axe throwing speed
  
 	6. BloodTwitch.txt 
 	   turns Blood Twitch into a passive skill, but lowers the Swap Speed to compensate
@@ -74,4 +74,4 @@ This folder contains mods that are related to Krieg
 	
 	makes each have a similar color scheme to Black As Day skin
 	
-	unfortunately has to be activated when youre actually using that skin, and in-game with that character.
+	unfortunately has to be activated when you're actually using that skin, and in-game with that character.
