@@ -1,0 +1,132 @@
+#<Slag Overhaul>
+
+#<Description>
+
+Mod by B33P B00P JOE
+
+***WARNING***
+This overhauls the Slag Element completely.
+Load this as early as you can!
+*************
+
+
+Based on the amazing Cryo Mod by Aaron0000, Kazy, Mike, FromDarkHell, and The Campin' Dutchman.
+
+Turns Slag into something less polarizing, a bit of a hybrid of Slag and Cryo!
+
+Changes from Vanilla Slag:
+
++75% movement slowdown when slagged.
+
+Reduces fire rate by 37.5% when slagged.
+
++125% melee / critical damage.
+
++75% non-slag bonus damage.
+
++50% slag on slag damage.
+
+Added Damage over time.
+
+8 second base duration, like Death Mark
+
+Slag is naturally weak vs shields, dealing less damage / DoT and having a lesser application chance
+
+
+#</Description>
+
+#<Code>
+
+#<Element Status Effects (Slag Bonus Damage Modifiers)>
+
+set GD_Amp.Skills.Skill_AmplifyDamage SkillEffectDefinitions ((AttributeToModify=AttributeDefinition'D_Attributes.DamageSourceModifiers.ReceivedAmplifyDamageModifier',bIncludeDuelingTargets=False,bIncludeSelfAsTarget=False,bOnlyEffectTargetsInRange=False,bExcludeNonPlayerCharacters=False,EffectTarget=TARGET_Self,TargetInstanceDataName=,TargetCriteria=CRITERIA_None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Amp.Skills.Init_AmplifyDamageScale',BaseValueScaleConstant=0.750000),GradeToStartApplyingEffect=1,PerGradeUpgradeInterval=1,PerGradeUpgrade=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),BonusUpgradeList=),(AttributeToModify=AttributeDefinition'D_Attributes.DamageTypeModifers.AmpImpactDamageModifier',bIncludeDuelingTargets=False,bIncludeSelfAsTarget=False,bOnlyEffectTargetsInRange=False,bExcludeNonPlayerCharacters=False,EffectTarget=TARGET_Self,TargetInstanceDataName=,TargetCriteria=CRITERIA_None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Amp.Skills.Init_AmplifyDamageScale',BaseValueScaleConstant=-0.150000),GradeToStartApplyingEffect=1,PerGradeUpgradeInterval=1,PerGradeUpgrade=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),BonusUpgradeList=),(AttributeToModify=AttributeDefinition'D_Attributes.GameplayAttributes.FootSpeed',bIncludeDuelingTargets=False,bIncludeSelfAsTarget=False,bOnlyEffectTargetsInRange=False,bExcludeNonPlayerCharacters=True,EffectTarget=TARGET_Self,TargetInstanceDataName=,TargetCriteria=CRITERIA_None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-0.750000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),GradeToStartApplyingEffect=0,PerGradeUpgradeInterval=1,PerGradeUpgrade=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),BonusUpgradeList=),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',bIncludeDuelingTargets=False,bIncludeSelfAsTarget=False,bOnlyEffectTargetsInRange=False,bExcludeNonPlayerCharacters=False,EffectTarget=TARGET_Self,TargetInstanceDataName=,TargetCriteria=CRITERIA_None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.375000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),GradeToStartApplyingEffect=1,PerGradeUpgradeInterval=1,PerGradeUpgrade=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),BonusUpgradeList=),(AttributeToModify=AttributeDefinition'D_Attributes.DamageSourceModifiers.ReceivedMeleeDamageModifier',bIncludeDuelingTargets=False,bIncludeSelfAsTarget=False,bOnlyEffectTargetsInRange=False,bExcludeNonPlayerCharacters=False,EffectTarget=TARGET_Self,TargetInstanceDataName=,TargetCriteria=CRITERIA_None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.288000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),GradeToStartApplyingEffect=0,PerGradeUpgradeInterval=1,PerGradeUpgrade=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),BonusUpgradeList=),(AttributeToModify=AttributeDefinition'D_Attributes.GameplayAttributes.PlayerCriticalHitBonus',bIncludeDuelingTargets=False,bIncludeSelfAsTarget=False,bOnlyEffectTargetsInRange=False,bExcludeNonPlayerCharacters=False,EffectTarget=TARGET_All,TargetInstanceDataName=,TargetCriteria=CRITERIA_None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.288000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),GradeToStartApplyingEffect=0,PerGradeUpgradeInterval=1,PerGradeUpgrade=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),BonusUpgradeList=))
+
+set GD_Amp.DamageType.DmgType_Amp_Impact:AttributePresentationDefinition_1 Description [slag]Slagged enemies are slowed and take additional damage from all sources.[-slag]
+
+#</Element Status Effects (Slag Bonus Damage Modifiers)>
+
+#<Damage (Damage that Slag Deals directly)>
+
+set GD_Amp.DamageType.DmgType_Amp_Impact FleshDamageModifier (BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance_HealthAndDamage.DamageMultipliers.Init_NormalElementResistMultiplier_ByPlaythrough',BaseValueScaleConstant=1.000000)
+
+set GD_Amp.DamageType.DmgType_Amp_Impact ArmorDamageModifier (BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance_HealthAndDamage.DamageMultipliers.Init_NormalElementResistMultiplier_ByPlaythrough',BaseValueScaleConstant=1.000000)
+
+set GD_Amp.DamageType.DmgType_Amp_Impact ShieldDamageModifier (BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance_HealthAndDamage.DamageMultipliers.Init_HighElementResistMultiplier_ByPlaythrough',BaseValueScaleConstant=0.750000)
+
+set GD_Amp.DamageType.DmgType_Amp_Impact bNoBlood True
+
+set GD_Amp.DamageType.DmgType_Amp_Impact MaxDamageRadius 0.100000
+
+set GD_Amp.DamageType.DmgType_Amp_Impact MinDamagePercent 0.750000
+
+#</Damage (Damage that Slag Deals directly)>
+
+#<Status Damage (Slag DoT damage)>
+
+set GD_Amp.DamageType.DmgType_Amp_Status FleshDamageModifier (BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance_HealthAndDamage.DamageMultipliers.Init_NormalElementResistMultiplier_ByPlaythrough',BaseValueScaleConstant=0.500000)
+
+set GD_Amp.DamageType.DmgType_Amp_Status ArmorDamageModifier (BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance_HealthAndDamage.DamageMultipliers.Init_NormalElementResistMultiplier_ByPlaythrough',BaseValueScaleConstant=0.500000)
+
+set GD_Amp.DamageType.DmgType_Amp_Status ShieldDamageModifier (BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance_HealthAndDamage.DamageMultipliers.Init_HighElementResistMultiplier_ByPlaythrough',BaseValueScaleConstant=0.500000)
+
+set GD_Amp.DamageType.DmgType_Amp_Status bNoPlayerFeedback False
+
+set GD_Amp.DamageType.DmgType_Amp_Status bApplyUpwardMomentum True
+
+set GD_Amp.DamageType.DmgType_Amp_Status CharacterDamageTypeModifierAttribute AttributeDefinition'D_Attributes.DamageTypeModifers.AmpStatusEffectDamageModifier'
+
+set GD_Amp.DamageType.DmgType_Amp_Status MaxDamageRadius 0.100000
+
+set GD_Amp.DamageType.DmgType_Amp_Status MinDamagePercent 0.750000
+
+#</Status Damage (Slag DoT damage)>
+
+#<Status Effect Attributes (Slag Status Effect duration / etc)>
+
+set GD_Amp.StatusEffect.Status_Amp BaseDuration (BaseValueConstant=8.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+
+set GD_Amp.StatusEffect.Status_Amp BaseSpreadTimeInterval (BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+
+set GD_Amp.StatusEffect.Status_Amp BaseSpreadDistanceFromSource (BaseValueConstant=48.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+
+set GD_Amp.StatusEffect.Status_Amp BaseSpreadCap (BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+
+set GD_Amp.StatusEffect.Status_Amp TargetStatusEffectChanceModifier (BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.StatusEffectModifiers.AmpChanceResistanceModifier',InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+
+set GD_Amp.StatusEffect.Status_Amp TargetStatusEffectDurationModifier (BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.StatusEffectModifiers.AmpDurationResistanceModifier',InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+
+set GD_Amp.StatusEffect.Status_Amp TargetStatusEffectDamageModifier (BaseValueConstant=1.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.DamageTypeModifers.AmpStatusEffectDamageModifier',InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+
+set GD_Amp.StatusEffect.Status_Amp DamageSurfaceChanceModifiers ((SurfaceType=DMGSURFACE_Generic,BaseChance=(BaseValueConstant=15.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),BaseSpreadChance=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),SpreadChanceDecayMultiplier=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(SurfaceType=DMGSURFACE_Flesh,BaseChance=(BaseValueConstant=15.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),BaseSpreadChance=(BaseValueConstant=20.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),SpreadChanceDecayMultiplier=(BaseValueConstant=0.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(SurfaceType=DMGSURFACE_Armor,BaseChance=(BaseValueConstant=15.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),BaseSpreadChance=(BaseValueConstant=10.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),SpreadChanceDecayMultiplier=(BaseValueConstant=0.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(SurfaceType=DMGSURFACE_Shield,BaseChance=(BaseValueConstant=7.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),BaseSpreadChance=(BaseValueConstant=5.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),SpreadChanceDecayMultiplier=(BaseValueConstant=0.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+#</Status Effect Attributes (Slag Status Effect duration / etc)>
+
+#<Slag DoT on Card>
+
+set GD_AttributePresentation.Weapons_ElementalDamage.AttrPresent_WeaponAmpStatusEffectChance Description Slag Damage / sec.
+
+set GD_AttributePresentation.Weapons.WeapStatusEffectAttrPresent_StatusEffectDamage MappingData ((Presentation=AttributePresentationDefinition'GD_AttributePresentation.Weapons_ElementalDamage.AttrPresent_WeaponFireStatusEffectDamage',DamageType=WillowDamageTypeDefinition'GD_Incendiary.DamageType.DmgType_Incendiary_Impact'),(Presentation=AttributePresentationDefinition'GD_AttributePresentation.Weapons_ElementalDamage.AttrPresent_WeaponCorrosiveStatusEffectDamage',DamageType=WillowDamageTypeDefinition'GD_Corrosive.DamageType.DmgType_Corrosive_Impact'),(Presentation=AttributePresentationDefinition'GD_AttributePresentation.Weapons_ElementalDamage.AttrPresent_WeaponShockStatusEffectDamage',DamageType=WillowDamageTypeDefinition'GD_Shock.DamageType.DmgType_Shock_Impact'),(Presentation=AttributePresentationDefinition'GD_AttributePresentation.Weapons_ElementalDamage.AttrPresent_WeaponAmpStatusEffectChance',DamageType=WillowDamageTypeDefinition'GD_Amp.DamageType.DmgType_Amp_Impact'))
+
+#</Slag DoT on Card>
+
+#<Splash Damage DoT Fixes>
+
+set GD_Aster_RaidWeapons.SMGs.Bullet_SMG_Plasma_Florentine:Behavior_Explode_5 StatusEffectDamage (BaseValueConstant=1.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.Weapon.WeaponStatusEffectDamage',InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+
+set GD_Weap_SMG.FiringModes.Bullet_SMG_Chulainn:Behavior_Explode_5 StatusEffectDamage (BaseValueConstant=1.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.Weapon.WeaponStatusEffectDamage',InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+
+#</Splash Damage DoT Fixes>
+
+#</Code>
+
+#</Slag Overhaul>
+
+
+
+
+
+
+
+
+
+
