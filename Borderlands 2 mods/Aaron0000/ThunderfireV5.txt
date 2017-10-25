@@ -26,6 +26,9 @@
 
         (Thanks to SirUnmei for fixing the fins not moving and the dots not applying correctly.)
 
+        NOTE:
+        There is an option to enable the Thunderfire to produce novas on impact instead of just splash damage. It is entirely a visual change, but some people may find the novas to get in the way.
+
     #</Description>
 
     #<Code>
@@ -44,9 +47,9 @@
 
         set GD_Weap_SMG.FiringModes.Bullet_SMG_HellFire:Behavior_Explode_5 StatusEffectDamage (BaseValueConstant=1.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.Weapon.WeaponStatusEffectDamage',InitializationDefinition=None,BaseValueScaleConstant=1.000000)
 
-        set GD_Weap_SMG.FiringModes.Bullet_SMG_HellFire PartSysTemplate ParticleSystem'FX_WEP_Trails.Particles.Alien.Part_Wep_Tracer_Alien_Sniper'
+        set GD_Weap_SMG.FiringModes.Bullet_SMG_HellFire PartSysTemplate ParticleSystem'FX_WEP_Trails_Alien.Particles.Part_Sniper_Alien_Incediary_Tracer'
 
-        set GD_Weap_SMG.FiringModes.Bullet_SMG_HellFire ConditionalPartSysTemplate EffectCollectionDefinition'GD_Weap_SniperRifles.Effects.SR_ETech_Tracers'
+        set GD_Weap_SMG.FiringModes.Bullet_SMG_HellFire ConditionalPartSysTemplate None
 
         set GD_Weap_SMG.FiringModes.Bullet_SMG_HellFire Speed 20000.000000
 
@@ -78,5 +81,16 @@
 
     #</Code>
 
+    #<Novas>
+
+        #set GD_Weap_SMG.FiringModes.Bullet_SMG_HellFire:Behavior_Explode_5 Definition ExplosionDefinition'GD_Explosions.Incendiary.Explosion_IncendiaryMaster_ShieldNova'<off>
+
+        #set GD_Weap_SMG.FiringModes.Bullet_SMG_HellFire ExplosionOverideInstanceDataName None<off>
+
+    #</Novas>
+
 #</Thunderfire>
+
+
+
 
