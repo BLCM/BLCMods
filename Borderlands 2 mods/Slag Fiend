@@ -1,0 +1,16 @@
+Krieg's fire fiend skill now has a chance to slag enemies with melee instead of setting them on fire.
+
+#<Slag Fiend>
+
+    #<hotfix><key>"SparkOnDemandPatchEntry-SlagFiend1"</key><value>"GD_Lilac_Psycho_Streaming,GD_Lilac_Skills_Hellborn.Skills.FireFiend:BehaviorProviderDefinition_8.Behavior_CauseDamage_0,DamageTypeDefinition,,WillowDamageTypeDefinition'GD_Amp.DamageType.DmgType_Amp_Impact'"</value><on>
+
+    #<hotfix><key>"SparkOnDemandPatchEntry-SlagFiend2"</key><value>"GD_Lilac_Psycho_Streaming,GD_Lilac_Skills_Hellborn.Skills.FireFiend,SkillDescription,,[skill]Melee attacks[-skill] have a chance to [slag]Slag[-slag] enemies. [skill]Weapon Accuracy[-skill] and [skill]Reload Speed[-skill] are increased [incendiary]while you are on fire[-incendiary]."</value><on>
+
+    #<hotfix><key>"SparkOnDemandPatchEntry-SlagFiend3"</key><value>"GD_Lilac_Psycho_Streaming,GD_Lilac_Skills_Hellborn.Skills.FireFiend:AttributePresentationDefinition_2,Description,,Melee Slag Chance: $NUMBER$"</value><on>
+
+#</Slag Fiend>
+
+set Transient.SparkServiceConfiguration_6 Keys ("SparkOnDemandPatchEntry-SlagFiend1","SparkOnDemandPatchEntry-SlagFiend2","SparkOnDemandPatchEntry-SlagFiend3")
+
+set Transient.SparkServiceConfiguration_6 Values ("GD_Lilac_Psycho_Streaming,GD_Lilac_Skills_Hellborn.Skills.FireFiend:BehaviorProviderDefinition_8.Behavior_CauseDamage_0,DamageTypeDefinition,,WillowDamageTypeDefinition'GD_Amp.DamageType.DmgType_Amp_Impact'","GD_Lilac_Psycho_Streaming,GD_Lilac_Skills_Hellborn.Skills.FireFiend,SkillDescription,,[skill]Melee attacks[-skill] have a chance to [slag]Slag[-slag] enemies. [skill]Weapon Accuracy[-skill] and [skill]Reload Speed[-skill] are increased [incendiary]while you are on fire[-incendiary].","GD_Lilac_Psycho_Streaming,GD_Lilac_Skills_Hellborn.Skills.FireFiend:AttributePresentationDefinition_2,Description,,Melee Slag Chance: $NUMBER$")
+
