@@ -26,5 +26,5 @@ Replaces the Wallop, and turns it into one of the most powerful guns in BL2 -- T
 ### [Twister](https://raw.githubusercontent.com/BLCM/BLCMods/master/Pre%20Sequel%20Mods/Laxlife/Twister.txt)
 
 ```
-Replaces the Moonface , and turns it into one of the coolest shotties in BL2 -- The Twister
+Replaces the Moonface, and turns it into one of the coolest shotties in BL2 -- The Twister
 ```
