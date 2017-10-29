@@ -23,3 +23,8 @@ Click on the what ammo type you want and it refills it fully. No more spamming r
 ```
 Replaces the Wallop, and turns it into one of the most powerful guns in BL2 -- The Bekah
 ```
+### [Twister](https://raw.githubusercontent.com/BLCM/BLCMods/master/Pre%20Sequel%20Mods/Laxlife/Twister.txt)
+
+```
+Replaces the Moonface , and turns it into one of the coolest shotties in BL2 -- The Twister
+```
