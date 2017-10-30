@@ -1,0 +1,37 @@
+#<Punter>
+
+  #<Info>
+
+    #Originally made by Aaron0000, ported by Laxlife
+    #Replaces the Fletcher, Spits out a massive number of projectiles but suffers decreased accuracy, decreased reload speed and Dramatically decreased fire rate. Sheer carnage.
+
+  #</Info>
+
+  #<Card>
+
+      set GD_Ma_Weapons.Name.Title.Title__Legendary_SG_Jakobs_5_Flayer PartName Punter
+      set GD_Ma_Weapons.Name.Title.Title__Legendary_SG_Jakobs_5_Flayer:AttributePresentationDefinition_8 NoConstraintText One and done.
+
+  #</Card>
+
+  #<Attributes>
+
+      set GD_Ma_Weapons.Barrel.SG_Barrel_Jakobs_5_Flayer WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=2.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=46.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Jakobs',InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-99999.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=4.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=30.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-3.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=20.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponReloadSpeed',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+      set GD_Ma_Weapons.Barrel.SG_Barrel_Jakobs_5_Flayer ExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.GameplayAttributes.PlayerCriticalHitBonus',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+      set GD_Ma_Weapons.Barrel.SG_Barrel_Jakobs_5_Flayer WeaponCardAttributes ((Attribute=AttributeDefinition'D_Attributes.GameplayAttributes.PlayerCriticalHitBonus',PriorityIncrease=0.500000))
+
+
+  #</Attributes>
+
+  #<Barrel>
+
+      set GD_Ma_Weapons.Barrel.SG_Barrel_Jakobs_5_Flayer GestaltModeSkeletalMeshName SG_Barrel_Torgue
+      set GD_Ma_Weapons.Barrel.SG_Barrel_Jakobs_5_Flayer ManufacturerDefinitionForScopeMovie ManufacturerDefinition'GD_Manufacturers.Manufacturers.Jakobs'
+
+  #</Barrel>
+
+
+
+#</Punter>
