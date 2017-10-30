@@ -28,3 +28,8 @@ Replaces the Wallop, and turns it into one of the most powerful guns in BL2 -- T
 ```
 Replaces the Moonface, and turns it into one of the coolest shotties in BL2 -- The Twister
 ```
+### [Singing Bird](https://raw.githubusercontent.com/BLCM/BLCMods/master/Pre%20Sequel%20Mods/Laxlife/singingbird.txt)
+
+```
+Dave's Famous Singing Bird, Aiming down the sight discharges a massive powershot, costing your whole mag!  
+```
