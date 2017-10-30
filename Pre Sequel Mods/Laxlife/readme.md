@@ -39,3 +39,8 @@ Dave's Famous Singing Bird, Aiming down the sight discharges a massive powershot
 A Popular mod from Aaron, the Punter replaces the Fletcher. the Punter Spits out a massive number of projectiles but suffers decreased accuracy, decreased reload speed and Dramatically decreased fire rate. Sheer carnage.
   
 ```
+### [Whale Killer](https://raw.githubusercontent.com/BLCM/BLCMods/master/Pre%20Sequel%20Mods/Laxlife/WhaleKiller.txt)
+```
+Lightchaosman's super fun sniper mod, if it took more than one shot, you werent using a Jakobs.
+  
+```
