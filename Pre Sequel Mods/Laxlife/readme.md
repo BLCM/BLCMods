@@ -37,3 +37,7 @@ A Popular mod from Aaron, the Punter replaces the Fletcher. the Punter Spits out
 ```
 Lightchaosman's super fun sniper mod, if it took more than one shot, you werent using a Jakobs.
 ```
+### [Cheat Code plus](https://raw.githubusercontent.com/BLCM/BLCMods/master/Pre%20Sequel%20Mods/Laxlife/CheatCodeplus.txt)
+```
+Makes the Cheat Code unique by increasing Crit damage, Movement speed, Continuous weapon damage and reduces reload speed in Fight for Your Life (FFYL)
+```
