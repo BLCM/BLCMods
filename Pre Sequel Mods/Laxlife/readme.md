@@ -33,3 +33,9 @@ Replaces the Moonface, and turns it into one of the coolest shotties in BL2 -- T
 ```
 Dave's Famous Singing Bird, Aiming down the sight discharges a massive powershot, costing your whole mag!  
 ```
+### [Punter](https://raw.githubusercontent.com/BLCM/BLCMods/master/Pre%20Sequel%20Mods/Laxlife/singingbird.txt)
+
+```
+A Popular mod from Aaron, the Punter replaces the Fletcher. the Punter Spits out a massive number of projectiles but suffers decreased accuracy, decreased reload speed and Dramatically decreased fire rate. Sheer carnage.
+  
+```
