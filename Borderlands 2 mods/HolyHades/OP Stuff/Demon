@@ -4,25 +4,17 @@
 
 #DESCRIPTION:
 
-#Breaks the Hail
+#Breaks the Orc
 #
 #Replaces the Hellfire
-#
-#A bit Overpowered
 #
 #Adapts the element to the enemy (e.g. if you shoot a loader, it will do corrosive Damage.)
 #
 #Buffed the Damage
 #
-#Only spawns with Maliwan parts except the sight
-#
-#Pretty good accuracy
-#
 #Modified the adaptive Bullets from Dashiku's Shikurian
 #
 #Took the awesome skin from Kieitrio's Revamped Hellfire
-#
-#If you already have a Hellfire, make sure it has Maliwan Parts, if not the Sanity Check will delete it. (Sight does not matter.)
 #
 #Gibbed Code: BL2(hwAAAACawABDKANBEAGFrmIxwYKLJQHLCpb//xRY/v/nYvnBIozl)
 
@@ -32,7 +24,7 @@
 
 #Weapon Attributes and Description#
 
-set GD_Weap_SMG.Barrel.SMG_Barrel_Maliwan_HellFire CustomFiringModeDefinition FiringModeDefinition'GD_Weap_AssaultRifle.FiringModes.Bullet_Assault_Hail'
+set GD_Weap_SMG.Barrel.SMG_Barrel_Maliwan_HellFire CustomFiringModeDefinition FiringModeDefinition'GD_Aster_Weapons.FiringModes.Bullet_SMG_Orc'
 
 set GD_Weap_SMG.Name.Title_Maliwan.Title_Legendary_HellFire PartName Demon
 
@@ -42,15 +34,11 @@ set AttributePresentationDefinition'GD_Weap_Pistol.Barrel.Fibber.Pistol_Barrel_B
 
 set AttributePresentationDefinition'GD_Weap_Pistol.Barrel.Fibber.Pistol_Barrel_Bandit_Fibber_3:AttributePresentationDefinition_0' NoConstraintText [incendiary]Ad[-incendiary][shock]apt[-shock][corrosive]ive[-corrosive] [slag]bullets.[-slag]
 
-set GD_Weap_SMG.A_Weapons_Legendary.SMG_Maliwan_5_HellFire:WeaponPartListCollectionDefinition_173 GripPartData (bEnabled=True,WeightedParts=((Part=WeaponPartDefinition'GD_Weap_SMG.Grip.SMG_Grip_Maliwan',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=2)))
+set GD_Weap_SMG.Barrel.SMG_Barrel_Maliwan_HellFire GestaltModeSkeletalMeshName SMG_Barrel_Bandit
 
-set GD_Weap_SMG.A_Weapons_Legendary.SMG_Maliwan_5_HellFire:WeaponPartListCollectionDefinition_173 StockPartData (bEnabled=True,WeightedParts=((Part=WeaponPartDefinition'GD_Weap_SMG.Stock.SMG_Stock_Maliwan',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=2)))
+set GD_Weap_SMG.Barrel.SMG_Barrel_Maliwan_HellFire WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=6.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponStatusEffectChanceModifier',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=100.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
 
-set GD_Weap_SMG.A_Weapons_Legendary.SMG_Maliwan_5_HellFire:WeaponPartListCollectionDefinition_173 Accessory1PartData (bEnabled=True,WeightedParts=((Part=WeaponPartDefinition'GD_Weap_SMG.Accessory.SMG_Accessory_Body2_Damage',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=2)))
-
-set GD_Weap_SMG.Barrel.SMG_Barrel_Maliwan_HellFire WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=3.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponStatusEffectChanceModifier',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=100.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
-
-set GD_Weap_SMG.Barrel.SMG_Barrel_Maliwan_HellFire ExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.ActiveSkillCooldownResource.ActiveSkillCooldownConsumptionRate',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.500000)),(AttributeToModify=AttributeDefinition'D_Attributes.GameplayAttributes.PlayerCriticalHitBonus',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=2.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+set GD_Weap_SMG.Barrel.SMG_Barrel_Maliwan_HellFire ExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.ActiveSkillCooldownResource.ActiveSkillCooldownConsumptionRate',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.500000)),(AttributeToModify=AteDefinition'D_Attributes.DamageTypeModifers.CorrosiveStatusEffectDamageModifier',ConstraintAttribute=None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AteDefinition'D_Attributes.DamageTypeModifers.IncendiaryStatusEffectDamageModifier',ConstraintAttribute=None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AteDefinition'D_Attributes.DamageTypeModifers.NormalStatusEffectDamageModifier',ConstraintAttribute=None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AteDefinition'D_Attributes.DamageTypeModifers.ShockStatusEffectDamageModifier',ConstraintAttribute=None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.DamageSourceModifiers.ReceivedAmplifyDamageModifier',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=-0.500000)),(AttributeToModify=AttributeDefinition'D_Attributes.DamageSourceModifiers.ReceivedRocketDamageModifier',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=-0.500000)),(AttributeToModify=AttributeDefinition'D_Attributes.DamageSourceModifiers.ReceivedGrenadeDamageModifier',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=-0.500000)),(AttributeToModify=AttributeDefinition'D_Attributes.DamageSourceModifiers.ReceivedMeleeDamageModifier',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=-0.500000)),(AttributeToModify=AttributeDefinition'D_Attributes.DamageSourceModifiers.ReceivedBulletDamageModifier',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=-0.500000)),(AttributeToModify=AttributeDefinition'D_Attributes.DamageSourceModifiers.ReceivedStatusEffectDamageModifier',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=-1.000000)))
 
 set GD_Weap_SMG.Barrel.SMG_Barrel_Maliwan_HellFire AttributeSlotUpgrades ((SlotName="WeaponSpread",GradeIncrease=10,bActivateSlot=True),(SlotName="AccuracyMax",GradeIncrease=100,bActivateSlot=True),(SlotName="AccuracyMin",GradeIncrease=100,bActivateSlot=True),(SlotName="AccuracyRegen",GradeIncrease=10,bActivateSlot=True),(SlotName="WeaponAccuracyImpulse",GradeIncrease=100,bActivateSlot=True))
 
@@ -58,64 +46,59 @@ set GD_Weap_SMG.Barrel.SMG_Barrel_Maliwan_HellFire AttributeSlotUpgrades ((SlotN
 
 #Bullet 1 - Reaper#
 
-set GD_Weap_AssaultRifle.FiringModes.Bullet_Assault_Hail ExplosionOverrideDefinition None
+set GD_Aster_Weapons.FiringModes.Bullet_SMG_Orc ExplosionOverrideDefinition None
 
-set GD_Weap_AssaultRifle.FiringModes.Bullet_Assault_Hail ExplosionOverideInstanceDataName None
+set GD_Aster_Weapons.FiringModes.Bullet_SMG_Orc ExplosionOverideInstanceDataName None
 
-set GD_Weap_AssaultRifle.FiringModes.Bullet_Assault_Hail bSuppressWeaponSpread True
+set GD_Aster_Weapons.FiringModes.Bullet_SMG_Orc bSuppressWeaponSpread True
 
-set GD_Weap_AssaultRifle.FiringModes.Bullet_Assault_Hail Acceleration (Z=0.000000)
+set GD_Aster_Weapons.FiringModes.Bullet_SMG_Orc Acceleration (Z=0.000000)
 
-set GD_Weap_AssaultRifle.FiringModes.Bullet_Assault_Hail AirFriction 0.000000
+set GD_Aster_Weapons.FiringModes.Bullet_SMG_Orc AirFriction 0.000000
 
-set GD_Weap_AssaultRifle.FiringModes.Bullet_Assault_Hail bPenetratePawn True
+set GD_Aster_Weapons.FiringModes.Bullet_SMG_Orc bPenetratePawn True
 
-set GD_Weap_AssaultRifle.FiringModes.Bullet_Assault_Hail bBeamChooseRandomBone True
+set GD_Aster_Weapons.FiringModes.Bullet_SMG_Orc bBeamChooseRandomBone True
 
-set GD_Weap_AssaultRifle.FiringModes.Bullet_Assault_Hail Speed 30000
+set GD_Aster_Weapons.FiringModes.Bullet_SMG_Orc Speed 30000
 
-set GD_Weap_AssaultRifle.FiringModes.Bullet_Assault_Hail FiringPatternLines ()
+set GD_Aster_Weapons.FiringModes.Bullet_SMG_Orc FiringPatternLines ()
 
-set GD_Weap_AssaultRifle.FiringModes.Bullet_Assault_Hail OnAnyImpact (Behavior_Explode'GD_Aster_RaidWeapons.SMGs.Bullet_SMG_Plasma_Florentine:Behavior_Explode_5',Behavior_Explode'GD_Weap_AssaultRifle.FiringModes.Bullet_Assault_Hail:Behavior_Explode_5')
-set GD_Weap_AssaultRifle.FiringModes.Bullet_Assault_Hail TimerEvents ((Time=0.000001,Response=(SplitNum=1,SplitAngle=0.000000,SplitAngleOffset=0.000000,SplitDistance=0.000000,SplitFire=FiringModeDefinition'GD_Weap_AssaultRifle.FiringModes.Bullet_Assault_Hail_Child',NewSpeed=0.000000,bDetonate=False,bRespawnTracer=False,bUpdateBeamSourceLocation=False,Behaviors=)))
+set GD_Aster_Weapons.FiringModes.Bullet_SMG_Orc OnAnyImpact (Behavior_Explode'GD_Aster_RaidWeapons.SMGs.Bullet_SMG_Plasma_Florentine:Behavior_Explode_5',Behavior_Explode'GD_Aster_Weapons.FiringModes.Bullet_SMG_Orc_Child:Behavior_Explode_5')
 
 #Bullet 1 - Reaper#
 
 #Adaptive Bullet 1#
 
-set GD_Weap_AssaultRifle.FiringModes.Bullet_Assault_Hail ImpactResponses ((DamageSurfaceType=DMGSURFACE_Flesh,bDisableRegularBulletDamage=False,Behaviors=(Behavior_Explode'GD_Weap_Pistol.FiringModes.Bullets_Pistol_Bandit_Tinderbox:Behavior_Explode_5')),(DamageSurfaceType=DMGSURFACE_Armor,bDisableRegularBulletDamage=False,Behaviors=(Behavior_Explode'GD_Sage_RaidWeapons.FiringModes.Bullet_Pistol_Maliwan_Infection:Behavior_Explode_5')),(DamageSurfaceType=DMGSURFACE_Shield,bDisableRegularBulletDamage=False,Behaviors=(Behavior_Explode'GD_Sage_Weapons.FiringModes.Bullet_Shotgun_Twister:Behavior_Explode_5')),(DamageSurfaceType=DMGSURFACE_Generic,bDisableRegularBulletDamage=False,Behaviors=(Behavior_Explode'GD_Iris_Weapons.FiringModes.Bullet_Sniper_Cobra:Behavior_Explode_5')))
+set GD_Aster_Weapons.FiringModes.Bullet_SMG_Orc_Child ImpactResponses ((DamageSurfaceType=DMGSURFACE_Flesh,bDisableRegularBulletDamage=False,Behaviors=(Behavior_Explode'GD_Weap_SniperRifles.FiringModes.Bullet_Sniper_Volcano:Behavior_Explode_5')),(DamageSurfaceType=DMGSURFACE_Armor,bDisableRegularBulletDamage=False,Behaviors=(Behavior_Explode'GD_Weap_Pistol.FiringModes.Bullet_Pistol_Dahl_Teapot:Behavior_Explode_5')),(DamageSurfaceType=DMGSURFACE_Shield,bDisableRegularBulletDamage=False,Behaviors=(Behavior_Explode'GD_Orchid_BossWeapons.FiringModes.Bullet_Pistol_Maliwan_Evie:Behavior_Explode_5')),(DamageSurfaceType=DMGSURFACE_Generic,bDisableRegularBulletDamage=False,Behaviors=(Behavior_Explode'GD_Weap_Pistol.FiringModes.Bullets_Pistol_Torgue_Calla:Behavior_Explode_5')))
 
 #Adaptive Bullet 1#
 
 #Bullet 2 - Grenade#
 
-set GD_Weap_AssaultRifle.FiringModes.Bullet_Assault_Hail_Child DamageTypeDefinition None
+set GD_Aster_Weapons.FiringModes.Bullet_SMG_Orc_Child ExplosionOverrideDefinition None
 
-set GD_Weap_AssaultRifle.FiringModes.Bullet_Assault_Hail_Child ExplosionOverrideDefinition None
+set GD_Aster_Weapons.FiringModes.Bullet_SMG_Orc_Child ExplosionOverideInstanceDataName None
 
-set GD_Weap_AssaultRifle.FiringModes.Bullet_Assault_Hail_Child ExplosionOverideInstanceDataName None
+set GD_Aster_Weapons.FiringModes.Bullet_SMG_Orc_Child bSuppressWeaponSpread True
 
-set GD_Weap_AssaultRifle.FiringModes.Bullet_Assault_Hail_Child bSuppressWeaponSpread True
+set GD_Aster_Weapons.FiringModes.Bullet_SMG_Orc_Child Acceleration (Z=0.000000)
 
-set GD_Weap_AssaultRifle.FiringModes.Bullet_Assault_Hail_Child Acceleration (Z=0.000000)
+set GD_Aster_Weapons.FiringModes.Bullet_SMG_Orc_Child AirFriction 0.000000
 
-set GD_Weap_AssaultRifle.FiringModes.Bullet_Assault_Hail_Child AirFriction 0.000000
+set GD_Aster_Weapons.FiringModes.Bullet_SMG_Orc_Child bPenetratePawn True
 
-set GD_Weap_AssaultRifle.FiringModes.Bullet_Assault_Hail_Child bPenetratePawn True
+set GD_Aster_Weapons.FiringModes.Bullet_SMG_Orc_Child bBeamChooseRandomBone True
 
-set GD_Weap_AssaultRifle.FiringModes.Bullet_Assault_Hail_Child bBeamChooseRandomBone True
+set GD_Aster_Weapons.FiringModes.Bullet_SMG_Orc_Child Speed 30000
 
-set GD_Weap_AssaultRifle.FiringModes.Bullet_Assault_Hail_Child Speed 30000
-
-set GD_Weap_AssaultRifle.FiringModes.Bullet_Assault_Hail_Child FiringPatternLines ()
-
-set GD_Weap_AssaultRifle.FiringModes.Bullet_Assault_Hail_Child OnAnyImpact ()
+set GD_Aster_Weapons.FiringModes.Bullet_SMG_Orc_Child FiringPatternLines ()
 
 #Bullet 2 - Grenade#
 
 #Adaptive Bullet 2#
 
-set GD_Weap_AssaultRifle.FiringModes.Bullet_Assault_Hail_Child ImpactResponses ((DamageSurfaceType=DMGSURFACE_Flesh,bDisableRegularBulletDamage=False,Behaviors=(Behavior_Explode'GD_Weap_SniperRifles.FiringModes.Bullet_Sniper_Volcano:Behavior_Explode_5')),(DamageSurfaceType=DMGSURFACE_Armor,bDisableRegularBulletDamage=False,Behaviors=(Behavior_Explode'GD_Weap_Pistol.FiringModes.Bullet_Pistol_Dahl_Teapot:Behavior_Explode_5')),(DamageSurfaceType=DMGSURFACE_Shield,bDisableRegularBulletDamage=False,Behaviors=(Behavior_Explode'GD_Orchid_BossWeapons.FiringModes.Bullet_Pistol_Maliwan_Evie:Behavior_Explode_5')),(DamageSurfaceType=DMGSURFACE_Generic,bDisableRegularBulletDamage=False,Behaviors=(Behavior_Explode'GD_Weap_Pistol.FiringModes.Bullets_Pistol_Torgue_Calla:Behavior_Explode_5')))
+set GD_Aster_Weapons.FiringModes.Bullet_SMG_Orc ImpactResponses ((DamageSurfaceType=DMGSURFACE_Flesh,bDisableRegularBulletDamage=False,Behaviors=(Behavior_Explode'GD_Weap_Pistol.FiringModes.Bullets_Pistol_Bandit_Tinderbox:Behavior_Explode_5')),(DamageSurfaceType=DMGSURFACE_Armor,bDisableRegularBulletDamage=False,Behaviors=(Behavior_Explode'GD_Sage_RaidWeapons.FiringModes.Bullet_Pistol_Maliwan_Infection:Behavior_Explode_5')),(DamageSurfaceType=DMGSURFACE_Shield,bDisableRegularBulletDamage=False,Behaviors=(Behavior_Explode'GD_Sage_Weapons.FiringModes.Bullet_Shotgun_Twister:Behavior_Explode_5')),(DamageSurfaceType=DMGSURFACE_Generic,bDisableRegularBulletDamage=False,Behaviors=(Behavior_Explode'GD_Iris_Weapons.FiringModes.Bullet_Sniper_Cobra:Behavior_Explode_5')))
 
 #Adaptive Bullet 2#
 
@@ -155,35 +138,7 @@ set GD_Weap_Pistol.FiringModes.Bullets_Pistol_Torgue_Calla:Behavior_Explode_5 In
 
 #Explosive Bullet 2 - Grenade#
 
-#Melee Explosion#
-
-set GD_Weap_AssaultRifle.FiringModes.Bullet_Assault_Hail:Behavior_Explode_5 DamageSource Class'WillowGame.WillowDmgSource_Melee'
-
-set GD_Weap_AssaultRifle.FiringModes.Bullet_Assault_Hail:Behavior_Explode_5 DamageRadiusFormula (BaseValueConstant=10.000000)
-
-set GD_Weap_AssaultRifle.FiringModes.Bullet_Assault_Hail:Behavior_Explode_5 DamageFormula (BaseValueConstant=0.000000,BaseValueScaleConstant=0.000000)
-
-set GD_Weap_AssaultRifle.FiringModes.Bullet_Assault_Hail:Behavior_Explode_5 InstigatorSelfDamageScale 0.000000
-
-#Melee Explosion#
-
 #Fire Explosion 1 - Reaper#
-
-set GD_Weap_Pistol.FiringModes.Bullets_Pistol_Bandit_Tinderbox:Behavior_Explode_5 DamageSource Class'WillowGame.WillowDmgSource_SubMachineGun'
-
-set GD_Weap_Pistol.FiringModes.Bullets_Pistol_Bandit_Tinderbox:Behavior_Explode_5 DamageFormula (BaseValueConstant=10000000.000000,BaseValueScaleConstant=1.000000)
-
-set GD_Weap_Pistol.FiringModes.Bullets_Pistol_Bandit_Tinderbox:Behavior_Explode_5 DamageRadiusFormula (BaseValueConstant=100.000000)
-
-set GD_Weap_Pistol.FiringModes.Bullets_Pistol_Bandit_Tinderbox:Behavior_Explode_5 Definition ExplosionDefinition'GD_Explosions.Incendiary.Explosion_IncendiaryMaster'
-
-set GD_Weap_Pistol.FiringModes.Bullets_Pistol_Bandit_Tinderbox:Behavior_Explode_5 StatusEffectChance (BaseValueScaleConstant=1.000000)
-
-set GD_Weap_Pistol.FiringModes.Bullets_Pistol_Bandit_Tinderbox:Behavior_Explode_5 InstigatorSelfDamageScale 0.000000
-
-#Fire Explosion 1 - Reaper#
-
-#Fire Explosion 2 - Grenade# 
 
 set GD_Weap_SniperRifles.FiringModes.Bullet_Sniper_Volcano:Behavior_Explode_5 DamageSource Class'WillowGame.WillowDmgSource_Grenade'
 
@@ -196,6 +151,22 @@ set GD_Weap_SniperRifles.FiringModes.Bullet_Sniper_Volcano:Behavior_Explode_5 De
 set GD_Weap_SniperRifles.FiringModes.Bullet_Sniper_Volcano:Behavior_Explode_5 StatusEffectChance (BaseValueScaleConstant=1.000000)
 
 set GD_Weap_SniperRifles.FiringModes.Bullet_Sniper_Volcano:Behavior_Explode_5 InstigatorSelfDamageScale 0.000000
+
+#Fire Explosion 1 - Reaper#
+
+#Fire Explosion 2 - Grenade# 
+
+set GD_Weap_Pistol.FiringModes.Bullets_Pistol_Bandit_Tinderbox:Behavior_Explode_5 DamageSource Class'WillowGame.WillowDmgSource_Grenade'
+
+set GD_Weap_Pistol.FiringModes.Bullets_Pistol_Bandit_Tinderbox:Behavior_Explode_5 DamageFormula (BaseValueScaleConstant=1.000000)
+
+set GD_Weap_Pistol.FiringModes.Bullets_Pistol_Bandit_Tinderbox:Behavior_Explode_5 DamageRadiusFormula (BaseValueConstant=120.000000)
+
+set GD_Weap_Pistol.FiringModes.Bullets_Pistol_Bandit_Tinderbox:Behavior_Explode_5 Definition ExplosionDefinition'GD_Explosions.Incendiary.Explosion_IncendiaryMaster'
+
+set GD_Weap_Pistol.FiringModes.Bullets_Pistol_Bandit_Tinderbox:Behavior_Explode_5 StatusEffectChance (BaseValueScaleConstant=1.000000)
+
+set GD_Weap_Pistol.FiringModes.Bullets_Pistol_Bandit_Tinderbox:Behavior_Explode_5 InstigatorSelfDamageScale 0.000000
 
 #Fire Explosion 2 - Grenade# 
 
