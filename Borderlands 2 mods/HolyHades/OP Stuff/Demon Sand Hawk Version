@@ -1,0 +1,149 @@
+###DEMON - HELLFIRE OVERHAUL###
+
+#by HolyHades
+
+#DESCRIPTION:
+
+#Breaks Non-Elemental Sand Hawk
+#
+#Replaces the Hellfire
+#
+#Adapts the element to the enemy (e.g. if you shoot a loader, it will do corrosive Damage.)
+#
+#Gets full Bee Amp Damage (the unlisted Projectiles)
+#
+#Modified the adaptive Bullets from Dashiku's Shikurian
+#
+#Took the awesome skin from Kieitrio's Revamped Hellfire
+#
+#Gibbed Code: BL2(hwAAAADs7wBDKANBEAGFrmIxwYKLJQELC5b//xRY/v/nYvnBIozl)
+
+
+
+#CODE
+
+#Weapon Attributes and Description#
+
+set GD_Weap_SMG.Barrel.SMG_Barrel_Maliwan_HellFire CustomFiringModeDefinition FiringModeDefinition'GD_Orchid_BossWeapons.FiringModes.Bullet_SMG_SandHawk'
+
+set GD_Weap_SMG.Name.Title_Maliwan.Title_Legendary_HellFire PartName Demon
+
+set GD_Weap_SMG.Barrel.SMG_Barrel_Maliwan_HellFire CustomPresentations (AttributePresentationDefinition'GD_Weap_Pistol.Barrel.Fibber.Pistol_Barrel_Bandit_Fibber_3:AttributePresentationDefinition_0')
+
+set AttributePresentationDefinition'GD_Weap_Pistol.Barrel.Fibber.Pistol_Barrel_Bandit_Fibber_3:AttributePresentationDefinition_0' BasePriority 10.000000
+
+set AttributePresentationDefinition'GD_Weap_Pistol.Barrel.Fibber.Pistol_Barrel_Bandit_Fibber_3:AttributePresentationDefinition_0' NoConstraintText [incendiary]Ad[-incendiary][shock]apt[-shock][corrosive]ive[-corrosive] [slag]bullets.[-slag]
+
+set GD_Weap_SMG.Barrel.SMG_Barrel_Maliwan_HellFire GestaltModeSkeletalMeshName SMG_Barrel_Maliwan
+
+set GD_Weap_SMG.Barrel.SMG_Barrel_Maliwan_HellFire WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=6.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponStatusEffectChanceModifier',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=100.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+set GD_Weap_SMG.Barrel.SMG_Barrel_Maliwan_HellFire ExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.ActiveSkillCooldownResource.ActiveSkillCooldownConsumptionRate',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.500000)),(AttributeToModify=AteDefinition'D_Attributes.DamageTypeModifers.CorrosiveStatusEffectDamageModifier',ConstraintAttribute=None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AteDefinition'D_Attributes.DamageTypeModifers.IncendiaryStatusEffectDamageModifier',ConstraintAttribute=None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AteDefinition'D_Attributes.DamageTypeModifers.NormalStatusEffectDamageModifier',ConstraintAttribute=None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AteDefinition'D_Attributes.DamageTypeModifers.ShockStatusEffectDamageModifier',ConstraintAttribute=None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.DamageSourceModifiers.ReceivedAmplifyDamageModifier',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=-0.500000)),(AttributeToModify=AttributeDefinition'D_Attributes.DamageSourceModifiers.ReceivedRocketDamageModifier',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=-0.500000)),(AttributeToModify=AttributeDefinition'D_Attributes.DamageSourceModifiers.ReceivedGrenadeDamageModifier',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=-0.500000)),(AttributeToModify=AttributeDefinition'D_Attributes.DamageSourceModifiers.ReceivedMeleeDamageModifier',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=-0.500000)),(AttributeToModify=AttributeDefinition'D_Attributes.DamageSourceModifiers.ReceivedBulletDamageModifier',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=-0.500000)),(AttributeToModify=AttributeDefinition'D_Attributes.DamageSourceModifiers.ReceivedStatusEffectDamageModifier',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=-1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.GameplayAttributes.PlayerCriticalHitBonus',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=2.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+set GD_Weap_SMG.Barrel.SMG_Barrel_Maliwan_HellFire AttributeSlotUpgrades ((SlotName="WeaponSpread",GradeIncrease=10,bActivateSlot=True),(SlotName="AccuracyMax",GradeIncrease=100,bActivateSlot=True),(SlotName="AccuracyMin",GradeIncrease=100,bActivateSlot=True),(SlotName="AccuracyRegen",GradeIncrease=10,bActivateSlot=True),(SlotName="WeaponAccuracyImpulse",GradeIncrease=100,bActivateSlot=True))
+
+#Weapon Attributes and Description#
+
+#Bullet 1 - Reaper#
+
+set GD_Orchid_BossWeapons.FiringModes.Bullet_SMG_SandHawk bPenetratePawn True
+
+set GD_Orchid_BossWeapons.FiringModes.Bullet_SMG_SandHawk OnAnyImpact (Behavior_Explode'GD_Aster_RaidWeapons.SMGs.Bullet_SMG_Plasma_Florentine:Behavior_Explode_5',Behavior_Explode'GD_Orchid_BossWeapons.FiringModes.Bullet_SMG_SandHawk_Child0',Behavior_Explode'GD_Orchid_BossWeapons.FiringModes.Bullet_SMG_SandHawk_Child1',Behavior_Explode'GD_Orchid_BossWeapons.FiringModes.Bullet_SMG_SandHawk_Child2',Behavior_Explode'GD_Orchid_BossWeapons.FiringModes.Bullet_SMG_SandHawk_Child3')
+
+#Bullet 1 - Reaper#
+
+#Adaptive Bullet 2#
+
+set GD_Orchid_BossWeapons.FiringModes.Bullet_SMG_SandHawk ImpactResponses ((DamageSurfaceType=DMGSURFACE_Flesh,bDisableRegularBulletDamage=False,Behaviors=(Behavior_Explode'GD_Weap_SniperRifles.FiringModes.Bullet_Sniper_Volcano:Behavior_Explode_5')),(DamageSurfaceType=DMGSURFACE_Armor,bDisableRegularBulletDamage=False,Behaviors=(Behavior_Explode'GD_Sage_RaidWeapons.FiringModes.Bullet_Pistol_Maliwan_Infection:Behavior_Explode_5')),(DamageSurfaceType=DMGSURFACE_Shield,bDisableRegularBulletDamage=False,Behaviors=(Behavior_Explode'GD_Sage_Weapons.FiringModes.Bullet_Shotgun_Twister:Behavior_Explode_5')),(DamageSurfaceType=DMGSURFACE_Generic,bDisableRegularBulletDamage=False,Behaviors=(Behavior_Explode'GD_Iris_Weapons.FiringModes.Bullet_Sniper_Cobra:Behavior_Explode_5')))
+
+set GD_Orchid_BossWeapons.FiringModes.Bullet_SMG_SandHawk_Child0 ImpactResponses ((DamageSurfaceType=DMGSURFACE_Flesh,bDisableRegularBulletDamage=False,Behaviors=(Behavior_Explode'GD_Weap_SniperRifles.FiringModes.Bullet_Sniper_Volcano:Behavior_Explode_5')),(DamageSurfaceType=DMGSURFACE_Armor,bDisableRegularBulletDamage=False,Behaviors=(Behavior_Explode'GD_Sage_RaidWeapons.FiringModes.Bullet_Pistol_Maliwan_Infection:Behavior_Explode_5')),(DamageSurfaceType=DMGSURFACE_Shield,bDisableRegularBulletDamage=False,Behaviors=(Behavior_Explode'GD_Sage_Weapons.FiringModes.Bullet_Shotgun_Twister:Behavior_Explode_5')),(DamageSurfaceType=DMGSURFACE_Generic,bDisableRegularBulletDamage=False,Behaviors=(Behavior_Explode'GD_Iris_Weapons.FiringModes.Bullet_Sniper_Cobra:Behavior_Explode_5')))
+
+set GD_Orchid_BossWeapons.FiringModes.Bullet_SMG_SandHawk_Child1 ImpactResponses ((DamageSurfaceType=DMGSURFACE_Flesh,bDisableRegularBulletDamage=False,Behaviors=(Behavior_Explode'GD_Weap_SniperRifles.FiringModes.Bullet_Sniper_Volcano:Behavior_Explode_5')),(DamageSurfaceType=DMGSURFACE_Armor,bDisableRegularBulletDamage=False,Behaviors=(Behavior_Explode'GD_Sage_RaidWeapons.FiringModes.Bullet_Pistol_Maliwan_Infection:Behavior_Explode_5')),(DamageSurfaceType=DMGSURFACE_Shield,bDisableRegularBulletDamage=False,Behaviors=(Behavior_Explode'GD_Sage_Weapons.FiringModes.Bullet_Shotgun_Twister:Behavior_Explode_5')),(DamageSurfaceType=DMGSURFACE_Generic,bDisableRegularBulletDamage=False,Behaviors=(Behavior_Explode'GD_Iris_Weapons.FiringModes.Bullet_Sniper_Cobra:Behavior_Explode_5')))
+
+set GD_Orchid_BossWeapons.FiringModes.Bullet_SMG_SandHawk_Child2 ImpactResponses ((DamageSurfaceType=DMGSURFACE_Flesh,bDisableRegularBulletDamage=False,Behaviors=(Behavior_Explode'GD_Weap_SniperRifles.FiringModes.Bullet_Sniper_Volcano:Behavior_Explode_5')),(DamageSurfaceType=DMGSURFACE_Armor,bDisableRegularBulletDamage=False,Behaviors=(Behavior_Explode'GD_Sage_RaidWeapons.FiringModes.Bullet_Pistol_Maliwan_Infection:Behavior_Explode_5')),(DamageSurfaceType=DMGSURFACE_Shield,bDisableRegularBulletDamage=False,Behaviors=(Behavior_Explode'GD_Sage_Weapons.FiringModes.Bullet_Shotgun_Twister:Behavior_Explode_5')),(DamageSurfaceType=DMGSURFACE_Generic,bDisableRegularBulletDamage=False,Behaviors=(Behavior_Explode'GD_Iris_Weapons.FiringModes.Bullet_Sniper_Cobra:Behavior_Explode_5')))
+
+set GD_Orchid_BossWeapons.FiringModes.Bullet_SMG_SandHawk_Child3 ImpactResponses ((DamageSurfaceType=DMGSURFACE_Flesh,bDisableRegularBulletDamage=False,Behaviors=(Behavior_Explode'GD_Weap_SniperRifles.FiringModes.Bullet_Sniper_Volcano:Behavior_Explode_5')),(DamageSurfaceType=DMGSURFACE_Armor,bDisableRegularBulletDamage=False,Behaviors=(Behavior_Explode'GD_Sage_RaidWeapons.FiringModes.Bullet_Pistol_Maliwan_Infection:Behavior_Explode_5')),(DamageSurfaceType=DMGSURFACE_Shield,bDisableRegularBulletDamage=False,Behaviors=(Behavior_Explode'GD_Sage_Weapons.FiringModes.Bullet_Shotgun_Twister:Behavior_Explode_5')),(DamageSurfaceType=DMGSURFACE_Generic,bDisableRegularBulletDamage=False,Behaviors=(Behavior_Explode'GD_Iris_Weapons.FiringModes.Bullet_Sniper_Cobra:Behavior_Explode_5')))
+
+#Adaptive Bullet 2#
+
+#Slag Explosion#
+
+set GD_Aster_RaidWeapons.SMGs.Bullet_SMG_Plasma_Florentine:Behavior_Explode_5 DamageSource Class'WillowGame.WillowDmgSource_SubMachineGun'
+
+set GD_Aster_RaidWeapons.SMGs.Bullet_SMG_Plasma_Florentine:Behavior_Explode_5 Definition ExplosionDefinition'GD_Explosions.Slag.Explosion_SlagMaster'
+
+#Slag Explosion#
+
+#Explosive Bullet 1 - Reaper#
+
+set GD_Iris_Weapons.FiringModes.Bullet_Sniper_Cobra:Behavior_Explode_5 DamageSource Class'WillowGame.WillowDmgSource_SubMachineGun'
+
+set GD_Iris_Weapons.FiringModes.Bullet_Sniper_Cobra:Behavior_Explode_5 DamageRadiusFormula (BaseValueConstant=100.000000)
+
+set GD_Iris_Weapons.FiringModes.Bullet_Sniper_Cobra:Behavior_Explode_5 DamageFormula (BaseValueConstant=2.000000,BaseValueScaleConstant=1.000000)
+
+set GD_Iris_Weapons.FiringModes.Bullet_Sniper_Cobra:Behavior_Explode_5 Definition ExplosionDefinition'GD_Explosions.Explosive.Explosion_ExplosiveMaster'
+
+set GD_Iris_Weapons.FiringModes.Bullet_Sniper_Cobra:Behavior_Explode_5 InstigatorSelfDamageScale 0.000000
+
+#Explosive Bullet 1 - Reaper#
+
+#Fire Explosion 1 - Reaper#
+
+set GD_Weap_SniperRifles.FiringModes.Bullet_Sniper_Volcano:Behavior_Explode_5 DamageSource Class'WillowGame.WillowDmgSource_Grenade'
+
+set GD_Weap_SniperRifles.FiringModes.Bullet_Sniper_Volcano:Behavior_Explode_5 DamageFormula (BaseValueScaleConstant=1.000000)
+
+set GD_Weap_SniperRifles.FiringModes.Bullet_Sniper_Volcano:Behavior_Explode_5 DamageRadiusFormula (BaseValueConstant=120.000000)
+
+set GD_Weap_SniperRifles.FiringModes.Bullet_Sniper_Volcano:Behavior_Explode_5 Definition ExplosionDefinition'GD_Explosions.Incendiary.Explosion_IncendiaryMaster'
+
+set GD_Weap_SniperRifles.FiringModes.Bullet_Sniper_Volcano:Behavior_Explode_5 StatusEffectChance (BaseValueScaleConstant=1.000000)
+
+set GD_Weap_SniperRifles.FiringModes.Bullet_Sniper_Volcano:Behavior_Explode_5 InstigatorSelfDamageScale 0.000000
+
+#Fire Explosion 1 - Reaper#
+
+#Shock Explosion 1 - Reaper#
+
+set GD_Sage_Weapons.FiringModes.Bullet_Shotgun_Twister:Behavior_Explode_5 DamageSource Class'WillowGame.WillowDmgSource_SubMachineGun'
+
+set GD_Sage_Weapons.FiringModes.Bullet_Shotgun_Twister:Behavior_Explode_5 DamageRadiusFormula (BaseValueConstant=100.000000)
+
+set GD_Sage_Weapons.FiringModes.Bullet_Shotgun_Twister:Behavior_Explode_5 DamageFormula (BaseValueScaleConstant=1.000000)
+
+set GD_Sage_Weapons.FiringModes.Bullet_Shotgun_Twister:Behavior_Explode_5 Definition ExplosionDefinition'GD_Explosions.Shock.Explosion_ShockMaster'
+
+set GD_Sage_Weapons.FiringModes.Bullet_Shotgun_Twister:Behavior_Explode_5 StatusEffectDamage (BaseValueConstant=2.000000)
+
+set GD_Sage_Weapons.FiringModes.Bullet_Shotgun_Twister:Behavior_Explode_5 StatusEffectChance (BaseValueScaleConstant=2.000000)
+
+set GD_Sage_Weapons.FiringModes.Bullet_Shotgun_Twister:Behavior_Explode_5 InstigatorSelfDamageScale 0.000000
+
+#Shock Explosion 1 - Reaper#
+
+#Corrosive Explosion 1 - Reaper#
+
+set GD_Sage_RaidWeapons.FiringModes.Bullet_Pistol_Maliwan_Infection:Behavior_Explode_5 DamageSource Class'WillowGame.WillowDmgSource_SubMachineGun'
+
+set GD_Sage_RaidWeapons.FiringModes.Bullet_Pistol_Maliwan_Infection:Behavior_Explode_5 DamageFormula (BaseValueScaleConstant=1.000000)
+
+set GD_Sage_RaidWeapons.FiringModes.Bullet_Pistol_Maliwan_Infection:Behavior_Explode_5 DamageRadiusFormula (BaseValueConstant=100.000000)
+
+set GD_Sage_RaidWeapons.FiringModes.Bullet_Pistol_Maliwan_Infection:Behavior_Explode_5 Definition ExplosionDefinition'GD_Explosions.Corrosive.Explosion_CorrosiveMaster'
+
+set GD_Sage_RaidWeapons.FiringModes.Bullet_Pistol_Maliwan_Infection:Behavior_Explode_5 StatusEffectChance (BaseValueScaleConstant=1.000000)
+
+set GD_Sage_RaidWeapons.FiringModes.Bullet_Pistol_Maliwan_Infection:Behavior_Explode_5 InstigatorSelfDamageScale 0.000000
+
+#Corrosive Explosion 1 - Reaper#
+
+#Skin#
+
+set Common_GunMaterials.Materials.SMG.Mati_Maliwan_Legendary_Hellfire ScalarParameterValues ((ParameterName="p_DecalRotate",ParameterValue=-0.250000,ExpressionGUID=(A=-276527909,B=1298581551,C=856978878,D=743944047)),(ParameterName="p_UseFullColorDecal",ParameterValue=0.000000,ExpressionGUID=(A=-1064329812,B=1077705328,C=339664807,D=1869745420)),(ParameterName="p_ReplaceDecal",ParameterValue=1.000000,ExpressionGUID=(A=85863466,B=1257609701,C=-728575820,D=1337098176)),(ParameterName="p_EmissiveScale",ParameterValue=5.000000,ExpressionGUID=(A=-1585388516,B=1089964715,C=308554175,D=-1500922158))))
+
+set Common_GunMaterials.Materials.SMG.Mati_Maliwan_Legendary_Hellfire TextureParameterValues ((ParameterName="p_Masks",ParameterValue=Texture2D'Weap_SMG.Tex.Weap_SMG_Comp',ExpressionGUID=(A=-330624041,B=1167251458,C=-335191907,D=-166684394)),(ParameterName="p_Diffuse",ParameterValue=Texture2D'Common_GunMaterials.CompTextures.Weap_AssaultSubSniper_Comp',ExpressionGUID=(A=1757607260,B=1326539502,C=-317215581,D=-565807463)),(ParameterName="p_NormalScopesEmissive",ParameterValue=Texture2D'Weap_SMG.Tex.Weap_SMG_Nrm',ExpressionGUID=(A=-1743872746,B=1126171774,C=119496871,D=-1952271718)),(ParameterName="p_Decal",ParameterValue=Texture2D'FX_Shared_Fire.Textures.Fire_Tile_Dif',ExpressionGUID=(A=-923052711,B=1309861752,C=584229786,D=-1229888527)),(ParameterName="p_Pattern",ParameterValue=Texture2D'Common_GunMaterials.Patterns.Pattern_MaliwanRare',ExpressionGUID=(A=534250533,B=1202550002,C=1578302861,D=-717876416))))
+
+set Common_GunMaterials.Materials.SMG.Mati_Maliwan_Legendary_Hellfire VectorParameterValues ((ParameterName="p_AColorHilight",ParameterValue=(R=1.274635,G=1.253723,B=1.021126,A=1.000000),ExpressionGUID=(A=384292798,B=1221323751,C=-2145405772,D=1872194118)),(ParameterName="p_AColorMidtone",ParameterValue=(R=0.303856,G=0.011034,B=0.008197,A=1.000000),ExpressionGUID=(A=1102826245,B=1256298978,C=-1429881438,D=-507521102)),(ParameterName="p_AColorShadow",ParameterValue=(R=0.364627,G=0.049075,B=0.059789,A=1.000000),ExpressionGUID=(A=1481234158,B=1129012376,C=-688827739,D=-2119135160)),(ParameterName="p_BColorHilight",ParameterValue=(R=0.397775,G=0.397775,B=0.397775,A=1.000000),ExpressionGUID=(A=170714760,B=1132476783,C=-275668290,D=655702143)),(ParameterName="p_BClorMidtone",ParameterValue=(R=0.287282,G=0.271054,B=0.235765,A=1.000000),ExpressionGUID=(A=473594356,B=1338758895,C=824823946,D=864253813)),(ParameterName="p_BColorShadow",ParameterValue=(R=0.104793,G=0.104969,B=0.098973,A=1.000000),ExpressionGUID=(A=-429590341,B=1156435294,C=-1015192901,D=687313413)),(ParameterName="p_CColorHilight",ParameterValue=(R=5.448920,G=6.960011,B=0.111248,A=1.000000),ExpressionGUID=(A=759765673,B=1280874949,C=257367956,D=-932702788)),(ParameterName="p_CColorMidtone",ParameterValue=(R=3.465487,G=3.693511,B=0.306217,A=1.000000),ExpressionGUID=(A=110180441,B=1232792373,C=-1232281417,D=-1030626065)),(ParameterName="p_CColorShadow",ParameterValue=(R=0.900741,G=1.000000,B=0.000000,A=1.000000),ExpressionGUID=(A=716329441,B=1214803259,C=-238071112,D=-1004122047)),(ParameterName="p_EmissiveColor",ParameterValue=(R=0.900000,G=0.076008,B=0.053768,A=1.000000),ExpressionGUID=(A=-2074486426,B=1296399582,C=-2021314681,D=-350758005)),(ParameterName="p_ReflectionChannelScale",ParameterValue=(R=0.500000,G=0.000000,B=0.400000,A=1.000000),ExpressionGUID=(A=1869386622,B=1303200947,C=-1616405849,D=714558284)),(ParameterName="p_DecalScalePosition",ParameterValue=(R=30.000000,G=20.000000,B=0.390000,A=0.480000),ExpressionGUID=(A=395540170,B=1243133493,C=-1264190552,D=123075385)),(ParameterName="p_DecalColor",ParameterValue=(R=7.000000,G=1.000000,B=0.500000,A=0.000000),ExpressionGUID=(A=1691998600,B=1239094551,C=2074257317,D=1844701893)),(ParameterName="p_PatternScalePosition",ParameterValue=(R=10.000000,G=10.000000,B=1.000000,A=0.000000),ExpressionGUID=(A=-2005018406,B=1132497243,C=-39915121,D=208423616)),(ParameterName="p_DecalChannel",ParameterValue=(R=1.000000,G=0.000000,B=0.000000,A=0.000000),ExpressionGUID=(A=1757499073,B=1097055033,C=-1266029657,D=1038353636)),(ParameterName="p_PatternChannelScale",ParameterValue=(R=0.000000,G=0.000000,B=0.000000,A=0.000000),ExpressionGUID=(A=439432319,B=1091149893,C=-1991909502,D=1816944627)),(ParameterName="p_PatternColor",ParameterValue=(R=4.762497,G=4.377199,B=1.526223,A=1.000000),ExpressionGUID=(A=676539706,B=1125682796,C=1871983293,D=-2049503601))))
+
+#Skin#
