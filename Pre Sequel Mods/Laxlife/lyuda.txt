@@ -1,0 +1,58 @@
+#<Lyuda>
+	
+	#<Info>
+
+		#By laxlife
+		#Took the FiringMode from the Hammer Buster, which I am pretty sure did nothing anyways, so the Hammer Buster should work like normal?
+		#Replaces The Machine, and turns it into the highest DPS gun in BL2 -- The Lyuda
+
+
+	#</Info>
+	
+	#<Card>
+
+		set GD_Cork_Weap_SniperRifles.Name.Title_Vladof.Title_Unique_TheMachine PartName  Lyuda
+		set GD_Cork_Weap_SniperRifles.Name.Title_Vladof.Title_Unique_TheMachine:AttributePresentationDefinition_8 NoConstraintText Man Killer.
+		set GD_Cork_Weap_SniperRifles.Name.Title_Vladof.Title_Unique_TheMachine rarity (BaseValueConstant=5.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+		#set GD_Cork_Weap_SniperRifles.Name.Prefix_Vladof.Prefix_TheMachine
+
+	#</Card>
+
+
+	#<Attributes>
+
+		set GD_Cork_Weap_SniperRifles.Barrel.SR_Barrel_Vladof_TheMachine ExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.GameplayAttributes.PlayerCriticalHitBonus',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.250000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+		set GD_Cork_Weap_SniperRifles.Barrel.SR_Barrel_Vladof_TheMachine WeaponAttributeEffects (AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.250000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Vladof',InitializationDefinition=None,BaseValueScaleConstant=4.000000))
+  		
+  		set GD_Cork_Weap_SniperRifles.Barrel.SR_Barrel_Vladof_TheMachine WeaponCardAttributes ((Attribute=AttributeDefinition'D_Attributes.GameplayAttributes.PlayerCriticalHitBonus',PriorityIncrease=0.500000))
+
+  		set GD_Cork_Weap_SniperRifles.Barrel.SR_Barrel_Vladof_TheMachine AttributeSlotUpgrades ((SlotName="WeaponSpread",GradeIncrease=5,bActivateSlot=True),(SlotName="WeaponFireRate",GradeIncrease=10,bActivateSlot=True),(SlotName="WeaponAccuracyImpulse",GradeIncrease=20,bActivateSlot=True),(SlotName="WeaponMagSize",GradeIncrease=10,bActivateSlot=True))
+
+  		set GD_Cork_Weap_SniperRifles.Barrel.SR_Barrel_Vladof_TheMachine SpinUpDuration (BaseValueConstant=0.300000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+  		set GD_Cork_Weap_SniperRifles.Barrel.SR_Barrel_Vladof_TheMachine SpinDownDuration (BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+  		set GD_Cork_Weap_SniperRifles.Barrel.SR_Barrel_Vladof_TheMachine StartingSpinUpFireIntervalMultiplier 1
+
+  		set GD_Cork_Weap_SniperRifles.Barrel.SR_Barrel_Vladof_TheMachine:AttributePresentationDefinition_0 BasePriority 0.000000
+
+	#</Attributes>
+
+	#<FiringMode>
+
+		set GD_Cork_Weap_SniperRifles.Barrel.SR_Barrel_Vladof_TheMachine CustomFiringModeDefinition FiringModeDefinition'gd_cork_weap_assaultrifle.FiringModes.Bullet_Assault_HammerBreaker'
+
+		set gd_cork_weap_assaultrifle.FiringModes.Bullet_Assault_HammerBreaker bPenetratePawn False
+		set gd_cork_weap_assaultrifle.FiringModes.Bullet_Assault_HammerBreaker Speed 45000
+		set gd_cork_weap_assaultrifle.FiringModes.Bullet_Assault_HammerBreaker TimerEvents ((Time=0.010000,Response=(SplitNum=2,SplitAngle=5.000000,SplitAngleOffset=0.000000,SplitDistance=0.000000,SplitFire=FiringModeDefinition'GD_Weap_SniperRifles.FiringModes.Bullet_Sniper_Default',NewSpeed=0.000000,bDetonate=False,bRespawnTracer=False,bUpdateBeamSourceLocation=False,Behaviors=)))
+ 
+	#</FiringMode>
+
+	#<Hammer Buster>
+
+		#Makes the Hammer Buster not shoot the Lyuda firing FiringMode
+
+		set gd_cork_weap_assaultrifle.Barrel.AR_Barrel_Dahl_HammerBreaker CustomFiringModeDefinition None
+
+	#</Hammer Buster>
+
+#</Lyuda>
