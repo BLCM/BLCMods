@@ -1,0 +1,21 @@
+##  Changes all three Anti Air Oz Kits to work on anything that's AboveNavMesh instead of checking for IsAirborne.
+##  Results in a much more reactive way when using the AckAck, instead of having it trigger only once or twice if using ice weapons.
+##  EXPERIMENTAL: TimeSeconds, in my mind, offers as a way to keep the condition active for a predetermined amount of time. It doesn't seem to do anything, or produce anything noticeable that would allow for a 'grace period' when the target's on the ground. Still a WIP.
+
+#<patch>
+
+    #<Oz Kits>
+
+        #<hotfix><key>"SparkPatchEntry-AckAck1"</key><value>"GD_MoonItems.Skills.AckAck:BehaviorProviderDefinition_0.Behavior_Conditional_3.FlagExpressionEvaluator_0,FlagChain,,(FlagEvalType=FLAG_IsTrue,FlagDefinition=FlagDefinition'GD_AI_Flags.Misc.Flag_AboveNavMesh',TimeSeconds=(BaseValueConstant=60.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=60.00000))"</value><on>
+
+        #<hotfix><key>"SparkPatchEntry-AntiAir1"</key><value>"GD_MoonItems.Skills.AntiAir_FireRate_Boost:BehaviorProviderDefinition_0.Behavior_Conditional_2.FlagExpressionEvaluator_0,FlagChain,,(FlagEvalType=FLAG_IsTrue,FlagDefinition=FlagDefinition'GD_AI_Flags.Misc.Flag_AboveNavMesh',TimeSeconds=(BaseValueConstant=60.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=60.00000))"</value><on>
+
+        #<hotfix><key>"SparkPatchEntry-PerdyLights1"</key><value>"GD_MoonItems.Skills.AntiAir_Perdy:BehaviorProviderDefinition_0.Behavior_Conditional_2.FlagExpressionEvaluator_0,FlagChain,,(FlagEvalType=FLAG_IsTrue,FlagDefinition=FlagDefinition'GD_AI_Flags.Misc.Flag_AboveNavMesh',TimeSeconds=(BaseValueConstant=60.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=60.00000))"</value><on>
+
+    #</Oz Kits>
+
+#</patch>
+
+set Transient.SparkServiceConfiguration_6 Keys ("SparkPatchEntry-AckAck1","SparkPatchEntry-AntiAir1","SparkPatchEntry-PerdyLights1")
+
+set Transient.SparkServiceConfiguration_6 Values ("GD_MoonItems.Skills.AckAck:BehaviorProviderDefinition_0.Behavior_Conditional_3.FlagExpressionEvaluator_0,FlagChain,,(FlagEvalType=FLAG_IsTrue,FlagDefinition=FlagDefinition'GD_AI_Flags.Misc.Flag_AboveNavMesh',TimeSeconds=(BaseValueConstant=60.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=60.00000))","GD_MoonItems.Skills.AntiAir_FireRate_Boost:BehaviorProviderDefinition_0.Behavior_Conditional_2.FlagExpressionEvaluator_0,FlagChain,,(FlagEvalType=FLAG_IsTrue,FlagDefinition=FlagDefinition'GD_AI_Flags.Misc.Flag_AboveNavMesh',TimeSeconds=(BaseValueConstant=60.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=60.00000))","GD_MoonItems.Skills.AntiAir_Perdy:BehaviorProviderDefinition_0.Behavior_Conditional_2.FlagExpressionEvaluator_0,FlagChain,,(FlagEvalType=FLAG_IsTrue,FlagDefinition=FlagDefinition'GD_AI_Flags.Misc.Flag_AboveNavMesh',TimeSeconds=(BaseValueConstant=60.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=60.00000))")
