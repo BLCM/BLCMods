@@ -1,5 +1,6 @@
 Update 20/11/2017
 Community Patch 2.0 is finally out. 
+
 I revamped the way the files are Organized and removed some obsolete options
 It ll be a while till 3.0 is out if ever but do expect 2.1 or 2.2 at some point
 
