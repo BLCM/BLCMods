@@ -1,0 +1,180 @@
+#<Sense of Pride and Accomplishment>
+
+    #<Info>
+
+        Made By Jim Raven
+
+        ---
+
+        QUICK IMPORTANT NOTE: If you are using Community Patch (OR CLO2) and NOT filter tool Run this first then the patch. If you are using filter tool just add it as any other mod and you are good to go.
+
+        You will lose the Removal of Sense of pride from the Quest that way but you ll keep all skill and loot changes of Community patch.
+
+        Doing it the other way around will Keep this mod's change on The Secret Chamber Quest AND DELETE ALL SKILL AND NEW LOOT SOURCES OF UCP.
+
+        ---
+
+        ---
+
+        Inspiration and ideas first Gun Notes just after
+
+        Hello guys. After the Recent Events and Drama with Starwars Battlefront 2 i had an idea
+
+        and though you know what?
+
+        Why not make an easter egg mod of the whole situation.
+
+        For those who are unfamiliar with the situation Basically the new StarWars game is completely
+
+        and utterly P2W locking progresion Behind RNG LootBoxes which you could acquire by playing the game
+
+        at an extremely slow rate and then Had the Audacity to justify it
+
+        by typing what is known as the MOST DownVoted comment in the history of Reddit which starts as
+
+        "The intent is to provide players with a sense of pride and accomplishment for unlocking different heroes."
+
+        ---
+
+        ---
+
+        Gun Notes.
+
+        BOTH GUNS CAN BE FOUND IN THE GOLDEN CHEST IN CONCORDIA Or You can Farm it free by grinding Purples :D (world drops and grinder)
+
+        Sense of Pride: Replaces Zarpedon's CyberEagle
+
+        Features: When you Hit an enemy (NOT A WALL) the bullets will ricochet to another Target until it misses
+
+        Gives the Gun a 50 ish % DMG boost else its not real Pay to Win
+
+        Represents Vader's Mastery of the Force with that Masterfull Ricochet.
+
+        Gun Can be acquired by doing the Quest The Secret chamber But unlike Vanilla this will be 1/8 chance of happening
+
+        GIB CODE FOR Pirates Yar Har Har
+
+        BLOZ(igAAAADZTQDG6wA9EGM0ImBJwKKAZQHL/38VTP////8zYDlGcoHl)
+
+        ---
+
+        ---
+
+        Sense of Accomplishment: Replaces The Boxxy Gun
+
+        Features: When you hit any surface that is not an enemy bullets will ricochet to the nearest enemy.
+
+        Gives the Gun a 50 ish % DMG boost else its not real Pay to Win
+
+        Increases Recoil (but not too much since its a Paywall weapon) to represent the StormTroopers aim :D
+
+        Represents StormTroopers and how they are more accurate when not aiming at someone :D
+
+        Gun is Removed From holodome Rewards Can Only be acquired from the Golden Chest in Concordia Or by grinding purple SMGs
+
+        GIB CODE FOR Pirates Yar Har Har 
+
+        BLOZ(igAAAADEcAJEkIABB2M0RuEiwFUB0AJXAy4OXCG4/v9bADxGQgHw)
+
+    #</Info>
+
+    #<Sense Of Pride>
+
+        #<Gun Stuff>
+
+            set GD_Cork_Weap_Pistol.Name.Title.Title__Unique_CyberColt PartName Sense Of Pride
+
+            set GD_Cork_Weap_Pistol.Barrel.Pistol_Barrel_Jakobs_CyberColt ExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.BulletReflection.BulletReflectionOffEnemyChance',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=10.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))
+
+            set GD_Cork_Weap_Pistol.Barrel.Pistol_Barrel_Jakobs_CyberColt PrefixList (WeaponNamePartDefinition'GD_Cork_Weap_Lasers.Name.Prefix.Prefix_EGun')
+
+            set GD_Cork_Weap_Pistol.Name.Title.Title__Unique_CyberColt:AttributePresentationDefinition_8 NoConstraintText So proud. It only took me 40 hours to find that thing!
+
+            #<DMG buff of 50ish% cause it aint Real P2W Without it>
+
+                set GD_Cork_Weap_Pistol.Barrel.Pistol_Barrel_Jakobs_CyberColt WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Jakobs',InitializationDefinition=None,BaseValueScaleConstant=0.800000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponPerShotAccuracyImpulse',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Jakobs',InitializationDefinition=None,BaseValueScaleConstant=-3.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Jakobs',InitializationDefinition=None,BaseValueScaleConstant=-3.000000)))
+
+            #</DMG buff of 50ish% cause it aint Real P2W Without it>
+
+        #</Gun Stuff>
+
+        #<Set the Gun to Lootboxes + Purple list>
+
+            set GD_Itempools.WeaponPools.Pool_Weapons_Pistols_05_VeryRare BalancedItems ((ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_Pistol.A_Weapons.Pistol_Bandit_4_VeryRare',Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_Pistol.A_Weapons.Pistol_Tediore_4_VeryRare',Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_Pistol.A_Weapons.Pistol_Dahl_4_VeryRare',Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_Pistol.A_Weapons.Pistol_Vladof_4_VeryRare',Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_Pistol.A_Weapons.Pistol_Torgue_4_VeryRare',Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_Pistol.A_Weapons.Pistol_Maliwan_4_VeryRare',Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_Pistol.A_Weapons.Pistol_Jakobs_4_VeryRare',Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_Pistol.A_Weapons.Pistol_Old_Hyperion_4_VeryRare',Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',BaseValueScaleConstant=0.500000),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_Pistols_Hyperion_05_VeryRare',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',BaseValueScaleConstant=0.750000),bDropOnDeath=True),(ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'GD_Cork_Weap_Pistol.A_Weapons_Unique.Pistol_Jakobs_CyberColt',Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',BaseValueScaleConstant=1.000000),bDropOnDeath=True))
+
+        #</Set the Gun to Lootboxes + Purple list>
+
+        #<Give a Chance for the quest The Secret Chamber Instead of 100%>
+
+            #<hotfix><key>"SparkLevelPatchEntry-name1"</key><value>",GD_Balance_Treasure.ChestGradesUnique.Balance_Chest_ZarpedonsStash,DefaultLoot,,((ConfigurationName=ZarpedonsStash,bIgnoreGameStageRestrictions=False,LootGameStageVarianceFormula=None,Weight=(BaseValueConstant=100.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),ItemAttachments=((ItemPool=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_Pistols_05_VeryRare',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),InvBalanceDefinition=None,AttachmentPointName=Gun1),(ItemPool=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_All_02_Uncommon',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),InvBalanceDefinition=None,AttachmentPointName=Gun2),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Ammo_All_DropAlways',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),InvBalanceDefinition=None,AttachmentPointName=Ammo1),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Ammo_All_DropAlways',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),InvBalanceDefinition=None,AttachmentPointName=Ammo2),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Ammo_All_DropAlways',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),InvBalanceDefinition=None,AttachmentPointName=Ammo3),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Ammo_All_DropAlways',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),InvBalanceDefinition=None,AttachmentPointName=Ammo4),(ItemPool=ItemPoolDefinition'GD_Itempools.GrenadeModPools.Pool_GrenadeMods_All',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),InvBalanceDefinition=None,AttachmentPointName=Grenade1),(ItemPool=ItemPoolDefinition'GD_Itempools.GrenadeModPools.Pool_GrenadeMods_All',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),InvBalanceDefinition=None,AttachmentPointName=Grenade2),(ItemPool=ItemPoolDefinition'GD_Itempools.GrenadeModPools.Pool_GrenadeMods_All',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),InvBalanceDefinition=None,AttachmentPointName=Grenade3),(ItemPool=ItemPoolDefinition'GD_Itempools.GrenadeModPools.Pool_GrenadeMods_All',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),InvBalanceDefinition=None,AttachmentPointName=Grenade4)))))"</value><on>
+
+        #</Give a Chance for the quest The Secret Chamber Instead of 100%>
+
+        #<Rarity Color or MONEY>
+
+            set GD_Cork_Weap_Pistol.Barrel.Pistol_Barrel_Jakobs_CyberColt Rarity (BaseValueConstant=200.000000)
+
+        #</Rarity Color or MONEY>
+
+    #</Sense Of Pride>
+
+    #<Sense Of Accomplishment>
+
+        #<Gun Stuff>
+
+            set GD_Petunia_Weapons.Name.Title.Title__Unique_Boxxy PartName Sense Of Accomplishment
+
+            set GD_Petunia_Weapons.Name.Title.Title__Unique_Boxxy:AttributePresentationDefinition_8 NoConstraintText The most Downvoted Gun in the History EchoIt!
+
+            set GD_Petunia_Weapons.SMGs.SMG_Barrel_Tediore_Boxxy PrefixList (WeaponNamePartDefinition'GD_Cork_Weap_Lasers.Name.Prefix.Prefix_EGun')
+
+            set GD_Petunia_Weapons.Name.Title.Title__Unique_Boxxy:AttributePresentationDefinition_0 NoConstraintText [skill]P2W[-skill] ammunition. Reload carefully!
+
+            set GD_Petunia_Weapons.SMGs.SMG_Barrel_Tediore_Boxxy ExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.BulletRicochet.BulletRicochetTowardsEnemyChance',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=10.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AccuracyResourcePool.AccuracyMaxValue',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+            #<DMG buff of 50ish% cause it aint real P2W without it>
+
+                set GD_Petunia_Weapons.SMGs.SMG_Barrel_Tediore_Boxxy WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Tediore',InitializationDefinition=None,BaseValueScaleConstant=1.350000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponReloadSpeed',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Tediore',InitializationDefinition=None,BaseValueScaleConstant=-0.250000)))
+
+            #</DMG buff of 50ish% cause it aint real P2W without it>
+
+        #</Gun Stuff>
+
+        #<Rarity Color Of Money>
+
+            set GD_Petunia_Weapons.SMGs.SMG_Barrel_Tediore_Boxxy Rarity (BaseValueConstant=200.000000)
+
+        #</Rarity Color Of Money>
+
+        #<Remove Gun from Holodome Second Round>
+
+            set GD_EridianSlaughter.MissionDef.M_EridianSlaughter02 AlternativeReward (ExperienceRewardPercentage=(BaseValueConstant=0.100000,BaseValueAttribute=AttributeDefinition'GD_MissionRewardBalance.XP.XPReward_02_Small',InitializationDefinition=None,BaseValueScaleConstant=1.000000),BadassRanksReward=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),CurrencyRewardType=CURRENCY_Credits,CreditRewardMultiplier=(BaseValueConstant=1.000000,BaseValueAttribute=AttributeDefinition'GD_MissionRewardBalance.Cash.CashReward_02_Small',InitializationDefinition=None,BaseValueScaleConstant=1.000000),OtherCurrencyReward=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),RewardItems=,RewardItemPools=(KeyedItemPoolDefinition'GD_CustomItemPools_petunia.Rewards.PetuniaHeads'))
+
+        #</Remove Gun from Holodome Second Round>
+
+        #<Remove Gun From badass Round of holodome>
+
+            set GD_Pet_ItemPools.Pool_AllPetuniaGear BalancedItems ((ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'GD_Petunia_Weapons.AssaultRifles.AR_Bandit_3_CryBaby',Probability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'GD_Petunia_Weapons.Pistols.Pistol_Hyperion_3_T4sr',Probability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'GD_Petunia_Weapons.Launchers.RL_Vladof_5_Menace',Probability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'GD_Petunia_Weapons.Shotguns.SG_Tediore_3_PartyLine',Probability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'GD_Petunia_Weapons.Snipers.Sniper_Jakobs_3_Plunkett',Probability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True))
+
+        #</Remove Gun From badass Round of holodome>
+
+        #<Set Gun to LootBoxes + Purple list>
+
+            set GD_Itempools.WeaponPools.Pool_Weapons_SMG_05_VeryRare BalancedItems ((ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_SMG.A_Weapons.SMG_Bandit_4_VeryRare',Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_SMG.A_Weapons.SMG_Tediore_4_VeryRare',Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_SMG.A_Weapons.SMG_Dahl_4_VeryRare',Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_SMG.A_Weapons.SMG_Maliwan_4_VeryRare',Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_SMG_Hyperion_05_VeryRare',InvBalanceDefinition=None,Probability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',BaseValueScaleConstant=0.750000),bDropOnDeath=True),(ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'GD_Petunia_Weapons.SMGs.SMG_Tediore_3_Boxxy',Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',BaseValueScaleConstant=0.500000),bDropOnDeath=True))
+
+        #</Set Gun to LootBoxes + Purple list>
+
+    #</Sense Of Accomplishment>
+
+#</Sense of Pride and Accomplishment>
+
+set Transient.SparkServiceConfiguration_0 ServiceName Micropatch
+
+set Transient.SparkServiceConfiguration_0 ConfigurationGroup Default
+
+set Transient.SparkServiceConfiguration_0 Keys ("SparkLevelPatchEntry-name1")
+
+set Transient.SparkServiceConfiguration_0 Values (",GD_Balance_Treasure.ChestGradesUnique.Balance_Chest_ZarpedonsStash,DefaultLoot,,((ConfigurationName=ZarpedonsStash,bIgnoreGameStageRestrictions=False,LootGameStageVarianceFormula=None,Weight=(BaseValueConstant=100.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),ItemAttachments=((ItemPool=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_Pistols_05_VeryRare',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),InvBalanceDefinition=None,AttachmentPointName=Gun1),(ItemPool=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_All_02_Uncommon',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),InvBalanceDefinition=None,AttachmentPointName=Gun2),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Ammo_All_DropAlways',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),InvBalanceDefinition=None,AttachmentPointName=Ammo1),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Ammo_All_DropAlways',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),InvBalanceDefinition=None,AttachmentPointName=Ammo2),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Ammo_All_DropAlways',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),InvBalanceDefinition=None,AttachmentPointName=Ammo3),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Ammo_All_DropAlways',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),InvBalanceDefinition=None,AttachmentPointName=Ammo4),(ItemPool=ItemPoolDefinition'GD_Itempools.GrenadeModPools.Pool_GrenadeMods_All',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),InvBalanceDefinition=None,AttachmentPointName=Grenade1),(ItemPool=ItemPoolDefinition'GD_Itempools.GrenadeModPools.Pool_GrenadeMods_All',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),InvBalanceDefinition=None,AttachmentPointName=Grenade2),(ItemPool=ItemPoolDefinition'GD_Itempools.GrenadeModPools.Pool_GrenadeMods_All',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),InvBalanceDefinition=None,AttachmentPointName=Grenade3),(ItemPool=ItemPoolDefinition'GD_Itempools.GrenadeModPools.Pool_GrenadeMods_All',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),InvBalanceDefinition=None,AttachmentPointName=Grenade4)))))")
+
+set Transient.GearboxAccountData_1 Services (Transient.SparkServiceConfiguration_0)
+
