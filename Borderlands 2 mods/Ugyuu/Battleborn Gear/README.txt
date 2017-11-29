@@ -14,10 +14,10 @@ Caldarius -> DONE
 Ghalt -> DONE
 Marquis -> DONE
 Montana -> DONE
-Thorn
+Thorn -> DONE
 Toby ?
 Ernest ?
 Mellka
 Whiskey Foxtrot
 Oscar Mike
-?????
+??????
