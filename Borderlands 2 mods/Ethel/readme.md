@@ -18,4 +18,4 @@ Unique Vendor
 	changes Bagman's Loot pool to include all non-farmable unique weapons in vanilla drop tables
 	Removes the pot-o-gold / bigg thumprr from bagmans lootpool
 	Changes the vendor in TK baha's hut to have a unique item
-  normal items will still follow default spawning rules, only the IOTD is unique
+ 	normal items will still follow default spawning rules, only the IOTD is unique
