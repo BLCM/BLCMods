@@ -35,7 +35,7 @@ discord.gg/shadowevil
 FAQ 
 
 "Which mods are included in the KPack?"
-  As of version 3.0, there are 103 mods in the KPack. You can find a list of all mods and their descriptions in the attached ModpackInfo.txt.
+  As of version 4.0, there are 92 mods in the KPack. You can find a list of all mods and their descriptions in the attached ModpackInfo.txt.
 
 "How do I install mods?"
   1. Download LightChaosman's Filter Tool (https://www.youtube.com/watch?v=zJ4qI4U_lE0) and install Java if you don't have it yet.
