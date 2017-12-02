@@ -15,8 +15,6 @@ Ghalt -> DONE
 Marquis -> DONE
 Montana -> DONE
 Thorn -> DONE
-Toby ?
-Ernest ?
 Mellka
 Whiskey Foxtrot
 Oscar Mike
