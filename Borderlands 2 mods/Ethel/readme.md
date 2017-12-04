@@ -17,7 +17,7 @@ Unique Vendor
 	Changes the vendor in TK baha's hut to have a unique following the above rules for the IOTD, normal items will still follow default spawning rules, only the IOTD is changed
 EZAmmoVendor
 
-	collapses all ammo down into 1 entry in the ammo dump vendor
-	refills all ammo of every type, including rockets
+	collapses all ammo down into 1(2) entry(entries) in the ammo dump vendor
+	refills all ammo of every type, (optionally) rockets
 	enables you to buy ammo if youre full, if you want to for whatever reason
 	in theory should also make loading the menu in ammo vendors less buggy/glitchy when backpack is full of gear, by removing unused entries 
