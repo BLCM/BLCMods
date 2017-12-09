@@ -1,0 +1,122 @@
+#<Smasher>
+
+    #<Description>
+
+        By Aaron0000
+
+        Features;
+
+        Replaces the lousy starter pistol you get from Claptrap with the Pre-Sequel's Smasher.
+
+        Has two options for the stats, the original stats or the re-balanced version (More damage, two ammo per shot)
+
+        Note;
+
+        Will absolutely delete any normal Dahl Starter pistols you may have lying around. Smashers will also be deleted if you try to run a save without this mod active.
+
+        It uses the Master material for Jakobs Legendaries in order to give it a skin, so anything that uses it as a parent will be affected (only the Hammer Buster in normal cases, but that is fixed at the bottom of this file.)
+
+        Gibbed Code for a Level 1 Smasher; BL2(hwAAAAD1fwCHxwJABhEIQMOIhdENIwHG/////x0w/v97wwCD8Q3j)
+
+    #</Description>
+
+    #<Code>
+
+        #<Title, Red Text, and Prefixes>
+
+            set GD_Weap_Pistol.Name.Prefix.Prefix_U_Crappy PartName Smasher
+
+            set GD_Weap_Pistol.Name.Prefix.Prefix_U_Crappy CustomPresentations (AttributePresentationDefinition'GD_Artifacts.Body.Body_Enigma:AttributePresentationDefinition_0')
+
+            set GD_Artifacts.Body.Body_Enigma:AttributePresentationDefinition_0 TextColor (B=70,G=70,R=220,A=255)
+
+            set GD_Artifacts.Body.Body_Enigma:AttributePresentationDefinition_0 Description Seven times the fun.
+
+            set GD_Weap_Pistol.Barrel.Pistol_Barrel_Bandit_CrappyStarter TitleList (WeaponNamePartDefinition'GD_Weap_Pistol.Name.Prefix.Prefix_U_Crappy')
+
+            set GD_Weap_Pistol.Barrel.Pistol_Barrel_Bandit_CrappyStarter PrefixList ()
+
+        #</Title, Red Text, and Prefixes>
+
+        #<Rarity>
+
+            set GD_Weap_Pistol.Barrel.Pistol_Barrel_Bandit_CrappyStarter Rarity (basevalueattribute=none)
+
+            set GD_Weap_Pistol.Barrel.Pistol_Barrel_Bandit_CrappyStarter rarity (BaseValueConstant=0)
+
+        #</Rarity>
+
+        #<Gun Barrel, Scope, and Misc. Stat Card things.>
+
+            set GD_Weap_Pistol.Barrel.Pistol_Barrel_Bandit_CrappyStarter GestaltModeSkeletalMeshName Pistol_Barrel_Jakobs
+
+            set GD_Weap_Pistol.Barrel.Pistol_Barrel_Bandit_CrappyStarter ManufacturerDefinitionForScopeMovie ManufacturerDefinition'GD_Manufacturers.Manufacturers.Jakobs'
+
+            set GD_Weap_Pistol.Barrel.Pistol_Barrel_Bandit_CrappyStarter WeaponCardAttributes ((Attribute=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',PriorityIncrease=0.600000))
+
+        #</Gun Barrel, Scope, and Misc. Stat Card things.>
+
+        #<Jakobs-ification>
+
+            set GD_Weap_Pistol.A_Weapons_Unique.Pistol_Dahl_Starter:PartList AssociatedWeaponType WeaponTypeDefinition'GD_Weap_Pistol.A_Weapons.WeaponType_Jakobs_Pistol'
+
+            set GD_Weap_Pistol.A_Weapons_Unique.Pistol_Dahl_Starter InventoryDefinition WeaponTypeDefinition'GD_Weap_Pistol.A_Weapons.WeaponType_Jakobs_Pistol'
+
+            set GD_Weap_Pistol.A_Weapons_Unique.Pistol_Dahl_Starter Manufacturers ((Manufacturer=ManufacturerDefinition'GD_Manufacturers.Manufacturers.Jakobs',Grades=((GradeModifiers=(ExpLevel=0,CustomInventoryDefinition=None),GameStageRequirement=(MinGameStage=1,MaxGameStage=10000),MinSpawnProbabilityModifier=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),MaxSpawnProbabilityModifier=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))))
+
+            set GD_Weap_Pistol.A_Weapons_Unique.Pistol_Dahl_Starter BaseDefinition WeaponBalanceDefinition'GD_Weap_Pistol.A_Weapons.Pistol_Jakobs_3_Rare'
+
+            set GD_Weap_Pistol.A_Weapons_Unique.Pistol_Dahl_Starter:PartList BodyPartData (bEnabled=True,WeightedParts=((bDisabled=False,Part=WeaponPartDefinition'GD_Weap_Pistol.Body.Pistol_Body_Jakobs_3',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0)))
+
+        #</Jakobs-ification>
+
+        #<Part Data>
+
+            set GD_Weap_Pistol.A_Weapons_Unique.Pistol_Dahl_Starter:PartList Accessory1PartData (bEnabled=True,WeightedParts=((bDisabled=False,Part=WeaponPartDefinition'GD_Weap_Pistol.Accessory.Pistol_Accessory_None',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=2),(bDisabled=False,Part=WeaponPartDefinition'GD_Weap_Pistol.Accessory.Pistol_Accessory_Bayonet_1',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=3),(bDisabled=False,Part=WeaponPartDefinition'GD_Weap_Pistol.Accessory.Pistol_Accessory_Laser_Accuracy',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=3),(bDisabled=False,Part=WeaponPartDefinition'GD_Weap_Pistol.Accessory.Pistol_Accessory_Laser_Double',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=3),(bDisabled=False,Part=WeaponPartDefinition'GD_Weap_Pistol.Accessory.Pistol_Accessory_Stock_Stability',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=3),(bDisabled=False,Part=WeaponPartDefinition'GD_Weap_Pistol.Accessory.Pistol_Accessory_Tech_1_Mag',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=3),(bDisabled=False,Part=WeaponPartDefinition'GD_Weap_Pistol.Accessory.Pistol_Accessory_Tech_2_Damage',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=3),(bDisabled=False,Part=WeaponPartDefinition'GD_Weap_Pistol.Accessory.Pistol_Accessory_Tech_3_Firerate',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=3)))
+
+            set GD_Weap_Pistol.A_Weapons_Unique.Pistol_Dahl_Starter:PartList GripPartData (bEnabled=True,WeightedParts=((bDisabled=False,Part=WeaponPartDefinition'GD_Weap_Pistol.Grip.Pistol_Grip_Jakobs',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0)))
+
+        #</Part Data>
+
+        #<Stats>
+
+            set GD_Weap_Pistol.Barrel.Pistol_Barrel_Bandit_CrappyStarter WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Jakobs',InitializationDefinition=None,BaseValueScaleConstant=-5.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponPerShotAccuracyImpulse',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Jakobs',InitializationDefinition=None,BaseValueScaleConstant=-0.200000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Jakobs',InitializationDefinition=None,BaseValueScaleConstant=2.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=6.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+            set GD_Weap_Pistol.Barrel.Pistol_Barrel_Bandit_CrappyStarter AttributeSlotUpgrades ((SlotName="WeaponSpread",GradeIncrease=8,bActivateSlot=True),(SlotName="AccuracyMin",GradeIncrease=0,bActivateSlot=True),(SlotName="AccuracyMax",GradeIncrease=0,bActivateSlot=True),(SlotName="WeaponDamage",GradeIncrease=6,bActivateSlot=True),(SlotName="WeaponAccuracyImpulse",GradeIncrease=-10,bActivateSlot=True),(SlotName="WeaponFireRate",GradeIncrease=-12,bActivateSlot=True))
+
+        #</Stats>
+
+    #</Code>
+
+    #<Skin>
+
+        set GD_Weap_Pistol.ManufacturerMaterials.Mat_Dahl_1_Starter Material MaterialInstanceConstant'Common_GunMaterials.MasterMaterials.Jakobs.MasterMati_JakobsLegendary'
+
+        set Common_GunMaterials.MasterMaterials.Jakobs.MasterMati_JakobsLegendary ScalarParameterValues ((ParameterName="p_HighlightsIntensity",ParameterValue=1.000000,ExpressionGUID=(A=-1257568432,B=1277066486,C=-723473993,D=-1144384173)),(ParameterName="p_ShadowsIntensity",ParameterValue=2.500000,ExpressionGUID=(A=437293753,B=1205147708,C=-775723903,D=1480014964)),(ParameterName="p_DecalRotate",ParameterValue=-2.500000,ExpressionGUID=(A=-276527909,B=1298581551,C=856978878,D=743944047)),(ParameterName="p_ReplacePattern",ParameterValue=0.000000,ExpressionGUID=(A=-2084339847,B=1096440125,C=439008937,D=45433490)),(ParameterName="p_UseFullColorDecal",ParameterValue=0.000000,ExpressionGUID=(A=-1064329812,B=1077705328,C=339664807,D=1869745420)),(ParameterName="p_ReplaceDecal",ParameterValue=1.000000,ExpressionGUID=(A=85863466,B=1257609701,C=-728575820,D=1337098176)))
+
+        set Common_GunMaterials.MasterMaterials.Jakobs.MasterMati_JakobsLegendary TextureParameterValues ((ParameterName="P_SimpleReflect",ParameterValue=Texture2D'Item_ClassMods.Textures.Soldier_ClassMod_Pattern_Lighting',ExpressionGUID=(A=-858148940,B=1327945772,C=148462268,D=1899047224)),(ParameterName="p_Decal",ParameterValue=None,ExpressionGUID=(A=534250533,B=1202550002,C=1578302861,D=-717876416)),(ParameterName="p_Pattern",ParameterValue=Texture2D'Common_GunMaterials.Patterns.Pattern_JakobsEpic_SpaltedMaple',ExpressionGUID=(A=534250533,B=1202550002,C=1578302861,D=-717876416)),(ParameterName="p_NormalScopesEmissive",ParameterValue=Texture2D'Weap_Pistol.Tex.Weap_Pistols_Nrm',ExpressionGUID=(A=-1685713219,B=1198583295,C=1500684677,D=295812567)),(ParameterName="p_Masks",ParameterValue=Texture2D'Weap_Pistol.Tex.Weap_Pistols_Comp',ExpressionGUID=(A=-330624041,B=1167251458,C=-335191907,D=-166684394)),(ParameterName="p_Diffuse",ParameterValue=Texture2D'Common_GunTextures.CompTextures.Weap_LauncherShotgunPistol_Comp',ExpressionGUID=(A=2024732779,B=1159440301,C=1487416485,D=-2018014041)))
+
+        set Common_GunMaterials.MasterMaterials.Jakobs.MasterMati_JakobsLegendary VectorParameterValues ((ParameterName="p_AColorHilight",ParameterValue=(R=2.408740,G=2.364497,B=4.208805,A=1.000000),ExpressionGUID=(A=384292798,B=1221323751,C=-2145405772,D=1872194118)),(ParameterName="p_AColorMidtone",ParameterValue=(R=0.000000,G=0.214508,B=1.534483,A=1.000000),ExpressionGUID=(A=1102826245,B=1256298978,C=-1429881438,D=-507521102)),(ParameterName="p_AColorShadow",ParameterValue=(R=0.027913,G=0.013877,B=0.210686,A=1.000000),ExpressionGUID=(A=1481234158,B=1129012376,C=-688827739,D=-2119135160)),(ParameterName="p_BColorHilight",ParameterValue=(R=0.245455,G=0.420198,B=1.618182,A=1.000000),ExpressionGUID=(A=170714760,B=1132476783,C=-275668290,D=655702143)),(ParameterName="p_BColorMidtone",ParameterValue=(R=0.002686,G=0.001799,B=0.016854,A=1.000000),ExpressionGUID=(A=473594356,B=1338758895,C=824823946,D=864253813)),(ParameterName="p_BColorShadow",ParameterValue=(R=0.011550,G=0.009992,B=0.016574,A=1.000000),ExpressionGUID=(A=-429590341,B=1156435294,C=-1015192901,D=687313413)),(ParameterName="p_CColorHilight",ParameterValue=(R=2.180628,G=2.111379,B=1.347579,A=1.000000),ExpressionGUID=(A=759765673,B=1280874949,C=257367956,D=-932702788)),(ParameterName="p_CColorMidtone",ParameterValue=(R=1.945533,G=0.744115,B=0.083194,A=1.000000),ExpressionGUID=(A=110180441,B=1232792373,C=-1232281417,D=-1030626065)),(ParameterName="p_CColorShadow",ParameterValue=(R=0.722672,G=0.016477,B=0.009731,A=1.000000),ExpressionGUID=(A=716329441,B=1214803259,C=-238071112,D=-1004122047)),(ParameterName="p_ReflectColor",ParameterValue=(R=12.042683,G=20.270809,B=27.134146,A=1.000000),ExpressionGUID=(A=295058103,B=1318551573,C=-2045449573,D=-547597976)),(ParameterName="p_ReflectionChannelScale",ParameterValue=(R=0.500000,G=1.000000,B=1.000000,A=1.000000),ExpressionGUID=(A=1869386622,B=1303200947,C=-1616405849,D=714558284)),(ParameterName="p_DColor",ParameterValue=(R=0.303856,G=0.292462,B=0.216880,A=1.000000),ExpressionGUID=(A=696455109,B=1155878830,C=-1741888361,D=802120528)),(ParameterName="p_DecalScalePosition",ParameterValue=(R=40.000000,G=40.000000,B=0.344100,A=0.536700),ExpressionGUID=(A=395540170,B=1243133493,C=-1264190552,D=123075385)),(ParameterName="p_DecalChannel",ParameterValue=(R=0.000000,G=0.000000,B=0.000000,A=1.000000),ExpressionGUID=(A=1757499073,B=1097055033,C=-1266029657,D=1038353636)),(ParameterName="p_DecalColor",ParameterValue=(R=0.056792,G=0.004124,B=0.112360,A=1.000000),ExpressionGUID=(A=1691998600,B=1239094551,C=2074257317,D=1844701893)),(ParameterName="p_PatternChannelScale",ParameterValue=(R=1.000000,G=0.000000,B=0.000000,A=0.800000),ExpressionGUID=(A=439432319,B=1091149893,C=-1991909502,D=1816944627)),(ParameterName="p_PatternColor",ParameterValue=(R=1.977778,G=1.333333,B=1.402022,A=1.000000),ExpressionGUID=(A=676539706,B=1125682796,C=1871983293,D=-2049503601)),(ParameterName="p_PatternScalePosition",ParameterValue=(R=10.000000,G=10.000000,B=0.312800,A=0.500000),ExpressionGUID=(A=-2005018406,B=1132497243,C=-39915121,D=208423616)))
+
+        #<Hammer Buster Skin Fix (Required)>
+
+            set Common_GunMaterials.Materials.AssaultRifle.Mati_JakobsLegendaryAR Parent Material'Common_Materials.Weapons.Master_Gun'
+
+            set Common_GunMaterials.Materials.AssaultRifle.Mati_JakobsLegendaryAR ScalarParameterValues ((ParameterName="p_HighlightsIntensity",ParameterValue=0.500000,ExpressionGUID=(A=-1257568432,B=1277066486,C=-723473993,D=-1144384173)),(ParameterName="p_ShadowsIntensity",ParameterValue=3.000000,ExpressionGUID=(A=437293753,B=1205147708,C=-775723903,D=1480014964)),(ParameterName="p_ReflectColorScale",ParameterValue=1.000000,ExpressionGUID=(A=1875785607,B=1186033550,C=-1822263113,D=-1465755701)),(ParameterName="p_ReplacePattern",ParameterValue=0.000000,ExpressionGUID=(A=-2084339847,B=1096440125,C=439008937,D=45433490)),(ParameterName="p_UseFullColorDecal",ParameterValue=1.000000,ExpressionGUID=(A=-1064329812,B=1077705328,C=339664807,D=1869745420)),(ParameterName="p_ReplaceDecal",ParameterValue=0.000000,ExpressionGUID=(A=85863466,B=1257609701,C=-728575820,D=1337098176)))
+
+            set Common_GunMaterials.Materials.AssaultRifle.Mati_JakobsLegendaryAR TextureParameterValues ((ParameterName="p_Masks",ParameterValue=Texture2D'Weap_AssaultRifles.Tex.Weap_AssaultRifle_Comp',ExpressionGUID=(A=-330624041,B=1167251458,C=-335191907,D=-166684394)),(ParameterName="p_Diffuse",ParameterValue=Texture2D'Common_GunMaterials.CompTextures.Weap_AssaultSubSniper_Comp',ExpressionGUID=(A=1757607260,B=1326539502,C=-317215581,D=-565807463)),(ParameterName="p_NormalScopesEmissive",ParameterValue=Texture2D'Weap_AssaultRifles.Tex.Weap_AssaultRifle_Nrm',ExpressionGUID=(A=-1743872746,B=1126171774,C=119496871,D=-1952271718)),(ParameterName="P_SimpleReflect",ParameterValue=Texture2D'Common_GunMaterials.Env.Gold',ExpressionGUID=(A=-858148940,B=1327945772,C=148462268,D=1899047224)),(ParameterName="p_Decal",ParameterValue=Texture2D'Common_GunMaterials.Patterns.Pattern_JakobsEpic_SpaltedMaple',ExpressionGUID=(A=-923052711,B=1309861752,C=584229786,D=-1229888527)),(ParameterName="p_Pattern",ParameterValue=Texture2D'Common_GunMaterials.Patterns.Pattern_Jakobs_CaseHardened',ExpressionGUID=(A=534250533,B=1202550002,C=1578302861,D=-717876416)))
+
+            set Common_GunMaterials.Materials.AssaultRifle.Mati_JakobsLegendaryAR  VectorParameterValues ((ParameterName="p_AColorHilight",ParameterValue=(R=2.095129,G=1.442611,B=0.474647,A=1.000000),ExpressionGUID=(A=384292798,B=1221323751,C=-2145405772,D=1872194118)),(ParameterName="p_AColorMidtone",ParameterValue=(R=0.979407,G=0.979407,B=0.979407,A=1.000000),ExpressionGUID=(A=1102826245,B=1256298978,C=-1429881438,D=-507521102)),(ParameterName="p_AColorShadow",ParameterValue=(R=0.789918,G=1.149612,B=2.337627,A=1.000000),ExpressionGUID=(A=1481234158,B=1129012376,C=-688827739,D=-2119135160)),(ParameterName="p_BColorHilight",ParameterValue=(R=0.324428,G=0.563936,B=1.000000,A=1.000000),ExpressionGUID=(A=170714760,B=1132476783,C=-275668290,D=655702143)),(ParameterName="p_BColorMidtone",ParameterValue=(R=0.004839,G=0.151061,B=0.436448,A=1.000000),ExpressionGUID=(A=473594356,B=1338758895,C=824823946,D=864253813)),(ParameterName="p_BColorShadow",ParameterValue=(R=0.006595,G=0.007439,B=0.066296,A=1.000000),ExpressionGUID=(A=-429590341,B=1156435294,C=-1015192901,D=687313413)),(ParameterName="p_CColorHilight",ParameterValue=(R=1.967321,G=1.420883,B=1.351585,A=1.000000),ExpressionGUID=(A=759765673,B=1280874949,C=257367956,D=-932702788)),(ParameterName="p_CColorMidtone",ParameterValue=(R=0.486170,G=0.453939,B=0.453939,A=1.000000),ExpressionGUID=(A=110180441,B=1232792373,C=-1232281417,D=-1030626065)),(ParameterName="p_CColorShadow",ParameterValue=(R=0.007150,G=0.060839,B=0.215462,A=1.000000),ExpressionGUID=(A=716329441,B=1214803259,C=-238071112,D=-1004122047)),(ParameterName="p_ReflectColor",ParameterValue=(R=13.289639,G=12.016720,B=5.417824,A=1.000000),ExpressionGUID=(A=295058103,B=1318551573,C=-2045449573,D=-547597976)),(ParameterName="p_ReflectionChannelScale",ParameterValue=(R=1.000000,G=1.000000,B=1.000000,A=0.000000),ExpressionGUID=(A=1869386622,B=1303200947,C=-1616405849,D=714558284)),(ParameterName="p_DecalScalePosition",ParameterValue=(R=4.209463,G=12.304509,B=-0.156290,A=0.400000),ExpressionGUID=(A=395540170,B=1243133493,C=-1264190552,D=123075385)),(ParameterName="p_DecalColor",ParameterValue=(R=0.104969,G=0.067840,B=0.061475,A=1.000000),ExpressionGUID=(A=1691998600,B=1239094551,C=2074257317,D=1844701893)),(ParameterName="p_PatternScalePosition",ParameterValue=(R=11.360003,G=16.618099,B=2.427300,A=0.464700),ExpressionGUID=(A=-2005018406,B=1132497243,C=-39915121,D=208423616)),(ParameterName="p_DColor",ParameterValue=(R=0.034413,G=0.088566,B=0.220986,A=1.000000),ExpressionGUID=(A=696455109,B=1155878830,C=-1741888361,D=802120528)),(ParameterName="p_DecalChannel",ParameterValue=(R=1.000000,G=0.000000,B=0.000000,A=0.000000),ExpressionGUID=(A=1757499073,B=1097055033,C=-1266029657,D=1038353636)),(ParameterName="p_PatternChannelScale",ParameterValue=(R=0.000000,G=0.000000,B=1.000000,A=0.000000),ExpressionGUID=(A=439432319,B=1091149893,C=-1991909502,D=1816944627)),(ParameterName="p_PatternColor",ParameterValue=(R=2.742248,G=2.211999,B=2.211999,A=1.000000),ExpressionGUID=(A=676539706,B=1125682796,C=1871983293,D=-2049503601)))
+
+        #</Hammer Buster Skin Fix (Required)>
+
+    #</Skin>
+
+    #<Buffed Stats>
+
+        #set GD_Weap_Pistol.Barrel.Pistol_Barrel_Bandit_CrappyStarter WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Jakobs',InitializationDefinition=None,BaseValueScaleConstant=-3.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponPerShotAccuracyImpulse',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Jakobs',InitializationDefinition=None,BaseValueScaleConstant=-0.200000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Jakobs',InitializationDefinition=None,BaseValueScaleConstant=2.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=6.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))<off>
+
+    #</Buffed Stats>
+
+#</Smasher>
+
