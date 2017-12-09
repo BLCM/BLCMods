@@ -15,7 +15,7 @@ Ghalt -> DONE
 Marquis -> DONE
 Montana -> DONE
 Thorn -> DONE
-ISIC?
+ISIC
 Whiskey Foxtrot
 Oscar Mike
 ??????
