@@ -6,3 +6,5 @@ EZAmmoVendor
 	in theory should also make loading the menu in ammo vendors less buggy/glitchy when backpack is full of gear, by removing unused entries 
 
 use the filter tool's option for refilling all ammo in one purchuse if you want to refill eeverything at once
+	
+![img](https://i.imgur.com/goq7nD8.jpg)
