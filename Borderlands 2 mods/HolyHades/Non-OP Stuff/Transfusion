@@ -1,0 +1,43 @@
+###TRANSFUSION - FLORENTINE OVERHAUL###
+
+#by HolyHades
+
+#DESCRIPTION:
+
+#Modifies the Florentine
+#
+#Gives it a Maliwan Barrel
+#
+#When it hits an Enemy it spawns Transfusion Orbs
+#
+#Buffed Damage and Accuracy
+#
+#Gibbed Code: BL2(hwAAAAB39AlDiIALEQGFrmIxwYIAMAHLChYILBRY/v8zAPzBkgDw)
+
+
+
+#CODE
+
+#Weapon Attributes#
+
+set GD_Aster_RaidWeapons.SMGs.Aster_Seraph_Florentine_Title PartName Transfusion
+
+set GD_Aster_RaidWeapons.SMGs.SMG_Barrel_Alien_Florentine GestaltModeSkeletalMeshName SMG_Barrel_Maliwan
+
+set GD_Aster_RaidWeapons.SMGs.SMG_Barrel_Alien_Florentine WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=3.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+set GD_Aster_RaidWeapons.SMGs.SMG_Barrel_Alien_Florentine AttributeSlotUpgrades ((SlotName="WeaponSpread",GradeIncrease=5,bActivateSlot=True),(SlotName="AccuracyMax",GradeIncrease=10,bActivateSlot=True),(SlotName="AccuracyMin",GradeIncrease=5,bActivateSlot=True),(SlotName="AccuracyRegen",GradeIncrease=5,bActivateSlot=True),(SlotName="WeaponAccuracyImpulse",GradeIncrease=5,bActivateSlot=True))
+
+#Weapon Attributes#
+
+#Impact
+
+set GD_Aster_RaidWeapons.SMGs.Bullet_SMG_Plasma_Florentine ImpactResponses ((DamageSurfaceType=DMGSURFACE_Flesh,bDisableRegularBulletDamage=False,Behaviors=(Behavior_SpawnProjectile'GD_Weap_SniperRifles.FiringModes.Bullet_Sniper_ChereAmie:Behavior_SpawnProjectile_1')),(DamageSurfaceType=DMGSURFACE_Armor,bDisableRegularBulletDamage=False,Behaviors=(Behavior_SpawnProjectile'GD_Weap_SniperRifles.FiringModes.Bullet_Sniper_ChereAmie:Behavior_SpawnProjectile_1')),(DamageSurfaceType=DMGSURFACE_Shield,bDisableRegularBulletDamage=False,Behaviors=(Behavior_SpawnProjectile'GD_Weap_SniperRifles.FiringModes.Bullet_Sniper_ChereAmie:Behavior_SpawnProjectile_1')))
+
+#Impact
+
+#Bullet Speed
+
+set GD_Aster_RaidWeapons.SMGs.Bullet_SMG_Plasma_Florentine Speed  10000
+
+#Bullet Speed

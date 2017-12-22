@@ -1,0 +1,17 @@
+
+#Credit: Darkhell 99% lax 1%
+#Makes the Stingray have priority over the Moonbuggy in the spawn station, and changes the laser buggy into the Stingray. The missle buggy will remain as a buggy to prevent some softlocks and stuff.
+
+#<stingray1>
+
+    #<hotfix><key>"SparkLevelPatchEntry-buggyreplace1"</key><value>",GD_Globals.VehicleSpawnStation.VSSUI_LaserBuggy,PathToVSSDefinition,,GD_Co_StingRay_Streaming.VSS.VSS_StingRay_FlakBurst"</value><on>
+
+    #<hotfix><key>"SparkLevelPatchEntry-buggyreplace2"</key><value>",GD_Globals.VehicleSpawnStation.VSSUI_LaserBuggy,VehicleName,,Flak Cannon Stingray"</value><on>
+
+    #<hotfix><key>"SparkLevelPatchEntry-buggyreplace3"</key><value>",VSSUIDefinition,GD_Globals.VehicleSpawnStation.VSSUI_LaserBuggy,,VehicleFamilyDefinition 'GD_Globals.VehicleSpawnStation.VehicleFamily_StingRay'"</value><on>
+
+#</stingray1>
+
+set Transient.SparkServiceConfiguration_6 Keys ("SparkLevelPatchEntry-buggyreplace1","SparkLevelPatchEntry-buggyreplace2","SparkLevelPatchEntry-buggyreplace3")
+
+set Transient.SparkServiceConfiguration_6 Values (",GD_Globals.VehicleSpawnStation.VSSUI_LaserBuggy,PathToVSSDefinition,,GD_Co_StingRay_Streaming.VSS.VSS_StingRay_FlakBurst",",GD_Globals.VehicleSpawnStation.VSSUI_LaserBuggy,VehicleName,,Flak Cannon Stingray",",VSSUIDefinition,GD_Globals.VehicleSpawnStation.VSSUI_LaserBuggy,,VehicleFamilyDefinition 'GD_Globals.VehicleSpawnStation.VehicleFamily_StingRay'")

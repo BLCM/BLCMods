@@ -1,0 +1,43 @@
+#<Whale Killer>
+
+  #<Info>
+
+    #Originally made by Lightchaosman, ported by Laxlife
+    #Replaces the Plunkett, if it took more than one shot, you werent using a Jakobs
+
+        #The Whale Killer is the ultimate jakobs sniper.
+        #If you crit, the enemy dies.
+        #If you dont crit, you deal no damage .
+        #Holding this gun causes you to take 2.5x more damage.
+        #Aiming down sights prevents movement.
+        #Aiming down sights quickly drains your healthbar.
+        #You become almost-immune to incoming damage while aiming down sights.
+        #Aiming down sights gives more projectiles.
+        #Getting a kill while aiming down sights, restores your health.
+        #Increased scope speed.
+
+  #</Info>
+
+  #<Card>
+
+      set GD_Petunia_Weapons.Name.Title.Title__Unique_Plunkett PartName Whale Killer
+      set GD_Petunia_Weapons.Name.Title.Title__Unique_Plunkett:AttributePresentationDefinition_8 NoConstraintText How quick is your aim?<font color = "#FFFFFF"
+      set GD_Petunia_Weapons.Name.Title.Title__Unique_Plunkett rarity (BaseValueConstant=5.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+
+  #</Card>
+
+  #<Attributes>
+
+      set GD_Petunia_Weapons.Snipers.SR_Barrel_Plunkett WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-9999.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-2.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-100000000000.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=1000.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponReloadSpeed',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-0.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectileSpeedMultiplier',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=100.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+      set GD_Petunia_Weapons.Snipers.SR_Barrel_Plunkett ExternalAttributeEffects ((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.HealthResourcePool.HealthMaxValue',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=5000.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.HealthResourcePool.HealthOnIdleRegenerationRate',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=ResourcePoolAttributeDefinition'D_Attributes.HealthResourcePool.HealthOnIdleRegenerationRate',InitializationDefinition=None,BaseValueScaleConstant=-0.6660)),(AttributeToModify=AttributeDefinition'D_Attributes.GameplayAttributes.PlayerCriticalHitBonus',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=999999999.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.DamageSourceModifiers.ReceivedAmplifyDamageModifier',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.50000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.DamageSourceModifiers.ReceivedBulletDamageModifier',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.50000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.DamageSourceModifiers.ReceivedGrenadeDamageModifier',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.50000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.DamageSourceModifiers.ReceivedMeleeDamageModifier',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.50000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.DamageSourceModifiers.ReceivedRocketDamageModifier',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.50000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.DamageSourceModifiers.ReceivedSkillDamageModifier',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.50000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.DamageSourceModifiers.ReceivedStatusEffectDamageModifier',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.50000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.DamageTypeModifers.NormalStatusEffectDamageModifier',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-0.2500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+      set GD_Petunia_Weapons.Snipers.SR_Barrel_Plunkett ZoomExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.GameplayAttributes.FootSpeed',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.GameplayAttributes.FootSpeed',InitializationDefinition=None,BaseValueScaleConstant=-1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.DamageEnhancementModifiers.PlayerConvertDamageToHealingPercent',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=0.000001,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.HealthResourcePool.HealthPassiveRegenerationRate',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=ResourcePoolAttributeDefinition'D_Attributes.HealthResourcePool.HealthMaxValue',InitializationDefinition=None,BaseValueScaleConstant=-0.333333333)),(AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.HealthResourcePool.HealthOnIdleRegenerationRate',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=ResourcePoolAttributeDefinition'D_Attributes.HealthResourcePool.HealthOnIdleRegenerationRate',InitializationDefinition=None,BaseValueScaleConstant=-1.5000)),(AttributeToModify=AttributeDefinition'D_Attributes.GameplayAttributes.BaseArmor',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=9999999.00000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+      set D_Attributes.DamageTypeModifers.NormalStatusEffectDamageModifier:ObjectPropertyAttributeValueResolver_561 PropertyName ZoomTimeModifier
+
+
+
+  #</Attributes>
+
+#</Whale Killer>

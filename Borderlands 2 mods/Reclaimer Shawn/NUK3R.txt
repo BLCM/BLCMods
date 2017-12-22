@@ -1,4 +1,4 @@
-#Version 1.0 of the NUK3R. As more things get discovered, more updates to this will be made. This mod currently breaks the Nukem. Gibbed's Codes for this weapon are:
+#Version 1.5 of the NUK3R. This mod currently breaks the Nukem. Gibbed's Codes for this weapon are:
 BL2(hwAAAABdyQBER4M/EAGFVqIYQ8GLggBFG4oIFBwo/v/TojhBAYzi)
 BL2(hwAAAACfjABER4M/EAGFVqIYQ8GLggBFGwoJFBwo/v/TojhBAYzi)
 BL2(hwAAAADGNgBER4M/EAGFVqIYQ8GLggBFGwoKFBwo/v/TojhBAYzi)
@@ -14,6 +14,9 @@ set GD_Weap_Launchers.Name.Title_Maliwan.Title_Barrel_Maliwan_Norfleet:Attribute
 #Sets the projectile#
 set GD_Weap_Launchers.Barrel.L_Barrel_Alien_Maliwan_Norfleet CustomFiringModeDefinition FiringModeDefinition 'GD_Weap_Launchers.FiringModes.FM_Rocket_Torgue_Nukem'
 set GD_Weap_Launchers.FiringModes.FM_Rocket_Torgue_Nukem ProjectileDefinition GD_GrenadeMods.Projectiles.Grenade_PandemicChild
+set GD_GrenadeMods.Projectiles.Grenade_PandemicChild DefaultExplosionDefinition ExplosionDefinition 'GD_Explosions.explosive.Explosion_Nukem'
+set GD_GrenadeMods.Projectiles.Grenade_PandemicChild InFlightEffects ParticleSystem 'FX_WEP_Trails.Particles.RL.Part_Rocket_Trail_Explosive'
+set GD_GrenadeMods.Projectiles.Grenade_PandemicChild AmbientAkEvent AkEvent 'Ake_Wep_Rocket_Launchers.Ak_Play_Wep_Missile_Proj'
 
 #Sets the guns base stats. You see this stuff on the card. Also affects projectile speed. The visual cap for damage is 1073741824. It can do more damage though#
 set GD_Weap_Launchers.Barrel.L_Barrel_Alien_Maliwan_Norfleet WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=999999999.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=20.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=20.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=20.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=-2.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=10.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectileSpeedMultiplier',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.100000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.00000))

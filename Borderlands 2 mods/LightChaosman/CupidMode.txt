@@ -1,0 +1,534 @@
+#<Cupid Mode>
+
+    #Cupid mode v1.0
+
+    #Enemies all love eachother now, and will exclusively focus their attention on you.
+
+    #By LightChaosman
+
+    #<Hotfixes>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode1"</key><value>",GD_AI_Allegiance.Allegiance_Bandit,DefaultOpinion,,OPINION_Friendly"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode2"</key><value>",GD_AI_Allegiance.Allegiance_Bandit,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode3"</key><value>",GD_AI_Allegiance.Allegiance_Bandit,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode4"</key><value>",GD_AI_Allegiance.Allegiance_BanditNeutral,DefaultOpinion,,OPINION_Friendly"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode5"</key><value>",GD_AI_Allegiance.Allegiance_BanditNeutral,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode6"</key><value>",GD_AI_Allegiance.Allegiance_BanditNeutral,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode7"</key><value>",GD_AI_Allegiance.Allegiance_Bloodwing,DefaultOpinion,,OPINION_Friendly"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode8"</key><value>",GD_AI_Allegiance.Allegiance_Bloodwing,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode9"</key><value>",GD_AI_Allegiance.Allegiance_Bloodwing,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode10"</key><value>",GD_AI_Allegiance.Allegiance_BloodwingSubdued,DefaultOpinion,,OPINION_Friendly"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode11"</key><value>",GD_AI_Allegiance.Allegiance_BloodwingSubdued,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode12"</key><value>",GD_AI_Allegiance.Allegiance_BloodwingSubdued,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode13"</key><value>",GD_AI_Allegiance.Allegiance_BoomBoom,DefaultOpinion,,OPINION_Friendly"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode14"</key><value>",GD_AI_Allegiance.Allegiance_BoomBoom,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode15"</key><value>",GD_AI_Allegiance.Allegiance_BoomBoom,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode16"</key><value>",GD_AI_Allegiance.Allegiance_Bot,DefaultOpinion,,OPINION_Friendly"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode17"</key><value>",GD_AI_Allegiance.Allegiance_Bot,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode18"</key><value>",GD_AI_Allegiance.Allegiance_Bot,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode19"</key><value>",GD_AI_Allegiance.Allegiance_Bot_NoLevel,DefaultOpinion,,OPINION_Friendly"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode20"</key><value>",GD_AI_Allegiance.Allegiance_Bot_NoLevel,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode21"</key><value>",GD_AI_Allegiance.Allegiance_Bot_NoLevel,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode22"</key><value>",GD_AI_Allegiance.Allegiance_BunkerBoss_AutoCannon,DefaultOpinion,,OPINION_Friendly"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode23"</key><value>",GD_AI_Allegiance.Allegiance_BunkerBoss_AutoCannon,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode24"</key><value>",GD_AI_Allegiance.Allegiance_BunkerBoss_AutoCannon,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode25"</key><value>",GD_AI_Allegiance.Allegiance_BunkerBoss_JetLoader,DefaultOpinion,,OPINION_Friendly"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode26"</key><value>",GD_AI_Allegiance.Allegiance_BunkerBoss_JetLoader,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode27"</key><value>",GD_AI_Allegiance.Allegiance_BunkerBoss_JetLoader,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode28"</key><value>",GD_AI_Allegiance.Allegiance_BunkerBoss_Loader,DefaultOpinion,,OPINION_Friendly"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode29"</key><value>",GD_AI_Allegiance.Allegiance_BunkerBoss_Loader,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode30"</key><value>",GD_AI_Allegiance.Allegiance_BunkerBoss_Loader,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode31"</key><value>",GD_AI_Allegiance.Allegiance_Creeper,DefaultOpinion,,OPINION_Friendly"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode32"</key><value>",GD_AI_Allegiance.Allegiance_Creeper,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode33"</key><value>",GD_AI_Allegiance.Allegiance_Creeper,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode34"</key><value>",GD_AI_Allegiance.Allegiance_Crystalisk,DefaultOpinion,,OPINION_Friendly"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode35"</key><value>",GD_AI_Allegiance.Allegiance_Crystalisk,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode36"</key><value>",GD_AI_Allegiance.Allegiance_Crystalisk,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode37"</key><value>",GD_AI_Allegiance.Allegiance_ElementalPlant,DefaultOpinion,,OPINION_Friendly"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode38"</key><value>",GD_AI_Allegiance.Allegiance_ElementalPlant,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode39"</key><value>",GD_AI_Allegiance.Allegiance_ElementalPlant,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode40"</key><value>",GD_AI_Allegiance.Allegiance_ExplosiveBarrel,DefaultOpinion,,OPINION_Friendly"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode41"</key><value>",GD_AI_Allegiance.Allegiance_ExplosiveBarrel,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode42"</key><value>",GD_AI_Allegiance.Allegiance_ExplosiveBarrel,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode43"</key><value>",GD_AI_Allegiance.Allegiance_GoliathRage,DefaultOpinion,,OPINION_Friendly"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode44"</key><value>",GD_AI_Allegiance.Allegiance_GoliathRage,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode45"</key><value>",GD_AI_Allegiance.Allegiance_GoliathRage,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode46"</key><value>",GD_AI_Allegiance.Allegiance_Gyrocopter,DefaultOpinion,,OPINION_Friendly"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode47"</key><value>",GD_AI_Allegiance.Allegiance_Gyrocopter,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode48"</key><value>",GD_AI_Allegiance.Allegiance_Gyrocopter,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode49"</key><value>",GD_AI_Allegiance.Allegiance_Nomad,DefaultOpinion,,OPINION_Friendly"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode50"</key><value>",GD_AI_Allegiance.Allegiance_Nomad,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode51"</key><value>",GD_AI_Allegiance.Allegiance_Nomad,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode52"</key><value>",GD_AI_Allegiance.Allegiance_PrimalBeast,DefaultOpinion,,OPINION_Friendly"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode53"</key><value>",GD_AI_Allegiance.Allegiance_PrimalBeast,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode54"</key><value>",GD_AI_Allegiance.Allegiance_PrimalBeast,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode55"</key><value>",GD_AI_Allegiance.Allegiance_Probe,DefaultOpinion,,OPINION_Friendly"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode56"</key><value>",GD_AI_Allegiance.Allegiance_Probe,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode57"</key><value>",GD_AI_Allegiance.Allegiance_Probe,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode58"</key><value>",GD_AI_Allegiance.Allegiance_Rakk,DefaultOpinion,,OPINION_Friendly"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode59"</key><value>",GD_AI_Allegiance.Allegiance_Rakk,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode60"</key><value>",GD_AI_Allegiance.Allegiance_Rakk,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode61"</key><value>",GD_AI_Allegiance.Allegiance_RakkVolcanic,DefaultOpinion,,OPINION_Friendly"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode62"</key><value>",GD_AI_Allegiance.Allegiance_RakkVolcanic,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode63"</key><value>",GD_AI_Allegiance.Allegiance_RakkVolcanic,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode64"</key><value>",GD_AI_Allegiance.Allegiance_ReleasedMidget,DefaultOpinion,,OPINION_Friendly"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode65"</key><value>",GD_AI_Allegiance.Allegiance_ReleasedMidget,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode66"</key><value>",GD_AI_Allegiance.Allegiance_ReleasedMidget,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode67"</key><value>",GD_AI_Allegiance.Allegiance_SarcasticSlab,DefaultOpinion,,OPINION_Friendly"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode68"</key><value>",GD_AI_Allegiance.Allegiance_SarcasticSlab,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode69"</key><value>",GD_AI_Allegiance.Allegiance_SarcasticSlab,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode70"</key><value>",GD_AI_Allegiance.Allegiance_Skag,DefaultOpinion,,OPINION_Friendly"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode71"</key><value>",GD_AI_Allegiance.Allegiance_Skag,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode72"</key><value>",GD_AI_Allegiance.Allegiance_Skag,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode73"</key><value>",GD_AI_Allegiance.Allegiance_Spiderant,DefaultOpinion,,OPINION_Friendly"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode74"</key><value>",GD_AI_Allegiance.Allegiance_Spiderant,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode75"</key><value>",GD_AI_Allegiance.Allegiance_Spiderant,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode76"</key><value>",GD_AI_Allegiance.Allegiance_Stalker,DefaultOpinion,,OPINION_Friendly"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode77"</key><value>",GD_AI_Allegiance.Allegiance_Stalker,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode78"</key><value>",GD_AI_Allegiance.Allegiance_Stalker,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode79"</key><value>",GD_AI_Allegiance.Allegiance_Stalker_Ambush,DefaultOpinion,,OPINION_Friendly"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode80"</key><value>",GD_AI_Allegiance.Allegiance_Stalker_Ambush,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode81"</key><value>",GD_AI_Allegiance.Allegiance_Stalker_Ambush,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode82"</key><value>",GD_AI_Allegiance.Allegiance_Stalker_Cyclone,DefaultOpinion,,OPINION_Friendly"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode83"</key><value>",GD_AI_Allegiance.Allegiance_Stalker_Cyclone,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode84"</key><value>",GD_AI_Allegiance.Allegiance_Stalker_Cyclone,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode85"</key><value>",GD_AI_Allegiance.Allegiance_Stalker_Needle,DefaultOpinion,,OPINION_Friendly"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode86"</key><value>",GD_AI_Allegiance.Allegiance_Stalker_Needle,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode87"</key><value>",GD_AI_Allegiance.Allegiance_Stalker_Needle,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode88"</key><value>",GD_AI_Allegiance.Allegiance_Stalker_Spring,DefaultOpinion,,OPINION_Friendly"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode89"</key><value>",GD_AI_Allegiance.Allegiance_Stalker_Spring,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode90"</key><value>",GD_AI_Allegiance.Allegiance_Stalker_Spring,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode91"</key><value>",GD_AI_Allegiance.Allegiance_Thresher,DefaultOpinion,,OPINION_Friendly"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode92"</key><value>",GD_AI_Allegiance.Allegiance_Thresher,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode93"</key><value>",GD_AI_Allegiance.Allegiance_Thresher,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode94"</key><value>",GD_AI_Allegiance.Allegiance_Varkid,DefaultOpinion,,OPINION_Friendly"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode95"</key><value>",GD_AI_Allegiance.Allegiance_Varkid,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode96"</key><value>",GD_AI_Allegiance.Allegiance_Varkid,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode97"</key><value>",GD_AI_Allegiance_Allium.Allegiance_Bandit_Allium,DefaultOpinion,,OPINION_Friendly"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode98"</key><value>",GD_AI_Allegiance_Allium.Allegiance_Bandit_Allium,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode99"</key><value>",GD_AI_Allegiance_Allium.Allegiance_Bandit_Allium,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode100"</key><value>",GD_AI_Allegiance_Allium.Allegiance_BigBird,DefaultOpinion,,OPINION_Friendly"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode101"</key><value>",GD_AI_Allegiance_Allium.Allegiance_BigBird,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode102"</key><value>",GD_AI_Allegiance_Allium.Allegiance_BigBird,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode103"</key><value>",GD_AI_Allegiance_Allium.Allegiance_BigBird_BanditFriendly,DefaultOpinion,,OPINION_Friendly"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode104"</key><value>",GD_AI_Allegiance_Allium.Allegiance_BigBird_BanditFriendly,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode105"</key><value>",GD_AI_Allegiance_Allium.Allegiance_BigBird_BanditFriendly,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode106"</key><value>",GD_Allium_GameShowCam.Character.Allegiance_GameShowCam,DefaultOpinion,,OPINION_Friendly"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode107"</key><value>",GD_Allium_GameShowCam.Character.Allegiance_GameShowCam,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode108"</key><value>",GD_Allium_GameShowCam.Character.Allegiance_GameShowCam,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode109"</key><value>",GD_Aster_AI_Allegiance.Allegiance_Dragons,DefaultOpinion,,OPINION_Friendly"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode110"</key><value>",GD_Aster_AI_Allegiance.Allegiance_Dragons,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode111"</key><value>",GD_Aster_AI_Allegiance.Allegiance_Dragons,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode112"</key><value>",GD_Aster_AI_Allegiance.Allegiance_Dwarves,DefaultOpinion,,OPINION_Friendly"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode113"</key><value>",GD_Aster_AI_Allegiance.Allegiance_Dwarves,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode114"</key><value>",GD_Aster_AI_Allegiance.Allegiance_Dwarves,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode115"</key><value>",GD_Aster_AI_Allegiance.Allegiance_GolemRage,DefaultOpinion,,OPINION_Friendly"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode116"</key><value>",GD_Aster_AI_Allegiance.Allegiance_GolemRage,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode117"</key><value>",GD_Aster_AI_Allegiance.Allegiance_GolemRage,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode118"</key><value>",GD_Aster_AI_Allegiance.Allegiance_Golems,DefaultOpinion,,OPINION_Friendly"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode119"</key><value>",GD_Aster_AI_Allegiance.Allegiance_Golems,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode120"</key><value>",GD_Aster_AI_Allegiance.Allegiance_Golems,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode121"</key><value>",GD_Aster_AI_Allegiance.Allegiance_Greedtooth,DefaultOpinion,,OPINION_Friendly"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode122"</key><value>",GD_Aster_AI_Allegiance.Allegiance_Greedtooth,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode123"</key><value>",GD_Aster_AI_Allegiance.Allegiance_Greedtooth,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode124"</key><value>",GD_Aster_AI_Allegiance.Allegiance_HandsomeSorcerer,DefaultOpinion,,OPINION_Friendly"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode125"</key><value>",GD_Aster_AI_Allegiance.Allegiance_HandsomeSorcerer,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode126"</key><value>",GD_Aster_AI_Allegiance.Allegiance_HandsomeSorcerer,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode127"</key><value>",GD_Aster_AI_Allegiance.Allegiance_Knights,DefaultOpinion,,OPINION_Friendly"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode128"</key><value>",GD_Aster_AI_Allegiance.Allegiance_Knights,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode129"</key><value>",GD_Aster_AI_Allegiance.Allegiance_Knights,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode130"</key><value>",GD_Aster_AI_Allegiance.Allegiance_Mimic,DefaultOpinion,,OPINION_Friendly"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode131"</key><value>",GD_Aster_AI_Allegiance.Allegiance_Mimic,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode132"</key><value>",GD_Aster_AI_Allegiance.Allegiance_Mimic,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode133"</key><value>",GD_Aster_AI_Allegiance.Allegiance_Orcs,DefaultOpinion,,OPINION_Friendly"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode134"</key><value>",GD_Aster_AI_Allegiance.Allegiance_Orcs,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode135"</key><value>",GD_Aster_AI_Allegiance.Allegiance_Orcs,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode136"</key><value>",GD_Aster_AI_Allegiance.Allegiance_SkeletonRage,DefaultOpinion,,OPINION_Friendly"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode137"</key><value>",GD_Aster_AI_Allegiance.Allegiance_SkeletonRage,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode138"</key><value>",GD_Aster_AI_Allegiance.Allegiance_SkeletonRage,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode139"</key><value>",GD_Aster_AI_Allegiance.Allegiance_Skeletons,DefaultOpinion,,OPINION_Friendly"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode140"</key><value>",GD_Aster_AI_Allegiance.Allegiance_Skeletons,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode141"</key><value>",GD_Aster_AI_Allegiance.Allegiance_Skeletons,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode142"</key><value>",GD_Aster_AI_Allegiance.Allegiance_Spider,DefaultOpinion,,OPINION_Friendly"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode143"</key><value>",GD_Aster_AI_Allegiance.Allegiance_Spider,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode144"</key><value>",GD_Aster_AI_Allegiance.Allegiance_Spider,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode145"</key><value>",GD_Aster_AI_Allegiance.Allegiance_TempleSlaughter,DefaultOpinion,,OPINION_Friendly"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode146"</key><value>",GD_Aster_AI_Allegiance.Allegiance_TempleSlaughter,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode147"</key><value>",GD_Aster_AI_Allegiance.Allegiance_TempleSlaughter,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode148"</key><value>",GD_Aster_AI_Allegiance.Allegiance_Treant,DefaultOpinion,,OPINION_Friendly"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode149"</key><value>",GD_Aster_AI_Allegiance.Allegiance_Treant,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode150"</key><value>",GD_Aster_AI_Allegiance.Allegiance_Treant,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode151"</key><value>",GD_Aster_AI_Allegiance.Allegiance_Wizard,DefaultOpinion,,OPINION_Friendly"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode152"</key><value>",GD_Aster_AI_Allegiance.Allegiance_Wizard,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode153"</key><value>",GD_Aster_AI_Allegiance.Allegiance_Wizard,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode154"</key><value>",GD_DigiCreaturesShared.Allegiance.Allegiance_DigiTestTargets,DefaultOpinion,,OPINION_Friendly"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode155"</key><value>",GD_DigiCreaturesShared.Allegiance.Allegiance_DigiTestTargets,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode156"</key><value>",GD_DigiCreaturesShared.Allegiance.Allegiance_DigiTestTargets,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode157"</key><value>",GD_DrifterShared.Allegiance.Allegiance_Drifter,DefaultOpinion,,OPINION_Friendly"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode158"</key><value>",GD_DrifterShared.Allegiance.Allegiance_Drifter,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode159"</key><value>",GD_DrifterShared.Allegiance.Allegiance_Drifter,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode160"</key><value>",GD_FinalBoss.AI.Allegiance_FinalBoss,DefaultOpinion,,OPINION_Friendly"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode161"</key><value>",GD_FinalBoss.AI.Allegiance_FinalBoss,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode162"</key><value>",GD_FinalBoss.AI.Allegiance_FinalBoss,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode163"</key><value>",GD_Flax_AI_Allegiance.Allegiance_HallowSkeletons,DefaultOpinion,,OPINION_Friendly"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode164"</key><value>",GD_Flax_AI_Allegiance.Allegiance_HallowSkeletons,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode165"</key><value>",GD_Flax_AI_Allegiance.Allegiance_HallowSkeletons,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode166"</key><value>",GD_Flax_AI_Allegiance.Allegiance_PumpkinKingpin,DefaultOpinion,,OPINION_Friendly"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode167"</key><value>",GD_Flax_AI_Allegiance.Allegiance_PumpkinKingpin,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode168"</key><value>",GD_Flax_AI_Allegiance.Allegiance_PumpkinKingpin,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode169"</key><value>",GD_Flax_AI_Allegiance.Allegiance_SkrakkSpycho,DefaultOpinion,,OPINION_Friendly"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode170"</key><value>",GD_Flax_AI_Allegiance.Allegiance_SkrakkSpycho,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode171"</key><value>",GD_Flax_AI_Allegiance.Allegiance_SkrakkSpycho,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode172"</key><value>",GD_GoliathBride.AI.Allegiance_GoliathWeddingPartyRage,DefaultOpinion,,OPINION_Friendly"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode173"</key><value>",GD_GoliathBride.AI.Allegiance_GoliathWeddingPartyRage,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode174"</key><value>",GD_GoliathBride.AI.Allegiance_GoliathWeddingPartyRage,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode175"</key><value>",GD_HyperionBunkerBoss.Allegiances.Allegiance_BunkerBoss,DefaultOpinion,,OPINION_Friendly"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode176"</key><value>",GD_HyperionBunkerBoss.Allegiances.Allegiance_BunkerBoss,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode177"</key><value>",GD_HyperionBunkerBoss.Allegiances.Allegiance_BunkerBoss,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode178"</key><value>",GD_HyperionBunkerBoss.Allegiances.Allegiance_BunkerBoss_Gun,DefaultOpinion,,OPINION_Friendly"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode179"</key><value>",GD_HyperionBunkerBoss.Allegiances.Allegiance_BunkerBoss_Gun,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode180"</key><value>",GD_HyperionBunkerBoss.Allegiances.Allegiance_BunkerBoss_Gun,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode181"</key><value>",GD_HyperionBunkerBoss.Allegiances.Allegiance_BunkerBoss_Gun_KillMe,DefaultOpinion,,OPINION_Friendly"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode182"</key><value>",GD_HyperionBunkerBoss.Allegiances.Allegiance_BunkerBoss_Gun_KillMe,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode183"</key><value>",GD_HyperionBunkerBoss.Allegiances.Allegiance_BunkerBoss_Gun_KillMe,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode184"</key><value>",GD_HyperionBunkerBoss.Allegiances.Allegiance_BunkerBoss_KillMe,DefaultOpinion,,OPINION_Friendly"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode185"</key><value>",GD_HyperionBunkerBoss.Allegiances.Allegiance_BunkerBoss_KillMe,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode186"</key><value>",GD_HyperionBunkerBoss.Allegiances.Allegiance_BunkerBoss_KillMe,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode187"</key><value>",GD_Iris_AI_Allegiance.Allegiance_MamaBoostBiker,DefaultOpinion,,OPINION_Friendly"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode188"</key><value>",GD_Iris_AI_Allegiance.Allegiance_MamaBoostBiker,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode189"</key><value>",GD_Iris_AI_Allegiance.Allegiance_MamaBoostBiker,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode190"</key><value>",GD_Iris_AI_Allegiance.Allegiance_RaidMama,DefaultOpinion,,OPINION_Friendly"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode191"</key><value>",GD_Iris_AI_Allegiance.Allegiance_RaidMama,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode192"</key><value>",GD_Iris_AI_Allegiance.Allegiance_RaidMama,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode193"</key><value>",GD_Iris_AI_Allegiance.Allegiance_RaidPete,DefaultOpinion,,OPINION_Friendly"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode194"</key><value>",GD_Iris_AI_Allegiance.Allegiance_RaidPete,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode195"</key><value>",GD_Iris_AI_Allegiance.Allegiance_RaidPete,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode196"</key><value>",GD_Iris_AI_Allegiance.Iris_Allegiance_AngelGang,DefaultOpinion,,OPINION_Friendly"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode197"</key><value>",GD_Iris_AI_Allegiance.Iris_Allegiance_AngelGang,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode198"</key><value>",GD_Iris_AI_Allegiance.Iris_Allegiance_AngelGang,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode199"</key><value>",GD_Iris_AI_Allegiance.Iris_Allegiance_BarFightBadasses,DefaultOpinion,,OPINION_Friendly"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode200"</key><value>",GD_Iris_AI_Allegiance.Iris_Allegiance_BarFightBadasses,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode201"</key><value>",GD_Iris_AI_Allegiance.Iris_Allegiance_BarFightBadasses,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode202"</key><value>",GD_Iris_AI_Allegiance.Iris_Allegiance_DragonGang,DefaultOpinion,,OPINION_Friendly"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode203"</key><value>",GD_Iris_AI_Allegiance.Iris_Allegiance_DragonGang,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode204"</key><value>",GD_Iris_AI_Allegiance.Iris_Allegiance_DragonGang,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode205"</key><value>",GD_Iris_AI_Allegiance.Iris_Allegiance_Torgue_Gang,DefaultOpinion,,OPINION_Friendly"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode206"</key><value>",GD_Iris_AI_Allegiance.Iris_Allegiance_Torgue_Gang,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode207"</key><value>",GD_Iris_AI_Allegiance.Iris_Allegiance_Torgue_Gang,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode208"</key><value>",GD_Jack.AI.Allegiance_Jack,DefaultOpinion,,OPINION_Friendly"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode209"</key><value>",GD_Jack.AI.Allegiance_Jack,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode210"</key><value>",GD_Jack.AI.Allegiance_Jack,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode211"</key><value>",GD_Jack.AI.Allegiance_KillDyingJack,DefaultOpinion,,OPINION_Friendly"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode212"</key><value>",GD_Jack.AI.Allegiance_KillDyingJack,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode213"</key><value>",GD_Jack.AI.Allegiance_KillDyingJack,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode214"</key><value>",GD_JackDeployableTurret.AI.Allegiance_JackTurret,DefaultOpinion,,OPINION_Friendly"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode215"</key><value>",GD_JackDeployableTurret.AI.Allegiance_JackTurret,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode216"</key><value>",GD_JackDeployableTurret.AI.Allegiance_JackTurret,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode217"</key><value>",GD_JackShieldProbes.AI.Allegiance_JackProbe_ThoughtLocked,DefaultOpinion,,OPINION_Friendly"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode218"</key><value>",GD_JackShieldProbes.AI.Allegiance_JackProbe_ThoughtLocked,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode219"</key><value>",GD_JackShieldProbes.AI.Allegiance_JackProbe_ThoughtLocked,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode220"</key><value>",GD_Nasturtium_AI_Allegiance.Allegiance_Crabworms,DefaultOpinion,,OPINION_Friendly"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode221"</key><value>",GD_Nasturtium_AI_Allegiance.Allegiance_Crabworms,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode222"</key><value>",GD_Nasturtium_AI_Allegiance.Allegiance_Crabworms,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode223"</key><value>",GD_Nasturtium_AI_Allegiance.Allegiance_Nast_Natives,DefaultOpinion,,OPINION_Friendly"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode224"</key><value>",GD_Nasturtium_AI_Allegiance.Allegiance_Nast_Natives,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode225"</key><value>",GD_Nasturtium_AI_Allegiance.Allegiance_Nast_Natives,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode226"</key><value>",GD_Orchid_AI_Allegiance.Allegiance_RaidThumper,DefaultOpinion,,OPINION_Friendly"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode227"</key><value>",GD_Orchid_AI_Allegiance.Allegiance_RaidThumper,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode228"</key><value>",GD_Orchid_AI_Allegiance.Allegiance_RaidThumper,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode229"</key><value>",GD_Orchid_SandWorm.Allegiance.Allegiance_Orchid_SandWorm,DefaultOpinion,,OPINION_Friendly"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode230"</key><value>",GD_Orchid_SandWorm.Allegiance.Allegiance_Orchid_SandWorm,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode231"</key><value>",GD_Orchid_SandWorm.Allegiance.Allegiance_Orchid_SandWorm,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode232"</key><value>",GD_Sage_AI_Allegiance.Allegiance_Sage_Raid_Beast,DefaultOpinion,,OPINION_Friendly"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode233"</key><value>",GD_Sage_AI_Allegiance.Allegiance_Sage_Raid_Beast,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode234"</key><value>",GD_Sage_AI_Allegiance.Allegiance_Sage_Raid_Beast,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode235"</key><value>",GD_Sage_AI_Allegiance.Allegiance_Sage_Raid_BeastMaster,DefaultOpinion,,OPINION_Friendly"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode236"</key><value>",GD_Sage_AI_Allegiance.Allegiance_Sage_Raid_BeastMaster,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode237"</key><value>",GD_Sage_AI_Allegiance.Allegiance_Sage_Raid_BeastMaster,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode238"</key><value>",GD_Sage_AI_Allegiance.Allegiance_Sage_Raid_Murderer_AtkPlayer,DefaultOpinion,,OPINION_Friendly"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode239"</key><value>",GD_Sage_AI_Allegiance.Allegiance_Sage_Raid_Murderer_AtkPlayer,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode240"</key><value>",GD_Sage_AI_Allegiance.Allegiance_Sage_Raid_Murderer_AtkPlayer,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode241"</key><value>",GD_Sage_AI_Allegiance.Allegiance_Sage_Savages,DefaultOpinion,,OPINION_Friendly"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode242"</key><value>",GD_Sage_AI_Allegiance.Allegiance_Sage_Savages,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode243"</key><value>",GD_Sage_AI_Allegiance.Allegiance_Sage_Savages,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode244"</key><value>",GD_Sage_GiantSpore_Shared.Character.Allegiance_Sage_Spore,DefaultOpinion,,OPINION_Friendly"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode245"</key><value>",GD_Sage_GiantSpore_Shared.Character.Allegiance_Sage_Spore,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode246"</key><value>",GD_Sage_GiantSpore_Shared.Character.Allegiance_Sage_Spore,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode247"</key><value>",GD_Sage_RhinoShared.Character.Allegiance_Rhino,DefaultOpinion,,OPINION_Friendly"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode248"</key><value>",GD_Sage_RhinoShared.Character.Allegiance_Rhino,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode249"</key><value>",GD_Sage_RhinoShared.Character.Allegiance_Rhino,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode250"</key><value>",GD_Sage_SM_AcquiredTasteData.VomitMidget.Allegiance_Sage_AcquiredTaste_VomitMidget,DefaultOpinion,,OPINION_Friendly"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode251"</key><value>",GD_Sage_SM_AcquiredTasteData.VomitMidget.Allegiance_Sage_AcquiredTaste_VomitMidget,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode252"</key><value>",GD_Sage_SM_AcquiredTasteData.VomitMidget.Allegiance_Sage_AcquiredTaste_VomitMidget,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode253"</key><value>",GD_Wisp.Allegiance.Allegiance_Wisp_Angry,DefaultOpinion,,OPINION_Friendly"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode254"</key><value>",GD_Wisp.Allegiance.Allegiance_Wisp_Angry,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode255"</key><value>",GD_Wisp.Allegiance.Allegiance_Wisp_Angry,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode256"</key><value>",GD_Wisp.Allegiance.Allegiance_Wisp_AngryFreakout,DefaultOpinion,,OPINION_Friendly"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode257"</key><value>",GD_Wisp.Allegiance.Allegiance_Wisp_AngryFreakout,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CupidMode258"</key><value>",GD_Wisp.Allegiance.Allegiance_Wisp_AngryFreakout,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))"</value><on>
+
+    #</Hotfixes>
+
+#</Cupid Mode>
+
+set Transient.SparkServiceConfiguration_6 Keys ("SparkLevelPatchEntry-CupidMode1","SparkLevelPatchEntry-CupidMode2","SparkLevelPatchEntry-CupidMode3","SparkLevelPatchEntry-CupidMode4","SparkLevelPatchEntry-CupidMode5","SparkLevelPatchEntry-CupidMode6","SparkLevelPatchEntry-CupidMode7","SparkLevelPatchEntry-CupidMode8","SparkLevelPatchEntry-CupidMode9","SparkLevelPatchEntry-CupidMode10","SparkLevelPatchEntry-CupidMode11","SparkLevelPatchEntry-CupidMode12","SparkLevelPatchEntry-CupidMode13","SparkLevelPatchEntry-CupidMode14","SparkLevelPatchEntry-CupidMode15","SparkLevelPatchEntry-CupidMode16","SparkLevelPatchEntry-CupidMode17","SparkLevelPatchEntry-CupidMode18","SparkLevelPatchEntry-CupidMode19","SparkLevelPatchEntry-CupidMode20","SparkLevelPatchEntry-CupidMode21","SparkLevelPatchEntry-CupidMode22","SparkLevelPatchEntry-CupidMode23","SparkLevelPatchEntry-CupidMode24","SparkLevelPatchEntry-CupidMode25","SparkLevelPatchEntry-CupidMode26","SparkLevelPatchEntry-CupidMode27","SparkLevelPatchEntry-CupidMode28","SparkLevelPatchEntry-CupidMode29","SparkLevelPatchEntry-CupidMode30","SparkLevelPatchEntry-CupidMode31","SparkLevelPatchEntry-CupidMode32","SparkLevelPatchEntry-CupidMode33","SparkLevelPatchEntry-CupidMode34","SparkLevelPatchEntry-CupidMode35","SparkLevelPatchEntry-CupidMode36","SparkLevelPatchEntry-CupidMode37","SparkLevelPatchEntry-CupidMode38","SparkLevelPatchEntry-CupidMode39","SparkLevelPatchEntry-CupidMode40","SparkLevelPatchEntry-CupidMode41","SparkLevelPatchEntry-CupidMode42","SparkLevelPatchEntry-CupidMode43","SparkLevelPatchEntry-CupidMode44","SparkLevelPatchEntry-CupidMode45","SparkLevelPatchEntry-CupidMode46","SparkLevelPatchEntry-CupidMode47","SparkLevelPatchEntry-CupidMode48","SparkLevelPatchEntry-CupidMode49","SparkLevelPatchEntry-CupidMode50","SparkLevelPatchEntry-CupidMode51","SparkLevelPatchEntry-CupidMode52","SparkLevelPatchEntry-CupidMode53","SparkLevelPatchEntry-CupidMode54","SparkLevelPatchEntry-CupidMode55","SparkLevelPatchEntry-CupidMode56","SparkLevelPatchEntry-CupidMode57","SparkLevelPatchEntry-CupidMode58","SparkLevelPatchEntry-CupidMode59","SparkLevelPatchEntry-CupidMode60","SparkLevelPatchEntry-CupidMode61","SparkLevelPatchEntry-CupidMode62","SparkLevelPatchEntry-CupidMode63","SparkLevelPatchEntry-CupidMode64","SparkLevelPatchEntry-CupidMode65","SparkLevelPatchEntry-CupidMode66","SparkLevelPatchEntry-CupidMode67","SparkLevelPatchEntry-CupidMode68","SparkLevelPatchEntry-CupidMode69","SparkLevelPatchEntry-CupidMode70","SparkLevelPatchEntry-CupidMode71","SparkLevelPatchEntry-CupidMode72","SparkLevelPatchEntry-CupidMode73","SparkLevelPatchEntry-CupidMode74","SparkLevelPatchEntry-CupidMode75","SparkLevelPatchEntry-CupidMode76","SparkLevelPatchEntry-CupidMode77","SparkLevelPatchEntry-CupidMode78","SparkLevelPatchEntry-CupidMode79","SparkLevelPatchEntry-CupidMode80","SparkLevelPatchEntry-CupidMode81","SparkLevelPatchEntry-CupidMode82","SparkLevelPatchEntry-CupidMode83","SparkLevelPatchEntry-CupidMode84","SparkLevelPatchEntry-CupidMode85","SparkLevelPatchEntry-CupidMode86","SparkLevelPatchEntry-CupidMode87","SparkLevelPatchEntry-CupidMode88","SparkLevelPatchEntry-CupidMode89","SparkLevelPatchEntry-CupidMode90","SparkLevelPatchEntry-CupidMode91","SparkLevelPatchEntry-CupidMode92","SparkLevelPatchEntry-CupidMode93","SparkLevelPatchEntry-CupidMode94","SparkLevelPatchEntry-CupidMode95","SparkLevelPatchEntry-CupidMode96","SparkLevelPatchEntry-CupidMode97","SparkLevelPatchEntry-CupidMode98","SparkLevelPatchEntry-CupidMode99","SparkLevelPatchEntry-CupidMode100","SparkLevelPatchEntry-CupidMode101","SparkLevelPatchEntry-CupidMode102","SparkLevelPatchEntry-CupidMode103","SparkLevelPatchEntry-CupidMode104","SparkLevelPatchEntry-CupidMode105","SparkLevelPatchEntry-CupidMode106","SparkLevelPatchEntry-CupidMode107","SparkLevelPatchEntry-CupidMode108","SparkLevelPatchEntry-CupidMode109","SparkLevelPatchEntry-CupidMode110","SparkLevelPatchEntry-CupidMode111","SparkLevelPatchEntry-CupidMode112","SparkLevelPatchEntry-CupidMode113","SparkLevelPatchEntry-CupidMode114","SparkLevelPatchEntry-CupidMode115","SparkLevelPatchEntry-CupidMode116","SparkLevelPatchEntry-CupidMode117","SparkLevelPatchEntry-CupidMode118","SparkLevelPatchEntry-CupidMode119","SparkLevelPatchEntry-CupidMode120","SparkLevelPatchEntry-CupidMode121","SparkLevelPatchEntry-CupidMode122","SparkLevelPatchEntry-CupidMode123","SparkLevelPatchEntry-CupidMode124","SparkLevelPatchEntry-CupidMode125","SparkLevelPatchEntry-CupidMode126","SparkLevelPatchEntry-CupidMode127","SparkLevelPatchEntry-CupidMode128","SparkLevelPatchEntry-CupidMode129","SparkLevelPatchEntry-CupidMode130","SparkLevelPatchEntry-CupidMode131","SparkLevelPatchEntry-CupidMode132","SparkLevelPatchEntry-CupidMode133","SparkLevelPatchEntry-CupidMode134","SparkLevelPatchEntry-CupidMode135","SparkLevelPatchEntry-CupidMode136","SparkLevelPatchEntry-CupidMode137","SparkLevelPatchEntry-CupidMode138","SparkLevelPatchEntry-CupidMode139","SparkLevelPatchEntry-CupidMode140","SparkLevelPatchEntry-CupidMode141","SparkLevelPatchEntry-CupidMode142","SparkLevelPatchEntry-CupidMode143","SparkLevelPatchEntry-CupidMode144","SparkLevelPatchEntry-CupidMode145","SparkLevelPatchEntry-CupidMode146","SparkLevelPatchEntry-CupidMode147","SparkLevelPatchEntry-CupidMode148","SparkLevelPatchEntry-CupidMode149","SparkLevelPatchEntry-CupidMode150","SparkLevelPatchEntry-CupidMode151","SparkLevelPatchEntry-CupidMode152","SparkLevelPatchEntry-CupidMode153","SparkLevelPatchEntry-CupidMode154","SparkLevelPatchEntry-CupidMode155","SparkLevelPatchEntry-CupidMode156","SparkLevelPatchEntry-CupidMode157","SparkLevelPatchEntry-CupidMode158","SparkLevelPatchEntry-CupidMode159","SparkLevelPatchEntry-CupidMode160","SparkLevelPatchEntry-CupidMode161","SparkLevelPatchEntry-CupidMode162","SparkLevelPatchEntry-CupidMode163","SparkLevelPatchEntry-CupidMode164","SparkLevelPatchEntry-CupidMode165","SparkLevelPatchEntry-CupidMode166","SparkLevelPatchEntry-CupidMode167","SparkLevelPatchEntry-CupidMode168","SparkLevelPatchEntry-CupidMode169","SparkLevelPatchEntry-CupidMode170","SparkLevelPatchEntry-CupidMode171","SparkLevelPatchEntry-CupidMode172","SparkLevelPatchEntry-CupidMode173","SparkLevelPatchEntry-CupidMode174","SparkLevelPatchEntry-CupidMode175","SparkLevelPatchEntry-CupidMode176","SparkLevelPatchEntry-CupidMode177","SparkLevelPatchEntry-CupidMode178","SparkLevelPatchEntry-CupidMode179","SparkLevelPatchEntry-CupidMode180","SparkLevelPatchEntry-CupidMode181","SparkLevelPatchEntry-CupidMode182","SparkLevelPatchEntry-CupidMode183","SparkLevelPatchEntry-CupidMode184","SparkLevelPatchEntry-CupidMode185","SparkLevelPatchEntry-CupidMode186","SparkLevelPatchEntry-CupidMode187","SparkLevelPatchEntry-CupidMode188","SparkLevelPatchEntry-CupidMode189","SparkLevelPatchEntry-CupidMode190","SparkLevelPatchEntry-CupidMode191","SparkLevelPatchEntry-CupidMode192","SparkLevelPatchEntry-CupidMode193","SparkLevelPatchEntry-CupidMode194","SparkLevelPatchEntry-CupidMode195","SparkLevelPatchEntry-CupidMode196","SparkLevelPatchEntry-CupidMode197","SparkLevelPatchEntry-CupidMode198","SparkLevelPatchEntry-CupidMode199","SparkLevelPatchEntry-CupidMode200","SparkLevelPatchEntry-CupidMode201","SparkLevelPatchEntry-CupidMode202","SparkLevelPatchEntry-CupidMode203","SparkLevelPatchEntry-CupidMode204","SparkLevelPatchEntry-CupidMode205","SparkLevelPatchEntry-CupidMode206","SparkLevelPatchEntry-CupidMode207","SparkLevelPatchEntry-CupidMode208","SparkLevelPatchEntry-CupidMode209","SparkLevelPatchEntry-CupidMode210","SparkLevelPatchEntry-CupidMode211","SparkLevelPatchEntry-CupidMode212","SparkLevelPatchEntry-CupidMode213","SparkLevelPatchEntry-CupidMode214","SparkLevelPatchEntry-CupidMode215","SparkLevelPatchEntry-CupidMode216","SparkLevelPatchEntry-CupidMode217","SparkLevelPatchEntry-CupidMode218","SparkLevelPatchEntry-CupidMode219","SparkLevelPatchEntry-CupidMode220","SparkLevelPatchEntry-CupidMode221","SparkLevelPatchEntry-CupidMode222","SparkLevelPatchEntry-CupidMode223","SparkLevelPatchEntry-CupidMode224","SparkLevelPatchEntry-CupidMode225","SparkLevelPatchEntry-CupidMode226","SparkLevelPatchEntry-CupidMode227","SparkLevelPatchEntry-CupidMode228","SparkLevelPatchEntry-CupidMode229","SparkLevelPatchEntry-CupidMode230","SparkLevelPatchEntry-CupidMode231","SparkLevelPatchEntry-CupidMode232","SparkLevelPatchEntry-CupidMode233","SparkLevelPatchEntry-CupidMode234","SparkLevelPatchEntry-CupidMode235","SparkLevelPatchEntry-CupidMode236","SparkLevelPatchEntry-CupidMode237","SparkLevelPatchEntry-CupidMode238","SparkLevelPatchEntry-CupidMode239","SparkLevelPatchEntry-CupidMode240","SparkLevelPatchEntry-CupidMode241","SparkLevelPatchEntry-CupidMode242","SparkLevelPatchEntry-CupidMode243","SparkLevelPatchEntry-CupidMode244","SparkLevelPatchEntry-CupidMode245","SparkLevelPatchEntry-CupidMode246","SparkLevelPatchEntry-CupidMode247","SparkLevelPatchEntry-CupidMode248","SparkLevelPatchEntry-CupidMode249","SparkLevelPatchEntry-CupidMode250","SparkLevelPatchEntry-CupidMode251","SparkLevelPatchEntry-CupidMode252","SparkLevelPatchEntry-CupidMode253","SparkLevelPatchEntry-CupidMode254","SparkLevelPatchEntry-CupidMode255","SparkLevelPatchEntry-CupidMode256","SparkLevelPatchEntry-CupidMode257","SparkLevelPatchEntry-CupidMode258")
+
+set Transient.SparkServiceConfiguration_6 Values (",GD_AI_Allegiance.Allegiance_Bandit,DefaultOpinion,,OPINION_Friendly",",GD_AI_Allegiance.Allegiance_Bandit,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_AI_Allegiance.Allegiance_Bandit,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_AI_Allegiance.Allegiance_BanditNeutral,DefaultOpinion,,OPINION_Friendly",",GD_AI_Allegiance.Allegiance_BanditNeutral,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_AI_Allegiance.Allegiance_BanditNeutral,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_AI_Allegiance.Allegiance_Bloodwing,DefaultOpinion,,OPINION_Friendly",",GD_AI_Allegiance.Allegiance_Bloodwing,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_AI_Allegiance.Allegiance_Bloodwing,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_AI_Allegiance.Allegiance_BloodwingSubdued,DefaultOpinion,,OPINION_Friendly",",GD_AI_Allegiance.Allegiance_BloodwingSubdued,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_AI_Allegiance.Allegiance_BloodwingSubdued,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_AI_Allegiance.Allegiance_BoomBoom,DefaultOpinion,,OPINION_Friendly",",GD_AI_Allegiance.Allegiance_BoomBoom,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_AI_Allegiance.Allegiance_BoomBoom,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_AI_Allegiance.Allegiance_Bot,DefaultOpinion,,OPINION_Friendly",",GD_AI_Allegiance.Allegiance_Bot,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_AI_Allegiance.Allegiance_Bot,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_AI_Allegiance.Allegiance_Bot_NoLevel,DefaultOpinion,,OPINION_Friendly",",GD_AI_Allegiance.Allegiance_Bot_NoLevel,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_AI_Allegiance.Allegiance_Bot_NoLevel,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_AI_Allegiance.Allegiance_BunkerBoss_AutoCannon,DefaultOpinion,,OPINION_Friendly",",GD_AI_Allegiance.Allegiance_BunkerBoss_AutoCannon,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_AI_Allegiance.Allegiance_BunkerBoss_AutoCannon,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_AI_Allegiance.Allegiance_BunkerBoss_JetLoader,DefaultOpinion,,OPINION_Friendly",",GD_AI_Allegiance.Allegiance_BunkerBoss_JetLoader,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_AI_Allegiance.Allegiance_BunkerBoss_JetLoader,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_AI_Allegiance.Allegiance_BunkerBoss_Loader,DefaultOpinion,,OPINION_Friendly",",GD_AI_Allegiance.Allegiance_BunkerBoss_Loader,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_AI_Allegiance.Allegiance_BunkerBoss_Loader,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_AI_Allegiance.Allegiance_Creeper,DefaultOpinion,,OPINION_Friendly",",GD_AI_Allegiance.Allegiance_Creeper,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_AI_Allegiance.Allegiance_Creeper,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_AI_Allegiance.Allegiance_Crystalisk,DefaultOpinion,,OPINION_Friendly",",GD_AI_Allegiance.Allegiance_Crystalisk,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_AI_Allegiance.Allegiance_Crystalisk,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_AI_Allegiance.Allegiance_ElementalPlant,DefaultOpinion,,OPINION_Friendly",",GD_AI_Allegiance.Allegiance_ElementalPlant,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_AI_Allegiance.Allegiance_ElementalPlant,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_AI_Allegiance.Allegiance_ExplosiveBarrel,DefaultOpinion,,OPINION_Friendly",",GD_AI_Allegiance.Allegiance_ExplosiveBarrel,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_AI_Allegiance.Allegiance_ExplosiveBarrel,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_AI_Allegiance.Allegiance_GoliathRage,DefaultOpinion,,OPINION_Friendly",",GD_AI_Allegiance.Allegiance_GoliathRage,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_AI_Allegiance.Allegiance_GoliathRage,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_AI_Allegiance.Allegiance_Gyrocopter,DefaultOpinion,,OPINION_Friendly",",GD_AI_Allegiance.Allegiance_Gyrocopter,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_AI_Allegiance.Allegiance_Gyrocopter,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_AI_Allegiance.Allegiance_Nomad,DefaultOpinion,,OPINION_Friendly",",GD_AI_Allegiance.Allegiance_Nomad,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_AI_Allegiance.Allegiance_Nomad,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_AI_Allegiance.Allegiance_PrimalBeast,DefaultOpinion,,OPINION_Friendly",",GD_AI_Allegiance.Allegiance_PrimalBeast,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_AI_Allegiance.Allegiance_PrimalBeast,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_AI_Allegiance.Allegiance_Probe,DefaultOpinion,,OPINION_Friendly",",GD_AI_Allegiance.Allegiance_Probe,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_AI_Allegiance.Allegiance_Probe,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_AI_Allegiance.Allegiance_Rakk,DefaultOpinion,,OPINION_Friendly",",GD_AI_Allegiance.Allegiance_Rakk,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_AI_Allegiance.Allegiance_Rakk,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_AI_Allegiance.Allegiance_RakkVolcanic,DefaultOpinion,,OPINION_Friendly",",GD_AI_Allegiance.Allegiance_RakkVolcanic,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_AI_Allegiance.Allegiance_RakkVolcanic,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_AI_Allegiance.Allegiance_ReleasedMidget,DefaultOpinion,,OPINION_Friendly",",GD_AI_Allegiance.Allegiance_ReleasedMidget,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_AI_Allegiance.Allegiance_ReleasedMidget,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_AI_Allegiance.Allegiance_SarcasticSlab,DefaultOpinion,,OPINION_Friendly",",GD_AI_Allegiance.Allegiance_SarcasticSlab,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_AI_Allegiance.Allegiance_SarcasticSlab,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_AI_Allegiance.Allegiance_Skag,DefaultOpinion,,OPINION_Friendly",",GD_AI_Allegiance.Allegiance_Skag,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_AI_Allegiance.Allegiance_Skag,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_AI_Allegiance.Allegiance_Spiderant,DefaultOpinion,,OPINION_Friendly",",GD_AI_Allegiance.Allegiance_Spiderant,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_AI_Allegiance.Allegiance_Spiderant,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_AI_Allegiance.Allegiance_Stalker,DefaultOpinion,,OPINION_Friendly",",GD_AI_Allegiance.Allegiance_Stalker,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_AI_Allegiance.Allegiance_Stalker,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_AI_Allegiance.Allegiance_Stalker_Ambush,DefaultOpinion,,OPINION_Friendly",",GD_AI_Allegiance.Allegiance_Stalker_Ambush,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_AI_Allegiance.Allegiance_Stalker_Ambush,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_AI_Allegiance.Allegiance_Stalker_Cyclone,DefaultOpinion,,OPINION_Friendly",",GD_AI_Allegiance.Allegiance_Stalker_Cyclone,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_AI_Allegiance.Allegiance_Stalker_Cyclone,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_AI_Allegiance.Allegiance_Stalker_Needle,DefaultOpinion,,OPINION_Friendly",",GD_AI_Allegiance.Allegiance_Stalker_Needle,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_AI_Allegiance.Allegiance_Stalker_Needle,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_AI_Allegiance.Allegiance_Stalker_Spring,DefaultOpinion,,OPINION_Friendly",",GD_AI_Allegiance.Allegiance_Stalker_Spring,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_AI_Allegiance.Allegiance_Stalker_Spring,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_AI_Allegiance.Allegiance_Thresher,DefaultOpinion,,OPINION_Friendly",",GD_AI_Allegiance.Allegiance_Thresher,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_AI_Allegiance.Allegiance_Thresher,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_AI_Allegiance.Allegiance_Varkid,DefaultOpinion,,OPINION_Friendly",",GD_AI_Allegiance.Allegiance_Varkid,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_AI_Allegiance.Allegiance_Varkid,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_AI_Allegiance_Allium.Allegiance_Bandit_Allium,DefaultOpinion,,OPINION_Friendly",",GD_AI_Allegiance_Allium.Allegiance_Bandit_Allium,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_AI_Allegiance_Allium.Allegiance_Bandit_Allium,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_AI_Allegiance_Allium.Allegiance_BigBird,DefaultOpinion,,OPINION_Friendly",",GD_AI_Allegiance_Allium.Allegiance_BigBird,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_AI_Allegiance_Allium.Allegiance_BigBird,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_AI_Allegiance_Allium.Allegiance_BigBird_BanditFriendly,DefaultOpinion,,OPINION_Friendly",",GD_AI_Allegiance_Allium.Allegiance_BigBird_BanditFriendly,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_AI_Allegiance_Allium.Allegiance_BigBird_BanditFriendly,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_Allium_GameShowCam.Character.Allegiance_GameShowCam,DefaultOpinion,,OPINION_Friendly",",GD_Allium_GameShowCam.Character.Allegiance_GameShowCam,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_Allium_GameShowCam.Character.Allegiance_GameShowCam,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_Aster_AI_Allegiance.Allegiance_Dragons,DefaultOpinion,,OPINION_Friendly",",GD_Aster_AI_Allegiance.Allegiance_Dragons,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_Aster_AI_Allegiance.Allegiance_Dragons,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_Aster_AI_Allegiance.Allegiance_Dwarves,DefaultOpinion,,OPINION_Friendly",",GD_Aster_AI_Allegiance.Allegiance_Dwarves,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_Aster_AI_Allegiance.Allegiance_Dwarves,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_Aster_AI_Allegiance.Allegiance_GolemRage,DefaultOpinion,,OPINION_Friendly",",GD_Aster_AI_Allegiance.Allegiance_GolemRage,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_Aster_AI_Allegiance.Allegiance_GolemRage,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_Aster_AI_Allegiance.Allegiance_Golems,DefaultOpinion,,OPINION_Friendly",",GD_Aster_AI_Allegiance.Allegiance_Golems,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_Aster_AI_Allegiance.Allegiance_Golems,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_Aster_AI_Allegiance.Allegiance_Greedtooth,DefaultOpinion,,OPINION_Friendly",",GD_Aster_AI_Allegiance.Allegiance_Greedtooth,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_Aster_AI_Allegiance.Allegiance_Greedtooth,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_Aster_AI_Allegiance.Allegiance_HandsomeSorcerer,DefaultOpinion,,OPINION_Friendly",",GD_Aster_AI_Allegiance.Allegiance_HandsomeSorcerer,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_Aster_AI_Allegiance.Allegiance_HandsomeSorcerer,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_Aster_AI_Allegiance.Allegiance_Knights,DefaultOpinion,,OPINION_Friendly",",GD_Aster_AI_Allegiance.Allegiance_Knights,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_Aster_AI_Allegiance.Allegiance_Knights,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_Aster_AI_Allegiance.Allegiance_Mimic,DefaultOpinion,,OPINION_Friendly",",GD_Aster_AI_Allegiance.Allegiance_Mimic,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_Aster_AI_Allegiance.Allegiance_Mimic,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_Aster_AI_Allegiance.Allegiance_Orcs,DefaultOpinion,,OPINION_Friendly",",GD_Aster_AI_Allegiance.Allegiance_Orcs,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_Aster_AI_Allegiance.Allegiance_Orcs,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_Aster_AI_Allegiance.Allegiance_SkeletonRage,DefaultOpinion,,OPINION_Friendly",",GD_Aster_AI_Allegiance.Allegiance_SkeletonRage,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_Aster_AI_Allegiance.Allegiance_SkeletonRage,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_Aster_AI_Allegiance.Allegiance_Skeletons,DefaultOpinion,,OPINION_Friendly",",GD_Aster_AI_Allegiance.Allegiance_Skeletons,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_Aster_AI_Allegiance.Allegiance_Skeletons,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_Aster_AI_Allegiance.Allegiance_Spider,DefaultOpinion,,OPINION_Friendly",",GD_Aster_AI_Allegiance.Allegiance_Spider,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_Aster_AI_Allegiance.Allegiance_Spider,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_Aster_AI_Allegiance.Allegiance_TempleSlaughter,DefaultOpinion,,OPINION_Friendly",",GD_Aster_AI_Allegiance.Allegiance_TempleSlaughter,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_Aster_AI_Allegiance.Allegiance_TempleSlaughter,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_Aster_AI_Allegiance.Allegiance_Treant,DefaultOpinion,,OPINION_Friendly",",GD_Aster_AI_Allegiance.Allegiance_Treant,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_Aster_AI_Allegiance.Allegiance_Treant,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_Aster_AI_Allegiance.Allegiance_Wizard,DefaultOpinion,,OPINION_Friendly",",GD_Aster_AI_Allegiance.Allegiance_Wizard,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_Aster_AI_Allegiance.Allegiance_Wizard,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_DigiCreaturesShared.Allegiance.Allegiance_DigiTestTargets,DefaultOpinion,,OPINION_Friendly",",GD_DigiCreaturesShared.Allegiance.Allegiance_DigiTestTargets,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_DigiCreaturesShared.Allegiance.Allegiance_DigiTestTargets,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_DrifterShared.Allegiance.Allegiance_Drifter,DefaultOpinion,,OPINION_Friendly",",GD_DrifterShared.Allegiance.Allegiance_Drifter,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_DrifterShared.Allegiance.Allegiance_Drifter,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_FinalBoss.AI.Allegiance_FinalBoss,DefaultOpinion,,OPINION_Friendly",",GD_FinalBoss.AI.Allegiance_FinalBoss,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_FinalBoss.AI.Allegiance_FinalBoss,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_Flax_AI_Allegiance.Allegiance_HallowSkeletons,DefaultOpinion,,OPINION_Friendly",",GD_Flax_AI_Allegiance.Allegiance_HallowSkeletons,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_Flax_AI_Allegiance.Allegiance_HallowSkeletons,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_Flax_AI_Allegiance.Allegiance_PumpkinKingpin,DefaultOpinion,,OPINION_Friendly",",GD_Flax_AI_Allegiance.Allegiance_PumpkinKingpin,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_Flax_AI_Allegiance.Allegiance_PumpkinKingpin,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_Flax_AI_Allegiance.Allegiance_SkrakkSpycho,DefaultOpinion,,OPINION_Friendly",",GD_Flax_AI_Allegiance.Allegiance_SkrakkSpycho,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_Flax_AI_Allegiance.Allegiance_SkrakkSpycho,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_GoliathBride.AI.Allegiance_GoliathWeddingPartyRage,DefaultOpinion,,OPINION_Friendly",",GD_GoliathBride.AI.Allegiance_GoliathWeddingPartyRage,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_GoliathBride.AI.Allegiance_GoliathWeddingPartyRage,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_HyperionBunkerBoss.Allegiances.Allegiance_BunkerBoss,DefaultOpinion,,OPINION_Friendly",",GD_HyperionBunkerBoss.Allegiances.Allegiance_BunkerBoss,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_HyperionBunkerBoss.Allegiances.Allegiance_BunkerBoss,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_HyperionBunkerBoss.Allegiances.Allegiance_BunkerBoss_Gun,DefaultOpinion,,OPINION_Friendly",",GD_HyperionBunkerBoss.Allegiances.Allegiance_BunkerBoss_Gun,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_HyperionBunkerBoss.Allegiances.Allegiance_BunkerBoss_Gun,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_HyperionBunkerBoss.Allegiances.Allegiance_BunkerBoss_Gun_KillMe,DefaultOpinion,,OPINION_Friendly",",GD_HyperionBunkerBoss.Allegiances.Allegiance_BunkerBoss_Gun_KillMe,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_HyperionBunkerBoss.Allegiances.Allegiance_BunkerBoss_Gun_KillMe,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_HyperionBunkerBoss.Allegiances.Allegiance_BunkerBoss_KillMe,DefaultOpinion,,OPINION_Friendly",",GD_HyperionBunkerBoss.Allegiances.Allegiance_BunkerBoss_KillMe,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_HyperionBunkerBoss.Allegiances.Allegiance_BunkerBoss_KillMe,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_Iris_AI_Allegiance.Allegiance_MamaBoostBiker,DefaultOpinion,,OPINION_Friendly",",GD_Iris_AI_Allegiance.Allegiance_MamaBoostBiker,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_Iris_AI_Allegiance.Allegiance_MamaBoostBiker,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_Iris_AI_Allegiance.Allegiance_RaidMama,DefaultOpinion,,OPINION_Friendly",",GD_Iris_AI_Allegiance.Allegiance_RaidMama,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_Iris_AI_Allegiance.Allegiance_RaidMama,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_Iris_AI_Allegiance.Allegiance_RaidPete,DefaultOpinion,,OPINION_Friendly",",GD_Iris_AI_Allegiance.Allegiance_RaidPete,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_Iris_AI_Allegiance.Allegiance_RaidPete,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_Iris_AI_Allegiance.Iris_Allegiance_AngelGang,DefaultOpinion,,OPINION_Friendly",",GD_Iris_AI_Allegiance.Iris_Allegiance_AngelGang,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_Iris_AI_Allegiance.Iris_Allegiance_AngelGang,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_Iris_AI_Allegiance.Iris_Allegiance_BarFightBadasses,DefaultOpinion,,OPINION_Friendly",",GD_Iris_AI_Allegiance.Iris_Allegiance_BarFightBadasses,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_Iris_AI_Allegiance.Iris_Allegiance_BarFightBadasses,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_Iris_AI_Allegiance.Iris_Allegiance_DragonGang,DefaultOpinion,,OPINION_Friendly",",GD_Iris_AI_Allegiance.Iris_Allegiance_DragonGang,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_Iris_AI_Allegiance.Iris_Allegiance_DragonGang,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_Iris_AI_Allegiance.Iris_Allegiance_Torgue_Gang,DefaultOpinion,,OPINION_Friendly",",GD_Iris_AI_Allegiance.Iris_Allegiance_Torgue_Gang,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_Iris_AI_Allegiance.Iris_Allegiance_Torgue_Gang,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_Jack.AI.Allegiance_Jack,DefaultOpinion,,OPINION_Friendly",",GD_Jack.AI.Allegiance_Jack,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_Jack.AI.Allegiance_Jack,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_Jack.AI.Allegiance_KillDyingJack,DefaultOpinion,,OPINION_Friendly",",GD_Jack.AI.Allegiance_KillDyingJack,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_Jack.AI.Allegiance_KillDyingJack,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_JackDeployableTurret.AI.Allegiance_JackTurret,DefaultOpinion,,OPINION_Friendly",",GD_JackDeployableTurret.AI.Allegiance_JackTurret,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_JackDeployableTurret.AI.Allegiance_JackTurret,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_JackShieldProbes.AI.Allegiance_JackProbe_ThoughtLocked,DefaultOpinion,,OPINION_Friendly",",GD_JackShieldProbes.AI.Allegiance_JackProbe_ThoughtLocked,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_JackShieldProbes.AI.Allegiance_JackProbe_ThoughtLocked,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_Nasturtium_AI_Allegiance.Allegiance_Crabworms,DefaultOpinion,,OPINION_Friendly",",GD_Nasturtium_AI_Allegiance.Allegiance_Crabworms,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_Nasturtium_AI_Allegiance.Allegiance_Crabworms,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_Nasturtium_AI_Allegiance.Allegiance_Nast_Natives,DefaultOpinion,,OPINION_Friendly",",GD_Nasturtium_AI_Allegiance.Allegiance_Nast_Natives,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_Nasturtium_AI_Allegiance.Allegiance_Nast_Natives,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_Orchid_AI_Allegiance.Allegiance_RaidThumper,DefaultOpinion,,OPINION_Friendly",",GD_Orchid_AI_Allegiance.Allegiance_RaidThumper,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_Orchid_AI_Allegiance.Allegiance_RaidThumper,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_Orchid_SandWorm.Allegiance.Allegiance_Orchid_SandWorm,DefaultOpinion,,OPINION_Friendly",",GD_Orchid_SandWorm.Allegiance.Allegiance_Orchid_SandWorm,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_Orchid_SandWorm.Allegiance.Allegiance_Orchid_SandWorm,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_Sage_AI_Allegiance.Allegiance_Sage_Raid_Beast,DefaultOpinion,,OPINION_Friendly",",GD_Sage_AI_Allegiance.Allegiance_Sage_Raid_Beast,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_Sage_AI_Allegiance.Allegiance_Sage_Raid_Beast,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_Sage_AI_Allegiance.Allegiance_Sage_Raid_BeastMaster,DefaultOpinion,,OPINION_Friendly",",GD_Sage_AI_Allegiance.Allegiance_Sage_Raid_BeastMaster,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_Sage_AI_Allegiance.Allegiance_Sage_Raid_BeastMaster,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_Sage_AI_Allegiance.Allegiance_Sage_Raid_Murderer_AtkPlayer,DefaultOpinion,,OPINION_Friendly",",GD_Sage_AI_Allegiance.Allegiance_Sage_Raid_Murderer_AtkPlayer,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_Sage_AI_Allegiance.Allegiance_Sage_Raid_Murderer_AtkPlayer,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_Sage_AI_Allegiance.Allegiance_Sage_Savages,DefaultOpinion,,OPINION_Friendly",",GD_Sage_AI_Allegiance.Allegiance_Sage_Savages,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_Sage_AI_Allegiance.Allegiance_Sage_Savages,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_Sage_GiantSpore_Shared.Character.Allegiance_Sage_Spore,DefaultOpinion,,OPINION_Friendly",",GD_Sage_GiantSpore_Shared.Character.Allegiance_Sage_Spore,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_Sage_GiantSpore_Shared.Character.Allegiance_Sage_Spore,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_Sage_RhinoShared.Character.Allegiance_Rhino,DefaultOpinion,,OPINION_Friendly",",GD_Sage_RhinoShared.Character.Allegiance_Rhino,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_Sage_RhinoShared.Character.Allegiance_Rhino,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_Sage_SM_AcquiredTasteData.VomitMidget.Allegiance_Sage_AcquiredTaste_VomitMidget,DefaultOpinion,,OPINION_Friendly",",GD_Sage_SM_AcquiredTasteData.VomitMidget.Allegiance_Sage_AcquiredTaste_VomitMidget,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_Sage_SM_AcquiredTasteData.VomitMidget.Allegiance_Sage_AcquiredTaste_VomitMidget,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_Wisp.Allegiance.Allegiance_Wisp_Angry,DefaultOpinion,,OPINION_Friendly",",GD_Wisp.Allegiance.Allegiance_Wisp_Angry,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_Wisp.Allegiance.Allegiance_Wisp_Angry,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_Wisp.Allegiance.Allegiance_Wisp_AngryFreakout,DefaultOpinion,,OPINION_Friendly",",GD_Wisp.Allegiance.Allegiance_Wisp_AngryFreakout,MyOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))",",GD_Wisp.Allegiance.Allegiance_Wisp_AngryFreakout,OtherOpinions,,((Opinion=OPINION_Enemy,Allegiance=PawnAllegiance'GD_AI_Allegiance.Allegiance_Player'))")
+
