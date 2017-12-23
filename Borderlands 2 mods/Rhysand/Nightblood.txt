@@ -1,0 +1,71 @@
+#<Nightblood>
+
+  #<Description>
+    +350% Melee Damage
+    +99.9% Slag chance - Nightblood is meant to be only slag. Use other elements at your own risk.
+    +85% Life Steal
+    +250% Critical Damage Bonus
+    +50% Movement Speed
+    CURSE: +100% Melee Damage Taken
+    CURSE: Constant 3% health drain while equipped.
+    Replaces Rapier - Received as a mission reward from the "Message in a Bottle" mission in Hayter's Folly.
+    Perfect Gibbed Code: BL2(hwAAAAD6XAGEZoIDCwGFkmIoxBCDUAHDIYYIDBYYZBDSIATDwIHw)
+    By Rhysand
+
+  #</Description>
+
+  #<Code>
+
+    #<Name, Red Text, Card, and Rarity>
+
+      set GD_Orchid_BossWeapons.Name.Title.Title__Unique_Cutlass PartName Nightblood
+      set GD_Orchid_BossWeapons.Name.Title.Title__Unique_Cutlass CustomPresentations (AttributePresentationDefinition'GD_Orchid_BossWeapons.Name.Title.Title__Unique_Cutlass:AttributePresentationDefinition_0')
+      set GD_Orchid_BossWeapons.Name.Title.Title__Unique_Cutlass:AttributePresentationDefinition_0 NoConstraintText <font color="#000000">Hello. Would you like to destroy some evil today?<font color="#00ffff"><br>- Curse of the Porcelain Fist.<br>- +350% Dealt Melee Damage.<br>- +100% Received Melee Damage.<font color="#dc0027"><br>- Curse of the Devoured Soul.<br>- +3% Constant Health Drain.<br>- +1000% Slag Chance.<br>- +250% Critical Hit Damage.<br>- +85% Life Steal.<br>- +50% Movement Speed.
+      set GD_Orchid_BossWeapons.AssaultRifle.AR_Barrel_Bandit_Rapier Rarity (BaseValueConstant=9.000000)
+      set GD_Orchid_BossWeapons.ManufacturerMaterials.Mat_Vladof_2_Rapier WeaponCardAttributes ()
+      set GD_Orchid_BossWeapons.AssaultRifle.AR_Accessory_Bayonet_Rapier WeaponCardAttributes ()
+      set GD_Orchid_BossWeapons.ManufacturerMaterials.Mat_Vladof_2_Rapier TextColor (B=39,G=0,R=220)
+
+    #</Name, Red Text, Card, and Rarity>
+
+    #<Weapon Changes>
+
+      #<External Attribute Effects>
+
+        set GD_Orchid_BossWeapons.AssaultRifle.AR_Barrel_Bandit_Rapier ExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.DamageSourceModifiers.InstigatedMeleeDamageModifier',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=3.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.DamageEnhancementModifiers.PlayerConvertDamageToHealingPercent',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.850000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.GameplayAttributes.PlayerCriticalHitBonus',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=5.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'WeaponSwapTimeMultiplier',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-0.600000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.GameplayAttributes.FootSpeed',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.DamageSourceModifiers.ReceivedMeleeDamageModifier',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.HealthResourcePool.HealthPassiveRegenerationRate',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.0,BaseValueAttribute=ResourcePoolAttributeDefinition'D_Attributes.HealthResourcePool.HealthMaxValue',InitializationDefinition=None,BaseValueScaleConstant=-0.03000)))
+
+      #</External Attribute Effects>
+
+      #<Weapon Attribute Effects>
+
+        set GD_Orchid_BossWeapons.AssaultRifle.AR_Barrel_Bandit_Rapier WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponStatusEffectChanceModifier',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=10.090000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-1.500000,BaseValueAttribute=none,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponPerShotAccuracyImpulse',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-9.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+      #</Weapon Attribute Effects>
+
+    #</Weapon Changes>
+
+  #</Code>
+
+  #<Skin>
+
+    #<Texture Parameter Values>
+
+      set Orchid_GunMaterials.Materials.AssaultRifle.Mati_VladofUncommonAR_Rapier TextureParameterValues ((ParameterName="p_NormalScopesEmissive",ParameterValue=Texture2D'Weap_AssaultRifles.Tex.Weap_AssaultRifle_Nrm',ExpressionGUID=(A=-1743872746,B=1126171774,C=119496871,D=-1952271718)),(ParameterName="p_Diffuse",ParameterValue=Texture2D'Common_GunMaterials.CompTextures.Weap_AssaultSubSniper_Comp',ExpressionGUID=(A=1757607260,B=1326539502,C=-317215581,D=-565807463)),(ParameterName="p_Masks",ParameterValue=Texture2D'Weap_AssaultRifles.Tex.Weap_AssaultRifle_Comp',ExpressionGUID=(A=-330624041,B=1167251458,C=-335191907,D=-166684394)),(ParameterName="P_SimpleReflect",ParameterValue=Texture2D'Common_GunMaterials.Env.GlossyC',ExpressionGUID=(A=-858148940,B=1327945772,C=148462268,D=1899047224)),(ParameterName="p_Pattern",ParameterValue=Texture2D'FX_ENV_Misc.Textures.SmokeTiled_Dif',ExpressionGUID=(A=534250533,B=1202550002,C=1578302861,D=-717876416)),(ParameterName="p_Decal",ParameterValue=Texture2D'FX_Shared_Water.Textures.T_Liquid_Waterjet_GP_01',ExpressionGUID=(A=-923052711,B=1309861752,C=584229786,D=-1229888527)))
+
+    #</Texture Parameter Values>
+
+    #<Vector Parameter Values>
+
+      set Orchid_GunMaterials.Materials.AssaultRifle.Mati_VladofUncommonAR_Rapier VectorParameterValues ((ParameterName="p_AColorHilight",ParameterValue=(R=6.000000,G=6.000000,B=6.000000,A=1.000000),ExpressionGUID=(A=170014760,B=1132076783,C=-275608290,D=650702143)),(ParameterName="p_AColorMidtone",ParameterValue=(R=4.000000,G=0.000000,B=0.000000,A=1.000000),ExpressionGUID=(A=473504356,B=1338058895,C=824823046,D=864253013)),(ParameterName="p_AColorShadow",ParameterValue=(R=2.000000,G=2.000000,B=255.000000,A=1.000000),ExpressionGUID=(A=-429590041,B=1156405294,C=-1015192900,D=687313410)),(ParameterName="p_BColorHilight",ParameterValue=(R=6.000000,G=0.000000,B=1.000000,A=1.000000),ExpressionGUID=(A=170714760,B=1132476783,C=-275668290,D=655702143)),(ParameterName="p_BColorMidtone",ParameterValue=(R=20.000000,G=0.000000,B=1.000000,A=1.000000),ExpressionGUID=(A=473594356,B=1338758895,C=824823946,D=864253813)),(ParameterName="p_BColorShadow",ParameterValue=(R=100.000000,G=0.000000,B=0.000000,A=1.000000),ExpressionGUID=(A=-429590341,B=1156435294,C=-1015192901,D=687313413)),(ParameterName="p_CColorHilight",ParameterValue=(R=6.000000,G=0.000000,B=6.000000,A=1.000000),ExpressionGUID=(A=170714760,B=1132476783,C=-275668290,D=655702143)),(ParameterName="p_CColorMidtone",ParameterValue=(R=2.000000,G=0.000000,B=255.000000,A=1.000000),ExpressionGUID=(A=473594356,B=1338758895,C=824823946,D=864253813)),(ParameterName="p_CColorShadow",ParameterValue=(R=2.000000,G=2.000000,B=255.000000,A=1.000000),ExpressionGUID=(A=-429590341,B=1156435294,C=-1015192901,D=687313413)),(ParameterName="p_DColor",Parameteralue=(R=0.000000,G=0.000000,B=20.000000,A=1.000000),ExpressionGUID=(A=696455109,B=1155878830,C=-1741888361,D=802120528)),(ParameterName="p_EmissiveColor",ParameterValue=(R=0.000000,G=0.000000,B=0.000000,A=1.000000),ExpressionGUID=(A=-2074486426,B=1296399582,C=-2021314681,D=-350758005)),(ParameterName="p_ReflectColor",ParameterValue=(R=0.0500000,G=0.000000,B=15.000000,A=1.000000),ExpressionGUID=(A=295058103,B=1318551573,C=-2045449573,D=-547597976)),(ParameterName="p_ReflectionChannelScale",ParameterValue=(R=1.000000,G=1.000000,B=1.000000,A=1.000000),ExpressionGUID=(A=295058103,B=1318551573,C=-2045449573,D=-547597976)),(ParameterName="p_PatternColor",ParameterValue=(R=0.010000,G=0.010000,B=0.010000,A=1.000000),ExpressionGUID=(A=676539706,B=1125682796,C=1871983293,D=-2049503601)),(ParameterName="p_PatternScalePosition",ParameterValue=(R=12.000000,G=8.000000,B=6.000000,A=1.000000),ExpressionGUID=(A=-2005018406,B=1132497243,C=-39915121,D=208423616)),(ParameterName="p_PatternChannelScale",ParameterValue=(R=1.000000,G=1.000000,B=1.000000,A=1.000000),ExpressionGUID=(A=439432319,B=1091149893,C=-1991909502,D=1816944627)),(ParameterName="p_DecalColor",ParameterValue=(R=255.000000,G=0.000000,B=0.000000,A=1.000000),ExpressionGUID=(A=1691998600,B=1239094551,C=2074257317,D=1844701893)),(ParameterName="p_DecalScalePosition",ParameterValue=(R=17.100000,G=24.100000,B=0.400000,A=.500000),ExpressionGUID=(A=395540170,B=1243133493,C=-1264190552,D=123075385)),(ParameterName="p_DecalChannel",ParameterValue=(R=1.000000,G=1.000000,B=1.000000,A=1.000000),ExpressionGUID=(A=1869386622,B=1303200947,C=-1616405849,D=714558284)))
+
+    #</Vector Parameter Values>
+
+    #<Scalar Parameter Values>
+
+      set Orchid_GunMaterials.Materials.AssaultRifle.Mati_VladofUncommonAR_Rapier ScalarParameterValues ((ParameterName="p_HighlightsIntensity",ParameterValue=0.450000,ExpressionGUID=(A=-1257568432,B=1277066486,C=-723473993,D=-1144384173)),(ParameterName="p_ShadowsIntensity",ParameterValue=5.000000,ExpressionGUID=(A=437293753,B=1205147708,C=-775723903,D=1480014964)),(ParameterName="p_ReflectColorScale",ParameterValue=1.00250,ExpressionGUID=(A=1875785607,B=1186033550,C=-1822263113,D=-1465755701)),(ParameterName="p_ReplacePattern",ParameterValue=0.000000,ExpressionGUID=(A=-2084339847,B=1096440125,C=439008937,D=45433490)),(ParameterName="p_DecalRotate",ParameterValue=0.000000,ExpressionGUID=(A=-276527909,B=1298581551,C=856978878,D=743944047)),(ParameterName="p_ReplaceDecal",ParameterValue=0.000000,ExpressionGUID=(A=85863466,B=1257609701,C=-728575820,D=1337098176)),(ParameterName="p_UseFullColorDecal",ParameterValue=0.000000,ExpressionGUID=(A=-1064329812,B=1077705328,C=339664807,D=1869745420)))
+
+    #</Scalar Parameter Values>
+
+  #</Skin>
+
+#</Nightblood>
