@@ -1,3 +1,3 @@
 Overall Changelog:
-  12/24/2017
-    Updated all mods to support Filtertool.
+  12/25/2017
+    Updated all mods to support Filtertool, updated cards, flavor texts, and descriptions.
