@@ -1,1 +1,1 @@
-These screenshots are what the weapon looks like and the weapon's stats WITHOUT ANY OTHER MODS. If you are running the patch, or any other mod, it will probably change the stats. The purpose of these screenshots is to view the skins, not the stats.
+These screenshots are what the weapon looks like and the weapon's stats WITH A ZILLION OTHER MODS ON. If you are running the patch, or any other mods, or do not have all of the mods that I have, it will probably change the stats. The purpose of these screenshots is to view the skins, not the stats.
