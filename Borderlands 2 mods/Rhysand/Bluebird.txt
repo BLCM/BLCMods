@@ -1,8 +1,8 @@
 #<Bluebird>
 
  #<Description>
-  
-   Meant to compete with/replace the Grog Nozzle. 
+
+   Meant to compete with/replace the Grog Nozzle.
    +99.9% slag chance.
    +60% faster swap speed to and from it.
    +85% life steal.
@@ -12,20 +12,20 @@
    Replaces the Chulainn - Received as a mission reward from "Clan War: Zafords vs. Hodunks" when siding with the Zaford family.
    Perfect Gibbed Code: BL2(hwAAAAATYwBDiANBEAGFemIxwUKNBQGLChYILBVY/v8jYynCko3l)
    By Rhysand.
-    
+
  #</Description>
-   
+
  #<Code>
-   
+
   #<Name, Red Text, Card>
-    
+
      set GD_Weap_SMG.Name.Title.Title__Unique_Chulainn PartName Bluebird
      set GD_Weap_SMG.Name.Title.Title__Unique_Chulainn:AttributePresentationDefinition_8 NoConstraintText <font color="#0066ff">I will never leave you, not in a million years.<br>- +600% Slag Chance.<br>- +250% Critical Damage.<br>- +85% Life Steal.<br>- +60% Weapon Swap Speed.<br>- +2 Projectiles Fired.<br>- +1 Bullet Ricochet
-      
+
   #</Name, Red Text, Card>
-     
+
   #<Weapon Changes>
-          
+
     set GD_Weap_SMG.Barrel.SMG_Barrel_Chulainn WeaponAttributeEffects   ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponAdditionalRicochets',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponStatusEffectChanceModifier',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=4.172000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
 
     set GD_Weap_SMG.Barrel.SMG_Barrel_Chulainn ExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.DamageEnhancementModifiers.PlayerConvertDamageToHealingPercent',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.850000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.GameplayAttributes.PlayerCriticalHitBonus',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=5.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'WeaponSwapTimeMultiplier',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-0.600000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
@@ -34,9 +34,9 @@
     set GD_Weap_SMG.FiringModes.Bullet_SMG_Chulainn OnAnyImpact (Behavior_Explode'GD_Weap_SMG.FiringModes.Bullet_SMG_Chulainn:Behavior_Explode_5')
     set GD_Weap_SMG.FiringModes.Bullet_SMG_Chulainn:Behavior_Explode_5 DamageRadiusFormula (BaseValueConstant=200.000000)
     set GD_Weap_SMG.FiringModes.Bullet_SMG_Chulainn:Behavior_Explode_5 DamageFormula (BaseValueScaleConstant=1.000000)
-      
+
   #</Weapon Changes>
-     
+
  #</Code>
-  
+
 #</Bluebird>
