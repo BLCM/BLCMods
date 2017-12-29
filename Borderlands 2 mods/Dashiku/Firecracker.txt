@@ -1,0 +1,18 @@
+##Firecracker - Replaces the Bearcat##
+
+Shoots a spread of firecrackers.
+Firecrackers drop on the floor and explode after a few seconds.
+Happy new year.
+
+-----------------------------------------
+set GD_Gladiolus_Weapons.Name.Title.Title_Pearlescent_Bearcat PartName Firecracker
+
+set GD_Gladiolus_Weapons.AssaultRifle.AR_Barrel_Torgue_Dahl_Bearcat WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=7.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=5.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=10.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+set GD_Gladiolus_Weapons.FiringModes.FM_Rocket_Dahl_Grenade_Bearcat ProjectileDefinition ProjectileDefinition'GD_GrenadeMods.Projectiles.Grenade_SkyRocket'
+set GD_Gladiolus_Weapons.FiringModes.FM_Rocket_Dahl_Grenade_Bearcat ExplosionOverrideDefinition ()
+set GD_Gladiolus_Weapons.FiringModes.FM_Rocket_Dahl_Grenade_Bearcat Speed 50000
+
+set GD_GrenadeMods.Projectiles.Grenade_SkyRocketChild PhysicsMode PHYS_Falling
+set GD_GrenadeMods.Projectiles.Grenade_SkyRocket GravityScaling 1
+set GD_GrenadeMods.Projectiles.Grenade_SkyRocket FuseTime (BaseValueConstant=5.000000)
