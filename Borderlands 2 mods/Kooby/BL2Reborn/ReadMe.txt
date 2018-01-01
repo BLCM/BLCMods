@@ -24,7 +24,7 @@ https://github.com/BLCM/BLCMods/wiki/UCP-Filter-Tool
 I also !!!HIGHLY!!! recommend using the Hex Multitool to disable Sanity Checks
 https://github.com/c0dycode/Borderlands-Hex-Multitool
 
-If you need help using the Filter Tool on the KPack, check out my video on it 
+If you need help using the Filter Tool on BL2Reborn, check out my video on it 
 https://youtu.be/jOL_Vlb2PN4
 
 If there's no other way, head over to Shadow's Discord and ping me (@Koby) in the #patch-questions channel 
