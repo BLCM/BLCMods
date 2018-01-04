@@ -1,16 +1,16 @@
 # Borderlands Pre-Sequel - Filter Tool Patch
 
-This file contains all of my patches to use with the Filter Tool.
+This file contains all of my patches to use with the Filter Tool.  
 
-  
+
 ## Latest Updates
 
 ### 01/04/2018
 
 Initial version.  
-Everything added for Filter Tool users.
+Everything added for Filter Tool users.  
 
-  
+
 ## Gibbed Codes
 
 ### Pyrophobia
