@@ -1,0 +1,37 @@
+#<Unforgiven>
+
+    #<Description>
+
+	First mod I ever "made"
+
+	By xilph3718
+
+        Turns Unforgiven into Luck Cannon from TPS
+
+        Code from Aaron0000's Luck Cannon mod, all I did was make it replace the Unforgiven instead of the Rex
+
+	I attempted to copy over Aaron's skin, but I haven't figured those out yet sooo for the time being there is none
+
+    #</Description>
+
+    #<Code>
+
+        set GD_Gladiolus_Weapons.Pistol.Pistol_Barrel_Jakobs_Unforgiven CustomFiringModeDefinition FiringModeDefinition'GD_Iris_Weapons.FiringModes.Bullet_Sniper_Cobra'
+
+        set GD_Gladiolus_Weapons.Pistol.Pistol_Barrel_Jakobs_Unforgiven WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.750000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponPerShotAccuracyImpulse',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Jakobs',InitializationDefinition=None,BaseValueScaleConstant=-0.300000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-99999.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectileSpeedMultiplier',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+        set GD_Gladiolus_Weapons.Pistol.Pistol_Barrel_Jakobs_Unforgiven AttributeSlotUpgrades ((SlotName="WeaponSpread",GradeIncrease=27,bActivateSlot=True),(SlotName="AccuracyMin",GradeIncrease=50,bActivateSlot=True),(SlotName="WeaponDamage",GradeIncrease=14,bActivateSlot=True),(SlotName="WeaponAccuracyImpulse",GradeIncrease=-10,bActivateSlot=True),(SlotName="WeaponFireRate",GradeIncrease=-12,bActivateSlot=True),(SlotName="WeaponZoomFOV",GradeIncrease=2,bActivateSlot=True))
+
+	set GD_Gladiolus_Weapons.Name.Title.Title_Pearlescent_Unforgiven PartName Luck Cannon
+
+        set GD_Gladiolus_Weapons.Name.Title.Title_Pearlescent_Unforgiven:AttributePresentationDefinition_8 NoConstraintText Better lucky than good!
+
+    #</Code>
+
+    #<Skin>
+	
+	WIP
+	
+    #</Skin>
+
+#</Unforgiven>
