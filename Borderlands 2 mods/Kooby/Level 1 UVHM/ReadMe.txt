@@ -4,9 +4,11 @@ By Koby
 
 This mod allows you to play in UVHM from level 1 with all UVHM modifiers active and all level restrictions lifted.
 
+Has three difficulty options you can pick from with the Filter Tool (defaults to vanilla difficulty).
+
 WARNING: THIS IS VERY HARD AND YOU WILL SUFFER IN THE EARLY LEVELS AND PROBABLY FURTHER INTO THE GAME. MODS LIKE VENDORS+ BY THENOCTURNI ARE HIGHLY RECOMMENDED. MODS LIKE UVHM+ AND ENEMYENHANCER MAKE THIS EXTREMELY HARD.
 
-Credit to Shadowevil for providing the hexcode and the UVHM modifier code and Nifsara for the save files.
+Credit to Shadowevil for providing the hexcode and the UVHM modifier code and Nifsara for the save files and the balanced difficulty.
 
 Please report any bugs and potentially mod incompatibilities to @Koby in Shadow's Discord: discord.gg/shadowevil
 
