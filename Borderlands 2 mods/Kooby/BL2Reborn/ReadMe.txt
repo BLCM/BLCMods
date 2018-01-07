@@ -12,7 +12,7 @@ Shadowevil: The Unofficial Community Patch and his mods
 LightChaosman: The Filter Tool and his mods
 Dave: For his resources and his help
 Zububu: For being a turtle and his mods
-Aaron0000, adudney, AngrierPat, B33PB00PJOE, Battle Bee, Coleby, EmpireScum, Exotek, FromDarkHell, Hemaxhu, Hydrattler, IK4MS, JimRaven, Kazy (Sheep), Orudeon, soze (Mike) and theNocturni: 
+Aaron0000, adudney, AngrierPat, B33PB00PJOE, Battle Bee, Coleby, EmpireScum, Exotek, FromDarkHell, GoldenGizzmo, Hemaxhu, Hydrattler, IK4MS, JimRaven, Kazy (Sheep), Natsu235, Orudeon, soze (Mike), splitzle and theNocturni: 
 For all of their mods
 
 ------------------------------------------------------------------------------------------------------------
@@ -34,8 +34,8 @@ discord.gg/shadowevil
 
 FAQ 
 
-"Which mods are included in the KPack?"
-  As of version 1.0, there are 102 mods in BL2Reborn. You can find a list of all mods and their descriptions in the attached ModpackInfo.txt.
+"Which mods are included in BL2Reborn?"
+  As of version 1.1, there are 105 mods in BL2Reborn. You can find a list of all mods and their descriptions in the attached ModpackInfo.txt.
 
 "How do I install mods?"
   1. Download LightChaosman's Filter Tool (https://www.youtube.com/watch?v=zJ4qI4U_lE0) and install Java if you don't have it yet.
