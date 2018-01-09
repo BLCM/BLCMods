@@ -13,7 +13,7 @@ Simply add this mod to the bottom of BL2Reborn and Level1UVHM and save it.
 -*Enemies no longer regenerate health.*<br/>
 -*Slag no longer amplifies damage taken.*<br/>
 -*Slag base duration is 5 seconds, down from 8.*<br/>
--*Slag is naturally weak towards everything (damage: 0.75). Application chance is the same across the board, however.*<br/>
+-*Slag is naturally weak towards everything (damage: 0.8). Application chance is the same across the board, however.*<br/>
 -*Slag lowers movement speed by 90%.*<br/>
 -*Slag lowers rate of fire by 50%.*
 
