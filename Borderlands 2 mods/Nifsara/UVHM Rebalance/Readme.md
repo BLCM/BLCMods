@@ -1,4 +1,4 @@
-*UVHM Rebalance*</br> by Nifsara</br>
+*UVHM Rebalance*</br> by Nifsara</br>I exist in Shadow's Discord server</br>
 
 This mod overhauls both UVHM and Slag into being less stressful to manage by removing the health regeneration of enemies and making Slag a non-damage debuff. In turn, enemies have received a large increase in health to compensate.
 
