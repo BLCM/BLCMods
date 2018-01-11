@@ -20,12 +20,11 @@ Make sure to turn off any other mod(s) touching Slag (e.g. B33PB00PJOE's <em>Sla
 
 <dl><dt>Enemies:</dt>
 <dd>No health regeneration.</br>
-Increased health.</br>
-(Hopefully) Doubled the drop rate of ammo.</dd>
+Slightly decreased health to compensate for no Slag damage bonus.</br></dd>
 <dl><dt>Slag:</dt>
 <dd>No longer amplifies damage taken.</br>
-Deals normal impact damage on Flesh and Armour (1) while shielded targets are slightly resistant (0.85).</br>
--90% movement speed while Slagged.</br>
+Deals normal impact damage on Flesh and Armour (1) while shielded targets are slightly resistant (0.9).</br>
+-100% movement speed (halved) while Slagged.</br>
 -50% fire rate while Slagged.</br>
 Base duration is 5 seconds, down from 8.</dd></dt>
 <dl><dt>Player:</dt>
