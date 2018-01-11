@@ -1,6 +1,6 @@
 *UVHM Rebalance*</br> by Nifsara</br>I exist in Shadow's Discord server</br>
 
-This mod overhauls both UVHM and Slag into being less stressful to manage by removing the health regeneration of enemies and making Slag a non-damage debuff. In turn, enemies have received a slight decrease in health to compensate. Intent is to make the time-to-kill roughly similar while turning Slag into more of a defensive tool.
+This mod overhauls both UVHM and Slag into being less stressful to manage by removing the health regeneration of enemies and making Slag a non-damage debuff. In turn, enemies have received a slight decrease in health to compensate.</br> Intent is to make the time-to-kill roughly similar while turning Slag into more of a defensive tool.
 
 ***
 
