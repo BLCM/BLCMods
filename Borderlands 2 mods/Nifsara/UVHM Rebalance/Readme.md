@@ -37,5 +37,5 @@ Deathtrap is immune to being Slagged.</dd></dl>
 <dl><dt>Credits for the code I used as a base:</dt>
 <dd>Shadowevil: Unofficial Community Patch and UVHM modifier code.<br/>
 B33PB00PJOE: Slag Overhaul.<br/>
-theNocturni: Enemy Enhancer (Unslaggable Turret and Deathtrap specifically).
+theNocturni: Enemy Enhancer (Unslaggable Turret and Deathtrap specifically).</br>
 Koby: Making Level1UVHM official.</dd></dl>
