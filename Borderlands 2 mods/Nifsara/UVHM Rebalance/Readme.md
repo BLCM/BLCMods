@@ -23,16 +23,19 @@ Make sure to turn off any other mod(s) touching Slag (e.g. B33PB00PJOE's <em>Sla
 Slightly decreased health to compensate for no Slag damage bonus.</br></dd>
 <dl><dt>Slag:</dt>
 <dd>No longer amplifies damage taken.</br>
-Deals normal impact damage on Flesh and Armour while Shields are slightly resistant.</br>
 -100% movement speed (halved) while Slagged.</br>
 -50% fire rate while Slagged.</br>
+Deals slightly lower damage as a trade-off.</br>
 Base duration is 5 seconds, down from 8.</dd></dt>
 <dl><dt>Player:</dt>
-<dd>UCP DoT buff has been removed (150% -> 0%).</dd></dl>
+<dd>UCP DoT buff has been removed (150% -> 0%).</br>
+Sabre Turret is immune to being Slagged.</br>
+Deathtrap is immune to being Slagged.</dd></dl>
 
 ***
 
 <dl><dt>Credits for the code I used as a base:</dt>
 <dd>Shadowevil: Unofficial Community Patch and UVHM modifier code.<br/>
 B33PB00PJOE: Slag Overhaul.<br/>
+theNocturni: Enemy Enhancer (Unslaggable Turret and Deathtrap specifically).
 Koby: Making Level1UVHM official.</dd></dl>
