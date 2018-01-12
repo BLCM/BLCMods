@@ -9,6 +9,12 @@ It's not a requirement, however. You just won't experience UVHM at low levels.
 
 ***
 
+<dl><dt>UVHM Rebalance (Regular)</dt>
+<dd>50% weaker enemies (health and shields) - Scales from level 32 to 50.</dd>
+<dt>UVHM Rebalance (Hard)</dt>
+<dd>25% weaker enemies (health and shields) - Scales from level 1 to 50.</dd></dl>
+ 
+
 <dl><dt>To install:</dt>
 <dd>Add this mod with the Filter Tool.</dd>
 <dd>Move <b>Difficulty</b> to the bottom as it touches enemy scaling.
@@ -21,13 +27,13 @@ Make sure to turn off any other mod(s) touching Slag (e.g. B33PB00PJOE's <em>Sla
 <dl><dt>Enemies:</dt>
 <dd>No health regeneration.</br>
 Slightly decreased health to compensate for no Slag damage bonus.</br></dd>
-<dl><dt>Slag:</dt>
+<dt>Slag:</dt>
 <dd>No longer amplifies damage taken.</br>
 -100% movement speed (halved) while Slagged.</br>
 -50% fire rate while Slagged.</br>
 Deals slightly lower damage as a trade-off.</br>
 Base duration is 5 seconds, down from 8.</dd></dt>
-<dl><dt>Player:</dt>
+<dt>Player:</dt>
 <dd>UCP DoT buff has been removed (150% -> 0%).</br>
 Sabre Turret is immune to being Slagged.</br>
 Deathtrap is immune to being Slagged.</dd></dl>
