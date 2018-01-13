@@ -9,6 +9,7 @@ It's not a requirement, however. You just won't experience UVHM at low levels.
 
 ***
 
+Both also come in an optional UVHM+ compatible download. For example, if you want Hard and UVHM+, you only need to download (Hard with UVHM+).
 <dl><dt>UVHM Rebalance (Regular)</dt>
 <dd>50% weaker enemies (health and shields) - Scales from level 32 to 50.</dd>
 <dt>UVHM Rebalance (Hard)</dt>
@@ -43,5 +44,5 @@ Deathtrap is immune to being Slagged.</dd></dl>
 <dl><dt>Credits for the code I used as a base:</dt>
 <dd>Shadowevil: Unofficial Community Patch and UVHM modifier code.<br/>
 B33PB00PJOE: Slag Overhaul.<br/>
-theNocturni: Enemy Enhancer (Unslaggable Turret and Deathtrap specifically).</br>
+theNocturni: UVHM+ and unslaggable Turret and Deathtrap.</br>
 Koby: Making Level1UVHM official.</dd></dl>
