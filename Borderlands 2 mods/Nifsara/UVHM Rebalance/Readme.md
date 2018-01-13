@@ -9,7 +9,7 @@ It's not a requirement, however. You just won't experience UVHM at low levels.
 
 ***
 
-Both also come in an optional UVHM+ compatible download. For example, if you want Hard and UVHM+, you only need to download (Hard with UVHM+).
+*Both also come in an optional UVHM+ compatible download. For example, if you want Hard and UVHM+, you only need to download (Hard with UVHM+).*
 <dl><dt>UVHM Rebalance (Regular)</dt>
 <dd>50% weaker enemies (health and shields) - Scales from level 32 to 50.</dd>
 <dt>UVHM Rebalance (Hard)</dt>
