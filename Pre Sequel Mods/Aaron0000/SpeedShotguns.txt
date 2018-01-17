@@ -1,0 +1,36 @@
+#<Speed-Boosting Shotgun Accessory>
+
+    #<Description>
+
+        By Aaron0000
+
+        Replaces the shotgun shell accessory of Shotguns. Changes it to boost movement speed instead of general boosts to stats.
+
+        Comes with custom prefixes: Jakobs = Stallion's, Hyperion = Expedient, Torgue = Slick, Bandit = haul ass, Tediore = Fast.
+
+    #</Description>
+
+    #<Code>
+
+        set GD_Weap_Shotgun.Accessory.SG_Accessory_ShotgunShell ExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.GameplayAttributes.FootSpeed',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.350000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+        set GD_Weap_Shotgun.Accessory.SG_Accessory_ShotgunShell AttributeSlotUpgrades ((SlotName="WeaponDamage",GradeIncrease=0,bActivateSlot=True),(SlotName="WeaponReloadSpeed",GradeIncrease=0,bActivateSlot=True),(SlotName="WeaponMagSize",GradeIncrease=0,bActivateSlot=True),(SlotName="WeaponFireRate",GradeIncrease=0,bActivateSlot=True))
+
+        #<Prefixes>
+
+            set GD_Weap_Shotgun.Name.Prefix_Bandit.Prefix_ShotgunShell_GeneralBoost PartName haul ass
+
+            set GD_Weap_Shotgun.Name.Prefix_Torgue.Prefix_ShotgunShell_GeneralBoost PartName Lubed
+
+            set GD_Weap_Shotgun.Name.Prefix_Hyperion.Prefix_ShotgunShell_GeneralBoost PartName Expedient
+
+            set GD_Weap_Shotgun.Name.Prefix_Jakobs.Prefix_ShotgunShell_GeneralBoost PartName Stallion's
+
+            set GD_Weap_Shotgun.Name.Prefix_Tediore.Prefix_ShotgunShell_GeneralBoost PartName Fast
+
+        #</Prefixes>
+
+    #</Code>
+
+#</Speed-Boosting Shotgun Accessory>
+

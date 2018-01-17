@@ -1,0 +1,58 @@
+#<Defense-Boosting Assault Rifle Accessory>
+
+    #<Description>
+
+        By Aaron0000
+
+        Replaces the foregrip accessory of Assault Rifles. Changes it to boost damage resistance (35%) instead of recoil reduction.
+
+        Comes with custom prefixes: Jakobs = Hearty, Dahl = Hardened, Torgue = Meaty, Bandit = tuf stuf, Vladof = Resilient.
+
+        Atlas Reborn also has an optional prefix located at the bottom. Activate this file after Atlas Reborn to enable the prefix properly.
+
+        Credit to "JOE!" for adding the little snippet in the cards saying it boosts defense, as well as adding FilterTool support..
+
+    #</Description>
+
+    #<Code>
+
+        set GD_Weap_AssaultRifle.Accessory.AR_Accessory_Foregrip_Stability ExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.DamageTypeModifers.IncendiaryImpactDamageModifier',ConstraintAttribute=None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-0.350000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.DamageTypeModifers.ShockImpactDamageModifier',ConstraintAttribute=None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-0.350000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.DamageTypeModifers.CorrosiveImpactDamageModifier',ConstraintAttribute=None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-0.350000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.DamageTypeModifers.ExplosiveImpactDamageModifier',ConstraintAttribute=None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-0.350000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.DamageTypeModifers.AmpImpactDamageModifier',ConstraintAttribute=None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-0.350000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.DamageTypeModifers.NormalImpactDamageModifier',ConstraintAttribute=None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-0.350000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+        set GD_Weap_AssaultRifle.Accessory.AR_Accessory_Foregrip_Stability AttributeSlotUpgrades ((SlotName="WeaponAccuracyImpulse",GradeIncrease=0,bActivateSlot=True),(SlotName="AccuracyRegen",GradeIncrease=0,bActivateSlot=True))
+
+        set GD_Weap_AssaultRifle.Name.Prefix_Scav.Prefix_Foregrip_Stability PartName tuf stuf
+
+        set GD_Weap_AssaultRifle.Name.Prefix_Dahl.Prefix_Foregrip_Stability PartName Hardened
+
+        set GD_Weap_AssaultRifle.Name.Prefix_Torgue.Prefix_Foregrip_Stability PartName Meaty
+
+        set GD_Weap_AssaultRifle.Name.Prefix_Jakobs.Prefix_Foregrip_Stability PartName Hearty
+
+        set GD_Weap_AssaultRifle.Name.Prefix_Vladof.Prefix_Foregrip_Stability PartName Resilient
+
+        #<Prefixes>
+
+            #Changes the AR foregrip accessory to state that damage resistance is increased.
+
+            set GD_Weap_AssaultRifle.Accessory.AR_Accessory_Foregrip_Stability:AttributePresentationDefinition_0 NoConstraintText Increases [skill]damage resistance[-skill] by [skill]35%[-skill]
+
+            #Alters the Stability text for SMG and Sniper to use the Pistol text, and thus the right stat.
+
+            set GD_Weap_SMG.Accessory.SMG_Accessory_Stock1_Stabilized CustomPresentations (AttributePresentationDefinition'GD_Weap_Pistol.Accessory.Pistol_Accessory_Stock_Stability:AttributePresentationDefinition_0')
+
+            set GD_Weap_SniperRifles.Accessory.Sniper_Accessory_Foregrip_Stability CustomPresentations (AttributePresentationDefinition'GD_Weap_Pistol.Accessory.Pistol_Accessory_Stock_Stability:AttributePresentationDefinition_0')
+
+        #</Prefixes>
+
+        #<Atlas Prefix:>
+
+            Remove the # to enable.
+
+            #set GD_Weap_AssaultRifle.Name.Prefix_Vladof.Prefix_Foregrip_Stability PartName Unassailable<off>
+
+        #</Atlas Prefix:>
+
+    #</Code>
+
+#</Defense-Boosting Assault Rifle Accessory>
+

@@ -1,0 +1,60 @@
+.########..######..##.....##.##....##....###....##.....##.####
+....##....##....##.##.....##.###...##...##.##...###...###..##.
+....##....##.......##.....##.####..##..##...##..####.####..##.
+....##.....######..##.....##.##.##.##.##.....##.##.###.##..##.
+....##..........##.##.....##.##..####.#########.##.....##..##.
+....##....##....##.##.....##.##...###.##.....##.##.....##..##.
+....##.....######...#######..##....##.##.....##.##.....##.#### -=Splash!=-
+
+#<Description>
+	
+	Replaces The Helfire SMG
+	Based Off the Tsunami Pearl From BL1
+
+	Breaks Tidal Wave Shotgun & Infection Pistol
+
+	Works Well With All Characters
+
+	Warning!!!
+		Very Broken With Bee Sheild (Not Raidboss Broken But Most Normal Enemies)
+		Sanity Check Will Delete Any Existing Hellfires. Farm For One Or Use This Gibbed Code
+		>>>>>>BL2(hwAAAAAgwgBDKANBEAGFrmIxwYKLRQHLChYKGBRY/v/nYvnBIozl)<<<<<<
+
+	Made By Wolvenn
+
+#</Description>
+
+#<Tsunami>
+	#<WeaponCard>
+		set GD_Weap_SMG.Name.Title_Maliwan.Title_Legendary_HellFire PartName Tsunami
+		set GD_Weap_SMG.Name.Title_Maliwan.Title_Legendary_HellFire:AttributePresentationDefinition_8 NoConstraintText Splash!
+	#</WeaponCard>
+
+	#<Barrel>
+		set GD_Weap_SMG.Barrel.SMG_Barrel_Maliwan_HellFire GestaltModeSkeletalMeshName SMG_Barrel_Hyperion
+		set GD_Weap_SMG.Barrel.SMG_Barrel_Maliwan_HellFire WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.20000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-0.250000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+		set GD_Weap_SMG.Barrel.SMG_Barrel_Maliwan_HellFire ExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+		set GD_Weap_SMG.Barrel.SMG_Barrel_Maliwan_HellFire CustomFiringModeDefinition FiringModeDefinition'GD_Weap_Shotgun.FiringModes.Bullet_Shotgun_TidalWave'
+	#</Barrel>
+
+	#<Bullets>
+		set GD_Weap_Shotgun.FiringModes.Bullet_Shotgun_TidalWave OnAnyImpact (Behavior_Explode'GD_Sage_RaidWeapons.FiringModes.Bullet_Pistol_Maliwan_Infection:Behavior_Explode_5')
+		set GD_Sage_RaidWeapons.FiringModes.Bullet_Pistol_Maliwan_Infection:Behavior_Explode_5 DamageSource Class'WillowGame.WillowDmgSource_SubMachineGun'
+		set GD_Weap_Shotgun.FiringModes.Bullet_Shotgun_TidalWave NumRicochets 3
+		set GD_Sage_RaidWeapons.FiringModes.Bullet_Pistol_Maliwan_Infection:Behavior_Explode_5 DamageFormula (BaseValueScaleConstant=1.000000)
+		set GD_Sage_RaidWeapons.FiringModes.Bullet_Pistol_Maliwan_Infection:Behavior_Explode_5 DamageRadiusFormula (BaseValueConstant=100.000000)
+		set GD_Sage_RaidWeapons.FiringModes.Bullet_Pistol_Maliwan_Infection:Behavior_Explode_5 Definition ExplosionDefinition'GD_Explosions.Corrosive.Explosion_CorrosiveMaster'
+		set GD_Sage_RaidWeapons.FiringModes.Bullet_Pistol_Maliwan_Infection:Behavior_Explode_5 StatusEffectChance (BaseValueScaleConstant=1.000000)
+		set GD_Sage_RaidWeapons.FiringModes.Bullet_Pistol_Maliwan_Infection:Behavior_Explode_5 InstigatorSelfDamageScale 0.000000
+	#</Bullets>
+
+	#<ElementLock>
+		set GD_Weap_SMG.A_Weapons_Legendary.SMG_Maliwan_5_HellFire:WeaponPartListCollectionDefinition_173 ElementalPartData (bEnabled=True,WeightedParts=((Part=WeaponPartDefinition'GD_Weap_Pistol.elemental.Pistol_Elemental_Shock',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=2)))
+	#</ElementLock>
+	
+	#<Skin>
+		set GD_Weap_SMG.ManufacturerMaterials.Mat_Maliwan_5_Legendary Material MaterialInstanceConstant 'Mati_Maliwan_Aquamarine_SMG'
+	#</Skin>
+#</Tsunami>
+
+
