@@ -11,9 +11,9 @@ It's not a requirement, however. You just won't experience UVHM at low levels.
 
 *Both come in an optional UVHM+ compatible version. If you want Hard and UVHM+ you only need to download "(Hard with UVHM+)." Be sure to also use the UVHM+ mod for all of the features.*
 <dl><dt>UVHM Rebalance (Regular)</dt>
-<dd>50% weaker enemies (health and shields) - Scales from level 32 to 50.</dd>
+<dd>50% lower enemy health and shields. Enemy damage is also lowered by 66% at level 1, returning to normal at level 50.</dd>
 <dt>UVHM Rebalance (Hard)</dt>
-<dd>25% weaker enemies (health and shields) - Scales from level 1 to 50.</dd></dl>
+<dd>25% lower enemy health and shields.</dd></dl>
  
 
 <dl><dt>To install:</dt>
