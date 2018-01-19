@@ -11,9 +11,7 @@ ____________________________________________|
 
 Turns the Skullmasher into the Hyper-Collider. Trespasser V2.0
 
-[Notes]
-
-Breaks the Smasher, but not in a bad way. It basically has hitscan speed as well now.
+Uses the Smasher firingmode. Smasher is unaffected by giving it the default firingmode.
 
 [Features]
 
@@ -27,6 +25,7 @@ Breaks the Smasher, but not in a bad way. It basically has hitscan speed as well
 
 [Changelog]
 
+v6: Smasher now uses the default pistol firingmode
 v5: Accuracy fix
 v4: Better description
 v3: FiringMode fix
@@ -42,6 +41,7 @@ set GD_Cork_Weap_SniperRifles.Barrel.SR_Barrel_Jakobs_Skullmasher WeaponAttribut
 
 set GD_Cork_Weap_SniperRifles.Barrel.SR_Barrel_Jakobs_Skullmasher WeaponCardAttributes ((Attribute=AttributeDefinition'D_Attributes.DamageSourceShieldPenetration.PercentChanceInstigatedBulletDmgIgnoresShields',PriorityIncrease=1.000000))
 
+set GD_Cork_Weap_Pistol.Barrel.Pistol_Barrel_Jakobs_Smasher CustomFiringModeDefinition FiringModeDefinition'GD_Weap_Pistol.FiringModes.Bullet_Pistol_Default'
 set GD_Cork_Weap_Pistol.FiringModes.Bullet_Pistol_Smasher Speed 80000.000000
 set GD_Cork_Weap_Pistol.FiringModes.Bullet_Pistol_Smasher FiringPatternLines ((StartPoint=(Pitch=0,Yaw=0,Roll=0),EndPoint=(Pitch=0,Yaw=0,Roll=0),bUseStartPointOnly=True,CustomWaveMotion=(bUseCustomWaveMotion=False,WaveFreq=(X=0.000000,Y=0.000000,Z=0.000000),WaveAmp=(X=0.000000,Y=0.000000,Z=0.000000),WavePhase=(X=0.000000,Y=0.000000,Z=0.000000))))
 set GD_Cork_Weap_Pistol.FiringModes.Bullet_Pistol_Smasher ImpactResponses ((DamageSurfaceType=DMGSURFACE_Armor,bDisableRegularBulletDamage=False,Behaviors=(Behavior_Explode'GD_Cork_Weap_Shotgun.FiringModes.Bullet_Shotgun_Moonface:Behavior_Explode_1')))
