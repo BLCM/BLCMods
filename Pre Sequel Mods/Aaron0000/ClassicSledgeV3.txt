@@ -32,6 +32,10 @@
 
         If using the Quadtastic mod, there is a compatibility fix for it located at the bottom.
 
+	If using S&S Forever, there is a fix for it at the bottom.
+
+	If using both S&S Forever and Quadtastic, there is a combined fix at the bottom.
+
     #</Description>
 
     #<Code>
@@ -48,7 +52,7 @@
 
     #</Code>
 
-    #<Fixes>
+    #<Fixes><MUT>
 
         #<Quadtastic Fix>
 
@@ -57,6 +61,40 @@
             #set GD_Cork_Weap_Shotgun.Barrel.SG_Barrel_Jakobs_Sledges AttributeSlotUpgrades ((SlotName="WeaponSpread",GradeIncrease=-28,bActivateSlot=True),(SlotName="WeaponFireRate",GradeIncrease=-28,bActivateSlot=True),(SlotName="AccuracyMin",GradeIncrease=-9,bActivateSlot=True),(SlotName="WeaponDamage",GradeIncrease=3,bActivateSlot=True),(SlotName="WeaponAccuracyImpulse",GradeIncrease=-23,bActivateSlot=True))<off>
 
         #</Quadtastic Fix>
+
+    #<Fixes><MUT>
+
+        #<S&S Forever Compatibility Fix>
+
+            #set GD_Cork_Weap_Shotgun.Barrel.SG_Barrel_Jakobs_Sledges WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=5.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-99999.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponAutomaticBurstCount',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.611000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.00000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponKnockback',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponKnockback',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=45.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-4.400000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=4.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponReloadSpeed',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-0.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))<off>
+
+            #set GD_Cork_Weap_Shotgun.Barrel.SG_Barrel_Jakobs_Sledges ExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.DamageSourceModifiers.InstigatedMeleeDamageModifier',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.GameplayAttributes.PlayerCriticalHitBonus',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0.150000)))<off>
+
+            #set GD_Cork_Weap_Shotgun.Barrel.SG_Barrel_Jakobs_Sledges AttributeSlotUpgrades ((SlotName="WeaponReloadSpeed",GradeIncrease=0,bActivateSlot=True),(SlotName="WeaponFireRate",GradeIncrease=0,bActivateSlot=True),(SlotName="WeaponSpread",GradeIncrease=0,bActivateSlot=True),(SlotName="WeaponSpread",GradeIncrease=0,bActivateSlot=True),(SlotName="AccuracyMin",GradeIncrease=0,bActivateSlot=True),(SlotName="WeaponDamage",GradeIncrease=0,bActivateSlot=True),(SlotName="WeaponAccuracyImpulse",GradeIncrease=0,bActivateSlot=True))<off>
+
+            #set GD_Cork_Weap_Shotgun.Barrel.SG_Barrel_Jakobs_Sledges WeaponCardAttributes ((Attribute=AttributeDefinition'D_Attributes.DamageSourceModifiers.InstigatedMeleeDamageModifier',PriorityIncrease=0.600000),(Attribute=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',PriorityIncrease=-3.000000))<off>
+
+            #set GD_Weap_Shotgun.Name.Title_Bandit.Title_Legendary_Shotgun ExternalAttributeEffects ((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Combat_Shotgun.Ammo_Combat_Shotgun_RegenerationRate',ConstraintAttribute=None,ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-0.850000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.AmmoResource_Combat_Shotgun.Ammo_Combat_Shotgun_RegenerationRate',ConstraintAttribute=None,ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Artifacts.BalanceAttributes.Init_ModifierBase_Linear',BaseValueScaleConstant=-0.010000),PerGradeUpgrade=(BaseValueConstant=0.005000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=-1.000000),bIncludeInFunStats=False,bIncludeAlliesAsTarget=False,bEnforceMinimumGrade=False,bEnforceMaximumGrade=False,MinimumGrade=0,MaximumGrade=12,TargetInstanceDataName=)))<off>
+
+        #</S&S Forever Compatibility Fix>
+
+        #<S&S Forever Quadtastic Combined Fix>
+
+            #set GD_Cork_Weap_Shotgun.Barrel.SG_Barrel_Jakobs_Sledges GestaltModeSkeletalMeshName SG_Barrel_Torgue<off>
+
+            #set GD_Cork_Weap_Shotgun.Barrel.SG_Barrel_Jakobs_Sledges WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=10.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-99999.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=4.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponAutomaticBurstCount',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=4.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.611000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.00000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponKnockback',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponKnockback',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=45.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-4.400000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=4.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponReloadSpeed',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-0.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))<off>
+
+            #set GD_Weap_Shotgun.Name.Title_Bandit.Title_Legendary_Shotgun ExternalAttributeEffects ((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Combat_Shotgun.Ammo_Combat_Shotgun_RegenerationRate',ConstraintAttribute=None,ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-2.00000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.AmmoResource_Combat_Shotgun.Ammo_Combat_Shotgun_RegenerationRate',ConstraintAttribute=None,ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Artifacts.BalanceAttributes.Init_ModifierBase_Linear',BaseValueScaleConstant=-0.010000),PerGradeUpgrade=(BaseValueConstant=0.005000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=-1.000000),bIncludeInFunStats=False,bIncludeAlliesAsTarget=False,bEnforceMinimumGrade=False,bEnforceMaximumGrade=False,MinimumGrade=0,MaximumGrade=12,TargetInstanceDataName=)))<off>
+
+            #set GD_Cork_Weap_Shotgun.Barrel.SG_Barrel_Jakobs_Sledges ExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.DamageSourceModifiers.InstigatedMeleeDamageModifier',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.GameplayAttributes.PlayerCriticalHitBonus',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0.150000)))<off>
+
+            #set GD_Cork_Weap_Shotgun.Barrel.SG_Barrel_Jakobs_Sledges AttributeSlotUpgrades ((SlotName="WeaponReloadSpeed",GradeIncrease=0,bActivateSlot=True),(SlotName="WeaponFireRate",GradeIncrease=0,bActivateSlot=True),(SlotName="WeaponSpread",GradeIncrease=0,bActivateSlot=True),(SlotName="WeaponSpread",GradeIncrease=0,bActivateSlot=True),(SlotName="AccuracyMin",GradeIncrease=0,bActivateSlot=True),(SlotName="WeaponDamage",GradeIncrease=0,bActivateSlot=True),(SlotName="WeaponAccuracyImpulse",GradeIncrease=0,bActivateSlot=True))<off>
+
+            #set GD_Cork_Weap_Shotgun.Barrel.SG_Barrel_Jakobs_Sledges WeaponCardAttributes ((Attribute=AttributeDefinition'D_Attributes.DamageSourceModifiers.InstigatedMeleeDamageModifier',PriorityIncrease=0.600000),(Attribute=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',PriorityIncrease=-3.000000))<off>
+
+        #</S&S Forever Quadtastic Combined Fix>
+
+    #</Fixes>
 
     #</Fixes>
 
