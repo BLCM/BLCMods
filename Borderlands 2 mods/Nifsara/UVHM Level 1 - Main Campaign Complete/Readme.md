@@ -4,7 +4,7 @@ Get it at [Koby's Github.](https://github.com/BLCM/BLCMods/tree/master/Borderlan
 <dl><dt>What's this?</dt>
 <dd>Save files for use with Koby's Level 1 UVHM mod.</dd></dl>
 <dl><dt>What's the difference?</dt>
-<dd>Those provided by Koby unlocks UVHM for level 1 characters.<br>These have all story missions completed. Side quests and DLCs are untouched.</dd></dl>
+<dd>Those provided by Koby unlocks UVHM for level 1 characters, allowing you to play the full game in one difficulty.<br>These have all story missions completed. Side quests and DLCs are untouched.</dd></dl>
 <dl><dt>What does it mean?</dt>
 <dd>It means that you can go anywhere and do anything at any time without being story-locked.</dd>
 <dl><dt>What about Fast Travel stations?</dt>
