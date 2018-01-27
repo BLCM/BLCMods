@@ -53,7 +53,7 @@ weapon_scale_uncommon = '85.000000'
 weapon_scale_rare = '55.000000'
 weapon_scale_veryrare = '50.000000'
 weapon_scale_alien = '30.000000'
-weapon_scale_legendary = '6.000000'
+weapon_scale_legendary = '3.000000'
 
 # Custom COM drop scaling (identical to weapons, apart from an additional Alignment COM pool)
 cm_scale_common = weapon_scale_common
@@ -81,13 +81,13 @@ shield_scale_legendary = weapon_scale_legendary
 treasure_scale_rare = '10.000000'
 treasure_scale_veryrare = '65.000000'
 treasure_scale_alien = '30.000000'
-treasure_scale_legendary = '20.000000'
+treasure_scale_legendary = '10.000000'
 
 # Drop rates for "epic" treasure chests
 epic_scale_veryrare = '1.000000'
 epic_scale_alien = '1.000000'
-epic_scale_legendary = '1.000000'
-epic_scale_legendary_dbl = '2.000000'
+epic_scale_legendary = '0.500000'
+epic_scale_legendary_dbl = '1.000000'
 
 # 3x chance of both kinds of eridium
 eridium_bar_drop = '0.004500'       # Stock: 0.001500
