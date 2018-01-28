@@ -5,7 +5,7 @@ This mod aims to make loot in Borderlands 2 "better" in general.  It's
 essentially a cheat mod, intended for those BL2 players like myself who
 tend to play in Normal most of the time, dislike grinding, get bored easily
 by the uninteresting and drab loot that typically gets dropped in-game, and
-who often ends up just resorting to Gibbed to be able to play around with
+who often end up just resorting to Gibbed to be able to play around with
 some better gear.  The goal, personally, was to get the loot drops in-game
 to a point where I never felt tempted to open up Gibbed.
 
@@ -53,6 +53,9 @@ Specifically, this mod does the following:
     of them.
   * Normalized the chances of boss-item drops, for the handful of bosses
     whose loot probabilities weren't already equal.
+* Raid Bosses will drop better loot, and will drop as many legendary/unique/etc
+  items as are in their pool:
+  * Master Gee
 * Remove early-game loot restrictions.  This is actually a superset of the
   similar feature already present in UCP 4.0.  The additions here are that
   both Relics and Class Mods will spawn from the beginning, as well.  Both
@@ -118,6 +121,7 @@ TODO
   preference.  Regardless, I've done extremely little actual playtesting
   with the current drop weights.
 * Boss drop counts for DLC bosses
+* Badass drop pools?
 * Can we increase boss drop counts depending on player count?
 * I'm not actually terribly interested in changing this, but I'd love to
   know how the gear is allocated for the miscellaneous smaller containers
@@ -143,3 +147,13 @@ To generate the end result file, I actually run the small shell script
 `create.sh` in this directory, which just does the following:
 
     ./generate-source.py && ../conv_to_mod.py -f "BL2 Better Loot Mod by Apocalyptech"
+
+Credits
+-------
+
+I've taken various ideas and at least one direct copy and paste from UCP,
+and from various other mods which had similar goals as what I was looking
+for.
+
+I'd also like to thank the fine folks in Shadow's Evil Hideout #borderlands-modding
+Discord channel for putting up with all my noobish questions.
