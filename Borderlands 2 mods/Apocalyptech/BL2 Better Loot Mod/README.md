@@ -134,7 +134,6 @@ TODO
   preference.  Regardless, I've done extremely little actual playtesting
   with the current drop weights.
 * Boss drop counts for DLC bosses
-* Badass drop pools?
 * Can we increase boss drop counts depending on player count?
 * I'm not actually terribly interested in changing this, but I'd love to
   know how the gear is allocated for the miscellaneous smaller containers
