@@ -56,9 +56,9 @@ Specifically, this mod does the following:
   Class Mod drop pools (and makes those COMs always drop at at least blue
   rarity).
 * Adds Gemstone-rarity weapons into the E-Tech weapon pools.
-* Omits Darts, Spikers, and Bandit BlASSters from the E-Tech pools.  *(I
-  suspect this might annoy some folks; I could be convinced to put those
-  back in)*
+* Darts and Spikers drop far less frequently in the E-Tech pools.  *(I
+  suspect this might annoy some folks; I could probably be convinced to
+  undo that)*
 * Makes Eridium drop 3x more often
 * Bosses are guaranteed to drop their legendaries/uniques
   * If a boss has more than one legendary/unique in their drop pool, they
@@ -110,10 +110,6 @@ There's some gear which I felt shouldn't be in the pools at all.  I am
 quite willing to hear counterarguments; my mind could probably be pretty
 easily persuaded otherwise if someone feels strongly about it.
 
-* Lame (IMO) E-Tech gear:
-  * Darts
-  * Spikers
-  * Bandit BlASSters
 * Cracked Sash (Shield)
 * GOTY/Preorder/Whatever starting game loot:
   * "Gearbox" themed guns (AR/SMG/Sniper)
@@ -122,6 +118,8 @@ easily persuaded otherwise if someone feels strongly about it.
 * Captain Blade's Midnight Star
 * Blue-rarity Magic Missile *(purple rarity will still spawn -- they're
   technically different items)*
+* "ERROR MESSAGE" Ahab (the one used by Master Gee).  Regular Ahabs will
+  still spawn, though.
 * Possibly one or two other guns as well -- I didn't think to keep track at
   first.
 

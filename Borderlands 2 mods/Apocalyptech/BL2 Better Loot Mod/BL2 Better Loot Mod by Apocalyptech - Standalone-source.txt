@@ -3634,11 +3634,22 @@
 
     #<E-Tech Pool Makeover>
 
-        # Put Gemstone weapons into the global E-Tech pools, and omit the
-        # lamer E-Tech weapons (like Darts/Spikers, Bandit Blassters, etc)
+        # Put Gemstone weapons into the global E-Tech pools, and reduce the
+        # chances of spawning lamer E-Tech weapons (Darts/Spikers, specifically)
 
         set GD_Itempools.WeaponPools.Pool_Weapons_AssaultRifles_05_VeryRare_Alien BalancedItems
         (
+            (
+                ItmPoolDefinition=None,
+                InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_AssaultRifle.A_Weapons.AR_Bandit_5_Alien',
+                Probability=(
+                    BaseValueConstant=0.000000,
+                    BaseValueAttribute=None,
+                    InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',
+                    BaseValueScaleConstant=2.000000
+                ),
+                bDropOnDeath=True
+            ),
             (
                 ItmPoolDefinition=None,
                 InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_AssaultRifle.A_Weapons.AR_Dahl_5_Alien',
@@ -3646,7 +3657,7 @@
                     BaseValueConstant=0.000000,
                     BaseValueAttribute=None,
                     InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',
-                    BaseValueScaleConstant=3.000000
+                    BaseValueScaleConstant=2.000000
                 ),
                 bDropOnDeath=True
             ),
@@ -3657,7 +3668,7 @@
                     BaseValueConstant=0.000000,
                     BaseValueAttribute=None,
                     InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',
-                    BaseValueScaleConstant=3.000000
+                    BaseValueScaleConstant=2.000000
                 ),
                 bDropOnDeath=True
             ),
@@ -3779,6 +3790,72 @@
 
         set GD_Itempools.WeaponPools.Pool_Weapons_Pistols_05_VeryRare_Alien BalancedItems
         (
+            (
+                ItmPoolDefinition=None,
+                InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_Pistol.A_Weapons.Pistol_Bandit_5_Alien',
+                Probability=(
+                    BaseValueConstant=0.000000,
+                    BaseValueAttribute=None,
+                    InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',
+                    BaseValueScaleConstant=0.200000
+                ),
+                bDropOnDeath=True
+            ),
+            (
+                ItmPoolDefinition=None,
+                InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_Pistol.A_Weapons.Pistol_Dahl_5_Alien',
+                Probability=(
+                    BaseValueConstant=0.000000,
+                    BaseValueAttribute=None,
+                    InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',
+                    BaseValueScaleConstant=0.200000
+                ),
+                bDropOnDeath=True
+            ),
+            (
+                ItmPoolDefinition=None,
+                InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_Pistol.A_Weapons.Pistol_Tediore_5_Alien',
+                Probability=(
+                    BaseValueConstant=0.000000,
+                    BaseValueAttribute=None,
+                    InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',
+                    BaseValueScaleConstant=0.200000
+                ),
+                bDropOnDeath=True
+            ),
+            (
+                ItmPoolDefinition=None,
+                InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_Pistol.A_Weapons.Pistol_Vladof_5_Alien',
+                Probability=(
+                    BaseValueConstant=0.000000,
+                    BaseValueAttribute=None,
+                    InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',
+                    BaseValueScaleConstant=0.200000
+                ),
+                bDropOnDeath=True
+            ),
+            (
+                ItmPoolDefinition=None,
+                InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_Pistol.A_Weapons.Pistol_Maliwan_5_Alien',
+                Probability=(
+                    BaseValueConstant=0.000000,
+                    BaseValueAttribute=None,
+                    InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',
+                    BaseValueScaleConstant=0.200000
+                ),
+                bDropOnDeath=True
+            ),
+            (
+                ItmPoolDefinition=None,
+                InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_Pistol.A_Weapons.Pistol_Hyperion_5_Alien',
+                Probability=(
+                    BaseValueConstant=0.000000,
+                    BaseValueAttribute=None,
+                    InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',
+                    BaseValueScaleConstant=0.200000
+                ),
+                bDropOnDeath=True
+            ),
             (
                 ItmPoolDefinition=None,
                 InvBalanceDefinition=WeaponBalanceDefinition'GD_Aster_Weapons.Pistols.Pistol_Jakobs_4_Citrine',
