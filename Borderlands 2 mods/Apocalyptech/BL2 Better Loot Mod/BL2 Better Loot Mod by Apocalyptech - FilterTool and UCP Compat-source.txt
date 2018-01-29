@@ -1,351 +1,12 @@
-#!/usr/bin/env python
-# vim: set expandtab tabstop=4 shiftwidth=4:
 
-# Python script to generate my BL2 Better Loot Mod.  All the drop
-# weights and stuff can be controlled by all the variables at the
-# top of the file.  Generates a human-readable multiline file which
-# must be converted using conv_to_mod.py in order to be loaded by
-# Borderlands / FilterTool.
-
-from hotfixes import Hotfixes
-
-###
-### Output variables
-###
-
-mod_name = 'BL2 Better Loot Mod by Apocalyptech'
-variant_filtertool_name = 'FilterTool and UCP Compat'
-variant_standalone_name = 'Standalone'
-output_filename_filtertool = '{} - {}-source.txt'.format(mod_name, variant_filtertool_name)
-output_filename_standalone = '{} - {}-source.txt'.format(mod_name, variant_standalone_name)
-
-###
-### Hotfix object to store all our hotfixes
-###
-
-hfs = Hotfixes()
-
-###
-### Variables which control drop rates and stuff like that
-###
-
-# Just some convenience vars
-one = '1.000000'
-zero = '0.000000'
-
-# "BaseValueConstant values for the various gear drop types.  These
-# are actually totally unchanged from the stock definitions; I'd just
-# put them in here in case I felt like overriding them easily later.
-weapon_base_common = one
-weapon_base_uncommon = one
-weapon_base_rare = one
-weapon_base_veryrare = one
-weapon_base_alien = one
-weapon_base_legendary = one
-cm_base_common = one
-cm_base_uncommon = one
-cm_base_rare = one
-cm_base_veryrare = one
-cm_base_legendary = one
-grenade_base_common = zero
-grenade_base_uncommon = zero
-grenade_base_rare = zero
-grenade_base_veryrare = zero
-grenade_base_legendary = zero
-shield_base_common = one
-shield_base_uncommon = one
-shield_base_rare = one
-shield_base_veryrare = one
-shield_base_legendary = one
-
-# Custom weapon drop scaling
-weapon_scale_common = '8.000000'
-weapon_scale_uncommon = '85.000000'
-weapon_scale_rare = '55.000000'
-weapon_scale_veryrare = '50.000000'
-weapon_scale_alien = '30.000000'
-weapon_scale_legendary = '3.000000'
-
-# Custom COM drop scaling (identical to weapons, apart from an additional Alignment COM pool)
-cm_scale_common = weapon_scale_common
-cm_scale_uncommon = weapon_scale_uncommon
-cm_scale_rare = weapon_scale_rare
-cm_scale_veryrare = weapon_scale_veryrare
-cm_scale_alignment = '30.000000'
-cm_scale_legendary = weapon_scale_legendary
-
-# Custom grenade drop scaling (identical to weapons)
-grenade_scale_common = weapon_scale_common
-grenade_scale_uncommon = weapon_scale_uncommon
-grenade_scale_rare = weapon_scale_rare
-grenade_scale_veryrare = weapon_scale_veryrare
-grenade_scale_legendary = weapon_scale_legendary
-
-# Custom shield drop scaling (identical to weapons)
-shield_scale_common = weapon_scale_common
-shield_scale_uncommon = weapon_scale_uncommon
-shield_scale_rare = weapon_scale_rare
-shield_scale_veryrare = weapon_scale_veryrare
-shield_scale_legendary = weapon_scale_legendary
-
-# Drop rates for "regular" treasure chests
-treasure_scale_rare = '10.000000'
-treasure_scale_veryrare = '65.000000'
-treasure_scale_alien = '30.000000'
-treasure_scale_legendary = '10.000000'
-
-# Drop rates for "epic" treasure chests
-epic_scale_veryrare = '1.000000'
-epic_scale_alien = '1.000000'
-epic_scale_legendary = '0.500000'
-epic_scale_legendary_dbl = '1.000000'
-
-# 3x chance of both kinds of eridium
-eridium_bar_drop = '0.004500'       # Stock: 0.001500
-eridium_stick_drop = '0.024000'     # Stock: 0.008000
-
-###
-### Vars used primarily during testing of loot pools - these aren't
-### intended to be "live" in the mod by default.
-###
-
-# Vars to control testing our drop pools.  Set `test_drop_pools` to True and
-# every enemy will drop a bunch of loot.
-test_drop_pools = False
-loot_drop_chance_1p = '1.000000'    # Stock: 0.085000
-loot_drop_chance_2p = '1.000000'    # Stock: 0.070000
-loot_drop_chance_3p = '1.000000'    # Stock: 0.060000
-loot_drop_chance_4p = '1.000000'    # Stock: 0.050000
-loot_drop_quantity = '5'            # Stock: 1.000000
-
-# Force Pool_GunsAndGear to always drop the specified pool, if `force_gunsandgear_drop`
-# is True.  Useful for testing out how individual pools are behaving.
-force_gunsandgear_drop = False
-force_gunsandgear_drop_type = 'GD_Itempools.ClassModPools.Pool_ClassMod_All'
-
-# Force Pool_GunsAndGear to always drop the specified item, if
-# `force_gunsandgear_specific` is True.  Useful for seeing what exactly an
-# item is.  `force_gunsandgear_specific` will override `force_gunsandgear_drop`,
-# if both are set to True.
-force_gunsandgear_specific = False
-force_gunsandgear_specific_name = 'GD_Orchid_BossWeapons.RPG.Ahab.Orchid_Boss_Ahab_Balance_NODROP'
-
-###
-### Hotfixes; these are handled a little differently than everything
-### else.
-###
-
-# Make No-Beard always drop his unique
-hfs.add_hotfix('scarlett_nobeard', 'SparkLevelPatchEntry-NoBeardDrop1',
-    ',GD_Orchid_Pop_NoBeard.PawnBalance_Orchid_NoBeard,DefaultItemPoolList[1].PoolProbability.BaseValueConstant,,1.0')
-
-###
-### Everything below this point is constructing the actual patch file
-###
-
-# Process our forced GunsAndGear drop
-gunsandgear_drop_str = ''
-if force_gunsandgear_specific:
-    gunsandgear_drop_str = """
-    #<Force GunsAndGearDrop to {force_gunsandgear_specific_name}>
-
-        # Forces the GunsAndGear drop pool to always drop {force_gunsandgear_specific_name}
-        # Just used during my own testing to find out what exactly some items
-        # are, when spawned in-game.
-
-        set GD_Itempools.GeneralItemPools.Pool_GunsAndGear BalancedItems
-        (
-            (
-                ItmPoolDefinition=ItemPoolDefinition'{force_gunsandgear_drop_type}',
-                InvBalanceDefinition=None,
-                Probability=(
-                    BaseValueConstant=1.000000,
-                    BaseValueAttribute=None,
-                    InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_2_Uncommon',
-                    BaseValueScaleConstant=2.200000
-                ),
-                bDropOnDeath=True
-            )
-        )
-
-        set {force_gunsandgear_drop_type} BalancedItems
-        (
-            (
-                ItmPoolDefinition=None,
-                InvBalanceDefinition=WeaponBalanceDefinition'{force_gunsandgear_specific_name}',
-                Probability=(
-                    BaseValueConstant=0.000000,
-                    BaseValueAttribute=None,
-                    InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',
-                    BaseValueScaleConstant=1.000000
-                ),
-                bDropOnDeath=True
-            )
-        )
-
-    #</Force GunsAndGearDrop to {force_gunsandgear_specific_name}>
-    """.format(
-        force_gunsandgear_drop_type=force_gunsandgear_drop_type,
-        force_gunsandgear_specific_name=force_gunsandgear_specific_name,
-        )
-elif force_gunsandgear_drop:
-    gunsandgear_drop_str = """
-    #<Force GunsAndGearDrop to {force_gunsandgear_drop_type}>
-
-        # Forces the GunsAndGear drop pool to always drop {force_gunsandgear_drop_type}
-        # Just used during my own testing to get a feel for drop rates.
-
-        set GD_Itempools.GeneralItemPools.Pool_GunsAndGear BalancedItems
-        (
-            (
-                ItmPoolDefinition=ItemPoolDefinition'{force_gunsandgear_drop_type}',
-                InvBalanceDefinition=None,
-                Probability=(
-                    BaseValueConstant=1.000000,
-                    BaseValueAttribute=None,
-                    InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_2_Uncommon',
-                    BaseValueScaleConstant=2.200000
-                ),
-                bDropOnDeath=True
-            )
-        )
-
-    #</Force GunsAndGearDrop to {force_gunsandgear_drop_type}>
-    """.format(force_gunsandgear_drop_type=force_gunsandgear_drop_type)
-
-# Process testing our drop pools
-if test_drop_pools:
-    drop_comment = ''
-    drop_off = ''
-    drop_wording = ''
-else:
-    drop_comment = '#'
-    drop_off = '    <off>'
-    drop_wording = ' (disabled by default)'
-test_drop_str = """
-
-    #<Guaranteed Enemy Loot Drop Chance{drop_wording}>
-
-        {drop_comment}# Gives a 100% chance to drop loot from enemies.{drop_off}
-        {drop_comment}# Just used during my own testing to get a feel for drop rates.{drop_off}
-
-        {drop_comment}set GD_Itempools.DropWeights.DropODDS_GunsAndGear:ConditionalAttributeValueResolver_0 ValueExpressions
-        (
-            bEnabled=True,
-            ConditionalExpressionList=(
-                (
-                    BaseValueIfTrue=(
-                        BaseValueConstant={loot_drop_chance_1p},
-                        BaseValueAttribute=None,
-                        InitializationDefinition=None,
-                        BaseValueScaleConstant=1.000000
-                    ),
-                    Expressions=(
-                        (
-                            AttributeOperand1=AttributeDefinition'D_Attributes.GameProperties.NumberOfPlayers',
-                            ComparisonOperator=OPERATOR_EqualTo,
-                            Operand2Usage=OPERAND_PreferAttribute,
-                            AttributeOperand2=None,
-                            ConstantOperand2=1.000000
-                        )
-                    )
-                ),
-                (
-                    BaseValueIfTrue=(
-                        BaseValueConstant={loot_drop_chance_2p},
-                        BaseValueAttribute=None,
-                        InitializationDefinition=None,
-                        BaseValueScaleConstant=1.000000
-                    ),
-                    Expressions=(
-                        (
-                            AttributeOperand1=AttributeDefinition'D_Attributes.GameProperties.NumberOfPlayers',
-                            ComparisonOperator=OPERATOR_EqualTo,
-                            Operand2Usage=OPERAND_PreferAttribute,
-                            AttributeOperand2=None,
-                            ConstantOperand2=2.000000
-                        )
-                    )
-                ),
-                (
-                    BaseValueIfTrue=(
-                        BaseValueConstant={loot_drop_chance_3p},
-                        BaseValueAttribute=None,
-                        InitializationDefinition=None,
-                        BaseValueScaleConstant=1.000000
-                    ),
-                    Expressions=(
-                        (
-                            AttributeOperand1=AttributeDefinition'D_Attributes.GameProperties.NumberOfPlayers',
-                            ComparisonOperator=OPERATOR_EqualTo,
-                            Operand2Usage=OPERAND_PreferAttribute,
-                            AttributeOperand2=None,
-                            ConstantOperand2=3.000000
-                        )
-                    )
-                ),
-                (
-                    BaseValueIfTrue=(
-                        BaseValueConstant={loot_drop_chance_4p},
-                        BaseValueAttribute=None,
-                        InitializationDefinition=None,
-                        BaseValueScaleConstant=1.000000
-                    ),
-                    Expressions=(
-                        (
-                            AttributeOperand1=AttributeDefinition'D_Attributes.GameProperties.NumberOfPlayers',
-                            ComparisonOperator=OPERATOR_EqualTo,
-                            Operand2Usage=OPERAND_PreferAttribute,
-                            AttributeOperand2=None,
-                            ConstantOperand2=4.000000
-                        )
-                    )
-                )
-            ),
-            DefaultBaseValue=(
-                BaseValueConstant=0.000000,
-                BaseValueAttribute=None,
-                InitializationDefinition=None,
-                BaseValueScaleConstant=1.000000
-            )
-        ){drop_off}
-
-    #</Guaranteed Enemy Loot Drop Chance{drop_wording}>
-
-    #<Extreme Enemy Loot Drop Quantity{drop_wording}>
-
-        {drop_comment}# Enemies drop {loot_drop_quantity} items instead of just one.{drop_off}
-        {drop_comment}# Just used during my own testing to get a feel for drop rates.{drop_off}
-
-        {drop_comment}set GD_Itempools.GeneralItemPools.Pool_GunsAndGear Quantity
-        (
-            BaseValueConstant={loot_drop_quantity},
-            BaseValueAttribute=None,
-            InitializationDefinition=None,
-            BaseValueScaleConstant=1.000000
-        ){drop_off}
-
-    #</Extreme Enemy Loot Drop Quantity{drop_wording}>
-    """.format(
-            drop_comment=drop_comment,
-            drop_off=drop_off,
-            drop_wording=drop_wording,
-            loot_drop_chance_1p=loot_drop_chance_1p,
-            loot_drop_chance_2p=loot_drop_chance_2p,
-            loot_drop_chance_3p=loot_drop_chance_3p,
-            loot_drop_chance_4p=loot_drop_chance_4p,
-            loot_drop_quantity=loot_drop_quantity,
-        )
-
-loot_str = """
-#<{mod_name} ({variant_name})>
+#<BL2 Better Loot Mod by Apocalyptech (FilterTool and UCP Compat)>
 
     # All sorts of tweaks to loot in general, with the aim of basically making all
     # the loot drops in the game "better".  Greatly increased chances of blues/purples/etech/legendary
     # across the board, slightly more Eridium, etc.  Also basically all game items will be
     # available as regular drops, including legendaries, uniques, pearls, and seraph items.
 
-{hotfix_gearbox_base}
+
 
     #<Better Treasure Chests>
 
@@ -361,7 +22,7 @@ loot_str = """
                     BaseValueConstant=0.000000,
                     BaseValueAttribute=None,
                     InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',
-                    BaseValueScaleConstant={treasure_scale_rare}
+                    BaseValueScaleConstant=10.000000
                 ),
                 bDropOnDeath=True
             ),
@@ -372,7 +33,7 @@ loot_str = """
                     BaseValueConstant=0.000000,
                     BaseValueAttribute=None,
                     InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',
-                    BaseValueScaleConstant={treasure_scale_veryrare}
+                    BaseValueScaleConstant=65.000000
                 ),
                 bDropOnDeath=True
             ),
@@ -383,7 +44,7 @@ loot_str = """
                     BaseValueConstant=0.000000,
                     BaseValueAttribute=None,
                     InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',
-                    BaseValueScaleConstant={treasure_scale_alien}
+                    BaseValueScaleConstant=30.000000
                 ),
                 bDropOnDeath=True
             ),
@@ -394,7 +55,7 @@ loot_str = """
                     BaseValueConstant=0.000000,
                     BaseValueAttribute=None,
                     InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',
-                    BaseValueScaleConstant={treasure_scale_legendary}
+                    BaseValueScaleConstant=10.000000
                 ),
                 bDropOnDeath=True
             ),
@@ -405,7 +66,7 @@ loot_str = """
                     BaseValueConstant=0.000000,
                     BaseValueAttribute=None,
                     InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',
-                    BaseValueScaleConstant={treasure_scale_rare}
+                    BaseValueScaleConstant=10.000000
                 ),
                 bDropOnDeath=True
             ),
@@ -416,7 +77,7 @@ loot_str = """
                     BaseValueConstant=0.000000,
                     BaseValueAttribute=None,
                     InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',
-                    BaseValueScaleConstant={treasure_scale_veryrare}
+                    BaseValueScaleConstant=65.000000
                 ),
                 bDropOnDeath=True
             ),
@@ -427,7 +88,7 @@ loot_str = """
                     BaseValueConstant=0.000000,
                     BaseValueAttribute=None,
                     InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',
-                    BaseValueScaleConstant={treasure_scale_alien}
+                    BaseValueScaleConstant=30.000000
                 ),
                 bDropOnDeath=True
             ),
@@ -438,7 +99,7 @@ loot_str = """
                     BaseValueConstant=0.000000,
                     BaseValueAttribute=None,
                     InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',
-                    BaseValueScaleConstant={treasure_scale_legendary}
+                    BaseValueScaleConstant=10.000000
                 ),
                 bDropOnDeath=True
             ),
@@ -449,7 +110,7 @@ loot_str = """
                     BaseValueConstant=0.000000,
                     BaseValueAttribute=None,
                     InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',
-                    BaseValueScaleConstant={treasure_scale_rare}
+                    BaseValueScaleConstant=10.000000
                 ),
                 bDropOnDeath=True
             ),
@@ -460,7 +121,7 @@ loot_str = """
                     BaseValueConstant=0.000000,
                     BaseValueAttribute=None,
                     InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',
-                    BaseValueScaleConstant={treasure_scale_veryrare}
+                    BaseValueScaleConstant=65.000000
                 ),
                 bDropOnDeath=True
             ),
@@ -471,7 +132,7 @@ loot_str = """
                     BaseValueConstant=0.000000,
                     BaseValueAttribute=None,
                     InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',
-                    BaseValueScaleConstant={treasure_scale_alien}
+                    BaseValueScaleConstant=30.000000
                 ),
                 bDropOnDeath=True
             ),
@@ -482,7 +143,7 @@ loot_str = """
                     BaseValueConstant=0.000000,
                     BaseValueAttribute=None,
                     InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',
-                    BaseValueScaleConstant={treasure_scale_legendary}
+                    BaseValueScaleConstant=10.000000
                 ),
                 bDropOnDeath=True
             ),
@@ -493,7 +154,7 @@ loot_str = """
                     BaseValueConstant=0.000000,
                     BaseValueAttribute=None,
                     InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',
-                    BaseValueScaleConstant={treasure_scale_rare}
+                    BaseValueScaleConstant=10.000000
                 ),
                 bDropOnDeath=True
             ),
@@ -504,7 +165,7 @@ loot_str = """
                     BaseValueConstant=0.000000,
                     BaseValueAttribute=None,
                     InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',
-                    BaseValueScaleConstant={treasure_scale_veryrare}
+                    BaseValueScaleConstant=65.000000
                 ),
                 bDropOnDeath=True
             ),
@@ -515,7 +176,7 @@ loot_str = """
                     BaseValueConstant=0.000000,
                     BaseValueAttribute=None,
                     InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',
-                    BaseValueScaleConstant={treasure_scale_alien}
+                    BaseValueScaleConstant=30.000000
                 ),
                 bDropOnDeath=True
             ),
@@ -526,7 +187,7 @@ loot_str = """
                     BaseValueConstant=0.000000,
                     BaseValueAttribute=None,
                     InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',
-                    BaseValueScaleConstant={treasure_scale_legendary}
+                    BaseValueScaleConstant=10.000000
                 ),
                 bDropOnDeath=True
             )
@@ -541,7 +202,7 @@ loot_str = """
                     BaseValueConstant=0.000000,
                     BaseValueAttribute=None,
                     InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',
-                    BaseValueScaleConstant={treasure_scale_rare}
+                    BaseValueScaleConstant=10.000000
                 ),
                 bDropOnDeath=True
             ),
@@ -552,7 +213,7 @@ loot_str = """
                     BaseValueConstant=0.000000,
                     BaseValueAttribute=None,
                     InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',
-                    BaseValueScaleConstant={treasure_scale_veryrare}
+                    BaseValueScaleConstant=65.000000
                 ),
                 bDropOnDeath=True
             ),
@@ -563,7 +224,7 @@ loot_str = """
                     BaseValueConstant=0.000000,
                     BaseValueAttribute=None,
                     InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',
-                    BaseValueScaleConstant={treasure_scale_alien}
+                    BaseValueScaleConstant=30.000000
                 ),
                 bDropOnDeath=True
             ),
@@ -574,7 +235,7 @@ loot_str = """
                     BaseValueConstant=0.000000,
                     BaseValueAttribute=None,
                     InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',
-                    BaseValueScaleConstant={treasure_scale_legendary}
+                    BaseValueScaleConstant=10.000000
                 ),
                 bDropOnDeath=True
             )
@@ -589,7 +250,7 @@ loot_str = """
                     BaseValueConstant=1.000000,
                     BaseValueAttribute=None,
                     InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',
-                    BaseValueScaleConstant={treasure_scale_rare}
+                    BaseValueScaleConstant=10.000000
                 ),
                 bDropOnDeath=True
             ),
@@ -600,7 +261,7 @@ loot_str = """
                     BaseValueConstant=1.000000,
                     BaseValueAttribute=None,
                     InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',
-                    BaseValueScaleConstant={treasure_scale_veryrare}
+                    BaseValueScaleConstant=65.000000
                 ),
                 bDropOnDeath=True
             ),
@@ -611,7 +272,7 @@ loot_str = """
                     BaseValueConstant=1.000000,
                     BaseValueAttribute=None,
                     InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',
-                    BaseValueScaleConstant={treasure_scale_legendary}
+                    BaseValueScaleConstant=10.000000
                 ),
                 bDropOnDeath=True
             )
@@ -626,7 +287,7 @@ loot_str = """
                     BaseValueConstant=1.000000,
                     BaseValueAttribute=None,
                     InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',
-                    BaseValueScaleConstant={treasure_scale_rare}
+                    BaseValueScaleConstant=10.000000
                 ),
                 bDropOnDeath=True
             ),
@@ -637,7 +298,7 @@ loot_str = """
                     BaseValueConstant=1.000000,
                     BaseValueAttribute=None,
                     InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',
-                    BaseValueScaleConstant={treasure_scale_veryrare}
+                    BaseValueScaleConstant=65.000000
                 ),
                 bDropOnDeath=True
             ),
@@ -648,7 +309,7 @@ loot_str = """
                     BaseValueConstant=1.000000,
                     BaseValueAttribute=None,
                     InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',
-                    BaseValueScaleConstant={treasure_scale_legendary}
+                    BaseValueScaleConstant=10.000000
                 ),
                 bDropOnDeath=True
             )
@@ -663,7 +324,7 @@ loot_str = """
                     BaseValueConstant=1.000000,
                     BaseValueAttribute=None,
                     InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',
-                    BaseValueScaleConstant={treasure_scale_rare}
+                    BaseValueScaleConstant=10.000000
                 ),
                 bDropOnDeath=True
             ),
@@ -674,7 +335,7 @@ loot_str = """
                     BaseValueConstant=0.000000,
                     BaseValueAttribute=None,
                     InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',
-                    BaseValueScaleConstant={treasure_scale_veryrare}
+                    BaseValueScaleConstant=65.000000
                 ),
                 bDropOnDeath=True
             ),
@@ -685,7 +346,7 @@ loot_str = """
                     BaseValueConstant=0.000000,
                     BaseValueAttribute=None,
                     InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',
-                    BaseValueScaleConstant={treasure_scale_legendary}
+                    BaseValueScaleConstant=10.000000
                 ),
                 bDropOnDeath=True
             )
@@ -700,7 +361,7 @@ loot_str = """
                     BaseValueConstant=1.000000,
                     BaseValueAttribute=None,
                     InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',
-                    BaseValueScaleConstant={treasure_scale_rare}
+                    BaseValueScaleConstant=10.000000
                 ),
                 bDropOnDeath=True
             ),
@@ -711,7 +372,7 @@ loot_str = """
                     BaseValueConstant=0.000000,
                     BaseValueAttribute=None,
                     InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',
-                    BaseValueScaleConstant={treasure_scale_veryrare}
+                    BaseValueScaleConstant=65.000000
                 ),
                 bDropOnDeath=True
             ),
@@ -722,7 +383,7 @@ loot_str = """
                     BaseValueConstant=0.000000,
                     BaseValueAttribute=None,
                     InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',
-                    BaseValueScaleConstant={treasure_scale_legendary}
+                    BaseValueScaleConstant=10.000000
                 ),
                 bDropOnDeath=True
             ),
@@ -733,7 +394,7 @@ loot_str = """
                     BaseValueConstant=1.000000,
                     BaseValueAttribute=None,
                     InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',
-                    BaseValueScaleConstant={treasure_scale_rare}
+                    BaseValueScaleConstant=10.000000
                 ),
                 bDropOnDeath=True
             ),
@@ -744,7 +405,7 @@ loot_str = """
                     BaseValueConstant=0.000000,
                     BaseValueAttribute=None,
                     InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',
-                    BaseValueScaleConstant={treasure_scale_veryrare}
+                    BaseValueScaleConstant=65.000000
                 ),
                 bDropOnDeath=True
             ),
@@ -755,7 +416,7 @@ loot_str = """
                     BaseValueConstant=0.000000,
                     BaseValueAttribute=None,
                     InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',
-                    BaseValueScaleConstant={treasure_scale_legendary}
+                    BaseValueScaleConstant=10.000000
                 ),
                 bDropOnDeath=True
             ),
@@ -766,7 +427,7 @@ loot_str = """
                     BaseValueConstant=1.000000,
                     BaseValueAttribute=None,
                     InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',
-                    BaseValueScaleConstant={treasure_scale_rare}
+                    BaseValueScaleConstant=10.000000
                 ),
                 bDropOnDeath=True
             ),
@@ -777,7 +438,7 @@ loot_str = """
                     BaseValueConstant=0.000000,
                     BaseValueAttribute=None,
                     InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',
-                    BaseValueScaleConstant={treasure_scale_veryrare}
+                    BaseValueScaleConstant=65.000000
                 ),
                 bDropOnDeath=True
             ),
@@ -788,7 +449,7 @@ loot_str = """
                     BaseValueConstant=0.000000,
                     BaseValueAttribute=None,
                     InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',
-                    BaseValueScaleConstant={treasure_scale_legendary}
+                    BaseValueScaleConstant=10.000000
                 ),
                 bDropOnDeath=True
             )
@@ -803,7 +464,7 @@ loot_str = """
                     BaseValueConstant=1.000000,
                     BaseValueAttribute=None,
                     InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',
-                    BaseValueScaleConstant={treasure_scale_rare}
+                    BaseValueScaleConstant=10.000000
                 ),
                 bDropOnDeath=True
             ),
@@ -814,7 +475,7 @@ loot_str = """
                     BaseValueConstant=0.000000,
                     BaseValueAttribute=None,
                     InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',
-                    BaseValueScaleConstant={treasure_scale_veryrare}
+                    BaseValueScaleConstant=65.000000
                 ),
                 bDropOnDeath=True
             ),
@@ -825,7 +486,7 @@ loot_str = """
                     BaseValueConstant=0.000000,
                     BaseValueAttribute=None,
                     InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',
-                    BaseValueScaleConstant={treasure_scale_legendary}
+                    BaseValueScaleConstant=10.000000
                 ),
                 bDropOnDeath=True
             )
@@ -840,7 +501,7 @@ loot_str = """
                     BaseValueConstant=1.000000,
                     BaseValueAttribute=None,
                     InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',
-                    BaseValueScaleConstant={treasure_scale_rare}
+                    BaseValueScaleConstant=10.000000
                 ),
                 bDropOnDeath=True
             ),
@@ -851,7 +512,7 @@ loot_str = """
                     BaseValueConstant=0.000000,
                     BaseValueAttribute=None,
                     InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',
-                    BaseValueScaleConstant={treasure_scale_veryrare}
+                    BaseValueScaleConstant=65.000000
                 ),
                 bDropOnDeath=True
             ),
@@ -862,7 +523,7 @@ loot_str = """
                     BaseValueConstant=0.000000,
                     BaseValueAttribute=None,
                     InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',
-                    BaseValueScaleConstant={treasure_scale_alien}
+                    BaseValueScaleConstant=30.000000
                 ),
                 bDropOnDeath=True
             ),
@@ -873,7 +534,7 @@ loot_str = """
                     BaseValueConstant=0.000000,
                     BaseValueAttribute=None,
                     InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',
-                    BaseValueScaleConstant={treasure_scale_legendary}
+                    BaseValueScaleConstant=10.000000
                 ),
                 bDropOnDeath=True
             )
@@ -895,7 +556,7 @@ loot_str = """
                     BaseValueConstant=1.000000,
                     BaseValueAttribute=None,
                     InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',
-                    BaseValueScaleConstant={epic_scale_veryrare}
+                    BaseValueScaleConstant=1.000000
                 ),
                 bDropOnDeath=True
             ),
@@ -906,7 +567,7 @@ loot_str = """
                     BaseValueConstant=1.000000,
                     BaseValueAttribute=None,
                     InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',
-                    BaseValueScaleConstant={epic_scale_legendary}
+                    BaseValueScaleConstant=0.500000
                 ),
                 bDropOnDeath=True
             )
@@ -921,7 +582,7 @@ loot_str = """
                     BaseValueConstant=1.000000,
                     BaseValueAttribute=None,
                     InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',
-                    BaseValueScaleConstant={epic_scale_veryrare}
+                    BaseValueScaleConstant=1.000000
                 ),
                 bDropOnDeath=True
             ),
@@ -932,7 +593,7 @@ loot_str = """
                     BaseValueConstant=1.000000,
                     BaseValueAttribute=None,
                     InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',
-                    BaseValueScaleConstant={epic_scale_legendary}
+                    BaseValueScaleConstant=0.500000
                 ),
                 bDropOnDeath=True
             )
@@ -947,7 +608,7 @@ loot_str = """
                     BaseValueConstant=1.000000,
                     BaseValueAttribute=None,
                     InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',
-                    BaseValueScaleConstant={epic_scale_veryrare}
+                    BaseValueScaleConstant=1.000000
                 ),
                 bDropOnDeath=True
             ),
@@ -958,7 +619,7 @@ loot_str = """
                     BaseValueConstant=1.000000,
                     BaseValueAttribute=None,
                     InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',
-                    BaseValueScaleConstant={epic_scale_legendary}
+                    BaseValueScaleConstant=0.500000
                 ),
                 bDropOnDeath=True
             )
@@ -973,7 +634,7 @@ loot_str = """
                     BaseValueConstant=1.000000,
                     BaseValueAttribute=None,
                     InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',
-                    BaseValueScaleConstant={epic_scale_veryrare}
+                    BaseValueScaleConstant=1.000000
                 ),
                 bDropOnDeath=True
             ),
@@ -984,7 +645,7 @@ loot_str = """
                     BaseValueConstant=1.000000,
                     BaseValueAttribute=None,
                     InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',
-                    BaseValueScaleConstant={epic_scale_legendary}
+                    BaseValueScaleConstant=0.500000
                 ),
                 bDropOnDeath=True
             ),
@@ -995,7 +656,7 @@ loot_str = """
                     BaseValueConstant=1.000000,
                     BaseValueAttribute=None,
                     InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',
-                    BaseValueScaleConstant={epic_scale_veryrare}
+                    BaseValueScaleConstant=1.000000
                 ),
                 bDropOnDeath=True
             ),
@@ -1006,7 +667,7 @@ loot_str = """
                     BaseValueConstant=1.000000,
                     BaseValueAttribute=None,
                     InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',
-                    BaseValueScaleConstant={epic_scale_legendary}
+                    BaseValueScaleConstant=0.500000
                 ),
                 bDropOnDeath=True
             )
@@ -1021,7 +682,7 @@ loot_str = """
                     BaseValueConstant=1.000000,
                     BaseValueAttribute=None,
                     InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',
-                    BaseValueScaleConstant={epic_scale_veryrare}
+                    BaseValueScaleConstant=1.000000
                 ),
                 bDropOnDeath=True
             ),
@@ -1032,7 +693,7 @@ loot_str = """
                     BaseValueConstant=1.000000,
                     BaseValueAttribute=None,
                     InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',
-                    BaseValueScaleConstant={epic_scale_legendary}
+                    BaseValueScaleConstant=0.500000
                 ),
                 bDropOnDeath=True
             )
@@ -1047,7 +708,7 @@ loot_str = """
                     BaseValueConstant=1.000000,
                     BaseValueAttribute=None,
                     InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',
-                    BaseValueScaleConstant={epic_scale_veryrare}
+                    BaseValueScaleConstant=1.000000
                 ),
                 bDropOnDeath=True
             ),
@@ -1058,7 +719,7 @@ loot_str = """
                     BaseValueConstant=1.000000,
                     BaseValueAttribute=None,
                     InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',
-                    BaseValueScaleConstant={epic_scale_alien}
+                    BaseValueScaleConstant=1.000000
                 ),
                 bDropOnDeath=True
             ),
@@ -1069,7 +730,7 @@ loot_str = """
                     BaseValueConstant=1.000000,
                     BaseValueAttribute=None,
                     InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',
-                    BaseValueScaleConstant={epic_scale_legendary_dbl}
+                    BaseValueScaleConstant=1.000000
                 ),
                 bDropOnDeath=True
             )
@@ -1084,7 +745,7 @@ loot_str = """
                     BaseValueConstant=1.000000,
                     BaseValueAttribute=None,
                     InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',
-                    BaseValueScaleConstant={epic_scale_veryrare}
+                    BaseValueScaleConstant=1.000000
                 ),
                 bDropOnDeath=True
             ),
@@ -1095,7 +756,7 @@ loot_str = """
                     BaseValueConstant=1.000000,
                     BaseValueAttribute=None,
                     InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',
-                    BaseValueScaleConstant={epic_scale_alien}
+                    BaseValueScaleConstant=1.000000
                 ),
                 bDropOnDeath=True
             ),
@@ -1106,7 +767,7 @@ loot_str = """
                     BaseValueConstant=1.000000,
                     BaseValueAttribute=None,
                     InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',
-                    BaseValueScaleConstant={epic_scale_legendary_dbl}
+                    BaseValueScaleConstant=1.000000
                 ),
                 bDropOnDeath=True
             ),
@@ -1117,7 +778,7 @@ loot_str = """
                     BaseValueConstant=1.000000,
                     BaseValueAttribute=None,
                     InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',
-                    BaseValueScaleConstant={epic_scale_veryrare}
+                    BaseValueScaleConstant=1.000000
                 ),
                 bDropOnDeath=True
             ),
@@ -1128,7 +789,7 @@ loot_str = """
                     BaseValueConstant=1.000000,
                     BaseValueAttribute=None,
                     InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',
-                    BaseValueScaleConstant={epic_scale_alien}
+                    BaseValueScaleConstant=1.000000
                 ),
                 bDropOnDeath=True
             ),
@@ -1139,7 +800,7 @@ loot_str = """
                     BaseValueConstant=1.000000,
                     BaseValueAttribute=None,
                     InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',
-                    BaseValueScaleConstant={epic_scale_legendary_dbl}
+                    BaseValueScaleConstant=1.000000
                 ),
                 bDropOnDeath=True
             ),
@@ -1150,7 +811,7 @@ loot_str = """
                     BaseValueConstant=1.000000,
                     BaseValueAttribute=None,
                     InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',
-                    BaseValueScaleConstant={epic_scale_veryrare}
+                    BaseValueScaleConstant=1.000000
                 ),
                 bDropOnDeath=True
             ),
@@ -1161,7 +822,7 @@ loot_str = """
                     BaseValueConstant=1.000000,
                     BaseValueAttribute=None,
                     InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',
-                    BaseValueScaleConstant={epic_scale_alien}
+                    BaseValueScaleConstant=1.000000
                 ),
                 bDropOnDeath=True
             ),
@@ -1172,7 +833,7 @@ loot_str = """
                     BaseValueConstant=1.000000,
                     BaseValueAttribute=None,
                     InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',
-                    BaseValueScaleConstant={epic_scale_legendary_dbl}
+                    BaseValueScaleConstant=1.000000
                 ),
                 bDropOnDeath=True
             ),
@@ -1183,7 +844,7 @@ loot_str = """
                     BaseValueConstant=1.000000,
                     BaseValueAttribute=None,
                     InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',
-                    BaseValueScaleConstant={epic_scale_veryrare}
+                    BaseValueScaleConstant=1.000000
                 ),
                 bDropOnDeath=True
             ),
@@ -1194,7 +855,7 @@ loot_str = """
                     BaseValueConstant=1.000000,
                     BaseValueAttribute=None,
                     InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',
-                    BaseValueScaleConstant={epic_scale_alien}
+                    BaseValueScaleConstant=1.000000
                 ),
                 bDropOnDeath=True
             ),
@@ -1205,7 +866,7 @@ loot_str = """
                     BaseValueConstant=1.000000,
                     BaseValueAttribute=None,
                     InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',
-                    BaseValueScaleConstant={epic_scale_legendary_dbl}
+                    BaseValueScaleConstant=1.000000
                 ),
                 bDropOnDeath=True
             )
@@ -1220,7 +881,7 @@ loot_str = """
                     BaseValueConstant=1.000000,
                     BaseValueAttribute=None,
                     InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',
-                    BaseValueScaleConstant={epic_scale_veryrare}
+                    BaseValueScaleConstant=1.000000
                 ),
                 bDropOnDeath=True
             ),
@@ -1231,7 +892,7 @@ loot_str = """
                     BaseValueConstant=1.000000,
                     BaseValueAttribute=None,
                     InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',
-                    BaseValueScaleConstant={epic_scale_legendary}
+                    BaseValueScaleConstant=0.500000
                 ),
                 bDropOnDeath=True
             )
@@ -2318,10 +1979,10 @@ loot_str = """
                 ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_All_01_Common',
                 InvBalanceDefinition=None,
                 Probability=(
-                    BaseValueConstant={weapon_base_common},
+                    BaseValueConstant=1.000000,
                     BaseValueAttribute=None,
                     InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',
-                    BaseValueScaleConstant={weapon_scale_common}
+                    BaseValueScaleConstant=8.000000
                 ),
                 bDropOnDeath=True
             ),
@@ -2329,10 +1990,10 @@ loot_str = """
                 ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_All_02_Uncommon',
                 InvBalanceDefinition=None,
                 Probability=(
-                    BaseValueConstant={weapon_base_uncommon},
+                    BaseValueConstant=1.000000,
                     BaseValueAttribute=None,
                     InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',
-                    BaseValueScaleConstant={weapon_scale_uncommon}
+                    BaseValueScaleConstant=85.000000
                 ),
                 bDropOnDeath=True
             ),
@@ -2340,10 +2001,10 @@ loot_str = """
                 ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_All_04_Rare',
                 InvBalanceDefinition=None,
                 Probability=(
-                    BaseValueConstant={weapon_base_rare},
+                    BaseValueConstant=1.000000,
                     BaseValueAttribute=None,
                     InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',
-                    BaseValueScaleConstant={weapon_scale_rare}
+                    BaseValueScaleConstant=55.000000
                 ),
                 bDropOnDeath=True
             ),
@@ -2351,10 +2012,10 @@ loot_str = """
                 ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_All_05_VeryRare',
                 InvBalanceDefinition=None,
                 Probability=(
-                    BaseValueConstant={weapon_base_veryrare},
+                    BaseValueConstant=1.000000,
                     BaseValueAttribute=None,
                     InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',
-                    BaseValueScaleConstant={weapon_scale_veryrare}
+                    BaseValueScaleConstant=50.000000
                 ),
                 bDropOnDeath=True
             ),
@@ -2362,10 +2023,10 @@ loot_str = """
                 ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_All_05_VeryRare_Alien',
                 InvBalanceDefinition=None,
                 Probability=(
-                    BaseValueConstant={weapon_base_alien},
+                    BaseValueConstant=1.000000,
                     BaseValueAttribute=None,
                     InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',
-                    BaseValueScaleConstant={weapon_scale_alien}
+                    BaseValueScaleConstant=30.000000
                 ),
                 bDropOnDeath=True
             ),
@@ -2373,10 +2034,10 @@ loot_str = """
                 ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_All_06_Legendary',
                 InvBalanceDefinition=None,
                 Probability=(
-                    BaseValueConstant={weapon_base_legendary},
+                    BaseValueConstant=1.000000,
                     BaseValueAttribute=None,
                     InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',
-                    BaseValueScaleConstant={weapon_scale_legendary}
+                    BaseValueScaleConstant=3.000000
                 ),
                 bDropOnDeath=True
             )
@@ -2396,10 +2057,10 @@ loot_str = """
                 ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ClassModPools.Pool_ClassMod_01_Common',
                 InvBalanceDefinition=None,
                 Probability=(
-                    BaseValueConstant={cm_base_common},
+                    BaseValueConstant=1.000000,
                     BaseValueAttribute=None,
                     InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',
-                    BaseValueScaleConstant={cm_scale_common}
+                    BaseValueScaleConstant=8.000000
                 ),
                 bDropOnDeath=True
             ),
@@ -2407,10 +2068,10 @@ loot_str = """
                 ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ClassModPools.Pool_ClassMod_02_Uncommon',
                 InvBalanceDefinition=None,
                 Probability=(
-                    BaseValueConstant={cm_base_uncommon},
+                    BaseValueConstant=1.000000,
                     BaseValueAttribute=None,
                     InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',
-                    BaseValueScaleConstant={cm_scale_uncommon}
+                    BaseValueScaleConstant=85.000000
                 ),
                 bDropOnDeath=True
             ),
@@ -2418,10 +2079,10 @@ loot_str = """
                 ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ClassModPools.Pool_ClassMod_04_Rare',
                 InvBalanceDefinition=None,
                 Probability=(
-                    BaseValueConstant={cm_base_rare},
+                    BaseValueConstant=1.000000,
                     BaseValueAttribute=None,
                     InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',
-                    BaseValueScaleConstant={cm_scale_rare}
+                    BaseValueScaleConstant=55.000000
                 ),
                 bDropOnDeath=True
             ),
@@ -2429,10 +2090,10 @@ loot_str = """
                 ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ClassModPools.Pool_ClassMod_05_VeryRare',
                 InvBalanceDefinition=None,
                 Probability=(
-                    BaseValueConstant={cm_base_veryrare},
+                    BaseValueConstant=1.000000,
                     BaseValueAttribute=None,
                     InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',
-                    BaseValueScaleConstant={cm_scale_veryrare}
+                    BaseValueScaleConstant=50.000000
                 ),
                 bDropOnDeath=True
             ),
@@ -2440,10 +2101,10 @@ loot_str = """
                 ItmPoolDefinition=ItemPoolDefinition'GD_Aster_ItemPools.ClassModPools.Pool_ClassMod_00_Aster',
                 InvBalanceDefinition=None,
                 Probability=(
-                    BaseValueConstant={cm_base_veryrare},
+                    BaseValueConstant=1.000000,
                     BaseValueAttribute=None,
                     InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',
-                    BaseValueScaleConstant={cm_scale_alignment}
+                    BaseValueScaleConstant=30.000000
                 ),
                 bDropOnDeath=True
             ),
@@ -2451,10 +2112,10 @@ loot_str = """
                 ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ClassModPools.Pool_ClassMod_06_Legendary',
                 InvBalanceDefinition=None,
                 Probability=(
-                    BaseValueConstant={cm_base_legendary},
+                    BaseValueConstant=1.000000,
                     BaseValueAttribute=None,
                     InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',
-                    BaseValueScaleConstant={cm_scale_legendary}
+                    BaseValueScaleConstant=3.000000
                 ),
                 bDropOnDeath=True
             )
@@ -3804,10 +3465,10 @@ loot_str = """
                 ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.GrenadeModPools.Pool_GrenadeMods_01_Common',
                 InvBalanceDefinition=None,
                 Probability=(
-                    BaseValueConstant={grenade_base_common},
+                    BaseValueConstant=0.000000,
                     BaseValueAttribute=None,
                     InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',
-                    BaseValueScaleConstant={grenade_scale_common}
+                    BaseValueScaleConstant=8.000000
                 ),
                 bDropOnDeath=True
             ),
@@ -3815,10 +3476,10 @@ loot_str = """
                 ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.GrenadeModPools.Pool_GrenadeMods_02_Uncommon',
                 InvBalanceDefinition=None,
                 Probability=(
-                    BaseValueConstant={grenade_base_uncommon},
+                    BaseValueConstant=0.000000,
                     BaseValueAttribute=None,
                     InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',
-                    BaseValueScaleConstant={grenade_scale_uncommon}
+                    BaseValueScaleConstant=85.000000
                 ),
                 bDropOnDeath=True
             ),
@@ -3826,10 +3487,10 @@ loot_str = """
                 ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.GrenadeModPools.Pool_GrenadeMods_04_Rare',
                 InvBalanceDefinition=None,
                 Probability=(
-                    BaseValueConstant={grenade_base_rare},
+                    BaseValueConstant=0.000000,
                     BaseValueAttribute=None,
                     InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',
-                    BaseValueScaleConstant={grenade_scale_rare}
+                    BaseValueScaleConstant=55.000000
                 ),
                 bDropOnDeath=True
             ),
@@ -3837,20 +3498,20 @@ loot_str = """
                 ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.GrenadeModPools.Pool_GrenadeMods_05_VeryRare',
                 InvBalanceDefinition=None,
                 Probability=(
-                    BaseValueConstant={grenade_base_veryrare},
+                    BaseValueConstant=0.000000,
                     BaseValueAttribute=None,
                     InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',
-                    BaseValueScaleConstant={grenade_scale_veryrare}
+                    BaseValueScaleConstant=50.000000
                 ),
                 bDropOnDeath=True
             ),(
                 ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.GrenadeModPools.Pool_GrenadeMods_06_Legendary',
                 InvBalanceDefinition=None,
                 Probability=(
-                    BaseValueConstant={grenade_base_legendary},
+                    BaseValueConstant=0.000000,
                     BaseValueAttribute=None,
                     InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',
-                    BaseValueScaleConstant={grenade_scale_legendary}
+                    BaseValueScaleConstant=3.000000
                 ),
                 bDropOnDeath=True
             )
@@ -3868,10 +3529,10 @@ loot_str = """
                 ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ShieldPools.Pool_Shields_All_01_Common',
                 InvBalanceDefinition=None,
                 Probability=(
-                    BaseValueConstant={shield_base_common},
+                    BaseValueConstant=1.000000,
                     BaseValueAttribute=None,
                     InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',
-                    BaseValueScaleConstant={shield_scale_common}
+                    BaseValueScaleConstant=8.000000
                 ),
                 bDropOnDeath=True
             ),
@@ -3879,10 +3540,10 @@ loot_str = """
                 ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ShieldPools.Pool_Shields_All_02_Uncommon',
                 InvBalanceDefinition=None,
                 Probability=(
-                    BaseValueConstant={shield_base_uncommon},
+                    BaseValueConstant=1.000000,
                     BaseValueAttribute=None,
                     InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',
-                    BaseValueScaleConstant={shield_scale_uncommon}
+                    BaseValueScaleConstant=85.000000
                 ),
                 bDropOnDeath=True
             ),
@@ -3890,10 +3551,10 @@ loot_str = """
                 ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ShieldPools.Pool_Shields_All_04_Rare',
                 InvBalanceDefinition=None,
                 Probability=(
-                    BaseValueConstant={shield_base_rare},
+                    BaseValueConstant=1.000000,
                     BaseValueAttribute=None,
                     InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',
-                    BaseValueScaleConstant={shield_scale_rare}
+                    BaseValueScaleConstant=55.000000
                 ),
                 bDropOnDeath=True
             ),
@@ -3901,10 +3562,10 @@ loot_str = """
                 ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ShieldPools.Pool_Shields_All_05_VeryRare',
                 InvBalanceDefinition=None,
                 Probability=(
-                    BaseValueConstant={shield_base_veryrare},
+                    BaseValueConstant=1.000000,
                     BaseValueAttribute=None,
                     InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',
-                    BaseValueScaleConstant={shield_scale_veryrare}
+                    BaseValueScaleConstant=50.000000
                 ),
                 bDropOnDeath=True
             ),
@@ -3912,10 +3573,10 @@ loot_str = """
                 ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ShieldPools.Pool_Shields_All_06_Legendary',
                 InvBalanceDefinition=None,
                 Probability=(
-                    BaseValueConstant={shield_base_legendary},
+                    BaseValueConstant=1.000000,
                     BaseValueAttribute=None,
                     InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',
-                    BaseValueScaleConstant={shield_scale_legendary}
+                    BaseValueScaleConstant=3.000000
                 ),
                 bDropOnDeath=True
             )
@@ -6560,7 +6221,7 @@ loot_str = """
                     BaseValueConstant=1.000000,
                     BaseValueAttribute=None,
                     InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',
-                    BaseValueScaleConstant={epic_scale_legendary_dbl}
+                    BaseValueScaleConstant=1.000000
                 ),
                 bDropOnDeath=True
             )
@@ -6572,8 +6233,8 @@ loot_str = """
 
         # Makes Eridium drop a little more frequently
 
-        set GD_Itempools.DropWeights.DropODDS_EridiumBar:ConstantAttributeValueResolver_1 ConstantValue {eridium_bar_drop}
-        set GD_Itempools.DropWeights.DropODDS_EridiumStick:ConstantAttributeValueResolver_1 ConstantValue {eridium_stick_drop}
+        set GD_Itempools.DropWeights.DropODDS_EridiumBar:ConstantAttributeValueResolver_1 ConstantValue 0.004500
+        set GD_Itempools.DropWeights.DropODDS_EridiumStick:ConstantAttributeValueResolver_1 ConstantValue 0.024000
 
     #</More Frequent Eridium>
 
@@ -6587,7 +6248,7 @@ loot_str = """
         # A lot of DLC minibosses don't use the DropODDs_BossUniques* vars and
         # have to be patched manually
 
-        {hotfixes:scarlett_nobeard}
+        #<hotfix><key>"SparkLevelPatchEntry-NoBeardDrop1"</key><value>",GD_Orchid_Pop_NoBeard.PawnBalance_Orchid_NoBeard,DefaultItemPoolList[1].PoolProbability.BaseValueConstant,,1.0"</value><on>
 
     #</Guaranteed Boss Drops>
 
@@ -7537,90 +7198,114 @@ loot_str = """
 
     #</Remove Loot restriction in the beginning areas (enhancement of UCP 4.0)>
 
-{test_drop_str}
-{gunsandgear_drop_str}
 
-#</{mod_name} ({variant_name})>
 
-{hotfix_transient_defs}
+    #<Guaranteed Enemy Loot Drop Chance (disabled by default)>
 
-""".format(
-        mod_name=mod_name,
-        weapon_base_common=weapon_base_common,
-        weapon_scale_common=weapon_scale_common,
-        weapon_base_uncommon=weapon_base_uncommon,
-        weapon_scale_uncommon=weapon_scale_uncommon,
-        weapon_base_rare=weapon_base_rare,
-        weapon_scale_rare=weapon_scale_rare,
-        weapon_base_veryrare=weapon_base_veryrare,
-        weapon_scale_veryrare=weapon_scale_veryrare,
-        weapon_base_alien=weapon_base_alien,
-        weapon_scale_alien=weapon_scale_alien,
-        weapon_base_legendary=weapon_base_legendary,
-        weapon_scale_legendary=weapon_scale_legendary,
-        cm_base_common=cm_base_common,
-        cm_scale_common=cm_scale_common,
-        cm_base_uncommon=cm_base_uncommon,
-        cm_scale_uncommon=cm_scale_uncommon,
-        cm_base_rare=cm_base_rare,
-        cm_scale_rare=cm_scale_rare,
-        cm_base_veryrare=cm_base_veryrare,
-        cm_scale_veryrare=cm_scale_veryrare,
-        cm_scale_alignment=cm_scale_alignment,
-        cm_base_legendary=cm_base_legendary,
-        cm_scale_legendary=cm_scale_legendary,
-        grenade_base_common=grenade_base_common,
-        grenade_scale_common=grenade_scale_common,
-        grenade_base_uncommon=grenade_base_uncommon,
-        grenade_scale_uncommon=grenade_scale_uncommon,
-        grenade_base_rare=grenade_base_rare,
-        grenade_scale_rare=grenade_scale_rare,
-        grenade_base_veryrare=grenade_base_veryrare,
-        grenade_scale_veryrare=grenade_scale_veryrare,
-        grenade_base_legendary=grenade_base_legendary,
-        grenade_scale_legendary=grenade_scale_legendary,
-        shield_base_common=shield_base_common,
-        shield_scale_common=shield_scale_common,
-        shield_base_uncommon=shield_base_uncommon,
-        shield_scale_uncommon=shield_scale_uncommon,
-        shield_base_rare=shield_base_rare,
-        shield_scale_rare=shield_scale_rare,
-        shield_base_veryrare=shield_base_veryrare,
-        shield_scale_veryrare=shield_scale_veryrare,
-        shield_base_legendary=shield_base_legendary,
-        shield_scale_legendary=shield_scale_legendary,
-        eridium_bar_drop=eridium_bar_drop,
-        eridium_stick_drop=eridium_stick_drop,
-        treasure_scale_rare=treasure_scale_rare,
-        treasure_scale_veryrare=treasure_scale_veryrare,
-        treasure_scale_alien=treasure_scale_alien,
-        treasure_scale_legendary=treasure_scale_legendary,
-        epic_scale_veryrare=epic_scale_veryrare,
-        epic_scale_alien=epic_scale_alien,
-        epic_scale_legendary=epic_scale_legendary,
-        epic_scale_legendary_dbl=epic_scale_legendary_dbl,
-        gunsandgear_drop_str=gunsandgear_drop_str,
-        test_drop_str=test_drop_str,
-        hotfixes=hfs,
-        variant_name='{variant_name}',
-        hotfix_gearbox_base='{hotfix_gearbox_base}',
-        hotfix_transient_defs='{hotfix_transient_defs}',
-    )
+        ## Gives a 100% chance to drop loot from enemies.    <off>
+        ## Just used during my own testing to get a feel for drop rates.    <off>
 
-# Write to a filtertool/ucp compatible file
-with open(output_filename_filtertool, 'w') as df:
-    df.write(loot_str.format(
-        variant_name=variant_filtertool_name,
-        hotfix_gearbox_base='',
-        hotfix_transient_defs='',
-        ))
-print('Wrote FilterTool/UCP-compatible mod file to: {}'.format(output_filename_filtertool))
+        #set GD_Itempools.DropWeights.DropODDS_GunsAndGear:ConditionalAttributeValueResolver_0 ValueExpressions
+        (
+            bEnabled=True,
+            ConditionalExpressionList=(
+                (
+                    BaseValueIfTrue=(
+                        BaseValueConstant=1.000000,
+                        BaseValueAttribute=None,
+                        InitializationDefinition=None,
+                        BaseValueScaleConstant=1.000000
+                    ),
+                    Expressions=(
+                        (
+                            AttributeOperand1=AttributeDefinition'D_Attributes.GameProperties.NumberOfPlayers',
+                            ComparisonOperator=OPERATOR_EqualTo,
+                            Operand2Usage=OPERAND_PreferAttribute,
+                            AttributeOperand2=None,
+                            ConstantOperand2=1.000000
+                        )
+                    )
+                ),
+                (
+                    BaseValueIfTrue=(
+                        BaseValueConstant=1.000000,
+                        BaseValueAttribute=None,
+                        InitializationDefinition=None,
+                        BaseValueScaleConstant=1.000000
+                    ),
+                    Expressions=(
+                        (
+                            AttributeOperand1=AttributeDefinition'D_Attributes.GameProperties.NumberOfPlayers',
+                            ComparisonOperator=OPERATOR_EqualTo,
+                            Operand2Usage=OPERAND_PreferAttribute,
+                            AttributeOperand2=None,
+                            ConstantOperand2=2.000000
+                        )
+                    )
+                ),
+                (
+                    BaseValueIfTrue=(
+                        BaseValueConstant=1.000000,
+                        BaseValueAttribute=None,
+                        InitializationDefinition=None,
+                        BaseValueScaleConstant=1.000000
+                    ),
+                    Expressions=(
+                        (
+                            AttributeOperand1=AttributeDefinition'D_Attributes.GameProperties.NumberOfPlayers',
+                            ComparisonOperator=OPERATOR_EqualTo,
+                            Operand2Usage=OPERAND_PreferAttribute,
+                            AttributeOperand2=None,
+                            ConstantOperand2=3.000000
+                        )
+                    )
+                ),
+                (
+                    BaseValueIfTrue=(
+                        BaseValueConstant=1.000000,
+                        BaseValueAttribute=None,
+                        InitializationDefinition=None,
+                        BaseValueScaleConstant=1.000000
+                    ),
+                    Expressions=(
+                        (
+                            AttributeOperand1=AttributeDefinition'D_Attributes.GameProperties.NumberOfPlayers',
+                            ComparisonOperator=OPERATOR_EqualTo,
+                            Operand2Usage=OPERAND_PreferAttribute,
+                            AttributeOperand2=None,
+                            ConstantOperand2=4.000000
+                        )
+                    )
+                )
+            ),
+            DefaultBaseValue=(
+                BaseValueConstant=0.000000,
+                BaseValueAttribute=None,
+                InitializationDefinition=None,
+                BaseValueScaleConstant=1.000000
+            )
+        )    <off>
 
-# Write to a standalone file
-with open(output_filename_standalone, 'w') as df:
-    df.write(loot_str.format(
-        variant_name=variant_standalone_name,
-        hotfix_gearbox_base=hfs.get_gearbox_hotfix_xml(),
-        hotfix_transient_defs=hfs.get_transient_defs(),
-        ))
-print('Wrote standalone mod file to: {}'.format(output_filename_standalone))
+    #</Guaranteed Enemy Loot Drop Chance (disabled by default)>
+
+    #<Extreme Enemy Loot Drop Quantity (disabled by default)>
+
+        ## Enemies drop 5 items instead of just one.    <off>
+        ## Just used during my own testing to get a feel for drop rates.    <off>
+
+        #set GD_Itempools.GeneralItemPools.Pool_GunsAndGear Quantity
+        (
+            BaseValueConstant=5,
+            BaseValueAttribute=None,
+            InitializationDefinition=None,
+            BaseValueScaleConstant=1.000000
+        )    <off>
+
+    #</Extreme Enemy Loot Drop Quantity (disabled by default)>
+    
+
+
+#</BL2 Better Loot Mod by Apocalyptech (FilterTool and UCP Compat)>
+
+
+

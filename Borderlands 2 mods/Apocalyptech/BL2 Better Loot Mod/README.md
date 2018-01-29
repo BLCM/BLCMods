@@ -11,14 +11,28 @@ to a point where I never felt tempted to open up Gibbed.
 
 This patch is set up to play nicely with FilterTool, and basically
 everything in here can be toggled on or off inside FilterTool as you'd
-hope, on an item-by-item basis.  Basically every bullet point in here is
-its own "folder" once imported into FilterTool.
+hope, on an item-by-item basis.  Basically every bullet point in the
+"Overview" section is its own "folder" once imported into FilterTool.
 
-To add this mod to FilterTool, use the base file
-`BL2 Better Loot Mod by Apocalyptech` (without any extensions, etc).  You
-could alternatively rename that file to anything more easy-to-type in the
-console, and then just `exec <filename>` from the console to load it on its
-own.  It works quite well by itself.
+Usage/Installation
+------------------
+
+The recommended way to use this mod is with FilterTool/UCP.  In FilterTool,
+select `Developer Tools` -> `Add Single Mod` and then select the file
+file `BL2 Better Loot Mod by Apocalyptech - FilterTool and UCP Compat`
+(without any extensions).  You'll have a new folder for this mod underneath
+the `mods` folder at the bottom, and can turn parts on or off at will.
+
+If for whatever reason you don't want to use FilterTool/UCP, there is also
+a standalone version at `BL2 Better Loot Mod by Apocalyptech - Standalone`.
+Simply copy that file into the game's `steamassets/binaries` directory with
+an easy-to-type filename, and then run `exec <filename>` from the console
+to load it on its own.  It works quite well by itself.
+
+The reason it's split up this way is due to how hotfixes are processed.  If
+you're using UCP/FilterTool, all the default Gearbox hotfixes are handled
+for you.  But if you want to just use this mod for whatever reason, it needs
+to take care of the default hotfixes itself, hence the different files.
 
 Mod Overview
 ------------
@@ -147,7 +161,9 @@ my `conv_to_mod.py` script which you'll find in the parent directory.
 To generate the end result file, I actually run the small shell script
 `create.sh` in this directory, which just does the following:
 
-    ./generate-source.py && ../conv_to_mod.py -f "BL2 Better Loot Mod by Apocalyptech"
+    ./generate-source.py && \
+        ../conv_to_mod.py -f "BL2 Better Loot Mod by Apocalyptech - FilterTool and UCP Compat" && \
+        ../conv_to_mod.py -f "BL2 Better Loot Mod by Apocalyptech - Standalone"
 
 Credits
 -------
