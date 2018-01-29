@@ -1,6 +1,8 @@
-Yes, stuff will break somewhere maybe.
-Yes, it's very incompatible with lots of mods.
-Yes, stuff might be unbalanced (in a good or bad way).
+If you want to experience Borderlands 2 in a new way, this modpack is exactly for you.
+
+As of version 1.2, there are 106 mods in BL2Reborn. You can find a list of all mods and their descriptions in the attached "Mod List.txt".
+
+Download the modpack by rightclicking the "Download" button in "BL2Reborn.txt" and "Save link as...".
 
 Lots of options are hand-picked by me. Don't enable/disable stuff unless you know exactly what you're doing!
 
@@ -33,9 +35,6 @@ discord.gg/shadowevil
 ------------------------------------------------------------------------------------------------------------
 
 FAQ 
-
-"Which mods are included in BL2Reborn?"
-  As of version 1.1, there are 105 mods in BL2Reborn. You can find a list of all mods and their descriptions in the attached ModpackInfo.txt.
 
 "How do I install mods?"
   1. Download LightChaosman's Filter Tool (https://www.youtube.com/watch?v=zJ4qI4U_lE0) and install Java if you don't have it yet.
