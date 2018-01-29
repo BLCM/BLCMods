@@ -139,6 +139,10 @@ force_gunsandgear_specific_name = 'GD_Orchid_BossWeapons.RPG.Ahab.Orchid_Boss_Ah
 hfs.add_hotfix('scarlett_nobeard', 'SparkLevelPatchEntry-NoBeardDrop1',
     ',GD_Orchid_Pop_NoBeard.PawnBalance_Orchid_NoBeard,DefaultItemPoolList[1].PoolProbability.BaseValueConstant,,1.0')
 
+# Make Big Sleep always drop his unique
+hfs.add_hotfix('scarlett_bigsleep', 'SparkLevelPatchEntry-BigSleepDrop1',
+    ',GD_Orchid_Pop_Sandman.Balance.PawnBalance_Orchid_BigSleep,DefaultItemPoolList[1].PoolProbability.BaseValueConstant,,1.0')
+
 ###
 ### Everything below this point is constructing the actual patch file
 ###
@@ -6665,6 +6669,8 @@ loot_str = """
         # have to be patched manually
 
         {hotfixes:scarlett_nobeard}
+
+        {hotfixes:scarlett_bigsleep}
 
     #</Guaranteed Boss Drops>
 
