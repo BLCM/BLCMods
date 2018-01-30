@@ -450,13 +450,17 @@
 
     #<Remove Level-Based Loot Restrictions (enhancement of UCP 4.0)>
         
-        # This is a superset of the UCP 4.0 mod section of the same name, which
-        # additionally allows Relics, Class Mods, all shield types, and probably
+        # This is a superset of a similar UCP 4.0 mod section.  In addition to the
+        # basic early-game weapon unlocks that UCP provides, this additionally allows
+        # Relics, Class Mods, all shield types, all grenade types, and probably
         # just about everything to spawn from the beginning.
         #
-        # It's reproduced in here because without it, the rest of this mod would
-        # result in zero gear being dropped in the early game.  This can be
-        # enabled alongside the UCP4.0 definition with no ill effects.
+        # Either UCP or the "UCP 4.0 Duplicates" section here, at least, will need to
+        # be active if the rest of this mod is active, because otherwise the early
+        # game will drop literally no loot.
+        #
+        # There's no problem with having both this and UCP enabled -- it'll just mean
+        # that a few statements get executed twice.
 
         #<UCP 4.0 Duplicates>
 
@@ -469,6 +473,9 @@
         #</UCP 4.0 Duplicates>
 
         #<Additional Unlocks>
+
+            # These take care of a ton of other stuff, like other weapon types (rocket launchers,
+            # etc), Relics, etc.
 
             set GD_Itempools.Scheduling.Gamestage_04:ConstantAttributeValueResolver_0 ConstantValue 1 
 
@@ -514,6 +521,8 @@
 
         #<Class Mods>
 
+            # Class Mods have their own set of scheduling parameters
+
             set GD_Itempools.Scheduling.LootSchedule_ClassMod_01_Common:ConstantAttributeValueResolver_0 ConstantValue 1 
 
             set GD_Itempools.Scheduling.LootSchedule_ClassMod_02_Uncommon:ConstantAttributeValueResolver_0 ConstantValue 1 
@@ -525,6 +534,87 @@
             set GD_Itempools.Scheduling.LootSchedule_ClassMod_05_Legendary:ConstantAttributeValueResolver_0 ConstantValue 1 
 
         #</Class Mods>
+
+        #<Grenade Mods>
+
+            # The various grenade mod components are restricted by level
+
+            set GD_GrenadeMods.BalanceAttributes.MinGameStage_CorrosiveGrenade:ConstantAttributeValueResolver_0 ConstantValue 1 
+
+            set GD_GrenadeMods.BalanceAttributes.MinGameStage_Homing:ConstantAttributeValueResolver_0 ConstantValue 1 
+
+            set GD_GrenadeMods.BalanceAttributes.MinGameStage_IncendiaryGrenade:ConstantAttributeValueResolver_0 ConstantValue 1 
+
+            set GD_GrenadeMods.BalanceAttributes.MinGameStage_Longbow:ConstantAttributeValueResolver_0 ConstantValue 1 
+
+            set GD_GrenadeMods.BalanceAttributes.MinGameStage_Rubberized:ConstantAttributeValueResolver_0 ConstantValue 1 
+
+            set GD_GrenadeMods.BalanceAttributes.MinGameStage_ShockGrenade:ConstantAttributeValueResolver_0 ConstantValue 1 
+
+            set GD_GrenadeMods.BalanceAttributes.MinGameStage_SlagGrenade:ConstantAttributeValueResolver_0 ConstantValue 1 
+
+            set GD_GrenadeMods.BalanceAttributes.MinGameStage_Sticky:ConstantAttributeValueResolver_0 ConstantValue 1 
+
+            # These definitions could be done with "set" as with other stuff, but
+            # it's actually a little more convenient to do 'em with hotfixes
+
+            #<hotfix><key>"SparkLevelPatchEntry-GrenadeAreaEffect0-0"</key><value>",GD_GrenadeMods.A_Item.GM_AreaEffect,Manufacturers[0].Grades[0].GameStageRequirement.MinGameStage,,0"</value><on>
+
+            #<hotfix><key>"SparkLevelPatchEntry-GrenadeAreaEffect0-1"</key><value>",GD_GrenadeMods.A_Item.GM_AreaEffect_2_Uncommon,Manufacturers[0].Grades[0].GameStageRequirement.MinGameStage,,0"</value><on>
+
+            #<hotfix><key>"SparkLevelPatchEntry-GrenadeAreaEffect0-2"</key><value>",GD_GrenadeMods.A_Item.GM_AreaEffect_3_Rare,Manufacturers[0].Grades[0].GameStageRequirement.MinGameStage,,0"</value><on>
+
+            #<hotfix><key>"SparkLevelPatchEntry-GrenadeAreaEffect0-3"</key><value>",GD_GrenadeMods.A_Item.GM_AreaEffect_4_VeryRare,Manufacturers[0].Grades[0].GameStageRequirement.MinGameStage,,0"</value><on>
+
+            #<hotfix><key>"SparkLevelPatchEntry-GrenadeBouncingBetty0-0"</key><value>",GD_GrenadeMods.A_Item.GM_BouncingBetty,Manufacturers[0].Grades[0].GameStageRequirement.MinGameStage,,0"</value><on>
+
+            #<hotfix><key>"SparkLevelPatchEntry-GrenadeBouncingBetty0-1"</key><value>",GD_GrenadeMods.A_Item.GM_BouncingBetty_2_Uncommon,Manufacturers[0].Grades[0].GameStageRequirement.MinGameStage,,0"</value><on>
+
+            #<hotfix><key>"SparkLevelPatchEntry-GrenadeBouncingBetty0-2"</key><value>",GD_GrenadeMods.A_Item.GM_BouncingBetty_3_Rare,Manufacturers[0].Grades[0].GameStageRequirement.MinGameStage,,0"</value><on>
+
+            #<hotfix><key>"SparkLevelPatchEntry-GrenadeBouncingBetty0-3"</key><value>",GD_GrenadeMods.A_Item.GM_BouncingBetty_4_VeryRare,Manufacturers[0].Grades[0].GameStageRequirement.MinGameStage,,0"</value><on>
+
+            #<hotfix><key>"SparkLevelPatchEntry-GrenadeBouncingBetty1-0"</key><value>",GD_GrenadeMods.A_Item.GM_BouncingBetty,Manufacturers[1].Grades[0].GameStageRequirement.MinGameStage,,0"</value><on>
+
+            #<hotfix><key>"SparkLevelPatchEntry-GrenadeBouncingBetty1-1"</key><value>",GD_GrenadeMods.A_Item.GM_BouncingBetty_2_Uncommon,Manufacturers[1].Grades[0].GameStageRequirement.MinGameStage,,0"</value><on>
+
+            #<hotfix><key>"SparkLevelPatchEntry-GrenadeBouncingBetty1-2"</key><value>",GD_GrenadeMods.A_Item.GM_BouncingBetty_3_Rare,Manufacturers[1].Grades[0].GameStageRequirement.MinGameStage,,0"</value><on>
+
+            #<hotfix><key>"SparkLevelPatchEntry-GrenadeBouncingBetty1-3"</key><value>",GD_GrenadeMods.A_Item.GM_BouncingBetty_4_VeryRare,Manufacturers[1].Grades[0].GameStageRequirement.MinGameStage,,0"</value><on>
+
+            #<hotfix><key>"SparkLevelPatchEntry-GrenadeMirv0-0"</key><value>",GD_GrenadeMods.A_Item.GM_Mirv,Manufacturers[0].Grades[0].GameStageRequirement.MinGameStage,,0"</value><on>
+
+            #<hotfix><key>"SparkLevelPatchEntry-GrenadeMirv0-1"</key><value>",GD_GrenadeMods.A_Item.GM_Mirv_2_Uncommon,Manufacturers[0].Grades[0].GameStageRequirement.MinGameStage,,0"</value><on>
+
+            #<hotfix><key>"SparkLevelPatchEntry-GrenadeMirv0-2"</key><value>",GD_GrenadeMods.A_Item.GM_Mirv_3_Rare,Manufacturers[0].Grades[0].GameStageRequirement.MinGameStage,,0"</value><on>
+
+            #<hotfix><key>"SparkLevelPatchEntry-GrenadeMirv0-3"</key><value>",GD_GrenadeMods.A_Item.GM_Mirv_4_VeryRare,Manufacturers[0].Grades[0].GameStageRequirement.MinGameStage,,0"</value><on>
+
+            #<hotfix><key>"SparkLevelPatchEntry-GrenadeMirv1-0"</key><value>",GD_GrenadeMods.A_Item.GM_Mirv,Manufacturers[1].Grades[0].GameStageRequirement.MinGameStage,,0"</value><on>
+
+            #<hotfix><key>"SparkLevelPatchEntry-GrenadeMirv1-1"</key><value>",GD_GrenadeMods.A_Item.GM_Mirv_2_Uncommon,Manufacturers[1].Grades[0].GameStageRequirement.MinGameStage,,0"</value><on>
+
+            #<hotfix><key>"SparkLevelPatchEntry-GrenadeMirv1-2"</key><value>",GD_GrenadeMods.A_Item.GM_Mirv_3_Rare,Manufacturers[1].Grades[0].GameStageRequirement.MinGameStage,,0"</value><on>
+
+            #<hotfix><key>"SparkLevelPatchEntry-GrenadeMirv1-3"</key><value>",GD_GrenadeMods.A_Item.GM_Mirv_4_VeryRare,Manufacturers[1].Grades[0].GameStageRequirement.MinGameStage,,0"</value><on>
+
+            #<hotfix><key>"SparkLevelPatchEntry-GrenadeSingularity0-0"</key><value>",GD_GrenadeMods.A_Item.GM_Singularity,Manufacturers[0].Grades[0].GameStageRequirement.MinGameStage,,0"</value><on>
+
+            #<hotfix><key>"SparkLevelPatchEntry-GrenadeSingularity0-1"</key><value>",GD_GrenadeMods.A_Item.GM_Singularity_2_Uncommon,Manufacturers[0].Grades[0].GameStageRequirement.MinGameStage,,0"</value><on>
+
+            #<hotfix><key>"SparkLevelPatchEntry-GrenadeSingularity0-2"</key><value>",GD_GrenadeMods.A_Item.GM_Singularity_3_Rare,Manufacturers[0].Grades[0].GameStageRequirement.MinGameStage,,0"</value><on>
+
+            #<hotfix><key>"SparkLevelPatchEntry-GrenadeSingularity0-3"</key><value>",GD_GrenadeMods.A_Item.GM_Singularity_4_VeryRare,Manufacturers[0].Grades[0].GameStageRequirement.MinGameStage,,0"</value><on>
+
+            #<hotfix><key>"SparkLevelPatchEntry-GrenadeTransfusion0-0"</key><value>",GD_GrenadeMods.A_Item.GM_Transfusion,Manufacturers[0].Grades[0].GameStageRequirement.MinGameStage,,0"</value><on>
+
+            #<hotfix><key>"SparkLevelPatchEntry-GrenadeTransfusion0-1"</key><value>",GD_GrenadeMods.A_Item.GM_Transfusion_2_Uncommon,Manufacturers[0].Grades[0].GameStageRequirement.MinGameStage,,0"</value><on>
+
+            #<hotfix><key>"SparkLevelPatchEntry-GrenadeTransfusion0-2"</key><value>",GD_GrenadeMods.A_Item.GM_Transfusion_3_Rare,Manufacturers[0].Grades[0].GameStageRequirement.MinGameStage,,0"</value><on>
+
+            #<hotfix><key>"SparkLevelPatchEntry-GrenadeTransfusion0-3"</key><value>",GD_GrenadeMods.A_Item.GM_Transfusion_4_VeryRare,Manufacturers[0].Grades[0].GameStageRequirement.MinGameStage,,0"</value><on>
+
+        #</Grenade Mods>
 
         #<Lobelia Pearlescent Pool>
 

@@ -121,7 +121,7 @@ loot_drop_quantity = '5'            # Stock: 1.000000
 # Force Pool_GunsAndGear to always drop the specified pool, if `force_gunsandgear_drop`
 # is True.  Useful for testing out how individual pools are behaving.
 force_gunsandgear_drop = False
-force_gunsandgear_drop_type = 'GD_Itempools.Treasure_ChestPools.Pool_WeaponChest_Shields'
+force_gunsandgear_drop_type = 'GD_Itempools.GrenadeModPools.Pool_GrenadeMods_All'
 
 # Force Pool_GunsAndGear to always drop the specified item, if
 # `force_gunsandgear_specific` is True.  Useful for seeing what exactly an
@@ -146,6 +146,38 @@ hfs.add_hotfix('scarlett_bigsleep', 'SparkLevelPatchEntry-BigSleepDrop1',
 # Make the Chubby drop pool better.
 hfs.add_hotfix('chubby_drop', 'SparkLevelPatchEntry-ChubbyDrop1',
     ",GD_Itempools.ListDefs.ChubbyEnemyGunsAndGear,ItemPools,,((ItemPool=ItemPoolDefinition'GD_Itempools.Runnables.Pool_ChubbieUniques',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.EnemyDropPools.Pool_GunsAndGear_05_VeryRare',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.GeneralItemPools.Pool_GunsAndGear',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.EnemyDropPools.Pool_GunsAndGear_05_VeryRare',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.WeightingPlayerCount.GearDrops_PerPlayer',BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.GeneralItemPools.Pool_GunsAndGear',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.WeightingPlayerCount.GearDrops_PerPlayer',BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.Treasure_ChestPools.Pool_EpicChest_Weapons_GunsAndGear',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.WeightingPlayerCount.GearDrops_PerPlayer',BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.VehicleSkins.Pool_VehicleSkins_All',PoolProbability=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'GD_Itempools.DropWeights.DropODDS_VehicleSkins',InitializationDefinition=None,BaseValueScaleConstant=10.000000)),(ItemPool=CrossDLCItemPoolDefinition'GD_Lobelia_Itempools.WeaponPools.Pool_Lobelia_Pearlescent_Weapons_All',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Eridium_Bar',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Eridium_Bar',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Eridium_Bar',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Eridium_Bar',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Eridium_Stick',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Eridium_Stick',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Eridium_Stick',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Eridium_Stick',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.BuffDrinkPools.Pool_BuffDrinks_HealingInstant',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Ammo_All_NeedOnly',PoolProbability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.WeightingPlayerCount.AmmoDrops_PerPlayer',BaseValueScaleConstant=0.250000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Ammo_All_Emergency',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))")
+
+# Various grenade mod early unlocks.  These actually don't have to be
+# hotfixes, but doing so lets us be much more concise.
+
+for (gm_type, man_count) in (
+            ('AreaEffect', 1),
+            ('BouncingBetty', 2),
+            ('Mirv', 2),
+            ('Singularity', 1),
+            ('Transfusion', 1),
+        ):
+    for man_num in range(man_count):
+        hfs.add_hotfix('grenade_{}_{}_0'.format(gm_type, man_num),
+            'SparkLevelPatchEntry-Grenade{}{}-0'.format(gm_type, man_num),
+            ',GD_GrenadeMods.A_Item.GM_{},Manufacturers[{}].Grades[0].GameStageRequirement.MinGameStage,,0'.format(
+                gm_type, man_num,
+            ))
+        hfs.add_hotfix('grenade_{}_{}_1'.format(gm_type, man_num),
+            'SparkLevelPatchEntry-Grenade{}{}-1'.format(gm_type, man_num),
+            ',GD_GrenadeMods.A_Item.GM_{}_2_Uncommon,Manufacturers[{}].Grades[0].GameStageRequirement.MinGameStage,,0'.format(
+                gm_type, man_num,
+            ))
+        hfs.add_hotfix('grenade_{}_{}_2'.format(gm_type, man_num),
+            'SparkLevelPatchEntry-Grenade{}{}-2'.format(gm_type, man_num),
+            ',GD_GrenadeMods.A_Item.GM_{}_3_Rare,Manufacturers[{}].Grades[0].GameStageRequirement.MinGameStage,,0'.format(
+                gm_type, man_num,
+            ))
+        hfs.add_hotfix('grenade_{}_{}_3'.format(gm_type, man_num),
+            'SparkLevelPatchEntry-Grenade{}{}-3'.format(gm_type, man_num),
+            ',GD_GrenadeMods.A_Item.GM_{}_4_VeryRare,Manufacturers[{}].Grades[0].GameStageRequirement.MinGameStage,,0'.format(
+                gm_type, man_num,
+            ))
 
 ###
 ### Testing hotfixes, not really intended to be used for real.  These
@@ -8342,13 +8374,17 @@ loot_str = """
 
     #<Remove Level-Based Loot Restrictions (enhancement of UCP 4.0)>
         
-        # This is a superset of the UCP 4.0 mod section of the same name, which
-        # additionally allows Relics, Class Mods, all shield types, and probably
+        # This is a superset of a similar UCP 4.0 mod section.  In addition to the
+        # basic early-game weapon unlocks that UCP provides, this additionally allows
+        # Relics, Class Mods, all shield types, all grenade types, and probably
         # just about everything to spawn from the beginning.
         #
-        # It's reproduced in here because without it, the rest of this mod would
-        # result in zero gear being dropped in the early game.  This can be
-        # enabled alongside the UCP4.0 definition with no ill effects.
+        # Either UCP or the "UCP 4.0 Duplicates" section here, at least, will need to
+        # be active if the rest of this mod is active, because otherwise the early
+        # game will drop literally no loot.
+        #
+        # There's no problem with having both this and UCP enabled -- it'll just mean
+        # that a few statements get executed twice.
 
         #<UCP 4.0 Duplicates>
 
@@ -8361,6 +8397,9 @@ loot_str = """
         #</UCP 4.0 Duplicates>
 
         #<Additional Unlocks>
+
+            # These take care of a ton of other stuff, like other weapon types (rocket launchers,
+            # etc), Relics, etc.
 
             set GD_Itempools.Scheduling.Gamestage_04:ConstantAttributeValueResolver_0 ConstantValue 1
 
@@ -8406,6 +8445,8 @@ loot_str = """
 
         #<Class Mods>
 
+            # Class Mods have their own set of scheduling parameters
+
             set GD_Itempools.Scheduling.LootSchedule_ClassMod_01_Common:ConstantAttributeValueResolver_0 ConstantValue 1
 
             set GD_Itempools.Scheduling.LootSchedule_ClassMod_02_Uncommon:ConstantAttributeValueResolver_0 ConstantValue 1
@@ -8417,6 +8458,87 @@ loot_str = """
             set GD_Itempools.Scheduling.LootSchedule_ClassMod_05_Legendary:ConstantAttributeValueResolver_0 ConstantValue 1
 
         #</Class Mods>
+
+        #<Grenade Mods>
+
+            # The various grenade mod components are restricted by level
+
+            set GD_GrenadeMods.BalanceAttributes.MinGameStage_CorrosiveGrenade:ConstantAttributeValueResolver_0 ConstantValue 1
+
+            set GD_GrenadeMods.BalanceAttributes.MinGameStage_Homing:ConstantAttributeValueResolver_0 ConstantValue 1
+
+            set GD_GrenadeMods.BalanceAttributes.MinGameStage_IncendiaryGrenade:ConstantAttributeValueResolver_0 ConstantValue 1
+
+            set GD_GrenadeMods.BalanceAttributes.MinGameStage_Longbow:ConstantAttributeValueResolver_0 ConstantValue 1
+
+            set GD_GrenadeMods.BalanceAttributes.MinGameStage_Rubberized:ConstantAttributeValueResolver_0 ConstantValue 1
+
+            set GD_GrenadeMods.BalanceAttributes.MinGameStage_ShockGrenade:ConstantAttributeValueResolver_0 ConstantValue 1
+
+            set GD_GrenadeMods.BalanceAttributes.MinGameStage_SlagGrenade:ConstantAttributeValueResolver_0 ConstantValue 1
+
+            set GD_GrenadeMods.BalanceAttributes.MinGameStage_Sticky:ConstantAttributeValueResolver_0 ConstantValue 1
+
+            # These definitions could be done with "set" as with other stuff, but
+            # it's actually a little more convenient to do 'em with hotfixes
+
+            {hotfixes:grenade_AreaEffect_0_0}
+
+            {hotfixes:grenade_AreaEffect_0_1}
+
+            {hotfixes:grenade_AreaEffect_0_2}
+
+            {hotfixes:grenade_AreaEffect_0_3}
+
+            {hotfixes:grenade_BouncingBetty_0_0}
+
+            {hotfixes:grenade_BouncingBetty_0_1}
+
+            {hotfixes:grenade_BouncingBetty_0_2}
+
+            {hotfixes:grenade_BouncingBetty_0_3}
+
+            {hotfixes:grenade_BouncingBetty_1_0}
+
+            {hotfixes:grenade_BouncingBetty_1_1}
+
+            {hotfixes:grenade_BouncingBetty_1_2}
+
+            {hotfixes:grenade_BouncingBetty_1_3}
+
+            {hotfixes:grenade_Mirv_0_0}
+
+            {hotfixes:grenade_Mirv_0_1}
+
+            {hotfixes:grenade_Mirv_0_2}
+
+            {hotfixes:grenade_Mirv_0_3}
+
+            {hotfixes:grenade_Mirv_1_0}
+
+            {hotfixes:grenade_Mirv_1_1}
+
+            {hotfixes:grenade_Mirv_1_2}
+
+            {hotfixes:grenade_Mirv_1_3}
+
+            {hotfixes:grenade_Singularity_0_0}
+
+            {hotfixes:grenade_Singularity_0_1}
+
+            {hotfixes:grenade_Singularity_0_2}
+
+            {hotfixes:grenade_Singularity_0_3}
+
+            {hotfixes:grenade_Transfusion_0_0}
+
+            {hotfixes:grenade_Transfusion_0_1}
+
+            {hotfixes:grenade_Transfusion_0_2}
+
+            {hotfixes:grenade_Transfusion_0_3}
+
+        #</Grenade Mods>
 
         #<Lobelia Pearlescent Pool>
 
