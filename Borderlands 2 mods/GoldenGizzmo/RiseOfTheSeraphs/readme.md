@@ -23,24 +23,24 @@ https://imgur.com/a/WZ5T5
 If you're using the filter tool, scroll to the bottom and you'll see a folder, which there you can choose to disable guns and loot changes
 
 Gear Replacements
-Actualizer    -> Destroyer
-Ahab          -> Commando II
-Devastator    -> Pulverizer
-Patriot       -> Vacation
-Retcher       -> Sneezy Peezy
-Seraphim      -> Knavelyn
-Meteor Shower -> Rocky Pebble
-O-Negative    -> Anemia
-Pun-Chee      -> Boss Rush
-Sponge        -> Pocket Money
-Florentine    -> Adaptive Florentine
-Seeker        -> Paparazzi
-Stinger       -> Rib Tycoon
-Infection     -> Melty Man
-Evolution     -> Super Moves™
-Afterburner   -> Monster of the Seraphs
-Breath Relic  -> Profanity of the Seraphs
-Blood Relic   -> Backbone of the Seraphs
+- Actualizer    -> Destroyer
+- Ahab          -> Commando II
+- Devastator    -> Pulverizer
+- Patriot       -> Vacation
+- Retcher       -> Sneezy Peezy
+- Seraphim      -> Knavelyn
+- Meteor Shower -> Rocky Pebble
+- O-Negative    -> Anemia
+- Pun-Chee      -> Boss Rush
+- Sponge        -> Pocket Money
+- Florentine    -> Adaptive Florentine
+- Seeker        -> Paparazzi
+- Stinger       -> Rib Tycoon
+- Infection     -> Melty Man
+- Evolution     -> Super Moves™
+- Afterburner   -> Monster of the Seraphs
+- Breath Relic  -> Profanity of the Seraphs
+- Blood Relic   -> Backbone of the Seraphs
 
 [-- Full drop details --]
 
