@@ -60,6 +60,7 @@ Specifically, this mod does the following:
   suspect this might annoy some folks; I could probably be convinced to
   undo that)*
 * Makes Eridium drop 3x more often
+* Makes Torgue Tokens more numerous when dropped
 * Bosses are guaranteed to drop their legendaries/uniques
   * If a boss has more than one legendary/unique in their drop pool, they
     are guaranteed to drop that many items.  You may get duplicates rather
@@ -72,6 +73,7 @@ Specifically, this mod does the following:
   * Terramorphous
   * Hyperius
   * Master Gee
+  * Pyro Pete
 * Remove early-game loot restrictions.  This is actually a superset of the
   similar feature already present in UCP 4.0.  The additions here are that
   both Relics and Class Mods will spawn from the beginning, as well.  Both
