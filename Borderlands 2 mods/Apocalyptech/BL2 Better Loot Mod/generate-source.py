@@ -143,12 +143,25 @@ hfs.add_hotfix('scarlett_nobeard', 'SparkLevelPatchEntry-NoBeardDrop1',
 hfs.add_hotfix('scarlett_bigsleep', 'SparkLevelPatchEntry-BigSleepDrop1',
     ',GD_Orchid_Pop_Sandman.Balance.PawnBalance_Orchid_BigSleep,DefaultItemPoolList[1].PoolProbability.BaseValueConstant,,1.0')
 
+# Make the Chubby drop pool better.
+hfs.add_hotfix('chubby_drop', 'SparkLevelPatchEntry-ChubbyDrop1',
+    ",GD_Itempools.ListDefs.ChubbyEnemyGunsAndGear,ItemPools,,((ItemPool=ItemPoolDefinition'GD_Itempools.Runnables.Pool_ChubbieUniques',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.EnemyDropPools.Pool_GunsAndGear_05_VeryRare',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.GeneralItemPools.Pool_GunsAndGear',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.EnemyDropPools.Pool_GunsAndGear_05_VeryRare',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.WeightingPlayerCount.GearDrops_PerPlayer',BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.GeneralItemPools.Pool_GunsAndGear',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.WeightingPlayerCount.GearDrops_PerPlayer',BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.Treasure_ChestPools.Pool_EpicChest_Weapons_GunsAndGear',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.WeightingPlayerCount.GearDrops_PerPlayer',BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.VehicleSkins.Pool_VehicleSkins_All',PoolProbability=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'GD_Itempools.DropWeights.DropODDS_VehicleSkins',InitializationDefinition=None,BaseValueScaleConstant=10.000000)),(ItemPool=CrossDLCItemPoolDefinition'GD_Lobelia_Itempools.WeaponPools.Pool_Lobelia_Pearlescent_Weapons_All',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Eridium_Bar',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Eridium_Bar',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Eridium_Bar',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Eridium_Bar',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Eridium_Stick',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Eridium_Stick',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Eridium_Stick',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Eridium_Stick',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.BuffDrinkPools.Pool_BuffDrinks_HealingInstant',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Ammo_All_NeedOnly',PoolProbability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.WeightingPlayerCount.AmmoDrops_PerPlayer',BaseValueScaleConstant=0.250000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Ammo_All_Emergency',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))")
+
 ###
-### Testing hotfixes, not really intended to be used for real
+### Testing hotfixes, not really intended to be used for real.  These
+### aren't referenced in the body of the mod, so they'll only activate
+### on the standalone version.
 ###
 
+# This one causes nearly every enemy to be a badass.
 #hfs.add_hotfix('badasses', 'SparkLevelPatchEntry-Badass1',
 #    ",GD_Balance.WeightingPlayerCount.Enemy_MajorUpgrade_PerPlayer,ConditionalInitialization,,(bEnabled=True,ConditionalExpressionList=((BaseValueIfTrue=(BaseValueConstant=500.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=20.000000),Expressions=((AttributeOperand1=AttributeDefinition'D_Attributes.GameProperties.NumberOfPlayers',ComparisonOperator=OPERATOR_LessThanOrEqual,Operand2Usage=OPERAND_PreferAttribute,AttributeOperand2=None,ConstantOperand2=4.000000)))),DefaultBaseValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))")
+
+# This makes nearly every SpiderAnt be Chubby -- similar techniques
+# could be used to change enemy type rates in general
+#hfs.add_hotfix('chubbies', 'SparkLevelPatchEntry-ChubbySpawn1',
+#    ',GD_Population_SpiderAnt.Population.PopDef_SpiderantMix_Regular,ActorArchetypeList[9].Probability.BaseValueConstant,,1000')
+
 
 ###
 ### Everything below this point is constructing the actual patch file
@@ -2159,6 +2172,17 @@ loot_str = """
             )
 
         #</Ultimate Badass Enemies>
+
+        #<Chubby Enemies>
+
+            # Unfortunately, this has to be done via Hotfix.  GD_Itempools.ListDefs.ChubbyEnemyGunsAndGear
+            # is defined in the base files, and can be altered via "set", but Lobelia uses some kind of
+            # hotfix of its own to alter the pool when levels get loaded, which will overwrite various
+            # values in there.  So, we have to put it in as a hotfix at the end, instead.
+
+            {hotfixes:chubby_drop}
+
+        #</Chubby Enemies>
 
     #</Better Badass Drops>
 
@@ -8344,6 +8368,22 @@ loot_str = """
         set GD_Itempools.Scheduling.LootSchedule_ClassMod_05_Legendary:ConstantAttributeValueResolver_0 ConstantValue 1
 
     #</Remove Loot restriction in the beginning areas (enhancement of UCP 4.0)>
+
+    #<Remove Other Loot Restrictions>
+
+        # There are some other loot restrictions in place, which we'll bypass here.
+
+        #<Lobelia Pearlescent Pool>
+
+            # Ordinarily, Pearlescent weapons which come from this pool won't drop until
+            # level 61 or so.  (So far I've only seen the Chubby pool as something using
+            # this drop pool, but other things might too.)
+
+            set GD_Lobelia_Itempools.WeaponPools.Pool_Lobelia_Pearlescent_Weapons_All MinGameStageRequirement None
+
+        #</Lobelia Pearlescent Pool>
+
+    #</Remove Other Loot Restrictions>
 
 {test_drop_str}
 {gunsandgear_drop_str}
