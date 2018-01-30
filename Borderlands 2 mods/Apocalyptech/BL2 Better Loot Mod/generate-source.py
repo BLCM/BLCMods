@@ -179,6 +179,10 @@ for (gm_type, man_count) in (
                 gm_type, man_num,
             ))
 
+# Make Piston always drop the Slow Hand
+hfs.add_hotfix('torgue_piston', 'SparkLevelPatchEntry-PistonDropSlowHand0',
+    ',GD_Iris_Population_PistonBoss.Balance.Iris_PawnBalance_PistonBoss,DefaultItemPoolList[2].PoolProbability.BaseValueConstant,,1.0')
+
 ###
 ### Testing hotfixes, not really intended to be used for real.  These
 ### aren't referenced in the body of the mod, so they'll only activate
@@ -7492,6 +7496,8 @@ loot_str = """
         {hotfixes:scarlett_nobeard}
 
         {hotfixes:scarlett_bigsleep}
+
+        {hotfixes:torgue_piston}
 
     #</Guaranteed Boss Drops>
 

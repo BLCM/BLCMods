@@ -155,6 +155,10 @@ TODO
   of what this mod does, it hardly matters, but my curiosity remains
   piqued.  I do know how to update dumpsters, but I left them alone on
   purpose.
+* Untested components:
+  * Pyro Pete's initial non-raid drops
+  * Piston drops (just Slow Hand, I figure the mini-lootsplosion after is
+    good enough to not bother tweaking his actual drop any more)
 
 Mod Construction / Implementation Details
 -----------------------------------------
