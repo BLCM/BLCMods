@@ -8025,38 +8025,83 @@
 
     #</Raid Boss Drop Improvements>
 
-    #<Remove Loot restriction in the beginning areas (enhancement of UCP 4.0)>
+    #<Remove Level-Based Loot Restrictions (enhancement of UCP 4.0)>
         
         # This is a superset of the UCP 4.0 mod section of the same name, which
-        # additionally allows Relics and Class Mods to spawn from the beginning.
+        # additionally allows Relics, Class Mods, all shield types, and probably
+        # just about everything to spawn from the beginning.
+        #
         # It's reproduced in here because without it, the rest of this mod would
         # result in zero gear being dropped in the early game.  This can be
-        # enabled alongside the UCP4.0 definition with no ill effects, and they
-        # can be executed in any order.
+        # enabled alongside the UCP4.0 definition with no ill effects.
 
-        set GD_Itempools.Scheduling.Gamestage_07:ConstantAttributeValueResolver_0 ConstantValue 1
+        #<UCP 4.0 Duplicates>
 
-        set GD_Itempools.Scheduling.Gamestage_03:ConstantAttributeValueResolver_0 ConstantValue 1
+            set GD_Itempools.Scheduling.Gamestage_07:ConstantAttributeValueResolver_0 ConstantValue 1
 
-        set GD_Itempools.Scheduling.Gamestage_02:ConstantAttributeValueResolver_0 ConstantValue 1
+            set GD_Itempools.Scheduling.Gamestage_03:ConstantAttributeValueResolver_0 ConstantValue 1
 
-        set GD_Itempools.Scheduling.Gamestage_14:ConstantAttributeValueResolver_0 ConstantValue 1
+            set GD_Itempools.Scheduling.Gamestage_02:ConstantAttributeValueResolver_0 ConstantValue 1
 
-        set GD_Itempools.Scheduling.LootSchedule_ClassMod_01_Common:ConstantAttributeValueResolver_0 ConstantValue 1
+        #</UCP 4.0 Duplicates>
 
-        set GD_Itempools.Scheduling.LootSchedule_ClassMod_02_Uncommon:ConstantAttributeValueResolver_0 ConstantValue 1
+        #<Additional Unlocks>
 
-        set GD_Itempools.Scheduling.LootSchedule_ClassMod_03_Rare:ConstantAttributeValueResolver_0 ConstantValue 1
+            set GD_Itempools.Scheduling.Gamestage_04:ConstantAttributeValueResolver_0 ConstantValue 1
 
-        set GD_Itempools.Scheduling.LootSchedule_ClassMod_04_VeryRare:ConstantAttributeValueResolver_0 ConstantValue 1
+            set GD_Itempools.Scheduling.Gamestage_05:ConstantAttributeValueResolver_0 ConstantValue 1
 
-        set GD_Itempools.Scheduling.LootSchedule_ClassMod_05_Legendary:ConstantAttributeValueResolver_0 ConstantValue 1
+            set GD_Itempools.Scheduling.Gamestage_06:ConstantAttributeValueResolver_0 ConstantValue 1
 
-    #</Remove Loot restriction in the beginning areas (enhancement of UCP 4.0)>
+            set GD_Itempools.Scheduling.Gamestage_08:ConstantAttributeValueResolver_0 ConstantValue 1
 
-    #<Remove Other Loot Restrictions>
+            set GD_Itempools.Scheduling.Gamestage_09:ConstantAttributeValueResolver_0 ConstantValue 1
 
-        # There are some other loot restrictions in place, which we'll bypass here.
+            set GD_Itempools.Scheduling.Gamestage_10:ConstantAttributeValueResolver_0 ConstantValue 1
+
+            set GD_Itempools.Scheduling.Gamestage_11:ConstantAttributeValueResolver_0 ConstantValue 1
+
+            set GD_Itempools.Scheduling.Gamestage_12:ConstantAttributeValueResolver_0 ConstantValue 1
+
+            set GD_Itempools.Scheduling.Gamestage_13:ConstantAttributeValueResolver_0 ConstantValue 1
+
+            set GD_Itempools.Scheduling.Gamestage_14:ConstantAttributeValueResolver_0 ConstantValue 1
+
+            set GD_Itempools.Scheduling.Gamestage_15:ConstantAttributeValueResolver_0 ConstantValue 1
+
+            set GD_Itempools.Scheduling.Gamestage_16:ConstantAttributeValueResolver_0 ConstantValue 1
+
+            set GD_Itempools.Scheduling.Gamestage_17:ConstantAttributeValueResolver_0 ConstantValue 1
+
+            set GD_Itempools.Scheduling.Gamestage_18:ConstantAttributeValueResolver_0 ConstantValue 1
+
+            set GD_Itempools.Scheduling.Gamestage_19:ConstantAttributeValueResolver_0 ConstantValue 1
+
+            set GD_Itempools.Scheduling.Gamestage_20:ConstantAttributeValueResolver_0 ConstantValue 1
+
+            set GD_Itempools.Scheduling.Gamestage_21:ConstantAttributeValueResolver_0 ConstantValue 1
+
+            set GD_Itempools.Scheduling.Gamestage_22:ConstantAttributeValueResolver_0 ConstantValue 1
+
+            set GD_Itempools.Scheduling.Gamestage_23:ConstantAttributeValueResolver_0 ConstantValue 1
+
+            set GD_Itempools.Scheduling.Gamestage_24:ConstantAttributeValueResolver_0 ConstantValue 1
+
+        #</Additional Unlocks>
+
+        #<Class Mods>
+
+            set GD_Itempools.Scheduling.LootSchedule_ClassMod_01_Common:ConstantAttributeValueResolver_0 ConstantValue 1
+
+            set GD_Itempools.Scheduling.LootSchedule_ClassMod_02_Uncommon:ConstantAttributeValueResolver_0 ConstantValue 1
+
+            set GD_Itempools.Scheduling.LootSchedule_ClassMod_03_Rare:ConstantAttributeValueResolver_0 ConstantValue 1
+
+            set GD_Itempools.Scheduling.LootSchedule_ClassMod_04_VeryRare:ConstantAttributeValueResolver_0 ConstantValue 1
+
+            set GD_Itempools.Scheduling.LootSchedule_ClassMod_05_Legendary:ConstantAttributeValueResolver_0 ConstantValue 1
+
+        #</Class Mods>
 
         #<Lobelia Pearlescent Pool>
 
@@ -8068,7 +8113,7 @@
 
         #</Lobelia Pearlescent Pool>
 
-    #</Remove Other Loot Restrictions>
+    #</Remove Level-Based Loot Restrictions (enhancement of UCP 4.0)>
 
 
 
