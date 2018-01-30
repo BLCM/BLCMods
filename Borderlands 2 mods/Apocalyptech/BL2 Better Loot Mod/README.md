@@ -69,6 +69,7 @@ Specifically, this mod does the following:
     whose loot probabilities weren't already equal.
 * Raid Bosses will drop better loot, and will drop as many legendary/unique/etc
   items as are in their pool:
+  * Terramorphous
   * Hyperius
   * Master Gee
 * Remove early-game loot restrictions.  This is actually a superset of the
