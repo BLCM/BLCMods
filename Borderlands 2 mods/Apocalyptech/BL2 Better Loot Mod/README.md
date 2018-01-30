@@ -123,6 +123,15 @@ easily persuaded otherwise if someone feels strongly about it.
 * Possibly one or two other guns as well -- I didn't think to keep track at
   first.
 
+There's also a few drop pools / containers / etc which I've purposefully
+left alone:
+
+* White Chests
+* Money Boxes
+* Laundry Machines / Toilets / Cardboard Boxes
+* Dumpsters
+* Loot Midgets
+
 TODO
 ----
 
