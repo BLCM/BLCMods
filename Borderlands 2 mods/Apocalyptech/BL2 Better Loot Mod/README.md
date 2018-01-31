@@ -155,14 +155,16 @@ TODO
   of what this mod does, it hardly matters, but my curiosity remains
   piqued.  I do know how to update dumpsters, but I left them alone on
   purpose.
-* Untested components:
+* Untested components from Torgue DLC *(I'm afraid that's my least favorite
+  DLC, to the point of not really liking it much, so I suspect that these
+  may go untouched)*:
   * Pyro Pete's initial non-raid drops
   * Piston drops (just Slow Hand, I figure the mini-lootsplosion after is
     good enough to not bother tweaking his actual drop any more)
   * Torgue Biker Gang drops are a little weird - there's an extra drop which
     happens outside of their weighted drop pool, but I can't seem to figure
-    out where that is.  I probably don't care enough to actually track this
-    down though.
+    out where that is.
+  * I think Biker Badasses, etc, have pretty anemic drops at the moment.
 
 Mod Construction / Implementation Details
 -----------------------------------------
