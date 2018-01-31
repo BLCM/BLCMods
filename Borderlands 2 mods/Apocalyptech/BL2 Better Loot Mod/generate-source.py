@@ -8267,6 +8267,7 @@ loot_str = """
         # Makes Eridium drop a little more frequently
 
         set GD_Itempools.DropWeights.DropODDS_EridiumBar:ConstantAttributeValueResolver_1 ConstantValue {eridium_bar_drop}
+
         set GD_Itempools.DropWeights.DropODDS_EridiumStick:ConstantAttributeValueResolver_1 ConstantValue {eridium_stick_drop}
 
     #</More Frequent Eridium>
@@ -8318,6 +8319,7 @@ loot_str = """
         #<Base Game>
 
             set GD_Itempools.DropWeights.DropODDs_BossUniques:ConstantAttributeValueResolver_0 ConstantValue 10
+
             set GD_Itempools.DropWeights.DropODDs_BossUniqueRares:ConstantAttributeValueResolver_0 ConstantValue 10
 
         #</Base Game>
