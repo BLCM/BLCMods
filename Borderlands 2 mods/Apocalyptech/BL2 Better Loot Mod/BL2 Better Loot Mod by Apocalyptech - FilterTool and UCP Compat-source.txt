@@ -1838,7 +1838,7 @@
 
     #</Better Badass Drops>
 
-    #<Better Regular Enemy Drops>
+    #<Better Other Enemy Drops>
 
         # There are a handful of enemy types which are somewhere between regular
         # enemies and Badasses, whose drop pools I felt could use a slight buff.
@@ -1859,7 +1859,15 @@
 
         #</Witch Doctors>
 
-    #</Better Regular Enemy Drops>
+        #<Bulstoss>
+
+            # Makes Bulstoss pull from the badass loot pool, rather than standard
+
+            #<hotfix><key>"SparkLevelPatchEntry-BulstossBadass1"</key><value>",GD_Sage_SM_AcquiredTasteData.Creature.PawnBalance_Sage_AcquiredTaste_Creature,DefaultItemPoolIncludedLists[0],,ItemPoolListDefinition'GD_Itempools.ListDefs.BadassEnemyGunsAndGear'"</value><on>
+
+        #</Bulstoss>
+
+    #</Better Other Enemy Drops>
 
     #<Better Relic Drops>
 
@@ -7856,17 +7864,35 @@
 
         # Bosses will always drop their unique/legendary rewards
 
-        set GD_Itempools.DropWeights.DropODDs_BossUniques:ConstantAttributeValueResolver_0 ConstantValue 10
-        set GD_Itempools.DropWeights.DropODDs_BossUniqueRares:ConstantAttributeValueResolver_0 ConstantValue 10
+        #<Base Game>
 
-        # A lot of DLC minibosses don't use the DropODDs_BossUniques* vars and
+            set GD_Itempools.DropWeights.DropODDs_BossUniques:ConstantAttributeValueResolver_0 ConstantValue 10
+            set GD_Itempools.DropWeights.DropODDs_BossUniqueRares:ConstantAttributeValueResolver_0 ConstantValue 10
+
+        #</Base Game>
+
+        # Some DLC minibosses don't use the DropODDs_BossUniques* vars and
         # have to be patched manually
 
-        #<hotfix><key>"SparkLevelPatchEntry-NoBeardDrop1"</key><value>",GD_Orchid_Pop_NoBeard.PawnBalance_Orchid_NoBeard,DefaultItemPoolList[1].PoolProbability.BaseValueConstant,,1.0"</value><on>
+        #<Captain Scarlett DLC>
 
-        #<hotfix><key>"SparkLevelPatchEntry-BigSleepDrop1"</key><value>",GD_Orchid_Pop_Sandman.Balance.PawnBalance_Orchid_BigSleep,DefaultItemPoolList[1].PoolProbability.BaseValueConstant,,1.0"</value><on>
+            #<hotfix><key>"SparkLevelPatchEntry-NoBeardDrop1"</key><value>",GD_Orchid_Pop_NoBeard.PawnBalance_Orchid_NoBeard,DefaultItemPoolList[1].PoolProbability.BaseValueConstant,,1.0"</value><on>
 
-        #<hotfix><key>"SparkLevelPatchEntry-PistonDropSlowHand0"</key><value>",GD_Iris_Population_PistonBoss.Balance.Iris_PawnBalance_PistonBoss,DefaultItemPoolList[2].PoolProbability.BaseValueConstant,,1.0"</value><on>
+            #<hotfix><key>"SparkLevelPatchEntry-BigSleepDrop1"</key><value>",GD_Orchid_Pop_Sandman.Balance.PawnBalance_Orchid_BigSleep,DefaultItemPoolList[1].PoolProbability.BaseValueConstant,,1.0"</value><on>
+
+        #</Captain Scarlett DLC>
+
+        #<Torgue DLC>
+
+            #<hotfix><key>"SparkLevelPatchEntry-PistonDropSlowHand0"</key><value>",GD_Iris_Population_PistonBoss.Balance.Iris_PawnBalance_PistonBoss,DefaultItemPoolList[2].PoolProbability.BaseValueConstant,,1.0"</value><on>
+
+        #</Torgue DLC>
+
+        #<Hammerlock DLC>
+
+            #<hotfix><key>"SparkLevelPatchEntry-BulstossDrop0"</key><value>",GD_Sage_SM_AcquiredTasteData.Creature.PawnBalance_Sage_AcquiredTaste_Creature,DefaultItemPoolList[0].PoolProbability,,(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)"</value><on>
+
+        #</Hammerlock DLC>
 
     #</Guaranteed Boss Drops>
 

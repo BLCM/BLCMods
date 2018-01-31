@@ -77,8 +77,10 @@ Specifically, this mod does the following:
 * Fixes/Changes to some enemies' drop pools:
   * Witch Doctors will drop an Eridium stick, and have a pretty good chance
     of dropping a Relic as well.
-  * Badass Boroks now drop from the Badass loot pool, rather than the standard
-    enemy pool.
+  * Enemies changed to drop from from the Badass loot pool, rather than the
+    standard enemy pool:
+    * Badass Boroks
+    * Bulstross
 * Remove early-game loot restrictions.  This is actually a superset of the
   similar feature already present in UCP 4.0.  This version enables spawning
   of basically everything from the beginning, including all grenade types,

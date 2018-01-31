@@ -197,6 +197,17 @@ for borok in ['Corrosive', 'Fire', 'Shock', 'Slag']:
         'SparkLevelPatchEntry-BadassBorok{}0'.format(borok),
         ",GD_Sage_Pop_Rhino.Balance.PawnBalance_Sage_RhinoBadass{},DefaultItemPoolIncludedLists[0],,ItemPoolListDefinition'GD_Itempools.ListDefs.BadassEnemyGunsAndGear'".format(borok))
 
+# Bulstoss guaranteed unique drop.  I actually have no idea why this is required; it
+# looks to me like the DropODDs_BossUniqueRares value should take care of it for us,
+# but it seems I've gotta do everything I can to set to probability up totally.  Go
+# figure.
+hfs.add_hotfix('bulstoss_drop', 'SparkLevelPatchEntry-BulstossDrop0',
+    ',GD_Sage_SM_AcquiredTasteData.Creature.PawnBalance_Sage_AcquiredTaste_Creature,DefaultItemPoolList[0].PoolProbability,,(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)')
+
+# Make Bulstoss also drop from the Badass loot pool
+hfs.add_hotfix('bulstoss_badass', 'SparkLevelPatchEntry-BulstossBadass1',
+    ",GD_Sage_SM_AcquiredTasteData.Creature.PawnBalance_Sage_AcquiredTaste_Creature,DefaultItemPoolIncludedLists[0],,ItemPoolListDefinition'GD_Itempools.ListDefs.BadassEnemyGunsAndGear'")
+
 ###
 ### Testing hotfixes, not really intended to be used for real.  These
 ### aren't referenced in the body of the mod, so they'll only activate
@@ -2278,7 +2289,7 @@ loot_str = """
 
     #</Better Badass Drops>
 
-    #<Better Regular Enemy Drops>
+    #<Better Other Enemy Drops>
 
         # There are a handful of enemy types which are somewhere between regular
         # enemies and Badasses, whose drop pools I felt could use a slight buff.
@@ -2299,7 +2310,15 @@ loot_str = """
 
         #</Witch Doctors>
 
-    #</Better Regular Enemy Drops>
+        #<Bulstoss>
+
+            # Makes Bulstoss pull from the badass loot pool, rather than standard
+
+            {hotfixes:bulstoss_badass}
+
+        #</Bulstoss>
+
+    #</Better Other Enemy Drops>
 
     #<Better Relic Drops>
 
@@ -8296,17 +8315,35 @@ loot_str = """
 
         # Bosses will always drop their unique/legendary rewards
 
-        set GD_Itempools.DropWeights.DropODDs_BossUniques:ConstantAttributeValueResolver_0 ConstantValue 10
-        set GD_Itempools.DropWeights.DropODDs_BossUniqueRares:ConstantAttributeValueResolver_0 ConstantValue 10
+        #<Base Game>
 
-        # A lot of DLC minibosses don't use the DropODDs_BossUniques* vars and
+            set GD_Itempools.DropWeights.DropODDs_BossUniques:ConstantAttributeValueResolver_0 ConstantValue 10
+            set GD_Itempools.DropWeights.DropODDs_BossUniqueRares:ConstantAttributeValueResolver_0 ConstantValue 10
+
+        #</Base Game>
+
+        # Some DLC minibosses don't use the DropODDs_BossUniques* vars and
         # have to be patched manually
 
-        {hotfixes:scarlett_nobeard}
+        #<Captain Scarlett DLC>
 
-        {hotfixes:scarlett_bigsleep}
+            {hotfixes:scarlett_nobeard}
 
-        {hotfixes:torgue_piston}
+            {hotfixes:scarlett_bigsleep}
+
+        #</Captain Scarlett DLC>
+
+        #<Torgue DLC>
+
+            {hotfixes:torgue_piston}
+
+        #</Torgue DLC>
+
+        #<Hammerlock DLC>
+
+            {hotfixes:bulstoss_drop}
+
+        #</Hammerlock DLC>
 
     #</Guaranteed Boss Drops>
 
