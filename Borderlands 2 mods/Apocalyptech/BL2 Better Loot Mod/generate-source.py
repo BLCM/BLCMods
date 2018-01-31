@@ -191,6 +191,12 @@ for doctor in ['Fire', 'Shock', 'Slag', 'Slow', 'Vampire']:
         'SparkLevelPatchEntry-WitchDoctor{}Drops0'.format(doctor),
         ",GD_Sage_Pop_Natives.Balance.PawnBalance_WitchDoctor{},DefaultItemPoolList,,((ItemPool=ItemPoolDefinition'GD_CustomItemPools_Sage.Fanboat.Pool_Customs_Fanboat_All',PoolProbability=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'GD_Itempools.DropWeights.DropODDS_VehicleSkins',InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.ArtifactPools.Pool_ArtifactsReward',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0.600000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Eridium_Stick',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))".format(doctor))
 
+# Badass Borok Fixes
+for borok in ['Corrosive', 'Fire', 'Shock', 'Slag']:
+    hfs.add_hotfix('badass_borok_{}'.format(borok),
+        'SparkLevelPatchEntry-BadassBorok{}0'.format(borok),
+        ",GD_Sage_Pop_Rhino.Balance.PawnBalance_Sage_RhinoBadass{},DefaultItemPoolIncludedLists[0],,ItemPoolListDefinition'GD_Itempools.ListDefs.BadassEnemyGunsAndGear'".format(borok))
+
 ###
 ### Testing hotfixes, not really intended to be used for real.  These
 ### aren't referenced in the body of the mod, so they'll only activate
@@ -2254,6 +2260,21 @@ loot_str = """
             {hotfixes:chubby_drop}
 
         #</Chubby Enemies>
+
+        #<Badass Boroks>
+
+            # Badass Boroks just drop from the standard loot pool right now.  Convert
+            # them to use the badass pool instead.
+
+            {hotfixes:badass_borok_Corrosive}
+
+            {hotfixes:badass_borok_Fire}
+
+            {hotfixes:badass_borok_Shock}
+
+            {hotfixes:badass_borok_Slag}
+
+        #</Badass Boroks>
 
     #</Better Badass Drops>
 

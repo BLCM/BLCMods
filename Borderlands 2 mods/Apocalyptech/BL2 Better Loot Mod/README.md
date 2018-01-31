@@ -74,9 +74,11 @@ Specifically, this mod does the following:
   * Hyperius
   * Master Gee
   * Pyro Pete
-* Small buffs for drop pools of some enemy types *(just one at the moment)*:
+* Fixes/Changes to some enemies' drop pools:
   * Witch Doctors will drop an Eridium stick, and have a pretty good chance
     of dropping a Relic as well.
+  * Badass Boroks now drop from the Badass loot pool, rather than the standard
+    enemy pool.
 * Remove early-game loot restrictions.  This is actually a superset of the
   similar feature already present in UCP 4.0.  The additions here are that
   both Relics and Class Mods will spawn from the beginning, as well.  Both
