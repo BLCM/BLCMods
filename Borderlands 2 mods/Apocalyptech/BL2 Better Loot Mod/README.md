@@ -80,13 +80,14 @@ Specifically, this mod does the following:
   * Badass Boroks now drop from the Badass loot pool, rather than the standard
     enemy pool.
 * Remove early-game loot restrictions.  This is actually a superset of the
-  similar feature already present in UCP 4.0.  The additions here are that
-  both Relics and Class Mods will spawn from the beginning, as well.  Both
-  this and the UCP 4.0 "Remove Loot restriction in the beginning areas"
-  mods can be active at the same time with no ill effects -- it'll just
-  mean that the relevant commands get executed twice.  Note that if you
-  *don't* have either this or UCP enabled on your game, the early game will
-  end up dropping *no* gear, due to our rarity changes.
+  similar feature already present in UCP 4.0.  This version enables spawning
+  of basically everything from the beginning, including all grenade types,
+  relics, class mods, rocket launchers, etc.  Both this and the UCP 4.0
+  "Remove Loot restriction in the beginning areas" mods can be active at the
+  same time with no ill effects -- it'll just mean that the relevant commands
+  get executed twice.  Note that if you *don't* have either this or UCP
+  enabled on your game, the early game will end up dropping *no* gear, due
+  to our rarity changes.
 * Optionally, I've left in some statements which cause all enemies to
   always drop gear, and always drop five items rather than just one.  This
   is disabled by default and would have to be enabled manually via FilterTool
