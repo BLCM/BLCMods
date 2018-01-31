@@ -159,6 +159,10 @@ TODO
   * Pyro Pete's initial non-raid drops
   * Piston drops (just Slow Hand, I figure the mini-lootsplosion after is
     good enough to not bother tweaking his actual drop any more)
+  * Torgue Biker Gang drops are a little weird - there's an extra drop which
+    happens outside of their weighted drop pool, but I can't seem to figure
+    out where that is.  I probably don't care enough to actually track this
+    down though.
 
 Mod Construction / Implementation Details
 -----------------------------------------
