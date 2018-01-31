@@ -151,13 +151,13 @@ hfs.add_hotfix('chubby_drop', 'SparkLevelPatchEntry-ChubbyDrop1',
 # Various grenade mod early unlocks.  These actually don't have to be
 # hotfixes, but doing so lets us be much more concise.
 
-for (gm_type, man_count) in (
+for (gm_type, man_count) in [
             ('AreaEffect', 1),
             ('BouncingBetty', 2),
             ('Mirv', 2),
             ('Singularity', 1),
             ('Transfusion', 1),
-        ):
+        ]:
     for man_num in range(man_count):
         hfs.add_hotfix('grenade_{}_{}_0'.format(gm_type, man_num),
             'SparkLevelPatchEntry-Grenade{}{}-0'.format(gm_type, man_num),
@@ -183,6 +183,13 @@ for (gm_type, man_count) in (
 # Make Piston always drop the Slow Hand
 hfs.add_hotfix('torgue_piston', 'SparkLevelPatchEntry-PistonDropSlowHand0',
     ',GD_Iris_Population_PistonBoss.Balance.Iris_PawnBalance_PistonBoss,DefaultItemPoolList[2].PoolProbability.BaseValueConstant,,1.0')
+
+# Make Witch Doctors drop some slightly-more-interesting loot
+
+for doctor in ['Fire', 'Shock', 'Slag', 'Slow', 'Vampire']:
+    hfs.add_hotfix('witchdoctor_{}'.format(doctor),
+        'SparkLevelPatchEntry-WitchDoctor{}Drops0'.format(doctor),
+        ",GD_Sage_Pop_Natives.Balance.PawnBalance_WitchDoctor{},DefaultItemPoolList,,((ItemPool=ItemPoolDefinition'GD_CustomItemPools_Sage.Fanboat.Pool_Customs_Fanboat_All',PoolProbability=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'GD_Itempools.DropWeights.DropODDS_VehicleSkins',InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.ArtifactPools.Pool_ArtifactsReward',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0.600000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Eridium_Stick',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))".format(doctor))
 
 ###
 ### Testing hotfixes, not really intended to be used for real.  These
@@ -2249,6 +2256,29 @@ loot_str = """
         #</Chubby Enemies>
 
     #</Better Badass Drops>
+
+    #<Better Regular Enemy Drops>
+
+        # There are a handful of enemy types which are somewhere between regular
+        # enemies and Badasses, whose drop pools I felt could use a slight buff.
+
+        #<Witch Doctors>
+
+            # Adds a guaranteed Eridium stick, and chance at a good Relic
+
+            {hotfixes:witchdoctor_Fire}
+
+            {hotfixes:witchdoctor_Shock}
+
+            {hotfixes:witchdoctor_Slag}
+
+            {hotfixes:witchdoctor_Slow}
+
+            {hotfixes:witchdoctor_Vampire}
+
+        #</Witch Doctors>
+
+    #</Better Regular Enemy Drops>
 
     #<Better Relic Drops>
 

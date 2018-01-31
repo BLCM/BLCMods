@@ -74,6 +74,9 @@ Specifically, this mod does the following:
   * Hyperius
   * Master Gee
   * Pyro Pete
+* Small buffs for drop pools of some enemy types *(just one at the moment)*:
+  * Witch Doctors will drop an Eridium stick, and have a pretty good chance
+    of dropping a Relic as well.
 * Remove early-game loot restrictions.  This is actually a superset of the
   similar feature already present in UCP 4.0.  The additions here are that
   both Relics and Class Mods will spawn from the beginning, as well.  Both
