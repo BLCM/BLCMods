@@ -197,13 +197,6 @@ for borok in ['Corrosive', 'Fire', 'Shock', 'Slag']:
         'SparkLevelPatchEntry-BadassBorok{}0'.format(borok),
         ",GD_Sage_Pop_Rhino.Balance.PawnBalance_Sage_RhinoBadass{},DefaultItemPoolIncludedLists[0],,ItemPoolListDefinition'GD_Itempools.ListDefs.BadassEnemyGunsAndGear'".format(borok))
 
-# Bulstoss guaranteed unique drop.  I actually have no idea why this is required; it
-# looks to me like the DropODDs_BossUniqueRares value should take care of it for us,
-# but it seems I've gotta do everything I can to set to probability up totally.  Go
-# figure.
-hfs.add_hotfix('bulstoss_drop', 'SparkLevelPatchEntry-BulstossDrop0',
-    ',GD_Sage_SM_AcquiredTasteData.Creature.PawnBalance_Sage_AcquiredTaste_Creature,DefaultItemPoolList[0].PoolProbability,,(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)')
-
 # Make Bulstoss also drop from the Badass loot pool
 hfs.add_hotfix('bulstoss_badass', 'SparkLevelPatchEntry-BulstossBadass1',
     ",GD_Sage_SM_AcquiredTasteData.Creature.PawnBalance_Sage_AcquiredTaste_Creature,DefaultItemPoolIncludedLists[0],,ItemPoolListDefinition'GD_Itempools.ListDefs.BadassEnemyGunsAndGear'")
@@ -8340,12 +8333,6 @@ loot_str = """
             {hotfixes:torgue_piston}
 
         #</Torgue DLC>
-
-        #<Hammerlock DLC>
-
-            {hotfixes:bulstoss_drop}
-
-        #</Hammerlock DLC>
 
     #</Guaranteed Boss Drops>
 
