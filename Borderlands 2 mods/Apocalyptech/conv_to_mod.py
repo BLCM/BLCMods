@@ -81,13 +81,15 @@ with open(source_file, 'r') as df:
     with open(dest_file, 'w') as odf:
         in_set = False
         set_list = []
-        for line in df.readlines():
+        for (linenum, line) in enumerate(df.readlines()):
             if in_set:
                 line = line.strip()
                 if line == '':
                     odf.write(''.join(set_list))
                     odf.write("\n\n")
                     in_set = False
+                elif line[:4] == 'set ' or line[0] == '#':
+                    raise Exception('Input file line {}: "set" statements should have an empty line after the end'.format(linenum))
                 else:
                     set_list.append(line)
             elif line.lstrip()[:4] == 'set ' or line.lstrip()[:5] == '#set ':
