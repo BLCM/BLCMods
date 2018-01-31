@@ -2472,7 +2472,7 @@ loot_str = """
                     BaseValueConstant=1.000000,
                     BaseValueAttribute=None,
                     InitializationDefinition=None,
-                    BaseValueScaleConstant=1.000000
+                    BaseValueScaleConstant=2.000000
                 ),
                 bDropOnDeath=True
             ),
@@ -2483,7 +2483,7 @@ loot_str = """
                     BaseValueConstant=1.000000,
                     BaseValueAttribute=None,
                     InitializationDefinition=None,
-                    BaseValueScaleConstant=1.000000
+                    BaseValueScaleConstant=2.000000
                 ),
                 bDropOnDeath=True
             ),
@@ -2494,7 +2494,7 @@ loot_str = """
                     BaseValueConstant=1.000000,
                     BaseValueAttribute=None,
                     InitializationDefinition=None,
-                    BaseValueScaleConstant=1.000000
+                    BaseValueScaleConstant=2.000000
                 ),
                 bDropOnDeath=True
             ),
@@ -2505,7 +2505,7 @@ loot_str = """
                     BaseValueConstant=1.000000,
                     BaseValueAttribute=None,
                     InitializationDefinition=None,
-                    BaseValueScaleConstant=1.000000
+                    BaseValueScaleConstant=2.000000
                 ),
                 bDropOnDeath=True
             ),
@@ -2516,7 +2516,7 @@ loot_str = """
                     BaseValueConstant=1.000000,
                     BaseValueAttribute=None,
                     InitializationDefinition=None,
-                    BaseValueScaleConstant=1.000000
+                    BaseValueScaleConstant=2.000000
                 ),
                 bDropOnDeath=True
             ),
@@ -2527,7 +2527,7 @@ loot_str = """
                     BaseValueConstant=1.000000,
                     BaseValueAttribute=None,
                     InitializationDefinition=None,
-                    BaseValueScaleConstant=1.000000
+                    BaseValueScaleConstant=2.000000
                 ),
                 bDropOnDeath=True
             ),
@@ -2538,7 +2538,7 @@ loot_str = """
                     BaseValueConstant=1.000000,
                     BaseValueAttribute=None,
                     InitializationDefinition=None,
-                    BaseValueScaleConstant=1.000000
+                    BaseValueScaleConstant=2.000000
                 ),
                 bDropOnDeath=True
             ),
@@ -2549,7 +2549,7 @@ loot_str = """
                     BaseValueConstant=1.000000,
                     BaseValueAttribute=None,
                     InitializationDefinition=None,
-                    BaseValueScaleConstant=1.000000
+                    BaseValueScaleConstant=2.000000
                 ),
                 bDropOnDeath=True
             ),
@@ -2560,7 +2560,7 @@ loot_str = """
                     BaseValueConstant=1.000000,
                     BaseValueAttribute=None,
                     InitializationDefinition=None,
-                    BaseValueScaleConstant=1.000000
+                    BaseValueScaleConstant=2.000000
                 ),
                 bDropOnDeath=True
             ),
@@ -2571,7 +2571,7 @@ loot_str = """
                     BaseValueConstant=1.000000,
                     BaseValueAttribute=None,
                     InitializationDefinition=None,
-                    BaseValueScaleConstant=1.000000
+                    BaseValueScaleConstant=2.000000
                 ),
                 bDropOnDeath=True
             ),
@@ -2703,7 +2703,7 @@ loot_str = """
                     BaseValueConstant=1.000000,
                     BaseValueAttribute=None,
                     InitializationDefinition=None,
-                    BaseValueScaleConstant=1.000000
+                    BaseValueScaleConstant=0.500000
                 ),
                 bDropOnDeath=True
             ),
