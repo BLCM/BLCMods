@@ -145,6 +145,12 @@ left alone:
 * Dumpsters
 * Loot Midgets
 
+Some other stuff not done:
+
+* Scaylion drops are rather anemic compared to everything else in the
+  Hammerlock DLC, but the Hammerlock DLC is kind of ludicrous with loot
+  anyway, so I'm leaving them the way they are.
+
 TODO
 ----
 
