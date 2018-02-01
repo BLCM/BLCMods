@@ -74,6 +74,7 @@ Specifically, this mod does the following:
   * Hyperius
   * Master Gee
   * Pyro Pete
+  * Dexiduous
 * Fixes/Changes to some enemies' drop pools:
   * Witch Doctors will drop an Eridium stick, and have a pretty good chance
     of dropping a Relic as well.
