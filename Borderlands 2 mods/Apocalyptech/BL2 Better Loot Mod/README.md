@@ -23,6 +23,11 @@ file `BL2 Better Loot Mod by Apocalyptech - FilterTool and UCP Compat`
 (without any extensions).  You'll have a new folder for this mod underneath
 the `mods` folder at the bottom, and can turn parts on or off at will.
 
+*Note:* At the moment this mod updates a few vars that UCP does as well, and
+FilterTool will complain because more than one mod is touching the same
+stuff.  I'll figure that out in a bit - for now, I think it's all pretty
+minor stuff, like the UCP sections which add gear to boss pools, etc.
+
 If for whatever reason you don't want to use FilterTool/UCP, there is also
 a standalone version at `BL2 Better Loot Mod by Apocalyptech - Standalone`.
 Simply copy that file into the game's `steamassets/binaries` directory with
@@ -102,10 +107,12 @@ Specifically, this mod does the following:
 Compatibility
 -------------
 
-As far as I know, this is totally compatible with UCP 4.0, and won't overwrite
-anything that's done in there, though I have yet to do a thorough
-look to make sure.  One possible source of conflicts with UCP would be in
-UCP's "Specific Loot Changes" folder.  I'll be looking into that in a bit.
+This mod is mostly compatible with UCP 4.0, though there's a few instances of
+UCP and this mod writing to the same values (mostly to do with boss drops
+and the like).  I do plan to go through and figure out a good way to coexist
+with UCP so that I'm not writing to the same stuff, but I haven't gone through
+to do that yet.  Stuff in UCP's "Specific Loot Changes" folder will be the
+likeliest culprits.  I'll be looking into that in a bit.
 
 Obviously this will conflict with other mods which play with the same
 variables.  I know that Hemaxhu's "Better White Chests" would conflict with
