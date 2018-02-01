@@ -71,6 +71,7 @@ Specifically, this mod does the following:
 * Raid Bosses will drop better loot, and will drop as many legendary/unique/etc
   items as are in their pool:
   * Terramorphous
+  * Vermivorous
   * Hyperius
   * Master Gee
   * Pyro Pete

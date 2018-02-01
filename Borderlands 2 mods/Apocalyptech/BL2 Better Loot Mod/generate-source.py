@@ -216,6 +216,17 @@ hfs.add_hotfix('bulstoss_badass', 'SparkLevelPatchEntry-BulstossBadass1',
 #hfs.add_hotfix('chubbies', 'SparkLevelPatchEntry-ChubbySpawn1',
 #    ',GD_Population_SpiderAnt.Population.PopDef_SpiderantMix_Regular,ActorArchetypeList[9].Probability.BaseValueConstant,,1000')
 
+# This will cause varkids to always morph into their next stage, up
+# through Vermivorous (even in Normal mode).  Used to test Verm drops.
+# Still have to wait for their timers to elapse before they evolve, of course.
+#for morph in range(1,6):
+#    hfs.add_hotfix('varkid_clear_{}'.format(morph),
+#        'SparkLevelPatchEntry-VarkidMorphClear{}'.format(morph),
+#        ',GD_Balance.WeightingPlayerCount.BugmorphCocoon_PerPlayers_Phase{},ConditionalInitialization.ConditionalExpressionList,,()'.format(morph))
+#    hfs.add_hotfix('varkid_default_{}'.format(morph),
+#        'SparkLevelPatchEntry-VarkidMorphDefault{}'.format(morph),
+#        ',GD_Balance.WeightingPlayerCount.BugmorphCocoon_PerPlayers_Phase{},ConditionalInitialization.DefaultBaseValue.BaseValueConstant,,1.0'.format(morph))
+
 ###
 ### Everything below this point is constructing the actual patch file
 ###
