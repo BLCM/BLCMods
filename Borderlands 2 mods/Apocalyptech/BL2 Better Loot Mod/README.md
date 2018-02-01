@@ -76,6 +76,7 @@ Specifically, this mod does the following:
   * Master Gee
   * Pyro Pete
   * Dexiduous
+  * Voracidous
 * Fixes/Changes to some enemies' drop pools:
   * Witch Doctors will drop an Eridium stick, and have a pretty good chance
     of dropping a Relic as well.
@@ -181,6 +182,9 @@ TODO
     happens outside of their weighted drop pool, but I can't seem to figure
     out where that is.
   * I think Biker Badasses, etc, have pretty anemic drops at the moment.
+* Add in level names to our hotfixes which could technically use them
+* Also maybe set up our own prefix on all our hotfix names, so there's very
+  little chance of ever conflicting with someone else's names.
 
 Mod Construction / Implementation Details
 -----------------------------------------
