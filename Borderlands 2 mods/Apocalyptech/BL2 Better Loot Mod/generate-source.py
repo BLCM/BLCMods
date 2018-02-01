@@ -201,6 +201,10 @@ for borok in ['Corrosive', 'Fire', 'Shock', 'Slag']:
 hfs.add_hotfix('bulstoss_badass', 'SparkLevelPatchEntry-BulstossBadass1',
     ",GD_Sage_SM_AcquiredTasteData.Creature.PawnBalance_Sage_AcquiredTaste_Creature,DefaultItemPoolIncludedLists[0],,ItemPoolListDefinition'GD_Itempools.ListDefs.BadassEnemyGunsAndGear'")
 
+# Make Thermitage always drop the spiderant skin
+hfs.add_hotfix('hammerlock_thermitage', 'SparkLevelPatchEntry-ThermitageDropSkin0',
+    ',GD_Sage_Ep3_Data.Creature.PawnBalance_Sage_Ep3_Creature,DefaultItemPoolList[0].PoolProbability,,(BaseValueConstant=1.0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.0)')
+
 ###
 ### Testing hotfixes, not really intended to be used for real.  These
 ### aren't referenced in the body of the mod, so they'll only activate
@@ -8345,6 +8349,12 @@ loot_str = """
 
         #</Torgue DLC>
 
+        #<Hammerlock DLC>
+
+            {hotfixes:hammerlock_thermitage}
+
+        #</Hammerlock DLC>
+
     #</Guaranteed Boss Drops>
 
     #<Boss Drop Improved Quantities>
@@ -8465,6 +8475,14 @@ loot_str = """
         )
 
         set GD_Itempools.Runnables.Pool_Wilhelm Quantity
+        (
+            BaseValueConstant=2.000000,
+            BaseValueAttribute=None,
+            InitializationDefinition=None,
+            BaseValueScaleConstant=1.000000
+        )
+
+        set GD_Itempools.Runnables.Pool_SonOfMothrakk Quantity
         (
             BaseValueConstant=2.000000,
             BaseValueAttribute=None,
