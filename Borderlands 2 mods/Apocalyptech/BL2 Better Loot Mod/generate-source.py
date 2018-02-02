@@ -272,6 +272,17 @@ hfs.add_hotfix('dragonkeep_arguk_drop', 'SparkLevelPatchEntry-ArgukDrop0',
 hfs.add_hotfix('dragonkeep_giant_skeleton', 'SparkLevelPatchEntry-GiantSkeletonDrop0',
     ",GD_Aster_Pop_Skeletons.Balance.PawnBalance_SkeletonGiant,DefaultItemPoolIncludedLists[0],,ItemPoolListDefinition'GD_Itempools.ListDefs.BadassEnemyGunsAndGear'")
 
+# Make Gold Golem always drop one of its "special" legendary drops (effectively
+# commenting out the first BalancedItem which would drop from a more general pool)
+hfs.add_hotfix('dragonkeep_goldgolem_drop_pool', 'SparkLevelPatchEntry-GoldGolemDropPool0',
+    'Mines_P,GD_GolemGold.LootPools.Pool_GoldGolemRunnable,BalancedItems[0].Probability,,(BaseValueConstant=0.0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0.0)')
+
+# ...aaaand set the Gold Golem drop pool quantity to 3, to at least possibly drop
+# one of each of those items (for nearly every other boss requiring this, we can
+# just do it via 'set', but Gold Golem must be hotfixed.
+hfs.add_hotfix('dragonkeep_goldgolem_drop_qty', 'SparkLevelPatchEntry-GoldGolemDropQty0',
+    'Mines_P,GD_GolemGold.LootPools.Pool_GoldGolemRunnable,Quantity,,(BaseValueConstant=3.0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.0)')
+
 ###
 ### Testing hotfixes, not really intended to be used for real.  These
 ### aren't referenced in the body of the mod, so they'll only activate
@@ -8663,6 +8674,12 @@ loot_str = """
 
         #</Hammerlock DLC>
 
+        #<Tiny Tina DLC>
+
+            {hotfixes:dragonkeep_goldgolem_drop_pool}
+
+        #</Tiny Tina DLC>
+
     #</Guaranteed Boss Drops>
 
     #<Boss Drop Improved Quantities>
@@ -8797,6 +8814,10 @@ loot_str = """
             InitializationDefinition=None,
             BaseValueScaleConstant=1.000000
         )
+
+        # This one has to be done via Hotfix
+
+        {hotfixes:dragonkeep_goldgolem_drop_qty}
 
     #</Boss Drop Improved Quantities>
 
