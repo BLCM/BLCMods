@@ -1,0 +1,1 @@
+quick and lazy mod that removes self dmg from STV
