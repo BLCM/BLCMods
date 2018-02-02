@@ -263,6 +263,10 @@ hfs.add_hotfix('nomimic_epic_11', 'SparkLevelPatchEntry-NoMimicEpic11',
 hfs.add_hotfix('nomimic_epic_12', 'SparkLevelPatchEntry-NoMimicEpic12',
     ",GD_Aster_Lootables.Balance.ObjectGrade_MimicChest_NoMimic,DefaultLoot[8].ItemAttachments[2].ItemPool,,ItemPoolDefinition'GD_Itempools.Treasure_ChestPools.Pool_EpicChest_Artifacts'")
 
+# Make Arguk the Butcher (from 'Critical Fail') drop from the Badass loot pool
+hfs.add_hotfix('dragonkeep_arguk_drop', 'SparkLevelPatchEntry-ArgukDrop0',
+    "Dark_Forest_P,GD_Aster_Pop_Orcs.Balance.PawnBalance_Orc_Butcher,DefaultItemPoolIncludedLists[0],,ItemPoolListDefinition'GD_Itempools.ListDefs.BadassEnemyGunsAndGear'")
+
 ###
 ### Testing hotfixes, not really intended to be used for real.  These
 ### aren't referenced in the body of the mod, so they'll only activate
@@ -2861,6 +2865,12 @@ loot_str = """
             {hotfixes:hammerlock_elite_savage}
 
         #</Elite Savages>
+
+        #<Arguk the Butcher>
+
+            {hotfixes:dragonkeep_arguk_drop}
+
+        #</Arguk the Butcher>
 
     #</Better Other Enemy Drops>
 

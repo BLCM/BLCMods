@@ -99,6 +99,7 @@ Specifically, this mod does the following:
     standard enemy pool:
     * Badass Boroks
     * Bulstross
+    * Arguk the Butcher
 * Remove early-game loot restrictions.  This is actually a superset of the
   similar feature already present in UCP 4.0.  This version enables spawning
   of basically everything from the beginning, including all grenade types,
