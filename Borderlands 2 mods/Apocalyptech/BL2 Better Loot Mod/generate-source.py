@@ -105,6 +105,11 @@ epic_scale_alien = '1.000000'
 epic_scale_legendary = '0.500000'
 epic_scale_legendary_dbl = '1.000000'
 
+# Drop rates within the "very high roll" pools of dice chests
+dice_vhigh_veryrare = '1.000000'
+dice_vhigh_alien = '1.000000'
+dice_vhigh_legendary = '0.050000'
+
 # 3x chance of both kinds of eridium
 eridium_bar_drop = '0.004500'       # Stock: 0.001500
 eridium_stick_drop = '0.024000'     # Stock: 0.008000
@@ -1693,6 +1698,226 @@ loot_str = """
         #</Hammerlock DLC Endgame Chests>
 
     #</Better Epic Chests>
+
+    #<Tweaked Dice Chests>
+
+        # Adds a chance to drop legendary on a very good roll, and normalizes the
+        # odds when it chooses between purples and e-tech.  Also incidentally fixes
+        # an error in the "Longs" pool which wasn't properly pulling in E-Tech ARs.
+        # The actual probabilities for what pools get dropped for which rolls remains
+        # unchanged (and not just because that data is daunting to parse)
+
+        set GD_Aster_ItemPools.DiceChestPools.Pool_DiceChest_4_VeryHighRoll_Launchers BalancedItems
+        (
+            (
+                ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_Launchers_05_VeryRare',
+                InvBalanceDefinition=None,
+                Probability=(
+                    BaseValueConstant=1.000000,
+                    BaseValueAttribute=None,
+                    InitializationDefinition=None,
+                    BaseValueScaleConstant={dice_vhigh_veryrare}
+                ),
+                bDropOnDeath=True
+            ),
+            (
+                ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_Launchers_05_VeryRare_Alien',
+                InvBalanceDefinition=None,
+                Probability=(
+                    BaseValueConstant=1.000000,
+                    BaseValueAttribute=None,
+                    InitializationDefinition=None,
+                    BaseValueScaleConstant={dice_vhigh_alien}
+                ),
+                bDropOnDeath=True
+            ),
+            (
+                ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_Launchers_06_Legendary',
+                InvBalanceDefinition=None,
+                Probability=(
+                    BaseValueConstant=1.000000,
+                    BaseValueAttribute=None,
+                    InitializationDefinition=None,
+                    BaseValueScaleConstant={dice_vhigh_legendary}
+                ),
+                bDropOnDeath=True
+            )
+        )
+
+        set GD_Aster_ItemPools.DiceChestPools.Pool_DiceChest_4_VeryHighRoll_Longs BalancedItems
+        (
+            (
+                ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_AssaultRifles_05_VeryRare',
+                InvBalanceDefinition=None,
+                Probability=(
+                    BaseValueConstant=1.000000,
+                    BaseValueAttribute=None,
+                    InitializationDefinition=None,
+                    BaseValueScaleConstant={dice_vhigh_veryrare}
+                ),
+                bDropOnDeath=True
+            ),
+            (
+                ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_AssaultRifles_05_VeryRare_Alien',
+                InvBalanceDefinition=None,
+                Probability=(
+                    BaseValueConstant=1.000000,
+                    BaseValueAttribute=None,
+                    InitializationDefinition=None,
+                    BaseValueScaleConstant={dice_vhigh_alien}
+                ),
+                bDropOnDeath=True
+            ),
+            (
+                ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_AssaultRifles_06_Legendary',
+                InvBalanceDefinition=None,
+                Probability=(
+                    BaseValueConstant=1.000000,
+                    BaseValueAttribute=None,
+                    InitializationDefinition=None,
+                    BaseValueScaleConstant={dice_vhigh_legendary}
+                ),
+                bDropOnDeath=True
+            ),
+            (
+                ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_Shotguns_05_VeryRare',
+                InvBalanceDefinition=None,
+                Probability=(
+                    BaseValueConstant=1.000000,
+                    BaseValueAttribute=None,
+                    InitializationDefinition=None,
+                    BaseValueScaleConstant={dice_vhigh_veryrare}
+                ),
+                bDropOnDeath=True
+            ),
+            (
+                ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_Shotguns_05_VeryRare_Alien',
+                InvBalanceDefinition=None,
+                Probability=(
+                    BaseValueConstant=1.000000,
+                    BaseValueAttribute=None,
+                    InitializationDefinition=None,
+                    BaseValueScaleConstant={dice_vhigh_alien}
+                ),
+                bDropOnDeath=True
+            ),
+            (
+                ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_Shotguns_06_Legendary',
+                InvBalanceDefinition=None,
+                Probability=(
+                    BaseValueConstant=1.000000,
+                    BaseValueAttribute=None,
+                    InitializationDefinition=None,
+                    BaseValueScaleConstant={dice_vhigh_legendary}
+                ),
+                bDropOnDeath=True
+            ),
+            (
+                ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_SniperRifles_05_VeryRare',
+                InvBalanceDefinition=None,
+                Probability=(
+                    BaseValueConstant=1.000000,
+                    BaseValueAttribute=None,
+                    InitializationDefinition=None,
+                    BaseValueScaleConstant={dice_vhigh_veryrare}
+                ),
+                bDropOnDeath=True
+            ),
+            (
+                ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_SniperRifles_05_VeryRare_Alien',
+                InvBalanceDefinition=None,
+                Probability=(
+                    BaseValueConstant=1.000000,
+                    BaseValueAttribute=None,
+                    InitializationDefinition=None,
+                    BaseValueScaleConstant={dice_vhigh_alien}
+                ),
+                bDropOnDeath=True
+            ),
+            (
+                ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_SniperRifles_06_Legendary',
+                InvBalanceDefinition=None,
+                Probability=(
+                    BaseValueConstant=1.000000,
+                    BaseValueAttribute=None,
+                    InitializationDefinition=None,
+                    BaseValueScaleConstant={dice_vhigh_legendary}
+                ),
+                bDropOnDeath=True
+            ),
+            (
+                ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_SMG_05_VeryRare',
+                InvBalanceDefinition=None,
+                Probability=(
+                    BaseValueConstant=1.000000,
+                    BaseValueAttribute=None,
+                    InitializationDefinition=None,
+                    BaseValueScaleConstant={dice_vhigh_veryrare}
+                ),
+                bDropOnDeath=True
+            ),
+            (
+                ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_SMG_05_VeryRare_Alien',
+                InvBalanceDefinition=None,
+                Probability=(
+                    BaseValueConstant=1.000000,
+                    BaseValueAttribute=None,
+                    InitializationDefinition=None,
+                    BaseValueScaleConstant={dice_vhigh_alien}
+                ),
+                bDropOnDeath=True
+            ),
+            (
+                ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_SMG_06_Legendary',
+                InvBalanceDefinition=None,
+                Probability=(
+                    BaseValueConstant=1.000000,
+                    BaseValueAttribute=None,
+                    InitializationDefinition=None,
+                    BaseValueScaleConstant={dice_vhigh_legendary}
+                ),
+                bDropOnDeath=True
+            )
+        )
+
+        set GD_Aster_ItemPools.DiceChestPools.Pool_DiceChest_4_VeryHighRoll_Pistols BalancedItems
+        (
+            (
+                ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_Pistols_05_VeryRare',
+                InvBalanceDefinition=None,
+                Probability=(
+                    BaseValueConstant=1.000000,
+                    BaseValueAttribute=None,
+                    InitializationDefinition=None,
+                    BaseValueScaleConstant={dice_vhigh_veryrare}
+                ),
+                bDropOnDeath=True
+            ),
+            (
+                ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_Pistols_05_VeryRare_Alien',
+                InvBalanceDefinition=None,
+                Probability=(
+                    BaseValueConstant=1.000000,
+                    BaseValueAttribute=None,
+                    InitializationDefinition=None,
+                    BaseValueScaleConstant={dice_vhigh_alien}
+                ),
+                bDropOnDeath=True
+            ),
+            (
+                ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_Pistols_06_Legendary',
+                InvBalanceDefinition=None,
+                Probability=(
+                    BaseValueConstant=1.000000,
+                    BaseValueAttribute=None,
+                    InitializationDefinition=None,
+                    BaseValueScaleConstant={dice_vhigh_legendary}
+                ),
+                bDropOnDeath=True
+            )
+        )
+
+    #</Tweaked Dice Chests>
 
     #<Better Lockers>
 
@@ -3926,6 +4151,73 @@ loot_str = """
             )
 
         #</Better Torgue Biker Gang Rarity Drops>
+
+        #<Equalize Tiny Tina DLC Gemstone Distribution>
+
+            # The default Gemstone pool in the Tiny Tina DLC vastly weights pistols
+            # over the others.  This sets them all equal.  (I'd noticed this thanks
+            # to Orudeon's "Gemstone Loot Pools")
+
+            set GD_Aster_ItemPools.WeaponPools.Pool_Weapons_04_Gemstone BalancedItems
+            (
+                (
+                    ItmPoolDefinition=ItemPoolDefinition'GD_Aster_ItemPools.WeaponPools.Pool_Weapons_Pistols_04_Gemstone',
+                    InvBalanceDefinition=None,
+                    Probability=(
+                        BaseValueConstant=1.000000,
+                        BaseValueAttribute=None,
+                        InitializationDefinition=None,
+                        BaseValueScaleConstant=1.000000
+                    ),
+                    bDropOnDeath=True
+                ),
+                (
+                    ItmPoolDefinition=ItemPoolDefinition'GD_Aster_ItemPools.WeaponPools.Pool_Weapons_Shotguns_04_Gemstone',
+                    InvBalanceDefinition=None,
+                    Probability=(
+                        BaseValueConstant=1.000000,
+                        BaseValueAttribute=None,
+                        InitializationDefinition=None,
+                        BaseValueScaleConstant=1.000000
+                    ),
+                    bDropOnDeath=True
+                ),
+                (
+                    ItmPoolDefinition=ItemPoolDefinition'GD_Aster_ItemPools.WeaponPools.Pool_Weapons_SMGs_04_Gemstone',
+                    InvBalanceDefinition=None,
+                    Probability=(
+                        BaseValueConstant=1.000000,
+                        BaseValueAttribute=None,
+                        InitializationDefinition=None,
+                        BaseValueScaleConstant=1.000000
+                    ),
+                    bDropOnDeath=True
+                ),
+                (
+                    ItmPoolDefinition=ItemPoolDefinition'GD_Aster_ItemPools.WeaponPools.Pool_Weapons_ARs_04_Gemstone',
+                    InvBalanceDefinition=None,
+                    Probability=(
+                        BaseValueConstant=1.000000,
+                        BaseValueAttribute=None,
+                        InitializationDefinition=None,
+                        BaseValueScaleConstant=1.000000
+                    ),
+                    bDropOnDeath=True
+                ),
+                (
+                    ItmPoolDefinition=ItemPoolDefinition'GD_Aster_ItemPools.WeaponPools.Pool_Weapons_Snipers_04_Gemstone',
+                    InvBalanceDefinition=None,
+                    Probability=(
+                        BaseValueConstant=1.000000,
+                        BaseValueAttribute=None,
+                        InitializationDefinition=None,
+                        BaseValueScaleConstant=1.000000
+                    ),
+                    bDropOnDeath=True
+                )
+            )
+
+        #</Equalize Tiny Tina DLC Gemstone Distribution>
 
     #</Better Weapon Rarity Drops>
 
@@ -10484,6 +10776,9 @@ loot_str = """
         shield_scale_veryrare=shield_scale_veryrare,
         shield_base_legendary=shield_base_legendary,
         shield_scale_legendary=shield_scale_legendary,
+        dice_vhigh_veryrare=dice_vhigh_veryrare,
+        dice_vhigh_alien=dice_vhigh_alien,
+        dice_vhigh_legendary=dice_vhigh_legendary,
         eridium_bar_drop=eridium_bar_drop,
         eridium_stick_drop=eridium_stick_drop,
         treasure_scale_rare=treasure_scale_rare,

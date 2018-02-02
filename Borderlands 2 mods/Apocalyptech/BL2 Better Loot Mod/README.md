@@ -54,6 +54,8 @@ Specifically, this mod does the following:
   and has a decent chance of including stuff from the legendary pools.
 * "Epic" treasure chests have an extremely high probability of dropping
   from the legendary pools.
+* Dice Chests (from the Tiny Tina DLC) will have a small chance of containing
+  legendary loot on a "very high" roll.
 * When lockers spawn gear, they will always be blue-rarity.  *(Previously
   lockers had a chance to spawn even legendaries, so some could potentially
   see this as a drawback)*
@@ -216,7 +218,13 @@ Credits
 
 I've taken various ideas and at least one direct copy and paste from UCP,
 and from various other mods which had similar goals as what I was looking
-for.
+for:
+
+* Setting guaranteed drops for the vast majority of bosses in-game, via
+  two nicely-concise statements, came from JimRaven's "FarmFest"
+* Orudeon's "Gemstone Loot Pools" clued me in that the main Gemstone pool in
+  the Tiny Tina DLC is heavily weighted towards Pistols.
+* *(will have to go through and see what else...)*
 
 I'd also like to thank the fine folks in Shadow's Evil Hideout #borderlands-modding
 Discord channel for putting up with all my noobish questions.
