@@ -1094,225 +1094,262 @@
 
     #</Better Epic Chests>
 
-    #<Tweaked Dice Chests>
+    #<Tiny Tina DLC Chest Changes>
 
-        # Adds a chance to drop legendary on a very good roll, and normalizes the
-        # odds when it chooses between purples and e-tech.  Also incidentally fixes
-        # an error in the "Longs" pool which wasn't properly pulling in E-Tech ARs.
-        # The actual probabilities for what pools get dropped for which rolls remains
-        # unchanged (and not just because that data is daunting to parse)
+        #<Tweaked Dice Chests>
 
-        set GD_Aster_ItemPools.DiceChestPools.Pool_DiceChest_4_VeryHighRoll_Launchers BalancedItems
-        (
+            # Adds a chance to drop legendary on a very good roll, and normalizes the
+            # odds when it chooses between purples and e-tech.  Also incidentally fixes
+            # an error in the "Longs" pool which wasn't properly pulling in E-Tech ARs.
+            # The actual probabilities for what pools get dropped for which rolls remains
+            # unchanged (and not just because that data is daunting to parse)
+
+            set GD_Aster_ItemPools.DiceChestPools.Pool_DiceChest_4_VeryHighRoll_Launchers BalancedItems
             (
-                ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_Launchers_05_VeryRare',
-                InvBalanceDefinition=None,
-                Probability=(
-                    BaseValueConstant=1.000000,
-                    BaseValueAttribute=None,
-                    InitializationDefinition=None,
-                    BaseValueScaleConstant=1.000000
+                (
+                    ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_Launchers_05_VeryRare',
+                    InvBalanceDefinition=None,
+                    Probability=(
+                        BaseValueConstant=1.000000,
+                        BaseValueAttribute=None,
+                        InitializationDefinition=None,
+                        BaseValueScaleConstant=1.000000
+                    ),
+                    bDropOnDeath=True
                 ),
-                bDropOnDeath=True
-            ),
-            (
-                ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_Launchers_05_VeryRare_Alien',
-                InvBalanceDefinition=None,
-                Probability=(
-                    BaseValueConstant=1.000000,
-                    BaseValueAttribute=None,
-                    InitializationDefinition=None,
-                    BaseValueScaleConstant=1.000000
+                (
+                    ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_Launchers_05_VeryRare_Alien',
+                    InvBalanceDefinition=None,
+                    Probability=(
+                        BaseValueConstant=1.000000,
+                        BaseValueAttribute=None,
+                        InitializationDefinition=None,
+                        BaseValueScaleConstant=1.000000
+                    ),
+                    bDropOnDeath=True
                 ),
-                bDropOnDeath=True
-            ),
-            (
-                ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_Launchers_06_Legendary',
-                InvBalanceDefinition=None,
-                Probability=(
-                    BaseValueConstant=1.000000,
-                    BaseValueAttribute=None,
-                    InitializationDefinition=None,
-                    BaseValueScaleConstant=0.050000
-                ),
-                bDropOnDeath=True
+                (
+                    ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_Launchers_06_Legendary',
+                    InvBalanceDefinition=None,
+                    Probability=(
+                        BaseValueConstant=1.000000,
+                        BaseValueAttribute=None,
+                        InitializationDefinition=None,
+                        BaseValueScaleConstant=0.050000
+                    ),
+                    bDropOnDeath=True
+                )
             )
-        )
 
-        set GD_Aster_ItemPools.DiceChestPools.Pool_DiceChest_4_VeryHighRoll_Longs BalancedItems
-        (
+            set GD_Aster_ItemPools.DiceChestPools.Pool_DiceChest_4_VeryHighRoll_Longs BalancedItems
             (
-                ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_AssaultRifles_05_VeryRare',
-                InvBalanceDefinition=None,
-                Probability=(
-                    BaseValueConstant=1.000000,
-                    BaseValueAttribute=None,
-                    InitializationDefinition=None,
-                    BaseValueScaleConstant=1.000000
+                (
+                    ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_AssaultRifles_05_VeryRare',
+                    InvBalanceDefinition=None,
+                    Probability=(
+                        BaseValueConstant=1.000000,
+                        BaseValueAttribute=None,
+                        InitializationDefinition=None,
+                        BaseValueScaleConstant=1.000000
+                    ),
+                    bDropOnDeath=True
                 ),
-                bDropOnDeath=True
-            ),
-            (
-                ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_AssaultRifles_05_VeryRare_Alien',
-                InvBalanceDefinition=None,
-                Probability=(
-                    BaseValueConstant=1.000000,
-                    BaseValueAttribute=None,
-                    InitializationDefinition=None,
-                    BaseValueScaleConstant=1.000000
+                (
+                    ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_AssaultRifles_05_VeryRare_Alien',
+                    InvBalanceDefinition=None,
+                    Probability=(
+                        BaseValueConstant=1.000000,
+                        BaseValueAttribute=None,
+                        InitializationDefinition=None,
+                        BaseValueScaleConstant=1.000000
+                    ),
+                    bDropOnDeath=True
                 ),
-                bDropOnDeath=True
-            ),
-            (
-                ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_AssaultRifles_06_Legendary',
-                InvBalanceDefinition=None,
-                Probability=(
-                    BaseValueConstant=1.000000,
-                    BaseValueAttribute=None,
-                    InitializationDefinition=None,
-                    BaseValueScaleConstant=0.050000
+                (
+                    ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_AssaultRifles_06_Legendary',
+                    InvBalanceDefinition=None,
+                    Probability=(
+                        BaseValueConstant=1.000000,
+                        BaseValueAttribute=None,
+                        InitializationDefinition=None,
+                        BaseValueScaleConstant=0.050000
+                    ),
+                    bDropOnDeath=True
                 ),
-                bDropOnDeath=True
-            ),
-            (
-                ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_Shotguns_05_VeryRare',
-                InvBalanceDefinition=None,
-                Probability=(
-                    BaseValueConstant=1.000000,
-                    BaseValueAttribute=None,
-                    InitializationDefinition=None,
-                    BaseValueScaleConstant=1.000000
+                (
+                    ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_Shotguns_05_VeryRare',
+                    InvBalanceDefinition=None,
+                    Probability=(
+                        BaseValueConstant=1.000000,
+                        BaseValueAttribute=None,
+                        InitializationDefinition=None,
+                        BaseValueScaleConstant=1.000000
+                    ),
+                    bDropOnDeath=True
                 ),
-                bDropOnDeath=True
-            ),
-            (
-                ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_Shotguns_05_VeryRare_Alien',
-                InvBalanceDefinition=None,
-                Probability=(
-                    BaseValueConstant=1.000000,
-                    BaseValueAttribute=None,
-                    InitializationDefinition=None,
-                    BaseValueScaleConstant=1.000000
+                (
+                    ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_Shotguns_05_VeryRare_Alien',
+                    InvBalanceDefinition=None,
+                    Probability=(
+                        BaseValueConstant=1.000000,
+                        BaseValueAttribute=None,
+                        InitializationDefinition=None,
+                        BaseValueScaleConstant=1.000000
+                    ),
+                    bDropOnDeath=True
                 ),
-                bDropOnDeath=True
-            ),
-            (
-                ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_Shotguns_06_Legendary',
-                InvBalanceDefinition=None,
-                Probability=(
-                    BaseValueConstant=1.000000,
-                    BaseValueAttribute=None,
-                    InitializationDefinition=None,
-                    BaseValueScaleConstant=0.050000
+                (
+                    ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_Shotguns_06_Legendary',
+                    InvBalanceDefinition=None,
+                    Probability=(
+                        BaseValueConstant=1.000000,
+                        BaseValueAttribute=None,
+                        InitializationDefinition=None,
+                        BaseValueScaleConstant=0.050000
+                    ),
+                    bDropOnDeath=True
                 ),
-                bDropOnDeath=True
-            ),
-            (
-                ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_SniperRifles_05_VeryRare',
-                InvBalanceDefinition=None,
-                Probability=(
-                    BaseValueConstant=1.000000,
-                    BaseValueAttribute=None,
-                    InitializationDefinition=None,
-                    BaseValueScaleConstant=1.000000
+                (
+                    ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_SniperRifles_05_VeryRare',
+                    InvBalanceDefinition=None,
+                    Probability=(
+                        BaseValueConstant=1.000000,
+                        BaseValueAttribute=None,
+                        InitializationDefinition=None,
+                        BaseValueScaleConstant=1.000000
+                    ),
+                    bDropOnDeath=True
                 ),
-                bDropOnDeath=True
-            ),
-            (
-                ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_SniperRifles_05_VeryRare_Alien',
-                InvBalanceDefinition=None,
-                Probability=(
-                    BaseValueConstant=1.000000,
-                    BaseValueAttribute=None,
-                    InitializationDefinition=None,
-                    BaseValueScaleConstant=1.000000
+                (
+                    ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_SniperRifles_05_VeryRare_Alien',
+                    InvBalanceDefinition=None,
+                    Probability=(
+                        BaseValueConstant=1.000000,
+                        BaseValueAttribute=None,
+                        InitializationDefinition=None,
+                        BaseValueScaleConstant=1.000000
+                    ),
+                    bDropOnDeath=True
                 ),
-                bDropOnDeath=True
-            ),
-            (
-                ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_SniperRifles_06_Legendary',
-                InvBalanceDefinition=None,
-                Probability=(
-                    BaseValueConstant=1.000000,
-                    BaseValueAttribute=None,
-                    InitializationDefinition=None,
-                    BaseValueScaleConstant=0.050000
+                (
+                    ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_SniperRifles_06_Legendary',
+                    InvBalanceDefinition=None,
+                    Probability=(
+                        BaseValueConstant=1.000000,
+                        BaseValueAttribute=None,
+                        InitializationDefinition=None,
+                        BaseValueScaleConstant=0.050000
+                    ),
+                    bDropOnDeath=True
                 ),
-                bDropOnDeath=True
-            ),
-            (
-                ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_SMG_05_VeryRare',
-                InvBalanceDefinition=None,
-                Probability=(
-                    BaseValueConstant=1.000000,
-                    BaseValueAttribute=None,
-                    InitializationDefinition=None,
-                    BaseValueScaleConstant=1.000000
+                (
+                    ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_SMG_05_VeryRare',
+                    InvBalanceDefinition=None,
+                    Probability=(
+                        BaseValueConstant=1.000000,
+                        BaseValueAttribute=None,
+                        InitializationDefinition=None,
+                        BaseValueScaleConstant=1.000000
+                    ),
+                    bDropOnDeath=True
                 ),
-                bDropOnDeath=True
-            ),
-            (
-                ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_SMG_05_VeryRare_Alien',
-                InvBalanceDefinition=None,
-                Probability=(
-                    BaseValueConstant=1.000000,
-                    BaseValueAttribute=None,
-                    InitializationDefinition=None,
-                    BaseValueScaleConstant=1.000000
+                (
+                    ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_SMG_05_VeryRare_Alien',
+                    InvBalanceDefinition=None,
+                    Probability=(
+                        BaseValueConstant=1.000000,
+                        BaseValueAttribute=None,
+                        InitializationDefinition=None,
+                        BaseValueScaleConstant=1.000000
+                    ),
+                    bDropOnDeath=True
                 ),
-                bDropOnDeath=True
-            ),
-            (
-                ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_SMG_06_Legendary',
-                InvBalanceDefinition=None,
-                Probability=(
-                    BaseValueConstant=1.000000,
-                    BaseValueAttribute=None,
-                    InitializationDefinition=None,
-                    BaseValueScaleConstant=0.050000
-                ),
-                bDropOnDeath=True
+                (
+                    ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_SMG_06_Legendary',
+                    InvBalanceDefinition=None,
+                    Probability=(
+                        BaseValueConstant=1.000000,
+                        BaseValueAttribute=None,
+                        InitializationDefinition=None,
+                        BaseValueScaleConstant=0.050000
+                    ),
+                    bDropOnDeath=True
+                )
             )
-        )
 
-        set GD_Aster_ItemPools.DiceChestPools.Pool_DiceChest_4_VeryHighRoll_Pistols BalancedItems
-        (
+            set GD_Aster_ItemPools.DiceChestPools.Pool_DiceChest_4_VeryHighRoll_Pistols BalancedItems
             (
-                ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_Pistols_05_VeryRare',
-                InvBalanceDefinition=None,
-                Probability=(
-                    BaseValueConstant=1.000000,
-                    BaseValueAttribute=None,
-                    InitializationDefinition=None,
-                    BaseValueScaleConstant=1.000000
+                (
+                    ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_Pistols_05_VeryRare',
+                    InvBalanceDefinition=None,
+                    Probability=(
+                        BaseValueConstant=1.000000,
+                        BaseValueAttribute=None,
+                        InitializationDefinition=None,
+                        BaseValueScaleConstant=1.000000
+                    ),
+                    bDropOnDeath=True
                 ),
-                bDropOnDeath=True
-            ),
-            (
-                ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_Pistols_05_VeryRare_Alien',
-                InvBalanceDefinition=None,
-                Probability=(
-                    BaseValueConstant=1.000000,
-                    BaseValueAttribute=None,
-                    InitializationDefinition=None,
-                    BaseValueScaleConstant=1.000000
+                (
+                    ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_Pistols_05_VeryRare_Alien',
+                    InvBalanceDefinition=None,
+                    Probability=(
+                        BaseValueConstant=1.000000,
+                        BaseValueAttribute=None,
+                        InitializationDefinition=None,
+                        BaseValueScaleConstant=1.000000
+                    ),
+                    bDropOnDeath=True
                 ),
-                bDropOnDeath=True
-            ),
-            (
-                ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_Pistols_06_Legendary',
-                InvBalanceDefinition=None,
-                Probability=(
-                    BaseValueConstant=1.000000,
-                    BaseValueAttribute=None,
-                    InitializationDefinition=None,
-                    BaseValueScaleConstant=0.050000
-                ),
-                bDropOnDeath=True
+                (
+                    ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_Pistols_06_Legendary',
+                    InvBalanceDefinition=None,
+                    Probability=(
+                        BaseValueConstant=1.000000,
+                        BaseValueAttribute=None,
+                        InitializationDefinition=None,
+                        BaseValueScaleConstant=0.050000
+                    ),
+                    bDropOnDeath=True
+                )
             )
-        )
 
-    #</Tweaked Dice Chests>
+        #</Tweaked Dice Chests>
+
+        #<Improved Non-Mimic Chests>
+
+            # The chests which could be mimics but aren't already have good loot
+            # when combined with the rest of this mod, but this will improve them
+            # a bit more.  Half the gear in the chest (rounded down) will take from
+            # the "Epic" chest pool, rather than the normal chest pool.
+
+            #<hotfix><key>"SparkLevelPatchEntry-NoMimicEpic1"</key><value>",GD_Aster_Lootables.Balance.ObjectGrade_MimicChest_NoMimic,DefaultLoot[0].ItemAttachments[1].ItemPool,,ItemPoolDefinition'GD_Itempools.Treasure_ChestPools.Pool_EpicChest_Weapons_LongGuns'"</value><on>
+
+            #<hotfix><key>"SparkLevelPatchEntry-NoMimicEpic2"</key><value>",GD_Aster_Lootables.Balance.ObjectGrade_MimicChest_NoMimic,DefaultLoot[0].ItemAttachments[3].ItemPool,,ItemPoolDefinition'GD_Itempools.Treasure_ChestPools.Pool_EpicChest_Weapons_Pistols'"</value><on>
+
+            #<hotfix><key>"SparkLevelPatchEntry-NoMimicEpic3"</key><value>",GD_Aster_Lootables.Balance.ObjectGrade_MimicChest_NoMimic,DefaultLoot[1].ItemAttachments[2].ItemPool,,ItemPoolDefinition'GD_Itempools.Treasure_ChestPools.Pool_EpicChest_Weapons_Pistols'"</value><on>
+
+            #<hotfix><key>"SparkLevelPatchEntry-NoMimicEpic4"</key><value>",GD_Aster_Lootables.Balance.ObjectGrade_MimicChest_NoMimic,DefaultLoot[1].ItemAttachments[3].ItemPool,,ItemPoolDefinition'GD_Itempools.Treasure_ChestPools.Pool_EpicChest_Weapons_Pistols'"</value><on>
+
+            #<hotfix><key>"SparkLevelPatchEntry-NoMimicEpic5"</key><value>",GD_Aster_Lootables.Balance.ObjectGrade_MimicChest_NoMimic,DefaultLoot[3].ItemAttachments[2].ItemPool,,ItemPoolDefinition'GD_Itempools.Treasure_ChestPools.Pool_EpicChest_Items'"</value><on>
+
+            #<hotfix><key>"SparkLevelPatchEntry-NoMimicEpic6"</key><value>",GD_Aster_Lootables.Balance.ObjectGrade_MimicChest_NoMimic,DefaultLoot[3].ItemAttachments[3].ItemPool,,ItemPoolDefinition'GD_Itempools.Treasure_ChestPools.Pool_EpicChest_Items'"</value><on>
+
+            #<hotfix><key>"SparkLevelPatchEntry-NoMimicEpic7"</key><value>",GD_Aster_Lootables.Balance.ObjectGrade_MimicChest_NoMimic,DefaultLoot[4].ItemAttachments[2].ItemPool,,ItemPoolDefinition'GD_Itempools.Treasure_ChestPools.Pool_EpicChest_Shields'"</value><on>
+
+            #<hotfix><key>"SparkLevelPatchEntry-NoMimicEpic8"</key><value>",GD_Aster_Lootables.Balance.ObjectGrade_MimicChest_NoMimic,DefaultLoot[4].ItemAttachments[3].ItemPool,,ItemPoolDefinition'GD_Itempools.Treasure_ChestPools.Pool_EpicChest_Shields'"</value><on>
+
+            #<hotfix><key>"SparkLevelPatchEntry-NoMimicEpic9"</key><value>",GD_Aster_Lootables.Balance.ObjectGrade_MimicChest_NoMimic,DefaultLoot[5].ItemAttachments[2].ItemPool,,ItemPoolDefinition'GD_Itempools.Treasure_ChestPools.Pool_EpicChest_GrenadeMods'"</value><on>
+
+            #<hotfix><key>"SparkLevelPatchEntry-NoMimicEpic10"</key><value>",GD_Aster_Lootables.Balance.ObjectGrade_MimicChest_NoMimic,DefaultLoot[5].ItemAttachments[3].ItemPool,,ItemPoolDefinition'GD_Itempools.Treasure_ChestPools.Pool_EpicChest_GrenadeMods'"</value><on>
+
+            #<hotfix><key>"SparkLevelPatchEntry-NoMimicEpic11"</key><value>",GD_Aster_Lootables.Balance.ObjectGrade_MimicChest_NoMimic,DefaultLoot[7].ItemAttachments[2].ItemPool,,ItemPoolDefinition'GD_Itempools.Treasure_ChestPools.Pool_EpicChest_Weapons_LongGuns'"</value><on>
+
+            #<hotfix><key>"SparkLevelPatchEntry-NoMimicEpic12"</key><value>",GD_Aster_Lootables.Balance.ObjectGrade_MimicChest_NoMimic,DefaultLoot[8].ItemAttachments[2].ItemPool,,ItemPoolDefinition'GD_Itempools.Treasure_ChestPools.Pool_EpicChest_Artifacts'"</value><on>
+
+        #</Improved Non-Mimic Chests>
+
+    #</Tiny Tina DLC Chest Changes>
 
     #<Better Lockers>
 
