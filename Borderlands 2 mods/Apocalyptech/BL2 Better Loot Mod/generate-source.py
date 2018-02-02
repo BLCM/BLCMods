@@ -89,6 +89,10 @@ shield_scale_rare = weapon_scale_rare
 shield_scale_veryrare = weapon_scale_veryrare
 shield_scale_legendary = weapon_scale_legendary
 
+# Custom relic drop scaling
+relic_scale_rare = '1.0'
+relic_scale_veryrare = '2.0'
+
 # Drop rates for "regular" treasure chests
 treasure_scale_rare = '10.000000'
 treasure_scale_veryrare = '65.000000'
@@ -122,7 +126,7 @@ loot_drop_quantity = '5'            # Stock: 1.000000
 # Force Pool_GunsAndGear to always drop the specified pool, if `force_gunsandgear_drop`
 # is True.  Useful for testing out how individual pools are behaving.
 force_gunsandgear_drop = False
-force_gunsandgear_drop_type = 'GD_Itempools.GrenadeModPools.Pool_GrenadeMods_All'
+force_gunsandgear_drop_type = 'GD_Itempools.ArtifactPools.Pool_ArtifactsReward'
 
 # Force Pool_GunsAndGear to always drop the specified item, if
 # `force_gunsandgear_specific` is True.  Useful for seeing what exactly an
@@ -150,7 +154,6 @@ hfs.add_hotfix('chubby_drop', 'SparkLevelPatchEntry-ChubbyDrop1',
 
 # Various grenade mod early unlocks.  These actually don't have to be
 # hotfixes, but doing so lets us be much more concise.
-
 for (gm_type, man_count) in [
             ('AreaEffect', 1),
             ('BouncingBetty', 2),
@@ -185,7 +188,6 @@ hfs.add_hotfix('torgue_piston', 'SparkLevelPatchEntry-PistonDropSlowHand0',
     ',GD_Iris_Population_PistonBoss.Balance.Iris_PawnBalance_PistonBoss,DefaultItemPoolList[2].PoolProbability.BaseValueConstant,,1.0')
 
 # Make Witch Doctors drop some slightly-more-interesting loot
-
 for doctor in ['Fire', 'Shock', 'Slag', 'Slow', 'Vampire']:
     hfs.add_hotfix('witchdoctor_{}'.format(doctor),
         'SparkLevelPatchEntry-WitchDoctor{}Drops0'.format(doctor),
@@ -480,6 +482,122 @@ test_drop_str = """
             loot_drop_quantity=loot_drop_quantity,
         )
 
+# Forcing the "Reward" Relic pool to obey our custom weights.  There's
+# 22 of these definitions which are all identical (and one outlier), so
+# we're going use a loop rather than a lot of copy+paste.
+relic_weight_parts = []
+for relic_type in [
+        'AggressionA',
+        'AggressionB',
+        'AggressionC',
+        'AggressionD',
+        'AggressionE',
+        'AggressionF',
+        'AllegianceA',
+        'AllegianceB',
+        'AllegianceC',
+        'AllegianceD',
+        'AllegianceE',
+        'AllegianceF',
+        'AllegianceG',
+        'AllegianceH',
+        'Elemental',
+        'Proficiency',
+        'Protection',
+        'Resistance',
+        'Stockpile',
+        'Strength',
+        'Tenacity',
+        'Vitality',
+        ]:
+    relic_weight_parts.append("""
+        set GD_Artifacts.PartLists.Parts_{relic_type}_Rare ConsolidatedAttributeInitData
+        (
+            (
+                BaseValueConstant=1.000000,
+                BaseValueAttribute=None,
+                InitializationDefinition=None,
+                BaseValueScaleConstant=1.000000
+            ),
+            (
+                BaseValueConstant=100.000000,
+                BaseValueAttribute=None,
+                InitializationDefinition=None,
+                BaseValueScaleConstant=1.000000
+            ),
+            (
+                BaseValueConstant=0.000000,
+                BaseValueAttribute=None,
+                InitializationDefinition=None,
+                BaseValueScaleConstant=1.000000
+            ),
+            (
+                BaseValueConstant=1.000000,
+                BaseValueAttribute=None,
+                InitializationDefinition=None,
+                BaseValueScaleConstant={relic_scale_rare}
+            ),
+            (
+                BaseValueConstant=1.000000,
+                BaseValueAttribute=None,
+                InitializationDefinition=None,
+                BaseValueScaleConstant={relic_scale_veryrare}
+            )
+        )
+""".format(
+    relic_type=relic_type,
+    relic_scale_rare=relic_scale_rare,
+    relic_scale_veryrare=relic_scale_veryrare,
+    ))
+# This one is the one that's slightly different
+relic_weight_parts.append("""
+        set GD_Artifacts.PartLists.Parts_Elemental_Status_Rare ConsolidatedAttributeInitData
+        (
+            (
+                BaseValueConstant=1.000000,
+                BaseValueAttribute=None,
+                InitializationDefinition=None,
+                BaseValueScaleConstant=1.000000
+            ),
+            (
+                BaseValueConstant=100.000000,
+                BaseValueAttribute=None,
+                InitializationDefinition=None,
+                BaseValueScaleConstant=1.000000
+            ),
+            (
+                BaseValueConstant=0.000000,
+                BaseValueAttribute=None,
+                InitializationDefinition=None,
+                BaseValueScaleConstant=1.000000
+            ),
+            (
+                BaseValueConstant=100.000000,
+                BaseValueAttribute=None,
+                InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',
+                BaseValueScaleConstant=1.000000
+            ),
+            (
+                BaseValueConstant=1.000000,
+                BaseValueAttribute=None,
+                InitializationDefinition=None,
+                BaseValueScaleConstant={relic_scale_rare}
+            ),
+            (
+                BaseValueConstant=1.000000,
+                BaseValueAttribute=None,
+                InitializationDefinition=None,
+                BaseValueScaleConstant={relic_scale_veryrare}
+            )
+        )
+""".format(
+    relic_type=relic_type,
+    relic_scale_rare=relic_scale_rare,
+    relic_scale_veryrare=relic_scale_veryrare,
+    ))
+relic_weight_str = ''.join(relic_weight_parts).lstrip()
+
+# Now start constructing the actual gigantic mod string.
 loot_str = """
 #<{mod_name} ({variant_name})>
 
@@ -2615,7 +2733,7 @@ loot_str = """
                     BaseValueConstant=1.000000,
                     BaseValueAttribute=None,
                     InitializationDefinition=None,
-                    BaseValueScaleConstant=2.500000
+                    BaseValueScaleConstant=4.000000
                 ),
                 bDropOnDeath=True
             ),
@@ -2626,7 +2744,7 @@ loot_str = """
                     BaseValueConstant=1.000000,
                     BaseValueAttribute=None,
                     InitializationDefinition=None,
-                    BaseValueScaleConstant=2.500000
+                    BaseValueScaleConstant=4.000000
                 ),
                 bDropOnDeath=True
             ),
@@ -2637,7 +2755,7 @@ loot_str = """
                     BaseValueConstant=1.000000,
                     BaseValueAttribute=None,
                     InitializationDefinition=None,
-                    BaseValueScaleConstant=2.500000
+                    BaseValueScaleConstant=4.000000
                 ),
                 bDropOnDeath=True
             ),
@@ -2648,7 +2766,7 @@ loot_str = """
                     BaseValueConstant=1.000000,
                     BaseValueAttribute=None,
                     InitializationDefinition=None,
-                    BaseValueScaleConstant=2.500000
+                    BaseValueScaleConstant=4.000000
                 ),
                 bDropOnDeath=True
             ),
@@ -2659,7 +2777,7 @@ loot_str = """
                     BaseValueConstant=1.000000,
                     BaseValueAttribute=None,
                     InitializationDefinition=None,
-                    BaseValueScaleConstant=2.500000
+                    BaseValueScaleConstant=4.000000
                 ),
                 bDropOnDeath=True
             ),
@@ -2670,7 +2788,7 @@ loot_str = """
                     BaseValueConstant=1.000000,
                     BaseValueAttribute=None,
                     InitializationDefinition=None,
-                    BaseValueScaleConstant=2.500000
+                    BaseValueScaleConstant=6.000000
                 ),
                 bDropOnDeath=True
             ),
@@ -2681,7 +2799,7 @@ loot_str = """
                     BaseValueConstant=1.000000,
                     BaseValueAttribute=None,
                     InitializationDefinition=None,
-                    BaseValueScaleConstant=2.500000
+                    BaseValueScaleConstant=4.000000
                 ),
                 bDropOnDeath=True
             ),
@@ -2692,7 +2810,7 @@ loot_str = """
                     BaseValueConstant=1.000000,
                     BaseValueAttribute=None,
                     InitializationDefinition=None,
-                    BaseValueScaleConstant=2.500000
+                    BaseValueScaleConstant=4.000000
                 ),
                 bDropOnDeath=True
             ),
@@ -2703,7 +2821,7 @@ loot_str = """
                     BaseValueConstant=1.000000,
                     BaseValueAttribute=None,
                     InitializationDefinition=None,
-                    BaseValueScaleConstant=2.500000
+                    BaseValueScaleConstant=10.000000
                 ),
                 bDropOnDeath=True
             ),
@@ -2714,7 +2832,7 @@ loot_str = """
                     BaseValueConstant=1.000000,
                     BaseValueAttribute=None,
                     InitializationDefinition=None,
-                    BaseValueScaleConstant=2.500000
+                    BaseValueScaleConstant=10.000000
                 ),
                 bDropOnDeath=True
             ),
@@ -2857,7 +2975,7 @@ loot_str = """
                     BaseValueConstant=1.000000,
                     BaseValueAttribute=None,
                     InitializationDefinition=None,
-                    BaseValueScaleConstant=1.000000
+                    BaseValueScaleConstant=0.500000
                 ),
                 bDropOnDeath=True
             ),
@@ -2868,7 +2986,7 @@ loot_str = """
                     BaseValueConstant=1.000000,
                     BaseValueAttribute=None,
                     InitializationDefinition=None,
-                    BaseValueScaleConstant=1.000000
+                    BaseValueScaleConstant=0.500000
                 ),
                 bDropOnDeath=True
             ),
@@ -2879,7 +2997,7 @@ loot_str = """
                     BaseValueConstant=1.000000,
                     BaseValueAttribute=None,
                     InitializationDefinition=None,
-                    BaseValueScaleConstant=1.000000
+                    BaseValueScaleConstant=0.500000
                 ),
                 bDropOnDeath=True
             ),
@@ -2890,7 +3008,7 @@ loot_str = """
                     BaseValueConstant=1.000000,
                     BaseValueAttribute=None,
                     InitializationDefinition=None,
-                    BaseValueScaleConstant=1.000000
+                    BaseValueScaleConstant=0.500000
                 ),
                 bDropOnDeath=True
             ),
@@ -2901,7 +3019,7 @@ loot_str = """
                     BaseValueConstant=1.000000,
                     BaseValueAttribute=None,
                     InitializationDefinition=None,
-                    BaseValueScaleConstant=1.000000
+                    BaseValueScaleConstant=0.500000
                 ),
                 bDropOnDeath=True
             ),
@@ -2912,7 +3030,7 @@ loot_str = """
                     BaseValueConstant=1.000000,
                     BaseValueAttribute=None,
                     InitializationDefinition=None,
-                    BaseValueScaleConstant=1.000000
+                    BaseValueScaleConstant=0.500000
                 ),
                 bDropOnDeath=True
             ),
@@ -2951,341 +3069,11 @@ loot_str = """
             )
         )
 
-        set GD_Itempools.ArtifactPools.Pool_Artifacts_05_Legendary
+        set GD_Itempools.ArtifactPools.Pool_Artifacts_05_Legendary BalancedItems
         (
             (
-                ItmPoolDefinition=None,
-                InvBalanceDefinition=InventoryBalanceDefinition'GD_Artifacts.A_Item.A_Vitality_Rare',
-                Probability=(
-                    BaseValueConstant=1.000000,
-                    BaseValueAttribute=None,
-                    InitializationDefinition=None,
-                    BaseValueScaleConstant=1.000000
-                ),
-                bDropOnDeath=True
-            ),
-            (
-                ItmPoolDefinition=None,
-                InvBalanceDefinition=InventoryBalanceDefinition'GD_Artifacts.A_Item.A_Stockpile_Rare',
-                Probability=(
-                    BaseValueConstant=1.000000,
-                    BaseValueAttribute=None,
-                    InitializationDefinition=None,
-                    BaseValueScaleConstant=1.000000
-                ),
-                bDropOnDeath=True
-            ),
-            (
-                ItmPoolDefinition=None,
-                InvBalanceDefinition=InventoryBalanceDefinition'GD_Artifacts.A_Item.A_Protection_Rare',
-                Probability=(
-                    BaseValueConstant=1.000000,
-                    BaseValueAttribute=None,
-                    InitializationDefinition=None,
-                    BaseValueScaleConstant=1.000000
-                ),
-                bDropOnDeath=True
-            ),
-            (
-                ItmPoolDefinition=None,
-                InvBalanceDefinition=InventoryBalanceDefinition'GD_Artifacts.A_Item.A_Strength_Rare',
-                Probability=(
-                    BaseValueConstant=1.000000,
-                    BaseValueAttribute=None,
-                    InitializationDefinition=None,
-                    BaseValueScaleConstant=1.000000
-                ),
-                bDropOnDeath=True
-            ),
-            (
-                ItmPoolDefinition=None,
-                InvBalanceDefinition=InventoryBalanceDefinition'GD_Artifacts.A_Item.A_Resistance_Rare',
-                Probability=(
-                    BaseValueConstant=1.000000,
-                    BaseValueAttribute=None,
-                    InitializationDefinition=None,
-                    BaseValueScaleConstant=1.000000
-                ),
-                bDropOnDeath=True
-            ),
-            (
-                ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ArtifactPools.Pool_Artifacts_ElementalReward',
+                ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ArtifactPools.Pool_ArtifactsReward',
                 InvBalanceDefinition=None,
-                Probability=(
-                    BaseValueConstant=1.000000,
-                    BaseValueAttribute=None,
-                    InitializationDefinition=None,
-                    BaseValueScaleConstant=1.000000
-                ),
-                bDropOnDeath=True
-            ),
-            (
-                ItmPoolDefinition=None,
-                InvBalanceDefinition=InventoryBalanceDefinition'GD_Artifacts.A_Item.A_Tenacity_Rare',
-                Probability=(
-                    BaseValueConstant=1.000000,
-                    BaseValueAttribute=None,
-                    InitializationDefinition=None,
-                    BaseValueScaleConstant=1.000000
-                ),
-                bDropOnDeath=True
-            ),
-            (
-                ItmPoolDefinition=None,
-                InvBalanceDefinition=InventoryBalanceDefinition'GD_Artifacts.A_Item.A_Proficiency_Rare',
-                Probability=(
-                    BaseValueConstant=1.000000,
-                    BaseValueAttribute=None,
-                    InitializationDefinition=None,
-                    BaseValueScaleConstant=1.000000
-                ),
-                bDropOnDeath=True
-            ),
-            (
-                ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ArtifactPools.Pool_Artifacts_AggressionReward',
-                InvBalanceDefinition=None,
-                Probability=(
-                    BaseValueConstant=1.000000,
-                    BaseValueAttribute=None,
-                    InitializationDefinition=None,
-                    BaseValueScaleConstant=1.000000
-                ),
-                bDropOnDeath=True
-            ),
-            (
-                ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ArtifactPools.Pool_Artifacts_AllegianceReward',
-                InvBalanceDefinition=None,
-                Probability=(
-                    BaseValueConstant=1.000000,
-                    BaseValueAttribute=None,
-                    InitializationDefinition=None,
-                    BaseValueScaleConstant=1.000000
-                ),
-                bDropOnDeath=True
-            ),
-            (
-                ItmPoolDefinition=None,
-                InvBalanceDefinition=InventoryBalanceDefinition'GD_Artifacts.A_Item_Unique.A_Afterburner',
-                Probability=(
-                    BaseValueConstant=1.000000,
-                    BaseValueAttribute=None,
-                    InitializationDefinition=None,
-                    BaseValueScaleConstant=1.000000
-                ),
-                bDropOnDeath=True
-            ),
-            (
-                ItmPoolDefinition=None,
-                InvBalanceDefinition=InventoryBalanceDefinition'GD_Orchid_Artifacts.A_Item_Unique.A_Blade',
-                Probability=(
-                    BaseValueConstant=1.000000,
-                    BaseValueAttribute=None,
-                    InitializationDefinition=None,
-                    BaseValueScaleConstant=1.000000
-                ),
-                bDropOnDeath=True
-            ),
-            (
-                ItmPoolDefinition=None,
-                InvBalanceDefinition=InventoryBalanceDefinition'GD_Artifacts.A_Item_Unique.A_Endowment',
-                Probability=(
-                    BaseValueConstant=1.000000,
-                    BaseValueAttribute=None,
-                    InitializationDefinition=None,
-                    BaseValueScaleConstant=1.000000
-                ),
-                bDropOnDeath=True
-            ),
-            (
-                ItmPoolDefinition=None,
-                InvBalanceDefinition=InventoryBalanceDefinition'GD_Artifacts.A_Item_Unique.A_Opportunity',
-                Probability=(
-                    BaseValueConstant=1.000000,
-                    BaseValueAttribute=None,
-                    InitializationDefinition=None,
-                    BaseValueScaleConstant=1.000000
-                ),
-                bDropOnDeath=True
-            ),
-            (
-                ItmPoolDefinition=None,
-                InvBalanceDefinition=InventoryBalanceDefinition'GD_Artifacts.A_Item_Unique.A_Sheriff',
-                Probability=(
-                    BaseValueConstant=1.000000,
-                    BaseValueAttribute=None,
-                    InitializationDefinition=None,
-                    BaseValueScaleConstant=1.000000
-                ),
-                bDropOnDeath=True
-            ),
-            (
-                ItmPoolDefinition=None,
-                InvBalanceDefinition=InventoryBalanceDefinition'GD_Artifacts.A_Item_Unique.A_Deputy',
-                Probability=(
-                    BaseValueConstant=1.000000,
-                    BaseValueAttribute=None,
-                    InitializationDefinition=None,
-                    BaseValueScaleConstant=1.000000
-                ),
-                bDropOnDeath=True
-            ),
-            (
-                ItmPoolDefinition=None,
-                InvBalanceDefinition=InventoryBalanceDefinition'GD_Iris_SeraphItems.Might.Iris_Seraph_Artifact_Might_Balance',
-                Probability=(
-                    BaseValueConstant=1.000000,
-                    BaseValueAttribute=None,
-                    InitializationDefinition=None,
-                    BaseValueScaleConstant=1.000000
-                ),
-                bDropOnDeath=True
-            ),
-            (
-                ItmPoolDefinition=None,
-                InvBalanceDefinition=InventoryBalanceDefinition'GD_Orchid_Artifacts.A_Item_Unique.A_SeraphBloodRelic',
-                Probability=(
-                    BaseValueConstant=1.000000,
-                    BaseValueAttribute=None,
-                    InitializationDefinition=None,
-                    BaseValueScaleConstant=1.000000
-                ),
-                bDropOnDeath=True
-            ),
-            (
-                ItmPoolDefinition=None,
-                InvBalanceDefinition=InventoryBalanceDefinition'GD_Sage_Artifacts.A_Item.A_SeraphBreath',
-                Probability=(
-                    BaseValueConstant=1.000000,
-                    BaseValueAttribute=None,
-                    InitializationDefinition=None,
-                    BaseValueScaleConstant=1.000000
-                ),
-                bDropOnDeath=True
-            ),
-            (
-                ItmPoolDefinition=None,
-                InvBalanceDefinition=InventoryBalanceDefinition'GD_Aster_Artifacts.A_Item_Unique.A_SeraphShadow',
-                Probability=(
-                    BaseValueConstant=1.000000,
-                    BaseValueAttribute=None,
-                    InitializationDefinition=None,
-                    BaseValueScaleConstant=1.000000
-                ),
-                bDropOnDeath=True
-            ),
-            (
-                ItmPoolDefinition=None,
-                InvBalanceDefinition=InventoryBalanceDefinition'GD_Artifacts.A_Item_Unique.A_Terramorphous',
-                Probability=(
-                    BaseValueConstant=1.000000,
-                    BaseValueAttribute=None,
-                    InitializationDefinition=None,
-                    BaseValueScaleConstant=1.000000
-                ),
-                bDropOnDeath=True
-            ),
-            (
-                ItmPoolDefinition=None,
-                InvBalanceDefinition=InventoryBalanceDefinition'GD_Aster_Artifacts.A_Item_Unique.A_MysteryAmulet',
-                Probability=(
-                    BaseValueConstant=1.000000,
-                    BaseValueAttribute=None,
-                    InitializationDefinition=None,
-                    BaseValueScaleConstant=1.000000
-                ),
-                bDropOnDeath=True
-            ),
-            (
-                ItmPoolDefinition=None,
-                InvBalanceDefinition=InventoryBalanceDefinition'GD_Gladiolus_Artifacts.A_Item.A_AggressionTenacityAssault_VeryRare',
-                Probability=(
-                    BaseValueConstant=1.000000,
-                    BaseValueAttribute=None,
-                    InitializationDefinition=None,
-                    BaseValueScaleConstant=1.000000
-                ),
-                bDropOnDeath=True
-            ),
-            (
-                ItmPoolDefinition=None,
-                InvBalanceDefinition=InventoryBalanceDefinition'GD_Gladiolus_Artifacts.A_Item.A_AggressionTenacityLauncher_VeryRare',
-                Probability=(
-                    BaseValueConstant=1.000000,
-                    BaseValueAttribute=None,
-                    InitializationDefinition=None,
-                    BaseValueScaleConstant=1.000000
-                ),
-                bDropOnDeath=True
-            ),
-            (
-                ItmPoolDefinition=None,
-                InvBalanceDefinition=InventoryBalanceDefinition'GD_Gladiolus_Artifacts.A_Item.A_AggressionTenacityPistol_VeryRare',
-                Probability=(
-                    BaseValueConstant=1.000000,
-                    BaseValueAttribute=None,
-                    InitializationDefinition=None,
-                    BaseValueScaleConstant=1.000000
-                ),
-                bDropOnDeath=True
-            ),
-            (
-                ItmPoolDefinition=None,
-                InvBalanceDefinition=InventoryBalanceDefinition'GD_Gladiolus_Artifacts.A_Item.A_AggressionTenacityShotgun_VeryRare',
-                Probability=(
-                    BaseValueConstant=1.000000,
-                    BaseValueAttribute=None,
-                    InitializationDefinition=None,
-                    BaseValueScaleConstant=1.000000
-                ),
-                bDropOnDeath=True
-            ),
-            (
-                ItmPoolDefinition=None,
-                InvBalanceDefinition=InventoryBalanceDefinition'GD_Gladiolus_Artifacts.A_Item.A_AggressionTenacitySMG_VeryRare',
-                Probability=(
-                    BaseValueConstant=1.000000,
-                    BaseValueAttribute=None,
-                    InitializationDefinition=None,
-                    BaseValueScaleConstant=1.000000
-                ),
-                bDropOnDeath=True
-            ),
-            (
-                ItmPoolDefinition=None,
-                InvBalanceDefinition=InventoryBalanceDefinition'GD_Gladiolus_Artifacts.A_Item.A_AggressionTenacitySniper_VeryRare',
-                Probability=(
-                    BaseValueConstant=1.000000,
-                    BaseValueAttribute=None,
-                    InitializationDefinition=None,
-                    BaseValueScaleConstant=1.000000
-                ),
-                bDropOnDeath=True
-            ),
-            (
-                ItmPoolDefinition=None,
-                InvBalanceDefinition=InventoryBalanceDefinition'GD_Gladiolus_Artifacts.A_Item.A_ElementalProficiency_VeryRare',
-                Probability=(
-                    BaseValueConstant=1.000000,
-                    BaseValueAttribute=None,
-                    InitializationDefinition=None,
-                    BaseValueScaleConstant=1.000000
-                ),
-                bDropOnDeath=True
-            ),
-            (
-                ItmPoolDefinition=None,
-                InvBalanceDefinition=InventoryBalanceDefinition'GD_Gladiolus_Artifacts.A_Item.A_ResistanceProtection_VeryRare',
-                Probability=(
-                    BaseValueConstant=1.000000,
-                    BaseValueAttribute=None,
-                    InitializationDefinition=None,
-                    BaseValueScaleConstant=1.000000
-                ),
-                bDropOnDeath=True
-            ),
-            (
-                ItmPoolDefinition=None,
-                InvBalanceDefinition=InventoryBalanceDefinition'GD_Gladiolus_Artifacts.A_Item.A_VitalityStockpile_VeryRare',
                 Probability=(
                     BaseValueConstant=1.000000,
                     BaseValueAttribute=None,
@@ -3328,6 +3116,10 @@ loot_str = """
                 )
             )
         )
+
+        # Now tweak the Reward weighting to follow our own numbers
+
+        {relic_weight_str}
 
     #</Better Relic Drops>
 
@@ -10703,6 +10495,7 @@ loot_str = """
         epic_scale_legendary=epic_scale_legendary,
         epic_scale_legendary_dbl=epic_scale_legendary_dbl,
         gunsandgear_drop_str=gunsandgear_drop_str,
+        relic_weight_str=relic_weight_str,
         test_drop_str=test_drop_str,
         hotfixes=hfs,
         variant_name='{variant_name}',
