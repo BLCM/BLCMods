@@ -68,11 +68,12 @@ Specifically, this mod does the following:
   undo that)*
 * Makes Eridium drop 3x more often
 * Makes Torgue Tokens more numerous when dropped
-* Bosses are guaranteed to drop their legendaries/uniques
-  * If a boss has more than one legendary/unique in their drop pool, they
-    are guaranteed to drop that many items.  You may get duplicates rather
-    than one of each, of course, but there's at least a chance to get all
-    of them.
+* Bosses are guaranteed to drop as many items from their legendary/unique
+  pool as are in that pool.
+  * Bosses with just a single unique/legendary drop will therefore be
+    guaranteed to drop that item.
+  * If a boss has more than one in their drop pool, you may get duplicates
+    of one rather than one of each.
   * Normalized the chances of boss-item drops, for the handful of bosses
     whose loot probabilities weren't already equal.
 * Raid Bosses will drop better loot, and will drop as many legendary/unique/etc
