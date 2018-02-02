@@ -267,6 +267,11 @@ hfs.add_hotfix('nomimic_epic_12', 'SparkLevelPatchEntry-NoMimicEpic12',
 hfs.add_hotfix('dragonkeep_arguk_drop', 'SparkLevelPatchEntry-ArgukDrop0',
     "Dark_Forest_P,GD_Aster_Pop_Orcs.Balance.PawnBalance_Orc_Butcher,DefaultItemPoolIncludedLists[0],,ItemPoolListDefinition'GD_Itempools.ListDefs.BadassEnemyGunsAndGear'")
 
+# Make Skeleton Giants drop from the Badass loot pool (not that Dragon Keep
+# needs more loot being dropped, really, but whatever)
+hfs.add_hotfix('dragonkeep_giant_skeleton', 'SparkLevelPatchEntry-GiantSkeletonDrop0',
+    ",GD_Aster_Pop_Skeletons.Balance.PawnBalance_SkeletonGiant,DefaultItemPoolIncludedLists[0],,ItemPoolListDefinition'GD_Itempools.ListDefs.BadassEnemyGunsAndGear'")
+
 ###
 ### Testing hotfixes, not really intended to be used for real.  These
 ### aren't referenced in the body of the mod, so they'll only activate
@@ -2868,9 +2873,19 @@ loot_str = """
 
         #<Arguk the Butcher>
 
+            # Make Arguk the Butcher drop from the badass pool
+
             {hotfixes:dragonkeep_arguk_drop}
 
         #</Arguk the Butcher>
+
+        #<Giant Skeletons>
+
+            # Make Giant Skeletons drop from the badass pool
+
+            {hotfixes:dragonkeep_giant_skeleton}
+
+        #</Giant Skeletons>
 
     #</Better Other Enemy Drops>
 
