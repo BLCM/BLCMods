@@ -14,6 +14,11 @@ everything in here can be toggled on or off inside FilterTool as you'd
 hope, on an item-by-item basis.  Basically every bullet point in the
 "Overview" section is its own "folder" once imported into FilterTool.
 
+Note that the Hammerlock and Tiny Tina DLCs were already quite generous
+with loot, compared to the rest of the game, and this mod ends up making
+those DLCs a bit ridiculous with loot.  I'll probably not bother trying
+to stem that tide, though, so just enjoy the overabundance of loot!
+
 Usage/Installation
 ------------------
 
