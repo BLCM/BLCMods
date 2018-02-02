@@ -77,7 +77,9 @@ Specifically, this mod does the following:
   * Normalized the chances of boss-item drops, for the handful of bosses
     whose loot probabilities weren't already equal.
 * Raid Bosses will drop better loot, and will drop as many legendary/unique/etc
-  items as are in their pool:
+  items as are in their pool.  (Seraph Crystal drops are increased as well,
+  and Guardians will drop Seraph Crystals even in Normal mode).  I still have a
+  couple to go through; the ones currently in place are:
   * Terramorphous
   * Vermivorous
   * Hyperius
