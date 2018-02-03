@@ -1,5 +1,5 @@
-Disclaimer;
-
+Disclaimer
+----------
 Everything in my mods was written by me unless mentioned otherwise.
 
 Don't host these files on other sites.
