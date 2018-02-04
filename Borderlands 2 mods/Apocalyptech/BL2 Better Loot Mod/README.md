@@ -170,6 +170,9 @@ Some other stuff not done:
 * Scaylion drops are rather anemic compared to everything else in the
   Hammerlock DLC, but the Hammerlock DLC is kind of ludicrous with loot
   anyway, so I'm leaving them the way they are.
+* Badass Giant Burning Broomsticks will continue to drop from the standard
+  enemy pool rather than the badass pool.  There's dozens of those things
+  all at once and it'd be ridiculous.
 
 TODO
 ----
