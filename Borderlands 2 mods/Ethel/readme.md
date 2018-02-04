@@ -8,5 +8,5 @@
   * use these files for private use between yourself and friends of yourself, be it in real life, or over the internet.
   * make videos/ movies/ stream yourself using gameplay of these files so long as you do not claim these files nor its content are your own creation.
   * make modpacks, compilations, modlists, or any other form of grouping of individual mods without requesting permission from me.
-    * so long as you provide credit in the f.orm of a download link linking to [***this***](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/Ethel) github, or the one [here](https://github.com/Ethel173/BL2-Modding).
+    * so long as you provide credit in the form of a download link linking to [***this***](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/Ethel) github, or the one [here](https://github.com/Ethel173/BL2-Modding).
   * use these files as a means to teach yourself or others how these mods or other mods on this github may work as a means of providing examples, both complete, and incomplete code without needed permission.
