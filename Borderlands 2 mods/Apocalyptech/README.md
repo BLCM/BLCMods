@@ -4,16 +4,25 @@ Apocalyptech's Borderlands 2 Mod(s)
 BL2 Better Loot Mod
 -------------------
 
-At the moment, this is my only mod in here.  Its general goal is to make
-loot drops in Borderlands 2 "better", as in skewing very much towards the
-rarer loot.  Legendaries/Uniques/Pearls/Seraphs will drop far more
-frequently than they do in vanilla B2, etc.
+This mod's general goal is to make loot drops in Borderlands 2 "better",
+as in skewing very much towards the rarer loot.
+Legendaries/Uniques/Pearls/Seraphs will drop far more frequently than they
+do in vanilla B2, etc.
 
 It's essentially a cheat mod, intended for those BL2 players like myself who
 tend to play in Normal most of the time, dislike grinding, get bored easily by
 the uninteresting and drab loot that typically gets dropped in-game, and who
-often ends up just resorting to Gibbed to be able to play around with some
+often end up just resorting to Gibbed to be able to play around with some
 better gear.  The README in the mod dir itself should provide a lot more info.
+
+Aegrus Not-So-Rare Monsters
+---------------------------
+
+This is a real simple mod which just alters the spawn rates of the "rare"
+creature types in Sir Hammerlock's Big Game Hunt.  This is really only
+useful if you're looking to complete the
+[I Like My Monsters Rare](http://borderlands.wikia.com/wiki/I_Like_My_Monsters_Rare)
+mission without having to do any extra farming.
 
 Utilities
 =========
