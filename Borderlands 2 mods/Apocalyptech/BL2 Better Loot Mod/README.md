@@ -173,6 +173,10 @@ Some other stuff not done:
 * Badass Giant Burning Broomsticks will continue to drop from the standard
   enemy pool rather than the badass pool.  There's dozens of those things
   all at once and it'd be ridiculous.
+* In general I've not touched skin/head drop rates at all.  There's a few
+  Hammerlock DLC creatures which have a rare skin drop which I ended up
+  making guaranteed just because I was already in there looking for
+  uniques/legendaries, but that's about it.
 
 TODO
 ----
