@@ -37,6 +37,9 @@ Well, I figured to hell with that, and wrote a couple of quick-n-dirty
 utilities in Python to automate that kind of thing for me, so I could edit
 to my heart's content in a format which was easy to deal with, and then just
 export to the "real" version which Borderlands / FilterTool can understand.
+(I've since discovered that if you enable some checkboxes in FilterTool, you
+can do pretty reasonable multiline editing right in there, but I still prefer
+being able to use my text editor of choice, etc.)
 
 Both of these utilities are written in Python, and probably require Python 3.
 They're intended to just be run from a commandline, which may pose some
