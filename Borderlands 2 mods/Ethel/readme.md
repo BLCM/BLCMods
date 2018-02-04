@@ -1,6 +1,6 @@
 # disclaimer 
   
-  these files are **not** to be reuploaded **without** explicit permission from me, either requested perms, or perms granted to you in this document.
+  these files are ***not*** to be reuploaded ***without*** explicit permission from me, either requested perms, or perms granted to you in this document.
   
   these files and content within are under the sole ownership of me, unless stated otherwise, and may be edited, deleted, or changed in any way without forward notification.
   
