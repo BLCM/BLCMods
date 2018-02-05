@@ -291,6 +291,14 @@ hfs.add_hotfix('dragonkeep_handsomedragon_drop2', 'SparkLevelPatchEntry-Handsome
 hfs.add_hotfix('dragonkeep_handsomedragon_drop3', 'SparkLevelPatchEntry-HandsomeDragonEridium3',
     "CastleExterior_P,GD_DragonBridgeBoss.InteractiveObjects.IO_DragonBridgeBoss_LootExplosion:BehaviorProviderDefinition_0.Behavior_SpawnItems_21,ItemPoolList[18].ItemPool,,ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Eridium_Stick'")
 
+# Make Badass Knights drop from the badass pool pool
+hfs.add_hotfix('dragonkeep_badass_knights', 'SparkLevelPatchEntry-BadassKnightsDrop0',
+    ",GD_Aster_Pop_Knights.Balance.PawnBalance_Knight_Badass,DefaultItemPoolIncludedLists[0],,ItemPoolListDefinition'GD_Itempools.ListDefs.BadassEnemyGunsAndGear'")
+
+# Make Badass Fire Archers drop from the badass pool pool
+hfs.add_hotfix('dragonkeep_badass_fire_archers', 'SparkLevelPatchEntry-BadassFireArchersDrop0',
+    ",GD_Aster_Pop_Knights.Balance.PawnBalance_Knight_BadassFireArcher,DefaultItemPoolIncludedLists[0],,ItemPoolListDefinition'GD_Itempools.ListDefs.BadassEnemyGunsAndGear'")
+
 ###
 ### Testing hotfixes, not really intended to be used for real.  These
 ### aren't referenced in the body of the mod, so they'll only activate
@@ -3239,6 +3247,25 @@ loot_str = """
             {hotfixes:dragonkeep_giant_skeleton}
 
         #</Giant Skeletons>
+
+        #<Badass Knights>
+
+            # Badass Knights are set to use the standard pool.  Oversight?
+            # Anyway, drop from the badass pool instead.
+
+            {hotfixes:dragonkeep_badass_knights}
+
+        #</Badass Knights>
+
+        #<Badass Fire Archers>
+
+            # Badass Fire Archers are set to use the standard pool.  Oversight?
+            # Anyway, drop from the badass pool instead.
+
+            {hotfixes:dragonkeep_badass_fire_archers}
+
+        #</Badass Fire Archers>
+
 
     #</Better Other Enemy Drops>
 
