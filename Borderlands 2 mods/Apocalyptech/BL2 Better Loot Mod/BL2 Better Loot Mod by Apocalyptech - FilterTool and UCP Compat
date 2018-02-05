@@ -736,9 +736,11 @@
 
         set GD_Itempools.Runnables.Pool_SonOfMothrakk Quantity (BaseValueConstant=2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
 
-        # This one has to be done via Hotfix
+        # The rest have to be done via Hotfix
 
         #<hotfix><key>"SparkLevelPatchEntry-GoldGolemDropQty0"</key><value>"Mines_P,GD_GolemGold.LootPools.Pool_GoldGolemRunnable,Quantity,,(BaseValueConstant=3.0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.0)"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-SorcerersDaughterDropPool0"</key><value>"Dungeon_P,GD_AngelBoss.LootPools.Pool_AngelBossRunnable,Quantity.BaseValueConstant,,4.0"</value><on>
 
     #</Boss Drop Improved Quantities>
 
@@ -749,6 +751,16 @@
         set GD_Itempools.Runnables.Pool_Sheriff BalancedItems ((ItmPoolDefinition=None,InvBalanceDefinition=InventoryBalanceDefinition'GD_Artifacts.A_Item_Unique.A_Sheriff',Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_Pistol.A_Weapons_Unique.Pistol_Jakobs_3_Law',Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',BaseValueScaleConstant=1.000000),bDropOnDeath=True))
 
         set GD_Itempools.Runnables.Pool_UltimateBadassVarkid BalancedItems ((ItmPoolDefinition=None,InvBalanceDefinition=InventoryBalanceDefinition'GD_GrenadeMods.A_Item_Legendary.GM_Quasar',Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=KeyedItemPoolDefinition'GD_CustomItemPools_MainGame.Rewards.YellowNinja',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',BaseValueScaleConstant=1.000000),bDropOnDeath=True))
+
+        # Hotfixes for the rest
+
+        #<hotfix><key>"SparkLevelPatchEntry-SorcerersDaughterNormalize0"</key><value>"Dungeon_P,GD_AngelBoss.LootPools.Pool_AngelBossRunnable,BalancedItems[0].Probability.BaseValueScaleConstant,,1.0"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-SorcerersDaughterNormalize1"</key><value>"Dungeon_P,GD_AngelBoss.LootPools.Pool_AngelBossRunnable,BalancedItems[1].Probability.BaseValueScaleConstant,,1.0"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-SorcerersDaughterNormalize2"</key><value>"Dungeon_P,GD_AngelBoss.LootPools.Pool_AngelBossRunnable,BalancedItems[2].Probability.BaseValueScaleConstant,,1.0"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-SorcerersDaughterNormalize3"</key><value>"Dungeon_P,GD_AngelBoss.LootPools.Pool_AngelBossRunnable,BalancedItems[3].Probability.BaseValueScaleConstant,,1.0"</value><on>
 
     #</Boss Drop Normalization>
 

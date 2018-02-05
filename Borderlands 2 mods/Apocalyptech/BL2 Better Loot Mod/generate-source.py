@@ -299,6 +299,16 @@ hfs.add_hotfix('dragonkeep_badass_knights', 'SparkLevelPatchEntry-BadassKnightsD
 hfs.add_hotfix('dragonkeep_badass_fire_archers', 'SparkLevelPatchEntry-BadassFireArchersDrop0',
     ",GD_Aster_Pop_Knights.Balance.PawnBalance_Knight_BadassFireArcher,DefaultItemPoolIncludedLists[0],,ItemPoolListDefinition'GD_Itempools.ListDefs.BadassEnemyGunsAndGear'")
 
+# Make Sorcerer's Daughter drop 4 items from her legendary pool (which is 4 long)
+hfs.add_hotfix('dragonkeep_sorcerersdaughter_drop_pool', 'SparkLevelPatchEntry-SorcerersDaughterDropPool0',
+    'Dungeon_P,GD_AngelBoss.LootPools.Pool_AngelBossRunnable,Quantity.BaseValueConstant,,4.0')
+
+# Normalize the probabilities for the Sorcerer's Daughter legendary pool
+for num in range(4):
+    hfs.add_hotfix('dragonkeep_sorcerersdaughter_normalize_{}'.format(num),
+        'SparkLevelPatchEntry-SorcerersDaughterNormalize{}'.format(num),
+        'Dungeon_P,GD_AngelBoss.LootPools.Pool_AngelBossRunnable,BalancedItems[{}].Probability.BaseValueScaleConstant,,1.0'.format(num))
+
 ###
 ### Testing hotfixes, not really intended to be used for real.  These
 ### aren't referenced in the body of the mod, so they'll only activate
@@ -9184,9 +9194,11 @@ loot_str = """
             BaseValueScaleConstant=1.000000
         )
 
-        # This one has to be done via Hotfix
+        # The rest have to be done via Hotfix
 
         {hotfixes:dragonkeep_goldgolem_drop_qty}
+
+        {hotfixes:dragonkeep_sorcerersdaughter_drop_pool}
 
     #</Boss Drop Improved Quantities>
 
@@ -9245,6 +9257,16 @@ loot_str = """
                 bDropOnDeath=True
             )
         )
+
+        # Hotfixes for the rest
+
+        {hotfixes:dragonkeep_sorcerersdaughter_normalize_0}
+
+        {hotfixes:dragonkeep_sorcerersdaughter_normalize_1}
+
+        {hotfixes:dragonkeep_sorcerersdaughter_normalize_2}
+
+        {hotfixes:dragonkeep_sorcerersdaughter_normalize_3}
 
     #</Boss Drop Normalization>
 
