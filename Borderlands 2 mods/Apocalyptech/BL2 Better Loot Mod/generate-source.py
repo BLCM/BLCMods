@@ -309,6 +309,16 @@ for num in range(4):
         'SparkLevelPatchEntry-SorcerersDaughterNormalize{}'.format(num),
         'Dungeon_P,GD_AngelBoss.LootPools.Pool_AngelBossRunnable,BalancedItems[{}].Probability.BaseValueScaleConstant,,1.0'.format(num))
 
+# Add more Eridium to Butt Stallion's victory trot after defeating the Handsome Sorcerr
+hfs.add_hotfix('dragonkeep_buttstallion_drop1', 'SparkLevelPatchEntry-ButtStallionEridium1',
+    "CastleKeep_P,GD_ButtStallion_Proto.Character.AIDef_ButtStallion_Proto:AIBehaviorProviderDefinition_1:Behavior_SpawnItems_44,ItemPoolList,,((ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Eridium_Stick',PoolProbability=(BaseValueConstant=1.0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.0)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Eridium_Stick',PoolProbability=(BaseValueConstant=1.0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.0)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Eridium_Stick',PoolProbability=(BaseValueConstant=1.0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.0)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Eridium_Stick',PoolProbability=(BaseValueConstant=1.0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.0)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Eridium_Stick',PoolProbability=(BaseValueConstant=1.0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.0)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Eridium_Stick',PoolProbability=(BaseValueConstant=1.0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.0)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Eridium_Stick',PoolProbability=(BaseValueConstant=1.0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.0)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Eridium_Stick',PoolProbability=(BaseValueConstant=1.0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.0)))")
+
+# Make the individual Jack battles at the end of Dragon Keep drop from a badass pool
+for suffix in ['', '_Demon', '_DemonFall', '_Phase2']:
+    hfs.add_hotfix('dragonkeep_jack{}_drop1'.format(suffix),
+        'SparkLevelPatchEntry-DragonKeepJack{}Drop1'.format(suffix),
+        "CastleKeep_P,GD_Aster_Pop_Wizards.Balance.PawnBalance_JackWarlock{},DefaultItemPoolIncludedLists[0],,ItemPoolListDefinition'GD_Itempools.ListDefs.SuperBadassEnemyGunsAndGear'".format(suffix))
+
 ###
 ### Testing hotfixes, not really intended to be used for real.  These
 ### aren't referenced in the body of the mod, so they'll only activate
@@ -3203,6 +3213,16 @@ loot_str = """
 
         #</Handsome Dragon Improvements>
 
+        #<Butt Stallion Endgame Improvements>
+
+            # Mostly just adding some more Eridium to Butt Stallion's endgame
+            # drop, after defeating the Handsome Sorcerer.  I feel as though I'm
+            # probably going overboard at this point.
+
+            {hotfixes:dragonkeep_buttstallion_drop1}
+
+        #</Butt Stallion Endgame Improvements>
+
     #</Better Miscellaneous Boss Drops>
 
     #<Better Other Enemy Drops>
@@ -3276,6 +3296,20 @@ loot_str = """
 
         #</Badass Fire Archers>
 
+        #<Handsome Sorcerer Stages>
+
+            # The individual Handsome Sorcerer stages don't actually drop anything
+            # special.  Let's make 'em do so!
+
+            {hotfixes:dragonkeep_jack_drop1}
+
+            {hotfixes:dragonkeep_jack_Demon_drop1}
+
+            {hotfixes:dragonkeep_jack_DemonFall_drop1}
+
+            {hotfixes:dragonkeep_jack_Phase2_drop1}
+
+        #</Handsome Sorcerer Stages>
 
     #</Better Other Enemy Drops>
 
