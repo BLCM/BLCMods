@@ -214,6 +214,13 @@ TODO
 * Also maybe set up our own prefix on all our hotfix names, so there's very
   little chance of ever conflicting with someone else's names.
 
+Other Recommended Mods
+----------------------
+
+* EmpireScum's "ButtStallion" will make Butt Stallion's drops in Flamerock Refuge
+  much better (can choose between blue-or-higher, or all-gemstone).
+* JimRaven's "#MakeVendorsGreatAgain2017" improves vendor stocks across the game.
+
 Mod Construction / Implementation Details
 -----------------------------------------
 
