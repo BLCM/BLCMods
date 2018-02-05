@@ -220,6 +220,18 @@ TODO
 * Add in level names to our hotfixes which could technically use them
 * Also maybe set up our own prefix on all our hotfix names, so there's very
   little chance of ever conflicting with someone else's names.
+* I noticed that various enemies have a `CustomItemPoolList` defined in their
+  `Playthroughs` section, for changes in TVHM/UVHM.  This seems to serve the
+  purpose of, for instance, adding a shield which wouldn't be present in
+  Normal.  We tweak enemies' ItemPools pretty often, and it would probably
+  be good to run some tests to see if these `CustomItemPoolList` updates
+  add to the pool list or if they replace it *(I suspect the latter)*.  If
+  it does overwrite entirely, it's possible we'll need to add those structures
+  into our patches.  For an example, see
+  `GD_IncineratorMale.Balance.PawnBalance_IncineratorMale` from allium's
+  `hunger_dynamic.upk`, which defines the Wattle Gobbler DLC's "Fuse, Tribute
+  of Frostburn."  (Though I'm sure there are probably tons more examples just
+  from the base game.)
 
 Other Notes
 -----------
