@@ -87,6 +87,7 @@ Specifically, this mod does the following:
   * Pyro Pete
   * Dexiduous
   * Voracidous
+  * Ancient Dragons of Destruction
 * Fixes/Changes to some enemies' drop pools:
   * Witch Doctors will drop an Eridium stick, and have a pretty good chance
     of dropping a Relic as well.
