@@ -14,11 +14,6 @@ everything in here can be toggled on or off inside FilterTool as you'd
 hope, on an item-by-item basis.  Basically every bullet point in the
 "Overview" section is its own "folder" once imported into FilterTool.
 
-Note that the Hammerlock and Tiny Tina DLCs were already quite generous
-with loot, compared to the rest of the game, and this mod ends up making
-those DLCs a bit ridiculous with loot.  I'll probably not bother trying
-to stem that tide, though, so just enjoy the overabundance of loot!
-
 Usage/Installation
 ------------------
 
@@ -223,6 +218,19 @@ TODO
 * Add in level names to our hotfixes which could technically use them
 * Also maybe set up our own prefix on all our hotfix names, so there's very
   little chance of ever conflicting with someone else's names.
+
+Other Notes
+-----------
+
+It's perhaps worth mentioning that while this mod does a great job in most
+of the game (IMO), in Normal mode at least, the amount of loot can get
+pretty absurd when you're in any area which can generate a lot of Badasses
+or the like.  The Hammerlock and Tiny Tina DLCs, in particular, were already
+very generous with loot, and this mod steers them into ridiculousness.  The
+last few stages of Murderlin's Magic Slaughter end up dropping enough loot
+to cause some notice FPS hits on my system in fact:
+
+![Pictured: A Bit Much.](excess.png)
 
 Mod Construction / Implementation Details
 -----------------------------------------
