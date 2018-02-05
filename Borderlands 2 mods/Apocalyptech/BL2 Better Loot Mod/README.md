@@ -138,13 +138,6 @@ In terms of loot compatibility, I'm pretty sure that this mod makes the
 "Vault Hunter's Relic" completely useless, but if you're using this mod,
 you certainly won't miss it.
 
-Other Recommended Mods
-----------------------
-
-* EmpireScum's "ButtStallion" will make Butt Stallion's drops in Flamerock Refuge
-  much better (can choose between blue-or-higher, or all-gemstone).
-* JimRaven's "#MakeVendorsGreatAgain2017" improves vendor stocks across the game.
-
 Loot Purposefully Excluded from Pools
 -------------------------------------
 
@@ -186,6 +179,16 @@ Some other stuff not done:
   Hammerlock DLC creatures which have a rare skin drop which I ended up
   making guaranteed just because I was already in there looking for
   uniques/legendaries, but that's about it.
+
+Other Recommended Mods
+----------------------
+
+There's a few things which I'd considered adding to this mod, but were already
+well-covered in other mods, so instead I'll just mention them here.
+
+* EmpireScum's "ButtStallion" will make Butt Stallion's drops in Flamerock Refuge
+  much better (can choose between blue-or-higher, or all-gemstone).
+* JimRaven's "#MakeVendorsGreatAgain2017" improves vendor stocks across the game.
 
 TODO
 ----
