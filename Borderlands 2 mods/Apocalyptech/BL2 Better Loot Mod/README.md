@@ -89,17 +89,24 @@ Specifically, this mod does the following:
   * Voracidous
   * Ancient Dragons of Destruction
 * Fixes/Changes to some enemies' drop pools:
-  * Witch Doctors will drop an Eridium stick, and have a pretty good chance
-    of dropping a Relic as well.
-  * Enemies changed to drop from from the Badass loot pool, rather than the
-    standard enemy pool:
+  * Some "Badass" enemies weren't actually pulling from the badass drop pool,
+    which has been fixed:
     * Badass Boroks
-    * Bulstross
-    * Arguk the Butcher
-    * Skeleton Giants *(as if the Dragon Keep DLC needed more loot)*
     * Badass Knights
     * Badass Fire Archers
     * Undead Badass Psychos
+  * A few more standard enemies have also been set to drop from the badass pool:
+    * Bulstross
+    * Arguk the Butcher
+    * Skeleton Giants *(as if the Dragon Keep DLC needed more loot)*
+    * Individual Handsome Sorcerer stage bosses
+  * Then a few other tweaks to certain enemies:
+    * Witch Doctors will drop an Eridium stick, and have a pretty good chance
+      of dropping a Relic as well.
+    * Elite Savages are guaranteed to drop loot (though just from the standard pool)
+    * Most Tributes from the Wattle Gobbler Headhunter Pack were set to drop from
+      the badadss loot pool, but three weren't set to drop any loot at all.  This
+      mod fixes the three to have them drop as well.
 * Remove early-game loot restrictions.  This is actually a superset of the
   similar feature already present in UCP 4.0.  This version enables spawning
   of basically everything from the beginning, including all grenade types,

@@ -344,6 +344,17 @@ hfs.add_hotfix('dragonkeep_ancient_drop2', 'SparkLevelPatchEntry-DragonKeepAncie
 hfs.add_hotfix('harvest_ubps', 'SparkLevelPatchEntry-UndeadBadassPsychoDrop0',
     "Pumpkin_Patch_P,GD_Pop_HallowSkeleton.Balance.PawnBalance_BadassUndeadPsycho,DefaultItemPoolIncludedLists[0],,ItemPoolListDefinition'GD_Itempools.ListDefs.BadassEnemyGunsAndGear'")
 
+# Three tributes from the Wattle Gobbler Headhunter pack don't actually drop
+# anything, whereas the others drop from the badass pool.  Fix that.
+for (name, classname) in [
+        ('cynder', 'GD_IncineratorFemale.Balance.PawnBalance_IncineratorFemale'),
+        ('strip', 'GD_FleshripperFemale.Balance.PawnBalance_FleshripperFemale'),
+        ('flay', 'GD_FleshripperMale.Balance.PawnBalance_FleshripperMale'),
+        ]:
+    hfs.add_hotfix('wattle_tribute_{}'.format(name),
+        'SparkLevelPatchEntry-WattleTribute{}Drop0'.format(name),
+        "Hunger_P,{},DefaultItemPoolIncludedLists,,(ItemPoolListDefinition'GD_Itempools.ListDefs.BadassEnemyGunsAndGear')".format(classname))
+
 ###
 ### Testing hotfixes, not really intended to be used for real.  These
 ### aren't referenced in the body of the mod, so they'll only activate
@@ -2190,7 +2201,7 @@ loot_str = """
 
     #</Better Lockers>
 
-    #<Better Badass Drops>
+    #<Better Badass Pool Definitions>
 
         # Improves the drop types of badass enemies, including a few like Bad Maw
         # who are internally classified as a special kind of "badass."  Note that
@@ -2917,22 +2928,45 @@ loot_str = """
 
         #</Chubby Enemies>
 
-        #<Badass Boroks>
+        #<Badass Enemy Fixes>
 
-            # Badass Boroks just drop from the standard loot pool right now.  Convert
-            # them to use the badass pool instead.
+            # Various "Badass" enemies in some DLCs were presumably accidentally set to
+            # pull from the standard enemy drop pool, rather than badass.  This section
+            # fixes those up.
 
-            {hotfixes:badass_borok_Corrosive}
+            #<Badass Boroks>
 
-            {hotfixes:badass_borok_Fire}
+                {hotfixes:badass_borok_Corrosive}
 
-            {hotfixes:badass_borok_Shock}
+                {hotfixes:badass_borok_Fire}
 
-            {hotfixes:badass_borok_Slag}
+                {hotfixes:badass_borok_Shock}
 
-        #</Badass Boroks>
+                {hotfixes:badass_borok_Slag}
 
-    #</Better Badass Drops>
+            #</Badass Boroks>
+
+            #<Badass Knights>
+
+                {hotfixes:dragonkeep_badass_knights}
+
+            #</Badass Knights>
+
+            #<Badass Fire Archers>
+
+                {hotfixes:dragonkeep_badass_fire_archers}
+
+            #</Badass Fire Archers>
+
+            #<Undead Badass Psychos>
+
+                {hotfixes:harvest_ubps}
+
+            #</Undead Badass Psychos>
+
+        #</Badass Enemy Fixes>
+
+    #</Better Badass Pool Definitions>
 
     #<Better Miscellaneous Boss Drops>
 
@@ -3250,7 +3284,7 @@ loot_str = """
 
     #</Better Miscellaneous Boss Drops>
 
-    #<Better Other Enemy Drops>
+    #<Regular Enemey Drop Improvements>
 
         # There are a handful of enemy types which are somewhere between regular
         # enemies and Badasses, whose drop pools I felt could use a slight buff.
@@ -3305,24 +3339,6 @@ loot_str = """
 
         #</Giant Skeletons>
 
-        #<Badass Knights>
-
-            # Badass Knights are set to use the standard pool.  Oversight?
-            # Anyway, drop from the badass pool instead.
-
-            {hotfixes:dragonkeep_badass_knights}
-
-        #</Badass Knights>
-
-        #<Badass Fire Archers>
-
-            # Badass Fire Archers are set to use the standard pool.  Oversight?
-            # Anyway, drop from the badass pool instead.
-
-            {hotfixes:dragonkeep_badass_fire_archers}
-
-        #</Badass Fire Archers>
-
         #<Handsome Sorcerer Stages>
 
             # The individual Handsome Sorcerer stages don't actually drop anything
@@ -3338,15 +3354,20 @@ loot_str = """
 
         #</Handsome Sorcerer Stages>
 
-        #<Undead Badass Psychos>
+        #<Wattle Gobbler Tributes>
 
-            # From the Bloody Harvest Headhunter pack.  Oversight?
+            # Three tributes from the Wattle Gobler Headhunter Pack don't have
+            # any drops defined, but the rest drop from the badass pool.  Fix that.
 
-            {hotfixes:harvest_ubps}
+            {hotfixes:wattle_tribute_cynder}
 
-        #</Undead Badass Psychos>
+            {hotfixes:wattle_tribute_strip}
 
-    #</Better Other Enemy Drops>
+            {hotfixes:wattle_tribute_flay}
+
+        #</Wattle Gobbler Tributes>
+
+    #</Regular Enemey Drop Improvements>
 
     #<Better Relic Drops>
 

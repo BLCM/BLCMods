@@ -1448,7 +1448,7 @@
 
     #</Better Lockers>
 
-    #<Better Badass Drops>
+    #<Better Badass Pool Definitions>
 
         # Improves the drop types of badass enemies, including a few like Bad Maw
         # who are internally classified as a special kind of "badass."  Note that
@@ -2175,22 +2175,45 @@
 
         #</Chubby Enemies>
 
-        #<Badass Boroks>
+        #<Badass Enemy Fixes>
 
-            # Badass Boroks just drop from the standard loot pool right now.  Convert
-            # them to use the badass pool instead.
+            # Various "Badass" enemies in some DLCs were presumably accidentally set to
+            # pull from the standard enemy drop pool, rather than badass.  This section
+            # fixes those up.
 
-            #<hotfix><key>"SparkLevelPatchEntry-BadassBorokCorrosive0"</key><value>",GD_Sage_Pop_Rhino.Balance.PawnBalance_Sage_RhinoBadassCorrosive,DefaultItemPoolIncludedLists[0],,ItemPoolListDefinition'GD_Itempools.ListDefs.BadassEnemyGunsAndGear'"</value><on>
+            #<Badass Boroks>
 
-            #<hotfix><key>"SparkLevelPatchEntry-BadassBorokFire0"</key><value>",GD_Sage_Pop_Rhino.Balance.PawnBalance_Sage_RhinoBadassFire,DefaultItemPoolIncludedLists[0],,ItemPoolListDefinition'GD_Itempools.ListDefs.BadassEnemyGunsAndGear'"</value><on>
+                #<hotfix><key>"SparkLevelPatchEntry-BadassBorokCorrosive0"</key><value>",GD_Sage_Pop_Rhino.Balance.PawnBalance_Sage_RhinoBadassCorrosive,DefaultItemPoolIncludedLists[0],,ItemPoolListDefinition'GD_Itempools.ListDefs.BadassEnemyGunsAndGear'"</value><on>
 
-            #<hotfix><key>"SparkLevelPatchEntry-BadassBorokShock0"</key><value>",GD_Sage_Pop_Rhino.Balance.PawnBalance_Sage_RhinoBadassShock,DefaultItemPoolIncludedLists[0],,ItemPoolListDefinition'GD_Itempools.ListDefs.BadassEnemyGunsAndGear'"</value><on>
+                #<hotfix><key>"SparkLevelPatchEntry-BadassBorokFire0"</key><value>",GD_Sage_Pop_Rhino.Balance.PawnBalance_Sage_RhinoBadassFire,DefaultItemPoolIncludedLists[0],,ItemPoolListDefinition'GD_Itempools.ListDefs.BadassEnemyGunsAndGear'"</value><on>
 
-            #<hotfix><key>"SparkLevelPatchEntry-BadassBorokSlag0"</key><value>",GD_Sage_Pop_Rhino.Balance.PawnBalance_Sage_RhinoBadassSlag,DefaultItemPoolIncludedLists[0],,ItemPoolListDefinition'GD_Itempools.ListDefs.BadassEnemyGunsAndGear'"</value><on>
+                #<hotfix><key>"SparkLevelPatchEntry-BadassBorokShock0"</key><value>",GD_Sage_Pop_Rhino.Balance.PawnBalance_Sage_RhinoBadassShock,DefaultItemPoolIncludedLists[0],,ItemPoolListDefinition'GD_Itempools.ListDefs.BadassEnemyGunsAndGear'"</value><on>
 
-        #</Badass Boroks>
+                #<hotfix><key>"SparkLevelPatchEntry-BadassBorokSlag0"</key><value>",GD_Sage_Pop_Rhino.Balance.PawnBalance_Sage_RhinoBadassSlag,DefaultItemPoolIncludedLists[0],,ItemPoolListDefinition'GD_Itempools.ListDefs.BadassEnemyGunsAndGear'"</value><on>
 
-    #</Better Badass Drops>
+            #</Badass Boroks>
+
+            #<Badass Knights>
+
+                #<hotfix><key>"SparkLevelPatchEntry-BadassKnightsDrop0"</key><value>",GD_Aster_Pop_Knights.Balance.PawnBalance_Knight_Badass,DefaultItemPoolIncludedLists[0],,ItemPoolListDefinition'GD_Itempools.ListDefs.BadassEnemyGunsAndGear'"</value><on>
+
+            #</Badass Knights>
+
+            #<Badass Fire Archers>
+
+                #<hotfix><key>"SparkLevelPatchEntry-BadassFireArchersDrop0"</key><value>",GD_Aster_Pop_Knights.Balance.PawnBalance_Knight_BadassFireArcher,DefaultItemPoolIncludedLists[0],,ItemPoolListDefinition'GD_Itempools.ListDefs.BadassEnemyGunsAndGear'"</value><on>
+
+            #</Badass Fire Archers>
+
+            #<Undead Badass Psychos>
+
+                #<hotfix><key>"SparkLevelPatchEntry-UndeadBadassPsychoDrop0"</key><value>"Pumpkin_Patch_P,GD_Pop_HallowSkeleton.Balance.PawnBalance_BadassUndeadPsycho,DefaultItemPoolIncludedLists[0],,ItemPoolListDefinition'GD_Itempools.ListDefs.BadassEnemyGunsAndGear'"</value><on>
+
+            #</Undead Badass Psychos>
+
+        #</Badass Enemy Fixes>
+
+    #</Better Badass Pool Definitions>
 
     #<Better Miscellaneous Boss Drops>
 
@@ -2508,7 +2531,7 @@
 
     #</Better Miscellaneous Boss Drops>
 
-    #<Better Other Enemy Drops>
+    #<Regular Enemey Drop Improvements>
 
         # There are a handful of enemy types which are somewhere between regular
         # enemies and Badasses, whose drop pools I felt could use a slight buff.
@@ -2563,24 +2586,6 @@
 
         #</Giant Skeletons>
 
-        #<Badass Knights>
-
-            # Badass Knights are set to use the standard pool.  Oversight?
-            # Anyway, drop from the badass pool instead.
-
-            #<hotfix><key>"SparkLevelPatchEntry-BadassKnightsDrop0"</key><value>",GD_Aster_Pop_Knights.Balance.PawnBalance_Knight_Badass,DefaultItemPoolIncludedLists[0],,ItemPoolListDefinition'GD_Itempools.ListDefs.BadassEnemyGunsAndGear'"</value><on>
-
-        #</Badass Knights>
-
-        #<Badass Fire Archers>
-
-            # Badass Fire Archers are set to use the standard pool.  Oversight?
-            # Anyway, drop from the badass pool instead.
-
-            #<hotfix><key>"SparkLevelPatchEntry-BadassFireArchersDrop0"</key><value>",GD_Aster_Pop_Knights.Balance.PawnBalance_Knight_BadassFireArcher,DefaultItemPoolIncludedLists[0],,ItemPoolListDefinition'GD_Itempools.ListDefs.BadassEnemyGunsAndGear'"</value><on>
-
-        #</Badass Fire Archers>
-
         #<Handsome Sorcerer Stages>
 
             # The individual Handsome Sorcerer stages don't actually drop anything
@@ -2596,15 +2601,20 @@
 
         #</Handsome Sorcerer Stages>
 
-        #<Undead Badass Psychos>
+        #<Wattle Gobbler Tributes>
 
-            # From the Bloody Harvest Headhunter pack.  Oversight?
+            # Three tributes from the Wattle Gobler Headhunter Pack don't have
+            # any drops defined, but the rest drop from the badass pool.  Fix that.
 
-            #<hotfix><key>"SparkLevelPatchEntry-UndeadBadassPsychoDrop0"</key><value>"Pumpkin_Patch_P,GD_Pop_HallowSkeleton.Balance.PawnBalance_BadassUndeadPsycho,DefaultItemPoolIncludedLists[0],,ItemPoolListDefinition'GD_Itempools.ListDefs.BadassEnemyGunsAndGear'"</value><on>
+            #<hotfix><key>"SparkLevelPatchEntry-WattleTributecynderDrop0"</key><value>"Hunger_P,GD_IncineratorFemale.Balance.PawnBalance_IncineratorFemale,DefaultItemPoolIncludedLists,,(ItemPoolListDefinition'GD_Itempools.ListDefs.BadassEnemyGunsAndGear')"</value><on>
 
-        #</Undead Badass Psychos>
+            #<hotfix><key>"SparkLevelPatchEntry-WattleTributestripDrop0"</key><value>"Hunger_P,GD_FleshripperFemale.Balance.PawnBalance_FleshripperFemale,DefaultItemPoolIncludedLists,,(ItemPoolListDefinition'GD_Itempools.ListDefs.BadassEnemyGunsAndGear')"</value><on>
 
-    #</Better Other Enemy Drops>
+            #<hotfix><key>"SparkLevelPatchEntry-WattleTributeflayDrop0"</key><value>"Hunger_P,GD_FleshripperMale.Balance.PawnBalance_FleshripperMale,DefaultItemPoolIncludedLists,,(ItemPoolListDefinition'GD_Itempools.ListDefs.BadassEnemyGunsAndGear')"</value><on>
+
+        #</Wattle Gobbler Tributes>
+
+    #</Regular Enemey Drop Improvements>
 
     #<Better Relic Drops>
 
