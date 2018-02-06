@@ -266,7 +266,7 @@ pretty absurd when you're in any area which can generate a lot of Badasses
 or the like.  The Hammerlock and Tiny Tina DLCs, in particular, were already
 very generous with loot, and this mod steers them into ridiculousness.  The
 last few stages of Murderlin's Magic Slaughter end up dropping enough loot
-to cause some notice FPS hits on my system in fact:
+to cause some noticeble FPS hits on my system in fact:
 
 ![Pictured: A Bit Much.](excess.png)
 
