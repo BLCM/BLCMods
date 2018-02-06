@@ -85,16 +85,7 @@ Specifically, this mod does the following:
     whose loot probabilities weren't already equal.
 * Raid Bosses will drop better loot, and will drop as many legendary/unique/etc
   items as are in their pool.  (Seraph Crystal drops are increased as well,
-  and Guardians will drop Seraph Crystals even in Normal mode).  I still have a
-  couple to go through; the ones currently in place are:
-  * Terramorphous
-  * Vermivorous
-  * Hyperius
-  * Master Gee
-  * Pyro Pete
-  * Dexiduous
-  * Voracidous
-  * Ancient Dragons of Destruction
+  and Guardians will drop Seraph Crystals even in Normal mode).
 * Fixes/Changes to some enemies' drop pools:
   * Some "Badass" enemies weren't actually pulling from the badass drop pool,
     which has been fixed:
@@ -109,18 +100,19 @@ Specifically, this mod does the following:
     * Skeleton Giants *(as if the Dragon Keep DLC needed more loot)*
     * Individual Handsome Sorcerer stage bosses
     * Bridget Hodunk and Colin Zaford *(from the Wedding Day Massacre Headhunter Pack)*
+    * Giant Craboid
   * Then a few other tweaks to certain enemies:
-    * Witch Doctors will drop an Eridium stick, and have a pretty good chance
-      of dropping a Relic as well.
+    * Witch Doctors (both in Big Game Hunt and Son of Crawmerax) will drop an Eridium
+      stick, and have a pretty good chance of dropping a Relic as well.
     * Elite Savages are guaranteed to drop loot (though just from the standard pool)
     * Most Tributes from the Wattle Gobbler Headhunter Pack were set to drop from
       the badadss loot pool, but three weren't set to drop any loot at all.  This
       mod fixes the three to have them drop as well.
     * The Loot Leprechaun (from Wedding Day Massacre) will drop from the Epic Chest
       pool, rather than the regular treasure chest pool.
-    * The BLNG Loader will drop from the badass pool and also drop a whole bunch of
-      money.  I've always been mystified why it didn't drop a ton of money from the
-      start.
+    * The BLNG Loader (from Wedding Day Massacre) will drop from the badass pool and
+      also drop a whole bunch of money.  I've always been mystified why it didn't
+      drop a ton of money from the start.
 * Remove early-game loot restrictions.  This is actually a superset of the
   similar feature already present in UCP 4.0.  This version enables spawning
   of basically everything from the beginning, including all grenade types,

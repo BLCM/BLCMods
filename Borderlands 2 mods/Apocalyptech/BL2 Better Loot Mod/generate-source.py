@@ -193,10 +193,20 @@ hfs.add_hotfix('torgue_piston', 'SparkLevelPatchEntry-PistonDropSlowHand0',
     ',GD_Iris_Population_PistonBoss.Balance.Iris_PawnBalance_PistonBoss,DefaultItemPoolList[2].PoolProbability.BaseValueConstant,,1.0')
 
 # Make Witch Doctors drop some slightly-more-interesting loot
+witch_extra_pools = "(ItemPool=ItemPoolDefinition'GD_Itempools.ArtifactPools.Pool_ArtifactsReward',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0.600000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Eridium_Stick',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))"
 for doctor in ['Fire', 'Shock', 'Slag', 'Slow', 'Vampire']:
     hfs.add_hotfix('witchdoctor_{}'.format(doctor),
         'SparkLevelPatchEntry-WitchDoctor{}Drops0'.format(doctor),
-        ",GD_Sage_Pop_Natives.Balance.PawnBalance_WitchDoctor{},DefaultItemPoolList,,((ItemPool=ItemPoolDefinition'GD_CustomItemPools_Sage.Fanboat.Pool_Customs_Fanboat_All',PoolProbability=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'GD_Itempools.DropWeights.DropODDS_VehicleSkins',InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.ArtifactPools.Pool_ArtifactsReward',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0.600000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Eridium_Stick',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))".format(doctor))
+        ",GD_Sage_Pop_Natives.Balance.PawnBalance_WitchDoctor{},DefaultItemPoolList,,((ItemPool=ItemPoolDefinition'GD_CustomItemPools_Sage.Fanboat.Pool_Customs_Fanboat_All',PoolProbability=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'GD_Itempools.DropWeights.DropODDS_VehicleSkins',InitializationDefinition=None,BaseValueScaleConstant=1.000000)),{})".format(doctor, witch_extra_pools))
+
+# And do the same for the Witch Doctors in the Son of Crawmerax Headhunter Pack
+for (label, classname) in [
+        ('Slow', 'GD_Nast_Native_WitchDoctorSlow.Population.PawnBalance_Nast_WitchDoctorSlow'),
+        ('Slag', 'GD_Nast_WitchDoctorSlag.Population.PawnBalance_Nast_WitchDoctorSlag'),
+        ]:
+    hfs.add_hotfix('crawmerax_witch_{}'.format(label),
+        'SparkLevelPatchEntry-CrawmeraxWitch{}Drops0'.format(label),
+        'Easter_P,{},DefaultItemPoolList,,({})'.format(classname, witch_extra_pools))
 
 # Badass Borok Fixes
 for borok in ['Corrosive', 'Fire', 'Shock', 'Slag']:
@@ -381,6 +391,15 @@ hfs.add_hotfix('wedding_blng_drop_0', 'SparkLevelPatchEntry-WeddingBLNGDrop0',
 money_pool_list=["(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Money_1_BIG',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))"]*30
 hfs.add_hotfix('wedding_blng_drop_1', 'SparkLevelPatchEntry-WeddingBLNGDrop1',
     "Distillery_P,GD_BlingLoader.Population.PawnBalance_BlingLoader,DefaultItemPoolList,,({})".format(','.join(money_pool_list)))
+
+# Make Giant Craboid (Son of Crawmerax) drop from the Badass loot pool
+hfs.add_hotfix('crawmerax_giant_craboid', 'SparkLevelPatchEntry-CrawmeraxGiantCraboidDrop0',
+    "Easter_P,GD_Population_Crabworms.Balance.PawnBalance_CraboidGiant,DefaultItemPoolIncludedLists[0],,ItemPoolListDefinition'GD_Itempools.ListDefs.BadassEnemyGunsAndGear'")
+
+# Improve Son of Crawmerax's (non-raid) drops.  Basically just calling the
+# RaidBossEnemyGunsAndGear pool three times instead of once.
+hfs.add_hotfix('crawmerax_son_nonraid_drop', 'SparkLevelPatchEntry-CrawmeraxSonNonRaidDrop0',
+    "Easter_P,GD_Crawmerax_Son.Population.PawnBalance_Crawmerax_Son,DefaultItemPoolIncludedLists,,(ItemPoolListDefinition'GD_Itempools.ListDefs.RaidBossEnemyGunsAndGear',ItemPoolListDefinition'GD_Itempools.ListDefs.RaidBossEnemyGunsAndGear',ItemPoolListDefinition'GD_Itempools.ListDefs.RaidBossEnemyGunsAndGear')")
 
 ###
 ### Testing hotfixes, not really intended to be used for real.  These
@@ -2997,6 +3016,12 @@ loot_str = """
 
             #</Badass Yeti>
 
+            #<Giant Craboid>
+
+                {hotfixes:crawmerax_giant_craboid}
+
+            #</Giant Craboid>
+
         #</Badass Enemy Fixes>
 
     #</Better Badass Pool Definitions>
@@ -3315,6 +3340,14 @@ loot_str = """
 
         #</Butt Stallion Endgame Improvements>
 
+        #<Son of Crawmerax (non-raid) Improvements>
+
+            # Makes the non-raid version of Son of Crawmerax drop some more loot
+
+            {hotfixes:crawmerax_son_nonraid_drop}
+
+        #</Son of Crawmerax (non-raid) Improvements>
+
     #</Better Miscellaneous Boss Drops>
 
     #<Regular Enemey Drop Improvements>
@@ -3324,7 +3357,7 @@ loot_str = """
         # Also a few enemies who claim to be Badasses but who didn't actually
         # drop from the badass pool originally.
 
-        #<Witch Doctors>
+        #<Witch Doctors (Big Game Hunt DLC)>
 
             # Adds a guaranteed Eridium stick, and chance at a good Relic
 
@@ -3338,7 +3371,17 @@ loot_str = """
 
             {hotfixes:witchdoctor_Vampire}
 
-        #</Witch Doctors>
+        #</Witch Doctors (Big Game Hunt DLC)>
+
+        #<Witch Doctors (Son of Crawmerax Headhunter Pack>
+
+            # Adding the same items as the story DLC ones - eridium and likely relic.
+
+            {hotfixes:crawmerax_witch_Slow}
+
+            {hotfixes:crawmerax_witch_Slag}
+
+        #</Witch Doctors (Son of Crawmerax Headhunter Pack>
 
         #<Bulstoss>
 
