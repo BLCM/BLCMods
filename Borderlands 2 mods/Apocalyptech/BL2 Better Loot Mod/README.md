@@ -108,6 +108,7 @@ Specifically, this mod does the following:
     * Arguk the Butcher
     * Skeleton Giants *(as if the Dragon Keep DLC needed more loot)*
     * Individual Handsome Sorcerer stage bosses
+    * Bridget Hodunk and Colin Zaford *(from the Wedding Day Massacre Headhunter Pack)*
   * Then a few other tweaks to certain enemies:
     * Witch Doctors will drop an Eridium stick, and have a pretty good chance
       of dropping a Relic as well.
@@ -115,6 +116,11 @@ Specifically, this mod does the following:
     * Most Tributes from the Wattle Gobbler Headhunter Pack were set to drop from
       the badadss loot pool, but three weren't set to drop any loot at all.  This
       mod fixes the three to have them drop as well.
+    * The Loot Leprechaun (from Wedding Day Massacre) will drop from the Epic Chest
+      pool, rather than the regular treasure chest pool.
+    * The BLNG Loader will drop from the badass pool and also drop a whole bunch of
+      money.  I've always been mystified why it didn't drop a ton of money from the
+      start.
 * Remove early-game loot restrictions.  This is actually a superset of the
   similar feature already present in UCP 4.0.  This version enables spawning
   of basically everything from the beginning, including all grenade types,
@@ -191,6 +197,9 @@ Some other stuff not done:
   Hammerlock DLC creatures which have a rare skin drop which I ended up
   making guaranteed just because I was already in there looking for
   uniques/legendaries, but that's about it.
+* From the Wedding Day Massacre Headhunter Pack: Ed, Stella, and Innuendobot
+  don't actually drop anything -- I felt that was probably approprate and
+  left them alone.
 
 Other Recommended Mods
 ----------------------

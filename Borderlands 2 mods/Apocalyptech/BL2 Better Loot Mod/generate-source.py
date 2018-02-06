@@ -359,6 +359,29 @@ for (name, classname) in [
 hfs.add_hotfix('mercenaryday_badass_yeti', 'SparkLevelPatchEntry-BadassYetiDrop0',
     "Xmas_P,GD_Allium_BadassYeti.Balance.PawnBalance_Allium_BadassYeti,DefaultItemPoolIncludedLists[0],,ItemPoolListDefinition'GD_Itempools.ListDefs.BadassEnemyGunsAndGear'")
 
+# Make Bridget Hodunk and Colin Zaford (Wedding Day Massacre) drop from the Badass loot pool
+hfs.add_hotfix('wedding_drop_bridget_0', 'SparkLevelPatchEntry-WeddingDropBridget0',
+    "Distillery_P,GD_GoliathBride.Population.PawnBalance_GoliathBride,DefaultItemPoolIncludedLists[0],,ItemPoolListDefinition'GD_Itempools.ListDefs.BadassEnemyGunsAndGear'")
+hfs.add_hotfix('wedding_drop_bridget_1', 'SparkLevelPatchEntry-WeddingDropBridget1',
+    "Distillery_P,GD_GoliathBride.Population.PawnBalance_GoliathBrideRaid,DefaultItemPoolIncludedLists[0],,ItemPoolListDefinition'GD_Itempools.ListDefs.BadassEnemyGunsAndGear'")
+hfs.add_hotfix('wedding_drop_colin_0', 'SparkLevelPatchEntry-WeddingDropColin0',
+    "Distillery_P,GD_GoliathGroom.Population.PawnBalance_GoliathGroom,DefaultItemPoolIncludedLists[0],,ItemPoolListDefinition'GD_Itempools.ListDefs.BadassEnemyGunsAndGear'")
+hfs.add_hotfix('wedding_drop_colin_1', 'SparkLevelPatchEntry-WeddingDropColin1',
+    "Distillery_P,GD_GoliathGroom.Population.PawnBalance_GoliathGroomRaid,DefaultItemPoolIncludedLists[0],,ItemPoolListDefinition'GD_Itempools.ListDefs.BadassEnemyGunsAndGear'")
+
+# Make the Loot Leprechaun (Wedding Day Massacre) drop from the Epic chest pool, rather than normal
+hfs.add_hotfix('wedding_loot_leprechaun_0', 'SparkLevelPatchEntry-WeddingLootLeprechaun0',
+    "Distillery_P,GD_Nast_Leprechaun.Character.CharClass_Nast_Leprechaun:BehaviorProviderDefinition_5.Behavior_SpawnItems_26,ItemPoolList[3].ItemPool,,ItemPoolDefinition'GD_Itempools.Treasure_ChestPools.Pool_EpicChest_Weapons_LongGuns'")
+hfs.add_hotfix('wedding_loot_leprechaun_1', 'SparkLevelPatchEntry-WeddingLootLeprechaun1',
+    "Distillery_P,GD_Nast_Leprechaun.Character.CharClass_Nast_Leprechaun:BehaviorProviderDefinition_5.Behavior_SpawnItems_26,ItemPoolList[4].ItemPool,,ItemPoolDefinition'GD_Itempools.Treasure_ChestPools.Pool_EpicChest_Weapons_Pistols'")
+
+# Make the BLNG Loader drop from the Badass pool, and add a lot of money drops
+hfs.add_hotfix('wedding_blng_drop_0', 'SparkLevelPatchEntry-WeddingBLNGDrop0',
+    "Distillery_P,GD_BlingLoader.Population.PawnBalance_BlingLoader,DefaultItemPoolIncludedLists[0],,ItemPoolListDefinition'GD_Itempools.ListDefs.BadassEnemyGunsAndGear'")
+money_pool_list=["(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Money_1_BIG',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))"]*30
+hfs.add_hotfix('wedding_blng_drop_1', 'SparkLevelPatchEntry-WeddingBLNGDrop1',
+    "Distillery_P,GD_BlingLoader.Population.PawnBalance_BlingLoader,DefaultItemPoolList,,({})".format(','.join(money_pool_list)))
+
 ###
 ### Testing hotfixes, not really intended to be used for real.  These
 ### aren't referenced in the body of the mod, so they'll only activate
@@ -3376,6 +3399,42 @@ loot_str = """
             {hotfixes:wattle_tribute_flay}
 
         #</Wattle Gobbler Tributes>
+
+        #<Bridget Hodunk and Colin Zaford>
+
+            # Makes these two spawn from the badass pool, rather than the regular pool.
+
+            {hotfixes:wedding_drop_bridget_0}
+
+            {hotfixes:wedding_drop_bridget_1}
+
+            {hotfixes:wedding_drop_colin_0}
+
+            {hotfixes:wedding_drop_colin_1}
+
+        #</Bridget Hodunk and Colin Zaford>
+
+        #<Loot Leprechaun>
+
+            # Make the Loot Leprechaun drop from the Epic Chest pool, rather than the
+            # regular treasure chest pool
+
+            {hotfixes:wedding_loot_leprechaun_0}
+
+            {hotfixes:wedding_loot_leprechaun_1}
+
+        #</Loot Leprechaun>
+
+        #<BLNG Loader>
+
+            # Make the BLNG Loader drop from the Badass pool, and also add a bunch of
+            # money to its drops.
+
+            {hotfixes:wedding_blng_drop_0}
+
+            {hotfixes:wedding_blng_drop_1}
+
+        #</BLNG Loader>
 
     #</Regular Enemey Drop Improvements>
 
