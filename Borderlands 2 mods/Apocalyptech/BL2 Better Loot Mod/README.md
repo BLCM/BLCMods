@@ -102,6 +102,7 @@ Specifically, this mod does the following:
     * Badass Knights
     * Badass Fire Archers
     * Undead Badass Psychos
+    * Badass Yeti
   * A few more standard enemies have also been set to drop from the badass pool:
     * Bulstross
     * Arguk the Butcher

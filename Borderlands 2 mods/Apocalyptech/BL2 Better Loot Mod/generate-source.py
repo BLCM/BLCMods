@@ -355,6 +355,10 @@ for (name, classname) in [
         'SparkLevelPatchEntry-WattleTribute{}Drop0'.format(name),
         "Hunger_P,{},DefaultItemPoolIncludedLists,,(ItemPoolListDefinition'GD_Itempools.ListDefs.BadassEnemyGunsAndGear')".format(classname))
 
+# Make Badass Yeti (Mercenary Day) drop from the Badass loot pool
+hfs.add_hotfix('mercenaryday_badass_yeti', 'SparkLevelPatchEntry-BadassYetiDrop0',
+    "Xmas_P,GD_Allium_BadassYeti.Balance.PawnBalance_Allium_BadassYeti,DefaultItemPoolIncludedLists[0],,ItemPoolListDefinition'GD_Itempools.ListDefs.BadassEnemyGunsAndGear'")
+
 ###
 ### Testing hotfixes, not really intended to be used for real.  These
 ### aren't referenced in the body of the mod, so they'll only activate
@@ -2963,6 +2967,12 @@ loot_str = """
                 {hotfixes:harvest_ubps}
 
             #</Undead Badass Psychos>
+
+            #<Badass Yeti>
+
+                {hotfixes:mercenaryday_badass_yeti}
+
+            #</Badass Yeti>
 
         #</Badass Enemy Fixes>
 
