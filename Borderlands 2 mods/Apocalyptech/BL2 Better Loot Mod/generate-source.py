@@ -194,9 +194,14 @@ for (gm_type, man_count) in [
                 gm_type, man_num,
             ))
 
-# Make Piston always drop the Slow Hand
-hfs.add_hotfix('torgue_piston', 'SparkLevelPatchEntry-PistonDropSlowHand0',
-    ',GD_Iris_Population_PistonBoss.Balance.Iris_PawnBalance_PistonBoss,DefaultItemPoolList[2].PoolProbability.BaseValueConstant,,1.0')
+# We want to make Piston always drop the Slow Hand, which is index 2 in its
+# DefaultItemPoolList, but if a user has UCP installed and with the default
+# selections, index 0 and 2 get swapped.  So, rather than just alter index
+# 2's probability, we'll have to set indexes 0 and 2 explicitly.  So, do that.
+hfs.add_hotfix('torgue_piston_0', 'SparkLevelPatchEntry-PistonDropSlowHand0',
+    ",GD_Iris_Population_PistonBoss.Balance.Iris_PawnBalance_PistonBoss,DefaultItemPoolList[0],,(ItemPool=ItemPoolDefinition'GD_ItempoolsEnemyUse.Shields.Pool_Shields_Standard_EnemyUse',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))")
+hfs.add_hotfix('torgue_piston_2', 'SparkLevelPatchEntry-PistonDropSlowHand2',
+    ",GD_Iris_Population_PistonBoss.Balance.Iris_PawnBalance_PistonBoss,DefaultItemPoolList[2],,(ItemPool=ItemPoolDefinition'GD_Iris_ItemPools.EnemyDropPools.Pool_Weapons_Piston',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))")
 
 # Make Witch Doctors drop some slightly-more-interesting loot
 witch_extra_pools = "(ItemPool=ItemPoolDefinition'GD_Itempools.ArtifactPools.Pool_ArtifactsReward',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0.600000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Eridium_Stick',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))"

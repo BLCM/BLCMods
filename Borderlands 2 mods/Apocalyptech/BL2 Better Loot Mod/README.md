@@ -148,6 +148,12 @@ In terms of loot compatibility, I'm pretty sure that this mod makes the
 "Vault Hunter's Relic" completely useless, but if you're using this mod,
 you certainly won't miss it.
 
+Known UCP 4.0 Incompatibilities:
+
+* "Regular Enemy Drop Improvements / BLNG Loader" in this mod will override
+  UCP's "Loot Pool & Drop Changes / Specific Loot Changes / Add Sledge's
+  Shotgun to BLNG Loader"
+
 Loot Purposefully Excluded from Pools
 -------------------------------------
 
@@ -232,6 +238,8 @@ TODO
     happens outside of their weighted drop pool, but I can't seem to figure
     out where that is.
   * I think Biker Badasses, etc, have pretty anemic drops at the moment.
+  * In order to retain UCP compatibility, we had to alter how we guarantee
+    Piston's Slow Hand drop.  This remains untested.
 * Add in level names to our hotfixes which could technically use them
 * Also maybe set up our own prefix on all our hotfix names, so there's very
   little chance of ever conflicting with someone else's names.

@@ -2668,7 +2668,7 @@
 
         #</Loot Leprechaun>
 
-        #<BLNG Loader>
+        #<BLNG Loader (will override UCP's "Add Sledge's Shotgun to BLNG Loader")>
 
             # Make the BLNG Loader drop from the Badass pool, and also add a bunch of
             # money to its drops.
@@ -2677,7 +2677,7 @@
 
             {hotfixes:wedding_blng_drop_1}
 
-        #</BLNG Loader>
+        #</BLNG Loader (will override UCP's "Add Sledge's Shotgun to BLNG Loader")>
 
     #</Regular Enemey Drop Improvements>
 
@@ -8439,7 +8439,13 @@
 
         #<Torgue DLC>
 
-            {hotfixes:torgue_piston}
+            # To alter Piston's Slow Hand drop rate, we have to assign
+            # two elements of his DefaultItemPoolList entirely, to maintain
+            # compatibility with UCP
+
+            {hotfixes:torgue_piston_0}
+
+            {hotfixes:torgue_piston_2}
 
         #</Torgue DLC>
 
