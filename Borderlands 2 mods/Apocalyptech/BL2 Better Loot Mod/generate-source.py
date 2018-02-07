@@ -14,7 +14,7 @@ from hotfixes import Hotfixes
 ###
 
 mod_name = 'BL2 Better Loot Mod by Apocalyptech'
-variant_filtertool_name = 'FilterTool and UCP Compat'
+variant_filtertool_name = 'UCP Compat'
 variant_standalone_name = 'Standalone'
 output_filename_filtertool = '{} - {}-source.txt'.format(mod_name, variant_filtertool_name)
 output_filename_standalone = '{} - {}-source.txt'.format(mod_name, variant_standalone_name)
@@ -904,7 +904,7 @@ with open(output_filename_filtertool, 'w') as df:
         hotfix_gearbox_base='',
         hotfix_transient_defs='',
         ))
-print('Wrote FilterTool/UCP-compatible mod file to: {}'.format(output_filename_filtertool))
+print('Wrote UCP-compatible mod file to: {}'.format(output_filename_filtertool))
 
 # Write to a standalone file
 with open(output_filename_standalone, 'w') as df:
