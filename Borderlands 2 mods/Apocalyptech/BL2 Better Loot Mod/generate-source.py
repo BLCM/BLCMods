@@ -261,6 +261,16 @@ for idx in range(3):
         'SparkLevelPatchEntry-VoracSeraph{}'.format(idx),
         "Sage_Cliffs_P,GD_Sage_ItemPools.Raid.PoolList_Sage_Raid_Items,ItemPools[{}].ItemPool,,ItemPoolDefinition'GD_Sage_ItemPools.SeraphCrystal.Pool_SeraphCrystal_7_Drop'".format(idx))
 
+# UCP Compatibility fixes: As with the Hyperius and Master Gee Legendary
+# pool drops, we need to account for the fact that UCP contains a definition
+# to improve the Legendary drop rate for Voracidous. We've already done that
+# via a 'set' command, so we need to introduce a hotfix to ensure that it
+# stays that way.  One other note is that we've also changed the ordering of
+# Voracidous's loot pools, so the element which UCP changes isn't the one it
+# thinks it's changed, with this mod installed
+hfs.add_hotfix('vorac_drop_ucp_fix', 'SparkLevelPatchEntry-VoracidousDropUCPFix0',
+    ',GD_Sage_ItemPools.Raid.PoolList_Sage_Raid_Items,Itempools[0].PoolProbability.BaseValueConstant,,1.0')
+
 # Make Elite Savages always drop something from the main GunsAndGear pool
 # (this'll give them a chance to drop twice, actually, but whatever)
 hfs.add_hotfix('hammerlock_elite_savage', 'SparkLevelPatchEntry-EliteSavageDrop0',

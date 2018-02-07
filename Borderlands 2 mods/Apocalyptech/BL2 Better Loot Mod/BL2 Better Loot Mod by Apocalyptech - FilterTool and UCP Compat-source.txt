@@ -11252,6 +11252,12 @@
 
             #<hotfix><key>"SparkLevelPatchEntry-VoracSeraph2"</key><value>"Sage_Cliffs_P,GD_Sage_ItemPools.Raid.PoolList_Sage_Raid_Items,ItemPools[2].ItemPool,,ItemPoolDefinition'GD_Sage_ItemPools.SeraphCrystal.Pool_SeraphCrystal_7_Drop'"</value><on>
 
+            # And one final hotfix for UCP compatibility, to make sure that
+            # UCP doesn't overwrite the probability of the first element of
+            # the itempool.
+
+            #<hotfix><key>"SparkLevelPatchEntry-VoracidousDropUCPFix0"</key><value>",GD_Sage_ItemPools.Raid.PoolList_Sage_Raid_Items,Itempools[0].PoolProbability.BaseValueConstant,,1.0"</value><on>
+
         #</Voracidous>
 
         #<Ancient Dragons>
