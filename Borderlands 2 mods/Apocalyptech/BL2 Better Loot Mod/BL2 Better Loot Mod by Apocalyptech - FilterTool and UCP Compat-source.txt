@@ -9899,6 +9899,12 @@
                 )
             )
 
+            # We need to have a hotfix to ensure that Hyperius's Seraph pool
+            # remains at 100%, to retain compatibility with UCP (which might
+            # otherwise be "increasing" the drop chance).
+
+            #<hotfix><key>"SparkLevelPatchEntry-HyperiusUCPFix0"</key><value>",GD_Orchid_ItemPools.Raid.PoolList_Orchid_Raid1_Items,Itempools[0].PoolProbability.BaseValueConstant,,1.0"</value><on>
+
         #</Hyperius>
 
         #<Master Gee>
@@ -10192,6 +10198,12 @@
                     )
                 )
             )
+
+            # We need to have a hotfix to ensure that Master Gee's Seraph pool
+            # remains at 100%, to retain compatibility with UCP (which might
+            # otherwise be "increasing" the drop chance).
+
+            #<hotfix><key>"SparkLevelPatchEntry-MasterGeeUCPFix0"</key><value>",GD_Orchid_ItemPools.Raid.PoolList_Orchid_Raid3_Items,Itempools[0].PoolProbability.BaseValueConstant,,1.0"</value><on>
 
         #</Master Gee>
 
