@@ -153,6 +153,15 @@ Known UCP 4.0 Incompatibilities:
 * "Regular Enemy Drop Improvements / BLNG Loader" in this mod will override
   UCP's "Loot Pool & Drop Changes / Specific Loot Changes / Add Sledge's
   Shotgun to BLNG Loader"
+* "Raid Boss Drop Improvements / Hyperius" in this mod will override UCP's
+  "Loot Pool & Drop Changes / Specific Loot Changes / Add Black Hole and remove
+  the Kiss of Death from Hyperius"
+* "Raid Boss Drop Improvements / Hyperius / Clean Up Seraph Drop Pool" in this
+  mod will override the loot pool changes in UCP's "Loot Pool & Drop Changes /
+  Specific Loot Changes / Increase Hyperius' Seraph drop chance and add all DLC
+  1 Seraphs".  Unselecting just "Clean Up Seraph Drop Pool" in this mod but
+  leaving the rest of our Hyperius section intact will still give a 100% drop
+  rate for Seraphs on Hyperius.
 
 Loot Purposefully Excluded from Pools
 -------------------------------------

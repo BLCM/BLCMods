@@ -9521,7 +9521,7 @@
         # for all possible weapons in that pool.  They will also drop more
         # Seraph crystals, and will drop crystals even in Normal/TVHM.
 
-        #<Hyperius>
+        #<Hyperius (overrides UCP's "Add Black Hole and remove the Kiss of Death from Hyperius")>
 
             # For Hyperius, we also tweak his "PinkWeapons" and "Legendary" pools to make
             # a little more sense.
@@ -9607,53 +9607,57 @@
                 )
             )
 
-            set GD_Orchid_ItemPools.Raid.Pool_Orchid_Raid1_PinkWeapons BalancedItems
-            (
-                ( 
-                    ItmPoolDefinition=None,
-                    InvBalanceDefinition=WeaponBalanceDefinition'GD_Orchid_RaidWeapons.Pistol.Devastator.Orchid_Seraph_Devastator_Balance',
-                    Probability=(
-                        BaseValueConstant=1.000000,
-                        BaseValueAttribute=None,
-                        InitializationDefinition=None,
-                        BaseValueScaleConstant=1.000000
-                    ),
-                    bDropOnDeath=True
-                ),
+            #<Clean Up Seraph Drop Pool (overrides loot pool changes in UCP's "Increase Hyperius' Seraph drop chance and add all DLC 1 Seraphs">
+
+                set GD_Orchid_ItemPools.Raid.Pool_Orchid_Raid1_PinkWeapons BalancedItems
                 (
-                    ItmPoolDefinition=None,
-                    InvBalanceDefinition=WeaponBalanceDefinition'GD_Orchid_RaidWeapons.SMG.Tattler.Orchid_Seraph_Tattler_Balance',
-                    Probability=(
-                        BaseValueConstant=1.000000,
-                        BaseValueAttribute=None,
-                        InitializationDefinition=None,
-                        BaseValueScaleConstant=1.000000
+                    ( 
+                        ItmPoolDefinition=None,
+                        InvBalanceDefinition=WeaponBalanceDefinition'GD_Orchid_RaidWeapons.Pistol.Devastator.Orchid_Seraph_Devastator_Balance',
+                        Probability=(
+                            BaseValueConstant=1.000000,
+                            BaseValueAttribute=None,
+                            InitializationDefinition=None,
+                            BaseValueScaleConstant=1.000000
+                        ),
+                        bDropOnDeath=True
                     ),
-                    bDropOnDeath=True
-                ),
-                (
-                    ItmPoolDefinition=None,
-                    InvBalanceDefinition=WeaponBalanceDefinition'GD_Orchid_RaidWeapons.Shotgun.Spitter.Orchid_Seraph_Spitter_Balance',
-                    Probability=(
-                        BaseValueConstant=1.000000,
-                        BaseValueAttribute=None,
-                        InitializationDefinition=None,
-                        BaseValueScaleConstant=1.000000
+                    (
+                        ItmPoolDefinition=None,
+                        InvBalanceDefinition=WeaponBalanceDefinition'GD_Orchid_RaidWeapons.SMG.Tattler.Orchid_Seraph_Tattler_Balance',
+                        Probability=(
+                            BaseValueConstant=1.000000,
+                            BaseValueAttribute=None,
+                            InitializationDefinition=None,
+                            BaseValueScaleConstant=1.000000
+                        ),
+                        bDropOnDeath=True
                     ),
-                    bDropOnDeath=True
-                ),
-                (
-                    ItmPoolDefinition=None,
-                    InvBalanceDefinition=WeaponBalanceDefinition'GD_Orchid_RaidWeapons.SMG.Actualizer.Orchid_Seraph_Actualizer_Balance',
-                    Probability=(
-                        BaseValueConstant=1.000000,
-                        BaseValueAttribute=None,
-                        InitializationDefinition=None,
-                        BaseValueScaleConstant=1.000000
+                    (
+                        ItmPoolDefinition=None,
+                        InvBalanceDefinition=WeaponBalanceDefinition'GD_Orchid_RaidWeapons.Shotgun.Spitter.Orchid_Seraph_Spitter_Balance',
+                        Probability=(
+                            BaseValueConstant=1.000000,
+                            BaseValueAttribute=None,
+                            InitializationDefinition=None,
+                            BaseValueScaleConstant=1.000000
+                        ),
+                        bDropOnDeath=True
                     ),
-                    bDropOnDeath=True
+                    (
+                        ItmPoolDefinition=None,
+                        InvBalanceDefinition=WeaponBalanceDefinition'GD_Orchid_RaidWeapons.SMG.Actualizer.Orchid_Seraph_Actualizer_Balance',
+                        Probability=(
+                            BaseValueConstant=1.000000,
+                            BaseValueAttribute=None,
+                            InitializationDefinition=None,
+                            BaseValueScaleConstant=1.000000
+                        ),
+                        bDropOnDeath=True
+                    )
                 )
-            )
+
+            #</Clean Up Seraph Drop Pool (overrides loot pool changes in UCP's "Increase Hyperius' Seraph drop chance and add all DLC 1 Seraphs">
 
             # Now on to the more usual drop pool tweaking
 
@@ -9953,7 +9957,7 @@
 
             #<hotfix><key>"SparkLevelPatchEntry-HyperiusUCPFix0"</key><value>",GD_Orchid_ItemPools.Raid.PoolList_Orchid_Raid1_Items,Itempools[0].PoolProbability.BaseValueConstant,,1.0"</value><on>
 
-        #</Hyperius>
+        #</Hyperius (overrides UCP's "Add Black Hole and remove the Kiss of Death from Hyperius")>
 
         #<Master Gee>
 
