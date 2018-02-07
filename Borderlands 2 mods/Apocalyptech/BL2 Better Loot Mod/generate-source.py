@@ -184,22 +184,22 @@ for (gm_type, man_count) in [
         ]:
     for man_num in range(man_count):
         hfs.add_hotfix('grenade_{}_{}_0'.format(gm_type, man_num),
-            'SparkLevelPatchEntry-Grenade{}{}-0'.format(gm_type, man_num),
+            'SparkLevelPatchEntry-Grenade{}Man{}Rarity0'.format(gm_type, man_num),
             ',GD_GrenadeMods.A_Item.GM_{},Manufacturers[{}].Grades[0].GameStageRequirement.MinGameStage,,0'.format(
                 gm_type, man_num,
             ))
         hfs.add_hotfix('grenade_{}_{}_1'.format(gm_type, man_num),
-            'SparkLevelPatchEntry-Grenade{}{}-1'.format(gm_type, man_num),
+            'SparkLevelPatchEntry-Grenade{}Man{}Rarity1'.format(gm_type, man_num),
             ',GD_GrenadeMods.A_Item.GM_{}_2_Uncommon,Manufacturers[{}].Grades[0].GameStageRequirement.MinGameStage,,0'.format(
                 gm_type, man_num,
             ))
         hfs.add_hotfix('grenade_{}_{}_2'.format(gm_type, man_num),
-            'SparkLevelPatchEntry-Grenade{}{}-2'.format(gm_type, man_num),
+            'SparkLevelPatchEntry-Grenade{}Man{}Rarity2'.format(gm_type, man_num),
             ',GD_GrenadeMods.A_Item.GM_{}_3_Rare,Manufacturers[{}].Grades[0].GameStageRequirement.MinGameStage,,0'.format(
                 gm_type, man_num,
             ))
         hfs.add_hotfix('grenade_{}_{}_3'.format(gm_type, man_num),
-            'SparkLevelPatchEntry-Grenade{}{}-3'.format(gm_type, man_num),
+            'SparkLevelPatchEntry-Grenade{}Man{}Rarity3'.format(gm_type, man_num),
             ',GD_GrenadeMods.A_Item.GM_{}_4_VeryRare,Manufacturers[{}].Grades[0].GameStageRequirement.MinGameStage,,0'.format(
                 gm_type, man_num,
             ))
