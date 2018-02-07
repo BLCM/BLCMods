@@ -14,13 +14,6 @@ everything in here can be toggled on or off inside FilterTool as you'd
 hope, on an item-by-item basis.  Basically every bullet point in the
 "Overview" section is its own "folder" once imported into FilterTool.
 
-The mod does include some fixes/tweaks for data in the Headhunter DLC packs,
-but it shouldn't cause any problems even if you don't have those - the
-relevant hotfixes would just never be triggered.  It does contain fixes/tweaks
-for all the bigger story DLC, though the worst that would happen if you don't
-have those installed is getting some error messages on the console when running
-the patch.
-
 Usage/Installation
 ------------------
 
