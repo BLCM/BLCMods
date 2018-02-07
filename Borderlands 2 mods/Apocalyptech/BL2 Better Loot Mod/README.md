@@ -71,8 +71,8 @@ Specifically, this mod does the following:
     guaranteed to drop that item.
   * If a boss has more than one in their drop pool, you may get duplicates
     of one rather than one of each.
-  * Normalized the chances of boss-item drops, for the handful of bosses
-    whose loot probabilities weren't already equal.
+  * A few bosses didn't have an equal chance to get everything in their
+    unique-loot pools.  This mod evens that out.
 * Raid Bosses will drop better loot, and will drop as many legendary/unique/etc
   items as are in their pool.  (Seraph Crystal drops are increased as well,
   and Guardians will drop Seraph Crystals even in Normal mode).
