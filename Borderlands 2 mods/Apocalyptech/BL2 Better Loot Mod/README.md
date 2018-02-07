@@ -131,24 +131,7 @@ Specifically, this mod does the following:
 Compatibility
 -------------
 
-This mod is mostly compatible with UCP 4.0, though there's a few instances of
-UCP and this mod writing to the same values (mostly to do with boss drops
-and the like).  I do plan to go through and figure out a good way to coexist
-with UCP so that I'm not writing to the same stuff, but I haven't gone through
-to do that yet.  Stuff in UCP's "Specific Loot Changes" folder will be the
-likeliest culprits.  I'll be looking into that in a bit.
-
-Obviously this will conflict with other mods which play with the same
-variables.  I know that Hemaxhu's "Better White Chests" would conflict with
-this, for instance, and possibly other mods in Hemaxhu's "Chest Mods"
-folder.  FromDarkHell's collection in the "Loot Drops" folder likewise will
-probably conflict.
-
-In terms of loot compatibility, I'm pretty sure that this mod makes the
-"Vault Hunter's Relic" completely useless, but if you're using this mod,
-you certainly won't miss it.
-
-Known UCP 4.0 Incompatibilities:
+This mod is mostly compatible with UCP 4.0, with three known exceptions:
 
 * "Regular Enemy Drop Improvements / BLNG Loader" in this mod will override
   UCP's "Loot Pool & Drop Changes / Specific Loot Changes / Add Sledge's
@@ -162,6 +145,20 @@ Known UCP 4.0 Incompatibilities:
   1 Seraphs".  Unselecting just "Clean Up Seraph Drop Pool" in this mod but
   leaving the rest of our Hyperius section intact will still give a 100% drop
   rate for Seraphs on Hyperius.
+
+It's possible that there are some other strange interactions which could take
+place when both UCP and this mod are active, though it shouldn't be anything
+awful.
+
+Obviously this mod will conflict with other mods which play with the same
+variables.  I know that Hemaxhu's "Better White Chests" would conflict with
+this, for instance, and possibly other mods in Hemaxhu's "Chest Mods"
+folder.  FromDarkHell's collection in the "Loot Drops" folder likewise will
+probably conflict.
+
+In terms of loot compatibility, I'm pretty sure that this mod makes the
+"Vault Hunter's Relic" completely useless, but if you're using this mod,
+you certainly won't miss it.
 
 Loot Purposefully Excluded from Pools
 -------------------------------------
@@ -221,22 +218,14 @@ well-covered in other mods, so instead I'll just mention them here.
 TODO
 ----
 
-* Test interactions with UCP - make sure we're not stepping on any toes.
+* Playtesting in general (including with UCP)
 * Balancing!  This mod is obviously very cheaty/OP, but I don't want it to
   be completely ludicrous.  I'd like it to still feel a bit special when
-  the Very Good loot gets dropped, while at the same time providing a steady
-  supply of fun gear.  Obviously this is very much down to personal
+  Legendaries/Pearls/Seraphs get dropped, while at the same time providing
+  a steady supply of fun gear.  Obviously this is very much down to personal
   preference.  Regardless, I've done extremely little actual playtesting
   with the current drop weights.
 * Can we increase boss drop counts depending on player count?
-* I'm not actually terribly interested in changing this, but I'd love to
-  know how the gear is allocated for the miscellaneous smaller containers
-  throughout the game, such as those regular "white" chests (which
-  more often than not just have ammo), cardboard boxes, washing machines,
-  toilets, etc.  Nothing I've found seems to affect them.  Given the rest
-  of what this mod does, it hardly matters, but my curiosity remains
-  piqued.  I do know how to update dumpsters, but I left them alone on
-  purpose.
 * Untested components from Torgue DLC *(I'm afraid that's my least favorite
   DLC, to the point of not really liking it much, so I suspect that these
   may go untouched)*:
