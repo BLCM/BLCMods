@@ -227,6 +227,7 @@ TODO
   * In order to retain UCP compatibility, we had to alter how we guarantee
     Piston's Slow Hand drop.  This remains untested.
 * Add in level names to our hotfixes which could technically use them
+* The folder layout of the mod could probably use some reorg.
 * I noticed that various enemies have a `CustomItemPoolList` defined in their
   `Playthroughs` section, for changes in TVHM/UVHM.  This seems to serve the
   purpose of, for instance, adding a shield which wouldn't be present in
@@ -274,15 +275,17 @@ To generate the end result file, I actually run the small shell script
 Credits
 -------
 
-I've taken various ideas and at least one direct copy and paste from UCP,
-and from various other mods which had similar goals as what I was looking
-for:
+I've taken various ideas and snippets from a few other mods:
 
+* Lifting early-game loot restrictions came directly from UCP, though I since
+  expanded that section quite a bit.
 * Setting guaranteed drops for the vast majority of bosses in-game, via
   two nicely-concise statements, came from JimRaven's "FarmFest"
 * Orudeon's "Gemstone Loot Pools" clued me in that the main Gemstone pool in
   the Tiny Tina DLC is heavily weighted towards Pistols.
-* *(will have to go through and see what else...)*
+* FromDarkHell's "BL1Loot" provided a great index of gear for my own similar
+  addition of uniques/pearls/seraphs into the legendary pool (though I went
+  about it slightly differently)
 
 I'd also like to thank the fine folks in Shadow's Evil Hideout #borderlands-modding
 Discord channel for putting up with all my noobish questions.
