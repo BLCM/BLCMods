@@ -227,8 +227,6 @@ TODO
   * In order to retain UCP compatibility, we had to alter how we guarantee
     Piston's Slow Hand drop.  This remains untested.
 * Add in level names to our hotfixes which could technically use them
-* Also maybe set up our own prefix on all our hotfix names, so there's very
-  little chance of ever conflicting with someone else's names.
 * I noticed that various enemies have a `CustomItemPoolList` defined in their
   `Playthroughs` section, for changes in TVHM/UVHM.  This seems to serve the
   purpose of, for instance, adding a shield which wouldn't be present in

@@ -152,11 +152,11 @@ force_gunsandgear_specific_name = 'GD_Orchid_BossWeapons.RPG.Ahab.Orchid_Boss_Ah
 ###
 
 # Make No-Beard always drop his unique
-hfs.add_hotfix('scarlett_nobeard', 'SparkLevelPatchEntry-NoBeardDrop1',
+hfs.add_level_hotfix('scarlett_nobeard', 'NoBeardDrop',
     ',GD_Orchid_Pop_NoBeard.PawnBalance_Orchid_NoBeard,DefaultItemPoolList[1].PoolProbability.BaseValueConstant,,1.0')
 
 # Make Big Sleep always drop his unique
-hfs.add_hotfix('scarlett_bigsleep', 'SparkLevelPatchEntry-BigSleepDrop1',
+hfs.add_level_hotfix('scarlett_bigsleep', 'BigSleepDrop',
     ',GD_Orchid_Pop_Sandman.Balance.PawnBalance_Orchid_BigSleep,DefaultItemPoolList[1].PoolProbability.BaseValueConstant,,1.0')
 
 # UCP Compatibility fixes: We need to add in a hotfix to set Hyperius and
@@ -164,13 +164,13 @@ hfs.add_hotfix('scarlett_bigsleep', 'SparkLevelPatchEntry-BigSleepDrop1',
 # with a regular "set" command, but a UCP hotfix (to improve the Legendary
 # drop rate) would overwrite our 100% chance.  So, in addition to the "set"
 # command, we'll overwrite the probability again.
-hfs.add_hotfix('scarlett_hyperius_ucp_fix', 'SparkLevelPatchEntry-HyperiusUCPFix0',
+hfs.add_level_hotfix('scarlett_hyperius_ucp_fix', 'HyperiusUCPFix',
     ',GD_Orchid_ItemPools.Raid.PoolList_Orchid_Raid1_Items,Itempools[0].PoolProbability.BaseValueConstant,,1.0')
-hfs.add_hotfix('scarlett_mastergee_ucp_fix', 'SparkLevelPatchEntry-MasterGeeUCPFix0',
+hfs.add_level_hotfix('scarlett_mastergee_ucp_fix', 'MasterGeeUCPFix',
     ',GD_Orchid_ItemPools.Raid.PoolList_Orchid_Raid3_Items,Itempools[0].PoolProbability.BaseValueConstant,,1.0')
 
 # Make the Chubby drop pool better.
-hfs.add_hotfix('chubby_drop', 'SparkLevelPatchEntry-ChubbyDrop1',
+hfs.add_level_hotfix('chubby_drop', 'ChubbyDrop',
     ",GD_Itempools.ListDefs.ChubbyEnemyGunsAndGear,ItemPools,,((ItemPool=ItemPoolDefinition'GD_Itempools.Runnables.Pool_ChubbieUniques',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.EnemyDropPools.Pool_GunsAndGear_05_VeryRare',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.GeneralItemPools.Pool_GunsAndGear',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.EnemyDropPools.Pool_GunsAndGear_05_VeryRare',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.WeightingPlayerCount.GearDrops_PerPlayer',BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.GeneralItemPools.Pool_GunsAndGear',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.WeightingPlayerCount.GearDrops_PerPlayer',BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.Treasure_ChestPools.Pool_EpicChest_Weapons_GunsAndGear',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.WeightingPlayerCount.GearDrops_PerPlayer',BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.VehicleSkins.Pool_VehicleSkins_All',PoolProbability=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'GD_Itempools.DropWeights.DropODDS_VehicleSkins',InitializationDefinition=None,BaseValueScaleConstant=10.000000)),(ItemPool=CrossDLCItemPoolDefinition'GD_Lobelia_Itempools.WeaponPools.Pool_Lobelia_Pearlescent_Weapons_All',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Eridium_Bar',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Eridium_Bar',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Eridium_Bar',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Eridium_Bar',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Eridium_Stick',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Eridium_Stick',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Eridium_Stick',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Eridium_Stick',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.BuffDrinkPools.Pool_BuffDrinks_HealingInstant',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Ammo_All_NeedOnly',PoolProbability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.WeightingPlayerCount.AmmoDrops_PerPlayer',BaseValueScaleConstant=0.250000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Ammo_All_Emergency',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))")
 
 # Various grenade mod early unlocks.  These actually don't have to be
@@ -183,23 +183,23 @@ for (gm_type, man_count) in [
             ('Transfusion', 1),
         ]:
     for man_num in range(man_count):
-        hfs.add_hotfix('grenade_{}_{}_0'.format(gm_type, man_num),
-            'SparkLevelPatchEntry-Grenade{}Man{}Rarity0'.format(gm_type, man_num),
+        hfs.add_level_hotfix('grenade_{}_{}_0'.format(gm_type, man_num),
+            'Grenade{}Man{}Rarity'.format(gm_type, man_num),
             ',GD_GrenadeMods.A_Item.GM_{},Manufacturers[{}].Grades[0].GameStageRequirement.MinGameStage,,0'.format(
                 gm_type, man_num,
             ))
-        hfs.add_hotfix('grenade_{}_{}_1'.format(gm_type, man_num),
-            'SparkLevelPatchEntry-Grenade{}Man{}Rarity1'.format(gm_type, man_num),
+        hfs.add_level_hotfix('grenade_{}_{}_1'.format(gm_type, man_num),
+            'Grenade{}Man{}Rarity'.format(gm_type, man_num),
             ',GD_GrenadeMods.A_Item.GM_{}_2_Uncommon,Manufacturers[{}].Grades[0].GameStageRequirement.MinGameStage,,0'.format(
                 gm_type, man_num,
             ))
-        hfs.add_hotfix('grenade_{}_{}_2'.format(gm_type, man_num),
-            'SparkLevelPatchEntry-Grenade{}Man{}Rarity2'.format(gm_type, man_num),
+        hfs.add_level_hotfix('grenade_{}_{}_2'.format(gm_type, man_num),
+            'Grenade{}Man{}Rarity'.format(gm_type, man_num),
             ',GD_GrenadeMods.A_Item.GM_{}_3_Rare,Manufacturers[{}].Grades[0].GameStageRequirement.MinGameStage,,0'.format(
                 gm_type, man_num,
             ))
-        hfs.add_hotfix('grenade_{}_{}_3'.format(gm_type, man_num),
-            'SparkLevelPatchEntry-Grenade{}Man{}Rarity3'.format(gm_type, man_num),
+        hfs.add_level_hotfix('grenade_{}_{}_3'.format(gm_type, man_num),
+            'Grenade{}Man{}Rarity'.format(gm_type, man_num),
             ',GD_GrenadeMods.A_Item.GM_{}_4_VeryRare,Manufacturers[{}].Grades[0].GameStageRequirement.MinGameStage,,0'.format(
                 gm_type, man_num,
             ))
@@ -208,16 +208,16 @@ for (gm_type, man_count) in [
 # DefaultItemPoolList, but if a user has UCP installed and with the default
 # selections, index 0 and 2 get swapped.  So, rather than just alter index
 # 2's probability, we'll have to set indexes 0 and 2 explicitly.  So, do that.
-hfs.add_hotfix('torgue_piston_0', 'SparkLevelPatchEntry-PistonDropSlowHand0',
+hfs.add_level_hotfix('torgue_piston_0', 'PistonDropSlowHand',
     ",GD_Iris_Population_PistonBoss.Balance.Iris_PawnBalance_PistonBoss,DefaultItemPoolList[0],,(ItemPool=ItemPoolDefinition'GD_ItempoolsEnemyUse.Shields.Pool_Shields_Standard_EnemyUse',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))")
-hfs.add_hotfix('torgue_piston_2', 'SparkLevelPatchEntry-PistonDropSlowHand2',
+hfs.add_level_hotfix('torgue_piston_2', 'PistonDropSlowHand',
     ",GD_Iris_Population_PistonBoss.Balance.Iris_PawnBalance_PistonBoss,DefaultItemPoolList[2],,(ItemPool=ItemPoolDefinition'GD_Iris_ItemPools.EnemyDropPools.Pool_Weapons_Piston',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))")
 
 # Make Witch Doctors drop some slightly-more-interesting loot
 witch_extra_pools = "(ItemPool=ItemPoolDefinition'GD_Itempools.ArtifactPools.Pool_ArtifactsReward',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0.600000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Eridium_Stick',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))"
 for doctor in ['Fire', 'Shock', 'Slag', 'Slow', 'Vampire']:
-    hfs.add_hotfix('witchdoctor_{}'.format(doctor),
-        'SparkLevelPatchEntry-WitchDoctor{}Drops0'.format(doctor),
+    hfs.add_level_hotfix('witchdoctor_{}'.format(doctor),
+        'WitchDoctor{}Drops'.format(doctor),
         ",GD_Sage_Pop_Natives.Balance.PawnBalance_WitchDoctor{},DefaultItemPoolList,,((ItemPool=ItemPoolDefinition'GD_CustomItemPools_Sage.Fanboat.Pool_Customs_Fanboat_All',PoolProbability=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'GD_Itempools.DropWeights.DropODDS_VehicleSkins',InitializationDefinition=None,BaseValueScaleConstant=1.000000)),{})".format(doctor, witch_extra_pools))
 
 # And do the same for the Witch Doctors in the Son of Crawmerax Headhunter Pack
@@ -225,40 +225,39 @@ for (label, classname) in [
         ('Slow', 'GD_Nast_Native_WitchDoctorSlow.Population.PawnBalance_Nast_WitchDoctorSlow'),
         ('Slag', 'GD_Nast_WitchDoctorSlag.Population.PawnBalance_Nast_WitchDoctorSlag'),
         ]:
-    hfs.add_hotfix('crawmerax_witch_{}'.format(label),
-        'SparkLevelPatchEntry-CrawmeraxWitch{}Drops0'.format(label),
+    hfs.add_level_hotfix('crawmerax_witch_{}'.format(label),
+        'CrawmeraxWitch{}Drops'.format(label),
         'Easter_P,{},DefaultItemPoolList,,({})'.format(classname, witch_extra_pools))
 
 # Badass Borok Fixes
 for borok in ['Corrosive', 'Fire', 'Shock', 'Slag']:
-    hfs.add_hotfix('badass_borok_{}'.format(borok),
-        'SparkLevelPatchEntry-BadassBorok{}0'.format(borok),
+    hfs.add_level_hotfix('badass_borok_{}'.format(borok),
+        'BadassBorok{}'.format(borok),
         ",GD_Sage_Pop_Rhino.Balance.PawnBalance_Sage_RhinoBadass{},DefaultItemPoolIncludedLists[0],,ItemPoolListDefinition'GD_Itempools.ListDefs.BadassEnemyGunsAndGear'".format(borok))
 
 # Make Bulstoss also drop from the Badass loot pool
-hfs.add_hotfix('bulstoss_badass', 'SparkLevelPatchEntry-BulstossBadass1',
+hfs.add_level_hotfix('bulstoss_badass', 'BulstossBadass',
     ",GD_Sage_SM_AcquiredTasteData.Creature.PawnBalance_Sage_AcquiredTaste_Creature,DefaultItemPoolIncludedLists[0],,ItemPoolListDefinition'GD_Itempools.ListDefs.BadassEnemyGunsAndGear'")
 
 # Make Thermitage always drop its rare skin
-hfs.add_hotfix('hammerlock_thermitage', 'SparkLevelPatchEntry-ThermitageDropSkin0',
+hfs.add_level_hotfix('hammerlock_thermitage', 'ThermitageDropSkin',
     ',GD_Sage_Ep3_Data.Creature.PawnBalance_Sage_Ep3_Creature,DefaultItemPoolList[0].PoolProbability,,(BaseValueConstant=1.0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.0)')
 
 # Make Dribbles always drop its rare skin
-hfs.add_hotfix('hammerlock_dribbles', 'SparkLevelPatchEntry-DribblesDropSkin0',
+hfs.add_level_hotfix('hammerlock_dribbles', 'DribblesDropSkin',
     'Sage_PowerStation_P,GD_Sage_SM_FollowGlowData.Creature.PawnBalance_Sage_FollowGlow_Creature,DefaultItemPoolList[0].PoolProbability,,(BaseValueConstant=1.0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.0)')
 
 # Make Woundspike always drop its rare skin
-hfs.add_hotfix('hammerlock_woundspike', 'SparkLevelPatchEntry-WoundspikeDropSkin0',
+hfs.add_level_hotfix('hammerlock_woundspike', 'WoundspikeDropSkin',
     'Sage_PowerStation_P,GD_Sage_Ep4_Data.Creature.PawnBalance_Sage_Ep4_Creature,DefaultItemPoolList[1].PoolProbability,,(BaseValueConstant=1.0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.0)')
 
 # Make Bloodtail always drop its rare skin
-hfs.add_hotfix('hammerlock_bloodtail', 'SparkLevelPatchEntry-BloodtailDropSkin0',
+hfs.add_level_hotfix('hammerlock_bloodtail', 'BloodtailDropSkin',
     'Sage_Cliffs_P,GD_Sage_SM_NowYouSeeItData.Creature.PawnBalance_Sage_NowYouSeeIt_Creature,DefaultItemPoolList[1].PoolProbability,,(BaseValueConstant=1.0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.0)')
 
 # Voracidous drop pool seraph crystal fix
 for idx in range(3):
-    hfs.add_hotfix('vorac_seraph_{}'.format(idx),
-        'SparkLevelPatchEntry-VoracSeraph{}'.format(idx),
+    hfs.add_level_hotfix('vorac_seraph_{}'.format(idx), 'VoracSeraph',
         "Sage_Cliffs_P,GD_Sage_ItemPools.Raid.PoolList_Sage_Raid_Items,ItemPools[{}].ItemPool,,ItemPoolDefinition'GD_Sage_ItemPools.SeraphCrystal.Pool_SeraphCrystal_7_Drop'".format(idx))
 
 # UCP Compatibility fixes: As with the Hyperius and Master Gee Legendary
@@ -268,121 +267,120 @@ for idx in range(3):
 # stays that way.  One other note is that we've also changed the ordering of
 # Voracidous's loot pools, so the element which UCP changes isn't the one it
 # thinks it's changed, with this mod installed
-hfs.add_hotfix('vorac_drop_ucp_fix', 'SparkLevelPatchEntry-VoracidousDropUCPFix0',
+hfs.add_level_hotfix('vorac_drop_ucp_fix', 'VoracidousDropUCPFix',
     ',GD_Sage_ItemPools.Raid.PoolList_Sage_Raid_Items,Itempools[0].PoolProbability.BaseValueConstant,,1.0')
 
 # Make Elite Savages always drop something from the main GunsAndGear pool
 # (this'll give them a chance to drop twice, actually, but whatever)
-hfs.add_hotfix('hammerlock_elite_savage', 'SparkLevelPatchEntry-EliteSavageDrop0',
+hfs.add_level_hotfix('hammerlock_elite_savage', 'EliteSavageDrop',
     "Sage_Cliffs_P,GD_Sage_Pop_Natives.Balance.PawnBalance_Native_Elite,DefaultItemPoolList,,((ItemPool=ItemPoolDefinition'GD_CustomItemPools_Sage.Fanboat.Pool_Customs_Fanboat_All',PoolProbability=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'GD_Itempools.DropWeights.DropODDS_VehicleSkins',InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.GeneralItemPools.Pool_GunsAndGear',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))")
 
 # Make "MimicChest_NoMimic" chests from Tiny Tina have slightly better
 # loot - they pull from the "regular" chest pool mostly; this will make
 # some of their slots pull from the "epic" chest pool instead.
-hfs.add_hotfix('nomimic_epic_1', 'SparkLevelPatchEntry-NoMimicEpic1',
+hfs.add_level_hotfix('nomimic_epic_1', 'NoMimicEpic',
     ",GD_Aster_Lootables.Balance.ObjectGrade_MimicChest_NoMimic,DefaultLoot[0].ItemAttachments[1].ItemPool,,ItemPoolDefinition'GD_Itempools.Treasure_ChestPools.Pool_EpicChest_Weapons_LongGuns'")
-hfs.add_hotfix('nomimic_epic_2', 'SparkLevelPatchEntry-NoMimicEpic2',
+hfs.add_level_hotfix('nomimic_epic_2', 'NoMimicEpic',
     ",GD_Aster_Lootables.Balance.ObjectGrade_MimicChest_NoMimic,DefaultLoot[0].ItemAttachments[3].ItemPool,,ItemPoolDefinition'GD_Itempools.Treasure_ChestPools.Pool_EpicChest_Weapons_Pistols'")
-hfs.add_hotfix('nomimic_epic_3', 'SparkLevelPatchEntry-NoMimicEpic3',
+hfs.add_level_hotfix('nomimic_epic_3', 'NoMimicEpic',
     ",GD_Aster_Lootables.Balance.ObjectGrade_MimicChest_NoMimic,DefaultLoot[1].ItemAttachments[2].ItemPool,,ItemPoolDefinition'GD_Itempools.Treasure_ChestPools.Pool_EpicChest_Weapons_Pistols'")
-hfs.add_hotfix('nomimic_epic_4', 'SparkLevelPatchEntry-NoMimicEpic4',
+hfs.add_level_hotfix('nomimic_epic_4', 'NoMimicEpic',
     ",GD_Aster_Lootables.Balance.ObjectGrade_MimicChest_NoMimic,DefaultLoot[1].ItemAttachments[3].ItemPool,,ItemPoolDefinition'GD_Itempools.Treasure_ChestPools.Pool_EpicChest_Weapons_Pistols'")
-hfs.add_hotfix('nomimic_epic_5', 'SparkLevelPatchEntry-NoMimicEpic5',
+hfs.add_level_hotfix('nomimic_epic_5', 'NoMimicEpic',
     ",GD_Aster_Lootables.Balance.ObjectGrade_MimicChest_NoMimic,DefaultLoot[3].ItemAttachments[2].ItemPool,,ItemPoolDefinition'GD_Itempools.Treasure_ChestPools.Pool_EpicChest_Items'")
-hfs.add_hotfix('nomimic_epic_6', 'SparkLevelPatchEntry-NoMimicEpic6',
+hfs.add_level_hotfix('nomimic_epic_6', 'NoMimicEpic',
     ",GD_Aster_Lootables.Balance.ObjectGrade_MimicChest_NoMimic,DefaultLoot[3].ItemAttachments[3].ItemPool,,ItemPoolDefinition'GD_Itempools.Treasure_ChestPools.Pool_EpicChest_Items'")
-hfs.add_hotfix('nomimic_epic_7', 'SparkLevelPatchEntry-NoMimicEpic7',
+hfs.add_level_hotfix('nomimic_epic_7', 'NoMimicEpic',
     ",GD_Aster_Lootables.Balance.ObjectGrade_MimicChest_NoMimic,DefaultLoot[4].ItemAttachments[2].ItemPool,,ItemPoolDefinition'GD_Itempools.Treasure_ChestPools.Pool_EpicChest_Shields'")
-hfs.add_hotfix('nomimic_epic_8', 'SparkLevelPatchEntry-NoMimicEpic8',
+hfs.add_level_hotfix('nomimic_epic_8', 'NoMimicEpic',
     ",GD_Aster_Lootables.Balance.ObjectGrade_MimicChest_NoMimic,DefaultLoot[4].ItemAttachments[3].ItemPool,,ItemPoolDefinition'GD_Itempools.Treasure_ChestPools.Pool_EpicChest_Shields'")
-hfs.add_hotfix('nomimic_epic_9', 'SparkLevelPatchEntry-NoMimicEpic9',
+hfs.add_level_hotfix('nomimic_epic_9', 'NoMimicEpic',
     ",GD_Aster_Lootables.Balance.ObjectGrade_MimicChest_NoMimic,DefaultLoot[5].ItemAttachments[2].ItemPool,,ItemPoolDefinition'GD_Itempools.Treasure_ChestPools.Pool_EpicChest_GrenadeMods'")
-hfs.add_hotfix('nomimic_epic_10', 'SparkLevelPatchEntry-NoMimicEpic10',
+hfs.add_level_hotfix('nomimic_epic_10', 'NoMimicEpic',
     ",GD_Aster_Lootables.Balance.ObjectGrade_MimicChest_NoMimic,DefaultLoot[5].ItemAttachments[3].ItemPool,,ItemPoolDefinition'GD_Itempools.Treasure_ChestPools.Pool_EpicChest_GrenadeMods'")
-hfs.add_hotfix('nomimic_epic_11', 'SparkLevelPatchEntry-NoMimicEpic11',
+hfs.add_level_hotfix('nomimic_epic_11', 'NoMimicEpic',
     ",GD_Aster_Lootables.Balance.ObjectGrade_MimicChest_NoMimic,DefaultLoot[7].ItemAttachments[2].ItemPool,,ItemPoolDefinition'GD_Itempools.Treasure_ChestPools.Pool_EpicChest_Weapons_LongGuns'")
-hfs.add_hotfix('nomimic_epic_12', 'SparkLevelPatchEntry-NoMimicEpic12',
+hfs.add_level_hotfix('nomimic_epic_12', 'NoMimicEpic',
     ",GD_Aster_Lootables.Balance.ObjectGrade_MimicChest_NoMimic,DefaultLoot[8].ItemAttachments[2].ItemPool,,ItemPoolDefinition'GD_Itempools.Treasure_ChestPools.Pool_EpicChest_Artifacts'")
 
 # Make Arguk the Butcher (from 'Critical Fail') drop from the Badass loot pool
-hfs.add_hotfix('dragonkeep_arguk_drop', 'SparkLevelPatchEntry-ArgukDrop0',
+hfs.add_level_hotfix('dragonkeep_arguk_drop', 'ArgukDrop',
     "Dark_Forest_P,GD_Aster_Pop_Orcs.Balance.PawnBalance_Orc_Butcher,DefaultItemPoolIncludedLists[0],,ItemPoolListDefinition'GD_Itempools.ListDefs.BadassEnemyGunsAndGear'")
 
 # Make Skeleton Giants drop from the Badass loot pool (not that Dragon Keep
 # needs more loot being dropped, really, but whatever)
-hfs.add_hotfix('dragonkeep_giant_skeleton', 'SparkLevelPatchEntry-GiantSkeletonDrop0',
+hfs.add_level_hotfix('dragonkeep_giant_skeleton', 'GiantSkeletonDrop',
     ",GD_Aster_Pop_Skeletons.Balance.PawnBalance_SkeletonGiant,DefaultItemPoolIncludedLists[0],,ItemPoolListDefinition'GD_Itempools.ListDefs.BadassEnemyGunsAndGear'")
 
 # Make Gold Golem always drop one of its "special" legendary drops (effectively
 # commenting out the first BalancedItem which would drop from a more general pool)
-hfs.add_hotfix('dragonkeep_goldgolem_drop_pool', 'SparkLevelPatchEntry-GoldGolemDropPool0',
+hfs.add_level_hotfix('dragonkeep_goldgolem_drop_pool', 'GoldGolemDropPool',
     'Mines_P,GD_GolemGold.LootPools.Pool_GoldGolemRunnable,BalancedItems[0].Probability,,(BaseValueConstant=0.0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0.0)')
 
 # ...aaaand set the Gold Golem drop pool quantity to 3, to at least possibly drop
 # one of each of those items (for nearly every other boss requiring this, we can
 # just do it via 'set', but Gold Golem must be hotfixed.
-hfs.add_hotfix('dragonkeep_goldgolem_drop_qty', 'SparkLevelPatchEntry-GoldGolemDropQty0',
+hfs.add_level_hotfix('dragonkeep_goldgolem_drop_qty', 'GoldGolemDropQty',
     'Mines_P,GD_GolemGold.LootPools.Pool_GoldGolemRunnable,Quantity,,(BaseValueConstant=3.0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.0)')
 
 # Add more Eridium to Handsome Dragon's lootsplosion over the bridge
-hfs.add_hotfix('dragonkeep_handsomedragon_drop1', 'SparkLevelPatchEntry-HandsomeDragonEridium1',
+hfs.add_level_hotfix('dragonkeep_handsomedragon_drop1', 'HandsomeDragonEridium',
     "CastleExterior_P,GD_DragonBridgeBoss.InteractiveObjects.IO_DragonBridgeBoss_LootExplosion:BehaviorProviderDefinition_0.Behavior_SpawnItems_21,ItemPoolList[16].ItemPool,,ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Eridium_Stick'")
-hfs.add_hotfix('dragonkeep_handsomedragon_drop2', 'SparkLevelPatchEntry-HandsomeDragonEridium2',
+hfs.add_level_hotfix('dragonkeep_handsomedragon_drop2', 'HandsomeDragonEridium',
     "CastleExterior_P,GD_DragonBridgeBoss.InteractiveObjects.IO_DragonBridgeBoss_LootExplosion:BehaviorProviderDefinition_0.Behavior_SpawnItems_21,ItemPoolList[17].ItemPool,,ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Eridium_Stick'")
-hfs.add_hotfix('dragonkeep_handsomedragon_drop3', 'SparkLevelPatchEntry-HandsomeDragonEridium3',
+hfs.add_level_hotfix('dragonkeep_handsomedragon_drop3', 'HandsomeDragonEridium',
     "CastleExterior_P,GD_DragonBridgeBoss.InteractiveObjects.IO_DragonBridgeBoss_LootExplosion:BehaviorProviderDefinition_0.Behavior_SpawnItems_21,ItemPoolList[18].ItemPool,,ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Eridium_Stick'")
 
 # Make Badass Knights drop from the badass pool pool
-hfs.add_hotfix('dragonkeep_badass_knights', 'SparkLevelPatchEntry-BadassKnightsDrop0',
+hfs.add_level_hotfix('dragonkeep_badass_knights', 'BadassKnightsDrop',
     ",GD_Aster_Pop_Knights.Balance.PawnBalance_Knight_Badass,DefaultItemPoolIncludedLists[0],,ItemPoolListDefinition'GD_Itempools.ListDefs.BadassEnemyGunsAndGear'")
 
 # Make Badass Fire Archers drop from the badass pool pool
-hfs.add_hotfix('dragonkeep_badass_fire_archers', 'SparkLevelPatchEntry-BadassFireArchersDrop0',
+hfs.add_level_hotfix('dragonkeep_badass_fire_archers', 'BadassFireArchersDrop',
     ",GD_Aster_Pop_Knights.Balance.PawnBalance_Knight_BadassFireArcher,DefaultItemPoolIncludedLists[0],,ItemPoolListDefinition'GD_Itempools.ListDefs.BadassEnemyGunsAndGear'")
 
 # Make Sorcerer's Daughter drop 4 items from her legendary pool (which is 4 long)
-hfs.add_hotfix('dragonkeep_sorcerersdaughter_drop_pool', 'SparkLevelPatchEntry-SorcerersDaughterDropPool0',
+hfs.add_level_hotfix('dragonkeep_sorcerersdaughter_drop_pool', 'SorcerersDaughterDropPool',
     'Dungeon_P,GD_AngelBoss.LootPools.Pool_AngelBossRunnable,Quantity.BaseValueConstant,,4.0')
 
 # Normalize the probabilities for the Sorcerer's Daughter legendary pool
 for num in range(4):
-    hfs.add_hotfix('dragonkeep_sorcerersdaughter_normalize_{}'.format(num),
-        'SparkLevelPatchEntry-SorcerersDaughterNormalize{}'.format(num),
+    hfs.add_level_hotfix('dragonkeep_sorcerersdaughter_normalize_{}'.format(num), 'SorcerersDaughterNormalize',
         'Dungeon_P,GD_AngelBoss.LootPools.Pool_AngelBossRunnable,BalancedItems[{}].Probability.BaseValueScaleConstant,,1.0'.format(num))
 
 # Add more Eridium to Butt Stallion's victory trot after defeating the Handsome Sorcerr
-hfs.add_hotfix('dragonkeep_buttstallion_drop1', 'SparkLevelPatchEntry-ButtStallionEridium1',
+hfs.add_level_hotfix('dragonkeep_buttstallion_drop1', 'ButtStallionEridium',
     "CastleKeep_P,GD_ButtStallion_Proto.Character.AIDef_ButtStallion_Proto:AIBehaviorProviderDefinition_1:Behavior_SpawnItems_44,ItemPoolList,,((ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Eridium_Stick',PoolProbability=(BaseValueConstant=1.0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.0)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Eridium_Stick',PoolProbability=(BaseValueConstant=1.0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.0)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Eridium_Stick',PoolProbability=(BaseValueConstant=1.0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.0)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Eridium_Stick',PoolProbability=(BaseValueConstant=1.0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.0)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Eridium_Stick',PoolProbability=(BaseValueConstant=1.0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.0)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Eridium_Stick',PoolProbability=(BaseValueConstant=1.0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.0)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Eridium_Stick',PoolProbability=(BaseValueConstant=1.0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.0)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Eridium_Stick',PoolProbability=(BaseValueConstant=1.0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.0)))")
 
 # Make the individual Jack battles at the end of Dragon Keep drop from a badass pool
 for suffix in ['', '_Demon', '_DemonFall', '_Phase2']:
-    hfs.add_hotfix('dragonkeep_jack{}_drop1'.format(suffix),
-        'SparkLevelPatchEntry-DragonKeepJack{}Drop1'.format(suffix),
+    hfs.add_level_hotfix('dragonkeep_jack{}_drop1'.format(suffix),
+        'DragonKeepJack{}Drop'.format(suffix),
         "CastleKeep_P,GD_Aster_Pop_Wizards.Balance.PawnBalance_JackWarlock{},DefaultItemPoolIncludedLists[0],,ItemPoolListDefinition'GD_Itempools.ListDefs.SuperBadassEnemyGunsAndGear'".format(suffix))
 
 # Ancient Dragons should always give you 28 Seraph Crystals (total - the pool gets called twice)
-hfs.add_hotfix('dragonkeep_ancient_crystals0', 'SparkLevelPatchEntry-DragonKeepAncientCrystals0',
+hfs.add_level_hotfix('dragonkeep_ancient_crystals0', 'DragonKeepAncientCrystals',
     "DungeonRaid_P,GD_Aster_ItemPools.Raid.Pool_Aster_SeraphCrystals,BalancedItems,,((ItmPoolDefinition=ItemPoolDefinition'GD_Aster_ItemPools.Raid.Pool_Aster_SeraphCrystal_7',InvBalanceDefinition=None,Probability=(BaseValueConstant=1.0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.0),bDropOnDeath=true))")
-hfs.add_hotfix('dragonkeep_ancient_crystals1', 'SparkLevelPatchEntry-DragonKeepAncientCrystals1',
+hfs.add_level_hotfix('dragonkeep_ancient_crystals1', 'DragonKeepAncientCrystals',
     'DungeonRaid_P,GD_Aster_ItemPools.Raid.Pool_Aster_SeraphCrystals,Quantity,,(BaseValueConstant=2.0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.0)')
 
 # Always drop crystals regardless of playthrough
-hfs.add_hotfix('dragonkeep_ancient_crystals2', 'SparkLevelPatchEntry-DragonKeepAncientCrystals2',
+hfs.add_level_hotfix('dragonkeep_ancient_crystals2', 'DragonKeepAncientCrystals',
     'DungeonRaid_P,GD_Aster_ItemPools.Raid.Pool_Aster_SeraphCrystals,MinGameStageRequirement,,None')
 
 # Drop three items from the Ancient Dragons' Uniques pool
-hfs.add_hotfix('dragonkeep_ancient_uniques0', 'SparkLevelPatchEntry-DragonKeepAncientUniques0',
+hfs.add_level_hotfix('dragonkeep_ancient_uniques0', 'DragonKeepAncientUniques',
     'DungeonRaid_P,GD_Aster_ItemPools.Raid.Pool_Aster_Raid1_Uniques,Quantity,,(BaseValueConstant=3.0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.0)')
 
 # Tweak our two drop pools (they each get spawned twice, FYI)
-hfs.add_hotfix('dragonkeep_ancient_drop1', 'SparkLevelPatchEntry-DragonKeepAncientDrop1',
+hfs.add_level_hotfix('dragonkeep_ancient_drop1', 'DragonKeepAncientDrop',
     "DungeonRaid_P,GD_Aster_ItemPools.Raid.PoolList_Aster_Raid1A_Items,ItemPools,,((ItemPool=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_All_06_Legendary',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0.400000)),(ItemPool=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_All_05_VeryRare_Alien',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0.400000)),(ItemPool=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_All_05_VeryRare',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0.400000)),(ItemPool=ItemPoolDefinition'GD_Itempools.ShieldPools.Pool_Shields_All_05_VeryRare',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0.400000)),(ItemPool=ItemPoolDefinition'GD_Itempools.ShieldPools.Pool_Shields_All_06_Legendary',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0.400000)),(ItemPool=ItemPoolDefinition'GD_Itempools.GrenadeModPools.Pool_GrenadeMods_06_Legendary',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0.400000)),(ItemPool=ItemPoolDefinition'GD_Itempools.GrenadeModPools.Pool_GrenadeMods_05_VeryRare',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0.400000)),(ItemPool=ItemPoolDefinition'GD_Itempools.ClassModPools.Pool_ClassMod_05_VeryRare',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0.400000)),(ItemPool=ItemPoolDefinition'GD_Itempools.ClassModPools.Pool_ClassMod_05_VeryRare',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0.400000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Money_1_BIG',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Money_1_BIG',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))")
 
-hfs.add_hotfix('dragonkeep_ancient_drop2', 'SparkLevelPatchEntry-DragonKeepAncientDrop2',
+hfs.add_level_hotfix('dragonkeep_ancient_drop2', 'DragonKeepAncientDrop',
     "DungeonRaid_P,GD_Aster_ItemPools.Raid.PoolList_Aster_Raid1B_Items,ItemPools,,((ItemPool=ItemPoolDefinition'GD_Aster_ItemPools.Raid.Pool_Aster_SeraphCrystals',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_All_05_VeryRare',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0.400000)),(ItemPool=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_All_05_VeryRare_Alien',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0.400000)),(ItemPool=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_All_06_Legendary',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0.400000)),(ItemPool=ItemPoolDefinition'GD_Itempools.ShieldPools.Pool_Shields_All_06_Legendary',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0.400000)),(ItemPool=ItemPoolDefinition'GD_Itempools.ShieldPools.Pool_Shields_All_05_VeryRare',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0.400000)),(ItemPool=ItemPoolDefinition'GD_Itempools.GrenadeModPools.Pool_GrenadeMods_05_VeryRare',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0.400000)),(ItemPool=ItemPoolDefinition'GD_Itempools.GrenadeModPools.Pool_GrenadeMods_06_Legendary',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0.400000)),(ItemPool=ItemPoolDefinition'GD_Itempools.ClassModPools.Pool_ClassMod_06_Legendary',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0.400000)),(ItemPool=ItemPoolDefinition'GD_Itempools.ClassModPools.Pool_ClassMod_05_VeryRare',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0.400000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Money_1_BIG',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Money_1_BIG',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))")
 
 # Make Undead Badass Psychos (Bloody Harvest) drop from the Badass loot pool
-hfs.add_hotfix('harvest_ubps', 'SparkLevelPatchEntry-UndeadBadassPsychoDrop0',
+hfs.add_level_hotfix('harvest_ubps', 'UndeadBadassPsychoDrop',
     "Pumpkin_Patch_P,GD_Pop_HallowSkeleton.Balance.PawnBalance_BadassUndeadPsycho,DefaultItemPoolIncludedLists[0],,ItemPoolListDefinition'GD_Itempools.ListDefs.BadassEnemyGunsAndGear'")
 
 # Three tributes from the Wattle Gobbler Headhunter pack don't actually drop
@@ -392,44 +390,44 @@ for (name, classname) in [
         ('strip', 'GD_FleshripperFemale.Balance.PawnBalance_FleshripperFemale'),
         ('flay', 'GD_FleshripperMale.Balance.PawnBalance_FleshripperMale'),
         ]:
-    hfs.add_hotfix('wattle_tribute_{}'.format(name),
-        'SparkLevelPatchEntry-WattleTribute{}Drop0'.format(name),
+    hfs.add_level_hotfix('wattle_tribute_{}'.format(name),
+        'WattleTribute{}Drop'.format(name),
         "Hunger_P,{},DefaultItemPoolIncludedLists,,(ItemPoolListDefinition'GD_Itempools.ListDefs.BadassEnemyGunsAndGear')".format(classname))
 
 # Make Badass Yeti (Mercenary Day) drop from the Badass loot pool
-hfs.add_hotfix('mercenaryday_badass_yeti', 'SparkLevelPatchEntry-BadassYetiDrop0',
+hfs.add_level_hotfix('mercenaryday_badass_yeti', 'BadassYetiDrop',
     "Xmas_P,GD_Allium_BadassYeti.Balance.PawnBalance_Allium_BadassYeti,DefaultItemPoolIncludedLists[0],,ItemPoolListDefinition'GD_Itempools.ListDefs.BadassEnemyGunsAndGear'")
 
 # Make Bridget Hodunk and Colin Zaford (Wedding Day Massacre) drop from the Badass loot pool
-hfs.add_hotfix('wedding_drop_bridget_0', 'SparkLevelPatchEntry-WeddingDropBridget0',
+hfs.add_level_hotfix('wedding_drop_bridget_0', 'WeddingDropBridget',
     "Distillery_P,GD_GoliathBride.Population.PawnBalance_GoliathBride,DefaultItemPoolIncludedLists[0],,ItemPoolListDefinition'GD_Itempools.ListDefs.BadassEnemyGunsAndGear'")
-hfs.add_hotfix('wedding_drop_bridget_1', 'SparkLevelPatchEntry-WeddingDropBridget1',
+hfs.add_level_hotfix('wedding_drop_bridget_1', 'WeddingDropBridget',
     "Distillery_P,GD_GoliathBride.Population.PawnBalance_GoliathBrideRaid,DefaultItemPoolIncludedLists[0],,ItemPoolListDefinition'GD_Itempools.ListDefs.BadassEnemyGunsAndGear'")
-hfs.add_hotfix('wedding_drop_colin_0', 'SparkLevelPatchEntry-WeddingDropColin0',
+hfs.add_level_hotfix('wedding_drop_colin_0', 'WeddingDropColin',
     "Distillery_P,GD_GoliathGroom.Population.PawnBalance_GoliathGroom,DefaultItemPoolIncludedLists[0],,ItemPoolListDefinition'GD_Itempools.ListDefs.BadassEnemyGunsAndGear'")
-hfs.add_hotfix('wedding_drop_colin_1', 'SparkLevelPatchEntry-WeddingDropColin1',
+hfs.add_level_hotfix('wedding_drop_colin_1', 'WeddingDropColin',
     "Distillery_P,GD_GoliathGroom.Population.PawnBalance_GoliathGroomRaid,DefaultItemPoolIncludedLists[0],,ItemPoolListDefinition'GD_Itempools.ListDefs.BadassEnemyGunsAndGear'")
 
 # Make the Loot Leprechaun (Wedding Day Massacre) drop from the Epic chest pool, rather than normal
-hfs.add_hotfix('wedding_loot_leprechaun_0', 'SparkLevelPatchEntry-WeddingLootLeprechaun0',
+hfs.add_level_hotfix('wedding_loot_leprechaun_0', 'WeddingLootLeprechaun',
     "Distillery_P,GD_Nast_Leprechaun.Character.CharClass_Nast_Leprechaun:BehaviorProviderDefinition_5.Behavior_SpawnItems_26,ItemPoolList[3].ItemPool,,ItemPoolDefinition'GD_Itempools.Treasure_ChestPools.Pool_EpicChest_Weapons_LongGuns'")
-hfs.add_hotfix('wedding_loot_leprechaun_1', 'SparkLevelPatchEntry-WeddingLootLeprechaun1',
+hfs.add_level_hotfix('wedding_loot_leprechaun_1', 'WeddingLootLeprechaun',
     "Distillery_P,GD_Nast_Leprechaun.Character.CharClass_Nast_Leprechaun:BehaviorProviderDefinition_5.Behavior_SpawnItems_26,ItemPoolList[4].ItemPool,,ItemPoolDefinition'GD_Itempools.Treasure_ChestPools.Pool_EpicChest_Weapons_Pistols'")
 
 # Make the BLNG Loader drop from the Badass pool, and add a lot of money drops
-hfs.add_hotfix('wedding_blng_drop_0', 'SparkLevelPatchEntry-WeddingBLNGDrop0',
+hfs.add_level_hotfix('wedding_blng_drop_0', 'WeddingBLNGDrop',
     "Distillery_P,GD_BlingLoader.Population.PawnBalance_BlingLoader,DefaultItemPoolIncludedLists[0],,ItemPoolListDefinition'GD_Itempools.ListDefs.BadassEnemyGunsAndGear'")
 money_pool_list=["(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Money_1_BIG',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))"]*30
-hfs.add_hotfix('wedding_blng_drop_1', 'SparkLevelPatchEntry-WeddingBLNGDrop1',
+hfs.add_level_hotfix('wedding_blng_drop_1', 'WeddingBLNGDrop',
     "Distillery_P,GD_BlingLoader.Population.PawnBalance_BlingLoader,DefaultItemPoolList,,({})".format(','.join(money_pool_list)))
 
 # Make Giant Craboid (Son of Crawmerax) drop from the Badass loot pool
-hfs.add_hotfix('crawmerax_giant_craboid', 'SparkLevelPatchEntry-CrawmeraxGiantCraboidDrop0',
+hfs.add_level_hotfix('crawmerax_giant_craboid', 'CrawmeraxGiantCraboidDrop',
     "Easter_P,GD_Population_Crabworms.Balance.PawnBalance_CraboidGiant,DefaultItemPoolIncludedLists[0],,ItemPoolListDefinition'GD_Itempools.ListDefs.BadassEnemyGunsAndGear'")
 
 # Improve Son of Crawmerax's (non-raid) drops.  Basically just calling the
 # RaidBossEnemyGunsAndGear pool three times instead of once.
-hfs.add_hotfix('crawmerax_son_nonraid_drop', 'SparkLevelPatchEntry-CrawmeraxSonNonRaidDrop0',
+hfs.add_level_hotfix('crawmerax_son_nonraid_drop', 'CrawmeraxSonNonRaidDrop',
     "Easter_P,GD_Crawmerax_Son.Population.PawnBalance_Crawmerax_Son,DefaultItemPoolIncludedLists,,(ItemPoolListDefinition'GD_Itempools.ListDefs.RaidBossEnemyGunsAndGear',ItemPoolListDefinition'GD_Itempools.ListDefs.RaidBossEnemyGunsAndGear',ItemPoolListDefinition'GD_Itempools.ListDefs.RaidBossEnemyGunsAndGear')")
 
 ###
@@ -439,52 +437,24 @@ hfs.add_hotfix('crawmerax_son_nonraid_drop', 'SparkLevelPatchEntry-CrawmeraxSonN
 ###
 
 # This one causes nearly every enemy to be a badass.
-#hfs.add_hotfix('badasses', 'SparkLevelPatchEntry-Badass1',
+#hfs.add_level_hotfix('badasses', 'Badass',
 #    ",GD_Balance.WeightingPlayerCount.Enemy_MajorUpgrade_PerPlayer,ConditionalInitialization,,(bEnabled=True,ConditionalExpressionList=((BaseValueIfTrue=(BaseValueConstant=500.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=20.000000),Expressions=((AttributeOperand1=AttributeDefinition'D_Attributes.GameProperties.NumberOfPlayers',ComparisonOperator=OPERATOR_LessThanOrEqual,Operand2Usage=OPERAND_PreferAttribute,AttributeOperand2=None,ConstantOperand2=4.000000)))),DefaultBaseValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))")
 
 # This makes nearly every SpiderAnt be Chubby -- similar techniques
 # could be used to change enemy type rates in general
-#hfs.add_hotfix('chubbies', 'SparkLevelPatchEntry-ChubbySpawn1',
+#hfs.add_level_hotfix('chubbies', 'ChubbySpawn',
 #    ',GD_Population_SpiderAnt.Population.PopDef_SpiderantMix_Regular,ActorArchetypeList[9].Probability.BaseValueConstant,,1000')
 
 # This will cause varkids to always morph into their next stage, up
 # through Vermivorous (even in Normal mode).  Used to test Verm drops.
 # Still have to wait for their timers to elapse before they evolve, of course.
 #for morph in range(1,6):
-#    hfs.add_hotfix('varkid_clear_{}'.format(morph),
-#        'SparkLevelPatchEntry-VarkidMorphClear{}'.format(morph),
+#    hfs.add_level_hotfix('varkid_clear_{}'.format(morph),
+#        'VarkidMorphClear',
 #        ',GD_Balance.WeightingPlayerCount.BugmorphCocoon_PerPlayers_Phase{},ConditionalInitialization.ConditionalExpressionList,,()'.format(morph))
-#    hfs.add_hotfix('varkid_default_{}'.format(morph),
-#        'SparkLevelPatchEntry-VarkidMorphDefault{}'.format(morph),
+#    hfs.add_level_hotfix('varkid_default_{}'.format(morph),
+#        'VarkidMorphDefault',
 #        ',GD_Balance.WeightingPlayerCount.BugmorphCocoon_PerPlayers_Phase{},ConditionalInitialization.DefaultBaseValue.BaseValueConstant,,1.0'.format(morph))
-
-# Just testing to see if I've got the right place to modify Handsome Dragon loot drops
-#for num in [17, 18, 19, 20, 21, 26, 27, 28, 29, 30, 31, 32, 53]:
-#    hfs.add_hotfix('hd_loot_reg_{}'.format(num),
-#        'SparkLevelPatchEntry-HandsomeLootRegular{}'.format(num),
-#        ",GD_DragonBridgeBoss.InteractiveObjects.IO_DragonBridgeBoss_LootExplosion:BehaviorProviderDefinition_0.Behavior_SpawnItems_{},ItemPoolList,,((ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Money_1or2',PoolProbability=(BaseValueConstant=1.0,BaseValueAttribute=none,InitializationDefinition=none,BaseValueScaleConstant=1.0)))".format(num))
-#for num in [26, 53]:
-#    hfs.add_hotfix('hd_loot_link_{}'.format(num),
-#        'SparkLevelPatchEntry-HandsomeLootLink{}'.format(num),
-#        ',GD_DragonBridgeBoss.InteractiveObjects.IO_DragonBridgeBoss_LootExplosion:BehaviorProviderDefinition_0.Behavior_SpawnItems_{},ItemPoolIncludedLists,,()'.format(num))
-#for (num, pool) in [
-#        (17, 'GD_Itempools.WeaponPools.Pool_Weapons_AssaultRifles_01_Common'),
-#        (18, 'GD_Itempools.WeaponPools.Pool_Weapons_AssaultRifles_02_Uncommon'),
-#        (19, 'GD_Itempools.WeaponPools.Pool_Weapons_AssaultRifles_04_Rare'),
-#        (20, 'GD_Itempools.WeaponPools.Pool_Weapons_AssaultRifles_05_VeryRare'),
-#        (21, 'GD_Itempools.WeaponPools.Pool_Weapons_AssaultRifles_05_VeryRare_Alien'),
-#        (26, 'GD_Itempools.WeaponPools.Pool_Weapons_Launchers_01_Common'),
-#        (27, 'GD_Itempools.WeaponPools.Pool_Weapons_Launchers_02_Uncommon'),
-#        (28, 'GD_Itempools.WeaponPools.Pool_Weapons_Launchers_04_Rare'),
-#        (29, 'GD_Itempools.WeaponPools.Pool_Weapons_Launchers_05_VeryRare'),
-#        (30, 'GD_Itempools.WeaponPools.Pool_Weapons_Launchers_05_VeryRare_Alien'),
-#        (31, 'GD_Itempools.WeaponPools.Pool_Weapons_Pistols_01_Common'),
-#        (32, 'GD_Itempools.WeaponPools.Pool_Weapons_Pistols_02_Uncommon'),
-#        (53, 'GD_Itempools.WeaponPools.Pool_Weapons_Pistols_04_Rare'),
-#        ]:
-#    hfs.add_hotfix('hd_loot_reg_{}'.format(num),
-#        'SparkLevelPatchEntry-HandsomeLootRegular{}'.format(num),
-#        ",GD_DragonBridgeBoss.InteractiveObjects.IO_DragonBridgeBoss_LootExplosion:BehaviorProviderDefinition_0.Behavior_SpawnItems_{num},ItemPoolList,,((ItemPool=ItemPoolDefinition'{pool}',PoolProbability=(BaseValueConstant=1.0,BaseValueAttribute=none,InitializationDefinition=none,BaseValueScaleConstant=1.0)))".format(num=num, pool=pool))
 
 ###
 ### Everything below this point is constructing the actual patch file
