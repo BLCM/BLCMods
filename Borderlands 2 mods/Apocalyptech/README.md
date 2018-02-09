@@ -139,7 +139,7 @@ All the code here is licensed under the
 which should be permissive enough to do just about whatever with.
 
 Mods under this folder are licensed under the
-[Creative Commons Attribution 4.0 International (CC BY 4.0) license](https://creativecommons.org/licenses/by/4.0/legalcode).
+[Creative Commons Attribution 4.0 International (CC BY 4.0) license](https://creativecommons.org/licenses/by/4.0/).
 
 See [COPYING-code.txt](COPYING-code.txt) and [COPYING-mods.txt](COPYING-mods.txt)
 for the full text.
