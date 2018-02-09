@@ -28,18 +28,17 @@ Utilities
 =========
 
 The statements used in Borderlands mod files are often fairly gigantic, and
-difficult to understand quickly without loading them into a text editor and
-inserting a bunch of linebreaks to get a feel for the overall structure.
-Then if you want to *edit* those structures, you'd have to undo all the
-linebreaks, or just make do with editing the middle of the gigantic strings.
+difficult to understand quickly without viewing them with a bunch of linebreaks
+inserted, to provide a more visual structure to the statements.  The FilterTool
+utility actually provides mod-editing capabilities which include viewing/editing
+mod statements as nicely-readable multiline segments, and that's probably the
+easiest solution for most people.
 
-Well, I figured to hell with that, and wrote a couple of quick-n-dirty
-utilities in Python to automate that kind of thing for me, so I could edit
-to my heart's content in a format which was easy to deal with, and then just
+However, I wanted to generate some mods using scripts, and anyway always prefer
+editing in my text editor of choice, so I wrote a couple of quick-n-dirty
+utilities in Python to automate that kind of thing for me.  This way, I can
+edit multiline versions of the mod statements in whatever editor I want, then
 export to the "real" version which Borderlands / FilterTool can understand.
-(I've since discovered that if you enable some checkboxes in FilterTool, you
-can do pretty reasonable multiline editing right in there, but I still prefer
-being able to use my text editor of choice, etc.)
 
 Both of these utilities are written in Python, and probably require Python 3.
 They're intended to just be run from a commandline, which may pose some
