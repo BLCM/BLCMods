@@ -18,6 +18,13 @@ There are two mutually-exclusive options when loaded into FilterTool:
    creature you see will be of the rare type.  This isn't enabled by
    default.
 
+Usage
+=====
+
+The best way to use this mod is to add it into FilterTool with
+`Developer tools` -> `Add single mod`.  Choose the file `Aegrus Not-So-Rare
+Monsters` and have at it!
+
 License
 =======
 

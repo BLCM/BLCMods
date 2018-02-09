@@ -268,6 +268,10 @@ outputs to a very human-readable multiline text file which can't actually
 be read directly by FilterTool/Borderlands -- it must be processed by
 my `conv_to_mod.py` script which you'll find in the parent directory.
 
+The generation script makes use of `hotfix.py` from the parent directory.
+You'd need to copy (or symlink, if you're on Mac or Linux) `hotfix.py`
+into this directory in order to run the script.
+
 To generate the end result file, I actually run the small shell script
 `create.sh` in this directory, which just does the following:
 
