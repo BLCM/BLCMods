@@ -32,7 +32,19 @@
 # must be converted using conv_to_mod.py in order to be loaded by
 # Borderlands / FilterTool.
 
-from hotfixes import Hotfixes
+import sys
+
+try:
+    from hotfixes import Hotfixes
+except ModuleNotFoundError:
+    print('')
+    print('****************************************************************')
+    print('To run this script, you will need to copy or symlink hotfixes.py')
+    print('from the parent directory, so it exists here as well.  Sorry for')
+    print('the bother!')
+    print('****************************************************************')
+    print('')
+    sys.exit(1)
 
 ###
 ### Output variables
@@ -54,7 +66,7 @@ input_filename = 'mod-input-file.txt'
 ### Hotfix object to store all our hotfixes
 ###
 
-hfs = Hotfixes()
+hfs = Hotfixes(include_gearbox_patches=True)
 
 ###
 ### Variables which control drop rates and stuff like that
