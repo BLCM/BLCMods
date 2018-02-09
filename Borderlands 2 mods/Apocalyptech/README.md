@@ -123,6 +123,14 @@ if it already exists.  You can use the `-f` or `--force` option to automatically
 overwrite without confirmation.  You can also use `-h` or `--help` as you'd hope,
 though there's no features not already mentioned here.
 
+hotfixes.py
+-----------
+
+This is actually a helper library script used by the generation script for a
+couple of my mods, to make dealing with hotfixes a bit easier.  It's pretty
+straightforward, though unless you're me, you're unlikely to ever bother with
+it.
+
 Resources
 =========
 
