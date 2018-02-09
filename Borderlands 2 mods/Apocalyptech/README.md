@@ -24,6 +24,13 @@ the uninteresting and drab loot that typically gets dropped in-game, and who
 often end up just resorting to Gibbed to be able to play around with some
 better gear.  The README in the mod dir itself should provide a lot more info.
 
+Guaranteed Varkid Evolution
+---------------------------
+
+Gives all Varkids a 100% chance of evolution, regardless of player count or
+playthrough.  Mostly just useful if you want to farm Vermivorous without
+having to gamble on its spawn chances.
+
 Utilities
 =========
 
