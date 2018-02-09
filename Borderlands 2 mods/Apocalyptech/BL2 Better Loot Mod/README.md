@@ -218,6 +218,10 @@ TODO
 ----
 
 * Playtesting in general (including with UCP)
+  * This is completely untested in TVHM/UVHM.  I'm not really a fan of either
+    mode, so I'm unlikely to do so.  The worst-case scenario is that
+    TVHM/UVHM might override some of my specific enemy drops, though -- I
+    suspect that the majority of the mod should still work fine.
 * Balancing!  This mod is obviously very cheaty/OP, but I don't want it to
   be completely ludicrous.  I'd like it to still feel a bit special when
   Legendaries/Pearls/Seraphs get dropped, while at the same time providing
@@ -272,7 +276,7 @@ I actually generate this mod using a simple little Python script named
 drop levels from a single location at the top of the file, and have it
 apply to a number of different objects throughout the game.  That script
 outputs to a very human-readable multiline text file which can't actually
-be read directly by FilterTool/Borderlands, and must then be processed by
+be read directly by FilterTool/Borderlands -- it must be processed by
 my `conv_to_mod.py` script which you'll find in the parent directory.
 
 To generate the end result file, I actually run the small shell script
