@@ -1,5 +1,5 @@
-Apocalyptech's Borderlands 2 Mod(s)
-===================================
+Apocalyptech's Borderlands 2 Mods
+=================================
 
 Aegrus Not-So-Rare Monsters
 ---------------------------
