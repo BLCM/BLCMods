@@ -17,3 +17,9 @@ There are two mutually-exclusive options when loaded into FilterTool:
    den seems to often be regular), but in general nearly every
    creature you see will be of the rare type.  This isn't enabled by
    default.
+
+License
+=======
+
+This mod is licensed under the
+[Creative Commons Attribution 4.0 International (CC BY 4.0) license](https://creativecommons.org/licenses/by/4.0/legalcode).

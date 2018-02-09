@@ -292,3 +292,16 @@ I've taken various ideas and snippets from a few other mods:
 
 I'd also like to thank the fine folks in Shadow's Evil Hideout #borderlands-modding
 Discord channel for putting up with all my noobish questions.
+
+Licenses
+========
+
+The `generate-source.py` script itself is licensed under the
+[3-clause BSD license](https://opensource.org/licenses/BSD-3-Clause),
+which should be permissive enough to do just about whatever with.
+
+The mod itself is licensed under the
+[Creative Commons Attribution 4.0 International (CC BY 4.0) license](https://creativecommons.org/licenses/by/4.0/legalcode).
+
+See [COPYING-code.txt](../COPYING-code.txt) and [COPYING-mods.txt](../COPYING-mods.txt)
+for the full text.
