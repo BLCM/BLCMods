@@ -153,11 +153,11 @@ force_gunsandgear_specific_name = 'GD_Orchid_BossWeapons.RPG.Ahab.Orchid_Boss_Ah
 
 # Make No-Beard always drop his unique
 hfs.add_level_hotfix('scarlett_nobeard', 'NoBeardDrop',
-    ',GD_Orchid_Pop_NoBeard.PawnBalance_Orchid_NoBeard,DefaultItemPoolList[1].PoolProbability.BaseValueConstant,,1.0')
+    'Orchid_OasisTown_P,GD_Orchid_Pop_NoBeard.PawnBalance_Orchid_NoBeard,DefaultItemPoolList[1].PoolProbability.BaseValueConstant,,1.0')
 
 # Make Big Sleep always drop his unique
 hfs.add_level_hotfix('scarlett_bigsleep', 'BigSleepDrop',
-    ',GD_Orchid_Pop_Sandman.Balance.PawnBalance_Orchid_BigSleep,DefaultItemPoolList[1].PoolProbability.BaseValueConstant,,1.0')
+    'Orchid_Caves_P,GD_Orchid_Pop_Sandman.Balance.PawnBalance_Orchid_BigSleep,DefaultItemPoolList[1].PoolProbability.BaseValueConstant,,1.0')
 
 # UCP Compatibility fixes: We need to add in a hotfix to set Hyperius and
 # Master Gee to always drop from their Legendary pool.  We hardcode that
@@ -165,9 +165,9 @@ hfs.add_level_hotfix('scarlett_bigsleep', 'BigSleepDrop',
 # drop rate) would overwrite our 100% chance.  So, in addition to the "set"
 # command, we'll overwrite the probability again.
 hfs.add_level_hotfix('scarlett_hyperius_ucp_fix', 'HyperiusUCPFix',
-    ',GD_Orchid_ItemPools.Raid.PoolList_Orchid_Raid1_Items,Itempools[0].PoolProbability.BaseValueConstant,,1.0')
+    'Orchid_Refinery_P,GD_Orchid_ItemPools.Raid.PoolList_Orchid_Raid1_Items,Itempools[0].PoolProbability.BaseValueConstant,,1.0')
 hfs.add_level_hotfix('scarlett_mastergee_ucp_fix', 'MasterGeeUCPFix',
-    ',GD_Orchid_ItemPools.Raid.PoolList_Orchid_Raid3_Items,Itempools[0].PoolProbability.BaseValueConstant,,1.0')
+    'Orchid_Caves_P,GD_Orchid_ItemPools.Raid.PoolList_Orchid_Raid3_Items,Itempools[0].PoolProbability.BaseValueConstant,,1.0')
 
 # Make the Chubby drop pool better.
 hfs.add_level_hotfix('chubby_drop', 'ChubbyDrop',

@@ -222,6 +222,8 @@ TODO
     mode, so I'm unlikely to do so.  The worst-case scenario is that
     TVHM/UVHM might override some of my specific enemy drops, though -- I
     suspect that the majority of the mod should still work fine.
+  * As such, I have not looked into OMGWTH's drops (from Digistruct Peak,
+    at OP5+), or drops by other bosses present on that map.
 * Balancing!  This mod is obviously very cheaty/OP, but I don't want it to
   be completely ludicrous.  I'd like it to still feel a bit special when
   Legendaries/Pearls/Seraphs get dropped, while at the same time providing
@@ -241,7 +243,6 @@ TODO
   * I think Biker Badasses, etc, have pretty anemic drops at the moment.
   * In order to retain UCP compatibility, we had to alter how we guarantee
     Piston's Slow Hand drop.  This remains untested.
-* Add in level names to our hotfixes which could technically use them
 
 Other Notes
 -----------
