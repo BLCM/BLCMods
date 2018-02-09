@@ -121,18 +121,18 @@ Compatibility
 
 This mod is mostly compatible with UCP 4.0, with three known exceptions:
 
-* "Regular Enemy Drop Improvements / BLNG Loader" in this mod will override
-  UCP's "Loot Pool & Drop Changes / Specific Loot Changes / Add Sledge's
-  Shotgun to BLNG Loader"
-* "Raid Boss Drop Improvements / Hyperius" in this mod will override UCP's
-  "Loot Pool & Drop Changes / Specific Loot Changes / Add Black Hole and remove
-  the Kiss of Death from Hyperius"
-* "Raid Boss Drop Improvements / Hyperius / Clean Up Seraph Drop Pool" in this
-  mod will override the loot pool changes in UCP's "Loot Pool & Drop Changes /
-  Specific Loot Changes / Increase Hyperius' Seraph drop chance and add all DLC
-  1 Seraphs".  Unselecting just "Clean Up Seraph Drop Pool" in this mod but
-  leaving the rest of our Hyperius section intact will still give a 100% drop
-  rate for Seraphs on Hyperius.
+* "Better Enemy Drops / Regular Enemy Drop Improvements / BLNG Loader" in this
+  mod will override UCP's "Loot Pool & Drop Changes / Specific Loot Changes /
+  Add Sledge's Shotgun to BLNG Loader"
+* "Better Enemy Drops / Raid Boss Drop Improvements / Hyperius" in this mod
+  will override UCP's "Loot Pool & Drop Changes / Specific Loot Changes / Add
+  Black Hole and remove the Kiss of Death from Hyperius"
+* "Better Enemy Drops / Raid Boss Drop Improvements / Hyperius / Clean Up
+  Seraph Drop Pool" in this mod will override the loot pool changes in UCP's
+  "Loot Pool & Drop Changes / Specific Loot Changes / Increase Hyperius' Seraph
+  drop chance and add all DLC 1 Seraphs".  Unselecting just "Clean Up Seraph
+  Drop Pool" in this mod but leaving the rest of our Hyperius section intact
+  will still give a 100% drop rate for Seraphs on Hyperius.
 
 It's possible that there are some other strange interactions which could take
 place when both UCP and this mod are active, though it shouldn't be anything
@@ -227,7 +227,6 @@ TODO
   * In order to retain UCP compatibility, we had to alter how we guarantee
     Piston's Slow Hand drop.  This remains untested.
 * Add in level names to our hotfixes which could technically use them
-* The folder layout of the mod could probably use some reorg.
 * I noticed that various enemies have a `CustomItemPoolList` defined in their
   `Playthroughs` section, for changes in TVHM/UVHM.  This seems to serve the
   purpose of, for instance, adding a shield which wouldn't be present in
