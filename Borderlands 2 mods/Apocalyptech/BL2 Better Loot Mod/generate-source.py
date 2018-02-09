@@ -1292,39 +1292,39 @@ for relic_type in [
         'Vitality',
         ]:
     relic_weight_parts.append("""
-        set GD_Artifacts.PartLists.Parts_{relic_type}_Rare ConsolidatedAttributeInitData
-        (
+            set GD_Artifacts.PartLists.Parts_{relic_type}_Rare ConsolidatedAttributeInitData
             (
-                BaseValueConstant=1.000000,
-                BaseValueAttribute=None,
-                InitializationDefinition=None,
-                BaseValueScaleConstant=1.000000
-            ),
-            (
-                BaseValueConstant=100.000000,
-                BaseValueAttribute=None,
-                InitializationDefinition=None,
-                BaseValueScaleConstant=1.000000
-            ),
-            (
-                BaseValueConstant=0.000000,
-                BaseValueAttribute=None,
-                InitializationDefinition=None,
-                BaseValueScaleConstant=1.000000
-            ),
-            (
-                BaseValueConstant=1.000000,
-                BaseValueAttribute=None,
-                InitializationDefinition=None,
-                BaseValueScaleConstant={relic_scale_rare}
-            ),
-            (
-                BaseValueConstant=1.000000,
-                BaseValueAttribute=None,
-                InitializationDefinition=None,
-                BaseValueScaleConstant={relic_scale_veryrare}
+                (
+                    BaseValueConstant=1.000000,
+                    BaseValueAttribute=None,
+                    InitializationDefinition=None,
+                    BaseValueScaleConstant=1.000000
+                ),
+                (
+                    BaseValueConstant=100.000000,
+                    BaseValueAttribute=None,
+                    InitializationDefinition=None,
+                    BaseValueScaleConstant=1.000000
+                ),
+                (
+                    BaseValueConstant=0.000000,
+                    BaseValueAttribute=None,
+                    InitializationDefinition=None,
+                    BaseValueScaleConstant=1.000000
+                ),
+                (
+                    BaseValueConstant=1.000000,
+                    BaseValueAttribute=None,
+                    InitializationDefinition=None,
+                    BaseValueScaleConstant={relic_scale_rare}
+                ),
+                (
+                    BaseValueConstant=1.000000,
+                    BaseValueAttribute=None,
+                    InitializationDefinition=None,
+                    BaseValueScaleConstant={relic_scale_veryrare}
+                )
             )
-        )
 """.format(
     relic_type=relic_type,
     relic_scale_rare=relic_scale_rare,
@@ -1332,45 +1332,45 @@ for relic_type in [
     ))
 # This one is the one that's slightly different
 relic_weight_parts.append("""
-        set GD_Artifacts.PartLists.Parts_Elemental_Status_Rare ConsolidatedAttributeInitData
-        (
+            set GD_Artifacts.PartLists.Parts_Elemental_Status_Rare ConsolidatedAttributeInitData
             (
-                BaseValueConstant=1.000000,
-                BaseValueAttribute=None,
-                InitializationDefinition=None,
-                BaseValueScaleConstant=1.000000
-            ),
-            (
-                BaseValueConstant=100.000000,
-                BaseValueAttribute=None,
-                InitializationDefinition=None,
-                BaseValueScaleConstant=1.000000
-            ),
-            (
-                BaseValueConstant=0.000000,
-                BaseValueAttribute=None,
-                InitializationDefinition=None,
-                BaseValueScaleConstant=1.000000
-            ),
-            (
-                BaseValueConstant=100.000000,
-                BaseValueAttribute=None,
-                InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',
-                BaseValueScaleConstant=1.000000
-            ),
-            (
-                BaseValueConstant=1.000000,
-                BaseValueAttribute=None,
-                InitializationDefinition=None,
-                BaseValueScaleConstant={relic_scale_rare}
-            ),
-            (
-                BaseValueConstant=1.000000,
-                BaseValueAttribute=None,
-                InitializationDefinition=None,
-                BaseValueScaleConstant={relic_scale_veryrare}
+                (
+                    BaseValueConstant=1.000000,
+                    BaseValueAttribute=None,
+                    InitializationDefinition=None,
+                    BaseValueScaleConstant=1.000000
+                ),
+                (
+                    BaseValueConstant=100.000000,
+                    BaseValueAttribute=None,
+                    InitializationDefinition=None,
+                    BaseValueScaleConstant=1.000000
+                ),
+                (
+                    BaseValueConstant=0.000000,
+                    BaseValueAttribute=None,
+                    InitializationDefinition=None,
+                    BaseValueScaleConstant=1.000000
+                ),
+                (
+                    BaseValueConstant=100.000000,
+                    BaseValueAttribute=None,
+                    InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',
+                    BaseValueScaleConstant=1.000000
+                ),
+                (
+                    BaseValueConstant=1.000000,
+                    BaseValueAttribute=None,
+                    InitializationDefinition=None,
+                    BaseValueScaleConstant={relic_scale_rare}
+                ),
+                (
+                    BaseValueConstant=1.000000,
+                    BaseValueAttribute=None,
+                    InitializationDefinition=None,
+                    BaseValueScaleConstant={relic_scale_veryrare}
+                )
             )
-        )
 """.format(
     relic_type=relic_type,
     relic_scale_rare=relic_scale_rare,
