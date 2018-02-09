@@ -47,15 +47,6 @@ Specifically, this mod does the following:
 * Loot will skew much more rare, in general.  You should expect to see
   those legendaries/uniques/pearls/seraphs far more frequently than in
   vanilla BL2.
-* "Regular" treasure chests will always provide at least blue-rarity gear,
-  and has a decent chance of including stuff from the legendary pools.
-* "Epic" treasure chests have an extremely high probability of dropping
-  from the legendary pools.
-* Dice Chests (from the Tiny Tina DLC) will have a small chance of containing
-  legendary loot on a "very high" roll.
-* When lockers spawn gear, they will always be blue-rarity.  *(Previously
-  lockers had a chance to spawn even legendaries, so some could potentially
-  see this as a drawback)*
 * Adds the "Alignment" Class Mods from the Dragon Keep DLC into the global
   Class Mod drop pools (and makes those COMs always drop at at least blue
   rarity).
@@ -63,18 +54,35 @@ Specifically, this mod does the following:
 * Darts and Spikers drop far less frequently in the E-Tech pools.  *(I
   suspect this might annoy some folks; I could probably be convinced to
   undo that)*
+* Lootable Container Changes:
+  * "Regular" treasure chests will always provide at least blue-rarity gear,
+    and has a decent chance of including stuff from the legendary pools.
+  * "Epic" treasure chests have an extremely high probability of dropping
+    from the legendary pools.
+  * Dice Chests (from the Tiny Tina DLC) will have a small chance of containing
+    legendary loot on a "very high" roll.
+  * Captain Scarlett DLC and Big Game Hunt DLC endgame chests were converted
+    to Epic chests.
+  * Non-Mimic chests from Dragon Keep DLC will partially pull from the Epic
+    chest pool as well.
+  * When lockers spawn gear, they will always be blue-rarity.  *(Previously
+    lockers had a chance to spawn even legendaries, so some could potentially
+    see this as a drawback)*
 * Makes Eridium drop 3x more often
 * Makes Torgue Tokens more numerous when dropped
-* Bosses are guaranteed to drop as many items from their legendary/unique
-  pool as are in that pool.
-  * Bosses with just a single unique/legendary drop will therefore be
-    guaranteed to drop that item.
+* Boss drop pools are generally improved, and bosses are guaranteed to drop as
+  many items from their unique drop pool as are in that pool.
+  * Bosses with just a single unique drop will therefore be guaranteed to drop
+    that item.
   * If a boss has more than one in their drop pool, you may get duplicates
     of one rather than one of each.
-* Raid Bosses will drop better loot, and will drop as many legendary/unique/etc
-  items as are in their pool.  (Seraph Crystal drops are increased as well,
-  and Guardians will drop Seraph Crystals even in Normal mode).
+* Raid Bosses will drop better loot, and will drop as many unique items as are
+  in their pool.
+* Seraph Crystals will drop from Seraph Guardians even in Normal mode, and the
+  amount of Seraph Crystals have been increased.
 * Fixes/Changes to some enemies' drop pools:
+  * Badasses are guaranteed to drop some loot
+  * Chubby drop pool has been improved
   * Some "Badass" enemies weren't actually pulling from the badass drop pool,
     which has been fixed:
     * Badass Boroks
@@ -110,11 +118,12 @@ Specifically, this mod does the following:
   get executed twice.  Note that if you *don't* have either this or UCP
   enabled on your game, the early game will end up dropping *no* gear, due
   to our rarity changes.
-* Optionally, I've left in some statements which cause all enemies to
-  always drop gear, and always drop five items rather than just one.  This
-  is disabled by default and would have to be enabled manually via FilterTool
-  -- I'd basically just been using them to test out my custom loot pools by
-  having a larger sample size.
+
+There's also a couple options which are disabled by default which I used primarily
+to test out the drop pools while tweaking probabilities, but I left in in case
+anyone feels like *really* going overboard with loot.  One will cause enemies to
+always drop loot when killed, and the other will cause any regular enemy loot drop
+to drop five items instead of just one.
 
 Compatibility
 -------------
