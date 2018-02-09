@@ -19,7 +19,7 @@ class Hotfix(object):
 
     def __init__(self, key, value, activated=True):
         self.key = key
-        self.value = value
+        self.value = ''.join([l.strip() for l in value.splitlines()])
         self.activated = activated
 
     def get_xml(self):
@@ -97,7 +97,61 @@ class Hotfixes(object):
         self.add_demand_hotfix('gearbox21', 'Gearbox',
             'GD_Assassin_Streaming,GD_Assassin_Skills.Sniping.Velocity,SkillEffectDefinitions[0].ModifierType,MT_PostAdd,MT_Scale')
         self.add_demand_hotfix('gearbox22', 'Gearbox',
-            'GD_Tulip_Mechro_Streaming,GD_Tulip_Mechromancer_Skills.LittleBigTrouble.WiresDontTalk,SkillEffectDefinitions,,((AttributeToModify=D_Attributes.DamageTypeModifers.InstigatedShockDamageModifier,bIncludeDuelingTargets=False,bIncludeSelfAsTarget=False,bOnlyEffectTargetsInRange=False,bExcludeNonPlayerCharacters=False,EffectTarget=TARGET_Self,TargetInstanceDataName=,TargetCriteria=CRITERIA_None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.030000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),GradeToStartApplyingEffect=1,PerGradeUpgradeInterval=1,PerGradeUpgrade=(BaseValueConstant=0.030000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),BonusUpgradeList=),(AttributeToModify=D_Attributes.DamageTypeModifers.InstigatedShockStatusDamageModifier,bIncludeDuelingTargets=False,bIncludeSelfAsTarget=False,bOnlyEffectTargetsInRange=False,bExcludeNonPlayerCharacters=False,EffectTarget=TARGET_Self,TargetInstanceDataName=,TargetCriteria=CRITERIA_None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.030000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),GradeToStartApplyingEffect=1,PerGradeUpgradeInterval=1,PerGradeUpgrade=(BaseValueConstant=0.030000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),BonusUpgradeList=))')
+            """GD_Tulip_Mechro_Streaming,GD_Tulip_Mechromancer_Skills.LittleBigTrouble.WiresDontTalk,SkillEffectDefinitions,,
+            (
+                (
+                    AttributeToModify=D_Attributes.DamageTypeModifers.InstigatedShockDamageModifier,
+                    bIncludeDuelingTargets=False,
+                    bIncludeSelfAsTarget=False,
+                    bOnlyEffectTargetsInRange=False,
+                    bExcludeNonPlayerCharacters=False,
+                    EffectTarget=TARGET_Self,
+                    TargetInstanceDataName=,
+                    TargetCriteria=CRITERIA_None,
+                    ModifierType=MT_Scale,
+                    BaseModifierValue=(
+                        BaseValueConstant=0.030000,
+                        BaseValueAttribute=None,
+                        InitializationDefinition=None,
+                        BaseValueScaleConstant=1.000000
+                    ),
+                    GradeToStartApplyingEffect=1,
+                    PerGradeUpgradeInterval=1,
+                    PerGradeUpgrade=(
+                        BaseValueConstant=0.030000,
+                        BaseValueAttribute=None,
+                        InitializationDefinition=None,
+                        BaseValueScaleConstant=1.000000
+                    ),
+                    BonusUpgradeList=
+                ),
+                (
+                    AttributeToModify=D_Attributes.DamageTypeModifers.InstigatedShockStatusDamageModifier,
+                    bIncludeDuelingTargets=False,
+                    bIncludeSelfAsTarget=False,
+                    bOnlyEffectTargetsInRange=False,
+                    bExcludeNonPlayerCharacters=False,
+                    EffectTarget=TARGET_Self,
+                    TargetInstanceDataName=,
+                    TargetCriteria=CRITERIA_None,
+                    ModifierType=MT_Scale,
+                    BaseModifierValue=(
+                        BaseValueConstant=0.030000,
+                        BaseValueAttribute=None,
+                        InitializationDefinition=None,
+                        BaseValueScaleConstant=1.000000
+                    ),
+                    GradeToStartApplyingEffect=1,
+                    PerGradeUpgradeInterval=1,
+                    PerGradeUpgrade=(
+                        BaseValueConstant=0.030000,
+                        BaseValueAttribute=None,
+                        InitializationDefinition=None,
+                        BaseValueScaleConstant=1.000000
+                    ),
+                    BonusUpgradeList=
+                )
+            )""")
 
         self.num_gearbox_patches = len(self.hotfixes)
 
