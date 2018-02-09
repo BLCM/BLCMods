@@ -130,3 +130,16 @@ Resources
 This directory contains a couple of text files which is mostly just the output
 from various `obj dump <foo>` commands for classes/objects I was interested in
 modding.
+
+Licenses
+========
+
+All the code here is licensed under the
+[3-clause BSD license](https://opensource.org/licenses/BSD-3-Clause),
+which should be permissive enough to do just about whatever with.
+
+Mods under this folder are licensed under the
+[Creative Commons Attribution 4.0 International (CC BY 4.0) license](https://creativecommons.org/licenses/by/4.0/legalcode).
+
+See [COPYING-code.txt](COPYING-code.txt) and [COPYING-mods.txt](COPYING-mods.txt)
+for the full text.
