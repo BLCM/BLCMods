@@ -202,6 +202,8 @@ well-covered in other mods, so instead I'll just mention them here.
 * EmpireScum's "ButtStallion" will make Butt Stallion's drops in Flamerock Refuge
   much better (can choose between blue-or-higher, or all-gemstone).
 * JimRaven's "#MakeVendorsGreatAgain2017" improves vendor stocks across the game.
+* Hemaxhu's "Better Quests" will improve quest rewards for the missions which
+  don't already have good rewards.
 
 TODO
 ----
