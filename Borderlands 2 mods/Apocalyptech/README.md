@@ -1,6 +1,15 @@
 Apocalyptech's Borderlands 2 Mod(s)
 ===================================
 
+Aegrus Not-So-Rare Monsters
+---------------------------
+
+This is a real simple mod which just alters the spawn rates of the "rare"
+creature types in Sir Hammerlock's Big Game Hunt.  This is really only
+useful if you're looking to complete the
+[I Like My Monsters Rare](http://borderlands.wikia.com/wiki/I_Like_My_Monsters_Rare)
+mission without having to do any extra farming.
+
 BL2 Better Loot Mod
 -------------------
 
@@ -14,15 +23,6 @@ tend to play in Normal most of the time, dislike grinding, get bored easily by
 the uninteresting and drab loot that typically gets dropped in-game, and who
 often end up just resorting to Gibbed to be able to play around with some
 better gear.  The README in the mod dir itself should provide a lot more info.
-
-Aegrus Not-So-Rare Monsters
----------------------------
-
-This is a real simple mod which just alters the spawn rates of the "rare"
-creature types in Sir Hammerlock's Big Game Hunt.  This is really only
-useful if you're looking to complete the
-[I Like My Monsters Rare](http://borderlands.wikia.com/wiki/I_Like_My_Monsters_Rare)
-mission without having to do any extra farming.
 
 Utilities
 =========
