@@ -104,7 +104,7 @@ shield_base_legendary = one
 # Custom weapon drop scaling
 weapon_scale_common = '8.000000'
 weapon_scale_uncommon = '85.000000'
-weapon_scale_rare = '55.000000'
+weapon_scale_rare = '65.000000'
 weapon_scale_veryrare = '50.000000'
 weapon_scale_alien = '30.000000'
 weapon_scale_legendary = '3.000000'
@@ -137,25 +137,25 @@ relic_scale_rare = '1.0'
 relic_scale_veryrare = '2.0'
 
 # Drop rates for "regular" treasure chests
-treasure_scale_rare = '10.000000'
-treasure_scale_veryrare = '65.000000'
+treasure_scale_rare = '20.000000'
+treasure_scale_veryrare = '60.000000'
 treasure_scale_alien = '30.000000'
-treasure_scale_legendary = '10.000000'
+treasure_scale_legendary = '5.000000'
 
 # Drop rates for "epic" treasure chests
 epic_scale_veryrare = '1.000000'
 epic_scale_alien = '1.000000'
-epic_scale_legendary = '0.500000'
-epic_scale_legendary_dbl = '1.000000'
+epic_scale_legendary = '0.400000'
+epic_scale_legendary_dbl = '0.800000'
 
 # Drop rates within the "very high roll" pools of dice chests
 dice_vhigh_veryrare = '1.000000'
 dice_vhigh_alien = '1.000000'
-dice_vhigh_legendary = '0.050000'
+dice_vhigh_legendary = '0.100000'
 
-# 3x chance of both kinds of eridium
-eridium_bar_drop = '0.004500'       # Stock: 0.001500
-eridium_stick_drop = '0.024000'     # Stock: 0.008000
+# 2.5x chance of both kinds of eridium
+eridium_bar_drop = '0.003750'       # Stock: 0.001500
+eridium_stick_drop = '0.020000'     # Stock: 0.008000
 
 ###
 ### Vars used primarily during testing of loot pools - these aren't

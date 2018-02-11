@@ -68,7 +68,7 @@ Specifically, this mod does the following:
   * When lockers spawn gear, they will always be blue-rarity.  *(Previously
     lockers had a chance to spawn even legendaries, so some could potentially
     see this as a drawback)*
-* Makes Eridium drop 3x more often
+* Makes Eridium drop 2.5x more often
 * Makes Torgue Tokens more numerous when dropped
 * Boss drop pools are generally improved, and bosses are guaranteed to drop as
   many items from their unique drop pool as are in that pool.
