@@ -188,6 +188,10 @@ force_gunsandgear_specific_name = 'GD_Orchid_BossWeapons.RPG.Ahab.Orchid_Boss_Ah
 ### else.
 ###
 
+# Make Shirtless Men drop from the badass pool pool
+hfs.add_level_hotfix('shirtless_man_badass', 'ShirtlessManDrop',
+    "Interlude_P,GD_Population_Marauder.Balance.Unique.PawnBalance_ShirtlessMan,DefaultItemPoolIncludedLists[0],,ItemPoolListDefinition'GD_Itempools.ListDefs.BadassEnemyGunsAndGear'")
+
 # Make No-Beard always drop his unique
 hfs.add_level_hotfix('scarlett_nobeard', 'NoBeardDrop',
     'Orchid_OasisTown_P,GD_Orchid_Pop_NoBeard.PawnBalance_Orchid_NoBeard,DefaultItemPoolList[1].PoolProbability.BaseValueConstant,,1.0')

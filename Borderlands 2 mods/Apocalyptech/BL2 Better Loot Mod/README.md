@@ -91,6 +91,7 @@ Specifically, this mod does the following:
     * Undead Badass Psychos
     * Badass Yeti
   * A few more standard enemies have also been set to drop from the badass pool:
+    * Shirtlesss Men
     * Bulstross
     * Arguk the Butcher
     * Skeleton Giants *(as if the Dragon Keep DLC needed more loot)*
