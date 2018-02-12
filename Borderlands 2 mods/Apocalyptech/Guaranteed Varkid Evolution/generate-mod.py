@@ -92,7 +92,7 @@ mod_str = """#<{mod_name}>
 
     {hotfixes:varkid_default_5}
 
-    # Licensed under CC BY 4.0 (Creative Commons Attribution 4.0 International)
+    # Licensed under Public Domain / CC0 1.0 Universal
 
 #</{mod_name}>
 
