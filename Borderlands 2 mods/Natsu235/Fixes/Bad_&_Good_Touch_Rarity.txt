@@ -1,0 +1,26 @@
+ #################################################
+#                                                 #
+#   Fix "Bad Touch" & "Good Touch" Wrong Rarity   #
+#                                                 #
+ #################################################
+
+
+# NOTE: The "Crit" SMG from Tiny Tina's DLC was patched to use Blue Rarity instead of Purple Rarity but "Bad Touch" & "Good Touch" was never fixed (you can still have a Purple Rarity "Crit" in your backpack, the Sanity Check wasn't updated and accept VarB & VarC Body)
+
+
+set GD_Weap_SMG.A_Weapons_Unique.SMG_Maliwan_3_BadTouch:WeaponPartListCollectionDefinition_180 BodyPartData (bEnabled=True,WeightedParts=((Part=WeaponPartDefinition'GD_Weap_SMG.Body.SMG_Body_Maliwan_VarC',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=0,DefaultWeightIndex=1),(Part=WeaponPartDefinition'GD_Weap_SMG.Body.SMG_Body_Maliwan_VarB',Manufacturers=,MinGameStageIndex=2,MaxGameStageIndex=3,DefaultWeightIndex=1)))
+
+set GD_Weap_SMG.Barrel.SMG_Barrel_Maliwan_BadTouch AttributeSlotUpgrades ((SlotName="WeaponDamage",GradeIncrease=8,bActivateSlot=True),(SlotName="WeaponMagSize",GradeIncrease=2,bActivateSlot=True),(SlotName="WeaponSpread",GradeIncrease=7,bActivateSlot=True),(SlotName="AccuracyMax",GradeIncrease=5,bActivateSlot=True))
+
+set GD_Weap_SMG.A_Weapons_Unique.SMG_Maliwan_3_GoodTouch:WeaponPartListCollectionDefinition_182 BodyPartData (bEnabled=True,WeightedParts=((Part=WeaponPartDefinition'GD_Weap_SMG.Body.SMG_Body_Maliwan_VarC',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=0,DefaultWeightIndex=1),(Part=WeaponPartDefinition'GD_Weap_SMG.Body.SMG_Body_Maliwan_VarB',Manufacturers=,MinGameStageIndex=2,MaxGameStageIndex=3,DefaultWeightIndex=1)))
+
+set GD_Weap_SMG.Barrel.SMG_Barrel_Maliwan_GoodTouch AttributeSlotUpgrades ((SlotName="WeaponDamage",GradeIncrease=8,bActivateSlot=True),(SlotName="WeaponMagSize",GradeIncrease=2,bActivateSlot=True),(SlotName="WeaponSpread",GradeIncrease=8,bActivateSlot=True),(SlotName="AccuracyMax",GradeIncrease=6,bActivateSlot=True))
+
+set GD_Aster_Weapons.SMGs.SMG_Barrel_Hyperion_Crit ShellCasingPSCTemplate ParticleSystem'FX_WEP_Pistol.Particles.Part_Pistol_Shells'
+
+set GD_Aster_Weapons.SMGs.SMG_Barrel_Hyperion_Crit BehaviorProviderDefinition ()
+
+set GD_Aster_Weapons.SMGs.SMG_Barrel_Hyperion_Crit ManufacturerDefinitionForScopeMovie ManufacturerDefinition'GD_Manufacturers.Manufacturers.Maliwan'
+
+# Replace "Crit" Hyperion Barrel with Maliwan Barrel (Optional)
+set GD_Aster_Weapons.SMGs.SMG_Barrel_Hyperion_Crit GestaltModeSkeletalMeshName SMG_Barrel_Maliwan

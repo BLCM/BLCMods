@@ -7,6 +7,11 @@ If your mod has specific considerations you should make it clear how to install.
 
 Check out the [Wiki](https://github.com/BL2CP/BLCMods/wiki). If you want to find specific mods by category, check [repository with sorted mods](https://github.com/BLCM/ModCabinet/wiki)
 
+## Requirements
+
+These mods can only be installed on PC and will **never** be ported to consoles due to technical and legal limitations.    
+All non-headhunter DLC is required for the patch and likely most mods.
+
 ## Contribution
 
 If you are not part of BLCM, to contribute a mod:
@@ -18,6 +23,13 @@ If you are not part of BLCM, to contribute a mod:
 
 If you are part of [BLCM](https://github.com/BLCM) you do not need to fork or pull request.
 
+## ModPacks
+
+If you wish to contribute a modpack (or a compilation of mods):
+- you **must** provide a screenshot or other proof of agreement from **each** mod author if you wish for your modpack to be accepted.
+- preferably using an image gallery of screenshots using an image hosting website of your choice, such as https://imgur.com/
+- modpacks are submitted the same way as regular contributions, so scroll up to read instructions on how to do so.
+
 ## Installation
 
 To download the files click the green `Clone or Download` button in the top right.
@@ -26,8 +38,3 @@ Installing the files follows methods discussed on the [Wiki](https://github.com/
 
 *Derch*'s Tutorial:    
 [![Derch's Install Tutorial](http://img.youtube.com/vi/HT79s6_KXqQ/0.jpg)](https://youtu.be/HT79s6_KXqQ)
-
-## Requirements
-
-These mods can only be installed on PC and will never be ported to consoles due to technical and legal limitations.    
-All non-headhunter DLC is required for the patch and likely most mods.

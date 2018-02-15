@@ -1,44 +1,6 @@
-#<Brasil>
+#<BRASIL>
 
-    (English)
-
-    #Made by Coleby (it's pronounced "Cole-bee")
-
-    #Brazilian flag themed Skin
-
-    #150% Base Damage
-
-    #350% Critical Damage (better hit those critical spots :P)
-
-    #Fixed 5-round magazine (but can be increased with mag size attachments or skills)
-
-    #Low fire-rate/bolt speed
-
-    #Railgun projectiles
-
-    #Still has the innate 100% shield bypass gimmick, don't worry
-
-    ======================///|||\\\======================
-
-    (Brazilian Portuguese)
-
-    #Feito por Coleby (se pronuncia "Co-le-bí")
-
-    #Skin baseada na bandeira do Brasil
-
-    #150% Dano Base
-
-    #350% Dano Crítico (melhor ter uma mira boa, hein :P)
-
-    #5 balas no carregador (mas pode ser aumentado por acessórios ou skills que aumentam o tamanho do carregador)
-
-    #Demora um pouquinho pra puxar a próxima bala
-
-    #Projéteis no estilo Railgun
-
-    #Ainda tem o artifício de ignorar escudos, não se preocupe
-
-    #<Aesthetic / Estética>
+    #<EstÃ©tica>
 
         #<Skin>
 
@@ -50,39 +12,33 @@
 
         #</Skin>
 
-        #<DAHL Barrel Visuals / Aparência do cano DAHL>
+        #<Visual do cano>
 
             set GD_Weap_SniperRifles.Barrel.SR_Barrel_Hyperion_Tresspasser GestaltModeSkeletalMeshName SR_Barrel_Dahl
 
-        #</DAHL Barrel Visuals / Aparência do cano DAHL>
+        #</Visual do cano>
 
-        #<Railgun Firing Mode + Muzzle Flash / Modo de tiro e flash de Railgun>
+    #</EstÃ©tica>
 
-            set GD_Weap_SniperRifles.Barrel.SR_Barrel_Hyperion_Tresspasser MuzzleFlashPSTemplates EffectCollectionDefinition'GD_Weap_SniperRifles.Effects.SR_ETech_MuzzleFlashes'
+    #<Atributos>
 
-            set GD_Weap_SniperRifles.Barrel.SR_Barrel_Hyperion_Tresspasser CustomFiringModeDefinition FiringModeDefinition'GD_Weap_SniperRifles.FiringModes.Bullet_RailGun'
+        set GD_Weap_SniperRifles.Barrel.SR_Barrel_Hyperion_Tresspasser WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=7.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponReloadSpeed',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.750000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-99.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=5.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
 
-        #</Railgun Firing Mode + Muzzle Flash / Modo de tiro e flash de Railgun>
-
-    #</Aesthetic / Estética>
-
-    #<Title Card / Tabela de atributos>
-
-        set GD_Weap_SniperRifles.Name.Title.Title__Unique_Trespasser PartName Brasil
-
-        set GD_Weap_SniperRifles.Name.Title.Title__Unique_Trespasser:AttributePresentationDefinition_8 NoConstraintText Gigante pela própria natureza.
-
-    #</Title Card / Tabela de atributos>
-
-    #<Attributes / Atributos>
-
-        set GD_Weap_SniperRifles.Barrel.SR_Barrel_Hyperion_Tresspasser WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponReloadSpeed',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-0.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.750000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-99.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=5.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
-
-        set GD_Weap_SniperRifles.Barrel.SR_Barrel_Hyperion_Tresspasser ExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.DamageSourceShieldPenetration.PercentChanceInstigatedBulletDmgIgnoresShields',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=100.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.DamageEnhancementModifiers.PlayerConvertDamageToHealingPercent',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.350000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.GameplayAttributes.PlayerCriticalHitBonus',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=3.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+        set GD_Weap_SniperRifles.Barrel.SR_Barrel_Hyperion_Tresspasser ExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.DamageSourceShieldPenetration.PercentChanceInstigatedBulletDmgIgnoresShields',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=100.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.DamageEnhancementModifiers.PlayerConvertDamageToHealingPercent',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.350000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.GameplayAttributes.PlayerCriticalHitBonus',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=3.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.HealthResourcePool.HealthOnIdleRegenerationRate',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-25000.0000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
 
         set GD_Weap_SniperRifles.Barrel.SR_Barrel_Hyperion_Tresspasser AttributeSlotUpgrades ((SlotName="WeaponDamage",GradeIncrease=10,bActivateSlot=True))
 
-    #</Attributes / Atributos>
+    #</Atributos>
 
-#</Brasil>
+    #<DescriÃ§Ã£o>
+
+        set GD_Weap_SniperRifles.Name.Title.Title__Unique_Trespasser PartName Brasil
+
+        set GD_Weap_SniperRifles.Name.Title.Title__Unique_Trespasser:AttributePresentationDefinition_8 Prefix <font color = "#00ff00">Gigante <font color ="#ffff00">pela prÃ³pria <font color ="#0077ff">natureza<font color ="#ffffff">.<br>
+
+        set GD_Weap_SniperRifles.Name.Title.Title__Unique_Trespasser:AttributePresentationDefinition_8 NoConstraintText <font color = "#999999">Um paÃ­s rico em recursos...<br>...mas com um pÃ©ssimo sistema pÃºblico de saÃºde.<br><font color ="#ffffff">[funstat]<font color ="#ff1616">Drena<font color ="#ffffff"> 25000 pontos de vida por segundo.<br><font color = "#999999">Altos Ã­ndices de violÃªncia.<br><font color ="#ffffff">[funstat]<font color ="#ff6411">750<font color ="#ffffff">% de dano base.<br>
+
+    #</DescriÃ§Ã£o>
+
+#</BRASIL>
 
