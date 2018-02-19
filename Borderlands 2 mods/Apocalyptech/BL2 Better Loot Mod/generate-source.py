@@ -145,8 +145,8 @@ treasure_scale_legendary = '5.000000'
 # Drop rates for "epic" treasure chests
 epic_scale_veryrare = '1.000000'
 epic_scale_alien = '1.000000'
-epic_scale_legendary = '0.400000'
-epic_scale_legendary_dbl = '0.800000'
+epic_scale_legendary = '0.300000'
+epic_scale_legendary_dbl = '0.600000'
 
 # Drop rates within the "very high roll" pools of dice chests
 dice_vhigh_veryrare = '1.000000'
