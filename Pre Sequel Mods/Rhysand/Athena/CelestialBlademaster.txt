@@ -1,4 +1,6 @@
 ########## Celestial Blademaster ##########
+## Update Notes: Removed the skill that makes Athena's shield immediately begin recharging upon activating Aspis.
+## For melee builds that skill is counterintuitive as it starts to recharge roid shields. 
 ## EXECUTE AFTER COMMUNITY PATCH
 ## +Melee Damage
 ## +Critical Hit Damage
@@ -17,6 +19,9 @@
 set GD_Cork_ClassMods_SMJ.Prefix_Gladiator.Prefix_CelestialGladiator PartName Celestial Blademaster
 set GD_Cork_ClassMods_SMJ.A_Item_Gladiator.ClassMod_Gladiator_Z_CelestialGladiator:AttributePresentationDefinition_2 Description <font color='#ff4d4d'> "There is no escape."
 set GD_Cork_ClassMods_SMJ.A_Item_Gladiator.ClassMod_Gladiator_Z_CelestialGladiator:AttributePresentationDefinition_3 Description <font color='#ff4d4d'> "Your Life is mine."
+
+## Immediate Shield Recharge Removal
+set GD_Cork_ClassMods_SMJ.A_Item_Gladiator.ClassMod_Gladiator_Z_CelestialGladiator BehaviorProviderDefinition None
 
 #UI
 set GD_Cork_ClassMods_SMJ.A_Item_Gladiator.ClassMod_Gladiator_Z_CelestialGladiator UIStatList ((bDisplayAsModifierOnly=True,AttributeStyle=ATTRSTYLE_ModifierText,SupplementalAttributeStyle=ATTRSTYLE_JustNumber,StatCombinationMethod=SCM_Multiply,Attribute=AttributeDefinition'D_Attributes.DamageSourceModifiers.InstigatedMeleeDamageModifier',ConstraintAttribute=None,SupplementalAttributeExpression=(AttributeOperand1=None,ComparisonOperator=OPERATOR_EqualTo,Operand2Usage=OPERAND_PreferAttribute,AttributeOperand2=None,ConstantOperand2=0.000000),SupplementalAttributeToAppend=None),(bDisplayAsModifierOnly=True,AttributeStyle=ATTRSTYLE_ModifierText,SupplementalAttributeStyle=ATTRSTYLE_JustNumber,StatCombinationMethod=SCM_Multiply,Attribute=AttributeDefinition'D_Attributes.GameplayAttributes.PlayerCriticalHitBonus',ConstraintAttribute=None,SupplementalAttributeExpression=(AttributeOperand1=None,ComparisonOperator=OPERATOR_EqualTo,Operand2Usage=OPERAND_PreferAttribute,AttributeOperand2=None,ConstantOperand2=0.000000),SupplementalAttributeToAppend=None))

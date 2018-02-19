@@ -25,7 +25,8 @@ Marquis -> DONE
 Montana -> DONE
 Thorn -> DONE
 ISIC -> DONE
-Toby?
-Whiskey Foxtrot
-Oscar Mike
+Toby -> DONE
+Ernest (Stuck :c)
+Whiskey Foxtrot (Stuck :c)
+Oscar Mike (Stuck :c)
 ??????
