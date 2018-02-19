@@ -7676,7 +7676,7 @@
                             BaseValueConstant=1.000000,
                             BaseValueAttribute=None,
                             InitializationDefinition=None,
-                            BaseValueScaleConstant=0.100000
+                            BaseValueScaleConstant=0.500000
                         ),
                         bDropOnDeath=True
                     )
@@ -7713,7 +7713,7 @@
                             BaseValueConstant=1.000000,
                             BaseValueAttribute=None,
                             InitializationDefinition=None,
-                            BaseValueScaleConstant=0.100000
+                            BaseValueScaleConstant=0.500000
                         ),
                         bDropOnDeath=True
                     ),
@@ -7746,7 +7746,7 @@
                             BaseValueConstant=1.000000,
                             BaseValueAttribute=None,
                             InitializationDefinition=None,
-                            BaseValueScaleConstant=0.100000
+                            BaseValueScaleConstant=0.500000
                         ),
                         bDropOnDeath=True
                     ),
@@ -7779,7 +7779,7 @@
                             BaseValueConstant=1.000000,
                             BaseValueAttribute=None,
                             InitializationDefinition=None,
-                            BaseValueScaleConstant=0.100000
+                            BaseValueScaleConstant=0.500000
                         ),
                         bDropOnDeath=True
                     ),
@@ -7812,7 +7812,7 @@
                             BaseValueConstant=1.000000,
                             BaseValueAttribute=None,
                             InitializationDefinition=None,
-                            BaseValueScaleConstant=0.100000
+                            BaseValueScaleConstant=0.500000
                         ),
                         bDropOnDeath=True
                     )
@@ -7849,7 +7849,7 @@
                             BaseValueConstant=1.000000,
                             BaseValueAttribute=None,
                             InitializationDefinition=None,
-                            BaseValueScaleConstant=0.100000
+                            BaseValueScaleConstant=0.500000
                         ),
                         bDropOnDeath=True
                     )
@@ -7989,6 +7989,26 @@
 
         #</Better Lockers>
 
+        #<Fix Broken Shield Pools>
+
+            # Various chests in the game have a possible "Shields" item pool which will
+            # never actually trigger in-game because they include an invalid item in the
+            # pool.  This fixes the pool so that it can be chosen again.
+
+            #<hotfix><key>"SparkLevelPatchEntry-ApocEuphoriaChestFix0"</key><value>",GD_Itempools.ListDefs.EpicChestRedLoot,LootData[4].ItemAttachments[11].ItemPool,,GD_Itempools.BuffDrinkPools.Pool_BuffDrinks_HealingRegen"</value><on>
+
+            #<hotfix><key>"SparkLevelPatchEntry-ApocEuphoriaChestFix1"</key><value>",GD_Itempools.ListDefs.EpicChestBanditLoot,LootData[3].ItemAttachments[11].ItemPool,,GD_Itempools.BuffDrinkPools.Pool_BuffDrinks_HealingRegen"</value><on>
+
+            #<hotfix><key>"SparkLevelPatchEntry-ApocEuphoriaChestFix2"</key><value>",GD_Balance_Treasure.ChestGrades.ObjectGrade_DahlEpic,DefaultLoot[4].ItemAttachments[11].ItemPool,,GD_Itempools.BuffDrinkPools.Pool_BuffDrinks_HealingRegen"</value><on>
+
+            #<hotfix><key>"SparkLevelPatchEntry-ApocEuphoriaChestFix3"</key><value>",GD_Balance_Treasure.ChestGrades.ObjectGrade_DahlEpic_BearerBadNews,DefaultLoot[4].ItemAttachments[11].ItemPool,,GD_Itempools.BuffDrinkPools.Pool_BuffDrinks_HealingRegen"</value><on>
+
+            #<hotfix><key>"SparkLevelPatchEntry-ApocEuphoriaChestFix4"</key><value>",GD_Itempools.ListDefs.EpicChestHyperionLoot,LootData[3].ItemAttachments[11].ItemPool,,GD_Itempools.BuffDrinkPools.Pool_BuffDrinks_HealingRegen"</value><on>
+
+            #<hotfix><key>"SparkLevelPatchEntry-ApocEuphoriaChestFix5"</key><value>",GD_Aster_Lootables.Balance.ObjectGrade_MimicChest_NoMimic,DefaultLoot[4].ItemAttachments[11].ItemPool,,GD_Itempools.BuffDrinkPools.Pool_BuffDrinks_HealingRegen"</value><on>
+
+        #</Fix Broken Shield Pools>
+
     #</Better Containers>
 
     #<Better Enemy Drops>
@@ -8007,6 +8027,14 @@
                 #<hotfix><key>"SparkLevelPatchEntry-ApocShirtlessManDrop0"</key><value>"Interlude_P,GD_Population_Marauder.Balance.Unique.PawnBalance_ShirtlessMan,DefaultItemPoolIncludedLists[0],,ItemPoolListDefinition'GD_Itempools.ListDefs.BadassEnemyGunsAndGear'"</value><on>
 
             #</Shirtless Men>
+
+            #<Roscoe>
+
+                # Makes Roscoe drop from the Badass pool
+
+                #<hotfix><key>"SparkLevelPatchEntry-ApocRoscoeBadass0"</key><value>"Orchid_WormBelly_P,GD_Orchid_Pop_RakkHive.Character.PawnBalance_Orchid_RakkHive,DefaultItemPoolIncludedLists,,(ItemPoolListDefinition'GD_Itempools.ListDefs.BadassEnemyGunsAndGear')"</value><on>
+
+            #</Roscoe>
 
             #<Witch Doctors (Big Game Hunt DLC)>
 

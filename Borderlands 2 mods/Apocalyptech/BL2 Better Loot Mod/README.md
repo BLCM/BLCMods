@@ -92,6 +92,7 @@ Specifically, this mod does the following:
     * Badass Yeti
   * A few more standard enemies have also been set to drop from the badass pool:
     * Shirtlesss Men
+    * Roscoe
     * Bulstross
     * Arguk the Butcher
     * Skeleton Giants *(as if the Dragon Keep DLC needed more loot)*

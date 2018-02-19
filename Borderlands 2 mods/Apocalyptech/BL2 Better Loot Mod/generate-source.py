@@ -151,7 +151,7 @@ epic_scale_legendary_dbl = '0.800000'
 # Drop rates within the "very high roll" pools of dice chests
 dice_vhigh_veryrare = '1.000000'
 dice_vhigh_alien = '1.000000'
-dice_vhigh_legendary = '0.100000'
+dice_vhigh_legendary = '0.500000'
 
 # 2.5x chance of both kinds of eridium
 eridium_bar_drop = '0.003750'       # Stock: 0.001500
@@ -497,7 +497,11 @@ for borok in ['Corrosive', 'Fire', 'Shock', 'Slag']:
         'BadassBorok{}'.format(borok),
         ",GD_Sage_Pop_Rhino.Balance.PawnBalance_Sage_RhinoBadass{},DefaultItemPoolIncludedLists[0],,ItemPoolListDefinition'GD_Itempools.ListDefs.BadassEnemyGunsAndGear'".format(borok))
 
-# Make Bulstoss also drop from the Badass loot pool
+# Make Roscoe drop from the Badass loot pool
+hfs.add_level_hotfix('scarlett_roscoe_badass', 'RoscoeBadass',
+    "Orchid_WormBelly_P,GD_Orchid_Pop_RakkHive.Character.PawnBalance_Orchid_RakkHive,DefaultItemPoolIncludedLists,,(ItemPoolListDefinition'GD_Itempools.ListDefs.BadassEnemyGunsAndGear')")
+
+# Make Bulstoss drop from the Badass loot pool
 hfs.add_level_hotfix('bulstoss_badass', 'BulstossBadass',
     ",GD_Sage_SM_AcquiredTasteData.Creature.PawnBalance_Sage_AcquiredTaste_Creature,DefaultItemPoolIncludedLists[0],,ItemPoolListDefinition'GD_Itempools.ListDefs.BadassEnemyGunsAndGear'")
 
@@ -1087,6 +1091,27 @@ hfs.add_level_hotfix('part_early_game_fix_56', 'PartEarlyGameFix', ",GD_Sage_Rai
 hfs.add_level_hotfix('part_early_game_fix_57', 'PartEarlyGameFix', ",GD_Sage_Weapons.AssaultRifle.AR_Bandit_3_Chopper:WeaponPartListCollectionDefinition_303,ElementalPartData.WeightedParts,,((Part=WeaponPartDefinition'GD_Weap_AssaultRifle.elemental.AR_Elemental_None',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=3),(Part=WeaponPartDefinition'GD_Weap_AssaultRifle.elemental.AR_Elemental_Fire',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=4),(Part=WeaponPartDefinition'GD_Weap_AssaultRifle.elemental.AR_Elemental_Corrosive',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=4),(Part=WeaponPartDefinition'GD_Weap_AssaultRifle.elemental.AR_Elemental_Shock',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=4),(Part=WeaponPartDefinition'GD_Weap_AssaultRifle.elemental.AR_Elemental_Slag',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=4))")
 hfs.add_level_hotfix('part_early_game_fix_58', 'PartEarlyGameFix', ",GD_Tulip_ItemGrades.ClassMods.BalDef_ClassMod_Mechromancer:ItemPartListCollectionDefinition_48,AlphaPartData.WeightedParts,,((Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_NoSkill',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS1',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS1_BS2',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS1_BS3',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS2',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS2_BS1',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS2_BS3',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS3',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS3_BS1',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS3_BS2',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS1_BS2_CS3',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS2_BS1_CS3',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS3_BS1_CS2',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS1_BS2_-CS3',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS1_-BS2_CS3',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS2_BS1_-CS3',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS2_-BS1_CS3',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS3_BS1_-CS2',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS3_-BS1_CS2',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0))")
 hfs.add_level_hotfix('part_early_game_fix_59', 'PartEarlyGameFix', ",GD_Tulip_ItemGrades.ClassMods.BalDef_ClassMod_Mechromancer_04_VeryRare:ItemPartListCollectionDefinition_52,AlphaPartData.WeightedParts,,((Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS1_BS2_CS3',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS2_BS1_CS3',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS3_BS1_CS2',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS1_BS2_-CS3',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS1_-BS2_CS3',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS2_BS1_-CS3',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS2_-BS1_CS3',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS3_BS1_-CS2',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS3_-BS1_CS2',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0))")
+
+# Fix some container drop pools which reference an item (Pool_BuffDrinks_Euphoria)
+# which doesn't actually exist, causing that loot possibility to never actually
+# get chosen.  We'll replace with Pool_BuffDrinks_HealingRegen.  Most of these could
+# happen via a regular `set` statement, but this lets us be much more concise.
+for (idx, (classname, propname, loot_idx, attachment_idx)) in enumerate([
+        ('GD_Itempools.ListDefs.EpicChestRedLoot', 'LootData', 4, 11),
+        ('GD_Itempools.ListDefs.EpicChestBanditLoot', 'LootData', 3, 11),
+        ('GD_Balance_Treasure.ChestGrades.ObjectGrade_DahlEpic', 'DefaultLoot', 4, 11),
+        ('GD_Balance_Treasure.ChestGrades.ObjectGrade_DahlEpic_BearerBadNews', 'DefaultLoot', 4, 11),
+        ('GD_Itempools.ListDefs.EpicChestHyperionLoot', 'LootData', 3, 11),
+        ('GD_Aster_Lootables.Balance.ObjectGrade_MimicChest_NoMimic', 'DefaultLoot', 4, 11),
+        ]):
+    hfs.add_level_hotfix('euphoria_fix_{}'.format(idx),
+        'EuphoriaChestFix',
+        ',{},{}[{}].ItemAttachments[{}].ItemPool,,GD_Itempools.BuffDrinkPools.Pool_BuffDrinks_HealingRegen'.format(
+            classname,
+            propname,
+            loot_idx,
+            attachment_idx,
+            ))
 
 ###
 ### Testing hotfixes, not really intended to be used for real.  These

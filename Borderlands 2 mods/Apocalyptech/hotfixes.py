@@ -44,7 +44,7 @@ class Hotfix(object):
 
     def __init__(self, key, value, activated=True):
         self.key = key
-        self.value = ''.join([l.strip() for l in value.splitlines()])
+        self.value = ''.join([l.strip() for l in value.splitlines()]).replace('"', '\\"')
         self.activated = activated
 
     def get_xml(self):
