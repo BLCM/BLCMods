@@ -95,6 +95,7 @@ Specifically, this mod does the following:
     * Badass Yeti
   * A few more standard enemies have also been set to drop from the badass pool:
     * Shirtlesss Men
+    * Gluttonous Thresher *(actually drops from the "super" badass pool)*
     * Roscoe
     * Bulstross
     * Arguk the Butcher
