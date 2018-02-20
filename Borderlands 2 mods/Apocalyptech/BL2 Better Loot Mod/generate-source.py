@@ -157,6 +157,14 @@ dice_vhigh_legendary = '0.500000'
 eridium_bar_drop = '0.003750'       # Stock: 0.001500
 eridium_stick_drop = '0.020000'     # Stock: 0.008000
 
+# Gun Type drop weights
+drop_prob_pistol = 100
+drop_prob_ar = 100
+drop_prob_smg = 100
+drop_prob_shotgun = 100
+drop_prob_sniper = 80
+drop_prob_launcher = 40
+
 ###
 ### Vars used primarily during testing of loot pools - these aren't
 ### intended to be "live" in the mod by default.
@@ -187,6 +195,34 @@ force_gunsandgear_specific_name = 'GD_Orchid_BossWeapons.RPG.Ahab.Orchid_Boss_Ah
 ### Hotfixes; these are handled a little differently than everything
 ### else.
 ###
+
+# Remove bias for dropping Pistols in the main game.  Also buffs drop rates
+# for snipers and launchers, though it does not bring them up to the level
+# of pistols/ARs/SMGs/shotguns.  This could be done with a `set` statement, but
+# this is more concise.
+for (number, rarity) in [
+        ('01', 'Common'),
+        ('02', 'Uncommon'),
+        ('04', 'Rare'),
+        ('05', 'VeryRare'),
+        ('05', 'VeryRare_Alien'),
+        ('06', 'Legendary'),
+        ]:
+    for (idx, (guntype, gunprob)) in enumerate([
+            ('Pistol', drop_prob_pistol),
+            ('AR', drop_prob_ar),
+            ('SMG', drop_prob_smg),
+            ('Shotgun', drop_prob_shotgun),
+            ('Sniper', drop_prob_sniper),
+            ('Launcher', drop_prob_launcher),
+            ]):
+        hfs.add_level_hotfix('normalize_weapon_types_{}_{}'.format(rarity, guntype),
+            'NormWeap{}{}'.format(rarity, guntype),
+            ',GD_Itempools.WeaponPools.Pool_Weapons_All_{}_{},BalancedItems[{}].Probability.BaseValueConstant,,{}'.format(
+                number,
+                rarity,
+                idx,
+                gunprob))
 
 # Make Shirtless Men drop from the badass pool pool
 hfs.add_level_hotfix('shirtless_man_badass', 'ShirtlessManDrop',

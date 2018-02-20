@@ -54,6 +54,8 @@ Specifically, this mod does the following:
 * Darts and Spikers drop far less frequently in the E-Tech pools.  *(I
   suspect this might annoy some folks; I could probably be convinced to
   undo that)*
+* Normalizes weapon type drops a bit.  *(Decreases pistol drop chance,
+  increases all other weapon types.)*
 * Lootable Container Changes:
   * "Regular" treasure chests will always provide at least blue-rarity gear,
     and has a decent chance of including stuff from the legendary pools.
