@@ -98,6 +98,7 @@ Specifically, this mod does the following:
   * A few more standard enemies have also been set to drop from the badass pool:
     * Shirtlesss Men
     * Gluttonous Thresher *(actually drops from the "super" badass pool)*
+    * Sinkhole
     * Roscoe
     * Bulstross
     * Arguk the Butcher

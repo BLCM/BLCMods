@@ -232,6 +232,10 @@ hfs.add_level_hotfix('shirtless_man_badass', 'ShirtlessManDrop',
 hfs.add_level_hotfix('gluttonous_badass', 'GluttonousDrop',
     "Outwash_P,GD_Population_Thresher.Balance.PawnBalance_ThresherGluttonous,DefaultItemPoolIncludedLists[0],,ItemPoolListDefinition'GD_Itempools.ListDefs.SuperBadassEnemyGunsAndGear'")
 
+# Make Sinkhole drop from the badass pool pool
+hfs.add_level_hotfix('sinkhole_badass', 'SinkholeDrop',
+    "Fridge_P,GD_Population_Stalker.Balance.Unique.PawnBalance_Stalker_SwallowedWhole,DefaultItemPoolIncludedLists[0],,ItemPoolListDefinition'GD_Itempools.ListDefs.BadassEnemyGunsAndGear'")
+
 # Make No-Beard always drop his unique
 hfs.add_level_hotfix('scarlett_nobeard', 'NoBeardDrop',
     'Orchid_OasisTown_P,GD_Orchid_Pop_NoBeard.PawnBalance_Orchid_NoBeard,DefaultItemPoolList[1].PoolProbability.BaseValueConstant,,1.0')
