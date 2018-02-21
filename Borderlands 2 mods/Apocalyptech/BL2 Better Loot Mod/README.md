@@ -61,6 +61,9 @@ Specifically, this mod does the following:
     and has a decent chance of including stuff from the legendary pools.
   * "Epic" treasure chests have an extremely high probability of dropping
     from the legendary pools.
+  * Mordecai's Stash (from the mission The Good, The Bad, and the Mordecai) has
+    been changed to only drop sniper rifles, and vastly improves the gear
+    quality.
   * Dice Chests (from the Tiny Tina DLC) will have a small chance of containing
     legendary loot on a "very high" roll.
   * Captain Scarlett DLC and Big Game Hunt DLC endgame chests were converted

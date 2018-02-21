@@ -285,6 +285,17 @@ for num in range(1, 8):
 hfs.add_level_hotfix('rakkman_badass', 'RakkmanDrop',
     "Fridge_P,GD_Population_Psycho.Balance.Unique.PawnBalance_RakkMan,DefaultItemPoolIncludedLists[0],,ItemPoolListDefinition'GD_Itempools.ListDefs.BadassEnemyGunsAndGear'")
 
+# Improve Mordecai's Stash end-mission drops.  All snipers, and much better
+# quality.
+hfs.add_level_hotfix('mordecai_stash_0', 'MordecaiStash',
+    "Interlude_P,GD_Z3_GoodBadMordecaiData.IO_GoodBadMordecai_GraveStash:BehaviorProviderDefinition_2.Behavior_SpawnItems_48,ItemPoolList[19].ItemPool,,ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_SniperRifles_05_VeryRare'")
+hfs.add_level_hotfix('mordecai_stash_1', 'MordecaiStash',
+    "Interlude_P,GD_Z3_GoodBadMordecaiData.IO_GoodBadMordecai_GraveStash:BehaviorProviderDefinition_2.Behavior_SpawnItems_48,ItemPoolList[20].ItemPool,,ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_SniperRifles_05_VeryRare_Alien'")
+hfs.add_level_hotfix('mordecai_stash_2', 'MordecaiStash',
+    "Interlude_P,GD_Z3_GoodBadMordecaiData.IO_GoodBadMordecai_GraveStash:BehaviorProviderDefinition_2.Behavior_SpawnItems_48,ItemPoolList[21].ItemPool,,ItemPoolDefinition'GD_Aster_ItemPools.WeaponPools.Pool_Weapons_Snipers_04_Gemstone'")
+hfs.add_level_hotfix('mordecai_stash_3', 'MordecaiStash',
+    "Interlude_P,GD_Z3_GoodBadMordecaiData.IO_GoodBadMordecai_GraveStash:BehaviorProviderDefinition_2.Behavior_SpawnItems_48,ItemPoolList[22].ItemPool,,ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_SniperRifles_06_Legendary'")
+
 # Make No-Beard always drop his unique
 hfs.add_level_hotfix('scarlett_nobeard', 'NoBeardDrop',
     'Orchid_OasisTown_P,GD_Orchid_Pop_NoBeard.PawnBalance_Orchid_NoBeard,DefaultItemPoolList[1].PoolProbability.BaseValueConstant,,1.0')
