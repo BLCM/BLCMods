@@ -281,7 +281,7 @@ for num in range(1, 8):
 		)
 		""".format(num))
 
-# Make Rakkman drop from the badass pool pool
+# Make Rakkman drop from the badass pool
 hfs.add_level_hotfix('rakkman_badass', 'RakkmanDrop',
     "Fridge_P,GD_Population_Psycho.Balance.Unique.PawnBalance_RakkMan,DefaultItemPoolIncludedLists[0],,ItemPoolListDefinition'GD_Itempools.ListDefs.BadassEnemyGunsAndGear'")
 
@@ -295,6 +295,12 @@ hfs.add_level_hotfix('mordecai_stash_2', 'MordecaiStash',
     "Interlude_P,GD_Z3_GoodBadMordecaiData.IO_GoodBadMordecai_GraveStash:BehaviorProviderDefinition_2.Behavior_SpawnItems_48,ItemPoolList[21].ItemPool,,ItemPoolDefinition'GD_Aster_ItemPools.WeaponPools.Pool_Weapons_Snipers_04_Gemstone'")
 hfs.add_level_hotfix('mordecai_stash_3', 'MordecaiStash',
     "Interlude_P,GD_Z3_GoodBadMordecaiData.IO_GoodBadMordecai_GraveStash:BehaviorProviderDefinition_2.Behavior_SpawnItems_48,ItemPoolList[22].ItemPool,,ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_SniperRifles_06_Legendary'")
+
+# Make Mick Zaford and Papa/Jimbo Hodunk drop from the badass pool
+hfs.add_level_hotfix('mickzaford_badass', 'MickZafordDrop',
+    "Interlude_P,GD_Population_Marauder.Balance.Unique.PawnBalance_MickZaford_Combat,DefaultItemPoolIncludedLists[0],,ItemPoolListDefinition'GD_Itempools.ListDefs.BadassEnemyGunsAndGear'")
+hfs.add_level_hotfix('papa_hodunk_badass', 'PapaHodunkDrop',
+    "Interlude_P,GD_Population_Marauder.Balance.Unique.PawnBalance_JimboRiding,DefaultItemPoolIncludedLists[0],,ItemPoolListDefinition'GD_Itempools.ListDefs.BadassEnemyGunsAndGear'")
 
 # Make No-Beard always drop his unique
 hfs.add_level_hotfix('scarlett_nobeard', 'NoBeardDrop',

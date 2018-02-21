@@ -103,6 +103,8 @@ Specifically, this mod does the following:
     * Gluttonous Thresher *(actually drops from the "super" badass pool)*
     * Sinkhole
     * Rakkman
+    * Mick Zaford
+    * Papa/Jimbo Hodunk
     * Roscoe
     * Bulstross
     * Arguk the Butcher
