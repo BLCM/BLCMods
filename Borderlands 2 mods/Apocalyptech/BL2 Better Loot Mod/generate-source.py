@@ -236,6 +236,51 @@ hfs.add_level_hotfix('gluttonous_badass', 'GluttonousDrop',
 hfs.add_level_hotfix('sinkhole_badass', 'SinkholeDrop',
     "Fridge_P,GD_Population_Stalker.Balance.Unique.PawnBalance_Stalker_SwallowedWhole,DefaultItemPoolIncludedLists[0],,ItemPoolListDefinition'GD_Itempools.ListDefs.BadassEnemyGunsAndGear'")
 
+# Make Laney's Dwarves drop crystals, and be likely to drop a gemstone between 'em
+for num in range(1, 8):
+	hfs.add_level_hotfix('laney_dwarf_drop_{}'.format(num),
+        'LaneyDwarfDrop{}'.format(num),
+		"""Fridge_P,GD_Population_Midget.Balance.Unique.PawnBalance_LaneyDwarf{},DefaultItemPoolList,,
+		(
+			(
+				ItemPool=ItemPoolDefinition'GD_ItempoolsEnemyUse.WeaponPools.Pool_Weapons_SMG_EnemyUse',
+				PoolProbability=(
+					BaseValueConstant=1.000000,
+					BaseValueAttribute=None,
+					InitializationDefinition=None,
+					BaseValueScaleConstant=1.000000
+				)
+			),
+			(
+				ItemPool=ItemPoolDefinition'GD_ItempoolsEnemyUse.Shields.Pool_Shields_Standard_EnemyUse',
+				PoolProbability=(
+					BaseValueConstant=0.250000,
+					BaseValueAttribute=None,
+					InitializationDefinition=None,
+					BaseValueScaleConstant=1.000000
+				)
+			),
+			(
+				ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Crystal',
+				PoolProbability=(
+					BaseValueConstant=1.000000,
+					BaseValueAttribute=None,
+					InitializationDefinition=None,
+					BaseValueScaleConstant=1.000000
+				)
+			),
+			(
+				ItemPool=ItemPoolDefinition'GD_Aster_ItemPools.WeaponPools.Pool_Weapons_04_Gemstone',
+				PoolProbability=(
+					BaseValueConstant=0.200000,
+					BaseValueAttribute=None,
+					InitializationDefinition=None,
+					BaseValueScaleConstant=1.000000
+				)
+			)
+		)
+		""".format(num))
+
 # Make No-Beard always drop his unique
 hfs.add_level_hotfix('scarlett_nobeard', 'NoBeardDrop',
     'Orchid_OasisTown_P,GD_Orchid_Pop_NoBeard.PawnBalance_Orchid_NoBeard,DefaultItemPoolList[1].PoolProbability.BaseValueConstant,,1.0')
