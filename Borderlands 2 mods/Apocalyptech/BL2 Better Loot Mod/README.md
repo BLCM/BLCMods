@@ -99,6 +99,7 @@ Specifically, this mod does the following:
     * Shirtlesss Men
     * Gluttonous Thresher *(actually drops from the "super" badass pool)*
     * Sinkhole
+    * Rakkman
     * Roscoe
     * Bulstross
     * Arguk the Butcher
