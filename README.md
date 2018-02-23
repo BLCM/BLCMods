@@ -37,7 +37,7 @@ If you are not part of BLCM and wish to contribute a mod:
 ![img](https://i.imgur.com/ssujDS4.png)
 - Then wait for someone on [BLCM](https://github.com/BLCM) to accept, merge and commit your request for you, if it takes more than a week feel free to ping someone on the discord to let them know that you've been waiting an extended period of time for a pull request.
 
--This is ***NOT*** permission to ping someone as soon as you send a pull request, remember that not everyone is on discord/Github 24/7, it will take some time regardless if you ping someone or not, and will be seemingly random at times, so please be patient when waiting for approval.
+- This is ***NOT*** permission to ping someone as soon as you send a pull request, remember that not everyone is on discord/Github 24/7, it will take some time regardless if you ping someone or not, and will be seemingly random at times, so please be patient when waiting for approval.
 
 If you are part of [BLCM](https://github.com/BLCM) you do not need to fork or pull request.
 
