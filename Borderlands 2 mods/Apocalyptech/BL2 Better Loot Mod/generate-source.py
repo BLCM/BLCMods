@@ -302,6 +302,14 @@ hfs.add_level_hotfix('mickzaford_badass', 'MickZafordDrop',
 hfs.add_level_hotfix('papa_hodunk_badass', 'PapaHodunkDrop',
     "Interlude_P,GD_Population_Marauder.Balance.Unique.PawnBalance_JimboRiding,DefaultItemPoolIncludedLists[0],,ItemPoolListDefinition'GD_Itempools.ListDefs.BadassEnemyGunsAndGear'")
 
+# Make Jack's Body Double drop from the badass pool
+hfs.add_level_hotfix('bodydouble_badass', 'BodyDoubleDrop',
+    "HyperionCity_P,GD_Population_Jack.Balance.PawnBalance_JacksBodyDouble,DefaultItemPoolIncludedLists[0],,ItemPoolListDefinition'GD_Itempools.ListDefs.BadassEnemyGunsAndGear'")
+
+# Make Deputy Winger drop from the badass pool
+hfs.add_level_hotfix('deputy_badass', 'DeputyDrop',
+    "Grass_Lynchwood_P,GD_Population_Sheriff.Balance.PawnBalance_Deputy,DefaultItemPoolIncludedLists[0],,ItemPoolListDefinition'GD_Itempools.ListDefs.BadassEnemyGunsAndGear'")
+
 # Make No-Beard always drop his unique
 hfs.add_level_hotfix('scarlett_nobeard', 'NoBeardDrop',
     'Orchid_OasisTown_P,GD_Orchid_Pop_NoBeard.PawnBalance_Orchid_NoBeard,DefaultItemPoolList[1].PoolProbability.BaseValueConstant,,1.0')
