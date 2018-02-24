@@ -64,6 +64,8 @@ Specifically, this mod does the following:
   * Mordecai's Stash (from the mission The Good, The Bad, and the Mordecai) has
     been changed to only drop sniper rifles, and vastly improves the gear
     quality.
+  * Roland's Chest in Sanctuary has been changed to only have loot pools with
+    weapons, and is guaranteed to have at least a couple legendaries.
   * Dice Chests (from the Tiny Tina DLC) will have a small chance of containing
     legendary loot on a "very high" roll.
   * Captain Scarlett DLC and Big Game Hunt DLC endgame chests were converted
