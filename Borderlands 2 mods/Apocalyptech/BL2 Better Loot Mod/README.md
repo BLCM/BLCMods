@@ -95,6 +95,7 @@ Specifically, this mod does the following:
   * Chubby drop pool has been improved
   * Some "Badass" enemies weren't actually pulling from the badass drop pool,
     which has been fixed:
+    * Badass Bedrock Bullymongs
     * Badass Boroks
     * Badass Knights
     * Badass Fire Archers

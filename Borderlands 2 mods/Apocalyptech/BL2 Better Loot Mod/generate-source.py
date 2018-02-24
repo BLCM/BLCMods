@@ -703,6 +703,10 @@ hfs.add_level_hotfix('roland_chest', 'BetterRolandChest',
     )
     """)
 
+# Make Badass Bedrock Bullymongs drop from the badass pool
+hfs.add_level_hotfix('bedrock_bullymong_badass', 'BedrockBullymongBadass',
+    ",GD_Population_PrimalBeast.Balance.PawnBalance_PrimalBeast_BedrockBadass,DefaultItemPoolIncludedLists[0],,ItemPoolListDefinition'GD_Itempools.ListDefs.BadassEnemyGunsAndGear'")
+
 # Make No-Beard always drop his unique
 hfs.add_level_hotfix('scarlett_nobeard', 'NoBeardDrop',
     'Orchid_OasisTown_P,GD_Orchid_Pop_NoBeard.PawnBalance_Orchid_NoBeard,DefaultItemPoolList[1].PoolProbability.BaseValueConstant,,1.0')
