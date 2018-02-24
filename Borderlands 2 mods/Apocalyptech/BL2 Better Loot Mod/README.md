@@ -105,6 +105,8 @@ Specifically, this mod does the following:
     * Rakkman
     * Mick Zaford
     * Papa/Jimbo Hodunk
+    * Jack's Body Double
+    * Deputy Winger
     * Roscoe
     * Bulstross
     * Arguk the Butcher
