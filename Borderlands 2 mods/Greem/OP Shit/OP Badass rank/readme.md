@@ -6,7 +6,10 @@ I use this to fuck around on borderlands, basically it boosts important stats li
 
 #How to install
 
-1.  Where your borderlands saves are located, there's a file named profile.bin. Take that file and drag it somewhere else for a backup. Drag the profile.bin you downloaded from me into your old one's place, then load up the game. If all goes right, you should have OP badass rank!
+1.  Where your borderlands saves are located, there's a file named profile.bin. 
+2.  Take that file and drag it somewhere else for a backup. 
+3.  Drag the profile.bin you downloaded from me into your old one's place, then load up the game. 
+3a. If all goes right, you should have OP badass rank!
 
 Claptrap's stash is stored in profile.bin. Do NOT delete your old profile.bin if you have important shit in there! This one has a perfect Shadow of the Seraphs.
 
