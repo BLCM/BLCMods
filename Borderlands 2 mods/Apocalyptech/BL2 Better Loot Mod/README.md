@@ -110,6 +110,7 @@ Specifically, this mod does the following:
     * Papa/Jimbo Hodunk
     * Jack's Body Double
     * Deputy Winger
+    * Mortar
     * Roscoe
     * Bulstross
     * Arguk the Butcher
