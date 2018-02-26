@@ -215,7 +215,7 @@ easily persuaded otherwise if someone feels strongly about it.
 There's also a few drop pools / containers / etc which I've purposefully
 left alone:
 
-* White Chests
+* Bandit Coolers
 * Money Boxes
 * Laundry Machines / Toilets / Cardboard Boxes
 * Dumpsters
