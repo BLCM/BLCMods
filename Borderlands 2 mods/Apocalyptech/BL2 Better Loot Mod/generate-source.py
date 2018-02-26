@@ -711,6 +711,10 @@ hfs.add_level_hotfix('bedrock_bullymong_badass', 'BedrockBullymongBadass',
 hfs.add_level_hotfix('mortar_badass', 'MortarDrop',
     "CraterLake_P,GD_Population_Rat.Balance.Unique.PawnBalance_Mortar,DefaultItemPoolIncludedLists[0],,ItemPoolListDefinition'GD_Itempools.ListDefs.BadassEnemyGunsAndGear'")
 
+# Make Bonehead 2.0 drop from the badass pool
+hfs.add_level_hotfix('bonehead2_badass', 'Bonehead2Drop',
+    "Stockade_P,GD_Population_Loader.Balance.Unique.PawnBalance_BoneHead2,DefaultItemPoolIncludedLists[0],,ItemPoolListDefinition'GD_Itempools.ListDefs.BadassEnemyGunsAndGear'")
+
 # Make No-Beard always drop his unique
 hfs.add_level_hotfix('scarlett_nobeard', 'NoBeardDrop',
     'Orchid_OasisTown_P,GD_Orchid_Pop_NoBeard.PawnBalance_Orchid_NoBeard,DefaultItemPoolList[1].PoolProbability.BaseValueConstant,,1.0')

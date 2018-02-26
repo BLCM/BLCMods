@@ -111,6 +111,7 @@ Specifically, this mod does the following:
     * Jack's Body Double
     * Deputy Winger
     * Mortar
+    * Bonehead 2.0
     * Roscoe
     * Bulstross
     * Arguk the Butcher
