@@ -133,6 +133,8 @@ Specifically, this mod does the following:
     * The BLNG Loader (from Wedding Day Massacre) will drop from the badass pool and
       also drop a whole bunch of money.  I've always been mystified why it didn't
       drop a ton of money from the start.
+* Improved gifts received in The Talon of God (from Sanctuary residents) to
+  be purples and gemstones.
 * Remove early-game loot restrictions.  This is actually a superset of the
   similar feature already present in UCP 4.0.  This version enables spawning
   of basically everything from the beginning, including all grenade types,

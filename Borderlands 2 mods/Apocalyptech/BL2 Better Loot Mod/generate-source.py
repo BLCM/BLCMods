@@ -715,6 +715,24 @@ hfs.add_level_hotfix('mortar_badass', 'MortarDrop',
 hfs.add_level_hotfix('bonehead2_badass', 'Bonehead2Drop',
     "Stockade_P,GD_Population_Loader.Balance.Unique.PawnBalance_BoneHead2,DefaultItemPoolIncludedLists[0],,ItemPoolListDefinition'GD_Itempools.ListDefs.BadassEnemyGunsAndGear'")
 
+# Improve Talon of God gifts
+hfs.add_level_hotfix('talon_gifts_zed', 'TalonGiftsZed',
+    "SanctuaryAir_P,GD_Zed.Character.AIDef_Zed:AIBehaviorProviderDefinition_0.Behavior_SpawnItems_11,ItemPoolList[0].ItemPool,,ItemPoolDefinition'GD_Itempools.ShieldPools.Pool_Shields_All_05_VeryRare'")
+hfs.add_level_hotfix('talon_gifts_scooter', 'TalonGiftsScooter',
+    "SanctuaryAir_P,GD_Scooter.Character.AIDef_Scooter:AIBehaviorProviderDefinition_0.Behavior_SpawnItems_25,ItemPoolList[0].ItemPool,,ItemPoolDefinition'GD_Itempools.GrenadeModPools.Pool_GrenadeMods_05_VeryRare'")
+hfs.add_level_hotfix('talon_gifts_tannis', 'TalonGiftsTannis',
+    "SanctuaryAir_P,GD_TannisNPC.Character.AIDef_TannisNPC:AIBehaviorProviderDefinition_1.Behavior_SpawnItems_6,ItemPoolList[0].ItemPool,,ItemPoolDefinition'GD_Itempools.ArtifactPools.Pool_Artifacts_04_VeryRare'")
+hfs.add_level_hotfix('talon_gifts_moxxi', 'TalonGiftsMoxxi',
+    "SanctuaryAir_P,GD_Moxxi.Character.AIDef_Moxxi:AIBehaviorProviderDefinition_1.Behavior_SpawnItems_1,ItemPoolList[0].ItemPool,,ItemPoolDefinition'GD_Aster_ItemPools.WeaponPools.Pool_Weapons_SMGs_04_Gemstone'")
+hfs.add_level_hotfix('talon_gifts_hammerlock', 'TalonGiftsHammerlock',
+    "SanctuaryAir_P,GD_Hammerlock.Character.AIDef_Hammerlock:AIBehaviorProviderDefinition_1.Behavior_SpawnItems_20,ItemPoolList[0].ItemPool,,ItemPoolDefinition'GD_Aster_ItemPools.WeaponPools.Pool_Weapons_Snipers_04_Gemstone'")
+hfs.add_level_hotfix('talon_gifts_marcus_0', 'TalonGiftsMarcus',
+    "SanctuaryAir_P,GD_Marcus.Character.AIDef_Marcus:AIBehaviorProviderDefinition_0.Behavior_SpawnItems_14,ItemPoolList[0].ItemPool,,ItemPoolDefinition'GD_Aster_ItemPools.WeaponPools.Pool_Weapons_ARs_04_Gemstone'")
+hfs.add_level_hotfix('talon_gifts_marcus_1', 'TalonGiftsMarcus',
+    "SanctuaryAir_P,GD_Marcus.Character.AIDef_Marcus:AIBehaviorProviderDefinition_0.Behavior_SpawnItems_14,ItemPoolList[1].ItemPool,,ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_Launchers_05_VeryRare'")
+hfs.add_level_hotfix('talon_gifts_marcus_2', 'TalonGiftsMarcus',
+    "SanctuaryAir_P,GD_Marcus.Character.AIDef_Marcus:AIBehaviorProviderDefinition_0.Behavior_SpawnItems_14,ItemPoolList[2].ItemPool,,ItemPoolDefinition'GD_Aster_ItemPools.WeaponPools.Pool_Weapons_Shotguns_04_Gemstone'")
+
 # Make No-Beard always drop his unique
 hfs.add_level_hotfix('scarlett_nobeard', 'NoBeardDrop',
     'Orchid_OasisTown_P,GD_Orchid_Pop_NoBeard.PawnBalance_Orchid_NoBeard,DefaultItemPoolList[1].PoolProbability.BaseValueConstant,,1.0')
