@@ -138,13 +138,6 @@ couple of my mods, to make dealing with hotfixes a bit easier.  It's pretty
 straightforward, though unless you're me, you're unlikely to ever bother with
 it.
 
-Resources
-=========
-
-This directory contains a couple of text files which is mostly just the output
-from various `obj dump <foo>` commands for classes/objects I was interested in
-modding.
-
 Licenses
 ========
 
