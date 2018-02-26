@@ -24,17 +24,18 @@ extensions).  You'll have a new folder for this mod underneath the `mods`
 folder at the bottom, and can turn parts on or off at will.
 
 If for whatever reason you don't want to use FilterTool, there is also
-a standalone version at `BL2 Better Loot Mod by Apocalyptech - Standalone`.
-Simply copy that file into the game's `steamassets/binaries` directory with
+a standalone version at `BL2 Better Loot Mod by Apocalyptech - Standalone`,
+and an offline standalone version at `BL2 Better Loot Mod by Apocalyptech - Standalone Offline`.
+Simply copy the file into the game's `steamassets/binaries` directory with
 an easy-to-type filename, and then run `exec <filename>` from the console
 to load it on its own.  It works quite well by itself.
 
-The only actual differences between the two versions are that the "Standalone"
-version contains all of the original Gearbox hotfix data, and sets up the
-hotfix commands for execution by Borderlands, whereas the "UCP Compat"
-version lets FilterTool/UCP take care of that for you.
+The only actual differences between the UCP and Standalone versions are
+that the "Standalone" versions contain all of the original Gearbox hotfix
+data, and set up the hotfix commands for execution by Borderlands, whereas
+the "UCP Compat" version lets FilterTool/UCP take care of that for you.
 
-Both versions are fully FilterTool compatible.
+All versions are fully FilterTool compatible.
 
 Mod Overview
 ------------
@@ -251,19 +252,12 @@ well-covered in other mods, so instead I'll just mention them here.
 TODO
 ----
 
-* Playtesting in general (including with UCP)
-  * This is completely untested in TVHM/UVHM.  I'm not really a fan of either
-    mode, so I'm unlikely to do so.  The worst-case scenario is that
-    TVHM/UVHM might override some of my specific enemy drops, though -- I
-    suspect that the majority of the mod should still work fine.
+* This is completely untested in TVHM/UVHM.  I'm not really a fan of either
+  mode, so I'm unlikely to do so.  The worst-case scenario is that
+  TVHM/UVHM might override some of my specific enemy drops, though -- I
+  suspect that the majority of the mod should still work fine.
   * As such, I have not looked into OMGWTH's drops (from Digistruct Peak,
     at OP5+), or drops by other bosses present on that map.
-* Balancing!  This mod is obviously very cheaty/OP, but I don't want it to
-  be completely ludicrous.  I'd like it to still feel a bit special when
-  Legendaries/Pearls/Seraphs get dropped, while at the same time providing
-  a steady supply of fun gear.  Obviously this is very much down to personal
-  preference.  Regardless, I've done extremely little actual playtesting
-  with the current drop weights.
 * Can we increase boss drop counts depending on player count?
 * Untested components from Torgue DLC *(I'm afraid that's my least favorite
   DLC, to the point of not really liking it much, so I suspect that these
@@ -311,7 +305,8 @@ To generate the end result file, I actually run the small shell script
 
     ./generate-source.py && \
         ../conv_to_mod.py -f "BL2 Better Loot Mod by Apocalyptech - UCP Compat" && \
-        ../conv_to_mod.py -f "BL2 Better Loot Mod by Apocalyptech - Standalone"
+        ../conv_to_mod.py -f "BL2 Better Loot Mod by Apocalyptech - Standalone" && \
+        ../conv_to_mod.py -f "BL2 Better Loot Mod by Apocalyptech - Standalone Offline"
 
 Credits
 -------

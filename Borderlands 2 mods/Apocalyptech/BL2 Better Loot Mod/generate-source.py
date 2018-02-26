@@ -53,8 +53,10 @@ except ModuleNotFoundError:
 mod_name = 'BL2 Better Loot Mod by Apocalyptech'
 variant_filtertool_name = 'UCP Compat'
 variant_standalone_name = 'Standalone'
+variant_offline_name = 'Standalone Offline'
 output_filename_filtertool = '{} - {}-source.txt'.format(mod_name, variant_filtertool_name)
 output_filename_standalone = '{} - {}-source.txt'.format(mod_name, variant_standalone_name)
+output_filename_offline = '{} - {}-source.txt'.format(mod_name, variant_offline_name)
 
 ###
 ### Where we get our mod data from
@@ -2517,3 +2519,12 @@ with open(output_filename_standalone, 'w') as df:
         hotfix_transient_defs=hfs.get_transient_defs(),
         ))
 print('Wrote standalone mod file to: {}'.format(output_filename_standalone))
+
+# Write to a standalone offline file
+with open(output_filename_offline, 'w') as df:
+    df.write(loot_str.format(
+        variant_name=variant_offline_name,
+        hotfix_gearbox_base=hfs.get_gearbox_hotfix_xml(),
+        hotfix_transient_defs=hfs.get_transient_defs(offline=True),
+        ))
+print('Wrote standalone offline mod file to: {}'.format(output_filename_offline))

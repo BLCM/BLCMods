@@ -286,14 +286,25 @@ class Hotfixes(object):
             output_lines.append('{}#</Original Gearbox hotfix data - Do not uncheck>'.format(indent))
             return "\n".join(output_lines)
 
-    def get_transient_defs(self):
+    def get_transient_defs(self, offline=False):
         """
         Returns the Transient.SparkServiceConfiguration_6 text necessary to
-        actually activate all of our included hotfixes.
+        actually activate all of our included hotfixes.  Pass `offline=True`
+        to generate offline hotfix statements instead.
         """
         return_lines = []
         keys = []
         values = []
+
+        # Offline setup
+        if offline:
+            return_lines.append('set Transient.SparkServiceConfiguration_0 ServiceName Micropatch')
+            return_lines.append('')
+            return_lines.append('set Transient.SparkServiceConfiguration_0 ConfigurationGroup Default')
+            return_lines.append('')
+            spark_num = 0
+        else:
+            spark_num = 6
 
         # Get all our keys+values that we're adding
         for hotfix in self.hotfixes:
@@ -301,12 +312,20 @@ class Hotfixes(object):
                 keys.append(hotfix.key)
                 values.append(hotfix.value)
 
+        # Output the hotfix keys/values
         if len(keys) > 0:
-            return_lines.append('set Transient.SparkServiceConfiguration_6 Keys ({})'.format(
+            return_lines.append('set Transient.SparkServiceConfiguration_{} Keys ({})'.format(
+                spark_num,
                 ','.join(['"{}"'.format(key) for key in keys])))
             return_lines.append('')
-            return_lines.append('set Transient.SparkServiceConfiguration_6 Values ({})'.format(
+            return_lines.append('set Transient.SparkServiceConfiguration_{} Values ({})'.format(
+                spark_num,
                 ','.join(['"{}"'.format(value) for value in values])))
+            return_lines.append('')
+
+        # More Offline setup
+        if offline:
+            return_lines.append('set Transient.GearboxAccountData_1 Services (Transient.SparkServiceConfiguration_0)')
             return_lines.append('')
 
         return "\n".join(return_lines)
