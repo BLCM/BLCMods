@@ -733,6 +733,16 @@ hfs.add_level_hotfix('talon_gifts_marcus_1', 'TalonGiftsMarcus',
 hfs.add_level_hotfix('talon_gifts_marcus_2', 'TalonGiftsMarcus',
     "SanctuaryAir_P,GD_Marcus.Character.AIDef_Marcus:AIBehaviorProviderDefinition_0.Behavior_SpawnItems_14,ItemPoolList[2].ItemPool,,ItemPoolDefinition'GD_Aster_ItemPools.WeaponPools.Pool_Weapons_Shotguns_04_Gemstone'")
 
+# Improve The Warrior drops
+for (num, pool) in [
+        (12, 'GD_Itempools.Treasure_ChestPools.Pool_WeaponChest_Weapons_LongGuns'),
+        (15, 'GD_Itempools.Treasure_ChestPools.Pool_WeaponChest_Weapons_Pistols'),
+        (17, 'GD_Itempools.Treasure_ChestPools.Pool_WeaponChest_Weapons_Launchers'),
+        ]:
+    hfs.add_level_hotfix('warrior_drop_{}'.format(num),
+        'WarriorDrop',
+        "Boss_Volcano_P,GD_FinalBoss.Character.AIDef_FinalBoss:AIBehaviorProviderDefinition_1.Behavior_SpawnItems_{},ItemPoolList[0].ItemPool,,ItemPoolDefinition'{}'".format(num, pool))
+
 # Make No-Beard always drop his unique
 hfs.add_level_hotfix('scarlett_nobeard', 'NoBeardDrop',
     'Orchid_OasisTown_P,GD_Orchid_Pop_NoBeard.PawnBalance_Orchid_NoBeard,DefaultItemPoolList[1].PoolProbability.BaseValueConstant,,1.0')

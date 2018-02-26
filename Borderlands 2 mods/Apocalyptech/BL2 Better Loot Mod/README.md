@@ -122,6 +122,8 @@ Specifically, this mod does the following:
   * Then a few other tweaks to certain enemies:
     * Laney's Dwarf companions will drop crystals, and have a good chance of dropping
       a gemstone weapon between 'em.
+    * The Warrior's non-unique drops have been improved slightly *(though they were
+      already pretty good with our other buffs)*.
     * Witch Doctors (both in Big Game Hunt and Son of Crawmerax) will drop an Eridium
       stick, and have a pretty good chance of dropping a Relic as well.
     * Elite Savages are guaranteed to drop loot (though just from the standard pool)
