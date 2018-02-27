@@ -51,6 +51,7 @@ except ModuleNotFoundError:
 ###
 
 mod_name = 'BL2 Better Loot Mod'
+mod_version = '1.1.0 (prerelease)'
 variant_filtertool_name = 'UCP Compat'
 variant_standalone_name = 'Standalone'
 variant_offline_name = 'Standalone Offline'
@@ -2547,6 +2548,7 @@ with open(input_filename, 'r') as df:
 with open(output_filename_filtertool, 'w') as df:
     df.write(loot_str.format(
         mod_name=mod_name,
+        mod_version=mod_version,
         variant_name=variant_filtertool_name,
         config=ConfigExtreme(),
         hotfixes=hfs,
@@ -2562,6 +2564,7 @@ for (profile_filename, profile_class) in alt_profiles:
     with open(profile_filename, 'w') as df:
         df.write(loot_str.format(
             mod_name=mod_name,
+            mod_version=mod_version,
             variant_name=variant_filtertool_name,
             config=profile_class(),
             hotfixes=hfs,
@@ -2579,6 +2582,7 @@ for (profile_filename, profile_class) in alt_profiles:
 with open(output_filename_standalone, 'w') as df:
     df.write(loot_str.format(
         mod_name=mod_name,
+        mod_version=mod_version,
         variant_name=variant_standalone_name,
         config=ConfigExtreme(),
         hotfixes=hfs,
@@ -2593,6 +2597,7 @@ print('Wrote standalone mod file to: {}'.format(output_filename_standalone))
 with open(output_filename_offline, 'w') as df:
     df.write(loot_str.format(
         mod_name=mod_name,
+        mod_version=mod_version,
         variant_name=variant_offline_name,
         config=ConfigExtreme(),
         hotfixes=hfs,
