@@ -176,6 +176,18 @@ class ConfigBase(object):
     super_badass_pool_legendary = '1'
     super_badass_pool_epicchest = '1'
 
+    # Ultimate Badass pool probabilities (NOTE: these are *not* weights)
+    ultimate_badass_pool_veryrare_1 = '1'
+    ultimate_badass_pool_veryrare_2 = '0.5'
+    ultimate_badass_pool_alien_1 = '1'
+    ultimate_badass_pool_alien_2 = '0.5'
+    ultimate_badass_pool_legendary_1 = '1'
+    ultimate_badass_pool_legendary_2 = '0.5'
+    ultimate_badass_pool_legendary_3 = '0.25'
+    ultimate_badass_pool_epicchest_1 = '1'
+    ultimate_badass_pool_epicchest_2 = '0.5'
+    ultimate_badass_pool_epicchest_3 = '0.5'
+
     # Unique drop quantities.  Some of these are pretty high in my "default"
     # configuration, so putting them here lets me override them in the other
     # configs, easily.
@@ -425,6 +437,18 @@ class ConfigReasonable(ConfigBase):
     super_badass_pool_alien = '0.15'
     super_badass_pool_legendary = '.03'
     super_badass_pool_epicchest = '1'
+
+    # Ultimate Badass pool probabilities (NOTE: these are *not* weights)
+    ultimate_badass_pool_veryrare_1 = '1'
+    ultimate_badass_pool_veryrare_2 = '0'
+    ultimate_badass_pool_alien_1 = '0.4'
+    ultimate_badass_pool_alien_2 = '0'
+    ultimate_badass_pool_legendary_1 = '0.08'
+    ultimate_badass_pool_legendary_2 = '0'
+    ultimate_badass_pool_legendary_3 = '0'
+    ultimate_badass_pool_epicchest_1 = '1'
+    ultimate_badass_pool_epicchest_2 = '1'
+    ultimate_badass_pool_epicchest_3 = '1'
 
     # Drop rates within the "very high roll" pools of dice chests
     dice_vhigh_veryrare = '1'
