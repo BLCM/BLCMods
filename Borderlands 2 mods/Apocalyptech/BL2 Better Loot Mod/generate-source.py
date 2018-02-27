@@ -113,20 +113,20 @@ class ConfigBase(object):
     shield_base_legendary = one
 
     # Custom weapon drop scaling
-    weapon_scale_common = '8.000000'
-    weapon_scale_uncommon = '85.000000'
-    weapon_scale_rare = '65.000000'
-    weapon_scale_veryrare = '50.000000'
-    weapon_scale_alien = '30.000000'
-    weapon_scale_legendary = '3.000000'
-    weapon_scale_iris_cobra = '1.000000'
+    weapon_scale_common = '8'
+    weapon_scale_uncommon = '85'
+    weapon_scale_rare = '65'
+    weapon_scale_veryrare = '50'
+    weapon_scale_alien = '30'
+    weapon_scale_legendary = '3'
+    weapon_scale_iris_cobra = '1'
 
     # Custom COM drop scaling (identical to weapons, apart from an additional Alignment COM pool)
     cm_scale_common = weapon_scale_common
     cm_scale_uncommon = weapon_scale_uncommon
     cm_scale_rare = weapon_scale_rare
     cm_scale_veryrare = weapon_scale_veryrare
-    cm_scale_alignment = '30.000000'
+    cm_scale_alignment = '30'
     cm_scale_legendary = weapon_scale_legendary
 
     # Custom grenade drop scaling (identical to weapons)
@@ -148,21 +148,26 @@ class ConfigBase(object):
     relic_scale_veryrare = '2.0'
 
     # Drop rates for "regular" treasure chests
-    treasure_scale_rare = '20.000000'
-    treasure_scale_veryrare = '60.000000'
-    treasure_scale_alien = '30.000000'
-    treasure_scale_legendary = '5.000000'
+    treasure_scale_common = zero
+    treasure_scale_uncommon = zero
+    treasure_scale_rare = '20'
+    treasure_scale_veryrare = '60'
+    treasure_scale_alien = '30'
+    treasure_scale_legendary = '5'
 
     # Drop rates for "epic" treasure chests
-    epic_scale_veryrare = '1.000000'
-    epic_scale_alien = '1.000000'
-    epic_scale_legendary = '0.300000'
-    epic_scale_legendary_dbl = '0.600000'
+    epic_scale_common = zero
+    epic_scale_uncommon = zero
+    epic_scale_rare = zero
+    epic_scale_veryrare = '1'
+    epic_scale_alien = '1'
+    epic_scale_legendary = '0.3'
+    epic_scale_legendary_dbl = '0.6'
 
     # Drop rates within the "very high roll" pools of dice chests
-    dice_vhigh_veryrare = '1.000000'
-    dice_vhigh_alien = '1.000000'
-    dice_vhigh_legendary = '0.500000'
+    dice_vhigh_veryrare = '1'
+    dice_vhigh_alien = '1'
+    dice_vhigh_legendary = '0.5'
 
     # 2.5x chance of both kinds of eridium
     eridium_bar_drop = '0.003750'       # Stock: 0.001500
@@ -320,20 +325,20 @@ class ConfigReasonable(ConfigBase):
     profile_name = 'Reasonable Drops'
 
     # Weapon drops
-    weapon_scale_common = '8.000000'
-    weapon_scale_uncommon = '85.000000'
-    weapon_scale_rare = '65.000000'
-    weapon_scale_veryrare = '50.000000'
-    weapon_scale_alien = '30.000000'
-    weapon_scale_legendary = '3.000000'
-    weapon_scale_iris_cobra = '1.000000'
+    weapon_scale_common = '32.75'
+    weapon_scale_uncommon = '35'
+    weapon_scale_rare = '25'
+    weapon_scale_veryrare = '5'
+    weapon_scale_alien = '2'
+    weapon_scale_legendary = '0.25'
+    weapon_scale_iris_cobra = '2'
 
     # Class mods
     cm_scale_common = weapon_scale_common
     cm_scale_uncommon = weapon_scale_uncommon
     cm_scale_rare = weapon_scale_rare
     cm_scale_veryrare = weapon_scale_veryrare
-    cm_scale_alignment = '30.000000'
+    cm_scale_alignment = '2'
     cm_scale_legendary = weapon_scale_legendary
 
     # Custom grenade drop scaling (identical to weapons)
@@ -355,21 +360,25 @@ class ConfigReasonable(ConfigBase):
     relic_scale_veryrare = '2.0'
 
     # Drop rates for "regular" treasure chests
-    treasure_scale_rare = '20.000000'
-    treasure_scale_veryrare = '60.000000'
-    treasure_scale_alien = '30.000000'
-    treasure_scale_legendary = '5.000000'
+    treasure_scale_common = '32.5'
+    treasure_scale_uncommon = '40'
+    treasure_scale_rare = '20'
+    treasure_scale_veryrare = '5'
+    treasure_scale_alien = '3'
+    treasure_scale_legendary = '0.5'
 
     # Drop rates for "epic" treasure chests
-    epic_scale_veryrare = '1.000000'
-    epic_scale_alien = '1.000000'
-    epic_scale_legendary = '0.300000'
-    epic_scale_legendary_dbl = '0.600000'
+    epic_scale_uncommon = '25'
+    epic_scale_rare = '49'
+    epic_scale_veryrare = '15'
+    epic_scale_alien = '10'
+    epic_scale_legendary = '1'
+    epic_scale_legendary_dbl = '2'
 
     # Drop rates within the "very high roll" pools of dice chests
-    dice_vhigh_veryrare = '1.000000'
-    dice_vhigh_alien = '1.000000'
-    dice_vhigh_legendary = '0.500000'
+    dice_vhigh_veryrare = '1'
+    dice_vhigh_alien = '1'
+    dice_vhigh_legendary = '0.5'
 
     # 2.5x chance of both kinds of eridium
     eridium_bar_drop = '0.003750'       # Stock: 0.001500

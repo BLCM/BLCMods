@@ -24,8 +24,7 @@ two files:
 * `BL2 Better Loot Mod by Apocalyptech - UCP Compat` - Default drop weights
   which I'm personally happy with.  Many folks may find these a bit extreme.
 * `BL2 Better Loot Mod (Reasonable Drops) - UCP Compat` - More reasonable
-  drop weights.  *(at the moment this is actually identical to the main
-  version - needs tweaking+testing, etc)*
+  drop weights.  *(Work in Progress - needs tweaking+testing, etc)*
 
 Once the mod has been added, you'll have a new folder for this mod
 underneath the `mods` folder at the bottom, and can turn parts on or off at
@@ -354,6 +353,8 @@ Changelog
 **v1.0.0**, February 26, 2018:
  * Initial public release
 
-**v1.0.1**, (tbd):
+**v1.1.0**, (tbd):
  * Converted some statements to `set` commands which had been needlessly using
    hotfixes previously.
+ * Added "Reasonable Drops" Variant
+
