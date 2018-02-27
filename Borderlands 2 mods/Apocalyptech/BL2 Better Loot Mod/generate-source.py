@@ -77,8 +77,147 @@ hfs = Hotfixes(include_gearbox_patches=True)
 class ConfigBase(object):
     """
     Class to hold all our weights, and other vars which alter the probabilities of
-    various things dropping.  Derive from this class to override any of these, to
-    support multiple "profiles"
+    various things dropping.  Derive from this class to actually define the
+    values.
+    """
+
+    def relic_weight_string(self):
+        """
+        Forcing the "Reward" Relic pool to obey our custom weights.  There's
+        22 of these definitions which are all identical (and one outlier), so
+        we're going use a loop rather than a lot of copy+paste.  This is also
+        happening inside our ConfigBase class so that our weights can get
+        applied dynamically.
+        """
+        relic_weight_parts = []
+        for relic_type in [
+                'AggressionA',
+                'AggressionB',
+                'AggressionC',
+                'AggressionD',
+                'AggressionE',
+                'AggressionF',
+                'AllegianceA',
+                'AllegianceB',
+                'AllegianceC',
+                'AllegianceD',
+                'AllegianceE',
+                'AllegianceF',
+                'AllegianceG',
+                'AllegianceH',
+                'Elemental',
+                'Proficiency',
+                'Protection',
+                'Resistance',
+                'Stockpile',
+                'Strength',
+                'Tenacity',
+                'Vitality',
+                ]:
+            relic_weight_parts.append("""
+                set GD_Artifacts.PartLists.Parts_{relic_type}_Rare ConsolidatedAttributeInitData
+                (
+                    (
+                        BaseValueConstant=1.000000,
+                        BaseValueAttribute=None,
+                        InitializationDefinition=None,
+                        BaseValueScaleConstant=1.000000
+                    ),
+                    (
+                        BaseValueConstant=100.000000,
+                        BaseValueAttribute=None,
+                        InitializationDefinition=None,
+                        BaseValueScaleConstant=1.000000
+                    ),
+                    (
+                        BaseValueConstant=0.000000,
+                        BaseValueAttribute=None,
+                        InitializationDefinition=None,
+                        BaseValueScaleConstant=1.000000
+                    ),
+                    (
+                        BaseValueConstant=1.000000,
+                        BaseValueAttribute=None,
+                        InitializationDefinition=None,
+                        BaseValueScaleConstant={relic_scale_rare}
+                    ),
+                    (
+                        BaseValueConstant=1.000000,
+                        BaseValueAttribute=None,
+                        InitializationDefinition=None,
+                        BaseValueScaleConstant={relic_scale_veryrare}
+                    )
+                )
+""".format(
+    relic_type=relic_type,
+    relic_scale_rare=self.relic_scale_rare,
+    relic_scale_veryrare=self.relic_scale_veryrare,
+    ))
+        # This one is the one that's slightly different
+        relic_weight_parts.append("""
+                set GD_Artifacts.PartLists.Parts_Elemental_Status_Rare ConsolidatedAttributeInitData
+                (
+                    (
+                        BaseValueConstant=1.000000,
+                        BaseValueAttribute=None,
+                        InitializationDefinition=None,
+                        BaseValueScaleConstant=1.000000
+                    ),
+                    (
+                        BaseValueConstant=100.000000,
+                        BaseValueAttribute=None,
+                        InitializationDefinition=None,
+                        BaseValueScaleConstant=1.000000
+                    ),
+                    (
+                        BaseValueConstant=0.000000,
+                        BaseValueAttribute=None,
+                        InitializationDefinition=None,
+                        BaseValueScaleConstant=1.000000
+                    ),
+                    (
+                        BaseValueConstant=100.000000,
+                        BaseValueAttribute=None,
+                        InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',
+                        BaseValueScaleConstant=1.000000
+                    ),
+                    (
+                        BaseValueConstant=1.000000,
+                        BaseValueAttribute=None,
+                        InitializationDefinition=None,
+                        BaseValueScaleConstant={relic_scale_rare}
+                    ),
+                    (
+                        BaseValueConstant=1.000000,
+                        BaseValueAttribute=None,
+                        InitializationDefinition=None,
+                        BaseValueScaleConstant={relic_scale_veryrare}
+                    )
+                )
+""".format(
+    relic_type=relic_type,
+    relic_scale_rare=self.relic_scale_rare,
+    relic_scale_veryrare=self.relic_scale_veryrare,
+    ))
+
+        # Return the string
+        return ''.join(relic_weight_parts).lstrip()
+
+    def __format__(self, formatstr):
+        """
+        A bit of magic so that we can use our values in format strings
+        """
+        attr = getattr(self, formatstr)
+        if type(attr) == str:
+            return attr
+        else:
+            return attr()
+
+
+class ConfigExtreme(ConfigBase):
+    """
+    This is our default config, which I personally find quite pleasant.
+    Many folks will consider this a bit too OP/Extreme.
     """
 
     profile_name = 'Extreme Drops'
@@ -221,139 +360,7 @@ class ConfigBase(object):
     drop_prob_sniper = 80
     drop_prob_launcher = 40
 
-    def relic_weight_string(self):
-        """
-        Forcing the "Reward" Relic pool to obey our custom weights.  There's
-        22 of these definitions which are all identical (and one outlier), so
-        we're going use a loop rather than a lot of copy+paste.  This is also
-        happening inside our ConfigBase class so that our weights can get
-        applied dynamically.
-        """
-        relic_weight_parts = []
-        for relic_type in [
-                'AggressionA',
-                'AggressionB',
-                'AggressionC',
-                'AggressionD',
-                'AggressionE',
-                'AggressionF',
-                'AllegianceA',
-                'AllegianceB',
-                'AllegianceC',
-                'AllegianceD',
-                'AllegianceE',
-                'AllegianceF',
-                'AllegianceG',
-                'AllegianceH',
-                'Elemental',
-                'Proficiency',
-                'Protection',
-                'Resistance',
-                'Stockpile',
-                'Strength',
-                'Tenacity',
-                'Vitality',
-                ]:
-            relic_weight_parts.append("""
-                set GD_Artifacts.PartLists.Parts_{relic_type}_Rare ConsolidatedAttributeInitData
-                (
-                    (
-                        BaseValueConstant=1.000000,
-                        BaseValueAttribute=None,
-                        InitializationDefinition=None,
-                        BaseValueScaleConstant=1.000000
-                    ),
-                    (
-                        BaseValueConstant=100.000000,
-                        BaseValueAttribute=None,
-                        InitializationDefinition=None,
-                        BaseValueScaleConstant=1.000000
-                    ),
-                    (
-                        BaseValueConstant=0.000000,
-                        BaseValueAttribute=None,
-                        InitializationDefinition=None,
-                        BaseValueScaleConstant=1.000000
-                    ),
-                    (
-                        BaseValueConstant=1.000000,
-                        BaseValueAttribute=None,
-                        InitializationDefinition=None,
-                        BaseValueScaleConstant={relic_scale_rare}
-                    ),
-                    (
-                        BaseValueConstant=1.000000,
-                        BaseValueAttribute=None,
-                        InitializationDefinition=None,
-                        BaseValueScaleConstant={relic_scale_veryrare}
-                    )
-                )
-""".format(
-    relic_type=relic_type,
-    relic_scale_rare=self.relic_scale_rare,
-    relic_scale_veryrare=self.relic_scale_veryrare,
-    ))
-        # This one is the one that's slightly different
-        relic_weight_parts.append("""
-                set GD_Artifacts.PartLists.Parts_Elemental_Status_Rare ConsolidatedAttributeInitData
-                (
-                    (
-                        BaseValueConstant=1.000000,
-                        BaseValueAttribute=None,
-                        InitializationDefinition=None,
-                        BaseValueScaleConstant=1.000000
-                    ),
-                    (
-                        BaseValueConstant=100.000000,
-                        BaseValueAttribute=None,
-                        InitializationDefinition=None,
-                        BaseValueScaleConstant=1.000000
-                    ),
-                    (
-                        BaseValueConstant=0.000000,
-                        BaseValueAttribute=None,
-                        InitializationDefinition=None,
-                        BaseValueScaleConstant=1.000000
-                    ),
-                    (
-                        BaseValueConstant=100.000000,
-                        BaseValueAttribute=None,
-                        InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',
-                        BaseValueScaleConstant=1.000000
-                    ),
-                    (
-                        BaseValueConstant=1.000000,
-                        BaseValueAttribute=None,
-                        InitializationDefinition=None,
-                        BaseValueScaleConstant={relic_scale_rare}
-                    ),
-                    (
-                        BaseValueConstant=1.000000,
-                        BaseValueAttribute=None,
-                        InitializationDefinition=None,
-                        BaseValueScaleConstant={relic_scale_veryrare}
-                    )
-                )
-""".format(
-    relic_type=relic_type,
-    relic_scale_rare=self.relic_scale_rare,
-    relic_scale_veryrare=self.relic_scale_veryrare,
-    ))
-
-        # Return the string
-        return ''.join(relic_weight_parts).lstrip()
-
-    def __format__(self, formatstr):
-        """
-        A bit of magic so that we can use our values in format strings
-        """
-        attr = getattr(self, formatstr)
-        if type(attr) == str:
-            return attr
-        else:
-            return attr()
-
-class ConfigReasonable(ConfigBase):
+class ConfigReasonable(ConfigExtreme):
     """
     Alternate config which has slightly-more-reasonable drop rates for stuff
     like legendaries.  Unsurprisingly, most folks find my default values a
@@ -509,12 +516,12 @@ for (number, rarity) in [
         ('06', 'Legendary'),
         ]:
     for (idx, (guntype, gunprob)) in enumerate([
-            ('Pistol', ConfigBase.drop_prob_pistol),
-            ('AR', ConfigBase.drop_prob_ar),
-            ('SMG', ConfigBase.drop_prob_smg),
-            ('Shotgun', ConfigBase.drop_prob_shotgun),
-            ('Sniper', ConfigBase.drop_prob_sniper),
-            ('Launcher', ConfigBase.drop_prob_launcher),
+            ('Pistol', ConfigExtreme.drop_prob_pistol),
+            ('AR', ConfigExtreme.drop_prob_ar),
+            ('SMG', ConfigExtreme.drop_prob_smg),
+            ('Shotgun', ConfigExtreme.drop_prob_shotgun),
+            ('Sniper', ConfigExtreme.drop_prob_sniper),
+            ('Launcher', ConfigExtreme.drop_prob_launcher),
             ]):
         hfs.add_level_hotfix('normalize_weapon_types_{}_{}'.format(rarity, guntype),
             'NormWeap{}{}'.format(rarity, guntype),
@@ -2550,7 +2557,7 @@ with open(output_filename_filtertool, 'w') as df:
     df.write(loot_str.format(
         mod_name=mod_name,
         variant_name=variant_filtertool_name,
-        config=ConfigBase(),
+        config=ConfigExtreme(),
         hotfixes=hfs,
         hotfix_gearbox_base='',
         hotfix_transient_defs='',
@@ -2582,7 +2589,7 @@ with open(output_filename_standalone, 'w') as df:
     df.write(loot_str.format(
         mod_name=mod_name,
         variant_name=variant_standalone_name,
-        config=ConfigBase(),
+        config=ConfigExtreme(),
         hotfixes=hfs,
         hotfix_gearbox_base=hfs.get_gearbox_hotfix_xml(),
         hotfix_transient_defs=hfs.get_transient_defs(),
@@ -2596,7 +2603,7 @@ with open(output_filename_offline, 'w') as df:
     df.write(loot_str.format(
         mod_name=mod_name,
         variant_name=variant_offline_name,
-        config=ConfigBase(),
+        config=ConfigExtreme(),
         hotfixes=hfs,
         hotfix_gearbox_base=hfs.get_gearbox_hotfix_xml(),
         hotfix_transient_defs=hfs.get_transient_defs(offline=True),
