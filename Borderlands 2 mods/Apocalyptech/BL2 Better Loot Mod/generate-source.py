@@ -457,15 +457,6 @@ class ConfigReasonable(ConfigExtreme):
     ultimate_badass_pool_epicchest_2 = '1'
     ultimate_badass_pool_epicchest_3 = '1'
 
-    # Drop rates within the "very high roll" pools of dice chests
-    dice_vhigh_veryrare = '1'
-    dice_vhigh_alien = '1'
-    dice_vhigh_legendary = '0.5'
-
-    # 2.5x chance of both kinds of eridium
-    eridium_bar_drop = '0.003750'       # Stock: 0.001500
-    eridium_stick_drop = '0.020000'     # Stock: 0.008000
-
 # Different Config Profile Outputs
 alt_profiles = [
     ('{} (Reasonable Drops) - {}-source.txt'.format(mod_name, variant_filtertool_name),
