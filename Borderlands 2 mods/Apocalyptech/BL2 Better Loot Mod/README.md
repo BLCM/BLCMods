@@ -260,6 +260,10 @@ well-covered in other mods, so instead I'll just mention them here.
 TODO
 ----
 
+* I hadn't noticed that Dexi and Vorac both share some common loot pools, and
+  I buffed up Vorac after having done Dexi, which I think probably made Dexi's
+  drops much more ridiculous than even I had intended.  So: I need to do some
+  testing on Dexi, and probably rework those pools a bit.
 * This is completely untested in TVHM/UVHM.  I'm not really a fan of either
   mode, so I'm unlikely to do so.  The worst-case scenario is that
   TVHM/UVHM might override some of my specific enemy drops, though -- I
