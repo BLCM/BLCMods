@@ -292,9 +292,9 @@ I actually generate this mod using a simple little Python script named
 `generate-source.py`, which enables me to do things like set the rarity
 drop levels from a single location at the top of the file, and have it
 apply to a number of different objects throughout the game.  That script
-outputs to a very human-readable multiline text file which can't actually
-be read directly by FilterTool/Borderlands -- it must be processed by
-my `conv_to_mod.py` script which you'll find in the parent directory.
+outputs to a human-readable multiline text file which can't actually be
+read directly by FilterTool/Borderlands -- it must be processed by my
+`conv_to_mod.py` script which you'll find in the parent directory.
 
 The generation script makes use of `hotfix.py` from the parent directory.
 You'd need to copy (or symlink, if you're on Mac or Linux) `hotfix.py`
