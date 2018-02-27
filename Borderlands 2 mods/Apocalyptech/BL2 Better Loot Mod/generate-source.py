@@ -52,12 +52,9 @@ except ModuleNotFoundError:
 
 mod_name = 'BL2 Better Loot Mod'
 mod_version = '1.1.0 (prerelease)'
-variant_filtertool_name = 'UCP Compat'
-variant_standalone_name = 'Standalone'
-variant_offline_name = 'Standalone Offline'
-output_filename_filtertool = '{} - {}-source.txt'.format(mod_name, variant_filtertool_name)
-output_filename_standalone = '{} - {}-source.txt'.format(mod_name, variant_standalone_name)
-output_filename_offline = '{} - {}-source.txt'.format(mod_name, variant_offline_name)
+variant_ucp = 'UCP Compat'
+variant_standalone = 'Standalone'
+variant_offline = 'Standalone Offline'
 
 ###
 ### Where we get our mod data from
@@ -81,6 +78,16 @@ class ConfigBase(object):
     various things dropping.  Derive from this class to actually define the
     values.
     """
+
+    def filename(self, mod_name, variant_name):
+        """
+        Constructs our filename
+        """
+        return '{} ({}) - {}-source.txt'.format(
+                mod_name,
+                self.profile_name,
+                variant_name,
+            )
 
     def relic_weight_string(self):
         """
@@ -214,14 +221,18 @@ class ConfigBase(object):
         else:
             return attr()
 
+###
+### Config classes which define the actual contstants that we use
+### for things like drop weights, etc.
+###
 
-class ConfigExtreme(ConfigBase):
+class ConfigLootsplosion(ConfigBase):
     """
     This is our default config, which I personally find quite pleasant.
     Many folks will consider this a bit too OP/Extreme.
     """
 
-    profile_name = 'Extreme Drops'
+    profile_name = 'Lootsplosion'
 
     # Just some convenience vars
     one = '1.000000'
@@ -361,7 +372,7 @@ class ConfigExtreme(ConfigBase):
     drop_prob_sniper = 80
     drop_prob_launcher = 40
 
-class ConfigReasonable(ConfigExtreme):
+class ConfigReasonable(ConfigLootsplosion):
     """
     Alternate config which has slightly-more-reasonable drop rates for stuff
     like legendaries.  Unsurprisingly, most folks find my default values a
@@ -458,10 +469,10 @@ class ConfigReasonable(ConfigExtreme):
     ultimate_badass_pool_epicchest_2 = '1'
     ultimate_badass_pool_epicchest_3 = '1'
 
-# Different Config Profile Outputs
-alt_profiles = [
-    ('{} (Reasonable Drops) - {}-source.txt'.format(mod_name, variant_filtertool_name),
-     ConfigReasonable),
+# The profiles we'll generate
+profiles = [
+    ConfigLootsplosion(),
+    ConfigReasonable(),
     ]
 
 ###
@@ -508,12 +519,12 @@ for (number, rarity) in [
         ('06', 'Legendary'),
         ]:
     for (idx, (guntype, gunprob)) in enumerate([
-            ('Pistol', ConfigExtreme.drop_prob_pistol),
-            ('AR', ConfigExtreme.drop_prob_ar),
-            ('SMG', ConfigExtreme.drop_prob_smg),
-            ('Shotgun', ConfigExtreme.drop_prob_shotgun),
-            ('Sniper', ConfigExtreme.drop_prob_sniper),
-            ('Launcher', ConfigExtreme.drop_prob_launcher),
+            ('Pistol', ConfigLootsplosion.drop_prob_pistol),
+            ('AR', ConfigLootsplosion.drop_prob_ar),
+            ('SMG', ConfigLootsplosion.drop_prob_smg),
+            ('Shotgun', ConfigLootsplosion.drop_prob_shotgun),
+            ('Sniper', ConfigLootsplosion.drop_prob_sniper),
+            ('Launcher', ConfigLootsplosion.drop_prob_launcher),
             ]):
         hfs.add_level_hotfix('normalize_weapon_types_{}_{}'.format(rarity, guntype),
             'NormWeap{}{}'.format(rarity, guntype),
@@ -2544,29 +2555,16 @@ test_drop_str = """
 with open(input_filename, 'r') as df:
     loot_str = df.read()
 
-# Write to a filtertool/ucp compatible file
-with open(output_filename_filtertool, 'w') as df:
-    df.write(loot_str.format(
-        mod_name=mod_name,
-        mod_version=mod_version,
-        variant_name=variant_filtertool_name,
-        config=ConfigExtreme(),
-        hotfixes=hfs,
-        hotfix_gearbox_base='',
-        hotfix_transient_defs='',
-        gunsandgear_drop_str=gunsandgear_drop_str,
-        test_drop_str=test_drop_str,
-        ))
-print('Wrote UCP-compatible mod file to: {}'.format(output_filename_filtertool))
+# Loop through our profiles and generate the files
+for profile in profiles:
 
-# Write out alternate UCP-compat profiles
-for (profile_filename, profile_class) in alt_profiles:
-    with open(profile_filename, 'w') as df:
+    # Write our UCP-compatible version
+    with open(profile.filename(mod_name, variant_ucp), 'w') as df:
         df.write(loot_str.format(
             mod_name=mod_name,
             mod_version=mod_version,
-            variant_name=variant_filtertool_name,
-            config=profile_class(),
+            variant_name=variant_ucp,
+            config=profile,
             hotfixes=hfs,
             hotfix_gearbox_base='',
             hotfix_transient_defs='',
@@ -2574,36 +2572,42 @@ for (profile_filename, profile_class) in alt_profiles:
             test_drop_str=test_drop_str,
             ))
     print('Wrote UCP-compatible ({}) mod file to: {}'.format(
-        profile_class.profile_name,
-        profile_filename,
+        profile.profile_name,
+        profile.filename(mod_name, variant_ucp),
         ))
 
-# Write to a standalone file
-with open(output_filename_standalone, 'w') as df:
-    df.write(loot_str.format(
-        mod_name=mod_name,
-        mod_version=mod_version,
-        variant_name=variant_standalone_name,
-        config=ConfigExtreme(),
-        hotfixes=hfs,
-        hotfix_gearbox_base=hfs.get_gearbox_hotfix_xml(),
-        hotfix_transient_defs=hfs.get_transient_defs(),
-        gunsandgear_drop_str=gunsandgear_drop_str,
-        test_drop_str=test_drop_str,
+    # Write to a standalone file
+    with open(profile.filename(mod_name, variant_standalone), 'w') as df:
+        df.write(loot_str.format(
+            mod_name=mod_name,
+            mod_version=mod_version,
+            variant_name=variant_standalone,
+            config=profile,
+            hotfixes=hfs,
+            hotfix_gearbox_base=hfs.get_gearbox_hotfix_xml(),
+            hotfix_transient_defs=hfs.get_transient_defs(),
+            gunsandgear_drop_str=gunsandgear_drop_str,
+            test_drop_str=test_drop_str,
+            ))
+    print('Wrote standalone ({}) mod file to: {}'.format(
+        profile.profile_name,
+        profile.filename(mod_name, variant_standalone),
         ))
-print('Wrote standalone mod file to: {}'.format(output_filename_standalone))
 
-# Write to a standalone offline file
-with open(output_filename_offline, 'w') as df:
-    df.write(loot_str.format(
-        mod_name=mod_name,
-        mod_version=mod_version,
-        variant_name=variant_offline_name,
-        config=ConfigExtreme(),
-        hotfixes=hfs,
-        hotfix_gearbox_base=hfs.get_gearbox_hotfix_xml(),
-        hotfix_transient_defs=hfs.get_transient_defs(offline=True),
-        gunsandgear_drop_str=gunsandgear_drop_str,
-        test_drop_str=test_drop_str,
+    # Write to a standalone offline file
+    with open(profile.filename(mod_name, variant_offline), 'w') as df:
+        df.write(loot_str.format(
+            mod_name=mod_name,
+            mod_version=mod_version,
+            variant_name=variant_offline,
+            config=profile,
+            hotfixes=hfs,
+            hotfix_gearbox_base=hfs.get_gearbox_hotfix_xml(),
+            hotfix_transient_defs=hfs.get_transient_defs(offline=True),
+            gunsandgear_drop_str=gunsandgear_drop_str,
+            test_drop_str=test_drop_str,
+            ))
+    print('Wrote standalone offline ({}) mod file to: {}'.format(
+        profile.profile_name,
+        profile.filename(mod_name, variant_offline),
         ))
-print('Wrote standalone offline mod file to: {}'.format(output_filename_offline))

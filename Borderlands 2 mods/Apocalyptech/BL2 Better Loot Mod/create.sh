@@ -1,5 +1,11 @@
-./generate-source.py && \
-    ../conv_to_mod.py -f "BL2 Better Loot Mod - UCP Compat" && \
-    ../conv_to_mod.py -f "BL2 Better Loot Mod - Standalone" && \
-    ../conv_to_mod.py -f "BL2 Better Loot Mod - Standalone Offline" && \
-    ../conv_to_mod.py -f "BL2 Better Loot Mod (Reasonable Drops) - UCP Compat"
+./generate-source.py && (
+    PROFILES=("Lootsplosion" "Reasonable Drops")
+    VARIANTS=("UCP Compat" "Standalone" "Standalone Offline")
+    for PROFILE in "${PROFILES[@]}"
+    do
+        for VARIANT in "${VARIANTS[@]}"
+        do
+            ../conv_to_mod.py -f "BL2 Better Loot Mod ($PROFILE) - $VARIANT" || exit
+        done
+    done
+    )
