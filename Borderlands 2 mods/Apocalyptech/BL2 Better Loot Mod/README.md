@@ -338,3 +338,12 @@ The mod itself is licensed under
 
 See [COPYING-code.txt](../COPYING-code.txt) and [COPYING-mods.txt](../COPYING-mods.txt)
 for the full text.
+
+Changelog
+=========
+
+**v1.0.0**, February 26, 2018: Initial public release
+
+**v1.0.1**, (tbd):
+ * Converted some statements to `set` commands which had been needlessly using
+   hotfixes previously.
