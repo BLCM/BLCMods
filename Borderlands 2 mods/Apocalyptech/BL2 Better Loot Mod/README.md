@@ -342,7 +342,8 @@ for the full text.
 Changelog
 =========
 
-**v1.0.0**, February 26, 2018: Initial public release
+**v1.0.0**, February 26, 2018:
+ * Initial public release
 
 **v1.0.1**, (tbd):
  * Converted some statements to `set` commands which had been needlessly using
