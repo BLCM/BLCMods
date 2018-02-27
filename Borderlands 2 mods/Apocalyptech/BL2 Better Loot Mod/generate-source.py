@@ -169,6 +169,13 @@ class ConfigBase(object):
     badass_pool_alien = '0.4'
     badass_pool_epicchest = '0.1'
 
+    # Super Badass pool probabilities (NOTE: these are *not* weights)
+    super_badass_pool_rare = '1'
+    super_badass_pool_veryrare = '1'
+    super_badass_pool_alien = '1'
+    super_badass_pool_legendary = '1'
+    super_badass_pool_epicchest = '1'
+
     # Unique drop quantities.  Some of these are pretty high in my "default"
     # configuration, so putting them here lets me override them in the other
     # configs, easily.
@@ -411,6 +418,13 @@ class ConfigReasonable(ConfigBase):
     badass_pool_veryrare = '0.2'
     badass_pool_alien = '0.15'
     badass_pool_epicchest = '0.1'
+
+    # Super Badass pool probabilities (NOTE: these are *not* weights)
+    super_badass_pool_rare = '1'
+    super_badass_pool_veryrare = '0.4'
+    super_badass_pool_alien = '0.15'
+    super_badass_pool_legendary = '.03'
+    super_badass_pool_epicchest = '1'
 
     # Drop rates within the "very high roll" pools of dice chests
     dice_vhigh_veryrare = '1'
