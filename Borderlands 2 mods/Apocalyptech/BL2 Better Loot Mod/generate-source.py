@@ -164,6 +164,11 @@ class ConfigBase(object):
     epic_scale_legendary = '0.3'
     epic_scale_legendary_dbl = '0.6'
 
+    # Badass pool probabilities (NOTE: these are *not* weights)
+    badass_pool_veryrare = '0.4'
+    badass_pool_alien = '0.4'
+    badass_pool_epicchest = '0.1'
+
     # Drop rates within the "very high roll" pools of dice chests
     dice_vhigh_veryrare = '1'
     dice_vhigh_alien = '1'
@@ -374,6 +379,11 @@ class ConfigReasonable(ConfigBase):
     epic_scale_alien = '10'
     epic_scale_legendary = '1'
     epic_scale_legendary_dbl = '2'
+
+    # Badass pool probabilities (NOTE: these are *not* weights)
+    badass_pool_veryrare = '0.2'
+    badass_pool_alien = '0.15'
+    badass_pool_epicchest = '0.1'
 
     # Drop rates within the "very high roll" pools of dice chests
     dice_vhigh_veryrare = '1'
