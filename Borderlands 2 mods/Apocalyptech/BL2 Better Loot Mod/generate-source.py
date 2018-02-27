@@ -401,8 +401,8 @@ class ConfigReasonable(ConfigExtreme):
     shield_scale_legendary = weapon_scale_legendary
 
     # Custom relic drop scaling
-    relic_scale_rare = '1.0'
-    relic_scale_veryrare = '2.0'
+    relic_scale_rare = '2.0'
+    relic_scale_veryrare = '1.0'
 
     # Drop rates for "regular" treasure chests
     treasure_scale_common = '32.5'
