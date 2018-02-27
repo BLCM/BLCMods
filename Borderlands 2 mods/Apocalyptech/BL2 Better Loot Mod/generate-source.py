@@ -169,6 +169,20 @@ class ConfigBase(object):
     badass_pool_alien = '0.4'
     badass_pool_epicchest = '0.1'
 
+    # Unique drop quantities.  Some of these are pretty high in my "default"
+    # configuration, so putting them here lets me override them in the other
+    # configs, easily.
+    quantity_chubby = '4'
+    quantity_terra = '7'
+    quantity_vermivorous = '5'
+    quantity_warrior = '8'
+    quantity_hyperius_legendary = '7'
+    quantity_hyperius_seraph = '4'
+    quantity_gee_seraph = '4'
+    quantity_gee_legendary = '6'
+    quantity_voracidous_seraph = '4'
+    quantity_voracidous_legendary = '4'
+
     # Drop rates within the "very high roll" pools of dice chests
     dice_vhigh_veryrare = '1'
     dice_vhigh_alien = '1'
@@ -379,6 +393,19 @@ class ConfigReasonable(ConfigBase):
     epic_scale_alien = '10'
     epic_scale_legendary = '1'
     epic_scale_legendary_dbl = '2'
+
+    # Unique drop quantities -- overridden from the base class to make
+    # them a bit more reasonable.
+    quantity_chubby = '2'
+    quantity_terra = '4'
+    quantity_vermivorous = '3'
+    quantity_warrior = '4'
+    quantity_hyperius_legendary = '2'
+    quantity_hyperius_seraph = '2'
+    quantity_gee_seraph = '2'
+    quantity_gee_legendary = '2'
+    quantity_voracidous_seraph = '2'
+    quantity_voracidous_legendary = '2'
 
     # Badass pool probabilities (NOTE: these are *not* weights)
     badass_pool_veryrare = '0.2'
