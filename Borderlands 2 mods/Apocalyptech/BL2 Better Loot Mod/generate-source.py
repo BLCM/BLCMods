@@ -74,98 +74,239 @@ hfs = Hotfixes(include_gearbox_patches=True)
 ### Variables which control drop rates and stuff like that
 ###
 
-# Just some convenience vars
-one = '1.000000'
-zero = '0.000000'
+class ConfigBase(object):
+    """
+    Class to hold all our weights, and other vars which alter the probabilities of
+    various things dropping.  Derive from this class to override any of these, to
+    support multiple "profiles"
+    """
 
-# "BaseValueConstant values for the various gear drop types.  These
-# are actually totally unchanged from the stock definitions; I'd just
-# put them in here in case I felt like overriding them easily later.
-weapon_base_common = one
-weapon_base_uncommon = one
-weapon_base_rare = one
-weapon_base_veryrare = one
-weapon_base_alien = one
-weapon_base_legendary = one
-cm_base_common = one
-cm_base_uncommon = one
-cm_base_rare = one
-cm_base_veryrare = one
-cm_base_legendary = one
-grenade_base_common = zero
-grenade_base_uncommon = zero
-grenade_base_rare = zero
-grenade_base_veryrare = zero
-grenade_base_legendary = zero
-shield_base_common = one
-shield_base_uncommon = one
-shield_base_rare = one
-shield_base_veryrare = one
-shield_base_legendary = one
+    # Just some convenience vars
+    one = '1.000000'
+    zero = '0.000000'
 
-# Custom weapon drop scaling
-weapon_scale_common = '8.000000'
-weapon_scale_uncommon = '85.000000'
-weapon_scale_rare = '65.000000'
-weapon_scale_veryrare = '50.000000'
-weapon_scale_alien = '30.000000'
-weapon_scale_legendary = '3.000000'
-weapon_scale_iris_cobra = '1.000000'
+    # "BaseValueConstant values for the various gear drop types.  These
+    # are actually totally unchanged from the stock definitions; I'd just
+    # put them in here in case I felt like overriding them easily later.
+    weapon_base_common = one
+    weapon_base_uncommon = one
+    weapon_base_rare = one
+    weapon_base_veryrare = one
+    weapon_base_alien = one
+    weapon_base_legendary = one
+    cm_base_common = one
+    cm_base_uncommon = one
+    cm_base_rare = one
+    cm_base_veryrare = one
+    cm_base_legendary = one
+    grenade_base_common = zero
+    grenade_base_uncommon = zero
+    grenade_base_rare = zero
+    grenade_base_veryrare = zero
+    grenade_base_legendary = zero
+    shield_base_common = one
+    shield_base_uncommon = one
+    shield_base_rare = one
+    shield_base_veryrare = one
+    shield_base_legendary = one
 
-# Custom COM drop scaling (identical to weapons, apart from an additional Alignment COM pool)
-cm_scale_common = weapon_scale_common
-cm_scale_uncommon = weapon_scale_uncommon
-cm_scale_rare = weapon_scale_rare
-cm_scale_veryrare = weapon_scale_veryrare
-cm_scale_alignment = '30.000000'
-cm_scale_legendary = weapon_scale_legendary
+    # Custom weapon drop scaling
+    weapon_scale_common = '8.000000'
+    weapon_scale_uncommon = '85.000000'
+    weapon_scale_rare = '65.000000'
+    weapon_scale_veryrare = '50.000000'
+    weapon_scale_alien = '30.000000'
+    weapon_scale_legendary = '3.000000'
+    weapon_scale_iris_cobra = '1.000000'
 
-# Custom grenade drop scaling (identical to weapons)
-grenade_scale_common = weapon_scale_common
-grenade_scale_uncommon = weapon_scale_uncommon
-grenade_scale_rare = weapon_scale_rare
-grenade_scale_veryrare = weapon_scale_veryrare
-grenade_scale_legendary = weapon_scale_legendary
+    # Custom COM drop scaling (identical to weapons, apart from an additional Alignment COM pool)
+    cm_scale_common = weapon_scale_common
+    cm_scale_uncommon = weapon_scale_uncommon
+    cm_scale_rare = weapon_scale_rare
+    cm_scale_veryrare = weapon_scale_veryrare
+    cm_scale_alignment = '30.000000'
+    cm_scale_legendary = weapon_scale_legendary
 
-# Custom shield drop scaling (identical to weapons)
-shield_scale_common = weapon_scale_common
-shield_scale_uncommon = weapon_scale_uncommon
-shield_scale_rare = weapon_scale_rare
-shield_scale_veryrare = weapon_scale_veryrare
-shield_scale_legendary = weapon_scale_legendary
+    # Custom grenade drop scaling (identical to weapons)
+    grenade_scale_common = weapon_scale_common
+    grenade_scale_uncommon = weapon_scale_uncommon
+    grenade_scale_rare = weapon_scale_rare
+    grenade_scale_veryrare = weapon_scale_veryrare
+    grenade_scale_legendary = weapon_scale_legendary
 
-# Custom relic drop scaling
-relic_scale_rare = '1.0'
-relic_scale_veryrare = '2.0'
+    # Custom shield drop scaling (identical to weapons)
+    shield_scale_common = weapon_scale_common
+    shield_scale_uncommon = weapon_scale_uncommon
+    shield_scale_rare = weapon_scale_rare
+    shield_scale_veryrare = weapon_scale_veryrare
+    shield_scale_legendary = weapon_scale_legendary
 
-# Drop rates for "regular" treasure chests
-treasure_scale_rare = '20.000000'
-treasure_scale_veryrare = '60.000000'
-treasure_scale_alien = '30.000000'
-treasure_scale_legendary = '5.000000'
+    # Custom relic drop scaling
+    relic_scale_rare = '1.0'
+    relic_scale_veryrare = '2.0'
 
-# Drop rates for "epic" treasure chests
-epic_scale_veryrare = '1.000000'
-epic_scale_alien = '1.000000'
-epic_scale_legendary = '0.300000'
-epic_scale_legendary_dbl = '0.600000'
+    # Drop rates for "regular" treasure chests
+    treasure_scale_rare = '20.000000'
+    treasure_scale_veryrare = '60.000000'
+    treasure_scale_alien = '30.000000'
+    treasure_scale_legendary = '5.000000'
 
-# Drop rates within the "very high roll" pools of dice chests
-dice_vhigh_veryrare = '1.000000'
-dice_vhigh_alien = '1.000000'
-dice_vhigh_legendary = '0.500000'
+    # Drop rates for "epic" treasure chests
+    epic_scale_veryrare = '1.000000'
+    epic_scale_alien = '1.000000'
+    epic_scale_legendary = '0.300000'
+    epic_scale_legendary_dbl = '0.600000'
 
-# 2.5x chance of both kinds of eridium
-eridium_bar_drop = '0.003750'       # Stock: 0.001500
-eridium_stick_drop = '0.020000'     # Stock: 0.008000
+    # Drop rates within the "very high roll" pools of dice chests
+    dice_vhigh_veryrare = '1.000000'
+    dice_vhigh_alien = '1.000000'
+    dice_vhigh_legendary = '0.500000'
 
-# Gun Type drop weights
-drop_prob_pistol = 100
-drop_prob_ar = 100
-drop_prob_smg = 100
-drop_prob_shotgun = 100
-drop_prob_sniper = 80
-drop_prob_launcher = 40
+    # 2.5x chance of both kinds of eridium
+    eridium_bar_drop = '0.003750'       # Stock: 0.001500
+    eridium_stick_drop = '0.020000'     # Stock: 0.008000
+
+    # Gun Type drop weights.  Note that because these values are going into
+    # our hotfix object, these variables *cannot* be successfully overridden
+    # in an extending class.
+    drop_prob_pistol = 100
+    drop_prob_ar = 100
+    drop_prob_smg = 100
+    drop_prob_shotgun = 100
+    drop_prob_sniper = 80
+    drop_prob_launcher = 40
+
+    def relic_weight_string(self):
+        """
+        Forcing the "Reward" Relic pool to obey our custom weights.  There's
+        22 of these definitions which are all identical (and one outlier), so
+        we're going use a loop rather than a lot of copy+paste.  This is also
+        happening inside our ConfigBase class so that our weights can get
+        applied dynamically.
+        """
+        relic_weight_parts = []
+        for relic_type in [
+                'AggressionA',
+                'AggressionB',
+                'AggressionC',
+                'AggressionD',
+                'AggressionE',
+                'AggressionF',
+                'AllegianceA',
+                'AllegianceB',
+                'AllegianceC',
+                'AllegianceD',
+                'AllegianceE',
+                'AllegianceF',
+                'AllegianceG',
+                'AllegianceH',
+                'Elemental',
+                'Proficiency',
+                'Protection',
+                'Resistance',
+                'Stockpile',
+                'Strength',
+                'Tenacity',
+                'Vitality',
+                ]:
+            relic_weight_parts.append("""
+                set GD_Artifacts.PartLists.Parts_{relic_type}_Rare ConsolidatedAttributeInitData
+                (
+                    (
+                        BaseValueConstant=1.000000,
+                        BaseValueAttribute=None,
+                        InitializationDefinition=None,
+                        BaseValueScaleConstant=1.000000
+                    ),
+                    (
+                        BaseValueConstant=100.000000,
+                        BaseValueAttribute=None,
+                        InitializationDefinition=None,
+                        BaseValueScaleConstant=1.000000
+                    ),
+                    (
+                        BaseValueConstant=0.000000,
+                        BaseValueAttribute=None,
+                        InitializationDefinition=None,
+                        BaseValueScaleConstant=1.000000
+                    ),
+                    (
+                        BaseValueConstant=1.000000,
+                        BaseValueAttribute=None,
+                        InitializationDefinition=None,
+                        BaseValueScaleConstant={relic_scale_rare}
+                    ),
+                    (
+                        BaseValueConstant=1.000000,
+                        BaseValueAttribute=None,
+                        InitializationDefinition=None,
+                        BaseValueScaleConstant={relic_scale_veryrare}
+                    )
+                )
+""".format(
+    relic_type=relic_type,
+    relic_scale_rare=self.relic_scale_rare,
+    relic_scale_veryrare=self.relic_scale_veryrare,
+    ))
+        # This one is the one that's slightly different
+        relic_weight_parts.append("""
+                set GD_Artifacts.PartLists.Parts_Elemental_Status_Rare ConsolidatedAttributeInitData
+                (
+                    (
+                        BaseValueConstant=1.000000,
+                        BaseValueAttribute=None,
+                        InitializationDefinition=None,
+                        BaseValueScaleConstant=1.000000
+                    ),
+                    (
+                        BaseValueConstant=100.000000,
+                        BaseValueAttribute=None,
+                        InitializationDefinition=None,
+                        BaseValueScaleConstant=1.000000
+                    ),
+                    (
+                        BaseValueConstant=0.000000,
+                        BaseValueAttribute=None,
+                        InitializationDefinition=None,
+                        BaseValueScaleConstant=1.000000
+                    ),
+                    (
+                        BaseValueConstant=100.000000,
+                        BaseValueAttribute=None,
+                        InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',
+                        BaseValueScaleConstant=1.000000
+                    ),
+                    (
+                        BaseValueConstant=1.000000,
+                        BaseValueAttribute=None,
+                        InitializationDefinition=None,
+                        BaseValueScaleConstant={relic_scale_rare}
+                    ),
+                    (
+                        BaseValueConstant=1.000000,
+                        BaseValueAttribute=None,
+                        InitializationDefinition=None,
+                        BaseValueScaleConstant={relic_scale_veryrare}
+                    )
+                )
+""".format(
+    relic_type=relic_type,
+    relic_scale_rare=self.relic_scale_rare,
+    relic_scale_veryrare=self.relic_scale_veryrare,
+    ))
+
+        # Return the string
+        return ''.join(relic_weight_parts).lstrip()
+
+    def __format__(self, formatstr):
+        """
+        A bit of magic so that we can use our values in format strings
+        """
+        attr = getattr(self, formatstr)
+        if type(attr) == str:
+            return attr
+        else:
+            return attr()
 
 ###
 ### Vars used primarily during testing of loot pools - these aren't
@@ -211,12 +352,12 @@ for (number, rarity) in [
         ('06', 'Legendary'),
         ]:
     for (idx, (guntype, gunprob)) in enumerate([
-            ('Pistol', drop_prob_pistol),
-            ('AR', drop_prob_ar),
-            ('SMG', drop_prob_smg),
-            ('Shotgun', drop_prob_shotgun),
-            ('Sniper', drop_prob_sniper),
-            ('Launcher', drop_prob_launcher),
+            ('Pistol', ConfigBase.drop_prob_pistol),
+            ('AR', ConfigBase.drop_prob_ar),
+            ('SMG', ConfigBase.drop_prob_smg),
+            ('Shotgun', ConfigBase.drop_prob_shotgun),
+            ('Sniper', ConfigBase.drop_prob_sniper),
+            ('Launcher', ConfigBase.drop_prob_launcher),
             ]):
         hfs.add_level_hotfix('normalize_weapon_types_{}_{}'.format(rarity, guntype),
             'NormWeap{}{}'.format(rarity, guntype),
@@ -2016,17 +2157,6 @@ hfs.add_level_hotfix('better_safes', 'BetterSafes',
 #hfs.add_level_hotfix('chubbies', 'ChubbySpawn',
 #    ',GD_Population_SpiderAnt.Population.PopDef_SpiderantMix_Regular,ActorArchetypeList[9].Probability.BaseValueConstant,,1000')
 
-# This will cause varkids to always morph into their next stage, up
-# through Vermivorous (even in Normal mode).  Used to test Verm drops.
-# Still have to wait for their timers to elapse before they evolve, of course.
-#for morph in range(1,6):
-#    hfs.add_level_hotfix('varkid_clear_{}'.format(morph),
-#        'VarkidMorphClear',
-#        ',GD_Balance.WeightingPlayerCount.BugmorphCocoon_PerPlayers_Phase{},ConditionalInitialization.ConditionalExpressionList,,()'.format(morph))
-#    hfs.add_level_hotfix('varkid_default_{}'.format(morph),
-#        'VarkidMorphDefault',
-#        ',GD_Balance.WeightingPlayerCount.BugmorphCocoon_PerPlayers_Phase{},ConditionalInitialization.DefaultBaseValue.BaseValueConstant,,1.0'.format(morph))
-
 ###
 ### Everything below this point is constructing the actual patch file
 ###
@@ -2253,214 +2383,49 @@ test_drop_str = """
             loot_drop_quantity=loot_drop_quantity,
         )
 
-# Forcing the "Reward" Relic pool to obey our custom weights.  There's
-# 22 of these definitions which are all identical (and one outlier), so
-# we're going use a loop rather than a lot of copy+paste.
-relic_weight_parts = []
-for relic_type in [
-        'AggressionA',
-        'AggressionB',
-        'AggressionC',
-        'AggressionD',
-        'AggressionE',
-        'AggressionF',
-        'AllegianceA',
-        'AllegianceB',
-        'AllegianceC',
-        'AllegianceD',
-        'AllegianceE',
-        'AllegianceF',
-        'AllegianceG',
-        'AllegianceH',
-        'Elemental',
-        'Proficiency',
-        'Protection',
-        'Resistance',
-        'Stockpile',
-        'Strength',
-        'Tenacity',
-        'Vitality',
-        ]:
-    relic_weight_parts.append("""
-                set GD_Artifacts.PartLists.Parts_{relic_type}_Rare ConsolidatedAttributeInitData
-                (
-                    (
-                        BaseValueConstant=1.000000,
-                        BaseValueAttribute=None,
-                        InitializationDefinition=None,
-                        BaseValueScaleConstant=1.000000
-                    ),
-                    (
-                        BaseValueConstant=100.000000,
-                        BaseValueAttribute=None,
-                        InitializationDefinition=None,
-                        BaseValueScaleConstant=1.000000
-                    ),
-                    (
-                        BaseValueConstant=0.000000,
-                        BaseValueAttribute=None,
-                        InitializationDefinition=None,
-                        BaseValueScaleConstant=1.000000
-                    ),
-                    (
-                        BaseValueConstant=1.000000,
-                        BaseValueAttribute=None,
-                        InitializationDefinition=None,
-                        BaseValueScaleConstant={relic_scale_rare}
-                    ),
-                    (
-                        BaseValueConstant=1.000000,
-                        BaseValueAttribute=None,
-                        InitializationDefinition=None,
-                        BaseValueScaleConstant={relic_scale_veryrare}
-                    )
-                )
-""".format(
-    relic_type=relic_type,
-    relic_scale_rare=relic_scale_rare,
-    relic_scale_veryrare=relic_scale_veryrare,
-    ))
-# This one is the one that's slightly different
-relic_weight_parts.append("""
-                set GD_Artifacts.PartLists.Parts_Elemental_Status_Rare ConsolidatedAttributeInitData
-                (
-                    (
-                        BaseValueConstant=1.000000,
-                        BaseValueAttribute=None,
-                        InitializationDefinition=None,
-                        BaseValueScaleConstant=1.000000
-                    ),
-                    (
-                        BaseValueConstant=100.000000,
-                        BaseValueAttribute=None,
-                        InitializationDefinition=None,
-                        BaseValueScaleConstant=1.000000
-                    ),
-                    (
-                        BaseValueConstant=0.000000,
-                        BaseValueAttribute=None,
-                        InitializationDefinition=None,
-                        BaseValueScaleConstant=1.000000
-                    ),
-                    (
-                        BaseValueConstant=100.000000,
-                        BaseValueAttribute=None,
-                        InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',
-                        BaseValueScaleConstant=1.000000
-                    ),
-                    (
-                        BaseValueConstant=1.000000,
-                        BaseValueAttribute=None,
-                        InitializationDefinition=None,
-                        BaseValueScaleConstant={relic_scale_rare}
-                    ),
-                    (
-                        BaseValueConstant=1.000000,
-                        BaseValueAttribute=None,
-                        InitializationDefinition=None,
-                        BaseValueScaleConstant={relic_scale_veryrare}
-                    )
-                )
-""".format(
-    relic_type=relic_type,
-    relic_scale_rare=relic_scale_rare,
-    relic_scale_veryrare=relic_scale_veryrare,
-    ))
-relic_weight_str = ''.join(relic_weight_parts).lstrip()
 
-# Now read in our main input file and substitute all of our variables.
+# Now read in our main input file
 with open(input_filename, 'r') as df:
-    loot_str = df.read().format(
-        mod_name=mod_name,
-        weapon_base_common=weapon_base_common,
-        weapon_scale_common=weapon_scale_common,
-        weapon_base_uncommon=weapon_base_uncommon,
-        weapon_scale_uncommon=weapon_scale_uncommon,
-        weapon_base_rare=weapon_base_rare,
-        weapon_scale_rare=weapon_scale_rare,
-        weapon_base_veryrare=weapon_base_veryrare,
-        weapon_scale_veryrare=weapon_scale_veryrare,
-        weapon_base_alien=weapon_base_alien,
-        weapon_scale_alien=weapon_scale_alien,
-        weapon_base_legendary=weapon_base_legendary,
-        weapon_scale_legendary=weapon_scale_legendary,
-        weapon_scale_iris_cobra=weapon_scale_iris_cobra,
-        cm_base_common=cm_base_common,
-        cm_scale_common=cm_scale_common,
-        cm_base_uncommon=cm_base_uncommon,
-        cm_scale_uncommon=cm_scale_uncommon,
-        cm_base_rare=cm_base_rare,
-        cm_scale_rare=cm_scale_rare,
-        cm_base_veryrare=cm_base_veryrare,
-        cm_scale_veryrare=cm_scale_veryrare,
-        cm_scale_alignment=cm_scale_alignment,
-        cm_base_legendary=cm_base_legendary,
-        cm_scale_legendary=cm_scale_legendary,
-        grenade_base_common=grenade_base_common,
-        grenade_scale_common=grenade_scale_common,
-        grenade_base_uncommon=grenade_base_uncommon,
-        grenade_scale_uncommon=grenade_scale_uncommon,
-        grenade_base_rare=grenade_base_rare,
-        grenade_scale_rare=grenade_scale_rare,
-        grenade_base_veryrare=grenade_base_veryrare,
-        grenade_scale_veryrare=grenade_scale_veryrare,
-        grenade_base_legendary=grenade_base_legendary,
-        grenade_scale_legendary=grenade_scale_legendary,
-        shield_base_common=shield_base_common,
-        shield_scale_common=shield_scale_common,
-        shield_base_uncommon=shield_base_uncommon,
-        shield_scale_uncommon=shield_scale_uncommon,
-        shield_base_rare=shield_base_rare,
-        shield_scale_rare=shield_scale_rare,
-        shield_base_veryrare=shield_base_veryrare,
-        shield_scale_veryrare=shield_scale_veryrare,
-        shield_base_legendary=shield_base_legendary,
-        shield_scale_legendary=shield_scale_legendary,
-        dice_vhigh_veryrare=dice_vhigh_veryrare,
-        dice_vhigh_alien=dice_vhigh_alien,
-        dice_vhigh_legendary=dice_vhigh_legendary,
-        eridium_bar_drop=eridium_bar_drop,
-        eridium_stick_drop=eridium_stick_drop,
-        treasure_scale_rare=treasure_scale_rare,
-        treasure_scale_veryrare=treasure_scale_veryrare,
-        treasure_scale_alien=treasure_scale_alien,
-        treasure_scale_legendary=treasure_scale_legendary,
-        epic_scale_veryrare=epic_scale_veryrare,
-        epic_scale_alien=epic_scale_alien,
-        epic_scale_legendary=epic_scale_legendary,
-        epic_scale_legendary_dbl=epic_scale_legendary_dbl,
-        gunsandgear_drop_str=gunsandgear_drop_str,
-        relic_weight_str=relic_weight_str,
-        test_drop_str=test_drop_str,
-        hotfixes=hfs,
-        variant_name='{variant_name}',
-        hotfix_gearbox_base='{hotfix_gearbox_base}',
-        hotfix_transient_defs='{hotfix_transient_defs}',
-    )
+    loot_str = df.read()
 
 # Write to a filtertool/ucp compatible file
 with open(output_filename_filtertool, 'w') as df:
     df.write(loot_str.format(
+        mod_name=mod_name,
         variant_name=variant_filtertool_name,
+        config=ConfigBase(),
+        hotfixes=hfs,
         hotfix_gearbox_base='',
         hotfix_transient_defs='',
+        gunsandgear_drop_str=gunsandgear_drop_str,
+        test_drop_str=test_drop_str,
         ))
 print('Wrote UCP-compatible mod file to: {}'.format(output_filename_filtertool))
 
 # Write to a standalone file
 with open(output_filename_standalone, 'w') as df:
     df.write(loot_str.format(
+        mod_name=mod_name,
         variant_name=variant_standalone_name,
+        config=ConfigBase(),
+        hotfixes=hfs,
         hotfix_gearbox_base=hfs.get_gearbox_hotfix_xml(),
         hotfix_transient_defs=hfs.get_transient_defs(),
+        gunsandgear_drop_str=gunsandgear_drop_str,
+        test_drop_str=test_drop_str,
         ))
 print('Wrote standalone mod file to: {}'.format(output_filename_standalone))
 
 # Write to a standalone offline file
 with open(output_filename_offline, 'w') as df:
     df.write(loot_str.format(
+        mod_name=mod_name,
         variant_name=variant_offline_name,
+        config=ConfigBase(),
+        hotfixes=hfs,
         hotfix_gearbox_base=hfs.get_gearbox_hotfix_xml(),
         hotfix_transient_defs=hfs.get_transient_defs(offline=True),
+        gunsandgear_drop_str=gunsandgear_drop_str,
+        test_drop_str=test_drop_str,
         ))
 print('Wrote standalone offline mod file to: {}'.format(output_filename_offline))
