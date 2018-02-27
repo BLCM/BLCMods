@@ -50,7 +50,7 @@ except ModuleNotFoundError:
 ### Output variables
 ###
 
-mod_name = 'BL2 Better Loot Mod by Apocalyptech'
+mod_name = 'BL2 Better Loot Mod'
 variant_filtertool_name = 'UCP Compat'
 variant_standalone_name = 'Standalone'
 variant_offline_name = 'Standalone Offline'
@@ -80,6 +80,8 @@ class ConfigBase(object):
     various things dropping.  Derive from this class to override any of these, to
     support multiple "profiles"
     """
+
+    profile_name = 'Extreme Drops'
 
     # Just some convenience vars
     one = '1.000000'
@@ -307,6 +309,77 @@ class ConfigBase(object):
             return attr
         else:
             return attr()
+
+class ConfigReasonable(ConfigBase):
+    """
+    Alternate config which has slightly-more-reasonable drop rates for stuff
+    like legendaries.  Unsurprisingly, most folks find my default values a
+    bit excessive.
+    """
+
+    profile_name = 'Reasonable Drops'
+
+    # Weapon drops
+    weapon_scale_common = '8.000000'
+    weapon_scale_uncommon = '85.000000'
+    weapon_scale_rare = '65.000000'
+    weapon_scale_veryrare = '50.000000'
+    weapon_scale_alien = '30.000000'
+    weapon_scale_legendary = '3.000000'
+    weapon_scale_iris_cobra = '1.000000'
+
+    # Class mods
+    cm_scale_common = weapon_scale_common
+    cm_scale_uncommon = weapon_scale_uncommon
+    cm_scale_rare = weapon_scale_rare
+    cm_scale_veryrare = weapon_scale_veryrare
+    cm_scale_alignment = '30.000000'
+    cm_scale_legendary = weapon_scale_legendary
+
+    # Custom grenade drop scaling (identical to weapons)
+    grenade_scale_common = weapon_scale_common
+    grenade_scale_uncommon = weapon_scale_uncommon
+    grenade_scale_rare = weapon_scale_rare
+    grenade_scale_veryrare = weapon_scale_veryrare
+    grenade_scale_legendary = weapon_scale_legendary
+
+    # Custom shield drop scaling (identical to weapons)
+    shield_scale_common = weapon_scale_common
+    shield_scale_uncommon = weapon_scale_uncommon
+    shield_scale_rare = weapon_scale_rare
+    shield_scale_veryrare = weapon_scale_veryrare
+    shield_scale_legendary = weapon_scale_legendary
+
+    # Custom relic drop scaling
+    relic_scale_rare = '1.0'
+    relic_scale_veryrare = '2.0'
+
+    # Drop rates for "regular" treasure chests
+    treasure_scale_rare = '20.000000'
+    treasure_scale_veryrare = '60.000000'
+    treasure_scale_alien = '30.000000'
+    treasure_scale_legendary = '5.000000'
+
+    # Drop rates for "epic" treasure chests
+    epic_scale_veryrare = '1.000000'
+    epic_scale_alien = '1.000000'
+    epic_scale_legendary = '0.300000'
+    epic_scale_legendary_dbl = '0.600000'
+
+    # Drop rates within the "very high roll" pools of dice chests
+    dice_vhigh_veryrare = '1.000000'
+    dice_vhigh_alien = '1.000000'
+    dice_vhigh_legendary = '0.500000'
+
+    # 2.5x chance of both kinds of eridium
+    eridium_bar_drop = '0.003750'       # Stock: 0.001500
+    eridium_stick_drop = '0.020000'     # Stock: 0.008000
+
+# Different Config Profile Outputs
+alt_profiles = [
+    ('{} (Reasonable Drops) - {}-source.txt'.format(mod_name, variant_filtertool_name),
+     ConfigReasonable),
+    ]
 
 ###
 ### Vars used primarily during testing of loot pools - these aren't
@@ -2401,6 +2474,24 @@ with open(output_filename_filtertool, 'w') as df:
         test_drop_str=test_drop_str,
         ))
 print('Wrote UCP-compatible mod file to: {}'.format(output_filename_filtertool))
+
+# Write out alternate UCP-compat profiles
+for (profile_filename, profile_class) in alt_profiles:
+    with open(profile_filename, 'w') as df:
+        df.write(loot_str.format(
+            mod_name=mod_name,
+            variant_name=variant_filtertool_name,
+            config=profile_class(),
+            hotfixes=hfs,
+            hotfix_gearbox_base='',
+            hotfix_transient_defs='',
+            gunsandgear_drop_str=gunsandgear_drop_str,
+            test_drop_str=test_drop_str,
+            ))
+    print('Wrote UCP-compatible ({}) mod file to: {}'.format(
+        profile_class.profile_name,
+        profile_filename,
+        ))
 
 # Write to a standalone file
 with open(output_filename_standalone, 'w') as df:
