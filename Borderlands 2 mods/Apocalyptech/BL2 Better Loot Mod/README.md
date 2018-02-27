@@ -18,17 +18,26 @@ Usage/Installation
 ------------------
 
 The recommended way to use this mod is with FilterTool/UCP.  In FilterTool,
-select `Developer Tools` -> `Add Single Mod` and then select the file
-file `BL2 Better Loot Mod by Apocalyptech - UCP Compat` (without any
-extensions).  You'll have a new folder for this mod underneath the `mods`
-folder at the bottom, and can turn parts on or off at will.
+select `Developer Tools` -> `Add Single Mod` and then select one of these
+two files:
+
+* `BL2 Better Loot Mod by Apocalyptech - UCP Compat` - Default drop weights
+  which I'm personally happy with.  Many folks may find these a bit extreme.
+* `BL2 Better Loot Mod (Reasonable Drops) - UCP Compat` - More reasonable
+  drop weights.  *(at the moment this is actually identical to the main
+  version - needs tweaking+testing, etc)*
+
+Once the mod has been added, you'll have a new folder for this mod
+underneath the `mods` folder at the bottom, and can turn parts on or off at
+will.
 
 If for whatever reason you don't want to use FilterTool, there is also
 a standalone version at `BL2 Better Loot Mod by Apocalyptech - Standalone`,
 and an offline standalone version at `BL2 Better Loot Mod by Apocalyptech - Standalone Offline`.
 Simply copy the file into the game's `steamassets/binaries` directory with
 an easy-to-type filename, and then run `exec <filename>` from the console
-to load it on its own.  It works quite well by itself.
+to load it on its own.  It works quite well by itself.  Note that the
+"Reasonable Drops" version only has the UCP Compat version.
 
 The only actual differences between the UCP and Standalone versions are
 that the "Standalone" versions contain all of the original Gearbox hotfix
