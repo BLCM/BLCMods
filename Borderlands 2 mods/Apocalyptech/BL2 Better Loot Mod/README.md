@@ -177,10 +177,10 @@ This mod is mostly compatible with UCP 4.0, with three known exceptions:
   will override UCP's "Loot Pool & Drop Changes / Specific Loot Changes / Add
   Black Hole and remove the Kiss of Death from Hyperius"
 * "Better Enemy Drops / Raid Boss Drop Improvements / Hyperius / Clean Up
-  Seraph Drop Pool" in this mod will override the loot pool changes in UCP's
+  Seraph Pool" in this mod will override the loot pool changes in UCP's
   "Loot Pool & Drop Changes / Specific Loot Changes / Increase Hyperius' Seraph
   drop chance and add all DLC 1 Seraphs".  Unselecting just "Clean Up Seraph
-  Drop Pool" in this mod but leaving the rest of our Hyperius section intact
+  Pool" in this mod but leaving the rest of our Hyperius section intact
   will still give a 100% drop rate for Seraphs on Hyperius.
 
 It's possible that there are some other strange interactions which could take
@@ -267,6 +267,8 @@ TODO
   I buffed up Vorac after having done Dexi, which I think probably made Dexi's
   drops much more ridiculous than even I had intended.  So: I need to do some
   testing on Dexi, and probably rework those pools a bit.
+* Should see if anything should be done with Godliaths, Iron Gods, and
+  Omnd-Omnd-Ohk.
 * This is completely untested in TVHM/UVHM.  I'm not really a fan of either
   mode, so I'm unlikely to do so.  The worst-case scenario is that
   TVHM/UVHM might override some of my specific enemy drops, though -- I
@@ -357,11 +359,13 @@ for the full text.
 Changelog
 =========
 
-**v1.0.0**, February 26, 2018:
+**v1.0.0**, February 26, 2018 (commit 45e70cdc7982ac22715955e5ffb9e3f5963601c7):
  * Initial public release
 
 **v1.1.0**, (tbd):
  * Converted some statements to `set` commands which had been needlessly using
    hotfixes previously.
  * Added "Reasonable Drops" Variant, suffixed original with "Lootsplosion"
+ * Added some more folder structure inside many of the Raid Boss improvements,
+   so they can be toggled at a more granular level.
 
