@@ -47,6 +47,10 @@ All versions are fully FilterTool compatible.
 Mod Overview
 ------------
 
+*(Note that the "Reasonable Drops" variant of this mod won't be **quite**
+as great as some of these statements imply, though the probabilities of
+getting better gear should still be much better than in the vanilla game.)*
+
 Specifically, this mod does the following:
 
 * Adds all legendaries/uniques/pearls/seraph items (weapons, grenade mods,
@@ -359,5 +363,5 @@ Changelog
 **v1.1.0**, (tbd):
  * Converted some statements to `set` commands which had been needlessly using
    hotfixes previously.
- * Added "Reasonable Drops" Variant
+ * Added "Reasonable Drops" Variant, suffixed original with "Lootsplosion"
 
