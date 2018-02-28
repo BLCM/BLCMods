@@ -350,8 +350,22 @@ class ConfigLootsplosion(ConfigBase):
     quantity_hyperius_seraph = '4'
     quantity_gee_seraph = '4'
     quantity_gee_legendary = '6'
-    quantity_voracidous_seraph = '4'
-    quantity_voracidous_legendary = '4'
+
+    # Voracidous quantities have to be done slightly differently, because both
+    # Dexiduous and Voracidous use the same Seraph and Legendary pools for their
+    # unique drops, but Dexi calls it multiple times, whereas Vorac just calls
+    # it the once (by default).  So upping the quantity for Vorac makes Dexi's
+    # drops totally ludicrous.  So instead, we're just gonna specify the pool
+    # multiple times in Vorac's ItemPool.  This is lame, but should let both
+    # of them coexist.
+    voracidous_drop_seraph_1 = '1'
+    voracidous_drop_seraph_2 = '1'
+    voracidous_drop_seraph_3 = '1'
+    voracidous_drop_seraph_4 = '1'
+    voracidous_drop_legendary_1 = '1'
+    voracidous_drop_legendary_2 = '1'
+    voracidous_drop_legendary_3 = '1'
+    voracidous_drop_legendary_4 = '1'
 
     # Drop rates within the "very high roll" pools of dice chests
     dice_vhigh_veryrare = '1'
@@ -442,8 +456,22 @@ class ConfigReasonable(ConfigLootsplosion):
     quantity_hyperius_seraph = '2'
     quantity_gee_seraph = '2'
     quantity_gee_legendary = '2'
-    quantity_voracidous_seraph = '2'
-    quantity_voracidous_legendary = '2'
+
+    # Voracidous quantities have to be done slightly differently, because both
+    # Dexiduous and Voracidous use the same Seraph and Legendary pools for their
+    # unique drops, but Dexi calls it multiple times, whereas Vorac just calls
+    # it the once (by default).  So upping the quantity for Vorac makes Dexi's
+    # drops totally ludicrous.  So instead, we're just gonna specify the pool
+    # multiple times in Vorac's ItemPool.  This is lame, but should let both
+    # of them coexist.
+    voracidous_drop_seraph_1 = '1'
+    voracidous_drop_seraph_2 = '1'
+    voracidous_drop_seraph_3 = '0'
+    voracidous_drop_seraph_4 = '0'
+    voracidous_drop_legendary_1 = '1'
+    voracidous_drop_legendary_2 = '1'
+    voracidous_drop_legendary_3 = '0'
+    voracidous_drop_legendary_4 = '0'
 
     # Badass pool probabilities (NOTE: these are *not* weights)
     badass_pool_veryrare = '0.2'

@@ -368,4 +368,6 @@ Changelog
  * Added "Reasonable Drops" Variant, suffixed original with "Lootsplosion"
  * Added some more folder structure inside many of the Raid Boss improvements,
    so they can be toggled at a more granular level.
+ * Fixed an error which was causing Dexiduous's drops to be way too huge, even
+   for this mod.
 
