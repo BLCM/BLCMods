@@ -14,6 +14,13 @@ everything in here can be toggled on or off inside FilterTool as you'd
 hope, on an item-by-item basis.  Basically every bullet point in the
 "Overview" section is its own "folder" once imported into FilterTool.
 
+**WARNING:** There seems to be some loot scaling in UVHM which can make
+some raid bosses spawn a totally crazy number of items, while using this
+mod, sometimes to the point of crashing the game (so far I've only seen
+a crash reported on Ancient Dragons, but the too-much-loot problem has
+happened at least on Terramorphous as well).  I'm still working on
+tracking that down.
+
 Usage/Installation
 ------------------
 
