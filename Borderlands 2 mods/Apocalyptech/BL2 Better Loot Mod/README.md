@@ -302,7 +302,6 @@ TODO
 * I haven't done much testing in TVHM/UVHM, though it should be fine in
   those modes.
 * I haven't yet looked into drops for the following:
-  * Omnd-Omnd-Ohk
   * Godliaths
   * Iron Gods
 * Can we increase boss drop counts depending on player count?
