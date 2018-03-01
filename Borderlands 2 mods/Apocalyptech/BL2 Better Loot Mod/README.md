@@ -397,6 +397,7 @@ Changelog
    so they can be toggled at a more granular level.
  * Fixed an error which was causing Dexiduous's drops to be way too huge, even
    for this mod.
+ * Nerfed Witch Doctor Relic drop chance a bit (from 60% -> 40%)
  * Added an optional folder which doubles the standard enemy drop rate (disabled
    by default)
  * Converted some statements to `set` commands which had been needlessly using

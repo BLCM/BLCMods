@@ -1349,7 +1349,7 @@ witch_extra_pools = """
             BaseValueConstant=1.000000,
             BaseValueAttribute=None,
             InitializationDefinition=None,
-            BaseValueScaleConstant=0.600000
+            BaseValueScaleConstant=0.400000
         )
     ),
     (
