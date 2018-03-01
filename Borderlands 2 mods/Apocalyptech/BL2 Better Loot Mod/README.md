@@ -347,12 +347,16 @@ You'd need to copy (or symlink, if you're on Mac or Linux) `hotfix.py`
 into this directory in order to run the script.
 
 To generate the end result file, I actually run the small shell script
-`create.sh` in this directory, which just does the following:
+`create.sh` in this directory, which effectively just does the following:
 
     ./generate-source.py && \
         ../conv_to_mod.py -f "BL2 Better Loot Mod by Apocalyptech - UCP Compat" && \
         ../conv_to_mod.py -f "BL2 Better Loot Mod by Apocalyptech - Standalone" && \
         ../conv_to_mod.py -f "BL2 Better Loot Mod by Apocalyptech - Standalone Offline"
+
+*(It's actually slightly more complicated now that I'm exporting multiple
+profiles of the same mod (Lootsplosion vs. Reasonable), but that's basically
+what it does.)*
 
 Credits
 -------
@@ -400,7 +404,7 @@ Changelog
  * Nerfed Witch Doctor Relic drop chance a bit (from 60% -> 40%)
  * Added an optional folder which doubles the standard enemy drop rate (disabled
    by default)
- * Converted some statements to `set` commands which had been needlessly using
-   hotfixes previously.
+ * Converted some hotfixes which didn't actually need to be hotfixes, to regular
+   `set` commands
  * Fixed the "Shields" loot configuration on Digistruct Peak Dahl chests
 
