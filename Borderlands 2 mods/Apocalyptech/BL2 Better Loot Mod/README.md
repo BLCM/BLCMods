@@ -303,7 +303,6 @@ TODO
   * Omnd-Omnd-Ohk
   * Godliaths
   * Iron Gods
-  * OMGWTH *(or other bosses present at Digistruct Peak)*
 * Can we increase boss drop counts depending on player count?
 * Untested components from Torgue DLC *(I'm afraid that's my least favorite
   DLC, to the point of not really liking it much, so I suspect that these
@@ -330,6 +329,9 @@ last few stages of Murderlin's Magic Slaughter end up dropping enough loot
 to cause some noticeble FPS hits on my system in fact:
 
 ![Pictured: A Bit Much.](excess.png)
+
+Digistruct Peak is a little ridiculous as well, on account of all the bosses
+and Badasses.
 
 Mod Construction / Implementation Details
 -----------------------------------------
