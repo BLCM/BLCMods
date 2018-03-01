@@ -372,11 +372,11 @@ Changelog
  * Initial public release
 
 **v1.1.0**, (tbd):
- * Converted some statements to `set` commands which had been needlessly using
-   hotfixes previously.
  * Added "Reasonable Drops" Variant, suffixed original with "Lootsplosion"
  * Added some more folder structure inside many of the Raid Boss improvements,
    so they can be toggled at a more granular level.
  * Fixed an error which was causing Dexiduous's drops to be way too huge, even
    for this mod.
+ * Converted some statements to `set` commands which had been needlessly using
+   hotfixes previously.
 
