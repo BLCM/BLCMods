@@ -51,7 +51,7 @@ except ModuleNotFoundError:
 ###
 
 mod_name = 'BL2 Better Loot Mod'
-mod_version = '1.1.0'
+mod_version = '1.1.1 (prerelease)'
 variant_ucp = 'UCP Compat'
 variant_standalone = 'Standalone'
 variant_offline = 'Standalone Offline'
