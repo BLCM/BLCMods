@@ -148,9 +148,9 @@ Specifically, this mod does the following:
     * Witch Doctors (both in Big Game Hunt and Son of Crawmerax) will drop an Eridium
       stick, and have a pretty good chance of dropping a Relic as well.
     * Elite Savages are guaranteed to drop loot (though just from the standard pool)
-    * Most Tributes from the Wattle Gobbler Headhunter Pack were set to drop from
-      the badadss loot pool, but three weren't set to drop any loot at all.  This
-      mod fixes the three to have them drop as well.
+    * In the vanilla game, the Tributes from the Wattle Gobbler Headhunter Pack are
+      mostly set to drop from the badadss loot pool, but three weren't set to drop any
+      loot at all.  This mod fixes the three to match all the others.
     * The Loot Leprechaun (from Wedding Day Massacre) will drop from the Epic Chest
       pool, rather than the regular treasure chest pool.
     * The BLNG Loader (from Wedding Day Massacre) will drop from the badass pool and
@@ -185,17 +185,17 @@ Compatibility
 
 This mod is mostly compatible with UCP 4.0, with three known exceptions:
 
-* "Better Enemy Drops / Regular Enemy Drop Improvements / BLNG Loader" in this
-  mod will override UCP's "Loot Pool & Drop Changes / Specific Loot Changes /
-  Add Sledge's Shotgun to BLNG Loader"
-* "Better Enemy Drops / Raid Boss Drop Improvements / Hyperius" in this mod
-  will override UCP's "Loot Pool & Drop Changes / Specific Loot Changes / Add
-  Black Hole and remove the Kiss of Death from Hyperius"
-* "Better Enemy Drops / Raid Boss Drop Improvements / Hyperius / Clean Up
-  Seraph Pool" in this mod will override the loot pool changes in UCP's
-  "Loot Pool & Drop Changes / Specific Loot Changes / Increase Hyperius' Seraph
-  drop chance and add all DLC 1 Seraphs".  Unselecting just "Clean Up Seraph
-  Pool" in this mod but leaving the rest of our Hyperius section intact
+* "`Better Enemy Drops / Regular Enemy Drop Improvements / BLNG Loader`" in this
+  mod will override UCP's "`Loot Pool & Drop Changes / Specific Loot Changes /
+  Add Sledge's Shotgun to BLNG Loader`"
+* "`Better Enemy Drops / Raid Boss Drop Improvements / Hyperius`" in this mod
+  will override UCP's "`Loot Pool & Drop Changes / Specific Loot Changes / Add
+  Black Hole and remove the Kiss of Death from Hyperius`"
+* "`Better Enemy Drops / Raid Boss Drop Improvements / Hyperius / Clean Up
+  Seraph Pool`" in this mod will override the loot pool changes in UCP's
+  "`Loot Pool & Drop Changes / Specific Loot Changes / Increase Hyperius' Seraph
+  drop chance and add all DLC 1 Seraphs`".  Unselecting just "`Clean Up Seraph
+  Pool`" in this mod but leaving the rest of our Hyperius section intact
   will still give a 100% drop rate for Seraphs on Hyperius.
 
 It's possible that there are some other strange interactions which could take
