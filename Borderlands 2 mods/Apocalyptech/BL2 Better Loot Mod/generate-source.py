@@ -517,6 +517,13 @@ loot_drop_chance_3p = '1.000000'    # Stock: 0.060000
 loot_drop_chance_4p = '1.000000'    # Stock: 0.050000
 loot_drop_quantity = '5'            # Stock: 1.000000
 
+# Some alternate vars from a mutually-exclusive area - merely improve
+# the drop rate, rather than making it 100%
+loot_drop_chance_1p_alt = '0.170000'    # Stock: 0.085000
+loot_drop_chance_2p_alt = '0.140000'    # Stock: 0.070000
+loot_drop_chance_3p_alt = '0.120000'    # Stock: 0.060000
+loot_drop_chance_4p_alt = '0.100000'    # Stock: 0.050000
+
 # Force Pool_GunsAndGear to always drop the specified pool, if `force_gunsandgear_drop`
 # is True.  Useful for testing out how individual pools are behaving.
 force_gunsandgear_drop = False
@@ -2435,96 +2442,97 @@ else:
     drop_comment = '#'
     drop_off = '    <off>'
     drop_wording = ' (disabled by default)'
-test_drop_str = """
+drop_chance_str_source = """
 
-    #<Guaranteed Enemy Loot Drop Chance{drop_wording}>
+        #<{adjective} Enemy Loot Drop Chance{drop_wording}>
 
-        {drop_comment}# Gives a 100% chance to drop loot from enemies.{drop_off}
-        {drop_comment}# Just used during my own testing to get a feel for drop rates.{drop_off}
+            {drop_comment}# Gives {description} chance to drop loot from enemies.{drop_off}
+            {drop_comment}# Just used during my own testing to get a feel for drop rates.{drop_off}
 
-        {drop_comment}set GD_Itempools.DropWeights.DropODDS_GunsAndGear:ConditionalAttributeValueResolver_0 ValueExpressions
-        (
-            bEnabled=True,
-            ConditionalExpressionList=(
-                (
-                    BaseValueIfTrue=(
-                        BaseValueConstant={loot_drop_chance_1p},
-                        BaseValueAttribute=None,
-                        InitializationDefinition=None,
-                        BaseValueScaleConstant=1.000000
+            {drop_comment}set GD_Itempools.DropWeights.DropODDS_GunsAndGear:ConditionalAttributeValueResolver_0 ValueExpressions
+            (
+                bEnabled=True,
+                ConditionalExpressionList=(
+                    (
+                        BaseValueIfTrue=(
+                            BaseValueConstant={loot_drop_chance_1p},
+                            BaseValueAttribute=None,
+                            InitializationDefinition=None,
+                            BaseValueScaleConstant=1.000000
+                        ),
+                        Expressions=(
+                            (
+                                AttributeOperand1=AttributeDefinition'D_Attributes.GameProperties.NumberOfPlayers',
+                                ComparisonOperator=OPERATOR_EqualTo,
+                                Operand2Usage=OPERAND_PreferAttribute,
+                                AttributeOperand2=None,
+                                ConstantOperand2=1.000000
+                            )
+                        )
                     ),
-                    Expressions=(
-                        (
-                            AttributeOperand1=AttributeDefinition'D_Attributes.GameProperties.NumberOfPlayers',
-                            ComparisonOperator=OPERATOR_EqualTo,
-                            Operand2Usage=OPERAND_PreferAttribute,
-                            AttributeOperand2=None,
-                            ConstantOperand2=1.000000
+                    (
+                        BaseValueIfTrue=(
+                            BaseValueConstant={loot_drop_chance_2p},
+                            BaseValueAttribute=None,
+                            InitializationDefinition=None,
+                            BaseValueScaleConstant=1.000000
+                        ),
+                        Expressions=(
+                            (
+                                AttributeOperand1=AttributeDefinition'D_Attributes.GameProperties.NumberOfPlayers',
+                                ComparisonOperator=OPERATOR_EqualTo,
+                                Operand2Usage=OPERAND_PreferAttribute,
+                                AttributeOperand2=None,
+                                ConstantOperand2=2.000000
+                            )
+                        )
+                    ),
+                    (
+                        BaseValueIfTrue=(
+                            BaseValueConstant={loot_drop_chance_3p},
+                            BaseValueAttribute=None,
+                            InitializationDefinition=None,
+                            BaseValueScaleConstant=1.000000
+                        ),
+                        Expressions=(
+                            (
+                                AttributeOperand1=AttributeDefinition'D_Attributes.GameProperties.NumberOfPlayers',
+                                ComparisonOperator=OPERATOR_EqualTo,
+                                Operand2Usage=OPERAND_PreferAttribute,
+                                AttributeOperand2=None,
+                                ConstantOperand2=3.000000
+                            )
+                        )
+                    ),
+                    (
+                        BaseValueIfTrue=(
+                            BaseValueConstant={loot_drop_chance_4p},
+                            BaseValueAttribute=None,
+                            InitializationDefinition=None,
+                            BaseValueScaleConstant=1.000000
+                        ),
+                        Expressions=(
+                            (
+                                AttributeOperand1=AttributeDefinition'D_Attributes.GameProperties.NumberOfPlayers',
+                                ComparisonOperator=OPERATOR_EqualTo,
+                                Operand2Usage=OPERAND_PreferAttribute,
+                                AttributeOperand2=None,
+                                ConstantOperand2=4.000000
+                            )
                         )
                     )
                 ),
-                (
-                    BaseValueIfTrue=(
-                        BaseValueConstant={loot_drop_chance_2p},
-                        BaseValueAttribute=None,
-                        InitializationDefinition=None,
-                        BaseValueScaleConstant=1.000000
-                    ),
-                    Expressions=(
-                        (
-                            AttributeOperand1=AttributeDefinition'D_Attributes.GameProperties.NumberOfPlayers',
-                            ComparisonOperator=OPERATOR_EqualTo,
-                            Operand2Usage=OPERAND_PreferAttribute,
-                            AttributeOperand2=None,
-                            ConstantOperand2=2.000000
-                        )
-                    )
-                ),
-                (
-                    BaseValueIfTrue=(
-                        BaseValueConstant={loot_drop_chance_3p},
-                        BaseValueAttribute=None,
-                        InitializationDefinition=None,
-                        BaseValueScaleConstant=1.000000
-                    ),
-                    Expressions=(
-                        (
-                            AttributeOperand1=AttributeDefinition'D_Attributes.GameProperties.NumberOfPlayers',
-                            ComparisonOperator=OPERATOR_EqualTo,
-                            Operand2Usage=OPERAND_PreferAttribute,
-                            AttributeOperand2=None,
-                            ConstantOperand2=3.000000
-                        )
-                    )
-                ),
-                (
-                    BaseValueIfTrue=(
-                        BaseValueConstant={loot_drop_chance_4p},
-                        BaseValueAttribute=None,
-                        InitializationDefinition=None,
-                        BaseValueScaleConstant=1.000000
-                    ),
-                    Expressions=(
-                        (
-                            AttributeOperand1=AttributeDefinition'D_Attributes.GameProperties.NumberOfPlayers',
-                            ComparisonOperator=OPERATOR_EqualTo,
-                            Operand2Usage=OPERAND_PreferAttribute,
-                            AttributeOperand2=None,
-                            ConstantOperand2=4.000000
-                        )
-                    )
+                DefaultBaseValue=(
+                    BaseValueConstant=0.000000,
+                    BaseValueAttribute=None,
+                    InitializationDefinition=None,
+                    BaseValueScaleConstant=1.000000
                 )
-            ),
-            DefaultBaseValue=(
-                BaseValueConstant=0.000000,
-                BaseValueAttribute=None,
-                InitializationDefinition=None,
-                BaseValueScaleConstant=1.000000
-            )
-        ){drop_off}
+            ){drop_off}
 
-    #</Guaranteed Enemy Loot Drop Chance{drop_wording}>
+        #</{adjective} Enemy Loot Drop Chance{drop_wording}>"""
 
+drop_quantity_str_source = """
     #<Extreme Enemy Loot Drop Quantity{drop_wording}>
 
         {drop_comment}# Enemies drop {loot_drop_quantity} items instead of just one.{drop_off}
@@ -2566,18 +2574,54 @@ test_drop_str = """
 
         #</Torgue Biker Gangs>
 
-    #</Extreme Enemy Loot Drop Quantity{drop_wording}>
-    """.format(
-            drop_comment=drop_comment,
-            drop_off=drop_off,
-            drop_wording=drop_wording,
-            loot_drop_chance_1p=loot_drop_chance_1p,
-            loot_drop_chance_2p=loot_drop_chance_2p,
-            loot_drop_chance_3p=loot_drop_chance_3p,
-            loot_drop_chance_4p=loot_drop_chance_4p,
-            loot_drop_quantity=loot_drop_quantity,
-        )
+    #</Extreme Enemy Loot Drop Quantity{drop_wording}>"""
 
+# Guaranteed drop chance string
+test_drop_chance_guaranteed_str = drop_chance_str_source.format(
+        adjective='Guaranteed',
+        description='a 100%',
+        drop_comment=drop_comment,
+        drop_off=drop_off,
+        drop_wording=drop_wording,
+        loot_drop_chance_1p=loot_drop_chance_1p,
+        loot_drop_chance_2p=loot_drop_chance_2p,
+        loot_drop_chance_3p=loot_drop_chance_3p,
+        loot_drop_chance_4p=loot_drop_chance_4p,
+    )
+
+# Merely improved drop chance string
+test_drop_chance_improved_str = drop_chance_str_source.format(
+        adjective='Improved',
+        description='a doubled',
+        drop_comment='#',
+        drop_off='    <off>',
+        drop_wording=' (disabled by default)',
+        loot_drop_chance_1p=loot_drop_chance_1p_alt,
+        loot_drop_chance_2p=loot_drop_chance_2p_alt,
+        loot_drop_chance_3p=loot_drop_chance_3p_alt,
+        loot_drop_chance_4p=loot_drop_chance_4p_alt,
+    )
+
+# Concatenate our drop chance stanzas in one mutually-exclusive folder
+test_drop_chance_str = """
+    #<Enemy Loot Drop Chance Modification (choose one){drop_wording}><MUT>
+{test_drop_chance_guaranteed_str}
+{test_drop_chance_improved_str}
+
+    #</Enemy Loot Drop Chance Modification (choose one){drop_wording}>
+""".format(
+        drop_wording=drop_wording,
+        test_drop_chance_guaranteed_str=test_drop_chance_guaranteed_str,
+        test_drop_chance_improved_str=test_drop_chance_improved_str,
+    )
+
+# Test drop quantity string
+test_drop_quantity_str = drop_quantity_str_source.format(
+        drop_comment=drop_comment,
+        drop_off=drop_off,
+        drop_wording=drop_wording,
+        loot_drop_quantity=loot_drop_quantity,
+    )
 
 # Now read in our main input file
 with open(input_filename, 'r') as df:
@@ -2597,7 +2641,8 @@ for profile in profiles:
             hotfix_gearbox_base='',
             hotfix_transient_defs='',
             gunsandgear_drop_str=gunsandgear_drop_str,
-            test_drop_str=test_drop_str,
+            test_drop_chance_str=test_drop_chance_str,
+            test_drop_quantity_str=test_drop_quantity_str,
             ))
     print('Wrote UCP-compatible ({}) mod file to: {}'.format(
         profile.profile_name,
@@ -2615,7 +2660,8 @@ for profile in profiles:
             hotfix_gearbox_base=hfs.get_gearbox_hotfix_xml(),
             hotfix_transient_defs=hfs.get_transient_defs(),
             gunsandgear_drop_str=gunsandgear_drop_str,
-            test_drop_str=test_drop_str,
+            test_drop_chance_str=test_drop_chance_str,
+            test_drop_quantity_str=test_drop_quantity_str,
             ))
     print('Wrote standalone ({}) mod file to: {}'.format(
         profile.profile_name,
@@ -2633,7 +2679,8 @@ for profile in profiles:
             hotfix_gearbox_base=hfs.get_gearbox_hotfix_xml(),
             hotfix_transient_defs=hfs.get_transient_defs(offline=True),
             gunsandgear_drop_str=gunsandgear_drop_str,
-            test_drop_str=test_drop_str,
+            test_drop_chance_str=test_drop_chance_str,
+            test_drop_quantity_str=test_drop_quantity_str,
             ))
     print('Wrote standalone offline ({}) mod file to: {}'.format(
         profile.profile_name,

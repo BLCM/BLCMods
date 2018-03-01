@@ -172,6 +172,10 @@ anyone feels like *really* going overboard with loot.  One will cause enemies to
 always drop loot when killed, and the other will cause any regular enemy loot drop
 to drop five items instead of just one.
 
+An alternative to the guaranteed-loot-drop setting is an improved loot drop, which
+will double the drop rate of standard enemies.  Like the guaranteed-drop version,
+this is disabled by default.
+
 Compatibility
 -------------
 
@@ -393,6 +397,8 @@ Changelog
    so they can be toggled at a more granular level.
  * Fixed an error which was causing Dexiduous's drops to be way too huge, even
    for this mod.
+ * Added an optional folder which doubles the standard enemy drop rate (disabled
+   by default)
  * Converted some statements to `set` commands which had been needlessly using
    hotfixes previously.
 

@@ -2390,15 +2390,30 @@
     #</Remove Level-Based Loot Restrictions (enhancement of UCP 4.0)>
 
 
+    #<Enemy Loot Drop Chance Modification (choose one) (disabled by default)><MUT>
 
-    #<Guaranteed Enemy Loot Drop Chance (disabled by default)>
 
-        ## Gives a 100% chance to drop loot from enemies.    <off>
-        ## Just used during my own testing to get a feel for drop rates.    <off>
+        #<Guaranteed Enemy Loot Drop Chance (disabled by default)>
 
-        #set GD_Itempools.DropWeights.DropODDS_GunsAndGear:ConditionalAttributeValueResolver_0 ValueExpressions (bEnabled=True,ConditionalExpressionList=((BaseValueIfTrue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),Expressions=((AttributeOperand1=AttributeDefinition'D_Attributes.GameProperties.NumberOfPlayers',ComparisonOperator=OPERATOR_EqualTo,Operand2Usage=OPERAND_PreferAttribute,AttributeOperand2=None,ConstantOperand2=1.000000))),(BaseValueIfTrue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),Expressions=((AttributeOperand1=AttributeDefinition'D_Attributes.GameProperties.NumberOfPlayers',ComparisonOperator=OPERATOR_EqualTo,Operand2Usage=OPERAND_PreferAttribute,AttributeOperand2=None,ConstantOperand2=2.000000))),(BaseValueIfTrue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),Expressions=((AttributeOperand1=AttributeDefinition'D_Attributes.GameProperties.NumberOfPlayers',ComparisonOperator=OPERATOR_EqualTo,Operand2Usage=OPERAND_PreferAttribute,AttributeOperand2=None,ConstantOperand2=3.000000))),(BaseValueIfTrue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),Expressions=((AttributeOperand1=AttributeDefinition'D_Attributes.GameProperties.NumberOfPlayers',ComparisonOperator=OPERATOR_EqualTo,Operand2Usage=OPERAND_PreferAttribute,AttributeOperand2=None,ConstantOperand2=4.000000)))),DefaultBaseValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))    <off>
+            ## Gives a 100% chance to drop loot from enemies.    <off>
+            ## Just used during my own testing to get a feel for drop rates.    <off>
 
-    #</Guaranteed Enemy Loot Drop Chance (disabled by default)>
+            #set GD_Itempools.DropWeights.DropODDS_GunsAndGear:ConditionalAttributeValueResolver_0 ValueExpressions (bEnabled=True,ConditionalExpressionList=((BaseValueIfTrue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),Expressions=((AttributeOperand1=AttributeDefinition'D_Attributes.GameProperties.NumberOfPlayers',ComparisonOperator=OPERATOR_EqualTo,Operand2Usage=OPERAND_PreferAttribute,AttributeOperand2=None,ConstantOperand2=1.000000))),(BaseValueIfTrue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),Expressions=((AttributeOperand1=AttributeDefinition'D_Attributes.GameProperties.NumberOfPlayers',ComparisonOperator=OPERATOR_EqualTo,Operand2Usage=OPERAND_PreferAttribute,AttributeOperand2=None,ConstantOperand2=2.000000))),(BaseValueIfTrue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),Expressions=((AttributeOperand1=AttributeDefinition'D_Attributes.GameProperties.NumberOfPlayers',ComparisonOperator=OPERATOR_EqualTo,Operand2Usage=OPERAND_PreferAttribute,AttributeOperand2=None,ConstantOperand2=3.000000))),(BaseValueIfTrue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),Expressions=((AttributeOperand1=AttributeDefinition'D_Attributes.GameProperties.NumberOfPlayers',ComparisonOperator=OPERATOR_EqualTo,Operand2Usage=OPERAND_PreferAttribute,AttributeOperand2=None,ConstantOperand2=4.000000)))),DefaultBaseValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))    <off>
+
+        #</Guaranteed Enemy Loot Drop Chance (disabled by default)>
+
+
+        #<Improved Enemy Loot Drop Chance (disabled by default)>
+
+            ## Gives a doubled chance to drop loot from enemies.    <off>
+            ## Just used during my own testing to get a feel for drop rates.    <off>
+
+            #set GD_Itempools.DropWeights.DropODDS_GunsAndGear:ConditionalAttributeValueResolver_0 ValueExpressions (bEnabled=True,ConditionalExpressionList=((BaseValueIfTrue=(BaseValueConstant=0.170000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),Expressions=((AttributeOperand1=AttributeDefinition'D_Attributes.GameProperties.NumberOfPlayers',ComparisonOperator=OPERATOR_EqualTo,Operand2Usage=OPERAND_PreferAttribute,AttributeOperand2=None,ConstantOperand2=1.000000))),(BaseValueIfTrue=(BaseValueConstant=0.140000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),Expressions=((AttributeOperand1=AttributeDefinition'D_Attributes.GameProperties.NumberOfPlayers',ComparisonOperator=OPERATOR_EqualTo,Operand2Usage=OPERAND_PreferAttribute,AttributeOperand2=None,ConstantOperand2=2.000000))),(BaseValueIfTrue=(BaseValueConstant=0.120000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),Expressions=((AttributeOperand1=AttributeDefinition'D_Attributes.GameProperties.NumberOfPlayers',ComparisonOperator=OPERATOR_EqualTo,Operand2Usage=OPERAND_PreferAttribute,AttributeOperand2=None,ConstantOperand2=3.000000))),(BaseValueIfTrue=(BaseValueConstant=0.100000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),Expressions=((AttributeOperand1=AttributeDefinition'D_Attributes.GameProperties.NumberOfPlayers',ComparisonOperator=OPERATOR_EqualTo,Operand2Usage=OPERAND_PreferAttribute,AttributeOperand2=None,ConstantOperand2=4.000000)))),DefaultBaseValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))    <off>
+
+        #</Improved Enemy Loot Drop Chance (disabled by default)>
+
+    #</Enemy Loot Drop Chance Modification (choose one) (disabled by default)>
+
 
     #<Extreme Enemy Loot Drop Quantity (disabled by default)>
 
@@ -2418,7 +2433,6 @@
         #</Torgue Biker Gangs>
 
     #</Extreme Enemy Loot Drop Quantity (disabled by default)>
-    
 
 
 #</BL2 Better Loot Mod (Reasonable Drops - UCP Compat)>
