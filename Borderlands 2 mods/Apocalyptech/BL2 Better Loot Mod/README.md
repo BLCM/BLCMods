@@ -293,14 +293,13 @@ well-covered in other mods, so instead I'll just mention them here.
 TODO
 ----
 
-* Should see if anything should be done with Godliaths, Iron Gods, and
-  Omnd-Omnd-Ohk.
-* This is completely untested in TVHM/UVHM.  I'm not really a fan of either
-  mode, so I'm unlikely to do so.  The worst-case scenario is that
-  TVHM/UVHM might override some of my specific enemy drops, though -- I
-  suspect that the majority of the mod should still work fine.
-  * As such, I have not looked into OMGWTH's drops (from Digistruct Peak,
-    at OP5+), or drops by other bosses present on that map.
+* I haven't done much testing in TVHM/UVHM, though it should be fine in
+  those modes.
+* I haven't yet looked into drops for the following:
+  * Omnd-Omnd-Ohk
+  * Godliaths
+  * Iron Gods
+  * OMGWTH *(or other bosses present at Digistruct Peak)*
 * Can we increase boss drop counts depending on player count?
 * Untested components from Torgue DLC *(I'm afraid that's my least favorite
   DLC, to the point of not really liking it much, so I suspect that these
