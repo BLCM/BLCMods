@@ -301,9 +301,6 @@ TODO
 
 * I haven't done much testing in TVHM/UVHM, though it should be fine in
   those modes.
-* I haven't yet looked into drops for the following:
-  * Godliaths
-  * Iron Gods
 * Can we increase boss drop counts depending on player count?
 * Untested components from Torgue DLC *(I'm afraid that's my least favorite
   DLC, to the point of not really liking it much, so I suspect that these
