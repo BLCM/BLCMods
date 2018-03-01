@@ -395,7 +395,7 @@ Changelog
 **v1.0.0**, February 26, 2018 (commit `45e70cdc7982ac22715955e5ffb9e3f5963601c7`):
  * Initial public release
 
-**v1.1.0**, (tbd):
+**v1.1.0**, March 1, 2018:
  * Added "Reasonable Drops" Variant, suffixed original with "Lootsplosion"
  * Added some more folder structure inside many of the Raid Boss improvements,
    so they can be toggled at a more granular level.
