@@ -1935,6 +1935,7 @@ for (idx, (classname, propname, loot_idx, attachment_idx)) in enumerate([
         ('GD_Balance_Treasure.ChestGrades.ObjectGrade_DahlEpic_BearerBadNews', 'DefaultLoot', 4, 11),
         ('GD_Itempools.ListDefs.EpicChestHyperionLoot', 'LootData', 3, 11),
         ('GD_Aster_Lootables.Balance.ObjectGrade_MimicChest_NoMimic', 'DefaultLoot', 4, 11),
+        ('GD_Lobelia_DahlDigi.LootableGradesUnique.ObjectGrade_DalhEpicCrate_Digi', 'DefaultLoot', 4, 11),
         ]):
     hfs.add_level_hotfix('euphoria_fix_{}'.format(idx),
         'EuphoriaChestFix',

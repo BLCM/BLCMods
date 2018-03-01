@@ -97,6 +97,8 @@ Specifically, this mod does the following:
   * Safes have been improved: Eridium configurations are far more likely, cash
     quantities have been improved.  Gear drop chances have been dropped
     somewhat, but gear from safes will always be legendary.
+  * Fixes some "shield" loot configurations which had an error and would never
+    spawn, previously.
 * Makes Eridium drop 2.5x more often
 * Makes Torgue Tokens more numerous when dropped
 * Boss drop pools are generally improved, and bosses are guaranteed to drop as
@@ -403,4 +405,5 @@ Changelog
    by default)
  * Converted some statements to `set` commands which had been needlessly using
    hotfixes previously.
+ * Fixed the "Shields" loot configuration on Digistruct Peak Dahl chests
 
