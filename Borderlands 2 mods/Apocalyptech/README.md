@@ -24,6 +24,13 @@ the uninteresting and drab loot that typically gets dropped in-game, and who
 often end up just resorting to Gibbed to be able to play around with some
 better gear.  The README in the mod dir itself should provide a lot more info.
 
+Guaranteed Omnd-Omnd-Ohk
+------------------------
+
+Gives all Badass Savages a 100% chance of evolving into Omnd-Omnd-Ohk, when
+left in the presence of a Witch Doctor.  Mostly just useful if you want to
+farm OOO without having to gamble on its spawn chances.
+
 Guaranteed Varkid Evolution
 ---------------------------
 
