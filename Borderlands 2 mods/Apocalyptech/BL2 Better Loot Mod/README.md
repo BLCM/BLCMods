@@ -14,12 +14,9 @@ everything in here can be toggled on or off inside FilterTool as you'd
 hope, on an item-by-item basis.  Basically every bullet point in the
 "Overview" section is its own "folder" once imported into FilterTool.
 
-**WARNING:** There seems to be some loot scaling in UVHM which can make
-some raid bosses spawn a totally crazy number of items, while using this
-mod, sometimes to the point of crashing the game (so far I've only seen
-a crash reported on Ancient Dragons, but the too-much-loot problem has
-happened at least on Terramorphous as well).  I'm still working on
-tracking that down.
+**NOTE:** One known incompatibility is with Shadowevil's "VaultHunter" mod.
+Best not to use both of them at the same time.  See the "Compatibility"
+section, below, for details.
 
 Usage/Installation
 ------------------
@@ -196,6 +193,12 @@ This mod is mostly compatible with UCP 4.0, with three known exceptions:
 It's possible that there are some other strange interactions which could take
 place when both UCP and this mod are active, though it shouldn't be anything
 awful.
+
+**NOTE:** This mod and Shadowevil's "VaultHunter" mod, which creates a
+Legendary-level Vault Hunter's Relic, don't play very well together,
+especially with Raid boss drops.  The combination has been known to
+sometimes crash Borderlands after defeating the Ancient Dragons, in fact,
+and legendary drops will be *far* more frequent than is useful.
 
 Obviously this mod will conflict with other mods which play with the same
 variables.  I know that Hemaxhu's "Better White Chests" would conflict with
