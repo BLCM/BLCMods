@@ -14,18 +14,32 @@ everything in here can be toggled on or off inside FilterTool as you'd
 hope, on an item-by-item basis.  Basically every bullet point in the
 "Overview" section is its own "folder" once imported into FilterTool.
 
+**NOTE:** One known incompatibility is with Shadowevil's "VaultHunter" mod.
+Best not to use both of them at the same time.  See the "Compatibility"
+section, below, for details.
+
 Usage/Installation
 ------------------
 
 The recommended way to use this mod is with FilterTool/UCP.  In FilterTool,
-select `Developer Tools` -> `Add Single Mod` and then select the file
-file `BL2 Better Loot Mod by Apocalyptech - UCP Compat` (without any
-extensions).  You'll have a new folder for this mod underneath the `mods`
-folder at the bottom, and can turn parts on or off at will.
+select `Developer Tools` -> `Add Single Mod` and then select one of these
+two files:
 
-If for whatever reason you don't want to use FilterTool, there is also
-a standalone version at `BL2 Better Loot Mod by Apocalyptech - Standalone`,
-and an offline standalone version at `BL2 Better Loot Mod by Apocalyptech - Standalone Offline`.
+* `BL2 Better Loot Mod (Lootsplosion) - UCP Compat` - Default drop weights
+  which I'm personally happy with.  Many folks may find these a bit extreme.
+  This version probably makes more sense in Normal mode than it does in UVHM.
+* `BL2 Better Loot Mod (Reasonable Drops) - UCP Compat` - More reasonable
+  drop weights.  This version may be more suitable for UVHM, where lots
+  of Legendary drops might be excessive. *(Work in Progress - needs
+  tweaking+testing, etc)*
+
+Once the mod has been added, you'll have a new folder for this mod
+underneath the `mods` folder at the bottom, and can turn parts on or off at
+will.
+
+If for whatever reason you don't want to use FilterTool, there are also
+standalone versions at `BL2 Better Loot Mod (*) - Standalone`,
+and an offline standalone version at `BL2 Better Loot Mod (*) - Standalone Offline`.
 Simply copy the file into the game's `steamassets/binaries` directory with
 an easy-to-type filename, and then run `exec <filename>` from the console
 to load it on its own.  It works quite well by itself.
@@ -39,6 +53,10 @@ All versions are fully FilterTool compatible.
 
 Mod Overview
 ------------
+
+*(Note that the "Reasonable Drops" variant of this mod won't be **quite**
+as great as some of these statements imply, though the probabilities of
+getting better gear should still be much better than in the vanilla game.)*
 
 Specifically, this mod does the following:
 
@@ -79,6 +97,8 @@ Specifically, this mod does the following:
   * Safes have been improved: Eridium configurations are far more likely, cash
     quantities have been improved.  Gear drop chances have been dropped
     somewhat, but gear from safes will always be legendary.
+  * Fixes some "shield" loot configurations which had an error and would never
+    spawn, previously.
 * Makes Eridium drop 2.5x more often
 * Makes Torgue Tokens more numerous when dropped
 * Boss drop pools are generally improved, and bosses are guaranteed to drop as
@@ -128,9 +148,9 @@ Specifically, this mod does the following:
     * Witch Doctors (both in Big Game Hunt and Son of Crawmerax) will drop an Eridium
       stick, and have a pretty good chance of dropping a Relic as well.
     * Elite Savages are guaranteed to drop loot (though just from the standard pool)
-    * Most Tributes from the Wattle Gobbler Headhunter Pack were set to drop from
-      the badadss loot pool, but three weren't set to drop any loot at all.  This
-      mod fixes the three to have them drop as well.
+    * In the vanilla game, the Tributes from the Wattle Gobbler Headhunter Pack are
+      mostly set to drop from the badadss loot pool, but three weren't set to drop any
+      loot at all.  This mod fixes the three to match all the others.
     * The Loot Leprechaun (from Wedding Day Massacre) will drop from the Epic Chest
       pool, rather than the regular treasure chest pool.
     * The BLNG Loader (from Wedding Day Massacre) will drop from the badass pool and
@@ -154,27 +174,58 @@ anyone feels like *really* going overboard with loot.  One will cause enemies to
 always drop loot when killed, and the other will cause any regular enemy loot drop
 to drop five items instead of just one.
 
+An alternative to the guaranteed-loot-drop setting is an improved loot drop, which
+will double the drop rate of standard enemies.  Like the guaranteed-drop version,
+this is disabled by default.
+
 Compatibility
 -------------
 
+### UCP ###
+
 This mod is mostly compatible with UCP 4.0, with three known exceptions:
 
-* "Better Enemy Drops / Regular Enemy Drop Improvements / BLNG Loader" in this
-  mod will override UCP's "Loot Pool & Drop Changes / Specific Loot Changes /
-  Add Sledge's Shotgun to BLNG Loader"
-* "Better Enemy Drops / Raid Boss Drop Improvements / Hyperius" in this mod
-  will override UCP's "Loot Pool & Drop Changes / Specific Loot Changes / Add
-  Black Hole and remove the Kiss of Death from Hyperius"
-* "Better Enemy Drops / Raid Boss Drop Improvements / Hyperius / Clean Up
-  Seraph Drop Pool" in this mod will override the loot pool changes in UCP's
-  "Loot Pool & Drop Changes / Specific Loot Changes / Increase Hyperius' Seraph
-  drop chance and add all DLC 1 Seraphs".  Unselecting just "Clean Up Seraph
-  Drop Pool" in this mod but leaving the rest of our Hyperius section intact
+* "`Better Enemy Drops / Regular Enemy Drop Improvements / BLNG Loader`" in this
+  mod will override UCP's "`Loot Pool & Drop Changes / Specific Loot Changes /
+  Add Sledge's Shotgun to BLNG Loader`"
+* "`Better Enemy Drops / Raid Boss Drop Improvements / Hyperius`" in this mod
+  will override UCP's "`Loot Pool & Drop Changes / Specific Loot Changes / Add
+  Black Hole and remove the Kiss of Death from Hyperius`"
+* "`Better Enemy Drops / Raid Boss Drop Improvements / Hyperius / Clean Up
+  Seraph Pool`" in this mod will override the loot pool changes in UCP's
+  "`Loot Pool & Drop Changes / Specific Loot Changes / Increase Hyperius' Seraph
+  drop chance and add all DLC 1 Seraphs`".  Unselecting just "`Clean Up Seraph
+  Pool`" in this mod but leaving the rest of our Hyperius section intact
   will still give a 100% drop rate for Seraphs on Hyperius.
 
 It's possible that there are some other strange interactions which could take
 place when both UCP and this mod are active, though it shouldn't be anything
 awful.
+
+### Shadowevil's "VaultHunter" mod
+
+**NOTE:** This mod and Shadowevil's "VaultHunter" mod, which creates a
+Legendary-level Vault Hunter's Relic, don't play very well together,
+especially with Raid boss drops.  The combination has been known to
+sometimes crash Borderlands after defeating the Ancient Dragons, in fact,
+and legendary drops will be *far* more frequent than is useful.
+
+I'm pretty sure that this mod makes the vanilla game's "Vault Hunter's
+Relic" completely useless, but if you're using this mod, you certainly
+won't miss it.
+
+### Hemaxhu's "More Chubbies" mod
+
+Hemaxhu's "More Chubbies" mod isn't *incompatible* with this one, but you
+will almost certainly find it to be quite excessive if Chubbies are spawning
+more frequently.  The best thing to do if using More Chubbies is probably to
+disable this mod's Chubby buffs, at least partially.  There are two toggles
+you can use in this mod:
+
+* `Better Enemy Drops > Better Badass Pool Definitions > Chubby Enemies`
+* `Better Enemy Drops > Boss Drop Improved Quantities > Chubby Enemies`
+
+### Other Mods
 
 Obviously this mod will conflict with other mods which play with the same
 variables.  I know that Hemaxhu's "Better White Chests" would conflict with
@@ -187,10 +238,6 @@ all item/weapon parts spawn starting at level 1 (though I'd autogenerated
 the ones here, rather than copying from Koby) - the two should coexist without
 problems, though, since the worst case scenario is just that the same command
 gets executed twice.
-
-In terms of loot compatibility, I'm pretty sure that this mod makes the
-"Vault Hunter's Relic" completely useless, but if you're using this mod,
-you certainly won't miss it.
 
 Loot Purposefully Excluded from Pools
 -------------------------------------
@@ -252,12 +299,8 @@ well-covered in other mods, so instead I'll just mention them here.
 TODO
 ----
 
-* This is completely untested in TVHM/UVHM.  I'm not really a fan of either
-  mode, so I'm unlikely to do so.  The worst-case scenario is that
-  TVHM/UVHM might override some of my specific enemy drops, though -- I
-  suspect that the majority of the mod should still work fine.
-  * As such, I have not looked into OMGWTH's drops (from Digistruct Peak,
-    at OP5+), or drops by other bosses present on that map.
+* I haven't done much testing in TVHM/UVHM, though it should be fine in
+  those modes.
 * Can we increase boss drop counts depending on player count?
 * Untested components from Torgue DLC *(I'm afraid that's my least favorite
   DLC, to the point of not really liking it much, so I suspect that these
@@ -285,6 +328,9 @@ to cause some noticeble FPS hits on my system in fact:
 
 ![Pictured: A Bit Much.](excess.png)
 
+Digistruct Peak is a little ridiculous as well, on account of all the bosses
+and Badasses.
+
 Mod Construction / Implementation Details
 -----------------------------------------
 
@@ -292,21 +338,25 @@ I actually generate this mod using a simple little Python script named
 `generate-source.py`, which enables me to do things like set the rarity
 drop levels from a single location at the top of the file, and have it
 apply to a number of different objects throughout the game.  That script
-outputs to a very human-readable multiline text file which can't actually
-be read directly by FilterTool/Borderlands -- it must be processed by
-my `conv_to_mod.py` script which you'll find in the parent directory.
+outputs to a human-readable multiline text file which can't actually be
+read directly by FilterTool/Borderlands -- it must be processed by my
+`conv_to_mod.py` script which you'll find in the parent directory.
 
 The generation script makes use of `hotfix.py` from the parent directory.
 You'd need to copy (or symlink, if you're on Mac or Linux) `hotfix.py`
 into this directory in order to run the script.
 
 To generate the end result file, I actually run the small shell script
-`create.sh` in this directory, which just does the following:
+`create.sh` in this directory, which effectively just does the following:
 
     ./generate-source.py && \
         ../conv_to_mod.py -f "BL2 Better Loot Mod by Apocalyptech - UCP Compat" && \
         ../conv_to_mod.py -f "BL2 Better Loot Mod by Apocalyptech - Standalone" && \
         ../conv_to_mod.py -f "BL2 Better Loot Mod by Apocalyptech - Standalone Offline"
+
+*(It's actually slightly more complicated now that I'm exporting multiple
+profiles of the same mod (Lootsplosion vs. Reasonable), but that's basically
+what it does.)*
 
 Credits
 -------
@@ -338,3 +388,23 @@ The mod itself is licensed under
 
 See [COPYING-code.txt](../COPYING-code.txt) and [COPYING-mods.txt](../COPYING-mods.txt)
 for the full text.
+
+Changelog
+=========
+
+**v1.0.0**, February 26, 2018 (commit `45e70cdc7982ac22715955e5ffb9e3f5963601c7`):
+ * Initial public release
+
+**v1.1.0**, March 1, 2018 (commit `fc80506d9615f662faec63eadf3fdf0fae5e9d37`):
+ * Added "Reasonable Drops" Variant, suffixed original with "Lootsplosion"
+ * Added some more folder structure inside many of the Raid Boss improvements,
+   so they can be toggled at a more granular level.
+ * Fixed an error which was causing Dexiduous's drops to be way too huge, even
+   for this mod.
+ * Nerfed Witch Doctor Relic drop chance a bit (from 60% -> 40%)
+ * Added an optional folder which doubles the standard enemy drop rate (disabled
+   by default)
+ * Converted some hotfixes which didn't actually need to be hotfixes, to regular
+   `set` commands
+ * Fixed the "Shields" loot configuration on Digistruct Peak Dahl chests
+

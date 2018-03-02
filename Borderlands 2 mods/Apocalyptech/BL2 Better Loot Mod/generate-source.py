@@ -50,13 +50,11 @@ except ModuleNotFoundError:
 ### Output variables
 ###
 
-mod_name = 'BL2 Better Loot Mod by Apocalyptech'
-variant_filtertool_name = 'UCP Compat'
-variant_standalone_name = 'Standalone'
-variant_offline_name = 'Standalone Offline'
-output_filename_filtertool = '{} - {}-source.txt'.format(mod_name, variant_filtertool_name)
-output_filename_standalone = '{} - {}-source.txt'.format(mod_name, variant_standalone_name)
-output_filename_offline = '{} - {}-source.txt'.format(mod_name, variant_offline_name)
+mod_name = 'BL2 Better Loot Mod'
+mod_version = '1.1.1 (prerelease)'
+variant_ucp = 'UCP Compat'
+variant_standalone = 'Standalone'
+variant_offline = 'Standalone Offline'
 
 ###
 ### Where we get our mod data from
@@ -74,98 +72,436 @@ hfs = Hotfixes(include_gearbox_patches=True)
 ### Variables which control drop rates and stuff like that
 ###
 
-# Just some convenience vars
-one = '1.000000'
-zero = '0.000000'
+class ConfigBase(object):
+    """
+    Class to hold all our weights, and other vars which alter the probabilities of
+    various things dropping.  Derive from this class to actually define the
+    values.
+    """
 
-# "BaseValueConstant values for the various gear drop types.  These
-# are actually totally unchanged from the stock definitions; I'd just
-# put them in here in case I felt like overriding them easily later.
-weapon_base_common = one
-weapon_base_uncommon = one
-weapon_base_rare = one
-weapon_base_veryrare = one
-weapon_base_alien = one
-weapon_base_legendary = one
-cm_base_common = one
-cm_base_uncommon = one
-cm_base_rare = one
-cm_base_veryrare = one
-cm_base_legendary = one
-grenade_base_common = zero
-grenade_base_uncommon = zero
-grenade_base_rare = zero
-grenade_base_veryrare = zero
-grenade_base_legendary = zero
-shield_base_common = one
-shield_base_uncommon = one
-shield_base_rare = one
-shield_base_veryrare = one
-shield_base_legendary = one
+    def filename(self, mod_name, variant_name):
+        """
+        Constructs our filename
+        """
+        return '{} ({}) - {}-source.txt'.format(
+                mod_name,
+                self.profile_name,
+                variant_name,
+            )
 
-# Custom weapon drop scaling
-weapon_scale_common = '8.000000'
-weapon_scale_uncommon = '85.000000'
-weapon_scale_rare = '65.000000'
-weapon_scale_veryrare = '50.000000'
-weapon_scale_alien = '30.000000'
-weapon_scale_legendary = '3.000000'
-weapon_scale_iris_cobra = '1.000000'
+    def relic_weight_string(self):
+        """
+        Forcing the "Reward" Relic pool to obey our custom weights.  There's
+        22 of these definitions which are all identical (and one outlier), so
+        we're going use a loop rather than a lot of copy+paste.  This is also
+        happening inside our ConfigBase class so that our weights can get
+        applied dynamically.
+        """
+        relic_weight_parts = []
+        for relic_type in [
+                'AggressionA',
+                'AggressionB',
+                'AggressionC',
+                'AggressionD',
+                'AggressionE',
+                'AggressionF',
+                'AllegianceA',
+                'AllegianceB',
+                'AllegianceC',
+                'AllegianceD',
+                'AllegianceE',
+                'AllegianceF',
+                'AllegianceG',
+                'AllegianceH',
+                'Elemental',
+                'Proficiency',
+                'Protection',
+                'Resistance',
+                'Stockpile',
+                'Strength',
+                'Tenacity',
+                'Vitality',
+                ]:
+            relic_weight_parts.append("""
+                set GD_Artifacts.PartLists.Parts_{relic_type}_Rare ConsolidatedAttributeInitData
+                (
+                    (
+                        BaseValueConstant=1.000000,
+                        BaseValueAttribute=None,
+                        InitializationDefinition=None,
+                        BaseValueScaleConstant=1.000000
+                    ),
+                    (
+                        BaseValueConstant=100.000000,
+                        BaseValueAttribute=None,
+                        InitializationDefinition=None,
+                        BaseValueScaleConstant=1.000000
+                    ),
+                    (
+                        BaseValueConstant=0.000000,
+                        BaseValueAttribute=None,
+                        InitializationDefinition=None,
+                        BaseValueScaleConstant=1.000000
+                    ),
+                    (
+                        BaseValueConstant=1.000000,
+                        BaseValueAttribute=None,
+                        InitializationDefinition=None,
+                        BaseValueScaleConstant={relic_scale_rare}
+                    ),
+                    (
+                        BaseValueConstant=1.000000,
+                        BaseValueAttribute=None,
+                        InitializationDefinition=None,
+                        BaseValueScaleConstant={relic_scale_veryrare}
+                    )
+                )
+""".format(
+    relic_type=relic_type,
+    relic_scale_rare=self.relic_scale_rare,
+    relic_scale_veryrare=self.relic_scale_veryrare,
+    ))
+        # This one is the one that's slightly different
+        relic_weight_parts.append("""
+                set GD_Artifacts.PartLists.Parts_Elemental_Status_Rare ConsolidatedAttributeInitData
+                (
+                    (
+                        BaseValueConstant=1.000000,
+                        BaseValueAttribute=None,
+                        InitializationDefinition=None,
+                        BaseValueScaleConstant=1.000000
+                    ),
+                    (
+                        BaseValueConstant=100.000000,
+                        BaseValueAttribute=None,
+                        InitializationDefinition=None,
+                        BaseValueScaleConstant=1.000000
+                    ),
+                    (
+                        BaseValueConstant=0.000000,
+                        BaseValueAttribute=None,
+                        InitializationDefinition=None,
+                        BaseValueScaleConstant=1.000000
+                    ),
+                    (
+                        BaseValueConstant=100.000000,
+                        BaseValueAttribute=None,
+                        InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',
+                        BaseValueScaleConstant=1.000000
+                    ),
+                    (
+                        BaseValueConstant=1.000000,
+                        BaseValueAttribute=None,
+                        InitializationDefinition=None,
+                        BaseValueScaleConstant={relic_scale_rare}
+                    ),
+                    (
+                        BaseValueConstant=1.000000,
+                        BaseValueAttribute=None,
+                        InitializationDefinition=None,
+                        BaseValueScaleConstant={relic_scale_veryrare}
+                    )
+                )
+""".format(
+    relic_type=relic_type,
+    relic_scale_rare=self.relic_scale_rare,
+    relic_scale_veryrare=self.relic_scale_veryrare,
+    ))
 
-# Custom COM drop scaling (identical to weapons, apart from an additional Alignment COM pool)
-cm_scale_common = weapon_scale_common
-cm_scale_uncommon = weapon_scale_uncommon
-cm_scale_rare = weapon_scale_rare
-cm_scale_veryrare = weapon_scale_veryrare
-cm_scale_alignment = '30.000000'
-cm_scale_legendary = weapon_scale_legendary
+        # Return the string
+        return ''.join(relic_weight_parts).lstrip()
 
-# Custom grenade drop scaling (identical to weapons)
-grenade_scale_common = weapon_scale_common
-grenade_scale_uncommon = weapon_scale_uncommon
-grenade_scale_rare = weapon_scale_rare
-grenade_scale_veryrare = weapon_scale_veryrare
-grenade_scale_legendary = weapon_scale_legendary
+    def __format__(self, formatstr):
+        """
+        A bit of magic so that we can use our values in format strings
+        """
+        attr = getattr(self, formatstr)
+        if type(attr) == str:
+            return attr
+        else:
+            return attr()
 
-# Custom shield drop scaling (identical to weapons)
-shield_scale_common = weapon_scale_common
-shield_scale_uncommon = weapon_scale_uncommon
-shield_scale_rare = weapon_scale_rare
-shield_scale_veryrare = weapon_scale_veryrare
-shield_scale_legendary = weapon_scale_legendary
+###
+### Config classes which define the actual contstants that we use
+### for things like drop weights, etc.
+###
 
-# Custom relic drop scaling
-relic_scale_rare = '1.0'
-relic_scale_veryrare = '2.0'
+class ConfigLootsplosion(ConfigBase):
+    """
+    This is our default config, which I personally find quite pleasant.
+    Many folks will consider this a bit too OP/Extreme.
+    """
 
-# Drop rates for "regular" treasure chests
-treasure_scale_rare = '20.000000'
-treasure_scale_veryrare = '60.000000'
-treasure_scale_alien = '30.000000'
-treasure_scale_legendary = '5.000000'
+    profile_name = 'Lootsplosion'
 
-# Drop rates for "epic" treasure chests
-epic_scale_veryrare = '1.000000'
-epic_scale_alien = '1.000000'
-epic_scale_legendary = '0.300000'
-epic_scale_legendary_dbl = '0.600000'
+    # Just some convenience vars
+    one = '1.000000'
+    zero = '0.000000'
 
-# Drop rates within the "very high roll" pools of dice chests
-dice_vhigh_veryrare = '1.000000'
-dice_vhigh_alien = '1.000000'
-dice_vhigh_legendary = '0.500000'
+    # "BaseValueConstant values for the various gear drop types.  These
+    # are actually totally unchanged from the stock definitions; I'd just
+    # put them in here in case I felt like overriding them easily later.
+    weapon_base_common = one
+    weapon_base_uncommon = one
+    weapon_base_rare = one
+    weapon_base_veryrare = one
+    weapon_base_alien = one
+    weapon_base_legendary = one
+    cm_base_common = one
+    cm_base_uncommon = one
+    cm_base_rare = one
+    cm_base_veryrare = one
+    cm_base_legendary = one
+    grenade_base_common = zero
+    grenade_base_uncommon = zero
+    grenade_base_rare = zero
+    grenade_base_veryrare = zero
+    grenade_base_legendary = zero
+    shield_base_common = one
+    shield_base_uncommon = one
+    shield_base_rare = one
+    shield_base_veryrare = one
+    shield_base_legendary = one
 
-# 2.5x chance of both kinds of eridium
-eridium_bar_drop = '0.003750'       # Stock: 0.001500
-eridium_stick_drop = '0.020000'     # Stock: 0.008000
+    # Custom weapon drop scaling
+    weapon_scale_common = '8'
+    weapon_scale_uncommon = '85'
+    weapon_scale_rare = '65'
+    weapon_scale_veryrare = '50'
+    weapon_scale_alien = '30'
+    weapon_scale_legendary = '3'
+    weapon_scale_iris_cobra = '1'
 
-# Gun Type drop weights
-drop_prob_pistol = 100
-drop_prob_ar = 100
-drop_prob_smg = 100
-drop_prob_shotgun = 100
-drop_prob_sniper = 80
-drop_prob_launcher = 40
+    # Custom COM drop scaling (identical to weapons, apart from an additional Alignment COM pool)
+    cm_scale_common = weapon_scale_common
+    cm_scale_uncommon = weapon_scale_uncommon
+    cm_scale_rare = weapon_scale_rare
+    cm_scale_veryrare = weapon_scale_veryrare
+    cm_scale_alignment = '30'
+    cm_scale_legendary = weapon_scale_legendary
+
+    # Custom grenade drop scaling (identical to weapons)
+    grenade_scale_common = weapon_scale_common
+    grenade_scale_uncommon = weapon_scale_uncommon
+    grenade_scale_rare = weapon_scale_rare
+    grenade_scale_veryrare = weapon_scale_veryrare
+    grenade_scale_legendary = weapon_scale_legendary
+
+    # Custom shield drop scaling (identical to weapons)
+    shield_scale_common = weapon_scale_common
+    shield_scale_uncommon = weapon_scale_uncommon
+    shield_scale_rare = weapon_scale_rare
+    shield_scale_veryrare = weapon_scale_veryrare
+    shield_scale_legendary = weapon_scale_legendary
+
+    # Custom relic drop scaling
+    relic_scale_rare = '1.0'
+    relic_scale_veryrare = '2.0'
+
+    # Drop rates for "regular" treasure chests
+    treasure_scale_common = zero
+    treasure_scale_uncommon = zero
+    treasure_scale_rare = '20'
+    treasure_scale_veryrare = '60'
+    treasure_scale_alien = '30'
+    treasure_scale_legendary = '5'
+
+    # Drop rates for "epic" treasure chests
+    epic_scale_common = zero
+    epic_scale_uncommon = zero
+    epic_scale_rare = zero
+    epic_scale_veryrare = '1'
+    epic_scale_alien = '1'
+    epic_scale_legendary = '0.3'
+    epic_scale_legendary_dbl = '0.6'
+
+    # Badass pool probabilities (NOTE: these are *not* weights)
+    badass_pool_veryrare = '0.4'
+    badass_pool_alien = '0.4'
+    badass_pool_epicchest = '0.1'
+
+    # Super Badass pool probabilities (NOTE: these are *not* weights)
+    super_badass_pool_rare = '1'
+    super_badass_pool_veryrare = '1'
+    super_badass_pool_alien = '1'
+    super_badass_pool_legendary = '1'
+    super_badass_pool_epicchest = '1'
+
+    # Ultimate Badass pool probabilities (NOTE: these are *not* weights)
+    ultimate_badass_pool_veryrare_1 = '1'
+    ultimate_badass_pool_veryrare_2 = '0.5'
+    ultimate_badass_pool_alien_1 = '1'
+    ultimate_badass_pool_alien_2 = '0.5'
+    ultimate_badass_pool_legendary_1 = '1'
+    ultimate_badass_pool_legendary_2 = '0.5'
+    ultimate_badass_pool_legendary_3 = '0.25'
+    ultimate_badass_pool_epicchest_1 = '1'
+    ultimate_badass_pool_epicchest_2 = '0.5'
+    ultimate_badass_pool_epicchest_3 = '0.5'
+
+    # Unique drop quantities.  Some of these are pretty high in my "default"
+    # configuration, so putting them here lets me override them in the other
+    # configs, easily.
+    quantity_chubby = '4'
+    quantity_terra = '7'
+    quantity_vermivorous = '5'
+    quantity_warrior = '8'
+    quantity_hyperius_legendary = '7'
+    quantity_hyperius_seraph = '4'
+    quantity_gee_seraph = '4'
+    quantity_gee_legendary = '6'
+
+    # Voracidous quantities have to be done slightly differently, because both
+    # Dexiduous and Voracidous use the same Seraph and Legendary pools for their
+    # unique drops, but Dexi calls it multiple times, whereas Vorac just calls
+    # it the once (by default).  So upping the quantity for Vorac makes Dexi's
+    # drops totally ludicrous.  So instead, we're just gonna specify the pool
+    # multiple times in Vorac's ItemPool.  This is lame, but should let both
+    # of them coexist.
+    voracidous_drop_seraph_1 = '1'
+    voracidous_drop_seraph_2 = '1'
+    voracidous_drop_seraph_3 = '1'
+    voracidous_drop_seraph_4 = '1'
+    voracidous_drop_legendary_1 = '1'
+    voracidous_drop_legendary_2 = '1'
+    voracidous_drop_legendary_3 = '1'
+    voracidous_drop_legendary_4 = '1'
+
+    # Drop rates within the "very high roll" pools of dice chests
+    dice_vhigh_veryrare = '1'
+    dice_vhigh_alien = '1'
+    dice_vhigh_legendary = '0.5'
+
+    # 2.5x chance of both kinds of eridium
+    eridium_bar_drop = '0.003750'       # Stock: 0.001500
+    eridium_stick_drop = '0.020000'     # Stock: 0.008000
+
+    # Gun Type drop weights.  Note that because these values are going into
+    # our hotfix object, these variables *cannot* be successfully overridden
+    # in an extending class.
+    drop_prob_pistol = 100
+    drop_prob_ar = 100
+    drop_prob_smg = 100
+    drop_prob_shotgun = 100
+    drop_prob_sniper = 80
+    drop_prob_launcher = 40
+
+class ConfigReasonable(ConfigLootsplosion):
+    """
+    Alternate config which has slightly-more-reasonable drop rates for stuff
+    like legendaries.  Unsurprisingly, most folks find my default values a
+    bit excessive.
+    """
+
+    profile_name = 'Reasonable Drops'
+
+    # Weapon drops
+    weapon_scale_common = '32.75'
+    weapon_scale_uncommon = '35'
+    weapon_scale_rare = '25'
+    weapon_scale_veryrare = '5'
+    weapon_scale_alien = '2'
+    weapon_scale_legendary = '0.25'
+    weapon_scale_iris_cobra = '2'
+
+    # Class mods
+    cm_scale_common = weapon_scale_common
+    cm_scale_uncommon = weapon_scale_uncommon
+    cm_scale_rare = weapon_scale_rare
+    cm_scale_veryrare = weapon_scale_veryrare
+    cm_scale_alignment = '2'
+    cm_scale_legendary = weapon_scale_legendary
+
+    # Custom grenade drop scaling (identical to weapons)
+    grenade_scale_common = weapon_scale_common
+    grenade_scale_uncommon = weapon_scale_uncommon
+    grenade_scale_rare = weapon_scale_rare
+    grenade_scale_veryrare = weapon_scale_veryrare
+    grenade_scale_legendary = weapon_scale_legendary
+
+    # Custom shield drop scaling (identical to weapons)
+    shield_scale_common = weapon_scale_common
+    shield_scale_uncommon = weapon_scale_uncommon
+    shield_scale_rare = weapon_scale_rare
+    shield_scale_veryrare = weapon_scale_veryrare
+    shield_scale_legendary = weapon_scale_legendary
+
+    # Custom relic drop scaling
+    relic_scale_rare = '2.0'
+    relic_scale_veryrare = '1.0'
+
+    # Drop rates for "regular" treasure chests
+    treasure_scale_common = '32.5'
+    treasure_scale_uncommon = '40'
+    treasure_scale_rare = '20'
+    treasure_scale_veryrare = '5'
+    treasure_scale_alien = '3'
+    treasure_scale_legendary = '0.5'
+
+    # Drop rates for "epic" treasure chests
+    epic_scale_uncommon = '25'
+    epic_scale_rare = '49'
+    epic_scale_veryrare = '15'
+    epic_scale_alien = '10'
+    epic_scale_legendary = '1'
+    epic_scale_legendary_dbl = '2'
+
+    # Unique drop quantities -- overridden from the base class to make
+    # them a bit more reasonable.
+    quantity_chubby = '2'
+    quantity_terra = '4'
+    quantity_vermivorous = '3'
+    quantity_warrior = '4'
+    quantity_hyperius_legendary = '2'
+    quantity_hyperius_seraph = '2'
+    quantity_gee_seraph = '2'
+    quantity_gee_legendary = '2'
+
+    # Voracidous quantities have to be done slightly differently, because both
+    # Dexiduous and Voracidous use the same Seraph and Legendary pools for their
+    # unique drops, but Dexi calls it multiple times, whereas Vorac just calls
+    # it the once (by default).  So upping the quantity for Vorac makes Dexi's
+    # drops totally ludicrous.  So instead, we're just gonna specify the pool
+    # multiple times in Vorac's ItemPool.  This is lame, but should let both
+    # of them coexist.
+    voracidous_drop_seraph_1 = '1'
+    voracidous_drop_seraph_2 = '1'
+    voracidous_drop_seraph_3 = '0'
+    voracidous_drop_seraph_4 = '0'
+    voracidous_drop_legendary_1 = '1'
+    voracidous_drop_legendary_2 = '1'
+    voracidous_drop_legendary_3 = '0'
+    voracidous_drop_legendary_4 = '0'
+
+    # Badass pool probabilities (NOTE: these are *not* weights)
+    badass_pool_veryrare = '0.2'
+    badass_pool_alien = '0.15'
+    badass_pool_epicchest = '0.1'
+
+    # Super Badass pool probabilities (NOTE: these are *not* weights)
+    super_badass_pool_rare = '1'
+    super_badass_pool_veryrare = '0.4'
+    super_badass_pool_alien = '0.15'
+    super_badass_pool_legendary = '.03'
+    super_badass_pool_epicchest = '1'
+
+    # Ultimate Badass pool probabilities (NOTE: these are *not* weights)
+    ultimate_badass_pool_veryrare_1 = '1'
+    ultimate_badass_pool_veryrare_2 = '0'
+    ultimate_badass_pool_alien_1 = '0.4'
+    ultimate_badass_pool_alien_2 = '0'
+    ultimate_badass_pool_legendary_1 = '0.08'
+    ultimate_badass_pool_legendary_2 = '0'
+    ultimate_badass_pool_legendary_3 = '0'
+    ultimate_badass_pool_epicchest_1 = '1'
+    ultimate_badass_pool_epicchest_2 = '1'
+    ultimate_badass_pool_epicchest_3 = '1'
+
+# The profiles we'll generate
+profiles = [
+    ConfigLootsplosion(),
+    ConfigReasonable(),
+    ]
 
 ###
 ### Vars used primarily during testing of loot pools - these aren't
@@ -180,6 +516,13 @@ loot_drop_chance_2p = '1.000000'    # Stock: 0.070000
 loot_drop_chance_3p = '1.000000'    # Stock: 0.060000
 loot_drop_chance_4p = '1.000000'    # Stock: 0.050000
 loot_drop_quantity = '5'            # Stock: 1.000000
+
+# Some alternate vars from a mutually-exclusive area - merely improve
+# the drop rate, rather than making it 100%
+loot_drop_chance_1p_alt = '0.170000'    # Stock: 0.085000
+loot_drop_chance_2p_alt = '0.140000'    # Stock: 0.070000
+loot_drop_chance_3p_alt = '0.120000'    # Stock: 0.060000
+loot_drop_chance_4p_alt = '0.100000'    # Stock: 0.050000
 
 # Force Pool_GunsAndGear to always drop the specified pool, if `force_gunsandgear_drop`
 # is True.  Useful for testing out how individual pools are behaving.
@@ -211,12 +554,12 @@ for (number, rarity) in [
         ('06', 'Legendary'),
         ]:
     for (idx, (guntype, gunprob)) in enumerate([
-            ('Pistol', drop_prob_pistol),
-            ('AR', drop_prob_ar),
-            ('SMG', drop_prob_smg),
-            ('Shotgun', drop_prob_shotgun),
-            ('Sniper', drop_prob_sniper),
-            ('Launcher', drop_prob_launcher),
+            ('Pistol', ConfigLootsplosion.drop_prob_pistol),
+            ('AR', ConfigLootsplosion.drop_prob_ar),
+            ('SMG', ConfigLootsplosion.drop_prob_smg),
+            ('Shotgun', ConfigLootsplosion.drop_prob_shotgun),
+            ('Sniper', ConfigLootsplosion.drop_prob_sniper),
+            ('Launcher', ConfigLootsplosion.drop_prob_launcher),
             ]):
         hfs.add_level_hotfix('normalize_weapon_types_{}_{}'.format(rarity, guntype),
             'NormWeap{}{}'.format(rarity, guntype),
@@ -1006,7 +1349,7 @@ witch_extra_pools = """
             BaseValueConstant=1.000000,
             BaseValueAttribute=None,
             InitializationDefinition=None,
-            BaseValueScaleConstant=0.600000
+            BaseValueScaleConstant=0.400000
         )
     ),
     (
@@ -1581,70 +1924,6 @@ hfs.add_level_hotfix('crawmerax_son_nonraid_drop', 'CrawmeraxSonNonRaidDrop',
         ItemPoolListDefinition'GD_Itempools.ListDefs.RaidBossEnemyGunsAndGear'
     )""")
 
-# Early-game weapon/grenade part unlocks - some of these have to be done via
-# hotfixes, rather than `set` statements.  These are generated via
-# `restricted_parts.py`, using data from FilterTool.
-hfs.add_level_hotfix('part_early_game_fix_0', 'PartEarlyGameFix', ",GD_Aster_ItemGrades.ClassMods.BalDef_ClassMod_Aster_Assassin:ItemPartListCollectionDefinition_28,AlphaPartData.WeightedParts,,((Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_NoSkill',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS1',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS1_BS2',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS1_BS3',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS2',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS2_BS1',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS2_BS3',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS3',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS3_BS1',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS3_BS2',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS1_BS2_CS3',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS2_BS1_CS3',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS3_BS1_CS2',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS1_BS2_-CS3',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS1_-BS2_CS3',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS2_BS1_-CS3',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS2_-BS1_CS3',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS3_BS1_-CS2',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS3_-BS1_CS2',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0))")
-hfs.add_level_hotfix('part_early_game_fix_1', 'PartEarlyGameFix', ",GD_Aster_ItemGrades.ClassMods.BalDef_ClassMod_Aster_Mechromancer:ItemPartListCollectionDefinition_29,AlphaPartData.WeightedParts,,((Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_NoSkill',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS1',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS1_BS2',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS1_BS3',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS2',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS2_BS1',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS2_BS3',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS3',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS3_BS1',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS3_BS2',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS1_BS2_CS3',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS2_BS1_CS3',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS3_BS1_CS2',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS1_BS2_-CS3',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS1_-BS2_CS3',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS2_BS1_-CS3',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS2_-BS1_CS3',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS3_BS1_-CS2',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS3_-BS1_CS2',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0))")
-hfs.add_level_hotfix('part_early_game_fix_2', 'PartEarlyGameFix', ",GD_Aster_ItemGrades.ClassMods.BalDef_ClassMod_Aster_Merc:ItemPartListCollectionDefinition_30,AlphaPartData.WeightedParts,,((Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_NoSkill',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS1',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS1_BS2',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS1_BS3',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS2',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS2_BS1',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS2_BS3',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS3',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS3_BS1',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS3_BS2',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS1_BS2_CS3',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS2_BS1_CS3',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS3_BS1_CS2',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS1_BS2_-CS3',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS1_-BS2_CS3',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS2_BS1_-CS3',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS2_-BS1_CS3',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS3_BS1_-CS2',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS3_-BS1_CS2',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0))")
-hfs.add_level_hotfix('part_early_game_fix_3', 'PartEarlyGameFix', ",GD_Aster_ItemGrades.ClassMods.BalDef_ClassMod_Aster_Psycho:ItemPartListCollectionDefinition_31,AlphaPartData.WeightedParts,,((Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_NoSkill',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS1',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS1_BS2',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS1_BS3',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS2',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS2_BS1',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS2_BS3',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS3',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS3_BS1',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS3_BS2',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS1_BS2_CS3',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS2_BS1_CS3',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS3_BS1_CS2',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS1_BS2_-CS3',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS1_-BS2_CS3',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS2_BS1_-CS3',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS2_-BS1_CS3',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS3_BS1_-CS2',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS3_-BS1_CS2',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0))")
-hfs.add_level_hotfix('part_early_game_fix_4', 'PartEarlyGameFix', ",GD_Aster_ItemGrades.ClassMods.BalDef_ClassMod_Aster_Siren:ItemPartListCollectionDefinition_32,AlphaPartData.WeightedParts,,((Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_NoSkill',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS1',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS1_BS2',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS1_BS3',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS2',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS2_BS1',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS2_BS3',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS3',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS3_BS1',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS3_BS2',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS1_BS2_CS3',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS2_BS1_CS3',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS3_BS1_CS2',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS1_BS2_-CS3',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS1_-BS2_CS3',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS2_BS1_-CS3',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS2_-BS1_CS3',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS3_BS1_-CS2',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS3_-BS1_CS2',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0))")
-hfs.add_level_hotfix('part_early_game_fix_5', 'PartEarlyGameFix', ",GD_Aster_ItemGrades.ClassMods.BalDef_ClassMod_Aster_Soldier:ItemPartListCollectionDefinition_33,AlphaPartData.WeightedParts,,((Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_NoSkill',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS1',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS1_BS2',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS1_BS3',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS2',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS2_BS1',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS2_BS3',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS3',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS3_BS1',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS3_BS2',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS1_BS2_CS3',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS2_BS1_CS3',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS3_BS1_CS2',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS1_BS2_-CS3',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS1_-BS2_CS3',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS2_BS1_-CS3',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS2_-BS1_CS3',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS3_BS1_-CS2',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS3_-BS1_CS2',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0))")
-hfs.add_level_hotfix('part_early_game_fix_6', 'PartEarlyGameFix', ",GD_Aster_Weapons.SMGs.SMG_Maliwan_3_Crit:WeaponPartListCollectionDefinition_223,BodyPartData.WeightedParts,,((Part=WeaponPartDefinition'GD_Weap_SMG.Body.SMG_Body_Maliwan_VarC',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=0,DefaultWeightIndex=1),(Part=WeaponPartDefinition'GD_Weap_SMG.Body.SMG_Body_Maliwan_VarB',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=3,DefaultWeightIndex=1))")
-hfs.add_level_hotfix('part_early_game_fix_7', 'PartEarlyGameFix', ",GD_Aster_Weapons.SMGs.SMG_Maliwan_3_Crit:WeaponPartListCollectionDefinition_223,GripPartData.WeightedParts,,((Part=WeaponPartDefinition'GD_Weap_SMG.Grip.SMG_Grip_Tediore',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=3,DefaultWeightIndex=1),(Part=WeaponPartDefinition'GD_Weap_SMG.Grip.SMG_Grip_Bandit',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=3,DefaultWeightIndex=1),(Part=WeaponPartDefinition'GD_Weap_SMG.Grip.SMG_Grip_Dahl',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=3,DefaultWeightIndex=1),(Part=WeaponPartDefinition'GD_Weap_SMG.Grip.SMG_Grip_Maliwan',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=3,DefaultWeightIndex=1),(Part=WeaponPartDefinition'GD_Weap_SMG.Grip.SMG_Grip_Hyperion',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=3,DefaultWeightIndex=1))")
-hfs.add_level_hotfix('part_early_game_fix_8', 'PartEarlyGameFix', ",GD_Aster_Weapons.SMGs.SMG_Maliwan_3_Crit:WeaponPartListCollectionDefinition_223,BarrelPartData.WeightedParts,,((Part=WeaponPartDefinition'GD_Aster_Weapons.SMGs.SMG_Barrel_Hyperion_Crit',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=3,DefaultWeightIndex=1))")
-hfs.add_level_hotfix('part_early_game_fix_9', 'PartEarlyGameFix', ",GD_Aster_Weapons.SMGs.SMG_Maliwan_3_Crit:WeaponPartListCollectionDefinition_223,SightPartData.WeightedParts,,((Part=WeaponPartDefinition'GD_Weap_SMG.Sight.SMG_Sight_None',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=3,DefaultWeightIndex=1),(Part=WeaponPartDefinition'GD_Weap_SMG.Sight.SMG_Sight_Tedior',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=3,DefaultWeightIndex=1),(Part=WeaponPartDefinition'GD_Weap_SMG.Sight.SMG_Sight_Bandit',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=3,DefaultWeightIndex=1),(Part=WeaponPartDefinition'GD_Weap_SMG.Sight.SMG_Sight_Dahl',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=3,DefaultWeightIndex=1),(Part=WeaponPartDefinition'GD_Weap_SMG.Sight.SMG_Sight_Maliwan',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=3,DefaultWeightIndex=1),(Part=WeaponPartDefinition'GD_Weap_SMG.Sight.SMG_Sight_Hyperion',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=3,DefaultWeightIndex=1))")
-hfs.add_level_hotfix('part_early_game_fix_10', 'PartEarlyGameFix', ",GD_Aster_Weapons.SMGs.SMG_Maliwan_3_Crit:WeaponPartListCollectionDefinition_223,StockPartData.WeightedParts,,((Part=WeaponPartDefinition'GD_Weap_SMG.Stock.SMG_Stock_Tediore',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=3,DefaultWeightIndex=1),(Part=WeaponPartDefinition'GD_Weap_SMG.Stock.SMG_Stock_Bandit',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=3,DefaultWeightIndex=1),(Part=WeaponPartDefinition'GD_Weap_SMG.Stock.SMG_Stock_Dahl',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=3,DefaultWeightIndex=1),(Part=WeaponPartDefinition'GD_Weap_SMG.Stock.SMG_Stock_Maliwan',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=3,DefaultWeightIndex=1),(Part=WeaponPartDefinition'GD_Weap_SMG.Stock.SMG_Stock_Hyperion',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=3,DefaultWeightIndex=1))")
-hfs.add_level_hotfix('part_early_game_fix_11', 'PartEarlyGameFix', ",GD_Aster_Weapons.SMGs.SMG_Maliwan_3_Crit:WeaponPartListCollectionDefinition_223,ElementalPartData.WeightedParts,,((Part=WeaponPartDefinition'GD_Weap_SMG.elemental.SMG_Elemental_Shock',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=3,DefaultWeightIndex=1))")
-hfs.add_level_hotfix('part_early_game_fix_12', 'PartEarlyGameFix', ",GD_Aster_Weapons.SMGs.SMG_Maliwan_3_Crit:WeaponPartListCollectionDefinition_223,Accessory1PartData.WeightedParts,,((Part=WeaponPartDefinition'GD_Weap_SMG.Accessory.SMG_Accessory_None',Manufacturers=((Manufacturer=None,DefaultWeightIndex=3)),MinGameStageIndex=0,MaxGameStageIndex=3,DefaultWeightIndex=4),(Part=WeaponPartDefinition'GD_Weap_SMG.Accessory.SMG_Accessory_Bayonet_1',Manufacturers=((Manufacturer=None,DefaultWeightIndex=3)),MinGameStageIndex=0,MaxGameStageIndex=3,DefaultWeightIndex=5),(Part=WeaponPartDefinition'GD_Weap_SMG.Accessory.SMG_Accessory_Body1_Accurate',Manufacturers=((Manufacturer=None,DefaultWeightIndex=3)),MinGameStageIndex=0,MaxGameStageIndex=3,DefaultWeightIndex=5),(Part=WeaponPartDefinition'GD_Weap_SMG.Accessory.SMG_Accessory_Body2_Damage',Manufacturers=((Manufacturer=None,DefaultWeightIndex=3)),MinGameStageIndex=0,MaxGameStageIndex=3,DefaultWeightIndex=5),(Part=WeaponPartDefinition'GD_Weap_SMG.Accessory.SMG_Accessory_Body3_Accelerated',Manufacturers=((Manufacturer=None,DefaultWeightIndex=3)),MinGameStageIndex=0,MaxGameStageIndex=3,DefaultWeightIndex=5),(Part=WeaponPartDefinition'GD_Weap_SMG.Accessory.SMG_Accessory_Stock1_Stabilized',Manufacturers=((Manufacturer=None,DefaultWeightIndex=3)),MinGameStageIndex=0,MaxGameStageIndex=3,DefaultWeightIndex=5),(Part=WeaponPartDefinition'GD_Weap_SMG.Accessory.SMG_Accessory_Stock2_Reload',Manufacturers=((Manufacturer=None,DefaultWeightIndex=3)),MinGameStageIndex=0,MaxGameStageIndex=3,DefaultWeightIndex=5))")
-hfs.add_level_hotfix('part_early_game_fix_13', 'PartEarlyGameFix', ",GD_Aster_Weapons.SMGs.SMG_Maliwan_3_Crit:WeaponPartListCollectionDefinition_223,MaterialPartData.WeightedParts,,((Part=WeaponPartDefinition'GD_Aster_Weapons.ManufacturerMaterials.Mat_Maliwan_3_Crit',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=3,DefaultWeightIndex=1))")
-hfs.add_level_hotfix('part_early_game_fix_14', 'PartEarlyGameFix', ",GD_Aster_RaidWeapons.Shotguns.Aster_Seraph_Omen_Balance:WeaponPartListCollectionDefinition_224,ElementalPartData.WeightedParts,,((Part=WeaponPartDefinition'GD_Weap_Shotgun.elemental.Shotgun_Elemental_None',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=4),(Part=WeaponPartDefinition'GD_Weap_Shotgun.elemental.Shotgun_Elemental_Fire',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=3),(Part=WeaponPartDefinition'GD_Weap_Shotgun.elemental.Shotgun_Elemental_Corrosive',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=3),(Part=WeaponPartDefinition'GD_Weap_Shotgun.elemental.Shotgun_Elemental_Shock',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=3),(Part=WeaponPartDefinition'GD_Weap_Shotgun.elemental.Shotgun_Elemental_Slag',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=3))")
-hfs.add_level_hotfix('part_early_game_fix_15', 'PartEarlyGameFix', ",GD_Aster_RaidWeapons.Pistols.Aster_Seraph_Stinger_Balance:WeaponPartListCollectionDefinition_225,ElementalPartData.WeightedParts,,((Part=WeaponPartDefinition'GD_Weap_Pistol.elemental.Pistol_Elemental_None',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=4),(Part=WeaponPartDefinition'GD_Weap_Pistol.elemental.Pistol_Elemental_Fire',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=3),(Part=WeaponPartDefinition'GD_Weap_Pistol.elemental.Pistol_Elemental_Shock',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=3),(Part=WeaponPartDefinition'GD_Weap_Pistol.elemental.Pistol_Elemental_Corrosive',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=3),(Part=WeaponPartDefinition'GD_Weap_Pistol.elemental.Pistol_Elemental_Slag',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=3))")
-hfs.add_level_hotfix('part_early_game_fix_16', 'PartEarlyGameFix', ",GD_Aster_Weapons.AssaultRifles.AR_Bandit_4_Quartz:WeaponPartListCollectionDefinition_231,ElementalPartData.WeightedParts,,((Part=WeaponPartDefinition'GD_Weap_AssaultRifle.elemental.AR_Elemental_None',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=3),(Part=WeaponPartDefinition'GD_Weap_AssaultRifle.elemental.AR_Elemental_Fire',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=5),(Part=WeaponPartDefinition'GD_Weap_AssaultRifle.elemental.AR_Elemental_Corrosive',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=5),(Part=WeaponPartDefinition'GD_Weap_AssaultRifle.elemental.AR_Elemental_Shock',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=5),(Part=WeaponPartDefinition'GD_Weap_AssaultRifle.elemental.AR_Elemental_Slag',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=5))")
-hfs.add_level_hotfix('part_early_game_fix_17', 'PartEarlyGameFix', ",GD_Aster_Weapons.AssaultRifles.AR_Dahl_4_Emerald:WeaponPartListCollectionDefinition_232,ElementalPartData.WeightedParts,,((Part=WeaponPartDefinition'GD_Weap_AssaultRifle.elemental.AR_Elemental_None',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=3),(Part=WeaponPartDefinition'GD_Weap_AssaultRifle.elemental.AR_Elemental_Fire',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=5),(Part=WeaponPartDefinition'GD_Weap_AssaultRifle.elemental.AR_Elemental_Corrosive',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=5),(Part=WeaponPartDefinition'GD_Weap_AssaultRifle.elemental.AR_Elemental_Shock',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=5),(Part=WeaponPartDefinition'GD_Weap_AssaultRifle.elemental.AR_Elemental_Slag',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=5))")
-hfs.add_level_hotfix('part_early_game_fix_18', 'PartEarlyGameFix', ",GD_Aster_Weapons.AssaultRifles.AR_Vladof_4_Garnet:WeaponPartListCollectionDefinition_233,ElementalPartData.WeightedParts,,((Part=WeaponPartDefinition'GD_Weap_AssaultRifle.elemental.AR_Elemental_None',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=4),(Part=WeaponPartDefinition'GD_Weap_AssaultRifle.elemental.AR_Elemental_Fire',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=3),(Part=WeaponPartDefinition'GD_Weap_AssaultRifle.elemental.AR_Elemental_Corrosive',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=3),(Part=WeaponPartDefinition'GD_Weap_AssaultRifle.elemental.AR_Elemental_Shock',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=3),(Part=WeaponPartDefinition'GD_Weap_AssaultRifle.elemental.AR_Elemental_Slag',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=3))")
-hfs.add_level_hotfix('part_early_game_fix_19', 'PartEarlyGameFix', ",GD_Aster_Weapons.Pistols.Pistol_Bandit_4_Quartz:WeaponPartListCollectionDefinition_235,ElementalPartData.WeightedParts,,((Part=WeaponPartDefinition'GD_Weap_Pistol.elemental.Pistol_Elemental_None',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=4),(Part=WeaponPartDefinition'GD_Weap_Pistol.elemental.Pistol_Elemental_Fire',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=3),(Part=WeaponPartDefinition'GD_Weap_Pistol.elemental.Pistol_Elemental_Shock',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=3),(Part=WeaponPartDefinition'GD_Weap_Pistol.elemental.Pistol_Elemental_Corrosive',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=3),(Part=WeaponPartDefinition'GD_Weap_Pistol.elemental.Pistol_Elemental_Slag',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=3))")
-hfs.add_level_hotfix('part_early_game_fix_20', 'PartEarlyGameFix', ",GD_Aster_Weapons.Pistols.Pistol_Tediore_4_CubicZerconia:WeaponPartListCollectionDefinition_236,ElementalPartData.WeightedParts,,((Part=WeaponPartDefinition'GD_Weap_Pistol.elemental.Pistol_Elemental_None',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=4),(Part=WeaponPartDefinition'GD_Weap_Pistol.elemental.Pistol_Elemental_Fire',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=3),(Part=WeaponPartDefinition'GD_Weap_Pistol.elemental.Pistol_Elemental_Shock',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=3),(Part=WeaponPartDefinition'GD_Weap_Pistol.elemental.Pistol_Elemental_Corrosive',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=3),(Part=WeaponPartDefinition'GD_Weap_Pistol.elemental.Pistol_Elemental_Slag',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=3))")
-hfs.add_level_hotfix('part_early_game_fix_21', 'PartEarlyGameFix', ",GD_Aster_Weapons.Pistols.Pistol_Dahl_4_Emerald:WeaponPartListCollectionDefinition_237,ElementalPartData.WeightedParts,,((Part=WeaponPartDefinition'GD_Weap_Pistol.elemental.Pistol_Elemental_None',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=4),(Part=WeaponPartDefinition'GD_Weap_Pistol.elemental.Pistol_Elemental_Fire',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=3),(Part=WeaponPartDefinition'GD_Weap_Pistol.elemental.Pistol_Elemental_Shock',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=3),(Part=WeaponPartDefinition'GD_Weap_Pistol.elemental.Pistol_Elemental_Corrosive',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=3),(Part=WeaponPartDefinition'GD_Weap_Pistol.elemental.Pistol_Elemental_Slag',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=3))")
-hfs.add_level_hotfix('part_early_game_fix_22', 'PartEarlyGameFix', ",GD_Aster_Weapons.Pistols.Pistol_Vladof_4_Garnet:WeaponPartListCollectionDefinition_238,ElementalPartData.WeightedParts,,((Part=WeaponPartDefinition'GD_Weap_Pistol.elemental.Pistol_Elemental_None',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=4),(Part=WeaponPartDefinition'GD_Weap_Pistol.elemental.Pistol_Elemental_Fire',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=3),(Part=WeaponPartDefinition'GD_Weap_Pistol.elemental.Pistol_Elemental_Shock',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=3),(Part=WeaponPartDefinition'GD_Weap_Pistol.elemental.Pistol_Elemental_Corrosive',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=3),(Part=WeaponPartDefinition'GD_Weap_Pistol.elemental.Pistol_Elemental_Slag',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=3))")
-hfs.add_level_hotfix('part_early_game_fix_23', 'PartEarlyGameFix', ",GD_Aster_Weapons.Pistols.Pistol_Maliwan_4_Aquamarine:WeaponPartListCollectionDefinition_239,ElementalPartData.WeightedParts,,((Part=WeaponPartDefinition'GD_Weap_Pistol.elemental.Pistol_Elemental_Fire',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=2),(Part=WeaponPartDefinition'GD_Weap_Pistol.elemental.Pistol_Elemental_Shock',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=2),(Part=WeaponPartDefinition'GD_Weap_Pistol.elemental.Pistol_Elemental_Corrosive',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=2),(Part=WeaponPartDefinition'GD_Weap_Pistol.elemental.Pistol_Elemental_Slag',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=2))")
-hfs.add_level_hotfix('part_early_game_fix_24', 'PartEarlyGameFix', ",GD_Aster_Weapons.Pistols.Pistol_Hyperion_4_Diamond:WeaponPartListCollectionDefinition_241,ElementalPartData.WeightedParts,,((Part=WeaponPartDefinition'GD_Weap_Pistol.elemental.Pistol_Elemental_None',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=4),(Part=WeaponPartDefinition'GD_Weap_Pistol.elemental.Pistol_Elemental_Fire',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=3),(Part=WeaponPartDefinition'GD_Weap_Pistol.elemental.Pistol_Elemental_Shock',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=3),(Part=WeaponPartDefinition'GD_Weap_Pistol.elemental.Pistol_Elemental_Corrosive',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=3),(Part=WeaponPartDefinition'GD_Weap_Pistol.elemental.Pistol_Elemental_Slag',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=3))")
-hfs.add_level_hotfix('part_early_game_fix_25', 'PartEarlyGameFix', ",GD_Aster_Weapons.Shotguns.SG_Bandit_4_Quartz:WeaponPartListCollectionDefinition_242,ElementalPartData.WeightedParts,,((Part=WeaponPartDefinition'GD_Weap_Shotgun.elemental.Shotgun_Elemental_None',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=4),(Part=WeaponPartDefinition'GD_Weap_Shotgun.elemental.Shotgun_Elemental_Fire',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=3),(Part=WeaponPartDefinition'GD_Weap_Shotgun.elemental.Shotgun_Elemental_Corrosive',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=3),(Part=WeaponPartDefinition'GD_Weap_Shotgun.elemental.Shotgun_Elemental_Shock',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=3),(Part=WeaponPartDefinition'GD_Weap_Shotgun.elemental.Shotgun_Elemental_Slag',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=3))")
-hfs.add_level_hotfix('part_early_game_fix_26', 'PartEarlyGameFix', ",GD_Aster_Weapons.Shotguns.SG_Tediore_4_CubicZerconia:WeaponPartListCollectionDefinition_243,ElementalPartData.WeightedParts,,((Part=WeaponPartDefinition'GD_Weap_Shotgun.elemental.Shotgun_Elemental_None',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=4),(Part=WeaponPartDefinition'GD_Weap_Shotgun.elemental.Shotgun_Elemental_Fire',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=3),(Part=WeaponPartDefinition'GD_Weap_Shotgun.elemental.Shotgun_Elemental_Corrosive',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=3),(Part=WeaponPartDefinition'GD_Weap_Shotgun.elemental.Shotgun_Elemental_Shock',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=3),(Part=WeaponPartDefinition'GD_Weap_Shotgun.elemental.Shotgun_Elemental_Slag',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=3))")
-hfs.add_level_hotfix('part_early_game_fix_27', 'PartEarlyGameFix', ",GD_Aster_Weapons.Shotguns.SG_Hyperion_4_Diamond:WeaponPartListCollectionDefinition_245,ElementalPartData.WeightedParts,,((Part=WeaponPartDefinition'GD_Weap_Shotgun.elemental.Shotgun_Elemental_None',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=4),(Part=WeaponPartDefinition'GD_Weap_Shotgun.elemental.Shotgun_Elemental_Fire',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=3),(Part=WeaponPartDefinition'GD_Weap_Shotgun.elemental.Shotgun_Elemental_Corrosive',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=3),(Part=WeaponPartDefinition'GD_Weap_Shotgun.elemental.Shotgun_Elemental_Shock',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=3),(Part=WeaponPartDefinition'GD_Weap_Shotgun.elemental.Shotgun_Elemental_Slag',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=3))")
-hfs.add_level_hotfix('part_early_game_fix_28', 'PartEarlyGameFix', ",GD_Aster_Weapons.SMGs.SMG_Bandit_4_Quartz:WeaponPartListCollectionDefinition_246,ElementalPartData.WeightedParts,,((Part=WeaponPartDefinition'GD_Weap_SMG.elemental.SMG_Elemental_None',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=3),(Part=WeaponPartDefinition'GD_Weap_SMG.elemental.SMG_Elemental_Fire',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=5),(Part=WeaponPartDefinition'GD_Weap_SMG.elemental.SMG_Elemental_Corrosive',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=5),(Part=WeaponPartDefinition'GD_Weap_SMG.elemental.SMG_Elemental_Shock',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=5),(Part=WeaponPartDefinition'GD_Weap_SMG.elemental.SMG_Elemental_Slag',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=5))")
-hfs.add_level_hotfix('part_early_game_fix_29', 'PartEarlyGameFix', ",GD_Aster_Weapons.SMGs.SMG_Tediore_4_CubicZerconia:WeaponPartListCollectionDefinition_247,ElementalPartData.WeightedParts,,((Part=WeaponPartDefinition'GD_Weap_SMG.elemental.SMG_Elemental_None',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=3),(Part=WeaponPartDefinition'GD_Weap_SMG.elemental.SMG_Elemental_Fire',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=5),(Part=WeaponPartDefinition'GD_Weap_SMG.elemental.SMG_Elemental_Corrosive',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=5),(Part=WeaponPartDefinition'GD_Weap_SMG.elemental.SMG_Elemental_Shock',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=5),(Part=WeaponPartDefinition'GD_Weap_SMG.elemental.SMG_Elemental_Slag',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=5))")
-hfs.add_level_hotfix('part_early_game_fix_30', 'PartEarlyGameFix', ",GD_Aster_Weapons.SMGs.SMG_Dahl_4_Emerald:WeaponPartListCollectionDefinition_248,ElementalPartData.WeightedParts,,((Part=WeaponPartDefinition'GD_Weap_SMG.elemental.SMG_Elemental_None',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=3),(Part=WeaponPartDefinition'GD_Weap_SMG.elemental.SMG_Elemental_Fire',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=5),(Part=WeaponPartDefinition'GD_Weap_SMG.elemental.SMG_Elemental_Corrosive',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=5),(Part=WeaponPartDefinition'GD_Weap_SMG.elemental.SMG_Elemental_Shock',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=5),(Part=WeaponPartDefinition'GD_Weap_SMG.elemental.SMG_Elemental_Slag',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=5))")
-hfs.add_level_hotfix('part_early_game_fix_31', 'PartEarlyGameFix', ",GD_Aster_Weapons.SMGs.SMG_Maliwan_4_Aquamarine:WeaponPartListCollectionDefinition_249,ElementalPartData.WeightedParts,,((Part=WeaponPartDefinition'GD_Weap_SMG.elemental.SMG_Elemental_Fire',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=3),(Part=WeaponPartDefinition'GD_Weap_SMG.elemental.SMG_Elemental_Corrosive',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=3),(Part=WeaponPartDefinition'GD_Weap_SMG.elemental.SMG_Elemental_Shock',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=3),(Part=WeaponPartDefinition'GD_Weap_SMG.elemental.SMG_Elemental_Slag',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=3))")
-hfs.add_level_hotfix('part_early_game_fix_32', 'PartEarlyGameFix', ",GD_Aster_Weapons.SMGs.SMG_Hyperion_4_Diamond:WeaponPartListCollectionDefinition_250,ElementalPartData.WeightedParts,,((Part=WeaponPartDefinition'GD_Weap_SMG.elemental.SMG_Elemental_None',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=3),(Part=WeaponPartDefinition'GD_Weap_SMG.elemental.SMG_Elemental_Fire',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=5),(Part=WeaponPartDefinition'GD_Weap_SMG.elemental.SMG_Elemental_Corrosive',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=5),(Part=WeaponPartDefinition'GD_Weap_SMG.elemental.SMG_Elemental_Shock',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=5),(Part=WeaponPartDefinition'GD_Weap_SMG.elemental.SMG_Elemental_Slag',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=5))")
-hfs.add_level_hotfix('part_early_game_fix_33', 'PartEarlyGameFix', ",GD_Aster_Weapons.Snipers.SR_Dahl_4_Emerald:WeaponPartListCollectionDefinition_251,ElementalPartData.WeightedParts,,((Part=WeaponPartDefinition'GD_Weap_SniperRifles.elemental.SR_Elemental_None',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=2),(Part=WeaponPartDefinition'GD_Weap_SniperRifles.elemental.SR_Elemental_Fire',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=2),(Part=WeaponPartDefinition'GD_Weap_SniperRifles.elemental.SR_Elemental_Shock',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=2),(Part=WeaponPartDefinition'GD_Weap_SniperRifles.elemental.SR_Elemental_Corrosive',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=2),(Part=WeaponPartDefinition'GD_Weap_SniperRifles.elemental.SR_Elemental_Slag',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=2))")
-hfs.add_level_hotfix('part_early_game_fix_34', 'PartEarlyGameFix', ",GD_Aster_Weapons.Snipers.SR_Vladof_4_Garnet:WeaponPartListCollectionDefinition_252,ElementalPartData.WeightedParts,,((Part=WeaponPartDefinition'GD_Weap_SniperRifles.elemental.SR_Elemental_None',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=2),(Part=WeaponPartDefinition'GD_Weap_SniperRifles.elemental.SR_Elemental_Fire',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=2),(Part=WeaponPartDefinition'GD_Weap_SniperRifles.elemental.SR_Elemental_Shock',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=2),(Part=WeaponPartDefinition'GD_Weap_SniperRifles.elemental.SR_Elemental_Corrosive',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=2),(Part=WeaponPartDefinition'GD_Weap_SniperRifles.elemental.SR_Elemental_Slag',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=2))")
-hfs.add_level_hotfix('part_early_game_fix_35', 'PartEarlyGameFix', ",GD_Aster_Weapons.Snipers.SR_Hyperion_4_Diamond:WeaponPartListCollectionDefinition_255,ElementalPartData.WeightedParts,,((Part=WeaponPartDefinition'GD_Weap_SniperRifles.elemental.SR_Elemental_None',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=2),(Part=WeaponPartDefinition'GD_Weap_SniperRifles.elemental.SR_Elemental_Fire',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=2),(Part=WeaponPartDefinition'GD_Weap_SniperRifles.elemental.SR_Elemental_Shock',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=2),(Part=WeaponPartDefinition'GD_Weap_SniperRifles.elemental.SR_Elemental_Corrosive',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=2),(Part=WeaponPartDefinition'GD_Weap_SniperRifles.elemental.SR_Elemental_Slag',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=2))")
-hfs.add_level_hotfix('part_early_game_fix_36', 'PartEarlyGameFix', ",GD_Aster_Weapons.SMGs.SMG_Bandit_3_Orc:WeaponPartListCollectionDefinition_258,ElementalPartData.WeightedParts,,((Part=WeaponPartDefinition'GD_Weap_SMG.elemental.SMG_Elemental_None',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=3),(Part=WeaponPartDefinition'GD_Weap_SMG.elemental.SMG_Elemental_Fire',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=5),(Part=WeaponPartDefinition'GD_Weap_SMG.elemental.SMG_Elemental_Corrosive',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=5),(Part=WeaponPartDefinition'GD_Weap_SMG.elemental.SMG_Elemental_Shock',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=5),(Part=WeaponPartDefinition'GD_Weap_SMG.elemental.SMG_Elemental_Slag',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=5))")
-hfs.add_level_hotfix('part_early_game_fix_37', 'PartEarlyGameFix', ",GD_Gladiolus_Weapons.Pistol.Pistol_Vladof_6_Stalker:WeaponPartListCollectionDefinition_260,ElementalPartData.WeightedParts,,((Part=WeaponPartDefinition'GD_Weap_Pistol.elemental.Pistol_Elemental_None',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=4),(Part=WeaponPartDefinition'GD_Weap_Pistol.elemental.Pistol_Elemental_Fire',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=3),(Part=WeaponPartDefinition'GD_Weap_Pistol.elemental.Pistol_Elemental_Shock',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=3),(Part=WeaponPartDefinition'GD_Weap_Pistol.elemental.Pistol_Elemental_Corrosive',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=3),(Part=WeaponPartDefinition'GD_Weap_Pistol.elemental.Pistol_Elemental_Slag',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=3))")
-hfs.add_level_hotfix('part_early_game_fix_38', 'PartEarlyGameFix', ",GD_Gladiolus_Weapons.AssaultRifle.AR_Dahl_6_Bearcat:WeaponPartListCollectionDefinition_262,ElementalPartData.WeightedParts,,((Part=WeaponPartDefinition'GD_Weap_AssaultRifle.elemental.AR_Elemental_None',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=3),(Part=WeaponPartDefinition'GD_Weap_AssaultRifle.elemental.AR_Elemental_Fire',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=5),(Part=WeaponPartDefinition'GD_Weap_AssaultRifle.elemental.AR_Elemental_Corrosive',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=5),(Part=WeaponPartDefinition'GD_Weap_AssaultRifle.elemental.AR_Elemental_Shock',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=5),(Part=WeaponPartDefinition'GD_Weap_AssaultRifle.elemental.AR_Elemental_Slag',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=5))")
-hfs.add_level_hotfix('part_early_game_fix_39', 'PartEarlyGameFix', ",GD_Gladiolus_Weapons.SMG.SMG_Tediore_6_Avenger:WeaponPartListCollectionDefinition_263,ElementalPartData.WeightedParts,,((Part=WeaponPartDefinition'GD_Weap_SMG.elemental.SMG_Elemental_None',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=3),(Part=WeaponPartDefinition'GD_Weap_SMG.elemental.SMG_Elemental_Fire',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=5),(Part=WeaponPartDefinition'GD_Weap_SMG.elemental.SMG_Elemental_Corrosive',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=5),(Part=WeaponPartDefinition'GD_Weap_SMG.elemental.SMG_Elemental_Shock',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=5),(Part=WeaponPartDefinition'GD_Weap_SMG.elemental.SMG_Elemental_Slag',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=5))")
-hfs.add_level_hotfix('part_early_game_fix_40', 'PartEarlyGameFix', ",GD_Gladiolus_Weapons.Shotgun.SG_Hyperion_6_Butcher:WeaponPartListCollectionDefinition_264,ElementalPartData.WeightedParts,,((Part=WeaponPartDefinition'GD_Weap_Shotgun.elemental.Shotgun_Elemental_None',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=4),(Part=WeaponPartDefinition'GD_Weap_Shotgun.elemental.Shotgun_Elemental_Fire',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=3),(Part=WeaponPartDefinition'GD_Weap_Shotgun.elemental.Shotgun_Elemental_Corrosive',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=3),(Part=WeaponPartDefinition'GD_Weap_Shotgun.elemental.Shotgun_Elemental_Shock',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=3),(Part=WeaponPartDefinition'GD_Weap_Shotgun.elemental.Shotgun_Elemental_Slag',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=3))")
-hfs.add_level_hotfix('part_early_game_fix_41', 'PartEarlyGameFix', ",GD_Iris_ItemPools.BalDefs.BalDef_ClassMod_Torgue_Common:ItemPartListCollectionDefinition_39,AlphaPartData.WeightedParts,,((Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_NoSkill',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS1',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS1_BS2',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS1_BS3',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS2',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS2_BS1',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS2_BS3',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS3',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS3_BS1',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS3_BS2',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS1_BS2_CS3',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS2_BS1_CS3',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS3_BS1_CS2',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS1_BS2_-CS3',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS1_-BS2_CS3',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS2_BS1_-CS3',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS2_-BS1_CS3',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS3_BS1_-CS2',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS3_-BS1_CS2',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0))")
-hfs.add_level_hotfix('part_early_game_fix_42', 'PartEarlyGameFix', ",GD_Iris_Weapons.Shotguns.SG_Hyperion_3_SlowHand:WeaponPartListCollectionDefinition_267,ElementalPartData.WeightedParts,,((Part=WeaponPartDefinition'GD_Weap_Shotgun.elemental.Shotgun_Elemental_Fire',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=3),(Part=WeaponPartDefinition'GD_Weap_Shotgun.elemental.Shotgun_Elemental_Corrosive',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=3),(Part=WeaponPartDefinition'GD_Weap_Shotgun.elemental.Shotgun_Elemental_Shock',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=3),(Part=WeaponPartDefinition'GD_Weap_Shotgun.elemental.Shotgun_Elemental_Slag',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=3))")
-hfs.add_level_hotfix('part_early_game_fix_43', 'PartEarlyGameFix', ",GD_Iris_Weapons.AssaultRifles.AR_Vladof_3_Kitten:WeaponPartListCollectionDefinition_272,ElementalPartData.WeightedParts,,((Part=WeaponPartDefinition'GD_Weap_AssaultRifle.elemental.AR_Elemental_Fire',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=4),(Part=WeaponPartDefinition'GD_Weap_AssaultRifle.elemental.AR_Elemental_Corrosive',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=4),(Part=WeaponPartDefinition'GD_Weap_AssaultRifle.elemental.AR_Elemental_Shock',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=4),(Part=WeaponPartDefinition'GD_Weap_AssaultRifle.elemental.AR_Elemental_Slag',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=4))")
-hfs.add_level_hotfix('part_early_game_fix_44', 'PartEarlyGameFix', ",GD_Lilac_ClassMods.BalanceDefs.BalDef_ClassMod_Psycho:ItemPartListCollectionDefinition_40,AlphaPartData.WeightedParts,,((Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_NoSkill',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS1',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS1_BS2',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS1_BS3',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS2',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS2_BS1',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS2_BS3',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS3',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS3_BS1',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS3_BS2',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS1_BS2_CS3',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS2_BS1_CS3',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS3_BS1_CS2',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS1_BS2_-CS3',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS1_-BS2_CS3',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS2_BS1_-CS3',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS2_-BS1_CS3',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS3_BS1_-CS2',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS3_-BS1_CS2',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0))")
-hfs.add_level_hotfix('part_early_game_fix_45', 'PartEarlyGameFix', ",GD_Lilac_ClassMods.BalanceDefs.BalDef_ClassMod_Psycho_04_VeryRare:ItemPartListCollectionDefinition_44,AlphaPartData.WeightedParts,,((Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS1_BS2_CS3',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS2_BS1_CS3',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS3_BS1_CS2',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS1_BS2_-CS3',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS1_-BS2_CS3',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS2_BS1_-CS3',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS2_-BS1_CS3',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS3_BS1_-CS2',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS3_-BS1_CS2',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0))")
-hfs.add_level_hotfix('part_early_game_fix_46', 'PartEarlyGameFix', ",GD_Lobelia_Weapons.Pistol.Pistol_Maliwan_6_Wanderlust:WeaponPartListCollectionDefinition_274,ElementalPartData.WeightedParts,,((Part=WeaponPartDefinition'GD_Weap_Pistol.elemental.Pistol_Elemental_Fire',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=3),(Part=WeaponPartDefinition'GD_Weap_Pistol.elemental.Pistol_Elemental_Shock',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=3),(Part=WeaponPartDefinition'GD_Weap_Pistol.elemental.Pistol_Elemental_Corrosive',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=3),(Part=WeaponPartDefinition'GD_Weap_Pistol.elemental.Pistol_Elemental_Slag',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=3))")
-hfs.add_level_hotfix('part_early_game_fix_47', 'PartEarlyGameFix', ",GD_Orchid_RaidWeapons.SMG.Tattler.Orchid_Seraph_Tattler_Balance:WeaponPartListCollectionDefinition_282,ElementalPartData.WeightedParts,,((Part=WeaponPartDefinition'GD_Weap_SMG.elemental.SMG_Elemental_None',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=3),(Part=WeaponPartDefinition'GD_Weap_SMG.elemental.SMG_Elemental_Fire',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=5),(Part=WeaponPartDefinition'GD_Weap_SMG.elemental.SMG_Elemental_Corrosive',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=5),(Part=WeaponPartDefinition'GD_Weap_SMG.elemental.SMG_Elemental_Shock',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=5),(Part=WeaponPartDefinition'GD_Weap_SMG.elemental.SMG_Elemental_Slag',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=5))")
-hfs.add_level_hotfix('part_early_game_fix_48', 'PartEarlyGameFix', ",GD_Orchid_RaidWeapons.Shotgun.Spitter.Orchid_Seraph_Spitter_Balance:WeaponPartListCollectionDefinition_283,ElementalPartData.WeightedParts,,((Part=WeaponPartDefinition'GD_Weap_Shotgun.elemental.Shotgun_Elemental_Corrosive',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=3))")
-hfs.add_level_hotfix('part_early_game_fix_49', 'PartEarlyGameFix', ",GD_Orchid_RaidWeapons.SMG.Actualizer.Orchid_Seraph_Actualizer_Balance:WeaponPartListCollectionDefinition_284,ElementalPartData.WeightedParts,,((Part=WeaponPartDefinition'GD_Weap_SMG.elemental.SMG_Elemental_None',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=3),(Part=WeaponPartDefinition'GD_Weap_SMG.elemental.SMG_Elemental_Fire',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=5),(Part=WeaponPartDefinition'GD_Weap_SMG.elemental.SMG_Elemental_Corrosive',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=5),(Part=WeaponPartDefinition'GD_Weap_SMG.elemental.SMG_Elemental_Shock',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=5),(Part=WeaponPartDefinition'GD_Weap_SMG.elemental.SMG_Elemental_Slag',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=5))")
-hfs.add_level_hotfix('part_early_game_fix_50', 'PartEarlyGameFix', ",GD_Orchid_RaidWeapons.sniper.Patriot.Orchid_Seraph_Patriot_Balance:WeaponPartListCollectionDefinition_286,ElementalPartData.WeightedParts,,((Part=WeaponPartDefinition'GD_Weap_SniperRifles.elemental.SR_Elemental_None',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=2),(Part=WeaponPartDefinition'GD_Weap_SniperRifles.elemental.SR_Elemental_Fire',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=2),(Part=WeaponPartDefinition'GD_Weap_SniperRifles.elemental.SR_Elemental_Shock',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=2),(Part=WeaponPartDefinition'GD_Weap_SniperRifles.elemental.SR_Elemental_Corrosive',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=2),(Part=WeaponPartDefinition'GD_Weap_SniperRifles.elemental.SR_Elemental_Slag',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=2))")
-hfs.add_level_hotfix('part_early_game_fix_51', 'PartEarlyGameFix', ",GD_Orchid_BossWeapons.AssaultRifle.AR_Vladof_3_Rapier:WeaponPartListCollectionDefinition_289,ElementalPartData.WeightedParts,,((Part=WeaponPartDefinition'GD_Weap_AssaultRifle.elemental.AR_Elemental_None',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=3),(Part=WeaponPartDefinition'GD_Weap_AssaultRifle.elemental.AR_Elemental_Fire',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=4),(Part=WeaponPartDefinition'GD_Weap_AssaultRifle.elemental.AR_Elemental_Corrosive',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=4),(Part=WeaponPartDefinition'GD_Weap_AssaultRifle.elemental.AR_Elemental_Shock',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=4),(Part=WeaponPartDefinition'GD_Weap_AssaultRifle.elemental.AR_Elemental_Slag',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=4))")
-hfs.add_level_hotfix('part_early_game_fix_52', 'PartEarlyGameFix', ",GD_Orchid_BossWeapons.Shotgun.SG_Bandit_3_JollyRoger:WeaponPartListCollectionDefinition_290,ElementalPartData.WeightedParts,,((Part=WeaponPartDefinition'GD_Weap_Shotgun.elemental.Shotgun_Elemental_None',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=3),(Part=WeaponPartDefinition'GD_Weap_Shotgun.elemental.Shotgun_Elemental_Fire',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=4),(Part=WeaponPartDefinition'GD_Weap_Shotgun.elemental.Shotgun_Elemental_Corrosive',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=4),(Part=WeaponPartDefinition'GD_Weap_Shotgun.elemental.Shotgun_Elemental_Shock',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=4),(Part=WeaponPartDefinition'GD_Weap_Shotgun.elemental.Shotgun_Elemental_Slag',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=4))")
-hfs.add_level_hotfix('part_early_game_fix_53', 'PartEarlyGameFix', ",GD_Orchid_BossWeapons.SMG.SMG_Dahl_3_SandHawk:WeaponPartListCollectionDefinition_292,ElementalPartData.WeightedParts,,((Part=WeaponPartDefinition'GD_Weap_SMG.elemental.SMG_Elemental_None',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=3),(Part=WeaponPartDefinition'GD_Weap_SMG.elemental.SMG_Elemental_Fire',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=5),(Part=WeaponPartDefinition'GD_Weap_SMG.elemental.SMG_Elemental_Corrosive',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=5),(Part=WeaponPartDefinition'GD_Weap_SMG.elemental.SMG_Elemental_Shock',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=5),(Part=WeaponPartDefinition'GD_Weap_SMG.elemental.SMG_Elemental_Slag',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=5))")
-hfs.add_level_hotfix('part_early_game_fix_54', 'PartEarlyGameFix', ",GD_Orchid_BossWeapons.SniperRifles.Sniper_Maliwan_3_Pimpernel:WeaponPartListCollectionDefinition_293,ElementalPartData.WeightedParts,,((Part=WeaponPartDefinition'GD_Weap_SniperRifles.elemental.SR_Elemental_Fire',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=2),(Part=WeaponPartDefinition'GD_Weap_SniperRifles.elemental.SR_Elemental_Shock',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=2),(Part=WeaponPartDefinition'GD_Weap_SniperRifles.elemental.SR_Elemental_Corrosive',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=2),(Part=WeaponPartDefinition'GD_Weap_SniperRifles.elemental.SR_Elemental_Slag',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=2))")
-hfs.add_level_hotfix('part_early_game_fix_55', 'PartEarlyGameFix', ",GD_Sage_RaidWeapons.Shotgun.Sage_Seraph_Interfacer_Balance:WeaponPartListCollectionDefinition_297,ElementalPartData.WeightedParts,,((Part=WeaponPartDefinition'GD_Weap_Shotgun.elemental.Shotgun_Elemental_None',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=3),(Part=WeaponPartDefinition'GD_Weap_Shotgun.elemental.Shotgun_Elemental_Fire',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=5),(Part=WeaponPartDefinition'GD_Weap_Shotgun.elemental.Shotgun_Elemental_Corrosive',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=5),(Part=WeaponPartDefinition'GD_Weap_Shotgun.elemental.Shotgun_Elemental_Shock',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=5),(Part=WeaponPartDefinition'GD_Weap_Shotgun.elemental.Shotgun_Elemental_Slag',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=5))")
-hfs.add_level_hotfix('part_early_game_fix_56', 'PartEarlyGameFix', ",GD_Sage_RaidWeapons.AssaultRifle.Sage_Seraph_LeadStorm_Balance:WeaponPartListCollectionDefinition_298,ElementalPartData.WeightedParts,,((Part=WeaponPartDefinition'GD_Weap_AssaultRifle.elemental.AR_Elemental_None',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=3),(Part=WeaponPartDefinition'GD_Weap_AssaultRifle.elemental.AR_Elemental_Fire',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=4),(Part=WeaponPartDefinition'GD_Weap_AssaultRifle.elemental.AR_Elemental_Corrosive',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=4),(Part=WeaponPartDefinition'GD_Weap_AssaultRifle.elemental.AR_Elemental_Shock',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=4),(Part=WeaponPartDefinition'GD_Weap_AssaultRifle.elemental.AR_Elemental_Slag',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=4))")
-hfs.add_level_hotfix('part_early_game_fix_57', 'PartEarlyGameFix', ",GD_Sage_Weapons.AssaultRifle.AR_Bandit_3_Chopper:WeaponPartListCollectionDefinition_303,ElementalPartData.WeightedParts,,((Part=WeaponPartDefinition'GD_Weap_AssaultRifle.elemental.AR_Elemental_None',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=3),(Part=WeaponPartDefinition'GD_Weap_AssaultRifle.elemental.AR_Elemental_Fire',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=4),(Part=WeaponPartDefinition'GD_Weap_AssaultRifle.elemental.AR_Elemental_Corrosive',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=4),(Part=WeaponPartDefinition'GD_Weap_AssaultRifle.elemental.AR_Elemental_Shock',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=4),(Part=WeaponPartDefinition'GD_Weap_AssaultRifle.elemental.AR_Elemental_Slag',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=4))")
-hfs.add_level_hotfix('part_early_game_fix_58', 'PartEarlyGameFix', ",GD_Tulip_ItemGrades.ClassMods.BalDef_ClassMod_Mechromancer:ItemPartListCollectionDefinition_48,AlphaPartData.WeightedParts,,((Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_NoSkill',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS1',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS1_BS2',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS1_BS3',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS2',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS2_BS1',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS2_BS3',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS3',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS3_BS1',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS3_BS2',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS1_BS2_CS3',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS2_BS1_CS3',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS3_BS1_CS2',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS1_BS2_-CS3',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS1_-BS2_CS3',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS2_BS1_-CS3',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS2_-BS1_CS3',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS3_BS1_-CS2',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS3_-BS1_CS2',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0))")
-hfs.add_level_hotfix('part_early_game_fix_59', 'PartEarlyGameFix', ",GD_Tulip_ItemGrades.ClassMods.BalDef_ClassMod_Mechromancer_04_VeryRare:ItemPartListCollectionDefinition_52,AlphaPartData.WeightedParts,,((Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS1_BS2_CS3',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS2_BS1_CS3',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS3_BS1_CS2',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS1_BS2_-CS3',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS1_-BS2_CS3',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS2_BS1_-CS3',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS2_-BS1_CS3',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS3_BS1_-CS2',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=ClassModPartDefinition'GD_ClassMods.Specialization.Spec_AS3_-BS1_CS2',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0))")
-
 # Fix some container drop pools which reference an item (Pool_BuffDrinks_Euphoria)
 # which doesn't actually exist, causing that loot possibility to never actually
 # get chosen.  We'll replace with Pool_BuffDrinks_HealingRegen.  Most of these could
@@ -1656,6 +1935,7 @@ for (idx, (classname, propname, loot_idx, attachment_idx)) in enumerate([
         ('GD_Balance_Treasure.ChestGrades.ObjectGrade_DahlEpic_BearerBadNews', 'DefaultLoot', 4, 11),
         ('GD_Itempools.ListDefs.EpicChestHyperionLoot', 'LootData', 3, 11),
         ('GD_Aster_Lootables.Balance.ObjectGrade_MimicChest_NoMimic', 'DefaultLoot', 4, 11),
+        ('GD_Lobelia_DahlDigi.LootableGradesUnique.ObjectGrade_DalhEpicCrate_Digi', 'DefaultLoot', 4, 11),
         ]):
     hfs.add_level_hotfix('euphoria_fix_{}'.format(idx),
         'EuphoriaChestFix',
@@ -2080,17 +2360,6 @@ hfs.add_level_hotfix('better_safes', 'BetterSafes',
 #hfs.add_level_hotfix('chubbies', 'ChubbySpawn',
 #    ',GD_Population_SpiderAnt.Population.PopDef_SpiderantMix_Regular,ActorArchetypeList[9].Probability.BaseValueConstant,,1000')
 
-# This will cause varkids to always morph into their next stage, up
-# through Vermivorous (even in Normal mode).  Used to test Verm drops.
-# Still have to wait for their timers to elapse before they evolve, of course.
-#for morph in range(1,6):
-#    hfs.add_level_hotfix('varkid_clear_{}'.format(morph),
-#        'VarkidMorphClear',
-#        ',GD_Balance.WeightingPlayerCount.BugmorphCocoon_PerPlayers_Phase{},ConditionalInitialization.ConditionalExpressionList,,()'.format(morph))
-#    hfs.add_level_hotfix('varkid_default_{}'.format(morph),
-#        'VarkidMorphDefault',
-#        ',GD_Balance.WeightingPlayerCount.BugmorphCocoon_PerPlayers_Phase{},ConditionalInitialization.DefaultBaseValue.BaseValueConstant,,1.0'.format(morph))
-
 ###
 ### Everything below this point is constructing the actual patch file
 ###
@@ -2174,96 +2443,97 @@ else:
     drop_comment = '#'
     drop_off = '    <off>'
     drop_wording = ' (disabled by default)'
-test_drop_str = """
+drop_chance_str_source = """
 
-    #<Guaranteed Enemy Loot Drop Chance{drop_wording}>
+        #<{adjective} Enemy Loot Drop Chance{drop_wording}>
 
-        {drop_comment}# Gives a 100% chance to drop loot from enemies.{drop_off}
-        {drop_comment}# Just used during my own testing to get a feel for drop rates.{drop_off}
+            {drop_comment}# Gives {description} chance to drop loot from enemies.{drop_off}
+            {drop_comment}# Just used during my own testing to get a feel for drop rates.{drop_off}
 
-        {drop_comment}set GD_Itempools.DropWeights.DropODDS_GunsAndGear:ConditionalAttributeValueResolver_0 ValueExpressions
-        (
-            bEnabled=True,
-            ConditionalExpressionList=(
-                (
-                    BaseValueIfTrue=(
-                        BaseValueConstant={loot_drop_chance_1p},
-                        BaseValueAttribute=None,
-                        InitializationDefinition=None,
-                        BaseValueScaleConstant=1.000000
+            {drop_comment}set GD_Itempools.DropWeights.DropODDS_GunsAndGear:ConditionalAttributeValueResolver_0 ValueExpressions
+            (
+                bEnabled=True,
+                ConditionalExpressionList=(
+                    (
+                        BaseValueIfTrue=(
+                            BaseValueConstant={loot_drop_chance_1p},
+                            BaseValueAttribute=None,
+                            InitializationDefinition=None,
+                            BaseValueScaleConstant=1.000000
+                        ),
+                        Expressions=(
+                            (
+                                AttributeOperand1=AttributeDefinition'D_Attributes.GameProperties.NumberOfPlayers',
+                                ComparisonOperator=OPERATOR_EqualTo,
+                                Operand2Usage=OPERAND_PreferAttribute,
+                                AttributeOperand2=None,
+                                ConstantOperand2=1.000000
+                            )
+                        )
                     ),
-                    Expressions=(
-                        (
-                            AttributeOperand1=AttributeDefinition'D_Attributes.GameProperties.NumberOfPlayers',
-                            ComparisonOperator=OPERATOR_EqualTo,
-                            Operand2Usage=OPERAND_PreferAttribute,
-                            AttributeOperand2=None,
-                            ConstantOperand2=1.000000
+                    (
+                        BaseValueIfTrue=(
+                            BaseValueConstant={loot_drop_chance_2p},
+                            BaseValueAttribute=None,
+                            InitializationDefinition=None,
+                            BaseValueScaleConstant=1.000000
+                        ),
+                        Expressions=(
+                            (
+                                AttributeOperand1=AttributeDefinition'D_Attributes.GameProperties.NumberOfPlayers',
+                                ComparisonOperator=OPERATOR_EqualTo,
+                                Operand2Usage=OPERAND_PreferAttribute,
+                                AttributeOperand2=None,
+                                ConstantOperand2=2.000000
+                            )
+                        )
+                    ),
+                    (
+                        BaseValueIfTrue=(
+                            BaseValueConstant={loot_drop_chance_3p},
+                            BaseValueAttribute=None,
+                            InitializationDefinition=None,
+                            BaseValueScaleConstant=1.000000
+                        ),
+                        Expressions=(
+                            (
+                                AttributeOperand1=AttributeDefinition'D_Attributes.GameProperties.NumberOfPlayers',
+                                ComparisonOperator=OPERATOR_EqualTo,
+                                Operand2Usage=OPERAND_PreferAttribute,
+                                AttributeOperand2=None,
+                                ConstantOperand2=3.000000
+                            )
+                        )
+                    ),
+                    (
+                        BaseValueIfTrue=(
+                            BaseValueConstant={loot_drop_chance_4p},
+                            BaseValueAttribute=None,
+                            InitializationDefinition=None,
+                            BaseValueScaleConstant=1.000000
+                        ),
+                        Expressions=(
+                            (
+                                AttributeOperand1=AttributeDefinition'D_Attributes.GameProperties.NumberOfPlayers',
+                                ComparisonOperator=OPERATOR_EqualTo,
+                                Operand2Usage=OPERAND_PreferAttribute,
+                                AttributeOperand2=None,
+                                ConstantOperand2=4.000000
+                            )
                         )
                     )
                 ),
-                (
-                    BaseValueIfTrue=(
-                        BaseValueConstant={loot_drop_chance_2p},
-                        BaseValueAttribute=None,
-                        InitializationDefinition=None,
-                        BaseValueScaleConstant=1.000000
-                    ),
-                    Expressions=(
-                        (
-                            AttributeOperand1=AttributeDefinition'D_Attributes.GameProperties.NumberOfPlayers',
-                            ComparisonOperator=OPERATOR_EqualTo,
-                            Operand2Usage=OPERAND_PreferAttribute,
-                            AttributeOperand2=None,
-                            ConstantOperand2=2.000000
-                        )
-                    )
-                ),
-                (
-                    BaseValueIfTrue=(
-                        BaseValueConstant={loot_drop_chance_3p},
-                        BaseValueAttribute=None,
-                        InitializationDefinition=None,
-                        BaseValueScaleConstant=1.000000
-                    ),
-                    Expressions=(
-                        (
-                            AttributeOperand1=AttributeDefinition'D_Attributes.GameProperties.NumberOfPlayers',
-                            ComparisonOperator=OPERATOR_EqualTo,
-                            Operand2Usage=OPERAND_PreferAttribute,
-                            AttributeOperand2=None,
-                            ConstantOperand2=3.000000
-                        )
-                    )
-                ),
-                (
-                    BaseValueIfTrue=(
-                        BaseValueConstant={loot_drop_chance_4p},
-                        BaseValueAttribute=None,
-                        InitializationDefinition=None,
-                        BaseValueScaleConstant=1.000000
-                    ),
-                    Expressions=(
-                        (
-                            AttributeOperand1=AttributeDefinition'D_Attributes.GameProperties.NumberOfPlayers',
-                            ComparisonOperator=OPERATOR_EqualTo,
-                            Operand2Usage=OPERAND_PreferAttribute,
-                            AttributeOperand2=None,
-                            ConstantOperand2=4.000000
-                        )
-                    )
+                DefaultBaseValue=(
+                    BaseValueConstant=0.000000,
+                    BaseValueAttribute=None,
+                    InitializationDefinition=None,
+                    BaseValueScaleConstant=1.000000
                 )
-            ),
-            DefaultBaseValue=(
-                BaseValueConstant=0.000000,
-                BaseValueAttribute=None,
-                InitializationDefinition=None,
-                BaseValueScaleConstant=1.000000
-            )
-        ){drop_off}
+            ){drop_off}
 
-    #</Guaranteed Enemy Loot Drop Chance{drop_wording}>
+        #</{adjective} Enemy Loot Drop Chance{drop_wording}>"""
 
+drop_quantity_str_source = """
     #<Extreme Enemy Loot Drop Quantity{drop_wording}>
 
         {drop_comment}# Enemies drop {loot_drop_quantity} items instead of just one.{drop_off}
@@ -2305,226 +2575,115 @@ test_drop_str = """
 
         #</Torgue Biker Gangs>
 
-    #</Extreme Enemy Loot Drop Quantity{drop_wording}>
-    """.format(
-            drop_comment=drop_comment,
-            drop_off=drop_off,
-            drop_wording=drop_wording,
-            loot_drop_chance_1p=loot_drop_chance_1p,
-            loot_drop_chance_2p=loot_drop_chance_2p,
-            loot_drop_chance_3p=loot_drop_chance_3p,
-            loot_drop_chance_4p=loot_drop_chance_4p,
-            loot_drop_quantity=loot_drop_quantity,
-        )
+    #</Extreme Enemy Loot Drop Quantity{drop_wording}>"""
 
-# Forcing the "Reward" Relic pool to obey our custom weights.  There's
-# 22 of these definitions which are all identical (and one outlier), so
-# we're going use a loop rather than a lot of copy+paste.
-relic_weight_parts = []
-for relic_type in [
-        'AggressionA',
-        'AggressionB',
-        'AggressionC',
-        'AggressionD',
-        'AggressionE',
-        'AggressionF',
-        'AllegianceA',
-        'AllegianceB',
-        'AllegianceC',
-        'AllegianceD',
-        'AllegianceE',
-        'AllegianceF',
-        'AllegianceG',
-        'AllegianceH',
-        'Elemental',
-        'Proficiency',
-        'Protection',
-        'Resistance',
-        'Stockpile',
-        'Strength',
-        'Tenacity',
-        'Vitality',
-        ]:
-    relic_weight_parts.append("""
-                set GD_Artifacts.PartLists.Parts_{relic_type}_Rare ConsolidatedAttributeInitData
-                (
-                    (
-                        BaseValueConstant=1.000000,
-                        BaseValueAttribute=None,
-                        InitializationDefinition=None,
-                        BaseValueScaleConstant=1.000000
-                    ),
-                    (
-                        BaseValueConstant=100.000000,
-                        BaseValueAttribute=None,
-                        InitializationDefinition=None,
-                        BaseValueScaleConstant=1.000000
-                    ),
-                    (
-                        BaseValueConstant=0.000000,
-                        BaseValueAttribute=None,
-                        InitializationDefinition=None,
-                        BaseValueScaleConstant=1.000000
-                    ),
-                    (
-                        BaseValueConstant=1.000000,
-                        BaseValueAttribute=None,
-                        InitializationDefinition=None,
-                        BaseValueScaleConstant={relic_scale_rare}
-                    ),
-                    (
-                        BaseValueConstant=1.000000,
-                        BaseValueAttribute=None,
-                        InitializationDefinition=None,
-                        BaseValueScaleConstant={relic_scale_veryrare}
-                    )
-                )
-""".format(
-    relic_type=relic_type,
-    relic_scale_rare=relic_scale_rare,
-    relic_scale_veryrare=relic_scale_veryrare,
-    ))
-# This one is the one that's slightly different
-relic_weight_parts.append("""
-                set GD_Artifacts.PartLists.Parts_Elemental_Status_Rare ConsolidatedAttributeInitData
-                (
-                    (
-                        BaseValueConstant=1.000000,
-                        BaseValueAttribute=None,
-                        InitializationDefinition=None,
-                        BaseValueScaleConstant=1.000000
-                    ),
-                    (
-                        BaseValueConstant=100.000000,
-                        BaseValueAttribute=None,
-                        InitializationDefinition=None,
-                        BaseValueScaleConstant=1.000000
-                    ),
-                    (
-                        BaseValueConstant=0.000000,
-                        BaseValueAttribute=None,
-                        InitializationDefinition=None,
-                        BaseValueScaleConstant=1.000000
-                    ),
-                    (
-                        BaseValueConstant=100.000000,
-                        BaseValueAttribute=None,
-                        InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',
-                        BaseValueScaleConstant=1.000000
-                    ),
-                    (
-                        BaseValueConstant=1.000000,
-                        BaseValueAttribute=None,
-                        InitializationDefinition=None,
-                        BaseValueScaleConstant={relic_scale_rare}
-                    ),
-                    (
-                        BaseValueConstant=1.000000,
-                        BaseValueAttribute=None,
-                        InitializationDefinition=None,
-                        BaseValueScaleConstant={relic_scale_veryrare}
-                    )
-                )
-""".format(
-    relic_type=relic_type,
-    relic_scale_rare=relic_scale_rare,
-    relic_scale_veryrare=relic_scale_veryrare,
-    ))
-relic_weight_str = ''.join(relic_weight_parts).lstrip()
-
-# Now read in our main input file and substitute all of our variables.
-with open(input_filename, 'r') as df:
-    loot_str = df.read().format(
-        mod_name=mod_name,
-        weapon_base_common=weapon_base_common,
-        weapon_scale_common=weapon_scale_common,
-        weapon_base_uncommon=weapon_base_uncommon,
-        weapon_scale_uncommon=weapon_scale_uncommon,
-        weapon_base_rare=weapon_base_rare,
-        weapon_scale_rare=weapon_scale_rare,
-        weapon_base_veryrare=weapon_base_veryrare,
-        weapon_scale_veryrare=weapon_scale_veryrare,
-        weapon_base_alien=weapon_base_alien,
-        weapon_scale_alien=weapon_scale_alien,
-        weapon_base_legendary=weapon_base_legendary,
-        weapon_scale_legendary=weapon_scale_legendary,
-        weapon_scale_iris_cobra=weapon_scale_iris_cobra,
-        cm_base_common=cm_base_common,
-        cm_scale_common=cm_scale_common,
-        cm_base_uncommon=cm_base_uncommon,
-        cm_scale_uncommon=cm_scale_uncommon,
-        cm_base_rare=cm_base_rare,
-        cm_scale_rare=cm_scale_rare,
-        cm_base_veryrare=cm_base_veryrare,
-        cm_scale_veryrare=cm_scale_veryrare,
-        cm_scale_alignment=cm_scale_alignment,
-        cm_base_legendary=cm_base_legendary,
-        cm_scale_legendary=cm_scale_legendary,
-        grenade_base_common=grenade_base_common,
-        grenade_scale_common=grenade_scale_common,
-        grenade_base_uncommon=grenade_base_uncommon,
-        grenade_scale_uncommon=grenade_scale_uncommon,
-        grenade_base_rare=grenade_base_rare,
-        grenade_scale_rare=grenade_scale_rare,
-        grenade_base_veryrare=grenade_base_veryrare,
-        grenade_scale_veryrare=grenade_scale_veryrare,
-        grenade_base_legendary=grenade_base_legendary,
-        grenade_scale_legendary=grenade_scale_legendary,
-        shield_base_common=shield_base_common,
-        shield_scale_common=shield_scale_common,
-        shield_base_uncommon=shield_base_uncommon,
-        shield_scale_uncommon=shield_scale_uncommon,
-        shield_base_rare=shield_base_rare,
-        shield_scale_rare=shield_scale_rare,
-        shield_base_veryrare=shield_base_veryrare,
-        shield_scale_veryrare=shield_scale_veryrare,
-        shield_base_legendary=shield_base_legendary,
-        shield_scale_legendary=shield_scale_legendary,
-        dice_vhigh_veryrare=dice_vhigh_veryrare,
-        dice_vhigh_alien=dice_vhigh_alien,
-        dice_vhigh_legendary=dice_vhigh_legendary,
-        eridium_bar_drop=eridium_bar_drop,
-        eridium_stick_drop=eridium_stick_drop,
-        treasure_scale_rare=treasure_scale_rare,
-        treasure_scale_veryrare=treasure_scale_veryrare,
-        treasure_scale_alien=treasure_scale_alien,
-        treasure_scale_legendary=treasure_scale_legendary,
-        epic_scale_veryrare=epic_scale_veryrare,
-        epic_scale_alien=epic_scale_alien,
-        epic_scale_legendary=epic_scale_legendary,
-        epic_scale_legendary_dbl=epic_scale_legendary_dbl,
-        gunsandgear_drop_str=gunsandgear_drop_str,
-        relic_weight_str=relic_weight_str,
-        test_drop_str=test_drop_str,
-        hotfixes=hfs,
-        variant_name='{variant_name}',
-        hotfix_gearbox_base='{hotfix_gearbox_base}',
-        hotfix_transient_defs='{hotfix_transient_defs}',
+# Guaranteed drop chance string
+test_drop_chance_guaranteed_str = drop_chance_str_source.format(
+        adjective='Guaranteed',
+        description='a 100%',
+        drop_comment=drop_comment,
+        drop_off=drop_off,
+        drop_wording=drop_wording,
+        loot_drop_chance_1p=loot_drop_chance_1p,
+        loot_drop_chance_2p=loot_drop_chance_2p,
+        loot_drop_chance_3p=loot_drop_chance_3p,
+        loot_drop_chance_4p=loot_drop_chance_4p,
     )
 
-# Write to a filtertool/ucp compatible file
-with open(output_filename_filtertool, 'w') as df:
-    df.write(loot_str.format(
-        variant_name=variant_filtertool_name,
-        hotfix_gearbox_base='',
-        hotfix_transient_defs='',
-        ))
-print('Wrote UCP-compatible mod file to: {}'.format(output_filename_filtertool))
+# Merely improved drop chance string
+test_drop_chance_improved_str = drop_chance_str_source.format(
+        adjective='Improved',
+        description='a doubled',
+        drop_comment='#',
+        drop_off='    <off>',
+        drop_wording=' (disabled by default)',
+        loot_drop_chance_1p=loot_drop_chance_1p_alt,
+        loot_drop_chance_2p=loot_drop_chance_2p_alt,
+        loot_drop_chance_3p=loot_drop_chance_3p_alt,
+        loot_drop_chance_4p=loot_drop_chance_4p_alt,
+    )
 
-# Write to a standalone file
-with open(output_filename_standalone, 'w') as df:
-    df.write(loot_str.format(
-        variant_name=variant_standalone_name,
-        hotfix_gearbox_base=hfs.get_gearbox_hotfix_xml(),
-        hotfix_transient_defs=hfs.get_transient_defs(),
-        ))
-print('Wrote standalone mod file to: {}'.format(output_filename_standalone))
+# Concatenate our drop chance stanzas in one mutually-exclusive folder
+test_drop_chance_str = """
+    #<Enemy Loot Drop Chance Modification (choose one){drop_wording}><MUT>
+{test_drop_chance_guaranteed_str}
+{test_drop_chance_improved_str}
 
-# Write to a standalone offline file
-with open(output_filename_offline, 'w') as df:
-    df.write(loot_str.format(
-        variant_name=variant_offline_name,
-        hotfix_gearbox_base=hfs.get_gearbox_hotfix_xml(),
-        hotfix_transient_defs=hfs.get_transient_defs(offline=True),
+    #</Enemy Loot Drop Chance Modification (choose one){drop_wording}>
+""".format(
+        drop_wording=drop_wording,
+        test_drop_chance_guaranteed_str=test_drop_chance_guaranteed_str,
+        test_drop_chance_improved_str=test_drop_chance_improved_str,
+    )
+
+# Test drop quantity string
+test_drop_quantity_str = drop_quantity_str_source.format(
+        drop_comment=drop_comment,
+        drop_off=drop_off,
+        drop_wording=drop_wording,
+        loot_drop_quantity=loot_drop_quantity,
+    )
+
+# Now read in our main input file
+with open(input_filename, 'r') as df:
+    loot_str = df.read()
+
+# Loop through our profiles and generate the files
+for profile in profiles:
+
+    # Write our UCP-compatible version
+    with open(profile.filename(mod_name, variant_ucp), 'w') as df:
+        df.write(loot_str.format(
+            mod_name=mod_name,
+            mod_version=mod_version,
+            variant_name=variant_ucp,
+            config=profile,
+            hotfixes=hfs,
+            hotfix_gearbox_base='',
+            hotfix_transient_defs='',
+            gunsandgear_drop_str=gunsandgear_drop_str,
+            test_drop_chance_str=test_drop_chance_str,
+            test_drop_quantity_str=test_drop_quantity_str,
+            ))
+    print('Wrote UCP-compatible ({}) mod file to: {}'.format(
+        profile.profile_name,
+        profile.filename(mod_name, variant_ucp),
         ))
-print('Wrote standalone offline mod file to: {}'.format(output_filename_offline))
+
+    # Write to a standalone file
+    with open(profile.filename(mod_name, variant_standalone), 'w') as df:
+        df.write(loot_str.format(
+            mod_name=mod_name,
+            mod_version=mod_version,
+            variant_name=variant_standalone,
+            config=profile,
+            hotfixes=hfs,
+            hotfix_gearbox_base=hfs.get_gearbox_hotfix_xml(),
+            hotfix_transient_defs=hfs.get_transient_defs(),
+            gunsandgear_drop_str=gunsandgear_drop_str,
+            test_drop_chance_str=test_drop_chance_str,
+            test_drop_quantity_str=test_drop_quantity_str,
+            ))
+    print('Wrote standalone ({}) mod file to: {}'.format(
+        profile.profile_name,
+        profile.filename(mod_name, variant_standalone),
+        ))
+
+    # Write to a standalone offline file
+    with open(profile.filename(mod_name, variant_offline), 'w') as df:
+        df.write(loot_str.format(
+            mod_name=mod_name,
+            mod_version=mod_version,
+            variant_name=variant_offline,
+            config=profile,
+            hotfixes=hfs,
+            hotfix_gearbox_base=hfs.get_gearbox_hotfix_xml(),
+            hotfix_transient_defs=hfs.get_transient_defs(offline=True),
+            gunsandgear_drop_str=gunsandgear_drop_str,
+            test_drop_chance_str=test_drop_chance_str,
+            test_drop_quantity_str=test_drop_quantity_str,
+            ))
+    print('Wrote standalone offline ({}) mod file to: {}'.format(
+        profile.profile_name,
+        profile.filename(mod_name, variant_offline),
+        ))
