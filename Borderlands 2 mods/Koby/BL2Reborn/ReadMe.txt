@@ -1,7 +1,3 @@
-CURRENTLY MORE OR LESS BROKEN, ANY CHANGES YOU MAKE TO BL2 REBORN WILL CRASH YOUR GAME. I'LL FIX IT TOMORROW.
-
-------------------------------------------------------------------------------------------------------------
-
 If you want to experience Borderlands 2 in a new way, this modpack is exactly for you.
 
 As of version 1.3.3, there are 118 mods in BL2Reborn. You can find a list of all mods and their descriptions in the attached "Mod List.txt".
