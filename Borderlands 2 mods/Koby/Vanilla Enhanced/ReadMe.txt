@@ -2,7 +2,7 @@ This modpack is basically a very light version of the Unofficial Community Patch
 
 Image Album https://captainkoby.imgur.com/
 
-Download the modpack by rightclicking the "Download" button in "VanillaEnhanced.txt" and "Save link as...".
+Download the modpack by rightclicking the "Raw" button in "VanillaEnhanced.txt" and "Save link as...".
 
 ------------------------------------------------------------------------------------------------------------
 Modpack built by Koby
