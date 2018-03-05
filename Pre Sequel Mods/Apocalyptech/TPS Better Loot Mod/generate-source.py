@@ -115,100 +115,81 @@ class ConfigLootsplosion(ConfigBase):
     one = '1.000000'
     zero = '0.000000'
 
-    # "BaseValueConstant values for the various gear drop types.  These
-    # are actually totally unchanged from the stock definitions; I'd just
-    # put them in here in case I felt like overriding them easily later.
-    weapon_base_common = one
-    weapon_base_uncommon = one
-    weapon_base_rare = one
-    weapon_base_veryrare = one
-    weapon_base_alien = one
-    weapon_base_legendary = one
-    cm_base_common = one
-    cm_base_uncommon = one
-    cm_base_rare = one
-    cm_base_veryrare = one
-    cm_base_legendary = one
-    grenade_base_common = zero
-    grenade_base_uncommon = zero
-    grenade_base_rare = zero
-    grenade_base_veryrare = zero
-    grenade_base_legendary = zero
-    shield_base_common = one
-    shield_base_uncommon = one
-    shield_base_rare = one
-    shield_base_veryrare = one
-    shield_base_legendary = one
-
     # Custom weapon drop scaling
-    weapon_scale_common = '8'
-    weapon_scale_uncommon = '85'
-    weapon_scale_rare = '65'
-    weapon_scale_veryrare = '50'
-    weapon_scale_alien = '30'
-    weapon_scale_legendary = '3'
-    weapon_scale_iris_cobra = '1'
+    weapon_base_common = '8'
+    weapon_base_uncommon = '85'
+    weapon_base_rare = '65'
+    weapon_base_veryrare = '50'
+    weapon_base_glitch = '15'
+    weapon_base_legendary = '3'
+
+    # Custom ozkit drop scaling (identical to weapons)
+    ozkit_base_common = weapon_base_common
+    ozkit_base_uncommon = weapon_base_uncommon
+    ozkit_base_rare = weapon_base_rare
+    ozkit_base_veryrare = weapon_base_veryrare
+    ozkit_base_legendary = weapon_base_legendary
 
     # Custom COM drop scaling (identical to weapons, apart from an additional Alignment COM pool)
-    cm_scale_common = weapon_scale_common
-    cm_scale_uncommon = weapon_scale_uncommon
-    cm_scale_rare = weapon_scale_rare
-    cm_scale_veryrare = weapon_scale_veryrare
-    cm_scale_alignment = '30'
-    cm_scale_legendary = weapon_scale_legendary
+    com_base_common = weapon_base_common
+    com_base_uncommon = weapon_base_uncommon
+    com_base_rare = weapon_base_rare
+    com_base_veryrare = weapon_base_veryrare
+    com_base_alignment = '30'
+    com_base_legendary = weapon_base_legendary
 
     # Custom grenade drop scaling (identical to weapons)
-    grenade_scale_common = weapon_scale_common
-    grenade_scale_uncommon = weapon_scale_uncommon
-    grenade_scale_rare = weapon_scale_rare
-    grenade_scale_veryrare = weapon_scale_veryrare
-    grenade_scale_legendary = weapon_scale_legendary
+    grenade_base_common = weapon_base_common
+    grenade_base_uncommon = weapon_base_uncommon
+    grenade_base_rare = weapon_base_rare
+    grenade_base_veryrare = weapon_base_veryrare
+    grenade_base_legendary = weapon_base_legendary
 
     # Custom shield drop scaling (identical to weapons)
-    shield_scale_common = weapon_scale_common
-    shield_scale_uncommon = weapon_scale_uncommon
-    shield_scale_rare = weapon_scale_rare
-    shield_scale_veryrare = weapon_scale_veryrare
-    shield_scale_legendary = weapon_scale_legendary
+    shield_base_common = weapon_base_common
+    shield_base_uncommon = weapon_base_uncommon
+    shield_base_rare = weapon_base_rare
+    shield_base_veryrare = weapon_base_veryrare
+    shield_base_legendary = weapon_base_legendary
 
     # Custom relic drop scaling
-    relic_scale_rare = '1.0'
-    relic_scale_veryrare = '2.0'
+    relic_base_rare = '1.0'
+    relic_base_veryrare = '2.0'
 
     # Drop rates for "regular" treasure chests
-    treasure_scale_common = zero
-    treasure_scale_uncommon = zero
-    treasure_scale_rare = '20'
-    treasure_scale_veryrare = '60'
-    treasure_scale_alien = '30'
-    treasure_scale_legendary = '5'
+    treasure_base_common = zero
+    treasure_base_uncommon = zero
+    treasure_base_rare = '20'
+    treasure_base_veryrare = '60'
+    treasure_base_glitch = '30'
+    treasure_base_legendary = '5'
 
     # Drop rates for "epic" treasure chests
-    epic_scale_common = zero
-    epic_scale_uncommon = zero
-    epic_scale_rare = zero
-    epic_scale_veryrare = '1'
-    epic_scale_alien = '1'
-    epic_scale_legendary = '0.3'
-    epic_scale_legendary_dbl = '0.6'
+    epic_base_common = zero
+    epic_base_uncommon = zero
+    epic_base_rare = zero
+    epic_base_veryrare = '1'
+    epic_base_glitch = '1'
+    epic_base_legendary = '0.3'
+    epic_base_legendary_dbl = '0.6'
 
     # Badass pool probabilities (NOTE: these are *not* weights)
     badass_pool_veryrare = '0.4'
-    badass_pool_alien = '0.4'
+    badass_pool_glitch = '0.4'
     badass_pool_epicchest = '0.1'
 
     # Super Badass pool probabilities (NOTE: these are *not* weights)
     super_badass_pool_rare = '1'
     super_badass_pool_veryrare = '1'
-    super_badass_pool_alien = '1'
+    super_badass_pool_glitch = '1'
     super_badass_pool_legendary = '1'
     super_badass_pool_epicchest = '1'
 
     # Ultimate Badass pool probabilities (NOTE: these are *not* weights)
     ultimate_badass_pool_veryrare_1 = '1'
     ultimate_badass_pool_veryrare_2 = '0.5'
-    ultimate_badass_pool_alien_1 = '1'
-    ultimate_badass_pool_alien_2 = '0.5'
+    ultimate_badass_pool_glitch_1 = '1'
+    ultimate_badass_pool_glitch_2 = '0.5'
     ultimate_badass_pool_legendary_1 = '1'
     ultimate_badass_pool_legendary_2 = '0.5'
     ultimate_badass_pool_legendary_3 = '0.25'
@@ -243,11 +224,6 @@ class ConfigLootsplosion(ConfigBase):
     voracidous_drop_legendary_2 = '1'
     voracidous_drop_legendary_3 = '1'
     voracidous_drop_legendary_4 = '1'
-
-    # Drop rates within the "very high roll" pools of dice chests
-    dice_vhigh_veryrare = '1'
-    dice_vhigh_alien = '1'
-    dice_vhigh_legendary = '0.5'
 
     # 2x chance of both kinds of moonstone
     moonstone_drop = '0.1'          # Stock: 0.050000
@@ -292,7 +268,7 @@ loot_drop_chance_4p_alt = '0.100000'    # Stock: 0.050000
 # Force Pool_GunsAndGear to always drop the specified pool, if `force_gunsandgear_drop`
 # is True.  Useful for testing out how individual pools are behaving.
 force_gunsandgear_drop = False
-force_gunsandgear_drop_type = 'GD_Itempools.WeaponPools.Pool_Weapons_All_06_Legendary'
+force_gunsandgear_drop_type = 'GD_Itempools.WeaponPools.Pool_Weapons_All'
 
 # Force Pool_GunsAndGear to always drop the specified item, if
 # `force_gunsandgear_specific` is True.  Useful for seeing what exactly an

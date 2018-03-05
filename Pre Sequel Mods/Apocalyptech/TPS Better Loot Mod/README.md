@@ -18,6 +18,9 @@ Mod Overview
 * Adds all legendaries + uniques (weapons, grenade mods, class mods,
   shields, oz kits) into the global "legendary" loot pools, so
   you'll start seeing those much more frequently.
+* Loot will skew much more rare, in general.  You should expect to see
+  those legendaries/uniques far more frequently than in vanilla TPS.
+* Glitch weapons spawn in the main game
 * Makes Moonstones drop 2x more often
 * Luneshine weapons will drop in all world drop pools (this is identical
   to some functionality in UCP)
