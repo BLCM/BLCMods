@@ -37,6 +37,19 @@
 import re
 import sys
 
+# Maliwan Aquamarine snipers are a bit weird - there's some kind of
+# hotfix-like behavior which happens after the main menu which redefines
+# the loot pool, and the PartListCollection number suffix ends up
+# changing when that happens.  Linux/Mac users have to exit to the
+# "press any key" menu before executing patches, and at that point this
+# hotfix-like fix has already been done, but Windows users do not.  Anyway,
+# the upshot is that Windows users will require that one class to be
+# hotfixed rather than just `set`, since they won't have the new number
+# yet.
+need_hotfix = set([
+    'GD_Aster_Weapons.Snipers.SR_Maliwan_4_Aquamarine:WeaponPartListCollectionDefinition_306',
+    ])
+
 class Re(object):
     """
     Class to allow us to use a Perl-like regex-comparison idiom
@@ -144,10 +157,23 @@ with open('Resource - InventoryPartListCollectionDefinition.txt', 'r') as df:
             # Create a `set` statement to remove all game stage requirements
             if need_set:
                 final_weight_text = '(({}))'.format('),('.join(','.join(['{}={}'.format(key, val) for (key, val) in part_dict.items()]) for part_dict in parts))
-                print('            set {classname} {propertyname} (bEnabled={enabled},WeightedParts={final_weight_text})'.format(
-                    classname=cur_partlist,
-                    propertyname=data_type,
-                    enabled=enabled,
-                    final_weight_text=final_weight_text,
-                    ))
+                if cur_partlist in need_hotfix:
+                    print('            {{hotfixes:part_early_game_fix_{}}}'.format(hotfix_count))
+
+                    # Also output our hotfix-generation code on stderr
+                    print("hfs.add_level_hotfix('part_early_game_fix_{idx}', 'PartEarlyGameFix', \",{classname},{propertyname}.WeightedParts,,{final_weight_text}\")".format(
+                        idx=hotfix_count,
+                        classname=cur_partlist,
+                        propertyname=data_type,
+                        final_weight_text=final_weight_text,
+                        ), file=sys.stderr)
+
+                    hotfix_count += 1
+                else:
+                    print('            set {classname} {propertyname} (bEnabled={enabled},WeightedParts={final_weight_text})'.format(
+                        classname=cur_partlist,
+                        propertyname=data_type,
+                        enabled=enabled,
+                        final_weight_text=final_weight_text,
+                        ))
                 print('')

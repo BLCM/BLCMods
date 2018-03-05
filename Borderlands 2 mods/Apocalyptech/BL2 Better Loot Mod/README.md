@@ -408,3 +408,6 @@ Changelog
    `set` commands
  * Fixed the "Shields" loot configuration on Digistruct Peak Dahl chests
 
+**v1.1.1**, (tbd):
+ * Fixed unlocking early-game elements for Maliwan Aquamarine Snipers on Windows
+
