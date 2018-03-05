@@ -69,115 +69,272 @@ class Hotfixes(object):
     Hotfixes we're interested in, for ease of use
     """
 
-    def __init__(self, include_gearbox_patches=False):
+    def __init__(self, include_gearbox_patches=False, game='bl2'):
         self.hotfixes = []
         self.hotfix_lookup = {}
         self.ids = {}
+
+        if game != 'bl2' and game != 'tps':
+            raise Exception('Valid `game` arguments are "bl2" and "tps"')
 
         # Add in all the default Gearbox-provided patches if we're told to.
         # This'll # allow us to not worry about polluting the master
         # generation file with this sort of cruft.
         if include_gearbox_patches:
-            self.add_level_hotfix('gearbox0', 'Gearbox',
-                ',GD_Balance.WeightingPlayerCount.BugmorphCocoon_PerPlayers_Phase1,ConditionalInitialization.ConditionalExpressionList[4].BaseValueIfTrue.BaseValueConstant,0.700000,.8')
-            self.add_level_hotfix('gearbox1', 'Gearbox',
-                ',GD_Balance.WeightingPlayerCount.BugmorphCocoon_PerPlayers_Phase2,ConditionalInitialization.ConditionalExpressionList[4].BaseValueIfTrue.BaseValueConstant,0.400000,.5')
-            self.add_level_hotfix('gearbox2', 'Gearbox',
-                ',GD_Balance.WeightingPlayerCount.BugmorphCocoon_PerPlayers_Phase3,ConditionalInitialization.ConditionalExpressionList[4].BaseValueIfTrue.BaseValueConstant,0.200000,.3')
-            self.add_level_hotfix('gearbox3', 'Gearbox',
-                ',GD_Balance.WeightingPlayerCount.BugmorphCocoon_PerPlayers_Phase4,ConditionalInitialization.ConditionalExpressionList[4].BaseValueIfTrue.BaseValueConstant,0.100000,.2')
-            self.add_level_hotfix('gearbox4', 'Gearbox',
-                ',GD_Balance.WeightingPlayerCount.BugmorphCocoon_PerPlayers_Phase5,ConditionalInitialization.ConditionalExpressionList[4].BaseValueIfTrue.BaseValueConstant,0.075000,.1')
-            self.add_demand_hotfix('gearbox5', 'Gearbox',
-                "GD_Siren_Streaming,GD_Siren_Skills.Misc.Init_BlightPhoenix_DamageCalc_Part2,ValueFormula.Level.InitializationDefinition,AttributeInitializationDefinition'GD_Balance_HealthAndDamage.HealthAndDamage.Init_PlayerMeleeDamage',AttributeInitializationDefinition'GD_Balance_HealthAndDamage.HealthAndDamage.Init_PlayerSkillDamage'")
-            self.add_demand_hotfix('gearbox6', 'Gearbox',
-                'GD_Siren_Streaming,GD_Siren_Skills.Misc.Init_BlightPhoenix_DamageCalc_Part2,ValueFormula.Level.BaseValueScaleConstant,1.000000,3.5')
-            self.add_demand_hotfix('gearbox7', 'Gearbox',
-                'GD_Assassin_Streaming,GD_Assassin_Skills.Misc.Att_DeathMark_BonusDamage,BaseValue.BaseValueConstant,0.200000,.8')
-            self.add_level_hotfix('gearbox8', 'Gearbox',
-                'SouthpawFactory_P,GD_Population_Marauder.Balance.Unique.PawnBalance_Assassin1,DefaultItemPoolList[3].PoolProbability.BaseValueScaleConstant,0.250000,1')
-            self.add_level_hotfix('gearbox9', 'Gearbox',
-                'SouthpawFactory_P,GD_Population_Nomad.Balance.Unique.PawnBalance_Assassin2,DefaultItemPoolList[4].PoolProbability.BaseValueScaleConstant,0.250000,1')
-            self.add_level_hotfix('gearbox10', 'Gearbox',
-                'SouthpawFactory_P,GD_Population_Psycho.Balance.Unique.PawnBalance_Assassin3,DefaultItemPoolList[1].PoolProbability.BaseValueScaleConstant,0.250000,1')
-            self.add_level_hotfix('gearbox11', 'Gearbox',
-                'SouthpawFactory_P,GD_Population_Rat.Balance.Unique.PawnBalance_Assassin4,DefaultItemPoolList[3].PoolProbability.BaseValueScaleConstant,0.250000,1')
-            self.add_reg_hotfix('gearbox12', 'Gearbox',
-                'GD_Itempools.Runnables.Pool_FourAssassins,BalancedItems[1].Probability.InitializationDefinition,None,GD_Balance.Weighting.Weight_1_Common')
-            self.add_level_hotfix('gearbox13', 'Gearbox',
-                ',GD_Sage_Rare_Scaylion.Population.PawnBalance_Sage_Rare_Scaylion,DefaultItemPoolList[1].PoolProbability.BaseValueScaleConstant,1.000000,100')
-            self.add_level_hotfix('gearbox14', 'Gearbox',
-                ',GD_Sage_Rare_Drifter.Balance.PawnBalance_Sage_Rare_Drifter,DefaultItemPoolList[0].PoolProbability.BaseValueScaleConstant,1.000000,100')
-            self.add_level_hotfix('gearbox15', 'Gearbox',
-                ',GD_Sage_Rare_Rhino.Population.PawnBalance_Sage_Rare_Rhino,DefaultItemPoolList[1].PoolProbability.BaseValueScaleConstant,1.000000,100')
-            self.add_level_hotfix('gearbox16', 'Gearbox',
-                ',GD_Sage_Rare_Skag.Population.PawnBalance_Sage_Rare_Skag,DefaultItemPoolList[1].PoolProbability.BaseValueScaleConstant,1.000000,100')
-            self.add_level_hotfix('gearbox17', 'Gearbox',
-                ',GD_Sage_Rare_Spore.Population.PawnBalance_Sage_Rare_Spore,DefaultItemPoolList[0].PoolProbability.BaseValueScaleConstant,1.000000,100')
-            self.add_reg_hotfix('gearbox18', 'Gearbox',
-                'GD_Shields.Projectiles.Proj_LegendaryBoosterShield:BehaviorProviderDefinition_1.Behavior_Explode_140,BehaviorSequences[0].BehaviorData2[7].Behavior.StatusEffectDamage.BaseValueAttribute,None,D_Attributes.Projectile.ProjectileDamage')
-            self.add_reg_hotfix('gearbox19', 'Gearbox',
-                'GD_Shields.Projectiles.Proj_LegendaryBoosterShield:BehaviorProviderDefinition_1.Behavior_Explode_140,BehaviorSequences[0].BehaviorData2[7].Behavior.StatusEffectDamage.BaseValueScaleConstant,1.000000,.25')
-            self.add_reg_hotfix('gearbox20', 'Gearbox',
-                'GD_Shields.Projectiles.Proj_LegendaryBoosterShield:BehaviorProviderDefinition_1.Behavior_Explode_140,BehaviorSequences[0].BehaviorData2[7].Behavior.StatusEffectChance.BaseValueConstant,1.000000,20')
-            self.add_demand_hotfix('gearbox21', 'Gearbox',
-                'GD_Assassin_Streaming,GD_Assassin_Skills.Sniping.Velocity,SkillEffectDefinitions[0].ModifierType,MT_PostAdd,MT_Scale')
-            self.add_demand_hotfix('gearbox22', 'Gearbox',
-                """GD_Tulip_Mechro_Streaming,GD_Tulip_Mechromancer_Skills.LittleBigTrouble.WiresDontTalk,SkillEffectDefinitions,,
-                (
+            if game == 'bl2':
+                self.add_level_hotfix('gearbox0', 'Gearbox',
+                    ',GD_Balance.WeightingPlayerCount.BugmorphCocoon_PerPlayers_Phase1,ConditionalInitialization.ConditionalExpressionList[4].BaseValueIfTrue.BaseValueConstant,0.700000,.8')
+                self.add_level_hotfix('gearbox1', 'Gearbox',
+                    ',GD_Balance.WeightingPlayerCount.BugmorphCocoon_PerPlayers_Phase2,ConditionalInitialization.ConditionalExpressionList[4].BaseValueIfTrue.BaseValueConstant,0.400000,.5')
+                self.add_level_hotfix('gearbox2', 'Gearbox',
+                    ',GD_Balance.WeightingPlayerCount.BugmorphCocoon_PerPlayers_Phase3,ConditionalInitialization.ConditionalExpressionList[4].BaseValueIfTrue.BaseValueConstant,0.200000,.3')
+                self.add_level_hotfix('gearbox3', 'Gearbox',
+                    ',GD_Balance.WeightingPlayerCount.BugmorphCocoon_PerPlayers_Phase4,ConditionalInitialization.ConditionalExpressionList[4].BaseValueIfTrue.BaseValueConstant,0.100000,.2')
+                self.add_level_hotfix('gearbox4', 'Gearbox',
+                    ',GD_Balance.WeightingPlayerCount.BugmorphCocoon_PerPlayers_Phase5,ConditionalInitialization.ConditionalExpressionList[4].BaseValueIfTrue.BaseValueConstant,0.075000,.1')
+                self.add_demand_hotfix('gearbox5', 'Gearbox',
+                    "GD_Siren_Streaming,GD_Siren_Skills.Misc.Init_BlightPhoenix_DamageCalc_Part2,ValueFormula.Level.InitializationDefinition,AttributeInitializationDefinition'GD_Balance_HealthAndDamage.HealthAndDamage.Init_PlayerMeleeDamage',AttributeInitializationDefinition'GD_Balance_HealthAndDamage.HealthAndDamage.Init_PlayerSkillDamage'")
+                self.add_demand_hotfix('gearbox6', 'Gearbox',
+                    'GD_Siren_Streaming,GD_Siren_Skills.Misc.Init_BlightPhoenix_DamageCalc_Part2,ValueFormula.Level.BaseValueScaleConstant,1.000000,3.5')
+                self.add_demand_hotfix('gearbox7', 'Gearbox',
+                    'GD_Assassin_Streaming,GD_Assassin_Skills.Misc.Att_DeathMark_BonusDamage,BaseValue.BaseValueConstant,0.200000,.8')
+                self.add_level_hotfix('gearbox8', 'Gearbox',
+                    'SouthpawFactory_P,GD_Population_Marauder.Balance.Unique.PawnBalance_Assassin1,DefaultItemPoolList[3].PoolProbability.BaseValueScaleConstant,0.250000,1')
+                self.add_level_hotfix('gearbox9', 'Gearbox',
+                    'SouthpawFactory_P,GD_Population_Nomad.Balance.Unique.PawnBalance_Assassin2,DefaultItemPoolList[4].PoolProbability.BaseValueScaleConstant,0.250000,1')
+                self.add_level_hotfix('gearbox10', 'Gearbox',
+                    'SouthpawFactory_P,GD_Population_Psycho.Balance.Unique.PawnBalance_Assassin3,DefaultItemPoolList[1].PoolProbability.BaseValueScaleConstant,0.250000,1')
+                self.add_level_hotfix('gearbox11', 'Gearbox',
+                    'SouthpawFactory_P,GD_Population_Rat.Balance.Unique.PawnBalance_Assassin4,DefaultItemPoolList[3].PoolProbability.BaseValueScaleConstant,0.250000,1')
+                self.add_reg_hotfix('gearbox12', 'Gearbox',
+                    'GD_Itempools.Runnables.Pool_FourAssassins,BalancedItems[1].Probability.InitializationDefinition,None,GD_Balance.Weighting.Weight_1_Common')
+                self.add_level_hotfix('gearbox13', 'Gearbox',
+                    ',GD_Sage_Rare_Scaylion.Population.PawnBalance_Sage_Rare_Scaylion,DefaultItemPoolList[1].PoolProbability.BaseValueScaleConstant,1.000000,100')
+                self.add_level_hotfix('gearbox14', 'Gearbox',
+                    ',GD_Sage_Rare_Drifter.Balance.PawnBalance_Sage_Rare_Drifter,DefaultItemPoolList[0].PoolProbability.BaseValueScaleConstant,1.000000,100')
+                self.add_level_hotfix('gearbox15', 'Gearbox',
+                    ',GD_Sage_Rare_Rhino.Population.PawnBalance_Sage_Rare_Rhino,DefaultItemPoolList[1].PoolProbability.BaseValueScaleConstant,1.000000,100')
+                self.add_level_hotfix('gearbox16', 'Gearbox',
+                    ',GD_Sage_Rare_Skag.Population.PawnBalance_Sage_Rare_Skag,DefaultItemPoolList[1].PoolProbability.BaseValueScaleConstant,1.000000,100')
+                self.add_level_hotfix('gearbox17', 'Gearbox',
+                    ',GD_Sage_Rare_Spore.Population.PawnBalance_Sage_Rare_Spore,DefaultItemPoolList[0].PoolProbability.BaseValueScaleConstant,1.000000,100')
+                self.add_reg_hotfix('gearbox18', 'Gearbox',
+                    'GD_Shields.Projectiles.Proj_LegendaryBoosterShield:BehaviorProviderDefinition_1.Behavior_Explode_140,BehaviorSequences[0].BehaviorData2[7].Behavior.StatusEffectDamage.BaseValueAttribute,None,D_Attributes.Projectile.ProjectileDamage')
+                self.add_reg_hotfix('gearbox19', 'Gearbox',
+                    'GD_Shields.Projectiles.Proj_LegendaryBoosterShield:BehaviorProviderDefinition_1.Behavior_Explode_140,BehaviorSequences[0].BehaviorData2[7].Behavior.StatusEffectDamage.BaseValueScaleConstant,1.000000,.25')
+                self.add_reg_hotfix('gearbox20', 'Gearbox',
+                    'GD_Shields.Projectiles.Proj_LegendaryBoosterShield:BehaviorProviderDefinition_1.Behavior_Explode_140,BehaviorSequences[0].BehaviorData2[7].Behavior.StatusEffectChance.BaseValueConstant,1.000000,20')
+                self.add_demand_hotfix('gearbox21', 'Gearbox',
+                    'GD_Assassin_Streaming,GD_Assassin_Skills.Sniping.Velocity,SkillEffectDefinitions[0].ModifierType,MT_PostAdd,MT_Scale')
+                self.add_demand_hotfix('gearbox22', 'Gearbox',
+                    """GD_Tulip_Mechro_Streaming,GD_Tulip_Mechromancer_Skills.LittleBigTrouble.WiresDontTalk,SkillEffectDefinitions,,
                     (
-                        AttributeToModify=D_Attributes.DamageTypeModifers.InstigatedShockDamageModifier,
-                        bIncludeDuelingTargets=False,
-                        bIncludeSelfAsTarget=False,
-                        bOnlyEffectTargetsInRange=False,
-                        bExcludeNonPlayerCharacters=False,
-                        EffectTarget=TARGET_Self,
-                        TargetInstanceDataName=,
-                        TargetCriteria=CRITERIA_None,
-                        ModifierType=MT_Scale,
-                        BaseModifierValue=(
-                            BaseValueConstant=0.030000,
-                            BaseValueAttribute=None,
-                            InitializationDefinition=None,
-                            BaseValueScaleConstant=1.000000
+                        (
+                            AttributeToModify=D_Attributes.DamageTypeModifers.InstigatedShockDamageModifier,
+                            bIncludeDuelingTargets=False,
+                            bIncludeSelfAsTarget=False,
+                            bOnlyEffectTargetsInRange=False,
+                            bExcludeNonPlayerCharacters=False,
+                            EffectTarget=TARGET_Self,
+                            TargetInstanceDataName=,
+                            TargetCriteria=CRITERIA_None,
+                            ModifierType=MT_Scale,
+                            BaseModifierValue=(
+                                BaseValueConstant=0.030000,
+                                BaseValueAttribute=None,
+                                InitializationDefinition=None,
+                                BaseValueScaleConstant=1.000000
+                            ),
+                            GradeToStartApplyingEffect=1,
+                            PerGradeUpgradeInterval=1,
+                            PerGradeUpgrade=(
+                                BaseValueConstant=0.030000,
+                                BaseValueAttribute=None,
+                                InitializationDefinition=None,
+                                BaseValueScaleConstant=1.000000
+                            ),
+                            BonusUpgradeList=
                         ),
-                        GradeToStartApplyingEffect=1,
-                        PerGradeUpgradeInterval=1,
-                        PerGradeUpgrade=(
-                            BaseValueConstant=0.030000,
-                            BaseValueAttribute=None,
-                            InitializationDefinition=None,
-                            BaseValueScaleConstant=1.000000
-                        ),
-                        BonusUpgradeList=
-                    ),
+                        (
+                            AttributeToModify=D_Attributes.DamageTypeModifers.InstigatedShockStatusDamageModifier,
+                            bIncludeDuelingTargets=False,
+                            bIncludeSelfAsTarget=False,
+                            bOnlyEffectTargetsInRange=False,
+                            bExcludeNonPlayerCharacters=False,
+                            EffectTarget=TARGET_Self,
+                            TargetInstanceDataName=,
+                            TargetCriteria=CRITERIA_None,
+                            ModifierType=MT_Scale,
+                            BaseModifierValue=(
+                                BaseValueConstant=0.030000,
+                                BaseValueAttribute=None,
+                                InitializationDefinition=None,
+                                BaseValueScaleConstant=1.000000
+                            ),
+                            GradeToStartApplyingEffect=1,
+                            PerGradeUpgradeInterval=1,
+                            PerGradeUpgrade=(
+                                BaseValueConstant=0.030000,
+                                BaseValueAttribute=None,
+                                InitializationDefinition=None,
+                                BaseValueScaleConstant=1.000000
+                            ),
+                            BonusUpgradeList=
+                        )
+                    )""")
+
+            else:
+                self.add_demand_hotfix('gearbox0', 'Gearbox',
+                    """GD_Gladiator_Streaming,
+                    GD_Gladiator_Skills.Projectiles.ShieldProjectile:BehaviorProviderDefinition_0,
+                    BehaviorSequences[0].BehaviorData2[26].LinkedVariables.ArrayIndexAndLength,
+                    2686977,0""")
+                self.add_demand_hotfix('gearbox1', 'Gearbox',
+                    """GD_Gladiator_Streaming,
+                    GD_Gladiator_Skills.Projectiles.ShieldProjectile:BehaviorProviderDefinition_0,
+                    BehaviorSequences[0].BehaviorData2[49].LinkedVariables.ArrayIndexAndLength,
+                    8323073,0""")
+                self.add_demand_hotfix('gearbox2', 'Gearbox',
+                    """GD_Gladiator_Streaming,
+                    GD_Gladiator_Skills.Projectiles.ShieldProjectile:BehaviorProviderDefinition_0.OzBehavior_ActorList_1,
+                    BehaviorSequences[0].BehaviorData2[32].Behavior.SearchRadius,
+                    500.000000,2048""")
+                self.add_level_hotfix('gearbox3', 'Gearbox',
+                    """Outlands_P,
+                    Outlands_SideMissions.TheWorld:PersistentLevel.Main_Sequence.WillowSeqEvent_MissionRemoteEvent_0,
+                    OutputLinks[0].Links[0].LinkedOp,GearboxSeqAct_TriggerDialogName'Outlands_SideMissions.TheWorld:PersistentLevel.Main_Sequence.GearboxSeqAct_TriggerDialogName_48',
+                    Outlands_SideMissions.TheWorld:PersistentLevel.Main_Sequence.WillowSeqAct_MissionCustomEvent_14""")
+                self.add_level_hotfix('gearbox4', 'Gearbox',
+                    """Outlands_P,
+                    Outlands_SideMissions.TheWorld:PersistentLevel.Main_Sequence.WillowSeqAct_MissionCustomEvent_14,OutputLinks[0].Links,,
+                    ((LinkedOp=GearboxSeqAct_TriggerDialogName'Outlands_SideMissions.TheWorld:PersistentLevel.Main_Sequence.GearboxSeqAct_TriggerDialogName_48',
+                    InputLinkIdx=0))""")
+                self.add_level_hotfix('gearbox5', 'Gearbox',
+                    """Outlands_P,
+                    Outlands_SideMissions.TheWorld:PersistentLevel.Main_Sequence.GearboxSeqAct_TriggerDialogName_49,
+                    OutputLinks[0].Links,,()""")
+                self.add_level_hotfix('gearbox6', 'Gearbox',
+                    """Outlands_P,
+                    Outlands_SideMissions.TheWorld:PersistentLevel.WillowPopulationEncounter_0,Waves[2].MemberOpportunities,,
                     (
-                        AttributeToModify=D_Attributes.DamageTypeModifers.InstigatedShockStatusDamageModifier,
-                        bIncludeDuelingTargets=False,
-                        bIncludeSelfAsTarget=False,
-                        bOnlyEffectTargetsInRange=False,
-                        bExcludeNonPlayerCharacters=False,
-                        EffectTarget=TARGET_Self,
-                        TargetInstanceDataName=,
-                        TargetCriteria=CRITERIA_None,
-                        ModifierType=MT_Scale,
-                        BaseModifierValue=(
-                            BaseValueConstant=0.030000,
+                        PopulationOpportunityDen'Outlands_SideMissions.TheWorld:PersistentLevel.PopulationOpportunityDen_2',
+                        PopulationOpportunityDen'Outlands_SideMissions.TheWorld:PersistentLevel.PopulationOpportunityDen_8',
+                        None
+                    )""")
+                self.add_reg_hotfix('gearbox7', 'Gearbox',
+                    """GD_Ma_Chapter03.M_Ma_Chapter03:ObjSet_Pt0_06_ReopenDataStream,ObjectiveSet.ObjectiveDefinitions,,
+                    (
+                        GD_Ma_Chapter03.M_Ma_Chapter03:Pt0_06_ReopenDataStream,
+                        GD_Ma_Chapter03.M_Ma_Chapter03:Pt0_04_GetToDataStream,
+                        GD_Ma_Chapter03.M_Ma_Chapter03:RetrieveHSource
+                    )""")
+                self.add_reg_hotfix('gearbox8', 'Gearbox',
+                    'Weap_Pistol.GestaltDef_Pistol_GestaltSkeletalMesh:SkeletalMeshSocket_260,RelativeLocation,,(X=-0.05,Y=55.0,Z=13.7)')
+                self.add_reg_hotfix('gearbox9', 'Gearbox',
+                    'Weap_Pistol.GestaltDef_Pistol_GestaltSkeletalMesh:SkeletalMeshSocket_268,RelativeLocation,,(X=0.02,Y=36.0,Z=15.45)')
+                self.add_reg_hotfix('gearbox10', 'Gearbox',
+                    'Weap_Pistol.GestaltDef_Pistol_GestaltSkeletalMesh:SkeletalMeshSocket_270,RelativeLocation.Z,,14.2')
+                self.add_reg_hotfix('gearbox11', 'Gearbox',
+                    """GD_Shields.Projectiles.Proj_LegendaryBoosterShield:BehaviorProviderDefinition_1.Behavior_Explode_140,
+                    BehaviorSequences[0].BehaviorData2[7].Behavior.StatusEffectDamage.BaseValueAttribute,
+                    None,
+                    D_Attributes.Projectile.ProjectileDamage""")
+                self.add_reg_hotfix('gearbox12', 'Gearbox',
+                    """GD_Shields.Projectiles.Proj_LegendaryBoosterShield:BehaviorProviderDefinition_1.Behavior_Explode_140,
+                    BehaviorSequences[0].BehaviorData2[7].Behavior.StatusEffectDamage.BaseValueScaleConstant,
+                    1.000000,
+                    .25""")
+                self.add_reg_hotfix('gearbox13', 'Gearbox',
+                    """GD_Shields.Projectiles.Proj_LegendaryBoosterShield:BehaviorProviderDefinition_1.Behavior_Explode_140,
+                    BehaviorSequences[0].BehaviorData2[7].Behavior.StatusEffectChance.BaseValueConstant,
+                    1.000000,
+                    20""")
+                self.add_reg_hotfix('gearbox14', 'Gearbox',
+                    """GD_Itempools.WeaponPools.Pool_Weapons_SniperRifles_04_Rare,
+                    BalancedItems,,
+                    +(
+                        ItmPoolDefinition=None,
+                        InvBalanceDefinition=GD_Cork_Weap_SniperRifles.A_Weapons_Unique.Sniper_Vladof_3_TheMachine,
+                        Probability=(
+                            BaseValueConstant=0,
                             BaseValueAttribute=None,
+                            InitializationDefinition=GD_Balance.Weighting.Weight_2_Uncommon,
+                            BaseValueScaleConstant=1
+                        ),
+                        bDropOnDeath=True
+                    )""")
+                self.add_reg_hotfix('gearbox15', 'Gearbox',
+                    """GD_Itempools.WeaponPools.Pool_Weapons_AssaultRifles_04_Rare,
+                    BalancedItems,,
+                    +(
+                        ItmPoolDefinition=None,
+                        InvBalanceDefinition=gd_cork_weap_assaultrifle.A_Weapons_Unique.AR_Vladof_3_OldPainful,
+                        Probability=(
+                            BaseValueConstant=0,
+                            BaseValueAttribute=None,
+                            InitializationDefinition=GD_Balance.Weighting.Weight_2_Uncommon,
+                            BaseValueScaleConstant=1
+                        ),
+                        bDropOnDeath=True
+                    )""")
+                self.add_reg_hotfix('gearbox16', 'Gearbox',
+                    """GD_Itempools.WeaponPools.Pool_Weapons_Shotguns_04_Rare,
+                    BalancedItems,,
+                    +(
+                        ItmPoolDefinition=None,
+                        InvBalanceDefinition=GD_Cork_Weap_Shotgun.A_Weapons_Unique.SG_Jakobs_Boomacorn,
+                        Probability=(
+                            BaseValueConstant=0,
+                            BaseValueAttribute=None,
+                            InitializationDefinition=GD_Balance.Weighting.Weight_2_Uncommon,
+                            BaseValueScaleConstant=1
+                        ),
+                        bDropOnDeath=True
+                    )""")
+                self.add_reg_hotfix('gearbox17', 'Gearbox',
+                    """GD_Itempools.WeaponPools.Pool_Weapons_Shotguns_04_Rare,
+                    BalancedItems,,
+                    +(
+                        ItmPoolDefinition=None,
+                        InvBalanceDefinition=GD_Cork_Weap_Shotgun.A_Weapons_Unique.SG_Torgue_3_JackOCannon,
+                        Probability=(
+                            BaseValueConstant=0,
+                            BaseValueAttribute=None,
+                            InitializationDefinition=GD_Balance.Weighting.Weight_2_Uncommon,
+                            BaseValueScaleConstant=1
+                        ),
+                        bDropOnDeath=True
+                    )""")
+                self.add_level_hotfix('gearbox18', 'Gearbox',
+                    """,GD_Population_Scavengers.Balance.Outlaws.PawnBalance_ScavWastelandWalker,
+                    PlayThroughs[0].CustomItemPoolList,,
+                    +(
+                        ItemPool=GD_Itempools.Runnables.Pool_ScavBadassSpacemanMidget,
+                        PoolProbability=(
+                            BaseValueConstant=1.000000,
+                            BaseValueAttribute=GD_Itempools.DropWeights.DropODDS_BossUniqueRares,
                             InitializationDefinition=None,
                             BaseValueScaleConstant=1.000000
-                        ),
-                        GradeToStartApplyingEffect=1,
-                        PerGradeUpgradeInterval=1,
-                        PerGradeUpgrade=(
-                            BaseValueConstant=0.030000,
-                            BaseValueAttribute=None,
+                        )
+                    )""")
+                self.add_level_hotfix('gearbox19', 'Gearbox',
+                    """,GD_Population_Scavengers.Balance.Outlaws.PawnBalance_ScavWastelandWalker,
+                    PlayThroughs[1].CustomItemPoolList,,
+                    +(
+                        ItemPool=GD_Itempools.Runnables.Pool_ScavBadassSpacemanMidget,
+                        PoolProbability=(
+                            BaseValueConstant=1.000000,
+                            BaseValueAttribute=GD_Itempools.DropWeights.DropODDS_BossUniqueRares,
                             InitializationDefinition=None,
                             BaseValueScaleConstant=1.000000
-                        ),
-                        BonusUpgradeList=
-                    )
-                )""")
+                        )
+                    )""")
+                self.add_level_hotfix('gearbox20', 'Gearbox',
+                    """Laser_P,
+                    GD_Challenges.Co_LevelChallenges.EyeOfHelios_TreadCarefully,
+                    ChallengeType,
+                    ECT_DesignerTriggered,
+                    ECT_LevelObject""")
 
         self.num_gearbox_patches = len(self.hotfixes)
 
