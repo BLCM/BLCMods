@@ -292,21 +292,541 @@ loot_drop_chance_4p_alt = '0.100000'    # Stock: 0.050000
 # Force Pool_GunsAndGear to always drop the specified pool, if `force_gunsandgear_drop`
 # is True.  Useful for testing out how individual pools are behaving.
 force_gunsandgear_drop = False
-force_gunsandgear_drop_type = 'GD_Itempools.ShieldPools.Pool_Shields_All_06_Legendary'
+force_gunsandgear_drop_type = 'GD_Itempools.WeaponPools.Pool_Weapons_All_06_Legendary'
 
 # Force Pool_GunsAndGear to always drop the specified item, if
 # `force_gunsandgear_specific` is True.  Useful for seeing what exactly an
 # item is.  `force_gunsandgear_specific` will override `force_gunsandgear_drop`,
 # if both are set to True.
 force_gunsandgear_specific = False
-#force_gunsandgear_specific_classtype = 'WeaponBalanceDefinition'
-force_gunsandgear_specific_classtype = 'InventoryBalanceDefinition'
-force_gunsandgear_specific_name = 'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Spike_Acid_05_Legendary'
+force_gunsandgear_specific_classtype = 'WeaponBalanceDefinition'
+#force_gunsandgear_specific_classtype = 'InventoryBalanceDefinition'
+force_gunsandgear_specific_names = [
+    'GD_Petunia_Weapons.Pistols.Pistol_Hyperion_3_T4sr',
+    'GD_Petunia_Weapons.Snipers.Sniper_Jakobs_3_Plunkett',
+    ]
 
 ###
 ### Hotfixes; these are handled a little differently than everything
 ### else.
 ###
+
+# Guaranteed Luneshine for Unique/Legendary weapons.  This is generated
+# automatically by `gen_guaranteed_luneshine.py`.  Note that removing the
+# "None" Luneshine attachment entirely would result in vanilla guns being
+# removed from inventory, if loaded with this mod active, but we're okay
+# if we just set `bDisabled` to `True`.
+hfs.add_level_hotfix('guaranteed_luneshine_0',
+    'GuaranteedLuneshine',
+    ',gd_cork_weap_assaultrifle.A_Weapons_Legendary.AR_Dahl_5_MajorTom:WeaponPartListCollectionDefinition_23,Accessory2PartData.WeightedParts[0].bDisabled,,True')
+hfs.add_level_hotfix('guaranteed_luneshine_1',
+    'GuaranteedLuneshine',
+    ',gd_cork_weap_assaultrifle.A_Weapons_Legendary.AR_Jakobs_5_HammerBreaker:WeaponPartListCollectionDefinition_27,Accessory2PartData.WeightedParts[0].bDisabled,,True')
+hfs.add_level_hotfix('guaranteed_luneshine_2',
+    'GuaranteedLuneshine',
+    ',gd_cork_weap_assaultrifle.A_Weapons_Legendary.AR_Torgue_5_KerBoom:WeaponPartListCollectionDefinition_31,Accessory2PartData.WeightedParts[0].bDisabled,,True')
+hfs.add_level_hotfix('guaranteed_luneshine_3',
+    'GuaranteedLuneshine',
+    ',gd_cork_weap_assaultrifle.A_Weapons_Legendary.AR_Vladof_5_Shredifier:WeaponPartListCollectionDefinition_35,Accessory2PartData.WeightedParts[0].bDisabled,,True')
+hfs.add_level_hotfix('guaranteed_luneshine_4',
+    'GuaranteedLuneshine',
+    ',gd_cork_weap_assaultrifle.A_Weapons_Unique.AR_Jakobs_3_Wallop:WeaponPartListCollectionDefinition_36,Accessory2PartData.WeightedParts[0].bDisabled,,True')
+hfs.add_level_hotfix('guaranteed_luneshine_5',
+    'GuaranteedLuneshine',
+    ',gd_cork_weap_assaultrifle.A_Weapons_Unique.AR_Vladof_3_Hail:WeaponPartListCollectionDefinition_37,Accessory2PartData.WeightedParts[0].bDisabled,,True')
+hfs.add_level_hotfix('guaranteed_luneshine_6',
+    'GuaranteedLuneshine',
+    ',gd_cork_weap_assaultrifle.A_Weapons_Unique.AR_Vladof_3_IceScream:WeaponPartListCollectionDefinition_38,Accessory2PartData.WeightedParts[0].bDisabled,,True')
+hfs.add_level_hotfix('guaranteed_luneshine_7',
+    'GuaranteedLuneshine',
+    ',gd_cork_weap_assaultrifle.A_Weapons_Unique.AR_Vladof_3_OldPainful:WeaponPartListCollectionDefinition_39,Accessory2PartData.WeightedParts[0].bDisabled,,True')
+hfs.add_level_hotfix('guaranteed_luneshine_8',
+    'GuaranteedLuneshine',
+    ',GD_Cork_Weap_Lasers.A_Weapons_Legendary.Laser_Dahl_5_Ricochet:WeaponPartListCollectionDefinition_52,Accessory2PartData.WeightedParts[0].bDisabled,,True')
+hfs.add_level_hotfix('guaranteed_luneshine_9',
+    'GuaranteedLuneshine',
+    ',GD_Cork_Weap_Lasers.A_Weapons_Legendary.Laser_Old_Hyperion_5_Excalibastard:WeaponPartListCollectionDefinition_53,Accessory2PartData.WeightedParts[0].bDisabled,,True')
+hfs.add_level_hotfix('guaranteed_luneshine_10',
+    'GuaranteedLuneshine',
+    ',GD_Cork_Weap_Lasers.A_Weapons_Legendary.Laser_Tediore_5_Tesla:WeaponPartListCollectionDefinition_54,Accessory2PartData.WeightedParts[0].bDisabled,,True')
+hfs.add_level_hotfix('guaranteed_luneshine_11',
+    'GuaranteedLuneshine',
+    ',GD_Cork_Weap_Lasers.A_Weapons_Unique.Laser_Dahl_3_Firestarta:WeaponPartListCollectionDefinition_56,Accessory2PartData.WeightedParts[0].bDisabled,,True')
+hfs.add_level_hotfix('guaranteed_luneshine_12',
+    'GuaranteedLuneshine',
+    ',GD_Cork_Weap_Lasers.A_Weapons_Unique.Laser_Hyperion_3_Mining:WeaponPartListCollectionDefinition_57,Accessory2PartData.WeightedParts[0].bDisabled,,True')
+hfs.add_level_hotfix('guaranteed_luneshine_13',
+    'GuaranteedLuneshine',
+    ',GD_Cork_Weap_Lasers.A_Weapons_Unique.Laser_Maliwan_3_Blizzard:WeaponPartListCollectionDefinition_58,Accessory2PartData.WeightedParts[0].bDisabled,,True')
+hfs.add_level_hotfix('guaranteed_luneshine_14',
+    'GuaranteedLuneshine',
+    ',GD_Cork_Weap_Lasers.A_Weapons_Unique.Laser_Maliwan_3_VibraPulse:WeaponPartListCollectionDefinition_59,Accessory2PartData.WeightedParts[0].bDisabled,,True')
+hfs.add_level_hotfix('guaranteed_luneshine_15',
+    'GuaranteedLuneshine',
+    ',GD_Cork_Weap_Lasers.A_Weapons_Unique.Laser_Maliwan_4_Egun:WeaponPartListCollectionDefinition_8,Accessory2PartData.WeightedParts[0].bDisabled,,True')
+hfs.add_level_hotfix('guaranteed_luneshine_16',
+    'GuaranteedLuneshine',
+    ',GD_Cork_Weap_Lasers.A_Weapons_Unique.Laser_Maliwan_4_Rosie:WeaponPartListCollectionDefinition_60,Accessory2PartData.WeightedParts[0].bDisabled,,True')
+hfs.add_level_hotfix('guaranteed_luneshine_17',
+    'GuaranteedLuneshine',
+    ',GD_Cork_Weap_Lasers.A_Weapons_Unique.Laser_Maliwan_4_SavorySideSaber:WeaponPartListCollectionDefinition_61,Accessory2PartData.WeightedParts[0].bDisabled,,True')
+hfs.add_level_hotfix('guaranteed_luneshine_18',
+    'GuaranteedLuneshine',
+    ',GD_Cork_Weap_Lasers.A_Weapons_Unique.Laser_Tediore_3_Vandergraffen:WeaponPartListCollectionDefinition_62,Accessory2PartData.WeightedParts[0].bDisabled,,True')
+hfs.add_level_hotfix('guaranteed_luneshine_19',
+    'GuaranteedLuneshine',
+    ',GD_Cork_Weap_Launchers.A_Weapons_Legendary.RL_Bandit_5_BadaBoom:WeaponPartListCollectionDefinition_66,Accessory2PartData.WeightedParts[0].bDisabled,,True')
+hfs.add_level_hotfix('guaranteed_luneshine_20',
+    'GuaranteedLuneshine',
+    ',GD_Cork_Weap_Launchers.A_Weapons_Legendary.RL_Bandit_5_Thingy:WeaponPartListCollectionDefinition_67,Accessory2PartData.WeightedParts[0].bDisabled,,True')
+hfs.add_level_hotfix('guaranteed_luneshine_21',
+    'GuaranteedLuneshine',
+    ',GD_Cork_Weap_Launchers.A_Weapons_Legendary.RL_Maliwan_5_Cryophobia:WeaponPartListCollectionDefinition_71,Accessory2PartData.WeightedParts[0].bDisabled,,True')
+hfs.add_level_hotfix('guaranteed_luneshine_22',
+    'GuaranteedLuneshine',
+    ',GD_Cork_Weap_Launchers.A_Weapons_Legendary.RL_Torgue_5_Nukem:WeaponPartListCollectionDefinition_75,Accessory2PartData.WeightedParts[0].bDisabled,,True')
+hfs.add_level_hotfix('guaranteed_luneshine_23',
+    'GuaranteedLuneshine',
+    ',GD_Cork_Weap_Launchers.A_Weapons_Legendary.RL_Vladof_5_Mongol:WeaponPartListCollectionDefinition_79,Accessory2PartData.WeightedParts[0].bDisabled,,True')
+hfs.add_level_hotfix('guaranteed_luneshine_24',
+    'GuaranteedLuneshine',
+    ',GD_Cork_Weap_Launchers.A_Weapons_Unique.RL_Tediore_3_Rocketeer:WeaponPartListCollectionDefinition_81,Accessory2PartData.WeightedParts[0].bDisabled,,True')
+hfs.add_level_hotfix('guaranteed_luneshine_25',
+    'GuaranteedLuneshine',
+    ',GD_Cork_Weap_Launchers.A_Weapons_Unique.RL_Torgue_3_Creamer:WeaponPartListCollectionDefinition_82,Accessory2PartData.WeightedParts[0].bDisabled,,True')
+hfs.add_level_hotfix('guaranteed_luneshine_26',
+    'GuaranteedLuneshine',
+    ',GD_Cork_Weap_Pistol.A_Weapons_Legendary.Pistol_Bandit_5_Zim:WeaponPartListCollectionDefinition_86,Accessory2PartData.WeightedParts[0].bDisabled,,True')
+hfs.add_level_hotfix('guaranteed_luneshine_27',
+    'GuaranteedLuneshine',
+    ',GD_Cork_Weap_Pistol.A_Weapons_Legendary.Pistol_Dahl_5_Blowfly:WeaponPartListCollectionDefinition_90,Accessory2PartData.WeightedParts[0].bDisabled,,True')
+hfs.add_level_hotfix('guaranteed_luneshine_28',
+    'GuaranteedLuneshine',
+    ',GD_Cork_Weap_Pistol.A_Weapons_Legendary.Pistol_Jakobs_5_Maggie:WeaponPartListCollectionDefinition_94,Accessory2PartData.WeightedParts[0].bDisabled,,True')
+hfs.add_level_hotfix('guaranteed_luneshine_29',
+    'GuaranteedLuneshine',
+    ',GD_Cork_Weap_Pistol.A_Weapons_Legendary.Pistol_Tediore_5_Shooterang:WeaponPartListCollectionDefinition_98,Accessory2PartData.WeightedParts[0].bDisabled,,True')
+hfs.add_level_hotfix('guaranteed_luneshine_30',
+    'GuaranteedLuneshine',
+    ',GD_Cork_Weap_Pistol.A_Weapons_Legendary.Pistol_Torgue_5_88Fragnum:WeaponPartListCollectionDefinition_102,Accessory2PartData.WeightedParts[0].bDisabled,,True')
+hfs.add_level_hotfix('guaranteed_luneshine_31',
+    'GuaranteedLuneshine',
+    ',GD_Cork_Weap_Pistol.A_Weapons_Unique.Pistol_Dahl_3_GwensOtherHead:WeaponPartListCollectionDefinition_103,Accessory2PartData.WeightedParts[0].bDisabled,,True')
+hfs.add_level_hotfix('guaranteed_luneshine_32',
+    'GuaranteedLuneshine',
+    ',GD_Cork_Weap_Pistol.A_Weapons_Unique.Pistol_Hyperion_3_Fibber:WeaponPartListCollectionDefinition_106,Accessory2PartData.WeightedParts[0].bDisabled,,True')
+hfs.add_level_hotfix('guaranteed_luneshine_33',
+    'GuaranteedLuneshine',
+    ',GD_Cork_Weap_Pistol.A_Weapons_Unique.Pistol_Hyperion_3_Globber:WeaponPartListCollectionDefinition_107,Accessory2PartData.WeightedParts[0].bDisabled,,True')
+hfs.add_level_hotfix('guaranteed_luneshine_34',
+    'GuaranteedLuneshine',
+    ',GD_Cork_Weap_Pistol.A_Weapons_Unique.Pistol_Hyperion_3_LadyFist:WeaponPartListCollectionDefinition_108,Accessory2PartData.WeightedParts[0].bDisabled,,True')
+hfs.add_level_hotfix('guaranteed_luneshine_35',
+    'GuaranteedLuneshine',
+    ',GD_Cork_Weap_Pistol.A_Weapons_Unique.Pistol_Jakobs_3_Smasher:WeaponPartListCollectionDefinition_109,Accessory2PartData.WeightedParts[0].bDisabled,,True')
+hfs.add_level_hotfix('guaranteed_luneshine_36',
+    'GuaranteedLuneshine',
+    ',GD_Cork_Weap_Pistol.A_Weapons_Unique.Pistol_Maliwan_3_Moxxis_Probe:WeaponPartListCollectionDefinition_11,Accessory2PartData.WeightedParts[0].bDisabled,,True')
+hfs.add_level_hotfix('guaranteed_luneshine_37',
+    'GuaranteedLuneshine',
+    ',GD_Cork_Weap_SMG.A_Weapons_Legendary.SMG_Dahl_5_Torrent:WeaponPartListCollectionDefinition_141,Accessory2PartData.WeightedParts[0].bDisabled,,True')
+hfs.add_level_hotfix('guaranteed_luneshine_38',
+    'GuaranteedLuneshine',
+    ',GD_Cork_Weap_SMG.A_Weapons_Legendary.SMG_Hyperion_5_Bitch:WeaponPartListCollectionDefinition_145,Accessory2PartData.WeightedParts[0].bDisabled,,True')
+hfs.add_level_hotfix('guaranteed_luneshine_39',
+    'GuaranteedLuneshine',
+    ',GD_Cork_Weap_SMG.A_Weapons_Legendary.SMG_Maliwan_5_HellFire:WeaponPartListCollectionDefinition_149,Accessory2PartData.WeightedParts[0].bDisabled,,True')
+hfs.add_level_hotfix('guaranteed_luneshine_40',
+    'GuaranteedLuneshine',
+    ',GD_Cork_Weap_SMG.A_Weapons_Legendary.SMG_Tediore_5_IVF:WeaponPartListCollectionDefinition_153,Accessory2PartData.WeightedParts[0].bDisabled,,True')
+hfs.add_level_hotfix('guaranteed_luneshine_41',
+    'GuaranteedLuneshine',
+    ',GD_Cork_Weap_SMG.A_Weapons_Unique.SMG_Bandit_3_MeatGrinder:WeaponPartListCollectionDefinition_157,Accessory2PartData.WeightedParts[0].bDisabled,,True')
+hfs.add_level_hotfix('guaranteed_luneshine_42',
+    'GuaranteedLuneshine',
+    ',GD_Cork_Weap_SMG.A_Weapons_Unique.SMG_Maliwan_3_BadTouch:WeaponPartListCollectionDefinition_158,Accessory2PartData.WeightedParts[0].bDisabled,,True')
+hfs.add_level_hotfix('guaranteed_luneshine_43',
+    'GuaranteedLuneshine',
+    ',GD_Cork_Weap_SMG.A_Weapons_Unique.SMG_Maliwan_3_GoodTouch:WeaponPartListCollectionDefinition_159,Accessory2PartData.WeightedParts[0].bDisabled,,True')
+hfs.add_level_hotfix('guaranteed_luneshine_44',
+    'GuaranteedLuneshine',
+    ',GD_Cork_Weap_Shotgun.A_Weapons_Legendary.SG_Bandit_5_SledgesShotgun:WeaponPartListCollectionDefinition_113,Accessory2PartData.WeightedParts[0].bDisabled,,True')
+hfs.add_level_hotfix('guaranteed_luneshine_45',
+    'GuaranteedLuneshine',
+    ',GD_Cork_Weap_Shotgun.A_Weapons_Legendary.SG_Hyperion_5_ConferenceCall:WeaponPartListCollectionDefinition_117,Accessory2PartData.WeightedParts[0].bDisabled,,True')
+hfs.add_level_hotfix('guaranteed_luneshine_46',
+    'GuaranteedLuneshine',
+    ',GD_Cork_Weap_Shotgun.A_Weapons_Legendary.SG_Jakobs_5_Striker:WeaponPartListCollectionDefinition_121,Accessory2PartData.WeightedParts[0].bDisabled,,True')
+hfs.add_level_hotfix('guaranteed_luneshine_47',
+    'GuaranteedLuneshine',
+    ',GD_Cork_Weap_Shotgun.A_Weapons_Legendary.SG_Torgue_5_Flakker:WeaponPartListCollectionDefinition_125,Accessory2PartData.WeightedParts[0].bDisabled,,True')
+hfs.add_level_hotfix('guaranteed_luneshine_48',
+    'GuaranteedLuneshine',
+    ',GD_Cork_Weap_Shotgun.A_Weapons_Unique.SG_Bandit_3_Boganella:WeaponPartListCollectionDefinition_126,Accessory2PartData.WeightedParts[0].bDisabled,,True')
+hfs.add_level_hotfix('guaranteed_luneshine_49',
+    'GuaranteedLuneshine',
+    ',GD_Cork_Weap_Shotgun.A_Weapons_Unique.SG_Jakobs_3_Moonface:WeaponPartListCollectionDefinition_128,Accessory2PartData.WeightedParts[0].bDisabled,,True')
+hfs.add_level_hotfix('guaranteed_luneshine_50',
+    'GuaranteedLuneshine',
+    ',GD_Cork_Weap_Shotgun.A_Weapons_Unique.SG_Old_Hyperion_3_Bullpup:WeaponPartListCollectionDefinition_131,Accessory2PartData.WeightedParts[0].bDisabled,,True')
+hfs.add_level_hotfix('guaranteed_luneshine_51',
+    'GuaranteedLuneshine',
+    ',GD_Cork_Weap_Shotgun.A_Weapons_Unique.SG_Tediore_3_Octo:WeaponPartListCollectionDefinition_134,Accessory2PartData.WeightedParts[0].bDisabled,,True')
+hfs.add_level_hotfix('guaranteed_luneshine_52',
+    'GuaranteedLuneshine',
+    ',GD_Cork_Weap_Shotgun.A_Weapons_Unique.SG_Torgue_3_JackOCannon:WeaponPartListCollectionDefinition_135,Accessory2PartData.WeightedParts[0].bDisabled,,True')
+hfs.add_level_hotfix('guaranteed_luneshine_53',
+    'GuaranteedLuneshine',
+    ',GD_Cork_Weap_Shotgun.A_Weapons_Unique.SG_Torgue_3_Torguemada:WeaponPartListCollectionDefinition_136,Accessory2PartData.WeightedParts[0].bDisabled,,True')
+hfs.add_level_hotfix('guaranteed_luneshine_54',
+    'GuaranteedLuneshine',
+    ',GD_Cork_Weap_Shotgun.A_Weapons_Unique.SG_Torgue_3_Wombat:WeaponPartListCollectionDefinition_137,Accessory2PartData.WeightedParts[0].bDisabled,,True')
+hfs.add_level_hotfix('guaranteed_luneshine_55',
+    'GuaranteedLuneshine',
+    ',GD_Cork_Weap_SniperRifles.A_Weapons_Legendary.Sniper_Dahl_5_Pitchfork:WeaponPartListCollectionDefinition_167,Accessory2PartData.WeightedParts[0].bDisabled,,True')
+hfs.add_level_hotfix('guaranteed_luneshine_56',
+    'GuaranteedLuneshine',
+    ',GD_Cork_Weap_SniperRifles.A_Weapons_Legendary.Sniper_Hyperion_5_Invader:WeaponPartListCollectionDefinition_171,Accessory2PartData.WeightedParts[0].bDisabled,,True')
+hfs.add_level_hotfix('guaranteed_luneshine_57',
+    'GuaranteedLuneshine',
+    ',GD_Cork_Weap_SniperRifles.A_Weapons_Legendary.Sniper_Jakobs_5_Skullmasher:WeaponPartListCollectionDefinition_175,Accessory2PartData.WeightedParts[0].bDisabled,,True')
+hfs.add_level_hotfix('guaranteed_luneshine_58',
+    'GuaranteedLuneshine',
+    ',GD_Cork_Weap_SniperRifles.A_Weapons_Legendary.Sniper_Maliwan_5_Magma:WeaponPartListCollectionDefinition_179,Accessory2PartData.WeightedParts[0].bDisabled,,True')
+hfs.add_level_hotfix('guaranteed_luneshine_59',
+    'GuaranteedLuneshine',
+    ',GD_Cork_Weap_SniperRifles.A_Weapons_Unique.Sniper_Dahl_3_WetWeek:WeaponPartListCollectionDefinition_184,Accessory2PartData.WeightedParts[0].bDisabled,,True')
+hfs.add_level_hotfix('guaranteed_luneshine_60',
+    'GuaranteedLuneshine',
+    ',GD_Cork_Weap_SniperRifles.A_Weapons_Unique.Sniper_Jakobs_3_Razorback:WeaponPartListCollectionDefinition_185,Accessory2PartData.WeightedParts[0].bDisabled,,True')
+hfs.add_level_hotfix('guaranteed_luneshine_61',
+    'GuaranteedLuneshine',
+    ',GD_Cork_Weap_SniperRifles.A_Weapons_Unique.Sniper_Maliwan_3_ChereAmie:WeaponPartListCollectionDefinition_186,Accessory2PartData.WeightedParts[0].bDisabled,,True')
+hfs.add_level_hotfix('guaranteed_luneshine_62',
+    'GuaranteedLuneshine',
+    ',GD_Cork_Weap_SniperRifles.A_Weapons_Unique.Sniper_Vladof_3_TheMachine:WeaponPartListCollectionDefinition_187,Accessory2PartData.WeightedParts[0].bDisabled,,True')
+hfs.add_level_hotfix('guaranteed_luneshine_63',
+    'GuaranteedLuneshine',
+    ',GD_Cypressure_Weapons.A_Weapons_Unique.SG_Hyperion_3_CompanyMan:WeaponPartListCollectionDefinition_235,Accessory2PartData.WeightedParts[0].bDisabled,,True')
+hfs.add_level_hotfix('guaranteed_luneshine_64',
+    'GuaranteedLuneshine',
+    ',GD_Cypressure_Weapons.A_Weapons_Unique.SG_Torgue_3_Landscaper2:WeaponPartListCollectionDefinition_236,Accessory2PartData.WeightedParts[0].bDisabled,,True')
+hfs.add_level_hotfix('guaranteed_luneshine_65',
+    'GuaranteedLuneshine',
+    ',GD_Cypressure_Weapons.A_Weapons_Unique.SMG_Bandit_3_FastTalker:WeaponPartListCollectionDefinition_237,Accessory2PartData.WeightedParts[0].bDisabled,,True')
+hfs.add_level_hotfix('guaranteed_luneshine_66',
+    'GuaranteedLuneshine',
+    ',GD_Ma_Weapons.A_Weapons_Legendary.AR_Bandit_5_Fusillade:WeaponPartListCollectionDefinition_221,Accessory2PartData.WeightedParts[0].bDisabled,,True')
+hfs.add_level_hotfix('guaranteed_luneshine_67',
+    'GuaranteedLuneshine',
+    ',GD_Ma_Weapons.A_Weapons_Legendary.Laser_Hyperion_5_LongestYard:WeaponPartListCollectionDefinition_222,Accessory2PartData.WeightedParts[0].bDisabled,,True')
+hfs.add_level_hotfix('guaranteed_luneshine_68',
+    'GuaranteedLuneshine',
+    ',GD_Ma_Weapons.A_Weapons_Legendary.Laser_Maliwan_5_FusionBeam:WeaponPartListCollectionDefinition_223,Accessory2PartData.WeightedParts[0].bDisabled,,True')
+hfs.add_level_hotfix('guaranteed_luneshine_69',
+    'GuaranteedLuneshine',
+    ',GD_Ma_Weapons.A_Weapons_Legendary.Laser_Maliwan_5_Thunderfire:WeaponPartListCollectionDefinition_224,Accessory2PartData.WeightedParts[0].bDisabled,,True')
+hfs.add_level_hotfix('guaranteed_luneshine_70',
+    'GuaranteedLuneshine',
+    ',GD_Ma_Weapons.A_Weapons_Legendary.Laser_Tediore_5_LaserDisker:WeaponPartListCollectionDefinition_225,Accessory2PartData.WeightedParts[0].bDisabled,,True')
+hfs.add_level_hotfix('guaranteed_luneshine_71',
+    'GuaranteedLuneshine',
+    ',GD_Ma_Weapons.A_Weapons_Legendary.Pistol_Jakobs_5_LuckCannon:WeaponPartListCollectionDefinition_226,Accessory2PartData.WeightedParts[0].bDisabled,,True')
+hfs.add_level_hotfix('guaranteed_luneshine_72',
+    'GuaranteedLuneshine',
+    ',GD_Ma_Weapons.A_Weapons_Legendary.Pistol_Vladof_5_Expander:WeaponPartListCollectionDefinition_234,Accessory2PartData.WeightedParts[0].bDisabled,,True')
+hfs.add_level_hotfix('guaranteed_luneshine_73',
+    'GuaranteedLuneshine',
+    ',GD_Ma_Weapons.A_Weapons_Legendary.RL_Tediore_5_KanedasLaser:WeaponPartListCollectionDefinition_227,Accessory2PartData.WeightedParts[0].bDisabled,,True')
+hfs.add_level_hotfix('guaranteed_luneshine_74',
+    'GuaranteedLuneshine',
+    ',GD_Ma_Weapons.A_Weapons_Legendary.SG_Jakobs_5_Flayer:WeaponPartListCollectionDefinition_238,Accessory2PartData.WeightedParts[0].bDisabled,,True')
+hfs.add_level_hotfix('guaranteed_luneshine_75',
+    'GuaranteedLuneshine',
+    ',GD_Ma_Weapons.A_Weapons_Legendary.SMG_Hyperion_5_CheatCode:WeaponPartListCollectionDefinition_228,Accessory2PartData.WeightedParts[0].bDisabled,,True')
+hfs.add_level_hotfix('guaranteed_luneshine_76',
+    'GuaranteedLuneshine',
+    ',GD_Ma_Weapons.A_Weapons_Legendary.Sniper_Old_Hyperion_5_OmniCannon:WeaponPartListCollectionDefinition_229,Accessory2PartData.WeightedParts[0].bDisabled,,True')
+hfs.add_level_hotfix('guaranteed_luneshine_77',
+    'GuaranteedLuneshine',
+    ',GD_Ma_Weapons.A_Weapons_Unique.Laser_Maliwan_3_Enlightenment:WeaponPartListCollectionDefinition_230,Accessory2PartData.WeightedParts[0].bDisabled,,True')
+hfs.add_level_hotfix('guaranteed_luneshine_78',
+    'GuaranteedLuneshine',
+    ',GD_Ma_Weapons.A_Weapons_Unique.Laser_Maliwan_3_Minac:WeaponPartListCollectionDefinition_231,Accessory2PartData.WeightedParts[0].bDisabled,,True')
+hfs.add_level_hotfix('guaranteed_luneshine_79',
+    'GuaranteedLuneshine',
+    ',GD_Ma_Weapons.A_Weapons_Unique.Pistol_Bandit_3_PartyPopper:WeaponPartListCollectionDefinition_232,Accessory2PartData.WeightedParts[0].bDisabled,,True')
+hfs.add_level_hotfix('guaranteed_luneshine_80',
+    'GuaranteedLuneshine',
+    ',GD_Ma_Weapons.A_Weapons_Unique.Pistol_Maliwan_3_HardReboot:WeaponPartListCollectionDefinition_233,Accessory2PartData.WeightedParts[0].bDisabled,,True')
+hfs.add_level_hotfix('guaranteed_luneshine_81',
+    'GuaranteedLuneshine',
+    ',GD_Weap_Pistol.A_Weapons_Legendary.Pistol_Hyperion_5_LogansGun:WeaponPartListCollectionDefinition_202,Accessory2PartData.WeightedParts[0].bDisabled,,True')
+hfs.add_level_hotfix('guaranteed_luneshine_82',
+    'GuaranteedLuneshine',
+    ',GD_Weap_SMG.A_Weapons_Unique.SMG_Dahl_3_Fridgia:WeaponPartListCollectionDefinition_207,Accessory2PartData.WeightedParts[0].bDisabled,,True')
+hfs.add_level_hotfix('guaranteed_luneshine_83',
+    'GuaranteedLuneshine',
+    ',GD_Weap_SMG.A_Weapons_Unique.SMG_Maliwan_3_Frostfire:WeaponPartListCollectionDefinition_209,Accessory2PartData.WeightedParts[0].bDisabled,,True')
+hfs.add_level_hotfix('guaranteed_luneshine_84',
+    'GuaranteedLuneshine',
+    ',GD_Weap_SniperRifles.A_Weapons_Unique.Sniper_Hyperion_3_FremingtonsEdge:WeaponPartListCollectionDefinition_215,Accessory2PartData.WeightedParts[0].bDisabled,,True')
+
+# Adds Luneshine to some unique weapons which didn't have them,
+# previously.  This too is autogenerated by `gen_guaranteed_luneshine.py`,
+# though I've since edited it slightly to handle the one launcher
+# properly.
+hfs.add_level_hotfix('luneshine_override_0',
+	'LuneshineOverride',
+	""",GD_Petunia_Weapons.Launchers.RL_Vladof_5_Menace:PartList,Accessory2PartData,,
+	(
+		bEnabled=True,
+		WeightedParts=(
+            (
+                bDisabled=True,
+                Part=WeaponPartDefinition'GD_Weap_Accessories.Moonstone.Moonstone_Attachment_None',
+                Manufacturers=(
+                    (
+                        Manufacturer=None,
+                        DefaultWeightIndex=1
+                    )
+                ),
+                MinGameStageIndex=0,
+                MaxGameStageIndex=1,
+                DefaultWeightIndex=1
+            ),
+			(
+				bDisabled=False,
+				Part=WeaponPartDefinition'GD_Weap_Accessories.Moonstone.Moonstone_Attachment_FastLearner',
+				Manufacturers=(
+					(
+						Manufacturer=None,
+						DefaultWeightIndex=1
+					)
+				),
+				MinGameStageIndex=0,
+				MaxGameStageIndex=1,
+				DefaultWeightIndex=1
+			),
+			(
+				bDisabled=False,
+				Part=WeaponPartDefinition'GD_Weap_Accessories.Moonstone.Moonstone_Attachment_HardenUp',
+				Manufacturers=(
+					(
+						Manufacturer=None,
+						DefaultWeightIndex=1
+					)
+				),
+				MinGameStageIndex=0,
+				MaxGameStageIndex=1,
+				DefaultWeightIndex=1
+			),
+			(
+				bDisabled=False,
+				Part=WeaponPartDefinition'GD_Weap_Accessories.Moonstone.Moonstone_Attachment_Boominator',
+				Manufacturers=(
+					(
+						Manufacturer=None,
+						DefaultWeightIndex=1
+					)
+				),
+				MinGameStageIndex=0,
+				MaxGameStageIndex=1,
+				DefaultWeightIndex=1
+			),
+			(
+				bDisabled=False,
+				Part=WeaponPartDefinition'GD_Weap_Accessories.Moonstone.Moonstone_Attachment_Safeguard',
+				Manufacturers=(
+					(
+						Manufacturer=None,
+						DefaultWeightIndex=1
+					)
+				),
+				MinGameStageIndex=0,
+				MaxGameStageIndex=1,
+				DefaultWeightIndex=1
+			),
+			(
+				bDisabled=False,
+				Part=WeaponPartDefinition'GD_Weap_Accessories.Moonstone.Moonstone_Attachment_Oxygenator',
+				Manufacturers=(
+					(
+						Manufacturer=None,
+						DefaultWeightIndex=1
+					)
+				),
+				MinGameStageIndex=0,
+				MaxGameStageIndex=1,
+				DefaultWeightIndex=1
+			),
+			(
+				bDisabled=False,
+				Part=WeaponPartDefinition'GD_Weap_Accessories.Moonstone.Moonstone_Attachment_PiercingRounds',
+				Manufacturers=(
+					(
+						Manufacturer=None,
+						DefaultWeightIndex=1
+					)
+				),
+				MinGameStageIndex=0,
+				MaxGameStageIndex=1,
+				DefaultWeightIndex=1
+			),
+			(
+				bDisabled=False,
+				Part=WeaponPartDefinition'GD_Weap_Accessories.Moonstone.Moonstone_Attachment_Serenity',
+				Manufacturers=(
+					(
+						Manufacturer=None,
+						DefaultWeightIndex=1
+					)
+				),
+				MinGameStageIndex=0,
+				MaxGameStageIndex=1,
+				DefaultWeightIndex=1
+			)
+		)
+	)""")
+
+for idx, partlist in enumerate([
+        'GD_Cork_Weap_Lasers.A_Weapons_Legendary.Laser_Dahl_5_ZX1:PartList',
+        'GD_Cork_Weap_Pistol.A_Weapons_Unique.Pistol_Jakobs_CyberColt:PartList',
+        'GD_Cork_Weap_SMG.A_Weapons_Unique.SMG_Old_Hyperion_BlackSnake:WeaponPartListCollectionDefinition_163',
+        'GD_Cork_Weap_Shotgun.A_Weapons_Unique.SG_Jakobs_Boomacorn:PartList',
+        'GD_Cork_Weap_Shotgun.A_Weapons_Unique.SG_Jakobs_TooScoops:PartList',
+        'GD_Cypressure_Weapons.A_Weapons_Unique.AR_Bandit_3_BossNova:PartList',
+        'GD_Petunia_Weapons.Pistols.Pistol_Hyperion_3_T4sr:WeaponPartListCollectionDefinition_282',
+        'GD_Petunia_Weapons.SMGs.SMG_Tediore_3_Boxxy:PartList',
+        'GD_Petunia_Weapons.Shotguns.SG_Tediore_3_PartyLine:PartList',
+        'GD_Petunia_Weapons.Snipers.Sniper_Jakobs_3_Plunkett:WeaponPartListCollectionDefinition_283',
+        ]):
+    hfs.add_level_hotfix('luneshine_override_{}'.format(idx+1),
+        'LuneshineOverride',
+        """,{},Accessory2PartData,,
+        (
+            bEnabled=True,
+            WeightedParts=(
+                (
+                    bDisabled=True,
+                    Part=WeaponPartDefinition'GD_Weap_Accessories.Moonstone.Moonstone_Attachment_None',
+                    Manufacturers=(
+                        (
+                            Manufacturer=None,
+                            DefaultWeightIndex=1
+                        )
+                    ),
+                    MinGameStageIndex=0,
+                    MaxGameStageIndex=1,
+                    DefaultWeightIndex=1
+                ),
+                (
+                    bDisabled=False,
+                    Part=WeaponPartDefinition'GD_Weap_Accessories.Moonstone.Moonstone_Attachment_FastLearner',
+                    Manufacturers=(
+                        (
+                            Manufacturer=None,
+                            DefaultWeightIndex=1
+                        )
+                    ),
+                    MinGameStageIndex=0,
+                    MaxGameStageIndex=1,
+                    DefaultWeightIndex=1
+                ),
+                (
+                    bDisabled=False,
+                    Part=WeaponPartDefinition'GD_Weap_Accessories.Moonstone.Moonstone_Attachment_HardenUp',
+                    Manufacturers=(
+                        (
+                            Manufacturer=None,
+                            DefaultWeightIndex=1
+                        )
+                    ),
+                    MinGameStageIndex=0,
+                    MaxGameStageIndex=1,
+                    DefaultWeightIndex=1
+                ),
+                (
+                    bDisabled=False,
+                    Part=WeaponPartDefinition'GD_Weap_Accessories.Moonstone.Moonstone_Attachment_Boominator',
+                    Manufacturers=(
+                        (
+                            Manufacturer=None,
+                            DefaultWeightIndex=1
+                        )
+                    ),
+                    MinGameStageIndex=0,
+                    MaxGameStageIndex=1,
+                    DefaultWeightIndex=1
+                ),
+                (
+                    bDisabled=False,
+                    Part=WeaponPartDefinition'GD_Weap_Accessories.Moonstone.Moonstone_Attachment_Safeguard',
+                    Manufacturers=(
+                        (
+                            Manufacturer=None,
+                            DefaultWeightIndex=1
+                        )
+                    ),
+                    MinGameStageIndex=0,
+                    MaxGameStageIndex=1,
+                    DefaultWeightIndex=1
+                ),
+                (
+                    bDisabled=False,
+                    Part=WeaponPartDefinition'GD_Weap_Accessories.Moonstone.Moonstone_Attachment_Oxygenator',
+                    Manufacturers=(
+                        (
+                            Manufacturer=None,
+                            DefaultWeightIndex=1
+                        )
+                    ),
+                    MinGameStageIndex=0,
+                    MaxGameStageIndex=1,
+                    DefaultWeightIndex=1
+                ),
+                (
+                    bDisabled=False,
+                    Part=WeaponPartDefinition'GD_Weap_Accessories.Moonstone.Moonstone_Attachment_PiercingRounds',
+                    Manufacturers=(
+                        (
+                            Manufacturer=None,
+                            DefaultWeightIndex=1
+                        )
+                    ),
+                    MinGameStageIndex=0,
+                    MaxGameStageIndex=1,
+                    DefaultWeightIndex=1
+                ),
+                (
+                    bDisabled=False,
+                    Part=WeaponPartDefinition'GD_Weap_Accessories.Moonstone.Moonstone_Attachment_Punisher',
+                    Manufacturers=(
+                        (
+                            Manufacturer=None,
+                            DefaultWeightIndex=1
+                        )
+                    ),
+                    MinGameStageIndex=0,
+                    MaxGameStageIndex=1,
+                    DefaultWeightIndex=1
+                ),
+                (
+                    bDisabled=False,
+                    Part=WeaponPartDefinition'GD_Weap_Accessories.Moonstone.Moonstone_Attachment_Serenity',
+                    Manufacturers=(
+                        (
+                            Manufacturer=None,
+                            DefaultWeightIndex=1
+                        )
+                    ),
+                    MinGameStageIndex=0,
+                    MaxGameStageIndex=1,
+                    DefaultWeightIndex=1
+                )
+            )
+        )
+        """.format(partlist))
 
 
 ###
@@ -359,10 +879,33 @@ force_gunsandgear_specific_name = 'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_S
 # Process our forced GunsAndGear drop
 gunsandgear_drop_str = ''
 if force_gunsandgear_specific:
-    gunsandgear_drop_str = """
-    #<Force GunsAndGearDrop to {force_gunsandgear_specific_name}>
+    specific_bits = []
+    for specific_name in force_gunsandgear_specific_names:
+        specific_bits.append("""            (
+                ItmPoolDefinition=None,
+                InvBalanceDefinition={force_gunsandgear_specific_classtype}'{specific_name}',
+                Probability=(
+                    BaseValueConstant=1.000000,
+                    BaseValueAttribute=None,
+                    InitializationDefinition=None,
+                    BaseValueScaleConstant=1.000000
+                ),
+                bDropOnDeath=True
+            )""".format(
+                force_gunsandgear_specific_classtype=force_gunsandgear_specific_classtype,
+                specific_name=specific_name,
+                ))
+    specific_pool_contents = ",\n".join(specific_bits)
 
-        # Forces the GunsAndGear drop pool to always drop {force_gunsandgear_specific_name}
+    if len(force_gunsandgear_specific_names) == 1:
+        desc_string = force_gunsandgear_specific_names[0]
+    else:
+        desc_string = '{} (and others)'.format(force_gunsandgear_specific_names[0])
+
+    gunsandgear_drop_str = """
+    #<Force GunsAndGearDrop to {desc_string}>
+
+        # Forces the GunsAndGear drop pool to always drop {desc_string}
         # Just used during my own testing to find out what exactly some items
         # are, when spawned in-game.
 
@@ -374,8 +917,8 @@ if force_gunsandgear_specific:
                 Probability=(
                     BaseValueConstant=1.000000,
                     BaseValueAttribute=None,
-                    InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_2_Uncommon',
-                    BaseValueScaleConstant=2.200000
+                    InitializationDefinition=None,
+                    BaseValueScaleConstant=1.000000
                 ),
                 bDropOnDeath=True
             )
@@ -383,24 +926,14 @@ if force_gunsandgear_specific:
 
         set {force_gunsandgear_drop_type} BalancedItems
         (
-            (
-                ItmPoolDefinition=None,
-                InvBalanceDefinition={force_gunsandgear_specific_classtype}'{force_gunsandgear_specific_name}',
-                Probability=(
-                    BaseValueConstant=0.000000,
-                    BaseValueAttribute=None,
-                    InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',
-                    BaseValueScaleConstant=1.000000
-                ),
-                bDropOnDeath=True
-            )
+{specific_pool_contents}
         )
 
-    #</Force GunsAndGearDrop to {force_gunsandgear_specific_name}>
+    #</Force GunsAndGearDrop to {desc_string}>
     """.format(
+        desc_string=desc_string,
         force_gunsandgear_drop_type=force_gunsandgear_drop_type,
-        force_gunsandgear_specific_classtype=force_gunsandgear_specific_classtype,
-        force_gunsandgear_specific_name=force_gunsandgear_specific_name,
+        specific_pool_contents=specific_pool_contents,
         )
 elif force_gunsandgear_drop:
     gunsandgear_drop_str = """

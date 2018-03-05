@@ -3,6 +3,15 @@ TPS Better Loot Mod by Apocalyptech
 
 Work in progress!
 
+**WARNING:** This mod contains some statements which can generate gear
+which the vanilla game doesn't think is valid.  If you have some of
+this gear in your inventory and start the game without having this
+mod enabled, the engine will remove those items from your inventory.
+If you see this, be sure to `Alt-F4` out of the game to prevent it
+from saving over your savegame.  The sections which could generate
+these kinds of gear are contained entirely within the `Volatile Changes`
+folder.
+
 Mod Overview
 ------------
 
@@ -10,6 +19,11 @@ Mod Overview
   shields, oz kits) into the global "legendary" loot pools, so
   you'll start seeing those much more frequently.
 * Makes Moonstones drop 2x more often
+* Luneshine weapons will drop in all world drop pools (this is identical
+  to some functionality in UCP)
+* Legendary/Unique weapons are guaranteed to have Luneshine, unless
+  they have specific custom accessories in that slot (ie: Marek's Mouth,
+  Cry Baby, Longnail, Heartfull Splodger, and Cutie Killer)
 
 Compatibility
 -------------
@@ -35,6 +49,12 @@ TODO
 * Check legendary drop pools
 * Legendary COM pool seems to be almost entirely Celestial.  Occasionally
   Chronicler, and no Eridian Vanquishers.  Figure that out.
+
+Credits
+-------
+
+* A set of statements to allow Luneshine spawns in the world drops was
+  taken from UCP.
 
 Licenses
 ========
