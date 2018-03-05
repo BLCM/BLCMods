@@ -27,6 +27,8 @@ Mod Overview
 * Legendary/Unique weapons are guaranteed to have Luneshine, unless
   they have specific custom accessories in that slot (ie: Marek's Mouth,
   Cry Baby, Longnail, Heartfull Splodger, and Cutie Killer)
+* Bosses are guaranteed to drop from their unique drop pools *(not
+  actually tested yet)*
 
 Compatibility
 -------------
