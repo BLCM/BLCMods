@@ -811,6 +811,60 @@ for idx, partlist in enumerate([
 ### on the standalone version.
 ###
 
+attach = 'Ammo1'
+containers = [
+    #('GD_Ma_Balance_Treasure.LootableGrades.ObjectGrade_MetalCrate_Marigold',
+    #    'GD_Itempools.WeaponPools.Pool_Weapons_Pistols_06_Legendary'),
+    #('GD_Ma_Balance_Treasure.LootableGrades.ObjectGrade_Bandit_Ammo_Marigold',
+    #    'GD_Itempools.ClassModPools.Pool_ClassMod_06_Legendary'),
+    #('GD_Ma_Balance_Treasure.ChestGrades.ObjectGrade_DahlWeaponChest_Marigold',
+    #    'GD_Itempools.ShieldPools.Pool_Shields_All_06_Legendary'),
+    #('GD_Ma_Balance_Treasure.ChestGrades.ObjectGrade_DahlWeaponChest_Glitched',
+    #    'GD_Itempools.GrenadeModPools.Pool_GrenadeMods_06_Legendary'),
+    #('GD_Balance_Treasure.LootableGrades.ObjectGrade_Mailbox',
+    #    'GD_Itempools.WeaponPools.Pool_Weapons_Launchers_06_Legendary'),
+    #('GD_Ma_Balance_Treasure.LootableGrades.ObjectGrade_StrongBox_CashOnly_Marigold',
+    #    'GD_Itempools.WeaponPools.Pool_Weapons_SniperRifles_06_Legendary'),
+    ]
+for idx, (container, pool) in enumerate(containers):
+    hfs.add_level_hotfix('cjtestingclear{}'.format(idx), 'cjtestclear',
+        ",{},DefaultIncludedLootLists,,()".format(container))
+    hfs.add_level_hotfix('cjtestingset{}'.format(idx), 'cjtestset',
+        """,{container},DefaultLoot,,
+        (
+            ( 
+                ConfigurationName="Testing", 
+                bIgnoreGameStageRestrictions=True, 
+                LootGameStageVarianceFormula=None, 
+                Weight=( 
+                    BaseValueConstant=1.000000, 
+                    BaseValueAttribute=None, 
+                    InitializationDefinition=None,
+                    BaseValueScaleConstant=1.000000 
+                ), 
+                ItemAttachments=( 
+                    ( 
+                        ItemPool=ItemPoolDefinition'{pool}', 
+                        PoolProbability=( 
+                            BaseValueConstant=1.000000, 
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=None, 
+                            BaseValueScaleConstant=1.000000 
+                        ), 
+                        InvBalanceDefinition=None, 
+                        AttachmentPointName="{attach}" 
+                    ) 
+                ) 
+            )
+        )
+        """.format(
+            container=container,
+            pool=pool,
+            attach=attach,
+            ))
+#hfs.add_level_hotfix('cjtestmeteor', 'meteor', ",GD_Meteorites.Projectiles.Projectile_Meteorite:BehaviorProviderDefinition_0.Behavior_SpawnFromPopulationSystem_123.PopulationFactoryPopulationDefinition_1,PopulationDef,,PopulationDefinition'GD_Meteorites.Population.Pop_Meteorite_LootPile_Chest'")
+#hfs.add_level_hotfix('cjtestmeteor2', 'meteor', ",GD_Meteorites.Projectiles.Projectile_Meteorite:BehaviorProviderDefinition_0.Behavior_SpawnFromPopulationSystem_124.PopulationFactoryPopulationDefinition_0,PopulationDef,,PopulationDefinition'GD_Meteorites.Population.Pop_Meteorite_LootPile_Chest'")
+
 # This one causes nearly every enemy to be a badass.
 #hfs.add_level_hotfix('badasses', 'Badass',
 #    """,GD_Balance.WeightingPlayerCount.Enemy_MajorUpgrade_PerPlayer,ConditionalInitialization,,

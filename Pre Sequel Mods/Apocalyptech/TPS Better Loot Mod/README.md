@@ -29,6 +29,7 @@ Mod Overview
   Cry Baby, Longnail, Heartfull Splodger, and Cutie Killer)
 * Bosses are guaranteed to drop from their unique drop pools *(not
   actually tested yet)*
+* Remove early-game loot restrictions.  *(work in progress)*
 
 Compatibility
 -------------
