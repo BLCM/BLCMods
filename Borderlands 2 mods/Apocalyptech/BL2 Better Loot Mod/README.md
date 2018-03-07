@@ -392,7 +392,7 @@ for the full text.
 Changelog
 =========
 
-**v1.1.1**, March 7, 2018:
+**v1.1.1**, March 7, 2018 (commit `ac9af0507b5b28f51e00f15e047cb019b1fc93e9`):
  * Fixed unlocking early-game elements for Maliwan Aquamarine Snipers on Windows
 
 **v1.1.0**, March 1, 2018 (commit `4985d37cefc4d4cd339cf73f507c91eaca4c4bb8`):
