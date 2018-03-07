@@ -21,6 +21,9 @@ Mod Overview
 * Loot will skew much more rare, in general.  You should expect to see
   those legendaries/uniques far more frequently than in vanilla TPS.
 * Glitch weapons spawn in the main game
+* Lootable Container Changes:
+  * Fixes some "shield" loot configurations which had an error and would
+    nver spawn, previously.
 * Makes Moonstones drop 2x more often
 * Luneshine weapons will drop in all world drop pools (this is identical
   to some functionality in UCP)

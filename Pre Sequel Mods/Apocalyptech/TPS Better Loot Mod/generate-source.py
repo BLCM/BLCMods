@@ -135,7 +135,6 @@ class ConfigLootsplosion(ConfigBase):
     com_base_uncommon = weapon_base_uncommon
     com_base_rare = weapon_base_rare
     com_base_veryrare = weapon_base_veryrare
-    com_base_alignment = '30'
     com_base_legendary = weapon_base_legendary
 
     # Custom grenade drop scaling (identical to weapons)
@@ -553,11 +552,11 @@ hfs.add_level_hotfix('guaranteed_luneshine_84',
 # though I've since edited it slightly to handle the one launcher
 # properly.
 hfs.add_level_hotfix('luneshine_override_0',
-	'LuneshineOverride',
-	""",GD_Petunia_Weapons.Launchers.RL_Vladof_5_Menace:PartList,Accessory2PartData,,
-	(
-		bEnabled=True,
-		WeightedParts=(
+    'LuneshineOverride',
+    """,GD_Petunia_Weapons.Launchers.RL_Vladof_5_Menace:PartList,Accessory2PartData,,
+    (
+        bEnabled=True,
+        WeightedParts=(
             (
                 bDisabled=True,
                 Part=WeaponPartDefinition'GD_Weap_Accessories.Moonstone.Moonstone_Attachment_None',
@@ -571,99 +570,99 @@ hfs.add_level_hotfix('luneshine_override_0',
                 MaxGameStageIndex=1,
                 DefaultWeightIndex=1
             ),
-			(
-				bDisabled=False,
-				Part=WeaponPartDefinition'GD_Weap_Accessories.Moonstone.Moonstone_Attachment_FastLearner',
-				Manufacturers=(
-					(
-						Manufacturer=None,
-						DefaultWeightIndex=1
-					)
-				),
-				MinGameStageIndex=0,
-				MaxGameStageIndex=1,
-				DefaultWeightIndex=1
-			),
-			(
-				bDisabled=False,
-				Part=WeaponPartDefinition'GD_Weap_Accessories.Moonstone.Moonstone_Attachment_HardenUp',
-				Manufacturers=(
-					(
-						Manufacturer=None,
-						DefaultWeightIndex=1
-					)
-				),
-				MinGameStageIndex=0,
-				MaxGameStageIndex=1,
-				DefaultWeightIndex=1
-			),
-			(
-				bDisabled=False,
-				Part=WeaponPartDefinition'GD_Weap_Accessories.Moonstone.Moonstone_Attachment_Boominator',
-				Manufacturers=(
-					(
-						Manufacturer=None,
-						DefaultWeightIndex=1
-					)
-				),
-				MinGameStageIndex=0,
-				MaxGameStageIndex=1,
-				DefaultWeightIndex=1
-			),
-			(
-				bDisabled=False,
-				Part=WeaponPartDefinition'GD_Weap_Accessories.Moonstone.Moonstone_Attachment_Safeguard',
-				Manufacturers=(
-					(
-						Manufacturer=None,
-						DefaultWeightIndex=1
-					)
-				),
-				MinGameStageIndex=0,
-				MaxGameStageIndex=1,
-				DefaultWeightIndex=1
-			),
-			(
-				bDisabled=False,
-				Part=WeaponPartDefinition'GD_Weap_Accessories.Moonstone.Moonstone_Attachment_Oxygenator',
-				Manufacturers=(
-					(
-						Manufacturer=None,
-						DefaultWeightIndex=1
-					)
-				),
-				MinGameStageIndex=0,
-				MaxGameStageIndex=1,
-				DefaultWeightIndex=1
-			),
-			(
-				bDisabled=False,
-				Part=WeaponPartDefinition'GD_Weap_Accessories.Moonstone.Moonstone_Attachment_PiercingRounds',
-				Manufacturers=(
-					(
-						Manufacturer=None,
-						DefaultWeightIndex=1
-					)
-				),
-				MinGameStageIndex=0,
-				MaxGameStageIndex=1,
-				DefaultWeightIndex=1
-			),
-			(
-				bDisabled=False,
-				Part=WeaponPartDefinition'GD_Weap_Accessories.Moonstone.Moonstone_Attachment_Serenity',
-				Manufacturers=(
-					(
-						Manufacturer=None,
-						DefaultWeightIndex=1
-					)
-				),
-				MinGameStageIndex=0,
-				MaxGameStageIndex=1,
-				DefaultWeightIndex=1
-			)
-		)
-	)""")
+            (
+                bDisabled=False,
+                Part=WeaponPartDefinition'GD_Weap_Accessories.Moonstone.Moonstone_Attachment_FastLearner',
+                Manufacturers=(
+                    (
+                        Manufacturer=None,
+                        DefaultWeightIndex=1
+                    )
+                ),
+                MinGameStageIndex=0,
+                MaxGameStageIndex=1,
+                DefaultWeightIndex=1
+            ),
+            (
+                bDisabled=False,
+                Part=WeaponPartDefinition'GD_Weap_Accessories.Moonstone.Moonstone_Attachment_HardenUp',
+                Manufacturers=(
+                    (
+                        Manufacturer=None,
+                        DefaultWeightIndex=1
+                    )
+                ),
+                MinGameStageIndex=0,
+                MaxGameStageIndex=1,
+                DefaultWeightIndex=1
+            ),
+            (
+                bDisabled=False,
+                Part=WeaponPartDefinition'GD_Weap_Accessories.Moonstone.Moonstone_Attachment_Boominator',
+                Manufacturers=(
+                    (
+                        Manufacturer=None,
+                        DefaultWeightIndex=1
+                    )
+                ),
+                MinGameStageIndex=0,
+                MaxGameStageIndex=1,
+                DefaultWeightIndex=1
+            ),
+            (
+                bDisabled=False,
+                Part=WeaponPartDefinition'GD_Weap_Accessories.Moonstone.Moonstone_Attachment_Safeguard',
+                Manufacturers=(
+                    (
+                        Manufacturer=None,
+                        DefaultWeightIndex=1
+                    )
+                ),
+                MinGameStageIndex=0,
+                MaxGameStageIndex=1,
+                DefaultWeightIndex=1
+            ),
+            (
+                bDisabled=False,
+                Part=WeaponPartDefinition'GD_Weap_Accessories.Moonstone.Moonstone_Attachment_Oxygenator',
+                Manufacturers=(
+                    (
+                        Manufacturer=None,
+                        DefaultWeightIndex=1
+                    )
+                ),
+                MinGameStageIndex=0,
+                MaxGameStageIndex=1,
+                DefaultWeightIndex=1
+            ),
+            (
+                bDisabled=False,
+                Part=WeaponPartDefinition'GD_Weap_Accessories.Moonstone.Moonstone_Attachment_PiercingRounds',
+                Manufacturers=(
+                    (
+                        Manufacturer=None,
+                        DefaultWeightIndex=1
+                    )
+                ),
+                MinGameStageIndex=0,
+                MaxGameStageIndex=1,
+                DefaultWeightIndex=1
+            ),
+            (
+                bDisabled=False,
+                Part=WeaponPartDefinition'GD_Weap_Accessories.Moonstone.Moonstone_Attachment_Serenity',
+                Manufacturers=(
+                    (
+                        Manufacturer=None,
+                        DefaultWeightIndex=1
+                    )
+                ),
+                MinGameStageIndex=0,
+                MaxGameStageIndex=1,
+                DefaultWeightIndex=1
+            )
+        )
+    )""")
 
 for idx, partlist in enumerate([
         'GD_Cork_Weap_Lasers.A_Weapons_Legendary.Laser_Dahl_5_ZX1:PartList',
@@ -804,6 +803,26 @@ for idx, partlist in enumerate([
         )
         """.format(partlist))
 
+# Fix some container drop pools which reference an item (Pool_BuffDrinks_Euphoria)
+# which doesn't actually exist, causing that loot possibility to never actually
+# get chosen.  We'll replace with Pool_BuffDrinks_HealingRegen.  Most of these could
+# happen via a regular `set` statement, but this lets us be much more concise.
+for (idx, (classname, propname, loot_idx, attachment_idx)) in enumerate([
+        ('GD_Balance_Treasure.ChestGrades.ObjectGrade_DahlEpic', 'DefaultLoot', 4, 11),
+        ('GD_Itempools.ListDefs.EpicChestRedLoot', 'LootData', 4, 11),
+        ('GD_Ma_ItemPools.ListDefs.EpicChestRedLoot_Marigold', 'LootData', 4, 11),
+        ('GD_Itempools.ListDefs.EpicChestHyperionLoot', 'LootData', 3, 11),
+        ('GD_Ma_ItemPools.ListDefs.EpicChestHyperionLoot_Marigold', 'LootData', 3, 11),
+        ('GD_Meteorites.Balance.ObjectGrade_Meteorite_LootPile_Chest', 'DefaultLoot', 4, 11),
+        ]):
+    hfs.add_level_hotfix('euphoria_fix_{}'.format(idx),
+        'EuphoriaChestFix',
+        ',{},{}[{}].ItemAttachments[{}].ItemPool,,GD_Itempools.BuffDrinkPools.Pool_BuffDrinks_HealingRegen'.format(
+            classname,
+            propname,
+            loot_idx,
+            attachment_idx,
+            ))
 
 ###
 ### Testing hotfixes, not really intended to be used for real.  These

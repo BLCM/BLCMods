@@ -288,11 +288,11 @@
 
         #</Luneshine Drops>
 
-        #<Better Weapons>
+        #<Better Weapon Drops>
 
             set GD_Itempools.WeaponPools.Pool_Weapons_All BalancedItems ((ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_All_01_Common',InvBalanceDefinition=None,Probability=(BaseValueConstant=8,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_All_02_Uncommon',InvBalanceDefinition=None,Probability=(BaseValueConstant=85,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_All_04_Rare',InvBalanceDefinition=None,Probability=(BaseValueConstant=65,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_All_05_VeryRare',InvBalanceDefinition=None,Probability=(BaseValueConstant=50,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Ma_ItemPools.WeaponPools.Pool_Weapons_All_Glitch_Marigold',InvBalanceDefinition=None,Probability=(BaseValueConstant=15,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_All_06_Legendary',InvBalanceDefinition=None,Probability=(BaseValueConstant=3,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True))
 
-        #</Better Weapons>
+        #</Better Weapon Drops>
 
         #<Better Oz Kit Drops>
 
@@ -333,6 +333,30 @@
         #</More Frequent Moonstone>
 
     #</Currency Drop Improvements>
+
+    #<Better Containers>
+
+        #<Fix Broken Shield Pools>
+
+            # Various chests in the game have a possible "Shields" item pool which will
+            # never actually trigger in-game because they include an invalid item in the
+            # pool.  This fixes the pool so that it can be chosen again.
+
+            #<hotfix><key>"SparkLevelPatchEntry-ApocEuphoriaChestFix0"</key><value>",GD_Balance_Treasure.ChestGrades.ObjectGrade_DahlEpic,DefaultLoot[4].ItemAttachments[11].ItemPool,,GD_Itempools.BuffDrinkPools.Pool_BuffDrinks_HealingRegen"</value><on>
+
+            #<hotfix><key>"SparkLevelPatchEntry-ApocEuphoriaChestFix1"</key><value>",GD_Itempools.ListDefs.EpicChestRedLoot,LootData[4].ItemAttachments[11].ItemPool,,GD_Itempools.BuffDrinkPools.Pool_BuffDrinks_HealingRegen"</value><on>
+
+            #<hotfix><key>"SparkLevelPatchEntry-ApocEuphoriaChestFix2"</key><value>",GD_Ma_ItemPools.ListDefs.EpicChestRedLoot_Marigold,LootData[4].ItemAttachments[11].ItemPool,,GD_Itempools.BuffDrinkPools.Pool_BuffDrinks_HealingRegen"</value><on>
+
+            #<hotfix><key>"SparkLevelPatchEntry-ApocEuphoriaChestFix3"</key><value>",GD_Itempools.ListDefs.EpicChestHyperionLoot,LootData[3].ItemAttachments[11].ItemPool,,GD_Itempools.BuffDrinkPools.Pool_BuffDrinks_HealingRegen"</value><on>
+
+            #<hotfix><key>"SparkLevelPatchEntry-ApocEuphoriaChestFix4"</key><value>",GD_Ma_ItemPools.ListDefs.EpicChestHyperionLoot_Marigold,LootData[3].ItemAttachments[11].ItemPool,,GD_Itempools.BuffDrinkPools.Pool_BuffDrinks_HealingRegen"</value><on>
+
+            #<hotfix><key>"SparkLevelPatchEntry-ApocEuphoriaChestFix5"</key><value>",GD_Meteorites.Balance.ObjectGrade_Meteorite_LootPile_Chest,DefaultLoot[4].ItemAttachments[11].ItemPool,,GD_Itempools.BuffDrinkPools.Pool_BuffDrinks_HealingRegen"</value><on>
+
+        #</Fix Broken Shield Pools>
+
+    #</Better Containers>
 
     #<Better Enemy Drops>
 
