@@ -392,8 +392,8 @@ for the full text.
 Changelog
 =========
 
-**v1.0.0**, February 26, 2018 (commit `45e70cdc7982ac22715955e5ffb9e3f5963601c7`):
- * Initial public release
+**v1.1.1**, March 7, 2018:
+ * Fixed unlocking early-game elements for Maliwan Aquamarine Snipers on Windows
 
 **v1.1.0**, March 1, 2018 (commit `4985d37cefc4d4cd339cf73f507c91eaca4c4bb8`):
  * Added "Reasonable Drops" Variant, suffixed original with "Lootsplosion"
@@ -408,6 +408,5 @@ Changelog
    `set` commands
  * Fixed the "Shields" loot configuration on Digistruct Peak Dahl chests
 
-**v1.1.1**, (tbd):
- * Fixed unlocking early-game elements for Maliwan Aquamarine Snipers on Windows
-
+**v1.0.0**, February 26, 2018 (commit `45e70cdc7982ac22715955e5ffb9e3f5963601c7`):
+ * Initial public release
