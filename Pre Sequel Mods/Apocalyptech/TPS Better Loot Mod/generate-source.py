@@ -164,11 +164,10 @@ class ConfigLootsplosion(ConfigBase):
     treasure_base_legendary = '5'
 
     # Drop rates for "epic" treasure chests
-    epic_base_common = zero
     epic_base_uncommon = zero
     epic_base_rare = zero
-    epic_base_veryrare = '1'
-    epic_base_glitch = '1'
+    epic_base_veryrare = '1.2'
+    epic_base_glitch = '.8'
     epic_base_legendary = '0.3'
     epic_base_legendary_dbl = '0.6'
 
@@ -883,6 +882,28 @@ for idx, (container, pool) in enumerate(containers):
             ))
 #hfs.add_level_hotfix('cjtestmeteor', 'meteor', ",GD_Meteorites.Projectiles.Projectile_Meteorite:BehaviorProviderDefinition_0.Behavior_SpawnFromPopulationSystem_123.PopulationFactoryPopulationDefinition_1,PopulationDef,,PopulationDefinition'GD_Meteorites.Population.Pop_Meteorite_LootPile_Chest'")
 #hfs.add_level_hotfix('cjtestmeteor2', 'meteor', ",GD_Meteorites.Projectiles.Projectile_Meteorite:BehaviorProviderDefinition_0.Behavior_SpawnFromPopulationSystem_124.PopulationFactoryPopulationDefinition_0,PopulationDef,,PopulationDefinition'GD_Meteorites.Population.Pop_Meteorite_LootPile_Chest'")
+
+# Chest Overload
+#cur_y = 29010
+#yaw = '8192'
+#chest_type = 'GD_Population_Treasure.TreasureChests.EpicChest_Dahl_Respawning'
+#for idx, point in enumerate([31, 32, 33, 34, 35, 36, 37, 20, 22, 24, 25, 26]):
+#    hfs.add_level_hotfix('moonstonenew{}type'.format(idx),
+#        'mooonstoneloc',
+#        "DahlFactory_Boss,DahlFactory_BossDynamic.TheWorld:PersistentLevel.PopulationOpportunityPoint_{},PopulationDef,,PopulationDefinition'{}'".format(point, chest_type))
+#    hfs.add_level_hotfix('moonstonenew{}x'.format(idx),
+#        'mooonstoneloc',
+#        'DahlFactory_Boss,DahlFactory_BossDynamic.TheWorld:PersistentLevel.PopulationOpportunityPoint_{},Location.X,,-16778'.format(point))
+#    hfs.add_level_hotfix('moonstonenew{}y'.format(idx),
+#        'mooonstoneloc',
+#        'DahlFactory_Boss,DahlFactory_BossDynamic.TheWorld:PersistentLevel.PopulationOpportunityPoint_{},Location.Y,,{}'.format(point, cur_y))
+#    hfs.add_level_hotfix('moonstonenew{}z'.format(idx),
+#        'mooonstoneloc',
+#        'DahlFactory_Boss,DahlFactory_BossDynamic.TheWorld:PersistentLevel.PopulationOpportunityPoint_{},Location.Z,,5920'.format(point))
+#    hfs.add_level_hotfix('moonstonenew{}yaw'.format(idx),
+#        'mooonstoneloc',
+#        'DahlFactory_Boss,DahlFactory_BossDynamic.TheWorld:PersistentLevel.PopulationOpportunityPoint_{},Rotation.Yaw,,{}'.format(point, yaw))
+#    cur_y += 200
 
 # This one causes nearly every enemy to be a badass.
 #hfs.add_level_hotfix('badasses', 'Badass',

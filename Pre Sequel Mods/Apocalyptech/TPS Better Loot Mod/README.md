@@ -22,6 +22,8 @@ Mod Overview
   those legendaries/uniques far more frequently than in vanilla TPS.
 * Glitch weapons spawn in the main game
 * Lootable Container Changes:
+  * "Epic" treasure chests have an extremely high probability of dropping
+    from the legendary pools.
   * Fixes some "shield" loot configurations which had an error and would
     nver spawn, previously.
 * Makes Moonstones drop 2x more often
