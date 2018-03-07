@@ -51,7 +51,7 @@ except ModuleNotFoundError:
 ###
 
 mod_name = 'BL2 Better Loot Mod'
-mod_version = '1.1.1 (prerelease)'
+mod_version = '1.1.1'
 variant_ucp = 'UCP Compat'
 variant_standalone = 'Standalone'
 variant_offline = 'Standalone Offline'
@@ -540,6 +540,44 @@ force_gunsandgear_specific_name = 'GD_Orchid_BossWeapons.RPG.Ahab.Orchid_Boss_Ah
 ### Hotfixes; these are handled a little differently than everything
 ### else.
 ###
+
+# Early-game loot unlocks.  Except for this one specific case (Aquamarine Snipers),
+# this can be done with `set` statements, so you'll see all those in mod-input-file.txt.
+# This one has to be hotfixed to be fully cross-platform compatible, and predictable.
+hfs.add_level_hotfix('part_early_game_fix_0',
+        'PartEarlyGameFix',
+        """,GD_Aster_Weapons.Snipers.SR_Maliwan_4_Aquamarine:WeaponPartListCollectionDefinition_306,
+        ElementalPartData.WeightedParts,,
+        (
+            (
+                Part=WeaponPartDefinition'GD_Weap_SniperRifles.elemental.SR_Elemental_Fire',
+                Manufacturers=,
+                MinGameStageIndex=0,
+                MaxGameStageIndex=1,
+                DefaultWeightIndex=2
+            ),
+            (
+                Part=WeaponPartDefinition'GD_Weap_SniperRifles.elemental.SR_Elemental_Shock',
+                Manufacturers=,
+                MinGameStageIndex=0,
+                MaxGameStageIndex=1,
+                DefaultWeightIndex=2
+            ),
+            (
+                Part=WeaponPartDefinition'GD_Weap_SniperRifles.elemental.SR_Elemental_Corrosive',
+                Manufacturers=,
+                MinGameStageIndex=0,
+                MaxGameStageIndex=1,
+                DefaultWeightIndex=2
+            ),
+            (
+                Part=WeaponPartDefinition'GD_Weap_SniperRifles.elemental.SR_Elemental_Slag',
+                Manufacturers=,
+                MinGameStageIndex=0,
+                MaxGameStageIndex=1,
+                DefaultWeightIndex=2
+            )
+        )""")
 
 # Remove bias for dropping Pistols in the main game.  Also buffs drop rates
 # for snipers and launchers, though it does not bring them up to the level
