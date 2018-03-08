@@ -24,8 +24,9 @@ Mod Overview
 * Lootable Container Changes:
   * "Epic" treasure chests have an extremely high probability of dropping
     from the legendary pools.
+  * Moonstone chests are guaranteed to contain legendary loot.
   * Fixes some "shield" loot configurations which had an error and would
-    nver spawn, previously.
+    never spawn, previously.
 * Makes Moonstones drop 2x more often
 * Luneshine weapons will drop in all world drop pools (this is identical
   to some functionality in UCP)
@@ -60,6 +61,8 @@ TODO
 * Check legendary drop pools
 * Legendary COM pool seems to be almost entirely Celestial.  Occasionally
   Chronicler, and no Eridian Vanquishers.  Figure that out.
+* Maybe decrease Moonstone chest cost in exchange for not doing guaranteed
+  legendaries on it?  Mull it over.
 
 Credits
 -------

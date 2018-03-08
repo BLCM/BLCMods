@@ -905,6 +905,8 @@ if False:
     level = 'DahlFactory_Boss'
     object_base = 'DahlFactory_BossDynamic.TheWorld:PersistentLevel.PopulationOpportunityPoint'
     points = [31, 32, 33, 34, 35, 36, 37, 20, 22, 24, 25, 26]
+    hfs.add_level_hotfix('moonstonecost', 'moonstonecost',
+        ',GD_Balance_Treasure.InteractiveObjects.InteractiveObj_TreasureChest_Moonstone:BehaviorProviderDefinition_1.Behavior_SetUsabilityCost_46,CostAmount,,0')
 if False:
     # Cluster Pandora.  These are actually by the level exit, and are fairly amusingly
     # tilted, since all we correct is yaw.
