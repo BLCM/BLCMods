@@ -1349,37 +1349,11 @@ for idx, point in enumerate(points):
         '{},{}_{},Rotation.Yaw,,{}'.format(level, object_base, point, yaw))
     cur_y += y_inc
 
-# This one causes nearly every enemy to be a badass.
-#hfs.add_level_hotfix('badasses', 'Badass',
-#    """,GD_Balance.WeightingPlayerCount.Enemy_MajorUpgrade_PerPlayer,ConditionalInitialization,,
-#    (
-#        bEnabled=True,
-#        ConditionalExpressionList=(
-#            (
-#                BaseValueIfTrue=(
-#                    BaseValueConstant=500.000000,
-#                    BaseValueAttribute=None,
-#                    InitializationDefinition=None,
-#                    BaseValueScaleConstant=20.000000
-#                ),
-#                Expressions=(
-#                    (
-#                        AttributeOperand1=AttributeDefinition'D_Attributes.GameProperties.NumberOfPlayers',
-#                        ComparisonOperator=OPERATOR_LessThanOrEqual,
-#                        Operand2Usage=OPERAND_PreferAttribute,
-#                        AttributeOperand2=None,
-#                        ConstantOperand2=4.000000
-#                    )
-#                )
-#            )
-#        ),
-#        DefaultBaseValue=(
-#            BaseValueConstant=0.000000,
-#            BaseValueAttribute=None,
-#            InitializationDefinition=None,
-#            BaseValueScaleConstant=1.000000
-#        )
-#    )""")
+# Badass scavs (at least in the Outlands)
+#hfs.add_level_hotfix('badasses0', 'Badass',
+#    ',GD_Population_Scavengers.Mixes.PopDef_ScavGroundMix_Outlands,ActorArchetypeList[3].Probability.BaseValueConstant,,500000')
+#hfs.add_level_hotfix('badasses1', 'Badass',
+#    ',GD_Population_Scavengers.Mixes.PopDef_ScavGroundMix_Outlands,ActorArchetypeList[3].MaxActiveAtOneTime.BaseValueConstant,,500000')
 
 # This makes nearly every SpiderAnt be Chubby -- similar techniques
 # could be used to change enemy type rates in general
