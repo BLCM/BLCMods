@@ -45,6 +45,8 @@ Mod Overview
   actually tested yet)*
 * Fixes/Changes to some enemies' drop poools:
   * Badass loot drops have been improved
+  * Chubby drop pool has been improved.  *(Though the only chubbies in the
+    game are Stalkers, so it's sort of hardly worth it.)*
 * Remove early-game loot restrictions.  *(work in progress)*
 
 Compatibility

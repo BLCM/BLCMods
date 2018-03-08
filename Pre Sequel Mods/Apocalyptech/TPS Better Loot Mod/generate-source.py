@@ -1355,10 +1355,13 @@ for idx, point in enumerate(points):
 #hfs.add_level_hotfix('badasses1', 'Badass',
 #    ',GD_Population_Scavengers.Mixes.PopDef_ScavGroundMix_Outlands,ActorArchetypeList[3].MaxActiveAtOneTime.BaseValueConstant,,500000')
 
-# This makes nearly every SpiderAnt be Chubby -- similar techniques
-# could be used to change enemy type rates in general
-#hfs.add_level_hotfix('chubbies', 'ChubbySpawn',
-#    ',GD_Population_SpiderAnt.Population.PopDef_SpiderantMix_Regular,ActorArchetypeList[9].Probability.BaseValueConstant,,1000')
+# Chubby Stalkers (these are the only chubby types in TPS, it seems)
+#hfs.add_level_hotfix('chubbies1', 'ChubbySpawn',
+#    ',GD_Population_Stalker.Mixes.PopDef_StalkerMix_Ambush,ActorArchetypeList[2].Probability.BaseValueConstant,,10000')
+#hfs.add_level_hotfix('chubbies2', 'ChubbySpawn',
+#    ',GD_Population_Stalker.Mixes.PopDef_StalkerMix_Needle,ActorArchetypeList[1].Probability.BaseValueConstant,,10000')
+#hfs.add_level_hotfix('chubbies3', 'ChubbySpawn',
+#    ',GD_Population_Stalker.Mixes.PopDef_StalkerMix_Spring,ActorArchetypeList[1].Probability.BaseValueConstant,,10000')
 
 ###
 ### Everything below this point is constructing the actual patch file
