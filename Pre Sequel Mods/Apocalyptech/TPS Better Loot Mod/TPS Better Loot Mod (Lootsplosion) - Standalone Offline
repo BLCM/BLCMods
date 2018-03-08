@@ -663,6 +663,21 @@
 
             #</X-STLK-23>
 
+            #<5H4D0W-TP>
+
+                set GD_Itempools.Runnables.Pool_FakeShadowTP_Marigold Quantity (BaseValueConstant=2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+
+            #</5H4D0W-TP>
+
+            #<5H4D0W-TP (probably unused)>
+
+                # I'm pretty sure this pool isn't actually used anywhere, but I'm
+                # bumping the quantity just in case.
+
+                set GD_Itempools.Runnables.Pool_ShadowTP_Marigold Quantity (BaseValueConstant=2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+
+            #</5H4D0W-TP (probably unused)>
+
         #</Boss Drop Improved Quantities>
 
         #<Boss Drop Normalization>
@@ -690,6 +705,20 @@
             #</Final Boss (raid)>
 
         #</Boss Drop Normalization>
+
+        #<Regular Enemy Drop Improvements>
+
+            #<Claptastic Voyage Legendary Drop Rates>
+
+                # Some enemies from the Claptastic Voyage DLC have the chance to drop
+                # a unique legendary, at a default drop rate of 0.1%.  We're going to
+                # bump that up a little bit.
+
+                set GD_Ma_ItemPools.DropWeights.DropODDS_RareDropLegendary_Marigold:ConstantAttributeValueResolver_0 ConstantValue .015 
+
+            #</Claptastic Voyage Legendary Drop Rates>
+
+        #</Regular Enemy Drop Improvements>
 
     #</Better Enemy Drops>
 
