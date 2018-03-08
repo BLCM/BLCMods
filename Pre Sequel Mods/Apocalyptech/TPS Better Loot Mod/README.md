@@ -29,7 +29,7 @@ Mod Overview
 * Makes Moonstones drop 2x more often
 * Lootable Container Changes:
   * "Regular" treasure chests will always provide at least blue-rarity gear,
-    and has a decent chance of including stuff from the legendary pools.
+    and have a decent chance of including stuff from the legendary pools.
   * "Epic" treasure chests have an extremely high probability of dropping
     from the legendary pools.
   * Moonstone chests are guaranteed to contain legendary loot.
@@ -90,13 +90,17 @@ left alone:
 * Dumpsters
 * etc...
 
+Some other stuff not done:
+
+* This mod won't touch the Grinder.  No point, really, given the rest of
+  the mod, and there are plenty of other mods out there which already
+  do that.
+
 TODO
 ----
 
 * Check legendary drop pools
 * Check boss unique drops
-* Legendary COM pool seems to be almost entirely Celestial.  Occasionally
-  Chronicler, and no Eridian Vanquishers.  Figure that out.
 * Maybe decrease Moonstone chest cost in exchange for not doing guaranteed
   legendaries on it?  Mull it over.
 * Check Lootbug drops
