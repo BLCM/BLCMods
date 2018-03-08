@@ -171,6 +171,14 @@ class ConfigLootsplosion(ConfigBase):
     epic_base_legendary = '0.3'
     epic_base_legendary_dbl = '0.6'
 
+    # Drop rates for Glitched Epic treasure chests.  This is basically just
+    # the same as regular, but with increased probabilities for Glitch.
+    epic_glitch_base_uncommon = zero
+    epic_glitch_base_rare = zero
+    epic_glitch_base_veryrare = '.9'
+    epic_glitch_base_glitch = '1.1'
+    epic_glitch_base_legendary_dbl = '0.6'
+
     # Badass pool probabilities (NOTE: these are *not* weights)
     badass_pool_veryrare = '0.4'
     badass_pool_glitch = '0.4'
@@ -884,26 +892,45 @@ for idx, (container, pool) in enumerate(containers):
 #hfs.add_level_hotfix('cjtestmeteor2', 'meteor', ",GD_Meteorites.Projectiles.Projectile_Meteorite:BehaviorProviderDefinition_0.Behavior_SpawnFromPopulationSystem_124.PopulationFactoryPopulationDefinition_0,PopulationDef,,PopulationDefinition'GD_Meteorites.Population.Pop_Meteorite_LootPile_Chest'")
 
 # Chest Overload
-#cur_y = 29010
-#yaw = '8192'
-#chest_type = 'GD_Population_Treasure.TreasureChests.EpicChest_Dahl_Respawning'
-#for idx, point in enumerate([31, 32, 33, 34, 35, 36, 37, 20, 22, 24, 25, 26]):
-#    hfs.add_level_hotfix('moonstonenew{}type'.format(idx),
-#        'mooonstoneloc',
-#        "DahlFactory_Boss,DahlFactory_BossDynamic.TheWorld:PersistentLevel.PopulationOpportunityPoint_{},PopulationDef,,PopulationDefinition'{}'".format(point, chest_type))
-#    hfs.add_level_hotfix('moonstonenew{}x'.format(idx),
-#        'mooonstoneloc',
-#        'DahlFactory_Boss,DahlFactory_BossDynamic.TheWorld:PersistentLevel.PopulationOpportunityPoint_{},Location.X,,-16778'.format(point))
-#    hfs.add_level_hotfix('moonstonenew{}y'.format(idx),
-#        'mooonstoneloc',
-#        'DahlFactory_Boss,DahlFactory_BossDynamic.TheWorld:PersistentLevel.PopulationOpportunityPoint_{},Location.Y,,{}'.format(point, cur_y))
-#    hfs.add_level_hotfix('moonstonenew{}z'.format(idx),
-#        'mooonstoneloc',
-#        'DahlFactory_Boss,DahlFactory_BossDynamic.TheWorld:PersistentLevel.PopulationOpportunityPoint_{},Location.Z,,5920'.format(point))
-#    hfs.add_level_hotfix('moonstonenew{}yaw'.format(idx),
-#        'mooonstoneloc',
-#        'DahlFactory_Boss,DahlFactory_BossDynamic.TheWorld:PersistentLevel.PopulationOpportunityPoint_{},Rotation.Yaw,,{}'.format(point, yaw))
-#    cur_y += 200
+points = []
+if False:
+    # Titan Robot Production Factory
+    x = -16778
+    z = 5920
+    cur_y = 29010
+    y_inc = 200
+    yaw = '8192'
+    #chest_type = 'GD_Population_Treasure.TreasureChests.EpicChest_Dahl_Respawning'
+    chest_type = 'GD_Population_Treasure.TreasureChests.EpicChest_Moonstone'
+    level = 'DahlFactory_Boss'
+    object_base = 'DahlFactory_BossDynamic.TheWorld:PersistentLevel.PopulationOpportunityPoint'
+    points = [31, 32, 33, 34, 35, 36, 37, 20, 22, 24, 25, 26]
+if False:
+    # Cluster Pandora.  These are actually by the level exit, and are fairly amusingly
+    # tilted, since all we correct is yaw.
+    x = 4046
+    z = 2650
+    cur_y = -22208
+    y_inc = 250
+    yaw = '0'
+    chest_type = 'GD_Ma_Population_Treasure.TreasureChests.EpicChest_Red_Glitched'
+    level = 'Ma_LeftCluster_P'
+    object_base = 'Ma_LeftCluster_Combat.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint'
+    points = [0, 1, 10, 100, 101, 103, 104]
+
+# Generate
+for idx, point in enumerate(points):
+    hfs.add_level_hotfix('chestnew{}type'.format(idx), 'chestloc',
+        "{},{}_{},PopulationDef,,PopulationDefinition'{}'".format(level, object_base, point, chest_type))
+    hfs.add_level_hotfix('chestnew{}x'.format(idx), 'chestloc',
+        '{},{}_{},Location.X,,{}'.format(level, object_base, point, x))
+    hfs.add_level_hotfix('chestnew{}y'.format(idx), 'chestloc',
+        '{},{}_{},Location.Y,,{}'.format(level, object_base, point, cur_y))
+    hfs.add_level_hotfix('chestnew{}z'.format(idx), 'chestloc',
+        '{},{}_{},Location.Z,,{}'.format(level, object_base, point, z))
+    hfs.add_level_hotfix('chestnew{}yaw'.format(idx), 'chestloc',
+        '{},{}_{},Rotation.Yaw,,{}'.format(level, object_base, point, yaw))
+    cur_y += y_inc
 
 # This one causes nearly every enemy to be a badass.
 #hfs.add_level_hotfix('badasses', 'Badass',
