@@ -831,6 +831,19 @@ for (idx, (classname, propname, loot_idx, attachment_idx)) in enumerate([
             attachment_idx,
             ))
 
+# Locker drop tweaks.  This could be done via `set` but using a hotfix lets us
+# be much more concise.
+hfs.add_level_hotfix('locker_loot_shield',
+    'LockerLoot',
+    """,GD_Itempools.ListDefs.StorageLockerLoot,
+    LootData[4].ItemAttachments[0].ItemPool,,
+    ItemPoolDefinition'GD_Itempools.ShieldPools.Pool_Shields_All_04_Rare'""")
+hfs.add_level_hotfix('locker_loot_grenade',
+    'LockerLoot',
+    """,GD_Itempools.ListDefs.StorageLockerLoot,
+    LootData[5].ItemAttachments[1].ItemPool,,
+    ItemPoolDefinition'GD_Itempools.GrenadeModPools.Pool_GrenadeMods_04_Rare'""")
+
 ###
 ### Testing hotfixes, not really intended to be used for real.  These
 ### aren't referenced in the body of the mod, so they'll only activate

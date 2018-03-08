@@ -29,6 +29,9 @@ Mod Overview
   * Moonstone chests are guaranteed to contain legendary loot.
   * Fixes some "shield" loot configurations which had an error and would
     never spawn, previously.
+  * When lockers spawn gear, they will always be blue-rarity.  *(Previously
+    lockers had a chance to spawn even legendaries, so some could potentially
+    see this as a drawback)*
 * Makes Moonstones drop 2x more often
 * Luneshine weapons will drop in all world drop pools (this is identical
   to some functionality in UCP)

@@ -421,6 +421,21 @@
 
         #</Better Regular Chests>
 
+        #<Better Lockers>
+
+            # Any gear dropped by lockers will always be Blue rarity.  This could
+            # technically be seen as a bit of a nerf given the rest of this mod, since
+            # lockers could previously drop legendaries if you were lucky enough, but
+            # I like the blue locker loot thing.
+
+            set GD_Itempools.LootablePools.Pool_Locker_Items_SMGsAndPistols BalancedItems ((ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_Pistols_04_Rare',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_2_Uncommon',BaseValueScaleConstant=1.000000),bDropOnDeath=False),(ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_SMG_04_Rare',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_3_Uncommoner',BaseValueScaleConstant=1.000000),bDropOnDeath=True))
+
+            #<hotfix><key>"SparkLevelPatchEntry-ApocLockerLoot0"</key><value>",GD_Itempools.ListDefs.StorageLockerLoot,LootData[4].ItemAttachments[0].ItemPool,,ItemPoolDefinition'GD_Itempools.ShieldPools.Pool_Shields_All_04_Rare'"</value><on>
+
+            #<hotfix><key>"SparkLevelPatchEntry-ApocLockerLoot1"</key><value>",GD_Itempools.ListDefs.StorageLockerLoot,LootData[5].ItemAttachments[1].ItemPool,,ItemPoolDefinition'GD_Itempools.GrenadeModPools.Pool_GrenadeMods_04_Rare'"</value><on>
+
+        #</Better Lockers>
+
         #<Fix Broken Shield Pools>
 
             # Various chests in the game have a possible "Shields" item pool which will
