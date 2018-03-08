@@ -96,6 +96,8 @@ TODO
 * I suspect that most everything that drops from the `UltimateBadassEnemyGunsAndGear`
   pool does so multiple times; we may want to nerf that a bit, or see about
   limiting the number of spawns for the more extreme enemies.
+* Early Game Unlocks
+* Weapon type normalization (de-emphasize pistols)?
 
 Credits
 -------

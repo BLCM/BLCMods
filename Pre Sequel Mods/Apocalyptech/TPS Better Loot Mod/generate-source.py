@@ -274,7 +274,7 @@ loot_drop_chance_4p_alt = '0.100000'    # Stock: 0.050000
 # Force Pool_GunsAndGear to always drop the specified pool, if `force_gunsandgear_drop`
 # is True.  Useful for testing out how individual pools are behaving.
 force_gunsandgear_drop = False
-force_gunsandgear_drop_type = 'GD_Itempools.WeaponPools.Pool_Weapons_All'
+force_gunsandgear_drop_type = 'GD_Itempools.MoonItemPools.Pool_MoonItem_All'
 
 # Force Pool_GunsAndGear to always drop the specified item, if
 # `force_gunsandgear_specific` is True.  Useful for seeing what exactly an
@@ -1222,6 +1222,37 @@ hfs.add_level_hotfix('final_boss_raid_norm_0', 'FinalBossLootNorm',
     ',GD_Itempools.Runnables.Pool_FinalBossRaid_Head,BalancedItems[0].Probability.InitializationDefinition,,None')
 hfs.add_level_hotfix('final_boss_raid_norm_1', 'FinalBossLootNorm',
     ',GD_Itempools.Runnables.Pool_FinalBossRaid_Head,BalancedItems[1].Probability.InitializationDefinition,,None')
+
+# Various grenade mod early unlocks.  These actually don't have to be
+# hotfixes, but doing so lets us be much more concise.
+for (gm_type, man_count) in [
+            ('AreaEffect', 1),
+            ('BouncingBetty', 2),
+            ('Mirv', 2),
+            ('Singularity', 1),
+            ('Transfusion', 1),
+        ]:
+    for man_num in range(man_count):
+        hfs.add_level_hotfix('grenade_{}_{}_0'.format(gm_type, man_num),
+            'Grenade{}Man{}Rarity'.format(gm_type, man_num),
+            ',GD_GrenadeMods.A_Item.GM_{},Manufacturers[{}].Grades[0].GameStageRequirement.MinGameStage,,0'.format(
+                gm_type, man_num,
+            ))
+        hfs.add_level_hotfix('grenade_{}_{}_1'.format(gm_type, man_num),
+            'Grenade{}Man{}Rarity'.format(gm_type, man_num),
+            ',GD_GrenadeMods.A_Item.GM_{}_2_Uncommon,Manufacturers[{}].Grades[0].GameStageRequirement.MinGameStage,,0'.format(
+                gm_type, man_num,
+            ))
+        hfs.add_level_hotfix('grenade_{}_{}_2'.format(gm_type, man_num),
+            'Grenade{}Man{}Rarity'.format(gm_type, man_num),
+            ',GD_GrenadeMods.A_Item.GM_{}_3_Rare,Manufacturers[{}].Grades[0].GameStageRequirement.MinGameStage,,0'.format(
+                gm_type, man_num,
+            ))
+        hfs.add_level_hotfix('grenade_{}_{}_3'.format(gm_type, man_num),
+            'Grenade{}Man{}Rarity'.format(gm_type, man_num),
+            ',GD_GrenadeMods.A_Item.GM_{}_4_VeryRare,Manufacturers[{}].Grades[0].GameStageRequirement.MinGameStage,,0'.format(
+                gm_type, man_num,
+            ))
 
 ###
 ### Testing hotfixes, not really intended to be used for real.  These
