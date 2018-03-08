@@ -51,6 +51,9 @@ Mod Overview
   * Badass loot drops have been improved
   * Chubby drop pool has been improved.  *(Though the only chubbies in the
     game are Stalkers, so it's sort of hardly worth it.)*
+  * Many enemies from the Claptastic Voyage DLC have a unique legendary drop
+    associated with them, with a default drop rate of 0.1%.  This mod ups that
+    probability to 1.5%.
 * Remove early-game loot restrictions.  *(work in progress)*
 
 Compatibility
