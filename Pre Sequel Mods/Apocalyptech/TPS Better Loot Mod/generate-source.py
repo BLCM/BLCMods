@@ -1213,6 +1213,16 @@ hfs.add_level_hotfix('better_safes', 'BetterSafes',
     )
     """)
 
+# Normalization of one of the final boss drop pools
+hfs.add_level_hotfix('final_boss_norm_0', 'FinalBossLootNorm',
+    ',GD_Itempools.Runnables.Pool_FinalBoss_Head,BalancedItems[0].Probability.InitializationDefinition,,None')
+hfs.add_level_hotfix('final_boss_norm_1', 'FinalBossLootNorm',
+    ',GD_Itempools.Runnables.Pool_FinalBoss_Head,BalancedItems[1].Probability.InitializationDefinition,,None')
+hfs.add_level_hotfix('final_boss_raid_norm_0', 'FinalBossLootNorm',
+    ',GD_Itempools.Runnables.Pool_FinalBossRaid_Head,BalancedItems[0].Probability.InitializationDefinition,,None')
+hfs.add_level_hotfix('final_boss_raid_norm_1', 'FinalBossLootNorm',
+    ',GD_Itempools.Runnables.Pool_FinalBossRaid_Head,BalancedItems[1].Probability.InitializationDefinition,,None')
+
 ###
 ### Testing hotfixes, not really intended to be used for real.  These
 ### aren't referenced in the body of the mod, so they'll only activate

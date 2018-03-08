@@ -21,6 +21,12 @@ Mod Overview
 * Loot will skew much more rare, in general.  You should expect to see
   those legendaries/uniques far more frequently than in vanilla TPS.
 * Glitch weapons spawn in the main game
+* Luneshine weapons will drop in all world drop pools (this is identical
+  to some functionality in UCP)
+* Legendary/Unique weapons are guaranteed to have Luneshine, unless
+  they have specific custom accessories in that slot (ie: Marek's Mouth,
+  Cry Baby, Longnail, Heartfull Splodger, and Cutie Killer)
+* Makes Moonstones drop 2x more often
 * Lootable Container Changes:
   * "Regular" treasure chests will always provide at least blue-rarity gear,
     and has a decent chance of including stuff from the legendary pools.
@@ -35,14 +41,12 @@ Mod Overview
     somewhat, but gear from safes will always be legendary.
   * Fixes some "shield" loot configurations which had an error and would
     never spawn, previously.
-* Makes Moonstones drop 2x more often
-* Luneshine weapons will drop in all world drop pools (this is identical
-  to some functionality in UCP)
-* Legendary/Unique weapons are guaranteed to have Luneshine, unless
-  they have specific custom accessories in that slot (ie: Marek's Mouth,
-  Cry Baby, Longnail, Heartfull Splodger, and Cutie Killer)
-* Bosses are guaranteed to drop from their unique drop pools *(not
-  actually tested yet)*
+* Boss drop pools are generally improved, and bosses are guaranteed to drop as
+  many items from their unique drop pool as are in that pool. *(needs testing)*
+  * Bosses with just a single unique drop will therefore be guaranteed to drop
+    that item.
+  * If a boss has more than one in their drop pool, you may get duplicates
+    of one rather than one of each.
 * Fixes/Changes to some enemies' drop poools:
   * Badass loot drops have been improved
   * Chubby drop pool has been improved.  *(Though the only chubbies in the
@@ -80,6 +84,7 @@ TODO
 ----
 
 * Check legendary drop pools
+* Check boss unique drops
 * Legendary COM pool seems to be almost entirely Celestial.  Occasionally
   Chronicler, and no Eridian Vanquishers.  Figure that out.
 * Maybe decrease Moonstone chest cost in exchange for not doing guaranteed
