@@ -22,6 +22,8 @@ Mod Overview
   those legendaries/uniques far more frequently than in vanilla TPS.
 * Glitch weapons spawn in the main game
 * Lootable Container Changes:
+  * "Regular" treasure chests will always provide at least blue-rarity gear,
+    and has a decent chance of including stuff from the legendary pools.
   * "Epic" treasure chests have an extremely high probability of dropping
     from the legendary pools.
   * Moonstone chests are guaranteed to contain legendary loot.
@@ -63,6 +65,7 @@ TODO
   Chronicler, and no Eridian Vanquishers.  Figure that out.
 * Maybe decrease Moonstone chest cost in exchange for not doing guaranteed
   legendaries on it?  Mull it over.
+* Check Lootbug drops
 
 Credits
 -------

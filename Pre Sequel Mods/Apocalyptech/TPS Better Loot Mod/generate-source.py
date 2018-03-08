@@ -158,9 +158,9 @@ class ConfigLootsplosion(ConfigBase):
     # Drop rates for "regular" treasure chests
     treasure_base_common = zero
     treasure_base_uncommon = zero
-    treasure_base_rare = '20'
+    treasure_base_rare = '30'
     treasure_base_veryrare = '60'
-    treasure_base_glitch = '30'
+    treasure_base_glitch = '15'
     treasure_base_legendary = '5'
 
     # Drop rates for "epic" treasure chests
@@ -919,6 +919,28 @@ if False:
     level = 'Ma_LeftCluster_P'
     object_base = 'Ma_LeftCluster_Combat.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint'
     points = [0, 1, 10, 100, 101, 103, 104]
+if False:
+    # Cluster Overlook.  Over by the level exit.
+    x = 47326
+    z = 453
+    cur_y = 2562
+    y_inc = 250
+    yaw = '16384'
+    chest_type = 'GD_Ma_Population_Treasure.TreasureChests.EpicChest_Hyperion_Glitched'
+    level = 'Ma_RightCluster_P'
+    object_base = 'Ma_RightCluster_Combat.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint'
+    points = [0, 1, 10, 100, 101, 102, 103, 104]
+if False:
+    # Outlands Canyon
+    x = -15766
+    z = -1252
+    cur_y = 51197
+    y_inc = 200
+    yaw = '33664'
+    chest_type = 'GD_Population_Treasure.TreasureChests.WeaponChest_BanditPotty'
+    level = 'Outlands_P2'
+    object_base = 'Outlands_P2.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint'
+    points = [1, 10, 11, 12, 13, 15, 2, 21, 22]
 
 # Generate
 for idx, point in enumerate(points):
