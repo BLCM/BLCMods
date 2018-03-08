@@ -27,11 +27,14 @@ Mod Overview
   * "Epic" treasure chests have an extremely high probability of dropping
     from the legendary pools.
   * Moonstone chests are guaranteed to contain legendary loot.
-  * Fixes some "shield" loot configurations which had an error and would
-    never spawn, previously.
   * When lockers spawn gear, they will always be blue-rarity.  *(Previously
     lockers had a chance to spawn even legendaries, so some could potentially
     see this as a drawback)*
+  * Safes have been improved: Eridium configurations are far more likely, cash
+    quantities have been improved.  Gear drop chances have been dropped
+    somewhat, but gear from safes will always be legendary.
+  * Fixes some "shield" loot configurations which had an error and would
+    never spawn, previously.
 * Makes Moonstones drop 2x more often
 * Luneshine weapons will drop in all world drop pools (this is identical
   to some functionality in UCP)
@@ -59,6 +62,15 @@ easily persuaded otherwise if someone feels strongly about it.
 * Cracked Sash (Shield)
 * Contraband Sky Rocket grenade *can* spawn, but has a much decreased
   chance compared to all the other legendaries.
+
+There's also a few drop pools / containers / etc which I've purposefully
+left alone:
+
+* Cash Boxes
+* Ammo Chests
+* Cardboard Boxes
+* Dumpsters
+* etc...
 
 TODO
 ----
