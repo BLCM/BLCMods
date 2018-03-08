@@ -54,7 +54,14 @@ Mod Overview
   * Many enemies from the Claptastic Voyage DLC have a unique legendary drop
     associated with them, with a default drop rate of 0.1%.  This mod ups that
     probability to 1.5%.
-* Remove early-game loot restrictions.  *(work in progress)*
+* Remove early-game loot restrictions.  This is actually a superset of the
+  similar feature already present in UCP 2.1.  This version enables spawning
+  of basically everything from the beginning, including all grenade types,
+  oz kits, class mods, rocket launchers, etc.  Both this and the UCP 2.1
+  "Make good stuff drop earlier" mods can be active at the same time with
+  no ill effects.  Note that if you *don't* have either this or UCP
+  enabled on your game, the early game will end up dropping *no* gear, due
+  to our rarity changes.
 
 Compatibility
 -------------
@@ -96,7 +103,6 @@ TODO
 * I suspect that most everything that drops from the `UltimateBadassEnemyGunsAndGear`
   pool does so multiple times; we may want to nerf that a bit, or see about
   limiting the number of spawns for the more extreme enemies.
-* Early Game Unlocks
 * Weapon type normalization (de-emphasize pistols)?
 
 Credits
