@@ -137,14 +137,16 @@ compatibility issues:
 * As mentioned above, our `Remove Level-Based Loot Restrictions` folder is a
   superset of UCP's `Patch 1.0 -> Make good stuff drop earlier` folder.  There are
   no problems with having both enabled, though -- they play nicely together.
-* UCP's `Patch 2.0 -> Loot changes 2.0 -> Make Rosie available in First Playthrough.
-  Make the Head available in all playthroughs` interacts a bit oddly with our changes
-  there -- you'll end up getting two head drops, and will get the Rosie as a mission
-  reward rather than a drop.  Not a big deal, so I'm not going to do a compat hotfix
-  for that.
 * This mod's `Loot Pool Tweaks -> Luneshine Drops -> Enable Luneshine in World drops`
   is a duplicate of UCP's `Patch 2.1 -> 2.1 Optionals -> Make Luneshines Appear in
   the Wild`.  There's no problem with having both enabled.
+* This mod will make most of the additional loot drops specified in UCP's `Patch 2.0 ->
+  Loot changes 2.0` guaranteed drops.  Additionally:
+  * UCP's `Make Rosie available in First Playthrough.  Make the Head available in all
+    playthroughs` interacts a bit oddly with our changes there -- you'll end up getting
+    two head drops, and will get the Rosie as a mission reward rather than a drop.
+  * Boomer will drop a little too much loot in conjunction with
+    `Boomer Removed Cradle of CP1`
 
 ### Other Mods
 
@@ -205,17 +207,12 @@ TODO
   legendaries on it?  Mull it over.
 * Check Lootbug drops
 * I suspect that most everything that drops from the `UltimateBadassEnemyGunsAndGear`
-  pool does so multiple times; we may want to nerf that a bit, or see about
+  pool does so ultiple times; we may want to nerf that a bit, or see about
   limiting the number of spawns for the more extreme enemies.
 * Relatedly, I seem to recall that badasses might be more common in TPS in general,
   may need to nerf that drop pool a bit, too.
 * Swagman drop pool - we're altering `GD_Itempools.Runnables.Pool_ScavWastelandWalker`
   but UCP alters `GD_Itempools.Runnables.Pool_ScavBadassSpacemanMidget`...
-* Check on usage of `GD_Itempools.DropWeights.DropODDS_BossUniqueRares` in "regular"
-  enemies, 'cause it seems to be used more frequently in TPS.  Probably will have to
-  nerf some things.
-  * UCP makes further use of this.  See `Loot changes 2.0` for various examples;
-    check for those and maybe put in some compat hotfixes.
 * I've done most of the initial construction of this using my extracted TPS data
   which didn't include Holodome Onslaught, so it's possible I'm missing some stuff
   from there.  Check that out...
