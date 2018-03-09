@@ -1,7 +1,50 @@
 TPS Better Loot Mod by Apocalyptech
 ===================================
 
-Work in progress!
+This mod aims to make loot in The Pre-Sequel "better" in general.  It's
+essentially a cheat mod, intended for those TPS players like myself who
+tend to play in Normal most of the time, dislike grinding, get bored easily
+by the uninteresting and drab loot that typically gets dropped in-game, and
+who often end up just resorting to Gibbed to be able to play around with
+some better gear.  The goal, personally, was to get the loot drops in-game
+to a point where I never felt tempted to open up Gibbed.
+
+This patch is set up to play nicely with FilterTool, and basically
+everything in here can be toggled on or off inside FilterTool as you'd
+hope, on an item-by-item basis.  Basically every bullet point in the
+"Overview" section is its own "folder" once imported into FilterTool.
+
+Usage/Installation
+------------------
+
+The recommended way to use this mod is with FilterTool/UCP.  In FilterTool,
+select `Developer Tools` -> `Add Single Mod` and then select one of these
+two files:
+
+* `TPS Better Loot Mod (Lootsplosion) - UCP Compat` - Default drop weights
+  which I'm personally happy with.  Many folks may find these a bit extreme.
+  This version probably makes more sense in Normal mode than it does in UVHM.
+* *("Reasonable Drops" version will be forthcoming in a bit)*
+
+Once the mod has been added, you'll have a new folder for this mod
+underneath the `mods` folder at the bottom, and can turn parts on or off at
+will.
+
+If for whatever reason you don't want to use FilterTool, there is also
+a standalone version at `TPS Better Loot Mod (*) - Standalone Offline`.
+Simply copy the file into the game's `steamassets/binaries` directory with
+an easy-to-type filename, and then run `exec <filename>` from the console
+to load it on its own.  It works quite well by itself.
+
+The only actual differences between the UCP and Standalone versions are
+that the "Standalone" versions contain all of the original Gearbox hotfix
+data, and set up the hotfix commands for execution by Borderlands, whereas
+the "UCP Compat" version lets FilterTool/UCP take care of that for you.
+The "Offline" in the filename just means that it's using offline-style
+hotfixes, which work better in TPS regardless of whether you're online or
+offline.
+
+All versions are fully FilterTool compatible.
 
 Mod Overview
 ------------
@@ -58,11 +101,55 @@ Mod Overview
   enabled on your game, the early game will end up dropping *no* gear, due
   to our rarity changes.
 
+**NOTE:** I believe that due to our Legendary loot pool changes, Unique
+gear will end up as possible Grinder results when trying to grind for
+legendaries.
+
 Compatibility
 -------------
 
-This'll be interesting - The TPS UCP touches a lot of the same stuff
-that we'll be touching here.  Will figure it out as I go...
+### UCP ###
+
+This mod is mostly compatible with UCP 2.1, even though UCP touches a lot of
+the same objects that this mod does.  Exceptions:
+
+* This mod's `Better Enemy Drops -> Better Chubby Drops` overrides UCP's
+  `Patch 2.1 -> Chubby SpawnRate and Loot -> Addition Of Holodome Com/
+  Holodome gear 60% Random leg 30% to Chubbies`.  Our version is a bit
+  more lootful.
+* This mod's `Better Containers -> Better Moonstone Chests` completely
+  overrides UCP's `Patch 2.1 -> MoonStone chests. Launchers 10% Longguns 5% ,
+  Pistols GM,CoM,Shields 3%`.  Our version guarantees all legendaries.
+
+Some instances where we touch the same objects but there's no real
+compatibility issues:
+
+* UCP improves the legendary pools as part of its Grinder changes -- this
+  mod goes further and adds uniques to those pools as well.  The statements
+  in this mod are supersets of the UCP statements, and shouldn't pose problems
+  (except potentially for the Grinder giving you uniques in addition to
+  legendaries).  Specifically, the following UCP 2.1 folders will get
+  overridden by this mod:
+  * `Patch 1.0` -> `Grinder & world drop changes` -> `Add DLC legendaries to grinder`
+  * `Patch 1.0` -> `Grinder & world drop changes` -> `Add Rerouter & MORQ to grinder and world drops`
+  * `Patch 1.0` -> `Grinder & world drop changes` -> `Add meganade to grinder and world drop`
+  * `Patch 1.0` -> `Grinder & world drop changes` -> `Fix purple spike shields and remove purple from legendary pool`
+* As mentioned above, our `Remove Level-Based Loot Restrictions` folder is a
+  superset of UCP's `Make good stuff drop earlier` folder.  There are no problems
+  with having both enabled, though -- they play nicely together.
+* UCP's `Patch 2.0` -> `Loot changes 2.0` -> `Make Rosie available in First Playthrough.
+  Make the Head available in all playthroughs` interacts a bit oddly with our changes
+  there -- you'll end up getting two head drops, and will get the Rosie as a mission
+  reward rather than a drop.  Not a big deal, so I'm not going to do a compat hotfix
+  for that.
+* This mod's `Loot Pool Tweaks -> Luneshine Drops -> Enable Luneshine in World drops`
+  is a duplicate of UCP's `Patch 2.1 -> 2.1 Optionals -> Make Luneshines Appear in
+  the Wild`.  There's no problem with having both enabled.
+
+### Other Mods
+
+Obviously this mod will conflict with other mods which play with the same
+variables, though I'm not aware of any in specific at the moment.
 
 Loot Purposefully Excluded from Pools
 -------------------------------------
@@ -102,11 +189,17 @@ Other Recommended Mods
   Luneshine, which I appreciate since there's so much more Luneshine in general
   when using this mod -- weapons all look too similar with the vanilla Luneshine
   effect.
+* The UCP 2.1 option `Customs -> makevendorsGreaterAgain` will improve vendor
+  stocks.
 
 TODO
 ----
 
 * Check legendary drop pools
+  * Legendary COMs especially - UCP does some different stuff than we do.  Specifically,
+    their section `Add legendary coms to world drops and grinder` alters some character-
+    specific legendary pools.  Check it out, to see if that's maybe altering the drop
+    probabilities in ways we don't expect.
 * Check boss unique drops
 * Maybe decrease Moonstone chest cost in exchange for not doing guaranteed
   legendaries on it?  Mull it over.
@@ -116,6 +209,39 @@ TODO
   limiting the number of spawns for the more extreme enemies.
 * Relatedly, I seem to recall that badasses might be more common in TPS in general,
   may need to nerf that drop pool a bit, too.
+* Swagman drop pool - we're altering `GD_Itempools.Runnables.Pool_ScavWastelandWalker`
+  but UCP alters `GD_Itempools.Runnables.Pool_ScavBadassSpacemanMidget`...
+* Check on usage of `GD_Itempools.DropWeights.DropODDS_BossUniqueRares` in "regular"
+  enemies, 'cause it seems to be used more frequently in TPS.  Probably will have to
+  nerf some things.
+  * UCP makes further use of this.  See `Loot changes 2.0` for various examples;
+    check for those and maybe put in some compat hotfixes.
+
+Mod Construction / Implementation Details
+-----------------------------------------
+
+I actually generate this mod using a simple little Python script named
+`generate-source.py`, which enables me to do things like set the rarity
+drop levels from a single location at the top of the file, and have it
+apply to a number of different objects throughout the game.  That script
+outputs to a human-readable multiline text file which can't actually be
+read directly by FilterTool/Borderlands -- it must be processed by my
+`conv_to_mod.py` script which you'll find in my BL2 mod directory.
+
+The generation script makes use of `hotfix.py` from my BL2 mod directory.
+You'd need to copy (or symlink, if you're on Mac or Linux) `hotfix.py`
+into this directory in order to run the script.
+
+To generate the end result file, I actually run the small shell script
+`create.sh` in this directory, which effectively just does the following:
+
+    ./generate-source.py && \
+        ../conv_to_mod.py -f "TPS Better Loot Mod (Lootsplosion) - UCP Compat" && \
+        ../conv_to_mod.py -f "TPS Better Loot Mod (Lootsplosion) - Standalone Offline"
+
+*(It's actually slightly more complicated now that I'm exporting multiple
+profiles of the same mod (Lootsplosion vs. Reasonable), but that's basically
+what it does.)*
 
 Credits
 -------
