@@ -20,6 +20,8 @@ Mod Overview
   Marek's Mouth, Cry Baby, Longnail, Heartfull Splodger, Cutie Killer, and
   a handful of others.)
 * Makes Moonstones drop 2x more often
+* Normalizes weapon type drops a bit.  *(Decreases pistol drop chance,
+  increases all other weapon types.)*
 * Lootable Container Changes:
   * "Regular" treasure chests will always provide at least blue-rarity gear,
     and have a decent chance of including stuff from the legendary pools.
@@ -112,7 +114,8 @@ TODO
 * I suspect that most everything that drops from the `UltimateBadassEnemyGunsAndGear`
   pool does so multiple times; we may want to nerf that a bit, or see about
   limiting the number of spawns for the more extreme enemies.
-* Weapon type normalization (de-emphasize pistols)?
+* Relatedly, I seem to recall that badasses might be more common in TPS in general,
+  may need to nerf that drop pool a bit, too.
 
 Credits
 -------

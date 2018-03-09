@@ -237,13 +237,15 @@ class ConfigLootsplosion(ConfigBase):
 
     # Gun Type drop weights.  Note that because these values are going into
     # our hotfix object, these variables *cannot* be successfully overridden
-    # in an extending class.
+    # in an extending class.  These probabilities aren't actually too much
+    # different than the stock ones.
     drop_prob_pistol = 100
     drop_prob_ar = 100
     drop_prob_smg = 100
     drop_prob_shotgun = 100
     drop_prob_sniper = 80
     drop_prob_launcher = 40
+    drop_prob_laser = 80
 
 # The profiles we'll generate
 profiles = [
@@ -292,6 +294,34 @@ force_gunsandgear_specific_names = [
 ### Hotfixes; these are handled a little differently than everything
 ### else.
 ###
+
+# Remove bias for dropping Pistols in the main game.  Also buffs drop rates
+# for snipers, lasers, and launchers, though it does not bring them up to the
+# level of pistols/ARs/SMGs/shotguns.  This could be done with a `set`
+# statement, but this is more concise.
+for (number, rarity) in [
+        ('01', 'Common'),
+        ('02', 'Uncommon'),
+        ('04', 'Rare'),
+        ('05', 'VeryRare'),
+        ('06', 'Legendary'),
+        ]:
+    for (idx, (guntype, gunprob)) in enumerate([
+            ('Pistol', ConfigLootsplosion.drop_prob_pistol),
+            ('AR', ConfigLootsplosion.drop_prob_ar),
+            ('SMG', ConfigLootsplosion.drop_prob_smg),
+            ('Shotgun', ConfigLootsplosion.drop_prob_shotgun),
+            ('Sniper', ConfigLootsplosion.drop_prob_sniper),
+            ('Launcher', ConfigLootsplosion.drop_prob_launcher),
+            ('Laser', ConfigLootsplosion.drop_prob_laser),
+            ]):
+        hfs.add_level_hotfix('normalize_weapon_types_{}_{}'.format(rarity, guntype),
+            'NormWeap{}{}'.format(rarity, guntype),
+            ',GD_Itempools.WeaponPools.Pool_Weapons_All_{}_{},BalancedItems[{}].Probability.BaseValueConstant,,{}'.format(
+                number,
+                rarity,
+                idx,
+                gunprob))
 
 # Fix legendary Class Mod pool.  We would usually do this via `set`, but
 # some hotfix-like behavior in the character DLCs ends up resetting the
