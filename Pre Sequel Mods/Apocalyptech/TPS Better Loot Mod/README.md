@@ -197,11 +197,6 @@ Other Recommended Mods
 TODO
 ----
 
-* Check legendary drop pools
-  * Legendary COMs especially - UCP does some different stuff than we do.  Specifically,
-    their section `Add legendary coms to world drops and grinder` alters some character-
-    specific legendary pools.  Check it out, to see if that's maybe altering the drop
-    probabilities in ways we don't expect.
 * Check boss unique drops
 * Maybe decrease Moonstone chest cost in exchange for not doing guaranteed
   legendaries on it?  Mull it over.
