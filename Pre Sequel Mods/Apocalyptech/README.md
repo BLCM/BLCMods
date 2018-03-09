@@ -4,7 +4,16 @@ Apocalyptech's Borderlands: The Pre-Sequel Mods
 TPS Better Loot Mod
 -------------------
 
-Work in progress...
+This mod's general goal is to make loot drops in The Pre-Sequel "better",
+as in skewing very much towards the rarer loot.  Legendaries/Uniques will
+drop far more frequently than they do in vanilla TPS, glitch/luneshine
+weapons will spawn in the main world, etc.
+
+It's essentially a cheat mod, intended for those TPS players like myself who
+tend to play in Normal most of the time, dislike grinding, get bored easily by
+the uninteresting and drab loot that typically gets dropped in-game, and who
+often end up just resorting to Gibbed to be able to play around with some
+better gear.  The README in the mod dir itself should provide a lot more info.
 
 Luneshine on Uniques
 --------------------
