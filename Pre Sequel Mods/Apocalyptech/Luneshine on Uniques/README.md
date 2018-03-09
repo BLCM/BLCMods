@@ -9,11 +9,11 @@ to actually get most of these to have Luneshine, you'll need to also be using
 something like UCP's "`Make Luneshines Appear in the Wild`" option (found in its
 "`2.1 Optionals`" folder), or my own "TPS Better Loot" mod.
 
-**WARNING:** This mod contains some statements which can generate gear which
-the vanilla game doesn't think is valid.  If you have some of this gear in your
-inventory and start the game without having this mod enabled, the engine will
-remove those items from your inventory.  If you see this, be sure to `Alt-F4`
-out of the game to prevent it from saving over your savegame.
+**WARNING:** This mod will generate gear which the vanilla game doesn't think
+is valid.  If you have some of this gear in your inventory and start the game
+without having this mod enabled, the engine will remove those items from your
+inventory.  If you see this, be sure to `Alt-F4` out of the game to prevent it
+from saving over your savegame.
 
 Specifically, this mod alters the parts pool for the following weapons:
 
