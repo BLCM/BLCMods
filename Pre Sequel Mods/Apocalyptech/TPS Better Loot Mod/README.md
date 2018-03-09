@@ -216,6 +216,9 @@ TODO
   nerf some things.
   * UCP makes further use of this.  See `Loot changes 2.0` for various examples;
     check for those and maybe put in some compat hotfixes.
+* I've done most of the initial construction of this using my extracted TPS data
+  which didn't include Holodome Onslaught, so it's possible I'm missing some stuff
+  from there.  Check that out...
 
 Mod Construction / Implementation Details
 -----------------------------------------
