@@ -130,14 +130,14 @@ compatibility issues:
   (except potentially for the Grinder giving you uniques in addition to
   legendaries).  Specifically, the following UCP 2.1 folders will get
   overridden by this mod:
-  * `Patch 1.0` -> `Grinder & world drop changes` -> `Add DLC legendaries to grinder`
-  * `Patch 1.0` -> `Grinder & world drop changes` -> `Add Rerouter & MORQ to grinder and world drops`
-  * `Patch 1.0` -> `Grinder & world drop changes` -> `Add meganade to grinder and world drop`
-  * `Patch 1.0` -> `Grinder & world drop changes` -> `Fix purple spike shields and remove purple from legendary pool`
+  * `Patch 1.0 -> Grinder & world drop changes -> Add DLC legendaries to grinder`
+  * `Patch 1.0 -> Grinder & world drop changes -> Add Rerouter & MORQ to grinder and world drops`
+  * `Patch 1.0 -> Grinder & world drop changes -> Add meganade to grinder and world drop`
+  * `Patch 1.0 -> Grinder & world drop changes -> Fix purple spike shields and remove purple from legendary pool`
 * As mentioned above, our `Remove Level-Based Loot Restrictions` folder is a
-  superset of UCP's `Make good stuff drop earlier` folder.  There are no problems
-  with having both enabled, though -- they play nicely together.
-* UCP's `Patch 2.0` -> `Loot changes 2.0` -> `Make Rosie available in First Playthrough.
+  superset of UCP's `Patch 1.0 -> Make good stuff drop earlier` folder.  There are
+  no problems with having both enabled, though -- they play nicely together.
+* UCP's `Patch 2.0 -> Loot changes 2.0 -> Make Rosie available in First Playthrough.
   Make the Head available in all playthroughs` interacts a bit oddly with our changes
   there -- you'll end up getting two head drops, and will get the Rosie as a mission
   reward rather than a drop.  Not a big deal, so I'm not going to do a compat hotfix
