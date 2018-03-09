@@ -6,6 +6,13 @@ TPS Better Loot Mod
 
 Work in progress...
 
+Luneshine on Uniques
+--------------------
+
+Adds Luneshine attachments to several Unique/Legendary weapons which didn't
+previously have them.  **WARNING:** This will generate weapons which TPS will
+delete from your inventory, if it's started up without this mod enabled.
+
 Licenses
 ========
 
