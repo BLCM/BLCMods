@@ -1,8 +1,10 @@
 If you want to experience Borderlands 2 in a new way, this modpack is exactly for you.
 
-As of version 1.3.3, there are 118 mods in BL2Reborn. You can find a list of all mods and their descriptions in the attached "Mod List.txt".
+As of version 1.4, there are 128 mods in BL2Reborn. You can find a list of all mods and their descriptions in the attached "Mod List.txt".
 
 Download the modpack by rightclicking the "Download" button in "BL2Reborn.txt" and "Save link as...".
+
+You can enable optional mods at the bottom of the modpack with the Filter Tool.
 
 Lots of options are hand-picked by me. Don't enable/disable stuff unless you know exactly what you're doing!
 
