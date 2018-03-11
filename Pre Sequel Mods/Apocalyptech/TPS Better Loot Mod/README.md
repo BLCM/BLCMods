@@ -92,6 +92,8 @@ Mod Overview
   * Many enemies from the Claptastic Voyage DLC have a unique legendary drop
     associated with them, with a default drop rate of 0.1%.  This mod ups that
     probability to 1.5%.
+* Individual Enemy Drop Fixes:
+  * FlameKnuckle will drop from the badass pool even on playthrough 1.
 * Remove early-game loot restrictions.  This is actually a superset of the
   similar feature already present in UCP 2.1.  This version enables spawning
   of basically everything from the beginning, including all grenade types,
