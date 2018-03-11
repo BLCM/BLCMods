@@ -111,10 +111,6 @@ class ConfigLootsplosion(ConfigBase):
 
     profile_name = 'Lootsplosion'
 
-    # Just some convenience vars
-    one = '1.000000'
-    zero = '0.000000'
-
     # Custom weapon drop scaling
     weapon_base_common = '8'
     weapon_base_uncommon = '85'
@@ -130,7 +126,7 @@ class ConfigLootsplosion(ConfigBase):
     ozkit_base_veryrare = weapon_base_veryrare
     ozkit_base_legendary = weapon_base_legendary
 
-    # Custom COM drop scaling (identical to weapons, apart from an additional Alignment COM pool)
+    # Custom COM drop scaling (identical to weapons)
     com_base_common = weapon_base_common
     com_base_uncommon = weapon_base_uncommon
     com_base_rare = weapon_base_rare
@@ -151,21 +147,17 @@ class ConfigLootsplosion(ConfigBase):
     shield_base_veryrare = weapon_base_veryrare
     shield_base_legendary = weapon_base_legendary
 
-    # Custom relic drop scaling
-    relic_base_rare = '1.0'
-    relic_base_veryrare = '2.0'
-
     # Drop rates for "regular" treasure chests
-    treasure_base_common = zero
-    treasure_base_uncommon = zero
+    treasure_base_common = '0'
+    treasure_base_uncommon = '0'
     treasure_base_rare = '30'
     treasure_base_veryrare = '60'
     treasure_base_glitch = '15'
     treasure_base_legendary = '5'
 
     # Drop rates for "epic" treasure chests
-    epic_base_uncommon = zero
-    epic_base_rare = zero
+    epic_base_uncommon = '0'
+    epic_base_rare = '0'
     epic_base_veryrare = '1.2'
     epic_base_glitch = '.8'
     epic_base_legendary = '0.3'
@@ -173,8 +165,8 @@ class ConfigLootsplosion(ConfigBase):
 
     # Drop rates for Glitched Epic treasure chests.  This is basically just
     # the same as regular, but with increased probabilities for Glitch.
-    epic_glitch_base_uncommon = zero
-    epic_glitch_base_rare = zero
+    epic_glitch_base_uncommon = '0'
+    epic_glitch_base_rare = '0'
     epic_glitch_base_veryrare = '.9'
     epic_glitch_base_glitch = '1.1'
     epic_glitch_base_legendary_dbl = '0.6'
@@ -203,34 +195,6 @@ class ConfigLootsplosion(ConfigBase):
     ultimate_badass_pool_epicchest_2 = '0.5'
     ultimate_badass_pool_epicchest_3 = '0.5'
 
-    # Unique drop quantities.  Some of these are pretty high in my "default"
-    # configuration, so putting them here lets me override them in the other
-    # configs, easily.
-    quantity_chubby = '4'
-    quantity_terra = '7'
-    quantity_vermivorous = '5'
-    quantity_warrior = '8'
-    quantity_hyperius_legendary = '7'
-    quantity_hyperius_seraph = '4'
-    quantity_gee_seraph = '4'
-    quantity_gee_legendary = '6'
-
-    # Voracidous quantities have to be done slightly differently, because both
-    # Dexiduous and Voracidous use the same Seraph and Legendary pools for their
-    # unique drops, but Dexi calls it multiple times, whereas Vorac just calls
-    # it the once (by default).  So upping the quantity for Vorac makes Dexi's
-    # drops totally ludicrous.  So instead, we're just gonna specify the pool
-    # multiple times in Vorac's ItemPool.  This is lame, but should let both
-    # of them coexist.
-    voracidous_drop_seraph_1 = '1'
-    voracidous_drop_seraph_2 = '1'
-    voracidous_drop_seraph_3 = '1'
-    voracidous_drop_seraph_4 = '1'
-    voracidous_drop_legendary_1 = '1'
-    voracidous_drop_legendary_2 = '1'
-    voracidous_drop_legendary_3 = '1'
-    voracidous_drop_legendary_4 = '1'
-
     # 2x chance of both kinds of moonstone
     moonstone_drop = '0.1'          # Stock: 0.050000
     moonstone_cluster_drop = '0.05' # Stock: 0.025000
@@ -247,9 +211,103 @@ class ConfigLootsplosion(ConfigBase):
     drop_prob_launcher = 40
     drop_prob_laser = 80
 
+class ConfigReasonable(ConfigLootsplosion):
+    """
+    Alternate config which has slightly-more-reasonable drop rates for stuff
+    like legendaries.  Unsurprisingly, most folks find my default values a
+    bit excessive.
+    """
+
+    profile_name = 'Reasonable Drops'
+
+    # Weapon drops
+    weapon_base_common = '32.75'
+    weapon_base_uncommon = '35'
+    weapon_base_rare = '25'
+    weapon_base_veryrare = '5'
+    weapon_base_glitch = '2'
+    weapon_base_legendary = '0.25'
+
+    # Custom ozkit drop scaling (identical to weapons)
+    ozkit_base_common = weapon_base_common
+    ozkit_base_uncommon = weapon_base_uncommon
+    ozkit_base_rare = weapon_base_rare
+    ozkit_base_veryrare = weapon_base_veryrare
+    ozkit_base_legendary = weapon_base_legendary
+
+    # Class mods (identical to weapons)
+    cm_base_common = weapon_base_common
+    cm_base_uncommon = weapon_base_uncommon
+    cm_base_rare = weapon_base_rare
+    cm_base_veryrare = weapon_base_veryrare
+    cm_base_legendary = weapon_base_legendary
+
+    # Custom grenade drop scaling (identical to weapons)
+    grenade_base_common = weapon_base_common
+    grenade_base_uncommon = weapon_base_uncommon
+    grenade_base_rare = weapon_base_rare
+    grenade_base_veryrare = weapon_base_veryrare
+    grenade_base_legendary = weapon_base_legendary
+
+    # Custom shield drop scaling (identical to weapons)
+    shield_base_common = weapon_base_common
+    shield_base_uncommon = weapon_base_uncommon
+    shield_base_rare = weapon_base_rare
+    shield_base_veryrare = weapon_base_veryrare
+    shield_base_legendary = weapon_base_legendary
+
+    # Drop rates for "regular" treasure chests
+    treasure_base_common = '32.5'
+    treasure_base_uncommon = '40'
+    treasure_base_rare = '20'
+    treasure_base_veryrare = '5'
+    treasure_base_glitch = '3'
+    treasure_base_legendary = '0.5'
+
+    # Drop rates for "epic" treasure chests
+    epic_base_uncommon = '25'
+    epic_base_rare = '49'
+    epic_base_veryrare = '20'
+    epic_base_glitch = '5'
+    epic_base_legendary = '1'
+    epic_base_legendary_dbl = '2'
+
+    # Drop rates for Glitched Epic treasure chests.  This is basically just
+    # the same as regular, but with increased probabilities for Glitch.
+    epic_glitch_base_uncommon = '25'
+    epic_glitch_base_rare = '49'
+    epic_glitch_base_veryrare = '10'
+    epic_glitch_base_glitch = '15'
+    epic_glitch_base_legendary_dbl = '2'
+
+    # Badass pool probabilities (NOTE: these are *not* weights)
+    badass_pool_veryrare = '0.2'
+    badass_pool_glitch = '0.15'
+    badass_pool_epicchest = '0.1'
+
+    # Super Badass pool probabilities (NOTE: these are *not* weights)
+    super_badass_pool_rare = '1'
+    super_badass_pool_veryrare = '0.4'
+    super_badass_pool_glitch = '0.15'
+    super_badass_pool_legendary = '.03'
+    super_badass_pool_epicchest = '1'
+
+    # Ultimate Badass pool probabilities (NOTE: these are *not* weights)
+    ultimate_badass_pool_veryrare_1 = '1'
+    ultimate_badass_pool_veryrare_2 = '0'
+    ultimate_badass_pool_glitch_1 = '0.4'
+    ultimate_badass_pool_glitch_2 = '0'
+    ultimate_badass_pool_legendary_1 = '0.08'
+    ultimate_badass_pool_legendary_2 = '0'
+    ultimate_badass_pool_legendary_3 = '0'
+    ultimate_badass_pool_epicchest_1 = '1'
+    ultimate_badass_pool_epicchest_2 = '1'
+    ultimate_badass_pool_epicchest_3 = '1'
+
 # The profiles we'll generate
 profiles = [
     ConfigLootsplosion(),
+    ConfigReasonable(),
     ]
 
 ###

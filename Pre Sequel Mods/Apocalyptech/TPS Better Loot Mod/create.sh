@@ -1,5 +1,5 @@
 ./generate-source.py && (
-    PROFILES=("Lootsplosion")
+    PROFILES=("Lootsplosion" "Reasonable Drops")
     VARIANTS=("UCP Compat" "Standalone Offline")
     for PROFILE in "${PROFILES[@]}"
     do

@@ -24,7 +24,10 @@ two files:
 * `TPS Better Loot Mod (Lootsplosion) - UCP Compat` - Default drop weights
   which I'm personally happy with.  Many folks may find these a bit extreme.
   This version probably makes more sense in Normal mode than it does in UVHM.
-* *("Reasonable Drops" version will be forthcoming in a bit)*
+* `TPS Better Loot Mod (Reasonable Drops) - UCP Compat` - More reasonable
+  drop weights.  This version may be more suitable for UVHM, where lots
+  of Legendary drops might be excessive. *(Work in Progress - needs
+  tweaking+testing, etc)*
 
 Once the mod has been added, you'll have a new folder for this mod
 underneath the `mods` folder at the bottom, and can turn parts on or off at
