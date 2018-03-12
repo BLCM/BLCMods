@@ -298,6 +298,10 @@ class ConfigLootsplosion(ConfigBase):
     relic_scale_rare = '1.0'
     relic_scale_veryrare = '2.0'
 
+    # Boss drop rates
+    boss_drop_uniques = '1.0'
+    boss_drop_rares = '1.0'
+
     # Drop rates for "regular" treasure chests
     treasure_scale_common = zero
     treasure_scale_uncommon = zero
@@ -429,6 +433,10 @@ class ConfigReasonable(ConfigLootsplosion):
     # Custom relic drop scaling
     relic_scale_rare = '2.0'
     relic_scale_veryrare = '1.0'
+
+    # Boss drop rates
+    boss_drop_uniques = '0.5'
+    boss_drop_rares = '0.25'
 
     # Drop rates for "regular" treasure chests
     treasure_scale_common = '32.5'

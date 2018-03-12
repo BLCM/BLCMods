@@ -392,6 +392,10 @@ for the full text.
 Changelog
 =========
 
+**v1.1.2**, (tbd):
+ * Dropped chances of bosses dropping unique gear in the "Reasonable Drops" variant.
+ * Rearranged some internal variables *(shouldn't actually have an effect on the mod)*
+
 **v1.1.1**, March 7, 2018 (commit `ac9af0507b5b28f51e00f15e047cb019b1fc93e9`):
  * Fixed unlocking early-game elements for Maliwan Aquamarine Snipers on Windows
 
