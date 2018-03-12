@@ -2,23 +2,23 @@ This modpack is basically a very light version of the Unofficial Community Patch
 
 Image Album https://captainkoby.imgur.com/
 
-Download the modpack by rightclicking the "Raw" button in "VanillaEnhanced.txt" and "Save link as...".
+Download the modpack by rightclicking the "Download" button in "VanillaEnhanced.txt" and "Save link as...".
 
------------------------------------------------------------------------------------------------------------
+Optional Changes at the bottom can be enabled with the Filter Tool.
+
+------------------------------------------------------------------------------------------------------------
 Modpack built by Koby
 
 All credit goes to the mod authors (Aaron0000, Battle Bee, Dave, FromDarkHell, IK4MS, Kazy, Mike, Shadowevil, SirUmnei and me)
 
 And obviously to everybody who worked on the UCP.
 
-Optional Changes at the bottom can be enabled with the Filter Tool.
-
------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------
 
 If you need any help, head over to Shadow's Discord and ping me (@Koby) in the #patch-questions channel 
 discord.gg/shadowevil
 
------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------
 
 FAQ 
 
