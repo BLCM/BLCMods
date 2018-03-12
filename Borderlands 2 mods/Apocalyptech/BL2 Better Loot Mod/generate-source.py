@@ -144,22 +144,22 @@ class ConfigBase(object):
                         BaseValueScaleConstant=1.000000
                     ),
                     (
-                        BaseValueConstant=1.000000,
+                        BaseValueConstant={relic_base_rare},
                         BaseValueAttribute=None,
                         InitializationDefinition=None,
-                        BaseValueScaleConstant={relic_scale_rare}
+                        BaseValueScaleConstant=1
                     ),
                     (
-                        BaseValueConstant=1.000000,
+                        BaseValueConstant={relic_base_veryrare},
                         BaseValueAttribute=None,
                         InitializationDefinition=None,
-                        BaseValueScaleConstant={relic_scale_veryrare}
+                        BaseValueScaleConstant=1
                     )
                 )
 """.format(
     relic_type=relic_type,
-    relic_scale_rare=self.relic_scale_rare,
-    relic_scale_veryrare=self.relic_scale_veryrare,
+    relic_base_rare=self.relic_base_rare,
+    relic_base_veryrare=self.relic_base_veryrare,
     ))
         # This one is the one that's slightly different
         relic_weight_parts.append("""
@@ -190,22 +190,22 @@ class ConfigBase(object):
                         BaseValueScaleConstant=1.000000
                     ),
                     (
-                        BaseValueConstant=1.000000,
+                        BaseValueConstant={relic_base_rare},
                         BaseValueAttribute=None,
                         InitializationDefinition=None,
-                        BaseValueScaleConstant={relic_scale_rare}
+                        BaseValueScaleConstant=1
                     ),
                     (
-                        BaseValueConstant=1.000000,
+                        BaseValueConstant={relic_base_veryrare},
                         BaseValueAttribute=None,
                         InitializationDefinition=None,
-                        BaseValueScaleConstant={relic_scale_veryrare}
+                        BaseValueScaleConstant=1
                     )
                 )
 """.format(
     relic_type=relic_type,
-    relic_scale_rare=self.relic_scale_rare,
-    relic_scale_veryrare=self.relic_scale_veryrare,
+    relic_base_rare=self.relic_base_rare,
+    relic_base_veryrare=self.relic_base_veryrare,
     ))
 
         # Return the string
@@ -234,90 +234,60 @@ class ConfigLootsplosion(ConfigBase):
 
     profile_name = 'Lootsplosion'
 
-    # Just some convenience vars
-    one = '1.000000'
-    zero = '0.000000'
-
-    # "BaseValueConstant values for the various gear drop types.  These
-    # are actually totally unchanged from the stock definitions; I'd just
-    # put them in here in case I felt like overriding them easily later.
-    weapon_base_common = one
-    weapon_base_uncommon = one
-    weapon_base_rare = one
-    weapon_base_veryrare = one
-    weapon_base_alien = one
-    weapon_base_legendary = one
-    cm_base_common = one
-    cm_base_uncommon = one
-    cm_base_rare = one
-    cm_base_veryrare = one
-    cm_base_legendary = one
-    grenade_base_common = zero
-    grenade_base_uncommon = zero
-    grenade_base_rare = zero
-    grenade_base_veryrare = zero
-    grenade_base_legendary = zero
-    shield_base_common = one
-    shield_base_uncommon = one
-    shield_base_rare = one
-    shield_base_veryrare = one
-    shield_base_legendary = one
-
     # Custom weapon drop scaling
-    weapon_scale_common = '8'
-    weapon_scale_uncommon = '85'
-    weapon_scale_rare = '65'
-    weapon_scale_veryrare = '50'
-    weapon_scale_alien = '30'
-    weapon_scale_legendary = '3'
-    weapon_scale_iris_cobra = '1'
+    weapon_base_common = '8'
+    weapon_base_uncommon = '85'
+    weapon_base_rare = '65'
+    weapon_base_veryrare = '50'
+    weapon_base_alien = '30'
+    weapon_base_legendary = '3'
+    weapon_base_iris_cobra = '1'
 
     # Custom COM drop scaling (identical to weapons, apart from an additional Alignment COM pool)
-    cm_scale_common = weapon_scale_common
-    cm_scale_uncommon = weapon_scale_uncommon
-    cm_scale_rare = weapon_scale_rare
-    cm_scale_veryrare = weapon_scale_veryrare
-    cm_scale_alignment = '30'
-    cm_scale_legendary = weapon_scale_legendary
+    cm_base_common = weapon_base_common
+    cm_base_uncommon = weapon_base_uncommon
+    cm_base_rare = weapon_base_rare
+    cm_base_veryrare = weapon_base_veryrare
+    cm_base_alignment = '30'
+    cm_base_legendary = weapon_base_legendary
 
     # Custom grenade drop scaling (identical to weapons)
-    grenade_scale_common = weapon_scale_common
-    grenade_scale_uncommon = weapon_scale_uncommon
-    grenade_scale_rare = weapon_scale_rare
-    grenade_scale_veryrare = weapon_scale_veryrare
-    grenade_scale_legendary = weapon_scale_legendary
+    grenade_base_common = weapon_base_common
+    grenade_base_uncommon = weapon_base_uncommon
+    grenade_base_rare = weapon_base_rare
+    grenade_base_veryrare = weapon_base_veryrare
+    grenade_base_legendary = weapon_base_legendary
 
     # Custom shield drop scaling (identical to weapons)
-    shield_scale_common = weapon_scale_common
-    shield_scale_uncommon = weapon_scale_uncommon
-    shield_scale_rare = weapon_scale_rare
-    shield_scale_veryrare = weapon_scale_veryrare
-    shield_scale_legendary = weapon_scale_legendary
+    shield_base_common = weapon_base_common
+    shield_base_uncommon = weapon_base_uncommon
+    shield_base_rare = weapon_base_rare
+    shield_base_veryrare = weapon_base_veryrare
+    shield_base_legendary = weapon_base_legendary
 
     # Custom relic drop scaling
-    relic_scale_rare = '1.0'
-    relic_scale_veryrare = '2.0'
+    relic_base_rare = '1.0'
+    relic_base_veryrare = '2.0'
 
     # Boss drop rates
     boss_drop_uniques = '1.0'
     boss_drop_rares = '1.0'
 
     # Drop rates for "regular" treasure chests
-    treasure_scale_common = zero
-    treasure_scale_uncommon = zero
-    treasure_scale_rare = '20'
-    treasure_scale_veryrare = '60'
-    treasure_scale_alien = '30'
-    treasure_scale_legendary = '5'
+    treasure_base_common = '0'
+    treasure_base_uncommon = '0'
+    treasure_base_rare = '20'
+    treasure_base_veryrare = '60'
+    treasure_base_alien = '30'
+    treasure_base_legendary = '5'
 
     # Drop rates for "epic" treasure chests
-    epic_scale_common = zero
-    epic_scale_uncommon = zero
-    epic_scale_rare = zero
-    epic_scale_veryrare = '1'
-    epic_scale_alien = '1'
-    epic_scale_legendary = '0.3'
-    epic_scale_legendary_dbl = '0.6'
+    epic_base_common = '0'
+    epic_base_uncommon = '0'
+    epic_base_rare = '0'
+    epic_base_veryrare = '1'
+    epic_base_alien = '1'
+    epic_base_legendary = '0.3'
 
     # Badass pool probabilities (NOTE: these are *not* weights)
     badass_pool_veryrare = '0.4'
@@ -400,59 +370,58 @@ class ConfigReasonable(ConfigLootsplosion):
     profile_name = 'Reasonable Drops'
 
     # Weapon drops
-    weapon_scale_common = '32.75'
-    weapon_scale_uncommon = '35'
-    weapon_scale_rare = '25'
-    weapon_scale_veryrare = '5'
-    weapon_scale_alien = '2'
-    weapon_scale_legendary = '0.25'
-    weapon_scale_iris_cobra = '2'
+    weapon_base_common = '32.75'
+    weapon_base_uncommon = '35'
+    weapon_base_rare = '25'
+    weapon_base_veryrare = '5'
+    weapon_base_alien = '2'
+    weapon_base_legendary = '0.25'
+    weapon_base_iris_cobra = '2'
 
     # Class mods
-    cm_scale_common = weapon_scale_common
-    cm_scale_uncommon = weapon_scale_uncommon
-    cm_scale_rare = weapon_scale_rare
-    cm_scale_veryrare = weapon_scale_veryrare
-    cm_scale_alignment = '2'
-    cm_scale_legendary = weapon_scale_legendary
+    cm_base_common = weapon_base_common
+    cm_base_uncommon = weapon_base_uncommon
+    cm_base_rare = weapon_base_rare
+    cm_base_veryrare = weapon_base_veryrare
+    cm_base_alignment = '2'
+    cm_base_legendary = weapon_base_legendary
 
     # Custom grenade drop scaling (identical to weapons)
-    grenade_scale_common = weapon_scale_common
-    grenade_scale_uncommon = weapon_scale_uncommon
-    grenade_scale_rare = weapon_scale_rare
-    grenade_scale_veryrare = weapon_scale_veryrare
-    grenade_scale_legendary = weapon_scale_legendary
+    grenade_base_common = weapon_base_common
+    grenade_base_uncommon = weapon_base_uncommon
+    grenade_base_rare = weapon_base_rare
+    grenade_base_veryrare = weapon_base_veryrare
+    grenade_base_legendary = weapon_base_legendary
 
     # Custom shield drop scaling (identical to weapons)
-    shield_scale_common = weapon_scale_common
-    shield_scale_uncommon = weapon_scale_uncommon
-    shield_scale_rare = weapon_scale_rare
-    shield_scale_veryrare = weapon_scale_veryrare
-    shield_scale_legendary = weapon_scale_legendary
+    shield_base_common = weapon_base_common
+    shield_base_uncommon = weapon_base_uncommon
+    shield_base_rare = weapon_base_rare
+    shield_base_veryrare = weapon_base_veryrare
+    shield_base_legendary = weapon_base_legendary
 
     # Custom relic drop scaling
-    relic_scale_rare = '2.0'
-    relic_scale_veryrare = '1.0'
+    relic_base_rare = '2.0'
+    relic_base_veryrare = '1.0'
 
     # Boss drop rates
     boss_drop_uniques = '0.5'
     boss_drop_rares = '0.25'
 
     # Drop rates for "regular" treasure chests
-    treasure_scale_common = '32.5'
-    treasure_scale_uncommon = '40'
-    treasure_scale_rare = '20'
-    treasure_scale_veryrare = '5'
-    treasure_scale_alien = '3'
-    treasure_scale_legendary = '0.5'
+    treasure_base_common = '32.5'
+    treasure_base_uncommon = '40'
+    treasure_base_rare = '20'
+    treasure_base_veryrare = '5'
+    treasure_base_alien = '3'
+    treasure_base_legendary = '0.5'
 
     # Drop rates for "epic" treasure chests
-    epic_scale_uncommon = '25'
-    epic_scale_rare = '49'
-    epic_scale_veryrare = '15'
-    epic_scale_alien = '10'
-    epic_scale_legendary = '1'
-    epic_scale_legendary_dbl = '2'
+    epic_base_uncommon = '25'
+    epic_base_rare = '49'
+    epic_base_veryrare = '15'
+    epic_base_alien = '10'
+    epic_base_legendary = '1'
 
     # Unique drop quantities -- overridden from the base class to make
     # them a bit more reasonable.
@@ -2428,8 +2397,8 @@ if force_gunsandgear_specific:
                 Probability=(
                     BaseValueConstant=1.000000,
                     BaseValueAttribute=None,
-                    InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_2_Uncommon',
-                    BaseValueScaleConstant=2.200000
+                    InitializationDefinition=None,
+                    BaseValueScaleConstant=1.000000
                 ),
                 bDropOnDeath=True
             )
@@ -2441,9 +2410,9 @@ if force_gunsandgear_specific:
                 ItmPoolDefinition=None,
                 InvBalanceDefinition=WeaponBalanceDefinition'{force_gunsandgear_specific_name}',
                 Probability=(
-                    BaseValueConstant=0.000000,
+                    BaseValueConstant=1.000000,
                     BaseValueAttribute=None,
-                    InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',
+                    InitializationDefinition=None,
                     BaseValueScaleConstant=1.000000
                 ),
                 bDropOnDeath=True
@@ -2470,8 +2439,8 @@ elif force_gunsandgear_drop:
                 Probability=(
                     BaseValueConstant=1.000000,
                     BaseValueAttribute=None,
-                    InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_2_Uncommon',
-                    BaseValueScaleConstant=2.200000
+                    InitializationDefinition=None,
+                    BaseValueScaleConstant=1.000000
                 ),
                 bDropOnDeath=True
             )
