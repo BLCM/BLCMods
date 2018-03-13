@@ -8,9 +8,3 @@ Special thanks to Mike for letting me *borrow* and modify his Slag Unf0reseen co
 
 #3: Butt Stallion
 >Butt Stallion will no longer drop ammo or money. There are two options in this file. Guarenteed gemstone or blue rarity and higher. Choose between them using the filtertool.
-
-#4: Flicker
->Changes flicker to add directly onto elemental chance.
-
-#5: More Pep
->Changes more pep to add directly onto elemental chance.
