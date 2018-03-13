@@ -1,6 +1,19 @@
 Apocalyptech's Borderlands: The Pre-Sequel Mods
 ===============================================
 
+Guaranteed Phonic
+-----------------
+
+Guarantees the spawn of Phonic Kraggon (or Phuper Phonic Kraggon) in Serenity's
+Waste.
+
+Luneshine on Uniques
+--------------------
+
+Adds Luneshine attachments to several Unique/Legendary weapons which didn't
+previously have them.  **WARNING:** This will generate weapons which TPS will
+delete from your inventory, if it's started up without this mod enabled.
+
 TPS Better Loot Mod
 -------------------
 
@@ -14,13 +27,6 @@ tend to play in Normal most of the time, dislike grinding, get bored easily by
 the uninteresting and drab loot that typically gets dropped in-game, and who
 often end up just resorting to Gibbed to be able to play around with some
 better gear.  The README in the mod dir itself should provide a lot more info.
-
-Luneshine on Uniques
---------------------
-
-Adds Luneshine attachments to several Unique/Legendary weapons which didn't
-previously have them.  **WARNING:** This will generate weapons which TPS will
-delete from your inventory, if it's started up without this mod enabled.
 
 Licenses
 ========
