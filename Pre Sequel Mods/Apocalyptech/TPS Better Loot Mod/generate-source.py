@@ -116,7 +116,7 @@ class ConfigLootsplosion(ConfigBase):
     weapon_base_uncommon = '85'
     weapon_base_rare = '65'
     weapon_base_veryrare = '50'
-    weapon_base_glitch = '15'
+    weapon_base_glitch = '10'
     weapon_base_legendary = '3'
 
     # Custom ozkit drop scaling (identical to weapons)
@@ -152,14 +152,14 @@ class ConfigLootsplosion(ConfigBase):
     treasure_base_uncommon = '0'
     treasure_base_rare = '30'
     treasure_base_veryrare = '60'
-    treasure_base_glitch = '15'
+    treasure_base_glitch = '10'
     treasure_base_legendary = '5'
 
     # Drop rates for "epic" treasure chests
     epic_base_uncommon = '0'
     epic_base_rare = '0'
-    epic_base_veryrare = '1.2'
-    epic_base_glitch = '.8'
+    epic_base_veryrare = '1.4'
+    epic_base_glitch = '.6'
     epic_base_legendary = '0.3'
     epic_base_legendary_dbl = '0.6'
 
@@ -167,8 +167,8 @@ class ConfigLootsplosion(ConfigBase):
     # the same as regular, but with increased probabilities for Glitch.
     epic_glitch_base_uncommon = '0'
     epic_glitch_base_rare = '0'
-    epic_glitch_base_veryrare = '.9'
-    epic_glitch_base_glitch = '1.1'
+    epic_glitch_base_veryrare = '1'
+    epic_glitch_base_glitch = '1'
     epic_glitch_base_legendary_dbl = '0.6'
 
     # Badass pool probabilities (NOTE: these are *not* weights)
