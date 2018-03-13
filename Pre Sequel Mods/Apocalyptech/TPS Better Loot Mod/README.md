@@ -97,6 +97,7 @@ Mod Overview
     probability to 1.5%.
 * Individual Enemy Drop Fixes:
   * FlameKnuckle will drop from the badass pool even on playthrough 1.
+  * Nel's drops have been improved (will pull from the Epic Chest pools)
 * Remove early-game loot restrictions.  This is actually a superset of the
   similar feature already present in UCP 2.1.  This version enables spawning
   of basically everything from the beginning, including all grenade types,
