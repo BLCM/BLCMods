@@ -225,6 +225,13 @@ you can use in this mod:
 * `Better Enemy Drops > Better Badass Pool Definitions > Chubby Enemies`
 * `Better Enemy Drops > Boss Drop Improved Quantities > Chubby Enemies`
 
+### SirUmnei's "COM Overhaul Pack"
+
+The COM Overhaul Pack, in conjunction with this mod, will end up creating
+items which will get deleted by Borderlands after you save/quit.  You should
+be able to avoid this by turning off this mod's `Loot Pool Tweaks -> Better
+Class Mod Rarity Drops -> Force Alignment COMs Blue And Higher`.
+
 ### Other Mods
 
 Obviously this mod will conflict with other mods which play with the same
@@ -392,7 +399,7 @@ for the full text.
 Changelog
 =========
 
-**v1.1.2**, (tbd):
+**v1.2.0**, (tbd):
  * Buffed "weighted" pools used by some enemies for drops, to be in line with the rest
    of the mod's drop weights (Marauders being the most obvious example).
  * Changes in the "Reasonable Drops" variant:
