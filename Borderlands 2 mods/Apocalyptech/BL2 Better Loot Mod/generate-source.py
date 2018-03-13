@@ -265,7 +265,11 @@ class ConfigLootsplosion(ConfigBase):
     shield_base_veryrare = weapon_base_veryrare
     shield_base_legendary = weapon_base_legendary
 
-    # Custom relic drop scaling
+    # Relic drop weights
+    relic_drop_scale_all = '0.2'
+    relic_drop_scale_reward = '1'
+
+    # Custom relic drop scaling, within "ArtifactsReward"
     relic_base_rare = '1.0'
     relic_base_veryrare = '2.0'
 
@@ -400,7 +404,11 @@ class ConfigReasonable(ConfigLootsplosion):
     shield_base_veryrare = weapon_base_veryrare
     shield_base_legendary = weapon_base_legendary
 
-    # Custom relic drop scaling
+    # Relic drop weights
+    relic_drop_scale_all = '0.6'
+    relic_drop_scale_reward = '0.6'
+
+    # Custom relic drop scaling, within "ArtifactsReward"
     relic_base_rare = '2.0'
     relic_base_veryrare = '1.0'
 

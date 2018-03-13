@@ -393,7 +393,11 @@ Changelog
 =========
 
 **v1.1.2**, (tbd):
- * Dropped chances of bosses dropping unique gear in the "Reasonable Drops" variant.
+ * Buffed "weighted" pools used by some enemies for drops, to be in line with the rest
+   of the mod's drop weights (Marauders being the most obvious example).
+ * Changes in the "Reasonable Drops" variant:
+   * Nerfed chances of bosses dropping unique gear
+   * Nerfed relic drops a bit
  * Refactor a lot of probability variables *(shouldn't actually have an effect on the
    mod, though it was a pretty big internal change)*
 
