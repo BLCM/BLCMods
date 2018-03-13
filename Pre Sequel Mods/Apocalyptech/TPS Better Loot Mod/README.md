@@ -185,6 +185,10 @@ Some other stuff not done:
 * This mod won't touch the Grinder.  No point, really, given the rest of
   the mod, and there are plenty of other mods out there which already
   do that.
+* Iwajira, Volcantis, and Odjurymir already had some extremely generous
+  loot drops just in the base game, and thsi mod improves those even more,
+  just on account of buffing the pools they drop from.  I've opted not to
+  nerf those down.
 
 Other Recommended Mods
 ----------------------
