@@ -7566,6 +7566,96 @@
 
     #</Remove Level-Based Loot Restrictions (superset of UCP 2.1)>
 
+    #<Provide Common Pistols for "To Arms!" mission (removes OzKit chests, disabled by default)>
+
+        # The mission "To Arms!" was already rather annoying to begin with, but with this   <off>
+        # mod enabled, it's actually one of the harder ones to complete, especially if      <off>
+        # you're also using some vendor improvements.  Enabling this folder will cause a    <off>
+        # few chests to appear in the same room as the dead drop, which always contain      <off>
+        # common pistols.  It uses the previously-OzKit-only chests found near Deirdre      <off>
+        # to do this, so those chests will no longer be ozkit chests if you have this       <off>
+        # enabled.                                                                          <off>
+
+        #set GD_Itempools.ListDefs.AmmoCrateLoot_OzKitsOnly LootData
+        (
+            ( 
+                ConfigurationName="AmmoCrate", 
+                bIgnoreGameStageRestrictions=False, 
+                LootGameStageVarianceFormula=None, 
+                Weight=( 
+                    BaseValueConstant=100.000000, 
+                    BaseValueAttribute=None, 
+                    InitializationDefinition=None, 
+                    BaseValueScaleConstant=1.000000 
+                ), 
+                ItemAttachments=( 
+                    ( 
+                        ItemPool=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_Pistols_01_Common', 
+                        PoolProbability=( 
+                            BaseValueConstant=1.000000, 
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=None, 
+                            BaseValueScaleConstant=1.000000 
+                        ), 
+                        InvBalanceDefinition=None, 
+                        AttachmentPointName="Ammo1" 
+                    ), 
+                    ( 
+                        ItemPool=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_Pistols_01_Common', 
+                        PoolProbability=( 
+                            BaseValueConstant=1.000000, 
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=None, 
+                            BaseValueScaleConstant=1.000000 
+                        ), 
+                        InvBalanceDefinition=None, 
+                        AttachmentPointName="Ammo2" 
+                    ), 
+                    ( 
+                        ItemPool=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_Pistols_01_Common', 
+                        PoolProbability=( 
+                            BaseValueConstant=1.000000, 
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=None, 
+                            BaseValueScaleConstant=1.000000 
+                        ), 
+                        InvBalanceDefinition=None, 
+                        AttachmentPointName="Ammo3" 
+                    ) 
+                ) 
+            )
+        )<off>
+
+        {hotfixes:toarms_banditammo_type_0}
+
+        {hotfixes:toarms_banditammo_loc_0}
+
+        {hotfixes:toarms_banditammo_rot_0}
+
+        {hotfixes:toarms_banditammo_type_1}
+
+        {hotfixes:toarms_banditammo_loc_1}
+
+        {hotfixes:toarms_banditammo_rot_1}
+
+        {hotfixes:toarms_banditammo_type_2}
+
+        {hotfixes:toarms_banditammo_loc_2}
+
+        {hotfixes:toarms_banditammo_rot_2}
+
+        {hotfixes:toarms_banditammo_type_3}
+
+        {hotfixes:toarms_banditammo_loc_3}
+
+        {hotfixes:toarms_banditammo_rot_3}
+
+        {hotfixes:toarms_ozchange0}
+
+        {hotfixes:toarms_ozchange1}
+
+    #</Provide Common Pistols for "To Arms!" mission (removes OzKit chests, disabled by default)>
+
 {test_drop_chance_str}
 {test_drop_quantity_str}
 {gunsandgear_drop_str}
@@ -7574,3 +7664,4 @@
 
 {hotfix_transient_defs}
 
+#<Type="TPS"/>
