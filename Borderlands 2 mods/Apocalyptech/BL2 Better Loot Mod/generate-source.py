@@ -51,7 +51,7 @@ except ModuleNotFoundError:
 ###
 
 mod_name = 'BL2 Better Loot Mod'
-mod_version = '1.1.2 (prerelease)'
+mod_version = '1.2.0 (prerelease)'
 variant_ucp = 'UCP Compat'
 variant_standalone = 'Standalone'
 variant_offline = 'Standalone Offline'
@@ -2659,6 +2659,7 @@ for profile in profiles:
         df.write(loot_str.format(
             mod_name=mod_name,
             mod_version=mod_version,
+            mod_type='BL2',
             variant_name=variant_ucp,
             config=profile,
             hotfixes=hfs,
@@ -2678,6 +2679,7 @@ for profile in profiles:
         df.write(loot_str.format(
             mod_name=mod_name,
             mod_version=mod_version,
+            mod_type='BL2',
             variant_name=variant_standalone,
             config=profile,
             hotfixes=hfs,
@@ -2697,6 +2699,7 @@ for profile in profiles:
         df.write(loot_str.format(
             mod_name=mod_name,
             mod_version=mod_version,
+            mod_type='Offline',
             variant_name=variant_offline,
             config=profile,
             hotfixes=hfs,
