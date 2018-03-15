@@ -106,6 +106,13 @@ Mod Overview
   no ill effects.  Note that if you *don't* have either this or UCP
   enabled on your game, the early game will end up dropping *no* gear, due
   to our rarity changes.
+* An optional folder is provided to add some common-rarity loot chests
+  near the dead drop location for the mission
+  [To Arms!](http://borderlands.wikia.com/wiki/To_Arms!) - that mission
+  amusingly becomes quite difficult when using this mod, otherwise.
+  Enabling this folder will make the OzKit-only chests near Deirdre become
+  regular ammo chests, since we had to override that chest type to provide
+  the weapons.
 
 **NOTE:** I believe that due to our Legendary loot pool changes, Unique
 gear will end up as possible Grinder results when trying to grind for
