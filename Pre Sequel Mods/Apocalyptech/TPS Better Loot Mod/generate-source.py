@@ -173,7 +173,7 @@ class ConfigLootsplosion(ConfigBase):
 
     # Badass pool probabilities (NOTE: these are *not* weights)
     badass_pool_veryrare = '0.4'
-    badass_pool_glitch = '0.4'
+    badass_pool_glitch = '0.3'
     badass_pool_epicchest = '0.1'
 
     # Super Badass pool probabilities (NOTE: these are *not* weights)
