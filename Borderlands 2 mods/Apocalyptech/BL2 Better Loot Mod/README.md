@@ -404,6 +404,8 @@ Changelog
 =========
 
 **v1.2.0**, (tbd):
+ * Fixed an issue where *Plan B* and *Bright Lights, Flying City* wouldn't reward
+   Weapon Slot SDUs on Playthrough 1.
  * Buffed "weighted" pools used by some enemies for drops, to be in line with the rest
    of the mod's drop weights (Marauders being the most obvious example).
  * Changes in the "Reasonable Drops" variant:

@@ -1521,7 +1521,9 @@
         #<Additional Unlocks>
 
             # These take care of a ton of other stuff, like other weapon types (rocket launchers,
-            # etc), Relics, etc.
+            # etc), Relics, etc.  Note that we omit Gamestage_24 on purpose here, because
+            # that is used to determine Weapon Slot SDU rewards during playthrough 1 in
+            # the main storyline.  Nothing else in the game uses 24, so we're leaving it.
 
             set GD_Itempools.Scheduling.Gamestage_04:ConstantAttributeValueResolver_0 ConstantValue 1 
 
@@ -1560,8 +1562,6 @@
             set GD_Itempools.Scheduling.Gamestage_22:ConstantAttributeValueResolver_0 ConstantValue 1 
 
             set GD_Itempools.Scheduling.Gamestage_23:ConstantAttributeValueResolver_0 ConstantValue 1 
-
-            set GD_Itempools.Scheduling.Gamestage_24:ConstantAttributeValueResolver_0 ConstantValue 1 
 
         #</Additional Unlocks>
 
