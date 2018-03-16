@@ -14,9 +14,8 @@ everything in here can be toggled on or off inside FilterTool as you'd
 hope, on an item-by-item basis.  Basically every bullet point in the
 "Overview" section is its own "folder" once imported into FilterTool.
 
-**NOTE:** One known incompatibility is with Shadowevil's "VaultHunter" mod.
-Best not to use both of them at the same time.  See the "Compatibility"
-section, below, for details.
+**NOTE:** A few mods are known to do some weird things in conjunction with
+this mod.  See the "Compatibility" section below.
 
 Usage/Installation
 ------------------
@@ -102,7 +101,9 @@ Specifically, this mod does the following:
 * Makes Eridium drop 2.5x more often
 * Makes Torgue Tokens more numerous when dropped
 * Boss drop pools are generally improved, and bosses are guaranteed to drop as
-  many items from their unique drop pool as are in that pool.
+  many items from their unique drop pool as are in that pool.  *(The "Reasonable
+  Drops" variant does not actually have a guaranteed boss drop, though it does
+  make them more likely than in vanilla.)*
   * Bosses with just a single unique drop will therefore be guaranteed to drop
     that item.
   * If a boss has more than one in their drop pool, you may get duplicates
@@ -123,6 +124,7 @@ Specifically, this mod does the following:
     * Undead Badass Psychos
     * Badass Yeti
   * A few more standard enemies have also been set to drop from the badass pool:
+    * Knuckledragger
     * Shirtlesss Men
     * Gluttonous Thresher *(actually drops from the "super" badass pool)*
     * Sinkhole
@@ -183,7 +185,7 @@ Compatibility
 
 ### UCP ###
 
-This mod is mostly compatible with UCP 4.0, with three known exceptions:
+This mod is mostly compatible with UCP 4.0, with four known exceptions:
 
 * "`Better Enemy Drops -> Regular Enemy Drop Improvements -> BLNG Loader`" in this
   mod will override UCP's "`Loot Pool & Drop Changes -> Specific Loot Changes ->
@@ -223,8 +225,8 @@ more frequently.  The best thing to do if using More Chubbies is probably to
 disable this mod's Chubby buffs, at least partially.  There are two toggles
 you can use in this mod:
 
-* `Better Enemy Drops > Better Badass Pool Definitions > Chubby Enemies`
-* `Better Enemy Drops > Boss Drop Improved Quantities > Chubby Enemies`
+* `Better Enemy Drops -> Better Badass Pool Definitions -> Chubby Enemies`
+* `Better Enemy Drops -> Boss Drop Improved Quantities -> Chubby Enemies`
 
 ### SirUmnei's "COM Overhaul Pack" (and possibly other mods which touch COMs)
 
@@ -401,7 +403,7 @@ for the full text.
 Changelog
 =========
 
-**v1.2.0**, (tbd):
+**v1.2.0**, (March 16, 2018):
  * Fixed an issue where *Plan B* and *Bright Lights, Flying City* wouldn't reward
    Weapon Slot SDUs on Playthrough 1.
  * Buffed "weighted" pools used by some enemies for drops, to be in line with the rest
