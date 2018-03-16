@@ -592,6 +592,21 @@ for (number, rarity) in [
                 idx,
                 gunprob))
 
+# Some tweaks to Locker drops -- enforce Blue-rarity as much as possible.
+# This is in addition to the main `set` in mod-input-file.txt
+hfs.add_level_hotfix('locker_shield', 'LockerDrops',
+    """,GD_Itempools.ListDefs.StorageLockerLoot,
+    LootData[4].ItemAttachments[0].ItemPool,,
+    ItemPoolDefinition'GD_Itempools.ShieldPools.Pool_Shields_All_04_Rare'""")
+hfs.add_level_hotfix('locker_grenade', 'LockerDrops',
+    """,GD_Itempools.ListDefs.StorageLockerLoot,
+    LootData[5].ItemAttachments[0].ItemPool,,
+    ItemPoolDefinition'GD_Itempools.GrenadeModPools.Pool_GrenadeMods_04_Rare'""")
+hfs.add_level_hotfix('locker_gungrenade', 'LockerDrops',
+    """,GD_Itempools.ListDefs.StorageLockerLoot,
+    LootData[6].ItemAttachments[1].ItemPool,,
+    ItemPoolDefinition'GD_Itempools.GrenadeModPools.Pool_GrenadeMods_04_Rare'""")
+
 # Make Knuckledragger drop from the badass loot pool
 hfs.add_level_hotfix('knuckledragger_badass', 'KnuckledraggerDrop',
     """Glacial_P,GD_Population_PrimalBeast.Balance.Unique.PawnBalance_PrimalBeast_KnuckleDragger,

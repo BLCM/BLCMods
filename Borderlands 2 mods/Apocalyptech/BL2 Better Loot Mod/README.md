@@ -416,6 +416,9 @@ Changelog
    pistol drops will use our improved weights rather than the vanilla game weights.
  * Buffed the early-game shotgun chest (on leaving Windshear Waste) to use our
    custom weights rather than the vanilla game weights.
+ * Enforced our blue-rarity lockers a little more thoroughly -- previously it was
+   just SMGs/Pistols forced to blue, and other item types (shields, grenades) pulled
+   from our main pools.
  * Refactor a lot of probability variables *(shouldn't actually have an effect on the
    mod, though it was a pretty big internal change)*
 

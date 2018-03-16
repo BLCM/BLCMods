@@ -652,17 +652,21 @@
 
         #<Better Lockers>
 
-            # Makes locker drops a bit different - will drop Blue-rarity loot, though if
-            # GD_Itempools.GeneralItemPools.Pool_Gear gets chosen by the engine, it'll end
-            # up dropping from a more "usual" loot pool.  
+            # Makes locker drops a bit different - will always drop Blue-rarity loot.
+            # Note that `GD_Itempools.LootablePools.Pool_Locker_Items` itself is never
+            # actually used by the game.
             #
             # This may not technically count as "better" since lockers previously had
             # a chance to drop all the way up to Legendary, but with our other loot
             # changes, getting something special from a lockers wouldn't be special anyway.
 
-            set GD_Itempools.LootablePools.Pool_Locker_Items BalancedItems ((ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Health_All',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'GD_Itempools.DropWeights.DropODDS_Health',InitializationDefinition=None,BaseValueScaleConstant=50.000000),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Ammo_All_DropAlways',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Money_1',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_0_VeryCommon',BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_Pistols_04_Rare',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_2_Uncommon',BaseValueScaleConstant=1.000000),bDropOnDeath=False),(ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.GeneralItemPools.Pool_Gear',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_2_Uncommon',BaseValueScaleConstant=1.000000),bDropOnDeath=True))
-
             set GD_Itempools.LootablePools.Pool_Locker_Items_SMGsAndPistols BalancedItems ((ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_Pistols_04_Rare',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_2_Uncommon',BaseValueScaleConstant=1.000000),bDropOnDeath=False),(ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_SMG_04_Rare',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_3_Uncommoner',BaseValueScaleConstant=1.000000),bDropOnDeath=True))
+
+            #<hotfix><key>"SparkLevelPatchEntry-ApocLockerDrops0"</key><value>",GD_Itempools.ListDefs.StorageLockerLoot,LootData[4].ItemAttachments[0].ItemPool,,ItemPoolDefinition'GD_Itempools.ShieldPools.Pool_Shields_All_04_Rare'"</value><on>
+
+            #<hotfix><key>"SparkLevelPatchEntry-ApocLockerDrops1"</key><value>",GD_Itempools.ListDefs.StorageLockerLoot,LootData[5].ItemAttachments[0].ItemPool,,ItemPoolDefinition'GD_Itempools.GrenadeModPools.Pool_GrenadeMods_04_Rare'"</value><on>
+
+            #<hotfix><key>"SparkLevelPatchEntry-ApocLockerDrops2"</key><value>",GD_Itempools.ListDefs.StorageLockerLoot,LootData[6].ItemAttachments[1].ItemPool,,ItemPoolDefinition'GD_Itempools.GrenadeModPools.Pool_GrenadeMods_04_Rare'"</value><on>
 
         #</Better Lockers>
 
