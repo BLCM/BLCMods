@@ -147,6 +147,10 @@ class ConfigLootsplosion(ConfigBase):
     shield_base_veryrare = weapon_base_veryrare
     shield_base_legendary = weapon_base_legendary
 
+    # Boss drop rates
+    boss_drop_uniques = '1.0'
+    boss_drop_rares = '1.0'
+
     # Drop rates for "regular" treasure chests
     treasure_base_common = '0'
     treasure_base_uncommon = '0'
@@ -255,6 +259,10 @@ class ConfigReasonable(ConfigLootsplosion):
     shield_base_rare = weapon_base_rare
     shield_base_veryrare = weapon_base_veryrare
     shield_base_legendary = weapon_base_legendary
+
+    # Boss drop rates
+    boss_drop_uniques = '0.5'
+    boss_drop_rares = '0.25'
 
     # Drop rates for "regular" treasure chests
     treasure_base_common = '32.5'
