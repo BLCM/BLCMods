@@ -321,6 +321,10 @@ TODO
   * I think Biker Badasses, etc, have pretty anemic drops at the moment.
   * In order to retain UCP compatibility, we had to alter how we guarantee
     Piston's Slow Hand drop.  This remains untested.
+* Looks like our recent changes to the weighted pools have ended up letting
+  bandit coolers and other more "regular" containers like that get good
+  loot...  I think I actually preferred those being kind of crappy; look
+  into that.
 
 Other Notes
 -----------
@@ -405,6 +409,8 @@ Changelog
  * Changes in the "Reasonable Drops" variant:
    * Nerfed chances of bosses dropping unique gear
    * Nerfed relic drops a bit
+ * Set Grenades and Rocket Ammo to be available in the early game, both from vendors
+   and world drops
  * Refactor a lot of probability variables *(shouldn't actually have an effect on the
    mod, though it was a pretty big internal change)*
 
