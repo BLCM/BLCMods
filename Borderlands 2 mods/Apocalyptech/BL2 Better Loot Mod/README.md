@@ -198,14 +198,10 @@ This mod is mostly compatible with UCP 4.0, with three known exceptions:
   Pool`" in this mod but leaving the rest of our Hyperius section intact
   will still give a 100% drop rate for Seraphs on Hyperius.
 * "`Better Enemy Drops -> Better Miscellaneous Boss Drops -> Knuckledragger
-  Improvements`" in thsi mod will override the Knuckledragger portion of UCP's
+  Improvements`" in this mod will override the Knuckledragger portion of UCP's
   "`Loot Pool & Drop Changes -> Specific Loot Changes -> Make Knuckle Dragger /
   Boll be able to world drop`".  Our version is more powerful (drops from the
   badass pool, rather than standard).
-
-It's possible that there are some other strange interactions which could take
-place when both UCP and this mod are active, though it shouldn't be anything
-awful.
 
 ### Shadowevil's "VaultHunter" mod
 
@@ -230,7 +226,7 @@ you can use in this mod:
 * `Better Enemy Drops > Better Badass Pool Definitions > Chubby Enemies`
 * `Better Enemy Drops > Boss Drop Improved Quantities > Chubby Enemies`
 
-### SirUmnei's "COM Overhaul Pack"
+### SirUmnei's "COM Overhaul Pack" (and possibly other mods which touch COMs)
 
 The COM Overhaul Pack, in conjunction with this mod, will end up creating
 items which will get deleted by Borderlands after you save/quit.  You should
@@ -268,8 +264,6 @@ easily persuaded otherwise if someone feels strongly about it.
   technically different items)*
 * "ERROR MESSAGE" Ahab (the one used by Master Gee).  Regular Ahabs will
   still spawn, though.
-* Possibly one or two other guns as well -- I didn't think to keep track at
-  first.
 
 There's also a few drop pools / containers / etc which I've purposefully
 left alone:
