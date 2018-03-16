@@ -1302,6 +1302,25 @@ for (gm_type, man_count) in [
                 gm_type, man_num,
             ))
 
+# Unlock rocket launcher ammo at level 1.  It's possible this can be done
+# with `set`, but I like being able to cherry-pick what I'm changing
+
+hfs.add_level_hotfix('rocket_vending', 'RocketVending',
+    """,GD_ItemGrades.Ammo_Shop.ItemGrade_AmmoShop_RocketLauncher,
+    Manufacturers[0].Grades[0].GameStageRequirement.MinGameStage,,1""")
+
+hfs.add_level_hotfix('rocket_drops', 'RocketDrops',
+    """,GD_ItemGrades.Ammo.ItemGrade_Ammo_RocketLauncher,
+    Manufacturers[0].Grades[0].GameStageRequirement.MinGameStage,,1""")
+
+hfs.add_level_hotfix('grenade_vending', 'GrenadeVending',
+    """,GD_ItemGrades.Ammo_Shop.ItemGrade_AmmoShop_Grenade,
+    Manufacturers[0].Grades[0].GameStageRequirement.MinGameStage,,1""")
+
+hfs.add_level_hotfix('grenade_drops', 'GrenadeDrops',
+    """,GD_ItemGrades.Ammo.ItemGrade_Ammo_Grenade,
+    Manufacturers[0].Grades[0].GameStageRequirement.MinGameStage,,1""")
+
 # Nerfs for some enemies' drops which get inappropriately buffed by the rest of this mod.
 # (basically just setting them back to their default values, but without reference to
 # constants)
