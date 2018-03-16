@@ -592,15 +592,21 @@ for (number, rarity) in [
                 idx,
                 gunprob))
 
-# Make Shirtless Men drop from the badass pool pool
+# Make Knuckledragger drop from the badass loot pool
+hfs.add_level_hotfix('knuckledragger_badass', 'KnuckledraggerDrop',
+    """Glacial_P,GD_Population_PrimalBeast.Balance.Unique.PawnBalance_PrimalBeast_KnuckleDragger,
+    DefaultItemPoolIncludedLists,,
+    (ItemPoolListDefinition'GD_Itempools.ListDefs.BadassEnemyGunsAndGear')""")
+
+# Make Shirtless Men drop from the badass loot pool
 hfs.add_level_hotfix('shirtless_man_badass', 'ShirtlessManDrop',
     "Interlude_P,GD_Population_Marauder.Balance.Unique.PawnBalance_ShirtlessMan,DefaultItemPoolIncludedLists[0],,ItemPoolListDefinition'GD_Itempools.ListDefs.BadassEnemyGunsAndGear'")
 
-# Make Gluttonous Thresher drop from the super badass pool pool
+# Make Gluttonous Thresher drop from the super badass loot pool
 hfs.add_level_hotfix('gluttonous_badass', 'GluttonousDrop',
     "Outwash_P,GD_Population_Thresher.Balance.PawnBalance_ThresherGluttonous,DefaultItemPoolIncludedLists[0],,ItemPoolListDefinition'GD_Itempools.ListDefs.SuperBadassEnemyGunsAndGear'")
 
-# Make Sinkhole drop from the badass pool pool
+# Make Sinkhole drop from the badass loot pool
 hfs.add_level_hotfix('sinkhole_badass', 'SinkholeDrop',
     "Fridge_P,GD_Population_Stalker.Balance.Unique.PawnBalance_Stalker_SwallowedWhole,DefaultItemPoolIncludedLists[0],,ItemPoolListDefinition'GD_Itempools.ListDefs.BadassEnemyGunsAndGear'")
 
@@ -1536,11 +1542,11 @@ hfs.add_level_hotfix('dragonkeep_handsomedragon_drop2', 'HandsomeDragonEridium',
 hfs.add_level_hotfix('dragonkeep_handsomedragon_drop3', 'HandsomeDragonEridium',
     "CastleExterior_P,GD_DragonBridgeBoss.InteractiveObjects.IO_DragonBridgeBoss_LootExplosion:BehaviorProviderDefinition_0.Behavior_SpawnItems_21,ItemPoolList[18].ItemPool,,ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Eridium_Stick'")
 
-# Make Badass Knights drop from the badass pool pool
+# Make Badass Knights drop from the badass loot pool
 hfs.add_level_hotfix('dragonkeep_badass_knights', 'BadassKnightsDrop',
     ",GD_Aster_Pop_Knights.Balance.PawnBalance_Knight_Badass,DefaultItemPoolIncludedLists[0],,ItemPoolListDefinition'GD_Itempools.ListDefs.BadassEnemyGunsAndGear'")
 
-# Make Badass Fire Archers drop from the badass pool pool
+# Make Badass Fire Archers drop from the badass loot pool
 hfs.add_level_hotfix('dragonkeep_badass_fire_archers', 'BadassFireArchersDrop',
     ",GD_Aster_Pop_Knights.Balance.PawnBalance_Knight_BadassFireArcher,DefaultItemPoolIncludedLists[0],,ItemPoolListDefinition'GD_Itempools.ListDefs.BadassEnemyGunsAndGear'")
 

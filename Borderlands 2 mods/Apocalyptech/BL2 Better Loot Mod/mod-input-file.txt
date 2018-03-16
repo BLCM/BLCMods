@@ -7729,6 +7729,29 @@
 
         #</Better Epic Chests>
 
+        #<Early Game Shotgun Chest>
+
+            # Improves the early game shotgun chest slightly - have it pull from the
+            # general shotgun pool, rather than Jakobs specifically.  This will have the
+            # effect of letting it use our default game weights.
+
+            set GD_Itempools.EarlyGame.Pool_Knuckledragger_Chest_Shotgun BalancedItems
+            (
+                ( 
+                    ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_Shotguns', 
+                    InvBalanceDefinition=None,
+                    Probability=( 
+                        BaseValueConstant=1.000000, 
+                        BaseValueAttribute=None, 
+                        InitializationDefinition=None, 
+                        BaseValueScaleConstant=1.000000 
+                    ), 
+                    bDropOnDeath=True 
+                )
+            )
+
+        #</Early Game Shotgun Chest>
+
         #<Mordecai's Stash>
 
             # Improves Mordecai's Stash, from The Good, The Bad, and the Mordecai.
@@ -10271,6 +10294,61 @@
                 )
 
             #</RaidBossEnemyGunsAndGear Improvements>
+
+            #<Knuckledragger Improvements>
+
+                # Makes Knuckledragger drop from the badass loot pool, and improves his
+                # pistol drops to pull from the main pistol pool, rather than Jakobs
+                # specifically (this will make the drop use our custom weights)
+
+                {hotfixes:knuckledragger_badass}
+
+                set GD_Itempools.EarlyGame.Pool_Knuckledragger_Pistol BalancedItems
+                (
+                    ( 
+                        ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_Pistols', 
+                        InvBalanceDefinition=None,
+                        Probability=( 
+                            BaseValueConstant=1.000000, 
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=None, 
+                            BaseValueScaleConstant=1.000000 
+                        ), 
+                        bDropOnDeath=True 
+                    )
+                )
+
+                set GD_Itempools.EarlyGame.Pool_Knuckledragger_Pistol_P2_P3 BalancedItems
+                (
+                    ( 
+                        ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_Pistols', 
+                        InvBalanceDefinition=None,
+                        Probability=( 
+                            BaseValueConstant=1.000000, 
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=None, 
+                            BaseValueScaleConstant=1.000000 
+                        ), 
+                        bDropOnDeath=True 
+                    )
+                )
+
+                set GD_Itempools.EarlyGame.Pool_Knuckledragger_Pistol_P4 BalancedItems
+                (
+                    ( 
+                        ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_Pistols', 
+                        InvBalanceDefinition=None,
+                        Probability=( 
+                            BaseValueConstant=1.000000, 
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=None, 
+                            BaseValueScaleConstant=1.000000 
+                        ), 
+                        bDropOnDeath=True 
+                    )
+                )
+
+            #</Knuckledragger Improvements>
 
             #<The Warrior Improvements>
 

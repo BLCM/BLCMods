@@ -185,18 +185,23 @@ Compatibility
 
 This mod is mostly compatible with UCP 4.0, with three known exceptions:
 
-* "`Better Enemy Drops / Regular Enemy Drop Improvements / BLNG Loader`" in this
-  mod will override UCP's "`Loot Pool & Drop Changes / Specific Loot Changes /
+* "`Better Enemy Drops -> Regular Enemy Drop Improvements -> BLNG Loader`" in this
+  mod will override UCP's "`Loot Pool & Drop Changes -> Specific Loot Changes ->
   Add Sledge's Shotgun to BLNG Loader`"
-* "`Better Enemy Drops / Raid Boss Drop Improvements / Hyperius`" in this mod
-  will override UCP's "`Loot Pool & Drop Changes / Specific Loot Changes / Add
+* "`Better Enemy Drops -> Raid Boss Drop Improvements -> Hyperius`" in this mod
+  will override UCP's "`Loot Pool & Drop Changes -> Specific Loot Changes -> Add
   Black Hole and remove the Kiss of Death from Hyperius`"
-* "`Better Enemy Drops / Raid Boss Drop Improvements / Hyperius / Clean Up
+* "`Better Enemy Drops -> Raid Boss Drop Improvements -> Hyperius -> Clean Up
   Seraph Pool`" in this mod will override the loot pool changes in UCP's
-  "`Loot Pool & Drop Changes / Specific Loot Changes / Increase Hyperius' Seraph
+  "`Loot Pool & Drop Changes -> Specific Loot Changes -> Increase Hyperius' Seraph
   drop chance and add all DLC 1 Seraphs`".  Unselecting just "`Clean Up Seraph
   Pool`" in this mod but leaving the rest of our Hyperius section intact
   will still give a 100% drop rate for Seraphs on Hyperius.
+* "`Better Enemy Drops -> Better Miscellaneous Boss Drops -> Knuckledragger
+  Improvements`" in thsi mod will override the Knuckledragger portion of UCP's
+  "`Loot Pool & Drop Changes -> Specific Loot Changes -> Make Knuckle Dragger /
+  Boll be able to world drop`".  Our version is more powerful (drops from the
+  badass pool, rather than standard).
 
 It's possible that there are some other strange interactions which could take
 place when both UCP and this mod are active, though it shouldn't be anything
@@ -413,6 +418,10 @@ Changelog
    * Nerfed relic drops a bit
  * Set Grenades and Rocket Ammo to be available in the early game, both from vendors
    and world drops
+ * Buffed Knuckledragger's drops: will drop from the badass pool, and his custom
+   pistol drops will use our improved weights rather than the vanilla game weights.
+ * Buffed the early-game shotgun chest (on leaving Windshear Waste) to use our
+   custom weights rather than the vanilla game weights.
  * Refactor a lot of probability variables *(shouldn't actually have an effect on the
    mod, though it was a pretty big internal change)*
 
