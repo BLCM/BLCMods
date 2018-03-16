@@ -14,9 +14,8 @@ everything in here can be toggled on or off inside FilterTool as you'd
 hope, on an item-by-item basis.  Basically every bullet point in the
 "Overview" section is its own "folder" once imported into FilterTool.
 
-**NOTE:** One known incompatibility is with Shadowevil's "VaultHunter" mod.
-Best not to use both of them at the same time.  See the "Compatibility"
-section, below, for details.
+**NOTE:** A few mods are known to do some weird things in conjunction with
+this mod.  See the "Compatibility" section below.
 
 Usage/Installation
 ------------------
@@ -102,7 +101,9 @@ Specifically, this mod does the following:
 * Makes Eridium drop 2.5x more often
 * Makes Torgue Tokens more numerous when dropped
 * Boss drop pools are generally improved, and bosses are guaranteed to drop as
-  many items from their unique drop pool as are in that pool.
+  many items from their unique drop pool as are in that pool.  *(The "Reasonable
+  Drops" variant does not actually have a guaranteed boss drop, though it does
+  make them more likely than in vanilla.)*
   * Bosses with just a single unique drop will therefore be guaranteed to drop
     that item.
   * If a boss has more than one in their drop pool, you may get duplicates
@@ -123,6 +124,7 @@ Specifically, this mod does the following:
     * Undead Badass Psychos
     * Badass Yeti
   * A few more standard enemies have also been set to drop from the badass pool:
+    * Knuckledragger
     * Shirtlesss Men
     * Gluttonous Thresher *(actually drops from the "super" badass pool)*
     * Sinkhole
@@ -183,24 +185,25 @@ Compatibility
 
 ### UCP ###
 
-This mod is mostly compatible with UCP 4.0, with three known exceptions:
+This mod is mostly compatible with UCP 4.0, with four known exceptions:
 
-* "`Better Enemy Drops / Regular Enemy Drop Improvements / BLNG Loader`" in this
-  mod will override UCP's "`Loot Pool & Drop Changes / Specific Loot Changes /
+* "`Better Enemy Drops -> Regular Enemy Drop Improvements -> BLNG Loader`" in this
+  mod will override UCP's "`Loot Pool & Drop Changes -> Specific Loot Changes ->
   Add Sledge's Shotgun to BLNG Loader`"
-* "`Better Enemy Drops / Raid Boss Drop Improvements / Hyperius`" in this mod
-  will override UCP's "`Loot Pool & Drop Changes / Specific Loot Changes / Add
+* "`Better Enemy Drops -> Raid Boss Drop Improvements -> Hyperius`" in this mod
+  will override UCP's "`Loot Pool & Drop Changes -> Specific Loot Changes -> Add
   Black Hole and remove the Kiss of Death from Hyperius`"
-* "`Better Enemy Drops / Raid Boss Drop Improvements / Hyperius / Clean Up
+* "`Better Enemy Drops -> Raid Boss Drop Improvements -> Hyperius -> Clean Up
   Seraph Pool`" in this mod will override the loot pool changes in UCP's
-  "`Loot Pool & Drop Changes / Specific Loot Changes / Increase Hyperius' Seraph
+  "`Loot Pool & Drop Changes -> Specific Loot Changes -> Increase Hyperius' Seraph
   drop chance and add all DLC 1 Seraphs`".  Unselecting just "`Clean Up Seraph
   Pool`" in this mod but leaving the rest of our Hyperius section intact
   will still give a 100% drop rate for Seraphs on Hyperius.
-
-It's possible that there are some other strange interactions which could take
-place when both UCP and this mod are active, though it shouldn't be anything
-awful.
+* "`Better Enemy Drops -> Better Miscellaneous Boss Drops -> Knuckledragger
+  Improvements`" in this mod will override the Knuckledragger portion of UCP's
+  "`Loot Pool & Drop Changes -> Specific Loot Changes -> Make Knuckle Dragger /
+  Boll be able to world drop`".  Our version is more powerful (drops from the
+  badass pool, rather than standard).
 
 ### Shadowevil's "VaultHunter" mod
 
@@ -222,8 +225,15 @@ more frequently.  The best thing to do if using More Chubbies is probably to
 disable this mod's Chubby buffs, at least partially.  There are two toggles
 you can use in this mod:
 
-* `Better Enemy Drops > Better Badass Pool Definitions > Chubby Enemies`
-* `Better Enemy Drops > Boss Drop Improved Quantities > Chubby Enemies`
+* `Better Enemy Drops -> Better Badass Pool Definitions -> Chubby Enemies`
+* `Better Enemy Drops -> Boss Drop Improved Quantities -> Chubby Enemies`
+
+### SirUmnei's "COM Overhaul Pack" (and possibly other mods which touch COMs)
+
+The COM Overhaul Pack, in conjunction with this mod, will end up creating
+items which will get deleted by Borderlands after you save/quit.  You should
+be able to avoid this by turning off this mod's `Loot Pool Tweaks -> Better
+Class Mod Rarity Drops -> Force Alignment COMs Blue And Higher`.
 
 ### Other Mods
 
@@ -256,16 +266,17 @@ easily persuaded otherwise if someone feels strongly about it.
   technically different items)*
 * "ERROR MESSAGE" Ahab (the one used by Master Gee).  Regular Ahabs will
   still spawn, though.
-* Possibly one or two other guns as well -- I didn't think to keep track at
-  first.
+
+A handful of containers will only ever drop common-level gear:
+
+* Bandit Coolers
+* Cardboard Boxes
+* Dumpsters
 
 There's also a few drop pools / containers / etc which I've purposefully
 left alone:
 
-* Bandit Coolers
-* Money Boxes
-* Laundry Machines / Toilets / Cardboard Boxes
-* Dumpsters
+* Money Boxes / Laundry Machines / Toilets / etc
 * Loot Midgets
 
 Some other stuff not done:
@@ -391,6 +402,29 @@ for the full text.
 
 Changelog
 =========
+
+**v1.2.0**, (March 16, 2018):
+ * Fixed an issue where *Plan B* and *Bright Lights, Flying City* wouldn't reward
+   Weapon Slot SDUs on Playthrough 1.
+ * Buffed "weighted" pools used by some enemies for drops, to be in line with the rest
+   of the mod's drop weights (Marauders being the most obvious example).
+ * Changes in the "Reasonable Drops" variant:
+   * Nerfed chances of bosses dropping unique gear
+   * Nerfed relic drops a bit
+ * Set Grenades and Rocket Ammo to be available in the early game, both from vendors
+   and world drops
+ * Buffed Knuckledragger's drops: will drop from the badass pool, and his custom
+   pistol drops will use our improved weights rather than the vanilla game weights.
+ * Buffed the early-game shotgun chest (on leaving Windshear Waste) to use our
+   custom weights rather than the vanilla game weights.
+ * Enforced our blue-rarity lockers a little more thoroughly -- previously it was
+   just SMGs/Pistols forced to blue, and other item types (shields, grenades) pulled
+   from our main pools.
+ * Dumpsters, Bandit Coolers, and Cardboard Boxes will only ever spawn common weapons,
+   when they spawn weapons (previously they used the vanilla game's probabilities for
+   rarity)
+ * Refactor a lot of probability variables *(shouldn't actually have an effect on the
+   mod, though it was a pretty big internal change)*
 
 **v1.1.1**, March 7, 2018 (commit `ac9af0507b5b28f51e00f15e047cb019b1fc93e9`):
  * Fixed unlocking early-game elements for Maliwan Aquamarine Snipers on Windows
