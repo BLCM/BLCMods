@@ -265,13 +265,16 @@ easily persuaded otherwise if someone feels strongly about it.
 * "ERROR MESSAGE" Ahab (the one used by Master Gee).  Regular Ahabs will
   still spawn, though.
 
+A handful of containers will only ever drop common-level gear:
+
+* Bandit Coolers
+* Cardboard Boxes
+* Dumpsters
+
 There's also a few drop pools / containers / etc which I've purposefully
 left alone:
 
-* Bandit Coolers
-* Money Boxes
-* Laundry Machines / Toilets / Cardboard Boxes
-* Dumpsters
+* Money Boxes / Laundry Machines / Toilets / etc
 * Loot Midgets
 
 Some other stuff not done:
@@ -320,10 +323,6 @@ TODO
   * I think Biker Badasses, etc, have pretty anemic drops at the moment.
   * In order to retain UCP compatibility, we had to alter how we guarantee
     Piston's Slow Hand drop.  This remains untested.
-* Looks like our recent changes to the weighted pools have ended up letting
-  bandit coolers and other more "regular" containers like that get good
-  loot...  I think I actually preferred those being kind of crappy; look
-  into that.
 
 Other Notes
 -----------
@@ -419,6 +418,9 @@ Changelog
  * Enforced our blue-rarity lockers a little more thoroughly -- previously it was
    just SMGs/Pistols forced to blue, and other item types (shields, grenades) pulled
    from our main pools.
+ * Dumpsters, Bandit Coolers, and Cardboard Boxes will only ever spawn common weapons,
+   when they spawn weapons (previously they used the vanilla game's probabilities for
+   rarity)
  * Refactor a lot of probability variables *(shouldn't actually have an effect on the
    mod, though it was a pretty big internal change)*
 

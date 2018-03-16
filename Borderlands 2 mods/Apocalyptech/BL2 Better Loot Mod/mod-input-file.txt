@@ -8303,6 +8303,95 @@
 
         #</Fix Broken Shield Pools>
 
+        #<Nerfed Containers>
+
+            # Prior to v1.2.0 of this mod, various smaller containers (cardboard boxes,
+            # dumpsters, etc) would have a chance to drop from weapon pools whose
+            # probabilities we didn't alter, so they would generally end up being whites
+            # or greens.  Some changes in v1.2.0 made them start using the enhanced
+            # weights, and I've found I prefer these containers to continue having junk
+            # for loot, actually.  So, these statements will nerf those containers down
+            # to only ever getting common gear.
+
+            #<Cardboard Boxes>
+
+                {hotfixes:cardboard_box_nerf}
+
+            #</Cardboard Boxes>
+
+            #<Dumpsters>
+
+                set GD_Itempools.LootablePools.Pool_Dumpster_Guns BalancedItems
+                (
+                    ( 
+                        ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_Pistols_01_Common', 
+                        InvBalanceDefinition=None, 
+                        Probability=( 
+                            BaseValueConstant=0.000000, 
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common', 
+                            BaseValueScaleConstant=1.000000 
+                        ), 
+                        bDropOnDeath=False 
+                    ),
+                    (
+                        ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_SMG_01_Common', 
+                        InvBalanceDefinition=None, 
+                        Probability=( 
+                            BaseValueConstant=0.000000, 
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common', 
+                            BaseValueScaleConstant=0.850000 
+                        ), 
+                        bDropOnDeath=True 
+                    ),
+                    (
+                        ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_Shotguns_01_Common', 
+                        InvBalanceDefinition=None, 
+                        Probability=( 
+                            BaseValueConstant=0.000000, 
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common', 
+                            BaseValueScaleConstant=0.850000 
+                        ), 
+                        bDropOnDeath=True 
+                    ),
+                    (
+                        ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_AssaultRifles_01_Common', 
+                        InvBalanceDefinition=None, 
+                        Probability=( 
+                            BaseValueConstant=0.000000, 
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common', 
+                            BaseValueScaleConstant=0.850000 
+                        ), 
+                        bDropOnDeath=True 
+                    ),
+                    (
+                        ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_SniperRifles_01_Common', 
+                        InvBalanceDefinition=None, 
+                        Probability=( 
+                            BaseValueConstant=0.000000, 
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common', 
+                            BaseValueScaleConstant=0.650000 
+                        ), 
+                        bDropOnDeath=True 
+                    )
+                )
+
+            #</Dumpsters>
+
+            #<Bandit Coolers>
+
+                {hotfixes:bandit_cooler_nerf_0}
+
+                {hotfixes:bandit_cooler_nerf_1}
+
+            #</Bandit Coolers>
+
+        #</Nerfed Containers>
+
     #</Better Containers>
 
     #<Better Enemy Drops>

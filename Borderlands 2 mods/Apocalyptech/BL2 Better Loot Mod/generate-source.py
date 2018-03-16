@@ -607,6 +607,24 @@ hfs.add_level_hotfix('locker_gungrenade', 'LockerDrops',
     LootData[6].ItemAttachments[1].ItemPool,,
     ItemPoolDefinition'GD_Itempools.GrenadeModPools.Pool_GrenadeMods_04_Rare'""")
 
+# Cardboard Box nerf ("needed" in v1.2.0 'cause of our weighted pool fixes)
+hfs.add_level_hotfix('cardboard_box_nerf', 'CardboardBoxNerf',
+    """,GD_Balance_Treasure.LootableGrades.ObjectGrade_Cardboard_Box,
+    DefaultLoot[1].ItemAttachments[0].ItemPool,,
+    ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_Pistols_01_Common'""")
+
+# Bandit Cooler nerf ("needed" in v1.2.0 'cause of our weighted pool fixes)
+for idx, objname in enumerate([
+        'GD_Balance_Treasure.LootableGrades.ObjectGrade_Bandit_Cooler',
+        'GD_Balance_Treasure.LootableGradesTrap.MidgetBandit.ObjectGrade_BanditCooler_MidgetBandit',
+        ]):
+    hfs.add_level_hotfix('bandit_cooler_nerf_{}'.format(idx),
+        'BanditCoolerNerf',
+        """,{},DefaultLoot[4].ItemAttachments[0].ItemPool,,
+        ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_Pistols_01_Common'""".format(
+            objname
+            ))
+
 # Make Knuckledragger drop from the badass loot pool
 hfs.add_level_hotfix('knuckledragger_badass', 'KnuckledraggerDrop',
     """Glacial_P,GD_Population_PrimalBeast.Balance.Unique.PawnBalance_PrimalBeast_KnuckleDragger,
