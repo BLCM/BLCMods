@@ -905,6 +905,10 @@
 
         #<Main Unlocks>
 
+            # Note that we omit Gamestage_24 on purpose here, because that is used to
+            # determine Weapon Slot SDU rewards during playthrough 1 in the main storyline.
+            # Nothing else in the game uses 24, so we're leaving it.  
+
             set GD_Itempools.Scheduling.Gamestage_02:ConstantAttributeValueResolver_0 ConstantValue 1 
 
             set GD_Itempools.Scheduling.Gamestage_03:ConstantAttributeValueResolver_0 ConstantValue 1 
@@ -948,8 +952,6 @@
             set GD_Itempools.Scheduling.Gamestage_22:ConstantAttributeValueResolver_0 ConstantValue 1 
 
             set GD_Itempools.Scheduling.Gamestage_23:ConstantAttributeValueResolver_0 ConstantValue 1 
-
-            set GD_Itempools.Scheduling.Gamestage_24:ConstantAttributeValueResolver_0 ConstantValue 1 
 
         #</Main Unlocks>
 
