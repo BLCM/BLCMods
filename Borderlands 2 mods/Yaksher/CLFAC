@@ -1,0 +1,55 @@
+#<patch>
+
+    #<Description>
+    
+        Replaces the Butcher with the Concentrated Laser Fire Auto Cannon (CLFAC).
+        It shoots railgun projectiles in a rotating sqaure-with-a-point-in-the-middle firing pattern. It is currently unfinished,
+        including but not limited to:
+         • Balancing stats (currently, damage has not been altered compared to a Butcher,
+           but the firerate has been massively increased and the pellet count has been buffed as well, so it is rather powerful)
+         • Changes to part list (for one, removing vertical grip accessory as it messes with firing pattern).
+         • (Possible) Making it multi-element or fixing the element.
+         • (Possible) Visual changes to projectiles.
+         • (Possible) Increase of bounces or removal of bouncing.
+         • (Unlikely) Figuring out how to fix a bug caused by the base railgun firing mode with projectiles not coming out of the barrel in 3rd person
+         • More changes likely not thought of yet.
+        
+        Breaks:
+         • E-Tech snipers (and anything else that uses the Railgun firing mode)
+           (at the moment, projectiles will cycle through the firing pattern of the minigun,
+           meaning you could in theory still use it, but it would be difficult to hit your shots).
+    
+    #</Description>
+    
+    #<Butcher Title>
+
+        set GD_Gladiolus_Weapons.Name.Title.Title_Pearlescent_Butcher PartName CLFAC
+
+        set GD_Gladiolus_Weapons.Name.Title.Title_Pearlescent_Butcher:AttributePresentationDefinition_8 NoConstraintText One can never have too many lasers.
+
+    #</Butcher Title>
+
+    #<Butcher Barrel>
+
+        set GD_Gladiolus_Weapons.Shotgun.SG_Barrel_Torgue_Butcher CustomFiringModeDefinition FiringModeDefinition'GD_Weap_SniperRifles.FiringModes.Bullet_RailGun'
+
+        set GD_Gladiolus_Weapons.Shotgun.SG_Barrel_Torgue_Butcher WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=3.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-0.180000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+        set GD_Gladiolus_Weapons.Shotgun.SG_Barrel_Torgue_Butcher WeaponCardAttributes ((Attribute=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',PriorityIncrease=0.001000))
+
+    #</Butcher Barrel>
+
+    #<Railgun Firing Mode>
+
+        set GD_Weap_SniperRifles.FiringModes.Bullet_RailGun NumRicochets 1
+
+        set GD_Weap_SniperRifles.FiringModes.Bullet_RailGun bPenetratePawn True
+
+        set GD_Weap_SniperRifles.FiringModes.Bullet_RailGun bSuppressWeaponSpread True
+
+        set GD_Weap_SniperRifles.FiringModes.Bullet_RailGun FiringPatternLines ((StartPoint=(Pitch=0,Yaw=0,Roll=0),EndPoint=(Pitch=0,Yaw=0,Roll=0),bUseStartPointOnly=True,CustomWaveMotion=(bUseCustomWaveMotion=True,WaveFreq=(X=0.000000,Y=0.000000,Z=0.000000),WaveAmp=(X=0.000000,Y=0.000000,Z=0.000000),WavePhase=(X=0.000000,Y=0.000000,Z=0.000000))),(StartPoint=(Pitch=150,Yaw=150,Roll=0),EndPoint=(Pitch=150,Yaw=150,Roll=0),bUseStartPointOnly=True,CustomWaveMotion=(bUseCustomWaveMotion=True,WaveFreq=(X=0.000000,Y=0.000000,Z=0.000000),WaveAmp=(X=0.000000,Y=0.000000,Z=0.000000),WavePhase=(X=0.000000,Y=0.000000,Z=0.000000))),(StartPoint=(Pitch=-150,Yaw=150,Roll=0),EndPoint=(Pitch=-150,Yaw=150,Roll=0),bUseStartPointOnly=True,CustomWaveMotion=(bUseCustomWaveMotion=True,WaveFreq=(X=0.000000,Y=0.000000,Z=0.000000),WaveAmp=(X=0.000000,Y=0.000000,Z=0.000000),WavePhase=(X=0.000000,Y=0.000000,Z=0.000000))),(StartPoint=(Pitch=150,Yaw=-150,Roll=0),EndPoint=(Pitch=150,Yaw=-150,Roll=0),bUseStartPointOnly=True,CustomWaveMotion=(bUseCustomWaveMotion=True,WaveFreq=(X=0.000000,Y=0.000000,Z=0.000000),WaveAmp=(X=0.000000,Y=0.000000,Z=0.000000),WavePhase=(X=0.000000,Y=0.000000,Z=0.000000))),(StartPoint=(Pitch=-150,Yaw=-150,Roll=0),EndPoint=(Pitch=-150,Yaw=-150,Roll=0),bUseStartPointOnly=True,CustomWaveMotion=(bUseCustomWaveMotion=True,WaveFreq=(X=0.000000,Y=0.000000,Z=0.000000),WaveAmp=(X=0.000000,Y=0.000000,Z=0.000000),WavePhase=(X=0.000000,Y=0.000000,Z=0.000000))),(StartPoint=(Pitch=0,Yaw=0,Roll=0),EndPoint=(Pitch=0,Yaw=0,Roll=0),bUseStartPointOnly=True,CustomWaveMotion=(bUseCustomWaveMotion=True,WaveFreq=(X=0.000000,Y=0.000000,Z=0.000000),WaveAmp=(X=0.000000,Y=0.000000,Z=0.000000),WavePhase=(X=0.000000,Y=0.000000,Z=0.000000))),(StartPoint=(Pitch=80,Yaw=195,Roll=0),EndPoint=(Pitch=80,Yaw=195,Roll=0),bUseStartPointOnly=True,CustomWaveMotion=(bUseCustomWaveMotion=True,WaveFreq=(X=0.000000,Y=0.000000,Z=0.000000),WaveAmp=(X=0.000000,Y=0.000000,Z=0.000000),WavePhase=(X=0.000000,Y=0.000000,Z=0.000000))),(StartPoint=(Pitch=-80,Yaw=-195,Roll=0),EndPoint=(Pitch=-80,Yaw=-195,Roll=0),bUseStartPointOnly=True,CustomWaveMotion=(bUseCustomWaveMotion=True,WaveFreq=(X=0.000000,Y=0.000000,Z=0.000000),WaveAmp=(X=0.000000,Y=0.000000,Z=0.000000),WavePhase=(X=0.000000,Y=0.000000,Z=0.000000))),(StartPoint=(Pitch=-195,Yaw=80,Roll=0),EndPoint=(Pitch=-195,Yaw=80,Roll=0),bUseStartPointOnly=True,CustomWaveMotion=(bUseCustomWaveMotion=True,WaveFreq=(X=0.000000,Y=0.000000,Z=0.000000),WaveAmp=(X=0.000000,Y=0.000000,Z=0.000000),WavePhase=(X=0.000000,Y=0.000000,Z=0.000000))),(StartPoint=(Pitch=195,Yaw=-80,Roll=0),EndPoint=(Pitch=195,Yaw=-80,Roll=0),bUseStartPointOnly=True,CustomWaveMotion=(bUseCustomWaveMotion=True,WaveFreq=(X=0.000000,Y=0.000000,Z=0.000000),WaveAmp=(X=0.000000,Y=0.000000,Z=0.000000),WavePhase=(X=0.000000,Y=0.000000,Z=0.000000))),(StartPoint=(Pitch=0,Yaw=0,Roll=0),EndPoint=(Pitch=0,Yaw=0,Roll=0),bUseStartPointOnly=True,CustomWaveMotion=(bUseCustomWaveMotion=True,WaveFreq=(X=0.000000,Y=0.000000,Z=0.000000),WaveAmp=(X=0.000000,Y=0.000000,Z=0.000000),WavePhase=(X=0.000000,Y=0.000000,Z=0.000000))),(StartPoint=(Pitch=210,Yaw=0,Roll=0),EndPoint=(Pitch=210,Yaw=0,Roll=0),bUseStartPointOnly=True,CustomWaveMotion=(bUseCustomWaveMotion=True,WaveFreq=(X=0.000000,Y=0.000000,Z=0.000000),WaveAmp=(X=0.000000,Y=0.000000,Z=0.000000),WavePhase=(X=0.000000,Y=0.000000,Z=0.000000))),(StartPoint=(Pitch=-210,Yaw=0,Roll=0),EndPoint=(Pitch=-210,Yaw=0,Roll=0),bUseStartPointOnly=True,CustomWaveMotion=(bUseCustomWaveMotion=True,WaveFreq=(X=0.000000,Y=0.000000,Z=0.000000),WaveAmp=(X=0.000000,Y=0.000000,Z=0.000000),WavePhase=(X=0.000000,Y=0.000000,Z=0.000000))),(StartPoint=(Pitch=0,Yaw=210,Roll=0),EndPoint=(Pitch=0,Yaw=210,Roll=0),bUseStartPointOnly=True,CustomWaveMotion=(bUseCustomWaveMotion=True,WaveFreq=(X=0.000000,Y=0.000000,Z=0.000000),WaveAmp=(X=0.000000,Y=0.000000,Z=0.000000),WavePhase=(X=0.000000,Y=0.000000,Z=0.000000))),(StartPoint=(Pitch=0,Yaw=-210,Roll=0),EndPoint=(Pitch=0,Yaw=-210,Roll=0),bUseStartPointOnly=True,CustomWaveMotion=(bUseCustomWaveMotion=True,WaveFreq=(X=0.000000,Y=0.000000,Z=0.000000),WaveAmp=(X=0.000000,Y=0.000000,Z=0.000000),WavePhase=(X=0.000000,Y=0.000000,Z=0.000000))),(StartPoint=(Pitch=0,Yaw=0,Roll=0),EndPoint=(Pitch=0,Yaw=0,Roll=0),bUseStartPointOnly=True,CustomWaveMotion=(bUseCustomWaveMotion=True,WaveFreq=(X=0.000000,Y=0.000000,Z=0.000000),WaveAmp=(X=0.000000,Y=0.000000,Z=0.000000),WavePhase=(X=0.000000,Y=0.000000,Z=0.000000))),(StartPoint=(Pitch=-80,Yaw=195,Roll=0),EndPoint=(Pitch=-80,Yaw=195,Roll=0),bUseStartPointOnly=True,CustomWaveMotion=(bUseCustomWaveMotion=True,WaveFreq=(X=0.000000,Y=0.000000,Z=0.000000),WaveAmp=(X=0.000000,Y=0.000000,Z=0.000000),WavePhase=(X=0.000000,Y=0.000000,Z=0.000000))),(StartPoint=(Pitch=80,Yaw=-195,Roll=0),EndPoint=(Pitch=80,Yaw=-195,Roll=0),bUseStartPointOnly=True,CustomWaveMotion=(bUseCustomWaveMotion=True,WaveFreq=(X=0.000000,Y=0.000000,Z=0.000000),WaveAmp=(X=0.000000,Y=0.000000,Z=0.000000),WavePhase=(X=0.000000,Y=0.000000,Z=0.000000))),(StartPoint=(Pitch=195,Yaw=80,Roll=0),EndPoint=(Pitch=195,Yaw=80,Roll=0),bUseStartPointOnly=True,CustomWaveMotion=(bUseCustomWaveMotion=True,WaveFreq=(X=0.000000,Y=0.000000,Z=0.000000),WaveAmp=(X=0.000000,Y=0.000000,Z=0.000000),WavePhase=(X=0.000000,Y=0.000000,Z=0.000000))),(StartPoint=(Pitch=-195,Yaw=-80,Roll=0),EndPoint=(Pitch=-195,Yaw=-80,Roll=0),bUseStartPointOnly=True,CustomWaveMotion=(bUseCustomWaveMotion=True,WaveFreq=(X=0.000000,Y=0.000000,Z=0.000000),WaveAmp=(X=0.000000,Y=0.000000,Z=0.000000),WavePhase=(X=0.000000,Y=0.000000,Z=0.000000))))
+
+    #</Railgun Firing Mode>
+
+#</patch>
+
