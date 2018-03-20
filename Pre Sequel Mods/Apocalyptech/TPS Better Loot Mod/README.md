@@ -82,6 +82,8 @@ Mod Overview
     somewhat, but gear from safes will always be legendary.
   * Fixes some "shield" loot configurations which had an error and would
     never spawn, previously.
+  * Zarpedon's Chest (from the mission The Secret Chamber) has been improved
+    to pull from the epic chest pools.
 * Boss drop pools are generally improved, and bosses are guaranteed to drop as
   many items from their unique drop pool as are in that pool. *(needs testing)*
   * Bosses with just a single unique drop will therefore be guaranteed to drop
