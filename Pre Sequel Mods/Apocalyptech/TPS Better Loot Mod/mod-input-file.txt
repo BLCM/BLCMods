@@ -5710,18 +5710,6 @@
 
             #</Lost Legion Powersuit Noob>
 
-            #<Felicity Rampant>
-
-                set GD_Itempools.Runnables.Pool_ProtoWarBot Quantity
-                (
-                    BaseValueConstant=2.000000,
-                    BaseValueAttribute=None,
-                    InitializationDefinition=None,
-                    BaseValueScaleConstant=1.000000
-                )
-
-            #</Felicity Rampant>
-
             #<Iwajira>
 
                 set GD_Itempools.Runnables.Pool_Rockzilla Quantity
@@ -5891,36 +5879,64 @@
 
         #</Regular Enemy Drop Improvements>
 
-        #<Regular Enemy Drop Nerfs>
+        #<Enemy Drop Nerfs>
 
-            # Some enemies in TPS use the main "Boss Uniques" and "Boss Unique Rares"
-            # probabilities for a chance to drop legendary loot.  That might be okay,
-            # given the usual Boss Uniques constants, but since we buff those in this mod,
-            # these enemies start dropping loot way too much.  So, these are actually some
-            # nerfs to bring those probabilities back down to a reasonable level.
+            #<Bosses>
 
-            #<Badass Kraggons>
+                #<Felicity Rampant>
 
-                {hotfixes:nerf_drop_badass_kraggon}
+                    # Felicity Rampant drops twice from the Super Badass pool, in addition
+                    # to the unique pool loot.  Given the rest of this mod, and especially
+                    # given the room full of epic chests just after, it's a bit much.
+                    # This will convert one of the Super Badass drops to be a couple of
+                    # standard enemy drops.
 
-            #</Badass Kraggons>
+                    {hotfixes:felicity_drop_nerf_0}
 
-            #<Tork Dredgers>
+                    {hotfixes:felicity_drop_nerf_1}
 
-                {hotfixes:nerf_drop_tork_dredger}
+                    # I believe these next two are the same thing, but for playthrough 2+
 
-            #</Tork Dredgers>
+                    {hotfixes:felicity_drop_nerf_2}
 
-            #<Guard.Clapdog>
+                    {hotfixes:felicity_drop_nerf_3}
 
-                # This one's slightly different - there's a duplicate pool definition, so
-                # we're disabling one of them entirely
+                #</Felicity Rampant>
 
-                {hotfixes:nerf_drop_guard_clapdog}
+            #</Bosses>
 
-            #</Guard.Clapdog>
+            #<Non-Boss Enemies>
 
-        #</Regular Enemy Drop Nerfs>
+                # Some enemies in TPS use the main "Boss Uniques" and "Boss Unique Rares"
+                # probabilities for a chance to drop legendary loot.  That might be okay,
+                # given the usual Boss Uniques constants, but since we buff those in this mod,
+                # these enemies start dropping loot way too much.  So, these are actually some
+                # nerfs to bring those probabilities back down to a reasonable level.
+
+                #<Badass Kraggons>
+
+                    {hotfixes:nerf_drop_badass_kraggon}
+
+                #</Badass Kraggons>
+
+                #<Tork Dredgers>
+
+                    {hotfixes:nerf_drop_tork_dredger}
+
+                #</Tork Dredgers>
+
+                #<Guard.Clapdog>
+
+                    # This one's slightly different - there's a duplicate pool definition, so
+                    # we're disabling one of them entirely
+
+                    {hotfixes:nerf_drop_guard_clapdog}
+
+                #</Guard.Clapdog>
+
+            #</Non-Boss Enemies>
+
+        #</Enemy Drop Nerfs>
 
     #</Better Enemy Drops>
 

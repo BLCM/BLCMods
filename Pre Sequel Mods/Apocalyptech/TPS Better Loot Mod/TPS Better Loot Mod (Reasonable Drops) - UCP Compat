@@ -693,12 +693,6 @@
 
             #</Lost Legion Powersuit Noob>
 
-            #<Felicity Rampant>
-
-                set GD_Itempools.Runnables.Pool_ProtoWarBot Quantity (BaseValueConstant=2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
-
-            #</Felicity Rampant>
-
             #<Iwajira>
 
                 set GD_Itempools.Runnables.Pool_Rockzilla Quantity (BaseValueConstant=2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
@@ -826,36 +820,64 @@
 
         #</Regular Enemy Drop Improvements>
 
-        #<Regular Enemy Drop Nerfs>
+        #<Enemy Drop Nerfs>
 
-            # Some enemies in TPS use the main "Boss Uniques" and "Boss Unique Rares"
-            # probabilities for a chance to drop legendary loot.  That might be okay,
-            # given the usual Boss Uniques constants, but since we buff those in this mod,
-            # these enemies start dropping loot way too much.  So, these are actually some
-            # nerfs to bring those probabilities back down to a reasonable level.
+            #<Bosses>
 
-            #<Badass Kraggons>
+                #<Felicity Rampant>
 
-                #<hotfix><key>"SparkLevelPatchEntry-ApocNerfDrops0"</key><value>",GD_Cork_Population_EleBeast.Balance.PawnBalance_ElementalSpitterBadass,DefaultItemPoolList[0].PoolProbability,,(BaseValueConstant=0.100000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)"</value><on>
+                    # Felicity Rampant drops twice from the Super Badass pool, in addition
+                    # to the unique pool loot.  Given the rest of this mod, and especially
+                    # given the room full of epic chests just after, it's a bit much.
+                    # This will convert one of the Super Badass drops to be a couple of
+                    # standard enemy drops.
 
-            #</Badass Kraggons>
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocFelicityDropNerf0"</key><value>"DahlFactory_Boss,GD_ProtoWarBot_CoreBody.Character.AIDef_ProtoWarBot_CoreBody:AIBehaviorProviderDefinition_0.Behavior_SpawnItems_10,ItemPoolIncludedLists[0],,ItemPoolListDefinition'GD_Itempools.ListDefs.StandardEnemyGunsAndGear'"</value><on>
 
-            #<Tork Dredgers>
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocFelicityDropNerf1"</key><value>"DahlFactory_Boss,GD_ProtoWarBot_CoreBody.Character.AIDef_ProtoWarBot_CoreBody:AIBehaviorProviderDefinition_0.Behavior_SpawnItems_11,ItemPoolIncludedLists,,(ItemPoolListDefinition'GD_Itempools.ListDefs.SuperBadassEnemyGunsAndGear')"</value><on>
 
-                #<hotfix><key>"SparkLevelPatchEntry-ApocNerfDrops1"</key><value>",GD_Population_Tork.Balance.PawnBalance_TorkDredger,DefaultItemPoolList[0].PoolProbability,,(BaseValueConstant=0.100000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0.125000)"</value><on>
+                    # I believe these next two are the same thing, but for playthrough 2+
 
-            #</Tork Dredgers>
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocFelicityDropNerf2"</key><value>"DahlFactory_Boss,GD_ProtoWarBot_CoreBody.Character.AIDef_ProtoWarBot_CoreBody:AIBehaviorProviderDefinition_0.Behavior_SpawnItems_20,ItemPoolIncludedLists[0],,ItemPoolListDefinition'GD_Itempools.ListDefs.StandardEnemyGunsAndGear'"</value><on>
 
-            #<Guard.Clapdog>
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocFelicityDropNerf3"</key><value>"DahlFactory_Boss,GD_ProtoWarBot_CoreBody.Character.AIDef_ProtoWarBot_CoreBody:AIBehaviorProviderDefinition_0.Behavior_SpawnItems_21,ItemPoolIncludedLists,,(ItemPoolListDefinition'GD_Itempools.ListDefs.SuperBadassEnemyGunsAndGear')"</value><on>
 
-                # This one's slightly different - there's a duplicate pool definition, so
-                # we're disabling one of them entirely
+                #</Felicity Rampant>
 
-                #<hotfix><key>"SparkLevelPatchEntry-ApocNerfDrops2"</key><value>",GD_Ma_Pop_ClaptrapForces.Balance.PawnBalance_ClapDawg,DefaultItemPoolList[0].PoolProbability,,(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0.000000)"</value><on>
+            #</Bosses>
 
-            #</Guard.Clapdog>
+            #<Non-Boss Enemies>
 
-        #</Regular Enemy Drop Nerfs>
+                # Some enemies in TPS use the main "Boss Uniques" and "Boss Unique Rares"
+                # probabilities for a chance to drop legendary loot.  That might be okay,
+                # given the usual Boss Uniques constants, but since we buff those in this mod,
+                # these enemies start dropping loot way too much.  So, these are actually some
+                # nerfs to bring those probabilities back down to a reasonable level.
+
+                #<Badass Kraggons>
+
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocNerfDrops0"</key><value>",GD_Cork_Population_EleBeast.Balance.PawnBalance_ElementalSpitterBadass,DefaultItemPoolList[0].PoolProbability,,(BaseValueConstant=0.100000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)"</value><on>
+
+                #</Badass Kraggons>
+
+                #<Tork Dredgers>
+
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocNerfDrops1"</key><value>",GD_Population_Tork.Balance.PawnBalance_TorkDredger,DefaultItemPoolList[0].PoolProbability,,(BaseValueConstant=0.100000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0.125000)"</value><on>
+
+                #</Tork Dredgers>
+
+                #<Guard.Clapdog>
+
+                    # This one's slightly different - there's a duplicate pool definition, so
+                    # we're disabling one of them entirely
+
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocNerfDrops2"</key><value>",GD_Ma_Pop_ClaptrapForces.Balance.PawnBalance_ClapDawg,DefaultItemPoolList[0].PoolProbability,,(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0.000000)"</value><on>
+
+                #</Guard.Clapdog>
+
+            #</Non-Boss Enemies>
+
+        #</Enemy Drop Nerfs>
 
     #</Better Enemy Drops>
 
