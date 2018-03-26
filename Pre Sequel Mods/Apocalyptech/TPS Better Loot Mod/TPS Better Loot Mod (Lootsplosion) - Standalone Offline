@@ -626,15 +626,156 @@
 
     #<Better Enemy Drops>
 
-        #<Guaranteed Boss Drops>
+        #<Boss Drop Changes>
 
-            # Bosses should always drop their unique items
+            #<Guaranteed Boss Drops>
 
-            set GD_Itempools.DropWeights.DropODDS_BossUniques:ConstantAttributeValueResolver_0 ConstantValue 1.0 
+                # Bosses should always drop their unique items
 
-            set GD_Itempools.DropWeights.DropODDS_BossUniqueRares:ConstantAttributeValueResolver_0 ConstantValue 1.0 
+                set GD_Itempools.DropWeights.DropODDS_BossUniques:ConstantAttributeValueResolver_0 ConstantValue 1.0 
 
-        #</Guaranteed Boss Drops>
+                set GD_Itempools.DropWeights.DropODDS_BossUniqueRares:ConstantAttributeValueResolver_0 ConstantValue 1.0 
+
+            #</Guaranteed Boss Drops>
+
+            #<Boss Drop Improved Quantities>
+
+                # Bosses which have more than one possible unique/legendary reward will always
+                # drop that many items on death, so you should have some chance of getting both.
+
+                #<Boomer>
+
+                    set GD_Itempools.Runnables.Pool_Boomer Quantity (BaseValueConstant=2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+
+                #</Boomer>
+
+                #<Bosun>
+
+                    set GD_Itempools.Runnables.Pool_Bosun Quantity (BaseValueConstant=3.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+
+                #</Bosun>
+
+                #<Corporal Bob>
+
+                    set GD_Itempools.Runnables.Pool_DahlMarineCentTerm Quantity (BaseValueConstant=2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+
+                #</Corporal Bob>
+
+                #<Final Boss>
+
+                    set GD_Itempools.Runnables.Pool_FinalBoss_Head Quantity (BaseValueConstant=2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+
+                #</Final Boss>
+
+                #<Final Boss (raid)>
+
+                    set GD_Itempools.Runnables.Pool_FinalBossRaid Quantity (BaseValueConstant=4.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+
+                    set GD_Itempools.Runnables.Pool_FinalBossRaid_Head Quantity (BaseValueConstant=2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+
+                #</Final Boss (raid)>
+
+                #<Giant Shuggurath of Ice>
+
+                    set GD_Itempools.Runnables.Pool_GiantCryoHive Quantity (BaseValueConstant=2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+
+                #</Giant Shuggurath of Ice>
+
+                #<Mini Destroyer>
+
+                    set GD_Itempools.Runnables.Pool_MiniDestroyer Quantity (BaseValueConstant=2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+
+                #</Mini Destroyer>
+
+                #<Felicity Rampant>
+
+                    set GD_Itempools.Runnables.Pool_ProtoWarBot Quantity (BaseValueConstant=2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+
+                #</Felicity Rampant>
+
+                #<Lost Legion Powersuit Noob>
+
+                    set GD_Itempools.Runnables.Pool_RedShirt Quantity (BaseValueConstant=2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+
+                #</Lost Legion Powersuit Noob>
+
+                #<Iwajira>
+
+                    set GD_Itempools.Runnables.Pool_Rockzilla Quantity (BaseValueConstant=2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+
+                #</Iwajira>
+
+                #<Rooster Booster>
+
+                    set GD_Itempools.Runnables.Pool_RoosterBooster Quantity (BaseValueConstant=2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+
+                #</Rooster Booster>
+
+                #<Swagman>
+
+                    # We're actually just setting this to 3, rather than the full size of
+                    # the pool, which would be 6.
+
+                    set GD_Itempools.Runnables.Pool_ScavWastelandWalker Quantity (BaseValueConstant=3.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+
+                #</Swagman>
+
+                #<Colonel Zarpedon>
+
+                    set GD_Itempools.Runnables.Pool_Tungsteena Quantity (BaseValueConstant=2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+
+                #</Colonel Zarpedon>
+
+                #<X-STLK-23>
+
+                    set GD_Itempools.Runnables.Pool_XSTLK23 Quantity (BaseValueConstant=2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+
+                #</X-STLK-23>
+
+                #<5H4D0W-TP>
+
+                    set GD_Ma_Itempools.Runnables.Pool_FakeShadowTP_Marigold Quantity (BaseValueConstant=2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+
+                #</5H4D0W-TP>
+
+                #<5H4D0W-TP (probably unused)>
+
+                    # I'm pretty sure this pool isn't actually used anywhere, but I'm
+                    # bumping the quantity just in case.
+
+                    set GD_Ma_Itempools.Runnables.Pool_ShadowTP_Marigold Quantity (BaseValueConstant=2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+
+                #</5H4D0W-TP (probably unused)>
+
+            #</Boss Drop Improved Quantities>
+
+            #<Boss Drop Normalization>
+
+                #  Make loot pools for bosses have equal probabilities for all items
+
+                #<Final Boss>
+
+                    # Technically what we're removing here is a check on playthrough.
+
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocFinalBossLootNorm0"</key><value>",GD_Itempools.Runnables.Pool_FinalBoss_Head,BalancedItems[0].Probability.InitializationDefinition,,None"</value><on>
+
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocFinalBossLootNorm1"</key><value>",GD_Itempools.Runnables.Pool_FinalBoss_Head,BalancedItems[1].Probability.InitializationDefinition,,None"</value><on>
+
+                #</Final Boss>
+
+                #<Final Boss (raid)>
+
+                    # Technically what we're removing here is a check on playthrough.
+
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocFinalBossLootNorm2"</key><value>",GD_Itempools.Runnables.Pool_FinalBossRaid_Head,BalancedItems[0].Probability.InitializationDefinition,,None"</value><on>
+
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocFinalBossLootNorm3"</key><value>",GD_Itempools.Runnables.Pool_FinalBossRaid_Head,BalancedItems[1].Probability.InitializationDefinition,,None"</value><on>
+
+                #</Final Boss (raid)>
+
+            #</Boss Drop Normalization>
+
+        #</Boss Drop Changes>
 
         #<Better Badass Drops>
 
@@ -687,142 +828,15 @@
 
         #</Better Chubby Drops>
 
-        #<Boss Drop Improved Quantities>
+        #<Claptastic Voyage Legendary Drop Rates>
 
-            # Bosses which have more than one possible unique/legendary reward will always
-            # drop that many items on death, so you should have some chance of getting both.
+            # Some enemies from the Claptastic Voyage DLC have the chance to drop
+            # a unique legendary, at a default drop rate of 0.1%.  We're going to
+            # bump that up a little bit.
 
-            #<Boomer>
+            set GD_Ma_ItemPools.DropWeights.DropODDS_RareDropLegendary_Marigold:ConstantAttributeValueResolver_0 ConstantValue .015 
 
-                set GD_Itempools.Runnables.Pool_Boomer Quantity (BaseValueConstant=2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
-
-            #</Boomer>
-
-            #<Bosun>
-
-                set GD_Itempools.Runnables.Pool_Bosun Quantity (BaseValueConstant=3.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
-
-            #</Bosun>
-
-            #<Corporal Bob>
-
-                set GD_Itempools.Runnables.Pool_DahlMarineCentTerm Quantity (BaseValueConstant=2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
-
-            #</Corporal Bob>
-
-            #<Final Boss>
-
-                set GD_Itempools.Runnables.Pool_FinalBoss_Head Quantity (BaseValueConstant=2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
-
-            #</Final Boss>
-
-            #<Final Boss (raid)>
-
-                set GD_Itempools.Runnables.Pool_FinalBossRaid Quantity (BaseValueConstant=4.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
-
-                set GD_Itempools.Runnables.Pool_FinalBossRaid_Head Quantity (BaseValueConstant=2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
-
-            #</Final Boss (raid)>
-
-            #<Giant Shuggurath of Ice>
-
-                set GD_Itempools.Runnables.Pool_GiantCryoHive Quantity (BaseValueConstant=2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
-
-            #</Giant Shuggurath of Ice>
-
-            #<Mini Destroyer>
-
-                set GD_Itempools.Runnables.Pool_MiniDestroyer Quantity (BaseValueConstant=2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
-
-            #</Mini Destroyer>
-
-            #<Felicity Rampant>
-
-                set GD_Itempools.Runnables.Pool_ProtoWarBot Quantity (BaseValueConstant=2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
-
-            #</Felicity Rampant>
-
-            #<Lost Legion Powersuit Noob>
-
-                set GD_Itempools.Runnables.Pool_RedShirt Quantity (BaseValueConstant=2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
-
-            #</Lost Legion Powersuit Noob>
-
-            #<Iwajira>
-
-                set GD_Itempools.Runnables.Pool_Rockzilla Quantity (BaseValueConstant=2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
-
-            #</Iwajira>
-
-            #<Rooster Booster>
-
-                set GD_Itempools.Runnables.Pool_RoosterBooster Quantity (BaseValueConstant=2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
-
-            #</Rooster Booster>
-
-            #<Swagman>
-
-                # We're actually just setting this to 3, rather than the full size of
-                # the pool, which would be 6.
-
-                set GD_Itempools.Runnables.Pool_ScavWastelandWalker Quantity (BaseValueConstant=3.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
-
-            #</Swagman>
-
-            #<Colonel Zarpedon>
-
-                set GD_Itempools.Runnables.Pool_Tungsteena Quantity (BaseValueConstant=2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
-
-            #</Colonel Zarpedon>
-
-            #<X-STLK-23>
-
-                set GD_Itempools.Runnables.Pool_XSTLK23 Quantity (BaseValueConstant=2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
-
-            #</X-STLK-23>
-
-            #<5H4D0W-TP>
-
-                set GD_Ma_Itempools.Runnables.Pool_FakeShadowTP_Marigold Quantity (BaseValueConstant=2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
-
-            #</5H4D0W-TP>
-
-            #<5H4D0W-TP (probably unused)>
-
-                # I'm pretty sure this pool isn't actually used anywhere, but I'm
-                # bumping the quantity just in case.
-
-                set GD_Ma_Itempools.Runnables.Pool_ShadowTP_Marigold Quantity (BaseValueConstant=2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
-
-            #</5H4D0W-TP (probably unused)>
-
-        #</Boss Drop Improved Quantities>
-
-        #<Boss Drop Normalization>
-
-            #  Make loot pools for bosses have equal probabilities for all items
-
-            #<Final Boss>
-
-                # Technically what we're removing here is a check on playthrough.
-
-                #<hotfix><key>"SparkLevelPatchEntry-ApocFinalBossLootNorm0"</key><value>",GD_Itempools.Runnables.Pool_FinalBoss_Head,BalancedItems[0].Probability.InitializationDefinition,,None"</value><on>
-
-                #<hotfix><key>"SparkLevelPatchEntry-ApocFinalBossLootNorm1"</key><value>",GD_Itempools.Runnables.Pool_FinalBoss_Head,BalancedItems[1].Probability.InitializationDefinition,,None"</value><on>
-
-            #</Final Boss>
-
-            #<Final Boss (raid)>
-
-                # Technically what we're removing here is a check on playthrough.
-
-                #<hotfix><key>"SparkLevelPatchEntry-ApocFinalBossLootNorm2"</key><value>",GD_Itempools.Runnables.Pool_FinalBossRaid_Head,BalancedItems[0].Probability.InitializationDefinition,,None"</value><on>
-
-                #<hotfix><key>"SparkLevelPatchEntry-ApocFinalBossLootNorm3"</key><value>",GD_Itempools.Runnables.Pool_FinalBossRaid_Head,BalancedItems[1].Probability.InitializationDefinition,,None"</value><on>
-
-            #</Final Boss (raid)>
-
-        #</Boss Drop Normalization>
+        #</Claptastic Voyage Legendary Drop Rates>
 
         #<Better Individual Enemy Drops>
 
@@ -860,20 +874,6 @@
             #</Nel>
 
         #</Better Individual Enemy Drops>
-
-        #<Regular Enemy Drop Improvements>
-
-            #<Claptastic Voyage Legendary Drop Rates>
-
-                # Some enemies from the Claptastic Voyage DLC have the chance to drop
-                # a unique legendary, at a default drop rate of 0.1%.  We're going to
-                # bump that up a little bit.
-
-                set GD_Ma_ItemPools.DropWeights.DropODDS_RareDropLegendary_Marigold:ConstantAttributeValueResolver_0 ConstantValue .015 
-
-            #</Claptastic Voyage Legendary Drop Rates>
-
-        #</Regular Enemy Drop Improvements>
 
         #<Enemy Drop Nerfs>
 
