@@ -126,12 +126,13 @@ class ConfigLootsplosion(ConfigBase):
     ozkit_base_veryrare = weapon_base_veryrare
     ozkit_base_legendary = weapon_base_legendary
 
-    # Custom COM drop scaling (identical to weapons)
+    # Custom COM drop scaling (identical to weapons, apart from buffing
+    # legendary rates a bit)
     com_base_common = weapon_base_common
     com_base_uncommon = weapon_base_uncommon
     com_base_rare = weapon_base_rare
     com_base_veryrare = weapon_base_veryrare
-    com_base_legendary = weapon_base_legendary
+    com_base_legendary = '5'
 
     # Custom grenade drop scaling (identical to weapons)
     grenade_base_common = weapon_base_common
