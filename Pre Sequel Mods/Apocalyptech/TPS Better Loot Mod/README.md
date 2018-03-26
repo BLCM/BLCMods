@@ -14,6 +14,16 @@ everything in here can be toggled on or off inside FilterTool as you'd
 hope, on an item-by-item basis.  Basically every bullet point in the
 "Overview" section is its own "folder" once imported into FilterTool.
 
+Compared to the BL2 Better Loot mod, rare loot has a slightly decreased chance
+of dropping in this mod, but TPS gives you many more opportunities to drop
+good loot than BL2 did, in general, especially starting about halfway through
+the campaign.  Rooms with multiple epic+regular chests after boss fights, bosses
+dropping multiple times from the same loot pools (you get two "Super Badass"
+drops from the Zarpedon fight, for instance -- one for the mech suit and one
+for Zarpedon herself), and an increased number of Badasses in general.  So
+despite the nerfed drop rates, you may find this to be even more generous than
+the BL2 version is.
+
 Usage/Installation
 ------------------
 
