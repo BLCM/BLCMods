@@ -240,11 +240,11 @@ class ConfigReasonable(ConfigLootsplosion):
     ozkit_base_legendary = weapon_base_legendary
 
     # Class mods (identical to weapons)
-    cm_base_common = weapon_base_common
-    cm_base_uncommon = weapon_base_uncommon
-    cm_base_rare = weapon_base_rare
-    cm_base_veryrare = weapon_base_veryrare
-    cm_base_legendary = weapon_base_legendary
+    com_base_common = weapon_base_common
+    com_base_uncommon = weapon_base_uncommon
+    com_base_rare = weapon_base_rare
+    com_base_veryrare = weapon_base_veryrare
+    com_base_legendary = weapon_base_legendary
 
     # Custom grenade drop scaling (identical to weapons)
     grenade_base_common = weapon_base_common
