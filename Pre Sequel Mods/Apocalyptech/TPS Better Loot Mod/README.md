@@ -113,6 +113,8 @@ Mod Overview
   * Individual Enemy Drop Fixes:
     * FlameKnuckle will drop from the badass pool even on playthrough 1.
     * Nel's drops have been improved (will pull from the Epic Chest pools)
+    * Buffed the laser weapon drops from when Lost Legion Eternal troops start
+      ascending to use the global drop pool instead of the enemy use pool.
   * This mod technically nerfs a few enemy drops, which otherwise get a little
     too excessive even for me:
     * Hardcodes the drop probabilities for the unique loot dropped by Badass

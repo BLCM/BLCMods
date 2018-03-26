@@ -376,6 +376,19 @@
 
             set GD_Itempools.WeaponPools.Pool_Weapons_All BalancedItems ((ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_All_01_Common',InvBalanceDefinition=None,Probability=(BaseValueConstant=8,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_All_02_Uncommon',InvBalanceDefinition=None,Probability=(BaseValueConstant=85,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_All_04_Rare',InvBalanceDefinition=None,Probability=(BaseValueConstant=65,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_All_05_VeryRare',InvBalanceDefinition=None,Probability=(BaseValueConstant=50,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Ma_ItemPools.WeaponPools.Pool_Weapons_All_Glitch_Marigold',InvBalanceDefinition=None,Probability=(BaseValueConstant=8,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_All_06_Legendary',InvBalanceDefinition=None,Probability=(BaseValueConstant=2,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True))
 
+            #<Better Individual Weapon Type Pools>
+
+                # I'm not aware of any enemies which drop directly from these weapon type
+                # pools, but Lost Legion Eternal troops do drop a laser weapon when they
+                # start ascending.  They do it from an "EnemyUse" pool (ie: the same pool
+                # which equips the Eternals themselves), but we're changing that to use
+                # the main drop pool, elsewhere in this mod.  This statement will make the
+                # generic laser drop pool use our custom weights.
+
+                set GD_Itempools.WeaponPools.Pool_Weapons_Lasers BalancedItems ((ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_Lasers_01_Common',InvBalanceDefinition=None,Probability=(BaseValueConstant=8,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_Lasers_02_Uncommon',InvBalanceDefinition=None,Probability=(BaseValueConstant=85,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_Lasers_04_Rare',InvBalanceDefinition=None,Probability=(BaseValueConstant=65,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_Lasers_05_VeryRare',InvBalanceDefinition=None,Probability=(BaseValueConstant=50,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Ma_ItemPools.WeaponPools.Pool_Weapons_Lasers_Glitch_Marigold',InvBalanceDefinition=None,Probability=(BaseValueConstant=8,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_Lasers_06_Legendary',InvBalanceDefinition=None,Probability=(BaseValueConstant=2,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True))
+
+            #</Better Individual Weapon Type Pools>
+
         #</Better Weapon Drops>
 
         #<Better Oz Kit Drops>
@@ -828,6 +841,16 @@
                 #<hotfix><key>"SparkLevelPatchEntry-ApocNelDrops6"</key><value>"Deadsurface_P,GD_Nel.Population.PawnBalance_Nel,DefaultItemPoolList[21].ItemPool,,ItemPoolDefinition'GD_Itempools.Treasure_ChestPools.Pool_EpicChest_Weapons_GunsAndGear'"</value><on>
 
             #</Nel>
+
+            #<Lost Legion Eternal>
+
+                # When they start to ascend, Lost Legion Eternal troops drop from
+                # Pool_Weapons_Laser_EnemyUse.  We change this to the main Laser pool
+                # instead, so it uses our custom weights.
+
+                #<hotfix><key>"SparkLevelPatchEntry-ApocEternalAscendDrop0"</key><value>",GD_DahlFanatic.Character.AIDef_DahlFanatic:AIBehaviorProviderDefinition_0.Behavior_SpawnItems_0,ItemPoolList[0].ItemPool,,ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_Lasers'"</value><on>
+
+            #</Lost Legion Eternal>
 
         #</Better Individual Enemy Drops>
 
