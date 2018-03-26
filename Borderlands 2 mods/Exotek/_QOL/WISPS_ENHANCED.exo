@@ -1,0 +1,37 @@
+_______________  _____________________________________  __.
+\_   _____/\   \/  /\_____  \__    ___/\_   _____/    |/ _|
+ |    __)_  \     /  /   |   \|    |    |    __)_|      <  
+ |        \ /     \ /    |    \    |    |        \    |  \ 
+/_______  //___/\  \\_______  /____|   /_______  /____|__ \
+        \/       \_/        \/                 \/        \/
+________________________________________________________________________________________________________________________
+
+! NOTE
+
+    - THIS IS A CUT OUT CODE FROM MY EQ_BLOODY_HARVEST MINI-QUEST MOD:
+    https://github.com/BLCM/BLCMods/blob/master/Borderlands%202%20mods/Exotek/_QUEST_MODE/EQ_BLOODY_HARVEST.exo
+    - I'VE FIGURED OUT TO RELEASE WISP ONLY MOD FOR THOSE WHO LIKE THEM,
+    - THEY NOW DO AROUND 10M+ DMG (AROUND 600K DOT) ON OP8 (MATCHING ELEMENT). WISPS DROP FROM JACQUES O'LANTERN.
+    (NOTE ABOUT WISPS: THEY DISAPEAR WHEN YOU FAST TRAVEL OR LEVEL TRANSITION. THEY DO NOT DISAPEAR WHEN YOU DIE AND RESPAWN).
+    - FOR THOSE WHO DONT WANT TO FARM THEM, HERE ARE THE CODES:
+    [PULSING RED (FIRE)] BL2(BwAAAAC6AQUAAAEAEBABKAHg////////////////////PwKgAOA=)
+    [FLICKERING BLUE (SHOCK)] BL2(BwAAAAA9eQUAAAEAEBABaAHg/////////////////////wGgAOA=)
+    [GLOWING GREEN (CORROSIVE)] BL2(BwAAAACDsgUAAAEAEBABKADg////////////////////fwCgAOA=)
+    [SPARKLING YELLOW (EXPLOSIVE)] BL2(BwAAAAB0kAUAAAEAEBAB6ADg////////////////////vwGgAOA=)
+
+# DEFINITIONS __________________________________________________________________________________________________________
+
+    set GD_Flax_Items.Item.Item_Wisp BaseRarity (BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+
+    set GD_Flax_Items.Item.Item_Wisp LootBeamColorOverride (B=255,G=255,R=255,A=0)
+
+    set GD_Flax_Items.Projectiles.Projectile_Wisp:BehaviorProviderDefinition_0.Behavior_Explode_36 DamageFormula (BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=100.000000)
+
+    set GD_Flax_Items.Projectiles.Projectile_Wisp:BehaviorProviderDefinition_0.Behavior_Explode_36 StatusEffectDamage (BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=20.000000)
+
+    set GD_CustomItemPools_Flax.Assassin.Pool_Customs_Assassin_All BalancedItems ((ItmPoolDefinition=None,InvBalanceDefinition=InventoryBalanceDefinition'GD_Flax_Items.Item.BalDef_Wisp',Probability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',BaseValueScaleConstant=1.000000),bDropOnDeath=True))
+
+    set Transient.SparkServiceConfiguration_6 Keys ("SparkLevelPatchEntry-EQ_JACQUESLOOT1")
+
+    set Transient.SparkServiceConfiguration_6 Values (",GD_Pumpkinhead.Population.PawnBalance_Pumpkinhead_Run,DefaultItemPoolList,,((ItemPool=ItemPoolDefinition'GD_CustomItemPools_Flax.Assassin.Pool_Customs_Assassin_All',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=AttributeDefinition'GD_Itempools.DropWeights.DropODDS_BossUniqueRares',InitializationDefinition=None,BaseValueScaleConstant=1.000000)))")
+
