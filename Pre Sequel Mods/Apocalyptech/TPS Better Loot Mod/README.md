@@ -92,10 +92,11 @@ Mod Overview
     somewhat, but gear from safes will always be legendary.
   * Fixes some "shield" loot configurations which had an error and would
     never spawn, previously.
-  * Zarpedon's Chest (from the mission The Secret Chamber) has been improved
-    to pull from the epic chest pools.
-  * The laser gun chest in the mission Picking Up The Pieces has been buffed to
-    contain blue-rarity lasers instead of white.
+  * Individual chest updates:
+    * Zarpedon's Chest (from the mission The Secret Chamber) has been improved
+      to pull from the epic chest pools.
+    * The laser gun chest in the mission Picking Up The Pieces has been buffed to
+      contain blue-rarity lasers instead of white.
 * Boss drop pools are generally improved, and bosses are guaranteed to drop as
   many items from their unique drop pool as are in that pool. *(needs testing)*
   * Bosses with just a single unique drop will therefore be guaranteed to drop
@@ -112,13 +113,13 @@ Mod Overview
   * Individual Enemy Drop Fixes:
     * FlameKnuckle will drop from the badass pool even on playthrough 1.
     * Nel's drops have been improved (will pull from the Epic Chest pools)
-    * This mod technically nerfs a few enemy drops, which otherwise get a little
-      too excessive even for me:
-      * Hardcodes the drop probabilities for the unique loot dropped by Badass
-        Kraggons and Tork Dredgers to pre-Better-Loot levels
-      * Nerfs the drops from Felicity Rampant a bit (though they'll still be
-        better than in vanilla TPS)
-      * Bring Guard.Clapdog unique drops in line with the rest of the mod
+  * This mod technically nerfs a few enemy drops, which otherwise get a little
+    too excessive even for me:
+    * Hardcodes the drop probabilities for the unique loot dropped by Badass
+      Kraggons and Tork Dredgers to pre-Better-Loot levels
+    * Nerfs the drops from Felicity Rampant a bit (though they'll still be
+      better than in vanilla TPS)
+    * Bring Guard.Clapdog unique drops in line with the rest of the mod
 * Remove early-game loot restrictions.  This is actually a superset of the
   similar feature already present in UCP 2.1.  This version enables spawning
   of basically everything from the beginning, including all grenade types,
