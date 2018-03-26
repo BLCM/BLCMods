@@ -184,8 +184,8 @@ easily persuaded otherwise if someone feels strongly about it.
 
 * Springs' Oz Kit
 * Cracked Sash (Shield)
-* Contraband Sky Rocket grenade *can* spawn, but has a much decreased
-  chance compared to all the other legendaries.
+* The Contraband Sky Rocket grenade and "Probe" pistol *can* spawn, but
+  have a much decreased chance compared to all the other legendaries.
 
 There's also a few drop pools / containers / etc which I've purposefully
 left alone:
