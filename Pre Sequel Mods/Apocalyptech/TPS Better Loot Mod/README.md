@@ -115,12 +115,15 @@ Mod Overview
     * Nel's drops have been improved (will pull from the Epic Chest pools)
     * Buffed the laser weapon drops from when Lost Legion Eternal troops start
       ascending to use the global drop pool instead of the enemy use pool.
+    * Elder Opha and Virtuous Opha will drop from the badass pool.
   * This mod technically nerfs a few enemy drops, which otherwise get a little
     too excessive even for me:
     * Hardcodes the drop probabilities for the unique loot dropped by Badass
       Kraggons and Tork Dredgers to pre-Better-Loot levels
     * Nerfs the drops from Felicity Rampant a bit (though they'll still be
       better than in vanilla TPS)
+    * Drops from the Sentinel and Empyrean Sentinel (both raid and non-raid)
+      have technically been nerfed so that the drops aren't completely absurd.
     * Bring Guard.Clapdog unique drops in line with the rest of the mod
 * Remove early-game loot restrictions.  This is actually a superset of the
   similar feature already present in UCP 2.1.  This version enables spawning
@@ -238,15 +241,9 @@ Other Recommended Mods
 TODO
 ----
 
-* Check boss unique drops
 * Maybe decrease Moonstone chest cost in exchange for not doing guaranteed
   legendaries on it?  Mull it over.
 * Check Lootbug drops
-* I suspect that most everything that drops from the `UltimateBadassEnemyGunsAndGear`
-  pool does so ultiple times; we may want to nerf that a bit, or see about
-  limiting the number of spawns for the more extreme enemies.
-* Relatedly, I seem to recall that badasses might be more common in TPS in general,
-  may need to nerf that drop pool a bit, too.
 * Swagman drop pool - we're altering `GD_Itempools.Runnables.Pool_ScavWastelandWalker`
   but UCP alters `GD_Itempools.Runnables.Pool_ScavBadassSpacemanMidget`...
 * I've done most of the initial construction of this using my extracted TPS data

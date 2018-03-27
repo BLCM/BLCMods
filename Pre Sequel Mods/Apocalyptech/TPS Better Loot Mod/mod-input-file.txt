@@ -4741,9 +4741,12 @@
 
                 #<Final Boss (raid)>
 
+                    # Note that Pool_FinalBossRaid gets dropped twice, so we are setting
+                    # the quantity to 2 rather than 4.
+
                     set GD_Itempools.Runnables.Pool_FinalBossRaid Quantity
                     (
-                        BaseValueConstant=4.000000,
+                        BaseValueConstant=2.000000,
                         BaseValueAttribute=None,
                         InitializationDefinition=None,
                         BaseValueScaleConstant=1.000000
@@ -4924,6 +4927,52 @@
                 #</Final Boss (raid)>
 
             #</Boss Drop Normalization>
+
+            #<Tweak Empyrean Sentinel (raid version) Pool>
+
+                # The raid version of the Empyrean Sentinel contains two chances to drop
+                # the ZX-1: one from its own pool, and one from the Colonel Zarpedon pool
+                # which it also drops from.  This removes the ZX-1 from the Sentinel's
+                # pool so that the ZX-1 isn't weighted any more than it already is.
+
+                set GD_Itempools.Runnables.Pool_FinalBossRaid BalancedItems
+                (
+                    ( 
+                        ItmPoolDefinition=None, 
+                        InvBalanceDefinition=WeaponBalanceDefinition'GD_Cork_Weap_SniperRifles.A_Weapons_Legendary.Sniper_Vladof_5_Longnail', 
+                        Probability=( 
+                            BaseValueConstant=0.000000, 
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common', 
+                            BaseValueScaleConstant=1.000000 
+                        ), 
+                        bDropOnDeath=True 
+                    ),
+                    (
+                        ItmPoolDefinition=None, 
+                        InvBalanceDefinition=InventoryBalanceDefinition'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Nova_Singularity', 
+                        Probability=( 
+                            BaseValueConstant=0.000000, 
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common', 
+                            BaseValueScaleConstant=1.000000 
+                        ), 
+                        bDropOnDeath=True 
+                    ),
+                    (
+                        ItmPoolDefinition=None, 
+                        InvBalanceDefinition=InventoryBalanceDefinition'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Absorption_PrismaticBulwark', 
+                        Probability=( 
+                            BaseValueConstant=0.000000, 
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common', 
+                            BaseValueScaleConstant=1.000000 
+                        ), 
+                        bDropOnDeath=True 
+                    )
+                )
+
+            #</Tweak Empyrean Sentinel (raid version) Pool>
 
         #</Boss Drop Changes>
 
@@ -5979,9 +6028,26 @@
 
             #</Lost Legion Eternal>
 
+            #<Elder Opha / Virtuous Opha>
+
+                # Make Elder Opha and Virtuous Opha drop from the badass pool,
+                # rather than standard.
+
+                {hotfixes:opha_drop_Heavy}
+
+                {hotfixes:opha_drop_BadAss}
+
+            #</Elder Opha / Virtuous Opha>
+
         #</Better Individual Enemy Drops>
 
         #<Enemy Drop Nerfs>
+
+            # The Pre-Sequel is, in general, far more generous with loot than BL2 was, and
+            # sometimes that tendency, in conjunction with everything else in this mod,
+            # creates a situation where far too much is getting dropped, even for me.
+            # (This happens in the later BL2 DLCs as well, actually.)  This section nerfs
+            # various drops so that it's not totally overwhelming.
 
             #<Bosses>
 
@@ -6004,6 +6070,46 @@
                     {hotfixes:felicity_drop_nerf_3}
 
                 #</Felicity Rampant>
+
+                #<The Sentinel (non-raid)>
+
+                    # The Sentinel drops twice from the UltimateBadass pool by default,
+                    # which is pretty excessive when paired with the Empyrian Sentinel
+                    # drops as well.  Reduce it to only drop once.
+
+                    {hotfixes:sentinel_drop_nerf}
+
+                #</The Sentinel (non-raid)>
+
+                #<The Empyrean Sentinel (non-raid)>
+
+                    # By default, the Empyrean Sentinel (non-raid version) drops three
+                    # times from UltimateBadass and twice from RaidBoss (plus some drops
+                    # from a number of custom drop pools).  We're leaving the custom
+                    # drop pool rates alone, but we're going to change the otehr drop
+                    # rates to: 2x Regular Badass, 2x Super Badass, 1x Ultimate.
+
+                    {hotfixes:empyrean_nerf_0}
+
+                    {hotfixes:empyrean_nerf_1}
+
+                    {hotfixes:empyrean_nerf_2}
+
+                #</The Empyrean Sentinel (non-raid)>
+
+                #<The Empyrean Sentinel (raid)>
+
+                    # By deafult, the Empyrean Sentinel (raid version) drops twice from
+                    # the UltimateBadass pool and once from RaidBoss.  This actually
+                    # requires less nerfing than the non-raid version; we're just going
+                    # to change one of the Ultimate drops to Super, and restrict the
+                    # number of unique-pool drops to 2.
+
+                    {hotfixes:empyrean_raid_nerf_0}
+
+                    {hotfixes:empyrean_raid_nerf_1}
+
+                #</The Empyrean Sentinel (raid)>
 
             #</Bosses>
 

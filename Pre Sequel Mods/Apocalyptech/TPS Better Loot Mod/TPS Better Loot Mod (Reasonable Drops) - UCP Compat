@@ -638,7 +638,10 @@
 
                 #<Final Boss (raid)>
 
-                    set GD_Itempools.Runnables.Pool_FinalBossRaid Quantity (BaseValueConstant=4.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+                    # Note that Pool_FinalBossRaid gets dropped twice, so we are setting
+                    # the quantity to 2 rather than 4.
+
+                    set GD_Itempools.Runnables.Pool_FinalBossRaid Quantity (BaseValueConstant=2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
 
                     set GD_Itempools.Runnables.Pool_FinalBossRaid_Head Quantity (BaseValueConstant=2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
 
@@ -743,6 +746,17 @@
                 #</Final Boss (raid)>
 
             #</Boss Drop Normalization>
+
+            #<Tweak Empyrean Sentinel (raid version) Pool>
+
+                # The raid version of the Empyrean Sentinel contains two chances to drop
+                # the ZX-1: one from its own pool, and one from the Colonel Zarpedon pool
+                # which it also drops from.  This removes the ZX-1 from the Sentinel's
+                # pool so that the ZX-1 isn't weighted any more than it already is.
+
+                set GD_Itempools.Runnables.Pool_FinalBossRaid BalancedItems ((ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'GD_Cork_Weap_SniperRifles.A_Weapons_Legendary.Sniper_Vladof_5_Longnail',Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=None,InvBalanceDefinition=InventoryBalanceDefinition'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Nova_Singularity',Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=None,InvBalanceDefinition=InventoryBalanceDefinition'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Absorption_PrismaticBulwark',Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',BaseValueScaleConstant=1.000000),bDropOnDeath=True))
+
+            #</Tweak Empyrean Sentinel (raid version) Pool>
 
         #</Boss Drop Changes>
 
@@ -852,9 +866,26 @@
 
             #</Lost Legion Eternal>
 
+            #<Elder Opha / Virtuous Opha>
+
+                # Make Elder Opha and Virtuous Opha drop from the badass pool,
+                # rather than standard.
+
+                #<hotfix><key>"SparkLevelPatchEntry-ApocOphaDropHeavy0"</key><value>",GD_Population_Eridian_Opha.AIPawn_Bal.PawnBalance_Opha_Heavy,DefaultItemPoolIncludedLists[0],,ItemPoolListDefinition'GD_Itempools.ListDefs.BadassEnemyGunsAndGear'"</value><on>
+
+                #<hotfix><key>"SparkLevelPatchEntry-ApocOphaDropBadAss0"</key><value>",GD_Population_Eridian_Opha.AIPawn_Bal.PawnBalance_Opha_BadAss,DefaultItemPoolIncludedLists[0],,ItemPoolListDefinition'GD_Itempools.ListDefs.BadassEnemyGunsAndGear'"</value><on>
+
+            #</Elder Opha / Virtuous Opha>
+
         #</Better Individual Enemy Drops>
 
         #<Enemy Drop Nerfs>
+
+            # The Pre-Sequel is, in general, far more generous with loot than BL2 was, and
+            # sometimes that tendency, in conjunction with everything else in this mod,
+            # creates a situation where far too much is getting dropped, even for me.
+            # (This happens in the later BL2 DLCs as well, actually.)  This section nerfs
+            # various drops so that it's not totally overwhelming.
 
             #<Bosses>
 
@@ -877,6 +908,46 @@
                     #<hotfix><key>"SparkLevelPatchEntry-ApocFelicityDropNerf3"</key><value>"DahlFactory_Boss,GD_ProtoWarBot_CoreBody.Character.AIDef_ProtoWarBot_CoreBody:AIBehaviorProviderDefinition_0.Behavior_SpawnItems_21,ItemPoolIncludedLists,,(ItemPoolListDefinition'GD_Itempools.ListDefs.SuperBadassEnemyGunsAndGear')"</value><on>
 
                 #</Felicity Rampant>
+
+                #<The Sentinel (non-raid)>
+
+                    # The Sentinel drops twice from the UltimateBadass pool by default,
+                    # which is pretty excessive when paired with the Empyrian Sentinel
+                    # drops as well.  Reduce it to only drop once.
+
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocSentinelDropNerf0"</key><value>"InnerCore_P,GD_Population_FinalBossCork.Balance.PawnBalance_FinalBossCork,DefaultItemPoolIncludedLists,,(ItemPoolListDefinition'GD_Itempools.ListDefs.UltimateBadassEnemyGunsAndGear')"</value><on>
+
+                #</The Sentinel (non-raid)>
+
+                #<The Empyrean Sentinel (non-raid)>
+
+                    # By default, the Empyrean Sentinel (non-raid version) drops three
+                    # times from UltimateBadass and twice from RaidBoss (plus some drops
+                    # from a number of custom drop pools).  We're leaving the custom
+                    # drop pool rates alone, but we're going to change the otehr drop
+                    # rates to: 2x Regular Badass, 2x Super Badass, 1x Ultimate.
+
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocEmpyreanNerf0"</key><value>"InnerCore_P,GD_FinalBossCorkBig.IOs.IO_LootSpew:BehaviorProviderDefinition_0.Behavior_SpawnItems_81,ItemPoolIncludedLists[0],,ItemPoolListDefinition'GD_Itempools.ListDefs.BadassEnemyGunsAndGear'"</value><on>
+
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocEmpyreanNerf1"</key><value>"InnerCore_P,GD_FinalBossCorkBig.IOs.IO_LootSpew:BehaviorProviderDefinition_0.Behavior_SpawnItems_84,ItemPoolIncludedLists[0],,ItemPoolListDefinition'GD_Itempools.ListDefs.SuperBadassEnemyGunsAndGear'"</value><on>
+
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocEmpyreanNerf2"</key><value>"InnerCore_P,GD_FinalBossCorkBig.IOs.IO_LootSpew:BehaviorProviderDefinition_0.Behavior_SpawnItems_86,ItemPoolIncludedLists[0],,ItemPoolListDefinition'GD_Itempools.ListDefs.SuperBadassEnemyGunsAndGear'"</value><on>
+
+                #</The Empyrean Sentinel (non-raid)>
+
+                #<The Empyrean Sentinel (raid)>
+
+                    # By deafult, the Empyrean Sentinel (raid version) drops twice from
+                    # the UltimateBadass pool and once from RaidBoss.  This actually
+                    # requires less nerfing than the non-raid version; we're just going
+                    # to change one of the Ultimate drops to Super, and restrict the
+                    # number of unique-pool drops to 2.
+
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocEmpyreanRaidNerf0"</key><value>"InnerCore_P,GD_FinalBossCorkBig.IOs.IO_LootSpew:BehaviorProviderDefinition_0.Behavior_SpawnItems_83,ItemPoolIncludedLists[0],,ItemPoolListDefinition'GD_Itempools.ListDefs.SuperBadassEnemyGunsAndGear'"</value><on>
+
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocEmpyreanRaidNerf1"</key><value>"InnerCore_P,GD_FinalBossCorkBig.IOs.IO_LootSpew:BehaviorProviderDefinition_0.Behavior_SpawnItems_88,ItemPoolList,,((ItemPool=ItemPoolDefinition'GD_Itempools.Runnables.Pool_ColZarpedon',PoolProbability=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'GD_Itempools.DropWeights.DropODDS_BossUniques',InitializationDefinition=None,BaseValueScaleConstant=1.000000)))"</value><on>
+
+                #</The Empyrean Sentinel (raid)>
 
             #</Bosses>
 
