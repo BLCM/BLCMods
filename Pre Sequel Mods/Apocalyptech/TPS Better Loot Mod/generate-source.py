@@ -189,6 +189,11 @@ class ConfigLootsplosion(ConfigBase):
     badass_pool_glitch = '0.3'
     badass_pool_epicchest = '0.1'
 
+    # Claptastic Voyage Badass pool probabilities (NOTE: these are *not* weights)
+    badass_pool_clap_veryrare = '0.2'
+    badass_pool_clap_glitch = '0.5'
+    badass_pool_clap_epicchest = '0.1'
+
     # Super Badass pool probabilities (NOTE: these are *not* weights)
     super_badass_pool_rare = '1'
     super_badass_pool_veryrare = '1'
@@ -207,6 +212,13 @@ class ConfigLootsplosion(ConfigBase):
     ultimate_badass_pool_epicchest_1 = '1'
     ultimate_badass_pool_epicchest_2 = '0.5'
     ultimate_badass_pool_epicchest_3 = '0.5'
+
+    # A few tweaks to the ultimate badass pool for Claptastic Voyage (the
+    # legendary + epic chest drops are untouched)
+    ultimate_badass_pool_clap_veryrare_1 = '1'
+    ultimate_badass_pool_clap_veryrare_2 = '0.2'
+    ultimate_badass_pool_clap_glitch_1 = '1'
+    ultimate_badass_pool_clap_glitch_2 = '0.8'
 
     # 2x chance of both kinds of moonstone
     moonstone_drop = '0.1'          # Stock: 0.050000
@@ -240,6 +252,14 @@ class ConfigReasonable(ConfigLootsplosion):
     weapon_base_veryrare = '5'
     weapon_base_glitch = '2'
     weapon_base_legendary = '0.25'
+
+    # Custom weapon drop scaling for Claptastic Voyage
+    weapon_clap_base_common = '32.75'
+    weapon_clap_base_uncommon = '35'
+    weapon_clap_base_rare = '25'
+    weapon_clap_base_veryrare = '4'
+    weapon_clap_base_glitch = '4'
+    weapon_clap_base_legendary = '0.25'
 
     # Custom ozkit drop scaling (identical to weapons)
     ozkit_base_common = weapon_base_common
@@ -302,6 +322,11 @@ class ConfigReasonable(ConfigLootsplosion):
     badass_pool_glitch = '0.15'
     badass_pool_epicchest = '0.1'
 
+    # Claptastic Voyage Badass pool probabilities (NOTE: these are *not* weights)
+    badass_pool_veryrare = '0.1'
+    badass_pool_glitch = '0.25'
+    badass_pool_epicchest = '0.1'
+
     # Super Badass pool probabilities (NOTE: these are *not* weights)
     super_badass_pool_rare = '1'
     super_badass_pool_veryrare = '0.4'
@@ -320,6 +345,13 @@ class ConfigReasonable(ConfigLootsplosion):
     ultimate_badass_pool_epicchest_1 = '1'
     ultimate_badass_pool_epicchest_2 = '1'
     ultimate_badass_pool_epicchest_3 = '1'
+
+    # A few tweaks to the ultimate badass pool for Claptastic Voyage (the
+    # legendary + epic chest drops are untouched)
+    ultimate_badass_pool_clap_veryrare_1 = '0.4'
+    ultimate_badass_pool_clap_veryrare_2 = '0'
+    ultimate_badass_pool_clap_glitch_1 = '1'
+    ultimate_badass_pool_clap_glitch_2 = '0'
 
 # The profiles we'll generate
 profiles = [
