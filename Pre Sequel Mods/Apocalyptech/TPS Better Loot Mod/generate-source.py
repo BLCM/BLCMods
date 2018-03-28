@@ -405,7 +405,9 @@ force_gunsandgear_specific_names = [
 # Remove bias for dropping Pistols in the main game.  Also buffs drop rates
 # for snipers, lasers, and launchers, though it does not bring them up to the
 # level of pistols/ARs/SMGs/shotguns.  This could be done with a `set`
-# statement, but this is more concise.
+# statement, but this is more concise.  We don't need to touch the Claptastic
+# Voyage pool GD_Ma_ItemPools.WeaponPools.Pool_Weapons_All_Glitch_Marigold
+# beacuse that pool already has equal weights for all weapon types.
 for (number, rarity) in [
         ('01', 'Common'),
         ('02', 'Uncommon'),
