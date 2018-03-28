@@ -119,6 +119,14 @@ class ConfigLootsplosion(ConfigBase):
     weapon_base_glitch = '8'
     weapon_base_legendary = '2'
 
+    # Custom weapon drop scaling for Claptastic Voyage
+    weapon_clap_base_common = '8'
+    weapon_clap_base_uncommon = '85'
+    weapon_clap_base_rare = '65'
+    weapon_clap_base_veryrare = '50'
+    weapon_clap_base_glitch = '16'
+    weapon_clap_base_legendary = '3'
+
     # Custom ozkit drop scaling (identical to weapons)
     ozkit_base_common = weapon_base_common
     ozkit_base_uncommon = weapon_base_uncommon

@@ -67,7 +67,8 @@ Mod Overview
   you'll start seeing those much more frequently.
 * Loot will skew much more rare, in general.  You should expect to see
   those legendaries/uniques far more frequently than in vanilla TPS.
-* Glitch weapons spawn in the main game
+* Glitch weapons spawn in the main game (though they will be more common
+  in the Claptastic Voyage DLC)
 * Luneshine weapons will drop in all world drop pools (this is identical
   to some functionality in UCP)
 * Legendary/Unique weapons which allow Luneshine are guaranteed to spawn
@@ -249,6 +250,18 @@ TODO
 * I've done most of the initial construction of this using my extracted TPS data
   which didn't include Holodome Onslaught, so it's possible I'm missing some stuff
   from there.  Check that out...
+* Things to look out for while testing Claptastic Voyage:
+  * The `GD_Ma_ItemPools.WeaponPoolsWeighted` class is referenced in END OF LINE's
+    mission behavior stuff, in `GD_Ma_Chapter05_Data.IO_Ma_LootShower:BehaviorProviderDefinition_1.Behavior_SpawnItems_153`.
+    Figure out what that is, and if we want to use something else.  (They're also
+    mentioned in vending machine IOTD pools, it looks like, but I'm not touching
+    vending machines.)
+  * The `GD_Ma_ItemPools.WeaponPoolsUnweighted` class is referenced inside various
+    `GD_Ma_Mutator.LootPools` objects -- I assume this is related to awards from
+    the mutator arena.  Figure that out.  (They're also referenced in some Grinder
+    pools, but I'm ignoring those as well.)  (Aha, yeah, it's pretty much GOT to
+    be the mutator arena rewards; the weights in those pools are all based on a
+    "Torment" level which is checked from 1-9.)
 
 Mod Construction / Implementation Details
 -----------------------------------------
