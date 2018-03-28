@@ -21,6 +21,7 @@ Dave: For his resources and his help
 Zububu: For being a turtle and his mods
 Aaron0000, adudney, AngrierPat, B33PB00PJOE, Battle Bee, Coleby, EmpireScum, Exotek, FromDarkHell, GoldenGizzmo, Hemaxhu, Hydrattler, IK4MS, JimRaven, Kazy (Sheep), Natsu235, Orudeon, soze (Mike), splitzle and theNocturni: 
 For all of their mods
+Extra credit to TheCampin'Dutchman for his original ideas of Aaron0000' Campin'Dutchpack
 
 -----------------------------------------------------------------------------------------------------------
 
