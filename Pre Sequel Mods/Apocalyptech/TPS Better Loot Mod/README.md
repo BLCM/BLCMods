@@ -266,6 +266,18 @@ TODO
     be the mutator arena rewards; the weights in those pools are all based on a
     "Torment" level which is checked from 1-9.)
 
+Other Notes
+-----------
+
+As with the BL2 Better Loot mod, enemy drops can get rather excessive if you're in an
+area which generates a lot of badasses, and The Pre-Sequel is already fairly generous
+with loot.  The first fight against SH4D0W-TP in The Cortex can end up generating
+nearly 30 good items (including the two glitched epic chests post-battle), which may
+be a bit much to sort through.  In the interests of keeping loot interesting near the
+beginning of the game, when that kind of excess is less common, I'm keeping the drops
+the way they are for now, though I could probably be talked into nerfing things a
+bit...
+
 Mod Construction / Implementation Details
 -----------------------------------------
 
