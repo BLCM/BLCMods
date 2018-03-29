@@ -120,6 +120,10 @@ Mod Overview
     * Added Zim and Min Min Lighter to Teh Earworm's drop pool, since you fight
       and kill it three times over the course of the You Can Stop The Music
       mission.
+    * EOS/SH4D0W-TP's final loot shower has been tweaked to explicitly include
+      glitch weapons, plus some extra moonstone and money.  The probabilities
+      have been tweaked slightly so the loot shower will be likely to drop
+      *fewer* weapons, though it'll still be a heck of a lot.
   * This mod technically nerfs a few enemy drops, which otherwise get a little
     too excessive even for me:
     * Hardcodes the drop probabilities for the unique loot dropped by Badass
@@ -254,11 +258,6 @@ TODO
   which didn't include Holodome Onslaught, so it's possible I'm missing some stuff
   from there.  Check that out...
 * Things to look out for while testing Claptastic Voyage:
-  * The `GD_Ma_ItemPools.WeaponPoolsWeighted` class is referenced in END OF LINE's
-    mission behavior stuff, in `GD_Ma_Chapter05_Data.IO_Ma_LootShower:BehaviorProviderDefinition_1.Behavior_SpawnItems_153`.
-    Figure out what that is, and if we want to use something else.  (They're also
-    mentioned in vending machine IOTD pools, it looks like, but I'm not touching
-    vending machines.)
   * The `GD_Ma_ItemPools.WeaponPoolsUnweighted` class is referenced inside various
     `GD_Ma_Mutator.LootPools` objects -- I assume this is related to awards from
     the mutator arena.  Figure that out.  (They're also referenced in some Grinder

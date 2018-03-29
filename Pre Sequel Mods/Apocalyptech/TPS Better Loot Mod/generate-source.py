@@ -1811,6 +1811,150 @@ hfs.add_level_hotfix('empyrean_raid_nerf_1', 'EmpyreanRaidNerf',
     )
     """)
 
+# Tweaks to EOS/SH4D0W-TP End-DLC Loot Shower.  There's a bunch of spawners at
+# GD_Ma_Chapter05_Data.IO_Ma_LootShower:BehaviorProviderDefinition_1.Behavior_SpawnItems_*
+# which fall into a few categories, which are identical save for the velocities +
+# angles which the loot comes out of:
+# 
+#   144, 148, 150, 154, 156, 158, 160: Money + Moonstones
+#   145, 147, 149, 151, 155, 157, 159, 161: One GunsAndGear Drop, 30% chance of purple,
+#       40% chance of blue, and 40% chance of green
+#   152: One Purple, Two Blues (seemingly only used outside System Shutdown (while farming))
+#   153: Legendary (only used during System Shutdown)
+#   146: Legendary (only used outside System Shutdown (while farming))
+#
+# Those pools (at least the main gear pools) can be called more than once, and the actual
+# quantity seems to be a bit random (and possibly depends on whether you're in System Shutdown
+# or not).  The in-mission drops, based on a small sample size, seem to be reasonably
+# consistent, with about 1-3 drops per pool.  Outside of the mission it seems to be a bit more
+# volatile (though that could be due to a small sample size), more like 0-4 per pool.  Apart
+# from the legendary pools and "152", which only have one drop, as noted above.  Anyway, we're
+# getting rid of greens, adding glitches, and adding a bit more money + moonstone.
+#
+# We're leaving 152 alone, doesn't seem worth the hotfix.  :)
+
+# First up, more money+moonstone:
+for num in [144, 148, 150, 154, 156, 158, 160]:
+    hfs.add_level_hotfix('eos_drop_{}'.format(num),
+        'EosDrop',
+        """Ma_FinalBoss_P,
+        GD_Ma_Chapter05_Data.IO_Ma_LootShower:BehaviorProviderDefinition_1.Behavior_SpawnItems_{},
+        ItemPoolList,,
+        (
+            ( 
+                ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Money_1_BIG', 
+                PoolProbability=( 
+                    BaseValueConstant=1.000000, 
+                    BaseValueAttribute=None, 
+                    InitializationDefinition=None, 
+                    BaseValueScaleConstant=1.000000 
+                ) 
+            ),
+            ( 
+                ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Money_1_BIG', 
+                PoolProbability=( 
+                    BaseValueConstant=1.000000, 
+                    BaseValueAttribute=None, 
+                    InitializationDefinition=None, 
+                    BaseValueScaleConstant=1.000000 
+                ) 
+            ),
+            (
+                ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Moonstone_Cluster', 
+                PoolProbability=( 
+                    BaseValueConstant=0.500000, 
+                    BaseValueAttribute=None, 
+                    InitializationDefinition=None, 
+                    BaseValueScaleConstant=1.000000 
+                ) 
+            ),
+            (
+                ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Moonstone_Cluster', 
+                PoolProbability=( 
+                    BaseValueConstant=1.000000, 
+                    BaseValueAttribute=None, 
+                    InitializationDefinition=None, 
+                    BaseValueScaleConstant=1.000000 
+                ) 
+            ),
+            (
+                ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Moonstone', 
+                PoolProbability=( 
+                    BaseValueConstant=1.000000, 
+                    BaseValueAttribute=None, 
+                    InitializationDefinition=None, 
+                    BaseValueScaleConstant=1.000000 
+                ) 
+            )
+        )""".format(num))
+
+# Next: improved general gear drops (though we're acutally going to tweak the
+# probabilities a bit here, with a net result of a bit less loot)
+for num in [145, 147, 149, 151, 155, 157, 159, 161]:
+    hfs.add_level_hotfix('eos_drop_{}'.format(num),
+        'EosDrop',
+        """Ma_FinalBoss_P,
+        GD_Ma_Chapter05_Data.IO_Ma_LootShower:BehaviorProviderDefinition_1.Behavior_SpawnItems_{},
+        ItemPoolList,,
+        (
+            ( 
+                ItemPool=ItemPoolDefinition'GD_Ma_ItemPools.Treasure_ChestPools.Pool_EpicChest_Weapons_GunsAndGear_Marigold', 
+                PoolProbability=( 
+                    BaseValueConstant=1.000000, 
+                    BaseValueAttribute=None, 
+                    InitializationDefinition=None, 
+                    BaseValueScaleConstant=1.000000 
+                ) 
+            ),
+            (
+                ItemPool=ItemPoolDefinition'GD_Itempools.EnemyDropPools.Pool_GunsAndGear_05_VeryRare', 
+                PoolProbability=( 
+                    BaseValueConstant=0.300000, 
+                    BaseValueAttribute=None, 
+                    InitializationDefinition=None, 
+                    BaseValueScaleConstant=1.000000 
+                ) 
+            ),
+            (
+                ItemPool=ItemPoolDefinition'GD_Itempools.EnemyDropPools.Pool_GunsAndGear_04_Rare', 
+                PoolProbability=( 
+                    BaseValueConstant=0.400000, 
+                    BaseValueAttribute=None, 
+                    InitializationDefinition=None, 
+                    BaseValueScaleConstant=1.000000 
+                ) 
+            ),
+            (
+                ItemPool=ItemPoolDefinition'GD_Ma_ItemPools.WeaponPools.Pool_Weapons_All_Glitch_Marigold', 
+                PoolProbability=( 
+                    BaseValueConstant=0.200000, 
+                    BaseValueAttribute=None, 
+                    InitializationDefinition=None, 
+                    BaseValueScaleConstant=1.000000 
+                ) 
+            )
+        )""".format(num))
+
+# Change the legendary drops to use our main legendary drop pool rather than
+# the "weighted" Marigold one.
+for num in [153, 146]:
+    hfs.add_level_hotfix('eos_drop_{}'.format(num),
+        'EosDrop',
+        """Ma_FinalBoss_P,
+        GD_Ma_Chapter05_Data.IO_Ma_LootShower:BehaviorProviderDefinition_1.Behavior_SpawnItems_{},
+        ItemPoolList,,
+        (
+            ( 
+                ItemPool=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_All_06_Legendary', 
+                PoolProbability=( 
+                    BaseValueConstant=1.000000, 
+                    BaseValueAttribute=None, 
+                    InitializationDefinition=None, 
+                    BaseValueScaleConstant=1.000000 
+                ) 
+            )
+        )""".format(num))
+
 # Exhaustive early-game weapon unlocks.  Generated by `part_unlock.py` using
 # ft-explorer data.
 hfs.add_level_hotfix('part_unlock_0', 'PartUnlock',

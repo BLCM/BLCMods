@@ -4744,7 +4744,7 @@
 
     #<Better Enemy Drops>
 
-        #<Boss Drop Changes>
+        #<General Boss Drop Changes>
 
             #<Guaranteed Boss Drops>
 
@@ -4998,53 +4998,7 @@
 
             #</Boss Drop Normalization>
 
-            #<Tweak Empyrean Sentinel (raid version) Pool>
-
-                # The raid version of the Empyrean Sentinel contains two chances to drop
-                # the ZX-1: one from its own pool, and one from the Colonel Zarpedon pool
-                # which it also drops from.  This removes the ZX-1 from the Sentinel's
-                # pool so that the ZX-1 isn't weighted any more than it already is.
-
-                set GD_Itempools.Runnables.Pool_FinalBossRaid BalancedItems
-                (
-                    ( 
-                        ItmPoolDefinition=None, 
-                        InvBalanceDefinition=WeaponBalanceDefinition'GD_Cork_Weap_SniperRifles.A_Weapons_Legendary.Sniper_Vladof_5_Longnail', 
-                        Probability=( 
-                            BaseValueConstant=0.000000, 
-                            BaseValueAttribute=None, 
-                            InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common', 
-                            BaseValueScaleConstant=1.000000 
-                        ), 
-                        bDropOnDeath=True 
-                    ),
-                    (
-                        ItmPoolDefinition=None, 
-                        InvBalanceDefinition=InventoryBalanceDefinition'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Nova_Singularity', 
-                        Probability=( 
-                            BaseValueConstant=0.000000, 
-                            BaseValueAttribute=None, 
-                            InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common', 
-                            BaseValueScaleConstant=1.000000 
-                        ), 
-                        bDropOnDeath=True 
-                    ),
-                    (
-                        ItmPoolDefinition=None, 
-                        InvBalanceDefinition=InventoryBalanceDefinition'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Absorption_PrismaticBulwark', 
-                        Probability=( 
-                            BaseValueConstant=0.000000, 
-                            BaseValueAttribute=None, 
-                            InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common', 
-                            BaseValueScaleConstant=1.000000 
-                        ), 
-                        bDropOnDeath=True 
-                    )
-                )
-
-            #</Tweak Empyrean Sentinel (raid version) Pool>
-
-        #</Boss Drop Changes>
+        #</General Boss Drop Changes>
 
         #<Better Badass Drops>
 
@@ -6660,6 +6614,93 @@
                 )
 
             #</Teh Earworm>
+
+            #<Tweak Empyrean Sentinel (raid version) Pool>
+
+                # The raid version of the Empyrean Sentinel contains two chances to drop
+                # the ZX-1: one from its own pool, and one from the Colonel Zarpedon pool
+                # which it also drops from.  This removes the ZX-1 from the Sentinel's
+                # pool so that the ZX-1 isn't weighted any more than it already is.
+
+                set GD_Itempools.Runnables.Pool_FinalBossRaid BalancedItems
+                (
+                    ( 
+                        ItmPoolDefinition=None, 
+                        InvBalanceDefinition=WeaponBalanceDefinition'GD_Cork_Weap_SniperRifles.A_Weapons_Legendary.Sniper_Vladof_5_Longnail', 
+                        Probability=( 
+                            BaseValueConstant=0.000000, 
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common', 
+                            BaseValueScaleConstant=1.000000 
+                        ), 
+                        bDropOnDeath=True 
+                    ),
+                    (
+                        ItmPoolDefinition=None, 
+                        InvBalanceDefinition=InventoryBalanceDefinition'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Nova_Singularity', 
+                        Probability=( 
+                            BaseValueConstant=0.000000, 
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common', 
+                            BaseValueScaleConstant=1.000000 
+                        ), 
+                        bDropOnDeath=True 
+                    ),
+                    (
+                        ItmPoolDefinition=None, 
+                        InvBalanceDefinition=InventoryBalanceDefinition'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Absorption_PrismaticBulwark', 
+                        Probability=( 
+                            BaseValueConstant=0.000000, 
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common', 
+                            BaseValueScaleConstant=1.000000 
+                        ), 
+                        bDropOnDeath=True 
+                    )
+                )
+
+            #</Tweak Empyrean Sentinel (raid version) Pool>
+
+            #<Improved EOS/SH4D0W-TP Loot Shower>
+
+                # This actually isn't much different from stock, though we add in explicit
+                # Glitch drops, plus some extra money+moonstone.
+
+                {hotfixes:eos_drop_144}
+
+                {hotfixes:eos_drop_145}
+
+                {hotfixes:eos_drop_146}
+
+                {hotfixes:eos_drop_147}
+
+                {hotfixes:eos_drop_148}
+
+                {hotfixes:eos_drop_149}
+
+                {hotfixes:eos_drop_150}
+
+                {hotfixes:eos_drop_151}
+
+                {hotfixes:eos_drop_153}
+
+                {hotfixes:eos_drop_154}
+
+                {hotfixes:eos_drop_155}
+
+                {hotfixes:eos_drop_156}
+
+                {hotfixes:eos_drop_157}
+
+                {hotfixes:eos_drop_158}
+
+                {hotfixes:eos_drop_159}
+
+                {hotfixes:eos_drop_160}
+
+                {hotfixes:eos_drop_161}
+
+            #</Improved EOS/SH4D0W-TP Loot Shower>
 
         #</Better Individual Enemy Drops>
 
