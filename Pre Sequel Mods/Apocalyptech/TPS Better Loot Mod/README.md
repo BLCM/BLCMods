@@ -320,5 +320,5 @@ for the full text.
 Changelog
 =========
 
-**v1.0.0**, March 30, 2018:
+**v1.0.0**, March 30, 2018 (commit `616fd5f420637a7ef28107ca440377d83c435025`):
  * Initial public release

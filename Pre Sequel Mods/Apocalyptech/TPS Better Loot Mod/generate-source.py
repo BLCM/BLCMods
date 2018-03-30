@@ -52,7 +52,7 @@ except ModuleNotFoundError:
 ###
 
 mod_name = 'TPS Better Loot Mod'
-mod_version = '1.0.0'
+mod_version = '1.0.1 (prerelease)'
 variant_ucp = 'UCP Compat'
 variant_offline = 'Standalone Offline'
 
