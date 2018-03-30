@@ -93,6 +93,8 @@ Mod Overview
     somewhat, but gear from safes will always be legendary.
   * Fixes some "shield" loot configurations which had an error and would
     never spawn, previously.
+  * Mutator Arena chests (from the mission l33t h4X0rz) have been improved
+    *(though that hasn't seen a whole lot of testing)*.
   * Individual chest updates:
     * Zarpedon's Chest (from the mission The Secret Chamber) has been improved
       to pull from the epic chest pools.
@@ -257,13 +259,6 @@ TODO
 * I've done most of the initial construction of this using my extracted TPS data
   which didn't include Holodome Onslaught, so it's possible I'm missing some stuff
   from there.  Check that out...
-* Things to look out for while testing Claptastic Voyage:
-  * The `GD_Ma_ItemPools.WeaponPoolsUnweighted` class is referenced inside various
-    `GD_Ma_Mutator.LootPools` objects -- I assume this is related to awards from
-    the mutator arena.  Figure that out.  (They're also referenced in some Grinder
-    pools, but I'm ignoring those as well.)  (Aha, yeah, it's pretty much GOT to
-    be the mutator arena rewards; the weights in those pools are all based on a
-    "Torment" level which is checked from 1-9.)
 
 Other Notes
 -----------

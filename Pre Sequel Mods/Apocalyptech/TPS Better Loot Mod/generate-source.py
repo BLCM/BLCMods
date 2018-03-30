@@ -33,6 +33,7 @@
 # Borderlands / FilterTool.
 
 import sys
+import math
 
 try:
     from hotfixes import Hotfixes
@@ -1954,6 +1955,265 @@ for num in [153, 146]:
                 ) 
             )
         )""".format(num))
+
+# Altering probabilities in the mutator arena chests (in the Cortex).  There's
+# a set of fun little AttributeInitializationDefinition objects which base
+# their weights on the difficulty selected by the user.  The stock percentages
+# end up looking like this (in percentages, assuming you have a pool with all
+# four probabilities - uncommon, rare, veryrare, legendary):
+#
+#   Torment level 1: 84, 14, 2, 0.09
+#   Torment level 2: 77, 19, 4, 0.1
+#   Torment level 3: 65, 27, 8, 0.33
+#   Torment level 4: 55, 33, 12, 0.55
+#   Torment level 5: 37, 43, 20, 1
+#   Torment level 6: 19, 51, 28, 2
+#   Torment level 7: 0.15, 53, 44, 4
+#   Torment level 8: 0.14, 42, 52, 5
+#   Torment level 9: 0.13, 33, 61, 6
+#
+# We're changing that to look like this instead, using a gaussian function as
+# our guide (with some custom tweaks to make the more common rarities fall
+# off a little faster than they otherwise would):
+#
+#   Torment level 1: 79, 19, 2, 0.07
+#   Torment level 2: 71, 25, 4, 0.2
+#   Torment level 3: 61, 32, 7, 0.54
+#   Torment level 4: 33, 50, 15, 2
+#   Torment level 5: 23, 51, 23, 4
+#   Torment level 6: 17, 37, 36, 10
+#   Torment level 7: 0.0, 33, 48, 18
+#   Torment level 8: 0.0, 23, 49, 28
+#   Torment level 9: 0.0, 15, 47, 38
+
+# All these curve + step parameters I'd just played around with until they
+# felt more-or-less "right"
+def gauss_at(x):
+    peak = 50
+    center = 50
+    std_dev = 25
+    exp = -((x-center)**2)/(2*(std_dev**2))
+    return peak*(math.e**exp)
+start = 75
+interval = 24
+step = -10
+uncommons = []
+rares = []
+veryrares = []
+legendaries = []
+for count in range(9):
+    if count >= 6:
+        uncommons.append(0)
+    elif count >= 3:
+        uncommons.append(gauss_at(start)/2)
+    else:
+        uncommons.append(gauss_at(start))
+
+    if count >= 5:
+        rares.append(gauss_at(start+(interval*1))*2/3)
+    else:
+        rares.append(gauss_at(start+(interval*1)))
+
+    veryrares.append(gauss_at(start+(interval*2)))
+    legendaries.append(gauss_at(start+(interval*3)))
+    start += step
+
+# Now actually set up those hotfixes
+for (label, objname, levels) in [
+        ('uncommon', 'GD_Ma_Mutator.Attributes.Init_TormentLootWeight_2_Uncommon', uncommons),
+        ('rare', 'GD_Ma_Mutator.Attributes.Init_TormentLootWeight_3_Rare', rares),
+        ('veryrare', 'GD_Ma_Mutator.Attributes.Init_TormentLootWeight_4_VeryRare', veryrares),
+        ('legendary', 'GD_Ma_Mutator.Attributes.Init_TormentLootWeight_5_Legendary', legendaries),
+        ]:
+    for idx, weight in enumerate(levels):
+        hfs.add_level_hotfix('mutator_weight_{}_{}'.format(label, idx),
+            'MutatorWeight',
+            """Ma_SubBoss_P,
+            {},
+            ConditionalInitialization.ConditionalExpressionList[{}].BaseValueIfTrue,,
+            (
+                BaseValueConstant={},
+                BaseValueAttribute=None,
+                InitializationDefinition=None,
+                BaseValueScaleConstant=1.000000
+            )
+            """.format(objname, idx, round(weight, 6)))
+
+# Now some hotfixes to improve the actual mutator loot pools themselves
+def mutator_pool(label, obj_name, contents):
+    items = []
+    for (pool, weight, scale) in contents:
+        if weight == 2:
+            idef = 'GD_Ma_Mutator.Attributes.Init_TormentLootWeight_2_Uncommon'
+        elif weight == 3:
+            idef = 'GD_Ma_Mutator.Attributes.Init_TormentLootWeight_3_Rare'
+        elif weight == 4:
+            idef = 'GD_Ma_Mutator.Attributes.Init_TormentLootWeight_4_VeryRare'
+        elif weight == 5:
+            idef = 'GD_Ma_Mutator.Attributes.Init_TormentLootWeight_5_Legendary'
+        else:
+            raise Exception('Unknown weight: {}'.format(weight))
+        if not scale:
+            scale = '1.000000'
+        items.append("""
+            ( 
+                ItmPoolDefinition=ItemPoolDefinition'{}', 
+                InvBalanceDefinition=None, 
+                Probability=( 
+                    BaseValueConstant=1.000000, 
+                    BaseValueAttribute=None, 
+                    InitializationDefinition=AttributeInitializationDefinition'{}', 
+                    BaseValueScaleConstant={} 
+                ), 
+                bDropOnDeath=True 
+            )
+            """.format(pool, idef, scale))
+
+    hfs.add_level_hotfix('mutator_{}'.format(label),
+        'MutatorPool',
+        """Ma_SubBoss_P,
+        {},
+        BalancedItems,,
+        (
+            {}
+        )
+        """.format(obj_name, ','.join(items)))
+
+mutator_pool('common_coms', 'GD_Ma_Mutator.LootPools.Pool_Mut_CommonChest_ClassMods', [
+    ('GD_Itempools.ClassModPools.Pool_ClassMod_02_Uncommon', 2, None),
+    ('GD_Itempools.ClassModPools.Pool_ClassMod_04_Rare', 3, None),
+    ('GD_Itempools.ClassModPools.Pool_ClassMod_05_VeryRare', 4, None),
+    ])
+mutator_pool('common_grenades', 'GD_Ma_Mutator.LootPools.Pool_Mut_CommonChest_GrenadeMods', [
+    ('GD_Itempools.GrenadeModPools.Pool_GrenadeMods_02_Uncommon', 2, None),
+    ('GD_Itempools.GrenadeModPools.Pool_GrenadeMods_04_Rare', 3, None),
+    ('GD_Itempools.GrenadeModPools.Pool_GrenadeMods_05_VeryRare', 4, None),
+    ])
+mutator_pool('common_ozkits', 'GD_Ma_Mutator.LootPools.Pool_Mut_CommonChest_MoonItems', [
+    ('GD_Itempools.MoonItemPools.Pool_MoonItem_02_Uncommon', 2, None),
+    ('GD_Itempools.MoonItemPools.Pool_MoonItem_04_Rare', 3, None),
+    ('GD_Itempools.MoonItemPools.Pool_MoonItem_05_VeryRare', 4, None),
+    ])
+mutator_pool('common_shields', 'GD_Ma_Mutator.LootPools.Pool_Mut_CommonChest_Shields', [
+    ('GD_Itempools.ShieldPools.Pool_Shields_All_02_Uncommon', 2, None),
+    ('GD_Itempools.ShieldPools.Pool_Shields_All_04_Rare', 3, None),
+    ('GD_Itempools.ShieldPools.Pool_Shields_All_05_VeryRare', 4, None),
+    ])
+mutator_pool('common_launchers', 'GD_Ma_Mutator.LootPools.Pool_Mut_CommonChest_Weapons_Launchers', [
+    ('GD_Itempools.WeaponPools.Pool_Weapons_Launchers_02_Uncommon', 2, None),
+    ('GD_Itempools.WeaponPools.Pool_Weapons_Launchers_04_Rare', 3, None),
+    ('GD_Itempools.WeaponPools.Pool_Weapons_Launchers_05_VeryRare', 4, None),
+    ])
+mutator_pool('common_longguns', 'GD_Ma_Mutator.LootPools.Pool_Mut_CommonChest_Weapons_LongGuns', [
+    ('GD_Itempools.WeaponPools.Pool_Weapons_AssaultRifles_02_Uncommon', 2, None),
+    ('GD_Itempools.WeaponPools.Pool_Weapons_AssaultRifles_04_Rare', 3, None),
+    ('GD_Itempools.WeaponPools.Pool_Weapons_AssaultRifles_05_VeryRare', 4, None),
+    ('GD_Itempools.WeaponPools.Pool_Weapons_Shotguns_02_Uncommon', 2, None),
+    ('GD_Itempools.WeaponPools.Pool_Weapons_Shotguns_04_Rare', 3, None),
+    ('GD_Itempools.WeaponPools.Pool_Weapons_Shotguns_05_VeryRare', 4, None),
+    ('GD_Itempools.WeaponPools.Pool_Weapons_SMG_02_Uncommon', 2, None),
+    ('GD_Itempools.WeaponPools.Pool_Weapons_SMG_04_Rare', 3, None),
+    ('GD_Itempools.WeaponPools.Pool_Weapons_SMG_05_VeryRare', 4, None),
+    ('GD_Itempools.WeaponPools.Pool_Weapons_SniperRifles_02_Uncommon', 2, None),
+    ('GD_Itempools.WeaponPools.Pool_Weapons_SniperRifles_04_Rare', 3, None),
+    ('GD_Itempools.WeaponPools.Pool_Weapons_SniperRifles_05_VeryRare', 4, None),
+    ('GD_Itempools.WeaponPools.Pool_Weapons_Lasers_02_Uncommon', 2, None),
+    ('GD_Itempools.WeaponPools.Pool_Weapons_Lasers_04_Rare', 3, None),
+    ('GD_Itempools.WeaponPools.Pool_Weapons_Lasers_05_VeryRare', 4, None),
+    ])
+mutator_pool('common_pistols', 'GD_Ma_Mutator.LootPools.Pool_Mut_CommonChest_Weapons_Pistols', [
+    ('GD_Itempools.WeaponPools.Pool_Weapons_Pistols_02_Uncommon', 2, None),
+    ('GD_Itempools.WeaponPools.Pool_Weapons_Pistols_04_Rare', 3, None),
+    ('GD_Itempools.WeaponPools.Pool_Weapons_Pistols_05_VeryRare', 4, None),
+    ])
+mutator_pool('red_coms', 'GD_Ma_Mutator.LootPools.Pool_Mut_RedChest_ClassMods', [
+    ('GD_Itempools.ClassModPools.Pool_ClassMod_04_Rare', 3, None),
+    ('GD_Itempools.ClassModPools.Pool_ClassMod_05_VeryRare', 4, None),
+    ('GD_Itempools.ClassModPools.Pool_ClassMod_06_Legendary', 5, None),
+    ])
+mutator_pool('red_grenades', 'GD_Ma_Mutator.LootPools.Pool_Mut_RedChest_GrenadeMods', [
+    ('GD_Itempools.GrenadeModPools.Pool_GrenadeMods_04_Rare', 3, None),
+    ('GD_Itempools.GrenadeModPools.Pool_GrenadeMods_05_VeryRare', 4, None),
+    ('GD_Itempools.GrenadeModPools.Pool_GrenadeMods_06_Legendary', 5, None),
+    ])
+mutator_pool('red_ozkits', 'GD_Ma_Mutator.LootPools.Pool_Mut_RedChest_MoonItems', [
+    ('GD_Itempools.MoonItemPools.Pool_MoonItem_04_Rare', 3, None),
+    ('GD_Itempools.MoonItemPools.Pool_MoonItem_05_VeryRare', 4, None),
+    ('GD_Itempools.MoonItemPools.Pool_MoonItem_06_Legendary', 5, None),
+    ])
+mutator_pool('red_shields', 'GD_Ma_Mutator.LootPools.Pool_Mut_RedChest_Shields', [
+    ('GD_Itempools.ShieldPools.Pool_Shields_All_04_Rare', 3, None),
+    ('GD_Itempools.ShieldPools.Pool_Shields_All_05_VeryRare', 4, None),
+    ('GD_Itempools.ShieldPools.Pool_Shields_All_06_Legendary', 5, None),
+    ])
+mutator_pool('red_launchers', 'GD_Ma_Mutator.LootPools.Pool_Mut_RedChest_Weapons_Launchers', [
+    ('GD_Itempools.WeaponPools.Pool_Weapons_Launchers_04_Rare', 3, None),
+    ('GD_Itempools.WeaponPools.Pool_Weapons_Launchers_05_VeryRare', 4, None),
+    ('GD_Ma_ItemPools.WeaponPools.Pool_Weapons_Launchers_Glitch_Marigold', 4, '0.5'),
+    ('GD_Itempools.WeaponPools.Pool_Weapons_Launchers_06_Legendary', 5, None),
+    ])
+mutator_pool('red_launchers_glitch', 'GD_Ma_Mutator.LootPools.Pool_Mut_RedChest_Weapons_Launchers_PlusGitch', [
+    ('GD_Itempools.WeaponPools.Pool_Weapons_Launchers_04_Rare', 3, None),
+    ('GD_Itempools.WeaponPools.Pool_Weapons_Launchers_05_VeryRare', 4, None),
+    ('GD_Ma_ItemPools.WeaponPools.Pool_Weapons_Launchers_Glitch_Marigold', 4, None),
+    ('GD_Itempools.WeaponPools.Pool_Weapons_Launchers_06_Legendary', 5, None),
+    ])
+mutator_pool('red_longguns', 'GD_Ma_Mutator.LootPools.Pool_Mut_RedChest_Weapons_LongGuns', [
+    ('GD_Itempools.WeaponPools.Pool_Weapons_AssaultRifles_04_Rare', 3, None),
+    ('GD_Itempools.WeaponPools.Pool_Weapons_AssaultRifles_05_VeryRare', 4, None),
+    ('GD_Ma_ItemPools.WeaponPools.Pool_Weapons_AssaultRifles_Glitch_Marigold', 4, '0.5'),
+    ('GD_Itempools.WeaponPools.Pool_Weapons_AssaultRifles_06_Legendary', 5, None),
+    ('GD_Itempools.WeaponPools.Pool_Weapons_Shotguns_04_Rare', 3, None),
+    ('GD_Itempools.WeaponPools.Pool_Weapons_Shotguns_05_VeryRare', 4, None),
+    ('GD_Ma_ItemPools.WeaponPools.Pool_Weapons_Shotguns_Glitch_Marigold', 4, '0.5'),
+    ('GD_Itempools.WeaponPools.Pool_Weapons_Shotguns_06_Legendary', 5, None),
+    ('GD_Itempools.WeaponPools.Pool_Weapons_SMG_04_Rare', 3, None),
+    ('GD_Itempools.WeaponPools.Pool_Weapons_SMG_05_VeryRare', 4, None),
+    ('GD_Ma_ItemPools.WeaponPools.Pool_Weapons_SMG_Glitch_Marigold', 4, '0.5'),
+    ('GD_Itempools.WeaponPools.Pool_Weapons_SMG_06_Legendary', 5, None),
+    ('GD_Itempools.WeaponPools.Pool_Weapons_SniperRifles_04_Rare', 3, None),
+    ('GD_Itempools.WeaponPools.Pool_Weapons_SniperRifles_05_VeryRare', 4, None),
+    ('GD_Ma_ItemPools.WeaponPools.Pool_Weapons_Sniper_Glitch_Marigold', 4, '0.5'),
+    ('GD_Itempools.WeaponPools.Pool_Weapons_SniperRifles_06_Legendary', 5, None),
+    ('GD_Itempools.WeaponPools.Pool_Weapons_Lasers_04_Rare', 3, None),
+    ('GD_Itempools.WeaponPools.Pool_Weapons_Lasers_05_VeryRare', 4, None),
+    ('GD_Ma_ItemPools.WeaponPools.Pool_Weapons_Lasers_Glitch_Marigold', 4, '0.5'),
+    ('GD_Itempools.WeaponPools.Pool_Weapons_Lasers_06_Legendary', 5, None),
+    ])
+mutator_pool('red_longguns_glitch', 'GD_Ma_Mutator.LootPools.Pool_Mut_RedChest_Weapons_LongGuns_PlusGlitch', [
+    ('GD_Itempools.WeaponPools.Pool_Weapons_AssaultRifles_04_Rare', 3, None),
+    ('GD_Itempools.WeaponPools.Pool_Weapons_AssaultRifles_05_VeryRare', 4, None),
+    ('GD_Ma_ItemPools.WeaponPools.Pool_Weapons_AssaultRifles_Glitch_Marigold', 4, None),
+    ('GD_Itempools.WeaponPools.Pool_Weapons_AssaultRifles_06_Legendary', 5, None),
+    ('GD_Itempools.WeaponPools.Pool_Weapons_Shotguns_04_Rare', 3, None),
+    ('GD_Itempools.WeaponPools.Pool_Weapons_Shotguns_05_VeryRare', 4, None),
+    ('GD_Ma_ItemPools.WeaponPools.Pool_Weapons_Shotguns_Glitch_Marigold', 4, None),
+    ('GD_Itempools.WeaponPools.Pool_Weapons_Shotguns_06_Legendary', 5, None),
+    ('GD_Itempools.WeaponPools.Pool_Weapons_SMG_04_Rare', 3, None),
+    ('GD_Itempools.WeaponPools.Pool_Weapons_SMG_05_VeryRare', 4, None),
+    ('GD_Ma_ItemPools.WeaponPools.Pool_Weapons_SMG_Glitch_Marigold', 4, None),
+    ('GD_Itempools.WeaponPools.Pool_Weapons_SMG_06_Legendary', 5, None),
+    ('GD_Itempools.WeaponPools.Pool_Weapons_SniperRifles_04_Rare', 3, None),
+    ('GD_Itempools.WeaponPools.Pool_Weapons_SniperRifles_05_VeryRare', 4, None),
+    ('GD_Ma_ItemPools.WeaponPools.Pool_Weapons_Sniper_Glitch_Marigold', 4, None),
+    ('GD_Itempools.WeaponPools.Pool_Weapons_SniperRifles_06_Legendary', 5, None),
+    ('GD_Itempools.WeaponPools.Pool_Weapons_Lasers_04_Rare', 3, None),
+    ('GD_Itempools.WeaponPools.Pool_Weapons_Lasers_05_VeryRare', 4, None),
+    ('GD_Ma_ItemPools.WeaponPools.Pool_Weapons_Lasers_Glitch_Marigold', 4, None),
+    ('GD_Itempools.WeaponPools.Pool_Weapons_Lasers_06_Legendary', 5, None),
+    ])
+mutator_pool('red_pistols', 'GD_Ma_Mutator.LootPools.Pool_Mut_RedChest_Weapons_Pistols', [
+    ('GD_Itempools.WeaponPools.Pool_Weapons_Pistols_04_Rare', 3, None),
+    ('GD_Itempools.WeaponPools.Pool_Weapons_Pistols_05_VeryRare', 4, None),
+    ('GD_Ma_ItemPools.WeaponPools.Pool_Weapons_Pistols_Glitch_Marigold', 4, '0.5'),
+    ('GD_Itempools.WeaponPools.Pool_Weapons_Pistols_06_Legendary', 5, None),
+    ])
+mutator_pool('red_pistols_glitch', 'GD_Ma_Mutator.LootPools.Pool_Mut_RedChest_Weapons_Pistols_PlusGlitch', [
+    ('GD_Itempools.WeaponPools.Pool_Weapons_Pistols_04_Rare', 3, None),
+    ('GD_Itempools.WeaponPools.Pool_Weapons_Pistols_05_VeryRare', 4, None),
+    ('GD_Ma_ItemPools.WeaponPools.Pool_Weapons_Pistols_Glitch_Marigold', 4, None),
+    ('GD_Itempools.WeaponPools.Pool_Weapons_Pistols_06_Legendary', 5, None),
+    ])
 
 # Exhaustive early-game weapon unlocks.  Generated by `part_unlock.py` using
 # ft-explorer data.
