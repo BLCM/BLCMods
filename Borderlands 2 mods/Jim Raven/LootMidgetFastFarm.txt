@@ -1,0 +1,54 @@
+#<LootMidgetFastFarm>
+
+    #<Intro>
+
+        This mod Combines two mods from Ethel and FromDarkHell making Lootmidget 
+
+        farming (doctors orders way) approximately 20 times faster (tottaly legit number dont question it ! )
+
+        All Credits Go to Both of them !
+
+        Two ways of using it 
+
+        Either find the second fast travel on Tundra express the one in the varkid house.And use it fast
+
+        travel to the Natural Selection annex. This will spawn ya near the boxes
+
+        OR
+
+        Run from Wildlife Preservation to Natural selection annex. Exit to Wildlife and savequit. 
+
+        When you load back in you ll be in the boxes area.
+
+    #</Intro>
+
+    #<Farmhouse Fast Travel to NSA Ethel>
+
+        set GD_FastTravelStations.Zone1.TundraExpressSecret StationLevelName CreatureSlaughter_P
+
+        set GD_LevelTravelStations.Zone2.CreatureSlaughterToPandoraPark StationLevelName tundraexpress_p
+
+        set GD_LevelTravelStations.Zone2.CreatureSlaughterToPandoraPark PreviousStation GD_FastTravelStations.Zone1.TundraExpressSecret
+
+        set GD_FastTravelStations.Zone1.TundraExpressSecret StationDisplayName Natural Selection Annex
+
+    #</Farmhouse Fast Travel to NSA Ethel>
+
+    #<Spawn Near the boxes when exiting NSA FromDarkHell>
+
+        #<hotfix><key>"SparkLevelPatchEntry-MidgetFarm1"</key><value>"Pandorapark_P,PandoraPark_P.TheWorld:PersistentLevel.StationTeleporterExitPoint_20,Location,,(X=-33215.61719,Y=28489.53906,Z=-614.1502686)"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-MidgetFarm2"</key><value>"Pandorapark_P,PandoraPark_P.TheWorld:PersistentLevel.StationTeleporterExitPoint_21,Location,,(X=-33230.61719,Y=28489.53906,Z=-614.1502686)"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-MidgetFarm3"</key><value>"Pandorapark_P,PandoraPark_P.TheWorld:PersistentLevel.StationTeleporterExitPoint_23,Location,,(X=-33200.61719,Y=28489.53906,Z=-614.1502686)"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-MidgetFarm4"</key><value>"Pandorapark_P,PandoraPark_P.TheWorld:PersistentLevel.StationTeleporterExitPoint_22,Location,,(X=-33225.61719,Y=28489.53906,Z=-614.1502686)"</value><on>
+
+    #</Spawn Near the boxes when exiting NSA FromDarkHell>
+
+#</LootMidgetFastFarm>
+
+set Transient.SparkServiceConfiguration_6 Keys ("SparkLevelPatchEntry-MidgetFarm1","SparkLevelPatchEntry-MidgetFarm2","SparkLevelPatchEntry-MidgetFarm3","SparkLevelPatchEntry-MidgetFarm4")
+
+set Transient.SparkServiceConfiguration_6 Values ("Pandorapark_P,PandoraPark_P.TheWorld:PersistentLevel.StationTeleporterExitPoint_20,Location,,(X=-33215.61719,Y=28489.53906,Z=-614.1502686)","Pandorapark_P,PandoraPark_P.TheWorld:PersistentLevel.StationTeleporterExitPoint_21,Location,,(X=-33230.61719,Y=28489.53906,Z=-614.1502686)","Pandorapark_P,PandoraPark_P.TheWorld:PersistentLevel.StationTeleporterExitPoint_23,Location,,(X=-33200.61719,Y=28489.53906,Z=-614.1502686)","Pandorapark_P,PandoraPark_P.TheWorld:PersistentLevel.StationTeleporterExitPoint_22,Location,,(X=-33225.61719,Y=28489.53906,Z=-614.1502686)")
+
