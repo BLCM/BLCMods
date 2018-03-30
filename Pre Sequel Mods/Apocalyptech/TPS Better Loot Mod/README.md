@@ -110,6 +110,7 @@ Mod Overview
   * Badass loot drops have been improved
   * Chubby drop pool has been improved.  *(Though the only chubbies in the
     game are Stalkers, so it's sort of hardly worth it.)*
+  * Holodome Onslaught unique item drop probabilities have been improved.
   * Many enemies from the Claptastic Voyage DLC have a unique legendary drop
     associated with them, with a default drop rate of 0.1%.  This mod ups that
     probability to 1.5%.
@@ -126,6 +127,8 @@ Mod Overview
       glitch weapons, plus some extra moonstone and money.  The probabilities
       have been tweaked slightly so the loot shower will be likely to drop
       *fewer* weapons, though it'll still be a heck of a lot.
+    * In the Holodome Onslaught, Powersuit Felicity and Flameknuckle's drops
+      have been improved somewhat.
   * This mod technically nerfs a few enemy drops, which otherwise get a little
     too excessive even for me:
     * Hardcodes the drop probabilities for the unique loot dropped by Badass
@@ -256,9 +259,6 @@ TODO
 * Check Lootbug drops
 * Swagman drop pool - we're altering `GD_Itempools.Runnables.Pool_ScavWastelandWalker`
   but UCP alters `GD_Itempools.Runnables.Pool_ScavBadassSpacemanMidget`...
-* I've done most of the initial construction of this using my extracted TPS data
-  which didn't include Holodome Onslaught, so it's possible I'm missing some stuff
-  from there.  Check that out...
 
 Other Notes
 -----------

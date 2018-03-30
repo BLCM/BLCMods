@@ -733,8 +733,6 @@
 
                 set GD_Itempools.DropWeights.DropODDS_BossUniqueRares:ConstantAttributeValueResolver_0 ConstantValue 0.25 
 
-                set GD_Pet_ItemPools.DropWeights.DropODDS_Pet_BossUniques:ConstantAttributeValueResolver_0 ConstantValue 0.5 
-
             #</Guaranteed Boss Drops>
 
             #<Boss Drop Improved Quantities>
@@ -942,6 +940,18 @@
 
         #</Better Chubby Drops>
 
+        #<Holodome Onslaught Unique Drop Rates>
+
+            # Pretty much all the "custom" Holodome Onslaught enemies will drop from a
+            # custom pool containing all the items added in that DLC.  By default it's
+            # 6.6%.  We're buffing that a bit.  You won't see many of these during the
+            # first few rounds of the Onslaught, but in the final stages, stuff will
+            # be dropping quite frequently.
+
+            set GD_Pet_ItemPools.DropWeights.DropODDS_Pet_BossUniques:ConstantAttributeValueResolver_0 ConstantValue 0.1 
+
+        #</Holodome Onslaught Unique Drop Rates>
+
         #<Claptastic Voyage Legendary Drop Rates>
 
             # Some enemies from the Claptastic Voyage DLC have the chance to drop
@@ -957,14 +967,31 @@
             # Some enemies in the game don't drop as I think they should, so this buffs
             # some of them
 
-            #<FlameKnuckle (playthrough 1)>
+            #<Flameknuckle (playthrough 1)>
 
-                # Makes FlameKnuckle drop from the Badass pool on playthrough one
+                # Makes Flameknuckle drop from the Badass pool on playthrough one
                 # (ordinarily this only happens on Playthrough 2+).
 
                 #<hotfix><key>"SparkLevelPatchEntry-ApocFlameKnuckleBadass0"</key><value>"MoonShotIntro_P,GD_DahlPowersuit_Knuckle.Population.PawnBalance_DahlSergeantFlameKnuckle,PlayThroughs[0].CustomItemPoolIncludedLists,,(ItemPoolListDefinition'GD_Itempools.ListDefs.BadassEnemyGunsAndGear')"</value><on>
 
-            #</FlameKnuckle (playthrough 1)>
+            #</Flameknuckle (playthrough 1)>
+
+            #<Flameknuckle (Holodome Onslaught)>
+
+                # The stock Flameknuckle found in the Holodome Onslaught weirdly drops
+                # some specific white+green gear.  Upgrading that to purple+glitch.
+
+                #<hotfix><key>"SparkLevelPatchEntry-ApocFlameknuckleHolodomeDrop0"</key><value>"Eridian_Slaughter_P,GD_DahlPowersuit_KnuckleRepaired.Population.PawnBalance_DahlSergeantFlameKnuckle,DefaultItemPoolList[17].ItemPool,,ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_All_05_VeryRare'"</value><on>
+
+                #<hotfix><key>"SparkLevelPatchEntry-ApocFlameknuckleHolodomeDrop1"</key><value>"Eridian_Slaughter_P,GD_DahlPowersuit_KnuckleRepaired.Population.PawnBalance_DahlSergeantFlameKnuckle,DefaultItemPoolList[18].ItemPool,,ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_All_05_VeryRare'"</value><on>
+
+                #<hotfix><key>"SparkLevelPatchEntry-ApocFlameknuckleHolodomeDrop2"</key><value>"Eridian_Slaughter_P,GD_DahlPowersuit_KnuckleRepaired.Population.PawnBalance_DahlSergeantFlameKnuckle,DefaultItemPoolList[19].ItemPool,,ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_All_05_VeryRare'"</value><on>
+
+                #<hotfix><key>"SparkLevelPatchEntry-ApocFlameknuckleHolodomeDrop3"</key><value>"Eridian_Slaughter_P,GD_DahlPowersuit_KnuckleRepaired.Population.PawnBalance_DahlSergeantFlameKnuckle,DefaultItemPoolList[20].ItemPool,,ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_All_05_VeryRare'"</value><on>
+
+                #<hotfix><key>"SparkLevelPatchEntry-ApocFlameknuckleHolodomeDrop4"</key><value>"Eridian_Slaughter_P,GD_DahlPowersuit_KnuckleRepaired.Population.PawnBalance_DahlSergeantFlameKnuckle,DefaultItemPoolList[21].ItemPool,,ItemPoolDefinition'GD_Ma_ItemPools.WeaponPools.Pool_Weapons_All_Glitch_Marigold'"</value><on>
+
+            #</Flameknuckle (Holodome Onslaught)>
 
             #<Nel>
 
@@ -1072,6 +1099,14 @@
                 #<hotfix><key>"SparkLevelPatchEntry-ApocEosDrop14"</key><value>"Ma_FinalBoss_P,GD_Ma_Chapter05_Data.IO_Ma_LootShower:BehaviorProviderDefinition_1.Behavior_SpawnItems_161,ItemPoolList,,((ItemPool=ItemPoolDefinition'GD_Ma_ItemPools.Treasure_ChestPools.Pool_EpicChest_Weapons_GunsAndGear_Marigold',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.EnemyDropPools.Pool_GunsAndGear_05_VeryRare',PoolProbability=(BaseValueConstant=0.300000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.EnemyDropPools.Pool_GunsAndGear_04_Rare',PoolProbability=(BaseValueConstant=0.400000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Ma_ItemPools.WeaponPools.Pool_Weapons_All_Glitch_Marigold',PoolProbability=(BaseValueConstant=0.200000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))"</value><on>
 
             #</Improved EOS/SH4D0W-TP Loot Shower>
+
+            #<Powersuit Felicity (Holodome Onslaught)>
+
+                # Makes Powersuit Felicity drop from the Badass pool
+
+                #<hotfix><key>"SparkLevelPatchEntry-ApocFelicityHolodomeDrop0"</key><value>"Eridian_Slaughter_P,GD_DahlCombatSuit_Felicity.Population.PawnBalance_DahlCombatSuit_Felicity,DefaultItemPoolIncludedLists,,(ItemPoolListDefinition'GD_Itempools.ListDefs.BadassEnemyGunsAndGear')"</value><on>
+
+            #</Powersuit Felicity (Holodome Onslaught)>
 
         #</Better Individual Enemy Drops>
 

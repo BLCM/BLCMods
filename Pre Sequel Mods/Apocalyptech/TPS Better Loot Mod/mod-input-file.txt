@@ -4880,8 +4880,6 @@
 
                 set GD_Itempools.DropWeights.DropODDS_BossUniqueRares:ConstantAttributeValueResolver_0 ConstantValue {config:boss_drop_rares}
 
-                set GD_Pet_ItemPools.DropWeights.DropODDS_Pet_BossUniques:ConstantAttributeValueResolver_0 ConstantValue {config:boss_drop_uniques}
-
             #</Guaranteed Boss Drops>
 
             #<Boss Drop Improved Quantities>
@@ -6629,6 +6627,18 @@
 
         #</Better Chubby Drops>
 
+        #<Holodome Onslaught Unique Drop Rates>
+
+            # Pretty much all the "custom" Holodome Onslaught enemies will drop from a
+            # custom pool containing all the items added in that DLC.  By default it's
+            # 6.6%.  We're buffing that a bit.  You won't see many of these during the
+            # first few rounds of the Onslaught, but in the final stages, stuff will
+            # be dropping quite frequently.
+
+            set GD_Pet_ItemPools.DropWeights.DropODDS_Pet_BossUniques:ConstantAttributeValueResolver_0 ConstantValue {config:holodome_drop_uniques}
+
+        #</Holodome Onslaught Unique Drop Rates>
+
         #<Claptastic Voyage Legendary Drop Rates>
 
             # Some enemies from the Claptastic Voyage DLC have the chance to drop
@@ -6644,14 +6654,31 @@
             # Some enemies in the game don't drop as I think they should, so this buffs
             # some of them
 
-            #<FlameKnuckle (playthrough 1)>
+            #<Flameknuckle (playthrough 1)>
 
-                # Makes FlameKnuckle drop from the Badass pool on playthrough one
+                # Makes Flameknuckle drop from the Badass pool on playthrough one
                 # (ordinarily this only happens on Playthrough 2+).
 
                 {hotfixes:flameknuckle_badass}
 
-            #</FlameKnuckle (playthrough 1)>
+            #</Flameknuckle (playthrough 1)>
+
+            #<Flameknuckle (Holodome Onslaught)>
+
+                # The stock Flameknuckle found in the Holodome Onslaught weirdly drops
+                # some specific white+green gear.  Upgrading that to purple+glitch.
+
+                {hotfixes:flameknuckle_holodome_drop_17}
+
+                {hotfixes:flameknuckle_holodome_drop_18}
+
+                {hotfixes:flameknuckle_holodome_drop_19}
+
+                {hotfixes:flameknuckle_holodome_drop_20}
+
+                {hotfixes:flameknuckle_holodome_drop_21}
+
+            #</Flameknuckle (Holodome Onslaught)>
 
             #<Nel>
 
@@ -6829,6 +6856,14 @@
                 {hotfixes:eos_drop_161}
 
             #</Improved EOS/SH4D0W-TP Loot Shower>
+
+            #<Powersuit Felicity (Holodome Onslaught)>
+
+                # Makes Powersuit Felicity drop from the Badass pool
+
+                {hotfixes:felicity_holodome_drop}
+
+            #</Powersuit Felicity (Holodome Onslaught)>
 
         #</Better Individual Enemy Drops>
 
