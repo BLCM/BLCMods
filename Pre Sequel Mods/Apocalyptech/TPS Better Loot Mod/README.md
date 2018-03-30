@@ -101,7 +101,7 @@ Mod Overview
     * The laser gun chest in the mission Picking Up The Pieces has been buffed to
       contain blue-rarity lasers instead of white.
 * Boss drop pools are generally improved, and bosses are guaranteed to drop as
-  many items from their unique drop pool as are in that pool. *(needs testing)*
+  many items from their unique drop pool as are in that pool.
   * Bosses with just a single unique drop will therefore be guaranteed to drop
     that item.
   * If a boss has more than one in their drop pool, you may get duplicates
@@ -254,11 +254,9 @@ Other Recommended Mods
 TODO
 ----
 
+* I haven't done any testing in TVHM/UVHM, or in anything but singleplayer mode.
 * Maybe decrease Moonstone chest cost in exchange for not doing guaranteed
-  legendaries on it?  Mull it over.
-* Check Lootbug drops
-* Swagman drop pool - we're altering `GD_Itempools.Runnables.Pool_ScavWastelandWalker`
-  but UCP alters `GD_Itempools.Runnables.Pool_ScavBadassSpacemanMidget`...
+  legendaries on it?
 
 Other Notes
 -----------
@@ -267,7 +265,9 @@ As with the BL2 Better Loot mod, enemy drops can get rather excessive if you're 
 area which generates a lot of badasses, and The Pre-Sequel is already fairly generous
 with loot.  The first fight against SH4D0W-TP in The Cortex can end up generating
 nearly 30 good items (including the two glitched epic chests post-battle), which may
-be a bit much to sort through.  In the interests of keeping loot interesting near the
+be a bit much to sort through.  Likewise, the later Holodome Onslaught levels are
+just lousy with Badass-level enemies, and you'll end up with more loot than you'll
+know what to do with.  In the interests of keeping loot interesting near the
 beginning of the game, when that kind of excess is less common, I'm keeping the drops
 the way they are for now, though I could probably be talked into nerfing things a
 bit...
@@ -320,5 +320,5 @@ for the full text.
 Changelog
 =========
 
-**v1.0.0**, (tbd):
+**v1.0.0**, March 30, 2018:
  * Initial public release

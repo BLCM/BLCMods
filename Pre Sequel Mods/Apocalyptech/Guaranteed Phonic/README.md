@@ -21,5 +21,5 @@ This mod is licensed under
 Changelog
 =========
 
-**v1.0.0**, (tbd):
+**v1.0.0**, March 30, 2018:
  * Initial public release
