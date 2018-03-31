@@ -19,7 +19,7 @@ Shadowevil: The Unofficial Community Patch and his mods
 LightChaosman: The Filter Tool and his mods
 Dave: For his resources and his help
 For all of their mods: Aaron0000, adudney, AngrierPat, B33PB00PJOE, Battle Bee, Coleby, EmpireScum, Exotek, FromDarkHell, GoldenGizzmo, Hemaxhu, Hydrattler, IK4MS, JimRaven, Kazy (Sheep), Natsu235, Orudeon, soze (Mike), splitzle, the_Nocturni and Zububu
-Special credit to ThaCampin'Dutchman for the original ideas of Aaron0000' "The Campin' Dutchpack" modpack.
+Special credit to Tha Campin' Dutchman for the original ideas of Aaron0000' "The Campin' Dutchpack" modpack.
 
 -----------------------------------------------------------------------------------------------------------
 
