@@ -1,0 +1,22 @@
+#<Razor Sharp [Luneshine]>
+
+by Kazy
+
+A simple code. Simply replaces the Oxygenator with a Melee-oriented Luneshine Effect called Razor Sharp. Boosts Melee by 50%.
+
+If you have a Melee attachement as well as Razor Sharp, Melee becomes 125%. Dunno how that makes any sense tbh but it happened and it seems to work.
+
+#<Code>
+
+set GD_Weap_Accessories.Moonstone.Moonstone_Attachment_Oxygenator ExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.DamageSourceModifiers.InstigatedMeleeDamageModifier',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+set GD_Weap_Accessories.Moonstone.Moonstone_Attachment_Oxygenator BehaviorProviderDefinition () 
+
+set GD_Weap_Accessories.Moonstone.Moonstone_Attachment_Oxygenator WeaponCardAttributes ((Attribute=AttributeDefinition'D_Attributes.DamageSourceModifiers.InstigatedMeleeDamageModifier',PriorityIncrease=0.500000))
+
+set GD_Weap_Accessories.Moonstone.Moonstone_Attachment_Oxygenator:AttributePresentationDefinition_0 Description Luneshine: Scales Melee by [skill]50%[-skill].
+
+#</Code>
+
+#</Razor Sharp [Luneshine]>
+
