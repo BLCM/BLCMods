@@ -155,6 +155,7 @@ control = {
     }
 
 transform_count = 0
+level_transforms = {}
 for game, levelnames in control.items():
     print('#<More Loot Midget Containers>')
     print('')
@@ -183,7 +184,8 @@ for game, levelnames in control.items():
         for package in level_packages:
             package_obj = data.get_node_by_full_object(package)
             for childname, child in package_obj.children.items():
-                if childname[:33].lower() == 'willowpopulationopportunitypoint_':
+                if (childname[:33].lower() == 'willowpopulationopportunitypoint_' or
+                        childname[:27].lower() == 'populationopportunitypoint_'):
                     childstruct = child.get_structure()
                     if childstruct != {}:
                         if childstruct['PopulationDef'] != 'None':
@@ -194,6 +196,10 @@ for game, levelnames in control.items():
                                     print('    #<{}>'.format(english))
                                     print('')
                                     got_hit = True
+                                if english not in level_transforms:
+                                    level_transforms[english] = 1
+                                else:
+                                    level_transforms[english] += 1
                                 print('        #<hotfix><key>"SparkLevelPatchEntry-ApocMaxLootMidgets{num}"</key><value>"{level},{objectname},PopulationDef,,PopulationDefinition\'{popdef}\'"</value><on>'.format(
                                     num=transform_count,
                                     level=levelname,
@@ -207,3 +213,8 @@ for game, levelnames in control.items():
             print('')
 
     print('#</More Loot Midget Containers>')
+
+# A bit of reporting at the end
+print('')
+for english, count in sorted(level_transforms.items()):
+    print('{}: {}'.format(english, count))

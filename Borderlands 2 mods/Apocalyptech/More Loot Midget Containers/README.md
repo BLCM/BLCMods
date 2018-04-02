@@ -3,9 +3,7 @@ More Loot Midget Containers
 
 This mod converts various maps so that that levels which contain
 loot-midget-spawning containers will always use the loot-midget-spawning
-versions if possible.  For some maps this is already the case (for instance,
-Thousand Cuts already already uses as many loot-midget-spawning containers
-as it can), but others could be improved.
+versions if possible.
 
 Note that not *every* container is loot-midgetable.  For instance, in
 Opportunity, the only loot-midget-spawning container is the shorter ammo
@@ -13,11 +11,16 @@ containers.
 
 Number of containers changed on each map:
 
-* **Arid Nexus - Badlands**: 20
+* **Arid Nexus - Badlands**: 53
+* **Arid Nexus - Boneyard**: 52
+* **The Dust**: 5
+* **Frostburn Canyon**: 50
 * **Hero's Pass**: 1
 * **Opportunity**: 45
 * **Sawtooth Cauldron**: 144
-* **Tundra Express**: 55
+* **Thousand Cuts**: 66
+* **Tundra Express**: 74
+* **Wildlife Exploitation Preserve**: 105
 
 Usage
 =====
@@ -44,6 +47,9 @@ This mod itself is licensed under
 
 Changelog
 =========
+
+**v1.0.1**, April 2, 2018:
+ * Added in a bunch more containers which my generation code missed.  D'oh.
 
 **v1.0.0**, April 2, 2018:
  * Initial public release
