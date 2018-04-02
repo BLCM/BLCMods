@@ -38,6 +38,14 @@ Gives all Varkids a 100% chance of evolution, regardless of player count or
 playthrough.  Mostly just useful if you want to farm Vermivorous without
 having to gamble on its spawn chances.
 
+More Loot Midget Containers
+---------------------------
+
+Alters a few levels (specifically: Arid Nexus Badlands, Hero's Pass, Opportunity,
+Sawtooth Cauldron, and Tundra Express) so that as many containers as possible
+can spawn loot midgets.  This doesn't meant that *all* containers can spawn
+midgets, but there'll be more than there were.
+
 Utilities
 =========
 
