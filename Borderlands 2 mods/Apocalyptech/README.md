@@ -24,6 +24,14 @@ the uninteresting and drab loot that typically gets dropped in-game, and who
 often end up just resorting to Gibbed to be able to play around with some
 better gear.  The README in the mod dir itself should provide a lot more info.
 
+BL2 Movement Speed Cheats
+-------------------------
+
+This mod increases movement speed of all BL2 characters (including while
+crouched, and while in FFYL).  It also increases the jump height a bit, and
+increases air control by quite a lot.  If you're looking to zip through
+some levels like there's no tomorrow, this is for you.
+
 Guaranteed Omnd-Omnd-Ohk
 ------------------------
 
