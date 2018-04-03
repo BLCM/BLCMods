@@ -320,5 +320,10 @@ for the full text.
 Changelog
 =========
 
+**v1.0.1**, April 3, 2018:
+ * Tweak to how we set up the legendary Class Mod pools, for compatibilty with my
+   TPS No Wasted COMs mod (specifically to use the same method used in the BL2
+   Better Loot Mod).  No actual effect on how the mod behaves.
+
 **v1.0.0**, March 30, 2018 (commit `616fd5f420637a7ef28107ca440377d83c435025`):
  * Initial public release
