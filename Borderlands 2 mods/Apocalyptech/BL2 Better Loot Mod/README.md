@@ -403,7 +403,7 @@ for the full text.
 Changelog
 =========
 
-**v1.2.0**, March 16, 2018 (commit `f5cb4c8cb8db8ad86ce24c69e2bdf2f0af98448e`):
+**v1.2.0**, (March 16, 2018):
  * Fixed an issue where *Plan B* and *Bright Lights, Flying City* wouldn't reward
    Weapon Slot SDUs on Playthrough 1.
  * Buffed "weighted" pools used by some enemies for drops, to be in line with the rest

@@ -1,6 +1,6 @@
 If you want to experience Borderlands 2 in a new way, this modpack is exactly for you.
 
-As of version 2.0, there are 150+ mods in BL2Reborn. You can find a list of all mods and their descriptions in the attached "Mod List.txt".
+As of version 2.0.2, there are 150+ mods in BL2Reborn. You can find a list of all mods and their descriptions in the attached "Mod List.txt".
 
 Download the modpack by rightclicking the "Download" button in "BL2Reborn.txt" and "Save link as...".
 
@@ -18,10 +18,8 @@ Modpack built by Koby, all credit goes to the mod authors.
 Shadowevil: The Unofficial Community Patch and his mods
 LightChaosman: The Filter Tool and his mods
 Dave: For his resources and his help
-Zububu: For being a turtle and his mods
-Aaron0000, adudney, AngrierPat, B33PB00PJOE, Battle Bee, Coleby, EmpireScum, Exotek, FromDarkHell, GoldenGizzmo, Hemaxhu, Hydrattler, IK4MS, JimRaven, Kazy (Sheep), Natsu235, Orudeon, soze (Mike), splitzle and theNocturni: 
-For all of their mods
-Extra credit to TheCampin'Dutchman for his original ideas of Aaron0000' Campin'Dutchpack
+For all of their mods: Aaron0000, adudney, AngrierPat, B33PB00PJOE, Battle Bee, Coleby, EmpireScum, Exotek, FromDarkHell, GoldenGizzmo, Hemaxhu, Hydrattler, IK4MS, JimRaven, Kazy (Sheep), Natsu235, Orudeon, soze (Mike), splitzle, the_Nocturni and Zububu
+Special credit to Tha Campin' Dutchman for the original ideas of Aaron0000' "The Campin' Dutchpack" modpack.
 
 -----------------------------------------------------------------------------------------------------------
 
