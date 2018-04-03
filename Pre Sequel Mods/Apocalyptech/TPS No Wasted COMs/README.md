@@ -23,6 +23,13 @@ Usage
 This mod must be run by adding it into FilterTool with `Developer tools` ->
 `Add single mod`.  Choose the file `TPS No Wasted COMs` and have at it!
 
+Compatibility
+=============
+
+If by chance you're using this mod in conjunction with my TPS Better Loot
+Mod, be sure to use at least v1.0.1 of Better Loot, otherwise legendary
+COMs won't be limited properly.
+
 Mod Construction / Implementation Details
 =========================================
 
