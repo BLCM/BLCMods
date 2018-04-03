@@ -24,6 +24,22 @@ the uninteresting and drab loot that typically gets dropped in-game, and who
 often end up just resorting to Gibbed to be able to play around with some
 better gear.  The README in the mod dir itself should provide a lot more info.
 
+BL2 Movement Speed Cheats
+-------------------------
+
+This mod increases movement speed of all BL2 characters (including while
+crouched, and while in FFYL).  It also increases the jump height a bit, and
+increases air control by quite a lot.  If you're looking to zip through
+some levels like there's no tomorrow, this is for you.
+
+BL2 No Wasted COMs
+------------------
+
+This mod changes the Class Mod drop pools such that the only COMs which drop
+are for characters who are actually playing the game.  For a singleplayer
+game, that means you'll only ever get COMs for your one character, for
+instance.
+
 Guaranteed Omnd-Omnd-Ohk
 ------------------------
 
@@ -37,6 +53,14 @@ Guaranteed Varkid Evolution
 Gives all Varkids a 100% chance of evolution, regardless of player count or
 playthrough.  Mostly just useful if you want to farm Vermivorous without
 having to gamble on its spawn chances.
+
+More Loot Midget Containers
+---------------------------
+
+Alters a few levels (specifically: Arid Nexus Badlands, Hero's Pass, Opportunity,
+Sawtooth Cauldron, and Tundra Express) so that as many containers as possible
+can spawn loot midgets.  This doesn't meant that *all* containers can spawn
+midgets, but there'll be more than there were.
 
 Utilities
 =========
