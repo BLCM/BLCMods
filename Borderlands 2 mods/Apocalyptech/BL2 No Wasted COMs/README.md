@@ -1,5 +1,5 @@
-No Wasted COMs
-==============
+BL2 No Wasted COMs
+==================
 
 This mod changes the Class Mod drop pools such that the only COMs which drop
 are for characters who are actually playing the game.  For a singleplayer
@@ -21,7 +21,7 @@ Usage
 =====
 
 This mod must be run by adding it into FilterTool with `Developer tools` ->
-`Add single mod`.  Choose the file `No Wasted COMs` and have at it!
+`Add single mod`.  Choose the file `BL2 No Wasted COMs` and have at it!
 
 Mod Construction / Implementation Details
 =========================================

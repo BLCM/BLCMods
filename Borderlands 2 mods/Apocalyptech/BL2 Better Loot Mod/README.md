@@ -306,7 +306,7 @@ well-covered in other mods, so instead I'll just mention them here.
 * JimRaven's "#MakeVendorsGreatAgain2017" improves vendor stocks across the game.
 * Hemaxhu's "Better Quests" will improve quest rewards for the missions which
   don't already have good rewards.
-* My own "No Wasted COMs" mod will make it so you only ever see mods for characters
+* My own "BL2 No Wasted COMs" mod will make it so you only ever see mods for characters
   actually playing the game.
 
 TODO
