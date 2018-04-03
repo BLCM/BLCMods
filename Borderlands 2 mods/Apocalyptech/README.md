@@ -54,6 +54,14 @@ Sawtooth Cauldron, and Tundra Express) so that as many containers as possible
 can spawn loot midgets.  This doesn't meant that *all* containers can spawn
 midgets, but there'll be more than there were.
 
+No Wasted COMs
+--------------
+
+This mod changes the Class Mod drop pools such that the only COMs which drop
+are for characters who are actually playing the game.  For a singleplayer
+game, that means you'll only ever get COMs for your one character, for
+instance.
+
 Utilities
 =========
 
