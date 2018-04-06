@@ -15,8 +15,8 @@
 	Only one ammo consumed per shot instead of two.
 
 	Spawns in all elements instead of just fire (but not non-elemental).
-	
-	Note; Uses the firing modes of Dahl Blasters and the Emperor to achieve the effects (but alters those guns to use the default blaster/smg firing modes). Beware if using mods that affect those weapons.
+
+        Note; Uses the firing modes of the Emperor to achieve the effects (but alters it to use the defaultsmg firing mode). Beware if using mods that affect that firing mode.
 
     #</Description>
 
@@ -46,33 +46,11 @@
 
             set GD_Weap_AssaultRifle.Barrel.AR_Barrel_Jakobs_Scorpio CustomFiringModeDefinition FiringModeDefinition'GD_Weap_AssaultRifle.FiringModes.Bullet_Blaster_Dahl'
 
-            set GD_Weap_AssaultRifle.FiringModes.Bullet_Blaster_Dahl PartSysTemplate ParticleSystem'FX_WEP_Trails.Particles.Alien.Part_Wep_Tracer_Alien_AR'
-
-            set GD_Weap_AssaultRifle.FiringModes.Bullet_Blaster_Dahl ConditionalPartSysTemplate EffectCollectionDefinition'GD_Weap_AssaultRifle.Effects.AR_ETech_Tracers'
-
-            set GD_Weap_AssaultRifle.FiringModes.Bullet_Blaster_Dahl Lifetime 0.200000
-
-            set GD_Weap_AssaultRifle.FiringModes.Bullet_Blaster_Dahl TraceInterval 0.200000
-
-            set GD_Weap_AssaultRifle.FiringModes.Bullet_Blaster_Dahl bSuppressImpactEffects False
-
-            set GD_Weap_AssaultRifle.FiringModes.Bullet_Blaster_Dahl bPenetratePawn False
-
-            set GD_Weap_AssaultRifle.FiringModes.Bullet_Blaster_Dahl NumRicochets 1
-
-            set GD_Weap_AssaultRifle.FiringModes.Bullet_Blaster_Dahl Speed 20000.000000
-
-            set GD_Weap_AssaultRifle.FiringModes.Bullet_Blaster_Dahl RicochetResponse (SplitNum=9,SplitAngle=10.000000,SplitAngleOffset=0.000000,SplitDistance=0.000000,SplitFire=FiringModeDefinition'GD_Weap_SMG.FiringModes.Bullet_SMG_Emperor',NewSpeed=0.000000,bDetonate=True,bRespawnTracer=True,bUpdateBeamSourceLocation=True,Behaviors=)
-
-            set GD_Weap_AssaultRifle.FiringModes.Bullet_Blaster_Dahl SoundDefinition FiringModeSoundDefinition'GD_Weap_AssaultRifle.FiringModes.BlasterSoundDefinition'
-
-            set GD_Weap_AssaultRifle.FiringModes.Bullet_Blaster_Dahl FiringPatternLines ()
-
-            set GD_Weap_SMG.FiringModes.Bullet_SMG_Emperor ParticleSystem'FX_WEP_Trails.Particles.Alien.Part_Wep_Tracer_Alien_AR'
+            set GD_Weap_SMG.FiringModes.Bullet_SMG_Emperor PartSysTemplate ParticleSystem'FX_WEP_Trails.Particles.Alien.Part_Wep_Tracer_Alien_AR'
 
             set GD_Weap_SMG.FiringModes.Bullet_SMG_Emperor ConditionalPartSysTemplate EffectCollectionDefinition'GD_Weap_AssaultRifle.Effects.AR_ETech_Tracers'
 
-            set GD_Weap_SMG.FiringModes.Bullet_SMG_Emperor Lifetime 0.500000
+            set GD_Weap_SMG.FiringModes.Bullet_SMG_Emperor Lifetime 0.200000
 
             set GD_Weap_SMG.FiringModes.Bullet_SMG_Emperor TraceInterval 0.200000
 
@@ -82,7 +60,9 @@
 
             set GD_Weap_SMG.FiringModes.Bullet_SMG_Emperor NumRicochets 1
 
-            set GD_Weap_SMG.FiringModes.Bullet_SMG_Emperor Speed 10000.000000
+            set GD_Weap_SMG.FiringModes.Bullet_SMG_Emperor Speed 16000.000000
+
+            set GD_Weap_SMG.FiringModes.Bullet_SMG_Emperor RicochetResponse (SplitNum=9,SplitAngle=10.000000,SplitAngleOffset=0.000000,SplitDistance=0.000000,SplitFire=FiringModeDefinition'GD_Weap_AssaultRifle.FiringModes.Bullet_Blaster_Default',NewSpeed=0.00000,bDetonate=True,bRespawnTracer=True,bUpdateBeamSourceLocation=True,Behaviors=)
 
             set GD_Weap_SMG.FiringModes.Bullet_SMG_Emperor SoundDefinition FiringModeSoundDefinition'GD_Weap_AssaultRifle.FiringModes.BlasterSoundDefinition'
 
@@ -90,7 +70,7 @@
 
 	    set GD_Weap_AssaultRifle.A_Weapons_Unique.AR_Dahl_3_Scorpio:WeaponPartListCollectionDefinition_41 ElementalPartData (bEnabled=True,WeightedParts=((Part=WeaponPartDefinition'GD_Weap_AssaultRifle.elemental.AR_Elemental_None',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=0,DefaultWeightIndex=0),(Part=WeaponPartDefinition'GD_Weap_AssaultRifle.elemental.AR_Elemental_Fire',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=4,MaxGameStageIndex=1,DefaultWeightIndex=3),(Part=WeaponPartDefinition'GD_Weap_AssaultRifle.elemental.AR_Elemental_Corrosive',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=5,MaxGameStageIndex=1,DefaultWeightIndex=3),(Part=WeaponPartDefinition'GD_Weap_AssaultRifle.elemental.AR_Elemental_Shock',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=6,MaxGameStageIndex=1,DefaultWeightIndex=3),(Part=WeaponPartDefinition'GD_Weap_AssaultRifle.elemental.AR_Elemental_Slag',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=7,MaxGameStageIndex=1,DefaultWeightIndex=3)))
 
-            set GD_Weap_AssaultRifle.Barrel.AR_Barrel_Jakobs_Scorpio WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.750000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponPerShotAccuracyImpulse',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.800000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponStatusEffectChanceModifier',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.200000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.800000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+            set GD_Weap_AssaultRifle.Barrel.AR_Barrel_Jakobs_Scorpio WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.750000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponPerShotAccuracyImpulse',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.800000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponStatusEffectChanceModifier',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.200000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.800000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponAdditionalRicochets',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectileSpeedMultiplier',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.250000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
 
             set GD_Weap_AssaultRifle.Barrel.AR_Barrel_Jakobs_Scorpio ExternalAttributeEffects ((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AccuracyResourcePool.AccuracyOnIdleRegenerationRate',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Hyperion',InitializationDefinition=None,BaseValueScaleConstant=8.000000)),(AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AccuracyResourcePool.AccuracyOnIdleRegenerationRate',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Hyperion_Old',InitializationDefinition=None,BaseValueScaleConstant=8.000000)),(AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AccuracyResourcePool.AccuracyMinValue',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AccuracyResourcePool.AccuracyMaxValue',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
 
