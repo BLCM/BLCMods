@@ -1,3 +1,12 @@
+Update 20/11/2017
+Community Patch 2.0 is finally out. 
+
+I revamped the way the files are Organized and removed some obsolete options
+It ll be a while till 3.0 is out if ever but do expect 2.1 or 2.2 at some point
+
+
+
+Update 29/9/2017
 Hello Folks Jim Raven here for a quick update time.
 
 For starters i am indeed working on Version 2.0. i Am kinda alone in that proccess tho so it takes longer than expected.

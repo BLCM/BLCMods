@@ -8,7 +8,7 @@
 
         NOTE;
 
-        Movement speed won't appear on the UI of the relic unless you have the Community Patch activated.
+        If you have the version of the Opportunity relic that buffs shop timer instead of movement speed from the Unofficial Community Patch, the movement speed would not appear correctly on the relic. So there's an option to enable those UI bits without implementing the movement speed buffs of the alternate Opportunity relic (Enabled by default. It'll still make shop timers go faster, but you won't be able to see it as a stat on the relic.)
 
         #<Credits>
 
@@ -18,9 +18,19 @@
 
         #</Credits>
 
-    #<Description>
+    #</Description>
 
     #<Code>
+
+        #<Movement Speed UI Fix>
+
+            set GD_AttributePresentation.Artifacts.AttrPresent_ArtifactShopTimerRate Attribute D_Attributes.GameplayAttributes.FootSpeed
+
+            set GD_AttributePresentation.Artifacts.AttrPresent_ArtifactShopTimerRate Description Movement Speed
+
+            set GD_Artifacts.Body.Body_Opportunity:AttributePresentationDefinition_0 Description Increases [skill]Movement Speed[-skill].
+
+        #</Movement Speed UI Fix>
 
         set D_Attributes.SkillAttributes.RevivalHealthMultiplier:ObjectpropertyAttributeValueResolver_20 PropertyName JumpZ
 
@@ -79,15 +89,4 @@
     #</Code>
 
 #</Agility Relics>
-
-
-
-
-
-
-
-
-
-
-
 

@@ -1,0 +1,63 @@
+#<Twiser>
+
+  #<Info>
+  #by Laxlife
+  #Gib Code: BLOZ(igAAAAB4dQAATIA9EGM0PoAhgAUBJgGWA6wOWCaw/v9HgImEJQLm)
+  #Replaces the Moonface , and turns it into one of the coolest shotties in BL2 -- The Twister
+  #Very powerful on Athena ;)
+
+  #</Info>
+
+  #<Card>
+
+      set GD_Cork_Weap_Shotgun.Name.Title.Title__Unique_Moonface PartName Twister
+      set GD_Cork_Weap_Shotgun.Name.Title.Title__Unique_Moonface:AttributePresentationDefinition_8 NoConstraintText Putting trouble on the run.
+
+  #</Card>
+
+  #<Attributes>
+
+    set GD_Cork_Weap_Shotgun.Barrel.SG_Barrel_Torgue_Moonface WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.400000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-6.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=3.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=10.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+    set GD_Cork_Weap_Shotgun.Barrel.SG_Barrel_Torgue_Moonface AttributeSlotUpgrades ((SlotName="WeaponDamage",GradeIncrease=6,bActivateSlot=True),(SlotName="WeaponFireRate",GradeIncrease=-12,bActivateSlot=True))
+
+    set GD_Cork_Weap_Shotgun.A_Weapons_Unique.SG_Jakobs_3_Moonface:WeaponPartListCollectionDefinition_128 ElementalPartData (bEnabled=True,WeightedParts=((bDisabled=False,Part=None,Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=999999999999),(bDisabled=False,Part=WeaponPartDefinition'GD_Weap_Shotgun.elemental.Shotgun_Elemental_Shock',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0)))
+
+  #</Attributes>
+
+  #<FiringModes>
+
+      #<Main Bullet>
+
+          #set GD_Cork_Weap_Shotgun.FiringModes.Bullet_Shotgun_Moonface
+          set GD_Cork_Weap_Shotgun.FiringModes.Bullet_Shotgun_Moonface ExplosionOverrideDefinition None
+          set GD_Cork_Weap_Shotgun.FiringModes.Bullet_Shotgun_Moonface ExplosionOverideInstanceDataName None
+          set GD_Cork_Weap_Shotgun.FiringModes.Bullet_Shotgun_Moonface PartSysTemplate ParticleSystem'GD_Petunia_Weapons.Effects.Part_Tracer_CryBaby_Default'
+          set GD_Cork_Weap_Shotgun.FiringModes.Bullet_Shotgun_Moonface ConditionalPartSysTemplate None
+          set GD_Cork_Weap_Shotgun.FiringModes.Bullet_Shotgun_Moonface bSuppressImpactEffects True
+          set GD_Cork_Weap_Shotgun.FiringModes.Bullet_Shotgun_Moonface bPenetratePawn True
+          set GD_Cork_Weap_Shotgun.FiringModes.Bullet_Shotgun_Moonface bFireRandomlyFromPattern True
+          set GD_Cork_Weap_Shotgun.FiringModes.Bullet_Shotgun_Moonface bSuppressWeaponSpread False
+          set GD_Cork_Weap_Shotgun.FiringModes.Bullet_Shotgun_Moonface Speed 500
+          set GD_Cork_Weap_Shotgun.FiringModes.Bullet_Shotgun_Moonface AirFriction -.100000
+          set GD_Cork_Weap_Shotgun.FiringModes.Bullet_Shotgun_Moonface FiringPatternLines ((StartPoint=(Pitch=728,Yaw=0,Roll=0),EndPoint=(Pitch=0,Yaw=0,Roll=0),bUseStartPointOnly=True,CustomWaveMotion=(bUseCustomWaveMotion=True,WaveFreq=(X=3000.000000,Y=3000.000000,Z=0.000000),WaveAmp=(X=160.000000,Y=160.000000,Z=0.000000),WavePhase=(X=90.000000,Y=0.000000,Z=0.000000))),(StartPoint=(Pitch=546,Yaw=0,Roll=0),EndPoint=(Pitch=0,Yaw=0,Roll=0),bUseStartPointOnly=True,CustomWaveMotion=(bUseCustomWaveMotion=True,WaveFreq=(X=2900.000000,Y=2900.000000,Z=0.000000),WaveAmp=(X=110.000000,Y=110.000000,Z=0.000000),WavePhase=(X=90.000000,Y=0.000000,Z=0.000000))),(StartPoint=(Pitch=182,Yaw=0,Roll=0),EndPoint=(Pitch=0,Yaw=0,Roll=0),bUseStartPointOnly=True,CustomWaveMotion=(bUseCustomWaveMotion=True,WaveFreq=(X=2800.000000,Y=2800.000000,Z=0.000000),WaveAmp=(X=70.000000,Y=70.000000,Z=0.000000),WavePhase=(X=90.000000,Y=0.000000,Z=0.000000))),(StartPoint=(Pitch=0,Yaw=0,Roll=0),EndPoint=(Pitch=0,Yaw=0,Roll=0),bUseStartPointOnly=True,CustomWaveMotion=(bUseCustomWaveMotion=True,WaveFreq=(X=2700.000000,Y=2700.000000,Z=0.000000),WaveAmp=(X=50.000000,Y=50.000000,Z=0.000000),WavePhase=(X=90.000000,Y=0.000000,Z=0.000000))),(StartPoint=(Pitch=-182,Yaw=0,Roll=0),EndPoint=(Pitch=0,Yaw=0,Roll=0),bUseStartPointOnly=True,CustomWaveMotion=(bUseCustomWaveMotion=True,WaveFreq=(X=2600.000000,Y=2600.000000,Z=0.000000),WaveAmp=(X=40.000000,Y=40.000000,Z=0.000000),WavePhase=(X=90.000000,Y=0.000000,Z=0.000000))),(StartPoint=(Pitch=-364,Yaw=0,Roll=0),EndPoint=(Pitch=0,Yaw=0,Roll=0),bUseStartPointOnly=True,CustomWaveMotion=(bUseCustomWaveMotion=True,WaveFreq=(X=2500.000000,Y=2500.000000,Z=0.000000),WaveAmp=(X=30.000000,Y=30.000000,Z=0.000000),WavePhase=(X=90.000000,Y=0.000000,Z=0.000000))),(StartPoint=(Pitch=-728,Yaw=0,Roll=0),EndPoint=(Pitch=0,Yaw=0,Roll=0),bUseStartPointOnly=True,CustomWaveMotion=(bUseCustomWaveMotion=True,WaveFreq=(X=2400.000000,Y=2400.000000,Z=0.000000),WaveAmp=(X=20.000000,Y=20.000000,Z=0.000000),WavePhase=(X=90.000000,Y=0.000000,Z=0.000000))),(StartPoint=(Pitch=728,Yaw=0,Roll=0),EndPoint=(Pitch=0,Yaw=0,Roll=0),bUseStartPointOnly=True,CustomWaveMotion=(bUseCustomWaveMotion=True,WaveFreq=(X=2000.000000,Y=2000.000000,Z=0.000000),WaveAmp=(X=160.000000,Y=160.000000,Z=0.000000),WavePhase=(X=270.000000,Y=180.000000,Z=0.000000))),(StartPoint=(Pitch=546,Yaw=0,Roll=0),EndPoint=(Pitch=0,Yaw=0,Roll=0),bUseStartPointOnly=True,CustomWaveMotion=(bUseCustomWaveMotion=True,WaveFreq=(X=1900.000000,Y=1900.000000,Z=0.000000),WaveAmp=(X=110.000000,Y=110.000000,Z=0.000000),WavePhase=(X=270.000000,Y=180.000000,Z=0.000000))),(StartPoint=(Pitch=182,Yaw=0,Roll=0),EndPoint=(Pitch=0,Yaw=0,Roll=0),bUseStartPointOnly=True,CustomWaveMotion=(bUseCustomWaveMotion=True,WaveFreq=(X=1800.000000,Y=1800.000000,Z=0.000000),WaveAmp=(X=70.000000,Y=70.000000,Z=0.000000),WavePhase=(X=270.000000,Y=180.000000,Z=0.000000))),(StartPoint=(Pitch=0,Yaw=0,Roll=0),EndPoint=(Pitch=0,Yaw=0,Roll=0),bUseStartPointOnly=True,CustomWaveMotion=(bUseCustomWaveMotion=True,WaveFreq=(X=1700.000000,Y=1700.000000,Z=0.000000),WaveAmp=(X=50.000000,Y=50.000000,Z=0.000000),WavePhase=(X=270.000000,Y=180.000000,Z=0.000000))),(StartPoint=(Pitch=-182,Yaw=0,Roll=0),EndPoint=(Pitch=0,Yaw=0,Roll=0),bUseStartPointOnly=True,CustomWaveMotion=(bUseCustomWaveMotion=True,WaveFreq=(X=1600.000000,Y=1600.000000,Z=0.000000),WaveAmp=(X=40.000000,Y=40.000000,Z=0.000000),WavePhase=(X=270.000000,Y=180.000000,Z=0.000000))),(StartPoint=(Pitch=-728,Yaw=0,Roll=0),EndPoint=(Pitch=0,Yaw=0,Roll=0),bUseStartPointOnly=True,CustomWaveMotion=(bUseCustomWaveMotion=True,WaveFreq=(X=1500.000000,Y=1500.000000,Z=0.000000),WaveAmp=(X=30.000000,Y=30.000000,Z=0.000000),WavePhase=(X=270.000000,Y=180.000000,Z=0.000000))),(StartPoint=(Pitch=728,Yaw=0,Roll=0),EndPoint=(Pitch=0,Yaw=0,Roll=0),bUseStartPointOnly=True,CustomWaveMotion=(bUseCustomWaveMotion=True,WaveFreq=(X=2600.000000,Y=2600.000000,Z=0.000000),WaveAmp=(X=160.000000,Y=160.000000,Z=0.000000),WavePhase=(X=180.000000,Y=90.000000,Z=0.000000))),(StartPoint=(Pitch=546,Yaw=0,Roll=0),EndPoint=(Pitch=0,Yaw=0,Roll=0),bUseStartPointOnly=True,CustomWaveMotion=(bUseCustomWaveMotion=True,WaveFreq=(X=2500.000000,Y=2500.000000,Z=0.000000),WaveAmp=(X=110.000000,Y=110.000000,Z=0.000000),WavePhase=(X=180.000000,Y=90.000000,Z=0.000000))),(StartPoint=(Pitch=182,Yaw=0,Roll=0),EndPoint=(Pitch=0,Yaw=0,Roll=0),bUseStartPointOnly=True,CustomWaveMotion=(bUseCustomWaveMotion=True,WaveFreq=(X=2400.000000,Y=2400.000000,Z=0.000000),WaveAmp=(X=70.000000,Y=70.000000,Z=0.000000),WavePhase=(X=180.000000,Y=90.000000,Z=0.000000))),(StartPoint=(Pitch=0,Yaw=0,Roll=0),EndPoint=(Pitch=0,Yaw=0,Roll=0),bUseStartPointOnly=True,CustomWaveMotion=(bUseCustomWaveMotion=True,WaveFreq=(X=2300.000000,Y=2300.000000,Z=0.000000),WaveAmp=(X=50.000000,Y=50.000000,Z=0.000000),WavePhase=(X=180.000000,Y=90.000000,Z=0.000000))),(StartPoint=(Pitch=-182,Yaw=0,Roll=0),EndPoint=(Pitch=0,Yaw=0,Roll=0),bUseStartPointOnly=True,CustomWaveMotion=(bUseCustomWaveMotion=True,WaveFreq=(X=2200.000000,Y=2200.000000,Z=0.000000),WaveAmp=(X=40.000000,Y=40.000000,Z=0.000000),WavePhase=(X=180.000000,Y=90.000000,Z=0.000000))),(StartPoint=(Pitch=-364,Yaw=0,Roll=0),EndPoint=(Pitch=0,Yaw=0,Roll=0),bUseStartPointOnly=True,CustomWaveMotion=(bUseCustomWaveMotion=True,WaveFreq=(X=2100.000000,Y=2100.000000,Z=0.000000),WaveAmp=(X=30.000000,Y=30.000000,Z=0.000000),WavePhase=(X=180.000000,Y=90.000000,Z=0.000000))),(StartPoint=(Pitch=-728,Yaw=0,Roll=0),EndPoint=(Pitch=0,Yaw=0,Roll=0),bUseStartPointOnly=True,CustomWaveMotion=(bUseCustomWaveMotion=True,WaveFreq=(X=2000.000000,Y=2000.000000,Z=0.000000),WaveAmp=(X=20.000000,Y=20.000000,Z=0.000000),WavePhase=(X=180.000000,Y=90.000000,Z=0.000000))))
+          set GD_Cork_Weap_Shotgun.FiringModes.Bullet_Shotgun_Moonface BasePatternSpread 4.000000
+          set GD_Cork_Weap_Shotgun.FiringModes.Bullet_Shotgun_Moonface MinPatternScale 0.700000
+
+
+
+      #</Main Bullet>
+
+  #</FiringModes>
+
+  #<Behavior Explode>
+
+    set GD_Cork_Weap_Shotgun.FiringModes.Bullet_Shotgun_Moonface:Behavior_Explode_1 DamageRadiusFormula (BaseValueConstant=120.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+    set GD_Cork_Weap_Shotgun.FiringModes.Bullet_Shotgun_Moonface:Behavior_Explode_1 DamageFormula (BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',InitializationDefinition=None,BaseValueScaleConstant=0.400000)
+    set GD_Cork_Weap_Shotgun.FiringModes.Bullet_Shotgun_Moonface:Behavior_Explode_1 Definition ExplosionDefinition'GD_Explosions.shock.Explosion_ShockMaster'
+    set GD_Cork_Weap_Shotgun.FiringModes.Bullet_Shotgun_Moonface:Behavior_Explode_1 StatusEffectDamage (BaseValueConstant=1.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.Weapon.WeaponStatusEffectDamage',InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+    set GD_Cork_Weap_Shotgun.FiringModes.Bullet_Shotgun_Moonface:Behavior_Explode_1 StatusEffectChance (BaseValueConstant=1.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.Weapon.WeaponCombinedStatusEffectChanceModifier',InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+
+  #</Behavior Explode>
+
+#</Twister>

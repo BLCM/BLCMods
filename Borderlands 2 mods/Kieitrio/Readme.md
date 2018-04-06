@@ -1,13 +1,10 @@
-Feel free to message me on Discord or Steam about any questions about my mods or if you want me to make you a mod
+If you have any questions about the mods I've made please feel free to ask me in Discord or Steam.
 
-All the skins for my mods are uploaded here:
+Most of the mods that I reskin can be found here:
 http://imgur.com/a/HkDUD
-
-
-Links:
 
 Steam: http://steamcommunity.com/id/Kieitrio
 
-Twitter: https://twitter.com/Kieitrio
+Discord: Kieitrio#5584
 
-Discord: Kieitrio#6390
+Note: I don't plan on being all that active anymore with modding Borderlands 2 and the Presequel (As seen by the last time I modded a weapon was nearly 6 months ago), I will mod weapons when I feel ambitious to do so.

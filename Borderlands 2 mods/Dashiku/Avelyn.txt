@@ -1,0 +1,28 @@
+==Avelyn - Replaces the Seraphim==
+
+Dark Souls inspired (copied) triple fire crossbow. Shoots 3 bolts at a time for maximum boltage. 
+
+= E-tech barrel for the triple crossbow style.
+= Shoots 3 Longbow arrows per shot.
+= 3 ammo in the clip to simulate realistic arrow loading.
+= Jakobs skin for authentic wooden look.
+
+==The nitty gritty==
+#Name/Card#
+set GD_Orchid_RaidWeapons.AssaultRifle.Seraphim.Orchid_Seraph_Seraphim_Title PartName Avelyn
+set GD_Orchid_RaidWeapons.AssaultRifle.Seraphim.Orchid_Seraph_Seraphim_Title:AttributePresentationDefinition_8 NoConstraintText <font color="#7f99f9">Cherished by the weapon craftsman Eidas.<font color="#eaeaea"><br>• Triple bolt action!
+
+#Barrel#
+set GD_Orchid_RaidWeapons.AssaultRifle.Seraphim.Orchid_Seraph_Seraphim_Barrel WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=2.500000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponReloadSpeed',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=-1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=-1000.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=3.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+set GD_Orchid_RaidWeapons.AssaultRifle.Seraphim.Orchid_Seraph_Seraphim_Barrel bFlapsEnabled True
+set GD_Orchid_RaidWeapons.AssaultRifle.Seraphim.Orchid_Seraph_Seraphim_Barrel FlapsExpandDuration (BaseValueConstant=0.100000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+set GD_Orchid_RaidWeapons.AssaultRifle.Seraphim.Orchid_Seraph_Seraphim_Barrel FlapsCollapseDuration (BaseValueConstant=999.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+
+set GD_Orchid_RaidWeapons.AssaultRifle.Seraphim.Orchid_Seraph_Seraphim_Barrel BoneControllers ((BoneName="AlienBarrelFlapTL1",ControlType=WEAP_BONE_CONTROL_Flap,bUseInFirstPerson=True,bUseInThirdPerson=False,ControlTemplate=WillowSkelControl_RotateFlapFromFiring'GD_Weap_AssaultRifle.Barrel.AR_Barrel_Alien:WillowSkelControl_RotateFlapFromFiring_4'),(BoneName="AlienBarrelFlapTL2",ControlType=WEAP_BONE_CONTROL_Flap,bUseInFirstPerson=True,bUseInThirdPerson=False,ControlTemplate=WillowSkelControl_RotateFlapFromFiring'GD_Weap_AssaultRifle.Barrel.AR_Barrel_Alien:WillowSkelControl_RotateFlapFromFiring_3'),(BoneName="AlienBarrelFlapTL3",ControlType=WEAP_BONE_CONTROL_Flap,bUseInFirstPerson=True,bUseInThirdPerson=False,ControlTemplate=WillowSkelControl_RotateFlapFromFiring'GD_Weap_AssaultRifle.Barrel.AR_Barrel_Alien:WillowSkelControl_RotateFlapFromFiring_5'),(BoneName="AlienBarrelFlapTL4",ControlType=WEAP_BONE_CONTROL_Flap,bUseInFirstPerson=True,bUseInThirdPerson=False,ControlTemplate=WillowSkelControl_RotateFlapFromFiring'GD_Weap_AssaultRifle.Barrel.AR_Barrel_Alien:WillowSkelControl_RotateFlapFromFiring_8'),(BoneName="AlienBarrelFlapTR1",ControlType=WEAP_BONE_CONTROL_Flap,bUseInFirstPerson=True,bUseInThirdPerson=False,ControlTemplate=WillowSkelControl_RotateFlapFromFiring'GD_Weap_AssaultRifle.Barrel.AR_Barrel_Alien:WillowSkelControl_RotateFlapFromFiring_1'),(BoneName="AlienBarrelFlapTR2",ControlType=WEAP_BONE_CONTROL_Flap,bUseInFirstPerson=True,bUseInThirdPerson=False,ControlTemplate=WillowSkelControl_RotateFlapFromFiring'GD_Weap_AssaultRifle.Barrel.AR_Barrel_Alien:WillowSkelControl_RotateFlapFromFiring_2'),(BoneName="AlienBarrelFlapTR3",ControlType=WEAP_BONE_CONTROL_Flap,bUseInFirstPerson=True,bUseInThirdPerson=False,ControlTemplate=WillowSkelControl_RotateFlapFromFiring'GD_Weap_AssaultRifle.Barrel.AR_Barrel_Alien:WillowSkelControl_RotateFlapFromFiring_6'),(BoneName="AlienBarrelFlapTR4",ControlType=WEAP_BONE_CONTROL_Flap,bUseInFirstPerson=True,bUseInThirdPerson=False,ControlTemplate=WillowSkelControl_RotateFlapFromFiring'GD_Weap_AssaultRifle.Barrel.AR_Barrel_Alien:WillowSkelControl_RotateFlapFromFiring_7'),(BoneName="AlienBarrelFlapBL",ControlType=WEAP_BONE_CONTROL_Flap,bUseInFirstPerson=True,bUseInThirdPerson=False,ControlTemplate=WillowSkelControl_RotateFlapFromFiring'GD_Weap_AssaultRifle.Barrel.AR_Barrel_Alien:WillowSkelControl_RotateFlapFromFiring_0'),(BoneName="AlienBarrelFlapBR",ControlType=WEAP_BONE_CONTROL_Flap,bUseInFirstPerson=True,bUseInThirdPerson=False,ControlTemplate=WillowSkelControl_RotateFlapFromFiring'GD_Weap_AssaultRifle.Barrel.AR_Barrel_Alien:WillowSkelControl_RotateFlapFromFiring_9'))
+
+set GD_Orchid_RaidWeapons.AssaultRifle.Seraphim.Orchid_Seraph_Seraphim_Barrel CustomFiringModeDefinition FiringModeDefinition'GD_Weap_SniperRifles.FiringModes.Bullet_Sniper_Longbow'
+set GD_Orchid_RaidWeapons.AssaultRifle.Seraphim.Orchid_Seraph_Seraphim_Barrel GestaltModeSkeletalMeshName AR_Barrel_Alien
+
+#Skin#
+set GD_Orchid_RaidWeapons.ManufacturerMaterials.Mat_Dahl_1_Seraphim Material MaterialInstanceConstant'Common_GunMaterials.Materials.AssaultRifle.Mati_JakobsUncommonAR'

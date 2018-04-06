@@ -1,0 +1,34 @@
+#<SemiAutoDahlSnipers>
+
+    #<Description>
+
+        Makes all Dahl snipers semi auto (with the exception of the Pitchfork) because something made for precision should never have had burst fire in the first place.
+
+        The Pitchfork now always has a 4 round burst because that was never a precision weapon to begin with and so its still useful against bosses.
+
+    #</Description>
+
+    #<Code>
+
+        #<Dahl Snipers>
+
+            set GD_Weap_SniperRifles.A_Weapons.WeaponType_Dahl_Sniper ZoomWeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-0.800000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponPerShotAccuracyImpulse',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=5.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+            set GD_Weap_SniperRifles.Barrel.SR_Barrel_Dahl ZoomWeaponAttributeEffects ()
+
+            set GD_Weap_SniperRifles.Stock.SR_Stock_Dahl ZoomWeaponAttributeEffects ()
+
+            set GD_Weap_SniperRifles.Barrel.SR_Barrel_Dahl_Pitchfork ZoomWeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponAutomaticBurstCount',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Dahl',InitializationDefinition=None,BaseValueScaleConstant=3.000000)))
+
+        #</Dahl Snipers>
+
+        #<Pitchfork>
+
+            set GD_Weap_SniperRifles.Barrel.SR_Barrel_Dahl_Pitchfork ZoomWeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponAutomaticBurstCount',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Dahl',InitializationDefinition=None,BaseValueScaleConstant=3.000000)))
+
+        #</Pitchfork>
+
+    #</Code>
+
+#</SemiAutoDahlSnipers>
+

@@ -1,0 +1,44 @@
+#<Slug Shotguns>
+
+    #<Description>
+
+        By Aaron0000
+
+        Changes the Hyperion shotgun barrel into a slug-firing shotgun (fires one single, powerful pellet instead of multiple weaker pellets). Also includes an option to modify the Striker into one.
+
+    #</Description>
+
+    #<Code>
+
+        set GD_Weap_Shotgun.Barrel.SG_Barrel_Hyperion CustomFiringModeDefinition None
+
+        set GD_Weap_Shotgun.Barrel.SG_Barrel_Hyperion WeaponCardAttributes ((Attribute=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',PriorityIncrease=-3.000000),(Attribute=AttributeDefinition'D_Attributes.Weapon.WeaponReloadSpeed',PriorityIncrease=-3.000000),(Attribute=AttributeDefinition'D_Attributes.Weapon.WeaponPerShotAccuracyImpulse',PriorityIncrease=-3.000000),(Attribute=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',PriorityIncrease=-3.000000))
+
+        set GD_Weap_Shotgun.Barrel.SG_Barrel_Hyperion WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-9999.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AccuracyResourcePool.AccuracyOnIdleRegenerationRate',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.250000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Torgue',InitializationDefinition=None,BaseValueScaleConstant=-0.200000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Jakobs',InitializationDefinition=None,BaseValueScaleConstant=1.600000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponPerShotAccuracyImpulse',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=-0.200000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Jakobs',InitializationDefinition=None,BaseValueScaleConstant=-0.500000)))
+
+        set GD_Weap_Shotgun.Barrel.SG_Barrel_Hyperion AttributeSlotUpgrades ((SlotName="WeaponDamage",GradeIncrease=263,bActivateSlot=True),(SlotName="WeaponSpread",GradeIncrease=40,bActivateSlot=True),(SlotName="AccuracyMin",GradeIncrease=10,bActivateSlot=True),(SlotName="AccuracyMax",GradeIncrease=10,bActivateSlot=True),(SlotName="WeaponMagSize",GradeIncrease=-2,bActivateSlot=True),(SlotName="WeaponAccuracyImpulse",GradeIncrease=5,bActivateSlot=True))
+
+        #<Firing Pattern Fixes>
+
+            set GD_Weap_Shotgun.FiringModes.Bullet_Shotgun_Default FiringPatternLines ()
+
+            set GD_Weap_Shotgun.FiringModes.Bullets_Shotgun_Torgue_GyroJet FiringPatternLines ()
+
+            set GD_Weap_Shotgun.FiringModes.Bullet_Shotgun_Hyperion FiringPatternLines ()
+
+        #</Firing Pattern Fixes>
+
+    #</Code>
+
+    #<Striker>
+
+        #set GD_Weap_Shotgun.Barrel.SG_Barrel_Hyperion_Striker WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-9999.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AccuracyResourcePool.AccuracyOnIdleRegenerationRate',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.250000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Torgue',InitializationDefinition=None,BaseValueScaleConstant=-0.200000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Jakobs',InitializationDefinition=None,BaseValueScaleConstant=1.600000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponPerShotAccuracyImpulse',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=-0.200000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-5.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))<off>
+
+        #set GD_Weap_Shotgun.Barrel.SG_Barrel_Hyperion_Striker AttributeSlotUpgrades ((SlotName="WeaponDamage",GradeIncrease=263,bActivateSlot=True),(SlotName="WeaponSpread",GradeIncrease=7,bActivateSlot=True),(SlotName="AccuracyMin",GradeIncrease=15,bActivateSlot=True),(SlotName="AccuracyMax",GradeIncrease=10,bActivateSlot=True),(SlotName="WeaponMagSize",GradeIncrease=-2,bActivateSlot=True),(SlotName="WeaponAccuracyImpulse",GradeIncrease=7,bActivateSlot=True),(SlotName="WeaponZoomFOV",GradeIncrease=5,bActivateSlot=True))<off><off>
+
+        #set GD_Weap_Shotgun.Barrel.SG_Barrel_Hyperion_Striker WeaponCardAttributes ((Attribute=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',PriorityIncrease=-3.000000),(Attribute=AttributeDefinition'D_Attributes.Weapon.WeaponReloadSpeed',PriorityIncrease=-3.000000),(Attribute=AttributeDefinition'D_Attributes.Weapon.WeaponPerShotAccuracyImpulse',PriorityIncrease=-3.000000),(Attribute=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',PriorityIncrease=-3.000000))<off>
+
+    #</Striker>
+
+#</Slug Shotguns>
+

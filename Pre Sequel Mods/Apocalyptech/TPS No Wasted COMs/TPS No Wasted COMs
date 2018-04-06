@@ -1,0 +1,323 @@
+#<TPS No Wasted COMs>
+
+    # TPS No Wasted COMs v1.0.0
+    # Licensed under Public Domain / CC0 1.0 Universal
+    #
+    # Sets the game to only drop COMs for the player classes who are actually
+    # in the game at the time.  Once a player class has joined the game, the
+    # only way to remove that character's COMs from the drop pools is to exit
+    # to the main menu and re-execute the patch.
+
+    #<Initial Clear>
+
+        # Do an initial set to clear out the COM item pools.  This is actually
+        # only required if you're looking to "clear out" a pool after a character's
+        # left the game, and must be done by exiting out to the main menu and re-
+        # executing the mod/patch.
+
+        set GD_Itempools.ClassModPools.Pool_ClassMod_01_Common BalancedItems ((ItmPoolDefinition=ItemPoolDefinition'GD_Cork_Itempools.ClassModPools.Pool_ClassMod_Lawbringer_01_Common',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Cork_Itempools.ClassModPools.Pool_ClassMod_Prototype_01_Common',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Cork_Itempools.ClassModPools.Pool_ClassMod_Enforcer_01_Common',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Cork_Itempools.ClassModPools.Pool_ClassMod_Gladiator_01_Common',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Crocus_Itempools.ClassModPools.Pool_ClassMod_Baroness_01_Common',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Quince_Itempools.ClassModPools.Pool_ClassMod_Doppelganger_01_Common',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True))
+
+        set GD_Itempools.ClassModPools.Pool_ClassMods_01_Common_1st BalancedItems ((ItmPoolDefinition=ItemPoolDefinition'GD_Cork_Itempools.ClassModPools.Pool_ClassMod_Lawbringer_01_Common',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Cork_Itempools.ClassModPools.Pool_ClassMod_Prototype_01_Common',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Cork_Itempools.ClassModPools.Pool_ClassMod_Enforcer_01_Common',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Cork_Itempools.ClassModPools.Pool_ClassMod_Gladiator_01_Common',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Crocus_Itempools.ClassModPools.Pool_ClassMod_Baroness_01_Common',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Quince_Itempools.ClassModPools.Pool_ClassMod_Doppelganger_01_Common',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True))
+
+        set GD_Itempools.ClassModPools.Pool_ClassMod_02_Uncommon BalancedItems ((ItmPoolDefinition=ItemPoolDefinition'GD_Cork_Itempools.ClassModPools.Pool_ClassMod_Lawbringer_02_Uncommon',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Cork_Itempools.ClassModPools.Pool_ClassMod_Prototype_02_Uncommon',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Cork_Itempools.ClassModPools.Pool_ClassMod_Enforcer_02_Uncommon',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Cork_Itempools.ClassModPools.Pool_ClassMod_Gladiator_02_Uncommon',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Crocus_Itempools.ClassModPools.Pool_ClassMod_Baroness_02_Uncommon',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Quince_Itempools.ClassModPools.Pool_ClassMod_Doppelganger_02_Uncommon',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True))
+
+        set GD_Itempools.ClassModPools.Pool_ClassMod_04_Rare BalancedItems ((ItmPoolDefinition=ItemPoolDefinition'GD_Cork_Itempools.ClassModPools.Pool_ClassMod_Lawbringer_03_Rare',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Cork_Itempools.ClassModPools.Pool_ClassMod_Prototype_03_Rare',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Cork_Itempools.ClassModPools.Pool_ClassMod_Enforcer_03_Rare',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Cork_Itempools.ClassModPools.Pool_ClassMod_Gladiator_03_Rare',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Crocus_Itempools.ClassModPools.Pool_ClassMod_Baroness_03_Rare',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Quince_Itempools.ClassModPools.Pool_ClassMod_Doppelganger_03_Rare',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True))
+
+        set GD_Itempools.ClassModPools.Pool_ClassMod_05_VeryRare BalancedItems ((ItmPoolDefinition=ItemPoolDefinition'GD_Cork_Itempools.ClassModPools.Pool_ClassMod_Lawbringer_04_VeryRare',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Cork_Itempools.ClassModPools.Pool_ClassMod_Prototype_04_VeryRare',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Cork_Itempools.ClassModPools.Pool_ClassMod_Enforcer_04_VeryRare',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Cork_Itempools.ClassModPools.Pool_ClassMod_Gladiator_04_VeryRare',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Crocus_Itempools.ClassModPools.Pool_ClassMod_Baroness_04_VeryRare',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Quince_Itempools.ClassModPools.Pool_ClassMod_Doppelganger_04_VeryRare',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True))
+
+        set GD_Itempools.ClassModPools.Pool_ClassMod_06_Legendary BalancedItems ((ItmPoolDefinition=ItemPoolDefinition'GD_Cork_Itempools.ClassModPools.Pool_ClassMod_Lawbringer_05_Legendary',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Cork_Itempools.ClassModPools.Pool_ClassMod_Prototype_05_Legendary',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Cork_Itempools.ClassModPools.Pool_ClassMod_Enforcer_05_Legendary',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Cork_Itempools.ClassModPools.Pool_ClassMod_Gladiator_05_Legendary',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Crocus_Itempools.ClassModPools.Pool_ClassMod_Baroness_05_Legendary',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Quince_Itempools.ClassModPools.Pool_ClassMod_Doppelganger_05_Legendary',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True))
+
+        set GD_Itempools.ClassModPools.Pool_ClassMods_06_Celestial BalancedItems ((ItmPoolDefinition=ItemPoolDefinition'GD_Cork_Itempools.ClassModPools.Pool_ClassMod_Lawbringer_06_EridianVanquisher',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Cork_Itempools.ClassModPools.Pool_ClassMod_Prototype_06_EridianVanquisher',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Cork_Itempools.ClassModPools.Pool_ClassMod_Enforcer_06_EridianVanquisher',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Cork_Itempools.ClassModPools.Pool_ClassMod_Gladiator_06_EridianVanquisher',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Crocus_Itempools.ClassModPools.Pool_ClassMod_Baroness_06_EridianVanquisher',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Quince_Itempools.ClassModPools.Pool_ClassMod_Doppelganger_06_EridianVanquisher',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True))
+
+        set GD_Itempools.ClassModPools.Pool_ClassMod_06_EridianVanquisher BalancedItems ((ItmPoolDefinition=ItemPoolDefinition'GD_Cork_Itempools.ClassModPools.Pool_ClassMod_Lawbringer_06_EridianVanquisher',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Cork_Itempools.ClassModPools.Pool_ClassMod_Prototype_06_EridianVanquisher',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Cork_Itempools.ClassModPools.Pool_ClassMod_Enforcer_06_EridianVanquisher',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Cork_Itempools.ClassModPools.Pool_ClassMod_Gladiator_06_EridianVanquisher',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Crocus_Itempools.ClassModPools.Pool_ClassMod_Baroness_06_EridianVanquisher',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Quince_Itempools.ClassModPools.Pool_ClassMod_Doppelganger_06_EridianVanquisher',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True))
+
+        set GD_Pet_ItemPools.ClassModPools.Pool_Chronicler_ClassMod_All BalancedItems ((ItmPoolDefinition=ItemPoolDefinition'GD_Pet_ItemPools.ClassModPools.Pool_Pet_ClassMod_Lawbringer_07_Chronicler',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Pet_ItemPools.ClassModPools.Pool_Pet_ClassMod_Prototype_07_Chronicler',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Pet_ItemPools.ClassModPools.Pool_Pet_ClassMod_Enforcer_07_Chronicler',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Pet_ItemPools.ClassModPools.Pool_Pet_ClassMod_Gladiator_07_Chronicler',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Crocus_Itempools.ClassModPools.Pool_ClassMod_Baroness_07_ChroniclerOfElpis',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Pet_ItemPools.ClassModPools.Pool_Pet_ClassMod_Doppel_07_Chronicler',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True))
+
+        set GD_Pet_ItemPools.ClassModPools.Pool_Pet_ClassMod_All BalancedItems ((ItmPoolDefinition=ItemPoolDefinition'GD_Pet_ItemPools.ClassModPools.Pool_Pet_ClassMod_Lawbringer_All_Petunia',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Pet_ItemPools.ClassModPools.Pool_Pet_ClassMod_Prototype_All_Petunia',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Pet_ItemPools.ClassModPools.Pool_Pet_ClassMod_Enforcer_All_Petunia',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Pet_ItemPools.ClassModPools.Pool_Pet_ClassMod_Gladiator_All_Petunia',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Crocus_Itempools.ClassModPools.Pool_Pet_ClassMod_Baroness_All_Petunia',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Pet_ItemPools.ClassModPools.Pool_Pet_ClassMod_Doppel_All_Petunia',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True))
+
+    #</Initial Clear>
+
+    #<Level Clear>
+
+        # Something hotfix-like modifies the InitializationDefinition of these pools
+        # on level load, so we need a level-load hotfix to clear it out.
+
+        #<hotfix><key>"SparkLevelPatchEntry-ApocCOMIDClear0"</key><value>",GD_Itempools.ClassModPools.Pool_ClassMod_01_Common,BalancedItems[0].Probability.InitializationDefinition,,None"</value><on>
+        
+        #<hotfix><key>"SparkLevelPatchEntry-ApocCOMIDClear1"</key><value>",GD_Itempools.ClassModPools.Pool_ClassMod_01_Common,BalancedItems[1].Probability.InitializationDefinition,,None"</value><on>
+        
+        #<hotfix><key>"SparkLevelPatchEntry-ApocCOMIDClear2"</key><value>",GD_Itempools.ClassModPools.Pool_ClassMod_01_Common,BalancedItems[2].Probability.InitializationDefinition,,None"</value><on>
+        
+        #<hotfix><key>"SparkLevelPatchEntry-ApocCOMIDClear3"</key><value>",GD_Itempools.ClassModPools.Pool_ClassMod_01_Common,BalancedItems[3].Probability.InitializationDefinition,,None"</value><on>
+        
+        #<hotfix><key>"SparkLevelPatchEntry-ApocCOMIDClear4"</key><value>",GD_Itempools.ClassModPools.Pool_ClassMod_01_Common,BalancedItems[4].Probability.InitializationDefinition,,None"</value><on>
+        
+        #<hotfix><key>"SparkLevelPatchEntry-ApocCOMIDClear5"</key><value>",GD_Itempools.ClassModPools.Pool_ClassMod_01_Common,BalancedItems[5].Probability.InitializationDefinition,,None"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-ApocCOMIDClear48"</key><value>",GD_Itempools.ClassModPools.Pool_ClassMods_01_Common_1st,BalancedItems[0].Probability.InitializationDefinition,,None"</value><on>
+        
+        #<hotfix><key>"SparkLevelPatchEntry-ApocCOMIDClear49"</key><value>",GD_Itempools.ClassModPools.Pool_ClassMods_01_Common_1st,BalancedItems[1].Probability.InitializationDefinition,,None"</value><on>
+        
+        #<hotfix><key>"SparkLevelPatchEntry-ApocCOMIDClear50"</key><value>",GD_Itempools.ClassModPools.Pool_ClassMods_01_Common_1st,BalancedItems[2].Probability.InitializationDefinition,,None"</value><on>
+        
+        #<hotfix><key>"SparkLevelPatchEntry-ApocCOMIDClear51"</key><value>",GD_Itempools.ClassModPools.Pool_ClassMods_01_Common_1st,BalancedItems[3].Probability.InitializationDefinition,,None"</value><on>
+        
+        #<hotfix><key>"SparkLevelPatchEntry-ApocCOMIDClear52"</key><value>",GD_Itempools.ClassModPools.Pool_ClassMods_01_Common_1st,BalancedItems[4].Probability.InitializationDefinition,,None"</value><on>
+        
+        #<hotfix><key>"SparkLevelPatchEntry-ApocCOMIDClear53"</key><value>",GD_Itempools.ClassModPools.Pool_ClassMods_01_Common_1st,BalancedItems[5].Probability.InitializationDefinition,,None"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-ApocCOMIDClear6"</key><value>",GD_Itempools.ClassModPools.Pool_ClassMod_02_Uncommon,BalancedItems[0].Probability.InitializationDefinition,,None"</value><on>
+        
+        #<hotfix><key>"SparkLevelPatchEntry-ApocCOMIDClear7"</key><value>",GD_Itempools.ClassModPools.Pool_ClassMod_02_Uncommon,BalancedItems[1].Probability.InitializationDefinition,,None"</value><on>
+        
+        #<hotfix><key>"SparkLevelPatchEntry-ApocCOMIDClear8"</key><value>",GD_Itempools.ClassModPools.Pool_ClassMod_02_Uncommon,BalancedItems[2].Probability.InitializationDefinition,,None"</value><on>
+        
+        #<hotfix><key>"SparkLevelPatchEntry-ApocCOMIDClear9"</key><value>",GD_Itempools.ClassModPools.Pool_ClassMod_02_Uncommon,BalancedItems[3].Probability.InitializationDefinition,,None"</value><on>
+        
+        #<hotfix><key>"SparkLevelPatchEntry-ApocCOMIDClear10"</key><value>",GD_Itempools.ClassModPools.Pool_ClassMod_02_Uncommon,BalancedItems[4].Probability.InitializationDefinition,,None"</value><on>
+        
+        #<hotfix><key>"SparkLevelPatchEntry-ApocCOMIDClear11"</key><value>",GD_Itempools.ClassModPools.Pool_ClassMod_02_Uncommon,BalancedItems[5].Probability.InitializationDefinition,,None"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-ApocCOMIDClear12"</key><value>",GD_Itempools.ClassModPools.Pool_ClassMod_04_Rare,BalancedItems[0].Probability.InitializationDefinition,,None"</value><on>
+        
+        #<hotfix><key>"SparkLevelPatchEntry-ApocCOMIDClear13"</key><value>",GD_Itempools.ClassModPools.Pool_ClassMod_04_Rare,BalancedItems[1].Probability.InitializationDefinition,,None"</value><on>
+        
+        #<hotfix><key>"SparkLevelPatchEntry-ApocCOMIDClear14"</key><value>",GD_Itempools.ClassModPools.Pool_ClassMod_04_Rare,BalancedItems[2].Probability.InitializationDefinition,,None"</value><on>
+        
+        #<hotfix><key>"SparkLevelPatchEntry-ApocCOMIDClear15"</key><value>",GD_Itempools.ClassModPools.Pool_ClassMod_04_Rare,BalancedItems[3].Probability.InitializationDefinition,,None"</value><on>
+        
+        #<hotfix><key>"SparkLevelPatchEntry-ApocCOMIDClear16"</key><value>",GD_Itempools.ClassModPools.Pool_ClassMod_04_Rare,BalancedItems[4].Probability.InitializationDefinition,,None"</value><on>
+        
+        #<hotfix><key>"SparkLevelPatchEntry-ApocCOMIDClear17"</key><value>",GD_Itempools.ClassModPools.Pool_ClassMod_04_Rare,BalancedItems[5].Probability.InitializationDefinition,,None"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-ApocCOMIDClear18"</key><value>",GD_Itempools.ClassModPools.Pool_ClassMod_05_VeryRare,BalancedItems[0].Probability.InitializationDefinition,,None"</value><on>
+        
+        #<hotfix><key>"SparkLevelPatchEntry-ApocCOMIDClear19"</key><value>",GD_Itempools.ClassModPools.Pool_ClassMod_05_VeryRare,BalancedItems[1].Probability.InitializationDefinition,,None"</value><on>
+        
+        #<hotfix><key>"SparkLevelPatchEntry-ApocCOMIDClear20"</key><value>",GD_Itempools.ClassModPools.Pool_ClassMod_05_VeryRare,BalancedItems[2].Probability.InitializationDefinition,,None"</value><on>
+        
+        #<hotfix><key>"SparkLevelPatchEntry-ApocCOMIDClear21"</key><value>",GD_Itempools.ClassModPools.Pool_ClassMod_05_VeryRare,BalancedItems[3].Probability.InitializationDefinition,,None"</value><on>
+        
+        #<hotfix><key>"SparkLevelPatchEntry-ApocCOMIDClear22"</key><value>",GD_Itempools.ClassModPools.Pool_ClassMod_05_VeryRare,BalancedItems[4].Probability.InitializationDefinition,,None"</value><on>
+        
+        #<hotfix><key>"SparkLevelPatchEntry-ApocCOMIDClear23"</key><value>",GD_Itempools.ClassModPools.Pool_ClassMod_05_VeryRare,BalancedItems[5].Probability.InitializationDefinition,,None"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-ApocCOMIDClear24"</key><value>",GD_Itempools.ClassModPools.Pool_ClassMod_06_Legendary,BalancedItems[0].Probability.InitializationDefinition,,None"</value><on>
+        
+        #<hotfix><key>"SparkLevelPatchEntry-ApocCOMIDClear25"</key><value>",GD_Itempools.ClassModPools.Pool_ClassMod_06_Legendary,BalancedItems[1].Probability.InitializationDefinition,,None"</value><on>
+        
+        #<hotfix><key>"SparkLevelPatchEntry-ApocCOMIDClear26"</key><value>",GD_Itempools.ClassModPools.Pool_ClassMod_06_Legendary,BalancedItems[2].Probability.InitializationDefinition,,None"</value><on>
+        
+        #<hotfix><key>"SparkLevelPatchEntry-ApocCOMIDClear27"</key><value>",GD_Itempools.ClassModPools.Pool_ClassMod_06_Legendary,BalancedItems[3].Probability.InitializationDefinition,,None"</value><on>
+        
+        #<hotfix><key>"SparkLevelPatchEntry-ApocCOMIDClear28"</key><value>",GD_Itempools.ClassModPools.Pool_ClassMod_06_Legendary,BalancedItems[4].Probability.InitializationDefinition,,None"</value><on>
+        
+        #<hotfix><key>"SparkLevelPatchEntry-ApocCOMIDClear29"</key><value>",GD_Itempools.ClassModPools.Pool_ClassMod_06_Legendary,BalancedItems[5].Probability.InitializationDefinition,,None"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-ApocCOMIDClear54"</key><value>",GD_Itempools.ClassModPools.Pool_ClassMods_06_Celestial,BalancedItems[0].Probability.InitializationDefinition,,None"</value><on>
+        
+        #<hotfix><key>"SparkLevelPatchEntry-ApocCOMIDClear55"</key><value>",GD_Itempools.ClassModPools.Pool_ClassMods_06_Celestial,BalancedItems[1].Probability.InitializationDefinition,,None"</value><on>
+        
+        #<hotfix><key>"SparkLevelPatchEntry-ApocCOMIDClear56"</key><value>",GD_Itempools.ClassModPools.Pool_ClassMods_06_Celestial,BalancedItems[2].Probability.InitializationDefinition,,None"</value><on>
+        
+        #<hotfix><key>"SparkLevelPatchEntry-ApocCOMIDClear57"</key><value>",GD_Itempools.ClassModPools.Pool_ClassMods_06_Celestial,BalancedItems[3].Probability.InitializationDefinition,,None"</value><on>
+        
+        #<hotfix><key>"SparkLevelPatchEntry-ApocCOMIDClear58"</key><value>",GD_Itempools.ClassModPools.Pool_ClassMods_06_Celestial,BalancedItems[4].Probability.InitializationDefinition,,None"</value><on>
+        
+        #<hotfix><key>"SparkLevelPatchEntry-ApocCOMIDClear59"</key><value>",GD_Itempools.ClassModPools.Pool_ClassMods_06_Celestial,BalancedItems[5].Probability.InitializationDefinition,,None"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-ApocCOMIDClear30"</key><value>",GD_Itempools.ClassModPools.Pool_ClassMod_06_EridianVanquisher,BalancedItems[0].Probability.InitializationDefinition,,None"</value><on>
+        
+        #<hotfix><key>"SparkLevelPatchEntry-ApocCOMIDClear31"</key><value>",GD_Itempools.ClassModPools.Pool_ClassMod_06_EridianVanquisher,BalancedItems[1].Probability.InitializationDefinition,,None"</value><on>
+        
+        #<hotfix><key>"SparkLevelPatchEntry-ApocCOMIDClear32"</key><value>",GD_Itempools.ClassModPools.Pool_ClassMod_06_EridianVanquisher,BalancedItems[2].Probability.InitializationDefinition,,None"</value><on>
+        
+        #<hotfix><key>"SparkLevelPatchEntry-ApocCOMIDClear33"</key><value>",GD_Itempools.ClassModPools.Pool_ClassMod_06_EridianVanquisher,BalancedItems[3].Probability.InitializationDefinition,,None"</value><on>
+        
+        #<hotfix><key>"SparkLevelPatchEntry-ApocCOMIDClear34"</key><value>",GD_Itempools.ClassModPools.Pool_ClassMod_06_EridianVanquisher,BalancedItems[4].Probability.InitializationDefinition,,None"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-ApocCOMIDClear35"</key><value>",GD_Itempools.ClassModPools.Pool_ClassMod_06_EridianVanquisher,BalancedItems[5].Probability.InitializationDefinition,,None"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-ApocCOMIDClear36"</key><value>",GD_Pet_ItemPools.ClassModPools.Pool_Chronicler_ClassMod_All,BalancedItems[0].Probability.InitializationDefinition,,None"</value><on>
+        
+        #<hotfix><key>"SparkLevelPatchEntry-ApocCOMIDClear37"</key><value>",GD_Pet_ItemPools.ClassModPools.Pool_Chronicler_ClassMod_All,BalancedItems[1].Probability.InitializationDefinition,,None"</value><on>
+        
+        #<hotfix><key>"SparkLevelPatchEntry-ApocCOMIDClear38"</key><value>",GD_Pet_ItemPools.ClassModPools.Pool_Chronicler_ClassMod_All,BalancedItems[2].Probability.InitializationDefinition,,None"</value><on>
+        
+        #<hotfix><key>"SparkLevelPatchEntry-ApocCOMIDClear39"</key><value>",GD_Pet_ItemPools.ClassModPools.Pool_Chronicler_ClassMod_All,BalancedItems[3].Probability.InitializationDefinition,,None"</value><on>
+        
+        #<hotfix><key>"SparkLevelPatchEntry-ApocCOMIDClear40"</key><value>",GD_Pet_ItemPools.ClassModPools.Pool_Chronicler_ClassMod_All,BalancedItems[4].Probability.InitializationDefinition,,None"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-ApocCOMIDClear41"</key><value>",GD_Pet_ItemPools.ClassModPools.Pool_Chronicler_ClassMod_All,BalancedItems[5].Probability.InitializationDefinition,,None"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-ApocCOMIDClear42"</key><value>",GD_Pet_ItemPools.ClassModPools.Pool_Pet_ClassMod_All,BalancedItems[0].Probability.InitializationDefinition,,None"</value><on>
+        
+        #<hotfix><key>"SparkLevelPatchEntry-ApocCOMIDClear43"</key><value>",GD_Pet_ItemPools.ClassModPools.Pool_Pet_ClassMod_All,BalancedItems[1].Probability.InitializationDefinition,,None"</value><on>
+        
+        #<hotfix><key>"SparkLevelPatchEntry-ApocCOMIDClear44"</key><value>",GD_Pet_ItemPools.ClassModPools.Pool_Pet_ClassMod_All,BalancedItems[2].Probability.InitializationDefinition,,None"</value><on>
+        
+        #<hotfix><key>"SparkLevelPatchEntry-ApocCOMIDClear45"</key><value>",GD_Pet_ItemPools.ClassModPools.Pool_Pet_ClassMod_All,BalancedItems[3].Probability.InitializationDefinition,,None"</value><on>
+        
+        #<hotfix><key>"SparkLevelPatchEntry-ApocCOMIDClear46"</key><value>",GD_Pet_ItemPools.ClassModPools.Pool_Pet_ClassMod_All,BalancedItems[4].Probability.InitializationDefinition,,None"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-ApocCOMIDClear47"</key><value>",GD_Pet_ItemPools.ClassModPools.Pool_Pet_ClassMod_All,BalancedItems[5].Probability.InitializationDefinition,,None"</value><on>
+
+    #</Level Clear>
+
+    #<Lawbringer>
+
+        # Allows Lawbringer COM drops when that class joins
+
+        #<hotfix><key>"SparkOnDemandPatchEntry-ApocCOMLawbringerSet0"</key><value>"GD_Lawbringer_Streaming,GD_Itempools.ClassModPools.Pool_ClassMod_01_Common,BalancedItems[0].Probability.BaseValueConstant,,1"</value><on>
+
+        #<hotfix><key>"SparkOnDemandPatchEntry-ApocCOMLawbringerSet8"</key><value>"GD_Lawbringer_Streaming,GD_Itempools.ClassModPools.Pool_ClassMods_01_Common_1st,BalancedItems[0].Probability.BaseValueConstant,,1"</value><on>
+        
+        #<hotfix><key>"SparkOnDemandPatchEntry-ApocCOMLawbringerSet1"</key><value>"GD_Lawbringer_Streaming,GD_Itempools.ClassModPools.Pool_ClassMod_02_Uncommon,BalancedItems[0].Probability.BaseValueConstant,,1"</value><on>
+        
+        #<hotfix><key>"SparkOnDemandPatchEntry-ApocCOMLawbringerSet2"</key><value>"GD_Lawbringer_Streaming,GD_Itempools.ClassModPools.Pool_ClassMod_04_Rare,BalancedItems[0].Probability.BaseValueConstant,,1"</value><on>
+        
+        #<hotfix><key>"SparkOnDemandPatchEntry-ApocCOMLawbringerSet3"</key><value>"GD_Lawbringer_Streaming,GD_Itempools.ClassModPools.Pool_ClassMod_05_VeryRare,BalancedItems[0].Probability.BaseValueConstant,,1"</value><on>
+        
+        #<hotfix><key>"SparkOnDemandPatchEntry-ApocCOMLawbringerSet4"</key><value>"GD_Lawbringer_Streaming,GD_Itempools.ClassModPools.Pool_ClassMod_06_Legendary,BalancedItems[0].Probability.BaseValueConstant,,1"</value><on>
+        
+        #<hotfix><key>"SparkOnDemandPatchEntry-ApocCOMLawbringerSet9"</key><value>"GD_Lawbringer_Streaming,GD_Itempools.ClassModPools.Pool_ClassMods_06_Celestial,BalancedItems[0].Probability.BaseValueConstant,,1"</value><on>
+        
+        #<hotfix><key>"SparkOnDemandPatchEntry-ApocCOMLawbringerSet5"</key><value>"GD_Lawbringer_Streaming,GD_Itempools.ClassModPools.Pool_ClassMod_06_EridianVanquisher,BalancedItems[0].Probability.BaseValueConstant,,1"</value><on>
+
+        #<hotfix><key>"SparkOnDemandPatchEntry-ApocCOMLawbringerSet6"</key><value>"GD_Lawbringer_Streaming,GD_Pet_ItemPools.ClassModPools.Pool_Chronicler_ClassMod_All,BalancedItems[0].Probability.BaseValueConstant,,1"</value><on>
+
+        #<hotfix><key>"SparkOnDemandPatchEntry-ApocCOMLawbringerSet7"</key><value>"GD_Lawbringer_Streaming,GD_Pet_ItemPools.ClassModPools.Pool_Pet_ClassMod_All,BalancedItems[0].Probability.BaseValueConstant,,1"</value><on>
+
+    #</Lawbringer>
+
+    #<Prototype>
+
+        # Allows Prototype COM drops when that class joins
+
+        #<hotfix><key>"SparkOnDemandPatchEntry-ApocCOMPrototypeSet0"</key><value>"GD_Prototype_Streaming,GD_Itempools.ClassModPools.Pool_ClassMod_01_Common,BalancedItems[1].Probability.BaseValueConstant,,1"</value><on>
+
+        #<hotfix><key>"SparkOnDemandPatchEntry-ApocCOMPrototypeSet8"</key><value>"GD_Prototype_Streaming,GD_Itempools.ClassModPools.Pool_ClassMods_01_Common_1st,BalancedItems[1].Probability.BaseValueConstant,,1"</value><on>
+        
+        #<hotfix><key>"SparkOnDemandPatchEntry-ApocCOMPrototypeSet1"</key><value>"GD_Prototype_Streaming,GD_Itempools.ClassModPools.Pool_ClassMod_02_Uncommon,BalancedItems[1].Probability.BaseValueConstant,,1"</value><on>
+        
+        #<hotfix><key>"SparkOnDemandPatchEntry-ApocCOMPrototypeSet2"</key><value>"GD_Prototype_Streaming,GD_Itempools.ClassModPools.Pool_ClassMod_04_Rare,BalancedItems[1].Probability.BaseValueConstant,,1"</value><on>
+        
+        #<hotfix><key>"SparkOnDemandPatchEntry-ApocCOMPrototypeSet3"</key><value>"GD_Prototype_Streaming,GD_Itempools.ClassModPools.Pool_ClassMod_05_VeryRare,BalancedItems[1].Probability.BaseValueConstant,,1"</value><on>
+        
+        #<hotfix><key>"SparkOnDemandPatchEntry-ApocCOMPrototypeSet4"</key><value>"GD_Prototype_Streaming,GD_Itempools.ClassModPools.Pool_ClassMod_06_Legendary,BalancedItems[1].Probability.BaseValueConstant,,1"</value><on>
+        
+        #<hotfix><key>"SparkOnDemandPatchEntry-ApocCOMPrototypeSet9"</key><value>"GD_Prototype_Streaming,GD_Itempools.ClassModPools.Pool_ClassMods_06_Celestial,BalancedItems[1].Probability.BaseValueConstant,,1"</value><on>
+        
+        #<hotfix><key>"SparkOnDemandPatchEntry-ApocCOMPrototypeSet5"</key><value>"GD_Prototype_Streaming,GD_Itempools.ClassModPools.Pool_ClassMod_06_EridianVanquisher,BalancedItems[1].Probability.BaseValueConstant,,1"</value><on>
+
+        #<hotfix><key>"SparkOnDemandPatchEntry-ApocCOMPrototypeSet6"</key><value>"GD_Prototype_Streaming,GD_Pet_ItemPools.ClassModPools.Pool_Chronicler_ClassMod_All,BalancedItems[1].Probability.BaseValueConstant,,1"</value><on>
+
+        #<hotfix><key>"SparkOnDemandPatchEntry-ApocCOMPrototypeSet7"</key><value>"GD_Prototype_Streaming,GD_Pet_ItemPools.ClassModPools.Pool_Pet_ClassMod_All,BalancedItems[1].Probability.BaseValueConstant,,1"</value><on>
+
+    #</Prototype>
+
+    #<Enforcer>
+
+        # Allows Enforcer COM drops when that class joins
+
+        #<hotfix><key>"SparkOnDemandPatchEntry-ApocCOMEnforcerSet0"</key><value>"GD_Enforcer_Streaming,GD_Itempools.ClassModPools.Pool_ClassMod_01_Common,BalancedItems[2].Probability.BaseValueConstant,,1"</value><on>
+
+        #<hotfix><key>"SparkOnDemandPatchEntry-ApocCOMEnforcerSet8"</key><value>"GD_Enforcer_Streaming,GD_Itempools.ClassModPools.Pool_ClassMods_01_Common_1st,BalancedItems[2].Probability.BaseValueConstant,,1"</value><on>
+        
+        #<hotfix><key>"SparkOnDemandPatchEntry-ApocCOMEnforcerSet1"</key><value>"GD_Enforcer_Streaming,GD_Itempools.ClassModPools.Pool_ClassMod_02_Uncommon,BalancedItems[2].Probability.BaseValueConstant,,1"</value><on>
+        
+        #<hotfix><key>"SparkOnDemandPatchEntry-ApocCOMEnforcerSet2"</key><value>"GD_Enforcer_Streaming,GD_Itempools.ClassModPools.Pool_ClassMod_04_Rare,BalancedItems[2].Probability.BaseValueConstant,,1"</value><on>
+        
+        #<hotfix><key>"SparkOnDemandPatchEntry-ApocCOMEnforcerSet3"</key><value>"GD_Enforcer_Streaming,GD_Itempools.ClassModPools.Pool_ClassMod_05_VeryRare,BalancedItems[2].Probability.BaseValueConstant,,1"</value><on>
+        
+        #<hotfix><key>"SparkOnDemandPatchEntry-ApocCOMEnforcerSet4"</key><value>"GD_Enforcer_Streaming,GD_Itempools.ClassModPools.Pool_ClassMod_06_Legendary,BalancedItems[2].Probability.BaseValueConstant,,1"</value><on>
+        
+        #<hotfix><key>"SparkOnDemandPatchEntry-ApocCOMEnforcerSet9"</key><value>"GD_Enforcer_Streaming,GD_Itempools.ClassModPools.Pool_ClassMods_06_Celestial,BalancedItems[2].Probability.BaseValueConstant,,1"</value><on>
+        
+        #<hotfix><key>"SparkOnDemandPatchEntry-ApocCOMEnforcerSet5"</key><value>"GD_Enforcer_Streaming,GD_Itempools.ClassModPools.Pool_ClassMod_06_EridianVanquisher,BalancedItems[2].Probability.BaseValueConstant,,1"</value><on>
+
+        #<hotfix><key>"SparkOnDemandPatchEntry-ApocCOMEnforcerSet6"</key><value>"GD_Enforcer_Streaming,GD_Pet_ItemPools.ClassModPools.Pool_Chronicler_ClassMod_All,BalancedItems[2].Probability.BaseValueConstant,,1"</value><on>
+
+        #<hotfix><key>"SparkOnDemandPatchEntry-ApocCOMEnforcerSet7"</key><value>"GD_Enforcer_Streaming,GD_Pet_ItemPools.ClassModPools.Pool_Pet_ClassMod_All,BalancedItems[2].Probability.BaseValueConstant,,1"</value><on>
+
+    #</Enforcer>
+
+    #<Gladiator>
+
+        # Allows Gladiator COM drops when that class joins
+
+        #<hotfix><key>"SparkOnDemandPatchEntry-ApocCOMGladiatorSet0"</key><value>"GD_Gladiator_Streaming,GD_Itempools.ClassModPools.Pool_ClassMod_01_Common,BalancedItems[3].Probability.BaseValueConstant,,1"</value><on>
+
+        #<hotfix><key>"SparkOnDemandPatchEntry-ApocCOMGladiatorSet8"</key><value>"GD_Gladiator_Streaming,GD_Itempools.ClassModPools.Pool_ClassMods_01_Common_1st,BalancedItems[3].Probability.BaseValueConstant,,1"</value><on>
+        
+        #<hotfix><key>"SparkOnDemandPatchEntry-ApocCOMGladiatorSet1"</key><value>"GD_Gladiator_Streaming,GD_Itempools.ClassModPools.Pool_ClassMod_02_Uncommon,BalancedItems[3].Probability.BaseValueConstant,,1"</value><on>
+        
+        #<hotfix><key>"SparkOnDemandPatchEntry-ApocCOMGladiatorSet2"</key><value>"GD_Gladiator_Streaming,GD_Itempools.ClassModPools.Pool_ClassMod_04_Rare,BalancedItems[3].Probability.BaseValueConstant,,1"</value><on>
+        
+        #<hotfix><key>"SparkOnDemandPatchEntry-ApocCOMGladiatorSet3"</key><value>"GD_Gladiator_Streaming,GD_Itempools.ClassModPools.Pool_ClassMod_05_VeryRare,BalancedItems[3].Probability.BaseValueConstant,,1"</value><on>
+        
+        #<hotfix><key>"SparkOnDemandPatchEntry-ApocCOMGladiatorSet4"</key><value>"GD_Gladiator_Streaming,GD_Itempools.ClassModPools.Pool_ClassMod_06_Legendary,BalancedItems[3].Probability.BaseValueConstant,,1"</value><on>
+        
+        #<hotfix><key>"SparkOnDemandPatchEntry-ApocCOMGladiatorSet9"</key><value>"GD_Gladiator_Streaming,GD_Itempools.ClassModPools.Pool_ClassMods_06_Celestial,BalancedItems[3].Probability.BaseValueConstant,,1"</value><on>
+        
+        #<hotfix><key>"SparkOnDemandPatchEntry-ApocCOMGladiatorSet5"</key><value>"GD_Gladiator_Streaming,GD_Itempools.ClassModPools.Pool_ClassMod_06_EridianVanquisher,BalancedItems[3].Probability.BaseValueConstant,,1"</value><on>
+
+        #<hotfix><key>"SparkOnDemandPatchEntry-ApocCOMGladiatorSet6"</key><value>"GD_Gladiator_Streaming,GD_Pet_ItemPools.ClassModPools.Pool_Chronicler_ClassMod_All,BalancedItems[3].Probability.BaseValueConstant,,1"</value><on>
+
+        #<hotfix><key>"SparkOnDemandPatchEntry-ApocCOMGladiatorSet7"</key><value>"GD_Gladiator_Streaming,GD_Pet_ItemPools.ClassModPools.Pool_Pet_ClassMod_All,BalancedItems[3].Probability.BaseValueConstant,,1"</value><on>
+
+    #</Gladiator>
+
+    #<Baroness>
+
+        # Allows Baroness COM drops when that class joins
+
+        #<hotfix><key>"SparkOnDemandPatchEntry-ApocCOMBaronessSet0"</key><value>"Crocus_Baroness_Streaming,GD_Itempools.ClassModPools.Pool_ClassMod_01_Common,BalancedItems[4].Probability.BaseValueConstant,,1"</value><on>
+
+        #<hotfix><key>"SparkOnDemandPatchEntry-ApocCOMBaronessSet8"</key><value>"Crocus_Baroness_Streaming,GD_Itempools.ClassModPools.Pool_ClassMods_01_Common_1st,BalancedItems[4].Probability.BaseValueConstant,,1"</value><on>
+        
+        #<hotfix><key>"SparkOnDemandPatchEntry-ApocCOMBaronessSet1"</key><value>"Crocus_Baroness_Streaming,GD_Itempools.ClassModPools.Pool_ClassMod_02_Uncommon,BalancedItems[4].Probability.BaseValueConstant,,1"</value><on>
+        
+        #<hotfix><key>"SparkOnDemandPatchEntry-ApocCOMBaronessSet2"</key><value>"Crocus_Baroness_Streaming,GD_Itempools.ClassModPools.Pool_ClassMod_04_Rare,BalancedItems[4].Probability.BaseValueConstant,,1"</value><on>
+        
+        #<hotfix><key>"SparkOnDemandPatchEntry-ApocCOMBaronessSet3"</key><value>"Crocus_Baroness_Streaming,GD_Itempools.ClassModPools.Pool_ClassMod_05_VeryRare,BalancedItems[4].Probability.BaseValueConstant,,1"</value><on>
+        
+        #<hotfix><key>"SparkOnDemandPatchEntry-ApocCOMBaronessSet4"</key><value>"Crocus_Baroness_Streaming,GD_Itempools.ClassModPools.Pool_ClassMod_06_Legendary,BalancedItems[4].Probability.BaseValueConstant,,1"</value><on>
+        
+        #<hotfix><key>"SparkOnDemandPatchEntry-ApocCOMBaronessSet9"</key><value>"Crocus_Baroness_Streaming,GD_Itempools.ClassModPools.Pool_ClassMods_06_Celestial,BalancedItems[4].Probability.BaseValueConstant,,1"</value><on>
+        
+        #<hotfix><key>"SparkOnDemandPatchEntry-ApocCOMBaronessSet5"</key><value>"Crocus_Baroness_Streaming,GD_Itempools.ClassModPools.Pool_ClassMod_06_EridianVanquisher,BalancedItems[4].Probability.BaseValueConstant,,1"</value><on>
+
+        #<hotfix><key>"SparkOnDemandPatchEntry-ApocCOMBaronessSet6"</key><value>"Crocus_Baroness_Streaming,GD_Pet_ItemPools.ClassModPools.Pool_Chronicler_ClassMod_All,BalancedItems[4].Probability.BaseValueConstant,,1"</value><on>
+
+        #<hotfix><key>"SparkOnDemandPatchEntry-ApocCOMBaronessSet7"</key><value>"Crocus_Baroness_Streaming,GD_Pet_ItemPools.ClassModPools.Pool_Pet_ClassMod_All,BalancedItems[4].Probability.BaseValueConstant,,1"</value><on>
+
+    #</Baroness>
+
+    #<Doppelganger>
+
+        # Allows Doppelganer COM drops when that class joins
+
+        #<hotfix><key>"SparkOnDemandPatchEntry-ApocCOMDoppelSet0"</key><value>"Quince_Doppel_Streaming,GD_Itempools.ClassModPools.Pool_ClassMod_01_Common,BalancedItems[5].Probability.BaseValueConstant,,1"</value><on>
+
+        #<hotfix><key>"SparkOnDemandPatchEntry-ApocCOMDoppelSet8"</key><value>"Quince_Doppel_Streaming,GD_Itempools.ClassModPools.Pool_ClassMods_01_Common_1st,BalancedItems[5].Probability.BaseValueConstant,,1"</value><on>
+        
+        #<hotfix><key>"SparkOnDemandPatchEntry-ApocCOMDoppelSet1"</key><value>"Quince_Doppel_Streaming,GD_Itempools.ClassModPools.Pool_ClassMod_02_Uncommon,BalancedItems[5].Probability.BaseValueConstant,,1"</value><on>
+        
+        #<hotfix><key>"SparkOnDemandPatchEntry-ApocCOMDoppelSet2"</key><value>"Quince_Doppel_Streaming,GD_Itempools.ClassModPools.Pool_ClassMod_04_Rare,BalancedItems[5].Probability.BaseValueConstant,,1"</value><on>
+        
+        #<hotfix><key>"SparkOnDemandPatchEntry-ApocCOMDoppelSet3"</key><value>"Quince_Doppel_Streaming,GD_Itempools.ClassModPools.Pool_ClassMod_05_VeryRare,BalancedItems[5].Probability.BaseValueConstant,,1"</value><on>
+        
+        #<hotfix><key>"SparkOnDemandPatchEntry-ApocCOMDoppelSet4"</key><value>"Quince_Doppel_Streaming,GD_Itempools.ClassModPools.Pool_ClassMod_06_Legendary,BalancedItems[5].Probability.BaseValueConstant,,1"</value><on>
+        
+        #<hotfix><key>"SparkOnDemandPatchEntry-ApocCOMDoppelSet9"</key><value>"Quince_Doppel_Streaming,GD_Itempools.ClassModPools.Pool_ClassMods_06_Celestial,BalancedItems[5].Probability.BaseValueConstant,,1"</value><on>
+        
+        #<hotfix><key>"SparkOnDemandPatchEntry-ApocCOMDoppelSet5"</key><value>"Quince_Doppel_Streaming,GD_Itempools.ClassModPools.Pool_ClassMod_06_EridianVanquisher,BalancedItems[5].Probability.BaseValueConstant,,1"</value><on>
+
+        #<hotfix><key>"SparkOnDemandPatchEntry-ApocCOMDoppelSet6"</key><value>"Quince_Doppel_Streaming,GD_Pet_ItemPools.ClassModPools.Pool_Chronicler_ClassMod_All,BalancedItems[5].Probability.BaseValueConstant,,1"</value><on>
+
+        #<hotfix><key>"SparkOnDemandPatchEntry-ApocCOMDoppelSet7"</key><value>"Quince_Doppel_Streaming,GD_Pet_ItemPools.ClassModPools.Pool_Pet_ClassMod_All,BalancedItems[5].Probability.BaseValueConstant,,1"</value><on>
+
+    #</Doppelganger>
+
+#</TPS No Wasted COMs>

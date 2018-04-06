@@ -1,0 +1,76 @@
+#<bekah>
+
+  #<Info>
+  #by Laxlife
+  #Replaces the Wallop, and turns it into one of the most powerful guns in BL2 -- The Bekah
+  #Breaks the Torgemada Shotgun. Turns it into a shotgun bekah, becuase I used its FiringModes.
+
+  #</Info>
+
+  #<Card>
+
+      set gd_cork_weap_assaultrifle.Name.Title_Jakobs.Title_Unique_Wallop PartName Bekah
+      set gd_cork_weap_assaultrifle.Name.Title_Jakobs.Title_Unique_Wallop:AttributePresentationDefinition_8 NoConstraintText Shoot them in the face. Twice.
+      set gd_cork_weap_assaultrifle.Barrel.AR_Barrel_Jakobs_Wallop WeaponCardAttributes ()
+      set gd_cork_weap_assaultrifle.Barrel.AR_Barrel_Jakobs_Wallop rarity (BaseValueConstant=501.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+
+  #</Card>
+
+  #<Attributes>
+
+      set gd_cork_weap_assaultrifle.Barrel.AR_Barrel_Jakobs_Wallop WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.300000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponPerShotAccuracyImpulse',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-0.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+      set gd_cork_weap_assaultrifle.Barrel.AR_Barrel_Jakobs_Wallop ExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.GameplayAttributes.PlayerCriticalHitBonus',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+      set gd_cork_weap_assaultrifle.Barrel.AR_Barrel_Jakobs_Wallop AttributeSlotUpgrades ((SlotName="WeaponSpread",GradeIncrease=-3,bActivateSlot=True),(SlotName="AccuracyMin",GradeIncrease=-3,bActivateSlot=True),(SlotName="WeaponDamage",GradeIncrease=2,bActivateSlot=True))
+
+  #</Attributes>
+
+  #<Barrel>
+
+      set gd_cork_weap_assaultrifle.Barrel.AR_Barrel_Jakobs_Wallop GestaltModeSkeletalMeshName AR_Barrel_Bandit
+      set gd_cork_weap_assaultrifle.Barrel.AR_Barrel_Jakobs_Wallop ManufacturerDefinitionForScopeMovie ManufacturerDefinition'GD_Manufacturers.Manufacturers.Bandit'
+  #</Barrel>
+
+  #<FiringModes>
+      set gd_cork_weap_assaultrifle.Barrel.AR_Barrel_Jakobs_Wallop CustomFiringModeDefinition FiringModeDefinition'GD_Cork_Weap_Shotgun.FiringModes.Bullet_Shotgun_Torgemada'
+
+      #<Main Bullet>
+
+        set GD_Cork_Weap_Shotgun.FiringModes.Bullet_Shotgun_Torgemada DamageTypeDefinition none
+        set GD_Cork_Weap_Shotgun.FiringModes.Bullet_Shotgun_Torgemada PartSysTemplate ParticleSystem'FX_WEP_Trails.Particles.Part_Wep_Tracer_Default'
+        set GD_Cork_Weap_Shotgun.FiringModes.Bullet_Shotgun_Torgemada ConditionalPartSysTemplate EffectCollectionDefinition'GD_Weap_Shared_Effects.Default_Tracers'
+        set GD_Cork_Weap_Shotgun.FiringModes.Bullet_Shotgun_Torgemada ImpactResponses ()
+        set GD_Cork_Weap_Shotgun.FiringModes.Bullet_Shotgun_Torgemada bSuppressWeaponSpread false
+        set GD_Cork_Weap_Shotgun.FiringModes.Bullet_Shotgun_Torgemada ScalePatternByWeaponSpread false
+        set GD_Cork_Weap_Shotgun.FiringModes.Bullet_Shotgun_Torgemada Speed 25000
+        set GD_Cork_Weap_Shotgun.FiringModes.Bullet_Shotgun_Torgemada AirFriction 0.000000
+        set GD_Cork_Weap_Shotgun.FiringModes.Bullet_Shotgun_Torgemada TimerEvents ((Time=0.010000,Response=(SplitNum=1,SplitAngle=0.000000,SplitAngleOffset=0.000000,SplitDistance=0.000000,SplitFire=FiringModeDefinition'GD_Cork_Weap_Shotgun.FiringModes.Bullet_Shotgun_Torgemada_Child',NewSpeed=0.000000,bDetonate=False,bRespawnTracer=False,bUpdateBeamSourceLocation=False,Behaviors=)),(Time=0.010000,Response=(SplitNum=2,SplitAngle=1.000000,SplitAngleOffset=0.000000,SplitDistance=0.000000,SplitFire=FiringModeDefinition'GD_Cork_Weap_Shotgun.FiringModes.Bullet_Shotgun_Torgemada_Child',NewSpeed=0.000000,bDetonate=False,bRespawnTracer=False,bUpdateBeamSourceLocation=False,Behaviors=)))
+        set GD_Cork_Weap_Shotgun.FiringModes.Bullet_Shotgun_Torgemada SoundDefinition FiringModeSoundDefinition'GD_Weap_Bullet_Tech_Sounds.Sound_Definitions.Default_Bullet'
+        set GD_Cork_Weap_Shotgun.FiringModes.Bullet_Shotgun_Torgemada FiringPatternLines ()
+        set GD_Cork_Weap_Shotgun.FiringModes.Bullet_Shotgun_Torgemada BasePatternSpread 1.000000
+        set GD_Cork_Weap_Shotgun.FiringModes.Bullet_Shotgun_Torgemada MinPatternScale 0.000000
+
+      #</Main Bullet>
+
+    #<Child Bullet>
+
+        set GD_Cork_Weap_Shotgun.FiringModes.Bullet_Shotgun_Torgemada_Child DamageTypeDefinition none
+        set GD_Cork_Weap_Shotgun.FiringModes.Bullet_Shotgun_Torgemada_Child PartSysTemplate ParticleSystem'FX_WEP_Trails.Particles.Part_Wep_Tracer_Default'
+        set GD_Cork_Weap_Shotgun.FiringModes.Bullet_Shotgun_Torgemada_Child ConditionalPartSysTemplate EffectCollectionDefinition'FX_WEP_Trails.Particles.Part_Wep_Tracer_Default'
+        set GD_Cork_Weap_Shotgun.FiringModes.Bullet_Shotgun_Torgemada_Child OnAnyImpact ()
+        set GD_Cork_Weap_Shotgun.FiringModes.Bullet_Shotgun_Torgemada_Child bPenetratePawn False
+        set GD_Cork_Weap_Shotgun.FiringModes.Bullet_Shotgun_Torgemada_Child NumRicochets 0
+        set GD_Cork_Weap_Shotgun.FiringModes.Bullet_Shotgun_Torgemada_Child Speed 1.000000
+        set GD_Cork_Weap_Shotgun.FiringModes.Bullet_Shotgun_Torgemada_Child AirFriction -18.000000
+        set GD_Cork_Weap_Shotgun.FiringModes.Bullet_Shotgun_Torgemada_Child TimerEvents ()
+        set GD_Cork_Weap_Shotgun.FiringModes.Bullet_Shotgun_Torgemada_Child SoundDefinition FiringModeSoundDefinition'GD_Weap_Bullet_Tech_Sounds.Sound_Definitions.Default_Bullet'
+        set GD_Cork_Weap_Shotgun.FiringModes.Bullet_Shotgun_Torgemada_Child BasePatternSpread 1.000000
+        set GD_Cork_Weap_Shotgun.FiringModes.Bullet_Shotgun_Torgemada_Child MinPatternScale 0.000000
+        set GD_Cork_Weap_Shotgun.FiringModes.Bullet_Shotgun_Torgemada_Child Acceleration (X=0.000000,Y=0.000000,Z=0.000000)
+
+    #</Child Bullet>
+
+  #</FiringModes>
+
+#</bekah>
