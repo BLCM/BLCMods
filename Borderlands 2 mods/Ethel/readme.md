@@ -1,23 +1,12 @@
-DerpTrap
-
-	Replaces DeathTrap's name with DerpTrap
-Seraphs Outside UVHM
-
-	Adds seraph crystals to the DLC raid bosses drop pools in normal/TVHM
-	Gives a 100% chance for either seraphs crystals to drop (approx 60%) or seraph gear to drop (weapons/Shields/etc. at approx 40%) 
-Firing Range Vendors
-
-	Adds 5 vendors to the firing range in sanctuary
-	1,2,4, and 5 are weapon vendors
-	4 is default ammo vendor, or optionally another weapon vendor
-Unique Vendor
-
-	changes Bagman's Loot pool to include all non-farmable unique weapons in vanilla drop tables
-	Removes the pot-o-gold / bigg thumprr from bagmans lootpool
-	Changes the vendor in TK baha's hut to have a unique following the above rules for the IOTD, normal items will still follow default spawning rules, only the IOTD is changed
-EZAmmoVendor
-
-	collapses all ammo down into 1(2) entry(entries) in the ammo dump vendor
-	refills all ammo of every type, (optionally) rockets
-	enables you to buy ammo if youre full, if you want to for whatever reason
-	in theory should also make loading the menu in ammo vendors less buggy/glitchy when backpack is full of gear, by removing unused entries 
+# disclaimer 
+  
+  these files are ***not*** to be reuploaded ***without*** explicit permission from me, either requested perms, or perms granted to you in this document.
+  
+  these files and content within are under the sole ownership of me, unless stated otherwise, and may be edited, deleted, or changed in any way without forward notification.
+  
+  these files and content within are free to use as desired under a personal use limited license that allows you to:
+  * use these files for private use between yourself and friends of yourself, be it in real life, or over the internet.
+  * make videos/ movies/ stream yourself using gameplay of these files so long as you do not claim these files nor its content are your own creation.
+  * make modpacks, compilations, modlists, or any other form of grouping of individual mods without requesting permission from me.
+    * so long as you provide credit in the form of a download link linking to [***this***](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/Ethel) github, or the one [here](https://github.com/Ethel173/BL2-Modding).
+  * use these files as a means to teach yourself or others how these mods or other mods on this github may work as a means of providing examples, both complete, and incomplete code without needed permission.

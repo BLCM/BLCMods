@@ -1,0 +1,40 @@
+#<Bone Shredder - Very Rare Tediore SMG>
+
+    by Kazy
+
+    Did you get bothered that the Bone Shredder was a Tediore in the first game, but a Bandit in BL2?
+
+    Me too!
+
+    I fixed it.
+
+    #<Coding>
+
+        #<Attributes>
+
+            set GD_Weap_SMG.ManufacturerMaterials.Mat_Bandit_3_BoneShredder WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=4.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+            set GD_Weap_SMG.Barrel.SMG_Barrel_Bandit_BoneShredder WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-4.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=4.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+        #</Attributes>
+
+        #<Appearance>
+
+            #<Switch from Bandit to Tediore>
+
+                set GD_Weap_SMG.A_Weapons_Unique.SMG_Bandit_3_BoneShredder BaseDefinition WeaponBalanceDefinition'GD_Weap_SMG.A_Weapons.SMG_Tediore_3_Rare'
+
+                set GD_Weap_SMG.A_Weapons_Unique.SMG_Bandit_3_BoneShredder:PartList BodyPartData (bEnabled=True,WeightedParts=((Part=WeaponPartDefinition'GD_Weap_SMG.Body.SMG_Body_Tediore_VarC',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=2)))
+
+                set GD_Weap_SMG.A_Weapons_Unique.SMG_Bandit_3_BoneShredder:WeaponPartListCollectionDefinition_175 BodyPartData (bEnabled=True,WeightedParts=((Part=WeaponPartDefinition'GD_Weap_SMG.Body.SMG_Body_Tediore_VarC',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=2)))
+
+                set GD_Weap_SMG.A_Weapons_Unique.SMG_Bandit_3_BoneShredder:WeaponPartListCollectionDefinition_175 AssociatedWeaponType WeaponTypeDefinition'GD_Weap_SMG.A_Weapons.WT_SMG_Tediore'
+
+            #</Switch from Bandit to Tediore>
+
+        #</Appearance>
+
+    #</Coding>
+
+#</Bone Shredder - Very Rare Tediore SMG>
+
