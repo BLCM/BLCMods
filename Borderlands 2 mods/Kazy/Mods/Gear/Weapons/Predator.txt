@@ -1,0 +1,98 @@
+#<Predator>
+
+    by Kazy
+
+    To quick-test this weapon, simply use the following Gibbed code for a Level 72 Ornery Predator.
+
+    BL2(hwAAAABf8wSHRwMJB4FEssOIhREKMgLG//////////+Xgvz/rwny)
+
+    The Predator is a replacement to the Infection, because honestly who actually liked that thing?
+
+    #<Description>
+
+        The Predator is a Seraph Jakobs Pistol, and shoots a single projectile which explodes on contact.
+
+        The Predator, upon firing, will summon a "Bloodwing" (It's Sandhawk bullets okay work with me here??), which will comes down at a 35-degree angle toward your bullet.
+
+        The "Bloodwing" will reach your target first, followed shortly after by the bullet.
+
+        #<This weapon has great synergy with...>
+
+            The Bee
+
+            Duty Calls
+
+            Reaper??
+
+            And other fantastical goods!
+
+        #</This weapon has great synergy with...>
+
+    #</Description>
+
+    #<Coding>
+
+        #<Appearance>
+
+            #<Name>
+
+                set GD_Sage_Weapons.Name.Title.Title_Unique_Rex PartName Predator
+
+                set GD_Sage_Weapons.Name.Title.Title_Unique_Rex:AttributePresentationDefinition_8 NoConstraintText You like my pet?<br><font color = "#ffffff">[funstat]Firing [skill]summons[-skill] a [skill]trusty companion[-skill] to [skill]swoop in[-skill] and [skill]attack[-skill].<font color = "#ffffff">
+
+            #</Name>
+
+            #<Skin>
+
+                set Sage_GunMaterials.Materials.Pistol.Mati_JakobsUniquePistol_Rex TextureParameterValues ((ParameterName="p_Masks",ParameterValue=Texture2D'Weap_Pistol.Tex.Weap_Pistols_Comp',ExpressionGUID=(A=-330624041,B=1167251458,C=-335191907,D=-166684394)),(ParameterName="p_NormalScopesEmissive",ParameterValue=Texture2D'Weap_Pistol.Tex.Weap_Pistols_Nrm',ExpressionGUID=(A=-1743872746,B=1126171774,C=119496871,D=-1952271718)),(ParameterName="p_Diffuse",ParameterValue=Texture2D'Common_GunMaterials.CompTextures.Weap_LauncherShotgunPistol_Comp',ExpressionGUID=(A=1757607260,B=1326539502,C=-317215581,D=-565807463)))
+
+                set Sage_GunMaterials.Materials.Pistol.Mati_JakobsUniquePistol_Rex Parent MaterialInstanceConstant'Common_GunMaterials.Materials.sniper.Mati_DahUniqueSR_Sloth'
+
+                set Sage_GunMaterials.Materials.Pistol.Mati_JakobsUniquePistol_Rex VectorParameterValues ((ParameterName="p_AColorHilight",ParameterValue=(R=0.906044,G=0.854217,B=0.565664,A=1.000000),ExpressionGUID=(A=384292798,B=1221323751,C=-2145405772,D=1872194118)),(ParameterName="p_AColorMidtone",ParameterValue=(R=0.718206,G=0.539368,B=0.412682,A=1.000000),ExpressionGUID=(A=1102826245,B=1256298978,C=-1429881438,D=-507521102)),(ParameterName="p_AColorShadow",ParameterValue=(R=0.403300,G=0.283903,B=0.133701,A=1.000000),ExpressionGUID=(A=1481234158,B=1129012376,C=-688827739,D=-2119135160)),(ParameterName="p_BColorHilight",ParameterValue=(R=0.206098,G=0.248610,B=0.094780,A=1.000000),ExpressionGUID=(A=170714760,B=1132476783,C=-275668290,D=655702143)),(ParameterName="p_BColorMidtone",ParameterValue=(R=0.007484,G=0.043085,B=0.003053,A=1.000000),ExpressionGUID=(A=473594356,B=1338758895,C=824823946,D=864253813)),(ParameterName="p_BColorShadow",ParameterValue=(R=0.125399,G=0.099460,B=0.041027,A=1.000000),ExpressionGUID=(A=-429590341,B=1156435294,C=-1015192901,D=687313413)),(ParameterName="p_CColorhilight",ParameterValue=(R=0.960401,G=0.062313,B=0.166296,A=1.000000),ExpressionGUID=(A=696455109,B=1155878830,C=-1741888361,D=802120528)),(ParameterName="p_CColorMidtone",ParameterValue=(R=0.960401,G=0.162313,B=0.166296,A=1.000000),ExpressionGUID=(A=696455109,B=1155878830,C=-1741888361,D=802120528)),(ParameterName="p_CColorShadow",ParameterValue=(R=0.960401,G=0.262313,B=0.466296,A=1.000000),ExpressionGUID=(A=696455109,B=1155878830,C=-1741888361,D=802120528)),(ParameterName="p_DColor",ParameterValue=(R=0.260401,G=0.032313,B=0.016296,A=1.000000),ExpressionGUID=(A=110180441,B=1232792373,C=-1232281417,D=-1030626065)),(ParameterName="p_ReflectionChannelScale",ParameterValue=(R=0.000000,G=0.000000,B=0.400000,A=0.000000),ExpressionGUID=(A=1869386622,B=1303200947,C=-1616405849,D=714558284)),(ParameterName="p_PatternScalePosition",ParameterValue=(R=3.000000,G=3.000000,B=0.595800,A=0.325600),ExpressionGUID=(A=-2005018406,B=1132497243,C=-39915121,D=208423616)),(ParameterName="p_PatternChannelScale",ParameterValue=(R=0.900000,G=0.000000,B=0.700000,A=0.000000),ExpressionGUID=(A=439432319,B=1091149893,C=-1991909502,D=1816944627)))
+
+                set GD_Sage_Weapons.Pistols.Pistol_Barrel_Jakobs_Rex AdditionalGestaltModeSkeletalMeshNames Pistol_Barrel_Maliwan
+
+            #</Skin>
+
+        #</Appearance>
+
+        #<Attributes>
+
+            #<FiringMode>
+
+                set GD_Weap_Pistol.FiringModes.Bullet_Pistol_Maliwan_ThunderballFists Speed 1700.000000
+
+                set GD_Weap_Pistol.FiringModes.Bullet_Pistol_Maliwan_ThunderballFists TimerEvents ((Time=0.010000,Response=(SplitNum=1,SplitAngle=-2.400000,SplitAngleOffset=35.000000,SplitDistance=100.000000,SplitFire=FiringModeDefinition'GD_Orchid_BossWeapons.FiringModes.Bullet_SMG_SandHawk',NewSpeed=0.000000,bDetonate=False,bRespawnTracer=False,bUpdateBeamSourceLocation=False,Behaviors=None)))
+
+                set GD_Weap_Pistol.FiringModes.Bullet_Pistol_Maliwan_ThunderballFists OnAnyImpact (())
+
+            #</FiringMode>
+
+            set GD_Sage_Weapons.Pistols.Pistol_Barrel_Jakobs_Rex PrefixList (())
+
+            set GD_Sage_Weapons.Pistols.Pistol_Barrel_Jakobs_Rex CustomFiringModeDefinition FiringModeDefinition'GD_Weap_Pistol.FiringModes.Bullet_Pistol_Maliwan_ThunderballFists'
+
+            set GD_Sage_Weapons.Pistols.Pistol_Barrel_Jakobs_Rex WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.300000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponReloadSpeed',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.200000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectileSpeedMultiplier',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.800000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+            set GD_Sage_Weapons.Pistols.Pistol_Barrel_Jakobs_Rex ExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.GameplayAttributes.PlayerCriticalHitBonus',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.750000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+        #</Attributes>
+
+        #<PartList>
+
+            #set GD_Sage_RaidWeapons.Pistol.Sage_Seraph_Infection_Balance BaseDefinition WeaponBalanceDefinition'GD_Weap_Pistol.A_Weapons.Pistol_Jakobs_4_VeryRare'<off>
+
+            #set GD_Sage_RaidWeapons.Pistol.Sage_Seraph_Infection_Balance:WeaponPartListCollectionDefinition_296 AssociatedWeaponType WeaponTypeDefinition'GD_Weap_Pistol.A_Weapons.WeaponType_Jakobs_Pistol'<off>
+
+            #set GD_Sage_RaidWeapons.Pistol.Sage_Seraph_Infection_Balance:WeaponPartListCollectionDefinition_296 BodyPartData (bEnabled=True,WeightedParts=((Part=WeaponPartDefinition'GD_Weap_Pistol.Body.Pistol_Body_Jakobs_4',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=2)))<off>
+
+            #set GD_Sage_RaidWeapons.Pistol.Sage_Seraph_Infection_Balance:PartList ElementalPartData (bEnabled=False,WeightedParts=)<off>
+
+            #set GD_Sage_RaidWeapons.Pistol.Sage_Seraph_Infection_Balance:WeaponPartListCollectionDefinition_296 ElementalPartData (bEnabled=True,WeightedParts=((Part=WeaponPartDefinition'GD_Weap_Pistol.elemental.Pistol_Elemental_Corrosive',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=0,DefaultWeightIndex=0)),(Part=WeaponPartDefinition'GD_Weap_Pistol.elemental.Pistol_Elemental_None',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=2)))<off>
+
+        #</PartList>
+
+    #</Coding>
+
+#</Predator>
+
