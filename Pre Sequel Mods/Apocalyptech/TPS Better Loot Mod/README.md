@@ -120,6 +120,9 @@ Mod Overview
     * Buffed the laser weapon drops from when Lost Legion Eternal troops start
       ascending to use the global drop pool instead of the enemy use pool.
     * Elder Opha and Virtuous Opha will drop from the badass pool.
+    * Fixed Iwajira, Volcantis, and Odjurymir's pools so that the Hail has an
+      even chance of dropping with everything else in their pool, as opposed to
+      a greatly-increased chance, which is the default.
     * Added Zim and Min Min Lighter to Teh Earworm's drop pool, since you fight
       and kill it three times over the course of the You Can Stop The Music
       mission.
@@ -320,7 +323,11 @@ for the full text.
 Changelog
 =========
 
-**v1.0.1**, April 3, 2018:
+**v1.0.2**, April 12, 2018:
+ * Fixed Iwajira / Volcantis / Odjurymir's drop pool so that the Hail isn't vastly
+   preferred over the other drops.
+
+**v1.0.1**, April 3, 2018 (commit `94e1898dfe792f7be67e5a25d55055499ae4709f`):
  * Tweak to how we set up the legendary Class Mod pools, for compatibilty with my
    TPS No Wasted COMs mod (specifically to use the same method used in the BL2
    Better Loot Mod).  No actual effect on how the mod behaves.
