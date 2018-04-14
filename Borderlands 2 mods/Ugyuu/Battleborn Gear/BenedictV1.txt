@@ -1,4 +1,4 @@
-#<Notes>
+#<Benedict>
   _    _  _____  _   _  _    _  _    _
  | |  | || ____|| | | || |  | || |  | |
  | |  | || | __ | \_/ || |  | || |  | |
@@ -11,9 +11,7 @@ Breaks the Hive and makes it so that the attribute of "Revived Health Multiplier
 If your UPR-SM23 is not regenerating ammo, re-equip it in your inventory.
 If you don't like the current look of the barrel, there's a code for an alternate barrel look below!
 
-#</Notes>
-
-#<Features>
+    #<Features>
 
 These features all represent Benedict's skills in Battleborn.
 Hawkeye: Fires a rocket that deals damage and targets your enemy for a limited time. Subsequent rockets home in on targeted enemies. --> Fires 3 Homing Rockets.
@@ -29,9 +27,9 @@ Weapon-Related changes;
 - Decreased accuracy.
 - Locked clip size of 5.
 
-#</Features>
+    #</Features>
 
-#<Code>
+    #<Code>
 
 set D_Attributes.SkillAttributes.RevivalHealthMultiplier:ObjectpropertyAttributeValueResolver_20 PropertyName JumpZ
 set D_Attributes.Injured.RevivedHealthAmount:SimpleMathValueResolver_0 Argument (BaseValueScaleConstant=0.000000)
@@ -74,4 +72,24 @@ Activate by changing "#set" to "set".
 #set GD_Weap_Launchers.Barrel.L_Barrel_Torgue_Nukem GestaltModeSkeletalMeshName L_Barrel_Torgue
 #set GD_Weap_Launchers.Barrel.L_Barrel_Torgue_Nukem AdditionalGestaltModeSkeletalMeshNames L_Barrel_Bandit
 
-#</Code>
+    #</Code>
+    
+    #<ALTERNATE BARREL>
+
+########Abandoned-Code-Involving-Me-Wanting-A-Rotating-Barrel-But-It-Didn't-Work########
+#set GD_Weap_Launchers.Barrel.L_Barrel_Torgue_Nukem NumPhysicalBarrelsToFireFrom 2
+#set GD_Weap_Launchers.Barrel.L_Barrel_Torgue_Nukem bIsSpinningEnabled True
+#set GD_Weap_Launchers.Barrel.L_Barrel_Torgue_Nukem StartingSpinUpFireIntervalMultiplier 1.000000
+#set GD_Weap_Launchers.Barrel.L_Barrel_Torgue_Nukem SpinUpDuration (BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+#set GD_Weap_Launchers.Barrel.L_Barrel_Torgue_Nukem SpinDownDuration (BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+#set GD_Weap_Launchers.Barrel.L_Barrel_Torgue_Nukem BoneControllers ((BoneName="Vladof_Pods",ControlType=WEAP_BONE_CONTROL_BarrelSpinner,bUseInFirstPerson=True,bUseInThirdPerson=True,ControlTemplate=WillowSkelControlLerpSingleBone'GD_Weap_Launchers.Barrel.L_Barrel_Vladof:WillowSkelControlLerpSingleBone_0'))
+########################################################################################
+~
+#####ALTERNATE BARREL#####
+Activate by changing "#set" to "set".
+#set GD_Weap_Launchers.Barrel.L_Barrel_Torgue_Nukem GestaltModeSkeletalMeshName L_Barrel_Torgue
+#set GD_Weap_Launchers.Barrel.L_Barrel_Torgue_Nukem AdditionalGestaltModeSkeletalMeshNames L_Barrel_Bandit
+    
+    #</ALTERNATE BARREL>
+
+#</Benedict>
