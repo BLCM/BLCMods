@@ -32,6 +32,14 @@ crouched, and while in FFYL).  It also increases the jump height a bit, and
 increases air control by quite a lot.  If you're looking to zip through
 some levels like there's no tomorrow, this is for you.
 
+BL2 No Wasted COMs
+------------------
+
+This mod changes the Class Mod drop pools such that the only COMs which drop
+are for characters who are actually playing the game.  For a singleplayer
+game, that means you'll only ever get COMs for your one character, for
+instance.
+
 Guaranteed Omnd-Omnd-Ohk
 ------------------------
 
@@ -53,14 +61,6 @@ Alters a few levels (specifically: Arid Nexus Badlands, Hero's Pass, Opportunity
 Sawtooth Cauldron, and Tundra Express) so that as many containers as possible
 can spawn loot midgets.  This doesn't meant that *all* containers can spawn
 midgets, but there'll be more than there were.
-
-No Wasted COMs
---------------
-
-This mod changes the Class Mod drop pools such that the only COMs which drop
-are for characters who are actually playing the game.  For a singleplayer
-game, that means you'll only ever get COMs for your one character, for
-instance.
 
 Utilities
 =========

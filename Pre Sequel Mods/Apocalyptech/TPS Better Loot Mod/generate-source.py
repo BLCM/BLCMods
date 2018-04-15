@@ -52,7 +52,7 @@ except ModuleNotFoundError:
 ###
 
 mod_name = 'TPS Better Loot Mod'
-mod_version = '1.0.0'
+mod_version = '1.0.2'
 variant_ucp = 'UCP Compat'
 variant_offline = 'Standalone Offline'
 
@@ -434,214 +434,6 @@ for (number, rarity) in [
                 rarity,
                 idx,
                 gunprob))
-
-# Fix legendary Class Mod pool.  We would usually do this via `set`, but
-# some hotfix-like behavior in the character DLCs ends up resetting the
-# pool and ignoring any changes we'd made with `set`, so we must hotfix,
-# instead.
-hfs.add_level_hotfix('legendary_com_fix', 'LegendaryCOMs',
-    """,GD_Itempools.ClassModPools.Pool_ClassMod_06_Legendary,BalancedItems,,
-    (
-        (
-            ItmPoolDefinition=None, 
-            InvBalanceDefinition=InventoryBalanceDefinition'GD_Crocus_ItemGrades.ClassMods.BalDef_ClassMod_Baroness_05_Legendary', 
-            Probability=( 
-                BaseValueConstant=1.000000, 
-                BaseValueAttribute=None, 
-                InitializationDefinition=None,
-                BaseValueScaleConstant=1.000000 
-            ), 
-            bDropOnDeath=True 
-        ),
-        (
-            ItmPoolDefinition=None, 
-            InvBalanceDefinition=InventoryBalanceDefinition'GD_Quince_ItemGrades.ClassMods.BalDef_ClassMod_Doppelganger_05_Legendary', 
-            Probability=( 
-                BaseValueConstant=1.000000, 
-                BaseValueAttribute=None, 
-                InitializationDefinition=None,
-                BaseValueScaleConstant=1.000000 
-            ), 
-            bDropOnDeath=True 
-        ),
-        (
-            ItmPoolDefinition=None, 
-            InvBalanceDefinition=InventoryBalanceDefinition'GD_Cork_ItemGrades.ClassMods.BalDef_ClassMod_Enforcer_05_Legendary', 
-            Probability=( 
-                BaseValueConstant=1.000000, 
-                BaseValueAttribute=None, 
-                InitializationDefinition=None,
-                BaseValueScaleConstant=1.000000 
-            ), 
-            bDropOnDeath=True 
-        ),
-        (
-            ItmPoolDefinition=None, 
-            InvBalanceDefinition=InventoryBalanceDefinition'GD_Cork_ItemGrades.ClassMods.BalDef_ClassMod_Prototype_05_Legendary', 
-            Probability=( 
-                BaseValueConstant=1.000000, 
-                BaseValueAttribute=None, 
-                InitializationDefinition=None,
-                BaseValueScaleConstant=1.000000 
-            ), 
-            bDropOnDeath=True 
-        ),
-        (
-            ItmPoolDefinition=None, 
-            InvBalanceDefinition=InventoryBalanceDefinition'GD_Cork_ItemGrades.ClassMods.BalDef_ClassMod_Gladiator_05_Legendary', 
-            Probability=( 
-                BaseValueConstant=1.000000, 
-                BaseValueAttribute=None, 
-                InitializationDefinition=None,
-                BaseValueScaleConstant=1.000000 
-            ), 
-            bDropOnDeath=True 
-        ),
-        (
-            ItmPoolDefinition=None, 
-            InvBalanceDefinition=InventoryBalanceDefinition'GD_Cork_ItemGrades.ClassMods.BalDef_ClassMod_Lawbringer_05_Legendary', 
-            Probability=( 
-                BaseValueConstant=1.000000, 
-                BaseValueAttribute=None, 
-                InitializationDefinition=None,
-                BaseValueScaleConstant=1.000000 
-            ), 
-            bDropOnDeath=True 
-        ),
-        (
-            ItmPoolDefinition=None, 
-            InvBalanceDefinition=InventoryBalanceDefinition'GD_Crocus_ItemGrades.ClassMods.BalDef_ClassMod_Baroness_07_ChroniclerOfElpis', 
-            Probability=( 
-                BaseValueConstant=1.000000, 
-                BaseValueAttribute=None, 
-                InitializationDefinition=None,
-                BaseValueScaleConstant=1.000000 
-            ), 
-            bDropOnDeath=True 
-        ),
-        (
-            ItmPoolDefinition=None, 
-            InvBalanceDefinition=InventoryBalanceDefinition'GD_Petunia_ItemGrades.ClassMods.BalDef_Pet_ClassMod_Doppel_07_Chronicler', 
-            Probability=( 
-                BaseValueConstant=1.000000, 
-                BaseValueAttribute=None, 
-                InitializationDefinition=None,
-                BaseValueScaleConstant=1.000000 
-            ), 
-            bDropOnDeath=True 
-        ),
-        (
-            ItmPoolDefinition=None, 
-            InvBalanceDefinition=InventoryBalanceDefinition'GD_Petunia_ItemGrades.ClassMods.BalDef_Pet_ClassMod_Enforcer_07_Chronicler', 
-            Probability=( 
-                BaseValueConstant=1.000000, 
-                BaseValueAttribute=None, 
-                InitializationDefinition=None,
-                BaseValueScaleConstant=1.000000 
-            ), 
-            bDropOnDeath=True 
-        ),
-        (
-            ItmPoolDefinition=None, 
-            InvBalanceDefinition=InventoryBalanceDefinition'GD_Petunia_ItemGrades.ClassMods.BalDef_Pet_ClassMod_Gladiator_07_Chronicler', 
-            Probability=( 
-                BaseValueConstant=1.000000, 
-                BaseValueAttribute=None, 
-                InitializationDefinition=None,
-                BaseValueScaleConstant=1.000000 
-            ), 
-            bDropOnDeath=True 
-        ),
-        (
-            ItmPoolDefinition=None, 
-            InvBalanceDefinition=InventoryBalanceDefinition'GD_Petunia_ItemGrades.ClassMods.BalDef_Pet_ClassMod_Lawbringer_07_Chronicler', 
-            Probability=( 
-                BaseValueConstant=1.000000, 
-                BaseValueAttribute=None, 
-                InitializationDefinition=None,
-                BaseValueScaleConstant=1.000000 
-            ), 
-            bDropOnDeath=True 
-        ),
-        (
-            ItmPoolDefinition=None, 
-            InvBalanceDefinition=InventoryBalanceDefinition'GD_Petunia_ItemGrades.ClassMods.BalDef_Pet_ClassMod_Prototype_07_Chronicler', 
-            Probability=( 
-                BaseValueConstant=1.000000, 
-                BaseValueAttribute=None, 
-                InitializationDefinition=None,
-                BaseValueScaleConstant=1.000000 
-            ), 
-            bDropOnDeath=True 
-        ),
-        (
-            ItmPoolDefinition=None, 
-            InvBalanceDefinition=InventoryBalanceDefinition'GD_Cork_ItemGrades.ClassMods.BalDef_ClassMod_Enforcer_06_EridianVanquisher', 
-            Probability=( 
-                BaseValueConstant=1.000000, 
-                BaseValueAttribute=None, 
-                InitializationDefinition=None,
-                BaseValueScaleConstant=1.000000 
-            ), 
-            bDropOnDeath=True 
-        ),
-        (
-            ItmPoolDefinition=None, 
-            InvBalanceDefinition=InventoryBalanceDefinition'GD_Cork_ItemGrades.ClassMods.BalDef_ClassMod_Gladiator_06_EridianVanquisher', 
-            Probability=( 
-                BaseValueConstant=1.000000, 
-                BaseValueAttribute=None, 
-                InitializationDefinition=None,
-                BaseValueScaleConstant=1.000000 
-            ), 
-            bDropOnDeath=True 
-        ),
-        (
-            ItmPoolDefinition=None, 
-            InvBalanceDefinition=InventoryBalanceDefinition'GD_Cork_ItemGrades.ClassMods.BalDef_ClassMod_Lawbringer_06_EridianVanquisher', 
-            Probability=( 
-                BaseValueConstant=1.000000, 
-                BaseValueAttribute=None, 
-                InitializationDefinition=None,
-                BaseValueScaleConstant=1.000000 
-            ), 
-            bDropOnDeath=True 
-        ),
-        (
-            ItmPoolDefinition=None, 
-            InvBalanceDefinition=InventoryBalanceDefinition'GD_Cork_ItemGrades.ClassMods.BalDef_ClassMod_Prototype_06_EridianVanquisher', 
-            Probability=( 
-                BaseValueConstant=1.000000, 
-                BaseValueAttribute=None, 
-                InitializationDefinition=None,
-                BaseValueScaleConstant=1.000000 
-            ), 
-            bDropOnDeath=True 
-        ),
-        (
-            ItmPoolDefinition=None, 
-            InvBalanceDefinition=InventoryBalanceDefinition'GD_Crocus_ItemGrades.ClassMods.BalDef_ClassMod_Baroness_06_EridianVanquisher', 
-            Probability=( 
-                BaseValueConstant=1.000000, 
-                BaseValueAttribute=None, 
-                InitializationDefinition=None,
-                BaseValueScaleConstant=1.000000 
-            ), 
-            bDropOnDeath=True 
-        ),
-        (
-            ItmPoolDefinition=None, 
-            InvBalanceDefinition=InventoryBalanceDefinition'GD_Quince_ItemGrades.ClassMods.BalDef_ClassMod_Doppelganger_06_EridianVanquisher', 
-            Probability=( 
-                BaseValueConstant=1.000000, 
-                BaseValueAttribute=None, 
-                InitializationDefinition=None,
-                BaseValueScaleConstant=1.000000 
-            ), 
-            bDropOnDeath=True 
-        )
-    )
-    """)
 
 # Guaranteed Luneshine for Unique/Legendary weapons.  This is generated
 # automatically by `gen_guaranteed_luneshine.py`.  Note that removing the
@@ -2238,6 +2030,19 @@ hfs.add_level_hotfix('felicity_holodome_drop', 'FelicityHolodomeDrop',
     GD_DahlCombatSuit_Felicity.Population.PawnBalance_DahlCombatSuit_Felicity,
     DefaultItemPoolIncludedLists,,
     (ItemPoolListDefinition'GD_Itempools.ListDefs.BadassEnemyGunsAndGear')""")
+
+# Clean up Iwajira's drop pool - something which acts like a hotfix but isn't
+# a hotfix adds the Hail to GD_Itempools.Runnables.Pool_Rockzilla with a scale
+# of 8, making it far more likely than the other two items in there.  We'll
+# nerf that down to 1.  Even though that object is available from the main
+# menu, we need to use a hotfix because of when the game applies its not-
+# actually-a-hotfix change.
+hfs.add_level_hotfix('iwajira_hail_nerf', 'IwajiraHailNerf',
+    """Moonsurface_P,
+    GD_Itempools.Runnables.Pool_Rockzilla,
+    BalancedItems[2].Probability.BaseValueScaleConstant,,
+    1
+    """)
 
 # Exhaustive early-game weapon unlocks.  Generated by `part_unlock.py` using
 # ft-explorer data.

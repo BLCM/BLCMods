@@ -36,6 +36,14 @@ crouched, and while in FFYL).  It also increases the jump height a bit, and
 increases air control by quite a lot.  If you're looking to zip through
 some levels like there's no tomorrow, this is for you.
 
+TPS No Wasted COMs
+------------------
+
+This mod changes the Class Mod drop pools such that the only COMs which drop
+are for characters who are actually playing the game.  For a singleplayer
+game, that means you'll only ever get COMs for your one character, for
+instance.
+
 Licenses
 ========
 

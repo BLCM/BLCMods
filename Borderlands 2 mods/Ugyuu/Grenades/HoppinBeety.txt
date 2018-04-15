@@ -1,3 +1,5 @@
+#<HoppinBeety>
+
 | |  | || ____|| | | || |  | || |  | |
 | |  | || | __ | \_/ || |  | || |  | |
 | |  | || ||_ | \   / | |  | || |  | |
@@ -6,16 +8,22 @@
 
 Makes the Bouncing Bonny a little more special to make it stand out.
 
-[Features]
+    #<Features>
 
 - x4 Child grenades that behave like Transfusion child grenades, spawning a transfusion bolt upon hitting an enemy.
 - Lowered blast radius slightly
 - The Bonny child grenades have a chance to spawn a transfusion bolt as well.
 
-[Code]
-
+    #</Features>
+    
+    #<Code>
+    
 set GD_GrenadeMods.Title.Title_BouncingBonny PartName Hoppin' Beety
 set GD_GrenadeMods.Payload.Payload_BouncingBonny:AttributePresentationDefinition_4 Description Frenemy to all, even to it's explosive self.
 
 set GD_GrenadeMods.A_Item_Legendary.GrenadeMod_BouncingBonny ItemAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.GrenadeMod.GrenadeDamage',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance_HealthAndDamage.HealthAndDamage.Init_GrenadeModDamage',BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.GrenadeMod.BlastRadius',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=515.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.GrenadeMod.NumberOfChildProjectiles',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=4.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.GrenadeMod.GrenadeModBaseStatusEffectChanceModifier',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.GrenadeMod.GrenadeModStatusEffectChanceModifier',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.900000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
 set GD_GrenadeMods.Payload.Payload_BouncingBonny SetProjectileSequenceState ((Action=CHANGE_Enable,SequenceName="Payload_BouncingBonny"),(Action=CHANGE_Enable,SequenceName="Payload_Transfusion"))
+
+    #</Code>
+    
+#</HoppinBeety>
