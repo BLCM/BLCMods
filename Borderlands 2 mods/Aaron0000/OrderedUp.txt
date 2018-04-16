@@ -4,55 +4,65 @@
 
         By Aaron0000
 
-        Makes most bayonets work with the Order's health steal ability (excluding Rapier because that'd be excessive) to give the Order some usability outside the Law.
+        Makes most bayonets (excluding Rapier) and normal roid shields work together like the Law and Order combo..
 
     #</Description>
 
     #<Code>
 
-        #<Pistols>
+        #<Make Bayonets work like Law>
 
-            set GD_Weap_Pistol.Accessory.Pistol_Accessory_Bayonet_1 ExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.DamageSourceModifiers.InstigatedMeleeDamageModifier',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=DesignerAttributeDefinition'GD_Shields.Attributes.Attr_LawEquipped',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+            #<Pistols>
 
-            set GD_Weap_Pistol.Accessory.Pistol_Accessory_Bayonet_2 ExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.DamageSourceModifiers.InstigatedMeleeDamageModifier',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=DesignerAttributeDefinition'GD_Shields.Attributes.Attr_LawEquipped',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+                set GD_Weap_Pistol.Accessory.Pistol_Accessory_Bayonet_1 ExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.DamageSourceModifiers.InstigatedMeleeDamageModifier',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=DesignerAttributeDefinition'GD_Shields.Attributes.Attr_LawEquipped',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
 
-        #</Pistols>
+                set GD_Weap_Pistol.Accessory.Pistol_Accessory_Bayonet_2 ExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.DamageSourceModifiers.InstigatedMeleeDamageModifier',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=DesignerAttributeDefinition'GD_Shields.Attributes.Attr_LawEquipped',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
 
-        #<Assault Rifles>
+            #</Pistols>
 
-            set GD_Weap_AssaultRifle.Accessory.AR_Accessory_Bayonet_1 ExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.DamageSourceModifiers.InstigatedMeleeDamageModifier',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=DesignerAttributeDefinition'GD_Shields.Attributes.Attr_LawEquipped',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+            #<Assault Rifles>
 
-            set GD_Weap_AssaultRifle.Accessory.AR_Accessory_Bayonet_2 ExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.DamageSourceModifiers.InstigatedMeleeDamageModifier',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=DesignerAttributeDefinition'GD_Shields.Attributes.Attr_LawEquipped',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+                set GD_Weap_AssaultRifle.Accessory.AR_Accessory_Bayonet_1 ExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.DamageSourceModifiers.InstigatedMeleeDamageModifier',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=DesignerAttributeDefinition'GD_Shields.Attributes.Attr_LawEquipped',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
 
-        #</Assault Rifles>
+                set GD_Weap_AssaultRifle.Accessory.AR_Accessory_Bayonet_2 ExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.DamageSourceModifiers.InstigatedMeleeDamageModifier',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=DesignerAttributeDefinition'GD_Shields.Attributes.Attr_LawEquipped',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
 
-        #<Submachine Guns>
+            #</Assault Rifles>
 
-            set GD_Weap_SMG.Accessory.SMG_Accessory_Bayonet_1 ExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.DamageSourceModifiers.InstigatedMeleeDamageModifier',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=DesignerAttributeDefinition'GD_Shields.Attributes.Attr_LawEquipped',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+            #<Submachine Guns>
 
-            set GD_Weap_SMG.Accessory.SMG_Accessory_Bayonet_2 ExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.DamageSourceModifiers.InstigatedMeleeDamageModifier',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=DesignerAttributeDefinition'GD_Shields.Attributes.Attr_LawEquipped',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+                set GD_Weap_SMG.Accessory.SMG_Accessory_Bayonet_1 ExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.DamageSourceModifiers.InstigatedMeleeDamageModifier',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=DesignerAttributeDefinition'GD_Shields.Attributes.Attr_LawEquipped',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
 
-        #</Submachine Guns>
+                set GD_Weap_SMG.Accessory.SMG_Accessory_Bayonet_2 ExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.DamageSourceModifiers.InstigatedMeleeDamageModifier',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=DesignerAttributeDefinition'GD_Shields.Attributes.Attr_LawEquipped',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
 
-        #<Shotguns>
+            #</Submachine Guns>
 
-            set GD_Weap_Shotgun.Accessory.SG_Accessory_Bayonet_1 ExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.DamageSourceModifiers.InstigatedMeleeDamageModifier',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=DesignerAttributeDefinition'GD_Shields.Attributes.Attr_LawEquipped',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+            #<Shotguns>
 
-            set GD_Weap_Shotgun.Accessory.SG_Accessory_Bayonet_2 ExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.DamageSourceModifiers.InstigatedMeleeDamageModifier',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=DesignerAttributeDefinition'GD_Shields.Attributes.Attr_LawEquipped',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+                set GD_Weap_Shotgun.Accessory.SG_Accessory_Bayonet_1 ExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.DamageSourceModifiers.InstigatedMeleeDamageModifier',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=DesignerAttributeDefinition'GD_Shields.Attributes.Attr_LawEquipped',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
 
-        #</Shotguns>
+                set GD_Weap_Shotgun.Accessory.SG_Accessory_Bayonet_2 ExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.DamageSourceModifiers.InstigatedMeleeDamageModifier',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=DesignerAttributeDefinition'GD_Shields.Attributes.Attr_LawEquipped',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
 
-        #<Sniper Rifles>
+            #</Shotguns>
 
-            set GD_Weap_SniperRifles.Accessory.Sniper_Accessory_Bayonet1 ExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.DamageSourceModifiers.InstigatedMeleeDamageModifier',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=DesignerAttributeDefinition'GD_Shields.Attributes.Attr_LawEquipped',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+            #<Sniper Rifles>
 
-        #</Sniper Rifles>
+                set GD_Weap_SniperRifles.Accessory.Sniper_Accessory_Bayonet1 ExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.DamageSourceModifiers.InstigatedMeleeDamageModifier',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=DesignerAttributeDefinition'GD_Shields.Attributes.Attr_LawEquipped',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
 
-        #<Rocket Launchers>
+            #</Sniper Rifles>
 
-            set GD_Weap_Launchers.Grip.L_Grip_Bandit ExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.DamageSourceModifiers.InstigatedMeleeDamageModifier',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=DesignerAttributeDefinition'GD_Shields.Attributes.Attr_LawEquipped',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+            #<Rocket Launchers>
 
-        #</Rocket Launchers>
+                set GD_Weap_Launchers.Grip.L_Grip_Bandit ExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.DamageSourceModifiers.InstigatedMeleeDamageModifier',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=DesignerAttributeDefinition'GD_Shields.Attributes.Attr_LawEquipped',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+            #</Rocket Launchers>
+
+        #</Make Bayonets work like Law>
+
+        #<Make normal Roid Shields work like Order>
+
+            set GD_Shields.Accessory.Accessory2_Roid BehaviorProviderDefinition GD_Shields.Accessory.Accessory2_Roid_Order:BehaviorProviderDefinition_0
+
+        #</Make normal Roid Shields work like Order>
 
     #</Code>
 
