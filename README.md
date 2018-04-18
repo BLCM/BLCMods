@@ -9,8 +9,9 @@ Check out the [Wiki](https://github.com/BL2CP/BLCMods/wiki). If you want to find
 
 ## Requirements
 
-These mods can only be installed on PC and will **never** be ported to consoles due to technical and legal limitations.    
-All **non-headhunter** DLC is required for the patch and likely most mods.
+These mods can only be installed on PC and will **never** be ported to consoles due to technical and legal limitations.
+
+All **non-headhunter** DLC is required for the patch and likely most mods, this includes both UVHMpacks and digistruct peak.
 
 support will most likely **NOT** be given for errors that the UCP cause due to missing DLC.
 
