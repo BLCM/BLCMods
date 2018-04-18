@@ -1,0 +1,38 @@
+_______________  _____________________________________  __.
+\_   _____/\   \/  /\_____  \__    ___/\_   _____/    |/ _|
+ |    __)_  \     /  /   |   \|    |    |    __)_|      <  
+ |        \ /     \ /    |    \    |    |        \    |  \ 
+/_______  //___/\  \\_______  /____|   /_______  /____|__ \
+        \/       \_/        \/                 \/        \/
+________________________________________________________________________________________________________________________
+
+    - REPLACES CLOUD KILL WITH "SHOCKWAVE",
+    - DEALS SHOCK DAMAGE ON IMPACT TO ALL ENEMIES CAUGHT WITHIN THE RADIUS,
+    - 100% CHANCE TO ELECTROCUTE ENEMIES WITH INCREASED DOT DAMAGE,
+    - RECHARGE (COOLDOWN) IS 10 SECONDS (WILL PROB NEED TO NERF THIS)...
+    
+! NOTE
+
+    - YOU SHOULD OBVIOUSLY USE FILTER TOOL TO MERGE HOTFIXES.
+
+# DEFINITIONS __________________________________________________________________________________________________________
+
+    #<hotfix><key>"SparkOnDemandPatchEntry-EQ_MAYASHOCKWAVE1"</key><value>"GD_Siren_Streaming,GD_Siren_Skills.Cataclysm.CloudKill,SkillName,,Shockwave"</value><on>
+
+    #<hotfix><key>"SparkOnDemandPatchEntry-EQ_MAYASHOCKWAVE2"</key><value>"GD_Siren_Streaming,GD_Siren_Skills.Cataclysm.CloudKill,SkillDescription,,Shooting an enemy creates a devastating [skill]Shockwave[-skill] dealing constant [skill]Shock Damage[-skill] to enemies who touch it. In addition it haves [place]100%[-place] chance to [skill]electrocute[-skill] nearby enemies dealing increased [skill]damage over time[-skill]. Only one [skill]Shockwave[-skill] can be active at a time."</value><on>
+
+    #<hotfix><key>"SparkOnDemandPatchEntry-EQ_MAYASHOCKWAVE3"</key><value>"GD_Siren_Streaming,GD_Siren_Skills.Cataclysm.CloudKill:AttributePresentationDefinition_0,Description,,Shockwave Recharge: [place]10[-place] seconds"</value><on>
+
+    #<hotfix><key>"SparkOnDemandPatchEntry-EQ_MAYASHOCKWAVE4"</key><value>"GD_Siren_Streaming,GD_Siren_Skills.Cataclysm.CloudKill,SkillIcon,,SwfMovie'SharedSkillIcons_Siren.SkillIcon-Sphere'"</value><on>
+
+    #<hotfix><key>"SparkOnDemandPatchEntry-EQ_MAYASHOCKWAVE5"</key><value>"GD_Siren_Streaming,GD_Siren_Skills.Cataclysm.CloudKill_Feedback,SkillIcon,,SwfMovie'SharedSkillIcons_Siren.SkillIcon-Sphere'"</value><on>
+
+    #<hotfix><key>"SparkOnDemandPatchEntry-EQ_MAYASHOCKWAVE6"</key><value>"GD_Siren_Streaming,GD_Siren_Skills.Cataclysm.CloudKill_Feedback,InitialDuration,,10.500000"</value><on>
+
+    #<hotfix><key>"SparkOnDemandPatchEntry-EQ_MAYASHOCKWAVE7"</key><value>"GD_Siren_Streaming,GD_Siren_Skills.Projectiles.CloudKill_Projectile:BehaviorProviderDefinition_0.Behavior_SpawnParticleSystem_51,ParticleEffect,,ParticleSystem'FX_WEP_Explosions.Particles.shock.Part_WEP_ShockExplosionLarge'"</value><on>
+
+    #<hotfix><key>"SparkOnDemandPatchEntry-EQ_MAYASHOCKWAVE8"</key><value>"GD_Siren_Streaming,GD_Siren_Skills.Projectiles.CloudKill_Projectile:BehaviorProviderDefinition_0.Behavior_CauseDamage_43,DamageTypeDefinition,,WillowDamageTypeDefinition'GD_Shock.DamageType.DmgType_Shock_Impact'"</value><on>
+
+    #<hotfix><key>"SparkOnDemandPatchEntry-EQ_MAYASHOCKWAVE9"</key><value>"GD_Siren_Streaming,GD_Siren_Skills.Projectiles.CloudKill_Projectile:BehaviorProviderDefinition_0.Behavior_CauseDamage_43,StatusEffectChance,,(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=100.000000)"</value><on>
+
+    #<hotfix><key>"SparkOnDemandPatchEntry-EQ_MAYASHOCKWAVE10"</key><value>"GD_Siren_Streaming,GD_Siren_Skills.Projectiles.CloudKill_Projectile:BehaviorProviderDefinition_0.Behavior_CauseDamage_43,StatusEffectDamage,,(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=50.000000)"</value><on>
