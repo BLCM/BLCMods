@@ -312,6 +312,9 @@ well-covered in other mods, so instead I'll just mention them here.
 TODO
 ----
 
+* Looks like some statements from my "Force Alignement COMS Blue And Higher"
+  section are being overwritten later on by my "Exhaustive Weapon/Item Part
+  Unlocks" section.  Whoops!  Fix that.
 * I haven't done much testing in TVHM/UVHM, though it should be fine in
   those modes.
 * Can we increase boss drop counts depending on player count?
