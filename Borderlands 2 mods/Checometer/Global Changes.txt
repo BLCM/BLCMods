@@ -1,24 +1,20 @@
 #<Global Changes>
 
-    #<KillSkillDurationPerPlayer>
+    #<Description>
 
-        #<Description>
+        These are changes to the global values of the game.
 
-            #This is actually broken and does not do at all what I expected.<off>
+        These are all simple but somewhat large, in a sense, changes.
 
-            #This makes it so kill skills never run out and can infinitely stack on top of them selves.<off>
+        It's a good idea to look at what you like and what you don't and to enable them or even change them yourself.
 
-        #</Description>
+    #</Description>
 
-        #Set GD_Globals.General.Globals KillSkillDurationsPerPlayers ((Players = 1,Duration = 8.000000))<off>
+    #<Longer KS Duration Per Player>
 
-        #Set GD_Globals.General.Globals KillSkillDurationsPerPlayers ((Players = 2,Duration = 11.000000))<off>
+        set GD_Globals.General.Globals KillSkillDurationsPerPlayers ((Players=1,Duration=9.000000),(Players=2,Duration=12.000000),(Players=3,Duration=14.000000),(Players=4,Duration=15.000000))
 
-        #Set GD_Globals.General.Globals KillSkillDurationsPerPlayers ((Players = 3,Duration = 13.000000))<off>
-
-        #Set GD_Globals.General.Globals KillSkillDurationsPerPlayers ((Players = 4,Duration = 14.000000))<off>
-
-    #</KillSkillDurationPerPlayer>
+    #</Longer KS Duration Per Player>
 
     #<More Tire Damage>
 
@@ -28,7 +24,7 @@
 
     #<Bigger Pickup Radius>
 
-        set GD_Globals.General.Globals PickupRadius 1500.000000
+        set GD_Globals.General.Globals PickupRadius 1200.000000
 
     #</Bigger Pickup Radius>
 
@@ -38,4 +34,53 @@
 
     #</Better Air Control>
 
+    #<Tele Time>
+
+        set GD_Globals.General.Globals TravelDelay 3
+
+    #</Tele Time>
+
+    #<Event Retrigger Delay>
+
+        set GD_Globals.General.Globals PlayerEventRetriggerDelaySeconds 5.000000
+
+    #</Event Retrigger Delay>
+
+    #<Mission Item Color>
+
+        set GD_Globals.General.Globals MissionItemRarityLevel 177
+
+    #</Mission Item Color>
+
+    #<Global AI Damage Scale>
+
+        #set GD_Globals.General.Globals GlobalAIDamageScale (BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance_HealthAndDamage.DamageMultipliers.Init_GlobalAIDamageBalanceMultiplier_Part1',BaseValueScaleConstant=1.000000)<off>
+
+        #set GD_Globals.General.Globals GlobalAIWeaponDamageScale (BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Globals.Balance.Init_EnemyGunDamage',BaseValueScaleConstant=1.000000)<off>
+
+        #set GD_Globals.General.Globals GlobalAIPistolWeaponDamageScale (BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)<off>
+
+        #set GD_Globals.General.Globals GlobalAIShotgunWeaponDamageScale (BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)<off>
+
+        #set GD_Globals.General.Globals GlobalAISmgWeaponDamageScale (BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)<off>
+
+        #set GD_Globals.General.Globals GlobalAISniperWeaponDamageScale (BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)<off>
+
+        #set GD_Globals.General.Globals GlobalAIAssaultWeaponDamageScale (BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)<off>
+
+        #set GD_Globals.General.Globals GlobalAIRocketWeaponDamageScale (BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)<off>
+
+    #</Global AI Damage Scale>
+
+    #<Health Gate>
+
+        #set GD_Globals.General.Globals ProtectionTimerThreshold 0.500000<off>
+
+        #set GD_Globals.General.Globals ProtectionTimerDurationInSeconds 2.000000<off>
+
+        #set GD_Globals.General.Globals ProtectionTimerMaintainedMaxHealthPct 0.100000<off>
+
+    #</Health Gate>
+
 #</Global Changes>
+
