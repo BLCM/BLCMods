@@ -1,0 +1,128 @@
+#<Divergence (1340 Shield Replacer)>
+
+    - Make sure to spawn this with a Maliwan Manufacturer if you gib it in. Here's a code, just in-case.
+
+    - BL2(BwAAAACqDAAKERigAxFQqAGEBEQHRCTE/////////z8YxA0ESMQ=) 
+
+    - Just check the card, should be obvious what it does.
+
+    #<Card>
+
+        #<Nova Things>
+
+            set GD_Shields.A_Item.Shield_Absorption_1340 ShieldType SHT_Nova
+
+            set GD_Shields.A_Item.Shield_Absorption_1340 ShieldPrimeMechanism SPM_PrimedWhenNotEmptyAfterFullRecharge
+
+            set GD_Shields.A_Item.Shield_Absorption_1340 ShieldTypeFlashFrameName nova
+
+            set GD_Shields.A_Item.Shield_Absorption_1340 PrimedFlashFrameName nova-shock
+
+            set GD_Shields.A_Item.Shield_Absorption_1340 DamageTypeIcon DAMAGE_TYPE_Shock
+
+        #</Nova Things>
+
+        #<Title>
+
+            set GD_Shields.Titles.Title_Absorption02_1340 PartName Divergence
+
+        #</Title>
+
+        #<Red text>
+
+            set GD_Shields.Titles.Title_Absorption02_1340:AttributePresentationDefinition_0 Description Don't blow a fuse.
+
+        #</Red text>
+
+        #<Elemental Resistance>
+
+            set GD_Shields.A_Item.Shield_Absorption_1340:AttributePresentationDefinition_2 Description Matches the [skill]elemental resistance[-skill] of the last damage received.
+
+        #</Elemental Resistance>
+
+        #<Shock Nova>
+
+            set GD_Shields.A_Item.Shield_Absorption_1340:AttributePresentationDefinition_1 Description Releases a [shock]Shock[-shock] [skill]Nova[-skill] when depleted.
+
+        #</Shock Nova>
+
+        #<Rarity>
+
+            set GD_Shields.Accessory.Accessory3_Absorption_1340 Rarity (BaseValueConstant=497.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+
+        #</Rarity>
+
+        #<Removes Prefix>
+
+            set GD_Shields.Accessory.Accessory3_Absorption_1340 PrefixList ()
+
+        #</Removes Prefix>
+
+        #<UI>
+
+            set GD_Shields.A_Item.Shield_Absorption_1340 UIStatList ((bDisplayAsModifierOnly=False,AttributeStyle=ATTRSTYLE_JustNumber,SupplementalAttributeStyle=ATTRSTYLE_JustNumber,StatCombinationMethod=SCM_Multiply,Attribute=ResourcePoolAttributeDefinition'D_Attributes.ShieldResourcePool.ShieldMaxValue',ConstraintAttribute=None,SupplementalAttributeExpression=(AttributeOperand1=None,ComparisonOperator=OPERATOR_EqualTo,Operand2Usage=OPERAND_PreferAttribute,AttributeOperand2=None,ConstantOperand2=0.000000),SupplementalAttributeToAppend=None),(bDisplayAsModifierOnly=False,AttributeStyle=ATTRSTYLE_JustNumber,SupplementalAttributeStyle=ATTRSTYLE_JustNumber,StatCombinationMethod=SCM_Multiply,Attribute=ResourcePoolAttributeDefinition'D_Attributes.ShieldResourcePool.ShieldOnIdleRegenerationRate',ConstraintAttribute=None,SupplementalAttributeExpression=(AttributeOperand1=None,ComparisonOperator=OPERATOR_EqualTo,Operand2Usage=OPERAND_PreferAttribute,AttributeOperand2=None,ConstantOperand2=0.000000),SupplementalAttributeToAppend=None),(bDisplayAsModifierOnly=False,AttributeStyle=ATTRSTYLE_JustNumber,SupplementalAttributeStyle=ATTRSTYLE_JustNumber,StatCombinationMethod=SCM_Multiply,Attribute=ResourcePoolAttributeDefinition'D_Attributes.ShieldResourcePool.ShieldOnIdleRegenerationDelay',ConstraintAttribute=None,SupplementalAttributeExpression=(AttributeOperand1=None,ComparisonOperator=OPERATOR_EqualTo,Operand2Usage=OPERAND_PreferAttribute,AttributeOperand2=None,ConstantOperand2=0.000000),SupplementalAttributeToAppend=None),(bDisplayAsModifierOnly=False,AttributeStyle=ATTRSTYLE_JustNumber,SupplementalAttributeStyle=ATTRSTYLE_JustNumber,StatCombinationMethod=SCM_Multiply,Attribute=DesignerAttributeDefinition'GD_Shields.Misc.Att_ShieldNovaDamage_Shock',ConstraintAttribute=None,SupplementalAttributeExpression=(AttributeOperand1=None,ComparisonOperator=OPERATOR_EqualTo,Operand2Usage=OPERAND_PreferAttribute,AttributeOperand2=None,ConstantOperand2=0.000000),SupplementalAttributeToAppend=None),(bDisplayAsModifierOnly=False,AttributeStyle=ATTRSTYLE_JustNumber,SupplementalAttributeStyle=ATTRSTYLE_JustNumber,StatCombinationMethod=SCM_Multiply,Attribute=DesignerAttributeDefinition'GD_Shields.Misc.Att_ShieldNovaSize_Shock',ConstraintAttribute=None,SupplementalAttributeExpression=(AttributeOperand1=None,ComparisonOperator=OPERATOR_EqualTo,Operand2Usage=OPERAND_PreferAttribute,AttributeOperand2=None,ConstantOperand2=0.000000),SupplementalAttributeToAppend=None),(bDisplayAsModifierOnly=False,AttributeStyle=ATTRSTYLE_ModifierText,SupplementalAttributeStyle=ATTRSTYLE_JustNumber,StatCombinationMethod=SCM_Multiply,Attribute=DesignerAttributeDefinition'GD_Shields.Misc.Att_ChimeraShield_Resistance',ConstraintAttribute=None,SupplementalAttributeExpression=(AttributeOperand1=None,ComparisonOperator=OPERATOR_EqualTo,Operand2Usage=OPERAND_PreferAttribute,AttributeOperand2=None,ConstantOperand2=0.000000),SupplementalAttributeToAppend=None)
+
+        #</UI>
+
+    #</Card>
+
+    #<Manufacturer Change>
+
+        #<Changes to Maliwan Manufacturer>
+
+            set GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Absorption_1340 Manufacturers ((Manufacturer=ManufacturerDefinition'GD_Manufacturers.Manufacturers.Maliwan',Grades=((GradeModifiers=(ExpLevel=1,CustomInventoryDefinition=None),GameStageRequirement=(MinGameStage=1,MaxGameStage=100),MinSpawnProbabilityModifier=(BaseValueConstant=0.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),MaxSpawnProbabilityModifier=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))))
+
+        #</Changes to Maliwan Manufacturer>
+
+    #</Manufacturer Change>
+
+    #<Stats>
+
+        set GD_Shields.A_Item.Shield_Absorption_1340 ExternalAttributeEffects ((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.ShieldResourcePool.ShieldMaxValue',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance_HealthAndDamage.Shields.Init_ShieldItem_CapacityMaxValue',BaseValueScaleConstant=1.000000)),(AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.ShieldResourcePool.ShieldOnIdleRegenerationDelay',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=5.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.ShieldResourcePool.ShieldOnIdleRegenerationRate',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance_HealthAndDamage.Shields.Init_ShieldItem_CapacityMaxValue',BaseValueScaleConstant=0.100000))
+
+        set GD_Shields.A_Item.Shield_Absorption_1340 AttributeSlotEffects ((SlotName="Capacity",bExternalSlot=True,bRunEffectsAsSkill=False,AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.ShieldResourcePool.ShieldMaxValue',ConstraintAttribute=None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),PerGradeUpgrade=(BaseValueConstant=0.030000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bIncludeInFunStats=False,bIncludeAlliesAsTarget=False,bEnforceMinimumGrade=False,bEnforceMaximumGrade=False,MinimumGrade=0,MaximumGrade=0,TargetInstanceDataName=),(SlotName="RechargeRate",bExternalSlot=True,bRunEffectsAsSkill=False,AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.ShieldResourcePool.ShieldOnIdleRegenerationRate',ConstraintAttribute=None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),PerGradeUpgrade=(BaseValueConstant=0.030000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bIncludeInFunStats=False,bIncludeAlliesAsTarget=False,bEnforceMinimumGrade=False,bEnforceMaximumGrade=False,MinimumGrade=0,MaximumGrade=0,TargetInstanceDataName=),(SlotName="RechargeDelay",bExternalSlot=True,bRunEffectsAsSkill=False,AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.ShieldResourcePool.ShieldOnIdleRegenerationDelay',ConstraintAttribute=None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),PerGradeUpgrade=(BaseValueConstant=-0.040000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bIncludeInFunStats=False,bIncludeAlliesAsTarget=False,bEnforceMinimumGrade=False,bEnforceMaximumGrade=False,MinimumGrade=0,MaximumGrade=0,TargetInstanceDataName=),(SlotName="FireResist",bExternalSlot=True,bRunEffectsAsSkill=False,AttributeToModify=AttributeDefinition'D_Attributes.StatusEffectModifiers.IgniteChanceResistanceModifier',ConstraintAttribute=None,ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),PerGradeUpgrade=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bIncludeInFunStats=False,bIncludeAlliesAsTarget=False,bEnforceMinimumGrade=False,bEnforceMaximumGrade=False,MinimumGrade=0,MaximumGrade=0,TargetInstanceDataName=),(SlotName="ShockResist",bExternalSlot=True,bRunEffectsAsSkill=False,AttributeToModify=AttributeDefinition'D_Attributes.StatusEffectModifiers.ShockChanceResistanceModifier',ConstraintAttribute=None,ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),PerGradeUpgrade=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bIncludeInFunStats=False,bIncludeAlliesAsTarget=False,bEnforceMinimumGrade=False,bEnforceMaximumGrade=False,MinimumGrade=0,MaximumGrade=0,TargetInstanceDataName=),(SlotName="CorrosiveResist",bExternalSlot=True,bRunEffectsAsSkill=False,AttributeToModify=AttributeDefinition'D_Attributes.StatusEffectModifiers.CorrosiveChanceResistanceModifier',ConstraintAttribute=None,ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),PerGradeUpgrade=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bIncludeInFunStats=False,bIncludeAlliesAsTarget=False,bEnforceMinimumGrade=False,bEnforceMaximumGrade=False,MinimumGrade=0,MaximumGrade=0,TargetInstanceDataName=),(SlotName="ExplosiveDamageResistance",bExternalSlot=True,bRunEffectsAsSkill=False,AttributeToModify=DesignerAttributeDefinition'GD_Shields.Misc.Att_Shield_ExplosiveDamageResistance',ConstraintAttribute=None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),PerGradeUpgrade=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bIncludeInFunStats=False,bIncludeAlliesAsTarget=False,bEnforceMinimumGrade=False,bEnforceMaximumGrade=False,MinimumGrade=0,MaximumGrade=0,TargetInstanceDataName=),(SlotName="Special01",bExternalSlot=True,bRunEffectsAsSkill=False,AttributeToModify=DesignerAttributeDefinition'GD_Shields.Misc.Att_ShieldNovaDamage_Shock',ConstraintAttribute=None,ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance_HealthAndDamage.HealthAndDamage.Init_ShieldDamage',BaseValueScaleConstant=10.000000),PerGradeUpgrade=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance_HealthAndDamage.HealthAndDamage.Init_ShieldDamage',BaseValueScaleConstant=0.550000),bIncludeInFunStats=False,bIncludeAlliesAsTarget=False,bEnforceMinimumGrade=False,bEnforceMaximumGrade=False,MinimumGrade=0,MaximumGrade=0,TargetInstanceDataName=),(SlotName="Special02",bExternalSlot=True,bRunEffectsAsSkill=False,AttributeToModify=DesignerAttributeDefinition'GD_Shields.Misc.Att_ShieldNovaSize_Shock',ConstraintAttribute=None,ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=800.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),PerGradeUpgrade=(BaseValueConstant=28.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bIncludeInFunStats=False,bIncludeAlliesAsTarget=False,bEnforceMinimumGrade=False,bEnforceMaximumGrade=False,MinimumGrade=0,MaximumGrade=0,TargetInstanceDataName=),(SlotName="Special03",bExternalSlot=True,bRunEffectsAsSkill=False,AttributeToModify=DesignerAttributeDefinition'GD_Shields.Misc.Att_ChimeraShield_Resistance',ConstraintAttribute=None,ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=-0.250000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),PerGradeUpgrade=(BaseValueConstant=-0.013000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bIncludeInFunStats=False,bIncludeAlliesAsTarget=False,bEnforceMinimumGrade=True,bEnforceMaximumGrade=False,MinimumGrade=-15,MaximumGrade=0,TargetInstanceDataName=),(SlotName="MaxHealth",bExternalSlot=True,bRunEffectsAsSkill=False,AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.HealthResourcePool.HealthMaxValue',ConstraintAttribute=None,ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),PerGradeUpgrade=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance_HealthAndDamage.HealthAndDamage.Init_HealthBonusFromShields_Formula',BaseValueScaleConstant=0.030000),bIncludeInFunStats=False,bIncludeAlliesAsTarget=False,bEnforceMinimumGrade=False,bEnforceMaximumGrade=False,MinimumGrade=0,MaximumGrade=0,TargetInstanceDataName=)
+
+        set GD_Shields.A_Item.Shield_Absorption_1340 AttributeSlotUpgrades ((SlotName="Capacity",GradeIncrease=20,bActivateSlot=True),(SlotName="RechargeRate",GradeIncrease=90,bActivateSlot=True),(SlotName="RechargeDelay",GradeIncrease=40,bActivateSlot=True),(SlotName="Special01",GradeIncrease=134,bActivateSlot=True),(SlotName="Special02",GradeIncrease=-10,bActivateSlot=True),(SlotName="Special03",GradeIncrease=25,bActivateSlot=True)
+
+    #</Stats>
+
+    #<Behavior>
+
+        #<Adds Nova Behavior>
+
+            set GD_Shields.Accessory.Accessory3_Absorption_1340 BehaviorProviderDefinition BehaviorProviderDefinition'GD_Shields.Accessory.Accessory6_Nova_Shock:BehaviorProviderDefinition_0'
+
+        #</Adds Nova Behavior>
+
+        #<Removes voice behavior>
+
+            set GD_Shields.A_Item.Shield_Absorption_1340 BehaviorProviderDefinition None
+
+        #</Removes voice behavior>
+
+    #</Behavior>
+
+    #<Skin>
+
+        #<Body>
+
+            set GD_Shields.Accessory.Accessory3_Absorption_1340 GestaltModeSkeletalMeshName Shield_Body_Anshin
+
+        #</Body>
+
+        #<Parent Change>
+
+            set GD_Shields.Material.Material3_Rare_Absorption Material MaterialInstanceConstant'Item_Shields.Materials.Mati_ShieldAnshinEpic'
+
+        #</Parent Change>
+
+        #<Skin itself>
+
+            set GD_Shields.Accessory.Accessory3_Absorption_1340 MaterialVectorParameterValues ((ParameterName="p_AColorHilight",ParameterValue=(R=1.000000,G=2.100000,B=4.600000,A=1.000000),ExpressionGUID=(A=-67213585,B=1174064151,C=1145077917,D=1667997837)),(ParameterName="p_AColorMidtone",ParameterValue=(R=1.000000,G=2.100000,B=5.600000,A=1.000000),ExpressionGUID=(A=-1550299660,B=1092871385,C=2005712271,D=1137646452)),(ParameterName="p_AColorShadow",ParameterValue=(R=0.000000,G=0.5000000,B=0.5000000,A=1.000000),ExpressionGUID=(A=-1237912396,B=1340481589,C=-1751132997,D=-2061419252)),(ParameterName="p_BColorHilight",ParameterValue=(R=0.100000,G=0.1000000,B=0.1000000,A=1.000000),ExpressionGUID=(A=-1787455778,B=1335579629,C=-1975783242,D=-231296165)),(ParameterName="p_BColorMidtone",ParameterValue=(R=0.0100000,G=0.0100000,B=0.0100000,A=1.000000),ExpressionGUID=(A=-1780197305,B=1189365699,C=-763074648,D=-1560762514)),(ParameterName="p_BColorShadow",ParameterValue=(R=0.0100000,G=0.0100000,B=0.0100000,A=1.000000),ExpressionGUID=(A=1978592701,B=1268422324,C=1382217095,D=-1197365110)),(ParameterName="p_CColorHilight",ParameterValue=(R=0.1000000,G=0.1000000,B=0.1000000,A=1.000000),ExpressionGUID=(A=-161410073,B=1301459859,C=656112266,D=-1829908056)),(ParameterName="p_CColorMidtone",ParameterValue=(R=0.3000000,G=0.3000000,B=0.3000000,A=1.000000),ExpressionGUID=(A=-1973617110,B=1112754116,C=-1762340418,D=-1714413755)),(ParameterName="p_CColorShadow",ParameterValue=(R=0.100000,G=0.1000000,B=0.1000000,A=1.000000),ExpressionGUID=(A=-745392642,B=1091735077,C=-335222092,D=1274265523)),(ParameterName="p_ColorD",ParameterValue=(R=1.000000,G=1.000000,B=2.000000,A=1.000000),ExpressionGUID=(A=1210191995,B=1309825855,C=-770078819,D=-360548266)),(ParameterName="p_PatternColor",ParameterValue=(R=1.000000,G=1.00000,B=1.00000,A=1.000000),ExpressionGUID=(A=-448074940,B=1159310716,C=-1837627249,D=-1702500821)),(ParameterName="p_PatternScalePosition",ParameterValue=(R=20.000000,G=20.000000,B=0.330000,A=0.030000),ExpressionGUID=(A=-890992185,B=1266714301,C=-2091612998,D=1000426871)),(ParameterName="p_PatternChannelScale",ParameterValue=(R=1.000000,G=0.950000,B=0.000000,A=0.000000),ExpressionGUID=(A=1831406463,B=1086737730,C=-923441504,D=-1373427117)),(ParameterName="p_EmissiveColor",ParameterValue=(R=0.000000,G=1.943780,B=3.040116,A=1.000000),ExpressionGUID=(A=-500078987,B=1335605199,C=-1319117688,D=173232637)),(ParameterName="p_DecalChannel",ParameterValue=(R=0.000000,G=0.000000,B=0.000000,A=1.000000),ExpressionGUID=(A=-572786374,B=1223669083,C=1151560880,D=-2006727295)),(ParameterName="p_ReflectColor",ParameterValue=(R=1.000000,G=1.000000,B=1.000000,A=1.000000),ExpressionGUID=(A=-137725129,B=1232248266,C=-1881647942,D=1919783776))
+
+        #</Skin itself>
+
+    #</Skin>
+
+#</Divergence (1340 Shield Replacer)>
+
