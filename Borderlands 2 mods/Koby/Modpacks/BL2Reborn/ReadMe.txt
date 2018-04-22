@@ -2,6 +2,8 @@ If you want to experience Borderlands 2 in a new way, this modpack is exactly fo
 
 As of version 2.0.3, there are 150+ mods in BL2Reborn. You can find a list of all mods and their descriptions in the attached "Mod List.txt".
 
+The version 3.0 is in BETA and features some additional features and was fully build from scratch with BLCMM (the currently unreleased successor of the Filter Tool). Please report any bugs and anomalies to @Koby in Discord.
+
 Download the modpack by rightclicking the "Download" button in "BL2Reborn.txt" and "Save link as...".
 
 You can enable optional mods at the bottom of the modpack with the Filter Tool.
