@@ -23,3 +23,9 @@ License
 
 This mod itself is licensed under
 [Public Domain / CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/).
+
+Changelog
+=========
+
+**v1.0.0**, March 1, 2018:
+ * Initial public release
