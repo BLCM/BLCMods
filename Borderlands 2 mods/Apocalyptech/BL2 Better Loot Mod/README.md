@@ -408,7 +408,7 @@ for the full text.
 Changelog
 =========
 
-**v1.2.1**, tba:
+**v1.2.1**, April 25, 2018:
  * Fixed an error in the Torgue Token quantity improvement section.
  * Fixed a conflict between our "Force Alignment COMs Blue And Higher" section and
    our "Exhaustive Weapon/Item Part Unlocks" section.
