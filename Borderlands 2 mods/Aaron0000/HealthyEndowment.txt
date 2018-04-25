@@ -1,0 +1,28 @@
+#<Health-Leech Moxxi's Endowment>
+
+    #<Description>
+
+        By Aaron0000
+
+        Features;
+
+        Changes Moxxi's Endowment so that it now grants health leech and a small amount of passive health regen when equipped. Health Leech goes from .125% at level 1 to 1% at 80. Health regen goes from .1% at level 1 to .5% at level 80.
+
+    #</Description>
+
+    #<Code>
+
+        set GD_Artifacts.A_Item_Unique.Artifact_Endowment UIStatList ((bDisplayAsModifierOnly=True,AttributeStyle=ATTRSTYLE_ModifierText,SupplementalAttributeStyle=ATTRSTYLE_JustNumber,StatCombinationMethod=SCM_Multiply,Attribute=DesignerAttributeDefinition'GD_Artifacts.BalanceAttributes.Attribute_ArtifactHealthRegenPercent',ConstraintAttribute=None,SupplementalAttributeExpression=(AttributeOperand1=None,ComparisonOperator=OPERATOR_EqualTo,Operand2Usage=OPERAND_PreferAttribute,AttributeOperand2=None,ConstantOperand2=0.000000),SupplementalAttributeToAppend=None)))
+
+        set GD_Artifacts.A_Item_Unique.Artifact_Endowment AttributeSlotEffects ((SlotName="Effect1",bExternalSlot=True,bRunEffectsAsSkill=True,AttributeToModify=DesignerAttributeDefinition'GD_Artifacts.BalanceAttributes.Attribute_ArtifactHealthRegenPercent',ConstraintAttribute=None,ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Artifacts.BalanceAttributes.Init_ModifierBase_Linear',BaseValueScaleConstant=0.000050),PerGradeUpgrade=(BaseValueConstant=0.000100,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bIncludeInFunStats=False,bIncludeAlliesAsTarget=False,bEnforceMinimumGrade=False,bEnforceMaximumGrade=False,MinimumGrade=0,MaximumGrade=12,TargetInstanceDataName=)))
+
+        set GD_Artifacts.A_Item_Unique.Artifact_Endowment ExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.DamageEnhancementModifiers.PlayerConvertDamageToHealingPercent',ConstraintAttribute=None,ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Artifacts.BalanceAttributes.Init_ModifierBase_Linear',BaseValueScaleConstant=0.001250),PerGradeUpgrade=(BaseValueConstant=1.0000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.0000000),bIncludeInFunStats=False,bIncludeAlliesAsTarget=False,bEnforceMinimumGrade=False,bEnforceMaximumGrade=False,MinimumGrade=0,MaximumGrade=12,TargetInstanceDataName=))
+
+        set GD_Artifacts.Body.Body_Endowment:AttributePresentationDefinition_0 Description [skill]Restores health as you deal damage[-skill].
+
+    #</Code>
+
+#</Health-Leech Moxxi's Endowment>
+
+
+
