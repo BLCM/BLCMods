@@ -312,6 +312,9 @@ well-covered in other mods, so instead I'll just mention them here.
 TODO
 ----
 
+* Looks like some statements from my "Force Alignement COMS Blue And Higher"
+  section are being overwritten later on by my "Exhaustive Weapon/Item Part
+  Unlocks" section.  Whoops!  Fix that.
 * I haven't done much testing in TVHM/UVHM, though it should be fine in
   those modes.
 * Can we increase boss drop counts depending on player count?
@@ -405,7 +408,12 @@ for the full text.
 Changelog
 =========
 
-**v1.2.0**, (March 16, 2018):
+**v1.2.1**, April 25, 2018:
+ * Fixed an error in the Torgue Token quantity improvement section.
+ * Fixed a conflict between our "Force Alignment COMs Blue And Higher" section and
+   our "Exhaustive Weapon/Item Part Unlocks" section.
+
+**v1.2.0**, March 16, 2018 (commit `f5cb4c8cb8db8ad86ce24c69e2bdf2f0af98448e`):
  * Fixed an issue where *Plan B* and *Bright Lights, Flying City* wouldn't reward
    Weapon Slot SDUs on Playthrough 1.
  * Buffed "weighted" pools used by some enemies for drops, to be in line with the rest

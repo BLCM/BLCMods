@@ -50,6 +50,24 @@ need_hotfix = set([
     'GD_Aster_Weapons.Snipers.SR_Maliwan_4_Aquamarine:WeaponPartListCollectionDefinition_306',
     ])
 
+# These attributes are a bit unique because we override these objects
+# elsewhere in the mod, and if we just blindly set them like we do with
+# everything else here, we'd end up overwriting those changes.  We
+# want to keep folder isolation intact as much as possible, so I don't
+# want either folder to end up as a "hybrid".  Our solution will be
+# to use a bunch of individual hotfixes for these classes which just
+# set MinGameStageIndex for each value present.  When our other
+# statements truncate the attributes, this'll mean that some of these
+# hotfixes will do nothing, but that should be fine.
+need_numerical_hotfixes = set([
+    'GD_Aster_ItemGrades.ClassMods.BalDef_ClassMod_Aster_Assassin:ItemPartListCollectionDefinition_28',
+    'GD_Aster_ItemGrades.ClassMods.BalDef_ClassMod_Aster_Mechromancer:ItemPartListCollectionDefinition_29',
+    'GD_Aster_ItemGrades.ClassMods.BalDef_ClassMod_Aster_Merc:ItemPartListCollectionDefinition_30',
+    'GD_Aster_ItemGrades.ClassMods.BalDef_ClassMod_Aster_Psycho:ItemPartListCollectionDefinition_31',
+    'GD_Aster_ItemGrades.ClassMods.BalDef_ClassMod_Aster_Siren:ItemPartListCollectionDefinition_32',
+    'GD_Aster_ItemGrades.ClassMods.BalDef_ClassMod_Aster_Soldier:ItemPartListCollectionDefinition_33',
+    ])
+
 class Re(object):
     """
     Class to allow us to use a Perl-like regex-comparison idiom
@@ -74,6 +92,7 @@ class Re(object):
         return self.last_match
 
 hotfix_count = 0
+numerical_hotfix_count = 0
 myre = Re()
 with open('Resource - InventoryPartListCollectionDefinition.txt', 'r') as df:
     cur_partlist = None
@@ -169,6 +188,17 @@ with open('Resource - InventoryPartListCollectionDefinition.txt', 'r') as df:
                         ), file=sys.stderr)
 
                     hotfix_count += 1
+                elif cur_partlist in need_numerical_hotfixes:
+                    for idx in range(len(parts)):
+                        print('            {{hotfixes:part_early_game_numerical_fix_{}}}'.format(numerical_hotfix_count))
+                        print('')
+                        print("hfs.add_level_hotfix('part_early_game_numerical_fix_{idx}', 'PartEarlyGameNumericalFix', \",{classname},{propertyname}.WeightedParts[{wp_idx}].MinGameStageIndex,,0\")".format(
+                            idx=numerical_hotfix_count,
+                            classname=cur_partlist,
+                            propertyname=data_type,
+                            wp_idx=idx,
+                            ), file=sys.stderr)
+                        numerical_hotfix_count += 1
                 else:
                     print('            set {classname} {propertyname} (bEnabled={enabled},WeightedParts={final_weight_text})'.format(
                         classname=cur_partlist,
