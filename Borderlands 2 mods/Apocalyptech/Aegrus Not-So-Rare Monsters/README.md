@@ -21,12 +21,23 @@ There are two mutually-exclusive options when loaded into FilterTool:
 Usage
 =====
 
-The best way to use this mod is to add it into FilterTool with
-`Developer tools` -> `Add single mod`.  Choose the file `Aegrus Not-So-Rare
-Monsters` and have at it!
+This mod must be imported into FilterTool/BLCMM with `Developer tools` ->
+`Add single mod`.  Choose the file `Aegrus Not-So-Rare Monsters` and have at
+it!
 
 License
 =======
 
 This mod is licensed under
 [Public Domain / CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/).
+
+Changelog
+=========
+
+**v1.0.1**, April 25, 2018:
+ * Tweaked comments in the mod file a bit, to look better inside FT/BLCMM.
+ * Removed the `Transient.SparkServiceConfiguration_6` set statements at the
+   bottom of the file, to enforce needing to run this via FT/BLCMM.
+
+**v1.0.0**, February 12, 2018:
+ * Initial public release
