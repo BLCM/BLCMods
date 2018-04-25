@@ -39,5 +39,5 @@ Changelog
  * Removed the `Transient.SparkServiceConfiguration_6` set statements at the
    bottom of the file, to enforce needing to run this via FT/BLCMM.
 
-**v1.0.0**, February 12, 2018:
+**v1.0.0**, February 26, 2018:
  * Initial public release
