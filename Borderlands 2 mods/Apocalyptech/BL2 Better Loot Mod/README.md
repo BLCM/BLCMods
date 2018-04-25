@@ -410,6 +410,8 @@ Changelog
 
 **v1.2.1**, tba:
  * Fixed an error in the Torgue Token quantity improvement section.
+ * Fixed a conflict between our "Force Alignment COMs Blue And Higher" section and
+   our "Exhaustive Weapon/Item Part Unlocks" section.
 
 **v1.2.0**, March 16, 2018 (commit `f5cb4c8cb8db8ad86ce24c69e2bdf2f0af98448e`):
  * Fixed an issue where *Plan B* and *Bright Lights, Flying City* wouldn't reward
