@@ -59,14 +59,14 @@ import argparse
 # for "set" style commands.
 #
 # The "source" filename used is expected to have a suffix of "-source.txt", and
-# the utility will write to the same filename minus that suffix.  You can pass
+# the utility will write to the same filename minus "-source".  You can pass
 # in either the destination or the source file and the utility will understand
 # what to do with either.
 
 parser = argparse.ArgumentParser(
     description='Converts human-editable Borderlands mod files into proper mod format',
     epilog='The source filename must have a suffix of "-source.txt", and the '
-        'destination filename will have the same name minus that suffix.  The '
+        'destination filename will have the same name minus "-source".  The '
         '"filename" argument can be either the source or destination filename, '
         'and the utility should figure out what to do from there.'
     )
@@ -79,10 +79,10 @@ args = parser.parse_args()
 input_file = args.filename[0]
 if input_file[-11:] == '-source.txt':
     source_file = input_file
-    dest_file = input_file[:-11]
+    dest_file = '{}.txt'.format(input_file[:-11])
 else:
     source_file = '{}-source.txt'.format(input_file)
-    dest_file = input_file
+    dest_file = '{}.txt'.format(input_file)
 print('Chosen source filename: {}'.format(source_file))
 print('Chosen destination filename: {}'.format(dest_file))
 

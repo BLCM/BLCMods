@@ -45,9 +45,9 @@ except ModuleNotFoundError:
 ###
 
 mod_name = 'Luneshine on Uniques'
-mod_version = '1.0.0'
+mod_version = '1.0.1'
 input_filename = 'mod-input-file.txt'
-output_filename = 'Luneshine on Uniques'
+output_filename = 'Luneshine on Uniques.txt'
 
 ###
 ### Hotfix object to store all our hotfixes

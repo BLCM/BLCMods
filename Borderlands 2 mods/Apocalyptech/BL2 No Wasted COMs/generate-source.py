@@ -47,7 +47,7 @@ except ModuleNotFoundError:
 ###
 
 mod_name = 'BL2 No Wasted COMs'
-mod_version = '1.0.0'
+mod_version = '1.0.1'
 output_filename = '{}-source.txt'.format(mod_name)
 
 ###

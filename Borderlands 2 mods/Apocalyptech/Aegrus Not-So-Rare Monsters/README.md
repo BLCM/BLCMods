@@ -22,8 +22,8 @@ Usage
 =====
 
 This mod must be imported into FilterTool/BLCMM with `Developer tools` ->
-`Add single mod`.  Choose the file `Aegrus Not-So-Rare Monsters` and have at
-it!
+`Add single mod`.  Choose the file `Aegrus Not-So-Rare Monsters.txt` and have
+at it!
 
 License
 =======
@@ -33,6 +33,9 @@ This mod is licensed under
 
 Changelog
 =========
+
+**v1.0.2**, April 25, 2018:
+ * Renamed file to have a .txt extension.
 
 **v1.0.1**, April 25, 2018:
  * Tweaked comments in the mod file a bit, to look better inside FT/BLCMM.

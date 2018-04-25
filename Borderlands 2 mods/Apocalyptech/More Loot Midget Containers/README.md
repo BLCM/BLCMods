@@ -26,7 +26,8 @@ Usage
 =====
 
 This mod must be added via FilterTool, with `Developer tools` ->
-`Add single mod`.  Choose the file `More Loot Midget Containers` and have at it!
+`Add single mod`.  Choose the file `More Loot Midget Containers.txt` and have
+at it!
 
 Mod Construction / Implementation Details
 =========================================
@@ -47,6 +48,9 @@ This mod itself is licensed under
 
 Changelog
 =========
+
+**v1.0.2**, April 25, 2018:
+ * Renamed mod file to have a `.txt` extension.
 
 **v1.0.1**, April 2, 2018:
  * Added in a bunch more containers which my generation code missed.  D'oh.

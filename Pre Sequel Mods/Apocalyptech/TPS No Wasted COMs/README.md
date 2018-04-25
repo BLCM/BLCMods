@@ -21,7 +21,7 @@ Usage
 =====
 
 This mod must be run by adding it into FilterTool with `Developer tools` ->
-`Add single mod`.  Choose the file `TPS No Wasted COMs` and have at it!
+`Add single mod`.  Choose the file `TPS No Wasted COMs.txt` and have at it!
 
 Compatibility
 =============
@@ -51,6 +51,9 @@ This mod itself is licensed under
 
 Changelog
 =========
+
+**v1.0.1**, April 25, 2018:
+ * Renamed mod file to have a `.txt` extension.
 
 **v1.0.0**, April 3, 2018:
  * Initial public release

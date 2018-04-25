@@ -144,8 +144,8 @@ to have a suffix of `-source.txt`, so for instance my own Better Lood Mod source
 filename is `BL2 Better Loot Mod by Apocalyptech-source.txt`.
 
 The destination file it uses will be identical to the source filename, minus the
-`-source.txt` suffix, so for my own mod, the output filename will be plain ol'
-`BL2 Better Loot Mod by Apocalyptech`.
+`-source` suffix, so for my own mod, the output filename will be plain ol'
+`BL2 Better Loot Mod by Apocalyptech.txt`.
 
 For the filename argument, you can specify either the source or destination file,
 and the utility will figure out which one you mean.  So, the following two

@@ -47,8 +47,8 @@ except ModuleNotFoundError:
 ###
 
 mod_name = 'Guaranteed Varkid Evolution'
-mod_version = '1.0.1'
-output_filename = '{}'.format(mod_name)
+mod_version = '1.0.2'
+output_filename = '{}.txt'.format(mod_name)
 
 ###
 ### Generate hotfixes!

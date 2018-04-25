@@ -31,10 +31,10 @@ The recommended way to use this mod is with FilterTool/UCP.  In FilterTool,
 select `Developer Tools` -> `Add Single Mod` and then select one of these
 two files:
 
-* `TPS Better Loot Mod (Lootsplosion) - UCP Compat` - Default drop weights
+* `TPS Better Loot Mod (Lootsplosion) - UCP Compat.txt` - Default drop weights
   which I'm personally happy with.  Many folks may find these a bit extreme.
   This version probably makes more sense in Normal mode than it does in UVHM.
-* `TPS Better Loot Mod (Reasonable Drops) - UCP Compat` - More reasonable
+* `TPS Better Loot Mod (Reasonable Drops) - UCP Compat.txt` - More reasonable
   drop weights.  This version may be more suitable for UVHM, where lots
   of Legendary drops might be excessive. *(Work in Progress - needs
   tweaking+testing, etc)*
@@ -44,7 +44,7 @@ underneath the `mods` folder at the bottom, and can turn parts on or off at
 will.
 
 If for whatever reason you don't want to use FilterTool, there is also
-a standalone version at `TPS Better Loot Mod (*) - Standalone Offline`.
+a standalone version at `TPS Better Loot Mod (*) - Standalone Offline.txt`.
 Simply copy the file into the game's `steamassets/binaries` directory with
 an easy-to-type filename, and then run `exec <filename>` from the console
 to load it on its own.  It works quite well by itself.
@@ -322,6 +322,9 @@ for the full text.
 
 Changelog
 =========
+
+**v1.0.3**, April 25, 2018:
+ * Renamed mod files to have a `.txt` extension.
 
 **v1.0.2**, April 12, 2018:
  * Fixed Iwajira / Volcantis / Odjurymir's drop pool so that the Hail isn't vastly

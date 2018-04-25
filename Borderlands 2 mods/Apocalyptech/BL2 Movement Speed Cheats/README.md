@@ -12,7 +12,8 @@ Usage
 =====
 
 This mod must be imported into FilterTool/BLCMM with `Developer tools` ->
-`Add single mod`.  Choose the file `BL2 Movement Speed Cheats` and have at it!
+`Add single mod`.  Choose the file `BL2 Movement Speed Cheats.txt` and have
+at it!
 
 Mod Construction / Implementation Details
 =========================================
@@ -34,6 +35,9 @@ The mod itself is licensed under
 
 Changelog
 =========
+
+**v1.0.1**, April 25, 2018:
+ * Changed mod to have a `.txt` extension
 
 **v1.0.0**, April 2, 2018:
  * Initial public release

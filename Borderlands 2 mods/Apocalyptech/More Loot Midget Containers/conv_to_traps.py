@@ -159,7 +159,7 @@ level_transforms = {}
 for game, levelnames in control.items():
     print('#<More Loot Midget Containers>')
     print('')
-    print('    # More Loot Midget Containers v1.0.1')
+    print('    # More Loot Midget Containers v1.0.2')
     print('    # Licensed under Public Domain / CC0 1.0 Universal')
     print('    #')
     print('    # For levels which support loot-midget-spawning containers, converts')

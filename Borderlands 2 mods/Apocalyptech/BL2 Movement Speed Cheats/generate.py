@@ -45,7 +45,8 @@ except ModuleNotFoundError:
 ###
 
 mod_name = 'BL2 Movement Speed Cheats'
-mod_version = '1.0.0'
+mod_version = '1.0.1'
+output_filename = '{}.txt'.format(mod_name)
 
 # Control vars
 ground_speed = 1000     # (stock: 440)
@@ -175,6 +176,6 @@ loot_str = """#<{mod_name}>
     air_control_pct=air_control_pct,
     )
 
-with open(mod_name, 'w') as df:
+with open(output_filename, 'w') as df:
     df.write(loot_str)
-print('Wrote mod file to: {}'.format(mod_name))
+print('Wrote mod file to: {}'.format(output_filename))

@@ -13,7 +13,8 @@ Usage
 =====
 
 This mod must be imported into FilterTool/BLCMM with `Developer tools` ->
-`Add single mod`.  Choose the file `TPS Movement Speed Cheats` and have at it!
+`Add single mod`.  Choose the file `TPS Movement Speed Cheats.txt` and have
+at it!
 
 Mod Construction / Implementation Details
 =========================================
@@ -35,6 +36,9 @@ The mod itself is licensed under
 
 Changelog
 =========
+
+**v1.0.1**, April 25, 2018:
+ * Renamed mod file to have a `.txt` extension
 
 **v1.0.0**, March 30, 2018:
  * Initial public release

@@ -14,8 +14,8 @@ Usage
 =====
 
 This mod must be imported into FilterTool/BLCMM with `Developer tools` ->
-`Add single mod`.  Choose the file `Guaranteed Varkid Evolution` and have at
-it!
+`Add single mod`.  Choose the file `Guaranteed Varkid Evolution.txt` and
+have at it!
 
 Mod Construction / Implementation Details
 =========================================
@@ -36,6 +36,9 @@ This mod itself is licensed under
 
 Changelog
 =========
+
+**v1.0.2**, April 25, 2018:
+ * Renamed the mod to have a `.txt` extension.
 
 **v1.0.1**, April 25, 2018:
  * Tweaked comments in the mod file a bit, to look better inside FT/BLCMM.

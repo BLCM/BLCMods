@@ -9,7 +9,7 @@ Usage
 =====
 
 This mod must be imported into FilterTool/BLCMM with `Developer tools` ->
-`Add single mod`.  Choose the file `Guaranteed Phonic` and have
+`Add single mod`.  Choose the file `Guaranteed Phonic.txt` and have
 at it!
 
 License
@@ -20,6 +20,9 @@ This mod is licensed under
 
 Changelog
 =========
+
+**v1.0.1**, April 25, 2018:
+ * Renamed mod file to have a `.txt` extension.
 
 **v1.0.0**, March 30, 2018:
  * Initial public release

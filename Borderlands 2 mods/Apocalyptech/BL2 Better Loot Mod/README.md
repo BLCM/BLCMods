@@ -24,10 +24,10 @@ The recommended way to use this mod is with FilterTool/UCP.  In FilterTool,
 select `Developer Tools` -> `Add Single Mod` and then select one of these
 two files:
 
-* `BL2 Better Loot Mod (Lootsplosion) - UCP Compat` - Default drop weights
+* `BL2 Better Loot Mod (Lootsplosion) - UCP Compat.txt` - Default drop weights
   which I'm personally happy with.  Many folks may find these a bit extreme.
   This version probably makes more sense in Normal mode than it does in UVHM.
-* `BL2 Better Loot Mod (Reasonable Drops) - UCP Compat` - More reasonable
+* `BL2 Better Loot Mod (Reasonable Drops) - UCP Compat.txt` - More reasonable
   drop weights.  This version may be more suitable for UVHM, where lots
   of Legendary drops might be excessive. *(Work in Progress - needs
   tweaking+testing, etc)*
@@ -37,8 +37,8 @@ underneath the `mods` folder at the bottom, and can turn parts on or off at
 will.
 
 If for whatever reason you don't want to use FilterTool, there are also
-standalone versions at `BL2 Better Loot Mod (*) - Standalone`,
-and an offline standalone version at `BL2 Better Loot Mod (*) - Standalone Offline`.
+standalone versions at `BL2 Better Loot Mod (*) - Standalone.txt`,
+and an offline standalone version at `BL2 Better Loot Mod (*) - Standalone Offline.txt`.
 Simply copy the file into the game's `steamassets/binaries` directory with
 an easy-to-type filename, and then run `exec <filename>` from the console
 to load it on its own.  It works quite well by itself.
@@ -408,7 +408,10 @@ for the full text.
 Changelog
 =========
 
-**v1.2.1**, April 25, 2018:
+**v1.2.2**, April 25, 2018:
+ * Changed mod filenames to have a `.txt` extension.
+
+**v1.2.1**, April 25, 2018 (commit `1a51920b01805297d7f15f5341587e9e56cc7758`):
  * Fixed an error in the Torgue Token quantity improvement section.
  * Fixed a conflict between our "Force Alignment COMs Blue And Higher" section and
    our "Exhaustive Weapon/Item Part Unlocks" section.
