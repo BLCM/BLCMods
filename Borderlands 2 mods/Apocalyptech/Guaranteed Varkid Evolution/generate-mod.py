@@ -47,6 +47,7 @@ except ModuleNotFoundError:
 ###
 
 mod_name = 'Guaranteed Varkid Evolution'
+mod_version = '1.0.1'
 output_filename = '{}'.format(mod_name)
 
 ###
@@ -69,6 +70,9 @@ for morph in range(1,6):
 
 mod_str = """#<{mod_name}>
 
+    # {mod_name} v{mod_version}
+    # Licensed under Public Domain / CC0 1.0 Universal
+    #
     # Guarantees evolution of all varkids, regardless of playthrough or
     # player count.  Leave one alive and you'll get Vermivorous eventually.
 
@@ -92,15 +96,11 @@ mod_str = """#<{mod_name}>
 
     {hotfixes:varkid_default_5}
 
-    # Licensed under Public Domain / CC0 1.0 Universal
-
 #</{mod_name}>
-
-{transient_defs}
 """.format(
         mod_name=mod_name,
+        mod_version=mod_version,
         hotfixes=hfs,
-        transient_defs=hfs.get_transient_defs(),
         )
 
 ###
