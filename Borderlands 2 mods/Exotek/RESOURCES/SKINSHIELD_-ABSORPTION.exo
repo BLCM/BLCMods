@@ -1,0 +1,128 @@
+
+    HI THERE EVERYONE,
+    THIS IS MY FIRST RESOURCE FILE AND A REALLY GOOD ONE. A SKIN SHIELD. YEP, YOU CAN TURN ANY CUSTOMIZATION INTO A SHIELD NOW.
+    THERE IS A WHOLE LOT OF SKINS IN THIS GAME. YOU CAN LITERALLY TURN ANY OF THEM INTO SHIELD OR A LEGENDARY ONE IF YOU WILL.
+    
+    THE EXAMPLE BELOW USES GD_Runner_Items_MainGame.Runner.Skin_Blood TO TURN IT INTO A PURPLE VLADOF ABSORPTION SHIELD,
+    HERE IS THE GIBBED CODE WITH THE SKIN SHIELD ITSELF:
+    BL2(BwAAAADWTwArA1YYoBBIgAGEBAQHhBjE/////////38YhA6EJMQ=)
+    
+    OBVIOUSLY THIS DOES NOT PASS SANITY CHECK. SO UNLESS YOUVE DISABLED IT, BE SURE TO RUN THE MOD BEFORE ENTERING THE GAME.
+    
+    ANYWAY WISH YOU A LOT OF FUN AND HAPPY MODDING.
+    CHEERS,
+    EXO    
+    ______________________________________________________________________
+    
+    - I AM NOT SURE WHY THE PART BELOW IS IMPORTANT BUT IT SIMPLY IS. THE LAST TWO LINES IN THIS SECTION IS WHAT OVERRIDES THE SKIN AND SET
+    THE SHIELD DEFINITION AND THE ACTUAL SHIELD BEHAVIOR.
+    
+    set GD_Runner_Items_MainGame.Runner.Skin_Blood OverridePool None    
+    
+    set GD_Runner_Items_MainGame.Runner.Skin_Blood CustomizationDef None
+    
+    set GD_Runner_Items_MainGame.Runner.Skin_Blood PrimaryColor (R=0.000000,G=0.000000,B=0.000000,A=0.000000)
+    
+    set GD_Runner_Items_MainGame.Runner.Skin_Blood SecondaryColor (R=0.000000,G=0.000000,B=0.000000,A=0.000000)
+    
+    set GD_Runner_Items_MainGame.Runner.Skin_Blood TertiaryColor (R=0.000000,G=0.000000,B=0.000000,A=0.000000)
+    
+    set GD_Runner_Items_MainGame.Runner.Skin_Blood ItemCardTopStatString None
+    
+    set GD_Runner_Items_MainGame.Runner.Skin_Blood bPlayerUseItemOnPickup None
+    
+    set GD_Runner_Items_MainGame.Runner.Skin_Blood bAIUseItemOnPickup None
+    
+    set GD_Runner_Items_MainGame.Runner.Skin_Blood bUseCoopRange None
+    
+    set GD_Runner_Items_MainGame.Runner.Skin_Blood UsedStatId None
+    
+    set GD_Runner_Items_MainGame.Runner.Skin_Blood ObjectArchetype ShieldDefinition'WillowGame.Default__ShieldDefinition'
+    
+    set GD_Runner_Items_MainGame.Runner.Skin_Blood Class Class'WillowGame.ShieldDefinition'  
+    
+    ______________________________________________________________________ # [TYPE} e.g. GD_Runner_Items_MainGame.Runner.Skin_Blood
+    
+    set GD_Runner_Items_MainGame.Runner.Skin_Blood ShieldType SHT_Absorption
+    
+    set GD_Runner_Items_MainGame.Runner.Skin_Blood ShieldPrimeMechanism SPM_AlwaysPrimed
+    
+    set GD_Runner_Items_MainGame.Runner.Skin_Blood ShieldTypeFlashFrameName absorb
+    
+    set GD_Runner_Items_MainGame.Runner.Skin_Blood PrimedFlashFrameName absorb
+    
+    set GD_Runner_Items_MainGame.Runner.Skin_Blood ShieldPhysicalMaterial PhysicalMaterial'GD_PhysicalMaterial_Shield.PhysicalMaterials.PhysMat_GenericShield'
+    
+    set GD_Runner_Items_MainGame.Runner.Skin_Blood ItemName <insert_name_here>
+    
+    set GD_Runner_Items_MainGame.Runner.Skin_Blood bItemNameIsFullName True
+    
+    set GD_Runner_Items_MainGame.Runner.Skin_Blood bUseMeshCompositing False
+    
+    set GD_Runner_Items_MainGame.Runner.Skin_Blood NonCompositeStaticMesh None
+    
+    set GD_Runner_Items_MainGame.Runner.Skin_Blood OverrideMaterial None
+    
+    set GD_Runner_Items_MainGame.Runner.Skin_Blood GestaltMesh GestaltSkeletalMeshDefinition'Item_Shields.Gestalt.GestaltDef_Shields'
+    
+    set GD_Runner_Items_MainGame.Runner.Skin_Blood AlphaParts ItemPartListDefinition'GD_Shields.Body.PartsList_Body_Absorption'
+    
+    set GD_Runner_Items_MainGame.Runner.Skin_Blood BetaParts ItemPartListDefinition'GD_Shields.Battery.PartsList_Battery_Standard'
+    
+    set GD_Runner_Items_MainGame.Runner.Skin_Blood GammaParts ItemPartListDefinition'GD_Shields.Capacitor.PartsList_Capacitor_Standard'
+    
+    set GD_Runner_Items_MainGame.Runner.Skin_Blood DeltaParts ItemPartListDefinition'GD_Shields.Accessory.PartsList_Accessory_Absorption'
+  
+    set GD_Runner_Items_MainGame.Runner.Skin_Blood MaterialParts ItemPartListDefinition'GD_Shields.Material.PartsList_Materials_Absorption'
+    
+    set GD_Runner_Items_MainGame.Runner.Skin_Blood BehaviorProviderDefinition (BehaviorProviderDefinition'GD_Shields.A_Item.Shield_Absorption:BehaviorProviderDefinition_5')
+    
+    set GD_Runner_Items_MainGame.Runner.Skin_Blood ExternalAttributeEffects ((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.ShieldResourcePool.ShieldMaxValue',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance_HealthAndDamage.Shields.Init_ShieldItem_CapacityMaxValue',BaseValueScaleConstant=1.000000)),(AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.ShieldResourcePool.ShieldOnIdleRegenerationDelay',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'GD_Shields.Misc.Att_UniversalShieldBaseDelayConstant',InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.ShieldResourcePool.ShieldOnIdleRegenerationRate',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance_HealthAndDamage.Shields.Init_ShieldItem_BaseRegenRatePercentage',BaseValueScaleConstant=1.000000)))
+  
+    set GD_Runner_Items_MainGame.Runner.Skin_Blood CustomPresentations (AttributePresentationDefinition'GD_Shields.A_Item.Shield_Absorption:AttributePresentationDefinition_2',AttributePresentationDefinition'GD_Shields.A_Item.Shield_Absorption:AttributePresentationDefinition_1',AttributePresentationDefinition'GD_Runner_Items_MainGame.AttributePresentationDefinition_111')
+    
+    ^ THIS IS WHERE YOU CAN USE THE SKINS AttributePresentationDefinition TO SET CUSTOM TEXT LIKE RED TEXT OR ANY ADDITIONAL INFO. IVE ADDED THE ONE ALREADY (AttributePresentationDefinition'GD_Runner_Items_MainGame.AttributePresentationDefinition_111') FOR THE SHOWCASE.
+    ______________________________________________________________________ 
+    
+    set GD_Runner_Items_MainGame.AttributePresentationDefinition_111 Description Have fun!<br>[funstat]Exo
+    
+    set GD_Runner_Items_MainGame.AttributePresentationDefinition_111 TextColor (B=70,G=70,R=220,A=255)
+    
+    set GD_Runner_Items_MainGame.AttributePresentationDefinition_111 BasePriority 1000.000000
+    ______________________________________________________________________ 
+    
+    set GD_Runner_Items_MainGame.Runner.Skin_Blood InventoryClass Class'WillowGame.WillowShield'
+    
+    set GD_Runner_Items_MainGame.Runner.Skin_Blood bUsesPlayerLevelRequirement True
+    
+    set GD_Runner_Items_MainGame.Runner.Skin_Blood bIsConsumable False
+    
+    set GD_Runner_Items_MainGame.Runner.Skin_Blood PickupFlagIcon Texture2D'fx_shared_items.Textures.ItemCards.Shield'
+    
+    set GD_Runner_Items_MainGame.Runner.Skin_Blood PickupSounds ((Event=AkEvent'Ake_Obj_Pickup.Obj_Pickup.Ak_Play_Obj_Pickup_Shield',Cue=None,Expressions=))
+    
+    set GD_Runner_Items_MainGame.Runner.Skin_Blood PhysicsAsset PhysicsAsset'Item_Shields.Physics.Phat_Shield'
+    
+    set GD_Runner_Items_MainGame.Runner.Skin_Blood PickupMessage Acquired a Basic Orb Shield
+    
+    set GD_Runner_Items_MainGame.Runner.Skin_Blood BaseRarity (BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+    
+    set GD_Runner_Items_MainGame.Runner.Skin_Blood PlayerUseLevelBonus (BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance_Inventory.LevelRequirement.Init_BaseGearLevelRequirementBonus',BaseValueScaleConstant=1.000000)
+    
+    set GD_Runner_Items_MainGame.Runner.Skin_Blood UIStatList ((bDisplayAsModifierOnly=False,AttributeStyle=ATTRSTYLE_JustNumber,SupplementalAttributeStyle=ATTRSTYLE_JustNumber,StatCombinationMethod=SCM_Multiply,Attribute=ResourcePoolAttributeDefinition'D_Attributes.ShieldResourcePool.ShieldMaxValue',ConstraintAttribute=None,SupplementalAttributeExpression=(AttributeOperand1=None,ComparisonOperator=OPERATOR_EqualTo,Operand2Usage=OPERAND_PreferAttribute,AttributeOperand2=None,ConstantOperand2=0.000000),SupplementalAttributeToAppend=None),(bDisplayAsModifierOnly=False,AttributeStyle=ATTRSTYLE_JustNumber,SupplementalAttributeStyle=ATTRSTYLE_JustNumber,StatCombinationMethod=SCM_Multiply,Attribute=ResourcePoolAttributeDefinition'D_Attributes.ShieldResourcePool.ShieldOnIdleRegenerationRate',ConstraintAttribute=None,SupplementalAttributeExpression=(AttributeOperand1=None,ComparisonOperator=OPERATOR_EqualTo,Operand2Usage=OPERAND_PreferAttribute,AttributeOperand2=None,ConstantOperand2=0.000000),SupplementalAttributeToAppend=None),(bDisplayAsModifierOnly=False,AttributeStyle=ATTRSTYLE_JustNumber,SupplementalAttributeStyle=ATTRSTYLE_JustNumber,StatCombinationMethod=SCM_Multiply,Attribute=ResourcePoolAttributeDefinition'D_Attributes.ShieldResourcePool.ShieldOnIdleRegenerationDelay',ConstraintAttribute=None,SupplementalAttributeExpression=(AttributeOperand1=None,ComparisonOperator=OPERATOR_EqualTo,Operand2Usage=OPERAND_PreferAttribute,AttributeOperand2=None,ConstantOperand2=0.000000),SupplementalAttributeToAppend=None),(bDisplayAsModifierOnly=False,AttributeStyle=ATTRSTYLE_ModifierText,SupplementalAttributeStyle=ATTRSTYLE_JustNumber,StatCombinationMethod=SCM_Multiply,Attribute=AttributeDefinition'D_Attributes.Shield.PercentChanceToAbsorbAmmo',ConstraintAttribute=None,SupplementalAttributeExpression=(AttributeOperand1=None,ComparisonOperator=OPERATOR_EqualTo,Operand2Usage=OPERAND_PreferAttribute,AttributeOperand2=None,ConstantOperand2=0.000000),SupplementalAttributeToAppend=None))
+    
+    set GD_Runner_Items_MainGame.Runner.Skin_Blood UIMeshRotation (Pitch=0,Yaw=32768,Roll=32768)
+    
+    set GD_Runner_Items_MainGame.Runner.Skin_Blood Presentation InventoryCardPresentationDefinition'GD_InventoryPresentations.Definitions.Shield'
+    
+    set GD_Runner_Items_MainGame.Runner.Skin_Blood PurchasedStatID STAT_PLAYER_SHIELD_PURCHASED
+    
+    set GD_Runner_Items_MainGame.Runner.Skin_Blood AttributeSlotEffects ((SlotName="Capacity",bExternalSlot=True,bRunEffectsAsSkill=False,AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.ShieldResourcePool.ShieldMaxValue',ConstraintAttribute=None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),PerGradeUpgrade=(BaseValueConstant=0.030000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bIncludeInFunStats=False,bIncludeAlliesAsTarget=False,bEnforceMinimumGrade=False,bEnforceMaximumGrade=False,MinimumGrade=0,MaximumGrade=0,TargetInstanceDataName=),(SlotName="RechargeRate",bExternalSlot=True,bRunEffectsAsSkill=False,AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.ShieldResourcePool.ShieldOnIdleRegenerationRate',ConstraintAttribute=None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),PerGradeUpgrade=(BaseValueConstant=0.030000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bIncludeInFunStats=False,bIncludeAlliesAsTarget=False,bEnforceMinimumGrade=False,bEnforceMaximumGrade=False,MinimumGrade=0,MaximumGrade=0,TargetInstanceDataName=),(SlotName="RechargeDelay",bExternalSlot=True,bRunEffectsAsSkill=False,AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.ShieldResourcePool.ShieldOnIdleRegenerationDelay',ConstraintAttribute=None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),PerGradeUpgrade=(BaseValueConstant=-0.040000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bIncludeInFunStats=False,bIncludeAlliesAsTarget=False,bEnforceMinimumGrade=False,bEnforceMaximumGrade=False,MinimumGrade=0,MaximumGrade=0,TargetInstanceDataName=),(SlotName="FireResist",bExternalSlot=True,bRunEffectsAsSkill=False,AttributeToModify=AttributeDefinition'D_Attributes.StatusEffectModifiers.IgniteChanceResistanceModifier',ConstraintAttribute=None,ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),PerGradeUpgrade=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bIncludeInFunStats=False,bIncludeAlliesAsTarget=False,bEnforceMinimumGrade=False,bEnforceMaximumGrade=False,MinimumGrade=0,MaximumGrade=0,TargetInstanceDataName=),(SlotName="ShockResist",bExternalSlot=True,bRunEffectsAsSkill=False,AttributeToModify=AttributeDefinition'D_Attributes.StatusEffectModifiers.ShockChanceResistanceModifier',ConstraintAttribute=None,ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),PerGradeUpgrade=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bIncludeInFunStats=False,bIncludeAlliesAsTarget=False,bEnforceMinimumGrade=False,bEnforceMaximumGrade=False,MinimumGrade=0,MaximumGrade=0,TargetInstanceDataName=),(SlotName="CorrosiveResist",bExternalSlot=True,bRunEffectsAsSkill=False,AttributeToModify=AttributeDefinition'D_Attributes.StatusEffectModifiers.CorrosiveChanceResistanceModifier',ConstraintAttribute=None,ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),PerGradeUpgrade=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bIncludeInFunStats=False,bIncludeAlliesAsTarget=False,bEnforceMinimumGrade=False,bEnforceMaximumGrade=False,MinimumGrade=0,MaximumGrade=0,TargetInstanceDataName=),(SlotName="ExplosiveDamageResistance",bExternalSlot=True,bRunEffectsAsSkill=False,AttributeToModify=DesignerAttributeDefinition'GD_Shields.Misc.Att_Shield_ExplosiveDamageResistance',ConstraintAttribute=None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=DesignerAttributeDefinition'GD_Shields.Misc.Att_ShieldResistance_Base',InitializationDefinition=None,BaseValueScaleConstant=1.000000),PerGradeUpgrade=(BaseValueConstant=0.000000,BaseValueAttribute=DesignerAttributeDefinition'GD_Shields.Misc.Att_ShieldResistance_PerGradeUpgrade',InitializationDefinition=None,BaseValueScaleConstant=1.000000),bIncludeInFunStats=False,bIncludeAlliesAsTarget=False,bEnforceMinimumGrade=False,bEnforceMaximumGrade=False,MinimumGrade=0,MaximumGrade=0,TargetInstanceDataName=),(SlotName="MaxHealth",bExternalSlot=True,bRunEffectsAsSkill=False,AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.HealthResourcePool.HealthMaxValue',ConstraintAttribute=None,ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),PerGradeUpgrade=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance_HealthAndDamage.HealthAndDamage.Init_HealthBonusFromShields_Formula',BaseValueScaleConstant=0.030000),bIncludeInFunStats=False,bIncludeAlliesAsTarget=False,bEnforceMinimumGrade=False,bEnforceMaximumGrade=False,MinimumGrade=0,MaximumGrade=0,TargetInstanceDataName=),(SlotName="Special01",bExternalSlot=False,bRunEffectsAsSkill=False,AttributeToModify=AttributeDefinition'D_Attributes.Shield.PercentChanceToAbsorbAmmo',ConstraintAttribute=None,ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.150000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),PerGradeUpgrade=(BaseValueConstant=0.008000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bIncludeInFunStats=False,bIncludeAlliesAsTarget=False,bEnforceMinimumGrade=False,bEnforceMaximumGrade=False,MinimumGrade=0,MaximumGrade=0,TargetInstanceDataName=),(SlotName="Special02",bExternalSlot=False,bRunEffectsAsSkill=False,AttributeToModify=AttributeDefinition'D_Attributes.Shield.PercentDamageToNegateWhenAmmoAbsorbed',ConstraintAttribute=None,ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),PerGradeUpgrade=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bIncludeInFunStats=False,bIncludeAlliesAsTarget=False,bEnforceMinimumGrade=False,bEnforceMaximumGrade=False,MinimumGrade=0,MaximumGrade=0,TargetInstanceDataName=))
+    
+    set GD_Runner_Items_MainGame.Runner.Skin_Blood AttributeSlotUpgrades ((SlotName="Capacity",GradeIncrease=0,bActivateSlot=True),(SlotName="RechargeRate",GradeIncrease=0,bActivateSlot=True),(SlotName="RechargeDelay",GradeIncrease=0,bActivateSlot=True),(SlotName="Special01",GradeIncrease=0,bActivateSlot=True),(SlotName="Special02",GradeIncrease=0,bActivateSlot=True))
+    
+    ______________________________________________________________________ # [BALANCE} e.g. GD_Runner_Items_MainGame.BalanceDefs.Runner_Skin_Blood
+    
+    set GD_Runner_Items_MainGame.BalanceDefs.Runner_Skin_Blood Manufacturers ((Manufacturer=ManufacturerDefinition'GD_Manufacturers.Manufacturers.Vladof',Grades=((GradeModifiers=(ExpLevel=1,CustomInventoryDefinition=None),GameStageRequirement=(MinGameStage=1,MaxGameStage=100),MinSpawnProbabilityModifier=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),MaxSpawnProbabilityModifier=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))))
+    
+    set GD_Runner_Items_MainGame.BalanceDefs.Runner_Skin_Blood PartListCollection ItemPartListCollectionDefinition'GD_Shields.A_Item.Shield_Absorption_04_VeryRare'
