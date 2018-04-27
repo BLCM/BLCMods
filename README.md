@@ -42,5 +42,7 @@ To download the files click the green `Clone or Download` button in the top righ
 
 Installing the files follows methods discussed on the [Wiki](https://github.com/BL2CP/BLCMods/wiki/Tutorial:-Installation)
 
-*Derch*'s Tutorial:    
-[![Derch's Install Tutorial](http://img.youtube.com/vi/HT79s6_KXqQ/0.jpg)](https://youtu.be/HT79s6_KXqQ)
+Note that the use of "master files" has become strongly discouraged as Borderlands
+2/TPS modding has become more complex.  The use of master files will often end
+up breaking parts or all of the mods you're trying to use.  Instead, always import
+mods into FilterTool, and only execute the single patch file that it saves.
