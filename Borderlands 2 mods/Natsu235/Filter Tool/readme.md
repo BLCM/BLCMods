@@ -21,6 +21,9 @@ Added:
 
 Updated:
 * Fixed some grammatical errors
+* Renamed files:
+	- *Fixes/Crossfire_Fusetime.txt* -> *Fixes/Crossfire_Fuse_Time.txt*
+	- *Fixes/Love_Thumper_Deadly_Bloom_Skins.txt* -> *Fixes/Love_Thumper_&_Deadly_Bloom_Skins.txt*
 
 
 ## Gibbed Codes
