@@ -15,7 +15,7 @@ Everything added for Filter Tool users.
 Update v2.0
 
 Added:
-* Color differences to each Fibber Barrel		(*Colored_Fibber_Barrels.txt*)
+* Different Colors to each Fibber Barrel		(*Colored_Fibber_Barrels.txt*)
 * BL2 Chulainn Skin over Frostfire				(*Skins/BL2_Chulainn.txt*)
 * BL2 Emperor Skin over Torrent					(*Skins/BL2_Emperor.txt*)
 * BL2 Gub Skin over Zim							(*Skins/BL2_Gub.txt*)
