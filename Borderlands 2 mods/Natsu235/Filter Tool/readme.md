@@ -29,13 +29,13 @@ Updated:
 ## Gibbed Codes
 
 ### Conference Call
-Corrosive: BL2(hwAAAACU3gACaINADAGFkkJZg+IKRQEKG5QLKBJQ/v+/QhGDggvl)  
+Corrosive:		BL2(hwAAAACU3gACaINADAGFkkJZg+IKRQEKG5QLKBJQ/v+/QhGDggvl)  
 
 ### Bad Touch
-Blue Rarity: BL2(hwAAAAAIQABDqANBEAGFemIxwfKMRQHLChYHLBRY/v8nY/nBso3l)  
+Blue Rarity:	BL2(hwAAAAAIQABDqANBEAGFemIxwfKMRQHLChYHLBRY/v8nY/nBso3l)  
 
 ### Good Touch
-Blue Rarity: BL2(hwAAAABNyABDaANBEAGFemIxweKMRQHLCpYGLBRY/v8fY/nBco3l)  
+Blue Rarity:	BL2(hwAAAABNyABDaANBEAGFemIxweKMRQHLCpYGLBRY/v8fY/nBco3l)  
 
 ### Crit
-Blue Rarity: BL2(hwAAAABXdAlDaAAMEQGFemIxwaKAUAHLCpYHLBRY/v8zIPzBsoDw)  
+Blue Rarity:	BL2(hwAAAABXdAlDaAAMEQGFemIxwaKAUAHLCpYHLBRY/v8zIPzBsoDw)  
