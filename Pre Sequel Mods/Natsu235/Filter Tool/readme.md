@@ -16,6 +16,7 @@ Update v2.0
 
 Added:
 * Different Colors to each Fibber Barrel		(*Colored_Fibber_Barrels.txt*)
+* Probe Fixed Element fix						(*Fixes/Probe_Fixed_Element.txt*)
 * BL2 Chulainn Skin over Frostfire				(*Skins/BL2_Chulainn.txt*)
 * BL2 Emperor Skin over Torrent					(*Skins/BL2_Emperor.txt*)
 * BL2 Gub Skin over Zim							(*Skins/BL2_Gub.txt*)
@@ -36,37 +37,41 @@ Updated:
 	- Fixed Shock & Slag Projectiles from Chulainn (named Setanta)
 	- Added Slag Icon to Slag Oz Kits
 	- Turned some Cryo Particles in Purple to match element color
-	- Replaced Frozen SFX with Slagged SFX (only works on maps using object GD_ColZ: Vorago Solitude, Outfall Pumping Station, Tycho's Ribs, Eleseer, The Holodôme)
+	- Replaced Frozen SFX with Slagged SFX (only works on maps using object GD_ColZ: Vorago Solitude, Outfall Pumping Station, Tycho's Ribs, Eleseer, The Holodome)
+	- Cryo Pools no longer Slag players
 * BL2 Weapons									(*BL2 Stuff/BL2_Weapons.txt*)
 	- Added some BL2 Weapons Skins
+* Renamed files:
+	- *Fixes/Nasty_Surprise_Prefix.txt* -> *Fixes/Cryo_Grenades.txt*
+
 
 ## Gibbed Codes
 
 ### Pyrophobia
-Fire: BLOZ(igAAAADVsACBa4A8DmM0TkASgVQAxQESC6QLSAiQAPAYQJGD5ADl)  
+Fire:		BLOZ(igAAAADVsACBa4A8DmM0TkASgVQAxQESC6QLSAiQAPAYQJGD5ADl)  
 
 ### Gub
-Corrosive: BLOZ(igAAAAAyawDBKwE9CmM0pmE6wtSAhQTT//8VTDOYAPA4YJHFlIHl)  
+Corrosive:	BLOZ(igAAAAAyawDBKwE9CmM0pmE6wtSAhQTT//8VTDOYAPA4YJHFlIHl)  
 
 ### Conference Call
-None: BLOZ(igAAAABmyQACrIE9AmM0EsEqgHUBJgOWAiwNWCawAPBIwYKEVQLm)  
-Fire: BLOZ(igAAAADY9QACrIE9AmM0EsEqgHUBJgOWAqwNWCawAPBIwYKEVQLm)  
-Corrosive: BLOZ(igAAAAA/cwACrIE9AmM0EsEqgHUBJgOWAiwOWCawAPBIwYKEVQLm)  
-Shock: BLOZ(igAAAACBTwACrIE9AmM0EsEqgHUBJgOWAqwOWCawAPBIwYKEVQLm)  
-Ice: BLOZ(igAAAABDCgACrIE9AmM0EsEqgHUBJgOWAiwPWCawAPBIwYKEVQLm)  
+None:		BLOZ(igAAAABmyQACrIE9AmM0EsEqgHUBJgOWAiwNWCawAPBIwYKEVQLm)  
+Fire:		BLOZ(igAAAADY9QACrIE9AmM0EsEqgHUBJgOWAqwNWCawAPBIwYKEVQLm)  
+Corrosive:	BLOZ(igAAAAA/cwACrIE9AmM0EsEqgHUBJgOWAiwOWCawAPBIwYKEVQLm)  
+Shock:		BLOZ(igAAAACBTwACrIE9AmM0EsEqgHUBJgOWAqwOWCawAPBIwYKEVQLm)  
+Ice:		BLOZ(igAAAABDCgACrIE9AmM0EsEqgHUBJgOWAiwPWCawAPBIwYKEVQLm)  
 
 ### Emperor
-None: BLOZ(igAAAACgXgBCTAA+AGM01uAywFWA5v//A64NXCK4APAYoCHEZYHm)  
-Fire: BLOZ(igAAAAClugBCTAA+AGM01uAywFWA5v//Ay4BXCK4APAYoCHEZYHm)  
-Corrosive: BLOZ(igAAAABn/wBCTAA+AGM01uAywFWA5v//A64AXCK4APAYoCHEZYHm)  
-Shock: BLOZ(igAAAABH2ABCTAA+AGM01uAywFWA5v//Ay4OXCK4APAYoCHEZYHm)  
-Ice: BLOZ(igAAAAD55ABCTAA+AGM01uAywFWA5v//A64OXCK4APAYoCHEZYHm)  
+None:		BLOZ(igAAAACgXgBCTAA+AGM01uAywFWA5v//A64NXCK4APAYoCHEZYHm)  
+Fire:		BLOZ(igAAAAClugBCTAA+AGM01uAywFWA5v//Ay4BXCK4APAYoCHEZYHm)  
+Corrosive:	BLOZ(igAAAABn/wBCTAA+AGM01uAywFWA5v//A64AXCK4APAYoCHEZYHm)  
+Shock:		BLOZ(igAAAABH2ABCTAA+AGM01uAywFWA5v//Ay4OXCK4APAYoCHEZYHm)  
+Ice:		BLOZ(igAAAAD55ABCTAA+AGM01uAywFWA5v//A64OXCK4APAYoCHEZYHm)  
 
 ### Lascaux
-None: BLOZ(igAAAAAX9wBCDAJBAGM0zuAywHWF6///A64NXCK4APBg4SLEZYnr)  
+None:		BLOZ(igAAAAAX9wBCDAJBAGM0zuAywHWF6///A64NXCK4APBg4SLEZYnr)  
 
 ### Fastball
-Explosive: BLOZ(CgAAAAAxDwAPFF5wYTBG4/9/OIYBhglGBgYSxv//BwYdBhAGOMY=)  
-Fire: BLOZ(CgAAAADXdwAPFF5wYTBG4/9/OIYBhgNGBgYSxv//BwYdRhAGOMY=)  
-Corrosive: BLOZ(CgAAAAD/dgAPFF5wYTBG4/9/OIYBRgRGBgYSxv//BwYdxg8GOMY=)  
-Shock: BLOZ(CgAAAAB0WQAPFF5wYTBG4/9/OIYBBgVGBgYSxv//BwYdhhAGOMY=)  
+Explosive:	BLOZ(CgAAAAAxDwAPFF5wYTBG4/9/OIYBhglGBgYSxv//BwYdBhAGOMY=)  
+Fire:		BLOZ(CgAAAADXdwAPFF5wYTBG4/9/OIYBhgNGBgYSxv//BwYdRhAGOMY=)  
+Corrosive:	BLOZ(CgAAAAD/dgAPFF5wYTBG4/9/OIYBRgRGBgYSxv//BwYdxg8GOMY=)  
+Shock:		BLOZ(CgAAAAB0WQAPFF5wYTBG4/9/OIYBBgVGBgYSxv//BwYdhhAGOMY=)  
