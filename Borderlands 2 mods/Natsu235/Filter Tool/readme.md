@@ -10,6 +10,18 @@ This file contains all of my patches to use with the Filter Tool.
 Initial version.  
 Everything added for Filter Tool users.  
 
+### 05/04/2018
+
+Update v2.0
+
+Added:
+* Different Colors to each Fibber Barrel			(*Colored_Fibber_Barrels.txt*)
+* Fire Icon to Hide of Terramorphous				(*Hide_of_Terra_Better_Hud.txt*)
+* Slag Icon & Slag Shield Bar Outline to Antagonist	(*Antagonist_Better_Hud.txt*)
+
+Updated:
+* Fixed some grammatical errors
+
 
 ## Gibbed Codes
 
