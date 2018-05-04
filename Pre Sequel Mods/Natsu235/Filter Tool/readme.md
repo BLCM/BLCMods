@@ -10,6 +10,35 @@ This file contains all of my patches to use with the Filter Tool.
 Initial version.  
 Everything added for Filter Tool users.  
 
+### 05/04/2018
+
+Update v2.0
+
+Added:
+* Color differences to each Fibber Barrel		(*Colored_Fibber_Barrels.txt*)
+* BL2 Chulainn Skin over Frostfire				(*Skins/BL2_Chulainn.txt*)
+* BL2 Emperor Skin over Torrent					(*Skins/BL2_Emperor.txt*)
+* BL2 Gub Skin over Zim							(*Skins/BL2_Gub.txt*)
+* BL2 Gunerang Skin over Shooterang				(*Skins/BL2_Gunerang.txt*)
+* BL2 Gwen's Head Skin over Gwen's Other Head	(*Skins/BL2_Gwens_Head.txt*)
+* BL2 Landscaper Skin over Moonscaper			(*Skins/BL2_Landscaper.txt*)
+* BL2 Norfleet Skin over Cryophobia				(*Skins/BL2_Chulainn.txt*)
+* BL2 Sloth Skin over Wet Weet					(*Skins/BL2_Chulainn.txt*)
+* BL2 Thunderball Fists Skin over Hard Reboot	(*Skins/BL2_Chulainn.txt*)
+* BL2 Veruc Skin over Major Tom					(*Skins/BL2_Chulainn.txt*)
+* Proletarian Revolution Custom Skin 			(*Skins/BL2_Chulainn.txt*)
+
+Updated:
+* Seraph Claptrap DLC Shields					(*Seraph_Marigold.txt*)
+	- Added Purple Emissive Color to match rarity
+* Slag Element									(*Slag.txt*)
+	- Removed Cryo Shields from every lootpool (if you have a Cryo Shield in your backpack/bank, it will be turned as a Shock Shield to prevent it's deletion)
+	- Fixed Shock & Slag Projectiles from Chulainn (named Setanta)
+	- Added Slag Icon to Slag Oz Kits
+	- Turned some Cryo Particles in Purple to match element color
+	- Replaced Frozen SFX with Slagged SFX (only works on maps using object GD_ColZ: Vorago Solitude, Outfall Pumping Station, Tycho's Ribs, Eleseer, The Holodôme)
+* BL2 Weapons									(*BL2 Stuff/BL2_Weapons.txt*)
+	- Added some BL2 Weapons Skins
 
 ## Gibbed Codes
 
