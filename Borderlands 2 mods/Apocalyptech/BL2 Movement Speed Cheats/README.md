@@ -52,7 +52,7 @@ Changelog
 =========
 
 **v1.1.0**, May 6, 2018:
- * Added "Reasonable Improvments" and "Stock Values" options, and made
+ * Added "Reasonable Improvements" and "Stock Values" options, and made
    "Reasonable Improvements" the default.
 
 **v1.0.1**, April 25, 2018:
