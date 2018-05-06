@@ -69,7 +69,8 @@ class Hotfixes(object):
     Hotfixes we're interested in, for ease of use
     """
 
-    def __init__(self, include_gearbox_patches=False, game='bl2'):
+    def __init__(self, nameprefix='Apoc', include_gearbox_patches=False, game='bl2'):
+        self.nameprefix = nameprefix
         self.hotfixes = []
         self.hotfix_lookup = {}
         self.ids = {}
@@ -370,13 +371,14 @@ class Hotfixes(object):
 
         The full key for the hotfix will be set to:
 
-            {prefix}-Apoc{key}{x}
+            {prefix}-{nameprefix}{key}{x}
 
-        where {x} is an internally generated counter.
+        where {nameprefix} is the name prefix for the whole Hotfixes object
+        (which defaults to "Apoc"), and {x} is an internally generated counter.
         """
         if name in self.hotfix_lookup:
             raise Exception('"{}" already exists as a hotfix'.format(name))
-        hotfix = Hotfix('{}-Apoc{}{}'.format(prefix, key, self.next_id(key)),
+        hotfix = Hotfix('{}-{}{}{}'.format(prefix, self.nameprefix, key, self.next_id(key)),
                 value, activated=activated)
         self.hotfix_lookup[name] = hotfix
         self.hotfixes.append(hotfix)

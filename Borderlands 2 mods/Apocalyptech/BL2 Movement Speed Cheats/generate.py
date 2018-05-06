@@ -45,94 +45,158 @@ except ModuleNotFoundError:
 ###
 
 mod_name = 'BL2 Movement Speed Cheats'
-mod_version = '1.0.1'
+mod_version = '1.1.0'
 output_filename = '{}.txt'.format(mod_name)
 
-# Control vars
-ground_speed = 1000     # (stock: 440)
-air_speed = 1100        # (stock: 500)
-injured_speed = 500     # (stock: 150)
-crouched_pct = 1        # (stock: 0.5)
-jump_z = 900            # (stock: 630)
-air_control_pct = .9    # (stock: 0.11)
-
 ###
-### Hotfix object to store all our hotfixes
+### Generation
 ###
 
-hfs = Hotfixes()
+segments = {}
 
-char_segments = {}
-for (name, streaming_obj, player_obj) in [
-        ('Axton', 'GD_Soldier_Streaming.Pawn_Soldier', 'GD_Soldier.Character.CharClass_Soldier'),
-        ('Gaige', 'GD_Tulip_Mechro_Streaming.Pawn_Mechromancer', 'GD_Tulip_Mechromancer.Character.CharClass_Mechromancer'),
-        ('Krieg', 'GD_Lilac_Psycho_Streaming.Pawn_LilacPlayerClass', 'GD_Lilac_PlayerClass.Character.CharClass_LilacPlayerClass'),
-        ('Maya', 'GD_Siren_Streaming.Pawn_Siren', 'GD_Siren.Character.CharClass_Siren'),
-        ('Salvador', 'GD_Mercenary_Streaming.Pawn_Mercenary', 'GD_Mercenary.Character.CharClass_Mercenary'),
-        ('Zero', 'GD_Assassin_Streaming.Pawn_Assassin', 'GD_Assassin.Character.CharClass_Assassin'),
-        ]:
-    (pkg, shortobj) = streaming_obj.split('.', 1)
-    hfs.add_demand_hotfix('{}GroundSpeed'.format(name),
-        '{}GroundSpeed'.format(name),
-        '{},{},GroundSpeed,,{}'.format(pkg, streaming_obj, ground_speed))
-    hfs.add_demand_hotfix('{}GroundSpeedBaseValue'.format(name),
-        '{}GroundSpeedBaseValue'.format(name),
-        '{},{},GroundSpeedBaseValue,,{}'.format(pkg, streaming_obj, ground_speed))
-    hfs.add_demand_hotfix('{}AirSpeed'.format(name),
-        '{}AirSpeed'.format(name),
-        '{},{},AirSpeed,,{}'.format(pkg, streaming_obj, air_speed))
-    hfs.add_demand_hotfix('{}AirSpeedBaseValue'.format(name),
-        '{}AirSpeedBaseValue'.format(name),
-        '{},{},AirSpeedBaseValue,,{}'.format(pkg, streaming_obj, air_speed))
-    hfs.add_demand_hotfix('{}JumpZ'.format(name),
-        '{}JumpZ'.format(name),
-        '{},{},JumpZ,,{}'.format(pkg, streaming_obj, jump_z))
-    hfs.add_demand_hotfix('{}JumpZBaseValue'.format(name),
-        '{}JumpZBaseValue'.format(name),
-        '{},{},JumpZBaseValue,,{}'.format(pkg, streaming_obj, jump_z))
-    hfs.add_demand_hotfix('{}CrouchedPct'.format(name),
-        '{}CrouchedPct'.format(name),
-        '{},{},CrouchedPct,,{}'.format(pkg, streaming_obj, crouched_pct))
-    segment_fmt = """#<{name}>
+# Loop through a number of control vars
+first_profile = True
+for (profile_name, profile_desc,
+            (ground_speed, air_speed, injured_speed, crouched_pct, jump_z, air_control_pct)
+            ) in [
+        ('reasonable', 'Reasonable Improvements', (650,  700,  300, 1,   750, .8)),
+        ('extreme',    'Extreme Improvements',    (1000, 1100, 500, 1,   900, .9)),
+        ('stock',      'Stock Values',            (440,  500,  150, 0.5, 630, .11))]:
 
-        # The set statements apply the settings initially
+    # Set up a new hotfix object
+    hfs = Hotfixes(nameprefix=profile_name.capitalize())
 
-        set {player_obj} GroundSpeed {ground_speed}
+    # Disable everything but the first option, by default
+    if first_profile:
+        line_prefix = ''
+        line_suffix = ''
+    else:
+        line_prefix = '#'
+        line_suffix = '<off>'
 
-        set {player_obj} AirSpeed {air_speed}
+    char_segments = {}
+    for (name, streaming_obj, player_obj) in [
+            ('Axton', 'GD_Soldier_Streaming.Pawn_Soldier', 'GD_Soldier.Character.CharClass_Soldier'),
+            ('Gaige', 'GD_Tulip_Mechro_Streaming.Pawn_Mechromancer', 'GD_Tulip_Mechromancer.Character.CharClass_Mechromancer'),
+            ('Krieg', 'GD_Lilac_Psycho_Streaming.Pawn_LilacPlayerClass', 'GD_Lilac_PlayerClass.Character.CharClass_LilacPlayerClass'),
+            ('Maya', 'GD_Siren_Streaming.Pawn_Siren', 'GD_Siren.Character.CharClass_Siren'),
+            ('Salvador', 'GD_Mercenary_Streaming.Pawn_Mercenary', 'GD_Mercenary.Character.CharClass_Mercenary'),
+            ('Zero', 'GD_Assassin_Streaming.Pawn_Assassin', 'GD_Assassin.Character.CharClass_Assassin'),
+            ]:
+        (pkg, shortobj) = streaming_obj.split('.', 1)
+        hfs.add_demand_hotfix('{}GroundSpeed'.format(name),
+            '{}GroundSpeed'.format(name),
+            '{},{},GroundSpeed,,{}'.format(pkg, streaming_obj, ground_speed),
+            activated=first_profile)
+        hfs.add_demand_hotfix('{}GroundSpeedBaseValue'.format(name),
+            '{}GroundSpeedBaseValue'.format(name),
+            '{},{},GroundSpeedBaseValue,,{}'.format(pkg, streaming_obj, ground_speed),
+            activated=first_profile)
+        hfs.add_demand_hotfix('{}AirSpeed'.format(name),
+            '{}AirSpeed'.format(name),
+            '{},{},AirSpeed,,{}'.format(pkg, streaming_obj, air_speed),
+            activated=first_profile)
+        hfs.add_demand_hotfix('{}AirSpeedBaseValue'.format(name),
+            '{}AirSpeedBaseValue'.format(name),
+            '{},{},AirSpeedBaseValue,,{}'.format(pkg, streaming_obj, air_speed),
+            activated=first_profile)
+        hfs.add_demand_hotfix('{}JumpZ'.format(name),
+            '{}JumpZ'.format(name),
+            '{},{},JumpZ,,{}'.format(pkg, streaming_obj, jump_z),
+            activated=first_profile)
+        hfs.add_demand_hotfix('{}JumpZBaseValue'.format(name),
+            '{}JumpZBaseValue'.format(name),
+            '{},{},JumpZBaseValue,,{}'.format(pkg, streaming_obj, jump_z),
+            activated=first_profile)
+        hfs.add_demand_hotfix('{}CrouchedPct'.format(name),
+            '{}CrouchedPct'.format(name),
+            '{},{},CrouchedPct,,{}'.format(pkg, streaming_obj, crouched_pct),
+            activated=first_profile)
+        segment_fmt = """#<{name}>{line_suffix}
 
-        set {player_obj} CrouchedPct {crouched_pct}
+                {line_prefix}# The set statements apply the settings initially{line_suffix}
 
-        set {player_obj} JumpZ {jump_z}
+                {line_prefix}set {player_obj} GroundSpeed {ground_speed}{line_suffix}
 
-        # The hotfixes apply once you respawn or exit FFYL
-        # (These may be a bit overboard.  Not sure if you need the BaseValue
-        # ones, or if the BaseValue ones are the only ones you need, etc.)
+                {line_prefix}set {player_obj} AirSpeed {air_speed}{line_suffix}
 
-        {{hotfixes:{name}GroundSpeed}}
+                {line_prefix}set {player_obj} CrouchedPct {crouched_pct}{line_suffix}
 
-        {{hotfixes:{name}GroundSpeedBaseValue}}
+                {line_prefix}set {player_obj} JumpZ {jump_z}{line_suffix}
 
-        {{hotfixes:{name}AirSpeed}}
+                {line_prefix}# The hotfixes apply once you respawn or exit FFYL{line_suffix}
+                {line_prefix}# (These may be a bit overboard.  Not sure if you need the BaseValue{line_suffix}
+                {line_prefix}# ones, or if the BaseValue ones are the only ones you need, etc.){line_suffix}
 
-        {{hotfixes:{name}AirSpeedBaseValue}}
+                {{hotfixes:{name}GroundSpeed}}
 
-        {{hotfixes:{name}JumpZ}}
+                {{hotfixes:{name}GroundSpeedBaseValue}}
 
-        {{hotfixes:{name}JumpZBaseValue}}
+                {{hotfixes:{name}AirSpeed}}
 
-        {{hotfixes:{name}CrouchedPct}}
+                {{hotfixes:{name}AirSpeedBaseValue}}
 
-    #</{name}>""".format(name=name,
-        player_obj=player_obj,
-        ground_speed=ground_speed,
-        air_speed=air_speed,
-        crouched_pct=crouched_pct,
-        jump_z=jump_z,
-        )
-    char_segments[name] = segment_fmt.format(hotfixes=hfs)
+                {{hotfixes:{name}JumpZ}}
 
-loot_str = """#<{mod_name}>
+                {{hotfixes:{name}JumpZBaseValue}}
+
+                {{hotfixes:{name}CrouchedPct}}
+
+            #</{name}>""".format(
+                name=name,
+                line_prefix=line_prefix,
+                line_suffix=line_suffix,
+                player_obj=player_obj,
+                ground_speed=ground_speed,
+                air_speed=air_speed,
+                crouched_pct=crouched_pct,
+                jump_z=jump_z,
+                )
+
+        char_segments[name] = segment_fmt.format(hotfixes=hfs)
+
+    segments[profile_name] = """#<{profile_desc}>{line_suffix}
+
+            {axton}
+
+            {gaige}
+
+            {krieg}
+
+            {maya}
+
+            {salvador}
+
+            {zero}
+
+            #<Global Movement Vars>{line_suffix}
+
+                {line_prefix}# These variables aren't player-specific, and don't seem to require hotfixes{line_suffix}
+                {line_prefix}# to apply post-death-or-FFYL{line_suffix}
+
+                {line_prefix}set GD_PlayerShared.injured.PlayerInjuredDefinition InjuredMovementSpeed {injured_speed}{line_suffix}
+
+                {line_prefix}set GD_Globals.General.Globals PlayerAirControl {air_control_pct}{line_suffix}
+
+            #</Global Movement Vars>
+
+        #</{profile_desc}>""".format(
+            line_prefix=line_prefix,
+            line_suffix=line_suffix,
+            profile_desc=profile_desc,
+            axton=char_segments['Axton'],
+            gaige=char_segments['Gaige'],
+            krieg=char_segments['Krieg'],
+            maya=char_segments['Maya'],
+            salvador=char_segments['Salvador'],
+            zero=char_segments['Zero'],
+            injured_speed=injured_speed,
+            air_control_pct=air_control_pct,
+            )
+
+    first_profile = False
+
+mod_str = """#<{mod_name}>
 
     # {mod_name} v{mod_version}
     # Licensed under Public Domain / CC0 1.0 Universal
@@ -140,42 +204,24 @@ loot_str = """#<{mod_name}>
     # Ups the movement speed of all characters (including while crouched and during
     # FFYL), increases jump height a bit, and provides much more air control.
 
-    {axton}
+    #<Movement Speed Buffs (Pick One)><MUT>
 
-    {gaige}
+        {reasonable}
 
-    {krieg}
+        {extreme}
 
-    {maya}
+        {stock}
 
-    {salvador}
-
-    {zero}
-
-    #<Global Movement Vars>
-
-        # These variables aren't player-specific, and don't seem to require hotfixes
-        # to apply post-death-or-FFYL
-
-        set GD_PlayerShared.injured.PlayerInjuredDefinition InjuredMovementSpeed {injured_speed}
-
-        set GD_Globals.General.Globals PlayerAirControl {air_control_pct}
-
-    #</Global Movement Vars>
+    #</Movement Speed Buffs (Pick One)>
 
 #</{mod_name}>""".format(
     mod_name=mod_name,
     mod_version=mod_version,
-    axton=char_segments['Axton'],
-    gaige=char_segments['Gaige'],
-    krieg=char_segments['Krieg'],
-    maya=char_segments['Maya'],
-    salvador=char_segments['Salvador'],
-    zero=char_segments['Zero'],
-    injured_speed=injured_speed,
-    air_control_pct=air_control_pct,
+    reasonable=segments['reasonable'],
+    extreme=segments['extreme'],
+    stock=segments['stock'],
     )
 
 with open(output_filename, 'w') as df:
-    df.write(loot_str)
+    df.write(mod_str)
 print('Wrote mod file to: {}'.format(output_filename))
