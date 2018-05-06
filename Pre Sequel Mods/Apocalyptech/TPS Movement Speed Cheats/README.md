@@ -9,6 +9,21 @@ some levels like there's no tomorrow, this is for you.
 Obviously this is quite cheaty; I've mostly just used it for easier testing
 of my other mods.
 
+There are actually three options to choose from, in a mututally-exclusive
+folder inside the mod:
+
+* Reasonable Improvements
+* Extreme Improvements
+* Stock Values
+
+"Extreme Improvements" used to be the only setting for this mod, and was
+useful while testing out some of my other mods, but is a bit much for
+ordinary play (and ends up making movement in multiplayer a bit jerky
+looking).  "Reasonable Improvements" is the new default, which makes
+things a bit more reasonable, though it will still be an improvement
+from stock.  "Stock Values" can be used to set the vanilla BL2 values
+for movement speed.
+
 Usage
 =====
 
@@ -36,6 +51,10 @@ The mod itself is licensed under
 
 Changelog
 =========
+
+**v1.1.0**, May 6, 2018:
+ * Added "Reasonable Improvments" and "Stock Values" options, and made
+   "Reasonable Improvements" the default.
 
 **v1.0.1**, April 25, 2018:
  * Renamed mod file to have a `.txt` extension
