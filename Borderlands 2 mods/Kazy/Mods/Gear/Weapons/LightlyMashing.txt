@@ -1,0 +1,66 @@
+#<Lightly Mashing>
+
+    by Kazy
+
+    Simply makes Jakobs, Maliwan, and Torgue Pistols' Double Accesory convert themm into Mashers.
+
+    #<Differences>
+
+        #<Projectiles>
+
+            Torgue has five projectiles
+
+            Maliwan has six projectiles
+
+            Jakobs has seven projectiles
+
+        #</Projectiles>
+
+        #<Ammo Consumption>
+
+            Torgue consumes two ammo per shot
+
+            Jakobs consumes three ammo per shot
+
+            Maliwan consumes four ammo per shot
+
+        #</Ammo Consumption>
+
+        #<Mag Size Boost>
+
+            Jakobs gains 2 bullets in the magazine (Unchanged from Double version)
+
+            Torgue gains 4 bullets in the magazine
+
+            Maliwan gains 6 bullets in the magazine
+
+        #</Mag Size Boost>
+
+        #<Other Side Changes>
+
+            #<Torgue>
+
+                -20% Damage
+
+                +20% Projectile Speed
+
+            #</Torgue>
+
+        #</Other Side Changes>
+
+    #</Differences>
+
+    #<Coding>
+
+        set GD_Weap_Pistol.Accessory.Pistol_Accessory_Laser_Double WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=2.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Torgue',InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=4.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Maliwan',InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponPerShotAccuracyImpulse',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Hyperion',InitializationDefinition=None,BaseValueScaleConstant=-4.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponPerShotAccuracyImpulse',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=4.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.400000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.600000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=3.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Torgue',InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=6.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Maliwan',InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=5.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Jakobs',InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.500000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Jakobs',InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectileSpeedMultiplier',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.200000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Torgue',,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Torgue',InitializationDefinition=None,BaseValueScaleConstant=-0.200000)))
+
+        set GD_Weap_Pistol.Name.Prefix_Jakobs.Prefix_Laser_Double PartName Truly Mashin' 
+
+        set GD_Weap_Pistol.Name.Prefix_Torgue.Prefix_Laser_Double PartName Gang Banging
+
+        set GD_Weap_Pistol.Name.Prefix_Maliwan.Prefix_Laser_Double PartName Hexad
+
+    #</Coding>
+
+#</Lightly Mashing>
+
