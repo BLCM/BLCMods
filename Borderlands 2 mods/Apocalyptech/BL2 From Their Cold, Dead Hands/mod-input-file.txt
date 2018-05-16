@@ -1,0 +1,262 @@
+#<{mod_name}>
+
+    # {mod_name} v{mod_version}
+    # Licensed under Public Domain / CC0 1.0 Universal
+    #
+    # Enemies will always drop the specific gun/shield that they were using, on death, and
+    # the gear quality for enemies has been much improved.  You will be fighting many
+    # enemies which have blue and higher gear (including legendaries).  Badasses should
+    # have better-quality gear than regular enemies, in general.  Creatures like Stalkers
+    # and Skeletons, and devices like turrets, will NOT drop a shield, even if they spawn
+    # with one.  Shielded loaders will drop shields, though.
+    #
+    # This mod requires that the UCP option "Skinpool Fixes (Don't uncheck this)" is
+    # enabled!  If you want to run this without UCP, make sure to at least copy that
+    # category over.
+
+    #<Disable World Weapon/Shield Drops>
+
+        # This section disables world drops for weapons and shields, so those items will
+        # only drop from what the enemies are carrying.  Rather than deleting/disabling
+        # the items entirely, we're changing them to draw from an ammo/money pool so that
+        # the rest of the probabilities in the pools aren't affected.
+
+{other:disable_world_sets}
+
+    #</Disable World Weapon/Shield Drops>
+
+    #<Enemy Weapon Rarity Pools>
+
+        # Pools which define weapon rarities, for enemies to draw from
+
+        #<Regular Enemies>
+
+            # Assault Rifles
+
+            {regular:set_rarity_ar}
+
+            # Launchers
+
+            {regular:set_rarity_launchers}
+
+            # Pistols
+
+            {regular:set_rarity_pistols}
+
+            # SMGs
+
+            {regular:set_rarity_smg}
+
+            # Shotguns
+
+            {regular:set_rarity_shotguns}
+
+            # Snipers
+
+            {regular:set_rarity_snipers}
+
+        #</Regular Enemies>
+
+        #<Badass Enemies>
+
+            # Assault Rifles
+
+            {badass:set_rarity_ar}
+
+            # Launchers
+
+            {badass:set_rarity_launchers}
+
+            # Pistols
+
+            {badass:set_rarity_pistols}
+
+            # SMGs
+
+            {badass:set_rarity_smg}
+
+            # Shotguns
+
+            {badass:set_rarity_shotguns}
+
+            # Snipers
+
+            {badass:set_rarity_snipers}
+
+        #</Badass Enemies>
+
+    #</Enemy Weapon Rarity Pools>
+
+    #<Enemy Weapon Equip Pools>
+
+        # These are the actual pools which enemies equip from
+
+        #<Regular Enemies>
+
+            # Weight Assault Rifles
+
+            set {regular:equip_pool_ar} bAutoReadyItems True
+
+            {regular:set_equip_ar}
+
+            # Weight Pistols
+
+            set {regular:equip_pool_pistols} bAutoReadyItems True
+
+            {regular:set_equip_pistols}
+
+            # Weight Shotguns
+
+            set {regular:equip_pool_shotguns} bAutoReadyItems True
+
+            {regular:set_equip_shotguns}
+
+            # Weight SMGs
+
+            set {regular:equip_pool_smg} bAutoReadyItems True
+
+            {regular:set_equip_smg}
+
+            # All ("standard" mod weights)
+
+            set {regular:equip_pool_all} bAutoReadyItems True
+
+            {regular:set_equip_all}
+
+            # Only Launchers
+
+            set {regular:equip_pool_launchers} bAutoReadyItems True
+
+            {regular:set_equip_launchers}
+
+            # Only Snipers
+
+            set {regular:equip_pool_snipers} bAutoReadyItems True
+
+            {regular:set_equip_snipers}
+
+            # Only Shotguns
+
+            set {regular:equip_pool_only_shotguns} bAutoReadyItems True
+
+            {regular:set_equip_only_shotguns}
+
+        #</Regular Enemies>
+
+        #<Badass Enemies>
+
+            # Weight Assault Rifles
+
+            set {badass:equip_pool_ar} bAutoReadyItems True
+
+            {badass:set_equip_ar}
+
+            # Weight Pistols
+
+            set {badass:equip_pool_pistols} bAutoReadyItems True
+
+            {badass:set_equip_pistols}
+
+            # Weight Shotguns
+
+            set {badass:equip_pool_shotguns} bAutoReadyItems True
+
+            {badass:set_equip_shotguns}
+
+            # Weight SMGs
+
+            set {badass:equip_pool_smg} bAutoReadyItems True
+
+            {badass:set_equip_smg}
+
+            # All ("standard" mod weights)
+
+            set {badass:equip_pool_all} bAutoReadyItems True
+
+            {badass:set_equip_all}
+
+            # Only Launchers
+
+            set {badass:equip_pool_launchers} bAutoReadyItems True
+
+            {badass:set_equip_launchers}
+
+            # Only Snipers
+
+            set {badass:equip_pool_snipers} bAutoReadyItems True
+
+            {badass:set_equip_snipers}
+
+            # Only Shotguns
+
+            set {badass:equip_pool_only_shotguns} bAutoReadyItems True
+
+            {badass:set_equip_only_shotguns}
+
+        #</Badass Enemies>
+
+    #</Enemy Weapon Equip Pools>
+
+    #<Enemy Shield Rarity/Equip Pools>
+
+        # Shields are a bit simpler since we only need to make a rarity decision
+
+        #<Regular Enemies>
+
+            set {regular:pool_shields} bAutoReadyItems True
+
+            {regular:set_shields}
+
+        #</Regular Enemies>
+
+        #<Badass Enemies>
+
+            set {badass:pool_shields} bAutoReadyItems True
+
+            {badass:set_shields}
+
+        #</Badass Enemies>
+
+    #</Enemy Shield Rarity/Equip Pools>
+
+    #<Other Pool Tweaks>
+
+        # A few other pools need some tweaking
+
+        #<"Medical Mystery" E-Tech Pool>
+
+            # This is used by a couple other enemies in addition to Dr. Mercy.
+
+            {hotfixes:medicalmystery}
+
+        #</"Medical Mystery" E-Tech Pool>
+
+        #<No-Beard's Stinkpot Drop>
+
+            {hotfixes:nobeard_stinkpot_0}
+
+            {hotfixes:nobeard_stinkpot_1}
+
+        #</No-Beard's Stinkpot Drop>
+
+    #</Other Pool Tweaks>
+
+    #<Enemy Pool Assignments>
+
+        # Assign enemies to use our custom pools, rather than the stock Borderlands pools
+
+        #<Regular Enemies>
+
+{regular:hotfix_assignments}
+
+        #</Regular Enemies>
+
+        #<Badass Enemies>
+
+{badass:hotfix_assignments}
+
+        #</Badass Enemies>
+
+    #</Enemy Pool Assignments>
+
+#</{mod_name}>
