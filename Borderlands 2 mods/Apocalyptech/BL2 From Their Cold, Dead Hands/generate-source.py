@@ -1133,6 +1133,7 @@ class Badass(DropConfig):
             # Shotguns
             [
                 (0, 0, 'GD_Population_Nomad.Balance.PawnBalance_BadMaw'),
+                (1, 0, 'GD_Population_Nomad.Balance.PawnBalance_BadMaw'),
             ],
             # SMGs
             [
@@ -1381,13 +1382,13 @@ def disable_balanced_drop(prefix, pool, item_num):
             '{}{}'.format(prefix, hfs.get_hotfix(hotfix_id_invbal).get_xml()),
         ]
 
-def set_poollist_item_prob(hotfix_name, classname, index, level=None, prob=None):
+def set_generic_item_prob(hotfix_name, classname, attribute,
+        level=None, prob=None):
     """
-    Sets a DefaultItemPoolList probability in the given `classname`, at
-    the given `index`.  Will do so via a hotfix with the name `hotfix_name`.
-    If `prob` is not specified, the item will be disabled (ie: given a zero
-    probability).  Otherwise, pass `1` for the prob (or any other percentage
-    you want).
+    Sets a probability in the given `classname`, on the attribute `attribute`.
+    Will do so via a hotfix with the name `hotfix_name`.  If `prob` is not
+    specified, the item will be disabled (ie: given a zero probability).
+    Otherwise, pass `1` for the prob (or any other percentage you want).
     """
     global hfs
     if level is None:
@@ -1395,15 +1396,35 @@ def set_poollist_item_prob(hotfix_name, classname, index, level=None, prob=None)
     if prob is None:
         prob = 0
     hfs.add_level_hotfix(hotfix_name, 'Disable',
-        """{},
-        {},
-        DefaultItemPoolList[{}].PoolProbability,,
+        """{},{},{},,
         (
             BaseValueConstant={},
             BaseValueAttribute=None,
             InitializationDefinition=None,
             BaseValueScaleConstant=1
-        )""".format(level, classname, index, prob))
+        )""".format(level, classname, attribute, prob))
+
+def set_dipl_item_prob(hotfix_name, classname, index, level=None, prob=None):
+    """
+    Sets a DefaultItemPoolList probability.
+    """
+    set_generic_item_prob(hotfix_name, classname,
+        'DefaultItemPoolList[{}].PoolProbability'.format(index),
+        level=level,
+        prob=prob)
+
+def set_pt_cipl_item_prob(hotfix_name, classname,
+        pt_index, poollist_index, level=None, prob=None):
+    """
+    Sets a PlayThroughs[x].CustomItemPoolList probability in the given
+    `classname`, at the playthrough index `pt_index` and CustomItemPoolList
+    index `poollist_index`.
+    """
+    set_generic_item_prob(hotfix_name, classname,
+        'PlayThroughs[{}].CustomItemPoolList[{}].PoolProbability'.format(
+            pt_index, poollist_index),
+        level=level,
+        prob=prob)
 
 ###
 ### Code to generate the mod
@@ -1674,19 +1695,31 @@ hfs.add_level_hotfix('midgemong_clean_pool', 'Midge',
 
 # Captain Flynt - use the drop pool for equipping
 
-set_poollist_item_prob('flynt_pool_0',
+set_dipl_item_prob('flynt_pool_0',
     'GD_Population_Nomad.Balance.Unique.PawnBalance_Flynt',
     0,
     level='SouthernShelf_P')
-set_poollist_item_prob('flynt_pool_1',
+set_dipl_item_prob('flynt_pool_1',
     'GD_Population_Nomad.Balance.Unique.PawnBalance_Flynt',
     3,
     level='SouthernShelf_P')
-set_poollist_item_prob('flynt_pool_2',
+set_dipl_item_prob('flynt_pool_2',
     'GD_Population_Nomad.Balance.Unique.PawnBalance_Flynt',
     2,
     level='SouthernShelf_P',
     prob=1)
+
+# Bad Maw - UCP adds Deliverance, so use that.
+
+set_pt_cipl_item_prob('badmaw_pool_0',
+    'GD_Population_Nomad.Balance.PawnBalance_BadMaw',
+    0, 0,
+    level='Frost_P')
+
+set_pt_cipl_item_prob('badmaw_pool_1',
+    'GD_Population_Nomad.Balance.PawnBalance_BadMaw',
+    1, 0,
+    level='Frost_P')
 
 ###
 ### Generate the mod string

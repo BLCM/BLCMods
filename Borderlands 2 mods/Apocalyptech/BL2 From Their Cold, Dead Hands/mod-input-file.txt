@@ -942,9 +942,11 @@
 
         #<Guaranteed Boss Drops (non-weapon-using bosses)>
 
-            set GD_Itempools.DropWeights.DropODDs_BossUniques:ConstantAttributeValueResolver_0 ConstantValue 1
+            set GD_Itempools.DropWeights.DropODDS_BossUniques:ConstantAttributeValueResolver_0 ConstantValue 1
 
-            set GD_Itempools.DropWeights.DropODDs_BossUniqueRares:ConstantAttributeValueResolver_0 ConstantValue 1
+            set GD_Itempools.DropWeights.DropODDS_BossUniqueRares:ConstantAttributeValueResolver_0 ConstantValue 1
+
+            set GD_Itempools.DropWeights.DropODDS_BossUniquesRareSpawnMonster:ConstantAttributeValueResolver_0 ConstantValue 1
 
         #</Guaranteed Boss Drops (non-weapon-using bosses)>
 
@@ -1004,6 +1006,19 @@
                 {hotfixes:flynt_pool_2}
 
             #</Captain Flynt>
+
+            #<Bad Maw>
+
+                # In vanilla BL2, Bad Maw doesn't have a specific weapon, but UCP adds
+                # Deliverance.  So, we're going to go ahead and force him to equip that.
+
+                set GD_Itempools.Runnables.Pool_Tumba bAutoReadyItems True
+
+                {hotfixes:badmaw_pool_0}
+
+                {hotfixes:badmaw_pool_1}
+
+            #</Bad Maw>
 
         #</Bosses Equip Uniques>
 
