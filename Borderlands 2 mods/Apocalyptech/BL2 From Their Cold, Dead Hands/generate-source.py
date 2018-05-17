@@ -1393,46 +1393,65 @@ other = OtherConfig()
 # Get rid of global world drops.
 prefix = ' '*(4*2)
 drop_disables = []
-drop_disables.extend(disable_balanced_drop(prefix, 'GD_Itempools.GeneralItemPools.Pool_Gear', 0))
-drop_disables.extend(disable_balanced_drop(prefix, 'GD_Itempools.GeneralItemPools.Pool_GunsAndGear', 0))
-drop_disables.extend(disable_balanced_drop(prefix, 'GD_Itempools.GeneralItemPools.Pool_GunsAndGearDropNumPlayersPlusOne', 0))
-drop_disables.extend(disable_balanced_drop(prefix, 'GD_Itempools.GeneralItemPools.Pool_GunsAndGear', 1))
-drop_disables.extend(disable_balanced_drop(prefix, 'GD_Itempools.GeneralItemPools.Pool_GunsAndGearDropNumPlayersPlusOne', 1))
-drop_disables.extend(disable_balanced_drop(prefix, 'GD_Itempools.GeneralItemPools.Pool_Items_Small', 1))
-drop_disables.extend(disable_balanced_drop(prefix, 'GD_Itempools.EnemyDropPools.Pool_GunsAndGear_01_Common', 0))
-drop_disables.extend(disable_balanced_drop(prefix, 'GD_Itempools.EnemyDropPools.Pool_GunsAndGear_01_Common', 1))
-drop_disables.extend(disable_balanced_drop(prefix, 'GD_Itempools.EnemyDropPools.Pool_GunsAndGear_02_Uncommon', 0))
-drop_disables.extend(disable_balanced_drop(prefix, 'GD_Itempools.EnemyDropPools.Pool_GunsAndGear_02_Uncommon', 1))
-drop_disables.extend(disable_balanced_drop(prefix, 'GD_Itempools.EnemyDropPools.Pool_GunsAndGear_02_UncommonsRaid', 0))
-drop_disables.extend(disable_balanced_drop(prefix, 'GD_Itempools.EnemyDropPools.Pool_GunsAndGear_02_UncommonsRaid', 1))
-drop_disables.extend(disable_balanced_drop(prefix, 'GD_Itempools.EnemyDropPools.Pool_GunsAndGear_04_Rare', 0))
-drop_disables.extend(disable_balanced_drop(prefix, 'GD_Itempools.EnemyDropPools.Pool_GunsAndGear_04_Rare', 1))
-drop_disables.extend(disable_balanced_drop(prefix, 'GD_Itempools.EnemyDropPools.Pool_GunsAndGear_04_RaresRaid', 0))
-drop_disables.extend(disable_balanced_drop(prefix, 'GD_Itempools.EnemyDropPools.Pool_GunsAndGear_04_RaresRaid', 1))
-drop_disables.extend(disable_balanced_drop(prefix, 'GD_Itempools.EnemyDropPools.Pool_GunsAndGear_05_VeryRare', 0))
-drop_disables.extend(disable_balanced_drop(prefix, 'GD_Itempools.EnemyDropPools.Pool_GunsAndGear_05_VeryRare', 1))
-drop_disables.extend(disable_balanced_drop(prefix, 'GD_Itempools.EnemyDropPools.Pool_GunsAndGear_06_Legendary', 0))
-drop_disables.extend(disable_balanced_drop(prefix, 'GD_Itempools.EnemyDropPools.Pool_GunsAndGear_06_Legendary', 1))
-drop_disables.extend(disable_balanced_drop(prefix, 'GD_Itempools.EnemyDropPools.Pool_GunsAndGear_WeightedLaunchers', 0))
-drop_disables.extend(disable_balanced_drop(prefix, 'GD_Itempools.EnemyDropPools.Pool_GunsAndGear_WeightedLaunchers', 1))
-drop_disables.extend(disable_balanced_drop(prefix, 'GD_Itempools.EnemyDropPools.Pool_GunsAndGear_WeightedLaunchers', 2))
-drop_disables.extend(disable_balanced_drop(prefix, 'GD_Itempools.EnemyDropPools.Pool_GunsAndGear_WeightedPistols', 0))
-drop_disables.extend(disable_balanced_drop(prefix, 'GD_Itempools.EnemyDropPools.Pool_GunsAndGear_WeightedPistols', 1))
-drop_disables.extend(disable_balanced_drop(prefix, 'GD_Itempools.EnemyDropPools.Pool_GunsAndGear_WeightedPistols', 2))
-drop_disables.extend(disable_balanced_drop(prefix, 'GD_Itempools.EnemyDropPools.Pool_GunsAndGear_WeightedRifles', 0))
-drop_disables.extend(disable_balanced_drop(prefix, 'GD_Itempools.EnemyDropPools.Pool_GunsAndGear_WeightedRifles', 1))
-drop_disables.extend(disable_balanced_drop(prefix, 'GD_Itempools.EnemyDropPools.Pool_GunsAndGear_WeightedRifles', 2))
-drop_disables.extend(disable_balanced_drop(prefix, 'GD_Itempools.EnemyDropPools.Pool_GunsAndGear_WeightedShotguns', 0))
-drop_disables.extend(disable_balanced_drop(prefix, 'GD_Itempools.EnemyDropPools.Pool_GunsAndGear_WeightedShotguns', 1))
-drop_disables.extend(disable_balanced_drop(prefix, 'GD_Itempools.EnemyDropPools.Pool_GunsAndGear_WeightedShotguns', 2))
-drop_disables.extend(disable_balanced_drop(prefix, 'GD_Itempools.EnemyDropPools.Pool_GunsAndGear_WeightedSMGs', 0))
-drop_disables.extend(disable_balanced_drop(prefix, 'GD_Itempools.EnemyDropPools.Pool_GunsAndGear_WeightedSMGs', 1))
-drop_disables.extend(disable_balanced_drop(prefix, 'GD_Itempools.EnemyDropPools.Pool_GunsAndGear_WeightedSMGs', 2))
-drop_disables.extend(disable_balanced_drop(prefix, 'GD_Itempools.EnemyDropPools.Pool_GunsAndGear_WeightedSniper', 0))
-drop_disables.extend(disable_balanced_drop(prefix, 'GD_Itempools.EnemyDropPools.Pool_GunsAndGear_WeightedSniper', 1))
-drop_disables.extend(disable_balanced_drop(prefix, 'GD_Itempools.EnemyDropPools.Pool_GunsAndGear_WeightedSniper', 2))
-drop_disables.extend(disable_balanced_drop(prefix, 'GD_Itempools.EnemyDropPools.Pool_GunsAndGear_WeightedShields', 0))
-drop_disables.extend(disable_balanced_drop(prefix, 'GD_Itempools.EnemyDropPools.Pool_GunsAndGear_WeightedShields', 1))
+for (pool, index) in [
+        ('GD_Itempools.GeneralItemPools.Pool_Gear', 0),
+        ('GD_Itempools.GeneralItemPools.Pool_GunsAndGear', 0),
+        ('GD_Itempools.GeneralItemPools.Pool_GunsAndGearDropNumPlayersPlusOne', 0),
+        ('GD_Itempools.GeneralItemPools.Pool_GunsAndGear', 1),
+        ('GD_Itempools.GeneralItemPools.Pool_GunsAndGearDropNumPlayersPlusOne', 1),
+        ('GD_Itempools.GeneralItemPools.Pool_Items_Small', 1),
+        ('GD_Itempools.EnemyDropPools.Pool_GunsAndGear_01_Common', 0),
+        ('GD_Itempools.EnemyDropPools.Pool_GunsAndGear_01_Common', 1),
+        ('GD_Itempools.EnemyDropPools.Pool_GunsAndGear_02_Uncommon', 0),
+        ('GD_Itempools.EnemyDropPools.Pool_GunsAndGear_02_Uncommon', 1),
+        ('GD_Itempools.EnemyDropPools.Pool_GunsAndGear_02_UncommonsRaid', 0),
+        ('GD_Itempools.EnemyDropPools.Pool_GunsAndGear_02_UncommonsRaid', 1),
+        ('GD_Itempools.EnemyDropPools.Pool_GunsAndGear_04_Rare', 0),
+        ('GD_Itempools.EnemyDropPools.Pool_GunsAndGear_04_Rare', 1),
+        ('GD_Itempools.EnemyDropPools.Pool_GunsAndGear_04_RaresRaid', 0),
+        ('GD_Itempools.EnemyDropPools.Pool_GunsAndGear_04_RaresRaid', 1),
+        ('GD_Itempools.EnemyDropPools.Pool_GunsAndGear_05_VeryRare', 0),
+        ('GD_Itempools.EnemyDropPools.Pool_GunsAndGear_05_VeryRare', 1),
+        ('GD_Itempools.EnemyDropPools.Pool_GunsAndGear_06_Legendary', 0),
+        ('GD_Itempools.EnemyDropPools.Pool_GunsAndGear_06_Legendary', 1),
+        ('GD_Itempools.EnemyDropPools.Pool_GunsAndGear_WeightedLaunchers', 0),
+        ('GD_Itempools.EnemyDropPools.Pool_GunsAndGear_WeightedLaunchers', 1),
+        ('GD_Itempools.EnemyDropPools.Pool_GunsAndGear_WeightedLaunchers', 2),
+        ('GD_Itempools.EnemyDropPools.Pool_GunsAndGear_WeightedPistols', 0),
+        ('GD_Itempools.EnemyDropPools.Pool_GunsAndGear_WeightedPistols', 1),
+        ('GD_Itempools.EnemyDropPools.Pool_GunsAndGear_WeightedPistols', 2),
+        ('GD_Itempools.EnemyDropPools.Pool_GunsAndGear_WeightedRifles', 0),
+        ('GD_Itempools.EnemyDropPools.Pool_GunsAndGear_WeightedRifles', 1),
+        ('GD_Itempools.EnemyDropPools.Pool_GunsAndGear_WeightedRifles', 2),
+        ('GD_Itempools.EnemyDropPools.Pool_GunsAndGear_WeightedShotguns', 0),
+        ('GD_Itempools.EnemyDropPools.Pool_GunsAndGear_WeightedShotguns', 1),
+        ('GD_Itempools.EnemyDropPools.Pool_GunsAndGear_WeightedShotguns', 2),
+        ('GD_Itempools.EnemyDropPools.Pool_GunsAndGear_WeightedSMGs', 0),
+        ('GD_Itempools.EnemyDropPools.Pool_GunsAndGear_WeightedSMGs', 1),
+        ('GD_Itempools.EnemyDropPools.Pool_GunsAndGear_WeightedSMGs', 2),
+        ('GD_Itempools.EnemyDropPools.Pool_GunsAndGear_WeightedSniper', 0),
+        ('GD_Itempools.EnemyDropPools.Pool_GunsAndGear_WeightedSniper', 1),
+        ('GD_Itempools.EnemyDropPools.Pool_GunsAndGear_WeightedSniper', 2),
+        ('GD_Itempools.EnemyDropPools.Pool_GunsAndGear_WeightedShields', 0),
+        ('GD_Itempools.EnemyDropPools.Pool_GunsAndGear_WeightedShields', 1),
+        ('GD_Itempools.Treasure_ChestPools.Pool_EpicChest_Weapons_GunsAndGear', 1),
+        ('GD_Itempools.Treasure_ChestPools.Pool_EpicChest_Weapons_GunsAndGear', 2),
+        ('GD_Itempools.Treasure_ChestPools.Pool_EpicChest_Weapons_GunsAndGear', 3),
+        ('GD_Itempools.Treasure_ChestPools.Pool_EpicChest_Weapons_GunsAndGear', 4),
+        ('GD_Itempools.Treasure_ChestPools.Pool_EpicChest_Items', 0),
+        ('GD_Itempools.Treasure_ChestPools.Pool_EpicChest_Items', 1),
+        ('GD_Itempools.Treasure_ChestPools.Pool_EpicChest_Items', 2),
+        ('GD_Itempools.Treasure_ChestPools.Pool_EpicChest_Items', 3),
+        ('GD_Itempools.Treasure_ChestPools.Pool_WeaponChest_Items', 0),
+        ('GD_Itempools.Treasure_ChestPools.Pool_WeaponChest_Items', 1),
+        ('GD_Itempools.Treasure_ChestPools.Pool_WeaponChest_Items', 2),
+        ('GD_Itempools.Treasure_ChestPools.Pool_WeaponChest_Items', 3),
+        # BL2 Better Loot would require clearing out index 4 of Pool_WeaponChest_Items, too.
+        ('GD_Itempools.EarlyGame.Pool_Knuckledragger_Pistol', 0),
+        ('GD_Itempools.EarlyGame.Pool_Knuckledragger_Pistol_P2_P3', 0),
+        ('GD_Itempools.EarlyGame.Pool_Knuckledragger_Pistol_P4', 0),
+        ]:
+    drop_disables.extend(disable_balanced_drop(prefix, pool, index))
 other.disable_world_sets = "\n\n".join(drop_disables)
 
 # Configure the loot pools that we'll use to equip regular + badass enemies.  There's one
@@ -1612,6 +1631,22 @@ hfs.add_level_hotfix('nobeard_stinkpot_1', 'NoBeardStinkpot',
     GD_Orchid_ItemPoolsEnemyUse.WeaponPools.Pool_Weapons_EnemyUse_NoBeardStinkpot,
     BalancedItems[0].bDropOnDeath,,
     True""")
+
+# Midge-mong uses a KerBlaster.  The rider is a generic Badass Midget, but fortunately
+# no other Badass Midgets can spawn in Cove_P.  So just fiddle with the pools via
+# hotfix and we're good to go.
+
+hfs.add_level_hotfix('midgemong_kerblaster', 'Midge',
+    """Cove_P,
+    GD_Population_Midget.Balance.PawnBalance_MidgetBadass,
+    DefaultItemPoolList[0].ItemPool,,
+    ItemPoolDefinition'GD_Itempools.Runnables.Pool_WarMong'""")
+
+hfs.add_level_hotfix('midgemong_clean_pool', 'Midge',
+    """Cove_P,
+    GD_Population_PrimalBeast.Balance.Unique.PawnBalance_PrimalBeast_Warmong,
+    DefaultItemPoolList,,
+    ()""")
 
 ###
 ### Generate the mod string
