@@ -1020,6 +1020,164 @@
 
             #</Bad Maw>
 
+            #<Assassins>
+
+                # The assassins share a common drop pool which has the Emperor, in
+                # addition to an individual pool per assassin.  We're pulling the
+                # Emperor into the individual pools and having them equip from that,
+                # while restricting the common pool to only have the second item
+                # (a customization)
+
+                #<Common>
+
+                    {hotfixes:assassin_pool_0}
+
+                #</Common>
+
+                #<Assassin Wot>
+
+                    set GD_Itempools.Runnables.Pool_AssassinWot bAutoReadyItems True
+
+                    set GD_Itempools.Runnables.Pool_AssassinWot BalancedItems
+                    (
+                        ( 
+                            ItmPoolDefinition=None, 
+                            InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_SMG.A_Weapons_Unique.SMG_Hyperion_3_Commerce', 
+                            Probability=( 
+                                BaseValueConstant=1.000000, 
+                                BaseValueAttribute=None, 
+                                InitializationDefinition=None,
+                                BaseValueScaleConstant=1.000000 
+                            ), 
+                            bDropOnDeath=True 
+                        ),
+                        ( 
+                            ItmPoolDefinition=None, 
+                            InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_SMG.A_Weapons_Legendary.SMG_Dahl_5_Emperor', 
+                            Probability=( 
+                                BaseValueConstant=1.000000, 
+                                BaseValueAttribute=None, 
+                                InitializationDefinition=None,
+                                BaseValueScaleConstant=0.250000 
+                            ), 
+                            bDropOnDeath=True 
+                        )
+                    )
+
+                    {hotfixes:wot_pool_0}
+
+                    {hotfixes:wot_pool_1}
+
+                #</Assassin Wot>
+
+                #<Assassin Oney>
+
+                    set GD_Itempools.Runnables.Pool_AssassinOney bAutoReadyItems True
+
+                    set GD_Itempools.Runnables.Pool_AssassinOney BalancedItems
+                    (
+                        ( 
+                            ItmPoolDefinition=None, 
+                            InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_Pistol.A_Weapons_Unique.Pistol_Jakobs_3_Judge', 
+                            Probability=( 
+                                BaseValueConstant=1.000000, 
+                                BaseValueAttribute=None, 
+                                InitializationDefinition=None,
+                                BaseValueScaleConstant=1.000000 
+                            ), 
+                            bDropOnDeath=True 
+                        ),
+                        ( 
+                            ItmPoolDefinition=None, 
+                            InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_SMG.A_Weapons_Legendary.SMG_Dahl_5_Emperor', 
+                            Probability=( 
+                                BaseValueConstant=1.000000, 
+                                BaseValueAttribute=None, 
+                                InitializationDefinition=None,
+                                BaseValueScaleConstant=0.250000 
+                            ), 
+                            bDropOnDeath=True 
+                        )
+                    )
+
+                    {hotfixes:oney_pool_0}
+
+                    {hotfixes:oney_pool_1}
+
+                #</Assassin Oney>
+
+                #<Assassin Reeth>
+
+                    # Reeth is a Psycho, so only does Melee attacks.  We're going to alter
+                    # his Runnables pool anyway, though, since we disabled the Emperor out
+                    # in the common pool, and he couldn't drop it otherwise.
+
+                    set GD_Itempools.Runnables.Pool_AssassinReeth BalancedItems
+                    (
+                        ( 
+                            ItmPoolDefinition=None, 
+                            InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_SniperRifles.A_Weapons_Unique.Sniper_Hyperion_3_FremingtonsEdge', 
+                            Probability=( 
+                                BaseValueConstant=1.000000, 
+                                BaseValueAttribute=None, 
+                                InitializationDefinition=None,
+                                BaseValueScaleConstant=1.000000 
+                            ), 
+                            bDropOnDeath=True 
+                        ),
+                        ( 
+                            ItmPoolDefinition=None, 
+                            InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_SMG.A_Weapons_Legendary.SMG_Dahl_5_Emperor', 
+                            Probability=( 
+                                BaseValueConstant=1.000000, 
+                                BaseValueAttribute=None, 
+                                InitializationDefinition=None,
+                                BaseValueScaleConstant=0.250000 
+                            ), 
+                            bDropOnDeath=True 
+                        )
+                    )
+
+                #</Assassin Reeth>
+
+                #<Assassin Rouf>
+
+                    set GD_Itempools.Runnables.Pool_AssassinRouf bAutoReadyItems True
+
+                    set GD_Itempools.Runnables.Pool_AssassinRouf BalancedItems
+                    (
+                        ( 
+                            ItmPoolDefinition=None, 
+                            InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_Shotgun.A_Weapons_Unique.SG_Bandit_3_Dog', 
+                            Probability=( 
+                                BaseValueConstant=1.000000, 
+                                BaseValueAttribute=None, 
+                                InitializationDefinition=None,
+                                BaseValueScaleConstant=1.000000 
+                            ), 
+                            bDropOnDeath=True 
+                        ),
+                        ( 
+                            ItmPoolDefinition=None, 
+                            InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_SMG.A_Weapons_Legendary.SMG_Dahl_5_Emperor', 
+                            Probability=( 
+                                BaseValueConstant=1.000000, 
+                                BaseValueAttribute=None, 
+                                InitializationDefinition=None,
+                                BaseValueScaleConstant=0.250000 
+                            ), 
+                            bDropOnDeath=True 
+                        )
+                    )
+
+                    {hotfixes:rouf_pool_0}
+
+                    {hotfixes:rouf_pool_1}
+
+                #</Assassin Rouf>
+
+            #</Assassins>
+
         #</Bosses Equip Uniques>
 
     #</Bosses Use+Drop Their Unique Weapons>
@@ -1043,6 +1201,18 @@
                 )
 
             #</Captain Flynt>
+
+            #<Southpaw Assassins>
+
+                set GD_Itempools.Runnables.Pool_FourAssassins Quantity
+                (
+                    BaseValueConstant=1.000000,
+                    BaseValueAttribute=None,
+                    InitializationDefinition=None,
+                    BaseValueScaleConstant=1.000000
+                )
+
+            #</Southpaw Assassins>
 
             #<Nisha>
 

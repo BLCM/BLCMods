@@ -1404,6 +1404,15 @@ def set_generic_item_prob(hotfix_name, classname, attribute,
             BaseValueScaleConstant=1
         )""".format(level, classname, attribute, prob))
 
+def set_bi_item_prob(hotfix_name, classname, index, level=None, prob=None):
+    """
+    Sets a BalancedItems probability.
+    """
+    set_generic_item_prob(hotfix_name, classname,
+        'BalancedItems[{}].Probability'.format(index),
+        level=level,
+        prob=prob)
+
 def set_dipl_item_prob(hotfix_name, classname, index, level=None, prob=None):
     """
     Sets a DefaultItemPoolList probability.
@@ -1720,6 +1729,52 @@ set_pt_cipl_item_prob('badmaw_pool_1',
     'GD_Population_Nomad.Balance.PawnBalance_BadMaw',
     1, 0,
     level='Frost_P')
+
+# Assassin Common
+
+set_bi_item_prob('assassin_pool_0',
+    'GD_Itempools.Runnables.Pool_FourAssassins',
+    0,
+    level='SouthpawFactory_P')
+
+# Assassin Wot
+
+set_dipl_item_prob('wot_pool_0',
+    'GD_Population_Marauder.Balance.Unique.PawnBalance_Assassin1',
+    0,
+    level='SouthpawFactory_P')
+
+set_dipl_item_prob('wot_pool_1',
+    'GD_Population_Marauder.Balance.Unique.PawnBalance_Assassin1',
+    2,
+    level='SouthpawFactory_P',
+    prob=1)
+
+# Assassin Oney
+
+set_dipl_item_prob('oney_pool_0',
+    'GD_Population_Nomad.Balance.Unique.PawnBalance_Assassin2',
+    1,
+    level='SouthpawFactory_P')
+
+set_dipl_item_prob('oney_pool_1',
+    'GD_Population_Nomad.Balance.Unique.PawnBalance_Assassin2',
+    3,
+    level='SouthpawFactory_P',
+    prob=1)
+
+# Assassin Rouf
+
+set_dipl_item_prob('rouf_pool_0',
+    'GD_Population_Rat.Balance.Unique.PawnBalance_Assassin4',
+    0,
+    level='SouthpawFactory_P')
+
+set_dipl_item_prob('rouf_pool_1',
+    'GD_Population_Rat.Balance.Unique.PawnBalance_Assassin4',
+    2,
+    level='SouthpawFactory_P',
+    prob=1)
 
 ###
 ### Generate the mod string
