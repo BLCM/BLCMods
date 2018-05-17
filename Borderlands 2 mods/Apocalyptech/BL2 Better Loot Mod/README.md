@@ -408,7 +408,11 @@ for the full text.
 Changelog
 =========
 
-**v1.2.2**, April 25, 2018:
+**v1.2.3**, (unreleased):
+ * Set a few creature minibosses (such as Pimon and Tumba) to guarantee their
+   unique drops.
+
+**v1.2.2**, April 25, 2018 (commit `2618668b068b93a397820dcbabcae9bf83a67fd8`):
  * Changed mod filenames to have a `.txt` extension.
 
 **v1.2.1**, April 25, 2018 (commit `1a51920b01805297d7f15f5341587e9e56cc7758`):
