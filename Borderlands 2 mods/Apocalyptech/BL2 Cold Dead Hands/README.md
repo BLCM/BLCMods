@@ -18,6 +18,11 @@ Creatures like Stalkers and Skeletons, and devices like turrets, will NOT
 drop a shield, even if they spawn with one.  Shielded loaders will drop
 shields, though.
 
+Bosses with unique weapon drops who don't actually use weapons (ie: most
+"creature" enemies like Knuckedragger, machines like BNK3R, melee-only
+bosses) will nevertheless have a guaranteed drop of one item from their
+drop pool, even though other melee-only enemies wouldn't.
+
 Grenade Mods, Class Mods, and Relics will still be acquired as per usual -
 via world drops, chests, and the like.
 
