@@ -1975,13 +1975,13 @@
 
     #<Bosses Use+Drop Their Unique Weapons>
 
-        #<Guaranteed Boss Drops>
+        #<Guaranteed Boss Drops (non-weapon-using bosses)>
 
             set GD_Itempools.DropWeights.DropODDs_BossUniques:ConstantAttributeValueResolver_0 ConstantValue 1 
 
             set GD_Itempools.DropWeights.DropODDs_BossUniqueRares:ConstantAttributeValueResolver_0 ConstantValue 1 
 
-        #</Guaranteed Boss Drops>
+        #</Guaranteed Boss Drops (non-weapon-using bosses)>
 
         #<Bosses Equip Uniques>
 
@@ -1998,8 +1998,50 @@
 
             #</Midge-Mong>
 
+            #<Captain Flynt>
+
+                # Flynt ordinarily has a guaranteed Tinderbox drop, and a possible Thunderball Fists
+                # drop.  We're combining those two, and Flynt will have one or the other (and drop
+                # it).
+
+                set GD_Itempools.Runnables.Pool_CaptFlynt bAutoReadyItems True 
+
+                set GD_Itempools.Runnables.Pool_CaptFlynt BalancedItems ((ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_Pistol.A_Weapons_Legendary.Pistol_Maliwan_5_ThunderballFists',Probability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_Pistol.A_Weapons_Unique.Pistol_Bandit_3_Tenderbox',Probability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True))
+
+                #<hotfix><key>"SparkLevelPatchEntry-ApocDisable0"</key><value>"SouthernShelf_P,GD_Population_Nomad.Balance.Unique.PawnBalance_Flynt,DefaultItemPoolList[0].PoolProbability,,(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><on>
+
+                #<hotfix><key>"SparkLevelPatchEntry-ApocDisable1"</key><value>"SouthernShelf_P,GD_Population_Nomad.Balance.Unique.PawnBalance_Flynt,DefaultItemPoolList[3].PoolProbability,,(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><on>
+
+                #<hotfix><key>"SparkLevelPatchEntry-ApocDisable2"</key><value>"SouthernShelf_P,GD_Population_Nomad.Balance.Unique.PawnBalance_Flynt,DefaultItemPoolList[2].PoolProbability,,(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><on>
+
+            #</Captain Flynt>
+
         #</Bosses Equip Uniques>
 
     #</Bosses Use+Drop Their Unique Weapons>
+
+    #<Better Loot Compat>
+
+        # This section is just for compatibility with my BL2 Better Loot mod, and mostly
+        # just undoes some statements which Better Loot makes, back to the stock BL2
+        # values.
+
+        #<Revert Boss Drop Improved Quantities>
+
+            #<Captain Flynt>
+
+                set GD_Itempools.Runnables.Pool_CaptFlynt Quantity (BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+
+            #</Captain Flynt>
+
+            #<Nisha>
+
+                set GD_Itempools.Runnables.Pool_Sheriff Quantity (BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+
+            #</Nisha>
+
+        #</Revert Boss Drop Improved Quantities>
+
+    #</Better Loot Compat>
 
 #</BL2 From Their Cold, Dead Hands>

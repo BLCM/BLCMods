@@ -1381,6 +1381,30 @@ def disable_balanced_drop(prefix, pool, item_num):
             '{}{}'.format(prefix, hfs.get_hotfix(hotfix_id_invbal).get_xml()),
         ]
 
+def set_poollist_item_prob(hotfix_name, classname, index, level=None, prob=None):
+    """
+    Sets a DefaultItemPoolList probability in the given `classname`, at
+    the given `index`.  Will do so via a hotfix with the name `hotfix_name`.
+    If `prob` is not specified, the item will be disabled (ie: given a zero
+    probability).  Otherwise, pass `1` for the prob (or any other percentage
+    you want).
+    """
+    global hfs
+    if level is None:
+        level = ''
+    if prob is None:
+        prob = 0
+    hfs.add_level_hotfix(hotfix_name, 'Disable',
+        """{},
+        {},
+        DefaultItemPoolList[{}].PoolProbability,,
+        (
+            BaseValueConstant={},
+            BaseValueAttribute=None,
+            InitializationDefinition=None,
+            BaseValueScaleConstant=1
+        )""".format(level, classname, index, prob))
+
 ###
 ### Code to generate the mod
 ###
@@ -1647,6 +1671,22 @@ hfs.add_level_hotfix('midgemong_clean_pool', 'Midge',
     GD_Population_PrimalBeast.Balance.Unique.PawnBalance_PrimalBeast_Warmong,
     DefaultItemPoolList,,
     ()""")
+
+# Captain Flynt - use the drop pool for equipping
+
+set_poollist_item_prob('flynt_pool_0',
+    'GD_Population_Nomad.Balance.Unique.PawnBalance_Flynt',
+    0,
+    level='SouthernShelf_P')
+set_poollist_item_prob('flynt_pool_1',
+    'GD_Population_Nomad.Balance.Unique.PawnBalance_Flynt',
+    3,
+    level='SouthernShelf_P')
+set_poollist_item_prob('flynt_pool_2',
+    'GD_Population_Nomad.Balance.Unique.PawnBalance_Flynt',
+    2,
+    level='SouthernShelf_P',
+    prob=1)
 
 ###
 ### Generate the mod string
