@@ -1,5 +1,5 @@
-BL2 From Their Cold, Dead Hands
-===============================
+BL2 Cold Dead Hands
+===================
 
 **NOTE:** This mod is a work in progress, and has not yet been officially
 released.  Use at your own risk, at the moment!
@@ -55,7 +55,7 @@ directory.  You'd need to copy (or symlink, if you're on Mac or Linux)
 To generate the end result file, I actually run the small shell script
 `create.sh` in this directory, which just does the following:
 
-    ./generate-source.py && ../conv_to_mod.py -f "BL2 From Their Cold, Dead Hands"
+    ./generate-source.py && ../conv_to_mod.py -f "BL2 Cold Dead Hands"
 
 Licenses
 ========

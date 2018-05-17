@@ -44,7 +44,7 @@ except ModuleNotFoundError:
 ### Output variables
 ###
 
-mod_name = 'BL2 From Their Cold, Dead Hands'
+mod_name = 'BL2 Cold Dead Hands'
 mod_version = '1.0.0-prerelease'
 output_filename = '{}-source.txt'.format(mod_name)
 
