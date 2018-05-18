@@ -20,9 +20,8 @@ and shields can no longer be found in treasure chests, though.
 
 This mod is a spiritual cousin of my own Better Loot mod, and you can
 expect to enjoy a much better quality of gear throughout your playthrough.
-Functionally it feels very similar to Better Loot, while playing, thanks to
-the increased volume of loot which gets dropped, thanks to every
-weapon-wielding enemy having a guaranteed drop.
+Functionally it feels very similar, thanks to the increased volume of loot
+which gets dropped.
 
 Grenade Mods, Class Mods, and Relics will still be acquired as per usual -
 via world drops, chests, and the like.
