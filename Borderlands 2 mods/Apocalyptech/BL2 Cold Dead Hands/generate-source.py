@@ -1324,19 +1324,29 @@ class Badass(DropConfig):
 ### Convenience functions
 ###
 
-def get_balanced_items(items):
+def get_balanced_items(items, invbalance=None):
     """
     Returns a string containing a BalancedItems array with the given `items`.
     Each element of the list `items` should be a tuple, the first element
     being the itempool class name, and the second being the weight of that
-    item.
+    item.  If `invbalance` is None, the items will be put into the
+    ItmPoolDefinition attribute - otherwise they will be put into the
+    InvBalanceDefinition attribute, with the given `invbalance` string as
+    the type of object being linked to (most commonly either
+    WeaponBalanceDefinition or ItemBalanceDefinition)
     """
     bal_items = []
     for (classname, weight) in items:
+        if invbalance:
+            itmpool = 'None'
+            invbal = "{}'{}'".format(invbalance, classname)
+        else:
+            itmpool = "ItemPoolDefinition'{}'".format(classname)
+            invbal = 'None'
         bal_items.append("""
             (
-                ItmPoolDefinition=ItemPoolDefinition'{}',
-                InvBalanceDefinition=None,
+                ItmPoolDefinition={},
+                InvBalanceDefinition={},
                 Probability=(
                     BaseValueConstant={},
                     BaseValueAttribute=None,
@@ -1345,7 +1355,7 @@ def get_balanced_items(items):
                 ),
                 bDropOnDeath=True
             )
-            """.format(classname, weight))
+            """.format(itmpool, invbal, weight))
     return '({})'.format(','.join(bal_items))
 
 def get_balanced_set(objectname, items):
@@ -1671,8 +1681,8 @@ for config in [regular, badass]:
 hfs.add_level_hotfix('medicalmystery', 'MedicalMystery',
     """,GD_ItempoolsEnemyUse.Turrets.MedicalMystery_AlienGun,
     BalancedItems,,{}""".format(get_balanced_items([
-        ('GD_Itempools.WeaponPools.Pool_Weapons_All_05_VeryRare_Alien', 1),
-    ])))
+        ('GD_Weap_AssaultRifle.A_Weapons.AR_Bandit_5_Alien', 1),
+    ], invbalance='WeaponBalanceDefinition')))
 
 # NoBeard's Stinkpot drop
 hfs.add_level_hotfix('nobeard_stinkpot_0', 'NoBeardStinkpot',

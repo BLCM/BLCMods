@@ -37,6 +37,15 @@ This mod requires that the UCP option "Skinpool Fixes (Don't uncheck this)" is
 enabled!  If you want to run this without UCP, make sure to at least copy that
 category over.
 
+Exceptions
+----------
+
+* Doc Mercy has to be using an E-Tech blaster for Medical Mystery to make
+  sense, so I've chosen to keep that rather than having him use an Infinity
+  on you.  So Doc Mercy will drop an Infinity even though he's not actually
+  using one.  If someone has a clever way to make a loot pool change in
+  response to a mission being active or not, I'd love to hear it!
+
 Compatibility
 -------------
 
