@@ -1046,6 +1046,7 @@ class Badass(DropConfig):
                 (1, 'GD_Population_Loader.Balance.PawnBalance_LoaderGuard'),
                 (0, 'GD_Population_Loader.Balance.PawnBalance_LoaderSuperBadass'),
                 (0, 'GD_Population_Loader.Balance.Unique.PawnBalance_LoaderWAR_1340'),
+                (2, 'GD_Population_Loader.Balance.Unique.PawnBalance_BoneHead2'), # UCP compat - does not have shields in vanilla
                 (1, 'GD_Population_Marauder.Balance.Unique.PawnBalance_Assassin1'),
                 (2, 'GD_Population_Marauder.Balance.Unique.PawnBalance_MickZaford_Combat'),
                 (1, 'GD_Population_Marauder.Balance.Unique.PawnBalance_Mobley'),
@@ -1075,13 +1076,13 @@ class Badass(DropConfig):
                 (0, 'GD_PsychoBadass_Digi.Population.PawnBalance_PsychoBadass_Digi'),
 
                 # Bosses follow - I'm actually not sure if we want to be doing these or not.
-                (2, 'GD_Iris_Population_MotorMama.Balance.Iris_PawnBalance_MotorMama'),
+                (3, 'GD_Iris_Population_MotorMama.Balance.Iris_PawnBalance_MotorMama'), # Index for Motor Mama shields is 2 in vanilla game
                 (1, 'GD_Iris_Population_PyroPete.Balance.Iris_PawnBalance_Pyro_Pete'),
                 (0, 'GD_Aster_Pop_Wizards.Balance.PawnBalance_JackWarlock_Demon'),
                 (0, 'GD_Aster_Pop_Wizards.Balance.PawnBalance_JackWarlock_DemonFall'),
                 (0, 'GD_Aster_Pop_Wizards.Balance.PawnBalance_JackWarlock_MirrorImage'),
                 (0, 'GD_Aster_Pop_Wizards.Balance.PawnBalance_JackWarlock_Phase2'),
-                (0, 'GD_Iris_Population_PistonBoss.Balance.Iris_PawnBalance_PistonBoss'),
+                (2, 'GD_Iris_Population_PistonBoss.Balance.Iris_PawnBalance_PistonBoss'), # UCP Compat: Shield index is 0 in vanilla
                 (0, 'GD_Iris_Population_RaidPete.Balance.Iris_PawnBalance_RaidPete'),
                 (0, 'GD_Orchid_Pop_LoaderBoss.Balance.PawnBalance_Orchid_LoaderBoss'),
                 (0, 'GD_Population_Jack.Balance.PawnBalance_Jack'),
@@ -1106,6 +1107,7 @@ class Badass(DropConfig):
                 (1, 0, 'GD_Iris_Population_Biker.Balance.Unique.Iris_PawnBalance_BB_JohnnyAbs'),
                 (1, 0, 'GD_Iris_Population_Biker.Balance.Unique.Iris_PawnBalance_BB_TonyGlutes'),
                 (1, 0, 'GD_Iris_Population_Biker.Balance.Unique.Iris_PawnBalance_SayFaceTroll'),
+                (1, 1, 'GD_Orchid_Pop_Deserters.Deserter1.PawnBalance_Orchid_Deserter1'),
                 (0, 0, 'GD_Orchid_Pop_Pirates.Balance.PawnBalance_Orchid_PirateCaptain'),
                 (1, 0, 'GD_Orchid_Pop_Pirates.Balance.PawnBalance_Orchid_PirateCaptain'),
                 (1, 0, 'GD_Orchid_Pop_ScarlettCrew.Balance.PawnBalance_Orchid_PirateHenchman'),
@@ -1809,11 +1811,6 @@ hfs.add_level_hotfix('mad_mike_pool_0', 'MadMike',
     GD_Population_Nomad.Balance.Unique.PawnBalance_MadMike,
     DefaultItemPoolList[0].ItemPool,,
     ItemPoolDefinition'{}'""".format(other.pool_mad_mike_equip))
-
-#set_dipl_item_prob('mad_mike_pool_1',
-#    'GD_Population_Nomad.Balance.Unique.PawnBalance_MadMike',
-#    2,
-#    level='Dam_P')
 
 # UCP sets CustomItemPoolList to add the MadHous, but since we're
 # overriding the equip pool anyway, just clear out that UCP edit.

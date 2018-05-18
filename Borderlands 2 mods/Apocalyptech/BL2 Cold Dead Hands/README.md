@@ -40,6 +40,10 @@ bits:
   Maw`: Without this enabled, Bad Maw won't actually have any weapon equipped
 * `Loot Pool & Drop Changes -> Specific Loot Changes -> Add RokSalt to Flinter`:
   Without this enabled, Flinter won't actually have any weapon equipped.
+* `Loot Pool & Drop Changes -> Add Kitten and Baby Maker to Motor Momma`: Motor
+  Momma's shield won't be properly droppable without this.
+* `Loot Pool & Drop Changes -> Add Torgue Legendaries and Torgue Tokens to Piston`:
+  Piston may not spawn with a weapon without this.
 
 Usage/Installation
 ------------------
