@@ -1786,6 +1786,19 @@ set_dipl_item_prob('rouf_pool_1',
     level='SouthpawFactory_P',
     prob=1)
 
+# Flinter
+
+set_dipl_item_prob('flinter_pool_0',
+    'GD_Population_Rat.Balance.Unique.PawnBalance_RatEasterEgg',
+    0,
+    level='Dam_P')
+
+set_dipl_item_prob('flinter_pool_1',
+    'GD_Population_Rat.Balance.Unique.PawnBalance_RatEasterEgg',
+    2,
+    level='Dam_P',
+    prob=1)
+
 ###
 ### Generate the mod string
 ###

@@ -26,16 +26,26 @@ drop pool, even though other melee-only enemies wouldn't.
 Grenade Mods, Class Mods, and Relics will still be acquired as per usual -
 via world drops, chests, and the like.
 
+Requirements
+------------
+
+This mod should be able to be used mostly on its own, but it does require that
+certain parts of UCP are active.  If for whatever reason you'd like to run this
+mod by itself without UCP, make sure to at least enable/copy these bits:
+
+* `Loot Pool & Drop Changes -> Skinpool Fixes (Don't uncheck this)`: this is
+  required to free up the custom loot pools that we use to equip enemies with.
+* `Loot Pool & Drop Changes -> Specific Loot Changes -> Add Deliverance to Bad
+  Maw`: Without this enabled, Bad Maw won't actually have any weapon equipped
+* `Loot Pool & Drop Changes -> Specific Loot Changes -> Add RokSalt to Flinter`:
+  Without this enabled, Flinter won't actually have any weapon equipped.
+
 Usage/Installation
 ------------------
 
 This mod must be imported into FilterTool/BLCMM with `Developer tools` ->
 `Add single mod`.  Choose the file `Guaranteed Varkid Evolution.txt` and
 have at it!
-
-This mod requires that the UCP option "Skinpool Fixes (Don't uncheck this)" is
-enabled!  If you want to run this without UCP, make sure to at least copy that
-category over.
 
 Exceptions
 ----------

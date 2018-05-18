@@ -2095,6 +2095,19 @@
 
             #</Assassins>
 
+            #<Flinter>
+
+                # In vanilla BL2, Flinter doesn't have a specific weapon, but UCP adds
+                # RokSalt.  So, we're going to go ahead and force him to equip that.
+
+                set GD_CustomItemPools_MainGame.Assassin.Head9 bAutoReadyItems True 
+
+                #<hotfix><key>"SparkLevelPatchEntry-ApocDisable12"</key><value>"Dam_P,GD_Population_Rat.Balance.Unique.PawnBalance_RatEasterEgg,DefaultItemPoolList[0].PoolProbability,,(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><on>
+
+                #<hotfix><key>"SparkLevelPatchEntry-ApocDisable13"</key><value>"Dam_P,GD_Population_Rat.Balance.Unique.PawnBalance_RatEasterEgg,DefaultItemPoolList[2].PoolProbability,,(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><on>
+
+            #</Flinter>
+
         #</Bosses Equip Uniques>
 
     #</Bosses Use+Drop Their Unique Weapons>
