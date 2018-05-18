@@ -1191,6 +1191,48 @@
 
             #</Flinter>
 
+            #<Mad Mike>
+
+                # UCP added Madhous! as a potential drop.  Mad Mike's whole Thing is sort
+                # of that he always has a launcher, but I'm going to go ahead and just
+                # split up his potential equip pool, instead.  This will consume another
+                # skinpool, since the items otherwise couldn't be a part of the same
+                # BalancedItems array
+
+                set {other:pool_mad_mike_equip} bAutoReadyItems True
+
+                set {other:pool_mad_mike_equip} BalancedItems
+                (
+                    ( 
+                        ItmPoolDefinition=ItemPoolDefinition'{badass:equip_pool_launchers}', 
+                        InvBalanceDefinition=None,
+                        Probability=( 
+                            BaseValueConstant=1,
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=None, 
+                            BaseValueScaleConstant=1
+                        ), 
+                        bDropOnDeath=True 
+                    ),
+                    ( 
+                        ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.Runnables.Pool_MadDog', 
+                        InvBalanceDefinition=None,
+                        Probability=( 
+                            BaseValueConstant=1,
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=None, 
+                            BaseValueScaleConstant=1
+                        ), 
+                        bDropOnDeath=True 
+                    )
+                )
+
+                {hotfixes:mad_mike_pool_0}
+
+                {hotfixes:mad_mike_pool_1}
+
+            #</Mad Mike>
+
         #</Bosses Equip Uniques>
 
     #</Bosses Use+Drop Their Unique Weapons>

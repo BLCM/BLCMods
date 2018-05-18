@@ -76,6 +76,9 @@ class OtherConfig(BaseConfig):
 
     disable_world_sets = None
 
+    # Mad Mike's equip pool
+    pool_mad_mike_equip = 'GD_CustomItemPools_allium.Mercenary.AlliumXmasSkins'
+
 class DropConfig(BaseConfig):
     """
     Class to hold basic config for drops
@@ -237,7 +240,7 @@ class Regular(DropConfig):
     rarity_pool_snipers = 'GD_CustomItemPools_MainGame.Assassin.TorgueUncommon'
 
     # Equip pools (this is where gun type weights are applied)
-    equip_pool_all = 'GD_CustomItemPools_allium.Mechro.AlliumTGSkins'
+    equip_pool_all = 'GD_CustomItemPools_allium.Mechro.AlliumXmasSkins'
     equip_pool_ar = 'GD_CustomItemPools_MainGame.Soldier.VladofUncommon'
     equip_pool_launchers = 'GD_CustomItemPools_Lilac.Psycho.VladofUncommon'
     equip_pool_pistols = 'GD_CustomItemPools_MainGame.Mercenary.VladofUncommon'
@@ -247,7 +250,7 @@ class Regular(DropConfig):
     equip_pool_only_shotguns = 'GD_CustomItemPools_allium.Assassin.AlliumXmasSkins'
 
     # Shield pool
-    pool_shields = 'GD_CustomItemPools_allium.Mechro.AlliumXmasSkins'
+    pool_shields = 'GD_CustomItemPools_allium.Mechro.AlliumTGSkins'
 
     ###
     ### Enemy changes
@@ -911,7 +914,7 @@ class Badass(DropConfig):
     rarity_pool_snipers = 'GD_CustomItemPools_MainGame.Assassin.TorgueEpic'
 
     # Equip pools (this is where gun type weights are applied)
-    equip_pool_all = 'GD_CustomItemPools_allium.Mechro.AlliumTGHeads'
+    equip_pool_all = 'GD_CustomItemPools_allium.Mechro.AlliumXmasHeads'
     equip_pool_ar = 'GD_CustomItemPools_MainGame.Soldier.VladofEpic'
     equip_pool_launchers = 'GD_CustomItemPools_Lilac.Psycho.VladofEpic'
     equip_pool_pistols = 'GD_CustomItemPools_MainGame.Mercenary.VladofEpic'
@@ -921,7 +924,7 @@ class Badass(DropConfig):
     equip_pool_only_shotguns = 'GD_CustomItemPools_allium.Assassin.AlliumXmasHeads'
 
     # Shield pool
-    pool_shields = 'GD_CustomItemPools_allium.Mechro.AlliumXmasHeads'
+    pool_shields = 'GD_CustomItemPools_allium.Mechro.AlliumTGHeads'
 
     ###
     ### Enemy changes
@@ -1798,6 +1801,27 @@ set_dipl_item_prob('flinter_pool_1',
     2,
     level='Dam_P',
     prob=1)
+
+# Mad Mike
+
+hfs.add_level_hotfix('mad_mike_pool_0', 'MadMike',
+    """Dam_P,
+    GD_Population_Nomad.Balance.Unique.PawnBalance_MadMike,
+    DefaultItemPoolList[0].ItemPool,,
+    ItemPoolDefinition'{}'""".format(other.pool_mad_mike_equip))
+
+#set_dipl_item_prob('mad_mike_pool_1',
+#    'GD_Population_Nomad.Balance.Unique.PawnBalance_MadMike',
+#    2,
+#    level='Dam_P')
+
+# UCP sets CustomItemPoolList to add the MadHous, but since we're
+# overriding the equip pool anyway, just clear out that UCP edit.
+hfs.add_level_hotfix('mad_mike_pool_1', 'MadMike',
+    """Dam_P,
+    GD_Population_Nomad.Balance.Unique.PawnBalance_MadMike,
+    PlayThroughs[0].CustomItemPoolList,,
+    ()""")
 
 ###
 ### Generate the mod string
