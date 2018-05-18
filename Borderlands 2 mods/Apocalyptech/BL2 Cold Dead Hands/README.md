@@ -5,23 +5,24 @@ BL2 Cold Dead Hands
 released.  Use at your own risk, at the moment!
 
 This mod completely revamps the way in which weapons and shields are
-acquired during the game.  Enemies will now always drop the specific gun
-and shield that they're using, when killed, and this is now the *only* way
-to acquire weapons and shields in the game.  Additionally, the gear quality
-which enemies use has been greatly improved, so this mod will make your
-game harder.  You'll be up against enemies using purples, gemstones, and
+acquired during the game.  Instead of dropping weapons/shields from a
+random loot pool, enemies will now *always* drop the specific gun and
+shield that they're using, and their gear quality has been improved
+considerably.  You'll be up against enemies using purples, gemstones, and
 even legendaries.  Badass enemies will, in general, have better gear than
 their ordinary counterparts, though even ordinary enemies have a chance to
 spawn with the highest-tier gear.
 
-Creatures like Stalkers and Skeletons, and devices like turrets, will NOT
-drop a shield, even if they spawn with one.  Shielded loaders will drop
-shields, though.
+The intention is that these enhanced enemy drops will be just about the
+*only* way to acquire weapons and shields in the game.  At the moment, gear
+can still be found in vending machines, and in some containers.  Weapons
+and shields can no longer be found in treasure chests, though.
 
-Bosses with unique weapon drops who don't actually use weapons (ie: most
-"creature" enemies like Knuckedragger, machines like BNK3R, melee-only
-bosses) will nevertheless have a guaranteed drop of one item from their
-drop pool, even though other melee-only enemies wouldn't.
+This mod is a spiritual cousin of my own Better Loot mod, and you can
+expect to enjoy a much better quality of gear throughout your playthrough.
+Functionally it feels very similar to Better Loot, while playing, thanks to
+the increased volume of loot which gets dropped, thanks to every
+weapon-wielding enemy having a guaranteed drop.
 
 Grenade Mods, Class Mods, and Relics will still be acquired as per usual -
 via world drops, chests, and the like.
@@ -29,9 +30,10 @@ via world drops, chests, and the like.
 Requirements
 ------------
 
-This mod should be able to be used mostly on its own, but it does require that
-certain parts of UCP are active.  If for whatever reason you'd like to run this
-mod by itself without UCP, make sure to at least enable/copy these bits:
+This mod should be able to be used mostly on its own, but it does require
+that certain parts of UCP are active.  If for whatever reason you'd like to
+run this mod by itself without UCP, make sure to at least enable/copy these
+bits:
 
 * `Loot Pool & Drop Changes -> Skinpool Fixes (Don't uncheck this)`: this is
   required to free up the custom loot pools that we use to equip enemies with.
@@ -47,8 +49,25 @@ This mod must be imported into FilterTool/BLCMM with `Developer tools` ->
 `Add single mod`.  Choose the file `Guaranteed Varkid Evolution.txt` and
 have at it!
 
-Exceptions
-----------
+Mod Details
+-----------
+
+As stated above, enemies who use guns and shields will always drop that gun
+and shield, and should never drop anything else.  Creatures like Stalkers
+and Skeletons, and devices like turrets, will NOT drop a shield, even if
+they spawn with one.  Shielded loaders will drop shields, though.
+
+Bosses with unique weapon drops who don't actually use weapons (ie: most
+"creature" enemies like Knuckedragger, machines like BNK3R, melee-only
+bosses) will nevertheless have a guaranteed drop of one item from their
+drop pool, even though other melee-only enemies wouldn't.
+
+If a weapon/shield-using boss has multiple unique drops of a weapon or
+shield, they will spawn with one of those items chosen randomly, and that
+will be the item that they'll drop.  So you should be able to tell right
+from the start of the battle which gun you'll receive.
+
+### Exceptions
 
 * Doc Mercy has to be using an E-Tech blaster for Medical Mystery to make
   sense, so I've chosen to keep that rather than having him use an Infinity
