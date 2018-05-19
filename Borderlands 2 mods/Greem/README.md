@@ -5,7 +5,7 @@ Example is my Xiphos, it's powerful, but not OP. On the other hand, my MostOPMod
 I hope you guys enjoy the mods I release.
 If you want to add me on Steam, click this [link](http://steamcommunity.com/id/greemking).
 
-Click [here](https://www.youtube.com/channel/UCc0sqBDDpS2MI1QWq0NMM5A) to vist my channel.
+Click [here](https://www.youtube.com/ch/Greeem) to vist my channel.
 
 Here's some of the Borderlands (Mods) videos I've made.
  > [Eridium Hurricane](https://youtu.be/UI9DWv1JTNs) |
