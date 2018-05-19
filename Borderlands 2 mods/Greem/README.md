@@ -17,8 +17,8 @@ You may come to find that you like my OP weapons, and I thank you. If you don't 
 
 I haven't "quit" modding, I'm just not doing it as frequently as my ideas have ran out. Feel free to PM me on Steam if you have a unique idea you'd want to see be made into a mod. 
 
-Click [here](https://discord.io/greem) to join my Discord server.
-If you don't want to join that, you can add me on Discord @Greem#0182. 
+Click [here](https://greem.xyz/SIVA) to join my Discord server.
+If you don't want to join that, you can add me on Discord @Greem#1337. 
 
 I might be coming back to modding...stay tuned.
 
