@@ -51,6 +51,9 @@ The mod itself is licensed under
 Changelog
 =========
 
+**v1.2.0**, May 20, 2018:
+ * Buffed ladder-climbing speed.
+
 **v1.1.0**, May 6, 2018:
  * Added "Reasonable Improvements" and "Stock Values" options, and made
    "Reasonable Improvements" the default.
