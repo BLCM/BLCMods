@@ -10,6 +10,8 @@ You can enable optional mods at the bottom of the modpack with the Filter Tool.
 
 Lots of options are hand-picked by me. Don't enable/disable stuff unless you know exactly what you're doing!
 
+Use on an existing save file at your own risk, make a backup. Items can and will disappear.
+
 Items tables of changed items: https://docs.google.com/spreadsheets/d/1iY0jsn2cOprdNWYiJ3lig5qGn2WqQCe4ghu6WT0hfUQ/edit?usp=sharing
 
 Troubleshooting FAQ can be found here: https://docs.google.com/document/d/17bwfQXWavBDiQuthxueXbRzB7LIx37Ki1a4-P-0qBW8/edit?usp=sharing
