@@ -1246,6 +1246,33 @@
 
             #</Prospector Zeke>
 
+            #<Laney>
+
+                set GD_Itempools.Runnables.Pool_Laney bAutoReadyItems True
+
+                {hotfixes:laney_pool_0}
+
+                {hotfixes:laney_pool_1}
+
+            #</Laney>
+
+            #<Smash-Head>
+
+                # UCP adds the Roaster to Smash-Head's default Sledge's Shotgun drop, so
+                # we'll make him use either of those, randomly.
+
+                set GD_CustomItemPools_MainGame.Assassin.Head4 bAutoReadyItems True
+
+                {hotfixes:smashhead_pool_0}
+
+                {hotfixes:smashhead_pool_1}
+
+                {hotfixes:smashhead_pool_2}
+
+                {hotfixes:smashhead_pool_3}
+
+            #</Smash-Head>
+
         #</Bosses Equip Uniques>
 
     #</Bosses Use+Drop Their Unique Weapons>
@@ -1255,6 +1282,31 @@
         # This section is just for compatibility with my BL2 Better Loot mod, and mostly
         # just undoes some statements which Better Loot makes, back to the stock BL2
         # values.
+
+        #<Revert Regular Enemy Drop Tweaks>
+
+            #<Laney's Dwarves>
+
+                # Better Loot gives all these a chance to drop gemstone weapons.  We'll
+                # just get rid of that entirely.
+
+                {hotfixes:laney_dwarf_pool_0}
+
+                {hotfixes:laney_dwarf_pool_1}
+
+                {hotfixes:laney_dwarf_pool_2}
+
+                {hotfixes:laney_dwarf_pool_3}
+
+                {hotfixes:laney_dwarf_pool_4}
+
+                {hotfixes:laney_dwarf_pool_5}
+
+                {hotfixes:laney_dwarf_pool_6}
+
+            #</Laney's Dwarves>
+
+        #</Revert Regular Enemy Drop Tweaks>
 
         #<Revert Boss Drop Improved Quantities>
 

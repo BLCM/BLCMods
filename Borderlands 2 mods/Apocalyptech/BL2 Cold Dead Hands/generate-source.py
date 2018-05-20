@@ -1833,6 +1833,53 @@ set_dipl_item_prob('zeke_pool_1',
     level='TundraExpress_P',
     prob=1)
 
+# Laney
+
+set_dipl_item_prob('laney_pool_0',
+    'GD_Population_Rat.Balance.Unique.PawnBalance_Laney',
+    0,
+    level='Fridge_P')
+
+set_dipl_item_prob('laney_pool_1',
+    'GD_Population_Rat.Balance.Unique.PawnBalance_Laney',
+    2,
+    level='Fridge_P',
+    prob=1)
+
+# Laney's Dwarves
+
+for idx in range(7):
+    set_dipl_item_prob('laney_dwarf_pool_{}'.format(idx),
+        'GD_Population_Midget.Balance.Unique.PawnBalance_LaneyDwarf{}'.format(idx+1),
+        3,
+        level='Fridge_P')
+
+# Smash-Head
+
+hfs.add_level_hotfix('smashhead_pool_0', 'SmashHead',
+    """Fridge_P,
+    GD_CustomItemPools_MainGame.Assassin.Head4,
+    BalancedItems,,{}""".format(get_balanced_items([
+        ('GD_Weap_Shotgun.A_Weapons_Legendary.SG_Bandit_5_SledgesShotgun', 1),
+        ('GD_Weap_Launchers.A_Weapons_Unique.RL_Bandit_3_Roaster', 1),
+    ], invbalance='WeaponBalanceDefinition')))
+
+set_dipl_item_prob('smashhead_pool_1',
+    'GD_Population_Goliath.Balance.Unique.PawnBalance_SmashHead',
+    0,
+    level='Fridge_P')
+
+set_dipl_item_prob('smashhead_pool_2',
+    'GD_Population_Goliath.Balance.Unique.PawnBalance_SmashHead',
+    1,
+    level='Fridge_P')
+
+set_dipl_item_prob('smashhead_pool_3',
+    'GD_Population_Goliath.Balance.Unique.PawnBalance_SmashHead',
+    2,
+    level='Fridge_P',
+    prob=1)
+
 ###
 ### Generate the mod string
 ###

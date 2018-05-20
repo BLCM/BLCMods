@@ -2143,6 +2143,33 @@
 
             #</Prospector Zeke>
 
+            #<Laney>
+
+                set GD_Itempools.Runnables.Pool_Laney bAutoReadyItems True 
+
+                #<hotfix><key>"SparkLevelPatchEntry-ApocDisable16"</key><value>"Fridge_P,GD_Population_Rat.Balance.Unique.PawnBalance_Laney,DefaultItemPoolList[0].PoolProbability,,(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><on>
+
+                #<hotfix><key>"SparkLevelPatchEntry-ApocDisable17"</key><value>"Fridge_P,GD_Population_Rat.Balance.Unique.PawnBalance_Laney,DefaultItemPoolList[2].PoolProbability,,(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><on>
+
+            #</Laney>
+
+            #<Smash-Head>
+
+                # UCP adds the Roaster to Smash-Head's default Sledge's Shotgun drop, so
+                # we'll make him use either of those, randomly.
+
+                set GD_CustomItemPools_MainGame.Assassin.Head4 bAutoReadyItems True 
+
+                #<hotfix><key>"SparkLevelPatchEntry-ApocSmashHead0"</key><value>"Fridge_P,GD_CustomItemPools_MainGame.Assassin.Head4,BalancedItems,,((ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_Shotgun.A_Weapons_Legendary.SG_Bandit_5_SledgesShotgun',Probability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_Launchers.A_Weapons_Unique.RL_Bandit_3_Roaster',Probability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True))"</value><on>
+
+                #<hotfix><key>"SparkLevelPatchEntry-ApocDisable25"</key><value>"Fridge_P,GD_Population_Goliath.Balance.Unique.PawnBalance_SmashHead,DefaultItemPoolList[0].PoolProbability,,(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><on>
+
+                #<hotfix><key>"SparkLevelPatchEntry-ApocDisable26"</key><value>"Fridge_P,GD_Population_Goliath.Balance.Unique.PawnBalance_SmashHead,DefaultItemPoolList[1].PoolProbability,,(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><on>
+
+                #<hotfix><key>"SparkLevelPatchEntry-ApocDisable27"</key><value>"Fridge_P,GD_Population_Goliath.Balance.Unique.PawnBalance_SmashHead,DefaultItemPoolList[2].PoolProbability,,(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><on>
+
+            #</Smash-Head>
+
         #</Bosses Equip Uniques>
 
     #</Bosses Use+Drop Their Unique Weapons>
@@ -2152,6 +2179,31 @@
         # This section is just for compatibility with my BL2 Better Loot mod, and mostly
         # just undoes some statements which Better Loot makes, back to the stock BL2
         # values.
+
+        #<Revert Regular Enemy Drop Tweaks>
+
+            #<Laney's Dwarves>
+
+                # Better Loot gives all these a chance to drop gemstone weapons.  We'll
+                # just get rid of that entirely.
+
+                #<hotfix><key>"SparkLevelPatchEntry-ApocDisable18"</key><value>"Fridge_P,GD_Population_Midget.Balance.Unique.PawnBalance_LaneyDwarf1,DefaultItemPoolList[3].PoolProbability,,(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><on>
+
+                #<hotfix><key>"SparkLevelPatchEntry-ApocDisable19"</key><value>"Fridge_P,GD_Population_Midget.Balance.Unique.PawnBalance_LaneyDwarf2,DefaultItemPoolList[3].PoolProbability,,(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><on>
+
+                #<hotfix><key>"SparkLevelPatchEntry-ApocDisable20"</key><value>"Fridge_P,GD_Population_Midget.Balance.Unique.PawnBalance_LaneyDwarf3,DefaultItemPoolList[3].PoolProbability,,(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><on>
+
+                #<hotfix><key>"SparkLevelPatchEntry-ApocDisable21"</key><value>"Fridge_P,GD_Population_Midget.Balance.Unique.PawnBalance_LaneyDwarf4,DefaultItemPoolList[3].PoolProbability,,(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><on>
+
+                #<hotfix><key>"SparkLevelPatchEntry-ApocDisable22"</key><value>"Fridge_P,GD_Population_Midget.Balance.Unique.PawnBalance_LaneyDwarf5,DefaultItemPoolList[3].PoolProbability,,(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><on>
+
+                #<hotfix><key>"SparkLevelPatchEntry-ApocDisable23"</key><value>"Fridge_P,GD_Population_Midget.Balance.Unique.PawnBalance_LaneyDwarf6,DefaultItemPoolList[3].PoolProbability,,(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><on>
+
+                #<hotfix><key>"SparkLevelPatchEntry-ApocDisable24"</key><value>"Fridge_P,GD_Population_Midget.Balance.Unique.PawnBalance_LaneyDwarf7,DefaultItemPoolList[3].PoolProbability,,(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><on>
+
+            #</Laney's Dwarves>
+
+        #</Revert Regular Enemy Drop Tweaks>
 
         #<Revert Boss Drop Improved Quantities>
 
