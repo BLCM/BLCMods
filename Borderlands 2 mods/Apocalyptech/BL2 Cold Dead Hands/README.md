@@ -32,18 +32,20 @@ Requirements
 This mod should be able to be used mostly on its own, but it does require
 that certain parts of UCP are active.  If for whatever reason you'd like to
 run this mod by itself without UCP, make sure to at least enable/copy these
-bits:
+bits, all inside the `Loot Pool & Drop Changes` folder:
 
-* `Loot Pool & Drop Changes -> Skinpool Fixes (Don't uncheck this)`: this is
+* `Skinpool Fixes (Don't uncheck this)`: this is
   required to free up the custom loot pools that we use to equip enemies with.
-* `Loot Pool & Drop Changes -> Specific Loot Changes -> Add Deliverance to Bad
+* `Specific Loot Changes -> Add Deliverance to Bad
   Maw`: Without this enabled, Bad Maw won't actually have any weapon equipped
-* `Loot Pool & Drop Changes -> Specific Loot Changes -> Add RokSalt to Flinter`:
+* `Specific Loot Changes -> Add RokSalt to Flinter`:
   Without this enabled, Flinter won't actually have any weapon equipped.
-* `Loot Pool & Drop Changes -> Add Kitten and Baby Maker to Motor Momma`: Motor
+* `Specific Loot Changes -> Add Kitten and Baby Maker to Motor Momma`: Motor
   Momma's shield won't be properly droppable without this.
-* `Loot Pool & Drop Changes -> Add Torgue Legendaries and Torgue Tokens to Piston`:
+* `Specific Loot Changes -> Add Torgue Legendaries and Torgue Tokens to Piston`:
   Piston may not spawn with a weapon without this.
+* `Specific Loot Changes -> Add Pitchfork to Prospector Zeke`: Zeke will not
+  spawn with a weapon without this.
 
 Usage/Installation
 ------------------

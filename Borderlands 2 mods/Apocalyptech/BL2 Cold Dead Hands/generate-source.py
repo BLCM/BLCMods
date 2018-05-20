@@ -1820,6 +1820,19 @@ hfs.add_level_hotfix('mad_mike_pool_1', 'MadMike',
     PlayThroughs[0].CustomItemPoolList,,
     ()""")
 
+# Prospector Zeke
+
+set_dipl_item_prob('zeke_pool_0',
+    'GD_Population_Nomad.Balance.Unique.PawnBalance_Prospector',
+    0,
+    level='TundraExpress_P')
+
+set_dipl_item_prob('zeke_pool_1',
+    'GD_Population_Nomad.Balance.Unique.PawnBalance_Prospector',
+    2,
+    level='TundraExpress_P',
+    prob=1)
+
 ###
 ### Generate the mod string
 ###
