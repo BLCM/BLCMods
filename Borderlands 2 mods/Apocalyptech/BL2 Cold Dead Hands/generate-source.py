@@ -1021,6 +1021,7 @@ class Badass(DropConfig):
             ],
             # Only Shotguns
             [
+                (0, 'GD_Population_Engineer.Balance.Unique.PawnBalance_Leprechaun'),
             ],
             # Shields
             [
@@ -1883,6 +1884,19 @@ set_dipl_item_prob('smashhead_pool_3',
     'GD_Population_Goliath.Balance.Unique.PawnBalance_SmashHead',
     2,
     level='Fridge_P',
+    prob=1)
+
+# Bagman
+
+set_dipl_item_prob('bagman_pool_0',
+    'GD_Population_Engineer.Balance.Unique.PawnBalance_Leprechaun',
+    1,
+    level='Luckys_P')
+
+set_dipl_item_prob('bagman_pool_1',
+    'GD_Population_Engineer.Balance.Unique.PawnBalance_Leprechaun',
+    2,
+    level='Luckys_P',
     prob=1)
 
 ###

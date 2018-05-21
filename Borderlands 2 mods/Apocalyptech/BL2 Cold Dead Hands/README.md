@@ -36,16 +36,14 @@ bits, all inside the `Loot Pool & Drop Changes` folder:
 
 * `Skinpool Fixes (Don't uncheck this)`: this is
   required to free up the custom loot pools that we use to equip enemies with.
-* `Specific Loot Changes -> Add Deliverance to Bad
-  Maw`: Without this enabled, Bad Maw won't actually have any weapon equipped
-* `Specific Loot Changes -> Add RokSalt to Flinter`:
-  Without this enabled, Flinter won't actually have any weapon equipped.
-* `Specific Loot Changes -> Add Kitten and Baby Maker to Motor Momma`: Motor
-  Momma's shield won't be properly droppable without this.
-* `Specific Loot Changes -> Add Torgue Legendaries and Torgue Tokens to Piston`:
-  Piston may not spawn with a weapon without this.
-* `Specific Loot Changes -> Add Pitchfork to Prospector Zeke`: Zeke will not
-  spawn with a weapon without this.
+* `Specific Loot Changes`: Without the items in this category enabled, the
+  relevant enemies won't spawn with the proper items:
+  * `Add Deliverance to Bad Maw`
+  * `Add RokSalt to Flinter`
+  * `Add Kitten and Baby Maker to Motor Momma`
+  * `Add Torgue Legendaries and Torgue Tokens to Piston`
+  * `Add Pitchfork to Prospector Zeke`
+  * `Add Roaster to Smash-Head`
 
 Usage/Installation
 ------------------
