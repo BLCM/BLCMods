@@ -123,13 +123,13 @@
                 #<Flinter>{line_suffix}
 
                     {line_prefix}# In vanilla BL2, Flinter doesn't have a specific weapon, but UCP adds{line_suffix}
-                    {line_prefix}# RokSalt.  So, we're going to go ahead and force him to equip that.{line_suffix}
-
-                    {line_prefix}set GD_CustomItemPools_MainGame.Assassin.Head9 bAutoReadyItems True{line_suffix}
+                    {line_prefix}# RokSalt.{line_suffix}
 
                     {hotfixes:flinter_pool_0}
 
                     {hotfixes:flinter_pool_1}
+
+                    {hotfixes:flinter_pool_2}
 
                 #</Flinter>
 
@@ -137,41 +137,13 @@
 
                     {line_prefix}# UCP added Madhous! as a potential drop.  Mad Mike's whole Thing is sort{line_suffix}
                     {line_prefix}# of that he always has a launcher, but I'm going to go ahead and just{line_suffix}
-                    {line_prefix}# split up his potential equip pool, instead.  This will consume another{line_suffix}
-                    {line_prefix}# skinpool, since the items otherwise couldn't be a part of the same{line_suffix}
-                    {line_prefix}# BalancedItems array{line_suffix}
-
-                    {line_prefix}set {other:level_pool_0} bAutoReadyItems True{line_suffix}
-
-                    {line_prefix}set {other:level_pool_0} BalancedItems
-                    (
-                        ( 
-                            ItmPoolDefinition=ItemPoolDefinition'{badass:equip_pool_launchers}', 
-                            InvBalanceDefinition=None,
-                            Probability=( 
-                                BaseValueConstant=1,
-                                BaseValueAttribute=None, 
-                                InitializationDefinition=None, 
-                                BaseValueScaleConstant=1
-                            ), 
-                            bDropOnDeath=True 
-                        ),
-                        ( 
-                            ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.Runnables.Pool_MadDog', 
-                            InvBalanceDefinition=None,
-                            Probability=( 
-                                BaseValueConstant=1,
-                                BaseValueAttribute=None, 
-                                InitializationDefinition=None, 
-                                BaseValueScaleConstant=1
-                            ), 
-                            bDropOnDeath=True 
-                        )
-                    ){line_suffix}
+                    {line_prefix}# split up his potential equip pool, instead.{line_suffix}
 
                     {hotfixes:mad_mike_pool_0}
 
                     {hotfixes:mad_mike_pool_1}
+
+                    {hotfixes:mad_mike_pool_2}
 
                 #</Mad Mike>
 

@@ -1934,7 +1934,7 @@ for (label, key, unique_pct, rare_pct) in [
 
     # Midge-mong uses a KerBlaster.  The rider is a generic Badass Midget, but fortunately
     # no other Badass Midgets can spawn in Cove_P.  So just fiddle with the pools via
-    # hotfix and we're good to go.
+    # hotfix and we're good to go. (Cove_P pool 0)
 
     setup_boss_pool('midgemong_pool_0', 'Cove_P', other.level_pool_0,
             badass.equip_pool_smg,
@@ -1957,7 +1957,7 @@ for (label, key, unique_pct, rare_pct) in [
         ()""",
         activated=hotfix_activated)
 
-    # Captain Flynt - use the drop pool for equipping
+    # Captain Flynt - use the drop pool for equipping (SouthernShelf_P pool 0)
 
     setup_boss_pool('flynt_pool_0', 'SouthernShelf_P', other.level_pool_0,
             None,
@@ -1986,7 +1986,7 @@ for (label, key, unique_pct, rare_pct) in [
             level='SouthernShelf_P',
             activated=hotfix_activated)
 
-    # Bad Maw - UCP adds Deliverance, so use that.
+    # Bad Maw - UCP adds Deliverance, so use that. (Frost_P pool 0)
 
     setup_boss_pool('badmaw_pool_0', 'Frost_P', other.level_pool_0,
             badass.equip_pool_shotguns,
@@ -2029,7 +2029,7 @@ for (label, key, unique_pct, rare_pct) in [
         level='SouthpawFactory_P',
         activated=hotfix_activated)
 
-    # Assassin Wot
+    # Assassin Wot (using Runnables)
     # Note that for the assassins, we're not using our level_pools, since the
     # Runnables for these are only used by their Digistruct counterparts, so
     # we don't have to worry about tainting the pools.
@@ -2056,7 +2056,7 @@ for (label, key, unique_pct, rare_pct) in [
         prob=1,
         activated=hotfix_activated)
 
-    # Assassin Oney
+    # Assassin Oney (using Runnables)
 
     setup_boss_pool('oney_pool_0', 'SouthpawFactory_P',
             'GD_Itempools.Runnables.Pool_AssassinOney',
@@ -2080,7 +2080,7 @@ for (label, key, unique_pct, rare_pct) in [
         prob=1,
         activated=hotfix_activated)
 
-    # Assassin Reeth (melee only, so only a pool setup here.
+    # Assassin Reeth (melee only, so only a pool setup here) (using Runnables)
 
     setup_boss_pool('reeth_pool_0', 'SouthpawFactory_P',
             'GD_Itempools.Runnables.Pool_AssassinReeth',
@@ -2091,7 +2091,7 @@ for (label, key, unique_pct, rare_pct) in [
             ],
             activated=hotfix_activated)
 
-    # Assassin Rouf
+    # Assassin Rouf (using Runnables)
 
     setup_boss_pool('rouf_pool_0', 'SouthpawFactory_P',
             'GD_Itempools.Runnables.Pool_AssassinRouf',
@@ -2115,33 +2115,54 @@ for (label, key, unique_pct, rare_pct) in [
         prob=1,
         activated=hotfix_activated)
 
-    # Flinter
+    # Flinter (Dam_P pool 0)
 
-    set_dipl_item_prob('flinter_pool_0',
+    setup_boss_pool('flinter_pool_0', 'Dam_P', other.level_pool_0,
+            badass.equip_pool_ar,
+            [
+                ('GD_CustomItemPools_MainGame.Assassin.Head9', rare_pct, None),
+            ],
+            activated=hotfix_activated)
+
+    set_dipl_item_pool('flinter_pool_1',
+            'GD_Population_Rat.Balance.Unique.PawnBalance_RatEasterEgg',
+            2,
+            other.level_pool_0,
+            level='Dam_P',
+            activated=hotfix_activated)
+
+    set_dipl_item_prob('flinter_pool_2',
         'GD_Population_Rat.Balance.Unique.PawnBalance_RatEasterEgg',
         0,
         level='Dam_P',
         activated=hotfix_activated)
 
-    set_dipl_item_prob('flinter_pool_1',
-        'GD_Population_Rat.Balance.Unique.PawnBalance_RatEasterEgg',
-        2,
-        level='Dam_P',
-        prob=1,
-        activated=hotfix_activated)
+    # Mad Mike (Dam_P pool 1)
 
-    # Mad Mike
+    # Let's make Mike cap out at 50% for Madhous!, since his real pleasures
+    # in life are those rocket launchers...
+    if unique_pct > .5:
+        mike_pct = .5
+    else:
+        mike_pct = unique_pct
 
-    hfs.add_level_hotfix('mad_mike_pool_0', 'MadMike',
-        """Dam_P,
-        GD_Population_Nomad.Balance.Unique.PawnBalance_MadMike,
-        DefaultItemPoolList[0].ItemPool,,
-        ItemPoolDefinition'{}'""".format(other.level_pool_0),
-        activated=hotfix_activated)
+    setup_boss_pool('mad_mike_pool_0', 'Dam_P', other.level_pool_1,
+            badass.equip_pool_launchers,
+            [
+                ('GD_Itempools.Runnables.Pool_MadDog', mike_pct, None),
+            ],
+            activated=hotfix_activated)
+
+    set_dipl_item_pool('mad_mike_pool_1',
+            'GD_Population_Nomad.Balance.Unique.PawnBalance_MadMike',
+            0,
+            other.level_pool_1,
+            level='Dam_P',
+            activated=hotfix_activated)
 
     # UCP sets CustomItemPoolList to add the MadHous, but since we're
     # overriding the equip pool anyway, just clear out that UCP edit.
-    hfs.add_level_hotfix('mad_mike_pool_1', 'MadMike',
+    hfs.add_level_hotfix('mad_mike_pool_2', 'MadMike',
         """Dam_P,
         GD_Population_Nomad.Balance.Unique.PawnBalance_MadMike,
         PlayThroughs[0].CustomItemPoolList,,
