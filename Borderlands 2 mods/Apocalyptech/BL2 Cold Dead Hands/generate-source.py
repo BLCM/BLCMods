@@ -1501,6 +1501,31 @@ def set_dipl_item_pool(hotfix_name, classname, index, pool,
         )""".format(level, classname, index, pool),
         activated=activated)
 
+def set_pt_cipl_item_pool(hotfix_name, classname, pt_index, cipl_index,
+        pool, level=None, activated=True):
+    """
+    Sets an entire PlayThroughs[x].CustomItemPoolList entry on the given
+    `classname`, at the given playthrough index `pt_index` and CIPL index
+    `cipl_index`, to point towards the pool `pool`.  Will be done with
+    a hotfix with the ID `hotfix_name`, optionally in the level `level`.
+    To disable (for inclusion into a MUT category, for instance), pass
+    `activated`=`False`.
+    """
+    if level is None:
+        level = ''
+    hfs.add_level_hotfix(hotfix_name, 'PTCIPLItemPool',
+        """{},{},PlayThroughs[{}].CustomItemPoolList[{}],,
+        (
+            ItemPool=ItemPoolDefinition'{}',
+            PoolProbability=(
+                BaseValueConstant=1,
+                BaseValueAttribute=None,
+                InitializationDefinition=None,
+                BaseValueScaleConstant=1
+            )
+        )""".format(level, classname, pt_index, cipl_index, pool),
+        activated=activated)
+
 def set_generic_item_prob(hotfix_name, classname, attribute,
         level=None, prob=None, activated=True):
     """
@@ -1963,13 +1988,34 @@ for (label, key, unique_pct, rare_pct) in [
 
     # Bad Maw - UCP adds Deliverance, so use that.
 
-    set_pt_cipl_item_prob('badmaw_pool_0',
+    setup_boss_pool('badmaw_pool_0', 'Frost_P', other.level_pool_0,
+            badass.equip_pool_shotguns,
+            [
+                ('GD_Itempools.Runnables.Pool_Tumba', unique_pct, None),
+            ],
+            activated=hotfix_activated)
+
+    set_pt_cipl_item_pool('badmaw_pool_1',
+            'GD_Population_Nomad.Balance.PawnBalance_BadMaw',
+            0, 2,
+            other.level_pool_0,
+            level='Frost_P',
+            activated=hotfix_activated)
+
+    set_pt_cipl_item_pool('badmaw_pool_2',
+            'GD_Population_Nomad.Balance.PawnBalance_BadMaw',
+            1, 2,
+            other.level_pool_0,
+            level='Frost_P',
+            activated=hotfix_activated)
+
+    set_pt_cipl_item_prob('badmaw_pool_3',
         'GD_Population_Nomad.Balance.PawnBalance_BadMaw',
         0, 0,
         level='Frost_P',
         activated=hotfix_activated)
 
-    set_pt_cipl_item_prob('badmaw_pool_1',
+    set_pt_cipl_item_prob('badmaw_pool_4',
         'GD_Population_Nomad.Balance.PawnBalance_BadMaw',
         1, 0,
         level='Frost_P',
