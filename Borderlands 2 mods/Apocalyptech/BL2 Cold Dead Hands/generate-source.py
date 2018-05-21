@@ -1899,6 +1899,19 @@ set_dipl_item_prob('bagman_pool_1',
     level='Luckys_P',
     prob=1)
 
+# Muscles
+
+set_dipl_item_prob('muscles_pool_0',
+    'GD_Population_Bruiser.Balance.PawnBalance_Bruiser_Muscles',
+    0,
+    level='Grass_Cliffs_P')
+
+set_dipl_item_prob('muscles_pool_1',
+    'GD_Population_Bruiser.Balance.PawnBalance_Bruiser_Muscles',
+    1,
+    level='Grass_Cliffs_P',
+    prob=1)
+
 ###
 ### Generate the mod string
 ###

@@ -44,6 +44,7 @@ bits, all inside the `Loot Pool & Drop Changes` folder:
   * `Add Torgue Legendaries and Torgue Tokens to Piston`
   * `Add Pitchfork to Prospector Zeke`
   * `Add Roaster to Smash-Head`
+  * `Add Sledge's Shotgun to BLNG Loader and Muscles`
 
 Usage/Installation
 ------------------
