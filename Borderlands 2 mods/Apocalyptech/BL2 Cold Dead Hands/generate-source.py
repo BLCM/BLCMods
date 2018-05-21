@@ -335,7 +335,6 @@ class Regular(DropConfig):
                 (0, 'GD_Population_Marauder.Balance.Unique.PawnBalance_ZafordGrunt'),
                 (0, 'GD_Nast_Zaford_Grunt.Balance.PawnBalance_Nast_ZafordGroomsman'),
                 (0, 'GD_Nast_Zaford_Grunt.Balance.PawnBalance_Nast_ZafordGrunt'),
-                (0, 'GD_Nast_Zaford_Grunt.Balance.PawnBalance_Nast_ZafordKnife'),
             ],
             # All
             [
