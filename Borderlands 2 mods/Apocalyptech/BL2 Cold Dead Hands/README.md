@@ -92,6 +92,10 @@ from the start of the battle which gun you'll receive.
   this mod, all their shields have turned into real shields, which start
   regenerating immediately, which will probably make Loader-heavy areas
   much more difficult than ordinarily.
+* Weapon and Shields ordinarily found in treasure chests have been replaced
+  with the main ammo/money/eridium pool, rather than removed outright,
+  because otherwise the probabilities of getting grenade mods, COMs, and
+  relics would be greatly buffed.
 
 Compatibility
 -------------
