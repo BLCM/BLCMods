@@ -62,6 +62,13 @@ Sawtooth Cauldron, and Tundra Express) so that as many containers as possible
 can spawn loot midgets.  This doesn't meant that *all* containers can spawn
 midgets, but there'll be more than there were.
 
+More Muscles
+------------
+
+This simple mod improves the spawn rate for Muscles, a unique Bruiser who
+appears in Thousand Cuts.  He will be fairly likely to appear during a full
+playthrough of the level.
+
 Utilities
 =========
 
