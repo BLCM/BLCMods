@@ -1969,6 +1969,32 @@ set_dipl_item_prob('mobley_pool_1',
     level='Interlude_P',
     prob=1)
 
+# Mick Zaford
+
+set_dipl_item_prob('zaford_pool_0',
+    'GD_Population_Marauder.Balance.Unique.PawnBalance_MickZaford_Combat',
+    0,
+    level='Interlude_P')
+
+set_dipl_item_prob('zaford_pool_1',
+    'GD_Population_Marauder.Balance.Unique.PawnBalance_MickZaford_Combat',
+    3,
+    level='Interlude_P',
+    prob=1)
+
+# Jimbo & Tector Hodunk
+
+set_dipl_item_prob('hodunk_pool_0',
+    'GD_Population_Marauder.Balance.Unique.PawnBalance_TectorHodunk_Combat',
+    0,
+    level='Interlude_P')
+
+set_dipl_item_prob('hodunk_pool_1',
+    'GD_Population_Marauder.Balance.Unique.PawnBalance_TectorHodunk_Combat',
+    3,
+    level='Interlude_P',
+    prob=1)
+
 ###
 ### Generate the mod string
 ###
