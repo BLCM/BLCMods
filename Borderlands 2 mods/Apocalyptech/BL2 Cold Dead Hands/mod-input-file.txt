@@ -1288,13 +1288,29 @@
 
             #<Muscles>
 
-                # UCP added Sledge's Shotgun, so equip that.
+                # UCP added Sledge's Shotgun, but also added it to BLNG Loader, using the
+                # same skinpool.  If BLNG Loader has an auto-ready pool, it won't actually
+                # attack properly, so we're going to consume a new skinpool of our own for
+                # Muscles.
 
-                set GD_CustomItemPools_MainGame.Assassin.JakobsCommon bAutoReadyItems True
+                set {other:pool_muscles_equip} bAutoReadyItems True
+
+                set {other:pool_muscles_equip} BalancedItems
+                (
+                    ( 
+                        ItmPoolDefinition=None, 
+                        InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_Shotgun.A_Weapons_Legendary.SG_Bandit_5_SledgesShotgun', 
+                        Probability=( 
+                            BaseValueConstant=1,
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=None,
+                            BaseValueScaleConstant=1
+                        ), 
+                        bDropOnDeath=True 
+                    )
+                )
 
                 {hotfixes:muscles_pool_0}
-
-                {hotfixes:muscles_pool_1}
 
             #</Muscles>
 

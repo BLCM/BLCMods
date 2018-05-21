@@ -79,6 +79,9 @@ class OtherConfig(BaseConfig):
     # Mad Mike's equip pool
     pool_mad_mike_equip = 'GD_CustomItemPools_allium.Mercenary.AlliumXmasSkins'
 
+    # Muscles' equip pool
+    pool_muscles_equip = 'GD_CustomItemPools_allium.Psycho.AlliumXmasSkins'
+
 class DropConfig(BaseConfig):
     """
     Class to hold basic config for drops
@@ -1900,16 +1903,22 @@ set_dipl_item_prob('bagman_pool_1',
 
 # Muscles
 
-set_dipl_item_prob('muscles_pool_0',
-    'GD_Population_Bruiser.Balance.PawnBalance_Bruiser_Muscles',
-    0,
-    level='Grass_Cliffs_P')
-
-set_dipl_item_prob('muscles_pool_1',
-    'GD_Population_Bruiser.Balance.PawnBalance_Bruiser_Muscles',
-    1,
-    level='Grass_Cliffs_P',
-    prob=1)
+hfs.add_level_hotfix('muscles_pool_0', 'Muscles',
+    """Grass_Cliffs_P,
+    GD_Population_Bruiser.Balance.PawnBalance_Bruiser_Muscles,
+    DefaultItemPoolList,,
+    (
+		(
+			ItemPool=ItemPoolDefinition'{}',
+			PoolProbability=(
+				BaseValueConstant=1.000000,
+				BaseValueAttribute=None,
+				InitializationDefinition=None,
+				BaseValueScaleConstant=1.000000
+			)
+		)
+    )
+    """.format(other.pool_muscles_equip))
 
 ###
 ### Generate the mod string

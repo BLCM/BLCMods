@@ -2195,13 +2195,16 @@
 
             #<Muscles>
 
-                # UCP added Sledge's Shotgun, so equip that.
+                # UCP added Sledge's Shotgun, but also added it to BLNG Loader, using the
+                # same skinpool.  If BLNG Loader has an auto-ready pool, it won't actually
+                # attack properly, so we're going to consume a new skinpool of our own for
+                # Muscles.
 
-                set GD_CustomItemPools_MainGame.Assassin.JakobsCommon bAutoReadyItems True 
+                set GD_CustomItemPools_allium.Psycho.AlliumXmasSkins bAutoReadyItems True 
 
-                #<hotfix><key>"SparkLevelPatchEntry-ApocDisable30"</key><value>"Grass_Cliffs_P,GD_Population_Bruiser.Balance.PawnBalance_Bruiser_Muscles,DefaultItemPoolList[0].PoolProbability,,(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><on>
+                set GD_CustomItemPools_allium.Psycho.AlliumXmasSkins BalancedItems ((ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_Shotgun.A_Weapons_Legendary.SG_Bandit_5_SledgesShotgun',Probability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True))
 
-                #<hotfix><key>"SparkLevelPatchEntry-ApocDisable31"</key><value>"Grass_Cliffs_P,GD_Population_Bruiser.Balance.PawnBalance_Bruiser_Muscles,DefaultItemPoolList[1].PoolProbability,,(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><on>
+                #<hotfix><key>"SparkLevelPatchEntry-ApocMuscles0"</key><value>"Grass_Cliffs_P,GD_Population_Bruiser.Balance.PawnBalance_Bruiser_Muscles,DefaultItemPoolList,,((ItemPool=ItemPoolDefinition'GD_CustomItemPools_allium.Psycho.AlliumXmasSkins',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))"</value><on>
 
             #</Muscles>
 
