@@ -1943,6 +1943,32 @@ set_dipl_item_prob('foreman_pool_0',
     level='HyperionCity_P',
     prob=1)
 
+# Gettle
+
+set_dipl_item_prob('gettle_pool_0',
+    'GD_Population_Engineer.Balance.Unique.PawnBalance_Gettle',
+    0,
+    level='Interlude_P')
+
+set_dipl_item_prob('gettle_pool_1',
+    'GD_Population_Engineer.Balance.Unique.PawnBalance_Gettle',
+    2,
+    level='Interlude_P',
+    prob=1)
+
+# Mobley
+
+set_dipl_item_prob('mobley_pool_0',
+    'GD_Population_Marauder.Balance.Unique.PawnBalance_Mobley',
+    0,
+    level='Interlude_P')
+
+set_dipl_item_prob('mobley_pool_1',
+    'GD_Population_Marauder.Balance.Unique.PawnBalance_Mobley',
+    3,
+    level='Interlude_P',
+    prob=1)
+
 ###
 ### Generate the mod string
 ###
