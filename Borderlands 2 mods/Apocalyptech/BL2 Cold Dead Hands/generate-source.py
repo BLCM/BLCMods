@@ -77,11 +77,12 @@ class OtherConfig(BaseConfig):
     # Some text that we'll put into the main file
     disable_world_sets = None
 
-    # Mad Mike's equip pool
-    pool_mad_mike_equip = 'GD_CustomItemPools_allium.Mercenary.AlliumXmasSkins'
-
-    # Muscles' equip pool
-    pool_muscles_equip = 'GD_CustomItemPools_allium.Psycho.AlliumXmasSkins'
+    # Pools used to provide proper weighted equipment drops for bosses.
+    # These will be all set via Hotfix, and re-used by enemies in different
+    # levels.  That way, we only need as many pools as we have loot-dropping
+    # bosses in a single level.
+    level_pool_0 = 'GD_CustomItemPools_allium.Mercenary.AlliumXmasSkins'
+    level_pool_1 = 'GD_CustomItemPools_allium.Psycho.AlliumXmasSkins'
 
 class DropConfig(BaseConfig):
     """
@@ -1402,19 +1403,25 @@ class Badass(DropConfig):
 ### Convenience functions
 ###
 
-def get_balanced_items(items, invbalance=None):
+def get_balanced_items(items):
     """
     Returns a string containing a BalancedItems array with the given `items`.
     Each element of the list `items` should be a tuple, the first element
-    being the itempool class name, and the second being the weight of that
-    item.  If `invbalance` is None, the items will be put into the
-    ItmPoolDefinition attribute - otherwise they will be put into the
-    InvBalanceDefinition attribute, with the given `invbalance` string as
-    the type of object being linked to (most commonly either
-    WeaponBalanceDefinition or ItemBalanceDefinition)
+    being the itempool class name, the second being the weight of that
+    item, and the third (optional) being an `invbalance` (or None).  If `None`,
+    the item will be put into the ItmPoolDefinition attribute - otherwise it
+    will be put into the InvBalanceDefinition attribute, with the given
+    `invbalance` string as the type of object being linked to (most commonly
+    either WeaponBalanceDefinition or ItemBalanceDefinition)
     """
     bal_items = []
-    for (classname, weight) in items:
+    new_items = []
+    for item in items:
+        if len(item) == 2:
+            new_items.append((item[0], item[1], None))
+        else:
+            new_items.append((item[0], item[1], item[2]))
+    for (classname, weight, invbalance) in new_items:
         if invbalance:
             itmpool = 'None'
             invbal = "{}'{}'".format(invbalance, classname)
@@ -1436,15 +1443,14 @@ def get_balanced_items(items, invbalance=None):
             """.format(itmpool, invbal, weight))
     return '({})'.format(','.join(bal_items))
 
-def get_balanced_set(objectname, items, invbalance=None):
+def get_balanced_set(objectname, items):
     """
     Returns a regular "set" command to set `objectname`'s BalancedItems
     attribute to an array with the specified `items`.  The bulk of the
-    work here is done in `get_balanced_items()`.  The `invbalance`
-    argument is passed directly in to there.
+    work here is done in `get_balanced_items()`.
     """
     return "set {} BalancedItems\n{}".format(objectname,
-            get_balanced_items(items, invbalance))
+            get_balanced_items(items))
 
 def disable_balanced_drop(prefix, pool, item_num):
     """
@@ -1471,13 +1477,39 @@ def disable_balanced_drop(prefix, pool, item_num):
             '{}{}'.format(prefix, hfs.get_hotfix(hotfix_id_invbal).get_xml()),
         ]
 
+def set_dipl_item_pool(hotfix_name, classname, index, pool,
+        level=None, activated=True):
+    """
+    Sets an entire DefaultItemPoolList entry on the given `classname`, at
+    the given `index`, to point towards the pool `pool`.  Will be done with
+    a hotfix with the ID `hotfix_name`, optionally in the level `level`.
+    To disable (for inclusion into a MUT category, for instance), pass
+    `activated`=`False`.
+    """
+    if level is None:
+        level = ''
+    hfs.add_level_hotfix(hotfix_name, 'DIPLItemPool',
+        """{},{},DefaultItemPoolList[{}],,
+        (
+            ItemPool=ItemPoolDefinition'{}',
+            PoolProbability=(
+                BaseValueConstant=1,
+                BaseValueAttribute=None,
+                InitializationDefinition=None,
+                BaseValueScaleConstant=1
+            )
+        )""".format(level, classname, index, pool),
+        activated=activated)
+
 def set_generic_item_prob(hotfix_name, classname, attribute,
-        level=None, prob=None):
+        level=None, prob=None, activated=True):
     """
     Sets a probability in the given `classname`, on the attribute `attribute`.
     Will do so via a hotfix with the name `hotfix_name`.  If `prob` is not
     specified, the item will be disabled (ie: given a zero probability).
     Otherwise, pass `1` for the prob (or any other percentage you want).
+    To disable the hotfix by default (for inclusion in a MUT, for instance),
+    pass `activated`=`False`.
     """
     global hfs
     if level is None:
@@ -1491,28 +1523,33 @@ def set_generic_item_prob(hotfix_name, classname, attribute,
             BaseValueAttribute=None,
             InitializationDefinition=None,
             BaseValueScaleConstant=1
-        )""".format(level, classname, attribute, prob))
+        )""".format(level, classname, attribute, prob),
+        activated=activated)
 
-def set_bi_item_prob(hotfix_name, classname, index, level=None, prob=None):
+def set_bi_item_prob(hotfix_name, classname, index, level=None,
+        prob=None, activated=True):
     """
     Sets a BalancedItems probability.
     """
     set_generic_item_prob(hotfix_name, classname,
         'BalancedItems[{}].Probability'.format(index),
         level=level,
-        prob=prob)
+        prob=prob,
+        activated=activated)
 
-def set_dipl_item_prob(hotfix_name, classname, index, level=None, prob=None):
+def set_dipl_item_prob(hotfix_name, classname, index, level=None,
+        prob=None, activated=True):
     """
     Sets a DefaultItemPoolList probability.
     """
     set_generic_item_prob(hotfix_name, classname,
         'DefaultItemPoolList[{}].PoolProbability'.format(index),
         level=level,
-        prob=prob)
+        prob=prob,
+        activated=activated)
 
 def set_pt_cipl_item_prob(hotfix_name, classname,
-        pt_index, poollist_index, level=None, prob=None):
+        pt_index, poollist_index, level=None, prob=None, activated=True):
     """
     Sets a PlayThroughs[x].CustomItemPoolList probability in the given
     `classname`, at the playthrough index `pt_index` and CustomItemPoolList
@@ -1522,7 +1559,36 @@ def set_pt_cipl_item_prob(hotfix_name, classname,
         'PlayThroughs[{}].CustomItemPoolList[{}].PoolProbability'.format(
             pt_index, poollist_index),
         level=level,
-        prob=prob)
+        prob=prob,
+        activated=activated)
+
+def setup_boss_pool(hotfix_id, level, pool, default_gear, unique_gear, activated=True):
+    """
+    Sets up our specified `pool` using the given `hotfix_id`, active in the
+    level `level`.  The "default" ItemPool which the boss ordinarily draws from
+    is specified by `default_gear`, and the pool's unique gear in a list of
+    `unique_gear`, each element of which should be a tuple with three elements:
+        1) The unique pool to drop from / gear to drop.
+        2) The percent chance of dropping this pool/gear
+        3) If this is an item, the InvBalanceDefinition type of the item.
+    If the total of all the percent chances in `unique_gear` is greater than
+    1, the `default_gear` will never actually be dropped.  To disable this
+    hotfix (for inclusion in a MUT, for instance) pass `activated`=`False`.
+    """
+    global hfs
+    total_unique = 0
+    bal_items_tuples = []
+    for (unique, pct, baldef) in unique_gear:
+        total_unique += pct
+        bal_items_tuples.append((unique, pct, baldef))
+    if total_unique < 1:
+        bal_items_tuples.append((default_gear, round(1 - total_unique, 6), None))
+    hfs.add_level_hotfix(hotfix_id, 'BossPool',
+        '{},{},BalancedItems,,{}'.format(
+            level,
+            pool,
+            get_balanced_items(bal_items_tuples)),
+        activated=activated)
 
 ###
 ### Code to generate the mod
@@ -1601,7 +1667,7 @@ other.disable_world_sets = "\n\n".join(drop_disables)
 rarity_sections = {}
 line_prefix = ''
 line_suffix = ''
-hotfix_enabled = True
+hotfix_activated = True
 for (rarity_key, rarity_label) in DropConfig.rarity_presets:
 
     for config in [regular, badass]:
@@ -1693,14 +1759,14 @@ for (rarity_key, rarity_label) in DropConfig.rarity_presets:
         GD_JacksBodyDouble.WeaponPools.Pool_Weapons_JackBodyDouble_EnemyUse,
         BalancedItems,,{}""".format(get_balanced_items(
             [
-                ('GD_Weap_SMG.A_Weapons.SMG_Hyperion', badass.weight_common),
-                ('GD_Weap_SMG.A_Weapons.SMG_Hyperion_2_Uncommon', badass.weight_uncommon),
-                ('GD_Weap_SMG.A_Weapons.SMG_Hyperion_3_Rare', badass.weight_rare),
-                ('GD_Weap_SMG.A_Weapons.SMG_Hyperion_4_VeryRare', badass.weight_veryrare),
-                ('GD_Weap_SMG.A_Weapons.SMG_Hyperion_5_Alien', badass.weight_alien),
-                ('GD_Weap_SMG.A_Weapons_Legendary.SMG_Hyperion_5_Bitch', badass.weight_legendary),
-            ], invbalance='WeaponBalanceDefinition')),
-            activated=hotfix_enabled)
+                ('GD_Weap_SMG.A_Weapons.SMG_Hyperion', badass.weight_common, 'WeaponBalanceDefinition'),
+                ('GD_Weap_SMG.A_Weapons.SMG_Hyperion_2_Uncommon', badass.weight_uncommon, 'WeaponBalanceDefinition'),
+                ('GD_Weap_SMG.A_Weapons.SMG_Hyperion_3_Rare', badass.weight_rare, 'WeaponBalanceDefinition'),
+                ('GD_Weap_SMG.A_Weapons.SMG_Hyperion_4_VeryRare', badass.weight_veryrare, 'WeaponBalanceDefinition'),
+                ('GD_Weap_SMG.A_Weapons.SMG_Hyperion_5_Alien', badass.weight_alien, 'WeaponBalanceDefinition'),
+                ('GD_Weap_SMG.A_Weapons_Legendary.SMG_Hyperion_5_Bitch', badass.weight_legendary, 'WeaponBalanceDefinition'),
+            ])),
+            activated=hotfix_activated)
 
     with open('rarity-input-file.txt', 'r') as df:
         rarity_sections[rarity_key] = df.read().format(
@@ -1714,7 +1780,7 @@ for (rarity_key, rarity_label) in DropConfig.rarity_presets:
 
     line_prefix = '#'
     line_suffix = '<off>'
-    hotfix_enabled = False
+    hotfix_activated = False
 
 # Configure the gun type probabilities
 for config in [regular, badass]:
@@ -1798,8 +1864,8 @@ for config in [regular, badass]:
 hfs.add_level_hotfix('medicalmystery', 'MedicalMystery',
     """,GD_ItempoolsEnemyUse.Turrets.MedicalMystery_AlienGun,
     BalancedItems,,{}""".format(get_balanced_items([
-        ('GD_Weap_AssaultRifle.A_Weapons.AR_Bandit_5_Alien', 1),
-    ], invbalance='WeaponBalanceDefinition')))
+        ('GD_Weap_AssaultRifle.A_Weapons.AR_Bandit_5_Alien', 1, 'WeaponBalanceDefinition'),
+    ])))
 
 # NoBeard's Stinkpot drop
 hfs.add_level_hotfix('nobeard_stinkpot_0', 'NoBeardStinkpot',
@@ -1813,276 +1879,358 @@ hfs.add_level_hotfix('nobeard_stinkpot_1', 'NoBeardStinkpot',
     BalancedItems[0].bDropOnDeath,,
     True""")
 
-# Midge-mong uses a KerBlaster.  The rider is a generic Badass Midget, but fortunately
-# no other Badass Midgets can spawn in Cove_P.  So just fiddle with the pools via
-# hotfix and we're good to go.
-
-hfs.add_level_hotfix('midgemong_kerblaster', 'Midge',
-    """Cove_P,
-    GD_Population_Midget.Balance.PawnBalance_MidgetBadass,
-    DefaultItemPoolList[0].ItemPool,,
-    ItemPoolDefinition'GD_Itempools.Runnables.Pool_WarMong'""")
-
-hfs.add_level_hotfix('midgemong_clean_pool', 'Midge',
-    """Cove_P,
-    GD_Population_PrimalBeast.Balance.Unique.PawnBalance_PrimalBeast_Warmong,
-    DefaultItemPoolList,,
-    ()""")
-
-# Captain Flynt - use the drop pool for equipping
-
-set_dipl_item_prob('flynt_pool_0',
-    'GD_Population_Nomad.Balance.Unique.PawnBalance_Flynt',
-    0,
-    level='SouthernShelf_P')
-set_dipl_item_prob('flynt_pool_1',
-    'GD_Population_Nomad.Balance.Unique.PawnBalance_Flynt',
-    3,
-    level='SouthernShelf_P')
-set_dipl_item_prob('flynt_pool_2',
-    'GD_Population_Nomad.Balance.Unique.PawnBalance_Flynt',
-    2,
-    level='SouthernShelf_P',
-    prob=1)
-
-# Bad Maw - UCP adds Deliverance, so use that.
-
-set_pt_cipl_item_prob('badmaw_pool_0',
-    'GD_Population_Nomad.Balance.PawnBalance_BadMaw',
-    0, 0,
-    level='Frost_P')
-
-set_pt_cipl_item_prob('badmaw_pool_1',
-    'GD_Population_Nomad.Balance.PawnBalance_BadMaw',
-    1, 0,
-    level='Frost_P')
-
-# Assassin Common
-
-set_bi_item_prob('assassin_pool_0',
-    'GD_Itempools.Runnables.Pool_FourAssassins',
-    0,
-    level='SouthpawFactory_P')
-
-# Assassin Wot
-
-set_dipl_item_prob('wot_pool_0',
-    'GD_Population_Marauder.Balance.Unique.PawnBalance_Assassin1',
-    0,
-    level='SouthpawFactory_P')
-
-set_dipl_item_prob('wot_pool_1',
-    'GD_Population_Marauder.Balance.Unique.PawnBalance_Assassin1',
-    2,
-    level='SouthpawFactory_P',
-    prob=1)
-
-# Assassin Oney
-
-set_dipl_item_prob('oney_pool_0',
-    'GD_Population_Nomad.Balance.Unique.PawnBalance_Assassin2',
-    1,
-    level='SouthpawFactory_P')
-
-set_dipl_item_prob('oney_pool_1',
-    'GD_Population_Nomad.Balance.Unique.PawnBalance_Assassin2',
-    3,
-    level='SouthpawFactory_P',
-    prob=1)
-
-# Assassin Rouf
-
-set_dipl_item_prob('rouf_pool_0',
-    'GD_Population_Rat.Balance.Unique.PawnBalance_Assassin4',
-    0,
-    level='SouthpawFactory_P')
-
-set_dipl_item_prob('rouf_pool_1',
-    'GD_Population_Rat.Balance.Unique.PawnBalance_Assassin4',
-    2,
-    level='SouthpawFactory_P',
-    prob=1)
-
-# Flinter
-
-set_dipl_item_prob('flinter_pool_0',
-    'GD_Population_Rat.Balance.Unique.PawnBalance_RatEasterEgg',
-    0,
-    level='Dam_P')
-
-set_dipl_item_prob('flinter_pool_1',
-    'GD_Population_Rat.Balance.Unique.PawnBalance_RatEasterEgg',
-    2,
-    level='Dam_P',
-    prob=1)
-
-# Mad Mike
-
-hfs.add_level_hotfix('mad_mike_pool_0', 'MadMike',
-    """Dam_P,
-    GD_Population_Nomad.Balance.Unique.PawnBalance_MadMike,
-    DefaultItemPoolList[0].ItemPool,,
-    ItemPoolDefinition'{}'""".format(other.pool_mad_mike_equip))
-
-# UCP sets CustomItemPoolList to add the MadHous, but since we're
-# overriding the equip pool anyway, just clear out that UCP edit.
-hfs.add_level_hotfix('mad_mike_pool_1', 'MadMike',
-    """Dam_P,
-    GD_Population_Nomad.Balance.Unique.PawnBalance_MadMike,
-    PlayThroughs[0].CustomItemPoolList,,
-    ()""")
-
-# Prospector Zeke
-
-set_dipl_item_prob('zeke_pool_0',
-    'GD_Population_Nomad.Balance.Unique.PawnBalance_Prospector',
-    0,
-    level='TundraExpress_P')
-
-set_dipl_item_prob('zeke_pool_1',
-    'GD_Population_Nomad.Balance.Unique.PawnBalance_Prospector',
-    2,
-    level='TundraExpress_P',
-    prob=1)
-
-# Laney
-
-set_dipl_item_prob('laney_pool_0',
-    'GD_Population_Rat.Balance.Unique.PawnBalance_Laney',
-    0,
-    level='Fridge_P')
-
-set_dipl_item_prob('laney_pool_1',
-    'GD_Population_Rat.Balance.Unique.PawnBalance_Laney',
-    2,
-    level='Fridge_P',
-    prob=1)
-
-# Laney's Dwarves
+# Laney's Dwarves - Better Loot Compat.  Deactivate the extra gemstone drop.
 
 for idx in range(7):
     set_dipl_item_prob('laney_dwarf_pool_{}'.format(idx),
         'GD_Population_Midget.Balance.Unique.PawnBalance_LaneyDwarf{}'.format(idx+1),
         3,
-        level='Fridge_P')
+        level='Fridge_P',
+        activated=hotfix_activated)
 
-# Smash-Head
+# Save our current hotfixes
+orig_hfs = hfs
 
-hfs.add_level_hotfix('smashhead_pool_0', 'SmashHead',
-    """Fridge_P,
-    GD_CustomItemPools_MainGame.Assassin.Head4,
-    BalancedItems,,{}""".format(get_balanced_items([
-        ('GD_Weap_Shotgun.A_Weapons_Legendary.SG_Bandit_5_SledgesShotgun', 1),
-        ('GD_Weap_Launchers.A_Weapons_Unique.RL_Bandit_3_Roaster', 1),
-    ], invbalance='WeaponBalanceDefinition')))
+# Set up Boss/Miniboss unique drops.
+boss_drops = {}
+line_prefix = ''
+line_suffix = ''
+hotfix_activated = True
+for (label, key, unique_pct, rare_pct) in [
+        ('Guaranteed Equip (100% Uniques, 100% Rares)', 'guaranteed', 1, 1),
+        ('Very Improved Equip (50% Uniques, 75% Rares)', 'veryimproved', .5, .75),
+        ('Improved Equip (33% Uniques, 60% Rares)', 'improved', .33, .60),
+        ('Stock Equip (10% Uniques, 33% Rares)', 'stock', .1, .33),
+        ]:
 
-set_dipl_item_prob('smashhead_pool_1',
-    'GD_Population_Goliath.Balance.Unique.PawnBalance_SmashHead',
-    0,
-    level='Fridge_P')
+    # Set up a new hotfixes object so we don't have to fiddle with hotfix IDs
+    hfs = Hotfixes(nameprefix='ApocBoss{}'.format(key.capitalize()))
 
-set_dipl_item_prob('smashhead_pool_2',
-    'GD_Population_Goliath.Balance.Unique.PawnBalance_SmashHead',
-    1,
-    level='Fridge_P')
+    # Midge-mong uses a KerBlaster.  The rider is a generic Badass Midget, but fortunately
+    # no other Badass Midgets can spawn in Cove_P.  So just fiddle with the pools via
+    # hotfix and we're good to go.
 
-set_dipl_item_prob('smashhead_pool_3',
-    'GD_Population_Goliath.Balance.Unique.PawnBalance_SmashHead',
-    2,
-    level='Fridge_P',
-    prob=1)
+    setup_boss_pool('midgemong_pool_0', 'Cove_P', other.level_pool_0,
+            badass.equip_pool_smg,
+            [
+                ('GD_Itempools.Runnables.Pool_WarMong', unique_pct, None),
+            ],
+            activated=hotfix_activated)
 
-# Bagman
+    set_dipl_item_pool('midgemong_pool_1',
+            'GD_Population_Midget.Balance.PawnBalance_MidgetBadass',
+            0,
+            other.level_pool_0,
+            level='Cove_P',
+            activated=hotfix_activated)
 
-set_dipl_item_prob('bagman_pool_0',
-    'GD_Population_Engineer.Balance.Unique.PawnBalance_Leprechaun',
-    1,
-    level='Luckys_P')
+    hfs.add_level_hotfix('midgemong_clean_pool', 'Midge',
+        """Cove_P,
+        GD_Population_PrimalBeast.Balance.Unique.PawnBalance_PrimalBeast_Warmong,
+        DefaultItemPoolList,,
+        ()""",
+        activated=hotfix_activated)
 
-set_dipl_item_prob('bagman_pool_1',
-    'GD_Population_Engineer.Balance.Unique.PawnBalance_Leprechaun',
-    2,
-    level='Luckys_P',
-    prob=1)
+    # Captain Flynt - use the drop pool for equipping
 
-# Muscles
+    set_dipl_item_prob('flynt_pool_0',
+        'GD_Population_Nomad.Balance.Unique.PawnBalance_Flynt',
+        0,
+        level='SouthernShelf_P',
+        activated=hotfix_activated)
+    set_dipl_item_prob('flynt_pool_1',
+        'GD_Population_Nomad.Balance.Unique.PawnBalance_Flynt',
+        3,
+        level='SouthernShelf_P',
+        activated=hotfix_activated)
+    set_dipl_item_prob('flynt_pool_2',
+        'GD_Population_Nomad.Balance.Unique.PawnBalance_Flynt',
+        2,
+        level='SouthernShelf_P',
+        prob=1,
+        activated=hotfix_activated)
 
-hfs.add_level_hotfix('muscles_pool_0', 'Muscles',
-    """Grass_Cliffs_P,
-    GD_Population_Bruiser.Balance.PawnBalance_Bruiser_Muscles,
-    DefaultItemPoolList,,
-    (
-		(
-			ItemPool=ItemPoolDefinition'{}',
-			PoolProbability=(
-				BaseValueConstant=1.000000,
-				BaseValueAttribute=None,
-				InitializationDefinition=None,
-				BaseValueScaleConstant=1.000000
-			)
-		)
-    )
-    """.format(other.pool_muscles_equip))
+    # Bad Maw - UCP adds Deliverance, so use that.
 
-# Foreman Jasper
+    set_pt_cipl_item_prob('badmaw_pool_0',
+        'GD_Population_Nomad.Balance.PawnBalance_BadMaw',
+        0, 0,
+        level='Frost_P',
+        activated=hotfix_activated)
 
-set_dipl_item_prob('foreman_pool_0',
-    'GD_Population_Engineer.Balance.Unique.PawnBalance_Foreman',
-    2,
-    level='HyperionCity_P',
-    prob=1)
+    set_pt_cipl_item_prob('badmaw_pool_1',
+        'GD_Population_Nomad.Balance.PawnBalance_BadMaw',
+        1, 0,
+        level='Frost_P',
+        activated=hotfix_activated)
 
-# Gettle
+    # Assassin Common
 
-set_dipl_item_prob('gettle_pool_0',
-    'GD_Population_Engineer.Balance.Unique.PawnBalance_Gettle',
-    0,
-    level='Interlude_P')
+    set_bi_item_prob('assassin_pool_0',
+        'GD_Itempools.Runnables.Pool_FourAssassins',
+        0,
+        level='SouthpawFactory_P',
+        activated=hotfix_activated)
 
-set_dipl_item_prob('gettle_pool_1',
-    'GD_Population_Engineer.Balance.Unique.PawnBalance_Gettle',
-    2,
-    level='Interlude_P',
-    prob=1)
+    # Assassin Wot
 
-# Mobley
+    set_dipl_item_prob('wot_pool_0',
+        'GD_Population_Marauder.Balance.Unique.PawnBalance_Assassin1',
+        0,
+        level='SouthpawFactory_P',
+        activated=hotfix_activated)
 
-set_dipl_item_prob('mobley_pool_0',
-    'GD_Population_Marauder.Balance.Unique.PawnBalance_Mobley',
-    0,
-    level='Interlude_P')
+    set_dipl_item_prob('wot_pool_1',
+        'GD_Population_Marauder.Balance.Unique.PawnBalance_Assassin1',
+        2,
+        level='SouthpawFactory_P',
+        prob=1,
+        activated=hotfix_activated)
 
-set_dipl_item_prob('mobley_pool_1',
-    'GD_Population_Marauder.Balance.Unique.PawnBalance_Mobley',
-    3,
-    level='Interlude_P',
-    prob=1)
+    # Assassin Oney
 
-# Mick Zaford
+    set_dipl_item_prob('oney_pool_0',
+        'GD_Population_Nomad.Balance.Unique.PawnBalance_Assassin2',
+        1,
+        level='SouthpawFactory_P',
+        activated=hotfix_activated)
 
-set_dipl_item_prob('zaford_pool_0',
-    'GD_Population_Marauder.Balance.Unique.PawnBalance_MickZaford_Combat',
-    0,
-    level='Interlude_P')
+    set_dipl_item_prob('oney_pool_1',
+        'GD_Population_Nomad.Balance.Unique.PawnBalance_Assassin2',
+        3,
+        level='SouthpawFactory_P',
+        prob=1,
+        activated=hotfix_activated)
 
-set_dipl_item_prob('zaford_pool_1',
-    'GD_Population_Marauder.Balance.Unique.PawnBalance_MickZaford_Combat',
-    3,
-    level='Interlude_P',
-    prob=1)
+    # Assassin Rouf
 
-# Jimbo & Tector Hodunk
+    set_dipl_item_prob('rouf_pool_0',
+        'GD_Population_Rat.Balance.Unique.PawnBalance_Assassin4',
+        0,
+        level='SouthpawFactory_P',
+        activated=hotfix_activated)
 
-set_dipl_item_prob('hodunk_pool_0',
-    'GD_Population_Marauder.Balance.Unique.PawnBalance_TectorHodunk_Combat',
-    0,
-    level='Interlude_P')
+    set_dipl_item_prob('rouf_pool_1',
+        'GD_Population_Rat.Balance.Unique.PawnBalance_Assassin4',
+        2,
+        level='SouthpawFactory_P',
+        prob=1,
+        activated=hotfix_activated)
 
-set_dipl_item_prob('hodunk_pool_1',
-    'GD_Population_Marauder.Balance.Unique.PawnBalance_TectorHodunk_Combat',
-    3,
-    level='Interlude_P',
-    prob=1)
+    # Flinter
+
+    set_dipl_item_prob('flinter_pool_0',
+        'GD_Population_Rat.Balance.Unique.PawnBalance_RatEasterEgg',
+        0,
+        level='Dam_P',
+        activated=hotfix_activated)
+
+    set_dipl_item_prob('flinter_pool_1',
+        'GD_Population_Rat.Balance.Unique.PawnBalance_RatEasterEgg',
+        2,
+        level='Dam_P',
+        prob=1,
+        activated=hotfix_activated)
+
+    # Mad Mike
+
+    hfs.add_level_hotfix('mad_mike_pool_0', 'MadMike',
+        """Dam_P,
+        GD_Population_Nomad.Balance.Unique.PawnBalance_MadMike,
+        DefaultItemPoolList[0].ItemPool,,
+        ItemPoolDefinition'{}'""".format(other.level_pool_0),
+        activated=hotfix_activated)
+
+    # UCP sets CustomItemPoolList to add the MadHous, but since we're
+    # overriding the equip pool anyway, just clear out that UCP edit.
+    hfs.add_level_hotfix('mad_mike_pool_1', 'MadMike',
+        """Dam_P,
+        GD_Population_Nomad.Balance.Unique.PawnBalance_MadMike,
+        PlayThroughs[0].CustomItemPoolList,,
+        ()""",
+        activated=hotfix_activated)
+
+    # Prospector Zeke
+
+    set_dipl_item_prob('zeke_pool_0',
+        'GD_Population_Nomad.Balance.Unique.PawnBalance_Prospector',
+        0,
+        level='TundraExpress_P',
+        activated=hotfix_activated)
+
+    set_dipl_item_prob('zeke_pool_1',
+        'GD_Population_Nomad.Balance.Unique.PawnBalance_Prospector',
+        2,
+        level='TundraExpress_P',
+        prob=1,
+        activated=hotfix_activated)
+
+    # Laney
+
+    set_dipl_item_prob('laney_pool_0',
+        'GD_Population_Rat.Balance.Unique.PawnBalance_Laney',
+        0,
+        level='Fridge_P',
+        activated=hotfix_activated)
+
+    set_dipl_item_prob('laney_pool_1',
+        'GD_Population_Rat.Balance.Unique.PawnBalance_Laney',
+        2,
+        level='Fridge_P',
+        prob=1,
+        activated=hotfix_activated)
+
+    # Smash-Head
+
+    hfs.add_level_hotfix('smashhead_pool_0', 'SmashHead',
+        """Fridge_P,
+        GD_CustomItemPools_MainGame.Assassin.Head4,
+        BalancedItems,,{}""".format(get_balanced_items([
+            ('GD_Weap_Shotgun.A_Weapons_Legendary.SG_Bandit_5_SledgesShotgun', 1, 'WeaponBalanceDefinition'),
+            ('GD_Weap_Launchers.A_Weapons_Unique.RL_Bandit_3_Roaster', 1, 'WeaponBalanceDefinition'),
+        ])),
+        activated=hotfix_activated)
+
+    set_dipl_item_prob('smashhead_pool_1',
+        'GD_Population_Goliath.Balance.Unique.PawnBalance_SmashHead',
+        0,
+        level='Fridge_P',
+        activated=hotfix_activated)
+
+    set_dipl_item_prob('smashhead_pool_2',
+        'GD_Population_Goliath.Balance.Unique.PawnBalance_SmashHead',
+        1,
+        level='Fridge_P',
+        activated=hotfix_activated)
+
+    set_dipl_item_prob('smashhead_pool_3',
+        'GD_Population_Goliath.Balance.Unique.PawnBalance_SmashHead',
+        2,
+        level='Fridge_P',
+        prob=1,
+        activated=hotfix_activated)
+
+    # Bagman
+
+    set_dipl_item_prob('bagman_pool_0',
+        'GD_Population_Engineer.Balance.Unique.PawnBalance_Leprechaun',
+        1,
+        level='Luckys_P',
+        activated=hotfix_activated)
+
+    set_dipl_item_prob('bagman_pool_1',
+        'GD_Population_Engineer.Balance.Unique.PawnBalance_Leprechaun',
+        2,
+        level='Luckys_P',
+        prob=1,
+        activated=hotfix_activated)
+
+    # Muscles
+
+    hfs.add_level_hotfix('muscles_pool_0', 'Muscles',
+        """Grass_Cliffs_P,
+        GD_Population_Bruiser.Balance.PawnBalance_Bruiser_Muscles,
+        DefaultItemPoolList,,
+        (
+            (
+                ItemPool=ItemPoolDefinition'{}',
+                PoolProbability=(
+                    BaseValueConstant=1.000000,
+                    BaseValueAttribute=None,
+                    InitializationDefinition=None,
+                    BaseValueScaleConstant=1.000000
+                )
+            )
+        )
+        """.format(other.level_pool_0),
+        activated=hotfix_activated)
+
+    # Foreman Jasper
+
+    set_dipl_item_prob('foreman_pool_0',
+        'GD_Population_Engineer.Balance.Unique.PawnBalance_Foreman',
+        2,
+        level='HyperionCity_P',
+        prob=1,
+        activated=hotfix_activated)
+
+    # Gettle
+
+    set_dipl_item_prob('gettle_pool_0',
+        'GD_Population_Engineer.Balance.Unique.PawnBalance_Gettle',
+        0,
+        level='Interlude_P',
+        activated=hotfix_activated)
+
+    set_dipl_item_prob('gettle_pool_1',
+        'GD_Population_Engineer.Balance.Unique.PawnBalance_Gettle',
+        2,
+        level='Interlude_P',
+        prob=1,
+        activated=hotfix_activated)
+
+    # Mobley
+
+    set_dipl_item_prob('mobley_pool_0',
+        'GD_Population_Marauder.Balance.Unique.PawnBalance_Mobley',
+        0,
+        level='Interlude_P',
+        activated=hotfix_activated)
+
+    set_dipl_item_prob('mobley_pool_1',
+        'GD_Population_Marauder.Balance.Unique.PawnBalance_Mobley',
+        3,
+        level='Interlude_P',
+        prob=1,
+        activated=hotfix_activated)
+
+    # Mick Zaford
+
+    set_dipl_item_prob('zaford_pool_0',
+        'GD_Population_Marauder.Balance.Unique.PawnBalance_MickZaford_Combat',
+        0,
+        level='Interlude_P',
+        activated=hotfix_activated)
+
+    set_dipl_item_prob('zaford_pool_1',
+        'GD_Population_Marauder.Balance.Unique.PawnBalance_MickZaford_Combat',
+        3,
+        level='Interlude_P',
+        prob=1,
+        activated=hotfix_activated)
+
+    # Jimbo & Tector Hodunk
+
+    set_dipl_item_prob('hodunk_pool_0',
+        'GD_Population_Marauder.Balance.Unique.PawnBalance_TectorHodunk_Combat',
+        0,
+        level='Interlude_P',
+        activated=hotfix_activated)
+
+    set_dipl_item_prob('hodunk_pool_1',
+        'GD_Population_Marauder.Balance.Unique.PawnBalance_TectorHodunk_Combat',
+        3,
+        level='Interlude_P',
+        prob=1,
+        activated=hotfix_activated)
+
+    # Generate the section string
+    with open('bosses-input-file.txt', 'r') as df:
+        boss_drops[key] = df.read().format(
+                boss_label=label,
+                line_prefix=line_prefix,
+                line_suffix=line_suffix,
+                hotfixes=hfs,
+                regular=regular,
+                badass=badass,
+                other=other,
+                unique_pct=unique_pct,
+                rare_pct=rare_pct,
+                )
+
+    line_prefix = '#'
+    line_suffix = '<off>'
+    hotfix_activated = False
 
 ###
 ### Generate the mod string
@@ -2092,13 +2240,17 @@ with open('mod-input-file.txt') as df:
     mod_str = df.read().format(
         mod_name=mod_name,
         mod_version=mod_version,
-        hotfixes=hfs,
+        hotfixes=orig_hfs,
         regular=regular,
         badass=badass,
         other=other,
         rarity_excellent=rarity_sections['excellent'],
         rarity_better=rarity_sections['better'],
         rarity_stock=rarity_sections['stock'],
+        boss_drops_guaranteed=boss_drops['guaranteed'],
+        boss_drops_veryimproved=boss_drops['veryimproved'],
+        boss_drops_improved=boss_drops['improved'],
+        boss_drops_stock=boss_drops['stock'],
         )
 
 ###
