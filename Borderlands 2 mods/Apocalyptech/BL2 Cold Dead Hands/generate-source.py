@@ -1581,7 +1581,7 @@ def setup_boss_pool(hotfix_id, level, pool, default_gear, unique_gear, activated
     for (unique, pct, baldef) in unique_gear:
         total_unique += pct
         bal_items_tuples.append((unique, pct, baldef))
-    if total_unique < 1:
+    if default_gear and total_unique < 1:
         bal_items_tuples.append((default_gear, round(1 - total_unique, 6), None))
     hfs.add_level_hotfix(hotfix_id, 'BossPool',
         '{},{},BalancedItems,,{}'.format(
@@ -1897,10 +1897,11 @@ line_prefix = ''
 line_suffix = ''
 hotfix_activated = True
 for (label, key, unique_pct, rare_pct) in [
-        ('Guaranteed Equip (100% Uniques, 100% Rares)', 'guaranteed', 1, 1),
-        ('Very Improved Equip (50% Uniques, 75% Rares)', 'veryimproved', .5, .75),
-        ('Improved Equip (33% Uniques, 60% Rares)', 'improved', .33, .60),
-        ('Stock Equip (10% Uniques, 33% Rares)', 'stock', .1, .33),
+        ('Guaranteed', 'guaranteed', 1, 1),
+        ('Very Improved', 'veryimproved', .5, .75),
+        ('Improved', 'improved', .33, .60),
+        ('Slightly Improved', 'slight', .22, .45),
+        ('Stock Equip', 'stock', .1, .33),
         ]:
 
     # Set up a new hotfixes object so we don't have to fiddle with hotfix IDs
@@ -1933,22 +1934,32 @@ for (label, key, unique_pct, rare_pct) in [
 
     # Captain Flynt - use the drop pool for equipping
 
-    set_dipl_item_prob('flynt_pool_0',
+    setup_boss_pool('flynt_pool_0', 'SouthernShelf_P', other.level_pool_0,
+            None,
+            [
+                ('GD_Weap_Pistol.A_Weapons_Legendary.Pistol_Maliwan_5_ThunderballFists', 1, 'WeaponBalanceDefinition'),
+                ('GD_Weap_Pistol.A_Weapons_Unique.Pistol_Bandit_3_Tenderbox', 1, 'WeaponBalanceDefinition'),
+            ],
+            activated=hotfix_activated)
+
+    set_dipl_item_prob('flynt_pool_1',
         'GD_Population_Nomad.Balance.Unique.PawnBalance_Flynt',
         0,
         level='SouthernShelf_P',
         activated=hotfix_activated)
-    set_dipl_item_prob('flynt_pool_1',
+
+    set_dipl_item_prob('flynt_pool_2',
         'GD_Population_Nomad.Balance.Unique.PawnBalance_Flynt',
         3,
         level='SouthernShelf_P',
         activated=hotfix_activated)
-    set_dipl_item_prob('flynt_pool_2',
-        'GD_Population_Nomad.Balance.Unique.PawnBalance_Flynt',
-        2,
-        level='SouthernShelf_P',
-        prob=1,
-        activated=hotfix_activated)
+
+    set_dipl_item_pool('flynt_pool_3',
+            'GD_Population_Nomad.Balance.Unique.PawnBalance_Flynt',
+            2,
+            other.level_pool_0,
+            level='SouthernShelf_P',
+            activated=hotfix_activated)
 
     # Bad Maw - UCP adds Deliverance, so use that.
 
@@ -2217,7 +2228,8 @@ for (label, key, unique_pct, rare_pct) in [
     # Generate the section string
     with open('bosses-input-file.txt', 'r') as df:
         boss_drops[key] = df.read().format(
-                boss_label=label,
+                boss_label='{} ({}% Uniques, {}% Rares)'.format(
+                    label, round(unique_pct*100), round(rare_pct*100)),
                 line_prefix=line_prefix,
                 line_suffix=line_suffix,
                 hotfixes=hfs,
@@ -2250,6 +2262,7 @@ with open('mod-input-file.txt') as df:
         boss_drops_guaranteed=boss_drops['guaranteed'],
         boss_drops_veryimproved=boss_drops['veryimproved'],
         boss_drops_improved=boss_drops['improved'],
+        boss_drops_slightimproved=boss_drops['slight'],
         boss_drops_stock=boss_drops['stock'],
         )
 
