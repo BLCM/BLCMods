@@ -1768,7 +1768,7 @@ for (rarity_key, rarity_label) in DropConfig.rarity_presets:
             ])),
             activated=hotfix_activated)
 
-    with open('rarity-input-file.txt', 'r') as df:
+    with open('input-file-rarity.txt', 'r') as df:
         rarity_sections[rarity_key] = df.read().format(
                 section_label=rarity_label,
                 line_prefix=line_prefix,
@@ -2226,7 +2226,7 @@ for (label, key, unique_pct, rare_pct) in [
         activated=hotfix_activated)
 
     # Generate the section string
-    with open('bosses-input-file.txt', 'r') as df:
+    with open('input-file-bosses.txt', 'r') as df:
         boss_drops[key] = df.read().format(
                 boss_label='{} ({}% Uniques, {}% Rares)'.format(
                     label, round(unique_pct*100), round(rare_pct*100)),
@@ -2248,7 +2248,7 @@ for (label, key, unique_pct, rare_pct) in [
 ### Generate the mod string
 ###
 
-with open('mod-input-file.txt') as df:
+with open('input-file-mod.txt') as df:
     mod_str = df.read().format(
         mod_name=mod_name,
         mod_version=mod_version,
