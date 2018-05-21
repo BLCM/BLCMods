@@ -1371,14 +1371,15 @@ def get_balanced_items(items, invbalance=None):
             """.format(itmpool, invbal, weight))
     return '({})'.format(','.join(bal_items))
 
-def get_balanced_set(objectname, items):
+def get_balanced_set(objectname, items, invbalance=None):
     """
     Returns a regular "set" command to set `objectname`'s BalancedItems
     attribute to an array with the specified `items`.  The bulk of the
-    work here is done in `get_balanced_items()`
+    work here is done in `get_balanced_items()`.  The `invbalance`
+    argument is passed directly in to there.
     """
     return "set {} BalancedItems\n{}".format(objectname,
-            get_balanced_items(items))
+            get_balanced_items(items, invbalance))
 
 def disable_balanced_drop(prefix, pool, item_num):
     """
@@ -1530,6 +1531,20 @@ for (pool, index) in [
         ]:
     drop_disables.extend(disable_balanced_drop(prefix, pool, index))
 other.disable_world_sets = "\n\n".join(drop_disables)
+
+# Set up Jack's Body Double's equip pool
+hfs.add_level_hotfix('body_double_equip', 'BodyDouble',
+    """HyperionCity_P,
+    GD_JacksBodyDouble.WeaponPools.Pool_Weapons_JackBodyDouble_EnemyUse,
+    BalancedItems,,{}""".format(get_balanced_items(
+        [
+            ('GD_Weap_SMG.A_Weapons.SMG_Hyperion', badass.weight_common),
+            ('GD_Weap_SMG.A_Weapons.SMG_Hyperion_2_Uncommon', badass.weight_uncommon),
+            ('GD_Weap_SMG.A_Weapons.SMG_Hyperion_3_Rare', badass.weight_rare),
+            ('GD_Weap_SMG.A_Weapons.SMG_Hyperion_4_VeryRare', badass.weight_veryrare),
+            ('GD_Weap_SMG.A_Weapons.SMG_Hyperion_5_Alien', badass.weight_alien),
+            ('GD_Weap_SMG.A_Weapons_Legendary.SMG_Hyperion_5_Bitch', badass.weight_legendary),
+        ], invbalance='WeaponBalanceDefinition')))
 
 # Configure the loot pools that we'll use to equip regular + badass enemies.  There's one
 # pool which determines the rarities, and another which determines the gun type probabilities
@@ -1919,6 +1934,14 @@ hfs.add_level_hotfix('muscles_pool_0', 'Muscles',
 		)
     )
     """.format(other.pool_muscles_equip))
+
+# Foreman Jasper
+
+set_dipl_item_prob('foreman_pool_0',
+    'GD_Population_Engineer.Balance.Unique.PawnBalance_Foreman',
+    2,
+    level='HyperionCity_P',
+    prob=1)
 
 ###
 ### Generate the mod string

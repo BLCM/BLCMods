@@ -355,6 +355,10 @@
 
             set GD_CustomItemPools_MainGame.Assassin.TorgueEpic BalancedItems ((ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_SniperRifles_01_Common',InvBalanceDefinition=None,Probability=(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_SniperRifles_02_Uncommon',InvBalanceDefinition=None,Probability=(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_SniperRifles_04_Rare',InvBalanceDefinition=None,Probability=(BaseValueConstant=35,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_SniperRifles_05_VeryRare',InvBalanceDefinition=None,Probability=(BaseValueConstant=60,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_SniperRifles_05_VeryRare_Alien',InvBalanceDefinition=None,Probability=(BaseValueConstant=55,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_SniperRifles_06_Legendary',InvBalanceDefinition=None,Probability=(BaseValueConstant=10,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True))
 
+            # Jack's Body Double
+
+            #<hotfix><key>"SparkLevelPatchEntry-ApocBodyDouble0"</key><value>"HyperionCity_P,GD_JacksBodyDouble.WeaponPools.Pool_Weapons_JackBodyDouble_EnemyUse,BalancedItems,,((ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_SMG.A_Weapons.SMG_Hyperion',Probability=(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_SMG.A_Weapons.SMG_Hyperion_2_Uncommon',Probability=(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_SMG.A_Weapons.SMG_Hyperion_3_Rare',Probability=(BaseValueConstant=35,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_SMG.A_Weapons.SMG_Hyperion_4_VeryRare',Probability=(BaseValueConstant=60,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_SMG.A_Weapons.SMG_Hyperion_5_Alien',Probability=(BaseValueConstant=55,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_SMG.A_Weapons_Legendary.SMG_Hyperion_5_Bitch',Probability=(BaseValueConstant=10,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True))"</value><on>
+
         #</Badass Enemies>
 
     #</Enemy Weapon Rarity Pools>
@@ -2207,6 +2211,16 @@
                 #<hotfix><key>"SparkLevelPatchEntry-ApocMuscles0"</key><value>"Grass_Cliffs_P,GD_Population_Bruiser.Balance.PawnBalance_Bruiser_Muscles,DefaultItemPoolList,,((ItemPool=ItemPoolDefinition'GD_CustomItemPools_allium.Psycho.AlliumXmasSkins',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))"</value><on>
 
             #</Muscles>
+
+            #<Foreman Jasper>
+
+                # Can drop the Black Hole, so make that a For Sure Thing.
+
+                set GD_Itempools.Runnables.Pool_Foreman bAutoReadyItems True 
+
+                #<hotfix><key>"SparkLevelPatchEntry-ApocDisable30"</key><value>"HyperionCity_P,GD_Population_Engineer.Balance.Unique.PawnBalance_Foreman,DefaultItemPoolList[2].PoolProbability,,(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><on>
+
+            #</Foreman Jasper>
 
         #</Bosses Equip Uniques>
 
