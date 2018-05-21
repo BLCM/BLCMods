@@ -80,6 +80,20 @@ from the start of the battle which gun you'll receive.
   using one.  If someone has a clever way to make a loot pool change in
   response to a mission being active or not, I'd love to hear it!
 
+### Implications
+
+* Giving better gear to enemies obviously makes them tougher, though the
+  abundance of good gear for yourself seems to do a reasonable job of
+  keeping things pretty level, at least in Normal mode.  You'll still be in
+  for some tougher times in tighter areas, though, if enemies start
+  spawning with Rocket Launchers or Grenadiers, etc.
+* It's not obvious in the vanilla game, but all Loaders spawn with a
+  shield, it's just that ordinarily their shield can *only* be charged up
+  by Shield Surveyors, and their shields start out at zero strength.  With
+  this mod, all their shields have turned into real shields, which start
+  regenerating immediately, which will probably make Loader-heavy areas
+  much more difficult than ordinarily.
+
 Compatibility
 -------------
 
