@@ -345,6 +345,11 @@ class Regular(DropConfig):
                 (0, 'GD_Iris_Population_Biker.Balance.Iris_PawnBalance_Biker'),
                 (0, 'GD_Population_Loader.Balance.PawnBalance_LoaderSGT'),
                 (0, 'GD_Orchid_Pop_Pirates.Balance.PawnBalance_Orchid_PirateMarauder'),
+                (0, 'GD_Population_Loader.Balance.PawnBalance_LoaderBUL'),
+                (0, 'GD_Population_Loader.Balance.PawnBalance_BunkerLoaderBUL'),
+                (0, 'GD_Population_Loader.Balance.Unique.JackFight.PawnBalance_LoaderBUL_JackFight'),
+                (0, 'GD_Orchid_Pop_Loader.Balance.PawnBalance_OrchidLoaderBUL'),
+                (0, 'GD_Orchid_Pop_Loader.Disabled.Balance.PawnBalance_Orchid_LoaderBUL_Disabled'),
             ],
             # Launchers
             [
