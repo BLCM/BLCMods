@@ -74,6 +74,7 @@ class OtherConfig(BaseConfig):
     Config which isn't specific to our other drops
     """
 
+    # Some text that we'll put into the main file
     disable_world_sets = None
 
     # Mad Mike's equip pool
@@ -123,6 +124,19 @@ class DropConfig(BaseConfig):
 
     # Shield pool (only need to worry about one pool for these)
     set_shields = None
+
+    # Rarity weight presets that we'll generate
+    weight_common = None
+    weight_uncommon = None
+    weight_rare = None
+    weight_veryrare = None
+    weight_alien = None
+    weight_legendary = None
+    rarity_presets = [
+            ('excellent', 'Enemies Have Excellent Gear'),
+            ('better', 'Enemies Have Better Gear'),
+            ('stock', 'Enemies Have Roughly Stock Gear'),
+        ]
     
     ###
     ### ... FUNCTIONS??!?
@@ -218,6 +232,15 @@ class DropConfig(BaseConfig):
 
         return "\n\n".join(retlist)
 
+    def set_rarity_weights(self, rarity_key):
+        rarity = self.rarities[rarity_key]
+        self.weight_common = rarity['common']
+        self.weight_uncommon = rarity['uncommon']
+        self.weight_rare = rarity['rare']
+        self.weight_veryrare = rarity['veryrare']
+        self.weight_alien = rarity['alien']
+        self.weight_legendary = rarity['legendary']
+
 class Regular(DropConfig):
     """
     Config info for regular enemies
@@ -227,12 +250,32 @@ class Regular(DropConfig):
     hotfix_prefix = 'reg'
 
     # Equip weights
-    weight_common = 20
-    weight_uncommon = 85
-    weight_rare = 65
-    weight_veryrare = 40
-    weight_alien = 20
-    weight_legendary = 1
+    rarities = {
+        'excellent': {
+            'common': 20,
+            'uncommon': 85,
+            'rare': 65,
+            'veryrare': 40,
+            'alien': 20,
+            'legendary': 1,
+            },
+        'better': {
+            'common': 32.75,
+            'uncommon': 35,
+            'rare': 25,
+            'veryrare': 5,
+            'alien': 2,
+            'legendary': 0.25,
+            },
+        'stock': {
+            'common': 100,
+            'uncommon': 10,
+            'rare': 1,
+            'veryrare': 0.1,
+            'alien': 0.1,
+            'legendary': 0.01,
+            },
+        }
 
     # Rarity weight pools
     rarity_pool_ar = 'GD_CustomItemPools_MainGame.Soldier.TorgueUncommon'
@@ -905,12 +948,34 @@ class Badass(DropConfig):
     hotfix_prefix = 'badass'
 
     # Equip weights
-    weight_common = 0
-    weight_uncommon = 0
-    weight_rare = 35
-    weight_veryrare = 60
-    weight_alien = 55
-    weight_legendary = 10
+    rarities = {
+        'excellent': {
+            'common': 0,
+            'uncommon': 0,
+            'rare': 35,
+            'veryrare': 60,
+            'alien': 55,
+            'legendary': 10,
+            },
+        'better': {
+            'common': 0,
+            'uncommon': 25,
+            'rare': 49,
+            'veryrare': 15,
+            'alien': 10,
+            'legendary': 1,
+            },
+        # There's really not such a thing as a "stock" badass pool we could
+        # base these weights on, so we're sort of just making it up.
+        'stock': {
+            'common': 0,
+            'uncommon': 40,
+            'rare': 30,
+            'veryrare': 20,
+            'alien': 10,
+            'legendary': 0.25,
+            },
+        }
 
     # Rarity weight pools
     rarity_pool_ar = 'GD_CustomItemPools_MainGame.Soldier.TorgueEpic'
@@ -1532,103 +1597,127 @@ for (pool, index) in [
     drop_disables.extend(disable_balanced_drop(prefix, pool, index))
 other.disable_world_sets = "\n\n".join(drop_disables)
 
-# Set up Jack's Body Double's equip pool
-hfs.add_level_hotfix('body_double_equip', 'BodyDouble',
-    """HyperionCity_P,
-    GD_JacksBodyDouble.WeaponPools.Pool_Weapons_JackBodyDouble_EnemyUse,
-    BalancedItems,,{}""".format(get_balanced_items(
-        [
-            ('GD_Weap_SMG.A_Weapons.SMG_Hyperion', badass.weight_common),
-            ('GD_Weap_SMG.A_Weapons.SMG_Hyperion_2_Uncommon', badass.weight_uncommon),
-            ('GD_Weap_SMG.A_Weapons.SMG_Hyperion_3_Rare', badass.weight_rare),
-            ('GD_Weap_SMG.A_Weapons.SMG_Hyperion_4_VeryRare', badass.weight_veryrare),
-            ('GD_Weap_SMG.A_Weapons.SMG_Hyperion_5_Alien', badass.weight_alien),
-            ('GD_Weap_SMG.A_Weapons_Legendary.SMG_Hyperion_5_Bitch', badass.weight_legendary),
-        ], invbalance='WeaponBalanceDefinition')))
+# Configure rarity pools
+rarity_sections = {}
+line_prefix = ''
+line_suffix = ''
+hotfix_enabled = True
+for (rarity_key, rarity_label) in DropConfig.rarity_presets:
 
-# Configure the loot pools that we'll use to equip regular + badass enemies.  There's one
-# pool which determines the rarities, and another which determines the gun type probabilities
+    for config in [regular, badass]:
+
+        config.set_rarity_weights(rarity_key)
+
+        config.set_rarity_ar = get_balanced_set(
+            config.rarity_pool_ar,
+            [
+                ('GD_Itempools.WeaponPools.Pool_Weapons_AssaultRifles_01_Common', config.weight_common),
+                ('GD_Itempools.WeaponPools.Pool_Weapons_AssaultRifles_02_Uncommon', config.weight_uncommon),
+                ('GD_Itempools.WeaponPools.Pool_Weapons_AssaultRifles_04_Rare', config.weight_rare),
+                ('GD_Itempools.WeaponPools.Pool_Weapons_AssaultRifles_05_VeryRare', config.weight_veryrare),
+                ('GD_Itempools.WeaponPools.Pool_Weapons_AssaultRifles_05_VeryRare_Alien', config.weight_alien),
+                ('GD_Itempools.WeaponPools.Pool_Weapons_AssaultRifles_06_Legendary', config.weight_legendary),
+            ])
+
+        config.set_rarity_launchers = get_balanced_set(
+            config.rarity_pool_launchers,
+            [
+                ('GD_Itempools.WeaponPools.Pool_Weapons_Launchers_01_Common', config.weight_common),
+                ('GD_Itempools.WeaponPools.Pool_Weapons_Launchers_02_Uncommon', config.weight_uncommon),
+                ('GD_Itempools.WeaponPools.Pool_Weapons_Launchers_04_Rare', config.weight_rare),
+                ('GD_Itempools.WeaponPools.Pool_Weapons_Launchers_05_VeryRare', config.weight_veryrare),
+                ('GD_Itempools.WeaponPools.Pool_Weapons_Launchers_05_VeryRare_Alien', config.weight_alien),
+                ('GD_Itempools.WeaponPools.Pool_Weapons_Launchers_06_Legendary', config.weight_legendary),
+            ])
+
+        config.set_rarity_pistols = get_balanced_set(
+            config.rarity_pool_pistols,
+            [
+                ('GD_Itempools.WeaponPools.Pool_Weapons_Pistols_01_Common', config.weight_common),
+                ('GD_Itempools.WeaponPools.Pool_Weapons_Pistols_02_Uncommon', config.weight_uncommon),
+                ('GD_Itempools.WeaponPools.Pool_Weapons_Pistols_04_Rare', config.weight_rare),
+                ('GD_Itempools.WeaponPools.Pool_Weapons_Pistols_05_VeryRare', config.weight_veryrare),
+                ('GD_Itempools.WeaponPools.Pool_Weapons_Pistols_05_VeryRare_Alien', config.weight_alien),
+                ('GD_Itempools.WeaponPools.Pool_Weapons_Pistols_06_Legendary', config.weight_legendary),
+            ])
+
+        config.set_rarity_smg = get_balanced_set(
+            config.rarity_pool_smg,
+            [
+                ('GD_Itempools.WeaponPools.Pool_Weapons_SMG_01_Common', config.weight_common),
+                ('GD_Itempools.WeaponPools.Pool_Weapons_SMG_02_Uncommon', config.weight_uncommon),
+                ('GD_Itempools.WeaponPools.Pool_Weapons_SMG_04_Rare', config.weight_rare),
+                ('GD_Itempools.WeaponPools.Pool_Weapons_SMG_05_VeryRare', config.weight_veryrare),
+                ('GD_Itempools.WeaponPools.Pool_Weapons_SMG_05_VeryRare_Alien', config.weight_alien),
+                ('GD_Itempools.WeaponPools.Pool_Weapons_SMG_06_Legendary', config.weight_legendary),
+            ])
+
+        config.set_rarity_shotguns = get_balanced_set(
+            config.rarity_pool_shotguns,
+            [
+                ('GD_Itempools.WeaponPools.Pool_Weapons_Shotguns_01_Common', config.weight_common),
+                ('GD_Itempools.WeaponPools.Pool_Weapons_Shotguns_02_Uncommon', config.weight_uncommon),
+                ('GD_Itempools.WeaponPools.Pool_Weapons_Shotguns_04_Rare', config.weight_rare),
+                ('GD_Itempools.WeaponPools.Pool_Weapons_Shotguns_05_VeryRare', config.weight_veryrare),
+                ('GD_Itempools.WeaponPools.Pool_Weapons_Shotguns_05_VeryRare_Alien', config.weight_alien),
+                ('GD_Itempools.WeaponPools.Pool_Weapons_Shotguns_06_Legendary', config.weight_legendary),
+            ])
+
+        config.set_rarity_snipers = get_balanced_set(
+            config.rarity_pool_snipers,
+            [
+                ('GD_Itempools.WeaponPools.Pool_Weapons_SniperRifles_01_Common', config.weight_common),
+                ('GD_Itempools.WeaponPools.Pool_Weapons_SniperRifles_02_Uncommon', config.weight_uncommon),
+                ('GD_Itempools.WeaponPools.Pool_Weapons_SniperRifles_04_Rare', config.weight_rare),
+                ('GD_Itempools.WeaponPools.Pool_Weapons_SniperRifles_05_VeryRare', config.weight_veryrare),
+                ('GD_Itempools.WeaponPools.Pool_Weapons_SniperRifles_05_VeryRare_Alien', config.weight_alien),
+                ('GD_Itempools.WeaponPools.Pool_Weapons_SniperRifles_06_Legendary', config.weight_legendary),
+            ])
+
+        # Shield pool (rarity + equip in one, since we don't need to make two choices)
+
+        config.set_shields = get_balanced_set(
+            config.pool_shields,
+            [
+                ('GD_Itempools.ShieldPools.Pool_Shields_All_01_Common', config.weight_common),
+                ('GD_Itempools.ShieldPools.Pool_Shields_All_02_Uncommon', config.weight_uncommon),
+                ('GD_Itempools.ShieldPools.Pool_Shields_All_04_Rare', config.weight_rare),
+                ('GD_Itempools.ShieldPools.Pool_Shields_All_05_VeryRare', config.weight_veryrare),
+                ('GD_Itempools.ShieldPools.Pool_Shields_All_06_Legendary', config.weight_legendary),
+            ])
+
+    # Set up Jack's Body Double's equip pool
+    body_double_key = '{}_body_double_equip'.format(rarity_key)
+    hfs.add_level_hotfix(body_double_key, 'BodyDouble',
+        """HyperionCity_P,
+        GD_JacksBodyDouble.WeaponPools.Pool_Weapons_JackBodyDouble_EnemyUse,
+        BalancedItems,,{}""".format(get_balanced_items(
+            [
+                ('GD_Weap_SMG.A_Weapons.SMG_Hyperion', badass.weight_common),
+                ('GD_Weap_SMG.A_Weapons.SMG_Hyperion_2_Uncommon', badass.weight_uncommon),
+                ('GD_Weap_SMG.A_Weapons.SMG_Hyperion_3_Rare', badass.weight_rare),
+                ('GD_Weap_SMG.A_Weapons.SMG_Hyperion_4_VeryRare', badass.weight_veryrare),
+                ('GD_Weap_SMG.A_Weapons.SMG_Hyperion_5_Alien', badass.weight_alien),
+                ('GD_Weap_SMG.A_Weapons_Legendary.SMG_Hyperion_5_Bitch', badass.weight_legendary),
+            ], invbalance='WeaponBalanceDefinition')),
+            activated=hotfix_enabled)
+
+    with open('rarity-input-file.txt', 'r') as df:
+        rarity_sections[rarity_key] = df.read().format(
+                section_label=rarity_label,
+                line_prefix=line_prefix,
+                line_suffix=line_suffix,
+                regular=regular,
+                badass=badass,
+                body_double_equip_hotfix_string=hfs.get_hotfix(body_double_key).get_xml(),
+                )
+
+    line_prefix = '#'
+    line_suffix = '<off>'
+    hotfix_enabled = False
+
+# Configure the gun type probabilities
 for config in [regular, badass]:
-
-    # Configure rarity pools
-
-    config.set_rarity_ar = get_balanced_set(
-        config.rarity_pool_ar,
-        [
-            ('GD_Itempools.WeaponPools.Pool_Weapons_AssaultRifles_01_Common', config.weight_common),
-            ('GD_Itempools.WeaponPools.Pool_Weapons_AssaultRifles_02_Uncommon', config.weight_uncommon),
-            ('GD_Itempools.WeaponPools.Pool_Weapons_AssaultRifles_04_Rare', config.weight_rare),
-            ('GD_Itempools.WeaponPools.Pool_Weapons_AssaultRifles_05_VeryRare', config.weight_veryrare),
-            ('GD_Itempools.WeaponPools.Pool_Weapons_AssaultRifles_05_VeryRare_Alien', config.weight_alien),
-            ('GD_Itempools.WeaponPools.Pool_Weapons_AssaultRifles_06_Legendary', config.weight_legendary),
-        ])
-
-    config.set_rarity_launchers = get_balanced_set(
-        config.rarity_pool_launchers,
-        [
-            ('GD_Itempools.WeaponPools.Pool_Weapons_Launchers_01_Common', config.weight_common),
-            ('GD_Itempools.WeaponPools.Pool_Weapons_Launchers_02_Uncommon', config.weight_uncommon),
-            ('GD_Itempools.WeaponPools.Pool_Weapons_Launchers_04_Rare', config.weight_rare),
-            ('GD_Itempools.WeaponPools.Pool_Weapons_Launchers_05_VeryRare', config.weight_veryrare),
-            ('GD_Itempools.WeaponPools.Pool_Weapons_Launchers_05_VeryRare_Alien', config.weight_alien),
-            ('GD_Itempools.WeaponPools.Pool_Weapons_Launchers_06_Legendary', config.weight_legendary),
-        ])
-
-    config.set_rarity_pistols = get_balanced_set(
-        config.rarity_pool_pistols,
-        [
-            ('GD_Itempools.WeaponPools.Pool_Weapons_Pistols_01_Common', config.weight_common),
-            ('GD_Itempools.WeaponPools.Pool_Weapons_Pistols_02_Uncommon', config.weight_uncommon),
-            ('GD_Itempools.WeaponPools.Pool_Weapons_Pistols_04_Rare', config.weight_rare),
-            ('GD_Itempools.WeaponPools.Pool_Weapons_Pistols_05_VeryRare', config.weight_veryrare),
-            ('GD_Itempools.WeaponPools.Pool_Weapons_Pistols_05_VeryRare_Alien', config.weight_alien),
-            ('GD_Itempools.WeaponPools.Pool_Weapons_Pistols_06_Legendary', config.weight_legendary),
-        ])
-
-    config.set_rarity_smg = get_balanced_set(
-        config.rarity_pool_smg,
-        [
-            ('GD_Itempools.WeaponPools.Pool_Weapons_SMG_01_Common', config.weight_common),
-            ('GD_Itempools.WeaponPools.Pool_Weapons_SMG_02_Uncommon', config.weight_uncommon),
-            ('GD_Itempools.WeaponPools.Pool_Weapons_SMG_04_Rare', config.weight_rare),
-            ('GD_Itempools.WeaponPools.Pool_Weapons_SMG_05_VeryRare', config.weight_veryrare),
-            ('GD_Itempools.WeaponPools.Pool_Weapons_SMG_05_VeryRare_Alien', config.weight_alien),
-            ('GD_Itempools.WeaponPools.Pool_Weapons_SMG_06_Legendary', config.weight_legendary),
-        ])
-
-    config.set_rarity_shotguns = get_balanced_set(
-        config.rarity_pool_shotguns,
-        [
-            ('GD_Itempools.WeaponPools.Pool_Weapons_Shotguns_01_Common', config.weight_common),
-            ('GD_Itempools.WeaponPools.Pool_Weapons_Shotguns_02_Uncommon', config.weight_uncommon),
-            ('GD_Itempools.WeaponPools.Pool_Weapons_Shotguns_04_Rare', config.weight_rare),
-            ('GD_Itempools.WeaponPools.Pool_Weapons_Shotguns_05_VeryRare', config.weight_veryrare),
-            ('GD_Itempools.WeaponPools.Pool_Weapons_Shotguns_05_VeryRare_Alien', config.weight_alien),
-            ('GD_Itempools.WeaponPools.Pool_Weapons_Shotguns_06_Legendary', config.weight_legendary),
-        ])
-
-    config.set_rarity_snipers = get_balanced_set(
-        config.rarity_pool_snipers,
-        [
-            ('GD_Itempools.WeaponPools.Pool_Weapons_SniperRifles_01_Common', config.weight_common),
-            ('GD_Itempools.WeaponPools.Pool_Weapons_SniperRifles_02_Uncommon', config.weight_uncommon),
-            ('GD_Itempools.WeaponPools.Pool_Weapons_SniperRifles_04_Rare', config.weight_rare),
-            ('GD_Itempools.WeaponPools.Pool_Weapons_SniperRifles_05_VeryRare', config.weight_veryrare),
-            ('GD_Itempools.WeaponPools.Pool_Weapons_SniperRifles_05_VeryRare_Alien', config.weight_alien),
-            ('GD_Itempools.WeaponPools.Pool_Weapons_SniperRifles_06_Legendary', config.weight_legendary),
-        ])
-
-    # Shield pool (rarity + equip in one, since we don't need to make two choices)
-
-    config.set_shields = get_balanced_set(
-        config.pool_shields,
-        [
-            ('GD_Itempools.ShieldPools.Pool_Shields_All_01_Common', config.weight_common),
-            ('GD_Itempools.ShieldPools.Pool_Shields_All_02_Uncommon', config.weight_uncommon),
-            ('GD_Itempools.ShieldPools.Pool_Shields_All_04_Rare', config.weight_rare),
-            ('GD_Itempools.ShieldPools.Pool_Shields_All_05_VeryRare', config.weight_veryrare),
-            ('GD_Itempools.ShieldPools.Pool_Shields_All_06_Legendary', config.weight_legendary),
-        ])
 
     # Configure Equip pools
 
@@ -2007,6 +2096,9 @@ with open('mod-input-file.txt') as df:
         regular=regular,
         badass=badass,
         other=other,
+        rarity_excellent=rarity_sections['excellent'],
+        rarity_better=rarity_sections['better'],
+        rarity_stock=rarity_sections['stock'],
         )
 
 ###
