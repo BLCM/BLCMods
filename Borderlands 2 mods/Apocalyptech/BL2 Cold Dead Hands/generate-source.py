@@ -2021,7 +2021,7 @@ for (label, key, unique_pct, rare_pct) in [
         level='Frost_P',
         activated=hotfix_activated)
 
-    # Assassin Common
+    # Assassin Common - remove Emperor from the shared loot pool
 
     set_bi_item_prob('assassin_pool_0',
         'GD_Itempools.Runnables.Pool_FourAssassins',
@@ -2030,14 +2030,26 @@ for (label, key, unique_pct, rare_pct) in [
         activated=hotfix_activated)
 
     # Assassin Wot
+    # Note that for the assassins, we're not using our level_pools, since the
+    # Runnables for these are only used by their Digistruct counterparts, so
+    # we don't have to worry about tainting the pools.
 
-    set_dipl_item_prob('wot_pool_0',
+    setup_boss_pool('wot_pool_0', 'SouthpawFactory_P',
+            'GD_Itempools.Runnables.Pool_AssassinWot',
+            badass.equip_pool_smg,
+            [
+                ('GD_Weap_SMG.A_Weapons_Unique.SMG_Hyperion_3_Commerce', rare_pct, 'WeaponBalanceDefinition'),
+                ('GD_Weap_SMG.A_Weapons_Legendary.SMG_Dahl_5_Emperor', rare_pct/4, 'WeaponBalanceDefinition'),
+            ],
+            activated=hotfix_activated)
+
+    set_dipl_item_prob('wot_pool_1',
         'GD_Population_Marauder.Balance.Unique.PawnBalance_Assassin1',
         0,
         level='SouthpawFactory_P',
         activated=hotfix_activated)
 
-    set_dipl_item_prob('wot_pool_1',
+    set_dipl_item_prob('wot_pool_2',
         'GD_Population_Marauder.Balance.Unique.PawnBalance_Assassin1',
         2,
         level='SouthpawFactory_P',
@@ -2046,28 +2058,57 @@ for (label, key, unique_pct, rare_pct) in [
 
     # Assassin Oney
 
-    set_dipl_item_prob('oney_pool_0',
+    setup_boss_pool('oney_pool_0', 'SouthpawFactory_P',
+            'GD_Itempools.Runnables.Pool_AssassinOney',
+            badass.equip_pool_only_shotguns,
+            [
+                ('GD_Weap_Pistol.A_Weapons_Unique.Pistol_Jakobs_3_Judge', rare_pct, 'WeaponBalanceDefinition'),
+                ('GD_Weap_SMG.A_Weapons_Legendary.SMG_Dahl_5_Emperor', rare_pct/4, 'WeaponBalanceDefinition'),
+            ],
+            activated=hotfix_activated)
+
+    set_dipl_item_prob('oney_pool_1',
         'GD_Population_Nomad.Balance.Unique.PawnBalance_Assassin2',
         1,
         level='SouthpawFactory_P',
         activated=hotfix_activated)
 
-    set_dipl_item_prob('oney_pool_1',
+    set_dipl_item_prob('oney_pool_2',
         'GD_Population_Nomad.Balance.Unique.PawnBalance_Assassin2',
         3,
         level='SouthpawFactory_P',
         prob=1,
         activated=hotfix_activated)
 
+    # Assassin Reeth (melee only, so only a pool setup here.
+
+    setup_boss_pool('reeth_pool_0', 'SouthpawFactory_P',
+            'GD_Itempools.Runnables.Pool_AssassinReeth',
+            None,
+            [
+                ('GD_Weap_SniperRifles.A_Weapons_Unique.Sniper_Hyperion_3_FremingtonsEdge', 1, 'WeaponBalanceDefinition'),
+                ('GD_Weap_SMG.A_Weapons_Legendary.SMG_Dahl_5_Emperor', .25, 'WeaponBalanceDefinition'),
+            ],
+            activated=hotfix_activated)
+
     # Assassin Rouf
 
-    set_dipl_item_prob('rouf_pool_0',
+    setup_boss_pool('rouf_pool_0', 'SouthpawFactory_P',
+            'GD_Itempools.Runnables.Pool_AssassinRouf',
+            badass.equip_pool_only_shotguns,
+            [
+                ('GD_Weap_Shotgun.A_Weapons_Unique.SG_Bandit_3_Dog', rare_pct, 'WeaponBalanceDefinition'),
+                ('GD_Weap_SMG.A_Weapons_Legendary.SMG_Dahl_5_Emperor', rare_pct/4, 'WeaponBalanceDefinition'),
+            ],
+            activated=hotfix_activated)
+
+    set_dipl_item_prob('rouf_pool_1',
         'GD_Population_Rat.Balance.Unique.PawnBalance_Assassin4',
         0,
         level='SouthpawFactory_P',
         activated=hotfix_activated)
 
-    set_dipl_item_prob('rouf_pool_1',
+    set_dipl_item_prob('rouf_pool_2',
         'GD_Population_Rat.Balance.Unique.PawnBalance_Assassin4',
         2,
         level='SouthpawFactory_P',
