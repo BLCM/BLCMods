@@ -1920,8 +1920,7 @@ for idx in range(7):
     set_dipl_item_prob('laney_dwarf_pool_{}'.format(idx),
         'GD_Population_Midget.Balance.Unique.PawnBalance_LaneyDwarf{}'.format(idx+1),
         3,
-        level='Fridge_P',
-        activated=hotfix_activated)
+        level='Fridge_P')
 
 # Legendary Pool management
 unique_hotfixes = []
