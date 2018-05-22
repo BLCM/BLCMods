@@ -2169,19 +2169,26 @@ for (label, key, unique_pct, rare_pct) in [
         ()""",
         activated=hotfix_activated)
 
-    # Prospector Zeke
+    # Prospector Zeke (TundraExpress_P pool 0)
 
-    set_dipl_item_prob('zeke_pool_0',
+    setup_boss_pool('zeke_pool_0', 'TundraExpress_P', other.level_pool_0,
+            badass.equip_pool_ar,
+            [
+                ('GD_CustomItemPools_MainGame.Assassin.Head3', unique_pct, None),
+            ],
+            activated=hotfix_activated)
+
+    set_dipl_item_pool('zeke_pool_1',
+            'GD_Population_Nomad.Balance.Unique.PawnBalance_Prospector',
+            2,
+            other.level_pool_0,
+            level='TundraExpress_P',
+            activated=hotfix_activated)
+
+    set_dipl_item_prob('zeke_pool_2',
         'GD_Population_Nomad.Balance.Unique.PawnBalance_Prospector',
         0,
         level='TundraExpress_P',
-        activated=hotfix_activated)
-
-    set_dipl_item_prob('zeke_pool_1',
-        'GD_Population_Nomad.Balance.Unique.PawnBalance_Prospector',
-        2,
-        level='TundraExpress_P',
-        prob=1,
         activated=hotfix_activated)
 
     # Laney
