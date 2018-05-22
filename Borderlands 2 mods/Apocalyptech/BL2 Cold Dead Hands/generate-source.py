@@ -2401,6 +2401,101 @@ for (label, key, unique_pct, rare_pct) in [
         level='Interlude_P',
         activated=hotfix_activated)
 
+    # Deputy Winger (Grass_Lynchwood_P pool 0)
+
+    setup_boss_pool('winger_pool_0', 'Grass_Lynchwood_P', other.level_pool_0,
+            badass.pool_shields,
+            [
+                ('GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Roid_Order', rare_pct, 'InventoryBalanceDefinition'),
+            ],
+            activated=hotfix_activated)
+
+    set_dipl_item_pool('winger_pool_1',
+            'GD_Population_Sheriff.Balance.PawnBalance_Deputy',
+            1,
+            other.level_pool_0,
+            level='Grass_Lynchwood_P',
+            activated=hotfix_activated)
+
+    set_bi_item_prob('winger_pool_2',
+        'GD_CustomItemPools_MainGame.Assassin.PurplePale',
+        0,
+        level='Grass_Lynchwood_P',
+        activated=hotfix_activated)
+
+    # Sheriff of Lynchwood (Grass_Lynchwood_P pool 1)
+
+    setup_boss_pool('sheriff_pool_0', 'Grass_Lynchwood_P', other.level_pool_1,
+            badass.equip_pool_pistols,
+            [
+                ('GD_Weap_Pistol.A_Weapons_Unique.Pistol_Jakobs_3_Law', rare_pct, 'WeaponBalanceDefinition'),
+            ],
+            activated=hotfix_activated)
+
+    set_dipl_item_pool('sheriff_pool_1',
+            'GD_Population_Sheriff.Balance.PawnBalance_Sheriff',
+            0,
+            other.level_pool_1,
+            level='Grass_Lynchwood_P',
+            activated=hotfix_activated)
+
+    set_bi_item_prob('sheriff_pool_2',
+        'GD_Itempools.Runnables.Pool_Sheriff',
+        1,
+        level='Grass_Lynchwood_P',
+        activated=hotfix_activated)
+
+    # Mortar (CraterLake_P pool 0)
+
+    setup_boss_pool('mortar_pool_0', 'CraterLake_P', other.level_pool_0,
+            badass.equip_pool_only_shotguns,
+            [
+                ('GD_Weap_AssaultRifle.A_Weapons_Unique.AR_Torgue_3_EvilSmasher', unique_pct, 'WeaponBalanceDefinition'),
+            ],
+            activated=hotfix_activated)
+
+    set_dipl_item_pool('mortar_pool_1',
+            'GD_Population_Rat.Balance.Unique.PawnBalance_Mortar',
+            0,
+            other.level_pool_0,
+            level='CraterLake_P',
+            activated=hotfix_activated)
+
+    set_dipl_item_prob('mortar_pool_2',
+        'GD_Population_Rat.Balance.Unique.PawnBalance_Mortar',
+        3,
+        level='CraterLake_P',
+        activated=hotfix_activated)
+
+    # Bone Head 2.0 (Stockade_P pool 0)
+
+    setup_boss_pool('bonehead2_pool_0', 'Stockade_P', other.level_pool_0,
+            badass.equip_pool_ar,
+            [
+                ('GD_Itempools.Runnables.Pool_Bonehead2', rare_pct, None),
+                ('GD_Weap_AssaultRifle.A_Weapons_Legendary.AR_Vladof_5_Sherdifier', unique_pct, 'WeaponBalanceDefinition'),
+            ],
+            activated=hotfix_activated)
+
+    set_dipl_item_pool('bonehead2_pool_1',
+            'GD_Population_Loader.Balance.Unique.PawnBalance_BoneHead2',
+            0,
+            other.level_pool_0,
+            level='Stockade_P',
+            activated=hotfix_activated)
+
+    set_dipl_item_prob('bonehead2_pool_2',
+        'GD_Population_Loader.Balance.Unique.PawnBalance_BoneHead2',
+        1,
+        level='Stockade_P',
+        activated=hotfix_activated)
+
+    set_dipl_item_prob('bonehead2_pool_3',
+        'GD_Population_Loader.Balance.Unique.PawnBalance_BoneHead2',
+        3,
+        level='Stockade_P',
+        activated=hotfix_activated)
+
     # Generate the section string
     with open('input-file-bosses.txt', 'r') as df:
         boss_drops[key] = df.read().format(
