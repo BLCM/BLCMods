@@ -2489,6 +2489,28 @@ for (label, key, unique_pct, rare_pct) in [
         level='CraterLake_P',
         activated=hotfix_activated)
 
+    # Hunter Hellquist (Fyrestone_P pool 0)
+
+    setup_boss_pool('hunter_pool_0', 'Fyrestone_P', other.level_pool_0,
+            badass.pool_shields,
+            [
+                ('GD_Itempools.Runnables.Pool_HunterHellquist', unique_pct, None),
+            ],
+            activated=hotfix_activated)
+
+    set_dipl_item_pool('hunter_pool_1',
+            'GD_Population_Engineer.Balance.Unique.PawnBalance_DJHyperion',
+            1,
+            other.level_pool_0,
+            level='Fyrestone_P',
+            activated=hotfix_activated)
+
+    set_dipl_item_prob('hunter_pool_2',
+        'GD_Population_Engineer.Balance.Unique.PawnBalance_DJHyperion',
+        2,
+        level='Fyrestone_P',
+        activated=hotfix_activated)
+
     # Bone Head 2.0 (Stockade_P pool 0)
 
     setup_boss_pool('bonehead2_pool_0', 'Stockade_P', other.level_pool_0,
