@@ -1561,6 +1561,37 @@ def set_generic_item_prob(hotfix_name, classname, attribute,
         )""".format(level, classname, attribute, prob),
         activated=activated)
 
+def set_bi_item_pool(hotfix_name, classname, index, item,
+        level=None, prob=None, activated=True, invbalance=None):
+    """
+    Sets an entire BalancedItem structure
+    """
+    global hfs
+    if level is None:
+        level = ''
+    if prob is None:
+        prob = 1
+    if invbalance:
+        itmpool = 'None'
+        invbal = "{}'{}'".format(invbalance, item)
+    else:
+        itmpool = "ItemPoolDefinition'{}'".format(item)
+        invbal = 'None'
+    hfs.add_level_hotfix(hotfix_name, 'SetBIItem',
+        """{},{},BalancedItems[{}],,
+        (
+            ItmPoolDefinition={},
+            InvBalanceDefinition={},
+            Probability=(
+                BaseValueConstant={},
+                BaseValueAttribute=None,
+                InitializationDefinition=None,
+                BaseValueScaleConstant=1
+            ),
+            bDropOnDeath=True
+        )""".format(level, classname, index, itmpool, invbal, prob),
+        activated=activated)
+
 def set_bi_item_prob(hotfix_name, classname, index, level=None,
         prob=None, activated=True):
     """
@@ -2247,6 +2278,48 @@ other.legendary_pearl_adds = "\n\n".join(
 other.legendary_seraph_adds = "\n\n".join(
         ['{}{}'.format(' '*(4*3), hfs.get_hotfix(hotfix_id).get_xml()) for hotfix_id in seraph_hotfixes]
     )
+
+# Legendary shield pool configuration.  Doing this a bit differently since there's
+# not nearly as many shields to handle as weapons.
+
+shields = {
+    'GD_Itempools.ShieldPools.Pool_Shields_Absorption_06_Legendary': [
+        ('1340', 2, 'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Absorption_1340'),
+        ('equitas', 3, 'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Absorption_Equitas'),
+        ('sponge', 4, 'GD_Iris_SeraphItems.Sponge.Iris_Seraph_Shield_Sponge_Balance'),
+        ],
+    'GD_Itempools.ShieldPools.Pool_Shields_Booster_06_Legendary': [
+        ('potogold', 1, 'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Booster_PotOGold'),
+        ('bigboomblaster', 2, 'GD_Iris_SeraphItems.BigBoomBlaster.Iris_Seraph_Shield_Booster_Balance'),
+        ],
+    'GD_Itempools.ShieldPools.Pool_Shields_Chimera_06_Legendary': [
+        ('evolution', 1, 'GD_Orchid_RaidWeapons.Shield.Anshin.Orchid_Seraph_Anshin_Shield_Balance')
+        ],
+    'GD_Itempools.ShieldPools.Pool_Shields_Juggernaut_06_Legendary': [
+        ('hoplite', 1, 'GD_Iris_SeraphItems.Hoplite.Iris_Seraph_Shield_Juggernaut_Balance'),
+        ],
+    'GD_Itempools.ShieldPools.Pool_Shields_NovaShields_Explosive_06_Legendary': [
+        ('deadlybloom', 0, 'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Nova_Explosive_DeadlyBloom'),
+        ],
+    'GD_Itempools.ShieldPools.Pool_Shields_Roid_06_Legendary': [
+        ('order', 1, 'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Roid_Order'),
+        ('lovethumper', 2, 'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Roid_04_LoveThumper'),
+        ('punchee', 3, 'GD_Iris_SeraphItems.Pun-chee.Iris_Seraph_Shield_Pun-chee_Balance'),
+        ],
+    'GD_Itempools.ShieldPools.Pool_Shields_Standard_06_Legendary': [
+        ('manlyman', 1, 'GD_Orchid_Shields.A_Item_Custom.S_BladeShield'),
+        ('roughrider', 2, 'GD_Sage_Shields.A_Item_Custom.S_BucklerShield'),
+        ('antagonist', 3, 'GD_Aster_ItemGrades.Shields.Aster_Seraph_Antagonist_Shield_Balance'),
+        ('blockade', 4, 'GD_Aster_ItemGrades.Shields.Aster_Seraph_Blockade_Shield_Balance'),
+        ],
+    }
+for (pool, shieldlist) in shields.items():
+    for (label, index, shieldname) in shieldlist:
+        set_bi_item_pool('shield_{}'.format(label),
+            pool,
+            index,
+            shieldname,
+            invbalance='InventoryBalanceDefinition')
 
 # Save our current hotfixes
 orig_hfs = hfs
