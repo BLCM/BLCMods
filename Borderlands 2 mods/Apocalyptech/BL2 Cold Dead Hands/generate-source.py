@@ -2393,6 +2393,14 @@ for (label, key, unique_pct, rare_pct) in [
         level='Interlude_P',
         activated=hotfix_activated)
 
+    # Jimbo Hodunk equip fix (shouldn't actually have a gun equip)
+
+    set_dipl_item_prob('hodunk_pool_3',
+        'GD_Population_Marauder.Balance.Unique.PawnBalance_JimboRiding',
+        0,
+        level='Interlude_P',
+        activated=hotfix_activated)
+
     # Generate the section string
     with open('input-file-bosses.txt', 'r') as df:
         boss_drops[key] = df.read().format(
