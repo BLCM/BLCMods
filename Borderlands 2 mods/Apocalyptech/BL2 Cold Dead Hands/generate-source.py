@@ -1413,7 +1413,7 @@ def get_balanced_items(items):
     the item will be put into the ItmPoolDefinition attribute - otherwise it
     will be put into the InvBalanceDefinition attribute, with the given
     `invbalance` string as the type of object being linked to (most commonly
-    either WeaponBalanceDefinition or ItemBalanceDefinition)
+    either WeaponBalanceDefinition or InventoryBalanceDefinition)
     """
     bal_items = []
     new_items = []
@@ -2114,6 +2114,28 @@ for (label, key, unique_pct, rare_pct) in [
         2,
         level='SouthpawFactory_P',
         prob=1,
+        activated=hotfix_activated)
+
+    # Incinerator Clayton (IceCanyon_P pool 0)
+
+    setup_boss_pool('clayton_pool_0', 'IceCanyon_P', other.level_pool_0,
+            badass.pool_shields,
+            [
+                ('GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Nova_Phoenix', unique_pct, 'InventoryBalanceDefinition'),
+            ],
+            activated=hotfix_activated)
+
+    set_dipl_item_pool('clayton_pool_1',
+            'GD_Population_Psycho.Balance.Unique.PawnBalance_IncineratorVanya_Combat',
+            0,
+            other.level_pool_0,
+            level='IceCanyon_P',
+            activated=hotfix_activated)
+
+    set_bi_item_prob('clayton_pool_2',
+        'GD_Itempools.Runnables.Pool_Clayton',
+        1,
+        level='IceCanyon_P',
         activated=hotfix_activated)
 
     # Flinter (Dam_P pool 0)
