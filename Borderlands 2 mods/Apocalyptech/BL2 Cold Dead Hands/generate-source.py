@@ -83,6 +83,7 @@ class OtherConfig(BaseConfig):
     # bosses in a single level.
     level_pool_0 = 'GD_CustomItemPools_allium.Mercenary.AlliumXmasSkins'
     level_pool_1 = 'GD_CustomItemPools_allium.Psycho.AlliumXmasSkins'
+    level_pool_2 = 'GD_CustomItemPools_allium.Siren.AlliumXmasSkins'
 
 class DropConfig(BaseConfig):
     """
@@ -2191,153 +2192,205 @@ for (label, key, unique_pct, rare_pct) in [
         level='TundraExpress_P',
         activated=hotfix_activated)
 
-    # Laney
+    # Laney (using her own pool)
 
-    set_dipl_item_prob('laney_pool_0',
+    setup_boss_pool('laney_pool_0', 'Fridge_P',
+            'GD_Itempools.Runnables.Pool_Laney',
+            badass.equip_pool_pistols,
+            [
+                ('GD_Weap_Pistol.A_Weapons_Legendary.Pistol_Bandit_5_Gub', unique_pct, 'WeaponBalanceDefinition'),
+            ],
+            activated=hotfix_activated)
+
+    set_dipl_item_prob('laney_pool_1',
         'GD_Population_Rat.Balance.Unique.PawnBalance_Laney',
         0,
         level='Fridge_P',
         activated=hotfix_activated)
 
-    set_dipl_item_prob('laney_pool_1',
+    set_dipl_item_prob('laney_pool_2',
         'GD_Population_Rat.Balance.Unique.PawnBalance_Laney',
         2,
         level='Fridge_P',
         prob=1,
         activated=hotfix_activated)
 
-    # Smash-Head
+    # Smash-Head (Fridge_P pool 0)
 
-    hfs.add_level_hotfix('smashhead_pool_0', 'SmashHead',
-        """Fridge_P,
-        GD_CustomItemPools_MainGame.Assassin.Head4,
-        BalancedItems,,{}""".format(get_balanced_items([
-            ('GD_Weap_Shotgun.A_Weapons_Legendary.SG_Bandit_5_SledgesShotgun', 1, 'WeaponBalanceDefinition'),
-            ('GD_Weap_Launchers.A_Weapons_Unique.RL_Bandit_3_Roaster', 1, 'WeaponBalanceDefinition'),
-        ])),
-        activated=hotfix_activated)
+    setup_boss_pool('smashhead_pool_0', 'Fridge_P', other.level_pool_0,
+            badass.equip_pool_launchers,
+            [
+                ('GD_Weap_Shotgun.A_Weapons_Legendary.SG_Bandit_5_SledgesShotgun', unique_pct, 'WeaponBalanceDefinition'),
+                ('GD_Weap_Launchers.A_Weapons_Unique.RL_Bandit_3_Roaster', rare_pct, 'WeaponBalanceDefinition'),
+            ],
+            activated=hotfix_activated)
 
-    set_dipl_item_prob('smashhead_pool_1',
-        'GD_Population_Goliath.Balance.Unique.PawnBalance_SmashHead',
-        0,
-        level='Fridge_P',
-        activated=hotfix_activated)
+    set_dipl_item_pool('smashhead_pool_1',
+            'GD_Population_Goliath.Balance.Unique.PawnBalance_SmashHead',
+            2,
+            other.level_pool_0,
+            level='Fridge_P',
+            activated=hotfix_activated)
 
     set_dipl_item_prob('smashhead_pool_2',
         'GD_Population_Goliath.Balance.Unique.PawnBalance_SmashHead',
-        1,
+        0,
         level='Fridge_P',
         activated=hotfix_activated)
 
     set_dipl_item_prob('smashhead_pool_3',
         'GD_Population_Goliath.Balance.Unique.PawnBalance_SmashHead',
-        2,
+        1,
         level='Fridge_P',
-        prob=1,
         activated=hotfix_activated)
 
-    # Bagman
+    # Bagman (Luckys_P pool 0)
 
-    set_dipl_item_prob('bagman_pool_0',
+    setup_boss_pool('bagman_pool_0', 'Luckys_P', other.level_pool_0,
+            badass.pool_shields,
+            [
+                ('GD_Itempools.Runnables.Pool_Bagman', unique_pct, None),
+            ],
+            activated=hotfix_activated)
+
+    set_dipl_item_pool('bagman_pool_1',
+            'GD_Population_Engineer.Balance.Unique.PawnBalance_Leprechaun',
+            2,
+            other.level_pool_0,
+            level='Luckys_P',
+            activated=hotfix_activated)
+
+    set_dipl_item_prob('bagman_pool_2',
         'GD_Population_Engineer.Balance.Unique.PawnBalance_Leprechaun',
         1,
         level='Luckys_P',
         activated=hotfix_activated)
 
-    set_dipl_item_prob('bagman_pool_1',
-        'GD_Population_Engineer.Balance.Unique.PawnBalance_Leprechaun',
-        2,
-        level='Luckys_P',
-        prob=1,
+    # Muscles (Grass_Cliffs_P pool 0)
+
+    setup_boss_pool('muscles_pool_0', 'Grass_Cliffs_P', other.level_pool_0,
+            badass.equip_pool_ar,
+            [
+                ('GD_Weap_Shotgun.A_Weapons_Legendary.SG_Bandit_5_SledgesShotgun', unique_pct, 'WeaponBalanceDefinition'),
+            ],
+            activated=hotfix_activated)
+
+    set_dipl_item_pool('muscles_pool_1',
+            'GD_Population_Bruiser.Balance.PawnBalance_Bruiser_Muscles',
+            0,
+            other.level_pool_0,
+            level='Grass_Cliffs_P',
+            activated=hotfix_activated)
+
+    set_dipl_item_prob('muscles_pool_2',
+        'GD_Population_Bruiser.Balance.PawnBalance_Bruiser_Muscles',
+        1,
+        level='Grass_Cliffs_P',
         activated=hotfix_activated)
 
-    # Muscles
+    # Foreman Jasper (HyperionCity_P pool 0)
 
-    hfs.add_level_hotfix('muscles_pool_0', 'Muscles',
-        """Grass_Cliffs_P,
-        GD_Population_Bruiser.Balance.PawnBalance_Bruiser_Muscles,
-        DefaultItemPoolList,,
-        (
-            (
-                ItemPool=ItemPoolDefinition'{}',
-                PoolProbability=(
-                    BaseValueConstant=1.000000,
-                    BaseValueAttribute=None,
-                    InitializationDefinition=None,
-                    BaseValueScaleConstant=1.000000
-                )
-            )
-        )
-        """.format(other.level_pool_0),
-        activated=hotfix_activated)
+    setup_boss_pool('foreman_pool_0', 'HyperionCity_P', other.level_pool_0,
+            badass.pool_shields,
+            [
+                ('GD_Itempools.Runnables.Pool_Foreman', unique_pct, None),
+            ],
+            activated=hotfix_activated)
 
-    # Foreman Jasper
+    set_dipl_item_pool('foreman_pool_1',
+            'GD_Population_Engineer.Balance.Unique.PawnBalance_Foreman',
+            2,
+            other.level_pool_0,
+            level='HyperionCity_P',
+            activated=hotfix_activated)
 
-    set_dipl_item_prob('foreman_pool_0',
-        'GD_Population_Engineer.Balance.Unique.PawnBalance_Foreman',
-        2,
-        level='HyperionCity_P',
-        prob=1,
-        activated=hotfix_activated)
+    # Gettle (uses own pool)
 
-    # Gettle
-
-    set_dipl_item_prob('gettle_pool_0',
-        'GD_Population_Engineer.Balance.Unique.PawnBalance_Gettle',
-        0,
-        level='Interlude_P',
-        activated=hotfix_activated)
+    setup_boss_pool('gettle_pool_0', 'Interlude_P',
+            'GD_Itempools.Runnables.Pool_Gettle',
+            badass.equip_pool_ar,
+            [
+                ('GD_Weap_SniperRifles.A_Weapons_Legendary.Sniper_Vladof_5_Lyudmila', unique_pct, 'WeaponBalanceDefinition'),
+            ],
+            activated=hotfix_activated)
 
     set_dipl_item_prob('gettle_pool_1',
         'GD_Population_Engineer.Balance.Unique.PawnBalance_Gettle',
+        0,
+        level='Interlude_P',
+        activated=hotfix_activated)
+
+    set_dipl_item_prob('gettle_pool_2',
+        'GD_Population_Engineer.Balance.Unique.PawnBalance_Gettle',
         2,
         level='Interlude_P',
         prob=1,
         activated=hotfix_activated)
 
-    # Mobley
+    # Mobley (Interlude_P pool 0)
 
-    set_dipl_item_prob('mobley_pool_0',
+    setup_boss_pool('mobley_pool_0', 'Interlude_P', other.level_pool_0,
+            badass.equip_pool_pistols,
+            [
+                ('GD_Itempools.Runnables.Pool_Mobley', unique_pct, None),
+            ],
+            activated=hotfix_activated)
+
+    set_dipl_item_pool('mobley_pool_1',
+            'GD_Population_Marauder.Balance.Unique.PawnBalance_Mobley',
+            3,
+            other.level_pool_0,
+            level='Interlude_P',
+            activated=hotfix_activated)
+
+    set_dipl_item_prob('mobley_pool_2',
         'GD_Population_Marauder.Balance.Unique.PawnBalance_Mobley',
         0,
         level='Interlude_P',
         activated=hotfix_activated)
 
-    set_dipl_item_prob('mobley_pool_1',
-        'GD_Population_Marauder.Balance.Unique.PawnBalance_Mobley',
-        3,
-        level='Interlude_P',
-        prob=1,
-        activated=hotfix_activated)
+    # Mick Zaford (Interlude_P pool 1)
 
-    # Mick Zaford
+    setup_boss_pool('zaford_pool_0', 'Interlude_P', other.level_pool_1,
+            badass.equip_pool_smg,
+            [
+                ('GD_Itempools.Runnables.Pool_MickZaford', unique_pct, None),
+            ],
+            activated=hotfix_activated)
 
-    set_dipl_item_prob('zaford_pool_0',
+    set_dipl_item_pool('zaford_pool_1',
+            'GD_Population_Marauder.Balance.Unique.PawnBalance_MickZaford_Combat',
+            3,
+            other.level_pool_1,
+            level='Interlude_P',
+            activated=hotfix_activated)
+
+    set_dipl_item_prob('zaford_pool_2',
         'GD_Population_Marauder.Balance.Unique.PawnBalance_MickZaford_Combat',
         0,
         level='Interlude_P',
         activated=hotfix_activated)
 
-    set_dipl_item_prob('zaford_pool_1',
-        'GD_Population_Marauder.Balance.Unique.PawnBalance_MickZaford_Combat',
-        3,
-        level='Interlude_P',
-        prob=1,
-        activated=hotfix_activated)
+    # Jimbo & Tector Hodunk (Interlude_P pool 2)
 
-    # Jimbo & Tector Hodunk
+    setup_boss_pool('hodunk_pool_0', 'Interlude_P', other.level_pool_2,
+            badass.equip_pool_only_shotguns,
+            [
+                ('GD_Itempools.Runnables.Pool_TectorHodunk', unique_pct, None),
+            ],
+            activated=hotfix_activated)
 
-    set_dipl_item_prob('hodunk_pool_0',
+    set_dipl_item_pool('hodunk_pool_1',
+            'GD_Population_Marauder.Balance.Unique.PawnBalance_TectorHodunk_Combat',
+            3,
+            other.level_pool_2,
+            level='Interlude_P',
+            activated=hotfix_activated)
+
+    set_dipl_item_prob('hodunk_pool_2',
         'GD_Population_Marauder.Balance.Unique.PawnBalance_TectorHodunk_Combat',
         0,
         level='Interlude_P',
-        activated=hotfix_activated)
-
-    set_dipl_item_prob('hodunk_pool_1',
-        'GD_Population_Marauder.Balance.Unique.PawnBalance_TectorHodunk_Combat',
-        3,
-        level='Interlude_P',
-        prob=1,
         activated=hotfix_activated)
 
     # Generate the section string

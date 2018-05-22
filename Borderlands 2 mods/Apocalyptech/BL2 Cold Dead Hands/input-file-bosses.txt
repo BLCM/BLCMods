@@ -161,20 +161,22 @@
 
                 #<Laney>{line_suffix}
 
+                    {line_prefix}# Laney can drop the Gub.  No need to use our custom pools here,{line_suffix}
+                    {line_prefix}# since nothing but Laney uses that pool, even in UCP.{line_suffix}
+
                     {line_prefix}set GD_Itempools.Runnables.Pool_Laney bAutoReadyItems True{line_suffix}
 
                     {hotfixes:laney_pool_0}
 
                     {hotfixes:laney_pool_1}
 
+                    {hotfixes:laney_pool_2}
+
                 #</Laney>
 
                 #<Smash-Head>{line_suffix}
 
-                    {line_prefix}# UCP adds the Roaster to Smash-Head's default Sledge's Shotgun drop, so{line_suffix}
-                    {line_prefix}# we'll make him use either of those, randomly.{line_suffix}
-
-                    {line_prefix}set GD_CustomItemPools_MainGame.Assassin.Head4 bAutoReadyItems True{line_suffix}
+                    {line_prefix}# UCP adds the Roaster to Smash-Head's default Sledge's Shotgun drop.{line_suffix}
 
                     {hotfixes:smashhead_pool_0}
 
@@ -191,55 +193,40 @@
                     {line_prefix}# Bagman had a chance to drop the Pot o' Gold, so make that a guaranteed{line_suffix}
                     {line_prefix}# thing.{line_suffix}
 
-                    {line_prefix}set GD_Itempools.Runnables.Pool_Bagman bAutoReadyItems True{line_suffix}
-
                     {hotfixes:bagman_pool_0}
 
                     {hotfixes:bagman_pool_1}
+
+                    {hotfixes:bagman_pool_2}
 
                 #</Bagman>
 
                 #<Muscles>{line_suffix}
 
-                    {line_prefix}# UCP added Sledge's Shotgun, but also added it to BLNG Loader, using the{line_suffix}
-                    {line_prefix}# same skinpool.  If BLNG Loader has an auto-ready pool, it won't actually{line_suffix}
-                    {line_prefix}# attack properly, so we're going to consume a new skinpool of our own for{line_suffix}
-                    {line_prefix}# Muscles.{line_suffix}
-
-                    {line_prefix}set {other:level_pool_0} bAutoReadyItems True{line_suffix}
-
-                    {line_prefix}set {other:level_pool_0} BalancedItems
-                    (
-                        ( 
-                            ItmPoolDefinition=None, 
-                            InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_Shotgun.A_Weapons_Legendary.SG_Bandit_5_SledgesShotgun', 
-                            Probability=( 
-                                BaseValueConstant=1,
-                                BaseValueAttribute=None, 
-                                InitializationDefinition=None,
-                                BaseValueScaleConstant=1
-                            ), 
-                            bDropOnDeath=True 
-                        )
-                    ){line_suffix}
+                    {line_prefix}# UCP added Sledge's Shotgun to Muscles{line_suffix}
 
                     {hotfixes:muscles_pool_0}
+
+                    {hotfixes:muscles_pool_1}
+
+                    {hotfixes:muscles_pool_2}
 
                 #</Muscles>
 
                 #<Foreman Jasper>{line_suffix}
 
-                    {line_prefix}# Can drop the Black Hole, so make that a For Sure Thing.{line_suffix}
-
-                    {line_prefix}set GD_Itempools.Runnables.Pool_Foreman bAutoReadyItems True{line_suffix}
+                    {line_prefix}# Can drop the Black Hole, so make that a possible equip.{line_suffix}
 
                     {hotfixes:foreman_pool_0}
+
+                    {hotfixes:foreman_pool_1}
 
                 #</Foreman Jasper>
 
                 #<Gettle>{line_suffix}
 
-                    {line_prefix}# Can drop the Lyuda, so enforce usage of that{line_suffix}
+                    {line_prefix}# Can drop the Lyuda.  Nothing else uses this Runnable, so go{line_suffix}
+                    {line_prefix}# ahead and use it.{line_suffix}
 
                     {line_prefix}set GD_Itempools.Runnables.Pool_Gettle bAutoReadyItems True{line_suffix}
 
@@ -247,41 +234,43 @@
 
                     {hotfixes:gettle_pool_1}
 
+                    {hotfixes:gettle_pool_2}
+
                 #</Gettle>
 
                 #<Mobley>{line_suffix}
 
-                    {line_prefix}# Can drop the Veruc, so enforce that.{line_suffix}
-
-                    {line_prefix}set GD_Itempools.Runnables.Pool_Mobley bAutoReadyItems True{line_suffix}
+                    {line_prefix}# Can drop the Veruc.{line_suffix}
 
                     {hotfixes:mobley_pool_0}
 
                     {hotfixes:mobley_pool_1}
 
+                    {hotfixes:mobley_pool_2}
+
                 #</Mobley>
 
                 #<Mick Zaford>{line_suffix}
 
-                    {line_prefix}# Can drop the Maggie, so enforce that{line_suffix}
-
-                    {line_prefix}set GD_Itempools.Runnables.Pool_MickZaford bAutoReadyItems True{line_suffix}
+                    {line_prefix}# Can drop the Maggie{line_suffix}
 
                     {hotfixes:zaford_pool_0}
 
                     {hotfixes:zaford_pool_1}
 
+                    {hotfixes:zaford_pool_2}
+
                 #</Mick Zaford>
 
                 #<Jimbo & Tector Hodunk>{line_suffix}
 
-                    {line_prefix}# These folks can drop the Slagga, so enforce that{line_suffix}
-
-                    {line_prefix}set GD_Itempools.Runnables.Pool_TectorHodunk bAutoReadyItems True{line_suffix}
+                    {line_prefix}# These folks can drop the Slagga{line_suffix}
 
                     {hotfixes:hodunk_pool_0}
 
                     {hotfixes:hodunk_pool_1}
+
+                    {hotfixes:hodunk_pool_2}
 
                 #</Jimbo & Tector Hodunk>
 

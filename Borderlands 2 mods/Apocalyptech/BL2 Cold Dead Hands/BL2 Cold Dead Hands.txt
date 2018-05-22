@@ -651,6 +651,8 @@
 
             set GD_CustomItemPools_allium.Psycho.AlliumXmasSkins bAutoReadyItems True 
 
+            set GD_CustomItemPools_allium.Siren.AlliumXmasSkins bAutoReadyItems True 
+
         #</Level-Specific Pool Initialization>
 
     #</Enemy Weapon Equip Pools>
@@ -2318,7 +2320,12 @@
 
                 #<Laney>
 
+                    # Laney can drop the Gub.  No need to use our custom pools here,
+                    # since nothing but Laney uses that pool, even in UCP.
+
                     set GD_Itempools.Runnables.Pool_Laney bAutoReadyItems True 
+
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossGuaranteedBossPool10"</key><value>"Fridge_P,GD_Itempools.Runnables.Pool_Laney,BalancedItems,,((ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_Pistol.A_Weapons_Legendary.Pistol_Bandit_5_Gub',Probability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True))"</value><on>
 
                     #<hotfix><key>"SparkLevelPatchEntry-ApocBossGuaranteedDisable13"</key><value>"Fridge_P,GD_Population_Rat.Balance.Unique.PawnBalance_Laney,DefaultItemPoolList[0].PoolProbability,,(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><on>
 
@@ -2328,18 +2335,15 @@
 
                 #<Smash-Head>
 
-                    # UCP adds the Roaster to Smash-Head's default Sledge's Shotgun drop, so
-                    # we'll make him use either of those, randomly.
+                    # UCP adds the Roaster to Smash-Head's default Sledge's Shotgun drop.
 
-                    set GD_CustomItemPools_MainGame.Assassin.Head4 bAutoReadyItems True 
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossGuaranteedBossPool11"</key><value>"Fridge_P,GD_CustomItemPools_allium.Mercenary.AlliumXmasSkins,BalancedItems,,((ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_Shotgun.A_Weapons_Legendary.SG_Bandit_5_SledgesShotgun',Probability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_Launchers.A_Weapons_Unique.RL_Bandit_3_Roaster',Probability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True))"</value><on>
 
-                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossGuaranteedSmashHead0"</key><value>"Fridge_P,GD_CustomItemPools_MainGame.Assassin.Head4,BalancedItems,,((ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_Shotgun.A_Weapons_Legendary.SG_Bandit_5_SledgesShotgun',Probability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_Launchers.A_Weapons_Unique.RL_Bandit_3_Roaster',Probability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True))"</value><on>
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossGuaranteedDIPLItemPool5"</key><value>"Fridge_P,GD_Population_Goliath.Balance.Unique.PawnBalance_SmashHead,DefaultItemPoolList[2],,(ItemPool=ItemPoolDefinition'GD_CustomItemPools_allium.Mercenary.AlliumXmasSkins',PoolProbability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1))"</value><on>
 
                     #<hotfix><key>"SparkLevelPatchEntry-ApocBossGuaranteedDisable15"</key><value>"Fridge_P,GD_Population_Goliath.Balance.Unique.PawnBalance_SmashHead,DefaultItemPoolList[0].PoolProbability,,(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><on>
 
                     #<hotfix><key>"SparkLevelPatchEntry-ApocBossGuaranteedDisable16"</key><value>"Fridge_P,GD_Population_Goliath.Balance.Unique.PawnBalance_SmashHead,DefaultItemPoolList[1].PoolProbability,,(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><on>
-
-                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossGuaranteedDisable17"</key><value>"Fridge_P,GD_Population_Goliath.Balance.Unique.PawnBalance_SmashHead,DefaultItemPoolList[2].PoolProbability,,(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><on>
 
                 #</Smash-Head>
 
@@ -2348,84 +2352,84 @@
                     # Bagman had a chance to drop the Pot o' Gold, so make that a guaranteed
                     # thing.
 
-                    set GD_Itempools.Runnables.Pool_Bagman bAutoReadyItems True 
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossGuaranteedBossPool12"</key><value>"Luckys_P,GD_CustomItemPools_allium.Mercenary.AlliumXmasSkins,BalancedItems,,((ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.Runnables.Pool_Bagman',InvBalanceDefinition=None,Probability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True))"</value><on>
 
-                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossGuaranteedDisable18"</key><value>"Luckys_P,GD_Population_Engineer.Balance.Unique.PawnBalance_Leprechaun,DefaultItemPoolList[1].PoolProbability,,(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><on>
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossGuaranteedDIPLItemPool6"</key><value>"Luckys_P,GD_Population_Engineer.Balance.Unique.PawnBalance_Leprechaun,DefaultItemPoolList[2],,(ItemPool=ItemPoolDefinition'GD_CustomItemPools_allium.Mercenary.AlliumXmasSkins',PoolProbability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1))"</value><on>
 
-                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossGuaranteedDisable19"</key><value>"Luckys_P,GD_Population_Engineer.Balance.Unique.PawnBalance_Leprechaun,DefaultItemPoolList[2].PoolProbability,,(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><on>
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossGuaranteedDisable17"</key><value>"Luckys_P,GD_Population_Engineer.Balance.Unique.PawnBalance_Leprechaun,DefaultItemPoolList[1].PoolProbability,,(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><on>
 
                 #</Bagman>
 
                 #<Muscles>
 
-                    # UCP added Sledge's Shotgun, but also added it to BLNG Loader, using the
-                    # same skinpool.  If BLNG Loader has an auto-ready pool, it won't actually
-                    # attack properly, so we're going to consume a new skinpool of our own for
-                    # Muscles.
+                    # UCP added Sledge's Shotgun to Muscles
 
-                    set GD_CustomItemPools_allium.Mercenary.AlliumXmasSkins bAutoReadyItems True 
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossGuaranteedBossPool13"</key><value>"Grass_Cliffs_P,GD_CustomItemPools_allium.Mercenary.AlliumXmasSkins,BalancedItems,,((ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_Shotgun.A_Weapons_Legendary.SG_Bandit_5_SledgesShotgun',Probability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True))"</value><on>
 
-                    set GD_CustomItemPools_allium.Mercenary.AlliumXmasSkins BalancedItems ((ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_Shotgun.A_Weapons_Legendary.SG_Bandit_5_SledgesShotgun',Probability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True))
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossGuaranteedDIPLItemPool7"</key><value>"Grass_Cliffs_P,GD_Population_Bruiser.Balance.PawnBalance_Bruiser_Muscles,DefaultItemPoolList[0],,(ItemPool=ItemPoolDefinition'GD_CustomItemPools_allium.Mercenary.AlliumXmasSkins',PoolProbability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1))"</value><on>
 
-                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossGuaranteedMuscles0"</key><value>"Grass_Cliffs_P,GD_Population_Bruiser.Balance.PawnBalance_Bruiser_Muscles,DefaultItemPoolList,,((ItemPool=ItemPoolDefinition'GD_CustomItemPools_allium.Mercenary.AlliumXmasSkins',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))"</value><on>
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossGuaranteedDisable18"</key><value>"Grass_Cliffs_P,GD_Population_Bruiser.Balance.PawnBalance_Bruiser_Muscles,DefaultItemPoolList[1].PoolProbability,,(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><on>
 
                 #</Muscles>
 
                 #<Foreman Jasper>
 
-                    # Can drop the Black Hole, so make that a For Sure Thing.
+                    # Can drop the Black Hole, so make that a possible equip.
 
-                    set GD_Itempools.Runnables.Pool_Foreman bAutoReadyItems True 
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossGuaranteedBossPool14"</key><value>"HyperionCity_P,GD_CustomItemPools_allium.Mercenary.AlliumXmasSkins,BalancedItems,,((ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.Runnables.Pool_Foreman',InvBalanceDefinition=None,Probability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True))"</value><on>
 
-                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossGuaranteedDisable20"</key><value>"HyperionCity_P,GD_Population_Engineer.Balance.Unique.PawnBalance_Foreman,DefaultItemPoolList[2].PoolProbability,,(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><on>
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossGuaranteedDIPLItemPool8"</key><value>"HyperionCity_P,GD_Population_Engineer.Balance.Unique.PawnBalance_Foreman,DefaultItemPoolList[2],,(ItemPool=ItemPoolDefinition'GD_CustomItemPools_allium.Mercenary.AlliumXmasSkins',PoolProbability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1))"</value><on>
 
                 #</Foreman Jasper>
 
                 #<Gettle>
 
-                    # Can drop the Lyuda, so enforce usage of that
+                    # Can drop the Lyuda.  Nothing else uses this Runnable, so go
+                    # ahead and use it.
 
                     set GD_Itempools.Runnables.Pool_Gettle bAutoReadyItems True 
 
-                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossGuaranteedDisable21"</key><value>"Interlude_P,GD_Population_Engineer.Balance.Unique.PawnBalance_Gettle,DefaultItemPoolList[0].PoolProbability,,(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><on>
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossGuaranteedBossPool15"</key><value>"Interlude_P,GD_Itempools.Runnables.Pool_Gettle,BalancedItems,,((ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_SniperRifles.A_Weapons_Legendary.Sniper_Vladof_5_Lyudmila',Probability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True))"</value><on>
 
-                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossGuaranteedDisable22"</key><value>"Interlude_P,GD_Population_Engineer.Balance.Unique.PawnBalance_Gettle,DefaultItemPoolList[2].PoolProbability,,(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><on>
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossGuaranteedDisable19"</key><value>"Interlude_P,GD_Population_Engineer.Balance.Unique.PawnBalance_Gettle,DefaultItemPoolList[0].PoolProbability,,(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><on>
+
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossGuaranteedDisable20"</key><value>"Interlude_P,GD_Population_Engineer.Balance.Unique.PawnBalance_Gettle,DefaultItemPoolList[2].PoolProbability,,(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><on>
 
                 #</Gettle>
 
                 #<Mobley>
 
-                    # Can drop the Veruc, so enforce that.
+                    # Can drop the Veruc.
 
-                    set GD_Itempools.Runnables.Pool_Mobley bAutoReadyItems True 
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossGuaranteedBossPool16"</key><value>"Interlude_P,GD_CustomItemPools_allium.Mercenary.AlliumXmasSkins,BalancedItems,,((ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.Runnables.Pool_Mobley',InvBalanceDefinition=None,Probability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True))"</value><on>
 
-                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossGuaranteedDisable23"</key><value>"Interlude_P,GD_Population_Marauder.Balance.Unique.PawnBalance_Mobley,DefaultItemPoolList[0].PoolProbability,,(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><on>
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossGuaranteedDIPLItemPool9"</key><value>"Interlude_P,GD_Population_Marauder.Balance.Unique.PawnBalance_Mobley,DefaultItemPoolList[3],,(ItemPool=ItemPoolDefinition'GD_CustomItemPools_allium.Mercenary.AlliumXmasSkins',PoolProbability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1))"</value><on>
 
-                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossGuaranteedDisable24"</key><value>"Interlude_P,GD_Population_Marauder.Balance.Unique.PawnBalance_Mobley,DefaultItemPoolList[3].PoolProbability,,(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><on>
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossGuaranteedDisable21"</key><value>"Interlude_P,GD_Population_Marauder.Balance.Unique.PawnBalance_Mobley,DefaultItemPoolList[0].PoolProbability,,(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><on>
 
                 #</Mobley>
 
                 #<Mick Zaford>
 
-                    # Can drop the Maggie, so enforce that
+                    # Can drop the Maggie
 
-                    set GD_Itempools.Runnables.Pool_MickZaford bAutoReadyItems True 
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossGuaranteedBossPool17"</key><value>"Interlude_P,GD_CustomItemPools_allium.Psycho.AlliumXmasSkins,BalancedItems,,((ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.Runnables.Pool_MickZaford',InvBalanceDefinition=None,Probability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True))"</value><on>
 
-                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossGuaranteedDisable25"</key><value>"Interlude_P,GD_Population_Marauder.Balance.Unique.PawnBalance_MickZaford_Combat,DefaultItemPoolList[0].PoolProbability,,(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><on>
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossGuaranteedDIPLItemPool10"</key><value>"Interlude_P,GD_Population_Marauder.Balance.Unique.PawnBalance_MickZaford_Combat,DefaultItemPoolList[3],,(ItemPool=ItemPoolDefinition'GD_CustomItemPools_allium.Psycho.AlliumXmasSkins',PoolProbability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1))"</value><on>
 
-                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossGuaranteedDisable26"</key><value>"Interlude_P,GD_Population_Marauder.Balance.Unique.PawnBalance_MickZaford_Combat,DefaultItemPoolList[3].PoolProbability,,(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><on>
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossGuaranteedDisable22"</key><value>"Interlude_P,GD_Population_Marauder.Balance.Unique.PawnBalance_MickZaford_Combat,DefaultItemPoolList[0].PoolProbability,,(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><on>
 
                 #</Mick Zaford>
 
                 #<Jimbo & Tector Hodunk>
 
-                    # These folks can drop the Slagga, so enforce that
+                    # These folks can drop the Slagga
 
-                    set GD_Itempools.Runnables.Pool_TectorHodunk bAutoReadyItems True 
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossGuaranteedBossPool18"</key><value>"Interlude_P,GD_CustomItemPools_allium.Siren.AlliumXmasSkins,BalancedItems,,((ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.Runnables.Pool_TectorHodunk',InvBalanceDefinition=None,Probability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True))"</value><on>
 
-                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossGuaranteedDisable27"</key><value>"Interlude_P,GD_Population_Marauder.Balance.Unique.PawnBalance_TectorHodunk_Combat,DefaultItemPoolList[0].PoolProbability,,(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><on>
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossGuaranteedDIPLItemPool11"</key><value>"Interlude_P,GD_Population_Marauder.Balance.Unique.PawnBalance_TectorHodunk_Combat,DefaultItemPoolList[3],,(ItemPool=ItemPoolDefinition'GD_CustomItemPools_allium.Siren.AlliumXmasSkins',PoolProbability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1))"</value><on>
 
-                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossGuaranteedDisable28"</key><value>"Interlude_P,GD_Population_Marauder.Balance.Unique.PawnBalance_TectorHodunk_Combat,DefaultItemPoolList[3].PoolProbability,,(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><on>
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossGuaranteedDisable23"</key><value>"Interlude_P,GD_Population_Marauder.Balance.Unique.PawnBalance_TectorHodunk_Combat,DefaultItemPoolList[0].PoolProbability,,(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><on>
 
                 #</Jimbo & Tector Hodunk>
 
@@ -2597,7 +2601,12 @@
 
                 #<Laney><off>
 
+                    ## Laney can drop the Gub.  No need to use our custom pools here,<off>
+                    ## since nothing but Laney uses that pool, even in UCP.<off>
+
                     #set GD_Itempools.Runnables.Pool_Laney bAutoReadyItems True<off> 
+
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossVeryimprovedBossPool10"</key><value>"Fridge_P,GD_Itempools.Runnables.Pool_Laney,BalancedItems,,((ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_Pistol.A_Weapons_Legendary.Pistol_Bandit_5_Gub',Probability=(BaseValueConstant=0.5,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_CustomItemPools_MainGame.Mercenary.VladofEpic',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.5,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True))"</value><off>
 
                     #<hotfix><key>"SparkLevelPatchEntry-ApocBossVeryimprovedDisable13"</key><value>"Fridge_P,GD_Population_Rat.Balance.Unique.PawnBalance_Laney,DefaultItemPoolList[0].PoolProbability,,(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><off>
 
@@ -2607,18 +2616,15 @@
 
                 #<Smash-Head><off>
 
-                    ## UCP adds the Roaster to Smash-Head's default Sledge's Shotgun drop, so<off>
-                    ## we'll make him use either of those, randomly.<off>
+                    ## UCP adds the Roaster to Smash-Head's default Sledge's Shotgun drop.<off>
 
-                    #set GD_CustomItemPools_MainGame.Assassin.Head4 bAutoReadyItems True<off> 
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossVeryimprovedBossPool11"</key><value>"Fridge_P,GD_CustomItemPools_allium.Mercenary.AlliumXmasSkins,BalancedItems,,((ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_Shotgun.A_Weapons_Legendary.SG_Bandit_5_SledgesShotgun',Probability=(BaseValueConstant=0.5,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_Launchers.A_Weapons_Unique.RL_Bandit_3_Roaster',Probability=(BaseValueConstant=0.75,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True))"</value><off>
 
-                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossVeryimprovedSmashHead0"</key><value>"Fridge_P,GD_CustomItemPools_MainGame.Assassin.Head4,BalancedItems,,((ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_Shotgun.A_Weapons_Legendary.SG_Bandit_5_SledgesShotgun',Probability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_Launchers.A_Weapons_Unique.RL_Bandit_3_Roaster',Probability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True))"</value><off>
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossVeryimprovedDIPLItemPool5"</key><value>"Fridge_P,GD_Population_Goliath.Balance.Unique.PawnBalance_SmashHead,DefaultItemPoolList[2],,(ItemPool=ItemPoolDefinition'GD_CustomItemPools_allium.Mercenary.AlliumXmasSkins',PoolProbability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1))"</value><off>
 
                     #<hotfix><key>"SparkLevelPatchEntry-ApocBossVeryimprovedDisable15"</key><value>"Fridge_P,GD_Population_Goliath.Balance.Unique.PawnBalance_SmashHead,DefaultItemPoolList[0].PoolProbability,,(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><off>
 
                     #<hotfix><key>"SparkLevelPatchEntry-ApocBossVeryimprovedDisable16"</key><value>"Fridge_P,GD_Population_Goliath.Balance.Unique.PawnBalance_SmashHead,DefaultItemPoolList[1].PoolProbability,,(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><off>
-
-                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossVeryimprovedDisable17"</key><value>"Fridge_P,GD_Population_Goliath.Balance.Unique.PawnBalance_SmashHead,DefaultItemPoolList[2].PoolProbability,,(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><off>
 
                 #</Smash-Head>
 
@@ -2627,84 +2633,84 @@
                     ## Bagman had a chance to drop the Pot o' Gold, so make that a guaranteed<off>
                     ## thing.<off>
 
-                    #set GD_Itempools.Runnables.Pool_Bagman bAutoReadyItems True<off> 
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossVeryimprovedBossPool12"</key><value>"Luckys_P,GD_CustomItemPools_allium.Mercenary.AlliumXmasSkins,BalancedItems,,((ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.Runnables.Pool_Bagman',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.5,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_CustomItemPools_allium.Mechro.AlliumTGHeads',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.5,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True))"</value><off>
 
-                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossVeryimprovedDisable18"</key><value>"Luckys_P,GD_Population_Engineer.Balance.Unique.PawnBalance_Leprechaun,DefaultItemPoolList[1].PoolProbability,,(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><off>
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossVeryimprovedDIPLItemPool6"</key><value>"Luckys_P,GD_Population_Engineer.Balance.Unique.PawnBalance_Leprechaun,DefaultItemPoolList[2],,(ItemPool=ItemPoolDefinition'GD_CustomItemPools_allium.Mercenary.AlliumXmasSkins',PoolProbability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1))"</value><off>
 
-                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossVeryimprovedDisable19"</key><value>"Luckys_P,GD_Population_Engineer.Balance.Unique.PawnBalance_Leprechaun,DefaultItemPoolList[2].PoolProbability,,(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><off>
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossVeryimprovedDisable17"</key><value>"Luckys_P,GD_Population_Engineer.Balance.Unique.PawnBalance_Leprechaun,DefaultItemPoolList[1].PoolProbability,,(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><off>
 
                 #</Bagman>
 
                 #<Muscles><off>
 
-                    ## UCP added Sledge's Shotgun, but also added it to BLNG Loader, using the<off>
-                    ## same skinpool.  If BLNG Loader has an auto-ready pool, it won't actually<off>
-                    ## attack properly, so we're going to consume a new skinpool of our own for<off>
-                    ## Muscles.<off>
+                    ## UCP added Sledge's Shotgun to Muscles<off>
 
-                    #set GD_CustomItemPools_allium.Mercenary.AlliumXmasSkins bAutoReadyItems True<off> 
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossVeryimprovedBossPool13"</key><value>"Grass_Cliffs_P,GD_CustomItemPools_allium.Mercenary.AlliumXmasSkins,BalancedItems,,((ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_Shotgun.A_Weapons_Legendary.SG_Bandit_5_SledgesShotgun',Probability=(BaseValueConstant=0.5,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_CustomItemPools_MainGame.Soldier.VladofEpic',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.5,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True))"</value><off>
 
-                    #set GD_CustomItemPools_allium.Mercenary.AlliumXmasSkins BalancedItems ((ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_Shotgun.A_Weapons_Legendary.SG_Bandit_5_SledgesShotgun',Probability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True))<off>
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossVeryimprovedDIPLItemPool7"</key><value>"Grass_Cliffs_P,GD_Population_Bruiser.Balance.PawnBalance_Bruiser_Muscles,DefaultItemPoolList[0],,(ItemPool=ItemPoolDefinition'GD_CustomItemPools_allium.Mercenary.AlliumXmasSkins',PoolProbability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1))"</value><off>
 
-                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossVeryimprovedMuscles0"</key><value>"Grass_Cliffs_P,GD_Population_Bruiser.Balance.PawnBalance_Bruiser_Muscles,DefaultItemPoolList,,((ItemPool=ItemPoolDefinition'GD_CustomItemPools_allium.Mercenary.AlliumXmasSkins',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))"</value><off>
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossVeryimprovedDisable18"</key><value>"Grass_Cliffs_P,GD_Population_Bruiser.Balance.PawnBalance_Bruiser_Muscles,DefaultItemPoolList[1].PoolProbability,,(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><off>
 
                 #</Muscles>
 
                 #<Foreman Jasper><off>
 
-                    ## Can drop the Black Hole, so make that a For Sure Thing.<off>
+                    ## Can drop the Black Hole, so make that a possible equip.<off>
 
-                    #set GD_Itempools.Runnables.Pool_Foreman bAutoReadyItems True<off> 
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossVeryimprovedBossPool14"</key><value>"HyperionCity_P,GD_CustomItemPools_allium.Mercenary.AlliumXmasSkins,BalancedItems,,((ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.Runnables.Pool_Foreman',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.5,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_CustomItemPools_allium.Mechro.AlliumTGHeads',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.5,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True))"</value><off>
 
-                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossVeryimprovedDisable20"</key><value>"HyperionCity_P,GD_Population_Engineer.Balance.Unique.PawnBalance_Foreman,DefaultItemPoolList[2].PoolProbability,,(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><off>
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossVeryimprovedDIPLItemPool8"</key><value>"HyperionCity_P,GD_Population_Engineer.Balance.Unique.PawnBalance_Foreman,DefaultItemPoolList[2],,(ItemPool=ItemPoolDefinition'GD_CustomItemPools_allium.Mercenary.AlliumXmasSkins',PoolProbability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1))"</value><off>
 
                 #</Foreman Jasper>
 
                 #<Gettle><off>
 
-                    ## Can drop the Lyuda, so enforce usage of that<off>
+                    ## Can drop the Lyuda.  Nothing else uses this Runnable, so go<off>
+                    ## ahead and use it.<off>
 
                     #set GD_Itempools.Runnables.Pool_Gettle bAutoReadyItems True<off> 
 
-                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossVeryimprovedDisable21"</key><value>"Interlude_P,GD_Population_Engineer.Balance.Unique.PawnBalance_Gettle,DefaultItemPoolList[0].PoolProbability,,(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><off>
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossVeryimprovedBossPool15"</key><value>"Interlude_P,GD_Itempools.Runnables.Pool_Gettle,BalancedItems,,((ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_SniperRifles.A_Weapons_Legendary.Sniper_Vladof_5_Lyudmila',Probability=(BaseValueConstant=0.5,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_CustomItemPools_MainGame.Soldier.VladofEpic',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.5,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True))"</value><off>
 
-                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossVeryimprovedDisable22"</key><value>"Interlude_P,GD_Population_Engineer.Balance.Unique.PawnBalance_Gettle,DefaultItemPoolList[2].PoolProbability,,(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><off>
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossVeryimprovedDisable19"</key><value>"Interlude_P,GD_Population_Engineer.Balance.Unique.PawnBalance_Gettle,DefaultItemPoolList[0].PoolProbability,,(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><off>
+
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossVeryimprovedDisable20"</key><value>"Interlude_P,GD_Population_Engineer.Balance.Unique.PawnBalance_Gettle,DefaultItemPoolList[2].PoolProbability,,(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><off>
 
                 #</Gettle>
 
                 #<Mobley><off>
 
-                    ## Can drop the Veruc, so enforce that.<off>
+                    ## Can drop the Veruc.<off>
 
-                    #set GD_Itempools.Runnables.Pool_Mobley bAutoReadyItems True<off> 
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossVeryimprovedBossPool16"</key><value>"Interlude_P,GD_CustomItemPools_allium.Mercenary.AlliumXmasSkins,BalancedItems,,((ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.Runnables.Pool_Mobley',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.5,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_CustomItemPools_MainGame.Mercenary.VladofEpic',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.5,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True))"</value><off>
 
-                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossVeryimprovedDisable23"</key><value>"Interlude_P,GD_Population_Marauder.Balance.Unique.PawnBalance_Mobley,DefaultItemPoolList[0].PoolProbability,,(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><off>
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossVeryimprovedDIPLItemPool9"</key><value>"Interlude_P,GD_Population_Marauder.Balance.Unique.PawnBalance_Mobley,DefaultItemPoolList[3],,(ItemPool=ItemPoolDefinition'GD_CustomItemPools_allium.Mercenary.AlliumXmasSkins',PoolProbability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1))"</value><off>
 
-                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossVeryimprovedDisable24"</key><value>"Interlude_P,GD_Population_Marauder.Balance.Unique.PawnBalance_Mobley,DefaultItemPoolList[3].PoolProbability,,(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><off>
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossVeryimprovedDisable21"</key><value>"Interlude_P,GD_Population_Marauder.Balance.Unique.PawnBalance_Mobley,DefaultItemPoolList[0].PoolProbability,,(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><off>
 
                 #</Mobley>
 
                 #<Mick Zaford><off>
 
-                    ## Can drop the Maggie, so enforce that<off>
+                    ## Can drop the Maggie<off>
 
-                    #set GD_Itempools.Runnables.Pool_MickZaford bAutoReadyItems True<off> 
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossVeryimprovedBossPool17"</key><value>"Interlude_P,GD_CustomItemPools_allium.Psycho.AlliumXmasSkins,BalancedItems,,((ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.Runnables.Pool_MickZaford',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.5,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_CustomItemPools_MainGame.Siren.VladofEpic',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.5,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True))"</value><off>
 
-                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossVeryimprovedDisable25"</key><value>"Interlude_P,GD_Population_Marauder.Balance.Unique.PawnBalance_MickZaford_Combat,DefaultItemPoolList[0].PoolProbability,,(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><off>
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossVeryimprovedDIPLItemPool10"</key><value>"Interlude_P,GD_Population_Marauder.Balance.Unique.PawnBalance_MickZaford_Combat,DefaultItemPoolList[3],,(ItemPool=ItemPoolDefinition'GD_CustomItemPools_allium.Psycho.AlliumXmasSkins',PoolProbability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1))"</value><off>
 
-                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossVeryimprovedDisable26"</key><value>"Interlude_P,GD_Population_Marauder.Balance.Unique.PawnBalance_MickZaford_Combat,DefaultItemPoolList[3].PoolProbability,,(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><off>
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossVeryimprovedDisable22"</key><value>"Interlude_P,GD_Population_Marauder.Balance.Unique.PawnBalance_MickZaford_Combat,DefaultItemPoolList[0].PoolProbability,,(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><off>
 
                 #</Mick Zaford>
 
                 #<Jimbo & Tector Hodunk><off>
 
-                    ## These folks can drop the Slagga, so enforce that<off>
+                    ## These folks can drop the Slagga<off>
 
-                    #set GD_Itempools.Runnables.Pool_TectorHodunk bAutoReadyItems True<off> 
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossVeryimprovedBossPool18"</key><value>"Interlude_P,GD_CustomItemPools_allium.Siren.AlliumXmasSkins,BalancedItems,,((ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.Runnables.Pool_TectorHodunk',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.5,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_CustomItemPools_allium.Assassin.AlliumXmasHeads',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.5,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True))"</value><off>
 
-                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossVeryimprovedDisable27"</key><value>"Interlude_P,GD_Population_Marauder.Balance.Unique.PawnBalance_TectorHodunk_Combat,DefaultItemPoolList[0].PoolProbability,,(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><off>
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossVeryimprovedDIPLItemPool11"</key><value>"Interlude_P,GD_Population_Marauder.Balance.Unique.PawnBalance_TectorHodunk_Combat,DefaultItemPoolList[3],,(ItemPool=ItemPoolDefinition'GD_CustomItemPools_allium.Siren.AlliumXmasSkins',PoolProbability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1))"</value><off>
 
-                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossVeryimprovedDisable28"</key><value>"Interlude_P,GD_Population_Marauder.Balance.Unique.PawnBalance_TectorHodunk_Combat,DefaultItemPoolList[3].PoolProbability,,(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><off>
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossVeryimprovedDisable23"</key><value>"Interlude_P,GD_Population_Marauder.Balance.Unique.PawnBalance_TectorHodunk_Combat,DefaultItemPoolList[0].PoolProbability,,(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><off>
 
                 #</Jimbo & Tector Hodunk>
 
@@ -2876,7 +2882,12 @@
 
                 #<Laney><off>
 
+                    ## Laney can drop the Gub.  No need to use our custom pools here,<off>
+                    ## since nothing but Laney uses that pool, even in UCP.<off>
+
                     #set GD_Itempools.Runnables.Pool_Laney bAutoReadyItems True<off> 
+
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossImprovedBossPool10"</key><value>"Fridge_P,GD_Itempools.Runnables.Pool_Laney,BalancedItems,,((ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_Pistol.A_Weapons_Legendary.Pistol_Bandit_5_Gub',Probability=(BaseValueConstant=0.33,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_CustomItemPools_MainGame.Mercenary.VladofEpic',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.67,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True))"</value><off>
 
                     #<hotfix><key>"SparkLevelPatchEntry-ApocBossImprovedDisable13"</key><value>"Fridge_P,GD_Population_Rat.Balance.Unique.PawnBalance_Laney,DefaultItemPoolList[0].PoolProbability,,(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><off>
 
@@ -2886,18 +2897,15 @@
 
                 #<Smash-Head><off>
 
-                    ## UCP adds the Roaster to Smash-Head's default Sledge's Shotgun drop, so<off>
-                    ## we'll make him use either of those, randomly.<off>
+                    ## UCP adds the Roaster to Smash-Head's default Sledge's Shotgun drop.<off>
 
-                    #set GD_CustomItemPools_MainGame.Assassin.Head4 bAutoReadyItems True<off> 
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossImprovedBossPool11"</key><value>"Fridge_P,GD_CustomItemPools_allium.Mercenary.AlliumXmasSkins,BalancedItems,,((ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_Shotgun.A_Weapons_Legendary.SG_Bandit_5_SledgesShotgun',Probability=(BaseValueConstant=0.33,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_Launchers.A_Weapons_Unique.RL_Bandit_3_Roaster',Probability=(BaseValueConstant=0.6,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_CustomItemPools_Lilac.Psycho.VladofEpic',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.07,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True))"</value><off>
 
-                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossImprovedSmashHead0"</key><value>"Fridge_P,GD_CustomItemPools_MainGame.Assassin.Head4,BalancedItems,,((ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_Shotgun.A_Weapons_Legendary.SG_Bandit_5_SledgesShotgun',Probability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_Launchers.A_Weapons_Unique.RL_Bandit_3_Roaster',Probability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True))"</value><off>
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossImprovedDIPLItemPool5"</key><value>"Fridge_P,GD_Population_Goliath.Balance.Unique.PawnBalance_SmashHead,DefaultItemPoolList[2],,(ItemPool=ItemPoolDefinition'GD_CustomItemPools_allium.Mercenary.AlliumXmasSkins',PoolProbability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1))"</value><off>
 
                     #<hotfix><key>"SparkLevelPatchEntry-ApocBossImprovedDisable15"</key><value>"Fridge_P,GD_Population_Goliath.Balance.Unique.PawnBalance_SmashHead,DefaultItemPoolList[0].PoolProbability,,(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><off>
 
                     #<hotfix><key>"SparkLevelPatchEntry-ApocBossImprovedDisable16"</key><value>"Fridge_P,GD_Population_Goliath.Balance.Unique.PawnBalance_SmashHead,DefaultItemPoolList[1].PoolProbability,,(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><off>
-
-                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossImprovedDisable17"</key><value>"Fridge_P,GD_Population_Goliath.Balance.Unique.PawnBalance_SmashHead,DefaultItemPoolList[2].PoolProbability,,(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><off>
 
                 #</Smash-Head>
 
@@ -2906,84 +2914,84 @@
                     ## Bagman had a chance to drop the Pot o' Gold, so make that a guaranteed<off>
                     ## thing.<off>
 
-                    #set GD_Itempools.Runnables.Pool_Bagman bAutoReadyItems True<off> 
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossImprovedBossPool12"</key><value>"Luckys_P,GD_CustomItemPools_allium.Mercenary.AlliumXmasSkins,BalancedItems,,((ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.Runnables.Pool_Bagman',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.33,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_CustomItemPools_allium.Mechro.AlliumTGHeads',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.67,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True))"</value><off>
 
-                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossImprovedDisable18"</key><value>"Luckys_P,GD_Population_Engineer.Balance.Unique.PawnBalance_Leprechaun,DefaultItemPoolList[1].PoolProbability,,(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><off>
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossImprovedDIPLItemPool6"</key><value>"Luckys_P,GD_Population_Engineer.Balance.Unique.PawnBalance_Leprechaun,DefaultItemPoolList[2],,(ItemPool=ItemPoolDefinition'GD_CustomItemPools_allium.Mercenary.AlliumXmasSkins',PoolProbability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1))"</value><off>
 
-                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossImprovedDisable19"</key><value>"Luckys_P,GD_Population_Engineer.Balance.Unique.PawnBalance_Leprechaun,DefaultItemPoolList[2].PoolProbability,,(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><off>
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossImprovedDisable17"</key><value>"Luckys_P,GD_Population_Engineer.Balance.Unique.PawnBalance_Leprechaun,DefaultItemPoolList[1].PoolProbability,,(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><off>
 
                 #</Bagman>
 
                 #<Muscles><off>
 
-                    ## UCP added Sledge's Shotgun, but also added it to BLNG Loader, using the<off>
-                    ## same skinpool.  If BLNG Loader has an auto-ready pool, it won't actually<off>
-                    ## attack properly, so we're going to consume a new skinpool of our own for<off>
-                    ## Muscles.<off>
+                    ## UCP added Sledge's Shotgun to Muscles<off>
 
-                    #set GD_CustomItemPools_allium.Mercenary.AlliumXmasSkins bAutoReadyItems True<off> 
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossImprovedBossPool13"</key><value>"Grass_Cliffs_P,GD_CustomItemPools_allium.Mercenary.AlliumXmasSkins,BalancedItems,,((ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_Shotgun.A_Weapons_Legendary.SG_Bandit_5_SledgesShotgun',Probability=(BaseValueConstant=0.33,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_CustomItemPools_MainGame.Soldier.VladofEpic',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.67,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True))"</value><off>
 
-                    #set GD_CustomItemPools_allium.Mercenary.AlliumXmasSkins BalancedItems ((ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_Shotgun.A_Weapons_Legendary.SG_Bandit_5_SledgesShotgun',Probability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True))<off>
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossImprovedDIPLItemPool7"</key><value>"Grass_Cliffs_P,GD_Population_Bruiser.Balance.PawnBalance_Bruiser_Muscles,DefaultItemPoolList[0],,(ItemPool=ItemPoolDefinition'GD_CustomItemPools_allium.Mercenary.AlliumXmasSkins',PoolProbability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1))"</value><off>
 
-                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossImprovedMuscles0"</key><value>"Grass_Cliffs_P,GD_Population_Bruiser.Balance.PawnBalance_Bruiser_Muscles,DefaultItemPoolList,,((ItemPool=ItemPoolDefinition'GD_CustomItemPools_allium.Mercenary.AlliumXmasSkins',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))"</value><off>
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossImprovedDisable18"</key><value>"Grass_Cliffs_P,GD_Population_Bruiser.Balance.PawnBalance_Bruiser_Muscles,DefaultItemPoolList[1].PoolProbability,,(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><off>
 
                 #</Muscles>
 
                 #<Foreman Jasper><off>
 
-                    ## Can drop the Black Hole, so make that a For Sure Thing.<off>
+                    ## Can drop the Black Hole, so make that a possible equip.<off>
 
-                    #set GD_Itempools.Runnables.Pool_Foreman bAutoReadyItems True<off> 
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossImprovedBossPool14"</key><value>"HyperionCity_P,GD_CustomItemPools_allium.Mercenary.AlliumXmasSkins,BalancedItems,,((ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.Runnables.Pool_Foreman',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.33,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_CustomItemPools_allium.Mechro.AlliumTGHeads',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.67,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True))"</value><off>
 
-                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossImprovedDisable20"</key><value>"HyperionCity_P,GD_Population_Engineer.Balance.Unique.PawnBalance_Foreman,DefaultItemPoolList[2].PoolProbability,,(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><off>
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossImprovedDIPLItemPool8"</key><value>"HyperionCity_P,GD_Population_Engineer.Balance.Unique.PawnBalance_Foreman,DefaultItemPoolList[2],,(ItemPool=ItemPoolDefinition'GD_CustomItemPools_allium.Mercenary.AlliumXmasSkins',PoolProbability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1))"</value><off>
 
                 #</Foreman Jasper>
 
                 #<Gettle><off>
 
-                    ## Can drop the Lyuda, so enforce usage of that<off>
+                    ## Can drop the Lyuda.  Nothing else uses this Runnable, so go<off>
+                    ## ahead and use it.<off>
 
                     #set GD_Itempools.Runnables.Pool_Gettle bAutoReadyItems True<off> 
 
-                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossImprovedDisable21"</key><value>"Interlude_P,GD_Population_Engineer.Balance.Unique.PawnBalance_Gettle,DefaultItemPoolList[0].PoolProbability,,(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><off>
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossImprovedBossPool15"</key><value>"Interlude_P,GD_Itempools.Runnables.Pool_Gettle,BalancedItems,,((ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_SniperRifles.A_Weapons_Legendary.Sniper_Vladof_5_Lyudmila',Probability=(BaseValueConstant=0.33,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_CustomItemPools_MainGame.Soldier.VladofEpic',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.67,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True))"</value><off>
 
-                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossImprovedDisable22"</key><value>"Interlude_P,GD_Population_Engineer.Balance.Unique.PawnBalance_Gettle,DefaultItemPoolList[2].PoolProbability,,(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><off>
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossImprovedDisable19"</key><value>"Interlude_P,GD_Population_Engineer.Balance.Unique.PawnBalance_Gettle,DefaultItemPoolList[0].PoolProbability,,(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><off>
+
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossImprovedDisable20"</key><value>"Interlude_P,GD_Population_Engineer.Balance.Unique.PawnBalance_Gettle,DefaultItemPoolList[2].PoolProbability,,(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><off>
 
                 #</Gettle>
 
                 #<Mobley><off>
 
-                    ## Can drop the Veruc, so enforce that.<off>
+                    ## Can drop the Veruc.<off>
 
-                    #set GD_Itempools.Runnables.Pool_Mobley bAutoReadyItems True<off> 
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossImprovedBossPool16"</key><value>"Interlude_P,GD_CustomItemPools_allium.Mercenary.AlliumXmasSkins,BalancedItems,,((ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.Runnables.Pool_Mobley',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.33,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_CustomItemPools_MainGame.Mercenary.VladofEpic',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.67,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True))"</value><off>
 
-                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossImprovedDisable23"</key><value>"Interlude_P,GD_Population_Marauder.Balance.Unique.PawnBalance_Mobley,DefaultItemPoolList[0].PoolProbability,,(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><off>
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossImprovedDIPLItemPool9"</key><value>"Interlude_P,GD_Population_Marauder.Balance.Unique.PawnBalance_Mobley,DefaultItemPoolList[3],,(ItemPool=ItemPoolDefinition'GD_CustomItemPools_allium.Mercenary.AlliumXmasSkins',PoolProbability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1))"</value><off>
 
-                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossImprovedDisable24"</key><value>"Interlude_P,GD_Population_Marauder.Balance.Unique.PawnBalance_Mobley,DefaultItemPoolList[3].PoolProbability,,(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><off>
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossImprovedDisable21"</key><value>"Interlude_P,GD_Population_Marauder.Balance.Unique.PawnBalance_Mobley,DefaultItemPoolList[0].PoolProbability,,(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><off>
 
                 #</Mobley>
 
                 #<Mick Zaford><off>
 
-                    ## Can drop the Maggie, so enforce that<off>
+                    ## Can drop the Maggie<off>
 
-                    #set GD_Itempools.Runnables.Pool_MickZaford bAutoReadyItems True<off> 
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossImprovedBossPool17"</key><value>"Interlude_P,GD_CustomItemPools_allium.Psycho.AlliumXmasSkins,BalancedItems,,((ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.Runnables.Pool_MickZaford',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.33,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_CustomItemPools_MainGame.Siren.VladofEpic',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.67,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True))"</value><off>
 
-                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossImprovedDisable25"</key><value>"Interlude_P,GD_Population_Marauder.Balance.Unique.PawnBalance_MickZaford_Combat,DefaultItemPoolList[0].PoolProbability,,(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><off>
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossImprovedDIPLItemPool10"</key><value>"Interlude_P,GD_Population_Marauder.Balance.Unique.PawnBalance_MickZaford_Combat,DefaultItemPoolList[3],,(ItemPool=ItemPoolDefinition'GD_CustomItemPools_allium.Psycho.AlliumXmasSkins',PoolProbability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1))"</value><off>
 
-                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossImprovedDisable26"</key><value>"Interlude_P,GD_Population_Marauder.Balance.Unique.PawnBalance_MickZaford_Combat,DefaultItemPoolList[3].PoolProbability,,(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><off>
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossImprovedDisable22"</key><value>"Interlude_P,GD_Population_Marauder.Balance.Unique.PawnBalance_MickZaford_Combat,DefaultItemPoolList[0].PoolProbability,,(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><off>
 
                 #</Mick Zaford>
 
                 #<Jimbo & Tector Hodunk><off>
 
-                    ## These folks can drop the Slagga, so enforce that<off>
+                    ## These folks can drop the Slagga<off>
 
-                    #set GD_Itempools.Runnables.Pool_TectorHodunk bAutoReadyItems True<off> 
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossImprovedBossPool18"</key><value>"Interlude_P,GD_CustomItemPools_allium.Siren.AlliumXmasSkins,BalancedItems,,((ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.Runnables.Pool_TectorHodunk',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.33,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_CustomItemPools_allium.Assassin.AlliumXmasHeads',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.67,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True))"</value><off>
 
-                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossImprovedDisable27"</key><value>"Interlude_P,GD_Population_Marauder.Balance.Unique.PawnBalance_TectorHodunk_Combat,DefaultItemPoolList[0].PoolProbability,,(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><off>
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossImprovedDIPLItemPool11"</key><value>"Interlude_P,GD_Population_Marauder.Balance.Unique.PawnBalance_TectorHodunk_Combat,DefaultItemPoolList[3],,(ItemPool=ItemPoolDefinition'GD_CustomItemPools_allium.Siren.AlliumXmasSkins',PoolProbability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1))"</value><off>
 
-                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossImprovedDisable28"</key><value>"Interlude_P,GD_Population_Marauder.Balance.Unique.PawnBalance_TectorHodunk_Combat,DefaultItemPoolList[3].PoolProbability,,(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><off>
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossImprovedDisable23"</key><value>"Interlude_P,GD_Population_Marauder.Balance.Unique.PawnBalance_TectorHodunk_Combat,DefaultItemPoolList[0].PoolProbability,,(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><off>
 
                 #</Jimbo & Tector Hodunk>
 
@@ -3155,7 +3163,12 @@
 
                 #<Laney><off>
 
+                    ## Laney can drop the Gub.  No need to use our custom pools here,<off>
+                    ## since nothing but Laney uses that pool, even in UCP.<off>
+
                     #set GD_Itempools.Runnables.Pool_Laney bAutoReadyItems True<off> 
+
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossSlightBossPool10"</key><value>"Fridge_P,GD_Itempools.Runnables.Pool_Laney,BalancedItems,,((ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_Pistol.A_Weapons_Legendary.Pistol_Bandit_5_Gub',Probability=(BaseValueConstant=0.22,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_CustomItemPools_MainGame.Mercenary.VladofEpic',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.78,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True))"</value><off>
 
                     #<hotfix><key>"SparkLevelPatchEntry-ApocBossSlightDisable13"</key><value>"Fridge_P,GD_Population_Rat.Balance.Unique.PawnBalance_Laney,DefaultItemPoolList[0].PoolProbability,,(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><off>
 
@@ -3165,18 +3178,15 @@
 
                 #<Smash-Head><off>
 
-                    ## UCP adds the Roaster to Smash-Head's default Sledge's Shotgun drop, so<off>
-                    ## we'll make him use either of those, randomly.<off>
+                    ## UCP adds the Roaster to Smash-Head's default Sledge's Shotgun drop.<off>
 
-                    #set GD_CustomItemPools_MainGame.Assassin.Head4 bAutoReadyItems True<off> 
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossSlightBossPool11"</key><value>"Fridge_P,GD_CustomItemPools_allium.Mercenary.AlliumXmasSkins,BalancedItems,,((ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_Shotgun.A_Weapons_Legendary.SG_Bandit_5_SledgesShotgun',Probability=(BaseValueConstant=0.22,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_Launchers.A_Weapons_Unique.RL_Bandit_3_Roaster',Probability=(BaseValueConstant=0.45,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_CustomItemPools_Lilac.Psycho.VladofEpic',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.33,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True))"</value><off>
 
-                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossSlightSmashHead0"</key><value>"Fridge_P,GD_CustomItemPools_MainGame.Assassin.Head4,BalancedItems,,((ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_Shotgun.A_Weapons_Legendary.SG_Bandit_5_SledgesShotgun',Probability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_Launchers.A_Weapons_Unique.RL_Bandit_3_Roaster',Probability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True))"</value><off>
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossSlightDIPLItemPool5"</key><value>"Fridge_P,GD_Population_Goliath.Balance.Unique.PawnBalance_SmashHead,DefaultItemPoolList[2],,(ItemPool=ItemPoolDefinition'GD_CustomItemPools_allium.Mercenary.AlliumXmasSkins',PoolProbability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1))"</value><off>
 
                     #<hotfix><key>"SparkLevelPatchEntry-ApocBossSlightDisable15"</key><value>"Fridge_P,GD_Population_Goliath.Balance.Unique.PawnBalance_SmashHead,DefaultItemPoolList[0].PoolProbability,,(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><off>
 
                     #<hotfix><key>"SparkLevelPatchEntry-ApocBossSlightDisable16"</key><value>"Fridge_P,GD_Population_Goliath.Balance.Unique.PawnBalance_SmashHead,DefaultItemPoolList[1].PoolProbability,,(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><off>
-
-                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossSlightDisable17"</key><value>"Fridge_P,GD_Population_Goliath.Balance.Unique.PawnBalance_SmashHead,DefaultItemPoolList[2].PoolProbability,,(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><off>
 
                 #</Smash-Head>
 
@@ -3185,84 +3195,84 @@
                     ## Bagman had a chance to drop the Pot o' Gold, so make that a guaranteed<off>
                     ## thing.<off>
 
-                    #set GD_Itempools.Runnables.Pool_Bagman bAutoReadyItems True<off> 
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossSlightBossPool12"</key><value>"Luckys_P,GD_CustomItemPools_allium.Mercenary.AlliumXmasSkins,BalancedItems,,((ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.Runnables.Pool_Bagman',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.22,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_CustomItemPools_allium.Mechro.AlliumTGHeads',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.78,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True))"</value><off>
 
-                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossSlightDisable18"</key><value>"Luckys_P,GD_Population_Engineer.Balance.Unique.PawnBalance_Leprechaun,DefaultItemPoolList[1].PoolProbability,,(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><off>
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossSlightDIPLItemPool6"</key><value>"Luckys_P,GD_Population_Engineer.Balance.Unique.PawnBalance_Leprechaun,DefaultItemPoolList[2],,(ItemPool=ItemPoolDefinition'GD_CustomItemPools_allium.Mercenary.AlliumXmasSkins',PoolProbability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1))"</value><off>
 
-                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossSlightDisable19"</key><value>"Luckys_P,GD_Population_Engineer.Balance.Unique.PawnBalance_Leprechaun,DefaultItemPoolList[2].PoolProbability,,(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><off>
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossSlightDisable17"</key><value>"Luckys_P,GD_Population_Engineer.Balance.Unique.PawnBalance_Leprechaun,DefaultItemPoolList[1].PoolProbability,,(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><off>
 
                 #</Bagman>
 
                 #<Muscles><off>
 
-                    ## UCP added Sledge's Shotgun, but also added it to BLNG Loader, using the<off>
-                    ## same skinpool.  If BLNG Loader has an auto-ready pool, it won't actually<off>
-                    ## attack properly, so we're going to consume a new skinpool of our own for<off>
-                    ## Muscles.<off>
+                    ## UCP added Sledge's Shotgun to Muscles<off>
 
-                    #set GD_CustomItemPools_allium.Mercenary.AlliumXmasSkins bAutoReadyItems True<off> 
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossSlightBossPool13"</key><value>"Grass_Cliffs_P,GD_CustomItemPools_allium.Mercenary.AlliumXmasSkins,BalancedItems,,((ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_Shotgun.A_Weapons_Legendary.SG_Bandit_5_SledgesShotgun',Probability=(BaseValueConstant=0.22,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_CustomItemPools_MainGame.Soldier.VladofEpic',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.78,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True))"</value><off>
 
-                    #set GD_CustomItemPools_allium.Mercenary.AlliumXmasSkins BalancedItems ((ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_Shotgun.A_Weapons_Legendary.SG_Bandit_5_SledgesShotgun',Probability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True))<off>
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossSlightDIPLItemPool7"</key><value>"Grass_Cliffs_P,GD_Population_Bruiser.Balance.PawnBalance_Bruiser_Muscles,DefaultItemPoolList[0],,(ItemPool=ItemPoolDefinition'GD_CustomItemPools_allium.Mercenary.AlliumXmasSkins',PoolProbability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1))"</value><off>
 
-                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossSlightMuscles0"</key><value>"Grass_Cliffs_P,GD_Population_Bruiser.Balance.PawnBalance_Bruiser_Muscles,DefaultItemPoolList,,((ItemPool=ItemPoolDefinition'GD_CustomItemPools_allium.Mercenary.AlliumXmasSkins',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))"</value><off>
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossSlightDisable18"</key><value>"Grass_Cliffs_P,GD_Population_Bruiser.Balance.PawnBalance_Bruiser_Muscles,DefaultItemPoolList[1].PoolProbability,,(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><off>
 
                 #</Muscles>
 
                 #<Foreman Jasper><off>
 
-                    ## Can drop the Black Hole, so make that a For Sure Thing.<off>
+                    ## Can drop the Black Hole, so make that a possible equip.<off>
 
-                    #set GD_Itempools.Runnables.Pool_Foreman bAutoReadyItems True<off> 
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossSlightBossPool14"</key><value>"HyperionCity_P,GD_CustomItemPools_allium.Mercenary.AlliumXmasSkins,BalancedItems,,((ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.Runnables.Pool_Foreman',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.22,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_CustomItemPools_allium.Mechro.AlliumTGHeads',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.78,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True))"</value><off>
 
-                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossSlightDisable20"</key><value>"HyperionCity_P,GD_Population_Engineer.Balance.Unique.PawnBalance_Foreman,DefaultItemPoolList[2].PoolProbability,,(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><off>
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossSlightDIPLItemPool8"</key><value>"HyperionCity_P,GD_Population_Engineer.Balance.Unique.PawnBalance_Foreman,DefaultItemPoolList[2],,(ItemPool=ItemPoolDefinition'GD_CustomItemPools_allium.Mercenary.AlliumXmasSkins',PoolProbability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1))"</value><off>
 
                 #</Foreman Jasper>
 
                 #<Gettle><off>
 
-                    ## Can drop the Lyuda, so enforce usage of that<off>
+                    ## Can drop the Lyuda.  Nothing else uses this Runnable, so go<off>
+                    ## ahead and use it.<off>
 
                     #set GD_Itempools.Runnables.Pool_Gettle bAutoReadyItems True<off> 
 
-                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossSlightDisable21"</key><value>"Interlude_P,GD_Population_Engineer.Balance.Unique.PawnBalance_Gettle,DefaultItemPoolList[0].PoolProbability,,(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><off>
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossSlightBossPool15"</key><value>"Interlude_P,GD_Itempools.Runnables.Pool_Gettle,BalancedItems,,((ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_SniperRifles.A_Weapons_Legendary.Sniper_Vladof_5_Lyudmila',Probability=(BaseValueConstant=0.22,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_CustomItemPools_MainGame.Soldier.VladofEpic',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.78,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True))"</value><off>
 
-                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossSlightDisable22"</key><value>"Interlude_P,GD_Population_Engineer.Balance.Unique.PawnBalance_Gettle,DefaultItemPoolList[2].PoolProbability,,(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><off>
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossSlightDisable19"</key><value>"Interlude_P,GD_Population_Engineer.Balance.Unique.PawnBalance_Gettle,DefaultItemPoolList[0].PoolProbability,,(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><off>
+
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossSlightDisable20"</key><value>"Interlude_P,GD_Population_Engineer.Balance.Unique.PawnBalance_Gettle,DefaultItemPoolList[2].PoolProbability,,(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><off>
 
                 #</Gettle>
 
                 #<Mobley><off>
 
-                    ## Can drop the Veruc, so enforce that.<off>
+                    ## Can drop the Veruc.<off>
 
-                    #set GD_Itempools.Runnables.Pool_Mobley bAutoReadyItems True<off> 
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossSlightBossPool16"</key><value>"Interlude_P,GD_CustomItemPools_allium.Mercenary.AlliumXmasSkins,BalancedItems,,((ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.Runnables.Pool_Mobley',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.22,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_CustomItemPools_MainGame.Mercenary.VladofEpic',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.78,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True))"</value><off>
 
-                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossSlightDisable23"</key><value>"Interlude_P,GD_Population_Marauder.Balance.Unique.PawnBalance_Mobley,DefaultItemPoolList[0].PoolProbability,,(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><off>
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossSlightDIPLItemPool9"</key><value>"Interlude_P,GD_Population_Marauder.Balance.Unique.PawnBalance_Mobley,DefaultItemPoolList[3],,(ItemPool=ItemPoolDefinition'GD_CustomItemPools_allium.Mercenary.AlliumXmasSkins',PoolProbability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1))"</value><off>
 
-                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossSlightDisable24"</key><value>"Interlude_P,GD_Population_Marauder.Balance.Unique.PawnBalance_Mobley,DefaultItemPoolList[3].PoolProbability,,(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><off>
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossSlightDisable21"</key><value>"Interlude_P,GD_Population_Marauder.Balance.Unique.PawnBalance_Mobley,DefaultItemPoolList[0].PoolProbability,,(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><off>
 
                 #</Mobley>
 
                 #<Mick Zaford><off>
 
-                    ## Can drop the Maggie, so enforce that<off>
+                    ## Can drop the Maggie<off>
 
-                    #set GD_Itempools.Runnables.Pool_MickZaford bAutoReadyItems True<off> 
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossSlightBossPool17"</key><value>"Interlude_P,GD_CustomItemPools_allium.Psycho.AlliumXmasSkins,BalancedItems,,((ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.Runnables.Pool_MickZaford',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.22,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_CustomItemPools_MainGame.Siren.VladofEpic',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.78,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True))"</value><off>
 
-                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossSlightDisable25"</key><value>"Interlude_P,GD_Population_Marauder.Balance.Unique.PawnBalance_MickZaford_Combat,DefaultItemPoolList[0].PoolProbability,,(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><off>
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossSlightDIPLItemPool10"</key><value>"Interlude_P,GD_Population_Marauder.Balance.Unique.PawnBalance_MickZaford_Combat,DefaultItemPoolList[3],,(ItemPool=ItemPoolDefinition'GD_CustomItemPools_allium.Psycho.AlliumXmasSkins',PoolProbability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1))"</value><off>
 
-                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossSlightDisable26"</key><value>"Interlude_P,GD_Population_Marauder.Balance.Unique.PawnBalance_MickZaford_Combat,DefaultItemPoolList[3].PoolProbability,,(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><off>
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossSlightDisable22"</key><value>"Interlude_P,GD_Population_Marauder.Balance.Unique.PawnBalance_MickZaford_Combat,DefaultItemPoolList[0].PoolProbability,,(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><off>
 
                 #</Mick Zaford>
 
                 #<Jimbo & Tector Hodunk><off>
 
-                    ## These folks can drop the Slagga, so enforce that<off>
+                    ## These folks can drop the Slagga<off>
 
-                    #set GD_Itempools.Runnables.Pool_TectorHodunk bAutoReadyItems True<off> 
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossSlightBossPool18"</key><value>"Interlude_P,GD_CustomItemPools_allium.Siren.AlliumXmasSkins,BalancedItems,,((ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.Runnables.Pool_TectorHodunk',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.22,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_CustomItemPools_allium.Assassin.AlliumXmasHeads',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.78,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True))"</value><off>
 
-                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossSlightDisable27"</key><value>"Interlude_P,GD_Population_Marauder.Balance.Unique.PawnBalance_TectorHodunk_Combat,DefaultItemPoolList[0].PoolProbability,,(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><off>
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossSlightDIPLItemPool11"</key><value>"Interlude_P,GD_Population_Marauder.Balance.Unique.PawnBalance_TectorHodunk_Combat,DefaultItemPoolList[3],,(ItemPool=ItemPoolDefinition'GD_CustomItemPools_allium.Siren.AlliumXmasSkins',PoolProbability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1))"</value><off>
 
-                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossSlightDisable28"</key><value>"Interlude_P,GD_Population_Marauder.Balance.Unique.PawnBalance_TectorHodunk_Combat,DefaultItemPoolList[3].PoolProbability,,(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><off>
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossSlightDisable23"</key><value>"Interlude_P,GD_Population_Marauder.Balance.Unique.PawnBalance_TectorHodunk_Combat,DefaultItemPoolList[0].PoolProbability,,(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><off>
 
                 #</Jimbo & Tector Hodunk>
 
@@ -3434,7 +3444,12 @@
 
                 #<Laney><off>
 
+                    ## Laney can drop the Gub.  No need to use our custom pools here,<off>
+                    ## since nothing but Laney uses that pool, even in UCP.<off>
+
                     #set GD_Itempools.Runnables.Pool_Laney bAutoReadyItems True<off> 
+
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossStockBossPool10"</key><value>"Fridge_P,GD_Itempools.Runnables.Pool_Laney,BalancedItems,,((ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_Pistol.A_Weapons_Legendary.Pistol_Bandit_5_Gub',Probability=(BaseValueConstant=0.1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_CustomItemPools_MainGame.Mercenary.VladofEpic',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.9,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True))"</value><off>
 
                     #<hotfix><key>"SparkLevelPatchEntry-ApocBossStockDisable13"</key><value>"Fridge_P,GD_Population_Rat.Balance.Unique.PawnBalance_Laney,DefaultItemPoolList[0].PoolProbability,,(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><off>
 
@@ -3444,18 +3459,15 @@
 
                 #<Smash-Head><off>
 
-                    ## UCP adds the Roaster to Smash-Head's default Sledge's Shotgun drop, so<off>
-                    ## we'll make him use either of those, randomly.<off>
+                    ## UCP adds the Roaster to Smash-Head's default Sledge's Shotgun drop.<off>
 
-                    #set GD_CustomItemPools_MainGame.Assassin.Head4 bAutoReadyItems True<off> 
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossStockBossPool11"</key><value>"Fridge_P,GD_CustomItemPools_allium.Mercenary.AlliumXmasSkins,BalancedItems,,((ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_Shotgun.A_Weapons_Legendary.SG_Bandit_5_SledgesShotgun',Probability=(BaseValueConstant=0.1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_Launchers.A_Weapons_Unique.RL_Bandit_3_Roaster',Probability=(BaseValueConstant=0.33,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_CustomItemPools_Lilac.Psycho.VladofEpic',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.57,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True))"</value><off>
 
-                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossStockSmashHead0"</key><value>"Fridge_P,GD_CustomItemPools_MainGame.Assassin.Head4,BalancedItems,,((ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_Shotgun.A_Weapons_Legendary.SG_Bandit_5_SledgesShotgun',Probability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_Launchers.A_Weapons_Unique.RL_Bandit_3_Roaster',Probability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True))"</value><off>
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossStockDIPLItemPool5"</key><value>"Fridge_P,GD_Population_Goliath.Balance.Unique.PawnBalance_SmashHead,DefaultItemPoolList[2],,(ItemPool=ItemPoolDefinition'GD_CustomItemPools_allium.Mercenary.AlliumXmasSkins',PoolProbability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1))"</value><off>
 
                     #<hotfix><key>"SparkLevelPatchEntry-ApocBossStockDisable15"</key><value>"Fridge_P,GD_Population_Goliath.Balance.Unique.PawnBalance_SmashHead,DefaultItemPoolList[0].PoolProbability,,(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><off>
 
                     #<hotfix><key>"SparkLevelPatchEntry-ApocBossStockDisable16"</key><value>"Fridge_P,GD_Population_Goliath.Balance.Unique.PawnBalance_SmashHead,DefaultItemPoolList[1].PoolProbability,,(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><off>
-
-                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossStockDisable17"</key><value>"Fridge_P,GD_Population_Goliath.Balance.Unique.PawnBalance_SmashHead,DefaultItemPoolList[2].PoolProbability,,(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><off>
 
                 #</Smash-Head>
 
@@ -3464,84 +3476,84 @@
                     ## Bagman had a chance to drop the Pot o' Gold, so make that a guaranteed<off>
                     ## thing.<off>
 
-                    #set GD_Itempools.Runnables.Pool_Bagman bAutoReadyItems True<off> 
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossStockBossPool12"</key><value>"Luckys_P,GD_CustomItemPools_allium.Mercenary.AlliumXmasSkins,BalancedItems,,((ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.Runnables.Pool_Bagman',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_CustomItemPools_allium.Mechro.AlliumTGHeads',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.9,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True))"</value><off>
 
-                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossStockDisable18"</key><value>"Luckys_P,GD_Population_Engineer.Balance.Unique.PawnBalance_Leprechaun,DefaultItemPoolList[1].PoolProbability,,(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><off>
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossStockDIPLItemPool6"</key><value>"Luckys_P,GD_Population_Engineer.Balance.Unique.PawnBalance_Leprechaun,DefaultItemPoolList[2],,(ItemPool=ItemPoolDefinition'GD_CustomItemPools_allium.Mercenary.AlliumXmasSkins',PoolProbability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1))"</value><off>
 
-                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossStockDisable19"</key><value>"Luckys_P,GD_Population_Engineer.Balance.Unique.PawnBalance_Leprechaun,DefaultItemPoolList[2].PoolProbability,,(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><off>
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossStockDisable17"</key><value>"Luckys_P,GD_Population_Engineer.Balance.Unique.PawnBalance_Leprechaun,DefaultItemPoolList[1].PoolProbability,,(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><off>
 
                 #</Bagman>
 
                 #<Muscles><off>
 
-                    ## UCP added Sledge's Shotgun, but also added it to BLNG Loader, using the<off>
-                    ## same skinpool.  If BLNG Loader has an auto-ready pool, it won't actually<off>
-                    ## attack properly, so we're going to consume a new skinpool of our own for<off>
-                    ## Muscles.<off>
+                    ## UCP added Sledge's Shotgun to Muscles<off>
 
-                    #set GD_CustomItemPools_allium.Mercenary.AlliumXmasSkins bAutoReadyItems True<off> 
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossStockBossPool13"</key><value>"Grass_Cliffs_P,GD_CustomItemPools_allium.Mercenary.AlliumXmasSkins,BalancedItems,,((ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_Shotgun.A_Weapons_Legendary.SG_Bandit_5_SledgesShotgun',Probability=(BaseValueConstant=0.1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_CustomItemPools_MainGame.Soldier.VladofEpic',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.9,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True))"</value><off>
 
-                    #set GD_CustomItemPools_allium.Mercenary.AlliumXmasSkins BalancedItems ((ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_Shotgun.A_Weapons_Legendary.SG_Bandit_5_SledgesShotgun',Probability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True))<off>
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossStockDIPLItemPool7"</key><value>"Grass_Cliffs_P,GD_Population_Bruiser.Balance.PawnBalance_Bruiser_Muscles,DefaultItemPoolList[0],,(ItemPool=ItemPoolDefinition'GD_CustomItemPools_allium.Mercenary.AlliumXmasSkins',PoolProbability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1))"</value><off>
 
-                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossStockMuscles0"</key><value>"Grass_Cliffs_P,GD_Population_Bruiser.Balance.PawnBalance_Bruiser_Muscles,DefaultItemPoolList,,((ItemPool=ItemPoolDefinition'GD_CustomItemPools_allium.Mercenary.AlliumXmasSkins',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))"</value><off>
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossStockDisable18"</key><value>"Grass_Cliffs_P,GD_Population_Bruiser.Balance.PawnBalance_Bruiser_Muscles,DefaultItemPoolList[1].PoolProbability,,(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><off>
 
                 #</Muscles>
 
                 #<Foreman Jasper><off>
 
-                    ## Can drop the Black Hole, so make that a For Sure Thing.<off>
+                    ## Can drop the Black Hole, so make that a possible equip.<off>
 
-                    #set GD_Itempools.Runnables.Pool_Foreman bAutoReadyItems True<off> 
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossStockBossPool14"</key><value>"HyperionCity_P,GD_CustomItemPools_allium.Mercenary.AlliumXmasSkins,BalancedItems,,((ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.Runnables.Pool_Foreman',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_CustomItemPools_allium.Mechro.AlliumTGHeads',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.9,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True))"</value><off>
 
-                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossStockDisable20"</key><value>"HyperionCity_P,GD_Population_Engineer.Balance.Unique.PawnBalance_Foreman,DefaultItemPoolList[2].PoolProbability,,(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><off>
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossStockDIPLItemPool8"</key><value>"HyperionCity_P,GD_Population_Engineer.Balance.Unique.PawnBalance_Foreman,DefaultItemPoolList[2],,(ItemPool=ItemPoolDefinition'GD_CustomItemPools_allium.Mercenary.AlliumXmasSkins',PoolProbability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1))"</value><off>
 
                 #</Foreman Jasper>
 
                 #<Gettle><off>
 
-                    ## Can drop the Lyuda, so enforce usage of that<off>
+                    ## Can drop the Lyuda.  Nothing else uses this Runnable, so go<off>
+                    ## ahead and use it.<off>
 
                     #set GD_Itempools.Runnables.Pool_Gettle bAutoReadyItems True<off> 
 
-                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossStockDisable21"</key><value>"Interlude_P,GD_Population_Engineer.Balance.Unique.PawnBalance_Gettle,DefaultItemPoolList[0].PoolProbability,,(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><off>
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossStockBossPool15"</key><value>"Interlude_P,GD_Itempools.Runnables.Pool_Gettle,BalancedItems,,((ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_SniperRifles.A_Weapons_Legendary.Sniper_Vladof_5_Lyudmila',Probability=(BaseValueConstant=0.1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_CustomItemPools_MainGame.Soldier.VladofEpic',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.9,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True))"</value><off>
 
-                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossStockDisable22"</key><value>"Interlude_P,GD_Population_Engineer.Balance.Unique.PawnBalance_Gettle,DefaultItemPoolList[2].PoolProbability,,(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><off>
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossStockDisable19"</key><value>"Interlude_P,GD_Population_Engineer.Balance.Unique.PawnBalance_Gettle,DefaultItemPoolList[0].PoolProbability,,(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><off>
+
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossStockDisable20"</key><value>"Interlude_P,GD_Population_Engineer.Balance.Unique.PawnBalance_Gettle,DefaultItemPoolList[2].PoolProbability,,(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><off>
 
                 #</Gettle>
 
                 #<Mobley><off>
 
-                    ## Can drop the Veruc, so enforce that.<off>
+                    ## Can drop the Veruc.<off>
 
-                    #set GD_Itempools.Runnables.Pool_Mobley bAutoReadyItems True<off> 
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossStockBossPool16"</key><value>"Interlude_P,GD_CustomItemPools_allium.Mercenary.AlliumXmasSkins,BalancedItems,,((ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.Runnables.Pool_Mobley',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_CustomItemPools_MainGame.Mercenary.VladofEpic',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.9,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True))"</value><off>
 
-                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossStockDisable23"</key><value>"Interlude_P,GD_Population_Marauder.Balance.Unique.PawnBalance_Mobley,DefaultItemPoolList[0].PoolProbability,,(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><off>
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossStockDIPLItemPool9"</key><value>"Interlude_P,GD_Population_Marauder.Balance.Unique.PawnBalance_Mobley,DefaultItemPoolList[3],,(ItemPool=ItemPoolDefinition'GD_CustomItemPools_allium.Mercenary.AlliumXmasSkins',PoolProbability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1))"</value><off>
 
-                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossStockDisable24"</key><value>"Interlude_P,GD_Population_Marauder.Balance.Unique.PawnBalance_Mobley,DefaultItemPoolList[3].PoolProbability,,(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><off>
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossStockDisable21"</key><value>"Interlude_P,GD_Population_Marauder.Balance.Unique.PawnBalance_Mobley,DefaultItemPoolList[0].PoolProbability,,(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><off>
 
                 #</Mobley>
 
                 #<Mick Zaford><off>
 
-                    ## Can drop the Maggie, so enforce that<off>
+                    ## Can drop the Maggie<off>
 
-                    #set GD_Itempools.Runnables.Pool_MickZaford bAutoReadyItems True<off> 
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossStockBossPool17"</key><value>"Interlude_P,GD_CustomItemPools_allium.Psycho.AlliumXmasSkins,BalancedItems,,((ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.Runnables.Pool_MickZaford',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_CustomItemPools_MainGame.Siren.VladofEpic',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.9,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True))"</value><off>
 
-                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossStockDisable25"</key><value>"Interlude_P,GD_Population_Marauder.Balance.Unique.PawnBalance_MickZaford_Combat,DefaultItemPoolList[0].PoolProbability,,(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><off>
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossStockDIPLItemPool10"</key><value>"Interlude_P,GD_Population_Marauder.Balance.Unique.PawnBalance_MickZaford_Combat,DefaultItemPoolList[3],,(ItemPool=ItemPoolDefinition'GD_CustomItemPools_allium.Psycho.AlliumXmasSkins',PoolProbability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1))"</value><off>
 
-                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossStockDisable26"</key><value>"Interlude_P,GD_Population_Marauder.Balance.Unique.PawnBalance_MickZaford_Combat,DefaultItemPoolList[3].PoolProbability,,(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><off>
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossStockDisable22"</key><value>"Interlude_P,GD_Population_Marauder.Balance.Unique.PawnBalance_MickZaford_Combat,DefaultItemPoolList[0].PoolProbability,,(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><off>
 
                 #</Mick Zaford>
 
                 #<Jimbo & Tector Hodunk><off>
 
-                    ## These folks can drop the Slagga, so enforce that<off>
+                    ## These folks can drop the Slagga<off>
 
-                    #set GD_Itempools.Runnables.Pool_TectorHodunk bAutoReadyItems True<off> 
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossStockBossPool18"</key><value>"Interlude_P,GD_CustomItemPools_allium.Siren.AlliumXmasSkins,BalancedItems,,((ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.Runnables.Pool_TectorHodunk',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_CustomItemPools_allium.Assassin.AlliumXmasHeads',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.9,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True))"</value><off>
 
-                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossStockDisable27"</key><value>"Interlude_P,GD_Population_Marauder.Balance.Unique.PawnBalance_TectorHodunk_Combat,DefaultItemPoolList[0].PoolProbability,,(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><off>
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossStockDIPLItemPool11"</key><value>"Interlude_P,GD_Population_Marauder.Balance.Unique.PawnBalance_TectorHodunk_Combat,DefaultItemPoolList[3],,(ItemPool=ItemPoolDefinition'GD_CustomItemPools_allium.Siren.AlliumXmasSkins',PoolProbability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1))"</value><off>
 
-                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossStockDisable28"</key><value>"Interlude_P,GD_Population_Marauder.Balance.Unique.PawnBalance_TectorHodunk_Combat,DefaultItemPoolList[3].PoolProbability,,(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><off>
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossStockDisable23"</key><value>"Interlude_P,GD_Population_Marauder.Balance.Unique.PawnBalance_TectorHodunk_Combat,DefaultItemPoolList[0].PoolProbability,,(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><off>
 
                 #</Jimbo & Tector Hodunk>
 
