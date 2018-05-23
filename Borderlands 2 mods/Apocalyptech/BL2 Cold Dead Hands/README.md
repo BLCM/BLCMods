@@ -121,20 +121,22 @@ quality, when loaded into FilterTool/BLCMM:
   Surveyors, and their shields start out at zero strength.  With this mod,
   all their shields have turned into real shields, which start regenerating
   immediately, which will probably make Loader-heavy areas much more
-  difficult than ordinarily.
+  difficult.
 
 * Weapon and Shields ordinarily found in treasure chests have been replaced
   with the main ammo/money/eridium pool, rather than removed outright,
   because otherwise the probabilities of getting grenade mods, COMs, and
-  relics would be greatly buffed.
+  relics would be greatly buffed.  So you'll have to get used to epic chests
+  opening up to find a handful of dollars and some pistol ammo.
 
 Compatibility
 -------------
 
 This will obviously conflict with other mods with similar aims.
-theNocturni's "Enemy Enhancer" is one obvious conflict.  The mod should be
-compatible with UCP, and in fact requires that UCP's skinpool changes be in
-place.
+theNocturni's "Enemy Enhancer" is one obvious conflict.
+
+This mod is compatible with UCP, and in fact requires that UCP's skinpool
+changes be in place.
 
 This mod overwrites/disables much of the functionality in my own "Better
 Loot" mod, though it's designed to work fine with both enabled (so long as
