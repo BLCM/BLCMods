@@ -36,15 +36,9 @@ bits, all inside the `Loot Pool & Drop Changes` folder:
 
 * `Skinpool Fixes (Don't uncheck this)`: this is
   required to free up the custom loot pools that we use to equip enemies with.
-* `Specific Loot Changes`: Without the items in this category enabled, the
-  relevant enemies won't spawn with the proper items:
-  * `Add Deliverance to Bad Maw`
-  * `Add RokSalt to Flinter`
+* `Specific Loot Changes`: (working on working around these)
   * `Add Kitten and Baby Maker to Motor Momma`
   * `Add Torgue Legendaries and Torgue Tokens to Piston`
-  * `Add Pitchfork to Prospector Zeke`
-  * `Add Roaster to Smash-Head`
-  * `Add Sledge's Shotgun to BLNG Loader and Muscles`
 
 Usage/Installation
 ------------------

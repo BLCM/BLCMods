@@ -2359,13 +2359,13 @@ for (label, key, unique_pct, rare_pct) in [
             activated=hotfix_activated)
 
     hfs.add_level_hotfix('midgemong_clean_pool', 'Midge',
-        """Cove_P,
-        GD_Population_PrimalBeast.Balance.Unique.PawnBalance_PrimalBeast_Warmong,
-        DefaultItemPoolList,,
-        ()""",
-        activated=hotfix_activated)
+            """Cove_P,
+            GD_Population_PrimalBeast.Balance.Unique.PawnBalance_PrimalBeast_Warmong,
+            DefaultItemPoolList,,
+            ()""",
+            activated=hotfix_activated)
 
-    # Captain Flynt - use the drop pool for equipping (SouthernShelf_P pool 0)
+    # Captain Flynt (SouthernShelf_P pool 0)
 
     setup_boss_pool('flynt_pool_0', 'SouthernShelf_P', other.level_pool_0,
             None,
@@ -2376,16 +2376,16 @@ for (label, key, unique_pct, rare_pct) in [
             activated=hotfix_activated)
 
     set_dipl_item_prob('flynt_pool_1',
-        'GD_Population_Nomad.Balance.Unique.PawnBalance_Flynt',
-        0,
-        level='SouthernShelf_P',
-        activated=hotfix_activated)
+            'GD_Population_Nomad.Balance.Unique.PawnBalance_Flynt',
+            0,
+            level='SouthernShelf_P',
+            activated=hotfix_activated)
 
     set_dipl_item_prob('flynt_pool_2',
-        'GD_Population_Nomad.Balance.Unique.PawnBalance_Flynt',
-        3,
-        level='SouthernShelf_P',
-        activated=hotfix_activated)
+            'GD_Population_Nomad.Balance.Unique.PawnBalance_Flynt',
+            3,
+            level='SouthernShelf_P',
+            activated=hotfix_activated)
 
     set_dipl_item_pool('flynt_pool_3',
             'GD_Population_Nomad.Balance.Unique.PawnBalance_Flynt',
@@ -2405,29 +2405,29 @@ for (label, key, unique_pct, rare_pct) in [
 
     set_pt_cipl_item_pool('badmaw_pool_1',
             'GD_Population_Nomad.Balance.PawnBalance_BadMaw',
-            0, 2,
+            0, 0,
             other.level_pool_0,
             level='Frost_P',
             activated=hotfix_activated)
 
     set_pt_cipl_item_pool('badmaw_pool_2',
             'GD_Population_Nomad.Balance.PawnBalance_BadMaw',
-            1, 2,
+            1, 0,
             other.level_pool_0,
             level='Frost_P',
             activated=hotfix_activated)
 
     set_pt_cipl_item_prob('badmaw_pool_3',
-        'GD_Population_Nomad.Balance.PawnBalance_BadMaw',
-        0, 0,
-        level='Frost_P',
-        activated=hotfix_activated)
+            'GD_Population_Nomad.Balance.PawnBalance_BadMaw',
+            0, 2,
+            level='Frost_P',
+            activated=hotfix_activated)
 
     set_pt_cipl_item_prob('badmaw_pool_4',
-        'GD_Population_Nomad.Balance.PawnBalance_BadMaw',
-        1, 0,
-        level='Frost_P',
-        activated=hotfix_activated)
+            'GD_Population_Nomad.Balance.PawnBalance_BadMaw',
+            1, 2,
+            level='Frost_P',
+            activated=hotfix_activated)
 
     # Assassin Common - remove Emperor from the shared loot pool
 
@@ -2556,14 +2556,14 @@ for (label, key, unique_pct, rare_pct) in [
 
     set_dipl_item_pool('flinter_pool_1',
             'GD_Population_Rat.Balance.Unique.PawnBalance_RatEasterEgg',
-            2,
+            0,
             other.level_pool_0,
             level='Dam_P',
             activated=hotfix_activated)
 
     set_dipl_item_prob('flinter_pool_2',
         'GD_Population_Rat.Balance.Unique.PawnBalance_RatEasterEgg',
-        0,
+        2,
         level='Dam_P',
         activated=hotfix_activated)
 
@@ -2604,20 +2604,20 @@ for (label, key, unique_pct, rare_pct) in [
     setup_boss_pool('zeke_pool_0', 'TundraExpress_P', other.level_pool_0,
             badass.equip_pool_ar,
             [
-                ('GD_CustomItemPools_MainGame.Assassin.Head3', unique_pct, None),
+                ('GD_Weap_SniperRifles.A_Weapons_Legendary.Sniper_Dahl_5_Pitchfork', unique_pct, 'WeaponBalanceDefinition'),
             ],
             activated=hotfix_activated)
 
     set_dipl_item_pool('zeke_pool_1',
             'GD_Population_Nomad.Balance.Unique.PawnBalance_Prospector',
-            2,
+            0,
             other.level_pool_0,
             level='TundraExpress_P',
             activated=hotfix_activated)
 
     set_dipl_item_prob('zeke_pool_2',
         'GD_Population_Nomad.Balance.Unique.PawnBalance_Prospector',
-        0,
+        2,
         level='TundraExpress_P',
         activated=hotfix_activated)
 
@@ -2656,20 +2656,20 @@ for (label, key, unique_pct, rare_pct) in [
 
     set_dipl_item_pool('smashhead_pool_1',
             'GD_Population_Goliath.Balance.Unique.PawnBalance_SmashHead',
-            2,
+            0,
             other.level_pool_0,
             level='Fridge_P',
             activated=hotfix_activated)
 
     set_dipl_item_prob('smashhead_pool_2',
         'GD_Population_Goliath.Balance.Unique.PawnBalance_SmashHead',
-        0,
+        1,
         level='Fridge_P',
         activated=hotfix_activated)
 
     set_dipl_item_prob('smashhead_pool_3',
         'GD_Population_Goliath.Balance.Unique.PawnBalance_SmashHead',
-        1,
+        2,
         level='Fridge_P',
         activated=hotfix_activated)
 
