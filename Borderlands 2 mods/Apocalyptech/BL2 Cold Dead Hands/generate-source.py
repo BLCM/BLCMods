@@ -182,7 +182,7 @@ class DropConfig(BaseConfig):
         """
 
         retlist = []
-        prefix = ' ' * (4*3)
+        prefix = ' ' * (4*4)
 
         # The order in which our assignment tuples are specified
         pool_order = [
@@ -1695,7 +1695,7 @@ badass = Badass(hfs)
 other = OtherConfig()
 
 # Get rid of global world drops.
-prefix = ' '*(4*2)
+prefix = ' '*(4*3)
 drop_disables = []
 for (pool, index) in [
         ('GD_Itempools.GeneralItemPools.Pool_Gear', 0),
@@ -2297,15 +2297,15 @@ for (guntype, legendaries, uniques, pearls, seraphs) in [
                 ))
 
 other.legendary_unique_adds = "\n\n".join(
-        ['{}{}'.format(' '*(4*3), hfs.get_hotfix(hotfix_id).get_xml()) for hotfix_id in unique_hotfixes]
+        ['{}{}'.format(' '*(4*4), hfs.get_hotfix(hotfix_id).get_xml()) for hotfix_id in unique_hotfixes]
     )
 
 other.legendary_pearl_adds = "\n\n".join(
-        ['{}{}'.format(' '*(4*3), hfs.get_hotfix(hotfix_id).get_xml()) for hotfix_id in pearl_hotfixes]
+        ['{}{}'.format(' '*(4*4), hfs.get_hotfix(hotfix_id).get_xml()) for hotfix_id in pearl_hotfixes]
     )
 
 other.legendary_seraph_adds = "\n\n".join(
-        ['{}{}'.format(' '*(4*3), hfs.get_hotfix(hotfix_id).get_xml()) for hotfix_id in seraph_hotfixes]
+        ['{}{}'.format(' '*(4*4), hfs.get_hotfix(hotfix_id).get_xml()) for hotfix_id in seraph_hotfixes]
     )
 
 # Legendary shield pool configuration.  Doing this a bit differently since there's
