@@ -144,6 +144,14 @@ class DropConfig(BaseConfig):
             ('better', 'Enemies Have Better Gear'),
             ('stock', 'Enemies Have Roughly Stock Gear'),
         ]
+
+    # Computed percent drop rates, for reporting to the user in mod comments
+    pct_common = None
+    pct_uncommon = None
+    pct_rare = None
+    pct_veryrare = None
+    pct_alien = None
+    pct_legendary = None
     
     ###
     ### ... FUNCTIONS??!?
@@ -239,6 +247,16 @@ class DropConfig(BaseConfig):
 
         return "\n\n".join(retlist)
 
+    def _get_pct_chance(self, weight, total):
+        chance = weight/total*100
+        if chance == 0:
+            return '0'
+        elif chance > 1:
+            return round(chance)
+        else:
+            return round(chance, 2)
+
+
     def set_rarity_weights(self, rarity_key):
         rarity = self.rarities[rarity_key]
         self.weight_common = rarity['common']
@@ -247,6 +265,17 @@ class DropConfig(BaseConfig):
         self.weight_veryrare = rarity['veryrare']
         self.weight_alien = rarity['alien']
         self.weight_legendary = rarity['legendary']
+
+        total_weight = (self.weight_common + self.weight_uncommon +
+                self.weight_rare + self.weight_veryrare +
+                self.weight_alien + self.weight_legendary)
+
+        self.pct_common = self._get_pct_chance(self.weight_common, total_weight)
+        self.pct_uncommon = self._get_pct_chance(self.weight_uncommon, total_weight)
+        self.pct_rare = self._get_pct_chance(self.weight_rare, total_weight)
+        self.pct_veryrare = self._get_pct_chance(self.weight_veryrare, total_weight)
+        self.pct_alien = self._get_pct_chance(self.weight_alien, total_weight)
+        self.pct_legendary = self._get_pct_chance(self.weight_legendary, total_weight)
 
 class Regular(DropConfig):
     """
