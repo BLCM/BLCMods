@@ -28,6 +28,14 @@ the uninteresting and drab loot that typically gets dropped in-game, and who
 often end up just resorting to Gibbed to be able to play around with some
 better gear.  The README in the mod dir itself should provide a lot more info.
 
+TPS Early Bloomer
+-----------------
+
+Unlocks all weapons/items to be able to spawn right at the beginning of the game.
+A more powerful version of the same functionality provided by UCP.  (This is
+technically a subset of Better Loot; if you're already running Better Loot then
+you already have this.)
+
 TPS Movement Speed Cheats
 -------------------------
 
