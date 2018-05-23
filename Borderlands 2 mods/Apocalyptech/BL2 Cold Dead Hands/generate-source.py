@@ -2297,15 +2297,15 @@ for (guntype, legendaries, uniques, pearls, seraphs) in [
                 ))
 
 other.legendary_unique_adds = "\n\n".join(
-        ['{}{}'.format(' '*(4*4), hfs.get_hotfix(hotfix_id).get_xml()) for hotfix_id in unique_hotfixes]
+        ['{}{}'.format(' '*(4*3), hfs.get_hotfix(hotfix_id).get_xml()) for hotfix_id in unique_hotfixes]
     )
 
 other.legendary_pearl_adds = "\n\n".join(
-        ['{}{}'.format(' '*(4*4), hfs.get_hotfix(hotfix_id).get_xml()) for hotfix_id in pearl_hotfixes]
+        ['{}{}'.format(' '*(4*3), hfs.get_hotfix(hotfix_id).get_xml()) for hotfix_id in pearl_hotfixes]
     )
 
 other.legendary_seraph_adds = "\n\n".join(
-        ['{}{}'.format(' '*(4*4), hfs.get_hotfix(hotfix_id).get_xml()) for hotfix_id in seraph_hotfixes]
+        ['{}{}'.format(' '*(4*3), hfs.get_hotfix(hotfix_id).get_xml()) for hotfix_id in seraph_hotfixes]
     )
 
 # Legendary shield pool configuration.  Doing this a bit differently since there's
