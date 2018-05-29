@@ -356,14 +356,14 @@
 
             #</Bone Head 2.0>
 
-            #<No-Beard>
+            #<No-Beard>{line_suffix}
 
-                # No-Beard is already set up to use a Stinkpot 100% of the time, though he
-                # uses a special "no-drop" version of the weapon which is slightly
-                # different than the version which gets dropped.  We're altering that pool
-                # so that he equips the user-droppable weapon version instead, which also
-                # means that No-Beard will have a 100% stinkpot drop rate, regardless of
-                # what probability is selected down below.
+                {line_prefix}# No-Beard is already set up to use a Stinkpot 100% of the time, though he{line_suffix}
+                {line_prefix}# uses a special "no-drop" version of the weapon which is slightly{line_suffix}
+                {line_prefix}# different than the version which gets dropped.  We're altering that pool{line_suffix}
+                {line_prefix}# so that he equips the user-droppable weapon version instead, which also{line_suffix}
+                {line_prefix}# means that No-Beard will have a 100% stinkpot drop rate, regardless of{line_suffix}
+                {line_prefix}# what probability is selected down below.{line_suffix}
 
                 {hotfixes:nobeard_pool_0}
 
@@ -373,15 +373,23 @@
 
             #</No-Beard>
 
-            #<Big Sleep>
+            #<Sandman / Big Sleep>{line_suffix}
 
-                # Big Sleep is a melee-only enemy so we ordinarily wouldn't touch him, but
-                # his drop is hardcoded at 33% in the base game data, rather than using
-                # the DropODDS variables.  So we're setting it in here so that it conforms
-                # to the drop rate the user has selected.
+                {line_prefix}# Ordinarily, Big Sleep (the melee-only enemy) has a chance of dropping{line_suffix}
+                {line_prefix}# the 12-Pounder, and Sandman (the weapon-using enemy) just drops from the{line_suffix}
+                {line_prefix}# Badass pool.  We're moving the 12-pounder drop/equip over to Sandman,{line_suffix}
+                {line_prefix}# which makes more sense, and should make for a more fun battle anyway.{line_suffix}
 
                 {hotfixes:bigsleep_pool_0}
 
-            #</Big Sleep>
+                {hotfixes:sandman_pool_0}
+
+                {hotfixes:sandman_pool_1}
+
+                {hotfixes:sandman_pool_2}
+
+                {hotfixes:sandman_pool_3}
+
+            #</Sandman / Big Sleep>
 
         #</{boss_label}>

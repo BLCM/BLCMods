@@ -2990,14 +2990,41 @@ for (label, key, unique_pct, rare_pct) in [
         level='Orchid_OasisTown_P',
         activated=hotfix_activated)
 
-    # Big Sleep (n/a)
-    # Just fixing a data inconsistency, really -- Big Sleep is melee-only.
+    # Sandman / Big Sleep (Orchid_Caves_P pool 0)
 
     hfs.add_level_hotfix('bigsleep_pool_0', 'BigSleepDrop',
         """Orchid_Caves_P,
         GD_Orchid_Pop_Sandman.Balance.PawnBalance_Orchid_BigSleep,
-        DefaultItemPoolList[1].PoolProbability.BaseValueConstant,,
-        {}""".format(rare_pct))
+        DefaultItemPoolList[1].PoolProbability.BaseValueConstant,,0""",
+        activated=hotfix_activated)
+
+    setup_boss_pool('sandman_pool_0', 'Orchid_Caves_P', other.level_pool_0,
+            badass.equip_pool_ar,
+            [
+                ('GD_Orchid_BossWeapons.Launcher.RL_Torgue_3_12Pounder', rare_pct, 'WeaponBalanceDefinition'),
+            ],
+            activated=hotfix_activated)
+
+    set_dipl_item_pool('sandman_pool_1',
+            'GD_Orchid_Pop_Sandman.Balance.PawnBalance_Orchid_Sandman',
+            0,
+            other.level_pool_0,
+            level='Orchid_Caves_P',
+            activated=hotfix_activated)
+
+    set_dipl_item_pool('sandman_pool_2',
+            'GD_Orchid_Pop_Sandman.Balance.PawnBalance_Orchid_Sandman_MarauderMaster',
+            0,
+            other.level_pool_0,
+            level='Orchid_Caves_P',
+            activated=hotfix_activated)
+
+    set_dipl_item_pool('sandman_pool_3',
+            'GD_Orchid_Pop_Sandman.Balance.PawnBalance_Orchid_Sandman_Solo',
+            0,
+            other.level_pool_0,
+            level='Orchid_Caves_P',
+            activated=hotfix_activated)
 
     # Generate the section string
     with open('input-file-bosses.txt', 'r') as df:

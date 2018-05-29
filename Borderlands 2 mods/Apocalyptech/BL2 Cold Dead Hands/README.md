@@ -73,6 +73,11 @@ shield, they will spawn with one of those items chosen randomly, and that
 will be the item that they'll drop.  So you should be able to tell right
 from the start of the battle which gun you'll receive.
 
+### Other Pool Tweaks
+
+* Big Sleep is usually the one to drop the 12 Pounder, but that drop/equip
+  has been moved to Sandman.
+
 ### Exceptions
 
 * Doc Mercy has to be using an E-Tech blaster for Medical Mystery to make
@@ -190,7 +195,6 @@ things to think about:
 * Fix orientation of items spawning in chests?  I think we can do this
   without messing up "regular" item spawns because it's just the weapon mounts
   that we'd change.  Not sure about shield mounts...
-* Make Sandman use/equip the 12-Pounder, instead of dropping from Big Sleep?
 
 Licenses
 ========

@@ -2940,16 +2940,24 @@
 
             #</No-Beard>
 
-            #<Big Sleep>
+            #<Sandman / Big Sleep>
 
-                # Big Sleep is a melee-only enemy so we ordinarily wouldn't touch him, but
-                # his drop is hardcoded at 33% in the base game data, rather than using
-                # the DropODDS variables.  So we're setting it in here so that it conforms
-                # to the drop rate the user has selected.
+                # Ordinarily, Big Sleep (the melee-only enemy) has a chance of dropping
+                # the 12-Pounder, and Sandman (the weapon-using enemy) just drops from the
+                # Badass pool.  We're moving the 12-pounder drop/equip over to Sandman,
+                # which makes more sense, and should make for a more fun battle anyway.
 
-                #<hotfix><key>"SparkLevelPatchEntry-ApocBossGuaranteedBigSleepDrop0"</key><value>"Orchid_Caves_P,GD_Orchid_Pop_Sandman.Balance.PawnBalance_Orchid_BigSleep,DefaultItemPoolList[1].PoolProbability.BaseValueConstant,,1"</value><on>
+                #<hotfix><key>"SparkLevelPatchEntry-ApocBossGuaranteedBigSleepDrop0"</key><value>"Orchid_Caves_P,GD_Orchid_Pop_Sandman.Balance.PawnBalance_Orchid_BigSleep,DefaultItemPoolList[1].PoolProbability.BaseValueConstant,,0"</value><on>
 
-            #</Big Sleep>
+                #<hotfix><key>"SparkLevelPatchEntry-ApocBossGuaranteedBossPool26"</key><value>"Orchid_Caves_P,GD_CustomItemPools_allium.Mercenary.AlliumXmasSkins,BalancedItems,,((ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'GD_Orchid_BossWeapons.Launcher.RL_Torgue_3_12Pounder',Probability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True))"</value><on>
+
+                #<hotfix><key>"SparkLevelPatchEntry-ApocBossGuaranteedDIPLItemPool19"</key><value>"Orchid_Caves_P,GD_Orchid_Pop_Sandman.Balance.PawnBalance_Orchid_Sandman,DefaultItemPoolList[0],,(ItemPool=ItemPoolDefinition'GD_CustomItemPools_allium.Mercenary.AlliumXmasSkins',PoolProbability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1))"</value><on>
+
+                #<hotfix><key>"SparkLevelPatchEntry-ApocBossGuaranteedDIPLItemPool20"</key><value>"Orchid_Caves_P,GD_Orchid_Pop_Sandman.Balance.PawnBalance_Orchid_Sandman_MarauderMaster,DefaultItemPoolList[0],,(ItemPool=ItemPoolDefinition'GD_CustomItemPools_allium.Mercenary.AlliumXmasSkins',PoolProbability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1))"</value><on>
+
+                #<hotfix><key>"SparkLevelPatchEntry-ApocBossGuaranteedDIPLItemPool21"</key><value>"Orchid_Caves_P,GD_Orchid_Pop_Sandman.Balance.PawnBalance_Orchid_Sandman_Solo,DefaultItemPoolList[0],,(ItemPool=ItemPoolDefinition'GD_CustomItemPools_allium.Mercenary.AlliumXmasSkins',PoolProbability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1))"</value><on>
+
+            #</Sandman / Big Sleep>
 
         #</Guaranteed (100% Uniques, 100% Rares)>
 
@@ -3312,14 +3320,14 @@
 
             #</Bone Head 2.0>
 
-            #<No-Beard>
+            #<No-Beard><off>
 
-                # No-Beard is already set up to use a Stinkpot 100% of the time, though he
-                # uses a special "no-drop" version of the weapon which is slightly
-                # different than the version which gets dropped.  We're altering that pool
-                # so that he equips the user-droppable weapon version instead, which also
-                # means that No-Beard will have a 100% stinkpot drop rate, regardless of
-                # what probability is selected down below.
+                ## No-Beard is already set up to use a Stinkpot 100% of the time, though he<off>
+                ## uses a special "no-drop" version of the weapon which is slightly<off>
+                ## different than the version which gets dropped.  We're altering that pool<off>
+                ## so that he equips the user-droppable weapon version instead, which also<off>
+                ## means that No-Beard will have a 100% stinkpot drop rate, regardless of<off>
+                ## what probability is selected down below.<off>
 
                 #<hotfix><key>"SparkLevelPatchEntry-ApocBossVeryimprovedBossPool25"</key><value>"Orchid_OasisTown_P,GD_CustomItemPools_allium.Mercenary.AlliumXmasSkins,BalancedItems,,((ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'GD_Orchid_BossWeapons.AssaultRifle.AR_Jakobs_3_Stinkpot',Probability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True))"</value><off>
 
@@ -3329,16 +3337,24 @@
 
             #</No-Beard>
 
-            #<Big Sleep>
+            #<Sandman / Big Sleep><off>
 
-                # Big Sleep is a melee-only enemy so we ordinarily wouldn't touch him, but
-                # his drop is hardcoded at 33% in the base game data, rather than using
-                # the DropODDS variables.  So we're setting it in here so that it conforms
-                # to the drop rate the user has selected.
+                ## Ordinarily, Big Sleep (the melee-only enemy) has a chance of dropping<off>
+                ## the 12-Pounder, and Sandman (the weapon-using enemy) just drops from the<off>
+                ## Badass pool.  We're moving the 12-pounder drop/equip over to Sandman,<off>
+                ## which makes more sense, and should make for a more fun battle anyway.<off>
 
-                #<hotfix><key>"SparkLevelPatchEntry-ApocBossVeryimprovedBigSleepDrop0"</key><value>"Orchid_Caves_P,GD_Orchid_Pop_Sandman.Balance.PawnBalance_Orchid_BigSleep,DefaultItemPoolList[1].PoolProbability.BaseValueConstant,,0.75"</value><on>
+                #<hotfix><key>"SparkLevelPatchEntry-ApocBossVeryimprovedBigSleepDrop0"</key><value>"Orchid_Caves_P,GD_Orchid_Pop_Sandman.Balance.PawnBalance_Orchid_BigSleep,DefaultItemPoolList[1].PoolProbability.BaseValueConstant,,0"</value><off>
 
-            #</Big Sleep>
+                #<hotfix><key>"SparkLevelPatchEntry-ApocBossVeryimprovedBossPool26"</key><value>"Orchid_Caves_P,GD_CustomItemPools_allium.Mercenary.AlliumXmasSkins,BalancedItems,,((ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'GD_Orchid_BossWeapons.Launcher.RL_Torgue_3_12Pounder',Probability=(BaseValueConstant=0.75,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_CustomItemPools_MainGame.Soldier.VladofEpic',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.25,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True))"</value><off>
+
+                #<hotfix><key>"SparkLevelPatchEntry-ApocBossVeryimprovedDIPLItemPool19"</key><value>"Orchid_Caves_P,GD_Orchid_Pop_Sandman.Balance.PawnBalance_Orchid_Sandman,DefaultItemPoolList[0],,(ItemPool=ItemPoolDefinition'GD_CustomItemPools_allium.Mercenary.AlliumXmasSkins',PoolProbability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1))"</value><off>
+
+                #<hotfix><key>"SparkLevelPatchEntry-ApocBossVeryimprovedDIPLItemPool20"</key><value>"Orchid_Caves_P,GD_Orchid_Pop_Sandman.Balance.PawnBalance_Orchid_Sandman_MarauderMaster,DefaultItemPoolList[0],,(ItemPool=ItemPoolDefinition'GD_CustomItemPools_allium.Mercenary.AlliumXmasSkins',PoolProbability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1))"</value><off>
+
+                #<hotfix><key>"SparkLevelPatchEntry-ApocBossVeryimprovedDIPLItemPool21"</key><value>"Orchid_Caves_P,GD_Orchid_Pop_Sandman.Balance.PawnBalance_Orchid_Sandman_Solo,DefaultItemPoolList[0],,(ItemPool=ItemPoolDefinition'GD_CustomItemPools_allium.Mercenary.AlliumXmasSkins',PoolProbability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1))"</value><off>
+
+            #</Sandman / Big Sleep>
 
         #</Very Improved (50% Uniques, 75% Rares)>
 
@@ -3701,14 +3717,14 @@
 
             #</Bone Head 2.0>
 
-            #<No-Beard>
+            #<No-Beard><off>
 
-                # No-Beard is already set up to use a Stinkpot 100% of the time, though he
-                # uses a special "no-drop" version of the weapon which is slightly
-                # different than the version which gets dropped.  We're altering that pool
-                # so that he equips the user-droppable weapon version instead, which also
-                # means that No-Beard will have a 100% stinkpot drop rate, regardless of
-                # what probability is selected down below.
+                ## No-Beard is already set up to use a Stinkpot 100% of the time, though he<off>
+                ## uses a special "no-drop" version of the weapon which is slightly<off>
+                ## different than the version which gets dropped.  We're altering that pool<off>
+                ## so that he equips the user-droppable weapon version instead, which also<off>
+                ## means that No-Beard will have a 100% stinkpot drop rate, regardless of<off>
+                ## what probability is selected down below.<off>
 
                 #<hotfix><key>"SparkLevelPatchEntry-ApocBossImprovedBossPool25"</key><value>"Orchid_OasisTown_P,GD_CustomItemPools_allium.Mercenary.AlliumXmasSkins,BalancedItems,,((ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'GD_Orchid_BossWeapons.AssaultRifle.AR_Jakobs_3_Stinkpot',Probability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True))"</value><off>
 
@@ -3718,16 +3734,24 @@
 
             #</No-Beard>
 
-            #<Big Sleep>
+            #<Sandman / Big Sleep><off>
 
-                # Big Sleep is a melee-only enemy so we ordinarily wouldn't touch him, but
-                # his drop is hardcoded at 33% in the base game data, rather than using
-                # the DropODDS variables.  So we're setting it in here so that it conforms
-                # to the drop rate the user has selected.
+                ## Ordinarily, Big Sleep (the melee-only enemy) has a chance of dropping<off>
+                ## the 12-Pounder, and Sandman (the weapon-using enemy) just drops from the<off>
+                ## Badass pool.  We're moving the 12-pounder drop/equip over to Sandman,<off>
+                ## which makes more sense, and should make for a more fun battle anyway.<off>
 
-                #<hotfix><key>"SparkLevelPatchEntry-ApocBossImprovedBigSleepDrop0"</key><value>"Orchid_Caves_P,GD_Orchid_Pop_Sandman.Balance.PawnBalance_Orchid_BigSleep,DefaultItemPoolList[1].PoolProbability.BaseValueConstant,,0.6"</value><on>
+                #<hotfix><key>"SparkLevelPatchEntry-ApocBossImprovedBigSleepDrop0"</key><value>"Orchid_Caves_P,GD_Orchid_Pop_Sandman.Balance.PawnBalance_Orchid_BigSleep,DefaultItemPoolList[1].PoolProbability.BaseValueConstant,,0"</value><off>
 
-            #</Big Sleep>
+                #<hotfix><key>"SparkLevelPatchEntry-ApocBossImprovedBossPool26"</key><value>"Orchid_Caves_P,GD_CustomItemPools_allium.Mercenary.AlliumXmasSkins,BalancedItems,,((ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'GD_Orchid_BossWeapons.Launcher.RL_Torgue_3_12Pounder',Probability=(BaseValueConstant=0.6,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_CustomItemPools_MainGame.Soldier.VladofEpic',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.4,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True))"</value><off>
+
+                #<hotfix><key>"SparkLevelPatchEntry-ApocBossImprovedDIPLItemPool19"</key><value>"Orchid_Caves_P,GD_Orchid_Pop_Sandman.Balance.PawnBalance_Orchid_Sandman,DefaultItemPoolList[0],,(ItemPool=ItemPoolDefinition'GD_CustomItemPools_allium.Mercenary.AlliumXmasSkins',PoolProbability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1))"</value><off>
+
+                #<hotfix><key>"SparkLevelPatchEntry-ApocBossImprovedDIPLItemPool20"</key><value>"Orchid_Caves_P,GD_Orchid_Pop_Sandman.Balance.PawnBalance_Orchid_Sandman_MarauderMaster,DefaultItemPoolList[0],,(ItemPool=ItemPoolDefinition'GD_CustomItemPools_allium.Mercenary.AlliumXmasSkins',PoolProbability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1))"</value><off>
+
+                #<hotfix><key>"SparkLevelPatchEntry-ApocBossImprovedDIPLItemPool21"</key><value>"Orchid_Caves_P,GD_Orchid_Pop_Sandman.Balance.PawnBalance_Orchid_Sandman_Solo,DefaultItemPoolList[0],,(ItemPool=ItemPoolDefinition'GD_CustomItemPools_allium.Mercenary.AlliumXmasSkins',PoolProbability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1))"</value><off>
+
+            #</Sandman / Big Sleep>
 
         #</Improved (33% Uniques, 60% Rares)>
 
@@ -4090,14 +4114,14 @@
 
             #</Bone Head 2.0>
 
-            #<No-Beard>
+            #<No-Beard><off>
 
-                # No-Beard is already set up to use a Stinkpot 100% of the time, though he
-                # uses a special "no-drop" version of the weapon which is slightly
-                # different than the version which gets dropped.  We're altering that pool
-                # so that he equips the user-droppable weapon version instead, which also
-                # means that No-Beard will have a 100% stinkpot drop rate, regardless of
-                # what probability is selected down below.
+                ## No-Beard is already set up to use a Stinkpot 100% of the time, though he<off>
+                ## uses a special "no-drop" version of the weapon which is slightly<off>
+                ## different than the version which gets dropped.  We're altering that pool<off>
+                ## so that he equips the user-droppable weapon version instead, which also<off>
+                ## means that No-Beard will have a 100% stinkpot drop rate, regardless of<off>
+                ## what probability is selected down below.<off>
 
                 #<hotfix><key>"SparkLevelPatchEntry-ApocBossSlightBossPool25"</key><value>"Orchid_OasisTown_P,GD_CustomItemPools_allium.Mercenary.AlliumXmasSkins,BalancedItems,,((ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'GD_Orchid_BossWeapons.AssaultRifle.AR_Jakobs_3_Stinkpot',Probability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True))"</value><off>
 
@@ -4107,16 +4131,24 @@
 
             #</No-Beard>
 
-            #<Big Sleep>
+            #<Sandman / Big Sleep><off>
 
-                # Big Sleep is a melee-only enemy so we ordinarily wouldn't touch him, but
-                # his drop is hardcoded at 33% in the base game data, rather than using
-                # the DropODDS variables.  So we're setting it in here so that it conforms
-                # to the drop rate the user has selected.
+                ## Ordinarily, Big Sleep (the melee-only enemy) has a chance of dropping<off>
+                ## the 12-Pounder, and Sandman (the weapon-using enemy) just drops from the<off>
+                ## Badass pool.  We're moving the 12-pounder drop/equip over to Sandman,<off>
+                ## which makes more sense, and should make for a more fun battle anyway.<off>
 
-                #<hotfix><key>"SparkLevelPatchEntry-ApocBossSlightBigSleepDrop0"</key><value>"Orchid_Caves_P,GD_Orchid_Pop_Sandman.Balance.PawnBalance_Orchid_BigSleep,DefaultItemPoolList[1].PoolProbability.BaseValueConstant,,0.45"</value><on>
+                #<hotfix><key>"SparkLevelPatchEntry-ApocBossSlightBigSleepDrop0"</key><value>"Orchid_Caves_P,GD_Orchid_Pop_Sandman.Balance.PawnBalance_Orchid_BigSleep,DefaultItemPoolList[1].PoolProbability.BaseValueConstant,,0"</value><off>
 
-            #</Big Sleep>
+                #<hotfix><key>"SparkLevelPatchEntry-ApocBossSlightBossPool26"</key><value>"Orchid_Caves_P,GD_CustomItemPools_allium.Mercenary.AlliumXmasSkins,BalancedItems,,((ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'GD_Orchid_BossWeapons.Launcher.RL_Torgue_3_12Pounder',Probability=(BaseValueConstant=0.45,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_CustomItemPools_MainGame.Soldier.VladofEpic',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.55,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True))"</value><off>
+
+                #<hotfix><key>"SparkLevelPatchEntry-ApocBossSlightDIPLItemPool19"</key><value>"Orchid_Caves_P,GD_Orchid_Pop_Sandman.Balance.PawnBalance_Orchid_Sandman,DefaultItemPoolList[0],,(ItemPool=ItemPoolDefinition'GD_CustomItemPools_allium.Mercenary.AlliumXmasSkins',PoolProbability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1))"</value><off>
+
+                #<hotfix><key>"SparkLevelPatchEntry-ApocBossSlightDIPLItemPool20"</key><value>"Orchid_Caves_P,GD_Orchid_Pop_Sandman.Balance.PawnBalance_Orchid_Sandman_MarauderMaster,DefaultItemPoolList[0],,(ItemPool=ItemPoolDefinition'GD_CustomItemPools_allium.Mercenary.AlliumXmasSkins',PoolProbability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1))"</value><off>
+
+                #<hotfix><key>"SparkLevelPatchEntry-ApocBossSlightDIPLItemPool21"</key><value>"Orchid_Caves_P,GD_Orchid_Pop_Sandman.Balance.PawnBalance_Orchid_Sandman_Solo,DefaultItemPoolList[0],,(ItemPool=ItemPoolDefinition'GD_CustomItemPools_allium.Mercenary.AlliumXmasSkins',PoolProbability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1))"</value><off>
+
+            #</Sandman / Big Sleep>
 
         #</Slightly Improved (22% Uniques, 45% Rares)>
 
@@ -4479,14 +4511,14 @@
 
             #</Bone Head 2.0>
 
-            #<No-Beard>
+            #<No-Beard><off>
 
-                # No-Beard is already set up to use a Stinkpot 100% of the time, though he
-                # uses a special "no-drop" version of the weapon which is slightly
-                # different than the version which gets dropped.  We're altering that pool
-                # so that he equips the user-droppable weapon version instead, which also
-                # means that No-Beard will have a 100% stinkpot drop rate, regardless of
-                # what probability is selected down below.
+                ## No-Beard is already set up to use a Stinkpot 100% of the time, though he<off>
+                ## uses a special "no-drop" version of the weapon which is slightly<off>
+                ## different than the version which gets dropped.  We're altering that pool<off>
+                ## so that he equips the user-droppable weapon version instead, which also<off>
+                ## means that No-Beard will have a 100% stinkpot drop rate, regardless of<off>
+                ## what probability is selected down below.<off>
 
                 #<hotfix><key>"SparkLevelPatchEntry-ApocBossStockBossPool25"</key><value>"Orchid_OasisTown_P,GD_CustomItemPools_allium.Mercenary.AlliumXmasSkins,BalancedItems,,((ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'GD_Orchid_BossWeapons.AssaultRifle.AR_Jakobs_3_Stinkpot',Probability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True))"</value><off>
 
@@ -4496,16 +4528,24 @@
 
             #</No-Beard>
 
-            #<Big Sleep>
+            #<Sandman / Big Sleep><off>
 
-                # Big Sleep is a melee-only enemy so we ordinarily wouldn't touch him, but
-                # his drop is hardcoded at 33% in the base game data, rather than using
-                # the DropODDS variables.  So we're setting it in here so that it conforms
-                # to the drop rate the user has selected.
+                ## Ordinarily, Big Sleep (the melee-only enemy) has a chance of dropping<off>
+                ## the 12-Pounder, and Sandman (the weapon-using enemy) just drops from the<off>
+                ## Badass pool.  We're moving the 12-pounder drop/equip over to Sandman,<off>
+                ## which makes more sense, and should make for a more fun battle anyway.<off>
 
-                #<hotfix><key>"SparkLevelPatchEntry-ApocBossStockBigSleepDrop0"</key><value>"Orchid_Caves_P,GD_Orchid_Pop_Sandman.Balance.PawnBalance_Orchid_BigSleep,DefaultItemPoolList[1].PoolProbability.BaseValueConstant,,0.33"</value><on>
+                #<hotfix><key>"SparkLevelPatchEntry-ApocBossStockBigSleepDrop0"</key><value>"Orchid_Caves_P,GD_Orchid_Pop_Sandman.Balance.PawnBalance_Orchid_BigSleep,DefaultItemPoolList[1].PoolProbability.BaseValueConstant,,0"</value><off>
 
-            #</Big Sleep>
+                #<hotfix><key>"SparkLevelPatchEntry-ApocBossStockBossPool26"</key><value>"Orchid_Caves_P,GD_CustomItemPools_allium.Mercenary.AlliumXmasSkins,BalancedItems,,((ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'GD_Orchid_BossWeapons.Launcher.RL_Torgue_3_12Pounder',Probability=(BaseValueConstant=0.33,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_CustomItemPools_MainGame.Soldier.VladofEpic',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.67,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True))"</value><off>
+
+                #<hotfix><key>"SparkLevelPatchEntry-ApocBossStockDIPLItemPool19"</key><value>"Orchid_Caves_P,GD_Orchid_Pop_Sandman.Balance.PawnBalance_Orchid_Sandman,DefaultItemPoolList[0],,(ItemPool=ItemPoolDefinition'GD_CustomItemPools_allium.Mercenary.AlliumXmasSkins',PoolProbability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1))"</value><off>
+
+                #<hotfix><key>"SparkLevelPatchEntry-ApocBossStockDIPLItemPool20"</key><value>"Orchid_Caves_P,GD_Orchid_Pop_Sandman.Balance.PawnBalance_Orchid_Sandman_MarauderMaster,DefaultItemPoolList[0],,(ItemPool=ItemPoolDefinition'GD_CustomItemPools_allium.Mercenary.AlliumXmasSkins',PoolProbability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1))"</value><off>
+
+                #<hotfix><key>"SparkLevelPatchEntry-ApocBossStockDIPLItemPool21"</key><value>"Orchid_Caves_P,GD_Orchid_Pop_Sandman.Balance.PawnBalance_Orchid_Sandman_Solo,DefaultItemPoolList[0],,(ItemPool=ItemPoolDefinition'GD_CustomItemPools_allium.Mercenary.AlliumXmasSkins',PoolProbability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1))"</value><off>
+
+            #</Sandman / Big Sleep>
 
         #</Stock Equip (10% Uniques, 33% Rares)>
 
