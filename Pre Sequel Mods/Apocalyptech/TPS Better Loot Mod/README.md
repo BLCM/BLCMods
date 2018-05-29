@@ -278,6 +278,12 @@ bit...
 Mod Construction / Implementation Details
 -----------------------------------------
 
+*(This section is only relevant for someone looking to edit the mod in the
+same way I do, or just someone curious about my mod construction techniques.
+If you're just looking to run the mod, see the "Usage" section above.  The
+mod can, of course, be edited directly in FilterTool/BLCMM as well, once it's
+been imported.)*
+
 I actually generate this mod using a simple little Python script named
 `generate-source.py`, which enables me to do things like set the rarity
 drop levels from a single location at the top of the file, and have it
