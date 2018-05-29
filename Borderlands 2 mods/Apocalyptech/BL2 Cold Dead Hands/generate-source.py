@@ -1962,18 +1962,6 @@ hfs.add_level_hotfix('medicalmystery', 'MedicalMystery',
         ('GD_Weap_AssaultRifle.A_Weapons.AR_Bandit_5_Alien', 1, 'WeaponBalanceDefinition'),
     ])))
 
-# NoBeard's Stinkpot drop
-hfs.add_level_hotfix('nobeard_stinkpot_0', 'NoBeardStinkpot',
-    """Orchid_OasisTown_P,
-    GD_Orchid_ItemPoolsEnemyUse.WeaponPools.Pool_Weapons_EnemyUse_NoBeardStinkpot,
-    BalancedItems[0].InvBalanceDefinition,,
-    WeaponBalanceDefinition'GD_Orchid_BossWeapons.AssaultRifle.AR_Jakobs_3_Stinkpot'""")
-hfs.add_level_hotfix('nobeard_stinkpot_1', 'NoBeardStinkpot',
-    """Orchid_OasisTown_P,
-    GD_Orchid_ItemPoolsEnemyUse.WeaponPools.Pool_Weapons_EnemyUse_NoBeardStinkpot,
-    BalancedItems[0].bDropOnDeath,,
-    True""")
-
 # Laney's Dwarves - Better Loot Compat.  Deactivate the extra gemstone drop.
 
 for idx in range(7):
@@ -2974,6 +2962,32 @@ for (label, key, unique_pct, rare_pct) in [
         'GD_Population_Loader.Balance.Unique.PawnBalance_BoneHead2',
         3,
         level='Stockade_P',
+        activated=hotfix_activated)
+
+    # No-Beard (Orchid_OasisTown_P pool 0)
+    # Different from the rest, because he already equips a version of the
+    # Stinkpot at 100%.  We convert that to the "real" Stinkpot and keep the
+    # 100% equip rate.  This means that this could live outside our boss MUT
+    # category, but it's a bit cleaner to keep it in here.
+
+    setup_boss_pool('nobeard_pool_0', 'Orchid_OasisTown_P', other.level_pool_0,
+            None,
+            [
+                ('GD_Orchid_BossWeapons.AssaultRifle.AR_Jakobs_3_Stinkpot', 1, 'WeaponBalanceDefinition'),
+            ],
+            activated=hotfix_activated)
+
+    set_dipl_item_pool('nobeard_pool_1',
+            'GD_Orchid_Pop_NoBeard.PawnBalance_Orchid_NoBeard',
+            0,
+            other.level_pool_0,
+            level='Orchid_OasisTown_P',
+            activated=hotfix_activated)
+
+    set_dipl_item_prob('nobeard_pool_2',
+        'GD_Orchid_Pop_NoBeard.PawnBalance_Orchid_NoBeard',
+        1,
+        level='Orchid_OasisTown_P',
         activated=hotfix_activated)
 
     # Generate the section string
