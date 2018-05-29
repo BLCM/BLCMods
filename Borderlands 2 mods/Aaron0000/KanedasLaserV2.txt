@@ -8,19 +8,21 @@
 
         Features;
 
-        Uses explosive lasers instead of regular rockets.
+        Uses lasers instead of regular rockets.
 
         Very high accuracy for a launcher.
 
         Can inflict critical hits.
 
+        Can spawn in all elements, unlike the Pre-Sequel version.
+
         Notes:
 
-        Dave's is a hand-made replication of the Kaneda's Laser, while mine is basically a direct-port within limitations. Pick your poison (although Dave's will crash the game when used with a Pocket Rocket mod.)
+        Dave's is a hand-made replication of the Kaneda's Laser, while mine is basically a direct-port within limitations (GFX and SFX aren't perfect). Pick your poison (although Dave's will crash the game when used with a Pocket Rocket mod.)
 
-        This version won't delete elemental versions of the Kaneda's Laser, but don't expect elemental versions to work 100% right (The laser will be the weapon's element, but will still have explosive splash).
+        Uses and modifies the unused Harpoon Gun firing mode and explosion for everything. As long as there isn't a mod that modifies the Harpoon Gun, there should be no problems with conflicts.
 
-        Modifies the unused Harpoon Gun firing mode for the vast majority of the behavior, as well as a slight amount of the Cobra's explosion. As long as there isn't a mod that modifies the Harpoon Gun, there should be no problems.
+        For some odd reason, activating the mod twice will cause the explosion to stop working. So don't activate this twice or more in one session of Borderlands 2.
 
     #</Description>
 
@@ -54,7 +56,11 @@
 
         set GD_Sage_HarpoonGun.Projectile.Sage_HarpoonGun_FireMode ProjectileDefinition None
 
-        set GD_Sage_HarpoonGun.Projectile.Sage_HarpoonGun_FireMode OnAnyImpact (Behavior_Explode'GD_Iris_Weapons.FiringModes.Bullet_Sniper_Cobra:Behavior_Explode_5')
+        set GD_Sage_HarpoonGun.Projectile.Sage_HarpoonGun_FireMode ExplosionOverrideDefinition ExplosionCollectionDefinition'GD_Weap_Shared_Effects.Default_Elemental_Explosions'
+
+        set GD_Sage_HarpoonGun.Projectile.Sage_HarpoonGun_FireMode ExplosionOverideInstanceDataName ExplosionOverride
+
+        set GD_Sage_HarpoonGun.Projectile.Sage_HarpoonGun_FireMode OnAnyImpact (Behavior_Explode'GD_Sage_HarpoonGun.Projectile.Sage_HarpoonGun_Projectile:BehaviorProviderDefinition_0.Behavior_Explode_7')
 
         set GD_Sage_HarpoonGun.Projectile.Sage_HarpoonGun_FireMode ConditionalPartSysTemplate None
 
@@ -118,11 +124,63 @@
 
         set GD_Sage_HarpoonGun.Projectile.Sage_HarpoonGun_FireMode BeamRandomBoneTimeMax 2.000000
 
-        set GD_Iris_Weapons.FiringModes.Bullet_Sniper_Cobra:Behavior_Explode_5 DamageRadiusFormula (BaseValueConstant=250.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+        set GD_Sage_HarpoonGun.Projectile.Sage_HarpoonGun_Projectile:BehaviorProviderDefinition_0.Behavior_Explode_7 DamageRadiusFormula (BaseValueConstant=250.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
 
-        set GD_Iris_Weapons.FiringModes.Bullet_Sniper_Cobra:Behavior_Explode_5 DamageFormula (BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+        set GD_Sage_HarpoonGun.Projectile.Sage_HarpoonGun_Projectile:BehaviorProviderDefinition_0.Behavior_Explode_7 DamageFormula (BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',InitializationDefinition=None,BaseValueScaleConstant=1.000000)
 
-        set GD_Iris_Weapons.FiringModes.Bullet_Sniper_Cobra:Behavior_Explode_5 MomentumFormula (BaseValueConstant=1000.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+        set GD_Sage_HarpoonGun.Projectile.Sage_HarpoonGun_Projectile:BehaviorProviderDefinition_0.Behavior_Explode_7 MomentumFormula (BaseValueConstant=1000.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+
+        set GD_Sage_HarpoonGun.Projectile.Sage_HarpoonGun_Projectile:BehaviorProviderDefinition_0.Behavior_Explode_7 DamageSource Class'WillowGame.WillowDmgSource_Rocket'
+
+        set GD_Sage_HarpoonGun.Projectile.Sage_HarpoonGun_Projectile:BehaviorProviderDefinition_0.Behavior_Explode_7 Definition ExplosionDefinition'GD_Explosions.explosive.Explosion_ExplosiveMaster'
+
+        set GD_Sage_HarpoonGun.Projectile.Sage_HarpoonGun_Projectile:BehaviorProviderDefinition_0.Behavior_Explode_7 bReplicate True
+
+        set GD_Sage_HarpoonGun.Projectile.Sage_HarpoonGun_Projectile:BehaviorProviderDefinition_0.Behavior_Explode_7 bNoSound False
+
+        set GD_Sage_HarpoonGun.Projectile.Sage_HarpoonGun_Projectile:BehaviorProviderDefinition_0.Behavior_Explode_7 bDisableRadiusDamageFalloff True
+
+        set GD_Sage_HarpoonGun.Projectile.Sage_HarpoonGun_Projectile:BehaviorProviderDefinition_0.Behavior_Explode_7 bSkipTraceTest False
+
+        set GD_Sage_HarpoonGun.Projectile.Sage_HarpoonGun_Projectile:BehaviorProviderDefinition_0.Behavior_Explode_7 bCanDamageFriendlies False
+
+        set GD_Sage_HarpoonGun.Projectile.Sage_HarpoonGun_Projectile:BehaviorProviderDefinition_0.Behavior_Explode_7 bBarrelSource False
+
+        set GD_Sage_HarpoonGun.Projectile.Sage_HarpoonGun_Projectile:BehaviorProviderDefinition_0.Behavior_Explode_7 bPlantSource False
+
+        set GD_Sage_HarpoonGun.Projectile.Sage_HarpoonGun_Projectile:BehaviorProviderDefinition_0.Behavior_Explode_7 LocationOffset (X=0.000000,Y=0.000000,Z=0.000000)
+
+        set GD_Sage_HarpoonGun.Projectile.Sage_HarpoonGun_Projectile:BehaviorProviderDefinition_0.Behavior_Explode_7 SocketName None
+
+        set GD_Sage_HarpoonGun.Projectile.Sage_HarpoonGun_Projectile:BehaviorProviderDefinition_0.Behavior_Explode_7 DamageContext (InstancedDataContextName=,ContextObject=None,BehaviorContext=BCONTEXT_Self,bSupportsDefaultOutputLink=0)
+
+        set GD_Sage_HarpoonGun.Projectile.Sage_HarpoonGun_Projectile:BehaviorProviderDefinition_0.Behavior_Explode_7 HitNormal (X=0.000000,Y=0.000000,Z=0.000000)
+
+        set GD_Sage_HarpoonGun.Projectile.Sage_HarpoonGun_Projectile:BehaviorProviderDefinition_0.Behavior_Explode_7 StatusEffectDamage (BaseValueConstant=1.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.Weapon.WeaponStatusEffectDamage',InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+
+        set GD_Sage_HarpoonGun.Projectile.Sage_HarpoonGun_Projectile:BehaviorProviderDefinition_0.Behavior_Explode_7 StatusEffectChance (BaseValueConstant=1.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.Weapon.WeaponCombinedStatusEffectChanceModifier',InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+
+        set GD_Sage_HarpoonGun.Projectile.Sage_HarpoonGun_Projectile:BehaviorProviderDefinition_0.Behavior_Explode_7 OverrideContext (InstancedDataContextName=,ContextObject=None,BehaviorContext=BCONTEXT_Self,bSupportsDefaultOutputLink=0)
+
+        set GD_Sage_HarpoonGun.Projectile.Sage_HarpoonGun_Projectile:BehaviorProviderDefinition_0.Behavior_Explode_7 OverrideName ExplosionOverride
+
+        set GD_Sage_HarpoonGun.Projectile.Sage_HarpoonGun_Projectile:BehaviorProviderDefinition_0.Behavior_Explode_7 HitContext (InstancedDataContextName=,ContextObject=None,BehaviorContext=BCONTEXT_Self,bSupportsDefaultOutputLink=0)
+
+        set GD_Sage_HarpoonGun.Projectile.Sage_HarpoonGun_Projectile:BehaviorProviderDefinition_0.Behavior_Explode_7 BarrelSourceTime 0.000000
+
+        set GD_Sage_HarpoonGun.Projectile.Sage_HarpoonGun_Projectile:BehaviorProviderDefinition_0.Behavior_Explode_7 PlantSourceTime 0.000000
+
+        set GD_Sage_HarpoonGun.Projectile.Sage_HarpoonGun_Projectile:BehaviorProviderDefinition_0.Behavior_Explode_7 InstigatorSelfDamageScale 0.000000
+
+        set GD_Sage_HarpoonGun.Projectile.Sage_HarpoonGun_Projectile:BehaviorProviderDefinition_0.Behavior_Explode_7 OverrideActor None
+
+        set GD_Sage_HarpoonGun.Projectile.Sage_HarpoonGun_Projectile:BehaviorProviderDefinition_0.Behavior_Explode_7 SelfActor None
+
+        set GD_Sage_HarpoonGun.Projectile.Sage_HarpoonGun_Projectile:BehaviorProviderDefinition_0.Behavior_Explode_7 BitBombSourceTime 0.000000
+
+        set GD_Sage_HarpoonGun.Projectile.Sage_HarpoonGun_Projectile:BehaviorProviderDefinition_0.Behavior_Explode_7 Context (InstancedDataContextName=,ContextObject=None,BehaviorContext=BCONTEXT_Self,bSupportsDefaultOutputLink=1)
+
+        set GD_Sage_HarpoonGun.Projectile.Sage_HarpoonGun_Projectile:BehaviorProviderDefinition_0.Behavior_Explode_7 Outer FiringModeDefinition'GD_Sage_HarpoonGun.Projectile.Sage_HarpoonGun_FireMode'
 
         set GD_Weap_Launchers.A_Weapons_Legendary.RL_Tediore_5_Bunny:WeaponPartListCollectionDefinition_66 ElementalPartData (bEnabled=True,WeightedParts=((Part=WeaponPartDefinition'GD_Weap_Launchers.elemental.RL_Elemental_None',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=3),(Part=WeaponPartDefinition'GD_Weap_Launchers.elemental.RL_Elemental_Fire',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=0,DefaultWeightIndex=0),(Part=WeaponPartDefinition'GD_Weap_Launchers.elemental.RL_Elemental_Corrosive',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=0,DefaultWeightIndex=0),(Part=WeaponPartDefinition'GD_Weap_Launchers.elemental.RL_Elemental_Shock',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=0,DefaultWeightIndex=0),(Part=WeaponPartDefinition'GD_Weap_Launchers.elemental.RL_Elemental_Slag',Manufacturers=),MinGameStageIndex=0,MaxGameStageIndex=0,DefaultWeightIndex=0)))
 
