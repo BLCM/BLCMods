@@ -162,6 +162,22 @@ To generate the end result file, I actually run the small shell script
 
     ./generate-source.py && ../conv_to_mod.py -f "BL2 Cold Dead Hands"
 
+Ideas
+=====
+
+Just some ideas to keep track of, not sure if I'll implement these here, or
+in another mod, or as an optional category in THIS mod, etc...  Anyway,
+things to think about:
+
+* Restrict weapon manufacturer by level?  (Only Jakobs in Lynchwood, etc?)
+* Might be nifty to restrict weapon manufacturer by enemy type, though that
+  would require eating up more skinpools (the by-level idea could reuse all
+  of ours w/ hotfixes)
+* Option to allow Stalkers to have shields?  (Maybe just Roid shields?)
+* Fix orientation of items spawning in chests?  I think we can do this
+  without messing up "regular" item spawns because it's just the weapon mounts
+  that we'd change.  Not sure about shield mounts...
+
 Licenses
 ========
 
