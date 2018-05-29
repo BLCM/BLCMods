@@ -84,6 +84,13 @@ from the start of the battle which gun you'll receive.
 * Mad Mike will retain at least a 50% chance of spawning with a random
   rocket launcher, even on "guaranteed" unique loot configurations.
 
+* Master Gee is the only raid boss who actually uses a recognizable weapon --
+  a strange version of the Ahab.  He rarely ever actually fires it, though,
+  and his animations don't really support other weapons anyway, so I'm
+  leaving him alone.  He'll continue to use the special Ahab, and drop
+  however he'd otherwise drop.  (See other mods like Better Loot to improve
+  his (and other Raid boss) drops.)
+
 ### Configuration
 
 There are three main categories which you can use to customize the gear
@@ -183,6 +190,7 @@ things to think about:
 * Fix orientation of items spawning in chests?  I think we can do this
   without messing up "regular" item spawns because it's just the weapon mounts
   that we'd change.  Not sure about shield mounts...
+* Make Sandman use/equip the 12-Pounder, instead of dropping from Big Sleep?
 
 Licenses
 ========

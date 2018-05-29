@@ -2990,6 +2990,15 @@ for (label, key, unique_pct, rare_pct) in [
         level='Orchid_OasisTown_P',
         activated=hotfix_activated)
 
+    # Big Sleep (n/a)
+    # Just fixing a data inconsistency, really -- Big Sleep is melee-only.
+
+    hfs.add_level_hotfix('bigsleep_pool_0', 'BigSleepDrop',
+        """Orchid_Caves_P,
+        GD_Orchid_Pop_Sandman.Balance.PawnBalance_Orchid_BigSleep,
+        DefaultItemPoolList[1].PoolProbability.BaseValueConstant,,
+        {}""".format(rare_pct))
+
     # Generate the section string
     with open('input-file-bosses.txt', 'r') as df:
         boss_drops[key] = df.read().format(
