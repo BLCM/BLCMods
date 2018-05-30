@@ -141,6 +141,7 @@ for (label, demand_name, vehicle_name, class_name) in [
 mod_str = """#<{mod_name}>
 
     # {mod_name} v{mod_version}
+    # by Apocalyptech
     # Licensed under Public Domain / CC0 1.0 Universal
     #
     # Improves the speed of all varieties of sandskiffs.  They were already
