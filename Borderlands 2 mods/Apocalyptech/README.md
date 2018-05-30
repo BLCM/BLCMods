@@ -77,6 +77,11 @@ This simple mod improves the spawn rate for Muscles, a unique Bruiser who
 appears in Thousand Cuts.  He will be fairly likely to appear during a full
 playthrough of the level.
 
+Speedier Sandskiffs
+-------------------
+
+Improves the speed (and afterburner capability) of Sandskiffs.
+
 Utilities
 =========
 
