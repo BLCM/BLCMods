@@ -2990,6 +2990,28 @@ for (label, key, unique_pct, rare_pct) in [
         level='Orchid_OasisTown_P',
         activated=hotfix_activated)
 
+    # Benny the Booster (Orchid_OasisTown_P pool 1)
+
+    setup_boss_pool('benny_pool_0', 'Orchid_OasisTown_P', other.level_pool_1,
+            badass.equip_pool_ar,
+            [
+                ('GD_Orchid_BossWeapons.SMG.SMG_Dahl_3_SandHawk', rare_pct, 'WeaponBalanceDefinition'),
+            ],
+            activated=hotfix_activated)
+
+    set_dipl_item_pool('benny_pool_1',
+            'GD_Orchid_Pop_Deserters.Deserter1.PawnBalance_Orchid_Deserter1',
+            0,
+            other.level_pool_1,
+            level='Orchid_OasisTown_P',
+            activated=hotfix_activated)
+
+    set_dipl_item_prob('benny_pool_2',
+        'GD_Orchid_Pop_Deserters.Deserter1.PawnBalance_Orchid_Deserter1',
+        1,
+        level='Orchid_OasisTown_P',
+        activated=hotfix_activated)
+
     # Sandman / Big Sleep (Orchid_Caves_P pool 0)
 
     hfs.add_level_hotfix('bigsleep_pool_0', 'BigSleepDrop',
@@ -3046,6 +3068,30 @@ for (label, key, unique_pct, rare_pct) in [
         'GD_Orchid_Pop_PirateRadioGuy.PawnBalance_Orchid_PirateRadioGuy',
         2,
         level='Orchid_Spire_P',
+        activated=hotfix_activated)
+
+    # Toothless Terry (Orchid_ShipGraveyard_P pool 0)
+    # Using unique rather than rare, to make launcher pretty common still, since that's
+    # sort of his thing.
+
+    setup_boss_pool('terry_pool_0', 'Orchid_ShipGraveyard_P', other.level_pool_0,
+            badass.equip_pool_launchers,
+            [
+                ('GD_Orchid_BossWeapons.SniperRifles.Sniper_Maliwan_3_Pimpernel', unique_pct, 'WeaponBalanceDefinition'),
+            ],
+            activated=hotfix_activated)
+
+    set_dipl_item_pool('terry_pool_1',
+            'GD_Orchid_Pop_Deserters.Deserter3.PawnBalance_Orchid_Deserter3',
+            0,
+            other.level_pool_0,
+            level='Orchid_ShipGraveyard_P',
+            activated=hotfix_activated)
+
+    set_dipl_item_prob('terry_pool_2',
+        'GD_Orchid_Pop_Deserters.Deserter3.PawnBalance_Orchid_Deserter3',
+        1,
+        level='Orchid_ShipGraveyard_P',
         activated=hotfix_activated)
 
     # Generate the section string
