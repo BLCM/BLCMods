@@ -10,424 +10,432 @@
 
             #</Generic Boss Drop Weights (for non-weapon-using bosses)>
 
-            #<Midge-Mong>{line_suffix}
+            #<Base Game>{line_suffix}
 
-                {line_prefix}# Midge is a generic Badass Midget, but he's also the only one to spawn in Southern{line_suffix}
-                {line_prefix}# Shelf Bay, so we can just edit its equip pool.{line_suffix}
+                #<Midge-Mong>{line_suffix}
 
-                {hotfixes:midgemong_pool_0}
+                    {line_prefix}# Midge is a generic Badass Midget, but he's also the only one to spawn in Southern{line_suffix}
+                    {line_prefix}# Shelf Bay, so we can just edit its equip pool.{line_suffix}
 
-                {hotfixes:midgemong_pool_1}
+                    {hotfixes:midgemong_pool_0}
 
-                {hotfixes:midgemong_clean_pool}
+                    {hotfixes:midgemong_pool_1}
 
-            #</Midge-Mong>
+                    {hotfixes:midgemong_clean_pool}
 
-            #<Captain Flynt>{line_suffix}
+                #</Midge-Mong>
 
-                {line_prefix}# Flynt ordinarily has a guaranteed Tinderbox drop, and a possible Thunderball Fists{line_suffix}
-                {line_prefix}# drop.  We're combining those two, and Flynt will have one or the other (and drop{line_suffix}
-                {line_prefix}# it).{line_suffix}
+                #<Captain Flynt>{line_suffix}
 
-                {hotfixes:flynt_pool_0}
+                    {line_prefix}# Flynt ordinarily has a guaranteed Tinderbox drop, and a possible Thunderball Fists{line_suffix}
+                    {line_prefix}# drop.  We're combining those two, and Flynt will have one or the other (and drop{line_suffix}
+                    {line_prefix}# it).{line_suffix}
 
-                {hotfixes:flynt_pool_1}
+                    {hotfixes:flynt_pool_0}
 
-                {hotfixes:flynt_pool_2}
+                    {hotfixes:flynt_pool_1}
 
-                {hotfixes:flynt_pool_3}
+                    {hotfixes:flynt_pool_2}
 
-            #</Captain Flynt>
+                    {hotfixes:flynt_pool_3}
 
-            #<Bad Maw>{line_suffix}
+                #</Captain Flynt>
 
-                {line_prefix}# In vanilla BL2, Bad Maw doesn't have a specific weapon, but UCP adds{line_suffix}
-                {line_prefix}# Deliverance.  So, we're going to go ahead and force him to equip that.{line_suffix}
+                #<Bad Maw>{line_suffix}
 
-                {hotfixes:badmaw_pool_0}
+                    {line_prefix}# In vanilla BL2, Bad Maw doesn't have a specific weapon, but UCP adds{line_suffix}
+                    {line_prefix}# Deliverance.  So, we're going to go ahead and force him to equip that.{line_suffix}
 
-                {hotfixes:badmaw_pool_1}
+                    {hotfixes:badmaw_pool_0}
 
-                {hotfixes:badmaw_pool_2}
+                    {hotfixes:badmaw_pool_1}
 
-                {hotfixes:badmaw_pool_3}
+                    {hotfixes:badmaw_pool_2}
 
-                {hotfixes:badmaw_pool_4}
+                    {hotfixes:badmaw_pool_3}
 
-            #</Bad Maw>
+                    {hotfixes:badmaw_pool_4}
 
-            #<Assassins>{line_suffix}
+                #</Bad Maw>
 
-                {line_prefix}# The assassins share a common drop pool which has the Emperor, in{line_suffix}
-                {line_prefix}# addition to an individual pool per assassin.  We're pulling the{line_suffix}
-                {line_prefix}# Emperor into the individual pools and having them equip from that,{line_suffix}
-                {line_prefix}# while restricting the common pool to only have the second item{line_suffix}
-                {line_prefix}# (a customization){line_suffix}
+                #<Assassins>{line_suffix}
 
-                #<Common>{line_suffix}
+                    {line_prefix}# The assassins share a common drop pool which has the Emperor, in{line_suffix}
+                    {line_prefix}# addition to an individual pool per assassin.  We're pulling the{line_suffix}
+                    {line_prefix}# Emperor into the individual pools and having them equip from that,{line_suffix}
+                    {line_prefix}# while restricting the common pool to only have the second item{line_suffix}
+                    {line_prefix}# (a customization){line_suffix}
 
-                    {hotfixes:assassin_pool_0}
+                    #<Common>{line_suffix}
 
-                #</Common>
+                        {hotfixes:assassin_pool_0}
 
-                #<Assassin Wot>{line_suffix}
+                    #</Common>
 
-                    {line_prefix}set GD_Itempools.Runnables.Pool_AssassinWot bAutoReadyItems True{line_suffix}
+                    #<Assassin Wot>{line_suffix}
 
-                    {hotfixes:wot_pool_0}
+                        {line_prefix}set GD_Itempools.Runnables.Pool_AssassinWot bAutoReadyItems True{line_suffix}
 
-                    {hotfixes:wot_pool_1}
+                        {hotfixes:wot_pool_0}
 
-                    {hotfixes:wot_pool_2}
+                        {hotfixes:wot_pool_1}
 
-                #</Assassin Wot>
+                        {hotfixes:wot_pool_2}
 
-                #<Assassin Oney>{line_suffix}
+                    #</Assassin Wot>
 
-                    {line_prefix}set GD_Itempools.Runnables.Pool_AssassinOney bAutoReadyItems True{line_suffix}
+                    #<Assassin Oney>{line_suffix}
 
-                    {hotfixes:oney_pool_0}
+                        {line_prefix}set GD_Itempools.Runnables.Pool_AssassinOney bAutoReadyItems True{line_suffix}
 
-                    {hotfixes:oney_pool_1}
+                        {hotfixes:oney_pool_0}
 
-                    {hotfixes:oney_pool_2}
+                        {hotfixes:oney_pool_1}
 
-                #</Assassin Oney>
+                        {hotfixes:oney_pool_2}
 
-                #<Assassin Reeth>{line_suffix}
+                    #</Assassin Oney>
 
-                    {line_prefix}# Reeth is a Psycho, so only does Melee attacks.  We're going to alter{line_suffix}
-                    {line_prefix}# his Runnables pool anyway, though, since we disabled the Emperor out{line_suffix}
-                    {line_prefix}# in the common pool, and he couldn't drop it otherwise.{line_suffix}
+                    #<Assassin Reeth>{line_suffix}
 
-                    {hotfixes:reeth_pool_0}
+                        {line_prefix}# Reeth is a Psycho, so only does Melee attacks.  We're going to alter{line_suffix}
+                        {line_prefix}# his Runnables pool anyway, though, since we disabled the Emperor out{line_suffix}
+                        {line_prefix}# in the common pool, and he couldn't drop it otherwise.{line_suffix}
 
-                #</Assassin Reeth>
+                        {hotfixes:reeth_pool_0}
 
-                #<Assassin Rouf>
+                    #</Assassin Reeth>
 
-                    {line_prefix}set GD_Itempools.Runnables.Pool_AssassinRouf bAutoReadyItems True{line_suffix}
+                    #<Assassin Rouf>
 
-                    {hotfixes:rouf_pool_0}
+                        {line_prefix}set GD_Itempools.Runnables.Pool_AssassinRouf bAutoReadyItems True{line_suffix}
 
-                    {hotfixes:rouf_pool_1}
+                        {hotfixes:rouf_pool_0}
 
-                    {hotfixes:rouf_pool_2}
+                        {hotfixes:rouf_pool_1}
 
-                #</Assassin Rouf>
+                        {hotfixes:rouf_pool_2}
 
-            #</Assassins>
+                    #</Assassin Rouf>
 
-            #<Incinerator Clayton>{line_suffix}
+                #</Assassins>
 
-                {line_prefix}# Clayton drops the Pyrophobia, which we don't care about because he's a Psycho and{line_suffix}
-                {line_prefix}# only does melee, but UCP also adds in Flame of the Firehawk.  So, fiddle with{line_suffix}
-                {line_prefix}# the pools so that he can equip that.  Also clean out the Runnables, post-UCP.{line_suffix}
+                #<Incinerator Clayton>{line_suffix}
 
-                {hotfixes:clayton_pool_0}
+                    {line_prefix}# Clayton drops the Pyrophobia, which we don't care about because he's a Psycho and{line_suffix}
+                    {line_prefix}# only does melee, but UCP also adds in Flame of the Firehawk.  So, fiddle with{line_suffix}
+                    {line_prefix}# the pools so that he can equip that.  Also clean out the Runnables, post-UCP.{line_suffix}
 
-                {hotfixes:clayton_pool_1}
+                    {hotfixes:clayton_pool_0}
 
-                {hotfixes:clayton_pool_2}
+                    {hotfixes:clayton_pool_1}
 
-            #</Incinerator Clayton>
+                    {hotfixes:clayton_pool_2}
 
-            #<Flinter>{line_suffix}
+                #</Incinerator Clayton>
 
-                {line_prefix}# In vanilla BL2, Flinter doesn't have a specific weapon, but UCP adds{line_suffix}
-                {line_prefix}# RokSalt.{line_suffix}
+                #<Flinter>{line_suffix}
 
-                {hotfixes:flinter_pool_0}
+                    {line_prefix}# In vanilla BL2, Flinter doesn't have a specific weapon, but UCP adds{line_suffix}
+                    {line_prefix}# RokSalt.{line_suffix}
 
-                {hotfixes:flinter_pool_1}
+                    {hotfixes:flinter_pool_0}
 
-                {hotfixes:flinter_pool_2}
+                    {hotfixes:flinter_pool_1}
 
-            #</Flinter>
+                    {hotfixes:flinter_pool_2}
 
-            #<Mad Mike>{line_suffix}
+                #</Flinter>
 
-                {line_prefix}# UCP added Madhous! as a potential drop.  Mad Mike's whole Thing is sort{line_suffix}
-                {line_prefix}# of that he always has a launcher, but I'm going to go ahead and just{line_suffix}
-                {line_prefix}# split up his potential equip pool, instead.{line_suffix}
+                #<Mad Mike>{line_suffix}
 
-                {hotfixes:mad_mike_pool_0}
+                    {line_prefix}# UCP added Madhous! as a potential drop.  Mad Mike's whole Thing is sort{line_suffix}
+                    {line_prefix}# of that he always has a launcher, but I'm going to go ahead and just{line_suffix}
+                    {line_prefix}# split up his potential equip pool, instead.{line_suffix}
 
-                {hotfixes:mad_mike_pool_1}
+                    {hotfixes:mad_mike_pool_0}
 
-                {hotfixes:mad_mike_pool_2}
+                    {hotfixes:mad_mike_pool_1}
 
-            #</Mad Mike>
+                    {hotfixes:mad_mike_pool_2}
 
-            #<Prospector Zeke>{line_suffix}
+                #</Mad Mike>
 
-                {line_prefix}# Ordinarily, Zeke has no unique drop, but UCP added in Pitchfork{line_suffix}
+                #<Prospector Zeke>{line_suffix}
 
-                {hotfixes:zeke_pool_0}
+                    {line_prefix}# Ordinarily, Zeke has no unique drop, but UCP added in Pitchfork{line_suffix}
 
-                {hotfixes:zeke_pool_1}
+                    {hotfixes:zeke_pool_0}
 
-                {hotfixes:zeke_pool_2}
+                    {hotfixes:zeke_pool_1}
 
-            #</Prospector Zeke>
+                    {hotfixes:zeke_pool_2}
 
-            #<Laney>{line_suffix}
+                #</Prospector Zeke>
 
-                {line_prefix}# Laney can drop the Gub.  No need to use our custom pools here,{line_suffix}
-                {line_prefix}# since nothing but Laney uses that pool, even in UCP.{line_suffix}
+                #<Laney>{line_suffix}
 
-                {line_prefix}set GD_Itempools.Runnables.Pool_Laney bAutoReadyItems True{line_suffix}
+                    {line_prefix}# Laney can drop the Gub.  No need to use our custom pools here,{line_suffix}
+                    {line_prefix}# since nothing but Laney uses that pool, even in UCP.{line_suffix}
 
-                {hotfixes:laney_pool_0}
+                    {line_prefix}set GD_Itempools.Runnables.Pool_Laney bAutoReadyItems True{line_suffix}
 
-                {hotfixes:laney_pool_1}
+                    {hotfixes:laney_pool_0}
 
-                {hotfixes:laney_pool_2}
+                    {hotfixes:laney_pool_1}
 
-            #</Laney>
+                    {hotfixes:laney_pool_2}
 
-            #<Smash-Head>{line_suffix}
+                #</Laney>
 
-                {line_prefix}# UCP adds the Roaster to Smash-Head's default Sledge's Shotgun drop.{line_suffix}
+                #<Smash-Head>{line_suffix}
 
-                {hotfixes:smashhead_pool_0}
+                    {line_prefix}# UCP adds the Roaster to Smash-Head's default Sledge's Shotgun drop.{line_suffix}
 
-                {hotfixes:smashhead_pool_1}
+                    {hotfixes:smashhead_pool_0}
 
-                {hotfixes:smashhead_pool_2}
+                    {hotfixes:smashhead_pool_1}
 
-                {hotfixes:smashhead_pool_3}
+                    {hotfixes:smashhead_pool_2}
 
-            #</Smash-Head>
+                    {hotfixes:smashhead_pool_3}
 
-            #<Bagman>{line_suffix}
+                #</Smash-Head>
 
-                {line_prefix}# Bagman had a chance to drop the Pot o' Gold, so make that a guaranteed{line_suffix}
-                {line_prefix}# thing.{line_suffix}
+                #<Bagman>{line_suffix}
 
-                {hotfixes:bagman_pool_0}
+                    {line_prefix}# Bagman had a chance to drop the Pot o' Gold, so make that a guaranteed{line_suffix}
+                    {line_prefix}# thing.{line_suffix}
 
-                {hotfixes:bagman_pool_1}
+                    {hotfixes:bagman_pool_0}
 
-                {hotfixes:bagman_pool_2}
+                    {hotfixes:bagman_pool_1}
 
-            #</Bagman>
+                    {hotfixes:bagman_pool_2}
 
-            #<Muscles>{line_suffix}
+                #</Bagman>
 
-                {line_prefix}# UCP added Sledge's Shotgun to Muscles{line_suffix}
+                #<Muscles>{line_suffix}
 
-                {hotfixes:muscles_pool_0}
+                    {line_prefix}# UCP added Sledge's Shotgun to Muscles{line_suffix}
 
-                {hotfixes:muscles_pool_1}
+                    {hotfixes:muscles_pool_0}
 
-                {hotfixes:muscles_pool_2}
+                    {hotfixes:muscles_pool_1}
 
-            #</Muscles>
+                    {hotfixes:muscles_pool_2}
 
-            #<Foreman Jasper>{line_suffix}
+                #</Muscles>
 
-                {line_prefix}# Can drop the Black Hole, so make that a possible equip.{line_suffix}
+                #<Foreman Jasper>{line_suffix}
 
-                {hotfixes:foreman_pool_0}
+                    {line_prefix}# Can drop the Black Hole, so make that a possible equip.{line_suffix}
 
-                {hotfixes:foreman_pool_1}
+                    {hotfixes:foreman_pool_0}
 
-            #</Foreman Jasper>
+                    {hotfixes:foreman_pool_1}
 
-            #<Gettle>{line_suffix}
+                #</Foreman Jasper>
 
-                {line_prefix}# Can drop the Lyuda.  Nothing else uses this Runnable, so go{line_suffix}
-                {line_prefix}# ahead and use it.{line_suffix}
+                #<Gettle>{line_suffix}
 
-                {line_prefix}set GD_Itempools.Runnables.Pool_Gettle bAutoReadyItems True{line_suffix}
+                    {line_prefix}# Can drop the Lyuda.  Nothing else uses this Runnable, so go{line_suffix}
+                    {line_prefix}# ahead and use it.{line_suffix}
 
-                {hotfixes:gettle_pool_0}
+                    {line_prefix}set GD_Itempools.Runnables.Pool_Gettle bAutoReadyItems True{line_suffix}
 
-                {hotfixes:gettle_pool_1}
+                    {hotfixes:gettle_pool_0}
 
-                {hotfixes:gettle_pool_2}
+                    {hotfixes:gettle_pool_1}
 
-            #</Gettle>
+                    {hotfixes:gettle_pool_2}
 
-            #<Mobley>{line_suffix}
+                #</Gettle>
 
-                {line_prefix}# Can drop the Veruc.{line_suffix}
+                #<Mobley>{line_suffix}
 
-                {hotfixes:mobley_pool_0}
+                    {line_prefix}# Can drop the Veruc.{line_suffix}
 
-                {hotfixes:mobley_pool_1}
+                    {hotfixes:mobley_pool_0}
 
-                {hotfixes:mobley_pool_2}
+                    {hotfixes:mobley_pool_1}
 
-            #</Mobley>
+                    {hotfixes:mobley_pool_2}
 
-            #<Mick Zaford>{line_suffix}
+                #</Mobley>
 
-                {line_prefix}# Can drop the Maggie{line_suffix}
+                #<Mick Zaford>{line_suffix}
 
-                {hotfixes:zaford_pool_0}
+                    {line_prefix}# Can drop the Maggie{line_suffix}
 
-                {hotfixes:zaford_pool_1}
+                    {hotfixes:zaford_pool_0}
 
-                {hotfixes:zaford_pool_2}
+                    {hotfixes:zaford_pool_1}
 
-            #</Mick Zaford>
+                    {hotfixes:zaford_pool_2}
 
-            #<Jimbo & Tector Hodunk>{line_suffix}
+                #</Mick Zaford>
 
-                {line_prefix}# These folks can drop the Slagga.  Prevent Jimbo from having{line_suffix}
-                {line_prefix}# any actual gun equip, since all he does is toss grenades.{line_suffix}
+                #<Jimbo & Tector Hodunk>{line_suffix}
 
-                {hotfixes:hodunk_pool_0}
+                    {line_prefix}# These folks can drop the Slagga.  Prevent Jimbo from having{line_suffix}
+                    {line_prefix}# any actual gun equip, since all he does is toss grenades.{line_suffix}
 
-                {hotfixes:hodunk_pool_1}
+                    {hotfixes:hodunk_pool_0}
 
-                {hotfixes:hodunk_pool_2}
+                    {hotfixes:hodunk_pool_1}
 
-                {hotfixes:hodunk_pool_3}
+                    {hotfixes:hodunk_pool_2}
 
-            #</Jimbo & Tector Hodunk>
+                    {hotfixes:hodunk_pool_3}
 
-            #<Deputy Winger>{line_suffix}
+                #</Jimbo & Tector Hodunk>
 
-                {line_prefix}# Ordinarily, Deputy Winger doesn't have any unique drops.  UCP adds in the{line_suffix}
-                {line_prefix}# Order shield (and Deputy's Badge relic, though we don't care about that),{line_suffix}
-                {line_prefix}# so ensure that the Order is a possible equip.{line_suffix}
+                #<Deputy Winger>{line_suffix}
 
-                {hotfixes:winger_pool_0}
+                    {line_prefix}# Ordinarily, Deputy Winger doesn't have any unique drops.  UCP adds in the{line_suffix}
+                    {line_prefix}# Order shield (and Deputy's Badge relic, though we don't care about that),{line_suffix}
+                    {line_prefix}# so ensure that the Order is a possible equip.{line_suffix}
 
-                {hotfixes:winger_pool_1}
+                    {hotfixes:winger_pool_0}
 
-                {hotfixes:winger_pool_2}
+                    {hotfixes:winger_pool_1}
 
-            #</Deputy Winger>
+                    {hotfixes:winger_pool_2}
 
-            #<Sheriff of Lynchwood>{line_suffix}
+                #</Deputy Winger>
 
-                {line_prefix}# Can drop the Law.  We have to do a bit of work here because the Law drop is{line_suffix}
-                {line_prefix}# lumped in with the Sheriff's Badge relic.{line_suffix}
+                #<Sheriff of Lynchwood>{line_suffix}
 
-                {hotfixes:sheriff_pool_0}
+                    {line_prefix}# Can drop the Law.  We have to do a bit of work here because the Law drop is{line_suffix}
+                    {line_prefix}# lumped in with the Sheriff's Badge relic.{line_suffix}
 
-                {hotfixes:sheriff_pool_1}
+                    {hotfixes:sheriff_pool_0}
 
-                {hotfixes:sheriff_pool_2}
+                    {hotfixes:sheriff_pool_1}
 
-            #</Sheriff of Lynchwood>
+                    {hotfixes:sheriff_pool_2}
 
-            #<Mortar>{line_suffix}
+                #</Sheriff of Lynchwood>
 
-                {line_prefix}# Mortar ordinarly just drops the Pandemic (which we don't care about), but{line_suffix}
-                {line_prefix}# UCP also adds in Evil Smasher, so use that.{line_suffix}
+                #<Mortar>{line_suffix}
 
-                {hotfixes:mortar_pool_0}
+                    {line_prefix}# Mortar ordinarly just drops the Pandemic (which we don't care about), but{line_suffix}
+                    {line_prefix}# UCP also adds in Evil Smasher, so use that.{line_suffix}
 
-                {hotfixes:mortar_pool_1}
+                    {hotfixes:mortar_pool_0}
 
-                {hotfixes:mortar_pool_2}
+                    {hotfixes:mortar_pool_1}
 
-            #</Mortar>
+                    {hotfixes:mortar_pool_2}
 
-            #<Hunter Hellquist>{line_suffix}
+                #</Mortar>
 
-                {line_prefix}# Hunter Hellquist can drop the Bee, so make it so that's equippable.{line_suffix}
+                #<Hunter Hellquist>{line_suffix}
 
-                {hotfixes:hunter_pool_0}
+                    {line_prefix}# Hunter Hellquist can drop the Bee, so make it so that's equippable.{line_suffix}
 
-                {hotfixes:hunter_pool_1}
+                    {hotfixes:hunter_pool_0}
 
-                {hotfixes:hunter_pool_2}
+                    {hotfixes:hunter_pool_1}
 
-            #</Hunter Hellquist>
+                    {hotfixes:hunter_pool_2}
 
-            #<Bone Head 2.0>{line_suffix}
+                #</Hunter Hellquist>
 
-                {line_prefix}# Bone Head 2.0 ordinarily drops the Bone Shredder, and UCP added Shredifier{line_suffix}
-                {line_prefix}# as well.  Add those both into the equip pool.{line_suffix}
+                #<Bone Head 2.0>{line_suffix}
 
-                {hotfixes:bonehead2_pool_0}
+                    {line_prefix}# Bone Head 2.0 ordinarily drops the Bone Shredder, and UCP added Shredifier{line_suffix}
+                    {line_prefix}# as well.  Add those both into the equip pool.{line_suffix}
 
-                {hotfixes:bonehead2_pool_1}
+                    {hotfixes:bonehead2_pool_0}
 
-                {hotfixes:bonehead2_pool_2}
+                    {hotfixes:bonehead2_pool_1}
 
-                {hotfixes:bonehead2_pool_3}
+                    {hotfixes:bonehead2_pool_2}
 
-            #</Bone Head 2.0>
+                    {hotfixes:bonehead2_pool_3}
 
-            #<No-Beard>{line_suffix}
+                #</Bone Head 2.0>
 
-                {line_prefix}# No-Beard is already set up to use a Stinkpot 100% of the time, though he{line_suffix}
-                {line_prefix}# uses a special "no-drop" version of the weapon which is slightly{line_suffix}
-                {line_prefix}# different than the version which gets dropped.  We're altering that pool{line_suffix}
-                {line_prefix}# so that he equips the user-droppable weapon version instead, which also{line_suffix}
-                {line_prefix}# means that No-Beard will have a 100% stinkpot drop rate, regardless of{line_suffix}
-                {line_prefix}# what probability is selected down below.{line_suffix}
+            #</Base Game>
 
-                {hotfixes:nobeard_pool_0}
+            #<Captain Scarlett DLC>{line_suffix}
 
-                {hotfixes:nobeard_pool_1}
+                #<No-Beard>{line_suffix}
 
-                {hotfixes:nobeard_pool_2}
+                    {line_prefix}# No-Beard is already set up to use a Stinkpot 100% of the time, though he{line_suffix}
+                    {line_prefix}# uses a special "no-drop" version of the weapon which is slightly{line_suffix}
+                    {line_prefix}# different than the version which gets dropped.  We're altering that pool{line_suffix}
+                    {line_prefix}# so that he equips the user-droppable weapon version instead, which also{line_suffix}
+                    {line_prefix}# means that No-Beard will have a 100% stinkpot drop rate, regardless of{line_suffix}
+                    {line_prefix}# what probability is selected down below.{line_suffix}
 
-            #</No-Beard>
+                    {hotfixes:nobeard_pool_0}
 
-            #<Benny the Booster>{line_suffix}
+                    {hotfixes:nobeard_pool_1}
 
-                {line_prefix}# UCP adds Sand Hawk to Benny, so equip that.{line_suffix}
+                    {hotfixes:nobeard_pool_2}
 
-                {hotfixes:benny_pool_0}
+                #</No-Beard>
 
-                {hotfixes:benny_pool_1}
+                #<Benny the Booster>{line_suffix}
 
-                {hotfixes:benny_pool_2}
+                    {line_prefix}# UCP adds Sand Hawk to Benny, so equip that.{line_suffix}
 
-            #</Benny the Booster>
+                    {hotfixes:benny_pool_0}
 
-            #<Sandman / Big Sleep>{line_suffix}
+                    {hotfixes:benny_pool_1}
 
-                {line_prefix}# Ordinarily, Big Sleep (the melee-only enemy) has a chance of dropping{line_suffix}
-                {line_prefix}# the 12-Pounder, and Sandman (the weapon-using enemy) just drops from the{line_suffix}
-                {line_prefix}# Badass pool.  We're moving the 12-pounder drop/equip over to Sandman,{line_suffix}
-                {line_prefix}# which makes more sense, and should make for a more fun battle anyway.{line_suffix}
+                    {hotfixes:benny_pool_2}
 
-                {hotfixes:bigsleep_pool_0}
+                #</Benny the Booster>
 
-                {hotfixes:sandman_pool_0}
+                #<Sandman / Big Sleep>{line_suffix}
 
-                {hotfixes:sandman_pool_1}
+                    {line_prefix}# Ordinarily, Big Sleep (the melee-only enemy) has a chance of dropping{line_suffix}
+                    {line_prefix}# the 12-Pounder, and Sandman (the weapon-using enemy) just drops from the{line_suffix}
+                    {line_prefix}# Badass pool.  We're moving the 12-pounder drop/equip over to Sandman,{line_suffix}
+                    {line_prefix}# which makes more sense, and should make for a more fun battle anyway.{line_suffix}
 
-                {hotfixes:sandman_pool_2}
+                    {hotfixes:bigsleep_pool_0}
 
-                {hotfixes:sandman_pool_3}
+                    {hotfixes:sandman_pool_0}
 
-            #</Sandman / Big Sleep>
+                    {hotfixes:sandman_pool_1}
 
-            #<DJ Tanner>{line_suffix}
+                    {hotfixes:sandman_pool_2}
 
-                {line_prefix}# UCP adds the Sham to DJ Tanner, so equip that.{line_suffix}
+                    {hotfixes:sandman_pool_3}
 
-                {hotfixes:tanner_pool_0}
+                #</Sandman / Big Sleep>
 
-                {hotfixes:tanner_pool_1}
+                #<DJ Tanner>{line_suffix}
 
-                {hotfixes:tanner_pool_2}
+                    {line_prefix}# UCP adds the Sham to DJ Tanner, so equip that.{line_suffix}
 
-            #</DJ Tanner>
+                    {hotfixes:tanner_pool_0}
 
-            #<Toothless Terry>{line_suffix}
+                    {hotfixes:tanner_pool_1}
 
-                {line_prefix}# UCP adds the Pimpernel, so equip that.{line_suffix}
-                {line_prefix}# Using a lower percent chance for the Pimpernel than UCP gives,{line_suffix}
-                {line_prefix}# since it seems like Terry's Thing is sort of the launcher.{line_suffix}
+                    {hotfixes:tanner_pool_2}
 
-                {hotfixes:terry_pool_0}
+                #</DJ Tanner>
 
-                {hotfixes:terry_pool_1}
+                #<Toothless Terry>{line_suffix}
 
-                {hotfixes:terry_pool_2}
+                    {line_prefix}# UCP adds the Pimpernel, so equip that.{line_suffix}
+                    {line_prefix}# Using a lower percent chance for the Pimpernel than UCP gives,{line_suffix}
+                    {line_prefix}# since it seems like Terry's Thing is sort of the launcher.{line_suffix}
 
-            #</Toothless Terry>
+                    {hotfixes:terry_pool_0}
+
+                    {hotfixes:terry_pool_1}
+
+                    {hotfixes:terry_pool_2}
+
+                #</Toothless Terry>
+
+            #</Captain Scarlett DLC>
 
         #</{boss_label}>
