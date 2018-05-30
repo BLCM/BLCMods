@@ -28,8 +28,8 @@ via world drops, chests, and the like.
 
 This mod is still under development.
 
-* The base BL2 game should be all right at the moment, but I have not
-  touched anything in the DLCs yet.
+* The base BL2 game, and the Captain Scarlett DLC should be all right at
+  the moment.  Other DLCs have not been touched yet.
 
 * The mod's not been tested much without Better Loot also active
 
