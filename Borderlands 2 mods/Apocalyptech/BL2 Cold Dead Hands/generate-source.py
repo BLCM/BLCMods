@@ -3026,6 +3026,28 @@ for (label, key, unique_pct, rare_pct) in [
             level='Orchid_Caves_P',
             activated=hotfix_activated)
 
+    # DJ Tanner (Orchid_Spire_P pool 0)
+
+    setup_boss_pool('tanner_pool_0', 'Orchid_Spire_P', other.level_pool_0,
+            badass.pool_shields,
+            [
+                ('GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Absorption_05_LegendaryNormal', unique_pct, 'InventoryBalanceDefinition'),
+            ],
+            activated=hotfix_activated)
+
+    set_dipl_item_pool('tanner_pool_1',
+            'GD_Orchid_Pop_PirateRadioGuy.PawnBalance_Orchid_PirateRadioGuy',
+            1,
+            other.level_pool_0,
+            level='Orchid_Spire_P',
+            activated=hotfix_activated)
+
+    set_dipl_item_prob('tanner_pool_2',
+        'GD_Orchid_Pop_PirateRadioGuy.PawnBalance_Orchid_PirateRadioGuy',
+        2,
+        level='Orchid_Spire_P',
+        activated=hotfix_activated)
+
     # Generate the section string
     with open('input-file-bosses.txt', 'r') as df:
         boss_drops[key] = df.read().format(
