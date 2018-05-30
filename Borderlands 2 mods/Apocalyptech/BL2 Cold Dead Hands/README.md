@@ -73,11 +73,6 @@ shield, they will spawn with one of those items chosen randomly, and that
 will be the item that they'll drop.  So you should be able to tell right
 from the start of the battle which gun you'll receive.
 
-### Other Pool Tweaks
-
-* Big Sleep is usually the one to drop the 12 Pounder, but that drop/equip
-  has been moved to Sandman.
-
 ### Exceptions
 
 * Doc Mercy has to be using an E-Tech blaster for Medical Mystery to make
@@ -95,6 +90,16 @@ from the start of the battle which gun you'll receive.
   leaving him alone.  He'll continue to use the special Ahab, and drop
   however he'd otherwise drop.  (See other mods like Better Loot to improve
   his (and other Raid boss) drops.)
+
+* UCP adds a Manly Man shield drop to H3RL-E.  Even though H3RL-E uses
+  a shield normally, the Manly Man would only nerf the fight, which I'm
+  not keen to do.  So H3RL-E may drop the Manly Man without actually having
+  it equipped.
+
+### Other Pool Tweaks
+
+* Big Sleep is usually the one to drop the 12 Pounder, but that drop/equip
+  has been moved to Sandman.
 
 ### Configuration
 

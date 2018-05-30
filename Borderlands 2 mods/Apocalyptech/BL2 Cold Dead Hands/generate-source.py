@@ -3094,6 +3094,28 @@ for (label, key, unique_pct, rare_pct) in [
         level='Orchid_ShipGraveyard_P',
         activated=hotfix_activated)
 
+    # P3RV-E (Orchid_Refinery_P pool 0)
+
+    setup_boss_pool('pervy_pool_0', 'Orchid_Refinery_P', other.level_pool_0,
+            badass.equip_pool_ar,
+            [
+                ('GD_Weap_SMG.A_Weapons_Unique.SMG_Maliwan_3_BadTouch', rare_pct, 'WeaponBalanceDefinition'),
+            ],
+            activated=hotfix_activated)
+
+    set_dipl_item_pool('pervy_pool_1',
+            'GD_Orchid_Pop_Pervbot.PawnBalance_Orchid_Pervbot',
+            0,
+            other.level_pool_0,
+            level='Orchid_Refinery_P',
+            activated=hotfix_activated)
+
+    set_dipl_item_prob('pervy_pool_2',
+        'GD_Orchid_Pop_Pervbot.PawnBalance_Orchid_Pervbot',
+        2,
+        level='Orchid_Refinery_P',
+        activated=hotfix_activated)
+
     # Generate the section string
     with open('input-file-bosses.txt', 'r') as df:
         boss_drops[key] = df.read().format(
