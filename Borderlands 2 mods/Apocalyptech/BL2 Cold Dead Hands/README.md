@@ -106,6 +106,8 @@ from the start of the battle which gun you'll receive.
   being manufacturer-restricted, badass gang members in the Torgue DLC will
   just use the standard badass equip pool that all other badasses use.
 
+* Torgue DLC gang members can equip/use launchers now.
+
 ### Configuration
 
 There are three main categories which you can use to customize the gear

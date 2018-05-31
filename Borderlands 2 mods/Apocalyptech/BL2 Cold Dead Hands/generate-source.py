@@ -1760,6 +1760,15 @@ for (pool, index) in [
         ('GD_Itempools.EarlyGame.Pool_Knuckledragger_Pistol', 0),
         ('GD_Itempools.EarlyGame.Pool_Knuckledragger_Pistol_P2_P3', 0),
         ('GD_Itempools.EarlyGame.Pool_Knuckledragger_Pistol_P4', 0),
+        ('GD_Iris_ItemPools.EnemyDropPools.Pool_GunsAndGear_WeightedAngelGang', 0),
+        ('GD_Iris_ItemPools.EnemyDropPools.Pool_GunsAndGear_WeightedAngelGang', 1),
+        ('GD_Iris_ItemPools.EnemyDropPools.Pool_GunsAndGear_WeightedAngelGang', 2),
+        ('GD_Iris_ItemPools.EnemyDropPools.Pool_GunsAndGear_WeightedDragonGang', 0),
+        ('GD_Iris_ItemPools.EnemyDropPools.Pool_GunsAndGear_WeightedDragonGang', 1),
+        ('GD_Iris_ItemPools.EnemyDropPools.Pool_GunsAndGear_WeightedDragonGang', 2),
+        ('GD_Iris_ItemPools.EnemyDropPools.Pool_GunsAndGear_WeightedTorgueGang', 0),
+        ('GD_Iris_ItemPools.EnemyDropPools.Pool_GunsAndGear_WeightedTorgueGang', 1),
+        ('GD_Iris_ItemPools.EnemyDropPools.Pool_GunsAndGear_WeightedTorgueGang', 2),
         ]:
     drop_disables.extend(disable_balanced_drop(prefix, pool, index))
 other.disable_world_sets = "\n\n".join(drop_disables)
