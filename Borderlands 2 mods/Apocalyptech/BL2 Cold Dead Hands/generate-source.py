@@ -1419,6 +1419,12 @@ class Badass(DropConfig):
             ],
             # All
             [
+                (0, 'GD_Iris_Population_Biker.Gangs.PopDef_Iris_BigBikerBadass_Angels:PopulationFactoryBalancedAIPawn_1.Behavior_AIChangeInventory_5'),
+                (0, 'GD_Iris_Population_Biker.Gangs.PopDef_Iris_BigBikerBadass_Dragon:PopulationFactoryBalancedAIPawn_1.Behavior_AIChangeInventory_2'),
+                (0, 'GD_Iris_Population_Biker.Gangs.PopDef_Iris_BigBikerBadass_Torgue:PopulationFactoryBalancedAIPawn_1.Behavior_AIChangeInventory_2'),
+                (0, 'GD_Iris_Population_Biker.Gangs.PopDef_Iris_BikerBadass_Angels:PopulationFactoryBalancedAIPawn_1.Behavior_AIChangeInventory_5'),
+                (0, 'GD_Iris_Population_Biker.Gangs.PopDef_Iris_BikerBadass_Dragon:PopulationFactoryBalancedAIPawn_1.Behavior_AIChangeInventory_2'),
+                (0, 'GD_Iris_Population_Biker.Gangs.PopDef_Iris_BikerBadass_Torgue:PopulationFactoryBalancedAIPawn_1.Behavior_AIChangeInventory_2'),
             ],
             # Launchers
             [
@@ -1863,6 +1869,140 @@ for (rarity_key, rarity_label) in DropConfig.rarity_presets:
             ])),
             activated=hotfix_activated)
 
+    # Torgue DLC equip rarities (only regular)
+
+    torguehfs = Hotfixes(nameprefix='{}TorgueRarity'.format(rarity_key))
+
+    torguehfs.add_level_hotfix('angel_pistols', 'Equip',
+        """,GD_Iris_ItemPoolsEnemyUse.WeaponPools.Pool_Weapons_AngelGang_Pistols_EnemyUse,
+        BalancedItems,,{}""".format(get_balanced_items(
+            [
+                ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_AngelGang_Pistols_01_Common', regular.weight_common),
+                ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_AngelGang_Pistols_02_Uncommon', regular.weight_uncommon),
+                ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_AngelGang_Pistols_04_Rare', regular.weight_rare),
+                ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_AngelGang_Pistols_05_VeryRare', regular.weight_veryrare),
+                ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_AngelGang_Pistols_05_VeryRare_Alien', regular.weight_alien),
+                ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_AngelGang_Pistols_06_Legendary', regular.weight_legendary),
+            ])),
+            activated=hotfix_activated)
+
+    torguehfs.add_level_hotfix('angel_shotguns', 'Equip',
+        """,GD_Iris_ItemPoolsEnemyUse.WeaponPools.Pool_Weapons_AngelGang_Shotguns_EnemyUse,
+        BalancedItems,,{}""".format(get_balanced_items(
+            [
+                ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_AngelGang_Shotguns_01_Common', regular.weight_common),
+                ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_AngelGang_Shotguns_02_Uncommon', regular.weight_uncommon),
+                ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_AngelGang_Shotguns_04_Rare', regular.weight_rare),
+                ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_AngelGang_Shotguns_05_VeryRare', regular.weight_veryrare),
+                ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_AngelGang_Shotguns_05_VeryRare_Alien', regular.weight_alien),
+                ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_AngelGang_Shotguns_06_Legendary', regular.weight_legendary),
+            ])),
+            activated=hotfix_activated)
+
+    torguehfs.add_level_hotfix('angel_smg', 'Equip',
+        """,GD_Iris_ItemPoolsEnemyUse.WeaponPools.Pool_Weapons_AngelGang_SMG_EnemyUse,
+        BalancedItems,,{}""".format(get_balanced_items(
+            [
+                ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_AngelGang_SMG_01_Common', regular.weight_common),
+                ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_AngelGang_SMG_02_Uncommon', regular.weight_uncommon),
+                ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_AngelGang_SMG_04_Rare', regular.weight_rare),
+                ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_AngelGang_SMG_05_VeryRare', regular.weight_veryrare),
+                ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_AngelGang_SMG_05_VeryRare_Alien', regular.weight_alien),
+                ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_AngelGang_SMG_06_Legendary', regular.weight_legendary),
+            ])),
+            activated=hotfix_activated)
+
+    torguehfs.add_level_hotfix('angel_snipers', 'Equip',
+        """,GD_Iris_ItemPoolsEnemyUse.WeaponPools.Pool_Weapons_AngelGang_SniperRifles_EnemyUse,
+        BalancedItems,,{}""".format(get_balanced_items(
+            [
+                ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_AngelGang_SniperRifles_01_Common', regular.weight_common),
+                ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_AngelGang_SniperRifles_02_Uncommon', regular.weight_uncommon),
+                ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_AngelGang_SniperRifles_04_Rare', regular.weight_rare),
+                ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_AngelGang_SniperRifles_05_VeryRare', regular.weight_veryrare),
+                ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_AngelGang_SniperRifles_05_VeryRare_Alien', regular.weight_alien),
+                ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_AngelGang_SniperRifles_06_Legendary', regular.weight_legendary),
+            ])),
+            activated=hotfix_activated)
+
+    torguehfs.add_level_hotfix('dragon_pistols', 'Equip',
+        """,GD_Iris_ItemPoolsEnemyUse.WeaponPools.Pool_Weapons_DragonGang_Pistols_EnemyUse,
+        BalancedItems,,{}""".format(get_balanced_items(
+            [
+                ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_DragonGang_Pistols_01_Common', regular.weight_common),
+                ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_DragonGang_Pistols_02_Uncommon', regular.weight_uncommon),
+                ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_DragonGang_Pistols_04_Rare', regular.weight_rare),
+                ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_DragonGang_Pistols_05_VeryRare', regular.weight_veryrare),
+                ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_DragonGang_Pistols_05_VeryRare_Alien', regular.weight_alien),
+                ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_DragonGang_Pistols_06_Legendary', regular.weight_legendary),
+            ])),
+            activated=hotfix_activated)
+
+    torguehfs.add_level_hotfix('dragon_smg', 'Equip',
+        """,GD_Iris_ItemPoolsEnemyUse.WeaponPools.Pool_Weapons_DragonGang_SMG_EnemyUse,
+        BalancedItems,,{}""".format(get_balanced_items(
+            [
+                ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_DragonGang_SMG_01_Common', regular.weight_common),
+                ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_DragonGang_SMG_02_Uncommon', regular.weight_uncommon),
+                ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_DragonGang_SMG_04_Rare', regular.weight_rare),
+                ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_DragonGang_SMG_05_VeryRare', regular.weight_veryrare),
+                ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_DragonGang_SMG_05_VeryRare_Alien', regular.weight_alien),
+                ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_DragonGang_SMG_06_Legendary', regular.weight_legendary),
+            ])),
+            activated=hotfix_activated)
+
+    torguehfs.add_level_hotfix('dragon_snipers', 'Equip',
+        """,GD_Iris_ItemPoolsEnemyUse.WeaponPools.Pool_Weapons_DragonGang_SniperRifles_EnemyUse,
+        BalancedItems,,{}""".format(get_balanced_items(
+            [
+                ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_DragonGang_SniperRifles_01_Common', regular.weight_common),
+                ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_DragonGang_SniperRifles_02_Uncommon', regular.weight_uncommon),
+                ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_DragonGang_SniperRifles_04_Rare', regular.weight_rare),
+                ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_DragonGang_SniperRifles_05_VeryRare', regular.weight_veryrare),
+                ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_DragonGang_SniperRifles_05_VeryRare_Alien', regular.weight_alien),
+                ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_DragonGang_SniperRifles_06_Legendary', regular.weight_legendary),
+            ])),
+            activated=hotfix_activated)
+
+    torguehfs.add_level_hotfix('torgue_pistols', 'Equip',
+        """,GD_Iris_ItemPoolsEnemyUse.WeaponPools.Pool_Weapons_TorgueGang_Pistols_EnemyUse,
+        BalancedItems,,{}""".format(get_balanced_items(
+            [
+                ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_TorgueGang_Pistols_01_Common', regular.weight_common),
+                ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_TorgueGang_Pistols_02_Uncommon', regular.weight_uncommon),
+                ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_TorgueGang_Pistols_04_Rare', regular.weight_rare),
+                ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_TorgueGang_Pistols_05_VeryRare', regular.weight_veryrare),
+                ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_TorgueGang_Pistols_05_VeryRare_Alien', regular.weight_alien),
+                ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_TorgueGang_Pistols_06_Legendary', regular.weight_legendary),
+            ])),
+            activated=hotfix_activated)
+
+    torguehfs.add_level_hotfix('torgue_shotguns', 'Equip',
+        """,GD_Iris_ItemPoolsEnemyUse.WeaponPools.Pool_Weapons_TorgueGang_Shotguns_EnemyUse,
+        BalancedItems,,{}""".format(get_balanced_items(
+            [
+                ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_TorgueGang_Shotguns_01_Common', regular.weight_common),
+                ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_TorgueGang_Shotguns_02_Uncommon', regular.weight_uncommon),
+                ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_TorgueGang_Shotguns_04_Rare', regular.weight_rare),
+                ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_TorgueGang_Shotguns_05_VeryRare', regular.weight_veryrare),
+                ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_TorgueGang_Shotguns_05_VeryRare_Alien', regular.weight_alien),
+                ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_TorgueGang_Shotguns_06_Legendary', regular.weight_legendary),
+            ])),
+            activated=hotfix_activated)
+
+    torguehfs.add_level_hotfix('torgue_ar', 'Equip',
+        """,GD_Iris_ItemPoolsEnemyUse.WeaponPools.Pool_Weapons_TorgueGang_AR_EnemyUse,
+        BalancedItems,,{}""".format(get_balanced_items(
+            [
+                ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_TorgueGang_AR_01_Common', regular.weight_common),
+                ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_TorgueGang_AR_02_Uncommon', regular.weight_uncommon),
+                ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_TorgueGang_AR_04_Rare', regular.weight_rare),
+                ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_TorgueGang_AR_05_VeryRare', regular.weight_veryrare),
+                ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_TorgueGang_AR_05_VeryRare_Alien', regular.weight_alien),
+                ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_TorgueGang_AR_06_Legendary', regular.weight_legendary),
+            ])),
+            activated=hotfix_activated)
+
     with open('input-file-rarity.txt', 'r') as df:
         rarity_sections[rarity_key] = df.read().format(
                 section_label=rarity_label,
@@ -1871,6 +2011,7 @@ for (rarity_key, rarity_label) in DropConfig.rarity_presets:
                 regular=regular,
                 badass=badass,
                 body_double_equip_hotfix_string=hfs.get_hotfix(body_double_key).get_xml(),
+                torguehotfixes=torguehfs,
                 )
 
     line_prefix = '#'
@@ -1954,6 +2095,35 @@ for config in [regular, badass]:
         [
             (config.rarity_pool_shotguns, 1),
         ])
+
+# Make Torgue DLC equip pools drop on death.
+hfs.add_level_hotfix('torgue_angel_equip', 'TorgueEquip',
+    """,GD_Iris_ItemPoolsEnemyUse.WeaponPools.Pool_AngelGang_All_ButLaunchers_Use,
+    BalancedItems,,{}""".format(get_balanced_items([
+        ('GD_Iris_ItemPoolsEnemyUse.WeaponPools.Pool_Weapons_AngelGang_Pistols_EnemyUse', regular.drop_prob_pistols, None),
+        ('GD_Iris_ItemPoolsEnemyUse.WeaponPools.Pool_Weapons_AngelGang_Shotguns_EnemyUse', regular.drop_prob_shotguns, None),
+        ('GD_Iris_ItemPoolsEnemyUse.WeaponPools.Pool_Weapons_AngelGang_SMG_EnemyUse', regular.drop_prob_smg, None),
+        ('GD_Iris_ItemPoolsEnemyUse.WeaponPools.Pool_Weapons_AngelGang_SniperRifles_EnemyUse', regular.drop_prob_snipers, None),
+        (regular.rarity_pool_launchers, regular.drop_prob_launchers, None),
+    ])))
+
+hfs.add_level_hotfix('torgue_dragon_equip', 'TorgueEquip',
+    """,GD_Iris_ItemPoolsEnemyUse.WeaponPools.Pool_DragonGang_All_ButLaunchers_Use,
+    BalancedItems,,{}""".format(get_balanced_items([
+        ('GD_Iris_ItemPoolsEnemyUse.WeaponPools.Pool_Weapons_DragonGang_Pistols_EnemyUse', regular.drop_prob_pistols, None),
+        ('GD_Iris_ItemPoolsEnemyUse.WeaponPools.Pool_Weapons_DragonGang_SMG_EnemyUse', regular.drop_prob_smg, None),
+        ('GD_Iris_ItemPoolsEnemyUse.WeaponPools.Pool_Weapons_DragonGang_SniperRifles_EnemyUse', regular.drop_prob_snipers, None),
+        (regular.rarity_pool_launchers, regular.drop_prob_launchers, None),
+    ])))
+
+hfs.add_level_hotfix('torgue_torgue_equip', 'TorgueEquip',
+    """,GD_Iris_ItemPoolsEnemyUse.WeaponPools.Pool_TorgueGangWeapons_All_ButLaunchers_Use,
+    BalancedItems,,{}""".format(get_balanced_items([
+        ('GD_Iris_ItemPoolsEnemyUse.WeaponPools.Pool_Weapons_TorgueGang_Pistols_EnemyUse', regular.drop_prob_pistols, None),
+        ('GD_Iris_ItemPoolsEnemyUse.WeaponPools.Pool_Weapons_TorgueGang_AR_EnemyUse', regular.drop_prob_ar, None),
+        ('GD_Iris_ItemPoolsEnemyUse.WeaponPools.Pool_Weapons_TorgueGang_Shotguns_EnemyUse', regular.drop_prob_shotguns, None),
+        (regular.rarity_pool_launchers, regular.drop_prob_launchers, None),
+    ])))
 
 # Improve "medical mystery" pool (used in a couple of places, actually)
 hfs.add_level_hotfix('medicalmystery', 'MedicalMystery',

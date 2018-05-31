@@ -101,6 +101,11 @@ from the start of the battle which gun you'll receive.
 * Big Sleep is usually the one to drop the 12 Pounder, but that drop/equip
   has been moved to Sandman.
 
+* Torgue DLC gangs use equip pools which are restricted by manufacturer.
+  Rather than consume more loot pools just to support gang badasses also
+  being manufacturer-restricted, badass gang members in the Torgue DLC will
+  just use the standard badass equip pool that all other badasses use.
+
 ### Configuration
 
 There are three main categories which you can use to customize the gear
