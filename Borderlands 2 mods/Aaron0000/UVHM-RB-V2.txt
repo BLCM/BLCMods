@@ -6,7 +6,7 @@
 
         Features;
 
-        Heavily reduces the health-sponginess of enemies (and passive enemy health regen) to eliminate the need for slag. Purple weapons should generally be effective at level 72 as long as your build is decent.
+        Heavily reduces the health-sponginess of enemies (and removes passive enemy health regen) to eliminate the need for slag. Purple weapons should generally be effective at level 72 as long as your build is decent.
 
         Adjusts enemy shields to warrant use of Shock more often.
 
@@ -14,11 +14,15 @@
 
         Enables Health-Scaling in the Overpowered Levels.
 
+        "Digi" enemies now have proper elemental weaknesses.
+
         Compatible with Koby's Level 1 UVHM Mod. Load this one after it.
 
         #<Adjusts certain enemies that had extra health/shield bonuses in UVHM to accomodate for the reduced damage output with slag, or otherwise make them less annoying to fight. Said enemies are;>
 
             Rabid Enemies have less health. Rabid Stalkers also now only move at Rabid Skag speed. (Rabid Skag - x5 (from x8), Rabid Stalker - x4 (from x5))
+
+            Badass Pyro Threshers have had their novas nerfed. Radius is reduced to 2,000 from 6,144 (Tunguska's epxlosion is 1,800, for comparison) and Now only has a 50% chance of applying DoTs.
 
             Juggernauts/Orczerkers recieve a small health nerf. (x8 (from x10))
 
@@ -26,19 +30,23 @@
 
             The Ghost Kings no longer resist Shock, Corrosive, and Slag damage, putting them in line with most skeletal enemies.
 
-            Terramorphous has nerfed health to accomodate the Slag Changes. (x300 (from x1000))
+            Digistruct Scorch has nerfed health to make it a bit less spongy. (x25 (from x40. Normal Scorch has x10, for comparison.))
+
+            Digistruct Black Queen has nerfed health to make it a bit less spongy. (x35 (from x50. Normal Black Queen has x16, for comparison.))
+
+            Terramorphous has nerfed health to accomodate the Slag Changes. (x300 (from x1,000))
 
             Vermivorous has nerfed health to make it less of a slog to kill it after spawning it in the higher OP levels. (x100 (from x200))
 
             Hyperius and his minions have nerfed health to accomodate the Slag Changes. (Hyperius - x23 (from x56), Minions - x10 (from x25.75))
 
-            Master Gee and his worms has significantly nerfed health to make him less of a slog to fight. (Master Gee - x400 (from x3500), Worms - x3 (from x20))
+            Master Gee and his worms has significantly nerfed health to make him less of a slog to fight. (Master Gee - x400 (from x3,500), Worms - x3 (from x20))
 
             Pete the Invincible and the pipe-enemies have nerfed health to accomodate the Slag Changes. (x135 (from x338). Pipe-enemy health nerfs are negligible.)
 
             Voracidous/Chief Ngwatu have nerfed shields to make the fight more bearable. Voracidous/Chief Ngwatu/Savage Murderers have nerfed health to accomodate the Slag Changes. (Vora/Chief shield nerfed by 65%. Voracidous - x70 (from x225). Chief/Murderer health nerfs negligible.)
 
-            Dexiduous has a massive health nerf to make it less of an eternity to fight. (x20000 (from x100000))
+            Dexiduous has a massive health nerf to make it less of an eternity to fight. (x20,000 (from x100,000))
 
             Ancient Dragons of Destruction have nerfed health to accomodate the Slag Changes. (Blue - x100 (from x300), (Red - x50 (from x200), (Green - x70 (from x150), (Purple - x40 (from x100))
 
@@ -298,19 +306,163 @@
 
             #</Ghost Kings no longer resist Shock/Corrosive/Slag>
 
+            #<Digistruct Scorch Health Nerf>
+
+                #<hotfix><key>"SparkLevelPatchEntry-UVHMRB13"</key><value>",GD_SpiderantScorch_Digi.Character.CharClass_SpiderantScorch_Digi,AttributeStartingValues[0].BaseValue.BaseValueConstant,,35.000000"</value><on>
+
+            #</Digistruct Scorch Health Nerf>
+
+            #<Digistruct Black Queen Health Nerf>
+
+                #<hotfix><key>"SparkLevelPatchEntry-UVHMRB14"</key><value>",GD_SpiderantBlackQueen_Digi.Character.CharClass_SpiderantBlackQueen_Digi,AttributeStartingValues[0].BaseValue.BaseValueConstant,,35.000000"</value><on>
+
+            #</Digistruct Black Queen Health Nerf>
+
+            #<Badass Pyro Thresher Nova Nerf>
+
+                #<hotfix><key>"SparkLevelPatchEntry-BadassThresherNovaNerf1"</key><value>",GD_ThresherBadassFire.Character.AIDef_ThresherBadassFire:AIBehaviorProviderDefinition_26.Behavior_Explode_5,DamageRadiusFormula,,(BaseValueConstant=2000.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)"</value><on>
+
+                #<hotfix><key>"SparkLevelPatchEntry-BadassThresherNovaNerf2"</key><value>",GD_ThresherBadassFire.Character.AIDef_ThresherBadassFire:AIBehaviorProviderDefinition_26.Behavior_Explode_5,StatusEffectChance,,(BaseValueConstant=0.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)"</value><on>
+
+            #</Badass Pyro Thresher Nova Nerf>
+
+            #<Digistruct Enemy Elemental Weaknesses>
+
+                #<hotfix><key>"SparkLevelPatchEntry-DigiEnemyElementWeaknesses1"</key><value>",GD_BigLoaderTurret_Digi.HitRegions.HitRegion_Body_Digi,PhysicalMaterial,,GD_PhysicalMaterial_Armor.PhysMats.PhysMat_Armor"</value><on>
+
+                #<hotfix><key>"SparkLevelPatchEntry-DigiEnemyElementWeaknesses2"</key><value>",GD_Constructor_Digi.HitRegions.HitRegion_Body_Digi,PhysicalMaterial,,GD_PhysicalMaterial_Armor.PhysMats.PhysMat_Armor"</value><on>
+
+                #<hotfix><key>"SparkLevelPatchEntry-DigiEnemyElementWeaknesses3"</key><value>",GD_Hyperion_TurretGun_Digi.HitRegions.HitRegion_Body_Digi,PhysicalMaterial,,GD_PhysicalMaterial_Armor.PhysMats.PhysMat_Armor"</value><on>
+
+                #<hotfix><key>"SparkLevelPatchEntry-DigiEnemyElementWeaknesses4"</key><value>",GD_Hyperion_TurretSlag_Digi.HitRegions.HitRegion_Body_Digi,PhysicalMaterial,,GD_PhysicalMaterial_Armor.PhysMats.PhysMat_Armor"</value><on>
+
+                #<hotfix><key>"SparkLevelPatchEntry-DigiEnemyElementWeaknesses5"</key><value>",GD_MarauderRegular_Digi.HitRegions.HitRegion_Body_Digi,PhysicalMaterial,,GD_PhysicalMaterial_Flesh.PhysMats.PhysMat_HumanFlesh_NormalHit"</value><on>
+
+                #<hotfix><key>"SparkLevelPatchEntry-DigiEnemyElementWeaknesses6"</key><value>",GD_MrMercy_Digi.HitRegions.HitRegion_Body_Digi,PhysicalMaterial,,GD_PhysicalMaterial_Flesh.PhysMats.PhysMat_HumanFlesh_NormalHit"</value><on>
+
+                #<hotfix><key>"SparkLevelPatchEntry-DigiEnemyElementWeaknesses7"</key><value>",GD_Psycho_Digi.HitRegions.HitRegion_Body_Digi,PhysicalMaterial,,GD_PhysicalMaterial_Flesh.PhysMats.PhysMat_HumanFlesh_NormalHit"</value><on>
+
+                #<hotfix><key>"SparkLevelPatchEntry-DigiEnemyElementWeaknesses8"</key><value>",GD_PsychoBadass_Digi.HitRegions.HitRegion_BadassBody_Digi,PhysicalMaterial,,GD_PhysicalMaterial_Flesh.PhysMats.PhysMat_HumanFlesh_NormalHit"</value><on>
+
+                #<hotfix><key>"SparkLevelPatchEntry-DigiEnemyElementWeaknesses9"</key><value>",GD_RatGrunt_Digi.HitRegions.HitRegion_Body_Digi,PhysicalMaterial,,GD_PhysicalMaterial_Flesh.PhysMats.PhysMat_HumanFlesh_NormalHit"</value><on>
+
+                #<hotfix><key>"SparkLevelPatchEntry-DigiEnemyElementWeaknesses10"</key><value>",GD_SkagAdult_Digi.HitRegions.HitRegion_Body_Digi,PhysicalMaterial,,GD_PhysicalMaterial_Creatures.PhysMats.Skag.PhysMat_Skag_NormalHit"</value><on>
+
+                #<hotfix><key>"SparkLevelPatchEntry-DigiEnemyElementWeaknesses11"</key><value>",GD_Skagzilla_Digi.HitRegions.HitRegion_Body_Skagzilla_Digi,PhysicalMaterial,,GD_PhysicalMaterial_Armor.PhysMats.PhysMat_Armor"</value><on>
+
+                #<hotfix><key>"SparkLevelPatchEntry-DigiEnemyElementWeaknesses12"</key><value>",GD_SpiderantSoldier_Digi.HitRegions.HitRegion_Body_Digi,PhysicalMaterial,,GD_PhysicalMaterial_Creatures.PhysMats.Stalker.PhysMat_Stalker_NormalHit"</value><on>
+
+                #<hotfix><key>"SparkLevelPatchEntry-DigiEnemyElementWeaknesses13"</key><value>",GD_PsychoBadass_Digi.HitRegions.HitRegion_BadassArmLeft_Digi,PhysicalMaterial,,GD_PhysicalMaterial_Flesh.PhysMats.PhysMat_HumanFlesh_NormalHit"</value><on>
+
+                #<hotfix><key>"SparkLevelPatchEntry-DigiEnemyElementWeaknesses14"</key><value>",GD_PsychoBadass_Digi.HitRegions.HitRegion_BadassArmRight_Digi,PhysicalMaterial,,GD_PhysicalMaterial_Flesh.PhysMats.PhysMat_HumanFlesh_NormalHit"</value><on>
+
+                #<hotfix><key>"SparkLevelPatchEntry-DigiEnemyElementWeaknesses15"</key><value>",GD_PsychoBadass_Digi.HitRegions.HitRegion_BadassHead_Digi,PhysicalMaterial,,GD_PhysicalMaterial_Flesh.PhysMats.PhysMat_HumanFlesh_CriticalHit"</value><on>
+
+                #<hotfix><key>"SparkLevelPatchEntry-DigiEnemyElementWeaknesses16"</key><value>",GD_PsychoBadass_Digi.HitRegions.HitRegion_BadassLegLeft_Digi,PhysicalMaterial,,GD_PhysicalMaterial_Flesh.PhysMats.PhysMat_HumanFlesh_NormalHit"</value><on>
+
+                #<hotfix><key>"SparkLevelPatchEntry-DigiEnemyElementWeaknesses17"</key><value>",GD_PsychoBadass_Digi.HitRegions.HitRegion_BadassLegRight_Digi,PhysicalMaterial,,GD_PhysicalMaterial_Flesh.PhysMats.PhysMat_HumanFlesh_NormalHit"</value><on>
+
+                #<hotfix><key>"SparkLevelPatchEntry-DigiEnemyElementWeaknesses18"</key><value>",GD_SpiderantSoldier_Digi.HitRegions.HitRegion_LeftArm_Digi,PhysicalMaterial,,GD_PhysicalMaterial_Creatures.PhysMats.Stalker.PhysMat_Stalker_NormalHit"</value><on>
+
+                #<hotfix><key>"SparkLevelPatchEntry-DigiEnemyElementWeaknesses19"</key><value>",GD_SpiderantSoldier_Digi.HitRegions.HitRegion_LeftLeg_Digi,PhysicalMaterial,,GD_PhysicalMaterial_Creatures.PhysMats.Stalker.PhysMat_Stalker_NormalHit"</value><on>
+
+                #<hotfix><key>"SparkLevelPatchEntry-DigiEnemyElementWeaknesses20"</key><value>",GD_SpiderantSoldier_Digi.HitRegions.HitRegion_RightArm_Digi,PhysicalMaterial,,GD_PhysicalMaterial_Creatures.PhysMats.Stalker.PhysMat_Stalker_NormalHit"</value><on>
+
+                #<hotfix><key>"SparkLevelPatchEntry-DigiEnemyElementWeaknesses21"</key><value>",GD_SpiderantSoldier_Digi.HitRegions.HitRegion_RightLeg_Digi,PhysicalMaterial,,GD_PhysicalMaterial_Creatures.PhysMats.Stalker.PhysMat_Stalker_NormalHit"</value><on>
+
+                #<hotfix><key>"SparkLevelPatchEntry-DigiEnemyElementWeaknesses22"</key><value>",GD_MarauderRegular_Digi.HitRegions.HitRegion_Head_Digi,PhysicalMaterial,,GD_PhysicalMaterial_Flesh.PhysMats.PhysMat_HumanFlesh_CriticalHit"</value><on>
+
+                #<hotfix><key>"SparkLevelPatchEntry-DigiEnemyElementWeaknesses23"</key><value>",GD_Psycho_Digi.HitRegions.HitRegion_ArmLeft_Digi,PhysicalMaterial,,GD_PhysicalMaterial_Flesh.PhysMats.PhysMat_HumanFlesh_NormalHit"</value><on>
+
+                #<hotfix><key>"SparkLevelPatchEntry-DigiEnemyElementWeaknesses24"</key><value>",GD_Psycho_Digi.HitRegions.HitRegion_ArmRight_Digi,PhysicalMaterial,,GD_PhysicalMaterial_Flesh.PhysMats.PhysMat_HumanFlesh_NormalHit"</value><on>
+
+                #<hotfix><key>"SparkLevelPatchEntry-DigiEnemyElementWeaknesses25"</key><value>",GD_Psycho_Digi.HitRegions.HitRegion_Head_Digi,PhysicalMaterial,,GD_PhysicalMaterial_Flesh.PhysMats.PhysMat_HumanFlesh_CriticalHit"</value><on>
+
+                #<hotfix><key>"SparkLevelPatchEntry-DigiEnemyElementWeaknesses26"</key><value>",GD_Psycho_Digi.HitRegions.HitRegion_LegLeft_Digi,PhysicalMaterial,,GD_PhysicalMaterial_Flesh.PhysMats.PhysMat_HumanFlesh_NormalHit"</value><on>
+
+                #<hotfix><key>"SparkLevelPatchEntry-DigiEnemyElementWeaknesses27"</key><value>",GD_Psycho_Digi.HitRegions.HitRegion_LegRight_Digi,PhysicalMaterial,,GD_PhysicalMaterial_Flesh.PhysMats.PhysMat_HumanFlesh_NormalHit"</value><on>
+
+                #<hotfix><key>"SparkLevelPatchEntry-DigiEnemyElementWeaknesses28"</key><value>",GD_RatGrunt_Digi.HitRegions.HitRegion_Head_Digi,PhysicalMaterial,,GD_PhysicalMaterial_Flesh.PhysMats.PhysMat_HumanFlesh_CriticalHit"</value><on>
+
+                #<hotfix><key>"SparkLevelPatchEntry-DigiEnemyElementWeaknesses29"</key><value>",GD_SpiderantSoldier_Digi.HitRegions.HitRegion_Head_Armor_Digi,PhysicalMaterial,,GD_PhysicalMaterial_Creatures.PhysMats.SpiderAnt.PhysMat_Spiderant_Armor"</value><on>
+
+                #<hotfix><key>"SparkLevelPatchEntry-DigiEnemyElementWeaknesses30"</key><value>",GD_SpiderantSoldier_Digi.HitRegions.HitRegion_LeftArm_Armor_Digi,PhysicalMaterial,,GD_PhysicalMaterial_Creatures.PhysMats.SpiderAnt.PhysMat_Spiderant_Armor"</value><on>
+
+                #<hotfix><key>"SparkLevelPatchEntry-DigiEnemyElementWeaknesses31"</key><value>",GD_SpiderantSoldier_Digi.HitRegions.HitRegion_RightArm_Armor_Digi,PhysicalMaterial,,GD_PhysicalMaterial_Creatures.PhysMats.SpiderAnt.PhysMat_Spiderant_Armor"</value><on>
+
+                #<hotfix><key>"SparkLevelPatchEntry-DigiEnemyElementWeaknesses32"</key><value>",GD_SkagAdult_Digi.HitRegions.HitRegion_ArmLeft_Digi,PhysicalMaterial,,GD_PhysicalMaterial_Creatures.PhysMats.Skag.PhysMat_Skag_NormalHit"</value><on>
+
+                #<hotfix><key>"SparkLevelPatchEntry-DigiEnemyElementWeaknesses33"</key><value>",GD_SkagAdult_Digi.HitRegions.HitRegion_ArmRight_Digi,PhysicalMaterial,,GD_PhysicalMaterial_Creatures.PhysMats.Skag.PhysMat_Skag_NormalHit"</value><on>
+
+                #<hotfix><key>"SparkLevelPatchEntry-DigiEnemyElementWeaknesses34"</key><value>",GD_SkagAdult_Digi.HitRegions.HitRegion_Head_Digi,PhysicalMaterial,,GD_PhysicalMaterial_Creatures.PhysMats.Skag.PhysMat_Skag_NormalHit"</value><on>
+
+                #<hotfix><key>"SparkLevelPatchEntry-DigiEnemyElementWeaknesses35"</key><value>",GD_SkagAdult_Digi.HitRegions.HitRegion_LegLeft_Digi,PhysicalMaterial,,GD_PhysicalMaterial_Creatures.PhysMats.Skag.PhysMat_Skag_NormalHit"</value><on>
+
+                #<hotfix><key>"SparkLevelPatchEntry-DigiEnemyElementWeaknesses36"</key><value>",GD_SkagAdult_Digi.HitRegions.HitRegion_LegRight_Digi,PhysicalMaterial,,GD_PhysicalMaterial_Creatures.PhysMats.Skag.PhysMat_Skag_NormalHit"</value><on>
+
+                #<hotfix><key>"SparkLevelPatchEntry-DigiEnemyElementWeaknesses37"</key><value>",GD_SkagAdult_Digi.HitRegions.HitRegion_Mouth_Digi,PhysicalMaterial,,GD_PhysicalMaterial_Creatures.PhysMats.Skag.PhysMat_Skag_NormalHit"</value><on>
+
+                #<hotfix><key>"SparkLevelPatchEntry-DigiEnemyElementWeaknesses38"</key><value>",GD_MarauderRegular_Digi.HitRegions.HitRegion_LegLeft_Digi,PhysicalMaterial,,GD_PhysicalMaterial_Flesh.PhysMats.PhysMat_HumanFlesh_NormalHit"</value><on>
+
+                #<hotfix><key>"SparkLevelPatchEntry-DigiEnemyElementWeaknesses39"</key><value>",GD_MarauderRegular_Digi.HitRegions.HitRegion_LegRight_Digi,PhysicalMaterial,,GD_PhysicalMaterial_Flesh.PhysMats.PhysMat_HumanFlesh_NormalHit"</value><on>
+
+                #<hotfix><key>"SparkLevelPatchEntry-DigiEnemyElementWeaknesses40"</key><value>",GD_MarauderRegular_Digi.HitRegions.HitRegion_ArmLeft_Digi,PhysicalMaterial,,GD_PhysicalMaterial_Flesh.PhysMats.PhysMat_HumanFlesh_NormalHit"</value><on>
+
+                #<hotfix><key>"SparkLevelPatchEntry-DigiEnemyElementWeaknesses41"</key><value>",GD_MarauderRegular_Digi.HitRegions.HitRegion_ArmRight_Digi,PhysicalMaterial,,GD_PhysicalMaterial_Flesh.PhysMats.PhysMat_HumanFlesh_NormalHit"</value><on>
+
+                #<hotfix><key>"SparkLevelPatchEntry-DigiEnemyElementWeaknesses42"</key><value>",GD_MrMercy_Digi.HitRegions.HitRegion_Head_Digi,PhysicalMaterial,,GD_PhysicalMaterial_Flesh.PhysMats.PhysMat_HumanFlesh_CriticalHit"</value><on>
+
+                #<hotfix><key>"SparkLevelPatchEntry-DigiEnemyElementWeaknesses43"</key><value>",GD_MrMercy_Digi.HitRegions.HitRegion_LegLeft_Digi,PhysicalMaterial,,GD_PhysicalMaterial_Flesh.PhysMats.PhysMat_HumanFlesh_NormalHit"</value><on>
+
+                #<hotfix><key>"SparkLevelPatchEntry-DigiEnemyElementWeaknesses44"</key><value>",GD_MrMercy_Digi.HitRegions.HitRegion_LegRight_Digi,PhysicalMaterial,,GD_PhysicalMaterial_Flesh.PhysMats.PhysMat_HumanFlesh_NormalHit"</value><on>
+
+                #<hotfix><key>"SparkLevelPatchEntry-DigiEnemyElementWeaknesses45"</key><value>",GD_MrMercy_Digi.HitRegions.HitRegion_ArmLeft_Digi,PhysicalMaterial,,GD_PhysicalMaterial_Flesh.PhysMats.PhysMat_HumanFlesh_NormalHit"</value><on>
+
+                #<hotfix><key>"SparkLevelPatchEntry-DigiEnemyElementWeaknesses46"</key><value>",GD_MrMercy_Digi.HitRegions.HitRegion_ArmRight_Digi,PhysicalMaterial,,GD_PhysicalMaterial_Flesh.PhysMats.PhysMat_HumanFlesh_NormalHit"</value><on>
+
+                #<hotfix><key>"SparkLevelPatchEntry-DigiEnemyElementWeaknesses47"</key><value>",GD_RatGrunt_Digi.HitRegions.HitRegion_LegLeft_Digi,PhysicalMaterial,,GD_PhysicalMaterial_Flesh.PhysMats.PhysMat_HumanFlesh_NormalHit"</value><on>
+
+                #<hotfix><key>"SparkLevelPatchEntry-DigiEnemyElementWeaknesses48"</key><value>",GD_RatGrunt_Digi.HitRegions.HitRegion_LegRight_Digi,PhysicalMaterial,,GD_PhysicalMaterial_Flesh.PhysMats.PhysMat_HumanFlesh_NormalHit"</value><on>
+
+                #<hotfix><key>"SparkLevelPatchEntry-DigiEnemyElementWeaknesses49"</key><value>",GD_RatGrunt_Digi.HitRegions.HitRegion_ArmLeft_Digi,PhysicalMaterial,,GD_PhysicalMaterial_Flesh.PhysMats.PhysMat_HumanFlesh_NormalHit"</value><on>
+
+                #<hotfix><key>"SparkLevelPatchEntry-DigiEnemyElementWeaknesses50"</key><value>",GD_RatGrunt_Digi.HitRegions.HitRegion_ArmRight_Digi,PhysicalMaterial,,GD_PhysicalMaterial_Flesh.PhysMats.PhysMat_HumanFlesh_NormalHit"</value><on>
+
+                #<hotfix><key>"SparkLevelPatchEntry-DigiEnemyElementWeaknesses51"</key><value>",GD_MrMercy_Digi.HitRegions.HitRegion_MrMercy_Digi_Shield,PhysicalMaterial,,GD_PhysicalMaterial_Metal.PhysMats.PhysMat_Metal"</value><on>
+
+                #<hotfix><key>"SparkLevelPatchEntry-DigiEnemyElementWeaknesses52"</key><value>",GD_Skagzilla_Digi.HitRegions.HitRegion_ArmLeft_Skagzilla_Digi,PhysicalMaterial,,GD_PhysicalMaterial_Armor.PhysMats.PhysMat_Armor"</value><on>
+
+                #<hotfix><key>"SparkLevelPatchEntry-DigiEnemyElementWeaknesses53"</key><value>",GD_Skagzilla_Digi.HitRegions.HitRegion_ArmRight_Skagzilla_Digi,PhysicalMaterial,,GD_PhysicalMaterial_Armor.PhysMats.PhysMat_Armor"</value><on>
+
+                #<hotfix><key>"SparkLevelPatchEntry-DigiEnemyElementWeaknesses54"</key><value>",GD_Skagzilla_Digi.HitRegions.HitRegion_Head_Skagzilla_Digi,PhysicalMaterial,,GD_PhysicalMaterial_Armor.PhysMats.PhysMat_Armor"</value><on>
+
+                #<hotfix><key>"SparkLevelPatchEntry-DigiEnemyElementWeaknesses55"</key><value>",GD_Skagzilla_Digi.HitRegions.HitRegion_LegLeft_Skagzilla_Digi,PhysicalMaterial,,GD_PhysicalMaterial_Armor.PhysMats.PhysMat_Armor"</value><on>
+
+                #<hotfix><key>"SparkLevelPatchEntry-DigiEnemyElementWeaknesses56"</key><value>",GD_Skagzilla_Digi.HitRegions.HitRegion_LegRight_Skagzilla_Digi,PhysicalMaterial,,GD_PhysicalMaterial_Armor.PhysMats.PhysMat_Armor"</value><on>
+
+                #<hotfix><key>"SparkLevelPatchEntry-DigiEnemyElementWeaknesses57"</key><value>",GD_Skagzilla_Digi.HitRegions.HitRegion_Mouth_Skagzilla_Digi,PhysicalMaterial,,GD_PhysicalMaterial_Creatures.PhysMats.Skag.PhysMat_Skag_NormalHit"</value><on>
+
+                #<hotfix><key>"SparkLevelPatchEntry-DigiEnemyElementWeaknesses58"</key><value>",GD_SpiderantSoldier_Digi.HitRegions.HitRegion_Abdomen_Digi,PhysicalMaterial,,GD_PhysicalMaterial_Creatures.PhysMats.Stalker.PhysMat_Stalker_NormalHit"</value><on>
+
+                #<hotfix><key>"SparkLevelPatchEntry-DigiEnemyElementWeaknesses59"</key><value>",GD_SpiderantSoldier_Digi.HitRegions.HitRegion_LeftLeg_Armor_Digi,PhysicalMaterial,,GD_PhysicalMaterial_Creatures.PhysMats.SpiderAnt.PhysMat_Spiderant_Armor"</value><on>
+
+                #<hotfix><key>"SparkLevelPatchEntry-DigiEnemyElementWeaknesses60"</key><value>",GD_SpiderantSoldier_Digi.HitRegions.HitRegion_RightLeg_Armor_Digi,PhysicalMaterial,,GD_PhysicalMaterial_Creatures.PhysMats.SpiderAnt.PhysMat_Spiderant_Armor"</value><on>
+
+            #</Digistruct Enemy Elemental Weaknesses>
+
         #</Standard Enemies>
 
         #<Raid Bosses>
 
             #<Terramorphous Health Nerf>
 
-                #<hotfix><key>"SparkLevelPatchEntry-UVHMRB13"</key><value>",GD_Thresher_Raid.Character.CharClass_Thresher_Raid,AttributeStartingValues[0].BaseValue.BaseValueConstant,,300.000000"</value><on>
+                #<hotfix><key>"SparkLevelPatchEntry-UVHMRB15"</key><value>",GD_Thresher_Raid.Character.CharClass_Thresher_Raid,AttributeStartingValues[0].BaseValue.BaseValueConstant,,300.000000"</value><on>
 
             #</Terramorphous Health Nerf>
 
             #<Vermivorous Health Nerf>
 
-                #<hotfix><key>"SparkLevelPatchEntry-UVHMRB14"</key><value>",GD_BugMorphRaid.Character.CharClass_BugMoprhRaid,AttributeStartingValues[0].BaseValue.BaseValueConstant,,100.000000"</value><on>
+                #<hotfix><key>"SparkLevelPatchEntry-UVHMRB16"</key><value>",GD_BugMorphRaid.Character.CharClass_BugMoprhRaid,AttributeStartingValues[0].BaseValue.BaseValueConstant,,100.000000"</value><on>
 
             #</Vermivorous Health Nerf>
 
@@ -356,7 +508,7 @@
 
             #<Dexiduous Health Nerf>
 
-                #<hotfix><key>"SparkLevelPatchEntry-UVHMRB15"</key><value>",GD_DrifterRaid.Character.CharClass_DrifterRaid,AttributeStartingValues[0].BaseValue.BaseValueConstant,,20000.000000"</value><on>
+                #<hotfix><key>"SparkLevelPatchEntry-UVHMRB17"</key><value>",GD_DrifterRaid.Character.CharClass_DrifterRaid,AttributeStartingValues[0].BaseValue.BaseValueConstant,,20000.000000"</value><on>
 
             #</Dexiduous Health Nerf>
 
@@ -366,7 +518,7 @@
 
                     #<UVHM>
 
-                        #<hotfix><key>"SparkLevelPatchEntry-UVHMRB16"</key><value>",GD_Aster_Pop_Dragons.Balance.PawnBalance_Dragon_Blue_Raid,PlayThroughs[2].AttributeStartingValues[0].BaseValue.BaseValueConstant,,100.000000"</value><on>
+                        #<hotfix><key>"SparkLevelPatchEntry-UVHMRB18"</key><value>",GD_Aster_Pop_Dragons.Balance.PawnBalance_Dragon_Blue_Raid,PlayThroughs[2].AttributeStartingValues[0].BaseValue.BaseValueConstant,,100.000000"</value><on>
 
                     #</UVHM>
 
@@ -376,7 +528,7 @@
 
                     #<UVHM>
 
-                        #<hotfix><key>"SparkLevelPatchEntry-UVHMRB17"</key><value>",GD_Aster_Pop_Dragons.Balance.PawnBalance_Dragon_Green_Raid,PlayThroughs[2].AttributeStartingValues[0].BaseValue.BaseValueConstant,,70.000000"</value><on>
+                        #<hotfix><key>"SparkLevelPatchEntry-UVHMRB19"</key><value>",GD_Aster_Pop_Dragons.Balance.PawnBalance_Dragon_Green_Raid,PlayThroughs[2].AttributeStartingValues[0].BaseValue.BaseValueConstant,,70.000000"</value><on>
 
                     #</UVHM>
 
@@ -386,7 +538,7 @@
 
                     #<UVHM>
 
-                        #<hotfix><key>"SparkLevelPatchEntry-UVHMRB18"</key><value>",GD_Aster_Pop_Dragons.Balance.PawnBalance_Dragon_Purple_Raid,PlayThroughs[2].AttributeStartingValues[0].BaseValue.BaseValueConstant,,40.000000"</value><on>
+                        #<hotfix><key>"SparkLevelPatchEntry-UVHMRB20"</key><value>",GD_Aster_Pop_Dragons.Balance.PawnBalance_Dragon_Purple_Raid,PlayThroughs[2].AttributeStartingValues[0].BaseValue.BaseValueConstant,,40.000000"</value><on>
 
                     #</UVHM>
 
@@ -396,7 +548,7 @@
 
                     #<UVHM>
 
-                        #<hotfix><key>"SparkLevelPatchEntry-UVHMRB19"</key><value>",GD_Aster_Pop_Dragons.Balance.PawnBalance_Dragon_Red_Raid,PlayThroughs[2].AttributeStartingValues[0].BaseValue.BaseValueConstant,,50.000000"</value><on>
+                        #<hotfix><key>"SparkLevelPatchEntry-UVHMRB21"</key><value>",GD_Aster_Pop_Dragons.Balance.PawnBalance_Dragon_Red_Raid,PlayThroughs[2].AttributeStartingValues[0].BaseValue.BaseValueConstant,,50.000000"</value><on>
 
                     #</UVHM>
 
@@ -410,7 +562,7 @@
 
 #</UVHM-RB>
 
-set Transient.SparkServiceConfiguration_6 Keys ("SparkLevelPatchEntry-UVHMRB1","SparkLevelPatchEntry-UVHMRB2","SparkLevelPatchEntry-UVHMRB3","SparkLevelPatchEntry-UVHMRB4","SparkLevelPatchEntry-UVHMRB5","SparkLevelPatchEntry-UVHMRB6","SparkLevelPatchEntry-UVHMRB7","SparkLevelPatchEntry-UVHMRB8","SparkLevelPatchEntry-UVHMRB9","SparkLevelPatchEntry-UVHMRB10","SparkLevelPatchEntry-UVHMRB11","SparkLevelPatchEntry-UVHMRB12","SparkLevelPatchEntry-UVHMRB13","SparkLevelPatchEntry-UVHMRB14","SparkLevelPatchEntry-UVHMRB15","SparkLevelPatchEntry-UVHMRB16","SparkLevelPatchEntry-UVHMRB17","SparkLevelPatchEntry-UVHMRB18","SparkLevelPatchEntry-UVHMRB19")
+set Transient.SparkServiceConfiguration_6 Keys ("SparkLevelPatchEntry-UVHMRB1","SparkLevelPatchEntry-UVHMRB2","SparkLevelPatchEntry-UVHMRB3","SparkLevelPatchEntry-UVHMRB4","SparkLevelPatchEntry-UVHMRB5","SparkLevelPatchEntry-UVHMRB6","SparkLevelPatchEntry-UVHMRB7","SparkLevelPatchEntry-UVHMRB8","SparkLevelPatchEntry-UVHMRB9","SparkLevelPatchEntry-UVHMRB10","SparkLevelPatchEntry-UVHMRB11","SparkLevelPatchEntry-UVHMRB12","SparkLevelPatchEntry-UVHMRB13","SparkLevelPatchEntry-UVHMRB14","SparkLevelPatchEntry-BadassThresherNovaNerf1","SparkLevelPatchEntry-BadassThresherNovaNerf2","SparkLevelPatchEntry-DigiEnemyElementWeaknesses1","SparkLevelPatchEntry-DigiEnemyElementWeaknesses2","SparkLevelPatchEntry-DigiEnemyElementWeaknesses3","SparkLevelPatchEntry-DigiEnemyElementWeaknesses4","SparkLevelPatchEntry-DigiEnemyElementWeaknesses5","SparkLevelPatchEntry-DigiEnemyElementWeaknesses6","SparkLevelPatchEntry-DigiEnemyElementWeaknesses7","SparkLevelPatchEntry-DigiEnemyElementWeaknesses8","SparkLevelPatchEntry-DigiEnemyElementWeaknesses9","SparkLevelPatchEntry-DigiEnemyElementWeaknesses10","SparkLevelPatchEntry-DigiEnemyElementWeaknesses11","SparkLevelPatchEntry-DigiEnemyElementWeaknesses12","SparkLevelPatchEntry-DigiEnemyElementWeaknesses13","SparkLevelPatchEntry-DigiEnemyElementWeaknesses14","SparkLevelPatchEntry-DigiEnemyElementWeaknesses15","SparkLevelPatchEntry-DigiEnemyElementWeaknesses16","SparkLevelPatchEntry-DigiEnemyElementWeaknesses17","SparkLevelPatchEntry-DigiEnemyElementWeaknesses18","SparkLevelPatchEntry-DigiEnemyElementWeaknesses19","SparkLevelPatchEntry-DigiEnemyElementWeaknesses20","SparkLevelPatchEntry-DigiEnemyElementWeaknesses21","SparkLevelPatchEntry-DigiEnemyElementWeaknesses22","SparkLevelPatchEntry-DigiEnemyElementWeaknesses23","SparkLevelPatchEntry-DigiEnemyElementWeaknesses24","SparkLevelPatchEntry-DigiEnemyElementWeaknesses25","SparkLevelPatchEntry-DigiEnemyElementWeaknesses26","SparkLevelPatchEntry-DigiEnemyElementWeaknesses27","SparkLevelPatchEntry-DigiEnemyElementWeaknesses28","SparkLevelPatchEntry-DigiEnemyElementWeaknesses29","SparkLevelPatchEntry-DigiEnemyElementWeaknesses30","SparkLevelPatchEntry-DigiEnemyElementWeaknesses31","SparkLevelPatchEntry-DigiEnemyElementWeaknesses32","SparkLevelPatchEntry-DigiEnemyElementWeaknesses33","SparkLevelPatchEntry-DigiEnemyElementWeaknesses34","SparkLevelPatchEntry-DigiEnemyElementWeaknesses35","SparkLevelPatchEntry-DigiEnemyElementWeaknesses36","SparkLevelPatchEntry-DigiEnemyElementWeaknesses37","SparkLevelPatchEntry-DigiEnemyElementWeaknesses38","SparkLevelPatchEntry-DigiEnemyElementWeaknesses39","SparkLevelPatchEntry-DigiEnemyElementWeaknesses40","SparkLevelPatchEntry-DigiEnemyElementWeaknesses41","SparkLevelPatchEntry-DigiEnemyElementWeaknesses42","SparkLevelPatchEntry-DigiEnemyElementWeaknesses43","SparkLevelPatchEntry-DigiEnemyElementWeaknesses44","SparkLevelPatchEntry-DigiEnemyElementWeaknesses45","SparkLevelPatchEntry-DigiEnemyElementWeaknesses46","SparkLevelPatchEntry-DigiEnemyElementWeaknesses47","SparkLevelPatchEntry-DigiEnemyElementWeaknesses48","SparkLevelPatchEntry-DigiEnemyElementWeaknesses49","SparkLevelPatchEntry-DigiEnemyElementWeaknesses50","SparkLevelPatchEntry-DigiEnemyElementWeaknesses51","SparkLevelPatchEntry-DigiEnemyElementWeaknesses52","SparkLevelPatchEntry-DigiEnemyElementWeaknesses53","SparkLevelPatchEntry-DigiEnemyElementWeaknesses54","SparkLevelPatchEntry-DigiEnemyElementWeaknesses55","SparkLevelPatchEntry-DigiEnemyElementWeaknesses56","SparkLevelPatchEntry-DigiEnemyElementWeaknesses57","SparkLevelPatchEntry-DigiEnemyElementWeaknesses58","SparkLevelPatchEntry-DigiEnemyElementWeaknesses59","SparkLevelPatchEntry-DigiEnemyElementWeaknesses60","SparkLevelPatchEntry-UVHMRB15","SparkLevelPatchEntry-UVHMRB16","SparkLevelPatchEntry-UVHMRB17","SparkLevelPatchEntry-UVHMRB18","SparkLevelPatchEntry-UVHMRB19","SparkLevelPatchEntry-UVHMRB20","SparkLevelPatchEntry-UVHMRB21")
 
-set Transient.SparkServiceConfiguration_6 Values (",GD_SkagFreeWilly.Character.CharClass_SkagFreeWilly,AttributeStartingValues[0].BaseValue.BaseValueConstant,,5.000000",",GD_SkagRabid_Digi.Character.CharClass_SkagRabid_Digi,AttributeStartingValues[0].BaseValue.BaseValueConstant,,5.000000",",GD_StalkerFreeWilly.Character.CharClass_StalkerFreeWilly,GroundSpeed,,800.000000",",GD_StalkerFreeWilly.Character.CharClass_StalkerFreeWilly,AttributeStartingValues[0].BaseValue.BaseValueConstant,,4.000000",",GD_Juggernaut.Character.CharClass_Juggernaut,AttributeStartingValues[0].BaseValue.BaseValueConstant,,8.000000",",GD_Aster_Pop_Orcs.Balance.PawnBalance_Orczerker,Playthroughs[2].AttributeStartingValues,,((Attribute=AttributeDefinition'GD_Balance_HealthAndDamage.AIParameters.Attribute_HealthMultiplier',BaseValue=(BaseValueConstant=8.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))",",GD_Skeleton_King.Character.CharClass_Skeleton_King,BaseShockDamageModifiers.ResistanceToImpact.BaseValueConstant,,1.000000",",GD_Skeleton_King.Character.CharClass_Skeleton_King,BaseCorrosiveDamageModifiers.ResistanceToImpact.BaseValueConstant,,1.000000",",GD_Skeleton_King.Character.CharClass_Skeleton_King,BaseAmpDamageModifiers.ResistanceToImpact.BaseValueConstant,,1.000000",",GD_Skeleton_KingHead.Character.CharClass_SkeletonKingHead,BaseShockDamageModifiers.ResistanceToImpact.BaseValueConstant,,1.000000",",GD_Skeleton_KingHead.Character.CharClass_SkeletonKingHead,BaseCorrosiveDamageModifiers.ResistanceToImpact.BaseValueConstant,,1.000000",",GD_Skeleton_KingHead.Character.CharClass_SkeletonKingHead,BaseAmpDamageModifiers.ResistanceToImpact.BaseValueConstant,,1.000000",",GD_Thresher_Raid.Character.CharClass_Thresher_Raid,AttributeStartingValues[0].BaseValue.BaseValueConstant,,300.000000",",GD_BugMorphRaid.Character.CharClass_BugMoprhRaid,AttributeStartingValues[0].BaseValue.BaseValueConstant,,100.000000",",GD_DrifterRaid.Character.CharClass_DrifterRaid,AttributeStartingValues[0].BaseValue.BaseValueConstant,,20000.000000",",GD_Aster_Pop_Dragons.Balance.PawnBalance_Dragon_Blue_Raid,PlayThroughs[2].AttributeStartingValues[0].BaseValue.BaseValueConstant,,100.000000",",GD_Aster_Pop_Dragons.Balance.PawnBalance_Dragon_Green_Raid,PlayThroughs[2].AttributeStartingValues[0].BaseValue.BaseValueConstant,,70.000000",",GD_Aster_Pop_Dragons.Balance.PawnBalance_Dragon_Purple_Raid,PlayThroughs[2].AttributeStartingValues[0].BaseValue.BaseValueConstant,,40.000000",",GD_Aster_Pop_Dragons.Balance.PawnBalance_Dragon_Red_Raid,PlayThroughs[2].AttributeStartingValues[0].BaseValue.BaseValueConstant,,50.000000")
+set Transient.SparkServiceConfiguration_6 Values (",GD_SkagFreeWilly.Character.CharClass_SkagFreeWilly,AttributeStartingValues[0].BaseValue.BaseValueConstant,,5.000000",",GD_SkagRabid_Digi.Character.CharClass_SkagRabid_Digi,AttributeStartingValues[0].BaseValue.BaseValueConstant,,5.000000",",GD_StalkerFreeWilly.Character.CharClass_StalkerFreeWilly,GroundSpeed,,800.000000",",GD_StalkerFreeWilly.Character.CharClass_StalkerFreeWilly,AttributeStartingValues[0].BaseValue.BaseValueConstant,,4.000000",",GD_Juggernaut.Character.CharClass_Juggernaut,AttributeStartingValues[0].BaseValue.BaseValueConstant,,8.000000",",GD_Aster_Pop_Orcs.Balance.PawnBalance_Orczerker,Playthroughs[2].AttributeStartingValues,,((Attribute=AttributeDefinition'GD_Balance_HealthAndDamage.AIParameters.Attribute_HealthMultiplier',BaseValue=(BaseValueConstant=8.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))",",GD_Skeleton_King.Character.CharClass_Skeleton_King,BaseShockDamageModifiers.ResistanceToImpact.BaseValueConstant,,1.000000",",GD_Skeleton_King.Character.CharClass_Skeleton_King,BaseCorrosiveDamageModifiers.ResistanceToImpact.BaseValueConstant,,1.000000",",GD_Skeleton_King.Character.CharClass_Skeleton_King,BaseAmpDamageModifiers.ResistanceToImpact.BaseValueConstant,,1.000000",",GD_Skeleton_KingHead.Character.CharClass_SkeletonKingHead,BaseShockDamageModifiers.ResistanceToImpact.BaseValueConstant,,1.000000",",GD_Skeleton_KingHead.Character.CharClass_SkeletonKingHead,BaseCorrosiveDamageModifiers.ResistanceToImpact.BaseValueConstant,,1.000000",",GD_Skeleton_KingHead.Character.CharClass_SkeletonKingHead,BaseAmpDamageModifiers.ResistanceToImpact.BaseValueConstant,,1.000000",",GD_SpiderantScorch_Digi.Character.CharClass_SpiderantScorch_Digi,AttributeStartingValues[0].BaseValue.BaseValueConstant,,35.000000",",GD_SpiderantBlackQueen_Digi.Character.CharClass_SpiderantBlackQueen_Digi,AttributeStartingValues[0].BaseValue.BaseValueConstant,,35.000000",",GD_ThresherBadassFire.Character.AIDef_ThresherBadassFire:AIBehaviorProviderDefinition_26.Behavior_Explode_5,DamageRadiusFormula,,(BaseValueConstant=2000.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)",",GD_ThresherBadassFire.Character.AIDef_ThresherBadassFire:AIBehaviorProviderDefinition_26.Behavior_Explode_5,StatusEffectChance,,(BaseValueConstant=0.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)",",GD_BigLoaderTurret_Digi.HitRegions.HitRegion_Body_Digi,PhysicalMaterial,,GD_PhysicalMaterial_Armor.PhysMats.PhysMat_Armor",",GD_Constructor_Digi.HitRegions.HitRegion_Body_Digi,PhysicalMaterial,,GD_PhysicalMaterial_Armor.PhysMats.PhysMat_Armor",",GD_Hyperion_TurretGun_Digi.HitRegions.HitRegion_Body_Digi,PhysicalMaterial,,GD_PhysicalMaterial_Armor.PhysMats.PhysMat_Armor",",GD_Hyperion_TurretSlag_Digi.HitRegions.HitRegion_Body_Digi,PhysicalMaterial,,GD_PhysicalMaterial_Armor.PhysMats.PhysMat_Armor",",GD_MarauderRegular_Digi.HitRegions.HitRegion_Body_Digi,PhysicalMaterial,,GD_PhysicalMaterial_Flesh.PhysMats.PhysMat_HumanFlesh_NormalHit",",GD_MrMercy_Digi.HitRegions.HitRegion_Body_Digi,PhysicalMaterial,,GD_PhysicalMaterial_Flesh.PhysMats.PhysMat_HumanFlesh_NormalHit",",GD_Psycho_Digi.HitRegions.HitRegion_Body_Digi,PhysicalMaterial,,GD_PhysicalMaterial_Flesh.PhysMats.PhysMat_HumanFlesh_NormalHit",",GD_PsychoBadass_Digi.HitRegions.HitRegion_BadassBody_Digi,PhysicalMaterial,,GD_PhysicalMaterial_Flesh.PhysMats.PhysMat_HumanFlesh_NormalHit",",GD_RatGrunt_Digi.HitRegions.HitRegion_Body_Digi,PhysicalMaterial,,GD_PhysicalMaterial_Flesh.PhysMats.PhysMat_HumanFlesh_NormalHit",",GD_SkagAdult_Digi.HitRegions.HitRegion_Body_Digi,PhysicalMaterial,,GD_PhysicalMaterial_Creatures.PhysMats.Skag.PhysMat_Skag_NormalHit",",GD_Skagzilla_Digi.HitRegions.HitRegion_Body_Skagzilla_Digi,PhysicalMaterial,,GD_PhysicalMaterial_Armor.PhysMats.PhysMat_Armor",",GD_SpiderantSoldier_Digi.HitRegions.HitRegion_Body_Digi,PhysicalMaterial,,GD_PhysicalMaterial_Creatures.PhysMats.Stalker.PhysMat_Stalker_NormalHit",",GD_PsychoBadass_Digi.HitRegions.HitRegion_BadassArmLeft_Digi,PhysicalMaterial,,GD_PhysicalMaterial_Flesh.PhysMats.PhysMat_HumanFlesh_NormalHit",",GD_PsychoBadass_Digi.HitRegions.HitRegion_BadassArmRight_Digi,PhysicalMaterial,,GD_PhysicalMaterial_Flesh.PhysMats.PhysMat_HumanFlesh_NormalHit",",GD_PsychoBadass_Digi.HitRegions.HitRegion_BadassHead_Digi,PhysicalMaterial,,GD_PhysicalMaterial_Flesh.PhysMats.PhysMat_HumanFlesh_CriticalHit",",GD_PsychoBadass_Digi.HitRegions.HitRegion_BadassLegLeft_Digi,PhysicalMaterial,,GD_PhysicalMaterial_Flesh.PhysMats.PhysMat_HumanFlesh_NormalHit",",GD_PsychoBadass_Digi.HitRegions.HitRegion_BadassLegRight_Digi,PhysicalMaterial,,GD_PhysicalMaterial_Flesh.PhysMats.PhysMat_HumanFlesh_NormalHit",",GD_SpiderantSoldier_Digi.HitRegions.HitRegion_LeftArm_Digi,PhysicalMaterial,,GD_PhysicalMaterial_Creatures.PhysMats.Stalker.PhysMat_Stalker_NormalHit",",GD_SpiderantSoldier_Digi.HitRegions.HitRegion_LeftLeg_Digi,PhysicalMaterial,,GD_PhysicalMaterial_Creatures.PhysMats.Stalker.PhysMat_Stalker_NormalHit",",GD_SpiderantSoldier_Digi.HitRegions.HitRegion_RightArm_Digi,PhysicalMaterial,,GD_PhysicalMaterial_Creatures.PhysMats.Stalker.PhysMat_Stalker_NormalHit",",GD_SpiderantSoldier_Digi.HitRegions.HitRegion_RightLeg_Digi,PhysicalMaterial,,GD_PhysicalMaterial_Creatures.PhysMats.Stalker.PhysMat_Stalker_NormalHit",",GD_MarauderRegular_Digi.HitRegions.HitRegion_Head_Digi,PhysicalMaterial,,GD_PhysicalMaterial_Flesh.PhysMats.PhysMat_HumanFlesh_CriticalHit",",GD_Psycho_Digi.HitRegions.HitRegion_ArmLeft_Digi,PhysicalMaterial,,GD_PhysicalMaterial_Flesh.PhysMats.PhysMat_HumanFlesh_NormalHit",",GD_Psycho_Digi.HitRegions.HitRegion_ArmRight_Digi,PhysicalMaterial,,GD_PhysicalMaterial_Flesh.PhysMats.PhysMat_HumanFlesh_NormalHit",",GD_Psycho_Digi.HitRegions.HitRegion_Head_Digi,PhysicalMaterial,,GD_PhysicalMaterial_Flesh.PhysMats.PhysMat_HumanFlesh_CriticalHit",",GD_Psycho_Digi.HitRegions.HitRegion_LegLeft_Digi,PhysicalMaterial,,GD_PhysicalMaterial_Flesh.PhysMats.PhysMat_HumanFlesh_NormalHit",",GD_Psycho_Digi.HitRegions.HitRegion_LegRight_Digi,PhysicalMaterial,,GD_PhysicalMaterial_Flesh.PhysMats.PhysMat_HumanFlesh_NormalHit",",GD_RatGrunt_Digi.HitRegions.HitRegion_Head_Digi,PhysicalMaterial,,GD_PhysicalMaterial_Flesh.PhysMats.PhysMat_HumanFlesh_CriticalHit",",GD_SpiderantSoldier_Digi.HitRegions.HitRegion_Head_Armor_Digi,PhysicalMaterial,,GD_PhysicalMaterial_Creatures.PhysMats.SpiderAnt.PhysMat_Spiderant_Armor",",GD_SpiderantSoldier_Digi.HitRegions.HitRegion_LeftArm_Armor_Digi,PhysicalMaterial,,GD_PhysicalMaterial_Creatures.PhysMats.SpiderAnt.PhysMat_Spiderant_Armor",",GD_SpiderantSoldier_Digi.HitRegions.HitRegion_RightArm_Armor_Digi,PhysicalMaterial,,GD_PhysicalMaterial_Creatures.PhysMats.SpiderAnt.PhysMat_Spiderant_Armor",",GD_SkagAdult_Digi.HitRegions.HitRegion_ArmLeft_Digi,PhysicalMaterial,,GD_PhysicalMaterial_Creatures.PhysMats.Skag.PhysMat_Skag_NormalHit",",GD_SkagAdult_Digi.HitRegions.HitRegion_ArmRight_Digi,PhysicalMaterial,,GD_PhysicalMaterial_Creatures.PhysMats.Skag.PhysMat_Skag_NormalHit",",GD_SkagAdult_Digi.HitRegions.HitRegion_Head_Digi,PhysicalMaterial,,GD_PhysicalMaterial_Creatures.PhysMats.Skag.PhysMat_Skag_NormalHit",",GD_SkagAdult_Digi.HitRegions.HitRegion_LegLeft_Digi,PhysicalMaterial,,GD_PhysicalMaterial_Creatures.PhysMats.Skag.PhysMat_Skag_NormalHit",",GD_SkagAdult_Digi.HitRegions.HitRegion_LegRight_Digi,PhysicalMaterial,,GD_PhysicalMaterial_Creatures.PhysMats.Skag.PhysMat_Skag_NormalHit",",GD_SkagAdult_Digi.HitRegions.HitRegion_Mouth_Digi,PhysicalMaterial,,GD_PhysicalMaterial_Creatures.PhysMats.Skag.PhysMat_Skag_NormalHit",",GD_MarauderRegular_Digi.HitRegions.HitRegion_LegLeft_Digi,PhysicalMaterial,,GD_PhysicalMaterial_Flesh.PhysMats.PhysMat_HumanFlesh_NormalHit",",GD_MarauderRegular_Digi.HitRegions.HitRegion_LegRight_Digi,PhysicalMaterial,,GD_PhysicalMaterial_Flesh.PhysMats.PhysMat_HumanFlesh_NormalHit",",GD_MarauderRegular_Digi.HitRegions.HitRegion_ArmLeft_Digi,PhysicalMaterial,,GD_PhysicalMaterial_Flesh.PhysMats.PhysMat_HumanFlesh_NormalHit",",GD_MarauderRegular_Digi.HitRegions.HitRegion_ArmRight_Digi,PhysicalMaterial,,GD_PhysicalMaterial_Flesh.PhysMats.PhysMat_HumanFlesh_NormalHit",",GD_MrMercy_Digi.HitRegions.HitRegion_Head_Digi,PhysicalMaterial,,GD_PhysicalMaterial_Flesh.PhysMats.PhysMat_HumanFlesh_CriticalHit",",GD_MrMercy_Digi.HitRegions.HitRegion_LegLeft_Digi,PhysicalMaterial,,GD_PhysicalMaterial_Flesh.PhysMats.PhysMat_HumanFlesh_NormalHit",",GD_MrMercy_Digi.HitRegions.HitRegion_LegRight_Digi,PhysicalMaterial,,GD_PhysicalMaterial_Flesh.PhysMats.PhysMat_HumanFlesh_NormalHit",",GD_MrMercy_Digi.HitRegions.HitRegion_ArmLeft_Digi,PhysicalMaterial,,GD_PhysicalMaterial_Flesh.PhysMats.PhysMat_HumanFlesh_NormalHit",",GD_MrMercy_Digi.HitRegions.HitRegion_ArmRight_Digi,PhysicalMaterial,,GD_PhysicalMaterial_Flesh.PhysMats.PhysMat_HumanFlesh_NormalHit",",GD_RatGrunt_Digi.HitRegions.HitRegion_LegLeft_Digi,PhysicalMaterial,,GD_PhysicalMaterial_Flesh.PhysMats.PhysMat_HumanFlesh_NormalHit",",GD_RatGrunt_Digi.HitRegions.HitRegion_LegRight_Digi,PhysicalMaterial,,GD_PhysicalMaterial_Flesh.PhysMats.PhysMat_HumanFlesh_NormalHit",",GD_RatGrunt_Digi.HitRegions.HitRegion_ArmLeft_Digi,PhysicalMaterial,,GD_PhysicalMaterial_Flesh.PhysMats.PhysMat_HumanFlesh_NormalHit",",GD_RatGrunt_Digi.HitRegions.HitRegion_ArmRight_Digi,PhysicalMaterial,,GD_PhysicalMaterial_Flesh.PhysMats.PhysMat_HumanFlesh_NormalHit",",GD_MrMercy_Digi.HitRegions.HitRegion_MrMercy_Digi_Shield,PhysicalMaterial,,GD_PhysicalMaterial_Metal.PhysMats.PhysMat_Metal",",GD_Skagzilla_Digi.HitRegions.HitRegion_ArmLeft_Skagzilla_Digi,PhysicalMaterial,,GD_PhysicalMaterial_Armor.PhysMats.PhysMat_Armor",",GD_Skagzilla_Digi.HitRegions.HitRegion_ArmRight_Skagzilla_Digi,PhysicalMaterial,,GD_PhysicalMaterial_Armor.PhysMats.PhysMat_Armor",",GD_Skagzilla_Digi.HitRegions.HitRegion_Head_Skagzilla_Digi,PhysicalMaterial,,GD_PhysicalMaterial_Armor.PhysMats.PhysMat_Armor",",GD_Skagzilla_Digi.HitRegions.HitRegion_LegLeft_Skagzilla_Digi,PhysicalMaterial,,GD_PhysicalMaterial_Armor.PhysMats.PhysMat_Armor",",GD_Skagzilla_Digi.HitRegions.HitRegion_LegRight_Skagzilla_Digi,PhysicalMaterial,,GD_PhysicalMaterial_Armor.PhysMats.PhysMat_Armor",",GD_Skagzilla_Digi.HitRegions.HitRegion_Mouth_Skagzilla_Digi,PhysicalMaterial,,GD_PhysicalMaterial_Creatures.PhysMats.Skag.PhysMat_Skag_NormalHit",",GD_SpiderantSoldier_Digi.HitRegions.HitRegion_Abdomen_Digi,PhysicalMaterial,,GD_PhysicalMaterial_Creatures.PhysMats.Stalker.PhysMat_Stalker_NormalHit",",GD_SpiderantSoldier_Digi.HitRegions.HitRegion_LeftLeg_Armor_Digi,PhysicalMaterial,,GD_PhysicalMaterial_Creatures.PhysMats.SpiderAnt.PhysMat_Spiderant_Armor",",GD_SpiderantSoldier_Digi.HitRegions.HitRegion_RightLeg_Armor_Digi,PhysicalMaterial,,GD_PhysicalMaterial_Creatures.PhysMats.SpiderAnt.PhysMat_Spiderant_Armor",",GD_Thresher_Raid.Character.CharClass_Thresher_Raid,AttributeStartingValues[0].BaseValue.BaseValueConstant,,300.000000",",GD_BugMorphRaid.Character.CharClass_BugMoprhRaid,AttributeStartingValues[0].BaseValue.BaseValueConstant,,100.000000",",GD_DrifterRaid.Character.CharClass_DrifterRaid,AttributeStartingValues[0].BaseValue.BaseValueConstant,,20000.000000",",GD_Aster_Pop_Dragons.Balance.PawnBalance_Dragon_Blue_Raid,PlayThroughs[2].AttributeStartingValues[0].BaseValue.BaseValueConstant,,100.000000",",GD_Aster_Pop_Dragons.Balance.PawnBalance_Dragon_Green_Raid,PlayThroughs[2].AttributeStartingValues[0].BaseValue.BaseValueConstant,,70.000000",",GD_Aster_Pop_Dragons.Balance.PawnBalance_Dragon_Purple_Raid,PlayThroughs[2].AttributeStartingValues[0].BaseValue.BaseValueConstant,,40.000000",",GD_Aster_Pop_Dragons.Balance.PawnBalance_Dragon_Red_Raid,PlayThroughs[2].AttributeStartingValues[0].BaseValue.BaseValueConstant,,50.000000")
 
