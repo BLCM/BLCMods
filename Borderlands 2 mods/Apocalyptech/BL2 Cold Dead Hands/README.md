@@ -28,12 +28,9 @@ via world drops, chests, and the like.
 
 This mod is still under development.
 
-* Should be basically done:
-  * Base game
-  * Captain Scarlett DLC
-  * Torgue DLC (hardly tested, though that's probably not about to change)
+* Base game and all story DLC should be good.
 
-* Other DLCs not mentioned above haven't been touched yet.
+* Headhunter DLCs haven't been touched yet.
 
 * The mod's not been tested much without Better Loot also active
 
@@ -156,6 +153,11 @@ quality, when loaded into FilterTool/BLCMM:
   because otherwise the probabilities of getting grenade mods, COMs, and
   relics would be greatly buffed.  So you'll have to get used to epic chests
   opening up to find a handful of dollars and some pistol ammo.
+
+* Keep in mind that areas which are creature-heavy (such as Caustic Caverns)
+  or full of non-gear-using enemies (such as most of the Dragon Keep DLC) will
+  be pretty weak in the loot front, since weapons and shields will generally
+  not be found in those areas.
 
 Compatibility
 -------------
