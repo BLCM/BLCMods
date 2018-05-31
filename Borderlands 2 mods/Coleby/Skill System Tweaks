@@ -1,6 +1,8 @@
 #<Skill System Tweaks>
 
     Made by Coleby
+    
+    Thanks to Apocalyptech for helping with the 2SP/Lv formula
    
     Gain 2 Skill Points instead of 1 and increase some skills' maximum grade to 10
 
@@ -11,6 +13,10 @@
     #<2 Skill Points per level>
 
     set GD_Globals.Skills.INI_SkillPointsPerLevelUp ConditionalInitialization (bEnabled=True,ConditionalExpressionList=((BaseValueIfTrue=(BaseValueConstant=2,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),Expressions=((AttributeOperand1=AttributeDefinition'D_Attributes.ExperienceResourcePool.PlayerExperienceLevel',ComparisonOperator=OPERATOR_GreaterThanOrEqual,Operand2Usage=OPERAND_PreferAttribute,AttributeOperand2=None,ConstantOperand2=1)))),DefaultBaseValue=(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1))
+    
+    set GD_Globals.Skills.INI_TotalSkillPointsForCurrentLevel ConditionalInitialization (bEnabled=True,ConditionalExpressionList=((BaseValueIfTrue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Globals.Skills.INI_TotalSkillPointsForCurrentLevelFormula',BaseValueScaleConstant=1.000000),Expressions=((AttributeOperand1=AttributeDefinition'D_Attributes.ExperienceResourcePool.PlayerExperienceLevel',ComparisonOperator=OPERATOR_GreaterThanOrEqual,Operand2Usage=OPERAND_PreferAttribute,AttributeOperand2=None,ConstantOperand2=2.000000)))),DefaultBaseValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))
+    
+    set GD_Globals.Skills.INI_TotalSkillPointsForCurrentLevelFormula ValueFormula (bEnabled=True,Multiplier=(BaseValueConstant=2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),Level=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.ExperienceResourcePool.PlayerExperienceLevel',InitializationDefinition=None,BaseValueScaleConstant=1.000000),Power=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),Offset=(BaseValueConstant=-1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))
     
     #</2 Skill Points per level>
 
