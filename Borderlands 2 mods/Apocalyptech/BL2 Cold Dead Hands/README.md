@@ -36,7 +36,6 @@ bits, all inside the `Loot Pool & Drop Changes` folder:
   custom loot pools that we use to equip enemies with.
 
 * `Specific Loot Changes`: (working on working around these)
-  * `Add Kitten and Baby Maker to Motor Momma`
   * `Add Torgue Legendaries and Torgue Tokens to Piston`
 
 Usage/Installation

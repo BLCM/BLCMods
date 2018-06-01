@@ -445,7 +445,6 @@ class Regular(DropConfig):
                 (1, 'GD_ButcherBoss3.Balance.PawnBalance_ButcherBoss3'),
                 (0, 'GD_Iris_Population_Goliath.Balance.Iris_PawnBalance_ArenaGoliath'),
                 (0, 'GD_Iris_Population_Loader.Balance.Iris_PawnBalance_LoaderRPG'),
-                (0, 'GD_Iris_Population_MotorMama.Balance.Iris_PawnBalance_MotorMamaBike'),
                 (0, 'GD_Orchid_Pop_Deserters.Deserter3.PawnBalance_Orchid_Deserter3'),
                 (0, 'GD_Population_Goliath.Balance.PawnBalance_GoliathBlaster'),
                 (0, 'GD_Population_Loader.Balance.PawnBalance_LoaderRPG'),
@@ -1127,6 +1126,7 @@ class Badass(DropConfig):
             [
                 (0, 'GD_Population_Goliath.Balance.Unique.PawnBalance_SmashHead'),
                 (0, 'GD_Population_Nomad.Balance.Unique.PawnBalance_MadMike'),
+                (0, 'GD_Iris_Population_MotorMama.Balance.Iris_PawnBalance_MotorMamaBike'),
             ],
             # Snipers
             [
@@ -1194,7 +1194,7 @@ class Badass(DropConfig):
                 (0, 'GD_PsychoBadass_Digi.Population.PawnBalance_PsychoBadass_Digi'),
 
                 # Bosses follow - I'm actually not sure if we want to be doing these or not.
-                (3, 'GD_Iris_Population_MotorMama.Balance.Iris_PawnBalance_MotorMama'), # Index for Motor Mama shields is 2 in vanilla game
+                (2, 'GD_Iris_Population_MotorMama.Balance.Iris_PawnBalance_MotorMama'),
                 (1, 'GD_Iris_Population_PyroPete.Balance.Iris_PawnBalance_Pyro_Pete'),
                 (0, 'GD_Aster_Pop_Wizards.Balance.PawnBalance_JackWarlock_Demon'),
                 (0, 'GD_Aster_Pop_Wizards.Balance.PawnBalance_JackWarlock_DemonFall'),
@@ -2149,6 +2149,32 @@ hfs.add_level_hotfix('medicalmystery', 'MedicalMystery',
     BalancedItems,,{}""".format(get_balanced_items([
         ('GD_Weap_AssaultRifle.A_Weapons.AR_Bandit_5_Alien', 1, 'WeaponBalanceDefinition'),
     ])))
+
+# Motor Momma drop pool fixes
+hfs.add_level_hotfix('motor_momma_0', 'MotorMomma',
+    """Iris_Hub2_P,
+    GD_Iris_Population_MotorMama.Balance.Iris_PawnBalance_MotorMama,
+    DefaultItemPoolList[2].PoolProbability,,
+    (
+        BaseValueConstant=1.000000,
+        BaseValueAttribute=None,
+        InitializationDefinition=None,
+        BaseValueScaleConstant=1.000000
+    )""")
+
+hfs.add_level_hotfix('motor_momma_1', 'MotorMomma',
+    """Iris_Hub2_P,
+    GD_Iris_Population_MotorMama.Balance.Iris_PawnBalance_MotorMama,
+    DefaultItemPoolList[3],,
+    (
+        ItemPool=ItemPoolDefinition'GD_Itempools.Runnables.Pool_MadameVonBartlesby',
+        PoolProbability=(
+            BaseValueConstant=0.000000,
+            BaseValueAttribute=AttributeDefinition'GD_Itempools.DropWeights.DropODDS_BossUniques',
+            InitializationDefinition=None,
+            BaseValueScaleConstant=1.000000
+        )
+    )""")
 
 # Laney's Dwarves - Better Loot Compat.  Deactivate the extra gemstone drop.
 
@@ -3281,6 +3307,41 @@ for (label, key, unique_pct, rare_pct) in [
         1,
         level='Orchid_ShipGraveyard_P',
         activated=hotfix_activated)
+
+    # Motor Momma (Iris_Hub2_P pool 0)
+
+    setup_boss_pool('momma_pool_0', 'Iris_Hub2_P', other.level_pool_0,
+            badass.equip_pool_launchers,
+            [
+                ('GD_Iris_Weapons.AssaultRifles.AR_Vladof_3_Kitten', rare_pct, 'WeaponBalanceDefinition'),
+                ('GD_Itempools.Runnables.Pool_MadameVonBartlesby', unique_pct, None),
+            ],
+            activated=hotfix_activated)
+
+    set_dipl_item_pool('momma_pool_1',
+            'GD_Iris_Population_MotorMama.Balance.Iris_PawnBalance_MotorMama',
+            0,
+            other.level_pool_0,
+            level='Iris_Hub2_P',
+            activated=hotfix_activated)
+
+    set_dipl_item_prob('momma_pool_2',
+            'GD_Iris_Population_MotorMama.Balance.Iris_PawnBalance_MotorMama',
+            3,
+            level='Iris_Hub2_P',
+            activated=hotfix_activated)
+
+    set_dipl_item_prob('momma_pool_3',
+            'GD_Iris_Population_MotorMama.Balance.Iris_PawnBalance_MotorMama',
+            4,
+            level='Iris_Hub2_P',
+            activated=hotfix_activated)
+
+    set_dipl_item_prob('momma_pool_4',
+            'GD_Iris_Population_MotorMama.Balance.Iris_PawnBalance_MotorMama',
+            5,
+            level='Iris_Hub2_P',
+            activated=hotfix_activated)
 
     # P3RV-E (Orchid_Refinery_P pool 0)
 
