@@ -450,4 +450,219 @@
 
             #</Captain Scarlett DLC>
 
+            #<Wattle Gobbler Headhunter Pack>{line_suffix}
+
+                {line_prefix}# UCP adds in a ton of unique drops to the various Tributes in this{line_suffix}
+                {line_prefix}# Headhunter Pack, often with multiple uniques per tribute.  We're{line_suffix}
+                {line_prefix}# making use of the UCP pools for as much of this as possible, though{line_suffix}
+                {line_prefix}# we still require the use of eight skinpools of our own, to support{line_suffix}
+                {line_prefix}# things properly.{line_suffix}
+
+                #<Axel, Tribute of Opportunity>{line_suffix}
+
+                    {line_prefix}# UCP adds the Nasty Surprise, Invader, and 1340 Shield.{line_suffix}
+
+                    {line_prefix}set GD_CustomItemPools_MainGame.Assassin.OrangeBold BalancedItems
+                    (
+                        (
+                            ItmPoolDefinition=None,
+                            InvBalanceDefinition=InventoryBalanceDefinition'GD_GrenadeMods.A_Item_Legendary.GM_NastySurprise',
+                            Probability=(
+                                BaseValueConstant=0.000000,
+                                BaseValueAttribute=None,
+                                InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',
+                                BaseValueScaleConstant=1.000000
+                            ),
+                            bDropOnDeath=True
+                        )
+                    ){line_suffix}
+
+                    {hotfixes:axel_pool_0}
+
+                    {hotfixes:axel_pool_1}
+
+                    {hotfixes:axel_pool_2}
+
+                    {hotfixes:axel_pool_3}
+
+                    {hotfixes:axel_pool_4}
+
+                    {hotfixes:axel_pool_5}
+
+                #</Axel, Tribute of Opportunity>
+
+                #<Rose, Tribute of Opportunity>{line_suffix}
+
+                    {line_prefix}# UCP adds the Bitch, Shotgun 1340, and Black Hole{line_suffix}
+
+                    {line_prefix}set GD_CustomItemPools_MainGame.Assassin.GreenNinja bAutoReadyItems True{line_suffix}
+
+                    {hotfixes:rose_pool_0}
+
+                    {hotfixes:rose_pool_1}
+
+                    {hotfixes:rose_pool_2}
+
+                    {hotfixes:rose_pool_3}
+
+                    {hotfixes:rose_pool_4}
+
+                    {hotfixes:rose_pool_5}
+
+                    {hotfixes:rose_pool_6}
+
+                    {hotfixes:rose_pool_7}
+
+                    {hotfixes:rose_pool_8}
+
+                #</Rose, Tribute of Opportunity>
+
+                #<Cynder, Tribute of Frostburn>{line_suffix}
+
+                    {line_prefix}# UCP adds Flame of the Firehawk and Pyrophobia.  Cynder is melee-only{line_suffix}
+                    {line_prefix}# so we're not going to equip Pyrophobia, but we will equip the{line_suffix}
+                    {line_prefix}# shield.  Note that Cynder ordinarily does not use a shield until{line_suffix}
+                    {line_prefix}# TVHM, so the FotF drop will only happen from then onwards.{line_suffix}
+
+                    {line_prefix}set GD_CustomItemPools_MainGame.Assassin.OrangePattern BalancedItems
+                    (
+                        (
+                            ItmPoolDefinition=None,
+                            InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_Launchers.A_Weapons_Legendary.RL_Maliwan_5_Pyrophobia',
+                            Probability=(
+                                BaseValueConstant=0.000000,
+                                BaseValueAttribute=None,
+                                InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',
+                                BaseValueScaleConstant=1.000000
+                            ),
+                            bDropOnDeath=True
+                        )
+                    ){line_suffix}
+
+                    {hotfixes:cynder_pool_0}
+
+                    {hotfixes:cynder_pool_1}
+
+                #</Cynder, Tribute of Frostburn>
+
+                #<Fuse, Tribute of Frostburn>{line_suffix}
+
+                    {line_prefix}# UCP adds HellFire and Neogenator.  Fuse is melee-only{line_suffix}
+                    {line_prefix}# so we're not going to equip HellFire, but we will equip the{line_suffix}
+                    {line_prefix}# shield.  Note that Fuse ordinarily does not use a shield until{line_suffix}
+                    {line_prefix}# TVHM, so the Neogenator drop will only happen from then onwards.{line_suffix}
+
+                    {line_prefix}set GD_CustomItemPools_MainGame.Assassin.MaliwanUncommon BalancedItems
+                    (
+                        (
+                            ItmPoolDefinition=None,
+                            InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_SMG.A_Weapons_Legendary.SMG_Maliwan_5_HellFire',
+                            Probability=(
+                                BaseValueConstant=0.000000,
+                                BaseValueAttribute=None,
+                                InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',
+                                BaseValueScaleConstant=1.000000
+                            ),
+                            bDropOnDeath=True
+                        )
+                    ){line_suffix}
+
+                    {hotfixes:fuse_pool_0}
+
+                    {hotfixes:fuse_pool_1}
+
+                #</Fuse, Tribute of Frostburn>
+
+                #<Annie, Tribute of Lynchwood>{line_suffix}
+
+                    {line_prefix}# UCP adds the Sheriffs Badge and Law{line_suffix}
+
+                    {line_prefix}set GD_CustomItemPools_MainGame.Assassin.PinkPandoracorn BalancedItems
+                    (
+                        (
+                            ItmPoolDefinition=None,
+                            InvBalanceDefinition=InventoryBalanceDefinition'GD_Artifacts.A_Item_Unique.A_Sheriff',
+                            Probability=(
+                                BaseValueConstant=0.000000,
+                                BaseValueAttribute=None,
+                                InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',
+                                BaseValueScaleConstant=1.000000
+                            ),
+                            bDropOnDeath=True
+                        )
+                    ){line_suffix}
+
+                    {hotfixes:annie_pool_0}
+
+                    {hotfixes:annie_pool_1}
+
+                    {hotfixes:annie_pool_2}
+
+                #</Annie, Tribute of Lynchwood>
+
+                #<Garret, Tribute of Lynchwood>{line_suffix}
+
+                    {line_prefix}# UCP adds Deputy's Badge and Order.{line_suffix}
+                    {line_prefix}# Note that Garret ordinarily does not use a shield until{line_suffix}
+                    {line_prefix}# TVHM, so the Order drop will only happen from then onwards.{line_suffix}
+
+                    {line_prefix}set GD_CustomItemPools_MainGame.Assassin.OrangeNinja BalancedItems
+                    (
+                        (
+                            ItmPoolDefinition=None,
+                            InvBalanceDefinition=InventoryBalanceDefinition'GD_Artifacts.A_Item_Unique.A_Deputy',
+                            Probability=(
+                                BaseValueConstant=0.000000,
+                                BaseValueAttribute=None,
+                                InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',
+                                BaseValueScaleConstant=1.000000
+                            ),
+                            bDropOnDeath=True
+                        )
+                    ){line_suffix}
+
+                    {hotfixes:garret_pool_0}
+
+                    {hotfixes:garret_pool_1}
+
+                #</Garret, Tribute of Lynchwood>
+
+                #<Fiona, Tribute of Sanctuary>{line_suffix}
+
+                    {line_prefix}# UCP adds the Scorpio{line_suffix}
+
+                    {line_prefix}set GD_CustomItemPools_MainGame.Assassin.CyanNinja bAutoReadyItems True{line_suffix}
+
+                    {hotfixes:fiona_pool_0}
+
+                    {hotfixes:fiona_pool_1}
+
+                    {hotfixes:fiona_pool_2}
+
+                    {hotfixes:fiona_pool_3}
+
+                #</Fiona, Tribute of Sanctuary>
+
+                #<Moretus, Tribute of Sawtooth Cauldron>{line_suffix}
+
+                    {line_prefix}# UCP adds the Evil Smasher{line_suffix}
+
+                    {line_prefix}set GD_CustomItemPools_MainGame.Assassin.GreenBold bAutoReadyItems True{line_suffix}
+
+                    {hotfixes:moretus_pool_0}
+
+                    {hotfixes:moretus_pool_1}
+
+                    {hotfixes:moretus_pool_2}
+
+                    {hotfixes:moretus_pool_3}
+
+                    {hotfixes:moretus_pool_4}
+
+                    {hotfixes:moretus_pool_5}
+
+                #</Moretus, Tribute of Sawtooth Cauldron>
+
+            #</Wattle Gobbler Headhunter Pack>
+
         #</{boss_label}>

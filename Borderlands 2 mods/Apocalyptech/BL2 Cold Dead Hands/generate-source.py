@@ -90,6 +90,14 @@ class OtherConfig(BaseConfig):
     level_pool_1 = 'GD_CustomItemPools_allium.Psycho.AlliumXmasSkins'
     level_pool_2 = 'GD_CustomItemPools_allium.Siren.AlliumXmasSkins'
 
+    # These four are *only* "required" due to the absurd amount of unique
+    # drops added in by UCP to the Tributes in the Wattle Gobbler Headhunter
+    # Pack.  Yay?
+    level_pool_3 = 'GD_CustomItemPools_allium.Soldier.AlliumXmasSkins'
+    level_pool_4 = 'GD_CustomItemPools_allium.Mercenary.AlliumXmasHeads'
+    level_pool_5 = 'GD_CustomItemPools_allium.Psycho.AlliumXmasHeads'
+    level_pool_6 = 'GD_CustomItemPools_allium.Siren.AlliumXmasHeads'
+
 class DropConfig(BaseConfig):
     """
     Class to hold basic config for drops
@@ -1075,6 +1083,7 @@ class Badass(DropConfig):
                 (0, 'GD_Population_Sheriff.Balance.PawnBalance_Deputy'),
                 (0, 'GD_Population_Sheriff.Balance.PawnBalance_Marshal'),
                 (0, 'GD_MarauderBadass_Digi.Population.PawnBalance_MarauderBadass_Digi'),
+                (1, 'GD_ButcherBoss2.Balance.PawnBalance_ButcherBoss2'),
             ],
             # Pistols
             [
@@ -1681,7 +1690,7 @@ def setup_boss_pool(hotfix_id, level, pool, default_gear, unique_gear, activated
     bal_items_tuples = []
     for (unique, pct, baldef) in unique_gear:
         total_unique += pct
-        bal_items_tuples.append((unique, pct, baldef))
+        bal_items_tuples.append((unique, round(pct, 6), baldef))
     if default_gear and total_unique < 1:
         bal_items_tuples.append((default_gear, round(1 - total_unique, 6), None))
     hfs.add_level_hotfix(hotfix_id, 'BossPool',
@@ -3294,6 +3303,262 @@ for (label, key, unique_pct, rare_pct) in [
         2,
         level='Orchid_Refinery_P',
         activated=hotfix_activated)
+
+    # Percent value to use for all Tribute drops in the Wattle Gobbler DLC.  There
+    # are so many at once that we don't really want to use our full drop percentage,
+    # even on 'guaranteed'
+    tribute_pct = unique_pct*(2/3)
+
+    # Axel, Tribute of Opportunity weapon (Hunger_P pool 0)
+
+    setup_boss_pool('axel_pool_0', 'Hunger_P', other.level_pool_0,
+            badass.equip_pool_ar,
+            [
+                ('GD_Weap_SniperRifles.A_Weapons_Legendary.Sniper_Hyperion_5_Invader', tribute_pct, 'WeaponBalanceDefinition'),
+            ],
+            activated=hotfix_activated)
+
+    set_pt_cipl_item_pool('axel_pool_1',
+            'GD_EngineerMale.Balance.PawnBalance_EngineerMale',
+            0, 0,
+            other.level_pool_0,
+            level='Hunger_P',
+            activated=hotfix_activated)
+
+    set_pt_cipl_item_pool('axel_pool_2',
+            'GD_EngineerMale.Balance.PawnBalance_EngineerMale',
+            1, 0,
+            other.level_pool_0,
+            level='Hunger_P',
+            activated=hotfix_activated)
+
+    # Axel, Tribute of Opportunity shield (Hunger_P pool 1)
+
+    setup_boss_pool('axel_pool_3', 'Hunger_P', other.level_pool_1,
+            badass.pool_shields,
+            [
+                ('GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Absorption_1340', tribute_pct, 'InventoryBalanceDefinition'),
+            ],
+            activated=hotfix_activated)
+
+    set_pt_cipl_item_pool('axel_pool_4',
+            'GD_EngineerMale.Balance.PawnBalance_EngineerMale',
+            0, 1,
+            other.level_pool_1,
+            level='Hunger_P',
+            activated=hotfix_activated)
+
+    set_pt_cipl_item_pool('axel_pool_5',
+            'GD_EngineerMale.Balance.PawnBalance_EngineerMale',
+            1, 1,
+            other.level_pool_1,
+            level='Hunger_P',
+            activated=hotfix_activated)
+
+    # Rose, Tribute of Opportunity weapons (UCP pool)
+
+    setup_boss_pool('rose_pool_0', 'Hunger_P', 'GD_CustomItemPools_MainGame.Assassin.GreenNinja',
+            'GD_ItempoolsEnemyUse.Turrets.MedicalMystery_AlienGun',
+            [
+                ('GD_Weap_SMG.A_Weapons_Legendary.SMG_Hyperion_5_Bitch', tribute_pct, 'WeaponBalanceDefinition'),
+                ('GD_Weap_Shotgun.A_Weapons_Unique.SG_Hyperion_3_Shotgun1340', tribute_pct, 'WeaponBalanceDefinition'),
+            ],
+            activated=hotfix_activated)
+
+    set_pt_cipl_item_pool('rose_pool_1',
+            'GD_EngineeFemale.Balance.PawnBalance_EngineerFemale',
+            0, 0,
+            'GD_CustomItemPools_MainGame.Assassin.GreenNinja',
+            level='Hunger_P',
+            activated=hotfix_activated)
+
+    set_pt_cipl_item_pool('rose_pool_2',
+            'GD_EngineeFemale.Balance.PawnBalance_EngineerFemale',
+            1, 0,
+            'GD_CustomItemPools_MainGame.Assassin.GreenNinja',
+            level='Hunger_P',
+            activated=hotfix_activated)
+
+    # Rose, Tribute of Opportunity shield (Hunger_P pool 2)
+
+    setup_boss_pool('rose_pool_3', 'Hunger_P', other.level_pool_2,
+            badass.pool_shields,
+            [
+                ('GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Nova_Singularity', tribute_pct, 'InventoryBalanceDefinition'),
+            ],
+            activated=hotfix_activated)
+
+    set_pt_cipl_item_pool('rose_pool_4',
+            'GD_EngineeFemale.Balance.PawnBalance_EngineerFemale',
+            0, 1,
+            other.level_pool_2,
+            level='Hunger_P',
+            activated=hotfix_activated)
+
+    set_pt_cipl_item_pool('rose_pool_5',
+            'GD_EngineeFemale.Balance.PawnBalance_EngineerFemale',
+            1, 1,
+            other.level_pool_2,
+            level='Hunger_P',
+            activated=hotfix_activated)
+
+    set_dipl_item_prob('rose_pool_6',
+            'GD_EngineeFemale.Balance.PawnBalance_EngineerFemale',
+            0,
+            level='Hunger_P',
+            activated=hotfix_activated)
+
+    set_pt_cipl_item_prob('rose_pool_7',
+            'GD_EngineeFemale.Balance.PawnBalance_EngineerFemale',
+            0, 2,
+            level='Hunger_P',
+            activated=hotfix_activated)
+
+    set_pt_cipl_item_prob('rose_pool_8',
+            'GD_EngineeFemale.Balance.PawnBalance_EngineerFemale',
+            1, 2,
+            level='Hunger_P',
+            activated=hotfix_activated)
+
+    # Cynder, Tribute of Frostburn shield (Hunger_P pool 3)
+
+    setup_boss_pool('cynder_pool_0', 'Hunger_P', other.level_pool_3,
+            badass.pool_shields,
+            [
+                ('GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Nova_Phoenix', tribute_pct, 'InventoryBalanceDefinition'),
+            ],
+            activated=hotfix_activated)
+
+    set_pt_cipl_item_pool('cynder_pool_1',
+            'GD_IncineratorFemale.Balance.PawnBalance_IncineratorFemale',
+            1, 0,
+            other.level_pool_3,
+            level='Hunger_P',
+            activated=hotfix_activated)
+
+    # Fuse, Tribute of Frostburn shield (Hunger_P pool 4)
+
+    setup_boss_pool('fuse_pool_0', 'Hunger_P', other.level_pool_4,
+            badass.pool_shields,
+            [
+                ('GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Chimera_05_Legendary', tribute_pct, 'InventoryBalanceDefinition'),
+            ],
+            activated=hotfix_activated)
+
+    set_pt_cipl_item_pool('fuse_pool_1',
+            'GD_IncineratorMale.Balance.PawnBalance_IncineratorMale',
+            1, 0,
+            other.level_pool_4,
+            level='Hunger_P',
+            activated=hotfix_activated)
+
+    # Annie, Tribute of Lynchwood weapon (Hunger_P pool 5)
+
+    setup_boss_pool('annie_pool_0', 'Hunger_P', other.level_pool_5,
+            badass.equip_pool_snipers,
+            [
+                ('GD_Weap_Pistol.A_Weapons_Unique.Pistol_Jakobs_3_Law', tribute_pct, 'WeaponBalanceDefinition'),
+            ],
+            activated=hotfix_activated)
+
+    set_pt_cipl_item_pool('annie_pool_1',
+            'GD_Lynchwood_Female.Balance.PawnBalance_Lynchwood_Female',
+            0, 0,
+            other.level_pool_5,
+            level='Hunger_P',
+            activated=hotfix_activated)
+
+    set_pt_cipl_item_pool('annie_pool_2',
+            'GD_Lynchwood_Female.Balance.PawnBalance_Lynchwood_Female',
+            1, 0,
+            other.level_pool_5,
+            level='Hunger_P',
+            activated=hotfix_activated)
+
+    # Garret, Tribute of Lynchwood shield (Hunger_P pool 6)
+
+    setup_boss_pool('garret_pool_0', 'Hunger_P', other.level_pool_6,
+            badass.pool_shields,
+            [
+                ('GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Roid_Order', tribute_pct, 'InventoryBalanceDefinition'),
+            ],
+            activated=hotfix_activated)
+
+    set_pt_cipl_item_pool('garret_pool_1',
+            'GD_Lynchwood_Male.Balance.PawnBalance_Lynchwood_Male',
+            1, 1,
+            other.level_pool_6,
+            level='Hunger_P',
+            activated=hotfix_activated)
+
+    # Fiona, Tribute of Sanctuary weapon (UCP pool)
+
+    setup_boss_pool('fiona_pool_0', 'Hunger_P', 'GD_CustomItemPools_MainGame.Assassin.CyanNinja',
+            badass.equip_pool_ar,
+            [
+                ('GD_Weap_AssaultRifle.A_Weapons_Unique.AR_Dahl_3_Scorpio', tribute_pct, 'WeaponBalanceDefinition'),
+            ],
+            activated=hotfix_activated)
+
+    set_pt_cipl_item_pool('fiona_pool_1',
+            'GD_RaiderFemale.Balance.PawnBalance_RaiderFemale',
+            0, 0,
+            'GD_CustomItemPools_MainGame.Assassin.CyanNinja',
+            level='Hunger_P',
+            activated=hotfix_activated)
+
+    set_dipl_item_prob('fiona_pool_2',
+            'GD_RaiderFemale.Balance.PawnBalance_RaiderFemale',
+            0,
+            level='Hunger_P',
+            activated=hotfix_activated)
+
+    set_pt_cipl_item_prob('fiona_pool_3',
+            'GD_RaiderFemale.Balance.PawnBalance_RaiderFemale',
+            0, 2,
+            level='Hunger_P',
+            activated=hotfix_activated)
+
+    # Moretus, Tribute of Sawtooth Cauldron weapon (UCP pool)
+
+    setup_boss_pool('moretus_pool_0', 'Hunger_P', 'GD_CustomItemPools_MainGame.Assassin.GreenBold',
+            badass.equip_pool_ar,
+            [
+                ('GD_Weap_AssaultRifle.A_Weapons_Unique.AR_Torgue_3_EvilSmasher', tribute_pct, 'WeaponBalanceDefinition'),
+            ],
+            activated=hotfix_activated)
+
+    set_pt_cipl_item_pool('moretus_pool_1',
+            'GD_CraterMale.Balance.PawnBalance_CraterMale',
+            0, 0,
+            'GD_CustomItemPools_MainGame.Assassin.GreenBold',
+            level='Hunger_P',
+            activated=hotfix_activated)
+
+    set_pt_cipl_item_pool('moretus_pool_2',
+            'GD_CraterMale.Balance.PawnBalance_CraterMale',
+            1, 0,
+            'GD_CustomItemPools_MainGame.Assassin.GreenBold',
+            level='Hunger_P',
+            activated=hotfix_activated)
+
+    set_dipl_item_prob('moretus_pool_3',
+            'GD_CraterMale.Balance.PawnBalance_CraterMale',
+            0,
+            level='Hunger_P',
+            activated=hotfix_activated)
+
+    set_pt_cipl_item_prob('moretus_pool_4',
+            'GD_CraterMale.Balance.PawnBalance_CraterMale',
+            0, 1,
+            level='Hunger_P',
+            activated=hotfix_activated)
+
+    set_pt_cipl_item_prob('moretus_pool_5',
+            'GD_CraterMale.Balance.PawnBalance_CraterMale',
+            1, 2,
+            level='Hunger_P',
+            activated=hotfix_activated)
 
     # Generate the section string
     with open('input-file-bosses.txt', 'r') as df:

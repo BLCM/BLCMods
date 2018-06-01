@@ -97,6 +97,11 @@ from the start of the battle which gun you'll receive.
   not keen to do.  So H3RL-E may drop the Manly Man without actually having
   it equipped.
 
+* The Tributes (from the Wattle Gobbler Headhunter Pack) will have a 2/3rds
+  chance of dropping the unique items that UCP adds to their drop pools
+  compared to other enemies, since there are so many of them in one location.
+  So even on "guaranteed" drops you may not get their unique items.
+
 ### Other Pool Tweaks
 
 * Big Sleep is usually the one to drop the 12 Pounder, but that drop/equip
