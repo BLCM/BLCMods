@@ -3560,6 +3560,54 @@ for (label, key, unique_pct, rare_pct) in [
             level='Hunger_P',
             activated=hotfix_activated)
 
+    # Sparky Flynt (Easter_P pool 0)
+
+    setup_boss_pool('sparky_pool_0', 'Easter_P', other.level_pool_0,
+            None,
+            [
+                ('GD_Weap_Pistol.A_Weapons_Legendary.Pistol_Maliwan_5_ThunderballFists', 1, 'WeaponBalanceDefinition'),
+                ('GD_Weap_Pistol.A_Weapons_Unique.Pistol_Bandit_3_Tenderbox', 1, 'WeaponBalanceDefinition'),
+            ],
+            activated=hotfix_activated)
+
+    set_dipl_item_pool('sparky_pool_1',
+            'GD_FlyntSon.Population.PawnBalance_FlyntSon',
+            0,
+            other.level_pool_0,
+            level='Easter_P',
+            activated=hotfix_activated)
+
+    set_dipl_item_prob('sparky_pool_2',
+            'GD_FlyntSon.Population.PawnBalance_FlyntSon',
+            1,
+            level='Easter_P',
+            activated=hotfix_activated)
+
+    set_dipl_item_prob('sparky_pool_3',
+            'GD_FlyntSon.Population.PawnBalance_FlyntSon',
+            2,
+            level='Easter_P',
+            activated=hotfix_activated)
+
+    set_dipl_item_pool('sparky_pool_4',
+            'GD_FlyntSon.Population.PawnBalance_FlyntSon_Run',
+            0,
+            other.level_pool_0,
+            level='Easter_P',
+            activated=hotfix_activated)
+
+    set_dipl_item_prob('sparky_pool_5',
+            'GD_FlyntSon.Population.PawnBalance_FlyntSon_Run',
+            1,
+            level='Easter_P',
+            activated=hotfix_activated)
+
+    set_dipl_item_prob('sparky_pool_6',
+            'GD_FlyntSon.Population.PawnBalance_FlyntSon_Run',
+            2,
+            level='Easter_P',
+            activated=hotfix_activated)
+
     # Generate the section string
     with open('input-file-bosses.txt', 'r') as df:
         boss_drops[key] = df.read().format(

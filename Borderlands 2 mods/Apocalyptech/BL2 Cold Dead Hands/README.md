@@ -24,16 +24,6 @@ enemies will have better gear than their ordinary counterparts.
 Grenade Mods, Class Mods, and Relics will still be acquired as per usual -
 via world drops, chests, and the like.
 
-### Mod Status
-
-This mod is still under development.
-
-* Base game and all story DLC should be good.
-
-* Headhunter DLCs haven't been touched yet.
-
-* The mod's not been tested much without Better Loot also active
-
 Requirements
 ------------
 
