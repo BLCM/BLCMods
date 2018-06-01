@@ -301,7 +301,7 @@ class Regular(DropConfig):
             'rare': 65,
             'veryrare': 40,
             'alien': 20,
-            'legendary': 1,
+            'legendary': 3,
             },
         'better': {
             'common': 32.75,
