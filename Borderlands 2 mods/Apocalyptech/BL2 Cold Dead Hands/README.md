@@ -10,9 +10,8 @@ quality is also improved considerably.
 The intention is that these enhanced enemy drops will be just about the
 *only* way to acquire weapons and shields in the game.  Quest rewards will
 be unchanged, so weapons and shields can still be acquired that way.  At
-the moment, gear can still be found in vending machines, and in some
-containers.  Weapons and shields can no longer be found in treasure chests,
-though.
+the moment, weapons and shields can still be found in vending machines,
+but should mostly be not available otherwise.
 
 In the default configuration, this mod is a spiritual cousin of my own
 Better Loot mod.  You'll be up against enemies using purples, gemstones,
@@ -64,6 +63,18 @@ will be the item that they'll drop.  So you should be able to tell right
 from the start of the battle which gun you'll receive.
 
 ### Exceptions
+
+* Some chests are likely to spawn weapons+shields still, or at least I'm not
+  specifically removing those loot drops from the containers.  This list is
+  unlikely to be exhaustive, and I haven't really tested many of these to find
+  out:
+  * Roland's Chest in Sanctuary will probably contain actual gear.
+  * Dice Chests (from the Tiny Tina DLC) - weapons will be sparse enough during
+    that DLC as it is.
+  * Chests which were hardcoded to give specific gear should still provide that
+    gear:
+    * Shotgun chest at the end of Windshear Waste
+    * Slag Gun chest in the Wattle Gobbler Headhunter Pack
 
 * Doc Mercy has to be using an E-Tech blaster for Medical Mystery to make
   sense, so I've chosen to keep that rather than having him use an Infinity
