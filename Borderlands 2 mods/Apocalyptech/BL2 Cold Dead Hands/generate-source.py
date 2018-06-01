@@ -2223,6 +2223,29 @@ set_dl_ia_item_pool('lockers_4',
         'GD_Itempools.LootablePools.Pool_Locker_Items_CashAndAmmo', 1, 0,
         point='Ammo1')
 
+# Remove weapons+shields from cardboard boxes
+set_dl_ia_item_pool('cardboard_0',
+        'GD_Balance_Treasure.LootableGrades.ObjectGrade_Cardboard_Box',
+        'GD_Itempools.LootablePools.Pool_Locker_Items_CashAndAmmo', 1, 0,
+        point='Ammo1')
+
+# Remove guns from dumpsters
+hfs.add_level_hotfix('dumpsters_0', 'Dumpster',
+        """,GD_Itempools.LootablePools.Pool_Dumpster_Guns,BalancedItems,,
+        (
+            (
+                ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.LootablePools.Pool_Locker_Items_CashAndAmmo',
+                InvBalanceDefinition=None,
+                Probability=(
+                    BaseValueConstant=1,
+                    BaseValueAttribute=None,
+                    InitializationDefinition=None,
+                    BaseValueScaleConstant=1
+                ),
+                bDropOnDeath=False
+            )
+        )""")
+
 # Improve "medical mystery" pool (used in a couple of places, actually)
 hfs.add_level_hotfix('medicalmystery', 'MedicalMystery',
     """,GD_ItempoolsEnemyUse.Turrets.MedicalMystery_AlienGun,
