@@ -209,7 +209,6 @@ things to think about:
 * Fix orientation of items spawning in chests?  I think we can do this
   without messing up "regular" item spawns because it's just the weapon mounts
   that we'd change.  Not sure about shield mounts...
-* Look into allowing AI to burst?  Look in WeaponType for "AIBurst" or somesuch.
 
 Licenses
 ========
