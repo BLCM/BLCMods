@@ -47,14 +47,16 @@ Mod Details
 -----------
 
 As stated above, enemies who use guns and shields will always drop that gun
-and shield, and should never drop anything else.  Creatures like Stalkers
-and Skeletons, and devices like turrets, will NOT drop a shield, even if
-they spawn with one.  Shielded loaders will drop shields, though.
+and shield.  Creatures like Stalkers and Skeletons, and devices like turrets,
+will NOT drop a shield, even if they spawn with one.  Shielded loaders will
+drop shields, though.
 
 Bosses with unique weapon drops who don't actually use weapons (ie: most
 "creature" enemies like Knuckedragger, machines like BNK3R, melee-only
 bosses) will nevertheless have a guaranteed drop of one item from their
-drop pool, even though other melee-only enemies wouldn't.
+drop pool, even though other melee-only enemies wouldn't.  Raid bosses, and
+other large "lootsplosion" events may end up generating some guns/shields
+as well.
 
 If a weapon/shield-using boss has multiple unique drops of a weapon or
 shield, they will spawn with one of those items chosen randomly, and that
@@ -106,7 +108,7 @@ from the start of the battle which gun you'll receive.
 There are three main categories which you can use to customize the gear
 quality, when loaded into FilterTool/BLCMM:
 
-* **Better Loot Pools**: This section adds gemstones into the global E-Tech
+* **Loot Pool Improvements**: This section adds gemstones into the global E-Tech
   pool, and improves the global legendary pool by adding all uniques,
   pearls, and seraphs.  These options can all be toggled individually.
 
@@ -154,14 +156,16 @@ quality, when loaded into FilterTool/BLCMM:
 Compatibility
 -------------
 
-This will obviously conflict with other mods with similar aims.
-theNocturni's "Enemy Enhancer" is one obvious conflict.
-
 This mod is compatible with UCP, and in fact requires that UCP's skinpool
 changes be in place.
 
+This will obviously conflict with other mods with similar aims.
+theNocturni's "Enemy Enhancer" is one obvious conflict, though the
+non-loot-pool parts of Enemy Enhancer would still be active (such as
+faster enemy animations, etc).
+
 This mod overwrites/disables much of the functionality in my own "Better
-Loot" mod, though it's designed to work fine with both enabled (so long as
+Loot" mod, but it's designed to work fine with both enabled (so long as
 this mod appears later in your patch file).  The "Better Loot" improvements
 to Class Mods, Grenades, Relics, etc, should help out against the increased
 enemy difficulty here, in fact.
