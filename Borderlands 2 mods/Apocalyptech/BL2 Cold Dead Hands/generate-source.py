@@ -2246,6 +2246,16 @@ hfs.add_level_hotfix('dumpsters_0', 'Dumpster',
             )
         )""")
 
+# Remove guns from bandit coolers
+set_dl_ia_item_pool('cooler_0',
+        'GD_Balance_Treasure.LootableGrades.ObjectGrade_Bandit_Cooler',
+        'GD_Itempools.LootablePools.Pool_Locker_Items_CashAndAmmo', 4, 0,
+        point='Ammo1')
+set_dl_ia_item_pool('cooler_1',
+        'GD_Balance_Treasure.LootableGradesTrap.MidgetBandit.ObjectGrade_BanditCooler_MidgetBandit',
+        'GD_Itempools.LootablePools.Pool_Locker_Items_CashAndAmmo', 4, 0,
+        point='Ammo1')
+
 # Improve "medical mystery" pool (used in a couple of places, actually)
 hfs.add_level_hotfix('medicalmystery', 'MedicalMystery',
     """,GD_ItempoolsEnemyUse.Turrets.MedicalMystery_AlienGun,
