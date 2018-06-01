@@ -1684,7 +1684,7 @@ def set_ld_item_weight(hotfix_name, classname, index, level=None,
         activated=activated)
 
 def set_ld_ia_item_pool(hotfix_name, classname, pool, ld_index, ia_index,
-        point=None, level=None, activated=True):
+        point=None, level=None, activated=True, main_attr='LootData'):
     """
     Sets an `ItemPool` pool inside a `LootData[x].ItemAttachments[y]` structure,
     inside the class `classname`, LootData index `ld_index`, and ItemAttachments
@@ -1692,7 +1692,8 @@ def set_ld_ia_item_pool(hotfix_name, classname, pool, ld_index, ia_index,
     a boolean describing if the hotfix will be active or not.  If `level` is passed
     in, the hotfix will only be active for the given level.  If `point` is passed
     in, we will additionally create another hotfix (with the name suffixed with
-    "_point") which sets the attachment point for the newly-defined pool.
+    "_point") which sets the attachment point for the newly-defined pool.  To
+    use a different top-level attribute than `LootData`, pass in `main_attr`.
     """
     global hfs
     if not level:
@@ -1700,10 +1701,11 @@ def set_ld_ia_item_pool(hotfix_name, classname, pool, ld_index, ia_index,
     hfs.add_level_hotfix(hotfix_name, 'LDIAPool',
         """{level},
         {classname},
-        LootData[{ld_index}].ItemAttachments[{ia_index}].ItemPool,,
+        {main_attr}[{ld_index}].ItemAttachments[{ia_index}].ItemPool,,
         ItemPoolDefinition'{pool}'""".format(
             level=level,
             classname=classname,
+            main_attr=main_attr,
             ld_index=ld_index,
             ia_index=ia_index,
             pool=pool),
@@ -1713,14 +1715,23 @@ def set_ld_ia_item_pool(hotfix_name, classname, pool, ld_index, ia_index,
             'LDIAPoolPoint',
             """{level},
             {classname},
-            LootData[{ld_index}].ItemAttachments[{ia_index}].AttachmentPointName,,
+            {main_attr}[{ld_index}].ItemAttachments[{ia_index}].AttachmentPointName,,
             {point}""".format(
                 level=level,
                 classname=classname,
+                main_attr=main_attr,
                 ld_index=ld_index,
                 ia_index=ia_index,
                 point='"{}"'.format(point)),
             activated=activated)
+
+def set_dl_ia_item_pool(hotfix_name, classname, pool, ld_index, ia_index,
+        point=None, level=None, activated=True):
+    """
+    Sets an `ItemPool` pool inside a `DefaultLoot[x].ItemAttachments[y]` structure.
+    """
+    set_ld_ia_item_pool(hotfix_name, classname, pool, ld_index, ia_index,
+        point=point, level=level, activated=activated, main_attr='DefaultLoot')
 
 def setup_boss_pool(hotfix_id, level, pool, default_gear, unique_gear, activated=True):
     """
@@ -2202,6 +2213,14 @@ set_ld_ia_item_pool('lockers_1', 'GD_Itempools.ListDefs.StorageLockerLoot',
         point='Ammo1')
 set_ld_ia_item_pool('lockers_2', 'GD_Itempools.ListDefs.StorageLockerLoot',
         'GD_Itempools.LootablePools.Pool_Locker_Items_CashAndAmmo', 6, 0,
+        point='Ammo1')
+set_dl_ia_item_pool('lockers_3',
+        'GD_Balance_Treasure.LootableGradesTrap.MidgetBandit.ObjectGrade_StorageLocker_MidgetBandit',
+        'GD_Itempools.LootablePools.Pool_Locker_Items_CashAndAmmo', 1, 0,
+        point='Ammo1')
+set_dl_ia_item_pool('lockers_4',
+        'GD_Balance_Treasure.LootableGradesTrap.MidgetHyperion.ObjectGrade_StorageLocker_MidgetHyperion',
+        'GD_Itempools.LootablePools.Pool_Locker_Items_CashAndAmmo', 1, 0,
         point='Ammo1')
 
 # Improve "medical mystery" pool (used in a couple of places, actually)
