@@ -1672,6 +1672,56 @@ def set_pt_cipl_item_prob(hotfix_name, classname,
         prob=prob,
         activated=activated)
 
+def set_ld_item_weight(hotfix_name, classname, index, level=None,
+        weight=None, activated=True):
+    """
+    Sets a LootData item weight.
+    """
+    set_generic_item_prob(hotfix_name, classname,
+        'LootData[{}].PoolProbability'.format(index),
+        level=level,
+        prob=weight,
+        activated=activated)
+
+def set_ld_ia_item_pool(hotfix_name, classname, pool, ld_index, ia_index,
+        point=None, level=None, activated=True):
+    """
+    Sets an `ItemPool` pool inside a `LootData[x].ItemAttachments[y]` structure,
+    inside the class `classname`, LootData index `ld_index`, and ItemAttachments
+    index `ia_index`.  Will use the hotfix name `hotfix_name`.  `activated` is
+    a boolean describing if the hotfix will be active or not.  If `level` is passed
+    in, the hotfix will only be active for the given level.  If `point` is passed
+    in, we will additionally create another hotfix (with the name suffixed with
+    "_point") which sets the attachment point for the newly-defined pool.
+    """
+    global hfs
+    if not level:
+        level = 'None'
+    hfs.add_level_hotfix(hotfix_name, 'LDIAPool',
+        """{level},
+        {classname},
+        LootData[{ld_index}].ItemAttachments[{ia_index}].ItemPool,,
+        ItemPoolDefinition'{pool}'""".format(
+            level=level,
+            classname=classname,
+            ld_index=ld_index,
+            ia_index=ia_index,
+            pool=pool),
+        activated=activated)
+    if point:
+        hfs.add_level_hotfix('{}_point'.format(hotfix_name),
+            'LDIAPoolPoint',
+            """{level},
+            {classname},
+            LootData[{ld_index}].ItemAttachments[{ia_index}].AttachmentPointName,,
+            {point}""".format(
+                level=level,
+                classname=classname,
+                ld_index=ld_index,
+                ia_index=ia_index,
+                point='"{}"'.format(point)),
+            activated=activated)
+
 def setup_boss_pool(hotfix_id, level, pool, default_gear, unique_gear, activated=True):
     """
     Sets up our specified `pool` using the given `hotfix_id`, active in the
@@ -1710,7 +1760,7 @@ badass = Badass(hfs)
 other = OtherConfig()
 
 # Get rid of global world drops.
-prefix = ' '*(4*3)
+prefix = ' '*(4*4)
 drop_disables = []
 for (pool, index) in [
         ('GD_Itempools.GeneralItemPools.Pool_Gear', 0),
@@ -2142,6 +2192,17 @@ hfs.add_level_hotfix('torgue_torgue_equip', 'TorgueEquip',
         ('GD_Iris_ItemPoolsEnemyUse.WeaponPools.Pool_Weapons_TorgueGang_Shotguns_EnemyUse', regular.drop_prob_shotguns, None),
         (regular.rarity_pool_launchers, regular.drop_prob_launchers, None),
     ])))
+
+# Remove weapons+shields from lockers
+set_ld_ia_item_pool('lockers_0', 'GD_Itempools.ListDefs.StorageLockerLoot',
+        'GD_Itempools.LootablePools.Pool_Locker_Items_CashAndAmmo', 3, 0,
+        point='Ammo1')
+set_ld_ia_item_pool('lockers_1', 'GD_Itempools.ListDefs.StorageLockerLoot',
+        'GD_Itempools.LootablePools.Pool_Locker_Items_CashAndAmmo', 4, 0,
+        point='Ammo1')
+set_ld_ia_item_pool('lockers_2', 'GD_Itempools.ListDefs.StorageLockerLoot',
+        'GD_Itempools.LootablePools.Pool_Locker_Items_CashAndAmmo', 6, 0,
+        point='Ammo1')
 
 # Improve "medical mystery" pool (used in a couple of places, actually)
 hfs.add_level_hotfix('medicalmystery', 'MedicalMystery',
