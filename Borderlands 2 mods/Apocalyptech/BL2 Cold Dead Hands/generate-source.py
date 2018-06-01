@@ -1200,7 +1200,7 @@ class Badass(DropConfig):
                 (0, 'GD_Aster_Pop_Wizards.Balance.PawnBalance_JackWarlock_DemonFall'),
                 (0, 'GD_Aster_Pop_Wizards.Balance.PawnBalance_JackWarlock_MirrorImage'),
                 (0, 'GD_Aster_Pop_Wizards.Balance.PawnBalance_JackWarlock_Phase2'),
-                (2, 'GD_Iris_Population_PistonBoss.Balance.Iris_PawnBalance_PistonBoss'), # UCP Compat: Shield index is 0 in vanilla
+                (0, 'GD_Iris_Population_PistonBoss.Balance.Iris_PawnBalance_PistonBoss'),
                 (0, 'GD_Iris_Population_RaidPete.Balance.Iris_PawnBalance_RaidPete'),
                 (0, 'GD_Orchid_Pop_LoaderBoss.Balance.PawnBalance_Orchid_LoaderBoss'),
                 (0, 'GD_Population_Jack.Balance.PawnBalance_Jack'),
@@ -2171,6 +2171,33 @@ hfs.add_level_hotfix('motor_momma_1', 'MotorMomma',
         PoolProbability=(
             BaseValueConstant=0.000000,
             BaseValueAttribute=AttributeDefinition'GD_Itempools.DropWeights.DropODDS_BossUniques',
+            InitializationDefinition=None,
+            BaseValueScaleConstant=1.000000
+        )
+    )""")
+
+# Piston drop pool fixes.
+
+hfs.add_level_hotfix('piston_0', 'Piston',
+    """Iris_DL1_TAS_P,
+    GD_Iris_Population_PistonBoss.Balance.Iris_PawnBalance_PistonBoss,
+    DefaultItemPoolList[0].PoolProbability,,
+    (
+        BaseValueConstant=1.000000,
+        BaseValueAttribute=None,
+        InitializationDefinition=None,
+        BaseValueScaleConstant=1.000000
+    )""")
+
+hfs.add_level_hotfix('piston_1', 'Piston',
+    """Iris_DL1_TAS_P,
+    GD_Iris_Population_PistonBoss.Balance.Iris_PawnBalance_PistonBoss,
+    DefaultItemPoolList[2],,
+    (
+        ItemPool=ItemPoolDefinition'GD_Iris_ItemPools.EnemyDropPools.Pool_Weapons_Piston',
+        PoolProbability=(
+            BaseValueConstant=0.300000,
+            BaseValueAttribute=None,
             InitializationDefinition=None,
             BaseValueScaleConstant=1.000000
         )

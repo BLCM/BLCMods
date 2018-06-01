@@ -514,6 +514,19 @@
 
             #</Motor Momma Drop Pool>
 
+            #<Piston Drop Pool>
+
+                # UCP adds some stuff to Piston's drop pool but messes around with the
+                # order of the pools in his DefaultItemPoolList.  To keep compatibility in
+                # case someone wants to run Cold Dead Hands without UCP, we're hotfixing
+                # the pool lists to normalize things.
+
+                #<hotfix><key>"SparkLevelPatchEntry-ApocPiston0"</key><value>"Iris_DL1_TAS_P,GD_Iris_Population_PistonBoss.Balance.Iris_PawnBalance_PistonBoss,DefaultItemPoolList[0].PoolProbability,,(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)"</value><on>
+
+                #<hotfix><key>"SparkLevelPatchEntry-ApocPiston1"</key><value>"Iris_DL1_TAS_P,GD_Iris_Population_PistonBoss.Balance.Iris_PawnBalance_PistonBoss,DefaultItemPoolList[2],,(ItemPool=ItemPoolDefinition'GD_Iris_ItemPools.EnemyDropPools.Pool_Weapons_Piston',PoolProbability=(BaseValueConstant=0.300000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))"</value><on>
+
+            #</Piston Drop Pool>
+
         #</Other Pool Tweaks>
 
         #<Enemy Pool Assignments>
@@ -1750,7 +1763,7 @@
 
                 #<hotfix><key>"SparkLevelPatchEntry-ApocEnemyDrop611"</key><value>",GD_Aster_Pop_Wizards.Balance.PawnBalance_JackWarlock_Phase2,DefaultItemPoolList[0].ItemPool,,ItemPoolDefinition'GD_CustomItemPools_allium.Mechro.AlliumTGHeads'"</value><on>
 
-                #<hotfix><key>"SparkLevelPatchEntry-ApocEnemyDrop612"</key><value>",GD_Iris_Population_PistonBoss.Balance.Iris_PawnBalance_PistonBoss,DefaultItemPoolList[2].ItemPool,,ItemPoolDefinition'GD_CustomItemPools_allium.Mechro.AlliumTGHeads'"</value><on>
+                #<hotfix><key>"SparkLevelPatchEntry-ApocEnemyDrop612"</key><value>",GD_Iris_Population_PistonBoss.Balance.Iris_PawnBalance_PistonBoss,DefaultItemPoolList[0].ItemPool,,ItemPoolDefinition'GD_CustomItemPools_allium.Mechro.AlliumTGHeads'"</value><on>
 
                 #<hotfix><key>"SparkLevelPatchEntry-ApocEnemyDrop613"</key><value>",GD_Iris_Population_RaidPete.Balance.Iris_PawnBalance_RaidPete,DefaultItemPoolList[0].ItemPool,,ItemPoolDefinition'GD_CustomItemPools_allium.Mechro.AlliumTGHeads'"</value><on>
 

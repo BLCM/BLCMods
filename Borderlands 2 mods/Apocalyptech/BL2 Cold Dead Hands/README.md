@@ -28,15 +28,13 @@ Requirements
 ------------
 
 This mod should be able to be used mostly on its own, but it does require
-that certain parts of UCP are active.  If for whatever reason you'd like to
-run this mod by itself without UCP, make sure to at least enable/copy these
-bits, all inside the `Loot Pool & Drop Changes` folder:
+one specific category of UCP to be active:
 
-* `Skinpool Fixes (Don't uncheck this)`: this is required to free up the
-  custom loot pools that we use to equip enemies with.
+* `Loot Pool & Drop Changes -> Skinpool Fixes (Don't uncheck this)`
 
-* `Specific Loot Changes`: (working on working around these)
-  * `Add Torgue Legendaries and Torgue Tokens to Piston`
+This is required to free up the custom loot pools that we use to equip enemies
+with.  If for whatever reason you'd like to run this mod by itself without UCP,
+make sure to at least enable/copy that folder over.
 
 Usage/Installation
 ------------------
