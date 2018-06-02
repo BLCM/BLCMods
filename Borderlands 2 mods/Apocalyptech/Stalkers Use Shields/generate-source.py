@@ -180,6 +180,8 @@ class Regular(DropConfig):
             (0, 'GD_Population_Stalker.Balance.PawnBalance_StalkerNeedle'),
             (0, 'GD_Population_Stalker.Balance.PawnBalance_StalkerSlagged'),
             (0, 'GD_Population_Stalker.Balance.PawnBalance_StalkerSpring'),
+            (0, 'GD_Orchid_Pop_Stalker.Balance.PawnBalance_Orchid_StalkerOrchid'),
+            (0, 'GD_Orchid_Pop_Stalker.Balance.PawnBalance_Orchid_StalkerRabid'),
         ]
 
 class Badass(DropConfig):
@@ -231,6 +233,10 @@ class Badass(DropConfig):
             (0, 'GD_Population_Stalker.Balance.Unique.PawnBalance_Stalker_SwallowedWhole'),
             (0, 'GD_Population_Stalker.Balance.Unique.PawnBalance_StalkerFreeWilly'),
             (0, 'GD_Population_Stalker.Balance.Unique.PawnBalance_StalkerRabid'),
+            (0, 'GD_Orchid_Pop_Stalker.Balance.PawnBalance_Orchid_StalkerBadass'),
+            (0, 'GD_Orchid_Pop_Stalker.Balance.PawnBalance_Orchid_StalkerChubby'),
+            (0, 'GD_Orchid_Pop_StalkerPet.PawnBalance_Orchid_StalkerPet'),
+            (0, 'GD_Sage_SM_NowYouSeeItData.Creature.PawnBalance_Sage_NowYouSeeIt_Creature'),
         ]
 
 ###
