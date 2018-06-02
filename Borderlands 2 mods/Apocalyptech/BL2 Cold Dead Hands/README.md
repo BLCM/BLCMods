@@ -51,10 +51,9 @@ and shield.  Creatures like Stalkers and Skeletons, and devices like turrets,
 will NOT drop a shield, even if they spawn with one.  (Stalker shield drops
 can be optionally toggled on.)  Shielded loaders will drop shields, though.
 
-Bosses with unique weapon drops who don't actually use weapons (ie: most
+Bosses with unique drops who don't actually use weapons/shields (ie: most
 "creature" enemies like Knuckedragger, machines like BNK3R, melee-only
-bosses) will nevertheless have a guaranteed drop of one item from their
-drop pool, even though other melee-only enemies wouldn't.  Raid bosses, and
+bosses) will still drop their unique items as per usual.  Raid bosses, and
 other large "lootsplosion" events may end up generating some guns/shields
 as well.
 
@@ -69,12 +68,12 @@ from the start of the battle which gun you'll receive.
   probably not exhaustive, and I haven't really tested many of these to find
   out:
   * Roland's Chest in Sanctuary will probably contain actual gear.
-  * Dice Chests (from the Tiny Tina DLC).  Weapons are sparse enough during
-    that DLC as it is.
+  * Dice Chests (from the Tiny Tina DLC) are probably unaffected.  Weapons
+    are sparse enough during that DLC as it is.
   * Chests which were hardcoded to give specific gear should still provide that
     gear:
     * Shotgun chest at the end of Windshear Waste
-    * Slag Gun chest in the Wattle Gobbler Headhunter Pack
+    * Slag Gun oven in the Wattle Gobbler Headhunter Pack
 
 * Doc Mercy has to be using an E-Tech blaster for Medical Mystery to make
   sense, so I've chosen to keep that rather than having him use an Infinity
@@ -111,7 +110,7 @@ from the start of the battle which gun you'll receive.
   than a gang-specific pool.  ("Regular" gang members use gang-specific
   pools, though, as per the stock game.)
 
-* Torgue DLC gang members can equip/use launchers now.
+* Torgue DLC gang members can equip/drop launchers now.
 
 ### Configuration
 
@@ -165,11 +164,13 @@ quality, when loaded into FilterTool/BLCMM:
   immediately, which will probably make Loader-heavy areas much more
   difficult.
 
-* Weapon and Shields ordinarily found in treasure chests have been replaced
+* Weapons and Shields ordinarily found in treasure chests have been replaced
   with the main ammo/money/eridium pool, rather than removed outright,
   because otherwise the probabilities of getting grenade mods, COMs, and
   relics would be greatly buffed.  So you'll have to get used to epic chests
-  opening up to find a handful of dollars and some pistol ammo.
+  opening up to find a handful of dollars and some pistol ammo.  (Also note
+  that as of right now, the extra ammo/money won't be aligned properly within
+  the chest.  Them's the breaks, currently.)
 
 * Keep in mind that areas which are creature-heavy (such as Caustic Caverns)
   or full of non-gear-using enemies (such as most of the Dragon Keep DLC) will
@@ -190,8 +191,8 @@ faster enemy animations, etc).
 This mod overwrites/disables much of the functionality in my own "Better
 Loot" mod, but it's designed to work fine with both enabled (so long as
 this mod appears later in your patch file).  The "Better Loot" improvements
-to Class Mods, Grenades, Relics, etc, should help out against the increased
-enemy difficulty here, in fact.
+to Class Mods, Grenades, Relics, Raid Boss drops, etc, should help out
+against the increased enemy difficulty here, in fact.
 
 My own "Early Bloomer" mod will unlock all gear from the beginning of the
 game, so enable that if you want early-game bandits to have the best gear
