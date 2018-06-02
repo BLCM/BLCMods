@@ -48,8 +48,8 @@ Mod Details
 
 As stated above, enemies who use guns and shields will always drop that gun
 and shield.  Creatures like Stalkers and Skeletons, and devices like turrets,
-will NOT drop a shield, even if they spawn with one.  Shielded loaders will
-drop shields, though.
+will NOT drop a shield, even if they spawn with one.  (Stalker shield drops
+can be optionally toggled on.)  Shielded loaders will drop shields, though.
 
 Bosses with unique weapon drops who don't actually use weapons (ie: most
 "creature" enemies like Knuckedragger, machines like BNK3R, melee-only
@@ -115,7 +115,7 @@ from the start of the battle which gun you'll receive.
 
 ### Configuration
 
-There are three main categories which you can use to customize the gear
+There are four main categories which you can use to customize the gear
 quality, when loaded into FilterTool/BLCMM:
 
 * **Loot Pool Improvements**: This section adds gemstones into the global E-Tech
@@ -135,6 +135,19 @@ quality, when loaded into FilterTool/BLCMM:
   often bosses will equip/drop their unique loot.  The default is
   "guaranteed," which is what the Better Loot mod does in "Lootsplosion,"
   but you can scale that back all the way to the stock values.
+
+* **Stalker Shield Behavior**: In the default configuration, Stalkers behave
+  just like they always have in BL2: they have a shield, but it's not a "real"
+  shield and won't drop.  If you prefer, though, you can toggle stalker
+  shields so that they work like other shielded enemies with Cold Dead Hands,
+  so you'll get stalkers using Novas and Maylay shields, and they'll drop them
+  when killed.  Additionally, if you want to make them very deadly in general,
+  you can specify that they *only* use Maylay shields.  **Warning:** there
+  seems to be some strange interaction with Maylay shields and Stalkers where
+  the roid damage buff is far greater than the number listed on the card.
+  Stalkers using Maylay shields are very likely to hit like a ton of bricks,
+  when their shields are depleted.  Use with caution!  Or with abandon!  It's
+  up to you!
 
 ### Implications
 
@@ -215,7 +228,6 @@ things to think about:
 * Might be nifty to restrict weapon manufacturer by enemy type, though that
   would require eating up more skinpools (the by-level idea could reuse all
   of ours w/ hotfixes)
-* Option to allow Stalkers to have shields?  (Maybe just Roid shields?)
 * Fix orientation of items spawning in chests?  There's two ways to do this:
   1) Update the `RelativeRotation` attribute inside the appropriate
      `SkeletalMeshSocket` objects.  The danger here is the handful of
