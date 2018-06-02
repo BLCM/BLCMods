@@ -24,6 +24,15 @@ the uninteresting and drab loot that typically gets dropped in-game, and who
 often end up just resorting to Gibbed to be able to play around with some
 better gear.  The README in the mod dir itself should provide a lot more info.
 
+BL2 Cold Dead Hands
+-------------------
+
+This mod completely revamps the way in which weapons and shields are
+acquired during the game.  Instead of dropping weapons/shields from a
+random loot pool, enemies will now *always* drop the specific gun and
+shield that they're using.  In the default configuration, enemy gear
+quality is also improved considerably.
+
 BL2 Early Bloomer
 -----------------
 
@@ -81,6 +90,13 @@ Speedier Sandskiffs
 -------------------
 
 Improves the speed (and afterburner capability) of Sandskiffs.
+
+Stalkers Use Shields
+--------------------
+
+Stalkers already use shields, of course, but this mod equips them with "real"
+shields, of the sort your characters equip.  Optionally, you can have them
+only use Maylay shields, as well.
 
 Utilities
 =========
