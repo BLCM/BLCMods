@@ -315,12 +315,12 @@ class Regular(DropConfig):
             'legendary': 0.25,
             },
         'stock': {
-            'common': 100,
+            'common': 80,
             'uncommon': 10,
             'rare': 1,
             'veryrare': 0.1,
             'alien': 0.1,
-            'legendary': 0.01,
+            'legendary': 0.03,
             },
         }
 
@@ -1027,8 +1027,8 @@ class Badass(DropConfig):
             'common': 0,
             'uncommon': 40,
             'rare': 30,
-            'veryrare': 20,
-            'alien': 10,
+            'veryrare': 8,
+            'alien': 3,
             'legendary': 0.25,
             },
         }
