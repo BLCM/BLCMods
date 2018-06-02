@@ -160,6 +160,9 @@ class DropConfig(BaseConfig):
     pct_veryrare = None
     pct_alien = None
     pct_legendary = None
+
+    # Stalker shield equips
+    stalker_dipl = []
     
     ###
     ### ... FUNCTIONS??!?
@@ -341,6 +344,7 @@ class Regular(DropConfig):
 
     # Shield pool
     pool_shields = 'GD_CustomItemPools_allium.Mechro.AlliumTGSkins'
+    stalker_shields = 'GD_CustomItemPools_allium.Soldier.AlliumXmasHeads'
 
     ###
     ### Enemy changes
@@ -982,6 +986,15 @@ class Regular(DropConfig):
             ],
         )
 
+    # Stalker shield equips
+    stalker_dipl = [
+            (0, 'GD_Population_Stalker.Balance.PawnBalance_StalkerAmbush'),
+            (0, 'GD_Population_Stalker.Balance.PawnBalance_StalkerCyclone'),
+            (0, 'GD_Population_Stalker.Balance.PawnBalance_StalkerNeedle'),
+            (0, 'GD_Population_Stalker.Balance.PawnBalance_StalkerSlagged'),
+            (0, 'GD_Population_Stalker.Balance.PawnBalance_StalkerSpring'),
+        ]
+
 class Badass(DropConfig):
     """
     Config info for badass enemies
@@ -1039,7 +1052,8 @@ class Badass(DropConfig):
     equip_pool_only_shotguns = 'GD_CustomItemPools_allium.Assassin.AlliumXmasHeads'
 
     # Shield pool
-    pool_shields = 'GD_CustomItemPools_allium.Mechro.AlliumTGHeads'
+    pool_shields = 'GD_CustomItemPools_allium.Mercenary.AlliumTGSkins'
+    stalker_shields = 'GD_CustomItemPools_allium.Psycho.AlliumTGSkins'
 
     ###
     ### Enemy changes
@@ -1448,6 +1462,17 @@ class Badass(DropConfig):
             [
             ],
         )
+
+    # Stalker shield equips
+    stalker_dipl = [
+            (0, 'GD_Population_Stalker.Balance.PawnBalance_StalkerBadass'),
+            (0, 'GD_Population_Stalker.Balance.PawnBalance_StalkerChubby'),
+            (0, 'GD_Population_Stalker.Balance.Unique.PawnBalance_Henry'),
+            (0, 'GD_Population_Stalker.Balance.Unique.PawnBalance_Stalker_Simon'),
+            (0, 'GD_Population_Stalker.Balance.Unique.PawnBalance_Stalker_SwallowedWhole'),
+            (0, 'GD_Population_Stalker.Balance.Unique.PawnBalance_StalkerFreeWilly'),
+            (0, 'GD_Population_Stalker.Balance.Unique.PawnBalance_StalkerRabid'),
+        ]
 
 ###
 ### Convenience functions
@@ -1930,6 +1955,18 @@ for (rarity_key, rarity_label) in DropConfig.rarity_presets:
                 ('GD_Itempools.ShieldPools.Pool_Shields_All_04_Rare', config.weight_rare),
                 ('GD_Itempools.ShieldPools.Pool_Shields_All_05_VeryRare', config.weight_veryrare),
                 ('GD_Itempools.ShieldPools.Pool_Shields_All_06_Legendary', config.weight_legendary),
+            ])
+
+        # Stalker shield pools (if the user's opted to make Stalkers terrifying)
+
+        config.set_stalker_shields = get_balanced_set(
+            config.stalker_shields,
+            [
+                ('GD_Itempools.ShieldPools.Pool_Shields_Roid_01_Common', config.weight_common),
+                ('GD_Itempools.ShieldPools.Pool_Shields_Roid_02_Uncommon', config.weight_uncommon),
+                ('GD_Itempools.ShieldPools.Pool_Shields_Roid_04_Rare', config.weight_rare),
+                ('GD_Itempools.ShieldPools.Pool_Shields_Roid_05_VeryRare', config.weight_veryrare),
+                ('GD_Itempools.ShieldPools.Pool_Shields_Roid_06_Legendary', config.weight_legendary),
             ])
 
     # Set up Jack's Body Double's equip pool
@@ -3010,6 +3047,36 @@ for (pool, shieldlist) in shields.items():
             index,
             shieldname,
             invbalance='InventoryBalanceDefinition')
+
+# Vanilla Stalker shield hotfixes (dummy statement)
+hfs.add_level_hotfix('stalker_dummy', 'StalkerShields',
+        'Dummy_P,GD_Dummy,DummyAttribute,1,1')
+
+# "Real" Stalker shield hotfixes
+stalker_shields_real_list = []
+prefix = ' '*(4*3)
+for config in [regular, badass]:
+    for (idx, (dipl_idx, popdef)) in enumerate(config.stalker_dipl):
+        stalker_id = 'real_stalker_{}_{}'.format(config.hotfix_prefix, idx)
+        hfs.add_level_hotfix(stalker_id, 'StalkerShields',
+            ",{},DefaultItemPoolList[{}].ItemPool,,ItemPoolDefinition'{}'".format(
+                popdef, dipl_idx, config.pool_shields,
+                ),
+            activated=False)
+        stalker_shields_real_list.append('{}{}'.format(prefix, hfs.get_hotfix_xml(stalker_id)))
+
+# Only-Maylay Stalker shield hotfixes
+stalker_shields_maylay_list = []
+prefix = ' '*(4*3)
+for config in [regular, badass]:
+    for (idx, (dipl_idx, popdef)) in enumerate(config.stalker_dipl):
+        stalker_id = 'maylay_stalker_{}_{}'.format(config.hotfix_prefix, idx)
+        hfs.add_level_hotfix(stalker_id, 'StalkerShields',
+            ",{},DefaultItemPoolList[{}].ItemPool,,ItemPoolDefinition'{}'".format(
+                popdef, dipl_idx, config.stalker_shields,
+                ),
+            activated=False)
+        stalker_shields_maylay_list.append('{}{}'.format(prefix, hfs.get_hotfix_xml(stalker_id)))
 
 # Save our current hotfixes
 orig_hfs = hfs
@@ -4167,6 +4234,8 @@ with open('input-file-mod.txt') as df:
         boss_drops_improved=boss_drops['improved'],
         boss_drops_slightimproved=boss_drops['slight'],
         boss_drops_stock=boss_drops['stock'],
+        stalker_shields_real="\n\n".join(stalker_shields_real_list),
+        stalker_shields_maylay="\n\n".join(stalker_shields_maylay_list),
         )
 
 ###
