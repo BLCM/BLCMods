@@ -161,11 +161,11 @@ class Regular(DropConfig):
             'legendary': 0.25,
             },
         'stock': {
-            'common': 100,
+            'common': 80,
             'uncommon': 10,
             'rare': 1,
             'veryrare': 0.1,
-            'legendary': 0.01,
+            'legendary': 0.03,
             },
         }
 
@@ -212,7 +212,7 @@ class Badass(DropConfig):
             'common': 0,
             'uncommon': 40,
             'rare': 30,
-            'veryrare': 20,
+            'veryrare': 10,
             'legendary': 0.25,
             },
         }
@@ -276,7 +276,7 @@ def get_balanced_items(items):
                     InitializationDefinition=None,
                     BaseValueScaleConstant=1
                 ),
-                bDropOnDeath=True
+                bDropOnDeath=False
             )
             """.format(itmpool, invbal, weight))
     return '({})'.format(','.join(bal_items))
