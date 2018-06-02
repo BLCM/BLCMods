@@ -1,0 +1,28 @@
+#<Torch>
+
+    #<Description>
+
+        Made by Glory. Replaces the Actualizer.
+
+        Damage is buffed, Projectile Spread is buffed, Clipsize is buffed a bit, Spread is majorly buffed, and Reload Speed has been increased. Also, Burn damage is increased.
+
+    #</Description>
+
+    #<Code>
+
+        set GD_Orchid_RaidWeapons.SMG.Actualizer.Orchid_Seraph_Actualizer_Title PartName Torch
+
+        set GD_Orchid_RaidWeapons.SMG.Actualizer.Orchid_Seraph_Actualizer_Title:AttributePresentationDefinition_8 NoConstraintText Some men just want to watch the world burn.
+
+        set GD_Orchid_RaidWeapons.SMG.Actualizer.Orchid_Seraph_Actualizer_Barrel WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.400000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=2.000000),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectileSpeedMultiplier',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.700000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.100000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponReloadSpeed',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))
+
+        set GD_Orchid_RaidWeapons.SMG.Actualizer.Orchid_Seraph_Actualizer_Balance:WeaponPartListCollectionDefinition_284 AttributeSlotUpgrades ((SlotName="AccuracyMin",GradeIncrease=20,bActivateSlot=True),(SlotName="AccuracyRegen",GradeIncrease=20,bActivateSlot=True))
+
+        set GD_Orchid_RaidWeapons.SMG.Actualizer.Orchid_Seraph_Actualizer_Balance:WeaponPartListCollectionDefinition_284 ElementalPartData ((bEnabled=True,WeightedParts=((Part=WeaponPartDefinition'GD_Weap_SMG.elemental.SMG_Elemental_Fire',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=3))
+
+        set GD_Weap_SMG.elemental.SMG_Elemental_Fire WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-1.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))
+
+    #</Code>
+
+#</Torch>
+
