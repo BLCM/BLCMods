@@ -216,9 +216,15 @@ things to think about:
   would require eating up more skinpools (the by-level idea could reuse all
   of ours w/ hotfixes)
 * Option to allow Stalkers to have shields?  (Maybe just Roid shields?)
-* Fix orientation of items spawning in chests?  I think we can do this
-  without messing up "regular" item spawns because it's just the weapon mounts
-  that we'd change.  Not sure about shield mounts...
+* Fix orientation of items spawning in chests?  There's two ways to do this:
+  1) Update the `RelativeRotation` attribute inside the appropriate
+     `SkeletalMeshSocket` objects.  The danger here is the handful of
+     chests which *do* still spawn guns - we'd have to make sure those still
+     look okay.
+  2) Update each chest pool configuration so that the attachments which used
+     to spawn weapons/shields attach to different locations, or just not at
+     all.  The problem here is that's just a fair amount of busywork I don't
+     care to do.
 
 Licenses
 ========
