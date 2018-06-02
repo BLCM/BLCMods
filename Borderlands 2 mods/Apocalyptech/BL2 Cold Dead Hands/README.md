@@ -217,23 +217,32 @@ To generate the end result file, I actually run the small shell script
 
     ./generate-source.py && ../conv_to_mod.py -f "BL2 Cold Dead Hands"
 
-Ideas
-=====
+Bugs
+====
 
-Just some ideas to keep track of, not sure if I'll implement these here, or
-in another mod, or as an optional category in THIS mod, etc...  Anyway,
-things to think about:
+Known issues with the mod:
+
+* When guns/shields inside chests get replaced by money/ammo, the money/ammo
+  orientation is wrong - they sort of "stick up" from the chest in an
+  unnatural-looking way.  For now I'm just coping; there's a couple different
+  ways to fix that (enumerated below) but I don't particularly care to do
+  either at the moment.
+
+Ideas/TODO
+==========
+
+Things to think about:
 
 * Restrict weapon manufacturer by level?  (Only Jakobs in Lynchwood, etc?)
 * Might be nifty to restrict weapon manufacturer by enemy type, though that
   would require eating up more skinpools (the by-level idea could reuse all
   of ours w/ hotfixes)
 * Fix orientation of items spawning in chests?  There's two ways to do this:
-  1) Update the `RelativeRotation` attribute inside the appropriate
+  1. Update the `RelativeRotation` attribute inside the appropriate
      `SkeletalMeshSocket` objects.  The danger here is the handful of
      chests which *do* still spawn guns - we'd have to make sure those still
      look okay.
-  2) Update each chest pool configuration so that the attachments which used
+  2. Update each chest pool configuration so that the attachments which used
      to spawn weapons/shields attach to different locations, or just not at
      all.  The problem here is that's just a fair amount of busywork I don't
      care to do.
