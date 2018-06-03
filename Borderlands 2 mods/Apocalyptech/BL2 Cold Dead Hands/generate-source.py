@@ -28,6 +28,11 @@
 
 import sys
 
+# Generation for BL2 Cold Dead Hands.
+# Apologies about the code in here; there's a lot of functions which do
+# nearly-identical things strewn about, and some functional duplication
+# here and there.  Might not be the nicest to browse through!
+
 try:
     from hotfixes import Hotfixes
 except ModuleNotFoundError:
@@ -45,7 +50,7 @@ except ModuleNotFoundError:
 ###
 
 mod_name = 'BL2 Cold Dead Hands'
-mod_version = '1.0.0-prerelease'
+mod_version = '1.0.0'
 output_filename = '{}-source.txt'.format(mod_name)
 
 ###

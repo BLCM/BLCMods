@@ -264,4 +264,5 @@ for the full text.
 Changelog
 =========
 
-**v1.0.0** - Currently unreleased!
+**v1.0.0** - June 2, 2018
+ * Initial Release

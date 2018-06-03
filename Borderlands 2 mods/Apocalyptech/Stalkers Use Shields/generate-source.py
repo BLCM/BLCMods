@@ -45,7 +45,7 @@ except ModuleNotFoundError:
 ###
 
 mod_name = 'Stalkers Use Shields'
-mod_version = '1.0.0-prerelease'
+mod_version = '1.0.0'
 output_filename = '{}-source.txt'.format(mod_name)
 
 ###
