@@ -1,1 +1,105 @@
+#<Candylands>
+
+    # Replaces health and ammo drops with consumable candies from TK Baha's Bloody Harvest.
+
+    # By mopioid ( mopioid#0001 | twitch.tv/mopioid | @mopioid )
+
+    #<All Ammo Drops>
+
+        set GD_Itempools.AmmoAndResourcePools.Pool_Ammo_All_DropAlways BalancedItems ((ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_AmmoDropAlways_CombatRifle',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_3_Uncommoner',BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_AmmoDropAlways_Repeater',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',BaseValueScaleConstant=2.000000),bDropOnDeath=True))
+
+        set GD_Itempools.AmmoAndResourcePools.Pool_Ammo_All_DropAlways_RaidTentacle BalancedItems ((ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Ammo_All_DropAlways',InvBalanceDefinition=None,Probability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True))
+
+        set GD_Itempools.AmmoAndResourcePools.Pool_AmmoDropAlways_CombatRifle BalancedItems ((ItmPoolDefinition=None,InvBalanceDefinition=InventoryBalanceDefinition'GD_Flax_Items.Item.BalDef_Candy_Blue',Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=None,InvBalanceDefinition=InventoryBalanceDefinition'GD_Flax_Items.Item.BalDef_Candy_Green',Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=None,InvBalanceDefinition=InventoryBalanceDefinition'GD_Flax_Items.Item.BalDef_Candy_Red',Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=None,InvBalanceDefinition=InventoryBalanceDefinition'GD_Flax_Items.Item.BalDef_Candy_Yellow',Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',BaseValueScaleConstant=1.000000),bDropOnDeath=True))
+
+        set GD_Itempools.AmmoAndResourcePools.Pool_AmmoDropAlways_Repeater BalancedItems ()
+
+    #</All Ammo Drops>
+
+    #<Emergency Ammo Drops>
+
+        set GD_Itempools.AmmoAndResourcePools.Pool_Ammo_All_Emergency BalancedItems ((ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Ammo_All_DropAlways',InvBalanceDefinition=None,Probability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True))
+
+        set GD_Itempools.AmmoAndResourcePools.Pool_Ammo_All_Emergency_RaidTentacle BalancedItems ((ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Ammo_All_Emergency',InvBalanceDefinition=None,Probability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True))
+
+    #</Emergency Ammo Drops>
+
+    #<Need Only Ammo Drops>
+
+        set GD_Itempools.AmmoAndResourcePools.Pool_Ammo_All_NeedOnly BalancedItems ((ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Ammo_All_Emergency',InvBalanceDefinition=None,Probability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True))
+
+        set GD_Itempools.AmmoAndResourcePools.Pool_Ammo_All_NeedOnly_RaidTentacle BalancedItems ((ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Ammo_All_Emergency',InvBalanceDefinition=None,Probability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True))
+
+    #</Need Only Ammo Drops>
+
+    #<Other Ammo Drops>
+
+        set GD_Itempools.Treasure_ChestPools.Pool_Chest_GrenadeAmmo BalancedItems ((ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Ammo_All_DropAlways',InvBalanceDefinition=None,Probability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True))
+
+    #</Other Ammo Drops>
+
+    #<Ammo Vendor>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CandylandsAmmoVendor1"</key><value>",GD_ItemPools_Shop.Ammo.Ammo_CombatRifle,BalancedItems,,()"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CandylandsAmmoVendor2"</key><value>",GD_ItemPools_Shop.Ammo.Ammo_ProteanGrenades,BalancedItems,,()"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CandylandsAmmoVendor3"</key><value>",GD_ItemPools_Shop.Ammo.Ammo_Repeater,BalancedItems,,()"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CandylandsAmmoVendor4"</key><value>",GD_ItemPools_Shop.Ammo.Ammo_RocketLauncher,BalancedItems,,()"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CandylandsAmmoVendor5"</key><value>",GD_ItemPools_Shop.Ammo.Ammo_SMG,BalancedItems,,()"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CandylandsAmmoVendor6"</key><value>",GD_ItemPools_Shop.Ammo.Ammo_Shotgun,BalancedItems,,()"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CandylandsAmmoVendor7"</key><value>",GD_ItemPools_Shop.Ammo.Ammo_SniperRifle,BalancedItems,,((ItmPoolDefinition=None,InvBalanceDefinition=InventoryBalanceDefinition'GD_Flax_Items.Item.BalDef_Candy_Blue',Probability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CandylandsAmmoVendor8"</key><value>",GD_ItemPools_Shop.Ammo.Ammo_SniperRifle,bShopsHaveInfiniteQuantity,,True"</value><on>
+
+    #</Ammo Vendor>
+
+    #<Health Drops>
+
+        set GD_Itempools.AmmoAndResourcePools.Pool_Health_All BalancedItems ((ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Ammo_All_DropAlways',InvBalanceDefinition=None,Probability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True))
+
+        set GD_Itempools.AmmoAndResourcePools.Pool_Health_RaidTentacle BalancedItems ((ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Health_All',InvBalanceDefinition=None,Probability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True))
+
+    #</Health Drops>
+
+    #<Health Vendor>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CandylandsHealthVendor1"</key><value>",GD_ItemPools_Shop.HealthShop.HealthShop_InstaHealth_1,BalancedItems,,((ItmPoolDefinition=None,InvBalanceDefinition=InventoryBalanceDefinition'GD_Flax_Items.Item.BalDef_Candy_Green',Probability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-CandylandsHealthVendor2"</key><value>",GD_ItemPools_Shop.HealthShop.HealthShop_InstaHealth_1,bShopsHaveInfiniteQuantity,,True"</value><on>
+
+    #</Health Vendor>
+
+    #<Reduce Sizes>
+
+        set GD_Flax_Items.Item.Item_Candy_Blue ThirdPersonMeshScale 0.75
+
+        set GD_Flax_Items.Item.Item_Candy_Green ThirdPersonMeshScale 0.75
+
+        set GD_Flax_Items.Item.Item_Candy_Red ThirdPersonMeshScale 0.75
+
+        set GD_Flax_Items.Item.Item_Candy_Yellow ThirdPersonMeshScale 0.75
+
+    #</Reduce Sizes>
+
+    #<Reduce Loot Beams>
+
+        set GD_Flax_Items.Item.Item_Candy_Blue LootBeamColorOverride (B=255,G=205,R=152,A=0)
+
+        set GD_Flax_Items.Item.Item_Candy_Green LootBeamColorOverride (B=180,G=255,R=180,A=0)
+
+        set GD_Flax_Items.Item.Item_Candy_Red LootBeamColorOverride (B=150,G=190,R=255,A=0)
+
+        set GD_Flax_Items.Item.Item_Candy_Yellow LootBeamColorOverride (B=150,G=240,R=230,A=0)
+
+    #</Reduce Loot Beams>
+
+#</Candylands>
+
+set Transient.SparkServiceConfiguration_6 Keys ("SparkLevelPatchEntry-GBX_fixes1","SparkLevelPatchEntry-GBX_fixes2","SparkLevelPatchEntry-GBX_fixes3","SparkLevelPatchEntry-GBX_fixes4","SparkLevelPatchEntry-GBX_fixes5","SparkLevelPatchEntry-GBX_Fixes6","SparkLevelPatchEntry-GBX_Fixes7","SparkLevelPatchEntry-GBX_Fixes8","SparkLevelPatchEntry-GBX_Fixes9","SparkLevelPatchEntry-GBX_fixes10","SparkLevelPatchEntry-GBX_fixes11","SparkLevelPatchEntry-GBX_fixes12","SparkLevelPatchEntry-GBX_fixes13","SparkLevelPatchEntry-GBX_fixes14","SparkOnDemandPatchEntry-GBX_fixes15","SparkOnDemandPatchEntry-GBX_fixes16","SparkOnDemandPatchEntry-GBX_fixes17","SparkOnDemandPatchEntry-GBX_fixes18","SparkOnDemandPatchEntry-GBX_fixes19","SparkPatchEntry-GBX_fixes20","SparkPatchEntry-GBX_fixes21","SparkPatchEntry-GBX_fixes22","SparkPatchEntry-GBX_fixes23","SparkLevelPatchEntry-CandylandsAmmoVendor1","SparkLevelPatchEntry-CandylandsAmmoVendor2","SparkLevelPatchEntry-CandylandsAmmoVendor3","SparkLevelPatchEntry-CandylandsAmmoVendor4","SparkLevelPatchEntry-CandylandsAmmoVendor5","SparkLevelPatchEntry-CandylandsAmmoVendor6","SparkLevelPatchEntry-CandylandsAmmoVendor7","SparkLevelPatchEntry-CandylandsAmmoVendor8","SparkLevelPatchEntry-CandylandsHealthVendor1","SparkLevelPatchEntry-CandylandsHealthVendor2")
+set Transient.SparkServiceConfiguration_6 Values (",GD_Balance.WeightingPlayerCount.BugmorphCocoon_PerPlayers_Phase1,ConditionalInitialization.ConditionalExpressionList[4].BaseValueIfTrue.BaseValueConstant,0.700000,.8",",GD_Balance.WeightingPlayerCount.BugmorphCocoon_PerPlayers_Phase2,ConditionalInitialization.ConditionalExpressionList[4].BaseValueIfTrue.BaseValueConstant,0.400000,.5",",GD_Balance.WeightingPlayerCount.BugmorphCocoon_PerPlayers_Phase3,ConditionalInitialization.ConditionalExpressionList[4].BaseValueIfTrue.BaseValueConstant,0.200000,.3",",GD_Balance.WeightingPlayerCount.BugmorphCocoon_PerPlayers_Phase4,ConditionalInitialization.ConditionalExpressionList[4].BaseValueIfTrue.BaseValueConstant,0.100000,.2",",GD_Balance.WeightingPlayerCount.BugmorphCocoon_PerPlayers_Phase5,ConditionalInitialization.ConditionalExpressionList[4].BaseValueIfTrue.BaseValueConstant,0.075000,.1","SouthpawFactory_P,GD_Population_Marauder.Balance.Unique.PawnBalance_Assassin1,DefaultItemPoolList[3].PoolProbability.BaseValueScaleConstant,0.250000,1","SouthpawFactory_P,GD_Population_Nomad.Balance.Unique.PawnBalance_Assassin2,DefaultItemPoolList[4].PoolProbability.BaseValueScaleConstant,0.250000,1","SouthpawFactory_P,GD_Population_Psycho.Balance.Unique.PawnBalance_Assassin3,DefaultItemPoolList[1].PoolProbability.BaseValueScaleConstant,0.250000,1","SouthpawFactory_P,GD_Population_Rat.Balance.Unique.PawnBalance_Assassin4,DefaultItemPoolList[3].PoolProbability.BaseValueScaleConstant,0.250000,1",",GD_Sage_Rare_Scaylion.Population.PawnBalance_Sage_Rare_Scaylion,DefaultItemPoolList[1].PoolProbability.BaseValueScaleConstant,1.000000,100",",GD_Sage_Rare_Drifter.Balance.PawnBalance_Sage_Rare_Drifter,DefaultItemPoolList[0].PoolProbability.BaseValueScaleConstant,1.000000,100",",GD_Sage_Rare_Rhino.Population.PawnBalance_Sage_Rare_Rhino,DefaultItemPoolList[1].PoolProbability.BaseValueScaleConstant,1.000000,100",",GD_Sage_Rare_Skag.Population.PawnBalance_Sage_Rare_Skag,DefaultItemPoolList[1].PoolProbability.BaseValueScaleConstant,1.000000,100",",GD_Sage_Rare_Spore.Population.PawnBalance_Sage_Rare_Spore,DefaultItemPoolList[0].PoolProbability.BaseValueScaleConstant,1.000000,100","GD_Assassin_Streaming,GD_Assassin_Skills.Sniping.Velocity,SkillEffectDefinitions[0].ModifierType,MT_PostAdd,MT_Scale","GD_Tulip_Mechro_Streaming,GD_Tulip_Mechromancer_Skills.LittleBigTrouble.WiresDontTalk,SkillEffectDefinitions,,((AttributeToModify=D_Attributes.DamageTypeModifers.InstigatedShockDamageModifier,bIncludeDuelingTargets=False,bIncludeSelfAsTarget=False,bOnlyEffectTargetsInRange=False,bExcludeNonPlayerCharacters=False,EffectTarget=TARGET_Self,TargetInstanceDataName=,TargetCriteria=CRITERIA_None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.030000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),GradeToStartApplyingEffect=1,PerGradeUpgradeInterval=1,PerGradeUpgrade=(BaseValueConstant=0.030000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),BonusUpgradeList=),(AttributeToModify=D_Attributes.DamageTypeModifers.InstigatedShockStatusDamageModifier,bIncludeDuelingTargets=False,bIncludeSelfAsTarget=False,bOnlyEffectTargetsInRange=False,bExcludeNonPlayerCharacters=False,EffectTarget=TARGET_Self,TargetInstanceDataName=,TargetCriteria=CRITERIA_None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.030000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),GradeToStartApplyingEffect=1,PerGradeUpgradeInterval=1,PerGradeUpgrade=(BaseValueConstant=0.030000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),BonusUpgradeList=))","GD_Siren_Streaming,GD_Siren_Skills.Misc.Init_BlightPhoenix_DamageCalc_Part2,ValueFormula.Level.InitializationDefinition,AttributeInitializationDefinition'GD_Balance_HealthAndDamage.HealthAndDamage.Init_PlayerMeleeDamage',AttributeInitializationDefinition'GD_Balance_HealthAndDamage.HealthAndDamage.Init_PlayerSkillDamage'","GD_Siren_Streaming,GD_Siren_Skills.Misc.Init_BlightPhoenix_DamageCalc_Part2,ValueFormula.Level.BaseValueScaleConstant,1.000000,3.5","GD_Assassin_Streaming,GD_Assassin_Skills.Misc.Att_DeathMark_BonusDamage,BaseValue.BaseValueConstant,0.200000,.8","GD_Itempools.Runnables.Pool_FourAssassins,BalancedItems[1].Probability.InitializationDefinition,None,GD_Balance.Weighting.Weight_1_Common","GD_Shields.Projectiles.Proj_LegendaryBoosterShield:BehaviorProviderDefinition_1.Behavior_Explode_140,BehaviorSequences[0].BehaviorData2[7].Behavior.StatusEffectDamage.BaseValueAttribute,None,D_Attributes.Projectile.ProjectileDamage","GD_Shields.Projectiles.Proj_LegendaryBoosterShield:BehaviorProviderDefinition_1.Behavior_Explode_140,BehaviorSequences[0].BehaviorData2[7].Behavior.StatusEffectDamage.BaseValueScaleConstant,1.000000,.25","GD_Shields.Projectiles.Proj_LegendaryBoosterShield:BehaviorProviderDefinition_1.Behavior_Explode_140,BehaviorSequences[0].BehaviorData2[7].Behavior.StatusEffectChance.BaseValueConstant,1.000000,20",",GD_ItemPools_Shop.Ammo.Ammo_CombatRifle,BalancedItems,,()",",GD_ItemPools_Shop.Ammo.Ammo_ProteanGrenades,BalancedItems,,()",",GD_ItemPools_Shop.Ammo.Ammo_Repeater,BalancedItems,,()",",GD_ItemPools_Shop.Ammo.Ammo_RocketLauncher,BalancedItems,,()",",GD_ItemPools_Shop.Ammo.Ammo_SMG,BalancedItems,,()",",GD_ItemPools_Shop.Ammo.Ammo_Shotgun,BalancedItems,,()",",GD_ItemPools_Shop.Ammo.Ammo_SniperRifle,BalancedItems,,((ItmPoolDefinition=None,InvBalanceDefinition=InventoryBalanceDefinition'GD_Flax_Items.Item.BalDef_Candy_Blue',Probability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True))",",GD_ItemPools_Shop.Ammo.Ammo_SniperRifle,bShopsHaveInfiniteQuantity,,True",",GD_ItemPools_Shop.HealthShop.HealthShop_InstaHealth_1,BalancedItems,,((ItmPoolDefinition=None,InvBalanceDefinition=InventoryBalanceDefinition'GD_Flax_Items.Item.BalDef_Candy_Green',Probability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True))",",GD_ItemPools_Shop.HealthShop.HealthShop_InstaHealth_1,bShopsHaveInfiniteQuantity,,True")
 
