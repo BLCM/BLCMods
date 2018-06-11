@@ -145,9 +145,12 @@ class DropConfig(BaseConfig):
     weight_glitch_claptastic = None
     weight_legendary = None
     rarity_presets = [
-            ('excellent', 'Enemies Have Excellent Gear'),
-            ('better', 'Enemies Have Better Gear'),
-            ('stock', 'Enemies Have Roughly Stock Gear'),
+            ('excellent', 'Enemies Have Excellent Gear (Glitch weapons in Main Game)'),
+            ('better', 'Enemies Have Better Gear (Glitch weapons in Main Game)'),
+            ('stock', 'Enemies Have Roughly Stock Gear (Glitch weapons in Main Game)'),
+            ('excellent_noglitch', 'Enemies Have Excellent Gear (Glitch weapons only in Claptastic Voyage)'),
+            ('better_noglitch', 'Enemies Have Better Gear (Glitch weapons only in Claptastic Voyage)'),
+            ('stock_noglitch', 'Enemies Have Roughly Stock Gear (Glitch weapons only in Claptastic Voyage)'),
         ]
 
     # Computed percent drop rates, for reporting to the user in mod comments
@@ -184,6 +187,18 @@ class DropConfig(BaseConfig):
     def __init__(self, hotfixes):
         self.hotfixes = hotfixes
         self.num_hotfixes = 0
+
+        # Process some non-glitch variants of our rarity
+        rarities_to_add = {}
+        for (key, weights) in self.rarities.items():
+            new_key = '{}_noglitch'.format(key)
+            rarities_to_add[new_key] = {}
+            for (level, weight) in weights.items():
+                if level == 'glitch_normal':
+                    rarities_to_add[new_key][level] = 0
+                else:
+                    rarities_to_add[new_key][level] = weight
+        self.rarities.update(rarities_to_add)
 
     def _single_assignment_hotfix(self, prefix, classname, attribute, pool, level=None):
         """
@@ -1973,6 +1988,9 @@ with open('input-file-mod.txt') as df:
         rarity_excellent=rarity_sections['excellent'],
         rarity_better=rarity_sections['better'],
         rarity_stock=rarity_sections['stock'],
+        rarity_noglitch_excellent=rarity_sections['excellent_noglitch'],
+        rarity_noglitch_better=rarity_sections['better_noglitch'],
+        rarity_noglitch_stock=rarity_sections['stock_noglitch'],
         boss_drops_guaranteed=boss_drops['guaranteed'],
         boss_drops_veryimproved=boss_drops['veryimproved'],
         boss_drops_improved=boss_drops['improved'],
