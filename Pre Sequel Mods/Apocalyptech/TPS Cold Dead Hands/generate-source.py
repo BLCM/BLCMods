@@ -89,7 +89,7 @@ class OtherConfig(BaseConfig):
     # These will be all set via Hotfix, and re-used by enemies in different
     # levels.  That way, we only need as many pools as we have loot-dropping
     # bosses in a single level.
-    level_pool_0 = 'GD_CustomItemPools_MainGame.Prototype.MaliwanUncommon'
+    level_pool_0 = 'GD_CustomItemPools_MainGame.Prototype.GreenPattern'
 
 class DropConfig(BaseConfig):
     """
@@ -113,7 +113,7 @@ class DropConfig(BaseConfig):
     ### Statements which'll be filled in later
     ###
 
-    # Rarity pools for regular enemies (main game)
+    # Rarity pools for regular enemies
     set_rarity_ar = None
     set_rarity_launchers = None
     set_rarity_pistols = None
@@ -121,15 +121,6 @@ class DropConfig(BaseConfig):
     set_rarity_smg = None
     set_rarity_snipers = None
     set_rarity_lasers = None
-
-    # Rarity pools for regular enemies (glitch-weighted in Claptastic Voyage)
-    set_rarity_glitch_ar = None
-    set_rarity_glitch_launchers = None
-    set_rarity_glitch_pistols = None
-    set_rarity_glitch_shotguns = None
-    set_rarity_glitch_smg = None
-    set_rarity_glitch_snipers = None
-    set_rarity_glitch_lasers = None
 
     # Equip pools for regular enemies
     set_equip_all = None
@@ -221,14 +212,12 @@ class DropConfig(BaseConfig):
         pool_order = [
                 self.equip_pool_shields,
                 self.equip_pool_all,
-                self.equip_pool_glitch_all,
                 self.equip_pool_ar,
                 self.equip_pool_launchers,
                 self.equip_pool_shotguns,
-                self.equip_pool_glitch_snipers,
+                self.equip_pool_snipers,
                 self.equip_pool_only_lasers,
                 self.equip_pool_lasers,
-                self.equip_pool_glitch_lasers,
             ]
 
         # First, assign enemies using DefaultItemPoolList[x]
@@ -367,35 +356,24 @@ class Regular(DropConfig):
             },
         }
 
-    # Rarity weight pools - "regular" drops
+    # Rarity weight pools
     rarity_pool_ar = 'GD_CustomItemPools_MainGame.Enforcer.GreenBold'
     rarity_pool_launchers = 'GD_CustomItemPools_MainGame.Enforcer.GreenBoldAccent'
     rarity_pool_pistols = 'GD_CustomItemPools_MainGame.Enforcer.GreenNinja'
     rarity_pool_shotguns = 'GD_CustomItemPools_MainGame.Enforcer.GreenPale'
-    rarity_pool_smg = 'GD_CustomItemPools_MainGame.Enforcer.GreenPattern'
-    rarity_pool_snipers = 'GD_CustomItemPools_MainGame.Enforcer.MaliwanCommon'
-    rarity_pool_lasers = 'GD_CustomItemPools_MainGame.Enforcer.MaliwanEpic'
-
-    # Rarity weight pools - glitch-weighted drops
-    rarity_pool_glitch_ar = 'GD_CustomItemPools_MainGame.Gladiator.GreenBold'
-    rarity_pool_glitch_launchers = 'GD_CustomItemPools_MainGame.Gladiator.GreenBoldAccent'
-    rarity_pool_glitch_pistols = 'GD_CustomItemPools_MainGame.Gladiator.GreenNinja'
-    rarity_pool_glitch_shotguns = 'GD_CustomItemPools_MainGame.Gladiator.GreenPale'
-    rarity_pool_glitch_smg = 'GD_CustomItemPools_MainGame.Gladiator.GreenPattern'
-    rarity_pool_glitch_snipers = 'GD_CustomItemPools_MainGame.Gladiator.MaliwanCommon'
-    rarity_pool_glitch_lasers = 'GD_CustomItemPools_MainGame.Gladiator.MaliwanEpic'
+    rarity_pool_smg = 'GD_CustomItemPools_MainGame.Gladiator.GreenBold'
+    rarity_pool_snipers = 'GD_CustomItemPools_MainGame.Gladiator.GreenBoldAccent'
+    rarity_pool_lasers = 'GD_CustomItemPools_MainGame.Gladiator.GreenNinja'
 
     # Equip pools (this is where weights are applied)
-    equip_pool_shields = 'GD_CustomItemPools_Quince.Doppel.GreenBold'
-    equip_pool_all = 'GD_CustomItemPools_Quince.Doppel.GreenBoldAccent'
-    equip_pool_glitch_all = 'GD_CustomItemPools_Quince.Doppel.GreenNinja'
-    equip_pool_ar = 'GD_CustomItemPools_Quince.Doppel.GreenPale'
-    equip_pool_launchers = 'GD_CustomItemPools_MainGame.Enforcer.MaliwanUncommon'
-    equip_pool_shotguns = 'GD_CustomItemPools_Quince.Doppel.GreenPattern'
-    equip_pool_glitch_snipers = 'GD_CustomItemPools_MainGame.Gladiator.MaliwanUncommon'
-    equip_pool_only_lasers = 'GD_CustomItemPools_MainGame.Lawbringer.MaliwanUncommon'
-    equip_pool_lasers = 'GD_CustomItemPools_Quince.Doppel.MaliwanCommon'
-    equip_pool_glitch_lasers = 'GD_CustomItemPools_Quince.Doppel.MaliwanEpic'
+    equip_pool_shields = 'GD_CustomItemPools_MainGame.Gladiator.GreenPale'
+    equip_pool_all = 'GD_CustomItemPools_MainGame.Lawbringer.GreenBold'
+    equip_pool_ar = 'GD_CustomItemPools_MainGame.Lawbringer.GreenBoldAccent'
+    equip_pool_launchers = 'GD_CustomItemPools_MainGame.Enforcer.GreenPattern'
+    equip_pool_shotguns = 'GD_CustomItemPools_MainGame.Lawbringer.GreenNinja'
+    equip_pool_snipers = 'GD_CustomItemPools_MainGame.Gladiator.GreenPattern'
+    equip_pool_only_lasers = 'GD_CustomItemPools_MainGame.Lawbringer.GreenPattern'
+    equip_pool_lasers = 'GD_CustomItemPools_MainGame.Lawbringer.GreenPale'
 
     ###
     ### Enemy changes
@@ -478,6 +456,11 @@ class Regular(DropConfig):
                 (0, 'GD_ColZ.Population.PawnBalance_ColZ_DahlMarine'),
                 (0, 'GD_ColZMech.Population.PawnBalance_ColZMech_DahlMarine'),
                 (0, 'GD_DahlMarineMoonshot.Balance.PawnBalance_DahlMarineMoonshot'),
+                (0, 'GD_Ma_Pop_ClaptrapForces.Balance.PawnBalance_InsecurityBot'),
+                (0, 'GD_Ma_Pop_ClaptrapForces.Balance.PawnBalance_InsecurityBot_LowDamage'),
+                (0, 'GD_Ma_Pop_ClaptrapForces.Balance.PawnBalance_MinacMinion'),
+                (0, 'GD_Ma_Pop_ClaptrapForces.Balance.PawnBalance_RexLoaderMinion'),
+                (0, 'GD_Ma_Pop_ClaptrapForces.Balance.PawnBalance_VeryInsecureBot'),
                 (0, 'GD_PLAMember.Balance.PawnBalance_TimPot'),
                 (0, 'GD_PLAMember.Balance.PawnBalance_TumPot'),
                 (0, 'GD_PLAMember.Population.PawnBalance_TomPot'),
@@ -495,14 +478,6 @@ class Regular(DropConfig):
                 (0, 'GD_Population_Darksiders.Balance.PawnBalance_DarksiderBandit'),
                 (0, 'GD_Population_Darksiders.Balance.PawnBalance_LittleDarksiderPsycho'),
                 (0, 'GD_ScavAccepterDude.Population.PawnBalance_ScavAccepterDude'),
-            ],
-            # All Weapons (glitch weighted)
-            [
-                (0, 'GD_Ma_Pop_ClaptrapForces.Balance.PawnBalance_InsecurityBot'),
-                (0, 'GD_Ma_Pop_ClaptrapForces.Balance.PawnBalance_InsecurityBot_LowDamage'),
-                (0, 'GD_Ma_Pop_ClaptrapForces.Balance.PawnBalance_MinacMinion'),
-                (0, 'GD_Ma_Pop_ClaptrapForces.Balance.PawnBalance_RexLoaderMinion'),
-                (0, 'GD_Ma_Pop_ClaptrapForces.Balance.PawnBalance_VeryInsecureBot'),
             ],
             # AR-Weighted
             [
@@ -528,7 +503,7 @@ class Regular(DropConfig):
                 (0, 'GD_Population_Dahl.Balance.Pumpkin.PawnBalance_DahlScout_Pumpkin'),
                 (0, 'GD_Population_Darksiders.Balance.PawnBalance_LittleDarksiderBandit'),
             ],
-            # Snipers Only (glitch weighted)
+            # Snipers Only
             [
                 (0, 'GD_Ma_Pop_ClaptrapForces.Balance.PawnBalance_InsecuritySniper'),
                 (0, 'GD_Ma_Pop_ClaptrapForces.Balance.PawnBalance_VeryInsecureSniper'),
@@ -545,17 +520,14 @@ class Regular(DropConfig):
             # Laser-Weighted
             [
                 (0, 'GD_DahlRedShirt.Balance.PawnBalance_DahlRedShirt'),
-                (0, 'GD_Population_Dahl.Balance.PawnBalance_DahlMarine_NoProvokeAnim'),
-                (0, 'GD_Population_Scavengers.Balance.Midgets.PawnBalance_ScavMidgetSpaceman'),
-                (0, 'GD_Population_Scavengers.Balance.Outlaws.PawnBalance_ScavFloatingSpaceman'),
-                (0, 'GD_Population_Scavengers.Balance.PawnBalance_ScavBanditRider'),
-            ],
-            # Laser-Weighted (glitch weighted)
-            [
                 (0, 'GD_Ma_Pop_ClaptrapForces.Balance.PawnBalance_BotRider'),
                 (0, 'GD_Ma_Pop_ClaptrapForces.Balance.PawnBalance_FlyTrap'),
                 (0, 'GD_Ma_Pop_ClaptrapForces.Balance.PawnBalance_PermFlyTrap'),
                 (0, 'GD_Ma_Pop_ClaptrapForces.Balance.PawnBalance_VeryInsecureFlight'),
+                (0, 'GD_Population_Dahl.Balance.PawnBalance_DahlMarine_NoProvokeAnim'),
+                (0, 'GD_Population_Scavengers.Balance.Midgets.PawnBalance_ScavMidgetSpaceman'),
+                (0, 'GD_Population_Scavengers.Balance.Outlaws.PawnBalance_ScavFloatingSpaceman'),
+                (0, 'GD_Population_Scavengers.Balance.PawnBalance_ScavBanditRider'),
             ],
         )
 
@@ -654,6 +626,30 @@ class Regular(DropConfig):
             ],
             # All Weapons
             [
+                (1, 0, 'GD_Ma_Pop_ClaptrapForces.Balance.PawnBalance_BotRider'),
+                (2, 0, 'GD_Ma_Pop_ClaptrapForces.Balance.PawnBalance_BotRider'),
+                (1, 0, 'GD_Ma_Pop_ClaptrapForces.Balance.PawnBalance_InsecurityBot'),
+                (2, 0, 'GD_Ma_Pop_ClaptrapForces.Balance.PawnBalance_InsecurityBot'),
+                (1, 1, 'GD_Ma_Pop_ClaptrapForces.Balance.PawnBalance_InsecurityBot_LowDamage'),
+                (2, 1, 'GD_Ma_Pop_ClaptrapForces.Balance.PawnBalance_InsecurityBot_LowDamage'),
+                (1, 1, 'GD_Ma_Pop_ClaptrapForces.Balance.PawnBalance_MinacMinion'),
+                (2, 1, 'GD_Ma_Pop_ClaptrapForces.Balance.PawnBalance_MinacMinion'),
+                (1, 1, 'GD_Ma_Pop_ClaptrapForces.Balance.PawnBalance_RexLoaderMinion'),
+                (2, 1, 'GD_Ma_Pop_ClaptrapForces.Balance.PawnBalance_RexLoaderMinion'),
+                (1, 0, 'GD_Ma_Pop_ClaptrapForces.Balance.PawnBalance_VeryInsecureBot'),
+                (2, 0, 'GD_Ma_Pop_ClaptrapForces.Balance.PawnBalance_VeryInsecureBot'),
+                (0, 0, 'GD_Ma_Pop_Engineer.Balance.PawnBalance_Engineer'),
+                (1, 0, 'GD_Ma_Pop_Engineer.Balance.PawnBalance_Engineer'),
+                (2, 0, 'GD_Ma_Pop_Engineer.Balance.PawnBalance_Engineer'),
+                (0, 0, 'GD_Marigold_Pop_Fragmented.Balance.PawnBalance_FragBadassBandit'),
+                (1, 0, 'GD_Marigold_Pop_Fragmented.Balance.PawnBalance_FragBadassBandit'),
+                (2, 0, 'GD_Marigold_Pop_Fragmented.Balance.PawnBalance_FragBadassBandit'),
+                (0, 0, 'GD_Marigold_Pop_Fragmented.Balance.PawnBalance_FragBandit'),
+                (1, 0, 'GD_Marigold_Pop_Fragmented.Balance.PawnBalance_FragBandit'),
+                (2, 0, 'GD_Marigold_Pop_Fragmented.Balance.PawnBalance_FragBandit'),
+                (0, 0, 'GD_Marigold_Pop_Fragmented.Balance.PawnBalance_FragBanditMidget'),
+                (1, 0, 'GD_Marigold_Pop_Fragmented.Balance.PawnBalance_FragBanditMidget'),
+                (2, 0, 'GD_Marigold_Pop_Fragmented.Balance.PawnBalance_FragBanditMidget'),
                 (0, 0, 'GD_Population_Scavengers.Balance.Bosun.PawnBalance_ScavMidget_Bosun'),
                 (0, 0, 'GD_Population_Scavengers.Balance.Bosun.PawnBalance_ScavengerBandit_Bosun'),
                 (1, 0, 'GD_Population_Scavengers.Balance.Bosun.PawnBalance_ScavengerBandit_Bosun'),
@@ -687,36 +683,9 @@ class Regular(DropConfig):
                 (1, 0, 'GD_Population_Scavengers.Balance.Pumpkin.PawnBalance_ScavengerBandit_Pumpkin'),
                 (0, 0, 'GD_ScavBanditMidget_Rider.Population.PawnBalance_ScavMidget_Rider'),
             ],
-            # All Weapons (glitch weighted)
-            [
-                (0, 0, 'GD_Ma_Cookie.Balance.PawnBalance_Ma_Cookie'),
-                (1, 0, 'GD_Ma_Pop_ClaptrapForces.Balance.PawnBalance_BotRider'),
-                (2, 0, 'GD_Ma_Pop_ClaptrapForces.Balance.PawnBalance_BotRider'),
-                (1, 0, 'GD_Ma_Pop_ClaptrapForces.Balance.PawnBalance_InsecurityBot'),
-                (2, 0, 'GD_Ma_Pop_ClaptrapForces.Balance.PawnBalance_InsecurityBot'),
-                (1, 1, 'GD_Ma_Pop_ClaptrapForces.Balance.PawnBalance_InsecurityBot_LowDamage'),
-                (2, 1, 'GD_Ma_Pop_ClaptrapForces.Balance.PawnBalance_InsecurityBot_LowDamage'),
-                (1, 1, 'GD_Ma_Pop_ClaptrapForces.Balance.PawnBalance_MinacMinion'),
-                (2, 1, 'GD_Ma_Pop_ClaptrapForces.Balance.PawnBalance_MinacMinion'),
-                (1, 1, 'GD_Ma_Pop_ClaptrapForces.Balance.PawnBalance_RexLoaderMinion'),
-                (2, 1, 'GD_Ma_Pop_ClaptrapForces.Balance.PawnBalance_RexLoaderMinion'),
-                (1, 0, 'GD_Ma_Pop_ClaptrapForces.Balance.PawnBalance_VeryInsecureBot'),
-                (2, 0, 'GD_Ma_Pop_ClaptrapForces.Balance.PawnBalance_VeryInsecureBot'),
-                (0, 0, 'GD_Ma_Pop_Engineer.Balance.PawnBalance_Engineer'),
-                (1, 0, 'GD_Ma_Pop_Engineer.Balance.PawnBalance_Engineer'),
-                (2, 0, 'GD_Ma_Pop_Engineer.Balance.PawnBalance_Engineer'),
-                (0, 0, 'GD_Marigold_Pop_Fragmented.Balance.PawnBalance_FragBadassBandit'),
-                (1, 0, 'GD_Marigold_Pop_Fragmented.Balance.PawnBalance_FragBadassBandit'),
-                (2, 0, 'GD_Marigold_Pop_Fragmented.Balance.PawnBalance_FragBadassBandit'),
-                (0, 0, 'GD_Marigold_Pop_Fragmented.Balance.PawnBalance_FragBandit'),
-                (1, 0, 'GD_Marigold_Pop_Fragmented.Balance.PawnBalance_FragBandit'),
-                (2, 0, 'GD_Marigold_Pop_Fragmented.Balance.PawnBalance_FragBandit'),
-                (0, 0, 'GD_Marigold_Pop_Fragmented.Balance.PawnBalance_FragBanditMidget'),
-                (1, 0, 'GD_Marigold_Pop_Fragmented.Balance.PawnBalance_FragBanditMidget'),
-                (2, 0, 'GD_Marigold_Pop_Fragmented.Balance.PawnBalance_FragBanditMidget'),
-            ],
             # AR-Weighted
             [
+                (0, 0, 'GD_Ma_Cookie.Balance.PawnBalance_Ma_Cookie'),
                 (0, 0, 'GD_Population_Boils.Balance.PawnBalance_BoilGuard'),
                 (1, 0, 'GD_Population_Boils.Balance.PawnBalance_BoilGuard'),
                 (0, 0, 'GD_Population_Rat.Balance.PawnBalance_HypRatGuard'),
@@ -728,7 +697,7 @@ class Regular(DropConfig):
             # Shotguns Only
             [
             ],
-            # Snipers Only (glitch weighted)
+            # Snipers Only
             [
                 (1, 1, 'GD_Ma_Pop_ClaptrapForces.Balance.PawnBalance_InsecuritySniper'),
                 (2, 1, 'GD_Ma_Pop_ClaptrapForces.Balance.PawnBalance_InsecuritySniper'),
@@ -742,6 +711,10 @@ class Regular(DropConfig):
             ],
             # Laser-Weighted
             [
+                (1, 1, 'GD_Ma_Pop_ClaptrapForces.Balance.PawnBalance_FlyTrap'),
+                (2, 1, 'GD_Ma_Pop_ClaptrapForces.Balance.PawnBalance_FlyTrap'),
+                (1, 1, 'GD_Ma_Pop_ClaptrapForces.Balance.PawnBalance_PermFlyTrap'),
+                (2, 1, 'GD_Ma_Pop_ClaptrapForces.Balance.PawnBalance_PermFlyTrap'),
                 (1, 0, 'GD_Population_Scavengers.Balance.Bosun.PawnBalance_ScavMidget_Bosun'),
                 (1, 0, 'GD_Population_Scavengers.Balance.MercDay.PawnBalance_ScavMidget_Mercday'),
                 (1, 0, 'GD_Population_Scavengers.Balance.Midgets.PawnBalance_ScavMidget'),
@@ -758,13 +731,6 @@ class Regular(DropConfig):
                 (1, 0, 'GD_Population_Scavengers.Balance.Pumpkin.PawnBalance_ScavMidget_Pumpkin'),
                 (1, 0, 'GD_ScavBanditMidget_Rider.Population.PawnBalance_ScavMidget_Rider'),
             ],
-            # Laser-Weighted (glitch weighted)
-            [
-                (1, 1, 'GD_Ma_Pop_ClaptrapForces.Balance.PawnBalance_FlyTrap'),
-                (2, 1, 'GD_Ma_Pop_ClaptrapForces.Balance.PawnBalance_FlyTrap'),
-                (1, 1, 'GD_Ma_Pop_ClaptrapForces.Balance.PawnBalance_PermFlyTrap'),
-                (2, 1, 'GD_Ma_Pop_ClaptrapForces.Balance.PawnBalance_PermFlyTrap'),
-            ],
         )
 
     enemy_level_ipl = (
@@ -772,9 +738,6 @@ class Regular(DropConfig):
             [
             ],
             # All Weapons
-            [
-            ],
-            # All Weapons (glitch weighted)
             [
             ],
             # AR-Weighted
@@ -786,16 +749,13 @@ class Regular(DropConfig):
             # Shotguns Only
             [
             ],
-            # Snipers Only (glitch weighted)
+            # Snipers Only
             [
             ],
             # Lasers Only
             [
             ],
             # Laser-Weighted
-            [
-            ],
-            # Laser-Weighted (glitch weighted)
             [
             ],
         )
@@ -807,9 +767,6 @@ class Regular(DropConfig):
             # All Weapons
             [
             ],
-            # All Weapons (glitch weighted)
-            [
-            ],
             # AR-Weighted
             [
             ],
@@ -819,16 +776,13 @@ class Regular(DropConfig):
             # Shotguns Only
             [
             ],
-            # Snipers Only (glitch weighted)
+            # Snipers Only
             [
             ],
             # Lasers Only
             [
             ],
             # Laser-Weighted
-            [
-            ],
-            # Laser-Weighted (glitch weighted)
             [
             ],
         )
@@ -840,9 +794,6 @@ class Regular(DropConfig):
             # All Weapons
             [
             ],
-            # All Weapons (glitch weighted)
-            [
-            ],
             # AR-Weighted
             [
             ],
@@ -852,16 +803,13 @@ class Regular(DropConfig):
             # Shotguns Only
             [
             ],
-            # Snipers Only (glitch weighted)
+            # Snipers Only
             [
             ],
             # Lasers Only
             [
             ],
             # Laser-Weighted
-            [
-            ],
-            # Laser-Weighted (glitch weighted)
             [
             ],
         )
@@ -975,35 +923,24 @@ class Badass(DropConfig):
             },
         }
 
-    # Rarity weight pools - "regular" drops
-    rarity_pool_ar = 'GD_CustomItemPools_MainGame.Lawbringer.GreenBold'
-    rarity_pool_launchers = 'GD_CustomItemPools_MainGame.Lawbringer.GreenBoldAccent'
-    rarity_pool_pistols = 'GD_CustomItemPools_MainGame.Lawbringer.GreenNinja'
-    rarity_pool_shotguns = 'GD_CustomItemPools_MainGame.Lawbringer.GreenPale'
-    rarity_pool_smg = 'GD_CustomItemPools_MainGame.Lawbringer.GreenPattern'
-    rarity_pool_snipers = 'GD_CustomItemPools_MainGame.Lawbringer.MaliwanCommon'
-    rarity_pool_lasers = 'GD_CustomItemPools_MainGame.Lawbringer.MaliwanEpic'
-
-    # Rarity weight pools - glitch-weighted drops
-    rarity_pool_glitch_ar = 'GD_CustomItemPools_MainGame.Prototype.GreenBold'
-    rarity_pool_glitch_launchers = 'GD_CustomItemPools_MainGame.Prototype.GreenBoldAccent'
-    rarity_pool_glitch_pistols = 'GD_CustomItemPools_MainGame.Prototype.GreenNinja'
-    rarity_pool_glitch_shotguns = 'GD_CustomItemPools_MainGame.Prototype.GreenPale'
-    rarity_pool_glitch_smg = 'GD_CustomItemPools_MainGame.Prototype.GreenPattern'
-    rarity_pool_glitch_snipers = 'GD_CustomItemPools_MainGame.Prototype.MaliwanCommon'
-    rarity_pool_glitch_lasers = 'GD_CustomItemPools_MainGame.Prototype.MaliwanEpic'
+    # Rarity weight pools
+    rarity_pool_ar = 'GD_CustomItemPools_MainGame.Prototype.GreenBold'
+    rarity_pool_launchers = 'GD_CustomItemPools_MainGame.Prototype.GreenBoldAccent'
+    rarity_pool_pistols = 'GD_CustomItemPools_MainGame.Prototype.GreenNinja'
+    rarity_pool_shotguns = 'GD_CustomItemPools_MainGame.Prototype.GreenPale'
+    rarity_pool_smg = 'GD_CustomItemPools_Quince.Doppel.GreenBold'
+    rarity_pool_snipers = 'GD_CustomItemPools_Quince.Doppel.GreenBoldAccent'
+    rarity_pool_lasers = 'GD_CustomItemPools_Quince.Doppel.GreenNinja'
 
     # Equip pools (this is where weights are applied)
-    equip_pool_shields = 'GD_CustomItemPools_crocus.Baroness.GreenBold'
-    equip_pool_all = 'GD_CustomItemPools_crocus.Baroness.GreenBoldAccent'
-    equip_pool_glitch_all = 'GD_CustomItemPools_crocus.Baroness.GreenNinja'
-    equip_pool_ar = 'GD_CustomItemPools_crocus.Baroness.GreenPale'
+    equip_pool_shields = 'GD_CustomItemPools_Quince.Doppel.GreenPale'
+    equip_pool_all = 'GD_CustomItemPools_crocus.Baroness.GreenBold'
+    equip_pool_ar = 'GD_CustomItemPools_crocus.Baroness.GreenBoldAccent'
     equip_pool_launchers = None
-    equip_pool_shotguns = 'GD_CustomItemPools_crocus.Baroness.GreenPattern'
-    equip_pool_glitch_snipers = None
+    equip_pool_shotguns = 'GD_CustomItemPools_crocus.Baroness.GreenNinja'
+    equip_pool_snipers = None
     equip_pool_only_lasers = None
-    equip_pool_lasers = 'GD_CustomItemPools_crocus.Baroness.MaliwanCommon'
-    equip_pool_glitch_lasers = 'GD_CustomItemPools_crocus.Baroness.MaliwanEpic'
+    equip_pool_lasers = 'GD_CustomItemPools_crocus.Baroness.GreenPale'
 
     ###
     ### Enemy changes
@@ -1058,15 +995,12 @@ class Badass(DropConfig):
             # All Weapons
             [
                 (0, 'GD_Bruce.Population.Bal_Bruce'),
+                (0, 'GD_Ma_Pop_ClaptrapForces.Balance.Uniques.PawnBalance_Hope'),
+                (0, 'GD_Ma_Pop_ClaptrapForces.Balance.Uniques.PawnBalance_SelfEsteem'),
                 (0, 'GD_Population_Darksiders.Balance.PawnBalance_DarksiderBadassBandit'),
                 (0, 'GD_Population_Darksiders.Balance.PawnBalance_LittleDarksiderBadassBandit'),
                 (0, 'GD_Squat.Population.PawnBalance_Squat'),
                 (2, 'GD_TimberLogwood.Balance.PawnBalance_TimberLogwood'),
-            ],
-            # All Weapons (glitch weighted)
-            [
-                (0, 'GD_Ma_Pop_ClaptrapForces.Balance.Uniques.PawnBalance_Hope'),
-                (0, 'GD_Ma_Pop_ClaptrapForces.Balance.Uniques.PawnBalance_SelfEsteem'),
             ],
             # AR-Weighted
             [
@@ -1082,7 +1016,7 @@ class Badass(DropConfig):
                 (0, 'GD_Population_Boils.Balance.PawnBalance_Eghood_Pandoracorn'),
                 (0, 'GD_Population_Boils.Balance.PawnBalance_Eghood_Pumpkin'),
             ],
-            # Snipers Only (glitch weighted)
+            # Snipers Only
             [
             ],
             # Lasers Only
@@ -1092,13 +1026,10 @@ class Badass(DropConfig):
             [
                 (0, 'GD_Cork_DontGetCocky_Data.Balance.PawnBalance_DanZando'),
                 (1, 'GD_DrongoBones.Balance.PawnBalance_DrongoBones'),
-                (2, 'GD_Population_Scavengers.Uniques.PawnBalance_Bosun'),
-                (0, 'GD_Population_Scavengers.Uniques.PawnBalance_Kelly'),
-            ],
-            # Laser-Weighted (glitch weighted)
-            [
                 (0, 'GD_Ma_Pop_ClaptrapForces.Balance.PawnBalance_CleanupRuntime'),
                 (0, 'GD_Ma_Pop_ClaptrapForces.Balance.PawnBalance_VeryInsecureBadass'),
+                (2, 'GD_Population_Scavengers.Uniques.PawnBalance_Bosun'),
+                (0, 'GD_Population_Scavengers.Uniques.PawnBalance_Kelly'),
             ],
         )
 
@@ -1143,12 +1074,9 @@ class Badass(DropConfig):
                 (0, 0, 'GD_Population_Scavengers.Balance.PawnBalance_ScavBadassBandit_Jetpack'),
                 (1, 0, 'GD_Population_Scavengers.Balance.PawnBalance_ScavBadassBandit_Jetpack'),
             ],
-            # All Weapons (glitch weighted)
-            [
-                (0, 0, 'GD_Ma_Chip.Balance.PawnBalance_Ma_Chip'),
-            ],
             # AR-Weighted
             [
+                (0, 0, 'GD_Ma_Chip.Balance.PawnBalance_Ma_Chip'),
                 (1, 0, 'GD_Population_Boils.Balance.PawnBalance_BoilBadass'),
             ],
             # Launchers Only
@@ -1157,7 +1085,7 @@ class Badass(DropConfig):
             # Shotguns Only
             [
             ],
-            # Snipers Only (glitch weighted)
+            # Snipers Only
             [
             ],
             # Lasers Only
@@ -1168,9 +1096,6 @@ class Badass(DropConfig):
                 (0, 0, 'GD_Population_Scavengers.Balance.Outlaws.PawnBalance_ScavWastelandWalker'),
                 (1, 0, 'GD_Population_Scavengers.Balance.Outlaws.PawnBalance_ScavWastelandWalker'),
             ],
-            # Laser-Weighted (glitch weighted)
-            [
-            ],
         )
 
     enemy_level_ipl = (
@@ -1178,9 +1103,6 @@ class Badass(DropConfig):
             [
             ],
             # All Weapons
-            [
-            ],
-            # All Weapons (glitch weighted)
             [
             ],
             # AR-Weighted
@@ -1192,16 +1114,13 @@ class Badass(DropConfig):
             # Shotguns Only
             [
             ],
-            # Snipers Only (glitch weighted)
+            # Snipers Only
             [
             ],
             # Lasers Only
             [
             ],
             # Laser-Weighted
-            [
-            ],
-            # Laser-Weighted (glitch weighted)
             [
             ],
         )
@@ -1213,9 +1132,6 @@ class Badass(DropConfig):
             # All Weapons
             [
             ],
-            # All Weapons (glitch weighted)
-            [
-            ],
             # AR-Weighted
             [
             ],
@@ -1225,16 +1141,13 @@ class Badass(DropConfig):
             # Shotguns Only
             [
             ],
-            # Snipers Only (glitch weighted)
+            # Snipers Only
             [
             ],
             # Lasers Only
             [
             ],
             # Laser-Weighted
-            [
-            ],
-            # Laser-Weighted (glitch weighted)
             [
             ],
         )
@@ -1246,9 +1159,6 @@ class Badass(DropConfig):
             # All Weapons
             [
             ],
-            # All Weapons (glitch weighted)
-            [
-            ],
             # AR-Weighted
             [
             ],
@@ -1258,16 +1168,13 @@ class Badass(DropConfig):
             # Shotguns Only
             [
             ],
-            # Snipers Only (glitch weighted)
+            # Snipers Only
             [
             ],
             # Lasers Only
             [
             ],
             # Laser-Weighted
-            [
-            ],
-            # Laser-Weighted (glitch weighted)
             [
             ],
         )
@@ -1721,17 +1628,27 @@ hfs.add_level_hotfix('moonstone_disable_1', 'MoonstoneDisable',
     )""")
 
 # Configure rarity pools
+prefix = ' '*(4*4)
+claptastic_levels = [
+        'Ma_LeftCluster_P',
+        'Ma_RightCluster_P',
+        'Ma_SubBoss_P',
+        'Ma_Deck13_P',
+        'Ma_FinalBoss_P',
+        'Ma_Motherboard_P',
+        'Ma_Nexus_P',
+        'Ma_Subconscious_P',
+    ]
 rarity_sections = {}
 line_prefix = ''
 line_suffix = ''
 hotfix_activated = True
 for (rarity_key, rarity_label) in DropConfig.rarity_presets:
 
+    hotfix_list = []
     for config in [regular, badass]:
 
         config.set_rarity_weights(rarity_key)
-
-        # Regular-weighted rarities (in the main game)
 
         config.set_rarity_ar = get_balanced_set(
             config.rarity_pool_ar,
@@ -1810,85 +1727,6 @@ for (rarity_key, rarity_label) in DropConfig.rarity_presets:
                 ('GD_Itempools.WeaponPools.Pool_Weapons_Lasers_06_Legendary', config.weight_legendary),
             ])
 
-        # Glitch-weighted rarities (for inside Claptastic Voyage)
-
-        config.set_rarity_glitch_ar = get_balanced_set(
-            config.rarity_pool_glitch_ar,
-            [
-                ('GD_Itempools.WeaponPools.Pool_Weapons_AssaultRifles_01_Common', config.weight_common),
-                ('GD_Itempools.WeaponPools.Pool_Weapons_AssaultRifles_02_Uncommon', config.weight_uncommon),
-                ('GD_Itempools.WeaponPools.Pool_Weapons_AssaultRifles_04_Rare', config.weight_rare),
-                ('GD_Itempools.WeaponPools.Pool_Weapons_AssaultRifles_05_VeryRare', config.weight_veryrare),
-                ('GD_Ma_ItemPools.WeaponPools.Pool_Weapons_AssaultRifles_Glitch_Marigold', config.weight_glitch_claptastic),
-                ('GD_Itempools.WeaponPools.Pool_Weapons_AssaultRifles_06_Legendary', config.weight_legendary),
-            ])
-
-        config.set_rarity_glitch_launchers = get_balanced_set(
-            config.rarity_pool_glitch_launchers,
-            [
-                ('GD_Itempools.WeaponPools.Pool_Weapons_Launchers_01_Common', config.weight_common),
-                ('GD_Itempools.WeaponPools.Pool_Weapons_Launchers_02_Uncommon', config.weight_uncommon),
-                ('GD_Itempools.WeaponPools.Pool_Weapons_Launchers_04_Rare', config.weight_rare),
-                ('GD_Itempools.WeaponPools.Pool_Weapons_Launchers_05_VeryRare', config.weight_veryrare),
-                ('GD_Ma_ItemPools.WeaponPools.Pool_Weapons_Launchers_Glitch_Marigold', config.weight_glitch_claptastic),
-                ('GD_Itempools.WeaponPools.Pool_Weapons_Launchers_06_Legendary', config.weight_legendary),
-            ])
-
-        config.set_rarity_glitch_pistols = get_balanced_set(
-            config.rarity_pool_glitch_pistols,
-            [
-                ('GD_Itempools.WeaponPools.Pool_Weapons_Pistols_01_Common', config.weight_common),
-                ('GD_Itempools.WeaponPools.Pool_Weapons_Pistols_02_Uncommon', config.weight_uncommon),
-                ('GD_Itempools.WeaponPools.Pool_Weapons_Pistols_04_Rare', config.weight_rare),
-                ('GD_Itempools.WeaponPools.Pool_Weapons_Pistols_05_VeryRare', config.weight_veryrare),
-                ('GD_Ma_ItemPools.WeaponPools.Pool_Weapons_Pistols_Glitch_Marigold', config.weight_glitch_claptastic),
-                ('GD_Itempools.WeaponPools.Pool_Weapons_Pistols_06_Legendary', config.weight_legendary),
-            ])
-
-        config.set_rarity_glitch_smg = get_balanced_set(
-            config.rarity_pool_glitch_smg,
-            [
-                ('GD_Itempools.WeaponPools.Pool_Weapons_SMG_01_Common', config.weight_common),
-                ('GD_Itempools.WeaponPools.Pool_Weapons_SMG_02_Uncommon', config.weight_uncommon),
-                ('GD_Itempools.WeaponPools.Pool_Weapons_SMG_04_Rare', config.weight_rare),
-                ('GD_Itempools.WeaponPools.Pool_Weapons_SMG_05_VeryRare', config.weight_veryrare),
-                ('GD_Ma_ItemPools.WeaponPools.Pool_Weapons_SMG_Glitch_Marigold', config.weight_glitch_claptastic),
-                ('GD_Itempools.WeaponPools.Pool_Weapons_SMG_06_Legendary', config.weight_legendary),
-            ])
-
-        config.set_rarity_glitch_shotguns = get_balanced_set(
-            config.rarity_pool_glitch_shotguns,
-            [
-                ('GD_Itempools.WeaponPools.Pool_Weapons_Shotguns_01_Common', config.weight_common),
-                ('GD_Itempools.WeaponPools.Pool_Weapons_Shotguns_02_Uncommon', config.weight_uncommon),
-                ('GD_Itempools.WeaponPools.Pool_Weapons_Shotguns_04_Rare', config.weight_rare),
-                ('GD_Itempools.WeaponPools.Pool_Weapons_Shotguns_05_VeryRare', config.weight_veryrare),
-                ('GD_Ma_ItemPools.WeaponPools.Pool_Weapons_Shotguns_Glitch_Marigold', config.weight_glitch_claptastic),
-                ('GD_Itempools.WeaponPools.Pool_Weapons_Shotguns_06_Legendary', config.weight_legendary),
-            ])
-
-        config.set_rarity_glitch_snipers = get_balanced_set(
-            config.rarity_pool_glitch_snipers,
-            [
-                ('GD_Itempools.WeaponPools.Pool_Weapons_SniperRifles_01_Common', config.weight_common),
-                ('GD_Itempools.WeaponPools.Pool_Weapons_SniperRifles_02_Uncommon', config.weight_uncommon),
-                ('GD_Itempools.WeaponPools.Pool_Weapons_SniperRifles_04_Rare', config.weight_rare),
-                ('GD_Itempools.WeaponPools.Pool_Weapons_SniperRifles_05_VeryRare', config.weight_veryrare),
-                ('GD_Ma_ItemPools.WeaponPools.Pool_Weapons_Sniper_Glitch_Marigold', config.weight_glitch_claptastic),
-                ('GD_Itempools.WeaponPools.Pool_Weapons_SniperRifles_06_Legendary', config.weight_legendary),
-            ])
-
-        config.set_rarity_glitch_lasers = get_balanced_set(
-            config.rarity_pool_glitch_lasers,
-            [
-                ('GD_Itempools.WeaponPools.Pool_Weapons_Lasers_01_Common', config.weight_common),
-                ('GD_Itempools.WeaponPools.Pool_Weapons_Lasers_02_Uncommon', config.weight_uncommon),
-                ('GD_Itempools.WeaponPools.Pool_Weapons_Lasers_04_Rare', config.weight_rare),
-                ('GD_Itempools.WeaponPools.Pool_Weapons_Lasers_05_VeryRare', config.weight_veryrare),
-                ('GD_Ma_ItemPools.WeaponPools.Pool_Weapons_Lasers_Glitch_Marigold', config.weight_glitch_normal),
-                ('GD_Itempools.WeaponPools.Pool_Weapons_Lasers_06_Legendary', config.weight_legendary),
-            ])
-
         # Shield pool (rarity + equip in one, since we don't need to make two choices)
 
         config.set_shields = get_balanced_set(
@@ -1901,6 +1739,38 @@ for (rarity_key, rarity_label) in DropConfig.rarity_presets:
                 ('GD_Itempools.ShieldPools.Pool_Shields_All_06_Legendary', config.weight_legendary),
             ])
 
+        # We save ourselves having to use a bunch more loot pools than necessary
+        # by using hotfixes to dynamically change the weights depending on if we're
+        # in a Claptastic Voyage map or not.  We set up a "base" hotfix which fires
+        # on all levels, and then a whole bunch of level-specific ones to fire
+        # afterwards on Claptastic Voyage levels.
+
+        rarity_hfs = Hotfixes(nameprefix='Apoc{}{}RarityFix'.format(
+            config.hotfix_prefix.capitalize(), rarity_key.capitalize()))
+        for pool in [
+                config.rarity_pool_ar,
+                config.rarity_pool_launchers,
+                config.rarity_pool_pistols,
+                config.rarity_pool_smg,
+                config.rarity_pool_shotguns,
+                config.rarity_pool_snipers,
+                config.rarity_pool_lasers,
+                ]:
+            hfs_id = 'rarity_{}'.format(len(rarity_hfs.hotfixes))
+            rarity_hfs.add_level_hotfix(hfs_id, 'Set',
+                ',{},BalancedItems[4].Probability.BaseValueConstant,,{}'.format(
+                    pool, config.weight_glitch_normal),
+                activated=hotfix_activated)
+            hotfix_list.append('{}{}'.format(prefix, rarity_hfs.get_hotfix_xml(hfs_id)))
+            for level in claptastic_levels:
+                hfs_id = 'rarity_{}'.format(len(rarity_hfs.hotfixes))
+                rarity_hfs.add_level_hotfix(hfs_id, 'Set',
+                    '{},{},BalancedItems[4].Probability.BaseValueConstant,,{}'.format(
+                        level, pool, config.weight_glitch_claptastic),
+                    activated=hotfix_activated)
+                hotfix_list.append('{}{}'.format(prefix, rarity_hfs.get_hotfix_xml(hfs_id)))
+
+    claptastic_support_str = "\n\n".join(hotfix_list)
     with open('input-file-rarity.txt', 'r') as df:
         rarity_sections[rarity_key] = df.read().format(
                 section_label=rarity_label,
@@ -1908,6 +1778,7 @@ for (rarity_key, rarity_label) in DropConfig.rarity_presets:
                 line_suffix=line_suffix,
                 regular=regular,
                 badass=badass,
+                claptastic_support_str=claptastic_support_str,
                 )
 
     line_prefix = '#'
@@ -1929,18 +1800,6 @@ for config in [regular, badass]:
             (config.rarity_pool_snipers, config.drop_prob_snipers),
             (config.rarity_pool_launchers, config.drop_prob_launchers),
             (config.rarity_pool_lasers, config.drop_prob_lasers),
-        ])
-
-    config.set_equip_all_glitch = get_balanced_set(
-        config.equip_pool_glitch_all,
-        [
-            (config.rarity_pool_glitch_pistols, config.drop_prob_pistols),
-            (config.rarity_pool_glitch_ar, config.drop_prob_ar),
-            (config.rarity_pool_glitch_smg, config.drop_prob_smg),
-            (config.rarity_pool_glitch_shotguns, config.drop_prob_shotguns),
-            (config.rarity_pool_glitch_snipers, config.drop_prob_snipers),
-            (config.rarity_pool_glitch_launchers, config.drop_prob_launchers),
-            (config.rarity_pool_glitch_lasers, config.drop_prob_lasers),
         ])
 
     config.set_equip_ar = get_balanced_set(
@@ -1968,11 +1827,11 @@ for config in [regular, badass]:
             (config.rarity_pool_shotguns, 1),
         ])
 
-    if config.equip_pool_glitch_snipers:
-        config.set_equip_snipers_glitch = get_balanced_set(
-            config.equip_pool_glitch_snipers,
+    if config.equip_pool_snipers:
+        config.set_equip_snipers = get_balanced_set(
+            config.equip_pool_snipers,
             [
-                (config.rarity_pool_glitch_snipers, 1),
+                (config.rarity_pool_snipers, 1),
             ])
 
     if config.equip_pool_only_lasers:
@@ -1992,18 +1851,6 @@ for config in [regular, badass]:
             (config.rarity_pool_snipers, config.drop_prob_snipers),
             (config.rarity_pool_launchers, config.drop_prob_launchers),
             (config.rarity_pool_lasers, config.drop_prob_lasers*config.weight_scale),
-        ])
-
-    config.set_equip_lasers_glitch = get_balanced_set(
-        config.equip_pool_glitch_lasers,
-        [
-            (config.rarity_pool_glitch_pistols, config.drop_prob_pistols),
-            (config.rarity_pool_glitch_ar, config.drop_prob_ar),
-            (config.rarity_pool_glitch_smg, config.drop_prob_smg),
-            (config.rarity_pool_glitch_shotguns, config.drop_prob_shotguns),
-            (config.rarity_pool_glitch_snipers, config.drop_prob_snipers),
-            (config.rarity_pool_glitch_launchers, config.drop_prob_launchers),
-            (config.rarity_pool_glitch_lasers, config.drop_prob_lasers*config.weight_scale),
         ])
 
 # Vanilla Stalker shield hotfixes (dummy statement)
