@@ -1,0 +1,269 @@
+#<{mod_name}>
+
+    # {mod_name} v{mod_version}
+    # by Apocalyptech
+    # Licensed under Public Domain / CC0 1.0 Universal
+    #
+    # Enemies will always drop the exact gun/shield that they were using, and
+    # weapons/shields are in general not otherwise findable in the world (treasure chests,
+    # for instance, will not contain guns or shields).
+    #
+    # In the default configuration, enemy gear is MUCH improved from stock -- you will be
+    # fighting enemies with gemstones, glitch, and even legendaries, across all weapon
+    # types.  Various options for controlling the quality of gear used by enemies (and
+    # thus available to yourself) can be found below.  See the README file for full
+    # details.
+
+    #<Main Mod (best to leave all this checked)>
+
+        #<Disable World Weapon/Shield Drops>
+
+            # This section disables world drops for weapons and shields, so those items will
+            # only drop from what the enemies are carrying.  Rather than deleting/disabling
+            # the items entirely, we're changing them to draw from an ammo/money pool so that
+            # the rest of the probabilities in the pools aren't affected.
+            #
+            # Note that this doesn't *completely* get rid of world weapon/shield drops, but it
+            # should get rid of the vast majority of them.
+
+            #<Main Weapon/Shield-Removing Hotfixes>
+
+{other:disable_world_sets}
+
+                # Ensure that moonstone chests always provide gear
+
+                {hotfixes:moonstone_disable_0}
+
+                {hotfixes:moonstone_disable_1}
+
+            #</Main Weapon/Shield-Removing Hotfixes>
+
+        #</Disable World Weapon/Shield Drops>
+
+        #<Enemy Weapon Equip Pools>
+
+            # These are the actual pools which enemies equip from
+
+            #<Regular Enemies>
+
+                # All ("standard" mod weights)
+
+                set {regular:equip_pool_all} bAutoReadyItems True
+
+                {regular:set_equip_all}
+
+                # All (glitch-weighted for Claptastic Voyage enemies)
+
+                set {regular:equip_pool_glitch_all} bAutoReadyItems True
+
+                {regular:set_equip_all_glitch}
+
+                # Weight Assault Rifles
+
+                set {regular:equip_pool_ar} bAutoReadyItems True
+
+                {regular:set_equip_ar}
+
+                # Only Launchers
+
+                set {regular:equip_pool_launchers} bAutoReadyItems True
+
+                {regular:set_equip_launchers}
+
+                # Only Shotguns
+
+                set {regular:equip_pool_shotguns} bAutoReadyItems True
+
+                {regular:set_equip_shotguns}
+
+                # Only Snipers (glitch-weighted for Claptastic Voyage enemies)
+
+                set {regular:equip_pool_glitch_snipers} bAutoReadyItems True
+
+                {regular:set_equip_snipers_glitch}
+
+                # Only Lasers
+
+                set {regular:equip_pool_only_lasers} bAutoReadyItems True
+
+                {regular:set_equip_only_lasers}
+
+                # Weighted Lasers
+
+                set {regular:equip_pool_lasers} bAutoReadyItems True
+
+                {regular:set_equip_lasers}
+
+                # Weighted Lasers (glitch-weighted for Claptastic Voyage enemies)
+
+                set {regular:equip_pool_glitch_lasers} bAutoReadyItems True
+
+                {regular:set_equip_lasers_glitch}
+
+            #</Regular Enemies>
+
+            #<Badass Enemies>
+
+                # All ("standard" mod weights)
+
+                set {badass:equip_pool_all} bAutoReadyItems True
+
+                {badass:set_equip_all}
+
+                # All (glitch-weighted for Claptastic Voyage enemies)
+
+                set {badass:equip_pool_glitch_all} bAutoReadyItems True
+
+                {badass:set_equip_all_glitch}
+
+                # Weight Assault Rifles
+
+                set {badass:equip_pool_ar} bAutoReadyItems True
+
+                {badass:set_equip_ar}
+
+                # Only Shotguns
+
+                set {badass:equip_pool_shotguns} bAutoReadyItems True
+
+                {badass:set_equip_shotguns}
+
+                # Weighted Lasers
+
+                set {badass:equip_pool_lasers} bAutoReadyItems True
+
+                {badass:set_equip_lasers}
+
+                # Weighted Lasers (glitch-weighted for Claptastic Voyage enemies)
+
+                set {badass:equip_pool_glitch_lasers} bAutoReadyItems True
+
+                {badass:set_equip_lasers_glitch}
+
+            #</Badass Enemies>
+
+            #<Level-Specific Pool Initialization>
+
+                # These pools are used by boss enemies to provide a proper weighted equipment
+                # drop, based on the user's selection in the "Bosses Use+Drop Their Unique
+                # Weapons" category.  These are re-used by enemies in different levels, to
+                # conserve the number of skinpools that this mod reserves.
+
+                set {other:level_pool_0} bAutoReadyItems True
+
+            #</Level-Specific Pool Initialization>
+
+        #</Enemy Weapon Equip Pools>
+
+        #<Enemy Pool Assignments>
+
+            # Assign enemies to use our custom pools, rather than the stock Borderlands pools
+
+            #<Regular Enemies>
+
+{regular:hotfix_assignments}
+
+            #</Regular Enemies>
+
+            #<Badass Enemies>
+
+{badass:hotfix_assignments}
+
+            #</Badass Enemies>
+
+        #</Enemy Pool Assignments>
+
+    #</Main Mod (best to leave all this checked)>
+
+    #<Enemy Gear Quality (choose one)><MUT>
+
+{rarity_excellent}
+
+{rarity_better}
+
+{rarity_stock}
+
+    #</Enemy Gear Quality (choose one)>
+
+    #<Boss Unique Weapon Frequency (choose one)><MUT>
+
+{boss_drops_guaranteed}
+
+{boss_drops_veryimproved}
+
+{boss_drops_improved}
+
+{boss_drops_slightimproved}
+
+{boss_drops_stock}
+
+    #</Boss Unique Weapon Frequency (choose one)>
+
+    #<Stalker Shield Behavior (choose one)><MUT>
+
+        #<Standard Game (no shield drops)>
+
+            # With this option, Stalkers have the standard shield they've always had in
+            # Borderlands, and will not drop a shield when killed.
+
+            {hotfixes:stalker_dummy}
+
+        #</Standard Game (no shield drops)>
+
+        #<Equip and Drop "Real" Shields><off>
+
+            ## Stalkers will equip and drop "real" shields, just like other shielded<off>
+            ## enemies in the game.<off>
+
+{stalker_shields_real}
+
+        #</Equip and Drop "Real" Shields>
+
+    #</Stalker Shield Behavior (choose one)><MUT>
+
+    #<Eridian Guardian Shield Behavior (choose one)><MUT>
+
+        #<Standard Game (no shield drops)>
+
+            # With this option, Eridian Guardians have the standard shield they've always
+            # had in TPS, and will not drop a shield when killed.
+
+            {hotfixes:guardian_dummy}
+
+        #</Standard Game (no shield drops)>
+
+        #<Equip and Drop "Real" Shields><off>
+
+            ## Eridian Guardians will equip and drop "real" shields, just like other<off>
+            ## shielded enemies in the game.<off>
+
+{guardian_shields_real}
+
+        #</Equip and Drop "Real" Shields>
+
+    #</Eridian Guardian Shield Behavior (choose one)><MUT>
+
+    #<Claptastic Voyage Creature Shield Behavior (choose one)><MUT>
+
+        #<Standard Game (no shield drops)>
+
+            # With this option, creatures from the Claptastic Voyage DLC (such as Trojans,
+            # Bugs, Viruses, etc) have the standard shield they've always had in TPS, and
+            # will not drop a shield when killed.
+
+            {hotfixes:clapcreature_dummy}
+
+        #</Standard Game (no shield drops)>
+
+        #<Equip and Drop "Real" Shields><off>
+
+            ## Claptastic Voyage creatures will equip and drop "real" shields, just like<off>
+            ## other shielded enemies in the game.<off>
+
+{clapcreature_shields_real}
+
+        #</Equip and Drop "Real" Shields>
+
+    #</Claptastic Voyage Creature Shield Behavior (choose one)><MUT>
+
+#</{mod_name}>
