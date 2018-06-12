@@ -541,6 +541,29 @@
 
         #</Disable World Weapon/Shield Drops>
 
+        #<Nerf Vending Machines>
+
+            # We're not completely removing weapons and shields from vending machines,
+            # mostly because they'd become a bit pointless.  Instead we're restricting
+            # the number of items in shield + weapon machines to 2, and removing the
+            # item of the day from the weapons machine.
+
+            #<hotfix><key>"SparkLevelPatchEntry-ApocVendorNerf0"</key><value>",GD_ItemPools_Shop.Items.Shoppool_Weapons_FlatChance,Quantity.BaseValueConstant,,2"</value><on>
+
+            #<hotfix><key>"SparkLevelPatchEntry-ApocVendorNerf1"</key><value>",GD_ItemPools_Shop.HealthShop.HealthShop_Items,Quantity.BaseValueConstant,,2"</value><on>
+
+            #<hotfix><key>"SparkLevelPatchEntry-ApocVendorNerf2"</key><value>",GD_ItemPools_Shop.WeaponPools.Shoppool_IOTD_WeaponMachine,Quantity.BaseValueConstant,,0"</value><on>
+
+            #<hotfix><key>"SparkLevelPatchEntry-ApocDisable0"</key><value>",GD_ItemPools_Shop.HealthShop.HealthShop_FeaturedItem,BalancedItems[0].Probability,,(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><on>
+
+            #<hotfix><key>"SparkLevelPatchEntry-ApocDisable1"</key><value>",GD_ItemPools_Shop.HealthShop.HealthShop_FeaturedItem,BalancedItems[1].Probability,,(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><on>
+
+            #<hotfix><key>"SparkLevelPatchEntry-ApocDisable2"</key><value>",GD_ItemPools_Shop.HealthShop.HealthShop_FeaturedItem,BalancedItems[2].Probability,,(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><on>
+
+            #<hotfix><key>"SparkLevelPatchEntry-ApocDisable3"</key><value>",GD_ItemPools_Shop.HealthShop.HealthShop_FeaturedItem,BalancedItems[3].Probability,,(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><on>
+
+        #</Nerf Vending Machines>
+
         #<Enemy Weapon Equip Pools>
 
             # These are the actual pools which enemies equip from

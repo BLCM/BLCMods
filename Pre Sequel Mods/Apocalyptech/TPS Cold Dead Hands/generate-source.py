@@ -2286,6 +2286,27 @@ hfs.add_level_hotfix('safes_0', 'BetterSafes',
     )
     """)
 
+# Nerf vendors
+hfs.add_level_hotfix('vendor_nerf_0', 'VendorNerf',
+        """,
+        GD_ItemPools_Shop.Items.Shoppool_Weapons_FlatChance,
+        Quantity.BaseValueConstant,,
+        2""")
+hfs.add_level_hotfix('vendor_nerf_1', 'VendorNerf',
+        """,
+        GD_ItemPools_Shop.HealthShop.HealthShop_Items,
+        Quantity.BaseValueConstant,,
+        2""")
+hfs.add_level_hotfix('vendor_nerf_2', 'VendorNerf',
+        """,
+        GD_ItemPools_Shop.WeaponPools.Shoppool_IOTD_WeaponMachine,
+        Quantity.BaseValueConstant,,
+        0""")
+set_bi_item_prob('vendor_nerf_3', 'GD_ItemPools_Shop.HealthShop.HealthShop_FeaturedItem', 0)
+set_bi_item_prob('vendor_nerf_4', 'GD_ItemPools_Shop.HealthShop.HealthShop_FeaturedItem', 1)
+set_bi_item_prob('vendor_nerf_5', 'GD_ItemPools_Shop.HealthShop.HealthShop_FeaturedItem', 2)
+set_bi_item_prob('vendor_nerf_6', 'GD_ItemPools_Shop.HealthShop.HealthShop_FeaturedItem', 3)
+
 # Save our current hotfixes
 orig_hfs = hfs
 
