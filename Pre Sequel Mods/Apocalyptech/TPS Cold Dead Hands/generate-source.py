@@ -1829,14 +1829,34 @@ for (rarity_key, rarity_label) in DropConfig.rarity_presets:
         hotfix_list.append('{}{}'.format(prefix, rarity_hfs.get_hotfix_xml(hfs_id)))
 
     # Also nerf our shield equip pool during the intro - with "excellent" rarity
-    # presets it becomes a pretty difficult fight.  Purple shields and all.
+    # presets it becomes a pretty difficult fight.  Purple shields and all.  Also
+    # note that we must specifically exclude Turtle/Juggernaut shields from here.
+    # The health scaling of the early-game Dahl troops is such that even white-rarity
+    # Turtle shields will make them literally unkillable, which in addition to being
+    # annoying, breaks the intro game sequence.
     hfs_id = 'intro_shield_equip_pool_{}'.format(rarity_key)
+    other_scale = .6
     rarity_hfs.add_level_hotfix(hfs_id, 'IntroShieldEquipPool',
             'MoonShotIntro_P,{},BalancedItems,,{}'.format(
                 regular.equip_pool_shields,
                 get_balanced_items([
-                        ('GD_Itempools.ShieldPools.Pool_Shields_All_01_Common', regular.weight_common),
-                        ('GD_Itempools.ShieldPools.Pool_Shields_All_02_Uncommon', regular.weight_uncommon),
+                        ('GD_Itempools.ShieldPools.Pool_Shields_Standard_01_Common', regular.weight_common),
+                        ('GD_Itempools.ShieldPools.Pool_Shields_Standard_02_Uncommon', regular.weight_uncommon),
+                        ('GD_Itempools.ShieldPools.Pool_Shields_Standard_04_Rare', regular.weight_rare/2),
+                        ('GD_Itempools.ShieldPools.Pool_Shields_Absorption_01_Common', round(regular.weight_common*other_scale, 6)),
+                        ('GD_Itempools.ShieldPools.Pool_Shields_Absorption_02_Uncommon', round(regular.weight_uncommon*other_scale, 6)),
+                        ('GD_Itempools.ShieldPools.Pool_Shields_Booster_01_Common', round(regular.weight_common*other_scale, 6)),
+                        ('GD_Itempools.ShieldPools.Pool_Shields_Booster_02_Uncommon', round(regular.weight_uncommon*other_scale, 6)),
+                        ('GD_Itempools.ShieldPools.Pool_Shields_Chimera_01_Common', round(regular.weight_common*other_scale, 6)),
+                        ('GD_Itempools.ShieldPools.Pool_Shields_Chimera_02_Uncommon', round(regular.weight_uncommon*other_scale, 6)),
+                        ('GD_Itempools.ShieldPools.Pool_Shields_Impact_01_Common', round(regular.weight_common*other_scale, 6)),
+                        ('GD_Itempools.ShieldPools.Pool_Shields_Impact_02_Uncommon', round(regular.weight_uncommon*other_scale, 6)),
+                        ('GD_Itempools.ShieldPools.Pool_Shields_NovaShields_All_01_Common', round(regular.weight_common*other_scale, 6)),
+                        ('GD_Itempools.ShieldPools.Pool_Shields_NovaShields_All_02_Uncommon', round(regular.weight_uncommon*other_scale, 6)),
+                        ('GD_Itempools.ShieldPools.Pool_Shields_Roid_01_Common', round(regular.weight_common*other_scale, 6)),
+                        ('GD_Itempools.ShieldPools.Pool_Shields_Roid_02_Uncommon', round(regular.weight_uncommon*other_scale, 6)),
+                        ('GD_Itempools.ShieldPools.Pool_Shields_SpikeShields_All_01_Common', round(regular.weight_common*other_scale, 6)),
+                        ('GD_Itempools.ShieldPools.Pool_Shields_SpikeShields_All_02_Uncommon', round(regular.weight_uncommon*other_scale, 6)),
                     ])),
                 activated=hotfix_activated)
     hotfix_list.append('{}{}'.format(prefix, rarity_hfs.get_hotfix_xml(hfs_id)))
