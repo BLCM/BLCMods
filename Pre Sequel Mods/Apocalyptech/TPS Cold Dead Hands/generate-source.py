@@ -84,6 +84,7 @@ class OtherConfig(BaseConfig):
 
     # Adding things to the legendary pools
     legendary_unique_adds = None
+    legendary_uniqueglitch_adds = None
 
     # Pools used to provide proper weighted equipment drops for bosses.
     # These will be all set via Hotfix, and re-used by enemies in different
@@ -1946,6 +1947,269 @@ for config in [regular, badass]:
             (config.rarity_pool_launchers, config.drop_prob_launchers),
             (config.rarity_pool_lasers, config.drop_prob_lasers*config.weight_scale),
         ])
+
+# Legendary Pool management
+unique_hotfixes = []
+uniqueglitch_hotfixes = []
+for (guntype, legendaries, uniques, uniqueglitches) in [
+        (
+            'AssaultRifles',
+            [
+                # Regular Legendaries
+                'gd_cork_weap_assaultrifle.A_Weapons_Legendary.AR_Torgue_5_KerBoom',
+                'gd_cork_weap_assaultrifle.A_Weapons_Legendary.AR_Vladof_5_Shredifier',
+                'gd_cork_weap_assaultrifle.A_Weapons_Legendary.AR_Dahl_5_MajorTom',
+                'gd_cork_weap_assaultrifle.A_Weapons_Legendary.AR_Jakobs_5_HammerBreaker',
+                'GD_Ma_Weapons.A_Weapons_Legendary.AR_Bandit_5_Fusillade',
+            ],
+            [
+                # Uniques
+                'gd_cork_weap_assaultrifle.A_Weapons_Unique.AR_Jakobs_3_Wallop',
+                'gd_cork_weap_assaultrifle.A_Weapons_Unique.AR_Vladof_3_Hail',
+                'gd_cork_weap_assaultrifle.A_Weapons_Unique.AR_Vladof_3_IceScream',
+                'gd_cork_weap_assaultrifle.A_Weapons_Unique.AR_Vladof_3_OldPainful',
+                'GD_Cypressure_Weapons.A_Weapons_Unique.AR_Bandit_3_BossNova',
+                'GD_Petunia_Weapons.AssaultRifles.AR_Bandit_3_CryBaby',
+            ],
+            [
+                # Unique Glitches
+            ],
+        ),
+        (
+            'Launchers',
+            [
+                # Regular Legendaries
+                'GD_Cork_Weap_Launchers.A_Weapons_Legendary.RL_Bandit_5_BadaBoom',
+                'GD_Cork_Weap_Launchers.A_Weapons_Legendary.RL_Maliwan_5_Cryophobia',
+                'GD_Cork_Weap_Launchers.A_Weapons_Legendary.RL_Torgue_5_Nukem',
+                'GD_Cork_Weap_Launchers.A_Weapons_Legendary.RL_Vladof_5_Mongol',
+                'GD_Cork_Weap_Launchers.A_Weapons_Legendary.RL_Bandit_5_Thingy',
+                'GD_Ma_Weapons.A_Weapons_Legendary.RL_Tediore_5_KanedasLaser',
+                'GD_Petunia_Weapons.Launchers.RL_Vladof_5_Menace',
+            ],
+            [
+                # Uniques
+                'GD_Cork_Weap_Launchers.A_Weapons_Unique.RL_Tediore_3_Rocketeer',
+                'GD_Cork_Weap_Launchers.A_Weapons_Unique.RL_Torgue_3_Creamer',
+            ],
+            [
+                # Unique Glitches
+            ],
+        ),
+        (
+            'Pistols',
+            [
+                # Regular Legendaries
+                'GD_Cork_Weap_Pistol.A_Weapons_Legendary.Pistol_Bandit_5_Zim',
+                'GD_Cork_Weap_Pistol.A_Weapons_Legendary.Pistol_Tediore_5_Shooterang',
+                'GD_Cork_Weap_Pistol.A_Weapons_Legendary.Pistol_Dahl_5_Blowfly',
+                'GD_Cork_Weap_Pistol.A_Weapons_Legendary.Pistol_Torgue_5_88Fragnum',
+                'GD_Cork_Weap_Pistol.A_Weapons_Legendary.Pistol_Jakobs_5_Maggie',
+                'GD_Weap_Pistol.A_Weapons_Legendary.Pistol_Hyperion_5_LogansGun',
+                'GD_Ma_Weapons.A_Weapons_Legendary.Pistol_Jakobs_5_LuckCannon',
+                'GD_Ma_Weapons.A_Weapons_Legendary.Pistol_Vladof_5_Expander',
+            ],
+            [
+                # Uniques
+                'GD_Cork_Weap_Pistol.A_Weapons_Unique.Pistol_Dahl_3_GwensOtherHead',
+                'GD_Cork_Weap_Pistol.A_Weapons_Unique.Pistol_Hyperion_3_Fibber',
+                'GD_Cork_Weap_Pistol.A_Weapons_Unique.Pistol_Hyperion_3_Globber',
+                'GD_Cork_Weap_Pistol.A_Weapons_Unique.Pistol_Hyperion_3_LadyFist',
+                'GD_Cork_Weap_Pistol.A_Weapons_Unique.Pistol_Jakobs_3_Smasher',
+                'GD_Cork_Weap_Pistol.A_Weapons_Unique.Pistol_Jakobs_CyberColt',
+                'GD_Cork_Weap_Pistol.A_Weapons_Unique.Pistol_Maliwan_3_Moxxis_Probe',
+                'GD_Ma_Weapons.A_Weapons_Unique.Pistol_Bandit_3_PartyPopper',
+                'GD_Ma_Weapons.A_Weapons_Unique.Pistol_Maliwan_3_HardReboot',
+                'GD_Petunia_Weapons.Pistols.Pistol_Hyperion_3_T4sr',
+            ],
+            [
+                # Unique Glitches
+            ],
+        ),
+        (
+            'Shotguns',
+            [
+                # Regular Legendaries
+                'GD_Cork_Weap_Shotgun.A_Weapons_Legendary.SG_Bandit_5_SledgesShotgun',
+                'GD_Cork_Weap_Shotgun.A_Weapons_Legendary.SG_Torgue_5_Flakker',
+                'GD_Cork_Weap_Shotgun.A_Weapons_Legendary.SG_Jakobs_5_Striker',
+                'GD_Cork_Weap_Shotgun.A_Weapons_Legendary.SG_Hyperion_5_ConferenceCall',
+                'GD_Ma_Weapons.A_Weapons_Legendary.SG_Jakobs_5_Flayer',
+            ],
+            [
+                # Uniques
+                'GD_Cork_Weap_Shotgun.A_Weapons_Unique.SG_Bandit_3_Boganella',
+                'GD_Cork_Weap_Shotgun.A_Weapons_Unique.SG_Jakobs_3_Moonface',
+                'GD_Cork_Weap_Shotgun.A_Weapons_Unique.SG_Jakobs_Boomacorn',
+                'GD_Cork_Weap_Shotgun.A_Weapons_Unique.SG_Jakobs_TooScoops',
+                'GD_Cork_Weap_Shotgun.A_Weapons_Unique.SG_Old_Hyperion_3_Bullpup',
+                'GD_Cork_Weap_Shotgun.A_Weapons_Unique.SG_Tediore_3_Octo',
+                'GD_Cork_Weap_Shotgun.A_Weapons_Unique.SG_Torgue_3_JackOCannon',
+                'GD_Cork_Weap_Shotgun.A_Weapons_Unique.SG_Torgue_3_Torguemada',
+                'GD_Cork_Weap_Shotgun.A_Weapons_Unique.SG_Torgue_3_Wombat',
+                'GD_Cypressure_Weapons.A_Weapons_Unique.SG_Hyperion_3_CompanyMan',
+                'GD_Cypressure_Weapons.A_Weapons_Unique.SG_Torgue_3_Landscaper2',
+                'GD_Petunia_Weapons.Shotguns.SG_Tediore_3_PartyLine',
+            ],
+            [
+                # Unique Glitches
+            ],
+        ),
+        (
+            'SMG',
+            [
+                # Regular Legendaries
+                'GD_Cork_Weap_SMG.A_Weapons_Legendary.SMG_Tediore_5_IVF',
+                'GD_Cork_Weap_SMG.A_Weapons_Legendary.SMG_Maliwan_5_HellFire',
+                'GD_Cork_Weap_SMG.A_Weapons_Legendary.SMG_Dahl_5_Torrent',
+                'GD_Cork_Weap_SMG.A_Weapons_Legendary.SMG_Hyperion_5_Bitch',
+                'GD_Ma_Weapons.A_Weapons_Legendary.SMG_Hyperion_5_CheatCode',
+            ],
+            [
+                # Uniques
+                'GD_Cork_Weap_SMG.A_Weapons_Unique.SMG_Bandit_3_MareksMouth',
+                'GD_Cork_Weap_SMG.A_Weapons_Unique.SMG_Bandit_3_MeatGrinder',
+                'GD_Cork_Weap_SMG.A_Weapons_Unique.SMG_Maliwan_3_BadTouch',
+                'GD_Cork_Weap_SMG.A_Weapons_Unique.SMG_Maliwan_3_GoodTouch',
+                'GD_Cork_Weap_SMG.A_Weapons_Unique.SMG_Old_Hyperion_BlackSnake',
+                'GD_Cypressure_Weapons.A_Weapons_Unique.SMG_Bandit_3_FastTalker',
+                'GD_Petunia_Weapons.SMGs.SMG_Tediore_3_Boxxy',
+                'GD_Weap_SMG.A_Weapons_Unique.SMG_Dahl_3_Fridgia',
+                'GD_Weap_SMG.A_Weapons_Unique.SMG_Maliwan_3_Frostfire',
+            ],
+            [
+                # Unique Glitches
+                'GD_Ma_Weapons.A_Weapons_Unique.SMG_Bandit_6_Glitch_CutieKiller',
+            ],
+        ),
+        (
+            'SniperRifles',
+            [
+                # Regular Legendaries
+                'GD_Cork_Weap_SniperRifles.A_Weapons_Legendary.Sniper_Dahl_5_Pitchfork',
+                'GD_Cork_Weap_SniperRifles.A_Weapons_Legendary.Sniper_Maliwan_5_Magma',
+                'GD_Cork_Weap_SniperRifles.A_Weapons_Legendary.Sniper_Jakobs_5_Skullmasher',
+                'GD_Cork_Weap_SniperRifles.A_Weapons_Legendary.Sniper_Vladof_5_Longnail',
+                'GD_Cork_Weap_SniperRifles.A_Weapons_Legendary.Sniper_Hyperion_5_Invader',
+                'GD_Ma_Weapons.A_Weapons_Legendary.Sniper_Old_Hyperion_5_OmniCannon',
+            ],
+            [
+                # Uniques
+                'GD_Cork_Weap_SniperRifles.A_Weapons_Unique.Sniper_Dahl_3_WetWeek',
+                'GD_Cork_Weap_SniperRifles.A_Weapons_Unique.Sniper_Jakobs_3_Razorback',
+                'GD_Cork_Weap_SniperRifles.A_Weapons_Unique.Sniper_Maliwan_3_ChereAmie',
+                'GD_Cork_Weap_SniperRifles.A_Weapons_Unique.Sniper_Vladof_3_TheMachine',
+                'GD_Petunia_Weapons.Snipers.Sniper_Jakobs_3_Plunkett',
+                'GD_Weap_SniperRifles.A_Weapons_Unique.Sniper_Hyperion_3_FremingtonsEdge',
+            ],
+            [
+                # Unique Glitches
+            ],
+        ),
+        (
+            'Lasers',
+            [
+                # Regular Legendaries
+                'GD_Cork_Weap_Lasers.A_Weapons_Legendary.Laser_Dahl_5_ZX1',
+                'GD_Cork_Weap_Lasers.A_Weapons_Legendary.Laser_Tediore_5_Tesla',
+                'GD_Cork_Weap_Lasers.A_Weapons_Legendary.Laser_Dahl_5_Ricochet',
+                'GD_Cork_Weap_Lasers.A_Weapons_Legendary.Laser_Old_Hyperion_5_Excalibastard',
+                'GD_Ma_Weapons.A_Weapons_Legendary.Laser_Hyperion_5_LongestYard',
+                'GD_Ma_Weapons.A_Weapons_Legendary.Laser_Maliwan_5_FusionBeam',
+                'GD_Ma_Weapons.A_Weapons_Legendary.Laser_Maliwan_5_Thunderfire',
+                'GD_Ma_Weapons.A_Weapons_Legendary.Laser_Tediore_5_LaserDisker',
+            ],
+            [
+                # Uniques
+                'GD_Cork_Weap_Lasers.A_Weapons_Unique.Laser_Dahl_3_Firestarta',
+                'GD_Cork_Weap_Lasers.A_Weapons_Unique.Laser_Hyperion_3_Mining',
+                'GD_Cork_Weap_Lasers.A_Weapons_Unique.Laser_Maliwan_3_Blizzard',
+                'GD_Cork_Weap_Lasers.A_Weapons_Unique.Laser_Maliwan_3_VibraPulse',
+                'GD_Cork_Weap_Lasers.A_Weapons_Unique.Laser_Maliwan_4_Egun',
+                'GD_Cork_Weap_Lasers.A_Weapons_Unique.Laser_Maliwan_4_Rosie',
+                'GD_Cork_Weap_Lasers.A_Weapons_Unique.Laser_Maliwan_4_SavorySideSaber',
+                'GD_Cork_Weap_Lasers.A_Weapons_Unique.Laser_Tediore_3_Vandergraffen',
+                'GD_Ma_Weapons.A_Weapons_Unique.Laser_Maliwan_3_Enlightenment',
+                'GD_Ma_Weapons.A_Weapons_Unique.Laser_Maliwan_3_Minac',
+            ],
+            [
+                # Unique Glitches
+                'GD_Ma_Weapons.A_Weapons_Unique.Laser_Dahl_6_Glitch_HeartfullSplodger',
+            ],
+        ),
+        ]:
+
+    # First set up a hotfix for the base pool initialization
+    initial_pool = []
+    for legendary in legendaries:
+        initial_pool.append((legendary, 1, 'WeaponBalanceDefinition'))
+    for i in range(len(uniques) + len(uniqueglitches)):
+        initial_pool.append((None, 0))
+    hfs.add_level_hotfix('weapon_pool_clear_{}'.format(guntype.lower()),
+        'WeaponPoolClear{}'.format(guntype),
+        """,GD_Itempools.WeaponPools.Pool_Weapons_{}_06_Legendary,
+        BalancedItems,,{}""".format(
+            guntype,
+            get_balanced_items(initial_pool),
+            ))  
+
+    # Hotfixes to add uniques
+    for (idx, unique) in enumerate(uniques):
+        hotfix_id = 'unique_weap_add_{}_{}'.format(guntype.lower(), idx)
+        unique_hotfixes.append(hotfix_id)
+        hfs.add_level_hotfix(hotfix_id,
+            'WeaponUniqueAdd{}'.format(guntype),
+            """,GD_Itempools.WeaponPools.Pool_Weapons_{}_06_Legendary,
+            BalancedItems[{}],,
+            (
+                ItmPoolDefinition=None,
+                InvBalanceDefinition=WeaponBalanceDefinition'{}',
+                Probability=(
+                    BaseValueConstant=1,
+                    BaseValueAttribute=None,
+                    InitializationDefinition=None,
+                    BaseValueScaleConstant=1
+                ),
+                bDropOnDeath=True
+            )
+            """.format(
+                guntype,
+                len(legendaries) + idx,
+                unique
+                ))
+
+    # Hotfixes to add unique glitches
+    for (idx, uniqueglitch) in enumerate(uniqueglitches):
+        hotfix_id = 'uniqueglitch_weap_add_{}_{}'.format(guntype.lower(), idx)
+        uniqueglitch_hotfixes.append(hotfix_id)
+        hfs.add_level_hotfix(hotfix_id,
+            'WeaponUniqueGlitchAdd{}'.format(guntype),
+            """,GD_Itempools.WeaponPools.Pool_Weapons_{}_06_Legendary,
+            BalancedItems[{}],,
+            (
+                ItmPoolDefinition=None,
+                InvBalanceDefinition=WeaponBalanceDefinition'{}',
+                Probability=(
+                    BaseValueConstant=1,
+                    BaseValueAttribute=None,
+                    InitializationDefinition=None,
+                    BaseValueScaleConstant=1
+                ),
+                bDropOnDeath=True
+            )
+            """.format(
+                guntype,
+                len(legendaries) + len(uniques) + idx,
+                uniqueglitch
+                ))
+
+other.legendary_unique_adds = "\n\n".join(
+        ['{}{}'.format(' '*(4*3), hfs.get_hotfix(hotfix_id).get_xml()) for hotfix_id in unique_hotfixes]
+    )
+
+other.legendary_uniqueglitch_adds = "\n\n".join(
+        ['{}{}'.format(' '*(4*3), hfs.get_hotfix(hotfix_id).get_xml()) for hotfix_id in uniqueglitch_hotfixes]
+    )
 
 # Vanilla Stalker shield hotfixes (dummy statement)
 hfs.add_level_hotfix('stalker_dummy', 'StalkerShields',
