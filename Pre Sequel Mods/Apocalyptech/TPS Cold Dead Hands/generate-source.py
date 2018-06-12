@@ -1973,6 +1973,10 @@ for (label, key, unique_pct, rare_pct) in [
     line_suffix = '<off>'
     hotfix_activated = False
 
+# Load in skinpool settings
+with open('input-file-skinpools.txt') as df:
+    skinpool_setup = df.read()
+
 ###
 ### Generate the mod string
 ###
@@ -1999,6 +2003,7 @@ with open('input-file-mod.txt') as df:
         stalker_shields_real="\n\n".join(stalker_shields_real_list),
         guardian_shields_real="\n\n".join(guardian_shields_real_list),
         clapcreature_shields_real="\n\n".join(clapcreature_shields_real_list),
+        skinpool_setup=skinpool_setup,
         )
 
 ###
