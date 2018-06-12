@@ -1743,16 +1743,23 @@ for (rarity_key, rarity_label) in DropConfig.rarity_presets:
             ])
 
         # Shield pool (rarity + equip in one, since we don't need to make two choices)
+        # Also, to support easier shields in the intro level (so that it's not too hard) we're using
+        # a global level hotfix here, instead of a set.  Then we can easily override for the intro
+        # level.
 
-        config.set_shields = get_balanced_set(
-            config.equip_pool_shields,
-            [
-                ('GD_Itempools.ShieldPools.Pool_Shields_All_01_Common', config.weight_common),
-                ('GD_Itempools.ShieldPools.Pool_Shields_All_02_Uncommon', config.weight_uncommon),
-                ('GD_Itempools.ShieldPools.Pool_Shields_All_04_Rare', config.weight_rare),
-                ('GD_Itempools.ShieldPools.Pool_Shields_All_05_VeryRare', config.weight_veryrare),
-                ('GD_Itempools.ShieldPools.Pool_Shields_All_06_Legendary', config.weight_legendary),
-            ])
+        hotfix_id = 'shield_equip_pool_{}_{}'.format(rarity_key, config.hotfix_prefix)
+        hfs.add_level_hotfix(hotfix_id, 'ShieldEquipPool',
+                ',{},BalancedItems,,{}'.format(
+                    config.equip_pool_shields,
+                    get_balanced_items([
+                            ('GD_Itempools.ShieldPools.Pool_Shields_All_01_Common', config.weight_common),
+                            ('GD_Itempools.ShieldPools.Pool_Shields_All_02_Uncommon', config.weight_uncommon),
+                            ('GD_Itempools.ShieldPools.Pool_Shields_All_04_Rare', config.weight_rare),
+                            ('GD_Itempools.ShieldPools.Pool_Shields_All_05_VeryRare', config.weight_veryrare),
+                            ('GD_Itempools.ShieldPools.Pool_Shields_All_06_Legendary', config.weight_legendary),
+                        ])),
+                    activated=hotfix_activated)
+        config.set_shields = hfs.get_hotfix_xml(hotfix_id)
 
         # We save ourselves having to use a bunch more loot pools than necessary
         # by using hotfixes to dynamically change the weights depending on if we're
@@ -1785,7 +1792,58 @@ for (rarity_key, rarity_label) in DropConfig.rarity_presets:
                     activated=hotfix_activated)
                 hotfix_list.append('{}{}'.format(prefix, rarity_hfs.get_hotfix_xml(hfs_id)))
 
+    # Join up our claptastic support hotfixes
     claptastic_support_str = "\n\n".join(hotfix_list)
+
+    # The first level in the game has some special Dahl marines who have a limited
+    # equipment set.  We're customizing the three pools which are used to all have
+    # the same stuff.  We allow for a wider range of equipment, but we're restricting
+    # it to blue and lower (and blue has a decreased chance).  Note that even though
+    # the pool names say "Pistol", the DahlIntro one already allows for lasers as well.
+    hotfix_list = []
+    for (idx, pool) in enumerate([
+            'GD_ItempoolsEnemyUse.WeaponPools.Pool_Weapons_Pistols_EnemyUse',
+            'GD_ItempoolsEnemyUse.WeaponPools.Pool_Weapons_Pistols_EnemyUse_DahlIntro',
+            'GD_ItempoolsEnemyUse.WeaponPools.Pool_Weapons_Pistols_EnemyUse_Intro',
+            ]):
+        hfs_id = 'intro_{}'.format(idx)
+        rarity_hfs.add_level_hotfix(hfs_id, 'IntroPools',
+            'MoonShotIntro_P,{},BalancedItems,,{}'.format(
+                pool,
+                get_balanced_items([
+                        ('GD_Itempools.WeaponPools.Pool_Weapons_Pistols_01_Common', regular.weight_common),
+                        ('GD_Itempools.WeaponPools.Pool_Weapons_Pistols_02_Uncommon', regular.weight_uncommon),
+                        ('GD_Itempools.WeaponPools.Pool_Weapons_Pistols_04_Rare', regular.weight_rare/2),
+                        ('GD_Itempools.WeaponPools.Pool_Weapons_AssaultRifles_01_Common', regular.weight_common),
+                        ('GD_Itempools.WeaponPools.Pool_Weapons_AssaultRifles_02_Uncommon', regular.weight_uncommon),
+                        ('GD_Itempools.WeaponPools.Pool_Weapons_AssaultRifles_04_Rare', regular.weight_rare/2),
+                        ('GD_Itempools.WeaponPools.Pool_Weapons_SMG_01_Common', regular.weight_common),
+                        ('GD_Itempools.WeaponPools.Pool_Weapons_SMG_02_Uncommon', regular.weight_uncommon),
+                        ('GD_Itempools.WeaponPools.Pool_Weapons_SMG_04_Rare', regular.weight_rare/2),
+                        ('GD_Itempools.WeaponPools.Pool_Weapons_Shotguns_01_Common', regular.weight_common),
+                        ('GD_Itempools.WeaponPools.Pool_Weapons_Shotguns_02_Uncommon', regular.weight_uncommon),
+                        ('GD_Itempools.WeaponPools.Pool_Weapons_Lasers_01_Common', regular.weight_common),
+                        ('GD_Itempools.WeaponPools.Pool_Weapons_Lasers_02_Uncommon', regular.weight_uncommon),
+                    ])),
+                activated=hotfix_activated)
+        hotfix_list.append('{}{}'.format(prefix, rarity_hfs.get_hotfix_xml(hfs_id)))
+
+    # Also nerf our shield equip pool during the intro - with "excellent" rarity
+    # presets it becomes a pretty difficult fight.  Purple shields and all.
+    hfs_id = 'intro_shield_equip_pool_{}'.format(rarity_key)
+    rarity_hfs.add_level_hotfix(hfs_id, 'IntroShieldEquipPool',
+            'MoonShotIntro_P,{},BalancedItems,,{}'.format(
+                regular.equip_pool_shields,
+                get_balanced_items([
+                        ('GD_Itempools.ShieldPools.Pool_Shields_All_01_Common', regular.weight_common),
+                        ('GD_Itempools.ShieldPools.Pool_Shields_All_02_Uncommon', regular.weight_uncommon),
+                    ])),
+                activated=hotfix_activated)
+    hotfix_list.append('{}{}'.format(prefix, rarity_hfs.get_hotfix_xml(hfs_id)))
+
+    # Join up our intro pool hotfixes
+    intro_pool_support_str = "\n\n".join(hotfix_list)
+
     with open('input-file-rarity.txt', 'r') as df:
         rarity_sections[rarity_key] = df.read().format(
                 section_label=rarity_label,
@@ -1794,6 +1852,7 @@ for (rarity_key, rarity_label) in DropConfig.rarity_presets:
                 regular=regular,
                 badass=badass,
                 claptastic_support_str=claptastic_support_str,
+                intro_pool_support_str=intro_pool_support_str,
                 )
 
     line_prefix = '#'
