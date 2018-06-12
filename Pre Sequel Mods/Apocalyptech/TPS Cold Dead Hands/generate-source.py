@@ -2211,6 +2211,38 @@ other.legendary_uniqueglitch_adds = "\n\n".join(
         ['{}{}'.format(' '*(4*3), hfs.get_hotfix(hotfix_id).get_xml()) for hotfix_id in uniqueglitch_hotfixes]
     )
 
+
+# Legendary shield pool configuration.  Doing this a bit differently since there's
+# not nearly as many shields to handle as weapons.
+
+shields = {
+    'GD_Itempools.ShieldPools.Pool_Shields_Booster_06_Legendary': [
+        ('asteroidbelt', 1, 'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Booster_AsteroidBelt'),
+        ('slammer', 2, 'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Booster_MoxxisSlammer'),
+        ],
+    'GD_Itempools.ShieldPools.Pool_Shields_Chimera_06_Legendary': [
+        ('haymaker', 1, 'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Chimera_Haymaker'),
+        ('m0rq', 2, 'GD_Ma_Shields.A_Item_Legendary.ItemGrade_Gear_Shield_Chimera_05_M0RQ'),
+        ],
+    'GD_Itempools.ShieldPools.Pool_Shields_Juggernaut_06_Legendary': [
+        ('shieldofages', 1, 'GD_Ma_Shields.A_Item_Unique.ItemGrade_Gear_Shield_Juggernaut_03_ShieldOfAges'),
+        ],
+    'GD_Itempools.ShieldPools.Pool_Shields_NovaShields_Explosive_06_Legendary': [
+        ('sunshine', 1, 'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Nova_Starburst'),
+        ('rapidrelease', 2, 'GD_Cork_Shields.A_Item_Custom.ItemGrade_Shield_RapidRelease'),
+        ],
+    'GD_Itempools.ShieldPools.Pool_Shields_Standard_06_Legendary': [
+        ('naught', 1, 'GD_Ma_Shields.A_Item_Unique.ItemGrade_Gear_Shield_Naught'),
+        ],
+    }
+for (pool, shieldlist) in shields.items():
+    for (label, index, shieldname) in shieldlist:
+        set_bi_item_pool('shield_{}'.format(label),
+            pool,
+            index,
+            shieldname,
+            invbalance='InventoryBalanceDefinition')
+
 # Vanilla Stalker shield hotfixes (dummy statement)
 hfs.add_level_hotfix('stalker_dummy', 'StalkerShields',
         'StalkerDummy_P,GD_StalkerDummy,DummyAttribute,1,1')
