@@ -2386,6 +2386,22 @@ set_bi_item_prob('vendor_nerf_4', 'GD_ItemPools_Shop.HealthShop.HealthShop_Featu
 set_bi_item_prob('vendor_nerf_5', 'GD_ItemPools_Shop.HealthShop.HealthShop_FeaturedItem', 2)
 set_bi_item_prob('vendor_nerf_6', 'GD_ItemPools_Shop.HealthShop.HealthShop_FeaturedItem', 3)
 
+# Badass Outlaw pool tweaks.  They have their own equip pool which splits it
+# 80% lasers, 20% launchers.  We'll go ahead and keep that split, and just
+# redirect the weapon pools to our own custom-weighted ones.
+hfs.add_level_hotfix('badass_outlaw_equip_0', 'BadassOutlawEquip',
+        """,
+        GD_BadassSpaceman.ItemPool.ItemPool_BadassOutlaw,
+        BalancedItems[0].ItmPoolDefinition,,
+        ItemPoolDefinition'{}'
+        """.format(badass.rarity_pool_lasers))
+hfs.add_level_hotfix('badass_outlaw_equip_1', 'BadassOutlawEquip',
+        """,
+        GD_BadassSpaceman.ItemPool.ItemPool_BadassOutlaw,
+        BalancedItems[1].ItmPoolDefinition,,
+        ItemPoolDefinition'{}'
+        """.format(badass.rarity_pool_launchers))
+
 # Save our current hotfixes
 orig_hfs = hfs
 
