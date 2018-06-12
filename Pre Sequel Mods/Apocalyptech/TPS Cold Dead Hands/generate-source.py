@@ -1935,6 +1935,30 @@ for config in [regular, badass]:
             activated=False)
         clapcreature_shields_real_list.append('{}{}'.format(prefix, hfs.get_hotfix_xml(clapcreature_id)))
 
+# Disable a weapon definition inside a Claptastic Voyage treasure loot pool
+hfs.add_level_hotfix('claptastic_epic_gunsandgear_disable', 'DisableClaptasticGunsAndGear',
+    """,
+    GD_Ma_ItemPools.Treasure_ChestPools.Pool_EpicChest_Weapons_GunsAndGear_Marigold,
+    BalancedItems[7].ItmPoolDefinition,,
+    ItemPoolDefinition'GD_Itempools.LootablePools.Pool_Locker_Items_CashAndAmmo'
+    """)
+
+# Remove weapons+shields from lockers
+set_ld_ia_item_pool('lockers_0', 'GD_Itempools.ListDefs.StorageLockerLoot',
+        'GD_Itempools.LootablePools.Pool_Locker_Items_CashAndAmmo', 3, 0,
+        point='Ammo1')
+set_ld_ia_item_pool('lockers_1', 'GD_Itempools.ListDefs.StorageLockerLoot',
+        'GD_Itempools.LootablePools.Pool_Locker_Items_CashAndAmmo', 4, 0,
+        point='Ammo1')
+set_ld_ia_item_pool('lockers_2', 'GD_Itempools.ListDefs.StorageLockerLoot',
+        'GD_Itempools.LootablePools.Pool_Locker_Items_CashAndAmmo', 5, 0,
+        point='Ammo1')
+hfs.add_level_hotfix('lockers_3', 'LockerNerf',
+    """,
+    GD_Itempools.ListDefs.StorageLockerLoot,
+    LootData[5].ItemAttachments[1].PoolProbability.BaseValueConstant,,
+    0""")
+
 # Save our current hotfixes
 orig_hfs = hfs
 
