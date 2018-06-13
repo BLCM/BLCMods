@@ -2227,9 +2227,9 @@ shields = {
     'GD_Itempools.ShieldPools.Pool_Shields_Juggernaut_06_Legendary': [
         ('shieldofages', 1, 'GD_Ma_Shields.A_Item_Unique.ItemGrade_Gear_Shield_Juggernaut_03_ShieldOfAges'),
         ],
-    'GD_Itempools.ShieldPools.Pool_Shields_NovaShields_Explosive_06_Legendary': [
-        ('sunshine', 1, 'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Nova_Starburst'),
-        ('rapidrelease', 2, 'GD_Cork_Shields.A_Item_Custom.ItemGrade_Shield_RapidRelease'),
+    'GD_Itempools.ShieldPools.Pool_Shields_NovaShields_All_06_Legendary': [
+        ('sunshine', 3, 'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Nova_Starburst'),
+        ('rapidrelease', 4, 'GD_Cork_Shields.A_Item_Custom.ItemGrade_Shield_RapidRelease'),
         ],
     'GD_Itempools.ShieldPools.Pool_Shields_Standard_06_Legendary': [
         ('naught', 1, 'GD_Ma_Shields.A_Item_Unique.ItemGrade_Gear_Shield_Naught'),
