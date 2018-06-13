@@ -405,6 +405,7 @@ class Regular(DropConfig):
                 (1, 'GD_ColZMech.Population.PawnBalance_ColZMech_DahlScout'),
                 (0, 'GD_DahlCombatSuit_Mini.Population.PawnBalance_DahlCombatSuit_Mini'),
                 (1, 'GD_DahlMarineMoonshot.Balance.PawnBalance_DahlMarineMoonshot'),
+                (2, 'GD_DahlPowersuit_Knuckle.Population.PawnBalance_DahlPowersuit_Knuckle'),
                 (1, 'GD_DahlRedShirt.Balance.PawnBalance_DahlRedShirt'),
                 (1, 'GD_Ma_Pop_ClaptrapForces.Balance.PawnBalance_BotRider'),
                 (1, 'GD_Ma_Pop_ClaptrapForces.Balance.PawnBalance_FlyTrap'),
@@ -970,7 +971,6 @@ class Badass(DropConfig):
                 (1, 'GD_Cork_DontGetCocky_Data.Balance.PawnBalance_DanZando'),
                 (0, 'GD_Cork_Eradicate_Data.BalanceDefs.PawnBalance_Clap_L3K'),
                 (0, 'GD_DahlCombatSuit_Felicity.Population.PawnBalance_DahlCombatSuit_Felicity'),
-                (2, 'GD_DahlPowersuit_Knuckle.Population.PawnBalance_DahlPowersuit_Knuckle'),
                 (1, 'GD_DahlPowersuit_Knuckle.Population.PawnBalance_DahlSergeantFlameKnuckle'),
                 (0, 'GD_DahlPowersuit_KnuckleRepaired.Population.PawnBalance_DahlPowersuit_KnuckleRepaired'),
                 (1, 'GD_DahlPowersuit_KnuckleRepaired.Population.PawnBalance_DahlSergeantFlameKnuckle'),
@@ -2699,6 +2699,190 @@ hfs.add_level_hotfix('badass_outlaw_equip_1', 'BadassOutlawEquip',
         ItemPoolDefinition'{}'
         """.format(badass.rarity_pool_launchers))
 
+# Flame Knuckle pool tweaks.  Revert UCP 2.0's changes and normalize all the drops,
+# regardless of playthrough, to drop from the "Default" pools.  Also, we're going
+# to force "regular" shields instead of badass, given the early-game nature of
+# Flame Knuckle.  Also also, prevent the powersuit version from dropping a weapon.
+hfs.add_level_hotfix('flameknuckle_pool_0', 'FlameKnucklePool',
+        """MoonShotIntro_P,
+        GD_DahlPowersuit_Knuckle.Population.PawnBalance_DahlPowersuit_Knuckle,
+        DefaultItemPoolList[1].PoolProbability.BaseValueConstant,,0""")
+hfs.add_level_hotfix('flameknuckle_pool_1', 'FlameKnucklePool',
+        """MoonShotIntro_P,
+        GD_DahlPowersuit_Knuckle.Population.PawnBalance_DahlSergeantFlameKnuckle,
+        PlayThroughs[0].CustomItemPoolIncludedLists,,()""")
+hfs.add_level_hotfix('flameknuckle_pool_2', 'FlameKnucklePool',
+        """MoonShotIntro_P,
+        GD_DahlPowersuit_Knuckle.Population.PawnBalance_DahlSergeantFlameKnuckle,
+        PlayThroughs[0].CustomItemPoolList,,()""")
+hfs.add_level_hotfix('flameknuckle_pool_3', 'FlameKnucklePool',
+        """MoonShotIntro_P,
+        GD_DahlPowersuit_Knuckle.Population.PawnBalance_DahlSergeantFlameKnuckle,
+        PlayThroughs[1].CustomItemPoolIncludedLists,,()""")
+hfs.add_level_hotfix('flameknuckle_pool_4', 'FlameKnucklePool',
+        """MoonShotIntro_P,
+        GD_DahlPowersuit_Knuckle.Population.PawnBalance_DahlSergeantFlameKnuckle,
+        PlayThroughs[1].CustomItemPoolList,,()""")
+hfs.add_level_hotfix('flameknuckle_pool_5', 'FlameKnucklePool',
+        """MoonShotIntro_P,
+        GD_DahlPowersuit_Knuckle.Population.PawnBalance_DahlSergeantFlameKnuckle,
+        DefaultItemPoolList,,
+        (
+            ( 
+                ItemPool=ItemPoolDefinition'GD_DahlPowersuit_Knuckle.WeaponPools.Pool_Weapons_KnuckleLaser_EnemyUse', 
+                PoolProbability=( 
+                    BaseValueConstant=1.000000, 
+                    BaseValueAttribute=None, 
+                    InitializationDefinition=None, 
+                    BaseValueScaleConstant=1.000000 
+                ) 
+            ),
+            (
+                ItemPool=ItemPoolDefinition'{}', 
+                PoolProbability=( 
+                    BaseValueConstant=1.000000, 
+                    BaseValueAttribute=None, 
+                    InitializationDefinition=None, 
+                    BaseValueScaleConstant=1.000000 
+                ) 
+            ),
+            (
+                ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Money_1or2', 
+                PoolProbability=( 
+                    BaseValueConstant=1.000000, 
+                    BaseValueAttribute=None, 
+                    InitializationDefinition=None, 
+                    BaseValueScaleConstant=1.000000 
+                ) 
+            ),
+            (
+                ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Money_1or2', 
+                PoolProbability=( 
+                    BaseValueConstant=1.000000, 
+                    BaseValueAttribute=None, 
+                    InitializationDefinition=None, 
+                    BaseValueScaleConstant=1.000000 
+                ) 
+            ),
+            (
+                ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Money_1or2', 
+                PoolProbability=( 
+                    BaseValueConstant=1.000000, 
+                    BaseValueAttribute=None, 
+                    InitializationDefinition=None, 
+                    BaseValueScaleConstant=1.000000 
+                ) 
+            ),
+            (
+                ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Money_1or2', 
+                PoolProbability=( 
+                    BaseValueConstant=1.000000, 
+                    BaseValueAttribute=None, 
+                    InitializationDefinition=None, 
+                    BaseValueScaleConstant=1.000000 
+                ) 
+            ),
+            (
+                ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Money_1or2', 
+                PoolProbability=( 
+                    BaseValueConstant=1.000000, 
+                    BaseValueAttribute=None, 
+                    InitializationDefinition=None, 
+                    BaseValueScaleConstant=1.000000 
+                ) 
+            ),
+            (
+                ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Money_1or2', 
+                PoolProbability=( 
+                    BaseValueConstant=1.000000, 
+                    BaseValueAttribute=None, 
+                    InitializationDefinition=None, 
+                    BaseValueScaleConstant=1.000000 
+                ) 
+            ),
+            (
+                ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Money_1or2', 
+                PoolProbability=( 
+                    BaseValueConstant=0.000000, 
+                    BaseValueAttribute=AttributeDefinition'GD_Itempools.DropWeights.DropODDS_Money', 
+                    InitializationDefinition=None, 
+                    BaseValueScaleConstant=1.000000 
+                ) 
+            ),
+            (
+                ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Moonstone', 
+                PoolProbability=( 
+                    BaseValueConstant=0.000000, 
+                    BaseValueAttribute=AttributeDefinition'GD_Itempools.DropWeights.DropODDS_Money', 
+                    InitializationDefinition=None, 
+                    BaseValueScaleConstant=1.000000 
+                ) 
+            ),
+            (
+                ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Moonstone_Cluster', 
+                PoolProbability=( 
+                    BaseValueConstant=0.000000, 
+                    BaseValueAttribute=AttributeDefinition'GD_Itempools.DropWeights.DropODDS_Money', 
+                    InitializationDefinition=None, 
+                    BaseValueScaleConstant=1.000000 
+                ) 
+            ),
+            (
+                ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Health_All', 
+                PoolProbability=( 
+                    BaseValueConstant=0.000000, 
+                    BaseValueAttribute=AttributeDefinition'GD_Itempools.DropWeights.DropODDS_Health', 
+                    InitializationDefinition=None, 
+                    BaseValueScaleConstant=1.000000 
+                ) 
+            ),
+            (
+                ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Health_All', 
+                PoolProbability=( 
+                    BaseValueConstant=0.000000, 
+                    BaseValueAttribute=AttributeDefinition'GD_Itempools.DropWeights.DropODDS_Health', 
+                    InitializationDefinition=None, 
+                    BaseValueScaleConstant=1.000000 
+                ) 
+            ),
+            (
+                ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Ammo_All_NeedOnly', 
+                PoolProbability=( 
+                    BaseValueConstant=1.000000, 
+                    BaseValueAttribute=None, 
+                    InitializationDefinition=AttributeInitializationDefinition'GD_Balance.WeightingPlayerCount.AmmoDrops_PerPlayer', 
+                    BaseValueScaleConstant=0.500000 
+                ) 
+            ),
+            (
+                ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Ammo_All_NeedOnly', 
+                PoolProbability=( 
+                    BaseValueConstant=1.000000, 
+                    BaseValueAttribute=None, 
+                    InitializationDefinition=AttributeInitializationDefinition'GD_Balance.WeightingPlayerCount.AmmoDrops_PerPlayer', 
+                    BaseValueScaleConstant=0.500000 
+                ) 
+            ),
+            (
+                ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Ammo_All_Emergency', 
+                PoolProbability=( 
+                    BaseValueConstant=1.000000, 
+                    BaseValueAttribute=None, 
+                    InitializationDefinition=None, 
+                    BaseValueScaleConstant=1.000000 
+                ) 
+            ),
+            (
+                ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Ammo_All_Emergency', 
+                PoolProbability=( 
+                    BaseValueConstant=1.000000, 
+                    BaseValueAttribute=None, 
+                    InitializationDefinition=None, 
+                    BaseValueScaleConstant=1.000000 
+                ) 
+            )
+        )""".format(regular.equip_pool_shields))
+
 # Save our current hotfixes
 orig_hfs = hfs
 
@@ -2717,6 +2901,17 @@ for (label, key, unique_pct, rare_pct) in [
 
     # Set up a new hotfixes object so we don't have to fiddle with hotfix IDs
     hfs = Hotfixes(nameprefix='ApocBoss{}'.format(key.capitalize()))
+
+    # Flame Knuckle (MoonShotIntro_P, using own pool)
+    # Also using "Regular" pool for lasers, since the intro's already a bit tough.
+
+    setup_boss_pool('flameknuckle_pool_6', 'MoonShotIntro_P',
+            'GD_DahlPowersuit_Knuckle.WeaponPools.Pool_Weapons_KnuckleLaser_EnemyUse',
+            regular.equip_pool_only_lasers,
+            [
+                ('GD_Itempools.Runnables.Pool_FlameKnuckle', rare_pct, None),
+            ],
+            activated=hotfix_activated)
 
     # Generate the section string
     with open('input-file-bosses.txt', 'r') as df:
