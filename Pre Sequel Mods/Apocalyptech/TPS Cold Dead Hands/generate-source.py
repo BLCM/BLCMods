@@ -1560,6 +1560,10 @@ for (pool, index) in [
         ('GD_Itempools.GeneralItemPools.Pool_GunsAndGear', 1),
         ('GD_Itempools.GeneralItemPools.Pool_GunsAndGearDropNumPlayersPlusOne', 1),
         ('GD_Itempools.GeneralItemPools.Pool_Items_Small', 1),
+        ('GD_Ma_ItemPools.GeneralItemPools.Pool_GunsAndGear_Marigold', 0),
+        ('GD_Ma_ItemPools.GeneralItemPools.Pool_GunsAndGearDropNumPlayersPlusOne_Marigold', 0),
+        ('GD_Ma_ItemPools.GeneralItemPools.Pool_GunsAndGear_Marigold', 1),
+        ('GD_Ma_ItemPools.GeneralItemPools.Pool_GunsAndGearDropNumPlayersPlusOne_Marigold', 1),
         ('GD_Itempools.EnemyDropPools.Pool_GunsAndGear_01_Common', 0),
         ('GD_Itempools.EnemyDropPools.Pool_GunsAndGear_01_Common', 1),
         ('GD_Itempools.EnemyDropPools.Pool_GunsAndGear_02_Uncommon', 0),
@@ -1615,6 +1619,11 @@ for (pool, index) in [
         ('GD_Itempools.Treasure_ChestPools.Pool_WeaponChest_Items', 2),
         ('GD_Itempools.Treasure_ChestPools.Pool_WeaponChest_Items', 3),
         # BL2 Better Loot would require clearing out index 4 of Pool_WeaponChest_Items, too.
+        ('GD_Ma_ItemPools.Treasure_ChestPools.Pool_EpicChest_Weapons_GunsAndGear_Marigold', 1),
+        ('GD_Ma_ItemPools.Treasure_ChestPools.Pool_EpicChest_Weapons_GunsAndGear_Marigold', 2),
+        ('GD_Ma_ItemPools.Treasure_ChestPools.Pool_EpicChest_Weapons_GunsAndGear_Marigold', 3),
+        ('GD_Ma_ItemPools.Treasure_ChestPools.Pool_EpicChest_Weapons_GunsAndGear_Marigold', 4),
+        ('GD_Ma_ItemPools.Treasure_ChestPools.Pool_EpicChest_Weapons_GunsAndGear_Marigold', 7),
         ]:
     drop_disables.extend(disable_balanced_drop(prefix, pool, index))
 other.disable_world_sets = "\n\n".join(drop_disables)
@@ -2309,14 +2318,6 @@ for config in [regular, badass]:
                 ),
             activated=False)
         clapcreature_shields_real_list.append('{}{}'.format(prefix, hfs.get_hotfix_xml(clapcreature_id)))
-
-# Disable a weapon definition inside a Claptastic Voyage treasure loot pool
-hfs.add_level_hotfix('claptastic_epic_gunsandgear_disable', 'DisableClaptasticGunsAndGear',
-    """,
-    GD_Ma_ItemPools.Treasure_ChestPools.Pool_EpicChest_Weapons_GunsAndGear_Marigold,
-    BalancedItems[7].ItmPoolDefinition,,
-    ItemPoolDefinition'GD_Itempools.LootablePools.Pool_Locker_Items_CashAndAmmo'
-    """)
 
 # Remove weapons+shields from lockers
 set_ld_ia_item_pool('lockers_0', 'GD_Itempools.ListDefs.StorageLockerLoot',
