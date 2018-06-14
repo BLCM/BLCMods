@@ -3101,6 +3101,39 @@ for (label, key, unique_pct, rare_pct) in [
             1, 2,
             activated=hotfix_activated)
 
+    # Bruce Weapons (ComFacility_P pool 0)
+
+    setup_boss_pool('bruce_pool_0', 'ComFacility_P', other.level_pool_0,
+            badass.equip_pool_all,
+            [
+                ('GD_Cork_Weap_Shotgun.A_Weapons_Legendary.SG_Bandit_5_SledgesShotgun', unique_pct, 'WeaponBalanceDefinition'),
+            ],
+            activated=hotfix_activated)
+
+    set_dipl_item_pool('bruce_pool_1',
+            'GD_Bruce.Population.Bal_Bruce',
+            0,
+            other.level_pool_0,
+            level='ComFacility_P',
+            activated=hotfix_activated)
+
+    # Bruce Shields (ComFacility_P, using own pool)
+
+    setup_boss_pool('bruce_pool_2', 'ComFacility_P',
+            'GD_Itempools.Runnables.Pool_Bruce',
+            badass.equip_pool_shields,
+            [
+                ('GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Nova_Supernova', rare_pct, 'InventoryBalanceDefinition'),
+            ],
+            activated=hotfix_activated)
+
+    set_dipl_item_pool('bruce_pool_3',
+            'GD_Bruce.Population.Bal_Bruce',
+            1,
+            'GD_Itempools.Runnables.Pool_Bruce',
+            level='ComFacility_P',
+            activated=hotfix_activated)
+
     # Generate the section string
     with open('input-file-bosses.txt', 'r') as df:
         boss_drops[key] = df.read().format(
