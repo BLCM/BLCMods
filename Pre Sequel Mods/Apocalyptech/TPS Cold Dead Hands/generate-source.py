@@ -1525,6 +1525,9 @@ def setup_boss_pool(hotfix_id, level, pool, default_gear, unique_gear, activated
     If the total of all the percent chances in `unique_gear` is greater than
     1, the `default_gear` will never actually be dropped.  To disable this
     hotfix (for inclusion in a MUT, for instance) pass `activated`=`False`.
+    `default_gear` may also be a tuple, with the following elements:
+        1) The pool to drop from / gear to drop.
+        2) If this is an item, the InvBalanceDefinition type of the item.
     """
     global hfs
     total_unique = 0
@@ -1533,7 +1536,11 @@ def setup_boss_pool(hotfix_id, level, pool, default_gear, unique_gear, activated
         total_unique += pct
         bal_items_tuples.append((unique, round(pct, 6), baldef))
     if default_gear and total_unique < 1:
-        bal_items_tuples.append((default_gear, round(1 - total_unique, 6), None))
+        try:
+            (default_name, default_baldef) = default_gear
+            bal_items_tuples.append((default_name, round(1 - total_unique, 6), default_baldef))
+        except ValueError:
+            bal_items_tuples.append((default_gear, round(1 - total_unique, 6), None))
     hfs.add_level_hotfix(hotfix_id, 'BossPool',
         '{},{},BalancedItems,,{}'.format(
             level,
@@ -2912,6 +2919,48 @@ for (label, key, unique_pct, rare_pct) in [
                 ('GD_Itempools.Runnables.Pool_FlameKnuckle', rare_pct, None),
             ],
             activated=hotfix_activated)
+
+    # Deadlift Weapon (Deadsurface_P, using own pool)
+    # UCP adds Min Min Lighter, so we'll swap back and forth between that and Vandergraffen
+    # Make sure to retain at least a 50% chance of spawning the Vandergraffen
+
+    minmin_pct = min(rare_pct, .5)
+    setup_boss_pool('deadlift_pool_0', 'Deadsurface_P',
+            'GD_SpacemanDeadlift.WeaponPools.Pool_Weapons_Deadlift_Shocklaser',
+            ('GD_Cork_Weap_Lasers.A_Weapons_Unique.Laser_Tediore_3_Vandergraffen', 'WeaponBalanceDefinition'),
+            [
+                ('GD_Cork_Weap_Lasers.A_Weapons_Legendary.Laser_Tediore_5_Tesla', minmin_pct, 'WeaponBalanceDefinition'),
+            ],
+            activated=hotfix_activated)
+
+    # Deadlift Shield (Deadsurface_P pool 0)
+
+    setup_boss_pool('deadlift_pool_1', 'Deadsurface_P', other.level_pool_0,
+            badass.equip_pool_shields,
+            [
+                ('GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Absorption_05_LegendaryShock', rare_pct, 'InventoryBalanceDefinition'),
+            ],
+            activated=hotfix_activated)
+
+    for (hotfix_id, popdef) in [
+            ('base', 'GD_SpacemanDeadlift.Population.PawnBalance_SpacemanDeadlift'),
+            ('mercday', 'GD_SpacemanDeadlift.Population.PawnBalance_SpacemanDeadlift_MercDay'),
+            ('pandoracorn', 'GD_SpacemanDeadlift.Population.PawnBalance_SpacemanDeadlift_Pandoracorn'),
+            ('pumpkin', 'GD_SpacemanDeadlift.Population.PawnBalance_SpacemanDeadlift_Pumpkin'),
+            ]:
+
+        set_dipl_item_pool('deadlift_pool_{}_2'.format(hotfix_id),
+                popdef,
+                1,
+                other.level_pool_0,
+                level='Deadsurface_P',
+                activated=hotfix_activated)
+
+        set_dipl_item_prob('deadlift_pool_{}_3'.format(hotfix_id),
+                popdef,
+                2,
+                level='Deadsurface_P',
+                activated=hotfix_activated)
 
     # Generate the section string
     with open('input-file-bosses.txt', 'r') as df:
