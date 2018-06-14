@@ -1541,6 +1541,21 @@
 
         #<Compatibility with Better Loot Mod>
 
+            # This section is just for compatibility with my BL2 Better Loot mod, and mostly
+            # just undoes some statements which Better Loot makes, back to the stock BL2
+            # values.  There is no harm in leaving this enabled even if you don't run Better
+            # Loot.
+
+            #<Revert Boss Drop Improved Quantities>
+
+                #<Swagman>
+
+                    set GD_Itempools.Runnables.Pool_ScavBadassSpacemanMidget Quantity (BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+
+                #</Swagman>
+
+            #</Revert Boss Drop Improved Quantities>
+
         #</Compatibility with Better Loot Mod>
 
     #</Main Mod (best to leave all this checked)>
@@ -4121,6 +4136,25 @@
 
                 #</Wally Wrong>
 
+                #<Swagman>
+
+                    # UCP sets Swagman to drop from a collection of five guns.  We're
+                    # setting him to be able to equip/drop all of them.
+
+                    set GD_Itempools.Runnables.Pool_ScavBadassSpacemanMidget bAutoReadyItems True 
+
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossGuaranteedBossPool7"</key><value>",GD_Itempools.Runnables.Pool_ScavBadassSpacemanMidget,BalancedItems,,((ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'GD_Cork_Weap_SniperRifles.A_Weapons_Unique.Sniper_Dahl_3_WetWeek',Probability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'GD_Cork_Weap_SniperRifles.A_Weapons_Unique.Sniper_Vladof_3_TheMachine',Probability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'GD_Cork_Weap_Shotgun.A_Weapons_Unique.SG_Torgue_3_JackOCannon',Probability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'GD_Cork_Weap_Shotgun.A_Weapons_Unique.SG_Jakobs_Boomacorn',Probability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'gd_cork_weap_assaultrifle.A_Weapons_Unique.AR_Vladof_3_OldPainful',Probability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True))"</value><on>
+
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossGuaranteedPTCIPLItemPool0"</key><value>",GD_Population_Scavengers.Balance.Outlaws.PawnBalance_ScavWastelandWalker,PlayThroughs[0].CustomItemPoolList[0],,(ItemPool=ItemPoolDefinition'GD_Itempools.Runnables.Pool_ScavBadassSpacemanMidget',PoolProbability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1))"</value><on>
+
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossGuaranteedPTCIPLItemPool1"</key><value>",GD_Population_Scavengers.Balance.Outlaws.PawnBalance_ScavWastelandWalker,PlayThroughs[1].CustomItemPoolList[0],,(ItemPool=ItemPoolDefinition'GD_Itempools.Runnables.Pool_ScavBadassSpacemanMidget',PoolProbability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1))"</value><on>
+
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossGuaranteedDisable7"</key><value>",GD_Population_Scavengers.Balance.Outlaws.PawnBalance_ScavWastelandWalker,PlayThroughs[0].CustomItemPoolList[2].PoolProbability,,(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><on>
+
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossGuaranteedDisable8"</key><value>",GD_Population_Scavengers.Balance.Outlaws.PawnBalance_ScavWastelandWalker,PlayThroughs[1].CustomItemPoolList[2].PoolProbability,,(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><on>
+
+                #</Swagman>
+
             #</Base Game>
 
         #</Guaranteed (100% Uniques, 100% Rares)>
@@ -4225,6 +4259,25 @@
                     #<hotfix><key>"SparkLevelPatchEntry-ApocBossVeryimprovedDisable6"</key><value>"Moon_P,GD_Itempools.Runnables.Pool_BadassDarksiderBandit,BalancedItems[1].Probability,,(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><off>
 
                 #</Wally Wrong>
+
+                #<Swagman><off>
+
+                    ## UCP sets Swagman to drop from a collection of five guns.  We're<off>
+                    ## setting him to be able to equip/drop all of them.<off>
+
+                    #set GD_Itempools.Runnables.Pool_ScavBadassSpacemanMidget bAutoReadyItems True<off> 
+
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossVeryimprovedBossPool7"</key><value>",GD_Itempools.Runnables.Pool_ScavBadassSpacemanMidget,BalancedItems,,((ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'GD_Cork_Weap_SniperRifles.A_Weapons_Unique.Sniper_Dahl_3_WetWeek',Probability=(BaseValueConstant=0.75,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'GD_Cork_Weap_SniperRifles.A_Weapons_Unique.Sniper_Vladof_3_TheMachine',Probability=(BaseValueConstant=0.75,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'GD_Cork_Weap_Shotgun.A_Weapons_Unique.SG_Torgue_3_JackOCannon',Probability=(BaseValueConstant=0.75,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'GD_Cork_Weap_Shotgun.A_Weapons_Unique.SG_Jakobs_Boomacorn',Probability=(BaseValueConstant=0.75,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'gd_cork_weap_assaultrifle.A_Weapons_Unique.AR_Vladof_3_OldPainful',Probability=(BaseValueConstant=0.75,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True))"</value><off>
+
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossVeryimprovedPTCIPLItemPool0"</key><value>",GD_Population_Scavengers.Balance.Outlaws.PawnBalance_ScavWastelandWalker,PlayThroughs[0].CustomItemPoolList[0],,(ItemPool=ItemPoolDefinition'GD_Itempools.Runnables.Pool_ScavBadassSpacemanMidget',PoolProbability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1))"</value><off>
+
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossVeryimprovedPTCIPLItemPool1"</key><value>",GD_Population_Scavengers.Balance.Outlaws.PawnBalance_ScavWastelandWalker,PlayThroughs[1].CustomItemPoolList[0],,(ItemPool=ItemPoolDefinition'GD_Itempools.Runnables.Pool_ScavBadassSpacemanMidget',PoolProbability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1))"</value><off>
+
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossVeryimprovedDisable7"</key><value>",GD_Population_Scavengers.Balance.Outlaws.PawnBalance_ScavWastelandWalker,PlayThroughs[0].CustomItemPoolList[2].PoolProbability,,(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><off>
+
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossVeryimprovedDisable8"</key><value>",GD_Population_Scavengers.Balance.Outlaws.PawnBalance_ScavWastelandWalker,PlayThroughs[1].CustomItemPoolList[2].PoolProbability,,(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><off>
+
+                #</Swagman>
 
             #</Base Game>
 
@@ -4331,6 +4384,25 @@
 
                 #</Wally Wrong>
 
+                #<Swagman><off>
+
+                    ## UCP sets Swagman to drop from a collection of five guns.  We're<off>
+                    ## setting him to be able to equip/drop all of them.<off>
+
+                    #set GD_Itempools.Runnables.Pool_ScavBadassSpacemanMidget bAutoReadyItems True<off> 
+
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossImprovedBossPool7"</key><value>",GD_Itempools.Runnables.Pool_ScavBadassSpacemanMidget,BalancedItems,,((ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'GD_Cork_Weap_SniperRifles.A_Weapons_Unique.Sniper_Dahl_3_WetWeek',Probability=(BaseValueConstant=0.6,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'GD_Cork_Weap_SniperRifles.A_Weapons_Unique.Sniper_Vladof_3_TheMachine',Probability=(BaseValueConstant=0.6,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'GD_Cork_Weap_Shotgun.A_Weapons_Unique.SG_Torgue_3_JackOCannon',Probability=(BaseValueConstant=0.6,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'GD_Cork_Weap_Shotgun.A_Weapons_Unique.SG_Jakobs_Boomacorn',Probability=(BaseValueConstant=0.6,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'gd_cork_weap_assaultrifle.A_Weapons_Unique.AR_Vladof_3_OldPainful',Probability=(BaseValueConstant=0.6,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True))"</value><off>
+
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossImprovedPTCIPLItemPool0"</key><value>",GD_Population_Scavengers.Balance.Outlaws.PawnBalance_ScavWastelandWalker,PlayThroughs[0].CustomItemPoolList[0],,(ItemPool=ItemPoolDefinition'GD_Itempools.Runnables.Pool_ScavBadassSpacemanMidget',PoolProbability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1))"</value><off>
+
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossImprovedPTCIPLItemPool1"</key><value>",GD_Population_Scavengers.Balance.Outlaws.PawnBalance_ScavWastelandWalker,PlayThroughs[1].CustomItemPoolList[0],,(ItemPool=ItemPoolDefinition'GD_Itempools.Runnables.Pool_ScavBadassSpacemanMidget',PoolProbability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1))"</value><off>
+
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossImprovedDisable7"</key><value>",GD_Population_Scavengers.Balance.Outlaws.PawnBalance_ScavWastelandWalker,PlayThroughs[0].CustomItemPoolList[2].PoolProbability,,(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><off>
+
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossImprovedDisable8"</key><value>",GD_Population_Scavengers.Balance.Outlaws.PawnBalance_ScavWastelandWalker,PlayThroughs[1].CustomItemPoolList[2].PoolProbability,,(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><off>
+
+                #</Swagman>
+
             #</Base Game>
 
         #</Improved (33% Uniques, 60% Rares)>
@@ -4436,6 +4508,25 @@
 
                 #</Wally Wrong>
 
+                #<Swagman><off>
+
+                    ## UCP sets Swagman to drop from a collection of five guns.  We're<off>
+                    ## setting him to be able to equip/drop all of them.<off>
+
+                    #set GD_Itempools.Runnables.Pool_ScavBadassSpacemanMidget bAutoReadyItems True<off> 
+
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossSlightBossPool7"</key><value>",GD_Itempools.Runnables.Pool_ScavBadassSpacemanMidget,BalancedItems,,((ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'GD_Cork_Weap_SniperRifles.A_Weapons_Unique.Sniper_Dahl_3_WetWeek',Probability=(BaseValueConstant=0.45,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'GD_Cork_Weap_SniperRifles.A_Weapons_Unique.Sniper_Vladof_3_TheMachine',Probability=(BaseValueConstant=0.45,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'GD_Cork_Weap_Shotgun.A_Weapons_Unique.SG_Torgue_3_JackOCannon',Probability=(BaseValueConstant=0.45,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'GD_Cork_Weap_Shotgun.A_Weapons_Unique.SG_Jakobs_Boomacorn',Probability=(BaseValueConstant=0.45,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'gd_cork_weap_assaultrifle.A_Weapons_Unique.AR_Vladof_3_OldPainful',Probability=(BaseValueConstant=0.45,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True))"</value><off>
+
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossSlightPTCIPLItemPool0"</key><value>",GD_Population_Scavengers.Balance.Outlaws.PawnBalance_ScavWastelandWalker,PlayThroughs[0].CustomItemPoolList[0],,(ItemPool=ItemPoolDefinition'GD_Itempools.Runnables.Pool_ScavBadassSpacemanMidget',PoolProbability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1))"</value><off>
+
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossSlightPTCIPLItemPool1"</key><value>",GD_Population_Scavengers.Balance.Outlaws.PawnBalance_ScavWastelandWalker,PlayThroughs[1].CustomItemPoolList[0],,(ItemPool=ItemPoolDefinition'GD_Itempools.Runnables.Pool_ScavBadassSpacemanMidget',PoolProbability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1))"</value><off>
+
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossSlightDisable7"</key><value>",GD_Population_Scavengers.Balance.Outlaws.PawnBalance_ScavWastelandWalker,PlayThroughs[0].CustomItemPoolList[2].PoolProbability,,(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><off>
+
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossSlightDisable8"</key><value>",GD_Population_Scavengers.Balance.Outlaws.PawnBalance_ScavWastelandWalker,PlayThroughs[1].CustomItemPoolList[2].PoolProbability,,(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><off>
+
+                #</Swagman>
+
             #</Base Game>
 
         #</Slightly Improved (22% Uniques, 45% Rares)>
@@ -4540,6 +4631,25 @@
                     #<hotfix><key>"SparkLevelPatchEntry-ApocBossStockDisable6"</key><value>"Moon_P,GD_Itempools.Runnables.Pool_BadassDarksiderBandit,BalancedItems[1].Probability,,(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><off>
 
                 #</Wally Wrong>
+
+                #<Swagman><off>
+
+                    ## UCP sets Swagman to drop from a collection of five guns.  We're<off>
+                    ## setting him to be able to equip/drop all of them.<off>
+
+                    #set GD_Itempools.Runnables.Pool_ScavBadassSpacemanMidget bAutoReadyItems True<off> 
+
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossStockBossPool7"</key><value>",GD_Itempools.Runnables.Pool_ScavBadassSpacemanMidget,BalancedItems,,((ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'GD_Cork_Weap_SniperRifles.A_Weapons_Unique.Sniper_Dahl_3_WetWeek',Probability=(BaseValueConstant=0.33,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'GD_Cork_Weap_SniperRifles.A_Weapons_Unique.Sniper_Vladof_3_TheMachine',Probability=(BaseValueConstant=0.33,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'GD_Cork_Weap_Shotgun.A_Weapons_Unique.SG_Torgue_3_JackOCannon',Probability=(BaseValueConstant=0.33,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'GD_Cork_Weap_Shotgun.A_Weapons_Unique.SG_Jakobs_Boomacorn',Probability=(BaseValueConstant=0.33,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'gd_cork_weap_assaultrifle.A_Weapons_Unique.AR_Vladof_3_OldPainful',Probability=(BaseValueConstant=0.33,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True))"</value><off>
+
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossStockPTCIPLItemPool0"</key><value>",GD_Population_Scavengers.Balance.Outlaws.PawnBalance_ScavWastelandWalker,PlayThroughs[0].CustomItemPoolList[0],,(ItemPool=ItemPoolDefinition'GD_Itempools.Runnables.Pool_ScavBadassSpacemanMidget',PoolProbability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1))"</value><off>
+
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossStockPTCIPLItemPool1"</key><value>",GD_Population_Scavengers.Balance.Outlaws.PawnBalance_ScavWastelandWalker,PlayThroughs[1].CustomItemPoolList[0],,(ItemPool=ItemPoolDefinition'GD_Itempools.Runnables.Pool_ScavBadassSpacemanMidget',PoolProbability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1))"</value><off>
+
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossStockDisable7"</key><value>",GD_Population_Scavengers.Balance.Outlaws.PawnBalance_ScavWastelandWalker,PlayThroughs[0].CustomItemPoolList[2].PoolProbability,,(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><off>
+
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossStockDisable8"</key><value>",GD_Population_Scavengers.Balance.Outlaws.PawnBalance_ScavWastelandWalker,PlayThroughs[1].CustomItemPoolList[2].PoolProbability,,(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><off>
+
+                #</Swagman>
 
             #</Base Game>
 

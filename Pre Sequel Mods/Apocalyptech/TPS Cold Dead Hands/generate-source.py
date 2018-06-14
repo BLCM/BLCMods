@@ -1537,6 +1537,10 @@ def setup_boss_pool(hotfix_id, level, pool, default_gear, unique_gear, activated
     for (unique, pct, baldef) in unique_gear:
         total_unique += pct
         bal_items_tuples.append((unique, round(pct, 6), baldef))
+    if level:
+        level_str = level
+    else:
+        level_str = ''
     if default_gear and total_unique < 1:
         try:
             (default_name, default_baldef) = default_gear
@@ -1545,7 +1549,7 @@ def setup_boss_pool(hotfix_id, level, pool, default_gear, unique_gear, activated
             bal_items_tuples.append((default_gear, round(1 - total_unique, 6), None))
     hfs.add_level_hotfix(hotfix_id, 'BossPool',
         '{},{},BalancedItems,,{}'.format(
-            level,
+            level_str,
             pool,
             get_balanced_items(bal_items_tuples)),
         activated=activated)
@@ -3059,6 +3063,42 @@ for (label, key, unique_pct, rare_pct) in [
             'GD_Itempools.Runnables.Pool_BadassDarksiderBandit',
             1,
             level='Moon_P',
+            activated=hotfix_activated)
+
+    # Swagman (various levels, using own pool)
+
+    setup_boss_pool('swagman_pool_0', None,
+            'GD_Itempools.Runnables.Pool_ScavBadassSpacemanMidget',
+            badass.equip_pool_lasers,
+            [
+                ('GD_Cork_Weap_SniperRifles.A_Weapons_Unique.Sniper_Dahl_3_WetWeek', rare_pct, 'WeaponBalanceDefinition'),
+                ('GD_Cork_Weap_SniperRifles.A_Weapons_Unique.Sniper_Vladof_3_TheMachine', rare_pct, 'WeaponBalanceDefinition'),
+                ('GD_Cork_Weap_Shotgun.A_Weapons_Unique.SG_Torgue_3_JackOCannon', rare_pct, 'WeaponBalanceDefinition'),
+                ('GD_Cork_Weap_Shotgun.A_Weapons_Unique.SG_Jakobs_Boomacorn', rare_pct, 'WeaponBalanceDefinition'),
+                ('gd_cork_weap_assaultrifle.A_Weapons_Unique.AR_Vladof_3_OldPainful', rare_pct, 'WeaponBalanceDefinition'),
+            ],
+            activated=hotfix_activated)
+
+    set_pt_cipl_item_pool('swagman_pool_1',
+            'GD_Population_Scavengers.Balance.Outlaws.PawnBalance_ScavWastelandWalker',
+            0, 0,
+            'GD_Itempools.Runnables.Pool_ScavBadassSpacemanMidget',
+            activated=hotfix_activated)
+
+    set_pt_cipl_item_pool('swagman_pool_2',
+            'GD_Population_Scavengers.Balance.Outlaws.PawnBalance_ScavWastelandWalker',
+            1, 0,
+            'GD_Itempools.Runnables.Pool_ScavBadassSpacemanMidget',
+            activated=hotfix_activated)
+
+    set_pt_cipl_item_prob('swagman_pool_3',
+            'GD_Population_Scavengers.Balance.Outlaws.PawnBalance_ScavWastelandWalker',
+            0, 2,
+            activated=hotfix_activated)
+
+    set_pt_cipl_item_prob('swagman_pool_4',
+            'GD_Population_Scavengers.Balance.Outlaws.PawnBalance_ScavWastelandWalker',
+            1, 2,
             activated=hotfix_activated)
 
     # Generate the section string
