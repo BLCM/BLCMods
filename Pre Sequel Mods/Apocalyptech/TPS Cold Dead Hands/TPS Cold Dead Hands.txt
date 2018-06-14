@@ -685,6 +685,10 @@
 
                 set GD_CustomItemPools_MainGame.Prototype.GreenPattern bAutoReadyItems True 
 
+                set GD_CustomItemPools_Quince.Doppel.GreenPattern bAutoReadyItems True 
+
+                set GD_CustomItemPools_crocus.Baroness.GreenPattern bAutoReadyItems True 
+
             #</Level-Specific Pool Initialization>
 
         #</Enemy Weapon Equip Pools>
@@ -4065,6 +4069,58 @@
 
                 #</Deadlift>
 
+                #<Oscar>
+
+                    # UCP adds the Reogenator shield to Oscar.  We're using the same pool
+                    # that UCP uses, to reduce the number of pools we need in Triton Flats.
+
+                    set GD_Itempools.Runnables.Pool_ScavBadassMidget bAutoReadyItems True 
+
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossGuaranteedBossPool3"</key><value>"Moon_P,GD_Itempools.Runnables.Pool_ScavBadassMidget,BalancedItems,,((ItmPoolDefinition=None,InvBalanceDefinition=InventoryBalanceDefinition'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Chimera_05_Legendary',Probability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True))"</value><on>
+
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossGuaranteedOscarShields0"</key><value>"Moon_P,GD_Population_Scavengers.Balance.Psychos.PawnBalance_ScavSuicidePsycho_Oscar,DefaultItemPoolList,,((ItemPool=ItemPoolDefinition'GD_Itempools.Runnables.Pool_ScavBadassMidget',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))"</value><on>
+
+                #</Oscar>
+
+                #<Magma Rivers>
+
+                    # UCP adds Magma, so equip that.  (It also adds the Fire Bee, and
+                    # we're making sure we're compat with that change.)
+
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossGuaranteedBossPool4"</key><value>"Moon_P,GD_CustomItemPools_MainGame.Prototype.GreenPattern,BalancedItems,,((ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'GD_Cork_Weap_SniperRifles.A_Weapons_Legendary.Sniper_Maliwan_5_Magma',Probability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True))"</value><on>
+
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossGuaranteedDIPLItemPool4"</key><value>"Moon_P,GD_Population_Darksiders.Balance.PawnBalance_LittleDarksiderBadassBandit,DefaultItemPoolList[0],,(ItemPool=ItemPoolDefinition'GD_CustomItemPools_MainGame.Prototype.GreenPattern',PoolProbability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1))"</value><on>
+
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossGuaranteedDisable4"</key><value>"Moon_P,GD_Itempools.Runnables.Pool_Maureen,BalancedItems[1].Probability,,(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><on>
+
+                #</Magma Rivers>
+
+                #<Fair Dinkum>
+
+                    # UCP adds Cradle, so equip that.  (It also adds the Pandemic, and
+                    # we're making sure we're compat with that change.)
+
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossGuaranteedBossPool5"</key><value>"Moon_P,GD_CustomItemPools_Quince.Doppel.GreenPattern,BalancedItems,,((ItmPoolDefinition=None,InvBalanceDefinition=InventoryBalanceDefinition'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Standard_05_Legendary',Probability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True))"</value><on>
+
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossGuaranteedDIPLItemPool5"</key><value>"Moon_P,GD_Population_Darksiders.Balance.PawnBalance_DarksiderBadassPsycho,DefaultItemPoolList[0],,(ItemPool=ItemPoolDefinition'GD_CustomItemPools_Quince.Doppel.GreenPattern',PoolProbability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1))"</value><on>
+
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossGuaranteedDisable5"</key><value>"Moon_P,GD_Itempools.Runnables.Pool_BadassDarksiderPsycho,BalancedItems[1].Probability,,(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><on>
+
+                #</Fair Dinkum>
+
+                #<Wally Wrong>
+
+                    # UCP adds Logan's Gun, so equip that.  (It also adds the Storm Front, and
+                    # we're making sure we're compat with that change.)
+
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossGuaranteedBossPool6"</key><value>"Moon_P,GD_CustomItemPools_crocus.Baroness.GreenPattern,BalancedItems,,((ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_Pistol.A_Weapons_Legendary.Pistol_Hyperion_5_LogansGun',Probability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True))"</value><on>
+
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossGuaranteedDIPLItemPool6"</key><value>"Moon_P,GD_Population_Darksiders.Balance.PawnBalance_DarksiderBadassBandit,DefaultItemPoolList[0],,(ItemPool=ItemPoolDefinition'GD_CustomItemPools_crocus.Baroness.GreenPattern',PoolProbability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1))"</value><on>
+
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossGuaranteedDisable6"</key><value>"Moon_P,GD_Itempools.Runnables.Pool_BadassDarksiderBandit,BalancedItems[1].Probability,,(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><on>
+
+                #</Wally Wrong>
+
             #</Base Game>
 
         #</Guaranteed (100% Uniques, 100% Rares)>
@@ -4117,6 +4173,58 @@
                     #<hotfix><key>"SparkLevelPatchEntry-ApocBossVeryimprovedDisable3"</key><value>"Deadsurface_P,GD_SpacemanDeadlift.Population.PawnBalance_SpacemanDeadlift_Pumpkin,DefaultItemPoolList[2].PoolProbability,,(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><off>
 
                 #</Deadlift>
+
+                #<Oscar><off>
+
+                    ## UCP adds the Reogenator shield to Oscar.  We're using the same pool<off>
+                    ## that UCP uses, to reduce the number of pools we need in Triton Flats.<off>
+
+                    #set GD_Itempools.Runnables.Pool_ScavBadassMidget bAutoReadyItems True<off> 
+
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossVeryimprovedBossPool3"</key><value>"Moon_P,GD_Itempools.Runnables.Pool_ScavBadassMidget,BalancedItems,,((ItmPoolDefinition=None,InvBalanceDefinition=InventoryBalanceDefinition'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Chimera_05_Legendary',Probability=(BaseValueConstant=0.75,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_CustomItemPools_Quince.Doppel.GreenPale',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.25,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True))"</value><off>
+
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossVeryimprovedOscarShields0"</key><value>"Moon_P,GD_Population_Scavengers.Balance.Psychos.PawnBalance_ScavSuicidePsycho_Oscar,DefaultItemPoolList,,((ItemPool=ItemPoolDefinition'GD_Itempools.Runnables.Pool_ScavBadassMidget',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))"</value><off>
+
+                #</Oscar>
+
+                #<Magma Rivers><off>
+
+                    ## UCP adds Magma, so equip that.  (It also adds the Fire Bee, and<off>
+                    ## we're making sure we're compat with that change.)<off>
+
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossVeryimprovedBossPool4"</key><value>"Moon_P,GD_CustomItemPools_MainGame.Prototype.GreenPattern,BalancedItems,,((ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'GD_Cork_Weap_SniperRifles.A_Weapons_Legendary.Sniper_Maliwan_5_Magma',Probability=(BaseValueConstant=0.75,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_CustomItemPools_crocus.Baroness.GreenBold',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.25,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True))"</value><off>
+
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossVeryimprovedDIPLItemPool4"</key><value>"Moon_P,GD_Population_Darksiders.Balance.PawnBalance_LittleDarksiderBadassBandit,DefaultItemPoolList[0],,(ItemPool=ItemPoolDefinition'GD_CustomItemPools_MainGame.Prototype.GreenPattern',PoolProbability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1))"</value><off>
+
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossVeryimprovedDisable4"</key><value>"Moon_P,GD_Itempools.Runnables.Pool_Maureen,BalancedItems[1].Probability,,(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><off>
+
+                #</Magma Rivers>
+
+                #<Fair Dinkum><off>
+
+                    ## UCP adds Cradle, so equip that.  (It also adds the Pandemic, and<off>
+                    ## we're making sure we're compat with that change.)<off>
+
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossVeryimprovedBossPool5"</key><value>"Moon_P,GD_CustomItemPools_Quince.Doppel.GreenPattern,BalancedItems,,((ItmPoolDefinition=None,InvBalanceDefinition=InventoryBalanceDefinition'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Standard_05_Legendary',Probability=(BaseValueConstant=0.75,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_CustomItemPools_Quince.Doppel.GreenPale',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.25,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True))"</value><off>
+
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossVeryimprovedDIPLItemPool5"</key><value>"Moon_P,GD_Population_Darksiders.Balance.PawnBalance_DarksiderBadassPsycho,DefaultItemPoolList[0],,(ItemPool=ItemPoolDefinition'GD_CustomItemPools_Quince.Doppel.GreenPattern',PoolProbability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1))"</value><off>
+
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossVeryimprovedDisable5"</key><value>"Moon_P,GD_Itempools.Runnables.Pool_BadassDarksiderPsycho,BalancedItems[1].Probability,,(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><off>
+
+                #</Fair Dinkum>
+
+                #<Wally Wrong><off>
+
+                    ## UCP adds Logan's Gun, so equip that.  (It also adds the Storm Front, and<off>
+                    ## we're making sure we're compat with that change.)<off>
+
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossVeryimprovedBossPool6"</key><value>"Moon_P,GD_CustomItemPools_crocus.Baroness.GreenPattern,BalancedItems,,((ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_Pistol.A_Weapons_Legendary.Pistol_Hyperion_5_LogansGun',Probability=(BaseValueConstant=0.75,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_CustomItemPools_crocus.Baroness.GreenBold',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.25,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True))"</value><off>
+
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossVeryimprovedDIPLItemPool6"</key><value>"Moon_P,GD_Population_Darksiders.Balance.PawnBalance_DarksiderBadassBandit,DefaultItemPoolList[0],,(ItemPool=ItemPoolDefinition'GD_CustomItemPools_crocus.Baroness.GreenPattern',PoolProbability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1))"</value><off>
+
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossVeryimprovedDisable6"</key><value>"Moon_P,GD_Itempools.Runnables.Pool_BadassDarksiderBandit,BalancedItems[1].Probability,,(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><off>
+
+                #</Wally Wrong>
 
             #</Base Game>
 
@@ -4171,6 +4279,58 @@
 
                 #</Deadlift>
 
+                #<Oscar><off>
+
+                    ## UCP adds the Reogenator shield to Oscar.  We're using the same pool<off>
+                    ## that UCP uses, to reduce the number of pools we need in Triton Flats.<off>
+
+                    #set GD_Itempools.Runnables.Pool_ScavBadassMidget bAutoReadyItems True<off> 
+
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossImprovedBossPool3"</key><value>"Moon_P,GD_Itempools.Runnables.Pool_ScavBadassMidget,BalancedItems,,((ItmPoolDefinition=None,InvBalanceDefinition=InventoryBalanceDefinition'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Chimera_05_Legendary',Probability=(BaseValueConstant=0.6,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_CustomItemPools_Quince.Doppel.GreenPale',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.4,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True))"</value><off>
+
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossImprovedOscarShields0"</key><value>"Moon_P,GD_Population_Scavengers.Balance.Psychos.PawnBalance_ScavSuicidePsycho_Oscar,DefaultItemPoolList,,((ItemPool=ItemPoolDefinition'GD_Itempools.Runnables.Pool_ScavBadassMidget',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))"</value><off>
+
+                #</Oscar>
+
+                #<Magma Rivers><off>
+
+                    ## UCP adds Magma, so equip that.  (It also adds the Fire Bee, and<off>
+                    ## we're making sure we're compat with that change.)<off>
+
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossImprovedBossPool4"</key><value>"Moon_P,GD_CustomItemPools_MainGame.Prototype.GreenPattern,BalancedItems,,((ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'GD_Cork_Weap_SniperRifles.A_Weapons_Legendary.Sniper_Maliwan_5_Magma',Probability=(BaseValueConstant=0.6,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_CustomItemPools_crocus.Baroness.GreenBold',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.4,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True))"</value><off>
+
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossImprovedDIPLItemPool4"</key><value>"Moon_P,GD_Population_Darksiders.Balance.PawnBalance_LittleDarksiderBadassBandit,DefaultItemPoolList[0],,(ItemPool=ItemPoolDefinition'GD_CustomItemPools_MainGame.Prototype.GreenPattern',PoolProbability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1))"</value><off>
+
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossImprovedDisable4"</key><value>"Moon_P,GD_Itempools.Runnables.Pool_Maureen,BalancedItems[1].Probability,,(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><off>
+
+                #</Magma Rivers>
+
+                #<Fair Dinkum><off>
+
+                    ## UCP adds Cradle, so equip that.  (It also adds the Pandemic, and<off>
+                    ## we're making sure we're compat with that change.)<off>
+
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossImprovedBossPool5"</key><value>"Moon_P,GD_CustomItemPools_Quince.Doppel.GreenPattern,BalancedItems,,((ItmPoolDefinition=None,InvBalanceDefinition=InventoryBalanceDefinition'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Standard_05_Legendary',Probability=(BaseValueConstant=0.6,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_CustomItemPools_Quince.Doppel.GreenPale',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.4,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True))"</value><off>
+
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossImprovedDIPLItemPool5"</key><value>"Moon_P,GD_Population_Darksiders.Balance.PawnBalance_DarksiderBadassPsycho,DefaultItemPoolList[0],,(ItemPool=ItemPoolDefinition'GD_CustomItemPools_Quince.Doppel.GreenPattern',PoolProbability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1))"</value><off>
+
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossImprovedDisable5"</key><value>"Moon_P,GD_Itempools.Runnables.Pool_BadassDarksiderPsycho,BalancedItems[1].Probability,,(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><off>
+
+                #</Fair Dinkum>
+
+                #<Wally Wrong><off>
+
+                    ## UCP adds Logan's Gun, so equip that.  (It also adds the Storm Front, and<off>
+                    ## we're making sure we're compat with that change.)<off>
+
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossImprovedBossPool6"</key><value>"Moon_P,GD_CustomItemPools_crocus.Baroness.GreenPattern,BalancedItems,,((ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_Pistol.A_Weapons_Legendary.Pistol_Hyperion_5_LogansGun',Probability=(BaseValueConstant=0.6,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_CustomItemPools_crocus.Baroness.GreenBold',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.4,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True))"</value><off>
+
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossImprovedDIPLItemPool6"</key><value>"Moon_P,GD_Population_Darksiders.Balance.PawnBalance_DarksiderBadassBandit,DefaultItemPoolList[0],,(ItemPool=ItemPoolDefinition'GD_CustomItemPools_crocus.Baroness.GreenPattern',PoolProbability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1))"</value><off>
+
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossImprovedDisable6"</key><value>"Moon_P,GD_Itempools.Runnables.Pool_BadassDarksiderBandit,BalancedItems[1].Probability,,(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><off>
+
+                #</Wally Wrong>
+
             #</Base Game>
 
         #</Improved (33% Uniques, 60% Rares)>
@@ -4224,6 +4384,58 @@
 
                 #</Deadlift>
 
+                #<Oscar><off>
+
+                    ## UCP adds the Reogenator shield to Oscar.  We're using the same pool<off>
+                    ## that UCP uses, to reduce the number of pools we need in Triton Flats.<off>
+
+                    #set GD_Itempools.Runnables.Pool_ScavBadassMidget bAutoReadyItems True<off> 
+
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossSlightBossPool3"</key><value>"Moon_P,GD_Itempools.Runnables.Pool_ScavBadassMidget,BalancedItems,,((ItmPoolDefinition=None,InvBalanceDefinition=InventoryBalanceDefinition'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Chimera_05_Legendary',Probability=(BaseValueConstant=0.45,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_CustomItemPools_Quince.Doppel.GreenPale',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.55,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True))"</value><off>
+
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossSlightOscarShields0"</key><value>"Moon_P,GD_Population_Scavengers.Balance.Psychos.PawnBalance_ScavSuicidePsycho_Oscar,DefaultItemPoolList,,((ItemPool=ItemPoolDefinition'GD_Itempools.Runnables.Pool_ScavBadassMidget',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))"</value><off>
+
+                #</Oscar>
+
+                #<Magma Rivers><off>
+
+                    ## UCP adds Magma, so equip that.  (It also adds the Fire Bee, and<off>
+                    ## we're making sure we're compat with that change.)<off>
+
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossSlightBossPool4"</key><value>"Moon_P,GD_CustomItemPools_MainGame.Prototype.GreenPattern,BalancedItems,,((ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'GD_Cork_Weap_SniperRifles.A_Weapons_Legendary.Sniper_Maliwan_5_Magma',Probability=(BaseValueConstant=0.45,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_CustomItemPools_crocus.Baroness.GreenBold',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.55,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True))"</value><off>
+
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossSlightDIPLItemPool4"</key><value>"Moon_P,GD_Population_Darksiders.Balance.PawnBalance_LittleDarksiderBadassBandit,DefaultItemPoolList[0],,(ItemPool=ItemPoolDefinition'GD_CustomItemPools_MainGame.Prototype.GreenPattern',PoolProbability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1))"</value><off>
+
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossSlightDisable4"</key><value>"Moon_P,GD_Itempools.Runnables.Pool_Maureen,BalancedItems[1].Probability,,(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><off>
+
+                #</Magma Rivers>
+
+                #<Fair Dinkum><off>
+
+                    ## UCP adds Cradle, so equip that.  (It also adds the Pandemic, and<off>
+                    ## we're making sure we're compat with that change.)<off>
+
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossSlightBossPool5"</key><value>"Moon_P,GD_CustomItemPools_Quince.Doppel.GreenPattern,BalancedItems,,((ItmPoolDefinition=None,InvBalanceDefinition=InventoryBalanceDefinition'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Standard_05_Legendary',Probability=(BaseValueConstant=0.45,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_CustomItemPools_Quince.Doppel.GreenPale',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.55,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True))"</value><off>
+
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossSlightDIPLItemPool5"</key><value>"Moon_P,GD_Population_Darksiders.Balance.PawnBalance_DarksiderBadassPsycho,DefaultItemPoolList[0],,(ItemPool=ItemPoolDefinition'GD_CustomItemPools_Quince.Doppel.GreenPattern',PoolProbability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1))"</value><off>
+
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossSlightDisable5"</key><value>"Moon_P,GD_Itempools.Runnables.Pool_BadassDarksiderPsycho,BalancedItems[1].Probability,,(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><off>
+
+                #</Fair Dinkum>
+
+                #<Wally Wrong><off>
+
+                    ## UCP adds Logan's Gun, so equip that.  (It also adds the Storm Front, and<off>
+                    ## we're making sure we're compat with that change.)<off>
+
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossSlightBossPool6"</key><value>"Moon_P,GD_CustomItemPools_crocus.Baroness.GreenPattern,BalancedItems,,((ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_Pistol.A_Weapons_Legendary.Pistol_Hyperion_5_LogansGun',Probability=(BaseValueConstant=0.45,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_CustomItemPools_crocus.Baroness.GreenBold',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.55,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True))"</value><off>
+
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossSlightDIPLItemPool6"</key><value>"Moon_P,GD_Population_Darksiders.Balance.PawnBalance_DarksiderBadassBandit,DefaultItemPoolList[0],,(ItemPool=ItemPoolDefinition'GD_CustomItemPools_crocus.Baroness.GreenPattern',PoolProbability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1))"</value><off>
+
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossSlightDisable6"</key><value>"Moon_P,GD_Itempools.Runnables.Pool_BadassDarksiderBandit,BalancedItems[1].Probability,,(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><off>
+
+                #</Wally Wrong>
+
             #</Base Game>
 
         #</Slightly Improved (22% Uniques, 45% Rares)>
@@ -4276,6 +4488,58 @@
                     #<hotfix><key>"SparkLevelPatchEntry-ApocBossStockDisable3"</key><value>"Deadsurface_P,GD_SpacemanDeadlift.Population.PawnBalance_SpacemanDeadlift_Pumpkin,DefaultItemPoolList[2].PoolProbability,,(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><off>
 
                 #</Deadlift>
+
+                #<Oscar><off>
+
+                    ## UCP adds the Reogenator shield to Oscar.  We're using the same pool<off>
+                    ## that UCP uses, to reduce the number of pools we need in Triton Flats.<off>
+
+                    #set GD_Itempools.Runnables.Pool_ScavBadassMidget bAutoReadyItems True<off> 
+
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossStockBossPool3"</key><value>"Moon_P,GD_Itempools.Runnables.Pool_ScavBadassMidget,BalancedItems,,((ItmPoolDefinition=None,InvBalanceDefinition=InventoryBalanceDefinition'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Chimera_05_Legendary',Probability=(BaseValueConstant=0.33,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_CustomItemPools_Quince.Doppel.GreenPale',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.67,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True))"</value><off>
+
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossStockOscarShields0"</key><value>"Moon_P,GD_Population_Scavengers.Balance.Psychos.PawnBalance_ScavSuicidePsycho_Oscar,DefaultItemPoolList,,((ItemPool=ItemPoolDefinition'GD_Itempools.Runnables.Pool_ScavBadassMidget',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))"</value><off>
+
+                #</Oscar>
+
+                #<Magma Rivers><off>
+
+                    ## UCP adds Magma, so equip that.  (It also adds the Fire Bee, and<off>
+                    ## we're making sure we're compat with that change.)<off>
+
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossStockBossPool4"</key><value>"Moon_P,GD_CustomItemPools_MainGame.Prototype.GreenPattern,BalancedItems,,((ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'GD_Cork_Weap_SniperRifles.A_Weapons_Legendary.Sniper_Maliwan_5_Magma',Probability=(BaseValueConstant=0.33,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_CustomItemPools_crocus.Baroness.GreenBold',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.67,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True))"</value><off>
+
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossStockDIPLItemPool4"</key><value>"Moon_P,GD_Population_Darksiders.Balance.PawnBalance_LittleDarksiderBadassBandit,DefaultItemPoolList[0],,(ItemPool=ItemPoolDefinition'GD_CustomItemPools_MainGame.Prototype.GreenPattern',PoolProbability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1))"</value><off>
+
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossStockDisable4"</key><value>"Moon_P,GD_Itempools.Runnables.Pool_Maureen,BalancedItems[1].Probability,,(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><off>
+
+                #</Magma Rivers>
+
+                #<Fair Dinkum><off>
+
+                    ## UCP adds Cradle, so equip that.  (It also adds the Pandemic, and<off>
+                    ## we're making sure we're compat with that change.)<off>
+
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossStockBossPool5"</key><value>"Moon_P,GD_CustomItemPools_Quince.Doppel.GreenPattern,BalancedItems,,((ItmPoolDefinition=None,InvBalanceDefinition=InventoryBalanceDefinition'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Standard_05_Legendary',Probability=(BaseValueConstant=0.33,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_CustomItemPools_Quince.Doppel.GreenPale',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.67,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True))"</value><off>
+
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossStockDIPLItemPool5"</key><value>"Moon_P,GD_Population_Darksiders.Balance.PawnBalance_DarksiderBadassPsycho,DefaultItemPoolList[0],,(ItemPool=ItemPoolDefinition'GD_CustomItemPools_Quince.Doppel.GreenPattern',PoolProbability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1))"</value><off>
+
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossStockDisable5"</key><value>"Moon_P,GD_Itempools.Runnables.Pool_BadassDarksiderPsycho,BalancedItems[1].Probability,,(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><off>
+
+                #</Fair Dinkum>
+
+                #<Wally Wrong><off>
+
+                    ## UCP adds Logan's Gun, so equip that.  (It also adds the Storm Front, and<off>
+                    ## we're making sure we're compat with that change.)<off>
+
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossStockBossPool6"</key><value>"Moon_P,GD_CustomItemPools_crocus.Baroness.GreenPattern,BalancedItems,,((ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_Pistol.A_Weapons_Legendary.Pistol_Hyperion_5_LogansGun',Probability=(BaseValueConstant=0.33,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_CustomItemPools_crocus.Baroness.GreenBold',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.67,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True))"</value><off>
+
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossStockDIPLItemPool6"</key><value>"Moon_P,GD_Population_Darksiders.Balance.PawnBalance_DarksiderBadassBandit,DefaultItemPoolList[0],,(ItemPool=ItemPoolDefinition'GD_CustomItemPools_crocus.Baroness.GreenPattern',PoolProbability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1))"</value><off>
+
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossStockDisable6"</key><value>"Moon_P,GD_Itempools.Runnables.Pool_BadassDarksiderBandit,BalancedItems[1].Probability,,(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)"</value><off>
+
+                #</Wally Wrong>
 
             #</Base Game>
 

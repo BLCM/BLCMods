@@ -91,6 +91,8 @@ class OtherConfig(BaseConfig):
     # levels.  That way, we only need as many pools as we have loot-dropping
     # bosses in a single level.
     level_pool_0 = 'GD_CustomItemPools_MainGame.Prototype.GreenPattern'
+    level_pool_1 = 'GD_CustomItemPools_Quince.Doppel.GreenPattern'
+    level_pool_2 = 'GD_CustomItemPools_crocus.Baroness.GreenPattern'
 
 class DropConfig(BaseConfig):
     """
@@ -2961,6 +2963,103 @@ for (label, key, unique_pct, rare_pct) in [
                 2,
                 level='Deadsurface_P',
                 activated=hotfix_activated)
+
+    # Oscar Shield (Moon_P, using the pool UCP uses, to cut back on the number of pools we need)
+    # Oscar doesn't define a DefaultItemPoolList by default, so for compatibility
+    # with UCP, we're just redefining it entirely.
+
+    setup_boss_pool('oscar_pool_0', 'Moon_P', 'GD_Itempools.Runnables.Pool_ScavBadassMidget',
+            badass.equip_pool_shields,
+            [
+                ('GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Chimera_05_Legendary', rare_pct, 'InventoryBalanceDefinition'),
+            ],
+            activated=hotfix_activated)
+
+    hfs.add_level_hotfix('oscar_pool_1', 'OscarShields',
+            """Moon_P,
+            GD_Population_Scavengers.Balance.Psychos.PawnBalance_ScavSuicidePsycho_Oscar,
+            DefaultItemPoolList,,
+            (
+                (
+                    ItemPool=ItemPoolDefinition'GD_Itempools.Runnables.Pool_ScavBadassMidget',
+                    PoolProbability=(
+                        BaseValueConstant=1.000000,
+                        BaseValueAttribute=None,
+                        InitializationDefinition=None,
+                        BaseValueScaleConstant=1.000000
+                    )
+                )
+            )
+            """,
+            activated=hotfix_activated)
+
+    # Magma Rivers (Moon_P pool 0)
+    # Also fixing up the UCP loot pool to exclude the Magma
+
+    setup_boss_pool('magmarivers_pool_0', 'Moon_P', other.level_pool_0,
+            badass.equip_pool_all,
+            [
+                ('GD_Cork_Weap_SniperRifles.A_Weapons_Legendary.Sniper_Maliwan_5_Magma', rare_pct, 'WeaponBalanceDefinition'),
+            ],
+            activated=hotfix_activated)
+
+    set_dipl_item_pool('magmarivers_pool_1',
+            'GD_Population_Darksiders.Balance.PawnBalance_LittleDarksiderBadassBandit',
+            0,
+            other.level_pool_0,
+            level='Moon_P',
+            activated=hotfix_activated)
+
+    set_bi_item_prob('magmarivers_pool_2',
+            'GD_Itempools.Runnables.Pool_Maureen',
+            1,
+            level='Moon_P',
+            activated=hotfix_activated)
+
+    # Fair Dinkum (Moon_P pool 1)
+    # Also fixing up the UCP loot pool to exclude Cradle
+
+    setup_boss_pool('fairdinkum_pool_0', 'Moon_P', other.level_pool_1,
+            badass.equip_pool_shields,
+            [
+                ('GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Standard_05_Legendary', rare_pct, 'InventoryBalanceDefinition'),
+            ],
+            activated=hotfix_activated)
+
+    set_dipl_item_pool('fairdinkum_pool_1',
+            'GD_Population_Darksiders.Balance.PawnBalance_DarksiderBadassPsycho',
+            0,
+            other.level_pool_1,
+            level='Moon_P',
+            activated=hotfix_activated)
+
+    set_bi_item_prob('fairdinkum_pool_2',
+            'GD_Itempools.Runnables.Pool_BadassDarksiderPsycho',
+            1,
+            level='Moon_P',
+            activated=hotfix_activated)
+
+    # Wally Wrong (Moon_P pool 2)
+
+    setup_boss_pool('wallywrong_pool_0', 'Moon_P', other.level_pool_2,
+            badass.equip_pool_all,
+            [
+                ('GD_Weap_Pistol.A_Weapons_Legendary.Pistol_Hyperion_5_LogansGun', rare_pct, 'WeaponBalanceDefinition'),
+            ],
+            activated=hotfix_activated)
+
+    set_dipl_item_pool('wallywrong_pool_1',
+            'GD_Population_Darksiders.Balance.PawnBalance_DarksiderBadassBandit',
+            0,
+            other.level_pool_2,
+            level='Moon_P',
+            activated=hotfix_activated)
+
+    set_bi_item_prob('wallywrong_pool_2',
+            'GD_Itempools.Runnables.Pool_BadassDarksiderBandit',
+            1,
+            level='Moon_P',
+            activated=hotfix_activated)
 
     # Generate the section string
     with open('input-file-bosses.txt', 'r') as df:
