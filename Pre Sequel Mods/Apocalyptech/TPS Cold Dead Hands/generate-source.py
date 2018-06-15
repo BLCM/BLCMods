@@ -1003,7 +1003,6 @@ class Badass(DropConfig):
                 (0, 'GD_Population_Darksiders.Balance.PawnBalance_DarksiderBadassPsycho'),
                 (1, 'GD_Population_Darksiders.Balance.PawnBalance_LittleDarksiderBadassBandit'),
                 (1, 'GD_Population_Rat.Balance.PawnBalance_Lazlo'),
-                (0, 'GD_Population_Scavengers.Uniques.PawnBalance_Bosun'),
                 (1, 'GD_SpacemanDeadlift.Population.PawnBalance_SpacemanDeadlift'),
                 (1, 'GD_SpacemanDeadlift.Population.PawnBalance_SpacemanDeadlift_MercDay'),
                 (1, 'GD_SpacemanDeadlift.Population.PawnBalance_SpacemanDeadlift_Pandoracorn'),
@@ -1046,7 +1045,6 @@ class Badass(DropConfig):
                 (1, 'GD_DrongoBones.Balance.PawnBalance_DrongoBones'),
                 (0, 'GD_Ma_Pop_ClaptrapForces.Balance.PawnBalance_CleanupRuntime'),
                 (0, 'GD_Ma_Pop_ClaptrapForces.Balance.PawnBalance_VeryInsecureBadass'),
-                (2, 'GD_Population_Scavengers.Uniques.PawnBalance_Bosun'),
                 (0, 'GD_Population_Scavengers.Uniques.PawnBalance_Kelly'),
             ],
         )
