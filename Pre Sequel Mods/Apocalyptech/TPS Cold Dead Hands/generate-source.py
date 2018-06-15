@@ -469,10 +469,6 @@ class Regular(DropConfig):
                 (1, 'GD_ProtoWarBot_GunLoader.Population.PawnBalance_ProtoWarBot_FriendLoader'),
                 (1, 'GD_ProtoWarBot_GunLoader.Population.PawnBalance_ProtoWarBot_FriendLoaderYellow'),
                 (1, 'GD_ProtoWarBot_GunLoader.Population.PawnBalance_ProtoWarBot_GunLoader'),
-                (0, 'GD_Population_Dahl.Balance.PawnBalance_DahlSergeant'),
-                (0, 'GD_Population_Dahl.Balance.Pumpkin.PawnBalance_DahlSergeant_Pumpkin'),
-                (0, 'GD_Population_Dahl.Balance.Pandoracorn.PawnBalance_DahlSergeant_Pandoracorn'),
-                (0, 'GD_Population_Dahl.Balance.MercDay.PawnBalance_DahlSergeant_MercDay'),
             ],
             # All Weapons
             [
@@ -501,6 +497,10 @@ class Regular(DropConfig):
                 (0, 'GD_Population_Darksiders.Balance.PawnBalance_DarksiderBandit'),
                 (0, 'GD_Population_Darksiders.Balance.PawnBalance_LittleDarksiderPsycho'),
                 (0, 'GD_ScavAccepterDude.Population.PawnBalance_ScavAccepterDude'),
+                (0, 'GD_Population_Dahl.Balance.PawnBalance_DahlSergeant'),
+                (0, 'GD_Population_Dahl.Balance.Pumpkin.PawnBalance_DahlSergeant_Pumpkin'),
+                (0, 'GD_Population_Dahl.Balance.Pandoracorn.PawnBalance_DahlSergeant_Pandoracorn'),
+                (0, 'GD_Population_Dahl.Balance.MercDay.PawnBalance_DahlSergeant_MercDay'),
             ],
             # AR-Weighted
             [
@@ -1012,10 +1012,6 @@ class Badass(DropConfig):
                 (1, 'GD_SpacemanDeadlift.Population.PawnBalance_SpacemanDeadlift_Pandoracorn'),
                 (1, 'GD_SpacemanDeadlift.Population.PawnBalance_SpacemanDeadlift_Pumpkin'),
                 (0, 'GD_TimberLogwood.Balance.PawnBalance_TimberLogwood'),
-                (0, 'GD_Population_Dahl.Balance.PawnBalance_BadassDahlMarine'),
-                (0, 'GD_Population_Dahl.Balance.Pumpkin.PawnBalance_BadassDahlMarine_Pumpkin'),
-                (0, 'GD_Population_Dahl.Balance.Pandoracorn.PawnBalance_BadassDahlMarine_Pandoracorn'),
-                (0, 'GD_Population_Dahl.Balance.MercDay.PawnBalance_BadassDahlMarine_MercDay'),
             ],
             # All Weapons
             [
@@ -1025,6 +1021,10 @@ class Badass(DropConfig):
                 (0, 'GD_Population_Darksiders.Balance.PawnBalance_DarksiderBadassBandit'),
                 (0, 'GD_Population_Darksiders.Balance.PawnBalance_LittleDarksiderBadassBandit'),
                 (0, 'GD_Squat.Population.PawnBalance_Squat'),
+                (0, 'GD_Population_Dahl.Balance.PawnBalance_BadassDahlMarine'),
+                (0, 'GD_Population_Dahl.Balance.Pumpkin.PawnBalance_BadassDahlMarine_Pumpkin'),
+                (0, 'GD_Population_Dahl.Balance.Pandoracorn.PawnBalance_BadassDahlMarine_Pandoracorn'),
+                (0, 'GD_Population_Dahl.Balance.MercDay.PawnBalance_BadassDahlMarine_MercDay'),
             ],
             # AR-Weighted
             [
@@ -1054,7 +1054,6 @@ class Badass(DropConfig):
                 (0, 'GD_Ma_Pop_ClaptrapForces.Balance.PawnBalance_CleanupRuntime'),
                 (0, 'GD_Ma_Pop_ClaptrapForces.Balance.PawnBalance_VeryInsecureBadass'),
                 (0, 'GD_Population_Scavengers.Uniques.PawnBalance_Kelly'),
-                (0, 'GD_Population_Dahl.Balance.PawnBalance_DahlMarine_CentralTerm'),
             ],
         )
 
@@ -2902,6 +2901,12 @@ hfs.add_level_hotfix('flameknuckle_pool_5', 'FlameKnucklePool',
                 ) 
             )
         )""".format(regular.equip_pool_shields))
+
+# Corporal Bob - remove weapon-equip pool, since he doesn't actually use it.
+set_dipl_item_prob('corporal_bob_pool_0',
+        'GD_Population_Dahl.Balance.PawnBalance_DahlMarine_CentralTerm',
+        0,
+        level='CentralTerminal_P')
 
 # Save our current hotfixes
 orig_hfs = hfs
