@@ -1,10 +1,6 @@
 TPS Cold Dead Hands
 ===================
 
-**NOTE: This mod is very much under construction, and is not ready
-for actual use.  Everything below is just copied directly from the
-BL2 Cold Dead Hands README, so don't trust it.**
-
 This mod completely revamps the way in which weapons and shields are
 acquired during the game.  Instead of dropping weapons/shields from a
 random loot pool, enemies will now *always* drop the specific gun and
@@ -25,38 +21,27 @@ FilterTool/BLCMM, so you can still play using something close to the stock
 Borderlands gear quality.  Regardless of gear quality configuration, Badass
 enemies will have better gear than their ordinary counterparts.
 
-Grenade Mods, Class Mods, and Relics will still be acquired as per usual -
+Grenade Mods, Class Mods, and Oz Kits will still be acquired as per usual -
 via world drops, chests, and the like.
-
-Requirements
-------------
-
-This mod should be able to be used mostly on its own, but it does require
-one specific category of UCP to be active:
-
-* `Loot Pool & Drop Changes -> Skinpool Fixes (Don't uncheck this)`
-
-This is required to free up the custom loot pools that we use to equip enemies
-with.  If for whatever reason you'd like to run this mod by itself without UCP,
-make sure to at least enable/copy that folder over.
 
 Usage/Installation
 ------------------
 
 This mod must be imported into FilterTool/BLCMM with `Developer tools` ->
-`Add single mod`.  Choose the file `BL2 Cold Dead Hands.txt` and
+`Add single mod`.  Choose the file `TPS Cold Dead Hands.txt` and
 have at it!
 
 Mod Details
 -----------
 
 As stated above, enemies who use guns and shields will always drop that gun
-and shield.  Creatures like Stalkers and Skeletons, and devices like turrets,
-will NOT drop a shield, even if they spawn with one.  (Stalker shield drops
-can be optionally toggled on.)  Shielded loaders will drop shields, though.
+and shield.  Creatures like Stalkers or viruses/bugs/etc from Claptastic
+Voyage, devices like turrets, and Eridian Guardians will NOT drop
+a shield, even if they spawn with one.  Shield drops *can* be optionally
+enabled for all three groups of enemies, though.
 
 Bosses with unique drops who don't actually use weapons/shields (ie: most
-"creature" enemies like Knuckedragger, machines like BNK3R, melee-only
+"creature" enemies like X-STLK-23, machines like RK5, melee-only
 bosses) will still drop their unique items as per usual.  Raid bosses, and
 other large "lootsplosion" events may end up generating some guns/shields
 as well.
@@ -68,62 +53,33 @@ from the start of the battle which gun you'll receive.
 
 ### Exceptions
 
+* Moonstone chests, since they cost 40E to open, have had their loot pools
+  left alone.  They will spawn gear as they always have.
+
 * Some chests have not had their weapons/shields removed.  This list is
   probably not exhaustive, and I haven't really tested many of these to find
-  out:
-  * Roland's Chest in Sanctuary will probably contain actual gear.
-  * Dice Chests (from the Tiny Tina DLC) are probably unaffected.  Weapons
-    are sparse enough during that DLC as it is.
-  * Chests which were hardcoded to give specific gear should still provide that
-    gear:
-    * Shotgun chest at the end of Windshear Waste
-    * Slag Gun oven in the Wattle Gobbler Headhunter Pack
+  out.  Regardless, the drops from these chests should be unaltered:
+  * Zarpedon's chest in Pity's fall
+  * Moxxi's chest in Concordia
+  * The couple mission-specific chests in Research + Development
+  * The three custom gear chests in Claptastic Voyage (which give the Heartfull
+    Splodger, Cutie Killer, and M0RQ)
+  * Spyware chest from Claptastic Voyage
 
-* Doc Mercy has to be using an E-Tech blaster for Medical Mystery to make
-  sense, so I've chosen to keep that rather than having him use an Infinity
-  on you.  So Doc Mercy will drop an Infinity even though he's not actually
-  using one.  If someone has a clever way to make a loot pool change in
-  response to a mission being active or not, I'd love to hear it!
-
-* Mad Mike will retain at least a 50% chance of spawning with a random
-  rocket launcher, even on "guaranteed" unique loot configurations.
-
-* Master Gee is the only raid boss who actually uses a recognizable weapon --
-  a strange version of the Ahab.  He rarely ever actually fires it, though,
-  and his animations don't really support other weapons anyway, so I'm
-  leaving him alone.  He'll continue to use the special Ahab, and drop
-  however he'd otherwise drop.  (See other mods like Better Loot to improve
-  his (and other Raid boss) drops.)
-
-* UCP adds a Manly Man shield drop to H3RL-E.  Even though H3RL-E uses
-  a shield normally, the Manly Man would only nerf the fight, which I'm
-  not keen to do.  So H3RL-E may drop the Manly Man without actually having
-  it equipped.
-
-* The Tributes (from the Wattle Gobbler Headhunter Pack) will have a 2/3rds
-  chance of dropping the unique items that UCP adds to their drop pools
-  compared to other enemies, since there are so many of them in one location.
-  So even on "guaranteed" drops you may not get their unique items.
-
-### Other Pool Tweaks
-
-* Big Sleep is usually the one to drop the 12 Pounder, but that drop/equip
-  has been moved to Sandman.
-
-* Torgue DLC Badass gang members use the global badass equip pool, rather
-  than a gang-specific pool.  ("Regular" gang members use gang-specific
-  pools, though, as per the stock game.)
-
-* Torgue DLC gang members can equip/drop launchers now.
+* There's some strange problem with the Dahl Lost Legion soldiers in the Veins
+  of Helios map which prevents them from being affected by this mod.  I honestly
+  have no idea why I can't seem to hotfix them.  Boils and other enemies in the
+  area are fine, though, and Lost Legion elsewhere in the game work just fine.
 
 ### Configuration
 
-There are four main categories which you can use to customize the gear
+There are six main categories which you can use to customize the gear
 quality, when loaded into FilterTool/BLCMM:
 
-* **Loot Pool Improvements**: This section adds gemstones into the global E-Tech
-  pool, and improves the global legendary pool by adding all uniques,
-  pearls, and seraphs.  These options can all be toggled individually.
+* **Loot Pool Improvements**: This section improves the global legendary pool
+  by adding all uniques and glitch uniques.  (There are only two Glitch
+  uniques: the Heartfull Splodger and the Cutie Killer).  Those options can
+  be toggled individually.
 
 * **Enemy Gear Quality**: This is a mutually-exclusive category (so you can
   only choose one of the options), and defines how good the enemy gear is.
@@ -144,13 +100,16 @@ quality, when loaded into FilterTool/BLCMM:
   shield and won't drop.  If you prefer, though, you can toggle stalker
   shields so that they work like other shielded enemies with Cold Dead Hands,
   so you'll get stalkers using Novas and Maylay shields, and they'll drop them
-  when killed.  Additionally, if you want to make them very deadly in general,
-  you can specify that they *only* use Maylay shields.  **Warning:** there
-  seems to be some strange interaction with Maylay shields and Stalkers where
-  the roid damage buff is far greater than the number listed on the card.
-  Stalkers using Maylay shields are very likely to hit like a ton of bricks,
-  when their shields are depleted.  Use with caution!  Or with abandon!  It's
-  up to you!
+  when killed.
+
+* **Eridian Guardian Shield Behavior**: In the default configuration, Eridian
+  Guardians will just use their default shield, and not drop any.  Like
+  Stalkers, they can optionally be set to equip and drop "real" shields.
+
+* **Claptastic Voyage Creature Shield Behavior**: As with Stalkers and
+  Eridian Guardians, by default the creatures from the Claptastic Voyage DLC
+  (viruses, bugs, glitches, etc) will not equip or drop "real" shields.
+  That can optionally be toggled on in here.
 
 ### Implications
 
@@ -161,13 +120,6 @@ quality, when loaded into FilterTool/BLCMM:
   knowing how to use better gear efficiently, though for very powerful
   weapons, that's not much help.
 
-* It's not obvious in the vanilla game, but nearly all Loaders spawn with a
-  shield. Ordinarily their shield can *only* be charged up by Shield
-  Surveyors, and their shields start out at zero strength.  With this mod,
-  all their shields have turned into real shields, which start regenerating
-  immediately, which will probably make Loader-heavy areas much more
-  difficult.
-
 * Weapons and Shields ordinarily found in treasure chests have been replaced
   with the main ammo/money/eridium pool, rather than removed outright,
   because otherwise the probabilities of getting grenade mods, COMs, and
@@ -176,21 +128,17 @@ quality, when loaded into FilterTool/BLCMM:
   that as of right now, the extra ammo/money won't be aligned properly within
   the chest.  Them's the breaks, currently.)
 
-* Keep in mind that areas which are creature-heavy (such as Caustic Caverns)
-  or full of non-gear-using enemies (such as most of the Dragon Keep DLC) will
-  be pretty weak in the loot front, since weapons and shields will generally
-  not be found in those areas.
+* Keep in mind that areas which are creature-heavy (such as Serenity's Waste,
+  Eleseer, and some areas of the Claptastic Voyage DLC) will be pretty weak
+  in the loot front, since weapons and shields will generally not be found
+  in those areas.
 
 Compatibility
 -------------
 
-This mod is compatible with UCP, and in fact requires that UCP's skinpool
-changes be in place.
+This mod is fully compatible with UCP.
 
 This will obviously conflict with other mods with similar aims.
-theNocturni's "Enemy Enhancer" is one obvious conflict, though the
-non-loot-pool parts of Enemy Enhancer would still be active (such as
-faster enemy animations, etc).
 
 This mod overwrites/disables much of the functionality in my own "Better
 Loot" mod, but it's designed to work fine with both enabled (so long as
@@ -220,7 +168,7 @@ directory.  You'd need to copy (or symlink, if you're on Mac or Linux)
 To generate the end result file, I actually run the small shell script
 `create.sh` in this directory, which just does the following:
 
-    ./generate-source.py && ../conv_to_mod.py -f "BL2 Cold Dead Hands"
+    ./generate-source.py && ../conv_to_mod.py -f "TPS Cold Dead Hands"
 
 Bugs
 ====
@@ -232,6 +180,13 @@ Known issues with the mod:
   unnatural-looking way.  For now I'm just coping; there's a couple different
   ways to fix that (enumerated below) but I don't particularly care to do
   either at the moment.
+
+* Dahl Lost Legion inside the Veins of Helios don't have this mod applied.
+  Hotfixes against their `AIPawnBalanceDefinition` objects just seem to get
+  totally ignored.  I could work around this by redirecting the "stock" equip
+  pools to my custom ones, but I'd been purposefully leaving those alone in
+  case anything else was using them.  I don't *think* that should be the case,
+  but I'll have to do some digging.
 
 Ideas/TODO
 ==========
@@ -252,6 +207,13 @@ Things to think about:
      to spawn weapons/shields attach to different locations, or just not at
      all.  The problem here is that's just a fair amount of busywork I don't
      care to do.
+* Variable drop rates for equipped items, per rarity level?  I think we could
+  accomplish this pretty easily by abusing the pools a bit - have two entries
+  per rarity, one which drops and one which doesn't.
+* Optionally disable launchers in the main equip pools
+* Optionally disable our container nerfs.  (This is actually mostly already
+  available -- we'd just need to move some of our big list-of-hotfixes in
+  with the other container area, and probably move the folder around a bit.)
 
 Licenses
 ========

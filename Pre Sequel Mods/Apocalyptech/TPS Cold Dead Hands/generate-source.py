@@ -3235,6 +3235,47 @@ for (label, key, unique_pct, rare_pct) in [
             level='Outlands_P2',
             activated=hotfix_activated)
 
+    # Lazlo (InnerHull_P, using own pool)
+
+    setup_boss_pool('lazlo_pool_0', 'InnerHull_P',
+            'GD_Lazlo.ItemPools.Pool_Lazlo_Freezeasy_EnemyUse',
+            None,
+            [
+                ('GD_Cork_Weap_Lasers.A_Weapons_Unique.Laser_Maliwan_3_Blizzard', 1, 'WeaponBalanceDefinition'),
+                ('GD_Cork_Weap_Pistol.A_Weapons_Legendary.Pistol_Tediore_5_Shooterang', 1, 'WeaponBalanceDefinition'),
+            ],
+            activated=hotfix_activated)
+
+    set_dipl_item_prob('lazlo_pool_1',
+            'GD_Population_Rat.Balance.PawnBalance_Lazlo',
+            2,
+            level='InnerHull_P',
+            activated=hotfix_activated)
+
+    # Eghood (InnerHull_P pool 0)
+
+    setup_boss_pool('eghood_pool_0', 'InnerHull_P', other.level_pool_0,
+            badass.equip_pool_shotguns,
+            [
+                ('GD_Cork_Weap_Pistol.A_Weapons_Legendary.Pistol_Dahl_5_Blowfly', unique_pct, 'WeaponBalanceDefinition'),
+            ],
+            activated=hotfix_activated)
+
+    set_dipl_item_pool('eghood_pool_1',
+            'GD_Population_Boils.Balance.PawnBalance_Eghood',
+            0,
+            other.level_pool_0,
+            level='InnerHull_P',
+            activated=hotfix_activated)
+
+    setup_boss_pool('eghood_pool_2', 'InnerHull_P',
+            'GD_Itempools.Runnables.Pool_Eghood',
+            None,
+            [
+                ('GD_GrenadeMods.A_Item_Legendary.GM_Leech', 1, 'InventoryBalanceDefinition'),
+            ],
+            activated=hotfix_activated)
+
     # Generate the section string
     with open('input-file-bosses.txt', 'r') as df:
         boss_drops[key] = df.read().format(
