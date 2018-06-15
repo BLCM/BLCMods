@@ -3276,6 +3276,50 @@ for (label, key, unique_pct, rare_pct) in [
             ],
             activated=hotfix_activated)
 
+    # Lost Legion Courier (Laser_P pool 0)
+    # This is actually our own addition - making him equip/drop a Major Tom.  The
+    # Powersuit Noob already does that, but the powersuit doesn't actually USE a
+    # real weapon, so I wanted to give it the opporuntity to do so.
+
+    setup_boss_pool('courier_pool_0', 'Laser_P', other.level_pool_0,
+            regular.equip_pool_lasers,
+            [
+                ('gd_cork_weap_assaultrifle.A_Weapons_Legendary.AR_Dahl_5_MajorTom', unique_pct, 'WeaponBalanceDefinition'),
+            ],
+            activated=hotfix_activated)
+
+    set_dipl_item_pool('courier_pool_1',
+            'GD_DahlRedShirt.Balance.PawnBalance_DahlRedShirt',
+            0,
+            other.level_pool_0,
+            level='Laser_P',
+            activated=hotfix_activated)
+
+    # Lost Legion Powersuit Noob shield (Laser_P pool 1)
+    # Also tweak the runnables to just have the Major Tom
+
+    setup_boss_pool('powersuit_noob_pool_0', 'Laser_P', other.level_pool_1,
+            badass.equip_pool_shields,
+            [
+                ('GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Roid_ShootingStar', unique_pct, 'InventoryBalanceDefinition'),
+            ],
+            activated=hotfix_activated)
+
+    set_dipl_item_pool('powersuit_noob_pool_1',
+            'GD_DahlRedShirtPowersuit.Balance.PawnBalance_DahlRedShirtPowersuit',
+            0,
+            other.level_pool_1,
+            level='Laser_P',
+            activated=hotfix_activated)
+
+    setup_boss_pool('powersuit_noob_pool_2', 'Laser_P',
+            'GD_Itempools.Runnables.Pool_RedShirt',
+            None,
+            [
+                ('gd_cork_weap_assaultrifle.A_Weapons_Legendary.AR_Dahl_5_MajorTom', 1, 'WeaponBalanceDefinition'),
+            ],
+            activated=hotfix_activated)
+
     # Generate the section string
     with open('input-file-bosses.txt', 'r') as df:
         boss_drops[key] = df.read().format(

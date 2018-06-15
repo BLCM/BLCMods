@@ -191,6 +191,20 @@ Known issues with the mod:
 Ideas/TODO
 ==========
 
+Things to do before releasing
+
+* Finish, obvs.
+* Go through BL's Boss Drop Improved Quantities in case I missed anything
+  * Doublecheck Swagman?  BL uses a different pool than CDH.  I bet one or
+    the other isn't actually correct.  (though BL may have linked the two)
+* Go through the drop pool lists main hotfix area to look for Better Loot
+  compat concerns.
+* Ascending Lost Legion - figure out their drops
+* Also figure out Shadow-TP's drops, though that'll happen as I go through CV...
+* Lost Legion Snipers don't drop weapon?
+* Let GUN loaders use our custom equip pools
+* Reset Red, then Dead to test Courier drops.
+
 Things to think about:
 
 * Enemy Moon Buggies shouldn't drop weapons

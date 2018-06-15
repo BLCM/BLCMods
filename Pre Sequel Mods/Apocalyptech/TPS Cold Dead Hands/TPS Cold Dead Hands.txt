@@ -1576,6 +1576,12 @@
 
                 #</Swagman>
 
+                #<Lost Legion Powersuit Noob>
+
+                    set GD_Itempools.Runnables.Pool_RedShirt Quantity (BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+
+                #</Lost Legion Powersuit Noob>
+
             #</Revert Boss Drop Improved Quantities>
 
         #</Compatibility with Better Loot Mod>
@@ -4262,6 +4268,36 @@
 
                 #</Eghood>
 
+                #<Lost Legion Courier>
+
+                    # This guy's only encountered during the mission "Red, then Dead" and
+                    # doesn't ordinarily have any unique drops (even with UCP enabled).
+                    # The Powersuit Noob, the next main enemy during that mission was
+                    # changed by UCP to drop the Major Tom, but the powersuits don't
+                    # actually use/equip "real" weapons.  So, just because I like having
+                    # these weapons equippable, I'm adding Major Tom to the Courier as
+                    # well.
+
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossGuaranteedBossPool18"</key><value>"Laser_P,GD_CustomItemPools_MainGame.Prototype.GreenPattern,BalancedItems,,((ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'gd_cork_weap_assaultrifle.A_Weapons_Legendary.AR_Dahl_5_MajorTom',Probability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True))"</value><on>
+
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossGuaranteedDIPLItemPool15"</key><value>"Laser_P,GD_DahlRedShirt.Balance.PawnBalance_DahlRedShirt,DefaultItemPoolList[0],,(ItemPool=ItemPoolDefinition'GD_CustomItemPools_MainGame.Prototype.GreenPattern',PoolProbability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1))"</value><on>
+
+                #</Lost Legion Courier>
+
+                #<Lost Legion Powersuit Noob>
+
+                    # UCP adds the Major Tom, in addition to the Shooting Star he usually
+                    # drops.  Powersuits don't use "real" weapons but we can equip the
+                    # shield.
+
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossGuaranteedBossPool19"</key><value>"Laser_P,GD_CustomItemPools_Quince.Doppel.GreenPattern,BalancedItems,,((ItmPoolDefinition=None,InvBalanceDefinition=InventoryBalanceDefinition'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Roid_ShootingStar',Probability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True))"</value><on>
+
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossGuaranteedDIPLItemPool16"</key><value>"Laser_P,GD_DahlRedShirtPowersuit.Balance.PawnBalance_DahlRedShirtPowersuit,DefaultItemPoolList[0],,(ItemPool=ItemPoolDefinition'GD_CustomItemPools_Quince.Doppel.GreenPattern',PoolProbability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1))"</value><on>
+
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossGuaranteedBossPool20"</key><value>"Laser_P,GD_Itempools.Runnables.Pool_RedShirt,BalancedItems,,((ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'gd_cork_weap_assaultrifle.A_Weapons_Legendary.AR_Dahl_5_MajorTom',Probability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True))"</value><on>
+
+                #</Lost Legion Powersuit Noob>
+
             #</Base Game>
 
         #</Guaranteed (100% Uniques, 100% Rares)>
@@ -4470,6 +4506,36 @@
                     #<hotfix><key>"SparkLevelPatchEntry-ApocBossVeryimprovedBossPool17"</key><value>"InnerHull_P,GD_Itempools.Runnables.Pool_Eghood,BalancedItems,,((ItmPoolDefinition=None,InvBalanceDefinition=InventoryBalanceDefinition'GD_GrenadeMods.A_Item_Legendary.GM_Leech',Probability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True))"</value><off>
 
                 #</Eghood>
+
+                #<Lost Legion Courier><off>
+
+                    ## This guy's only encountered during the mission "Red, then Dead" and<off>
+                    ## doesn't ordinarily have any unique drops (even with UCP enabled).<off>
+                    ## The Powersuit Noob, the next main enemy during that mission was<off>
+                    ## changed by UCP to drop the Major Tom, but the powersuits don't<off>
+                    ## actually use/equip "real" weapons.  So, just because I like having<off>
+                    ## these weapons equippable, I'm adding Major Tom to the Courier as<off>
+                    ## well.<off>
+
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossVeryimprovedBossPool18"</key><value>"Laser_P,GD_CustomItemPools_MainGame.Prototype.GreenPattern,BalancedItems,,((ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'gd_cork_weap_assaultrifle.A_Weapons_Legendary.AR_Dahl_5_MajorTom',Probability=(BaseValueConstant=0.5,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_CustomItemPools_MainGame.Lawbringer.GreenPale',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.5,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True))"</value><off>
+
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossVeryimprovedDIPLItemPool15"</key><value>"Laser_P,GD_DahlRedShirt.Balance.PawnBalance_DahlRedShirt,DefaultItemPoolList[0],,(ItemPool=ItemPoolDefinition'GD_CustomItemPools_MainGame.Prototype.GreenPattern',PoolProbability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1))"</value><off>
+
+                #</Lost Legion Courier>
+
+                #<Lost Legion Powersuit Noob><off>
+
+                    ## UCP adds the Major Tom, in addition to the Shooting Star he usually<off>
+                    ## drops.  Powersuits don't use "real" weapons but we can equip the<off>
+                    ## shield.<off>
+
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossVeryimprovedBossPool19"</key><value>"Laser_P,GD_CustomItemPools_Quince.Doppel.GreenPattern,BalancedItems,,((ItmPoolDefinition=None,InvBalanceDefinition=InventoryBalanceDefinition'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Roid_ShootingStar',Probability=(BaseValueConstant=0.5,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_CustomItemPools_Quince.Doppel.GreenPale',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.5,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True))"</value><off>
+
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossVeryimprovedDIPLItemPool16"</key><value>"Laser_P,GD_DahlRedShirtPowersuit.Balance.PawnBalance_DahlRedShirtPowersuit,DefaultItemPoolList[0],,(ItemPool=ItemPoolDefinition'GD_CustomItemPools_Quince.Doppel.GreenPattern',PoolProbability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1))"</value><off>
+
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossVeryimprovedBossPool20"</key><value>"Laser_P,GD_Itempools.Runnables.Pool_RedShirt,BalancedItems,,((ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'gd_cork_weap_assaultrifle.A_Weapons_Legendary.AR_Dahl_5_MajorTom',Probability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True))"</value><off>
+
+                #</Lost Legion Powersuit Noob>
 
             #</Base Game>
 
@@ -4680,6 +4746,36 @@
 
                 #</Eghood>
 
+                #<Lost Legion Courier><off>
+
+                    ## This guy's only encountered during the mission "Red, then Dead" and<off>
+                    ## doesn't ordinarily have any unique drops (even with UCP enabled).<off>
+                    ## The Powersuit Noob, the next main enemy during that mission was<off>
+                    ## changed by UCP to drop the Major Tom, but the powersuits don't<off>
+                    ## actually use/equip "real" weapons.  So, just because I like having<off>
+                    ## these weapons equippable, I'm adding Major Tom to the Courier as<off>
+                    ## well.<off>
+
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossImprovedBossPool18"</key><value>"Laser_P,GD_CustomItemPools_MainGame.Prototype.GreenPattern,BalancedItems,,((ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'gd_cork_weap_assaultrifle.A_Weapons_Legendary.AR_Dahl_5_MajorTom',Probability=(BaseValueConstant=0.33,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_CustomItemPools_MainGame.Lawbringer.GreenPale',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.67,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True))"</value><off>
+
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossImprovedDIPLItemPool15"</key><value>"Laser_P,GD_DahlRedShirt.Balance.PawnBalance_DahlRedShirt,DefaultItemPoolList[0],,(ItemPool=ItemPoolDefinition'GD_CustomItemPools_MainGame.Prototype.GreenPattern',PoolProbability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1))"</value><off>
+
+                #</Lost Legion Courier>
+
+                #<Lost Legion Powersuit Noob><off>
+
+                    ## UCP adds the Major Tom, in addition to the Shooting Star he usually<off>
+                    ## drops.  Powersuits don't use "real" weapons but we can equip the<off>
+                    ## shield.<off>
+
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossImprovedBossPool19"</key><value>"Laser_P,GD_CustomItemPools_Quince.Doppel.GreenPattern,BalancedItems,,((ItmPoolDefinition=None,InvBalanceDefinition=InventoryBalanceDefinition'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Roid_ShootingStar',Probability=(BaseValueConstant=0.33,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_CustomItemPools_Quince.Doppel.GreenPale',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.67,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True))"</value><off>
+
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossImprovedDIPLItemPool16"</key><value>"Laser_P,GD_DahlRedShirtPowersuit.Balance.PawnBalance_DahlRedShirtPowersuit,DefaultItemPoolList[0],,(ItemPool=ItemPoolDefinition'GD_CustomItemPools_Quince.Doppel.GreenPattern',PoolProbability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1))"</value><off>
+
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossImprovedBossPool20"</key><value>"Laser_P,GD_Itempools.Runnables.Pool_RedShirt,BalancedItems,,((ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'gd_cork_weap_assaultrifle.A_Weapons_Legendary.AR_Dahl_5_MajorTom',Probability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True))"</value><off>
+
+                #</Lost Legion Powersuit Noob>
+
             #</Base Game>
 
         #</Improved (33% Uniques, 60% Rares)>
@@ -4889,6 +4985,36 @@
 
                 #</Eghood>
 
+                #<Lost Legion Courier><off>
+
+                    ## This guy's only encountered during the mission "Red, then Dead" and<off>
+                    ## doesn't ordinarily have any unique drops (even with UCP enabled).<off>
+                    ## The Powersuit Noob, the next main enemy during that mission was<off>
+                    ## changed by UCP to drop the Major Tom, but the powersuits don't<off>
+                    ## actually use/equip "real" weapons.  So, just because I like having<off>
+                    ## these weapons equippable, I'm adding Major Tom to the Courier as<off>
+                    ## well.<off>
+
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossSlightBossPool18"</key><value>"Laser_P,GD_CustomItemPools_MainGame.Prototype.GreenPattern,BalancedItems,,((ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'gd_cork_weap_assaultrifle.A_Weapons_Legendary.AR_Dahl_5_MajorTom',Probability=(BaseValueConstant=0.22,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_CustomItemPools_MainGame.Lawbringer.GreenPale',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.78,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True))"</value><off>
+
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossSlightDIPLItemPool15"</key><value>"Laser_P,GD_DahlRedShirt.Balance.PawnBalance_DahlRedShirt,DefaultItemPoolList[0],,(ItemPool=ItemPoolDefinition'GD_CustomItemPools_MainGame.Prototype.GreenPattern',PoolProbability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1))"</value><off>
+
+                #</Lost Legion Courier>
+
+                #<Lost Legion Powersuit Noob><off>
+
+                    ## UCP adds the Major Tom, in addition to the Shooting Star he usually<off>
+                    ## drops.  Powersuits don't use "real" weapons but we can equip the<off>
+                    ## shield.<off>
+
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossSlightBossPool19"</key><value>"Laser_P,GD_CustomItemPools_Quince.Doppel.GreenPattern,BalancedItems,,((ItmPoolDefinition=None,InvBalanceDefinition=InventoryBalanceDefinition'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Roid_ShootingStar',Probability=(BaseValueConstant=0.22,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_CustomItemPools_Quince.Doppel.GreenPale',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.78,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True))"</value><off>
+
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossSlightDIPLItemPool16"</key><value>"Laser_P,GD_DahlRedShirtPowersuit.Balance.PawnBalance_DahlRedShirtPowersuit,DefaultItemPoolList[0],,(ItemPool=ItemPoolDefinition'GD_CustomItemPools_Quince.Doppel.GreenPattern',PoolProbability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1))"</value><off>
+
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossSlightBossPool20"</key><value>"Laser_P,GD_Itempools.Runnables.Pool_RedShirt,BalancedItems,,((ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'gd_cork_weap_assaultrifle.A_Weapons_Legendary.AR_Dahl_5_MajorTom',Probability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True))"</value><off>
+
+                #</Lost Legion Powersuit Noob>
+
             #</Base Game>
 
         #</Slightly Improved (22% Uniques, 45% Rares)>
@@ -5097,6 +5223,36 @@
                     #<hotfix><key>"SparkLevelPatchEntry-ApocBossStockBossPool17"</key><value>"InnerHull_P,GD_Itempools.Runnables.Pool_Eghood,BalancedItems,,((ItmPoolDefinition=None,InvBalanceDefinition=InventoryBalanceDefinition'GD_GrenadeMods.A_Item_Legendary.GM_Leech',Probability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True))"</value><off>
 
                 #</Eghood>
+
+                #<Lost Legion Courier><off>
+
+                    ## This guy's only encountered during the mission "Red, then Dead" and<off>
+                    ## doesn't ordinarily have any unique drops (even with UCP enabled).<off>
+                    ## The Powersuit Noob, the next main enemy during that mission was<off>
+                    ## changed by UCP to drop the Major Tom, but the powersuits don't<off>
+                    ## actually use/equip "real" weapons.  So, just because I like having<off>
+                    ## these weapons equippable, I'm adding Major Tom to the Courier as<off>
+                    ## well.<off>
+
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossStockBossPool18"</key><value>"Laser_P,GD_CustomItemPools_MainGame.Prototype.GreenPattern,BalancedItems,,((ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'gd_cork_weap_assaultrifle.A_Weapons_Legendary.AR_Dahl_5_MajorTom',Probability=(BaseValueConstant=0.1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_CustomItemPools_MainGame.Lawbringer.GreenPale',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.9,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True))"</value><off>
+
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossStockDIPLItemPool15"</key><value>"Laser_P,GD_DahlRedShirt.Balance.PawnBalance_DahlRedShirt,DefaultItemPoolList[0],,(ItemPool=ItemPoolDefinition'GD_CustomItemPools_MainGame.Prototype.GreenPattern',PoolProbability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1))"</value><off>
+
+                #</Lost Legion Courier>
+
+                #<Lost Legion Powersuit Noob><off>
+
+                    ## UCP adds the Major Tom, in addition to the Shooting Star he usually<off>
+                    ## drops.  Powersuits don't use "real" weapons but we can equip the<off>
+                    ## shield.<off>
+
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossStockBossPool19"</key><value>"Laser_P,GD_CustomItemPools_Quince.Doppel.GreenPattern,BalancedItems,,((ItmPoolDefinition=None,InvBalanceDefinition=InventoryBalanceDefinition'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Roid_ShootingStar',Probability=(BaseValueConstant=0.1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_CustomItemPools_Quince.Doppel.GreenPale',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.9,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True))"</value><off>
+
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossStockDIPLItemPool16"</key><value>"Laser_P,GD_DahlRedShirtPowersuit.Balance.PawnBalance_DahlRedShirtPowersuit,DefaultItemPoolList[0],,(ItemPool=ItemPoolDefinition'GD_CustomItemPools_Quince.Doppel.GreenPattern',PoolProbability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1))"</value><off>
+
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocBossStockBossPool20"</key><value>"Laser_P,GD_Itempools.Runnables.Pool_RedShirt,BalancedItems,,((ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'gd_cork_weap_assaultrifle.A_Weapons_Legendary.AR_Dahl_5_MajorTom',Probability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True))"</value><off>
+
+                #</Lost Legion Powersuit Noob>
 
             #</Base Game>
 
