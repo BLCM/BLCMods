@@ -1018,7 +1018,6 @@ class Badass(DropConfig):
                 (0, 'GD_Population_Darksiders.Balance.PawnBalance_DarksiderBadassBandit'),
                 (0, 'GD_Population_Darksiders.Balance.PawnBalance_LittleDarksiderBadassBandit'),
                 (0, 'GD_Squat.Population.PawnBalance_Squat'),
-                (2, 'GD_TimberLogwood.Balance.PawnBalance_TimberLogwood'),
             ],
             # AR-Weighted
             [
@@ -1033,6 +1032,7 @@ class Badass(DropConfig):
                 (0, 'GD_Population_Boils.Balance.PawnBalance_Eghood_MercDay'),
                 (0, 'GD_Population_Boils.Balance.PawnBalance_Eghood_Pandoracorn'),
                 (0, 'GD_Population_Boils.Balance.PawnBalance_Eghood_Pumpkin'),
+                (2, 'GD_TimberLogwood.Balance.PawnBalance_TimberLogwood'),
             ],
             # Snipers Only
             [
@@ -3140,7 +3140,7 @@ for (label, key, unique_pct, rare_pct) in [
             'GD_Itempools.Runnables.Pool_Red_Rare',
             badass.equip_pool_ar,
             [
-                ('GD_Cork_Weap_Launchers.A_Weapons_Legendary.RL_Bandit_5_BadaBoom', rare_pct, 'InventoryBalanceDefinition'),
+                ('GD_Cork_Weap_Launchers.A_Weapons_Legendary.RL_Bandit_5_BadaBoom', rare_pct, 'WeaponBalanceDefinition'),
             ],
             activated=hotfix_activated)
 
@@ -3173,7 +3173,7 @@ for (label, key, unique_pct, rare_pct) in [
             'GD_Itempools.Runnables.Pool_Belly',
             badass.equip_pool_lasers,
             [
-                ('GD_Cork_Weap_Shotgun.A_Weapons_Legendary.SG_Jakobs_5_Striker', unique_pct, 'InventoryBalanceDefinition'),
+                ('GD_Cork_Weap_Shotgun.A_Weapons_Legendary.SG_Jakobs_5_Striker', unique_pct, 'WeaponBalanceDefinition'),
             ],
             activated=hotfix_activated)
 
@@ -3198,6 +3198,29 @@ for (label, key, unique_pct, rare_pct) in [
             1,
             other.level_pool_2,
             level='ComFacility_P',
+            activated=hotfix_activated)
+
+    # Drongo Bones (Outlands_P2 pool 0)
+
+    setup_boss_pool('drongobones_pool_0', 'Outlands_P2', other.level_pool_0,
+            badass.equip_pool_lasers,
+            [
+                ('GD_Cork_Weap_SMG.A_Weapons_Legendary.SMG_Hyperion_5_Bitch', unique_pct, 'WeaponBalanceDefinition'),
+                ('GD_Cork_Weap_Pistol.A_Weapons_Legendary.Pistol_Jakobs_5_Maggie', unique_pct, 'WeaponBalanceDefinition'),
+            ],
+            activated=hotfix_activated)
+
+    set_dipl_item_pool('drongobones_pool_1',
+            'GD_DrongoBones.Balance.PawnBalance_DrongoBones',
+            1,
+            other.level_pool_0,
+            level='Outlands_P2',
+            activated=hotfix_activated)
+
+    set_dipl_item_prob('drongobones_pool_2',
+            'GD_DrongoBones.Balance.PawnBalance_DrongoBones',
+            2,
+            level='Outlands_P2',
             activated=hotfix_activated)
 
     # Generate the section string
