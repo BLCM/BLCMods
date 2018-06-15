@@ -469,6 +469,10 @@ class Regular(DropConfig):
                 (1, 'GD_ProtoWarBot_GunLoader.Population.PawnBalance_ProtoWarBot_FriendLoader'),
                 (1, 'GD_ProtoWarBot_GunLoader.Population.PawnBalance_ProtoWarBot_FriendLoaderYellow'),
                 (1, 'GD_ProtoWarBot_GunLoader.Population.PawnBalance_ProtoWarBot_GunLoader'),
+                (0, 'GD_Population_Dahl.Balance.PawnBalance_DahlSergeant'),
+                (0, 'GD_Population_Dahl.Balance.Pumpkin.PawnBalance_DahlSergeant_Pumpkin'),
+                (0, 'GD_Population_Dahl.Balance.Pandoracorn.PawnBalance_DahlSergeant_Pandoracorn'),
+                (0, 'GD_Population_Dahl.Balance.MercDay.PawnBalance_DahlSergeant_MercDay'),
             ],
             # All Weapons
             [
@@ -1008,6 +1012,10 @@ class Badass(DropConfig):
                 (1, 'GD_SpacemanDeadlift.Population.PawnBalance_SpacemanDeadlift_Pandoracorn'),
                 (1, 'GD_SpacemanDeadlift.Population.PawnBalance_SpacemanDeadlift_Pumpkin'),
                 (0, 'GD_TimberLogwood.Balance.PawnBalance_TimberLogwood'),
+                (0, 'GD_Population_Dahl.Balance.PawnBalance_BadassDahlMarine'),
+                (0, 'GD_Population_Dahl.Balance.Pumpkin.PawnBalance_BadassDahlMarine_Pumpkin'),
+                (0, 'GD_Population_Dahl.Balance.Pandoracorn.PawnBalance_BadassDahlMarine_Pandoracorn'),
+                (0, 'GD_Population_Dahl.Balance.MercDay.PawnBalance_BadassDahlMarine_MercDay'),
             ],
             # All Weapons
             [
@@ -1046,6 +1054,7 @@ class Badass(DropConfig):
                 (0, 'GD_Ma_Pop_ClaptrapForces.Balance.PawnBalance_CleanupRuntime'),
                 (0, 'GD_Ma_Pop_ClaptrapForces.Balance.PawnBalance_VeryInsecureBadass'),
                 (0, 'GD_Population_Scavengers.Uniques.PawnBalance_Kelly'),
+                (0, 'GD_Population_Dahl.Balance.PawnBalance_DahlMarine_CentralTerm'),
             ],
         )
 
