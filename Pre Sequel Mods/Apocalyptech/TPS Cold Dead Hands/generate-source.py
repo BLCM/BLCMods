@@ -3134,6 +3134,72 @@ for (label, key, unique_pct, rare_pct) in [
             level='ComFacility_P',
             activated=hotfix_activated)
 
+    # Red Weapon (ComFacility_P, using own pool)
+
+    setup_boss_pool('red_pool_0', 'ComFacility_P',
+            'GD_Itempools.Runnables.Pool_Red_Rare',
+            badass.equip_pool_ar,
+            [
+                ('GD_Cork_Weap_Launchers.A_Weapons_Legendary.RL_Bandit_5_BadaBoom', rare_pct, 'InventoryBalanceDefinition'),
+            ],
+            activated=hotfix_activated)
+
+    set_dipl_item_pool('red_pool_1',
+            'GD_Population_Scavengers.Uniques.PawnBalance_Ned',
+            0,
+            'GD_Itempools.Runnables.Pool_Red_Rare',
+            level='ComFacility_P',
+            activated=hotfix_activated)
+
+    # Red Shield (ComFacility_P pool 1)
+
+    setup_boss_pool('red_pool_2', 'ComFacility_P', other.level_pool_1,
+            badass.equip_pool_shields,
+            [
+                ('GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Roid_05_Legendary', rare_pct, 'InventoryBalanceDefinition'),
+            ],
+            activated=hotfix_activated)
+
+    set_dipl_item_pool('red_pool_3',
+            'GD_Population_Scavengers.Uniques.PawnBalance_Ned',
+            2,
+            other.level_pool_1,
+            level='ComFacility_P',
+            activated=hotfix_activated)
+
+    # Belly Weapon (ComFacility_P, using own pool)
+
+    setup_boss_pool('belly_pool_0', 'ComFacility_P',
+            'GD_Itempools.Runnables.Pool_Belly',
+            badass.equip_pool_lasers,
+            [
+                ('GD_Cork_Weap_Shotgun.A_Weapons_Legendary.SG_Jakobs_5_Striker', unique_pct, 'InventoryBalanceDefinition'),
+            ],
+            activated=hotfix_activated)
+
+    set_dipl_item_pool('belly_pool_1',
+            'GD_Population_Scavengers.Uniques.PawnBalance_Kelly',
+            0,
+            'GD_Itempools.Runnables.Pool_Belly',
+            level='ComFacility_P',
+            activated=hotfix_activated)
+
+    # Belly Shield (ComFacility_P pool 2)
+
+    setup_boss_pool('belly_pool_2', 'ComFacility_P', other.level_pool_2,
+            badass.equip_pool_shields,
+            [
+                ('GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Juggernaut_05_Legendary', unique_pct, 'InventoryBalanceDefinition'),
+            ],
+            activated=hotfix_activated)
+
+    set_dipl_item_pool('belly_pool_3',
+            'GD_Population_Scavengers.Uniques.PawnBalance_Kelly',
+            1,
+            other.level_pool_2,
+            level='ComFacility_P',
+            activated=hotfix_activated)
+
     # Generate the section string
     with open('input-file-bosses.txt', 'r') as df:
         boss_drops[key] = df.read().format(
