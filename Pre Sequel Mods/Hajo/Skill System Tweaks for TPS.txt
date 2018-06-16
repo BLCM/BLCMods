@@ -1,0 +1,1068 @@
+#<Skill System Tweaks For TPS>
+
+    #<---------------------------------------------------------------------------------------------------->
+
+    #</---------------------------------------------------------------------------------------------------->
+
+    #<Made by Coleby & Hajo with the help of apocalyptech>
+
+    #</Made by Coleby & Hajo with the help of apocalyptech>
+
+    #<---------------------------------------------------------------------------------------------------->
+
+    #</---------------------------------------------------------------------------------------------------->
+
+    #<Gain 2 Skill Points instead of 1 and increase some skills' maximum grade to 10!>
+
+    #</Gain 2 Skill Points instead of 1 and increase some skills' maximum grade to 10!>
+
+    #<---------------------------------------------------------------------------------------------------->
+
+    #</---------------------------------------------------------------------------------------------------->
+
+    #<NOTE: Some skill maximums are not extended to 10, due to being too overpowered, even for this Mod.>
+
+    #</NOTE: Some skill maximums are not extended to 10, due to being too overpowered, even for this Mod.>
+
+    #<They can be enabled under the "Disabled by default" section. (Most of Nisha is disabled)>
+
+    #</They can be enabled under the "Disabled by default" section. (Most of Nisha is disabled)>
+
+    #<---------------------------------------------------------------------------------------------------->
+
+    #</---------------------------------------------------------------------------------------------------->
+
+    #<WARNING: Activate this mod before loading your character, because if you don't activate this mod,>
+
+    #</WARNING: Activate this mod before loading your character, because if you don't activate this mod,>
+
+    #<before loading your character you will lose your extra skill points>
+
+    #</before loading your character you will lose your extra skill points>
+
+    #<(which can be recovered by using a Cheat Engine (Gibbed))>
+
+    #</(which can be recovered by using a Cheat Engine (Gibbed))>
+
+    #<---------------------------------------------------------------------------------------------------->
+
+    #</---------------------------------------------------------------------------------------------------->
+
+    #<2 Skill Points per level>
+
+        set GD_Globals.Skills.INI_SkillPointsPerLevelUp ConditionalInitialization (bEnabled=True,ConditionalExpressionList=((BaseValueIfTrue=(BaseValueConstant=2,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),Expressions=((AttributeOperand1=AttributeDefinition'D_Attributes.ExperienceResourcePool.PlayerExperienceLevel',ComparisonOperator=OPERATOR_GreaterThanOrEqual,Operand2Usage=OPERAND_PreferAttribute,AttributeOperand2=None,ConstantOperand2=1)))),DefaultBaseValue=(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1))
+
+        set GD_Globals.Skills.INI_TotalSkillPointsForCurrentLevel ConditionalInitialization (bEnabled=True,ConditionalExpressionList=((BaseValueIfTrue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Globals.Skills.INI_TotalSkillPointsForCurrentLevelFormula',BaseValueScaleConstant=1.000000),Expressions=((AttributeOperand1=AttributeDefinition'D_Attributes.ExperienceResourcePool.PlayerExperienceLevel',ComparisonOperator=OPERATOR_GreaterThanOrEqual,Operand2Usage=OPERAND_PreferAttribute,AttributeOperand2=None,ConstantOperand2=2.000000)))),DefaultBaseValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))
+
+        set GD_Globals.Skills.INI_TotalSkillPointsForCurrentLevelFormula ValueFormula (bEnabled=True,Multiplier=(BaseValueConstant=2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),Level=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.ExperienceResourcePool.PlayerExperienceLevel',InitializationDefinition=None,BaseValueScaleConstant=1.000000),Power=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),Offset=(BaseValueConstant=-1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))
+
+    #</2 Skill Points per level>
+
+    #<Enabled by default>
+
+        #<Athena>
+
+            #<Phalanx Tree>
+
+                #<Ivictus Skill>
+
+                    #<hotfix><key>"SparkOnDemandPatchEntry-Phalanx1"</key><value>"GD_Gladiator_Streaming,GD_Gladiator_Skills.Phalanx.Invictus,MaxGrade,,10"</value><on>
+
+                #</Ivictus Skill>
+
+                #<Ephodos Skill>
+
+                    #<hotfix><key>"SparkOnDemandPatchEntry-Phalanx2"</key><value>"GD_Gladiator_Streaming,GD_Gladiator_Skills.Phalanx.Ephodos,MaxGrade,,10"</value><on>
+
+                #</Ephodos Skill>
+
+                #<Vanguard Skill>
+
+                    #<hotfix><key>"SparkOnDemandPatchEntry-Phalanx3"</key><value>"GD_Gladiator_Streaming,GD_Gladiator_Skills.Phalanx.Vanguard,MaxGrade,,10"</value><on>
+
+                #</Vanguard Skill>
+
+                #<Hold The Line Skill>
+
+                    #<hotfix><key>"SparkOnDemandPatchEntry-Phalanx4"</key><value>"GD_Gladiator_Streaming,GD_Gladiator_Skills.Phalanx.HoldTheLine,MaxGrade,,10"</value><on>
+
+                #</Hold The Line Skill>
+
+                #<United Front Skill>
+
+                    #<hotfix><key>"SparkOnDemandPatchEntry-Phalanx5"</key><value>"GD_Gladiator_Streaming,GD_Gladiator_Skills.Phalanx.UnitedFront,MaxGrade,,10"</value><on>
+
+                #</United Front Skill>
+
+                #<Stalwart Skill>
+
+                    #<hotfix><key>"SparkOnDemandPatchEntry-Phalanx6"</key><value>"GD_Gladiator_Streaming,GD_Gladiator_Skills.Phalanx.Stalwart,MaxGrade,,10"</value><on>
+
+                #</Stalwart Skill>
+
+                #<Returning Fire Skill>
+
+                    #<hotfix><key>"SparkOnDemandPatchEntry-Phalanx7"</key><value>"GD_Gladiator_Streaming,GD_Gladiator_Skills.Phalanx.ReturningFire,MaxGrade,,10"</value><on>
+
+                #</Returning Fire Skill>
+
+                #<Prepare For Glory Skill>
+
+                    #<hotfix><key>"SparkOnDemandPatchEntry-Phalanx8"</key><value>"GD_Gladiator_Streaming,GD_Gladiator_Skills.Phalanx.PrepareForGlory,MaxGrade,,10"</value><on>
+
+                #</Prepare For Glory Skill>
+
+            #</Phalanx Tree>
+
+            #<Xiphos Tree>
+
+                #<Gun Kata Skill>
+
+                    #<hotfix><key>"SparkOnDemandPatchEntry-Xiphos1"</key><value>"GD_Gladiator_Streaming,GD_Gladiator_Skills.Xiphos.Gun-Kata,MaxGrade,,10"</value><on>
+
+                #</Gun Kata Skill>
+
+                #<Clarity Of Purpose Skill>
+
+                    #<hotfix><key>"SparkOnDemandPatchEntry-Xiphos2"</key><value>"GD_Gladiator_Streaming,GD_Gladiator_Skills.Xiphos.ClarityOfPurpose,MaxGrade,,10"</value><on>
+
+                #</Clarity Of Purpose Skill>
+
+                #<Mercurial Skill>
+
+                    #<hotfix><key>"SparkOnDemandPatchEntry-Xiphos3"</key><value>"GD_Gladiator_Streaming,GD_Gladiator_Skills.Xiphos.Mercurial,MaxGrade,,10"</value><on>
+
+                #</Mercurial Skill>
+
+                #<Omega-Senshu Skill>
+
+                    #<hotfix><key>"SparkOnDemandPatchEntry-Xiphos4"</key><value>"GD_Gladiator_Streaming,GD_Gladiator_Skills.Xiphos.FinalVictory,MaxGrade,,10"</value><on>
+
+                #</Omega-Senshu Skill>
+
+                #<Bloodlust Skill>
+
+                    #<hotfix><key>"SparkOnDemandPatchEntry-Xiphos5"</key><value>"GD_Gladiator_Streaming,GD_Gladiator_Skills.Xiphos.Bloodlust,MaxGrade,,10"</value><on>
+
+                #</Bloodlust Skill>
+
+                #<Tear Skill>
+
+                    #<hotfix><key>"SparkOnDemandPatchEntry-Xiphos6"</key><value>"GD_Gladiator_Streaming,GD_Gladiator_Skills.Xiphos.Tear,MaxGrade,,10"</value><on>
+
+                #</Tear Skill>
+
+                #<You've Got Red on You Skill>
+
+                    #<hotfix><key>"SparkOnDemandPatchEntry-Xiphos7"</key><value>"GD_Gladiator_Streaming,GD_Gladiator_Skills.Xiphos.YouveGotRedonYou,MaxGrade,,10"</value><on>
+
+                #</You've Got Red on You Skill>
+
+                #<Fury of the Arena Skill>
+
+                    #<hotfix><key>"SparkOnDemandPatchEntry-Xiphos8"</key><value>"GD_Gladiator_Streaming,GD_Gladiator_Skills.Xiphos.FuryOfTheArena,MaxGrade,,10"</value><on>
+
+                #</Fury of the Arena Skill>
+
+            #</Xiphos Tree>
+
+            #<Ceraunic Storm Tree>
+
+                #<Storm Weaving Skill>
+
+                    #<hotfix><key>"SparkOnDemandPatchEntry-CeraunicStorm1"</key><value>"GD_Gladiator_Streaming,GD_Gladiator_Skills.CeraunicStorm.StormWeaving,MaxGrade,,10"</value><on>
+
+                #</Storm Weaving Skill>
+
+                #<Gathering Tempest Skill>
+
+                    #<hotfix><key>"SparkOnDemandPatchEntry-CeraunicStorm2"</key><value>"GD_Gladiator_Streaming,GD_Gladiator_Skills.CeraunicStorm.GatheringTempest,MaxGrade,,10"</value><on>
+
+                #</Gathering Tempest Skill>
+
+                #<Conduit Skill>
+
+                    #<hotfix><key>"SparkOnDemandPatchEntry-CeraunicStorm3"</key><value>"GD_Gladiator_Streaming,GD_Gladiator_Skills.CeraunicStorm.Conduit_V2,MaxGrade,,10"</value><on>
+
+                #</Conduit Skill>
+
+                #<Unrelenting Skill>
+
+                    #<hotfix><key>"SparkOnDemandPatchEntry-CeraunicStorm4"</key><value>"GD_Gladiator_Streaming,GD_Gladiator_Skills.CeraunicStorm.Unrelenting,MaxGrade,,10"</value><on>
+
+                #</Unrelenting Skill>
+
+                #<Superconductor Skill>
+
+                    #<hotfix><key>"SparkOnDemandPatchEntry-CeraunicStorm5"</key><value>"GD_Gladiator_Streaming,GD_Gladiator_Skills.CeraunicStorm.Superconductor,MaxGrade,,10"</value><on>
+
+                #</Superconductor Skill>
+
+                #<Elemental Barrage Skill>
+
+                    #<hotfix><key>"SparkOnDemandPatchEntry-CeraunicStorm6"</key><value>"GD_Gladiator_Streaming,GD_Gladiator_Skills.CeraunicStorm.ElementalBarrage,MaxGrade,,10"</value><on>
+
+                #</Elemental Barrage Skill>
+
+                #<Overload Skill>
+
+                    #<hotfix><key>"SparkOnDemandPatchEntry-CeraunicStorm7"</key><value>"GD_Gladiator_Streaming,GD_Gladiator_Skills.CeraunicStorm.Overload,MaxGrade,,10"</value><on>
+
+                #</Overload Skill>
+
+                #<Flash Freeze Skill>
+
+                    #<hotfix><key>"SparkOnDemandPatchEntry-CeraunicStorm8"</key><value>"GD_Gladiator_Streaming,GD_Gladiator_Skills.CeraunicStorm.FlashFreeze,MaxGrade,,10"</value><on>
+
+                #</Flash Freeze Skill>
+
+            #</Ceraunic Storm Tree>
+
+        #</Athena>
+
+        #<Wilhelm>
+
+            #<Hunter-Killer Tree>
+
+                #<Afterburner Skill>
+
+                    #<hotfix><key>"SparkOnDemandPatchEntry-HunterKiller1"</key><value>"GD_Enforcer_Streaming,GD_Enforcer_Skills.HunterKiller.Afterburner,MaxGrade,,10"</value><on>
+
+                #</Afterburner Skill>
+
+                #<Fire Support Skill>
+
+                    #<hotfix><key>"SparkOnDemandPatchEntry-HunterKiller2"</key><value>"GD_Enforcer_Streaming,GD_Enforcer_Skills.HunterKiller.FireSupport,MaxGrade,,10"</value><on>
+
+                #</Fire Support Skill>
+
+                #<Venom Bolts Skill>
+
+                    #<hotfix><key>"SparkOnDemandPatchEntry-HunterKiller3"</key><value>"GD_Enforcer_Streaming,GD_Enforcer_Skills.HunterKiller.VenomBolts,MaxGrade,,10"</value><on>
+
+                #</Venom Bolts Skill>
+
+                #<Suppression Skill>
+
+                    #<hotfix><key>"SparkOnDemandPatchEntry-HunterKiller4"</key><value>"GD_Enforcer_Streaming,GD_Enforcer_Skills.HunterKiller.Suppression,MaxGrade,,10"</value><on>
+
+                #</Suppression Skill>
+
+                #<Rolling Thunder Skill>
+
+                    #<hotfix><key>"SparkOnDemandPatchEntry-HunterKiller5"</key><value>"GD_Enforcer_Streaming,GD_Enforcer_Skills.HunterKiller.RollingThunder,MaxGrade,,10"</value><on>
+
+                #</Rolling Thunder Skill>
+
+                #<Cold War Skill>
+
+                    #<hotfix><key>"SparkOnDemandPatchEntry-HunterKiller6"</key><value>"GD_Enforcer_Streaming,GD_Enforcer_Skills.HunterKiller.ColdWar,MaxGrade,,10"</value><on>
+
+                #</Cold War Skill>
+
+                #<Escalation Skill>
+
+                    #<hotfix><key>"SparkOnDemandPatchEntry-HunterKiller7"</key><value>"GD_Enforcer_Streaming,GD_Enforcer_Skills.HunterKiller.Escalation,MaxGrade,,10"</value><on>
+
+                #</Escalation Skill>
+
+            #</Hunter-Killer Tree>
+
+            #<Cyber Commando Tree>
+
+                #<Laser Focus Skill>
+
+                    #<hotfix><key>"SparkOnDemandPatchEntry-CyberCommando1"</key><value>"GD_Enforcer_Streaming,GD_Enforcer_Skills.CyberCommando.LezerFighter,MaxGrade,,10"</value><on>
+
+                #</Laser Focus Skill>
+
+                #<Man and Machine Skill>
+
+                    #<hotfix><key>"SparkOnDemandPatchEntry-CyberCommando2"</key><value>"GD_Enforcer_Streaming,GD_Enforcer_Skills.CyberCommando.ManandMachine,MaxGrade,,10"</value><on>
+
+                #</Man and Machine Skill>
+
+                #<First to Fight Skill>
+
+                    #<hotfix><key>"SparkOnDemandPatchEntry-CyberCommando3"</key><value>"GD_Enforcer_Streaming,GD_Enforcer_Skills.CyberCommando.FirsttoFight,MaxGrade,,10"</value><on>
+
+                #</First to Fight Skill>
+
+                #<Targeting Scope Skill>
+
+                    #<hotfix><key>"SparkOnDemandPatchEntry-CyberCommando4"</key><value>"GD_Enforcer_Streaming,GD_Enforcer_Skills.CyberCommando.HyZ33TargetingScope,MaxGrade,,10"</value><on>
+
+                #</Targeting Scope Skill>
+
+                #<Emergency Response Skill>
+
+                    #<hotfix><key>"SparkOnDemandPatchEntry-CyberCommando5"</key><value>"GD_Enforcer_Streaming,GD_Enforcer_Skills.CyberCommando.EmergencyResponse,MaxGrade,,10"</value><on>
+
+                #</Emergency Response Skill>
+
+                #<Divert Power Skill>
+
+                    #<hotfix><key>"SparkOnDemandPatchEntry-CyberCommando6"</key><value>"GD_Enforcer_Streaming,GD_Enforcer_Skills.CyberCommando.DivertPower,MaxGrade,,10"</value><on>
+
+                #</Divert Power Skill>
+
+                #<Meteor Slam Skill>
+
+                    #<hotfix><key>"SparkOnDemandPatchEntry-CyberCommando7"</key><value>"GD_Enforcer_Streaming,GD_Enforcer_Skills.CyberCommando.DeathFromAbove,MaxGrade,,10"</value><on>
+
+                #</Meteor Slam Skill>
+
+                #<Welcome To The Gun Show Skill>
+
+                    #<hotfix><key>"SparkOnDemandPatchEntry-CyberCommando8"</key><value>"GD_Enforcer_Streaming,GD_Enforcer_Skills.CyberCommando.WelcomeToTheGunShow,MaxGrade,,10"</value><on>
+
+                #</Welcome To The Gun Show Skill>
+
+            #</Cyber Commando Tree>
+
+            #<Dreadnought Tree>
+
+                #<Auxillary Tanks Skill>
+
+                    #<hotfix><key>"SparkOnDemandPatchEntry-Dreadnought1"</key><value>"GD_Enforcer_Streaming,GD_Enforcer_Skills.Dreadnought.AuxillaryTanks,MaxGrade,,10"</value><on>
+
+                #</Auxillary Tanks Skill>
+
+                #<Fortify Skill>
+
+                    #<hotfix><key>"SparkOnDemandPatchEntry-Dreadnought2"</key><value>"GD_Enforcer_Streaming,GD_Enforcer_Skills.Dreadnought.Fortify,MaxGrade,,10"</value><on>
+
+                #</Fortify Skill>
+
+                #<Energize Skill>
+
+                    #<hotfix><key>"SparkOnDemandPatchEntry-Dreadnought3"</key><value>"GD_Enforcer_Streaming,GD_Enforcer_Skills.Dreadnought.Energize,MaxGrade,,10"</value><on>
+
+                #</Energize Skill>
+
+                #<Heat Sinks Skill>
+
+                    #<hotfix><key>"SparkOnDemandPatchEntry-Dreadnought4"</key><value>"GD_Enforcer_Streaming,GD_Enforcer_Skills.Dreadnought.HeatSinks,MaxGrade,,10"</value><on>
+
+                #</Heat Sinks Skill>
+
+                #<Rapid Reinforcement Skill>
+
+                    #<hotfix><key>"SparkOnDemandPatchEntry-Dreadnought5"</key><value>"GD_Enforcer_Streaming,GD_Enforcer_Skills.Dreadnought.RapidReinforcement,MaxGrade,,10"</value><on>
+
+                #</Rapid Reinforcement Skill>
+
+                #<Hazmat Containment Systems Skill>
+
+                    #<hotfix><key>"SparkOnDemandPatchEntry-Dreadnought6"</key><value>"GD_Enforcer_Streaming,GD_Enforcer_Skills.Dreadnought.HazmatContainmentSystems,MaxGrade,,10"</value><on>
+
+                #</Hazmat Containment Systems Skill>
+
+                #<Hard To Kill Skill>
+
+                    #<hotfix><key>"SparkOnDemandPatchEntry-Dreadnought7"</key><value>"GD_Enforcer_Streaming,GD_Enforcer_Skills.Dreadnought.HardToKill,MaxGrade,,10"</value><on>
+
+                #</Hard To Kill Skill>
+
+            #</Dreadnought Tree>
+
+        #</Wilhelm>
+
+        #<Nisha>
+
+            #<Law & Order Tree>
+
+                #<The Third Degree Skill>
+
+                    #<hotfix><key>"SparkOnDemandPatchEntry-Law & Order1"</key><value>"GD_Lawbringer_Streaming,GD_Lawbringer_Skills.Order.TheThirdDegree,MaxGrade,,10"</value><on>
+
+                #</The Third Degree Skill>
+
+                #<Wanted Skill>
+
+                    #<hotfix><key>"SparkOnDemandPatchEntry-Law & Order2"</key><value>"GD_Lawbringer_Streaming,GD_Lawbringer_Skills.Order.Wanted,MaxGrade,,10"</value><on>
+
+                #</Wanted Skill>
+
+                #<Due Process Skill>
+
+                    #<hotfix><key>"SparkOnDemandPatchEntry-Law & Order3"</key><value>"GD_Lawbringer_Streaming,GD_Lawbringer_Skills.Order.DueProcess,MaxGrade,,10"</value><on>
+
+                #</Due Process Skill>
+
+                #<Jurisdiction Skill>
+
+                    #<hotfix><key>"SparkOnDemandPatchEntry-Law & Order4"</key><value>"GD_Lawbringer_Streaming,GD_Lawbringer_Skills.Order.Jurisdiction,MaxGrade,,10"</value><on>
+
+                #</Jurisdiction Skill>
+
+                #<Rarin To Go Skill>
+
+                    #<hotfix><key>"SparkOnDemandPatchEntry-Law & Order5"</key><value>"GD_Lawbringer_Streaming,GD_Lawbringer_Skills.Order.RarinToGo,MaxGrade,,10"</value><on>
+
+                #</Rarin To Go Skill>
+
+            #</Law & Order Tree>
+
+            #<Fan the Hammer Tree>
+
+                #<Ruthless Skill>
+
+                    #<hotfix><key>"SparkOnDemandPatchEntry-Fan the Hammer1"</key><value>"GD_Lawbringer_Streaming,GD_Lawbringer_Skills.FanTheHammer.Ruthless,MaxGrade,,10"</value><on>
+
+                #</Ruthless Skill>
+
+                #<Gunslinger Skill>
+
+                    #<hotfix><key>"SparkOnDemandPatchEntry-Fan the Hammer2"</key><value>"GD_Lawbringer_Streaming,GD_Lawbringer_Skills.FanTheHammer.Gunslinger,MaxGrade,,10"</value><on>
+
+                #</Gunslinger Skill>
+
+            #</Fan the Hammer Tree>
+
+            #<The Riflewoman Tree>
+
+                #<Snap Shot Skill>
+
+                    #<hotfix><key>"SparkOnDemandPatchEntry-The Riflewoman1"</key><value>"GD_Lawbringer_Streaming,GD_Lawbringer_Skills.Riflewoman.SnapShot,MaxGrade,,10"</value><on>
+
+                #</Snap Shot Skill>
+
+                #<Bona Fide Grit Skill>
+
+                    #<hotfix><key>"SparkOnDemandPatchEntry-The Riflewoman2"</key><value>"GD_Lawbringer_Streaming,GD_Lawbringer_Skills.Riflewoman.BonaFideGrit,MaxGrade,,10"</value><on>
+
+                #</Bona Fide Grit Skill>
+
+                #<Crack Shot Skill>
+
+                    #<hotfix><key>"SparkOnDemandPatchEntry-The Riflewoman3"</key><value>"GD_Lawbringer_Streaming,GD_Lawbringer_Skills.Riflewoman.CrackShot,MaxGrade,,10"</value><on>
+
+                #</Crack Shot Skill>
+
+                #<Hot Lead Skill>
+
+                    #<hotfix><key>"SparkOnDemandPatchEntry-The Riflewoman4"</key><value>"GD_Lawbringer_Streaming,GD_Lawbringer_Skills.Riflewoman.HotLead,MaxGrade,,10"</value><on>
+
+                #</Hot Lead Skill>
+
+            #</The Riflewoman Tree>
+
+        #</Nisha>
+
+        #<Claptrap>
+
+            #<Boomtrap Tree>
+
+                #<Drop The Hammer Skill>
+
+                    #<hotfix><key>"SparkOnDemandPatchEntry-Boomtrap1"</key><value>"GD_Prototype_Streaming,GD_Prototype_Skills.Boomtrap.DropTheHammer,MaxGrade,,10"</value><on>
+
+                #</Drop The Hammer Skill>
+
+                #<Repulsive Skill>
+
+                    #<hotfix><key>"SparkOnDemandPatchEntry-Boomtrap2"</key><value>"GD_Prototype_Streaming,GD_Prototype_Skills.Boomtrap.Repulsive,MaxGrade,,10"</value><on>
+
+                #</Repulsive Skill>
+
+                #<Load'N'Spload Skill>
+
+                    #<hotfix><key>"SparkOnDemandPatchEntry-Boomtrap3"</key><value>"GD_Prototype_Streaming,GD_Prototype_Skills.Boomtrap.LoadNSplode,MaxGrade,,10"</value><on>
+
+                #</Load'N'Spload Skill>
+
+                #<Start With A Bang Skill>
+
+                    #<hotfix><key>"SparkOnDemandPatchEntry-Boomtrap4"</key><value>"GD_Prototype_Streaming,GD_Prototype_Skills.Boomtrap.StartWithABang,MaxGrade,,10"</value><on>
+
+                #</Start With A Bang Skill>
+
+                #<Hyperion Punch Skill>
+
+                    #<hotfix><key>"SparkOnDemandPatchEntry-Boomtrap5"</key><value>"GD_Prototype_Streaming,GD_Prototype_Skills.Boomtrap.HyperionPunch,MaxGrade,,10"</value><on>
+
+                #</Hyperion Punch Skill>
+
+                #<One Last Thing Skill>
+
+                    #<hotfix><key>"SparkOnDemandPatchEntry-Boomtrap6"</key><value>"GD_Prototype_Streaming,GD_Prototype_Skills.Boomtrap.OneLastThing,MaxGrade,,10"</value><on>
+
+                #</One Last Thing Skill>
+
+            #</Boomtrap Tree>
+
+            #<I Love You Guys Tree>
+
+                #<Best Buds 4 Life Skill>
+
+                    #<hotfix><key>"SparkOnDemandPatchEntry-I Love You Guys1"</key><value>"GD_Prototype_Streaming,GD_Prototype_Skills.ILoveYouGuys.BestBuds4Life,MaxGrade,,10"</value><on>
+
+                #</Best Buds 4 Life Skill>
+
+                #<Maniacal Laughter Skill>
+
+                    #<hotfix><key>"SparkOnDemandPatchEntry-I Love You Guys2"</key><value>"GD_Prototype_Streaming,GD_Prototype_Skills.ILoveYouGuys.ManiacalLaughter,MaxGrade,,10"</value><on>
+
+                #</Maniacal Laughter Skill>
+
+                #<All The Things Are Awesome Skill>
+
+                    #<hotfix><key>"SparkOnDemandPatchEntry-I Love You Guys3"</key><value>"GD_Prototype_Streaming,GD_Prototype_Skills.ILoveYouGuys.AllTheThingsAreAwesome,MaxGrade,,10"</value><on>
+
+                #</All The Things Are Awesome Skill>
+
+                #<Wax Off Wax On Skill>
+
+                    #<hotfix><key>"SparkOnDemandPatchEntry-I Love You Guys4"</key><value>"GD_Prototype_Streaming,GD_Prototype_Skills.ILoveYouGuys.WaxOffWaxOn,MaxGrade,,10"</value><on>
+
+                #</Wax Off Wax On Skill>
+
+                #<Pain Simulator Is Painful Skill>
+
+                    #<hotfix><key>"SparkOnDemandPatchEntry-I Love You Guys5"</key><value>"GD_Prototype_Streaming,GD_Prototype_Skills.ILoveYouGuys.PainSimulatorIsPainful,MaxGrade,,10"</value><on>
+
+                #</Pain Simulator Is Painful Skill>
+
+                #<Kick Him While Hes Up Skill>
+
+                    #<hotfix><key>"SparkOnDemandPatchEntry-I Love You Guys6"</key><value>"GD_Prototype_Streaming,GD_Prototype_Skills.ILoveYouGuys.KickHimWhileHesUp,MaxGrade,,10"</value><on>
+
+                #</Kick Him While Hes Up Skill>
+
+                #<Organized Guns Are Happy Skill>
+
+                    #<hotfix><key>"SparkOnDemandPatchEntry-I Love You Guys7"</key><value>"GD_Prototype_Streaming,GD_Prototype_Skills.ILoveYouGuys.OrganizedGunsAreHappyGuns,MaxGrade,,10"</value><on>
+
+                #</Organized Guns Are Happy Skill>
+
+            #</I Love You Guys Tree>
+
+            #<Fragmented Fragtrap Tree>
+
+                #<Surpise? Stabilize! Skill>
+
+                    #<hotfix><key>"SparkOnDemandPatchEntry-Fragmented Fragtrap1"</key><value>"GD_Prototype_Streaming,GD_Prototype_Skills.Fragmented.SurprisedStabalize,MaxGrade,,10"</value><on>
+
+                #</Surpise? Stabilize! Skill>
+
+                #<Blue Shell Skill>
+
+                    #<hotfix><key>"SparkOnDemandPatchEntry-Fragmented Fragtrap2"</key><value>"GD_Prototype_Streaming,GD_Prototype_Skills.Fragmented.BlueShell,MaxGrade,,10"</value><on>
+
+                #</Blue Shell Skill>
+
+                #<Grenade Vent Skill>
+
+                    #<hotfix><key>"SparkOnDemandPatchEntry-Fragmented Fragtrap3"</key><value>"GD_Prototype_Streaming,GD_Prototype_Skills.Fragmented.GrenadeVent,MaxGrade,,10"</value><on>
+
+                #</Grenade Vent Skill>
+
+                #<Cryogenic Exhaust Manifold Skill>
+
+                    #<hotfix><key>"SparkOnDemandPatchEntry-Fragmented Fragtrap4"</key><value>"GD_Prototype_Streaming,GD_Prototype_Skills.Fragmented.CryogenicExhaustManifold,MaxGrade,,10"</value><on>
+
+                #</Cryogenic Exhaust Manifold Skill>
+
+            #</Fragmented Fragtrap Tree>
+
+        #</Claptrap>
+
+        #<Jack>
+
+            #<The Hero of this Story Tree>
+
+                #<Best Foot Forward Skill>
+
+                    #<hotfix><key>"SparkOnDemandPatchEntry-The Hero of this Story1"</key><value>"Quince_Doppel_Streaming,Quince_Doppel_Hero.Skills.BestFootForward,MaxGrade,,10"</value><on>
+
+                #</Best Foot Forward Skill>
+
+                #<Bolster Skill>
+
+                    #<hotfix><key>"SparkOnDemandPatchEntry-The Hero of this Story2"</key><value>"Quince_Doppel_Streaming,Quince_Doppel_Hero.Skills.Bolster,MaxGrade,,10"</value><on>
+
+                #</Bolster Skill>
+
+                #<Just Compensation Skill>
+
+                    #<hotfix><key>"SparkOnDemandPatchEntry-The Hero of this Story3"</key><value>"Quince_Doppel_Streaming,Quince_Doppel_Hero.Skills.JustCompensation,MaxGrade,,10"</value><on>
+
+                #</Just Compensation Skill>
+
+                #<Hero Pose Skill>
+
+                    #<hotfix><key>"SparkOnDemandPatchEntry-The Hero of this Story4"</key><value>"Quince_Doppel_Streaming,Quince_Doppel_Hero.Skills.HeroPose,MaxGrade,,10"</value><on>
+
+                #</Hero Pose Skill>
+
+                #<Lean On Me Skill>
+
+                    #<hotfix><key>"SparkOnDemandPatchEntry-The Hero of this Story5"</key><value>"Quince_Doppel_Streaming,Quince_Doppel_Hero.Skills.LeanOnMe,MaxGrade,,10"</value><on>
+
+                #</Lean On Me Skill>
+
+            #</The Hero of this Story Tree>
+
+            #<Greater Good Tree>
+
+                #<Integrity Skill>
+
+                    #<hotfix><key>"SparkOnDemandPatchEntry-Greater Good1"</key><value>"Quince_Doppel_Streaming,Quince_Doppel_GreaterGood.Skills.Integrity,MaxGrade,,10"</value><on>
+
+                #</Integrity Skill>
+
+                #<Teamwork Skill>
+
+                    #<hotfix><key>"SparkOnDemandPatchEntry-Greater Good2"</key><value>"Quince_Doppel_Streaming,Quince_Doppel_GreaterGood.Skills.Teamwork,MaxGrade,,10"</value><on>
+
+                #</Teamwork Skill>
+
+                #<Optimism Skill>
+
+                    #<hotfix><key>"SparkOnDemandPatchEntry-Greater Good3"</key><value>"Quince_Doppel_Streaming,Quince_Doppel_GreaterGood.Skills.Optimism,MaxGrade,,10"</value><on>
+
+                #</Optimism Skill>
+
+            #</Greater Good Tree>
+
+            #<Free Enterprise Tree>
+
+                #<High Frequency Trading Skill>
+
+                    #<hotfix><key>"SparkOnDemandPatchEntry-Free Enterprise1"</key><value>"Quince_Doppel_Streaming,Quince_Doppel_FreeEnterprise.Skills.HighFrequencyTrading,MaxGrade,,10"</value><on>
+
+                #</High Frequency Trading Skill>
+
+                #<Incentives Skill>
+
+                    #<hotfix><key>"SparkOnDemandPatchEntry-Free Enterprise2"</key><value>"Quince_Doppel_Streaming,Quince_Doppel_FreeEnterprise.Skills.Incentives,MaxGrade,,10"</value><on>
+
+                #</Incentives Skill>
+
+                #<Marginal Benefit Skill>
+
+                    #<hotfix><key>"SparkOnDemandPatchEntry-Free Enterprise3"</key><value>"Quince_Doppel_Streaming,Quince_Doppel_FreeEnterprise.Skills.MarginalBenefit,MaxGrade,,10"</value><on>
+
+                #</Marginal Benefit Skill>
+
+                #<Company Man Skill>
+
+                    #<hotfix><key>"SparkOnDemandPatchEntry-Free Enterprise4"</key><value>"Quince_Doppel_Streaming,Quince_Doppel_FreeEnterprise.Skills.CompanyMan,MaxGrade,,10"</value><on>
+
+                #</Company Man Skill>
+
+            #</Free Enterprise Tree>
+
+        #</Jack>
+
+        #<Aurelia>
+
+            #<The Huntress Tree>
+
+                #<Markswoman Skill>
+
+                    #<hotfix><key>"SparkOnDemandPatchEntry-The Huntress1"</key><value>"Crocus_Baroness_Streaming,Crocus_Baroness_Huntress.Skills.Markswoman,MaxGrade,,10"</value><on>
+
+                #</Markswoman Skill>
+
+                #<Only The Best Skill>
+
+                    #<hotfix><key>"SparkOnDemandPatchEntry-The Huntress2"</key><value>"Crocus_Baroness_Streaming,Crocus_Baroness_Huntress.Skills.OnlyTheBest,MaxGrade,,10"</value><on>
+
+                #</Only The Best Skill>
+
+                #<I Never Miss Skill>
+
+                    #<hotfix><key>"SparkOnDemandPatchEntry-The Huntress3"</key><value>"Crocus_Baroness_Streaming,Crocus_Baroness_Huntress.Skills.INeverMiss,MaxGrade,,10"</value><on>
+
+                #</I Never Miss Skill>
+
+                #<Wait For It Skill>
+
+                    #<hotfix><key>"SparkOnDemandPatchEntry-The Huntress4"</key><value>"Crocus_Baroness_Streaming,Crocus_Baroness_Huntress.Skills.WaitForIt,MaxGrade,,10"</value><on>
+
+                #</Wait For It Skill>
+
+                #<Large Calibur Skill>
+
+                    #<hotfix><key>"SparkOnDemandPatchEntry-The Huntress5"</key><value>"Crocus_Baroness_Streaming,Crocus_Baroness_Huntress.Skills.LargeCalibur,MaxGrade,,10"</value><on>
+
+                #</Large Calibur Skill>
+
+            #</The Huntress Tree>
+
+            #<Cold Money Tree>
+
+                #<Avalanche Skill>
+
+                    #<hotfix><key>"SparkOnDemandPatchEntry-Cold Money1"</key><value>"Crocus_Baroness_Streaming,Crocus_Baroness_ColdMoney.Skills.Avalanche,MaxGrade,,10"</value><on>
+
+                #</Avalanche Skill>
+
+                #<Bitter Riposte Skill>
+
+                    #<hotfix><key>"SparkOnDemandPatchEntry-Cold Money2"</key><value>"Crocus_Baroness_Streaming,Crocus_Baroness_ColdMoney.Skills.BitterRiposte,MaxGrade,,10"</value><on>
+
+                #</Bitter Riposte Skill>
+
+                #<Short Summer Skill>
+
+                    #<hotfix><key>"SparkOnDemandPatchEntry-Cold Money3"</key><value>"Crocus_Baroness_Streaming,Crocus_Baroness_ColdMoney.Skills.ShortSummer,MaxGrade,,10"</value><on>
+
+                #</Short Summer Skill>
+
+                #<Frigid Touch Skill>
+
+                    #<hotfix><key>"SparkOnDemandPatchEntry-Cold Money4"</key><value>"Crocus_Baroness_Streaming,Crocus_Baroness_ColdMoney.Skills.FrigidTouch,MaxGrade,,10"</value><on>
+
+                #</Frigid Touch Skill>
+
+                #<Winters Veil Skill>
+
+                    #<hotfix><key>"SparkOnDemandPatchEntry-Cold Money5"</key><value>"Crocus_Baroness_Streaming,Crocus_Baroness_ColdMoney.Skills.WintersVeil,MaxGrade,,10"</value><on>
+
+                #</Winters Veil Skill>
+
+            #</Cold Money Tree>
+
+            #<Contractual Aristocracy Tree>
+
+                #<Quality Not Quantitiy Skill>
+
+                    #<hotfix><key>"SparkOnDemandPatchEntry-Contractual Aristocracy1"</key><value>"Crocus_Baroness_Streaming,Crocus_Baroness_Servant.Skills.QualityNotQuantity,MaxGrade,,10"</value><on>
+
+                #</Quality Not Quantitiy Skill>
+
+                #<Next To Cleanliness>
+
+                    #<hotfix><key>"SparkOnDemandPatchEntry-Contractual Aristocracy2"</key><value>"Crocus_Baroness_Streaming,Crocus_Baroness_Servant.Skills.NextToCleanliness,MaxGrade,,10"</value><on>
+
+                #</Next To Cleanliness>
+
+                #<Save The Queen Skill>
+
+                    #<hotfix><key>"SparkOnDemandPatchEntry-Contractual Aristocracy3"</key><value>"Crocus_Baroness_Streaming,Crocus_Baroness_Servant.Skills.SaveTheQueen,MaxGrade,,10"</value><on>
+
+                #</Save The Queen Skill>
+
+            #</Contractual Aristocracy Tree>
+
+        #</Aurelia>
+
+    #</Enabled by default>
+
+    #<Disabled by default>
+
+        #<Wilhelm>
+
+            #<Hunter-Killer Tree>
+
+                #<Scramble Skill>
+
+                    #<hotfix><key>"SparkOnDemandPatchEntry-HunterKiller8"</key><value>"GD_Enforcer_Streaming,GD_Enforcer_Skills.HunterKiller.Scramble,MaxGrade,,10"</value><off>
+
+                #</Scramble Skill>
+
+            #</Hunter-Killer Tree>
+
+            #<Dreadnought Tree>
+
+                #<Kinetic Armor Skill>
+
+                    #<hotfix><key>"SparkOnDemandPatchEntry-Dreadnought8"</key><value>"GD_Enforcer_Streaming,GD_Enforcer_Skills.Dreadnought.KineticArmor,MaxGrade,,10"</value><off>
+
+                #</Kinetic Armor Skill>
+
+            #</Dreadnought Tree>
+
+        #</Wilhelm>
+
+        #<Nisha>
+
+            #<Law & Order Tree>
+
+                #<No Pain No Gain Skill>
+
+                    #<hotfix><key>"SparkOnDemandPatchEntry-Law & Order6"</key><value>"GD_Lawbringer_Streaming,GD_Lawbringer_Skills.Order.NoPainNoGain,MaxGrade,,10"</value><off>
+
+                #</No Pain No Gain Skill>
+
+            #</Law & Order Tree>
+
+            #<Fan the Hammer Tree>
+
+                #<Saddle Up Skill>
+
+                    #<hotfix><key>"SparkOnDemandPatchEntry-Fan the Hammer3"</key><value>"GD_Lawbringer_Streaming,GD_Lawbringer_Skills.FanTheHammer.SaddleUp,MaxGrade,,10"</value><off>
+
+                #</Saddle Up Skill>
+
+                #<Magnificent Six Skill>
+
+                    #<hotfix><key>"SparkOnDemandPatchEntry-Fan the Hammer4"</key><value>"GD_Lawbringer_Streaming,GD_Lawbringer_Skills.FanTheHammer.MagnificentSix,MaxGrade,,10"</value><off>
+
+                #</Magnificent Six Skill>
+
+                #<Bottled Courage Skill>
+
+                    #<hotfix><key>"SparkOnDemandPatchEntry-Fan the Hammer5"</key><value>"GD_Lawbringer_Streaming,GD_Lawbringer_Skills.FanTheHammer.BottledCourage,MaxGrade,,10"</value><off>
+
+                #</Bottled Courage Skill>
+
+                #<Faster'n'You Skill>
+
+                    #<hotfix><key>"SparkOnDemandPatchEntry-Fan the Hammer6"</key><value>"GD_Lawbringer_Streaming,GD_Lawbringer_Skills.FanTheHammer.FasterNYou,MaxGrade,,10"</value><off>
+
+                #</Faster'n'You Skill>
+
+                #<Hells Coming With Me Skill>
+
+                    #<hotfix><key>"SparkOnDemandPatchEntry-Fan the Hammer7"</key><value>"GD_Lawbringer_Streaming,GD_Lawbringer_Skills.FanTheHammer.HellsCominWithMe,MaxGrade,,10"</value><off>
+
+                #</Hells Coming With Me Skill>
+
+                #<High Noon Skill>
+
+                    #<hotfix><key>"SparkOnDemandPatchEntry-Fan the Hammer8"</key><value>"GD_Lawbringer_Streaming,GD_Lawbringer_Skills.FanTheHammer.HighNoon,MaxGrade,,10"</value><off>
+
+                #</High Noon Skill>
+
+            #</Fan the Hammer Tree>
+
+            #<The Riflewoman Tree>
+
+                #<Quick Shot Skill>
+
+                    #<hotfix><key>"SparkOnDemandPatchEntry-The Riflewoman5"</key><value>"GD_Lawbringer_Streaming,GD_Lawbringer_Skills.Riflewoman.QuickShot,MaxGrade,,10"</value><off>
+
+                #</Quick Shot Skill>
+
+                #<Trick Shot Skill>
+
+                    #<hotfix><key>"SparkOnDemandPatchEntry-The Riflewoman6"</key><value>"GD_Lawbringer_Streaming,GD_Lawbringer_Skills.Riflewoman.TrickShot,MaxGrade,,10"</value><off>
+
+                #</Trick Shot Skill>
+
+                #<Tombstone Skill>
+
+                    #<hotfix><key>"SparkOnDemandPatchEntry-The Riflewoman7"</key><value>"GD_Lawbringer_Streaming,GD_Lawbringer_Skills.Riflewoman.Tombstone,MaxGrade,,10"</value><off>
+
+                #</Tombstone Skill>
+
+            #</The Riflewoman Tree>
+
+        #</Nisha>
+
+        #<Claptrap>
+
+            #<Boomtrap Tree>
+
+                #<Kill Bot Skill>
+
+                    #<hotfix><key>"SparkOnDemandPatchEntry-Boomtrap7"</key><value>"GD_Prototype_Streaming,GD_Prototype_Skills.Boomtrap.KillBot,MaxGrade,,10"</value><off>
+
+                #</Kill Bot Skill>
+
+                #<Coincidental Combustion Skill>
+
+                    #<hotfix><key>"SparkOnDemandPatchEntry-Boomtrap8"</key><value>"GD_Prototype_Streaming,GD_Prototype_Skills.Boomtrap.CoincidentalCombustion,MaxGrade,,10"</value><off>
+
+                #</Coincidental Combustion Skill>
+
+            #</Boomtrap Tree>
+
+            #<I Love You Guys Tree>
+
+                #<Through Thick And Thin Skill>
+
+                    #<hotfix><key>"SparkOnDemandPatchEntry-I Love You Guys8"</key><value>"GD_Prototype_Streaming,GD_Prototype_Skills.ILoveYouGuys.ThroughThickAndThin,MaxGrade,,10"</value><off>
+
+                #</Through Thick And Thin Skill>
+
+            #</I Love You Guys Tree>
+
+            #<Fragmented Fragtrap Tree>
+
+                #<Death Machine Skill>
+
+                    #<hotfix><key>"SparkOnDemandPatchEntry-Fragmented Fragtrap5"</key><value>"GD_Prototype_Streaming,GD_Prototype_Skills.Fragmented.DeathMachine,MaxGrade,,10"</value><off>
+
+                #</Death Machine Skill>
+
+                #<Float Like A Bee Skill>
+
+                    #<hotfix><key>"SparkOnDemandPatchEntry-Fragmented Fragtrap6"</key><value>"GD_Prototype_Streaming,GD_Prototype_Skills.Fragmented.FloatLikeABee,MaxGrade,,10"</value><off>
+
+                #</Float Like A Bee Skill>
+
+            #</Fragmented Fragtrap Tree>
+
+        #</Claptrap>
+
+        #<Jack>
+
+            #<The Hero of this Story Tree>
+
+                #<Take Their Freedom Skill>
+
+                    #<hotfix><key>"SparkOnDemandPatchEntry-The Hero of this Story6"</key><value>"Quince_Doppel_Streaming,Quince_Doppel_Hero.Skills.TakeTheirFreedom,MaxGrade,,10"</value><off>
+
+                #</Take Their Freedom Skill>
+
+                #<Persistence Skill>
+
+                    #<hotfix><key>"SparkOnDemandPatchEntry-The Hero of this Story7"</key><value>"Quince_Doppel_Streaming,Quince_Doppel_Hero.Skills.Persistence,MaxGrade,,10"</value><off>
+
+                #</Persistence Skill>
+
+                #<Resolute Skill>
+
+                    #<hotfix><key>"SparkOnDemandPatchEntry-The Hero of this Story8"</key><value>"Quince_Doppel_Streaming,Quince_Doppel_Hero.Skills.Resolute,MaxGrade,,10"</value><off>
+
+                #</Resolute Skill>
+
+            #</The Hero of this Story Tree>
+
+            #<Greater Good Tree>
+
+                #<Collaborate Skill>
+
+                    #<hotfix><key>"SparkOnDemandPatchEntry-Greater Good4"</key><value>"Quince_Doppel_Streaming,Quince_Doppel_GreaterGood.Skills.Collaborate,MaxGrade,,10"</value><off>
+
+                #</Collaborate Skill>
+
+                #<Synergy Skill>
+
+                    #<hotfix><key>"SparkOnDemandPatchEntry-Greater Good5"</key><value>"Quince_Doppel_Streaming,Quince_Doppel_GreaterGood.Skills.Synergy,MaxGrade,,10"</value><off>
+
+                #</Synergy Skill>
+
+                #<Winning Skill>
+
+                    #<hotfix><key>"SparkOnDemandPatchEntry-Greater Good6"</key><value>"Quince_Doppel_Streaming,Quince_Doppel_GreaterGood.Skills.Winning,MaxGrade,,10"</value><off>
+
+                #</Winning Skill>
+
+                #<Believe Skill>
+
+                    #<hotfix><key>"SparkOnDemandPatchEntry-Greater Good7"</key><value>"Quince_Doppel_Streaming,Quince_Doppel_GreaterGood.Skills.Believe,MaxGrade,,10"</value><off>
+
+                #</Believe Skill>
+
+                #<Delegation Skill>
+
+                    #<hotfix><key>"SparkOnDemandPatchEntry-Greater Good8"</key><value>"Quince_Doppel_Streaming,Quince_Doppel_GreaterGood.Skills.Delegation,MaxGrade,,10"</value><off>
+
+                #</Delegation Skill>
+
+            #</Greater Good Tree>
+
+            #<Free Enterprise Tree>
+
+                #<Compound Interest Skill>
+
+                    #<hotfix><key>"SparkOnDemandPatchEntry-Free Enterprise5"</key><value>"Quince_Doppel_Streaming,Quince_Doppel_FreeEnterprise.Skills.CompoundInterest,MaxGrade,,10"</value><off>
+
+                #</Compound Interest Skill>
+
+                #<Taxation of Trade Routes Skill>
+
+                    #<hotfix><key>"SparkOnDemandPatchEntry-Free Enterprise6"</key><value>"Quince_Doppel_Streaming,Quince_Doppel_FreeEnterprise.Skills.TaxationofTradeRoutes,MaxGrade,,10"</value><off>
+
+                #</Taxation of Trade Routes Skill>
+
+                #<Absolute Advantage Skill>
+
+                    #<hotfix><key>"SparkOnDemandPatchEntry-Free Enterprise7"</key><value>"Quince_Doppel_Streaming,Quince_Doppel_FreeEnterprise.Skills.AbsoluteAdvantage,MaxGrade,,10"</value><off>
+
+                #</Absolute Advantage Skill>
+
+                #<Supply And Demand>
+
+                    #<hotfix><key>"SparkOnDemandPatchEntry-Free Enterprise8"</key><value>"Quince_Doppel_Streaming,Quince_Doppel_FreeEnterprise.Skills.SupplyAndDemand,MaxGrade,,10"</value><off>
+
+                #</Supply And Demand>
+
+            #</Free Enterprise Tree>
+
+        #</Jack>
+
+        #<Aurelia>
+
+            #<The Huntress Tree>
+
+                #<Culling The Herd Skill>
+
+                    #<hotfix><key>"SparkOnDemandPatchEntry-The Huntress6"</key><value>"Crocus_Baroness_Streaming,Crocus_Baroness_Huntress.Skills.CullingTheHerd,MaxGrade,,10"</value><off>
+
+                #</Culling The Herd Skill>
+
+                #<Warning Shot Skill>
+
+                    #<hotfix><key>"SparkOnDemandPatchEntry-The Huntress7"</key><value>"Crocus_Baroness_Streaming,Crocus_Baroness_Huntress.Skills.WarningShot,MaxGrade,,10"</value><off>
+
+                #</Warning Shot Skill>
+
+                #<Prudent Prudence Skill>
+
+                    #<hotfix><key>"SparkOnDemandPatchEntry-The Huntress8"</key><value>"Crocus_Baroness_Streaming,Crocus_Baroness_Huntress.Skills.PrudentPrudence,MaxGrade,,10"</value><off>
+
+                #</Prudent Prudence Skill>
+
+            #</The Huntress Tree>
+
+            #<Cold Money Tree>
+
+                #<Frostbite Skill>
+
+                    #<hotfix><key>"SparkOnDemandPatchEntry-Cold Money6"</key><value>"Crocus_Baroness_Streaming,Crocus_Baroness_ColdMoney.Skills.Frostbite,MaxGrade,,10"</value><off>
+
+                #</Frostbite Skill>
+
+                #<Cold Advance Skill>
+
+                    #<hotfix><key>"SparkOnDemandPatchEntry-Cold Money7"</key><value>"Crocus_Baroness_Streaming,Crocus_Baroness_ColdMoney.Skills.ColdAdvance,MaxGrade,,10"</value><off>
+
+                #</Cold Advance Skill>
+
+                #<Whiteout Skill>
+
+                    #<hotfix><key>"SparkOnDemandPatchEntry-Cold Money8"</key><value>"Crocus_Baroness_Streaming,Crocus_Baroness_ColdMoney.Skills.Whiteout,MaxGrade,,10"</value><off>
+
+                #</Whiteout Skill>
+
+            #</Cold Money Tree>
+
+            #<Contractual Aristocracy Tree>
+
+                #<Protect Your Assets Skill>
+
+                    #<hotfix><key>"SparkOnDemandPatchEntry-Contractual Aristocracy4"</key><value>"Crocus_Baroness_Streaming,Crocus_Baroness_Servant.Skills.ProtectYourAssets,MaxGrade,,10"</value><off>
+
+                #</Protect Your Assets Skill>
+
+                #<Keep Your Chin Up Skill>
+
+                    #<hotfix><key>"SparkOnDemandPatchEntry-Contractual Aristocracy5"</key><value>"Crocus_Baroness_Streaming,Crocus_Baroness_Servant.Skills.KeepYourChinUp,MaxGrade,,10"</value><off>
+
+                #</Keep Your Chin Up Skill>
+
+                #<Podsnappery Skill>
+
+                    #<hotfix><key>"SparkOnDemandPatchEntry-Contractual Aristocracy6"</key><value>"Crocus_Baroness_Streaming,Crocus_Baroness_Servant.Skills.Podsnappery,MaxGrade,,10"</value><off>
+
+                #</Podsnappery Skill>
+
+            #</Contractual Aristocracy Tree>
+
+        #</Aurelia>
+
+    #</Disabled by default>
+
+#</Skill System Tweaks For TPS>
+
+set Transient.SparkServiceConfiguration_5 Keys ("SparkOnDemandPatchEntry-Phalanx1","SparkOnDemandPatchEntry-Phalanx2","SparkOnDemandPatchEntry-Phalanx3","SparkOnDemandPatchEntry-Phalanx4","SparkOnDemandPatchEntry-Phalanx5","SparkOnDemandPatchEntry-Phalanx6","SparkOnDemandPatchEntry-Phalanx7","SparkOnDemandPatchEntry-Phalanx8","SparkOnDemandPatchEntry-Xiphos1","SparkOnDemandPatchEntry-Xiphos2","SparkOnDemandPatchEntry-Xiphos3","SparkOnDemandPatchEntry-Xiphos4","SparkOnDemandPatchEntry-Xiphos5","SparkOnDemandPatchEntry-Xiphos6","SparkOnDemandPatchEntry-Xiphos7","SparkOnDemandPatchEntry-Xiphos8","SparkOnDemandPatchEntry-CeraunicStorm1","SparkOnDemandPatchEntry-CeraunicStorm2","SparkOnDemandPatchEntry-CeraunicStorm3","SparkOnDemandPatchEntry-CeraunicStorm4","SparkOnDemandPatchEntry-CeraunicStorm5","SparkOnDemandPatchEntry-CeraunicStorm6","SparkOnDemandPatchEntry-CeraunicStorm7","SparkOnDemandPatchEntry-CeraunicStorm8","SparkOnDemandPatchEntry-HunterKiller1","SparkOnDemandPatchEntry-HunterKiller2","SparkOnDemandPatchEntry-HunterKiller3","SparkOnDemandPatchEntry-HunterKiller4","SparkOnDemandPatchEntry-HunterKiller5","SparkOnDemandPatchEntry-HunterKiller6","SparkOnDemandPatchEntry-HunterKiller7","SparkOnDemandPatchEntry-CyberCommando1","SparkOnDemandPatchEntry-CyberCommando2","SparkOnDemandPatchEntry-CyberCommando3","SparkOnDemandPatchEntry-CyberCommando4","SparkOnDemandPatchEntry-CyberCommando5","SparkOnDemandPatchEntry-CyberCommando6","SparkOnDemandPatchEntry-CyberCommando7","SparkOnDemandPatchEntry-CyberCommando8","SparkOnDemandPatchEntry-Dreadnought1","SparkOnDemandPatchEntry-Dreadnought2","SparkOnDemandPatchEntry-Dreadnought3","SparkOnDemandPatchEntry-Dreadnought4","SparkOnDemandPatchEntry-Dreadnought5","SparkOnDemandPatchEntry-Dreadnought6","SparkOnDemandPatchEntry-Dreadnought7","SparkOnDemandPatchEntry-Law & Order1","SparkOnDemandPatchEntry-Law & Order2","SparkOnDemandPatchEntry-Law & Order3","SparkOnDemandPatchEntry-Law & Order4","SparkOnDemandPatchEntry-Law & Order5","SparkOnDemandPatchEntry-Fan the Hammer1","SparkOnDemandPatchEntry-Fan the Hammer2","SparkOnDemandPatchEntry-The Riflewoman1","SparkOnDemandPatchEntry-The Riflewoman2","SparkOnDemandPatchEntry-The Riflewoman3","SparkOnDemandPatchEntry-The Riflewoman4","SparkOnDemandPatchEntry-Boomtrap1","SparkOnDemandPatchEntry-Boomtrap2","SparkOnDemandPatchEntry-Boomtrap3","SparkOnDemandPatchEntry-Boomtrap4","SparkOnDemandPatchEntry-Boomtrap5","SparkOnDemandPatchEntry-Boomtrap6","SparkOnDemandPatchEntry-I Love You Guys1","SparkOnDemandPatchEntry-I Love You Guys2","SparkOnDemandPatchEntry-I Love You Guys3","SparkOnDemandPatchEntry-I Love You Guys4","SparkOnDemandPatchEntry-I Love You Guys5","SparkOnDemandPatchEntry-I Love You Guys6","SparkOnDemandPatchEntry-I Love You Guys7","SparkOnDemandPatchEntry-Fragmented Fragtrap1","SparkOnDemandPatchEntry-Fragmented Fragtrap2","SparkOnDemandPatchEntry-Fragmented Fragtrap3","SparkOnDemandPatchEntry-Fragmented Fragtrap4","SparkOnDemandPatchEntry-The Hero of this Story1","SparkOnDemandPatchEntry-The Hero of this Story2","SparkOnDemandPatchEntry-The Hero of this Story3","SparkOnDemandPatchEntry-The Hero of this Story4","SparkOnDemandPatchEntry-The Hero of this Story5","SparkOnDemandPatchEntry-Greater Good1","SparkOnDemandPatchEntry-Greater Good2","SparkOnDemandPatchEntry-Greater Good3","SparkOnDemandPatchEntry-Free Enterprise1","SparkOnDemandPatchEntry-Free Enterprise2","SparkOnDemandPatchEntry-Free Enterprise3","SparkOnDemandPatchEntry-Free Enterprise4","SparkOnDemandPatchEntry-The Huntress1","SparkOnDemandPatchEntry-The Huntress2","SparkOnDemandPatchEntry-The Huntress3","SparkOnDemandPatchEntry-The Huntress4","SparkOnDemandPatchEntry-The Huntress5","SparkOnDemandPatchEntry-Cold Money1","SparkOnDemandPatchEntry-Cold Money2","SparkOnDemandPatchEntry-Cold Money3","SparkOnDemandPatchEntry-Cold Money4","SparkOnDemandPatchEntry-Cold Money5","SparkOnDemandPatchEntry-Contractual Aristocracy1","SparkOnDemandPatchEntry-Contractual Aristocracy2","SparkOnDemandPatchEntry-Contractual Aristocracy3")
+
+set Transient.SparkServiceConfiguration_5 Values ("GD_Gladiator_Streaming,GD_Gladiator_Skills.Phalanx.Invictus,MaxGrade,,10","GD_Gladiator_Streaming,GD_Gladiator_Skills.Phalanx.Ephodos,MaxGrade,,10","GD_Gladiator_Streaming,GD_Gladiator_Skills.Phalanx.Vanguard,MaxGrade,,10","GD_Gladiator_Streaming,GD_Gladiator_Skills.Phalanx.HoldTheLine,MaxGrade,,10","GD_Gladiator_Streaming,GD_Gladiator_Skills.Phalanx.UnitedFront,MaxGrade,,10","GD_Gladiator_Streaming,GD_Gladiator_Skills.Phalanx.Stalwart,MaxGrade,,10","GD_Gladiator_Streaming,GD_Gladiator_Skills.Phalanx.ReturningFire,MaxGrade,,10","GD_Gladiator_Streaming,GD_Gladiator_Skills.Phalanx.PrepareForGlory,MaxGrade,,10","GD_Gladiator_Streaming,GD_Gladiator_Skills.Xiphos.Gun-Kata,MaxGrade,,10","GD_Gladiator_Streaming,GD_Gladiator_Skills.Xiphos.ClarityOfPurpose,MaxGrade,,10","GD_Gladiator_Streaming,GD_Gladiator_Skills.Xiphos.Mercurial,MaxGrade,,10","GD_Gladiator_Streaming,GD_Gladiator_Skills.Xiphos.FinalVictory,MaxGrade,,10","GD_Gladiator_Streaming,GD_Gladiator_Skills.Xiphos.Bloodlust,MaxGrade,,10","GD_Gladiator_Streaming,GD_Gladiator_Skills.Xiphos.Tear,MaxGrade,,10","GD_Gladiator_Streaming,GD_Gladiator_Skills.Xiphos.YouveGotRedonYou,MaxGrade,,10","GD_Gladiator_Streaming,GD_Gladiator_Skills.Xiphos.FuryOfTheArena,MaxGrade,,10","GD_Gladiator_Streaming,GD_Gladiator_Skills.CeraunicStorm.StormWeaving,MaxGrade,,10","GD_Gladiator_Streaming,GD_Gladiator_Skills.CeraunicStorm.GatheringTempest,MaxGrade,,10","GD_Gladiator_Streaming,GD_Gladiator_Skills.CeraunicStorm.Conduit_V2,MaxGrade,,10","GD_Gladiator_Streaming,GD_Gladiator_Skills.CeraunicStorm.Unrelenting,MaxGrade,,10","GD_Gladiator_Streaming,GD_Gladiator_Skills.CeraunicStorm.Superconductor,MaxGrade,,10","GD_Gladiator_Streaming,GD_Gladiator_Skills.CeraunicStorm.ElementalBarrage,MaxGrade,,10","GD_Gladiator_Streaming,GD_Gladiator_Skills.CeraunicStorm.Overload,MaxGrade,,10","GD_Gladiator_Streaming,GD_Gladiator_Skills.CeraunicStorm.FlashFreeze,MaxGrade,,10","GD_Enforcer_Streaming,GD_Enforcer_Skills.HunterKiller.Afterburner,MaxGrade,,10","GD_Enforcer_Streaming,GD_Enforcer_Skills.HunterKiller.FireSupport,MaxGrade,,10","GD_Enforcer_Streaming,GD_Enforcer_Skills.HunterKiller.VenomBolts,MaxGrade,,10","GD_Enforcer_Streaming,GD_Enforcer_Skills.HunterKiller.Suppression,MaxGrade,,10","GD_Enforcer_Streaming,GD_Enforcer_Skills.HunterKiller.RollingThunder,MaxGrade,,10","GD_Enforcer_Streaming,GD_Enforcer_Skills.HunterKiller.ColdWar,MaxGrade,,10","GD_Enforcer_Streaming,GD_Enforcer_Skills.HunterKiller.Escalation,MaxGrade,,10","GD_Enforcer_Streaming,GD_Enforcer_Skills.CyberCommando.LezerFighter,MaxGrade,,10","GD_Enforcer_Streaming,GD_Enforcer_Skills.CyberCommando.ManandMachine,MaxGrade,,10","GD_Enforcer_Streaming,GD_Enforcer_Skills.CyberCommando.FirsttoFight,MaxGrade,,10","GD_Enforcer_Streaming,GD_Enforcer_Skills.CyberCommando.HyZ33TargetingScope,MaxGrade,,10","GD_Enforcer_Streaming,GD_Enforcer_Skills.CyberCommando.EmergencyResponse,MaxGrade,,10","GD_Enforcer_Streaming,GD_Enforcer_Skills.CyberCommando.DivertPower,MaxGrade,,10","GD_Enforcer_Streaming,GD_Enforcer_Skills.CyberCommando.DeathFromAbove,MaxGrade,,10","GD_Enforcer_Streaming,GD_Enforcer_Skills.CyberCommando.WelcomeToTheGunShow,MaxGrade,,10","GD_Enforcer_Streaming,GD_Enforcer_Skills.Dreadnought.AuxillaryTanks,MaxGrade,,10","GD_Enforcer_Streaming,GD_Enforcer_Skills.Dreadnought.Fortify,MaxGrade,,10","GD_Enforcer_Streaming,GD_Enforcer_Skills.Dreadnought.Energize,MaxGrade,,10","GD_Enforcer_Streaming,GD_Enforcer_Skills.Dreadnought.HeatSinks,MaxGrade,,10","GD_Enforcer_Streaming,GD_Enforcer_Skills.Dreadnought.RapidReinforcement,MaxGrade,,10","GD_Enforcer_Streaming,GD_Enforcer_Skills.Dreadnought.HazmatContainmentSystems,MaxGrade,,10","GD_Enforcer_Streaming,GD_Enforcer_Skills.Dreadnought.HardToKill,MaxGrade,,10","GD_Lawbringer_Streaming,GD_Lawbringer_Skills.Order.TheThirdDegree,MaxGrade,,10","GD_Lawbringer_Streaming,GD_Lawbringer_Skills.Order.Wanted,MaxGrade,,10","GD_Lawbringer_Streaming,GD_Lawbringer_Skills.Order.DueProcess,MaxGrade,,10","GD_Lawbringer_Streaming,GD_Lawbringer_Skills.Order.Jurisdiction,MaxGrade,,10","GD_Lawbringer_Streaming,GD_Lawbringer_Skills.Order.RarinToGo,MaxGrade,,10","GD_Lawbringer_Streaming,GD_Lawbringer_Skills.FanTheHammer.Ruthless,MaxGrade,,10","GD_Lawbringer_Streaming,GD_Lawbringer_Skills.FanTheHammer.Gunslinger,MaxGrade,,10","GD_Lawbringer_Streaming,GD_Lawbringer_Skills.Riflewoman.SnapShot,MaxGrade,,10","GD_Lawbringer_Streaming,GD_Lawbringer_Skills.Riflewoman.BonaFideGrit,MaxGrade,,10","GD_Lawbringer_Streaming,GD_Lawbringer_Skills.Riflewoman.CrackShot,MaxGrade,,10","GD_Lawbringer_Streaming,GD_Lawbringer_Skills.Riflewoman.HotLead,MaxGrade,,10","GD_Prototype_Streaming,GD_Prototype_Skills.Boomtrap.DropTheHammer,MaxGrade,,10","GD_Prototype_Streaming,GD_Prototype_Skills.Boomtrap.Repulsive,MaxGrade,,10","GD_Prototype_Streaming,GD_Prototype_Skills.Boomtrap.LoadNSplode,MaxGrade,,10","GD_Prototype_Streaming,GD_Prototype_Skills.Boomtrap.StartWithABang,MaxGrade,,10","GD_Prototype_Streaming,GD_Prototype_Skills.Boomtrap.HyperionPunch,MaxGrade,,10","GD_Prototype_Streaming,GD_Prototype_Skills.Boomtrap.OneLastThing,MaxGrade,,10","GD_Prototype_Streaming,GD_Prototype_Skills.ILoveYouGuys.BestBuds4Life,MaxGrade,,10","GD_Prototype_Streaming,GD_Prototype_Skills.ILoveYouGuys.ManiacalLaughter,MaxGrade,,10","GD_Prototype_Streaming,GD_Prototype_Skills.ILoveYouGuys.AllTheThingsAreAwesome,MaxGrade,,10","GD_Prototype_Streaming,GD_Prototype_Skills.ILoveYouGuys.WaxOffWaxOn,MaxGrade,,10","GD_Prototype_Streaming,GD_Prototype_Skills.ILoveYouGuys.PainSimulatorIsPainful,MaxGrade,,10","GD_Prototype_Streaming,GD_Prototype_Skills.ILoveYouGuys.KickHimWhileHesUp,MaxGrade,,10","GD_Prototype_Streaming,GD_Prototype_Skills.ILoveYouGuys.OrganizedGunsAreHappyGuns,MaxGrade,,10","GD_Prototype_Streaming,GD_Prototype_Skills.Fragmented.SurprisedStabalize,MaxGrade,,10","GD_Prototype_Streaming,GD_Prototype_Skills.Fragmented.BlueShell,MaxGrade,,10","GD_Prototype_Streaming,GD_Prototype_Skills.Fragmented.GrenadeVent,MaxGrade,,10","GD_Prototype_Streaming,GD_Prototype_Skills.Fragmented.CryogenicExhaustManifold,MaxGrade,,10","Quince_Doppel_Streaming,Quince_Doppel_Hero.Skills.BestFootForward,MaxGrade,,10","Quince_Doppel_Streaming,Quince_Doppel_Hero.Skills.Bolster,MaxGrade,,10","Quince_Doppel_Streaming,Quince_Doppel_Hero.Skills.JustCompensation,MaxGrade,,10","Quince_Doppel_Streaming,Quince_Doppel_Hero.Skills.HeroPose,MaxGrade,,10","Quince_Doppel_Streaming,Quince_Doppel_Hero.Skills.LeanOnMe,MaxGrade,,10","Quince_Doppel_Streaming,Quince_Doppel_GreaterGood.Skills.Integrity,MaxGrade,,10","Quince_Doppel_Streaming,Quince_Doppel_GreaterGood.Skills.Teamwork,MaxGrade,,10","Quince_Doppel_Streaming,Quince_Doppel_GreaterGood.Skills.Optimism,MaxGrade,,10","Quince_Doppel_Streaming,Quince_Doppel_FreeEnterprise.Skills.HighFrequencyTrading,MaxGrade,,10","Quince_Doppel_Streaming,Quince_Doppel_FreeEnterprise.Skills.Incentives,MaxGrade,,10","Quince_Doppel_Streaming,Quince_Doppel_FreeEnterprise.Skills.MarginalBenefit,MaxGrade,,10","Quince_Doppel_Streaming,Quince_Doppel_FreeEnterprise.Skills.CompanyMan,MaxGrade,,10","Crocus_Baroness_Streaming,Crocus_Baroness_Huntress.Skills.Markswoman,MaxGrade,,10","Crocus_Baroness_Streaming,Crocus_Baroness_Huntress.Skills.OnlyTheBest,MaxGrade,,10","Crocus_Baroness_Streaming,Crocus_Baroness_Huntress.Skills.INeverMiss,MaxGrade,,10","Crocus_Baroness_Streaming,Crocus_Baroness_Huntress.Skills.WaitForIt,MaxGrade,,10","Crocus_Baroness_Streaming,Crocus_Baroness_Huntress.Skills.LargeCalibur,MaxGrade,,10","Crocus_Baroness_Streaming,Crocus_Baroness_ColdMoney.Skills.Avalanche,MaxGrade,,10","Crocus_Baroness_Streaming,Crocus_Baroness_ColdMoney.Skills.BitterRiposte,MaxGrade,,10","Crocus_Baroness_Streaming,Crocus_Baroness_ColdMoney.Skills.ShortSummer,MaxGrade,,10","Crocus_Baroness_Streaming,Crocus_Baroness_ColdMoney.Skills.FrigidTouch,MaxGrade,,10","Crocus_Baroness_Streaming,Crocus_Baroness_ColdMoney.Skills.WintersVeil,MaxGrade,,10","Crocus_Baroness_Streaming,Crocus_Baroness_Servant.Skills.QualityNotQuantity,MaxGrade,,10","Crocus_Baroness_Streaming,Crocus_Baroness_Servant.Skills.NextToCleanliness,MaxGrade,,10","Crocus_Baroness_Streaming,Crocus_Baroness_Servant.Skills.SaveTheQueen,MaxGrade,,10")
+

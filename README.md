@@ -9,24 +9,30 @@ Check out the [Wiki](https://github.com/BL2CP/BLCMods/wiki). If you want to find
 
 ## Requirements
 
-These mods can only be installed on PC and will **never** be ported to consoles due to technical and legal limitations.    
-All non-headhunter DLC is required for the patch and likely most mods.
+These mods can only be installed on PC and will **never** be ported to consoles due to technical and legal limitations.
+
+All **non-headhunter** DLC is required for the patch and likely most mods, this includes both UVHMpacks and digistruct peak.
+
+support will most likely **NOT** be given for errors that the UCP cause due to missing DLC.
+
+Individual mod support for errors is up to the author of the mod and is a case by case basis.
+
+**DO NOT EXPECT TO BE *ENTITLED* TO HELP**, each member of BLCM and the discord is an individual first then a modder second, is doing this for free, and have (potentially busy) lives to live.
+
+That being said most members of BLCM are more than willing to help if you remember this.
 
 ## Contribution
 
-If you are not part of BLCM, to contribute a mod:
-- `Fork` the repository (top right).
-- `Commit` files to the respective folders. (either `Borderlands 2 mods` or `Pre Sequel Mods`)    
-  under a personal folder that shares your github username    
-  E.g. (`Borderlands 2 mods/SomeDude/mod.txt`)
-- Send a `Pull Request` to `Compare` merge your fork to the `master` branch.
+If you wish to contribute a mod:
 
-If you are part of [BLCM](https://github.com/BLCM) you do not need to fork or pull request.
+[please see the tutorial here](https://github.com/BLCM/BLCMods/wiki/Contribution)
 
-## ModPacks
+If you are part of [BLCM](https://github.com/BLCM) you do not need to fork or pull request, simply drag and drop the file/folder to your directory
+
+## ModPack Policy
 
 If you wish to contribute a modpack (or a compilation of mods):
-- you **must** provide a screenshot or other proof of agreement from **each** mod author if you wish for your modpack to be accepted.
+- you **must** provide a screenshot or other proof of agreement from ***EACH*** mod author if you wish for your modpack to be accepted.
 - preferably using an image gallery of screenshots using an image hosting website of your choice, such as https://imgur.com/
 - modpacks are submitted the same way as regular contributions, so scroll up to read instructions on how to do so.
 
@@ -36,5 +42,7 @@ To download the files click the green `Clone or Download` button in the top righ
 
 Installing the files follows methods discussed on the [Wiki](https://github.com/BL2CP/BLCMods/wiki/Tutorial:-Installation)
 
-*Derch*'s Tutorial:    
-[![Derch's Install Tutorial](http://img.youtube.com/vi/HT79s6_KXqQ/0.jpg)](https://youtu.be/HT79s6_KXqQ)
+Note that the use of "master files" has become strongly discouraged as Borderlands
+2/TPS modding has become more complex.  The use of master files will often end
+up breaking parts or all of the mods you're trying to use.  Instead, always import
+mods into FilterTool, and only execute the single patch file that it saves.

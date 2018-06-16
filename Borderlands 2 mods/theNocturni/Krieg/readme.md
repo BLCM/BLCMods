@@ -14,6 +14,10 @@ This folder contains mods that are related to Krieg
 	   makes LtF scale to OP8, and also increases the thrown dynamite's radius by 33%
 	
 	   you may want to disable the community patch's buff of LtF when using this.
+	   
+	3. SlagDoTKrieg.txt
+	   allows Slag DoT to proc Elemental Empathy and Elemental Elation.
+	   this will have no effect unless you are using a mod that gives slag a DoT.
 
  #2. Krieg Tweaks(fixes?)
  

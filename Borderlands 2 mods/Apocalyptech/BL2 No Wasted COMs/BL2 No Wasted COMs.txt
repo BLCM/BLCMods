@@ -1,0 +1,271 @@
+#<BL2 No Wasted COMs>
+
+    # BL2 No Wasted COMs v1.0.1
+    # Licensed under Public Domain / CC0 1.0 Universal
+    #
+    # Sets the game to only drop COMs for the player classes who are actually
+    # in the game at the time.  Once a player class has joined the game, the
+    # only way to remove that character's COMs from the drop pools is to exit
+    # to the main menu and re-execute the patch.
+
+    #<Initial Clear>
+
+        # Do an initial set to clear out the COM item pools.  This is actually
+        # only required if you're looking to "clear out" a pool after a character's
+        # left the game, and must be done by exiting out to the main menu and re-
+        # executing the mod/patch.
+
+        set GD_Itempools.ClassModPools.Pool_ClassMod_01_Common BalancedItems ((ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ClassModPools.Pool_ClassMod_Assassin_01_Common',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ClassModPools.Pool_ClassMod_Merc_01_Common',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ClassModPools.Pool_ClassMod_Siren_01_Common',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ClassModPools.Pool_ClassMod_Soldier_01_Common',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Lilac_Itempools.ClassModPools.Pool_ClassMod_LilacPlayerClass_01_Common',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Tulip_Itempools.ClassModPools.Pool_ClassMod_Mechromancer_01_Common',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True))
+
+        set GD_Itempools.ClassModPools.Pool_ClassMod_02_Uncommon BalancedItems ((ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ClassModPools.Pool_ClassMod_Assassin_02_Uncommon',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ClassModPools.Pool_ClassMod_Merc_02_Uncommon',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ClassModPools.Pool_ClassMod_Siren_02_Uncommon',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ClassModPools.Pool_ClassMod_Soldier_02_Uncommon',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Lilac_Itempools.ClassModPools.Pool_ClassMod_LilacPlayerClass_02_Uncommon',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Tulip_Itempools.ClassModPools.Pool_ClassMod_Mechromancer_02_Uncommon',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True))
+
+        set GD_Itempools.ClassModPools.Pool_ClassMod_04_Rare BalancedItems ((ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ClassModPools.Pool_ClassMod_Assassin_03_Rare',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ClassModPools.Pool_ClassMod_Merc_03_Rare',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ClassModPools.Pool_ClassMod_Siren_03_Rare',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ClassModPools.Pool_ClassMod_Soldier_03_Rare',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Lilac_Itempools.ClassModPools.Pool_ClassMod_LilacPlayerClass_03_Rare',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Tulip_Itempools.ClassModPools.Pool_ClassMod_Mechromancer_03_Rare',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True))
+
+        set GD_Itempools.ClassModPools.Pool_ClassMod_05_VeryRare BalancedItems ((ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ClassModPools.Pool_ClassMod_Assassin_04_VeryRare',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ClassModPools.Pool_ClassMod_Merc_04_VeryRare',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ClassModPools.Pool_ClassMod_Siren_04_VeryRare',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ClassModPools.Pool_ClassMod_Soldier_04_VeryRare',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Lilac_Itempools.ClassModPools.Pool_ClassMod_LilacPlayerClass_04_VeryRare',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Tulip_Itempools.ClassModPools.Pool_ClassMod_Mechromancer_04_VeryRare',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True))
+
+        set GD_Itempools.ClassModPools.Pool_ClassMod_06_Legendary BalancedItems ((ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ClassModPools.Pool_ClassMod_Assassin_05_Legendary',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ClassModPools.Pool_ClassMod_Merc_05_Legendary',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ClassModPools.Pool_ClassMod_Siren_05_Legendary',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ClassModPools.Pool_ClassMod_Soldier_05_Legendary',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Lilac_Itempools.ClassModPools.Pool_ClassMod_LilacPlayerClass_05_Legendary',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Tulip_Itempools.ClassModPools.Pool_ClassMod_Mechromancer_05_Legendary',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True))
+
+        set GD_Itempools.ClassModPools.Pool_ClassMod_06_SlayerOfTerramorphous BalancedItems ((ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ClassModPools.Pool_ClassMod_Assassin_01_Common',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ClassModPools.Pool_ClassMod_Merc_01_Common',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ClassModPools.Pool_ClassMod_Siren_01_Common',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ClassModPools.Pool_ClassMod_Soldier_01_Common',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Lilac_Itempools.ClassModPools.Pool_ClassMod_LilacPlayerClass_01_Common',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Tulip_Itempools.ClassModPools.Pool_ClassMod_Mechromancer_01_Common',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True))
+
+        set GD_Aster_ItemPools.ClassModPools.Pool_ClassMod_00_Aster BalancedItems ((ItmPoolDefinition=ItemPoolDefinition'GD_Aster_ItemPools.ClassModPools.Pool_ClassMod_Assassin_Aster',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Aster_ItemPools.ClassModPools.Pool_ClassMod_Merc_Aster',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Aster_ItemPools.ClassModPools.Pool_ClassMod_Siren_Aster',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Aster_ItemPools.ClassModPools.Pool_ClassMod_Soldier_Aster',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Aster_ItemPools.ClassModPools.Pool_ClassMod_Psycho_Aster',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Aster_ItemPools.ClassModPools.Pool_ClassMod_Mechromancer_Aster',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True))
+
+        set GD_Lobelia_Itempools.ClassModPools.Pool_ClassMod_Lobelia_All BalancedItems ((ItmPoolDefinition=ItemPoolDefinition'GD_Lobelia_Itempools.ClassModPools.Pool_ClassMod_Lobelia_Assassin',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Lobelia_Itempools.ClassModPools.Pool_ClassMod_Lobelia_Merc',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Lobelia_Itempools.ClassModPools.Pool_ClassMod_Lobelia_Siren',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Lobelia_Itempools.ClassModPools.Pool_ClassMod_Lobelia_Soldier',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Lobelia_Itempools.ClassModPools.Pool_ClassMod_Lobelia_Psycho',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Lobelia_Itempools.ClassModPools.Pool_ClassMod_Lobelia_Mechromancer',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True))
+
+    #</Initial Clear>
+
+    #<Level Clear>
+
+        # Something hotfix-like modifies the InitializationDefinition of these pools
+        # on level load, so we need a level-load hotfix to clear it out.
+
+        #<hotfix><key>"SparkLevelPatchEntry-ApocCOMIDClear0"</key><value>",GD_Itempools.ClassModPools.Pool_ClassMod_01_Common,BalancedItems[0].Probability.InitializationDefinition,,None"</value><on>
+        
+        #<hotfix><key>"SparkLevelPatchEntry-ApocCOMIDClear1"</key><value>",GD_Itempools.ClassModPools.Pool_ClassMod_01_Common,BalancedItems[1].Probability.InitializationDefinition,,None"</value><on>
+        
+        #<hotfix><key>"SparkLevelPatchEntry-ApocCOMIDClear2"</key><value>",GD_Itempools.ClassModPools.Pool_ClassMod_01_Common,BalancedItems[2].Probability.InitializationDefinition,,None"</value><on>
+        
+        #<hotfix><key>"SparkLevelPatchEntry-ApocCOMIDClear3"</key><value>",GD_Itempools.ClassModPools.Pool_ClassMod_01_Common,BalancedItems[3].Probability.InitializationDefinition,,None"</value><on>
+        
+        #<hotfix><key>"SparkLevelPatchEntry-ApocCOMIDClear4"</key><value>",GD_Itempools.ClassModPools.Pool_ClassMod_01_Common,BalancedItems[4].Probability.InitializationDefinition,,None"</value><on>
+        
+        #<hotfix><key>"SparkLevelPatchEntry-ApocCOMIDClear5"</key><value>",GD_Itempools.ClassModPools.Pool_ClassMod_01_Common,BalancedItems[5].Probability.InitializationDefinition,,None"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-ApocCOMIDClear6"</key><value>",GD_Itempools.ClassModPools.Pool_ClassMod_02_Uncommon,BalancedItems[0].Probability.InitializationDefinition,,None"</value><on>
+        
+        #<hotfix><key>"SparkLevelPatchEntry-ApocCOMIDClear7"</key><value>",GD_Itempools.ClassModPools.Pool_ClassMod_02_Uncommon,BalancedItems[1].Probability.InitializationDefinition,,None"</value><on>
+        
+        #<hotfix><key>"SparkLevelPatchEntry-ApocCOMIDClear8"</key><value>",GD_Itempools.ClassModPools.Pool_ClassMod_02_Uncommon,BalancedItems[2].Probability.InitializationDefinition,,None"</value><on>
+        
+        #<hotfix><key>"SparkLevelPatchEntry-ApocCOMIDClear9"</key><value>",GD_Itempools.ClassModPools.Pool_ClassMod_02_Uncommon,BalancedItems[3].Probability.InitializationDefinition,,None"</value><on>
+        
+        #<hotfix><key>"SparkLevelPatchEntry-ApocCOMIDClear10"</key><value>",GD_Itempools.ClassModPools.Pool_ClassMod_02_Uncommon,BalancedItems[4].Probability.InitializationDefinition,,None"</value><on>
+        
+        #<hotfix><key>"SparkLevelPatchEntry-ApocCOMIDClear11"</key><value>",GD_Itempools.ClassModPools.Pool_ClassMod_02_Uncommon,BalancedItems[5].Probability.InitializationDefinition,,None"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-ApocCOMIDClear12"</key><value>",GD_Itempools.ClassModPools.Pool_ClassMod_04_Rare,BalancedItems[0].Probability.InitializationDefinition,,None"</value><on>
+        
+        #<hotfix><key>"SparkLevelPatchEntry-ApocCOMIDClear13"</key><value>",GD_Itempools.ClassModPools.Pool_ClassMod_04_Rare,BalancedItems[1].Probability.InitializationDefinition,,None"</value><on>
+        
+        #<hotfix><key>"SparkLevelPatchEntry-ApocCOMIDClear14"</key><value>",GD_Itempools.ClassModPools.Pool_ClassMod_04_Rare,BalancedItems[2].Probability.InitializationDefinition,,None"</value><on>
+        
+        #<hotfix><key>"SparkLevelPatchEntry-ApocCOMIDClear15"</key><value>",GD_Itempools.ClassModPools.Pool_ClassMod_04_Rare,BalancedItems[3].Probability.InitializationDefinition,,None"</value><on>
+        
+        #<hotfix><key>"SparkLevelPatchEntry-ApocCOMIDClear16"</key><value>",GD_Itempools.ClassModPools.Pool_ClassMod_04_Rare,BalancedItems[4].Probability.InitializationDefinition,,None"</value><on>
+        
+        #<hotfix><key>"SparkLevelPatchEntry-ApocCOMIDClear17"</key><value>",GD_Itempools.ClassModPools.Pool_ClassMod_04_Rare,BalancedItems[5].Probability.InitializationDefinition,,None"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-ApocCOMIDClear18"</key><value>",GD_Itempools.ClassModPools.Pool_ClassMod_05_VeryRare,BalancedItems[0].Probability.InitializationDefinition,,None"</value><on>
+        
+        #<hotfix><key>"SparkLevelPatchEntry-ApocCOMIDClear19"</key><value>",GD_Itempools.ClassModPools.Pool_ClassMod_05_VeryRare,BalancedItems[1].Probability.InitializationDefinition,,None"</value><on>
+        
+        #<hotfix><key>"SparkLevelPatchEntry-ApocCOMIDClear20"</key><value>",GD_Itempools.ClassModPools.Pool_ClassMod_05_VeryRare,BalancedItems[2].Probability.InitializationDefinition,,None"</value><on>
+        
+        #<hotfix><key>"SparkLevelPatchEntry-ApocCOMIDClear21"</key><value>",GD_Itempools.ClassModPools.Pool_ClassMod_05_VeryRare,BalancedItems[3].Probability.InitializationDefinition,,None"</value><on>
+        
+        #<hotfix><key>"SparkLevelPatchEntry-ApocCOMIDClear22"</key><value>",GD_Itempools.ClassModPools.Pool_ClassMod_05_VeryRare,BalancedItems[4].Probability.InitializationDefinition,,None"</value><on>
+        
+        #<hotfix><key>"SparkLevelPatchEntry-ApocCOMIDClear23"</key><value>",GD_Itempools.ClassModPools.Pool_ClassMod_05_VeryRare,BalancedItems[5].Probability.InitializationDefinition,,None"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-ApocCOMIDClear24"</key><value>",GD_Itempools.ClassModPools.Pool_ClassMod_06_Legendary,BalancedItems[0].Probability.InitializationDefinition,,None"</value><on>
+        
+        #<hotfix><key>"SparkLevelPatchEntry-ApocCOMIDClear25"</key><value>",GD_Itempools.ClassModPools.Pool_ClassMod_06_Legendary,BalancedItems[1].Probability.InitializationDefinition,,None"</value><on>
+        
+        #<hotfix><key>"SparkLevelPatchEntry-ApocCOMIDClear26"</key><value>",GD_Itempools.ClassModPools.Pool_ClassMod_06_Legendary,BalancedItems[2].Probability.InitializationDefinition,,None"</value><on>
+        
+        #<hotfix><key>"SparkLevelPatchEntry-ApocCOMIDClear27"</key><value>",GD_Itempools.ClassModPools.Pool_ClassMod_06_Legendary,BalancedItems[3].Probability.InitializationDefinition,,None"</value><on>
+        
+        #<hotfix><key>"SparkLevelPatchEntry-ApocCOMIDClear28"</key><value>",GD_Itempools.ClassModPools.Pool_ClassMod_06_Legendary,BalancedItems[4].Probability.InitializationDefinition,,None"</value><on>
+        
+        #<hotfix><key>"SparkLevelPatchEntry-ApocCOMIDClear29"</key><value>",GD_Itempools.ClassModPools.Pool_ClassMod_06_Legendary,BalancedItems[5].Probability.InitializationDefinition,,None"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-ApocCOMIDClear30"</key><value>",GD_Itempools.ClassModPools.Pool_ClassMod_06_SlayerOfTerramorphous,BalancedItems[0].Probability.InitializationDefinition,,None"</value><on>
+        
+        #<hotfix><key>"SparkLevelPatchEntry-ApocCOMIDClear31"</key><value>",GD_Itempools.ClassModPools.Pool_ClassMod_06_SlayerOfTerramorphous,BalancedItems[1].Probability.InitializationDefinition,,None"</value><on>
+        
+        #<hotfix><key>"SparkLevelPatchEntry-ApocCOMIDClear32"</key><value>",GD_Itempools.ClassModPools.Pool_ClassMod_06_SlayerOfTerramorphous,BalancedItems[2].Probability.InitializationDefinition,,None"</value><on>
+        
+        #<hotfix><key>"SparkLevelPatchEntry-ApocCOMIDClear33"</key><value>",GD_Itempools.ClassModPools.Pool_ClassMod_06_SlayerOfTerramorphous,BalancedItems[3].Probability.InitializationDefinition,,None"</value><on>
+        
+        #<hotfix><key>"SparkLevelPatchEntry-ApocCOMIDClear34"</key><value>",GD_Itempools.ClassModPools.Pool_ClassMod_06_SlayerOfTerramorphous,BalancedItems[4].Probability.InitializationDefinition,,None"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-ApocCOMIDClear35"</key><value>",GD_Itempools.ClassModPools.Pool_ClassMod_06_SlayerOfTerramorphous,BalancedItems[5].Probability.InitializationDefinition,,None"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-ApocCOMIDClear36"</key><value>",GD_Aster_ItemPools.ClassModPools.Pool_ClassMod_00_Aster,BalancedItems[0].Probability.InitializationDefinition,,None"</value><on>
+        
+        #<hotfix><key>"SparkLevelPatchEntry-ApocCOMIDClear37"</key><value>",GD_Aster_ItemPools.ClassModPools.Pool_ClassMod_00_Aster,BalancedItems[1].Probability.InitializationDefinition,,None"</value><on>
+        
+        #<hotfix><key>"SparkLevelPatchEntry-ApocCOMIDClear38"</key><value>",GD_Aster_ItemPools.ClassModPools.Pool_ClassMod_00_Aster,BalancedItems[2].Probability.InitializationDefinition,,None"</value><on>
+        
+        #<hotfix><key>"SparkLevelPatchEntry-ApocCOMIDClear39"</key><value>",GD_Aster_ItemPools.ClassModPools.Pool_ClassMod_00_Aster,BalancedItems[3].Probability.InitializationDefinition,,None"</value><on>
+        
+        #<hotfix><key>"SparkLevelPatchEntry-ApocCOMIDClear40"</key><value>",GD_Aster_ItemPools.ClassModPools.Pool_ClassMod_00_Aster,BalancedItems[4].Probability.InitializationDefinition,,None"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-ApocCOMIDClear41"</key><value>",GD_Aster_ItemPools.ClassModPools.Pool_ClassMod_00_Aster,BalancedItems[5].Probability.InitializationDefinition,,None"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-ApocCOMIDClear42"</key><value>",GD_Lobelia_Itempools.ClassModPools.Pool_ClassMod_Lobelia_All,BalancedItems[0].Probability.InitializationDefinition,,None"</value><on>
+        
+        #<hotfix><key>"SparkLevelPatchEntry-ApocCOMIDClear43"</key><value>",GD_Lobelia_Itempools.ClassModPools.Pool_ClassMod_Lobelia_All,BalancedItems[1].Probability.InitializationDefinition,,None"</value><on>
+        
+        #<hotfix><key>"SparkLevelPatchEntry-ApocCOMIDClear44"</key><value>",GD_Lobelia_Itempools.ClassModPools.Pool_ClassMod_Lobelia_All,BalancedItems[2].Probability.InitializationDefinition,,None"</value><on>
+        
+        #<hotfix><key>"SparkLevelPatchEntry-ApocCOMIDClear45"</key><value>",GD_Lobelia_Itempools.ClassModPools.Pool_ClassMod_Lobelia_All,BalancedItems[3].Probability.InitializationDefinition,,None"</value><on>
+        
+        #<hotfix><key>"SparkLevelPatchEntry-ApocCOMIDClear46"</key><value>",GD_Lobelia_Itempools.ClassModPools.Pool_ClassMod_Lobelia_All,BalancedItems[4].Probability.InitializationDefinition,,None"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-ApocCOMIDClear47"</key><value>",GD_Lobelia_Itempools.ClassModPools.Pool_ClassMod_Lobelia_All,BalancedItems[5].Probability.InitializationDefinition,,None"</value><on>
+
+    #</Level Clear>
+
+    #<Assassin>
+
+        # Allows Assassin COM drops when that class joins
+
+        #<hotfix><key>"SparkOnDemandPatchEntry-ApocCOMAssassinSet0"</key><value>"GD_Assassin_Streaming,GD_Itempools.ClassModPools.Pool_ClassMod_01_Common,BalancedItems[0].Probability.BaseValueConstant,,1"</value><on>
+        
+        #<hotfix><key>"SparkOnDemandPatchEntry-ApocCOMAssassinSet1"</key><value>"GD_Assassin_Streaming,GD_Itempools.ClassModPools.Pool_ClassMod_02_Uncommon,BalancedItems[0].Probability.BaseValueConstant,,1"</value><on>
+        
+        #<hotfix><key>"SparkOnDemandPatchEntry-ApocCOMAssassinSet2"</key><value>"GD_Assassin_Streaming,GD_Itempools.ClassModPools.Pool_ClassMod_04_Rare,BalancedItems[0].Probability.BaseValueConstant,,1"</value><on>
+        
+        #<hotfix><key>"SparkOnDemandPatchEntry-ApocCOMAssassinSet3"</key><value>"GD_Assassin_Streaming,GD_Itempools.ClassModPools.Pool_ClassMod_05_VeryRare,BalancedItems[0].Probability.BaseValueConstant,,1"</value><on>
+        
+        #<hotfix><key>"SparkOnDemandPatchEntry-ApocCOMAssassinSet4"</key><value>"GD_Assassin_Streaming,GD_Itempools.ClassModPools.Pool_ClassMod_06_Legendary,BalancedItems[0].Probability.BaseValueConstant,,1"</value><on>
+        
+        #<hotfix><key>"SparkOnDemandPatchEntry-ApocCOMAssassinSet5"</key><value>"GD_Assassin_Streaming,GD_Itempools.ClassModPools.Pool_ClassMod_06_SlayerOfTerramorphous,BalancedItems[0].Probability.BaseValueConstant,,1"</value><on>
+
+        #<hotfix><key>"SparkOnDemandPatchEntry-ApocCOMAssassinSet6"</key><value>"GD_Assassin_Streaming,GD_Aster_ItemPools.ClassModPools.Pool_ClassMod_00_Aster,BalancedItems[0].Probability.BaseValueConstant,,1"</value><on>
+
+        #<hotfix><key>"SparkOnDemandPatchEntry-ApocCOMAssassinSet7"</key><value>"GD_Assassin_Streaming,GD_Lobelia_Itempools.ClassModPools.Pool_ClassMod_Lobelia_All,BalancedItems[0].Probability.BaseValueConstant,,1"</value><on>
+
+    #</Assassin>
+
+    #<Mercenary>
+
+        # Allows Mercenary COM drops when that class joins
+
+        #<hotfix><key>"SparkOnDemandPatchEntry-ApocCOMMercenarySet0"</key><value>"GD_Mercenary_Streaming,GD_Itempools.ClassModPools.Pool_ClassMod_01_Common,BalancedItems[1].Probability.BaseValueConstant,,1"</value><on>
+        
+        #<hotfix><key>"SparkOnDemandPatchEntry-ApocCOMMercenarySet1"</key><value>"GD_Mercenary_Streaming,GD_Itempools.ClassModPools.Pool_ClassMod_02_Uncommon,BalancedItems[1].Probability.BaseValueConstant,,1"</value><on>
+        
+        #<hotfix><key>"SparkOnDemandPatchEntry-ApocCOMMercenarySet2"</key><value>"GD_Mercenary_Streaming,GD_Itempools.ClassModPools.Pool_ClassMod_04_Rare,BalancedItems[1].Probability.BaseValueConstant,,1"</value><on>
+        
+        #<hotfix><key>"SparkOnDemandPatchEntry-ApocCOMMercenarySet3"</key><value>"GD_Mercenary_Streaming,GD_Itempools.ClassModPools.Pool_ClassMod_05_VeryRare,BalancedItems[1].Probability.BaseValueConstant,,1"</value><on>
+        
+        #<hotfix><key>"SparkOnDemandPatchEntry-ApocCOMMercenarySet4"</key><value>"GD_Mercenary_Streaming,GD_Itempools.ClassModPools.Pool_ClassMod_06_Legendary,BalancedItems[1].Probability.BaseValueConstant,,1"</value><on>
+        
+        #<hotfix><key>"SparkOnDemandPatchEntry-ApocCOMMercenarySet5"</key><value>"GD_Mercenary_Streaming,GD_Itempools.ClassModPools.Pool_ClassMod_06_SlayerOfTerramorphous,BalancedItems[1].Probability.BaseValueConstant,,1"</value><on>
+
+        #<hotfix><key>"SparkOnDemandPatchEntry-ApocCOMMercenarySet6"</key><value>"GD_Mercenary_Streaming,GD_Aster_ItemPools.ClassModPools.Pool_ClassMod_00_Aster,BalancedItems[1].Probability.BaseValueConstant,,1"</value><on>
+
+        #<hotfix><key>"SparkOnDemandPatchEntry-ApocCOMMercenarySet7"</key><value>"GD_Mercenary_Streaming,GD_Lobelia_Itempools.ClassModPools.Pool_ClassMod_Lobelia_All,BalancedItems[1].Probability.BaseValueConstant,,1"</value><on>
+
+    #</Mercenary>
+
+    #<Siren>
+
+        # Allows Siren COM drops when that class joins
+
+        #<hotfix><key>"SparkOnDemandPatchEntry-ApocCOMSirenSet0"</key><value>"GD_Siren_Streaming,GD_Itempools.ClassModPools.Pool_ClassMod_01_Common,BalancedItems[2].Probability.BaseValueConstant,,1"</value><on>
+        
+        #<hotfix><key>"SparkOnDemandPatchEntry-ApocCOMSirenSet1"</key><value>"GD_Siren_Streaming,GD_Itempools.ClassModPools.Pool_ClassMod_02_Uncommon,BalancedItems[2].Probability.BaseValueConstant,,1"</value><on>
+        
+        #<hotfix><key>"SparkOnDemandPatchEntry-ApocCOMSirenSet2"</key><value>"GD_Siren_Streaming,GD_Itempools.ClassModPools.Pool_ClassMod_04_Rare,BalancedItems[2].Probability.BaseValueConstant,,1"</value><on>
+        
+        #<hotfix><key>"SparkOnDemandPatchEntry-ApocCOMSirenSet3"</key><value>"GD_Siren_Streaming,GD_Itempools.ClassModPools.Pool_ClassMod_05_VeryRare,BalancedItems[2].Probability.BaseValueConstant,,1"</value><on>
+        
+        #<hotfix><key>"SparkOnDemandPatchEntry-ApocCOMSirenSet4"</key><value>"GD_Siren_Streaming,GD_Itempools.ClassModPools.Pool_ClassMod_06_Legendary,BalancedItems[2].Probability.BaseValueConstant,,1"</value><on>
+        
+        #<hotfix><key>"SparkOnDemandPatchEntry-ApocCOMSirenSet5"</key><value>"GD_Siren_Streaming,GD_Itempools.ClassModPools.Pool_ClassMod_06_SlayerOfTerramorphous,BalancedItems[2].Probability.BaseValueConstant,,1"</value><on>
+
+        #<hotfix><key>"SparkOnDemandPatchEntry-ApocCOMSirenSet6"</key><value>"GD_Siren_Streaming,GD_Aster_ItemPools.ClassModPools.Pool_ClassMod_00_Aster,BalancedItems[2].Probability.BaseValueConstant,,1"</value><on>
+
+        #<hotfix><key>"SparkOnDemandPatchEntry-ApocCOMSirenSet7"</key><value>"GD_Siren_Streaming,GD_Lobelia_Itempools.ClassModPools.Pool_ClassMod_Lobelia_All,BalancedItems[2].Probability.BaseValueConstant,,1"</value><on>
+
+    #</Siren>
+
+    #<Soldier>
+
+        # Allows Soldier COM drops when that class joins
+
+        #<hotfix><key>"SparkOnDemandPatchEntry-ApocCOMSoldierSet0"</key><value>"GD_Soldier_Streaming,GD_Itempools.ClassModPools.Pool_ClassMod_01_Common,BalancedItems[3].Probability.BaseValueConstant,,1"</value><on>
+        
+        #<hotfix><key>"SparkOnDemandPatchEntry-ApocCOMSoldierSet1"</key><value>"GD_Soldier_Streaming,GD_Itempools.ClassModPools.Pool_ClassMod_02_Uncommon,BalancedItems[3].Probability.BaseValueConstant,,1"</value><on>
+        
+        #<hotfix><key>"SparkOnDemandPatchEntry-ApocCOMSoldierSet2"</key><value>"GD_Soldier_Streaming,GD_Itempools.ClassModPools.Pool_ClassMod_04_Rare,BalancedItems[3].Probability.BaseValueConstant,,1"</value><on>
+        
+        #<hotfix><key>"SparkOnDemandPatchEntry-ApocCOMSoldierSet3"</key><value>"GD_Soldier_Streaming,GD_Itempools.ClassModPools.Pool_ClassMod_05_VeryRare,BalancedItems[3].Probability.BaseValueConstant,,1"</value><on>
+        
+        #<hotfix><key>"SparkOnDemandPatchEntry-ApocCOMSoldierSet4"</key><value>"GD_Soldier_Streaming,GD_Itempools.ClassModPools.Pool_ClassMod_06_Legendary,BalancedItems[3].Probability.BaseValueConstant,,1"</value><on>
+        
+        #<hotfix><key>"SparkOnDemandPatchEntry-ApocCOMSoldierSet5"</key><value>"GD_Soldier_Streaming,GD_Itempools.ClassModPools.Pool_ClassMod_06_SlayerOfTerramorphous,BalancedItems[3].Probability.BaseValueConstant,,1"</value><on>
+
+        #<hotfix><key>"SparkOnDemandPatchEntry-ApocCOMSoldierSet6"</key><value>"GD_Soldier_Streaming,GD_Aster_ItemPools.ClassModPools.Pool_ClassMod_00_Aster,BalancedItems[3].Probability.BaseValueConstant,,1"</value><on>
+
+        #<hotfix><key>"SparkOnDemandPatchEntry-ApocCOMSoldierSet7"</key><value>"GD_Soldier_Streaming,GD_Lobelia_Itempools.ClassModPools.Pool_ClassMod_Lobelia_All,BalancedItems[3].Probability.BaseValueConstant,,1"</value><on>
+
+    #</Soldier>
+
+    #<Psycho>
+
+        # Allows Psycho COM drops when that class joins
+
+        #<hotfix><key>"SparkOnDemandPatchEntry-ApocCOMPsychoSet0"</key><value>"GD_Lilac_Psycho_Streaming,GD_Itempools.ClassModPools.Pool_ClassMod_01_Common,BalancedItems[4].Probability.BaseValueConstant,,1"</value><on>
+        
+        #<hotfix><key>"SparkOnDemandPatchEntry-ApocCOMPsychoSet1"</key><value>"GD_Lilac_Psycho_Streaming,GD_Itempools.ClassModPools.Pool_ClassMod_02_Uncommon,BalancedItems[4].Probability.BaseValueConstant,,1"</value><on>
+        
+        #<hotfix><key>"SparkOnDemandPatchEntry-ApocCOMPsychoSet2"</key><value>"GD_Lilac_Psycho_Streaming,GD_Itempools.ClassModPools.Pool_ClassMod_04_Rare,BalancedItems[4].Probability.BaseValueConstant,,1"</value><on>
+        
+        #<hotfix><key>"SparkOnDemandPatchEntry-ApocCOMPsychoSet3"</key><value>"GD_Lilac_Psycho_Streaming,GD_Itempools.ClassModPools.Pool_ClassMod_05_VeryRare,BalancedItems[4].Probability.BaseValueConstant,,1"</value><on>
+        
+        #<hotfix><key>"SparkOnDemandPatchEntry-ApocCOMPsychoSet4"</key><value>"GD_Lilac_Psycho_Streaming,GD_Itempools.ClassModPools.Pool_ClassMod_06_Legendary,BalancedItems[4].Probability.BaseValueConstant,,1"</value><on>
+        
+        #<hotfix><key>"SparkOnDemandPatchEntry-ApocCOMPsychoSet5"</key><value>"GD_Lilac_Psycho_Streaming,GD_Itempools.ClassModPools.Pool_ClassMod_06_SlayerOfTerramorphous,BalancedItems[4].Probability.BaseValueConstant,,1"</value><on>
+
+        #<hotfix><key>"SparkOnDemandPatchEntry-ApocCOMPsychoSet6"</key><value>"GD_Lilac_Psycho_Streaming,GD_Aster_ItemPools.ClassModPools.Pool_ClassMod_00_Aster,BalancedItems[4].Probability.BaseValueConstant,,1"</value><on>
+
+        #<hotfix><key>"SparkOnDemandPatchEntry-ApocCOMPsychoSet7"</key><value>"GD_Lilac_Psycho_Streaming,GD_Lobelia_Itempools.ClassModPools.Pool_ClassMod_Lobelia_All,BalancedItems[4].Probability.BaseValueConstant,,1"</value><on>
+
+    #</Psycho>
+
+    #<Mechromancer>
+
+        # Allows Mechromancer COM drops when that class joins
+
+        #<hotfix><key>"SparkOnDemandPatchEntry-ApocCOMMechroSet0"</key><value>"GD_Tulip_Mechro_Streaming,GD_Itempools.ClassModPools.Pool_ClassMod_01_Common,BalancedItems[5].Probability.BaseValueConstant,,1"</value><on>
+        
+        #<hotfix><key>"SparkOnDemandPatchEntry-ApocCOMMechroSet1"</key><value>"GD_Tulip_Mechro_Streaming,GD_Itempools.ClassModPools.Pool_ClassMod_02_Uncommon,BalancedItems[5].Probability.BaseValueConstant,,1"</value><on>
+        
+        #<hotfix><key>"SparkOnDemandPatchEntry-ApocCOMMechroSet2"</key><value>"GD_Tulip_Mechro_Streaming,GD_Itempools.ClassModPools.Pool_ClassMod_04_Rare,BalancedItems[5].Probability.BaseValueConstant,,1"</value><on>
+        
+        #<hotfix><key>"SparkOnDemandPatchEntry-ApocCOMMechroSet3"</key><value>"GD_Tulip_Mechro_Streaming,GD_Itempools.ClassModPools.Pool_ClassMod_05_VeryRare,BalancedItems[5].Probability.BaseValueConstant,,1"</value><on>
+        
+        #<hotfix><key>"SparkOnDemandPatchEntry-ApocCOMMechroSet4"</key><value>"GD_Tulip_Mechro_Streaming,GD_Itempools.ClassModPools.Pool_ClassMod_06_Legendary,BalancedItems[5].Probability.BaseValueConstant,,1"</value><on>
+        
+        #<hotfix><key>"SparkOnDemandPatchEntry-ApocCOMMechroSet5"</key><value>"GD_Tulip_Mechro_Streaming,GD_Itempools.ClassModPools.Pool_ClassMod_06_SlayerOfTerramorphous,BalancedItems[5].Probability.BaseValueConstant,,1"</value><on>
+
+        #<hotfix><key>"SparkOnDemandPatchEntry-ApocCOMMechroSet6"</key><value>"GD_Tulip_Mechro_Streaming,GD_Aster_ItemPools.ClassModPools.Pool_ClassMod_00_Aster,BalancedItems[5].Probability.BaseValueConstant,,1"</value><on>
+
+        #<hotfix><key>"SparkOnDemandPatchEntry-ApocCOMMechroSet7"</key><value>"GD_Tulip_Mechro_Streaming,GD_Lobelia_Itempools.ClassModPools.Pool_ClassMod_Lobelia_All,BalancedItems[5].Probability.BaseValueConstant,,1"</value><on>
+
+    #</Mechromancer>
+
+#</BL2 No Wasted COMs>

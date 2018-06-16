@@ -1,0 +1,345 @@
+#<Stalkers Use Shields>
+
+    # Stalkers Use Shields v1.0.0
+    # by Apocalyptech
+    # Licensed under Public Domain / CC0 1.0 Universal
+    #
+    # Stalkers always have shields, of course, but this mod gives them
+    # "real" shields of the sort that your character can equip.
+    # Optionally, and for greater challenge, you can opt to give them only
+    # Maylay shields.  WARNING: The Roid damage seems to be far greater than
+    # the card's listed damage, for Stalkers, so they will hit like a ton of
+    # bricks with Maylay shields.
+    #
+    # This mod requires that the UCP option "Skinpool Fixes (Don't uncheck
+    # this)" is enabled!  If you want to run this without UCP, make sure to
+    # at least copy that category over.
+
+    #<Legendary Pool Setup (optionally add uniques + seraphs)>
+
+        # This category does some basic setup which then lets us alter
+        # the legendary shield pools dynamically in the next category.
+
+        #<Base Pool Initialization>
+
+            set GD_Itempools.ShieldPools.Pool_Shields_Absorption_06_Legendary BalancedItems ((ItmPoolDefinition=None,InvBalanceDefinition=InventoryBalanceDefinition'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Absorption_05_LegendaryShock',Probability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=None,InvBalanceDefinition=InventoryBalanceDefinition'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Absorption_05_LegendaryNormal',Probability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=None,InvBalanceDefinition=None,Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=None,InvBalanceDefinition=None,Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=None,InvBalanceDefinition=None,Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True))
+
+            set GD_Itempools.ShieldPools.Pool_Shields_Booster_06_Legendary BalancedItems ((ItmPoolDefinition=None,InvBalanceDefinition=InventoryBalanceDefinition'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Booster_05_Legendary',Probability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=None,InvBalanceDefinition=None,Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=None,InvBalanceDefinition=None,Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True))
+
+            set GD_Itempools.ShieldPools.Pool_Shields_Chimera_06_Legendary BalancedItems ((ItmPoolDefinition=None,InvBalanceDefinition=InventoryBalanceDefinition'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Chimera_05_Legendary',Probability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=None,InvBalanceDefinition=None,Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True))
+
+            set GD_Itempools.ShieldPools.Pool_Shields_Impact_06_Legendary BalancedItems ((ItmPoolDefinition=None,InvBalanceDefinition=InventoryBalanceDefinition'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Impact_05_Legendary',Probability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True))
+
+            set GD_Itempools.ShieldPools.Pool_Shields_Juggernaut_06_Legendary BalancedItems ((ItmPoolDefinition=None,InvBalanceDefinition=InventoryBalanceDefinition'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Juggernaut_05_Legendary',Probability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=None,InvBalanceDefinition=None,Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True))
+
+            set GD_Itempools.ShieldPools.Pool_Shields_NovaShields_All_06_Legendary BalancedItems ((ItmPoolDefinition=None,InvBalanceDefinition=InventoryBalanceDefinition'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Nova_Singularity',Probability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ShieldPools.Pool_Shields_NovaShields_Explosive_06_Legendary',InvBalanceDefinition=None,Probability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ShieldPools.Pool_Shields_NovaShields_Fire_06_Legendary',InvBalanceDefinition=None,Probability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True))
+
+            set GD_Itempools.ShieldPools.Pool_Shields_NovaShields_Explosive_06_Legendary BalancedItems ((ItmPoolDefinition=None,InvBalanceDefinition=None,Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True))
+
+            set GD_Itempools.ShieldPools.Pool_Shields_NovaShields_Fire_06_Legendary BalancedItems ((ItmPoolDefinition=None,InvBalanceDefinition=InventoryBalanceDefinition'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Nova_Phoenix',Probability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True))
+
+            set GD_Itempools.ShieldPools.Pool_Shields_Roid_06_Legendary BalancedItems ((ItmPoolDefinition=None,InvBalanceDefinition=InventoryBalanceDefinition'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Roid_ThresherRaid',Probability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=None,InvBalanceDefinition=None,Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=None,InvBalanceDefinition=None,Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=None,InvBalanceDefinition=None,Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True))
+
+            set GD_Itempools.ShieldPools.Pool_Shields_SpikeShields_All_06_Legendary BalancedItems ((ItmPoolDefinition=None,InvBalanceDefinition=InventoryBalanceDefinition'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Spike_Acid_05_Legendary',Probability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True))
+
+            set GD_Itempools.ShieldPools.Pool_Shields_SpikeShields_Corrosive_06_Legendary BalancedItems ((ItmPoolDefinition=None,InvBalanceDefinition=InventoryBalanceDefinition'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Spike_Acid_05_Legendary',Probability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True))
+
+            set GD_Itempools.ShieldPools.Pool_Shields_Standard_06_Legendary BalancedItems ((ItmPoolDefinition=None,InvBalanceDefinition=InventoryBalanceDefinition'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Standard_05_Legendary',Probability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=None,InvBalanceDefinition=None,Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=None,InvBalanceDefinition=None,Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=None,InvBalanceDefinition=None,Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=None,InvBalanceDefinition=None,Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True))
+
+        #</Base Pool Initialization>
+
+        #<Add Uniques to Legendary Shield Pools>
+
+            #<hotfix><key>"SparkLevelPatchEntry-ApocSetBIItem0"</key><value>",GD_Itempools.ShieldPools.Pool_Shields_Absorption_06_Legendary,BalancedItems[2],,(ItmPoolDefinition=None,InvBalanceDefinition=InventoryBalanceDefinition'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Absorption_1340',Probability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True)"</value><on>
+
+            #<hotfix><key>"SparkLevelPatchEntry-ApocSetBIItem1"</key><value>",GD_Itempools.ShieldPools.Pool_Shields_Absorption_06_Legendary,BalancedItems[3],,(ItmPoolDefinition=None,InvBalanceDefinition=InventoryBalanceDefinition'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Absorption_Equitas',Probability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True)"</value><on>
+
+            #<hotfix><key>"SparkLevelPatchEntry-ApocSetBIItem3"</key><value>",GD_Itempools.ShieldPools.Pool_Shields_Booster_06_Legendary,BalancedItems[1],,(ItmPoolDefinition=None,InvBalanceDefinition=InventoryBalanceDefinition'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Booster_PotOGold',Probability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True)"</value><on>
+
+            #<hotfix><key>"SparkLevelPatchEntry-ApocSetBIItem7"</key><value>",GD_Itempools.ShieldPools.Pool_Shields_NovaShields_Explosive_06_Legendary,BalancedItems[0],,(ItmPoolDefinition=None,InvBalanceDefinition=InventoryBalanceDefinition'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Nova_Explosive_DeadlyBloom',Probability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True)"</value><on>
+
+            #<hotfix><key>"SparkLevelPatchEntry-ApocSetBIItem8"</key><value>",GD_Itempools.ShieldPools.Pool_Shields_Roid_06_Legendary,BalancedItems[1],,(ItmPoolDefinition=None,InvBalanceDefinition=InventoryBalanceDefinition'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Roid_Order',Probability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True)"</value><on>
+
+            #<hotfix><key>"SparkLevelPatchEntry-ApocSetBIItem9"</key><value>",GD_Itempools.ShieldPools.Pool_Shields_Roid_06_Legendary,BalancedItems[2],,(ItmPoolDefinition=None,InvBalanceDefinition=InventoryBalanceDefinition'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Roid_04_LoveThumper',Probability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True)"</value><on>
+
+            #<hotfix><key>"SparkLevelPatchEntry-ApocSetBIItem11"</key><value>",GD_Itempools.ShieldPools.Pool_Shields_Standard_06_Legendary,BalancedItems[1],,(ItmPoolDefinition=None,InvBalanceDefinition=InventoryBalanceDefinition'GD_Orchid_Shields.A_Item_Custom.S_BladeShield',Probability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True)"</value><on>
+
+            #<hotfix><key>"SparkLevelPatchEntry-ApocSetBIItem12"</key><value>",GD_Itempools.ShieldPools.Pool_Shields_Standard_06_Legendary,BalancedItems[2],,(ItmPoolDefinition=None,InvBalanceDefinition=InventoryBalanceDefinition'GD_Sage_Shields.A_Item_Custom.S_BucklerShield',Probability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True)"</value><on>
+
+        #</Add Uniques to Legendary Shield Pools>
+
+        #<Add Seraphs to Legendary Shield Pools>
+
+            #<hotfix><key>"SparkLevelPatchEntry-ApocSetBIItem2"</key><value>",GD_Itempools.ShieldPools.Pool_Shields_Absorption_06_Legendary,BalancedItems[4],,(ItmPoolDefinition=None,InvBalanceDefinition=InventoryBalanceDefinition'GD_Iris_SeraphItems.Sponge.Iris_Seraph_Shield_Sponge_Balance',Probability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True)"</value><on>
+
+            #<hotfix><key>"SparkLevelPatchEntry-ApocSetBIItem4"</key><value>",GD_Itempools.ShieldPools.Pool_Shields_Booster_06_Legendary,BalancedItems[2],,(ItmPoolDefinition=None,InvBalanceDefinition=InventoryBalanceDefinition'GD_Iris_SeraphItems.BigBoomBlaster.Iris_Seraph_Shield_Booster_Balance',Probability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True)"</value><on>
+
+            #<hotfix><key>"SparkLevelPatchEntry-ApocSetBIItem5"</key><value>",GD_Itempools.ShieldPools.Pool_Shields_Chimera_06_Legendary,BalancedItems[1],,(ItmPoolDefinition=None,InvBalanceDefinition=InventoryBalanceDefinition'GD_Orchid_RaidWeapons.Shield.Anshin.Orchid_Seraph_Anshin_Shield_Balance',Probability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True)"</value><on>
+
+            #<hotfix><key>"SparkLevelPatchEntry-ApocSetBIItem6"</key><value>",GD_Itempools.ShieldPools.Pool_Shields_Juggernaut_06_Legendary,BalancedItems[1],,(ItmPoolDefinition=None,InvBalanceDefinition=InventoryBalanceDefinition'GD_Iris_SeraphItems.Hoplite.Iris_Seraph_Shield_Juggernaut_Balance',Probability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True)"</value><on>
+
+            #<hotfix><key>"SparkLevelPatchEntry-ApocSetBIItem10"</key><value>",GD_Itempools.ShieldPools.Pool_Shields_Roid_06_Legendary,BalancedItems[3],,(ItmPoolDefinition=None,InvBalanceDefinition=InventoryBalanceDefinition'GD_Iris_SeraphItems.Pun-chee.Iris_Seraph_Shield_Pun-chee_Balance',Probability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True)"</value><on>
+
+            #<hotfix><key>"SparkLevelPatchEntry-ApocSetBIItem13"</key><value>",GD_Itempools.ShieldPools.Pool_Shields_Standard_06_Legendary,BalancedItems[3],,(ItmPoolDefinition=None,InvBalanceDefinition=InventoryBalanceDefinition'GD_Aster_ItemGrades.Shields.Aster_Seraph_Antagonist_Shield_Balance',Probability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True)"</value><on>
+
+            #<hotfix><key>"SparkLevelPatchEntry-ApocSetBIItem14"</key><value>",GD_Itempools.ShieldPools.Pool_Shields_Standard_06_Legendary,BalancedItems[4],,(ItmPoolDefinition=None,InvBalanceDefinition=InventoryBalanceDefinition'GD_Aster_ItemGrades.Shields.Aster_Seraph_Blockade_Shield_Balance',Probability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True)"</value><on>
+
+        #</Add Seraphs to Legendary Shield Pools>
+
+    #</Legendary Pool Setup (optionally add uniques + seraphs)>
+
+    #<Stalker Shield Quality (choose one)><MUT>
+
+        #<Stalkers Have Excellent Shields>
+
+            # Equip chances for regular stalkers:
+            #
+            #           Common (white): 9%
+            #         Uncommon (green): 40%
+            #              Rare (blue): 31%
+            #       Very Rare (purple): 19%
+            #       Legendary (orange): 1%
+            #
+            # Equip chances for badass stalkers:
+            #
+            #           Common (white): 0%
+            #         Uncommon (green): 0%
+            #              Rare (blue): 33%
+            #       Very Rare (purple): 57%
+            #       Legendary (orange): 10%
+
+            #<Regular Stalkers>
+
+                # Regular shields
+
+                set GD_CustomItemPools_allium.Mechro.AlliumTGSkins bAutoReadyItems True 
+
+                set GD_CustomItemPools_allium.Mechro.AlliumTGSkins BalancedItems ((ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ShieldPools.Pool_Shields_All_01_Common',InvBalanceDefinition=None,Probability=(BaseValueConstant=20,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=False),(ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ShieldPools.Pool_Shields_All_02_Uncommon',InvBalanceDefinition=None,Probability=(BaseValueConstant=85,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=False),(ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ShieldPools.Pool_Shields_All_04_Rare',InvBalanceDefinition=None,Probability=(BaseValueConstant=65,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=False),(ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ShieldPools.Pool_Shields_All_05_VeryRare',InvBalanceDefinition=None,Probability=(BaseValueConstant=40,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=False),(ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ShieldPools.Pool_Shields_All_06_Legendary',InvBalanceDefinition=None,Probability=(BaseValueConstant=3,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=False))
+
+                # Maylay shields
+
+                set GD_CustomItemPools_allium.Soldier.AlliumXmasHeads bAutoReadyItems True 
+
+                set GD_CustomItemPools_allium.Soldier.AlliumXmasHeads BalancedItems ((ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ShieldPools.Pool_Shields_Roid_01_Common',InvBalanceDefinition=None,Probability=(BaseValueConstant=20,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=False),(ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ShieldPools.Pool_Shields_Roid_02_Uncommon',InvBalanceDefinition=None,Probability=(BaseValueConstant=85,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=False),(ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ShieldPools.Pool_Shields_Roid_04_Rare',InvBalanceDefinition=None,Probability=(BaseValueConstant=65,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=False),(ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ShieldPools.Pool_Shields_Roid_05_VeryRare',InvBalanceDefinition=None,Probability=(BaseValueConstant=40,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=False),(ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ShieldPools.Pool_Shields_Roid_06_Legendary',InvBalanceDefinition=None,Probability=(BaseValueConstant=3,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=False))
+
+            #</Regular Stalkers>
+
+            #<Badass Stalkers>
+
+                # Regular shields
+
+                set GD_CustomItemPools_allium.Mercenary.AlliumTGSkins bAutoReadyItems True 
+
+                set GD_CustomItemPools_allium.Mercenary.AlliumTGSkins BalancedItems ((ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ShieldPools.Pool_Shields_All_01_Common',InvBalanceDefinition=None,Probability=(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=False),(ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ShieldPools.Pool_Shields_All_02_Uncommon',InvBalanceDefinition=None,Probability=(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=False),(ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ShieldPools.Pool_Shields_All_04_Rare',InvBalanceDefinition=None,Probability=(BaseValueConstant=35,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=False),(ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ShieldPools.Pool_Shields_All_05_VeryRare',InvBalanceDefinition=None,Probability=(BaseValueConstant=60,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=False),(ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ShieldPools.Pool_Shields_All_06_Legendary',InvBalanceDefinition=None,Probability=(BaseValueConstant=10,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=False))
+
+                # Maylay shields
+
+                set GD_CustomItemPools_allium.Psycho.AlliumTGSkins bAutoReadyItems True 
+
+                set GD_CustomItemPools_allium.Psycho.AlliumTGSkins BalancedItems ((ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ShieldPools.Pool_Shields_Roid_01_Common',InvBalanceDefinition=None,Probability=(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=False),(ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ShieldPools.Pool_Shields_Roid_02_Uncommon',InvBalanceDefinition=None,Probability=(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=False),(ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ShieldPools.Pool_Shields_Roid_04_Rare',InvBalanceDefinition=None,Probability=(BaseValueConstant=35,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=False),(ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ShieldPools.Pool_Shields_Roid_05_VeryRare',InvBalanceDefinition=None,Probability=(BaseValueConstant=60,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=False),(ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ShieldPools.Pool_Shields_Roid_06_Legendary',InvBalanceDefinition=None,Probability=(BaseValueConstant=10,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=False))
+
+            #</Badass Stalkers>
+
+        #</Stalkers Have Excellent Shields>
+
+
+        #<Stalkers Have Better Shields><off>
+
+            ## Equip chances for regular stalkers:<off>
+            ##<off>
+            ##           Common (white): 33%<off>
+            ##         Uncommon (green): 36%<off>
+            ##              Rare (blue): 26%<off>
+            ##       Very Rare (purple): 5%<off>
+            ##       Legendary (orange): 0.26%<off>
+            ##<off>
+            ## Equip chances for badass stalkers:<off>
+            ##<off>
+            ##           Common (white): 0%<off>
+            ##         Uncommon (green): 28%<off>
+            ##              Rare (blue): 54%<off>
+            ##       Very Rare (purple): 17%<off>
+            ##       Legendary (orange): 1%<off>
+
+            #<Regular Stalkers><off>
+
+                ## Regular shields<off>
+
+                #set GD_CustomItemPools_allium.Mechro.AlliumTGSkins bAutoReadyItems True<off> 
+
+                #set GD_CustomItemPools_allium.Mechro.AlliumTGSkins BalancedItems ((ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ShieldPools.Pool_Shields_All_01_Common',InvBalanceDefinition=None,Probability=(BaseValueConstant=32.75,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=False),(ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ShieldPools.Pool_Shields_All_02_Uncommon',InvBalanceDefinition=None,Probability=(BaseValueConstant=35,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=False),(ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ShieldPools.Pool_Shields_All_04_Rare',InvBalanceDefinition=None,Probability=(BaseValueConstant=25,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=False),(ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ShieldPools.Pool_Shields_All_05_VeryRare',InvBalanceDefinition=None,Probability=(BaseValueConstant=5,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=False),(ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ShieldPools.Pool_Shields_All_06_Legendary',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.25,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=False))<off>
+
+                ## Maylay shields<off>
+
+                #set GD_CustomItemPools_allium.Soldier.AlliumXmasHeads bAutoReadyItems True<off> 
+
+                #set GD_CustomItemPools_allium.Soldier.AlliumXmasHeads BalancedItems ((ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ShieldPools.Pool_Shields_Roid_01_Common',InvBalanceDefinition=None,Probability=(BaseValueConstant=32.75,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=False),(ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ShieldPools.Pool_Shields_Roid_02_Uncommon',InvBalanceDefinition=None,Probability=(BaseValueConstant=35,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=False),(ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ShieldPools.Pool_Shields_Roid_04_Rare',InvBalanceDefinition=None,Probability=(BaseValueConstant=25,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=False),(ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ShieldPools.Pool_Shields_Roid_05_VeryRare',InvBalanceDefinition=None,Probability=(BaseValueConstant=5,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=False),(ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ShieldPools.Pool_Shields_Roid_06_Legendary',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.25,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=False))<off>
+
+            #</Regular Stalkers>
+
+            #<Badass Stalkers><off>
+
+                ## Regular shields<off>
+
+                #set GD_CustomItemPools_allium.Mercenary.AlliumTGSkins bAutoReadyItems True<off> 
+
+                #set GD_CustomItemPools_allium.Mercenary.AlliumTGSkins BalancedItems ((ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ShieldPools.Pool_Shields_All_01_Common',InvBalanceDefinition=None,Probability=(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=False),(ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ShieldPools.Pool_Shields_All_02_Uncommon',InvBalanceDefinition=None,Probability=(BaseValueConstant=25,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=False),(ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ShieldPools.Pool_Shields_All_04_Rare',InvBalanceDefinition=None,Probability=(BaseValueConstant=49,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=False),(ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ShieldPools.Pool_Shields_All_05_VeryRare',InvBalanceDefinition=None,Probability=(BaseValueConstant=15,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=False),(ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ShieldPools.Pool_Shields_All_06_Legendary',InvBalanceDefinition=None,Probability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=False))<off>
+
+                ## Maylay shields<off>
+
+                #set GD_CustomItemPools_allium.Psycho.AlliumTGSkins bAutoReadyItems True<off> 
+
+                #set GD_CustomItemPools_allium.Psycho.AlliumTGSkins BalancedItems ((ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ShieldPools.Pool_Shields_Roid_01_Common',InvBalanceDefinition=None,Probability=(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=False),(ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ShieldPools.Pool_Shields_Roid_02_Uncommon',InvBalanceDefinition=None,Probability=(BaseValueConstant=25,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=False),(ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ShieldPools.Pool_Shields_Roid_04_Rare',InvBalanceDefinition=None,Probability=(BaseValueConstant=49,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=False),(ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ShieldPools.Pool_Shields_Roid_05_VeryRare',InvBalanceDefinition=None,Probability=(BaseValueConstant=15,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=False),(ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ShieldPools.Pool_Shields_Roid_06_Legendary',InvBalanceDefinition=None,Probability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=False))<off>
+
+            #</Badass Stalkers>
+
+        #</Stalkers Have Better Shields>
+
+
+        #<Stalkers Have Common Shields><off>
+
+            ## Equip chances for regular stalkers:<off>
+            ##<off>
+            ##           Common (white): 88%<off>
+            ##         Uncommon (green): 11%<off>
+            ##              Rare (blue): 1%<off>
+            ##       Very Rare (purple): 0.11%<off>
+            ##       Legendary (orange): 0.03%<off>
+            ##<off>
+            ## Equip chances for badass stalkers:<off>
+            ##<off>
+            ##           Common (white): 0%<off>
+            ##         Uncommon (green): 50%<off>
+            ##              Rare (blue): 37%<off>
+            ##       Very Rare (purple): 12%<off>
+            ##       Legendary (orange): 0.31%<off>
+
+            #<Regular Stalkers><off>
+
+                ## Regular shields<off>
+
+                #set GD_CustomItemPools_allium.Mechro.AlliumTGSkins bAutoReadyItems True<off> 
+
+                #set GD_CustomItemPools_allium.Mechro.AlliumTGSkins BalancedItems ((ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ShieldPools.Pool_Shields_All_01_Common',InvBalanceDefinition=None,Probability=(BaseValueConstant=80,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=False),(ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ShieldPools.Pool_Shields_All_02_Uncommon',InvBalanceDefinition=None,Probability=(BaseValueConstant=10,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=False),(ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ShieldPools.Pool_Shields_All_04_Rare',InvBalanceDefinition=None,Probability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=False),(ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ShieldPools.Pool_Shields_All_05_VeryRare',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=False),(ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ShieldPools.Pool_Shields_All_06_Legendary',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.03,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=False))<off>
+
+                ## Maylay shields<off>
+
+                #set GD_CustomItemPools_allium.Soldier.AlliumXmasHeads bAutoReadyItems True<off> 
+
+                #set GD_CustomItemPools_allium.Soldier.AlliumXmasHeads BalancedItems ((ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ShieldPools.Pool_Shields_Roid_01_Common',InvBalanceDefinition=None,Probability=(BaseValueConstant=80,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=False),(ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ShieldPools.Pool_Shields_Roid_02_Uncommon',InvBalanceDefinition=None,Probability=(BaseValueConstant=10,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=False),(ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ShieldPools.Pool_Shields_Roid_04_Rare',InvBalanceDefinition=None,Probability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=False),(ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ShieldPools.Pool_Shields_Roid_05_VeryRare',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=False),(ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ShieldPools.Pool_Shields_Roid_06_Legendary',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.03,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=False))<off>
+
+            #</Regular Stalkers>
+
+            #<Badass Stalkers><off>
+
+                ## Regular shields<off>
+
+                #set GD_CustomItemPools_allium.Mercenary.AlliumTGSkins bAutoReadyItems True<off> 
+
+                #set GD_CustomItemPools_allium.Mercenary.AlliumTGSkins BalancedItems ((ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ShieldPools.Pool_Shields_All_01_Common',InvBalanceDefinition=None,Probability=(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=False),(ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ShieldPools.Pool_Shields_All_02_Uncommon',InvBalanceDefinition=None,Probability=(BaseValueConstant=40,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=False),(ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ShieldPools.Pool_Shields_All_04_Rare',InvBalanceDefinition=None,Probability=(BaseValueConstant=30,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=False),(ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ShieldPools.Pool_Shields_All_05_VeryRare',InvBalanceDefinition=None,Probability=(BaseValueConstant=10,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=False),(ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ShieldPools.Pool_Shields_All_06_Legendary',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.25,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=False))<off>
+
+                ## Maylay shields<off>
+
+                #set GD_CustomItemPools_allium.Psycho.AlliumTGSkins bAutoReadyItems True<off> 
+
+                #set GD_CustomItemPools_allium.Psycho.AlliumTGSkins BalancedItems ((ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ShieldPools.Pool_Shields_Roid_01_Common',InvBalanceDefinition=None,Probability=(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=False),(ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ShieldPools.Pool_Shields_Roid_02_Uncommon',InvBalanceDefinition=None,Probability=(BaseValueConstant=40,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=False),(ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ShieldPools.Pool_Shields_Roid_04_Rare',InvBalanceDefinition=None,Probability=(BaseValueConstant=30,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=False),(ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ShieldPools.Pool_Shields_Roid_05_VeryRare',InvBalanceDefinition=None,Probability=(BaseValueConstant=10,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=False),(ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ShieldPools.Pool_Shields_Roid_06_Legendary',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.25,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=False))<off>
+
+            #</Badass Stalkers>
+
+        #</Stalkers Have Common Shields>
+
+
+    #</Stalker Shield Quality (choose one)>
+
+    #<Shield Selection (choose one)><MUT>
+
+        #<Equip Regular Shields>
+
+            # Stalkers will equip regular shields from the general shield pool.
+
+            #<hotfix><key>"SparkLevelPatchEntry-ApocStalkerShields0"</key><value>",GD_Population_Stalker.Balance.PawnBalance_StalkerAmbush,DefaultItemPoolList[0].ItemPool,,ItemPoolDefinition'GD_CustomItemPools_allium.Mechro.AlliumTGSkins'"</value><on>
+
+            #<hotfix><key>"SparkLevelPatchEntry-ApocStalkerShields1"</key><value>",GD_Population_Stalker.Balance.PawnBalance_StalkerCyclone,DefaultItemPoolList[0].ItemPool,,ItemPoolDefinition'GD_CustomItemPools_allium.Mechro.AlliumTGSkins'"</value><on>
+
+            #<hotfix><key>"SparkLevelPatchEntry-ApocStalkerShields2"</key><value>",GD_Population_Stalker.Balance.PawnBalance_StalkerNeedle,DefaultItemPoolList[0].ItemPool,,ItemPoolDefinition'GD_CustomItemPools_allium.Mechro.AlliumTGSkins'"</value><on>
+
+            #<hotfix><key>"SparkLevelPatchEntry-ApocStalkerShields3"</key><value>",GD_Population_Stalker.Balance.PawnBalance_StalkerSlagged,DefaultItemPoolList[0].ItemPool,,ItemPoolDefinition'GD_CustomItemPools_allium.Mechro.AlliumTGSkins'"</value><on>
+
+            #<hotfix><key>"SparkLevelPatchEntry-ApocStalkerShields4"</key><value>",GD_Population_Stalker.Balance.PawnBalance_StalkerSpring,DefaultItemPoolList[0].ItemPool,,ItemPoolDefinition'GD_CustomItemPools_allium.Mechro.AlliumTGSkins'"</value><on>
+
+            #<hotfix><key>"SparkLevelPatchEntry-ApocStalkerShields5"</key><value>",GD_Orchid_Pop_Stalker.Balance.PawnBalance_Orchid_StalkerOrchid,DefaultItemPoolList[0].ItemPool,,ItemPoolDefinition'GD_CustomItemPools_allium.Mechro.AlliumTGSkins'"</value><on>
+
+            #<hotfix><key>"SparkLevelPatchEntry-ApocStalkerShields6"</key><value>",GD_Orchid_Pop_Stalker.Balance.PawnBalance_Orchid_StalkerRabid,DefaultItemPoolList[0].ItemPool,,ItemPoolDefinition'GD_CustomItemPools_allium.Mechro.AlliumTGSkins'"</value><on>
+
+            #<hotfix><key>"SparkLevelPatchEntry-ApocStalkerShields7"</key><value>",GD_Population_Stalker.Balance.PawnBalance_StalkerBadass,DefaultItemPoolList[0].ItemPool,,ItemPoolDefinition'GD_CustomItemPools_allium.Mercenary.AlliumTGSkins'"</value><on>
+
+            #<hotfix><key>"SparkLevelPatchEntry-ApocStalkerShields8"</key><value>",GD_Population_Stalker.Balance.PawnBalance_StalkerChubby,DefaultItemPoolList[0].ItemPool,,ItemPoolDefinition'GD_CustomItemPools_allium.Mercenary.AlliumTGSkins'"</value><on>
+
+            #<hotfix><key>"SparkLevelPatchEntry-ApocStalkerShields9"</key><value>",GD_Population_Stalker.Balance.Unique.PawnBalance_Henry,DefaultItemPoolList[0].ItemPool,,ItemPoolDefinition'GD_CustomItemPools_allium.Mercenary.AlliumTGSkins'"</value><on>
+
+            #<hotfix><key>"SparkLevelPatchEntry-ApocStalkerShields10"</key><value>",GD_Population_Stalker.Balance.Unique.PawnBalance_Stalker_Simon,DefaultItemPoolList[0].ItemPool,,ItemPoolDefinition'GD_CustomItemPools_allium.Mercenary.AlliumTGSkins'"</value><on>
+
+            #<hotfix><key>"SparkLevelPatchEntry-ApocStalkerShields11"</key><value>",GD_Population_Stalker.Balance.Unique.PawnBalance_Stalker_SwallowedWhole,DefaultItemPoolList[0].ItemPool,,ItemPoolDefinition'GD_CustomItemPools_allium.Mercenary.AlliumTGSkins'"</value><on>
+
+            #<hotfix><key>"SparkLevelPatchEntry-ApocStalkerShields12"</key><value>",GD_Population_Stalker.Balance.Unique.PawnBalance_StalkerFreeWilly,DefaultItemPoolList[0].ItemPool,,ItemPoolDefinition'GD_CustomItemPools_allium.Mercenary.AlliumTGSkins'"</value><on>
+
+            #<hotfix><key>"SparkLevelPatchEntry-ApocStalkerShields13"</key><value>",GD_Population_Stalker.Balance.Unique.PawnBalance_StalkerRabid,DefaultItemPoolList[0].ItemPool,,ItemPoolDefinition'GD_CustomItemPools_allium.Mercenary.AlliumTGSkins'"</value><on>
+
+            #<hotfix><key>"SparkLevelPatchEntry-ApocStalkerShields14"</key><value>",GD_Orchid_Pop_Stalker.Balance.PawnBalance_Orchid_StalkerBadass,DefaultItemPoolList[0].ItemPool,,ItemPoolDefinition'GD_CustomItemPools_allium.Mercenary.AlliumTGSkins'"</value><on>
+
+            #<hotfix><key>"SparkLevelPatchEntry-ApocStalkerShields15"</key><value>",GD_Orchid_Pop_Stalker.Balance.PawnBalance_Orchid_StalkerChubby,DefaultItemPoolList[0].ItemPool,,ItemPoolDefinition'GD_CustomItemPools_allium.Mercenary.AlliumTGSkins'"</value><on>
+
+            #<hotfix><key>"SparkLevelPatchEntry-ApocStalkerShields16"</key><value>",GD_Orchid_Pop_StalkerPet.PawnBalance_Orchid_StalkerPet,DefaultItemPoolList[0].ItemPool,,ItemPoolDefinition'GD_CustomItemPools_allium.Mercenary.AlliumTGSkins'"</value><on>
+
+            #<hotfix><key>"SparkLevelPatchEntry-ApocStalkerShields17"</key><value>",GD_Sage_SM_NowYouSeeItData.Creature.PawnBalance_Sage_NowYouSeeIt_Creature,DefaultItemPoolList[0].ItemPool,,ItemPoolDefinition'GD_CustomItemPools_allium.Mercenary.AlliumTGSkins'"</value><on>
+
+        #</Equip Regular Shields>
+
+        #<Equip only Maylay Shields><off>
+
+            ## Stalkers will always equip Maylay shields.  WARNING: the Maylay<off>
+            ## effect seems to be multiplied beyond usual on Stalkers for some reason; this<off>
+            ## will probably make Stalkers hit VERY hard when their shields are down.<off>
+            ## You've been warned!<off>
+
+            #<hotfix><key>"SparkLevelPatchEntry-ApocStalkerShields18"</key><value>",GD_Population_Stalker.Balance.PawnBalance_StalkerAmbush,DefaultItemPoolList[0].ItemPool,,ItemPoolDefinition'GD_CustomItemPools_allium.Soldier.AlliumXmasHeads'"</value><off>
+
+            #<hotfix><key>"SparkLevelPatchEntry-ApocStalkerShields19"</key><value>",GD_Population_Stalker.Balance.PawnBalance_StalkerCyclone,DefaultItemPoolList[0].ItemPool,,ItemPoolDefinition'GD_CustomItemPools_allium.Soldier.AlliumXmasHeads'"</value><off>
+
+            #<hotfix><key>"SparkLevelPatchEntry-ApocStalkerShields20"</key><value>",GD_Population_Stalker.Balance.PawnBalance_StalkerNeedle,DefaultItemPoolList[0].ItemPool,,ItemPoolDefinition'GD_CustomItemPools_allium.Soldier.AlliumXmasHeads'"</value><off>
+
+            #<hotfix><key>"SparkLevelPatchEntry-ApocStalkerShields21"</key><value>",GD_Population_Stalker.Balance.PawnBalance_StalkerSlagged,DefaultItemPoolList[0].ItemPool,,ItemPoolDefinition'GD_CustomItemPools_allium.Soldier.AlliumXmasHeads'"</value><off>
+
+            #<hotfix><key>"SparkLevelPatchEntry-ApocStalkerShields22"</key><value>",GD_Population_Stalker.Balance.PawnBalance_StalkerSpring,DefaultItemPoolList[0].ItemPool,,ItemPoolDefinition'GD_CustomItemPools_allium.Soldier.AlliumXmasHeads'"</value><off>
+
+            #<hotfix><key>"SparkLevelPatchEntry-ApocStalkerShields23"</key><value>",GD_Orchid_Pop_Stalker.Balance.PawnBalance_Orchid_StalkerOrchid,DefaultItemPoolList[0].ItemPool,,ItemPoolDefinition'GD_CustomItemPools_allium.Soldier.AlliumXmasHeads'"</value><off>
+
+            #<hotfix><key>"SparkLevelPatchEntry-ApocStalkerShields24"</key><value>",GD_Orchid_Pop_Stalker.Balance.PawnBalance_Orchid_StalkerRabid,DefaultItemPoolList[0].ItemPool,,ItemPoolDefinition'GD_CustomItemPools_allium.Soldier.AlliumXmasHeads'"</value><off>
+
+            #<hotfix><key>"SparkLevelPatchEntry-ApocStalkerShields25"</key><value>",GD_Population_Stalker.Balance.PawnBalance_StalkerBadass,DefaultItemPoolList[0].ItemPool,,ItemPoolDefinition'GD_CustomItemPools_allium.Psycho.AlliumTGSkins'"</value><off>
+
+            #<hotfix><key>"SparkLevelPatchEntry-ApocStalkerShields26"</key><value>",GD_Population_Stalker.Balance.PawnBalance_StalkerChubby,DefaultItemPoolList[0].ItemPool,,ItemPoolDefinition'GD_CustomItemPools_allium.Psycho.AlliumTGSkins'"</value><off>
+
+            #<hotfix><key>"SparkLevelPatchEntry-ApocStalkerShields27"</key><value>",GD_Population_Stalker.Balance.Unique.PawnBalance_Henry,DefaultItemPoolList[0].ItemPool,,ItemPoolDefinition'GD_CustomItemPools_allium.Psycho.AlliumTGSkins'"</value><off>
+
+            #<hotfix><key>"SparkLevelPatchEntry-ApocStalkerShields28"</key><value>",GD_Population_Stalker.Balance.Unique.PawnBalance_Stalker_Simon,DefaultItemPoolList[0].ItemPool,,ItemPoolDefinition'GD_CustomItemPools_allium.Psycho.AlliumTGSkins'"</value><off>
+
+            #<hotfix><key>"SparkLevelPatchEntry-ApocStalkerShields29"</key><value>",GD_Population_Stalker.Balance.Unique.PawnBalance_Stalker_SwallowedWhole,DefaultItemPoolList[0].ItemPool,,ItemPoolDefinition'GD_CustomItemPools_allium.Psycho.AlliumTGSkins'"</value><off>
+
+            #<hotfix><key>"SparkLevelPatchEntry-ApocStalkerShields30"</key><value>",GD_Population_Stalker.Balance.Unique.PawnBalance_StalkerFreeWilly,DefaultItemPoolList[0].ItemPool,,ItemPoolDefinition'GD_CustomItemPools_allium.Psycho.AlliumTGSkins'"</value><off>
+
+            #<hotfix><key>"SparkLevelPatchEntry-ApocStalkerShields31"</key><value>",GD_Population_Stalker.Balance.Unique.PawnBalance_StalkerRabid,DefaultItemPoolList[0].ItemPool,,ItemPoolDefinition'GD_CustomItemPools_allium.Psycho.AlliumTGSkins'"</value><off>
+
+            #<hotfix><key>"SparkLevelPatchEntry-ApocStalkerShields32"</key><value>",GD_Orchid_Pop_Stalker.Balance.PawnBalance_Orchid_StalkerBadass,DefaultItemPoolList[0].ItemPool,,ItemPoolDefinition'GD_CustomItemPools_allium.Psycho.AlliumTGSkins'"</value><off>
+
+            #<hotfix><key>"SparkLevelPatchEntry-ApocStalkerShields33"</key><value>",GD_Orchid_Pop_Stalker.Balance.PawnBalance_Orchid_StalkerChubby,DefaultItemPoolList[0].ItemPool,,ItemPoolDefinition'GD_CustomItemPools_allium.Psycho.AlliumTGSkins'"</value><off>
+
+            #<hotfix><key>"SparkLevelPatchEntry-ApocStalkerShields34"</key><value>",GD_Orchid_Pop_StalkerPet.PawnBalance_Orchid_StalkerPet,DefaultItemPoolList[0].ItemPool,,ItemPoolDefinition'GD_CustomItemPools_allium.Psycho.AlliumTGSkins'"</value><off>
+
+            #<hotfix><key>"SparkLevelPatchEntry-ApocStalkerShields35"</key><value>",GD_Sage_SM_NowYouSeeItData.Creature.PawnBalance_Sage_NowYouSeeIt_Creature,DefaultItemPoolList[0].ItemPool,,ItemPoolDefinition'GD_CustomItemPools_allium.Psycho.AlliumTGSkins'"</value><off>
+
+        #</Equip only Maylay Shields>
+
+    #</Shield Selection (choose one)><MUT>
+
+#</Stalkers Use Shields>

@@ -1,0 +1,24 @@
+#<Bone Shredder Buff>
+
+    #<Description>
+
+        Makes the Bone Shredder only consume 1 ammo per shot and decreased its damage penalty a bit. 
+
+        This is to make it compete with the Tattler.
+	
+	Retains the other changes made to it in the Community Patch
+
+    #</Description>
+
+    #<Code>
+
+        set GD_Weap_SMG.Barrel.SMG_Barrel_Bandit_BoneShredder AttributeSlotUpgrades ((SlotName="WeaponSpread",GradeIncrease=-12,bActivateSlot=True),(SlotName="WeaponAccuracyImpulse",GradeIncrease=-10,bActivateSlot=True),(SlotName="WeaponDamage",GradeIncrease=-9,bActivateSlot=True))
+
+        set GD_Weap_SMG.Barrel.SMG_Barrel_Bandit_BoneShredder WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=2.400000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+        set GD_Weap_SMG.Barrel.SMG_Barrel_Bandit_BoneShredder WeaponCardAttributes ( )
+
+    #</Code>
+
+#</Bone Shredder Buff>
+

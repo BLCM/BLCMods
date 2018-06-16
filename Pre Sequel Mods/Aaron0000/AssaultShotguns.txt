@@ -1,0 +1,68 @@
+#<Assault Shotguns>
+
+    #<Description>
+
+        By Aaron0000
+
+        Features:
+
+        Changes the normal Hyperion barrel to be similar to Borderlands 1's Assault Shotguns, as well as give them a new title.
+
+	Stats (Compared to the Tediore barrel);
+
+            Damage ~ One additional pellet, but roughly 30% less damage per shot.
+
+            Spread ~ 25% tighter.
+
+            Reload ~ 30% faster.
+
+            Fire Rate ~ 75% faster (excluding Jakobs.)
+
+            Magazine Size - Four additional bullets before any magazine size bonuses are applied.
+
+            Recoil - 24% less.
+
+            Elemental - 25% more DoT damage, 75% greater chance.
+
+        Titles;
+
+            Bandit - Saltass
+
+            Hyperion - Application
+
+            Jakobs - Trailgun
+
+            Tediore - Assault Special
+
+            Torgue - Smacker
+
+    #</Description>
+
+    #<Code>
+
+        #<Stats>
+
+            set GD_Weap_Shotgun.Barrel.SG_Barrel_Hyperion WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=4.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponStatusEffectChanceModifier',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.750000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponStatusEffectDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.250000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.200000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Jakobs',InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+            set GD_Weap_Shotgun.Barrel.SG_Barrel_Hyperion AttributeSlotUpgrades ((SlotName="WeaponDamage",GradeIncrease=-22,bActivateSlot=True),(SlotName="WeaponSpread",GradeIncrease=20,bActivateSlot=True),(SlotName="WeaponFireRate",GradeIncrease=24,bActivateSlot=True),(SlotName="WeaponReloadSpeed",GradeIncrease=8,bActivateSlot=True),(SlotName="WeaponAccuracyImpulse",GradeIncrease=12,bActivateSlot=True),(SlotName="AccuracyMin",GradeIncrease=2,bActivateSlot=True),(SlotName="AccuracyMax",GradeIncrease=-1,bActivateSlot=True))
+
+        #</Stats>
+
+        #<Titles>
+
+            set GD_Weap_Shotgun.Name.Title_Hyperion.Title_Barrel_Hyperion_Accuracy PartName Application
+
+            set GD_Weap_Shotgun.Name.Title_Jakobs.Title_Barrel_Hyperion_Accuracy PartName Trailgun
+
+            set GD_Weap_Shotgun.Name.Title_Tediore.Title_Barrel_Hyperion_Accuracy PartName Assault Special
+
+            set GD_Weap_Shotgun.Name.Title_Torgue.Title_Barrel_Hyperion_Accuracy PartName Smacker
+
+            set GD_Weap_Shotgun.Name.Title_Bandit.Title_Barrel_Hyperion_Accuracy PartName Saltass
+
+        #</Titles>
+
+    #</Code>
+
+#</Assault Shotguns>
+

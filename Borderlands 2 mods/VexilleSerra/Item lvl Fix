@@ -1,0 +1,25 @@
+#<Item Lvl Fix>
+
+    #<Description>
+
+        Removes random variance from level of items found in vendors/dropped from enemies.
+
+        Makes the game give gear of level equal to current game stage, without offset.
+
+    #</Description>
+
+    #<Code>
+
+        #<hotfix><key>"SparkLevelPatchEntry-ItemLvlFix1"</key><value>",GD_Balance.RandomNumbers.Random_Minus01-Plus01,RandomVariance,,(bEnabled=True,bUseIntegerRandomization=True,LowerBound=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),UpperBound=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-ItemLvlFix2"</key><value>",GD_Balance.RandomNumbers.Random_Minus02-Plus01,RandomVariance,,(bEnabled=True,bUseIntegerRandomization=True,LowerBound=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),UpperBound=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-ItemLvlFix3"</key><value>",GD_Economy.VendingMachine.Init_VendingMachine_LootGamestageVariance,RandomVariance,,(bEnabled=True,bUseIntegerRandomization=True,LowerBound=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),UpperBound=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))"</value><on>
+
+    #</Code>
+
+#</Item Lvl Fix>
+
+set Transient.SparkServiceConfiguration_6 Keys ("SparkLevelPatchEntry-ItemLvlFix1","SparkLevelPatchEntry-ItemLvlFix2","SparkLevelPatchEntry-ItemLvlFix3")
+
+set Transient.SparkServiceConfiguration_6 Values (",GD_Balance.RandomNumbers.Random_Minus01-Plus01,RandomVariance,,(bEnabled=True,bUseIntegerRandomization=True,LowerBound=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),UpperBound=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))",",GD_Balance.RandomNumbers.Random_Minus02-Plus01,RandomVariance,,(bEnabled=True,bUseIntegerRandomization=True,LowerBound=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),UpperBound=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))",",GD_Economy.VendingMachine.Init_VendingMachine_LootGamestageVariance,RandomVariance,,(bEnabled=True,bUseIntegerRandomization=True,LowerBound=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),UpperBound=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))")
