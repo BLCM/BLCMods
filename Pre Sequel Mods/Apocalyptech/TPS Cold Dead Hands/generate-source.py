@@ -506,6 +506,7 @@ class Regular(DropConfig):
             [
                 (0, 'GD_Population_Dahl.Balance.PawnBalance_DahlFactory_SecurityBot'),
                 (0, 'GD_Population_Dahl.Balance.PawnBalance_DahlFactory_SecurityBot_Small'),
+                (1, 'GD_Population_Loader.Balance.PawnBalance_LoaderEXPStation'),
                 (0, 'GD_Population_Loader.Balance.PawnBalance_LoaderGUN'),
                 (0, 'GD_Population_Loader.Balance.PawnBalance_LoaderJunk'),
                 (0, 'GD_ProtoWarBot_GunLoader.Population.PawnBalance_ProtoWarBot_FriendLoader'),

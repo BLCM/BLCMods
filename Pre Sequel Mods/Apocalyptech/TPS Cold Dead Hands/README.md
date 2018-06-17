@@ -201,13 +201,12 @@ Things to do before releasing
   compat concerns.
 * Ascending Lost Legion - figure out their drops
 * Also figure out Shadow-TP's drops, though that'll happen as I go through CV...
-* Let GUN loaders use our custom equip pools
 * Reset Red, then Dead to test Courier drops.
 
 Things to think about:
 
 * Enemy Moon Buggies shouldn't drop weapons
-* Restrict weapon manufacturer by level?  (Only Jakobs in Lynchwood, etc?)
+* Restrict weapon manufacturer by level?  (Only Dahl in Lunar Launching Station, etc?)
 * Might be nifty to restrict weapon manufacturer by enemy type, though that
   would require eating up more skinpools (the by-level idea could reuse all
   of ours w/ hotfixes)
