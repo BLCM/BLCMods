@@ -1250,16 +1250,20 @@ def get_balanced_items(items):
     the item will be put into the ItmPoolDefinition attribute - otherwise it
     will be put into the InvBalanceDefinition attribute, with the given
     `invbalance` string as the type of object being linked to (most commonly
-    either WeaponBalanceDefinition or InventoryBalanceDefinition)
+    either WeaponBalanceDefinition or InventoryBalanceDefinition).  An
+    optional fourth element will be the BaseValueScaleConstant of the item,
+    which will default to 1, otherwise.
     """
     bal_items = []
     new_items = []
     for item in items:
         if len(item) == 2:
-            new_items.append((item[0], item[1], None))
+            new_items.append((item[0], item[1], None, 1))
+        elif len(item) == 3:
+            new_items.append((item[0], item[1], item[2], 1))
         else:
-            new_items.append((item[0], item[1], item[2]))
-    for (classname, weight, invbalance) in new_items:
+            new_items.append((item[0], item[1], item[2], item[3]))
+    for (classname, weight, invbalance, scale) in new_items:
         if classname:
             if invbalance:
                 itmpool = 'None'
@@ -1278,11 +1282,11 @@ def get_balanced_items(items):
                     BaseValueConstant={},
                     BaseValueAttribute=None,
                     InitializationDefinition=None,
-                    BaseValueScaleConstant=1
+                    BaseValueScaleConstant={}
                 ),
                 bDropOnDeath=True
             )
-            """.format(itmpool, invbal, weight))
+            """.format(itmpool, invbal, weight, scale))
     return '({})'.format(','.join(bal_items))
 
 def get_balanced_set(objectname, items):
@@ -1893,6 +1897,29 @@ for (rarity_key, rarity_label) in DropConfig.rarity_presets:
     # Join up our intro pool hotfixes
     intro_pool_support_str = "\n\n".join(hotfix_list)
 
+    # Dahl snipers have their own equip pool which restricts them to only Dahl
+    # sniper rifles (with Hyperion barrel, apparently).  We'll widen that up a bit
+    # to allow *any* Dahl sniper (and use our regular weight, as well)
+
+    for (idx, weight) in enumerate([
+            regular.weight_common,
+            regular.weight_uncommon,
+            regular.weight_rare,
+            regular.weight_veryrare,
+            regular.weight_glitch_normal,
+            regular.weight_legendary/2,
+            regular.weight_legendary/2,
+            ]):
+        rarity_hfs.add_level_hotfix('dahl_sniper_activate_{}'.format(idx),
+                'DahlSniperActivatePool{}'.format(rarity_key.capitalize()),
+                ',{},BalancedItems[{}].Probability.BaseValueConstant,,{}'.format(
+                    'GD_DahlSniper.WeaponPools.Pool_Weapons_HypSniper_EnemyUse_NoScheduling',
+                    idx,
+                    weight),
+                activated=hotfix_activated)
+
+    # Now construct the rarity section
+
     with open('input-file-rarity.txt', 'r') as df:
         rarity_sections[rarity_key] = df.read().format(
                 section_label=rarity_label,
@@ -1902,6 +1929,7 @@ for (rarity_key, rarity_label) in DropConfig.rarity_presets:
                 badass=badass,
                 claptastic_support_str=claptastic_support_str,
                 intro_pool_support_str=intro_pool_support_str,
+                hotfixes=rarity_hfs,
                 )
 
     line_prefix = '#'
@@ -2270,6 +2298,24 @@ for (pool, shieldlist) in shields.items():
             index,
             shieldname,
             invbalance='InventoryBalanceDefinition')
+
+# Dahl Sniper poool setup
+hfs.add_level_hotfix('dahl_sniper_setup', 'DahlSniperPool',
+        ',{},BalancedItems,,{}'.format(
+            'GD_DahlSniper.WeaponPools.Pool_Weapons_HypSniper_EnemyUse_NoScheduling',
+            get_balanced_items([
+                    ('GD_Weap_SniperRifles.A_Weapons.Sniper_Dahl', regular.rarities['stock']['common'], 'WeaponBalanceDefinition'),
+                    ('GD_Weap_SniperRifles.A_Weapons.Sniper_Dahl_2_Uncommon', regular.rarities['stock']['uncommon'], 'WeaponBalanceDefinition'),
+                    ('GD_Weap_SniperRifles.A_Weapons.Sniper_Dahl_3_Rare', regular.rarities['stock']['rare'], 'WeaponBalanceDefinition'),
+                    ('GD_Weap_SniperRifles.A_Weapons.Sniper_Dahl_4_VeryRare', regular.rarities['stock']['veryrare'], 'WeaponBalanceDefinition'),
+                    ('GD_Ma_Weapons.A_Weapons.Sniper_Dahl_6_Glitch', regular.rarities['stock']['glitch_normal'], 'WeaponBalanceDefinition'),
+                    ('GD_Cork_Weap_SniperRifles.A_Weapons_Legendary.Sniper_Dahl_5_Pitchfork', regular.rarities['stock']['legendary']/2, 'WeaponBalanceDefinition'),
+                    ('GD_Cork_Weap_SniperRifles.A_Weapons_Unique.Sniper_Dahl_3_WetWeek', regular.rarities['stock']['legendary']/2, 'WeaponBalanceDefinition', 0),
+                ])))
+
+hfs.add_level_hotfix('dahl_sniper_unique', 'DahlSniperPool',
+        ',{},BalancedItems[6].Probability.BaseValueScaleConstant,,1'.format(
+            'GD_DahlSniper.WeaponPools.Pool_Weapons_HypSniper_EnemyUse_NoScheduling'))
 
 # Vanilla Stalker shield hotfixes (dummy statement)
 hfs.add_level_hotfix('stalker_dummy', 'StalkerShields',

@@ -1632,6 +1632,16 @@
 
         #</Legendary Weapon + Shield Pool Base Setup (don't uncheck this if you choose anything below here)>
 
+        #<Lost Legion Sniper Pool Setup>
+
+            # Lost Legion Snipers have their own equip pool which limits them to Dahl
+            # snipers, and we've got to play a little game with that to make our uniques
+            # handling work properly.
+
+            #<hotfix><key>"SparkLevelPatchEntry-ApocDahlSniperPool0"</key><value>",GD_DahlSniper.WeaponPools.Pool_Weapons_HypSniper_EnemyUse_NoScheduling,BalancedItems,,((ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_SniperRifles.A_Weapons.Sniper_Dahl',Probability=(BaseValueConstant=80,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_SniperRifles.A_Weapons.Sniper_Dahl_2_Uncommon',Probability=(BaseValueConstant=10,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_SniperRifles.A_Weapons.Sniper_Dahl_3_Rare',Probability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_SniperRifles.A_Weapons.Sniper_Dahl_4_VeryRare',Probability=(BaseValueConstant=0.1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'GD_Ma_Weapons.A_Weapons.Sniper_Dahl_6_Glitch',Probability=(BaseValueConstant=0.1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'GD_Cork_Weap_SniperRifles.A_Weapons_Legendary.Sniper_Dahl_5_Pitchfork',Probability=(BaseValueConstant=0.015,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'GD_Cork_Weap_SniperRifles.A_Weapons_Unique.Sniper_Dahl_3_WetWeek',Probability=(BaseValueConstant=0.015,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0),bDropOnDeath=True))"</value><on>
+
+        #</Lost Legion Sniper Pool Setup>
+
         #<Add Uniques to Legendary Weapon + Shield Pools>
 
             #<hotfix><key>"SparkLevelPatchEntry-ApocWeaponUniqueAddAssaultRifles0"</key><value>",GD_Itempools.WeaponPools.Pool_Weapons_AssaultRifles_06_Legendary,BalancedItems[5],,(ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'gd_cork_weap_assaultrifle.A_Weapons_Unique.AR_Jakobs_3_Wallop',Probability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True)"</value><on>
@@ -1759,6 +1769,8 @@
             #<hotfix><key>"SparkLevelPatchEntry-ApocSetBIItem6"</key><value>",GD_Itempools.ShieldPools.Pool_Shields_NovaShields_All_06_Legendary,BalancedItems[4],,(ItmPoolDefinition=None,InvBalanceDefinition=InventoryBalanceDefinition'GD_Cork_Shields.A_Item_Custom.ItemGrade_Shield_RapidRelease',Probability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True)"</value><on>
 
             #<hotfix><key>"SparkLevelPatchEntry-ApocSetBIItem7"</key><value>",GD_Itempools.ShieldPools.Pool_Shields_Standard_06_Legendary,BalancedItems[1],,(ItmPoolDefinition=None,InvBalanceDefinition=InventoryBalanceDefinition'GD_Ma_Shields.A_Item_Unique.ItemGrade_Gear_Shield_Naught',Probability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True)"</value><on>
+
+            #<hotfix><key>"SparkLevelPatchEntry-ApocDahlSniperPool1"</key><value>",GD_DahlSniper.WeaponPools.Pool_Weapons_HypSniper_EnemyUse_NoScheduling,BalancedItems[6].Probability.BaseValueScaleConstant,,1"</value><on>
 
         #</Add Uniques to Legendary Weapon + Shield Pools>
 
@@ -1890,6 +1902,28 @@
                 #<hotfix><key>"SparkLevelPatchEntry-ApocBadassExcellentRarityFixIntroShieldEquipPool0"</key><value>"MoonShotIntro_P,GD_CustomItemPools_MainGame.Gladiator.GreenPale,BalancedItems,,((ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ShieldPools.Pool_Shields_Standard_01_Common',InvBalanceDefinition=None,Probability=(BaseValueConstant=20,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ShieldPools.Pool_Shields_Standard_02_Uncommon',InvBalanceDefinition=None,Probability=(BaseValueConstant=85,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ShieldPools.Pool_Shields_Standard_04_Rare',InvBalanceDefinition=None,Probability=(BaseValueConstant=32.5,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ShieldPools.Pool_Shields_Absorption_01_Common',InvBalanceDefinition=None,Probability=(BaseValueConstant=12.0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ShieldPools.Pool_Shields_Absorption_02_Uncommon',InvBalanceDefinition=None,Probability=(BaseValueConstant=51.0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ShieldPools.Pool_Shields_Booster_01_Common',InvBalanceDefinition=None,Probability=(BaseValueConstant=12.0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ShieldPools.Pool_Shields_Booster_02_Uncommon',InvBalanceDefinition=None,Probability=(BaseValueConstant=51.0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ShieldPools.Pool_Shields_Chimera_01_Common',InvBalanceDefinition=None,Probability=(BaseValueConstant=12.0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ShieldPools.Pool_Shields_Chimera_02_Uncommon',InvBalanceDefinition=None,Probability=(BaseValueConstant=51.0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ShieldPools.Pool_Shields_Impact_01_Common',InvBalanceDefinition=None,Probability=(BaseValueConstant=12.0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ShieldPools.Pool_Shields_Impact_02_Uncommon',InvBalanceDefinition=None,Probability=(BaseValueConstant=51.0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ShieldPools.Pool_Shields_NovaShields_All_01_Common',InvBalanceDefinition=None,Probability=(BaseValueConstant=12.0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ShieldPools.Pool_Shields_NovaShields_All_02_Uncommon',InvBalanceDefinition=None,Probability=(BaseValueConstant=51.0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ShieldPools.Pool_Shields_Roid_01_Common',InvBalanceDefinition=None,Probability=(BaseValueConstant=12.0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ShieldPools.Pool_Shields_Roid_02_Uncommon',InvBalanceDefinition=None,Probability=(BaseValueConstant=51.0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ShieldPools.Pool_Shields_SpikeShields_All_01_Common',InvBalanceDefinition=None,Probability=(BaseValueConstant=12.0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ShieldPools.Pool_Shields_SpikeShields_All_02_Uncommon',InvBalanceDefinition=None,Probability=(BaseValueConstant=51.0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True))"</value><on>
 
             #</Game Intro Dahl Soldier Pools>
+
+            #<Lost Legion Snipers>
+
+                # Lost Legion Snipers have their own equip pool which restricts them to
+                # some specific Dahl sniper rifles.  We're expanding that a bit, though
+                # keeping the Dahl restriction.
+
+                #<hotfix><key>"SparkLevelPatchEntry-ApocBadassExcellentRarityFixDahlSniperActivatePoolExcellent0"</key><value>",GD_DahlSniper.WeaponPools.Pool_Weapons_HypSniper_EnemyUse_NoScheduling,BalancedItems[0].Probability.BaseValueConstant,,20"</value><on>
+
+                #<hotfix><key>"SparkLevelPatchEntry-ApocBadassExcellentRarityFixDahlSniperActivatePoolExcellent1"</key><value>",GD_DahlSniper.WeaponPools.Pool_Weapons_HypSniper_EnemyUse_NoScheduling,BalancedItems[1].Probability.BaseValueConstant,,85"</value><on>
+
+                #<hotfix><key>"SparkLevelPatchEntry-ApocBadassExcellentRarityFixDahlSniperActivatePoolExcellent2"</key><value>",GD_DahlSniper.WeaponPools.Pool_Weapons_HypSniper_EnemyUse_NoScheduling,BalancedItems[2].Probability.BaseValueConstant,,65"</value><on>
+
+                #<hotfix><key>"SparkLevelPatchEntry-ApocBadassExcellentRarityFixDahlSniperActivatePoolExcellent3"</key><value>",GD_DahlSniper.WeaponPools.Pool_Weapons_HypSniper_EnemyUse_NoScheduling,BalancedItems[3].Probability.BaseValueConstant,,40"</value><on>
+
+                #<hotfix><key>"SparkLevelPatchEntry-ApocBadassExcellentRarityFixDahlSniperActivatePoolExcellent4"</key><value>",GD_DahlSniper.WeaponPools.Pool_Weapons_HypSniper_EnemyUse_NoScheduling,BalancedItems[4].Probability.BaseValueConstant,,8"</value><on>
+
+                #<hotfix><key>"SparkLevelPatchEntry-ApocBadassExcellentRarityFixDahlSniperActivatePoolExcellent5"</key><value>",GD_DahlSniper.WeaponPools.Pool_Weapons_HypSniper_EnemyUse_NoScheduling,BalancedItems[5].Probability.BaseValueConstant,,1.5"</value><on>
+
+                #<hotfix><key>"SparkLevelPatchEntry-ApocBadassExcellentRarityFixDahlSniperActivatePoolExcellent6"</key><value>",GD_DahlSniper.WeaponPools.Pool_Weapons_HypSniper_EnemyUse_NoScheduling,BalancedItems[6].Probability.BaseValueConstant,,1.5"</value><on>
+
+            #</Lost Legion Snipers>
 
             #<Claptastic Voyage Support>
 
@@ -2272,6 +2306,28 @@
 
             #</Game Intro Dahl Soldier Pools>
 
+            #<Lost Legion Snipers><off>
+
+                ## Lost Legion Snipers have their own equip pool which restricts them to<off>
+                ## some specific Dahl sniper rifles.  We're expanding that a bit, though<off>
+                ## keeping the Dahl restriction.<off>
+
+                #<hotfix><key>"SparkLevelPatchEntry-ApocBadassBetterRarityFixDahlSniperActivatePoolBetter0"</key><value>",GD_DahlSniper.WeaponPools.Pool_Weapons_HypSniper_EnemyUse_NoScheduling,BalancedItems[0].Probability.BaseValueConstant,,32.75"</value><off>
+
+                #<hotfix><key>"SparkLevelPatchEntry-ApocBadassBetterRarityFixDahlSniperActivatePoolBetter1"</key><value>",GD_DahlSniper.WeaponPools.Pool_Weapons_HypSniper_EnemyUse_NoScheduling,BalancedItems[1].Probability.BaseValueConstant,,35"</value><off>
+
+                #<hotfix><key>"SparkLevelPatchEntry-ApocBadassBetterRarityFixDahlSniperActivatePoolBetter2"</key><value>",GD_DahlSniper.WeaponPools.Pool_Weapons_HypSniper_EnemyUse_NoScheduling,BalancedItems[2].Probability.BaseValueConstant,,25"</value><off>
+
+                #<hotfix><key>"SparkLevelPatchEntry-ApocBadassBetterRarityFixDahlSniperActivatePoolBetter3"</key><value>",GD_DahlSniper.WeaponPools.Pool_Weapons_HypSniper_EnemyUse_NoScheduling,BalancedItems[3].Probability.BaseValueConstant,,5"</value><off>
+
+                #<hotfix><key>"SparkLevelPatchEntry-ApocBadassBetterRarityFixDahlSniperActivatePoolBetter4"</key><value>",GD_DahlSniper.WeaponPools.Pool_Weapons_HypSniper_EnemyUse_NoScheduling,BalancedItems[4].Probability.BaseValueConstant,,2"</value><off>
+
+                #<hotfix><key>"SparkLevelPatchEntry-ApocBadassBetterRarityFixDahlSniperActivatePoolBetter5"</key><value>",GD_DahlSniper.WeaponPools.Pool_Weapons_HypSniper_EnemyUse_NoScheduling,BalancedItems[5].Probability.BaseValueConstant,,0.125"</value><off>
+
+                #<hotfix><key>"SparkLevelPatchEntry-ApocBadassBetterRarityFixDahlSniperActivatePoolBetter6"</key><value>",GD_DahlSniper.WeaponPools.Pool_Weapons_HypSniper_EnemyUse_NoScheduling,BalancedItems[6].Probability.BaseValueConstant,,0.125"</value><off>
+
+            #</Lost Legion Snipers>
+
             #<Claptastic Voyage Support><off>
 
                 ## To support increased Glitch weights in Claptastic Voyage, we're using<off>
@@ -2652,6 +2708,28 @@
                 #<hotfix><key>"SparkLevelPatchEntry-ApocBadassStockRarityFixIntroShieldEquipPool0"</key><value>"MoonShotIntro_P,GD_CustomItemPools_MainGame.Gladiator.GreenPale,BalancedItems,,((ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ShieldPools.Pool_Shields_Standard_01_Common',InvBalanceDefinition=None,Probability=(BaseValueConstant=80,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ShieldPools.Pool_Shields_Standard_02_Uncommon',InvBalanceDefinition=None,Probability=(BaseValueConstant=10,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ShieldPools.Pool_Shields_Standard_04_Rare',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.5,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ShieldPools.Pool_Shields_Absorption_01_Common',InvBalanceDefinition=None,Probability=(BaseValueConstant=48.0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ShieldPools.Pool_Shields_Absorption_02_Uncommon',InvBalanceDefinition=None,Probability=(BaseValueConstant=6.0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ShieldPools.Pool_Shields_Booster_01_Common',InvBalanceDefinition=None,Probability=(BaseValueConstant=48.0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ShieldPools.Pool_Shields_Booster_02_Uncommon',InvBalanceDefinition=None,Probability=(BaseValueConstant=6.0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ShieldPools.Pool_Shields_Chimera_01_Common',InvBalanceDefinition=None,Probability=(BaseValueConstant=48.0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ShieldPools.Pool_Shields_Chimera_02_Uncommon',InvBalanceDefinition=None,Probability=(BaseValueConstant=6.0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ShieldPools.Pool_Shields_Impact_01_Common',InvBalanceDefinition=None,Probability=(BaseValueConstant=48.0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ShieldPools.Pool_Shields_Impact_02_Uncommon',InvBalanceDefinition=None,Probability=(BaseValueConstant=6.0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ShieldPools.Pool_Shields_NovaShields_All_01_Common',InvBalanceDefinition=None,Probability=(BaseValueConstant=48.0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ShieldPools.Pool_Shields_NovaShields_All_02_Uncommon',InvBalanceDefinition=None,Probability=(BaseValueConstant=6.0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ShieldPools.Pool_Shields_Roid_01_Common',InvBalanceDefinition=None,Probability=(BaseValueConstant=48.0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ShieldPools.Pool_Shields_Roid_02_Uncommon',InvBalanceDefinition=None,Probability=(BaseValueConstant=6.0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ShieldPools.Pool_Shields_SpikeShields_All_01_Common',InvBalanceDefinition=None,Probability=(BaseValueConstant=48.0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ShieldPools.Pool_Shields_SpikeShields_All_02_Uncommon',InvBalanceDefinition=None,Probability=(BaseValueConstant=6.0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True))"</value><off>
 
             #</Game Intro Dahl Soldier Pools>
+
+            #<Lost Legion Snipers><off>
+
+                ## Lost Legion Snipers have their own equip pool which restricts them to<off>
+                ## some specific Dahl sniper rifles.  We're expanding that a bit, though<off>
+                ## keeping the Dahl restriction.<off>
+
+                #<hotfix><key>"SparkLevelPatchEntry-ApocBadassStockRarityFixDahlSniperActivatePoolStock0"</key><value>",GD_DahlSniper.WeaponPools.Pool_Weapons_HypSniper_EnemyUse_NoScheduling,BalancedItems[0].Probability.BaseValueConstant,,80"</value><off>
+
+                #<hotfix><key>"SparkLevelPatchEntry-ApocBadassStockRarityFixDahlSniperActivatePoolStock1"</key><value>",GD_DahlSniper.WeaponPools.Pool_Weapons_HypSniper_EnemyUse_NoScheduling,BalancedItems[1].Probability.BaseValueConstant,,10"</value><off>
+
+                #<hotfix><key>"SparkLevelPatchEntry-ApocBadassStockRarityFixDahlSniperActivatePoolStock2"</key><value>",GD_DahlSniper.WeaponPools.Pool_Weapons_HypSniper_EnemyUse_NoScheduling,BalancedItems[2].Probability.BaseValueConstant,,1"</value><off>
+
+                #<hotfix><key>"SparkLevelPatchEntry-ApocBadassStockRarityFixDahlSniperActivatePoolStock3"</key><value>",GD_DahlSniper.WeaponPools.Pool_Weapons_HypSniper_EnemyUse_NoScheduling,BalancedItems[3].Probability.BaseValueConstant,,0.1"</value><off>
+
+                #<hotfix><key>"SparkLevelPatchEntry-ApocBadassStockRarityFixDahlSniperActivatePoolStock4"</key><value>",GD_DahlSniper.WeaponPools.Pool_Weapons_HypSniper_EnemyUse_NoScheduling,BalancedItems[4].Probability.BaseValueConstant,,0.1"</value><off>
+
+                #<hotfix><key>"SparkLevelPatchEntry-ApocBadassStockRarityFixDahlSniperActivatePoolStock5"</key><value>",GD_DahlSniper.WeaponPools.Pool_Weapons_HypSniper_EnemyUse_NoScheduling,BalancedItems[5].Probability.BaseValueConstant,,0.015"</value><off>
+
+                #<hotfix><key>"SparkLevelPatchEntry-ApocBadassStockRarityFixDahlSniperActivatePoolStock6"</key><value>",GD_DahlSniper.WeaponPools.Pool_Weapons_HypSniper_EnemyUse_NoScheduling,BalancedItems[6].Probability.BaseValueConstant,,0.015"</value><off>
+
+            #</Lost Legion Snipers>
 
             #<Claptastic Voyage Support><off>
 
@@ -3034,6 +3112,28 @@
 
             #</Game Intro Dahl Soldier Pools>
 
+            #<Lost Legion Snipers><off>
+
+                ## Lost Legion Snipers have their own equip pool which restricts them to<off>
+                ## some specific Dahl sniper rifles.  We're expanding that a bit, though<off>
+                ## keeping the Dahl restriction.<off>
+
+                #<hotfix><key>"SparkLevelPatchEntry-ApocBadassExcellent_noglitchRarityFixDahlSniperActivatePoolExcellent_noglitch0"</key><value>",GD_DahlSniper.WeaponPools.Pool_Weapons_HypSniper_EnemyUse_NoScheduling,BalancedItems[0].Probability.BaseValueConstant,,20"</value><off>
+
+                #<hotfix><key>"SparkLevelPatchEntry-ApocBadassExcellent_noglitchRarityFixDahlSniperActivatePoolExcellent_noglitch1"</key><value>",GD_DahlSniper.WeaponPools.Pool_Weapons_HypSniper_EnemyUse_NoScheduling,BalancedItems[1].Probability.BaseValueConstant,,85"</value><off>
+
+                #<hotfix><key>"SparkLevelPatchEntry-ApocBadassExcellent_noglitchRarityFixDahlSniperActivatePoolExcellent_noglitch2"</key><value>",GD_DahlSniper.WeaponPools.Pool_Weapons_HypSniper_EnemyUse_NoScheduling,BalancedItems[2].Probability.BaseValueConstant,,65"</value><off>
+
+                #<hotfix><key>"SparkLevelPatchEntry-ApocBadassExcellent_noglitchRarityFixDahlSniperActivatePoolExcellent_noglitch3"</key><value>",GD_DahlSniper.WeaponPools.Pool_Weapons_HypSniper_EnemyUse_NoScheduling,BalancedItems[3].Probability.BaseValueConstant,,40"</value><off>
+
+                #<hotfix><key>"SparkLevelPatchEntry-ApocBadassExcellent_noglitchRarityFixDahlSniperActivatePoolExcellent_noglitch4"</key><value>",GD_DahlSniper.WeaponPools.Pool_Weapons_HypSniper_EnemyUse_NoScheduling,BalancedItems[4].Probability.BaseValueConstant,,0"</value><off>
+
+                #<hotfix><key>"SparkLevelPatchEntry-ApocBadassExcellent_noglitchRarityFixDahlSniperActivatePoolExcellent_noglitch5"</key><value>",GD_DahlSniper.WeaponPools.Pool_Weapons_HypSniper_EnemyUse_NoScheduling,BalancedItems[5].Probability.BaseValueConstant,,1.5"</value><off>
+
+                #<hotfix><key>"SparkLevelPatchEntry-ApocBadassExcellent_noglitchRarityFixDahlSniperActivatePoolExcellent_noglitch6"</key><value>",GD_DahlSniper.WeaponPools.Pool_Weapons_HypSniper_EnemyUse_NoScheduling,BalancedItems[6].Probability.BaseValueConstant,,1.5"</value><off>
+
+            #</Lost Legion Snipers>
+
             #<Claptastic Voyage Support><off>
 
                 ## To support increased Glitch weights in Claptastic Voyage, we're using<off>
@@ -3415,6 +3515,28 @@
 
             #</Game Intro Dahl Soldier Pools>
 
+            #<Lost Legion Snipers><off>
+
+                ## Lost Legion Snipers have their own equip pool which restricts them to<off>
+                ## some specific Dahl sniper rifles.  We're expanding that a bit, though<off>
+                ## keeping the Dahl restriction.<off>
+
+                #<hotfix><key>"SparkLevelPatchEntry-ApocBadassBetter_noglitchRarityFixDahlSniperActivatePoolBetter_noglitch0"</key><value>",GD_DahlSniper.WeaponPools.Pool_Weapons_HypSniper_EnemyUse_NoScheduling,BalancedItems[0].Probability.BaseValueConstant,,32.75"</value><off>
+
+                #<hotfix><key>"SparkLevelPatchEntry-ApocBadassBetter_noglitchRarityFixDahlSniperActivatePoolBetter_noglitch1"</key><value>",GD_DahlSniper.WeaponPools.Pool_Weapons_HypSniper_EnemyUse_NoScheduling,BalancedItems[1].Probability.BaseValueConstant,,35"</value><off>
+
+                #<hotfix><key>"SparkLevelPatchEntry-ApocBadassBetter_noglitchRarityFixDahlSniperActivatePoolBetter_noglitch2"</key><value>",GD_DahlSniper.WeaponPools.Pool_Weapons_HypSniper_EnemyUse_NoScheduling,BalancedItems[2].Probability.BaseValueConstant,,25"</value><off>
+
+                #<hotfix><key>"SparkLevelPatchEntry-ApocBadassBetter_noglitchRarityFixDahlSniperActivatePoolBetter_noglitch3"</key><value>",GD_DahlSniper.WeaponPools.Pool_Weapons_HypSniper_EnemyUse_NoScheduling,BalancedItems[3].Probability.BaseValueConstant,,5"</value><off>
+
+                #<hotfix><key>"SparkLevelPatchEntry-ApocBadassBetter_noglitchRarityFixDahlSniperActivatePoolBetter_noglitch4"</key><value>",GD_DahlSniper.WeaponPools.Pool_Weapons_HypSniper_EnemyUse_NoScheduling,BalancedItems[4].Probability.BaseValueConstant,,0"</value><off>
+
+                #<hotfix><key>"SparkLevelPatchEntry-ApocBadassBetter_noglitchRarityFixDahlSniperActivatePoolBetter_noglitch5"</key><value>",GD_DahlSniper.WeaponPools.Pool_Weapons_HypSniper_EnemyUse_NoScheduling,BalancedItems[5].Probability.BaseValueConstant,,0.125"</value><off>
+
+                #<hotfix><key>"SparkLevelPatchEntry-ApocBadassBetter_noglitchRarityFixDahlSniperActivatePoolBetter_noglitch6"</key><value>",GD_DahlSniper.WeaponPools.Pool_Weapons_HypSniper_EnemyUse_NoScheduling,BalancedItems[6].Probability.BaseValueConstant,,0.125"</value><off>
+
+            #</Lost Legion Snipers>
+
             #<Claptastic Voyage Support><off>
 
                 ## To support increased Glitch weights in Claptastic Voyage, we're using<off>
@@ -3795,6 +3917,28 @@
                 #<hotfix><key>"SparkLevelPatchEntry-ApocBadassStock_noglitchRarityFixIntroShieldEquipPool0"</key><value>"MoonShotIntro_P,GD_CustomItemPools_MainGame.Gladiator.GreenPale,BalancedItems,,((ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ShieldPools.Pool_Shields_Standard_01_Common',InvBalanceDefinition=None,Probability=(BaseValueConstant=80,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ShieldPools.Pool_Shields_Standard_02_Uncommon',InvBalanceDefinition=None,Probability=(BaseValueConstant=10,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ShieldPools.Pool_Shields_Standard_04_Rare',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.5,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ShieldPools.Pool_Shields_Absorption_01_Common',InvBalanceDefinition=None,Probability=(BaseValueConstant=48.0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ShieldPools.Pool_Shields_Absorption_02_Uncommon',InvBalanceDefinition=None,Probability=(BaseValueConstant=6.0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ShieldPools.Pool_Shields_Booster_01_Common',InvBalanceDefinition=None,Probability=(BaseValueConstant=48.0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ShieldPools.Pool_Shields_Booster_02_Uncommon',InvBalanceDefinition=None,Probability=(BaseValueConstant=6.0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ShieldPools.Pool_Shields_Chimera_01_Common',InvBalanceDefinition=None,Probability=(BaseValueConstant=48.0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ShieldPools.Pool_Shields_Chimera_02_Uncommon',InvBalanceDefinition=None,Probability=(BaseValueConstant=6.0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ShieldPools.Pool_Shields_Impact_01_Common',InvBalanceDefinition=None,Probability=(BaseValueConstant=48.0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ShieldPools.Pool_Shields_Impact_02_Uncommon',InvBalanceDefinition=None,Probability=(BaseValueConstant=6.0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ShieldPools.Pool_Shields_NovaShields_All_01_Common',InvBalanceDefinition=None,Probability=(BaseValueConstant=48.0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ShieldPools.Pool_Shields_NovaShields_All_02_Uncommon',InvBalanceDefinition=None,Probability=(BaseValueConstant=6.0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ShieldPools.Pool_Shields_Roid_01_Common',InvBalanceDefinition=None,Probability=(BaseValueConstant=48.0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ShieldPools.Pool_Shields_Roid_02_Uncommon',InvBalanceDefinition=None,Probability=(BaseValueConstant=6.0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ShieldPools.Pool_Shields_SpikeShields_All_01_Common',InvBalanceDefinition=None,Probability=(BaseValueConstant=48.0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True),(ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ShieldPools.Pool_Shields_SpikeShields_All_02_Uncommon',InvBalanceDefinition=None,Probability=(BaseValueConstant=6.0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True))"</value><off>
 
             #</Game Intro Dahl Soldier Pools>
+
+            #<Lost Legion Snipers><off>
+
+                ## Lost Legion Snipers have their own equip pool which restricts them to<off>
+                ## some specific Dahl sniper rifles.  We're expanding that a bit, though<off>
+                ## keeping the Dahl restriction.<off>
+
+                #<hotfix><key>"SparkLevelPatchEntry-ApocBadassStock_noglitchRarityFixDahlSniperActivatePoolStock_noglitch0"</key><value>",GD_DahlSniper.WeaponPools.Pool_Weapons_HypSniper_EnemyUse_NoScheduling,BalancedItems[0].Probability.BaseValueConstant,,80"</value><off>
+
+                #<hotfix><key>"SparkLevelPatchEntry-ApocBadassStock_noglitchRarityFixDahlSniperActivatePoolStock_noglitch1"</key><value>",GD_DahlSniper.WeaponPools.Pool_Weapons_HypSniper_EnemyUse_NoScheduling,BalancedItems[1].Probability.BaseValueConstant,,10"</value><off>
+
+                #<hotfix><key>"SparkLevelPatchEntry-ApocBadassStock_noglitchRarityFixDahlSniperActivatePoolStock_noglitch2"</key><value>",GD_DahlSniper.WeaponPools.Pool_Weapons_HypSniper_EnemyUse_NoScheduling,BalancedItems[2].Probability.BaseValueConstant,,1"</value><off>
+
+                #<hotfix><key>"SparkLevelPatchEntry-ApocBadassStock_noglitchRarityFixDahlSniperActivatePoolStock_noglitch3"</key><value>",GD_DahlSniper.WeaponPools.Pool_Weapons_HypSniper_EnemyUse_NoScheduling,BalancedItems[3].Probability.BaseValueConstant,,0.1"</value><off>
+
+                #<hotfix><key>"SparkLevelPatchEntry-ApocBadassStock_noglitchRarityFixDahlSniperActivatePoolStock_noglitch4"</key><value>",GD_DahlSniper.WeaponPools.Pool_Weapons_HypSniper_EnemyUse_NoScheduling,BalancedItems[4].Probability.BaseValueConstant,,0"</value><off>
+
+                #<hotfix><key>"SparkLevelPatchEntry-ApocBadassStock_noglitchRarityFixDahlSniperActivatePoolStock_noglitch5"</key><value>",GD_DahlSniper.WeaponPools.Pool_Weapons_HypSniper_EnemyUse_NoScheduling,BalancedItems[5].Probability.BaseValueConstant,,0.015"</value><off>
+
+                #<hotfix><key>"SparkLevelPatchEntry-ApocBadassStock_noglitchRarityFixDahlSniperActivatePoolStock_noglitch6"</key><value>",GD_DahlSniper.WeaponPools.Pool_Weapons_HypSniper_EnemyUse_NoScheduling,BalancedItems[6].Probability.BaseValueConstant,,0.015"</value><off>
+
+            #</Lost Legion Snipers>
 
             #<Claptastic Voyage Support><off>
 

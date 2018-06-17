@@ -201,7 +201,6 @@ Things to do before releasing
   compat concerns.
 * Ascending Lost Legion - figure out their drops
 * Also figure out Shadow-TP's drops, though that'll happen as I go through CV...
-* Lost Legion Snipers don't drop weapon?
 * Let GUN loaders use our custom equip pools
 * Reset Red, then Dead to test Courier drops.
 
