@@ -2955,6 +2955,15 @@ set_dipl_item_prob('corporal_bob_pool_0',
         0,
         level='CentralTerminal_P')
 
+# Lost Legion Eternal - remove their ascension drop, since we can't guarantee
+# that it will be the same as what they use (and in fact is all but guaranteed
+# *not* to be).
+hfs.add_level_hotfix('lost_legion_eternal_0', 'LostLegionEternal',
+        """,
+        GD_DahlFanatic.Character.AIDef_DahlFanatic:AIBehaviorProviderDefinition_0.Behavior_SpawnItems_0,
+        ItemPoolList[0].PoolProbability.BaseValueConstant,,
+        0""")
+
 # Save our current hotfixes
 orig_hfs = hfs
 

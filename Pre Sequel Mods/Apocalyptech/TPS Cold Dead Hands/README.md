@@ -71,6 +71,13 @@ from the start of the battle which gun you'll receive.
   have no idea why I can't seem to hotfix them.  Boils and other enemies in the
   area are fine, though, and Lost Legion elsewhere in the game work just fine.
 
+* Ordinarily, Lost Legion Eternal (and plain ol' Eternal) drop a weapon when they
+  start ascending, but as far as I can tell there's no way to make this drop the
+  SAME weapon they were using.  I ended up disabling that drop entirely -- if you
+  want their weapon, be sure to kill 'em before they start ascending!  I justify
+  this to myself by saying they must need the matter as part of whatever reaction
+  is powering their ascension.  :)
+
 ### Configuration
 
 There are six main categories which you can use to customize the gear
@@ -199,7 +206,6 @@ Things to do before releasing
     the other isn't actually correct.  (though BL may have linked the two)
 * Go through the drop pool lists main hotfix area to look for Better Loot
   compat concerns.
-* Ascending Lost Legion - figure out their drops
 * Also figure out Shadow-TP's drops, though that'll happen as I go through CV...
 
 Things to think about:
