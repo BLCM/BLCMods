@@ -32,6 +32,12 @@ at it!
 Mod Construction / Implementation Details
 =========================================
 
+*(This section is only relevant for someone looking to edit the mod in the
+same way I do, or just someone curious about my mod construction techniques.
+If you're just looking to run the mod, see the "Usage" section above.  The
+mod can, of course, be edited directly in FilterTool/BLCMM as well, once it's
+been imported.)*
+
 This mod is actually generated using a Python script named `conv_to_traps.py`,
 which makes use of some data classes from my [FT Explorer](https://github.com/apocalyptech/ft-explorer)
 project.  There's a couple other scripts in here which were used to do the

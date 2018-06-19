@@ -346,6 +346,12 @@ class Hotfixes(object):
         """
         return self.get_hotfix(format).get_xml()
 
+    def num_hotfixes(self):
+        """
+        Returns the number of hotfixes we currently have
+        """
+        return len(self.hotfixes)
+
     def next_id(self, key):
         """
         Returns the next ID to use for the given key.  Indexes will start
