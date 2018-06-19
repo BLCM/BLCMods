@@ -671,9 +671,6 @@ class Regular(DropConfig):
                 (0, 0, 'GD_Marigold_Pop_Fragmented.Balance.PawnBalance_FragBandit'),
                 (1, 0, 'GD_Marigold_Pop_Fragmented.Balance.PawnBalance_FragBandit'),
                 (2, 0, 'GD_Marigold_Pop_Fragmented.Balance.PawnBalance_FragBandit'),
-                (0, 0, 'GD_Marigold_Pop_Fragmented.Balance.PawnBalance_FragBanditMidget'),
-                (1, 0, 'GD_Marigold_Pop_Fragmented.Balance.PawnBalance_FragBanditMidget'),
-                (2, 0, 'GD_Marigold_Pop_Fragmented.Balance.PawnBalance_FragBanditMidget'),
                 (0, 0, 'GD_Population_Scavengers.Balance.Bosun.PawnBalance_ScavMidget_Bosun'),
                 (0, 0, 'GD_Population_Scavengers.Balance.Bosun.PawnBalance_ScavengerBandit_Bosun'),
                 (1, 0, 'GD_Population_Scavengers.Balance.Bosun.PawnBalance_ScavengerBandit_Bosun'),
@@ -720,6 +717,9 @@ class Regular(DropConfig):
             ],
             # Shotguns Only
             [
+                (0, 0, 'GD_Marigold_Pop_Fragmented.Balance.PawnBalance_FragBanditMidget'),
+                (1, 0, 'GD_Marigold_Pop_Fragmented.Balance.PawnBalance_FragBanditMidget'),
+                (2, 0, 'GD_Marigold_Pop_Fragmented.Balance.PawnBalance_FragBanditMidget'),
             ],
             # Snipers Only
             [
