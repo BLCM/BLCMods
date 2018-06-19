@@ -1,0 +1,199 @@
+#<Ghostrider>
+
+    #<Description>
+
+        Mod author: WarMocK
+	
+		Release Date: 06-19-2018
+	
+		Version: 1.0.0
+	
+		Summary: 
+		
+		Converts the Whiskey Tango Foxtrott into the Jakobs Ghostrider shield.
+
+        Makes bayonets on sniper rifles more usable by both buffing their damage and applying the lifesteal effect of the Law piostol and Order shield.
+
+		The Law pistol now deals 125 % more melee damage, has more OOmph per bullet, and can spawn with a stock as the secondary accessory (has to be enables, also consider the sanity check later on!). Oh, and it looks more badass now :D
+		
+		Heart of the Ancients now features the cooldown reduction from the Proficiency relic instead of the HP boost after FFYL
+		
+        Shield Features:
+
+        - No shield capacity.
+
+        - Additional roid damage.
+
+        - High damage resistance.
+
+        - Provides lifesteal when dealing melee damage with either the Law pistol or a sniper rifle equipped with a bayonet.
+
+        - Spawns as a Jakobs shield instead of Dahl.
+
+        - Additionally, all bayonets on sniper rifles deal 100 % more melee damage instead of just 50 %
+
+        - Jakobs barrels increase melee damage by 25 %
+
+        - Jakobs Citrine skin increases melee damage by 15 %
+		
+		- The Elephant Gun now also increases melee damage by 85 %
+		
+		Gibbed codes (OP 8):
+		
+		- Modified Law with gunstock on accessory slot 2: BL2(hwAAAABjYQCHRwJABgGFQsOIhRENAwLG/////9IwNmBMw3CCgQ3j)
+
+        Acknowledgements:
+		
+		* Aaron000 for listing the necessary attributes of the Law blade and the Order shield effect in the Law&OrderedUp mod (for the record: they can also be found in the title definition of the Law and the special delta accessory of the Order, in case anyone wants to have a look at how it works ;-))
+
+        * Apacalyptech for helping me out with the coding and understanding how some of the stuff I had to do actually works
+
+        * Exotek for pointing me in the right direction for the hotfix which makes the Kunai deal no damage.
+
+        * the entire UCP team for making modding on BL 2 possible in the first place :)
+
+    #</Description>
+
+    #<Show test message when initializin>
+
+        say Running Ghostrider version 1.0.0
+
+    #</Show test message when initializin>
+	
+	#<No Kunai self damage>
+		
+		#<hotfix><key>"SparkOnDemandPatchEntry-DeathBlossomWMK"</key><value>"GD_Assassin_Streaming,GD_Assassin_Skills.ActionSkill.Skill_Stealth:BehaviorProviderDefinition_0.Behavior_SpawnProjectile_0,bInflictRadiusDamageOnOwner,,False"</value><on>
+
+	#</No Kunai self damage>
+	
+    #<Sniper rifle changes>
+
+        #<Make sniper rifle bayonets do more damage and behave like the blade from the Law pistol>
+
+            set GD_Weap_SniperRifles.Accessory.Sniper_Accessory_Bayonet1 ExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.DamageSourceModifiers.InstigatedMeleeDamageModifier',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=DesignerAttributeDefinition'GD_Shields.Attributes.Attr_LawEquipped',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+        #</Make sniper rifle bayonets do more damage and behave like the blade from the Law pistol>
+
+        #<Make sniper rifle parts from Jakobs improve melee damage as well>
+
+            set GD_Aster_Weapons.ManufacturerMaterials.Mat_Jakobs_4_Citrine_SR ExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.DamageSourceModifiers.InstigatedMeleeDamageModifier',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.150000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+            set GD_Weap_SniperRifles.Barrel.SR_Barrel_Jakobs ExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.DamageSourceModifiers.InstigatedMeleeDamageModifier',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.350000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+			set GD_Weap_SniperRifles.Body.SR_Body_Jakobs_2 ExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.DamageSourceModifiers.InstigatedMeleeDamageModifier',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.250000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+					
+			set GD_Weap_SniperRifles.Body.SR_Body_Jakobs_3 ExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.DamageSourceModifiers.InstigatedMeleeDamageModifier',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.250000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+					
+			set GD_Weap_SniperRifles.Body.SR_Body_Jakobs_4 ExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.DamageSourceModifiers.InstigatedMeleeDamageModifier',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.250000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+			
+			set GD_Sage_Weapons.SniperRifles.SR_Barrel_Hyperion_ElephantGun ExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.DamageSourceModifiers.InstigatedMeleeDamageModifier',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+			
+        #</Make sniper rifle parts from Jakobs improve melee damage as well>
+
+    #</Sniper rifle changes>
+	
+	#<Law pistol changes>
+	
+		set GD_Weap_Pistol.Barrel.Pistol_Barrel_Dahl_Law GestaltModeSkeletalMeshName Pistol_Barrel_Jakobs
+	
+		set GD_Weap_Pistol.Accessory.Pistol_Accessory_Bayonet_1_Law ExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.DamageSourceModifiers.InstigatedMeleeDamageModifier',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.250000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=DesignerAttributeDefinition'GD_Shields.Attributes.Attr_LawEquipped',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+	
+		set GD_Weap_Pistol.Barrel.Pistol_Barrel_Dahl_Law WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.690000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-0.340000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+	
+		#<OPTIONAL: Add a pistol stock to the Law. Beware the sanity check when turning this off!!!>
+	
+			set GD_Weap_Pistol.A_Weapons_Unique.Pistol_Jakobs_3_Law:WeaponPartListCollectionDefinition_114 Accessory2PartData (bEnabled=True,WeightedParts=((Part=WeaponPartDefinition'GD_Weap_Pistol.Accessory.Pistol_Accessory_Stock_Stability',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=3)))
+	
+		#</OPTIONAL: Add a pistol stock to the Law. Beware the sanity check when turning this off!!!>
+	
+		set Common_GunMaterials.Materials.Pistol.Mati_JakobsUniquePistol_Law VectorParameterValues ((ParameterName="p_AColorHilight",ParameterValue=(R=1.000000,G=0.988279,B=0.453059,A=1.000000),ExpressionGUID=(A=384292798,B=1221323751,C=-2145405772,D=1872194118)),(ParameterName="p_AColorMidtone",ParameterValue=(R=0.138116,G=0.077760,B=0.049603,A=1.000000),ExpressionGUID=(A=1102826245,B=1256298978,C=-1429881438,D=-507521102)),(ParameterName="p_AColorShadow",ParameterValue=(R=0.072345,G=0.110493,B=0.071425,A=1.000000),ExpressionGUID=(A=1481234158,B=1129012376,C=-688827739,D=-2119135160)),(ParameterName="p_BColorHilight",ParameterValue=(R=2.291030,G=2.200570,B=1.027252,A=1.000000),ExpressionGUID=(A=170714760,B=1132476783,C=-275668290,D=655702143)),(ParameterName="p_BColorMidtone",ParameterValue=(R=1.000000,G=1.000000,B=1.000000,A=1.000000),ExpressionGUID=(A=473594356,B=1338758895,C=824823946,D=864253813)),(ParameterName="p_BColorShadow",ParameterValue=(R=0.211376,G=0.358642,B=0.574564,A=1.000000),ExpressionGUID=(A=-429590341,B=1156435294,C=-1015192901,D=687313413)),(ParameterName="p_CColorHilight",ParameterValue=(R=1.000000,G=0.988279,B=0.453059,A=1.000000),ExpressionGUID=(A=759765673,B=1280874949,C=257367956,D=-932702788)),(ParameterName="p_CColorMidtone",ParameterValue=(R=0.138116,G=0.077760,B=0.049603,A=1.000000),ExpressionGUID=(A=110180441,B=1232792373,C=-1232281417,D=-1030626065)),(ParameterName="p_CColorShadow",ParameterValue=(R=0.072345,G=0.110493,B=0.071425,A=1.000000),ExpressionGUID=(A=716329441,B=1214803259,C=-238071112,D=-1004122047)),(ParameterName="p_ColorD",ParameterValue=(R=0.014349,G=0.014349,B=0.014349,A=1.000000),ExpressionGUID=(A=1210191995,B=1309825855,C=-770078819,D=-360548266)),(ParameterName="p_DecalColor",ParameterValue=(R=1.867956,G=1.920971,B=1.954049,A=1.000000),ExpressionGUID=(A=1691998600,B=1239094551,C=2074257317,D=1844701893)),(ParameterName="p_DColor",ParameterValue=(R=0.883945,G=0.774010,B=0.259365,A=1.000000),ExpressionGUID=(A=696455109,B=1155878830,C=-1741888361,D=802120528)),(ParameterName="p_DecalChannel",ParameterValue=(R=1.000000,G=0.000000,B=0.000000,A=0.000000),ExpressionGUID=(A=1757499073,B=1097055033,C=-1266029657,D=1038353636)),(ParameterName="p_DecalScalePosition",ParameterValue=(R=2.631579,G=7.692308,B=-0.250000,A=0.400000),ExpressionGUID=(A=395540170,B=1243133493,C=-1264190552,D=123075385)),(ParameterName="p_PatternColor",ParameterValue=(R=3.351562,G=3.351562,B=3.351562,A=1.000000),ExpressionGUID=(A=676539706,B=1125682796,C=1871983293,D=-2049503601)),(ParameterName="p_PatternScalePosition",ParameterValue=(R=8.000000,G=10.560000,B=2.816400,A=0.360000),ExpressionGUID=(A=-2005018406,B=1132497243,C=-39915121,D=208423616)),(ParameterName="p_PatternChannelScale",ParameterValue=(R=0.000000,G=0.000000,B=1.000000,A=0.000000),ExpressionGUID=(A=439432319,B=1091149893,C=-1991909502,D=1816944627)),(ParameterName="p_EmissiveColor",ParameterValue=(R=5.480000,G=2.283333,B=0.548000,A=1.000000),ExpressionGUID=(A=-500078987,B=1335605199,C=-1319117688,D=173232637)),(ParameterName="p_ReflectionChannelScale",ParameterValue=(R=1.000000,G=1.000000,B=1.000000,A=0.000000),ExpressionGUID=(A=1869386622,B=1303200947,C=-1616405849,D=714558284)),(ParameterName="p_ReflectColor",ParameterValue=(R=4.021775,G=4.021775,B=4.021775,A=1.000000),ExpressionGUID=(A=295058103,B=1318551573,C=-2045449573,D=-547597976)))
+
+		set Common_GunMaterials.Materials.Pistol.Mati_JakobsUniquePistol_Law TextureParameterValues ((ParameterName="p_Masks",ParameterValue=Texture2D'Weap_Pistol.Tex.Weap_Pistols_Comp',ExpressionGUID=(A=-330624041,B=1167251458,C=-335191907,D=-166684394)),(ParameterName="p_Pattern",ParameterValue=Texture2D'Common_GunMaterials.Patterns.Pattern_JakobsEpic_SpaltedMaple',ExpressionGUID=(A=534250533,B=1202550002,C=1578302861,D=-717876416)),(ParameterName="p_Diffuse",ParameterValue=Texture2D'Common_GunMaterials.CompTextures.Weap_LauncherShotgunPistol_Comp',ExpressionGUID=(A=1757607260,B=1326539502,C=-317215581,D=-565807463)),(ParameterName="P_SimpleReflect",ParameterValue=Texture2D'Common_GunMaterials.Env.Gold',ExpressionGUID=(A=-858148940,B=1327945772,C=148462268,D=1899047224)),(ParameterName="p_NormalScopesEmissive",ParameterValue=Texture2D'Weap_Pistol.Tex.Weap_Pistols_Nrm',ExpressionGUID=(A=-1743872746,B=1126171774,C=119496871,D=-1952271718)))
+
+	#</Law pistol changes>
+	
+    #<Ghostrider Text>
+
+        #<Allow Visible 0 Capacity and Damage Reduction.>
+
+            set GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Booster_05_Legendary DlcItemSet DownloadableItemSetDefinition'GD_SagePackageDef.ItemSetDef_Sage'
+			
+			set GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Booster_05_Legendary DlcItemSet DownloadableItemSetDefinition'GD_AsterPackageDef.ItemSetDef_Aster'
+
+        #</Allow Visible 0 Capacity and Damage Reduction.>
+
+        #<No Prefixes>
+
+            set GD_Shields.Accessory.Accessory4_Booster_Legendary PrefixList (())
+
+        #</No Prefixes>
+
+        set GD_Shields.Titles.Title_Booster04_BoosterShieldLegendary PartName The Ghost Rider
+
+        set GD_Shields.Titles.Title_Booster04_BoosterShieldLegendary:AttributePresentationDefinition_0 Description Yippee ki-yay<font color = "#FFFFFF">.<br>[funstat]Increases [health]roid damage[-health].<br>[funstat]Increases [health]max. health[-health].<br>[funstat]Has a chance to [skill]deflect[-skill] incoming bullets.<br> [funstat]Deflected [skill]bullets[-skill] deal no damage to you.<br>[funstat]Restores [skill]health[-skill] when dealing melee damage with a [skill]sniper rifle[-skill] featuring a [skill]bayonet[-skill].<br>
+
+        set GD_Shields.A_Item.Shield_Booster_05_Legendary CustomPresentations ()
+
+        set GD_Shields.Titles.Title_Booster04_BoosterShieldLegendary (AttributePresentationDefinition'GD_Shields.Titles.Title_Booster04_BoosterShieldLegendary:AttributePresentationDefinition_0')
+
+    #</Ghostrider Text>
+
+    #<Ghostrider Skin>
+
+        set Item_Shields.Materials.Mati_ShieldDahlLegendary TextureParameterValues ((ParameterName="p_Masks",ParameterValue=Texture2D'Item_Shields.Textures.Shield_Comp',ExpressionGUID=(A=1119835015,B=1217668104,C=-731293559,D=-1637979052)),(ParameterName="p_CustomPattern",ParameterValue=Texture2D'Common_GunMaterials.Patterns.Pattern_JakobsEpic_SpaltedMaple',ExpressionGUID=(A=2068997063,B=1272990424,C=-753953389,D=740074929)),(ParameterName="p_Diffuse",ParameterValue=Texture2D'Item_Shields.Textures.Shield_Dif',ExpressionGUID=(A=-799570247,B=1300675618,C=1585420178,D=1764712970)),(ParameterName="p_Normal",ParameterValue=Texture2D'Item_Shields.Textures.Shield_Nrm',ExpressionGUID=(A=-650386323,B=1201950419,C=548909745,D=194260177)),(ParameterName="P_SimpleReflect",ParameterValue=Texture2D'Common_GunMaterials.Env.Chrome',ExpressionGUID=(A=974440054,B=1280265041,C=-1735236951,D=1941115906)),(ParameterName="p_Decal",ParameterValue=Texture2D'Common_GunMaterials.Logos.grundge_decals_3',ExpressionGUID=(A=1726271731,B=1130599351,C=68010120,D=1290837988)),(ParameterName="p_EpicEmiss",ParameterValue=Texture2D'Item_Shields.Textures.Shield_Nrm',ExpressionGUID=(A=660262091,B=1291427372,C=-1255432812,D=988169546)))
+
+        set Item_Shields.Materials.Mati_ShieldDahlLegendary VectorParameterValues ((ParameterName="p_AColorHilight",ParameterValue=(R=0.8737912,G=0.381476,B=0.064999,A=1.000000),ExpressionGUID=(A=-67213585,B=1174064151,C=1145077917,D=1667997837)),(ParameterName="p_AColorMidtone",ParameterValue=(R=0.128116,G=0.117760,B=0.069603,A=1.000000),ExpressionGUID=(A=-1550299660,B=1092871385,C=2005712271,D=1137646452)),(ParameterName="p_AColorShadow",ParameterValue=(R=0.002931,G=0.001878,B=0.000560,A=1.000000),ExpressionGUID=(A=-1237912396,B=1340481589,C=-1751132997,D=-2061419252)),(ParameterName="p_BColorHilight",ParameterValue=(R=0.0752500,G=0.037525,B=0.017525,A=1.000000),ExpressionGUID=(A=-1787455778,B=1335579629,C=-1975783242,D=-231296165)),(ParameterName="p_BColorMidtone",ParameterValue=(R=0.0018500,G=0.001125,B=0.001020,A=1.000000),ExpressionGUID=(A=-1780197305,B=1189365699,C=-763074648,D=-1560762514)),(ParameterName="p_BColorShadow",ParameterValue=(R=0.000390,G=0.000770,B=0.000431,A=1.000000),ExpressionGUID=(A=1978592701,B=1268422324,C=1382217095,D=-1197365110)),(ParameterName="p_CColorHilight",ParameterValue=(R=1.638359,G=0.715268,B=0.071874,A=1.000000),ExpressionGUID=(A=-161410073,B=1301459859,C=656112266,D=-1829908056)),(ParameterName="p_CColorMidtone",ParameterValue=(R=0.128116,G=0.117760,B=0.069603,A=1.000000),ExpressionGUID=(A=-1973617110,B=1112754116,C=-1762340418,D=-1714413755)),(ParameterName="p_CColorShadow",ParameterValue=(R=0.142500,G=0.0725,B=0.00725,A=1.000000),ExpressionGUID=(A=-745392642,B=1091735077,C=-335222092,D=1274265523)),(ParameterName="p_ColorD",ParameterValue=(R=3.906431,G=1.770016,B=0.431778,A=1.000000),ExpressionGUID=(A=1210191995,B=1309825855,C=-770078819,D=-360548266)),(ParameterName="p_DecalColor",ParameterValue=(R=3.906431,G=1.770016,B=0.431778,A=1.000000),ExpressionGUID=(A=2075208188,B=1246262123,C=52377270,D=906439115)),(ParameterName="p_DColor",ParameterValue=(R=3.906431,G=1.770016,B=0.431778,A=1.000000),ExpressionGUID=(A=2075208188,B=1246262123,C=52377270,D=906439115)),(ParameterName="p_DecalChannel",ParameterValue=(R=0.000000,G=0.60000,B=0.000000,A=0.000000),ExpressionGUID=(A=-572786374,B=1223669083,C=1151560880,D=-2006727295)),(ParameterName="p_DecalScalePosition",ParameterValue=(R=2.000000,G=4.000000,B=0.500000,A=0.650000),ExpressionGUID=(A=100722303,B=1277960078,C=1755017611,D=-1440029857)),(ParameterName="p_PatternColor",ParameterValue=(R=1.306407,G=0.969467,B=1.381660,A=1.000000),ExpressionGUID=(A=-448074940,B=1159310716,C=-1837627249,D=-1702500821)),(ParameterName="p_PatternScalePosition",ParameterValue=(R=7.600000,G=8.692308,B=-0.250000,A=1.000000),ExpressionGUID=(A=-890992185,B=1266714301,C=-2091612998,D=1000426871)),(ParameterName="p_PatternChannelScale",ParameterValue=(R=0.900000,G=0.000000,B=0.900000,A=0.900000),ExpressionGUID=(A=1831406463,B=1086737730,C=-923441504,D=-1373427117)),(ParameterName="p_EmissiveColor",ParameterValue=(R=5.480000,G=2.283333,B=0.548000,A=1.000000),ExpressionGUID=(A=-500078987,B=1335605199,C=-1319117688,D=173232637)),(ParameterName="p_ReflectionChannelScale",ParameterValue=(R=0.640000,G=0.340000,B=0.170000,A=1.000000),ExpressionGUID=(A=-123504864,B=1135465386,C=276674187,D=1280409926)),(ParameterName="p_ReflectColor",ParameterValue=(R=0.825415,G=0.473303,B=0.304115,A=0.600000),ExpressionGUID=(A=-137725129,B=1232248266,C=-1881647942,D=1919783776)))
+
+        set GD_Shields.A_Item.Shield_Booster_05_Legendary DamageTypeIcon Damage_Type_unknown
+
+    #</Ghostrider Skin>
+
+    #<Ghostrider Shield Code>
+
+        set GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Booster_05_Legendary Manufacturers ((Manufacturer=ManufacturerDefinition'GD_Manufacturers.Manufacturers.Jakobs',Grades=((GradeModifiers=(ExpLevel=1,CustomInventoryDefinition=None),GameStageRequirement=(MinGameStage=1,MaxGameStage=100),MinSpawnProbabilityModifier=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),MaxSpawnProbabilityModifier=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))))
+
+        set GD_Shields.Accessory.Accessory4_Booster_Legendary GestaltModeSkeletalMeshName Shield_Body_Bandit
+
+        #<Only body parts with positive effects on Special01 and Special02>
+
+            set GD_Shields.Body.PartsList_Body_Booster_Legendary WeightedParts ((bDisabled=False,Part=ShieldPartDefinition'GD_Shields.Body.Body1_Tediore',Manufacturers=((Manufacturer=None,DefaultWeightIndex=3)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=2),(bDisabled=False,Part=ShieldPartDefinition'GD_Shields.Body.Body2_Bandit',Manufacturers=((Manufacturer=None,DefaultWeightIndex=3)),MinGameStageIndex=1,MaxGameStageIndex=1,DefaultWeightIndex=2),(bDisabled=False,Part=ShieldPartDefinition'GD_Shields.Body.Body3_Vladof',Manufacturers=((Manufacturer=None,DefaultWeightIndex=3)),MinGameStageIndex=1,MaxGameStageIndex=1,DefaultWeightIndex=2),(bDisabled=False,Part=ShieldPartDefinition'GD_Shields.Body.Body5_Anshin',Manufacturers=((Manufacturer=None,DefaultWeightIndex=3)),MinGameStageIndex=1,MaxGameStageIndex=1,DefaultWeightIndex=0),(bDisabled=False,Part=ShieldPartDefinition'GD_Shields.Body.Body5_Maliwan',Manufacturers=((Manufacturer=None,DefaultWeightIndex=3)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=4),(bDisabled=False,Part=ShieldPartDefinition'GD_Shields.Body.Body7_Hyperion',Manufacturers=((Manufacturer=None,DefaultWeightIndex=3)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=2),(bDisabled=False,Part=ShieldPartDefinition'GD_Shields.Body.Body8_Pangolin',Manufacturers=((Manufacturer=None,DefaultWeightIndex=3)),MinGameStageIndex=1,MaxGameStageIndex=1,DefaultWeightIndex=2))
+
+        #</Only body parts with positive effects on Special01 and Special02>
+
+        #<Vladof and Anshin battery only>
+
+            set GD_Shields.Battery.PartsList_Battery_Booster_Legendary WeightedParts ((bDisabled=False,Part=ShieldPartDefinition'GD_Shields.Battery.Battery1_Tediore',Manufacturers=((Manufacturer=None,DefaultWeightIndex=3)),MinGameStageIndex=1,MaxGameStageIndex=1,DefaultWeightIndex=2),(bDisabled=False,Part=ShieldPartDefinition'GD_Shields.Battery.Battery3_Vladof',Manufacturers=((Manufacturer=None,DefaultWeightIndex=3)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=2),(bDisabled=False,Part=ShieldPartDefinition'GD_Shields.Battery.Battery4_Dahl',Manufacturers=((Manufacturer=None,DefaultWeightIndex=3)),MinGameStageIndex=1,MaxGameStageIndex=1,DefaultWeightIndex=2),(bDisabled=False,Part=ShieldPartDefinition'GD_Shields.Battery.Battery5_Anshin',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=1),(bDisabled=False,Part=ShieldPartDefinition'GD_Shields.Battery.Battery5_Maliwan',Manufacturers=((Manufacturer=None,DefaultWeightIndex=3)),MinGameStageIndex=1,MaxGameStageIndex=1,DefaultWeightIndex=4),(bDisabled=False,Part=ShieldPartDefinition'GD_Shields.Battery.Battery7_Hyperion',Manufacturers=((Manufacturer=None,DefaultWeightIndex=3)),MinGameStageIndex=1,MaxGameStageIndex=1,DefaultWeightIndex=2),(bDisabled=False,Part=ShieldPartDefinition'GD_Shields.Battery.Battery8_Pangolin',Manufacturers=((Manufacturer=None,DefaultWeightIndex=3)),MinGameStageIndex=1,MaxGameStageIndex=1,DefaultWeightIndex=2))
+
+        #</Vladof and Anshin battery only>
+
+        #<Pangolin Capacitors Only>
+
+            set GD_Shields.Capacitor.PartsList_Capacitor_Booster_Legendary WeightedParts ((bDisabled=False,Part=ShieldPartDefinition'GD_Shields.Capacitor.Capacitor1_Tediore',Manufacturers=((Manufacturer=None,DefaultWeightIndex=3)),MinGameStageIndex=1,MaxGameStageIndex=1,DefaultWeightIndex=2),(bDisabled=False,Part=ShieldPartDefinition'GD_Shields.Capacitor.Capacitor3_Vladof',Manufacturers=((Manufacturer=None,DefaultWeightIndex=3)),MinGameStageIndex=1,MaxGameStageIndex=1,DefaultWeightIndex=4),(bDisabled=False,Part=ShieldPartDefinition'GD_Shields.Capacitor.Capacitor5_Anshin',Manufacturers=,MinGameStageIndex=1,MaxGameStageIndex=1,DefaultWeightIndex=5),(bDisabled=False,Part=ShieldPartDefinition'GD_Shields.Capacitor.Capacitor5_Maliwan_CorrosiveRes',Manufacturers=((Manufacturer=None,DefaultWeightIndex=3)),MinGameStageIndex=1,MaxGameStageIndex=1,DefaultWeightIndex=5),(bDisabled=False,Part=ShieldPartDefinition'GD_Shields.Capacitor.Capacitor5_Maliwan_FireRes',Manufacturers=((Manufacturer=None,DefaultWeightIndex=3)),MinGameStageIndex=1,MaxGameStageIndex=1,DefaultWeightIndex=5),(bDisabled=False,Part=ShieldPartDefinition'GD_Shields.Capacitor.Capacitor5_Maliwan_ShockRes',Manufacturers=((Manufacturer=None,DefaultWeightIndex=3)),MinGameStageIndex=1,MaxGameStageIndex=1,DefaultWeightIndex=5),(bDisabled=False,Part=ShieldPartDefinition'GD_Shields.Capacitor.Capacitor6_Torgue_ExplosiveRes',Manufacturers=((Manufacturer=None,DefaultWeightIndex=3)),MinGameStageIndex=1,MaxGameStageIndex=1,DefaultWeightIndex=5),(bDisabled=False,Part=ShieldPartDefinition'GD_Shields.Capacitor.Capacitor7_Hyperion',Manufacturers=((Manufacturer=None,DefaultWeightIndex=3)),MinGameStageIndex=1,MaxGameStageIndex=1,DefaultWeightIndex=4),(bDisabled=False,Part=ShieldPartDefinition'GD_Shields.Capacitor.Capacitor8_Pangolin',Manufacturers=((Manufacturer=None,DefaultWeightIndex=3)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0))
+
+        #</Pangolin Capacitors Only>
+
+        set GD_Shields.A_Item.Shield_Booster_05_Legendary BehaviorProviderDefinition GD_Shields.Accessory.Accessory2_Roid_Order:BehaviorProviderDefinition_0
+
+        set GD_Shields.A_Item.Shield_Booster_05_Legendary ExternalAttributeEffects ((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.ShieldResourcePool.ShieldMaxValue',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=100.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.ShieldResourcePool.ShieldOnIdleRegenerationDelay',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'GD_Shields.Misc.Att_UniversalShieldBaseDelayConstant',InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.ShieldResourcePool.ShieldOnIdleRegenerationRate',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance_HealthAndDamage.Shields.Init_ShieldItem_BaseRegenRatePercentage',BaseValueScaleConstant=1.000000)),(AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.ShieldResourcePool.ShieldConsumptionRate',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=100000.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+        set GD_Shields.A_Item.Shield_Booster_05_Legendary AttributeSlotEffects ((SlotName="Capacity",bExternalSlot=True,bRunEffectsAsSkill=False,AttributeToModify=AttributeDefinition'GD_Sage_Shields.Attributes.Attr_BucklerShieldCapacityProxy',ConstraintAttribute=None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),PerGradeUpgrade=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bIncludeInFunStats=False,bIncludeAlliesAsTarget=False,bEnforceMinimumGrade=False,bEnforceMaximumGrade=False,MinimumGrade=0,MaximumGrade=0,TargetInstanceDataName=),(SlotName="RechargeRate",bExternalSlot=True,bRunEffectsAsSkill=False,AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.ShieldResourcePool.ShieldOnIdleRegenerationRate',ConstraintAttribute=None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),PerGradeUpgrade=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bIncludeInFunStats=False,bIncludeAlliesAsTarget=False,bEnforceMinimumGrade=False,bEnforceMaximumGrade=False,MinimumGrade=0,MaximumGrade=0,TargetInstanceDataName=),(SlotName="RechargeDelay",bExternalSlot=True,bRunEffectsAsSkill=False,AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.ShieldResourcePool.ShieldOnIdleRegenerationDelay',ConstraintAttribute=None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),PerGradeUpgrade=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bIncludeInFunStats=False,bIncludeAlliesAsTarget=False,bEnforceMinimumGrade=False,bEnforceMaximumGrade=False,MinimumGrade=0,MaximumGrade=0,TargetInstanceDataName=),(SlotName="Special01",bExternalSlot=False,bRunEffectsAsSkill=False,AttributeToModify=AttributeDefinition'D_Attributes.Shield.RoidMeleeDamage',ConstraintAttribute=None,ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance_HealthAndDamage.HealthAndDamage.Init_ShieldDamage',BaseValueScaleConstant=1.000000),PerGradeUpgrade=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance_HealthAndDamage.HealthAndDamage.Init_ShieldDamage',BaseValueScaleConstant=0.06900),bIncludeInFunStats=False,bIncludeAlliesAsTarget=False,bEnforceMinimumGrade=True,bEnforceMaximumGrade=False,MinimumGrade=-10,MaximumGrade=0,TargetInstanceDataName=),(SlotName="Special02",bExternalSlot=True,bRunEffectsAsSkill=True,AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.HealthResourcePool.HealthMaxValue',ConstraintAttribute=None,ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance_HealthAndDamage.HealthAndDamage.Init_HealthBonusFromShields_Formula',BaseValueScaleConstant=0.100000),PerGradeUpgrade=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance_HealthAndDamage.HealthAndDamage.Init_HealthBonusFromShields_Formula',BaseValueScaleConstant=0.004800),bIncludeInFunStats=False,bIncludeAlliesAsTarget=False,bEnforceMinimumGrade=True,bEnforceMaximumGrade=False,MinimumGrade=-10,MaximumGrade=0,TargetInstanceDataName=),(SlotName="Special03",bExternalSlot=True,bRunEffectsAsSkill=True,AttributeToModify=AttributeDefinition'D_Attributes.BulletReflection.BulletReflectionOffSelfChance',ConstraintAttribute=None,ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=0.430000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),PerGradeUpgrade=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bIncludeInFunStats=False,bIncludeAlliesAsTarget=False,bEnforceMinimumGrade=False,bEnforceMaximumGrade=False,MinimumGrade=0,MaximumGrade=0,TargetInstanceDataName=),(SlotName="Special04",bExternalSlot=True,bRunEffectsAsSkill=True,AttributeToModify=AttributeDefinition'D_Attributes.BulletReflection.BulletReflectedOffSelfDamageScale',ConstraintAttribute=None,ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),PerGradeUpgrade=(BaseValueConstant=0.200000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bIncludeInFunStats=False,bIncludeAlliesAsTarget=False,bEnforceMinimumGrade=False,bEnforceMaximumGrade=False,MinimumGrade=0,MaximumGrade=0,TargetInstanceDataName=),(SlotName="Special05",bExternalSlot=True,bRunEffectsAsSkill=True,AttributeToModify=AttributeDefinition'D_Attributes.BulletReflection.BulletReflectedOffSelfDamageTakenScale',ConstraintAttribute=None,ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=-1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),PerGradeUpgrade=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bIncludeInFunStats=False,bIncludeAlliesAsTarget=False,bEnforceMinimumGrade=False,bEnforceMaximumGrade=False,MinimumGrade=0,MaximumGrade=0,TargetInstanceDataName=))
+
+        set GD_Shields.A_Item.Shield_Booster_05_Legendary AttributeSlotUpgrades ((SlotName="Capacity",GradeIncrease=0,bActivateSlot=True),(SlotName="RechargeRate",GradeIncrease=0,bActivateSlot=True),(SlotName="RechargeDelay",GradeIncrease=0,bActivateSlot=True),(SlotName="Special01",GradeIncrease=0,bActivateSlot=True),(SlotName="Special02",GradeIncrease=0,bActivateSlot=True),(SlotName="Special03",GradeIncrease=0,bActivateSlot=True),(SlotName="Special04",GradeIncrease=0,bActivateSlot=True),(SlotName="Special05",GradeIncrease=0,bActivateSlot=True))
+
+        set GD_Shields.A_Item.Shield_Booster_05_Legendary UIStatList ((bDisplayAsModifierOnly=False,AttributeStyle=ATTRSTYLE_JustNumber,SupplementalAttributeStyle=ATTRSTYLE_JustNumber,StatCombinationMethod=SCM_Multiply,Attribute=AttributeDefinition'GD_Sage_Shields.Attributes.Attr_BucklerShieldCapacityProxy',ConstraintAttribute=None,SupplementalAttributeExpression=(AttributeOperand1=None,ComparisonOperator=OPERATOR_EqualTo,Operand2Usage=OPERAND_PreferAttribute,AttributeOperand2=None,ConstantOperand2=0.000000),SupplementalAttributeToAppend=None),(bDisplayAsModifierOnly=False,AttributeStyle=ATTRSTYLE_ModifierText,SupplementalAttributeStyle=ATTRSTYLE_JustNumber,StatCombinationMethod=SCM_Multiply,Attribute=AttributeDefinition'D_Attributes.Shield.RoidMeleeDamage',ConstraintAttribute=None,SupplementalAttributeExpression=(AttributeOperand1=None,ComparisonOperator=OPERATOR_EqualTo,Operand2Usage=OPERAND_PreferAttribute,AttributeOperand2=None,ConstantOperand2=0.000000),SupplementalAttributeToAppend=None),(bDisplayAsModifierOnly=True,AttributeStyle=ATTRSTYLE_ModifierText,SupplementalAttributeStyle=ATTRSTYLE_JustNumber,StatCombinationMethod=SCM_Multiply,Attribute=AttributeDefinition'D_Attributes.BulletReflection.BulletReflectionOffSelfChance',ConstraintAttribute=None,SupplementalAttributeExpression=(AttributeOperand1=None,ComparisonOperator=OPERATOR_EqualTo,Operand2Usage=OPERAND_PreferAttribute,AttributeOperand2=None,ConstantOperand2=0.000000),SupplementalAttributeToAppend=None),(bDisplayAsModifierOnly=True,AttributeStyle=ATTRSTYLE_ModifierText,SupplementalAttributeStyle=ATTRSTYLE_JustNumber,StatCombinationMethod=SCM_Multiply,Attribute=AttributeDefinition'D_Attributes.BulletReflection.BulletReflectedOffSelfDamageTakenScale',ConstraintAttribute=None,SupplementalAttributeExpression=(AttributeOperand1=None,ComparisonOperator=OPERATOR_EqualTo,Operand2Usage=OPERAND_PreferAttribute,AttributeOperand2=None,ConstantOperand2=0.000000),SupplementalAttributeToAppend=None),(bDisplayAsModifierOnly=False,AttributeStyle=ATTRSTYLE_ModifierText,SupplementalAttributeStyle=ATTRSTYLE_JustNumber,StatCombinationMethod=SCM_Multiply,Attribute=ResourcePoolAttributeDefinition'D_Attributes.HealthResourcePool.HealthMaxValue',ConstraintAttribute=None,SupplementalAttributeExpression=(AttributeOperand1=None,ComparisonOperator=OPERATOR_EqualTo,Operand2Usage=OPERAND_PreferAttribute,AttributeOperand2=None,ConstantOperand2=0.000000),SupplementalAttributeToAppend=None))
+
+    #</Ghostrider Shield Code>
+
+    #<Optional: Make Knuckledragger drop them>
+
+		#set GD_Itempools.Runnables.Pool_Knuckledragger BalancedItems ((ItmPoolDefinition=None,InvBalanceDefinition=InventoryBalanceDefinition'GD_Weap_Pistol.A_Weapons_Legendary.Pistol_Dahl_5_Hornet',Probability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=None,InvBalanceDefinition=InventoryBalanceDefinition'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Booster_05_Legendary',Probability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=None,InvBalanceDefinition=InventoryBalanceDefinition'GD_Weap_Pistol.A_Weapons_Unique.Pistol_Jakobs_3_Law',Probability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True))<off>
+
+	#</Optional: Make Knuckledragger drop them>
+
+	#<Optional: enable to set drop chance for ALL unique bosses to 100 percent>
+
+		#set GD_Itempools.DropWeights.DropODDs_BossUniques:ConstantAttributeValueResolver_0 ConstantValue 1.0<off>
+
+	#</Optional: enable to set drop chance for ALL unique bosses to 100 percent>
+	
+#</Ghostrider>
