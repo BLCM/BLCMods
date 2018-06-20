@@ -978,7 +978,6 @@ class Badass(DropConfig):
                 (0, 'GD_DahlCombatSuit_Felicity.Population.PawnBalance_DahlCombatSuit_Felicity'),
                 (1, 'GD_DahlPowersuit_Knuckle.Population.PawnBalance_DahlSergeantFlameKnuckle'),
                 (0, 'GD_DahlPowersuit_KnuckleRepaired.Population.PawnBalance_DahlPowersuit_KnuckleRepaired'),
-                (1, 'GD_DahlPowersuit_KnuckleRepaired.Population.PawnBalance_DahlSergeantFlameKnuckle'),
                 (0, 'GD_DahlRedShirtPowersuit.Balance.PawnBalance_DahlRedShirtPowersuit'),
                 (0, 'GD_DrongoBones.Balance.PawnBalance_DrongoBones'),
                 (1, 'GD_Ma_Pop_ClaptrapForces.Balance.PawnBalance_CleanupRuntime'),
@@ -1058,7 +1057,6 @@ class Badass(DropConfig):
             # Shields
             [
                 (1, 2, 'GD_DahlPowersuit_Knuckle.Population.PawnBalance_DahlSergeantFlameKnuckle'),
-                (1, 2, 'GD_DahlPowersuit_KnuckleRepaired.Population.PawnBalance_DahlSergeantFlameKnuckle'),
                 (1, 0, 'GD_Ma_Pop_ClaptrapForces.Balance.PawnBalance_FireWall'),
                 (2, 0, 'GD_Ma_Pop_ClaptrapForces.Balance.PawnBalance_FireWall'),
                 (0, 1, 'GD_Marigold_Pop_Fragmented.Balance.PawnBalance_FragBadassBandit'),
@@ -2943,6 +2941,49 @@ hfs.add_level_hotfix('flameknuckle_pool_5', 'FlameKnucklePool',
             )
         )""".format(regular.equip_pool_shields))
 
+# Flame Knuckle (Holodome) pool tweaks.  UCP doesn't touch this, but the pool
+# definitions are weird anyway, so we're going to normalize them.  Cut out most
+# of the obviously-intended-for-early-game drops, make sure we're using our
+# own badass pool for shields, and drop the same stuff regardless of playthrough.
+hfs.add_level_hotfix('flameknuckle_holodome_pool_0', 'FlameKnuckleHolodomePool',
+        """Eridian_Slaughter_P,
+        GD_DahlPowersuit_KnuckleRepaired.Population.PawnBalance_DahlSergeantFlameKnuckle,
+        PlayThroughs[1].CustomItemPoolIncludedLists,,()""")
+hfs.add_level_hotfix('flameknuckle_holodome_pool_1', 'FlameKnuckleHolodomePool',
+        """Eridian_Slaughter_P,
+        GD_DahlPowersuit_KnuckleRepaired.Population.PawnBalance_DahlSergeantFlameKnuckle,
+        PlayThroughs[1].CustomItemPoolList,,()""")
+hfs.add_level_hotfix('flameknuckle_holodome_pool_2', 'FlameKnuckleHolodomePool',
+        """Eridian_Slaughter_P,
+        GD_DahlPowersuit_KnuckleRepaired.Population.PawnBalance_DahlSergeantFlameKnuckle,
+        DefaultItemPoolIncludedLists,,
+        (ItemPoolListDefinition'GD_Itempools.ListDefs.BadassEnemyGunsAndGear')""")
+hfs.add_level_hotfix('flameknuckle_holodome_pool_3', 'FlameKnuckleHolodomePool',
+        """Eridian_Slaughter_P,
+        GD_DahlPowersuit_KnuckleRepaired.Population.PawnBalance_DahlSergeantFlameKnuckle,
+        DefaultItemPoolList,,
+        (
+            ( 
+                ItemPool=ItemPoolDefinition'GD_DahlPowersuit_Knuckle.WeaponPools.Pool_Weapons_KnuckleLaser_EnemyUse', 
+                PoolProbability=( 
+                    BaseValueConstant=1.000000, 
+                    BaseValueAttribute=None, 
+                    InitializationDefinition=None, 
+                    BaseValueScaleConstant=1.000000 
+                ) 
+            ),
+            (
+                ItemPool=ItemPoolDefinition'{}', 
+                PoolProbability=( 
+                    BaseValueConstant=1.000000, 
+                    BaseValueAttribute=None, 
+                    InitializationDefinition=None, 
+                    BaseValueScaleConstant=1.000000 
+                ) 
+            )
+        )
+        """.format(badass.equip_pool_shields))
+
 # Corporal Bob - remove weapon-equip pool, since he doesn't actually use it.
 set_dipl_item_prob('corporal_bob_pool_0',
         'GD_Population_Dahl.Balance.PawnBalance_DahlMarine_CentralTerm',
@@ -2980,13 +3021,18 @@ for (label, key, unique_pct, rare_pct) in [
     # Flame Knuckle (MoonShotIntro_P, using own pool)
     # Also using "Regular" pool for lasers, since the intro's already a bit tough.
 
-    setup_boss_pool('flameknuckle_pool_6', 'MoonShotIntro_P',
-            'GD_DahlPowersuit_Knuckle.WeaponPools.Pool_Weapons_KnuckleLaser_EnemyUse',
-            regular.equip_pool_only_lasers,
-            [
-                ('GD_Itempools.Runnables.Pool_FlameKnuckle', rare_pct, None),
-            ],
-            activated=hotfix_activated)
+    for (idx, (level, default_pool)) in enumerate([
+            ('MoonShotIntro_P', regular.equip_pool_only_lasers),
+            ('Eridian_Slaughter_P', badass.equip_pool_lasers),
+            ]):
+        setup_boss_pool('flameknuckle_use_pool_{}'.format(idx),
+                level,
+                'GD_DahlPowersuit_Knuckle.WeaponPools.Pool_Weapons_KnuckleLaser_EnemyUse',
+                default_pool,
+                [
+                    ('GD_Itempools.Runnables.Pool_FlameKnuckle', rare_pct, None),
+                ],
+                activated=hotfix_activated)
 
     # Deadlift Weapon (Deadsurface_P, using own pool)
     # UCP adds Min Min Lighter, so we'll swap back and forth between that and Vandergraffen
