@@ -1015,8 +1015,6 @@ class Badass(DropConfig):
             # All Weapons
             [
                 (0, 'GD_Bruce.Population.Bal_Bruce'),
-                (0, 'GD_Ma_Pop_ClaptrapForces.Balance.Uniques.PawnBalance_Hope'),
-                (0, 'GD_Ma_Pop_ClaptrapForces.Balance.Uniques.PawnBalance_SelfEsteem'),
                 (0, 'GD_Population_Darksiders.Balance.PawnBalance_DarksiderBadassBandit'),
                 (0, 'GD_Population_Darksiders.Balance.PawnBalance_LittleDarksiderBadassBandit'),
                 (0, 'GD_Squat.Population.PawnBalance_Squat'),
@@ -3370,6 +3368,38 @@ for (label, key, unique_pct, rare_pct) in [
             [
                 ('gd_cork_weap_assaultrifle.A_Weapons_Legendary.AR_Dahl_5_MajorTom', 1, 'WeaponBalanceDefinition'),
             ],
+            activated=hotfix_activated)
+
+    # Shadow-TP weapon (Ma_SubBoss_P, using own pool)
+
+    setup_boss_pool('shadowtrap_pool_0', 'Ma_SubBoss_P',
+            'GD_Ma_SH4D0W-TP.ItemPool.ItemPool_ShadowTrapBlaster',
+            'GD_Ma_ItemPools.WeaponPools.Pool_Weapons_Lasers_Glitch_Marigold',
+            [
+                ('GD_Ma_Weapons.A_Weapons_Legendary.Laser_Tediore_5_LaserDisker', unique_pct, 'WeaponBalanceDefinition'),
+            ],
+            activated=hotfix_activated)
+
+    # Shadow-TP shield (Ma_SubBoss_P pool 0)
+
+    setup_boss_pool('shadowtrap_pool_1', 'Ma_SubBoss_P', other.level_pool_0,
+            badass.equip_pool_shields,
+            [
+                ('GD_Ma_Shields.A_Item_Legendary.ItemGrade_Gear_Shield_Impact_05_Rerouter', unique_pct, 'InventoryBalanceDefinition'),
+            ],
+            activated=hotfix_activated)
+
+    set_dipl_item_pool('shadowtrap_pool_2',
+            'GD_Ma_Pop_ClaptrapForces.Balance.Uniques.PawnBalance_SH4D0W-TP-Part1',
+            0,
+            other.level_pool_0,
+            level='Ma_SubBoss_P',
+            activated=hotfix_activated)
+
+    set_dipl_item_prob('shadowtrap_pool_3',
+            'GD_Ma_Pop_ClaptrapForces.Balance.Uniques.PawnBalance_SH4D0W-TP-Part1',
+            3,
+            level='Ma_SubBoss_P',
             activated=hotfix_activated)
 
     # Generate the section string
