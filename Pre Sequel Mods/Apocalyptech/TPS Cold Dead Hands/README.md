@@ -202,11 +202,8 @@ Things to do before releasing
 
 * Finish, obvs.
 * Go through BL's Boss Drop Improved Quantities in case I missed anything
-  * Doublecheck Swagman?  BL uses a different pool than CDH.  I bet one or
-    the other isn't actually correct.  (though BL may have linked the two)
 * Go through the drop pool lists main hotfix area to look for Better Loot
   compat concerns.
-* Also figure out Shadow-TP's drops, though that'll happen as I go through CV...
 
 Things to think about:
 
