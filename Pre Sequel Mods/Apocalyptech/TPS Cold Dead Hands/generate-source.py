@@ -558,7 +558,6 @@ class Regular(DropConfig):
     enemy_pt_cipl = (
             # Shields
             [
-                (0, 1, 'GD_Ma_Cookie.Balance.PawnBalance_Ma_Cookie'),
                 (1, 1, 'GD_Ma_Pop_ClaptrapForces.Balance.PawnBalance_BotRider'),
                 (2, 1, 'GD_Ma_Pop_ClaptrapForces.Balance.PawnBalance_BotRider'),
                 (1, 0, 'GD_Ma_Pop_ClaptrapForces.Balance.PawnBalance_ClapDawgRider'),
@@ -706,7 +705,6 @@ class Regular(DropConfig):
             ],
             # AR-Weighted
             [
-                (0, 0, 'GD_Ma_Cookie.Balance.PawnBalance_Ma_Cookie'),
                 (0, 0, 'GD_Population_Boils.Balance.PawnBalance_BoilGuard'),
                 (1, 0, 'GD_Population_Boils.Balance.PawnBalance_BoilGuard'),
                 (0, 0, 'GD_Population_Rat.Balance.PawnBalance_HypRatGuard'),
@@ -1063,7 +1061,6 @@ class Badass(DropConfig):
             [
                 (1, 2, 'GD_DahlPowersuit_Knuckle.Population.PawnBalance_DahlSergeantFlameKnuckle'),
                 (1, 2, 'GD_DahlPowersuit_KnuckleRepaired.Population.PawnBalance_DahlSergeantFlameKnuckle'),
-                (0, 1, 'GD_Ma_Chip.Balance.PawnBalance_Ma_Chip'),
                 (1, 0, 'GD_Ma_Pop_ClaptrapForces.Balance.PawnBalance_FireWall'),
                 (2, 0, 'GD_Ma_Pop_ClaptrapForces.Balance.PawnBalance_FireWall'),
                 (0, 1, 'GD_Marigold_Pop_Fragmented.Balance.PawnBalance_FragBadassBandit'),
@@ -1101,7 +1098,6 @@ class Badass(DropConfig):
             ],
             # AR-Weighted
             [
-                (0, 0, 'GD_Ma_Chip.Balance.PawnBalance_Ma_Chip'),
                 (1, 0, 'GD_Population_Boils.Balance.PawnBalance_BoilBadass'),
             ],
             # Launchers Only
