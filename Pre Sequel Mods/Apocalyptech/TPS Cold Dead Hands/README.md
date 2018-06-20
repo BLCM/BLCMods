@@ -198,13 +198,6 @@ Known issues with the mod:
 Ideas/TODO
 ==========
 
-Things to do before releasing
-
-* Finish, obvs.
-* Go through BL's Boss Drop Improved Quantities in case I missed anything
-* Go through the drop pool lists main hotfix area to look for Better Loot
-  compat concerns.
-
 Things to think about:
 
 * Enemy Moon Buggies shouldn't drop weapons

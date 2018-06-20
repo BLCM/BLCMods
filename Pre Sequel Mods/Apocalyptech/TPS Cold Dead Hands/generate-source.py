@@ -1619,9 +1619,6 @@ for (pool, index) in [
         ('GD_Itempools.EnemyDropPools.Pool_GunsAndGear_WeightedSniper', 2),
         ('GD_Itempools.EnemyDropPools.Pool_GunsAndGear_WeightedShields', 0),
         ('GD_Itempools.EnemyDropPools.Pool_GunsAndGear_WeightedShields', 1),
-        # TODO: need to actually go through all the TPS stuff here to make sure that
-        # it's good, and as compatible with Better Loot as possible (the note re:
-        # index 4, below, may not be accurate)
         ('GD_Itempools.Treasure_ChestPools.Pool_EpicChest_Weapons_GunsAndGear', 1),
         ('GD_Itempools.Treasure_ChestPools.Pool_EpicChest_Weapons_GunsAndGear', 2),
         ('GD_Itempools.Treasure_ChestPools.Pool_EpicChest_Weapons_GunsAndGear', 3),
@@ -1630,11 +1627,6 @@ for (pool, index) in [
         ('GD_Itempools.Treasure_ChestPools.Pool_EpicChest_Items', 1),
         ('GD_Itempools.Treasure_ChestPools.Pool_EpicChest_Items', 2),
         ('GD_Itempools.Treasure_ChestPools.Pool_EpicChest_Items', 3),
-        ('GD_Itempools.Treasure_ChestPools.Pool_WeaponChest_Items', 0),
-        ('GD_Itempools.Treasure_ChestPools.Pool_WeaponChest_Items', 1),
-        ('GD_Itempools.Treasure_ChestPools.Pool_WeaponChest_Items', 2),
-        ('GD_Itempools.Treasure_ChestPools.Pool_WeaponChest_Items', 3),
-        # BL2 Better Loot would require clearing out index 4 of Pool_WeaponChest_Items, too.
         ('GD_Ma_ItemPools.Treasure_ChestPools.Pool_EpicChest_Weapons_GunsAndGear_Marigold', 1),
         ('GD_Ma_ItemPools.Treasure_ChestPools.Pool_EpicChest_Weapons_GunsAndGear_Marigold', 2),
         ('GD_Ma_ItemPools.Treasure_ChestPools.Pool_EpicChest_Weapons_GunsAndGear_Marigold', 3),
