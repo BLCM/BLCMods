@@ -81,6 +81,7 @@ class OtherConfig(BaseConfig):
 
     # Some text that we'll put into the main file
     disable_world_sets = None
+    disable_world_chest_sets = None
 
     # Adding things to the legendary pools
     legendary_unique_adds = None
@@ -1599,8 +1600,9 @@ badass = Badass(hfs)
 other = OtherConfig()
 
 # Get rid of global world drops.
-prefix = ' '*(4*4)
+prefix = ' '*(4*5)
 drop_disables = []
+drop_chest_disables = []
 for (pool, index) in [
         ('GD_Itempools.GeneralItemPools.Pool_Gear', 0),
         ('GD_Itempools.GeneralItemPools.Pool_GunsAndGear', 0),
@@ -1626,8 +1628,6 @@ for (pool, index) in [
         ('GD_Itempools.EnemyDropPools.Pool_GunsAndGear_05_VeryRare', 1),
         ('GD_Itempools.EnemyDropPools.Pool_GunsAndGear_06_Legendary', 0),
         ('GD_Itempools.EnemyDropPools.Pool_GunsAndGear_06_Legendary', 1),
-        ('GD_Itempools.EnemyDropPools.Pool_GunsAndGear_06_Legendary_Moonstone', 0),
-        ('GD_Itempools.EnemyDropPools.Pool_GunsAndGear_06_Legendary_Moonstone', 1),
         ('GD_Itempools.EnemyDropPools.Pool_GunsAndGear_WeightedLasers', 0),
         ('GD_Itempools.EnemyDropPools.Pool_GunsAndGear_WeightedLasers', 1),
         ('GD_Itempools.EnemyDropPools.Pool_GunsAndGear_WeightedLasers', 2),
@@ -1651,6 +1651,17 @@ for (pool, index) in [
         ('GD_Itempools.EnemyDropPools.Pool_GunsAndGear_WeightedSniper', 2),
         ('GD_Itempools.EnemyDropPools.Pool_GunsAndGear_WeightedShields', 0),
         ('GD_Itempools.EnemyDropPools.Pool_GunsAndGear_WeightedShields', 1),
+        ]:
+    drop_disables.extend(disable_balanced_drop(prefix, pool, index))
+other.disable_world_sets = "\n\n".join(drop_disables)
+
+# A separate set of hotfixes for chests, so they can be easily toggled in FT/BLCMM
+prefix = ' '*(4*5)
+for (pool, index) in [
+        # The Pool_GunsAndGear_06_Legendary_Moonstone pool doesn't seem to be actually
+        # used anywhere, but whatever.
+        ('GD_Itempools.EnemyDropPools.Pool_GunsAndGear_06_Legendary_Moonstone', 0),
+        ('GD_Itempools.EnemyDropPools.Pool_GunsAndGear_06_Legendary_Moonstone', 1),
         ('GD_Itempools.Treasure_ChestPools.Pool_EpicChest_Weapons_GunsAndGear', 1),
         ('GD_Itempools.Treasure_ChestPools.Pool_EpicChest_Weapons_GunsAndGear', 2),
         ('GD_Itempools.Treasure_ChestPools.Pool_EpicChest_Weapons_GunsAndGear', 3),
@@ -1665,8 +1676,8 @@ for (pool, index) in [
         ('GD_Ma_ItemPools.Treasure_ChestPools.Pool_EpicChest_Weapons_GunsAndGear_Marigold', 4),
         ('GD_Ma_ItemPools.Treasure_ChestPools.Pool_EpicChest_Weapons_GunsAndGear_Marigold', 7),
         ]:
-    drop_disables.extend(disable_balanced_drop(prefix, pool, index))
-other.disable_world_sets = "\n\n".join(drop_disables)
+    drop_chest_disables.extend(disable_balanced_drop(prefix, pool, index))
+other.disable_world_chest_sets = "\n\n".join(drop_chest_disables)
 
 # Moonstone chests cost Eridium to open up, and paying 40E to get a couple bucks
 # and some shotgun ammo is needlessly cruel.  :)  So, completely disable those

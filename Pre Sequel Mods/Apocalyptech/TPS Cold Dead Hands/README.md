@@ -80,21 +80,35 @@ from the start of the battle which gun you'll receive.
 
 ### Configuration
 
-There are six main categories which you can use to customize the gear
-quality, when loaded into FilterTool/BLCMM:
+There are several categories you can use to customize various aspects of the
+mod, when loaded into FilterTool/BLCMM:
 
-* **Loot Pool Improvements**: This section improves the global legendary pool
+* **Legendary Loot Pool Improvements**: This section improves the global legendary pool
   by adding all uniques and glitch uniques.  (There are only two Glitch
   uniques: the Heartfull Splodger and the Cutie Killer).  Those options can
   be toggled individually.
 
-* **Enemy Gear Quality**: This is a mutually-exclusive category (so you can
-  only choose one of the options), and defines how good the enemy gear is.
-  The default ("Excellent Gear") is more or less at the Better Loot mod's
-  "Lootsplosion" levels, so high-level gear will be extremely common.
-  Remember that guns and shields aren't easily acquireable outside of enemy
-  equipment, so choosing the "Stock" preset here may hamper your own gear
-  loadout.  Epic treasure chests will no longer help out, etc.
+* **Rocket Launchers in Global Equip Pools**: This is a mutually-exclusive category
+  (so you can only choose one of the options).  By default, this mod adds in rocket
+  launchers to the main enemy equip pools.  This is fine in Normal (though it will
+  make for some more challenging fights), but in UVHM it can get a bit much.  If
+  playing in UVHM, you may want to disable enemy rocket launchers.  (Enemies which
+  are specifically set to use rocket launchers will still use RLs regardless, of
+  course.)
+
+* **Enemy Gear Quality**: This is another mutually-exclusive category,
+  and defines how good the enemy gear is.  The default ("Excellent Gear") is
+  more or less at the Better Loot mod's "Lootsplosion" levels, so high-level
+  gear will be extremely common.  Remember that guns and shields aren't easily
+  acquireable outside of enemy equipment, so choosing the "Stock" preset here
+  may hamper your own gear loadout.  Epic treasure chests will no longer help
+  out, etc.
+
+* **Rarity Drop Rates**: This is another mutually-exclusive category.  In the
+  default configuration, enemies will *always* drop the weapon+shield that they
+  have equipped.  To give a percent chance of dropping the lower rarities, to
+  prevent an overabundance of unwanted gear, you can opt to do so in here.
+  Purples, Glitches, and Legendaries will always drop, though.
 
 * **Boss Unique Weapon Frequency**: This is another mutually-exclusive
   category, so you can only choose one option.  It will let you choose how
@@ -117,6 +131,16 @@ quality, when loaded into FilterTool/BLCMM:
   Eridian Guardians, by default the creatures from the Claptastic Voyage DLC
   (viruses, bugs, glitches, etc) will not equip or drop "real" shields.
   That can optionally be toggled on in here.
+
+Additionally, there's one category in the "Main Mod" section which you may
+be interested in:
+
+* `Main Mod -> Disable World Weapon/Shield Drops -> Remove Weapons and Shields
+  from Containers`: This section is what removes all weapons/shields from
+  treasure chests and other containers in the game.  If this bothers you, feel
+  free to uncheck this option.  (This might be especially useful if you've
+  opted to keep some of the stock rarity values, or disabled rocket launchers
+  in the global equip pools, etc.)
 
 ### Implications
 
@@ -214,9 +238,6 @@ Things to think about:
      to spawn weapons/shields attach to different locations, or just not at
      all.  The problem here is that's just a fair amount of busywork I don't
      care to do.
-* Optionally disable our container nerfs.  (This is actually mostly already
-  available -- we'd just need to move some of our big list-of-hotfixes in
-  with the other container area, and probably move the folder around a bit.)
 
 Licenses
 ========
