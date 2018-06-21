@@ -24,6 +24,13 @@ enemies will have better gear than their ordinary counterparts.
 Grenade Mods, Class Mods, and Oz Kits will still be acquired as per usual -
 via world drops, chests, and the like.
 
+**NOTE:** This mod has a *lot* of user-configurable options (detailed below
+in the "Configuration" section).  There's technically 7,680 supported
+configurations.  Needless to say, I have not thoroughly tested out all 7,680
+combinations to ensure that everything works as it should.  If you encounter
+strange behavior, definitely look me up on Discord, github, or email, with
+full details of how you've got it configured, and I can take a look.
+
 Usage/Installation
 ------------------
 
