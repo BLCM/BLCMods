@@ -2000,10 +2000,16 @@ for (rarity_key, rarity_label) in DropConfig.rarity_presets:
 
     for (idx, weight) in enumerate([
             regular.weight_common,
+            regular.weight_common,
+            regular.weight_uncommon,
             regular.weight_uncommon,
             regular.weight_rare,
+            regular.weight_rare,
+            regular.weight_veryrare,
             regular.weight_veryrare,
             regular.weight_glitch_normal,
+            regular.weight_glitch_normal,
+            regular.weight_legendary/2,
             regular.weight_legendary/2,
             regular.weight_legendary/2,
             ]):
