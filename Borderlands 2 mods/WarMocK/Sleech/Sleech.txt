@@ -5,8 +5,10 @@
 		Mod author: WarMocK
 	
 		Release Date: 05-31-2018
+		
+		Last Update: 06-17-2018
 	
-		Version: 1.0.0
+		Version: 1.1.0
 	
 		Summary: Changes how both the Breath of Terramorphous and the Leech grenade mod work in Borderlands 2
 		
@@ -25,10 +27,6 @@
 		set GD_GrenadeMods.Title.Title_LeechCorrosive PartName Corrosive (S)Leech
 		
 		set GD_GrenadeMods.Title.Title_LeechShock PartName Shock (S)Leech
-		
-		set GD_GrenadeMods.Projectiles.Grenade_FlameSpurt Damage (BaseValueConstant=350.000000,BaseValueAttribute=D_Attributes.Weapon.WeaponDamage,InitializationDefinition=GD_Balance_HealthAndDamage.HealthAndDamage.Init_ProjectileDamage,BaseValueScaleConstant=2.500000)
-
-		set GD_GrenadeMods.Projectiles.Grenade_FlameSpurt DamageRadius (BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
 		
 		set GD_GrenadeMods.Projectiles.Grenade_Longbow:BehaviorProviderDefinition_1.Behavior_Explode_111 OverrideName none
 		
@@ -53,7 +51,13 @@
 		set GD_GrenadeMods.Projectiles.Grenade_FlameSpurtChild:WillowDamageArea_498 DamageTypeDefinition WillowDamageTypeDefinition'GD_Amp.DamageType.DmgType_Amp_Impact'
 
 		set GD_GrenadeMods.Payload.Payload_Leech SetProjectileSequenceState ((Action=CHANGE_Enable,SequenceName="Payload_Leech"),(Action=CHANGE_Enable,SequenceName="Payload_FlameSpurt"))
+		
+		set GD_GrenadeMods.Payload.Payload_Leech CustomPresentations (AttributePresentationDefinition'GD_GrenadeMods.Payload.Payload_Leech:AttributePresentationDefinition_4',AttributePresentationDefinition'GD_Amp.DamageType.DmgType_Amp_Impact:AttributePresentationDefinition_1')
+		
+		set GD_GrenadeMods.Payload.Payload_FlameSpurt CustomPresentations (AttributePresentationDefinition'GD_GrenadeMods.Payload.Payload_FlameSpurt:AttributePresentationDefinition_4',AttributePresentationDefinition'GD_Amp.DamageType.DmgType_Amp_Impact:AttributePresentationDefinition_1')
 
+		set GD_GrenadeMods.Payload.Payload_FlameSpurt AttributeSlotUpgrades ((SlotName="Damage",GradeIncrease=28,bActivateSlot=True))
+		
 	#</Code>
 	
 #</Sleech>
