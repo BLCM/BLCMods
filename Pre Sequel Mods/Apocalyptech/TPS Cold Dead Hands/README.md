@@ -231,7 +231,6 @@ Ideas/TODO
 
 Things to think about:
 
-* Enemy Moon Buggies shouldn't drop weapons
 * Restrict weapon manufacturer by level?  (Only Dahl in Lunar Launching Station, etc?)
 * Might be nifty to restrict weapon manufacturer by enemy type, though that
   would require eating up more skinpools (the by-level idea could reuse all
