@@ -2136,7 +2136,7 @@ for config in [regular, badass]:
             (config.rarity_pool_smg, config.drop_prob_smg),
             (config.rarity_pool_shotguns, config.drop_prob_shotguns),
             (config.rarity_pool_snipers, config.drop_prob_snipers),
-            (config.rarity_pool_launchers, config.drop_prob_launchers),
+            (config.rarity_pool_launchers, config.drop_prob_launchers, None, 0),
             (config.rarity_pool_lasers, config.drop_prob_lasers),
         ])
 
@@ -2148,7 +2148,7 @@ for config in [regular, badass]:
             (config.rarity_pool_smg, config.drop_prob_smg),
             (config.rarity_pool_shotguns, config.drop_prob_shotguns),
             (config.rarity_pool_snipers, config.drop_prob_snipers),
-            (config.rarity_pool_launchers, config.drop_prob_launchers),
+            (config.rarity_pool_launchers, config.drop_prob_launchers, None, 0),
             (config.rarity_pool_lasers, config.drop_prob_lasers),
         ])
 
@@ -2187,9 +2187,23 @@ for config in [regular, badass]:
             (config.rarity_pool_smg, config.drop_prob_smg),
             (config.rarity_pool_shotguns, config.drop_prob_shotguns),
             (config.rarity_pool_snipers, config.drop_prob_snipers),
-            (config.rarity_pool_launchers, config.drop_prob_launchers),
+            (config.rarity_pool_launchers, config.drop_prob_launchers, None, 0),
             (config.rarity_pool_lasers, config.drop_prob_lasers*config.weight_scale),
         ])
+
+    # Hotfixes to enable rocket launchers for all our general-purpose pools.
+    for (pooltype, pool) in [
+            ('all', config.equip_pool_all),
+            ('ar', config.equip_pool_ar),
+            ('lasers', config.equip_pool_lasers),
+            ]:
+        hfs.add_level_hotfix('rocket_enable_{}_{}'.format(config.hotfix_prefix, pooltype),
+                'RocketEnable',
+                ',{},BalancedItems[5].Probability.BaseValueScaleConstant,,1'.format(pool))
+        hfs.add_level_hotfix('rocket_disable_{}_{}'.format(config.hotfix_prefix, pooltype),
+                'RocketDisable',
+                ',{},BalancedItems[5].Probability.BaseValueScaleConstant,,0'.format(pool),
+                activated=False)
 
 # Legendary Pool management
 unique_hotfixes = []

@@ -214,10 +214,6 @@ Things to think about:
      to spawn weapons/shields attach to different locations, or just not at
      all.  The problem here is that's just a fair amount of busywork I don't
      care to do.
-* Variable drop rates for equipped items, per rarity level?  I think we could
-  accomplish this pretty easily by abusing the pools a bit - have two entries
-  per rarity, one which drops and one which doesn't.
-* Optionally disable launchers in the main equip pools
 * Optionally disable our container nerfs.  (This is actually mostly already
   available -- we'd just need to move some of our big list-of-hotfixes in
   with the other container area, and probably move the folder around a bit.)
