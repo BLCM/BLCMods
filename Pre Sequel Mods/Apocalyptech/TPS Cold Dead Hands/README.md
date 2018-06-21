@@ -59,7 +59,7 @@ from the start of the battle which gun you'll receive.
 * Some chests have not had their weapons/shields removed.  This list is
   probably not exhaustive, and I haven't really tested many of these to find
   out.  Regardless, the drops from these chests should be unaltered:
-  * Zarpedon's chest in Pity's fall
+  * Zarpedon's chest in Pity's Fall
   * Moxxi's chest in Concordia
   * The couple mission-specific chests in Research + Development
   * The three custom gear chests in Claptastic Voyage (which give the Heartfull
@@ -154,7 +154,7 @@ be interested in:
 * Weapons and Shields ordinarily found in treasure chests have been replaced
   with the main ammo/money/eridium pool, rather than removed outright,
   because otherwise the probabilities of getting grenade mods, COMs, and
-  relics would be greatly buffed.  So you'll have to get used to epic chests
+  oz kits would be greatly buffed.  So you'll have to get used to epic chests
   opening up to find a handful of dollars and some pistol ammo.  (Also note
   that as of right now, the extra ammo/money won't be aligned properly within
   the chest.  Them's the breaks, currently.)
@@ -174,7 +174,7 @@ This will obviously conflict with other mods with similar aims.
 This mod overwrites/disables much of the functionality in my own "Better
 Loot" mod, but it's designed to work fine with both enabled (so long as
 this mod appears later in your patch file).  The "Better Loot" improvements
-to Class Mods, Grenades, Relics, Raid Boss drops, etc, should help out
+to Class Mods, Grenades, Oz Kits, Raid Boss drops, etc, should help out
 against the increased enemy difficulty here, in fact.
 
 My own "Early Bloomer" mod will unlock all gear from the beginning of the
