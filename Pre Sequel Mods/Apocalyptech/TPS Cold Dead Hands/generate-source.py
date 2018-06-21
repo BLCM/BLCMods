@@ -112,6 +112,26 @@ class DropConfig(BaseConfig):
     # Scale for weighted pools
     weight_scale = 2.5
 
+    # Rarity drop probabilities
+    rarity_drop_prob = {
+            'guaranteed': {
+                    'common': 1,
+                    'uncommon': 1,
+                    'rare': 1,
+                    'veryrare': 1,
+                    'glitch': 1,
+                    'legendary': 1,
+                },
+            'variable': {
+                    'common': .1,
+                    'uncommon': .33,
+                    'rare': .66,
+                    'veryrare': 1,
+                    'glitch': 1,
+                    'legendary': 1,
+                },
+        }
+
     ###
     ### Statements which'll be filled in later
     ###
@@ -155,8 +175,12 @@ class DropConfig(BaseConfig):
             ('better_noglitch', 'Enemies Have Better Gear (Glitch weapons only in Claptastic Voyage)'),
             ('stock_noglitch', 'Enemies Have Roughly Stock Gear (Glitch weapons only in Claptastic Voyage)'),
         ]
+    rarity_drop_prob_presets = [
+            ('guaranteed', 'Guaranteed Drops for All Rarities'),
+            ('variable', 'Lower Rarities Drop Less Frequently'),
+        ]
 
-    # Computed percent drop rates, for reporting to the user in mod comments
+    # Computed percent equip rates, for reporting to the user in mod comments
     pct_common = None
     pct_uncommon = None
     pct_rare = None
@@ -164,7 +188,7 @@ class DropConfig(BaseConfig):
     pct_glitch = None
     pct_legendary = None
 
-    # Claptastic Voyage drop rates
+    # Claptastic Voyage equip rates
     pct_clap_common = None
     pct_clap_uncommon = None
     pct_clap_rare = None
@@ -1245,18 +1269,22 @@ def get_balanced_items(items):
     `invbalance` string as the type of object being linked to (most commonly
     either WeaponBalanceDefinition or InventoryBalanceDefinition).  An
     optional fourth element will be the BaseValueScaleConstant of the item,
-    which will default to 1, otherwise.
+    which will default to 1, otherwise.  An optional *fifth* element can be
+    specified to determine whether or not the item/pool will be Actually
+    Dropped.
     """
     bal_items = []
     new_items = []
     for item in items:
         if len(item) == 2:
-            new_items.append((item[0], item[1], None, 1))
+            new_items.append((item[0], item[1], None, 1, True))
         elif len(item) == 3:
-            new_items.append((item[0], item[1], item[2], 1))
+            new_items.append((item[0], item[1], item[2], 1, True))
+        elif len(item) == 4:
+            new_items.append((item[0], item[1], item[2], item[3], True))
         else:
-            new_items.append((item[0], item[1], item[2], item[3]))
-    for (classname, weight, invbalance, scale) in new_items:
+            new_items.append((item[0], item[1], item[2], item[3], item[4]))
+    for (classname, weight, invbalance, scale, item_drop) in new_items:
         if classname:
             if invbalance:
                 itmpool = 'None'
@@ -1267,6 +1295,10 @@ def get_balanced_items(items):
         else:
             itmpool = 'None'
             invbal = 'None'
+        if item_drop:
+            drop_string = 'True'
+        else:
+            drop_string = 'False'
         bal_items.append("""
             (
                 ItmPoolDefinition={},
@@ -1277,9 +1309,9 @@ def get_balanced_items(items):
                     InitializationDefinition=None,
                     BaseValueScaleConstant={}
                 ),
-                bDropOnDeath=True
+                bDropOnDeath={}
             )
-            """.format(itmpool, invbal, weight, scale))
+            """.format(itmpool, invbal, weight, round(scale, 6), drop_string))
     return '({})'.format(','.join(bal_items))
 
 def get_balanced_set(objectname, items):
@@ -1686,78 +1718,120 @@ for (rarity_key, rarity_label) in DropConfig.rarity_presets:
         config.set_rarity_ar = get_balanced_set(
             config.rarity_pool_ar,
             [
-                ('GD_Itempools.WeaponPools.Pool_Weapons_AssaultRifles_01_Common', config.weight_common),
-                ('GD_Itempools.WeaponPools.Pool_Weapons_AssaultRifles_02_Uncommon', config.weight_uncommon),
-                ('GD_Itempools.WeaponPools.Pool_Weapons_AssaultRifles_04_Rare', config.weight_rare),
-                ('GD_Itempools.WeaponPools.Pool_Weapons_AssaultRifles_05_VeryRare', config.weight_veryrare),
-                ('GD_Ma_ItemPools.WeaponPools.Pool_Weapons_AssaultRifles_Glitch_Marigold', config.weight_glitch_normal),
-                ('GD_Itempools.WeaponPools.Pool_Weapons_AssaultRifles_06_Legendary', config.weight_legendary),
+                ('GD_Itempools.WeaponPools.Pool_Weapons_AssaultRifles_01_Common', config.weight_common, None, 1, True),
+                ('GD_Itempools.WeaponPools.Pool_Weapons_AssaultRifles_01_Common', config.weight_common, None, 1, False),
+                ('GD_Itempools.WeaponPools.Pool_Weapons_AssaultRifles_02_Uncommon', config.weight_uncommon, None, 1, True),
+                ('GD_Itempools.WeaponPools.Pool_Weapons_AssaultRifles_02_Uncommon', config.weight_uncommon, None, 1, False),
+                ('GD_Itempools.WeaponPools.Pool_Weapons_AssaultRifles_04_Rare', config.weight_rare, None, 1, True),
+                ('GD_Itempools.WeaponPools.Pool_Weapons_AssaultRifles_04_Rare', config.weight_rare, None, 1, False),
+                ('GD_Itempools.WeaponPools.Pool_Weapons_AssaultRifles_05_VeryRare', config.weight_veryrare, None, 1, True),
+                ('GD_Itempools.WeaponPools.Pool_Weapons_AssaultRifles_05_VeryRare', config.weight_veryrare, None, 1, False),
+                ('GD_Ma_ItemPools.WeaponPools.Pool_Weapons_AssaultRifles_Glitch_Marigold', config.weight_glitch_normal, None, 1, True),
+                ('GD_Ma_ItemPools.WeaponPools.Pool_Weapons_AssaultRifles_Glitch_Marigold', config.weight_glitch_normal, None, 1, False),
+                ('GD_Itempools.WeaponPools.Pool_Weapons_AssaultRifles_06_Legendary', config.weight_legendary, None, 1, True),
+                ('GD_Itempools.WeaponPools.Pool_Weapons_AssaultRifles_06_Legendary', config.weight_legendary, None, 1, False),
             ])
 
         config.set_rarity_launchers = get_balanced_set(
             config.rarity_pool_launchers,
             [
-                ('GD_Itempools.WeaponPools.Pool_Weapons_Launchers_01_Common', config.weight_common),
-                ('GD_Itempools.WeaponPools.Pool_Weapons_Launchers_02_Uncommon', config.weight_uncommon),
-                ('GD_Itempools.WeaponPools.Pool_Weapons_Launchers_04_Rare', config.weight_rare),
-                ('GD_Itempools.WeaponPools.Pool_Weapons_Launchers_05_VeryRare', config.weight_veryrare),
-                ('GD_Ma_ItemPools.WeaponPools.Pool_Weapons_Launchers_Glitch_Marigold', config.weight_glitch_normal),
-                ('GD_Itempools.WeaponPools.Pool_Weapons_Launchers_06_Legendary', config.weight_legendary),
+                ('GD_Itempools.WeaponPools.Pool_Weapons_Launchers_01_Common', config.weight_common, None, 1, True),
+                ('GD_Itempools.WeaponPools.Pool_Weapons_Launchers_01_Common', config.weight_common, None, 1, False),
+                ('GD_Itempools.WeaponPools.Pool_Weapons_Launchers_02_Uncommon', config.weight_uncommon, None, 1, True),
+                ('GD_Itempools.WeaponPools.Pool_Weapons_Launchers_02_Uncommon', config.weight_uncommon, None, 1, False),
+                ('GD_Itempools.WeaponPools.Pool_Weapons_Launchers_04_Rare', config.weight_rare, None, 1, True),
+                ('GD_Itempools.WeaponPools.Pool_Weapons_Launchers_04_Rare', config.weight_rare, None, 1, False),
+                ('GD_Itempools.WeaponPools.Pool_Weapons_Launchers_05_VeryRare', config.weight_veryrare, None, 1, True),
+                ('GD_Itempools.WeaponPools.Pool_Weapons_Launchers_05_VeryRare', config.weight_veryrare, None, 1, False),
+                ('GD_Ma_ItemPools.WeaponPools.Pool_Weapons_Launchers_Glitch_Marigold', config.weight_glitch_normal, None, 1, True),
+                ('GD_Ma_ItemPools.WeaponPools.Pool_Weapons_Launchers_Glitch_Marigold', config.weight_glitch_normal, None, 1, False),
+                ('GD_Itempools.WeaponPools.Pool_Weapons_Launchers_06_Legendary', config.weight_legendary, None, 1, True),
+                ('GD_Itempools.WeaponPools.Pool_Weapons_Launchers_06_Legendary', config.weight_legendary, None, 1, False),
             ])
 
         config.set_rarity_pistols = get_balanced_set(
             config.rarity_pool_pistols,
             [
-                ('GD_Itempools.WeaponPools.Pool_Weapons_Pistols_01_Common', config.weight_common),
-                ('GD_Itempools.WeaponPools.Pool_Weapons_Pistols_02_Uncommon', config.weight_uncommon),
-                ('GD_Itempools.WeaponPools.Pool_Weapons_Pistols_04_Rare', config.weight_rare),
-                ('GD_Itempools.WeaponPools.Pool_Weapons_Pistols_05_VeryRare', config.weight_veryrare),
-                ('GD_Ma_ItemPools.WeaponPools.Pool_Weapons_Pistols_Glitch_Marigold', config.weight_glitch_normal),
-                ('GD_Itempools.WeaponPools.Pool_Weapons_Pistols_06_Legendary', config.weight_legendary),
+                ('GD_Itempools.WeaponPools.Pool_Weapons_Pistols_01_Common', config.weight_common, None, 1, True),
+                ('GD_Itempools.WeaponPools.Pool_Weapons_Pistols_01_Common', config.weight_common, None, 1, False),
+                ('GD_Itempools.WeaponPools.Pool_Weapons_Pistols_02_Uncommon', config.weight_uncommon, None, 1, True),
+                ('GD_Itempools.WeaponPools.Pool_Weapons_Pistols_02_Uncommon', config.weight_uncommon, None, 1, False),
+                ('GD_Itempools.WeaponPools.Pool_Weapons_Pistols_04_Rare', config.weight_rare, None, 1, True),
+                ('GD_Itempools.WeaponPools.Pool_Weapons_Pistols_04_Rare', config.weight_rare, None, 1, False),
+                ('GD_Itempools.WeaponPools.Pool_Weapons_Pistols_05_VeryRare', config.weight_veryrare, None, 1, True),
+                ('GD_Itempools.WeaponPools.Pool_Weapons_Pistols_05_VeryRare', config.weight_veryrare, None, 1, False),
+                ('GD_Ma_ItemPools.WeaponPools.Pool_Weapons_Pistols_Glitch_Marigold', config.weight_glitch_normal, None, 1, True),
+                ('GD_Ma_ItemPools.WeaponPools.Pool_Weapons_Pistols_Glitch_Marigold', config.weight_glitch_normal, None, 1, False),
+                ('GD_Itempools.WeaponPools.Pool_Weapons_Pistols_06_Legendary', config.weight_legendary, None, 1, True),
+                ('GD_Itempools.WeaponPools.Pool_Weapons_Pistols_06_Legendary', config.weight_legendary, None, 1, False),
             ])
 
         config.set_rarity_smg = get_balanced_set(
             config.rarity_pool_smg,
             [
-                ('GD_Itempools.WeaponPools.Pool_Weapons_SMG_01_Common', config.weight_common),
-                ('GD_Itempools.WeaponPools.Pool_Weapons_SMG_02_Uncommon', config.weight_uncommon),
-                ('GD_Itempools.WeaponPools.Pool_Weapons_SMG_04_Rare', config.weight_rare),
-                ('GD_Itempools.WeaponPools.Pool_Weapons_SMG_05_VeryRare', config.weight_veryrare),
-                ('GD_Ma_ItemPools.WeaponPools.Pool_Weapons_SMG_Glitch_Marigold', config.weight_glitch_normal),
-                ('GD_Itempools.WeaponPools.Pool_Weapons_SMG_06_Legendary', config.weight_legendary),
+                ('GD_Itempools.WeaponPools.Pool_Weapons_SMG_01_Common', config.weight_common, None, 1, True),
+                ('GD_Itempools.WeaponPools.Pool_Weapons_SMG_01_Common', config.weight_common, None, 1, False),
+                ('GD_Itempools.WeaponPools.Pool_Weapons_SMG_02_Uncommon', config.weight_uncommon, None, 1, True),
+                ('GD_Itempools.WeaponPools.Pool_Weapons_SMG_02_Uncommon', config.weight_uncommon, None, 1, False),
+                ('GD_Itempools.WeaponPools.Pool_Weapons_SMG_04_Rare', config.weight_rare, None, 1, True),
+                ('GD_Itempools.WeaponPools.Pool_Weapons_SMG_04_Rare', config.weight_rare, None, 1, False),
+                ('GD_Itempools.WeaponPools.Pool_Weapons_SMG_05_VeryRare', config.weight_veryrare, None, 1, True),
+                ('GD_Itempools.WeaponPools.Pool_Weapons_SMG_05_VeryRare', config.weight_veryrare, None, 1, False),
+                ('GD_Ma_ItemPools.WeaponPools.Pool_Weapons_SMG_Glitch_Marigold', config.weight_glitch_normal, None, 1, True),
+                ('GD_Ma_ItemPools.WeaponPools.Pool_Weapons_SMG_Glitch_Marigold', config.weight_glitch_normal, None, 1, False),
+                ('GD_Itempools.WeaponPools.Pool_Weapons_SMG_06_Legendary', config.weight_legendary, None, 1, True),
+                ('GD_Itempools.WeaponPools.Pool_Weapons_SMG_06_Legendary', config.weight_legendary, None, 1, False),
             ])
 
         config.set_rarity_shotguns = get_balanced_set(
             config.rarity_pool_shotguns,
             [
-                ('GD_Itempools.WeaponPools.Pool_Weapons_Shotguns_01_Common', config.weight_common),
-                ('GD_Itempools.WeaponPools.Pool_Weapons_Shotguns_02_Uncommon', config.weight_uncommon),
-                ('GD_Itempools.WeaponPools.Pool_Weapons_Shotguns_04_Rare', config.weight_rare),
-                ('GD_Itempools.WeaponPools.Pool_Weapons_Shotguns_05_VeryRare', config.weight_veryrare),
-                ('GD_Ma_ItemPools.WeaponPools.Pool_Weapons_Shotguns_Glitch_Marigold', config.weight_glitch_normal),
-                ('GD_Itempools.WeaponPools.Pool_Weapons_Shotguns_06_Legendary', config.weight_legendary),
+                ('GD_Itempools.WeaponPools.Pool_Weapons_Shotguns_01_Common', config.weight_common, None, 1, True),
+                ('GD_Itempools.WeaponPools.Pool_Weapons_Shotguns_01_Common', config.weight_common, None, 1, False),
+                ('GD_Itempools.WeaponPools.Pool_Weapons_Shotguns_02_Uncommon', config.weight_uncommon, None, 1, True),
+                ('GD_Itempools.WeaponPools.Pool_Weapons_Shotguns_02_Uncommon', config.weight_uncommon, None, 1, False),
+                ('GD_Itempools.WeaponPools.Pool_Weapons_Shotguns_04_Rare', config.weight_rare, None, 1, True),
+                ('GD_Itempools.WeaponPools.Pool_Weapons_Shotguns_04_Rare', config.weight_rare, None, 1, False),
+                ('GD_Itempools.WeaponPools.Pool_Weapons_Shotguns_05_VeryRare', config.weight_veryrare, None, 1, True),
+                ('GD_Itempools.WeaponPools.Pool_Weapons_Shotguns_05_VeryRare', config.weight_veryrare, None, 1, False),
+                ('GD_Ma_ItemPools.WeaponPools.Pool_Weapons_Shotguns_Glitch_Marigold', config.weight_glitch_normal, None, 1, True),
+                ('GD_Ma_ItemPools.WeaponPools.Pool_Weapons_Shotguns_Glitch_Marigold', config.weight_glitch_normal, None, 1, False),
+                ('GD_Itempools.WeaponPools.Pool_Weapons_Shotguns_06_Legendary', config.weight_legendary, None, 1, True),
+                ('GD_Itempools.WeaponPools.Pool_Weapons_Shotguns_06_Legendary', config.weight_legendary, None, 1, False),
             ])
 
         config.set_rarity_snipers = get_balanced_set(
             config.rarity_pool_snipers,
             [
-                ('GD_Itempools.WeaponPools.Pool_Weapons_SniperRifles_01_Common', config.weight_common),
-                ('GD_Itempools.WeaponPools.Pool_Weapons_SniperRifles_02_Uncommon', config.weight_uncommon),
-                ('GD_Itempools.WeaponPools.Pool_Weapons_SniperRifles_04_Rare', config.weight_rare),
-                ('GD_Itempools.WeaponPools.Pool_Weapons_SniperRifles_05_VeryRare', config.weight_veryrare),
-                ('GD_Ma_ItemPools.WeaponPools.Pool_Weapons_Sniper_Glitch_Marigold', config.weight_glitch_normal),
-                ('GD_Itempools.WeaponPools.Pool_Weapons_SniperRifles_06_Legendary', config.weight_legendary),
+                ('GD_Itempools.WeaponPools.Pool_Weapons_SniperRifles_01_Common', config.weight_common, None, 1, True),
+                ('GD_Itempools.WeaponPools.Pool_Weapons_SniperRifles_01_Common', config.weight_common, None, 1, False),
+                ('GD_Itempools.WeaponPools.Pool_Weapons_SniperRifles_02_Uncommon', config.weight_uncommon, None, 1, True),
+                ('GD_Itempools.WeaponPools.Pool_Weapons_SniperRifles_02_Uncommon', config.weight_uncommon, None, 1, False),
+                ('GD_Itempools.WeaponPools.Pool_Weapons_SniperRifles_04_Rare', config.weight_rare, None, 1, True),
+                ('GD_Itempools.WeaponPools.Pool_Weapons_SniperRifles_04_Rare', config.weight_rare, None, 1, False),
+                ('GD_Itempools.WeaponPools.Pool_Weapons_SniperRifles_05_VeryRare', config.weight_veryrare, None, 1, True),
+                ('GD_Itempools.WeaponPools.Pool_Weapons_SniperRifles_05_VeryRare', config.weight_veryrare, None, 1, False),
+                ('GD_Ma_ItemPools.WeaponPools.Pool_Weapons_Sniper_Glitch_Marigold', config.weight_glitch_normal, None, 1, True),
+                ('GD_Ma_ItemPools.WeaponPools.Pool_Weapons_Sniper_Glitch_Marigold', config.weight_glitch_normal, None, 1, False),
+                ('GD_Itempools.WeaponPools.Pool_Weapons_SniperRifles_06_Legendary', config.weight_legendary, None, 1, True),
+                ('GD_Itempools.WeaponPools.Pool_Weapons_SniperRifles_06_Legendary', config.weight_legendary, None, 1, False),
             ])
 
         config.set_rarity_lasers = get_balanced_set(
             config.rarity_pool_lasers,
             [
-                ('GD_Itempools.WeaponPools.Pool_Weapons_Lasers_01_Common', config.weight_common),
-                ('GD_Itempools.WeaponPools.Pool_Weapons_Lasers_02_Uncommon', config.weight_uncommon),
-                ('GD_Itempools.WeaponPools.Pool_Weapons_Lasers_04_Rare', config.weight_rare),
-                ('GD_Itempools.WeaponPools.Pool_Weapons_Lasers_05_VeryRare', config.weight_veryrare),
-                ('GD_Ma_ItemPools.WeaponPools.Pool_Weapons_Lasers_Glitch_Marigold', config.weight_glitch_normal),
-                ('GD_Itempools.WeaponPools.Pool_Weapons_Lasers_06_Legendary', config.weight_legendary),
+                ('GD_Itempools.WeaponPools.Pool_Weapons_Lasers_01_Common', config.weight_common, None, 1, True),
+                ('GD_Itempools.WeaponPools.Pool_Weapons_Lasers_01_Common', config.weight_common, None, 1, False),
+                ('GD_Itempools.WeaponPools.Pool_Weapons_Lasers_02_Uncommon', config.weight_uncommon, None, 1, True),
+                ('GD_Itempools.WeaponPools.Pool_Weapons_Lasers_02_Uncommon', config.weight_uncommon, None, 1, False),
+                ('GD_Itempools.WeaponPools.Pool_Weapons_Lasers_04_Rare', config.weight_rare, None, 1, True),
+                ('GD_Itempools.WeaponPools.Pool_Weapons_Lasers_04_Rare', config.weight_rare, None, 1, False),
+                ('GD_Itempools.WeaponPools.Pool_Weapons_Lasers_05_VeryRare', config.weight_veryrare, None, 1, True),
+                ('GD_Itempools.WeaponPools.Pool_Weapons_Lasers_05_VeryRare', config.weight_veryrare, None, 1, False),
+                ('GD_Ma_ItemPools.WeaponPools.Pool_Weapons_Lasers_Glitch_Marigold', config.weight_glitch_normal, None, 1, True),
+                ('GD_Ma_ItemPools.WeaponPools.Pool_Weapons_Lasers_Glitch_Marigold', config.weight_glitch_normal, None, 1, False),
+                ('GD_Itempools.WeaponPools.Pool_Weapons_Lasers_06_Legendary', config.weight_legendary, None, 1, True),
+                ('GD_Itempools.WeaponPools.Pool_Weapons_Lasers_06_Legendary', config.weight_legendary, None, 1, False),
             ])
 
         # Shield pool (rarity + equip in one, since we don't need to make two choices)
@@ -1770,11 +1844,16 @@ for (rarity_key, rarity_label) in DropConfig.rarity_presets:
                 ',{},BalancedItems,,{}'.format(
                     config.equip_pool_shields,
                     get_balanced_items([
-                            ('GD_Itempools.ShieldPools.Pool_Shields_All_01_Common', config.weight_common),
-                            ('GD_Itempools.ShieldPools.Pool_Shields_All_02_Uncommon', config.weight_uncommon),
-                            ('GD_Itempools.ShieldPools.Pool_Shields_All_04_Rare', config.weight_rare),
-                            ('GD_Itempools.ShieldPools.Pool_Shields_All_05_VeryRare', config.weight_veryrare),
-                            ('GD_Itempools.ShieldPools.Pool_Shields_All_06_Legendary', config.weight_legendary),
+                            ('GD_Itempools.ShieldPools.Pool_Shields_All_01_Common', config.weight_common, None, 1, True),
+                            ('GD_Itempools.ShieldPools.Pool_Shields_All_01_Common', config.weight_common, None, 1, False),
+                            ('GD_Itempools.ShieldPools.Pool_Shields_All_02_Uncommon', config.weight_uncommon, None, 1, True),
+                            ('GD_Itempools.ShieldPools.Pool_Shields_All_02_Uncommon', config.weight_uncommon, None, 1, False),
+                            ('GD_Itempools.ShieldPools.Pool_Shields_All_04_Rare', config.weight_rare, None, 1, True),
+                            ('GD_Itempools.ShieldPools.Pool_Shields_All_04_Rare', config.weight_rare, None, 1, False),
+                            ('GD_Itempools.ShieldPools.Pool_Shields_All_05_VeryRare', config.weight_veryrare, None, 1, True),
+                            ('GD_Itempools.ShieldPools.Pool_Shields_All_05_VeryRare', config.weight_veryrare, None, 1, False),
+                            ('GD_Itempools.ShieldPools.Pool_Shields_All_06_Legendary', config.weight_legendary, None, 1, True),
+                            ('GD_Itempools.ShieldPools.Pool_Shields_All_06_Legendary', config.weight_legendary, None, 1, False),
                         ])),
                     activated=hotfix_activated)
         config.set_shields = hfs.get_hotfix_xml(hotfix_id)
@@ -1787,6 +1866,7 @@ for (rarity_key, rarity_label) in DropConfig.rarity_presets:
 
         rarity_hfs = Hotfixes(nameprefix='Apoc{}{}RarityFix'.format(
             config.hotfix_prefix.capitalize(), rarity_key.capitalize()))
+        glitch_indexes = [8, 9]
         for pool in [
                 config.rarity_pool_ar,
                 config.rarity_pool_launchers,
@@ -1796,19 +1876,21 @@ for (rarity_key, rarity_label) in DropConfig.rarity_presets:
                 config.rarity_pool_snipers,
                 config.rarity_pool_lasers,
                 ]:
-            hfs_id = 'rarity_{}'.format(len(rarity_hfs.hotfixes))
-            rarity_hfs.add_level_hotfix(hfs_id, 'Set',
-                ',{},BalancedItems[4].Probability.BaseValueConstant,,{}'.format(
-                    pool, config.weight_glitch_normal),
-                activated=hotfix_activated)
-            hotfix_list.append('{}{}'.format(prefix, rarity_hfs.get_hotfix_xml(hfs_id)))
-            for level in claptastic_levels:
+            for idx in glitch_indexes:
                 hfs_id = 'rarity_{}'.format(len(rarity_hfs.hotfixes))
                 rarity_hfs.add_level_hotfix(hfs_id, 'Set',
-                    '{},{},BalancedItems[4].Probability.BaseValueConstant,,{}'.format(
-                        level, pool, config.weight_glitch_claptastic),
+                    ',{},BalancedItems[{}].Probability.BaseValueConstant,,{}'.format(
+                        pool, idx, config.weight_glitch_normal),
                     activated=hotfix_activated)
                 hotfix_list.append('{}{}'.format(prefix, rarity_hfs.get_hotfix_xml(hfs_id)))
+            for level in claptastic_levels:
+                for idx in glitch_indexes:
+                    hfs_id = 'rarity_{}'.format(len(rarity_hfs.hotfixes))
+                    rarity_hfs.add_level_hotfix(hfs_id, 'Set',
+                        '{},{},BalancedItems[{}].Probability.BaseValueConstant,,{}'.format(
+                            level, pool, idx, config.weight_glitch_claptastic),
+                        activated=hotfix_activated)
+                    hotfix_list.append('{}{}'.format(prefix, rarity_hfs.get_hotfix_xml(hfs_id)))
 
     # Join up our claptastic support hotfixes
     claptastic_support_str = "\n\n".join(hotfix_list)
@@ -1829,19 +1911,32 @@ for (rarity_key, rarity_label) in DropConfig.rarity_presets:
             'MoonShotIntro_P,{},BalancedItems,,{}'.format(
                 pool,
                 get_balanced_items([
-                        ('GD_Itempools.WeaponPools.Pool_Weapons_Pistols_01_Common', regular.weight_common),
-                        ('GD_Itempools.WeaponPools.Pool_Weapons_Pistols_02_Uncommon', regular.weight_uncommon),
-                        ('GD_Itempools.WeaponPools.Pool_Weapons_Pistols_04_Rare', regular.weight_rare/2),
-                        ('GD_Itempools.WeaponPools.Pool_Weapons_AssaultRifles_01_Common', regular.weight_common),
-                        ('GD_Itempools.WeaponPools.Pool_Weapons_AssaultRifles_02_Uncommon', regular.weight_uncommon),
-                        ('GD_Itempools.WeaponPools.Pool_Weapons_AssaultRifles_04_Rare', regular.weight_rare/2),
-                        ('GD_Itempools.WeaponPools.Pool_Weapons_SMG_01_Common', regular.weight_common),
-                        ('GD_Itempools.WeaponPools.Pool_Weapons_SMG_02_Uncommon', regular.weight_uncommon),
-                        ('GD_Itempools.WeaponPools.Pool_Weapons_SMG_04_Rare', regular.weight_rare/2),
-                        ('GD_Itempools.WeaponPools.Pool_Weapons_Shotguns_01_Common', regular.weight_common),
-                        ('GD_Itempools.WeaponPools.Pool_Weapons_Shotguns_02_Uncommon', regular.weight_uncommon),
-                        ('GD_Itempools.WeaponPools.Pool_Weapons_Lasers_01_Common', regular.weight_common),
-                        ('GD_Itempools.WeaponPools.Pool_Weapons_Lasers_02_Uncommon', regular.weight_uncommon),
+                        ('GD_Itempools.WeaponPools.Pool_Weapons_Pistols_01_Common', regular.weight_common, None, 1, True),
+                        ('GD_Itempools.WeaponPools.Pool_Weapons_Pistols_01_Common', regular.weight_common, None, 1, False),
+                        ('GD_Itempools.WeaponPools.Pool_Weapons_Pistols_02_Uncommon', regular.weight_uncommon, None, 1, True),
+                        ('GD_Itempools.WeaponPools.Pool_Weapons_Pistols_02_Uncommon', regular.weight_uncommon, None, 1, False),
+                        ('GD_Itempools.WeaponPools.Pool_Weapons_Pistols_04_Rare', regular.weight_rare/2, None, 1, True),
+                        ('GD_Itempools.WeaponPools.Pool_Weapons_Pistols_04_Rare', regular.weight_rare/2, None, 1, False),
+                        ('GD_Itempools.WeaponPools.Pool_Weapons_AssaultRifles_01_Common', regular.weight_common, None, 1, True),
+                        ('GD_Itempools.WeaponPools.Pool_Weapons_AssaultRifles_01_Common', regular.weight_common, None, 1, False),
+                        ('GD_Itempools.WeaponPools.Pool_Weapons_AssaultRifles_02_Uncommon', regular.weight_uncommon, None, 1, True),
+                        ('GD_Itempools.WeaponPools.Pool_Weapons_AssaultRifles_02_Uncommon', regular.weight_uncommon, None, 1, False),
+                        ('GD_Itempools.WeaponPools.Pool_Weapons_AssaultRifles_04_Rare', regular.weight_rare/2, None, 1, True),
+                        ('GD_Itempools.WeaponPools.Pool_Weapons_AssaultRifles_04_Rare', regular.weight_rare/2, None, 1, False),
+                        ('GD_Itempools.WeaponPools.Pool_Weapons_SMG_01_Common', regular.weight_common, None, 1, True),
+                        ('GD_Itempools.WeaponPools.Pool_Weapons_SMG_01_Common', regular.weight_common, None, 1, False),
+                        ('GD_Itempools.WeaponPools.Pool_Weapons_SMG_02_Uncommon', regular.weight_uncommon, None, 1, True),
+                        ('GD_Itempools.WeaponPools.Pool_Weapons_SMG_02_Uncommon', regular.weight_uncommon, None, 1, False),
+                        ('GD_Itempools.WeaponPools.Pool_Weapons_SMG_04_Rare', regular.weight_rare/2, None, 1, True),
+                        ('GD_Itempools.WeaponPools.Pool_Weapons_SMG_04_Rare', regular.weight_rare/2, None, 1, False),
+                        ('GD_Itempools.WeaponPools.Pool_Weapons_Shotguns_01_Common', regular.weight_common, None, 1, True),
+                        ('GD_Itempools.WeaponPools.Pool_Weapons_Shotguns_01_Common', regular.weight_common, None, 1, False),
+                        ('GD_Itempools.WeaponPools.Pool_Weapons_Shotguns_02_Uncommon', regular.weight_uncommon, None, 1, True),
+                        ('GD_Itempools.WeaponPools.Pool_Weapons_Shotguns_02_Uncommon', regular.weight_uncommon, None, 1, False),
+                        ('GD_Itempools.WeaponPools.Pool_Weapons_Lasers_01_Common', regular.weight_common, None, 1, True),
+                        ('GD_Itempools.WeaponPools.Pool_Weapons_Lasers_01_Common', regular.weight_common, None, 1, False),
+                        ('GD_Itempools.WeaponPools.Pool_Weapons_Lasers_02_Uncommon', regular.weight_uncommon, None, 1, True),
+                        ('GD_Itempools.WeaponPools.Pool_Weapons_Lasers_02_Uncommon', regular.weight_uncommon, None, 1, False),
                     ])),
                 activated=hotfix_activated)
         hotfix_list.append('{}{}'.format(prefix, rarity_hfs.get_hotfix_xml(hfs_id)))
@@ -1858,23 +1953,40 @@ for (rarity_key, rarity_label) in DropConfig.rarity_presets:
             'MoonShotIntro_P,{},BalancedItems,,{}'.format(
                 regular.equip_pool_shields,
                 get_balanced_items([
-                        ('GD_Itempools.ShieldPools.Pool_Shields_Standard_01_Common', regular.weight_common),
-                        ('GD_Itempools.ShieldPools.Pool_Shields_Standard_02_Uncommon', regular.weight_uncommon),
-                        ('GD_Itempools.ShieldPools.Pool_Shields_Standard_04_Rare', regular.weight_rare/2),
-                        ('GD_Itempools.ShieldPools.Pool_Shields_Absorption_01_Common', round(regular.weight_common*other_scale, 6)),
-                        ('GD_Itempools.ShieldPools.Pool_Shields_Absorption_02_Uncommon', round(regular.weight_uncommon*other_scale, 6)),
-                        ('GD_Itempools.ShieldPools.Pool_Shields_Booster_01_Common', round(regular.weight_common*other_scale, 6)),
-                        ('GD_Itempools.ShieldPools.Pool_Shields_Booster_02_Uncommon', round(regular.weight_uncommon*other_scale, 6)),
-                        ('GD_Itempools.ShieldPools.Pool_Shields_Chimera_01_Common', round(regular.weight_common*other_scale, 6)),
-                        ('GD_Itempools.ShieldPools.Pool_Shields_Chimera_02_Uncommon', round(regular.weight_uncommon*other_scale, 6)),
-                        ('GD_Itempools.ShieldPools.Pool_Shields_Impact_01_Common', round(regular.weight_common*other_scale, 6)),
-                        ('GD_Itempools.ShieldPools.Pool_Shields_Impact_02_Uncommon', round(regular.weight_uncommon*other_scale, 6)),
-                        ('GD_Itempools.ShieldPools.Pool_Shields_NovaShields_All_01_Common', round(regular.weight_common*other_scale, 6)),
-                        ('GD_Itempools.ShieldPools.Pool_Shields_NovaShields_All_02_Uncommon', round(regular.weight_uncommon*other_scale, 6)),
-                        ('GD_Itempools.ShieldPools.Pool_Shields_Roid_01_Common', round(regular.weight_common*other_scale, 6)),
-                        ('GD_Itempools.ShieldPools.Pool_Shields_Roid_02_Uncommon', round(regular.weight_uncommon*other_scale, 6)),
-                        ('GD_Itempools.ShieldPools.Pool_Shields_SpikeShields_All_01_Common', round(regular.weight_common*other_scale, 6)),
-                        ('GD_Itempools.ShieldPools.Pool_Shields_SpikeShields_All_02_Uncommon', round(regular.weight_uncommon*other_scale, 6)),
+                        ('GD_Itempools.ShieldPools.Pool_Shields_Standard_01_Common', regular.weight_common, None, 1, True),
+                        ('GD_Itempools.ShieldPools.Pool_Shields_Standard_01_Common', regular.weight_common, None, 1, True),
+                        ('GD_Itempools.ShieldPools.Pool_Shields_Standard_02_Uncommon', regular.weight_uncommon, None, 1, True),
+                        ('GD_Itempools.ShieldPools.Pool_Shields_Standard_02_Uncommon', regular.weight_uncommon, None, 1, True),
+                        ('GD_Itempools.ShieldPools.Pool_Shields_Standard_04_Rare', regular.weight_rare/2, None, 1, True),
+                        ('GD_Itempools.ShieldPools.Pool_Shields_Standard_04_Rare', regular.weight_rare/2, None, 1, True),
+                        ('GD_Itempools.ShieldPools.Pool_Shields_Absorption_01_Common', round(regular.weight_common*other_scale, 6), None, 1, True),
+                        ('GD_Itempools.ShieldPools.Pool_Shields_Absorption_01_Common', round(regular.weight_common*other_scale, 6), None, 1, True),
+                        ('GD_Itempools.ShieldPools.Pool_Shields_Absorption_02_Uncommon', round(regular.weight_uncommon*other_scale, 6), None, 1, True),
+                        ('GD_Itempools.ShieldPools.Pool_Shields_Absorption_02_Uncommon', round(regular.weight_uncommon*other_scale, 6), None, 1, True),
+                        ('GD_Itempools.ShieldPools.Pool_Shields_Booster_01_Common', round(regular.weight_common*other_scale, 6), None, 1, True),
+                        ('GD_Itempools.ShieldPools.Pool_Shields_Booster_01_Common', round(regular.weight_common*other_scale, 6), None, 1, True),
+                        ('GD_Itempools.ShieldPools.Pool_Shields_Booster_02_Uncommon', round(regular.weight_uncommon*other_scale, 6), None, 1, True),
+                        ('GD_Itempools.ShieldPools.Pool_Shields_Booster_02_Uncommon', round(regular.weight_uncommon*other_scale, 6), None, 1, True),
+                        ('GD_Itempools.ShieldPools.Pool_Shields_Chimera_01_Common', round(regular.weight_common*other_scale, 6), None, 1, True),
+                        ('GD_Itempools.ShieldPools.Pool_Shields_Chimera_01_Common', round(regular.weight_common*other_scale, 6), None, 1, True),
+                        ('GD_Itempools.ShieldPools.Pool_Shields_Chimera_02_Uncommon', round(regular.weight_uncommon*other_scale, 6), None, 1, True),
+                        ('GD_Itempools.ShieldPools.Pool_Shields_Chimera_02_Uncommon', round(regular.weight_uncommon*other_scale, 6), None, 1, True),
+                        ('GD_Itempools.ShieldPools.Pool_Shields_Impact_01_Common', round(regular.weight_common*other_scale, 6), None, 1, True),
+                        ('GD_Itempools.ShieldPools.Pool_Shields_Impact_01_Common', round(regular.weight_common*other_scale, 6), None, 1, True),
+                        ('GD_Itempools.ShieldPools.Pool_Shields_Impact_02_Uncommon', round(regular.weight_uncommon*other_scale, 6), None, 1, True),
+                        ('GD_Itempools.ShieldPools.Pool_Shields_Impact_02_Uncommon', round(regular.weight_uncommon*other_scale, 6), None, 1, True),
+                        ('GD_Itempools.ShieldPools.Pool_Shields_NovaShields_All_01_Common', round(regular.weight_common*other_scale, 6), None, 1, True),
+                        ('GD_Itempools.ShieldPools.Pool_Shields_NovaShields_All_01_Common', round(regular.weight_common*other_scale, 6), None, 1, True),
+                        ('GD_Itempools.ShieldPools.Pool_Shields_NovaShields_All_02_Uncommon', round(regular.weight_uncommon*other_scale, 6), None, 1, True),
+                        ('GD_Itempools.ShieldPools.Pool_Shields_NovaShields_All_02_Uncommon', round(regular.weight_uncommon*other_scale, 6), None, 1, True),
+                        ('GD_Itempools.ShieldPools.Pool_Shields_Roid_01_Common', round(regular.weight_common*other_scale, 6), None, 1, True),
+                        ('GD_Itempools.ShieldPools.Pool_Shields_Roid_01_Common', round(regular.weight_common*other_scale, 6), None, 1, True),
+                        ('GD_Itempools.ShieldPools.Pool_Shields_Roid_02_Uncommon', round(regular.weight_uncommon*other_scale, 6), None, 1, True),
+                        ('GD_Itempools.ShieldPools.Pool_Shields_Roid_02_Uncommon', round(regular.weight_uncommon*other_scale, 6), None, 1, True),
+                        ('GD_Itempools.ShieldPools.Pool_Shields_SpikeShields_All_01_Common', round(regular.weight_common*other_scale, 6), None, 1, True),
+                        ('GD_Itempools.ShieldPools.Pool_Shields_SpikeShields_All_01_Common', round(regular.weight_common*other_scale, 6), None, 1, True),
+                        ('GD_Itempools.ShieldPools.Pool_Shields_SpikeShields_All_02_Uncommon', round(regular.weight_uncommon*other_scale, 6), None, 1, True),
+                        ('GD_Itempools.ShieldPools.Pool_Shields_SpikeShields_All_02_Uncommon', round(regular.weight_uncommon*other_scale, 6), None, 1, True),
                     ])),
                 activated=hotfix_activated)
     hotfix_list.append('{}{}'.format(prefix, rarity_hfs.get_hotfix_xml(hfs_id)))
@@ -1915,6 +2027,90 @@ for (rarity_key, rarity_label) in DropConfig.rarity_presets:
                 claptastic_support_str=claptastic_support_str,
                 intro_pool_support_str=intro_pool_support_str,
                 hotfixes=rarity_hfs,
+                )
+
+    line_prefix = '#'
+    line_suffix = '<off>'
+    hotfix_activated = False
+
+# Configure the drop percentages per rarity level
+rarity_drop_prob_sections = {}
+prefix = ' '*(4*4)
+line_prefix = ''
+line_suffix = ''
+hotfix_activated = True
+for (rarity_key, rarity_label) in DropConfig.rarity_drop_prob_presets:
+    drop_prob_hfs = Hotfixes(nameprefix='ApocRarityDropProb{}'.format(rarity_key.capitalize()))
+    hotfix_list = []
+    for config in [regular, badass]:
+        rarity_drop_prob = config.rarity_drop_prob[rarity_key]
+        (T_GUN, T_SHIELD, T_DAHLINTRO, T_DAHLINTROSHIELD) = range(4)
+        for (pooldesc, pool, pooltype, has_regular, has_badass, level) in [
+                ('ar', config.rarity_pool_ar, T_GUN, True, True, ''),
+                ('launchers', config.rarity_pool_launchers, T_GUN, True, True, ''),
+                ('pistols', config.rarity_pool_pistols, T_GUN, True, True, ''),
+                ('smg', config.rarity_pool_smg, T_GUN, True, True, ''),
+                ('shotguns', config.rarity_pool_shotguns, T_GUN, True, True, ''),
+                ('snipers', config.rarity_pool_snipers, T_GUN, True, True, ''),
+                ('lasers', config.rarity_pool_lasers, T_GUN, True, True, ''),
+                ('shields', config.equip_pool_shields, T_SHIELD, True, True, ''),
+                ('dahl0', 'GD_ItempoolsEnemyUse.WeaponPools.Pool_Weapons_Pistols_EnemyUse', T_DAHLINTRO, True, False, 'MoonShotIntro_P'),
+                ('dahl1', 'GD_ItempoolsEnemyUse.WeaponPools.Pool_Weapons_Pistols_EnemyUse_DahlIntro', T_DAHLINTRO, True, False, 'MoonShotIntro_P'),
+                ('dahl2', 'GD_ItempoolsEnemyUse.WeaponPools.Pool_Weapons_Pistols_EnemyUse_Intro', T_DAHLINTRO, True, False, 'MoonShotIntro_P'),
+                ('dahl3', regular.equip_pool_shields, T_DAHLINTROSHIELD, True, False, 'MoonShotIntro_P'),
+                ('dahl4', 'GD_DahlSniper.WeaponPools.Pool_Weapons_HypSniper_EnemyUse_NoScheduling', T_GUN, True, False, ''),
+                ]:
+            if config.hotfix_prefix == 'reg' and not has_regular:
+                continue
+            if config.hotfix_prefix == 'badass' and not has_badass:
+                continue
+            if pool:
+                if pooltype == T_GUN:
+                    rarities = ['common', 'uncommon', 'rare', 'veryrare', 'glitch', 'legendary']
+                elif pooltype == T_SHIELD:
+                    rarities = ['common', 'uncommon', 'rare', 'veryrare', 'legendary']
+                elif pooltype == T_DAHLINTRO:
+                    rarities = ['common', 'uncommon', 'rare']*3 + ['common', 'uncommon']*2
+                elif pooltype == T_DAHLINTROSHIELD:
+                    rarities = ['common', 'uncommon', 'rare'] + ['common', 'uncommon']*7
+                else:
+                    raise Exception('Unknown pool type: {}'.format(pooltype))
+                for (idx, rarity) in enumerate(rarities):
+                    prob_val = rarity_drop_prob[rarity]
+                    
+                    # Make Dahl Intro pools drop a bit more frequently than usual
+                    if pooltype == T_DAHLINTRO or pooltype == T_DAHLINTROSHIELD:
+                        prob_val = (prob_val*2 + 1)/3
+
+                    hotfix_id = 'rarity_drop_prob_{}_{}_{}_{}'.format(config.hotfix_prefix, pooldesc, rarity, len(hotfix_list))
+                    drop_prob_hfs.add_level_hotfix(hotfix_id, 'Idx',
+                            '{},{},BalancedItems[{}].Probability.BaseValueScaleConstant,,{}'.format(
+                                level, pool, idx*2, round(prob_val, 6)
+                                ),
+                            activated=hotfix_activated)
+                    hotfix_list.append('{}{}'.format(prefix, drop_prob_hfs.get_hotfix_xml(hotfix_id)))
+                    hotfix_id = 'rarity_drop_prob_{}_{}_{}_{}'.format(config.hotfix_prefix, pooldesc, rarity, len(hotfix_list))
+                    drop_prob_hfs.add_level_hotfix(hotfix_id, 'Idx',
+                            '{},{},BalancedItems[{}].Probability.BaseValueScaleConstant,,{}'.format(
+                                level, pool, (idx*2)+1, round(1-prob_val, 6)
+                                ),
+                            activated=hotfix_activated)
+                    hotfix_list.append('{}{}'.format(prefix, drop_prob_hfs.get_hotfix_xml(hotfix_id)))
+
+    # Now construct the rarity section
+
+    with open('input-file-droppct.txt', 'r') as df:
+        rarity_drop_prob_sections[rarity_key] = df.read().format(
+                section_label=rarity_label,
+                line_prefix=line_prefix,
+                line_suffix=line_suffix,
+                pct_common=round(regular.rarity_drop_prob[rarity_key]['common']*100),
+                pct_uncommon=round(regular.rarity_drop_prob[rarity_key]['uncommon']*100),
+                pct_rare=round(regular.rarity_drop_prob[rarity_key]['rare']*100),
+                pct_veryrare=round(regular.rarity_drop_prob[rarity_key]['veryrare']*100),
+                pct_glitch=round(regular.rarity_drop_prob[rarity_key]['glitch']*100),
+                pct_legendary=round(regular.rarity_drop_prob[rarity_key]['legendary']*100),
+                drop_prob_hotfixes="\n\n".join(hotfix_list),
                 )
 
     line_prefix = '#'
@@ -2289,17 +2485,23 @@ hfs.add_level_hotfix('dahl_sniper_setup', 'DahlSniperPool',
         ',{},BalancedItems,,{}'.format(
             'GD_DahlSniper.WeaponPools.Pool_Weapons_HypSniper_EnemyUse_NoScheduling',
             get_balanced_items([
-                    ('GD_Weap_SniperRifles.A_Weapons.Sniper_Dahl', regular.rarities['stock']['common'], 'WeaponBalanceDefinition'),
-                    ('GD_Weap_SniperRifles.A_Weapons.Sniper_Dahl_2_Uncommon', regular.rarities['stock']['uncommon'], 'WeaponBalanceDefinition'),
-                    ('GD_Weap_SniperRifles.A_Weapons.Sniper_Dahl_3_Rare', regular.rarities['stock']['rare'], 'WeaponBalanceDefinition'),
-                    ('GD_Weap_SniperRifles.A_Weapons.Sniper_Dahl_4_VeryRare', regular.rarities['stock']['veryrare'], 'WeaponBalanceDefinition'),
-                    ('GD_Ma_Weapons.A_Weapons.Sniper_Dahl_6_Glitch', regular.rarities['stock']['glitch_normal'], 'WeaponBalanceDefinition'),
-                    ('GD_Cork_Weap_SniperRifles.A_Weapons_Legendary.Sniper_Dahl_5_Pitchfork', regular.rarities['stock']['legendary']/2, 'WeaponBalanceDefinition'),
+                    ('GD_Weap_SniperRifles.A_Weapons.Sniper_Dahl', regular.rarities['stock']['common'], 'WeaponBalanceDefinition', 1, True),
+                    ('GD_Weap_SniperRifles.A_Weapons.Sniper_Dahl', regular.rarities['stock']['common'], 'WeaponBalanceDefinition', 1, False),
+                    ('GD_Weap_SniperRifles.A_Weapons.Sniper_Dahl_2_Uncommon', regular.rarities['stock']['uncommon'], 'WeaponBalanceDefinition', 1, True),
+                    ('GD_Weap_SniperRifles.A_Weapons.Sniper_Dahl_2_Uncommon', regular.rarities['stock']['uncommon'], 'WeaponBalanceDefinition', 1, False),
+                    ('GD_Weap_SniperRifles.A_Weapons.Sniper_Dahl_3_Rare', regular.rarities['stock']['rare'], 'WeaponBalanceDefinition', 1, True),
+                    ('GD_Weap_SniperRifles.A_Weapons.Sniper_Dahl_3_Rare', regular.rarities['stock']['rare'], 'WeaponBalanceDefinition', 1, False),
+                    ('GD_Weap_SniperRifles.A_Weapons.Sniper_Dahl_4_VeryRare', regular.rarities['stock']['veryrare'], 'WeaponBalanceDefinition', 1, True),
+                    ('GD_Weap_SniperRifles.A_Weapons.Sniper_Dahl_4_VeryRare', regular.rarities['stock']['veryrare'], 'WeaponBalanceDefinition', 1, False),
+                    ('GD_Ma_Weapons.A_Weapons.Sniper_Dahl_6_Glitch', regular.rarities['stock']['glitch_normal'], 'WeaponBalanceDefinition', 1, True),
+                    ('GD_Ma_Weapons.A_Weapons.Sniper_Dahl_6_Glitch', regular.rarities['stock']['glitch_normal'], 'WeaponBalanceDefinition', 1, False),
+                    ('GD_Cork_Weap_SniperRifles.A_Weapons_Legendary.Sniper_Dahl_5_Pitchfork', regular.rarities['stock']['legendary']/2, 'WeaponBalanceDefinition', 1, True),
+                    ('GD_Cork_Weap_SniperRifles.A_Weapons_Legendary.Sniper_Dahl_5_Pitchfork', regular.rarities['stock']['legendary']/2, 'WeaponBalanceDefinition', 1, False),
                     ('GD_Cork_Weap_SniperRifles.A_Weapons_Unique.Sniper_Dahl_3_WetWeek', regular.rarities['stock']['legendary']/2, 'WeaponBalanceDefinition', 0),
                 ])))
 
 hfs.add_level_hotfix('dahl_sniper_unique', 'DahlSniperPool',
-        ',{},BalancedItems[6].Probability.BaseValueScaleConstant,,1'.format(
+        ',{},BalancedItems[12].Probability.BaseValueScaleConstant,,1'.format(
             'GD_DahlSniper.WeaponPools.Pool_Weapons_HypSniper_EnemyUse_NoScheduling'))
 
 # Vanilla Stalker shield hotfixes (dummy statement)
@@ -3481,6 +3683,8 @@ with open('input-file-mod.txt') as df:
         rarity_noglitch_excellent=rarity_sections['excellent_noglitch'],
         rarity_noglitch_better=rarity_sections['better_noglitch'],
         rarity_noglitch_stock=rarity_sections['stock_noglitch'],
+        rarity_drop_prob_guaranteed=rarity_drop_prob_sections['guaranteed'],
+        rarity_drop_prob_variable=rarity_drop_prob_sections['variable'],
         boss_drops_guaranteed=boss_drops['guaranteed'],
         boss_drops_veryimproved=boss_drops['veryimproved'],
         boss_drops_improved=boss_drops['improved'],
