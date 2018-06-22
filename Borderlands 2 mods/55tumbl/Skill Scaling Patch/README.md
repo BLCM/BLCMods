@@ -1,7 +1,6 @@
 # Overview
 
-The Skill Scaling Patch fixes a number of bugs (or inconsistencies) about the way skills scale with level, and across playthroughs. It is not meant to modify the balance of the game in a way that I would personnal.
-The 
+The Skill Scaling Patch fixes a number of bugs (or inconsistencies) about the way skills scale with level, and across playthroughs. It is not meant to "fix" the balance of the game according to my personnal preferences, but it does improve some aspects. The skills that are the most affected are Ruin (Maya), Light the Fuse (Krieg), Deathtrap and all its damage abilities (Gaige), the Sabre Turret and all its damage abilities (Axton).
 
 # Compatibility
 
