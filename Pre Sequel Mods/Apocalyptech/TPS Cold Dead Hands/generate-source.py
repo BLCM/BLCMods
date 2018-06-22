@@ -92,8 +92,8 @@ class OtherConfig(BaseConfig):
     # levels.  That way, we only need as many pools as we have loot-dropping
     # bosses in a single level.
     level_pool_0 = 'GD_CustomItemPools_MainGame.Prototype.GreenPattern'
-    level_pool_1 = 'GD_CustomItemPools_Quince.Doppel.GreenPattern'
-    level_pool_2 = 'GD_CustomItemPools_crocus.Baroness.GreenPattern'
+    level_pool_1 = 'GD_CustomItemPools_MainGame.Enforcer.DigitalEdSkins'
+    level_pool_2 = 'GD_CustomItemPools_MainGame.Gladiator.DigitalEdSkins'
 
 class DropConfig(BaseConfig):
     """
@@ -971,19 +971,19 @@ class Badass(DropConfig):
     rarity_pool_launchers = 'GD_CustomItemPools_MainGame.Prototype.GreenBoldAccent'
     rarity_pool_pistols = 'GD_CustomItemPools_MainGame.Prototype.GreenNinja'
     rarity_pool_shotguns = 'GD_CustomItemPools_MainGame.Prototype.GreenPale'
-    rarity_pool_smg = 'GD_CustomItemPools_Quince.Doppel.GreenBold'
-    rarity_pool_snipers = 'GD_CustomItemPools_Quince.Doppel.GreenBoldAccent'
-    rarity_pool_lasers = 'GD_CustomItemPools_Quince.Doppel.GreenNinja'
+    rarity_pool_smg = 'GD_CustomItemPools_MainGame.Enforcer.Gearbox'
+    rarity_pool_snipers = 'GD_CustomItemPools_MainGame.Enforcer.Gray'
+    rarity_pool_lasers = 'GD_CustomItemPools_MainGame.Gladiator.Gearbox'
 
     # Equip pools (this is where weights are applied)
-    equip_pool_shields = 'GD_CustomItemPools_Quince.Doppel.GreenPale'
-    equip_pool_all = 'GD_CustomItemPools_crocus.Baroness.GreenBold'
-    equip_pool_ar = 'GD_CustomItemPools_crocus.Baroness.GreenBoldAccent'
+    equip_pool_shields = 'GD_CustomItemPools_MainGame.Gladiator.Gray'
+    equip_pool_all = 'GD_CustomItemPools_MainGame.Lawbringer.Gearbox'
+    equip_pool_ar = 'GD_CustomItemPools_MainGame.Lawbringer.Gray'
     equip_pool_launchers = None
-    equip_pool_shotguns = 'GD_CustomItemPools_crocus.Baroness.GreenNinja'
+    equip_pool_shotguns = 'GD_CustomItemPools_MainGame.Prototype.Gearbox'
     equip_pool_snipers = None
     equip_pool_only_lasers = None
-    equip_pool_lasers = 'GD_CustomItemPools_crocus.Baroness.GreenPale'
+    equip_pool_lasers = 'GD_CustomItemPools_MainGame.Prototype.Gray'
 
     ###
     ### Enemy changes
