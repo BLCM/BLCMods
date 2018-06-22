@@ -8,7 +8,7 @@ The Skill Scaling Patch can be used as a standalone, for a vanilla experience wi
 
 The Skill Scaling Patch can also be merged onto the UCP. For that, use the SkillScalingPatch_UCP.txt, which contains additional statements that should resolve incompatibility issues.
 
-Adding other mods that affect those skills, or even skills in general, may create some issues. 
+Adding other mods that affect those skills, or even skills in general, may or may not create some issues.
 
 # Detailed changes
 
