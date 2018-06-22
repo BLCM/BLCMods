@@ -12,8 +12,8 @@
 
 ## Krieg
 
-**Light the Fuse**: Removed the level 72 cap.
+**Light the Fuse**: removed the level 72 cap.
 * No effect on damage up to level 72. Damage increased by +183% at OP8.
 
-**Krieg's innate melee damage bonus (without blade attachment)**: Removed the level 72 cap.
+**Krieg's innate melee damage bonus (without blade attachment)**: removed the level 72 cap.
 * No effect on damage up to level 72. Base melee damage increased by +6.6% at OP8.
