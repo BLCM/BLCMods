@@ -4,7 +4,7 @@ The Skill Scaling Patch fixes a number of bugs or inconsistencies about the way 
 
 # Compatibility
 
-The Skill Scaling Patch can be used as a standalone, for a vanilla experience with less bugs, and to meet Deathtrap and the Sabre Turret the way they were (I believe) supposed to be. For that, use the SkillScalingPatch_standalone.txt file, which includes the latest Gearbox hotfixes.
+The Skill Scaling Patch can be used as a standalone, for a vanilla experience with less bugs, and to meet Deathtrap and the Sabre Turret the way they were supposed to be (and actually are, on console). For that, use the SkillScalingPatch_standalone.txt file, which includes the latest Gearbox hotfixes.
 
 The Skill Scaling Patch can also be merged onto the UCP. For that, use the SkillScalingPatch_UCP.txt, which contains additional statements that should resolve incompatibility issues.
 
