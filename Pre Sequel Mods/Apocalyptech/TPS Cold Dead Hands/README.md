@@ -25,8 +25,9 @@ Grenade Mods, Class Mods, and Oz Kits will still be acquired as per usual -
 via world drops, chests, and the like.
 
 **NOTE:** This mod has a *lot* of user-configurable options (detailed below
-in the "Configuration" section).  There's technically 7,680 supported
-configurations.  Needless to say, I have not thoroughly tested out all 7,680
+in the "Configuration" section).  In fact, there's 15,360 theoretically-supported
+permutations of the options (though to be fair, there's only about 480 which
+are closely-related).  Needless to say, I have not thoroughly tested out all
 combinations to ensure that everything works as it should.  If you encounter
 strange behavior, definitely look me up on Discord, github, or email, with
 full details of how you've got it configured, and I can take a look.
@@ -122,6 +123,14 @@ mod, when loaded into FilterTool/BLCMM:
   often bosses will equip/drop their unique loot.  The default is
   "guaranteed," which is what the Better Loot mod does in "Lootsplosion,"
   but you can scale that back all the way to the stock values.
+
+* **Add More Shields to Early-Game Enemies**: By default, in Normal mode,
+  enemies in the early-to-mid game (apart from the very first intro level)
+  generally don't have shields, which would make shield acquisition difficult
+  with this mod.  Selecting this option (which is enabled by default) will
+  give most early-game Scavs and Darksiders the possibility of spawning with
+  a shield (though the shield chances will be less than they would be in
+  TVHM or UVHM).
 
 * **Stalker Shield Behavior**: In the default configuration, Stalkers behave
   just like they always have in BL2: they have a shield, but it's not a "real"

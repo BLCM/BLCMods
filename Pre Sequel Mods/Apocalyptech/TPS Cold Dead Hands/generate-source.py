@@ -2531,6 +2531,119 @@ hfs.add_level_hotfix('dahl_sniper_unique', 'DahlSniperPool',
         ',{},BalancedItems[12].Probability.BaseValueScaleConstant,,1'.format(
             'GD_DahlSniper.WeaponPools.Pool_Weapons_HypSniper_EnemyUse_NoScheduling'))
 
+# No extra shields (dummy statement)
+hfs.add_level_hotfix('moreshields_dummy', 'MoreShields',
+        'MoreShieldsDummy_P,GD_MoreShieldsDummy,DummyAttribute,1,1',
+        activated=False)
+
+# Add a chance of shields to early-game enemies so that there's a reasonable
+# chance of getting shield drops (would be very thin on the ground, otherwise)
+moreshields_real_list = []
+prefix = ' '*(4*4)
+
+# First up: enemies with a CIPL on PT[0] without any shield entry
+for (pool, chance) in [
+        ('GD_Population_Scavengers.Balance.MercDay.PawnBalance_ScavMidget_Mercday', .2),
+        ('GD_Population_Scavengers.Balance.Midgets.PawnBalance_ScavMidget', .2),
+        ('GD_Population_Scavengers.Balance.Pandoracorn.PawnBalance_ScavMidget_Pandoracorn', .2),
+        ('GD_Population_Scavengers.Balance.Pumpkin.PawnBalance_ScavMidget_Pumpkin', .2),
+        ('GD_Population_Scavengers.Balance.Midgets.PawnBalance_ScavMidgetSpaceman', .3),
+        ('GD_Population_Scavengers.Balance.Outlaws.PawnBalance_ScavNomad', .3),
+        ]:
+    hotfix_id = 'more_shields_{}'.format(len(moreshields_real_list))
+    hfs.add_level_hotfix(hotfix_id, 'MoreShields',
+            """,{},PlayThroughs[0].CustomItemPoolList,,
+            +(
+                ItemPool=ItemPoolDefinition'{}',
+                PoolProbability=(
+                    BaseValueConstant=1,
+                    BaseValueAttribute=None,
+                    InitializationDefinition=None,
+                    BaseValueScaleConstant={}
+                )
+            )
+            """.format(
+                pool,
+                regular.equip_pool_shields,
+                chance))
+    moreshields_real_list.append('{}{}'.format(prefix, hfs.get_hotfix_xml(hotfix_id)))
+
+# Next: enemies without DIPL or CIPL at all (populate CIPL)
+for (pool, chance) in [
+        ('GD_Population_Scavengers.Balance.MercDay.PawnBalance_ScavengerPsycho_Mercday', .2),
+        ('GD_Population_Scavengers.Balance.Pandoracorn.PawnBalance_ScavengerPsycho_Pandoracorn', .2),
+        ('GD_Population_Scavengers.Balance.Psychos.PawnBalance_ScavengerPsycho', .2),
+        ('GD_Population_Scavengers.Balance.Pumpkin.PawnBalance_ScavengerPsycho_Pumpkin', .2),
+        ('GD_Population_Scavengers.Balance.Midgets.PawnBalance_ScavPsychoMidget', .33),
+        ('GD_Population_Darksiders.Balance.PawnBalance_DarksiderPsycho', .1),
+        ]:
+    hotfix_id = 'more_shields_{}'.format(len(moreshields_real_list))
+    hfs.add_level_hotfix(hotfix_id, 'MoreShields',
+            """,{},PlayThroughs[0].CustomItemPoolList,,
+            (
+                (
+                    ItemPool=ItemPoolDefinition'{}',
+                    PoolProbability=(
+                        BaseValueConstant=1,
+                        BaseValueAttribute=None,
+                        InitializationDefinition=None,
+                        BaseValueScaleConstant={}
+                    )
+                )
+            )
+            """.format(
+                pool,
+                regular.equip_pool_shields,
+                chance))
+    moreshields_real_list.append('{}{}'.format(prefix, hfs.get_hotfix_xml(hotfix_id)))
+
+# Next: enemies with a CIPL on PT[0] which already has a shield entry (but is typically set to 0)
+for (pool, cipl_idx, chance) in [
+        ('GD_Population_Scavengers.Balance.MercDay.PawnBalance_ScavengerBandit_Jetpack_MercDay', 1, .1),
+        ('GD_Population_Scavengers.Balance.Pandoracorn.PawnBalance_ScavengerBandit_Jetpack_Pandoracorn', 1, .1),
+        ('GD_Population_Scavengers.Balance.Pumpkin.PawnBalance_ScavengerBandit_Jetpack_Pumpkin', 1, .1),
+        ('GD_Population_Scavengers.Balance.PawnBalance_ScavengerBandit_Jetpack', 1, .1),
+        ('GD_Population_Scavengers.Balance.MercDay.PawnBalance_ScavengerBandit_Mercday', 1, .1),
+        ('GD_Population_Scavengers.Balance.Pandoracorn.PawnBalance_ScavengerBandit_Pandoracorn', 1, .1),
+        ('GD_Population_Scavengers.Balance.PawnBalance_ScavengerBandit', 1, .1),
+        ('GD_Population_Scavengers.Balance.Pumpkin.PawnBalance_ScavengerBandit_Pumpkin', 1, .1),
+        ]:
+    hotfix_id = 'more_shields_{}'.format(len(moreshields_real_list))
+    hfs.add_level_hotfix(hotfix_id, 'MoreShields',
+            """,{},PlayThroughs[0].CustomItemPoolList[{}].PoolProbability,,
+            (
+                BaseValueConstant=1,
+                BaseValueAttribute=None,
+                InitializationDefinition=None,
+                BaseValueScaleConstant={}
+            )
+            """.format(pool, cipl_idx, chance))
+    moreshields_real_list.append('{}{}'.format(prefix, hfs.get_hotfix_xml(hotfix_id)))
+
+# Finally: enemies with a DIPL which doesn't have shields
+for (pool, chance) in [
+        ('GD_Population_Darksiders.Balance.PawnBalance_DarksiderBandit', .1),
+        ('GD_Population_Darksiders.Balance.PawnBalance_LittleDarksiderBandit', .1),
+        ('GD_Population_Darksiders.Balance.PawnBalance_LittleDarksiderPsycho', .1),
+        ]:
+    hotfix_id = 'more_shields_{}'.format(len(moreshields_real_list))
+    hfs.add_level_hotfix(hotfix_id, 'MoreShields',
+            """,{},DefaultItemPoolList,,
+            +(
+                ItemPool=ItemPoolDefinition'{}',
+                PoolProbability=(
+                    BaseValueConstant=1,
+                    BaseValueAttribute=None,
+                    InitializationDefinition=None,
+                    BaseValueScaleConstant={}
+                )
+            )
+            """.format(
+                pool,
+                regular.equip_pool_shields,
+                chance))
+    moreshields_real_list.append('{}{}'.format(prefix, hfs.get_hotfix_xml(hotfix_id)))
+
 # Vanilla Stalker shield hotfixes (dummy statement)
 hfs.add_level_hotfix('stalker_dummy', 'StalkerShields',
         'StalkerDummy_P,GD_StalkerDummy,DummyAttribute,1,1')
@@ -3717,6 +3830,7 @@ with open('input-file-mod.txt') as df:
         boss_drops_improved=boss_drops['improved'],
         boss_drops_slightimproved=boss_drops['slight'],
         boss_drops_stock=boss_drops['stock'],
+        more_shields_real="\n\n".join(moreshields_real_list),
         stalker_shields_real="\n\n".join(stalker_shields_real_list),
         guardian_shields_real="\n\n".join(guardian_shields_real_list),
         clapcreature_shields_real="\n\n".join(clapcreature_shields_real_list),
