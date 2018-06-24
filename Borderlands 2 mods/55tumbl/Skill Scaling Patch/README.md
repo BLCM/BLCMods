@@ -14,7 +14,7 @@ Adding other mods that affect those skills, or even skills in general, may or ma
 
 # Detailed change log
 
-You can check all the damage values at different levels, on console or on PC/mac (with or without the SkillScalingPatch) [here](http://blstats.com/skilldamage.php).
+You can find [here](http://blstats.com/skilldamage.php) all the damage values at different levels/playthroughs, on console and on PC/mac (with or without the SkillScalingPatch).
 
 ## Maya
 
