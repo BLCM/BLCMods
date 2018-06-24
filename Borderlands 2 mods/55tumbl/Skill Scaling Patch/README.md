@@ -38,4 +38,13 @@ Adding other mods that affect those skills, or even skills in general, may or ma
 ## Zer0
 **Unf0rseen (electrocute DOT)**: made to scale like other skills and removed the level 72 cap.    
 * Damage increase of +60% at level 30, +100% at level 50, +144% at 72, +590% at OP8.
-* This does not affect the main damage from Unf0rseen (if the target is electrocuted, the increased DOT would give about +5% overall Unf0rseen damage at OP8).
+* This is minor, since it does not affect the main damage from Unf0rseen (if the target is electrocuted, the increased DOT would give about +5% overall Unf0rseen damage at OP8).
+
+## Gaige
+**Deathtrap** Made its damage scale the way it was supposed to (and actually does, on console)
+* This affects the base melee damage, and the damage from his skills (Explosive Clap, The Stare, etc)
+* Damage decrease of -29% at level 5 (Normal), increase of +4% at level 30 (Normal), +110% at level 50 (TVHM), +156% at level 72 (UVHM), +173% at OP8.
+* The multiplicative bonus on his roid damage from Sharing is Caring now depends on level: instead of a constant value of 1.4, it increases from ~1.5 at level 31 (Normal), to ~3.8 at OP8.
+* Deathtrap now gets a bonus to his damage in co-op. The max bonus (4 players) should be about +90% in Normal, and about +30% in TVHM/UVHM.
+* All of this should now be exactly the same as it is on console.
+
