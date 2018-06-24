@@ -2,7 +2,7 @@
 
 The Skill Scaling Patch fixes a number of bugs or inconsistencies about the way skills scale with level, and across playthroughs. It is not meant to "fix" the balance of the game according to my personnal preferences, but merely to make it work as was (most probably) intended. It does clearly improve some aspects of the balance, though. The skills that are the most affected are Ruin (Maya), Light the Fuse (Krieg), Deathtrap and all its damage abilities (Gaige), the Sabre Turret and all its damage abilities (Axton).
 
-Concerning Deathtrap and the Sabre Turret, most of the bugs in question were actually not present on console. With the SkillScalingPatch, their damage output should be identical (or close) to what it is on console. And that makes a huge difference on their end-game viability.
+Concerning Deathtrap and the Sabre Turret, the main problem addressed by this patch was actually not present on console. With the SkillScalingPatch, their damage output should thus be identical (or close) to what it is on console. And that makes a huge difference on their end-game viability.
 
 # Compatibility
 
@@ -63,3 +63,13 @@ You can find [here](http://blstats.com/skilldamage.php) all the damage values at
 * The Sabre Turret still does not get any bonus damage in multiplayer, as it does on console (like Deathtrap).
 
 One issue with this fix is that the damage of the turret is in part calculated from the level of the game, rather than the level of the turret itself. For example, if you join the game of a lower/higher level player, your turret damage will adapt (to some extent), and be lower/higher than it should. I don't think this should be too problematic in practice.
+
+# Credits
+
+This was all written by me.
+
+Thanks to Koby for making me want to do something about it, and inviting me to Shadow's Evil Hideout Discord channel. And thanks to all the folks there who answered my questions and helped me get started.
+
+
+
+
