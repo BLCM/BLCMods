@@ -2,7 +2,7 @@
 
 The Skill Scaling Patch fixes a number of bugs or inconsistencies about the way skills scale with level, and across playthroughs. It is not meant to "fix" the balance of the game according to my personnal preferences, but merely to make it work as was (most probably) intended. It does clearly improve some aspects of the balance, though. The skills that are the most affected are Ruin (Maya), Light the Fuse (Krieg), Deathtrap and all its damage abilities (Gaige), the Sabre Turret and all its damage abilities (Axton).
 
-Concerning Deathtrap and the Sabre Turret, the bugs in question were actually not present on console. With the SkillScalingPatch, their damage output should be identical (or close) to what it is on console. And that makes a huge difference on their end-game viability.
+Concerning Deathtrap and the Sabre Turret, most of the bugs in question were actually not present on console. With the SkillScalingPatch, their damage output should be identical (or close) to what it is on console. And that makes a huge difference on their end-game viability.
 
 # Compatibility
 
