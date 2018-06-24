@@ -14,6 +14,8 @@ Adding other mods that affect those skills, or even skills in general, may or ma
 
 # Detailed change log
 
+You can check all the damage values at different levels, on console or on PC/mac (with or without the SkillScalingPatch) [here](http://blstats.com/skilldamage.php).
+
 ## Maya
 
 **Ruin (elemental explosions and DOTs)**: made to scale like other skills and removed the level 72 cap.    
