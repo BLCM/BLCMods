@@ -55,7 +55,7 @@ Adding other mods that affect those skills, or even skills in general, may or ma
 * This affects the damage of the bullets, the Scorched Earth Rockets, Nuke, and the capacity of the Phalanx Shield.
 * The damage is now as it should be (and the same as on console) at level 0 (Normal), and at OP8. But it evolves a bit differently in-between. Mostly: it gets about 30% too large at the end of Normal mode, and about 30% too small in the beginning of TVHM. 
 * Bullets, Rockets & part of the Nuke damage: -38% damage at level 5 (Normal), +14% at level 30 (Normal), +56% at level 50 (TVHM), +119% at OP8.
-* Other part of the Nuke damage: -7% at level 16 (Normal), +43% at level 30 (Normal), +95% at level 50 (TVHM), +173% at OP8.
+* Other part of the Nuke damage: +43% at level 30 (Normal), +95% at level 50 (TVHM), +173% at OP8.
 * Nuke Fire DOT:
 * Phalanx Shield capacity is made to scale better, to stay (very roughly) constant relative to the turret's health. This is not the case on console. -12% capacity at level 16 (Normal), +18% at level 30 (Normal), +61% at level 50 (TVHM), +125% at OP8.
 * The Sabre Turret still does not get any bonus damage in multiplayer, as it does on console (like Deathtrap).
