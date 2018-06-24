@@ -14,3 +14,7 @@ It's an alright skin but @Yurot made a better one lol
 This is supposed to resemble the gun of the same name from Halo
 Yes it's an assualt rifle don't reeee me for it
 I also plan on balancing this too
+
+
+-Sal the Invincible
+Makes Sal Invincible :SeemsGood:
