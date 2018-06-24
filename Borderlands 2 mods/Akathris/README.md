@@ -17,4 +17,4 @@ I also plan on balancing this too
 
 
 -Sal the Invincible
-Makes Sal Invincible :SeemsGood:
+Makes Sal Invincible ![](https://static-cdn.jtvnw.net/emoticons/v1/64138/3.0)
