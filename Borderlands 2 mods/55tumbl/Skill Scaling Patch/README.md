@@ -60,4 +60,4 @@ Adding other mods that affect those skills, or even skills in general, may or ma
 * Phalanx Shield capacity is made to scale better, to stay (very roughly) constant relative to the turret's health. This is not the case on console. -12% capacity at level 16 (Normal), +18% at level 30 (Normal), +61% at level 50 (TVHM), +125% at OP8.
 * The Sabre Turret still does not get any bonus damage in multiplayer, as it does on console (like Deathtrap).
 
-One issue with this fix is that the damage of the turret is in part calculated from the level of the game, rather than the level of the turret itself. For example, if you join the game of a lower/higher level player, your turret damage will adapt (to some extent), and be lower/higher than it should. 
+One issue with this fix is that the damage of the turret is in part calculated from the level of the game, rather than the level of the turret itself. For example, if you join the game of a lower/higher level player, your turret damage will adapt (to some extent), and be lower/higher than it should. I don't think this should be too problematic in practice.
