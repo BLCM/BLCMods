@@ -3381,9 +3381,22 @@ for (label, key, unique_pct, rare_pct) in [
             ],
             activated=hotfix_activated)
 
-    # Deadlift Shield (Deadsurface_P pool 0)
+    for (hotfix_id, popdef) in [
+            ('base', 'GD_SpacemanDeadlift.Population.PawnBalance_SpacemanDeadlift'),
+            ('mercday', 'GD_SpacemanDeadlift.Population.PawnBalance_SpacemanDeadlift_MercDay'),
+            ('pandoracorn', 'GD_SpacemanDeadlift.Population.PawnBalance_SpacemanDeadlift_Pandoracorn'),
+            ('pumpkin', 'GD_SpacemanDeadlift.Population.PawnBalance_SpacemanDeadlift_Pumpkin'),
+            ]:
 
-    setup_boss_pool('deadlift_pool_1', 'Deadsurface_P', other.level_pool_0,
+        set_dipl_item_prob('deadlift_pool_{}_1'.format(hotfix_id),
+                popdef,
+                2,
+                level='Deadsurface_P',
+                activated=hotfix_activated)
+
+    # Deadlift Shield, though only in PT2+ (Deadsurface_P pool 0)
+
+    setup_boss_pool('deadlift_pool_2', 'Deadsurface_P', other.level_pool_0,
             badass.equip_pool_shields,
             [
                 ('GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Absorption_05_LegendaryShock', rare_pct, 'InventoryBalanceDefinition'),
@@ -3397,16 +3410,68 @@ for (label, key, unique_pct, rare_pct) in [
             ('pumpkin', 'GD_SpacemanDeadlift.Population.PawnBalance_SpacemanDeadlift_Pumpkin'),
             ]:
 
-        set_dipl_item_pool('deadlift_pool_{}_2'.format(hotfix_id),
-                popdef,
-                1,
-                other.level_pool_0,
-                level='Deadsurface_P',
+        hfs.add_level_hotfix('deadlift_pool_{}_3'.format(hotfix_id),
+                'DeadliftShieldSecondPT',
+                """
+                Deadsurface_P,
+                {},
+                PlayThroughs[1].CustomItemPoolList,,
+                (
+                    ( 
+                        ItemPool=ItemPoolDefinition'GD_SpacemanDeadlift.WeaponPools.Pool_Weapons_Deadlift_Shocklaser', 
+                        PoolProbability=( 
+                            BaseValueConstant=1.000000, 
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=None, 
+                            BaseValueScaleConstant=1.000000 
+                        ) 
+                    ),
+                    (
+                        ItemPool=ItemPoolDefinition'{}', 
+                        PoolProbability=( 
+                            BaseValueConstant=1.000000, 
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=None, 
+                            BaseValueScaleConstant=1.000000 
+                        ) 
+                    )
+                )
+                """.format(popdef, other.level_pool_0),
                 activated=hotfix_activated)
 
-        set_dipl_item_prob('deadlift_pool_{}_3'.format(hotfix_id),
-                popdef,
-                2,
+    # Nel Shield (Deadsurface_P pool 1)
+
+    setup_boss_pool('nel_pool_0', 'Deadsurface_P', other.level_pool_1,
+            badass.equip_pool_shields,
+            [
+                ('GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Absorption_05_LegendaryShock', rare_pct, 'InventoryBalanceDefinition'),
+            ],
+            activated=hotfix_activated)
+
+    hfs.add_level_hotfix('nel_pool_1', 'NelKalaShield',
+            """
+            DeadSurface_P,
+            GD_Nel.Population.PawnBalance_Nel,
+            DefaultItemPoolList,,
+            +(
+                ItemPool=ItemPoolDefinition'{}',
+                PoolProbability=( 
+                    BaseValueConstant=1.000000, 
+                    BaseValueAttribute=None, 
+                    InitializationDefinition=None, 
+                    BaseValueScaleConstant=1.000000 
+                ) 
+            )
+            """.format(other.level_pool_1),
+            activated=hotfix_activated)
+
+    # Nel - disable specific weapon drops.
+
+    for num in range(15, 22):
+
+        set_dipl_item_prob('nel_pool_disable_{}'.format(num),
+                'GD_Nel.Population.PawnBalance_Nel',
+                num,
                 level='Deadsurface_P',
                 activated=hotfix_activated)
 

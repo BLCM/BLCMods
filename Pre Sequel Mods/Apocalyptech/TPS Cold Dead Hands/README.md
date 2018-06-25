@@ -86,6 +86,11 @@ from the start of the battle which gun you'll receive.
   this to myself by saying they must need the matter as part of whatever reaction
   is powering their ascension.  :)
 
+* UCP added a chance for Deadlift to spawn the Kala, but we're not letting him
+  equip/drop the Kala on Playthrough 1.  It's just too hard a fight for that stage
+  of the game.  He'll have a chance to equip/drop it on TVHM+, and I've also set
+  Nel to be able to equip/drop the Kala to compensate.
+
 ### Configuration
 
 There are several categories you can use to customize various aspects of the
