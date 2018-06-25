@@ -8,9 +8,11 @@ Concerning Deathtrap and the Sabre Turret, the main problem addressed by this pa
 
 The Skill Scaling Patch can be used as a standalone, for a vanilla experience with less bugs, and to meet Deathtrap and the Sabre Turret the way they were supposed to be (and actually are, on console). For that, use the SkillScalingPatch_SA.txt file, which includes the latest Gearbox hotfixes.
 
-The Skill Scaling Patch can also be merged onto the UCP. For that, use the SkillScalingPatch_UCP.txt, which contains additional statements to reverse some UCP buffs that are no longer necessary and/or create incompatibility issues.
-
-Adding other mods that affect those skills, or even skills in general, may or may not create some incompatibility issues.
+You can also try to merge it with other mods. However, this may create serious incompatibilities if the other mods affect the skills modified by the Skill Scaling Patch, or even skills in general. Notably, if you want to use it with the UCP: open the UCP with the FilterTool, add SkillScalingPatch.txt from the FilterTool menu (Developer Tools > Add single mod), and make sure to disable the following UCP changes in Buffs > Changes to Skills:
+* For Axton: Turret Buff, Double Up, Gemeni, Laser Sight, Nuke, PhalanxShield, Scorched Earth, Sentry
+* For Maya: Ruin, (Scorn optional)
+* For Gaige: Annoyed Android, Explosive Clap, Laser Stare, Make it Sparkle, One Two Boom, Robot Rampage, Sharing is Caring, (Made of Sterner stuff optional)
+* For Krieg: Light the Fuse
 
 # Detailed change log
 
