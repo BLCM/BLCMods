@@ -2,7 +2,7 @@
 
 The Skill Scaling Patch fixes a number of bugs or inconsistencies about the way skills scale with level, and across playthroughs. It is not meant to "fix" the balance of the game according to my personnal preferences, but merely to make it work as was (most probably) intended. It does clearly improve some aspects of the balance, though. The skills that are the most affected are Ruin (Maya), Light the Fuse (Krieg), Deathtrap and all its damage abilities (Gaige), the Sabre Turret and all its damage abilities (Axton).
 
-Concerning Deathtrap and the Sabre Turret, the main problem addressed by this patch was actually not present on console. With the SkillScalingPatch, their damage output should thus be identical (or close) to what it is on console. And that makes a huge difference on their end-game viability.
+Concerning Deathtrap and the Sabre Turret, the main problem addressed by this patch was actually not present on console. With the Skill Scaling Patch, their damage output should thus be identical (or close) to what it is on console. And that makes a huge difference on their end-game viability.
 
 # Compatibility
 
@@ -16,7 +16,7 @@ You can also try to merge it with other mods. However, this may create serious i
 
 # Detailed change log
 
-You can find [here](http://blstats.com/skilldamage.php) all the damage values at different levels/playthroughs, on console and on PC/mac (with or without the SkillScalingPatch).
+You can find [here](http://blstats.com/skilldamage.php) all the damage values at different levels/playthroughs, on console and on PC/mac (with or without the Skill Scaling Patch).
 
 ## Maya
 
