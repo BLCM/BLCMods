@@ -26,8 +26,7 @@ Cloud Kill does about 7% of its damage at level 16, 12% at level 30, 27% at leve
 # Known Issues
 
 The Cloud Kill damage ends up being in part calculated from the level of the game, rather than the level of Maya herself.
-For example, if you join the game of a lower/higher level player, your Cloud Kill damage will adapt (to some extent), and be lower/higher than it should.
-I don't think this should be too problematic in practice.
+For example, if you join the game of a lower/higher level player, your Cloud Kill damage will adapt (to some extent), and be lower/higher than it would have been in a perfect world. I don't think this should be really problematic in practice.
 
 # Credits
 
