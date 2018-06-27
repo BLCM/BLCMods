@@ -1,8 +1,8 @@
 # Overview
 
 The **Cloud Kill Dynamic Nerf** nerfs Cloud Kill, uh well, dynamically.
-Basically, Cloud Kill gets nerfed a lot in the early levels, and a lot less (or pretty much not at all) in the end game.
-Several options are available.
+
+In other words, Cloud Kill gets nerfed *a lot* in the early levels, and *a lot less* (or pretty much not at all) in the end game. Several options are available.
 
 # Compatibility
 
