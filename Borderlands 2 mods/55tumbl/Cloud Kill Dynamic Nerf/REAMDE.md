@@ -8,7 +8,7 @@ In other words, Cloud Kill gets nerfed *a lot* in the early levels, and *a lot l
 
 The Cloud Kill Dynamic Nerf is compatible with the Skill Scaling Patch.
 It should be compatible with most other mods, as long as they do not touch Cloud Kill and/or Blight Phoenix.
-If they do touch Cloud Kill and/or Blight Phoenix, it will probably still be fine as long as you add the Cloud Kill Dynamic Nerf at the end.
+If they do touch Cloud Kill and/or Blight Phoenix, it will probably still be fine as long as you add the Cloud Kill Dynamic Nerf at the end. It may also not be fine at all.
 
 (Note that, in practice, Blight Phoenix is left unchanged by this mod.. it did lose a few of its internal organs, but with no noticeable consequences).
 
