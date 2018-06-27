@@ -14,11 +14,14 @@ If they do touch Cloud Kill and/or Blight Phoenix, it will probably still be fin
 
 # Options
 
-* Normal Maya: Cloud Kill does about 10% of its damage at level 16, 18% at level 30, 41% at level 50, 79% at level 72, 95% at OP8.
+**Normal Maya**
+Cloud Kill does about 10% of its damage at level 16, 18% at level 30, 41% at level 50, 79% at level 72, 95% at OP8.
 
-* True Maya: Cloud Kill does about 10% of its damage at level 16, 17% at level 30, 36% at level 50, 65% at level 72, 78% at OP8.
+**True Maya**
+Cloud Kill does about 10% of its damage at level 16, 17% at level 30, 36% at level 50, 65% at level 72, 78% at OP8.
 
-* Ultimate Maya: Cloud Kill does about 7% of its damage at level 16, 12% at level 30, 27% at level 50, 52% at level 72, 63% at OP8.
+**Ultimate Maya**
+Cloud Kill does about 7% of its damage at level 16, 12% at level 30, 27% at level 50, 52% at level 72, 63% at OP8.
 
 # Known Issues
 
