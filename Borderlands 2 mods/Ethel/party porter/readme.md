@@ -6,10 +6,13 @@ spawns w/ unique bandit body
 
 ***
 
-+++ dmg
---- acc
--- spread
-- FR
++++dmg
+
+---acc
+
+--spread
+
+-FR
 
 ***
 ignore no name, too lazy to gib title in
