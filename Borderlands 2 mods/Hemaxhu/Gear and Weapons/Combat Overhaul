@@ -1,5 +1,55 @@
 #<Combat Plus>
 
+    #<Description>
+
+        This mod will :
+
+        1] Increase game difficulty (At least sometimes)
+
+        2] Increase animation speed [A bit (50%), not FFYL way]
+
+        3] Add recoil to most weapons
+
+        5] Rework most weapons, their manufacturers
+
+        6] Teach enemies how to shoot 30 bullets instead of 3
+
+        7] Allow player to regenerate health after 15 seconds of idle
+
+        8] Increase revive speed (In coop, +50%)
+
+        9] Increase player sprint speed 
+
+        10] Decrease FFYL duration. If you will fall more than 2 times - hello respawn station
+
+        11] Get rid off bullet spongy enemies
+
+        12] Reduce your ammo pool. For balance reasons. 
+
+        13] Remove "Reload Cancel" on most weapons
+
+        14] Add 'Shaking effect' to weapons while walking, sprinting [Optional]
+
+        15] Edit view on guns
+
+        16] Change skill tree fov, some text colors
+
+        Changes in update:
+
+        Added 'optional' section
+
+        Be sure to check it
+
+        Note: This mod is currently in 'Alpha' stage
+
+        Enemies with guns were affected mostly, and i don't know what to do about animals and others
+
+        This mod also wasnt tested on high levels
+
+        Don't test this mod by using only one or two guns like someone who uploaded a video about it.
+
+    #</Description>
+
     #<Core>
 
         #<Settings>
@@ -26,29 +76,41 @@
 
             set GD_Globals.General.Globals DayNightCycleRate 0.700000
 
-            set GD_PlayerShared.injured.PlayerInjuredDefinition ReviveDuration 2.55 
+            set GD_PlayerShared.injured.PlayerInjuredDefinition ReviveDuration 2.55
 
-            set GD_PlayerShared.injured.PlayerInjuredDefinition ResurrectedShieldPctOfMax 0.01 
+            set GD_PlayerShared.injured.PlayerInjuredDefinition ResurrectedShieldPctOfMax 0.01
 
-            set GD_PlayerShared.injured.PlayerInjuredDefinition RejuvenatedHealthPctOfMax 0.10 
+            set GD_PlayerShared.injured.PlayerInjuredDefinition RejuvenatedHealthPctOfMax 0.10
 
             set GD_PlayerShared.injured.PlayerInjuredDefinition RejuvenatedShieldPctOfMax 0.10
 
-            set GD_PlayerShared.injured.PlayerInjuredDefinition ResurrectedHealthPctOfMax 0.25 
+            set GD_PlayerShared.injured.PlayerInjuredDefinition ResurrectedHealthPctOfMax 0.25
 
-            set GD_PlayerShared.injured.PlayerInjuredDefinition RevivedShieldPctOfMax 0.25 
+            set GD_PlayerShared.injured.PlayerInjuredDefinition RevivedShieldPctOfMax 0.25
 
-            set GD_PlayerShared.injured.PlayerInjuredDefinition RevivedHealthPctOfMax 0.10 
+            set GD_PlayerShared.injured.PlayerInjuredDefinition RevivedHealthPctOfMax 0.10
 
-            set GD_PlayerShared.injured.PlayerInjuredDefinition BaseRejuvenateDelay 5 
+            set GD_PlayerShared.injured.PlayerInjuredDefinition BaseRejuvenateDelay 5
 
-            set GD_PlayerShared.injured.PlayerInjuredDefinition BaseMultiplePlayersRejuvenateDelay 7 
+            set GD_PlayerShared.injured.PlayerInjuredDefinition BaseMultiplePlayersRejuvenateDelay 7
 
-            set GD_PlayerShared.injured.PlayerInjuredDefinition InjuredViewDropCycleTime 0.25 
+            set GD_PlayerShared.injured.PlayerInjuredDefinition InjuredViewDropCycleTime 0.25
 
             set GD_PlayerShared.injured.PlayerInjuredDefinition MaxDesiredSuccessiveInjuries 2
 
-            set GD_Balance_HealthAndDamage.HealthAndDamage.Att_UniversalBalanceScaler:ConstantAttributeValueResolver_0 ConstantValue 1.06
+            set GD_Balance_HealthAndDamage.HealthAndDamage.Att_UniversalBalanceScaler:ConstantAttributeValueResolver_0 ConstantValue 1.05
+
+            set GD_Ammodrops.Pickups.AmmoDrop_Assault_Rifle_Bullets ExternalAttributeEffects ((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Combat_Rifle.Ammo_Combat_Rifle_CurrentValue',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Ammodrops.AttributeInitialization.Init_AmmoAmountShared_CombatRifle',BaseValueScaleConstant=0.500000))
+
+            set GD_Ammodrops.Pickups.AmmoDrop_Patrol_SMG_Clip ExternalAttributeEffects ((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Patrol_SMG.Ammo_Patrol_SMG_CurrentValue',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=24.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Ammodrops.AttributeInitialization.Init_AmmoAmountShared_SMG',BaseValueScaleConstant=0.500000))
+
+            set GD_Ammodrops.Pickups.AmmoDrop_Repeater_Pistol_Clip ExternalAttributeEffects ((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Repeater_Pistol.Ammo_Repeater_Pistol_CurrentValue',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Ammodrops.AttributeInitialization.Init_AmmoAmountShared_Repeater',BaseValueScaleConstant=0.400000))
+
+            set GD_Ammodrops.Pickups.AmmoDrop_Rocket_Launcher ExternalAttributeEffects ((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Rocket_Launcher.Ammo_Rocket_Launcher_CurrentValue',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Ammodrops.AttributeInitialization.Init_AmmoAmountShared_Launcher',BaseValueScaleConstant=0.300000))
+
+            set GD_Ammodrops.Pickups.AmmoDrop_Shotgun_Shells ExternalAttributeEffects ((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Combat_Shotgun.Ammo_Combat_Shotgun_CurrentValue',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Ammodrops.AttributeInitialization.Init_AmmoAmountShared_Shotgun',BaseValueScaleConstant=0.400000))
+
+            set GD_Ammodrops.Pickups.AmmoDrop_Sniper_Rifle_Cartridges ExternalAttributeEffects ((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Sniper_Rifle.Ammo_Sniper_Rifle_CurrentValue',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Ammodrops.AttributeInitialization.Init_AmmoAmountShared_SniperRifle',BaseValueScaleConstant=0.500000))
 
         #</Settings>
 
@@ -292,7 +354,7 @@
 
                     set GD_Weap_AssaultRifle.A_Weapons.WT_Vladof_AssaultRifle Torque (X=0.000000,Y=0.000000,Z=3.000000)
 
-                    set GD_Weap_AssaultRifle.A_Weapons.WT_Vladof_AssaultRifle MaxAngleCos 5555 
+                    set GD_Weap_AssaultRifle.A_Weapons.WT_Vladof_AssaultRifle MaxAngleCos 5555
 
                     set GD_Weap_AssaultRifle.A_Weapons.WT_Vladof_AssaultRifle FireRate 0.07
 
@@ -306,21 +368,21 @@
 
                     set GD_Weap_AssaultRifle.A_Weapons.WT_Dahl_AssaultRifle FractalWanderLacunarity 0.800000
 
-                    set GD_Weap_AssaultRifle.A_Weapons.WT_Dahl_AssaultRifle FractalWanderPersistence 5.700000 
+                    set GD_Weap_AssaultRifle.A_Weapons.WT_Dahl_AssaultRifle FractalWanderPersistence 5.700000
 
-                    set GD_Weap_AssaultRifle.A_Weapons.WT_Dahl_AssaultRifle AutomaticBurstCount 3 
+                    set GD_Weap_AssaultRifle.A_Weapons.WT_Dahl_AssaultRifle AutomaticBurstCount 3
 
-                    set GD_Weap_AssaultRifle.A_Weapons.WT_Dahl_AssaultRifle FractalWanderPersistence 6.700000 
+                    set GD_Weap_AssaultRifle.A_Weapons.WT_Dahl_AssaultRifle FractalWanderPersistence 6.700000
 
-                    set GD_Weap_AssaultRifle.A_Weapons.WT_Dahl_AssaultRifle FractalWanderLacunarity 1.100000 
+                    set GD_Weap_AssaultRifle.A_Weapons.WT_Dahl_AssaultRifle FractalWanderLacunarity 1.100000
 
                     set GD_Weap_AssaultRifle.A_Weapons.WT_Dahl_AssaultRifle ZoomedRecoilAnimScale 0.06
 
-                    set GD_Weap_AssaultRifle.A_Weapons.WT_Dahl_AssaultRifle WeaponKickDown 7.55 
+                    set GD_Weap_AssaultRifle.A_Weapons.WT_Dahl_AssaultRifle WeaponKickDown 7.55
 
-                    set GD_Weap_AssaultRifle.A_Weapons.WT_Dahl_AssaultRifle WeaponKickUp 52 
+                    set GD_Weap_AssaultRifle.A_Weapons.WT_Dahl_AssaultRifle WeaponKickUp 52
 
-                    set GD_Weap_AssaultRifle.A_Weapons.WT_Dahl_AssaultRifle WeaponKickSpeed 752.75 
+                    set GD_Weap_AssaultRifle.A_Weapons.WT_Dahl_AssaultRifle WeaponKickSpeed 752.75
 
                     set GD_Weap_AssaultRifle.A_Weapons.WT_Dahl_AssaultRifle Firerate 0.12
 
@@ -330,23 +392,23 @@
 
                 #<Jakobs AR>
 
-                    set GD_Weap_AssaultRifle.A_Weapons.WT_Jakobs_AssaultRifle FireRate 0.175000 
+                    set GD_Weap_AssaultRifle.A_Weapons.WT_Jakobs_AssaultRifle FireRate 0.175000
 
-                    set GD_Weap_AssaultRifle.A_Weapons.WT_Jakobs_AssaultRifle WeaponKickSpeed 75.75 
+                    set GD_Weap_AssaultRifle.A_Weapons.WT_Jakobs_AssaultRifle WeaponKickSpeed 75.75
 
-                    set GD_Weap_AssaultRifle.A_Weapons.WT_Jakobs_AssaultRifle WeaponKickDown 10.55 
+                    set GD_Weap_AssaultRifle.A_Weapons.WT_Jakobs_AssaultRifle WeaponKickDown 10.55
 
-                    set GD_Weap_AssaultRifle.A_Weapons.WT_Jakobs_AssaultRifle WeaponKickLeft 120.55 
+                    set GD_Weap_AssaultRifle.A_Weapons.WT_Jakobs_AssaultRifle WeaponKickLeft 120.55
 
-                    set GD_Weap_AssaultRifle.A_Weapons.WT_Jakobs_AssaultRifle BobDamping 1.25 
+                    set GD_Weap_AssaultRifle.A_Weapons.WT_Jakobs_AssaultRifle BobDamping 1.25
 
-                    set GD_Weap_AssaultRifle.A_Weapons.WT_Jakobs_AssaultRifle FractalWanderLacunarity 3.000000 
+                    set GD_Weap_AssaultRifle.A_Weapons.WT_Jakobs_AssaultRifle FractalWanderLacunarity 3.000000
 
-                    set GD_Weap_AssaultRifle.A_Weapons.WT_Jakobs_AssaultRifle FractalWanderPersistence 4.700000 
+                    set GD_Weap_AssaultRifle.A_Weapons.WT_Jakobs_AssaultRifle FractalWanderPersistence 4.700000
 
                     set GD_Weap_AssaultRifle.A_Weapons.WT_Jakobs_AssaultRifle PerShotAccuracyImpulse 8
 
-                    set GD_Weap_AssaultRifle.A_Weapons.WT_Jakobs_AssaultRifle:AttributePresentationDefinition_3 NoConstraintText [skill]Horrible[-skill] recoil but [skill]strong[-skill] damage. 
+                    set GD_Weap_AssaultRifle.A_Weapons.WT_Jakobs_AssaultRifle:AttributePresentationDefinition_3 NoConstraintText [skill]Horrible[-skill] recoil but [skill]strong[-skill] damage.
 
                     set GD_Weap_AssaultRifle.A_Weapons.WT_Jakobs_AssaultRifle RecoilAnimScaleCurve (Points=((InVal=10.000000,OutVal=2.700000,ArriveTangent=0.000000,LeaveTangent=0.000000,InterpMode=CIM_Linear),(InVal=10.000000,OutVal=1.000000,ArriveTangent=0.000000,LeaveTangent=0.000000,InterpMode=CIM_Linear)),InterpMethod=IMT_UseFixedTangentEvalAndNewAutoTangents)
 
@@ -354,7 +416,7 @@
 
                 #<Torgue AR>
 
-                    set GD_Weap_AssaultRifle.A_Weapons.WT_Torgue_AssaultRifle PerShotAccuracyImpulse 0.55 
+                    set GD_Weap_AssaultRifle.A_Weapons.WT_Torgue_AssaultRifle PerShotAccuracyImpulse 0.55
 
                     set GD_Weap_AssaultRifle.A_Weapons.WT_Torgue_AssaultRifle RecoilAnimScaleCurve (Points=((InVal=10.000000,OutVal=1.700000,ArriveTangent=0.000000,LeaveTangent=0.000000,InterpMode=CIM_Linear),(InVal=10.000000,OutVal=1.000000,ArriveTangent=0.000000,LeaveTangent=0.000000,InterpMode=CIM_Linear)),InterpMethod=IMT_UseFixedTangentEvalAndNewAutoTangents)
 
@@ -364,13 +426,13 @@
 
                     set GD_Weap_AssaultRifle.A_Weapons.WT_Bandit_AssaultRifle RecoilAnimScaleCurve (Points=((InVal=10.000000,OutVal=1.500000,ArriveTangent=0.000000,LeaveTangent=0.000000,InterpMode=CIM_Linear),(InVal=10.000000,OutVal=12.000000,ArriveTangent=0.000000,LeaveTangent=0.000000,InterpMode=CIM_Linear)),InterpMethod=IMT_UseFixedTangentEvalAndNewAutoTangents)
 
-                    set GD_Weap_AssaultRifle.A_Weapons.WT_Bandit_AssaultRifle WeaponKickRight 51 
+                    set GD_Weap_AssaultRifle.A_Weapons.WT_Bandit_AssaultRifle WeaponKickRight 51
 
-                    set GD_Weap_AssaultRifle.A_Weapons.WT_Bandit_AssaultRifle WeaponKickSpeed 75.75 
+                    set GD_Weap_AssaultRifle.A_Weapons.WT_Bandit_AssaultRifle WeaponKickSpeed 75.75
 
-                    set GD_Weap_AssaultRifle.A_Weapons.WT_Bandit_AssaultRifle WeaponKickDown 10.55 
+                    set GD_Weap_AssaultRifle.A_Weapons.WT_Bandit_AssaultRifle WeaponKickDown 10.55
 
-                    set GD_Weap_AssaultRifle.A_Weapons.WT_Bandit_AssaultRifle WeaponKickLeft 120.55 
+                    set GD_Weap_AssaultRifle.A_Weapons.WT_Bandit_AssaultRifle WeaponKickLeft 120.55
 
                     set GD_Weap_AssaultRifle.A_Weapons.WT_Bandit_AssaultRifle BobDamping 1.35
 
@@ -378,11 +440,11 @@
 
                     set GD_Weap_AssaultRifle.A_Weapons.WT_Bandit_AssaultRifle FractalWanderPersistence 1.700000
 
-                    set GD_Weap_AssaultRifle.A_Weapons.WT_Bandit_AssaultRifle PerShotAccuracyImpulse 8 
+                    set GD_Weap_AssaultRifle.A_Weapons.WT_Bandit_AssaultRifle PerShotAccuracyImpulse 8
 
-                    set GD_Weap_AssaultRifle.A_Weapons.WT_Bandit_AssaultRifle FireRate 0.10 
+                    set GD_Weap_AssaultRifle.A_Weapons.WT_Bandit_AssaultRifle FireRate 0.10
 
-                    set GD_Weap_AssaultRifle.A_Weapons.WT_Bandit_AssaultRifle ClipSize 75 
+                    set GD_Weap_AssaultRifle.A_Weapons.WT_Bandit_AssaultRifle ClipSize 75
 
                     set WillowGame.WillowDmgSource_MachineGun VehicleDamageScaling 1.000000
 
@@ -398,7 +460,7 @@
 
                     set GD_Weap_Shotgun.A_Weapons.WT_Jakobs_Shotgun:AttributePresentationDefinition_1 Description Strong enough to [skill]push[-skill] stuff<br>[funstat]Pretty unaccurate.
 
-                    set GD_Weap_Shotgun.A_Weapons.WT_Jakobs_Shotgun FireRate 0.20 
+                    set GD_Weap_Shotgun.A_Weapons.WT_Jakobs_Shotgun FireRate 0.20
 
                     set GD_Weap_Shotgun.A_Weapons.WT_Jakobs_Shotgun Spread 13.5
 
@@ -418,17 +480,17 @@
 
                 #<Bandit Shotgun>
 
-                    set GD_Weap_Shotgun.A_Weapons.WT_Bandit_Shotgun ReloadCompletePercent 0.9000 
+                    set GD_Weap_Shotgun.A_Weapons.WT_Bandit_Shotgun ReloadCompletePercent 0.9000
 
-                    set GD_Weap_Shotgun.A_Weapons.WT_Bandit_Shotgun FireRate 0.13 
+                    set GD_Weap_Shotgun.A_Weapons.WT_Bandit_Shotgun FireRate 0.13
 
                     set GD_Weap_Shotgun.A_Weapons.WT_Bandit_Shotgun InstantHitDamage (BaseValueConstant=20.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance_HealthAndDamage.HealthAndDamage.Init_WeaponDamage',BaseValueScaleConstant=4.400000)
 
-                    set GD_Weap_Shotgun.A_Weapons.WT_Bandit_Shotgun AutomaticBurstCount 3 
+                    set GD_Weap_Shotgun.A_Weapons.WT_Bandit_Shotgun AutomaticBurstCount 3
 
-                    set GD_Weap_Shotgun.A_Weapons.WT_Bandit_Shotgun Spread 22.5 
+                    set GD_Weap_Shotgun.A_Weapons.WT_Bandit_Shotgun Spread 22.5
 
-                    set GD_Weap_Shotgun.A_Weapons.WT_Bandit_Shotgun ClipSize 20 
+                    set GD_Weap_Shotgun.A_Weapons.WT_Bandit_Shotgun ClipSize 20
 
                     set GD_Weap_Shotgun.A_Weapons.WT_Bandit_Shotgun DryFireSounds ((Event=AkEvent'Ake_Wep_Assault_Rifles.Rifle_BT.Ak_Play_Wep_Rifle_BT_Bolt_Close',Cue=None,Expressions=))
 
@@ -442,7 +504,7 @@
 
                     set GD_Weap_Shotgun.A_Weapons.WT_Hyperion_Shotgun EquipSounds ((Event=AkEvent'Ake_Obj_Pickup.Obj_Pickup_Equip.Ak_Play_Obj_Pickup_Equip_Rifle',Cue=None,Expressions=))
 
-                    set GD_Weap_Shotgun.A_Weapons.WT_Hyperion_Shotgun:AttributePresentationDefinition_0 NoConstraintText Increased [skill]critical hit[-skill] damage<br>[funstat][skill]Sustained fire[-skill] increases [skill]accuracy[-skill]. 
+                    set GD_Weap_Shotgun.A_Weapons.WT_Hyperion_Shotgun:AttributePresentationDefinition_0 NoConstraintText Increased [skill]critical hit[-skill] damage<br>[funstat][skill]Sustained fire[-skill] increases [skill]accuracy[-skill].
 
                     set GD_Weap_Shotgun.A_Weapons.WT_Hyperion_Shotgun ExternalAttributeEffects ((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AccuracyResourcePool.AccuracyMinValue',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AccuracyResourcePool.AccuracyMaxValue',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AccuracyResourcePool.AccuracyOnIdleRegenerationRate',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=18.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.GameplayAttributes.PlayerCriticalHitBonus',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=6.250000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))
 
@@ -458,7 +520,7 @@
 
                     set GD_Weap_Shotgun.A_Weapons.WT_Torgue_Shotgun InstantHitDamage (BaseValueConstant=20.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance_HealthAndDamage.HealthAndDamage.Init_WeaponDamage',BaseValueScaleConstant=5.200000)
 
-                    set GD_Weap_Shotgun.A_Weapons.WT_Torgue_Shotgun ReloadCompletePercent 0.9000 
+                    set GD_Weap_Shotgun.A_Weapons.WT_Torgue_Shotgun ReloadCompletePercent 0.9000
 
                 #</Torgue Shotgun>
 
@@ -470,7 +532,7 @@
 
                     set GD_Weap_Shotgun.A_Weapons.WT_Tediore_Shotgun FireRate 2.65
 
-                    set GD_Weap_Shotgun.A_Weapons.WT_Tediore_Shotgun ReloadTime 1.15 
+                    set GD_Weap_Shotgun.A_Weapons.WT_Tediore_Shotgun ReloadTime 1.15
 
                     set GD_Weap_Shotgun.A_Weapons.WT_Tediore_Shotgun Spread 7
 
@@ -642,7 +704,7 @@
 
                     set GD_Weap_SniperRifles.A_Weapons.WeaponType_Jakobs_Sniper WeaponKickRight 27
 
-                    set GD_Weap_SniperRifles.A_Weapons.WeaponType_Maliwan_Sniper WeaponKickDown 27.55 
+                    set GD_Weap_SniperRifles.A_Weapons.WeaponType_Maliwan_Sniper WeaponKickDown 27.55
 
                     set GD_Weap_SniperRifles.A_Weapons.WeaponType_Maliwan_Sniper WeaponKickRecoveryTime 2.35
 
@@ -650,25 +712,25 @@
 
                 #<Dahl SR>
 
-                    set GD_Weap_SniperRifles.A_Weapons.WeaponType_Dahl_Sniper ShotCost 1 
+                    set GD_Weap_SniperRifles.A_Weapons.WeaponType_Dahl_Sniper ShotCost 1
 
                     set GD_Weap_SniperRifles.A_Weapons.WeaponType_Dahl_Sniper DryFireSounds ((Event=AkEvent'Ake_Wep_Assault_Rifles.Rifle_BT.Ak_Play_Wep_Rifle_BT_Bolt_Close',Cue=None,Expressions=))
 
                     set GD_Weap_SniperRifles.A_Weapons.WeaponType_Dahl_Sniper EquipSounds ((Event=AkEvent'Ake_Obj_Pickup.Obj_Pickup_Equip.Ak_Play_Obj_Pickup_Equip_Rifle',Cue=None,Expressions=))
 
-                    set GD_Weap_SniperRifles.A_Weapons.WeaponType_Dahl_Sniper WeaponKickLeft 19 
+                    set GD_Weap_SniperRifles.A_Weapons.WeaponType_Dahl_Sniper WeaponKickLeft 19
 
-                    set GD_Weap_SniperRifles.A_Weapons.WeaponType_Dahl_Sniper WeaponKickSpeed 2.75 
+                    set GD_Weap_SniperRifles.A_Weapons.WeaponType_Dahl_Sniper WeaponKickSpeed 2.75
 
                     set GD_Weap_SniperRifles.A_Weapons.WeaponType_Dahl_Sniper AutomaticBurstCount 3
 
                     set GD_Weap_SniperRifles.A_Weapons.WeaponType_Dahl_Sniper RecoilAnimScaleCurve (Points=((InVal=0.200000,OutVal=0.500000,ArriveTangent=0.000000,LeaveTangent=0.000000,InterpMode=CIM_Linear),(InVal=1.000000,OutVal=2.800000,ArriveTangent=0.000000,LeaveTangent=0.000000,InterpMode=CIM_Linear)),InterpMethod=IMT_UseFixedTangentEvalAndNewAutoTangents)
 
-                    set GD_Weap_SniperRifles.A_Weapons.WeaponType_Dahl_Sniper WeaponKickUp 5 
+                    set GD_Weap_SniperRifles.A_Weapons.WeaponType_Dahl_Sniper WeaponKickUp 5
 
-                    set GD_Weap_SniperRifles.A_Weapons.WeaponType_Dahl_Sniper BaseMonetaryValueModifier 2.5 
+                    set GD_Weap_SniperRifles.A_Weapons.WeaponType_Dahl_Sniper BaseMonetaryValueModifier 2.5
 
-                    set GD_Weap_SniperRifles.A_Weapons.WeaponType_Dahl_Sniper WeaponKickDown 27.55 
+                    set GD_Weap_SniperRifles.A_Weapons.WeaponType_Dahl_Sniper WeaponKickDown 27.55
 
                     set GD_Weap_SniperRifles.A_Weapons.WeaponType_Dahl_Sniper WeaponKickRecoveryTime 2.35
 
@@ -676,19 +738,19 @@
 
                 #<Hyperion SR>
 
-                    set GD_Weap_SniperRifles.A_Weapons.WeaponType_Hyperion_Sniper ZoomTime 0.07 
+                    set GD_Weap_SniperRifles.A_Weapons.WeaponType_Hyperion_Sniper ZoomTime 0.07
 
                     set GD_Weap_SniperRifles.A_Weapons.WeaponType_Hyperion_Sniper DryFireSounds ((Event=AkEvent'Ake_Wep_Assault_Rifles.Rifle_BT.Ak_Play_Wep_Rifle_BT_Bolt_Close',Cue=None,Expressions=))
 
                     set GD_Weap_SniperRifles.A_Weapons.WeaponType_Hyperion_Sniper EquipSounds ((Event=AkEvent'Ake_Obj_Pickup.Obj_Pickup_Equip.Ak_Play_Obj_Pickup_Equip_Rifle',Cue=None,Expressions=))
 
-                    set GD_Weap_SniperRifles.A_Weapons.WeaponType_Hyperion_Sniper FireRate 1.85 
+                    set GD_Weap_SniperRifles.A_Weapons.WeaponType_Hyperion_Sniper FireRate 1.85
 
                     set GD_Weap_SniperRifles.A_Weapons.WeaponType_Hyperion_Sniper FireTailSounds ((Event=AkEvent'Ake_Wep_Assault_Rifles.Rifle_BT.Ak_Play_Wep_Rifle_BT_Bolt_Close',Cue=None,Expressions=))
 
-                    set GD_Weap_SniperRifles.A_Weapons.WeaponType_Hyperion_Sniper EquipTime 0.45 
+                    set GD_Weap_SniperRifles.A_Weapons.WeaponType_Hyperion_Sniper EquipTime 0.45
 
-                    set GD_Weap_SniperRifles.A_Weapons.WeaponType_Hyperion_Sniper PutDownTime 0.45 
+                    set GD_Weap_SniperRifles.A_Weapons.WeaponType_Hyperion_Sniper PutDownTime 0.45
 
                     set GD_Weap_SniperRifles.A_Weapons.WeaponType_Hyperion_Sniper:AttributePresentationDefinition_2 NoConstraintText [skill]Light weight[-skill] allows to aim and swap weapons faster<br>[funstat][skill]sustained fire[-skill] and [skill]aiming down the sights[-skill] increases [skill]accuracy[-skill]<br>[funstat]Increased [skill]critical hit[-skill] damage.
 
@@ -704,11 +766,11 @@
 
                     set GD_Weap_SMG.A_Weapons.WT_SMG_Hyperion ExternalAttributeEffects ((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AccuracyResourcePool.AccuracyMinValue',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AccuracyResourcePool.AccuracyMaxValue',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AccuracyResourcePool.AccuracyOnIdleRegenerationRate',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=18.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.GameplayAttributes.PlayerCriticalHitBonus',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=8.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))
 
-                    set GD_Weap_SMG.A_Weapons.WT_SMG_Hyperion:AttributePresentationDefinition_1 NoConstraintText Increased [skill]critical hit[-skill] damage<br>[funstat][skill]Sustained fire[-skill] increases [skill]accuracy[-skill]. 
+                    set GD_Weap_SMG.A_Weapons.WT_SMG_Hyperion:AttributePresentationDefinition_1 NoConstraintText Increased [skill]critical hit[-skill] damage<br>[funstat][skill]Sustained fire[-skill] increases [skill]accuracy[-skill].
 
                     set GD_Weap_SMG.A_Weapons.WT_SMG_Hyperion FireRate 0.26
 
-                    set GD_Weap_SMG.A_Weapons.WT_SMG_Hyperion PerShotAccuracyImpulse -5.05 
+                    set GD_Weap_SMG.A_Weapons.WT_SMG_Hyperion PerShotAccuracyImpulse -5.05
 
                     set GD_Weap_SMG.A_Weapons.WT_SMG_Hyperion DryFireSounds ((Event=AkEvent'Ake_Wep_Assault_Rifles.Rifle_BT.Ak_Play_Wep_Rifle_BT_Bolt_Close',Cue=None,Expressions=))
 
@@ -718,7 +780,7 @@
 
                 #<Tediore>
 
-                    set GD_Weap_SMG.A_Weapons.WT_SMG_Tediore Firerate 0.35 
+                    set GD_Weap_SMG.A_Weapons.WT_SMG_Tediore Firerate 0.35
 
                     set GD_Weap_SMG.A_Weapons.WT_SMG_Tediore DryFireSounds ((Event=AkEvent'Ake_Wep_Assault_Rifles.Rifle_BT.Ak_Play_Wep_Rifle_BT_Bolt_Close',Cue=None,Expressions=))
 
@@ -756,7 +818,7 @@
 
                     set GD_Weap_SMG.A_Weapons.WT_SMG_Dahl InstantHitDamage (BaseValueConstant=20.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance_HealthAndDamage.HealthAndDamage.Init_WeaponDamage',BaseValueScaleConstant=3.200000)
 
-                    set GD_Weap_SMG.A_Weapons.WT_SMG_Dahl AutomaticBurstCount 5 
+                    set GD_Weap_SMG.A_Weapons.WT_SMG_Dahl AutomaticBurstCount 5
 
                     set GD_Weap_SMG.A_Weapons.WT_SMG_Dahl DryFireSounds ((Event=AkEvent'Ake_Wep_Assault_Rifles.Rifle_BT.Ak_Play_Wep_Rifle_BT_Bolt_Close',Cue=None,Expressions=))
 
@@ -768,25 +830,25 @@
 
                     set GD_Weap_SMG.A_Weapons.WT_SMG_Bandit RecoilAnimScaleCurve (Points=((InVal=10.000000,OutVal=1.500000,ArriveTangent=0.000000,LeaveTangent=0.000000,InterpMode=CIM_Linear),(InVal=10.000000,OutVal=12.000000,ArriveTangent=0.000000,LeaveTangent=0.000000,InterpMode=CIM_Linear)),InterpMethod=IMT_UseFixedTangentEvalAndNewAutoTangents)
 
-                    set GD_Weap_SMG.A_Weapons.WT_SMG_Bandit WeaponKickRight 51 
+                    set GD_Weap_SMG.A_Weapons.WT_SMG_Bandit WeaponKickRight 51
 
-                    set GD_Weap_SMG.A_Weapons.WT_SMG_Bandit WeaponKickSpeed 75.75 
+                    set GD_Weap_SMG.A_Weapons.WT_SMG_Bandit WeaponKickSpeed 75.75
 
-                    set GD_Weap_SMG.A_Weapons.WT_SMG_Bandit WeaponKickDown 10.55 
+                    set GD_Weap_SMG.A_Weapons.WT_SMG_Bandit WeaponKickDown 10.55
 
-                    set GD_Weap_SMG.A_Weapons.WT_SMG_Bandit WeaponKickLeft 120.55 
+                    set GD_Weap_SMG.A_Weapons.WT_SMG_Bandit WeaponKickLeft 120.55
 
-                    set GD_Weap_SMG.A_Weapons.WT_SMG_Bandit BobDamping 1.35 
+                    set GD_Weap_SMG.A_Weapons.WT_SMG_Bandit BobDamping 1.35
 
-                    set GD_Weap_SMG.A_Weapons.WT_SMG_Bandit FractalWanderLacunarity 2.000000 
+                    set GD_Weap_SMG.A_Weapons.WT_SMG_Bandit FractalWanderLacunarity 2.000000
 
-                    set GD_Weap_SMG.A_Weapons.WT_SMG_Bandit FractalWanderPersistence 1.700000 
+                    set GD_Weap_SMG.A_Weapons.WT_SMG_Bandit FractalWanderPersistence 1.700000
 
-                    set GD_Weap_SMG.A_Weapons.WT_SMG_Bandit PerShotAccuracyImpulse 8 
+                    set GD_Weap_SMG.A_Weapons.WT_SMG_Bandit PerShotAccuracyImpulse 8
 
-                    set GD_Weap_SMG.A_Weapons.WT_SMG_Bandit FireRate 0.075 
+                    set GD_Weap_SMG.A_Weapons.WT_SMG_Bandit FireRate 0.075
 
-                    set GD_Weap_SMG.A_Weapons.WT_SMG_Bandit ClipSize 75 
+                    set GD_Weap_SMG.A_Weapons.WT_SMG_Bandit ClipSize 75
 
                     set GD_Weap_SMG.A_Weapons.WT_SMG_Bandit InstantHitDamage (BaseValueConstant=20.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance_HealthAndDamage.HealthAndDamage.Init_WeaponDamage',BaseValueScaleConstant=3.900000)
 
@@ -814,7 +876,7 @@
 
                 #<Maliwan Launcher>
 
-                    set GD_Weap_Launchers.A_Weapons.WT_Maliwan_Launcher ShotCost 3 
+                    set GD_Weap_Launchers.A_Weapons.WT_Maliwan_Launcher ShotCost 3
 
                     set GD_Weap_Launchers.A_Weapons.WT_Maliwan_Launcher InstantHitDamage (BaseValueConstant=20.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance_HealthAndDamage.HealthAndDamage.Init_WeaponDamage',BaseValueScaleConstant=4.000000)
 
@@ -840,7 +902,7 @@
 
                     set GD_Weap_Launchers.A_Weapons.WT_Torgue_Launcher DryFireSounds ((Event=AkEvent'Ake_Wep_Assault_Rifles.Rifle_BT.Ak_Play_Wep_Rifle_BT_Bolt_Close',Cue=None,Expressions=))
 
-                    set GD_Weap_Launchers.A_Weapons.WT_Torgue_Launcher ShotCost 4 
+                    set GD_Weap_Launchers.A_Weapons.WT_Torgue_Launcher ShotCost 4
 
                     set GD_Weap_Launchers.A_Weapons.WT_Torgue_Launcher InstantHitDamage (BaseValueConstant=20.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance_HealthAndDamage.HealthAndDamage.Init_WeaponDamage',BaseValueScaleConstant=125.000000)
 
@@ -850,13 +912,13 @@
 
                 #<Bandit Launcher>
 
-                    set GD_Weap_Launchers.A_Weapons.WT_Bandit_Launcher AmmoResource ResourceDefinition'D_Resources.AmmoResources.Ammo_Grenade_Protean' 
+                    set GD_Weap_Launchers.A_Weapons.WT_Bandit_Launcher AmmoResource ResourceDefinition'D_Resources.AmmoResources.Ammo_Grenade_Protean'
 
                     set GD_Weap_Launchers.A_Weapons.WT_Bandit_Launcher InstantHitDamage (BaseValueConstant=20.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance_HealthAndDamage.HealthAndDamage.Init_WeaponDamage',BaseValueScaleConstant=5.000000)
 
                     set GD_Weap_Launchers.A_Weapons.WT_Bandit_Launcher bUseOverheatBehavior False
 
-                    set GD_Weap_Launchers.A_Weapons.WT_Bandit_Launcher DefaultFiringModeDefinition FiringModeDefinition'GD_Weap_AssaultRifle.FiringModes.FM_Rocket_Dahl_Grenade' 
+                    set GD_Weap_Launchers.A_Weapons.WT_Bandit_Launcher DefaultFiringModeDefinition FiringModeDefinition'GD_Weap_AssaultRifle.FiringModes.FM_Rocket_Dahl_Grenade'
 
                     set GD_Weap_Launchers.A_Weapons.WT_Bandit_Launcher DryFireSounds ((Event=AkEvent'Ake_Wep_Assault_Rifles.Rifle_BT.Ak_Play_Wep_Rifle_BT_Bolt_Close',Cue=None,Expressions=))
 
@@ -940,7 +1002,7 @@
 
                     set GD_Weap_Pistol.A_Weapons.WeaponType_Jakobs_Pistol WeaponKickDown 7.55
 
-                    set GD_Weap_Pistol.A_Weapons.WeaponType_Jakobs_Pistol ZoomedRecoilAnimScale 152.0 
+                    set GD_Weap_Pistol.A_Weapons.WeaponType_Jakobs_Pistol ZoomedRecoilAnimScale 152.0
 
                     set GD_Weap_Pistol.A_Weapons.WeaponType_Jakobs_Pistol:AttributePresentationDefinition_3 NoConstraintText Deals [skill]a lot[-skill] of damage<br>[funstat]but recoil is a thing
 
@@ -974,7 +1036,7 @@
 
                     set GD_Weap_Pistol.A_Weapons.WeaponType_Maliwan_Pistol RegenRate 0.25
 
-                    set GD_Weap_Pistol.A_Weapons.WeaponType_Maliwan_Pistol ShotCost 2 
+                    set GD_Weap_Pistol.A_Weapons.WeaponType_Maliwan_Pistol ShotCost 2
 
                     set GD_Weap_Pistol.A_Weapons.WeaponType_Maliwan_Pistol ReloadCompletePercent 0.900
 
@@ -990,9 +1052,9 @@
 
                     set GD_Weap_Pistol.A_Weapons.WeaponType_Dahl_Pistol RecoilAnimScaleCurve (Points=((InVal=0.000000,OutVal=0.500000,ArriveTangent=10.000000,LeaveTangent=20.000000,InterpMode=CIM_Linear),(InVal=1.000000,OutVal=1.800000,ArriveTangent=0.000000,LeaveTangent=0.000000,InterpMode=CIM_Linear)),InterpMethod=IMT_UseFixedTangentEvalAndNewAutoTangents)
 
-                    set GD_Weap_Pistol.A_Weapons.WeaponType_Dahl_Pistol AutomaticBurstCount 3 
+                    set GD_Weap_Pistol.A_Weapons.WeaponType_Dahl_Pistol AutomaticBurstCount 3
 
-                    set GD_Weap_Pistol.A_Weapons.WeaponType_Dahl_Pistol ReloadCompletePercent 0.900 
+                    set GD_Weap_Pistol.A_Weapons.WeaponType_Dahl_Pistol ReloadCompletePercent 0.900
 
                     set GD_Weap_Pistol.A_Weapons.WeaponType_Dahl_Pistol DryFireSounds ((Event=AkEvent'Ake_Wep_Assault_Rifles.Rifle_BT.Ak_Play_Wep_Rifle_BT_Bolt_Close',Cue=None,Expressions=))
 
@@ -1004,7 +1066,7 @@
 
                     set GD_Weap_Pistol.A_Weapons.WeaponType_Bandit_Pistol FireRate 0.125
 
-                    set GD_Weap_Pistol.A_Weapons.WeaponType_Bandit_Pistol FireRegenDelay 0.015 
+                    set GD_Weap_Pistol.A_Weapons.WeaponType_Bandit_Pistol FireRegenDelay 0.015
 
                     set GD_Weap_Pistol.A_Weapons.WeaponType_Bandit_Pistol ReloadCompletePercent 0.900
 
@@ -1018,13 +1080,13 @@
 
                 #<Tediore Pistol>
 
-                    set GD_Weap_Pistol.A_Weapons.WeaponType_Tediore_Pistol FireRate 0.35 
+                    set GD_Weap_Pistol.A_Weapons.WeaponType_Tediore_Pistol FireRate 0.35
 
                     set GD_Weap_Pistol.A_Weapons.WeaponType_Tediore_Pistol DryFireSounds ((Event=AkEvent'Ake_Wep_Assault_Rifles.Rifle_BT.Ak_Play_Wep_Rifle_BT_Bolt_Close',Cue=None,Expressions=))
 
                     set GD_Weap_Pistol.A_Weapons.WeaponType_Tediore_Pistol EquipSounds ((Event=AkEvent'Ake_Obj_Pickup.Obj_Pickup_Equip.Ak_Play_Obj_Pickup_Equip_Rifle',Cue=None,Expressions=))
 
-                    set GD_Weap_Pistol.A_Weapons.WeaponType_Tediore_Pistol ReloadTime 0.35 
+                    set GD_Weap_Pistol.A_Weapons.WeaponType_Tediore_Pistol ReloadTime 0.35
 
                     set GD_Weap_Pistol.A_Weapons.WeaponType_Tediore_Pistol ReloadCompletePercent 0.900
 
@@ -1032,9 +1094,9 @@
 
                 #<Vladof pistol>
 
-                    set GD_Weap_Pistol.A_Weapons.WeaponType_Vladof_Pistol FireRate 0.062 
+                    set GD_Weap_Pistol.A_Weapons.WeaponType_Vladof_Pistol FireRate 0.062
 
-                    set GD_Weap_Pistol.A_Weapons.WeaponType_Vladof_Pistol ReloadCompletePercent 0.900 
+                    set GD_Weap_Pistol.A_Weapons.WeaponType_Vladof_Pistol ReloadCompletePercent 0.900
 
                     set GD_Weap_Pistol.A_Weapons.WeaponType_Vladof_Pistol DryFireSounds ((Event=AkEvent'Ake_Wep_Assault_Rifles.Rifle_BT.Ak_Play_Wep_Rifle_BT_Bolt_Close',Cue=None,Expressions=))
 
@@ -1156,55 +1218,17 @@
 
         #<Spark keys>
 
-            #<hotfix><key>"SparkOnDemandPatchEntry-Tests1"</key><value>"GD_Soldier_Streaming,GD_Soldier_Streaming.Pawn_Soldier,bWeaponBob,,True"</value><on>
+            #<hotfix><key>"SparkOnDemandPatchEntry-Tests1"</key><value>"GD_Soldier_Streaming,GD_Soldier.Character.CharClass_Soldier,SprintingPct,,1.75"</value><on>
 
-            #<hotfix><key>"SparkOnDemandPatchEntry-Tests2"</key><value>"GD_Soldier_Streaming,GD_Soldier_Streaming.Pawn_Soldier,Bob,,0.015000"</value><on>
+            #<hotfix><key>"SparkOnDemandPatchEntry-Tests2"</key><value>"GD_Assassin_Streaming,GD_Assassin.Character.CharClass_Assassin,SprintingPct,,1.75"</value><on>
 
-            #<hotfix><key>"SparkOnDemandPatchEntry-Tests3"</key><value>"GD_Soldier_Streaming,GD_Soldier_Streaming.Pawn_Soldier,BobBaseValue,,0.015000"</value><on>
+            #<hotfix><key>"SparkOnDemandPatchEntry-Tests3"</key><value>"GD_Lilac_Psycho_Streaming,GD_Lilac_PlayerClass.Character.CharClass_LilacPlayerClass,SprintingPct,,1.65"</value><on>
 
-            #<hotfix><key>"SparkOnDemandPatchEntry-Tests4"</key><value>"GD_Soldier_Streaming,GD_Soldier_Streaming.Pawn_Soldier,WalkBob,,(X=0.000000,Y=0.000000,Z=0.000000)"</value><on>
+            #<hotfix><key>"SparkOnDemandPatchEntry-Tests4"</key><value>"GD_Mercenary_Streaming,GD_Mercenary.Character.CharClass_Mercenary,SprintingPct,,1.75"</value><on>
 
-            #<hotfix><key>"SparkOnDemandPatchEntry-Tests5"</key><value>"GD_Soldier_Streaming,GD_Soldier.Character.CharClass_Soldier,SprintingPct,,1.75"</value><on>
+            #<hotfix><key>"SparkOnDemandPatchEntry-Tests5"</key><value>"GD_Siren_Streaming,GD_Siren.Character.CharClass_Siren,SprintingPct,,1.75"</value><on>
 
-            #<hotfix><key>"SparkOnDemandPatchEntry-Tests6"</key><value>"GD_Assassin_Streaming,GD_Assassin_Streaming.Pawn_Assassin,bWeaponBob,,True"</value><on>
-
-            #<hotfix><key>"SparkOnDemandPatchEntry-Tests7"</key><value>"GD_Assassin_Streaming,GD_Assassin_Streaming.Pawn_Assassin,Bob,,0.015000"</value><on>
-
-            #<hotfix><key>"SparkOnDemandPatchEntry-Tests8"</key><value>"GD_Assassin_Streaming,GD_Assassin_Streaming.Pawn_Assassin,BobBaseValue,,0.015000"</value><on>
-
-            #<hotfix><key>"SparkOnDemandPatchEntry-Tests9"</key><value>"GD_Assassin_Streaming,GD_Assassin.Character.CharClass_Assassin,SprintingPct,,1.75"</value><on>
-
-            #<hotfix><key>"SparkOnDemandPatchEntry-Tests10"</key><value>"GD_Lilac_Psycho_Streaming,GD_Lilac_Psycho_Streaming.Pawn_LilacPlayerClass,bWeaponBob,,True"</value><on>
-
-            #<hotfix><key>"SparkOnDemandPatchEntry-Tests11"</key><value>"GD_Lilac_Psycho_Streaming,GD_Lilac_Psycho_Streaming.Pawn_LilacPlayerClass,Bob,,0.015000"</value><on>
-
-            #<hotfix><key>"SparkOnDemandPatchEntry-Tests12"</key><value>"GD_Lilac_Psycho_Streaming,GD_Lilac_Psycho_Streaming.Pawn_LilacPlayerClass,BobBaseValue,,0.015000"</value><on>
-
-            #<hotfix><key>"SparkOnDemandPatchEntry-Tests13"</key><value>"GD_Lilac_Psycho_Streaming,GD_Lilac_PlayerClass.Character.CharClass_LilacPlayerClass,SprintingPct,,1.65"</value><on>
-
-            #<hotfix><key>"SparkOnDemandPatchEntry-Tests14"</key><value>"GD_Mercenary_Streaming,GD_Mercenary_Streaming.Pawn_Mercenary,bWeaponBob,,True"</value><on>
-
-            #<hotfix><key>"SparkOnDemandPatchEntry-Tests15"</key><value>"GD_Mercenary_Streaming,GD_Mercenary_Streaming.Pawn_Mercenary,Bob,,0.015000"</value><on>
-
-            #<hotfix><key>"SparkOnDemandPatchEntry-Tests16"</key><value>"GD_Mercenary_Streaming,GD_Mercenary_Streaming.Pawn_Mercenary,BobBaseValue,,0.015000"</value><on>
-
-            #<hotfix><key>"SparkOnDemandPatchEntry-Tests17"</key><value>"GD_Mercenary_Streaming,GD_Mercenary.Character.CharClass_Mercenary,SprintingPct,,1.75"</value><on>
-
-            #<hotfix><key>"SparkOnDemandPatchEntry-Tests18"</key><value>"GD_Siren_Streaming,GD_Siren_Streaming.Pawn_Siren,bWeaponBob,,True"</value><on>
-
-            #<hotfix><key>"SparkOnDemandPatchEntry-Tests19"</key><value>"GD_Siren_Streaming,GD_Siren_Streaming.Pawn_Siren,Bob,,0.015000"</value><on>
-
-            #<hotfix><key>"SparkOnDemandPatchEntry-Tests20"</key><value>"GD_Siren_Streaming,GD_Siren_Streaming.Pawn_Siren,BobBaseValue,,0.015000"</value><on>
-
-            #<hotfix><key>"SparkOnDemandPatchEntry-Tests21"</key><value>"GD_Siren_Streaming,GD_Siren.Character.CharClass_Siren,SprintingPct,,1.75"</value><on>
-
-            #<hotfix><key>"SparkOnDemandPatchEntry-Tests22"</key><value>"GD_Tulip_Mechro_Streaming,GD_Tulip_Mechro_Streaming.Pawn_Mechromancer,bWeaponBob,,True"</value><on>
-
-            #<hotfix><key>"SparkOnDemandPatchEntry-Tests23"</key><value>"GD_Tulip_Mechro_Streaming,GD_Tulip_Mechromancer.Character.CharClass_Mechromancer,SprintingPct,,1.75"</value><on>
-
-            #<hotfix><key>"SparkOnDemandPatchEntry-Tests24"</key><value>"GD_Tulip_Mechro_Streaming,GD_Tulip_Mechro_Streaming.Pawn_Mechromancer,Bob,,0.015000"</value><on>
-
-            #<hotfix><key>"SparkOnDemandPatchEntry-Tests25"</key><value>"GD_Tulip_Mechro_Streaming,GD_Tulip_Mechro_Streaming.Pawn_Mechromancer,BobBaseValue,,0.015000"</value><on>
+            #<hotfix><key>"SparkOnDemandPatchEntry-Tests6"</key><value>"GD_Tulip_Mechro_Streaming,GD_Tulip_Mechromancer.Character.CharClass_Mechromancer,SprintingPct,,1.75"</value><on>
 
             #<hotfix><key>"SparkLevelPatchEntry-Overrided1"</key><value>",GD_Ammodrops.Pickups.AmmoDrop_Sniper_Rifle_Cartridges,bAutomaticallyPickup,,False"</value><on>
 
@@ -1226,77 +1250,181 @@
 
             #<hotfix><key>"SparkLevelPatchEntry-Overrided10"</key><value>",GD_Ammodrops.Shop.AmmoShop_Repeater_Pistol_Clip,ExternalAttributeEffects,,((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Repeater_Pistol.Ammo_Repeater_Pistol_CurrentValue',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=InventoryAttributeDefinition'GD_Ammodrops.AmmoPickup_Amounts.AmmoAmountShop_Repeater',InitializationDefinition=None,BaseValueScaleConstant=0.200000))"</value><on>
 
-            set GD_Ammodrops.Pickups.AmmoDrop_Assault_Rifle_Bullets bAutomaticallyPickup False
-
-            set GD_Ammodrops.Pickups.AmmoDrop_Patrol_SMG_Clip bAutomaticallyPickup False
-
-            set GD_Ammodrops.Pickups.AmmoDrop_Repeater_Pistol_Clip bAutomaticallyPickup False
-
-            set GD_Ammodrops.Pickups.AmmoDrop_Rocket_Launcher bAutomaticallyPickup False
-
-            set GD_Ammodrops.Pickups.AmmoDrop_Shotgun_Shells bAutomaticallyPickup False
-
-            set GD_Ammodrops.Pickups.AmmoDrop_Sniper_Rifle_Cartridges bAutomaticallyPickup False
-
-            set GD_Ammodrops.Pickups_BossOnly.AmmoDropBoss_Assault_Rifle_Bullets bAutomaticallyPickup False
-
-            set GD_Ammodrops.Pickups_BossOnly.AmmoDropBoss_Grenade_Protean bAutomaticallyPickup False
-
-            set GD_Ammodrops.Pickups_BossOnly.AmmoDropBoss_Patrol_SMG_Clip bAutomaticallyPickup False
-
-            set GD_Ammodrops.Pickups_BossOnly.AmmoDropBoss_Repeater_Pistol_Clip bAutomaticallyPickup False
-
-            set GD_Ammodrops.Pickups_BossOnly.AmmoDropBoss_Shotgun_Shells bAutomaticallyPickup False
-
-            set GD_Ammodrops.Pickups.AmmoDrop_Assault_Rifle_Bullets ExternalAttributeEffects ((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Combat_Rifle.Ammo_Combat_Rifle_CurrentValue',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Ammodrops.AttributeInitialization.Init_AmmoAmountShared_CombatRifle',BaseValueScaleConstant=0.700000))
-
-            set GD_Ammodrops.Pickups.AmmoDrop_Patrol_SMG_Clip ExternalAttributeEffects ((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Patrol_SMG.Ammo_Patrol_SMG_CurrentValue',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=24.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Ammodrops.AttributeInitialization.Init_AmmoAmountShared_SMG',BaseValueScaleConstant=0.700000))
-
-            set GD_Ammodrops.Pickups.AmmoDrop_Repeater_Pistol_Clip ExternalAttributeEffects ((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Repeater_Pistol.Ammo_Repeater_Pistol_CurrentValue',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Ammodrops.AttributeInitialization.Init_AmmoAmountShared_Repeater',BaseValueScaleConstant=0.400000))
-
-            set GD_Ammodrops.Pickups.AmmoDrop_Rocket_Launcher ExternalAttributeEffects ((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Rocket_Launcher.Ammo_Rocket_Launcher_CurrentValue',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Ammodrops.AttributeInitialization.Init_AmmoAmountShared_Launcher',BaseValueScaleConstant=0.300000))
-
-            set GD_Ammodrops.Pickups.AmmoDrop_Shotgun_Shells ExternalAttributeEffects ((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Combat_Shotgun.Ammo_Combat_Shotgun_CurrentValue',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Ammodrops.AttributeInitialization.Init_AmmoAmountShared_Shotgun',BaseValueScaleConstant=0.400000))
-
-            set GD_Ammodrops.Pickups.AmmoDrop_Sniper_Rifle_Cartridges ExternalAttributeEffects ((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Sniper_Rifle.Ammo_Sniper_Rifle_CurrentValue',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Ammodrops.AttributeInitialization.Init_AmmoAmountShared_SniperRifle',BaseValueScaleConstant=0.500000))
-
         #</Spark keys>
 
     #</Core>
 
     #<Optional>
 
-        #<Buff animation speed [+50%]>
+        #<Do you want Auto-Ammo Pickup?><MUT>
 
-            set WillowGame.SpecialMove_Cringe playrate 1.5 
+            #<No>
 
-            set WillowGame.SpecialMove_Motion playrate 1.5 
+                #set GD_Ammodrops.Pickups.AmmoDrop_Assault_Rifle_Bullets bAutomaticallyPickup False<off>
 
-            set WillowGame.SpecialMove_Cloak playrate 1.5 
+                #set GD_Ammodrops.Pickups.AmmoDrop_Patrol_SMG_Clip bAutomaticallyPickup False<off>
 
-            set WillowGame.SpecialMove_Dodge playrate 1.5 
+                #set GD_Ammodrops.Pickups.AmmoDrop_Repeater_Pistol_Clip bAutomaticallyPickup False<off>
 
-            set WillowGame.SpecialMove_Turn playrate 1.5 
+                #set GD_Ammodrops.Pickups.AmmoDrop_Rocket_Launcher bAutomaticallyPickup False<off>
 
-            set WillowGame.SpecialMove_Perch playrate 1.5 
+                #set GD_Ammodrops.Pickups.AmmoDrop_Shotgun_Shells bAutomaticallyPickup False<off>
 
-            set WillowGame.SpecialMove_PerchLoop playrate 1.5
+                #set GD_Ammodrops.Pickups.AmmoDrop_Sniper_Rifle_Cartridges bAutomaticallyPickup False<off>
 
-            set WillowGame.SpecialMove_PerchRandomLoop playrate 1.5
+                #set GD_Ammodrops.Pickups_BossOnly.AmmoDropBoss_Assault_Rifle_Bullets bAutomaticallyPickup False<off>
 
-            set WillowGame.SpecialMove_Spawned playrate 1.5 
+                #set GD_Ammodrops.Pickups_BossOnly.AmmoDropBoss_Grenade_Protean bAutomaticallyPickup False<off>
 
-            set WillowGame.SpecialMove_Vehicle playrate 1.5 
+                #set GD_Ammodrops.Pickups_BossOnly.AmmoDropBoss_Patrol_SMG_Clip bAutomaticallyPickup False<off>
 
-            set WillowGame.WillowAnimDefinition playrate 1.75
+                #set GD_Ammodrops.Pickups_BossOnly.AmmoDropBoss_Repeater_Pistol_Clip bAutomaticallyPickup False<off>
 
-        #</Buff animation speed [+50%]>
+                #set GD_Ammodrops.Pickups_BossOnly.AmmoDropBoss_Shotgun_Shells bAutomaticallyPickup False<off>
+
+            #</No>
+
+            #<Yes>
+
+                set GD_Ammodrops.Pickups.AmmoDrop_Assault_Rifle_Bullets bAutomaticallyPickup True 
+
+                set GD_Ammodrops.Pickups.AmmoDrop_Patrol_SMG_Clip bAutomaticallyPickup True 
+
+                set GD_Ammodrops.Pickups.AmmoDrop_Repeater_Pistol_Clip bAutomaticallyPickup True 
+
+                set GD_Ammodrops.Pickups.AmmoDrop_Rocket_Launcher bAutomaticallyPickup True 
+
+                set GD_Ammodrops.Pickups.AmmoDrop_Shotgun_Shells bAutomaticallyPickup True 
+
+                set GD_Ammodrops.Pickups.AmmoDrop_Sniper_Rifle_Cartridges bAutomaticallyPickup True 
+
+                set GD_Ammodrops.Pickups_BossOnly.AmmoDropBoss_Assault_Rifle_Bullets bAutomaticallyPickup True 
+
+                set GD_Ammodrops.Pickups_BossOnly.AmmoDropBoss_Grenade_Protean bAutomaticallyPickup True 
+
+                set GD_Ammodrops.Pickups_BossOnly.AmmoDropBoss_Patrol_SMG_Clip bAutomaticallyPickup True 
+
+                set GD_Ammodrops.Pickups_BossOnly.AmmoDropBoss_Repeater_Pistol_Clip bAutomaticallyPickup True 
+
+                set GD_Ammodrops.Pickups_BossOnly.AmmoDropBoss_Shotgun_Shells bAutomaticallyPickup True
+
+            #</Yes>
+
+        #</Do you want Auto-Ammo Pickup?>
+
+        #<Buff Animation Speed? [+50%]><MUT>
+
+            #<Yes>
+
+                #set WillowGame.SpecialMove_Cringe playrate 1.5<off>
+
+                #set WillowGame.SpecialMove_Motion playrate 1.5<off>
+
+                #set WillowGame.SpecialMove_Cloak playrate 1.5<off>
+
+                #set WillowGame.SpecialMove_Dodge playrate 1.5<off>
+
+                #set WillowGame.SpecialMove_Turn playrate 1.5<off>
+
+                #set WillowGame.SpecialMove_Perch playrate 1.5<off>
+
+                #set WillowGame.SpecialMove_PerchLoop playrate 1.5<off>
+
+                #set WillowGame.SpecialMove_PerchRandomLoop playrate 1.5<off>
+
+                #set WillowGame.SpecialMove_Spawned playrate 1.5<off>
+
+                #set WillowGame.SpecialMove_Vehicle playrate 1.5<off>
+
+                #set WillowGame.WillowAnimDefinition playrate 1.75<off>
+
+            #</Yes>
+
+            #<No>
+
+                set WillowGame.SpecialMove_Cringe playrate 1 
+
+                set WillowGame.SpecialMove_Motion playrate 1 
+
+                set WillowGame.SpecialMove_Cloak playrate 1 
+
+                set WillowGame.SpecialMove_Dodge playrate 1 
+
+                set WillowGame.SpecialMove_Turn playrate 1 
+
+                set WillowGame.SpecialMove_Perch playrate 1 
+
+                set WillowGame.SpecialMove_PerchLoop playrate 1 
+
+                set WillowGame.SpecialMove_PerchRandomLoop playrate 1 
+
+                set WillowGame.SpecialMove_Spawned playrate 1 
+
+                set WillowGame.SpecialMove_Vehicle playrate 1 
+
+                set WillowGame.WillowAnimDefinition playrate 1
+
+            #</No>
+
+        #</Buff Animation Speed? [+50%]>
+
+        #<Enable weapon 'sway effect'?><MUT>
+
+            #<Yes>
+
+                #<hotfix><key>"SparkOnDemandPatchEntry-Sway1"</key><value>"GD_Tulip_Mechro_Streaming,GD_Tulip_Mechro_Streaming.Pawn_Mechromancer,BobBaseValue,,0.015000"</value><off>
+
+                #<hotfix><key>"SparkOnDemandPatchEntry-Sway2"</key><value>"GD_Tulip_Mechro_Streaming,GD_Tulip_Mechro_Streaming.Pawn_Mechromancer,Bob,,0.015000"</value><off>
+
+                #<hotfix><key>"SparkOnDemandPatchEntry-Sway3"</key><value>"GD_Tulip_Mechro_Streaming,GD_Tulip_Mechro_Streaming.Pawn_Mechromancer,bWeaponBob,,True"</value><off>
+
+                #<hotfix><key>"SparkOnDemandPatchEntry-Sway4"</key><value>"GD_Siren_Streaming,GD_Siren_Streaming.Pawn_Siren,BobBaseValue,,0.015000"</value><off>
+
+                #<hotfix><key>"SparkOnDemandPatchEntry-Sway5"</key><value>"GD_Siren_Streaming,GD_Siren_Streaming.Pawn_Siren,Bob,,0.015000"</value><off>
+
+                #<hotfix><key>"SparkOnDemandPatchEntry-Sway6"</key><value>"GD_Siren_Streaming,GD_Siren_Streaming.Pawn_Siren,bWeaponBob,,True"</value><off>
+
+                #<hotfix><key>"SparkOnDemandPatchEntry-Sway7"</key><value>"GD_Mercenary_Streaming,GD_Mercenary_Streaming.Pawn_Mercenary,BobBaseValue,,0.015000"</value><off>
+
+                #<hotfix><key>"SparkOnDemandPatchEntry-Sway8"</key><value>"GD_Mercenary_Streaming,GD_Mercenary_Streaming.Pawn_Mercenary,Bob,,0.015000"</value><off>
+
+                #<hotfix><key>"SparkOnDemandPatchEntry-Sway9"</key><value>"GD_Mercenary_Streaming,GD_Mercenary_Streaming.Pawn_Mercenary,bWeaponBob,,True"</value><off>
+
+                #<hotfix><key>"SparkOnDemandPatchEntry-Sway10"</key><value>"GD_Lilac_Psycho_Streaming,GD_Lilac_Psycho_Streaming.Pawn_LilacPlayerClass,BobBaseValue,,0.015000"</value><off>
+
+                #<hotfix><key>"SparkOnDemandPatchEntry-Sway11"</key><value>"GD_Lilac_Psycho_Streaming,GD_Lilac_Psycho_Streaming.Pawn_LilacPlayerClass,Bob,,0.015000"</value><off>
+
+                #<hotfix><key>"SparkOnDemandPatchEntry-Sway12"</key><value>"GD_Lilac_Psycho_Streaming,GD_Lilac_Psycho_Streaming.Pawn_LilacPlayerClass,bWeaponBob,,True"</value><off>
+
+                #<hotfix><key>"SparkOnDemandPatchEntry-Sway13"</key><value>"GD_Assassin_Streaming,GD_Assassin_Streaming.Pawn_Assassin,BobBaseValue,,0.015000"</value><off>
+
+                #<hotfix><key>"SparkOnDemandPatchEntry-Sway14"</key><value>"GD_Assassin_Streaming,GD_Assassin_Streaming.Pawn_Assassin,Bob,,0.015000"</value><off>
+
+                #<hotfix><key>"SparkOnDemandPatchEntry-Sway15"</key><value>"GD_Assassin_Streaming,GD_Assassin_Streaming.Pawn_Assassin,bWeaponBob,,True"</value><off>
+
+                #<hotfix><key>"SparkOnDemandPatchEntry-Sway16"</key><value>"GD_Soldier_Streaming,GD_Soldier_Streaming.Pawn_Soldier,WalkBob,,(X=0.000000,Y=0.000000,Z=0.000000)"</value><off>
+
+                #<hotfix><key>"SparkOnDemandPatchEntry-Sway17"</key><value>"GD_Soldier_Streaming,GD_Soldier_Streaming.Pawn_Soldier,BobBaseValue,,0.015000"</value><off>
+
+                #<hotfix><key>"SparkOnDemandPatchEntry-Sway18"</key><value>"GD_Soldier_Streaming,GD_Soldier_Streaming.Pawn_Soldier,Bob,,0.015000"</value><off>
+
+                #<hotfix><key>"SparkOnDemandPatchEntry-Sway19"</key><value>"GD_Soldier_Streaming,GD_Soldier_Streaming.Pawn_Soldier,bWeaponBob,,True"</value><off>
+
+            #</Yes>
+
+            #<No>
+
+                Lmao empty
+
+            #</No>
+
+        #</Enable weapon 'sway effect'?>
 
     #</Optional>
 
 #</Combat Plus>
 
-set Transient.SparkServiceConfiguration_6 Keys ("SparkLevelPatchEntry-Hyperion1","SparkOnDemandPatchEntry-Tests1","SparkOnDemandPatchEntry-Tests2","SparkOnDemandPatchEntry-Tests3","SparkOnDemandPatchEntry-Tests4","SparkOnDemandPatchEntry-Tests5","SparkOnDemandPatchEntry-Tests6","SparkOnDemandPatchEntry-Tests7","SparkOnDemandPatchEntry-Tests8","SparkOnDemandPatchEntry-Tests9","SparkOnDemandPatchEntry-Tests10","SparkOnDemandPatchEntry-Tests11","SparkOnDemandPatchEntry-Tests12","SparkOnDemandPatchEntry-Tests13","SparkOnDemandPatchEntry-Tests14","SparkOnDemandPatchEntry-Tests15","SparkOnDemandPatchEntry-Tests16","SparkOnDemandPatchEntry-Tests17","SparkOnDemandPatchEntry-Tests18","SparkOnDemandPatchEntry-Tests19","SparkOnDemandPatchEntry-Tests20","SparkOnDemandPatchEntry-Tests21","SparkOnDemandPatchEntry-Tests22","SparkOnDemandPatchEntry-Tests23","SparkOnDemandPatchEntry-Tests24","SparkOnDemandPatchEntry-Tests25","SparkLevelPatchEntry-Overrided1","SparkLevelPatchEntry-Overrided2","SparkLevelPatchEntry-Overrided3","SparkLevelPatchEntry-Overrided4","SparkLevelPatchEntry-Overrided5","SparkLevelPatchEntry-Overrided6","SparkLevelPatchEntry-Overrided7","SparkLevelPatchEntry-Overrided8","SparkLevelPatchEntry-Overrided9","SparkLevelPatchEntry-Overrided10")
+set Transient.SparkServiceConfiguration_6 Keys ("SparkLevelPatchEntry-Hyperion1","SparkOnDemandPatchEntry-Tests1","SparkOnDemandPatchEntry-Tests2","SparkOnDemandPatchEntry-Tests3","SparkOnDemandPatchEntry-Tests4","SparkOnDemandPatchEntry-Tests5","SparkOnDemandPatchEntry-Tests6","SparkLevelPatchEntry-Overrided1","SparkLevelPatchEntry-Overrided2","SparkLevelPatchEntry-Overrided3","SparkLevelPatchEntry-Overrided4","SparkLevelPatchEntry-Overrided5","SparkLevelPatchEntry-Overrided6","SparkLevelPatchEntry-Overrided7","SparkLevelPatchEntry-Overrided8","SparkLevelPatchEntry-Overrided9","SparkLevelPatchEntry-Overrided10")
 
-set Transient.SparkServiceConfiguration_6 Values (",GD_Weap_SniperRifles.A_Weapons.WeaponType_Hyperion_Sniper,ExternalAttributeEffects[3].BaseModifierValue.BaseValueConstant,,17.45","GD_Soldier_Streaming,GD_Soldier_Streaming.Pawn_Soldier,bWeaponBob,,True","GD_Soldier_Streaming,GD_Soldier_Streaming.Pawn_Soldier,Bob,,0.015000","GD_Soldier_Streaming,GD_Soldier_Streaming.Pawn_Soldier,BobBaseValue,,0.015000","GD_Soldier_Streaming,GD_Soldier_Streaming.Pawn_Soldier,WalkBob,,(X=0.000000,Y=0.000000,Z=0.000000)","GD_Soldier_Streaming,GD_Soldier.Character.CharClass_Soldier,SprintingPct,,1.75","GD_Assassin_Streaming,GD_Assassin_Streaming.Pawn_Assassin,bWeaponBob,,True","GD_Assassin_Streaming,GD_Assassin_Streaming.Pawn_Assassin,Bob,,0.015000","GD_Assassin_Streaming,GD_Assassin_Streaming.Pawn_Assassin,BobBaseValue,,0.015000","GD_Assassin_Streaming,GD_Assassin.Character.CharClass_Assassin,SprintingPct,,1.75","GD_Lilac_Psycho_Streaming,GD_Lilac_Psycho_Streaming.Pawn_LilacPlayerClass,bWeaponBob,,True","GD_Lilac_Psycho_Streaming,GD_Lilac_Psycho_Streaming.Pawn_LilacPlayerClass,Bob,,0.015000","GD_Lilac_Psycho_Streaming,GD_Lilac_Psycho_Streaming.Pawn_LilacPlayerClass,BobBaseValue,,0.015000","GD_Lilac_Psycho_Streaming,GD_Lilac_PlayerClass.Character.CharClass_LilacPlayerClass,SprintingPct,,1.65","GD_Mercenary_Streaming,GD_Mercenary_Streaming.Pawn_Mercenary,bWeaponBob,,True","GD_Mercenary_Streaming,GD_Mercenary_Streaming.Pawn_Mercenary,Bob,,0.015000","GD_Mercenary_Streaming,GD_Mercenary_Streaming.Pawn_Mercenary,BobBaseValue,,0.015000","GD_Mercenary_Streaming,GD_Mercenary.Character.CharClass_Mercenary,SprintingPct,,1.75","GD_Siren_Streaming,GD_Siren_Streaming.Pawn_Siren,bWeaponBob,,True","GD_Siren_Streaming,GD_Siren_Streaming.Pawn_Siren,Bob,,0.015000","GD_Siren_Streaming,GD_Siren_Streaming.Pawn_Siren,BobBaseValue,,0.015000","GD_Siren_Streaming,GD_Siren.Character.CharClass_Siren,SprintingPct,,1.75","GD_Tulip_Mechro_Streaming,GD_Tulip_Mechro_Streaming.Pawn_Mechromancer,bWeaponBob,,True","GD_Tulip_Mechro_Streaming,GD_Tulip_Mechromancer.Character.CharClass_Mechromancer,SprintingPct,,1.75","GD_Tulip_Mechro_Streaming,GD_Tulip_Mechro_Streaming.Pawn_Mechromancer,Bob,,0.015000","GD_Tulip_Mechro_Streaming,GD_Tulip_Mechro_Streaming.Pawn_Mechromancer,BobBaseValue,,0.015000",",GD_Ammodrops.Pickups.AmmoDrop_Sniper_Rifle_Cartridges,bAutomaticallyPickup,,False",",GD_Ammodrops.Shop.AmmoShop_Assault_Rifle_Bullets,bAutomaticallyPickup,,False",",GD_Ammodrops.Shop.AmmoShop_Patrol_SMG_Clip,bAutomaticallyPickup,,False",",GD_Ammodrops.Shop.AmmoShop_Repeater_Pistol_Clip,bAutomaticallyPickup,,False",",GD_Ammodrops.Shop.AmmoShop_Rocket_Launcher,bAutomaticallyPickup,,False",",GD_Ammodrops.Shop.AmmoShop_Rocket_Launcher,ExternalAttributeEffects,,((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Rocket_Launcher.Ammo_Rocket_Launcher_CurrentValue',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=InventoryAttributeDefinition'GD_Ammodrops.AmmoPickup_Amounts.AmmoAmountShop_Launcher',InitializationDefinition=None,BaseValueScaleConstant=0.500000))",",GD_Ammodrops.Shop.AmmoShop_Shotgun_Shells,bAutomaticallyPickup,,False",",GD_Ammodrops.Shop.AmmoShop_Shotgun_Shells,ExternalAttributeEffects,,((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Combat_Shotgun.Ammo_Combat_Shotgun_CurrentValue',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=InventoryAttributeDefinition'GD_Ammodrops.AmmoPickup_Amounts.AmmoAmountShop_Shotgun',InitializationDefinition=None,BaseValueScaleConstant=0.400000))",",GD_Ammodrops.Pickups.AmmoDrop_Sniper_Rifle_Cartridges,ExternalAttributeEffects,,((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Sniper_Rifle.Ammo_Sniper_Rifle_CurrentValue',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Ammodrops.AttributeInitialization.Init_AmmoAmountShared_SniperRifle',BaseValueScaleConstant=0.400000))",",GD_Ammodrops.Shop.AmmoShop_Repeater_Pistol_Clip,ExternalAttributeEffects,,((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Repeater_Pistol.Ammo_Repeater_Pistol_CurrentValue',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=InventoryAttributeDefinition'GD_Ammodrops.AmmoPickup_Amounts.AmmoAmountShop_Repeater',InitializationDefinition=None,BaseValueScaleConstant=0.200000))")
+set Transient.SparkServiceConfiguration_6 Values (",GD_Weap_SniperRifles.A_Weapons.WeaponType_Hyperion_Sniper,ExternalAttributeEffects[3].BaseModifierValue.BaseValueConstant,,17.45","GD_Soldier_Streaming,GD_Soldier.Character.CharClass_Soldier,SprintingPct,,1.75","GD_Assassin_Streaming,GD_Assassin.Character.CharClass_Assassin,SprintingPct,,1.75","GD_Lilac_Psycho_Streaming,GD_Lilac_PlayerClass.Character.CharClass_LilacPlayerClass,SprintingPct,,1.65","GD_Mercenary_Streaming,GD_Mercenary.Character.CharClass_Mercenary,SprintingPct,,1.75","GD_Siren_Streaming,GD_Siren.Character.CharClass_Siren,SprintingPct,,1.75","GD_Tulip_Mechro_Streaming,GD_Tulip_Mechromancer.Character.CharClass_Mechromancer,SprintingPct,,1.75",",GD_Ammodrops.Pickups.AmmoDrop_Sniper_Rifle_Cartridges,bAutomaticallyPickup,,False",",GD_Ammodrops.Shop.AmmoShop_Assault_Rifle_Bullets,bAutomaticallyPickup,,False",",GD_Ammodrops.Shop.AmmoShop_Patrol_SMG_Clip,bAutomaticallyPickup,,False",",GD_Ammodrops.Shop.AmmoShop_Repeater_Pistol_Clip,bAutomaticallyPickup,,False",",GD_Ammodrops.Shop.AmmoShop_Rocket_Launcher,bAutomaticallyPickup,,False",",GD_Ammodrops.Shop.AmmoShop_Rocket_Launcher,ExternalAttributeEffects,,((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Rocket_Launcher.Ammo_Rocket_Launcher_CurrentValue',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=InventoryAttributeDefinition'GD_Ammodrops.AmmoPickup_Amounts.AmmoAmountShop_Launcher',InitializationDefinition=None,BaseValueScaleConstant=0.500000))",",GD_Ammodrops.Shop.AmmoShop_Shotgun_Shells,bAutomaticallyPickup,,False",",GD_Ammodrops.Shop.AmmoShop_Shotgun_Shells,ExternalAttributeEffects,,((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Combat_Shotgun.Ammo_Combat_Shotgun_CurrentValue',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=InventoryAttributeDefinition'GD_Ammodrops.AmmoPickup_Amounts.AmmoAmountShop_Shotgun',InitializationDefinition=None,BaseValueScaleConstant=0.400000))",",GD_Ammodrops.Pickups.AmmoDrop_Sniper_Rifle_Cartridges,ExternalAttributeEffects,,((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Sniper_Rifle.Ammo_Sniper_Rifle_CurrentValue',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Ammodrops.AttributeInitialization.Init_AmmoAmountShared_SniperRifle',BaseValueScaleConstant=0.400000))",",GD_Ammodrops.Shop.AmmoShop_Repeater_Pistol_Clip,ExternalAttributeEffects,,((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Repeater_Pistol.Ammo_Repeater_Pistol_CurrentValue',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=InventoryAttributeDefinition'GD_Ammodrops.AmmoPickup_Amounts.AmmoAmountShop_Repeater',InitializationDefinition=None,BaseValueScaleConstant=0.200000))")
 
