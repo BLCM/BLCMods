@@ -1,0 +1,278 @@
+#<FiringMode-Free-er-Upper>
+
+    #<Description>
+
+        By Aaron0000
+
+        (This is more of a resource for other modders, rather than an actual mod. Feel free to copy and use pieces of this as long as you give me just a little credit.)
+
+        (Everything is disabled by default. Use the Filtertool to enable things.)
+
+        #<Frees up some somewhat unnecessary firing modes so that they can be used for other weapons, as well as adjusting said weapons (as needed) to be as close to their Unofficial Community Patch version as possible (expect some differences in things like tracers, or splash radius for most of them with splash). There are a few minor changes due to doing this; >
+
+            Dahl blasters no longer fire in a triangular matter.
+
+            Infection and Little Evie no longer arc.
+
+            Retcher has a gentler arc. Also buffed the speed of it because it was just pitiful.
+
+            Yellow Jacket no longer starts slow and becomes fast, moves at a constant 50% of a normal plasma caster. It also has increased base damage to accomodate the loss from the splash (was 70%, is 50% after changing the firing mode to a normal plasma caster's).
+
+            Norfleet no longer fires out projectiles in a spread. The projectiles also no longer twist around in the air, and have marginally smaller splash. Weapon's accuracy was lowered to help it function roughly as it did before.
+
+            Pitchfork bullets move faster. Can also no longer get multiple amp damage boosts.
+
+            Sand Hawk can no longer get multiple amp damage boosts. It also starts out smaller than normal and gets larger as it flies away.
+
+        #</Frees up some somewhat unnecessary firing modes so that they can be used for other weapons, as well as adjusting said weapons (as needed) to be as close to their Unofficial Community Patch version as possible (expect some differences in things like tracers, or splash radius for most of them with splash). There are a few minor changes due to doing this; >
+
+        #<The firing modes that are freed up by this mod are;>
+
+            GD_Weap_AssaultRifle.FiringModes.Bullet_Assault_Hammerbuster
+
+            GD_Weap_Pistol.FiringModes.Bullet_Pistol_Dahl_Hornet
+
+            GD_Weap_Pistol.FiringModes.Bullet_Pistol_Dahl_Teapot
+
+            GD_Weap_Launchers.FiringModes.FM_Alien_Maliwan_Norfleet
+
+            GD_Weap_Launchers.FiringModes.FM_Rocket_Bandit_BadaBoom
+
+            GD_Weap_Pistol.FiringModes.Bullet_Pistol_Hyperion_Fibber_1 (Shotgun Fibber, Fibber Barrel 2 in Gibbed)
+
+            GD_Weap_Pistol.FiringModes.Bullet_Pistol_Spiker_Homing_Dahlminator
+
+            GD_Weap_Shotgun.FiringModes.Bullet_Shotgun_ConferenceCall_Child
+
+            GD_Weap_Shotgun.FiringModes.Bullet_Shotgun_HyperionBarrel (Striker)
+
+            GD_Weap_SMG.FiringModes.Bullet_SMG_Commerce
+
+            GD_Weap_SMG.FiringModes.Bullet_SMG_Emperor
+
+            GD_Weap_SniperRifles.FiringModes.Bullet_Sniper_Pitchfork_Child
+
+            GD_Weap_SniperRifles.FiringModes.Bullet_Sniper_Pitchfork_Child_2
+
+            GD_Aster_Weapons.FiringModes.Bullet_SMG_Orc_Child
+
+            GD_Gladiolus_Weapons.FiringModes.Bullet_Pistol_Stalker
+
+            GD_Iris_Weapons.FiringModes.Bullets_Pistol_Torgue_PocketRocket
+
+            GD_Lobelia_Weapons.FiringModes.Bullet_Sniper_Jakobs_Godfinger_Ch1
+
+            GD_Orchid_BossWeapons.FiringModes.Bullet_Pistol_Maliwan_Evie
+
+            GD_Orchid_BossWeapons.FiringModes.Bullet_SMG_SandHawk_Child0
+
+            GD_Orchid_BossWeapons.FiringModes.Bullet_SMG_SandHawk_Child1
+
+            GD_Orchid_BossWeapons.FiringModes.Bullet_SMG_SandHawk_Child2
+
+            GD_Orchid_BossWeapons.FiringModes.Bullet_SMG_SandHawk_Child3
+
+            GD_Orchid_RaidWeapons.Shotgun.Spitter.Orchid_Seraph_Spitter_FireMode (Retcher)
+
+            GD_Sage_RaidWeapons.FiringModes.Bullet_Pistol_Maliwan_Infection
+
+            GD_Sage_Weapons.FiringModes.Bullet_Plasma_YellowJacket
+
+            GD_Weap_AssaultRifle.FiringModes.Bullet_Blaster_Dahl
+
+        #</The firing modes that are freed up by this mod are;>
+
+    #</Description>
+
+    #<Code>
+
+        #<Firing Mode Changed Only>
+
+            #<Commerce>
+
+                #set GD_Weap_SMG.Barrel.SMG_Barrel_Tediore_Commerce CustomFiringModeDefinition None<off>
+
+            #</Commerce>
+
+            #<Conference Call Child Bullets>
+
+                #set GD_Weap_Shotgun.FiringModes.Bullet_Shotgun_ConferenceCall TimerEvents ((Time=0.050000,Response=(SplitNum=2,SplitAngle=90.000000,SplitAngleOffset=0.000000,SplitDistance=0.000000,SplitFire=FiringModeDefinition'GD_Weap_Shotgun.FiringModes.Bullet_Shotgun_ConferenceCall_Child',NewSpeed=0.000000,bDetonate=False,bRespawnTracer=False,bUpdateBeamSourceLocation=False,Behaviors=)),(Time=0.100000,Response=(SplitNum=2,SplitAngle=90.000000,SplitAngleOffset=0.000000,SplitDistance=0.000000,SplitFire=FiringModeDefinition'GD_Weap_Shotgun.FiringModes.Bullet_Shotgun_Default',NewSpeed=0.000000,bDetonate=False,bRespawnTracer=False,bUpdateBeamSourceLocation=False,Behaviors=)),(Time=0.150000,Response=(SplitNum=2,SplitAngle=90.000000,SplitAngleOffset=0.000000,SplitDistance=0.000000,SplitFire=FiringModeDefinition'GD_Weap_Shotgun.FiringModes.Bullet_Shotgun_Default',NewSpeed=0.000000,bDetonate=False,bRespawnTracer=False,bUpdateBeamSourceLocation=False,Behaviors=)),(Time=0.200000,Response=(SplitNum=2,SplitAngle=90.000000,SplitAngleOffset=0.000000,SplitDistance=0.000000,SplitFire=FiringModeDefinition'GD_Weap_Shotgun.FiringModes.Bullet_Shotgun_Default',NewSpeed=0.000000,bDetonate=False,bRespawnTracer=False,bUpdateBeamSourceLocation=False,Behaviors=)),(Time=0.250000,Response=(SplitNum=2,SplitAngle=90.000000,SplitAngleOffset=0.000000,SplitDistance=0.000000,SplitFire=FiringModeDefinition'GD_Weap_Shotgun.FiringModes.Bullet_Shotgun_Default',NewSpeed=0.000000,bDetonate=False,bRespawnTracer=False,bUpdateBeamSourceLocation=False,Behaviors=)),(Time=0.300000,Response=(SplitNum=2,SplitAngle=90.000000,SplitAngleOffset=0.000000,SplitDistance=0.000000,SplitFire=FiringModeDefinition'GD_Weap_Shotgun.FiringModes.Bullet_Shotgun_Default',NewSpeed=0.000000,bDetonate=False,bRespawnTracer=False,bUpdateBeamSourceLocation=False,Behaviors=)),(Time=0.350000,Response=(SplitNum=2,SplitAngle=90.000000,SplitAngleOffset=0.000000,SplitDistance=0.000000,SplitFire=FiringModeDefinition'GD_Weap_Shotgun.FiringModes.Bullet_Shotgun_Default',NewSpeed=0.000000,bDetonate=False,bRespawnTracer=False,bUpdateBeamSourceLocation=False,Behaviors=)),(Time=0.400000,Response=(SplitNum=2,SplitAngle=90.000000,SplitAngleOffset=0.000000,SplitDistance=0.000000,SplitFire=FiringModeDefinition'GD_Weap_Shotgun.FiringModes.Bullet_Shotgun_Default',NewSpeed=0.000000,bDetonate=False,bRespawnTracer=False,bUpdateBeamSourceLocation=False,Behaviors=)))<off>
+
+            #</Conference Call Child Bullets>
+
+            #<Dahl Blasters>
+
+                #set GD_Weap_AssaultRifle.Barrel.AR_Barrel_Alien_Dahl CustomFiringModeDefinition FiringModeDefinition'GD_Weap_AssaultRifle.FiringModes.Bullet_Blaster_Default'<off>
+
+            #</Dahl Blasters>
+
+            #<Emperor>
+
+                #set GD_Weap_SMG.Barrel.SMG_Barrel_Dahl_Emperor CustomFiringModeDefinition None<off>
+
+            #</Emperor>
+
+            #<Godfinger Child Bullets>
+
+                #set GD_Lobelia_Weapons.FiringModes.Bullet_Sniper_Jakobs_Godfinger TimerEvents ((Time=0.030000,Response=(SplitNum=1,SplitAngle=0.000000,SplitAngleOffset=0.000000,SplitDistance=0.000000,SplitFire=FiringModeDefinition'GD_Weap_SniperRifles.FiringModes.Bullet_Sniper_Default',NewSpeed=0.000000,bDetonate=False,bRespawnTracer=False,bUpdateBeamSourceLocation=False,Behaviors=)),(Time=0.060000,Response=(SplitNum=1,SplitAngle=0.000000,SplitAngleOffset=0.000000,SplitDistance=0.000000,SplitFire=FiringModeDefinition'GD_Weap_SniperRifles.FiringModes.Bullet_Sniper_Default',NewSpeed=0.000000,bDetonate=False,bRespawnTracer=False,bUpdateBeamSourceLocation=False,Behaviors=)),(Time=0.090000,Response=(SplitNum=1,SplitAngle=0.000000,SplitAngleOffset=0.000000,SplitDistance=0.000000,SplitFire=FiringModeDefinition'GD_Weap_SniperRifles.FiringModes.Bullet_Sniper_Default',NewSpeed=0.000000,bDetonate=False,bRespawnTracer=False,bUpdateBeamSourceLocation=False,Behaviors=)),(Time=0.120000,Response=(SplitNum=1,SplitAngle=0.000000,SplitAngleOffset=0.000000,SplitDistance=0.000000,SplitFire=FiringModeDefinition'GD_Weap_SniperRifles.FiringModes.Bullet_Sniper_Default',NewSpeed=0.000000,bDetonate=False,bRespawnTracer=False,bUpdateBeamSourceLocation=False,Behaviors=)),(Time=0.150000,Response=(SplitNum=1,SplitAngle=0.000000,SplitAngleOffset=0.000000,SplitDistance=0.000000,SplitFire=FiringModeDefinition'GD_Weap_SniperRifles.FiringModes.Bullet_Sniper_Default',NewSpeed=0.000000,bDetonate=False,bRespawnTracer=False,bUpdateBeamSourceLocation=False,Behaviors=)),(Time=0.180000,Response=(SplitNum=2,SplitAngle=0.000000,SplitAngleOffset=0.000000,SplitDistance=0.000000,SplitFire=FiringModeDefinition'GD_Weap_SniperRifles.FiringModes.Bullet_Sniper_Default',NewSpeed=0.000000,bDetonate=False,bRespawnTracer=False,bUpdateBeamSourceLocation=False,Behaviors=)),(Time=0.210000,Response=(SplitNum=2,SplitAngle=0.000000,SplitAngleOffset=0.000000,SplitDistance=0.000000,SplitFire=FiringModeDefinition'GD_Weap_SniperRifles.FiringModes.Bullet_Sniper_Default',NewSpeed=0.000000,bDetonate=False,bRespawnTracer=False,bUpdateBeamSourceLocation=False,Behaviors=)),(Time=0.240000,Response=(SplitNum=4,SplitAngle=0.000000,SplitAngleOffset=0.000000,SplitDistance=0.000000,SplitFire=FiringModeDefinition'GD_Weap_SniperRifles.FiringModes.Bullet_Sniper_Default',NewSpeed=0.000000,bDetonate=False,bRespawnTracer=False,bUpdateBeamSourceLocation=False,Behaviors=)))<off>
+
+                #set GD_Lobelia_Weapons.FiringModes.Bullet_Sniper_Jakobs_Godfinger Speed 22000<off>
+
+            #</Godfinger Child Bullets>
+
+            #<Hammer Buster>
+
+                #set GD_Weap_AssaultRifle.Barrel.AR_Barrel_Dahl_HammerBuster CustomFiringModeDefinition None<off>
+
+            #</Hammer Buster>
+
+            #<Hornet>
+
+                #set GD_Weap_Pistol.Barrel.Pistol_Barrel_Dahl_Hornet CustomFiringModeDefinition FiringModeDefinition'GD_Weap_Pistol.FiringModes.Bullet_Pistol_Maliwan'<off>
+
+            #</Hornet>
+
+            #<Orc Child Bullets>
+
+                #set GD_Aster_Weapons.FiringModes.Bullet_SMG_Orc RicochetResponse (SplitNum=1,SplitAngle=5.000000,SplitAngleOffset=-2.500000,SplitDistance=0.000000,SplitFire=FiringModeDefinition'GD_Weap_SMG.FiringModes.Bullet_SMG_Default',NewSpeed=6000.000000,bDetonate=False,bRespawnTracer=True,bUpdateBeamSourceLocation=False,Behaviors=)<off>
+
+            #</Orc Child Bullets>
+
+            #<Pitchfork Multiple Child Bullets>
+
+                #set GD_Weap_SniperRifles.FiringModes.Bullet_Sniper_Pitchfork Speed 45000<off>
+
+                #set GD_Weap_SniperRifles.FiringModes.Bullet_Sniper_Pitchfork TimerEvents ((Time=0.010000,Response=(SplitNum=2,SplitAngle=0.000000,SplitAngleOffset=0.000000,SplitDistance=44.000000,SplitFire=FiringModeDefinition'GD_Weap_SniperRifles.FiringModes.Bullet_Sniper_Default',NewSpeed=0.000000,bDetonate=False,bRespawnTracer=False,bUpdateBeamSourceLocation=False,Behaviors=)),(Time=0.010000,Response=(SplitNum=2,SplitAngle=0.000000,SplitAngleOffset=0.000000,SplitDistance=88.000000,SplitFire=FiringModeDefinition'GD_Weap_SniperRifles.FiringModes.Bullet_Sniper_Default',NewSpeed=0.000000,bDetonate=False,bRespawnTracer=False,bUpdateBeamSourceLocation=False,Behaviors=)))<off>
+
+            #</Pitchfork Multiple Child Bullets>
+
+            #<Striker>
+
+                #set GD_Weap_Shotgun.Barrel.SG_Barrel_Hyperion_Striker CustomFiringModeDefinition FiringModeDefinition'GD_Weap_Pistol.FiringModes.Bullet_Pistol_Default'<off>
+
+            #</Striker>
+
+        #</Firing Mode Changed Only>
+
+        #<Firing Mode and Weapon Stats Changed>
+
+            #<Badaboom>
+
+                #set GD_Weap_Launchers.Barrel.L_Barrel_Bandit_BadaBoom CustomFiringModeDefinition None<off>
+
+                #set GD_Weap_Launchers.Barrel.L_Barrel_Bandit_BadaBoom WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=5.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=3.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectileSpeedMultiplier',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-0.300000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))<off>
+
+            #</Badaboom>
+
+            #<Dahlminator>
+
+                #set GD_Weap_Pistol.Barrel.Pistol_Barrel_Alien_Homing_Dahlminator CustomFiringModeDefinition FiringModeDefinition'GD_Weap_Pistol.FiringModes.Bullet_Pistol_Spiker_Homing'<off>
+
+                #set GD_Weap_Pistol.Barrel.Pistol_Barrel_Alien_Homing_Dahlminator WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponStatusEffectChanceModifier',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.200000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.800000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectileSpeedMultiplier',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.200000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))<off>
+
+            #</Dahlminator>
+
+            #<Infection>
+
+                #set GD_Sage_RaidWeapons.Pistol.Pistol_Barrel_Infection CustomFiringModeDefinition FiringModeDefinition'GD_Weap_Pistol.FiringModes.Bullet_Pistol_Maliwan'<off>
+
+                #set GD_Sage_RaidWeapons.Pistol.Pistol_Barrel_Infection WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-0.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponReloadSpeed',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.200000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponStatusEffectChanceModifier',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=3.300000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponStatusEffectDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.800000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectileSpeedMultiplier',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-1.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))<off>
+
+                #set GD_Sage_RaidWeapons.Pistol.Pistol_Barrel_Infection AttributeSlotUpgrades ()<off>
+
+            #</Infection>
+
+            #<Little Evie>
+
+                #set GD_Orchid_BossWeapons.Pistol.Pistol_Barrel_Vladof_Evie CustomFiringModeDefinition FiringModeDefinition'GD_Weap_Pistol.FiringModes.Bullet_Pistol_Maliwan'<off>
+
+                #set GD_Orchid_BossWeapons.Pistol.Pistol_Barrel_Vladof_Evie WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.400000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponStatusEffectChanceModifier',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.300000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=6.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectileSpeedMultiplier',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.333333,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))<off>
+
+            #</Little Evie>
+
+            #<Norfleet>
+
+                #set GD_Weap_Launchers.Barrel.L_Barrel_Alien_Maliwan_Norfleet CustomFiringModeDefinition FiringModeDefinition'GD_Weap_Launchers.FiringModes.FM_Alien_Maliwan_PBFG'<off>
+
+                #set GD_Weap_Launchers.Barrel.L_Barrel_Alien_Maliwan_Norfleet WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.200000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponStatusEffectChanceModifier',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.200000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=15.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))<off>
+
+                #set GD_Weap_Launchers.Barrel.L_Barrel_Alien_Maliwan_Norfleet ExternalAttributeEffects ((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AccuracyResourcePool.AccuracyMinValue',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AccuracyResourcePool.AccuracyMaxValue',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))<off>
+
+            #</Norfleet>
+
+            #<Pocket Rocket>
+
+                #set GD_Iris_Weapons.Pistols.Pistol_Barrel_Torgue_PocketRocket CustomFiringModeDefinition FiringModeDefinition'GD_Weap_Pistol.FiringModes.Bullets_Pistol_Torgue_GyroJet'<off>
+
+                #set GD_Iris_Weapons.Pistols.Pistol_Barrel_Torgue_PocketRocket WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=6.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Torgue',InitializationDefinition=None,BaseValueScaleConstant=-0.050000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.800000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectileSpeedMultiplier',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.625000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))<off>
+
+            #</Pocket Rocket>
+
+            #<Retcher>
+
+                #set GD_Orchid_RaidWeapons.Shotgun.Spitter.Orchid_Seraph_Spitter_Barrel CustomFiringModeDefinition FiringModeDefinition'GD_Weap_Shotgun.FiringModes.Bullets_Splatgun'<off>
+
+                #set GD_Orchid_RaidWeapons.Shotgun.Spitter.Orchid_Seraph_Spitter_Barrel WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-5.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=4.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-0.200000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=7.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponReloadSpeed',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.350000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectileSpeedMultiplier',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-0.476190,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))<off>
+
+            #</Retcher>
+
+            #<Sand Hawk Multiple Child Bullets>
+
+                #set GD_Orchid_BossWeapons.FiringModes.Bullet_SMG_SandHawk TimerEvents ()<off>
+
+                #set GD_Orchid_BossWeapons.FiringModes.Bullet_SMG_SandHawk FiringPatternLines ((StartPoint=(Pitch=0,Yaw=0,Roll=0),EndPoint=(Pitch=0,Yaw=0,Roll=0),bUseStartPointOnly=True,CustomWaveMotion=(bUseCustomWaveMotion=False,WaveFreq=(X=0.000000,Y=0.000000,Z=0.000000),WaveAmp=(X=0.000000,Y=0.000000,Z=0.000000),WavePhase=(X=0.000000,Y=0.000000,Z=0.000000))),(StartPoint=(Pitch=0,Yaw=32,Roll=90),EndPoint=(Pitch=0,Yaw=0,Roll=0),bUseStartPointOnly=True,CustomWaveMotion=(bUseCustomWaveMotion=False,WaveFreq=(X=0.000000,Y=0.000000,Z=0.000000),WaveAmp=(X=0.000000,Y=0.000000,Z=0.000000),WavePhase=(X=0.000000,Y=0.000000,Z=0.000000))),(StartPoint=(Pitch=0,Yaw=64,Roll=0),EndPoint=(Pitch=0,Yaw=0,Roll=0),bUseStartPointOnly=True,CustomWaveMotion=(bUseCustomWaveMotion=True,WaveFreq=(X=0.000000,Y=0.000000,Z=300.000000),WaveAmp=(X=0.000000,Y=0.000000,Z=12.000000),WavePhase=(X=0.000000,Y=0.000000,Z=0.000000))),(StartPoint=(Pitch=0,Yaw=-64,Roll=0),EndPoint=(Pitch=0,Yaw=0,Roll=0),bUseStartPointOnly=True,CustomWaveMotion=(bUseCustomWaveMotion=True,WaveFreq=(X=0.000000,Y=0.000000,Z=300.000000),WaveAmp=(X=0.000000,Y=0.000000,Z=12.000000),WavePhase=(X=0.000000,Y=0.000000,Z=0.000000))),(StartPoint=(Pitch=0,Yaw=128,Roll=0),EndPoint=(Pitch=0,Yaw=0,Roll=0),bUseStartPointOnly=True,CustomWaveMotion=(bUseCustomWaveMotion=True,WaveFreq=(X=0.000000,Y=0.000000,Z=300.000000),WaveAmp=(X=0.000000,Y=0.000000,Z=20.000000),WavePhase=(X=0.000000,Y=0.000000,Z=-20.000000))),(StartPoint=(Pitch=0,Yaw=-128,Roll=0),EndPoint=(Pitch=0,Yaw=0,Roll=0),bUseStartPointOnly=True,CustomWaveMotion=(bUseCustomWaveMotion=True,WaveFreq=(X=0.000000,Y=0.000000,Z=300.000000),WaveAmp=(X=0.000000,Y=0.000000,Z=20.000000),WavePhase=(X=0.000000,Y=0.000000,Z=-20.000000))),(StartPoint=(Pitch=0,Yaw=192,Roll=0),EndPoint=(Pitch=0,Yaw=0,Roll=0),bUseStartPointOnly=True,CustomWaveMotion=(bUseCustomWaveMotion=True,WaveFreq=(X=0.000000,Y=0.000000,Z=300.000000),WaveAmp=(X=0.000000,Y=0.000000,Z=24.000000),WavePhase=(X=0.000000,Y=0.000000,Z=-30.000000))),(StartPoint=(Pitch=0,Yaw=-192,Roll=0),EndPoint=(Pitch=0,Yaw=0,Roll=0),bUseStartPointOnly=True,CustomWaveMotion=(bUseCustomWaveMotion=True,WaveFreq=(X=0.000000,Y=0.000000,Z=300.000000),WaveAmp=(X=0.000000,Y=0.000000,Z=24.000000),WavePhase=(X=0.000000,Y=0.000000,Z=-30.000000))))<off>
+
+                #set GD_Orchid_BossWeapons.FiringModes.Bullet_SMG_SandHawk bFireRandomlyFromPattern False<off>
+
+                #set GD_Orchid_BossWeapons.FiringModes.Bullet_SMG_SandHawk bResetPatternAfterEachShot True<off>
+
+                #set GD_Orchid_BossWeapons.FiringModes.Bullet_SMG_SandHawk bSuppressWeaponSpread True<off>
+
+                #set GD_Orchid_BossWeapons.FiringModes.Bullet_SMG_SandHawk bScalePatternByWeaponSpread False<off>
+
+                #set GD_Orchid_BossWeapons.FiringModes.Bullet_SMG_SandHawk BasePatternSpread 1.000000<off>
+
+                #set GD_Orchid_BossWeapons.FiringModes.Bullet_SMG_SandHawk MinPatternScale 0.000000<off>
+
+                #set GD_Orchid_BossWeapons.SMG.SMG_Barrel_Bandit_SandHawk WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-0.100000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.250000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponBurstInterval',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.100000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=7.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))<off>
+
+            #</Sand Hawk Multiple Child Bullets>
+
+            #<Shotgun Fibber>
+
+                #set GD_Weap_Pistol.Barrel.Fibber.Pistol_Barrel_Bandit_Fibber_1 CustomFiringModeDefinition None<off>
+
+                #set GD_Weap_Pistol.Barrel.Fibber.Pistol_Barrel_Bandit_Fibber_1 WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-4.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponReloadSpeed',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-5.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=4.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectileSpeedMultiplier',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-20.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))<off>
+
+            #</Shotgun Fibber>
+
+            #<Stalker>
+
+                #set GD_Gladiolus_Weapons.Pistol.Pistol_Barrel_Stalker CustomFiringModeDefinition None<off>
+
+                #set GD_Gladiolus_Weapons.Pistol.Pistol_Barrel_Stalker WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=8.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-0.030000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=3.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.740000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectileSpeedMultiplier',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-1.440000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponAdditionalRicochets',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=5.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))<off>
+
+            #</Stalker>
+
+            #<Teapot>
+
+                #set GD_Weap_Pistol.Barrel.Pistol_Barrel_Tediore_Teapot CustomFiringModeDefinition FiringModeDefinition'GD_Weap_Pistol.FiringModes.Bullet_Pistol_Maliwan'<off>
+
+                #set GD_Weap_Pistol.Barrel.Pistol_Barrel_Tediore_Teapot WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectileSpeedMultiplier',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.333333,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))<off>
+
+            #</Teapot>
+
+            #<Yellow Jacket>
+
+                #set GD_Sage_Weapons.SMG.SMG_Barrel_Alien_YellowJacket CustomFiringModeDefinition FiringModeDefinition'GD_Weap_SMG.FiringModes.Bullet_Plasma_Default'<off>
+
+                #set GD_Sage_Weapons.SMG.SMG_Barrel_Alien_YellowJacket WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.350000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponStatusEffectChanceModifier',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.300000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponPerShotAccuracyImpulse',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponPerShotAccuracyImpulse',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Hyperion',InitializationDefinition=None,BaseValueScaleConstant=3.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectileSpeedMultiplier',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))<off>
+
+            #</Yellow Jacket>
+
+        #</Firing Mode and Weapon Stats Changed>
+
+    #</Code>
+
+#</FiringMode-Free-er-Upper>
+
