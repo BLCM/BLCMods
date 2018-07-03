@@ -26,8 +26,6 @@
 
         If you want to un-mystify the Mysterious Amulet, you can toggle the stats to appear on the item card with the Filter Tool. They're off by default (only displays "Friendship").
 
-        If you have the version of the Opportunity relic that buffs shop timer instead of movement speed from the Unofficial Community Patch, the movement speed would not appear correctly on the relic. So there's an option to enable those UI bits without implementing the movement speed buffs of the alternate Opportunity relic (Enabled by default. It'll still make shop timers go faster, but you won't be able to see it as a stat on the relic.)
-
     #</Description>
 
     #<Code>
@@ -50,17 +48,57 @@
 
             set GD_AttributePresentation.Artifacts.AttrPresent_ArtifactTimeToBeRevivedMultiplier Description FFYL Time
 
+            set GD_AttributePresentation.Weapons.AttrPresent_TechActiveRegenerationRate Attribute D_Attributes.GameplayAttributes.FootSpeed
+
+            set GD_AttributePresentation.Weapons.AttrPresent_TechActiveRegenerationRate Description Movement Speed
+
+            set GD_AttributePresentation.Weapons.AttrPresent_TechActiveRegenerationRate BasePriority 0.000000
+
+            set GD_AttributePresentation.Weapons.AttrPresent_TechActiveRegenerationRate NoConstraintText 
+
+            set GD_AttributePresentation.Weapons.AttrPresent_TechActiveRegenerationRate Suffix 
+
+            set GD_AttributePresentation.Weapons.AttrPresent_TechActiveRegenerationRate Prefix 
+
+            set GD_AttributePresentation.Weapons.AttrPresent_TechActiveRegenerationRate bIncludeSuffixInTranslation False
+
+            set GD_AttributePresentation.Weapons.AttrPresent_TechActiveRegenerationRate bIncludePrefixInTranslation False
+
+            set GD_AttributePresentation.Weapons.AttrPresent_TechActiveRegenerationRate bBiggerIsBetter True
+
+            set GD_AttributePresentation.Weapons.AttrPresent_TechActiveRegenerationRate bDisplayAsPercentage True
+
+            set GD_AttributePresentation.Weapons.AttrPresent_TechActiveRegenerationRate bDisplayPercentAsFloat True
+
+            set GD_AttributePresentation.Weapons.AttrPresent_TechActiveRegenerationRate bDisplayAsInverse False
+
+            set GD_AttributePresentation.Weapons.AttrPresent_TechActiveRegenerationRate bDontDisplayNumber True
+
+            set GD_AttributePresentation.Weapons.AttrPresent_TechActiveRegenerationRate bDontDisplayPlusSign False
+
+            set GD_AttributePresentation.Weapons.AttrPresent_TechActiveRegenerationRate bUseCustomNumberPlacement False
+
+            set GD_AttributePresentation.Weapons.AttrPresent_TechActiveRegenerationRate bEnableTextColor False
+
+            set GD_AttributePresentation.Weapons.AttrPresent_TechActiveRegenerationRate bValueRemappingEnabled False
+
+            set GD_AttributePresentation.Weapons.AttrPresent_TechActiveRegenerationRate bUseOneAsBaseValueForPresentationIfContextFailsToResolve False
+
+            set GD_AttributePresentation.Weapons.AttrPresent_TechActiveRegenerationRate bUseTwoAsBaseValueForPresentationIfContextFailsToResolve False
+
+            set GD_AttributePresentation.Weapons.AttrPresent_TechActiveRegenerationRate RoundingMode ATTRROUNDING_Float
+
+            set GD_AttributePresentation.Weapons.AttrPresent_TechActiveRegenerationRate SignStyle SIGNSTYLE_AsIs
+
+            set GD_AttributePresentation.Weapons.AttrPresent_TechActiveRegenerationRate TextColor (B=255,G=255,R=255,A=255)
+
+            set GD_AttributePresentation.Weapons.AttrPresent_TechActiveRegenerationRate FloatPrecision 1
+
+            set GD_AttributePresentation.Weapons.AttrPresent_TechActiveRegenerationRate Icon shieldRechargeDelay
+
+            set GD_AttributePresentation.Weapons.AttrPresent_TechActiveRegenerationRate RemappingData (bUseContextOverride=False,InputValueMn=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),InputValueMx=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),OutputValueMn=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),OutputValueMx=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))
+
         #</Minor UI Changes>
-
-        #<Movement Speed UI Fix>
-
-            set GD_AttributePresentation.Artifacts.AttrPresent_ArtifactShopTimerRate Attribute D_Attributes.GameplayAttributes.FootSpeed
-
-            set GD_AttributePresentation.Artifacts.AttrPresent_ArtifactShopTimerRate Description Movement Speed
-
-            set GD_Artifacts.Body.Body_Opportunity:AttributePresentationDefinition_0 Description Increases [skill]Movement Speed[-skill].
-
-        #</Movement Speed UI Fix>
 
         #<Display All Stats (Off by Default)>
 
