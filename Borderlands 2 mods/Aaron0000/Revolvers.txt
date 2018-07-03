@@ -38,6 +38,8 @@
 
         All Unique/Legendary/Seraph Torgue pistols (Unkempt Harold was adjusted so that the projectile count as a masher is x5 instead of x6.)
 
+        Thanks to Koby (modified code) and Hemaxhu (original code), Jakobs pistols have had their animations adjusted to better fit the feel of a slow-powerful gun, instead of fanning the hammer.
+
         FIXES FOR OTHER MODS;
 
         If you want to use the standalone version of mashers (that "mashes" all pistols, instead of just Jakobs/Maliwan/Torgue), just activate Mashers after this mod.
@@ -518,7 +520,19 @@
 
         #</Custom Item Fixes>
 
+        #<Animation Fixes (Thanks Koby and Hemaxhu)>
+
+            set GD_Weap_Pistol.A_Weapons.WeaponType_Jakobs_Pistol RecoilAnimScaleCurve (Points=((InVal=1.200000,OutVal=1.200000,ArriveTangent=0.000000,LeaveTangent=0.000000,InterpMode=CIM_Linear),(InVal=1.200000,OutVal=1.200000,ArriveTangent=0.000000,LeaveTangent=0.000000,InterpMode=CIM_Linear)),InterpMethod=IMT_UseFixedTangentEvalAndNewAutoTangents)
+
+            #<hotfix><key>"SparkLevelPatchEntry-RevolversAnimationFix1"</key><value>",GD_PlayerShared.WeaponHolds1st.WeaponHold_Player_Pistol,WeaponActions,,((Posture=BWAP_All,Actions=((Action=BWA_FireRecoil,Expression=None,Animations=((Expression=ExpressionTree'GD_PlayerShared.WeaponHolds1st.WeaponHold_Player_Pistol:ExpressionTree_2',SpecialMove=SpecialMove_FirstPerson'GD_PlayerShared.Anims1st.WeaponAnim_Fire_Revolver_Recoil'),(Expression=ExpressionTree'GD_PlayerShared.WeaponHolds1st.WeaponHold_Player_Pistol:ExpressionTree_3',SpecialMove=SpecialMove_FirstPerson'GD_PlayerShared.Anims1st.WeaponAnim_Fire_Revolver_Recoil'))),(Action=BWA_Reload,Expression=ExpressionTree'GD_PlayerShared.WeaponHolds1st.WeaponHold_Player_Pistol:ExpressionTree_0',Animations=((Expression=AttributeExpressionEvaluator'GD_PlayerShared.WeaponHolds1st.WeaponHold_Player_Pistol:AttributeExpressionEvaluator_20',SpecialMove=SpecialMove_FirstPerson'GD_PlayerShared.Anims1st.WeaponAnim_Reload_Jakobs_Fast_Var2'),(Expression=AttributeExpressionEvaluator'GD_PlayerShared.WeaponHolds1st.WeaponHold_Player_Pistol:AttributeExpressionEvaluator_21',SpecialMove=SpecialMove_FirstPerson'GD_PlayerShared.Anims1st.WeaponAnim_Reload_Jakobs_Var2'))))))"</value><on>
+
+        #</Animation Fixes (Thanks Koby and Hemaxhu)>
+
     #</Code>
 
 #</Revolvers>
+
+set Transient.SparkServiceConfiguration_6 Keys ("SparkLevelPatchEntry-RevolversAnimationFix1")
+
+set Transient.SparkServiceConfiguration_6 Values (",GD_PlayerShared.WeaponHolds1st.WeaponHold_Player_Pistol,WeaponActions,,((Posture=BWAP_All,Actions=((Action=BWA_FireRecoil,Expression=None,Animations=((Expression=ExpressionTree'GD_PlayerShared.WeaponHolds1st.WeaponHold_Player_Pistol:ExpressionTree_2',SpecialMove=SpecialMove_FirstPerson'GD_PlayerShared.Anims1st.WeaponAnim_Fire_Revolver_Recoil'),(Expression=ExpressionTree'GD_PlayerShared.WeaponHolds1st.WeaponHold_Player_Pistol:ExpressionTree_3',SpecialMove=SpecialMove_FirstPerson'GD_PlayerShared.Anims1st.WeaponAnim_Fire_Revolver_Recoil'))),(Action=BWA_Reload,Expression=ExpressionTree'GD_PlayerShared.WeaponHolds1st.WeaponHold_Player_Pistol:ExpressionTree_0',Animations=((Expression=AttributeExpressionEvaluator'GD_PlayerShared.WeaponHolds1st.WeaponHold_Player_Pistol:AttributeExpressionEvaluator_20',SpecialMove=SpecialMove_FirstPerson'GD_PlayerShared.Anims1st.WeaponAnim_Reload_Jakobs_Fast_Var2'),(Expression=AttributeExpressionEvaluator'GD_PlayerShared.WeaponHolds1st.WeaponHold_Player_Pistol:AttributeExpressionEvaluator_21',SpecialMove=SpecialMove_FirstPerson'GD_PlayerShared.Anims1st.WeaponAnim_Reload_Jakobs_Var2'))))))")
 
