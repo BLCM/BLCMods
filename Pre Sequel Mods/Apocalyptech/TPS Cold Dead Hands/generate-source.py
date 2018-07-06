@@ -91,9 +91,9 @@ class OtherConfig(BaseConfig):
     # These will be all set via Hotfix, and re-used by enemies in different
     # levels.  That way, we only need as many pools as we have loot-dropping
     # bosses in a single level.
-    level_pool_0 = 'GD_CustomItemPools_MainGame.Prototype.GreenPattern'
-    level_pool_1 = 'GD_CustomItemPools_MainGame.Enforcer.DigitalEdSkins'
-    level_pool_2 = 'GD_CustomItemPools_MainGame.Gladiator.DigitalEdSkins'
+    level_pool_0 = 'GD_CustomItemPools_Marigold.Baroness.MarigoldSkin06'
+    level_pool_1 = 'GD_CustomItemPools_Marigold.Doppel.MarigoldSkin06'
+    level_pool_2 = 'GD_CustomItemPools_Marigold.Enforcer.MarigoldSkin06'
 
 class DropConfig(BaseConfig):
     """
@@ -400,23 +400,23 @@ class Regular(DropConfig):
         }
 
     # Rarity weight pools
-    rarity_pool_ar = 'GD_CustomItemPools_MainGame.Enforcer.GreenBold'
-    rarity_pool_launchers = 'GD_CustomItemPools_MainGame.Enforcer.GreenBoldAccent'
-    rarity_pool_pistols = 'GD_CustomItemPools_MainGame.Enforcer.GreenNinja'
-    rarity_pool_shotguns = 'GD_CustomItemPools_MainGame.Enforcer.GreenPale'
-    rarity_pool_smg = 'GD_CustomItemPools_MainGame.Gladiator.GreenBold'
-    rarity_pool_snipers = 'GD_CustomItemPools_MainGame.Gladiator.GreenBoldAccent'
-    rarity_pool_lasers = 'GD_CustomItemPools_MainGame.Gladiator.GreenNinja'
+    rarity_pool_ar = 'GD_CustomItemPools_Marigold.Gladiator.MarigoldSkin06'
+    rarity_pool_launchers = 'GD_CustomItemPools_Marigold.Lawbringer.MarigoldSkin06'
+    rarity_pool_pistols = 'GD_CustomItemPools_Marigold.Prototype.MarigoldSkin06'
+    rarity_pool_shotguns = 'GD_CustomItemPools_Marigold.Baroness.MarigoldSkin07'
+    rarity_pool_smg = 'GD_CustomItemPools_Marigold.Doppel.MarigoldSkin07'
+    rarity_pool_snipers = 'GD_CustomItemPools_Marigold.Enforcer.MarigoldSkin07'
+    rarity_pool_lasers = 'GD_CustomItemPools_Marigold.Gladiator.MarigoldSkin07'
 
     # Equip pools (this is where weights are applied)
-    equip_pool_shields = 'GD_CustomItemPools_MainGame.Gladiator.GreenPale'
-    equip_pool_all = 'GD_CustomItemPools_MainGame.Lawbringer.GreenBold'
-    equip_pool_ar = 'GD_CustomItemPools_MainGame.Lawbringer.GreenBoldAccent'
-    equip_pool_launchers = 'GD_CustomItemPools_MainGame.Enforcer.GreenPattern'
-    equip_pool_shotguns = 'GD_CustomItemPools_MainGame.Lawbringer.GreenNinja'
-    equip_pool_snipers = 'GD_CustomItemPools_MainGame.Gladiator.GreenPattern'
-    equip_pool_only_lasers = 'GD_CustomItemPools_MainGame.Lawbringer.GreenPattern'
-    equip_pool_lasers = 'GD_CustomItemPools_MainGame.Lawbringer.GreenPale'
+    equip_pool_shields = 'GD_CustomItemPools_Marigold.Lawbringer.MarigoldSkin07'
+    equip_pool_all = 'GD_CustomItemPools_Marigold.Prototype.MarigoldSkin07'
+    equip_pool_ar = 'GD_CustomItemPools_Marigold.Baroness.MarigoldSkin11'
+    equip_pool_launchers = 'GD_CustomItemPools_Marigold.Doppel.MarigoldSkin11'
+    equip_pool_shotguns = 'GD_CustomItemPools_Marigold.Enforcer.MarigoldSkin11'
+    equip_pool_snipers = 'GD_CustomItemPools_Marigold.Gladiator.MarigoldSkin11'
+    equip_pool_only_lasers = 'GD_CustomItemPools_Marigold.Lawbringer.MarigoldSkin11'
+    equip_pool_lasers = 'GD_CustomItemPools_Marigold.Prototype.MarigoldSkin11'
 
     ###
     ### Enemy changes
@@ -967,23 +967,23 @@ class Badass(DropConfig):
         }
 
     # Rarity weight pools
-    rarity_pool_ar = 'GD_CustomItemPools_MainGame.Prototype.GreenBold'
-    rarity_pool_launchers = 'GD_CustomItemPools_MainGame.Prototype.GreenBoldAccent'
-    rarity_pool_pistols = 'GD_CustomItemPools_MainGame.Prototype.GreenNinja'
-    rarity_pool_shotguns = 'GD_CustomItemPools_MainGame.Prototype.GreenPale'
-    rarity_pool_smg = 'GD_CustomItemPools_MainGame.Enforcer.Gearbox'
-    rarity_pool_snipers = 'GD_CustomItemPools_MainGame.Enforcer.Gray'
-    rarity_pool_lasers = 'GD_CustomItemPools_MainGame.Gladiator.Gearbox'
+    rarity_pool_ar = 'GD_CustomItemPools_Marigold.Baroness.MarigoldSkin12'
+    rarity_pool_launchers = 'GD_CustomItemPools_Marigold.Doppel.MarigoldSkin12'
+    rarity_pool_pistols = 'GD_CustomItemPools_Marigold.Enforcer.MarigoldSkin12'
+    rarity_pool_shotguns = 'GD_CustomItemPools_Marigold.Gladiator.MarigoldSkin12'
+    rarity_pool_smg = 'GD_CustomItemPools_Marigold.Lawbringer.MarigoldSkin12'
+    rarity_pool_snipers = 'GD_CustomItemPools_Marigold.Prototype.MarigoldSkin12'
+    rarity_pool_lasers = 'GD_CustomItemPools_Marigold.Baroness.MarigoldSkin13'
 
     # Equip pools (this is where weights are applied)
-    equip_pool_shields = 'GD_CustomItemPools_MainGame.Gladiator.Gray'
-    equip_pool_all = 'GD_CustomItemPools_MainGame.Lawbringer.Gearbox'
-    equip_pool_ar = 'GD_CustomItemPools_MainGame.Lawbringer.Gray'
+    equip_pool_shields = 'GD_CustomItemPools_Marigold.Doppel.MarigoldSkin13'
+    equip_pool_all = 'GD_CustomItemPools_Marigold.Enforcer.MarigoldSkin13'
+    equip_pool_ar = 'GD_CustomItemPools_Marigold.Gladiator.MarigoldSkin13'
     equip_pool_launchers = None
-    equip_pool_shotguns = 'GD_CustomItemPools_MainGame.Prototype.Gearbox'
+    equip_pool_shotguns = 'GD_CustomItemPools_Marigold.Lawbringer.MarigoldSkin13'
     equip_pool_snipers = None
     equip_pool_only_lasers = None
-    equip_pool_lasers = 'GD_CustomItemPools_MainGame.Prototype.Gray'
+    equip_pool_lasers = 'GD_CustomItemPools_Marigold.Prototype.MarigoldSkin13'
 
     ###
     ### Enemy changes
