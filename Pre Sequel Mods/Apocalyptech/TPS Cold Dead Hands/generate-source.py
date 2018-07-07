@@ -371,13 +371,13 @@ class Regular(DropConfig):
     # Equip weights
     rarities = {
         'excellent': {
-            'common': 30,
-            'uncommon': 95,
-            'rare': 70,
-            'veryrare': 40,
+            'common': 32,
+            'uncommon': 97,
+            'rare': 72,
+            'veryrare': 37,
             'glitch_normal': 8,
             'glitch_claptastic': 16,
-            'legendary': 3,
+            'legendary': 2,
             },
         'better': {
             'common': 32.75,
@@ -938,7 +938,7 @@ class Badass(DropConfig):
         'excellent': {
             'common': 0,
             'uncommon': 0,
-            'rare': 50,
+            'rare': 70,
             'veryrare': 60,
             'glitch_normal': 40,
             'glitch_claptastic': 70,
