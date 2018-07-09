@@ -1,0 +1,44 @@
+#<Not-Even-A-Quarter-Assed AjaxOgre>
+
+    by Kazy
+
+    Simple mod. Removes the spinning, increases bullet speed, and changed some stats a slight bit.
+
+    For all your pseudo-Ajax needs
+
+    #<Coding>
+
+        #<Appearance>
+
+            set GD_Aster_Weapons.AssaultRifles.AR_Barrel_Vladof_Ogre GestaltModeSkeletalMeshName AR_Barrel_Bandit
+
+        #</Appearance>
+
+        #<Attributes>
+
+            set GD_Aster_Weapons.AssaultRifles.AR_Barrel_Vladof_Ogre WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.170000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-0.300000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=28.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponExtraShotChance',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Torgue',InitializationDefinition=None,BaseValueScaleConstant=0.250000)))
+
+            set GD_Aster_Weapons.FiringModes.Bullet_Assault_Ogre Speed 17000.000000
+
+            set GD_Aster_Weapons.AssaultRifles.AR_Barrel_Vladof_Ogre AttributeSlotUpgrades ((SlotName="WeaponSpread",GradeIncrease=-4,bActivateSlot=True),(SlotName="WeaponFireRate",GradeIncrease=24,bActivateSlot=True),(SlotName="WeaponAccuracyImpulse",GradeIncrease=8,bActivateSlot=True),(SlotName="WeaponMagSize",GradeIncrease=10,bActivateSlot=True),,(SlotName="WeaponDamage",GradeIncrease=-3,bActivateSlot=True),(SlotName="AccuracyMax",GradeIncrease=5,bActivateSlot=True),(SlotName="AccuracyRegen",GradeIncrease=5,bActivateSlot=True),(SlotName="WeaponBurstImpulse",GradeIncrease=3,bActivateSlot=True))
+
+        #</Attributes>
+
+        #<Stop spinning!>
+
+            set GD_Aster_Weapons.AssaultRifles.AR_Barrel_Vladof_Ogre NumPhysicalBarrelsToFireFrom 0 
+
+            set GD_Aster_Weapons.AssaultRifles.AR_Barrel_Vladof_Ogre bIsSpinningEnabled False 
+
+            set GD_Aster_Weapons.AssaultRifles.AR_Barrel_Vladof_Ogre SpinUpDuration (BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+
+            set GD_Aster_Weapons.AssaultRifles.AR_Barrel_Vladof_Ogre SpinDownDuration (BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+
+            set GD_Aster_Weapons.AssaultRifles.AR_Barrel_Vladof_Ogre StartingSpinUpFireIntervalMultiplier 1.000000 
+
+        #</Stop spinning!>
+
+    #</Coding>
+
+#</Not-Even-A-Quarter-Assed AjaxOgre>
+

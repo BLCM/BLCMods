@@ -6,10 +6,6 @@
 
         Replaces the largely uselss Tenacity relics with Agility relics; Relics that increase your movement speed and jump height. Also adjusts the Heart of the Seraph relics to boost speed and jump height as well.
 
-        NOTE;
-
-        If you have the version of the Opportunity relic that buffs shop timer instead of movement speed from the Unofficial Community Patch, the movement speed would not appear correctly on the relic. So there's an option to enable those UI bits without implementing the movement speed buffs of the alternate Opportunity relic (Enabled by default. It'll still make shop timers go faster, but you won't be able to see it as a stat on the relic.)
-
         #<Credits>
 
             Nocturni - For making the jump attribute a reality.
@@ -22,41 +18,89 @@
 
     #<Code>
 
-        #<Movement Speed UI Fix>
+        #<UI Stuff>
 
-            set GD_AttributePresentation.Artifacts.AttrPresent_ArtifactShopTimerRate Attribute D_Attributes.GameplayAttributes.FootSpeed
+            set GD_AttributePresentation.Weapons.AttrPresent_TechActiveRegenerationRate Attribute D_Attributes.GameplayAttributes.FootSpeed
 
-            set GD_AttributePresentation.Artifacts.AttrPresent_ArtifactShopTimerRate Description Movement Speed
+            set GD_AttributePresentation.Weapons.AttrPresent_TechActiveRegenerationRate Description Movement Speed
 
-            set GD_Artifacts.Body.Body_Opportunity:AttributePresentationDefinition_0 Description Increases [skill]Movement Speed[-skill].
+            set GD_AttributePresentation.Weapons.AttrPresent_TechActiveRegenerationRate BasePriority 0.000000
 
-        #</Movement Speed UI Fix>
+            set GD_AttributePresentation.Weapons.AttrPresent_TechActiveRegenerationRate NoConstraintText 
 
-        set D_Attributes.SkillAttributes.RevivalHealthMultiplier:ObjectpropertyAttributeValueResolver_20 PropertyName JumpZ
+            set GD_AttributePresentation.Weapons.AttrPresent_TechActiveRegenerationRate Suffix 
 
-        set D_Attributes.Injured.RevivedHealthAmount:SimpleMathValueResolver_0 Argument (BaseValueScaleConstant=0.000000)
+            set GD_AttributePresentation.Weapons.AttrPresent_TechActiveRegenerationRate Prefix 
 
-        set GD_AttributePresentation.Artifacts.AttrPresent_ArtifactRevivalHealthMultiplier Description Jump Height
+            set GD_AttributePresentation.Weapons.AttrPresent_TechActiveRegenerationRate bIncludeSuffixInTranslation False
 
-        set GD_AttributePresentation.Artifacts.AttrPresent_ArtifactRevivalHealthMultiplier bIncludeSuffixInTranslation False
+            set GD_AttributePresentation.Weapons.AttrPresent_TechActiveRegenerationRate bIncludePrefixInTranslation False
 
-        set GD_AttributePresentation.Artifacts.AttrPresent_ArtifactRevivalHealthMultiplier bIncludePrefixInTranslation False
+            set GD_AttributePresentation.Weapons.AttrPresent_TechActiveRegenerationRate bBiggerIsBetter True
 
-        set GD_AttributePresentation.Artifacts.AttrPresent_ArtifactRevivalHealthMultiplier bDisplayAsPercentage True
+            set GD_AttributePresentation.Weapons.AttrPresent_TechActiveRegenerationRate bDisplayAsPercentage True
 
-        set GD_AttributePresentation.Artifacts.AttrPresent_ArtifactRevivalHealthMultiplier bDontDisplayNumber True
+            set GD_AttributePresentation.Weapons.AttrPresent_TechActiveRegenerationRate bDisplayPercentAsFloat True
 
-        set GD_AttributePresentation.Artifacts.AttrPresent_ArtifactRevivalHealthMultiplier bEnableTextColor True
+            set GD_AttributePresentation.Weapons.AttrPresent_TechActiveRegenerationRate bDisplayAsInverse False
 
-        set GD_Artifacts.A_Item.Artifact_Tenacity UIStatList ((bDisplayAsModifierOnly=True,AttributeStyle=ATTRSTYLE_ModifierText,SupplementalAttributeStyle=ATTRSTYLE_JustNumber,StatCombinationMethod=SCM_Multiply,Attribute=AttributeDefinition'D_Attributes.GameplayAttributes.FootSpeed',ConstraintAttribute=None,SupplementalAttributeExpression=(AttributeOperand1=None,ComparisonOperator=OPERATOR_EqualTo,Operand2Usage=OPERAND_PreferAttribute,AttributeOperand2=None,ConstantOperand2=0.000000),SupplementalAttributeToAppend=None),(bDisplayAsModifierOnly=True,AttributeStyle=ATTRSTYLE_ModifierText,SupplementalAttributeStyle=ATTRSTYLE_JustNumber,StatCombinationMethod=SCM_Multiply,Attribute=AttributeDefinition'D_Attributes.SkillAttributes.RevivalHealthMultiplier',ConstraintAttribute=None,SupplementalAttributeExpression=(AttributeOperand1=None,ComparisonOperator=OPERATOR_EqualTo,Operand2Usage=OPERAND_PreferAttribute,AttributeOperand2=None,ConstantOperand2=0.000000),SupplementalAttributeToAppend=None))
+            set GD_AttributePresentation.Weapons.AttrPresent_TechActiveRegenerationRate bDontDisplayNumber True
 
-        set GD_Artifacts.Body.Body_Tenacity:AttributePresentationDefinition_0 Description Increases [skill]movement speed[-skill] and [skill]jumping ability[-skill].
+            set GD_AttributePresentation.Weapons.AttrPresent_TechActiveRegenerationRate bDontDisplayPlusSign False
 
-        set GD_Artifacts.A_Item.Artifact_Tenacity AttributeSlotEffects ((SlotName="Effect1",bExternalSlot=True,bRunEffectsAsSkill=False,AttributeToModify=AttributeDefinition'D_Attributes.GameplayAttributes.FootSpeed',ConstraintAttribute=None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Artifacts.BalanceAttributes.Init_ModifierBase_Linear',BaseValueScaleConstant=0.001870),PerGradeUpgrade=(BaseValueConstant=0.016700,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bIncludeInFunStats=False,bIncludeAlliesAsTarget=False,bEnforceMinimumGrade=False,bEnforceMaximumGrade=False,MinimumGrade=0,MaximumGrade=12,TargetInstanceDataName=),(SlotName="Effect2",bExternalSlot=True,bRunEffectsAsSkill=False,AttributeToModify=AttributeDefinition'D_Attributes.SkillAttributes.RevivalHealthMultiplier',ConstraintAttribute=None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Artifacts.BalanceAttributes.Init_ModifierBase_Linear',BaseValueScaleConstant=0.001870),PerGradeUpgrade=(BaseValueConstant=0.016700,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bIncludeInFunStats=False,bIncludeAlliesAsTarget=False,bEnforceMinimumGrade=False,bEnforceMaximumGrade=False,MinimumGrade=0,MaximumGrade=12,TargetInstanceDataName=))
+            set GD_AttributePresentation.Weapons.AttrPresent_TechActiveRegenerationRate bUseCustomNumberPlacement False
 
-        set GD_Artifacts.A_Item.Artifact_Tenacity ItemName Agility Relic
+            set GD_AttributePresentation.Weapons.AttrPresent_TechActiveRegenerationRate bEnableTextColor False
 
-        set GD_Gladiolus_Artifacts.Body.Body_AggressionTenacity:AttributePresentationDefinition_0 Description Increases [skill]weapon damage[-skill], [skill]movement speed[-skill], and [skill]jumping ability[-skill].
+            set GD_AttributePresentation.Weapons.AttrPresent_TechActiveRegenerationRate bValueRemappingEnabled False
+
+            set GD_AttributePresentation.Weapons.AttrPresent_TechActiveRegenerationRate bUseOneAsBaseValueForPresentationIfContextFailsToResolve False
+
+            set GD_AttributePresentation.Weapons.AttrPresent_TechActiveRegenerationRate bUseTwoAsBaseValueForPresentationIfContextFailsToResolve False
+
+            set GD_AttributePresentation.Weapons.AttrPresent_TechActiveRegenerationRate RoundingMode ATTRROUNDING_Float
+
+            set GD_AttributePresentation.Weapons.AttrPresent_TechActiveRegenerationRate SignStyle SIGNSTYLE_AsIs
+
+            set GD_AttributePresentation.Weapons.AttrPresent_TechActiveRegenerationRate TextColor (B=255,G=255,R=255,A=255)
+
+            set GD_AttributePresentation.Weapons.AttrPresent_TechActiveRegenerationRate FloatPrecision 1
+
+            set GD_AttributePresentation.Weapons.AttrPresent_TechActiveRegenerationRate Icon shieldRechargeDelay
+
+            set GD_AttributePresentation.Weapons.AttrPresent_TechActiveRegenerationRate RemappingData (bUseContextOverride=False,InputValueMn=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),InputValueMx=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),OutputValueMn=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),OutputValueMx=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))
+
+            set D_Attributes.SkillAttributes.RevivalHealthMultiplier:ObjectpropertyAttributeValueResolver_20 PropertyName JumpZ
+
+            set D_Attributes.Injured.RevivedHealthAmount:SimpleMathValueResolver_0 Argument (BaseValueScaleConstant=0.000000)
+
+            set GD_AttributePresentation.Artifacts.AttrPresent_ArtifactRevivalHealthMultiplier Description Jump Height
+
+            set GD_AttributePresentation.Artifacts.AttrPresent_ArtifactRevivalHealthMultiplier bIncludeSuffixInTranslation False
+
+            set GD_AttributePresentation.Artifacts.AttrPresent_ArtifactRevivalHealthMultiplier bIncludePrefixInTranslation False
+
+            set GD_AttributePresentation.Artifacts.AttrPresent_ArtifactRevivalHealthMultiplier bDisplayAsPercentage True
+
+            set GD_AttributePresentation.Artifacts.AttrPresent_ArtifactRevivalHealthMultiplier bDontDisplayNumber True
+
+            set GD_AttributePresentation.Artifacts.AttrPresent_ArtifactRevivalHealthMultiplier bEnableTextColor True
+
+        #</UI Stuff>
+
+        #<Normal Agility Relics>
+
+            set GD_Artifacts.A_Item.Artifact_Tenacity UIStatList ((bDisplayAsModifierOnly=True,AttributeStyle=ATTRSTYLE_ModifierText,SupplementalAttributeStyle=ATTRSTYLE_JustNumber,StatCombinationMethod=SCM_Multiply,Attribute=AttributeDefinition'D_Attributes.GameplayAttributes.FootSpeed',ConstraintAttribute=None,SupplementalAttributeExpression=(AttributeOperand1=None,ComparisonOperator=OPERATOR_EqualTo,Operand2Usage=OPERAND_PreferAttribute,AttributeOperand2=None,ConstantOperand2=0.000000),SupplementalAttributeToAppend=None),(bDisplayAsModifierOnly=True,AttributeStyle=ATTRSTYLE_ModifierText,SupplementalAttributeStyle=ATTRSTYLE_JustNumber,StatCombinationMethod=SCM_Multiply,Attribute=AttributeDefinition'D_Attributes.SkillAttributes.RevivalHealthMultiplier',ConstraintAttribute=None,SupplementalAttributeExpression=(AttributeOperand1=None,ComparisonOperator=OPERATOR_EqualTo,Operand2Usage=OPERAND_PreferAttribute,AttributeOperand2=None,ConstantOperand2=0.000000),SupplementalAttributeToAppend=None))
+
+            set GD_Artifacts.Body.Body_Tenacity:AttributePresentationDefinition_0 Description Increases [skill]movement speed[-skill] and [skill]jumping ability[-skill].
+
+            set GD_Artifacts.A_Item.Artifact_Tenacity AttributeSlotEffects ((SlotName="Effect1",bExternalSlot=True,bRunEffectsAsSkill=False,AttributeToModify=AttributeDefinition'D_Attributes.GameplayAttributes.FootSpeed',ConstraintAttribute=None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Artifacts.BalanceAttributes.Init_ModifierBase_Linear',BaseValueScaleConstant=0.001870),PerGradeUpgrade=(BaseValueConstant=0.016700,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bIncludeInFunStats=False,bIncludeAlliesAsTarget=False,bEnforceMinimumGrade=False,bEnforceMaximumGrade=False,MinimumGrade=0,MaximumGrade=12,TargetInstanceDataName=),(SlotName="Effect2",bExternalSlot=True,bRunEffectsAsSkill=False,AttributeToModify=AttributeDefinition'D_Attributes.SkillAttributes.RevivalHealthMultiplier',ConstraintAttribute=None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Artifacts.BalanceAttributes.Init_ModifierBase_Linear',BaseValueScaleConstant=0.001870),PerGradeUpgrade=(BaseValueConstant=0.016700,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bIncludeInFunStats=False,bIncludeAlliesAsTarget=False,bEnforceMinimumGrade=False,bEnforceMaximumGrade=False,MinimumGrade=0,MaximumGrade=12,TargetInstanceDataName=))
+
+            set GD_Artifacts.A_Item.Artifact_Tenacity ItemName Agility Relic
+
+            set GD_Gladiolus_Artifacts.Body.Body_AggressionTenacity:AttributePresentationDefinition_0 Description Increases [skill]weapon damage[-skill], [skill]movement speed[-skill], and [skill]jumping ability[-skill].
+
+        #</Normal Agility Relics>
 
         #<Hearts of the Ancients>
 

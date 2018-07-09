@@ -14,7 +14,7 @@ Credit to Shadowevil for providing the hexcode and the UVHM modifier code and Ni
 
 To make this work you need to do three things:
 
-1. Hexedit 430083FE32 into 430083FE01 in your Borderlands2.exe
+1. Hexedit 430083FE32 into 430083FE01 in your Borderlands2.exe OR use c0dycode's Hex Multitool and its UVHM Level Modifier (keep it at 1)
 
 2. Place a pre-set save file into your Borderlands 2 save directory (usually at \Documents\My Games\Borderlands 2\WillowGame\SaveData\<########...>)
 
