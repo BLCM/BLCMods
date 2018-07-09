@@ -4,10 +4,8 @@ TPS Cold Dead Hands
 This mod completely revamps the way in which weapons and shields are
 acquired during the game.  Instead of dropping weapons/shields from a
 random loot pool, enemies will now *always* drop the specific gun and
-shield that they're using.  I have been told that this is basically the
-BL1-style method of loot drops, though I can't really confirm that
-myself.  In the default configuration, enemy gear quality is also
-improved considerably.
+shield that they're using.  In the default configuration, enemy gear
+quality is also improved considerably.
 
 In general, these enhanced enemy drops are just about the *only* way to
 acquire weapons and shields in the game.  Weapons and shields will not be
