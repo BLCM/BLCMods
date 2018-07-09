@@ -264,5 +264,8 @@ for the full text.
 Changelog
 =========
 
-**v1.0.0** - June 2, 2018
+**v1.1.0** - Unreleased
+ * Nothing, yet
+
+**v1.0.0** - June 2, 2018 (commit `e69036bad26493073be7bd82207266aac77d2577`)
  * Initial Release

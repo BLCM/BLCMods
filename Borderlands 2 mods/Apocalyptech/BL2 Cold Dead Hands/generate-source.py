@@ -50,7 +50,7 @@ except ModuleNotFoundError:
 ###
 
 mod_name = 'BL2 Cold Dead Hands'
-mod_version = '1.0.0'
+mod_version = '1.1.0-prerelease'
 output_filename = '{}-source.txt'.format(mod_name)
 
 ###
