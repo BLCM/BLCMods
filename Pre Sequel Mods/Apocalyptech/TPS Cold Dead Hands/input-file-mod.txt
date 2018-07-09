@@ -2004,4 +2004,103 @@
 
     #</Claptastic Voyage Creature Shield Behavior (choose one)><MUT>
 
+    #<Provide Common Pistols for "To Arms!" mission? (choose one)><MUT>
+
+        #<Do Not Provide Common Pistols (no changes from vanilla TPS)>
+
+            {hotfixes:toarms_dummy}
+
+        #</Do Not Provide Common Pistols (no changes from vanilla TPS)>
+
+        #<Provide Common Pistol chests near drop point (removes ozkit-only chests)>
+
+            ## The mission "To Arms!" was already rather annoying to begin with, but<off>
+            ## depending on this mod's configuration, it's actually one of the harder ones<off>
+            ## to complete.  Enabling this option will cause a few chests to appear in the<off>
+            ## same room as the dead drop, which always contain common pistols.  It uses<off>
+            ## the previously-OzKit-only chests found near Dierdre to do this, so those<off>
+            ## chests will no longer be ozkit chests if you have this enabled.<off>
+
+            #set GD_Itempools.ListDefs.AmmoCrateLoot_OzKitsOnly LootData
+            (
+                ( 
+                    ConfigurationName="AmmoCrate", 
+                    bIgnoreGameStageRestrictions=False, 
+                    LootGameStageVarianceFormula=None, 
+                    Weight=( 
+                        BaseValueConstant=100.000000, 
+                        BaseValueAttribute=None, 
+                        InitializationDefinition=None, 
+                        BaseValueScaleConstant=1.000000 
+                    ), 
+                    ItemAttachments=( 
+                        ( 
+                            ItemPool=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_Pistols_01_Common', 
+                            PoolProbability=( 
+                                BaseValueConstant=1.000000, 
+                                BaseValueAttribute=None, 
+                                InitializationDefinition=None, 
+                                BaseValueScaleConstant=1.000000 
+                            ), 
+                            InvBalanceDefinition=None, 
+                            AttachmentPointName="Ammo1" 
+                        ), 
+                        ( 
+                            ItemPool=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_Pistols_01_Common', 
+                            PoolProbability=( 
+                                BaseValueConstant=1.000000, 
+                                BaseValueAttribute=None, 
+                                InitializationDefinition=None, 
+                                BaseValueScaleConstant=1.000000 
+                            ), 
+                            InvBalanceDefinition=None, 
+                            AttachmentPointName="Ammo2" 
+                        ), 
+                        ( 
+                            ItemPool=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_Pistols_01_Common', 
+                            PoolProbability=( 
+                                BaseValueConstant=1.000000, 
+                                BaseValueAttribute=None, 
+                                InitializationDefinition=None, 
+                                BaseValueScaleConstant=1.000000 
+                            ), 
+                            InvBalanceDefinition=None, 
+                            AttachmentPointName="Ammo3" 
+                        ) 
+                    ) 
+                )
+            )<off>
+
+            {hotfixes:toarms_banditammo_type_0}
+
+            {hotfixes:toarms_banditammo_loc_0}
+
+            {hotfixes:toarms_banditammo_rot_0}
+
+            {hotfixes:toarms_banditammo_type_1}
+
+            {hotfixes:toarms_banditammo_loc_1}
+
+            {hotfixes:toarms_banditammo_rot_1}
+
+            {hotfixes:toarms_banditammo_type_2}
+
+            {hotfixes:toarms_banditammo_loc_2}
+
+            {hotfixes:toarms_banditammo_rot_2}
+
+            {hotfixes:toarms_banditammo_type_3}
+
+            {hotfixes:toarms_banditammo_loc_3}
+
+            {hotfixes:toarms_banditammo_rot_3}
+
+            {hotfixes:toarms_ozchange0}
+
+            {hotfixes:toarms_ozchange1}
+
+        #</Provide Common Pistol chests near drop point (removes ozkit-only chests)>
+
+    #</Provide Common Pistols for "To Arms!" mission? (choose one)>
+
 #</{mod_name}>

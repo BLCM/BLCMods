@@ -2759,6 +2759,161 @@ for config in [regular, badass]:
             activated=False)
         clapcreature_shields_real_list.append('{}{}'.format(prefix, hfs.get_hotfix_xml(clapcreature_id)))
 
+# Vanilla To Arms container hotfixes (dummy statement)
+hfs.add_level_hotfix('toarms_dummy', 'ToArmsDummy',
+        'ToArmsDummy_P,GD_ToArmsDummy,DummyAttribute,1,1')
+
+# Optional hotfixes which let us generate common pistols, for the mission
+# To Arms!, which is otherwise, amusingly, one of the more difficult missions
+# when using this mod.
+
+# First up: the three BanditAmmo containers in the dead drop room will convert
+# to being ozkit crates, and get moved around a bit
+
+hfs.add_level_hotfix('toarms_banditammo_type_0', 'ToArmsChanges',
+    """Moon_P,
+    Moon_P.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_31,
+    PopulationDef,,
+    PopulationDefinition'GD_Population_Treasure.Lootables.Crate_Military_OzKitsOnly'""",
+    activated=False)
+
+hfs.add_level_hotfix('toarms_banditammo_loc_0', 'ToArmsChanges',
+    """Moon_P,
+    Moon_P.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_31,
+    Location,,
+    (
+        X=-8960,
+        Y=10660,
+        Z=-948.618042
+    )
+    """,
+    activated=False)
+
+hfs.add_level_hotfix('toarms_banditammo_rot_0', 'ToArmsChanges',
+    """Moon_P,
+    Moon_P.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_31,
+    Rotation,,
+    (
+        Pitch=45,
+        Yaw=-33960,
+        Roll=94
+    )
+    """,
+    activated=False)
+
+hfs.add_level_hotfix('toarms_banditammo_type_1', 'ToArmsChanges',
+    """Moon_P,
+    Moon_P.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_24,
+    PopulationDef,,
+    PopulationDefinition'GD_Population_Treasure.Lootables.Crate_Military_OzKitsOnly'""",
+    activated=False)
+
+hfs.add_level_hotfix('toarms_banditammo_loc_1', 'ToArmsChanges',
+    """Moon_P,
+    Moon_P.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_24,
+    Location,,
+    (
+        X=-9160,
+        Y=10630,
+        Z=-948.618042
+    )
+    """,
+    activated=False)
+
+hfs.add_level_hotfix('toarms_banditammo_rot_1', 'ToArmsChanges',
+    """Moon_P,
+    Moon_P.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_24,
+    Rotation,,
+    (
+        Pitch=68, 
+        Yaw=-30284, 
+        Roll=77 
+    )
+    """,
+    activated=False)
+
+hfs.add_level_hotfix('toarms_banditammo_type_2', 'ToArmsChanges',
+    """Moon_P,
+    Moon_P.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_4,
+    PopulationDef,,
+    PopulationDefinition'GD_Population_Treasure.Lootables.Crate_Military_OzKitsOnly'""",
+    activated=False)
+
+hfs.add_level_hotfix('toarms_banditammo_loc_2', 'ToArmsChanges',
+    """Moon_P,
+    Moon_P.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_4,
+    Location,,
+    (
+        X=-8493,
+        Y=10731,
+        Z=-948.618042
+    )
+    """,
+    activated=False)
+
+hfs.add_level_hotfix('toarms_banditammo_rot_2', 'ToArmsChanges',
+    """Moon_P,
+    Moon_P.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_4,
+    Rotation,,
+    (
+        Pitch=0, 
+        Yaw=14931, 
+        Roll=0 
+    )
+    """,
+    activated=False)
+
+# Next: steal one more BanditAmmo container from on top of the Darksiders'
+# tower
+
+hfs.add_level_hotfix('toarms_banditammo_type_3', 'ToArmsChanges',
+    """Moon_P,
+    Moon_P.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_146,
+    PopulationDef,,
+    PopulationDefinition'GD_Population_Treasure.Lootables.Crate_Military_OzKitsOnly'""",
+    activated=False)
+
+hfs.add_level_hotfix('toarms_banditammo_loc_3', 'ToArmsChanges',
+    """Moon_P,
+    Moon_P.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_146,
+    Location,,
+    (
+        X=-8443,
+        Y=10531,
+        Z=-948.618042
+    )
+    """,
+    activated=False)
+
+hfs.add_level_hotfix('toarms_banditammo_rot_3', 'ToArmsChanges',
+    """Moon_P,
+    Moon_P.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_146,
+    Rotation,,
+    (
+        Pitch=0, 
+        Yaw=17931, 
+        Roll=0 
+    )
+    """,
+    activated=False)
+
+# Next: the original ozkit crates will get switched to being just ordinary
+# Crate_Military.
+
+hfs.add_level_hotfix('toarms_ozchange0', 'ToArmsChanges',
+    """Moon_P,
+    Moon_P.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_85,
+    PopulationDef,,
+    PopulationDefinition'GD_Population_Treasure.Lootables.Crate_Military'""",
+    activated=False)
+
+hfs.add_level_hotfix('toarms_ozchange1', 'ToArmsChanges',
+    """Moon_P,
+    Moon_P.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_367,
+    PopulationDef,,
+    PopulationDefinition'GD_Population_Treasure.Lootables.Crate_Military'""",
+    activated=False)
+
 # Remove weapons+shields from lockers
 set_ld_ia_item_pool('lockers_0', 'GD_Itempools.ListDefs.StorageLockerLoot',
         'GD_Itempools.LootablePools.Pool_Locker_Items_CashAndAmmo', 3, 0,

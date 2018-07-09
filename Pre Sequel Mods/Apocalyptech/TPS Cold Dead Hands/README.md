@@ -25,7 +25,7 @@ Grenade Mods, Class Mods, and Oz Kits will still be acquired as per usual -
 via world drops, chests, and the like.
 
 **NOTE:** This mod has a *lot* of user-configurable options (detailed below
-in the "Configuration" section).  In fact, there's 15,360 theoretically-supported
+in the "Configuration" section).  In fact, there's 30,720 theoretically-supported
 permutations of the options (though to be fair, there's only about 480 which
 are closely-related).  Needless to say, I have not thoroughly tested out all
 combinations to ensure that everything works as it should.  If you encounter
@@ -152,6 +152,14 @@ mod, when loaded into FilterTool/BLCMM:
   Eridian Guardians, by default the creatures from the Claptastic Voyage DLC
   (viruses, bugs, glitches, etc) will not equip or drop "real" shields.
   That can optionally be toggled on in here.
+
+* **Provide Common Pistols for "To Arms!" Mission?**: This has been copied
+  over from my Better Loot mod for the same reason: when the loot quality has
+  been improved as much as this mod makes it possible, the mission "To Arms!"
+  can become extremely difficult to complete while using this mod.  To
+  compensate, you can optionally have this mod provide four chests containing
+  three common pistols each, in the same room as the drop location.  This
+  should compensate nicely for hardly ever getting common items ingame.
 
 Additionally, there's one category in the "Main Mod" section which you may
 be interested in:
