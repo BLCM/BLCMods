@@ -3746,8 +3746,8 @@ with open('input-file-mod.txt') as df:
 ###
 
 # just temp so I can take a look at this for now
-with open('{}-tempsource'.format(output_filename), 'w') as odf:
-    odf.write(mod_str)
+#with open('{}-tempsource'.format(output_filename), 'w') as odf:
+#    odf.write(mod_str)
 
 mp.human_str_to_blcm_filename(mod_str, output_filename)
 print('Wrote mod file to: {}'.format(output_filename))
