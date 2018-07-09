@@ -314,6 +314,7 @@ class ModProcessor(object):
         self.mod_name = None
         self.last_hotfix = None
         self.need_to_close_hotfix = False
+        self.format_strings = {}
 
     def line(self, line, odf, indent=0):
         """
@@ -484,7 +485,7 @@ class ModProcessor(object):
             mut_str = ' MUT="true"'
         else:
             mut_str = ''
-        self.line('<category name="{}"{}{}>'.format(cat_name, lock_str, mut_str), odf, indent)
+        self.line('<category name="{}"{}{}>'.format(cat_name.replace('"', '\\"'), lock_str, mut_str), odf, indent)
         indent += 1
 
         internal_cat_count = 0
@@ -575,6 +576,21 @@ class ModProcessor(object):
         """
         with open(output_filename, 'w') as odf:
             self.human_to_blcm(io.StringIO(modstring), odf)
+
+    def register_str(self, name, line):
+        """
+        Registers a string with the name `name` which we can then pull in
+        later with format strings.
+        """
+        self.format_strings[name] = line
+
+    def __format__(self, format_str):
+        """
+        Convenience function which allows us to use string formatting of
+        the sort {mp:name} in our string templates, to put arbitrary code-
+        generated strings in place without too much fuss.
+        """
+        return self.format_strings[format_str]
 
 if __name__ == '__main__':
 
