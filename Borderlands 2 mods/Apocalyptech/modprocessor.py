@@ -356,7 +356,7 @@ class ModProcessor(object):
             if stripped == '':
                 break
             else:
-                if len(set_cmd_parts) == 1:
+                if len(set_cmd_parts) == 1 and set_cmd_parts[0][-1] != '(':
                     set_cmd_parts.append(' ')
                 set_cmd_parts.append(stripped)
             line = df.readline()
