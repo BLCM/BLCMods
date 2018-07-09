@@ -283,4 +283,5 @@ for the full text.
 Changelog
 =========
 
-**v1.0.0** - *unreleased*
+**v1.0.0**, July 9, 2018:
+ * Initial public release

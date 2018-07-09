@@ -50,7 +50,7 @@ except ModuleNotFoundError:
 ###
 
 mod_name = 'TPS Cold Dead Hands'
-mod_version = '1.0.0-prerelease'
+mod_version = '1.0.0'
 output_filename = '{}-source.txt'.format(mod_name)
 
 ###
