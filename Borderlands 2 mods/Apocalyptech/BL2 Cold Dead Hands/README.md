@@ -16,10 +16,10 @@ and the like.
 
 In the default configuration, this mod is a spiritual cousin of my own
 Better Loot mod.  You'll be up against enemies using purples, gemstones,
-and even legendaries.  Gear quality can be customized easily in
-FilterTool/BLCMM, so you can still play using something close to the stock
-Borderlands gear quality.  Regardless of gear quality configuration, Badass
-enemies will have better gear than their ordinary counterparts.
+and even legendaries.  Gear quality can be customized easily in BLCMM,
+so you can still play using something close to the stock Borderlands gear
+quality.  Regardless of gear quality configuration, Badass enemies will
+have better gear than their ordinary counterparts.
 
 Grenade Mods, Class Mods, and Relics will still be acquired as per usual -
 via world drops, chests, and the like.
@@ -39,9 +39,8 @@ make sure to at least enable/copy that folder over.
 Usage/Installation
 ------------------
 
-This mod must be imported into FilterTool/BLCMM with `Developer tools` ->
-`Add single mod`.  Choose the file `BL2 Cold Dead Hands.txt` and
-have at it!
+This mod must be imported into BLCMM with `File -> Import single mod`.
+Choose the file `BL2 Cold Dead Hands.blcm` and have at it!
 
 Mod Details
 -----------
@@ -115,7 +114,7 @@ from the start of the battle which gun you'll receive.
 ### Configuration
 
 There are four main categories which you can use to customize the gear
-quality, when loaded into FilterTool/BLCMM:
+quality, when loaded into BLCMM:
 
 * **Loot Pool Improvements**: This section adds gemstones into the global E-Tech
   pool, and improves the global legendary pool by adding all uniques,
@@ -205,18 +204,13 @@ Mod Construction / Implementation Details
 *(This section is only relevant for someone looking to edit the mod in the
 same way I do, or just someone curious about my mod construction techniques.
 If you're just looking to run the mod, see the "Usage" section above.  The
-mod can, of course, be edited directly in FilterTool/BLCMM as well, once it's
+mod can, of course, be edited directly in BLCMM as well, once it's
 been imported.)*
 
 This mod is actually generated using a simple little Python script named
-`generate-source.py`.  The script makes use of `hotfix.py` from the parent
+`generate-mod.py`.  The script makes use of `modprocessor.py` from the parent
 directory.  You'd need to copy (or symlink, if you're on Mac or Linux)
-`hotfix.py` into this directory in order to run the script.
-
-To generate the end result file, I actually run the small shell script
-`create.sh` in this directory, which just does the following:
-
-    ./generate-source.py && ../conv_to_mod.py -f "BL2 Cold Dead Hands"
+`modprocessor.py` into this directory in order to run the script.
 
 Bugs
 ====
@@ -265,7 +259,7 @@ Changelog
 =========
 
 **v1.1.0** - Unreleased
- * Nothing, yet
+ * Converted to BLCM format
 
 **v1.0.0** - June 2, 2018 (commit `e69036bad26493073be7bd82207266aac77d2577`)
  * Initial Release

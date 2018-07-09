@@ -34,14 +34,15 @@ import sys
 # here and there.  Might not be the nicest to browse through!
 
 try:
-    from hotfixes import Hotfixes
+    from modprocessor import ModProcessor
+    mp = ModProcessor()
 except ModuleNotFoundError:
     print('')
-    print('****************************************************************')
-    print('To run this script, you will need to copy or symlink hotfixes.py')
+    print('********************************************************************')
+    print('To run this script, you will need to copy or symlink modprocessor.py')
     print('from the parent directory, so it exists here as well.  Sorry for')
     print('the bother!')
-    print('****************************************************************')
+    print('********************************************************************')
     print('')
     sys.exit(1)
 
@@ -51,7 +52,7 @@ except ModuleNotFoundError:
 
 mod_name = 'BL2 Cold Dead Hands'
 mod_version = '1.1.0-prerelease'
-output_filename = '{}-source.txt'.format(mod_name)
+output_filename = '{}.blcm'.format(mod_name)
 
 ###
 ### Some constants
@@ -173,23 +174,15 @@ class DropConfig(BaseConfig):
     ### ... FUNCTIONS??!?
     ###
 
-    def __init__(self, hotfixes):
-        self.hotfixes = hotfixes
-        self.num_hotfixes = 0
-
     def _single_assignment_hotfix(self, prefix, classname, attribute, pool, level=None):
         """
         A single assignment hotfix.  Convenience function just to avoid repetition.
-        Returns the hotfix XML which should be output in the mod file.
         """
         if level is None:
-            level = ''
-        hotfix_id = '{}_{}'.format(self.hotfix_prefix, self.num_hotfixes)
-        self.hotfixes.add_level_hotfix(hotfix_id, 'EnemyDrop',
-                "{},{},{},,ItemPoolDefinition'{}'".format(
-                    level, classname, attribute, pool))
-        self.num_hotfixes += 1
-        return '{}{}'.format(prefix, self.hotfixes.get_hotfix(hotfix_id).get_xml())
+            level = 'None'
+        return "{}level {} set {} {} ItemPoolDefinition'{}'".format(
+                prefix, level, classname, attribute, pool,
+                )
 
     def hotfix_assignments(self):
         """
@@ -1550,105 +1543,93 @@ def disable_balanced_drop(prefix, pool, item_num):
     will just see slightly more ammo/health/eridium instead.  Returns a list
     of XMLish strings to add to the mod file.
     """
-    global hfs
     to_pool = 'GD_Itempools.LootablePools.Pool_Locker_Items_CashAndAmmo'
-    hotfix_id_itmpool = 'disable_balanced_itmpool_{}'.format(hfs.num_hotfixes())
-    hotfix_id_invbal = 'disable_balanced_invbal_{}'.format(hfs.num_hotfixes())
-    hfs.add_level_hotfix(hotfix_id_itmpool,
-        'DisableBalanced',
-        ",{},BalancedItems[{}].ItmPoolDefinition,,ItemPoolDefinition'{}'".format(
-            pool, item_num, to_pool))
-    hfs.add_level_hotfix(hotfix_id_invbal,
-        'DisableBalanced',
-        ',{},BalancedItems[{}].InvBalanceDefinition,,None'.format(
-            pool, item_num))
     return [
-            '{}{}'.format(prefix, hfs.get_hotfix(hotfix_id_itmpool).get_xml()),
-            '{}{}'.format(prefix, hfs.get_hotfix(hotfix_id_invbal).get_xml()),
+            "{}level None set {} BalancedItems[{}].ItmPoolDefinition ItemPoolDefinition'{}'".format(
+                prefix, pool, item_num, to_pool,
+                ),
+            "{}level None set {} BalancedItems[{}].InvBalanceDefinition None".format(
+                prefix, pool, item_num,
+                ),
         ]
 
-def set_dipl_item_pool(hotfix_name, classname, index, pool,
-        level=None, activated=True):
+def set_dipl_item_pool(hotfix_name, classname, index, pool, level=None):
     """
     Sets an entire DefaultItemPoolList entry on the given `classname`, at
     the given `index`, to point towards the pool `pool`.  Will be done with
     a hotfix with the ID `hotfix_name`, optionally in the level `level`.
-    To disable (for inclusion into a MUT category, for instance), pass
-    `activated`=`False`.
     """
+    global mp
     if level is None:
-        level = ''
-    hfs.add_level_hotfix(hotfix_name, 'DIPLItemPool',
-        """{},{},DefaultItemPoolList[{}],,
-        (
-            ItemPool=ItemPoolDefinition'{}',
-            PoolProbability=(
-                BaseValueConstant=1,
-                BaseValueAttribute=None,
-                InitializationDefinition=None,
-                BaseValueScaleConstant=1
-            )
-        )""".format(level, classname, index, pool),
-        activated=activated)
+        level = 'None'
+    mp.register_str(hotfix_name,
+            """level {} set {} DefaultItemPoolList[{}]
+            (
+                ItemPool=ItemPoolDefinition'{}',
+                PoolProbability=(
+                    BaseValueConstant=1,
+                    BaseValueAttribute=None,
+                    InitializationDefinition=None,
+                    BaseValueScaleConstant=1
+                )
+            )""".format(level, classname, index, pool)
+        )
 
 def set_pt_cipl_item_pool(hotfix_name, classname, pt_index, cipl_index,
-        pool, level=None, activated=True):
+        pool, level=None):
     """
     Sets an entire PlayThroughs[x].CustomItemPoolList entry on the given
     `classname`, at the given playthrough index `pt_index` and CIPL index
     `cipl_index`, to point towards the pool `pool`.  Will be done with
     a hotfix with the ID `hotfix_name`, optionally in the level `level`.
-    To disable (for inclusion into a MUT category, for instance), pass
-    `activated`=`False`.
     """
+    global mp
     if level is None:
-        level = ''
-    hfs.add_level_hotfix(hotfix_name, 'PTCIPLItemPool',
-        """{},{},PlayThroughs[{}].CustomItemPoolList[{}],,
-        (
-            ItemPool=ItemPoolDefinition'{}',
-            PoolProbability=(
-                BaseValueConstant=1,
-                BaseValueAttribute=None,
-                InitializationDefinition=None,
-                BaseValueScaleConstant=1
-            )
-        )""".format(level, classname, pt_index, cipl_index, pool),
-        activated=activated)
+        level = 'None'
+    mp.register_str(hotfix_name,
+            """level {} set {} PlayThroughs[{}].CustomItemPoolList[{}]
+            (
+                ItemPool=ItemPoolDefinition'{}',
+                PoolProbability=(
+                    BaseValueConstant=1,
+                    BaseValueAttribute=None,
+                    InitializationDefinition=None,
+                    BaseValueScaleConstant=1
+                )
+            )""".format(level, classname, pt_index, cipl_index, pool)
+        )
 
 def set_generic_item_prob(hotfix_name, classname, attribute,
-        level=None, prob=None, activated=True):
+        level=None, prob=None):
     """
     Sets a probability in the given `classname`, on the attribute `attribute`.
     Will do so via a hotfix with the name `hotfix_name`.  If `prob` is not
     specified, the item will be disabled (ie: given a zero probability).
     Otherwise, pass `1` for the prob (or any other percentage you want).
-    To disable the hotfix by default (for inclusion in a MUT, for instance),
-    pass `activated`=`False`.
     """
-    global hfs
+    global mp
     if level is None:
-        level = ''
+        level = 'None'
     if prob is None:
         prob = 0
-    hfs.add_level_hotfix(hotfix_name, 'Disable',
-        """{},{},{},,
-        (
-            BaseValueConstant={},
-            BaseValueAttribute=None,
-            InitializationDefinition=None,
-            BaseValueScaleConstant=1
-        )""".format(level, classname, attribute, prob),
-        activated=activated)
+    mp.register_str(hotfix_name,
+            """level {} set {} {}
+            (
+                BaseValueConstant={},
+                BaseValueAttribute=None,
+                InitializationDefinition=None,
+                BaseValueScaleConstant=1
+            )""".format(level, classname, attribute, prob)
+        )
 
 def set_bi_item_pool(hotfix_name, classname, index, item,
-        level=None, prob=None, activated=True, invbalance=None):
+        level=None, prob=None, invbalance=None):
     """
     Sets an entire BalancedItem structure
     """
-    global hfs
+    global mp
     if level is None:
-        level = ''
+        level = 'None'
     if prob is None:
         prob = 1
     if invbalance:
@@ -1657,23 +1638,23 @@ def set_bi_item_pool(hotfix_name, classname, index, item,
     else:
         itmpool = "ItemPoolDefinition'{}'".format(item)
         invbal = 'None'
-    hfs.add_level_hotfix(hotfix_name, 'SetBIItem',
-        """{},{},BalancedItems[{}],,
-        (
-            ItmPoolDefinition={},
-            InvBalanceDefinition={},
-            Probability=(
-                BaseValueConstant={},
-                BaseValueAttribute=None,
-                InitializationDefinition=None,
-                BaseValueScaleConstant=1
-            ),
-            bDropOnDeath=True
-        )""".format(level, classname, index, itmpool, invbal, prob),
-        activated=activated)
+    mp.register_str(hotfix_name,
+            """level {} set {} BalancedItems[{}]
+            (
+                ItmPoolDefinition={},
+                InvBalanceDefinition={},
+                Probability=(
+                    BaseValueConstant={},
+                    BaseValueAttribute=None,
+                    InitializationDefinition=None,
+                    BaseValueScaleConstant=1
+                ),
+                bDropOnDeath=True
+            )""".format(level, classname, index, itmpool, invbal, prob)
+        )
 
 def set_bi_item_prob(hotfix_name, classname, index, level=None,
-        prob=None, activated=True):
+        prob=None):
     """
     Sets a BalancedItems probability.
     """
@@ -1681,10 +1662,10 @@ def set_bi_item_prob(hotfix_name, classname, index, level=None,
         'BalancedItems[{}].Probability'.format(index),
         level=level,
         prob=prob,
-        activated=activated)
+        )
 
 def set_dipl_item_prob(hotfix_name, classname, index, level=None,
-        prob=None, activated=True):
+        prob=None):
     """
     Sets a DefaultItemPoolList probability.
     """
@@ -1692,10 +1673,10 @@ def set_dipl_item_prob(hotfix_name, classname, index, level=None,
         'DefaultItemPoolList[{}].PoolProbability'.format(index),
         level=level,
         prob=prob,
-        activated=activated)
+        )
 
 def set_pt_cipl_item_prob(hotfix_name, classname,
-        pt_index, poollist_index, level=None, prob=None, activated=True):
+        pt_index, poollist_index, level=None, prob=None):
     """
     Sets a PlayThroughs[x].CustomItemPoolList probability in the given
     `classname`, at the playthrough index `pt_index` and CustomItemPoolList
@@ -1706,10 +1687,10 @@ def set_pt_cipl_item_prob(hotfix_name, classname,
             pt_index, poollist_index),
         level=level,
         prob=prob,
-        activated=activated)
+        )
 
 def set_ld_item_weight(hotfix_name, classname, index, level=None,
-        weight=None, activated=True):
+        weight=None):
     """
     Sets a LootData item weight.
     """
@@ -1717,59 +1698,53 @@ def set_ld_item_weight(hotfix_name, classname, index, level=None,
         'LootData[{}].PoolProbability'.format(index),
         level=level,
         prob=weight,
-        activated=activated)
+        )
 
 def set_ld_ia_item_pool(hotfix_name, classname, pool, ld_index, ia_index,
-        point=None, level=None, activated=True, main_attr='LootData'):
+        point=None, level=None, main_attr='LootData'):
     """
     Sets an `ItemPool` pool inside a `LootData[x].ItemAttachments[y]` structure,
     inside the class `classname`, LootData index `ld_index`, and ItemAttachments
-    index `ia_index`.  Will use the hotfix name `hotfix_name`.  `activated` is
-    a boolean describing if the hotfix will be active or not.  If `level` is passed
+    index `ia_index`.  Will use the hotfix name `hotfix_name`.  If `level` is passed
     in, the hotfix will only be active for the given level.  If `point` is passed
     in, we will additionally create another hotfix (with the name suffixed with
     "_point") which sets the attachment point for the newly-defined pool.  To
     use a different top-level attribute than `LootData`, pass in `main_attr`.
     """
-    global hfs
+    global mp
     if not level:
         level = 'None'
-    hfs.add_level_hotfix(hotfix_name, 'LDIAPool',
-        """{level},
-        {classname},
-        {main_attr}[{ld_index}].ItemAttachments[{ia_index}].ItemPool,,
-        ItemPoolDefinition'{pool}'""".format(
-            level=level,
-            classname=classname,
-            main_attr=main_attr,
-            ld_index=ld_index,
-            ia_index=ia_index,
-            pool=pool),
-        activated=activated)
-    if point:
-        hfs.add_level_hotfix('{}_point'.format(hotfix_name),
-            'LDIAPoolPoint',
-            """{level},
-            {classname},
-            {main_attr}[{ld_index}].ItemAttachments[{ia_index}].AttachmentPointName,,
-            {point}""".format(
+    mp.register_str(hotfix_name,
+            """level {level} set {classname} {main_attr}[{ld_index}].ItemAttachments[{ia_index}].ItemPool
+            ItemPoolDefinition'{pool}'""".format(
                 level=level,
                 classname=classname,
                 main_attr=main_attr,
                 ld_index=ld_index,
                 ia_index=ia_index,
-                point='"{}"'.format(point)),
-            activated=activated)
+                pool=pool)
+        )
+    if point:
+        mp.register_str('{}_point'.format(hotfix_name),
+                """level {level} set {classname} {main_attr}[{ld_index}].ItemAttachments[{ia_index}].AttachmentPointName
+                {point}""".format(
+                    level=level,
+                    classname=classname,
+                    main_attr=main_attr,
+                    ld_index=ld_index,
+                    ia_index=ia_index,
+                    point='"{}"'.format(point)),
+            )
 
 def set_dl_ia_item_pool(hotfix_name, classname, pool, ld_index, ia_index,
-        point=None, level=None, activated=True):
+        point=None, level=None):
     """
     Sets an `ItemPool` pool inside a `DefaultLoot[x].ItemAttachments[y]` structure.
     """
     set_ld_ia_item_pool(hotfix_name, classname, pool, ld_index, ia_index,
-        point=point, level=level, activated=activated, main_attr='DefaultLoot')
+        point=point, level=level, main_attr='DefaultLoot')
 
-def setup_boss_pool(hotfix_id, level, pool, default_gear, unique_gear, activated=True):
+def setup_boss_pool(hotfix_id, level, pool, default_gear, unique_gear):
     """
     Sets up our specified `pool` using the given `hotfix_id`, active in the
     level `level`.  The "default" ItemPool which the boss ordinarily draws from
@@ -1779,10 +1754,9 @@ def setup_boss_pool(hotfix_id, level, pool, default_gear, unique_gear, activated
         2) The percent chance of dropping this pool/gear
         3) If this is an item, the InvBalanceDefinition type of the item.
     If the total of all the percent chances in `unique_gear` is greater than
-    1, the `default_gear` will never actually be dropped.  To disable this
-    hotfix (for inclusion in a MUT, for instance) pass `activated`=`False`.
+    1, the `default_gear` will never actually be dropped.
     """
-    global hfs
+    global mp
     total_unique = 0
     bal_items_tuples = []
     for (unique, pct, baldef) in unique_gear:
@@ -1790,20 +1764,18 @@ def setup_boss_pool(hotfix_id, level, pool, default_gear, unique_gear, activated
         bal_items_tuples.append((unique, round(pct, 6), baldef))
     if default_gear and total_unique < 1:
         bal_items_tuples.append((default_gear, round(1 - total_unique, 6), None))
-    hfs.add_level_hotfix(hotfix_id, 'BossPool',
-        '{},{},BalancedItems,,{}'.format(
+    mp.register_str(hotfix_id,
+        'level {} set {} BalancedItems {}'.format(
             level,
             pool,
-            get_balanced_items(bal_items_tuples)),
-        activated=activated)
+            get_balanced_items(bal_items_tuples)))
 
 ###
 ### Code to generate the mod
 ###
 
-hfs = Hotfixes()
-regular = Regular(hfs)
-badass = Badass(hfs)
+regular = Regular()
+badass = Badass()
 other = OtherConfig()
 
 # Get rid of global world drops.
@@ -1881,9 +1853,6 @@ other.disable_world_sets = "\n\n".join(drop_disables)
 
 # Configure rarity pools
 rarity_sections = {}
-line_prefix = ''
-line_suffix = ''
-hotfix_activated = True
 for (rarity_key, rarity_label) in DropConfig.rarity_presets:
 
     for config in [regular, badass]:
@@ -1981,11 +1950,8 @@ for (rarity_key, rarity_label) in DropConfig.rarity_presets:
             ])
 
     # Set up Jack's Body Double's equip pool
-    body_double_key = '{}_body_double_equip'.format(rarity_key)
-    hfs.add_level_hotfix(body_double_key, 'BodyDouble',
-        """HyperionCity_P,
-        GD_JacksBodyDouble.WeaponPools.Pool_Weapons_JackBodyDouble_EnemyUse,
-        BalancedItems,,{}""".format(get_balanced_items(
+    mp.register_str('body_double_equip',
+        'level HyperionCity_P set GD_JacksBodyDouble.WeaponPools.Pool_Weapons_JackBodyDouble_EnemyUse BalancedItems {}'.format(get_balanced_items(
             [
                 ('GD_Weap_SMG.A_Weapons.SMG_Hyperion', badass.weight_common, 'WeaponBalanceDefinition'),
                 ('GD_Weap_SMG.A_Weapons.SMG_Hyperion_2_Uncommon', badass.weight_uncommon, 'WeaponBalanceDefinition'),
@@ -1993,16 +1959,12 @@ for (rarity_key, rarity_label) in DropConfig.rarity_presets:
                 ('GD_Weap_SMG.A_Weapons.SMG_Hyperion_4_VeryRare', badass.weight_veryrare, 'WeaponBalanceDefinition'),
                 ('GD_Weap_SMG.A_Weapons.SMG_Hyperion_5_Alien', badass.weight_alien, 'WeaponBalanceDefinition'),
                 ('GD_Weap_SMG.A_Weapons_Legendary.SMG_Hyperion_5_Bitch', badass.weight_legendary, 'WeaponBalanceDefinition'),
-            ])),
-            activated=hotfix_activated)
+            ])))
 
     # Torgue DLC equip rarities (only regular)
 
-    torguehfs = Hotfixes(nameprefix='{}TorgueRarity'.format(rarity_key))
-
-    torguehfs.add_level_hotfix('angel_pistols', 'Equip',
-        """,GD_Iris_ItemPoolsEnemyUse.WeaponPools.Pool_Weapons_AngelGang_Pistols_EnemyUse,
-        BalancedItems,,{}""".format(get_balanced_items(
+    mp.register_str('angel_pistols',
+        'level None set GD_Iris_ItemPoolsEnemyUse.WeaponPools.Pool_Weapons_AngelGang_Pistols_EnemyUse BalancedItems {}'.format(get_balanced_items(
             [
                 ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_AngelGang_Pistols_01_Common', regular.weight_common),
                 ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_AngelGang_Pistols_02_Uncommon', regular.weight_uncommon),
@@ -2010,12 +1972,10 @@ for (rarity_key, rarity_label) in DropConfig.rarity_presets:
                 ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_AngelGang_Pistols_05_VeryRare', regular.weight_veryrare),
                 ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_AngelGang_Pistols_05_VeryRare_Alien', regular.weight_alien),
                 ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_AngelGang_Pistols_06_Legendary', regular.weight_legendary),
-            ])),
-            activated=hotfix_activated)
+            ])))
 
-    torguehfs.add_level_hotfix('angel_shotguns', 'Equip',
-        """,GD_Iris_ItemPoolsEnemyUse.WeaponPools.Pool_Weapons_AngelGang_Shotguns_EnemyUse,
-        BalancedItems,,{}""".format(get_balanced_items(
+    mp.register_str('angel_shotguns',
+        'level None set GD_Iris_ItemPoolsEnemyUse.WeaponPools.Pool_Weapons_AngelGang_Shotguns_EnemyUse BalancedItems {}'.format(get_balanced_items(
             [
                 ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_AngelGang_Shotguns_01_Common', regular.weight_common),
                 ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_AngelGang_Shotguns_02_Uncommon', regular.weight_uncommon),
@@ -2023,12 +1983,10 @@ for (rarity_key, rarity_label) in DropConfig.rarity_presets:
                 ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_AngelGang_Shotguns_05_VeryRare', regular.weight_veryrare),
                 ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_AngelGang_Shotguns_05_VeryRare_Alien', regular.weight_alien),
                 ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_AngelGang_Shotguns_06_Legendary', regular.weight_legendary),
-            ])),
-            activated=hotfix_activated)
+            ])))
 
-    torguehfs.add_level_hotfix('angel_smg', 'Equip',
-        """,GD_Iris_ItemPoolsEnemyUse.WeaponPools.Pool_Weapons_AngelGang_SMG_EnemyUse,
-        BalancedItems,,{}""".format(get_balanced_items(
+    mp.register_str('angel_smg',
+        'level None set GD_Iris_ItemPoolsEnemyUse.WeaponPools.Pool_Weapons_AngelGang_SMG_EnemyUse BalancedItems {}'.format(get_balanced_items(
             [
                 ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_AngelGang_SMG_01_Common', regular.weight_common),
                 ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_AngelGang_SMG_02_Uncommon', regular.weight_uncommon),
@@ -2036,12 +1994,10 @@ for (rarity_key, rarity_label) in DropConfig.rarity_presets:
                 ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_AngelGang_SMG_05_VeryRare', regular.weight_veryrare),
                 ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_AngelGang_SMG_05_VeryRare_Alien', regular.weight_alien),
                 ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_AngelGang_SMG_06_Legendary', regular.weight_legendary),
-            ])),
-            activated=hotfix_activated)
+            ])))
 
-    torguehfs.add_level_hotfix('angel_snipers', 'Equip',
-        """,GD_Iris_ItemPoolsEnemyUse.WeaponPools.Pool_Weapons_AngelGang_SniperRifles_EnemyUse,
-        BalancedItems,,{}""".format(get_balanced_items(
+    mp.register_str('angel_snipers',
+        'level None set GD_Iris_ItemPoolsEnemyUse.WeaponPools.Pool_Weapons_AngelGang_SniperRifles_EnemyUse BalancedItems {}'.format(get_balanced_items(
             [
                 ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_AngelGang_SniperRifles_01_Common', regular.weight_common),
                 ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_AngelGang_SniperRifles_02_Uncommon', regular.weight_uncommon),
@@ -2049,12 +2005,10 @@ for (rarity_key, rarity_label) in DropConfig.rarity_presets:
                 ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_AngelGang_SniperRifles_05_VeryRare', regular.weight_veryrare),
                 ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_AngelGang_SniperRifles_05_VeryRare_Alien', regular.weight_alien),
                 ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_AngelGang_SniperRifles_06_Legendary', regular.weight_legendary),
-            ])),
-            activated=hotfix_activated)
+            ])))
 
-    torguehfs.add_level_hotfix('dragon_pistols', 'Equip',
-        """,GD_Iris_ItemPoolsEnemyUse.WeaponPools.Pool_Weapons_DragonGang_Pistols_EnemyUse,
-        BalancedItems,,{}""".format(get_balanced_items(
+    mp.register_str('dragon_pistols',
+        'level None set GD_Iris_ItemPoolsEnemyUse.WeaponPools.Pool_Weapons_DragonGang_Pistols_EnemyUse BalancedItems {}'.format(get_balanced_items(
             [
                 ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_DragonGang_Pistols_01_Common', regular.weight_common),
                 ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_DragonGang_Pistols_02_Uncommon', regular.weight_uncommon),
@@ -2062,12 +2016,10 @@ for (rarity_key, rarity_label) in DropConfig.rarity_presets:
                 ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_DragonGang_Pistols_05_VeryRare', regular.weight_veryrare),
                 ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_DragonGang_Pistols_05_VeryRare_Alien', regular.weight_alien),
                 ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_DragonGang_Pistols_06_Legendary', regular.weight_legendary),
-            ])),
-            activated=hotfix_activated)
+            ])))
 
-    torguehfs.add_level_hotfix('dragon_smg', 'Equip',
-        """,GD_Iris_ItemPoolsEnemyUse.WeaponPools.Pool_Weapons_DragonGang_SMG_EnemyUse,
-        BalancedItems,,{}""".format(get_balanced_items(
+    mp.register_str('dragon_smg',
+        'level None set GD_Iris_ItemPoolsEnemyUse.WeaponPools.Pool_Weapons_DragonGang_SMG_EnemyUse BalancedItems {}'.format(get_balanced_items(
             [
                 ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_DragonGang_SMG_01_Common', regular.weight_common),
                 ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_DragonGang_SMG_02_Uncommon', regular.weight_uncommon),
@@ -2075,12 +2027,10 @@ for (rarity_key, rarity_label) in DropConfig.rarity_presets:
                 ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_DragonGang_SMG_05_VeryRare', regular.weight_veryrare),
                 ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_DragonGang_SMG_05_VeryRare_Alien', regular.weight_alien),
                 ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_DragonGang_SMG_06_Legendary', regular.weight_legendary),
-            ])),
-            activated=hotfix_activated)
+            ])))
 
-    torguehfs.add_level_hotfix('dragon_snipers', 'Equip',
-        """,GD_Iris_ItemPoolsEnemyUse.WeaponPools.Pool_Weapons_DragonGang_SniperRifles_EnemyUse,
-        BalancedItems,,{}""".format(get_balanced_items(
+    mp.register_str('dragon_snipers',
+        'level None set GD_Iris_ItemPoolsEnemyUse.WeaponPools.Pool_Weapons_DragonGang_SniperRifles_EnemyUse BalancedItems {}'.format(get_balanced_items(
             [
                 ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_DragonGang_SniperRifles_01_Common', regular.weight_common),
                 ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_DragonGang_SniperRifles_02_Uncommon', regular.weight_uncommon),
@@ -2088,12 +2038,10 @@ for (rarity_key, rarity_label) in DropConfig.rarity_presets:
                 ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_DragonGang_SniperRifles_05_VeryRare', regular.weight_veryrare),
                 ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_DragonGang_SniperRifles_05_VeryRare_Alien', regular.weight_alien),
                 ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_DragonGang_SniperRifles_06_Legendary', regular.weight_legendary),
-            ])),
-            activated=hotfix_activated)
+            ])))
 
-    torguehfs.add_level_hotfix('torgue_pistols', 'Equip',
-        """,GD_Iris_ItemPoolsEnemyUse.WeaponPools.Pool_Weapons_TorgueGang_Pistols_EnemyUse,
-        BalancedItems,,{}""".format(get_balanced_items(
+    mp.register_str('torgue_pistols',
+        'level None set GD_Iris_ItemPoolsEnemyUse.WeaponPools.Pool_Weapons_TorgueGang_Pistols_EnemyUse BalancedItems {}'.format(get_balanced_items(
             [
                 ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_TorgueGang_Pistols_01_Common', regular.weight_common),
                 ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_TorgueGang_Pistols_02_Uncommon', regular.weight_uncommon),
@@ -2101,12 +2049,10 @@ for (rarity_key, rarity_label) in DropConfig.rarity_presets:
                 ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_TorgueGang_Pistols_05_VeryRare', regular.weight_veryrare),
                 ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_TorgueGang_Pistols_05_VeryRare_Alien', regular.weight_alien),
                 ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_TorgueGang_Pistols_06_Legendary', regular.weight_legendary),
-            ])),
-            activated=hotfix_activated)
+            ])))
 
-    torguehfs.add_level_hotfix('torgue_shotguns', 'Equip',
-        """,GD_Iris_ItemPoolsEnemyUse.WeaponPools.Pool_Weapons_TorgueGang_Shotguns_EnemyUse,
-        BalancedItems,,{}""".format(get_balanced_items(
+    mp.register_str('torgue_shotguns',
+        'level None set GD_Iris_ItemPoolsEnemyUse.WeaponPools.Pool_Weapons_TorgueGang_Shotguns_EnemyUse BalancedItems {}'.format(get_balanced_items(
             [
                 ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_TorgueGang_Shotguns_01_Common', regular.weight_common),
                 ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_TorgueGang_Shotguns_02_Uncommon', regular.weight_uncommon),
@@ -2114,12 +2060,10 @@ for (rarity_key, rarity_label) in DropConfig.rarity_presets:
                 ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_TorgueGang_Shotguns_05_VeryRare', regular.weight_veryrare),
                 ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_TorgueGang_Shotguns_05_VeryRare_Alien', regular.weight_alien),
                 ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_TorgueGang_Shotguns_06_Legendary', regular.weight_legendary),
-            ])),
-            activated=hotfix_activated)
+            ])))
 
-    torguehfs.add_level_hotfix('torgue_ar', 'Equip',
-        """,GD_Iris_ItemPoolsEnemyUse.WeaponPools.Pool_Weapons_TorgueGang_AR_EnemyUse,
-        BalancedItems,,{}""".format(get_balanced_items(
+    mp.register_str('torgue_ar',
+        'level None set GD_Iris_ItemPoolsEnemyUse.WeaponPools.Pool_Weapons_TorgueGang_AR_EnemyUse BalancedItems {}'.format(get_balanced_items(
             [
                 ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_TorgueGang_AR_01_Common', regular.weight_common),
                 ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_TorgueGang_AR_02_Uncommon', regular.weight_uncommon),
@@ -2127,23 +2071,15 @@ for (rarity_key, rarity_label) in DropConfig.rarity_presets:
                 ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_TorgueGang_AR_05_VeryRare', regular.weight_veryrare),
                 ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_TorgueGang_AR_05_VeryRare_Alien', regular.weight_alien),
                 ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_TorgueGang_AR_06_Legendary', regular.weight_legendary),
-            ])),
-            activated=hotfix_activated)
+            ])))
 
     with open('input-file-rarity.txt', 'r') as df:
         rarity_sections[rarity_key] = df.read().format(
                 section_label=rarity_label,
-                line_prefix=line_prefix,
-                line_suffix=line_suffix,
                 regular=regular,
                 badass=badass,
-                body_double_equip_hotfix_string=hfs.get_hotfix(body_double_key).get_xml(),
-                torguehotfixes=torguehfs,
+                mp=mp,
                 )
-
-    line_prefix = '#'
-    line_suffix = '<off>'
-    hotfix_activated = False
 
 # Configure the gun type probabilities
 for config in [regular, badass]:
@@ -2224,9 +2160,8 @@ for config in [regular, badass]:
         ])
 
 # Make Torgue DLC equip pools drop on death.
-hfs.add_level_hotfix('torgue_angel_equip', 'TorgueEquip',
-    """,GD_Iris_ItemPoolsEnemyUse.WeaponPools.Pool_AngelGang_All_ButLaunchers_Use,
-    BalancedItems,,{}""".format(get_balanced_items([
+mp.register_str('torgue_angel_equip',
+    'level None set GD_Iris_ItemPoolsEnemyUse.WeaponPools.Pool_AngelGang_All_ButLaunchers_Use BalancedItems {}'.format(get_balanced_items([
         ('GD_Iris_ItemPoolsEnemyUse.WeaponPools.Pool_Weapons_AngelGang_Pistols_EnemyUse', regular.drop_prob_pistols, None),
         ('GD_Iris_ItemPoolsEnemyUse.WeaponPools.Pool_Weapons_AngelGang_Shotguns_EnemyUse', regular.drop_prob_shotguns, None),
         ('GD_Iris_ItemPoolsEnemyUse.WeaponPools.Pool_Weapons_AngelGang_SMG_EnemyUse', regular.drop_prob_smg, None),
@@ -2234,18 +2169,16 @@ hfs.add_level_hotfix('torgue_angel_equip', 'TorgueEquip',
         (regular.rarity_pool_launchers, regular.drop_prob_launchers, None),
     ])))
 
-hfs.add_level_hotfix('torgue_dragon_equip', 'TorgueEquip',
-    """,GD_Iris_ItemPoolsEnemyUse.WeaponPools.Pool_DragonGang_All_ButLaunchers_Use,
-    BalancedItems,,{}""".format(get_balanced_items([
+mp.register_str('torgue_dragon_equip',
+    'level None set GD_Iris_ItemPoolsEnemyUse.WeaponPools.Pool_DragonGang_All_ButLaunchers_Use BalancedItems {}'.format(get_balanced_items([
         ('GD_Iris_ItemPoolsEnemyUse.WeaponPools.Pool_Weapons_DragonGang_Pistols_EnemyUse', regular.drop_prob_pistols, None),
         ('GD_Iris_ItemPoolsEnemyUse.WeaponPools.Pool_Weapons_DragonGang_SMG_EnemyUse', regular.drop_prob_smg, None),
         ('GD_Iris_ItemPoolsEnemyUse.WeaponPools.Pool_Weapons_DragonGang_SniperRifles_EnemyUse', regular.drop_prob_snipers, None),
         (regular.rarity_pool_launchers, regular.drop_prob_launchers, None),
     ])))
 
-hfs.add_level_hotfix('torgue_torgue_equip', 'TorgueEquip',
-    """,GD_Iris_ItemPoolsEnemyUse.WeaponPools.Pool_TorgueGangWeapons_All_ButLaunchers_Use,
-    BalancedItems,,{}""".format(get_balanced_items([
+mp.register_str('torgue_torgue_equip',
+    'level None set GD_Iris_ItemPoolsEnemyUse.WeaponPools.Pool_TorgueGangWeapons_All_ButLaunchers_Use BalancedItems {}'.format(get_balanced_items([
         ('GD_Iris_ItemPoolsEnemyUse.WeaponPools.Pool_Weapons_TorgueGang_Pistols_EnemyUse', regular.drop_prob_pistols, None),
         ('GD_Iris_ItemPoolsEnemyUse.WeaponPools.Pool_Weapons_TorgueGang_AR_EnemyUse', regular.drop_prob_ar, None),
         ('GD_Iris_ItemPoolsEnemyUse.WeaponPools.Pool_Weapons_TorgueGang_Shotguns_EnemyUse', regular.drop_prob_shotguns, None),
@@ -2277,23 +2210,6 @@ set_dl_ia_item_pool('cardboard_0',
         'GD_Itempools.LootablePools.Pool_Locker_Items_CashAndAmmo', 1, 0,
         point='Ammo1')
 
-# Remove guns from dumpsters
-hfs.add_level_hotfix('dumpsters_0', 'Dumpster',
-        """,GD_Itempools.LootablePools.Pool_Dumpster_Guns,BalancedItems,,
-        (
-            (
-                ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.LootablePools.Pool_Locker_Items_CashAndAmmo',
-                InvBalanceDefinition=None,
-                Probability=(
-                    BaseValueConstant=1,
-                    BaseValueAttribute=None,
-                    InitializationDefinition=None,
-                    BaseValueScaleConstant=1
-                ),
-                bDropOnDeath=False
-            )
-        )""")
-
 # Remove guns from bandit coolers
 set_dl_ia_item_pool('cooler_0',
         'GD_Balance_Treasure.LootableGrades.ObjectGrade_Bandit_Cooler',
@@ -2304,384 +2220,19 @@ set_dl_ia_item_pool('cooler_1',
         'GD_Itempools.LootablePools.Pool_Locker_Items_CashAndAmmo', 4, 0,
         point='Ammo1')
 
-# Remove guns from safes (this is actually taken from my Better Loot safe
-# definition, and improves the safes in general).
-hfs.add_level_hotfix('safes_0', 'Safes',
-    """,GD_Balance_Treasure.LootableGrades.ObjectGrade_Safe,DefaultLoot,,
-    (
-        (
-            ConfigurationName="EridiumStick",
-            LootGameStageVarianceFormula=None,
-            Weight=(
-                BaseValueConstant=1.000000,
-                BaseValueAttribute=None,
-                InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',
-                BaseValueScaleConstant=1.000000
-            ),
-            ItemAttachments=(
-                (
-                    ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Eridium_Stick',
-                    PoolProbability=(
-                        BaseValueConstant=1.000000,
-                        BaseValueAttribute=None,
-                        InitializationDefinition=None,
-                        BaseValueScaleConstant=1.000000
-                    ),
-                    AttachmentPointName="Ammo4"
-                ),
-                (
-                    ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Eridium_Stick',
-                    PoolProbability=(
-                        BaseValueConstant=1.000000,
-                        BaseValueAttribute=None,
-                        InitializationDefinition=None,
-                        BaseValueScaleConstant=1.000000
-                    ),
-                    AttachmentPointName="Ammo1"
-                ),
-                (
-                    ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Money_1_BIG',
-                    PoolProbability=(
-                        BaseValueConstant=1.000000,
-                        BaseValueAttribute=None,
-                        InitializationDefinition=None,
-                        BaseValueScaleConstant=1.000000
-                    ),
-                    AttachmentPointName="Ammo2"
-                ),
-                (
-                    ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Money_1_BIG',
-                    PoolProbability=(
-                        BaseValueConstant=1.000000,
-                        BaseValueAttribute=None,
-                        InitializationDefinition=None,
-                        BaseValueScaleConstant=0.800000
-                    ),
-                    AttachmentPointName="Ammo5"
-                ),
-                (
-                    ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Eridium_Stick',
-                    PoolProbability=(
-                        BaseValueConstant=1.000000,
-                        BaseValueAttribute=None,
-                        InitializationDefinition=None,
-                        BaseValueScaleConstant=0.800000
-                    ),
-                    AttachmentPointName="Ammo3"
-                )
-            )
-        ),
-        (
-            ConfigurationName="Eridium",
-            LootGameStageVarianceFormula=None,
-            Weight=(
-                BaseValueConstant=1.000000,
-                BaseValueAttribute=None,
-                InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',
-                BaseValueScaleConstant=1.000000
-            ),
-            ItemAttachments=(
-                (
-                    ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Eridium_Bar',
-                    PoolProbability=(
-                        BaseValueConstant=1.000000,
-                        BaseValueAttribute=None,
-                        InitializationDefinition=None,
-                        BaseValueScaleConstant=1.000000
-                    ),
-                    AttachmentPointName="Ammo4"
-                ),
-                (
-                    ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Money_1_BIG',
-                    PoolProbability=(
-                        BaseValueConstant=1.000000,
-                        BaseValueAttribute=None,
-                        InitializationDefinition=None,
-                        BaseValueScaleConstant=1.000000
-                    ),
-                    AttachmentPointName="Ammo1"
-                ),
-                (
-                    ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Money_1_BIG',
-                    PoolProbability=(
-                        BaseValueConstant=1.000000,
-                        BaseValueAttribute=None,
-                        InitializationDefinition=None,
-                        BaseValueScaleConstant=1.000000
-                    ),
-                    AttachmentPointName="Ammo2"
-                ),
-                (
-                    ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Money_1_BIG',
-                    PoolProbability=(
-                        BaseValueConstant=1.000000,
-                        BaseValueAttribute=None,
-                        InitializationDefinition=None,
-                        BaseValueScaleConstant=0.800000
-                    ),
-                    AttachmentPointName="Ammo5"
-                ),
-                (
-                    ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Money_1_BIG',
-                    PoolProbability=(
-                        BaseValueConstant=1.000000,
-                        BaseValueAttribute=None,
-                        InitializationDefinition=None,
-                        BaseValueScaleConstant=0.800000
-                    ),
-                    AttachmentPointName="Ammo3"
-                )
-            )
-        ),
-        (
-            ConfigurationName="Safe_Cash",
-            LootGameStageVarianceFormula=None,
-            Weight=(
-                BaseValueConstant=1.000000,
-                BaseValueAttribute=None,
-                InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',
-                BaseValueScaleConstant=1.000000
-            ),
-            ItemAttachments=(
-                (
-                    ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Money_1_BIG',
-                    PoolProbability=(
-                        BaseValueConstant=1.000000,
-                        BaseValueAttribute=None,
-                        InitializationDefinition=None,
-                        BaseValueScaleConstant=1.000000
-                    ),
-                    AttachmentPointName="Ammo1"
-                ),
-                (
-                    ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Money_1_BIG',
-                    PoolProbability=(
-                        BaseValueConstant=1.000000,
-                        BaseValueAttribute=None,
-                        InitializationDefinition=None,
-                        BaseValueScaleConstant=0.800000
-                    ),
-                    AttachmentPointName="Ammo2"
-                ),
-                (
-                    ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Money_1_BIG',
-                    PoolProbability=(
-                        BaseValueConstant=1.000000,
-                        BaseValueAttribute=None,
-                        InitializationDefinition=None,
-                        BaseValueScaleConstant=1.000000
-                    ),
-                    AttachmentPointName="Ammo3"
-                ),
-                (
-                    ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Money_1_BIG',
-                    PoolProbability=(
-                        BaseValueConstant=1.000000,
-                        BaseValueAttribute=None,
-                        InitializationDefinition=None,
-                        BaseValueScaleConstant=1.000000
-                    ),
-                    AttachmentPointName="Ammo4"
-                ),
-                (
-                    ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Money_1_BIG',
-                    PoolProbability=(
-                        BaseValueConstant=1.000000,
-                        BaseValueAttribute=None,
-                        InitializationDefinition=None,
-                        BaseValueScaleConstant=0.800000
-                    ),
-                    AttachmentPointName="Ammo5"
-                )
-            )
-        ),
-        (
-            ConfigurationName="Grenade",
-            LootGameStageVarianceFormula=None,
-            Weight=(
-                BaseValueConstant=1.000000,
-                BaseValueAttribute=None,
-                InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_3_Uncommoner',
-                BaseValueScaleConstant=1.000000
-            ),
-            ItemAttachments=(
-                (
-                    ItemPool=ItemPoolDefinition'GD_Itempools.GrenadeModPools.Pool_GrenadeMods_06_Legendary',
-                    PoolProbability=(
-                        BaseValueConstant=1.000000,
-                        BaseValueAttribute=None,
-                        InitializationDefinition=None,
-                        BaseValueScaleConstant=1.000000
-                    ),
-                    AttachmentPointName="Grenade"
-                ),
-                (
-                    ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Ammo_Grenades',
-                    PoolProbability=(
-                        BaseValueConstant=1.000000,
-                        BaseValueAttribute=None,
-                        InitializationDefinition=None,
-                        BaseValueScaleConstant=1.000000
-                    ),
-                    AttachmentPointName="Shield"
-                ),
-                (
-                    ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Money_1_BIG',
-                    PoolProbability=(
-                        BaseValueConstant=1.000000,
-                        BaseValueAttribute=None,
-                        InitializationDefinition=None,
-                        BaseValueScaleConstant=1.000000
-                    ),
-                    AttachmentPointName="Ammo1"
-                ),
-                (
-                    ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Money_1_BIG',
-                    PoolProbability=(
-                        BaseValueConstant=1.000000,
-                        BaseValueAttribute=None,
-                        InitializationDefinition=None,
-                        BaseValueScaleConstant=1.000000
-                    ),
-                    AttachmentPointName="Ammo2"
-                ),
-                (
-                    ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Ammo_Grenades',
-                    PoolProbability=(
-                        BaseValueConstant=1.000000,
-                        BaseValueAttribute=None,
-                        InitializationDefinition=None,
-                        BaseValueScaleConstant=1.000000
-                    ),
-                    AttachmentPointName="Ammo5"
-                )
-            )
-        ),
-        (
-            ConfigurationName="Relic",
-            LootGameStageVarianceFormula=None,
-            Weight=(
-                BaseValueConstant=1.000000,
-                BaseValueAttribute=None,
-                InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_3_Uncommoner',
-                BaseValueScaleConstant=1.000000
-            ),
-            ItemAttachments=(
-                (
-                    ItemPool=ItemPoolDefinition'GD_Itempools.ArtifactPools.Pool_ArtifactsReward',
-                    PoolProbability=(
-                        BaseValueConstant=1.000000,
-                        BaseValueAttribute=None,
-                        InitializationDefinition=None,
-                        BaseValueScaleConstant=0.500000
-                    ),
-                    AttachmentPointName="Grenade"
-                ),
-                (
-                    ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Money_1_BIG',
-                    PoolProbability=(
-                        BaseValueConstant=1.000000,
-                        BaseValueAttribute=None,
-                        InitializationDefinition=None,
-                        BaseValueScaleConstant=1.000000
-                    ),
-                    AttachmentPointName="Ammo1"
-                ),
-                (
-                    ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Money_1_BIG',
-                    PoolProbability=(
-                        BaseValueConstant=1.000000,
-                        BaseValueAttribute=None,
-                        InitializationDefinition=None,
-                        BaseValueScaleConstant=1.000000
-                    ),
-                    AttachmentPointName="Ammo2"
-                )
-            )
-        )
-    )
-    """)
-
 # Nerf vendors
-hfs.add_level_hotfix('vendor_nerf_0', 'VendorNerf',
-        """,
-        GD_ItemPools_Shop.Items.Shoppool_Weapons_FlatChance,
-        Quantity.BaseValueConstant,,
-        2""")
-hfs.add_level_hotfix('vendor_nerf_1', 'VendorNerf',
-        """,
-        GD_ItemPools_Shop.HealthShop.HealthShop_Items,
-        Quantity.BaseValueConstant,,
-        2""")
-hfs.add_level_hotfix('vendor_nerf_2', 'VendorNerf',
-        """,
-        GD_ItemPools_Shop.WeaponPools.Shoppool_FeaturedItem_WeaponMachine,
-        Quantity.BaseValueConstant,,
-        0""")
-set_bi_item_prob('vendor_nerf_3', 'GD_ItemPools_Shop.HealthShop.HealthShop_FeaturedItem', 0)
-set_bi_item_prob('vendor_nerf_4', 'GD_ItemPools_Shop.HealthShop.HealthShop_FeaturedItem', 1)
-set_bi_item_prob('vendor_nerf_5', 'GD_ItemPools_Shop.HealthShop.HealthShop_FeaturedItem', 2)
-set_bi_item_prob('vendor_nerf_6', 'GD_ItemPools_Shop.HealthShop.HealthShop_FeaturedItem', 3)
+set_bi_item_prob('vendor_nerf_0', 'GD_ItemPools_Shop.HealthShop.HealthShop_FeaturedItem', 0)
+set_bi_item_prob('vendor_nerf_1', 'GD_ItemPools_Shop.HealthShop.HealthShop_FeaturedItem', 1)
+set_bi_item_prob('vendor_nerf_2', 'GD_ItemPools_Shop.HealthShop.HealthShop_FeaturedItem', 2)
+set_bi_item_prob('vendor_nerf_3', 'GD_ItemPools_Shop.HealthShop.HealthShop_FeaturedItem', 3)
 
 # Improve "medical mystery" pool (used in a couple of places, actually)
-hfs.add_level_hotfix('medicalmystery', 'MedicalMystery',
-    """,GD_ItempoolsEnemyUse.Turrets.MedicalMystery_AlienGun,
-    BalancedItems,,{}""".format(get_balanced_items([
-        ('GD_Weap_AssaultRifle.A_Weapons.AR_Bandit_5_Alien', 1, 'WeaponBalanceDefinition'),
-    ])))
-
-# Motor Momma drop pool fixes
-hfs.add_level_hotfix('motor_momma_0', 'MotorMomma',
-    """Iris_Hub2_P,
-    GD_Iris_Population_MotorMama.Balance.Iris_PawnBalance_MotorMama,
-    DefaultItemPoolList[2].PoolProbability,,
-    (
-        BaseValueConstant=1.000000,
-        BaseValueAttribute=None,
-        InitializationDefinition=None,
-        BaseValueScaleConstant=1.000000
-    )""")
-
-hfs.add_level_hotfix('motor_momma_1', 'MotorMomma',
-    """Iris_Hub2_P,
-    GD_Iris_Population_MotorMama.Balance.Iris_PawnBalance_MotorMama,
-    DefaultItemPoolList[3],,
-    (
-        ItemPool=ItemPoolDefinition'GD_Itempools.Runnables.Pool_MadameVonBartlesby',
-        PoolProbability=(
-            BaseValueConstant=0.000000,
-            BaseValueAttribute=AttributeDefinition'GD_Itempools.DropWeights.DropODDS_BossUniques',
-            InitializationDefinition=None,
-            BaseValueScaleConstant=1.000000
-        )
-    )""")
-
-# Piston drop pool fixes.
-
-hfs.add_level_hotfix('piston_0', 'Piston',
-    """Iris_DL1_TAS_P,
-    GD_Iris_Population_PistonBoss.Balance.Iris_PawnBalance_PistonBoss,
-    DefaultItemPoolList[0].PoolProbability,,
-    (
-        BaseValueConstant=1.000000,
-        BaseValueAttribute=None,
-        InitializationDefinition=None,
-        BaseValueScaleConstant=1.000000
-    )""")
-
-hfs.add_level_hotfix('piston_1', 'Piston',
-    """Iris_DL1_TAS_P,
-    GD_Iris_Population_PistonBoss.Balance.Iris_PawnBalance_PistonBoss,
-    DefaultItemPoolList[2],,
-    (
-        ItemPool=ItemPoolDefinition'GD_Iris_ItemPools.EnemyDropPools.Pool_Weapons_Piston',
-        PoolProbability=(
-            BaseValueConstant=0.300000,
-            BaseValueAttribute=None,
-            InitializationDefinition=None,
-            BaseValueScaleConstant=1.000000
-        )
-    )""")
+mp.register_str('medicalmystery',
+    'level None set GD_ItempoolsEnemyUse.Turrets.MedicalMystery_AlienGun BalancedItems {}'.format(
+        get_balanced_items([
+            ('GD_Weap_AssaultRifle.A_Weapons.AR_Bandit_5_Alien', 1, 'WeaponBalanceDefinition'),
+        ]))
+    )
 
 # Laney's Dwarves - Better Loot Compat.  Deactivate the extra gemstone drop.
 
@@ -2922,22 +2473,16 @@ for (guntype, legendaries, uniques, pearls, seraphs) in [
         initial_pool.append((legendary, 1, 'WeaponBalanceDefinition'))
     for i in range(len(uniques) + len(pearls) + len(seraphs)):
         initial_pool.append((None, 0))
-    hfs.add_level_hotfix('weapon_pool_clear_{}'.format(guntype.lower()),
-        'WeaponPoolClear{}'.format(guntype),
-        """,GD_Itempools.WeaponPools.Pool_Weapons_{}_06_Legendary,
-        BalancedItems,,{}""".format(
+    mp.register_str('weapon_pool_clear_{}'.format(guntype.lower()),
+        'level None set GD_Itempools.WeaponPools.Pool_Weapons_{}_06_Legendary BalancedItems {}'.format(
             guntype,
             get_balanced_items(initial_pool),
             ))
 
     # Hotfixes to add uniques
     for (idx, unique) in enumerate(uniques):
-        hotfix_id = 'unique_weap_add_{}_{}'.format(guntype.lower(), idx)
-        unique_hotfixes.append(hotfix_id)
-        hfs.add_level_hotfix(hotfix_id,
-            'WeaponUniqueAdd{}'.format(guntype),
-            """,GD_Itempools.WeaponPools.Pool_Weapons_{}_06_Legendary,
-            BalancedItems[{}],,
+        unique_hotfixes.append(
+            """level None set GD_Itempools.WeaponPools.Pool_Weapons_{}_06_Legendary BalancedItems[{}]
             (
                 ItmPoolDefinition=None,
                 InvBalanceDefinition=WeaponBalanceDefinition'{}',
@@ -2957,12 +2502,8 @@ for (guntype, legendaries, uniques, pearls, seraphs) in [
 
     # Hotfixes to add pearls
     for (idx, pearl) in enumerate(pearls):
-        hotfix_id = 'pearl_weap_add_{}_{}'.format(guntype.lower(), idx)
-        pearl_hotfixes.append(hotfix_id)
-        hfs.add_level_hotfix(hotfix_id,
-            'WeaponPearlAdd{}'.format(guntype),
-            """,GD_Itempools.WeaponPools.Pool_Weapons_{}_06_Legendary,
-            BalancedItems[{}],,
+        pearl_hotfixes.append(
+            """level None set GD_Itempools.WeaponPools.Pool_Weapons_{}_06_Legendary BalancedItems[{}]
             (
                 ItmPoolDefinition=None,
                 InvBalanceDefinition=WeaponBalanceDefinition'{}',
@@ -2982,12 +2523,8 @@ for (guntype, legendaries, uniques, pearls, seraphs) in [
 
     # Hotfixes to add seraphs
     for (idx, seraph) in enumerate(seraphs):
-        hotfix_id = 'seraph_weap_add_{}_{}'.format(guntype.lower(), idx)
-        seraph_hotfixes.append(hotfix_id)
-        hfs.add_level_hotfix(hotfix_id,
-            'WeaponSeraphAdd{}'.format(guntype),
-            """,GD_Itempools.WeaponPools.Pool_Weapons_{}_06_Legendary,
-            BalancedItems[{}],,
+        seraph_hotfixes.append(
+            """level None set GD_Itempools.WeaponPools.Pool_Weapons_{}_06_Legendary BalancedItems[{}]
             (
                 ItmPoolDefinition=None,
                 InvBalanceDefinition=WeaponBalanceDefinition'{}',
@@ -3006,15 +2543,15 @@ for (guntype, legendaries, uniques, pearls, seraphs) in [
                 ))
 
 other.legendary_unique_adds = "\n\n".join(
-        ['{}{}'.format(' '*(4*3), hfs.get_hotfix(hotfix_id).get_xml()) for hotfix_id in unique_hotfixes]
+        ['{}{}'.format(' '*(4*3), hotfix) for hotfix in unique_hotfixes]
     )
 
 other.legendary_pearl_adds = "\n\n".join(
-        ['{}{}'.format(' '*(4*3), hfs.get_hotfix(hotfix_id).get_xml()) for hotfix_id in pearl_hotfixes]
+        ['{}{}'.format(' '*(4*3), hotfix) for hotfix in pearl_hotfixes]
     )
 
 other.legendary_seraph_adds = "\n\n".join(
-        ['{}{}'.format(' '*(4*3), hfs.get_hotfix(hotfix_id).get_xml()) for hotfix_id in seraph_hotfixes]
+        ['{}{}'.format(' '*(4*3), hotfix) for hotfix in seraph_hotfixes]
     )
 
 # Legendary shield pool configuration.  Doing this a bit differently since there's
@@ -3059,44 +2596,30 @@ for (pool, shieldlist) in shields.items():
             shieldname,
             invbalance='InventoryBalanceDefinition')
 
-# Vanilla Stalker shield hotfixes (dummy statement)
-hfs.add_level_hotfix('stalker_dummy', 'StalkerShields',
-        'Dummy_P,GD_Dummy,DummyAttribute,1,1')
-
 # "Real" Stalker shield hotfixes
 stalker_shields_real_list = []
 prefix = ' '*(4*3)
 for config in [regular, badass]:
     for (idx, (dipl_idx, popdef)) in enumerate(config.stalker_dipl):
-        stalker_id = 'real_stalker_{}_{}'.format(config.hotfix_prefix, idx)
-        hfs.add_level_hotfix(stalker_id, 'StalkerShields',
-            ",{},DefaultItemPoolList[{}].ItemPool,,ItemPoolDefinition'{}'".format(
+        stalker_shields_real_list.append('{}{}'.format(prefix,
+            "level None set {} DefaultItemPoolList[{}].ItemPool ItemPoolDefinition'{}'".format(
                 popdef, dipl_idx, config.pool_shields,
-                ),
-            activated=False)
-        stalker_shields_real_list.append('{}{}'.format(prefix, hfs.get_hotfix_xml(stalker_id)))
+                )
+            ))
 
 # Only-Maylay Stalker shield hotfixes
 stalker_shields_maylay_list = []
 prefix = ' '*(4*3)
 for config in [regular, badass]:
     for (idx, (dipl_idx, popdef)) in enumerate(config.stalker_dipl):
-        stalker_id = 'maylay_stalker_{}_{}'.format(config.hotfix_prefix, idx)
-        hfs.add_level_hotfix(stalker_id, 'StalkerShields',
-            ",{},DefaultItemPoolList[{}].ItemPool,,ItemPoolDefinition'{}'".format(
+        stalker_shields_maylay_list.append('{}{}'.format(prefix,
+            "level None set {} DefaultItemPoolList[{}].ItemPool ItemPoolDefinition'{}'".format(
                 popdef, dipl_idx, config.stalker_shields,
-                ),
-            activated=False)
-        stalker_shields_maylay_list.append('{}{}'.format(prefix, hfs.get_hotfix_xml(stalker_id)))
-
-# Save our current hotfixes
-orig_hfs = hfs
+                )
+            ))
 
 # Set up Boss/Miniboss unique drops.
 boss_drops = {}
-line_prefix = ''
-line_suffix = ''
-hotfix_activated = True
 for (label, key, unique_pct, rare_pct) in [
         ('Guaranteed', 'guaranteed', 1, 1),
         ('Very Improved', 'veryimproved', .5, .75),
@@ -3104,9 +2627,6 @@ for (label, key, unique_pct, rare_pct) in [
         ('Slightly Improved', 'slight', .22, .45),
         ('Stock Equip', 'stock', .1, .33),
         ]:
-
-    # Set up a new hotfixes object so we don't have to fiddle with hotfix IDs
-    hfs = Hotfixes(nameprefix='ApocBoss{}'.format(key.capitalize()))
 
     # Midge-mong uses a KerBlaster.  The rider is a generic Badass Midget, but fortunately
     # no other Badass Midgets can spawn in Cove_P.  So just fiddle with the pools via
@@ -3117,21 +2637,14 @@ for (label, key, unique_pct, rare_pct) in [
             [
                 ('GD_Itempools.Runnables.Pool_WarMong', unique_pct, None),
             ],
-            activated=hotfix_activated)
+            )
 
     set_dipl_item_pool('midgemong_pool_1',
             'GD_Population_Midget.Balance.PawnBalance_MidgetBadass',
             0,
             other.level_pool_0,
             level='Cove_P',
-            activated=hotfix_activated)
-
-    hfs.add_level_hotfix('midgemong_clean_pool', 'Midge',
-            """Cove_P,
-            GD_Population_PrimalBeast.Balance.Unique.PawnBalance_PrimalBeast_Warmong,
-            DefaultItemPoolList,,
-            ()""",
-            activated=hotfix_activated)
+            )
 
     # Captain Flynt (SouthernShelf_P pool 0)
 
@@ -3141,26 +2654,26 @@ for (label, key, unique_pct, rare_pct) in [
                 ('GD_Weap_Pistol.A_Weapons_Legendary.Pistol_Maliwan_5_ThunderballFists', 1, 'WeaponBalanceDefinition'),
                 ('GD_Weap_Pistol.A_Weapons_Unique.Pistol_Bandit_3_Tenderbox', 1, 'WeaponBalanceDefinition'),
             ],
-            activated=hotfix_activated)
+            )
 
     set_dipl_item_prob('flynt_pool_1',
             'GD_Population_Nomad.Balance.Unique.PawnBalance_Flynt',
             0,
             level='SouthernShelf_P',
-            activated=hotfix_activated)
+            )
 
     set_dipl_item_prob('flynt_pool_2',
             'GD_Population_Nomad.Balance.Unique.PawnBalance_Flynt',
             3,
             level='SouthernShelf_P',
-            activated=hotfix_activated)
+            )
 
     set_dipl_item_pool('flynt_pool_3',
             'GD_Population_Nomad.Balance.Unique.PawnBalance_Flynt',
             2,
             other.level_pool_0,
             level='SouthernShelf_P',
-            activated=hotfix_activated)
+            )
 
     # Bad Maw - UCP adds Deliverance, so use that. (Frost_P pool 0)
 
@@ -3169,33 +2682,33 @@ for (label, key, unique_pct, rare_pct) in [
             [
                 ('GD_Itempools.Runnables.Pool_Tumba', unique_pct, None),
             ],
-            activated=hotfix_activated)
+            )
 
     set_pt_cipl_item_pool('badmaw_pool_1',
             'GD_Population_Nomad.Balance.PawnBalance_BadMaw',
             0, 0,
             other.level_pool_0,
             level='Frost_P',
-            activated=hotfix_activated)
+            )
 
     set_pt_cipl_item_pool('badmaw_pool_2',
             'GD_Population_Nomad.Balance.PawnBalance_BadMaw',
             1, 0,
             other.level_pool_0,
             level='Frost_P',
-            activated=hotfix_activated)
+            )
 
     set_pt_cipl_item_prob('badmaw_pool_3',
             'GD_Population_Nomad.Balance.PawnBalance_BadMaw',
             0, 2,
             level='Frost_P',
-            activated=hotfix_activated)
+            )
 
     set_pt_cipl_item_prob('badmaw_pool_4',
             'GD_Population_Nomad.Balance.PawnBalance_BadMaw',
             1, 2,
             level='Frost_P',
-            activated=hotfix_activated)
+            )
 
     # Assassin Common - remove Emperor from the shared loot pool
 
@@ -3203,7 +2716,7 @@ for (label, key, unique_pct, rare_pct) in [
         'GD_Itempools.Runnables.Pool_FourAssassins',
         0,
         level='SouthpawFactory_P',
-        activated=hotfix_activated)
+        )
 
     # Assassin Wot (using Runnables)
     # Note that for the assassins, we're not using our level_pools, since the
@@ -3217,20 +2730,20 @@ for (label, key, unique_pct, rare_pct) in [
                 ('GD_Weap_SMG.A_Weapons_Unique.SMG_Hyperion_3_Commerce', rare_pct, 'WeaponBalanceDefinition'),
                 ('GD_Weap_SMG.A_Weapons_Legendary.SMG_Dahl_5_Emperor', rare_pct/4, 'WeaponBalanceDefinition'),
             ],
-            activated=hotfix_activated)
+            )
 
     set_dipl_item_prob('wot_pool_1',
         'GD_Population_Marauder.Balance.Unique.PawnBalance_Assassin1',
         0,
         level='SouthpawFactory_P',
-        activated=hotfix_activated)
+        )
 
     set_dipl_item_prob('wot_pool_2',
         'GD_Population_Marauder.Balance.Unique.PawnBalance_Assassin1',
         2,
         level='SouthpawFactory_P',
         prob=1,
-        activated=hotfix_activated)
+        )
 
     # Assassin Oney (using Runnables)
 
@@ -3241,20 +2754,20 @@ for (label, key, unique_pct, rare_pct) in [
                 ('GD_Weap_Pistol.A_Weapons_Unique.Pistol_Jakobs_3_Judge', rare_pct, 'WeaponBalanceDefinition'),
                 ('GD_Weap_SMG.A_Weapons_Legendary.SMG_Dahl_5_Emperor', rare_pct/4, 'WeaponBalanceDefinition'),
             ],
-            activated=hotfix_activated)
+            )
 
     set_dipl_item_prob('oney_pool_1',
         'GD_Population_Nomad.Balance.Unique.PawnBalance_Assassin2',
         1,
         level='SouthpawFactory_P',
-        activated=hotfix_activated)
+        )
 
     set_dipl_item_prob('oney_pool_2',
         'GD_Population_Nomad.Balance.Unique.PawnBalance_Assassin2',
         3,
         level='SouthpawFactory_P',
         prob=1,
-        activated=hotfix_activated)
+        )
 
     # Assassin Reeth (melee only, so only a pool setup here) (using Runnables)
 
@@ -3265,7 +2778,7 @@ for (label, key, unique_pct, rare_pct) in [
                 ('GD_Weap_SniperRifles.A_Weapons_Unique.Sniper_Hyperion_3_FremingtonsEdge', 1, 'WeaponBalanceDefinition'),
                 ('GD_Weap_SMG.A_Weapons_Legendary.SMG_Dahl_5_Emperor', .25, 'WeaponBalanceDefinition'),
             ],
-            activated=hotfix_activated)
+            )
 
     # Assassin Rouf (using Runnables)
 
@@ -3276,20 +2789,20 @@ for (label, key, unique_pct, rare_pct) in [
                 ('GD_Weap_Shotgun.A_Weapons_Unique.SG_Bandit_3_Dog', rare_pct, 'WeaponBalanceDefinition'),
                 ('GD_Weap_SMG.A_Weapons_Legendary.SMG_Dahl_5_Emperor', rare_pct/4, 'WeaponBalanceDefinition'),
             ],
-            activated=hotfix_activated)
+            )
 
     set_dipl_item_prob('rouf_pool_1',
         'GD_Population_Rat.Balance.Unique.PawnBalance_Assassin4',
         0,
         level='SouthpawFactory_P',
-        activated=hotfix_activated)
+        )
 
     set_dipl_item_prob('rouf_pool_2',
         'GD_Population_Rat.Balance.Unique.PawnBalance_Assassin4',
         2,
         level='SouthpawFactory_P',
         prob=1,
-        activated=hotfix_activated)
+        )
 
     # Incinerator Clayton (IceCanyon_P pool 0)
 
@@ -3298,20 +2811,20 @@ for (label, key, unique_pct, rare_pct) in [
             [
                 ('GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Nova_Phoenix', unique_pct, 'InventoryBalanceDefinition'),
             ],
-            activated=hotfix_activated)
+            )
 
     set_dipl_item_pool('clayton_pool_1',
             'GD_Population_Psycho.Balance.Unique.PawnBalance_IncineratorVanya_Combat',
             0,
             other.level_pool_0,
             level='IceCanyon_P',
-            activated=hotfix_activated)
+            )
 
     set_bi_item_prob('clayton_pool_2',
         'GD_Itempools.Runnables.Pool_Clayton',
         1,
         level='IceCanyon_P',
-        activated=hotfix_activated)
+        )
 
     # Flinter (Dam_P pool 0)
 
@@ -3320,20 +2833,20 @@ for (label, key, unique_pct, rare_pct) in [
             [
                 ('GD_CustomItemPools_MainGame.Assassin.Head9', rare_pct, None),
             ],
-            activated=hotfix_activated)
+            )
 
     set_dipl_item_pool('flinter_pool_1',
             'GD_Population_Rat.Balance.Unique.PawnBalance_RatEasterEgg',
             0,
             other.level_pool_0,
             level='Dam_P',
-            activated=hotfix_activated)
+            )
 
     set_dipl_item_prob('flinter_pool_2',
         'GD_Population_Rat.Balance.Unique.PawnBalance_RatEasterEgg',
         2,
         level='Dam_P',
-        activated=hotfix_activated)
+        )
 
     # Mad Mike (Dam_P pool 1)
 
@@ -3349,23 +2862,14 @@ for (label, key, unique_pct, rare_pct) in [
             [
                 ('GD_Itempools.Runnables.Pool_MadDog', mike_pct, None),
             ],
-            activated=hotfix_activated)
+            )
 
     set_dipl_item_pool('mad_mike_pool_1',
             'GD_Population_Nomad.Balance.Unique.PawnBalance_MadMike',
             0,
             other.level_pool_1,
             level='Dam_P',
-            activated=hotfix_activated)
-
-    # UCP sets CustomItemPoolList to add the MadHous, but since we're
-    # overriding the equip pool anyway, just clear out that UCP edit.
-    hfs.add_level_hotfix('mad_mike_pool_2', 'MadMike',
-        """Dam_P,
-        GD_Population_Nomad.Balance.Unique.PawnBalance_MadMike,
-        PlayThroughs[0].CustomItemPoolList,,
-        ()""",
-        activated=hotfix_activated)
+            )
 
     # Prospector Zeke (TundraExpress_P pool 0)
 
@@ -3374,20 +2878,20 @@ for (label, key, unique_pct, rare_pct) in [
             [
                 ('GD_Weap_SniperRifles.A_Weapons_Legendary.Sniper_Dahl_5_Pitchfork', unique_pct, 'WeaponBalanceDefinition'),
             ],
-            activated=hotfix_activated)
+            )
 
     set_dipl_item_pool('zeke_pool_1',
             'GD_Population_Nomad.Balance.Unique.PawnBalance_Prospector',
             0,
             other.level_pool_0,
             level='TundraExpress_P',
-            activated=hotfix_activated)
+            )
 
     set_dipl_item_prob('zeke_pool_2',
         'GD_Population_Nomad.Balance.Unique.PawnBalance_Prospector',
         2,
         level='TundraExpress_P',
-        activated=hotfix_activated)
+        )
 
     # Laney (using her own pool)
 
@@ -3397,20 +2901,20 @@ for (label, key, unique_pct, rare_pct) in [
             [
                 ('GD_Weap_Pistol.A_Weapons_Legendary.Pistol_Bandit_5_Gub', unique_pct, 'WeaponBalanceDefinition'),
             ],
-            activated=hotfix_activated)
+            )
 
     set_dipl_item_prob('laney_pool_1',
         'GD_Population_Rat.Balance.Unique.PawnBalance_Laney',
         0,
         level='Fridge_P',
-        activated=hotfix_activated)
+        )
 
     set_dipl_item_prob('laney_pool_2',
         'GD_Population_Rat.Balance.Unique.PawnBalance_Laney',
         2,
         level='Fridge_P',
         prob=1,
-        activated=hotfix_activated)
+        )
 
     # Smash-Head (Fridge_P pool 0)
 
@@ -3420,26 +2924,26 @@ for (label, key, unique_pct, rare_pct) in [
                 ('GD_Weap_Shotgun.A_Weapons_Legendary.SG_Bandit_5_SledgesShotgun', unique_pct, 'WeaponBalanceDefinition'),
                 ('GD_Weap_Launchers.A_Weapons_Unique.RL_Bandit_3_Roaster', rare_pct, 'WeaponBalanceDefinition'),
             ],
-            activated=hotfix_activated)
+            )
 
     set_dipl_item_pool('smashhead_pool_1',
             'GD_Population_Goliath.Balance.Unique.PawnBalance_SmashHead',
             0,
             other.level_pool_0,
             level='Fridge_P',
-            activated=hotfix_activated)
+            )
 
     set_dipl_item_prob('smashhead_pool_2',
         'GD_Population_Goliath.Balance.Unique.PawnBalance_SmashHead',
         1,
         level='Fridge_P',
-        activated=hotfix_activated)
+        )
 
     set_dipl_item_prob('smashhead_pool_3',
         'GD_Population_Goliath.Balance.Unique.PawnBalance_SmashHead',
         2,
         level='Fridge_P',
-        activated=hotfix_activated)
+        )
 
     # Bagman (Luckys_P pool 0)
 
@@ -3448,20 +2952,20 @@ for (label, key, unique_pct, rare_pct) in [
             [
                 ('GD_Itempools.Runnables.Pool_Bagman', unique_pct, None),
             ],
-            activated=hotfix_activated)
+            )
 
     set_dipl_item_pool('bagman_pool_1',
             'GD_Population_Engineer.Balance.Unique.PawnBalance_Leprechaun',
             2,
             other.level_pool_0,
             level='Luckys_P',
-            activated=hotfix_activated)
+            )
 
     set_dipl_item_prob('bagman_pool_2',
         'GD_Population_Engineer.Balance.Unique.PawnBalance_Leprechaun',
         1,
         level='Luckys_P',
-        activated=hotfix_activated)
+        )
 
     # Muscles (Grass_Cliffs_P pool 0)
 
@@ -3470,20 +2974,20 @@ for (label, key, unique_pct, rare_pct) in [
             [
                 ('GD_Weap_Shotgun.A_Weapons_Legendary.SG_Bandit_5_SledgesShotgun', unique_pct, 'WeaponBalanceDefinition'),
             ],
-            activated=hotfix_activated)
+            )
 
     set_dipl_item_pool('muscles_pool_1',
             'GD_Population_Bruiser.Balance.PawnBalance_Bruiser_Muscles',
             0,
             other.level_pool_0,
             level='Grass_Cliffs_P',
-            activated=hotfix_activated)
+            )
 
     set_dipl_item_prob('muscles_pool_2',
         'GD_Population_Bruiser.Balance.PawnBalance_Bruiser_Muscles',
         1,
         level='Grass_Cliffs_P',
-        activated=hotfix_activated)
+        )
 
     # Foreman Jasper (HyperionCity_P pool 0)
 
@@ -3492,14 +2996,14 @@ for (label, key, unique_pct, rare_pct) in [
             [
                 ('GD_Itempools.Runnables.Pool_Foreman', unique_pct, None),
             ],
-            activated=hotfix_activated)
+            )
 
     set_dipl_item_pool('foreman_pool_1',
             'GD_Population_Engineer.Balance.Unique.PawnBalance_Foreman',
             2,
             other.level_pool_0,
             level='HyperionCity_P',
-            activated=hotfix_activated)
+            )
 
     # Gettle (uses own pool)
 
@@ -3509,20 +3013,20 @@ for (label, key, unique_pct, rare_pct) in [
             [
                 ('GD_Weap_SniperRifles.A_Weapons_Legendary.Sniper_Vladof_5_Lyudmila', unique_pct, 'WeaponBalanceDefinition'),
             ],
-            activated=hotfix_activated)
+            )
 
     set_dipl_item_prob('gettle_pool_1',
         'GD_Population_Engineer.Balance.Unique.PawnBalance_Gettle',
         0,
         level='Interlude_P',
-        activated=hotfix_activated)
+        )
 
     set_dipl_item_prob('gettle_pool_2',
         'GD_Population_Engineer.Balance.Unique.PawnBalance_Gettle',
         2,
         level='Interlude_P',
         prob=1,
-        activated=hotfix_activated)
+        )
 
     # Mobley (Interlude_P pool 0)
 
@@ -3531,20 +3035,20 @@ for (label, key, unique_pct, rare_pct) in [
             [
                 ('GD_Itempools.Runnables.Pool_Mobley', unique_pct, None),
             ],
-            activated=hotfix_activated)
+            )
 
     set_dipl_item_pool('mobley_pool_1',
             'GD_Population_Marauder.Balance.Unique.PawnBalance_Mobley',
             3,
             other.level_pool_0,
             level='Interlude_P',
-            activated=hotfix_activated)
+            )
 
     set_dipl_item_prob('mobley_pool_2',
         'GD_Population_Marauder.Balance.Unique.PawnBalance_Mobley',
         0,
         level='Interlude_P',
-        activated=hotfix_activated)
+        )
 
     # Mick Zaford (Interlude_P pool 1)
 
@@ -3553,20 +3057,20 @@ for (label, key, unique_pct, rare_pct) in [
             [
                 ('GD_Itempools.Runnables.Pool_MickZaford', unique_pct, None),
             ],
-            activated=hotfix_activated)
+            )
 
     set_dipl_item_pool('zaford_pool_1',
             'GD_Population_Marauder.Balance.Unique.PawnBalance_MickZaford_Combat',
             3,
             other.level_pool_1,
             level='Interlude_P',
-            activated=hotfix_activated)
+            )
 
     set_dipl_item_prob('zaford_pool_2',
         'GD_Population_Marauder.Balance.Unique.PawnBalance_MickZaford_Combat',
         0,
         level='Interlude_P',
-        activated=hotfix_activated)
+        )
 
     # Jimbo & Tector Hodunk (Interlude_P pool 2)
 
@@ -3575,20 +3079,20 @@ for (label, key, unique_pct, rare_pct) in [
             [
                 ('GD_Itempools.Runnables.Pool_TectorHodunk', unique_pct, None),
             ],
-            activated=hotfix_activated)
+            )
 
     set_dipl_item_pool('hodunk_pool_1',
             'GD_Population_Marauder.Balance.Unique.PawnBalance_TectorHodunk_Combat',
             3,
             other.level_pool_2,
             level='Interlude_P',
-            activated=hotfix_activated)
+            )
 
     set_dipl_item_prob('hodunk_pool_2',
         'GD_Population_Marauder.Balance.Unique.PawnBalance_TectorHodunk_Combat',
         0,
         level='Interlude_P',
-        activated=hotfix_activated)
+        )
 
     # Jimbo Hodunk equip fix (shouldn't actually have a gun equip)
 
@@ -3596,7 +3100,7 @@ for (label, key, unique_pct, rare_pct) in [
         'GD_Population_Marauder.Balance.Unique.PawnBalance_JimboRiding',
         0,
         level='Interlude_P',
-        activated=hotfix_activated)
+        )
 
     # Deputy Winger (Grass_Lynchwood_P pool 0)
 
@@ -3605,20 +3109,20 @@ for (label, key, unique_pct, rare_pct) in [
             [
                 ('GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Roid_Order', rare_pct, 'InventoryBalanceDefinition'),
             ],
-            activated=hotfix_activated)
+            )
 
     set_dipl_item_pool('winger_pool_1',
             'GD_Population_Sheriff.Balance.PawnBalance_Deputy',
             1,
             other.level_pool_0,
             level='Grass_Lynchwood_P',
-            activated=hotfix_activated)
+            )
 
     set_bi_item_prob('winger_pool_2',
         'GD_CustomItemPools_MainGame.Assassin.PurplePale',
         0,
         level='Grass_Lynchwood_P',
-        activated=hotfix_activated)
+        )
 
     # Sheriff of Lynchwood (Grass_Lynchwood_P pool 1)
 
@@ -3627,20 +3131,20 @@ for (label, key, unique_pct, rare_pct) in [
             [
                 ('GD_Weap_Pistol.A_Weapons_Unique.Pistol_Jakobs_3_Law', rare_pct, 'WeaponBalanceDefinition'),
             ],
-            activated=hotfix_activated)
+            )
 
     set_dipl_item_pool('sheriff_pool_1',
             'GD_Population_Sheriff.Balance.PawnBalance_Sheriff',
             0,
             other.level_pool_1,
             level='Grass_Lynchwood_P',
-            activated=hotfix_activated)
+            )
 
     set_bi_item_prob('sheriff_pool_2',
         'GD_Itempools.Runnables.Pool_Sheriff',
         1,
         level='Grass_Lynchwood_P',
-        activated=hotfix_activated)
+        )
 
     # Mortar (CraterLake_P pool 0)
 
@@ -3649,20 +3153,20 @@ for (label, key, unique_pct, rare_pct) in [
             [
                 ('GD_Weap_AssaultRifle.A_Weapons_Unique.AR_Torgue_3_EvilSmasher', unique_pct, 'WeaponBalanceDefinition'),
             ],
-            activated=hotfix_activated)
+            )
 
     set_dipl_item_pool('mortar_pool_1',
             'GD_Population_Rat.Balance.Unique.PawnBalance_Mortar',
             0,
             other.level_pool_0,
             level='CraterLake_P',
-            activated=hotfix_activated)
+            )
 
     set_dipl_item_prob('mortar_pool_2',
         'GD_Population_Rat.Balance.Unique.PawnBalance_Mortar',
         3,
         level='CraterLake_P',
-        activated=hotfix_activated)
+        )
 
     # Hunter Hellquist (Fyrestone_P pool 0)
 
@@ -3671,20 +3175,20 @@ for (label, key, unique_pct, rare_pct) in [
             [
                 ('GD_Itempools.Runnables.Pool_HunterHellquist', unique_pct, None),
             ],
-            activated=hotfix_activated)
+            )
 
     set_dipl_item_pool('hunter_pool_1',
             'GD_Population_Engineer.Balance.Unique.PawnBalance_DJHyperion',
             1,
             other.level_pool_0,
             level='Fyrestone_P',
-            activated=hotfix_activated)
+            )
 
     set_dipl_item_prob('hunter_pool_2',
         'GD_Population_Engineer.Balance.Unique.PawnBalance_DJHyperion',
         2,
         level='Fyrestone_P',
-        activated=hotfix_activated)
+        )
 
     # Bone Head 2.0 (Stockade_P pool 0)
 
@@ -3694,26 +3198,26 @@ for (label, key, unique_pct, rare_pct) in [
                 ('GD_Itempools.Runnables.Pool_Bonehead2', rare_pct, None),
                 ('GD_Weap_AssaultRifle.A_Weapons_Legendary.AR_Vladof_5_Sherdifier', unique_pct, 'WeaponBalanceDefinition'),
             ],
-            activated=hotfix_activated)
+            )
 
     set_dipl_item_pool('bonehead2_pool_1',
             'GD_Population_Loader.Balance.Unique.PawnBalance_BoneHead2',
             0,
             other.level_pool_0,
             level='Stockade_P',
-            activated=hotfix_activated)
+            )
 
     set_dipl_item_prob('bonehead2_pool_2',
         'GD_Population_Loader.Balance.Unique.PawnBalance_BoneHead2',
         1,
         level='Stockade_P',
-        activated=hotfix_activated)
+        )
 
     set_dipl_item_prob('bonehead2_pool_3',
         'GD_Population_Loader.Balance.Unique.PawnBalance_BoneHead2',
         3,
         level='Stockade_P',
-        activated=hotfix_activated)
+        )
 
     # No-Beard (Orchid_OasisTown_P pool 0)
     # Different from the rest, because he already equips a version of the
@@ -3726,20 +3230,20 @@ for (label, key, unique_pct, rare_pct) in [
             [
                 ('GD_Orchid_BossWeapons.AssaultRifle.AR_Jakobs_3_Stinkpot', 1, 'WeaponBalanceDefinition'),
             ],
-            activated=hotfix_activated)
+            )
 
     set_dipl_item_pool('nobeard_pool_1',
             'GD_Orchid_Pop_NoBeard.PawnBalance_Orchid_NoBeard',
             0,
             other.level_pool_0,
             level='Orchid_OasisTown_P',
-            activated=hotfix_activated)
+            )
 
     set_dipl_item_prob('nobeard_pool_2',
         'GD_Orchid_Pop_NoBeard.PawnBalance_Orchid_NoBeard',
         1,
         level='Orchid_OasisTown_P',
-        activated=hotfix_activated)
+        )
 
     # Benny the Booster (Orchid_OasisTown_P pool 1)
 
@@ -3748,56 +3252,50 @@ for (label, key, unique_pct, rare_pct) in [
             [
                 ('GD_Orchid_BossWeapons.SMG.SMG_Dahl_3_SandHawk', rare_pct, 'WeaponBalanceDefinition'),
             ],
-            activated=hotfix_activated)
+            )
 
     set_dipl_item_pool('benny_pool_1',
             'GD_Orchid_Pop_Deserters.Deserter1.PawnBalance_Orchid_Deserter1',
             0,
             other.level_pool_1,
             level='Orchid_OasisTown_P',
-            activated=hotfix_activated)
+            )
 
     set_dipl_item_prob('benny_pool_2',
         'GD_Orchid_Pop_Deserters.Deserter1.PawnBalance_Orchid_Deserter1',
         1,
         level='Orchid_OasisTown_P',
-        activated=hotfix_activated)
+        )
 
     # Sandman / Big Sleep (Orchid_Caves_P pool 0)
-
-    hfs.add_level_hotfix('bigsleep_pool_0', 'BigSleepDrop',
-        """Orchid_Caves_P,
-        GD_Orchid_Pop_Sandman.Balance.PawnBalance_Orchid_BigSleep,
-        DefaultItemPoolList[1].PoolProbability.BaseValueConstant,,0""",
-        activated=hotfix_activated)
 
     setup_boss_pool('sandman_pool_0', 'Orchid_Caves_P', other.level_pool_0,
             badass.equip_pool_ar,
             [
                 ('GD_Orchid_BossWeapons.Launcher.RL_Torgue_3_12Pounder', rare_pct, 'WeaponBalanceDefinition'),
             ],
-            activated=hotfix_activated)
+            )
 
     set_dipl_item_pool('sandman_pool_1',
             'GD_Orchid_Pop_Sandman.Balance.PawnBalance_Orchid_Sandman',
             0,
             other.level_pool_0,
             level='Orchid_Caves_P',
-            activated=hotfix_activated)
+            )
 
     set_dipl_item_pool('sandman_pool_2',
             'GD_Orchid_Pop_Sandman.Balance.PawnBalance_Orchid_Sandman_MarauderMaster',
             0,
             other.level_pool_0,
             level='Orchid_Caves_P',
-            activated=hotfix_activated)
+            )
 
     set_dipl_item_pool('sandman_pool_3',
             'GD_Orchid_Pop_Sandman.Balance.PawnBalance_Orchid_Sandman_Solo',
             0,
             other.level_pool_0,
             level='Orchid_Caves_P',
-            activated=hotfix_activated)
+            )
 
     # DJ Tanner (Orchid_Spire_P pool 0)
 
@@ -3806,20 +3304,20 @@ for (label, key, unique_pct, rare_pct) in [
             [
                 ('GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Absorption_05_LegendaryNormal', unique_pct, 'InventoryBalanceDefinition'),
             ],
-            activated=hotfix_activated)
+            )
 
     set_dipl_item_pool('tanner_pool_1',
             'GD_Orchid_Pop_PirateRadioGuy.PawnBalance_Orchid_PirateRadioGuy',
             1,
             other.level_pool_0,
             level='Orchid_Spire_P',
-            activated=hotfix_activated)
+            )
 
     set_dipl_item_prob('tanner_pool_2',
         'GD_Orchid_Pop_PirateRadioGuy.PawnBalance_Orchid_PirateRadioGuy',
         2,
         level='Orchid_Spire_P',
-        activated=hotfix_activated)
+        )
 
     # Toothless Terry (Orchid_ShipGraveyard_P pool 0)
     # Using unique rather than rare, to make launcher pretty common still, since that's
@@ -3830,20 +3328,20 @@ for (label, key, unique_pct, rare_pct) in [
             [
                 ('GD_Orchid_BossWeapons.SniperRifles.Sniper_Maliwan_3_Pimpernel', unique_pct, 'WeaponBalanceDefinition'),
             ],
-            activated=hotfix_activated)
+            )
 
     set_dipl_item_pool('terry_pool_1',
             'GD_Orchid_Pop_Deserters.Deserter3.PawnBalance_Orchid_Deserter3',
             0,
             other.level_pool_0,
             level='Orchid_ShipGraveyard_P',
-            activated=hotfix_activated)
+            )
 
     set_dipl_item_prob('terry_pool_2',
         'GD_Orchid_Pop_Deserters.Deserter3.PawnBalance_Orchid_Deserter3',
         1,
         level='Orchid_ShipGraveyard_P',
-        activated=hotfix_activated)
+        )
 
     # Motor Momma (Iris_Hub2_P pool 0)
 
@@ -3853,32 +3351,32 @@ for (label, key, unique_pct, rare_pct) in [
                 ('GD_Iris_Weapons.AssaultRifles.AR_Vladof_3_Kitten', rare_pct, 'WeaponBalanceDefinition'),
                 ('GD_Itempools.Runnables.Pool_MadameVonBartlesby', unique_pct, None),
             ],
-            activated=hotfix_activated)
+            )
 
     set_dipl_item_pool('momma_pool_1',
             'GD_Iris_Population_MotorMama.Balance.Iris_PawnBalance_MotorMama',
             0,
             other.level_pool_0,
             level='Iris_Hub2_P',
-            activated=hotfix_activated)
+            )
 
     set_dipl_item_prob('momma_pool_2',
             'GD_Iris_Population_MotorMama.Balance.Iris_PawnBalance_MotorMama',
             3,
             level='Iris_Hub2_P',
-            activated=hotfix_activated)
+            )
 
     set_dipl_item_prob('momma_pool_3',
             'GD_Iris_Population_MotorMama.Balance.Iris_PawnBalance_MotorMama',
             4,
             level='Iris_Hub2_P',
-            activated=hotfix_activated)
+            )
 
     set_dipl_item_prob('momma_pool_4',
             'GD_Iris_Population_MotorMama.Balance.Iris_PawnBalance_MotorMama',
             5,
             level='Iris_Hub2_P',
-            activated=hotfix_activated)
+            )
 
     # P3RV-E (Orchid_Refinery_P pool 0)
 
@@ -3887,20 +3385,20 @@ for (label, key, unique_pct, rare_pct) in [
             [
                 ('GD_Weap_SMG.A_Weapons_Unique.SMG_Maliwan_3_BadTouch', rare_pct, 'WeaponBalanceDefinition'),
             ],
-            activated=hotfix_activated)
+            )
 
     set_dipl_item_pool('pervy_pool_1',
             'GD_Orchid_Pop_Pervbot.PawnBalance_Orchid_Pervbot',
             0,
             other.level_pool_0,
             level='Orchid_Refinery_P',
-            activated=hotfix_activated)
+            )
 
     set_dipl_item_prob('pervy_pool_2',
         'GD_Orchid_Pop_Pervbot.PawnBalance_Orchid_Pervbot',
         2,
         level='Orchid_Refinery_P',
-        activated=hotfix_activated)
+        )
 
     # Percent value to use for all Tribute drops in the Wattle Gobbler DLC.  There
     # are so many at once that we don't really want to use our full drop percentage,
@@ -3914,21 +3412,21 @@ for (label, key, unique_pct, rare_pct) in [
             [
                 ('GD_Weap_SniperRifles.A_Weapons_Legendary.Sniper_Hyperion_5_Invader', tribute_pct, 'WeaponBalanceDefinition'),
             ],
-            activated=hotfix_activated)
+            )
 
     set_pt_cipl_item_pool('axel_pool_1',
             'GD_EngineerMale.Balance.PawnBalance_EngineerMale',
             0, 0,
             other.level_pool_0,
             level='Hunger_P',
-            activated=hotfix_activated)
+            )
 
     set_pt_cipl_item_pool('axel_pool_2',
             'GD_EngineerMale.Balance.PawnBalance_EngineerMale',
             1, 0,
             other.level_pool_0,
             level='Hunger_P',
-            activated=hotfix_activated)
+            )
 
     # Axel, Tribute of Opportunity shield (Hunger_P pool 1)
 
@@ -3937,21 +3435,21 @@ for (label, key, unique_pct, rare_pct) in [
             [
                 ('GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Absorption_1340', tribute_pct, 'InventoryBalanceDefinition'),
             ],
-            activated=hotfix_activated)
+            )
 
     set_pt_cipl_item_pool('axel_pool_4',
             'GD_EngineerMale.Balance.PawnBalance_EngineerMale',
             0, 1,
             other.level_pool_1,
             level='Hunger_P',
-            activated=hotfix_activated)
+            )
 
     set_pt_cipl_item_pool('axel_pool_5',
             'GD_EngineerMale.Balance.PawnBalance_EngineerMale',
             1, 1,
             other.level_pool_1,
             level='Hunger_P',
-            activated=hotfix_activated)
+            )
 
     # Rose, Tribute of Opportunity weapons (UCP pool)
 
@@ -3961,21 +3459,21 @@ for (label, key, unique_pct, rare_pct) in [
                 ('GD_Weap_SMG.A_Weapons_Legendary.SMG_Hyperion_5_Bitch', tribute_pct, 'WeaponBalanceDefinition'),
                 ('GD_Weap_Shotgun.A_Weapons_Unique.SG_Hyperion_3_Shotgun1340', tribute_pct, 'WeaponBalanceDefinition'),
             ],
-            activated=hotfix_activated)
+            )
 
     set_pt_cipl_item_pool('rose_pool_1',
             'GD_EngineeFemale.Balance.PawnBalance_EngineerFemale',
             0, 0,
             'GD_CustomItemPools_MainGame.Assassin.GreenNinja',
             level='Hunger_P',
-            activated=hotfix_activated)
+            )
 
     set_pt_cipl_item_pool('rose_pool_2',
             'GD_EngineeFemale.Balance.PawnBalance_EngineerFemale',
             1, 0,
             'GD_CustomItemPools_MainGame.Assassin.GreenNinja',
             level='Hunger_P',
-            activated=hotfix_activated)
+            )
 
     # Rose, Tribute of Opportunity shield (Hunger_P pool 2)
 
@@ -3984,39 +3482,39 @@ for (label, key, unique_pct, rare_pct) in [
             [
                 ('GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Nova_Singularity', tribute_pct, 'InventoryBalanceDefinition'),
             ],
-            activated=hotfix_activated)
+            )
 
     set_pt_cipl_item_pool('rose_pool_4',
             'GD_EngineeFemale.Balance.PawnBalance_EngineerFemale',
             0, 1,
             other.level_pool_2,
             level='Hunger_P',
-            activated=hotfix_activated)
+            )
 
     set_pt_cipl_item_pool('rose_pool_5',
             'GD_EngineeFemale.Balance.PawnBalance_EngineerFemale',
             1, 1,
             other.level_pool_2,
             level='Hunger_P',
-            activated=hotfix_activated)
+            )
 
     set_dipl_item_prob('rose_pool_6',
             'GD_EngineeFemale.Balance.PawnBalance_EngineerFemale',
             0,
             level='Hunger_P',
-            activated=hotfix_activated)
+            )
 
     set_pt_cipl_item_prob('rose_pool_7',
             'GD_EngineeFemale.Balance.PawnBalance_EngineerFemale',
             0, 2,
             level='Hunger_P',
-            activated=hotfix_activated)
+            )
 
     set_pt_cipl_item_prob('rose_pool_8',
             'GD_EngineeFemale.Balance.PawnBalance_EngineerFemale',
             1, 2,
             level='Hunger_P',
-            activated=hotfix_activated)
+            )
 
     # Cynder, Tribute of Frostburn shield (Hunger_P pool 3)
 
@@ -4025,14 +3523,14 @@ for (label, key, unique_pct, rare_pct) in [
             [
                 ('GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Nova_Phoenix', tribute_pct, 'InventoryBalanceDefinition'),
             ],
-            activated=hotfix_activated)
+            )
 
     set_pt_cipl_item_pool('cynder_pool_1',
             'GD_IncineratorFemale.Balance.PawnBalance_IncineratorFemale',
             1, 0,
             other.level_pool_3,
             level='Hunger_P',
-            activated=hotfix_activated)
+            )
 
     # Fuse, Tribute of Frostburn shield (Hunger_P pool 4)
 
@@ -4041,14 +3539,14 @@ for (label, key, unique_pct, rare_pct) in [
             [
                 ('GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Chimera_05_Legendary', tribute_pct, 'InventoryBalanceDefinition'),
             ],
-            activated=hotfix_activated)
+            )
 
     set_pt_cipl_item_pool('fuse_pool_1',
             'GD_IncineratorMale.Balance.PawnBalance_IncineratorMale',
             1, 0,
             other.level_pool_4,
             level='Hunger_P',
-            activated=hotfix_activated)
+            )
 
     # Annie, Tribute of Lynchwood weapon (Hunger_P pool 5)
 
@@ -4057,21 +3555,21 @@ for (label, key, unique_pct, rare_pct) in [
             [
                 ('GD_Weap_Pistol.A_Weapons_Unique.Pistol_Jakobs_3_Law', tribute_pct, 'WeaponBalanceDefinition'),
             ],
-            activated=hotfix_activated)
+            )
 
     set_pt_cipl_item_pool('annie_pool_1',
             'GD_Lynchwood_Female.Balance.PawnBalance_Lynchwood_Female',
             0, 0,
             other.level_pool_5,
             level='Hunger_P',
-            activated=hotfix_activated)
+            )
 
     set_pt_cipl_item_pool('annie_pool_2',
             'GD_Lynchwood_Female.Balance.PawnBalance_Lynchwood_Female',
             1, 0,
             other.level_pool_5,
             level='Hunger_P',
-            activated=hotfix_activated)
+            )
 
     # Garret, Tribute of Lynchwood shield (Hunger_P pool 6)
 
@@ -4080,14 +3578,14 @@ for (label, key, unique_pct, rare_pct) in [
             [
                 ('GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Roid_Order', tribute_pct, 'InventoryBalanceDefinition'),
             ],
-            activated=hotfix_activated)
+            )
 
     set_pt_cipl_item_pool('garret_pool_1',
             'GD_Lynchwood_Male.Balance.PawnBalance_Lynchwood_Male',
             1, 1,
             other.level_pool_6,
             level='Hunger_P',
-            activated=hotfix_activated)
+            )
 
     # Fiona, Tribute of Sanctuary weapon (UCP pool)
 
@@ -4096,26 +3594,26 @@ for (label, key, unique_pct, rare_pct) in [
             [
                 ('GD_Weap_AssaultRifle.A_Weapons_Unique.AR_Dahl_3_Scorpio', tribute_pct, 'WeaponBalanceDefinition'),
             ],
-            activated=hotfix_activated)
+            )
 
     set_pt_cipl_item_pool('fiona_pool_1',
             'GD_RaiderFemale.Balance.PawnBalance_RaiderFemale',
             0, 0,
             'GD_CustomItemPools_MainGame.Assassin.CyanNinja',
             level='Hunger_P',
-            activated=hotfix_activated)
+            )
 
     set_dipl_item_prob('fiona_pool_2',
             'GD_RaiderFemale.Balance.PawnBalance_RaiderFemale',
             0,
             level='Hunger_P',
-            activated=hotfix_activated)
+            )
 
     set_pt_cipl_item_prob('fiona_pool_3',
             'GD_RaiderFemale.Balance.PawnBalance_RaiderFemale',
             0, 2,
             level='Hunger_P',
-            activated=hotfix_activated)
+            )
 
     # Moretus, Tribute of Sawtooth Cauldron weapon (UCP pool)
 
@@ -4124,39 +3622,39 @@ for (label, key, unique_pct, rare_pct) in [
             [
                 ('GD_Weap_AssaultRifle.A_Weapons_Unique.AR_Torgue_3_EvilSmasher', tribute_pct, 'WeaponBalanceDefinition'),
             ],
-            activated=hotfix_activated)
+            )
 
     set_pt_cipl_item_pool('moretus_pool_1',
             'GD_CraterMale.Balance.PawnBalance_CraterMale',
             0, 0,
             'GD_CustomItemPools_MainGame.Assassin.GreenBold',
             level='Hunger_P',
-            activated=hotfix_activated)
+            )
 
     set_pt_cipl_item_pool('moretus_pool_2',
             'GD_CraterMale.Balance.PawnBalance_CraterMale',
             1, 0,
             'GD_CustomItemPools_MainGame.Assassin.GreenBold',
             level='Hunger_P',
-            activated=hotfix_activated)
+            )
 
     set_dipl_item_prob('moretus_pool_3',
             'GD_CraterMale.Balance.PawnBalance_CraterMale',
             0,
             level='Hunger_P',
-            activated=hotfix_activated)
+            )
 
     set_pt_cipl_item_prob('moretus_pool_4',
             'GD_CraterMale.Balance.PawnBalance_CraterMale',
             0, 1,
             level='Hunger_P',
-            activated=hotfix_activated)
+            )
 
     set_pt_cipl_item_prob('moretus_pool_5',
             'GD_CraterMale.Balance.PawnBalance_CraterMale',
             1, 2,
             level='Hunger_P',
-            activated=hotfix_activated)
+            )
 
     # Sparky Flynt (Easter_P pool 0)
 
@@ -4166,64 +3664,58 @@ for (label, key, unique_pct, rare_pct) in [
                 ('GD_Weap_Pistol.A_Weapons_Legendary.Pistol_Maliwan_5_ThunderballFists', 1, 'WeaponBalanceDefinition'),
                 ('GD_Weap_Pistol.A_Weapons_Unique.Pistol_Bandit_3_Tenderbox', 1, 'WeaponBalanceDefinition'),
             ],
-            activated=hotfix_activated)
+            )
 
     set_dipl_item_pool('sparky_pool_1',
             'GD_FlyntSon.Population.PawnBalance_FlyntSon',
             0,
             other.level_pool_0,
             level='Easter_P',
-            activated=hotfix_activated)
+            )
 
     set_dipl_item_prob('sparky_pool_2',
             'GD_FlyntSon.Population.PawnBalance_FlyntSon',
             1,
             level='Easter_P',
-            activated=hotfix_activated)
+            )
 
     set_dipl_item_prob('sparky_pool_3',
             'GD_FlyntSon.Population.PawnBalance_FlyntSon',
             2,
             level='Easter_P',
-            activated=hotfix_activated)
+            )
 
     set_dipl_item_pool('sparky_pool_4',
             'GD_FlyntSon.Population.PawnBalance_FlyntSon_Run',
             0,
             other.level_pool_0,
             level='Easter_P',
-            activated=hotfix_activated)
+            )
 
     set_dipl_item_prob('sparky_pool_5',
             'GD_FlyntSon.Population.PawnBalance_FlyntSon_Run',
             1,
             level='Easter_P',
-            activated=hotfix_activated)
+            )
 
     set_dipl_item_prob('sparky_pool_6',
             'GD_FlyntSon.Population.PawnBalance_FlyntSon_Run',
             2,
             level='Easter_P',
-            activated=hotfix_activated)
+            )
 
     # Generate the section string
     with open('input-file-bosses.txt', 'r') as df:
         boss_drops[key] = df.read().format(
                 boss_label='{} ({}% Uniques, {}% Rares)'.format(
                     label, round(unique_pct*100), round(rare_pct*100)),
-                line_prefix=line_prefix,
-                line_suffix=line_suffix,
-                hotfixes=hfs,
+                mp=mp,
                 regular=regular,
                 badass=badass,
                 other=other,
                 unique_pct=unique_pct,
                 rare_pct=rare_pct,
                 )
-
-    line_prefix = '#'
-    line_suffix = '<off>'
-    hotfix_activated = False
 
 ###
 ### Generate the mod string
@@ -4233,7 +3725,7 @@ with open('input-file-mod.txt') as df:
     mod_str = df.read().format(
         mod_name=mod_name,
         mod_version=mod_version,
-        hotfixes=orig_hfs,
+        mp=mp,
         regular=regular,
         badass=badass,
         other=other,
@@ -4253,6 +3745,9 @@ with open('input-file-mod.txt') as df:
 ### Output to a file.
 ###
 
-with open(output_filename, 'w') as df:
-    df.write(mod_str)
+# just temp so I can take a look at this for now
+with open('{}-tempsource'.format(output_filename), 'w') as odf:
+    odf.write(mod_str)
+
+mp.human_str_to_blcm_filename(mod_str, output_filename)
 print('Wrote mod file to: {}'.format(output_filename))
