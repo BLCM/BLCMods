@@ -1643,6 +1643,40 @@
 
         #<Add Uniques to Legendary Weapon + Shield Pools>
 
+            #<Remove Uniques from Global Pools>
+
+                # TPS includes four Unique weapons in with the global world blue/rare
+                # drops, since they don't otherwise have specific drops.  This happens
+                # for the Boomacorn, Ol'Painful, Jack-O-Cannon, and The Machine.  Since
+                # we're adding these to our Legendary pool, and we're increasing blue/rare
+                # drops anyway, let's take these out of the global pools.
+
+                #<Remove Ol'Painful>
+
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocRemoveOlPainful0"</key><value>",GD_Itempools.WeaponPools.Pool_Weapons_AssaultRifles_04_Rare,BalancedItems[5].Probability,,(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0)"</value><on>
+
+                #</Remove Ol'Painful>
+
+                #<Remove Boomacorn>
+
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocRemoveBoomacorn0"</key><value>",GD_Itempools.WeaponPools.Pool_Weapons_Shotguns_04_Rare,BalancedItems[6].Probability,,(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0)"</value><on>
+
+                #</Remove Boomacorn>
+
+                #<Remove Jack-O-Cannon>
+
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocRemoveJackOCannon0"</key><value>",GD_Itempools.WeaponPools.Pool_Weapons_Shotguns_04_Rare,BalancedItems[7].Probability,,(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0)"</value><on>
+
+                #</Remove Jack-O-Cannon>
+
+                #<Remove The Machine>
+
+                    #<hotfix><key>"SparkLevelPatchEntry-ApocRemoveTheMachine0"</key><value>",GD_Itempools.WeaponPools.Pool_Weapons_SniperRifles_04_Rare,BalancedItems[6].Probability,,(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0)"</value><on>
+
+                #</Remove The Machine>
+
+            #</Remove Uniques from Global Pools>
+
             #<hotfix><key>"SparkLevelPatchEntry-ApocWeaponUniqueAddAssaultRifles0"</key><value>",GD_Itempools.WeaponPools.Pool_Weapons_AssaultRifles_06_Legendary,BalancedItems[5],,(ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'gd_cork_weap_assaultrifle.A_Weapons_Unique.AR_Jakobs_3_Wallop',Probability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True)"</value><on>
 
             #<hotfix><key>"SparkLevelPatchEntry-ApocWeaponUniqueAddAssaultRifles1"</key><value>",GD_Itempools.WeaponPools.Pool_Weapons_AssaultRifles_06_Legendary,BalancedItems[6],,(ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'gd_cork_weap_assaultrifle.A_Weapons_Unique.AR_Vladof_3_Hail',Probability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True)"</value><on>

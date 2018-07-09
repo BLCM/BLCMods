@@ -2531,6 +2531,54 @@ hfs.add_level_hotfix('dahl_sniper_unique', 'DahlSniperPool',
         ',{},BalancedItems[12].Probability.BaseValueScaleConstant,,1'.format(
             'GD_DahlSniper.WeaponPools.Pool_Weapons_HypSniper_EnemyUse_NoScheduling'))
 
+# Remove Ol'Painful
+hfs.add_level_hotfix('remove_olpainful', 'RemoveOlPainful',
+        """,
+        GD_Itempools.WeaponPools.Pool_Weapons_AssaultRifles_04_Rare,
+        BalancedItems[5].Probability,,
+        (
+            BaseValueConstant=0,
+            BaseValueAttribute=None, 
+            InitializationDefinition=None,
+            BaseValueScaleConstant=0
+        )""")
+
+# Remove Boomacorn
+hfs.add_level_hotfix('remove_boomacorn', 'RemoveBoomacorn',
+        """,
+        GD_Itempools.WeaponPools.Pool_Weapons_Shotguns_04_Rare,
+        BalancedItems[6].Probability,,
+        (
+            BaseValueConstant=0,
+            BaseValueAttribute=None, 
+            InitializationDefinition=None,
+            BaseValueScaleConstant=0
+        )""")
+
+# Remove Jack-O-Cannon
+hfs.add_level_hotfix('remove_jackocannon', 'RemoveJackOCannon',
+        """,
+        GD_Itempools.WeaponPools.Pool_Weapons_Shotguns_04_Rare,
+        BalancedItems[7].Probability,,
+        (
+            BaseValueConstant=0,
+            BaseValueAttribute=None, 
+            InitializationDefinition=None,
+            BaseValueScaleConstant=0
+        )""")
+
+# Remove The Machine
+hfs.add_level_hotfix('remove_themachine', 'RemoveTheMachine',
+        """,
+        GD_Itempools.WeaponPools.Pool_Weapons_SniperRifles_04_Rare,
+        BalancedItems[6].Probability,,
+        (
+            BaseValueConstant=0,
+            BaseValueAttribute=None, 
+            InitializationDefinition=None,
+            BaseValueScaleConstant=0
+        )""")
+
 # No extra shields (dummy statement)
 hfs.add_level_hotfix('moreshields_dummy', 'MoreShields',
         'MoreShieldsDummy_P,GD_MoreShieldsDummy,DummyAttribute,1,1',
