@@ -283,5 +283,8 @@ for the full text.
 Changelog
 =========
 
-**v1.0.0**, July 9, 2018:
+**v1.0.1**, unreleased:
+ * Nothing, yet.
+
+**v1.0.0**, July 9, 2018 (commit `502a6d1e2a96a76750299b930e267074e6dc260e`):
  * Initial public release
