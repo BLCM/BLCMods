@@ -92,17 +92,17 @@ class OtherConfig(BaseConfig):
     # These will be all set via Hotfix, and re-used by enemies in different
     # levels.  That way, we only need as many pools as we have loot-dropping
     # bosses in a single level.
-    level_pool_0 = 'GD_CustomItemPools_allium.Mercenary.AlliumXmasSkins'
-    level_pool_1 = 'GD_CustomItemPools_allium.Psycho.AlliumXmasSkins'
-    level_pool_2 = 'GD_CustomItemPools_allium.Siren.AlliumXmasSkins'
+    level_pool_0 = 'GD_CustomItemPools_Aster.Assassin.AsterSkin'
+    level_pool_1 = 'GD_CustomItemPools_Aster.Mechro.AsterSkin'
+    level_pool_2 = 'GD_CustomItemPools_Aster.Mercenary.AsterSkin'
 
     # These four are *only* "required" due to the absurd amount of unique
     # drops added in by UCP to the Tributes in the Wattle Gobbler Headhunter
     # Pack.  Yay?
-    level_pool_3 = 'GD_CustomItemPools_allium.Soldier.AlliumXmasSkins'
-    level_pool_4 = 'GD_CustomItemPools_allium.Mercenary.AlliumXmasHeads'
-    level_pool_5 = 'GD_CustomItemPools_allium.Psycho.AlliumXmasHeads'
-    level_pool_6 = 'GD_CustomItemPools_allium.Siren.AlliumXmasHeads'
+    level_pool_3 = 'GD_CustomItemPools_Aster.Assassin.AsterHead'
+    level_pool_4 = 'GD_CustomItemPools_Aster.Mechro.AsterHead'
+    level_pool_5 = 'GD_CustomItemPools_Aster.Mercenary.AsterHead'
+    level_pool_6 = 'GD_CustomItemPools_Aster.Psycho.AsterHead'
 
 class DropConfig(BaseConfig):
     """
@@ -323,26 +323,26 @@ class Regular(DropConfig):
         }
 
     # Rarity weight pools
-    rarity_pool_ar = 'GD_CustomItemPools_MainGame.Soldier.TorgueUncommon'
-    rarity_pool_launchers = 'GD_CustomItemPools_Lilac.Psycho.TorgueUncommon'
-    rarity_pool_pistols = 'GD_CustomItemPools_MainGame.Mercenary.TorgueUncommon'
-    rarity_pool_shotguns = 'GD_CustomItemPools_tulip.Mechro.TorgueUncommon'
-    rarity_pool_smg = 'GD_CustomItemPools_MainGame.Siren.TorgueUncommon'
-    rarity_pool_snipers = 'GD_CustomItemPools_MainGame.Assassin.TorgueUncommon'
+    rarity_pool_ar = 'GD_CustomItemPools_Aster.Siren.AsterHead'
+    rarity_pool_launchers = 'GD_CustomItemPools_Aster.Soldier.AsterHead'
+    rarity_pool_pistols = 'GD_CustomItemPools_tulip.Mechro.White'
+    rarity_pool_shotguns = 'GD_CustomItemPools_Lilac.Psycho.MinecraftSkins'
+    rarity_pool_smg = 'GD_CustomItemPools_MainGame.Assassin.MinecraftSkins'
+    rarity_pool_snipers = 'GD_CustomItemPools_MainGame.Mercenary.MinecraftSkins'
 
     # Equip pools (this is where gun type weights are applied)
-    equip_pool_all = 'GD_CustomItemPools_allium.Mechro.AlliumXmasSkins'
-    equip_pool_ar = 'GD_CustomItemPools_MainGame.Soldier.VladofUncommon'
-    equip_pool_launchers = 'GD_CustomItemPools_Lilac.Psycho.VladofUncommon'
-    equip_pool_pistols = 'GD_CustomItemPools_MainGame.Mercenary.VladofUncommon'
-    equip_pool_shotguns = 'GD_CustomItemPools_tulip.Mechro.VladofUncommon'
-    equip_pool_smg = 'GD_CustomItemPools_MainGame.Siren.VladofUncommon'
-    equip_pool_snipers = 'GD_CustomItemPools_MainGame.Assassin.VladofUncommon'
-    equip_pool_only_shotguns = 'GD_CustomItemPools_allium.Assassin.AlliumXmasSkins'
+    equip_pool_all = 'GD_CustomItemPools_MainGame.Siren.MinecraftSkins'
+    equip_pool_ar = 'GD_CustomItemPools_MainGame.Soldier.MinecraftSkins'
+    equip_pool_launchers = 'GD_CustomItemPools_tulip.Mechro.MinecraftSkins'
+    equip_pool_pistols = 'GD_CustomItemPools_Lilac.Psycho.PurpleDark'
+    equip_pool_shotguns = 'GD_CustomItemPools_MainGame.Assassin.PurpleDark'
+    equip_pool_smg = 'GD_CustomItemPools_MainGame.Mercenary.PurpleDark'
+    equip_pool_snipers = 'GD_CustomItemPools_MainGame.Siren.PurpleDark'
+    equip_pool_only_shotguns = 'GD_CustomItemPools_MainGame.Soldier.PurpleDark'
 
     # Shield pool
-    pool_shields = 'GD_CustomItemPools_allium.Mechro.AlliumTGSkins'
-    stalker_shields = 'GD_CustomItemPools_allium.Soldier.AlliumXmasHeads'
+    pool_shields = 'GD_CustomItemPools_tulip.Mechro.PurpleDark'
+    stalker_shields = 'GD_CustomItemPools_Lilac.Psycho.RedNinja'
 
     ###
     ### Enemy changes
@@ -1034,26 +1034,26 @@ class Badass(DropConfig):
         }
 
     # Rarity weight pools
-    rarity_pool_ar = 'GD_CustomItemPools_MainGame.Soldier.TorgueEpic'
-    rarity_pool_launchers = 'GD_CustomItemPools_Lilac.Psycho.TorgueEpic'
-    rarity_pool_pistols = 'GD_CustomItemPools_MainGame.Mercenary.TorgueEpic'
-    rarity_pool_shotguns = 'GD_CustomItemPools_tulip.Mechro.TorgueEpic'
-    rarity_pool_smg = 'GD_CustomItemPools_MainGame.Siren.TorgueEpic'
-    rarity_pool_snipers = 'GD_CustomItemPools_MainGame.Assassin.TorgueEpic'
+    rarity_pool_ar = 'GD_CustomItemPools_MainGame.Assassin.RedNinja'
+    rarity_pool_launchers = 'GD_CustomItemPools_MainGame.Mercenary.RedNinja'
+    rarity_pool_pistols = 'GD_CustomItemPools_MainGame.Siren.RedNinja'
+    rarity_pool_shotguns = 'GD_CustomItemPools_MainGame.Soldier.RedNinja'
+    rarity_pool_smg = 'GD_CustomItemPools_tulip.Mechro.RedNinja'
+    rarity_pool_snipers = 'GD_CustomItemPools_Lilac.Psycho.RedPattern'
 
     # Equip pools (this is where gun type weights are applied)
-    equip_pool_all = 'GD_CustomItemPools_allium.Mechro.AlliumXmasHeads'
-    equip_pool_ar = 'GD_CustomItemPools_MainGame.Soldier.VladofEpic'
-    equip_pool_launchers = 'GD_CustomItemPools_Lilac.Psycho.VladofEpic'
-    equip_pool_pistols = 'GD_CustomItemPools_MainGame.Mercenary.VladofEpic'
-    equip_pool_shotguns = 'GD_CustomItemPools_tulip.Mechro.VladofEpic'
-    equip_pool_smg = 'GD_CustomItemPools_MainGame.Siren.VladofEpic'
-    equip_pool_snipers = 'GD_CustomItemPools_MainGame.Assassin.VladofEpic'
-    equip_pool_only_shotguns = 'GD_CustomItemPools_allium.Assassin.AlliumXmasHeads'
+    equip_pool_all = 'GD_CustomItemPools_MainGame.Assassin.RedPattern'
+    equip_pool_ar = 'GD_CustomItemPools_MainGame.Mercenary.RedPattern'
+    equip_pool_launchers = 'GD_CustomItemPools_MainGame.Siren.RedPattern'
+    equip_pool_pistols = 'GD_CustomItemPools_MainGame.Soldier.RedPattern'
+    equip_pool_shotguns = 'GD_CustomItemPools_tulip.Mechro.RedPattern'
+    equip_pool_smg = 'GD_CustomItemPools_Lilac.Psycho.White'
+    equip_pool_snipers = 'GD_CustomItemPools_MainGame.Assassin.White'
+    equip_pool_only_shotguns = 'GD_CustomItemPools_MainGame.Mercenary.White'
 
     # Shield pool
-    pool_shields = 'GD_CustomItemPools_allium.Mercenary.AlliumTGSkins'
-    stalker_shields = 'GD_CustomItemPools_allium.Psycho.AlliumTGSkins'
+    pool_shields = 'GD_CustomItemPools_MainGame.Siren.White'
+    stalker_shields = 'GD_CustomItemPools_MainGame.Soldier.White'
 
     ###
     ### Enemy changes
@@ -3119,7 +3119,7 @@ for (label, key, unique_pct, rare_pct) in [
             )
 
     set_bi_item_prob('winger_pool_2',
-        'GD_CustomItemPools_MainGame.Assassin.PurplePale',
+        'GD_CustomItemPools_MainGame.Mercenary.Borderlands1Skin',
         0,
         level='Grass_Lynchwood_P',
         )
@@ -3453,7 +3453,7 @@ for (label, key, unique_pct, rare_pct) in [
 
     # Rose, Tribute of Opportunity weapons (UCP pool)
 
-    setup_boss_pool('rose_pool_0', 'Hunger_P', 'GD_CustomItemPools_MainGame.Assassin.GreenNinja',
+    setup_boss_pool('rose_pool_0', 'Hunger_P', 'GD_CustomItemPools_MainGame.Siren.Borderlands1Head',
             'GD_ItempoolsEnemyUse.Turrets.MedicalMystery_AlienGun',
             [
                 ('GD_Weap_SMG.A_Weapons_Legendary.SMG_Hyperion_5_Bitch', tribute_pct, 'WeaponBalanceDefinition'),
@@ -3464,14 +3464,14 @@ for (label, key, unique_pct, rare_pct) in [
     set_pt_cipl_item_pool('rose_pool_1',
             'GD_EngineeFemale.Balance.PawnBalance_EngineerFemale',
             0, 0,
-            'GD_CustomItemPools_MainGame.Assassin.GreenNinja',
+            'GD_CustomItemPools_MainGame.Siren.Borderlands1Head',
             level='Hunger_P',
             )
 
     set_pt_cipl_item_pool('rose_pool_2',
             'GD_EngineeFemale.Balance.PawnBalance_EngineerFemale',
             1, 0,
-            'GD_CustomItemPools_MainGame.Assassin.GreenNinja',
+            'GD_CustomItemPools_MainGame.Siren.Borderlands1Head',
             level='Hunger_P',
             )
 
@@ -3588,8 +3588,9 @@ for (label, key, unique_pct, rare_pct) in [
             )
 
     # Fiona, Tribute of Sanctuary weapon (UCP pool)
+    # SKINPOOL ALERT - this'll break reward for Statuesque
 
-    setup_boss_pool('fiona_pool_0', 'Hunger_P', 'GD_CustomItemPools_MainGame.Assassin.CyanNinja',
+    setup_boss_pool('fiona_pool_0', 'Hunger_P', 'GD_CustomItemPools_MainGame.Siren.Head7',
             badass.equip_pool_ar,
             [
                 ('GD_Weap_AssaultRifle.A_Weapons_Unique.AR_Dahl_3_Scorpio', tribute_pct, 'WeaponBalanceDefinition'),
@@ -3599,7 +3600,7 @@ for (label, key, unique_pct, rare_pct) in [
     set_pt_cipl_item_pool('fiona_pool_1',
             'GD_RaiderFemale.Balance.PawnBalance_RaiderFemale',
             0, 0,
-            'GD_CustomItemPools_MainGame.Assassin.CyanNinja',
+            'GD_CustomItemPools_MainGame.Siren.Head7',
             level='Hunger_P',
             )
 
@@ -3616,8 +3617,9 @@ for (label, key, unique_pct, rare_pct) in [
             )
 
     # Moretus, Tribute of Sawtooth Cauldron weapon (UCP pool)
+    # SKINPOOL ALERT - Will break reward for To Grandmother's House We Go
 
-    setup_boss_pool('moretus_pool_0', 'Hunger_P', 'GD_CustomItemPools_MainGame.Assassin.GreenBold',
+    setup_boss_pool('moretus_pool_0', 'Hunger_P', 'GD_CustomItemPools_MainGame.Assassin.PurpleNinja',
             badass.equip_pool_ar,
             [
                 ('GD_Weap_AssaultRifle.A_Weapons_Unique.AR_Torgue_3_EvilSmasher', tribute_pct, 'WeaponBalanceDefinition'),
@@ -3627,14 +3629,14 @@ for (label, key, unique_pct, rare_pct) in [
     set_pt_cipl_item_pool('moretus_pool_1',
             'GD_CraterMale.Balance.PawnBalance_CraterMale',
             0, 0,
-            'GD_CustomItemPools_MainGame.Assassin.GreenBold',
+            'GD_CustomItemPools_MainGame.Assassin.PurpleNinja',
             level='Hunger_P',
             )
 
     set_pt_cipl_item_pool('moretus_pool_2',
             'GD_CraterMale.Balance.PawnBalance_CraterMale',
             1, 0,
-            'GD_CustomItemPools_MainGame.Assassin.GreenBold',
+            'GD_CustomItemPools_MainGame.Assassin.PurpleNinja',
             level='Hunger_P',
             )
 

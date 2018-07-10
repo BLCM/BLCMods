@@ -259,7 +259,8 @@ Changelog
 =========
 
 **v1.1.0** - Unreleased
- * Converted to BLCM format
+ * Converted to BLCM format *(we now require BLCMM - FilterTool is not supported)*
+ * Updated for UCP 4.1 Compatibility *(various loot pool reassignments)*
 
 **v1.0.0** - June 2, 2018 (commit `e69036bad26493073be7bd82207266aac77d2577`)
  * Initial Release
