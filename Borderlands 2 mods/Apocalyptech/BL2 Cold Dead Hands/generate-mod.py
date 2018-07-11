@@ -263,7 +263,11 @@ class DropConfig(BaseConfig):
         elif chance > 1:
             return round(chance)
         else:
-            return round(chance, 2)
+            retval = round(chance, 2)
+            if (str(retval) == '1.0'):
+                return 1
+            else:
+                return retval
 
 
     def set_rarity_weights(self, rarity_key):
