@@ -187,6 +187,9 @@ theNocturni's "Enemy Enhancer" is one obvious conflict, though the
 non-loot-pool parts of Enemy Enhancer would still be active (such as
 faster enemy animations, etc).
 
+**Note:** Cold Dead Hands is incompatible with BL2 Reborn, and using the
+two together has been known to cause crashes.
+
 This mod overwrites/disables much of the functionality in my own "Better
 Loot" mod, but it's designed to work fine with both enabled (so long as
 this mod appears later in your patch file).  The "Better Loot" improvements
