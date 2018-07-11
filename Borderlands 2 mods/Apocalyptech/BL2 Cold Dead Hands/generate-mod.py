@@ -3712,6 +3712,35 @@ for (label, key, unique_pct, rare_pct) in [
             level='Easter_P',
             )
 
+    # Bone Head 3.0 (TestingZone_P pool 0)
+
+    setup_boss_pool('bonehead3_pool_0', 'TestingZone_P', other.level_pool_0,
+            badass.equip_pool_ar,
+            [
+                ('GD_Itempools.Runnables.Pool_Bonehead2', rare_pct, None),
+                ('GD_Weap_AssaultRifle.A_Weapons_Legendary.AR_Vladof_5_Sherdifier', unique_pct, 'WeaponBalanceDefinition'),
+            ],
+            )
+
+    set_dipl_item_pool('bonehead3_pool_1',
+            'GD_BoneHead_v3.Population.PawnBalance_BoneHead_V3',
+            0,
+            other.level_pool_0,
+            level='TestingZone_P',
+            )
+
+    set_dipl_item_prob('bonehead3_pool_2',
+        'GD_BoneHead_v3.Population.PawnBalance_BoneHead_V3',
+        1,
+        level='TestingZone_P',
+        )
+
+    set_dipl_item_prob('bonehead3_pool_3',
+        'GD_BoneHead_v3.Population.PawnBalance_BoneHead_V3',
+        3,
+        level='TestingZone_P',
+        )
+
     # Generate the section string
     with open('input-file-bosses.txt', 'r') as df:
         boss_drops[key] = df.read().format(
