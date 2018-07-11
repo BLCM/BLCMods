@@ -325,7 +325,11 @@ class DropConfig(BaseConfig):
         elif chance > 1:
             return '{:4d}'.format(round(chance))
         else:
-            return '{:4.2f}'.format(round(chance, 2))
+            retval = '{:4.2f}'.format(round(chance, 2))
+            if retval == ' 1.0' or retval == '1.00':
+                return '   1'
+            else:
+                return retval
 
 
     def set_rarity_weights(self, rarity_key):
