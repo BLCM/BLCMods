@@ -1,12 +1,23 @@
 Configurable Catch-A-Ride
 =========================
 
-This directory houses the code used to generate a "Configurable
-Catch-A-Ride" mod, which is basically an extension of FromDarkHell's
-CarReplacements/More Vehicles mod.
+This mod is a souped-up version of FromDarkHell's "CarReplacements" mod,
+which changed some of the Catch-A-Ride locations so that you can spawn
+various types of vehicles throughout all the game's content.  That version
+just had a few hardcoded replacements, though.  This one lets you fully
+customize every single Catch-A-Ride slot in the game!
 
-The mod itself lives in FromDarkHell's directory, so head over there
-to get it!
+Usage
+=====
+
+This mod must be imported into BLCMM, via `File -> Import single mod`.
+Choose the file `Configurable Catch-A-Ride.blcm` and have at it!
+
+![Selections](screenshot.png)
+
+Each of the categories defaults to the stock values, so by default this
+mod won't actually change anything.  You'll have to choose what you want
+to spawn where.
 
 Mod Construction / Implementation Details
 =========================================
@@ -41,5 +52,5 @@ make a more thorough version easy to generate.
 Changelog
 =========
 
-**v1.0.0**, May 30, 2018:
+**v1.0.0**, July 11, 2018:
  * Initial public release
