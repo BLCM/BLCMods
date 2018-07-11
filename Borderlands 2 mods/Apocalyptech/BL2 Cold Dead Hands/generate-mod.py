@@ -3269,6 +3269,12 @@ for (label, key, unique_pct, rare_pct) in [
 
     # Sandman / Big Sleep (Orchid_Caves_P pool 0)
 
+    set_dipl_item_prob('bigsleep_pool_0',
+        'GD_Orchid_Pop_Sandman.Balance.PawnBalance_Orchid_BigSleep',
+        1,
+        level='Orchid_Caves_P',
+        )
+
     setup_boss_pool('sandman_pool_0', 'Orchid_Caves_P', other.level_pool_0,
             badass.equip_pool_ar,
             [
