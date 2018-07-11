@@ -57,6 +57,15 @@ are for characters who are actually playing the game.  For a singleplayer
 game, that means you'll only ever get COMs for your one character, for
 instance.
 
+Configurable Catch-A-Ride
+-------------------------
+
+This mod is a souped-up version of FromDarkHell's "CarReplacements" mod,
+which changed some of the Catch-A-Ride locations so that you can spawn
+various types of vehicles throughout all the game's content.  That version
+just had a few hardcoded replacements, though.  This one lets you fully
+customize every single Catch-A-Ride slot in the game!
+
 Guaranteed Omnd-Omnd-Ohk
 ------------------------
 
