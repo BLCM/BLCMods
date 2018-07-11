@@ -1,0 +1,31 @@
+<BLCMM v="1">
+#<!!!You opened a file saved with BLCMM in FilterTool. Please update to BLCMM to properly open this file!!!>
+	<head>
+		<type name="BL2" offline="false"/>
+		<profiles>
+			<profile name="default" current="true"/>
+		</profiles>
+	</head>
+	<body>
+		<category name="OverpowerLevelBonuses">
+			<category name="Description">
+				<comment>By Aaron0000</comment>
+				<comment>Allows you to earn up to 8 extra skill points in the Overpower levels. Also includes an option to enable extra health scaling in the Overpower levels (taken from my UVHMRB mod), on by default.</comment>
+				<comment>Note;</comment>
+				<comment>If you plan on not using this mod at some point (after having used it in a save file that has Overpower levels active), reset your skill points before closing out your save file, so that it'll return to the normal amount (68) upon loading the save file later without this mod active.</comment>
+			</category>
+			<category name="Code">
+				<category name="OP Level Skill Points">
+					<code profiles="default">set GD_Globals.Skills.INI_TotalSkillPointsForCurrentLevelFormula ValueFormula (bEnabled=True,Multiplier=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),Level=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'GD_Lobelia_GameStages.Attributes.GameStageViaGetGameStage',InitializationDefinition=None,BaseValueScaleConstant=1.000000),Power=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),Offset=(BaseValueConstant=-4.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))</code>
+				</category>
+				<category name="OP Level Health Scaling">
+					<code profiles="default">set GD_Balance_HealthAndDamage.HealthAndDamage.Init_PlayerHealth ValueFormula (bEnabled=True,Multiplier=(BaseValueConstant=94.000000,BaseValueAttribute=AttributeDefinition'GD_Balance_HealthAndDamage.HealthAndDamage.Att_UniversalBalanceMultiplier_HealthShields',InitializationDefinition=None,BaseValueScaleConstant=1.000000),Level=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'GD_Balance_HealthAndDamage.HealthAndDamage.Att_UniversalBalanceScaler',InitializationDefinition=None,BaseValueScaleConstant=1.000000),Power=(BaseValueConstant=1.000000,BaseValueAttribute=AttributeDefinition'GD_Lobelia_GameStages.Attributes.GameStageViaGetGameStage',InitializationDefinition=None,BaseValueScaleConstant=1.000000),Offset=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))</code>
+				</category>
+			</category>
+		</category>
+	</body>
+</BLCMM>
+
+#Commands:
+set GD_Globals.Skills.INI_TotalSkillPointsForCurrentLevelFormula ValueFormula (bEnabled=True,Multiplier=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),Level=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'GD_Lobelia_GameStages.Attributes.GameStageViaGetGameStage',InitializationDefinition=None,BaseValueScaleConstant=1.000000),Power=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),Offset=(BaseValueConstant=-4.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))
+set GD_Balance_HealthAndDamage.HealthAndDamage.Init_PlayerHealth ValueFormula (bEnabled=True,Multiplier=(BaseValueConstant=94.000000,BaseValueAttribute=AttributeDefinition'GD_Balance_HealthAndDamage.HealthAndDamage.Att_UniversalBalanceMultiplier_HealthShields',InitializationDefinition=None,BaseValueScaleConstant=1.000000),Level=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'GD_Balance_HealthAndDamage.HealthAndDamage.Att_UniversalBalanceScaler',InitializationDefinition=None,BaseValueScaleConstant=1.000000),Power=(BaseValueConstant=1.000000,BaseValueAttribute=AttributeDefinition'GD_Lobelia_GameStages.Attributes.GameStageViaGetGameStage',InitializationDefinition=None,BaseValueScaleConstant=1.000000),Offset=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))
