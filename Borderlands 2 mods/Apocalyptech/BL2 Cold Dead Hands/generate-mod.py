@@ -2383,6 +2383,23 @@ for config in [regular, badass]:
             (config.rarity_pool_shotguns, 1),
         ])
 
+    # Hotfixes to enable rocket launchers for all our general-purpose pools.
+    for (pooltype, pool) in [
+            ('all', config.equip_pool_all),
+            ('ar', config.equip_pool_ar),
+            ('pistols', config.equip_pool_pistols),
+            ('shotguns', config.equip_pool_shotguns),
+            ('smg', config.equip_pool_smg),
+            ]:
+        mp.register_str('rocket_enable_{}_{}'.format(config.hotfix_prefix, pooltype),
+                'level None set {} BalancedItems[5].Probability.BaseValueScaleConstant 1'.format(
+                    pool
+                    ))
+        mp.register_str('rocket_disable_{}_{}'.format(config.hotfix_prefix, pooltype),
+                'level None set {} BalancedItems[5].Probability.BaseValueScaleConstant 0'.format(
+                    pool
+                    ))
+
 # Make Torgue DLC equip pools drop on death.
 mp.register_str('torgue_angel_equip',
     'level None set GD_Iris_ItemPoolsEnemyUse.WeaponPools.Pool_AngelGang_All_ButLaunchers_Use BalancedItems {}'.format(get_balanced_items([

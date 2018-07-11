@@ -136,6 +136,7 @@ quality, when loaded into BLCMM:
   have equipped.  To give a percent chance of dropping the lower rarities, to
   prevent an overabundance of unwanted gear, you can opt to do so in here.
   Purples, E-Tech, Gemstones, and Legendaries will always drop, though.
+  Selecting this option makes the drops in BL2 pretty similar to BL1-style drops.
 
 * **Boss Unique Weapon Frequency**: This is another mutually-exclusive
   category, so you can only choose one option.  It will let you choose how
@@ -276,6 +277,8 @@ Changelog
  * Added an option to have enemy guns not drop all the time (at least at lower
    rarities), as we have in the TPS version of this mod.  This is, more or less,
    BL1-style loot drops, apparently.
+ * Added an option to not have rocket launchers in the global equip pools, mostly
+   for help in UVHM where facing launcher-using enemies is *suuper* deadly.
  * Added Bone Head 3.0 to equip Bone Shredder / Shredifier properly
  * Cosmetic change: ensure that reported rarity percentages report "1%" instead of
    "1.0%".
