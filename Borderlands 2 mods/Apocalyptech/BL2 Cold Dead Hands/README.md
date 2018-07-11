@@ -27,14 +27,17 @@ via world drops, chests, and the like.
 Requirements
 ------------
 
-This mod should be able to be used mostly on its own, but it does require
-one specific category of UCP to be active:
+This mod should be able to be used mostly on its own, but has never been
+tested without also having UCP 4.1 fully enabled.  It's highly recommended
+that you use the mod with UCP 4.1, to prevent potential problems.
+
+If you do decide to use this mod without UCP 4.1 active, make sure you at least
+copy/enable this one specific UCP category:
 
 * `Loot Pool & Drop Changes -> Skinpool Fixes (Don't uncheck this)`
 
 This is required to free up the custom loot pools that we use to equip enemies
-with.  If for whatever reason you'd like to run this mod by itself without UCP,
-make sure to at least enable/copy that folder over.
+with.
 
 Usage/Installation
 ------------------
