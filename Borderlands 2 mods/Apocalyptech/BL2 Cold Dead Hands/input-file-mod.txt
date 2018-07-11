@@ -1396,7 +1396,7 @@ BL2
 
         #<Other Pool Tweaks>
 
-            # A few other pools need some tweaking
+            # Any other pools which need tweaking
 
             #<"Medical Mystery" E-Tech Pool>
 
@@ -1405,62 +1405,6 @@ BL2
                 {mp:medicalmystery}
 
             #</"Medical Mystery" E-Tech Pool>
-
-            #<Motor Momma Drop Pool>
-
-                # UCP adds some stuff to Motor Momma's drop pool but messes around a bit
-                # with the order of her DefaultItemPoolList.  These couple of hotfixes
-                # will normalize it so that our shield replacement works regardless of
-                # whether UCP itself is active.
-
-                level Iris_Hub2_P set GD_Iris_Population_MotorMama.Balance.Iris_PawnBalance_MotorMama DefaultItemPoolList[2].PoolProbability
-                (
-                    BaseValueConstant=1.000000,
-                    BaseValueAttribute=None,
-                    InitializationDefinition=None,
-                    BaseValueScaleConstant=1.000000
-                )
-
-                level Iris_Hub2_P set GD_Iris_Population_MotorMama.Balance.Iris_PawnBalance_MotorMama DefaultItemPoolList[3]
-                (
-                    ItemPool=ItemPoolDefinition'GD_Itempools.Runnables.Pool_MadameVonBartlesby',
-                    PoolProbability=(
-                        BaseValueConstant=0.000000,
-                        BaseValueAttribute=AttributeDefinition'GD_Itempools.DropWeights.DropODDS_BossUniques',
-                        InitializationDefinition=None,
-                        BaseValueScaleConstant=1.000000
-                    )
-                )
-
-            #</Motor Momma Drop Pool>
-
-            #<Piston Drop Pool>
-
-                # UCP adds some stuff to Piston's drop pool but messes around with the
-                # order of the pools in his DefaultItemPoolList.  To keep compatibility in
-                # case someone wants to run Cold Dead Hands without UCP, we're hotfixing
-                # the pool lists to normalize things.
-
-                level Iris_DL1_TAS_P set GD_Iris_Population_PistonBoss.Balance.Iris_PawnBalance_PistonBoss DefaultItemPoolList[0].PoolProbability
-                (
-                    BaseValueConstant=1.000000,
-                    BaseValueAttribute=None,
-                    InitializationDefinition=None,
-                    BaseValueScaleConstant=1.000000
-                )
-
-                level Iris_DL1_TAS_P set GD_Iris_Population_PistonBoss.Balance.Iris_PawnBalance_PistonBoss DefaultItemPoolList[2]
-                (
-                    ItemPool=ItemPoolDefinition'GD_Iris_ItemPools.EnemyDropPools.Pool_Weapons_Piston',
-                    PoolProbability=(
-                        BaseValueConstant=0.300000,
-                        BaseValueAttribute=None,
-                        InitializationDefinition=None,
-                        BaseValueScaleConstant=1.000000
-                    )
-                )
-
-            #</Piston Drop Pool>
 
         #</Other Pool Tweaks>
 
