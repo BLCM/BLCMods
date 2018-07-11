@@ -116,7 +116,7 @@ from the start of the battle which gun you'll receive.
 
 ### Configuration
 
-There are four main categories which you can use to customize the gear
+There are various categories which you can use to customize the gear
 quality, when loaded into BLCMM:
 
 * **Loot Pool Improvements**: This section adds gemstones into the global E-Tech
@@ -130,6 +130,12 @@ quality, when loaded into BLCMM:
   Remember that guns and shields aren't easily acquireable outside of enemy
   equipment, so choosing the "Stock" preset here may hamper your own gear
   loadout.  Epic treasure chests will no longer help out, etc.
+
+* **Rarity Drop Rates**: This is another mutually-exclusive category.  In the
+  default configuration, enemies will *always* drop the weapon+shield that they
+  have equipped.  To give a percent chance of dropping the lower rarities, to
+  prevent an overabundance of unwanted gear, you can opt to do so in here.
+  Purples, E-Tech, Gemstones, and Legendaries will always drop, though.
 
 * **Boss Unique Weapon Frequency**: This is another mutually-exclusive
   category, so you can only choose one option.  It will let you choose how
@@ -267,6 +273,9 @@ Changelog
 **v1.1.0** - Unreleased
  * Converted to BLCM format *(we now require BLCMM - FilterTool is not supported)*
  * Updated for UCP 4.1 Compatibility *(various loot pool reassignments)*
+ * Added an option to have enemy guns not drop all the time (at least at lower
+   rarities), as we have in the TPS version of this mod.  This is, more or less,
+   BL1-style loot drops, apparently.
  * Added Bone Head 3.0 to equip Bone Shredder / Shredifier properly
  * Cosmetic change: ensure that reported rarity percentages report "1%" instead of
    "1.0%".
