@@ -305,8 +305,9 @@ Changelog
  * Added Bone Head 3.0 to equip Bone Shredder / Shredifier properly.
  * Fixes some errant commas in various statements (didn't affect the mod itself
    but was causing some syntax warnings in BLCMM)
- * Cosmetic change: ensure that reported rarity percentages report "1%" instead of
-   "1.0%".
+ * Cosmetic changes in Enemy Geart Quality comments:
+   * Ensure that reported rarity percentages report "1%" instead of "1.0%".
+   * Condense regular/badass percentages onto the same lines
 
 **v1.0.0** - June 2, 2018 (commit `e69036bad26493073be7bd82207266aac77d2577`)
  * Initial Release

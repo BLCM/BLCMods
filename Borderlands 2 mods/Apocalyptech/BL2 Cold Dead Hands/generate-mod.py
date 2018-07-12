@@ -284,15 +284,15 @@ class DropConfig(BaseConfig):
     def _get_pct_chance(self, weight, total):
         chance = weight/total*100
         if chance == 0:
-            return '0'
+            return '   0'
         elif chance > 1:
-            return round(chance)
+            return '{:4d}'.format(round(chance))
         else:
             retval = round(chance, 2)
             if (str(retval) == '1.0'):
-                return 1
+                return '   1'
             else:
-                return retval
+                return '{:4.2f}'.format(retval)
 
 
     def set_rarity_weights(self, rarity_key):
