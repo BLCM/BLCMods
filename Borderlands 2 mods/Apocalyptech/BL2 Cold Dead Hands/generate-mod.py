@@ -3991,6 +3991,125 @@ for (label, key, unique_pct, rare_pct) in [
         level='TestingZone_P',
         )
 
+    # Digistruct Doc Mercy (TestingZone_P pool 1)
+
+    mercy_pct = min(unique_pct, .5)
+
+    setup_boss_pool('digidocmercy_pool_0', 'TestingZone_P', other.level_pool_1,
+            'GD_Itempools.WeaponPools.Pool_Weapons_AssaultRifles_05_VeryRare_Alien',
+            [
+                ('GD_Itempools.Runnables.Pool_MrMercy', mercy_pct, None),
+            ],
+            )
+
+    set_dipl_item_pool('digidocmercy_pool_1',
+            'GD_MrMercy_Digi.Balance.PawnBalance_MrMercy_Digi',
+            0,
+            other.level_pool_1,
+            level='TestingZone_P',
+            )
+
+    set_dipl_item_prob('digidocmercy_pool_2',
+            'GD_MrMercy_Digi.Balance.PawnBalance_MrMercy_Digi',
+            2,
+            level='TestingZone_P',
+            )
+
+    # Digistruct Assassins Common - remove Emperor from the shared loot pool
+
+    set_bi_item_prob('digiassassin_pool_0',
+        'GD_Itempools.Runnables.Pool_FourAssassins',
+        0,
+        level='TestingZone_P',
+        )
+
+    # Digistruct Assassin Wot (using Runnables)
+    # Note that for the assassins, we're not using our level_pools, since the
+    # Runnables for these are only shared between the real-game asssassins and
+    # their Digistruct counterparts, so we don't have to worry about tainting
+    # the pools.
+
+    setup_boss_pool('digiwot_pool_0', 'TestingZone_P',
+            'GD_Itempools.Runnables.Pool_AssassinWot',
+            badass.equip_pool_smg,
+            [
+                ('GD_Weap_SMG.A_Weapons_Unique.SMG_Hyperion_3_Commerce', rare_pct, 'WeaponBalanceDefinition'),
+                ('GD_Weap_SMG.A_Weapons_Legendary.SMG_Dahl_5_Emperor', rare_pct/4, 'WeaponBalanceDefinition'),
+            ],
+            )
+
+    set_dipl_item_prob('digiwot_pool_1',
+        'GD_Assassin1_Digi.Population.PawnBalance_Assassin1_Digi',
+        0,
+        level='TestingZone_P',
+        )
+
+    set_dipl_item_prob('digiwot_pool_2',
+        'GD_Assassin1_Digi.Population.PawnBalance_Assassin1_Digi',
+        2,
+        level='TestingZone_P',
+        prob=1,
+        )
+
+    # Digistruct Assassin Oney (using Runnables)
+
+    setup_boss_pool('digioney_pool_0', 'TestingZone_P',
+            'GD_Itempools.Runnables.Pool_AssassinOney',
+            badass.equip_pool_only_shotguns,
+            [
+                ('GD_Weap_Pistol.A_Weapons_Unique.Pistol_Jakobs_3_Judge', rare_pct, 'WeaponBalanceDefinition'),
+                ('GD_Weap_SMG.A_Weapons_Legendary.SMG_Dahl_5_Emperor', rare_pct/4, 'WeaponBalanceDefinition'),
+            ],
+            )
+
+    set_dipl_item_prob('digioney_pool_1',
+        'GD_Assassin2_Digi.Population.PawnBalance_Assassin2_Digi',
+        1,
+        level='TestingZone_P',
+        )
+
+    set_dipl_item_prob('digioney_pool_2',
+        'GD_Assassin2_Digi.Population.PawnBalance_Assassin2_Digi',
+        3,
+        level='TestingZone_P',
+        prob=1,
+        )
+
+    # Digistruct Assassin Reeth (melee only, so only a pool setup here) (using Runnables)
+
+    setup_boss_pool('digireeth_pool_0', 'TestingZone_P',
+            'GD_Itempools.Runnables.Pool_AssassinReeth',
+            None,
+            [
+                ('GD_Weap_SniperRifles.A_Weapons_Unique.Sniper_Hyperion_3_FremingtonsEdge', 1, 'WeaponBalanceDefinition'),
+                ('GD_Weap_SMG.A_Weapons_Legendary.SMG_Dahl_5_Emperor', .25, 'WeaponBalanceDefinition'),
+            ],
+            )
+
+    # Digistruct Assassin Rouf (using Runnables)
+
+    setup_boss_pool('digirouf_pool_0', 'TestingZone_P',
+            'GD_Itempools.Runnables.Pool_AssassinRouf',
+            badass.equip_pool_only_shotguns,
+            [
+                ('GD_Weap_Shotgun.A_Weapons_Unique.SG_Bandit_3_Dog', rare_pct, 'WeaponBalanceDefinition'),
+                ('GD_Weap_SMG.A_Weapons_Legendary.SMG_Dahl_5_Emperor', rare_pct/4, 'WeaponBalanceDefinition'),
+            ],
+            )
+
+    set_dipl_item_prob('digirouf_pool_1',
+        'GD_Population_Rat.Balance.Unique.PawnBalance_Assassin4',
+        0,
+        level='TestingZone_P',
+        )
+
+    set_dipl_item_prob('digirouf_pool_2',
+        'GD_Population_Rat.Balance.Unique.PawnBalance_Assassin4',
+        2,
+        level='TestingZone_P',
+        prob=1,
+        )
+
     # Generate the section string
     with open('input-file-bosses.txt', 'r') as df:
         boss_drops[key] = df.read().format(

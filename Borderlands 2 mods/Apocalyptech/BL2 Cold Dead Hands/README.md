@@ -81,7 +81,8 @@ from the start of the battle which gun you'll receive.
   sense, so I've chosen to keep that rather than having him use an Infinity
   on you.  So Doc Mercy will drop an Infinity even though he's not actually
   using one.  If someone has a clever way to make a loot pool change in
-  response to a mission being active or not, I'd love to hear it!
+  response to a mission being active or not, I'd love to hear it!  (Digistruct
+  Doc Mercy will alternate between E-tech level ARs and the Infinity, though)
 
 * Mad Mike will retain at least a 50% chance of spawning with a random
   rocket launcher, even on "guaranteed" unique loot configurations.
@@ -302,7 +303,10 @@ Changelog
  * Reorganized the section which disables world weapon/shield drops so that
    disabling weapons/shields in chests is easily toggleable via a single
    category.
- * Added Bone Head 3.0 to equip Bone Shredder / Shredifier properly.
+ * Added bosses from Digistruct Peak:
+     * Bone Head 3.0 equips Bone Shredder / Shredifier
+     * Digi Doc Mercy has a 50% chance to equip the Infinity
+     * Digi Assassins all equip as they do in Southpaw Steam and Power
  * Fixes some errant commas in various statements (didn't affect the mod itself
    but was causing some syntax warnings in BLCMM)
  * Cosmetic changes in Enemy Geart Quality comments:

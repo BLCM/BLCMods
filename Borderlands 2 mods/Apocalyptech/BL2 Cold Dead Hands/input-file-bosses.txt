@@ -74,7 +74,7 @@
 
                     #<Assassin Wot>
 
-                        set GD_Itempools.Runnables.Pool_AssassinWot bAutoReadyItems True
+                        level SouthpawFactory_P set GD_Itempools.Runnables.Pool_AssassinWot bAutoReadyItems True
 
                         {mp:wot_pool_0}
 
@@ -86,7 +86,7 @@
 
                     #<Assassin Oney>
 
-                        set GD_Itempools.Runnables.Pool_AssassinOney bAutoReadyItems True
+                        level SouthpawFactory_P set GD_Itempools.Runnables.Pool_AssassinOney bAutoReadyItems True
 
                         {mp:oney_pool_0}
 
@@ -108,7 +108,7 @@
 
                     #<Assassin Rouf>
 
-                        set GD_Itempools.Runnables.Pool_AssassinRouf bAutoReadyItems True
+                        level SouthpawFactory_P set GD_Itempools.Runnables.Pool_AssassinRouf bAutoReadyItems True
 
                         {mp:rouf_pool_0}
 
@@ -726,6 +726,83 @@
                     {mp:bonehead3_pool_3}
 
                 #</Bone Head 3.0>
+
+                #<Digistruct Doc Mercy>
+
+                    # Unlike the regular Doc Mercy, we can go ahead and have him equip an
+                    # Infinity in here, even though that probably makes him a little less
+                    # fearsome in Digistuct Peak.  Will have a maximum 50% chance to
+                    # equip/drop the Infinity, regardless of the chosen drop rate.
+
+                    {mp:digidocmercy_pool_0}
+
+                    {mp:digidocmercy_pool_1}
+
+                    {mp:digidocmercy_pool_2}
+
+                #</Digistruct Doc Mercy>
+
+                #<Digistruct Assassins>
+
+                    # The assassins share a common drop pool which has the Emperor, in
+                    # addition to an individual pool per assassin.  We're pulling the
+                    # Emperor into the individual pools and having them equip from that,
+                    # while restricting the common pool to only have the second item
+                    # (a customization)
+
+                    #<Common>
+
+                        {mp:digiassassin_pool_0}
+
+                    #</Common>
+
+                    #<Digistruct Assassin Wot>
+
+                        level TestingZone_P set GD_Itempools.Runnables.Pool_AssassinWot bAutoReadyItems True
+
+                        {mp:digiwot_pool_0}
+
+                        {mp:digiwot_pool_1}
+
+                        {mp:digiwot_pool_2}
+
+                    #</Digistruct Assassin Wot>
+
+                    #<Digistruct Assassin Oney>
+
+                        level TestingZone_P set GD_Itempools.Runnables.Pool_AssassinOney bAutoReadyItems True
+
+                        {mp:digioney_pool_0}
+
+                        {mp:digioney_pool_1}
+
+                        {mp:digioney_pool_2}
+
+                    #</Digistruct Assassin Oney>
+
+                    #<Digistruct Assassin Reeth>
+
+                        # Reeth is a Psycho, so only does Melee attacks.  We're going to alter
+                        # his Runnables pool anyway, though, since we disabled the Emperor out
+                        # in the common pool, and he couldn't drop it otherwise.
+
+                        {mp:digireeth_pool_0}
+
+                    #</Digistruct Assassin Reeth>
+
+                    #<Digistruct Assassin Rouf>
+
+                        level TestingZone_P set GD_Itempools.Runnables.Pool_AssassinRouf bAutoReadyItems True
+
+                        {mp:digirouf_pool_0}
+
+                        {mp:digirouf_pool_1}
+
+                        {mp:digirouf_pool_2}
+
+                    #</Digistruct Assassin Rouf>
+
+                #</Digistruct Assassins>
 
             #</Digistruct Peak>
 
