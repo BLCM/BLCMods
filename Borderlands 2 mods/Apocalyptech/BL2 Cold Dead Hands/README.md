@@ -208,10 +208,11 @@ be interested in:
 Compatibility
 -------------
 
-This mod is compatible with UCP, and in fact requires that UCP's skinpool
-changes be in place.
+This mod is compatible with UCP 4.1, and in fact requires that UCP 4.1's skinpool
+changes be in place.  UCP 4.0 isn't supported with this mod -- be sure to be
+using the most recent.
 
-This will obviously conflict with other mods with similar aims.
+Cold Dead Hands will obviously conflict with other mods with similar aims.
 theNocturni's "Enemy Enhancer" is one obvious conflict, though the
 non-loot-pool parts of Enemy Enhancer would still be active (such as
 faster enemy animations, etc).
@@ -225,11 +226,6 @@ this mod appears later in your patch file).  The "Better Loot" improvements
 to Class Mods, Grenades, Relics, Raid Boss drops, etc, should help out
 against the increased enemy difficulty here, in fact.
 
-My own "Early Bloomer" mod will unlock all gear from the beginning of the
-game, so enable that if you want early-game bandits to have the best gear
-possible.  Note that Better Loot already includes Early Bloomer, so if
-you're running Better Loot, you wouldn't have to bother.
-
 Mod Construction / Implementation Details
 -----------------------------------------
 
@@ -239,7 +235,7 @@ If you're just looking to run the mod, see the "Usage" section above.  The
 mod can, of course, be edited directly in BLCMM as well, once it's
 been imported.)*
 
-This mod is actually generated using a simple little Python script named
+This mod is actually generated using a Python script named
 `generate-mod.py`.  The script makes use of `modprocessor.py` from the parent
 directory.  You'd need to copy (or symlink, if you're on Mac or Linux)
 `modprocessor.py` into this directory in order to run the script.
@@ -309,7 +305,7 @@ Changelog
      * Digi Assassins all equip as they do in Southpaw Steam and Power
  * Fixes some errant commas in various statements (didn't affect the mod itself
    but was causing some syntax warnings in BLCMM)
- * Cosmetic changes in Enemy Geart Quality comments:
+ * Cosmetic changes in Enemy Gear Quality comments:
    * Ensure that reported rarity percentages report "1%" instead of "1.0%".
    * Condense regular/badass percentages onto the same lines
  * Alphabetized boss lists in "Boss Unique Weapon Frequency" section
