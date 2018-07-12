@@ -301,6 +301,8 @@ Changelog
    disabling weapons/shields in chests is easily toggleable via a single
    category.
  * Added Bone Head 3.0 to equip Bone Shredder / Shredifier properly.
+ * Fixes some errant commas in various statements (didn't affect the mod itself
+   but was causing some syntax warnings in BLCMM)
  * Cosmetic change: ensure that reported rarity percentages report "1%" instead of
    "1.0%".
 
