@@ -82,6 +82,7 @@ class OtherConfig(BaseConfig):
 
     # Some text that we'll put into the main file
     disable_world_sets = None
+    disable_world_chest_sets = None
 
     # Adding things to the legendary pools
     legendary_unique_adds = None
@@ -1819,8 +1820,9 @@ badass = Badass()
 other = OtherConfig()
 
 # Get rid of global world drops.
-prefix = ' '*(4*4)
+prefix = ' '*(4*5)
 drop_disables = []
+drop_chest_disables = []
 for (pool, index) in [
         ('GD_Itempools.GeneralItemPools.Pool_Gear', 0),
         ('GD_Itempools.GeneralItemPools.Pool_GunsAndGear', 0),
@@ -1862,19 +1864,6 @@ for (pool, index) in [
         ('GD_Itempools.EnemyDropPools.Pool_GunsAndGear_WeightedSniper', 2),
         ('GD_Itempools.EnemyDropPools.Pool_GunsAndGear_WeightedShields', 0),
         ('GD_Itempools.EnemyDropPools.Pool_GunsAndGear_WeightedShields', 1),
-        ('GD_Itempools.Treasure_ChestPools.Pool_EpicChest_Weapons_GunsAndGear', 1),
-        ('GD_Itempools.Treasure_ChestPools.Pool_EpicChest_Weapons_GunsAndGear', 2),
-        ('GD_Itempools.Treasure_ChestPools.Pool_EpicChest_Weapons_GunsAndGear', 3),
-        ('GD_Itempools.Treasure_ChestPools.Pool_EpicChest_Weapons_GunsAndGear', 4),
-        ('GD_Itempools.Treasure_ChestPools.Pool_EpicChest_Items', 0),
-        ('GD_Itempools.Treasure_ChestPools.Pool_EpicChest_Items', 1),
-        ('GD_Itempools.Treasure_ChestPools.Pool_EpicChest_Items', 2),
-        ('GD_Itempools.Treasure_ChestPools.Pool_EpicChest_Items', 3),
-        ('GD_Itempools.Treasure_ChestPools.Pool_WeaponChest_Items', 0),
-        ('GD_Itempools.Treasure_ChestPools.Pool_WeaponChest_Items', 1),
-        ('GD_Itempools.Treasure_ChestPools.Pool_WeaponChest_Items', 2),
-        ('GD_Itempools.Treasure_ChestPools.Pool_WeaponChest_Items', 3),
-        # BL2 Better Loot would require clearing out index 4 of Pool_WeaponChest_Items, too.
         ('GD_Itempools.EarlyGame.Pool_Knuckledragger_Pistol', 0),
         ('GD_Itempools.EarlyGame.Pool_Knuckledragger_Pistol_P2_P3', 0),
         ('GD_Itempools.EarlyGame.Pool_Knuckledragger_Pistol_P4', 0),
@@ -1890,6 +1879,26 @@ for (pool, index) in [
         ]:
     drop_disables.extend(disable_balanced_drop(prefix, pool, index))
 other.disable_world_sets = "\n\n".join(drop_disables)
+
+# A separate set of hotfixes for chests, so they can be easily toggled in FT/BLCMM
+prefix = ' '*(4*5)
+for (pool, index) in [
+        ('GD_Itempools.Treasure_ChestPools.Pool_EpicChest_Weapons_GunsAndGear', 1),
+        ('GD_Itempools.Treasure_ChestPools.Pool_EpicChest_Weapons_GunsAndGear', 2),
+        ('GD_Itempools.Treasure_ChestPools.Pool_EpicChest_Weapons_GunsAndGear', 3),
+        ('GD_Itempools.Treasure_ChestPools.Pool_EpicChest_Weapons_GunsAndGear', 4),
+        ('GD_Itempools.Treasure_ChestPools.Pool_EpicChest_Items', 0),
+        ('GD_Itempools.Treasure_ChestPools.Pool_EpicChest_Items', 1),
+        ('GD_Itempools.Treasure_ChestPools.Pool_EpicChest_Items', 2),
+        ('GD_Itempools.Treasure_ChestPools.Pool_EpicChest_Items', 3),
+        ('GD_Itempools.Treasure_ChestPools.Pool_WeaponChest_Items', 0),
+        ('GD_Itempools.Treasure_ChestPools.Pool_WeaponChest_Items', 1),
+        ('GD_Itempools.Treasure_ChestPools.Pool_WeaponChest_Items', 2),
+        ('GD_Itempools.Treasure_ChestPools.Pool_WeaponChest_Items', 3),
+        # BL2 Better Loot would require clearing out index 4 of Pool_WeaponChest_Items, too.
+        ]:
+    drop_chest_disables.extend(disable_balanced_drop(prefix, pool, index))
+other.disable_world_chest_sets = "\n\n".join(drop_chest_disables)
 
 # Configure rarity pools
 rarity_sections = {}

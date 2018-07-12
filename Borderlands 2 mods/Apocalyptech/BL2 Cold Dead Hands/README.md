@@ -165,6 +165,16 @@ quality, when loaded into BLCMM:
   BL2 Early Bloomer mod, and is also included inside BL2 Better Loot, though
   there's no problems with having it enabled in multiple places.
 
+Additionally, there's one category in the "Main Mod" section which you may
+be interested in:
+
+* `Main Mod -> Disable World Weapon/Shield Drops -> Remove Weapons and Shields
+  from Containers`: This section is what removes all weapons/shields from
+  treasure chests and other containers in the game.  If this bothers you, feel
+  free to uncheck this option.  (This might be especially useful if you've
+  opted to keep some of the stock rarity values, or disabled rocket launchers
+  in the global equip pools, etc.)
+
 ### Implications
 
 * Remember that with this mod active, mods which provide buffs to weapons
@@ -287,7 +297,10 @@ Changelog
    BL1-style loot drops, apparently.
  * Added an option to not have rocket launchers in the global equip pools, mostly
    for help in UVHM where facing launcher-using enemies is *suuper* deadly.
- * Added Bone Head 3.0 to equip Bone Shredder / Shredifier properly
+ * Reorganized the section which disables world weapon/shield drops so that
+   disabling weapons/shields in chests is easily toggleable via a single
+   category.
+ * Added Bone Head 3.0 to equip Bone Shredder / Shredifier properly.
  * Cosmetic change: ensure that reported rarity percentages report "1%" instead of
    "1.0%".
 
