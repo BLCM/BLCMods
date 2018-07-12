@@ -157,6 +157,14 @@ quality, when loaded into BLCMM:
   when their shields are depleted.  Use with caution!  Or with abandon!  It's
   up to you!
 
+* **Remove Level-Based Loot Restrictions**: This Allows all weapon, shield,
+  grenade, COM, shield, relic, and ammo types from the very beginning of the
+  game.  If you have the quality of gear pumped up, it's possible that some
+  early-game enemies might not otherwise be properly equipped unless you've got
+  something like this which unlocks everything.  This is a duplicate of my
+  BL2 Early Bloomer mod, and is also included inside BL2 Better Loot, though
+  there's no problems with having it enabled in multiple places.
+
 ### Implications
 
 * Remember that with this mod active, mods which provide buffs to weapons
