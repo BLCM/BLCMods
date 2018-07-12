@@ -12,52 +12,6 @@
 
             #<Base Game>
 
-                #<Midge-Mong>
-
-                    # Midge is a generic Badass Midget, but he's also the only one to spawn in Southern
-                    # Shelf Bay, so we can just edit its equip pool.
-
-                    {mp:midgemong_pool_0}
-
-                    {mp:midgemong_pool_1}
-
-                    level Cove_P set GD_Population_PrimalBeast.Balance.Unique.PawnBalance_PrimalBeast_Warmong DefaultItemPoolList ()
-
-                #</Midge-Mong>
-
-                #<Captain Flynt>
-
-                    # Flynt ordinarily has a guaranteed Tinderbox drop, and a possible Thunderball Fists
-                    # drop.  We're combining those two, and Flynt will have one or the other (and drop
-                    # it).
-
-                    {mp:flynt_pool_0}
-
-                    {mp:flynt_pool_1}
-
-                    {mp:flynt_pool_2}
-
-                    {mp:flynt_pool_3}
-
-                #</Captain Flynt>
-
-                #<Bad Maw>
-
-                    # In vanilla BL2, Bad Maw doesn't have a specific weapon, but UCP adds
-                    # Deliverance.  So, we're going to go ahead and force him to equip that.
-
-                    {mp:badmaw_pool_0}
-
-                    {mp:badmaw_pool_1}
-
-                    {mp:badmaw_pool_2}
-
-                    {mp:badmaw_pool_3}
-
-                    {mp:badmaw_pool_4}
-
-                #</Bad Maw>
-
                 #<Assassins>
 
                     # The assassins share a common drop pool which has the Emperor, in
@@ -120,87 +74,22 @@
 
                 #</Assassins>
 
-                #<Incinerator Clayton>
+                #<Bad Maw>
 
-                    # Clayton drops the Pyrophobia, which we don't care about because he's a Psycho and
-                    # only does melee, but UCP also adds in Flame of the Firehawk.  So, fiddle with
-                    # the pools so that he can equip that.  Also clean out the Runnables, post-UCP.
+                    # In vanilla BL2, Bad Maw doesn't have a specific weapon, but UCP adds
+                    # Deliverance.  So, we're going to go ahead and force him to equip that.
 
-                    {mp:clayton_pool_0}
+                    {mp:badmaw_pool_0}
 
-                    {mp:clayton_pool_1}
+                    {mp:badmaw_pool_1}
 
-                    {mp:clayton_pool_2}
+                    {mp:badmaw_pool_2}
 
-                #</Incinerator Clayton>
+                    {mp:badmaw_pool_3}
 
-                #<Flinter>
+                    {mp:badmaw_pool_4}
 
-                    # In vanilla BL2, Flinter doesn't have a specific weapon, but UCP adds
-                    # RokSalt.
-
-                    {mp:flinter_pool_0}
-
-                    {mp:flinter_pool_1}
-
-                    {mp:flinter_pool_2}
-
-                #</Flinter>
-
-                #<Mad Mike>
-
-                    # UCP added Madhous! as a potential drop.  Mad Mike's whole Thing is sort
-                    # of that he always has a launcher, but I'm going to go ahead and just
-                    # split up his potential equip pool, instead.
-
-                    {mp:mad_mike_pool_0}
-
-                    {mp:mad_mike_pool_1}
-
-                    level Dam_P set GD_Population_Nomad.Balance.Unique.PawnBalance_MadMike PlayThroughs[0].CustomItemPoolList ()
-
-                #</Mad Mike>
-
-                #<Prospector Zeke>
-
-                    # Ordinarily, Zeke has no unique drop, but UCP added in Pitchfork
-
-                    {mp:zeke_pool_0}
-
-                    {mp:zeke_pool_1}
-
-                    {mp:zeke_pool_2}
-
-                #</Prospector Zeke>
-
-                #<Laney>
-
-                    # Laney can drop the Gub.  No need to use our custom pools here,
-                    # since nothing but Laney uses that pool, even in UCP.
-
-                    set GD_Itempools.Runnables.Pool_Laney bAutoReadyItems True
-
-                    {mp:laney_pool_0}
-
-                    {mp:laney_pool_1}
-
-                    {mp:laney_pool_2}
-
-                #</Laney>
-
-                #<Smash-Head>
-
-                    # UCP adds the Roaster to Smash-Head's default Sledge's Shotgun drop.
-
-                    {mp:smashhead_pool_0}
-
-                    {mp:smashhead_pool_1}
-
-                    {mp:smashhead_pool_2}
-
-                    {mp:smashhead_pool_3}
-
-                #</Smash-Head>
+                #</Bad Maw>
 
                 #<Bagman>
 
@@ -215,17 +104,63 @@
 
                 #</Bagman>
 
-                #<Muscles>
+                #<Bone Head 2.0>
 
-                    # UCP added Sledge's Shotgun to Muscles
+                    # Bone Head 2.0 ordinarily drops the Bone Shredder, and UCP added Shredifier
+                    # as well.  Add those both into the equip pool.
 
-                    {mp:muscles_pool_0}
+                    {mp:bonehead2_pool_0}
 
-                    {mp:muscles_pool_1}
+                    {mp:bonehead2_pool_1}
 
-                    {mp:muscles_pool_2}
+                    {mp:bonehead2_pool_2}
 
-                #</Muscles>
+                    {mp:bonehead2_pool_3}
+
+                #</Bone Head 2.0>
+
+                #<Captain Flynt>
+
+                    # Flynt ordinarily has a guaranteed Tinderbox drop, and a possible Thunderball Fists
+                    # drop.  We're combining those two, and Flynt will have one or the other (and drop
+                    # it).
+
+                    {mp:flynt_pool_0}
+
+                    {mp:flynt_pool_1}
+
+                    {mp:flynt_pool_2}
+
+                    {mp:flynt_pool_3}
+
+                #</Captain Flynt>
+
+                #<Deputy Winger>
+
+                    # Ordinarily, Deputy Winger doesn't have any unique drops.  UCP adds in the
+                    # Order shield (and Deputy's Badge relic, though we don't care about that),
+                    # so ensure that the Order is a possible equip.
+
+                    {mp:winger_pool_0}
+
+                    {mp:winger_pool_1}
+
+                    {mp:winger_pool_2}
+
+                #</Deputy Winger>
+
+                #<Flinter>
+
+                    # In vanilla BL2, Flinter doesn't have a specific weapon, but UCP adds
+                    # RokSalt.
+
+                    {mp:flinter_pool_0}
+
+                    {mp:flinter_pool_1}
+
+                    {mp:flinter_pool_2}
+
+                #</Flinter>
 
                 #<Foreman Jasper>
 
@@ -252,29 +187,31 @@
 
                 #</Gettle>
 
-                #<Mobley>
+                #<Hunter Hellquist>
 
-                    # Can drop the Veruc.
+                    # Hunter Hellquist can drop the Bee, so make it so that's equippable.
 
-                    {mp:mobley_pool_0}
+                    {mp:hunter_pool_0}
 
-                    {mp:mobley_pool_1}
+                    {mp:hunter_pool_1}
 
-                    {mp:mobley_pool_2}
+                    {mp:hunter_pool_2}
 
-                #</Mobley>
+                #</Hunter Hellquist>
 
-                #<Mick Zaford>
+                #<Incinerator Clayton>
 
-                    # Can drop the Maggie
+                    # Clayton drops the Pyrophobia, which we don't care about because he's a Psycho and
+                    # only does melee, but UCP also adds in Flame of the Firehawk.  So, fiddle with
+                    # the pools so that he can equip that.  Also clean out the Runnables, post-UCP.
 
-                    {mp:zaford_pool_0}
+                    {mp:clayton_pool_0}
 
-                    {mp:zaford_pool_1}
+                    {mp:clayton_pool_1}
 
-                    {mp:zaford_pool_2}
+                    {mp:clayton_pool_2}
 
-                #</Mick Zaford>
+                #</Incinerator Clayton>
 
                 #<Jimbo & Tector Hodunk>
 
@@ -291,32 +228,71 @@
 
                 #</Jimbo & Tector Hodunk>
 
-                #<Deputy Winger>
+                #<Laney>
 
-                    # Ordinarily, Deputy Winger doesn't have any unique drops.  UCP adds in the
-                    # Order shield (and Deputy's Badge relic, though we don't care about that),
-                    # so ensure that the Order is a possible equip.
+                    # Laney can drop the Gub.  No need to use our custom pools here,
+                    # since nothing but Laney uses that pool, even in UCP.
 
-                    {mp:winger_pool_0}
+                    set GD_Itempools.Runnables.Pool_Laney bAutoReadyItems True
 
-                    {mp:winger_pool_1}
+                    {mp:laney_pool_0}
 
-                    {mp:winger_pool_2}
+                    {mp:laney_pool_1}
 
-                #</Deputy Winger>
+                    {mp:laney_pool_2}
 
-                #<Sheriff of Lynchwood>
+                #</Laney>
 
-                    # Can drop the Law.  We have to do a bit of work here because the Law drop is
-                    # lumped in with the Sheriff's Badge relic.
+                #<Mad Mike>
 
-                    {mp:sheriff_pool_0}
+                    # UCP added Madhous! as a potential drop.  Mad Mike's whole Thing is sort
+                    # of that he always has a launcher, but I'm going to go ahead and just
+                    # split up his potential equip pool, instead.
 
-                    {mp:sheriff_pool_1}
+                    {mp:mad_mike_pool_0}
 
-                    {mp:sheriff_pool_2}
+                    {mp:mad_mike_pool_1}
 
-                #</Sheriff of Lynchwood>
+                    level Dam_P set GD_Population_Nomad.Balance.Unique.PawnBalance_MadMike PlayThroughs[0].CustomItemPoolList ()
+
+                #</Mad Mike>
+
+                #<Mick Zaford>
+
+                    # Can drop the Maggie
+
+                    {mp:zaford_pool_0}
+
+                    {mp:zaford_pool_1}
+
+                    {mp:zaford_pool_2}
+
+                #</Mick Zaford>
+
+                #<Midge-Mong>
+
+                    # Midge is a generic Badass Midget, but he's also the only one to spawn in Southern
+                    # Shelf Bay, so we can just edit its equip pool.
+
+                    {mp:midgemong_pool_0}
+
+                    {mp:midgemong_pool_1}
+
+                    level Cove_P set GD_Population_PrimalBeast.Balance.Unique.PawnBalance_PrimalBeast_Warmong DefaultItemPoolList ()
+
+                #</Midge-Mong>
+
+                #<Mobley>
+
+                    # Can drop the Veruc.
+
+                    {mp:mobley_pool_0}
+
+                    {mp:mobley_pool_1}
+
+                    {mp:mobley_pool_2}
+
+                #</Mobley>
 
                 #<Mortar>
 
@@ -331,36 +307,84 @@
 
                 #</Mortar>
 
-                #<Hunter Hellquist>
+                #<Muscles>
 
-                    # Hunter Hellquist can drop the Bee, so make it so that's equippable.
+                    # UCP added Sledge's Shotgun to Muscles
 
-                    {mp:hunter_pool_0}
+                    {mp:muscles_pool_0}
 
-                    {mp:hunter_pool_1}
+                    {mp:muscles_pool_1}
 
-                    {mp:hunter_pool_2}
+                    {mp:muscles_pool_2}
 
-                #</Hunter Hellquist>
+                #</Muscles>
 
-                #<Bone Head 2.0>
+                #<Prospector Zeke>
 
-                    # Bone Head 2.0 ordinarily drops the Bone Shredder, and UCP added Shredifier
-                    # as well.  Add those both into the equip pool.
+                    # Ordinarily, Zeke has no unique drop, but UCP added in Pitchfork
 
-                    {mp:bonehead2_pool_0}
+                    {mp:zeke_pool_0}
 
-                    {mp:bonehead2_pool_1}
+                    {mp:zeke_pool_1}
 
-                    {mp:bonehead2_pool_2}
+                    {mp:zeke_pool_2}
 
-                    {mp:bonehead2_pool_3}
+                #</Prospector Zeke>
 
-                #</Bone Head 2.0>
+                #<Sheriff of Lynchwood>
+
+                    # Can drop the Law.  We have to do a bit of work here because the Law drop is
+                    # lumped in with the Sheriff's Badge relic.
+
+                    {mp:sheriff_pool_0}
+
+                    {mp:sheriff_pool_1}
+
+                    {mp:sheriff_pool_2}
+
+                #</Sheriff of Lynchwood>
+
+                #<Smash-Head>
+
+                    # UCP adds the Roaster to Smash-Head's default Sledge's Shotgun drop.
+
+                    {mp:smashhead_pool_0}
+
+                    {mp:smashhead_pool_1}
+
+                    {mp:smashhead_pool_2}
+
+                    {mp:smashhead_pool_3}
+
+                #</Smash-Head>
 
             #</Base Game>
 
             #<Captain Scarlett DLC>
+
+                #<Benny the Booster>
+
+                    # UCP adds Sand Hawk to Benny, so equip that.
+
+                    {mp:benny_pool_0}
+
+                    {mp:benny_pool_1}
+
+                    {mp:benny_pool_2}
+
+                #</Benny the Booster>
+
+                #<DJ Tanner>
+
+                    # UCP adds the Sham to DJ Tanner, so equip that.
+
+                    {mp:tanner_pool_0}
+
+                    {mp:tanner_pool_1}
+
+                    {mp:tanner_pool_2}
+
+                #</DJ Tanner>
 
                 #<No-Beard>
 
@@ -379,17 +403,17 @@
 
                 #</No-Beard>
 
-                #<Benny the Booster>
+                #<P3RV-E>
 
-                    # UCP adds Sand Hawk to Benny, so equip that.
+                    # UCP adds Bad Touch, so equip that.
 
-                    {mp:benny_pool_0}
+                    {mp:pervy_pool_0}
 
-                    {mp:benny_pool_1}
+                    {mp:pervy_pool_1}
 
-                    {mp:benny_pool_2}
+                    {mp:pervy_pool_2}
 
-                #</Benny the Booster>
+                #</P3RV-E>
 
                 #<Sandman / Big Sleep>
 
@@ -410,18 +434,6 @@
 
                 #</Sandman / Big Sleep>
 
-                #<DJ Tanner>
-
-                    # UCP adds the Sham to DJ Tanner, so equip that.
-
-                    {mp:tanner_pool_0}
-
-                    {mp:tanner_pool_1}
-
-                    {mp:tanner_pool_2}
-
-                #</DJ Tanner>
-
                 #<Toothless Terry>
 
                     # UCP adds the Pimpernel, so equip that.
@@ -436,23 +448,9 @@
 
                 #</Toothless Terry>
 
-                #<P3RV-E>
-
-                    # UCP adds Bad Touch, so equip that.
-
-                    {mp:pervy_pool_0}
-
-                    {mp:pervy_pool_1}
-
-                    {mp:pervy_pool_2}
-
-                #</P3RV-E>
-
             #</Captain Scarlett DLC>
 
             #<Torgue DLC>
-
-                # Tweaks required in the Torgue DLC
 
                 #<Motor Momma>
 
@@ -480,6 +478,33 @@
                 # making use of the UCP pools for as much of this as possible, though
                 # we still require the use of eight skinpools of our own, to support
                 # things properly.
+
+                #<Annie, Tribute of Lynchwood>
+
+                    # UCP adds the Sheriffs Badge and Law
+
+                    set GD_CustomItemPools_MainGame.Soldier.DigitalEdSkins BalancedItems
+                    (
+                        (
+                            ItmPoolDefinition=None,
+                            InvBalanceDefinition=InventoryBalanceDefinition'GD_Artifacts.A_Item_Unique.A_Sheriff',
+                            Probability=(
+                                BaseValueConstant=0.000000,
+                                BaseValueAttribute=None,
+                                InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',
+                                BaseValueScaleConstant=1.000000
+                            ),
+                            bDropOnDeath=True
+                        )
+                    )
+
+                    {mp:annie_pool_0}
+
+                    {mp:annie_pool_1}
+
+                    {mp:annie_pool_2}
+
+                #</Annie, Tribute of Lynchwood>
 
                 #<Axel, Tribute of Opportunity>
 
@@ -514,32 +539,6 @@
 
                 #</Axel, Tribute of Opportunity>
 
-                #<Rose, Tribute of Opportunity>
-
-                    # UCP adds the Bitch, Shotgun 1340, and Black Hole
-
-                    set GD_CustomItemPools_MainGame.Siren.Borderlands1Head bAutoReadyItems True
-
-                    {mp:rose_pool_0}
-
-                    {mp:rose_pool_1}
-
-                    {mp:rose_pool_2}
-
-                    {mp:rose_pool_3}
-
-                    {mp:rose_pool_4}
-
-                    {mp:rose_pool_5}
-
-                    {mp:rose_pool_6}
-
-                    {mp:rose_pool_7}
-
-                    {mp:rose_pool_8}
-
-                #</Rose, Tribute of Opportunity>
-
                 #<Cynder, Tribute of Frostburn>
 
                     # UCP adds Flame of the Firehawk and Pyrophobia.  Cynder is melee-only
@@ -567,6 +566,22 @@
                     {mp:cynder_pool_1}
 
                 #</Cynder, Tribute of Frostburn>
+
+                #<Fiona, Tribute of Sanctuary>
+
+                    # UCP adds the Scorpio
+
+                    set GD_CustomItemPools_MainGame.Siren.Head7 bAutoReadyItems True
+
+                    {mp:fiona_pool_0}
+
+                    {mp:fiona_pool_1}
+
+                    {mp:fiona_pool_2}
+
+                    {mp:fiona_pool_3}
+
+                #</Fiona, Tribute of Sanctuary>
 
                 #<Fuse, Tribute of Frostburn>
 
@@ -596,33 +611,6 @@
 
                 #</Fuse, Tribute of Frostburn>
 
-                #<Annie, Tribute of Lynchwood>
-
-                    # UCP adds the Sheriffs Badge and Law
-
-                    set GD_CustomItemPools_MainGame.Soldier.DigitalEdSkins BalancedItems
-                    (
-                        (
-                            ItmPoolDefinition=None,
-                            InvBalanceDefinition=InventoryBalanceDefinition'GD_Artifacts.A_Item_Unique.A_Sheriff',
-                            Probability=(
-                                BaseValueConstant=0.000000,
-                                BaseValueAttribute=None,
-                                InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',
-                                BaseValueScaleConstant=1.000000
-                            ),
-                            bDropOnDeath=True
-                        )
-                    )
-
-                    {mp:annie_pool_0}
-
-                    {mp:annie_pool_1}
-
-                    {mp:annie_pool_2}
-
-                #</Annie, Tribute of Lynchwood>
-
                 #<Garret, Tribute of Lynchwood>
 
                     # UCP adds Deputy's Badge and Order.
@@ -650,22 +638,6 @@
 
                 #</Garret, Tribute of Lynchwood>
 
-                #<Fiona, Tribute of Sanctuary>
-
-                    # UCP adds the Scorpio
-
-                    set GD_CustomItemPools_MainGame.Siren.Head7 bAutoReadyItems True
-
-                    {mp:fiona_pool_0}
-
-                    {mp:fiona_pool_1}
-
-                    {mp:fiona_pool_2}
-
-                    {mp:fiona_pool_3}
-
-                #</Fiona, Tribute of Sanctuary>
-
                 #<Moretus, Tribute of Sawtooth Cauldron>
 
                     # UCP adds the Evil Smasher
@@ -686,27 +658,57 @@
 
                 #</Moretus, Tribute of Sawtooth Cauldron>
 
+                #<Rose, Tribute of Opportunity>
+
+                    # UCP adds the Bitch, Shotgun 1340, and Black Hole
+
+                    set GD_CustomItemPools_MainGame.Siren.Borderlands1Head bAutoReadyItems True
+
+                    {mp:rose_pool_0}
+
+                    {mp:rose_pool_1}
+
+                    {mp:rose_pool_2}
+
+                    {mp:rose_pool_3}
+
+                    {mp:rose_pool_4}
+
+                    {mp:rose_pool_5}
+
+                    {mp:rose_pool_6}
+
+                    {mp:rose_pool_7}
+
+                    {mp:rose_pool_8}
+
+                #</Rose, Tribute of Opportunity>
+
             #</Wattle Gobbler Headhunter Pack>
 
             #<Son of Crawmerax Headhunter Pack>
 
-                # The only enemy needing attention here is Sparky Flynt, who we're
-                # handling just like Captain Flynt -- set up a pool with both Thunderball
-                # Fists and the Tinderbox, and have Sparky equip from that pool.
-                
-                {mp:sparky_pool_0}
-                
-                {mp:sparky_pool_1}
-                
-                {mp:sparky_pool_2}
-                
-                {mp:sparky_pool_3}
-                
-                {mp:sparky_pool_4}
-                
-                {mp:sparky_pool_5}
-                
-                {mp:sparky_pool_6}
+                #<Sparky Flynt>
+
+                    # The only enemy needing attention here is Sparky Flynt, who we're
+                    # handling just like Captain Flynt -- set up a pool with both Thunderball
+                    # Fists and the Tinderbox, and have Sparky equip from that pool.
+
+                    {mp:sparky_pool_0}
+
+                    {mp:sparky_pool_1}
+
+                    {mp:sparky_pool_2}
+
+                    {mp:sparky_pool_3}
+
+                    {mp:sparky_pool_4}
+
+                    {mp:sparky_pool_5}
+
+                    {mp:sparky_pool_6}
+
+                #</Sparky Flynt>
 
             #</Son of Crawmerax Headhunter Pack>
 
@@ -726,21 +728,6 @@
                     {mp:bonehead3_pool_3}
 
                 #</Bone Head 3.0>
-
-                #<Digistruct Doc Mercy>
-
-                    # Unlike the regular Doc Mercy, we can go ahead and have him equip an
-                    # Infinity in here, even though that probably makes him a little less
-                    # fearsome in Digistuct Peak.  Will have a maximum 50% chance to
-                    # equip/drop the Infinity, regardless of the chosen drop rate.
-
-                    {mp:digidocmercy_pool_0}
-
-                    {mp:digidocmercy_pool_1}
-
-                    {mp:digidocmercy_pool_2}
-
-                #</Digistruct Doc Mercy>
 
                 #<Digistruct Assassins>
 
@@ -803,6 +790,21 @@
                     #</Digistruct Assassin Rouf>
 
                 #</Digistruct Assassins>
+
+                #<Digistruct Doc Mercy>
+
+                    # Unlike the regular Doc Mercy, we can go ahead and have him equip an
+                    # Infinity in here, even though that probably makes him a little less
+                    # fearsome in Digistuct Peak.  Will have a maximum 50% chance to
+                    # equip/drop the Infinity, regardless of the chosen drop rate.
+
+                    {mp:digidocmercy_pool_0}
+
+                    {mp:digidocmercy_pool_1}
+
+                    {mp:digidocmercy_pool_2}
+
+                #</Digistruct Doc Mercy>
 
             #</Digistruct Peak>
 

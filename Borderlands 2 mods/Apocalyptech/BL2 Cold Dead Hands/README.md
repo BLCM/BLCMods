@@ -312,6 +312,7 @@ Changelog
  * Cosmetic changes in Enemy Geart Quality comments:
    * Ensure that reported rarity percentages report "1%" instead of "1.0%".
    * Condense regular/badass percentages onto the same lines
+ * Alphabetized boss lists in "Boss Unique Weapon Frequency" section
 
 **v1.0.0** - June 2, 2018 (commit `e69036bad26493073be7bd82207266aac77d2577`)
  * Initial Release
