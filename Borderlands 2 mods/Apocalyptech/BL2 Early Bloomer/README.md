@@ -17,7 +17,7 @@ no reason to import it again.
 Usage
 =====
 
-This mod must be imported into BLCMM with `File -> `Import single mod`.
+This mod must be imported into BLCMM with `File -> Import single mod`.
 Choose the file `BL2 Early Bloomer.blcm` and have at it!
 
 Compatibility
