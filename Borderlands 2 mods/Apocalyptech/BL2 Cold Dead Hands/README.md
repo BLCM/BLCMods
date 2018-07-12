@@ -290,13 +290,15 @@ Changelog
 =========
 
 **v1.1.0** - Unreleased
- * Converted to BLCM format *(we now require BLCMM - FilterTool is not supported)*
+ * Converted to BLCM format *(we now require BLCMM; FilterTool is not supported)*
  * Updated for UCP 4.1 Compatibility *(various loot pool reassignments)*
  * Added an option to have enemy guns not drop all the time (at least at lower
    rarities), as we have in the TPS version of this mod.  This is, more or less,
    BL1-style loot drops, apparently.
  * Added an option to not have rocket launchers in the global equip pools, mostly
    for help in UVHM where facing launcher-using enemies is *suuper* deadly.
+ * Added in my BL2 Early Bloomer mod to enable all item/weapon types from the
+   very beginning of the game.
  * Reorganized the section which disables world weapon/shield drops so that
    disabling weapons/shields in chests is easily toggleable via a single
    category.
