@@ -166,6 +166,7 @@ class DropConfig(BaseConfig):
 
     # Shield pool (only need to worry about one pool for these)
     set_shields = None
+    set_shields_noturtle = None
 
     # Rarity weight presets that we'll generate
     weight_common = None
@@ -229,6 +230,7 @@ class DropConfig(BaseConfig):
                 self.equip_pool_snipers,
                 self.equip_pool_only_shotguns,
                 self.pool_shields,
+                self.pool_shields_noturtle,
             ]
 
         # First, assign enemies using DefaultItemPoolList[x]
@@ -371,6 +373,7 @@ class Regular(DropConfig):
 
     # Shield pool
     pool_shields = 'GD_CustomItemPools_tulip.Mechro.PurpleDark'
+    pool_shields_noturtle = 'GD_CustomItemPools_Aster.Psycho.AsterSkin'
     stalker_shields = 'GD_CustomItemPools_Lilac.Psycho.RedNinja'
 
     ###
@@ -553,14 +556,6 @@ class Regular(DropConfig):
                 (1, 'GD_Population_Marauder.Balance.Unique.PawnBalance_HodunkGrunt'),
                 (3, 'GD_Population_Marauder.Balance.Unique.PawnBalance_ZafordGrunt'),
                 (0, 'GD_Population_Midget.Balance.PawnBalance_MidgetNomad'),
-                (1, 'GD_Population_Midget.Balance.PawnBalance_MidgetRat'),
-                (1, 'GD_Population_Midget.Balance.Unique.PawnBalance_LaneyDwarf1'),
-                (1, 'GD_Population_Midget.Balance.Unique.PawnBalance_LaneyDwarf2'),
-                (1, 'GD_Population_Midget.Balance.Unique.PawnBalance_LaneyDwarf3'),
-                (1, 'GD_Population_Midget.Balance.Unique.PawnBalance_LaneyDwarf4'),
-                (1, 'GD_Population_Midget.Balance.Unique.PawnBalance_LaneyDwarf5'),
-                (1, 'GD_Population_Midget.Balance.Unique.PawnBalance_LaneyDwarf6'),
-                (1, 'GD_Population_Midget.Balance.Unique.PawnBalance_LaneyDwarf7'),
                 (1, 'GD_Population_Nomad.Balance.PawnBalance_Nomad_Rocket'),
                 (0, 'GD_Population_Psycho.Balance.Unique.PawnBalance_Undertaker'),
                 (0, 'GD_Population_Rat.Balance.PawnBalance_RatPlague'),
@@ -570,6 +565,17 @@ class Regular(DropConfig):
                 (0, 'GD_Sage_Pop_Loader.Balance.PawnBalance_Sage_LoaderEXP'),
                 (1, 'GD_Sage_Pop_Loader.Balance.PawnBalance_Sage_LoaderGUN'),
                 (1, 'GD_Sage_Pop_Loader.Balance.PawnBalance_Sage_LoaderION'),
+            ],
+            # Shields (but without Turtle shields)
+            [
+                (1, 'GD_Population_Midget.Balance.Unique.PawnBalance_LaneyDwarf1'),
+                (1, 'GD_Population_Midget.Balance.Unique.PawnBalance_LaneyDwarf2'),
+                (1, 'GD_Population_Midget.Balance.Unique.PawnBalance_LaneyDwarf3'),
+                (1, 'GD_Population_Midget.Balance.Unique.PawnBalance_LaneyDwarf4'),
+                (1, 'GD_Population_Midget.Balance.Unique.PawnBalance_LaneyDwarf5'),
+                (1, 'GD_Population_Midget.Balance.Unique.PawnBalance_LaneyDwarf6'),
+                (1, 'GD_Population_Midget.Balance.Unique.PawnBalance_LaneyDwarf7'),
+                (1, 'GD_Population_Midget.Balance.PawnBalance_MidgetRat'),
             ],
         )
 
@@ -685,9 +691,6 @@ class Regular(DropConfig):
                 (0, 0, 'GD_Allium_PsychoSnow.Balance.PawnBalance_PsychoSnow'),
                 (1, 0, 'GD_Allium_PsychoSnow.Balance.PawnBalance_PsychoSnow'),
                 (2, 0, 'GD_Allium_PsychoSnow.Balance.PawnBalance_PsychoSnow'),
-                (0, 0, 'GD_Allium_PsychoSnow_Midget.Balance.PawnBalance_PsychoSnow_Midget'),
-                (1, 0, 'GD_Allium_PsychoSnow_Midget.Balance.PawnBalance_PsychoSnow_Midget'),
-                (2, 0, 'GD_Allium_PsychoSnow_Midget.Balance.PawnBalance_PsychoSnow_Midget'),
                 (0, 0, 'GD_Butcher.Balance.PawnBalance_Butcher'),
                 (1, 0, 'GD_Butcher.Balance.PawnBalance_Butcher'),
                 (2, 0, 'GD_Butcher.Balance.PawnBalance_Butcher'),
@@ -714,8 +717,6 @@ class Regular(DropConfig):
                 (1, 1, 'GD_Population_Engineer.Balance.PawnBalance_Engineer'),
                 (0, 0, 'GD_Population_Engineer.Balance.PawnBalance_EngineerArms'),
                 (1, 0, 'GD_Population_Engineer.Balance.PawnBalance_EngineerArms'),
-                (0, 1, 'GD_Population_Engineer.Balance.PawnBalance_HyperionHawk'),
-                (1, 1, 'GD_Population_Engineer.Balance.PawnBalance_HyperionHawk'),
                 (0, 1, 'GD_Population_Engineer.Balance.PawnBalance_HyperionInfiltrator'),
                 (1, 1, 'GD_Population_Engineer.Balance.PawnBalance_HyperionInfiltrator'),
                 (0, 1, 'GD_Population_Engineer.Balance.PawnBalance_HyperionSoldier'),
@@ -769,6 +770,14 @@ class Regular(DropConfig):
                 (0, 0, 'GD_RatChef.Balance.PawnBalance_RatChef'),
                 (0, 0, 'GD_RatLab_Digi.Population.PawnBalance_RatLab_Digi'),
                 (1, 0, 'GD_RatLab_Digi.Population.PawnBalance_RatLab_Digi'),
+            ],
+            # Shields (but without Turtle shields)
+            [
+                (0, 0, 'GD_Allium_PsychoSnow_Midget.Balance.PawnBalance_PsychoSnow_Midget'),
+                (1, 0, 'GD_Allium_PsychoSnow_Midget.Balance.PawnBalance_PsychoSnow_Midget'),
+                (2, 0, 'GD_Allium_PsychoSnow_Midget.Balance.PawnBalance_PsychoSnow_Midget'),
+                (0, 1, 'GD_Population_Engineer.Balance.PawnBalance_HyperionHawk'),
+                (1, 1, 'GD_Population_Engineer.Balance.PawnBalance_HyperionHawk'),
             ],
         )
 
@@ -949,6 +958,9 @@ class Regular(DropConfig):
                 ('icecanyon_p', 9, 'icecanyon_p.TheWorld:PersistentLevel.WillowAIPawn_69'),
                 ('icecanyon_p', 9, 'icecanyon_p.TheWorld:PersistentLevel.WillowAIPawn_70'),
             ],
+            # Shields (but without Turtle shields)
+            [
+            ],
         )
 
     enemy_dl_ia = (
@@ -980,6 +992,9 @@ class Regular(DropConfig):
             # Shields
             [
             ],
+            # Shields (but without Turtle shields)
+            [
+            ],
         )
 
     enemy_nipl = (
@@ -1009,6 +1024,9 @@ class Regular(DropConfig):
             [
             ],
             # Shields
+            [
+            ],
+            # Shields (but without Turtle shields)
             [
             ],
         )
@@ -1082,6 +1100,7 @@ class Badass(DropConfig):
 
     # Shield pool
     pool_shields = 'GD_CustomItemPools_MainGame.Siren.White'
+    pool_shields_noturtle = None
     stalker_shields = 'GD_CustomItemPools_MainGame.Soldier.White'
 
     ###
@@ -1251,6 +1270,9 @@ class Badass(DropConfig):
                 (0, 'GD_Population_Loader.Balance.Unique.PawnBalance_Willhelm'),
                 (0, 'GD_Sage_Raid_BeastMaster.Population.Balance_Sage_Raid_BeastMaster'),
             ],
+            # Shields (but without Turtle shields)
+            [
+            ],
         )
 
     enemy_pt_cipl = (
@@ -1376,6 +1398,9 @@ class Badass(DropConfig):
                 (0, 1, 'GD_Sage_Pop_DrNakayama.Balance.PawnBalance_Sage_DrNakayama'), # again, let's give him all the help we can
                 (0, 0, 'GD_SandMale.Balance.PawnBalance_SandMale'),
             ],
+            # Shields (but without Turtle shields)
+            [
+            ],
         )
 
     enemy_level_ipl = (
@@ -1420,6 +1445,9 @@ class Badass(DropConfig):
                 ('damtop_p', 13, 'damtop_p.TheWorld:PersistentLevel.WillowAIPawn_20'),
                 ('Fridge_P', 12, 'Fridge_P.TheWorld:PersistentLevel.WillowAIPawn_228'),
             ],
+            # Shields (but without Turtle shields)
+            [
+            ],
         )
 
     enemy_dl_ia = (
@@ -1448,6 +1476,9 @@ class Badass(DropConfig):
             [
             ],
             # Shields
+            [
+            ],
+            # Shields (but without Turtle shields)
             [
             ],
         )
@@ -1488,6 +1519,9 @@ class Badass(DropConfig):
             [
             ],
             # Shields
+            [
+            ],
+            # Shields (but without Turtle shields)
             [
             ],
         )
@@ -2015,6 +2049,7 @@ for (rarity_key, rarity_label) in DropConfig.rarity_presets:
         config.set_shields = get_balanced_set(
             config.pool_shields,
             [
+                #('GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Juggernaut_01_Common', config.weight_common, 'InventoryBalanceDefinition', 1, True),
                 ('GD_Itempools.ShieldPools.Pool_Shields_All_01_Common', config.weight_common, None, 1, True),
                 ('GD_Itempools.ShieldPools.Pool_Shields_All_01_Common', config.weight_common, None, 1, False),
                 ('GD_Itempools.ShieldPools.Pool_Shields_All_02_Uncommon', config.weight_uncommon, None, 1, True),
@@ -2043,6 +2078,102 @@ for (rarity_key, rarity_label) in DropConfig.rarity_presets:
                 ('GD_Itempools.ShieldPools.Pool_Shields_Roid_06_Legendary', config.weight_legendary, None, 1, True),
                 ('GD_Itempools.ShieldPools.Pool_Shields_Roid_06_Legendary', config.weight_legendary, None, 1, False),
             ])
+
+    # A few enemies (Hyperion Hawks, Midget Rats, Psycho Snow Midgets, and Laney's Dwarves)
+    # can become unkillable if they get a turtle shield, depending on parts and rarity and
+    # comparative level (common-rarity turtle shields in all bandit parts are the worst,
+    # even compared to Fabled Tortoise).  We're going to set up a special shields pool for
+    # these folks.  (There are, of course, plenty of other enemies in the game who COULD
+    # be affected by this, but those are the ones which actually use shields.)
+    regular.set_shields_noturtle = get_balanced_set(
+        regular.pool_shields_noturtle,
+        [
+
+            ('GD_Itempools.ShieldPools.Pool_Shields_Standard_01_Common', regular.weight_common, None, 1, True),
+            ('GD_Itempools.ShieldPools.Pool_Shields_Standard_01_Common', regular.weight_common, None, 1, False),
+            ('GD_Itempools.ShieldPools.Pool_Shields_NovaShields_All_01_Common', regular.weight_common, None, 1, True),
+            ('GD_Itempools.ShieldPools.Pool_Shields_NovaShields_All_01_Common', regular.weight_common, None, 1, False),
+            ('GD_Itempools.ShieldPools.Pool_Shields_Roid_01_Common', regular.weight_common, None, 1, True),
+            ('GD_Itempools.ShieldPools.Pool_Shields_Roid_01_Common', regular.weight_common, None, 1, False),
+            ('GD_Itempools.ShieldPools.Pool_Shields_SpikeShields_All_01_Common', regular.weight_common, None, 1, True),
+            ('GD_Itempools.ShieldPools.Pool_Shields_SpikeShields_All_01_Common', regular.weight_common, None, 1, False),
+            ('GD_Itempools.ShieldPools.Pool_Shields_Booster_01_Common', regular.weight_common, None, 1, True),
+            ('GD_Itempools.ShieldPools.Pool_Shields_Booster_01_Common', regular.weight_common, None, 1, False),
+            ('GD_Itempools.ShieldPools.Pool_Shields_Absorption_01_Common', regular.weight_common, None, 1, True),
+            ('GD_Itempools.ShieldPools.Pool_Shields_Absorption_01_Common', regular.weight_common, None, 1, False),
+            ('GD_Itempools.ShieldPools.Pool_Shields_Impact_01_Common', regular.weight_common, None, 1, True),
+            ('GD_Itempools.ShieldPools.Pool_Shields_Impact_01_Common', regular.weight_common, None, 1, False),
+            ('GD_Itempools.ShieldPools.Pool_Shields_Chimera_01_Common', regular.weight_common, None, 1, True),
+            ('GD_Itempools.ShieldPools.Pool_Shields_Chimera_01_Common', regular.weight_common, None, 1, False),
+
+            ('GD_Itempools.ShieldPools.Pool_Shields_Standard_02_Uncommon', regular.weight_uncommon, None, 1, True),
+            ('GD_Itempools.ShieldPools.Pool_Shields_Standard_02_Uncommon', regular.weight_uncommon, None, 1, False),
+            ('GD_Itempools.ShieldPools.Pool_Shields_NovaShields_All_02_Uncommon', regular.weight_uncommon, None, 1, True),
+            ('GD_Itempools.ShieldPools.Pool_Shields_NovaShields_All_02_Uncommon', regular.weight_uncommon, None, 1, False),
+            ('GD_Itempools.ShieldPools.Pool_Shields_Roid_02_Uncommon', regular.weight_uncommon, None, 1, True),
+            ('GD_Itempools.ShieldPools.Pool_Shields_Roid_02_Uncommon', regular.weight_uncommon, None, 1, False),
+            ('GD_Itempools.ShieldPools.Pool_Shields_SpikeShields_All_02_Uncommon', regular.weight_uncommon, None, 1, True),
+            ('GD_Itempools.ShieldPools.Pool_Shields_SpikeShields_All_02_Uncommon', regular.weight_uncommon, None, 1, False),
+            ('GD_Itempools.ShieldPools.Pool_Shields_Booster_02_Uncommon', regular.weight_uncommon, None, 1, True),
+            ('GD_Itempools.ShieldPools.Pool_Shields_Booster_02_Uncommon', regular.weight_uncommon, None, 1, False),
+            ('GD_Itempools.ShieldPools.Pool_Shields_Absorption_02_Uncommon', regular.weight_uncommon, None, 1, True),
+            ('GD_Itempools.ShieldPools.Pool_Shields_Absorption_02_Uncommon', regular.weight_uncommon, None, 1, False),
+            ('GD_Itempools.ShieldPools.Pool_Shields_Impact_02_Uncommon', regular.weight_uncommon, None, 1, True),
+            ('GD_Itempools.ShieldPools.Pool_Shields_Impact_02_Uncommon', regular.weight_uncommon, None, 1, False),
+            ('GD_Itempools.ShieldPools.Pool_Shields_Chimera_02_Uncommon', regular.weight_uncommon, None, 1, True),
+            ('GD_Itempools.ShieldPools.Pool_Shields_Chimera_02_Uncommon', regular.weight_uncommon, None, 1, False),
+
+            ('GD_Itempools.ShieldPools.Pool_Shields_Standard_04_Rare', regular.weight_rare, None, 1, True),
+            ('GD_Itempools.ShieldPools.Pool_Shields_Standard_04_Rare', regular.weight_rare, None, 1, False),
+            ('GD_Itempools.ShieldPools.Pool_Shields_NovaShields_All_04_Rare', regular.weight_rare, None, 1, True),
+            ('GD_Itempools.ShieldPools.Pool_Shields_NovaShields_All_04_Rare', regular.weight_rare, None, 1, False),
+            ('GD_Itempools.ShieldPools.Pool_Shields_Roid_04_Rare', regular.weight_rare, None, 1, True),
+            ('GD_Itempools.ShieldPools.Pool_Shields_Roid_04_Rare', regular.weight_rare, None, 1, False),
+            ('GD_Itempools.ShieldPools.Pool_Shields_SpikeShields_All_04_Rare', regular.weight_rare, None, 1, True),
+            ('GD_Itempools.ShieldPools.Pool_Shields_SpikeShields_All_04_Rare', regular.weight_rare, None, 1, False),
+            ('GD_Itempools.ShieldPools.Pool_Shields_Booster_04_Rare', regular.weight_rare, None, 1, True),
+            ('GD_Itempools.ShieldPools.Pool_Shields_Booster_04_Rare', regular.weight_rare, None, 1, False),
+            ('GD_Itempools.ShieldPools.Pool_Shields_Absorption_04_Rare', regular.weight_rare, None, 1, True),
+            ('GD_Itempools.ShieldPools.Pool_Shields_Absorption_04_Rare', regular.weight_rare, None, 1, False),
+            ('GD_Itempools.ShieldPools.Pool_Shields_Impact_04_Rare', regular.weight_rare, None, 1, True),
+            ('GD_Itempools.ShieldPools.Pool_Shields_Impact_04_Rare', regular.weight_rare, None, 1, False),
+            ('GD_Itempools.ShieldPools.Pool_Shields_Chimera_04_Rare', regular.weight_rare, None, 1, True),
+            ('GD_Itempools.ShieldPools.Pool_Shields_Chimera_04_Rare', regular.weight_rare, None, 1, False),
+
+            ('GD_Itempools.ShieldPools.Pool_Shields_Standard_05_VeryRare', regular.weight_veryrare, None, 1, True),
+            ('GD_Itempools.ShieldPools.Pool_Shields_Standard_05_VeryRare', regular.weight_veryrare, None, 1, False),
+            ('GD_Itempools.ShieldPools.Pool_Shields_NovaShields_All_05_VeryRare', regular.weight_veryrare, None, 1, True),
+            ('GD_Itempools.ShieldPools.Pool_Shields_NovaShields_All_05_VeryRare', regular.weight_veryrare, None, 1, False),
+            ('GD_Itempools.ShieldPools.Pool_Shields_Roid_05_VeryRare', regular.weight_veryrare, None, 1, True),
+            ('GD_Itempools.ShieldPools.Pool_Shields_Roid_05_VeryRare', regular.weight_veryrare, None, 1, False),
+            ('GD_Itempools.ShieldPools.Pool_Shields_SpikeShields_All_05_VeryRare', regular.weight_veryrare, None, 1, True),
+            ('GD_Itempools.ShieldPools.Pool_Shields_SpikeShields_All_05_VeryRare', regular.weight_veryrare, None, 1, False),
+            ('GD_Itempools.ShieldPools.Pool_Shields_Booster_05_VeryRare', regular.weight_veryrare, None, 1, True),
+            ('GD_Itempools.ShieldPools.Pool_Shields_Booster_05_VeryRare', regular.weight_veryrare, None, 1, False),
+            ('GD_Itempools.ShieldPools.Pool_Shields_Absorption_05_VeryRare', regular.weight_veryrare, None, 1, True),
+            ('GD_Itempools.ShieldPools.Pool_Shields_Absorption_05_VeryRare', regular.weight_veryrare, None, 1, False),
+            ('GD_Itempools.ShieldPools.Pool_Shields_Impact_05_VeryRare', regular.weight_veryrare, None, 1, True),
+            ('GD_Itempools.ShieldPools.Pool_Shields_Impact_05_VeryRare', regular.weight_veryrare, None, 1, False),
+            ('GD_Itempools.ShieldPools.Pool_Shields_Chimera_05_VeryRare', regular.weight_veryrare, None, 1, True),
+            ('GD_Itempools.ShieldPools.Pool_Shields_Chimera_05_VeryRare', regular.weight_veryrare, None, 1, False),
+
+            ('GD_Itempools.ShieldPools.Pool_Shields_Standard_06_Legendary', regular.weight_legendary, None, 1, True),
+            ('GD_Itempools.ShieldPools.Pool_Shields_Standard_06_Legendary', regular.weight_legendary, None, 1, False),
+            ('GD_Itempools.ShieldPools.Pool_Shields_NovaShields_All_06_Legendary', regular.weight_legendary, None, 1, True),
+            ('GD_Itempools.ShieldPools.Pool_Shields_NovaShields_All_06_Legendary', regular.weight_legendary, None, 1, False),
+            ('GD_Itempools.ShieldPools.Pool_Shields_Roid_06_Legendary', regular.weight_legendary, None, 1, True),
+            ('GD_Itempools.ShieldPools.Pool_Shields_Roid_06_Legendary', regular.weight_legendary, None, 1, False),
+            ('GD_Itempools.ShieldPools.Pool_Shields_SpikeShields_All_06_Legendary', regular.weight_legendary, None, 1, True),
+            ('GD_Itempools.ShieldPools.Pool_Shields_SpikeShields_All_06_Legendary', regular.weight_legendary, None, 1, False),
+            ('GD_Itempools.ShieldPools.Pool_Shields_Booster_06_Legendary', regular.weight_legendary, None, 1, True),
+            ('GD_Itempools.ShieldPools.Pool_Shields_Booster_06_Legendary', regular.weight_legendary, None, 1, False),
+            ('GD_Itempools.ShieldPools.Pool_Shields_Absorption_06_Legendary', regular.weight_legendary, None, 1, True),
+            ('GD_Itempools.ShieldPools.Pool_Shields_Absorption_06_Legendary', regular.weight_legendary, None, 1, False),
+            ('GD_Itempools.ShieldPools.Pool_Shields_Impact_06_Legendary', regular.weight_legendary, None, 1, True),
+            ('GD_Itempools.ShieldPools.Pool_Shields_Impact_06_Legendary', regular.weight_legendary, None, 1, False),
+            ('GD_Itempools.ShieldPools.Pool_Shields_Chimera_06_Legendary', regular.weight_legendary, None, 1, True),
+            ('GD_Itempools.ShieldPools.Pool_Shields_Chimera_06_Legendary', regular.weight_legendary, None, 1, False),
+        ])
 
     # Set up Jack's Body Double's equip pool
     mp.register_str('body_double_equip',
@@ -2249,7 +2380,7 @@ for (rarity_key, rarity_label) in DropConfig.rarity_drop_prob_presets:
     hotfix_list = []
     for config in [regular, badass]:
         rarity_drop_prob = config.rarity_drop_prob[rarity_key]
-        (T_GUN, T_SHIELD) = range(2)
+        (T_GUN, T_SHIELD, T_SHIELD_NOTURTLE) = range(3)
         for (pool, pooltype, has_regular, has_badass, level) in [
                 (config.rarity_pool_ar, T_GUN, True, True, 'None'),
                 (config.rarity_pool_launchers, T_GUN, True, True, 'None'),
@@ -2258,6 +2389,7 @@ for (rarity_key, rarity_label) in DropConfig.rarity_drop_prob_presets:
                 (config.rarity_pool_smg, T_GUN, True, True, 'None'),
                 (config.rarity_pool_snipers, T_GUN, True, True, 'None'),
                 (config.pool_shields, T_SHIELD, True, True, 'None'),
+                (config.pool_shields_noturtle, T_SHIELD_NOTURTLE, True, False, 'None'),
                 (config.stalker_shields, T_SHIELD, True, True, 'None'),
                 ('GD_JacksBodyDouble.WeaponPools.Pool_Weapons_JackBodyDouble_EnemyUse', T_GUN, False, True, 'HyperionCity_P'),
                 ('GD_Iris_ItemPoolsEnemyUse.WeaponPools.Pool_Weapons_AngelGang_Pistols_EnemyUse', T_GUN, True, False, 'None'),
@@ -2280,6 +2412,11 @@ for (rarity_key, rarity_label) in DropConfig.rarity_drop_prob_presets:
                     rarities = ['common', 'uncommon', 'rare', 'veryrare', 'alien', 'legendary']
                 elif pooltype == T_SHIELD:
                     rarities = ['common', 'uncommon', 'rare', 'veryrare', 'legendary']
+                elif pooltype == T_SHIELD_NOTURTLE:
+                    num_types = 8
+                    rarities = ['common']*num_types + ['uncommon']*num_types + \
+                            ['rare']*num_types + ['veryrare']*num_types + \
+                            ['legendary']*num_types
                 else:
                     raise Exception('Unknown pool type: {}'.format(pooltype))
                 for (idx, rarity) in enumerate(rarities):

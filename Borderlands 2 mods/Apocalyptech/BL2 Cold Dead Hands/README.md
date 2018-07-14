@@ -300,9 +300,16 @@ Changelog
    disabling weapons/shields in chests is easily toggleable via a single
    category.
  * Added bosses from Digistruct Peak:
-     * Bone Head 3.0 equips Bone Shredder / Shredifier
-     * Digi Doc Mercy has a 50% chance to equip the Infinity
-     * Digi Assassins all equip as they do in Southpaw Steam and Power
+    * Bone Head 3.0 equips Bone Shredder / Shredifier
+    * Digi Doc Mercy has a 50% chance to equip the Infinity
+    * Digi Assassins all equip as they do in Southpaw Steam and Power
+ * Changed some enemy shield pools so they can't spawn Turtle shields, since
+   Turtle shields can potentially cause the enemy to become literally unkillable,
+   with the right combination of shield parts, rarity, and level:
+    * Midget Rats
+    * Laney's Dwarves
+    * Hyperion Hawks
+    * Psycho Snow Midgets
  * Fixes some errant commas in various statements (didn't affect the mod itself
    but was causing some syntax warnings in BLCMM)
  * Cosmetic changes in Enemy Gear Quality comments:
