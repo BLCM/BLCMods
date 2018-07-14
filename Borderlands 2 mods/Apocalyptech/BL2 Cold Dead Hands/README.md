@@ -76,6 +76,10 @@ from the start of the battle which gun you'll receive.
     gear:
     * Shotgun chest at the end of Windshear Waste
     * Slag Gun oven in the Wattle Gobbler Headhunter Pack
+    * Red chest in Torgue arena
+  * Snowman's head in Tundra Express
+  * Slot machines
+  * Torgue vending machines
 
 * Doc Mercy has to be using an E-Tech blaster for Medical Mystery to make
   sense, so I've chosen to keep that rather than having him use an Infinity
@@ -254,8 +258,9 @@ Known issues with the mod:
 Ideas/TODO
 ==========
 
-Things to think about:
-
+* Because gemstones were added into the E-Tech pool, the Medical Mystery
+  mission might accidentally reward you a gemstone weapon rather than
+  E-Tech.
 * Restrict weapon manufacturer by level?  (Only Jakobs in Lynchwood, etc?)
 * Might be nifty to restrict weapon manufacturer by enemy type, though that
   would require eating up more skinpools (the by-level idea could reuse all
@@ -269,6 +274,20 @@ Things to think about:
      to spawn weapons/shields attach to different locations, or just not at
      all.  The problem here is that's just a fair amount of busywork I don't
      care to do.
+* Various lootsplosion-style events provide weapons (and maybe shields), and
+  should possibly be nerfed.  I've left them as-is for awhile mostly out of
+  laziness, and partly because I think they probably *should* continue to give
+  some gear, even if they violate the spirit of the mod.  This list is
+  probably not exhaustive, but:
+  * BNK3R lootsplosion
+  * Warrior lootsplosion
+  * Good, Bad, Mordecai lootsplosion
+  * Handsome Dragon lootsplosion
+* Add in a toggle to allow Shield Surveyors to use/drop "real" shields?
+* I don't think this is possible, but have enemies drop their guns when they
+  go into a "no gun" state?  I couldn't even figure out a way to do it
+  with TPS's Ascending Dahl troops, and they've already got behaviors to
+  drop gear built-in, though.
 
 Licenses
 ========
