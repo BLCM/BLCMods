@@ -2,9 +2,9 @@ If you want to experience Borderlands 2 in a new way, this modpack is exactly fo
 
 !!!THE UCP IS INCLUDED IN THIS STOP MERGING THE UCP INTO BL2 REBORN PLEASE READ THE MODLIST LOL!!!
 
-The version 1.2 is in BETA and features some additional features and was fully build from scratch with BLCMM. Please report any bugs and anomalies to @Koby in Discord.
+The version 1.3 is in BETA and features some additional features and was fully build from scratch with BLCMM. Please report any bugs and anomalies to @Koby in Discord.
 
-Download the modpack by rightclicking the "Download" button in "BL2Reborn.txt" and "Save link as...".
+Download the modpack by rightclicking the "Download" button in "BL2RebornBETA.txt" and "Save link as...".
 
 You can enable optional mods at the bottom of the modpack with BLCMM.
 
@@ -31,8 +31,7 @@ Special credit to ThaCampin'Dutchman for the original ideas of Aaron0000' "The C
 I !!!HIGHLY!!! recommend using BLCMM for everything you're doing with this modpack
 https://github.com/BLCM/BLCMods/wiki/Borderlands-Community-Mod-Manager
 
-I also !!!HIGHLY!!! recommend using the Hex Multitool to disable Sanity Checks
-https://github.com/c0dycode/Borderlands-Hex-Multitool
+I also !!!HIGHLY!!! recommend using the Hex Multitool to disable Sanity Checks which is included in BLCMM
 
 If you need help using BLCMM on BL2 Reborn, check out my video on it (outdated but should still work)
 https://youtu.be/jOL_Vlb2PN4
