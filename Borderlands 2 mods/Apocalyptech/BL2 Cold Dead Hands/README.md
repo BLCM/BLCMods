@@ -1,6 +1,11 @@
 BL2 Cold Dead Hands
 ===================
 
+**WARNING:** This mod has not been tested/updated with UCP 4.1 yet, and
+there's probably at least some boss drops which won't work properly
+with UCP 4.1.  *Probably* whatever problems there are will be pretty
+minor, but right now UCP 4.1 is unsupported with this.
+
 This mod completely revamps the way in which weapons and shields are
 acquired during the game.  Instead of dropping weapons/shields from a
 random loot pool, enemies will now *always* drop the specific gun and
