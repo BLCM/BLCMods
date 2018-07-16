@@ -4263,6 +4263,10 @@ for (label, key, unique_pct, rare_pct) in [
                 rare_pct=rare_pct,
                 )
 
+# Load in skinpool settings
+with open('input-file-skinpools.txt') as df:
+    skinpool_setup = df.read()
+
 ###
 ### Generate the mod string
 ###
@@ -4287,6 +4291,7 @@ with open('input-file-mod.txt') as df:
         boss_drops_stock=boss_drops['stock'],
         stalker_shields_real="\n\n".join(stalker_shields_real_list),
         stalker_shields_maylay="\n\n".join(stalker_shields_maylay_list),
+        skinpool_setup=skinpool_setup,
         )
 
 ###

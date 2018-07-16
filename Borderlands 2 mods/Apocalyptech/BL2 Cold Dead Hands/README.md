@@ -27,17 +27,18 @@ via world drops, chests, and the like.
 Requirements
 ------------
 
-This mod should be able to be used mostly on its own, but has never been
-tested without also having UCP 4.1 fully enabled.  It's highly recommended
-that you use the mod with UCP 4.1, to prevent potential problems.
+Cold Dead Hands should theoretically be fully standalone, as of version 1.1
+(it no longer requires any part of UCP).  It's received the most testing
+in conjunction with UCP 4.1, but let me know if there are any problems when
+running without.
 
-If you do decide to use this mod without UCP 4.1 active, make sure you at least
-copy/enable this one specific UCP category:
+Note that Cold Dead Hands is probably incompatible with any version of
+BL2 Reborn, and may cause crashes or other instability if run together
+with that.
 
-* `Loot Pool & Drop Changes -> Skinpool Fixes (Don't uncheck this)`
-
-This is required to free up the custom loot pools that we use to equip enemies
-with.
+Cold Dead Hands assumes that you have all Borderlands DLC (including the
+Headhunter packs, though it's possible that it'll work fine if you don't
+have those).
 
 Usage/Installation
 ------------------
@@ -256,6 +257,10 @@ Known issues with the mod:
   unnatural-looking way.  For now I'm just coping; there's a couple different
   ways to fix that (enumerated below) but I don't particularly care to do
   either at the moment.
+* As a side-effect of the way we have to make use of loot pools, skin drops
+  from various enemies will be broken (it's that or break skin rewards for
+  challenges/missions).  Cold Dead Hands breaks skin drops for the following:
+  creepers, skags, chubbies/tubbies, spiderants, and threshers.
 
 Ideas/TODO
 ==========
