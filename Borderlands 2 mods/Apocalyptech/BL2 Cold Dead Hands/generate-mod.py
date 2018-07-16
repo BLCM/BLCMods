@@ -229,6 +229,7 @@ class DropConfig(BaseConfig):
                 self.equip_pool_launchers,
                 self.equip_pool_snipers,
                 self.equip_pool_only_shotguns,
+                self.equip_pool_only_ar,
                 self.pool_shields,
                 self.pool_shields_noturtle,
             ]
@@ -370,6 +371,7 @@ class Regular(DropConfig):
     equip_pool_smg = 'GD_CustomItemPools_MainGame.Mercenary.PurpleDark'
     equip_pool_snipers = 'GD_CustomItemPools_MainGame.Siren.PurpleDark'
     equip_pool_only_shotguns = 'GD_CustomItemPools_MainGame.Soldier.PurpleDark'
+    equip_pool_only_ar = 'GD_CustomItemPools_Aster.Siren.AsterSkin'
 
     # Shield pool
     pool_shields = 'GD_CustomItemPools_tulip.Mechro.PurpleDark'
@@ -492,6 +494,9 @@ class Regular(DropConfig):
             # Only Shotguns
             [
             ],
+            # Only ARs
+            [
+            ],
             # Shields
             [
                 (1, 'GD_Allium_LootMidget_LoaderJET.Balance.PawnBalance_LootMidget_LoaderJETAllium'),
@@ -593,7 +598,6 @@ class Regular(DropConfig):
                 (1, 1, 'GD_Population_Midget.Balance.PawnBalance_MidgetNomad'),
                 (0, 0, 'GD_Population_Nomad.Balance.PawnBalance_Nomad'),
                 (1, 0, 'GD_Population_Nomad.Balance.PawnBalance_Nomad'),
-                (1, 0, 'GD_Population_Nomad.Balance.PawnBalance_NomadPyro'),
                 (0, 0, 'GD_Population_Nomad.Balance.PawnBalance_NomadShieldwMidget'),
                 (1, 0, 'GD_Population_Nomad.Balance.PawnBalance_NomadShieldwMidget'),
                 (0, 0, 'GD_Population_Nomad.Balance.PawnBalance_NomadShock'),
@@ -670,6 +674,11 @@ class Regular(DropConfig):
                 (1, 0, 'GD_Orchid_Pop_Pirates.Balance.PawnBalance_Orchid_PirateMidgetShotgun'),
                 (0, 0, 'GD_Population_Midget.Balance.PawnBalance_MidgetShotgun'),
                 (1, 0, 'GD_Population_Midget.Balance.PawnBalance_MidgetShotgun'),
+            ],
+            # Only ARs
+            [
+                (0, 0, 'GD_Population_Nomad.Balance.PawnBalance_NomadPyro'),
+                (1, 0, 'GD_Population_Nomad.Balance.PawnBalance_NomadPyro'),
             ],
             # Shields
             [
@@ -877,6 +886,9 @@ class Regular(DropConfig):
             # Only Shotguns
             [
             ],
+            # Only ARs
+            [
+            ],
             # Shields
             [
                 ('dam_p', 9, 'dam_p.TheWorld:PersistentLevel.WillowAIPawn_20'),
@@ -987,6 +999,9 @@ class Regular(DropConfig):
             # Only Shotguns
             [
             ],
+            # Only ARs
+            [
+            ],
             # Shields
             [
             ],
@@ -1019,6 +1034,9 @@ class Regular(DropConfig):
             [
             ],
             # Only Shotguns
+            [
+            ],
+            # Only ARs
             [
             ],
             # Shields
@@ -1095,6 +1113,7 @@ class Badass(DropConfig):
     equip_pool_smg = 'GD_CustomItemPools_Lilac.Psycho.White'
     equip_pool_snipers = 'GD_CustomItemPools_MainGame.Assassin.White'
     equip_pool_only_shotguns = 'GD_CustomItemPools_MainGame.Mercenary.White'
+    equip_pool_only_ar = None
 
     # Shield pool
     pool_shields = 'GD_CustomItemPools_MainGame.Siren.White'
@@ -1194,6 +1213,9 @@ class Badass(DropConfig):
             # Only Shotguns
             [
                 (0, 'GD_Population_Engineer.Balance.Unique.PawnBalance_Leprechaun'),
+            ],
+            # Only ARs
+            [
             ],
             # Shields
             [
@@ -1338,6 +1360,9 @@ class Badass(DropConfig):
             # Only Shotguns
             [
             ],
+            # Only ARs
+            [
+            ],
             # Shields
             [
                 (0, 1, 'GD_HodunkBadass.Balance.PawnBalance_HodunkBadass'),
@@ -1437,6 +1462,9 @@ class Badass(DropConfig):
             # Only Shotguns
             [
             ],
+            # Only ARs
+            [
+            ],
             # Shields
             [
                 ('damtop_p', 13, 'damtop_p.TheWorld:PersistentLevel.WillowAIPawn_20'),
@@ -1470,6 +1498,9 @@ class Badass(DropConfig):
             [
             ],
             # Only Shotguns
+            [
+            ],
+            # Only ARs
             [
             ],
             # Shields
@@ -1513,6 +1544,9 @@ class Badass(DropConfig):
             [
             ],
             # Only Shotguns
+            [
+            ],
+            # Only ARs
             [
             ],
             # Shields
@@ -2531,6 +2565,13 @@ for config in [regular, badass]:
         [
             (config.rarity_pool_shotguns, 1),
         ])
+
+    if config.equip_pool_only_ar is not None:
+        config.set_equip_only_ar = get_balanced_set(
+            config.equip_pool_only_ar,
+            [
+                (config.rarity_pool_ar, 1),
+            ])
 
     # Hotfixes to enable rocket launchers for all our general-purpose pools.
     for (pooltype, pool) in [
