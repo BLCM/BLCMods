@@ -168,7 +168,9 @@ quality, when loaded into BLCMM:
   early-game enemies might not otherwise be properly equipped unless you've got
   something like this which unlocks everything.  This is a duplicate of my
   BL2 Early Bloomer mod, and is also included inside BL2 Better Loot, though
-  there's no problems with having it enabled in multiple places.
+  there's no problems with having it enabled in multiple places.  Note that if
+  you have "Excellent Gear" or "Better Gear" selected *without* this option
+  being active, you may end up with some oddities like E-Techs without elements.
 
 Additionally, there's one category in the "Main Mod" section which you may
 be interested in:

@@ -23,21 +23,15 @@ BL2
 
         #<Early Game Gear Unlocks><lock>
 
-            # This is a slightly-improved version of UCP's Early Game Unlocks, which
-            # allows various weapon and shield levels from the very beginning of the
-            # game.  This section additionally should unlock all weapon types and
-            # rarities, in addition to basic shields.  Without this section, we risk
-            # early-game enemies not having ANY equipped gear, which is weird.
+            # This is a copy of UCP's Early Game Unlocks, which allows various weapon and
+            # shield levels from the very beginning of the game.  Without this in place,
+            # early-game enemies can spawn without ANY equipped gear, which is weird.
 
             set GD_Itempools.Scheduling.Gamestage_02:ConstantAttributeValueResolver_0 ConstantValue 1
 
             set GD_Itempools.Scheduling.Gamestage_03:ConstantAttributeValueResolver_0 ConstantValue 1
 
-            set GD_Itempools.Scheduling.Gamestage_05:ConstantAttributeValueResolver_0 ConstantValue 1
-
             set GD_Itempools.Scheduling.Gamestage_07:ConstantAttributeValueResolver_0 ConstantValue 1
-
-            set GD_Itempools.Scheduling.Gamestage_10:ConstantAttributeValueResolver_0 ConstantValue 1
 
         #</Early Game Gear Unlocks>
 
@@ -2675,9 +2669,8 @@ BL2
         # possible that some early-game enemies might not otherwise be properly equipped
         # unless you've got something like this which unlocks everything.
         #
-        # Copied from BL2 Early Bloomer v1.1.0 by Apocalyptech, with some minor edits:
-        # Gamestage levels 2, 3, 5, 7, and 10 are considered required by Cold Dead Hands,
-        # so those unlocks are in the main mod section.
+        # Copied from BL2 Early Bloomer v1.1.0 by Apocalyptech, though the UCP duplicates
+        # were moved up into the main section of this mod.
         #
         # This section is already also included in BL2 Better Loot, but there's no problem
         # with having it enabled in both.
@@ -2691,11 +2684,15 @@ BL2
 
             set GD_Itempools.Scheduling.Gamestage_04:ConstantAttributeValueResolver_0 ConstantValue 1
 
+            set GD_Itempools.Scheduling.Gamestage_05:ConstantAttributeValueResolver_0 ConstantValue 1
+
             set GD_Itempools.Scheduling.Gamestage_06:ConstantAttributeValueResolver_0 ConstantValue 1
 
             set GD_Itempools.Scheduling.Gamestage_08:ConstantAttributeValueResolver_0 ConstantValue 1
 
             set GD_Itempools.Scheduling.Gamestage_09:ConstantAttributeValueResolver_0 ConstantValue 1
+
+            set GD_Itempools.Scheduling.Gamestage_10:ConstantAttributeValueResolver_0 ConstantValue 1
 
             set GD_Itempools.Scheduling.Gamestage_11:ConstantAttributeValueResolver_0 ConstantValue 1
 
