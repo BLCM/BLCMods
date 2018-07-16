@@ -7,25 +7,19 @@
 		</profiles>
 	</head>
 	<body>
-		<category name="E-Tech Pistols Remastered">
+		<category name="Plasma Pistols">
 			<category name="Description">
 				<comment>By Aaron0000</comment>
 				<comment>Features;</comment>
-				<comment>Overhauls the Darts into a more useful form, and replaces Spikers with a new type of weapon (Plasma Pistol). Also includes options for the Logan's gun, Dahlminator, and Wanderlust (off by default).</comment>
+				<comment>Replaces Spikers with a new type of weapon (Plasma Pistol). Also includes options for the Logan's gun, Dahlminator, and Wanderlust (off by default).</comment>
 			</category>
 			<category name="Extended Description">
-				<comment>PLASMA PISTOLS;</comment>
 				<comment>Fires a Plasma projectile.</comment>
 				<comment>Costs three ammo per shot.</comment>
 				<comment>Dahl Plasma Pistols burst-fire three shots when not aiming-down-sights.</comment>
 				<comment>Aiming down sights (for all Plasma Pistols) and firing will launch a powerful projectile that is multiple times stronger, but costs just as much ammo (Up to seven times for both).</comment>
 				<comment>After firing a "charged" shot, you will be unable to fire the gun for a few seconds (Dahl variants have a shorter delay).</comment>
 				<comment>Credit to Dave for letting me use his Singing Bird as inspiration for Plasma Pistols.</comment>
-				<comment>DARTS:</comment>
-				<comment>Projectiles now explode on impact with any enemy and have great homing capabilities (behaves like Wanderlust.)</comment>
-				<comment>Increased projectile speed.</comment>
-				<comment>Costs two ammo per shot.</comment>
-				<comment>Dahl Darts burst-fire three shots when not aiming-down-sights, and five when aiming-down-sights.</comment>
 				<comment>NOTES:</comment>
 				<comment>Technically, the "Charged" shots are (up-to) seven projectiles simply fired so fast, that they register as one projectile upon hitting something (kinda like shotguns.) Therefore, if you happen to see a spray of projectiles when using less accurate versions of the weapon or Anarchy, don't be surprised.</comment>
 				<comment>If using S&S Forever, there is a fix for it at the bottom.</comment>
@@ -49,29 +43,7 @@
 					<code profiles="default">set GD_Weap_Pistol.FiringModes.Bullet_Pistol_Spiker TraceInterval 0.200000</code>
 					<code profiles="default">set GD_Weap_Pistol.FiringModes.Bullet_Pistol_Spiker BeamTraceNumSteps 6.000000</code>
 				</category>
-				<category name="Darts">
-					<code profiles="default">set GD_Weap_Pistol.Barrel.Pistol_Barrel_Alien_Homing ZoomExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponAutomaticBurstCount',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Dahl',InitializationDefinition=None,BaseValueScaleConstant=1.000000)))</code>
-					<code profiles="default">set GD_Weap_Pistol.Barrel.Pistol_Barrel_Alien_Homing ExternalAttributeEffects ((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AccuracyResourcePool.AccuracyMinValue',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=-4.000000)),(AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AccuracyResourcePool.AccuracyMaxValue',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=-1.000000)),(AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AccuracyResourcePool.AccuracyOnIdleRegenerationRate',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.200000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AccuracyResourcePool.AccuracyMinValue',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Hyperion',InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AccuracyResourcePool.AccuracyMaxValue',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Hyperion',InitializationDefinition=None,BaseValueScaleConstant=2.000000)),(AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AccuracyResourcePool.AccuracyOnIdleRegenerationRate',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Hyperion',InitializationDefinition=None,BaseValueScaleConstant=4.00000)))</code>
-					<code profiles="default">set GD_Weap_Pistol.Barrel.Pistol_Barrel_Alien_Homing WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Maliwan',InitializationDefinition=None,BaseValueScaleConstant=-1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponStatusEffectChanceModifier',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0.750000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponAutomaticBurstCount',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Dahl',InitializationDefinition=None,BaseValueScaleConstant=2.000000)))</code>
-					<code profiles="default">set GD_Weap_Pistol.Barrel.Pistol_Barrel_Alien_Homing AttributeSlotUpgrades ((SlotName="WeaponDamage",GradeIncrease=45,bActivateSlot=True),(SlotName="WeaponMagSize",GradeIncrease=10,bActivateSlot=True),(SlotName="WeaponReloadSpeed",GradeIncrease=-10,bActivateSlot=True))</code>
-					<category name="UCP Projectile Buffs">
-						<code profiles="default">set GD_Weap_Pistol.Projectiles.Projectile_Spiker_Homing:BehaviorProviderDefinition_0.Behavior_Explode_30 DamageSource Class'WillowGame.WillowDmgSource_Grenade'</code>
-						<code profiles="default">set GD_Weap_Pistol.Projectiles.Projectile_Spiker_Homing HomingRotationRate (Pitch=65336,Yaw=65336,Roll=65336)</code>
-						<code profiles="default">set GD_Weap_Pistol.Projectiles.Projectile_Spiker_Homing:BehaviorProviderDefinition_0.ProjectileBehavior_FindHomingTarget_30 TargetType HTARGET_NearestFoe</code>
-						<code profiles="default">set GD_Weap_Pistol.Projectiles.Projectile_Spiker_Homing:BehaviorProviderDefinition_0.ProjectileBehavior_FindHomingTarget_30 bRetryIfTargetNotFound False</code>
-						<code profiles="default">set GD_Weap_Pistol.Projectiles.Projectile_Spiker_Homing:BehaviorProviderDefinition_0.ProjectileBehavior_FindHomingTarget_30 TargetSearchFovAngle 360.000000</code>
-						<code profiles="default">set GD_Weap_Pistol.Projectiles.Projectile_Spiker_Homing:BehaviorProviderDefinition_0.ProjectileBehavior_FindHomingTarget_30 TargetSearchRange 9001.000000</code>
-						<code profiles="default">set GD_Weap_Pistol.Projectiles.Projectile_Spiker_Homing:BehaviorProviderDefinition_0.ProjectileBehavior_FindHomingTarget_30 bUniqueTarget False</code>
-						<code profiles="default">set GD_Weap_Pistol.Projectiles.Projectile_Spiker_Homing bIsPossibleHomingTarget True</code>
-						<code profiles="default">set GD_Weap_Pistol.Projectiles.Projectile_Spiker_Homing TurningRadius 360</code>
-						<code profiles="default">set GD_Weap_Pistol.Projectiles.Projectile_Spiker_Homing HomingRollAmt 99999</code>
-						<code profiles="default">set GD_Weap_Pistol.Projectiles.Projectile_Spiker_Homing HomingRollSpeed 80.000000</code>
-						<code profiles="default">set GD_Weap_Pistol.Projectiles.Projectile_Spiker_Homing bAutoAimTarget True</code>
-						<code profiles="default">set GD_Weap_Pistol.Projectiles.Projectile_Spiker_Homing ViewGuideLockOnAngle 45.000000</code>
-						<code profiles="default">set GD_Weap_Pistol.Projectiles.Projectile_Spiker_Homing SpeedFormula (BaseValueConstant=2000.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)</code>
-					</category>
-				</category>
-				<category name="Uniques and Pearls">
+				<category name="Special guns">
 					<category name="Dahlminator">
 						<comment>Burst-fires five shots instead of three.</comment>
 						<comment>Increased charged shot damage.</comment>
@@ -149,22 +121,4 @@ set GD_Weap_Pistol.FiringModes.Bullet_Pistol_Spiker SoundDefinition FiringModeSo
 set GD_Weap_Pistol.FiringModes.Bullet_Pistol_Spiker Lifetime 5.000000
 set GD_Weap_Pistol.FiringModes.Bullet_Pistol_Spiker TraceInterval 0.200000
 set GD_Weap_Pistol.FiringModes.Bullet_Pistol_Spiker BeamTraceNumSteps 6.000000
-set GD_Weap_Pistol.Barrel.Pistol_Barrel_Alien_Homing ZoomExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponAutomaticBurstCount',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Dahl',InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
-set GD_Weap_Pistol.Barrel.Pistol_Barrel_Alien_Homing ExternalAttributeEffects ((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AccuracyResourcePool.AccuracyMinValue',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=-4.000000)),(AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AccuracyResourcePool.AccuracyMaxValue',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=-1.000000)),(AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AccuracyResourcePool.AccuracyOnIdleRegenerationRate',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.200000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AccuracyResourcePool.AccuracyMinValue',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Hyperion',InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AccuracyResourcePool.AccuracyMaxValue',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Hyperion',InitializationDefinition=None,BaseValueScaleConstant=2.000000)),(AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AccuracyResourcePool.AccuracyOnIdleRegenerationRate',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Hyperion',InitializationDefinition=None,BaseValueScaleConstant=4.00000)))
-set GD_Weap_Pistol.Barrel.Pistol_Barrel_Alien_Homing WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Maliwan',InitializationDefinition=None,BaseValueScaleConstant=-1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponStatusEffectChanceModifier',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0.750000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponAutomaticBurstCount',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Dahl',InitializationDefinition=None,BaseValueScaleConstant=2.000000)))
-set GD_Weap_Pistol.Barrel.Pistol_Barrel_Alien_Homing AttributeSlotUpgrades ((SlotName="WeaponDamage",GradeIncrease=45,bActivateSlot=True),(SlotName="WeaponMagSize",GradeIncrease=10,bActivateSlot=True),(SlotName="WeaponReloadSpeed",GradeIncrease=-10,bActivateSlot=True))
-set GD_Weap_Pistol.Projectiles.Projectile_Spiker_Homing:BehaviorProviderDefinition_0.Behavior_Explode_30 DamageSource Class'WillowGame.WillowDmgSource_Grenade'
-set GD_Weap_Pistol.Projectiles.Projectile_Spiker_Homing HomingRotationRate (Pitch=65336,Yaw=65336,Roll=65336)
-set GD_Weap_Pistol.Projectiles.Projectile_Spiker_Homing:BehaviorProviderDefinition_0.ProjectileBehavior_FindHomingTarget_30 TargetType HTARGET_NearestFoe
-set GD_Weap_Pistol.Projectiles.Projectile_Spiker_Homing:BehaviorProviderDefinition_0.ProjectileBehavior_FindHomingTarget_30 bRetryIfTargetNotFound False
-set GD_Weap_Pistol.Projectiles.Projectile_Spiker_Homing:BehaviorProviderDefinition_0.ProjectileBehavior_FindHomingTarget_30 TargetSearchFovAngle 360.000000
-set GD_Weap_Pistol.Projectiles.Projectile_Spiker_Homing:BehaviorProviderDefinition_0.ProjectileBehavior_FindHomingTarget_30 TargetSearchRange 9001.000000
-set GD_Weap_Pistol.Projectiles.Projectile_Spiker_Homing:BehaviorProviderDefinition_0.ProjectileBehavior_FindHomingTarget_30 bUniqueTarget False
-set GD_Weap_Pistol.Projectiles.Projectile_Spiker_Homing bIsPossibleHomingTarget True
-set GD_Weap_Pistol.Projectiles.Projectile_Spiker_Homing TurningRadius 360
-set GD_Weap_Pistol.Projectiles.Projectile_Spiker_Homing HomingRollAmt 99999
-set GD_Weap_Pistol.Projectiles.Projectile_Spiker_Homing HomingRollSpeed 80.000000
-set GD_Weap_Pistol.Projectiles.Projectile_Spiker_Homing bAutoAimTarget True
-set GD_Weap_Pistol.Projectiles.Projectile_Spiker_Homing ViewGuideLockOnAngle 45.000000
-set GD_Weap_Pistol.Projectiles.Projectile_Spiker_Homing SpeedFormula (BaseValueConstant=2000.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
 
