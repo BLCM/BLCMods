@@ -1447,6 +1447,26 @@ BL2
 
             #</"Medical Mystery" E-Tech Pool>
 
+            #<Badass Creeper Drops>
+
+                # This is not, strictly speaking, the remit of this mod, but since we
+                # happen to fix the other couple instances of this for No-Beard and Big
+                # Sleep, we may as well fix it here. Basically the chances of Badass
+                # Creepers dropping their unique gear is a fixed percentage, rather than
+                # using the global DropODDS vars.  This resets it to use the DropODDS
+                # vars, so that the drops follow the user choice of boss drop chance,
+                # below.
+
+                level Caverns_P set GD_Population_Creeper.Balance.PawnBalance_CreeperBadass DefaultItemPoolList[0].PoolProbability
+                (
+                    BaseValueConstant = 0.000000,
+                    BaseValueAttribute = AttributeDefinition'GD_Itempools.DropWeights.DropODDS_BossUniques',
+                    InitializationDefinition = None,
+                    BaseValueScaleConstant = 1.250000
+                )
+
+            #</Badass Creeper Drops>
+
         #</Other Pool Tweaks>
 
         #<Enemy Pool Assignments>
