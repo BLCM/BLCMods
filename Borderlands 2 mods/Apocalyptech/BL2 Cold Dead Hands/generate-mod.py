@@ -2212,6 +2212,22 @@ for (rarity_key, rarity_label) in DropConfig.rarity_presets:
             ('GD_Itempools.ShieldPools.Pool_Shields_Chimera_06_Legendary', regular.weight_legendary, None, 1, False),
         ])
 
+    # Set up Boom + Bewm's shotgun pool
+    mp.register_str('boom_bewm_shotguns',
+        'level SouthernShelf_P set GD_BoomBoom.WeaponPools.Pool_Weapons_Shotguns_BoomBoom BalancedItems {}'.format(get_balanced_items(
+            [
+                ('GD_Weap_Shotgun.A_Weapons.SG_Torgue', badass.weight_common, 'WeaponBalanceDefinition', 1, True),
+                ('GD_Weap_Shotgun.A_Weapons.SG_Torgue', badass.weight_common, 'WeaponBalanceDefinition', 1, False),
+                ('GD_Weap_Shotgun.A_Weapons.SG_Torgue_2_Uncommon', badass.weight_uncommon, 'WeaponBalanceDefinition', 1, True),
+                ('GD_Weap_Shotgun.A_Weapons.SG_Torgue_2_Uncommon', badass.weight_uncommon, 'WeaponBalanceDefinition', 1, False),
+                ('GD_Weap_Shotgun.A_Weapons.SG_Torgue_3_Rare', badass.weight_rare, 'WeaponBalanceDefinition', 1, True),
+                ('GD_Weap_Shotgun.A_Weapons.SG_Torgue_3_Rare', badass.weight_rare, 'WeaponBalanceDefinition', 1, False),
+                ('GD_Weap_Shotgun.A_Weapons.SG_Torgue_4_VeryRare', badass.weight_veryrare, 'WeaponBalanceDefinition', 1, True),
+                ('GD_Weap_Shotgun.A_Weapons.SG_Torgue_4_VeryRare', badass.weight_veryrare, 'WeaponBalanceDefinition', 1, False),
+                ('GD_Weap_Shotgun.A_Weapons_Legendary.SG_Torgue_5_Flakker', badass.weight_legendary, 'WeaponBalanceDefinition', 1, True),
+                ('GD_Weap_Shotgun.A_Weapons_Legendary.SG_Torgue_5_Flakker', badass.weight_legendary, 'WeaponBalanceDefinition', 1, False),
+            ])))
+
     # Set up Jack's Body Double's equip pool
     mp.register_str('body_double_equip',
         'level HyperionCity_P set GD_JacksBodyDouble.WeaponPools.Pool_Weapons_JackBodyDouble_EnemyUse BalancedItems {}'.format(get_balanced_items(
@@ -2428,6 +2444,8 @@ for (rarity_key, rarity_label) in DropConfig.rarity_drop_prob_presets:
                 (config.pool_shields, T_SHIELD, True, True, 'None'),
                 (config.pool_shields_noturtle, T_SHIELD_NOTURTLE, True, False, 'None'),
                 (config.stalker_shields, T_SHIELD, True, True, 'None'),
+                # T_SHIELD is technically inappropriate here, but there's no E-Tech Torgue shotguns, so it fits.
+                ('GD_BoomBoom.WeaponPools.Pool_Weapons_Shotguns_BoomBoom', T_SHIELD, False, True, 'SouthernShelf_P'),
                 ('GD_JacksBodyDouble.WeaponPools.Pool_Weapons_JackBodyDouble_EnemyUse', T_GUN, False, True, 'HyperionCity_P'),
                 ('GD_Iris_ItemPoolsEnemyUse.WeaponPools.Pool_Weapons_AngelGang_Pistols_EnemyUse', T_GUN, True, False, 'None'),
                 ('GD_Iris_ItemPoolsEnemyUse.WeaponPools.Pool_Weapons_AngelGang_Shotguns_EnemyUse', T_GUN, True, False, 'None'),

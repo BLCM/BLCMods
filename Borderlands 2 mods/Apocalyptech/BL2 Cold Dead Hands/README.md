@@ -335,8 +335,9 @@ Changelog
     * Bone Head 3.0 equips Bone Shredder / Shredifier
     * Digi Doc Mercy has a 50% chance to equip the Infinity
     * Digi Assassins all equip as they do in Southpaw Steam and Power
- * Set Nomad Pyros to equip/use real ARs in Normal (formerly they would only do
+ * Set Nomad Pyros to equip/drop real ARs in Normal (formerly they would only do
    so in TVHM+)
+ * Fixed Boom and Bewm to drop their shotguns properly
  * Changed some enemy shield pools so they can't spawn Turtle shields, since
    Turtle shields can potentially cause the enemy to become literally unkillable,
    with the right combination of shield parts, rarity, and level:
