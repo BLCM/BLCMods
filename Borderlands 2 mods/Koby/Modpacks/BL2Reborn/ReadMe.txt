@@ -1,8 +1,9 @@
+!!!I'M REROUTING ALL DISCUSSION, HELP AND SUPPORT AS WELL AS ANNOUNCEMENTS TO MY PERSONAL DISCORD SERVER: https://discord.gg/3dNR4zD  !!!
+
+
 If you want to experience Borderlands 2 in a new way, this modpack is exactly for you.
 
 !!!THE UCP IS INCLUDED IN THIS STOP MERGING THE UCP INTO BL2 REBORN PLEASE READ THE MODLIST LOL!!!
-
-!!!I'M REROUTING ALL DISCUSSION, HELP AND SUPPORT TO MY PERSONAL DISCORD SERVER: https://discord.gg/3dNR4zD  !!!
 
 The version 1.3.2 is in BETA and features some additional features and was fully build from scratch with BLCMM. Please report any bugs and anomalies to @Koby in Discord.
 
