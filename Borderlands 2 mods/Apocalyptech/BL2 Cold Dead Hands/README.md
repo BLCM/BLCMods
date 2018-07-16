@@ -104,6 +104,9 @@ from the start of the battle which gun you'll receive.
   not keen to do.  So H3RL-E may drop the Manly Man without actually having
   it equipped.
 
+* Paladins (from the Dragon Keep DLC) will not equip/drop real shields; having
+  a real shield messes with their behavior too much.
+
 * The Tributes (from the Wattle Gobbler Headhunter Pack) will have a 2/3rds
   chance of dropping the unique items that UCP adds to their drop pools
   compared to other enemies, since there are so many of them in one location.
