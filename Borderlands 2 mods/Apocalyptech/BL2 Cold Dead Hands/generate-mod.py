@@ -2046,7 +2046,13 @@ for (rarity_key, rarity_label) in DropConfig.rarity_presets:
         config.set_shields = get_balanced_set(
             config.pool_shields,
             [
-                #('GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Juggernaut_01_Common', config.weight_common, 'InventoryBalanceDefinition', 1, True),
+                # These two used instead of everything else if you want to test to see
+                # which enemies will become unkillable with Turtle shields.  Common-rarity
+                # Turtles have an even higher health penalty than the Fabled Tortoise.
+                # To get the full effect, make sure to restrict shield parts to bandit-only,
+                # elsewhere.
+                #('GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Juggernaut_01_Common', 1, 'InventoryBalanceDefinition', 1, True),
+                #('GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Juggernaut_01_Common', 1, 'InventoryBalanceDefinition', 1, False),
                 ('GD_Itempools.ShieldPools.Pool_Shields_All_01_Common', config.weight_common, None, 1, True),
                 ('GD_Itempools.ShieldPools.Pool_Shields_All_01_Common', config.weight_common, None, 1, False),
                 ('GD_Itempools.ShieldPools.Pool_Shields_All_02_Uncommon', config.weight_uncommon, None, 1, True),
