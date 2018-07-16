@@ -1,6 +1,11 @@
 BL2 Better Loot Mod by Apocalyptech
 ===================================
 
+**WARNING:** This mod has not been tested/updated with UCP 4.1 yet, and
+there's probably at least some boss drops which won't work properly
+with UCP 4.1.  *Probably* whatever problems there are will be pretty
+minor, but right now UCP 4.1 is unsupported with this.
+
 This mod aims to make loot in Borderlands 2 "better" in general.  It's
 essentially a cheat mod, intended for those BL2 players like myself who
 tend to play in Normal most of the time, dislike grinding, get bored easily
