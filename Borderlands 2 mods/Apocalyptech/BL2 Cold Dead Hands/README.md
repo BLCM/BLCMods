@@ -342,6 +342,8 @@ Changelog
  * Removed putting "real" shields on Jack's Digistruct Clones during the
    storyline Warrior battle, and from the Handsome Sorcerer's Clones during
    the Dragon Keep DLC final battle.
+ * Included necessary skinpool reassignment code in the mod itself, so we don't
+   rely on anything from UCP.
  * Fixes some errant commas in various statements (didn't affect the mod itself
    but was causing some syntax warnings in BLCMM)
  * Cosmetic changes in Enemy Gear Quality comments:
