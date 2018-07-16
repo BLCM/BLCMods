@@ -298,6 +298,8 @@ Ideas/TODO
   go into a "no gun" state?  I couldn't even figure out a way to do it
   with TPS's Ascending Dahl troops, and they've already got behaviors to
   drop gear built-in, though.
+  * Enraged Goliaths
+  * Loaders having their limbs knocked off
 
 Licenses
 ========
