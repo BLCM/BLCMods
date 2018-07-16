@@ -315,6 +315,9 @@ Changelog
    for help in UVHM where facing launcher-using enemies is *suuper* deadly.
  * Added in my BL2 Early Bloomer mod to enable all item/weapon types from the
    very beginning of the game.
+ * Forced some early-game unlocks from Early Bloomer to be active at all times,
+   regardless of whether that option is selected, to prevent early-game enemies
+   from having no equipment.
  * Reorganized the section which disables world weapon/shield drops so that
    disabling weapons/shields in chests is easily toggleable via a single
    category.
