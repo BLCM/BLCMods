@@ -300,6 +300,8 @@ Ideas/TODO
   drop gear built-in, though.
   * Enraged Goliaths
   * Loaders having their limbs knocked off
+* A loader or two in End of the Line can spawn without limbs, but will still
+  drop a gun.  Not sure if I can get that to not drop...
 
 Licenses
 ========
