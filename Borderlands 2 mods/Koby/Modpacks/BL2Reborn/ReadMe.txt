@@ -1,3 +1,6 @@
+!!!I'M REROUTING ALL DISCUSSION, HELP AND SUPPORT AS WELL AS ANNOUNCEMENTS TO MY PERSONAL DISCORD SERVER: https://discord.gg/3dNR4zD  !!!
+
+
 If you want to experience Borderlands 2 in a new way, this modpack is exactly for you.
 
 !!!THE UCP IS INCLUDED IN THIS STOP MERGING THE UCP INTO BL2 REBORN PLEASE READ THE MODLIST LOL!!!
@@ -36,5 +39,4 @@ I also !!!HIGHLY!!! recommend using the Hex Multitool to disable Sanity Checks w
 If you need help using BLCMM on BL2 Reborn, check out my video on it (outdated but should still work)
 https://youtu.be/jOL_Vlb2PN4
 
-If there's no other way, head over to Shadow's Discord and ping me (@Koby) in the #patch-mod-troubleshooting channel 
-discord.gg/shadowevil
+If there's no other way, head over to my Discord and ping me (@Koby) in the #bl2-reborn-discussion channel https://discord.gg/3dNR4zD
