@@ -45,7 +45,7 @@ except ModuleNotFoundError:
 ###
 
 mod_name = 'TPS Movement Speed Cheats'
-mod_version = '1.1.0'
+mod_version = '1.2.0'
 output_filename = '{}.txt'.format(mod_name)
 
 ###
@@ -57,11 +57,11 @@ segments = {}
 # Loop through a number of control vars
 first_profile = True
 for (profile_name, profile_desc,
-            (ground_speed, air_speed, injured_speed, crouched_pct, jump_z, air_control_pct)
+            (ground_speed, air_speed, injured_speed, crouched_pct, jump_z, air_control_pct, ladder_speed)
             ) in [
-        ('reasonable', 'Reasonable Improvements', (650,  700,  300, 1,   750, .8)),
-        ('extreme',    'Extreme Improvements',    (1000, 1100, 500, 1,   900, .9)),
-        ('stock',      'Stock Values',            (440,  500,  150, 0.5, 630, .05))]:
+        ('reasonable', 'Reasonable Improvements', (650,  700,  300, 1,   750, .8, 400)),
+        ('extreme',    'Extreme Improvements',    (1000, 1100, 500, 1,   900, .9, 600)),
+        ('stock',      'Stock Values',            (440,  500,  150, 0.5, 630, .05, 200))]:
 
     # Set up a new hotfix object
     hfs = Hotfixes(nameprefix=profile_name.capitalize())
@@ -178,6 +178,8 @@ for (profile_name, profile_desc,
 
                 {line_prefix}set GD_Globals.General.Globals PlayerAirControl {air_control_pct}{line_suffix}
 
+                {line_prefix}set Engine.Pawn LadderSpeed {ladder_speed}{line_suffix}
+
             #</Global Movement Vars>
 
         #</{profile_desc}>""".format(
@@ -192,6 +194,7 @@ for (profile_name, profile_desc,
             wilhelm=char_segments['Wilhelm'],
             injured_speed=injured_speed,
             air_control_pct=air_control_pct,
+            ladder_speed=ladder_speed,
             )
 
     first_profile = False

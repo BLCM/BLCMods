@@ -1,0 +1,76 @@
+#<Troll>
+
+    by Kazy
+
+    Turns the Gub into the Troll.
+
+    Converts it into an e-Tech Spiker pistol, with regenerative properties.
+
+    Heals 1% of Max HP / second.
+
+    #<Coding>
+
+        #<Appearance>
+
+            #<Skin>
+
+                set Common_GunMaterials.Materials.Pistol.Mati_BanditLegendaryPistol_Gub VectorParameterValues ((ParameterName="p_AColorHilight",ParameterValue=(R=1.000000,G=1.000000,B=1.000000,A=1.000000),ExpressionGUID=(A=384292798,B=1221323751,C=-2145405772,D=1872194118)),(ParameterName="p_AColorMidtone",ParameterValue=(R=0.722672,G=0.673049,B=0.673049,A=1.000000),ExpressionGUID=(A=1102826245,B=1256298978,C=-1429881438,D=-507521102)),(ParameterName="p_AColorShadow",ParameterValue=(R=0.106222,G=0.118770,B=0.160215,A=1.000000),ExpressionGUID=(A=1481234158,B=1129012376,C=-688827739,D=-2119135160)),(ParameterName="p_BColorHilight",ParameterValue=(R=0.083511,G=0.096653,B=0.099444,A=1.000000),ExpressionGUID=(A=170714760,B=1132476783,C=-275668290,D=655702143)),(ParameterName="p_BColorMidtone",ParameterValue=(R=0.015018,G=0.017417,B=0.022099,A=1.000000),ExpressionGUID=(A=473594356,B=1338758895,C=824823946,D=864253813)),(ParameterName="p_BColorShadow",ParameterValue=(R=0.028876,G=0.029326,B=0.060771,A=1.000000),ExpressionGUID=(A=-429590341,B=1156435294,C=-1015192901,D=687313413)),(ParameterName="p_CColorHilight",ParameterValue=(R=1.967321,G=1.420883,B=1.351585,A=1.000000),ExpressionGUID=(A=759765673,B=1280874949,C=257367956,D=-932702788)),(ParameterName="p_CColorMidtone",ParameterValue=(R=0.723730,G=0.675750,B=0.675750,A=1.000000),ExpressionGUID=(A=110180441,B=1232792373,C=-1232281417,D=-1030626065)),(ParameterName="p_CColorShadow",ParameterValue=(R=0.215462,G=0.215462,B=0.060839,A=1.000000),ExpressionGUID=(A=716329441,B=1214803259,C=-238071112,D=-1004122047)),(ParameterName="p_ReflectColor",ParameterValue=(R=2.513749,G=2.513749,B=2.513749,A=1.000000),ExpressionGUID=(A=295058103,B=1318551573,C=-2045449573,D=-547597976)),(ParameterName="p_ReflectionChannelScale",ParameterValue=(R=1.000000,G=1.000000,B=1.000000,A=0.000000),ExpressionGUID=(A=1869386622,B=1303200947,C=-1616405849,D=714558284)),(ParameterName="p_DecalScalePosition",ParameterValue=(R=2.545500,G=18.677000,B=0.507900,A=0.516500),ExpressionGUID=(A=395540170,B=1243133493,C=-1264190552,D=123075385)),(ParameterName="p_DecalColor",ParameterValue=(R=2.675884,G=2.675884,B=2.675884,A=1.000000),ExpressionGUID=(A=1691998600,B=1239094551,C=2074257317,D=1844701893)),(ParameterName="p_PatternScalePosition",ParameterValue=(R=5.600000,G=13.600000,B=0.000000,A=0.000000),ExpressionGUID=(A=-2005018406,B=1132497243,C=-39915121,D=208423616)),(ParameterName="p_DColor",ParameterValue=(R=0.220986,G=0.220986,B=0.088566,A=1.000000),ExpressionGUID=(A=696455109,B=1155878830,C=-1741888361,D=802120528)),(ParameterName="p_DecalChannel",ParameterValue=(R=0.000000,G=0.000000,B=0.000000,A=1.000000),ExpressionGUID=(A=1757499073,B=1097055033,C=-1266029657,D=1038353636)),(ParameterName="p_PatternChannelScale",ParameterValue=(R=0.500000,G=0.800000,B=0.000000,A=0.800000),ExpressionGUID=(A=439432319,B=1091149893,C=-1991909502,D=1816944627)),(ParameterName="p_PatternColor",ParameterValue=(R=1.675884,G=1.675884,B=1.675884,A=1.000000),ExpressionGUID=(A=676539706,B=1125682796,C=1871983293,D=-2049503601)))
+
+            #</Skin>
+
+            #<Title and Red Text>
+
+                set GD_Weap_Pistol.Name.Title_Bandit.Title_Legendary_Gub PartName Troll
+
+                set GD_Weap_Pistol.Name.Title_Bandit.Title_Legendary_Gub:AttributePresentationDefinition_8 NoConstraintText Pain heals.
+
+            #</Title and Red Text>
+
+        #</Appearance>
+
+        #<Attributes>
+
+            set GD_Weap_Pistol.Barrel.Pistol_Barrel_Bandit_Gub AttributeSlotUpgrades ((SlotName="WeaponAccuracyImpulse",GradeIncrease=6,bActivateSlot=True),(SlotName="AccuracyMax",GradeIncrease=7,bActivateSlot=True),(SlotName="WeaponSpread",GradeIncrease=3,bActivateSlot=True))
+
+            set GD_Weap_Pistol.Barrel.Pistol_Barrel_Bandit_Gub WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponStatusEffectChanceModifier',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.200000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+            set GD_Weap_Pistol.Barrel.Pistol_Barrel_Bandit_Gub WeaponCardAttributes ((Attribute=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',PriorityIncrease=0.500000))
+
+            set GD_Weap_Pistol.Barrel.Pistol_Barrel_Bandit_Gub ExternalAttributeEffects ((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.HealthResourcePool.HealthPassiveRegenerationRate',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=ResourcePoolAttributeDefinition'D_Attributes.HealthResourcePool.HealthMaxValue_Player',InitializationDefinition=None,BaseValueScaleConstant=0.010000)))
+
+            set GD_Weap_Pistol.Barrel.Pistol_Barrel_Bandit_Gub CustomFiringModeDefinition FiringModeDefinition'GD_Weap_Pistol.FiringModes.Bullet_Pistol_Spiker'
+
+            #<e-Tech Barrel properties>
+
+                set GD_Weap_Pistol.Barrel.Pistol_Barrel_Bandit_Gub GestaltModeSkeletalMeshName Pistol_Barrel_Alien
+
+                set GD_Weap_Pistol.Barrel.Pistol_Barrel_Bandit_Gub ManufacturerDefinitionForScopeMovie ManufacturerDefinition'GD_Manufacturers.Manufacturers.Vladof'
+
+                set GD_Weap_Pistol.Barrel.Pistol_Barrel_Bandit_Gub MuzzleFlashPSTemplates EffectCollectionDefinition'GD_Weap_Pistol.Effects.Pistol_ETech_MuzzleFlashes'
+
+                set GD_Weap_Pistol.Barrel.Pistol_Barrel_Bandit_Gub FlapsCollapseDuration (BaseValueConstant=0.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+
+                set GD_Weap_Pistol.Barrel.Pistol_Barrel_Bandit_Gub FlapsExpandDuration (BaseValueConstant=2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+
+                set GD_Weap_Pistol.Barrel.Pistol_Barrel_Bandit_Gub StartingSpinUpFireIntervalMultiplier 1.000000
+
+                set GD_Weap_Pistol.Barrel.Pistol_Barrel_Bandit_Gub SpinDownDuration (BaseValueConstant=1.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+
+                set GD_Weap_Pistol.Barrel.Pistol_Barrel_Bandit_Gub SpinUpDuration (BaseValueConstant=0.800000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+
+                set GD_Weap_Pistol.Barrel.Pistol_Barrel_Bandit_Gub bFlapsEnabled True
+
+                set GD_Weap_Pistol.Barrel.Pistol_Barrel_Bandit_Gub bIsSpinningEnabled True
+
+                set GD_Weap_Pistol.Barrel.Pistol_Barrel_Bandit_Gub BoneControllers ((BoneName="AlienBarrelFin_L_Front",ControlType=WEAP_BONE_CONTROL_Flap,bUseInFirstPerson=True,bUseInThirdPerson=True,ControlTemplate=WillowSkelControl_RotateFlapFromFiring'GD_Weap_Pistol.Barrel.Pistol_Barrel_Alien:WillowSkelControl_RotateFlapFromFiring_0'),(BoneName="AlienBarrelFin_L_Middle",ControlType=WEAP_BONE_CONTROL_Flap,bUseInFirstPerson=True,bUseInThirdPerson=True,ControlTemplate=WillowSkelControl_RotateFlapFromFiring'GD_Weap_Pistol.Barrel.Pistol_Barrel_Alien:WillowSkelControl_RotateFlapFromFiring_4'),(BoneName="AlienBarrelFin_L_Back",ControlType=WEAP_BONE_CONTROL_Flap,bUseInFirstPerson=True,bUseInThirdPerson=True,ControlTemplate=WillowSkelControl_RotateFlapFromFiring'GD_Weap_Pistol.Barrel.Pistol_Barrel_Alien:WillowSkelControl_RotateFlapFromFiring_5'),(BoneName="AlienBarrelFin_R_Front",ControlType=WEAP_BONE_CONTROL_Flap,bUseInFirstPerson=True,bUseInThirdPerson=True,ControlTemplate=WillowSkelControl_RotateFlapFromFiring'GD_Weap_Pistol.Barrel.Pistol_Barrel_Alien:WillowSkelControl_RotateFlapFromFiring_6'),(BoneName="AlienBarrelFin_R_Middle",ControlType=WEAP_BONE_CONTROL_Flap,bUseInFirstPerson=True,bUseInThirdPerson=True,ControlTemplate=WillowSkelControl_RotateFlapFromFiring'GD_Weap_Pistol.Barrel.Pistol_Barrel_Alien:WillowSkelControl_RotateFlapFromFiring_7'),(BoneName="AlienBarrelFin_R_Back",ControlType=WEAP_BONE_CONTROL_Flap,bUseInFirstPerson=True,bUseInThirdPerson=True,ControlTemplate=WillowSkelControl_RotateFlapFromFiring'GD_Weap_Pistol.Barrel.Pistol_Barrel_Alien:WillowSkelControl_RotateFlapFromFiring_8'),(BoneName="AlienBarrelFin_L_Bottom",ControlType=WEAP_BONE_CONTROL_Flap,bUseInFirstPerson=True,bUseInThirdPerson=True,ControlTemplate=WillowSkelControl_RotateFlapFromFiring'GD_Weap_Pistol.Barrel.Pistol_Barrel_Alien:WillowSkelControl_RotateFlapFromFiring_9'),(BoneName="AlienBarrelFin_R_Bottom",ControlType=WEAP_BONE_CONTROL_Flap,bUseInFirstPerson=True,bUseInThirdPerson=True,ControlTemplate=WillowSkelControl_RotateFlapFromFiring'GD_Weap_Pistol.Barrel.Pistol_Barrel_Alien:WillowSkelControl_RotateFlapFromFiring_10'))
+
+                set GD_Weap_Pistol.Barrel.Pistol_Barrel_Bandit_Gub NumPhysicalBarrelsToFireFrom 2
+
+            #</e-Tech Barrel properties>
+
+        #</Attributes>
+
+    #</Coding>
+
+#</Troll>
+

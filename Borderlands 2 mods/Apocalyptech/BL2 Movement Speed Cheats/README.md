@@ -33,6 +33,12 @@ at it!
 Mod Construction / Implementation Details
 =========================================
 
+*(This section is only relevant for someone looking to edit the mod in the
+same way I do, or just someone curious about my mod construction techniques.
+If you're just looking to run the mod, see the "Usage" section above.  The
+mod can, of course, be edited directly in FilterTool/BLCMM as well, once it's
+been imported.)*
+
 This mod is actually generated using a simple little Python script named
 `generate.py`.  The script makes use of `hotfix.py` from the parent directory.
 You'd need to copy (or symlink, if you're on Mac or Linux) `hotfix.py` into
@@ -50,6 +56,9 @@ The mod itself is licensed under
 
 Changelog
 =========
+
+**v1.2.0**, May 20, 2018:
+ * Buffed ladder-climbing speed.
 
 **v1.1.0**, May 6, 2018:
  * Added "Reasonable Improvements" and "Stock Values" options, and made

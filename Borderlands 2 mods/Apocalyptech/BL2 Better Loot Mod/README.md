@@ -1,6 +1,11 @@
 BL2 Better Loot Mod by Apocalyptech
 ===================================
 
+**WARNING:** This mod has not been tested/updated with UCP 4.1 yet, and
+there's probably at least some boss drops which won't work properly
+with UCP 4.1.  *Probably* whatever problems there are will be pretty
+minor, but right now UCP 4.1 is unsupported with this.
+
 This mod aims to make loot in Borderlands 2 "better" in general.  It's
 essentially a cheat mod, intended for those BL2 players like myself who
 tend to play in Normal most of the time, dislike grinding, get bored easily
@@ -349,6 +354,12 @@ and Badasses.
 
 Mod Construction / Implementation Details
 -----------------------------------------
+
+*(This section is only relevant for someone looking to edit the mod in the
+same way I do, or just someone curious about my mod construction techniques.
+If you're just looking to run the mod, see the "Usage" section above.  The
+mod can, of course, be edited directly in FilterTool/BLCMM as well, once it's
+been imported.)*
 
 I actually generate this mod using a simple little Python script named
 `generate-source.py`, which enables me to do things like set the rarity

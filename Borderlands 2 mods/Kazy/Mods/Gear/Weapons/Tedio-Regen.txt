@@ -1,0 +1,60 @@
+#<Regenerative Tediores>
+
+    by Kazy
+
+    A simple mod that adds ammo regenerative properties to all the Tediore Legendary weaponry.
+
+    In addition, adds Assault Rifle Ammo Regeneration to the Avenger.
+
+    Note: Does not add Grenade Regeneration to the Fastball
+
+    Note: Does not add Passive Shield Regeneration to the Cradle
+
+    Note: Seraphs are not classified as Legendary in this case.
+
+    #<Coding>
+
+        #<Baby Maker - SMG Regeneration>
+
+            set GD_Weap_SMG.Barrel.SMG_Barrel_Tediore_BabyMaker ExternalAttributeEffects ((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Patrol_SMG.Ammo_Patrol_SMG_RegenerationRate',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Patrol_SMG.Ammo_Patrol_SMG_MaxValue',InitializationDefinition=None,BaseValueScaleConstant=0.000500)))
+
+        #</Baby Maker - SMG Regeneration>
+
+        #<Deliverance - Shotgun Regeneration>
+
+            set GD_Weap_Shotgun.Barrel.SG_Barrel_Tediore_Deliverance ExternalAttributeEffects ((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Combat_Shotgun.Ammo_Combat_Shotgun_RegenerationRate',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Combat_Shotgun.Ammo_Combat_Shotgun_MaxValue',InitializationDefinition=None,BaseValueScaleConstant=0.001000)))
+
+        #</Deliverance - Shotgun Regeneration>
+
+        #<Gunerang - Pistol Regeneration>
+
+            set GD_Weap_Pistol.Barrel.Pistol_Barrel_Tediore_Gunerang ExternalAttributeEffects ((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Repeater_Pistol.Ammo_Repeater_Pistol_RegenerationRate',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Repeater_Pistol.Ammo_Repeater_Pistol_MaxValue',InitializationDefinition=None,BaseValueScaleConstant=0.000750)))
+
+        #</Gunerang - Pistol Regeneration>
+
+        #<Bunny - Rocket Launcher Regeneration>
+
+            set GD_Weap_Launchers.Barrel.L_Barrel_Tediore_Bunny ExternalAttributeEffects ((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Rocket_Launcher.Ammo_Rocket_Launcher_RegenerationRate',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Rocket_Launcher.Ammo_Rocket_Launcher_MaxValue',InitializationDefinition=None,BaseValueScaleConstant=0.001000)))
+
+        #</Bunny - Rocket Launcher Regeneration>
+
+        #<Avenger - SMG and Assault Rifle Regeneration><MUT>
+
+            #<Realistic Values>
+
+                set GD_Gladiolus_Weapons.SMG.SMG_Barrel_Hyperion_Avenger ExternalAttributeEffects ((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Patrol_SMG.Ammo_Patrol_SMG_RegenerationRate',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Patrol_SMG.Ammo_Patrol_SMG_MaxValue',InitializationDefinition=None,BaseValueScaleConstant=0.000500)),(AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Combat_Rifle.Ammo_Combat_Rifle_RegenerationRate',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Combat_Rifle.Ammo_Combat_Rifle_MaxValue',InitializationDefinition=None,BaseValueScaleConstant=0.000750)))
+
+            #</Realistic Values>
+
+            #<UCP-Like Values>
+
+                #set GD_Gladiolus_Weapons.SMG.SMG_Barrel_Hyperion_Avenger ExternalAttributeEffects ((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Patrol_SMG.Ammo_Patrol_SMG_RegenerationRate',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Patrol_SMG.Ammo_Patrol_SMG_MaxValue',InitializationDefinition=None,BaseValueScaleConstant=0.002500)),(AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Combat_Rifle.Ammo_Combat_Rifle_RegenerationRate',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Combat_Rifle.Ammo_Combat_Rifle_MaxValue',InitializationDefinition=None,BaseValueScaleConstant=0.002750)))<off>
+
+            #</UCP-Like Values>
+
+        #</Avenger - SMG and Assault Rifle Regeneration>
+
+    #</Coding>
+
+#</Regenerative Tediores>
+

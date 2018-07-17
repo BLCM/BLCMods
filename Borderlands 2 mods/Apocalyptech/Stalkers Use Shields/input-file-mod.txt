@@ -1,0 +1,467 @@
+#<{mod_name}>
+
+    # {mod_name} v{mod_version}
+    # by Apocalyptech
+    # Licensed under Public Domain / CC0 1.0 Universal
+    #
+    # Stalkers always have shields, of course, but this mod gives them
+    # "real" shields of the sort that your character can equip.
+    # Optionally, and for greater challenge, you can opt to give them only
+    # Maylay shields.  WARNING: The Roid damage seems to be far greater than
+    # the card's listed damage, for Stalkers, so they will hit like a ton of
+    # bricks with Maylay shields.
+    #
+    # This mod requires that the UCP option "Skinpool Fixes (Don't uncheck
+    # this)" is enabled!  If you want to run this without UCP, make sure to
+    # at least copy that category over.
+
+    #<Legendary Pool Setup (optionally add uniques + seraphs)>
+
+        # This category does some basic setup which then lets us alter
+        # the legendary shield pools dynamically in the next category.
+
+        #<Base Pool Initialization>
+
+            set GD_Itempools.ShieldPools.Pool_Shields_Absorption_06_Legendary BalancedItems
+            (
+                (
+                    ItmPoolDefinition=None,
+                    InvBalanceDefinition=InventoryBalanceDefinition'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Absorption_05_LegendaryShock',
+                    Probability=(
+                        BaseValueConstant=1.000000,
+                        BaseValueAttribute=None,
+                        InitializationDefinition=None,
+                        BaseValueScaleConstant=1.000000
+                    ),
+                    bDropOnDeath=True
+                ),
+                (
+                    ItmPoolDefinition=None,
+                    InvBalanceDefinition=InventoryBalanceDefinition'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Absorption_05_LegendaryNormal',
+                    Probability=(
+                        BaseValueConstant=1.000000,
+                        BaseValueAttribute=None,
+                        InitializationDefinition=None,
+                        BaseValueScaleConstant=1.000000
+                    ),
+                    bDropOnDeath=True
+                ),
+                (
+                    ItmPoolDefinition=None,
+                    InvBalanceDefinition=None,
+                    Probability=(
+                        BaseValueConstant=0.000000,
+                        BaseValueAttribute=None,
+                        InitializationDefinition=None,
+                        BaseValueScaleConstant=1.000000
+                    ),
+                    bDropOnDeath=True
+                ),
+                (
+                    ItmPoolDefinition=None,
+                    InvBalanceDefinition=None,
+                    Probability=(
+                        BaseValueConstant=0.000000,
+                        BaseValueAttribute=None,
+                        InitializationDefinition=None,
+                        BaseValueScaleConstant=1.000000
+                    ),
+                    bDropOnDeath=True
+                ),
+                (
+                    ItmPoolDefinition=None,
+                    InvBalanceDefinition=None,
+                    Probability=(
+                        BaseValueConstant=0.000000,
+                        BaseValueAttribute=None,
+                        InitializationDefinition=None,
+                        BaseValueScaleConstant=1.000000
+                    ),
+                    bDropOnDeath=True
+                )
+            )
+
+            set GD_Itempools.ShieldPools.Pool_Shields_Booster_06_Legendary BalancedItems
+            (
+                (
+                    ItmPoolDefinition=None,
+                    InvBalanceDefinition=InventoryBalanceDefinition'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Booster_05_Legendary',
+                    Probability=(
+                        BaseValueConstant=1.000000,
+                        BaseValueAttribute=None,
+                        InitializationDefinition=None,
+                        BaseValueScaleConstant=1.000000
+                    ),
+                    bDropOnDeath=True
+                ),
+                (
+                    ItmPoolDefinition=None,
+                    InvBalanceDefinition=None,
+                    Probability=(
+                        BaseValueConstant=0.000000,
+                        BaseValueAttribute=None,
+                        InitializationDefinition=None,
+                        BaseValueScaleConstant=1.000000
+                    ),
+                    bDropOnDeath=True
+                ),
+                (
+                    ItmPoolDefinition=None,
+                    InvBalanceDefinition=None,
+                    Probability=(
+                        BaseValueConstant=0.000000,
+                        BaseValueAttribute=None,
+                        InitializationDefinition=None,
+                        BaseValueScaleConstant=1.000000
+                    ),
+                    bDropOnDeath=True
+                )
+            )
+
+            set GD_Itempools.ShieldPools.Pool_Shields_Chimera_06_Legendary BalancedItems
+            (
+                (
+                    ItmPoolDefinition=None,
+                    InvBalanceDefinition=InventoryBalanceDefinition'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Chimera_05_Legendary',
+                    Probability=(
+                        BaseValueConstant=1.000000,
+                        BaseValueAttribute=None,
+                        InitializationDefinition=None,
+                        BaseValueScaleConstant=1.000000
+                    ),
+                    bDropOnDeath=True
+                ),
+                (
+                    ItmPoolDefinition=None,
+                    InvBalanceDefinition=None,
+                    Probability=(
+                        BaseValueConstant=0.000000,
+                        BaseValueAttribute=None,
+                        InitializationDefinition=None,
+                        BaseValueScaleConstant=1.000000
+                    ),
+                    bDropOnDeath=True
+                )
+            )
+
+            set GD_Itempools.ShieldPools.Pool_Shields_Impact_06_Legendary BalancedItems
+            (
+                (
+                    ItmPoolDefinition=None,
+                    InvBalanceDefinition=InventoryBalanceDefinition'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Impact_05_Legendary',
+                    Probability=(
+                        BaseValueConstant=1.000000,
+                        BaseValueAttribute=None,
+                        InitializationDefinition=None,
+                        BaseValueScaleConstant=1.000000
+                    ),
+                    bDropOnDeath=True
+                )
+            )
+
+            set GD_Itempools.ShieldPools.Pool_Shields_Juggernaut_06_Legendary BalancedItems
+            (
+                (
+                    ItmPoolDefinition=None,
+                    InvBalanceDefinition=InventoryBalanceDefinition'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Juggernaut_05_Legendary',
+                    Probability=(
+                        BaseValueConstant=1.000000,
+                        BaseValueAttribute=None,
+                        InitializationDefinition=None,
+                        BaseValueScaleConstant=1.000000
+                    ),
+                    bDropOnDeath=True
+                ),
+                (
+                    ItmPoolDefinition=None,
+                    InvBalanceDefinition=None,
+                    Probability=(
+                        BaseValueConstant=0.000000,
+                        BaseValueAttribute=None,
+                        InitializationDefinition=None,
+                        BaseValueScaleConstant=1.000000
+                    ),
+                    bDropOnDeath=True
+                )
+            )
+
+            set GD_Itempools.ShieldPools.Pool_Shields_NovaShields_All_06_Legendary BalancedItems
+            (
+                (
+                    ItmPoolDefinition=None,
+                    InvBalanceDefinition=InventoryBalanceDefinition'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Nova_Singularity',
+                    Probability=(
+                        BaseValueConstant=1.000000,
+                        BaseValueAttribute=None,
+                        InitializationDefinition=None,
+                        BaseValueScaleConstant=1.000000
+                    ),
+                    bDropOnDeath=True
+                ),
+                (
+                    ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ShieldPools.Pool_Shields_NovaShields_Explosive_06_Legendary',
+                    InvBalanceDefinition=None,
+                    Probability=(
+                        BaseValueConstant=1.000000,
+                        BaseValueAttribute=None,
+                        InitializationDefinition=None,
+                        BaseValueScaleConstant=1.000000
+                    ),
+                    bDropOnDeath=True
+                ),
+                (
+                    ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ShieldPools.Pool_Shields_NovaShields_Fire_06_Legendary',
+                    InvBalanceDefinition=None,
+                    Probability=(
+                        BaseValueConstant=1.000000,
+                        BaseValueAttribute=None,
+                        InitializationDefinition=None,
+                        BaseValueScaleConstant=1.000000
+                    ),
+                    bDropOnDeath=True
+                )
+            )
+
+            set GD_Itempools.ShieldPools.Pool_Shields_NovaShields_Explosive_06_Legendary BalancedItems
+            (
+                (
+                    ItmPoolDefinition=None,
+                    InvBalanceDefinition=None,
+                    Probability=(
+                        BaseValueConstant=0.000000,
+                        BaseValueAttribute=None,
+                        InitializationDefinition=None,
+                        BaseValueScaleConstant=1.000000
+                    ),
+                    bDropOnDeath=True
+                )
+            )
+
+            set GD_Itempools.ShieldPools.Pool_Shields_NovaShields_Fire_06_Legendary BalancedItems
+            (
+                (
+                    ItmPoolDefinition=None,
+                    InvBalanceDefinition=InventoryBalanceDefinition'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Nova_Phoenix',
+                    Probability=(
+                        BaseValueConstant=1.000000,
+                        BaseValueAttribute=None,
+                        InitializationDefinition=None,
+                        BaseValueScaleConstant=1.000000
+                    ),
+                    bDropOnDeath=True
+                )
+            )
+
+            set GD_Itempools.ShieldPools.Pool_Shields_Roid_06_Legendary BalancedItems
+            (
+                (
+                    ItmPoolDefinition=None,
+                    InvBalanceDefinition=InventoryBalanceDefinition'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Roid_ThresherRaid',
+                    Probability=(
+                        BaseValueConstant=1.000000,
+                        BaseValueAttribute=None,
+                        InitializationDefinition=None,
+                        BaseValueScaleConstant=1.000000
+                    ),
+                    bDropOnDeath=True
+                ),
+                (
+                    ItmPoolDefinition=None,
+                    InvBalanceDefinition=None,
+                    Probability=(
+                        BaseValueConstant=0.000000,
+                        BaseValueAttribute=None,
+                        InitializationDefinition=None,
+                        BaseValueScaleConstant=1.000000
+                    ),
+                    bDropOnDeath=True
+                ),
+                (
+                    ItmPoolDefinition=None,
+                    InvBalanceDefinition=None,
+                    Probability=(
+                        BaseValueConstant=0.000000,
+                        BaseValueAttribute=None,
+                        InitializationDefinition=None,
+                        BaseValueScaleConstant=1.000000
+                    ),
+                    bDropOnDeath=True
+                ),
+                (
+                    ItmPoolDefinition=None,
+                    InvBalanceDefinition=None,
+                    Probability=(
+                        BaseValueConstant=0.000000,
+                        BaseValueAttribute=None,
+                        InitializationDefinition=None,
+                        BaseValueScaleConstant=1.000000
+                    ),
+                    bDropOnDeath=True
+                )
+            )
+
+            set GD_Itempools.ShieldPools.Pool_Shields_SpikeShields_All_06_Legendary BalancedItems
+            (
+                (
+                    ItmPoolDefinition=None,
+                    InvBalanceDefinition=InventoryBalanceDefinition'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Spike_Acid_05_Legendary',
+                    Probability=(
+                        BaseValueConstant=1.000000,
+                        BaseValueAttribute=None,
+                        InitializationDefinition=None,
+                        BaseValueScaleConstant=1.000000
+                    ),
+                    bDropOnDeath=True
+                )
+            )
+
+            set GD_Itempools.ShieldPools.Pool_Shields_SpikeShields_Corrosive_06_Legendary BalancedItems
+            (
+                (
+                    ItmPoolDefinition=None,
+                    InvBalanceDefinition=InventoryBalanceDefinition'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Spike_Acid_05_Legendary',
+                    Probability=(
+                        BaseValueConstant=1.000000,
+                        BaseValueAttribute=None,
+                        InitializationDefinition=None,
+                        BaseValueScaleConstant=1.000000
+                    ),
+                    bDropOnDeath=True
+                )
+            )
+
+            set GD_Itempools.ShieldPools.Pool_Shields_Standard_06_Legendary BalancedItems
+            (
+                (
+                    ItmPoolDefinition=None,
+                    InvBalanceDefinition=InventoryBalanceDefinition'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Standard_05_Legendary',
+                    Probability=(
+                        BaseValueConstant=1.000000,
+                        BaseValueAttribute=None,
+                        InitializationDefinition=None,
+                        BaseValueScaleConstant=1.000000
+                    ),
+                    bDropOnDeath=True
+                ),
+                (
+                    ItmPoolDefinition=None,
+                    InvBalanceDefinition=None,
+                    Probability=(
+                        BaseValueConstant=0.000000,
+                        BaseValueAttribute=None,
+                        InitializationDefinition=None,
+                        BaseValueScaleConstant=1.000000
+                    ),
+                    bDropOnDeath=True
+                ),
+                (
+                    ItmPoolDefinition=None,
+                    InvBalanceDefinition=None,
+                    Probability=(
+                        BaseValueConstant=0.000000,
+                        BaseValueAttribute=None,
+                        InitializationDefinition=None,
+                        BaseValueScaleConstant=1.000000
+                    ),
+                    bDropOnDeath=True
+                ),
+                (
+                    ItmPoolDefinition=None,
+                    InvBalanceDefinition=None,
+                    Probability=(
+                        BaseValueConstant=0.000000,
+                        BaseValueAttribute=None,
+                        InitializationDefinition=None,
+                        BaseValueScaleConstant=1.000000
+                    ),
+                    bDropOnDeath=True
+                ),
+                (
+                    ItmPoolDefinition=None,
+                    InvBalanceDefinition=None,
+                    Probability=(
+                        BaseValueConstant=0.000000,
+                        BaseValueAttribute=None,
+                        InitializationDefinition=None,
+                        BaseValueScaleConstant=1.000000
+                    ),
+                    bDropOnDeath=True
+                )
+            )
+
+        #</Base Pool Initialization>
+
+        #<Add Uniques to Legendary Shield Pools>
+
+            {hotfixes:shield_1340}
+
+            {hotfixes:shield_equitas}
+
+            {hotfixes:shield_potogold}
+
+            {hotfixes:shield_deadlybloom}
+
+            {hotfixes:shield_order}
+
+            {hotfixes:shield_lovethumper}
+
+            {hotfixes:shield_manlyman}
+
+            {hotfixes:shield_roughrider}
+
+        #</Add Uniques to Legendary Shield Pools>
+
+        #<Add Seraphs to Legendary Shield Pools>
+
+            {hotfixes:shield_sponge}
+
+            {hotfixes:shield_bigboomblaster}
+
+            {hotfixes:shield_evolution}
+
+            {hotfixes:shield_hoplite}
+
+            {hotfixes:shield_punchee}
+
+            {hotfixes:shield_antagonist}
+
+            {hotfixes:shield_blockade}
+
+        #</Add Seraphs to Legendary Shield Pools>
+
+    #</Legendary Pool Setup (optionally add uniques + seraphs)>
+
+    #<Stalker Shield Quality (choose one)><MUT>
+
+{rarity_excellent}
+
+{rarity_better}
+
+{rarity_stock}
+
+    #</Stalker Shield Quality (choose one)>
+
+    #<Shield Selection (choose one)><MUT>
+
+        #<Equip Regular Shields>
+
+            # Stalkers will equip regular shields from the general shield pool.
+
+{stalker_shields_real}
+
+        #</Equip Regular Shields>
+
+        #<Equip only Maylay Shields><off>
+
+            ## Stalkers will always equip Maylay shields.  WARNING: the Maylay<off>
+            ## effect seems to be multiplied beyond usual on Stalkers for some reason; this<off>
+            ## will probably make Stalkers hit VERY hard when their shields are down.<off>
+            ## You've been warned!<off>
+
+{stalker_shields_maylay}
+
+        #</Equip only Maylay Shields>
+
+    #</Shield Selection (choose one)><MUT>
+
+#</{mod_name}>
