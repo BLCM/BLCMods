@@ -1459,13 +1459,32 @@ BL2
 
                 level Caverns_P set GD_Population_Creeper.Balance.PawnBalance_CreeperBadass DefaultItemPoolList[0].PoolProbability
                 (
-                    BaseValueConstant = 0.000000,
-                    BaseValueAttribute = AttributeDefinition'GD_Itempools.DropWeights.DropODDS_BossUniques',
-                    InitializationDefinition = None,
-                    BaseValueScaleConstant = 1.250000
+                    BaseValueConstant=0.000000,
+                    BaseValueAttribute=AttributeDefinition'GD_Itempools.DropWeights.DropODDS_BossUniques',
+                    InitializationDefinition=None,
+                    BaseValueScaleConstant=1.250000
                 )
 
             #</Badass Creeper Drops>
+
+            #<Chubby/Tubby Enemy Drops>
+
+                # This is not, strictly speaking, the remit of this mod, but since we
+                # happen to fix the other couple instances of this for No-Beard and Big
+                # Sleep, we may as well fix it here. Basically the chances of Chubbies
+                # dropping their unique gear is a fixed percentage, rather than using
+                # the global DropODDs vars.  This resets it to use the DropODDS vars,
+                # so that the drops follow the user choice of boss drop chance, below.
+
+                level None set GD_Itempools.ListDefs.ChubbyEnemyGunsAndGear ItemPools[0].PoolProbability
+                (
+                    BaseValueConstant=0.000000,
+                    BaseValueAttribute=AttributeDefinition'GD_Itempools.DropWeights.DropODDS_BossUniques',
+                    InitializationDefinition=None,
+                    BaseValueScaleConstant=2.000000
+                )
+
+            #</Chubby/Tubby Enemy Drops>
 
         #</Other Pool Tweaks>
 

@@ -349,8 +349,8 @@ Changelog
     * Laney's Dwarves
     * Hyperion Hawks
     * Psycho Snow Midgets
- * Made Badass Creepers use our unique-drop-chance selection for their unique
-   drops
+ * Made Badass Creepers and Chubby/Tubby enemies use our unique-drop-chance
+   selection for their unique drops
  * Removed putting "real" shields on Jack's Digistruct Clones during the
    storyline Warrior battle, and from the Handsome Sorcerer's Clones during
    the Dragon Keep DLC final battle.
