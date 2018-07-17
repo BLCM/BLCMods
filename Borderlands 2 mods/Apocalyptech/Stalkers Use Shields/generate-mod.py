@@ -29,14 +29,15 @@
 import sys
 
 try:
-    from hotfixes import Hotfixes
+    from modprocessor import ModProcessor
+    mp = ModProcessor()
 except ModuleNotFoundError:
     print('')
-    print('****************************************************************')
-    print('To run this script, you will need to copy or symlink hotfixes.py')
+    print('********************************************************************')
+    print('To run this script, you will need to copy or symlink modprocessor.py')
     print('from the parent directory, so it exists here as well.  Sorry for')
     print('the bother!')
-    print('****************************************************************')
+    print('********************************************************************')
     print('')
     sys.exit(1)
 
@@ -45,8 +46,8 @@ except ModuleNotFoundError:
 ###
 
 mod_name = 'Stalkers Use Shields'
-mod_version = '1.0.0'
-output_filename = '{}-source.txt'.format(mod_name)
+mod_version = '1.1.0'
+output_filename = '{}.blcm'.format(mod_name)
 
 ###
 ### Some constants
@@ -103,10 +104,6 @@ class DropConfig(BaseConfig):
     ###
     ### ... FUNCTIONS??!?
     ###
-
-    def __init__(self, hotfixes):
-        self.hotfixes = hotfixes
-        self.num_hotfixes = 0
 
     def _get_pct_chance(self, weight, total):
         chance = weight/total*100
@@ -297,13 +294,13 @@ def get_balanced_set(objectname, items):
             get_balanced_items(items))
 
 def set_bi_item_pool(hotfix_name, classname, index, item,
-        level=None, prob=None, activated=True, invbalance=None):
+        level=None, prob=None, invbalance=None):
     """
     Sets an entire BalancedItem structure
     """
-    global hfs
+    global mp
     if level is None:
-        level = ''
+        level = 'None'
     if prob is None:
         prob = 1
     if invbalance:
@@ -312,8 +309,8 @@ def set_bi_item_pool(hotfix_name, classname, index, item,
     else:
         itmpool = "ItemPoolDefinition'{}'".format(item)
         invbal = 'None'
-    hfs.add_level_hotfix(hotfix_name, 'SetBIItem',
-        """{},{},BalancedItems[{}],,
+    mp.register_str(hotfix_name,
+        """level {} set {} BalancedItems[{}]
         (
             ItmPoolDefinition={},
             InvBalanceDefinition={},
@@ -324,22 +321,17 @@ def set_bi_item_pool(hotfix_name, classname, index, item,
                 BaseValueScaleConstant=1
             ),
             bDropOnDeath=True
-        )""".format(level, classname, index, itmpool, invbal, prob),
-        activated=activated)
+        )""".format(level, classname, index, itmpool, invbal, prob))
 
 ###
 ### Code to generate the mod
 ###
 
-hfs = Hotfixes()
-regular = Regular(hfs)
-badass = Badass(hfs)
+regular = Regular()
+badass = Badass()
 
 # Configure rarity pools
 rarity_sections = {}
-line_prefix = ''
-line_suffix = ''
-hotfix_activated = True
 for (rarity_key, rarity_label) in DropConfig.rarity_presets:
 
     for config in [regular, badass]:
@@ -371,15 +363,9 @@ for (rarity_key, rarity_label) in DropConfig.rarity_presets:
     with open('input-file-rarity.txt', 'r') as df:
         rarity_sections[rarity_key] = df.read().format(
                 section_label=rarity_label,
-                line_prefix=line_prefix,
-                line_suffix=line_suffix,
                 regular=regular,
                 badass=badass,
                 )
-
-    line_prefix = '#'
-    line_suffix = '<off>'
-    hotfix_activated = False
 
 # Legendary shield pool configuration.
 shields = {
@@ -426,26 +412,18 @@ stalker_shields_real_list = []
 prefix = ' '*(4*3)
 for config in [regular, badass]:
     for (idx, (dipl_idx, popdef)) in enumerate(config.stalker_dipl):
-        stalker_id = 'real_stalker_{}_{}'.format(config.hotfix_prefix, idx)
-        hfs.add_level_hotfix(stalker_id, 'StalkerShields',
-            ",{},DefaultItemPoolList[{}].ItemPool,,ItemPoolDefinition'{}'".format(
-                popdef, dipl_idx, config.regular_shields,
-                ),
-            activated=True)
-        stalker_shields_real_list.append('{}{}'.format(prefix, hfs.get_hotfix_xml(stalker_id)))
+        stalker_shields_real_list.append("{}level None set {} DefaultItemPoolList[{}].ItemPool ItemPoolDefinition'{}'".format(
+            prefix, popdef, dipl_idx, config.regular_shields
+            ))
 
 # Only-Maylay Stalker shield hotfixes
 stalker_shields_maylay_list = []
 prefix = ' '*(4*3)
 for config in [regular, badass]:
     for (idx, (dipl_idx, popdef)) in enumerate(config.stalker_dipl):
-        stalker_id = 'maylay_stalker_{}_{}'.format(config.hotfix_prefix, idx)
-        hfs.add_level_hotfix(stalker_id, 'StalkerShields',
-            ",{},DefaultItemPoolList[{}].ItemPool,,ItemPoolDefinition'{}'".format(
-                popdef, dipl_idx, config.maylay_shields,
-                ),
-            activated=False)
-        stalker_shields_maylay_list.append('{}{}'.format(prefix, hfs.get_hotfix_xml(stalker_id)))
+        stalker_shields_maylay_list.append("{}level None set {} DefaultItemPoolList[{}].ItemPool ItemPoolDefinition'{}'".format(
+            prefix, popdef, dipl_idx, config.maylay_shields,
+            ))
 
 ###
 ### Generate the mod string
@@ -455,7 +433,7 @@ with open('input-file-mod.txt') as df:
     mod_str = df.read().format(
         mod_name=mod_name,
         mod_version=mod_version,
-        hotfixes=hfs,
+        mp=mp,
         regular=regular,
         badass=badass,
         rarity_excellent=rarity_sections['excellent'],
@@ -469,6 +447,5 @@ with open('input-file-mod.txt') as df:
 ### Output to a file.
 ###
 
-with open(output_filename, 'w') as df:
-    df.write(mod_str)
+mp.human_str_to_blcm_filename(mod_str, output_filename)
 print('Wrote mod file to: {}'.format(output_filename))

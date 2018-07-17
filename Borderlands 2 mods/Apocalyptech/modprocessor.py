@@ -528,6 +528,8 @@ class ModProcessor(object):
         written by BLCMM.
         """
         self.patch_type = df.readline().strip()
+        if self.patch_type != 'BL2' and self.patch_type != 'TPS':
+            raise Exception('Unknown patch type found: {} (should be BL2 or TPS)'.format(self.patch_type))
         self.line('<BLCMM v="1">', odf)
         self.line('#<!!!You opened a file saved with BLCMM in FilterTool. Please update to BLCMM to properly open this file!!!>', odf)
         self.line('<head>', odf, 1)
