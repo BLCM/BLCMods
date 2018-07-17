@@ -167,8 +167,8 @@ class Regular(DropConfig):
         }
 
     # Shield pools
-    regular_shields = 'GD_CustomItemPools_allium.Mechro.AlliumTGSkins'
-    maylay_shields = 'GD_CustomItemPools_allium.Soldier.AlliumXmasHeads'
+    regular_shields = 'GD_CustomItemPools_tulip.Mechro.PurpleDark'
+    maylay_shields = 'GD_CustomItemPools_Lilac.Psycho.RedNinja'
 
     # Stalker shield equips
     stalker_dipl = [
@@ -218,8 +218,8 @@ class Badass(DropConfig):
 
 
     # Shield pools
-    regular_shields = 'GD_CustomItemPools_allium.Mercenary.AlliumTGSkins'
-    maylay_shields = 'GD_CustomItemPools_allium.Psycho.AlliumTGSkins'
+    regular_shields = 'GD_CustomItemPools_MainGame.Siren.White'
+    maylay_shields = 'GD_CustomItemPools_MainGame.Soldier.White'
 
     # Stalker shield equips
     stalker_dipl = [
