@@ -24,6 +24,13 @@ have better gear than their ordinary counterparts.
 Grenade Mods, Class Mods, and Relics will still be acquired as per usual -
 via world drops, chests, and the like.
 
+**NOTE:** This mod has a *lot* of user-configurable options (detailed below
+in the "Configuration" section).  In fact, there's 11,520 theoretically-supported
+permutations of the options.  Needless to say, I have not thoroughly tested
+all combinations to ensure that everything works as it should.  if you encounter
+strange behavior, definitely look me up on Discord, github, or email, with
+full details of how you've got it configured, and I can take a look.
+
 * [Requirements](#requirements)
 * [Usage/Installation](#usageinstallation)
 * [Mod Details](#mod-details)
