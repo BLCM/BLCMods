@@ -53,6 +53,8 @@ As stated above, enemies who use guns and shields will always drop that gun
 and shield.  Creatures like Stalkers and Skeletons, and devices like turrets,
 will NOT drop a shield, even if they spawn with one.  (Stalker shield drops
 can be optionally toggled on.)  Shielded loaders will drop shields, though.
+This mod will cause weapon-using enemies to use their UCP drops, whether
+you have UCP installed.
 
 Bosses with unique drops who don't actually use weapons/shields (ie: most
 "creature" enemies like Knuckedragger, machines like BNK3R, melee-only
@@ -319,7 +321,7 @@ for the full text.
 Changelog
 =========
 
-**v1.1.0** - Unreleased
+**v1.1.0** - July 17, 2018
  * Converted to BLCM format *(we now require BLCMM; FilterTool is not supported)*
  * Updated for UCP 4.1 Compatibility *(various loot pool reassignments)*
  * Added an option to have enemy guns not drop all the time (at least at lower
@@ -335,13 +337,19 @@ Changelog
  * Reorganized the section which disables world weapon/shield drops so that
    disabling weapons/shields in chests is easily toggleable via a single
    category.
- * Added bosses from Digistruct Peak:
-    * Bone Head 3.0 equips Bone Shredder / Shredifier
-    * Digi Doc Mercy has a 50% chance to equip the Infinity
-    * Digi Assassins all equip as they do in Southpaw Steam and Power
- * Set Nomad Pyros to equip/drop real ARs in Normal (formerly they would only do
-   so in TVHM+)
- * Fixed Boom and Bewm to drop their shotguns properly
+ * Specific enemy tweaks:
+   * Added bosses from Digistruct Peak:
+      * Bone Head 3.0 equips Bone Shredder / Shredifier
+      * Digi Doc Mercy has a 50% chance to equip the Infinity
+      * Digi Assassins all equip as they do in Southpaw Steam and Power
+   * Set Nomad Pyros to equip/drop real ARs in Normal (formerly they would only do
+     so in TVHM+)
+   * Fixed Boom and Bewm to drop their shotguns properly
+   * Made Badass Creepers and Chubby/Tubby enemies use our unique-drop-chance
+     selection for their unique drops
+   * Removed putting "real" shields on Jack's Digistruct Clones during the
+     storyline Warrior battle, and from the Handsome Sorcerer's Clones during
+     the Dragon Keep DLC final battle.
  * Changed some enemy shield pools so they can't spawn Turtle shields, since
    Turtle shields can potentially cause the enemy to become literally unkillable,
    with the right combination of shield parts, rarity, and level:
@@ -349,11 +357,6 @@ Changelog
     * Laney's Dwarves
     * Hyperion Hawks
     * Psycho Snow Midgets
- * Made Badass Creepers and Chubby/Tubby enemies use our unique-drop-chance
-   selection for their unique drops
- * Removed putting "real" shields on Jack's Digistruct Clones during the
-   storyline Warrior battle, and from the Handsome Sorcerer's Clones during
-   the Dragon Keep DLC final battle.
  * Included necessary skinpool reassignment code in the mod itself, so we don't
    rely on anything from UCP.
  * Fixes some errant commas in various statements (didn't affect the mod itself
