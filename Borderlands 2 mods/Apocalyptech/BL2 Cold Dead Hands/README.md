@@ -24,6 +24,20 @@ have better gear than their ordinary counterparts.
 Grenade Mods, Class Mods, and Relics will still be acquired as per usual -
 via world drops, chests, and the like.
 
+* [Requirements](#requirements)
+* [Usage/Installation](#usageinstallation)
+* [Mod Details](#mod-details)
+  * [Exceptions](#exceptions)
+  * [Other Pool Tweaks](#other-pool-tweaks)
+  * [Configuration](#configuration)
+  * [Implications](#implications)
+* [Compatibility](#compatibility)
+* [Mod Construction / Implementation Details](#mod-construction--implementation-details)
+* [Bugs](#bugs)
+* [Ideas/TODO](#ideastodo)
+* [Licenses](#licenses)
+* [Changelog](#changelog)
+
 Requirements
 ------------
 
