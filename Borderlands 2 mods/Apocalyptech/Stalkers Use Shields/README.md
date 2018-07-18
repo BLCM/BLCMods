@@ -79,6 +79,16 @@ The script makes use of `modprocessor.py` from the parent directory.  You'd
 need to copy (or symlink, if you're on Mac or Linux) `modprocessor.py` into
 this directory in order to run the script.
 
+Bugs
+====
+
+Known issues with the mod:
+
+* As a side-effect of the way we have to make use of loot pools, skin drops
+  from various enemies will be broken (it's that or break skin rewards for
+  challenges/missions).  This mod breaks skin drops for skags and
+  chubbies/tubbies.
+
 Licenses
 ========
 
