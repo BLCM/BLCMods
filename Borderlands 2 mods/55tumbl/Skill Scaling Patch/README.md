@@ -74,3 +74,4 @@ Thanks to Koby for making me want to do something about it, and inviting me to S
 # Change log
 
 * [2018-07-18] v1.1: Fixed a small issue with the calculation of the Phalanx Shield Capacity. Switched to BLCMM-compatible format.
+* [2018-06-24] v1.0.
