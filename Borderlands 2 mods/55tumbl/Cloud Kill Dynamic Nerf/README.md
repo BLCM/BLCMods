@@ -34,3 +34,6 @@ This was all written by me.
 
 Thanks to the Order of the Impending Storm for balancing Cloud Kill so well in the first place.
 
+# Change log
+* [2018-07-18] v1.1: Switched to BLCMM-compatible format.
+* [2018-06-27] v1.0.
