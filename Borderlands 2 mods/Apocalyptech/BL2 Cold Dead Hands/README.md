@@ -342,6 +342,9 @@ for the full text.
 Changelog
 =========
 
+**v1.1.1** - Unreleased
+ * Removed some outdated wording in the mod header comments
+
 **v1.1.0** - July 17, 2018 (commit `7a654f0ac8e8682814395f335ecdb6358b138984`)
  * Converted to BLCM format *(we now require BLCMM; FilterTool is not supported)*
  * Updated for UCP 4.1 Compatibility *(various loot pool reassignments)*
