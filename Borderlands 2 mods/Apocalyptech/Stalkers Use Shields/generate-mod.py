@@ -425,6 +425,10 @@ for config in [regular, badass]:
             prefix, popdef, dipl_idx, config.maylay_shields,
             ))
 
+# Read in skinpool config
+with open('input-file-skinpools.txt') as df:
+    skinpool_setup = df.read()
+
 ###
 ### Generate the mod string
 ###
@@ -441,6 +445,7 @@ with open('input-file-mod.txt') as df:
         rarity_stock=rarity_sections['stock'],
         stalker_shields_real="\n\n".join(stalker_shields_real_list),
         stalker_shields_maylay="\n\n".join(stalker_shields_maylay_list),
+        skinpool_setup=skinpool_setup,
         )
 
 ###

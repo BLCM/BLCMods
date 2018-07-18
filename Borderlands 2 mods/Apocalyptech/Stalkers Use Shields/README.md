@@ -20,14 +20,8 @@ drop their shields, whereas the Stalkers in this mod will not.
 Requirements
 ------------
 
-This mod should be able to be used mostly on its own, but it does require
-one specific category of UCP to be active:
-
-* `Loot Pool & Drop Changes -> Skinpool Fixes (Don't uncheck this)`
-
-This is required to free up the custom loot pools that we use to equip
-stalkers with.  If for whatever reason you'd like to run this mod by itself
-without UCP, make sure to at least enable/copy that folder over.
+As of v1.1, this mod should be able to be used on its own, and does not
+require any UCP config to run.
 
 Usage/Installation
 ------------------
@@ -63,8 +57,8 @@ in various ways, when loaded into BLCMM:
 Compatibility
 -------------
 
-This mod is compatible with UCP, and in fact requires that UCP's skinpool
-changes be in place.
+This mod is compatible with UCP, and should in general be compatible with
+anything which isn't also changing Stalker equipment.
 
 The mod can be used at the same time as my Cold Dead Hands mod, though
 there's not much reason since it's already included inside Cold Dead Hands.
@@ -104,6 +98,7 @@ Changelog
 **v1.1.0** - Unreleased
  * Converted to BLCM format *(Requires BLCMM now, will not work with FilterTool)*
  * Update to use the same skinpools as BL2 Cold Dead Hands
+ * Include skinpool reassignments, so no part of UCP is required
 
 **v1.0.0** - June 2, 2018
  * Initial Release
