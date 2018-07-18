@@ -105,7 +105,7 @@ for the full text.
 Changelog
 =========
 
-**v1.1.0** - Unreleased
+**v1.1.0** - July 18, 2018
  * Converted to BLCM format *(Requires BLCMM now, will not work with FilterTool)*
  * Update to use the same skinpools as BL2 Cold Dead Hands
  * Include skinpool reassignments, so no part of UCP is required
