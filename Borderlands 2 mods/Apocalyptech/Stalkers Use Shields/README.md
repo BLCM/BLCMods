@@ -109,6 +109,8 @@ Changelog
  * Converted to BLCM format *(Requires BLCMM now, will not work with FilterTool)*
  * Update to use the same skinpools as BL2 Cold Dead Hands
  * Include skinpool reassignments, so no part of UCP is required
+ * Cosmetic change: Condensed the rarity choice comments so that regular
+   and badass enemy equip chances are printed on the same line.
 
 **v1.0.0** - June 2, 2018
  * Initial Release
