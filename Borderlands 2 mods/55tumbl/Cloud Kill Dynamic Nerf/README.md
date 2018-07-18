@@ -1,8 +1,8 @@
+*All files and content provided here were written by me (55tumbl), unless stated otherwise. They are free for personal use. You may use these mods in videos, or for streaming, as long as you give proper credit and let me know about it. You may re-use small bits of code (e.g. formulas, etc) for your own purposes as long as you give proper credit and let me know about it. Ask permission if you wish to use larger portions of this code, make a modified/improved version, include it in a mod pack, etc. Do not re-upload any of those files anywhere.*
+
 # Overview
 
-The **Cloud Kill Dynamic Nerf** nerfs Cloud Kill, uh well, dynamically.
-
-That is, Cloud Kill gets nerfed *a lot* in the early levels, and *a lot less* (or pretty much not at all) in the end game. Several options are available.
+The **Cloud Kill Dynamic Nerf** nerfs Cloud Kill, uh well, dynamically. That is, Cloud Kill gets nerfed *a lot* in the early levels, and *a lot less* (or pretty much not at all) in the end game. Several options are available.
 
 # Compatibility
 
