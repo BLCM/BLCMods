@@ -97,6 +97,21 @@ class Config(object):
             else:
                 setattr(self, varname, pct)
 
+    def set_badass_qty_reports(self, basename, quantities):
+        """
+        This is only really used when reporting likely numbers of drops from
+        the various badass enemy definitions.  Will always set fixed-width
+        strings.  Will set the vars `badass_basename_idx`.
+        """
+        for (idx, quantity) in enumerate(quantities):
+            varname = 'badass_{}_{}'.format(basename, idx)
+            if int(quantity) == quantity:
+                setattr(self, varname, '{:4d}'.format(int(quantity)))
+            elif round(quantity,1) == quantity:
+                setattr(self, varname, '{:4.1f}'.format(quantity))
+            else:
+                setattr(self, varname, '{:4.2f}'.format(quantity))
+
     def __format__(self, formatstr):
         """
         A bit of magic so that we can use our values in format strings
@@ -333,28 +348,28 @@ class ConfigLootsplosion(ConfigBase):
     epic_base_legendary = 0.3
 
     # Badass pool probabilities (NOTE: these are *not* weights)
-    badass_pool_veryrare = '0.4'
-    badass_pool_alien = '0.4'
-    badass_pool_epicchest = '0.1'
+    badass_pool_veryrare = 0.4
+    badass_pool_alien = 0.4
+    badass_pool_epicchest = 0.1
 
     # Super Badass pool probabilities (NOTE: these are *not* weights)
-    super_badass_pool_rare = '1'
-    super_badass_pool_veryrare = '1'
-    super_badass_pool_alien = '1'
-    super_badass_pool_legendary = '1'
-    super_badass_pool_epicchest = '1'
+    super_badass_pool_rare = 1
+    super_badass_pool_veryrare = 1
+    super_badass_pool_alien = 1
+    super_badass_pool_legendary = 1
+    super_badass_pool_epicchest = 1
 
     # Ultimate Badass pool probabilities (NOTE: these are *not* weights)
-    ultimate_badass_pool_veryrare_1 = '1'
-    ultimate_badass_pool_veryrare_2 = '0.5'
-    ultimate_badass_pool_alien_1 = '1'
-    ultimate_badass_pool_alien_2 = '0.5'
-    ultimate_badass_pool_legendary_1 = '1'
-    ultimate_badass_pool_legendary_2 = '0.5'
-    ultimate_badass_pool_legendary_3 = '0.25'
-    ultimate_badass_pool_epicchest_1 = '1'
-    ultimate_badass_pool_epicchest_2 = '0.5'
-    ultimate_badass_pool_epicchest_3 = '0.5'
+    ultimate_badass_pool_veryrare_1 = 1
+    ultimate_badass_pool_veryrare_2 = 0.5
+    ultimate_badass_pool_alien_1 = 1
+    ultimate_badass_pool_alien_2 = 0.5
+    ultimate_badass_pool_legendary_1 = 1
+    ultimate_badass_pool_legendary_2 = 0.5
+    ultimate_badass_pool_legendary_3 = 0.25
+    ultimate_badass_pool_epicchest_1 = 1
+    ultimate_badass_pool_epicchest_2 = 0.5
+    ultimate_badass_pool_epicchest_3 = 0.5
 
 class ConfigReasonable(ConfigLootsplosion):
     """
@@ -421,28 +436,28 @@ class ConfigReasonable(ConfigLootsplosion):
     epic_base_legendary = 1
 
     # Badass pool probabilities (NOTE: these are *not* weights)
-    badass_pool_veryrare = '0.2'
-    badass_pool_alien = '0.15'
-    badass_pool_epicchest = '0.1'
+    badass_pool_veryrare = 0.2
+    badass_pool_alien = 0.15
+    badass_pool_epicchest = 0.1
 
     # Super Badass pool probabilities (NOTE: these are *not* weights)
-    super_badass_pool_rare = '1'
-    super_badass_pool_veryrare = '0.4'
-    super_badass_pool_alien = '0.15'
-    super_badass_pool_legendary = '.03'
-    super_badass_pool_epicchest = '1'
+    super_badass_pool_rare = 1
+    super_badass_pool_veryrare = 0.4
+    super_badass_pool_alien = 0.15
+    super_badass_pool_legendary = 0.03
+    super_badass_pool_epicchest = 1
 
     # Ultimate Badass pool probabilities (NOTE: these are *not* weights)
-    ultimate_badass_pool_veryrare_1 = '1'
-    ultimate_badass_pool_veryrare_2 = '0'
-    ultimate_badass_pool_alien_1 = '0.4'
-    ultimate_badass_pool_alien_2 = '0'
-    ultimate_badass_pool_legendary_1 = '0.08'
-    ultimate_badass_pool_legendary_2 = '0'
-    ultimate_badass_pool_legendary_3 = '0'
-    ultimate_badass_pool_epicchest_1 = '1'
-    ultimate_badass_pool_epicchest_2 = '1'
-    ultimate_badass_pool_epicchest_3 = '1'
+    ultimate_badass_pool_veryrare_1 = 1
+    ultimate_badass_pool_veryrare_2 = 0
+    ultimate_badass_pool_alien_1 = 0.4
+    ultimate_badass_pool_alien_2 = 0
+    ultimate_badass_pool_legendary_1 = 0.08
+    ultimate_badass_pool_legendary_2 = 0
+    ultimate_badass_pool_legendary_3 = 0
+    ultimate_badass_pool_epicchest_1 = 1
+    ultimate_badass_pool_epicchest_2 = 1
+    ultimate_badass_pool_epicchest_3 = 1
 
 # The profiles we'll generate
 profiles = [
@@ -848,6 +863,24 @@ for profile in profiles:
     profile.set_balanced_pct_reports('relic_reward', [
             profile.relic_base_rare,
             profile.relic_base_veryrare,
+            ])
+    profile.set_badass_qty_reports('regular', [
+            profile.badass_pool_veryrare,
+            profile.badass_pool_alien,
+            profile.badass_pool_epicchest,
+            ])
+    profile.set_badass_qty_reports('super', [
+            profile.super_badass_pool_rare,
+            profile.super_badass_pool_veryrare,
+            profile.super_badass_pool_alien,
+            profile.super_badass_pool_legendary,
+            profile.super_badass_pool_epicchest,
+            ])
+    profile.set_badass_qty_reports('ultimate', [
+            profile.ultimate_badass_pool_veryrare_1 + profile.ultimate_badass_pool_veryrare_2,
+            profile.ultimate_badass_pool_alien_1 + profile.ultimate_badass_pool_alien_2,
+            profile.ultimate_badass_pool_legendary_1 + profile.ultimate_badass_pool_legendary_2 + profile.ultimate_badass_pool_legendary_3,
+            profile.ultimate_badass_pool_epicchest_1 + profile.ultimate_badass_pool_epicchest_2 + profile.ultimate_badass_pool_epicchest_3,
             ])
 
     with open('input-file-quality.txt') as df:
