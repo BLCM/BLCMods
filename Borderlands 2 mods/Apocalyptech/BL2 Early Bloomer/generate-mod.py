@@ -29,13 +29,26 @@
 import sys
 
 try:
-    from hotfixes import Hotfixes
+    from modprocessor import ModProcessor
+    mp = ModProcessor()
+except ModuleNotFoundError:
+    print('')
+    print('********************************************************************')
+    print('To run this script, you will need to copy or symlink modprocessor.py')
+    print('from the parent directory, so it exists here as well.  Sorry for')
+    print('the bother!')
+    print('********************************************************************')
+    print('')
+    sys.exit(1)
+
+try:
+    from ftexplorer.data import Data
 except ModuleNotFoundError:
     print('')
     print('****************************************************************')
-    print('To run this script, you will need to copy or symlink hotfixes.py')
-    print('from the parent directory, so it exists here as well.  Sorry for')
-    print('the bother!')
+    print('To run this script, you will need to copy or symlink the')
+    print('"ftexplorer" and "resources" dirs from my ft-explorer project so')
+    print('they exist here as well.  Sorry for the bother!')
     print('****************************************************************')
     print('')
     sys.exit(1)
@@ -45,401 +58,32 @@ except ModuleNotFoundError:
 ###
 
 mod_name = 'BL2 Early Bloomer'
-mod_version = '1.0.0'
+mod_version = '1.1.0'
 input_filename = 'mod-input-file.txt'
-output_filename = '{}.txt'.format(mod_name)
-
-###
-### Hotfix object to store all our hotfixes
-###
-
-hfs = Hotfixes(include_gearbox_patches=True)
-
-# Early-game loot unlocks.  Except for this one specific case (Aquamarine Snipers),
-# this can be done with `set` statements, so you'll see all those in mod-input-file.txt.
-# This one has to be hotfixed to be fully cross-platform compatible, and predictable.
-hfs.add_level_hotfix('part_early_game_fix_0',
-        'PartEarlyGameFix',
-        """,GD_Aster_Weapons.Snipers.SR_Maliwan_4_Aquamarine:WeaponPartListCollectionDefinition_306,
-        ElementalPartData.WeightedParts,,
-        (
-            (
-                Part=WeaponPartDefinition'GD_Weap_SniperRifles.elemental.SR_Elemental_Fire',
-                Manufacturers=,
-                MinGameStageIndex=0,
-                MaxGameStageIndex=1,
-                DefaultWeightIndex=2
-            ),
-            (
-                Part=WeaponPartDefinition'GD_Weap_SniperRifles.elemental.SR_Elemental_Shock',
-                Manufacturers=,
-                MinGameStageIndex=0,
-                MaxGameStageIndex=1,
-                DefaultWeightIndex=2
-            ),
-            (
-                Part=WeaponPartDefinition'GD_Weap_SniperRifles.elemental.SR_Elemental_Corrosive',
-                Manufacturers=,
-                MinGameStageIndex=0,
-                MaxGameStageIndex=1,
-                DefaultWeightIndex=2
-            ),
-            (
-                Part=WeaponPartDefinition'GD_Weap_SniperRifles.elemental.SR_Elemental_Slag',
-                Manufacturers=,
-                MinGameStageIndex=0,
-                MaxGameStageIndex=1,
-                DefaultWeightIndex=2
-            )
-        )""")
+output_filename = '{}.blcm'.format(mod_name)
 
 # Hotfixes for compatibility with my "Better Loot" mod.  No ill effects if applied
 # without Better Loot installed!
-hfs.add_level_hotfix('part_early_game_numerical_fix_0',
-    'PartEarlyGameNumericalFix',
-    ",GD_Aster_ItemGrades.ClassMods.BalDef_ClassMod_Aster_Assassin:ItemPartListCollectionDefinition_28,AlphaPartData.WeightedParts[0].MinGameStageIndex,,0")
-hfs.add_level_hotfix('part_early_game_numerical_fix_1',
-    'PartEarlyGameNumericalFix',
-    ",GD_Aster_ItemGrades.ClassMods.BalDef_ClassMod_Aster_Assassin:ItemPartListCollectionDefinition_28,AlphaPartData.WeightedParts[1].MinGameStageIndex,,0")
-hfs.add_level_hotfix('part_early_game_numerical_fix_2',
-    'PartEarlyGameNumericalFix',
-    ",GD_Aster_ItemGrades.ClassMods.BalDef_ClassMod_Aster_Assassin:ItemPartListCollectionDefinition_28,AlphaPartData.WeightedParts[2].MinGameStageIndex,,0")
-hfs.add_level_hotfix('part_early_game_numerical_fix_3',
-    'PartEarlyGameNumericalFix',
-    ",GD_Aster_ItemGrades.ClassMods.BalDef_ClassMod_Aster_Assassin:ItemPartListCollectionDefinition_28,AlphaPartData.WeightedParts[3].MinGameStageIndex,,0")
-hfs.add_level_hotfix('part_early_game_numerical_fix_4',
-    'PartEarlyGameNumericalFix',
-    ",GD_Aster_ItemGrades.ClassMods.BalDef_ClassMod_Aster_Assassin:ItemPartListCollectionDefinition_28,AlphaPartData.WeightedParts[4].MinGameStageIndex,,0")
-hfs.add_level_hotfix('part_early_game_numerical_fix_5',
-    'PartEarlyGameNumericalFix',
-    ",GD_Aster_ItemGrades.ClassMods.BalDef_ClassMod_Aster_Assassin:ItemPartListCollectionDefinition_28,AlphaPartData.WeightedParts[5].MinGameStageIndex,,0")
-hfs.add_level_hotfix('part_early_game_numerical_fix_6',
-    'PartEarlyGameNumericalFix',
-    ",GD_Aster_ItemGrades.ClassMods.BalDef_ClassMod_Aster_Assassin:ItemPartListCollectionDefinition_28,AlphaPartData.WeightedParts[6].MinGameStageIndex,,0")
-hfs.add_level_hotfix('part_early_game_numerical_fix_7',
-    'PartEarlyGameNumericalFix',
-    ",GD_Aster_ItemGrades.ClassMods.BalDef_ClassMod_Aster_Assassin:ItemPartListCollectionDefinition_28,AlphaPartData.WeightedParts[7].MinGameStageIndex,,0")
-hfs.add_level_hotfix('part_early_game_numerical_fix_8',
-    'PartEarlyGameNumericalFix',
-    ",GD_Aster_ItemGrades.ClassMods.BalDef_ClassMod_Aster_Assassin:ItemPartListCollectionDefinition_28,AlphaPartData.WeightedParts[8].MinGameStageIndex,,0")
-hfs.add_level_hotfix('part_early_game_numerical_fix_9',
-    'PartEarlyGameNumericalFix',
-    ",GD_Aster_ItemGrades.ClassMods.BalDef_ClassMod_Aster_Assassin:ItemPartListCollectionDefinition_28,AlphaPartData.WeightedParts[9].MinGameStageIndex,,0")
-hfs.add_level_hotfix('part_early_game_numerical_fix_10',
-    'PartEarlyGameNumericalFix',
-    ",GD_Aster_ItemGrades.ClassMods.BalDef_ClassMod_Aster_Assassin:ItemPartListCollectionDefinition_28,AlphaPartData.WeightedParts[10].MinGameStageIndex,,0")
-hfs.add_level_hotfix('part_early_game_numerical_fix_11',
-    'PartEarlyGameNumericalFix',
-    ",GD_Aster_ItemGrades.ClassMods.BalDef_ClassMod_Aster_Assassin:ItemPartListCollectionDefinition_28,AlphaPartData.WeightedParts[11].MinGameStageIndex,,0")
-hfs.add_level_hotfix('part_early_game_numerical_fix_12',
-    'PartEarlyGameNumericalFix',
-    ",GD_Aster_ItemGrades.ClassMods.BalDef_ClassMod_Aster_Assassin:ItemPartListCollectionDefinition_28,AlphaPartData.WeightedParts[12].MinGameStageIndex,,0")
-hfs.add_level_hotfix('part_early_game_numerical_fix_13',
-    'PartEarlyGameNumericalFix',
-    ",GD_Aster_ItemGrades.ClassMods.BalDef_ClassMod_Aster_Assassin:ItemPartListCollectionDefinition_28,AlphaPartData.WeightedParts[13].MinGameStageIndex,,0")
-hfs.add_level_hotfix('part_early_game_numerical_fix_14',
-    'PartEarlyGameNumericalFix',
-    ",GD_Aster_ItemGrades.ClassMods.BalDef_ClassMod_Aster_Assassin:ItemPartListCollectionDefinition_28,AlphaPartData.WeightedParts[14].MinGameStageIndex,,0")
-hfs.add_level_hotfix('part_early_game_numerical_fix_15',
-    'PartEarlyGameNumericalFix',
-    ",GD_Aster_ItemGrades.ClassMods.BalDef_ClassMod_Aster_Assassin:ItemPartListCollectionDefinition_28,AlphaPartData.WeightedParts[15].MinGameStageIndex,,0")
-hfs.add_level_hotfix('part_early_game_numerical_fix_16',
-    'PartEarlyGameNumericalFix',
-    ",GD_Aster_ItemGrades.ClassMods.BalDef_ClassMod_Aster_Assassin:ItemPartListCollectionDefinition_28,AlphaPartData.WeightedParts[16].MinGameStageIndex,,0")
-hfs.add_level_hotfix('part_early_game_numerical_fix_17',
-    'PartEarlyGameNumericalFix',
-    ",GD_Aster_ItemGrades.ClassMods.BalDef_ClassMod_Aster_Assassin:ItemPartListCollectionDefinition_28,AlphaPartData.WeightedParts[17].MinGameStageIndex,,0")
-hfs.add_level_hotfix('part_early_game_numerical_fix_18',
-    'PartEarlyGameNumericalFix',
-    ",GD_Aster_ItemGrades.ClassMods.BalDef_ClassMod_Aster_Assassin:ItemPartListCollectionDefinition_28,AlphaPartData.WeightedParts[18].MinGameStageIndex,,0")
-hfs.add_level_hotfix('part_early_game_numerical_fix_19',
-    'PartEarlyGameNumericalFix',
-    ",GD_Aster_ItemGrades.ClassMods.BalDef_ClassMod_Aster_Mechromancer:ItemPartListCollectionDefinition_29,AlphaPartData.WeightedParts[0].MinGameStageIndex,,0")
-hfs.add_level_hotfix('part_early_game_numerical_fix_20',
-    'PartEarlyGameNumericalFix',
-    ",GD_Aster_ItemGrades.ClassMods.BalDef_ClassMod_Aster_Mechromancer:ItemPartListCollectionDefinition_29,AlphaPartData.WeightedParts[1].MinGameStageIndex,,0")
-hfs.add_level_hotfix('part_early_game_numerical_fix_21',
-    'PartEarlyGameNumericalFix',
-    ",GD_Aster_ItemGrades.ClassMods.BalDef_ClassMod_Aster_Mechromancer:ItemPartListCollectionDefinition_29,AlphaPartData.WeightedParts[2].MinGameStageIndex,,0")
-hfs.add_level_hotfix('part_early_game_numerical_fix_22',
-    'PartEarlyGameNumericalFix',
-    ",GD_Aster_ItemGrades.ClassMods.BalDef_ClassMod_Aster_Mechromancer:ItemPartListCollectionDefinition_29,AlphaPartData.WeightedParts[3].MinGameStageIndex,,0")
-hfs.add_level_hotfix('part_early_game_numerical_fix_23',
-    'PartEarlyGameNumericalFix',
-    ",GD_Aster_ItemGrades.ClassMods.BalDef_ClassMod_Aster_Mechromancer:ItemPartListCollectionDefinition_29,AlphaPartData.WeightedParts[4].MinGameStageIndex,,0")
-hfs.add_level_hotfix('part_early_game_numerical_fix_24',
-    'PartEarlyGameNumericalFix',
-    ",GD_Aster_ItemGrades.ClassMods.BalDef_ClassMod_Aster_Mechromancer:ItemPartListCollectionDefinition_29,AlphaPartData.WeightedParts[5].MinGameStageIndex,,0")
-hfs.add_level_hotfix('part_early_game_numerical_fix_25',
-    'PartEarlyGameNumericalFix',
-    ",GD_Aster_ItemGrades.ClassMods.BalDef_ClassMod_Aster_Mechromancer:ItemPartListCollectionDefinition_29,AlphaPartData.WeightedParts[6].MinGameStageIndex,,0")
-hfs.add_level_hotfix('part_early_game_numerical_fix_26',
-    'PartEarlyGameNumericalFix',
-    ",GD_Aster_ItemGrades.ClassMods.BalDef_ClassMod_Aster_Mechromancer:ItemPartListCollectionDefinition_29,AlphaPartData.WeightedParts[7].MinGameStageIndex,,0")
-hfs.add_level_hotfix('part_early_game_numerical_fix_27',
-    'PartEarlyGameNumericalFix',
-    ",GD_Aster_ItemGrades.ClassMods.BalDef_ClassMod_Aster_Mechromancer:ItemPartListCollectionDefinition_29,AlphaPartData.WeightedParts[8].MinGameStageIndex,,0")
-hfs.add_level_hotfix('part_early_game_numerical_fix_28',
-    'PartEarlyGameNumericalFix',
-    ",GD_Aster_ItemGrades.ClassMods.BalDef_ClassMod_Aster_Mechromancer:ItemPartListCollectionDefinition_29,AlphaPartData.WeightedParts[9].MinGameStageIndex,,0")
-hfs.add_level_hotfix('part_early_game_numerical_fix_29',
-    'PartEarlyGameNumericalFix',
-    ",GD_Aster_ItemGrades.ClassMods.BalDef_ClassMod_Aster_Mechromancer:ItemPartListCollectionDefinition_29,AlphaPartData.WeightedParts[10].MinGameStageIndex,,0")
-hfs.add_level_hotfix('part_early_game_numerical_fix_30',
-    'PartEarlyGameNumericalFix',
-    ",GD_Aster_ItemGrades.ClassMods.BalDef_ClassMod_Aster_Mechromancer:ItemPartListCollectionDefinition_29,AlphaPartData.WeightedParts[11].MinGameStageIndex,,0")
-hfs.add_level_hotfix('part_early_game_numerical_fix_31',
-    'PartEarlyGameNumericalFix',
-    ",GD_Aster_ItemGrades.ClassMods.BalDef_ClassMod_Aster_Mechromancer:ItemPartListCollectionDefinition_29,AlphaPartData.WeightedParts[12].MinGameStageIndex,,0")
-hfs.add_level_hotfix('part_early_game_numerical_fix_32',
-    'PartEarlyGameNumericalFix',
-    ",GD_Aster_ItemGrades.ClassMods.BalDef_ClassMod_Aster_Mechromancer:ItemPartListCollectionDefinition_29,AlphaPartData.WeightedParts[13].MinGameStageIndex,,0")
-hfs.add_level_hotfix('part_early_game_numerical_fix_33',
-    'PartEarlyGameNumericalFix',
-    ",GD_Aster_ItemGrades.ClassMods.BalDef_ClassMod_Aster_Mechromancer:ItemPartListCollectionDefinition_29,AlphaPartData.WeightedParts[14].MinGameStageIndex,,0")
-hfs.add_level_hotfix('part_early_game_numerical_fix_34',
-    'PartEarlyGameNumericalFix',
-    ",GD_Aster_ItemGrades.ClassMods.BalDef_ClassMod_Aster_Mechromancer:ItemPartListCollectionDefinition_29,AlphaPartData.WeightedParts[15].MinGameStageIndex,,0")
-hfs.add_level_hotfix('part_early_game_numerical_fix_35',
-    'PartEarlyGameNumericalFix',
-    ",GD_Aster_ItemGrades.ClassMods.BalDef_ClassMod_Aster_Mechromancer:ItemPartListCollectionDefinition_29,AlphaPartData.WeightedParts[16].MinGameStageIndex,,0")
-hfs.add_level_hotfix('part_early_game_numerical_fix_36',
-    'PartEarlyGameNumericalFix',
-    ",GD_Aster_ItemGrades.ClassMods.BalDef_ClassMod_Aster_Mechromancer:ItemPartListCollectionDefinition_29,AlphaPartData.WeightedParts[17].MinGameStageIndex,,0")
-hfs.add_level_hotfix('part_early_game_numerical_fix_37',
-    'PartEarlyGameNumericalFix',
-    ",GD_Aster_ItemGrades.ClassMods.BalDef_ClassMod_Aster_Mechromancer:ItemPartListCollectionDefinition_29,AlphaPartData.WeightedParts[18].MinGameStageIndex,,0")
-hfs.add_level_hotfix('part_early_game_numerical_fix_38',
-    'PartEarlyGameNumericalFix',
-    ",GD_Aster_ItemGrades.ClassMods.BalDef_ClassMod_Aster_Merc:ItemPartListCollectionDefinition_30,AlphaPartData.WeightedParts[0].MinGameStageIndex,,0")
-hfs.add_level_hotfix('part_early_game_numerical_fix_39',
-    'PartEarlyGameNumericalFix',
-    ",GD_Aster_ItemGrades.ClassMods.BalDef_ClassMod_Aster_Merc:ItemPartListCollectionDefinition_30,AlphaPartData.WeightedParts[1].MinGameStageIndex,,0")
-hfs.add_level_hotfix('part_early_game_numerical_fix_40',
-    'PartEarlyGameNumericalFix',
-    ",GD_Aster_ItemGrades.ClassMods.BalDef_ClassMod_Aster_Merc:ItemPartListCollectionDefinition_30,AlphaPartData.WeightedParts[2].MinGameStageIndex,,0")
-hfs.add_level_hotfix('part_early_game_numerical_fix_41',
-    'PartEarlyGameNumericalFix',
-    ",GD_Aster_ItemGrades.ClassMods.BalDef_ClassMod_Aster_Merc:ItemPartListCollectionDefinition_30,AlphaPartData.WeightedParts[3].MinGameStageIndex,,0")
-hfs.add_level_hotfix('part_early_game_numerical_fix_42',
-    'PartEarlyGameNumericalFix',
-    ",GD_Aster_ItemGrades.ClassMods.BalDef_ClassMod_Aster_Merc:ItemPartListCollectionDefinition_30,AlphaPartData.WeightedParts[4].MinGameStageIndex,,0")
-hfs.add_level_hotfix('part_early_game_numerical_fix_43',
-    'PartEarlyGameNumericalFix',
-    ",GD_Aster_ItemGrades.ClassMods.BalDef_ClassMod_Aster_Merc:ItemPartListCollectionDefinition_30,AlphaPartData.WeightedParts[5].MinGameStageIndex,,0")
-hfs.add_level_hotfix('part_early_game_numerical_fix_44',
-    'PartEarlyGameNumericalFix',
-    ",GD_Aster_ItemGrades.ClassMods.BalDef_ClassMod_Aster_Merc:ItemPartListCollectionDefinition_30,AlphaPartData.WeightedParts[6].MinGameStageIndex,,0")
-hfs.add_level_hotfix('part_early_game_numerical_fix_45',
-    'PartEarlyGameNumericalFix',
-    ",GD_Aster_ItemGrades.ClassMods.BalDef_ClassMod_Aster_Merc:ItemPartListCollectionDefinition_30,AlphaPartData.WeightedParts[7].MinGameStageIndex,,0")
-hfs.add_level_hotfix('part_early_game_numerical_fix_46',
-    'PartEarlyGameNumericalFix',
-    ",GD_Aster_ItemGrades.ClassMods.BalDef_ClassMod_Aster_Merc:ItemPartListCollectionDefinition_30,AlphaPartData.WeightedParts[8].MinGameStageIndex,,0")
-hfs.add_level_hotfix('part_early_game_numerical_fix_47',
-    'PartEarlyGameNumericalFix',
-    ",GD_Aster_ItemGrades.ClassMods.BalDef_ClassMod_Aster_Merc:ItemPartListCollectionDefinition_30,AlphaPartData.WeightedParts[9].MinGameStageIndex,,0")
-hfs.add_level_hotfix('part_early_game_numerical_fix_48',
-    'PartEarlyGameNumericalFix',
-    ",GD_Aster_ItemGrades.ClassMods.BalDef_ClassMod_Aster_Merc:ItemPartListCollectionDefinition_30,AlphaPartData.WeightedParts[10].MinGameStageIndex,,0")
-hfs.add_level_hotfix('part_early_game_numerical_fix_49',
-    'PartEarlyGameNumericalFix',
-    ",GD_Aster_ItemGrades.ClassMods.BalDef_ClassMod_Aster_Merc:ItemPartListCollectionDefinition_30,AlphaPartData.WeightedParts[11].MinGameStageIndex,,0")
-hfs.add_level_hotfix('part_early_game_numerical_fix_50',
-    'PartEarlyGameNumericalFix',
-    ",GD_Aster_ItemGrades.ClassMods.BalDef_ClassMod_Aster_Merc:ItemPartListCollectionDefinition_30,AlphaPartData.WeightedParts[12].MinGameStageIndex,,0")
-hfs.add_level_hotfix('part_early_game_numerical_fix_51',
-    'PartEarlyGameNumericalFix',
-    ",GD_Aster_ItemGrades.ClassMods.BalDef_ClassMod_Aster_Merc:ItemPartListCollectionDefinition_30,AlphaPartData.WeightedParts[13].MinGameStageIndex,,0")
-hfs.add_level_hotfix('part_early_game_numerical_fix_52',
-    'PartEarlyGameNumericalFix',
-    ",GD_Aster_ItemGrades.ClassMods.BalDef_ClassMod_Aster_Merc:ItemPartListCollectionDefinition_30,AlphaPartData.WeightedParts[14].MinGameStageIndex,,0")
-hfs.add_level_hotfix('part_early_game_numerical_fix_53',
-    'PartEarlyGameNumericalFix',
-    ",GD_Aster_ItemGrades.ClassMods.BalDef_ClassMod_Aster_Merc:ItemPartListCollectionDefinition_30,AlphaPartData.WeightedParts[15].MinGameStageIndex,,0")
-hfs.add_level_hotfix('part_early_game_numerical_fix_54',
-    'PartEarlyGameNumericalFix',
-    ",GD_Aster_ItemGrades.ClassMods.BalDef_ClassMod_Aster_Merc:ItemPartListCollectionDefinition_30,AlphaPartData.WeightedParts[16].MinGameStageIndex,,0")
-hfs.add_level_hotfix('part_early_game_numerical_fix_55',
-    'PartEarlyGameNumericalFix',
-    ",GD_Aster_ItemGrades.ClassMods.BalDef_ClassMod_Aster_Merc:ItemPartListCollectionDefinition_30,AlphaPartData.WeightedParts[17].MinGameStageIndex,,0")
-hfs.add_level_hotfix('part_early_game_numerical_fix_56',
-    'PartEarlyGameNumericalFix',
-    ",GD_Aster_ItemGrades.ClassMods.BalDef_ClassMod_Aster_Merc:ItemPartListCollectionDefinition_30,AlphaPartData.WeightedParts[18].MinGameStageIndex,,0")
-hfs.add_level_hotfix('part_early_game_numerical_fix_57',
-    'PartEarlyGameNumericalFix',
-    ",GD_Aster_ItemGrades.ClassMods.BalDef_ClassMod_Aster_Psycho:ItemPartListCollectionDefinition_31,AlphaPartData.WeightedParts[0].MinGameStageIndex,,0")
-hfs.add_level_hotfix('part_early_game_numerical_fix_58',
-    'PartEarlyGameNumericalFix',
-    ",GD_Aster_ItemGrades.ClassMods.BalDef_ClassMod_Aster_Psycho:ItemPartListCollectionDefinition_31,AlphaPartData.WeightedParts[1].MinGameStageIndex,,0")
-hfs.add_level_hotfix('part_early_game_numerical_fix_59',
-    'PartEarlyGameNumericalFix',
-    ",GD_Aster_ItemGrades.ClassMods.BalDef_ClassMod_Aster_Psycho:ItemPartListCollectionDefinition_31,AlphaPartData.WeightedParts[2].MinGameStageIndex,,0")
-hfs.add_level_hotfix('part_early_game_numerical_fix_60',
-    'PartEarlyGameNumericalFix',
-    ",GD_Aster_ItemGrades.ClassMods.BalDef_ClassMod_Aster_Psycho:ItemPartListCollectionDefinition_31,AlphaPartData.WeightedParts[3].MinGameStageIndex,,0")
-hfs.add_level_hotfix('part_early_game_numerical_fix_61',
-    'PartEarlyGameNumericalFix',
-    ",GD_Aster_ItemGrades.ClassMods.BalDef_ClassMod_Aster_Psycho:ItemPartListCollectionDefinition_31,AlphaPartData.WeightedParts[4].MinGameStageIndex,,0")
-hfs.add_level_hotfix('part_early_game_numerical_fix_62',
-    'PartEarlyGameNumericalFix',
-    ",GD_Aster_ItemGrades.ClassMods.BalDef_ClassMod_Aster_Psycho:ItemPartListCollectionDefinition_31,AlphaPartData.WeightedParts[5].MinGameStageIndex,,0")
-hfs.add_level_hotfix('part_early_game_numerical_fix_63',
-    'PartEarlyGameNumericalFix',
-    ",GD_Aster_ItemGrades.ClassMods.BalDef_ClassMod_Aster_Psycho:ItemPartListCollectionDefinition_31,AlphaPartData.WeightedParts[6].MinGameStageIndex,,0")
-hfs.add_level_hotfix('part_early_game_numerical_fix_64',
-    'PartEarlyGameNumericalFix',
-    ",GD_Aster_ItemGrades.ClassMods.BalDef_ClassMod_Aster_Psycho:ItemPartListCollectionDefinition_31,AlphaPartData.WeightedParts[7].MinGameStageIndex,,0")
-hfs.add_level_hotfix('part_early_game_numerical_fix_65',
-    'PartEarlyGameNumericalFix',
-    ",GD_Aster_ItemGrades.ClassMods.BalDef_ClassMod_Aster_Psycho:ItemPartListCollectionDefinition_31,AlphaPartData.WeightedParts[8].MinGameStageIndex,,0")
-hfs.add_level_hotfix('part_early_game_numerical_fix_66',
-    'PartEarlyGameNumericalFix',
-    ",GD_Aster_ItemGrades.ClassMods.BalDef_ClassMod_Aster_Psycho:ItemPartListCollectionDefinition_31,AlphaPartData.WeightedParts[9].MinGameStageIndex,,0")
-hfs.add_level_hotfix('part_early_game_numerical_fix_67',
-    'PartEarlyGameNumericalFix',
-    ",GD_Aster_ItemGrades.ClassMods.BalDef_ClassMod_Aster_Psycho:ItemPartListCollectionDefinition_31,AlphaPartData.WeightedParts[10].MinGameStageIndex,,0")
-hfs.add_level_hotfix('part_early_game_numerical_fix_68',
-    'PartEarlyGameNumericalFix',
-    ",GD_Aster_ItemGrades.ClassMods.BalDef_ClassMod_Aster_Psycho:ItemPartListCollectionDefinition_31,AlphaPartData.WeightedParts[11].MinGameStageIndex,,0")
-hfs.add_level_hotfix('part_early_game_numerical_fix_69',
-    'PartEarlyGameNumericalFix',
-    ",GD_Aster_ItemGrades.ClassMods.BalDef_ClassMod_Aster_Psycho:ItemPartListCollectionDefinition_31,AlphaPartData.WeightedParts[12].MinGameStageIndex,,0")
-hfs.add_level_hotfix('part_early_game_numerical_fix_70',
-    'PartEarlyGameNumericalFix',
-    ",GD_Aster_ItemGrades.ClassMods.BalDef_ClassMod_Aster_Psycho:ItemPartListCollectionDefinition_31,AlphaPartData.WeightedParts[13].MinGameStageIndex,,0")
-hfs.add_level_hotfix('part_early_game_numerical_fix_71',
-    'PartEarlyGameNumericalFix',
-    ",GD_Aster_ItemGrades.ClassMods.BalDef_ClassMod_Aster_Psycho:ItemPartListCollectionDefinition_31,AlphaPartData.WeightedParts[14].MinGameStageIndex,,0")
-hfs.add_level_hotfix('part_early_game_numerical_fix_72',
-    'PartEarlyGameNumericalFix',
-    ",GD_Aster_ItemGrades.ClassMods.BalDef_ClassMod_Aster_Psycho:ItemPartListCollectionDefinition_31,AlphaPartData.WeightedParts[15].MinGameStageIndex,,0")
-hfs.add_level_hotfix('part_early_game_numerical_fix_73',
-    'PartEarlyGameNumericalFix',
-    ",GD_Aster_ItemGrades.ClassMods.BalDef_ClassMod_Aster_Psycho:ItemPartListCollectionDefinition_31,AlphaPartData.WeightedParts[16].MinGameStageIndex,,0")
-hfs.add_level_hotfix('part_early_game_numerical_fix_74',
-    'PartEarlyGameNumericalFix',
-    ",GD_Aster_ItemGrades.ClassMods.BalDef_ClassMod_Aster_Psycho:ItemPartListCollectionDefinition_31,AlphaPartData.WeightedParts[17].MinGameStageIndex,,0")
-hfs.add_level_hotfix('part_early_game_numerical_fix_75',
-    'PartEarlyGameNumericalFix',
-    ",GD_Aster_ItemGrades.ClassMods.BalDef_ClassMod_Aster_Psycho:ItemPartListCollectionDefinition_31,AlphaPartData.WeightedParts[18].MinGameStageIndex,,0")
-hfs.add_level_hotfix('part_early_game_numerical_fix_76',
-    'PartEarlyGameNumericalFix',
-    ",GD_Aster_ItemGrades.ClassMods.BalDef_ClassMod_Aster_Siren:ItemPartListCollectionDefinition_32,AlphaPartData.WeightedParts[0].MinGameStageIndex,,0")
-hfs.add_level_hotfix('part_early_game_numerical_fix_77',
-    'PartEarlyGameNumericalFix',
-    ",GD_Aster_ItemGrades.ClassMods.BalDef_ClassMod_Aster_Siren:ItemPartListCollectionDefinition_32,AlphaPartData.WeightedParts[1].MinGameStageIndex,,0")
-hfs.add_level_hotfix('part_early_game_numerical_fix_78',
-    'PartEarlyGameNumericalFix',
-    ",GD_Aster_ItemGrades.ClassMods.BalDef_ClassMod_Aster_Siren:ItemPartListCollectionDefinition_32,AlphaPartData.WeightedParts[2].MinGameStageIndex,,0")
-hfs.add_level_hotfix('part_early_game_numerical_fix_79',
-    'PartEarlyGameNumericalFix',
-    ",GD_Aster_ItemGrades.ClassMods.BalDef_ClassMod_Aster_Siren:ItemPartListCollectionDefinition_32,AlphaPartData.WeightedParts[3].MinGameStageIndex,,0")
-hfs.add_level_hotfix('part_early_game_numerical_fix_80',
-    'PartEarlyGameNumericalFix',
-    ",GD_Aster_ItemGrades.ClassMods.BalDef_ClassMod_Aster_Siren:ItemPartListCollectionDefinition_32,AlphaPartData.WeightedParts[4].MinGameStageIndex,,0")
-hfs.add_level_hotfix('part_early_game_numerical_fix_81',
-    'PartEarlyGameNumericalFix',
-    ",GD_Aster_ItemGrades.ClassMods.BalDef_ClassMod_Aster_Siren:ItemPartListCollectionDefinition_32,AlphaPartData.WeightedParts[5].MinGameStageIndex,,0")
-hfs.add_level_hotfix('part_early_game_numerical_fix_82',
-    'PartEarlyGameNumericalFix',
-    ",GD_Aster_ItemGrades.ClassMods.BalDef_ClassMod_Aster_Siren:ItemPartListCollectionDefinition_32,AlphaPartData.WeightedParts[6].MinGameStageIndex,,0")
-hfs.add_level_hotfix('part_early_game_numerical_fix_83',
-    'PartEarlyGameNumericalFix',
-    ",GD_Aster_ItemGrades.ClassMods.BalDef_ClassMod_Aster_Siren:ItemPartListCollectionDefinition_32,AlphaPartData.WeightedParts[7].MinGameStageIndex,,0")
-hfs.add_level_hotfix('part_early_game_numerical_fix_84',
-    'PartEarlyGameNumericalFix',
-    ",GD_Aster_ItemGrades.ClassMods.BalDef_ClassMod_Aster_Siren:ItemPartListCollectionDefinition_32,AlphaPartData.WeightedParts[8].MinGameStageIndex,,0")
-hfs.add_level_hotfix('part_early_game_numerical_fix_85',
-    'PartEarlyGameNumericalFix',
-    ",GD_Aster_ItemGrades.ClassMods.BalDef_ClassMod_Aster_Siren:ItemPartListCollectionDefinition_32,AlphaPartData.WeightedParts[9].MinGameStageIndex,,0")
-hfs.add_level_hotfix('part_early_game_numerical_fix_86',
-    'PartEarlyGameNumericalFix',
-    ",GD_Aster_ItemGrades.ClassMods.BalDef_ClassMod_Aster_Siren:ItemPartListCollectionDefinition_32,AlphaPartData.WeightedParts[10].MinGameStageIndex,,0")
-hfs.add_level_hotfix('part_early_game_numerical_fix_87',
-    'PartEarlyGameNumericalFix',
-    ",GD_Aster_ItemGrades.ClassMods.BalDef_ClassMod_Aster_Siren:ItemPartListCollectionDefinition_32,AlphaPartData.WeightedParts[11].MinGameStageIndex,,0")
-hfs.add_level_hotfix('part_early_game_numerical_fix_88',
-    'PartEarlyGameNumericalFix',
-    ",GD_Aster_ItemGrades.ClassMods.BalDef_ClassMod_Aster_Siren:ItemPartListCollectionDefinition_32,AlphaPartData.WeightedParts[12].MinGameStageIndex,,0")
-hfs.add_level_hotfix('part_early_game_numerical_fix_89',
-    'PartEarlyGameNumericalFix',
-    ",GD_Aster_ItemGrades.ClassMods.BalDef_ClassMod_Aster_Siren:ItemPartListCollectionDefinition_32,AlphaPartData.WeightedParts[13].MinGameStageIndex,,0")
-hfs.add_level_hotfix('part_early_game_numerical_fix_90',
-    'PartEarlyGameNumericalFix',
-    ",GD_Aster_ItemGrades.ClassMods.BalDef_ClassMod_Aster_Siren:ItemPartListCollectionDefinition_32,AlphaPartData.WeightedParts[14].MinGameStageIndex,,0")
-hfs.add_level_hotfix('part_early_game_numerical_fix_91',
-    'PartEarlyGameNumericalFix',
-    ",GD_Aster_ItemGrades.ClassMods.BalDef_ClassMod_Aster_Siren:ItemPartListCollectionDefinition_32,AlphaPartData.WeightedParts[15].MinGameStageIndex,,0")
-hfs.add_level_hotfix('part_early_game_numerical_fix_92',
-    'PartEarlyGameNumericalFix',
-    ",GD_Aster_ItemGrades.ClassMods.BalDef_ClassMod_Aster_Siren:ItemPartListCollectionDefinition_32,AlphaPartData.WeightedParts[16].MinGameStageIndex,,0")
-hfs.add_level_hotfix('part_early_game_numerical_fix_93',
-    'PartEarlyGameNumericalFix',
-    ",GD_Aster_ItemGrades.ClassMods.BalDef_ClassMod_Aster_Siren:ItemPartListCollectionDefinition_32,AlphaPartData.WeightedParts[17].MinGameStageIndex,,0")
-hfs.add_level_hotfix('part_early_game_numerical_fix_94',
-    'PartEarlyGameNumericalFix',
-    ",GD_Aster_ItemGrades.ClassMods.BalDef_ClassMod_Aster_Siren:ItemPartListCollectionDefinition_32,AlphaPartData.WeightedParts[18].MinGameStageIndex,,0")
-hfs.add_level_hotfix('part_early_game_numerical_fix_95',
-    'PartEarlyGameNumericalFix',
-    ",GD_Aster_ItemGrades.ClassMods.BalDef_ClassMod_Aster_Soldier:ItemPartListCollectionDefinition_33,AlphaPartData.WeightedParts[0].MinGameStageIndex,,0")
-hfs.add_level_hotfix('part_early_game_numerical_fix_96',
-    'PartEarlyGameNumericalFix',
-    ",GD_Aster_ItemGrades.ClassMods.BalDef_ClassMod_Aster_Soldier:ItemPartListCollectionDefinition_33,AlphaPartData.WeightedParts[1].MinGameStageIndex,,0")
-hfs.add_level_hotfix('part_early_game_numerical_fix_97',
-    'PartEarlyGameNumericalFix',
-    ",GD_Aster_ItemGrades.ClassMods.BalDef_ClassMod_Aster_Soldier:ItemPartListCollectionDefinition_33,AlphaPartData.WeightedParts[2].MinGameStageIndex,,0")
-hfs.add_level_hotfix('part_early_game_numerical_fix_98',
-    'PartEarlyGameNumericalFix',
-    ",GD_Aster_ItemGrades.ClassMods.BalDef_ClassMod_Aster_Soldier:ItemPartListCollectionDefinition_33,AlphaPartData.WeightedParts[3].MinGameStageIndex,,0")
-hfs.add_level_hotfix('part_early_game_numerical_fix_99',
-    'PartEarlyGameNumericalFix',
-    ",GD_Aster_ItemGrades.ClassMods.BalDef_ClassMod_Aster_Soldier:ItemPartListCollectionDefinition_33,AlphaPartData.WeightedParts[4].MinGameStageIndex,,0")
-hfs.add_level_hotfix('part_early_game_numerical_fix_100',
-    'PartEarlyGameNumericalFix',
-    ",GD_Aster_ItemGrades.ClassMods.BalDef_ClassMod_Aster_Soldier:ItemPartListCollectionDefinition_33,AlphaPartData.WeightedParts[5].MinGameStageIndex,,0")
-hfs.add_level_hotfix('part_early_game_numerical_fix_101',
-    'PartEarlyGameNumericalFix',
-    ",GD_Aster_ItemGrades.ClassMods.BalDef_ClassMod_Aster_Soldier:ItemPartListCollectionDefinition_33,AlphaPartData.WeightedParts[6].MinGameStageIndex,,0")
-hfs.add_level_hotfix('part_early_game_numerical_fix_102',
-    'PartEarlyGameNumericalFix',
-    ",GD_Aster_ItemGrades.ClassMods.BalDef_ClassMod_Aster_Soldier:ItemPartListCollectionDefinition_33,AlphaPartData.WeightedParts[7].MinGameStageIndex,,0")
-hfs.add_level_hotfix('part_early_game_numerical_fix_103',
-    'PartEarlyGameNumericalFix',
-    ",GD_Aster_ItemGrades.ClassMods.BalDef_ClassMod_Aster_Soldier:ItemPartListCollectionDefinition_33,AlphaPartData.WeightedParts[8].MinGameStageIndex,,0")
-hfs.add_level_hotfix('part_early_game_numerical_fix_104',
-    'PartEarlyGameNumericalFix',
-    ",GD_Aster_ItemGrades.ClassMods.BalDef_ClassMod_Aster_Soldier:ItemPartListCollectionDefinition_33,AlphaPartData.WeightedParts[9].MinGameStageIndex,,0")
-hfs.add_level_hotfix('part_early_game_numerical_fix_105',
-    'PartEarlyGameNumericalFix',
-    ",GD_Aster_ItemGrades.ClassMods.BalDef_ClassMod_Aster_Soldier:ItemPartListCollectionDefinition_33,AlphaPartData.WeightedParts[10].MinGameStageIndex,,0")
-hfs.add_level_hotfix('part_early_game_numerical_fix_106',
-    'PartEarlyGameNumericalFix',
-    ",GD_Aster_ItemGrades.ClassMods.BalDef_ClassMod_Aster_Soldier:ItemPartListCollectionDefinition_33,AlphaPartData.WeightedParts[11].MinGameStageIndex,,0")
-hfs.add_level_hotfix('part_early_game_numerical_fix_107',
-    'PartEarlyGameNumericalFix',
-    ",GD_Aster_ItemGrades.ClassMods.BalDef_ClassMod_Aster_Soldier:ItemPartListCollectionDefinition_33,AlphaPartData.WeightedParts[12].MinGameStageIndex,,0")
-hfs.add_level_hotfix('part_early_game_numerical_fix_108',
-    'PartEarlyGameNumericalFix',
-    ",GD_Aster_ItemGrades.ClassMods.BalDef_ClassMod_Aster_Soldier:ItemPartListCollectionDefinition_33,AlphaPartData.WeightedParts[13].MinGameStageIndex,,0")
-hfs.add_level_hotfix('part_early_game_numerical_fix_109',
-    'PartEarlyGameNumericalFix',
-    ",GD_Aster_ItemGrades.ClassMods.BalDef_ClassMod_Aster_Soldier:ItemPartListCollectionDefinition_33,AlphaPartData.WeightedParts[14].MinGameStageIndex,,0")
-hfs.add_level_hotfix('part_early_game_numerical_fix_110',
-    'PartEarlyGameNumericalFix',
-    ",GD_Aster_ItemGrades.ClassMods.BalDef_ClassMod_Aster_Soldier:ItemPartListCollectionDefinition_33,AlphaPartData.WeightedParts[15].MinGameStageIndex,,0")
-hfs.add_level_hotfix('part_early_game_numerical_fix_111',
-    'PartEarlyGameNumericalFix',
-    ",GD_Aster_ItemGrades.ClassMods.BalDef_ClassMod_Aster_Soldier:ItemPartListCollectionDefinition_33,AlphaPartData.WeightedParts[16].MinGameStageIndex,,0")
-hfs.add_level_hotfix('part_early_game_numerical_fix_112',
-    'PartEarlyGameNumericalFix',
-    ",GD_Aster_ItemGrades.ClassMods.BalDef_ClassMod_Aster_Soldier:ItemPartListCollectionDefinition_33,AlphaPartData.WeightedParts[17].MinGameStageIndex,,0")
-hfs.add_level_hotfix('part_early_game_numerical_fix_113',
-    'PartEarlyGameNumericalFix',
-    ",GD_Aster_ItemGrades.ClassMods.BalDef_ClassMod_Aster_Soldier:ItemPartListCollectionDefinition_33,AlphaPartData.WeightedParts[18].MinGameStageIndex,,0")
+better_loot_compat_list = []
+for (classname) in [
+        'GD_Aster_ItemGrades.ClassMods.BalDef_ClassMod_Aster_Assassin:ItemPartListCollectionDefinition_28',
+        'GD_Aster_ItemGrades.ClassMods.BalDef_ClassMod_Aster_Mechromancer:ItemPartListCollectionDefinition_29',
+        'GD_Aster_ItemGrades.ClassMods.BalDef_ClassMod_Aster_Merc:ItemPartListCollectionDefinition_30',
+        'GD_Aster_ItemGrades.ClassMods.BalDef_ClassMod_Aster_Psycho:ItemPartListCollectionDefinition_31',
+        'GD_Aster_ItemGrades.ClassMods.BalDef_ClassMod_Aster_Siren:ItemPartListCollectionDefinition_32',
+        'GD_Aster_ItemGrades.ClassMods.BalDef_ClassMod_Aster_Soldier:ItemPartListCollectionDefinition_33',
+        ]:
+    for i in range(19):
+        better_loot_compat_list.append('level None set {} AlphaPartData.WeightedParts[{}].MinGameStageIndex 0'.format(
+            classname,
+            i,
+            ))
+prefix = ' '*(4*2)
+better_loot_compat = "\n\n".join(['{}{}'.format(prefix, s) for s in better_loot_compat_list])
 
 # Various grenade mod early unlocks.  These actually don't have to be
 # hotfixes, but doing so lets us be much more concise.
+grenade_unlock_list = []
 for (gm_type, man_count) in [
             ('AreaEffect', 1),
             ('BouncingBetty', 2),
@@ -448,45 +92,60 @@ for (gm_type, man_count) in [
             ('Transfusion', 1),
         ]:
     for man_num in range(man_count):
-        hfs.add_level_hotfix('grenade_{}_{}_0'.format(gm_type, man_num),
-            'Grenade{}Man{}Rarity'.format(gm_type, man_num),
-            ',GD_GrenadeMods.A_Item.GM_{},Manufacturers[{}].Grades[0].GameStageRequirement.MinGameStage,,0'.format(
-                gm_type, man_num,
+        grenade_unlock_list.append('level None set GD_GrenadeMods.A_Item.GM_{} Manufacturers[{}].Grades[0].GameStageRequirement.MinGameStage 0'.format(
+            gm_type, man_num
             ))
-        hfs.add_level_hotfix('grenade_{}_{}_1'.format(gm_type, man_num),
-            'Grenade{}Man{}Rarity'.format(gm_type, man_num),
-            ',GD_GrenadeMods.A_Item.GM_{}_2_Uncommon,Manufacturers[{}].Grades[0].GameStageRequirement.MinGameStage,,0'.format(
-                gm_type, man_num,
+        grenade_unlock_list.append('level None set GD_GrenadeMods.A_Item.GM_{}_2_Uncommon Manufacturers[{}].Grades[0].GameStageRequirement.MinGameStage 0'.format(
+            gm_type, man_num
             ))
-        hfs.add_level_hotfix('grenade_{}_{}_2'.format(gm_type, man_num),
-            'Grenade{}Man{}Rarity'.format(gm_type, man_num),
-            ',GD_GrenadeMods.A_Item.GM_{}_3_Rare,Manufacturers[{}].Grades[0].GameStageRequirement.MinGameStage,,0'.format(
-                gm_type, man_num,
+        grenade_unlock_list.append('level None set GD_GrenadeMods.A_Item.GM_{}_3_Rare Manufacturers[{}].Grades[0].GameStageRequirement.MinGameStage 0'.format(
+            gm_type, man_num,
             ))
-        hfs.add_level_hotfix('grenade_{}_{}_3'.format(gm_type, man_num),
-            'Grenade{}Man{}Rarity'.format(gm_type, man_num),
-            ',GD_GrenadeMods.A_Item.GM_{}_4_VeryRare,Manufacturers[{}].Grades[0].GameStageRequirement.MinGameStage,,0'.format(
-                gm_type, man_num,
+        grenade_unlock_list.append('level None set GD_GrenadeMods.A_Item.GM_{}_4_VeryRare Manufacturers[{}].Grades[0].GameStageRequirement.MinGameStage 0'.format(
+            gm_type, man_num,
             ))
+prefix = ' '*(4*2)
+grenade_unlock = "\n\n".join(['{}{}'.format(prefix, s) for s in grenade_unlock_list])
 
-# Unlock rocket launcher ammo at level 1.  It's possible this can be done
-# with `set`, but I like being able to cherry-pick what I'm changing
+# Generate an exhaustive list of part unlocks, using my ft-explorer
+# data introspection routines.
+exhaustive_unlocks_list = []
+data = Data('BL2')
+classnames = sorted(data.get_all_by_type('WeaponPartListCollectionDefinition') +
+        data.get_all_by_type('ItemPartListCollectionDefinition'))
+for classname in classnames:
+    obj_struct = data.get_struct_by_full_object(classname)
 
-hfs.add_level_hotfix('rocket_vending', 'RocketVending',
-    """,GD_ItemGrades.Ammo_Shop.ItemGrade_AmmoShop_RocketLauncher,
-    Manufacturers[0].Grades[0].GameStageRequirement.MinGameStage,,1""")
+    if 'ConsolidatedAttributeInitData' not in obj_struct:
+        # Should maybe keep track of which of these doesn't have it...
+        continue
 
-hfs.add_level_hotfix('rocket_drops', 'RocketDrops',
-    """,GD_ItemGrades.Ammo.ItemGrade_Ammo_RocketLauncher,
-    Manufacturers[0].Grades[0].GameStageRequirement.MinGameStage,,1""")
+    # Figure out our caid values
+    caid = obj_struct['ConsolidatedAttributeInitData']
+    caid_values = []
+    for caid_val in caid:
+        caid_values.append(float(caid_val['BaseValueConstant']))
 
-hfs.add_level_hotfix('grenade_vending', 'GrenadeVending',
-    """,GD_ItemGrades.Ammo_Shop.ItemGrade_AmmoShop_Grenade,
-    Manufacturers[0].Grades[0].GameStageRequirement.MinGameStage,,1""")
+    # Now loop through all our items.
+    caid_updates = set()
+    for key, val in obj_struct.items():
+        if key[-8:] == 'PartData':
+            for part in val['WeightedParts']:
+                min_stage_idx = int(part['MinGameStageIndex'])
+                if caid_values[min_stage_idx] > 1:
+                    caid_updates.add(min_stage_idx)
 
-hfs.add_level_hotfix('grenade_drops', 'GrenadeDrops',
-    """,GD_ItemGrades.Ammo.ItemGrade_Ammo_Grenade,
-    Manufacturers[0].Grades[0].GameStageRequirement.MinGameStage,,1""")
+    # Update, if need be!
+    if len(caid_updates) > 0:
+        #print('Updating the following in {}:'.format(obj_name))
+        for idx in caid_updates:
+            #print(' * {}: {}'.format(idx, caid_values[idx]))
+            exhaustive_unlocks_list.append('level None set {} ConsolidatedAttributeInitData[{}].BaseValueConstant 1'.format(
+                classname, idx
+                ))
+
+prefix = ' '*(4*2)
+exhaustive_unlocks = "\n\n".join(['{}{}'.format(prefix, s) for s in exhaustive_unlocks_list])
 
 ###
 ### Everything below this point is constructing the actual patch file
@@ -494,10 +153,12 @@ hfs.add_level_hotfix('grenade_drops', 'GrenadeDrops',
 
 # Output the mod file
 with open(input_filename, 'r') as df:
-    with open(output_filename, 'w') as odf:
-        odf.write(df.read().format(
-            mod_name=mod_name,
-            mod_version=mod_version,
-            hotfixes=hfs,
-            ))
+    mod_str = df.read().format(
+        mod_name=mod_name,
+        mod_version=mod_version,
+        grenade_unlock=grenade_unlock,
+        better_loot_compat=better_loot_compat,
+        exhaustive_unlocks=exhaustive_unlocks,
+        )
+mp.human_str_to_blcm_filename(mod_str, output_filename)
 print('Wrote mod file to {}'.format(output_filename))
