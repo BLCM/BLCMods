@@ -402,6 +402,8 @@ Changelog
  * Removed disabled-by-default categories which I'd had in there for my own testing
    purposes.  No real need to have them in there in the first place, and it just made
    checking/unchecking the mod fraught with potential unintended side effects.
+ * Fixed some errant commas in a few statements (wasn't actually causing problems, but
+   throwing syntax warnings in BLCMM)
 
 **v1.2.2**, April 25, 2018 (commit `2618668b068b93a397820dcbabcae9bf83a67fd8`):
  * Changed mod filenames to have a `.txt` extension.
