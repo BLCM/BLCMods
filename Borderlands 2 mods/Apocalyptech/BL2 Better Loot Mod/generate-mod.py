@@ -672,33 +672,6 @@ for (num, pool) in [
     mp.register_str('warrior_drop_{}'.format(num),
         "level Boss_Volcano_P set GD_FinalBoss.Character.AIDef_FinalBoss:AIBehaviorProviderDefinition_1.Behavior_SpawnItems_{} ItemPoolList[0].ItemPool ItemPoolDefinition'{}'".format(num, pool))
 
-# Various grenade mod early unlocks.  These actually don't have to be
-# hotfixes, but doing so lets us be much more concise.
-for (gm_type, man_count) in [
-            ('AreaEffect', 1),
-            ('BouncingBetty', 2),
-            ('Mirv', 2),
-            ('Singularity', 1),
-            ('Transfusion', 1),
-        ]:
-    for man_num in range(man_count):
-        mp.register_str('grenade_{}_{}_0'.format(gm_type, man_num),
-            'level None set GD_GrenadeMods.A_Item.GM_{} Manufacturers[{}].Grades[0].GameStageRequirement.MinGameStage 0'.format(
-                gm_type, man_num,
-            ))
-        mp.register_str('grenade_{}_{}_1'.format(gm_type, man_num),
-            'level None set GD_GrenadeMods.A_Item.GM_{}_2_Uncommon Manufacturers[{}].Grades[0].GameStageRequirement.MinGameStage 0'.format(
-                gm_type, man_num,
-            ))
-        mp.register_str('grenade_{}_{}_2'.format(gm_type, man_num),
-            'level None set GD_GrenadeMods.A_Item.GM_{}_3_Rare Manufacturers[{}].Grades[0].GameStageRequirement.MinGameStage 0'.format(
-                gm_type, man_num,
-            ))
-        mp.register_str('grenade_{}_{}_3'.format(gm_type, man_num),
-            'level None set GD_GrenadeMods.A_Item.GM_{}_4_VeryRare Manufacturers[{}].Grades[0].GameStageRequirement.MinGameStage 0'.format(
-                gm_type, man_num,
-            ))
-
 # Make Witch Doctors drop some slightly-more-interesting loot
 witch_extra_pools = """(
         ItemPool=ItemPoolDefinition'GD_Itempools.ArtifactPools.Pool_ArtifactsReward',
@@ -934,6 +907,13 @@ for (label, key, unique_pct, rare_pct) in [
                 )
 
 ###
+### Read in our early game unlocks
+###
+
+with open('input-file-earlyunlock.txt') as df:
+    early_game_unlocks = df.read()
+
+###
 ### Everything below this point is constructing the actual patch file
 ###
 
@@ -955,6 +935,7 @@ with open(input_filename, 'r') as df:
         boss_quantity_excellent=boss_quantities['excellent'],
         boss_quantity_improved=boss_quantities['improved'],
         boss_quantity_stock=boss_quantities['stock'],
+        early_game_unlocks=early_game_unlocks,
         )
 mp.human_str_to_blcm_filename(mod_str, output_filename)
 print('Wrote mod to: {}'.format(output_filename))
