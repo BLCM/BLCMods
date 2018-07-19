@@ -880,7 +880,11 @@
 				</category>
 			</category>
 			<category name="Legendary and E-Tech Pool Adjustments">
-				<comment># Various changes to the Legendary pools, and to the E-Tech pools</comment>
+				<comment># Categories to alter what items are in the global legendary pools.  First,</comment>
+				<comment># Gemstones can be added to the E-Tech pool, and then a series of optional</comment>
+				<comment># categories which can add uniques, pearls, and seraphs into the main legendary</comment>
+				<comment># pools.  (This does omit a few items such as Captain Blade's Midnight Star, and</comment>
+				<comment># the Contraband Sky Rocket.)</comment>
 				<category name="Add Gemstones to E-Tech Pools">
 					<comment># Put Gemstone weapons into the global E-Tech pools, and reduce the</comment>
 					<comment># chances of spawning lamer E-Tech weapons (Darts/Spikers, specifically)</comment>
@@ -892,6 +896,11 @@
 					<code profiles="default">set GD_Itempools.WeaponPools.Pool_Weapons_SniperRifles_05_VeryRare_Alien BalancedItems ((ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_SniperRifles.A_Weapons.Sniper_Dahl_5_Alien',Probability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_SniperRifles.A_Weapons.Sniper_Vladof_5_Alien',Probability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_SniperRifles.A_Weapons.Sniper_Maliwan_5_Alien',Probability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_SniperRifles.A_Weapons.Sniper_Hyperion_5_Alien',Probability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'GD_Aster_Weapons.Snipers.SR_Jakobs_4_Citrine',Probability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'GD_Aster_Weapons.Snipers.SR_Hyperion_4_Diamond',Probability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'GD_Aster_Weapons.Snipers.SR_Dahl_4_Emerald',Probability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True),(ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'GD_Aster_Weapons.Snipers.SR_Vladof_4_Garnet',Probability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True))</code>
 				</category>
 				<category name="Legendary Pool Base Setup (don't uncheck this if you choose anything below here)" locked="true">
+					<comment># Various statements to prep our Legendary pools.  Ensures that all of the</comment>
+					<comment># "standard" legendary items are always in the legendary pool, and leaves</comment>
+					<comment># room in the pools so that uniques, seraphs, and pearls can be added in later</comment>
+					<comment># if desired.  Also ensures that the "gladiolus" pools point to our main</comment>
+					<comment># pools.</comment>
 					<category name="Redirect Gladiolus Pools to Main Pools">
 						<comment># First up, Gladiolus specifies its own weapon pools, GD_Gladioulus_Itempools.WeaponPools.Pool_Weapons_*_LegendaryPlusPearl,</comment>
 						<comment># and we want to make sure that anything looking for legendaries looks in our overridden classes here.  So</comment>
