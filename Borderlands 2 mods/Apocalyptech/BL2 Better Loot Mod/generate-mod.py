@@ -356,22 +356,6 @@ class ConfigLootsplosion(ConfigBase):
     ultimate_badass_pool_epicchest_2 = '0.5'
     ultimate_badass_pool_epicchest_3 = '0.5'
 
-    # Voracidous quantities have to be done slightly differently, because both
-    # Dexiduous and Voracidous use the same Seraph and Legendary pools for their
-    # unique drops, but Dexi calls it multiple times, whereas Vorac just calls
-    # it the once (by default).  So upping the quantity for Vorac makes Dexi's
-    # drops totally ludicrous.  So instead, we're just gonna specify the pool
-    # multiple times in Vorac's ItemPool.  This is lame, but should let both
-    # of them coexist.
-    voracidous_drop_seraph_1 = '1'
-    voracidous_drop_seraph_2 = '1'
-    voracidous_drop_seraph_3 = '1'
-    voracidous_drop_seraph_4 = '1'
-    voracidous_drop_legendary_1 = '1'
-    voracidous_drop_legendary_2 = '1'
-    voracidous_drop_legendary_3 = '1'
-    voracidous_drop_legendary_4 = '1'
-
 class ConfigReasonable(ConfigLootsplosion):
     """
     Alternate config which has slightly-more-reasonable drop rates for stuff
@@ -436,22 +420,6 @@ class ConfigReasonable(ConfigLootsplosion):
     epic_base_alien = 10
     epic_base_legendary = 1
 
-    # Voracidous quantities have to be done slightly differently, because both
-    # Dexiduous and Voracidous use the same Seraph and Legendary pools for their
-    # unique drops, but Dexi calls it multiple times, whereas Vorac just calls
-    # it the once (by default).  So upping the quantity for Vorac makes Dexi's
-    # drops totally ludicrous.  So instead, we're just gonna specify the pool
-    # multiple times in Vorac's ItemPool.  This is lame, but should let both
-    # of them coexist.
-    voracidous_drop_seraph_1 = '1'
-    voracidous_drop_seraph_2 = '1'
-    voracidous_drop_seraph_3 = '0'
-    voracidous_drop_seraph_4 = '0'
-    voracidous_drop_legendary_1 = '1'
-    voracidous_drop_legendary_2 = '1'
-    voracidous_drop_legendary_3 = '0'
-    voracidous_drop_legendary_4 = '0'
-
     # Badass pool probabilities (NOTE: these are *not* weights)
     badass_pool_veryrare = '0.2'
     badass_pool_alien = '0.15'
@@ -505,6 +473,22 @@ class QtyExcellent(Config):
     quantity_gee_legendary = '6'
     quantity_sorcerers_daughter = '4'
 
+    # Voracidous quantities have to be done slightly differently, because both
+    # Dexiduous and Voracidous use the same Seraph and Legendary pools for their
+    # unique drops, but Dexi calls it multiple times, whereas Vorac just calls
+    # it the once (by default).  So upping the quantity for Vorac makes Dexi's
+    # drops totally ludicrous.  So instead, we're just gonna specify the pool
+    # multiple times in Vorac's ItemPool.  This is lame, but should let both
+    # of them coexist.
+    voracidous_drop_seraph_1 = 1
+    voracidous_drop_seraph_2 = 1
+    voracidous_drop_seraph_3 = 1
+    voracidous_drop_seraph_4 = 1
+    voracidous_drop_legendary_1 = 1
+    voracidous_drop_legendary_2 = 1
+    voracidous_drop_legendary_3 = 1
+    voracidous_drop_legendary_4 = 1
+
 class QtyImproved(Config):
     """
     Improved drop quantities - bosses with more than one unique item will
@@ -528,6 +512,22 @@ class QtyImproved(Config):
     quantity_gee_legendary = '2'
     quantity_sorcerers_daughter = '2'
 
+    # Voracidous quantities have to be done slightly differently, because both
+    # Dexiduous and Voracidous use the same Seraph and Legendary pools for their
+    # unique drops, but Dexi calls it multiple times, whereas Vorac just calls
+    # it the once (by default).  So upping the quantity for Vorac makes Dexi's
+    # drops totally ludicrous.  So instead, we're just gonna specify the pool
+    # multiple times in Vorac's ItemPool.  This is lame, but should let both
+    # of them coexist.
+    voracidous_drop_seraph_1 = 1
+    voracidous_drop_seraph_2 = 1
+    voracidous_drop_seraph_3 = 0
+    voracidous_drop_seraph_4 = 0
+    voracidous_drop_legendary_1 = 1
+    voracidous_drop_legendary_2 = 1
+    voracidous_drop_legendary_3 = 0
+    voracidous_drop_legendary_4 = 0
+
 class QtyStock(Config):
     """
     Stock drop quantities - bosses will only ever drop a single item from
@@ -550,6 +550,22 @@ class QtyStock(Config):
     quantity_gee_seraph = '1'
     quantity_gee_legendary = '1'
     quantity_sorcerers_daughter = '1'
+
+    # Voracidous quantities have to be done slightly differently, because both
+    # Dexiduous and Voracidous use the same Seraph and Legendary pools for their
+    # unique drops, but Dexi calls it multiple times, whereas Vorac just calls
+    # it the once (by default).  So upping the quantity for Vorac makes Dexi's
+    # drops totally ludicrous.  So instead, we're just gonna specify the pool
+    # multiple times in Vorac's ItemPool.  This is lame, but should let both
+    # of them coexist.
+    voracidous_drop_seraph_1 = 1
+    voracidous_drop_seraph_2 = 0
+    voracidous_drop_seraph_3 = 0
+    voracidous_drop_seraph_4 = 0
+    voracidous_drop_legendary_1 = 1
+    voracidous_drop_legendary_2 = 0
+    voracidous_drop_legendary_3 = 0
+    voracidous_drop_legendary_4 = 0
 
 # Remove bias for dropping Pistols in the main game.  Also buffs drop rates
 # for snipers and launchers, though it does not bring them up to the level
@@ -847,8 +863,21 @@ for profile in profiles:
 
 boss_quantities = {}
 for qty in [QtyExcellent(), QtyImproved(), QtyStock()]:
+    vorac_legendary_qty = qty.voracidous_drop_legendary_1 + \
+            qty.voracidous_drop_legendary_2 + \
+            qty.voracidous_drop_legendary_3 + \
+            qty.voracidous_drop_legendary_4
+    vorac_seraph_qty = qty.voracidous_drop_seraph_1 + \
+            qty.voracidous_drop_seraph_2 + \
+            qty.voracidous_drop_seraph_3 + \
+            qty.voracidous_drop_seraph_4
     with open('input-file-quantity.txt') as df:
-        boss_quantities[qty.qty_index] = df.read().format(config=qty)
+        boss_quantities[qty.qty_index] = df.read().format(
+                config=qty,
+                mp=mp,
+                vorac_legendary_qty=vorac_legendary_qty,
+                vorac_seraph_qty=vorac_seraph_qty,
+                )
 
 ###
 ### Generate our boss unique drop strings
