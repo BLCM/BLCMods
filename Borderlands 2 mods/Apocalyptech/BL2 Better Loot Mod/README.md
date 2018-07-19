@@ -395,6 +395,9 @@ Changelog
  * Added a category to choose drop quantities for bosses, in addition to the drop rates.
  * Set a few creature minibosses (such as Pimon and Tumba) to guarantee their
    unique drops.
+ * Allow customized legendary pool by providing options for adding uniques, seraphs,
+   and pearls individually rather than hardcoding them all at once.  Moved that category
+   up to being a top-level category as well.
  * Removed buffs for Big Game Hunt DLC rare skins.  We weren't touching any other
    skin drop percentages, which made them an anomaly.
  * Converted to a nicer method of unlocking early-game weapon/item parts which should

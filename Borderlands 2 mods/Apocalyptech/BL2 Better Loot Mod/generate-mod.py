@@ -780,6 +780,376 @@ for (idx, (classname, propname, loot_idx, attachment_idx)) in enumerate([
             attachment_idx,
             ))
 
+# Legendary Pool management
+unique_hotfixes = []
+pearl_hotfixes = []
+seraph_hotfixes = []
+for (guntype, legendaries, uniques, pearls, seraphs) in [
+        (
+            'AssaultRifles',
+            [
+                # Regular Legendaries
+                'GD_Weap_AssaultRifle.A_Weapons_Legendary.AR_Bandit_5_Madhouse',
+                'GD_Weap_AssaultRifle.A_Weapons_Legendary.AR_Dahl_5_Veruc',
+                'GD_Weap_AssaultRifle.A_Weapons_Legendary.AR_Jakobs_5_HammerBuster',
+                'GD_Weap_AssaultRifle.A_Weapons_Legendary.AR_Torgue_5_KerBlaster',
+                'GD_Weap_AssaultRifle.A_Weapons_Legendary.AR_Vladof_5_Sherdifier',
+            ],
+            [
+                # Uniques
+                'GD_Aster_Weapons.AssaultRifles.AR_Bandit_3_Ogre',
+                'GD_Iris_Weapons.AssaultRifles.AR_Torgue_3_BoomPuppy',
+                'GD_Iris_Weapons.AssaultRifles.AR_Vladof_3_Kitten',
+                'GD_Orchid_BossWeapons.AssaultRifle.AR_Jakobs_3_Stinkpot',
+                'GD_Orchid_BossWeapons.AssaultRifle.AR_Vladof_3_Rapier',
+                'GD_Sage_Weapons.AssaultRifle.AR_Bandit_3_Chopper',
+                'GD_Sage_Weapons.AssaultRifle.AR_Jakobs_3_DamnedCowboy',
+                'GD_Weap_AssaultRifle.A_Weapons_Unique.AR_Dahl_3_Scorpio',
+                'GD_Weap_AssaultRifle.A_Weapons_Unique.AR_Jakobs_3_Stomper',
+                'GD_Weap_AssaultRifle.A_Weapons_Unique.AR_Torgue_3_EvilSmasher',
+                'GD_Weap_AssaultRifle.A_Weapons_Unique.AR_Vladof_3_Hail',
+            ],
+            [
+                # Pearls
+                'GD_Gladiolus_Weapons.AssaultRifle.AR_Bandit_6_Sawbar',
+                'GD_Gladiolus_Weapons.AssaultRifle.AR_Dahl_6_Bearcat',
+                'GD_Lobelia_Weapons.AssaultRifles.AR_Jakobs_6_Bekah',
+            ],
+            [
+                # Seraphs
+                'GD_Aster_RaidWeapons.AssaultRifles.Aster_Seraph_Seeker_Balance',
+                'GD_Orchid_RaidWeapons.AssaultRifle.Seraphim.Orchid_Seraph_Seraphim_Balance',
+                'GD_Sage_RaidWeapons.AssaultRifle.Sage_Seraph_LeadStorm_Balance',
+            ],
+        ),
+        (
+            'Launchers',
+            [
+                # Regular Legendaries
+                'GD_Weap_Launchers.A_Weapons_Legendary.RL_Bandit_5_BadaBoom',
+                'GD_Weap_Launchers.A_Weapons_Legendary.RL_Maliwan_5_Pyrophobia',
+                'GD_Weap_Launchers.A_Weapons_Legendary.RL_Tediore_5_Bunny',
+                'GD_Weap_Launchers.A_Weapons_Legendary.RL_Torgue_5_Nukem',
+                'GD_Weap_Launchers.A_Weapons_Legendary.RL_Vladof_5_Mongol',
+                'GD_Weap_Launchers.A_Weapons_Unique.RL_Maliwan_Alien_Norfleet',
+            ],
+            [
+                # Uniques
+                'GD_Weap_Launchers.A_Weapons_Unique.RL_Maliwan_3_TheHive',
+                'GD_Orchid_BossWeapons.Launcher.RL_Torgue_3_12Pounder',
+                'GD_Weap_Launchers.A_Weapons_Unique.RL_Torgue_3_Creamer',
+                'GD_Weap_Launchers.A_Weapons_Unique.RL_Bandit_3_Roaster',
+            ],
+            [
+                # Pearls
+                'GD_Gladiolus_Weapons.Launchers.RL_Torgue_6_Tunguska',
+            ],
+            [
+                # Seraphs
+                'GD_Orchid_RaidWeapons.RPG.Ahab.Orchid_Seraph_Ahab_Balance',
+            ],
+        ),
+        (
+            'Pistols',
+            [
+                # Regular Legendaries
+                'GD_Weap_Pistol.A_Weapons_Legendary.Pistol_Bandit_5_Gub',
+                'GD_Weap_Pistol.A_Weapons_Legendary.Pistol_Tediore_5_Gunerang',
+                'GD_Weap_Pistol.A_Weapons_Legendary.Pistol_Dahl_5_Hornet',
+                'GD_Weap_Pistol.A_Weapons_Legendary.Pistol_Vladof_5_Infinity',
+                'GD_Weap_Pistol.A_Weapons_Legendary.Pistol_Torgue_5_Calla',
+                'GD_Weap_Pistol.A_Weapons_Legendary.Pistol_Maliwan_5_ThunderballFists',
+                'GD_Weap_Pistol.A_Weapons_Legendary.Pistol_Jakobs_5_Maggie',
+                'GD_Weap_Pistol.A_Weapons_Legendary.Pistol_Hyperion_5_LogansGun',
+            ],
+            [
+                # Uniques
+                'GD_Weap_Pistol.A_Weapons_Unique.Pistol_Jakobs_3_Judge',
+                'GD_Aster_Weapons.Pistols.Pistol_Maliwan_3_GrogNozzle',
+                'GD_Orchid_BossWeapons.Pistol.Pistol_Jakobs_ScarletsGreed',
+                'GD_Weap_Pistol.A_Weapons_Unique.Pistol_Dahl_3_GwensHead',
+                'GD_Weap_Pistol.A_Weapons_Unique.Pistol_Hyperion_3_Fibber',
+                'GD_Weap_Pistol.A_Weapons_Unique.Pistol_Dahl_3_Dahlminator',
+                'GD_Iris_Weapons.Pistols.Pistol_Torgue_3_PocketRocket',
+                'GD_Sage_Weapons.Pistols.Pistol_Jakobs_3_Rex',
+                'GD_Weap_Pistol.A_Weapons_Unique.Pistol_Jakobs_3_Law',
+                'GD_Orchid_BossWeapons.Pistol.Pistol_Maliwan_3_LittleEvie',
+                'GD_Weap_Pistol.A_Weapons_Unique.Pistol_Hyperion_3_LadyFist',
+                'GD_Weap_Pistol.A_Weapons_Unique.Pistol_Maliwan_3_Rubi',
+                'GD_Weap_Pistol.A_Weapons_Unique.Pistol_Dahl_3_Teapot',
+                'GD_Weap_Pistol.A_Weapons_Unique.Pistol_Vladof_3_Veritas',
+                'GD_Weap_Pistol.A_Weapons_Unique.Pistol_Bandit_3_Tenderbox',
+            ],
+            [
+                # Pearls
+                'GD_Gladiolus_Weapons.Pistol.Pistol_Jakobs_6_Unforgiven',
+                'GD_Gladiolus_Weapons.Pistol.Pistol_Vladof_6_Stalker',
+                'GD_Lobelia_Weapons.Pistol.Pistol_Maliwan_6_Wanderlust',
+            ],
+            [
+                # Seraphs
+                'GD_Orchid_RaidWeapons.Pistol.Devastator.Orchid_Seraph_Devastator_Balance',
+                'GD_Sage_RaidWeapons.Pistol.Sage_Seraph_Infection_Balance',
+                'GD_Aster_RaidWeapons.Pistols.Aster_Seraph_Stinger_Balance',
+            ],
+        ),
+        (
+            'Shotguns',
+            [
+                # Regular Legendaries
+                'GD_Weap_Shotgun.A_Weapons_Legendary.SG_Bandit_5_SledgesShotgun',
+                'GD_Weap_Shotgun.A_Weapons_Legendary.SG_Tediore_5_Deliverance',
+                'GD_Weap_Shotgun.A_Weapons_Legendary.SG_Torgue_5_Flakker',
+                'GD_Weap_Shotgun.A_Weapons_Legendary.SG_Jakobs_5_Striker',
+                'GD_Weap_Shotgun.A_Weapons_Legendary.SG_Hyperion_5_ConferenceCall',
+            ],
+            [
+                # Uniques
+                'GD_Sage_Weapons.Shotgun.SG_Jakobs_3_Hydra',
+                'GD_Orchid_BossWeapons.Shotgun.SG_Bandit_3_JollyRoger',
+                'GD_Weap_Shotgun.A_Weapons_Unique.SG_Hyperion_3_HeartBreaker',
+                'GD_Weap_Shotgun.A_Weapons_Unique.SG_Bandit_3_Dog',
+                'GD_Weap_Shotgun.A_Weapons_Unique.SG_Tediore_3_Blockhead',
+                'GD_Weap_Shotgun.A_Weapons_Unique.SG_Tediore_3_Octo',
+                'GD_Orchid_BossWeapons.Shotgun.SG_Jakobs_3_OrphanMaker',
+                'GD_Weap_Shotgun.A_Weapons_Unique.SG_Torgue_3_Landscaper',
+                'GD_Iris_Weapons.Shotguns.SG_Hyperion_3_SlowHand',
+                'GD_Weap_Shotgun.A_Weapons_Unique.SG_Hyperion_3_Shotgun1340',
+                'GD_Weap_Shotgun.A_Weapons_Unique.SG_Bandit_3_RokSalt',
+                'GD_Weap_Shotgun.A_Weapons_Unique.SG_Jakobs_3_TidalWave',
+                'GD_Weap_Shotgun.A_Weapons_Unique.SG_Bandit_3_Teeth',
+                'GD_Aster_Weapons.Shotguns.SG_Torgue_3_SwordSplosion',
+                'GD_Sage_Weapons.Shotgun.SG_Jakobs_3_Twister',
+                'GD_Weap_Shotgun.A_Weapons_Unique.SG_Jakobs_3_Triquetra',
+            ],
+            [
+                # Pearls
+                'GD_Gladiolus_Weapons.Shotgun.SG_Hyperion_6_Butcher',
+                'GD_Lobelia_Weapons.Shotguns.SG_Torgue_6_Carnage',
+            ],
+            [
+                # Seraphs
+                'GD_Orchid_RaidWeapons.Shotgun.Spitter.Orchid_Seraph_Spitter_Balance',
+                'GD_Sage_RaidWeapons.Shotgun.Sage_Seraph_Interfacer_Balance',
+                'GD_Aster_RaidWeapons.Shotguns.Aster_Seraph_Omen_Balance',
+            ],
+        ),
+        (
+            'SMG',
+            [
+                # Regular Legendaries
+                'GD_Weap_SMG.A_Weapons_Legendary.SMG_Bandit_5_Slagga',
+                'GD_Weap_SMG.A_Weapons_Legendary.SMG_Tediore_5_BabyMaker',
+                'GD_Weap_SMG.A_Weapons_Legendary.SMG_Dahl_5_Emperor',
+                'GD_Weap_SMG.A_Weapons_Legendary.SMG_Maliwan_5_HellFire',
+                'GD_Weap_SMG.A_Weapons_Legendary.SMG_Hyperion_5_Bitch',
+            ],
+            [
+                # Uniques
+                'GD_Weap_SMG.A_Weapons_Unique.SMG_Maliwan_3_GoodTouch',
+                'GD_Weap_SMG.A_Weapons_Unique.SMG_Bandit_3_BoneShredder',
+                'GD_Weap_SMG.A_Weapons_Unique.SMG_Maliwan_3_BadTouch',
+                'GD_Weap_SMG.A_Weapons_Unique.SMG_Hyperion_3_Bane',
+                'GD_Weap_SMG.A_Weapons_Unique.SMG_Hyperion_3_Commerce',
+                'GD_Weap_SMG.A_Weapons_Unique.SMG_Maliwan_3_Chulainn',
+                'GD_Aster_Weapons.SMGs.SMG_Maliwan_3_Crit',
+                'GD_Weap_SMG.A_Weapons_Unique.SMG_Dahl_3_Lascaux',
+                'GD_Orchid_BossWeapons.SMG.SMG_Dahl_3_SandHawk',
+                'GD_Sage_Weapons.SMG.SMG_Hyperion_3_YellowJacket',
+                'GD_Aster_Weapons.SMGs.SMG_Bandit_3_Orc',
+            ],
+            [
+                # Pearls
+                'GD_Gladiolus_Weapons.SMG.SMG_Tediore_6_Avenger',
+            ],
+            [
+                # Seraphs
+                'GD_Orchid_RaidWeapons.SMG.Tattler.Orchid_Seraph_Tattler_Balance',
+                'GD_Orchid_RaidWeapons.SMG.Actualizer.Orchid_Seraph_Actualizer_Balance',
+                'GD_Aster_RaidWeapons.SMGs.Aster_Seraph_Florentine_Balance',
+            ],
+        ),
+        (
+            'SniperRifles',
+            [
+                # Regular Legendaries
+                'GD_Weap_SniperRifles.A_Weapons_Legendary.Sniper_Dahl_5_Pitchfork',
+                'GD_Weap_SniperRifles.A_Weapons_Legendary.Sniper_Vladof_5_Lyudmila',
+                'GD_Weap_SniperRifles.A_Weapons_Legendary.Sniper_Maliwan_5_Volcano',
+                'GD_Weap_SniperRifles.A_Weapons_Legendary.Sniper_Jakobs_5_Skullmasher',
+                'GD_Weap_SniperRifles.A_Weapons_Legendary.Sniper_Hyperion_5_Invader',
+            ],
+            [
+                # Uniques
+                'GD_Sage_Weapons.SniperRifles.Sniper_Jakobs_3_ElephantGun',
+                'GD_Weap_SniperRifles.A_Weapons_Unique.Sniper_Hyperion_3_FremingtonsEdge',
+                'GD_Weap_SniperRifles.A_Weapons_Unique.Sniper_Jakobs_3_Buffalo',
+                'GD_Iris_Weapons.SniperRifles.Sniper_Jakobs_3_Cobra',
+                'GD_Weap_SniperRifles.A_Weapons_Unique.Sniper_Maliwan_3_ChereAmie',
+                'GD_Orchid_BossWeapons.SniperRifles.Sniper_Maliwan_3_Pimpernel',
+                'GD_Weap_SniperRifles.A_Weapons_Unique.Sniper_Hyperion_3_Morningstar',
+                'GD_Weap_SniperRifles.A_Weapons_Unique.Sniper_Dahl_3_Sloth',
+                'GD_Weap_SniperRifles.A_Weapons_Unique.Sniper_Jakobs_3_Tresspasser',
+                'GD_Weap_SniperRifles.A_Weapons_Unique.Sniper_Hyperion_3_Longbow',
+            ],
+            [
+                # Pearls
+                'GD_Gladiolus_Weapons.sniper.Sniper_Maliwan_6_Storm',
+                'GD_Lobelia_Weapons.sniper.Sniper_Jakobs_6_Godfinger',
+            ],
+            [
+                # Seraphs
+                'GD_Orchid_RaidWeapons.sniper.Patriot.Orchid_Seraph_Patriot_Balance',
+                'GD_Sage_RaidWeapons.sniper.Sage_Seraph_HawkEye_Balance',
+            ],
+        ),
+        ]:
+
+    # First set up a hotfix for the base pool initialization
+    initial_pool = []
+    for legendary in legendaries:
+        initial_pool.append((legendary, 1, 'WeaponBalanceDefinition'))
+    for i in range(len(uniques) + len(pearls) + len(seraphs)):
+        initial_pool.append((None, 0))
+    mp.register_str('weapon_pool_clear_{}'.format(guntype.lower()),
+        'level None set GD_Itempools.WeaponPools.Pool_Weapons_{}_06_Legendary BalancedItems {}'.format(
+            guntype,
+            mp.get_balanced_items(initial_pool),
+            ))
+
+    # Hotfixes to add uniques
+    for (idx, unique) in enumerate(uniques):
+        unique_hotfixes.append(
+            """level None set GD_Itempools.WeaponPools.Pool_Weapons_{}_06_Legendary BalancedItems[{}]
+            (
+                ItmPoolDefinition=None,
+                InvBalanceDefinition=WeaponBalanceDefinition'{}',
+                Probability=(
+                    BaseValueConstant=1,
+                    BaseValueAttribute=None,
+                    InitializationDefinition=None,
+                    BaseValueScaleConstant=1
+                ),
+                bDropOnDeath=True
+            )
+            """.format(
+                guntype,
+                len(legendaries) + idx,
+                unique
+                ))
+
+    # Hotfixes to add pearls
+    for (idx, pearl) in enumerate(pearls):
+        pearl_hotfixes.append(
+            """level None set GD_Itempools.WeaponPools.Pool_Weapons_{}_06_Legendary BalancedItems[{}]
+            (
+                ItmPoolDefinition=None,
+                InvBalanceDefinition=WeaponBalanceDefinition'{}',
+                Probability=(
+                    BaseValueConstant=1,
+                    BaseValueAttribute=None,
+                    InitializationDefinition=None,
+                    BaseValueScaleConstant=1
+                ),
+                bDropOnDeath=True
+            )
+            """.format(
+                guntype,
+                len(legendaries) + len(uniques) + idx,
+                pearl
+                ))
+
+    # Hotfixes to add seraphs
+    for (idx, seraph) in enumerate(seraphs):
+        seraph_hotfixes.append(
+            """level None set GD_Itempools.WeaponPools.Pool_Weapons_{}_06_Legendary BalancedItems[{}]
+            (
+                ItmPoolDefinition=None,
+                InvBalanceDefinition=WeaponBalanceDefinition'{}',
+                Probability=(
+                    BaseValueConstant=1,
+                    BaseValueAttribute=None,
+                    InitializationDefinition=None,
+                    BaseValueScaleConstant=1
+                ),
+                bDropOnDeath=True
+            )
+            """.format(
+                guntype,
+                len(legendaries) + len(uniques) + len(pearls) + idx,
+                seraph
+                ))
+
+mp.register_str('legendary_unique_adds', "\n\n".join(
+        ['{}{}'.format(' '*(4*3), hotfix) for hotfix in unique_hotfixes]
+    ))
+
+mp.register_str('legendary_pearl_adds', "\n\n".join(
+        ['{}{}'.format(' '*(4*3), hotfix) for hotfix in pearl_hotfixes]
+    ))
+
+mp.register_str('legendary_seraph_adds', "\n\n".join(
+        ['{}{}'.format(' '*(4*3), hotfix) for hotfix in seraph_hotfixes]
+    ))
+
+# Legendary shield/grenade pool configuration.  Doing this a bit differently since there's
+# not nearly as many shields/grenades to handle as weapons.
+
+items = {
+    'shield': {
+        'GD_Itempools.ShieldPools.Pool_Shields_Absorption_06_Legendary': [
+            ('1340', 2, 'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Absorption_1340'),
+            ('equitas', 3, 'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Absorption_Equitas'),
+            ('sponge', 4, 'GD_Iris_SeraphItems.Sponge.Iris_Seraph_Shield_Sponge_Balance'),
+            ],
+        'GD_Itempools.ShieldPools.Pool_Shields_Booster_06_Legendary': [
+            ('potogold', 1, 'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Booster_PotOGold'),
+            ('bigboomblaster', 2, 'GD_Iris_SeraphItems.BigBoomBlaster.Iris_Seraph_Shield_Booster_Balance'),
+            ],
+        'GD_Itempools.ShieldPools.Pool_Shields_Chimera_06_Legendary': [
+            ('evolution', 1, 'GD_Orchid_RaidWeapons.Shield.Anshin.Orchid_Seraph_Anshin_Shield_Balance')
+            ],
+        'GD_Itempools.ShieldPools.Pool_Shields_Juggernaut_06_Legendary': [
+            ('hoplite', 1, 'GD_Iris_SeraphItems.Hoplite.Iris_Seraph_Shield_Juggernaut_Balance'),
+            ],
+        'GD_Itempools.ShieldPools.Pool_Shields_NovaShields_Explosive_06_Legendary': [
+            ('deadlybloom', 0, 'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Nova_Explosive_DeadlyBloom'),
+            ],
+        'GD_Itempools.ShieldPools.Pool_Shields_Roid_06_Legendary': [
+            ('order', 1, 'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Roid_Order'),
+            ('lovethumper', 2, 'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Roid_04_LoveThumper'),
+            ('punchee', 3, 'GD_Iris_SeraphItems.Pun-chee.Iris_Seraph_Shield_Pun-chee_Balance'),
+            ],
+        'GD_Itempools.ShieldPools.Pool_Shields_Standard_06_Legendary': [
+            ('manlyman', 1, 'GD_Orchid_Shields.A_Item_Custom.S_BladeShield'),
+            ('roughrider', 2, 'GD_Sage_Shields.A_Item_Custom.S_BucklerShield'),
+            ('antagonist', 3, 'GD_Aster_ItemGrades.Shields.Aster_Seraph_Antagonist_Shield_Balance'),
+            ('blockade', 4, 'GD_Aster_ItemGrades.Shields.Aster_Seraph_Blockade_Shield_Balance'),
+            ],
+        },
+    'grenade': {
+        'GD_Itempools.GrenadeModPools.Pool_GrenadeMods_06_Legendary': [
+            ('breath_of_terra', 12, 'GD_GrenadeMods.A_Item_Legendary.GM_FlameSpurt'),
+            ('fireball', 13, 'GD_Aster_GrenadeMods.A_Item.GM_Fireball'),
+            ('fuster_cluck', 14, 'GD_GrenadeMods.A_Item_Custom.GM_FusterCluck'),
+            ('kiss_of_death', 15, 'GD_GrenadeMods.A_Item_Custom.GM_KissOfDeath'),
+            ('lightning_bolt', 16, 'GD_Aster_GrenadeMods.A_Item.GM_LightningBolt'),
+            ('magic_missile', 17, 'GD_Aster_GrenadeMods.A_Item.GM_MagicMissileRare'),
+            ('crossfire', 18, 'GD_Iris_SeraphItems.Crossfire.Iris_Seraph_GrenadeMod_Crossfire_Balance'),
+            ('meteor_shower', 19, 'GD_Iris_SeraphItems.MeteorShower.Iris_Seraph_GrenadeMod_MeteorShower_Balance'),
+            ('o_negative', 20, 'GD_Iris_SeraphItems.ONegative.Iris_Seraph_GrenadeMod_ONegative_Balance'),
+            ],
+        },
+    }
+for (itemtype, itemdict) in items.items():
+    for (pool, itemlist) in itemdict.items():
+        for (label, index, itemname) in itemlist:
+            mp.set_bi_item_pool('{}_{}'.format(itemtype, label),
+                pool,
+                index,
+                itemname,
+                invbalance='InventoryBalanceDefinition')
+
 ###
 ### Generate our quality category strings
 ###
