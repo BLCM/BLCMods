@@ -573,93 +573,95 @@
 					<comment>#       Voracidous Legendaries: 4</comment>
 					<comment>#           Voracidous Seraphs: 4</comment>
 					<comment>#                  The Warrior: 8</comment>
-					<category name="BNK3R">
-						<code profiles="default">set GD_Itempools.Runnables.Pool_Bunker Quantity (BaseValueConstant=3,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)</code>
-					</category>
-					<category name="Captain Flynt">
-						<code profiles="default">set GD_Itempools.Runnables.Pool_CaptFlynt Quantity (BaseValueConstant=2,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)</code>
-					</category>
-					<category name="Chubby/Tubby Enemies">
-						<code profiles="default">set GD_Itempools.Runnables.Pool_ChubbieUniques Quantity (BaseValueConstant=4,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)</code>
-					</category>
-					<category name="Dukino's Mom">
-						<code profiles="default">set GD_Itempools.Runnables.Pool_SkagzillaMom Quantity (BaseValueConstant=2,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)</code>
-					</category>
-					<category name="Gold Golem">
-						<hotfix name="ApocHotfix" level="Mines_P">
-							<code profiles="default">set GD_GolemGold.LootPools.Pool_GoldGolemRunnable Quantity (BaseValueConstant=3,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.0)</code>
-						</hotfix>
-					</category>
-					<category name="Henry">
-						<code profiles="default">set GD_Itempools.Runnables.Pool_Henry Quantity (BaseValueConstant=2,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)</code>
-					</category>
-					<category name="Hyperius">
-						<code profiles="default">set GD_Orchid_ItemPools.Raid.Pool_Orchid_Raid1_PinkWeapons Quantity (BaseValueConstant=4,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)</code>
-						<code profiles="default">set GD_Orchid_ItemPools.Raid.Pool_Orchid_Raid1_Legendary Quantity (BaseValueConstant=7,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)</code>
-					</category>
-					<category name="King Mong">
-						<code profiles="default">set GD_Itempools.Runnables.Pool_KingMong Quantity (BaseValueConstant=2,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)</code>
-					</category>
-					<category name="Master Gee">
-						<code profiles="default">set GD_Orchid_ItemPools.Raid.Pool_Orchid_Raid3_PinkWeapons Quantity (BaseValueConstant=4,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)</code>
-						<code profiles="default">set GD_Orchid_ItemPools.Raid.Pool_Orchid_Raid3_Legendary Quantity (BaseValueConstant=6,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)</code>
-					</category>
-					<category name="Nisha">
-						<code profiles="default">set GD_Itempools.Runnables.Pool_Sheriff Quantity (BaseValueConstant=2,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)</code>
-					</category>
-					<category name="Saturn">
-						<code profiles="default">set GD_Itempools.Runnables.Pool_Talos Quantity (BaseValueConstant=3,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)</code>
-					</category>
-					<category name="Son of Mothrakk">
-						<code profiles="default">set GD_Itempools.Runnables.Pool_SonOfMothrakk Quantity (BaseValueConstant=2,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)</code>
-					</category>
-					<category name="Sorcerer's Daughter">
-						<hotfix name="ApocHotfix" level="Dungeon_P">
-							<code profiles="default">set GD_AngelBoss.LootPools.Pool_AngelBossRunnable Quantity.BaseValueConstant 4</code>
-						</hotfix>
-					</category>
-					<category name="Southpaw Assassins">
-						<code profiles="default">set GD_Itempools.Runnables.Pool_FourAssassins Quantity (BaseValueConstant=2,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)</code>
-					</category>
-					<category name="Terramorphous">
-						<code profiles="default">set GD_Itempools.Runnables.Pool_Terramorphous Quantity (BaseValueConstant=7,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)</code>
-					</category>
-					<category name="Ultimate Badass Varkids">
-						<code profiles="default">set GD_Itempools.Runnables.Pool_UltimateBadassVarkid Quantity (BaseValueConstant=2,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)</code>
-					</category>
-					<category name="Vermivorous">
-						<code profiles="default">set GD_Itempools.Runnables.Pool_Verm Quantity (BaseValueConstant=5,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)</code>
-					</category>
-					<category name="Voracidous">
-						<comment># We're playing a strange game with the drop pool here.  Unlike</comment>
-						<comment># other DLCs, the item definition for the seraph crystals doesn't get</comment>
-						<comment># loaded until the level does, so we can't specify seraph crystal</comment>
-						<comment># rewards directly.  Rather than have a gigantic hotfix, what I'm doing</comment>
-						<comment># is substituting GD_Itempools.WeaponPools.Pool_Weapons_All_01_Common</comment>
-						<comment># and then just hotfixing *those* values.</comment>
-						<comment>#</comment>
-						<comment># Additionally, Vorac and Dexi both drop from the same pool.  We'd want to</comment>
-						<comment># update the quantity for Vorac's drops, but can't because Dexi's drops</comment>
-						<comment># would be insane then (since it drops multiple times).  So the same</comment>
-						<comment># unique pools get specified in here multiple times.</comment>
-						<code profiles="default">set GD_Sage_ItemPools.Raid.PoolList_Sage_Raid_Items ItemPools ((ItemPool=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_All_01_Common',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_All_01_Common',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_All_01_Common',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Sage_ItemPools.Raid.Pool_Sage_Raid_PinkWeapons',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)),(ItemPool=ItemPoolDefinition'GD_Sage_ItemPools.Raid.Pool_Sage_Raid_PinkWeapons',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)),(ItemPool=ItemPoolDefinition'GD_Sage_ItemPools.Raid.Pool_Sage_Raid_PinkWeapons',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)),(ItemPool=ItemPoolDefinition'GD_Sage_ItemPools.Raid.Pool_Sage_Raid_PinkWeapons',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)),(ItemPool=ItemPoolDefinition'GD_Sage_ItemPools.Raid.Pool_Sage_Raid_Legendary',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)),(ItemPool=ItemPoolDefinition'GD_Sage_ItemPools.Raid.Pool_Sage_Raid_Legendary',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)),(ItemPool=ItemPoolDefinition'GD_Sage_ItemPools.Raid.Pool_Sage_Raid_Legendary',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)),(ItemPool=ItemPoolDefinition'GD_Sage_ItemPools.Raid.Pool_Sage_Raid_Legendary',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)),(ItemPool=ItemPoolDefinition'GD_Itempools.EnemyDropPools.Pool_GunsAndGear_05_VeryRare',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.EnemyDropPools.Pool_GunsAndGear_05_VeryRare',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.EnemyDropPools.Pool_GunsAndGear_05_VeryRare',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.EnemyDropPools.Pool_GunsAndGear_06_Legendary',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.EnemyDropPools.Pool_GunsAndGear_06_Legendary',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.EnemyDropPools.Pool_GunsAndGear_06_Legendary',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.GeneralItemPools.Pool_GunsAndGearDropNumPlayersPlusOne',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.GeneralItemPools.Pool_GunsAndGear',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.WeightingPlayerCount.GearDrops_PerPlayer',BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.EnemyDropPools.Pool_GunsAndGear_06_Legendary',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.WeightingPlayerCount.GearDrops_PerPlayer',BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.EnemyDropPools.Pool_GunsAndGear_06_Legendary',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.WeightingPlayerCount.GearDrops_PerPlayer',BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.EnemyDropPools.Pool_GunsAndGear_06_Legendary',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.WeightingPlayerCount.GearDrops_PerPlayer',BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.EnemyDropPools.Pool_GunsAndGear_05_VeryRare',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.WeightingPlayerCount.GearDrops_PerPlayer',BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.EnemyDropPools.Pool_GunsAndGear_05_VeryRare',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.WeightingPlayerCount.GearDrops_PerPlayer',BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.EnemyDropPools.Pool_GunsAndGear_05_VeryRare',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.WeightingPlayerCount.GearDrops_PerPlayer',BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Money_1_BIG',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Money_1_BIG',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Money_1_BIG',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Money_1_BIG',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Money_1_BIG',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Money_1_BIG',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Eridium_Bar',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Eridium_Bar',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Eridium_Bar',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Eridium_Bar',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Health_All',PoolProbability=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'GD_Itempools.DropWeights.DropODDS_Health',InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Health_All',PoolProbability=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'GD_Itempools.DropWeights.DropODDS_Health',InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Ammo_All_DropAlways',PoolProbability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.WeightingPlayerCount.AmmoDrops_PerPlayer',BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Ammo_All_DropAlways',PoolProbability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.WeightingPlayerCount.AmmoDrops_PerPlayer',BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Ammo_All_DropAlways',PoolProbability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.WeightingPlayerCount.AmmoDrops_PerPlayer',BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Ammo_All_DropAlways',PoolProbability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.WeightingPlayerCount.AmmoDrops_PerPlayer',BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Ammo_All_NeedOnly',PoolProbability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.WeightingPlayerCount.AmmoDrops_PerPlayer',BaseValueScaleConstant=0.250000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Ammo_All_Emergency',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))</code>
-						<hotfix name="ApocHotfix" level="Sage_Cliffs_P">
-							<code profiles="default">set GD_Sage_ItemPools.Raid.PoolList_Sage_Raid_Items ItemPools[0].ItemPool ItemPoolDefinition'GD_Sage_ItemPools.SeraphCrystal.Pool_SeraphCrystal_7_Drop'</code>
-							<code profiles="default">set GD_Sage_ItemPools.Raid.PoolList_Sage_Raid_Items ItemPools[1].ItemPool ItemPoolDefinition'GD_Sage_ItemPools.SeraphCrystal.Pool_SeraphCrystal_7_Drop'</code>
-							<code profiles="default">set GD_Sage_ItemPools.Raid.PoolList_Sage_Raid_Items ItemPools[2].ItemPool ItemPoolDefinition'GD_Sage_ItemPools.SeraphCrystal.Pool_SeraphCrystal_7_Drop'</code>
-						</hotfix>
-						<comment># And one final hotfix for UCP compatibility, to make sure that</comment>
-						<comment># UCP doesn't overwrite the probability of the first element of</comment>
-						<comment># the itempool.</comment>
-						<hotfix name="ApocHotfix" level="None">
-							<code profiles="default">set GD_Sage_ItemPools.Raid.PoolList_Sage_Raid_Items Itempools[0].PoolProbability.BaseValueConstant 1.0</code>
-						</hotfix>
-					</category>
-					<category name="The Warrior">
-						<code profiles="default">set GD_Itempools.Runnables.Pool_Warrior Quantity (BaseValueConstant=8,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)</code>
-					</category>
-					<category name="Wilhelm">
-						<code profiles="default">set GD_Itempools.Runnables.Pool_Wilhelm Quantity (BaseValueConstant=2,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)</code>
+					<category name="Individual Quantity Statements">
+						<category name="BNK3R">
+							<code profiles="default">set GD_Itempools.Runnables.Pool_Bunker Quantity (BaseValueConstant=3,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)</code>
+						</category>
+						<category name="Captain Flynt">
+							<code profiles="default">set GD_Itempools.Runnables.Pool_CaptFlynt Quantity (BaseValueConstant=2,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)</code>
+						</category>
+						<category name="Chubby/Tubby Enemies">
+							<code profiles="default">set GD_Itempools.Runnables.Pool_ChubbieUniques Quantity (BaseValueConstant=4,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)</code>
+						</category>
+						<category name="Dukino's Mom">
+							<code profiles="default">set GD_Itempools.Runnables.Pool_SkagzillaMom Quantity (BaseValueConstant=2,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)</code>
+						</category>
+						<category name="Gold Golem">
+							<hotfix name="ApocHotfix" level="Mines_P">
+								<code profiles="default">set GD_GolemGold.LootPools.Pool_GoldGolemRunnable Quantity (BaseValueConstant=3,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.0)</code>
+							</hotfix>
+						</category>
+						<category name="Henry">
+							<code profiles="default">set GD_Itempools.Runnables.Pool_Henry Quantity (BaseValueConstant=2,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)</code>
+						</category>
+						<category name="Hyperius">
+							<code profiles="default">set GD_Orchid_ItemPools.Raid.Pool_Orchid_Raid1_PinkWeapons Quantity (BaseValueConstant=4,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)</code>
+							<code profiles="default">set GD_Orchid_ItemPools.Raid.Pool_Orchid_Raid1_Legendary Quantity (BaseValueConstant=7,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)</code>
+						</category>
+						<category name="King Mong">
+							<code profiles="default">set GD_Itempools.Runnables.Pool_KingMong Quantity (BaseValueConstant=2,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)</code>
+						</category>
+						<category name="Master Gee">
+							<code profiles="default">set GD_Orchid_ItemPools.Raid.Pool_Orchid_Raid3_PinkWeapons Quantity (BaseValueConstant=4,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)</code>
+							<code profiles="default">set GD_Orchid_ItemPools.Raid.Pool_Orchid_Raid3_Legendary Quantity (BaseValueConstant=6,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)</code>
+						</category>
+						<category name="Nisha">
+							<code profiles="default">set GD_Itempools.Runnables.Pool_Sheriff Quantity (BaseValueConstant=2,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)</code>
+						</category>
+						<category name="Saturn">
+							<code profiles="default">set GD_Itempools.Runnables.Pool_Talos Quantity (BaseValueConstant=3,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)</code>
+						</category>
+						<category name="Son of Mothrakk">
+							<code profiles="default">set GD_Itempools.Runnables.Pool_SonOfMothrakk Quantity (BaseValueConstant=2,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)</code>
+						</category>
+						<category name="Sorcerer's Daughter">
+							<hotfix name="ApocHotfix" level="Dungeon_P">
+								<code profiles="default">set GD_AngelBoss.LootPools.Pool_AngelBossRunnable Quantity.BaseValueConstant 4</code>
+							</hotfix>
+						</category>
+						<category name="Southpaw Assassins">
+							<code profiles="default">set GD_Itempools.Runnables.Pool_FourAssassins Quantity (BaseValueConstant=2,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)</code>
+						</category>
+						<category name="Terramorphous">
+							<code profiles="default">set GD_Itempools.Runnables.Pool_Terramorphous Quantity (BaseValueConstant=7,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)</code>
+						</category>
+						<category name="Ultimate Badass Varkids">
+							<code profiles="default">set GD_Itempools.Runnables.Pool_UltimateBadassVarkid Quantity (BaseValueConstant=2,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)</code>
+						</category>
+						<category name="Vermivorous">
+							<code profiles="default">set GD_Itempools.Runnables.Pool_Verm Quantity (BaseValueConstant=5,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)</code>
+						</category>
+						<category name="Voracidous">
+							<comment># We're playing a strange game with the drop pool here.  Unlike</comment>
+							<comment># other DLCs, the item definition for the seraph crystals doesn't get</comment>
+							<comment># loaded until the level does, so we can't specify seraph crystal</comment>
+							<comment># rewards directly.  Rather than have a gigantic hotfix, what I'm doing</comment>
+							<comment># is substituting GD_Itempools.WeaponPools.Pool_Weapons_All_01_Common</comment>
+							<comment># and then just hotfixing *those* values.</comment>
+							<comment>#</comment>
+							<comment># Additionally, Vorac and Dexi both drop from the same pool.  We'd want to</comment>
+							<comment># update the quantity for Vorac's drops, but can't because Dexi's drops</comment>
+							<comment># would be insane then (since it drops multiple times).  So the same</comment>
+							<comment># unique pools get specified in here multiple times.</comment>
+							<code profiles="default">set GD_Sage_ItemPools.Raid.PoolList_Sage_Raid_Items ItemPools ((ItemPool=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_All_01_Common',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_All_01_Common',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_All_01_Common',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Sage_ItemPools.Raid.Pool_Sage_Raid_PinkWeapons',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)),(ItemPool=ItemPoolDefinition'GD_Sage_ItemPools.Raid.Pool_Sage_Raid_PinkWeapons',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)),(ItemPool=ItemPoolDefinition'GD_Sage_ItemPools.Raid.Pool_Sage_Raid_PinkWeapons',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)),(ItemPool=ItemPoolDefinition'GD_Sage_ItemPools.Raid.Pool_Sage_Raid_PinkWeapons',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)),(ItemPool=ItemPoolDefinition'GD_Sage_ItemPools.Raid.Pool_Sage_Raid_Legendary',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)),(ItemPool=ItemPoolDefinition'GD_Sage_ItemPools.Raid.Pool_Sage_Raid_Legendary',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)),(ItemPool=ItemPoolDefinition'GD_Sage_ItemPools.Raid.Pool_Sage_Raid_Legendary',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)),(ItemPool=ItemPoolDefinition'GD_Sage_ItemPools.Raid.Pool_Sage_Raid_Legendary',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)),(ItemPool=ItemPoolDefinition'GD_Itempools.EnemyDropPools.Pool_GunsAndGear_05_VeryRare',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.EnemyDropPools.Pool_GunsAndGear_05_VeryRare',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.EnemyDropPools.Pool_GunsAndGear_05_VeryRare',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.EnemyDropPools.Pool_GunsAndGear_06_Legendary',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.EnemyDropPools.Pool_GunsAndGear_06_Legendary',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.EnemyDropPools.Pool_GunsAndGear_06_Legendary',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.GeneralItemPools.Pool_GunsAndGearDropNumPlayersPlusOne',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.GeneralItemPools.Pool_GunsAndGear',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.WeightingPlayerCount.GearDrops_PerPlayer',BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.EnemyDropPools.Pool_GunsAndGear_06_Legendary',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.WeightingPlayerCount.GearDrops_PerPlayer',BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.EnemyDropPools.Pool_GunsAndGear_06_Legendary',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.WeightingPlayerCount.GearDrops_PerPlayer',BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.EnemyDropPools.Pool_GunsAndGear_06_Legendary',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.WeightingPlayerCount.GearDrops_PerPlayer',BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.EnemyDropPools.Pool_GunsAndGear_05_VeryRare',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.WeightingPlayerCount.GearDrops_PerPlayer',BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.EnemyDropPools.Pool_GunsAndGear_05_VeryRare',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.WeightingPlayerCount.GearDrops_PerPlayer',BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.EnemyDropPools.Pool_GunsAndGear_05_VeryRare',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.WeightingPlayerCount.GearDrops_PerPlayer',BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Money_1_BIG',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Money_1_BIG',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Money_1_BIG',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Money_1_BIG',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Money_1_BIG',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Money_1_BIG',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Eridium_Bar',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Eridium_Bar',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Eridium_Bar',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Eridium_Bar',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Health_All',PoolProbability=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'GD_Itempools.DropWeights.DropODDS_Health',InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Health_All',PoolProbability=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'GD_Itempools.DropWeights.DropODDS_Health',InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Ammo_All_DropAlways',PoolProbability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.WeightingPlayerCount.AmmoDrops_PerPlayer',BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Ammo_All_DropAlways',PoolProbability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.WeightingPlayerCount.AmmoDrops_PerPlayer',BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Ammo_All_DropAlways',PoolProbability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.WeightingPlayerCount.AmmoDrops_PerPlayer',BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Ammo_All_DropAlways',PoolProbability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.WeightingPlayerCount.AmmoDrops_PerPlayer',BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Ammo_All_NeedOnly',PoolProbability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.WeightingPlayerCount.AmmoDrops_PerPlayer',BaseValueScaleConstant=0.250000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Ammo_All_Emergency',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))</code>
+							<hotfix name="ApocHotfix" level="Sage_Cliffs_P">
+								<code profiles="default">set GD_Sage_ItemPools.Raid.PoolList_Sage_Raid_Items ItemPools[0].ItemPool ItemPoolDefinition'GD_Sage_ItemPools.SeraphCrystal.Pool_SeraphCrystal_7_Drop'</code>
+								<code profiles="default">set GD_Sage_ItemPools.Raid.PoolList_Sage_Raid_Items ItemPools[1].ItemPool ItemPoolDefinition'GD_Sage_ItemPools.SeraphCrystal.Pool_SeraphCrystal_7_Drop'</code>
+								<code profiles="default">set GD_Sage_ItemPools.Raid.PoolList_Sage_Raid_Items ItemPools[2].ItemPool ItemPoolDefinition'GD_Sage_ItemPools.SeraphCrystal.Pool_SeraphCrystal_7_Drop'</code>
+							</hotfix>
+							<comment># And one final hotfix for UCP compatibility, to make sure that</comment>
+							<comment># UCP doesn't overwrite the probability of the first element of</comment>
+							<comment># the itempool.</comment>
+							<hotfix name="ApocHotfix" level="None">
+								<code profiles="default">set GD_Sage_ItemPools.Raid.PoolList_Sage_Raid_Items Itempools[0].PoolProbability.BaseValueConstant 1.0</code>
+							</hotfix>
+						</category>
+						<category name="The Warrior">
+							<code profiles="default">set GD_Itempools.Runnables.Pool_Warrior Quantity (BaseValueConstant=8,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)</code>
+						</category>
+						<category name="Wilhelm">
+							<code profiles="default">set GD_Itempools.Runnables.Pool_Wilhelm Quantity (BaseValueConstant=2,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)</code>
+						</category>
 					</category>
 				</category>
 				<category name="Improved Drop Quantities (formerly \"Reasonable\")">
@@ -678,93 +680,95 @@
 					<comment>#       Voracidous Legendaries: 2</comment>
 					<comment>#           Voracidous Seraphs: 2</comment>
 					<comment>#                  The Warrior: 4</comment>
-					<category name="BNK3R">
-						<code profiles="">set GD_Itempools.Runnables.Pool_Bunker Quantity (BaseValueConstant=2,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)</code>
-					</category>
-					<category name="Captain Flynt">
-						<code profiles="">set GD_Itempools.Runnables.Pool_CaptFlynt Quantity (BaseValueConstant=2,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)</code>
-					</category>
-					<category name="Chubby/Tubby Enemies">
-						<code profiles="">set GD_Itempools.Runnables.Pool_ChubbieUniques Quantity (BaseValueConstant=2,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)</code>
-					</category>
-					<category name="Dukino's Mom">
-						<code profiles="">set GD_Itempools.Runnables.Pool_SkagzillaMom Quantity (BaseValueConstant=2,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)</code>
-					</category>
-					<category name="Gold Golem">
-						<hotfix name="ApocHotfix" level="Mines_P">
-							<code profiles="">set GD_GolemGold.LootPools.Pool_GoldGolemRunnable Quantity (BaseValueConstant=2,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.0)</code>
-						</hotfix>
-					</category>
-					<category name="Henry">
-						<code profiles="">set GD_Itempools.Runnables.Pool_Henry Quantity (BaseValueConstant=2,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)</code>
-					</category>
-					<category name="Hyperius">
-						<code profiles="">set GD_Orchid_ItemPools.Raid.Pool_Orchid_Raid1_PinkWeapons Quantity (BaseValueConstant=2,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)</code>
-						<code profiles="">set GD_Orchid_ItemPools.Raid.Pool_Orchid_Raid1_Legendary Quantity (BaseValueConstant=2,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)</code>
-					</category>
-					<category name="King Mong">
-						<code profiles="">set GD_Itempools.Runnables.Pool_KingMong Quantity (BaseValueConstant=2,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)</code>
-					</category>
-					<category name="Master Gee">
-						<code profiles="">set GD_Orchid_ItemPools.Raid.Pool_Orchid_Raid3_PinkWeapons Quantity (BaseValueConstant=2,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)</code>
-						<code profiles="">set GD_Orchid_ItemPools.Raid.Pool_Orchid_Raid3_Legendary Quantity (BaseValueConstant=2,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)</code>
-					</category>
-					<category name="Nisha">
-						<code profiles="">set GD_Itempools.Runnables.Pool_Sheriff Quantity (BaseValueConstant=2,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)</code>
-					</category>
-					<category name="Saturn">
-						<code profiles="">set GD_Itempools.Runnables.Pool_Talos Quantity (BaseValueConstant=2,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)</code>
-					</category>
-					<category name="Son of Mothrakk">
-						<code profiles="">set GD_Itempools.Runnables.Pool_SonOfMothrakk Quantity (BaseValueConstant=2,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)</code>
-					</category>
-					<category name="Sorcerer's Daughter">
-						<hotfix name="ApocHotfix" level="Dungeon_P">
-							<code profiles="">set GD_AngelBoss.LootPools.Pool_AngelBossRunnable Quantity.BaseValueConstant 2</code>
-						</hotfix>
-					</category>
-					<category name="Southpaw Assassins">
-						<code profiles="">set GD_Itempools.Runnables.Pool_FourAssassins Quantity (BaseValueConstant=2,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)</code>
-					</category>
-					<category name="Terramorphous">
-						<code profiles="">set GD_Itempools.Runnables.Pool_Terramorphous Quantity (BaseValueConstant=4,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)</code>
-					</category>
-					<category name="Ultimate Badass Varkids">
-						<code profiles="">set GD_Itempools.Runnables.Pool_UltimateBadassVarkid Quantity (BaseValueConstant=2,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)</code>
-					</category>
-					<category name="Vermivorous">
-						<code profiles="">set GD_Itempools.Runnables.Pool_Verm Quantity (BaseValueConstant=3,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)</code>
-					</category>
-					<category name="Voracidous">
-						<comment># We're playing a strange game with the drop pool here.  Unlike</comment>
-						<comment># other DLCs, the item definition for the seraph crystals doesn't get</comment>
-						<comment># loaded until the level does, so we can't specify seraph crystal</comment>
-						<comment># rewards directly.  Rather than have a gigantic hotfix, what I'm doing</comment>
-						<comment># is substituting GD_Itempools.WeaponPools.Pool_Weapons_All_01_Common</comment>
-						<comment># and then just hotfixing *those* values.</comment>
-						<comment>#</comment>
-						<comment># Additionally, Vorac and Dexi both drop from the same pool.  We'd want to</comment>
-						<comment># update the quantity for Vorac's drops, but can't because Dexi's drops</comment>
-						<comment># would be insane then (since it drops multiple times).  So the same</comment>
-						<comment># unique pools get specified in here multiple times.</comment>
-						<code profiles="">set GD_Sage_ItemPools.Raid.PoolList_Sage_Raid_Items ItemPools ((ItemPool=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_All_01_Common',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_All_01_Common',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_All_01_Common',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Sage_ItemPools.Raid.Pool_Sage_Raid_PinkWeapons',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)),(ItemPool=ItemPoolDefinition'GD_Sage_ItemPools.Raid.Pool_Sage_Raid_PinkWeapons',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)),(ItemPool=ItemPoolDefinition'GD_Sage_ItemPools.Raid.Pool_Sage_Raid_PinkWeapons',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0)),(ItemPool=ItemPoolDefinition'GD_Sage_ItemPools.Raid.Pool_Sage_Raid_PinkWeapons',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0)),(ItemPool=ItemPoolDefinition'GD_Sage_ItemPools.Raid.Pool_Sage_Raid_Legendary',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)),(ItemPool=ItemPoolDefinition'GD_Sage_ItemPools.Raid.Pool_Sage_Raid_Legendary',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)),(ItemPool=ItemPoolDefinition'GD_Sage_ItemPools.Raid.Pool_Sage_Raid_Legendary',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0)),(ItemPool=ItemPoolDefinition'GD_Sage_ItemPools.Raid.Pool_Sage_Raid_Legendary',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0)),(ItemPool=ItemPoolDefinition'GD_Itempools.EnemyDropPools.Pool_GunsAndGear_05_VeryRare',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.EnemyDropPools.Pool_GunsAndGear_05_VeryRare',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.EnemyDropPools.Pool_GunsAndGear_05_VeryRare',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.EnemyDropPools.Pool_GunsAndGear_06_Legendary',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.EnemyDropPools.Pool_GunsAndGear_06_Legendary',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.EnemyDropPools.Pool_GunsAndGear_06_Legendary',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.GeneralItemPools.Pool_GunsAndGearDropNumPlayersPlusOne',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.GeneralItemPools.Pool_GunsAndGear',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.WeightingPlayerCount.GearDrops_PerPlayer',BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.EnemyDropPools.Pool_GunsAndGear_06_Legendary',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.WeightingPlayerCount.GearDrops_PerPlayer',BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.EnemyDropPools.Pool_GunsAndGear_06_Legendary',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.WeightingPlayerCount.GearDrops_PerPlayer',BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.EnemyDropPools.Pool_GunsAndGear_06_Legendary',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.WeightingPlayerCount.GearDrops_PerPlayer',BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.EnemyDropPools.Pool_GunsAndGear_05_VeryRare',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.WeightingPlayerCount.GearDrops_PerPlayer',BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.EnemyDropPools.Pool_GunsAndGear_05_VeryRare',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.WeightingPlayerCount.GearDrops_PerPlayer',BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.EnemyDropPools.Pool_GunsAndGear_05_VeryRare',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.WeightingPlayerCount.GearDrops_PerPlayer',BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Money_1_BIG',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Money_1_BIG',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Money_1_BIG',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Money_1_BIG',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Money_1_BIG',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Money_1_BIG',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Eridium_Bar',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Eridium_Bar',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Eridium_Bar',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Eridium_Bar',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Health_All',PoolProbability=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'GD_Itempools.DropWeights.DropODDS_Health',InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Health_All',PoolProbability=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'GD_Itempools.DropWeights.DropODDS_Health',InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Ammo_All_DropAlways',PoolProbability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.WeightingPlayerCount.AmmoDrops_PerPlayer',BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Ammo_All_DropAlways',PoolProbability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.WeightingPlayerCount.AmmoDrops_PerPlayer',BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Ammo_All_DropAlways',PoolProbability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.WeightingPlayerCount.AmmoDrops_PerPlayer',BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Ammo_All_DropAlways',PoolProbability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.WeightingPlayerCount.AmmoDrops_PerPlayer',BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Ammo_All_NeedOnly',PoolProbability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.WeightingPlayerCount.AmmoDrops_PerPlayer',BaseValueScaleConstant=0.250000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Ammo_All_Emergency',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))</code>
-						<hotfix name="ApocHotfix" level="Sage_Cliffs_P">
-							<code profiles="">set GD_Sage_ItemPools.Raid.PoolList_Sage_Raid_Items ItemPools[0].ItemPool ItemPoolDefinition'GD_Sage_ItemPools.SeraphCrystal.Pool_SeraphCrystal_7_Drop'</code>
-							<code profiles="">set GD_Sage_ItemPools.Raid.PoolList_Sage_Raid_Items ItemPools[1].ItemPool ItemPoolDefinition'GD_Sage_ItemPools.SeraphCrystal.Pool_SeraphCrystal_7_Drop'</code>
-							<code profiles="">set GD_Sage_ItemPools.Raid.PoolList_Sage_Raid_Items ItemPools[2].ItemPool ItemPoolDefinition'GD_Sage_ItemPools.SeraphCrystal.Pool_SeraphCrystal_7_Drop'</code>
-						</hotfix>
-						<comment># And one final hotfix for UCP compatibility, to make sure that</comment>
-						<comment># UCP doesn't overwrite the probability of the first element of</comment>
-						<comment># the itempool.</comment>
-						<hotfix name="ApocHotfix" level="None">
-							<code profiles="">set GD_Sage_ItemPools.Raid.PoolList_Sage_Raid_Items Itempools[0].PoolProbability.BaseValueConstant 1.0</code>
-						</hotfix>
-					</category>
-					<category name="The Warrior">
-						<code profiles="">set GD_Itempools.Runnables.Pool_Warrior Quantity (BaseValueConstant=4,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)</code>
-					</category>
-					<category name="Wilhelm">
-						<code profiles="">set GD_Itempools.Runnables.Pool_Wilhelm Quantity (BaseValueConstant=2,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)</code>
+					<category name="Individual Quantity Statements">
+						<category name="BNK3R">
+							<code profiles="">set GD_Itempools.Runnables.Pool_Bunker Quantity (BaseValueConstant=2,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)</code>
+						</category>
+						<category name="Captain Flynt">
+							<code profiles="">set GD_Itempools.Runnables.Pool_CaptFlynt Quantity (BaseValueConstant=2,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)</code>
+						</category>
+						<category name="Chubby/Tubby Enemies">
+							<code profiles="">set GD_Itempools.Runnables.Pool_ChubbieUniques Quantity (BaseValueConstant=2,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)</code>
+						</category>
+						<category name="Dukino's Mom">
+							<code profiles="">set GD_Itempools.Runnables.Pool_SkagzillaMom Quantity (BaseValueConstant=2,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)</code>
+						</category>
+						<category name="Gold Golem">
+							<hotfix name="ApocHotfix" level="Mines_P">
+								<code profiles="">set GD_GolemGold.LootPools.Pool_GoldGolemRunnable Quantity (BaseValueConstant=2,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.0)</code>
+							</hotfix>
+						</category>
+						<category name="Henry">
+							<code profiles="">set GD_Itempools.Runnables.Pool_Henry Quantity (BaseValueConstant=2,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)</code>
+						</category>
+						<category name="Hyperius">
+							<code profiles="">set GD_Orchid_ItemPools.Raid.Pool_Orchid_Raid1_PinkWeapons Quantity (BaseValueConstant=2,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)</code>
+							<code profiles="">set GD_Orchid_ItemPools.Raid.Pool_Orchid_Raid1_Legendary Quantity (BaseValueConstant=2,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)</code>
+						</category>
+						<category name="King Mong">
+							<code profiles="">set GD_Itempools.Runnables.Pool_KingMong Quantity (BaseValueConstant=2,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)</code>
+						</category>
+						<category name="Master Gee">
+							<code profiles="">set GD_Orchid_ItemPools.Raid.Pool_Orchid_Raid3_PinkWeapons Quantity (BaseValueConstant=2,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)</code>
+							<code profiles="">set GD_Orchid_ItemPools.Raid.Pool_Orchid_Raid3_Legendary Quantity (BaseValueConstant=2,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)</code>
+						</category>
+						<category name="Nisha">
+							<code profiles="">set GD_Itempools.Runnables.Pool_Sheriff Quantity (BaseValueConstant=2,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)</code>
+						</category>
+						<category name="Saturn">
+							<code profiles="">set GD_Itempools.Runnables.Pool_Talos Quantity (BaseValueConstant=2,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)</code>
+						</category>
+						<category name="Son of Mothrakk">
+							<code profiles="">set GD_Itempools.Runnables.Pool_SonOfMothrakk Quantity (BaseValueConstant=2,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)</code>
+						</category>
+						<category name="Sorcerer's Daughter">
+							<hotfix name="ApocHotfix" level="Dungeon_P">
+								<code profiles="">set GD_AngelBoss.LootPools.Pool_AngelBossRunnable Quantity.BaseValueConstant 2</code>
+							</hotfix>
+						</category>
+						<category name="Southpaw Assassins">
+							<code profiles="">set GD_Itempools.Runnables.Pool_FourAssassins Quantity (BaseValueConstant=2,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)</code>
+						</category>
+						<category name="Terramorphous">
+							<code profiles="">set GD_Itempools.Runnables.Pool_Terramorphous Quantity (BaseValueConstant=4,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)</code>
+						</category>
+						<category name="Ultimate Badass Varkids">
+							<code profiles="">set GD_Itempools.Runnables.Pool_UltimateBadassVarkid Quantity (BaseValueConstant=2,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)</code>
+						</category>
+						<category name="Vermivorous">
+							<code profiles="">set GD_Itempools.Runnables.Pool_Verm Quantity (BaseValueConstant=3,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)</code>
+						</category>
+						<category name="Voracidous">
+							<comment># We're playing a strange game with the drop pool here.  Unlike</comment>
+							<comment># other DLCs, the item definition for the seraph crystals doesn't get</comment>
+							<comment># loaded until the level does, so we can't specify seraph crystal</comment>
+							<comment># rewards directly.  Rather than have a gigantic hotfix, what I'm doing</comment>
+							<comment># is substituting GD_Itempools.WeaponPools.Pool_Weapons_All_01_Common</comment>
+							<comment># and then just hotfixing *those* values.</comment>
+							<comment>#</comment>
+							<comment># Additionally, Vorac and Dexi both drop from the same pool.  We'd want to</comment>
+							<comment># update the quantity for Vorac's drops, but can't because Dexi's drops</comment>
+							<comment># would be insane then (since it drops multiple times).  So the same</comment>
+							<comment># unique pools get specified in here multiple times.</comment>
+							<code profiles="">set GD_Sage_ItemPools.Raid.PoolList_Sage_Raid_Items ItemPools ((ItemPool=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_All_01_Common',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_All_01_Common',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_All_01_Common',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Sage_ItemPools.Raid.Pool_Sage_Raid_PinkWeapons',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)),(ItemPool=ItemPoolDefinition'GD_Sage_ItemPools.Raid.Pool_Sage_Raid_PinkWeapons',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)),(ItemPool=ItemPoolDefinition'GD_Sage_ItemPools.Raid.Pool_Sage_Raid_PinkWeapons',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0)),(ItemPool=ItemPoolDefinition'GD_Sage_ItemPools.Raid.Pool_Sage_Raid_PinkWeapons',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0)),(ItemPool=ItemPoolDefinition'GD_Sage_ItemPools.Raid.Pool_Sage_Raid_Legendary',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)),(ItemPool=ItemPoolDefinition'GD_Sage_ItemPools.Raid.Pool_Sage_Raid_Legendary',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)),(ItemPool=ItemPoolDefinition'GD_Sage_ItemPools.Raid.Pool_Sage_Raid_Legendary',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0)),(ItemPool=ItemPoolDefinition'GD_Sage_ItemPools.Raid.Pool_Sage_Raid_Legendary',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0)),(ItemPool=ItemPoolDefinition'GD_Itempools.EnemyDropPools.Pool_GunsAndGear_05_VeryRare',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.EnemyDropPools.Pool_GunsAndGear_05_VeryRare',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.EnemyDropPools.Pool_GunsAndGear_05_VeryRare',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.EnemyDropPools.Pool_GunsAndGear_06_Legendary',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.EnemyDropPools.Pool_GunsAndGear_06_Legendary',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.EnemyDropPools.Pool_GunsAndGear_06_Legendary',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.GeneralItemPools.Pool_GunsAndGearDropNumPlayersPlusOne',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.GeneralItemPools.Pool_GunsAndGear',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.WeightingPlayerCount.GearDrops_PerPlayer',BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.EnemyDropPools.Pool_GunsAndGear_06_Legendary',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.WeightingPlayerCount.GearDrops_PerPlayer',BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.EnemyDropPools.Pool_GunsAndGear_06_Legendary',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.WeightingPlayerCount.GearDrops_PerPlayer',BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.EnemyDropPools.Pool_GunsAndGear_06_Legendary',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.WeightingPlayerCount.GearDrops_PerPlayer',BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.EnemyDropPools.Pool_GunsAndGear_05_VeryRare',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.WeightingPlayerCount.GearDrops_PerPlayer',BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.EnemyDropPools.Pool_GunsAndGear_05_VeryRare',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.WeightingPlayerCount.GearDrops_PerPlayer',BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.EnemyDropPools.Pool_GunsAndGear_05_VeryRare',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.WeightingPlayerCount.GearDrops_PerPlayer',BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Money_1_BIG',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Money_1_BIG',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Money_1_BIG',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Money_1_BIG',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Money_1_BIG',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Money_1_BIG',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Eridium_Bar',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Eridium_Bar',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Eridium_Bar',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Eridium_Bar',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Health_All',PoolProbability=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'GD_Itempools.DropWeights.DropODDS_Health',InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Health_All',PoolProbability=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'GD_Itempools.DropWeights.DropODDS_Health',InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Ammo_All_DropAlways',PoolProbability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.WeightingPlayerCount.AmmoDrops_PerPlayer',BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Ammo_All_DropAlways',PoolProbability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.WeightingPlayerCount.AmmoDrops_PerPlayer',BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Ammo_All_DropAlways',PoolProbability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.WeightingPlayerCount.AmmoDrops_PerPlayer',BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Ammo_All_DropAlways',PoolProbability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.WeightingPlayerCount.AmmoDrops_PerPlayer',BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Ammo_All_NeedOnly',PoolProbability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.WeightingPlayerCount.AmmoDrops_PerPlayer',BaseValueScaleConstant=0.250000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Ammo_All_Emergency',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))</code>
+							<hotfix name="ApocHotfix" level="Sage_Cliffs_P">
+								<code profiles="">set GD_Sage_ItemPools.Raid.PoolList_Sage_Raid_Items ItemPools[0].ItemPool ItemPoolDefinition'GD_Sage_ItemPools.SeraphCrystal.Pool_SeraphCrystal_7_Drop'</code>
+								<code profiles="">set GD_Sage_ItemPools.Raid.PoolList_Sage_Raid_Items ItemPools[1].ItemPool ItemPoolDefinition'GD_Sage_ItemPools.SeraphCrystal.Pool_SeraphCrystal_7_Drop'</code>
+								<code profiles="">set GD_Sage_ItemPools.Raid.PoolList_Sage_Raid_Items ItemPools[2].ItemPool ItemPoolDefinition'GD_Sage_ItemPools.SeraphCrystal.Pool_SeraphCrystal_7_Drop'</code>
+							</hotfix>
+							<comment># And one final hotfix for UCP compatibility, to make sure that</comment>
+							<comment># UCP doesn't overwrite the probability of the first element of</comment>
+							<comment># the itempool.</comment>
+							<hotfix name="ApocHotfix" level="None">
+								<code profiles="">set GD_Sage_ItemPools.Raid.PoolList_Sage_Raid_Items Itempools[0].PoolProbability.BaseValueConstant 1.0</code>
+							</hotfix>
+						</category>
+						<category name="The Warrior">
+							<code profiles="">set GD_Itempools.Runnables.Pool_Warrior Quantity (BaseValueConstant=4,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)</code>
+						</category>
+						<category name="Wilhelm">
+							<code profiles="">set GD_Itempools.Runnables.Pool_Wilhelm Quantity (BaseValueConstant=2,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)</code>
+						</category>
 					</category>
 				</category>
 				<category name="Stock Drop Quantities (just one per boss)">
@@ -783,93 +787,95 @@
 					<comment>#       Voracidous Legendaries: 1</comment>
 					<comment>#           Voracidous Seraphs: 1</comment>
 					<comment>#                  The Warrior: 1</comment>
-					<category name="BNK3R">
-						<code profiles="">set GD_Itempools.Runnables.Pool_Bunker Quantity (BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)</code>
-					</category>
-					<category name="Captain Flynt">
-						<code profiles="">set GD_Itempools.Runnables.Pool_CaptFlynt Quantity (BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)</code>
-					</category>
-					<category name="Chubby/Tubby Enemies">
-						<code profiles="">set GD_Itempools.Runnables.Pool_ChubbieUniques Quantity (BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)</code>
-					</category>
-					<category name="Dukino's Mom">
-						<code profiles="">set GD_Itempools.Runnables.Pool_SkagzillaMom Quantity (BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)</code>
-					</category>
-					<category name="Gold Golem">
-						<hotfix name="ApocHotfix" level="Mines_P">
-							<code profiles="">set GD_GolemGold.LootPools.Pool_GoldGolemRunnable Quantity (BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.0)</code>
-						</hotfix>
-					</category>
-					<category name="Henry">
-						<code profiles="">set GD_Itempools.Runnables.Pool_Henry Quantity (BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)</code>
-					</category>
-					<category name="Hyperius">
-						<code profiles="">set GD_Orchid_ItemPools.Raid.Pool_Orchid_Raid1_PinkWeapons Quantity (BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)</code>
-						<code profiles="">set GD_Orchid_ItemPools.Raid.Pool_Orchid_Raid1_Legendary Quantity (BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)</code>
-					</category>
-					<category name="King Mong">
-						<code profiles="">set GD_Itempools.Runnables.Pool_KingMong Quantity (BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)</code>
-					</category>
-					<category name="Master Gee">
-						<code profiles="">set GD_Orchid_ItemPools.Raid.Pool_Orchid_Raid3_PinkWeapons Quantity (BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)</code>
-						<code profiles="">set GD_Orchid_ItemPools.Raid.Pool_Orchid_Raid3_Legendary Quantity (BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)</code>
-					</category>
-					<category name="Nisha">
-						<code profiles="">set GD_Itempools.Runnables.Pool_Sheriff Quantity (BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)</code>
-					</category>
-					<category name="Saturn">
-						<code profiles="">set GD_Itempools.Runnables.Pool_Talos Quantity (BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)</code>
-					</category>
-					<category name="Son of Mothrakk">
-						<code profiles="">set GD_Itempools.Runnables.Pool_SonOfMothrakk Quantity (BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)</code>
-					</category>
-					<category name="Sorcerer's Daughter">
-						<hotfix name="ApocHotfix" level="Dungeon_P">
-							<code profiles="">set GD_AngelBoss.LootPools.Pool_AngelBossRunnable Quantity.BaseValueConstant 1</code>
-						</hotfix>
-					</category>
-					<category name="Southpaw Assassins">
-						<code profiles="">set GD_Itempools.Runnables.Pool_FourAssassins Quantity (BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)</code>
-					</category>
-					<category name="Terramorphous">
-						<code profiles="">set GD_Itempools.Runnables.Pool_Terramorphous Quantity (BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)</code>
-					</category>
-					<category name="Ultimate Badass Varkids">
-						<code profiles="">set GD_Itempools.Runnables.Pool_UltimateBadassVarkid Quantity (BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)</code>
-					</category>
-					<category name="Vermivorous">
-						<code profiles="">set GD_Itempools.Runnables.Pool_Verm Quantity (BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)</code>
-					</category>
-					<category name="Voracidous">
-						<comment># We're playing a strange game with the drop pool here.  Unlike</comment>
-						<comment># other DLCs, the item definition for the seraph crystals doesn't get</comment>
-						<comment># loaded until the level does, so we can't specify seraph crystal</comment>
-						<comment># rewards directly.  Rather than have a gigantic hotfix, what I'm doing</comment>
-						<comment># is substituting GD_Itempools.WeaponPools.Pool_Weapons_All_01_Common</comment>
-						<comment># and then just hotfixing *those* values.</comment>
-						<comment>#</comment>
-						<comment># Additionally, Vorac and Dexi both drop from the same pool.  We'd want to</comment>
-						<comment># update the quantity for Vorac's drops, but can't because Dexi's drops</comment>
-						<comment># would be insane then (since it drops multiple times).  So the same</comment>
-						<comment># unique pools get specified in here multiple times.</comment>
-						<code profiles="">set GD_Sage_ItemPools.Raid.PoolList_Sage_Raid_Items ItemPools ((ItemPool=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_All_01_Common',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_All_01_Common',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_All_01_Common',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Sage_ItemPools.Raid.Pool_Sage_Raid_PinkWeapons',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)),(ItemPool=ItemPoolDefinition'GD_Sage_ItemPools.Raid.Pool_Sage_Raid_PinkWeapons',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0)),(ItemPool=ItemPoolDefinition'GD_Sage_ItemPools.Raid.Pool_Sage_Raid_PinkWeapons',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0)),(ItemPool=ItemPoolDefinition'GD_Sage_ItemPools.Raid.Pool_Sage_Raid_PinkWeapons',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0)),(ItemPool=ItemPoolDefinition'GD_Sage_ItemPools.Raid.Pool_Sage_Raid_Legendary',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)),(ItemPool=ItemPoolDefinition'GD_Sage_ItemPools.Raid.Pool_Sage_Raid_Legendary',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0)),(ItemPool=ItemPoolDefinition'GD_Sage_ItemPools.Raid.Pool_Sage_Raid_Legendary',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0)),(ItemPool=ItemPoolDefinition'GD_Sage_ItemPools.Raid.Pool_Sage_Raid_Legendary',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0)),(ItemPool=ItemPoolDefinition'GD_Itempools.EnemyDropPools.Pool_GunsAndGear_05_VeryRare',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.EnemyDropPools.Pool_GunsAndGear_05_VeryRare',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.EnemyDropPools.Pool_GunsAndGear_05_VeryRare',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.EnemyDropPools.Pool_GunsAndGear_06_Legendary',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.EnemyDropPools.Pool_GunsAndGear_06_Legendary',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.EnemyDropPools.Pool_GunsAndGear_06_Legendary',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.GeneralItemPools.Pool_GunsAndGearDropNumPlayersPlusOne',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.GeneralItemPools.Pool_GunsAndGear',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.WeightingPlayerCount.GearDrops_PerPlayer',BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.EnemyDropPools.Pool_GunsAndGear_06_Legendary',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.WeightingPlayerCount.GearDrops_PerPlayer',BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.EnemyDropPools.Pool_GunsAndGear_06_Legendary',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.WeightingPlayerCount.GearDrops_PerPlayer',BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.EnemyDropPools.Pool_GunsAndGear_06_Legendary',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.WeightingPlayerCount.GearDrops_PerPlayer',BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.EnemyDropPools.Pool_GunsAndGear_05_VeryRare',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.WeightingPlayerCount.GearDrops_PerPlayer',BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.EnemyDropPools.Pool_GunsAndGear_05_VeryRare',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.WeightingPlayerCount.GearDrops_PerPlayer',BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.EnemyDropPools.Pool_GunsAndGear_05_VeryRare',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.WeightingPlayerCount.GearDrops_PerPlayer',BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Money_1_BIG',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Money_1_BIG',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Money_1_BIG',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Money_1_BIG',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Money_1_BIG',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Money_1_BIG',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Eridium_Bar',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Eridium_Bar',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Eridium_Bar',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Eridium_Bar',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Health_All',PoolProbability=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'GD_Itempools.DropWeights.DropODDS_Health',InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Health_All',PoolProbability=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'GD_Itempools.DropWeights.DropODDS_Health',InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Ammo_All_DropAlways',PoolProbability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.WeightingPlayerCount.AmmoDrops_PerPlayer',BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Ammo_All_DropAlways',PoolProbability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.WeightingPlayerCount.AmmoDrops_PerPlayer',BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Ammo_All_DropAlways',PoolProbability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.WeightingPlayerCount.AmmoDrops_PerPlayer',BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Ammo_All_DropAlways',PoolProbability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.WeightingPlayerCount.AmmoDrops_PerPlayer',BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Ammo_All_NeedOnly',PoolProbability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.WeightingPlayerCount.AmmoDrops_PerPlayer',BaseValueScaleConstant=0.250000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Ammo_All_Emergency',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))</code>
-						<hotfix name="ApocHotfix" level="Sage_Cliffs_P">
-							<code profiles="">set GD_Sage_ItemPools.Raid.PoolList_Sage_Raid_Items ItemPools[0].ItemPool ItemPoolDefinition'GD_Sage_ItemPools.SeraphCrystal.Pool_SeraphCrystal_7_Drop'</code>
-							<code profiles="">set GD_Sage_ItemPools.Raid.PoolList_Sage_Raid_Items ItemPools[1].ItemPool ItemPoolDefinition'GD_Sage_ItemPools.SeraphCrystal.Pool_SeraphCrystal_7_Drop'</code>
-							<code profiles="">set GD_Sage_ItemPools.Raid.PoolList_Sage_Raid_Items ItemPools[2].ItemPool ItemPoolDefinition'GD_Sage_ItemPools.SeraphCrystal.Pool_SeraphCrystal_7_Drop'</code>
-						</hotfix>
-						<comment># And one final hotfix for UCP compatibility, to make sure that</comment>
-						<comment># UCP doesn't overwrite the probability of the first element of</comment>
-						<comment># the itempool.</comment>
-						<hotfix name="ApocHotfix" level="None">
-							<code profiles="">set GD_Sage_ItemPools.Raid.PoolList_Sage_Raid_Items Itempools[0].PoolProbability.BaseValueConstant 1.0</code>
-						</hotfix>
-					</category>
-					<category name="The Warrior">
-						<code profiles="">set GD_Itempools.Runnables.Pool_Warrior Quantity (BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)</code>
-					</category>
-					<category name="Wilhelm">
-						<code profiles="">set GD_Itempools.Runnables.Pool_Wilhelm Quantity (BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)</code>
+					<category name="Individual Quantity Statements">
+						<category name="BNK3R">
+							<code profiles="">set GD_Itempools.Runnables.Pool_Bunker Quantity (BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)</code>
+						</category>
+						<category name="Captain Flynt">
+							<code profiles="">set GD_Itempools.Runnables.Pool_CaptFlynt Quantity (BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)</code>
+						</category>
+						<category name="Chubby/Tubby Enemies">
+							<code profiles="">set GD_Itempools.Runnables.Pool_ChubbieUniques Quantity (BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)</code>
+						</category>
+						<category name="Dukino's Mom">
+							<code profiles="">set GD_Itempools.Runnables.Pool_SkagzillaMom Quantity (BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)</code>
+						</category>
+						<category name="Gold Golem">
+							<hotfix name="ApocHotfix" level="Mines_P">
+								<code profiles="">set GD_GolemGold.LootPools.Pool_GoldGolemRunnable Quantity (BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.0)</code>
+							</hotfix>
+						</category>
+						<category name="Henry">
+							<code profiles="">set GD_Itempools.Runnables.Pool_Henry Quantity (BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)</code>
+						</category>
+						<category name="Hyperius">
+							<code profiles="">set GD_Orchid_ItemPools.Raid.Pool_Orchid_Raid1_PinkWeapons Quantity (BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)</code>
+							<code profiles="">set GD_Orchid_ItemPools.Raid.Pool_Orchid_Raid1_Legendary Quantity (BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)</code>
+						</category>
+						<category name="King Mong">
+							<code profiles="">set GD_Itempools.Runnables.Pool_KingMong Quantity (BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)</code>
+						</category>
+						<category name="Master Gee">
+							<code profiles="">set GD_Orchid_ItemPools.Raid.Pool_Orchid_Raid3_PinkWeapons Quantity (BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)</code>
+							<code profiles="">set GD_Orchid_ItemPools.Raid.Pool_Orchid_Raid3_Legendary Quantity (BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)</code>
+						</category>
+						<category name="Nisha">
+							<code profiles="">set GD_Itempools.Runnables.Pool_Sheriff Quantity (BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)</code>
+						</category>
+						<category name="Saturn">
+							<code profiles="">set GD_Itempools.Runnables.Pool_Talos Quantity (BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)</code>
+						</category>
+						<category name="Son of Mothrakk">
+							<code profiles="">set GD_Itempools.Runnables.Pool_SonOfMothrakk Quantity (BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)</code>
+						</category>
+						<category name="Sorcerer's Daughter">
+							<hotfix name="ApocHotfix" level="Dungeon_P">
+								<code profiles="">set GD_AngelBoss.LootPools.Pool_AngelBossRunnable Quantity.BaseValueConstant 1</code>
+							</hotfix>
+						</category>
+						<category name="Southpaw Assassins">
+							<code profiles="">set GD_Itempools.Runnables.Pool_FourAssassins Quantity (BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)</code>
+						</category>
+						<category name="Terramorphous">
+							<code profiles="">set GD_Itempools.Runnables.Pool_Terramorphous Quantity (BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)</code>
+						</category>
+						<category name="Ultimate Badass Varkids">
+							<code profiles="">set GD_Itempools.Runnables.Pool_UltimateBadassVarkid Quantity (BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)</code>
+						</category>
+						<category name="Vermivorous">
+							<code profiles="">set GD_Itempools.Runnables.Pool_Verm Quantity (BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)</code>
+						</category>
+						<category name="Voracidous">
+							<comment># We're playing a strange game with the drop pool here.  Unlike</comment>
+							<comment># other DLCs, the item definition for the seraph crystals doesn't get</comment>
+							<comment># loaded until the level does, so we can't specify seraph crystal</comment>
+							<comment># rewards directly.  Rather than have a gigantic hotfix, what I'm doing</comment>
+							<comment># is substituting GD_Itempools.WeaponPools.Pool_Weapons_All_01_Common</comment>
+							<comment># and then just hotfixing *those* values.</comment>
+							<comment>#</comment>
+							<comment># Additionally, Vorac and Dexi both drop from the same pool.  We'd want to</comment>
+							<comment># update the quantity for Vorac's drops, but can't because Dexi's drops</comment>
+							<comment># would be insane then (since it drops multiple times).  So the same</comment>
+							<comment># unique pools get specified in here multiple times.</comment>
+							<code profiles="">set GD_Sage_ItemPools.Raid.PoolList_Sage_Raid_Items ItemPools ((ItemPool=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_All_01_Common',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_All_01_Common',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_All_01_Common',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Sage_ItemPools.Raid.Pool_Sage_Raid_PinkWeapons',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)),(ItemPool=ItemPoolDefinition'GD_Sage_ItemPools.Raid.Pool_Sage_Raid_PinkWeapons',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0)),(ItemPool=ItemPoolDefinition'GD_Sage_ItemPools.Raid.Pool_Sage_Raid_PinkWeapons',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0)),(ItemPool=ItemPoolDefinition'GD_Sage_ItemPools.Raid.Pool_Sage_Raid_PinkWeapons',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0)),(ItemPool=ItemPoolDefinition'GD_Sage_ItemPools.Raid.Pool_Sage_Raid_Legendary',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)),(ItemPool=ItemPoolDefinition'GD_Sage_ItemPools.Raid.Pool_Sage_Raid_Legendary',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0)),(ItemPool=ItemPoolDefinition'GD_Sage_ItemPools.Raid.Pool_Sage_Raid_Legendary',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0)),(ItemPool=ItemPoolDefinition'GD_Sage_ItemPools.Raid.Pool_Sage_Raid_Legendary',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0)),(ItemPool=ItemPoolDefinition'GD_Itempools.EnemyDropPools.Pool_GunsAndGear_05_VeryRare',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.EnemyDropPools.Pool_GunsAndGear_05_VeryRare',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.EnemyDropPools.Pool_GunsAndGear_05_VeryRare',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.EnemyDropPools.Pool_GunsAndGear_06_Legendary',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.EnemyDropPools.Pool_GunsAndGear_06_Legendary',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.EnemyDropPools.Pool_GunsAndGear_06_Legendary',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.GeneralItemPools.Pool_GunsAndGearDropNumPlayersPlusOne',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.GeneralItemPools.Pool_GunsAndGear',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.WeightingPlayerCount.GearDrops_PerPlayer',BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.EnemyDropPools.Pool_GunsAndGear_06_Legendary',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.WeightingPlayerCount.GearDrops_PerPlayer',BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.EnemyDropPools.Pool_GunsAndGear_06_Legendary',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.WeightingPlayerCount.GearDrops_PerPlayer',BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.EnemyDropPools.Pool_GunsAndGear_06_Legendary',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.WeightingPlayerCount.GearDrops_PerPlayer',BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.EnemyDropPools.Pool_GunsAndGear_05_VeryRare',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.WeightingPlayerCount.GearDrops_PerPlayer',BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.EnemyDropPools.Pool_GunsAndGear_05_VeryRare',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.WeightingPlayerCount.GearDrops_PerPlayer',BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.EnemyDropPools.Pool_GunsAndGear_05_VeryRare',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.WeightingPlayerCount.GearDrops_PerPlayer',BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Money_1_BIG',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Money_1_BIG',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Money_1_BIG',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Money_1_BIG',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Money_1_BIG',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Money_1_BIG',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Eridium_Bar',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Eridium_Bar',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Eridium_Bar',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Eridium_Bar',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Health_All',PoolProbability=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'GD_Itempools.DropWeights.DropODDS_Health',InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Health_All',PoolProbability=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'GD_Itempools.DropWeights.DropODDS_Health',InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Ammo_All_DropAlways',PoolProbability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.WeightingPlayerCount.AmmoDrops_PerPlayer',BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Ammo_All_DropAlways',PoolProbability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.WeightingPlayerCount.AmmoDrops_PerPlayer',BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Ammo_All_DropAlways',PoolProbability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.WeightingPlayerCount.AmmoDrops_PerPlayer',BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Ammo_All_DropAlways',PoolProbability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.WeightingPlayerCount.AmmoDrops_PerPlayer',BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Ammo_All_NeedOnly',PoolProbability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.WeightingPlayerCount.AmmoDrops_PerPlayer',BaseValueScaleConstant=0.250000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Ammo_All_Emergency',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))</code>
+							<hotfix name="ApocHotfix" level="Sage_Cliffs_P">
+								<code profiles="">set GD_Sage_ItemPools.Raid.PoolList_Sage_Raid_Items ItemPools[0].ItemPool ItemPoolDefinition'GD_Sage_ItemPools.SeraphCrystal.Pool_SeraphCrystal_7_Drop'</code>
+								<code profiles="">set GD_Sage_ItemPools.Raid.PoolList_Sage_Raid_Items ItemPools[1].ItemPool ItemPoolDefinition'GD_Sage_ItemPools.SeraphCrystal.Pool_SeraphCrystal_7_Drop'</code>
+								<code profiles="">set GD_Sage_ItemPools.Raid.PoolList_Sage_Raid_Items ItemPools[2].ItemPool ItemPoolDefinition'GD_Sage_ItemPools.SeraphCrystal.Pool_SeraphCrystal_7_Drop'</code>
+							</hotfix>
+							<comment># And one final hotfix for UCP compatibility, to make sure that</comment>
+							<comment># UCP doesn't overwrite the probability of the first element of</comment>
+							<comment># the itempool.</comment>
+							<hotfix name="ApocHotfix" level="None">
+								<code profiles="">set GD_Sage_ItemPools.Raid.PoolList_Sage_Raid_Items Itempools[0].PoolProbability.BaseValueConstant 1.0</code>
+							</hotfix>
+						</category>
+						<category name="The Warrior">
+							<code profiles="">set GD_Itempools.Runnables.Pool_Warrior Quantity (BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)</code>
+						</category>
+						<category name="Wilhelm">
+							<code profiles="">set GD_Itempools.Runnables.Pool_Wilhelm Quantity (BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)</code>
+						</category>
 					</category>
 				</category>
 			</category>
