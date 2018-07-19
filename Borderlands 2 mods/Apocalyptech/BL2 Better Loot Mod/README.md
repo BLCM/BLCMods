@@ -1,11 +1,6 @@
 BL2 Better Loot Mod by Apocalyptech
 ===================================
 
-**WARNING:** This mod has not been tested/updated with UCP 4.1 yet, and
-there's probably at least some boss drops which won't work properly
-with UCP 4.1.  *Probably* whatever problems there are will be pretty
-minor, but right now UCP 4.1 is unsupported with this.
-
 This mod aims to make loot in Borderlands 2 "better" in general.  It's
 essentially a cheat mod, intended for those BL2 players like myself who
 tend to play in Normal most of the time, dislike grinding, get bored easily
@@ -25,35 +20,20 @@ this mod.  See the "Compatibility" section below.
 Usage/Installation
 ------------------
 
-The recommended way to use this mod is with FilterTool/UCP.  In FilterTool,
-select `Developer Tools` -> `Add Single Mod` and then select one of these
-two files:
+This mod must be imported into BLCMM using `File -> Import single mod`.
+Simply choose the file `BL2 Better Loot.blcm` and have at it!
 
-* `BL2 Better Loot Mod (Lootsplosion) - UCP Compat.txt` - Default drop weights
-  which I'm personally happy with.  Many folks may find these a bit extreme.
-  This version probably makes more sense in Normal mode than it does in UVHM.
-* `BL2 Better Loot Mod (Reasonable Drops) - UCP Compat.txt` - More reasonable
-  drop weights.  This version may be more suitable for UVHM, where lots
-  of Legendary drops might be excessive. *(Work in Progress - needs
-  tweaking+testing, etc)*
+Previous versions of this mod had various options, including offline and
+standalone variants, but these are no longer provided.  BLCMM itself provides
+all that functionality very easily now.  Even if you intend to use nothing
+but this single mod, be sure to import into BLCMM and use the file that it
+saves.
 
-Once the mod has been added, you'll have a new folder for this mod
-underneath the `mods` folder at the bottom, and can turn parts on or off at
-will.
-
-If for whatever reason you don't want to use FilterTool, there are also
-standalone versions at `BL2 Better Loot Mod (*) - Standalone.txt`,
-and an offline standalone version at `BL2 Better Loot Mod (*) - Standalone Offline.txt`.
-Simply copy the file into the game's `steamassets/binaries` directory with
-an easy-to-type filename, and then run `exec <filename>` from the console
-to load it on its own.  It works quite well by itself.
-
-The only actual differences between the UCP and Standalone versions are
-that the "Standalone" versions contain all of the original Gearbox hotfix
-data, and set up the hotfix commands for execution by Borderlands, whereas
-the "UCP Compat" version lets FilterTool/UCP take care of that for you.
-
-All versions are fully FilterTool compatible.
+The previous "Lootsplosion" and "Reasonable" variants have been merged into
+the single mod file, and you can now choose various aspects of the mod in
+several "mutually exclusive" categories, meaning that you can only choose
+one of the options in each.  This way you can tailor the mod to what you want
+to do a little bit more easily.
 
 Mod Overview
 ------------
@@ -358,32 +338,17 @@ Mod Construction / Implementation Details
 *(This section is only relevant for someone looking to edit the mod in the
 same way I do, or just someone curious about my mod construction techniques.
 If you're just looking to run the mod, see the "Usage" section above.  The
-mod can, of course, be edited directly in FilterTool/BLCMM as well, once it's
+mod can, of course, be edited directly in BLCMM as well, once it's
 been imported.)*
 
-I actually generate this mod using a simple little Python script named
-`generate-source.py`, which enables me to do things like set the rarity
-drop levels from a single location at the top of the file, and have it
-apply to a number of different objects throughout the game.  That script
-outputs to a human-readable multiline text file which can't actually be
-read directly by FilterTool/Borderlands -- it must be processed by my
-`conv_to_mod.py` script which you'll find in the parent directory.
+I generate this mod using a Python script named `generate-mod.py`, which
+enables me to do things like set the rarity drop levels from a single
+location at the top of the file, and have it apply to a number of different
+objects throughout the game.
 
-The generation script makes use of `hotfix.py` from the parent directory.
-You'd need to copy (or symlink, if you're on Mac or Linux) `hotfix.py`
+The generation script makes use of `modprocessor.py` from the parent directory.
+You'd need to copy (or symlink, if you're on Mac or Linux) `modprocessor.py`
 into this directory in order to run the script.
-
-To generate the end result file, I actually run the small shell script
-`create.sh` in this directory, which effectively just does the following:
-
-    ./generate-source.py && \
-        ../conv_to_mod.py -f "BL2 Better Loot Mod by Apocalyptech - UCP Compat" && \
-        ../conv_to_mod.py -f "BL2 Better Loot Mod by Apocalyptech - Standalone" && \
-        ../conv_to_mod.py -f "BL2 Better Loot Mod by Apocalyptech - Standalone Offline"
-
-*(It's actually slightly more complicated now that I'm exporting multiple
-profiles of the same mod (Lootsplosion vs. Reasonable), but that's basically
-what it does.)*
 
 Credits
 -------
@@ -427,6 +392,7 @@ Changelog
    * Removed "standalone" and "standalone offline" variants *(this is now much better
      managed by BLCMM)*
  * Added wider selection of boss unique drop rates
+ * Added a category to choose drop quantities for bosses, in addition to the drop rates.
  * Set a few creature minibosses (such as Pimon and Tumba) to guarantee their
    unique drops.
  * Removed buffs for Big Game Hunt DLC rare skins.  We weren't touching any other

@@ -65,7 +65,22 @@ input_filename = 'input-file-mod.txt'
 ### Variables which control drop rates and stuff like that
 ###
 
-class ConfigBase(object):
+class Config(object):
+    """
+    Base class which allows us to use constants as format strings
+    """
+
+    def __format__(self, formatstr):
+        """
+        A bit of magic so that we can use our values in format strings
+        """
+        attr = getattr(self, formatstr)
+        if type(attr) == str:
+            return attr
+        else:
+            return attr()
+
+class ConfigBase(Config):
     """
     Class to hold all our weights, and other vars which alter the probabilities of
     various things dropping.  Derive from this class to actually define the
@@ -219,16 +234,6 @@ class ConfigBase(object):
         # Return the string
         return ''.join(relic_weight_parts).lstrip()
 
-    def __format__(self, formatstr):
-        """
-        A bit of magic so that we can use our values in format strings
-        """
-        attr = getattr(self, formatstr)
-        if type(attr) == str:
-            return attr
-        else:
-            return attr()
-
 ###
 ### Config classes which define the actual contstants that we use
 ### for things like drop weights, etc.
@@ -322,18 +327,6 @@ class ConfigLootsplosion(ConfigBase):
     ultimate_badass_pool_epicchest_2 = '0.5'
     ultimate_badass_pool_epicchest_3 = '0.5'
 
-    # Unique drop quantities.  Some of these are pretty high in my "default"
-    # configuration, so putting them here lets me override them in the other
-    # configs, easily.
-    quantity_chubby = '4'
-    quantity_terra = '7'
-    quantity_vermivorous = '5'
-    quantity_warrior = '8'
-    quantity_hyperius_legendary = '7'
-    quantity_hyperius_seraph = '4'
-    quantity_gee_seraph = '4'
-    quantity_gee_legendary = '6'
-
     # Voracidous quantities have to be done slightly differently, because both
     # Dexiduous and Voracidous use the same Seraph and Legendary pools for their
     # unique drops, but Dexi calls it multiple times, whereas Vorac just calls
@@ -414,17 +407,6 @@ class ConfigReasonable(ConfigLootsplosion):
     epic_base_alien = '10'
     epic_base_legendary = '1'
 
-    # Unique drop quantities -- overridden from the base class to make
-    # them a bit more reasonable.
-    quantity_chubby = '2'
-    quantity_terra = '4'
-    quantity_vermivorous = '3'
-    quantity_warrior = '4'
-    quantity_hyperius_legendary = '2'
-    quantity_hyperius_seraph = '2'
-    quantity_gee_seraph = '2'
-    quantity_gee_legendary = '2'
-
     # Voracidous quantities have to be done slightly differently, because both
     # Dexiduous and Voracidous use the same Seraph and Legendary pools for their
     # unique drops, but Dexi calls it multiple times, whereas Vorac just calls
@@ -470,6 +452,75 @@ profiles = [
     ConfigLootsplosion(),
     ConfigReasonable(),
     ]
+
+class QtyExcellent(Config):
+    """
+    Excellent drop quantities - bosses will drop as many items as they
+    have unique items in their pools.  Formerly this was the "Lootsplosion"
+    defaults.
+    """
+
+    qty_index = 'excellent'
+    qty_label = 'Excellent Drop Quantities (formerly "Lootsplosion")'
+
+    quantity_default_two = '2'
+    quantity_default_three = '3'
+
+    quantity_chubby = '4'
+    quantity_terra = '7'
+    quantity_vermivorous = '5'
+    quantity_warrior = '8'
+    quantity_hyperius_legendary = '7'
+    quantity_hyperius_seraph = '4'
+    quantity_gee_seraph = '4'
+    quantity_gee_legendary = '6'
+    quantity_sorcerers_daughter = '4'
+
+class QtyImproved(Config):
+    """
+    Improved drop quantities - bosses with more than one unique item will
+    spawn more than one, though not necessarily as many as there are items
+    in the pool.  Formerly the "Reasonable" preset.
+    """
+
+    qty_index = 'improved'
+    qty_label = 'Improved Drop Quantities (formerly "Reasonable")'
+
+    quantity_default_two = '2'
+    quantity_default_three = '2'
+
+    quantity_chubby = '2'
+    quantity_terra = '4'
+    quantity_vermivorous = '3'
+    quantity_warrior = '4'
+    quantity_hyperius_legendary = '2'
+    quantity_hyperius_seraph = '2'
+    quantity_gee_seraph = '2'
+    quantity_gee_legendary = '2'
+    quantity_sorcerers_daughter = '2'
+
+class QtyStock(Config):
+    """
+    Stock drop quantities - bosses will only ever drop a single item from
+    their unique drop pools.  (This is the same as the game's stock drop
+    quantities.
+    """
+
+    qty_index = 'stock'
+    qty_label = 'Stock Drop Quantities (just one per boss)'
+
+    quantity_default_two = '1'
+    quantity_default_three = '1'
+
+    quantity_chubby = '1'
+    quantity_terra = '1'
+    quantity_vermivorous = '1'
+    quantity_warrior = '1'
+    quantity_hyperius_legendary = '1'
+    quantity_hyperius_seraph = '1'
+    quantity_gee_seraph = '1'
+    quantity_gee_legendary = '1'
+    quantity_sorcerers_daughter = '1'
 
 # Remove bias for dropping Pistols in the main game.  Also buffs drop rates
 # for snipers and launchers, though it does not bring them up to the level
@@ -710,6 +761,15 @@ for profile in profiles:
                 )
 
 ###
+### Generate our drop quantity category strings
+###
+
+boss_quantities = {}
+for qty in [QtyExcellent(), QtyImproved(), QtyStock()]:
+    with open('input-file-quantity.txt') as df:
+        boss_quantities[qty.qty_index] = df.read().format(config=qty)
+
+###
 ### Generate our boss unique drop strings
 ###
 
@@ -719,7 +779,7 @@ for (label, key, unique_pct, rare_pct) in [
         ('Very Improved', 'veryimproved', .5, .75),
         ('Improved', 'improved', .33, .60),
         ('Slightly Improved', 'slight', .22, .45),
-        ('Stock Equip', 'stock', .1, .33),
+        ('Stock', 'stock', .1, .33),
         ]:
 
     with open('input-file-droprate.txt', 'r') as df:
@@ -749,6 +809,9 @@ with open(input_filename, 'r') as df:
         boss_drops_improved=boss_drops['improved'],
         boss_drops_slightimproved=boss_drops['slight'],
         boss_drops_stock=boss_drops['stock'],
+        boss_quantity_excellent=boss_quantities['excellent'],
+        boss_quantity_improved=boss_quantities['improved'],
+        boss_quantity_stock=boss_quantities['stock'],
         )
 mp.human_str_to_blcm_filename(mod_str, output_filename)
 print('Wrote mod to: {}'.format(output_filename))
