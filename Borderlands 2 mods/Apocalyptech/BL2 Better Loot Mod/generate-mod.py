@@ -70,6 +70,33 @@ class Config(object):
     Base class which allows us to use constants as format strings
     """
 
+    def set_balanced_pct_reports(self, basename, weights, fixedlen=False):
+        """
+        Given a list of numerical `weights`, sets some attributes in our
+        object based on `basename` which describe the percent chances
+        of drops.  Var names will be `basename_pct_idx`, where `idx`
+        relates to the position of the weight in question in `weights`.
+        If `fixedlen` is true, the percentages will be stored as
+        right-aligned strings, otherwise it should be numbers.
+        """
+        total = sum(weights)
+        for (idx, weight) in enumerate(weights):
+            varname = '{}_pct_{}'.format(basename, idx)
+            pct = weight/total*100
+            if pct >= 1:
+                pct = round(pct)
+            elif pct != 0:
+                pct = round(pct, 2)
+                if str(pct) == '1.0':
+                    pct = 1
+            if fixedlen:
+                if pct == 0 or pct >= 1:
+                    setattr(self, varname, '{:4d}'.format(round(pct)))
+                else:
+                    setattr(self, varname, '{:4.2f}'.format(pct))
+            else:
+                setattr(self, varname, pct)
+
     def __format__(self, formatstr):
         """
         A bit of magic so that we can use our values in format strings
@@ -77,6 +104,8 @@ class Config(object):
         attr = getattr(self, formatstr)
         if type(attr) == str:
             return attr
+        elif type(attr) == int or type(attr) == float:
+            return str(attr)
         else:
             return attr()
 
@@ -249,20 +278,20 @@ class ConfigLootsplosion(ConfigBase):
     profile_name_orig = 'Lootsplosion'
 
     # Custom weapon drop scaling
-    weapon_base_common = '8'
-    weapon_base_uncommon = '85'
-    weapon_base_rare = '65'
-    weapon_base_veryrare = '50'
-    weapon_base_alien = '30'
-    weapon_base_legendary = '3'
-    weapon_base_iris_cobra = '1'
+    weapon_base_common = 8
+    weapon_base_uncommon = 85
+    weapon_base_rare = 65
+    weapon_base_veryrare = 50
+    weapon_base_alien = 30
+    weapon_base_legendary = 3
+    weapon_base_iris_cobra = 1
 
     # Custom COM drop scaling (identical to weapons, apart from an additional Alignment COM pool)
     cm_base_common = weapon_base_common
     cm_base_uncommon = weapon_base_uncommon
     cm_base_rare = weapon_base_rare
     cm_base_veryrare = weapon_base_veryrare
-    cm_base_alignment = '30'
+    cm_base_alignment = 30
     cm_base_legendary = weapon_base_legendary
 
     # Custom grenade drop scaling (identical to weapons)
@@ -280,28 +309,28 @@ class ConfigLootsplosion(ConfigBase):
     shield_base_legendary = weapon_base_legendary
 
     # Relic drop weights
-    relic_drop_scale_all = '0.2'
-    relic_drop_scale_reward = '1'
+    relic_drop_scale_all = 0.2
+    relic_drop_scale_reward = 1
 
     # Custom relic drop scaling, within "ArtifactsReward"
-    relic_base_rare = '1.0'
-    relic_base_veryrare = '2.0'
+    relic_base_rare = 1.0
+    relic_base_veryrare = 2.0
 
     # Drop rates for "regular" treasure chests
-    treasure_base_common = '0'
-    treasure_base_uncommon = '0'
-    treasure_base_rare = '20'
-    treasure_base_veryrare = '60'
-    treasure_base_alien = '30'
-    treasure_base_legendary = '5'
+    treasure_base_common = 0
+    treasure_base_uncommon = 0
+    treasure_base_rare = 20
+    treasure_base_veryrare = 60
+    treasure_base_alien = 30
+    treasure_base_legendary = 5
 
     # Drop rates for "epic" treasure chests
-    epic_base_common = '0'
-    epic_base_uncommon = '0'
-    epic_base_rare = '0'
-    epic_base_veryrare = '1'
-    epic_base_alien = '1'
-    epic_base_legendary = '0.3'
+    epic_base_common = 0
+    epic_base_uncommon = 0
+    epic_base_rare = 0
+    epic_base_veryrare = 1
+    epic_base_alien = 1
+    epic_base_legendary = 0.3
 
     # Badass pool probabilities (NOTE: these are *not* weights)
     badass_pool_veryrare = '0.4'
@@ -354,20 +383,20 @@ class ConfigReasonable(ConfigLootsplosion):
     profile_name_orig = 'Reasonable'
 
     # Weapon drops
-    weapon_base_common = '32.75'
-    weapon_base_uncommon = '35'
-    weapon_base_rare = '25'
-    weapon_base_veryrare = '5'
-    weapon_base_alien = '2'
-    weapon_base_legendary = '0.25'
-    weapon_base_iris_cobra = '2'
+    weapon_base_common = 32.75
+    weapon_base_uncommon = 35
+    weapon_base_rare = 25
+    weapon_base_veryrare = 5
+    weapon_base_alien = 2
+    weapon_base_legendary = 0.25
+    weapon_base_iris_cobra = 2
 
     # Class mods
     cm_base_common = weapon_base_common
     cm_base_uncommon = weapon_base_uncommon
     cm_base_rare = weapon_base_rare
     cm_base_veryrare = weapon_base_veryrare
-    cm_base_alignment = '2'
+    cm_base_alignment = 2
     cm_base_legendary = weapon_base_legendary
 
     # Custom grenade drop scaling (identical to weapons)
@@ -385,27 +414,27 @@ class ConfigReasonable(ConfigLootsplosion):
     shield_base_legendary = weapon_base_legendary
 
     # Relic drop weights
-    relic_drop_scale_all = '0.6'
-    relic_drop_scale_reward = '0.6'
+    relic_drop_scale_all = 0.6
+    relic_drop_scale_reward = 0.6
 
     # Custom relic drop scaling, within "ArtifactsReward"
-    relic_base_rare = '2.0'
-    relic_base_veryrare = '1.0'
+    relic_base_rare = 2.0
+    relic_base_veryrare = 1.0
 
     # Drop rates for "regular" treasure chests
-    treasure_base_common = '32.5'
-    treasure_base_uncommon = '40'
-    treasure_base_rare = '20'
-    treasure_base_veryrare = '5'
-    treasure_base_alien = '3'
-    treasure_base_legendary = '0.5'
+    treasure_base_common = 32.5
+    treasure_base_uncommon = 40
+    treasure_base_rare = 20
+    treasure_base_veryrare = 5
+    treasure_base_alien = 3
+    treasure_base_legendary = 0.5
 
     # Drop rates for "epic" treasure chests
-    epic_base_uncommon = '25'
-    epic_base_rare = '49'
-    epic_base_veryrare = '15'
-    epic_base_alien = '10'
-    epic_base_legendary = '1'
+    epic_base_uncommon = 25
+    epic_base_rare = 49
+    epic_base_veryrare = 15
+    epic_base_alien = 10
+    epic_base_legendary = 1
 
     # Voracidous quantities have to be done slightly differently, because both
     # Dexiduous and Voracidous use the same Seraph and Legendary pools for their
@@ -754,10 +783,62 @@ for (idx, (classname, propname, loot_idx, attachment_idx)) in enumerate([
 qualities = {}
 for profile in profiles:
 
+    profile.set_balanced_pct_reports('drop_weapon', [
+            profile.weapon_base_common,
+            profile.weapon_base_uncommon,
+            profile.weapon_base_rare,
+            profile.weapon_base_veryrare,
+            profile.weapon_base_alien,
+            profile.weapon_base_legendary,
+            ], fixedlen=True)
+    # We're assuming that all items have the same percentages, which at the
+    # moment is true.  It's possible that at some point in the future that'll
+    # become Not True, and we'll have more work to do.
+    profile.set_balanced_pct_reports('drop_items', [
+            profile.cm_base_common,
+            profile.cm_base_uncommon,
+            profile.cm_base_rare,
+            profile.cm_base_veryrare,
+            profile.cm_base_legendary,
+            ], fixedlen=True)
+    profile.set_balanced_pct_reports('treasure_weapon', [
+            profile.treasure_base_common,
+            profile.treasure_base_uncommon,
+            profile.treasure_base_rare,
+            profile.treasure_base_veryrare,
+            profile.treasure_base_alien,
+            profile.treasure_base_legendary,
+            ], fixedlen=True)
+    profile.set_balanced_pct_reports('treasure_items', [
+            profile.treasure_base_common,
+            profile.treasure_base_uncommon,
+            profile.treasure_base_rare,
+            profile.treasure_base_veryrare,
+            profile.treasure_base_legendary,
+            ], fixedlen=True)
+    profile.set_balanced_pct_reports('epic_weapon', [
+            profile.epic_base_uncommon,
+            profile.epic_base_rare,
+            profile.epic_base_veryrare,
+            profile.epic_base_alien,
+            profile.epic_base_legendary,
+            ], fixedlen=True)
+    profile.set_balanced_pct_reports('epic_items', [
+            profile.epic_base_uncommon,
+            profile.epic_base_rare,
+            profile.epic_base_veryrare,
+            profile.epic_base_legendary,
+            ], fixedlen=True)
+    profile.set_balanced_pct_reports('relic_reward', [
+            profile.relic_base_rare,
+            profile.relic_base_veryrare,
+            ])
+
     with open('input-file-quality.txt') as df:
         qualities[profile.profile_name] = df.read().format(
                 config=profile,
                 mp=mp,
+                relic_pct=round(profile.relic_drop_scale_reward/(profile.relic_drop_scale_all+profile.relic_drop_scale_reward)*100),
                 )
 
 ###
