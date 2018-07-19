@@ -421,10 +421,16 @@ Changelog
 
 **v1.3.0**, (unreleased):
  * Converted to BLCM format *(BLCMM is now required, FilterTool is not supported)*
- * Removed "standalone" and "standalone offline" variants *(this is now much better
-   managed by BLCMM)*
+ * Merged all versions into a single master file
+   * "Lootsplosion" and "Reasonable" variants are options in a mutually-exclusive
+     category in the mod, rather than separate files
+   * Removed "standalone" and "standalone offline" variants *(this is now much better
+     managed by BLCMM)*
+ * Added wider selection of boss unique drop rates
  * Set a few creature minibosses (such as Pimon and Tumba) to guarantee their
    unique drops.
+ * Removed buffs for Big Game Hunt DLC rare skins.  We weren't touching any other
+   skin drop percentages, which made them an anomaly.
 
 **v1.2.2**, April 25, 2018 (commit `2618668b068b93a397820dcbabcae9bf83a67fd8`):
  * Changed mod filenames to have a `.txt` extension.

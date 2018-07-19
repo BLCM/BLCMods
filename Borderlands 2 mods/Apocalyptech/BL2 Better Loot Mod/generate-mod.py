@@ -53,6 +53,7 @@ except ModuleNotFoundError:
 
 mod_name = 'BL2 Better Loot Mod'
 mod_version = '1.3.0-prerelease'
+output_filename = '{}.blcm'.format(mod_name)
 
 ###
 ### Where we get our mod data from
@@ -71,14 +72,30 @@ class ConfigBase(object):
     values.
     """
 
-    def filename(self, mod_name):
-        """
-        Constructs our filename
-        """
-        return '{} ({}).blcm'.format(
-                mod_name,
-                self.profile_name,
-            )
+    # Gun Type drop weights.  Note that because these values are going into
+    # our hotfix object, these variables *cannot* be successfully overridden
+    # in an extending class.
+    drop_prob_pistol = 100
+    drop_prob_ar = 100
+    drop_prob_smg = 100
+    drop_prob_shotgun = 100
+    drop_prob_sniper = 80
+    drop_prob_launcher = 40
+
+    # Drop rates within the "very high roll" pools of dice chests
+    dice_vhigh_veryrare = '1'
+    dice_vhigh_alien = '1'
+    dice_vhigh_legendary = '0.5'
+
+    # 2.5x chance of both kinds of eridium
+    eridium_bar_drop = '0.003750'       # Stock: 0.001500
+    eridium_stick_drop = '0.020000'     # Stock: 0.008000
+
+    def full_profile_name(self):
+        if self.profile_name_orig:
+            return '{} Quality (formerly "{}")'.format(self.profile_name, self.profile_name_orig)
+        else:
+            return '{} Quality'.format(self.profile_name)
 
     def relic_weight_string(self):
         """
@@ -223,7 +240,8 @@ class ConfigLootsplosion(ConfigBase):
     Many folks will consider this a bit too OP/Extreme.
     """
 
-    profile_name = 'Lootsplosion'
+    profile_name = 'Excellent'
+    profile_name_orig = 'Lootsplosion'
 
     # Custom weapon drop scaling
     weapon_base_common = '8'
@@ -263,10 +281,6 @@ class ConfigLootsplosion(ConfigBase):
     # Custom relic drop scaling, within "ArtifactsReward"
     relic_base_rare = '1.0'
     relic_base_veryrare = '2.0'
-
-    # Boss drop rates
-    boss_drop_uniques = '1.0'
-    boss_drop_rares = '1.0'
 
     # Drop rates for "regular" treasure chests
     treasure_base_common = '0'
@@ -336,25 +350,6 @@ class ConfigLootsplosion(ConfigBase):
     voracidous_drop_legendary_3 = '1'
     voracidous_drop_legendary_4 = '1'
 
-    # Drop rates within the "very high roll" pools of dice chests
-    dice_vhigh_veryrare = '1'
-    dice_vhigh_alien = '1'
-    dice_vhigh_legendary = '0.5'
-
-    # 2.5x chance of both kinds of eridium
-    eridium_bar_drop = '0.003750'       # Stock: 0.001500
-    eridium_stick_drop = '0.020000'     # Stock: 0.008000
-
-    # Gun Type drop weights.  Note that because these values are going into
-    # our hotfix object, these variables *cannot* be successfully overridden
-    # in an extending class.
-    drop_prob_pistol = 100
-    drop_prob_ar = 100
-    drop_prob_smg = 100
-    drop_prob_shotgun = 100
-    drop_prob_sniper = 80
-    drop_prob_launcher = 40
-
 class ConfigReasonable(ConfigLootsplosion):
     """
     Alternate config which has slightly-more-reasonable drop rates for stuff
@@ -362,7 +357,8 @@ class ConfigReasonable(ConfigLootsplosion):
     bit excessive.
     """
 
-    profile_name = 'Reasonable Drops'
+    profile_name = 'Very Good'
+    profile_name_orig = 'Reasonable'
 
     # Weapon drops
     weapon_base_common = '32.75'
@@ -402,10 +398,6 @@ class ConfigReasonable(ConfigLootsplosion):
     # Custom relic drop scaling, within "ArtifactsReward"
     relic_base_rare = '2.0'
     relic_base_veryrare = '1.0'
-
-    # Boss drop rates
-    boss_drop_uniques = '0.5'
-    boss_drop_rares = '0.25'
 
     # Drop rates for "regular" treasure chests
     treasure_base_common = '32.5'
@@ -492,12 +484,12 @@ for (number, rarity) in [
         ('06', 'Legendary'),
         ]:
     for (idx, (guntype, gunprob)) in enumerate([
-            ('Pistol', ConfigLootsplosion.drop_prob_pistol),
-            ('AR', ConfigLootsplosion.drop_prob_ar),
-            ('SMG', ConfigLootsplosion.drop_prob_smg),
-            ('Shotgun', ConfigLootsplosion.drop_prob_shotgun),
-            ('Sniper', ConfigLootsplosion.drop_prob_sniper),
-            ('Launcher', ConfigLootsplosion.drop_prob_launcher),
+            ('Pistol', ConfigBase.drop_prob_pistol),
+            ('AR', ConfigBase.drop_prob_ar),
+            ('SMG', ConfigBase.drop_prob_smg),
+            ('Shotgun', ConfigBase.drop_prob_shotgun),
+            ('Sniper', ConfigBase.drop_prob_sniper),
+            ('Launcher', ConfigBase.drop_prob_launcher),
             ]):
         mp.register_str('normalize_weapon_types_{}_{}'.format(rarity, guntype),
             'level None set GD_Itempools.WeaponPools.Pool_Weapons_All_{}_{} BalancedItems[{}].Probability.BaseValueConstant {}'.format(
@@ -518,47 +510,47 @@ for idx, objname in enumerate([
 
 # Make Laney's Dwarves drop crystals, and be likely to drop a gemstone between 'em
 for num in range(1, 8):
-	mp.register_str('laney_dwarf_drop_{}'.format(num),
-		"""level Fridge_P set GD_Population_Midget.Balance.Unique.PawnBalance_LaneyDwarf{} DefaultItemPoolList
-		(
-			(
-				ItemPool=ItemPoolDefinition'GD_ItempoolsEnemyUse.WeaponPools.Pool_Weapons_SMG_EnemyUse',
-				PoolProbability=(
-					BaseValueConstant=1.000000,
-					BaseValueAttribute=None,
-					InitializationDefinition=None,
-					BaseValueScaleConstant=1.000000
-				)
-			),
-			(
-				ItemPool=ItemPoolDefinition'GD_ItempoolsEnemyUse.Shields.Pool_Shields_Standard_EnemyUse',
-				PoolProbability=(
-					BaseValueConstant=0.250000,
-					BaseValueAttribute=None,
-					InitializationDefinition=None,
-					BaseValueScaleConstant=1.000000
-				)
-			),
-			(
-				ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Crystal',
-				PoolProbability=(
-					BaseValueConstant=1.000000,
-					BaseValueAttribute=None,
-					InitializationDefinition=None,
-					BaseValueScaleConstant=1.000000
-				)
-			),
-			(
-				ItemPool=ItemPoolDefinition'GD_Aster_ItemPools.WeaponPools.Pool_Weapons_04_Gemstone',
-				PoolProbability=(
-					BaseValueConstant=0.200000,
-					BaseValueAttribute=None,
-					InitializationDefinition=None,
-					BaseValueScaleConstant=1.000000
-				)
-			)
-		)
-		""".format(num))
+    mp.register_str('laney_dwarf_drop_{}'.format(num),
+        """level Fridge_P set GD_Population_Midget.Balance.Unique.PawnBalance_LaneyDwarf{} DefaultItemPoolList
+        (
+            (
+                ItemPool=ItemPoolDefinition'GD_ItempoolsEnemyUse.WeaponPools.Pool_Weapons_SMG_EnemyUse',
+                PoolProbability=(
+                    BaseValueConstant=1.000000,
+                    BaseValueAttribute=None,
+                    InitializationDefinition=None,
+                    BaseValueScaleConstant=1.000000
+                )
+            ),
+            (
+                ItemPool=ItemPoolDefinition'GD_ItempoolsEnemyUse.Shields.Pool_Shields_Standard_EnemyUse',
+                PoolProbability=(
+                    BaseValueConstant=0.250000,
+                    BaseValueAttribute=None,
+                    InitializationDefinition=None,
+                    BaseValueScaleConstant=1.000000
+                )
+            ),
+            (
+                ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Crystal',
+                PoolProbability=(
+                    BaseValueConstant=1.000000,
+                    BaseValueAttribute=None,
+                    InitializationDefinition=None,
+                    BaseValueScaleConstant=1.000000
+                )
+            ),
+            (
+                ItemPool=ItemPoolDefinition'GD_Aster_ItemPools.WeaponPools.Pool_Weapons_04_Gemstone',
+                PoolProbability=(
+                    BaseValueConstant=0.200000,
+                    BaseValueAttribute=None,
+                    InitializationDefinition=None,
+                    BaseValueScaleConstant=1.000000
+                )
+            )
+        )
+        """.format(num))
 
 # Improve The Warrior drops
 for (num, pool) in [
@@ -705,25 +697,58 @@ for (idx, (classname, propname, loot_idx, attachment_idx)) in enumerate([
             ))
 
 ###
+### Generate our quality category strings
+###
+
+qualities = {}
+for profile in profiles:
+
+    with open('input-file-quality.txt') as df:
+        qualities[profile.profile_name] = df.read().format(
+                config=profile,
+                mp=mp,
+                )
+
+###
+### Generate our boss unique drop strings
+###
+
+boss_drops = {}
+for (label, key, unique_pct, rare_pct) in [
+        ('Guaranteed', 'guaranteed', 1, 1),
+        ('Very Improved', 'veryimproved', .5, .75),
+        ('Improved', 'improved', .33, .60),
+        ('Slightly Improved', 'slight', .22, .45),
+        ('Stock Equip', 'stock', .1, .33),
+        ]:
+
+    with open('input-file-droprate.txt', 'r') as df:
+        boss_drops[key] = df.read().format(
+                section_label='{} ({}% Uniques, {}% Rares)'.format(
+                    label, round(unique_pct*100), round(rare_pct*100)),
+                unique_pct=unique_pct,
+                rare_pct=rare_pct,
+                )
+
+###
 ### Everything below this point is constructing the actual patch file
 ###
 
 # Now read in our main input file
 with open(input_filename, 'r') as df:
-    loot_str = df.read()
-
-# Loop through our profiles and generate the files
-for profile in profiles:
-
-    profile_str = loot_str.format(
-            mod_name=mod_name,
-            mod_version=mod_version,
-            mod_type='BL2',
-            config=profile,
-            mp=mp,
-            )
-    mp.human_str_to_blcm_filename(profile_str, profile.filename(mod_name))
-    print('Wrote {} mod file to: {}'.format(
-        profile.profile_name,
-        profile.filename(mod_name),
-        ))
+    mod_str = df.read().format(
+        mod_name=mod_name,
+        mod_version=mod_version,
+        mod_type='BL2',
+        mp=mp,
+        base=ConfigBase(),
+        drop_quality_excellent=qualities['Excellent'],
+        drop_quality_verygood=qualities['Very Good'],
+        boss_drops_guaranteed=boss_drops['guaranteed'],
+        boss_drops_veryimproved=boss_drops['veryimproved'],
+        boss_drops_improved=boss_drops['improved'],
+        boss_drops_slightimproved=boss_drops['slight'],
+        boss_drops_stock=boss_drops['stock'],
+        )
+mp.human_str_to_blcm_filename(mod_str, output_filename)
+print('Wrote mod to: {}'.format(output_filename))
