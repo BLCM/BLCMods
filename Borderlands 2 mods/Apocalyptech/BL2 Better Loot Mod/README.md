@@ -419,7 +419,10 @@ for the full text.
 Changelog
 =========
 
-**v1.2.3**, (unreleased):
+**v1.3.0**, (unreleased):
+ * Converted to BLCM format *(BLCMM is now required, FilterTool is not supported)*
+ * Removed "standalone" and "standalone offline" variants *(this is now much better
+   managed by BLCMM)*
  * Set a few creature minibosses (such as Pimon and Tumba) to guarantee their
    unique drops.
 
