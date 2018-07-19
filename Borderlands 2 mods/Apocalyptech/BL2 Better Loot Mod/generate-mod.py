@@ -142,13 +142,13 @@ class ConfigBase(Config):
     drop_prob_launcher = 40
 
     # Drop rates within the "very high roll" pools of dice chests
-    dice_vhigh_veryrare = '1'
-    dice_vhigh_alien = '1'
-    dice_vhigh_legendary = '0.5'
+    dice_vhigh_veryrare = 1
+    dice_vhigh_alien = 1
+    dice_vhigh_legendary = 0.5
 
     # 2.5x chance of both kinds of eridium
-    eridium_bar_drop = '0.003750'       # Stock: 0.001500
-    eridium_stick_drop = '0.020000'     # Stock: 0.008000
+    eridium_bar_drop = 0.003750       # Stock: 0.001500
+    eridium_stick_drop = 0.020000     # Stock: 0.008000
 
     def full_profile_name(self):
         if self.profile_name_orig:
