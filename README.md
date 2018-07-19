@@ -58,6 +58,6 @@ If you wish to contribute a modpack (or a compilation of mods):
 
 - To downlaod an individual file, click the `raw` button in the top right of the bar that has `raw | blame | history`. Once the web page loads, `Rclick` and `press save page as`.
 
-- Installing the files follows methods discussed on the [Wiki](https://github.com/BL2CP/BLCMods/wiki/Tutorial:-Installation)
+- Installing the files follows methods discussed on the [Wiki](https://github.com/BLCM/BLCMods/wiki/Tutorial%3A-Enabling-Console)
 
 #### The usage of "master files" has become strongly discouraged as Borderlands 2/TPS modding has become more complex. The use of master files will often end up breaking parts or all of the mods you're trying to use. Instead, always import mods into FilterTool, and only execute the single patch file that it saves.
