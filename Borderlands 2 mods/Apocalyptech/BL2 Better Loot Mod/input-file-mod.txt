@@ -6003,6 +6003,39 @@ BL2
 
             #</Raid Boss Drop Improvements>
 
+            #<Enemy Drop Nerfs>
+
+                # A few enemies end up dropping loot a bit too much even for my tastes.
+                # This section nerfs them a bit to be slightly more reasonable.
+
+                #<Skeleton Kings>
+
+                    # UCP adds the Emperor as a drop for the four Skeleton Kings in the
+                    # Dragon Keep DLC.  They drop at a reduced rate already, but we're
+                    # going to drop them down a little bit further.
+
+                    level Dead_Forest_P set GD_Aster_Pop_Skeletons.Balance.PawnBalance_SkeletonKing_Aliah DefaultItemPoolList[0].PoolProbability.BaseValueScaleConstant 0.333333
+
+                    level Dead_Forest_P set GD_Aster_Pop_Skeletons.Balance.PawnBalance_SkeletonKing_Crono DefaultItemPoolList[0].PoolProbability.BaseValueScaleConstant 0.333333
+
+                    level Dead_Forest_P set GD_Aster_Pop_Skeletons.Balance.PawnBalance_SkeletonKing_Nazar DefaultItemPoolList[0].PoolProbability.BaseValueScaleConstant 0.333333
+
+                    level Dead_Forest_P set GD_Aster_Pop_Skeletons.Balance.PawnBalance_SkeletonKing_Seth DefaultItemPoolList[0].PoolProbability.BaseValueScaleConstant 0.333333
+
+                #</Skeleton Kings>
+
+                #<Treants>
+
+                    # Treants drop the Bee at usual boss-level drop rates, which is a
+                    # bit much since you encounter so many of them throughout the
+                    # Dragon Keep DLC.  Scaling their drop rate by 33%
+
+                    level None set GD_Aster_Pop_Treant.Balance.PawnBalance_Treant DefaultItemPoolList[0].PoolProbability.BaseValueScaleConstant 0.333333
+
+                #</Treants>
+
+            #</Enemy Drop Nerfs>
+
         #</Better Enemy Drops>
 
         #<UCP Duplicates>
