@@ -405,6 +405,8 @@ Changelog
  * Set BLNG loader to also drop Sledge's Shotgun, as UCP does, so that we're not
    overriding that behavior for UCP users.  People not using UCP will just have to
    cope with the extra shotgun drop chance.
+ * Set Badass Creepers to use global drop probabilities for their unique gear (this
+   is present in UCP 4.1 as well)
  * Removed disabled-by-default categories which I'd had in there for my own testing
    purposes.  No real need to have them in there in the first place, and it just made
    checking/unchecking the mod fraught with potential unintended side effects.
