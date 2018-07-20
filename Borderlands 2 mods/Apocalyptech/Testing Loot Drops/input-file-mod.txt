@@ -1,0 +1,81 @@
+BL2
+#<{mod_name}>
+
+    # {mod_name}
+    # by Apocalyptech
+    # Licensed under Public Domain / CC0 1.0 Universal
+    #
+    # Guarantees the specified drops given in the generation file.  Not
+    # for general-purpose use -- to force some drops in the game, alter
+    # the parameters in generate-mod.py and regenerate.
+
+    #<Guaranteed Enemy Loot Drop Chance>
+
+        # Gives 100% chance to drop loot from enemies.
+
+        set GD_Itempools.DropWeights.DropODDS_GunsAndGear:ConditionalAttributeValueResolver_0 ValueExpressions
+        (
+            bEnabled=True,
+            ConditionalExpressionList=(),
+            DefaultBaseValue=(
+                BaseValueConstant=1,
+                BaseValueAttribute=None,
+                InitializationDefinition=None,
+                BaseValueScaleConstant=1
+            )
+        )
+
+        level None set GD_Itempools.ListDefs.StandardEnemyNoGunsOrGear ItemPools[0]
+        ( 
+            ItemPool=ItemPoolDefinition'GD_Itempools.GeneralItemPools.Pool_GunsAndGear', 
+            PoolProbability=( 
+                BaseValueConstant=0.000000, 
+                BaseValueAttribute=AttributeDefinition'GD_Itempools.DropWeights.DropODDS_GunsAndGear', 
+                InitializationDefinition=None, 
+                BaseValueScaleConstant=1.000000 
+            ) 
+        )
+
+    #</Guaranteed Enemy Loot Drop Chance>
+
+    #<Enemies Drop {loot_drop_quantity} Item{plural}>
+
+        # Enemies drop {loot_drop_quantity} items instead of just one.
+
+        set GD_Itempools.GeneralItemPools.Pool_GunsAndGear Quantity
+        (
+            BaseValueConstant={loot_drop_quantity},
+            BaseValueAttribute=None,
+            InitializationDefinition=None,
+            BaseValueScaleConstant=1
+        )
+
+        set GD_Iris_ItemPools.EnemyDropPools.Pool_GunsAndGear_WeightedAngelGang Quantity
+        (
+            BaseValueConstant={loot_drop_quantity},
+            BaseValueAttribute=None,
+            InitializationDefinition=None,
+            BaseValueScaleConstant=1
+        )
+
+        set GD_Iris_ItemPools.EnemyDropPools.Pool_GunsAndGear_WeightedDragonGang Quantity
+        (
+            BaseValueConstant={loot_drop_quantity},
+            BaseValueAttribute=None,
+            InitializationDefinition=None,
+            BaseValueScaleConstant=1
+        )
+
+        set GD_Iris_ItemPools.EnemyDropPools.Pool_GunsAndGear_WeightedTorgueGang Quantity
+        (
+            BaseValueConstant={loot_drop_quantity},
+            BaseValueAttribute=None,
+            InitializationDefinition=None,
+            BaseValueScaleConstant=1
+        )
+
+    #</Enemies Drop {loot_drop_quantity} Item{plural}>
+
+{gunsandgear_drop_str}
+
+#</{mod_name}>
