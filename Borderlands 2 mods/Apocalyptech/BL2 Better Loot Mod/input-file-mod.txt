@@ -2812,100 +2812,24 @@ BL2
                 # enemies and Badasses, whose drop pools I felt could use a slight buff.
                 # Some of these get upgraded to dropping from the Badass pool.
 
-                #<Shirtless Men>
+                #<Arguk the Butcher>
 
-                    # Makes Shirtless Men (from the base game mission Too Close For
-                    # Missiles) drop from the badass pool
+                    # Make Arguk the Butcher drop from the badass pool
 
-                    level Interlude_P set GD_Population_Marauder.Balance.Unique.PawnBalance_ShirtlessMan DefaultItemPoolIncludedLists[0] ItemPoolListDefinition'GD_Itempools.ListDefs.BadassEnemyGunsAndGear'
+                    level Dark_Forest_P set GD_Aster_Pop_Orcs.Balance.PawnBalance_Orc_Butcher DefaultItemPoolIncludedLists[0] ItemPoolListDefinition'GD_Itempools.ListDefs.BadassEnemyGunsAndGear'
 
-                #</Shirtless Men>
+                #</Arguk the Butcher>
 
-                #<Gluttonous Thresher>
+                #<BLNG Loader (will override UCP's "Add Sledge's Shotgun to BLNG Loader")>
 
-                    # Makes the Gluttonous Thresher (during Bright Lights, Flying City)
-                    # drop from the super badass pool
+                    # Make the BLNG Loader drop from the Badass pool, and also add a bunch of
+                    # money to its drops.
 
-                    level Outwash_P set GD_Population_Thresher.Balance.PawnBalance_ThresherGluttonous DefaultItemPoolIncludedLists[0] ItemPoolListDefinition'GD_Itempools.ListDefs.SuperBadassEnemyGunsAndGear'
+                    level Distillery_P set GD_BlingLoader.Population.PawnBalance_BlingLoader DefaultItemPoolIncludedLists[0] ItemPoolListDefinition'GD_Itempools.ListDefs.BadassEnemyGunsAndGear'
 
-                #</Gluttonous Thresher>
+                    {mp:wedding_blng_drop}
 
-                #<Sinkhole>
-
-                    # Makes Sinkhole (from Swallowed Whole) drop from the badass pool
-
-                    level Fridge_P set GD_Population_Stalker.Balance.Unique.PawnBalance_Stalker_SwallowedWhole DefaultItemPoolIncludedLists[0] ItemPoolListDefinition'GD_Itempools.ListDefs.BadassEnemyGunsAndGear'
-
-                #</Sinkhole>
-
-                #<Laney's Dwarves>
-
-                    # Make Laney's Dwarves drop crystals, and have a good chance between 'em
-                    # to drop a gemstone weapon, as well.
-
-                    {mp:laney_dwarf_drop_1}
-
-                    {mp:laney_dwarf_drop_2}
-
-                    {mp:laney_dwarf_drop_3}
-
-                    {mp:laney_dwarf_drop_4}
-
-                    {mp:laney_dwarf_drop_5}
-
-                    {mp:laney_dwarf_drop_6}
-
-                    {mp:laney_dwarf_drop_7}
-
-                #</Laney's Dwarves>
-
-                #<Rakkman>
-
-                    # Makes Rakkman drop from the badass pool
-
-                    level Fridge_P set GD_Population_Psycho.Balance.Unique.PawnBalance_RakkMan DefaultItemPoolIncludedLists[0] ItemPoolListDefinition'GD_Itempools.ListDefs.BadassEnemyGunsAndGear'
-
-                #</Rakkman>
-
-                #<Mick Zaford>
-
-                    # Makes Mick Zaford drop from the badass pool
-
-                    level Interlude_P set GD_Population_Marauder.Balance.Unique.PawnBalance_MickZaford_Combat DefaultItemPoolIncludedLists[0] ItemPoolListDefinition'GD_Itempools.ListDefs.BadassEnemyGunsAndGear'
-
-                #</Mick Zaford>
-
-                #<Papa/Jimbo Hodunk>
-
-                    # Makes Papa/Jimbo Hodunk drop from the badass pool
-
-                    level Interlude_P set GD_Population_Marauder.Balance.Unique.PawnBalance_JimboRiding DefaultItemPoolIncludedLists[0] ItemPoolListDefinition'GD_Itempools.ListDefs.BadassEnemyGunsAndGear'
-
-                #</Papa/Jimbo Hodunk>
-
-                #<Jack's Body Double>
-
-                    # Makes Jack's Body Double drop from the badass pool
-
-                    level HyperionCity_P set GD_Population_Jack.Balance.PawnBalance_JacksBodyDouble DefaultItemPoolIncludedLists[0] ItemPoolListDefinition'GD_Itempools.ListDefs.BadassEnemyGunsAndGear'
-
-                #</Jack's Body Double>
-
-                #<Deputy Winger>
-
-                    # Makes Deputy Winger drop from the badass pool
-
-                    level Grass_Lynchwood_P set GD_Population_Sheriff.Balance.PawnBalance_Deputy DefaultItemPoolIncludedLists[0] ItemPoolListDefinition'GD_Itempools.ListDefs.BadassEnemyGunsAndGear'
-
-                #</Deputy Winger>
-
-                #<Mortar>
-
-                    # Makes Mortar drop from the badass pool
-
-                    level CraterLake_P set GD_Population_Rat.Balance.Unique.PawnBalance_Mortar DefaultItemPoolIncludedLists[0] ItemPoolListDefinition'GD_Itempools.ListDefs.BadassEnemyGunsAndGear'
-
-                #</Mortar>
+                #</BLNG Loader (will override UCP's "Add Sledge's Shotgun to BLNG Loader")>
 
                 #<Bonehead 2.0>
 
@@ -2915,39 +2839,19 @@ BL2
 
                 #</Bonehead 2.0>
 
-                #<Roscoe>
+                #<Bridget Hodunk and Colin Zaford>
 
-                    # Makes Roscoe drop from the Badass pool
+                    # Makes these two spawn from the badass pool, rather than the regular pool.
 
-                    level Orchid_WormBelly_P set GD_Orchid_Pop_RakkHive.Character.PawnBalance_Orchid_RakkHive DefaultItemPoolIncludedLists (ItemPoolListDefinition'GD_Itempools.ListDefs.BadassEnemyGunsAndGear')
+                    level Distillery_P set GD_GoliathBride.Population.PawnBalance_GoliathBride DefaultItemPoolIncludedLists[0] ItemPoolListDefinition'GD_Itempools.ListDefs.BadassEnemyGunsAndGear'
 
-                #</Roscoe>
+                    level Distillery_P set GD_GoliathBride.Population.PawnBalance_GoliathBrideRaid DefaultItemPoolIncludedLists[0] ItemPoolListDefinition'GD_Itempools.ListDefs.BadassEnemyGunsAndGear'
 
-                #<Witch Doctors (Big Game Hunt DLC)>
+                    level Distillery_P set GD_GoliathGroom.Population.PawnBalance_GoliathGroom DefaultItemPoolIncludedLists[0] ItemPoolListDefinition'GD_Itempools.ListDefs.BadassEnemyGunsAndGear'
 
-                    # Adds a guaranteed Eridium stick, and chance at a good Relic
+                    level Distillery_P set GD_GoliathGroom.Population.PawnBalance_GoliathGroomRaid DefaultItemPoolIncludedLists[0] ItemPoolListDefinition'GD_Itempools.ListDefs.BadassEnemyGunsAndGear'
 
-                    {mp:witchdoctor_Fire}
-
-                    {mp:witchdoctor_Shock}
-
-                    {mp:witchdoctor_Slag}
-
-                    {mp:witchdoctor_Slow}
-
-                    {mp:witchdoctor_Vampire}
-
-                #</Witch Doctors (Big Game Hunt DLC)>
-
-                #<Witch Doctors (Son of Crawmerax Headhunter Pack>
-
-                    # Adding the same items as the story DLC ones - eridium and likely relic.
-
-                    {mp:crawmerax_witch_Slow}
-
-                    {mp:crawmerax_witch_Slag}
-
-                #</Witch Doctors (Son of Crawmerax Headhunter Pack>
+                #</Bridget Hodunk and Colin Zaford>
 
                 #<Bulstoss>
 
@@ -2956,6 +2860,14 @@ BL2
                     level None set GD_Sage_SM_AcquiredTasteData.Creature.PawnBalance_Sage_AcquiredTaste_Creature DefaultItemPoolIncludedLists[0] ItemPoolListDefinition'GD_Itempools.ListDefs.BadassEnemyGunsAndGear'
 
                 #</Bulstoss>
+
+                #<Deputy Winger>
+
+                    # Makes Deputy Winger drop from the badass pool
+
+                    level Grass_Lynchwood_P set GD_Population_Sheriff.Balance.PawnBalance_Deputy DefaultItemPoolIncludedLists[0] ItemPoolListDefinition'GD_Itempools.ListDefs.BadassEnemyGunsAndGear'
+
+                #</Deputy Winger>
 
                 #<Elite Savages>
 
@@ -2985,13 +2897,13 @@ BL2
 
                 #</Elite Savages>
 
-                #<Arguk the Butcher>
+                #<Giant Craboid>
 
-                    # Make Arguk the Butcher drop from the badass pool
+                    # Make the Giant Craboid drop from the Badass pool
 
-                    level Dark_Forest_P set GD_Aster_Pop_Orcs.Balance.PawnBalance_Orc_Butcher DefaultItemPoolIncludedLists[0] ItemPoolListDefinition'GD_Itempools.ListDefs.BadassEnemyGunsAndGear'
+                    level Easter_P set GD_Population_Crabworms.Balance.PawnBalance_CraboidGiant DefaultItemPoolIncludedLists[0] ItemPoolListDefinition'GD_Itempools.ListDefs.BadassEnemyGunsAndGear'
 
-                #</Arguk the Butcher>
+                #</Giant Craboid>
 
                 #<Giant Skeletons>
 
@@ -3000,6 +2912,15 @@ BL2
                     level None set GD_Aster_Pop_Skeletons.Balance.PawnBalance_SkeletonGiant DefaultItemPoolIncludedLists[0] ItemPoolListDefinition'GD_Itempools.ListDefs.BadassEnemyGunsAndGear'
 
                 #</Giant Skeletons>
+
+                #<Gluttonous Thresher>
+
+                    # Makes the Gluttonous Thresher (during Bright Lights, Flying City)
+                    # drop from the super badass pool
+
+                    level Outwash_P set GD_Population_Thresher.Balance.PawnBalance_ThresherGluttonous DefaultItemPoolIncludedLists[0] ItemPoolListDefinition'GD_Itempools.ListDefs.SuperBadassEnemyGunsAndGear'
+
+                #</Gluttonous Thresher>
 
                 #<Handsome Sorcerer Stages>
 
@@ -3016,32 +2937,34 @@ BL2
 
                 #</Handsome Sorcerer Stages>
 
-                #<Wattle Gobbler Tributes>
+                #<Jack's Body Double>
 
-                    # Three tributes from the Wattle Gobler Headhunter Pack don't have
-                    # any drops defined, but the rest drop from the badass pool.  Fix that.
+                    # Makes Jack's Body Double drop from the badass pool
 
-                    {mp:wattle_tribute_cynder}
+                    level HyperionCity_P set GD_Population_Jack.Balance.PawnBalance_JacksBodyDouble DefaultItemPoolIncludedLists[0] ItemPoolListDefinition'GD_Itempools.ListDefs.BadassEnemyGunsAndGear'
 
-                    {mp:wattle_tribute_strip}
+                #</Jack's Body Double>
 
-                    {mp:wattle_tribute_flay}
+                #<Laney's Dwarves>
 
-                #</Wattle Gobbler Tributes>
+                    # Make Laney's Dwarves drop crystals, and have a good chance between 'em
+                    # to drop a gemstone weapon, as well.
 
-                #<Bridget Hodunk and Colin Zaford>
+                    {mp:laney_dwarf_drop_1}
 
-                    # Makes these two spawn from the badass pool, rather than the regular pool.
+                    {mp:laney_dwarf_drop_2}
 
-                    level Distillery_P set GD_GoliathBride.Population.PawnBalance_GoliathBride DefaultItemPoolIncludedLists[0] ItemPoolListDefinition'GD_Itempools.ListDefs.BadassEnemyGunsAndGear'
+                    {mp:laney_dwarf_drop_3}
 
-                    level Distillery_P set GD_GoliathBride.Population.PawnBalance_GoliathBrideRaid DefaultItemPoolIncludedLists[0] ItemPoolListDefinition'GD_Itempools.ListDefs.BadassEnemyGunsAndGear'
+                    {mp:laney_dwarf_drop_4}
 
-                    level Distillery_P set GD_GoliathGroom.Population.PawnBalance_GoliathGroom DefaultItemPoolIncludedLists[0] ItemPoolListDefinition'GD_Itempools.ListDefs.BadassEnemyGunsAndGear'
+                    {mp:laney_dwarf_drop_5}
 
-                    level Distillery_P set GD_GoliathGroom.Population.PawnBalance_GoliathGroomRaid DefaultItemPoolIncludedLists[0] ItemPoolListDefinition'GD_Itempools.ListDefs.BadassEnemyGunsAndGear'
+                    {mp:laney_dwarf_drop_6}
 
-                #</Bridget Hodunk and Colin Zaford>
+                    {mp:laney_dwarf_drop_7}
+
+                #</Laney's Dwarves>
 
                 #<Loot Leprechaun>
 
@@ -3054,24 +2977,103 @@ BL2
 
                 #</Loot Leprechaun>
 
-                #<BLNG Loader (will override UCP's "Add Sledge's Shotgun to BLNG Loader")>
+                #<Mick Zaford>
 
-                    # Make the BLNG Loader drop from the Badass pool, and also add a bunch of
-                    # money to its drops.
+                    # Makes Mick Zaford drop from the badass pool
 
-                    level Distillery_P set GD_BlingLoader.Population.PawnBalance_BlingLoader DefaultItemPoolIncludedLists[0] ItemPoolListDefinition'GD_Itempools.ListDefs.BadassEnemyGunsAndGear'
+                    level Interlude_P set GD_Population_Marauder.Balance.Unique.PawnBalance_MickZaford_Combat DefaultItemPoolIncludedLists[0] ItemPoolListDefinition'GD_Itempools.ListDefs.BadassEnemyGunsAndGear'
 
-                    {mp:wedding_blng_drop}
+                #</Mick Zaford>
 
-                #</BLNG Loader (will override UCP's "Add Sledge's Shotgun to BLNG Loader")>
+                #<Mortar>
 
-                #<Giant Craboid>
+                    # Makes Mortar drop from the badass pool
 
-                    # Make the Giant Craboid drop from the Badass pool
+                    level CraterLake_P set GD_Population_Rat.Balance.Unique.PawnBalance_Mortar DefaultItemPoolIncludedLists[0] ItemPoolListDefinition'GD_Itempools.ListDefs.BadassEnemyGunsAndGear'
 
-                    level Easter_P set GD_Population_Crabworms.Balance.PawnBalance_CraboidGiant DefaultItemPoolIncludedLists[0] ItemPoolListDefinition'GD_Itempools.ListDefs.BadassEnemyGunsAndGear'
+                #</Mortar>
 
-                #</Giant Craboid>
+                #<Papa/Jimbo Hodunk>
+
+                    # Makes Papa/Jimbo Hodunk drop from the badass pool
+
+                    level Interlude_P set GD_Population_Marauder.Balance.Unique.PawnBalance_JimboRiding DefaultItemPoolIncludedLists[0] ItemPoolListDefinition'GD_Itempools.ListDefs.BadassEnemyGunsAndGear'
+
+                #</Papa/Jimbo Hodunk>
+
+                #<Rakkman>
+
+                    # Makes Rakkman drop from the badass pool
+
+                    level Fridge_P set GD_Population_Psycho.Balance.Unique.PawnBalance_RakkMan DefaultItemPoolIncludedLists[0] ItemPoolListDefinition'GD_Itempools.ListDefs.BadassEnemyGunsAndGear'
+
+                #</Rakkman>
+
+                #<Roscoe>
+
+                    # Makes Roscoe drop from the Badass pool
+
+                    level Orchid_WormBelly_P set GD_Orchid_Pop_RakkHive.Character.PawnBalance_Orchid_RakkHive DefaultItemPoolIncludedLists (ItemPoolListDefinition'GD_Itempools.ListDefs.BadassEnemyGunsAndGear')
+
+                #</Roscoe>
+
+                #<Shirtless Men>
+
+                    # Makes Shirtless Men (from the base game mission Too Close For
+                    # Missiles) drop from the badass pool
+
+                    level Interlude_P set GD_Population_Marauder.Balance.Unique.PawnBalance_ShirtlessMan DefaultItemPoolIncludedLists[0] ItemPoolListDefinition'GD_Itempools.ListDefs.BadassEnemyGunsAndGear'
+
+                #</Shirtless Men>
+
+                #<Sinkhole>
+
+                    # Makes Sinkhole (from Swallowed Whole) drop from the badass pool
+
+                    level Fridge_P set GD_Population_Stalker.Balance.Unique.PawnBalance_Stalker_SwallowedWhole DefaultItemPoolIncludedLists[0] ItemPoolListDefinition'GD_Itempools.ListDefs.BadassEnemyGunsAndGear'
+
+                #</Sinkhole>
+
+                #<Wattle Gobbler Tributes (duplicate of UCP 4.1)>
+
+                    # Three tributes from the Wattle Gobler Headhunter Pack don't have
+                    # any drops defined, but the rest drop from the badass pool.  Fix that.
+                    # This was also fixed in the UCP 4.1 update, but we're going to leave
+                    # it in here as well.
+
+                    {mp:wattle_tribute_cynder}
+
+                    {mp:wattle_tribute_strip}
+
+                    {mp:wattle_tribute_flay}
+
+                #</Wattle Gobbler Tributes (duplicate of UCP 4.1)>
+
+                #<Witch Doctors (Big Game Hunt DLC)>
+
+                    # Adds a guaranteed Eridium stick, and chance at a good Relic
+
+                    {mp:witchdoctor_Fire}
+
+                    {mp:witchdoctor_Shock}
+
+                    {mp:witchdoctor_Slag}
+
+                    {mp:witchdoctor_Slow}
+
+                    {mp:witchdoctor_Vampire}
+
+                #</Witch Doctors (Big Game Hunt DLC)>
+
+                #<Witch Doctors (Son of Crawmerax Headhunter Pack>
+
+                    # Adding the same items as the story DLC ones - eridium and likely relic.
+
+                    {mp:crawmerax_witch_Slow}
+
+                    {mp:crawmerax_witch_Slag}
+
+                #</Witch Doctors (Son of Crawmerax Headhunter Pack>
 
             #</Regular Enemy Drop Improvements>
 
@@ -7661,7 +7663,7 @@ BL2
 
     #</Legendary and E-Tech Pool Adjustments>
 
-    #<Remove Level-Based Loot Restrictions (enhancement of UCP 4.0)>
+    #<Remove Level-Based Loot Restrictions (enhancement of UCP 4.1)>
 
         # In addition to the basic early-game weapon unlocks that UCP provides, this
         # allows Relics, Class Mods, all shield types, all grenade types, and probably
@@ -7674,7 +7676,7 @@ BL2
 
 {early_game_unlocks}
 
-    #</Remove Level-Based Loot Restrictions (enhancement of UCP 4.0)>
+    #</Remove Level-Based Loot Restrictions (enhancement of UCP 4.1)>
 
     #<Drop Quality (choose one)><MUT>
 
