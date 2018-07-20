@@ -1383,893 +1383,6 @@ BL2
             # treasure/epic chest pool tweaks happen in the "Drop Quality" section of the
             # mod, below.
 
-            #<Early Game Shotgun Chest>
-
-                # Improves the early game shotgun chest slightly - have it pull from the
-                # general shotgun pool, rather than Jakobs specifically.  This will have the
-                # effect of letting it use our default game weights.
-
-                set GD_Itempools.EarlyGame.Pool_Knuckledragger_Chest_Shotgun BalancedItems
-                (
-                    ( 
-                        ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_Shotguns', 
-                        InvBalanceDefinition=None,
-                        Probability=( 
-                            BaseValueConstant=1.000000, 
-                            BaseValueAttribute=None, 
-                            InitializationDefinition=None, 
-                            BaseValueScaleConstant=1.000000 
-                        ), 
-                        bDropOnDeath=True 
-                    )
-                )
-
-            #</Early Game Shotgun Chest>
-
-            #<Mordecai's Stash>
-
-                # Improves Mordecai's Stash, from The Good, The Bad, and the Mordecai.
-                # All sniper rifles: Purple, E-Tech, Gemstone, and Legendary.
-
-                level Interlude_P set GD_Z3_GoodBadMordecaiData.IO_GoodBadMordecai_GraveStash:BehaviorProviderDefinition_2.Behavior_SpawnItems_48 ItemPoolList[19].ItemPool ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_SniperRifles_05_VeryRare'
-
-                level Interlude_P set GD_Z3_GoodBadMordecaiData.IO_GoodBadMordecai_GraveStash:BehaviorProviderDefinition_2.Behavior_SpawnItems_48 ItemPoolList[20].ItemPool ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_SniperRifles_05_VeryRare_Alien'
-
-                level Interlude_P set GD_Z3_GoodBadMordecaiData.IO_GoodBadMordecai_GraveStash:BehaviorProviderDefinition_2.Behavior_SpawnItems_48 ItemPoolList[21].ItemPool ItemPoolDefinition'GD_Aster_ItemPools.WeaponPools.Pool_Weapons_Snipers_04_Gemstone'
-
-                level Interlude_P set GD_Z3_GoodBadMordecaiData.IO_GoodBadMordecai_GraveStash:BehaviorProviderDefinition_2.Behavior_SpawnItems_48 ItemPoolList[22].ItemPool ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_SniperRifles_06_Legendary'
-
-            #</Mordecai's Stash>
-
-            #<Roland's Chest>
-
-                # Improves Roland's chest in Sanctuary - various guaranteed Legendaries, only
-                # weapon pools.
-
-                level SanctuaryAir_P set GD_Balance_Treasure.ChestGrades.ObjectGrade_DahlEpic_BearerBadNews DefaultLoot
-                (
-                    (
-                        ConfigurationName="TreasureChest_2guns2Pistols",
-                        LootGameStageVarianceFormula=None,
-                        Weight=(
-                            BaseValueConstant=1.000000,
-                            BaseValueAttribute=None,
-                            InitializationDefinition=None,
-                            BaseValueScaleConstant=2.000000
-                        ),
-                        ItemAttachments=(
-                            (
-                                ItemPool=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_All_06_Legendary',
-                                PoolProbability=(
-                                    BaseValueConstant=1.000000,
-                                    BaseValueAttribute=None,
-                                    InitializationDefinition=None,
-                                    BaseValueScaleConstant=1.000000
-                                ),
-                                AttachmentPointName="Gun1"
-                            ),
-                            (
-                                ItemPool=ItemPoolDefinition'GD_Itempools.Treasure_ChestPools.Pool_EpicChest_Weapons_LongGuns',
-                                PoolProbability=(
-                                    BaseValueConstant=1.000000,
-                                    BaseValueAttribute=None,
-                                    InitializationDefinition=None,
-                                    BaseValueScaleConstant=1.000000
-                                ),
-                                AttachmentPointName="Gun2"
-                            ),
-                            (
-                                ItemPool=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_Pistols_06_Legendary',
-                                PoolProbability=(
-                                    BaseValueConstant=1.000000,
-                                    BaseValueAttribute=None,
-                                    InitializationDefinition=None,
-                                    BaseValueScaleConstant=1.000000
-                                ),
-                                AttachmentPointName="Pistol5"
-                            ),
-                            (
-                                ItemPool=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_Pistols_06_Legendary',
-                                PoolProbability=(
-                                    BaseValueConstant=1.000000,
-                                    BaseValueAttribute=None,
-                                    InitializationDefinition=None,
-                                    BaseValueScaleConstant=1.000000
-                                ),
-                                AttachmentPointName="Pistol6"
-                            ),
-                            (
-                                ItemPool=ItemPoolDefinition'GD_Itempools.Treasure_ChestPools.Pool_Chest_Ammo',
-                                PoolProbability=(
-                                    BaseValueConstant=1.000000,
-                                    BaseValueAttribute=None,
-                                    InitializationDefinition=None,
-                                    BaseValueScaleConstant=1.000000
-                                ),
-                                AttachmentPointName="Ammo1"
-                            ),
-                            (
-                                ItemPool=ItemPoolDefinition'GD_Itempools.Treasure_ChestPools.Pool_Chest_Ammo',
-                                PoolProbability=(
-                                    BaseValueConstant=1.000000,
-                                    BaseValueAttribute=None,
-                                    InitializationDefinition=None,
-                                    BaseValueScaleConstant=1.000000
-                                ),
-                                AttachmentPointName="Ammo2"
-                            ),
-                            (
-                                ItemPool=ItemPoolDefinition'GD_Itempools.Treasure_ChestPools.Pool_Chest_Ammo',
-                                PoolProbability=(
-                                    BaseValueConstant=1.000000,
-                                    BaseValueAttribute=None,
-                                    InitializationDefinition=None,
-                                    BaseValueScaleConstant=1.000000
-                                ),
-                                AttachmentPointName="Ammo3"
-                            ),
-                            (
-                                ItemPool=ItemPoolDefinition'GD_Itempools.Treasure_ChestPools.Pool_Chest_Ammo',
-                                PoolProbability=(
-                                    BaseValueConstant=1.000000,
-                                    BaseValueAttribute=None,
-                                    InitializationDefinition=None,
-                                    BaseValueScaleConstant=1.000000
-                                ),
-                                AttachmentPointName="Ammo4"
-                            ),
-                            (
-                                ItemPool=ItemPoolDefinition'GD_Itempools.Treasure_ChestPools.Pool_Chest_Ammo',
-                                PoolProbability=(
-                                    BaseValueConstant=1.000000,
-                                    BaseValueAttribute=None,
-                                    InitializationDefinition=None,
-                                    BaseValueScaleConstant=1.000000
-                                ),
-                                AttachmentPointName="Grenade1"
-                            ),
-                            (
-                                ItemPool=ItemPoolDefinition'GD_Itempools.Treasure_ChestPools.Pool_Chest_Ammo',
-                                PoolProbability=(
-                                    BaseValueConstant=1.000000,
-                                    BaseValueAttribute=None,
-                                    InitializationDefinition=None,
-                                    BaseValueScaleConstant=1.000000
-                                ),
-                                AttachmentPointName="Grenade2"
-                            ),
-                            (
-                                ItemPool=ItemPoolDefinition'GD_Itempools.Treasure_ChestPools.Pool_Chest_Ammo',
-                                PoolProbability=(
-                                    BaseValueConstant=1.000000,
-                                    BaseValueAttribute=None,
-                                    InitializationDefinition=None,
-                                    BaseValueScaleConstant=1.000000
-                                ),
-                                AttachmentPointName="Grenade3"
-                            ),
-                            (
-                                ItemPool=ItemPoolDefinition'GD_Itempools.Treasure_ChestPools.Pool_Chest_GrenadeAmmo',
-                                PoolProbability=(
-                                    BaseValueConstant=1.000000,
-                                    BaseValueAttribute=None,
-                                    InitializationDefinition=None,
-                                    BaseValueScaleConstant=1.000000
-                                ),
-                                AttachmentPointName="Grenade4"
-                            )
-                        )
-                    ),
-                    (
-                        ConfigurationName="TreasureChest_4Pistols1Long",
-                        LootGameStageVarianceFormula=None,
-                        Weight=(
-                            BaseValueConstant=1.000000,
-                            BaseValueAttribute=None,
-                            InitializationDefinition=None,
-                            BaseValueScaleConstant=1.000000
-                        ),
-                        ItemAttachments=(
-                            (
-                                ItemPool=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_Pistols_06_Legendary',
-                                PoolProbability=(
-                                    BaseValueConstant=1.000000,
-                                    BaseValueAttribute=None,
-                                    InitializationDefinition=None,
-                                    BaseValueScaleConstant=1.000000
-                                ),
-                                AttachmentPointName="Pistol1"
-                            ),
-                            (
-                                ItemPool=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_Pistols_06_Legendary',
-                                PoolProbability=(
-                                    BaseValueConstant=1.000000,
-                                    BaseValueAttribute=None,
-                                    InitializationDefinition=None,
-                                    BaseValueScaleConstant=1.000000
-                                ),
-                                AttachmentPointName="Pistol2"
-                            ),
-                            (
-                                ItemPool=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_Pistols_06_Legendary',
-                                PoolProbability=(
-                                    BaseValueConstant=1.000000,
-                                    BaseValueAttribute=None,
-                                    InitializationDefinition=None,
-                                    BaseValueScaleConstant=1.000000
-                                ),
-                                AttachmentPointName="Pistol3"
-                            ),
-                            (
-                                ItemPool=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_Pistols_06_Legendary',
-                                PoolProbability=(
-                                    BaseValueConstant=1.000000,
-                                    BaseValueAttribute=None,
-                                    InitializationDefinition=None,
-                                    BaseValueScaleConstant=1.000000
-                                ),
-                                AttachmentPointName="Pistol4"
-                            ),
-                            (
-                                ItemPool=ItemPoolDefinition'GD_Itempools.Treasure_ChestPools.Pool_EpicChest_Weapons_LongGuns',
-                                PoolProbability=(
-                                    BaseValueConstant=1.000000,
-                                    BaseValueAttribute=None,
-                                    InitializationDefinition=None,
-                                    BaseValueScaleConstant=1.000000
-                                ),
-                                AttachmentPointName="Gun3"
-                            ),
-                            (
-                                ItemPool=ItemPoolDefinition'GD_Itempools.Treasure_ChestPools.Pool_Chest_Ammo',
-                                PoolProbability=(
-                                    BaseValueConstant=1.000000,
-                                    BaseValueAttribute=None,
-                                    InitializationDefinition=None,
-                                    BaseValueScaleConstant=1.000000
-                                ),
-                                AttachmentPointName="Ammo1"
-                            ),
-                            (
-                                ItemPool=ItemPoolDefinition'GD_Itempools.Treasure_ChestPools.Pool_Chest_Ammo',
-                                PoolProbability=(
-                                    BaseValueConstant=1.000000,
-                                    BaseValueAttribute=None,
-                                    InitializationDefinition=None,
-                                    BaseValueScaleConstant=1.000000
-                                ),
-                                AttachmentPointName="Ammo2"
-                            ),
-                            (
-                                ItemPool=ItemPoolDefinition'GD_Itempools.Treasure_ChestPools.Pool_Chest_Ammo',
-                                PoolProbability=(
-                                    BaseValueConstant=1.000000,
-                                    BaseValueAttribute=None,
-                                    InitializationDefinition=None,
-                                    BaseValueScaleConstant=1.000000
-                                ),
-                                AttachmentPointName="Ammo3"
-                            ),
-                            (
-                                ItemPool=ItemPoolDefinition'GD_Itempools.Treasure_ChestPools.Pool_Chest_Ammo',
-                                PoolProbability=(
-                                    BaseValueConstant=1.000000,
-                                    BaseValueAttribute=None,
-                                    InitializationDefinition=None,
-                                    BaseValueScaleConstant=1.000000
-                                ),
-                                AttachmentPointName="Ammo4"
-                            ),
-                            (
-                                ItemPool=ItemPoolDefinition'GD_Itempools.Treasure_ChestPools.Pool_Chest_Ammo',
-                                PoolProbability=(
-                                    BaseValueConstant=1.000000,
-                                    BaseValueAttribute=None,
-                                    InitializationDefinition=None,
-                                    BaseValueScaleConstant=1.000000
-                                ),
-                                AttachmentPointName="Grenade1"
-                            ),
-                            (
-                                ItemPool=ItemPoolDefinition'GD_Itempools.Treasure_ChestPools.Pool_Chest_Ammo',
-                                PoolProbability=(
-                                    BaseValueConstant=1.000000,
-                                    BaseValueAttribute=None,
-                                    InitializationDefinition=None,
-                                    BaseValueScaleConstant=1.000000
-                                ),
-                                AttachmentPointName="Grenade2"
-                            ),
-                            (
-                                ItemPool=ItemPoolDefinition'GD_Itempools.Treasure_ChestPools.Pool_Chest_Ammo',
-                                PoolProbability=(
-                                    BaseValueConstant=1.000000,
-                                    BaseValueAttribute=None,
-                                    InitializationDefinition=None,
-                                    BaseValueScaleConstant=1.000000
-                                ),
-                                AttachmentPointName="Grenade3"
-                            ),
-                            (
-                                ItemPool=ItemPoolDefinition'GD_Itempools.Treasure_ChestPools.Pool_Chest_Ammo',
-                                PoolProbability=(
-                                    BaseValueConstant=1.000000,
-                                    BaseValueAttribute=None,
-                                    InitializationDefinition=None,
-                                    BaseValueScaleConstant=1.000000
-                                ),
-                                AttachmentPointName="Grenade4"
-                            )
-                        )
-                    ),
-                    (
-                        ConfigurationName="TreasureChest_Launcher",
-                        LootGameStageVarianceFormula=None,
-                        Weight=(
-                            BaseValueConstant=1.000000,
-                            BaseValueAttribute=None,
-                            InitializationDefinition=None,
-                            BaseValueScaleConstant=1.000000
-                        ),
-                        ItemAttachments=(
-                            (
-                                ItemPool=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_Launchers_06_Legendary',
-                                PoolProbability=(
-                                    BaseValueConstant=1.000000,
-                                    BaseValueAttribute=None,
-                                    InitializationDefinition=None,
-                                    BaseValueScaleConstant=1.000000
-                                ),
-                                AttachmentPointName="Launcher1"
-                            ),
-                            (
-                                ItemPool=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_Launchers_06_Legendary',
-                                PoolProbability=(
-                                    BaseValueConstant=1.000000,
-                                    BaseValueAttribute=None,
-                                    InitializationDefinition=None,
-                                    BaseValueScaleConstant=1.000000
-                                ),
-                                AttachmentPointName="Launcher2"
-                            ),
-                            (
-                                ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Ammo_RocketLauncher',
-                                PoolProbability=(
-                                    BaseValueConstant=1.000000,
-                                    BaseValueAttribute=None,
-                                    InitializationDefinition=None,
-                                    BaseValueScaleConstant=1.000000
-                                ),
-                                AttachmentPointName="Ammo1"
-                            ),
-                            (
-                                ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Ammo_Grenades',
-                                PoolProbability=(
-                                    BaseValueConstant=1.000000,
-                                    BaseValueAttribute=None,
-                                    InitializationDefinition=None,
-                                    BaseValueScaleConstant=1.000000
-                                ),
-                                AttachmentPointName="Ammo2"
-                            ),
-                            (
-                                ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Ammo_Grenades',
-                                PoolProbability=(
-                                    BaseValueConstant=1.000000,
-                                    BaseValueAttribute=None,
-                                    InitializationDefinition=None,
-                                    BaseValueScaleConstant=1.000000
-                                ),
-                                AttachmentPointName="Ammo3"
-                            ),
-                            (
-                                ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Ammo_RocketLauncher',
-                                PoolProbability=(
-                                    BaseValueConstant=1.000000,
-                                    BaseValueAttribute=None,
-                                    InitializationDefinition=None,
-                                    BaseValueScaleConstant=1.000000
-                                ),
-                                AttachmentPointName="Ammo4"
-                            ),
-                            (
-                                ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Ammo_RocketLauncher',
-                                PoolProbability=(
-                                    BaseValueConstant=1.000000,
-                                    BaseValueAttribute=None,
-                                    InitializationDefinition=None,
-                                    BaseValueScaleConstant=1.000000
-                                ),
-                                AttachmentPointName="Grenade1"
-                            ),
-                            (
-                                ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Ammo_Grenades',
-                                PoolProbability=(
-                                    BaseValueConstant=1.000000,
-                                    BaseValueAttribute=None,
-                                    InitializationDefinition=None,
-                                    BaseValueScaleConstant=1.000000
-                                ),
-                                AttachmentPointName="Grenade2"
-                            ),
-                            (
-                                ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Ammo_Grenades',
-                                PoolProbability=(
-                                    BaseValueConstant=1.000000,
-                                    BaseValueAttribute=None,
-                                    InitializationDefinition=None,
-                                    BaseValueScaleConstant=1.000000
-                                ),
-                                AttachmentPointName="Grenade3"
-                            ),
-                            (
-                                ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Ammo_RocketLauncher',
-                                PoolProbability=(
-                                    BaseValueConstant=1.000000,
-                                    BaseValueAttribute=None,
-                                    InitializationDefinition=None,
-                                    BaseValueScaleConstant=1.000000
-                                ),
-                                AttachmentPointName="Grenade4"
-                            )
-                        )
-                    )
-                )
-
-
-            #</Roland's Chest>
-
-            #<Captain Scarlett DLC Endgame Chests>
-
-                # Convert the Captain Scarlett endgame chests to pull from the
-                # "epic" chest drop pool.
-
-                set GD_Orchid_ItemPools.EndGame.Pool_PirateChest_EndGame_ClassMods BalancedItems
-                (
-                    (
-                        ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.Treasure_ChestPools.Pool_EpicChest_ClassMods',
-                        InvBalanceDefinition=None,
-                        Probability=(
-                            BaseValueConstant=1.000000,
-                            BaseValueAttribute=None,
-                            InitializationDefinition=None,
-                            BaseValueScaleConstant=1.000000
-                        ),
-                        bDropOnDeath=True
-                    )
-                )
-
-                set GD_Orchid_ItemPools.EndGame.Pool_PirateChest_EndGame_GrenadeMods BalancedItems
-                (
-                    (
-                        ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.Treasure_ChestPools.Pool_EpicChest_GrenadeMods',
-                        InvBalanceDefinition=None,
-                        Probability=(
-                            BaseValueConstant=1.000000,
-                            BaseValueAttribute=None,
-                            InitializationDefinition=None,
-                            BaseValueScaleConstant=1.000000
-                        ),
-                        bDropOnDeath=True
-                    )
-                )
-
-                set GD_Orchid_ItemPools.EndGame.Pool_PirateChest_EndGame_Launchers BalancedItems
-                (
-                    (
-                        ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.Treasure_ChestPools.Pool_EpicChest_Weapons_Launchers',
-                        InvBalanceDefinition=None,
-                        Probability=(
-                            BaseValueConstant=1.000000,
-                            BaseValueAttribute=None,
-                            InitializationDefinition=None,
-                            BaseValueScaleConstant=1.000000
-                        ),
-                        bDropOnDeath=True
-                    )
-                )
-
-                set GD_Orchid_ItemPools.EndGame.Pool_PirateChest_EndGame_LongGuns BalancedItems
-                (
-                    (
-                        ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.Treasure_ChestPools.Pool_EpicChest_Weapons_LongGuns',
-                        InvBalanceDefinition=None,
-                        Probability=(
-                            BaseValueConstant=1.000000,
-                            BaseValueAttribute=None,
-                            InitializationDefinition=None,
-                            BaseValueScaleConstant=1.000000
-                        ),
-                        bDropOnDeath=True
-                    )
-                )
-
-                set GD_Orchid_ItemPools.EndGame.Pool_PirateChest_EndGame_Pistols BalancedItems
-                (
-                    (
-                        ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.Treasure_ChestPools.Pool_EpicChest_Weapons_Pistols',
-                        InvBalanceDefinition=None,
-                        Probability=(
-                            BaseValueConstant=1.000000,
-                            BaseValueAttribute=None,
-                            InitializationDefinition=None,
-                            BaseValueScaleConstant=1.000000
-                        ),
-                        bDropOnDeath=True
-                    )
-                )
-
-                set GD_Orchid_ItemPools.EndGame.Pool_PirateChest_EndGame_Shields BalancedItems
-                (
-                    (
-                        ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.Treasure_ChestPools.Pool_EpicChest_Shields',
-                        InvBalanceDefinition=None,
-                        Probability=(
-                            BaseValueConstant=1.000000,
-                            BaseValueAttribute=None,
-                            InitializationDefinition=None,
-                            BaseValueScaleConstant=1.000000
-                        ),
-                        bDropOnDeath=True
-                    )
-                )
-
-            #</Captain Scarlett DLC Endgame Chests>
-
-            #<Hammerlock DLC Endgame Chests>
-
-                # Convert the Hammerlock DLC's endgame chests to pull from the
-                # "epic" chest drop pool.
-
-                set GD_Sage_ItemPools.EndGame.Pool_HyperionChest_EndGame_ClassMods BalancedItems
-                (
-                    (
-                        ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.Treasure_ChestPools.Pool_EpicChest_ClassMods',
-                        InvBalanceDefinition=None,
-                        Probability=(
-                            BaseValueConstant=1.000000,
-                            BaseValueAttribute=None,
-                            InitializationDefinition=None,
-                            BaseValueScaleConstant=1.000000
-                        ),
-                        bDropOnDeath=True
-                    )
-                )
-
-                set GD_Sage_ItemPools.EndGame.Pool_HyperionChest_EndGame_GrenadeMods BalancedItems
-                (
-                    (
-                        ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.Treasure_ChestPools.Pool_EpicChest_GrenadeMods',
-                        InvBalanceDefinition=None,
-                        Probability=(
-                            BaseValueConstant=1.000000,
-                            BaseValueAttribute=None,
-                            InitializationDefinition=None,
-                            BaseValueScaleConstant=1.000000
-                        ),
-                        bDropOnDeath=True
-                    )
-                )
-
-                set GD_Sage_ItemPools.EndGame.Pool_HyperionChest_EndGame_Launchers BalancedItems
-                (
-                    (
-                        ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.Treasure_ChestPools.Pool_EpicChest_Weapons_Launchers',
-                        InvBalanceDefinition=None,
-                        Probability=(
-                            BaseValueConstant=1.000000,
-                            BaseValueAttribute=None,
-                            InitializationDefinition=None,
-                            BaseValueScaleConstant=1.000000
-                        ),
-                        bDropOnDeath=True
-                    )
-                )
-
-                set GD_Sage_ItemPools.EndGame.Pool_HyperionChest_EndGame_LongGuns BalancedItems
-                (
-                    (
-                        ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.Treasure_ChestPools.Pool_EpicChest_Weapons_LongGuns',
-                        InvBalanceDefinition=None,
-                        Probability=(
-                            BaseValueConstant=1.000000,
-                            BaseValueAttribute=None,
-                            InitializationDefinition=None,
-                            BaseValueScaleConstant=1.000000
-                        ),
-                        bDropOnDeath=True
-                    )
-                )
-
-                set GD_Sage_ItemPools.EndGame.Pool_HyperionChest_EndGame_Pistols BalancedItems
-                (
-                    (
-                        ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.Treasure_ChestPools.Pool_EpicChest_Weapons_Pistols',
-                        InvBalanceDefinition=None,
-                        Probability=(
-                            BaseValueConstant=1.000000,
-                            BaseValueAttribute=None,
-                            InitializationDefinition=None,
-                            BaseValueScaleConstant=1.000000
-                        ),
-                        bDropOnDeath=True
-                    )
-                )
-
-                set GD_Sage_ItemPools.EndGame.Pool_HyperionChest_EndGame_Shields BalancedItems
-                (
-                    (
-                        ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.Treasure_ChestPools.Pool_EpicChest_Shields',
-                        InvBalanceDefinition=None,
-                        Probability=(
-                            BaseValueConstant=1.000000,
-                            BaseValueAttribute=None,
-                            InitializationDefinition=None,
-                            BaseValueScaleConstant=1.000000
-                        ),
-                        bDropOnDeath=True
-                    )
-                )
-
-            #</Hammerlock DLC Endgame Chests>
-
-            #<Tiny Tina DLC Chest Changes>
-
-                #<Tweaked Dice Chests>
-
-                    # Adds a chance to drop legendary on a very good roll, and normalizes the
-                    # odds when it chooses between purples and e-tech.  Also incidentally fixes
-                    # an error in the "Longs" pool which wasn't properly pulling in E-Tech ARs.
-                    # The actual probabilities for what pools get dropped for which rolls remains
-                    # unchanged (and not just because that data is daunting to parse)
-
-                    set GD_Aster_ItemPools.DiceChestPools.Pool_DiceChest_4_VeryHighRoll_Launchers BalancedItems
-                    (
-                        (
-                            ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_Launchers_05_VeryRare',
-                            InvBalanceDefinition=None,
-                            Probability=(
-                                BaseValueConstant={base:dice_vhigh_veryrare},
-                                BaseValueAttribute=None,
-                                InitializationDefinition=None,
-                                BaseValueScaleConstant=1
-                            ),
-                            bDropOnDeath=True
-                        ),
-                        (
-                            ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_Launchers_05_VeryRare_Alien',
-                            InvBalanceDefinition=None,
-                            Probability=(
-                                BaseValueConstant={base:dice_vhigh_alien},
-                                BaseValueAttribute=None,
-                                InitializationDefinition=None,
-                                BaseValueScaleConstant=1
-                            ),
-                            bDropOnDeath=True
-                        ),
-                        (
-                            ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_Launchers_06_Legendary',
-                            InvBalanceDefinition=None,
-                            Probability=(
-                                BaseValueConstant={base:dice_vhigh_legendary},
-                                BaseValueAttribute=None,
-                                InitializationDefinition=None,
-                                BaseValueScaleConstant=1
-                            ),
-                            bDropOnDeath=True
-                        )
-                    )
-
-                    set GD_Aster_ItemPools.DiceChestPools.Pool_DiceChest_4_VeryHighRoll_Longs BalancedItems
-                    (
-                        (
-                            ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_AssaultRifles_05_VeryRare',
-                            InvBalanceDefinition=None,
-                            Probability=(
-                                BaseValueConstant={base:dice_vhigh_veryrare},
-                                BaseValueAttribute=None,
-                                InitializationDefinition=None,
-                                BaseValueScaleConstant=1
-                            ),
-                            bDropOnDeath=True
-                        ),
-                        (
-                            ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_AssaultRifles_05_VeryRare_Alien',
-                            InvBalanceDefinition=None,
-                            Probability=(
-                                BaseValueConstant={base:dice_vhigh_alien},
-                                BaseValueAttribute=None,
-                                InitializationDefinition=None,
-                                BaseValueScaleConstant=1
-                            ),
-                            bDropOnDeath=True
-                        ),
-                        (
-                            ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_AssaultRifles_06_Legendary',
-                            InvBalanceDefinition=None,
-                            Probability=(
-                                BaseValueConstant={base:dice_vhigh_legendary},
-                                BaseValueAttribute=None,
-                                InitializationDefinition=None,
-                                BaseValueScaleConstant=1
-                            ),
-                            bDropOnDeath=True
-                        ),
-                        (
-                            ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_Shotguns_05_VeryRare',
-                            InvBalanceDefinition=None,
-                            Probability=(
-                                BaseValueConstant={base:dice_vhigh_veryrare},
-                                BaseValueAttribute=None,
-                                InitializationDefinition=None,
-                                BaseValueScaleConstant=1
-                            ),
-                            bDropOnDeath=True
-                        ),
-                        (
-                            ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_Shotguns_05_VeryRare_Alien',
-                            InvBalanceDefinition=None,
-                            Probability=(
-                                BaseValueConstant={base:dice_vhigh_alien},
-                                BaseValueAttribute=None,
-                                InitializationDefinition=None,
-                                BaseValueScaleConstant=1
-                            ),
-                            bDropOnDeath=True
-                        ),
-                        (
-                            ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_Shotguns_06_Legendary',
-                            InvBalanceDefinition=None,
-                            Probability=(
-                                BaseValueConstant={base:dice_vhigh_legendary},
-                                BaseValueAttribute=None,
-                                InitializationDefinition=None,
-                                BaseValueScaleConstant=1
-                            ),
-                            bDropOnDeath=True
-                        ),
-                        (
-                            ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_SniperRifles_05_VeryRare',
-                            InvBalanceDefinition=None,
-                            Probability=(
-                                BaseValueConstant={base:dice_vhigh_veryrare},
-                                BaseValueAttribute=None,
-                                InitializationDefinition=None,
-                                BaseValueScaleConstant=1
-                            ),
-                            bDropOnDeath=True
-                        ),
-                        (
-                            ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_SniperRifles_05_VeryRare_Alien',
-                            InvBalanceDefinition=None,
-                            Probability=(
-                                BaseValueConstant={base:dice_vhigh_alien},
-                                BaseValueAttribute=None,
-                                InitializationDefinition=None,
-                                BaseValueScaleConstant=1
-                            ),
-                            bDropOnDeath=True
-                        ),
-                        (
-                            ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_SniperRifles_06_Legendary',
-                            InvBalanceDefinition=None,
-                            Probability=(
-                                BaseValueConstant={base:dice_vhigh_legendary},
-                                BaseValueAttribute=None,
-                                InitializationDefinition=None,
-                                BaseValueScaleConstant=1
-                            ),
-                            bDropOnDeath=True
-                        ),
-                        (
-                            ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_SMG_05_VeryRare',
-                            InvBalanceDefinition=None,
-                            Probability=(
-                                BaseValueConstant={base:dice_vhigh_veryrare},
-                                BaseValueAttribute=None,
-                                InitializationDefinition=None,
-                                BaseValueScaleConstant=1
-                            ),
-                            bDropOnDeath=True
-                        ),
-                        (
-                            ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_SMG_05_VeryRare_Alien',
-                            InvBalanceDefinition=None,
-                            Probability=(
-                                BaseValueConstant={base:dice_vhigh_alien},
-                                BaseValueAttribute=None,
-                                InitializationDefinition=None,
-                                BaseValueScaleConstant=1
-                            ),
-                            bDropOnDeath=True
-                        ),
-                        (
-                            ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_SMG_06_Legendary',
-                            InvBalanceDefinition=None,
-                            Probability=(
-                                BaseValueConstant={base:dice_vhigh_legendary},
-                                BaseValueAttribute=None,
-                                InitializationDefinition=None,
-                                BaseValueScaleConstant=1
-                            ),
-                            bDropOnDeath=True
-                        )
-                    )
-
-                    set GD_Aster_ItemPools.DiceChestPools.Pool_DiceChest_4_VeryHighRoll_Pistols BalancedItems
-                    (
-                        (
-                            ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_Pistols_05_VeryRare',
-                            InvBalanceDefinition=None,
-                            Probability=(
-                                BaseValueConstant={base:dice_vhigh_veryrare},
-                                BaseValueAttribute=None,
-                                InitializationDefinition=None,
-                                BaseValueScaleConstant=1
-                            ),
-                            bDropOnDeath=True
-                        ),
-                        (
-                            ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_Pistols_05_VeryRare_Alien',
-                            InvBalanceDefinition=None,
-                            Probability=(
-                                BaseValueConstant={base:dice_vhigh_alien},
-                                BaseValueAttribute=None,
-                                InitializationDefinition=None,
-                                BaseValueScaleConstant=1
-                            ),
-                            bDropOnDeath=True
-                        ),
-                        (
-                            ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_Pistols_06_Legendary',
-                            InvBalanceDefinition=None,
-                            Probability=(
-                                BaseValueConstant={base:dice_vhigh_legendary},
-                                BaseValueAttribute=None,
-                                InitializationDefinition=None,
-                                BaseValueScaleConstant=1
-                            ),
-                            bDropOnDeath=True
-                        )
-                    )
-
-                #</Tweaked Dice Chests>
-
-                #<Improved Non-Mimic Chests>
-
-                    # The chests which could be mimics but aren't already have good loot
-                    # when combined with the rest of this mod, but this will improve them
-                    # a bit more.  Half the gear in the chest (rounded down) will take from
-                    # the "Epic" chest pool, rather than the normal chest pool.
-
-                    level None set GD_Aster_Lootables.Balance.ObjectGrade_MimicChest_NoMimic DefaultLoot[0].ItemAttachments[1].ItemPool ItemPoolDefinition'GD_Itempools.Treasure_ChestPools.Pool_EpicChest_Weapons_LongGuns'
-
-                    level None set GD_Aster_Lootables.Balance.ObjectGrade_MimicChest_NoMimic DefaultLoot[0].ItemAttachments[3].ItemPool ItemPoolDefinition'GD_Itempools.Treasure_ChestPools.Pool_EpicChest_Weapons_Pistols'
-
-                    level None set GD_Aster_Lootables.Balance.ObjectGrade_MimicChest_NoMimic DefaultLoot[1].ItemAttachments[2].ItemPool ItemPoolDefinition'GD_Itempools.Treasure_ChestPools.Pool_EpicChest_Weapons_Pistols'
-
-                    level None set GD_Aster_Lootables.Balance.ObjectGrade_MimicChest_NoMimic DefaultLoot[1].ItemAttachments[3].ItemPool ItemPoolDefinition'GD_Itempools.Treasure_ChestPools.Pool_EpicChest_Weapons_Pistols'
-
-                    level None set GD_Aster_Lootables.Balance.ObjectGrade_MimicChest_NoMimic DefaultLoot[3].ItemAttachments[2].ItemPool ItemPoolDefinition'GD_Itempools.Treasure_ChestPools.Pool_EpicChest_Items'
-
-                    level None set GD_Aster_Lootables.Balance.ObjectGrade_MimicChest_NoMimic DefaultLoot[3].ItemAttachments[3].ItemPool ItemPoolDefinition'GD_Itempools.Treasure_ChestPools.Pool_EpicChest_Items'
-
-                    level None set GD_Aster_Lootables.Balance.ObjectGrade_MimicChest_NoMimic DefaultLoot[4].ItemAttachments[2].ItemPool ItemPoolDefinition'GD_Itempools.Treasure_ChestPools.Pool_EpicChest_Shields'
-
-                    level None set GD_Aster_Lootables.Balance.ObjectGrade_MimicChest_NoMimic DefaultLoot[4].ItemAttachments[3].ItemPool ItemPoolDefinition'GD_Itempools.Treasure_ChestPools.Pool_EpicChest_Shields'
-
-                    level None set GD_Aster_Lootables.Balance.ObjectGrade_MimicChest_NoMimic DefaultLoot[5].ItemAttachments[2].ItemPool ItemPoolDefinition'GD_Itempools.Treasure_ChestPools.Pool_EpicChest_GrenadeMods'
-
-                    level None set GD_Aster_Lootables.Balance.ObjectGrade_MimicChest_NoMimic DefaultLoot[5].ItemAttachments[3].ItemPool ItemPoolDefinition'GD_Itempools.Treasure_ChestPools.Pool_EpicChest_GrenadeMods'
-
-                    level None set GD_Aster_Lootables.Balance.ObjectGrade_MimicChest_NoMimic DefaultLoot[7].ItemAttachments[2].ItemPool ItemPoolDefinition'GD_Itempools.Treasure_ChestPools.Pool_EpicChest_Weapons_LongGuns'
-
-                    level None set GD_Aster_Lootables.Balance.ObjectGrade_MimicChest_NoMimic DefaultLoot[8].ItemAttachments[2].ItemPool ItemPoolDefinition'GD_Itempools.Treasure_ChestPools.Pool_EpicChest_Artifacts'
-
-                #</Improved Non-Mimic Chests>
-
-            #</Tiny Tina DLC Chest Changes>
-
             #<Better Lockers>
 
                 # Makes locker drops a bit different - will always drop Blue-rarity loot.
@@ -2688,6 +1801,126 @@ BL2
 
             #</Better Safes>
 
+            #<Captain Scarlett DLC Endgame Chests>
+
+                # Convert the Captain Scarlett endgame chests to pull from the
+                # "epic" chest drop pool.
+
+                set GD_Orchid_ItemPools.EndGame.Pool_PirateChest_EndGame_ClassMods BalancedItems
+                (
+                    (
+                        ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.Treasure_ChestPools.Pool_EpicChest_ClassMods',
+                        InvBalanceDefinition=None,
+                        Probability=(
+                            BaseValueConstant=1.000000,
+                            BaseValueAttribute=None,
+                            InitializationDefinition=None,
+                            BaseValueScaleConstant=1.000000
+                        ),
+                        bDropOnDeath=True
+                    )
+                )
+
+                set GD_Orchid_ItemPools.EndGame.Pool_PirateChest_EndGame_GrenadeMods BalancedItems
+                (
+                    (
+                        ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.Treasure_ChestPools.Pool_EpicChest_GrenadeMods',
+                        InvBalanceDefinition=None,
+                        Probability=(
+                            BaseValueConstant=1.000000,
+                            BaseValueAttribute=None,
+                            InitializationDefinition=None,
+                            BaseValueScaleConstant=1.000000
+                        ),
+                        bDropOnDeath=True
+                    )
+                )
+
+                set GD_Orchid_ItemPools.EndGame.Pool_PirateChest_EndGame_Launchers BalancedItems
+                (
+                    (
+                        ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.Treasure_ChestPools.Pool_EpicChest_Weapons_Launchers',
+                        InvBalanceDefinition=None,
+                        Probability=(
+                            BaseValueConstant=1.000000,
+                            BaseValueAttribute=None,
+                            InitializationDefinition=None,
+                            BaseValueScaleConstant=1.000000
+                        ),
+                        bDropOnDeath=True
+                    )
+                )
+
+                set GD_Orchid_ItemPools.EndGame.Pool_PirateChest_EndGame_LongGuns BalancedItems
+                (
+                    (
+                        ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.Treasure_ChestPools.Pool_EpicChest_Weapons_LongGuns',
+                        InvBalanceDefinition=None,
+                        Probability=(
+                            BaseValueConstant=1.000000,
+                            BaseValueAttribute=None,
+                            InitializationDefinition=None,
+                            BaseValueScaleConstant=1.000000
+                        ),
+                        bDropOnDeath=True
+                    )
+                )
+
+                set GD_Orchid_ItemPools.EndGame.Pool_PirateChest_EndGame_Pistols BalancedItems
+                (
+                    (
+                        ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.Treasure_ChestPools.Pool_EpicChest_Weapons_Pistols',
+                        InvBalanceDefinition=None,
+                        Probability=(
+                            BaseValueConstant=1.000000,
+                            BaseValueAttribute=None,
+                            InitializationDefinition=None,
+                            BaseValueScaleConstant=1.000000
+                        ),
+                        bDropOnDeath=True
+                    )
+                )
+
+                set GD_Orchid_ItemPools.EndGame.Pool_PirateChest_EndGame_Shields BalancedItems
+                (
+                    (
+                        ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.Treasure_ChestPools.Pool_EpicChest_Shields',
+                        InvBalanceDefinition=None,
+                        Probability=(
+                            BaseValueConstant=1.000000,
+                            BaseValueAttribute=None,
+                            InitializationDefinition=None,
+                            BaseValueScaleConstant=1.000000
+                        ),
+                        bDropOnDeath=True
+                    )
+                )
+
+            #</Captain Scarlett DLC Endgame Chests>
+
+            #<Early Game Shotgun Chest>
+
+                # Improves the early game shotgun chest slightly - have it pull from the
+                # general shotgun pool, rather than Jakobs specifically.  This will have the
+                # effect of letting it use our default game weights.
+
+                set GD_Itempools.EarlyGame.Pool_Knuckledragger_Chest_Shotgun BalancedItems
+                (
+                    ( 
+                        ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_Shotguns', 
+                        InvBalanceDefinition=None,
+                        Probability=( 
+                            BaseValueConstant=1.000000, 
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=None, 
+                            BaseValueScaleConstant=1.000000 
+                        ), 
+                        bDropOnDeath=True 
+                    )
+                )
+
+            #</Early Game Shotgun Chest>
+
             #<Fix Broken Shield Pools (duplicate of UCP 4.1)>
 
                 # Various chests in the game have a possible "Shields" item pool which will
@@ -2711,6 +1944,118 @@ BL2
 
             #</Fix Broken Shield Pools (duplicate of UCP 4.1)>
 
+            #<Hammerlock DLC Endgame Chests>
+
+                # Convert the Hammerlock DLC's endgame chests to pull from the
+                # "epic" chest drop pool.
+
+                set GD_Sage_ItemPools.EndGame.Pool_HyperionChest_EndGame_ClassMods BalancedItems
+                (
+                    (
+                        ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.Treasure_ChestPools.Pool_EpicChest_ClassMods',
+                        InvBalanceDefinition=None,
+                        Probability=(
+                            BaseValueConstant=1.000000,
+                            BaseValueAttribute=None,
+                            InitializationDefinition=None,
+                            BaseValueScaleConstant=1.000000
+                        ),
+                        bDropOnDeath=True
+                    )
+                )
+
+                set GD_Sage_ItemPools.EndGame.Pool_HyperionChest_EndGame_GrenadeMods BalancedItems
+                (
+                    (
+                        ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.Treasure_ChestPools.Pool_EpicChest_GrenadeMods',
+                        InvBalanceDefinition=None,
+                        Probability=(
+                            BaseValueConstant=1.000000,
+                            BaseValueAttribute=None,
+                            InitializationDefinition=None,
+                            BaseValueScaleConstant=1.000000
+                        ),
+                        bDropOnDeath=True
+                    )
+                )
+
+                set GD_Sage_ItemPools.EndGame.Pool_HyperionChest_EndGame_Launchers BalancedItems
+                (
+                    (
+                        ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.Treasure_ChestPools.Pool_EpicChest_Weapons_Launchers',
+                        InvBalanceDefinition=None,
+                        Probability=(
+                            BaseValueConstant=1.000000,
+                            BaseValueAttribute=None,
+                            InitializationDefinition=None,
+                            BaseValueScaleConstant=1.000000
+                        ),
+                        bDropOnDeath=True
+                    )
+                )
+
+                set GD_Sage_ItemPools.EndGame.Pool_HyperionChest_EndGame_LongGuns BalancedItems
+                (
+                    (
+                        ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.Treasure_ChestPools.Pool_EpicChest_Weapons_LongGuns',
+                        InvBalanceDefinition=None,
+                        Probability=(
+                            BaseValueConstant=1.000000,
+                            BaseValueAttribute=None,
+                            InitializationDefinition=None,
+                            BaseValueScaleConstant=1.000000
+                        ),
+                        bDropOnDeath=True
+                    )
+                )
+
+                set GD_Sage_ItemPools.EndGame.Pool_HyperionChest_EndGame_Pistols BalancedItems
+                (
+                    (
+                        ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.Treasure_ChestPools.Pool_EpicChest_Weapons_Pistols',
+                        InvBalanceDefinition=None,
+                        Probability=(
+                            BaseValueConstant=1.000000,
+                            BaseValueAttribute=None,
+                            InitializationDefinition=None,
+                            BaseValueScaleConstant=1.000000
+                        ),
+                        bDropOnDeath=True
+                    )
+                )
+
+                set GD_Sage_ItemPools.EndGame.Pool_HyperionChest_EndGame_Shields BalancedItems
+                (
+                    (
+                        ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.Treasure_ChestPools.Pool_EpicChest_Shields',
+                        InvBalanceDefinition=None,
+                        Probability=(
+                            BaseValueConstant=1.000000,
+                            BaseValueAttribute=None,
+                            InitializationDefinition=None,
+                            BaseValueScaleConstant=1.000000
+                        ),
+                        bDropOnDeath=True
+                    )
+                )
+
+            #</Hammerlock DLC Endgame Chests>
+
+            #<Mordecai's Stash>
+
+                # Improves Mordecai's Stash, from The Good, The Bad, and the Mordecai.
+                # All sniper rifles: Purple, E-Tech, Gemstone, and Legendary.
+
+                level Interlude_P set GD_Z3_GoodBadMordecaiData.IO_GoodBadMordecai_GraveStash:BehaviorProviderDefinition_2.Behavior_SpawnItems_48 ItemPoolList[19].ItemPool ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_SniperRifles_05_VeryRare'
+
+                level Interlude_P set GD_Z3_GoodBadMordecaiData.IO_GoodBadMordecai_GraveStash:BehaviorProviderDefinition_2.Behavior_SpawnItems_48 ItemPoolList[20].ItemPool ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_SniperRifles_05_VeryRare_Alien'
+
+                level Interlude_P set GD_Z3_GoodBadMordecaiData.IO_GoodBadMordecai_GraveStash:BehaviorProviderDefinition_2.Behavior_SpawnItems_48 ItemPoolList[21].ItemPool ItemPoolDefinition'GD_Aster_ItemPools.WeaponPools.Pool_Weapons_Snipers_04_Gemstone'
+
+                level Interlude_P set GD_Z3_GoodBadMordecaiData.IO_GoodBadMordecai_GraveStash:BehaviorProviderDefinition_2.Behavior_SpawnItems_48 ItemPoolList[22].ItemPool ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_SniperRifles_06_Legendary'
+
+            #</Mordecai's Stash>
+
             #<Nerfed Containers>
 
                 # Prior to v1.2.0 of this mod, various smaller containers (cardboard boxes,
@@ -2720,6 +2065,14 @@ BL2
                 # weights, and I've found I prefer these containers to continue having junk
                 # for loot, actually.  So, these statements will nerf those containers down
                 # to only ever getting common gear.
+
+                #<Bandit Coolers>
+
+                    {mp:bandit_cooler_nerf_0}
+
+                    {mp:bandit_cooler_nerf_1}
+
+                #</Bandit Coolers>
 
                 #<Cardboard Boxes>
 
@@ -2790,15 +2143,662 @@ BL2
 
                 #</Dumpsters>
 
-                #<Bandit Coolers>
-
-                    {mp:bandit_cooler_nerf_0}
-
-                    {mp:bandit_cooler_nerf_1}
-
-                #</Bandit Coolers>
-
             #</Nerfed Containers>
+
+            #<Roland's Chest>
+
+                # Improves Roland's chest in Sanctuary - various guaranteed Legendaries, only
+                # weapon pools.
+
+                level SanctuaryAir_P set GD_Balance_Treasure.ChestGrades.ObjectGrade_DahlEpic_BearerBadNews DefaultLoot
+                (
+                    (
+                        ConfigurationName="TreasureChest_2guns2Pistols",
+                        LootGameStageVarianceFormula=None,
+                        Weight=(
+                            BaseValueConstant=1.000000,
+                            BaseValueAttribute=None,
+                            InitializationDefinition=None,
+                            BaseValueScaleConstant=2.000000
+                        ),
+                        ItemAttachments=(
+                            (
+                                ItemPool=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_All_06_Legendary',
+                                PoolProbability=(
+                                    BaseValueConstant=1.000000,
+                                    BaseValueAttribute=None,
+                                    InitializationDefinition=None,
+                                    BaseValueScaleConstant=1.000000
+                                ),
+                                AttachmentPointName="Gun1"
+                            ),
+                            (
+                                ItemPool=ItemPoolDefinition'GD_Itempools.Treasure_ChestPools.Pool_EpicChest_Weapons_LongGuns',
+                                PoolProbability=(
+                                    BaseValueConstant=1.000000,
+                                    BaseValueAttribute=None,
+                                    InitializationDefinition=None,
+                                    BaseValueScaleConstant=1.000000
+                                ),
+                                AttachmentPointName="Gun2"
+                            ),
+                            (
+                                ItemPool=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_Pistols_06_Legendary',
+                                PoolProbability=(
+                                    BaseValueConstant=1.000000,
+                                    BaseValueAttribute=None,
+                                    InitializationDefinition=None,
+                                    BaseValueScaleConstant=1.000000
+                                ),
+                                AttachmentPointName="Pistol5"
+                            ),
+                            (
+                                ItemPool=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_Pistols_06_Legendary',
+                                PoolProbability=(
+                                    BaseValueConstant=1.000000,
+                                    BaseValueAttribute=None,
+                                    InitializationDefinition=None,
+                                    BaseValueScaleConstant=1.000000
+                                ),
+                                AttachmentPointName="Pistol6"
+                            ),
+                            (
+                                ItemPool=ItemPoolDefinition'GD_Itempools.Treasure_ChestPools.Pool_Chest_Ammo',
+                                PoolProbability=(
+                                    BaseValueConstant=1.000000,
+                                    BaseValueAttribute=None,
+                                    InitializationDefinition=None,
+                                    BaseValueScaleConstant=1.000000
+                                ),
+                                AttachmentPointName="Ammo1"
+                            ),
+                            (
+                                ItemPool=ItemPoolDefinition'GD_Itempools.Treasure_ChestPools.Pool_Chest_Ammo',
+                                PoolProbability=(
+                                    BaseValueConstant=1.000000,
+                                    BaseValueAttribute=None,
+                                    InitializationDefinition=None,
+                                    BaseValueScaleConstant=1.000000
+                                ),
+                                AttachmentPointName="Ammo2"
+                            ),
+                            (
+                                ItemPool=ItemPoolDefinition'GD_Itempools.Treasure_ChestPools.Pool_Chest_Ammo',
+                                PoolProbability=(
+                                    BaseValueConstant=1.000000,
+                                    BaseValueAttribute=None,
+                                    InitializationDefinition=None,
+                                    BaseValueScaleConstant=1.000000
+                                ),
+                                AttachmentPointName="Ammo3"
+                            ),
+                            (
+                                ItemPool=ItemPoolDefinition'GD_Itempools.Treasure_ChestPools.Pool_Chest_Ammo',
+                                PoolProbability=(
+                                    BaseValueConstant=1.000000,
+                                    BaseValueAttribute=None,
+                                    InitializationDefinition=None,
+                                    BaseValueScaleConstant=1.000000
+                                ),
+                                AttachmentPointName="Ammo4"
+                            ),
+                            (
+                                ItemPool=ItemPoolDefinition'GD_Itempools.Treasure_ChestPools.Pool_Chest_Ammo',
+                                PoolProbability=(
+                                    BaseValueConstant=1.000000,
+                                    BaseValueAttribute=None,
+                                    InitializationDefinition=None,
+                                    BaseValueScaleConstant=1.000000
+                                ),
+                                AttachmentPointName="Grenade1"
+                            ),
+                            (
+                                ItemPool=ItemPoolDefinition'GD_Itempools.Treasure_ChestPools.Pool_Chest_Ammo',
+                                PoolProbability=(
+                                    BaseValueConstant=1.000000,
+                                    BaseValueAttribute=None,
+                                    InitializationDefinition=None,
+                                    BaseValueScaleConstant=1.000000
+                                ),
+                                AttachmentPointName="Grenade2"
+                            ),
+                            (
+                                ItemPool=ItemPoolDefinition'GD_Itempools.Treasure_ChestPools.Pool_Chest_Ammo',
+                                PoolProbability=(
+                                    BaseValueConstant=1.000000,
+                                    BaseValueAttribute=None,
+                                    InitializationDefinition=None,
+                                    BaseValueScaleConstant=1.000000
+                                ),
+                                AttachmentPointName="Grenade3"
+                            ),
+                            (
+                                ItemPool=ItemPoolDefinition'GD_Itempools.Treasure_ChestPools.Pool_Chest_GrenadeAmmo',
+                                PoolProbability=(
+                                    BaseValueConstant=1.000000,
+                                    BaseValueAttribute=None,
+                                    InitializationDefinition=None,
+                                    BaseValueScaleConstant=1.000000
+                                ),
+                                AttachmentPointName="Grenade4"
+                            )
+                        )
+                    ),
+                    (
+                        ConfigurationName="TreasureChest_4Pistols1Long",
+                        LootGameStageVarianceFormula=None,
+                        Weight=(
+                            BaseValueConstant=1.000000,
+                            BaseValueAttribute=None,
+                            InitializationDefinition=None,
+                            BaseValueScaleConstant=1.000000
+                        ),
+                        ItemAttachments=(
+                            (
+                                ItemPool=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_Pistols_06_Legendary',
+                                PoolProbability=(
+                                    BaseValueConstant=1.000000,
+                                    BaseValueAttribute=None,
+                                    InitializationDefinition=None,
+                                    BaseValueScaleConstant=1.000000
+                                ),
+                                AttachmentPointName="Pistol1"
+                            ),
+                            (
+                                ItemPool=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_Pistols_06_Legendary',
+                                PoolProbability=(
+                                    BaseValueConstant=1.000000,
+                                    BaseValueAttribute=None,
+                                    InitializationDefinition=None,
+                                    BaseValueScaleConstant=1.000000
+                                ),
+                                AttachmentPointName="Pistol2"
+                            ),
+                            (
+                                ItemPool=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_Pistols_06_Legendary',
+                                PoolProbability=(
+                                    BaseValueConstant=1.000000,
+                                    BaseValueAttribute=None,
+                                    InitializationDefinition=None,
+                                    BaseValueScaleConstant=1.000000
+                                ),
+                                AttachmentPointName="Pistol3"
+                            ),
+                            (
+                                ItemPool=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_Pistols_06_Legendary',
+                                PoolProbability=(
+                                    BaseValueConstant=1.000000,
+                                    BaseValueAttribute=None,
+                                    InitializationDefinition=None,
+                                    BaseValueScaleConstant=1.000000
+                                ),
+                                AttachmentPointName="Pistol4"
+                            ),
+                            (
+                                ItemPool=ItemPoolDefinition'GD_Itempools.Treasure_ChestPools.Pool_EpicChest_Weapons_LongGuns',
+                                PoolProbability=(
+                                    BaseValueConstant=1.000000,
+                                    BaseValueAttribute=None,
+                                    InitializationDefinition=None,
+                                    BaseValueScaleConstant=1.000000
+                                ),
+                                AttachmentPointName="Gun3"
+                            ),
+                            (
+                                ItemPool=ItemPoolDefinition'GD_Itempools.Treasure_ChestPools.Pool_Chest_Ammo',
+                                PoolProbability=(
+                                    BaseValueConstant=1.000000,
+                                    BaseValueAttribute=None,
+                                    InitializationDefinition=None,
+                                    BaseValueScaleConstant=1.000000
+                                ),
+                                AttachmentPointName="Ammo1"
+                            ),
+                            (
+                                ItemPool=ItemPoolDefinition'GD_Itempools.Treasure_ChestPools.Pool_Chest_Ammo',
+                                PoolProbability=(
+                                    BaseValueConstant=1.000000,
+                                    BaseValueAttribute=None,
+                                    InitializationDefinition=None,
+                                    BaseValueScaleConstant=1.000000
+                                ),
+                                AttachmentPointName="Ammo2"
+                            ),
+                            (
+                                ItemPool=ItemPoolDefinition'GD_Itempools.Treasure_ChestPools.Pool_Chest_Ammo',
+                                PoolProbability=(
+                                    BaseValueConstant=1.000000,
+                                    BaseValueAttribute=None,
+                                    InitializationDefinition=None,
+                                    BaseValueScaleConstant=1.000000
+                                ),
+                                AttachmentPointName="Ammo3"
+                            ),
+                            (
+                                ItemPool=ItemPoolDefinition'GD_Itempools.Treasure_ChestPools.Pool_Chest_Ammo',
+                                PoolProbability=(
+                                    BaseValueConstant=1.000000,
+                                    BaseValueAttribute=None,
+                                    InitializationDefinition=None,
+                                    BaseValueScaleConstant=1.000000
+                                ),
+                                AttachmentPointName="Ammo4"
+                            ),
+                            (
+                                ItemPool=ItemPoolDefinition'GD_Itempools.Treasure_ChestPools.Pool_Chest_Ammo',
+                                PoolProbability=(
+                                    BaseValueConstant=1.000000,
+                                    BaseValueAttribute=None,
+                                    InitializationDefinition=None,
+                                    BaseValueScaleConstant=1.000000
+                                ),
+                                AttachmentPointName="Grenade1"
+                            ),
+                            (
+                                ItemPool=ItemPoolDefinition'GD_Itempools.Treasure_ChestPools.Pool_Chest_Ammo',
+                                PoolProbability=(
+                                    BaseValueConstant=1.000000,
+                                    BaseValueAttribute=None,
+                                    InitializationDefinition=None,
+                                    BaseValueScaleConstant=1.000000
+                                ),
+                                AttachmentPointName="Grenade2"
+                            ),
+                            (
+                                ItemPool=ItemPoolDefinition'GD_Itempools.Treasure_ChestPools.Pool_Chest_Ammo',
+                                PoolProbability=(
+                                    BaseValueConstant=1.000000,
+                                    BaseValueAttribute=None,
+                                    InitializationDefinition=None,
+                                    BaseValueScaleConstant=1.000000
+                                ),
+                                AttachmentPointName="Grenade3"
+                            ),
+                            (
+                                ItemPool=ItemPoolDefinition'GD_Itempools.Treasure_ChestPools.Pool_Chest_Ammo',
+                                PoolProbability=(
+                                    BaseValueConstant=1.000000,
+                                    BaseValueAttribute=None,
+                                    InitializationDefinition=None,
+                                    BaseValueScaleConstant=1.000000
+                                ),
+                                AttachmentPointName="Grenade4"
+                            )
+                        )
+                    ),
+                    (
+                        ConfigurationName="TreasureChest_Launcher",
+                        LootGameStageVarianceFormula=None,
+                        Weight=(
+                            BaseValueConstant=1.000000,
+                            BaseValueAttribute=None,
+                            InitializationDefinition=None,
+                            BaseValueScaleConstant=1.000000
+                        ),
+                        ItemAttachments=(
+                            (
+                                ItemPool=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_Launchers_06_Legendary',
+                                PoolProbability=(
+                                    BaseValueConstant=1.000000,
+                                    BaseValueAttribute=None,
+                                    InitializationDefinition=None,
+                                    BaseValueScaleConstant=1.000000
+                                ),
+                                AttachmentPointName="Launcher1"
+                            ),
+                            (
+                                ItemPool=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_Launchers_06_Legendary',
+                                PoolProbability=(
+                                    BaseValueConstant=1.000000,
+                                    BaseValueAttribute=None,
+                                    InitializationDefinition=None,
+                                    BaseValueScaleConstant=1.000000
+                                ),
+                                AttachmentPointName="Launcher2"
+                            ),
+                            (
+                                ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Ammo_RocketLauncher',
+                                PoolProbability=(
+                                    BaseValueConstant=1.000000,
+                                    BaseValueAttribute=None,
+                                    InitializationDefinition=None,
+                                    BaseValueScaleConstant=1.000000
+                                ),
+                                AttachmentPointName="Ammo1"
+                            ),
+                            (
+                                ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Ammo_Grenades',
+                                PoolProbability=(
+                                    BaseValueConstant=1.000000,
+                                    BaseValueAttribute=None,
+                                    InitializationDefinition=None,
+                                    BaseValueScaleConstant=1.000000
+                                ),
+                                AttachmentPointName="Ammo2"
+                            ),
+                            (
+                                ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Ammo_Grenades',
+                                PoolProbability=(
+                                    BaseValueConstant=1.000000,
+                                    BaseValueAttribute=None,
+                                    InitializationDefinition=None,
+                                    BaseValueScaleConstant=1.000000
+                                ),
+                                AttachmentPointName="Ammo3"
+                            ),
+                            (
+                                ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Ammo_RocketLauncher',
+                                PoolProbability=(
+                                    BaseValueConstant=1.000000,
+                                    BaseValueAttribute=None,
+                                    InitializationDefinition=None,
+                                    BaseValueScaleConstant=1.000000
+                                ),
+                                AttachmentPointName="Ammo4"
+                            ),
+                            (
+                                ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Ammo_RocketLauncher',
+                                PoolProbability=(
+                                    BaseValueConstant=1.000000,
+                                    BaseValueAttribute=None,
+                                    InitializationDefinition=None,
+                                    BaseValueScaleConstant=1.000000
+                                ),
+                                AttachmentPointName="Grenade1"
+                            ),
+                            (
+                                ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Ammo_Grenades',
+                                PoolProbability=(
+                                    BaseValueConstant=1.000000,
+                                    BaseValueAttribute=None,
+                                    InitializationDefinition=None,
+                                    BaseValueScaleConstant=1.000000
+                                ),
+                                AttachmentPointName="Grenade2"
+                            ),
+                            (
+                                ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Ammo_Grenades',
+                                PoolProbability=(
+                                    BaseValueConstant=1.000000,
+                                    BaseValueAttribute=None,
+                                    InitializationDefinition=None,
+                                    BaseValueScaleConstant=1.000000
+                                ),
+                                AttachmentPointName="Grenade3"
+                            ),
+                            (
+                                ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Ammo_RocketLauncher',
+                                PoolProbability=(
+                                    BaseValueConstant=1.000000,
+                                    BaseValueAttribute=None,
+                                    InitializationDefinition=None,
+                                    BaseValueScaleConstant=1.000000
+                                ),
+                                AttachmentPointName="Grenade4"
+                            )
+                        )
+                    )
+                )
+
+
+            #</Roland's Chest>
+
+            #<Tiny Tina DLC Chest Changes>
+
+                #<Tweaked Dice Chests>
+
+                    # Adds a chance to drop legendary on a very good roll, and normalizes the
+                    # odds when it chooses between purples and e-tech.  Also incidentally fixes
+                    # an error in the "Longs" pool which wasn't properly pulling in E-Tech ARs.
+                    # The actual probabilities for what pools get dropped for which rolls remains
+                    # unchanged (and not just because that data is daunting to parse)
+
+                    set GD_Aster_ItemPools.DiceChestPools.Pool_DiceChest_4_VeryHighRoll_Launchers BalancedItems
+                    (
+                        (
+                            ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_Launchers_05_VeryRare',
+                            InvBalanceDefinition=None,
+                            Probability=(
+                                BaseValueConstant={base:dice_vhigh_veryrare},
+                                BaseValueAttribute=None,
+                                InitializationDefinition=None,
+                                BaseValueScaleConstant=1
+                            ),
+                            bDropOnDeath=True
+                        ),
+                        (
+                            ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_Launchers_05_VeryRare_Alien',
+                            InvBalanceDefinition=None,
+                            Probability=(
+                                BaseValueConstant={base:dice_vhigh_alien},
+                                BaseValueAttribute=None,
+                                InitializationDefinition=None,
+                                BaseValueScaleConstant=1
+                            ),
+                            bDropOnDeath=True
+                        ),
+                        (
+                            ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_Launchers_06_Legendary',
+                            InvBalanceDefinition=None,
+                            Probability=(
+                                BaseValueConstant={base:dice_vhigh_legendary},
+                                BaseValueAttribute=None,
+                                InitializationDefinition=None,
+                                BaseValueScaleConstant=1
+                            ),
+                            bDropOnDeath=True
+                        )
+                    )
+
+                    set GD_Aster_ItemPools.DiceChestPools.Pool_DiceChest_4_VeryHighRoll_Longs BalancedItems
+                    (
+                        (
+                            ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_AssaultRifles_05_VeryRare',
+                            InvBalanceDefinition=None,
+                            Probability=(
+                                BaseValueConstant={base:dice_vhigh_veryrare},
+                                BaseValueAttribute=None,
+                                InitializationDefinition=None,
+                                BaseValueScaleConstant=1
+                            ),
+                            bDropOnDeath=True
+                        ),
+                        (
+                            ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_AssaultRifles_05_VeryRare_Alien',
+                            InvBalanceDefinition=None,
+                            Probability=(
+                                BaseValueConstant={base:dice_vhigh_alien},
+                                BaseValueAttribute=None,
+                                InitializationDefinition=None,
+                                BaseValueScaleConstant=1
+                            ),
+                            bDropOnDeath=True
+                        ),
+                        (
+                            ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_AssaultRifles_06_Legendary',
+                            InvBalanceDefinition=None,
+                            Probability=(
+                                BaseValueConstant={base:dice_vhigh_legendary},
+                                BaseValueAttribute=None,
+                                InitializationDefinition=None,
+                                BaseValueScaleConstant=1
+                            ),
+                            bDropOnDeath=True
+                        ),
+                        (
+                            ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_Shotguns_05_VeryRare',
+                            InvBalanceDefinition=None,
+                            Probability=(
+                                BaseValueConstant={base:dice_vhigh_veryrare},
+                                BaseValueAttribute=None,
+                                InitializationDefinition=None,
+                                BaseValueScaleConstant=1
+                            ),
+                            bDropOnDeath=True
+                        ),
+                        (
+                            ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_Shotguns_05_VeryRare_Alien',
+                            InvBalanceDefinition=None,
+                            Probability=(
+                                BaseValueConstant={base:dice_vhigh_alien},
+                                BaseValueAttribute=None,
+                                InitializationDefinition=None,
+                                BaseValueScaleConstant=1
+                            ),
+                            bDropOnDeath=True
+                        ),
+                        (
+                            ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_Shotguns_06_Legendary',
+                            InvBalanceDefinition=None,
+                            Probability=(
+                                BaseValueConstant={base:dice_vhigh_legendary},
+                                BaseValueAttribute=None,
+                                InitializationDefinition=None,
+                                BaseValueScaleConstant=1
+                            ),
+                            bDropOnDeath=True
+                        ),
+                        (
+                            ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_SniperRifles_05_VeryRare',
+                            InvBalanceDefinition=None,
+                            Probability=(
+                                BaseValueConstant={base:dice_vhigh_veryrare},
+                                BaseValueAttribute=None,
+                                InitializationDefinition=None,
+                                BaseValueScaleConstant=1
+                            ),
+                            bDropOnDeath=True
+                        ),
+                        (
+                            ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_SniperRifles_05_VeryRare_Alien',
+                            InvBalanceDefinition=None,
+                            Probability=(
+                                BaseValueConstant={base:dice_vhigh_alien},
+                                BaseValueAttribute=None,
+                                InitializationDefinition=None,
+                                BaseValueScaleConstant=1
+                            ),
+                            bDropOnDeath=True
+                        ),
+                        (
+                            ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_SniperRifles_06_Legendary',
+                            InvBalanceDefinition=None,
+                            Probability=(
+                                BaseValueConstant={base:dice_vhigh_legendary},
+                                BaseValueAttribute=None,
+                                InitializationDefinition=None,
+                                BaseValueScaleConstant=1
+                            ),
+                            bDropOnDeath=True
+                        ),
+                        (
+                            ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_SMG_05_VeryRare',
+                            InvBalanceDefinition=None,
+                            Probability=(
+                                BaseValueConstant={base:dice_vhigh_veryrare},
+                                BaseValueAttribute=None,
+                                InitializationDefinition=None,
+                                BaseValueScaleConstant=1
+                            ),
+                            bDropOnDeath=True
+                        ),
+                        (
+                            ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_SMG_05_VeryRare_Alien',
+                            InvBalanceDefinition=None,
+                            Probability=(
+                                BaseValueConstant={base:dice_vhigh_alien},
+                                BaseValueAttribute=None,
+                                InitializationDefinition=None,
+                                BaseValueScaleConstant=1
+                            ),
+                            bDropOnDeath=True
+                        ),
+                        (
+                            ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_SMG_06_Legendary',
+                            InvBalanceDefinition=None,
+                            Probability=(
+                                BaseValueConstant={base:dice_vhigh_legendary},
+                                BaseValueAttribute=None,
+                                InitializationDefinition=None,
+                                BaseValueScaleConstant=1
+                            ),
+                            bDropOnDeath=True
+                        )
+                    )
+
+                    set GD_Aster_ItemPools.DiceChestPools.Pool_DiceChest_4_VeryHighRoll_Pistols BalancedItems
+                    (
+                        (
+                            ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_Pistols_05_VeryRare',
+                            InvBalanceDefinition=None,
+                            Probability=(
+                                BaseValueConstant={base:dice_vhigh_veryrare},
+                                BaseValueAttribute=None,
+                                InitializationDefinition=None,
+                                BaseValueScaleConstant=1
+                            ),
+                            bDropOnDeath=True
+                        ),
+                        (
+                            ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_Pistols_05_VeryRare_Alien',
+                            InvBalanceDefinition=None,
+                            Probability=(
+                                BaseValueConstant={base:dice_vhigh_alien},
+                                BaseValueAttribute=None,
+                                InitializationDefinition=None,
+                                BaseValueScaleConstant=1
+                            ),
+                            bDropOnDeath=True
+                        ),
+                        (
+                            ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_Pistols_06_Legendary',
+                            InvBalanceDefinition=None,
+                            Probability=(
+                                BaseValueConstant={base:dice_vhigh_legendary},
+                                BaseValueAttribute=None,
+                                InitializationDefinition=None,
+                                BaseValueScaleConstant=1
+                            ),
+                            bDropOnDeath=True
+                        )
+                    )
+
+                #</Tweaked Dice Chests>
+
+                #<Improved Non-Mimic Chests>
+
+                    # The chests which could be mimics but aren't already have good loot
+                    # when combined with the rest of this mod, but this will improve them
+                    # a bit more.  Half the gear in the chest (rounded down) will take from
+                    # the "Epic" chest pool, rather than the normal chest pool.
+
+                    level None set GD_Aster_Lootables.Balance.ObjectGrade_MimicChest_NoMimic DefaultLoot[0].ItemAttachments[1].ItemPool ItemPoolDefinition'GD_Itempools.Treasure_ChestPools.Pool_EpicChest_Weapons_LongGuns'
+
+                    level None set GD_Aster_Lootables.Balance.ObjectGrade_MimicChest_NoMimic DefaultLoot[0].ItemAttachments[3].ItemPool ItemPoolDefinition'GD_Itempools.Treasure_ChestPools.Pool_EpicChest_Weapons_Pistols'
+
+                    level None set GD_Aster_Lootables.Balance.ObjectGrade_MimicChest_NoMimic DefaultLoot[1].ItemAttachments[2].ItemPool ItemPoolDefinition'GD_Itempools.Treasure_ChestPools.Pool_EpicChest_Weapons_Pistols'
+
+                    level None set GD_Aster_Lootables.Balance.ObjectGrade_MimicChest_NoMimic DefaultLoot[1].ItemAttachments[3].ItemPool ItemPoolDefinition'GD_Itempools.Treasure_ChestPools.Pool_EpicChest_Weapons_Pistols'
+
+                    level None set GD_Aster_Lootables.Balance.ObjectGrade_MimicChest_NoMimic DefaultLoot[3].ItemAttachments[2].ItemPool ItemPoolDefinition'GD_Itempools.Treasure_ChestPools.Pool_EpicChest_Items'
+
+                    level None set GD_Aster_Lootables.Balance.ObjectGrade_MimicChest_NoMimic DefaultLoot[3].ItemAttachments[3].ItemPool ItemPoolDefinition'GD_Itempools.Treasure_ChestPools.Pool_EpicChest_Items'
+
+                    level None set GD_Aster_Lootables.Balance.ObjectGrade_MimicChest_NoMimic DefaultLoot[4].ItemAttachments[2].ItemPool ItemPoolDefinition'GD_Itempools.Treasure_ChestPools.Pool_EpicChest_Shields'
+
+                    level None set GD_Aster_Lootables.Balance.ObjectGrade_MimicChest_NoMimic DefaultLoot[4].ItemAttachments[3].ItemPool ItemPoolDefinition'GD_Itempools.Treasure_ChestPools.Pool_EpicChest_Shields'
+
+                    level None set GD_Aster_Lootables.Balance.ObjectGrade_MimicChest_NoMimic DefaultLoot[5].ItemAttachments[2].ItemPool ItemPoolDefinition'GD_Itempools.Treasure_ChestPools.Pool_EpicChest_GrenadeMods'
+
+                    level None set GD_Aster_Lootables.Balance.ObjectGrade_MimicChest_NoMimic DefaultLoot[5].ItemAttachments[3].ItemPool ItemPoolDefinition'GD_Itempools.Treasure_ChestPools.Pool_EpicChest_GrenadeMods'
+
+                    level None set GD_Aster_Lootables.Balance.ObjectGrade_MimicChest_NoMimic DefaultLoot[7].ItemAttachments[2].ItemPool ItemPoolDefinition'GD_Itempools.Treasure_ChestPools.Pool_EpicChest_Weapons_LongGuns'
+
+                    level None set GD_Aster_Lootables.Balance.ObjectGrade_MimicChest_NoMimic DefaultLoot[8].ItemAttachments[2].ItemPool ItemPoolDefinition'GD_Itempools.Treasure_ChestPools.Pool_EpicChest_Artifacts'
+
+                #</Improved Non-Mimic Chests>
+
+            #</Tiny Tina DLC Chest Changes>
 
         #</Better Containers>
 
