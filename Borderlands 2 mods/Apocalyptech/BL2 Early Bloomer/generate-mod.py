@@ -26,6 +26,11 @@
 # (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 # SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
+# NOTE: Some more data for this came from invbalstage.py, but we're not automating
+# that since it required a bunch of manual pruning.  The various
+# Manufacturers[x].Grades[x].GameStageRequirement.MinGameStage hotfixes can be
+# found that way, though.  (Mostly grenades, but also a few relics)
+
 import sys
 
 try:
