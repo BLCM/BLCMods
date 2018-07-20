@@ -1098,97 +1098,88 @@ mp.register_str('legendary_seraph_adds', "\n\n".join(
 items = {
     'shield': {
         'GD_Itempools.ShieldPools.Pool_Shields_Absorption_06_Legendary': [
-            ('1340', 2, 'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Absorption_1340'),
-            ('equitas', 3, 'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Absorption_Equitas'),
-            ('sponge', 4, 'GD_Iris_SeraphItems.Sponge.Iris_Seraph_Shield_Sponge_Balance'),
+            ('1340', 2, 'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Absorption_1340', 1),
+            ('equitas', 3, 'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Absorption_Equitas', 1),
+            ('sponge', 4, 'GD_Iris_SeraphItems.Sponge.Iris_Seraph_Shield_Sponge_Balance', 1),
             ],
         'GD_Itempools.ShieldPools.Pool_Shields_Booster_06_Legendary': [
-            ('potogold', 1, 'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Booster_PotOGold'),
-            ('bigboomblaster', 2, 'GD_Iris_SeraphItems.BigBoomBlaster.Iris_Seraph_Shield_Booster_Balance'),
+            ('potogold', 1, 'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Booster_PotOGold', 1),
+            ('bigboomblaster', 2, 'GD_Iris_SeraphItems.BigBoomBlaster.Iris_Seraph_Shield_Booster_Balance', 1),
             ],
         'GD_Itempools.ShieldPools.Pool_Shields_Chimera_06_Legendary': [
-            ('evolution', 1, 'GD_Orchid_RaidWeapons.Shield.Anshin.Orchid_Seraph_Anshin_Shield_Balance')
+            ('evolution', 1, 'GD_Orchid_RaidWeapons.Shield.Anshin.Orchid_Seraph_Anshin_Shield_Balance', 1)
             ],
         'GD_Itempools.ShieldPools.Pool_Shields_Juggernaut_06_Legendary': [
-            ('hoplite', 1, 'GD_Iris_SeraphItems.Hoplite.Iris_Seraph_Shield_Juggernaut_Balance'),
+            ('hoplite', 1, 'GD_Iris_SeraphItems.Hoplite.Iris_Seraph_Shield_Juggernaut_Balance', 1),
             ],
         'GD_Itempools.ShieldPools.Pool_Shields_NovaShields_Explosive_06_Legendary': [
-            ('deadlybloom', 0, 'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Nova_Explosive_DeadlyBloom'),
+            ('deadlybloom', 0, 'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Nova_Explosive_DeadlyBloom', 1),
             ],
         'GD_Itempools.ShieldPools.Pool_Shields_Roid_06_Legendary': [
-            ('order', 1, 'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Roid_Order'),
-            ('lovethumper', 2, 'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Roid_04_LoveThumper'),
-            ('punchee', 3, 'GD_Iris_SeraphItems.Pun-chee.Iris_Seraph_Shield_Pun-chee_Balance'),
+            ('order', 1, 'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Roid_Order', 1),
+            ('lovethumper', 2, 'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Roid_04_LoveThumper', 1),
+            ('punchee', 3, 'GD_Iris_SeraphItems.Pun-chee.Iris_Seraph_Shield_Pun-chee_Balance', 1),
             ],
         'GD_Itempools.ShieldPools.Pool_Shields_Standard_06_Legendary': [
-            ('manlyman', 1, 'GD_Orchid_Shields.A_Item_Custom.S_BladeShield'),
-            ('roughrider', 2, 'GD_Sage_Shields.A_Item_Custom.S_BucklerShield'),
-            ('antagonist', 3, 'GD_Aster_ItemGrades.Shields.Aster_Seraph_Antagonist_Shield_Balance'),
-            ('blockade', 4, 'GD_Aster_ItemGrades.Shields.Aster_Seraph_Blockade_Shield_Balance'),
+            ('manlyman', 1, 'GD_Orchid_Shields.A_Item_Custom.S_BladeShield', 1),
+            ('roughrider', 2, 'GD_Sage_Shields.A_Item_Custom.S_BucklerShield', 1),
+            ('antagonist', 3, 'GD_Aster_ItemGrades.Shields.Aster_Seraph_Antagonist_Shield_Balance', 1),
+            ('blockade', 4, 'GD_Aster_ItemGrades.Shields.Aster_Seraph_Blockade_Shield_Balance', 1),
             ],
         },
     'grenade': {
         'GD_Itempools.GrenadeModPools.Pool_GrenadeMods_06_Legendary': [
-            ('breath_of_terra', 12, 'GD_GrenadeMods.A_Item_Legendary.GM_FlameSpurt'),
-            ('fireball', 13, 'GD_Aster_GrenadeMods.A_Item.GM_Fireball'),
-            ('fuster_cluck', 14, 'GD_GrenadeMods.A_Item_Custom.GM_FusterCluck'),
-            ('kiss_of_death', 15, 'GD_GrenadeMods.A_Item_Custom.GM_KissOfDeath'),
-            ('lightning_bolt', 16, 'GD_Aster_GrenadeMods.A_Item.GM_LightningBolt'),
-            ('magic_missile', 17, 'GD_Aster_GrenadeMods.A_Item.GM_MagicMissileRare'),
-            ('crossfire', 18, 'GD_Iris_SeraphItems.Crossfire.Iris_Seraph_GrenadeMod_Crossfire_Balance'),
-            ('meteor_shower', 19, 'GD_Iris_SeraphItems.MeteorShower.Iris_Seraph_GrenadeMod_MeteorShower_Balance'),
-            ('o_negative', 20, 'GD_Iris_SeraphItems.ONegative.Iris_Seraph_GrenadeMod_ONegative_Balance'),
+            ('breath_of_terra', 12, 'GD_GrenadeMods.A_Item_Legendary.GM_FlameSpurt', 1),
+            ('fireball', 13, 'GD_Aster_GrenadeMods.A_Item.GM_Fireball', 1),
+            ('fuster_cluck', 14, 'GD_GrenadeMods.A_Item_Custom.GM_FusterCluck', 1),
+            ('kiss_of_death', 15, 'GD_GrenadeMods.A_Item_Custom.GM_KissOfDeath', 1),
+            ('lightning_bolt', 16, 'GD_Aster_GrenadeMods.A_Item.GM_LightningBolt', 1),
+            ('magic_missile', 17, 'GD_Aster_GrenadeMods.A_Item.GM_MagicMissileRare', 1),
+            ('crossfire', 18, 'GD_Iris_SeraphItems.Crossfire.Iris_Seraph_GrenadeMod_Crossfire_Balance', 1),
+            ('meteor_shower', 19, 'GD_Iris_SeraphItems.MeteorShower.Iris_Seraph_GrenadeMod_MeteorShower_Balance', 1),
+            ('o_negative', 20, 'GD_Iris_SeraphItems.ONegative.Iris_Seraph_GrenadeMod_ONegative_Balance', 1),
+            ],
+        },
+    'relic': {
+        'GD_Itempools.ArtifactPools.Pool_ArtifactsReward': [
+            # Leg:
+            ('blood_terra', 10, 'GD_Artifacts.A_Item_Unique.A_Terramorphous', 0.5),
+            # Uniques:
+            ('midnight_star', 11, 'GD_Orchid_Artifacts.A_Item_Unique.A_Blade', 0.5),
+            ('deputys_badge', 12, 'GD_Artifacts.A_Item_Unique.A_Deputy', 0.5),
+            ('opportunity', 13, 'GD_Artifacts.A_Item_Unique.A_Opportunity', 0.5),
+            ('endowment', 14, 'GD_Artifacts.A_Item_Unique.A_Endowment', 0.5),
+            ('amulet', 15, 'GD_Aster_Artifacts.A_Item_Unique.A_MysteryAmulet', 0.25),
+            ('sheriffs_badge', 16, 'GD_Artifacts.A_Item_Unique.A_Sheriff', 0.5),
+            ('afterburner', 17, 'GD_Artifacts.A_Item_Unique.A_Afterburner', 0.5),
+            # E-Tech:
+            ('ancients_blood', 18, 'GD_Gladiolus_Artifacts.A_Item.A_VitalityStockpile_VeryRare', 0.5),
+            ('ancients_bone', 19, 'GD_Gladiolus_Artifacts.A_Item.A_ElementalProficiency_VeryRare', 0.5),
+            ('ancients_heart_1', 20, 'GD_Gladiolus_Artifacts.A_Item.A_AggressionTenacityAssault_VeryRare', 0.25),
+            ('ancients_heart_2', 21, 'GD_Gladiolus_Artifacts.A_Item.A_AggressionTenacityLauncher_VeryRare', 0.25),
+            ('ancients_heart_3', 22, 'GD_Gladiolus_Artifacts.A_Item.A_AggressionTenacityPistol_VeryRare', 0.25),
+            ('ancients_heart_4', 23, 'GD_Gladiolus_Artifacts.A_Item.A_AggressionTenacityShotgun_VeryRare', 0.25),
+            ('ancients_heart_5', 24, 'GD_Gladiolus_Artifacts.A_Item.A_AggressionTenacitySMG_VeryRare', 0.25),
+            ('ancients_heart_6', 25, 'GD_Gladiolus_Artifacts.A_Item.A_AggressionTenacitySniper_VeryRare', 0.25),
+            ('ancients_skin', 26, 'GD_Gladiolus_Artifacts.A_Item.A_ResistanceProtection_VeryRare', 0.5),
+            # Seraph:
+            ('seraphs_blood', 27, 'GD_Orchid_Artifacts.A_Item_Unique.A_SeraphBloodRelic', 0.5),
+            ('seraphs_breath', 28, 'GD_Sage_Artifacts.A_Item.A_SeraphBreath', 0.5),
+            ('seraphs_might', 29, 'GD_Iris_SeraphItems.Might.Iris_Seraph_Artifact_Might_Balance', 0.5),
+            ('seraphs_shadow', 30, 'GD_Aster_Artifacts.A_Item_Unique.A_SeraphShadow', 0.5),
             ],
         },
     }
 for (itemtype, itemdict) in items.items():
     for (pool, itemlist) in itemdict.items():
-        for (label, index, itemname) in itemlist:
+        for (label, index, itemname, scale) in itemlist:
             mp.set_bi_item_pool('{}_{}'.format(itemtype, label),
                 pool,
                 index,
                 itemname,
-                invbalance='InventoryBalanceDefinition')
-
-# Relics are a bit weirder since they don't *really* have rarity-level pools
-# like everything else.  There *is* technically a "Legendary" pool for them,
-# but it's not really used the way any other legendary pool is (the only "true"
-# legendary relic isn't meant to be world-droppable anyway).  So, these are
-# handled a bit separately
-for (label, index, relic, weight) in [
-        # Leg:
-        ('blood_terra', 10, 'GD_Artifacts.A_Item_Unique.A_Terramorphous', 0.5),
-        # Uniques:
-        ('midnight_star', 11, 'GD_Orchid_Artifacts.A_Item_Unique.A_Blade', 0.5),
-        ('deputys_badge', 12, 'GD_Artifacts.A_Item_Unique.A_Deputy', 0.5),
-        ('opportunity', 13, 'GD_Artifacts.A_Item_Unique.A_Opportunity', 0.5),
-        ('endowment', 14, 'GD_Artifacts.A_Item_Unique.A_Endowment', 0.5),
-        ('amulet', 15, 'GD_Aster_Artifacts.A_Item_Unique.A_MysteryAmulet', 0.25),
-        ('sheriffs_badge', 16, 'GD_Artifacts.A_Item_Unique.A_Sheriff', 0.5),
-        ('afterburner', 17, 'GD_Artifacts.A_Item_Unique.A_Afterburner', 0.5),
-        # E-Tech:
-        ('ancients_blood', 18, 'GD_Gladiolus_Artifacts.A_Item.A_VitalityStockpile_VeryRare', 0.5),
-        ('ancients_bone', 19, 'GD_Gladiolus_Artifacts.A_Item.A_ElementalProficiency_VeryRare', 0.5),
-        ('ancients_heart_1', 20, 'GD_Gladiolus_Artifacts.A_Item.A_AggressionTenacityAssault_VeryRare', 0.25),
-        ('ancients_heart_2', 21, 'GD_Gladiolus_Artifacts.A_Item.A_AggressionTenacityLauncher_VeryRare', 0.25),
-        ('ancients_heart_3', 22, 'GD_Gladiolus_Artifacts.A_Item.A_AggressionTenacityPistol_VeryRare', 0.25),
-        ('ancients_heart_4', 23, 'GD_Gladiolus_Artifacts.A_Item.A_AggressionTenacityShotgun_VeryRare', 0.25),
-        ('ancients_heart_5', 24, 'GD_Gladiolus_Artifacts.A_Item.A_AggressionTenacitySMG_VeryRare', 0.25),
-        ('ancients_heart_6', 25, 'GD_Gladiolus_Artifacts.A_Item.A_AggressionTenacitySniper_VeryRare', 0.25),
-        ('ancients_skin', 26, 'GD_Gladiolus_Artifacts.A_Item.A_ResistanceProtection_VeryRare', 0.5),
-        # Seraph:
-        ('seraphs_blood', 27, 'GD_Orchid_Artifacts.A_Item_Unique.A_SeraphBloodRelic', 0.5),
-        ('seraphs_breath', 28, 'GD_Sage_Artifacts.A_Item.A_SeraphBreath', 0.5),
-        ('seraphs_might', 29, 'GD_Iris_SeraphItems.Might.Iris_Seraph_Artifact_Might_Balance', 0.5),
-        ('seraphs_shadow', 30, 'GD_Aster_Artifacts.A_Item_Unique.A_SeraphShadow', 0.5),
-        ]:
-    mp.set_bi_item_pool('relic_{}'.format(label),
-        'GD_Itempools.ArtifactPools.Pool_ArtifactsReward',
-        index,
-        relic,
-        invbalance='InventoryBalanceDefinition',
-        scale=weight,
-        )
+                invbalance='InventoryBalanceDefinition',
+                scale=scale,
+                )
 
 ###
 ### Generate our quality category strings
