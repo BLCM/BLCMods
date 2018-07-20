@@ -746,8 +746,7 @@ for (name, classname) in [
         "level Hunger_P set {} DefaultItemPoolIncludedLists (ItemPoolListDefinition'GD_Itempools.ListDefs.BadassEnemyGunsAndGear')".format(classname))
 
 # Make the BLNG Loader drop from the Badass pool, and add a lot of money drops
-money_pool_list=["""
-    (
+money_pool_list=["""(
         ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Money_1_BIG',
         PoolProbability=(
             BaseValueConstant=1.000000,
@@ -757,7 +756,20 @@ money_pool_list=["""
         )
     )"""]*30
 mp.register_str('wedding_blng_drop',
-    "level Distillery_P set GD_BlingLoader.Population.PawnBalance_BlingLoader DefaultItemPoolList ({})".format(','.join(money_pool_list)))
+    """level Distillery_P set GD_BlingLoader.Population.PawnBalance_BlingLoader DefaultItemPoolList
+    (
+        (
+            ItemPool = ItemPoolDefinition'GD_CustomItemPools_MainGame.Soldier.BanditEpic',
+            PoolProbability =
+            (
+                BaseValueConstant = 0.000000,
+                BaseValueAttribute = AttributeDefinition'GD_Itempools.DropWeights.DropODDS_BossUniques',
+                InitializationDefinition = None,
+                BaseValueScaleConstant = 1.0
+            )
+        ),
+        {}
+    )""".format(','.join(money_pool_list)))
 
 # Fix some container drop pools which reference an item (Pool_BuffDrinks_Euphoria)
 # which doesn't actually exist, causing that loot possibility to never actually

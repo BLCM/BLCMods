@@ -170,11 +170,8 @@ Compatibility
 
 ### UCP ###
 
-This mod is mostly compatible with UCP 4.0, with four known exceptions:
+This mod is mostly compatible with UCP 4.1, with three known exceptions:
 
-* "`Better Enemy Drops -> Regular Enemy Drop Improvements -> BLNG Loader`" in this
-  mod will override UCP's "`Loot Pool & Drop Changes -> Specific Loot Changes ->
-  Add Sledge's Shotgun to BLNG Loader`"
 * "`Better Enemy Drops -> Raid Boss Drop Improvements -> Hyperius`" in this mod
   will override UCP's "`Loot Pool & Drop Changes -> Specific Loot Changes -> Add
   Black Hole and remove the Kiss of Death from Hyperius`"
@@ -405,6 +402,9 @@ Changelog
  * Improved chances of dart/spiker spawns, since UCP4.1 gave them some reasonable buffs.
    Still a bit less likely than gemstone pistols, though, if you have gemstones added
    to the E-Tech pools.
+ * Set BLNG loader to also drop Sledge's Shotgun, as UCP does, so that we're not
+   overriding that behavior for UCP users.  People not using UCP will just have to
+   cope with the extra shotgun drop chance.
  * Removed disabled-by-default categories which I'd had in there for my own testing
    purposes.  No real need to have them in there in the first place, and it just made
    checking/unchecking the mod fraught with potential unintended side effects.

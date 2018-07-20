@@ -2821,16 +2821,40 @@ BL2
 
                 #</Arguk the Butcher>
 
-                #<BLNG Loader (will override UCP's "Add Sledge's Shotgun to BLNG Loader")>
+                #<BLNG Loader>
 
                     # Make the BLNG Loader drop from the Badass pool, and also add a bunch of
-                    # money to its drops.
+                    # money to its drops.  UCP adds Sledge's Shotgun as a drop for BLNG
+                    # Loader, too, so we're going to continue to do so in this definition
+                    # as well.  We're putting in a couple of the skinpool reassignment
+                    # statements in here, as well, in case someone's using this mod without
+                    # UCP.
+
+                    level Distillery_P set GD_CustomItemPools_MainGame.Rewards.BanditEpic BalancedItems[3].InvBalanceDefinition InventoryBalanceDefinition'GD_Soldier_Items_MainGame.BalanceDefs.Soldier_Skin_BanditC'
+
+                    level Distillery_P set GD_CustomItemPools_MainGame.Rewards.BanditEpic BalancedItems[3].ItmPoolDefinition None
+
+                    level Distillery_P set GD_CustomItemPools_MainGame.Soldier.BanditEpic BalancedItems
+                    (
+                        (
+                            ItmPoolDefinition = None,
+                            InvBalanceDefinition = WeaponBalanceDefinition'GD_Weap_Shotgun.A_Weapons_Legendary.SG_Bandit_5_SledgesShotgun',
+                            Probability =
+                            (
+                                BaseValueConstant = 0.000000,
+                                BaseValueAttribute = None,
+                                InitializationDefinition = AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',
+                                BaseValueScaleConstant = 1.000000
+                            ),
+                            bDropOnDeath = True
+                        )
+                    )
 
                     level Distillery_P set GD_BlingLoader.Population.PawnBalance_BlingLoader DefaultItemPoolIncludedLists[0] ItemPoolListDefinition'GD_Itempools.ListDefs.BadassEnemyGunsAndGear'
 
                     {mp:wedding_blng_drop}
 
-                #</BLNG Loader (will override UCP's "Add Sledge's Shotgun to BLNG Loader")>
+                #</BLNG Loader>
 
                 #<Bonehead 2.0>
 
