@@ -652,14 +652,14 @@ class ModProcessor(object):
         return '({})'.format(','.join(bal_items))
 
     def set_bi_item_pool(self, reg_name, classname, index, item,
-            level='None', weight=1, invbalance=None):
+            level='None', weight=1, scale=1, invbalance=None):
         """
         Sets an entire BalancedItem structure as a hotfix, and saves it as the
         given `reg_name`.  The class to set is given in `classname`.  The given
         `index` of the BalancedItems structure will be set to `item`.  If
         `invbalance` is not given, it will default to `ItemPoolDefinition`.
         An optional `level` can be specified (will default to `None` otherwise),
-        and `weight` can be used to specify a weight other than `1`.
+        and `weight` and `scale` can be used to specify a weight other than `1`.
         """
         if invbalance:
             itmpool = 'None'
@@ -676,10 +676,10 @@ class ModProcessor(object):
                         BaseValueConstant={},
                         BaseValueAttribute=None,
                         InitializationDefinition=None,
-                        BaseValueScaleConstant=1
+                        BaseValueScaleConstant={}
                     ),
                     bDropOnDeath=True
-                )""".format(level, classname, index, itmpool, invbal, weight)
+                )""".format(level, classname, index, itmpool, invbal, weight, scale)
             )
 
 if __name__ == '__main__':

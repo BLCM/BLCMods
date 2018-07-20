@@ -1081,15 +1081,15 @@ for (guntype, legendaries, uniques, pearls, seraphs) in [
                 ))
 
 mp.register_str('legendary_unique_adds', "\n\n".join(
-        ['{}{}'.format(' '*(4*3), hotfix) for hotfix in unique_hotfixes]
+        ['{}{}'.format(' '*(4*4), hotfix) for hotfix in unique_hotfixes]
     ))
 
 mp.register_str('legendary_pearl_adds', "\n\n".join(
-        ['{}{}'.format(' '*(4*3), hotfix) for hotfix in pearl_hotfixes]
+        ['{}{}'.format(' '*(4*4), hotfix) for hotfix in pearl_hotfixes]
     ))
 
 mp.register_str('legendary_seraph_adds', "\n\n".join(
-        ['{}{}'.format(' '*(4*3), hotfix) for hotfix in seraph_hotfixes]
+        ['{}{}'.format(' '*(4*4), hotfix) for hotfix in seraph_hotfixes]
     ))
 
 # Legendary shield/grenade pool configuration.  Doing this a bit differently since there's
@@ -1149,6 +1149,46 @@ for (itemtype, itemdict) in items.items():
                 index,
                 itemname,
                 invbalance='InventoryBalanceDefinition')
+
+# Relics are a bit weirder since they don't *really* have rarity-level pools
+# like everything else.  There *is* technically a "Legendary" pool for them,
+# but it's not really used the way any other legendary pool is (the only "true"
+# legendary relic isn't meant to be world-droppable anyway).  So, these are
+# handled a bit separately
+for (label, index, relic, weight) in [
+        # Leg:
+        ('blood_terra', 10, 'GD_Artifacts.A_Item_Unique.A_Terramorphous', 0.5),
+        # Uniques:
+        ('midnight_star', 11, 'GD_Orchid_Artifacts.A_Item_Unique.A_Blade', 0.5),
+        ('deputys_badge', 12, 'GD_Artifacts.A_Item_Unique.A_Deputy', 0.5),
+        ('opportunity', 13, 'GD_Artifacts.A_Item_Unique.A_Opportunity', 0.5),
+        ('endowment', 14, 'GD_Artifacts.A_Item_Unique.A_Endowment', 0.5),
+        ('amulet', 15, 'GD_Aster_Artifacts.A_Item_Unique.A_MysteryAmulet', 0.25),
+        ('sheriffs_badge', 16, 'GD_Artifacts.A_Item_Unique.A_Sheriff', 0.5),
+        ('afterburner', 17, 'GD_Artifacts.A_Item_Unique.A_Afterburner', 0.5),
+        # E-Tech:
+        ('ancients_blood', 18, 'GD_Gladiolus_Artifacts.A_Item.A_VitalityStockpile_VeryRare', 0.5),
+        ('ancients_bone', 19, 'GD_Gladiolus_Artifacts.A_Item.A_ElementalProficiency_VeryRare', 0.5),
+        ('ancients_heart_1', 20, 'GD_Gladiolus_Artifacts.A_Item.A_AggressionTenacityAssault_VeryRare', 0.25),
+        ('ancients_heart_2', 21, 'GD_Gladiolus_Artifacts.A_Item.A_AggressionTenacityLauncher_VeryRare', 0.25),
+        ('ancients_heart_3', 22, 'GD_Gladiolus_Artifacts.A_Item.A_AggressionTenacityPistol_VeryRare', 0.25),
+        ('ancients_heart_4', 23, 'GD_Gladiolus_Artifacts.A_Item.A_AggressionTenacityShotgun_VeryRare', 0.25),
+        ('ancients_heart_5', 24, 'GD_Gladiolus_Artifacts.A_Item.A_AggressionTenacitySMG_VeryRare', 0.25),
+        ('ancients_heart_6', 25, 'GD_Gladiolus_Artifacts.A_Item.A_AggressionTenacitySniper_VeryRare', 0.25),
+        ('ancients_skin', 26, 'GD_Gladiolus_Artifacts.A_Item.A_ResistanceProtection_VeryRare', 0.5),
+        # Seraph:
+        ('seraphs_blood', 27, 'GD_Orchid_Artifacts.A_Item_Unique.A_SeraphBloodRelic', 0.5),
+        ('seraphs_breath', 28, 'GD_Sage_Artifacts.A_Item.A_SeraphBreath', 0.5),
+        ('seraphs_might', 29, 'GD_Iris_SeraphItems.Might.Iris_Seraph_Artifact_Might_Balance', 0.5),
+        ('seraphs_shadow', 30, 'GD_Aster_Artifacts.A_Item_Unique.A_SeraphShadow', 0.5),
+        ]:
+    mp.set_bi_item_pool('relic_{}'.format(label),
+        'GD_Itempools.ArtifactPools.Pool_ArtifactsReward',
+        index,
+        relic,
+        invbalance='InventoryBalanceDefinition',
+        scale=weight,
+        )
 
 ###
 ### Generate our quality category strings
