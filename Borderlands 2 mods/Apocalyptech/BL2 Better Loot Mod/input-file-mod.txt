@@ -1921,29 +1921,6 @@ BL2
 
             #</Early Game Shotgun Chest>
 
-            #<Fix Broken Shield Pools (duplicate of UCP 4.1)>
-
-                # Various chests in the game have a possible "Shields" item pool which will
-                # never actually trigger in-game because they include an invalid item in the
-                # pool.  This fixes the pool so that it can be chosen again.  This fix is now
-                # included as part of UCP 4.1, but we're leaving it in here anyway.
-
-                {mp:euphoria_fix_0}
-
-                {mp:euphoria_fix_1}
-
-                {mp:euphoria_fix_2}
-
-                {mp:euphoria_fix_3}
-
-                {mp:euphoria_fix_4}
-
-                {mp:euphoria_fix_5}
-
-                {mp:euphoria_fix_6}
-
-            #</Fix Broken Shield Pools (duplicate of UCP 4.1)>
-
             #<Hammerlock DLC Endgame Chests>
 
                 # Convert the Hammerlock DLC's endgame chests to pull from the
@@ -3059,21 +3036,6 @@ BL2
 
                 #</Sinkhole>
 
-                #<Wattle Gobbler Tributes (duplicate of UCP 4.1)>
-
-                    # Three tributes from the Wattle Gobler Headhunter Pack don't have
-                    # any drops defined, but the rest drop from the badass pool.  Fix that.
-                    # This was also fixed in the UCP 4.1 update, but we're going to leave
-                    # it in here as well.
-
-                    {mp:wattle_tribute_cynder}
-
-                    {mp:wattle_tribute_strip}
-
-                    {mp:wattle_tribute_flay}
-
-                #</Wattle Gobbler Tributes (duplicate of UCP 4.1)>
-
                 #<Witch Doctors (Big Game Hunt DLC)>
 
                     # Adds a guaranteed Eridium stick, and chance at a good Relic
@@ -3291,57 +3253,6 @@ BL2
                     )
 
                 #</Chubby Enemies>
-
-                #<Badass Enemy Fixes (Duplicate of UCP 4.1)>
-
-                    # Various "Badass" enemies in some DLCs were presumably accidentally set to
-                    # pull from the standard enemy drop pool, rather than badass.  This section
-                    # fixes those up.  UCP 4.1 added this in as a base feature, but we're
-                    # keeping it in here regardless.
-
-                    #<Badass Bedrock Bullymong>
-
-                        level None set GD_Population_PrimalBeast.Balance.PawnBalance_PrimalBeast_BedrockBadass DefaultItemPoolIncludedLists[0] ItemPoolListDefinition'GD_Itempools.ListDefs.BadassEnemyGunsAndGear'
-
-                    #</Badass Bedrock Bullymong>
-
-                    #<Badass Boroks>
-
-                        {mp:badass_borok_Corrosive}
-
-                        {mp:badass_borok_Fire}
-
-                        {mp:badass_borok_Shock}
-
-                        {mp:badass_borok_Slag}
-
-                    #</Badass Boroks>
-
-                    #<Badass Fire Archers>
-
-                        level None set GD_Aster_Pop_Knights.Balance.PawnBalance_Knight_BadassFireArcher DefaultItemPoolIncludedLists[0] ItemPoolListDefinition'GD_Itempools.ListDefs.BadassEnemyGunsAndGear'
-
-                    #</Badass Fire Archers>
-
-                    #<Badass Knights>
-
-                        level None set GD_Aster_Pop_Knights.Balance.PawnBalance_Knight_Badass DefaultItemPoolIncludedLists[0] ItemPoolListDefinition'GD_Itempools.ListDefs.BadassEnemyGunsAndGear'
-
-                    #</Badass Knights>
-
-                    #<Badass Yeti>
-
-                        level Xmas_P set GD_Allium_BadassYeti.Balance.PawnBalance_Allium_BadassYeti DefaultItemPoolIncludedLists[0] ItemPoolListDefinition'GD_Itempools.ListDefs.BadassEnemyGunsAndGear'
-
-                    #</Badass Yeti>
-
-                    #<Undead Badass Psychos>
-
-                        level Pumpkin_Patch_P set GD_Pop_HallowSkeleton.Balance.PawnBalance_BadassUndeadPsycho DefaultItemPoolIncludedLists[0] ItemPoolListDefinition'GD_Itempools.ListDefs.BadassEnemyGunsAndGear'
-
-                    #</Undead Badass Psychos>
-
-                #</Badass Enemy Fixes (Duplicate of UCP 4.1)>
 
             #</Better Badass Pool Definitions>
 
@@ -3898,63 +3809,6 @@ BL2
                     #</Sorcerer's Daughter>
 
                 #</Equalize Drop Probabilities>
-
-                #<Make Bosses Use Global Drop Probability Constants (duplicate of UCP 4.1)>
-
-                    # A few bosses had hardcoded probabilities for their unique drops,
-                    # rather than using the game's drop probability constants that basically
-                    # everything else in the game uses.  This section fixes that up.  (This
-                    # fix was also included in UCP 4.1, but we're keeping it in here too.)
-
-                    #<Badass Creeper>
-
-                        level Caverns_P set GD_Population_Creeper.Balance.PawnBalance_CreeperBadass DefaultItemPoolList[0].PoolProbability
-                        (
-                            BaseValueConstant=0.000000,
-                            BaseValueAttribute=AttributeDefinition'GD_Itempools.DropWeights.DropODDS_BossUniques',
-                            InitializationDefinition=None,
-                            BaseValueScaleConstant=1.250000
-                        )
-
-                    #</Badass Creeper>
-
-                    #<Big Sleep>
-
-                        level Orchid_Caves_P set GD_Orchid_Pop_Sandman.Balance.PawnBalance_Orchid_BigSleep DefaultItemPoolList[1].PoolProbability
-                        (
-                            BaseValueConstant=0,
-                            BaseValueAttribute=AttributeDefinition'GD_Itempools.DropWeights.DropODDS_BossUniqueRares',
-                            InitializationDefinition=None,
-                            BaseValueScaleConstant=1
-                        )
-
-                    #</Big Sleep>
-
-                    #<No-Beard>
-
-                        level Orchid_OasisTown_P set GD_Orchid_Pop_NoBeard.PawnBalance_Orchid_NoBeard DefaultItemPoolList[1].PoolProbability
-                        (
-                            BaseValueConstant=0,
-                            BaseValueAttribute=AttributeDefinition'GD_Itempools.DropWeights.DropODDS_BossUniqueRares',
-                            InitializationDefinition=None,
-                            BaseValueScaleConstant=1
-                        )
-
-                    #</No-Beard>
-
-                    #<Piston>
-
-                        level None set GD_Iris_Population_PistonBoss.Balance.Iris_PawnBalance_PistonBoss DefaultItemPoolList[2].PoolProbability
-                        (
-                            BaseValueConstant=0,
-                            BaseValueAttribute=AttributeDefinition'GD_Itempools.DropWeights.DropODDS_BossUniqueRares',
-                            InitializationDefinition=None,
-                            BaseValueScaleConstant=1
-                        )
-
-                    #</Piston>
-
-                #</Make Bosses Use Global Drop Probability Constants (duplicate of UCP 4.1)>
 
                 #<Tweak Gold Golem Pool>
 
@@ -6150,6 +6004,164 @@ BL2
             #</Raid Boss Drop Improvements>
 
         #</Better Enemy Drops>
+
+        #<UCP Duplicates>
+
+            # This section contains various statements which are duplicates of stuff
+            # that's in UCP already.  Mostly these are things which were in the original
+            # versions of Better Loot, and were added into UCP when 4.1 was released.
+            # There's no problem with having both active -- it just means that a few
+            # things will be executed twice.  I'm leaving them in here, though, because
+            # they're mostly fixes which should be in the base game itself, and that way
+            # people who don't use UCP will still get them.
+
+            #<Badass Enemy Fixes>
+
+                # Various "Badass" enemies in some DLCs were presumably accidentally set to
+                # pull from the standard enemy drop pool, rather than badass.  This section
+                # fixes those up.  UCP 4.1 added this in as a base feature, but we're
+                # keeping it in here regardless.
+
+                #<Badass Bedrock Bullymong>
+
+                    level None set GD_Population_PrimalBeast.Balance.PawnBalance_PrimalBeast_BedrockBadass DefaultItemPoolIncludedLists[0] ItemPoolListDefinition'GD_Itempools.ListDefs.BadassEnemyGunsAndGear'
+
+                #</Badass Bedrock Bullymong>
+
+                #<Badass Boroks>
+
+                    {mp:badass_borok_Corrosive}
+
+                    {mp:badass_borok_Fire}
+
+                    {mp:badass_borok_Shock}
+
+                    {mp:badass_borok_Slag}
+
+                #</Badass Boroks>
+
+                #<Badass Fire Archers>
+
+                    level None set GD_Aster_Pop_Knights.Balance.PawnBalance_Knight_BadassFireArcher DefaultItemPoolIncludedLists[0] ItemPoolListDefinition'GD_Itempools.ListDefs.BadassEnemyGunsAndGear'
+
+                #</Badass Fire Archers>
+
+                #<Badass Knights>
+
+                    level None set GD_Aster_Pop_Knights.Balance.PawnBalance_Knight_Badass DefaultItemPoolIncludedLists[0] ItemPoolListDefinition'GD_Itempools.ListDefs.BadassEnemyGunsAndGear'
+
+                #</Badass Knights>
+
+                #<Badass Yeti>
+
+                    level Xmas_P set GD_Allium_BadassYeti.Balance.PawnBalance_Allium_BadassYeti DefaultItemPoolIncludedLists[0] ItemPoolListDefinition'GD_Itempools.ListDefs.BadassEnemyGunsAndGear'
+
+                #</Badass Yeti>
+
+                #<Undead Badass Psychos>
+
+                    level Pumpkin_Patch_P set GD_Pop_HallowSkeleton.Balance.PawnBalance_BadassUndeadPsycho DefaultItemPoolIncludedLists[0] ItemPoolListDefinition'GD_Itempools.ListDefs.BadassEnemyGunsAndGear'
+
+                #</Undead Badass Psychos>
+
+                #<Wattle Gobbler Tributes>
+
+                    # Three tributes from the Wattle Gobler Headhunter Pack don't have
+                    # any drops defined, but the rest drop from the badass pool.  Fix that.
+                    # This was also fixed in the UCP 4.1 update, but we're going to leave
+                    # it in here as well.
+
+                    {mp:wattle_tribute_cynder}
+
+                    {mp:wattle_tribute_strip}
+
+                    {mp:wattle_tribute_flay}
+
+                #</Wattle Gobbler Tributes>
+
+            #</Badass Enemy Fixes>
+
+            #<Fix Broken Treasure Chest Shield Pools>
+
+                # Various chests in the game have a possible "Shields" item pool which will
+                # never actually trigger in-game because they include an invalid item in the
+                # pool.  This fixes the pool so that it can be chosen again.  This fix is now
+                # included as part of UCP 4.1, but we're leaving it in here anyway.
+
+                {mp:euphoria_fix_0}
+
+                {mp:euphoria_fix_1}
+
+                {mp:euphoria_fix_2}
+
+                {mp:euphoria_fix_3}
+
+                {mp:euphoria_fix_4}
+
+                {mp:euphoria_fix_5}
+
+                {mp:euphoria_fix_6}
+
+            #</Fix Broken Treasure Chest Shield Pools>
+
+            #<Make Bosses Use Global Drop Probability Constants>
+
+                # A few bosses had hardcoded probabilities for their unique drops,
+                # rather than using the game's drop probability constants that basically
+                # everything else in the game uses.  This section fixes that up.  (This
+                # fix was also included in UCP 4.1, but we're keeping it in here too.)
+
+                #<Badass Creeper>
+
+                    level Caverns_P set GD_Population_Creeper.Balance.PawnBalance_CreeperBadass DefaultItemPoolList[0].PoolProbability
+                    (
+                        BaseValueConstant=0.000000,
+                        BaseValueAttribute=AttributeDefinition'GD_Itempools.DropWeights.DropODDS_BossUniques',
+                        InitializationDefinition=None,
+                        BaseValueScaleConstant=1.250000
+                    )
+
+                #</Badass Creeper>
+
+                #<Big Sleep>
+
+                    level Orchid_Caves_P set GD_Orchid_Pop_Sandman.Balance.PawnBalance_Orchid_BigSleep DefaultItemPoolList[1].PoolProbability
+                    (
+                        BaseValueConstant=0,
+                        BaseValueAttribute=AttributeDefinition'GD_Itempools.DropWeights.DropODDS_BossUniqueRares',
+                        InitializationDefinition=None,
+                        BaseValueScaleConstant=1
+                    )
+
+                #</Big Sleep>
+
+                #<No-Beard>
+
+                    level Orchid_OasisTown_P set GD_Orchid_Pop_NoBeard.PawnBalance_Orchid_NoBeard DefaultItemPoolList[1].PoolProbability
+                    (
+                        BaseValueConstant=0,
+                        BaseValueAttribute=AttributeDefinition'GD_Itempools.DropWeights.DropODDS_BossUniqueRares',
+                        InitializationDefinition=None,
+                        BaseValueScaleConstant=1
+                    )
+
+                #</No-Beard>
+
+                #<Piston>
+
+                    level None set GD_Iris_Population_PistonBoss.Balance.Iris_PawnBalance_PistonBoss DefaultItemPoolList[2].PoolProbability
+                    (
+                        BaseValueConstant=0,
+                        BaseValueAttribute=AttributeDefinition'GD_Itempools.DropWeights.DropODDS_BossUniqueRares',
+                        InitializationDefinition=None,
+                        BaseValueScaleConstant=1
+                    )
+
+                #</Piston>
+
+            #</Make Bosses Use Global Drop Probability Constants>
+
+        #</UCP Duplicates>
 
     #</Base Mod Configuration>
 
