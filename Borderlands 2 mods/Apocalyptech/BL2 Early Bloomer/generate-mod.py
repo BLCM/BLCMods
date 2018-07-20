@@ -66,6 +66,7 @@ mod_name = 'BL2 Early Bloomer'
 mod_version = '1.1.0'
 input_filename = 'mod-input-file.txt'
 output_filename = '{}.blcm'.format(mod_name)
+source_output_filename = '{}-source.txt'.format(mod_name)
 
 # Hotfixes for compatibility with my "Better Loot" mod.  No ill effects if applied
 # without Better Loot installed!
@@ -167,3 +168,7 @@ with open(input_filename, 'r') as df:
         )
 mp.human_str_to_blcm_filename(mod_str, output_filename)
 print('Wrote mod file to {}'.format(output_filename))
+
+with open(source_output_filename, 'w') as df:
+    df.write(mod_str)
+print('Also wrote source file to {}, for inclusion in other of my own mods'.format(source_output_filename))
