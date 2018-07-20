@@ -1,54 +1,9 @@
         #<{section_label}>
 
-            #<Base Game (and most DLC bosses)>
-                
-                # This folder takes care of most of the bosses in the game.
+            set GD_Itempools.DropWeights.DropODDS_BossUniques:ConstantAttributeValueResolver_0 ConstantValue {unique_pct}
 
-                set GD_Itempools.DropWeights.DropODDS_BossUniques:ConstantAttributeValueResolver_0 ConstantValue {unique_pct}
+            set GD_Itempools.DropWeights.DropODDS_BossUniqueRares:ConstantAttributeValueResolver_0 ConstantValue {rare_pct}
 
-                set GD_Itempools.DropWeights.DropODDS_BossUniqueRares:ConstantAttributeValueResolver_0 ConstantValue {rare_pct}
-
-                set GD_Itempools.DropWeights.DropODDS_BossUniquesRareSpawnMonster:ConstantAttributeValueResolver_0 ConstantValue {unique_pct}
-
-            #</Base Game (and most DLC bosses)>
-
-            #<Captain Scarlett DLC>
-
-                # No-Beard and Big Sleep require some manual tweaking here
-
-                level Orchid_OasisTown_P set GD_Orchid_Pop_NoBeard.PawnBalance_Orchid_NoBeard DefaultItemPoolList[1].PoolProbability.BaseValueConstant {rare_pct}
-
-                level Orchid_Caves_P set GD_Orchid_Pop_Sandman.Balance.PawnBalance_Orchid_BigSleep DefaultItemPoolList[1].PoolProbability.BaseValueConstant {rare_pct}
-
-            #</Captain Scarlett DLC>
-
-            #<Torgue DLC>
-
-                level None set GD_Iris_Population_PistonBoss.Balance.Iris_PawnBalance_PistonBoss DefaultItemPoolList[2]
-                (
-                    ItemPool=ItemPoolDefinition'GD_Iris_ItemPools.EnemyDropPools.Pool_Weapons_Piston',
-                    PoolProbability=(
-                        BaseValueConstant={rare_pct},
-                        BaseValueAttribute=None,
-                        InitializationDefinition=None,
-                        BaseValueScaleConstant=1.000000
-                    )
-                )
-
-            #</Torgue DLC>
-
-            #<Tiny Tina DLC>
-
-                # The Gold Golem needs a bit of custom tweaking.
-
-                level Mines_P set GD_GolemGold.LootPools.Pool_GoldGolemRunnable BalancedItems[0].Probability
-                (
-                    BaseValueConstant=0.0,
-                    BaseValueAttribute=None,
-                    InitializationDefinition=None,
-                    BaseValueScaleConstant=0.0
-                )
-
-            #</Tiny Tina DLC>
+            set GD_Itempools.DropWeights.DropODDS_BossUniquesRareSpawnMonster:ConstantAttributeValueResolver_0 ConstantValue {unique_pct}
 
         #</{section_label}>

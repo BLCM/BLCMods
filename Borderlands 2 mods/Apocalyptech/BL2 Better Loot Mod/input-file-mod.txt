@@ -3796,69 +3796,147 @@ BL2
 
             #<Boss Drop Normalization>
 
-                #  Make loot pools for bosses have equal probabilities for all items
+                #<Equalize Drop Probabilities>
 
-                set GD_Itempools.Runnables.Pool_Sheriff BalancedItems
-                (
+                    # A couple of bosses have more than one unique item drop, but the drops
+                    # aren't weighted equally by default.  This section fixes that.
+
+                    #<Sheriff>
+
+                        set GD_Itempools.Runnables.Pool_Sheriff BalancedItems
+                        (
+                            (
+                                ItmPoolDefinition=None,
+                                InvBalanceDefinition=InventoryBalanceDefinition'GD_Artifacts.A_Item_Unique.A_Sheriff',
+                                Probability=(
+                                    BaseValueConstant=0.000000,
+                                    BaseValueAttribute=None,
+                                    InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',
+                                    BaseValueScaleConstant=1.000000
+                                ),
+                                bDropOnDeath=True
+                            ),
+                            (
+                                ItmPoolDefinition=None,
+                                InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_Pistol.A_Weapons_Unique.Pistol_Jakobs_3_Law',
+                                Probability=(
+                                    BaseValueConstant=0.000000,
+                                    BaseValueAttribute=None,
+                                    InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',
+                                    BaseValueScaleConstant=1.000000
+                                ),
+                                bDropOnDeath=True
+                            )
+                        )
+
+                    #</Sheriff>
+
+                    #<Ultimate Badass Varkid>
+
+                        set GD_Itempools.Runnables.Pool_UltimateBadassVarkid BalancedItems
+                        (
+                            (
+                                ItmPoolDefinition=None,
+                                InvBalanceDefinition=InventoryBalanceDefinition'GD_GrenadeMods.A_Item_Legendary.GM_Quasar',
+                                Probability=(
+                                    BaseValueConstant=0.000000,
+                                    BaseValueAttribute=None,
+                                    InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',
+                                    BaseValueScaleConstant=1.000000
+                                ),
+                                bDropOnDeath=True
+                            ),
+                            (
+                                ItmPoolDefinition=KeyedItemPoolDefinition'GD_CustomItemPools_MainGame.Rewards.YellowNinja',
+                                InvBalanceDefinition=None,
+                                Probability=(
+                                    BaseValueConstant=0.000000,
+                                    BaseValueAttribute=None,
+                                    InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',
+                                    BaseValueScaleConstant=1.000000
+                                ),
+                                bDropOnDeath=True
+                            )
+                        )
+
+                    #</Ultimate Badass Varkid>
+
+                    #<Sorcerer's Daughter>
+
+                        {mp:dragonkeep_sorcerersdaughter_normalize_0}
+
+                        {mp:dragonkeep_sorcerersdaughter_normalize_1}
+
+                        {mp:dragonkeep_sorcerersdaughter_normalize_2}
+
+                        {mp:dragonkeep_sorcerersdaughter_normalize_3}
+
+                    #</Sorcerer's Daughter>
+
+                #</Equalize Drop Probabilities>
+
+                #<Make Bosses Use Global Drop Probability Constants (duplicate of UCP 4.1)>
+
+                    # A few bosses had hardcoded probabilities for their unique drops,
+                    # rather than using the game's drop probability constants that basically
+                    # everything else in the game uses.  This section fixes that up.  (This
+                    # fix was also included in UCP 4.1, but we're keeping it in here too.)
+
+                    #<Big Sleep>
+
+                        level Orchid_Caves_P set GD_Orchid_Pop_Sandman.Balance.PawnBalance_Orchid_BigSleep DefaultItemPoolList[1].PoolProbability
+                        (
+                            BaseValueConstant=0,
+                            BaseValueAttribute=AttributeDefinition'GD_Itempools.DropWeights.DropODDS_BossUniqueRares',
+                            InitializationDefinition=None,
+                            BaseValueScaleConstant=1
+                        )
+
+                    #</Big Sleep>
+
+                    #<No-Beard>
+
+                        level Orchid_OasisTown_P set GD_Orchid_Pop_NoBeard.PawnBalance_Orchid_NoBeard DefaultItemPoolList[1].PoolProbability
+                        (
+                            BaseValueConstant=0,
+                            BaseValueAttribute=AttributeDefinition'GD_Itempools.DropWeights.DropODDS_BossUniqueRares',
+                            InitializationDefinition=None,
+                            BaseValueScaleConstant=1
+                        )
+
+                    #</No-Beard>
+
+                    #<Piston>
+
+                        level None set GD_Iris_Population_PistonBoss.Balance.Iris_PawnBalance_PistonBoss DefaultItemPoolList[2].PoolProbability
+                        (
+                            BaseValueConstant=0,
+                            BaseValueAttribute=AttributeDefinition'GD_Itempools.DropWeights.DropODDS_BossUniqueRares',
+                            InitializationDefinition=None,
+                            BaseValueScaleConstant=1
+                        )
+
+                    #</Piston>
+
+                #</Make Bosses Use Global Drop Probability Constants (duplicate of UCP 4.1)>
+
+                #<Tweak Gold Golem Pool>
+
+                    # Gold Golems drop from a few pools, but one of the entries in the
+                    # default pool is just the main Legendary pool.  Since we're already
+                    # buffing Legendaries in general with this mod, we're removing the
+                    # chance of the generic Legendary, in favor of the Gold Golem's specific
+                    # unique loot.
+
+                    level Mines_P set GD_GolemGold.LootPools.Pool_GoldGolemRunnable BalancedItems[0].Probability
                     (
-                        ItmPoolDefinition=None,
-                        InvBalanceDefinition=InventoryBalanceDefinition'GD_Artifacts.A_Item_Unique.A_Sheriff',
-                        Probability=(
-                            BaseValueConstant=0.000000,
-                            BaseValueAttribute=None,
-                            InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',
-                            BaseValueScaleConstant=1.000000
-                        ),
-                        bDropOnDeath=True
-                    ),
-                    (
-                        ItmPoolDefinition=None,
-                        InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_Pistol.A_Weapons_Unique.Pistol_Jakobs_3_Law',
-                        Probability=(
-                            BaseValueConstant=0.000000,
-                            BaseValueAttribute=None,
-                            InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',
-                            BaseValueScaleConstant=1.000000
-                        ),
-                        bDropOnDeath=True
+                        BaseValueConstant=0.0,
+                        BaseValueAttribute=None,
+                        InitializationDefinition=None,
+                        BaseValueScaleConstant=0.0
                     )
-                )
 
-                set GD_Itempools.Runnables.Pool_UltimateBadassVarkid BalancedItems
-                (
-                    (
-                        ItmPoolDefinition=None,
-                        InvBalanceDefinition=InventoryBalanceDefinition'GD_GrenadeMods.A_Item_Legendary.GM_Quasar',
-                        Probability=(
-                            BaseValueConstant=0.000000,
-                            BaseValueAttribute=None,
-                            InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',
-                            BaseValueScaleConstant=1.000000
-                        ),
-                        bDropOnDeath=True
-                    ),
-                    (
-                        ItmPoolDefinition=KeyedItemPoolDefinition'GD_CustomItemPools_MainGame.Rewards.YellowNinja',
-                        InvBalanceDefinition=None,
-                        Probability=(
-                            BaseValueConstant=0.000000,
-                            BaseValueAttribute=None,
-                            InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',
-                            BaseValueScaleConstant=1.000000
-                        ),
-                        bDropOnDeath=True
-                    )
-                )
-
-                # Hotfixes for the rest
-
-                {mp:dragonkeep_sorcerersdaughter_normalize_0}
-
-                {mp:dragonkeep_sorcerersdaughter_normalize_1}
-
-                {mp:dragonkeep_sorcerersdaughter_normalize_2}
-
-                {mp:dragonkeep_sorcerersdaughter_normalize_3}
+                #</Tweak Gold Golem Pool>
 
             #</Boss Drop Normalization>
 
