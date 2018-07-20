@@ -1169,15 +1169,54 @@ items = {
             ('seraphs_shadow', 30, 'GD_Aster_Artifacts.A_Item_Unique.A_SeraphShadow', 0.5),
             ],
         },
+    'gemstone': {
+        'GD_Itempools.WeaponPools.Pool_Weapons_AssaultRifles_05_VeryRare_Alien': [
+            ('ar_dahl', 3, 'GD_Aster_Weapons.AssaultRifles.AR_Dahl_4_Emerald', 1.2),
+            ('ar_bandit', 4, 'GD_Aster_Weapons.AssaultRifles.AR_Bandit_4_Quartz', 1.2),
+            ('ar_vladof', 5, 'GD_Aster_Weapons.AssaultRifles.AR_Vladof_4_Garnet', 1.2),
+            ('ar_jakobs', 6, 'GD_Aster_Weapons.AssaultRifles.AR_Jakobs_4_Citrine', 1.2),
+            ('ar_torgue', 7, 'GD_Aster_Weapons.AssaultRifles.AR_Torgue_4_Rock', 1.2),
+            ],
+        'GD_Itempools.WeaponPools.Pool_Weapons_Pistols_05_VeryRare_Alien': [
+            ('pistol_jakobs', 6, 'GD_Aster_Weapons.Pistols.Pistol_Jakobs_4_Citrine', 1),
+            ('pistol_hyperion', 7, 'GD_Aster_Weapons.Pistols.Pistol_Hyperion_4_Diamond', 1),
+            ('pistol_maliwan', 8, 'GD_Aster_Weapons.Pistols.Pistol_Maliwan_4_Aquamarine', 1),
+            ('pistol_vladof', 9, 'GD_Aster_Weapons.Pistols.Pistol_Vladof_4_Garnet', 1),
+            ('pistol_torgue', 10, 'GD_Aster_Weapons.Pistols.Pistol_Torgue_4_Rock', 1),
+            ],
+        'GD_Itempools.WeaponPools.Pool_Weapons_Shotguns_05_VeryRare_Alien': [
+            ('sg_torgue', 3, 'GD_Aster_Weapons.Shotguns.SG_Torgue_4_Rock', 1),
+            ('sg_hyperion', 4, 'GD_Aster_Weapons.Shotguns.SG_Hyperion_4_Diamond', 1),
+            ('sg_jakobs', 5, 'GD_Aster_Weapons.Shotguns.SG_Jakobs_4_Citrine', 1),
+            ('sg_tediore', 6, 'GD_Aster_Weapons.Shotguns.SG_Tediore_4_CubicZerconia', 1),
+            ('sg_bandit', 7, 'GD_Aster_Weapons.Shotguns.SG_Bandit_4_Quartz', 1),
+            ],
+        'GD_Itempools.WeaponPools.Pool_Weapons_SMG_05_VeryRare_Alien': [
+            ('smg_tediore', 5, 'GD_Aster_Weapons.SMGs.SMG_Tediore_4_CubicZerconia', 1),
+            ('smg_bandit', 6, 'GD_Aster_Weapons.SMGs.SMG_Bandit_4_Quartz', 1),
+            ('smg_hyperion', 7, 'GD_Aster_Weapons.SMGs.SMG_Hyperion_4_Diamond', 1),
+            ('smg_dahl', 8, 'GD_Aster_Weapons.SMGs.SMG_Dahl_4_Emerald', 1),
+            ],
+        'GD_Itempools.WeaponPools.Pool_Weapons_SniperRifles_05_VeryRare_Alien': [
+            ('sniper_jakobs', 4, 'GD_Aster_Weapons.Snipers.SR_Jakobs_4_Citrine', 1),
+            ('sniper_hyperion', 5, 'GD_Aster_Weapons.Snipers.SR_Hyperion_4_Diamond', 1),
+            ('sniper_dahl', 6, 'GD_Aster_Weapons.Snipers.SR_Dahl_4_Emerald', 1),
+            ('sniper_vladof', 7, 'GD_Aster_Weapons.Snipers.SR_Vladof_4_Garnet', 1),
+            ],
+        },
     }
 for (itemtype, itemdict) in items.items():
     for (pool, itemlist) in itemdict.items():
         for (label, index, itemname, scale) in itemlist:
+            if itemtype == 'gemstone':
+                invbalance = 'WeaponBalanceDefinition'
+            else:
+                invbalance = 'InventoryBalanceDefinition'
             mp.set_bi_item_pool('{}_{}'.format(itemtype, label),
                 pool,
                 index,
                 itemname,
-                invbalance='InventoryBalanceDefinition',
+                invbalance=invbalance,
                 scale=scale,
                 )
 

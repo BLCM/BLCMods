@@ -402,6 +402,9 @@ Changelog
    skin drop percentages, which made them an anomaly.
  * Converted to a nicer method of unlocking early-game weapon/item parts which should
    play more nicely with custom items (taken from BL2 Early Bloomer)
+ * Improved chances of dart/spiker spawns, since UCP4.1 gave them some reasonable buffs.
+   Still a bit less likely than gemstone pistols, though, if you have gemstones added
+   to the E-Tech pools.
  * Removed disabled-by-default categories which I'd had in there for my own testing
    purposes.  No real need to have them in there in the first place, and it just made
    checking/unchecking the mod fraught with potential unintended side effects.
