@@ -22,6 +22,8 @@
 				<comment># It's not really a "base" config -- at lot of the "meat" of the mod is in the</comment>
 				<comment># user-selectable areas, but I was at a loss for a better name for it.</comment>
 				<category name="Loot Pool Tweaks">
+					<comment># Note that more loot pool tweaks occur inside the "Drop Quality" section</comment>
+					<comment># down below.</comment>
 					<category name="Normalize Gun Type Drops">
 						<comment># In the vanilla game, pistols are the most likely drop, followed by</comment>
 						<comment># ARs/SMGs/Shotguns, then snipers, and then launchers.  This normalizes</comment>
@@ -153,7 +155,9 @@
 					</category>
 				</category>
 				<category name="Better Containers">
-					<comment># Improve the loot gained from various container types</comment>
+					<comment># Improve the loot gained from various container types.  Note that the main</comment>
+					<comment># treasure/epic chest pool tweaks happen in the "Drop Quality" section of the</comment>
+					<comment># mod, below.</comment>
 					<category name="Early Game Shotgun Chest">
 						<comment># Improves the early game shotgun chest slightly - have it pull from the</comment>
 						<comment># general shotgun pool, rather than Jakobs specifically.  This will have the</comment>
@@ -291,6 +295,8 @@
 					</category>
 				</category>
 				<category name="Better Enemy Drops">
+					<comment># Note that some more enemy drop tweaking happens in the "Drop Quality"</comment>
+					<comment># section, below.</comment>
 					<category name="Regular Enemy Drop Improvements">
 						<comment># There are a handful of enemy types which are somewhere between regular</comment>
 						<comment># enemies and Badasses, whose drop pools I felt could use a slight buff.</comment>
@@ -469,6 +475,9 @@
 						</category>
 					</category>
 					<category name="Better Badass Pool Definitions">
+						<comment># Improvements for a few badass-style enemies.  Note that improvements to</comment>
+						<comment># the main Badass pools happen inside the "Drop Quality" section, so check</comment>
+						<comment># there as well.</comment>
 						<category name="Chubby Enemies">
 							<comment># Unfortunately, this has to be done via Hotfix.  GD_Itempools.ListDefs.ChubbyEnemyGunsAndGear</comment>
 							<comment># is defined in the base files, and can be altered via "set", but Lobelia uses some kind of</comment>
@@ -2109,6 +2118,7 @@
 					<comment>#              Rare (blue):   33%</comment>
 					<comment>#       Very Rare (purple):   67%</comment>
 					<category name="Loot Pool Tweaks">
+						<comment># Note that more loot pool tweaks happen in the main mod section, as well.</comment>
 						<category name="Better Relic Drops">
 							<comment># Allow all legendary/unique/seraph relics to spawn from the main loot pool.</comment>
 							<comment># Note that there are two identical "rare" relic pools defined in the game:</comment>
@@ -2196,6 +2206,8 @@
 						</category>
 					</category>
 					<category name="Better Enemy Drops">
+						<comment># Note that the majority of the drop tweaks happen in the main section of</comment>
+						<comment># the mod.</comment>
 						<category name="Better Weighted Drop Pools">
 							<comment># Some enemies drop from "weighted" pools - for instance, Marauders are more</comment>
 							<comment># likely to drop SMGs.  We're leaving these weighted pools mostly alone, but</comment>
@@ -2216,6 +2228,10 @@
 							<comment># some of these special enemies, though that does NOT correspond to the</comment>
 							<comment># enemies which actually show up as "Super Badass" or "Ultimate Badass"</comment>
 							<comment># in the game.</comment>
+							<comment>#</comment>
+							<comment># Note that improvements to the Chubby/Tubby pool, and some other</comment>
+							<comment># fixes for Badass enemies happens out in the main mod section's Better</comment>
+							<comment># Enemy Drops category.</comment>
 							<category name="Badass Enemies">
 								<code profiles="default">set GD_Itempools.ListDefs.BadassEnemyGunsAndGear ItemPools ((ItemPool=ItemPoolDefinition'GD_Itempools.EnemyDropPools.Pool_GunsAndGear_05_VeryRare',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0.4)),(ItemPool=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_All_05_VeryRare_Alien',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0.4)),(ItemPool=ItemPoolDefinition'GD_Itempools.GeneralItemPools.Pool_GunsAndGear',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.Treasure_ChestPools.Pool_EpicChest_Weapons_GunsAndGear',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0.1)),(ItemPool=ItemPoolDefinition'GD_Itempools.VehicleSkins.Pool_VehicleSkins_All',PoolProbability=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'GD_Itempools.DropWeights.DropODDS_VehicleSkins',InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=KeyedItemPoolDefinition'GD_CustomItemPools_MainGame.Rewards.Head10',PoolProbability=(BaseValueConstant=0.005000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Money_1_BIG',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Eridium_Bar',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=AttributeDefinition'GD_Itempools.DropWeights.DropODDS_EridiumBar',InitializationDefinition=None,BaseValueScaleConstant=10.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Eridium_Stick',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Eridium_Stick',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0.500000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Health_All',PoolProbability=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'GD_Itempools.DropWeights.DropODDS_Health',InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Ammo_All_NeedOnly',PoolProbability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.WeightingPlayerCount.AmmoDrops_PerPlayer',BaseValueScaleConstant=0.500000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Ammo_All_Emergency',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))</code>
 								<code profiles="default">set GD_Itempools.ListDefs.BadassEnemyWeightedShotgun ItemPools ((ItemPool=ItemPoolDefinition'GD_Itempools.EnemyDropPools.Pool_GunsAndGear_04_Rare',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0.4)),(ItemPool=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_Shotguns_05_VeryRare',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0.4)),(ItemPool=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_All_05_VeryRare_Alien',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0.4)),(ItemPool=ItemPoolDefinition'GD_Itempools.GeneralItemPools.Pool_GunsAndGear',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.Treasure_ChestPools.Pool_EpicChest_Weapons_GunsAndGear',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0.1)),(ItemPool=ItemPoolDefinition'GD_Itempools.VehicleSkins.Pool_VehicleSkins_All',PoolProbability=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'GD_Itempools.DropWeights.DropODDS_VehicleSkins',InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=KeyedItemPoolDefinition'GD_CustomItemPools_MainGame.Rewards.Head10',PoolProbability=(BaseValueConstant=0.005000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Money_1_BIG',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Eridium_Bar',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=AttributeDefinition'GD_Itempools.DropWeights.DropODDS_EridiumBar',InitializationDefinition=None,BaseValueScaleConstant=10.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Eridium_Stick',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Eridium_Stick',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0.500000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Health_All',PoolProbability=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'GD_Itempools.DropWeights.DropODDS_Health',InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Ammo_All_NeedOnly',PoolProbability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.WeightingPlayerCount.AmmoDrops_PerPlayer',BaseValueScaleConstant=0.500000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Ammo_All_Emergency',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))</code>
@@ -2231,7 +2247,8 @@
 						</category>
 					</category>
 					<category name="Better Containers">
-						<comment># Improve the loot gained from various container types</comment>
+						<comment># Improve the loot gained from various container types.  Note that most of</comment>
+						<comment># the specific container tweaks happen in the main section of the mod.</comment>
 						<category name="Better Treasure Chests">
 							<comment># Makes regular treasure chests better: will only drop blue and higher,</comment>
 							<comment># and adds a decent chance to include a legendary.</comment>
@@ -2296,6 +2313,7 @@
 					<comment>#              Rare (blue):   67%</comment>
 					<comment>#       Very Rare (purple):   33%</comment>
 					<category name="Loot Pool Tweaks">
+						<comment># Note that more loot pool tweaks happen in the main mod section, as well.</comment>
 						<category name="Better Relic Drops">
 							<comment># Allow all legendary/unique/seraph relics to spawn from the main loot pool.</comment>
 							<comment># Note that there are two identical "rare" relic pools defined in the game:</comment>
@@ -2383,6 +2401,8 @@
 						</category>
 					</category>
 					<category name="Better Enemy Drops">
+						<comment># Note that the majority of the drop tweaks happen in the main section of</comment>
+						<comment># the mod.</comment>
 						<category name="Better Weighted Drop Pools">
 							<comment># Some enemies drop from "weighted" pools - for instance, Marauders are more</comment>
 							<comment># likely to drop SMGs.  We're leaving these weighted pools mostly alone, but</comment>
@@ -2403,6 +2423,10 @@
 							<comment># some of these special enemies, though that does NOT correspond to the</comment>
 							<comment># enemies which actually show up as "Super Badass" or "Ultimate Badass"</comment>
 							<comment># in the game.</comment>
+							<comment>#</comment>
+							<comment># Note that improvements to the Chubby/Tubby pool, and some other</comment>
+							<comment># fixes for Badass enemies happens out in the main mod section's Better</comment>
+							<comment># Enemy Drops category.</comment>
 							<category name="Badass Enemies">
 								<code profiles="">set GD_Itempools.ListDefs.BadassEnemyGunsAndGear ItemPools ((ItemPool=ItemPoolDefinition'GD_Itempools.EnemyDropPools.Pool_GunsAndGear_05_VeryRare',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0.2)),(ItemPool=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_All_05_VeryRare_Alien',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0.15)),(ItemPool=ItemPoolDefinition'GD_Itempools.GeneralItemPools.Pool_GunsAndGear',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.Treasure_ChestPools.Pool_EpicChest_Weapons_GunsAndGear',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0.1)),(ItemPool=ItemPoolDefinition'GD_Itempools.VehicleSkins.Pool_VehicleSkins_All',PoolProbability=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'GD_Itempools.DropWeights.DropODDS_VehicleSkins',InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=KeyedItemPoolDefinition'GD_CustomItemPools_MainGame.Rewards.Head10',PoolProbability=(BaseValueConstant=0.005000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Money_1_BIG',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Eridium_Bar',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=AttributeDefinition'GD_Itempools.DropWeights.DropODDS_EridiumBar',InitializationDefinition=None,BaseValueScaleConstant=10.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Eridium_Stick',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Eridium_Stick',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0.500000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Health_All',PoolProbability=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'GD_Itempools.DropWeights.DropODDS_Health',InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Ammo_All_NeedOnly',PoolProbability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.WeightingPlayerCount.AmmoDrops_PerPlayer',BaseValueScaleConstant=0.500000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Ammo_All_Emergency',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))</code>
 								<code profiles="">set GD_Itempools.ListDefs.BadassEnemyWeightedShotgun ItemPools ((ItemPool=ItemPoolDefinition'GD_Itempools.EnemyDropPools.Pool_GunsAndGear_04_Rare',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0.2)),(ItemPool=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_Shotguns_05_VeryRare',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0.2)),(ItemPool=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_All_05_VeryRare_Alien',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0.15)),(ItemPool=ItemPoolDefinition'GD_Itempools.GeneralItemPools.Pool_GunsAndGear',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.Treasure_ChestPools.Pool_EpicChest_Weapons_GunsAndGear',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0.1)),(ItemPool=ItemPoolDefinition'GD_Itempools.VehicleSkins.Pool_VehicleSkins_All',PoolProbability=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'GD_Itempools.DropWeights.DropODDS_VehicleSkins',InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=KeyedItemPoolDefinition'GD_CustomItemPools_MainGame.Rewards.Head10',PoolProbability=(BaseValueConstant=0.005000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Money_1_BIG',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Eridium_Bar',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=AttributeDefinition'GD_Itempools.DropWeights.DropODDS_EridiumBar',InitializationDefinition=None,BaseValueScaleConstant=10.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Eridium_Stick',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Eridium_Stick',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0.500000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Health_All',PoolProbability=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'GD_Itempools.DropWeights.DropODDS_Health',InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Ammo_All_NeedOnly',PoolProbability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.WeightingPlayerCount.AmmoDrops_PerPlayer',BaseValueScaleConstant=0.500000)),(ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Ammo_All_Emergency',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))</code>
@@ -2418,7 +2442,8 @@
 						</category>
 					</category>
 					<category name="Better Containers">
-						<comment># Improve the loot gained from various container types</comment>
+						<comment># Improve the loot gained from various container types.  Note that most of</comment>
+						<comment># the specific container tweaks happen in the main section of the mod.</comment>
 						<category name="Better Treasure Chests">
 							<comment># Makes regular treasure chests better: will only drop blue and higher,</comment>
 							<comment># and adds a decent chance to include a legendary.</comment>
