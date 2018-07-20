@@ -170,17 +170,8 @@ Compatibility
 
 ### UCP ###
 
-This mod is mostly compatible with UCP 4.1, with three known exceptions:
+This mod is mostly compatible with UCP 4.1, with one known exceptions:
 
-* "`Better Enemy Drops -> Raid Boss Drop Improvements -> Hyperius`" in this mod
-  will override UCP's "`Loot Pool & Drop Changes -> Specific Loot Changes -> Add
-  Black Hole and remove the Kiss of Death from Hyperius`"
-* "`Better Enemy Drops -> Raid Boss Drop Improvements -> Hyperius -> Clean Up
-  Seraph Pool`" in this mod will override the loot pool changes in UCP's
-  "`Loot Pool & Drop Changes -> Specific Loot Changes -> Increase Hyperius' Seraph
-  drop chance and add all DLC 1 Seraphs`".  Unselecting just "`Clean Up Seraph
-  Pool`" in this mod but leaving the rest of our Hyperius section intact
-  will still give a 100% drop rate for Seraphs on Hyperius.
 * "`Better Enemy Drops -> Better Miscellaneous Boss Drops -> Knuckledragger
   Improvements`" in this mod will override the Knuckledragger portion of UCP's
   "`Loot Pool & Drop Changes -> Specific Loot Changes -> Make Knuckle Dragger /
@@ -402,9 +393,12 @@ Changelog
  * Improved chances of dart/spiker spawns, since UCP4.1 gave them some reasonable buffs.
    Still a bit less likely than gemstone pistols, though, if you have gemstones added
    to the E-Tech pools.
- * Set BLNG loader to also drop Sledge's Shotgun, as UCP does, so that we're not
-   overriding that behavior for UCP users.  People not using UCP will just have to
-   cope with the extra shotgun drop chance.
+ * Removed UCP conflicts:
+   * Set BLNG loader to also drop Sledge's Shotgun, as UCP does, so that we're not
+     overriding that behavior for UCP users.  People not using UCP will just have to
+     cope with the extra shotgun drop chance.
+   * Set Hyperius to use UCP's changes (all DLC1 Seraph items, replacing Kiss of Death
+     with Black Hole)
  * Set Badass Creepers to use global drop probabilities for their unique gear (this
    is present in UCP 4.1 as well)
  * Removed disabled-by-default categories which I'd had in there for my own testing

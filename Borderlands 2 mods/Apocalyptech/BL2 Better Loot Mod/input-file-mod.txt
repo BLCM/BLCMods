@@ -3988,16 +3988,21 @@ BL2
                 # why Terramorphous, Vermivorous, and Son of Crawmerax don't have a
                 # section in here).
 
-                #<Hyperius (overrides UCP's "Add Black Hole and remove the Kiss of Death from Hyperius")>
+                #<Hyperius>
 
                     # For Hyperius, we're tweaking his Legendary and (optionally) Seraph pools,
                     # which were defined a bit weirdly in the base game.
 
-                    #<Clean Up Seraph Pool (overrides part of UCP's "Increase Hyperius' Seraph drop chance and add all DLC 1 Seraphs">
+                    #<Clean Up Seraph Pool>
 
-                        set GD_Orchid_ItemPools.Raid.Pool_Orchid_Raid1_PinkWeapons BalancedItems
+                        # Make sure that the Seraph pool only contains Seraph items.
+                        # Also, as UCP does, we're going to add in all DLC1 Seraph items to
+                        # here.  Using a level hotfix so that we don't trigger a full
+                        # overwrite warning in BLCMM when used in conjunction with UCP.
+
+                        level Orchid_Refinery_P set GD_Orchid_ItemPools.Raid.Pool_Orchid_Raid1_PinkWeapons BalancedItems
                         (
-                            ( 
+                            (
                                 ItmPoolDefinition=None,
                                 InvBalanceDefinition=WeaponBalanceDefinition'GD_Orchid_RaidWeapons.Pistol.Devastator.Orchid_Seraph_Devastator_Balance',
                                 Probability=(
@@ -4040,14 +4045,76 @@ BL2
                                     BaseValueScaleConstant=1.000000
                                 ),
                                 bDropOnDeath=True
+                            ),
+                            (
+                                ItmPoolDefinition=None,
+                                InvBalanceDefinition=InventoryBalanceDefinition'GD_Orchid_Artifacts.A_Item_Unique.A_SeraphBloodRelic',
+                                Probability=(
+                                    BaseValueConstant=1.000000,
+                                    BaseValueAttribute=None,
+                                    InitializationDefinition=None,
+                                    BaseValueScaleConstant=1.000000
+                                ),
+                                bDropOnDeath=True
+                            ),
+                            (
+                                ItmPoolDefinition=None,
+                                InvBalanceDefinition=WeaponBalanceDefinition'GD_Orchid_RaidWeapons.AssaultRifle.Seraphim.Orchid_Seraph_Seraphim_Balance',
+                                Probability=(
+                                    BaseValueConstant=1.000000,
+                                    BaseValueAttribute=None,
+                                    InitializationDefinition=None,
+                                    BaseValueScaleConstant=1.000000
+                                ),
+                                bDropOnDeath=True
+                            ),
+                            (
+                                ItmPoolDefinition=None,
+                                InvBalanceDefinition=WeaponBalanceDefinition'GD_Orchid_RaidWeapons.RPG.Ahab.Orchid_Seraph_Ahab_Balance',
+                                Probability=(
+                                    BaseValueConstant=1.000000,
+                                    BaseValueAttribute=None,
+                                    InitializationDefinition=None,
+                                    BaseValueScaleConstant=1.000000
+                                ),
+                                bDropOnDeath=True
+                            ),
+                            (
+                                ItmPoolDefinition=None,
+                                InvBalanceDefinition=InventoryBalanceDefinition'GD_Orchid_RaidWeapons.Shield.Anshin.Orchid_Seraph_Anshin_Shield_Balance',
+                                Probability=(
+                                    BaseValueConstant=1.000000,
+                                    BaseValueAttribute=None,
+                                    InitializationDefinition=None,
+                                    BaseValueScaleConstant=1.000000
+                                ),
+                                bDropOnDeath=True
+                            ),
+                            (
+                                ItmPoolDefinition=None,
+                                InvBalanceDefinition=WeaponBalanceDefinition'GD_Orchid_RaidWeapons.sniper.Patriot.Orchid_Seraph_Patriot_Balance',
+                                Probability=(
+                                    BaseValueConstant=1.000000,
+                                    BaseValueAttribute=None,
+                                    InitializationDefinition=None,
+                                    BaseValueScaleConstant=1.000000
+                                ),
+                                bDropOnDeath=True
                             )
                         )
 
-                    #</Clean Up Seraph Pool (overrides part of UCP's "Increase Hyperius' Seraph drop chance and add all DLC 1 Seraphs">
+                    #</Clean Up Seraph Pool>
 
                     #<Clean Up Legendary Pool>
 
-                        set GD_Orchid_ItemPools.Raid.Pool_Orchid_Raid1_Legendary BalancedItems
+                        # Make sure that the Legendary pool doesn't have seraphs in it,
+                        # and replaces Kiss of Death with Black Hole, as UCP does.
+                        # Additionally adds Pyrophobia, since the original Hyperius Seraph
+                        # pool includes Pyrophobia but it doesn't belong there.  Using a
+                        # level hotfix here so that we don't trigger a full overwrite
+                        # warning in BLCMM when used in conjunction with UCP.
+
+                        level Orchid_Refinery_P set GD_Orchid_ItemPools.Raid.Pool_Orchid_Raid1_Legendary BalancedItems
                         (
                             (
                                 ItmPoolDefinition=None,
@@ -4095,7 +4162,7 @@ BL2
                             ),
                             (
                                 ItmPoolDefinition=None,
-                                InvBalanceDefinition=InventoryBalanceDefinition'GD_GrenadeMods.A_Item_Custom.GM_KissOfDeath',
+                                InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_Shotgun.A_Weapons_Legendary.SG_Bandit_5_SledgesShotgun',
                                 Probability=(
                                     BaseValueConstant=1.000000,
                                     BaseValueAttribute=None,
@@ -4106,7 +4173,7 @@ BL2
                             ),
                             (
                                 ItmPoolDefinition=None,
-                                InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_Shotgun.A_Weapons_Legendary.SG_Bandit_5_SledgesShotgun',
+                                InvBalanceDefinition=InventoryBalanceDefinition'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Nova_Singularity',
                                 Probability=(
                                     BaseValueConstant=1.000000,
                                     BaseValueAttribute=None,
@@ -4137,8 +4204,8 @@ BL2
                             (
                                 ItemPool=ItemPoolDefinition'GD_Orchid_ItemPools.Raid.Pool_Orchid_Raid1_PinkWeapons',
                                 PoolProbability=(
-                                    BaseValueConstant=1.000000,
-                                    BaseValueAttribute=None,
+                                    BaseValueConstant=0.000000,
+                                    BaseValueAttribute=AttributeDefinition'GD_Itempools.DropWeights.DropODDS_BossUniques',
                                     InitializationDefinition=None,
                                     BaseValueScaleConstant=1.000000
                                 )
@@ -4146,8 +4213,8 @@ BL2
                             (
                                 ItemPool=ItemPoolDefinition'GD_Orchid_ItemPools.Raid.Pool_Orchid_Raid1_Legendary',
                                 PoolProbability=(
-                                    BaseValueConstant=1.000000,
-                                    BaseValueAttribute=None,
+                                    BaseValueConstant=0.000000,
+                                    BaseValueAttribute=AttributeDefinition'GD_Itempools.DropWeights.DropODDS_BossUniques',
                                     InitializationDefinition=None,
                                     BaseValueScaleConstant=1.000000
                                 )
@@ -4406,15 +4473,21 @@ BL2
                             )
                         )
 
-                        # We need to have a hotfix to ensure that Hyperius's Seraph pool
-                        # remains at 100%, to retain compatibility with UCP (which might
-                        # otherwise be "increasing" the drop chance).
+                        # Ensure that our Seraph pool stays at our configured value - UCP
+                        # has a statement which buffs the chance from stock, but we need
+                        # to re-override that with our own hotfix.
 
-                        level Orchid_Refinery_P set GD_Orchid_ItemPools.Raid.PoolList_Orchid_Raid1_Items Itempools[0].PoolProbability.BaseValueConstant 1.0
+                        level Orchid_Refinery_P set GD_Orchid_ItemPools.Raid.PoolList_Orchid_Raid1_Items Itempools[0].PoolProbability
+                        (
+                            BaseValueConstant=0.000000,
+                            BaseValueAttribute=AttributeDefinition'GD_Itempools.DropWeights.DropODDS_BossUniques',
+                            InitializationDefinition=None,
+                            BaseValueScaleConstant=1.000000
+                        )
 
                     #</Improve Main Drop Pool>
 
-                #</Hyperius (overrides UCP's "Add Black Hole and remove the Kiss of Death from Hyperius")>
+                #</Hyperius>
 
                 #<Master Gee>
 
