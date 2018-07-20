@@ -15,7 +15,9 @@ hope, on an item-by-item basis.  Basically every bullet point in the
 "Overview" section is its own "folder" once imported into FilterTool.
 
 **NOTE:** A few mods are known to do some weird things in conjunction with
-this mod.  See the "Compatibility" section below.
+this mod.  See the "Compatibility" section below.  **BL2 Reborn** in
+particular is known to cause crashes and other bad behavior, so definitely
+do not use this with BL2 Reborn.
 
 Usage/Installation
 ------------------
@@ -170,13 +172,14 @@ Compatibility
 
 ### UCP ###
 
-This mod is mostly compatible with UCP 4.1, with one known exceptions:
+This mod should be fully compatible with UCP 4.1.  It should also probably run
+fine without, though it's received less testing that way.
 
-* "`Better Enemy Drops -> Better Miscellaneous Boss Drops -> Knuckledragger
-  Improvements`" in this mod will override the Knuckledragger portion of UCP's
-  "`Loot Pool & Drop Changes -> Specific Loot Changes -> Make Knuckle Dragger /
-  Boll be able to world drop`".  Our version is more powerful (drops from the
-  badass pool, rather than standard).
+### BL2 Reborn ###
+
+This mod is **not** compatible with BL2 Reborn.  There are known crashes and
+other sorts of instability when trying to use the two together.  Avoid using
+the two at the same time!
 
 ### Shadowevil's "VaultHunter" mod
 
@@ -198,15 +201,15 @@ more frequently.  The best thing to do if using More Chubbies is probably to
 disable this mod's Chubby buffs, at least partially.  There are two toggles
 you can use in this mod:
 
-* `Better Enemy Drops -> Better Badass Pool Definitions -> Chubby Enemies`
-* `Better Enemy Drops -> Boss Drop Improved Quantities -> Chubby Enemies`
+* `Base Mod Configuration -> Better Enemy Drops -> Better Badass Pool Definitions -> Chubby Enemies`
+* `Boss Unique Drop Quantities -> X -> Chubby/Tubby Enemies`
 
 ### SirUmnei's "COM Overhaul Pack" (and possibly other mods which touch COMs)
 
 The COM Overhaul Pack, in conjunction with this mod, will end up creating
 items which will get deleted by Borderlands after you save/quit.  You should
-be able to avoid this by turning off this mod's `Loot Pool Tweaks -> Better
-Class Mod Rarity Drops -> Force Alignment COMs Blue And Higher`.
+be able to avoid this by turning off this mod's `Base Mod Configuration ->
+Loot Pool Tweaks -> Force Alignment COMs Blue And Higher`.
 
 ### Other Mods
 
