@@ -720,11 +720,6 @@ for borok in ['Corrosive', 'Fire', 'Shock', 'Slag']:
     mp.register_str('badass_borok_{}'.format(borok),
         "level None set GD_Sage_Pop_Rhino.Balance.PawnBalance_Sage_RhinoBadass{} DefaultItemPoolIncludedLists[0] ItemPoolListDefinition'GD_Itempools.ListDefs.BadassEnemyGunsAndGear'".format(borok))
 
-# Voracidous drop pool seraph crystal fix
-for idx in range(3):
-    mp.register_str('vorac_seraph_{}'.format(idx),
-        "level Sage_Cliffs_P set GD_Sage_ItemPools.Raid.PoolList_Sage_Raid_Items ItemPools[{}].ItemPool ItemPoolDefinition'GD_Sage_ItemPools.SeraphCrystal.Pool_SeraphCrystal_7_Drop'".format(idx))
-
 # Normalize the probabilities for the Sorcerer's Daughter legendary pool
 for num in range(4):
     mp.register_str('dragonkeep_sorcerersdaughter_normalize_{}'.format(num),
