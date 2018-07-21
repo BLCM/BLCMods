@@ -405,7 +405,7 @@ Changelog
    to the E-Tech pools.
  * Reduced drop chances of Treants dropping the Bee, and of the Skeleton Kings dropping
    the Emperor (so long as UCP is active, in the latter case)
- * Removed UCP conflicts:
+ * Resolved conflicts with UCP:
    * Set BLNG loader to also drop Sledge's Shotgun, as UCP does, so that we're not
      overriding that behavior for UCP users.  People not using UCP will just have to
      cope with the extra shotgun drop chance.
