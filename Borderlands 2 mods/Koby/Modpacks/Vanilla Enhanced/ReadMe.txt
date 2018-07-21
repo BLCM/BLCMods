@@ -1,6 +1,6 @@
 This modpack is basically a very light version of the Unofficial Community Patch which only contains fixes and visual changes.
 
-Optional Changes at the bottom can be enabled with the Filter Tool.
+Optional Changes at the bottom can be enabled with BLCMM.
 
 Image Album https://captainkoby.imgur.com/
 
@@ -19,6 +19,6 @@ Special thanks to Mopioid for giving me opinions on selected modules.
 
 -----------------------------------------------------------------------------------------------------------
 
-If you need any help, head over to Shadow's Discord and ping me (@Koby) in the #patch-questions channel 
+If you need any help, head over to Shadow's Discord and ping me (@Koby) in the #patch-mod-troubleshooting channel 
 discord.gg/shadowevil
 

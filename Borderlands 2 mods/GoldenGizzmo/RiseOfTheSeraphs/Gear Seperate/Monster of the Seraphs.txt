@@ -1,0 +1,43 @@
+# Monster of the Seraphs
+# Created by GoldenGizzmo
+
+# NOTE: This mod uses hotfixes, you must add this as a mod in filter tool for the drops to work.
+
+# Replaces the Afterburner Relic
+# Due to Might of the Seraphs being a pain to edit, it's been swapped with Afterburner
+# The quest is fixed
+# Dealing damage heals the user, similar to Moxxi weapons
+# Made to compete with the Bone of the Ancients
+
+# A picture
+# https://imgur.com/bvcWHkR
+
+# Each relic in my pack is based off one of the original Vault Hunters.
+# This one is based off Maya.
+
+-- Rename and RedText --
+
+set GD_Artifacts.A_Item_Unique.Artifact_Afterburner ItemName Monster of the Seraphs
+set GD_Artifacts.Body.Body_Afterburner:AttributePresentationDefinition_0 Description Who said life was fair?<br><font color="#ffffff">[funstat][skill]Damage dealt[-skill] restores [health]health[-health].
+
+-- Stats --
+
+set GD_Artifacts.A_Item_Unique.Artifact_Afterburner UIStatList ((bDisplayAsModifierOnly=True,AttributeStyle=ATTRSTYLE_ModifierText,SupplementalAttributeStyle=ATTRSTYLE_JustNumber,StatCombinationMethod=SCM_Multiply,Attribute=AttributeDefinition'D_Attributes.DamageEnhancementModifiers.PlayerConvertDamageToHealingPercent',ConstraintAttribute=None,SupplementalAttributeExpression=(AttributeOperand1=None,ComparisonOperator=OPERATOR_EqualTo,Operand2Usage=OPERAND_PreferAttribute,AttributeOperand2=None,ConstantOperand2=0.000000),SupplementalAttributeToAppend=None)))
+set GD_Artifacts.A_Item_Unique.Artifact_Afterburner AttributeSlotEffects ((SlotName="Effect1",bExternalSlot=True,bRunEffectsAsSkill=True,AttributeToModify=AttributeDefinition'D_Attributes.DamageEnhancementModifiers.PlayerConvertDamageToHealingPercent',ConstraintAttribute=None,ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Artifacts.BalanceAttributes.Init_ModifierBase_Linear',BaseValueScaleConstant=0.000325),PerGradeUpgrade=(BaseValueConstant=0.010000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0.001000),bIncludeInFunStats=False,bIncludeAlliesAsTarget=False,bEnforceMinimumGrade=True,bEnforceMaximumGrade=False,MinimumGrade=0,MaximumGrade=0,TargetInstanceDataName=))
+set GD_Artifacts.A_Item_Unique.Artifact_Afterburner AttributeSlotUpgrades ((SlotName="Effect1",GradeIncrease=0,bActivateSlot=True))
+set GD_AttributePresentation.Damage.AttrPresent_InstigatedIncendiaryStatusChanceModifier Attribute AttributeDefinition'D_Attributes.DamageEnhancementModifiers.PlayerConvertDamageToHealingPercent'
+set GD_AttributePresentation.Damage.AttrPresent_InstigatedIncendiaryStatusChanceModifier Description Life Steal
+set GD_AttributePresentation.Damage.AttrPresent_InstigatedIncendiaryStatusChanceModifier bIncludeSuffixInTranslation False
+set GD_AttributePresentation.Damage.AttrPresent_InstigatedIncendiaryStatusChanceModifier bIncludePrefixInTranslation False
+set GD_AttributePresentation.Damage.AttrPresent_InstigatedIncendiaryStatusChanceModifier bDisplayAsPercentage False
+set GD_AttributePresentation.Damage.AttrPresent_InstigatedIncendiaryStatusChanceModifier bDontDisplayNumber True
+set GD_AttributePresentation.Damage.AttrPresent_InstigatedIncendiaryStatusChanceModifier bDontDisplayPlusSign False
+set GD_AttributePresentation.Damage.AttrPresent_InstigatedIncendiaryStatusChanceModifier bEnableTextColor False
+set GD_Artifacts.Body.Body_Afterburner GestaltModeSkeletalMeshName Type_Healthbuff
+set GD_Artifacts.Body.Body_Afterburner:AttributePresentationDefinition_0 TextColor (B=70,G=70,R=220,A=255)
+set GD_Artifacts.Body.Body_Afterburner MaterialVectorParameterValues ((ParameterName="p_EmissiveColor",ParameterValue=(R=0.000000,G=3.000000,B=0.000000,A=1.000000),ExpressionGUID=(A=0,B=0,C=0,D=0)),(ParameterName="Ring_ScaleSpeedOffset",ParameterValue=(R=0.000000,G=0.450000,B=0.645000,A=1.000000),ExpressionGUID=(A=0,B=0,C=0,D=0)))
+set GD_Artifacts.Body.Body_Afterburner rarity (BaseValueConstant=498.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+
+ #<hotfix><key>"SparkLevelPatchEntry-NoAfterburnerReward1"</key><value>",GD_Z3_PositiveSelfImage.M_PositiveSelfImage,Reward,,(ExperienceRewardPercentage=(BaseValueConstant=0.100000,BaseValueAttribute=AttributeDefinition'GD_MissionRewardBalance.XP.XPReward_03_Medium',InitializationDefinition=None,BaseValueScaleConstant=1.000000),CurrencyRewardType=CURRENCY_Credits,CreditRewardMultiplier=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),OtherCurrencyReward=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),RewardItems=(InventoryBalanceDefinition'GD_Artifacts.A_Item.A_Strength_Rare'),RewardItemPools=)"</value><on>
+
+#<hotfix><key>"SparkLevelPatchEntry-AfterburnerInVendor1"</key><value>",GD_Iris_ItemPools.SeraphCrystalVendor.ShopPool_SeraphCrystalVendorPool2,BalancedItems,,((ItmPoolDefinition=None,InvBalanceDefinition=InventoryBalanceDefinition'GD_Artifacts.A_Item_Unique.A_Afterburner',Probability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bDropOnDeath=True))"</value><on>

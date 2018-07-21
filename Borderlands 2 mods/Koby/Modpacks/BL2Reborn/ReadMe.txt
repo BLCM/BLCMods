@@ -1,8 +1,13 @@
+!!!I'M REROUTING ALL DISCUSSION, HELP AND SUPPORT AS WELL AS ANNOUNCEMENTS TO MY PERSONAL DISCORD SERVER: https://discord.gg/3dNR4zD  !!!
+
+!!! THIS PROJECT'S DEVELOPMENT IS STOPPED UNTIL FURTHER NOTICE; READ HERE: https://i.imgur.com/ZJBAErX.png !!!
+
+
 If you want to experience Borderlands 2 in a new way, this modpack is exactly for you.
 
 !!!THE UCP IS INCLUDED IN THIS STOP MERGING THE UCP INTO BL2 REBORN PLEASE READ THE MODLIST LOL!!!
 
-The version 1.3 is in BETA and features some additional features and was fully build from scratch with BLCMM. Please report any bugs and anomalies to @Koby in Discord.
+The version 1.3.2 is in BETA and features some additional features and was fully build from scratch with BLCMM. Please report any bugs and anomalies to @Koby in Discord.
 
 Download the modpack by rightclicking the "Download" button in "BL2RebornBETA.txt" and "Save link as...".
 
@@ -36,5 +41,4 @@ I also !!!HIGHLY!!! recommend using the Hex Multitool to disable Sanity Checks w
 If you need help using BLCMM on BL2 Reborn, check out my video on it (outdated but should still work)
 https://youtu.be/jOL_Vlb2PN4
 
-If there's no other way, head over to Shadow's Discord and ping me (@Koby) in the #patch-mod-troubleshooting channel 
-discord.gg/shadowevil
+If there's no other way, head over to my Discord and ping me (@Koby) in the #bl2-reborn-discussion channel https://discord.gg/3dNR4zD

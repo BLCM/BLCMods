@@ -20,26 +20,19 @@ drop their shields, whereas the Stalkers in this mod will not.
 Requirements
 ------------
 
-This mod should be able to be used mostly on its own, but it does require
-one specific category of UCP to be active:
-
-* `Loot Pool & Drop Changes -> Skinpool Fixes (Don't uncheck this)`
-
-This is required to free up the custom loot pools that we use to equip
-stalkers with.  If for whatever reason you'd like to run this mod by itself
-without UCP, make sure to at least enable/copy that folder over.
+As of v1.1, this mod should be able to be used on its own, and does not
+require any UCP config to run.
 
 Usage/Installation
 ------------------
 
-This mod must be imported into FilterTool/BLCMM with `Developer tools` ->
-`Add single mod`.  Choose the file `Stalkers Use Shields.txt` and
-have at it!
+This mod must be imported into BLCMM using `File -> Import single mod`.
+Choose the file `Stalkers Use Shields.blcm` and have at it!
 
 ### Configuration
 
 The three main categories contain some options to customize shield quality
-in various ways, when loaded into FilterTool/BLCMM:
+in various ways, when loaded into BLCMM:
 
 * **Legendary Pool Setup**: Stalkers have the ability to use legendary
   shields, and as with my Better Loot and Cold Dead Hands mods, this
@@ -64,8 +57,8 @@ in various ways, when loaded into FilterTool/BLCMM:
 Compatibility
 -------------
 
-This mod is compatible with UCP, and in fact requires that UCP's skinpool
-changes be in place.
+This mod is compatible with UCP, and should in general be compatible with
+anything which isn't also changing Stalker equipment.
 
 The mod can be used at the same time as my Cold Dead Hands mod, though
 there's not much reason since it's already included inside Cold Dead Hands.
@@ -78,18 +71,23 @@ Mod Construction / Implementation Details
 *(This section is only relevant for someone looking to edit the mod in the
 same way I do, or just someone curious about my mod construction techniques.
 If you're just looking to run the mod, see the "Usage" section above.  The
-mod can, of course, be edited directly in FilterTool/BLCMM as well, once it's
+mod can, of course, be edited directly in BLCMM as well, once it's
 been imported.)*
 
-This mod is actually generated using a simple little Python script named
-`generate-source.py`.  The script makes use of `hotfix.py` from the parent
-directory.  You'd need to copy (or symlink, if you're on Mac or Linux)
-`hotfix.py` into this directory in order to run the script.
+This mod is actually generated using a Python script named `generate-mod.py`.
+The script makes use of `modprocessor.py` from the parent directory.  You'd
+need to copy (or symlink, if you're on Mac or Linux) `modprocessor.py` into
+this directory in order to run the script.
 
-To generate the end result file, I actually run the small shell script
-`create.sh` in this directory, which just does the following:
+Bugs
+====
 
-    ./generate-source.py && ../conv_to_mod.py -f "Stalkers Use Shields"
+Known issues with the mod:
+
+* As a side-effect of the way we have to make use of loot pools, skin drops
+  from various enemies will be broken (it's that or break skin rewards for
+  challenges/missions).  This mod breaks skin drops for skags and
+  chubbies/tubbies.
 
 Licenses
 ========
@@ -106,6 +104,13 @@ for the full text.
 
 Changelog
 =========
+
+**v1.1.0** - July 18, 2018
+ * Converted to BLCM format *(Requires BLCMM now, will not work with FilterTool)*
+ * Update to use the same skinpools as BL2 Cold Dead Hands
+ * Include skinpool reassignments, so no part of UCP is required
+ * Cosmetic change: Condensed the rarity choice comments so that regular
+   and badass enemy equip chances are printed on the same line.
 
 **v1.0.0** - June 2, 2018
  * Initial Release
