@@ -189,21 +189,18 @@ this is disabled by default.
 Compatibility
 =============
 
-UCP
----
+### UCP
 
 This mod should be fully compatible with UCP 4.1.  It should also probably run
 fine without, though it's received less testing that way.
 
-BL2 Reborn
-----------
+### BL2 Reborn
 
 This mod is **not** compatible with BL2 Reborn.  There are known crashes and
 other sorts of instability when trying to use the two together.  Avoid using
 the two at the same time!
 
-Shadowevil's "VaultHunter" mod
-------------------------------
+### Shadowevil's "VaultHunter" mod
 
 This mod and Shadowevil's "VaultHunter" mod, which creates a Legendary-level
 Vault Hunter's Relic, don't play very well together, especially with Raid boss
@@ -215,8 +212,7 @@ I'm pretty sure that this mod makes the vanilla game's "Vault Hunter's
 Relic" completely useless, but if you're using this mod, you certainly
 won't miss it.
 
-Hemaxhu's "More Chubbies" mod
------------------------------
+### Hemaxhu's "More Chubbies" mod
 
 Hemaxhu's "More Chubbies" mod isn't *incompatible* with this one, but you
 will almost certainly find it to be quite excessive if Chubbies are spawning
@@ -227,16 +223,14 @@ you can use in this mod:
 * `Base Mod Configuration -> Better Enemy Drops -> Better Badass Pool Definitions -> Chubby Enemies`
 * `Boss Unique Drop Quantities -> X -> Chubby/Tubby Enemies`
 
-SirUmnei's "COM Overhaul Pack" (and possibly other mods which touch COMs)
--------------------------------------------------------------------------
+### SirUmnei's "COM Overhaul Pack" (and possibly other mods which touch COMs)
 
 The COM Overhaul Pack, in conjunction with this mod, will end up creating
 items which will get deleted by Borderlands after you save/quit.  You should
 be able to avoid this by turning off this mod's `Base Mod Configuration ->
 Loot Pool Tweaks -> Force Alignment COMs Blue And Higher`.
 
-Other Mods
-----------
+### Other Mods
 
 Obviously this mod will conflict with other mods which play with the same
 variables.  I know that Hemaxhu's "Better White Chests" would conflict with
