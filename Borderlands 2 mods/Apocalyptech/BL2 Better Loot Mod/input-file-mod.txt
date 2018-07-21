@@ -20,6 +20,33 @@ BL2
         # It's not really a "base" config -- at lot of the "meat" of the mod is in the
         # user-selectable areas, but I was at a loss for a better name for it.
 
+        #<Base Early Game Unlocks><lock>
+
+            # There are problems with early-game loot if we don't unlock at least SOME
+            # weapon/gear tiers earlier than the game intends.  We're forcing the game to
+            # unlock everything from the beginning as if you're already at level seven.
+            # UCP does some of this but skips some of the intermediate levels, which
+            # can cause problems for us.  So, we're locking this category so that breakage
+            # can't happen.  (One of the more egregious problems is the shotgun not
+            # spawning in the Hyperion barge at the end of Windshear Waste, which can
+            # block mission progress.  Another solution there would be to just not improve
+            # that chest, of course, but we'd still have issues with other early-game
+            # drops.)
+
+            set GD_Itempools.Scheduling.Gamestage_02:ConstantAttributeValueResolver_0 ConstantValue 1
+
+            set GD_Itempools.Scheduling.Gamestage_03:ConstantAttributeValueResolver_0 ConstantValue 1
+
+            set GD_Itempools.Scheduling.Gamestage_04:ConstantAttributeValueResolver_0 ConstantValue 1
+
+            set GD_Itempools.Scheduling.Gamestage_05:ConstantAttributeValueResolver_0 ConstantValue 1
+
+            set GD_Itempools.Scheduling.Gamestage_06:ConstantAttributeValueResolver_0 ConstantValue 1
+
+            set GD_Itempools.Scheduling.Gamestage_07:ConstantAttributeValueResolver_0 ConstantValue 1
+
+        #</Base Early Game Unlocks>
+
         #<Loot Pool Tweaks>
 
             # Note that more loot pool tweaks occur inside the "Drop Quality" section
@@ -8332,7 +8359,8 @@ BL2
         # allows Relics, Class Mods, all shield types, all grenade types, and probably
         # just about everything to spawn from the beginning.
         #
-        # Copied from BL2 Early Bloomer v1.1.1 by Apocalyptech
+        # Copied from BL2 Early Bloomer v1.1.1 by Apocalyptech, though with a few of the
+        # unlocks moved into the main mod section.
         #
         # This section is already also included in BL2 Cold Dead Hands, but there's no problem
         # with having it enabled in both.

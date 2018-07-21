@@ -407,6 +407,8 @@ Changelog
      with Black Hole)
  * Set Badass Creepers to use global drop probabilities for their unique gear (this
    is present in UCP 4.1 as well)
+ * Force some early-game gear unlocks, to prevent the first chest at the end of
+   Windshear Waste from being empty of gear, thus blocking mission progress.
  * Removed disabled-by-default categories which I'd had in there for my own testing
    purposes.  No real need to have them in there in the first place, and it just made
    checking/unchecking the mod fraught with potential unintended side effects.
