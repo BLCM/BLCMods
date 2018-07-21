@@ -26,6 +26,7 @@ do not use this with BL2 Reborn.
 * [Compatibility](#compatibility)
   * [UCP](#ucp)
   * [BL2 Reborn](#bl2-reborn)
+  * [BL2 Cold Dead Hands](#bl2-cold-dead-hands)
   * [Shadowevil's "VaultHunter" mod](#shadowevils-vaulthunter-mod)
   * [Hemaxhu's "More Chubbies" mod](#hemaxhus-more-chubbies-mod)
   * [SirUmnei's "COM Overhaul Pack"](#sirumneis-com-overhaul-pack-and-possibly-other-mods-which-touch-coms)
@@ -220,6 +221,16 @@ fine without, though it's received less testing that way.
 This mod is **not** compatible with BL2 Reborn.  There are known crashes and
 other sorts of instability when trying to use the two together.  Avoid using
 the two at the same time!
+
+### BL2 Cold Dead Hands
+
+These two mods actually work real well together.  Cold Dead Hands does override
+a lot of what Better Loot does, so huge areas of this mod don't actually do
+anything when CDH is active, but CDH only touches weapons+shields.  So if you
+use both together, you'll be able to get the Better Loot benefits for COMs,
+Grenades, Relics, etc.  I tend to use both of them together, myself.  Just make
+sure to have Cold Dead Hands *after* Better Loot in your mod list, so that
+it overrides things properly.
 
 ### Shadowevil's "VaultHunter" mod
 
