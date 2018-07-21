@@ -372,7 +372,7 @@ class ConfigLootsplosion(ConfigBase):
     ultimate_badass_pool_epicchest_2 = 0.5
     ultimate_badass_pool_epicchest_3 = 0.5
 
-class ConfigReasonable(ConfigLootsplosion):
+class ConfigReasonable(ConfigBase):
     """
     Alternate config which has slightly-more-reasonable drop rates for stuff
     like legendaries.  Unsurprisingly, most folks find my default values a
