@@ -58,7 +58,7 @@ loot_drop_quantity = 5
 
 # Force Pool_GunsAndGear to always drop the specified pool, if `force_gunsandgear_drop`
 # is True.  Useful for testing out how individual pools are behaving.
-force_gunsandgear_drop = True
+force_gunsandgear_drop = False
 force_gunsandgear_drop_type = 'GD_Itempools.WeaponPools.Pool_Weapons_All_05_VeryRare_Alien'
 
 # Force Pool_GunsAndGear to always drop the specified item, if

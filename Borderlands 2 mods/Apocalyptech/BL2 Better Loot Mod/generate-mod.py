@@ -380,7 +380,7 @@ class ConfigVeryGood(ConfigBase):
 
     profile_name = 'Very Good'
     profile_name_orig = None
-    profile_desc = 'Something for inbetween the former "Lootsplosion" and "Reasonable" presets.'
+    profile_desc = 'Inbetween the former "Lootsplosion" and "Reasonable" presets.'
 
     # Weapon drops
     weapon_base_common = 15
@@ -469,7 +469,7 @@ class ConfigGood(ConfigBase):
 
     profile_name = 'Good'
     profile_name_orig = 'Reasonable'
-    profile_desc = 'Original "Reasonable" presets.  Attempts to be somewhat restrained still.'
+    profile_desc = 'Original "Reasonable" presets.  Attempts to be somewhat restrained.'
 
     # Weapon drops
     weapon_base_common = 32.75
@@ -648,7 +648,7 @@ class ConfigStock(ConfigBase):
 
     profile_name = 'Stock-ish'
     profile_name_orig = None
-    profile_desc = 'This is not *actually* stock values, but it\'s somewhat close.'
+    profile_desc = 'This is not *actually* stock values, but it\'s somewhat close.  Not recommended, but You Do You(tm).'
 
     # Weapon drops
     weapon_base_common = 75
