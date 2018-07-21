@@ -125,40 +125,37 @@ Specifically, this mod does the following:
     which has been fixed:
     * Badass Bedrock Bullymongs
     * Badass Boroks
-    * Badass Knights
     * Badass Fire Archers
-    * Undead Badass Psychos
+    * Badass Knights
     * Badass Yeti
+    * Undead Badass Psychos
+    * Wattle Gobble Tributes *(three out of the twelve weren't set to drop anything)*
   * A few more standard enemies have also been set to drop from the badass pool:
-    * Knuckledragger
-    * Shirtlesss Men
-    * Gluttonous Thresher *(actually drops from the "super" badass pool)*
-    * Sinkhole
-    * Rakkman
-    * Mick Zaford
-    * Papa/Jimbo Hodunk
-    * Jack's Body Double
-    * Deputy Winger
-    * Mortar
-    * Bonehead 2.0
-    * Roscoe
-    * Bulstross
     * Arguk the Butcher
-    * Skeleton Giants *(as if the Dragon Keep DLC needed more loot)*
-    * Individual Handsome Sorcerer stage bosses
-    * Bridget Hodunk and Colin Zaford *(from the Wedding Day Massacre Headhunter Pack)*
+    * Bonehead 2.0
+    * Bridget Hodunk and Colin Zaford
+    * Bulstross
+    * Deputy Winger
     * Giant Craboid
+    * Gluttonous Thresher *(actually drops from the "super" badass pool)*
+    * Individual Handsome Sorcerer stage bosses
+    * Jack's Body Double
+    * Knuckledragger
+    * Mick Zaford
+    * Mortar
+    * Papa/Jimbo Hodunk
+    * Rakkman
+    * Roscoe
+    * Shirtlesss Men
+    * Sinkhole
+    * Skeleton Giants
   * Then a few other tweaks to certain enemies:
     * Laney's Dwarf companions will drop crystals, and have a good chance of dropping
       a gemstone weapon between 'em.
-    * The Warrior's non-unique drops have been improved slightly *(though they were
-      already pretty good with our other buffs)*.
+    * The Warrior's non-unique drops have been improved slightly
     * Witch Doctors (both in Big Game Hunt and Son of Crawmerax) will drop an Eridium
       stick, and have a pretty good chance of dropping a Relic as well.
     * Elite Savages are guaranteed to drop loot (though just from the standard pool)
-    * In the vanilla game, the Tributes from the Wattle Gobbler Headhunter Pack are
-      mostly set to drop from the badadss loot pool, but three weren't set to drop any
-      loot at all.  This mod fixes the three to match all the others.
     * The Loot Leprechaun (from Wedding Day Massacre) will drop from the Epic Chest
       pool, rather than the regular treasure chest pool.
     * The BLNG Loader (from Wedding Day Massacre) will drop from the badass pool and
@@ -167,17 +164,17 @@ Specifically, this mod does the following:
 * Improved gifts received in The Talon of God (from Sanctuary residents) to
   be purples and gemstones.
 * Remove early-game loot restrictions.  This is actually a superset of the
-  similar feature already present in UCP.  This version enables spawning
-  of basically everything from the beginning, including all grenade types,
-  relics, class mods, rocket launchers, etc.  Both this and the UCP
-  "Remove Loot restriction in the beginning areas" mods can be active at the
-  same time with no ill effects -- it'll just mean that the relevant commands
-  get executed twice.
+  similar feature already present in UCP, and is copied from my own BL2 Early Bloomer
+  mod.  This version enables spawning of basically everything from the beginning,
+  including all grenade types, relics, class mods, rocket launchers, etc.  Both
+  this and the UCP "Remove Loot restriction in the beginning areas" section, and
+  even Early Bloomer itself, can be active at the same time with no ill effects --
+  it'll just mean that the relevant commands get executed twice.
 
 ### Configuration
 
 There are a few categories in the mod which are explicitly intended to be
-user-changeable.
+user-changeable:
 
 * **Remove Level-Based Loot Restrictions** - This is active by default, and allows
   basically all item/weapon types, elements, grenades, COMs, etc, from the very
