@@ -475,19 +475,19 @@ class QtyExcellent(Config):
     qty_index = 'excellent'
     qty_label = 'Excellent Drop Quantities (formerly "Lootsplosion")'
 
-    quantity_default_two = '2'
-    quantity_default_three = '3'
+    quantity_default_two = 2
+    quantity_default_three = 3
 
-    quantity_chubby = '4'
-    quantity_terra = '7'
-    quantity_vermivorous = '5'
-    quantity_warrior = '8'
-    quantity_hyperius_legendary = '7'
-    quantity_hyperius_seraph = '4'
-    quantity_gee_seraph = '4'
-    quantity_gee_legendary = '6'
-    quantity_sorcerers_daughter = '4'
-    quantity_ancient_dragons = '3'
+    quantity_chubby = 4
+    quantity_terra = 7
+    quantity_vermivorous = 5
+    quantity_warrior = 8
+    quantity_hyperius_legendary = 7
+    quantity_hyperius_seraph = 4
+    quantity_gee_seraph = 4
+    quantity_gee_legendary = 6
+    quantity_sorcerers_daughter = 4
+    quantity_ancient_dragons = 3
 
     # Voracidous quantities have to be done slightly differently, because both
     # Dexiduous and Voracidous use the same Seraph and Legendary pools for their
@@ -515,19 +515,19 @@ class QtyImproved(Config):
     qty_index = 'improved'
     qty_label = 'Improved Drop Quantities (formerly "Reasonable")'
 
-    quantity_default_two = '2'
-    quantity_default_three = '2'
+    quantity_default_two = 2
+    quantity_default_three = 2
 
-    quantity_chubby = '2'
-    quantity_terra = '4'
-    quantity_vermivorous = '3'
-    quantity_warrior = '4'
-    quantity_hyperius_legendary = '2'
-    quantity_hyperius_seraph = '2'
-    quantity_gee_seraph = '2'
-    quantity_gee_legendary = '2'
-    quantity_sorcerers_daughter = '2'
-    quantity_ancient_dragons = '2'
+    quantity_chubby = 2
+    quantity_terra = 4
+    quantity_vermivorous = 3
+    quantity_warrior = 4
+    quantity_hyperius_legendary = 2
+    quantity_hyperius_seraph = 2
+    quantity_gee_seraph = 2
+    quantity_gee_legendary = 2
+    quantity_sorcerers_daughter = 2
+    quantity_ancient_dragons = 2
 
     # Voracidous quantities have to be done slightly differently, because both
     # Dexiduous and Voracidous use the same Seraph and Legendary pools for their
@@ -555,19 +555,19 @@ class QtyStock(Config):
     qty_index = 'stock'
     qty_label = 'Stock Drop Quantities (just one per boss)'
 
-    quantity_default_two = '1'
-    quantity_default_three = '1'
+    quantity_default_two = 1
+    quantity_default_three = 1
 
-    quantity_chubby = '1'
-    quantity_terra = '1'
-    quantity_vermivorous = '1'
-    quantity_warrior = '1'
-    quantity_hyperius_legendary = '1'
-    quantity_hyperius_seraph = '1'
-    quantity_gee_seraph = '1'
-    quantity_gee_legendary = '1'
-    quantity_sorcerers_daughter = '1'
-    quantity_ancient_dragons = '1'
+    quantity_chubby = 1
+    quantity_terra = 1
+    quantity_vermivorous = 1
+    quantity_warrior = 1
+    quantity_hyperius_legendary = 1
+    quantity_hyperius_seraph = 1
+    quantity_gee_seraph = 1
+    quantity_gee_legendary = 1
+    quantity_sorcerers_daughter = 1
+    quantity_ancient_dragons = 1
 
     # Voracidous quantities have to be done slightly differently, because both
     # Dexiduous and Voracidous use the same Seraph and Legendary pools for their
