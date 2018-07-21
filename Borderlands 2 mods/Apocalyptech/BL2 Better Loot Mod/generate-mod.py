@@ -291,6 +291,7 @@ class ConfigLootsplosion(ConfigBase):
 
     profile_name = 'Excellent'
     profile_name_orig = 'Lootsplosion'
+    profile_desc = 'Original "Lootsplosion" presets.  This is the version I prefer.'
 
     # Custom weapon drop scaling
     weapon_base_common = 8
@@ -380,6 +381,7 @@ class ConfigReasonable(ConfigLootsplosion):
 
     profile_name = 'Very Good'
     profile_name_orig = 'Reasonable'
+    profile_desc = 'Original "Reasonable" presets.  Could be rather OP for some people, still.'
 
     # Weapon drops
     weapon_base_common = 32.75
