@@ -288,11 +288,6 @@ well-covered in other mods, so instead I'll just mention them here.
 TODO
 ----
 
-* Looks like some statements from my "Force Alignement COMS Blue And Higher"
-  section are being overwritten later on by my "Exhaustive Weapon/Item Part
-  Unlocks" section.  Whoops!  Fix that.
-* I haven't done much testing in TVHM/UVHM, though it should be fine in
-  those modes.
 * Can we increase boss drop counts depending on player count?
 * Untested components from Torgue DLC *(I'm afraid that's my least favorite
   DLC, to the point of not really liking it much, so I suspect that these
@@ -306,6 +301,12 @@ TODO
   * I think Biker Badasses, etc, have pretty anemic drops at the moment.
   * In order to retain UCP compatibility, we had to alter how we guarantee
     Piston's Slow Hand drop.  This remains untested.
+* The mission Medical Mystery: X-Com-municate is supposed to reward an
+  E-Tech pistol, but because we add gemstones into the E-Tech pool (at least
+  by default), you may end up with a gemstone weapon instead.
+* It probably wouldn't be difficult to nerf the drop rates in general during
+  Slaughterdome missions (or rather, in the Slaughterdome areas).  That might
+  be especially helpful in Murderlin's Temple.
 
 Other Notes
 -----------
