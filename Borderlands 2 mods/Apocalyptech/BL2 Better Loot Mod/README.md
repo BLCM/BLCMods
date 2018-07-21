@@ -9,10 +9,11 @@ who often end up just resorting to Gibbed to be able to play around with
 some better gear.  The goal, personally, was to get the loot drops in-game
 to a point where I never felt tempted to open up Gibbed.
 
-This patch is set up to play nicely with FilterTool, and basically
-everything in here can be toggled on or off inside FilterTool as you'd
-hope, on an item-by-item basis.  Basically every bullet point in the
-"Overview" section is its own "folder" once imported into FilterTool.
+The mod must be loaded into BLCMM, and nearly all of the mod can be toggled
+on or off inside BLCMM as you'd hope, on an item-by-item basis.  Basically
+every bullet point in the "Overview" section is its own "folder" once imported.
+See the [Configuration](#configuration) section for the most obvious
+configuration areas.
 
 **NOTE:** A few mods are known to do some weird things in conjunction with
 this mod.  See the "Compatibility" section below.  **BL2 Reborn** in
@@ -21,6 +22,7 @@ do not use this with BL2 Reborn.
 
 * [Usage/Installation](#usageinstallation)
 * [Mod Overview](#mod-overview)
+  * [Configuration](#configuration)
 * [Compatibility](#compatibility)
   * [UCP](#ucp)
   * [BL2 Reborn](#bl2-reborn)
@@ -54,37 +56,36 @@ The previous "Lootsplosion" and "Reasonable" variants have been merged into
 the single mod file, and you can now choose various aspects of the mod in
 several "mutually exclusive" categories, meaning that you can only choose
 one of the options in each.  This way you can tailor the mod to what you want
-to do a little bit more easily.
+to do a little bit more easily.  See the [Configuration](#configuration) section
+for more detail.
 
 Mod Overview
 ============
 
-*(Note that the "Reasonable Drops" variant of this mod won't be **quite**
-as great as some of these statements imply, though the probabilities of
-getting better gear should still be much better than in the vanilla game.)*
+*(Note that various behaviors in here can be changed by selecting from various
+options in the mod file itself.)*
 
 Specifically, this mod does the following:
 
-* Adds all legendaries/uniques/pearls/seraph items (weapons, grenade mods,
-  class mods, shields, relics) into the global "legendary" loot pools, so
-  you'll start seeing those much more frequently.
-* Loot will skew much more rare, in general.  You should expect to see
+* By default, adds all legendaries/uniques/pearls/seraph items (weapons,
+  grenade mods, class mods, shields, relics) into the global "legendary" loot
+  pools, so you'll start seeing those much more frequently.
+* By default, loot will skew much more rare.  You should expect to see
   those legendaries/uniques/pearls/seraphs far more frequently than in
   vanilla BL2.
 * Adds the "Alignment" Class Mods from the Dragon Keep DLC into the global
   Class Mod drop pools (and makes those COMs always drop at at least blue
   rarity).
-* Adds Gemstone-rarity weapons into the E-Tech weapon pools.
-* Darts and Spikers drop far less frequently in the E-Tech pools.  *(I
-  suspect this might annoy some folks; I could probably be convinced to
-  undo that)*
+* By default, adds Gemstone-rarity weapons into the E-Tech weapon pools.
+* Darts and Spikers drop less frequently in the E-Tech pools.
 * Normalizes weapon type drops a bit.  *(Decreases pistol drop chance,
   increases all other weapon types.)*
 * Lootable Container Changes:
-  * "Regular" treasure chests will always provide at least blue-rarity gear,
-    and has a decent chance of including stuff from the legendary pools.
-  * "Epic" treasure chests have an extremely high probability of dropping
-    from the legendary pools.
+  * In the default configuration, "regular" treasure chests will always
+    provide at least blue-rarity gear, and has a decent chance of including
+    stuff from the legendary pools.  This can be configured, though.
+  * Also in the default configuration, "epic" treasure chests have an
+    extremely high probability of dropping from the legendary pools.
   * Mordecai's Stash (from the mission The Good, The Bad, and the Mordecai) has
     been changed to only drop sniper rifles, and vastly improves the gear
     quality.
@@ -106,16 +107,15 @@ Specifically, this mod does the following:
     spawn, previously.
 * Makes Eridium drop 2.5x more often
 * Makes Torgue Tokens more numerous when dropped
-* Boss drop pools are generally improved, and bosses are guaranteed to drop as
-  many items from their unique drop pool as are in that pool.  *(The "Reasonable
-  Drops" variant does not actually have a guaranteed boss drop, though it does
-  make them more likely than in vanilla.)*
+* Boss drop pools are generally improved, and by default, bosses are guaranteed
+  to drop as many items from their unique drop pool as are in that pool.
+  *(Though that can be configured easily.)*
   * Bosses with just a single unique drop will therefore be guaranteed to drop
     that item.
   * If a boss has more than one in their drop pool, you may get duplicates
     of one rather than one of each.
 * Raid Bosses will drop better loot, and will drop as many unique items as are
-  in their pool.
+  in their pool.  *(Though that can be configured easily)*
 * Seraph Crystals will drop from Seraph Guardians even in Normal mode, and the
   amount of Seraph Crystals have been increased.
 * Fixes/Changes to some enemies' drop pools:
@@ -167,24 +167,48 @@ Specifically, this mod does the following:
 * Improved gifts received in The Talon of God (from Sanctuary residents) to
   be purples and gemstones.
 * Remove early-game loot restrictions.  This is actually a superset of the
-  similar feature already present in UCP 4.0.  This version enables spawning
+  similar feature already present in UCP.  This version enables spawning
   of basically everything from the beginning, including all grenade types,
-  relics, class mods, rocket launchers, etc.  Both this and the UCP 4.0
+  relics, class mods, rocket launchers, etc.  Both this and the UCP
   "Remove Loot restriction in the beginning areas" mods can be active at the
   same time with no ill effects -- it'll just mean that the relevant commands
-  get executed twice.  Note that if you *don't* have either this or UCP
-  enabled on your game, the early game will end up dropping *no* gear, due
-  to our rarity changes.
+  get executed twice.
 
-There's also a couple options which are disabled by default which I used primarily
-to test out the drop pools while tweaking probabilities, but I left in in case
-anyone feels like *really* going overboard with loot.  One will cause enemies to
-always drop loot when killed, and the other will cause any regular enemy loot drop
-to drop five items instead of just one.
+### Configuration
 
-An alternative to the guaranteed-loot-drop setting is an improved loot drop, which
-will double the drop rate of standard enemies.  Like the guaranteed-drop version,
-this is disabled by default.
+There are a few categories in the mod which are explicitly intended to be
+user-changeable.
+
+* **Remove Level-Based Loot Restrictions** - This is active by default, and allows
+  basically all item/weapon types, elements, grenades, COMs, etc, from the very
+  beginning of the game.  It can be toggled off if you'd prefer that to not be the
+  case, though some of the unlocks are hardcoded in the main area of the mod, since
+  we need *some* unlocks for things to work properly in the early levels.  This is
+  a copy of my own BL2 Early Bloomer mod, though there's no harm in having both
+  active at the same time.
+* **Legendary and E-Tech Pool Adjustments** - The default configuration adds all
+  unique, legendary, seraph, and pearlescent weapons/items (including gemstone
+  weapons) into the main global loot pools, so all items can technically be found
+  just about anywhere.  You can tweak which groups of items/weapons get added by
+  going in here and disabling any you don't want to drop.
+* **Drop Quality** - This is the main section which determines the quality of
+  drops that you'll get throughout the game.  The choices range from "Excellent"
+  (which used to be called "Lootsplosion," pre-1.3.0), all the way down to
+  "Stock-ish", which is pretty close to the stock/vanilla BL2 drop rates, though
+  it's actually a *bit* better.  If you expand any of those categories, you'll
+  see the exact percentages that it provides.  The default setting is Excellent.
+* **Boss Unique Drop Rate** - This section lets you choose how often bosses drop
+  their unique items/weapons.  The default setting is to make bosses always drop
+  their unique gear, but it can be configured all the way down to the stock/vanilla
+  drop rates.
+* **Boss Unique Drop Quantities** - This section lets you define how *many* unique
+  drops a boss will drop.  In the default configuration, if a boss has two unique
+  drops, it'll drop two items from that pool.  It may end up being two of the same
+  item, but it could also be one of each.  For enemies with huge loot pools, this
+  can end up producing quite a few legendary drops.  For instance, the Warrior will
+  drop *eight* by default.  This section lets you specify the quantities you want,
+  though, and can be configured to go back to just a single drop, as BL2 does by
+  default.
 
 Compatibility
 =============
@@ -238,12 +262,6 @@ this, for instance, and possibly other mods in Hemaxhu's "Chest Mods"
 folder.  FromDarkHell's collection in the "Loot Drops" folder likewise will
 probably conflict.
 
-This mod duplicates some of the statements in Koby's "Level 1 UVHM", to let
-all item/weapon parts spawn starting at level 1 (though I'd autogenerated
-the ones here, rather than copying from Koby) - the two should coexist without
-problems, though, since the worst case scenario is just that the same command
-gets executed twice.
-
 Loot Purposefully Excluded from Pools
 =====================================
 
@@ -282,10 +300,7 @@ Some other stuff not done:
 * Badass Giant Burning Broomsticks will continue to drop from the standard
   enemy pool rather than the badass pool.  There's dozens of those things
   all at once and it'd be ridiculous.
-* In general I've not touched skin/head drop rates at all.  There's a few
-  Hammerlock DLC creatures which have a rare skin drop which I ended up
-  making guaranteed just because I was already in there looking for
-  uniques/legendaries, but that's about it.
+* Skin/head drop rates have not been touched at all.
 * From the Wedding Day Massacre Headhunter Pack: Ed, Stella, and Innuendobot
   don't actually drop anything -- I felt that was probably approprate and
   left them alone.
@@ -303,6 +318,7 @@ well-covered in other mods, so instead I'll just mention them here.
   don't already have good rewards.
 * My own "BL2 No Wasted COMs" mod will make it so you only ever see mods for characters
   actually playing the game.
+* mopioid's "Booperlands" mod should be a mandatory mod in anyone's personal modpack.
 
 Bugs
 ====
@@ -381,7 +397,7 @@ I've taken various ideas and snippets from a few other mods:
   addition of uniques/pearls/seraphs into the legendary pool (though I went
   about it slightly differently)
 
-I'd also like to thank the fine folks in Shadow's Evil Hideout #borderlands-modding
+I'd also like to thank the fine folks in Shadow's Evil Hideout #bl-modding
 Discord channel for putting up with all my noobish questions when I was first getting
 started with BL2 modding.
 
