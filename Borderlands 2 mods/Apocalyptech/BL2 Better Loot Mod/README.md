@@ -414,7 +414,10 @@ for the full text.
 Changelog
 =========
 
-**v1.3.0**, July 21, 2018:
+**v1.3.1**, (unreleased):
+ * Nothing yet.
+
+**v1.3.0**, July 21, 2018 (commit `7774bab49f3adaf65826c69c4265b779705d4a69`):
  * Converted to BLCM format *(BLCMM is now required, FilterTool is not supported)*
  * Merged all versions into a single master file
    * "Lootsplosion" and "Reasonable" variants are options in a mutually-exclusive
