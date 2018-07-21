@@ -19,8 +19,27 @@ this mod.  See the "Compatibility" section below.  **BL2 Reborn** in
 particular is known to cause crashes and other bad behavior, so definitely
 do not use this with BL2 Reborn.
 
+* [Usage/Installation](#usageinstallation)
+* [Mod Overview](#mod-overview)
+* [Compatibility](#compatibility)
+  * [UCP](#ucp)
+  * [BL2 Reborn](#bl2-reborn)
+  * [Shadowevil's "VaultHunter" mod](#shadowevils-vaulthunter-mod)
+  * [Hemaxhu's "More Chubbies" mod](#hemaxhus-more-chubbies-mod)
+  * [SirUmnei's "COM Overhaul Pack"](#sirumneis-com-overhaul-pack-and-possibly-other-mods-which-touch-coms)
+  * [Other Mods](#other-mods)
+* [Loot Purposefully Excluded from Pools](#loot-purposefully-excluded-from-pools)
+* [Other Recommended Mods](#other-recommended-mods)
+* [Bugs](#bugs)
+* [TODO](#todo)
+* [Other Notes](#other-notes)
+* [Mod Construction / Implementation Details](#mod-construction--implementation-details)
+* [Credits](#credits)
+* [Licenses](#licenses)
+* [Changelog](#changelog)
+
 Usage/Installation
-------------------
+==================
 
 This mod must be imported into BLCMM using `File -> Import single mod`.
 Simply choose the file `BL2 Better Loot.blcm` and have at it!
@@ -38,7 +57,7 @@ one of the options in each.  This way you can tailor the mod to what you want
 to do a little bit more easily.
 
 Mod Overview
-------------
+============
 
 *(Note that the "Reasonable Drops" variant of this mod won't be **quite**
 as great as some of these statements imply, though the probabilities of
@@ -168,32 +187,36 @@ will double the drop rate of standard enemies.  Like the guaranteed-drop version
 this is disabled by default.
 
 Compatibility
--------------
+=============
 
-### UCP ###
+UCP
+---
 
 This mod should be fully compatible with UCP 4.1.  It should also probably run
 fine without, though it's received less testing that way.
 
-### BL2 Reborn ###
+BL2 Reborn
+----------
 
 This mod is **not** compatible with BL2 Reborn.  There are known crashes and
 other sorts of instability when trying to use the two together.  Avoid using
 the two at the same time!
 
-### Shadowevil's "VaultHunter" mod
+Shadowevil's "VaultHunter" mod
+------------------------------
 
-**NOTE:** This mod and Shadowevil's "VaultHunter" mod, which creates a
-Legendary-level Vault Hunter's Relic, don't play very well together,
-especially with Raid boss drops.  The combination has been known to
-sometimes crash Borderlands after defeating the Ancient Dragons, in fact,
-and legendary drops will be *far* more frequent than is useful.
+This mod and Shadowevil's "VaultHunter" mod, which creates a Legendary-level
+Vault Hunter's Relic, don't play very well together, especially with Raid boss
+drops.  The combination has been known to sometimes crash Borderlands after
+defeating the Ancient Dragons, in fact, and legendary drops will be *far* more
+frequent than is useful.
 
 I'm pretty sure that this mod makes the vanilla game's "Vault Hunter's
 Relic" completely useless, but if you're using this mod, you certainly
 won't miss it.
 
-### Hemaxhu's "More Chubbies" mod
+Hemaxhu's "More Chubbies" mod
+-----------------------------
 
 Hemaxhu's "More Chubbies" mod isn't *incompatible* with this one, but you
 will almost certainly find it to be quite excessive if Chubbies are spawning
@@ -204,14 +227,16 @@ you can use in this mod:
 * `Base Mod Configuration -> Better Enemy Drops -> Better Badass Pool Definitions -> Chubby Enemies`
 * `Boss Unique Drop Quantities -> X -> Chubby/Tubby Enemies`
 
-### SirUmnei's "COM Overhaul Pack" (and possibly other mods which touch COMs)
+SirUmnei's "COM Overhaul Pack" (and possibly other mods which touch COMs)
+-------------------------------------------------------------------------
 
 The COM Overhaul Pack, in conjunction with this mod, will end up creating
 items which will get deleted by Borderlands after you save/quit.  You should
 be able to avoid this by turning off this mod's `Base Mod Configuration ->
 Loot Pool Tweaks -> Force Alignment COMs Blue And Higher`.
 
-### Other Mods
+Other Mods
+----------
 
 Obviously this mod will conflict with other mods which play with the same
 variables.  I know that Hemaxhu's "Better White Chests" would conflict with
@@ -226,7 +251,7 @@ problems, though, since the worst case scenario is just that the same command
 gets executed twice.
 
 Loot Purposefully Excluded from Pools
--------------------------------------
+=====================================
 
 There's some gear which I felt shouldn't be in the pools at all.  I am
 quite willing to hear counterarguments; my mind could probably be pretty
@@ -272,7 +297,7 @@ Some other stuff not done:
   left them alone.
 
 Other Recommended Mods
-----------------------
+======================
 
 There's a few things which I'd considered adding to this mod, but were already
 well-covered in other mods, so instead I'll just mention them here.
@@ -285,8 +310,15 @@ well-covered in other mods, so instead I'll just mention them here.
 * My own "BL2 No Wasted COMs" mod will make it so you only ever see mods for characters
   actually playing the game.
 
+Bugs
+====
+
+* The mission Medical Mystery: X-Com-municate is supposed to reward an
+  E-Tech pistol, but because we add gemstones into the E-Tech pool (at least
+  by default), you may end up with a gemstone weapon instead.
+
 TODO
-----
+====
 
 * Can we increase boss drop counts depending on player count?
 * Untested components from Torgue DLC *(I'm afraid that's my least favorite
@@ -301,15 +333,13 @@ TODO
   * I think Biker Badasses, etc, have pretty anemic drops at the moment.
   * In order to retain UCP compatibility, we had to alter how we guarantee
     Piston's Slow Hand drop.  This remains untested.
-* The mission Medical Mystery: X-Com-municate is supposed to reward an
-  E-Tech pistol, but because we add gemstones into the E-Tech pool (at least
-  by default), you may end up with a gemstone weapon instead.
 * It probably wouldn't be difficult to nerf the drop rates in general during
   Slaughterdome missions (or rather, in the Slaughterdome areas).  That might
   be especially helpful in Murderlin's Temple.
+* Make a Reborn-compatible version of this
 
 Other Notes
------------
+===========
 
 It's perhaps worth mentioning that while this mod does a great job in most
 of the game (IMO), in Normal mode at least, the amount of loot can get
@@ -325,7 +355,7 @@ Digistruct Peak is a little ridiculous as well, on account of all the bosses
 and Badasses.
 
 Mod Construction / Implementation Details
------------------------------------------
+=========================================
 
 *(This section is only relevant for someone looking to edit the mod in the
 same way I do, or just someone curious about my mod construction techniques.
@@ -343,7 +373,7 @@ You'd need to copy (or symlink, if you're on Mac or Linux) `modprocessor.py`
 into this directory in order to run the script.
 
 Credits
--------
+=======
 
 I've taken various ideas and snippets from a few other mods:
 
@@ -358,7 +388,8 @@ I've taken various ideas and snippets from a few other mods:
   about it slightly differently)
 
 I'd also like to thank the fine folks in Shadow's Evil Hideout #borderlands-modding
-Discord channel for putting up with all my noobish questions.
+Discord channel for putting up with all my noobish questions when I was first getting
+started with BL2 modding.
 
 Licenses
 ========
@@ -389,8 +420,8 @@ Changelog
    * Good (formerly "Reasonable")
    * Improved
    * Stock-ish
- * Added wider selection of boss unique drop rates
- * Added a category to choose drop quantities for bosses, in addition to the drop rates.
+ * Added wider selection of boss unique drop rate selections
+ * Added a category to choose drop quantities for bosses, in addition to the drop rates
  * Set a few creature minibosses (such as Pimon and Tumba) to guarantee their
    unique drops.
  * Allow customized legendary pool by providing options for adding uniques, seraphs,
@@ -401,8 +432,7 @@ Changelog
  * Converted to a nicer method of unlocking early-game weapon/item parts which should
    play more nicely with custom items (taken from BL2 Early Bloomer)
  * Improved chances of dart/spiker spawns, since UCP4.1 gave them some reasonable buffs.
-   Still a bit less likely than gemstone pistols, though, if you have gemstones added
-   to the E-Tech pools.
+   Still a bit less likely than gemstone pistols, though
  * Reduced drop chances of Treants dropping the Bee, and of the Skeleton Kings dropping
    the Emperor (so long as UCP is active, in the latter case)
  * Resolved conflicts with UCP:
