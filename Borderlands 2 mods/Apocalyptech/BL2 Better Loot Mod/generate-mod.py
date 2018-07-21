@@ -487,6 +487,7 @@ class QtyExcellent(Config):
     quantity_gee_seraph = '4'
     quantity_gee_legendary = '6'
     quantity_sorcerers_daughter = '4'
+    quantity_ancient_dragons = '3'
 
     # Voracidous quantities have to be done slightly differently, because both
     # Dexiduous and Voracidous use the same Seraph and Legendary pools for their
@@ -526,6 +527,7 @@ class QtyImproved(Config):
     quantity_gee_seraph = '2'
     quantity_gee_legendary = '2'
     quantity_sorcerers_daughter = '2'
+    quantity_ancient_dragons = '2'
 
     # Voracidous quantities have to be done slightly differently, because both
     # Dexiduous and Voracidous use the same Seraph and Legendary pools for their
@@ -565,6 +567,7 @@ class QtyStock(Config):
     quantity_gee_seraph = '1'
     quantity_gee_legendary = '1'
     quantity_sorcerers_daughter = '1'
+    quantity_ancient_dragons = '1'
 
     # Voracidous quantities have to be done slightly differently, because both
     # Dexiduous and Voracidous use the same Seraph and Legendary pools for their
