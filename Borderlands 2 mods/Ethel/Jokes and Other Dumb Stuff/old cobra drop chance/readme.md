@@ -1,0 +1,1 @@
+reverts the cobra drop chance buff from GBX back to its insanely small drop %-age

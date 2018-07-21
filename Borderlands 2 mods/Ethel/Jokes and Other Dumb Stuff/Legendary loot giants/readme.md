@@ -1,1 +1,1 @@
-makes loot midgets giants
+makes loot midgets 3x as big
