@@ -63,7 +63,7 @@ except ModuleNotFoundError:
 ###
 
 mod_name = 'BL2 Early Bloomer'
-mod_version = '1.1.0'
+mod_version = '1.1.1'
 input_filename = 'mod-input-file.txt'
 output_filename = '{}.blcm'.format(mod_name)
 source_output_filename = '{}-source.txt'.format(mod_name)
