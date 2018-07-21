@@ -383,6 +383,12 @@ Changelog
      category in the mod, rather than separate files
    * Removed "standalone" and "standalone offline" variants *(this is now much better
      managed by BLCMM)*
+ * Added three extra drop quality presets, for a total of five:
+   * Excellent (formerly "Lootsplosion")
+   * Very Good
+   * Good (formerly "Reasonable")
+   * Improved
+   * Stock-ish
  * Added wider selection of boss unique drop rates
  * Added a category to choose drop quantities for bosses, in addition to the drop rates.
  * Set a few creature minibosses (such as Pimon and Tumba) to guarantee their

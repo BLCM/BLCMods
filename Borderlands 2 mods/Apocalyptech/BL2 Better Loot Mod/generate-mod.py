@@ -283,7 +283,7 @@ class ConfigBase(Config):
 ### for things like drop weights, etc.
 ###
 
-class ConfigLootsplosion(ConfigBase):
+class ConfigExcellent(ConfigBase):
     """
     This is our default config, which I personally find quite pleasant.
     Many folks will consider this a bit too OP/Extreme.
@@ -324,7 +324,7 @@ class ConfigLootsplosion(ConfigBase):
     shield_base_veryrare = weapon_base_veryrare
     shield_base_legendary = weapon_base_legendary
 
-    # Relic drop weights
+    # Relic drop weights, should add up to 1.2
     relic_drop_scale_all = 0.2
     relic_drop_scale_reward = 1
 
@@ -372,16 +372,104 @@ class ConfigLootsplosion(ConfigBase):
     ultimate_badass_pool_epicchest_2 = 0.5
     ultimate_badass_pool_epicchest_3 = 0.5
 
-class ConfigReasonable(ConfigBase):
+class ConfigVeryGood(ConfigBase):
+    """
+    Alternate config for inbetween the former Lootsplosion and Reasonable
+    presets.
+    """
+
+    profile_name = 'Very Good'
+    profile_name_orig = None
+    profile_desc = 'Something for inbetween the former "Lootsplosion" and "Reasonable" presets.'
+
+    # Weapon drops
+    weapon_base_common = 15
+    weapon_base_uncommon = 35
+    weapon_base_rare = 25
+    weapon_base_veryrare = 10
+    weapon_base_alien = 7
+    weapon_base_legendary = 0.3
+    weapon_base_iris_cobra = 0.3
+
+    # Class mods
+    cm_base_common = weapon_base_common
+    cm_base_uncommon = weapon_base_uncommon
+    cm_base_rare = weapon_base_rare
+    cm_base_veryrare = weapon_base_veryrare
+    cm_base_alignment = 7
+    cm_base_legendary = weapon_base_legendary
+
+    # Custom grenade drop scaling (identical to weapons)
+    grenade_base_common = weapon_base_common
+    grenade_base_uncommon = weapon_base_uncommon
+    grenade_base_rare = weapon_base_rare
+    grenade_base_veryrare = weapon_base_veryrare
+    grenade_base_legendary = weapon_base_legendary
+
+    # Custom shield drop scaling (identical to weapons)
+    shield_base_common = weapon_base_common
+    shield_base_uncommon = weapon_base_uncommon
+    shield_base_rare = weapon_base_rare
+    shield_base_veryrare = weapon_base_veryrare
+    shield_base_legendary = weapon_base_legendary
+
+    # Relic drop weights, should add up to 1.2
+    relic_drop_scale_all = 0.3
+    relic_drop_scale_reward = 0.9
+
+    # Custom relic drop scaling, within "ArtifactsReward"
+    relic_base_rare = 1.5
+    relic_base_veryrare = 1.5
+
+    # Drop rates for "regular" treasure chests
+    treasure_base_common = 20
+    treasure_base_uncommon = 40
+    treasure_base_rare = 25
+    treasure_base_veryrare = 7
+    treasure_base_alien = 7
+    treasure_base_legendary = 1
+
+    # Drop rates for "epic" treasure chests
+    epic_base_uncommon = 15
+    epic_base_rare = 49
+    epic_base_veryrare = 25
+    epic_base_alien = 20
+    epic_base_legendary = 1.8
+
+    # Badass pool probabilities (NOTE: these are *not* weights)
+    badass_pool_veryrare = 0.3
+    badass_pool_alien = 0.3
+    badass_pool_epicchest = 0.1
+
+    # Super Badass pool probabilities (NOTE: these are *not* weights)
+    super_badass_pool_rare = 1
+    super_badass_pool_veryrare = 0.6
+    super_badass_pool_alien = 0.3
+    super_badass_pool_legendary = 0.06
+    super_badass_pool_epicchest = 1
+
+    # Ultimate Badass pool probabilities (NOTE: these are *not* weights)
+    ultimate_badass_pool_veryrare_1 = 1
+    ultimate_badass_pool_veryrare_2 = .2
+    ultimate_badass_pool_alien_1 = 1
+    ultimate_badass_pool_alien_2 = 0
+    ultimate_badass_pool_legendary_1 = 0.1
+    ultimate_badass_pool_legendary_2 = 0
+    ultimate_badass_pool_legendary_3 = 0
+    ultimate_badass_pool_epicchest_1 = 1
+    ultimate_badass_pool_epicchest_2 = 1
+    ultimate_badass_pool_epicchest_3 = 1
+
+class ConfigGood(ConfigBase):
     """
     Alternate config which has slightly-more-reasonable drop rates for stuff
     like legendaries.  Unsurprisingly, most folks find my default values a
     bit excessive.
     """
 
-    profile_name = 'Very Good'
+    profile_name = 'Good'
     profile_name_orig = 'Reasonable'
-    profile_desc = 'Original "Reasonable" presets.  Could be rather OP for some people, still.'
+    profile_desc = 'Original "Reasonable" presets.  Attempts to be somewhat restrained still.'
 
     # Weapon drops
     weapon_base_common = 32.75
@@ -414,7 +502,7 @@ class ConfigReasonable(ConfigBase):
     shield_base_veryrare = weapon_base_veryrare
     shield_base_legendary = weapon_base_legendary
 
-    # Relic drop weights
+    # Relic drop weights, should add up to 1.2
     relic_drop_scale_all = 0.6
     relic_drop_scale_reward = 0.6
 
@@ -461,10 +549,197 @@ class ConfigReasonable(ConfigBase):
     ultimate_badass_pool_epicchest_2 = 1
     ultimate_badass_pool_epicchest_3 = 1
 
+class ConfigImproved(ConfigBase):
+    """
+    Alternate config which has improved drop rates for stuff like legendaries.
+    Quite anemic to my mind, still, but better than stock.
+    """
+
+    profile_name = 'Improved'
+    profile_name_orig = None
+    profile_desc = 'For anyone who thought that "Reasonable" was still OP but doesn\'t want to go all the way to Stock'
+
+    # Weapon drops
+    weapon_base_common = 40
+    weapon_base_uncommon = 40
+    weapon_base_rare = 5
+    weapon_base_veryrare = 0.5
+    weapon_base_alien = 0.5
+    weapon_base_legendary = 0.1
+    weapon_base_iris_cobra = 0.1
+
+    # Class mods
+    cm_base_common = weapon_base_common
+    cm_base_uncommon = weapon_base_uncommon
+    cm_base_rare = weapon_base_rare
+    cm_base_veryrare = weapon_base_veryrare
+    cm_base_alignment = 0.5
+    cm_base_legendary = weapon_base_legendary
+
+    # Custom grenade drop scaling (identical to weapons)
+    grenade_base_common = weapon_base_common
+    grenade_base_uncommon = weapon_base_uncommon
+    grenade_base_rare = weapon_base_rare
+    grenade_base_veryrare = weapon_base_veryrare
+    grenade_base_legendary = weapon_base_legendary
+
+    # Custom shield drop scaling (identical to weapons)
+    shield_base_common = weapon_base_common
+    shield_base_uncommon = weapon_base_uncommon
+    shield_base_rare = weapon_base_rare
+    shield_base_veryrare = weapon_base_veryrare
+    shield_base_legendary = weapon_base_legendary
+
+    # Relic drop weights, should add up to 1.2
+    relic_drop_scale_all = 0.9
+    relic_drop_scale_reward = 0.3
+
+    # Custom relic drop scaling, within "ArtifactsReward"
+    relic_base_rare = 2.4
+    relic_base_veryrare = 0.6
+
+    # Drop rates for "regular" treasure chests
+    treasure_base_common = 40
+    treasure_base_uncommon = 45
+    treasure_base_rare = 10
+    treasure_base_veryrare = 2
+    treasure_base_alien = 2
+    treasure_base_legendary = 0.15
+
+    # Drop rates for "epic" treasure chests
+    epic_base_uncommon = 37
+    epic_base_rare = 45
+    epic_base_veryrare = 10
+    epic_base_alien = 7
+    epic_base_legendary = 0.6
+
+    # Badass pool probabilities (NOTE: these are *not* weights)
+    badass_pool_veryrare = 0.2
+    badass_pool_alien = 0.1
+    badass_pool_epicchest = 0.05
+
+    # Super Badass pool probabilities (NOTE: these are *not* weights)
+    super_badass_pool_rare = 1
+    super_badass_pool_veryrare = 0.2
+    super_badass_pool_alien = 0.15
+    super_badass_pool_legendary = 0.03
+    super_badass_pool_epicchest = 0.8
+
+    # Ultimate Badass pool probabilities (NOTE: these are *not* weights)
+    ultimate_badass_pool_veryrare_1 = 0.8
+    ultimate_badass_pool_veryrare_2 = 0
+    ultimate_badass_pool_alien_1 = 0.4
+    ultimate_badass_pool_alien_2 = 0
+    ultimate_badass_pool_legendary_1 = 0.07
+    ultimate_badass_pool_legendary_2 = 0
+    ultimate_badass_pool_legendary_3 = 0
+    ultimate_badass_pool_epicchest_1 = 1
+    ultimate_badass_pool_epicchest_2 = 0.5
+    ultimate_badass_pool_epicchest_3 = 0
+
+class ConfigStock(ConfigBase):
+    """
+    Alternate config which has roughly stock drop rates for stuff
+    like legendaries.  This isn't *actually* stock, and pretends to
+    be using a Vault Hunter's Relic, but it probably won't feel too
+    off for most players (though of course much of the rest of the
+    mod will still be buffing stuff up.
+    """
+
+    profile_name = 'Stock-ish'
+    profile_name_orig = None
+    profile_desc = 'This is not *actually* stock values, but it\'s somewhat close.'
+
+    # Weapon drops
+    weapon_base_common = 75
+    weapon_base_uncommon = 10
+    weapon_base_rare = 1
+    weapon_base_veryrare = .1
+    weapon_base_alien = .1
+    weapon_base_legendary = 0.03
+    weapon_base_iris_cobra = 0.03
+
+    # Class mods
+    cm_base_common = weapon_base_common
+    cm_base_uncommon = weapon_base_uncommon
+    cm_base_rare = weapon_base_rare
+    cm_base_veryrare = weapon_base_veryrare
+    cm_base_alignment = .1
+    cm_base_legendary = weapon_base_legendary
+
+    # Custom grenade drop scaling (identical to weapons)
+    grenade_base_common = weapon_base_common
+    grenade_base_uncommon = weapon_base_uncommon
+    grenade_base_rare = weapon_base_rare
+    grenade_base_veryrare = weapon_base_veryrare
+    grenade_base_legendary = weapon_base_legendary
+
+    # Custom shield drop scaling (identical to weapons)
+    shield_base_common = weapon_base_common
+    shield_base_uncommon = weapon_base_uncommon
+    shield_base_rare = weapon_base_rare
+    shield_base_veryrare = weapon_base_veryrare
+    shield_base_legendary = weapon_base_legendary
+
+    # Relic drop weights, should add up to 1.2
+    relic_drop_scale_all = 1.08
+    relic_drop_scale_reward = 0.12
+
+    # Custom relic drop scaling, within "ArtifactsReward"
+    relic_base_rare = 2.7
+    relic_base_veryrare = 0.3
+
+    # Drop rates for "regular" treasure chests
+    treasure_base_common = 5
+    treasure_base_uncommon = 6.6
+    treasure_base_rare = .35
+    treasure_base_veryrare = .05
+    treasure_base_alien = .05
+    treasure_base_legendary = 0
+
+    # Drop rates for "epic" treasure chests
+    epic_base_uncommon = 10
+    epic_base_rare = 1
+    epic_base_veryrare = .25
+    epic_base_alien = .25
+    epic_base_legendary = .03
+
+    ###
+    ### The rest of these are all basically made-up; the real stock
+    ### values don't even have these as options.
+    ###
+
+    # Badass pool probabilities (NOTE: these are *not* weights)
+    badass_pool_veryrare = 0.1
+    badass_pool_alien = 0.05
+    badass_pool_epicchest = 0
+
+    # Super Badass pool probabilities (NOTE: these are *not* weights)
+    super_badass_pool_rare = 0.5
+    super_badass_pool_veryrare = 0.1
+    super_badass_pool_alien = 0.1
+    super_badass_pool_legendary = 0.03
+    super_badass_pool_epicchest = 0.5
+
+    # Ultimate Badass pool probabilities (NOTE: these are *not* weights)
+    ultimate_badass_pool_veryrare_1 = 0.5
+    ultimate_badass_pool_veryrare_2 = 0
+    ultimate_badass_pool_alien_1 = 0.4
+    ultimate_badass_pool_alien_2 = 0
+    ultimate_badass_pool_legendary_1 = 0.06
+    ultimate_badass_pool_legendary_2 = 0
+    ultimate_badass_pool_legendary_3 = 0
+    ultimate_badass_pool_epicchest_1 = 0.5
+    ultimate_badass_pool_epicchest_2 = 0.05
+    ultimate_badass_pool_epicchest_3 = 0
+
 # The profiles we'll generate
 profiles = [
-    ConfigLootsplosion(),
-    ConfigReasonable(),
+    ConfigExcellent(),
+    ConfigVeryGood(),
+    ConfigGood(),
+    ConfigImproved(),
+    ConfigStock(),
     ]
 
 class QtyExcellent(Config):
@@ -1379,6 +1654,9 @@ with open(input_filename, 'r') as df:
         base=ConfigBase(),
         drop_quality_excellent=qualities['Excellent'],
         drop_quality_verygood=qualities['Very Good'],
+        drop_quality_good=qualities['Good'],
+        drop_quality_improved=qualities['Improved'],
+        drop_quality_stock=qualities['Stock-ish'],
         boss_drops_guaranteed=boss_drops['guaranteed'],
         boss_drops_veryimproved=boss_drops['veryimproved'],
         boss_drops_improved=boss_drops['improved'],
