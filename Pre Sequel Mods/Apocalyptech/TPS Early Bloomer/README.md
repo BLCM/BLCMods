@@ -11,8 +11,8 @@ There's no problem with having both this and UCP enabled -- it'll just mean
 that a few statements get executed twice.
 
 This mod was copied directly from a section of my Better Loot mod.  If you're
-running Better Loot, you already have this mod active, so there's no reason to
-import it again.
+running Better Loot or Cold Dead Hands, you already have this mod active, so
+there's no reason to import it again.
 
 Usage
 =====
@@ -32,7 +32,10 @@ been imported.)*
 This mod is generated using a Python script named `generate-mod.py`.  The
 script makes use of `modprocessor.py` from the parent directory.  You'd need
 to copy (or symlink, if you're on Mac or Linux) `modprocessor.py` into this
-directory in order to run the script.
+directory in order to run the script.  Likewise, `generate-mod.py` makes
+use of some data introspection abilities available in my FT/BLCMM Explorer
+project.  You'll need to copy (or, again, symlink) FT Explorer's `ftexplorer`
+and `resources` dirs into this directory to generate the mod.
 
 Licenses
 ========
@@ -53,6 +56,8 @@ Changelog
 **v1.1.0**, (unreleased):
  * Converted to BLCM format *(BLCMM is now required; FilterTool is not supported)*
  * Added a missing grenade unlock: Four Seasons
+ * Switch to dynamically generating the exhaustive part unlock section in the
+   generation script itself.
  * Added a byline in the mod header comments
 
 **v1.0.0**, May 23, 2018:
