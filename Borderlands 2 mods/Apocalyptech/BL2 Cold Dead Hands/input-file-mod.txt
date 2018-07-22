@@ -1576,6 +1576,19 @@ BL2
 
         #</Compatibility with Better Loot Mod>
 
+        #<Fix Enemy Roid/Maylay Shield Damage>
+
+            # The base calculation which the game does to determine enemy melee damage
+            # doesn't correctly deal with Roid/Maylay shields -- enemies get a FAR
+            # greater boost from these shields than they should.  This was never a problem
+            # with the base game, since enemies couldn't use those shields, but since they
+            # can in CDH, it makes Roid-using enemies much more difficult.  This fixes the
+            # equation up, courtesy 55tumbl.  Thanks for that!
+
+            level None set GD_Balance_HealthAndDamage.HealthAndDamage.Init_EnemyNonWeaponDamage ValueFormula.Offset.BaseValueScaleConstant 0.125
+
+        #</Fix Enemy Roid/Maylay Shield Damage>
+
     #</Main Mod (best to leave all this checked)>
 
     #<Loot Pool Improvements (Gemstones/Uniques/Pearls/Seraphs)>
@@ -2703,10 +2716,7 @@ BL2
 
         #<Equip and Drop only Maylay Shields>
 
-            # Stalkers will always equip and drop Maylay shields.  WARNING: the Maylay
-            # effect seems to be multiplied beyond usual on Stalkers for some reason; this
-            # will probably make Stalkers hit VERY hard when their shields are down.
-            # You've been warned!
+            # Stalkers will always equip and drop Maylay shields.
 
 {stalker_shields_maylay}
 

@@ -182,12 +182,7 @@ quality, when loaded into BLCMM:
   shields so that they work like other shielded enemies with Cold Dead Hands,
   so you'll get stalkers using Novas and Maylay shields, and they'll drop them
   when killed.  Additionally, if you want to make them very deadly in general,
-  you can specify that they *only* use Maylay shields.  **Warning:** there
-  seems to be some strange interaction with Maylay shields and Stalkers where
-  the roid damage buff is far greater than the number listed on the card.
-  Stalkers using Maylay shields are very likely to hit like a ton of bricks,
-  when their shields are depleted.  Use with caution!  Or with abandon!  It's
-  up to you!
+  you can specify that they *only* use Maylay shields.
 
 * **Remove Level-Based Loot Restrictions**: This Allows all weapon, shield,
   grenade, COM, shield, relic, and ammo types from the very beginning of the
@@ -342,7 +337,10 @@ for the full text.
 Changelog
 =========
 
-**v1.1.1** - Unreleased
+**v1.1.1** - July 22, 2018
+ * Included fix, thanks to 55tumbl, so that enemies using Roid/Maylay shields 
+   receive the intended melee damage boost, instead of the extremely powerful
+   attacks that they were doing.
  * Updated bundled BL2 Early Bloomer to v1.1.1, to include a couple of items
    which weren't properly unlocked previously.
  * Removed some outdated wording in the mod header comments
