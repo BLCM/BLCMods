@@ -343,6 +343,8 @@ Changelog
 =========
 
 **v1.1.1** - Unreleased
+ * Updated bundled BL2 Early Bloomer to v1.1.1, to include a couple of items
+   which weren't properly unlocked previously.
  * Removed some outdated wording in the mod header comments
 
 **v1.1.0** - July 17, 2018 (commit `7a654f0ac8e8682814395f335ecdb6358b138984`)
