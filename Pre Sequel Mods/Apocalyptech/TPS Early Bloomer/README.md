@@ -52,6 +52,7 @@ Changelog
 
 **v1.1.0**, (unreleased):
  * Converted to BLCM format *(BLCMM is now required; FilterTool is not supported)*
+ * Added a missing grenade unlock: Four Seasons
  * Added a byline in the mod header comments
 
 **v1.0.0**, May 23, 2018:
