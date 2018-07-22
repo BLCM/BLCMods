@@ -1,0 +1,1673 @@
+TPS
+#<{mod_name}>
+
+    # {mod_name} v{mod_version}
+    # Licensed under Public Domain / CC0 1.0 Universal
+    #
+    # This mod is an improvement on the similar section from UCP 2.1 which unlocks various
+    # equipment in the game.  In addition to the basic early-game weapon unlocks that UCP
+    # provides, this additionally allows Relics, Class Mods, all shield types, all grenade
+    # types, and probably just about everything to spawn from the beginning.
+    #
+    # There's no problem with having both this and UCP enabled -- it'll just mean
+    # that a few statements get executed twice.
+
+    #<Main Unlocks>
+
+        # Note that we omit Gamestage_24 on purpose here, because that is used to
+        # determine Weapon Slot SDU rewards during playthrough 1 in the main storyline.
+        # Nothing else in the game uses 24, so we're leaving it.  
+
+        set GD_Itempools.Scheduling.Gamestage_02:ConstantAttributeValueResolver_0 ConstantValue 1
+
+        set GD_Itempools.Scheduling.Gamestage_03:ConstantAttributeValueResolver_0 ConstantValue 1
+
+        set GD_Itempools.Scheduling.Gamestage_04:ConstantAttributeValueResolver_0 ConstantValue 1
+
+        set GD_Itempools.Scheduling.Gamestage_05:ConstantAttributeValueResolver_0 ConstantValue 1
+
+        set GD_Itempools.Scheduling.Gamestage_06:ConstantAttributeValueResolver_0 ConstantValue 1
+
+        set GD_Itempools.Scheduling.Gamestage_07:ConstantAttributeValueResolver_0 ConstantValue 1
+
+        set GD_Itempools.Scheduling.Gamestage_08:ConstantAttributeValueResolver_0 ConstantValue 1
+
+        set GD_Itempools.Scheduling.Gamestage_09:ConstantAttributeValueResolver_0 ConstantValue 1
+
+        set GD_Itempools.Scheduling.Gamestage_10:ConstantAttributeValueResolver_0 ConstantValue 1
+
+        set GD_Itempools.Scheduling.Gamestage_11:ConstantAttributeValueResolver_0 ConstantValue 1
+
+        set GD_Itempools.Scheduling.Gamestage_12:ConstantAttributeValueResolver_0 ConstantValue 1
+
+        set GD_Itempools.Scheduling.Gamestage_13:ConstantAttributeValueResolver_0 ConstantValue 1
+
+        set GD_Itempools.Scheduling.Gamestage_14:ConstantAttributeValueResolver_0 ConstantValue 1
+
+        set GD_Itempools.Scheduling.Gamestage_15:ConstantAttributeValueResolver_0 ConstantValue 1
+
+        set GD_Itempools.Scheduling.Gamestage_16:ConstantAttributeValueResolver_0 ConstantValue 1
+
+        set GD_Itempools.Scheduling.Gamestage_17:ConstantAttributeValueResolver_0 ConstantValue 1
+
+        set GD_Itempools.Scheduling.Gamestage_18:ConstantAttributeValueResolver_0 ConstantValue 1
+
+        set GD_Itempools.Scheduling.Gamestage_19:ConstantAttributeValueResolver_0 ConstantValue 1
+
+        set GD_Itempools.Scheduling.Gamestage_20:ConstantAttributeValueResolver_0 ConstantValue 1
+
+        set GD_Itempools.Scheduling.Gamestage_21:ConstantAttributeValueResolver_0 ConstantValue 1
+
+        set GD_Itempools.Scheduling.Gamestage_22:ConstantAttributeValueResolver_0 ConstantValue 1
+
+        set GD_Itempools.Scheduling.Gamestage_23:ConstantAttributeValueResolver_0 ConstantValue 1
+
+    #</Main Unlocks>
+
+    #<Class Mods>
+
+        # Class mods apparently have a separate set of values to override.
+
+        set GD_Itempools.Scheduling.LootSchedule_ClassMod_01_Common:ConstantAttributeValueResolver_0 ConstantValue 1
+
+        set GD_Itempools.Scheduling.LootSchedule_ClassMod_02_Uncommon:ConstantAttributeValueResolver_0 ConstantValue 1
+
+        set GD_Itempools.Scheduling.LootSchedule_ClassMod_03_Rare:ConstantAttributeValueResolver_0 ConstantValue 1
+
+        set GD_Itempools.Scheduling.LootSchedule_ClassMod_04_VeryRare:ConstantAttributeValueResolver_0 ConstantValue 1
+
+        set GD_Itempools.Scheduling.LootSchedule_ClassMod_05_Legendary:ConstantAttributeValueResolver_0 ConstantValue 1
+
+    #</Class Mods>
+
+    #<Grenade Mods>
+
+        # Grenade mods apparently have a separate set of values to override
+
+        set GD_GrenadeMods.BalanceAttributes.MinGameStage_CorrosiveGrenade:ConstantAttributeValueResolver_0 ConstantValue 1
+
+        set GD_GrenadeMods.BalanceAttributes.MinGameStage_Homing:ConstantAttributeValueResolver_0 ConstantValue 1
+
+        set GD_GrenadeMods.BalanceAttributes.MinGameStage_IncendiaryGrenade:ConstantAttributeValueResolver_0 ConstantValue 1
+
+        set GD_GrenadeMods.BalanceAttributes.MinGameStage_Longbow:ConstantAttributeValueResolver_0 ConstantValue 1
+
+        set GD_GrenadeMods.BalanceAttributes.MinGameStage_Rubberized:ConstantAttributeValueResolver_0 ConstantValue 1
+
+        set GD_GrenadeMods.BalanceAttributes.MinGameStage_ShockGrenade:ConstantAttributeValueResolver_0 ConstantValue 1
+
+        set GD_GrenadeMods.BalanceAttributes.MinGameStage_SlagGrenade:ConstantAttributeValueResolver_0 ConstantValue 1
+
+        set GD_GrenadeMods.BalanceAttributes.MinGameStage_Sticky:ConstantAttributeValueResolver_0 ConstantValue 1
+
+        # These definitions could be done with "set" as with other stuff, but
+        # it's actually a little more convenient to do 'em with hotfixes
+
+        {mp:grenade_AreaEffect_0_0}
+
+        {mp:grenade_AreaEffect_0_1}
+
+        {mp:grenade_AreaEffect_0_2}
+
+        {mp:grenade_AreaEffect_0_3}
+
+        {mp:grenade_BouncingBetty_0_0}
+
+        {mp:grenade_BouncingBetty_0_1}
+
+        {mp:grenade_BouncingBetty_0_2}
+
+        {mp:grenade_BouncingBetty_0_3}
+
+        {mp:grenade_BouncingBetty_1_0}
+
+        {mp:grenade_BouncingBetty_1_1}
+
+        {mp:grenade_BouncingBetty_1_2}
+
+        {mp:grenade_BouncingBetty_1_3}
+
+        {mp:grenade_Mirv_0_0}
+
+        {mp:grenade_Mirv_0_1}
+
+        {mp:grenade_Mirv_0_2}
+
+        {mp:grenade_Mirv_0_3}
+
+        {mp:grenade_Mirv_1_0}
+
+        {mp:grenade_Mirv_1_1}
+
+        {mp:grenade_Mirv_1_2}
+
+        {mp:grenade_Mirv_1_3}
+
+        {mp:grenade_Singularity_0_0}
+
+        {mp:grenade_Singularity_0_1}
+
+        {mp:grenade_Singularity_0_2}
+
+        {mp:grenade_Singularity_0_3}
+
+        {mp:grenade_Transfusion_0_0}
+
+        {mp:grenade_Transfusion_0_1}
+
+        {mp:grenade_Transfusion_0_2}
+
+        {mp:grenade_Transfusion_0_3}
+
+    #</Grenade Mods>
+
+    #<Rocket Ammo and Grenades in Early Game>
+
+        # Lets rocket ammo and grenades be available in world drops and vending
+        # machines right from the start of the game.  (Grenades already pop up
+        # pretty early, actually, but this should get 'em right from level 1.)
+
+        level None set GD_ItemGrades.Ammo_Shop.ItemGrade_AmmoShop_RocketLauncher Manufacturers[0].Grades[0].GameStageRequirement.MinGameStage 1
+
+        level None set GD_ItemGrades.Ammo.ItemGrade_Ammo_RocketLauncher Manufacturers[0].Grades[0].GameStageRequirement.MinGameStage 1
+
+        level None set GD_ItemGrades.Ammo_Shop.ItemGrade_AmmoShop_Grenade Manufacturers[0].Grades[0].GameStageRequirement.MinGameStage 1
+
+        level None set GD_ItemGrades.Ammo.ItemGrade_Ammo_Grenade Manufacturers[0].Grades[0].GameStageRequirement.MinGameStage 1
+
+    #</Rocket Ammo and Grenades in Early Game>
+
+    #<Exhaustive Weapon/Item Part Unlocks>
+
+        # This is an utterly absurd set of commands which sets every weapon/item part
+        # to be able to spawn from the very beginning.  This is what will allow all
+        # element types from the beginning game, and various COM parts, etc.
+        # Realistically we'd only need a subset of these, but we include all fixes
+        # for unique/legendary partlists as well.  These are all generated by some
+        # code which reads from FilterTool's catalogued `obj dump` outputs.  Rather
+        # than alter MinGameStageIndex itself, as we do on my BL2 Better Loot mod,
+        # here we're editing the ConsolidatedAttributeInitData vars which drive those.
+
+        {mp:part_unlock_0}
+
+        {mp:part_unlock_1}
+
+        {mp:part_unlock_2}
+
+        {mp:part_unlock_3}
+
+        {mp:part_unlock_4}
+
+        {mp:part_unlock_5}
+
+        {mp:part_unlock_6}
+
+        {mp:part_unlock_7}
+
+        {mp:part_unlock_8}
+
+        {mp:part_unlock_9}
+
+        {mp:part_unlock_10}
+
+        {mp:part_unlock_11}
+
+        {mp:part_unlock_12}
+
+        {mp:part_unlock_13}
+
+        {mp:part_unlock_14}
+
+        {mp:part_unlock_15}
+
+        {mp:part_unlock_16}
+
+        {mp:part_unlock_17}
+
+        {mp:part_unlock_18}
+
+        {mp:part_unlock_19}
+
+        {mp:part_unlock_20}
+
+        {mp:part_unlock_21}
+
+        {mp:part_unlock_22}
+
+        {mp:part_unlock_23}
+
+        {mp:part_unlock_24}
+
+        {mp:part_unlock_25}
+
+        {mp:part_unlock_26}
+
+        {mp:part_unlock_27}
+
+        {mp:part_unlock_28}
+
+        {mp:part_unlock_29}
+
+        {mp:part_unlock_30}
+
+        {mp:part_unlock_31}
+
+        {mp:part_unlock_32}
+
+        {mp:part_unlock_33}
+
+        {mp:part_unlock_34}
+
+        {mp:part_unlock_35}
+
+        {mp:part_unlock_36}
+
+        {mp:part_unlock_37}
+
+        {mp:part_unlock_38}
+
+        {mp:part_unlock_39}
+
+        {mp:part_unlock_40}
+
+        {mp:part_unlock_41}
+
+        {mp:part_unlock_42}
+
+        {mp:part_unlock_43}
+
+        {mp:part_unlock_44}
+
+        {mp:part_unlock_45}
+
+        {mp:part_unlock_46}
+
+        {mp:part_unlock_47}
+
+        {mp:part_unlock_48}
+
+        {mp:part_unlock_49}
+
+        {mp:part_unlock_50}
+
+        {mp:part_unlock_51}
+
+        {mp:part_unlock_52}
+
+        {mp:part_unlock_53}
+
+        {mp:part_unlock_54}
+
+        {mp:part_unlock_55}
+
+        {mp:part_unlock_56}
+
+        {mp:part_unlock_57}
+
+        {mp:part_unlock_58}
+
+        {mp:part_unlock_59}
+
+        {mp:part_unlock_60}
+
+        {mp:part_unlock_61}
+
+        {mp:part_unlock_62}
+
+        {mp:part_unlock_63}
+
+        {mp:part_unlock_64}
+
+        {mp:part_unlock_65}
+
+        {mp:part_unlock_66}
+
+        {mp:part_unlock_67}
+
+        {mp:part_unlock_68}
+
+        {mp:part_unlock_69}
+
+        {mp:part_unlock_70}
+
+        {mp:part_unlock_71}
+
+        {mp:part_unlock_72}
+
+        {mp:part_unlock_73}
+
+        {mp:part_unlock_74}
+
+        {mp:part_unlock_75}
+
+        {mp:part_unlock_76}
+
+        {mp:part_unlock_77}
+
+        {mp:part_unlock_78}
+
+        {mp:part_unlock_79}
+
+        {mp:part_unlock_80}
+
+        {mp:part_unlock_81}
+
+        {mp:part_unlock_82}
+
+        {mp:part_unlock_83}
+
+        {mp:part_unlock_84}
+
+        {mp:part_unlock_85}
+
+        {mp:part_unlock_86}
+
+        {mp:part_unlock_87}
+
+        {mp:part_unlock_88}
+
+        {mp:part_unlock_89}
+
+        {mp:part_unlock_90}
+
+        {mp:part_unlock_91}
+
+        {mp:part_unlock_92}
+
+        {mp:part_unlock_93}
+
+        {mp:part_unlock_94}
+
+        {mp:part_unlock_95}
+
+        {mp:part_unlock_96}
+
+        {mp:part_unlock_97}
+
+        {mp:part_unlock_98}
+
+        {mp:part_unlock_99}
+
+        {mp:part_unlock_100}
+
+        {mp:part_unlock_101}
+
+        {mp:part_unlock_102}
+
+        {mp:part_unlock_103}
+
+        {mp:part_unlock_104}
+
+        {mp:part_unlock_105}
+
+        {mp:part_unlock_106}
+
+        {mp:part_unlock_107}
+
+        {mp:part_unlock_108}
+
+        {mp:part_unlock_109}
+
+        {mp:part_unlock_110}
+
+        {mp:part_unlock_111}
+
+        {mp:part_unlock_112}
+
+        {mp:part_unlock_113}
+
+        {mp:part_unlock_114}
+
+        {mp:part_unlock_115}
+
+        {mp:part_unlock_116}
+
+        {mp:part_unlock_117}
+
+        {mp:part_unlock_118}
+
+        {mp:part_unlock_119}
+
+        {mp:part_unlock_120}
+
+        {mp:part_unlock_121}
+
+        {mp:part_unlock_122}
+
+        {mp:part_unlock_123}
+
+        {mp:part_unlock_124}
+
+        {mp:part_unlock_125}
+
+        {mp:part_unlock_126}
+
+        {mp:part_unlock_127}
+
+        {mp:part_unlock_128}
+
+        {mp:part_unlock_129}
+
+        {mp:part_unlock_130}
+
+        {mp:part_unlock_131}
+
+        {mp:part_unlock_132}
+
+        {mp:part_unlock_133}
+
+        {mp:part_unlock_134}
+
+        {mp:part_unlock_135}
+
+        {mp:part_unlock_136}
+
+        {mp:part_unlock_137}
+
+        {mp:part_unlock_138}
+
+        {mp:part_unlock_139}
+
+        {mp:part_unlock_140}
+
+        {mp:part_unlock_141}
+
+        {mp:part_unlock_142}
+
+        {mp:part_unlock_143}
+
+        {mp:part_unlock_144}
+
+        {mp:part_unlock_145}
+
+        {mp:part_unlock_146}
+
+        {mp:part_unlock_147}
+
+        {mp:part_unlock_148}
+
+        {mp:part_unlock_149}
+
+        {mp:part_unlock_150}
+
+        {mp:part_unlock_151}
+
+        {mp:part_unlock_152}
+
+        {mp:part_unlock_153}
+
+        {mp:part_unlock_154}
+
+        {mp:part_unlock_155}
+
+        {mp:part_unlock_156}
+
+        {mp:part_unlock_157}
+
+        {mp:part_unlock_158}
+
+        {mp:part_unlock_159}
+
+        {mp:part_unlock_160}
+
+        {mp:part_unlock_161}
+
+        {mp:part_unlock_162}
+
+        {mp:part_unlock_163}
+
+        {mp:part_unlock_164}
+
+        {mp:part_unlock_165}
+
+        {mp:part_unlock_166}
+
+        {mp:part_unlock_167}
+
+        {mp:part_unlock_168}
+
+        {mp:part_unlock_169}
+
+        {mp:part_unlock_170}
+
+        {mp:part_unlock_171}
+
+        {mp:part_unlock_172}
+
+        {mp:part_unlock_173}
+
+        {mp:part_unlock_174}
+
+        {mp:part_unlock_175}
+
+        {mp:part_unlock_176}
+
+        {mp:part_unlock_177}
+
+        {mp:part_unlock_178}
+
+        {mp:part_unlock_179}
+
+        {mp:part_unlock_180}
+
+        {mp:part_unlock_181}
+
+        {mp:part_unlock_182}
+
+        {mp:part_unlock_183}
+
+        {mp:part_unlock_184}
+
+        {mp:part_unlock_185}
+
+        {mp:part_unlock_186}
+
+        {mp:part_unlock_187}
+
+        {mp:part_unlock_188}
+
+        {mp:part_unlock_189}
+
+        {mp:part_unlock_190}
+
+        {mp:part_unlock_191}
+
+        {mp:part_unlock_192}
+
+        {mp:part_unlock_193}
+
+        {mp:part_unlock_194}
+
+        {mp:part_unlock_195}
+
+        {mp:part_unlock_196}
+
+        {mp:part_unlock_197}
+
+        {mp:part_unlock_198}
+
+        {mp:part_unlock_199}
+
+        {mp:part_unlock_200}
+
+        {mp:part_unlock_201}
+
+        {mp:part_unlock_202}
+
+        {mp:part_unlock_203}
+
+        {mp:part_unlock_204}
+
+        {mp:part_unlock_205}
+
+        {mp:part_unlock_206}
+
+        {mp:part_unlock_207}
+
+        {mp:part_unlock_208}
+
+        {mp:part_unlock_209}
+
+        {mp:part_unlock_210}
+
+        {mp:part_unlock_211}
+
+        {mp:part_unlock_212}
+
+        {mp:part_unlock_213}
+
+        {mp:part_unlock_214}
+
+        {mp:part_unlock_215}
+
+        {mp:part_unlock_216}
+
+        {mp:part_unlock_217}
+
+        {mp:part_unlock_218}
+
+        {mp:part_unlock_219}
+
+        {mp:part_unlock_220}
+
+        {mp:part_unlock_221}
+
+        {mp:part_unlock_222}
+
+        {mp:part_unlock_223}
+
+        {mp:part_unlock_224}
+
+        {mp:part_unlock_225}
+
+        {mp:part_unlock_226}
+
+        {mp:part_unlock_227}
+
+        {mp:part_unlock_228}
+
+        {mp:part_unlock_229}
+
+        {mp:part_unlock_230}
+
+        {mp:part_unlock_231}
+
+        {mp:part_unlock_232}
+
+        {mp:part_unlock_233}
+
+        {mp:part_unlock_234}
+
+        {mp:part_unlock_235}
+
+        {mp:part_unlock_236}
+
+        {mp:part_unlock_237}
+
+        {mp:part_unlock_238}
+
+        {mp:part_unlock_239}
+
+        {mp:part_unlock_240}
+
+        {mp:part_unlock_241}
+
+        {mp:part_unlock_242}
+
+        {mp:part_unlock_243}
+
+        {mp:part_unlock_244}
+
+        {mp:part_unlock_245}
+
+        {mp:part_unlock_246}
+
+        {mp:part_unlock_247}
+
+        {mp:part_unlock_248}
+
+        {mp:part_unlock_249}
+
+        {mp:part_unlock_250}
+
+        {mp:part_unlock_251}
+
+        {mp:part_unlock_252}
+
+        {mp:part_unlock_253}
+
+        {mp:part_unlock_254}
+
+        {mp:part_unlock_255}
+
+        {mp:part_unlock_256}
+
+        {mp:part_unlock_257}
+
+        {mp:part_unlock_258}
+
+        {mp:part_unlock_259}
+
+        {mp:part_unlock_260}
+
+        {mp:part_unlock_261}
+
+        {mp:part_unlock_262}
+
+        {mp:part_unlock_263}
+
+        {mp:part_unlock_264}
+
+        {mp:part_unlock_265}
+
+        {mp:part_unlock_266}
+
+        {mp:part_unlock_267}
+
+        {mp:part_unlock_268}
+
+        {mp:part_unlock_269}
+
+        {mp:part_unlock_270}
+
+        {mp:part_unlock_271}
+
+        {mp:part_unlock_272}
+
+        {mp:part_unlock_273}
+
+        {mp:part_unlock_274}
+
+        {mp:part_unlock_275}
+
+        {mp:part_unlock_276}
+
+        {mp:part_unlock_277}
+
+        {mp:part_unlock_278}
+
+        {mp:part_unlock_279}
+
+        {mp:part_unlock_280}
+
+        {mp:part_unlock_281}
+
+        {mp:part_unlock_282}
+
+        {mp:part_unlock_283}
+
+        {mp:part_unlock_284}
+
+        {mp:part_unlock_285}
+
+        {mp:part_unlock_286}
+
+        {mp:part_unlock_287}
+
+        {mp:part_unlock_288}
+
+        {mp:part_unlock_289}
+
+        {mp:part_unlock_290}
+
+        {mp:part_unlock_291}
+
+        {mp:part_unlock_292}
+
+        {mp:part_unlock_293}
+
+        {mp:part_unlock_294}
+
+        {mp:part_unlock_295}
+
+        {mp:part_unlock_296}
+
+        {mp:part_unlock_297}
+
+        {mp:part_unlock_298}
+
+        {mp:part_unlock_299}
+
+        {mp:part_unlock_300}
+
+        {mp:part_unlock_301}
+
+        {mp:part_unlock_302}
+
+        {mp:part_unlock_303}
+
+        {mp:part_unlock_304}
+
+        {mp:part_unlock_305}
+
+        {mp:part_unlock_306}
+
+        {mp:part_unlock_307}
+
+        {mp:part_unlock_308}
+
+        {mp:part_unlock_309}
+
+        {mp:part_unlock_310}
+
+        {mp:part_unlock_311}
+
+        {mp:part_unlock_312}
+
+        {mp:part_unlock_313}
+
+        {mp:part_unlock_314}
+
+        {mp:part_unlock_315}
+
+        {mp:part_unlock_316}
+
+        {mp:part_unlock_317}
+
+        {mp:part_unlock_318}
+
+        {mp:part_unlock_319}
+
+        {mp:part_unlock_320}
+
+        {mp:part_unlock_321}
+
+        {mp:part_unlock_322}
+
+        {mp:part_unlock_323}
+
+        {mp:part_unlock_324}
+
+        {mp:part_unlock_325}
+
+        {mp:part_unlock_326}
+
+        {mp:part_unlock_327}
+
+        {mp:part_unlock_328}
+
+        {mp:part_unlock_329}
+
+        {mp:part_unlock_330}
+
+        {mp:part_unlock_331}
+
+        {mp:part_unlock_332}
+
+        {mp:part_unlock_333}
+
+        {mp:part_unlock_334}
+
+        {mp:part_unlock_335}
+
+        {mp:part_unlock_336}
+
+        {mp:part_unlock_337}
+
+        {mp:part_unlock_338}
+
+        {mp:part_unlock_339}
+
+        {mp:part_unlock_340}
+
+        {mp:part_unlock_341}
+
+        {mp:part_unlock_342}
+
+        {mp:part_unlock_343}
+
+        {mp:part_unlock_344}
+
+        {mp:part_unlock_345}
+
+        {mp:part_unlock_346}
+
+        {mp:part_unlock_347}
+
+        {mp:part_unlock_348}
+
+        {mp:part_unlock_349}
+
+        {mp:part_unlock_350}
+
+        {mp:part_unlock_351}
+
+        {mp:part_unlock_352}
+
+        {mp:part_unlock_353}
+
+        {mp:part_unlock_354}
+
+        {mp:part_unlock_355}
+
+        {mp:part_unlock_356}
+
+        {mp:part_unlock_357}
+
+        {mp:part_unlock_358}
+
+        {mp:part_unlock_359}
+
+        {mp:part_unlock_360}
+
+        {mp:part_unlock_361}
+
+        {mp:part_unlock_362}
+
+        {mp:part_unlock_363}
+
+        {mp:part_unlock_364}
+
+        {mp:part_unlock_365}
+
+        {mp:part_unlock_366}
+
+        {mp:part_unlock_367}
+
+        {mp:part_unlock_368}
+
+        {mp:part_unlock_369}
+
+        {mp:part_unlock_370}
+
+        {mp:part_unlock_371}
+
+        {mp:part_unlock_372}
+
+        {mp:part_unlock_373}
+
+        {mp:part_unlock_374}
+
+        {mp:part_unlock_375}
+
+        {mp:part_unlock_376}
+
+        {mp:part_unlock_377}
+
+        {mp:part_unlock_378}
+
+        {mp:part_unlock_379}
+
+        {mp:part_unlock_380}
+
+        {mp:part_unlock_381}
+
+        {mp:part_unlock_382}
+
+        {mp:part_unlock_383}
+
+        {mp:part_unlock_384}
+
+        {mp:part_unlock_385}
+
+        {mp:part_unlock_386}
+
+        {mp:part_unlock_387}
+
+        {mp:part_unlock_388}
+
+        {mp:part_unlock_389}
+
+        {mp:part_unlock_390}
+
+        {mp:part_unlock_391}
+
+        {mp:part_unlock_392}
+
+        {mp:part_unlock_393}
+
+        {mp:part_unlock_394}
+
+        {mp:part_unlock_395}
+
+        {mp:part_unlock_396}
+
+        {mp:part_unlock_397}
+
+        {mp:part_unlock_398}
+
+        {mp:part_unlock_399}
+
+        {mp:part_unlock_400}
+
+        {mp:part_unlock_401}
+
+        {mp:part_unlock_402}
+
+        {mp:part_unlock_403}
+
+        {mp:part_unlock_404}
+
+        {mp:part_unlock_405}
+
+        {mp:part_unlock_406}
+
+        {mp:part_unlock_407}
+
+        {mp:part_unlock_408}
+
+        {mp:part_unlock_409}
+
+        {mp:part_unlock_410}
+
+        {mp:part_unlock_411}
+
+        {mp:part_unlock_412}
+
+        {mp:part_unlock_413}
+
+        {mp:part_unlock_414}
+
+        {mp:part_unlock_415}
+
+        {mp:part_unlock_416}
+
+        {mp:part_unlock_417}
+
+        {mp:part_unlock_418}
+
+        {mp:part_unlock_419}
+
+        {mp:part_unlock_420}
+
+        {mp:part_unlock_421}
+
+        {mp:part_unlock_422}
+
+        {mp:part_unlock_423}
+
+        {mp:part_unlock_424}
+
+        {mp:part_unlock_425}
+
+        {mp:part_unlock_426}
+
+        {mp:part_unlock_427}
+
+        {mp:part_unlock_428}
+
+        {mp:part_unlock_429}
+
+        {mp:part_unlock_430}
+
+        {mp:part_unlock_431}
+
+        {mp:part_unlock_432}
+
+        {mp:part_unlock_433}
+
+        {mp:part_unlock_434}
+
+        {mp:part_unlock_435}
+
+        {mp:part_unlock_436}
+
+        {mp:part_unlock_437}
+
+        {mp:part_unlock_438}
+
+        {mp:part_unlock_439}
+
+        {mp:part_unlock_440}
+
+        {mp:part_unlock_441}
+
+        {mp:part_unlock_442}
+
+        {mp:part_unlock_443}
+
+        {mp:part_unlock_444}
+
+        {mp:part_unlock_445}
+
+        {mp:part_unlock_446}
+
+        {mp:part_unlock_447}
+
+        {mp:part_unlock_448}
+
+        {mp:part_unlock_449}
+
+        {mp:part_unlock_450}
+
+        {mp:part_unlock_451}
+
+        {mp:part_unlock_452}
+
+        {mp:part_unlock_453}
+
+        {mp:part_unlock_454}
+
+        {mp:part_unlock_455}
+
+        {mp:part_unlock_456}
+
+        {mp:part_unlock_457}
+
+        {mp:part_unlock_458}
+
+        {mp:part_unlock_459}
+
+        {mp:part_unlock_460}
+
+        {mp:part_unlock_461}
+
+        {mp:part_unlock_462}
+
+        {mp:part_unlock_463}
+
+        {mp:part_unlock_464}
+
+        {mp:part_unlock_465}
+
+        {mp:part_unlock_466}
+
+        {mp:part_unlock_467}
+
+        {mp:part_unlock_468}
+
+        {mp:part_unlock_469}
+
+        {mp:part_unlock_470}
+
+        {mp:part_unlock_471}
+
+        {mp:part_unlock_472}
+
+        {mp:part_unlock_473}
+
+        {mp:part_unlock_474}
+
+        {mp:part_unlock_475}
+
+        {mp:part_unlock_476}
+
+        {mp:part_unlock_477}
+
+        {mp:part_unlock_478}
+
+        {mp:part_unlock_479}
+
+        {mp:part_unlock_480}
+
+        {mp:part_unlock_481}
+
+        {mp:part_unlock_482}
+
+        {mp:part_unlock_483}
+
+        {mp:part_unlock_484}
+
+        {mp:part_unlock_485}
+
+        {mp:part_unlock_486}
+
+        {mp:part_unlock_487}
+
+        {mp:part_unlock_488}
+
+        {mp:part_unlock_489}
+
+        {mp:part_unlock_490}
+
+        {mp:part_unlock_491}
+
+        {mp:part_unlock_492}
+
+        {mp:part_unlock_493}
+
+        {mp:part_unlock_494}
+
+        {mp:part_unlock_495}
+
+        {mp:part_unlock_496}
+
+        {mp:part_unlock_497}
+
+        {mp:part_unlock_498}
+
+        {mp:part_unlock_499}
+
+        {mp:part_unlock_500}
+
+        {mp:part_unlock_501}
+
+        {mp:part_unlock_502}
+
+        {mp:part_unlock_503}
+
+        {mp:part_unlock_504}
+
+        {mp:part_unlock_505}
+
+        {mp:part_unlock_506}
+
+        {mp:part_unlock_507}
+
+        {mp:part_unlock_508}
+
+        {mp:part_unlock_509}
+
+        {mp:part_unlock_510}
+
+        {mp:part_unlock_511}
+
+        {mp:part_unlock_512}
+
+        {mp:part_unlock_513}
+
+        {mp:part_unlock_514}
+
+        {mp:part_unlock_515}
+
+        {mp:part_unlock_516}
+
+        {mp:part_unlock_517}
+
+        {mp:part_unlock_518}
+
+        {mp:part_unlock_519}
+
+        {mp:part_unlock_520}
+
+        {mp:part_unlock_521}
+
+        {mp:part_unlock_522}
+
+        {mp:part_unlock_523}
+
+        {mp:part_unlock_524}
+
+        {mp:part_unlock_525}
+
+        {mp:part_unlock_526}
+
+        {mp:part_unlock_527}
+
+        {mp:part_unlock_528}
+
+        {mp:part_unlock_529}
+
+        {mp:part_unlock_530}
+
+        {mp:part_unlock_531}
+
+        {mp:part_unlock_532}
+
+        {mp:part_unlock_533}
+
+        {mp:part_unlock_534}
+
+        {mp:part_unlock_535}
+
+        {mp:part_unlock_536}
+
+        {mp:part_unlock_537}
+
+        {mp:part_unlock_538}
+
+        {mp:part_unlock_539}
+
+        {mp:part_unlock_540}
+
+        {mp:part_unlock_541}
+
+        {mp:part_unlock_542}
+
+        {mp:part_unlock_543}
+
+        {mp:part_unlock_544}
+
+        {mp:part_unlock_545}
+
+        {mp:part_unlock_546}
+
+        {mp:part_unlock_547}
+
+        {mp:part_unlock_548}
+
+        {mp:part_unlock_549}
+
+        {mp:part_unlock_550}
+
+        {mp:part_unlock_551}
+
+        {mp:part_unlock_552}
+
+        {mp:part_unlock_553}
+
+        {mp:part_unlock_554}
+
+        {mp:part_unlock_555}
+
+        {mp:part_unlock_556}
+
+        {mp:part_unlock_557}
+
+        {mp:part_unlock_558}
+
+        {mp:part_unlock_559}
+
+        {mp:part_unlock_560}
+
+        {mp:part_unlock_561}
+
+        {mp:part_unlock_562}
+
+        {mp:part_unlock_563}
+
+        {mp:part_unlock_564}
+
+        {mp:part_unlock_565}
+
+        {mp:part_unlock_566}
+
+        {mp:part_unlock_567}
+
+        {mp:part_unlock_568}
+
+        {mp:part_unlock_569}
+
+        {mp:part_unlock_570}
+
+        {mp:part_unlock_571}
+
+        {mp:part_unlock_572}
+
+        {mp:part_unlock_573}
+
+        {mp:part_unlock_574}
+
+        {mp:part_unlock_575}
+
+        {mp:part_unlock_576}
+
+        {mp:part_unlock_577}
+
+        {mp:part_unlock_578}
+
+        {mp:part_unlock_579}
+
+        {mp:part_unlock_580}
+
+        {mp:part_unlock_581}
+
+        {mp:part_unlock_582}
+
+        {mp:part_unlock_583}
+
+        {mp:part_unlock_584}
+
+        {mp:part_unlock_585}
+
+        {mp:part_unlock_586}
+
+        {mp:part_unlock_587}
+
+        {mp:part_unlock_588}
+
+        {mp:part_unlock_589}
+
+        {mp:part_unlock_590}
+
+        {mp:part_unlock_591}
+
+        {mp:part_unlock_592}
+
+        {mp:part_unlock_593}
+
+        {mp:part_unlock_594}
+
+        {mp:part_unlock_595}
+
+        {mp:part_unlock_596}
+
+        {mp:part_unlock_597}
+
+        {mp:part_unlock_598}
+
+        {mp:part_unlock_599}
+
+        {mp:part_unlock_600}
+
+        {mp:part_unlock_601}
+
+        {mp:part_unlock_602}
+
+        {mp:part_unlock_603}
+
+        {mp:part_unlock_604}
+
+        {mp:part_unlock_605}
+
+        {mp:part_unlock_606}
+
+        {mp:part_unlock_607}
+
+        {mp:part_unlock_608}
+
+        {mp:part_unlock_609}
+
+        {mp:part_unlock_610}
+
+        {mp:part_unlock_611}
+
+        {mp:part_unlock_612}
+
+        {mp:part_unlock_613}
+
+        {mp:part_unlock_614}
+
+        {mp:part_unlock_615}
+
+        {mp:part_unlock_616}
+
+        {mp:part_unlock_617}
+
+        {mp:part_unlock_618}
+
+        {mp:part_unlock_619}
+
+        {mp:part_unlock_620}
+
+        {mp:part_unlock_621}
+
+        {mp:part_unlock_622}
+
+        {mp:part_unlock_623}
+
+        {mp:part_unlock_624}
+
+        {mp:part_unlock_625}
+
+        {mp:part_unlock_626}
+
+        {mp:part_unlock_627}
+
+        {mp:part_unlock_628}
+
+        {mp:part_unlock_629}
+
+        {mp:part_unlock_630}
+
+        {mp:part_unlock_631}
+
+        {mp:part_unlock_632}
+
+        {mp:part_unlock_633}
+
+        {mp:part_unlock_634}
+
+        {mp:part_unlock_635}
+
+        {mp:part_unlock_636}
+
+        {mp:part_unlock_637}
+
+        {mp:part_unlock_638}
+
+        {mp:part_unlock_639}
+
+        {mp:part_unlock_640}
+
+        {mp:part_unlock_641}
+
+        {mp:part_unlock_642}
+
+        {mp:part_unlock_643}
+
+        {mp:part_unlock_644}
+
+        {mp:part_unlock_645}
+
+        {mp:part_unlock_646}
+
+        {mp:part_unlock_647}
+
+        {mp:part_unlock_648}
+
+        {mp:part_unlock_649}
+
+        {mp:part_unlock_650}
+
+        {mp:part_unlock_651}
+
+        {mp:part_unlock_652}
+
+        {mp:part_unlock_653}
+
+        {mp:part_unlock_654}
+
+        {mp:part_unlock_655}
+
+        {mp:part_unlock_656}
+
+        {mp:part_unlock_657}
+
+        {mp:part_unlock_658}
+
+        {mp:part_unlock_659}
+
+        {mp:part_unlock_660}
+
+        {mp:part_unlock_661}
+
+        {mp:part_unlock_662}
+
+        {mp:part_unlock_663}
+
+        {mp:part_unlock_664}
+
+        {mp:part_unlock_665}
+
+        {mp:part_unlock_666}
+
+        {mp:part_unlock_667}
+
+        {mp:part_unlock_668}
+
+        {mp:part_unlock_669}
+
+        {mp:part_unlock_670}
+
+        {mp:part_unlock_671}
+
+        {mp:part_unlock_672}
+
+        {mp:part_unlock_673}
+
+        {mp:part_unlock_674}
+
+        {mp:part_unlock_675}
+
+        {mp:part_unlock_676}
+
+        {mp:part_unlock_677}
+
+        {mp:part_unlock_678}
+
+        {mp:part_unlock_679}
+
+        {mp:part_unlock_680}
+
+        {mp:part_unlock_681}
+
+        {mp:part_unlock_682}
+
+        {mp:part_unlock_683}
+
+        {mp:part_unlock_684}
+
+        {mp:part_unlock_685}
+
+        {mp:part_unlock_686}
+
+        {mp:part_unlock_687}
+
+        {mp:part_unlock_688}
+
+        {mp:part_unlock_689}
+
+        {mp:part_unlock_690}
+
+        {mp:part_unlock_691}
+
+        {mp:part_unlock_692}
+
+        {mp:part_unlock_693}
+
+        {mp:part_unlock_694}
+
+        {mp:part_unlock_695}
+
+        {mp:part_unlock_696}
+
+        {mp:part_unlock_697}
+
+        {mp:part_unlock_698}
+
+        {mp:part_unlock_699}
+
+        {mp:part_unlock_700}
+
+        {mp:part_unlock_701}
+
+        {mp:part_unlock_702}
+
+        {mp:part_unlock_703}
+
+        {mp:part_unlock_704}
+
+        {mp:part_unlock_705}
+
+        {mp:part_unlock_706}
+
+        {mp:part_unlock_707}
+
+        {mp:part_unlock_708}
+
+        {mp:part_unlock_709}
+
+        {mp:part_unlock_710}
+
+        {mp:part_unlock_711}
+
+        {mp:part_unlock_712}
+
+        {mp:part_unlock_713}
+
+        {mp:part_unlock_714}
+
+        {mp:part_unlock_715}
+
+        {mp:part_unlock_716}
+
+        {mp:part_unlock_717}
+
+        {mp:part_unlock_718}
+
+        {mp:part_unlock_719}
+
+        {mp:part_unlock_720}
+
+        {mp:part_unlock_721}
+
+        {mp:part_unlock_722}
+
+        {mp:part_unlock_723}
+
+        {mp:part_unlock_724}
+
+        {mp:part_unlock_725}
+
+        {mp:part_unlock_726}
+
+        {mp:part_unlock_727}
+
+        {mp:part_unlock_728}
+
+        {mp:part_unlock_729}
+
+        {mp:part_unlock_730}
+
+        {mp:part_unlock_731}
+
+        {mp:part_unlock_732}
+
+        {mp:part_unlock_733}
+
+        {mp:part_unlock_734}
+
+        {mp:part_unlock_735}
+
+        {mp:part_unlock_736}
+
+        {mp:part_unlock_737}
+
+        {mp:part_unlock_738}
+
+        {mp:part_unlock_739}
+
+    #</Exhaustive Weapon/Item Part Unlocks>
+
+#</{mod_name}>
