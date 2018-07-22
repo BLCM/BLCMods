@@ -58,7 +58,7 @@ except ModuleNotFoundError:
 ###
 
 mod_name = 'TPS Early Bloomer'
-mod_version = '1.0.0'
+mod_version = '1.1.0'
 input_filename = 'input-file-mod.txt'
 output_filename = '{}.blcm'.format(mod_name)
 source_output_filename = '{}-source.txt'.format(mod_name)

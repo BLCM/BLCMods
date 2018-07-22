@@ -53,7 +53,7 @@ for the full text.
 Changelog
 =========
 
-**v1.1.0**, (unreleased):
+**v1.1.0**, July 22, 2018:
  * Converted to BLCM format *(BLCMM is now required; FilterTool is not supported)*
  * Added a missing grenade unlock: Four Seasons
  * Switch to dynamically generating the exhaustive part unlock section in the
