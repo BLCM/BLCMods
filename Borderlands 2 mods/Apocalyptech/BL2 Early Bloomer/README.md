@@ -62,6 +62,16 @@ for the full text.
 Changelog
 =========
 
+**v1.1.1**, July 21, 2018:
+ * Extra grenade mods unlocked:
+   * Captain Blade's Midnight Star
+   * O-Negative
+ * Extra relics unlocked:
+   * Blood of the Ancients
+   * Blood of the Seraphs
+ * Unlocked extra variants of base Stockpile Relic
+ * Added byline in mod header comments
+
 **v1.1.0**, July 11, 2018:
  * Converted to BLCMM format (no longer compatible with FilterTool)
  * Updated part unlock mechanism to play more nicely with custom objects.
