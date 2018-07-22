@@ -426,32 +426,32 @@ items = {
     'relic': {
         'GD_Itempools.ArtifactPools.Pool_ArtifactsReward': [
             # Leg:
-            ('blood_terra', 10, 'GD_Artifacts.A_Item_Unique.A_Terramorphous', 0.5),
+            ('blood_terra', 10, 'GD_Artifacts.A_Item_Unique.A_Terramorphous', 0.3),
             # Uniques:
-            ('midnight_star', 11, 'GD_Orchid_Artifacts.A_Item_Unique.A_Blade', 0.5),
-            ('deputys_badge', 12, 'GD_Artifacts.A_Item_Unique.A_Deputy', 0.5),
-            ('opportunity', 13, 'GD_Artifacts.A_Item_Unique.A_Opportunity', 0.5),
-            ('endowment', 14, 'GD_Artifacts.A_Item_Unique.A_Endowment', 0.5),
-            ('amulet', 15, 'GD_Aster_Artifacts.A_Item_Unique.A_MysteryAmulet', 0.25),
-            ('sheriffs_badge', 16, 'GD_Artifacts.A_Item_Unique.A_Sheriff', 0.5),
-            ('afterburner', 17, 'GD_Artifacts.A_Item_Unique.A_Afterburner', 0.5),
+            ('midnight_star', 11, 'GD_Orchid_Artifacts.A_Item_Unique.A_Blade', 0.3),
+            ('deputys_badge', 12, 'GD_Artifacts.A_Item_Unique.A_Deputy', 0.3),
+            ('opportunity', 13, 'GD_Artifacts.A_Item_Unique.A_Opportunity', 0.3),
+            ('endowment', 14, 'GD_Artifacts.A_Item_Unique.A_Endowment', 0.3),
+            ('amulet', 15, 'GD_Aster_Artifacts.A_Item_Unique.A_MysteryAmulet', 0.1),
+            ('sheriffs_badge', 16, 'GD_Artifacts.A_Item_Unique.A_Sheriff', 0.3),
+            ('afterburner', 17, 'GD_Artifacts.A_Item_Unique.A_Afterburner', 0.3),
             # E-Tech:
-            ('ancients_blood', 18, 'GD_Gladiolus_Artifacts.A_Item.A_VitalityStockpile_VeryRare', 0.5),
-            ('ancients_bone', 19, 'GD_Gladiolus_Artifacts.A_Item.A_ElementalProficiency_VeryRare', 0.5),
-            ('ancients_heart_1', 20, 'GD_Gladiolus_Artifacts.A_Item.A_AggressionTenacityAssault_VeryRare', 0.25),
-            ('ancients_heart_2', 21, 'GD_Gladiolus_Artifacts.A_Item.A_AggressionTenacityLauncher_VeryRare', 0.25),
-            ('ancients_heart_3', 22, 'GD_Gladiolus_Artifacts.A_Item.A_AggressionTenacityPistol_VeryRare', 0.25),
-            ('ancients_heart_4', 23, 'GD_Gladiolus_Artifacts.A_Item.A_AggressionTenacityShotgun_VeryRare', 0.25),
-            ('ancients_heart_5', 24, 'GD_Gladiolus_Artifacts.A_Item.A_AggressionTenacitySMG_VeryRare', 0.25),
-            ('ancients_heart_6', 25, 'GD_Gladiolus_Artifacts.A_Item.A_AggressionTenacitySniper_VeryRare', 0.25),
-            ('ancients_skin', 26, 'GD_Gladiolus_Artifacts.A_Item.A_ResistanceProtection_VeryRare', 0.5),
+            ('ancients_blood', 18, 'GD_Gladiolus_Artifacts.A_Item.A_VitalityStockpile_VeryRare', 0.3),
+            ('ancients_bone', 19, 'GD_Gladiolus_Artifacts.A_Item.A_ElementalProficiency_VeryRare', 0.3),
+            ('ancients_heart_1', 20, 'GD_Gladiolus_Artifacts.A_Item.A_AggressionTenacityAssault_VeryRare', 0.15),
+            ('ancients_heart_2', 21, 'GD_Gladiolus_Artifacts.A_Item.A_AggressionTenacityLauncher_VeryRare', 0.15),
+            ('ancients_heart_3', 22, 'GD_Gladiolus_Artifacts.A_Item.A_AggressionTenacityPistol_VeryRare', 0.15),
+            ('ancients_heart_4', 23, 'GD_Gladiolus_Artifacts.A_Item.A_AggressionTenacityShotgun_VeryRare', 0.15),
+            ('ancients_heart_5', 24, 'GD_Gladiolus_Artifacts.A_Item.A_AggressionTenacitySMG_VeryRare', 0.15),
+            ('ancients_heart_6', 25, 'GD_Gladiolus_Artifacts.A_Item.A_AggressionTenacitySniper_VeryRare', 0.15),
+            ('ancients_skin', 26, 'GD_Gladiolus_Artifacts.A_Item.A_ResistanceProtection_VeryRare', 0.3),
             # Seraph:
-            ('seraphs_blood', 27, 'GD_Orchid_Artifacts.A_Item_Unique.A_SeraphBloodRelic', 0.5),
-            ('seraphs_breath', 28, 'GD_Sage_Artifacts.A_Item.A_SeraphBreath', 0.5),
-            ('seraphs_might', 29, 'GD_Iris_SeraphItems.Might.Iris_Seraph_Artifact_Might_Balance', 0.5),
-            ('seraphs_shadow', 30, 'GD_Aster_Artifacts.A_Item_Unique.A_SeraphShadow', 0.5),
+            ('seraphs_blood', 27, 'GD_Orchid_Artifacts.A_Item_Unique.A_SeraphBloodRelic', 0.3),
+            ('seraphs_breath', 28, 'GD_Sage_Artifacts.A_Item.A_SeraphBreath', 0.3),
+            ('seraphs_might', 29, 'GD_Iris_SeraphItems.Might.Iris_Seraph_Artifact_Might_Balance', 0.3),
+            ('seraphs_shadow', 30, 'GD_Aster_Artifacts.A_Item_Unique.A_SeraphShadow', 0.3),
             # Junk:
-            ('vault_hunter', 31, 'GD_Artifacts.A_Item_Unique.A_VaultHunter', 0.5)
+            ('vault_hunter', 31, 'GD_Artifacts.A_Item_Unique.A_VaultHunter', 0.3)
             ],
         },
     'gemstone': {
