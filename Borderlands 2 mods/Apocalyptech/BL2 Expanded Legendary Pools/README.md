@@ -1,13 +1,26 @@
 BL2 Expanded Legendary Pools
 ============================
 
-Adds all legendaries/uniques/pearls/seraph items (weapons,
-grenade mods, class mods, shields, relics) into the global "legendary" loot
-pools.  This was basically taken directly from BL2 Better Loot and
-repackaged as standalone functionality, since folks may find it useful
-without wanting to buff their loot more generally.
+Adds all legendary items into the global "legendary" loot pools, and
+by default adds all uniques, seraphs, and pearlescents into the legendary
+pools.  This applies to weapons, grenade mods, class mods, shields, and
+even relics.  The mod will also by default add in gemstone weapons into the
+E-Tech pool, so that those will drop throughout the game (though this, like
+most of the functionality in this mod, can be configured easily).
 
-This isn't entirely dissimilar from FromDarkHell's `BL1Loot.txt`, though
+To compensate for the increased number of items which are available in
+the legendary/E-tech pools, this mod also doubles the chances of those
+drops, by default.  An optional configuration section can be used to revert
+those rates to the standard drop rates, or set them to drop three times as
+often, instead.
+
+This mod was basically taken straight out of BL2 Better Loot, though there
+are a few functional differences.  This mod will **not** play nicely with
+Better Loot, or my Cold Dead Hands mod, for that matter!  Those mods already
+improve the loot drops in their own ways, and having this mod on top will
+result in undefined behavior.
+
+This mod isn't entirely dissimilar to FromDarkHell's `BL1Loot.txt`, though
 that mod just adds a bunch of stuff to the legendary weapons pool (and
 doesn't include things like COMs), whereas this one adds things to their
 respective loot pools and allows for more configuration.
@@ -30,24 +43,11 @@ the last category, if you like.  These are:
 * ERROR MESSAGE *(the Ahab version that Master Gee wields)*
 * Vault Hunter's Relic
 
-Differences Between This And BL2 Better Loot's Version
-======================================================
-
-This mod was taken pretty much directly from BL2 Better Loot, but has a
-couple of differences to make it a more general-purpose solution:
-
-* This version does not nerf the drop rates for E-Tech pistols (darts and
-  spikers), when adding gemstones to the E-Tech pool.  All E-Tech weapon
-  type pools should have an equal chance of dropping an E-Tech or a
-  gemstone.
-
 TODO
 ====
 
-* Normalize and buff leg/reward relics
 * Options to buff E-tech drop rate
 * Probably need to add in alignment COMs?
-* Figure out the correct weight for the relic reward pool
 
 Bugs
 ====

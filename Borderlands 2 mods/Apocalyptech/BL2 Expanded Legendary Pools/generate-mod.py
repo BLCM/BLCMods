@@ -512,10 +512,10 @@ for (itemtype, itemdict) in items.items():
 
 # Load in our legendary scales.
 leg_scales = {}
-for (key, label, scale_most, scale_com) in [
-        ('base', 'Stock Legendary Drop Rate', 3, 1),
-        ('2x', 'Doubled Legendary Drop Rate', 6, 2),
-        ('3x', 'Tripled Legendary Drop Rate', 9, 3),
+for (key, label, scale_most, scale_com, scale_relic_full, scale_relic_half, scale_relic_amulet) in [
+        ('base', 'Stock Legendary Drop Rate', 3, 1, .3, .15, .1),
+        ('2x', 'Doubled Legendary Drop Rate', 6, 2, .6, .3, .2),
+        ('3x', 'Tripled Legendary Drop Rate', 9, 3, .9, .45, .3),
         ]:
     with open('input-file-legendary.txt') as df:
         leg_scales[key] = df.read().format(
@@ -524,6 +524,9 @@ for (key, label, scale_most, scale_com) in [
                 shield_scale=scale_most,
                 grenade_scale=scale_most,
                 com_scale=scale_com,
+                relic_scale_full=scale_relic_full,
+                relic_scale_half=scale_relic_half,
+                relic_scale_amulet=scale_relic_amulet,
                 )
 
 ###
