@@ -118,9 +118,7 @@ BL2
         #<E-Tech Weapon Pool Setup>
 
             # Initializes the various Legendary drop pools in a way which lets us choose
-            # what else to put in them (via hotfix) in the next categories.  Note that
-            # we have a reduced chance of spawning darts/spikers in here, since
-            # they're fairly lame (though UCP gives them a reasonable boost).
+            # what else to put in them (via hotfix) in the next categories.
 
             set GD_Itempools.WeaponPools.Pool_Weapons_AssaultRifles_05_VeryRare_Alien BalancedItems
             (
@@ -1064,6 +1062,17 @@ BL2
                         BaseValueScaleConstant=1.000000
                     ),
                     bDropOnDeath=True
+                ),
+                (
+                    ItmPoolDefinition=None,
+                    InvBalanceDefinition=None,
+                    Probability=(
+                        BaseValueConstant=0.000000,
+                        BaseValueAttribute=None,
+                        InitializationDefinition=None,
+                        BaseValueScaleConstant=1.000000
+                    ),
+                    bDropOnDeath=True
                 )
             )
 
@@ -1202,6 +1211,28 @@ BL2
                     InvBalanceDefinition=InventoryBalanceDefinition'GD_Aster_GrenadeMods.A_Item.GM_FireStorm',
                     Probability=(
                         BaseValueConstant=1.000000,
+                        BaseValueAttribute=None,
+                        InitializationDefinition=None,
+                        BaseValueScaleConstant=1.000000
+                    ),
+                    bDropOnDeath=True
+                ),
+                (
+                    ItmPoolDefinition=None,
+                    InvBalanceDefinition=None,
+                    Probability=(
+                        BaseValueConstant=0.000000,
+                        BaseValueAttribute=None,
+                        InitializationDefinition=None,
+                        BaseValueScaleConstant=1.000000
+                    ),
+                    bDropOnDeath=True
+                ),
+                (
+                    ItmPoolDefinition=None,
+                    InvBalanceDefinition=None,
+                    Probability=(
+                        BaseValueConstant=0.000000,
                         BaseValueAttribute=None,
                         InitializationDefinition=None,
                         BaseValueScaleConstant=1.000000
@@ -1891,6 +1922,17 @@ BL2
                         BaseValueScaleConstant=0
                     ),
                     bDropOnDeath=True
+                ),
+                (
+                    ItmPoolDefinition=None,
+                    InvBalanceDefinition=None,
+                    Probability=(
+                        BaseValueConstant=1.000000,
+                        BaseValueAttribute=None,
+                        InitializationDefinition=None,
+                        BaseValueScaleConstant=0
+                    ),
+                    bDropOnDeath=True
                 )
             )
 
@@ -2124,5 +2166,59 @@ BL2
         #</Relics>
 
     #</Add Seraphs to Legendary Pools>
+
+    #<Add Undesirable Items to Pools (disabled by default)><MUT>
+
+        #<Don't Add Undesirable Items>
+
+            # Smart move, these items kind of suck.
+
+            level Dummy_P set GD_Dummy Foo Bar
+
+        #</Don't Add Undesirable Items>
+
+        #<Add Undesirable Items>
+
+            # There's a number of items which probably aren't particularly worthy of
+            # taking up valuable space in the legendary pools, but if you'd like to have
+            # them added anyway, here's where you can do so.
+
+            #<Captain Blade's Midnight Star>
+
+                {mp:grenade_midnight_star}
+
+            #</Captain Blade's Midnight Star>
+
+            #<Contraband Sky Rocket>
+
+                {mp:grenade_sky_rocket}
+
+            #</Contraband Sky Rocket>
+
+            #<Cracked Sash>
+
+                {mp:shield_cracked_sash}
+
+            #</Cracked Sash>
+
+            #<ERROR MESSAGE>
+
+                # ERROR MESSAGE is the weird Ahab launcher which Master Gee is armed with,
+                # and isn't ever supposed to drop.  Thumb your nose at GBX, if you like,
+                # and enable it here.
+
+                {mp:launcher_error_message}
+
+            #</ERROR MESSAGE>
+
+            #<Vault Hunter's Relic>
+
+                {mp:relic_vault_hunter}
+
+            #</Vault Hunter's Relic>
+
+        #</Add Undesirable Items>
+
+    #</Add Undesirable Items to Pools (disabled by default)>
 
 #</{mod_name}>

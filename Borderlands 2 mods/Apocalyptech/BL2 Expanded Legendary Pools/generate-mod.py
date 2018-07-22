@@ -58,7 +58,7 @@ input_filename = 'input-file-mod.txt'
 unique_hotfixes = []
 pearl_hotfixes = []
 seraph_hotfixes = []
-for (guntype, legendaries, uniques, pearls, seraphs) in [
+for (guntype, legendaries, uniques, pearls, seraphs, num_undesirables) in [
         (
             'AssaultRifles',
             [
@@ -95,6 +95,7 @@ for (guntype, legendaries, uniques, pearls, seraphs) in [
                 'GD_Orchid_RaidWeapons.AssaultRifle.Seraphim.Orchid_Seraph_Seraphim_Balance',
                 'GD_Sage_RaidWeapons.AssaultRifle.Sage_Seraph_LeadStorm_Balance',
             ],
+            0,
         ),
         (
             'Launchers',
@@ -122,6 +123,7 @@ for (guntype, legendaries, uniques, pearls, seraphs) in [
                 # Seraphs
                 'GD_Orchid_RaidWeapons.RPG.Ahab.Orchid_Seraph_Ahab_Balance',
             ],
+            1,
         ),
         (
             'Pistols',
@@ -166,6 +168,7 @@ for (guntype, legendaries, uniques, pearls, seraphs) in [
                 'GD_Sage_RaidWeapons.Pistol.Sage_Seraph_Infection_Balance',
                 'GD_Aster_RaidWeapons.Pistols.Aster_Seraph_Stinger_Balance',
             ],
+            0,
         ),
         (
             'Shotguns',
@@ -207,6 +210,7 @@ for (guntype, legendaries, uniques, pearls, seraphs) in [
                 'GD_Sage_RaidWeapons.Shotgun.Sage_Seraph_Interfacer_Balance',
                 'GD_Aster_RaidWeapons.Shotguns.Aster_Seraph_Omen_Balance',
             ],
+            0,
         ),
         (
             'SMG',
@@ -242,6 +246,7 @@ for (guntype, legendaries, uniques, pearls, seraphs) in [
                 'GD_Orchid_RaidWeapons.SMG.Actualizer.Orchid_Seraph_Actualizer_Balance',
                 'GD_Aster_RaidWeapons.SMGs.Aster_Seraph_Florentine_Balance',
             ],
+            0,
         ),
         (
             'SniperRifles',
@@ -276,6 +281,7 @@ for (guntype, legendaries, uniques, pearls, seraphs) in [
                 'GD_Orchid_RaidWeapons.sniper.Patriot.Orchid_Seraph_Patriot_Balance',
                 'GD_Sage_RaidWeapons.sniper.Sage_Seraph_HawkEye_Balance',
             ],
+            0,
         ),
         ]:
 
@@ -283,7 +289,7 @@ for (guntype, legendaries, uniques, pearls, seraphs) in [
     initial_pool = []
     for legendary in legendaries:
         initial_pool.append((legendary, 1, 'WeaponBalanceDefinition'))
-    for i in range(len(uniques) + len(pearls) + len(seraphs)):
+    for i in range(len(uniques) + len(pearls) + len(seraphs) + num_undesirables):
         initial_pool.append((None, 0))
     mp.register_str('weapon_pool_clear_{}'.format(guntype.lower()),
         'level None set GD_Itempools.WeaponPools.Pool_Weapons_{}_06_Legendary BalancedItems {}'.format(
@@ -399,6 +405,7 @@ items = {
             ('roughrider', 2, 'GD_Sage_Shields.A_Item_Custom.S_BucklerShield', 1),
             ('antagonist', 3, 'GD_Aster_ItemGrades.Shields.Aster_Seraph_Antagonist_Shield_Balance', 1),
             ('blockade', 4, 'GD_Aster_ItemGrades.Shields.Aster_Seraph_Blockade_Shield_Balance', 1),
+            ('cracked_sash', 5, 'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Standard_CrackedSash', 1),
             ],
         },
     'grenade': {
@@ -412,6 +419,8 @@ items = {
             ('crossfire', 18, 'GD_Iris_SeraphItems.Crossfire.Iris_Seraph_GrenadeMod_Crossfire_Balance', 1),
             ('meteor_shower', 19, 'GD_Iris_SeraphItems.MeteorShower.Iris_Seraph_GrenadeMod_MeteorShower_Balance', 1),
             ('o_negative', 20, 'GD_Iris_SeraphItems.ONegative.Iris_Seraph_GrenadeMod_ONegative_Balance', 1),
+            ('midnight_star', 21, 'GD_Orchid_GrenadeMods.A_Item_Custom.GM_Blade', 1),
+            ('sky_rocket', 22, 'GD_GrenadeMods.A_Item_Custom.GM_SkyRocket', 1),
             ],
         },
     'relic': {
@@ -441,6 +450,8 @@ items = {
             ('seraphs_breath', 28, 'GD_Sage_Artifacts.A_Item.A_SeraphBreath', 0.5),
             ('seraphs_might', 29, 'GD_Iris_SeraphItems.Might.Iris_Seraph_Artifact_Might_Balance', 0.5),
             ('seraphs_shadow', 30, 'GD_Aster_Artifacts.A_Item_Unique.A_SeraphShadow', 0.5),
+            # Junk:
+            ('vault_hunter', 31, 'GD_Artifacts.A_Item_Unique.A_VaultHunter', 0.5)
             ],
         },
     'gemstone': {
@@ -478,11 +489,16 @@ items = {
             ('sniper_vladof', 7, 'GD_Aster_Weapons.Snipers.SR_Vladof_4_Garnet', 1),
             ],
         },
+    'launcher': {
+        'GD_Itempools.WeaponPools.Pool_Weapons_Launchers_06_Legendary': [
+            ('error_message', 12, 'GD_Orchid_BossWeapons.RPG.Ahab.Orchid_Boss_Ahab_Balance_NODROP', 1),
+            ],
+        },
     }
 for (itemtype, itemdict) in items.items():
     for (pool, itemlist) in itemdict.items():
         for (label, index, itemname, scale) in itemlist:
-            if itemtype == 'gemstone':
+            if itemtype == 'gemstone' or itemtype == 'launcher':
                 invbalance = 'WeaponBalanceDefinition'
             else:
                 invbalance = 'InventoryBalanceDefinition'

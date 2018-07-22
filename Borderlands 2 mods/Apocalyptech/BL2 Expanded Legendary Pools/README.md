@@ -18,6 +18,18 @@ Usage/Installation
 This mod must be imported into BLCMM using `File -> Import single mod`.
 Simply choose the file `BL2 Expanded Legendary Pools.blcm` and have at it!
 
+### Configuration
+
+There are several items which aren't enabled by default, and I've labeled
+them as "undesirables."  You can enable them on an item-by-item basis in
+the last category, if you like.  These are:
+
+* Captain Blade's Midnight Star
+* Contraband Sky Rocket
+* Cracked Sash
+* ERROR MESSAGE *(the Ahab version that Master Gee wields)*
+* Vault Hunter's Relic
+
 Differences Between This And BL2 Better Loot's Version
 ======================================================
 
@@ -29,31 +41,13 @@ couple of differences to make it a more general-purpose solution:
   type pools should have an equal chance of dropping an E-Tech or a
   gemstone.
 
-Loot Purposefully Excluded from Pools
-=====================================
-
-There's some gear which I felt shouldn't be in the pools at all.  I am
-quite willing to hear counterarguments; my mind could probably be pretty
-easily persuaded otherwise if someone feels strongly about it.
-
-* Cracked Sash (Shield)
-* GOTY/Preorder/Whatever starting game loot:
-  * "Gearbox" themed guns (AR/SMG/Sniper)
-  * Contraband Sky Rocket
-  * Vault Hunter's Relic
-* Captain Blade's Midnight Star
-* Blue-rarity Magic Missile *(purple rarity will still spawn -- they're
-  technically different items)*
-* "ERROR MESSAGE" Ahab (the one used by Master Gee).  Regular Ahabs will
-  still spawn, though.
-
 TODO
 ====
 
 * Options to buff legendary drop rate
 * Options to buff E-tech drop rate
-* Option to add in "undesirable" loot (above) rather than omitting outright
 * Option to add "reward" relic pool
+* Probably need to add in alignment COMs?
 
 Bugs
 ====
