@@ -1,0 +1,138 @@
+TPS
+#<{mod_name}>
+
+    # {mod_name} v{mod_version}
+    # by Apocalyptech
+    # Licensed under Public Domain / CC0 1.0 Universal
+    #
+    # This mod is an improvement on the similar section from UCP 2.1 which unlocks various
+    # equipment in the game.  In addition to the basic early-game weapon unlocks that UCP
+    # provides, this additionally allows Relics, Class Mods, all shield types, all grenade
+    # types, and probably just about everything to spawn from the beginning.
+    #
+    # There's no problem with having both this and UCP enabled -- it'll just mean
+    # that a few statements get executed twice.
+
+    #<Main Unlocks>
+
+        # Note that we omit Gamestage_24 on purpose here, because that is used to
+        # determine Weapon Slot SDU rewards during playthrough 1 in the main storyline.
+        # Nothing else in the game uses 24, so we're leaving it.  
+
+        set GD_Itempools.Scheduling.Gamestage_02:ConstantAttributeValueResolver_0 ConstantValue 1
+
+        set GD_Itempools.Scheduling.Gamestage_03:ConstantAttributeValueResolver_0 ConstantValue 1
+
+        set GD_Itempools.Scheduling.Gamestage_04:ConstantAttributeValueResolver_0 ConstantValue 1
+
+        set GD_Itempools.Scheduling.Gamestage_05:ConstantAttributeValueResolver_0 ConstantValue 1
+
+        set GD_Itempools.Scheduling.Gamestage_06:ConstantAttributeValueResolver_0 ConstantValue 1
+
+        set GD_Itempools.Scheduling.Gamestage_07:ConstantAttributeValueResolver_0 ConstantValue 1
+
+        set GD_Itempools.Scheduling.Gamestage_08:ConstantAttributeValueResolver_0 ConstantValue 1
+
+        set GD_Itempools.Scheduling.Gamestage_09:ConstantAttributeValueResolver_0 ConstantValue 1
+
+        set GD_Itempools.Scheduling.Gamestage_10:ConstantAttributeValueResolver_0 ConstantValue 1
+
+        set GD_Itempools.Scheduling.Gamestage_11:ConstantAttributeValueResolver_0 ConstantValue 1
+
+        set GD_Itempools.Scheduling.Gamestage_12:ConstantAttributeValueResolver_0 ConstantValue 1
+
+        set GD_Itempools.Scheduling.Gamestage_13:ConstantAttributeValueResolver_0 ConstantValue 1
+
+        set GD_Itempools.Scheduling.Gamestage_14:ConstantAttributeValueResolver_0 ConstantValue 1
+
+        set GD_Itempools.Scheduling.Gamestage_15:ConstantAttributeValueResolver_0 ConstantValue 1
+
+        set GD_Itempools.Scheduling.Gamestage_16:ConstantAttributeValueResolver_0 ConstantValue 1
+
+        set GD_Itempools.Scheduling.Gamestage_17:ConstantAttributeValueResolver_0 ConstantValue 1
+
+        set GD_Itempools.Scheduling.Gamestage_18:ConstantAttributeValueResolver_0 ConstantValue 1
+
+        set GD_Itempools.Scheduling.Gamestage_19:ConstantAttributeValueResolver_0 ConstantValue 1
+
+        set GD_Itempools.Scheduling.Gamestage_20:ConstantAttributeValueResolver_0 ConstantValue 1
+
+        set GD_Itempools.Scheduling.Gamestage_21:ConstantAttributeValueResolver_0 ConstantValue 1
+
+        set GD_Itempools.Scheduling.Gamestage_22:ConstantAttributeValueResolver_0 ConstantValue 1
+
+        set GD_Itempools.Scheduling.Gamestage_23:ConstantAttributeValueResolver_0 ConstantValue 1
+
+    #</Main Unlocks>
+
+    #<Class Mods>
+
+        # Class mods apparently have a separate set of values to override.
+
+        set GD_Itempools.Scheduling.LootSchedule_ClassMod_01_Common:ConstantAttributeValueResolver_0 ConstantValue 1
+
+        set GD_Itempools.Scheduling.LootSchedule_ClassMod_02_Uncommon:ConstantAttributeValueResolver_0 ConstantValue 1
+
+        set GD_Itempools.Scheduling.LootSchedule_ClassMod_03_Rare:ConstantAttributeValueResolver_0 ConstantValue 1
+
+        set GD_Itempools.Scheduling.LootSchedule_ClassMod_04_VeryRare:ConstantAttributeValueResolver_0 ConstantValue 1
+
+        set GD_Itempools.Scheduling.LootSchedule_ClassMod_05_Legendary:ConstantAttributeValueResolver_0 ConstantValue 1
+
+    #</Class Mods>
+
+    #<Grenade Mods>
+
+        # Grenade mods apparently have a separate set of values to override
+
+        set GD_GrenadeMods.BalanceAttributes.MinGameStage_CorrosiveGrenade:ConstantAttributeValueResolver_0 ConstantValue 1
+
+        set GD_GrenadeMods.BalanceAttributes.MinGameStage_Homing:ConstantAttributeValueResolver_0 ConstantValue 1
+
+        set GD_GrenadeMods.BalanceAttributes.MinGameStage_IncendiaryGrenade:ConstantAttributeValueResolver_0 ConstantValue 1
+
+        set GD_GrenadeMods.BalanceAttributes.MinGameStage_Longbow:ConstantAttributeValueResolver_0 ConstantValue 1
+
+        set GD_GrenadeMods.BalanceAttributes.MinGameStage_Rubberized:ConstantAttributeValueResolver_0 ConstantValue 1
+
+        set GD_GrenadeMods.BalanceAttributes.MinGameStage_ShockGrenade:ConstantAttributeValueResolver_0 ConstantValue 1
+
+        set GD_GrenadeMods.BalanceAttributes.MinGameStage_SlagGrenade:ConstantAttributeValueResolver_0 ConstantValue 1
+
+        set GD_GrenadeMods.BalanceAttributes.MinGameStage_Sticky:ConstantAttributeValueResolver_0 ConstantValue 1
+
+{grenade_unlock}
+
+        level None set GD_GrenadeMods.A_Item_Legendary.GM_FourSeasons Manufacturers[0].Grades[0].GameStageRequirement.MinGameStage 1
+
+    #</Grenade Mods>
+
+    #<Rocket Ammo and Grenades in Early Game>
+
+        # Lets rocket ammo and grenades be available in world drops and vending
+        # machines right from the start of the game.  (Grenades already pop up
+        # pretty early, actually, but this should get 'em right from level 1.)
+
+        level None set GD_ItemGrades.Ammo_Shop.ItemGrade_AmmoShop_RocketLauncher Manufacturers[0].Grades[0].GameStageRequirement.MinGameStage 1
+
+        level None set GD_ItemGrades.Ammo.ItemGrade_Ammo_RocketLauncher Manufacturers[0].Grades[0].GameStageRequirement.MinGameStage 1
+
+        level None set GD_ItemGrades.Ammo_Shop.ItemGrade_AmmoShop_Grenade Manufacturers[0].Grades[0].GameStageRequirement.MinGameStage 1
+
+        level None set GD_ItemGrades.Ammo.ItemGrade_Ammo_Grenade Manufacturers[0].Grades[0].GameStageRequirement.MinGameStage 1
+
+    #</Rocket Ammo and Grenades in Early Game>
+
+    #<Exhaustive Weapon/Item Part Unlocks>
+
+        # This is an utterly absurd set of commands which sets every weapon/item part
+        # to be able to spawn from the very beginning.  This is what will allow all
+        # element types from the beginning game, and various COM parts, etc.
+        # Realistically we'd only need a subset of these, but we include all fixes
+        # for unique/legendary partlists as well.
+
+{exhaustive_unlocks}
+
+    #</Exhaustive Weapon/Item Part Unlocks>
+
+#</{mod_name}>
