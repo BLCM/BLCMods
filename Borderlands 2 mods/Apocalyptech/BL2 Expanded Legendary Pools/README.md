@@ -1,13 +1,13 @@
 BL2 Expanded Legendary Pools
 ============================
 
-This mod adds all legendary items into the global "legendary" loot pools, and
-by default adds all uniques, seraphs, and pearlescents into the legendary
-pools, too.  This applies to weapons, grenade mods, class mods, shields, and
-even relics.  The mod will also by default add in gemstone weapons into the
-E-Tech pool, and add the Dragon Keep "Alignment" Class Mods to the global
-class mod drops.  These additions, like most of the functionality in this
-mod, can be disabled/configured easily.
+This mod adds all legendary items across DLCs into the global legendary loot
+pools, and by default adds all uniques, seraphs, and pearlescents into the
+legendary pools, too.  This applies to weapons, grenade mods, class mods,
+shields, and even relics.  The mod will also by default add in gemstone weapons
+into the E-Tech pool, and add the Dragon Keep "Alignment" Class Mods to the
+global class mod drops.  These additions, like most of the functionality in
+this mod, can be disabled/configured easily.
 
 To compensate for the increased number of items which are available in
 the legendary/E-tech pools, this mod also doubles the chances of those
