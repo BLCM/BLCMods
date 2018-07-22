@@ -337,7 +337,7 @@ for the full text.
 Changelog
 =========
 
-**v1.1.1** - July 22, 2018
+**v1.1.1** - July 22, 2018 (commit `483c10f4e54d16b40dd4ebe8e787a0580f377d32`)
  * Included fix, thanks to 55tumbl, so that enemies using Roid/Maylay shields 
    receive the intended melee damage boost, instead of the extremely powerful
    attacks that they were doing.
