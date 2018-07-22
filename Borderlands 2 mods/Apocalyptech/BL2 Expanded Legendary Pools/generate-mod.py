@@ -510,6 +510,22 @@ for (itemtype, itemdict) in items.items():
                 scale=scale,
                 )
 
+# Load in our legendary scales.
+leg_scales = {}
+for (key, label, scale_most, scale_com) in [
+        ('base', 'Stock Legendary Drop Rate', 3, 1),
+        ('2x', 'Doubled Legendary Drop Rate', 6, 2),
+        ('3x', 'Tripled Legendary Drop Rate', 9, 3),
+        ]:
+    with open('input-file-legendary.txt') as df:
+        leg_scales[key] = df.read().format(
+                section_label=label,
+                weapon_scale=scale_most,
+                shield_scale=scale_most,
+                grenade_scale=scale_most,
+                com_scale=scale_com,
+                )
+
 ###
 ### Everything below this point is constructing the actual patch file
 ###
@@ -520,6 +536,9 @@ with open(input_filename, 'r') as df:
         mod_name=mod_name,
         mod_version=mod_version,
         mp=mp,
+        leg_scale_base=leg_scales['base'],
+        leg_scale_2x=leg_scales['2x'],
+        leg_scale_3x=leg_scales['3x'],
         )
 mp.human_str_to_blcm_filename(mod_str, output_filename)
 print('Wrote mod to: {}'.format(output_filename))

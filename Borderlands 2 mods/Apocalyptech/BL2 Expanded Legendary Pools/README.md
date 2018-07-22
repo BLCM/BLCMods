@@ -44,7 +44,7 @@ couple of differences to make it a more general-purpose solution:
 TODO
 ====
 
-* Options to buff legendary drop rate
+* Normalize and buff leg/reward relics
 * Options to buff E-tech drop rate
 * Probably need to add in alignment COMs?
 * Figure out the correct weight for the relic reward pool
