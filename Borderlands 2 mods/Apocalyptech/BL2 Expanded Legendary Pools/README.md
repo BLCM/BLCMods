@@ -3,7 +3,9 @@ BL2 Expanded Legendary Pools
 
 Adds all legendaries/uniques/pearls/seraph items (weapons,
 grenade mods, class mods, shields, relics) into the global "legendary" loot
-pools.
+pools.  This was basically taken directly from BL2 Better Loot and
+repackaged as standalone functionality, since folks may find it useful
+without wanting to buff their loot more generally.
 
 This isn't entirely dissimilar from FromDarkHell's `BL1Loot.txt`, though
 that mod just adds a bunch of stuff to the legendary weapons pool (and
@@ -15,6 +17,17 @@ Usage/Installation
 
 This mod must be imported into BLCMM using `File -> Import single mod`.
 Simply choose the file `BL2 Expanded Legendary Pools.blcm` and have at it!
+
+Differences Between This And BL2 Better Loot's Version
+======================================================
+
+This mod was taken pretty much directly from BL2 Better Loot, but has a
+couple of differences to make it a more general-purpose solution:
+
+* This version does not nerf the drop rates for E-Tech pistols (darts and
+  spikers), when adding gemstones to the E-Tech pool.  All E-Tech weapon
+  type pools should have an equal chance of dropping an E-Tech or a
+  gemstone.
 
 Loot Purposefully Excluded from Pools
 =====================================
