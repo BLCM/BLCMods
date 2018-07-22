@@ -34,6 +34,14 @@ easily persuaded otherwise if someone feels strongly about it.
 * "ERROR MESSAGE" Ahab (the one used by Master Gee).  Regular Ahabs will
   still spawn, though.
 
+TODO
+====
+
+* Options to buff legendary drop rate
+* Options to buff E-tech drop rate
+* Option to add in "undesirable" loot (above) rather than omitting outright
+* Option to add "reward" relic pool
+
 Bugs
 ====
 
