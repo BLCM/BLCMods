@@ -1,5 +1,7 @@
 !!!I'M REROUTING ALL DISCUSSION, HELP AND SUPPORT AS WELL AS ANNOUNCEMENTS TO MY PERSONAL DISCORD SERVER: https://discord.gg/3dNR4zD  !!!
 
+!!! THIS PROJECT'S DEVELOPMENT IS STOPPED UNTIL FURTHER NOTICE; READ HERE: https://i.imgur.com/ZJBAErX.png !!!
+
 
 If you want to experience Borderlands 2 in a new way, this modpack is exactly for you.
 

@@ -1,11 +1,11 @@
 # BLCMods
 
-This is a repository for Community Mods made for the Borderlands series, specifically BL2 and BLTPS.
+This is a repository for Community Mods made for the Borderlands series (specifically BL2 and BLTPS).
 
 These mods should use the `set` command in the Unreal console to change in-game variables.
 If your mod has specific considerations you should make it clear how to install.
 
-Check out the [Wiki](https://github.com/BL2CP/BLCMods/wiki). If you want to find specific mods by category, check [repository with sorted mods](https://github.com/BLCM/ModCabinet/wiki)
+Check out the [Wiki](https://github.com/BL2CP/BLCMods/wiki). If you want to find specific mods by category, check [repository with sorted mods](https://github.com/BLCM/ModCabinet/wiki).
 
 ***
 
@@ -13,9 +13,9 @@ Check out the [Wiki](https://github.com/BL2CP/BLCMods/wiki). If you want to find
 
 These mods can only be installed on PC and will **never** be ported to consoles due to technical and legal limitations.
 
-All **non-headhunter** DLC is required for the patch and likely most mods, this includes both UVHMpacks and digistruct peak.
+All **non-headhunter** DLC is required for the patch and most mods. This includes both UVHMpacks and digistruct peak.
 
-support will most likely **NOT** be given for errors that the UCP cause due to missing DLC.
+Support will most likely **NOT** be given for errors that the UCP cause due to missing DLC.
 
 Individual mod support for errors is up to the author of the mod and is a case by case basis.
 
@@ -54,10 +54,10 @@ If you wish to contribute a modpack (or a compilation of mods):
 
 ## Installation
 
-- To download the files click the green `Clone or Download` button in the top right if you wish to download a mirror of the entire repository at the current point in time.
+- To download files click the green `Clone or Download` button in the top right if you want to download a mirror of the entire repository at the current point in time.
 
-- To downlaod an individual file, click the `raw` button in the top right of the bar that has `raw | blame | history`, once the web page loads, `Rclick` and `press save page as`.
+- To downlaod an individual file, click the `raw` button in the top right of the bar that has `raw | blame | history`. Once the web page loads, `Rclick` and `press save page as`.
 
-- Installing the files follows methods discussed on the [Wiki](https://github.com/BL2CP/BLCMods/wiki/Tutorial:-Installation)
+- Installing the files follows methods discussed on the [Wiki](https://github.com/BLCM/BLCMods/wiki/Tutorial%3A-Enabling-Console)
 
 #### The usage of "master files" has become strongly discouraged as Borderlands 2/TPS modding has become more complex. The use of master files will often end up breaking parts or all of the mods you're trying to use. Instead, always import mods into FilterTool, and only execute the single patch file that it saves.
