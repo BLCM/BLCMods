@@ -46,8 +46,8 @@ TODO
 
 * Options to buff legendary drop rate
 * Options to buff E-tech drop rate
-* Option to add "reward" relic pool
 * Probably need to add in alignment COMs?
+* Figure out the correct weight for the relic reward pool
 
 Bugs
 ====
