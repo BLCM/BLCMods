@@ -510,6 +510,22 @@ for (itemtype, itemdict) in items.items():
                 scale=scale,
                 )
 
+# Load in our etech scales
+etech_scales = {}
+for (key, label, scale_drop, scale_epic, scale_treasure) in [
+        ('base', 'Stock E-Tech Drop Rate', 1, 2.5, 5),
+        ('2x', 'Doubled E-Tech Drop Rate', 2, 5, 10),
+        ('3x', 'Tripled E-Tech Drop Rate', 3, 7.5, 15),
+        ]:
+    with open('input-file-etech.txt') as df:
+        etech_scales[key] = df.read().format(
+                section_label=label,
+                scale_drop=scale_drop,
+                scale_epic=scale_epic,
+                scale_treasure=scale_treasure,
+                scale_ind=scale_drop,
+                )
+
 # Load in our legendary scales.
 leg_scales = {}
 for (key, label, scale_most, scale_com, scale_relic_full, scale_relic_half, scale_relic_amulet) in [
@@ -551,6 +567,9 @@ with open(input_filename, 'r') as df:
         mod_name=mod_name,
         mod_version=mod_version,
         mp=mp,
+        etech_scale_base=etech_scales['base'],
+        etech_scale_2x=etech_scales['2x'],
+        etech_scale_3x=etech_scales['3x'],
         leg_scale_base=leg_scales['base'],
         leg_scale_2x=leg_scales['2x'],
         leg_scale_3x=leg_scales['3x'],

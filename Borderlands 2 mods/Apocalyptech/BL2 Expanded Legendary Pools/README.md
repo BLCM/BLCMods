@@ -46,7 +46,6 @@ the last category, if you like.  These are:
 TODO
 ====
 
-* Options to buff E-tech drop rate
 * Probably need to add in alignment COMs?
 
 Bugs
