@@ -520,13 +520,25 @@ for (key, label, scale_most, scale_com, scale_relic_full, scale_relic_half, scal
     with open('input-file-legendary.txt') as df:
         leg_scales[key] = df.read().format(
                 section_label=label,
+                # World drops:
                 weapon_scale=scale_most,
                 shield_scale=scale_most,
                 grenade_scale=scale_most,
                 com_scale=scale_com,
+                # Special-case relic stuff:
                 relic_scale_full=scale_relic_full,
                 relic_scale_half=scale_relic_half,
                 relic_scale_amulet=scale_relic_amulet,
+                # Epic Chests:
+                relic_scale_chest=scale_most,
+                com_scale_chest=scale_most,
+                grenade_scale_chest=scale_most,
+                item_scale_chest=scale_com,
+                shield_scale_chest=scale_most,
+                weapon_scale_chest_most=scale_com,
+                weapon_scale_chest_sniper=scale_most,
+                # Individual weapon pools:
+                ind_weapon_scale=scale_com,
                 )
 
 ###
