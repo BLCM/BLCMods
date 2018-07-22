@@ -425,8 +425,6 @@ items = {
         },
     'relic': {
         'GD_Itempools.ArtifactPools.Pool_ArtifactsReward': [
-            # Leg:
-            ('blood_terra', 10, 'GD_Artifacts.A_Item_Unique.A_Terramorphous', 0.3),
             # Uniques:
             ('midnight_star', 11, 'GD_Orchid_Artifacts.A_Item_Unique.A_Blade', 0.3),
             ('deputys_badge', 12, 'GD_Artifacts.A_Item_Unique.A_Deputy', 0.3),

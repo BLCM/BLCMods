@@ -8,6 +8,8 @@ BL2
     # Various legendary-and-similar loot pool alterations.  First, gemstones can be added
     # to the E-Tech pool, and then a series of optional categories which can add uniques,
     # pearls, and seraphs into the main legendary pools.
+    #
+    # Don't use this with BL2 Better Loot or BL2 Cold Dead Hands!
 
     #<Loot Pool Setup>
 
@@ -1696,12 +1698,12 @@ BL2
                     ),
                     (
                         ItmPoolDefinition=None,
-                        InvBalanceDefinition=None,
+                        InvBalanceDefinition=InventoryBalanceDefinition'GD_Artifacts.A_Item_Unique.A_Terramorphous',
                         Probability=(
-                            BaseValueConstant=0,
+                            BaseValueConstant=1,
                             BaseValueAttribute=None,
                             InitializationDefinition=None,
-                            BaseValueScaleConstant=0
+                            BaseValueScaleConstant=0.3
                         ),
                         bDropOnDeath=True
                     ),
@@ -2084,6 +2086,80 @@ BL2
 
         #</Base Setup for Pools (don't uncheck this)>
 
+        #<Add Dragon Keep "Alignment" Class Mods to Global Drop Pool>
+
+            set GD_Itempools.ClassModPools.Pool_ClassMod_All BalancedItems
+            (
+                ( 
+                    ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ClassModPools.Pool_ClassMod_01_Common', 
+                    InvBalanceDefinition=None, 
+                    Probability=( 
+                        BaseValueConstant=1.000000, 
+                        BaseValueAttribute=None, 
+                        InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common_RareMod', 
+                        BaseValueScaleConstant=1.000000 
+                    ), 
+                    bDropOnDeath=True 
+                ),
+                (
+                    ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ClassModPools.Pool_ClassMod_02_Uncommon', 
+                    InvBalanceDefinition=None, 
+                    Probability=( 
+                        BaseValueConstant=1.000000, 
+                        BaseValueAttribute=None, 
+                        InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_2_Uncommon', 
+                        BaseValueScaleConstant=1.000000 
+                    ), 
+                    bDropOnDeath=True 
+                ),
+                (
+                    ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ClassModPools.Pool_ClassMod_04_Rare', 
+                    InvBalanceDefinition=None, 
+                    Probability=( 
+                        BaseValueConstant=1.000000, 
+                        BaseValueAttribute=None, 
+                        InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_4_Rare', 
+                        BaseValueScaleConstant=1.000000 
+                    ), 
+                    bDropOnDeath=True 
+                ),
+                (
+                    ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ClassModPools.Pool_ClassMod_05_VeryRare', 
+                    InvBalanceDefinition=None, 
+                    Probability=( 
+                        BaseValueConstant=1.000000, 
+                        BaseValueAttribute=None, 
+                        InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_5_VeryRare', 
+                        BaseValueScaleConstant=1.000000 
+                    ), 
+                    bDropOnDeath=True 
+                ),
+                (
+                    ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ClassModPools.Pool_ClassMod_06_Legendary', 
+                    InvBalanceDefinition=None, 
+                    Probability=( 
+                        BaseValueConstant=1.000000, 
+                        BaseValueAttribute=None, 
+                        InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_6_Legendary', 
+                        BaseValueScaleConstant=1.000000 
+                    ), 
+                    bDropOnDeath=True 
+                ),
+                (
+                    ItmPoolDefinition=ItemPoolDefinition'GD_Aster_ItemPools.ClassModPools.Pool_ClassMod_00_Aster', 
+                    InvBalanceDefinition=None, 
+                    Probability=( 
+                        BaseValueConstant=1.000000, 
+                        BaseValueAttribute=None, 
+                        InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_5_VeryRare', 
+                        BaseValueScaleConstant=1.000000 
+                    ), 
+                    bDropOnDeath=True 
+                )
+            )
+
+        #</Add Dragon Keep "Alignment" Class Mods to Global Drop Pool>
+
         #<Add Gemstones to E-Tech Pool>
 
             # Adds Gemstone weapons to the main global E-Tech pool, so that they'll drop
@@ -2137,16 +2213,6 @@ BL2
             {mp:gemstone_sniper_vladof}
 
         #</Add Gemstones to E-Tech Pool>
-
-        #<Add Legendary Relic to Drop Pool>
-
-            # There's only one of these, Blood of Terramorphous, which obviously isn't
-            # intended to drop from the world ordinarily.  So we'll make that configurable
-            # in here.
-
-            {mp:relic_blood_terra}
-
-        #</Add Legendary Relic to Drop Pool>
 
         #<Add Uniques to Legendary Pools>
 

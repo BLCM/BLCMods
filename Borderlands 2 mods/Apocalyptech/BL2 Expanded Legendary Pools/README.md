@@ -1,12 +1,13 @@
 BL2 Expanded Legendary Pools
 ============================
 
-Adds all legendary items into the global "legendary" loot pools, and
+This mod adds all legendary items into the global "legendary" loot pools, and
 by default adds all uniques, seraphs, and pearlescents into the legendary
-pools.  This applies to weapons, grenade mods, class mods, shields, and
+pools, too.  This applies to weapons, grenade mods, class mods, shields, and
 even relics.  The mod will also by default add in gemstone weapons into the
-E-Tech pool, so that those will drop throughout the game (though this, like
-most of the functionality in this mod, can be configured easily).
+E-Tech pool, and add the Dragon Keep "Alignment" Class Mods to the global
+class mod drops.  These additions, like most of the functionality in this
+mod, can be disabled/configured easily.
 
 To compensate for the increased number of items which are available in
 the legendary/E-tech pools, this mod also doubles the chances of those
@@ -33,20 +34,33 @@ Simply choose the file `BL2 Expanded Legendary Pools.blcm` and have at it!
 
 ### Configuration
 
-There are several items which aren't enabled by default, and I've labeled
-them as "undesirables."  You can enable them on an item-by-item basis in
-the last category, if you like.  These are:
-
-* Captain Blade's Midnight Star
-* Contraband Sky Rocket
-* Cracked Sash
-* ERROR MESSAGE *(the Ahab version that Master Gee wields)*
-* Vault Hunter's Relic
-
-TODO
-====
-
-* Probably need to add in alignment COMs?
+* **Loot Pool Setup** - This is where the main bit of the mod happens.
+  The one locked category adds all legendary items to the various legendary
+  pools.  Then all the other options in here can be freely unchecked if you
+  want.  For reference here, they are:
+  * Add Dragon Keep "Alignment" Class Mods to Global Drop Pool
+  * Add Gemstones to E-Tech Pool
+  * Add Uniques to Legendary Pools
+  * Add E-Tech Relics to Legendary Pools
+  * Add Pearls to Legendary Pools (Weapons Only)
+  * Add Seraphs to Legendary Pools
+* **Add Undesirable Items to Pools (disabled by default)** - There are several
+  items which aren't enabled by default, and I've labeled them as
+  "undesirables."  You can enable them on an item-by-item basis in the last
+  category, if you like.  These are:
+  * Captain Blade's Midnight Star
+  * Contraband Sky Rocket
+  * Cracked Sash
+  * ERROR MESSAGE *(the Ahab version that Master Gee wields)*
+  * Vault Hunter's Relic
+* **E-Tech Drop Rate Adjustment (defaults to 2x)** - Since we doubled the
+  amount of weapons in the E-Tech pools, it seemed fair to double the drop
+  rate.  This can optionally be reverted down to stock values, or increased
+  further to 3x.
+* **Legendary Drop Rate Adjustment (defaults to 2x)** - As with E-Techs, since
+  we greatly increased the number of items in the Legendary pools, it seemed
+  fair to double the drop rate.  This can optionally be reverted down to
+  stock values, or increased further to 3x.
 
 Bugs
 ====
