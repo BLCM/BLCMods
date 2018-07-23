@@ -281,31 +281,16 @@ Mod Construction / Implementation Details
 *(This section is only relevant for someone looking to edit the mod in the
 same way I do, or just someone curious about my mod construction techniques.
 If you're just looking to run the mod, see the "Usage" section above.  The
-mod can, of course, be edited directly in FilterTool/BLCMM as well, once it's
-been imported.)*
+mod can, of course, be edited directly in BLCMM as well, once it's been
+imported.)*
 
-I actually generate this mod using a simple little Python script named
-`generate-source.py`, which enables me to do things like set the rarity
-drop levels from a single location at the top of the file, and have it
-apply to a number of different objects throughout the game.  That script
-outputs to a human-readable multiline text file which can't actually be
-read directly by FilterTool/Borderlands -- it must be processed by my
-`conv_to_mod.py` script which you'll find in my BL2 mod directory.
-
-The generation script makes use of `hotfix.py` from my BL2 mod directory.
-You'd need to copy (or symlink, if you're on Mac or Linux) `hotfix.py`
-into this directory in order to run the script.
-
-To generate the end result file, I actually run the small shell script
-`create.sh` in this directory, which effectively just does the following:
-
-    ./generate-source.py && \
-        ../conv_to_mod.py -f "TPS Better Loot Mod (Lootsplosion) - UCP Compat" && \
-        ../conv_to_mod.py -f "TPS Better Loot Mod (Lootsplosion) - Standalone Offline"
-
-*(It's actually slightly more complicated now that I'm exporting multiple
-profiles of the same mod (Lootsplosion vs. Reasonable), but that's basically
-what it does.)*
+I generate this mod using a Python script named `generate-mod.py`, which
+enables me to do things like set the rarity drop levels from a single
+location at the top of the file, and have it apply to a number of different
+objects throughout the game.  The generation script makes use of
+`modprocessor.py` from my BL2 mod directory.  You'd need to copy (or
+symlink, if you're on Mac or Linux) `modprocessor.py` into this directory
+in order to run the script.
 
 Credits
 -------
@@ -328,6 +313,9 @@ for the full text.
 
 Changelog
 =========
+
+**v1.1.0**, (unreleased):
+ * Converted to BLCM format *(BLCMM is now required; FilterTool is not supported)*
 
 **v1.0.3**, April 25, 2018:
  * Renamed mod files to have a `.txt` extension.
