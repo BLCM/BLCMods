@@ -1324,6 +1324,15 @@ items = {
             ('naught', 1, 'GD_Ma_Shields.A_Item_Unique.ItemGrade_Gear_Shield_Naught', 1),
             ],
         },
+    'grenade': {
+        'GD_Itempools.GrenadeModPools.Pool_GrenadeMods_06_Legendary': [
+            ('baby_boomer', 11, 'GD_GrenadeMods.A_Item_Custom.GM_BabyBoomer', 1),
+            ('data_scrubber', 12, 'GD_Ma_GrenadeMods.A_Item_Unique.GM_DataScrubber', 1),
+            ('kiss_of_death', 13, 'GD_Cork_GrenadeMods.A_Item_Custom.GM_KissOfDeath', 1),
+            ('snowball', 14, 'GD_GrenadeMods.A_Item_Custom.GM_Snowball', 1),
+            ('sky_rocket', 15, 'GD_GrenadeMods.A_Item_Custom.GM_SkyRocket', 0.05),
+            ],
+        },
     }
 for (itemtype, itemdict) in items.items():
     for (pool, itemlist) in itemdict.items():
