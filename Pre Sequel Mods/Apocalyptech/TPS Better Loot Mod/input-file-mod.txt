@@ -21,7 +21,7 @@ TPS
         # This category is mostly considered stuff you'll be unlikely to toggle on/off
         # individually.  The categories which are intended to be user-settable are all below
         # this one, starting with "Legendary and E-Tech Pool Adjustments" and ending with
-        # the OzKit Chest Configuration section.
+        # the Common Pistol Chest Configuration section.
         #   
         # It's not really a "base" config -- at lot of the "meat" of the mod is in the
         # user-selectable areas, but I was at a loss for a better name for it.
@@ -2955,63 +2955,6 @@ TPS
 
             #</Fix Broken Shield Pools>
 
-            #<Better OzKit-Only Chests>
-
-                # Ups the rarity (slightly, just greens+blues) of ozkit-only chests.  I think
-                # there's only the one of these, in Triton Flats.
-
-                set GD_Itempools.ListDefs.AmmoCrateLoot_OzKitsOnly LootData
-                (
-                    ( 
-                        ConfigurationName="AmmoCrate", 
-                        bIgnoreGameStageRestrictions=False, 
-                        LootGameStageVarianceFormula=None, 
-                        Weight=( 
-                            BaseValueConstant=100.000000, 
-                            BaseValueAttribute=None, 
-                            InitializationDefinition=None, 
-                            BaseValueScaleConstant=1.000000 
-                        ), 
-                        ItemAttachments=( 
-                            ( 
-                                ItemPool=ItemPoolDefinition'GD_Itempools.MoonItemPools.Pool_MoonItem_02_Uncommon', 
-                                PoolProbability=( 
-                                    BaseValueConstant=1.000000, 
-                                    BaseValueAttribute=None, 
-                                    InitializationDefinition=None, 
-                                    BaseValueScaleConstant=1.000000 
-                                ), 
-                                InvBalanceDefinition=None, 
-                                AttachmentPointName="Ammo1" 
-                            ), 
-                            ( 
-                                ItemPool=ItemPoolDefinition'GD_Itempools.MoonItemPools.Pool_MoonItem_04_Rare', 
-                                PoolProbability=( 
-                                    BaseValueConstant=1.000000, 
-                                    BaseValueAttribute=None, 
-                                    InitializationDefinition=None, 
-                                    BaseValueScaleConstant=1.000000 
-                                ), 
-                                InvBalanceDefinition=None, 
-                                AttachmentPointName="Ammo2" 
-                            ), 
-                            ( 
-                                ItemPool=ItemPoolDefinition'GD_Itempools.MoonItemPools.Pool_MoonItem_02_Uncommon', 
-                                PoolProbability=( 
-                                    BaseValueConstant=1.000000, 
-                                    BaseValueAttribute=None, 
-                                    InitializationDefinition=None, 
-                                    BaseValueScaleConstant=1.000000 
-                                ), 
-                                InvBalanceDefinition=None, 
-                                AttachmentPointName="Ammo3" 
-                            ) 
-                        ) 
-                    )
-                )
-
-            #</Better OzKit-Only Chests>
-
             #<Improve Zarpedon's Chest>
 
                 # Improves Col. Zarpedon's chest on the Drakensburg (in Pity's Fall)
@@ -4390,134 +4333,197 @@ TPS
 
     #</Boss Unique Drop Rate (choose one)>
 
-    #<Provide Common Pistols for "To Arms!" mission (removes OzKit chests, disabled by default)>
+    #<Provide Common Pistol Chests for "To Arms!" mission (choose one)><MUT>
 
-        # The mission "To Arms!" was already rather annoying to begin with, but with this
-        # mod enabled, it's actually one of the harder ones to complete, especially if
-        # you're also using some vendor improvements.  Enabling this folder will cause a
-        # few chests to appear in the same room as the dead drop, which always contain
-        # common pistols.  It uses the previously-OzKit-only chests found near Deirdre
-        # to do this, so those chests will no longer be ozkit chests if you have this
-        # enabled.
+        #<Don't Provide Common Pistol Chest (improve OzKit-Only Chests, though)>
 
-        set GD_Itempools.ListDefs.AmmoCrateLoot_OzKitsOnly LootData
-        (
-            ( 
-                ConfigurationName="AmmoCrate", 
-                bIgnoreGameStageRestrictions=False, 
-                LootGameStageVarianceFormula=None, 
-                Weight=( 
-                    BaseValueConstant=100.000000, 
-                    BaseValueAttribute=None, 
-                    InitializationDefinition=None, 
-                    BaseValueScaleConstant=1.000000 
-                ), 
-                ItemAttachments=( 
-                    ( 
-                        ItemPool=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_Pistols_01_Common', 
-                        PoolProbability=( 
-                            BaseValueConstant=1.000000, 
-                            BaseValueAttribute=None, 
-                            InitializationDefinition=None, 
-                            BaseValueScaleConstant=1.000000 
-                        ), 
-                        InvBalanceDefinition=None, 
-                        AttachmentPointName="Ammo1" 
+            # In Triton Flats, near where Dierdre is found, there are two chests which
+            # will always contain only OzKits (there's also an ECHO from a disappointed
+            # OzKit graphic designer in there).  This section will bump up the rarity of
+            # those OzKits to be greens and blues.
+
+            set GD_Itempools.ListDefs.AmmoCrateLoot_OzKitsOnly LootData
+            (
+                ( 
+                    ConfigurationName="AmmoCrate", 
+                    bIgnoreGameStageRestrictions=False, 
+                    LootGameStageVarianceFormula=None, 
+                    Weight=( 
+                        BaseValueConstant=100.000000, 
+                        BaseValueAttribute=None, 
+                        InitializationDefinition=None, 
+                        BaseValueScaleConstant=1.000000 
                     ), 
-                    ( 
-                        ItemPool=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_Pistols_01_Common', 
-                        PoolProbability=( 
-                            BaseValueConstant=1.000000, 
-                            BaseValueAttribute=None, 
-                            InitializationDefinition=None, 
-                            BaseValueScaleConstant=1.000000 
+                    ItemAttachments=( 
+                        ( 
+                            ItemPool=ItemPoolDefinition'GD_Itempools.MoonItemPools.Pool_MoonItem_02_Uncommon', 
+                            PoolProbability=( 
+                                BaseValueConstant=1.000000, 
+                                BaseValueAttribute=None, 
+                                InitializationDefinition=None, 
+                                BaseValueScaleConstant=1.000000 
+                            ), 
+                            InvBalanceDefinition=None, 
+                            AttachmentPointName="Ammo1" 
                         ), 
-                        InvBalanceDefinition=None, 
-                        AttachmentPointName="Ammo2" 
-                    ), 
-                    ( 
-                        ItemPool=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_Pistols_01_Common', 
-                        PoolProbability=( 
-                            BaseValueConstant=1.000000, 
-                            BaseValueAttribute=None, 
-                            InitializationDefinition=None, 
-                            BaseValueScaleConstant=1.000000 
+                        ( 
+                            ItemPool=ItemPoolDefinition'GD_Itempools.MoonItemPools.Pool_MoonItem_04_Rare', 
+                            PoolProbability=( 
+                                BaseValueConstant=1.000000, 
+                                BaseValueAttribute=None, 
+                                InitializationDefinition=None, 
+                                BaseValueScaleConstant=1.000000 
+                            ), 
+                            InvBalanceDefinition=None, 
+                            AttachmentPointName="Ammo2" 
                         ), 
-                        InvBalanceDefinition=None, 
-                        AttachmentPointName="Ammo3" 
+                        ( 
+                            ItemPool=ItemPoolDefinition'GD_Itempools.MoonItemPools.Pool_MoonItem_02_Uncommon', 
+                            PoolProbability=( 
+                                BaseValueConstant=1.000000, 
+                                BaseValueAttribute=None, 
+                                InitializationDefinition=None, 
+                                BaseValueScaleConstant=1.000000 
+                            ), 
+                            InvBalanceDefinition=None, 
+                            AttachmentPointName="Ammo3" 
+                        ) 
                     ) 
-                ) 
+                )
             )
-        )
 
-        level Moon_P set Moon_P.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_31 PopulationDef PopulationDefinition'GD_Population_Treasure.Lootables.Crate_Military_OzKitsOnly'
+        #</Don't Provide Common Pistol Chest (improve OzKit-Only Chests, though)>
 
-        level Moon_P set Moon_P.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_31 Location
-        (
-            X=-8960,
-            Y=10660,
-            Z=-948.618042
-        )
+        #<Provide Common Pistol Chests (removes OzKit-only chests)>
 
-        level Moon_P set Moon_P.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_31 Rotation
-        (
-            Pitch=45,
-            Yaw=-33960,
-            Roll=94
-        )
+            # The mission "To Arms!" was already rather annoying to begin with, but with this
+            # mod enabled, it's actually one of the harder ones to complete, especially if
+            # you're also using some vendor improvements.  Enabling this folder will cause a
+            # few chests to appear in the same room as the dead drop, which always contain
+            # common pistols.  It uses the previously-OzKit-only chests found near Deirdre
+            # to do this, so those chests will no longer be ozkit chests if you have this
+            # enabled.
 
-        level Moon_P set Moon_P.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_24 PopulationDef PopulationDefinition'GD_Population_Treasure.Lootables.Crate_Military_OzKitsOnly'
+            set GD_Itempools.ListDefs.AmmoCrateLoot_OzKitsOnly LootData
+            (
+                ( 
+                    ConfigurationName="AmmoCrate", 
+                    bIgnoreGameStageRestrictions=False, 
+                    LootGameStageVarianceFormula=None, 
+                    Weight=( 
+                        BaseValueConstant=100.000000, 
+                        BaseValueAttribute=None, 
+                        InitializationDefinition=None, 
+                        BaseValueScaleConstant=1.000000 
+                    ), 
+                    ItemAttachments=( 
+                        ( 
+                            ItemPool=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_Pistols_01_Common', 
+                            PoolProbability=( 
+                                BaseValueConstant=1.000000, 
+                                BaseValueAttribute=None, 
+                                InitializationDefinition=None, 
+                                BaseValueScaleConstant=1.000000 
+                            ), 
+                            InvBalanceDefinition=None, 
+                            AttachmentPointName="Ammo1" 
+                        ), 
+                        ( 
+                            ItemPool=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_Pistols_01_Common', 
+                            PoolProbability=( 
+                                BaseValueConstant=1.000000, 
+                                BaseValueAttribute=None, 
+                                InitializationDefinition=None, 
+                                BaseValueScaleConstant=1.000000 
+                            ), 
+                            InvBalanceDefinition=None, 
+                            AttachmentPointName="Ammo2" 
+                        ), 
+                        ( 
+                            ItemPool=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_Pistols_01_Common', 
+                            PoolProbability=( 
+                                BaseValueConstant=1.000000, 
+                                BaseValueAttribute=None, 
+                                InitializationDefinition=None, 
+                                BaseValueScaleConstant=1.000000 
+                            ), 
+                            InvBalanceDefinition=None, 
+                            AttachmentPointName="Ammo3" 
+                        ) 
+                    ) 
+                )
+            )
 
-        level Moon_P set Moon_P.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_24 Location
-        (
-            X=-9160,
-            Y=10630,
-            Z=-948.618042
-        )
+            level Moon_P set Moon_P.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_31 PopulationDef PopulationDefinition'GD_Population_Treasure.Lootables.Crate_Military_OzKitsOnly'
 
-        level Moon_P set Moon_P.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_24 Rotation
-        (
-            Pitch=68, 
-            Yaw=-30284, 
-            Roll=77 
-        )
+            level Moon_P set Moon_P.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_31 Location
+            (
+                X=-8960,
+                Y=10660,
+                Z=-948.618042
+            )
 
-        level Moon_P set Moon_P.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_4 PopulationDef PopulationDefinition'GD_Population_Treasure.Lootables.Crate_Military_OzKitsOnly'
+            level Moon_P set Moon_P.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_31 Rotation
+            (
+                Pitch=45,
+                Yaw=-33960,
+                Roll=94
+            )
 
-        level Moon_P set Moon_P.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_4 Location
-        (
-            X=-8493,
-            Y=10731,
-            Z=-948.618042
-        )
+            level Moon_P set Moon_P.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_24 PopulationDef PopulationDefinition'GD_Population_Treasure.Lootables.Crate_Military_OzKitsOnly'
 
-        level Moon_P set Moon_P.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_4 Rotation
-        (
-            Pitch=0, 
-            Yaw=14931, 
-            Roll=0 
-        )
+            level Moon_P set Moon_P.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_24 Location
+            (
+                X=-9160,
+                Y=10630,
+                Z=-948.618042
+            )
 
-        level Moon_P set Moon_P.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_146 PopulationDef PopulationDefinition'GD_Population_Treasure.Lootables.Crate_Military_OzKitsOnly'
+            level Moon_P set Moon_P.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_24 Rotation
+            (
+                Pitch=68, 
+                Yaw=-30284, 
+                Roll=77 
+            )
 
-        level Moon_P set Moon_P.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_146 Location
-        (
-            X=-8443,
-            Y=10531,
-            Z=-948.618042
-        )
+            level Moon_P set Moon_P.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_4 PopulationDef PopulationDefinition'GD_Population_Treasure.Lootables.Crate_Military_OzKitsOnly'
 
-        level Moon_P set Moon_P.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_146 Rotation
-        (
-            Pitch=0, 
-            Yaw=17931, 
-            Roll=0 
-        )
+            level Moon_P set Moon_P.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_4 Location
+            (
+                X=-8493,
+                Y=10731,
+                Z=-948.618042
+            )
 
-        level Moon_P set Moon_P.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_85 PopulationDef PopulationDefinition'GD_Population_Treasure.Lootables.Crate_Military'
+            level Moon_P set Moon_P.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_4 Rotation
+            (
+                Pitch=0, 
+                Yaw=14931, 
+                Roll=0 
+            )
 
-        level Moon_P set Moon_P.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_367 PopulationDef PopulationDefinition'GD_Population_Treasure.Lootables.Crate_Military'
+            level Moon_P set Moon_P.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_146 PopulationDef PopulationDefinition'GD_Population_Treasure.Lootables.Crate_Military_OzKitsOnly'
 
-    #</Provide Common Pistols for "To Arms!" mission (removes OzKit chests, disabled by default)>
+            level Moon_P set Moon_P.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_146 Location
+            (
+                X=-8443,
+                Y=10531,
+                Z=-948.618042
+            )
+
+            level Moon_P set Moon_P.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_146 Rotation
+            (
+                Pitch=0, 
+                Yaw=17931, 
+                Roll=0 
+            )
+
+            level Moon_P set Moon_P.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_85 PopulationDef PopulationDefinition'GD_Population_Treasure.Lootables.Crate_Military'
+
+            level Moon_P set Moon_P.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_367 PopulationDef PopulationDefinition'GD_Population_Treasure.Lootables.Crate_Military'
+
+        #</Provide Common Pistol Chests (removes OzKit-only chests)>
+
+    #</Provide Common Pistol Chests for "To Arms!" mission (choose one)>
 
 #</{mod_name}>
