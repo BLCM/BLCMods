@@ -316,6 +316,13 @@ Changelog
 
 **v1.1.0**, (unreleased):
  * Converted to BLCM format *(BLCMM is now required; FilterTool is not supported)*
+ * Merged all versions into a single master file
+   * "Lootsplosion" and "Reasonable" variants are options in a mutually-exclusive
+     category in the mod, rather than separate files
+   * Removed "standalone" and "standalone offline" variants *(this is now much better
+     managed by BLCMM)*
+ * Added wider selection of boss unique drop rate selections
+ * Added a byline in the header comments
 
 **v1.0.3**, April 25, 2018:
  * Renamed mod files to have a `.txt` extension.

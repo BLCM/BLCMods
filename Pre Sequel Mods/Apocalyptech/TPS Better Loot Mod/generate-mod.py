@@ -55,26 +55,58 @@ except ModuleNotFoundError:
 mod_name = 'TPS Better Loot Mod'
 mod_version = '1.1.0-prerelease'
 input_filename = 'input-file-mod.txt'
+output_filename = '{}.blcm'.format(mod_name)
 
 ###
 ### Variables which control drop rates and stuff like that
 ###
 
-class ConfigBase(object):
+class Config(object):
     """
-    Class to hold all our weights, and other vars which alter the probabilities of
-    various things dropping.  Derive from this class to actually define the
-    values.
+    Base class which allows us to use constants as format strings
     """
 
-    def filename(self, mod_name):
+    def set_balanced_pct_reports(self, basename, weights, fixedlen=False):
         """
-        Constructs our filename
+        Given a list of numerical `weights`, sets some attributes in our
+        object based on `basename` which describe the percent chances
+        of drops.  Var names will be `basename_pct_idx`, where `idx`
+        relates to the position of the weight in question in `weights`.
+        If `fixedlen` is true, the percentages will be stored as
+        right-aligned strings, otherwise it should be numbers.
         """
-        return '{} ({}) - UCP Compat.blcm'.format(
-                mod_name,
-                self.profile_name,
-            )
+        total = sum(weights)
+        for (idx, weight) in enumerate(weights):
+            varname = '{}_pct_{}'.format(basename, idx)
+            pct = weight/total*100
+            if pct >= 1:
+                pct = round(pct)
+            elif pct != 0:
+                pct = round(pct, 2)
+                if str(pct) == '1.0':
+                    pct = 1
+            if fixedlen:
+                if pct == 0 or pct >= 1:
+                    setattr(self, varname, '{:4d}'.format(round(pct)))
+                else:
+                    setattr(self, varname, '{:4.2f}'.format(pct))
+            else:
+                setattr(self, varname, pct)
+
+    def set_badass_qty_reports(self, basename, quantities):
+        """
+        This is only really used when reporting likely numbers of drops from
+        the various badass enemy definitions.  Will always set fixed-width
+        strings.  Will set the vars `badass_basename_idx`.
+        """
+        for (idx, quantity) in enumerate(quantities):
+            varname = 'badass_{}_{}'.format(basename, idx)
+            if int(quantity) == quantity:
+                setattr(self, varname, '{:4d}'.format(int(quantity)))
+            elif round(quantity,1) == quantity:
+                setattr(self, varname, '{:4.1f}'.format(quantity))
+            else:
+                setattr(self, varname, '{:4.2f}'.format(quantity))
 
     def __format__(self, formatstr):
         """
@@ -83,37 +115,70 @@ class ConfigBase(object):
         attr = getattr(self, formatstr)
         if type(attr) == str:
             return attr
+        elif type(attr) == int or type(attr) == float:
+            return str(attr)
         else:
             return attr()
+
+class ConfigBase(Config):
+    """
+    Class to hold all our weights, and other vars which alter the probabilities of
+    various things dropping.  Derive from this class to actually define the
+    values.
+    """
+
+    # 2x chance of both kinds of moonstone
+    moonstone_drop = 0.1          # Stock: 0.050000
+    moonstone_cluster_drop = 0.05 # Stock: 0.025000
+
+    # Gun Type drop weights.  Note that because these values are going into
+    # our hotfix object, these variables *cannot* be successfully overridden
+    # in an extending class.  These probabilities aren't actually too much
+    # different than the stock ones.
+    drop_prob_pistol = 100
+    drop_prob_ar = 100
+    drop_prob_smg = 100
+    drop_prob_shotgun = 100
+    drop_prob_sniper = 80
+    drop_prob_launcher = 40
+    drop_prob_laser = 80
+
+    def full_profile_name(self):
+        if self.profile_name_orig:
+            return '{} Quality (formerly "{}")'.format(self.profile_name, self.profile_name_orig)
+        else:
+            return '{} Quality'.format(self.profile_name)
 
 ###
 ### Config classes which define the actual contstants that we use
 ### for things like drop weights, etc.
 ###
 
-class ConfigLootsplosion(ConfigBase):
+class ConfigExcellent(ConfigBase):
     """
     This is our default config, which I personally find quite pleasant.
     Many folks will consider this a bit too OP/Extreme.
     """
 
-    profile_name = 'Lootsplosion'
+    profile_name = 'Excellent'
+    profile_name_orig = 'Lootsplosion'
+    profile_desc = 'Original "Lootsplosion" presets.  This is the version I prefer.'
 
     # Custom weapon drop scaling
-    weapon_base_common = '8'
-    weapon_base_uncommon = '85'
-    weapon_base_rare = '65'
-    weapon_base_veryrare = '50'
-    weapon_base_glitch = '8'
-    weapon_base_legendary = '2'
+    weapon_base_common = 8
+    weapon_base_uncommon = 85
+    weapon_base_rare = 65
+    weapon_base_veryrare = 50
+    weapon_base_glitch = 8
+    weapon_base_legendary = 2
 
     # Custom weapon drop scaling for Claptastic Voyage
-    weapon_clap_base_common = '8'
-    weapon_clap_base_uncommon = '85'
-    weapon_clap_base_rare = '65'
-    weapon_clap_base_veryrare = '50'
-    weapon_clap_base_glitch = '16'
-    weapon_clap_base_legendary = '3'
+    weapon_clap_base_common = 8
+    weapon_clap_base_uncommon = 85
+    weapon_clap_base_rare = 65
+    weapon_clap_base_veryrare = 50
+    weapon_clap_base_glitch = 16
+    weapon_clap_base_legendary = 3
 
     # Custom ozkit drop scaling (identical to weapons)
     ozkit_base_common = weapon_base_common
@@ -128,7 +193,7 @@ class ConfigLootsplosion(ConfigBase):
     com_base_uncommon = weapon_base_uncommon
     com_base_rare = weapon_base_rare
     com_base_veryrare = weapon_base_veryrare
-    com_base_legendary = '5'
+    com_base_legendary = 5
 
     # Custom grenade drop scaling (identical to weapons)
     grenade_base_common = weapon_base_common
@@ -144,111 +209,92 @@ class ConfigLootsplosion(ConfigBase):
     shield_base_veryrare = weapon_base_veryrare
     shield_base_legendary = weapon_base_legendary
 
-    # Boss drop rates
-    boss_drop_uniques = '1.0'
-    boss_drop_rares = '1.0'
-    holodome_drop_uniques = '0.2'
-
     # Drop rates for "regular" treasure chests
-    treasure_base_common = '0'
-    treasure_base_uncommon = '0'
-    treasure_base_rare = '30'
-    treasure_base_veryrare = '60'
-    treasure_base_glitch = '10'
-    treasure_base_legendary = '4'
+    treasure_base_common = 0
+    treasure_base_uncommon = 0
+    treasure_base_rare = 30
+    treasure_base_veryrare = 60
+    treasure_base_glitch = 10
+    treasure_base_legendary = 4
 
     # Drop rates for "epic" treasure chests
-    epic_base_uncommon = '0'
-    epic_base_rare = '0'
-    epic_base_veryrare = '1.4'
-    epic_base_glitch = '.6'
-    epic_base_legendary = '0.2'
-    epic_base_legendary_dbl = '0.4'
+    epic_base_uncommon = 0
+    epic_base_rare = 0
+    epic_base_veryrare = 1.4
+    epic_base_glitch = .6
+    epic_base_legendary = 0.2
+    epic_base_legendary_dbl = 0.4
 
     # Drop rates for Glitched Epic treasure chests.  This is basically just
     # the same as regular, but with increased probabilities for Glitch.
-    epic_glitch_base_uncommon = '0'
-    epic_glitch_base_rare = '0'
-    epic_glitch_base_veryrare = '0.9'
-    epic_glitch_base_glitch = '1.1'
-    epic_glitch_base_legendary_dbl = '0.5'
+    epic_glitch_base_uncommon = 0
+    epic_glitch_base_rare = 0
+    epic_glitch_base_veryrare = 0.9
+    epic_glitch_base_glitch = 1.1
+    epic_glitch_base_legendary_dbl = 0.5
 
     # Badass pool probabilities (NOTE: these are *not* weights)
-    badass_pool_veryrare = '0.4'
-    badass_pool_glitch = '0.3'
-    badass_pool_epicchest = '0.1'
+    badass_pool_veryrare = 0.4
+    badass_pool_glitch = 0.3
+    badass_pool_epicchest = 0.1
 
     # Claptastic Voyage Badass pool probabilities (NOTE: these are *not* weights)
-    badass_pool_clap_veryrare = '0.2'
-    badass_pool_clap_glitch = '0.5'
-    badass_pool_clap_epicchest = '0.1'
+    badass_pool_clap_veryrare = 0.2
+    badass_pool_clap_glitch = 0.5
+    badass_pool_clap_epicchest = 0.1
 
     # Super Badass pool probabilities (NOTE: these are *not* weights)
-    super_badass_pool_rare = '1'
-    super_badass_pool_veryrare = '1'
-    super_badass_pool_glitch = '1'
-    super_badass_pool_legendary = '1'
-    super_badass_pool_epicchest = '1'
+    super_badass_pool_rare = 1
+    super_badass_pool_veryrare = 1
+    super_badass_pool_glitch = 1
+    super_badass_pool_legendary = 1
+    super_badass_pool_epicchest = 1
 
     # Ultimate Badass pool probabilities (NOTE: these are *not* weights)
-    ultimate_badass_pool_veryrare_1 = '1'
-    ultimate_badass_pool_veryrare_2 = '0.5'
-    ultimate_badass_pool_glitch_1 = '1'
-    ultimate_badass_pool_glitch_2 = '0.5'
-    ultimate_badass_pool_legendary_1 = '1'
-    ultimate_badass_pool_legendary_2 = '0.5'
-    ultimate_badass_pool_legendary_3 = '0.25'
-    ultimate_badass_pool_epicchest_1 = '1'
-    ultimate_badass_pool_epicchest_2 = '0.5'
-    ultimate_badass_pool_epicchest_3 = '0.5'
+    ultimate_badass_pool_veryrare_1 = 1
+    ultimate_badass_pool_veryrare_2 = 0.5
+    ultimate_badass_pool_glitch_1 = 1
+    ultimate_badass_pool_glitch_2 = 0.5
+    ultimate_badass_pool_legendary_1 = 1
+    ultimate_badass_pool_legendary_2 = 0.5
+    ultimate_badass_pool_legendary_3 = 0.25
+    ultimate_badass_pool_epicchest_1 = 1
+    ultimate_badass_pool_epicchest_2 = 0.5
+    ultimate_badass_pool_epicchest_3 = 0.5
 
     # A few tweaks to the ultimate badass pool for Claptastic Voyage (the
     # legendary + epic chest drops are untouched)
-    ultimate_badass_pool_clap_veryrare_1 = '1'
-    ultimate_badass_pool_clap_veryrare_2 = '0.2'
-    ultimate_badass_pool_clap_glitch_1 = '1'
-    ultimate_badass_pool_clap_glitch_2 = '0.8'
+    ultimate_badass_pool_clap_veryrare_1 = 1
+    ultimate_badass_pool_clap_veryrare_2 = 0.2
+    ultimate_badass_pool_clap_glitch_1 = 1
+    ultimate_badass_pool_clap_glitch_2 = 0.8
 
-    # 2x chance of both kinds of moonstone
-    moonstone_drop = '0.1'          # Stock: 0.050000
-    moonstone_cluster_drop = '0.05' # Stock: 0.025000
-
-    # Gun Type drop weights.  Note that because these values are going into
-    # our hotfix object, these variables *cannot* be successfully overridden
-    # in an extending class.  These probabilities aren't actually too much
-    # different than the stock ones.
-    drop_prob_pistol = 100
-    drop_prob_ar = 100
-    drop_prob_smg = 100
-    drop_prob_shotgun = 100
-    drop_prob_sniper = 80
-    drop_prob_launcher = 40
-    drop_prob_laser = 80
-
-class ConfigReasonable(ConfigLootsplosion):
+class ConfigGood(ConfigBase):
     """
     Alternate config which has slightly-more-reasonable drop rates for stuff
     like legendaries.  Unsurprisingly, most folks find my default values a
     bit excessive.
     """
 
-    profile_name = 'Reasonable Drops'
+    profile_name = 'Good'
+    profile_name_orig = 'Reasonable'
+    profile_desc = 'Original "Reasonable" presets.  Attempts to be somewhat restrained.'
 
     # Weapon drops
-    weapon_base_common = '32.75'
-    weapon_base_uncommon = '35'
-    weapon_base_rare = '25'
-    weapon_base_veryrare = '5'
-    weapon_base_glitch = '2'
-    weapon_base_legendary = '0.25'
+    weapon_base_common = 32.75
+    weapon_base_uncommon = 35
+    weapon_base_rare = 25
+    weapon_base_veryrare = 5
+    weapon_base_glitch = 2
+    weapon_base_legendary = 0.25
 
     # Custom weapon drop scaling for Claptastic Voyage
-    weapon_clap_base_common = '32.75'
-    weapon_clap_base_uncommon = '35'
-    weapon_clap_base_rare = '25'
-    weapon_clap_base_veryrare = '4'
-    weapon_clap_base_glitch = '4'
-    weapon_clap_base_legendary = '0.25'
+    weapon_clap_base_common = 32.75
+    weapon_clap_base_uncommon = 35
+    weapon_clap_base_rare = 25
+    weapon_clap_base_veryrare = 4
+    weapon_clap_base_glitch = 4
+    weapon_clap_base_legendary = 0.25
 
     # Custom ozkit drop scaling (identical to weapons)
     ozkit_base_common = weapon_base_common
@@ -279,74 +325,74 @@ class ConfigReasonable(ConfigLootsplosion):
     shield_base_legendary = weapon_base_legendary
 
     # Boss drop rates
-    boss_drop_uniques = '0.5'
-    boss_drop_rares = '0.25'
-    holodome_drop_uniques = '0.1'
+    boss_drop_uniques = 0.5
+    boss_drop_rares = 0.25
+    holodome_drop_uniques = 0.1
 
     # Drop rates for "regular" treasure chests
-    treasure_base_common = '32.5'
-    treasure_base_uncommon = '40'
-    treasure_base_rare = '20'
-    treasure_base_veryrare = '5'
-    treasure_base_glitch = '3'
-    treasure_base_legendary = '0.5'
+    treasure_base_common = 32.5
+    treasure_base_uncommon = 40
+    treasure_base_rare = 20
+    treasure_base_veryrare = 5
+    treasure_base_glitch = 3
+    treasure_base_legendary = 0.5
 
     # Drop rates for "epic" treasure chests
-    epic_base_uncommon = '25'
-    epic_base_rare = '49'
-    epic_base_veryrare = '20'
-    epic_base_glitch = '5'
-    epic_base_legendary = '1'
-    epic_base_legendary_dbl = '2'
+    epic_base_uncommon = 25
+    epic_base_rare = 49
+    epic_base_veryrare = 20
+    epic_base_glitch = 5
+    epic_base_legendary = 1
+    epic_base_legendary_dbl = 2
 
     # Drop rates for Glitched Epic treasure chests.  This is basically just
     # the same as regular, but with increased probabilities for Glitch.
-    epic_glitch_base_uncommon = '25'
-    epic_glitch_base_rare = '49'
-    epic_glitch_base_veryrare = '10'
-    epic_glitch_base_glitch = '15'
-    epic_glitch_base_legendary_dbl = '2'
+    epic_glitch_base_uncommon = 25
+    epic_glitch_base_rare = 49
+    epic_glitch_base_veryrare = 10
+    epic_glitch_base_glitch = 15
+    epic_glitch_base_legendary_dbl = 2
 
     # Badass pool probabilities (NOTE: these are *not* weights)
-    badass_pool_veryrare = '0.2'
-    badass_pool_glitch = '0.15'
-    badass_pool_epicchest = '0.1'
+    badass_pool_veryrare = 0.2
+    badass_pool_glitch = 0.15
+    badass_pool_epicchest = 0.1
 
     # Claptastic Voyage Badass pool probabilities (NOTE: these are *not* weights)
-    badass_pool_veryrare = '0.1'
-    badass_pool_glitch = '0.25'
-    badass_pool_epicchest = '0.1'
+    badass_pool_clap_veryrare = 0.1
+    badass_pool_clap_glitch = 0.25
+    badass_pool_clap_epicchest = 0.1
 
     # Super Badass pool probabilities (NOTE: these are *not* weights)
-    super_badass_pool_rare = '1'
-    super_badass_pool_veryrare = '0.4'
-    super_badass_pool_glitch = '0.15'
-    super_badass_pool_legendary = '.03'
-    super_badass_pool_epicchest = '1'
+    super_badass_pool_rare = 1
+    super_badass_pool_veryrare = 0.4
+    super_badass_pool_glitch = 0.15
+    super_badass_pool_legendary = .03
+    super_badass_pool_epicchest = 1
 
     # Ultimate Badass pool probabilities (NOTE: these are *not* weights)
-    ultimate_badass_pool_veryrare_1 = '1'
-    ultimate_badass_pool_veryrare_2 = '0'
-    ultimate_badass_pool_glitch_1 = '0.4'
-    ultimate_badass_pool_glitch_2 = '0'
-    ultimate_badass_pool_legendary_1 = '0.08'
-    ultimate_badass_pool_legendary_2 = '0'
-    ultimate_badass_pool_legendary_3 = '0'
-    ultimate_badass_pool_epicchest_1 = '1'
-    ultimate_badass_pool_epicchest_2 = '1'
-    ultimate_badass_pool_epicchest_3 = '1'
+    ultimate_badass_pool_veryrare_1 = 1
+    ultimate_badass_pool_veryrare_2 = 0
+    ultimate_badass_pool_glitch_1 = 0.4
+    ultimate_badass_pool_glitch_2 = 0
+    ultimate_badass_pool_legendary_1 = 0.08
+    ultimate_badass_pool_legendary_2 = 0
+    ultimate_badass_pool_legendary_3 = 0
+    ultimate_badass_pool_epicchest_1 = 1
+    ultimate_badass_pool_epicchest_2 = 1
+    ultimate_badass_pool_epicchest_3 = 1
 
     # A few tweaks to the ultimate badass pool for Claptastic Voyage (the
     # legendary + epic chest drops are untouched)
-    ultimate_badass_pool_clap_veryrare_1 = '0.4'
-    ultimate_badass_pool_clap_veryrare_2 = '0'
-    ultimate_badass_pool_clap_glitch_1 = '1'
-    ultimate_badass_pool_clap_glitch_2 = '0'
+    ultimate_badass_pool_clap_veryrare_1 = 0.4
+    ultimate_badass_pool_clap_veryrare_2 = 0
+    ultimate_badass_pool_clap_glitch_1 = 1
+    ultimate_badass_pool_clap_glitch_2 = 0
 
 # The profiles we'll generate
 profiles = [
-    ConfigLootsplosion(),
-    ConfigReasonable(),
+    ConfigExcellent(),
+    ConfigGood(),
     ]
 
 ###
@@ -368,13 +414,13 @@ for (number, rarity) in [
         ('06', 'Legendary'),
         ]:
     for (idx, (guntype, gunprob)) in enumerate([
-            ('Pistol', ConfigLootsplosion.drop_prob_pistol),
-            ('AR', ConfigLootsplosion.drop_prob_ar),
-            ('SMG', ConfigLootsplosion.drop_prob_smg),
-            ('Shotgun', ConfigLootsplosion.drop_prob_shotgun),
-            ('Sniper', ConfigLootsplosion.drop_prob_sniper),
-            ('Launcher', ConfigLootsplosion.drop_prob_launcher),
-            ('Laser', ConfigLootsplosion.drop_prob_laser),
+            ('Pistol', ConfigBase.drop_prob_pistol),
+            ('AR', ConfigBase.drop_prob_ar),
+            ('SMG', ConfigBase.drop_prob_smg),
+            ('Shotgun', ConfigBase.drop_prob_shotgun),
+            ('Sniper', ConfigBase.drop_prob_sniper),
+            ('Launcher', ConfigBase.drop_prob_launcher),
+            ('Laser', ConfigBase.drop_prob_laser),
             ]):
         mp.register_str('normalize_weapon_types_{}_{}'.format(rarity, guntype),
             'level None set GD_Itempools.WeaponPools.Pool_Weapons_All_{}_{} BalancedItems[{}].Probability.BaseValueConstant {}'.format(
@@ -2511,26 +2557,124 @@ mp.register_str('part_unlock_739',
     'level None set GD_Quince_ItemGrades.ClassMods.BalDef_ClassMod_Doppelganger_04_VeryRare:ItemPartListCollectionDefinition_75 ConsolidatedAttributeInitData[2].BaseValueConstant 1')
 
 ###
+### Generate our quality category strings
+###
+
+qualities = {}
+for profile in profiles:
+
+    profile.set_balanced_pct_reports('drop_weapon', [
+            profile.weapon_base_common,
+            profile.weapon_base_uncommon,
+            profile.weapon_base_rare,
+            profile.weapon_base_veryrare,
+            profile.weapon_base_glitch,
+            profile.weapon_base_legendary,
+            ], fixedlen=True)
+    # We're assuming that all items have the same percentages, which at the
+    # moment is true.  It's possible that at some point in the future that'll
+    # become Not True, and we'll have more work to do.
+    profile.set_balanced_pct_reports('drop_items', [
+            profile.com_base_common,
+            profile.com_base_uncommon,
+            profile.com_base_rare,
+            profile.com_base_veryrare,
+            profile.com_base_legendary,
+            ], fixedlen=True)
+    profile.set_balanced_pct_reports('treasure_weapon', [
+            profile.treasure_base_common,
+            profile.treasure_base_uncommon,
+            profile.treasure_base_rare,
+            profile.treasure_base_veryrare,
+            profile.treasure_base_glitch,
+            profile.treasure_base_legendary,
+            ], fixedlen=True)
+    profile.set_balanced_pct_reports('treasure_items', [
+            profile.treasure_base_common,
+            profile.treasure_base_uncommon,
+            profile.treasure_base_rare,
+            profile.treasure_base_veryrare,
+            profile.treasure_base_legendary,
+            ], fixedlen=True)
+    profile.set_balanced_pct_reports('epic_weapon', [
+            profile.epic_base_uncommon,
+            profile.epic_base_rare,
+            profile.epic_base_veryrare,
+            profile.epic_base_glitch,
+            profile.epic_base_legendary,
+            ], fixedlen=True)
+    profile.set_balanced_pct_reports('epic_items', [
+            profile.epic_base_uncommon,
+            profile.epic_base_rare,
+            profile.epic_base_veryrare,
+            profile.epic_base_legendary,
+            ], fixedlen=True)
+    profile.set_badass_qty_reports('regular', [
+            profile.badass_pool_veryrare,
+            profile.badass_pool_glitch,
+            profile.badass_pool_epicchest,
+            ])
+    profile.set_badass_qty_reports('super', [
+            profile.super_badass_pool_rare,
+            profile.super_badass_pool_veryrare,
+            profile.super_badass_pool_glitch,
+            profile.super_badass_pool_legendary,
+            profile.super_badass_pool_epicchest,
+            ])
+    profile.set_badass_qty_reports('ultimate', [
+            profile.ultimate_badass_pool_veryrare_1 + profile.ultimate_badass_pool_veryrare_2,
+            profile.ultimate_badass_pool_glitch_1 + profile.ultimate_badass_pool_glitch_2,
+            profile.ultimate_badass_pool_legendary_1 + profile.ultimate_badass_pool_legendary_2 + profile.ultimate_badass_pool_legendary_3,
+            profile.ultimate_badass_pool_epicchest_1 + profile.ultimate_badass_pool_epicchest_2 + profile.ultimate_badass_pool_epicchest_3,
+            ])
+
+    with open('input-file-quality.txt') as df:
+        qualities[profile.profile_name] = df.read().format(
+                config=profile,
+                mp=mp,
+                )
+
+
+###
+### Generate our boss unique drop strings
+###
+
+boss_drops = {}
+for (label, key, unique_pct, rare_pct, holodome_pct) in [
+        ('Guaranteed', 'guaranteed', 1, 1, .2),
+        ('Very Improved', 'veryimproved', .5, .75, .15),
+        ('Improved', 'improved', .33, .60, 0.1),
+        ('Slightly Improved', 'slight', .22, .45, .085),
+        ('Stock', 'stock', .1, .33, .066),
+        ]:
+
+    with open('input-file-droprate.txt', 'r') as df:
+        boss_drops[key] = df.read().format(
+                section_label='{} ({}% Uniques, {}% Rares, {}% Holodome Uniques)'.format(
+                    label, round(unique_pct*100), round(rare_pct*100), round(holodome_pct*100)),
+                unique_pct=unique_pct,
+                rare_pct=rare_pct,
+                holodome_pct=holodome_pct,
+                )
+
+###
 ### Everything below this point is constructing the actual patch file
 ###
 
-# Now read in our main input file
+# Write out the file
 with open(input_filename, 'r') as df:
-    loot_str = df.read()
-
-# Loop through our profiles and generate the files
-for profile in profiles:
-
-    # Write our UCP-compatible version
-    mp.human_str_to_blcm_filename(loot_str.format(
-            mod_name=mod_name,
-            mod_version=mod_version,
-            variant_name='UCP Compat',
-            config=profile,
-            mp=mp,
-        ),
-        profile.filename(mod_name))
-    print('Wrote UCP-compatible ({}) mod file to: {}'.format(
-        profile.profile_name,
-        profile.filename(mod_name),
-        ))
+    mod_str = df.read().format(
+        mod_name=mod_name,
+        mod_version=mod_version,
+        mp=mp,
+        base=ConfigBase(),
+        drop_quality_excellent=qualities['Excellent'],
+        drop_quality_good=qualities['Good'],
+        boss_drops_guaranteed=boss_drops['guaranteed'],
+        boss_drops_veryimproved=boss_drops['veryimproved'],
+        boss_drops_improved=boss_drops['improved'],
+        boss_drops_slightimproved=boss_drops['slight'],
+        boss_drops_stock=boss_drops['stock'],
+        )
+mp.human_str_to_blcm_filename(mod_str, output_filename)
+print('Wrote mod to: {}'.format(output_filename))

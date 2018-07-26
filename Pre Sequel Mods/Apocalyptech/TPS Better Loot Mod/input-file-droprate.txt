@@ -1,0 +1,23 @@
+        #<{section_label}>
+
+            #<Base Drop Rates>
+
+                set GD_Itempools.DropWeights.DropODDS_BossUniques:ConstantAttributeValueResolver_0 ConstantValue {unique_pct}
+
+                set GD_Itempools.DropWeights.DropODDS_BossUniqueRares:ConstantAttributeValueResolver_0 ConstantValue {rare_pct}
+
+            #</Base Drop Rates>
+
+            #<Holodome Onslaught Unique Drop Rates>
+
+                # Pretty much all the "custom" Holodome Onslaught enemies will drop from a
+                # custom pool containing all the items added in that DLC.  By default it's
+                # 6.6%.  We're buffing that a bit.  You won't see many of these during the
+                # first few rounds of the Onslaught, but in the final stages, stuff will
+                # be dropping quite frequently.
+
+                set GD_Pet_ItemPools.DropWeights.DropODDS_Pet_BossUniques:ConstantAttributeValueResolver_0 ConstantValue {holodome_pct}
+
+            #</Holodome Onslaught Unique Drop Rates>
+
+        #</{section_label}>
