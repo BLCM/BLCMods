@@ -257,9 +257,11 @@ Other Recommended Mods
 TODO
 ----
 
-* I haven't done any testing in TVHM/UVHM, or in anything but singleplayer mode.
 * Maybe decrease Moonstone chest cost in exchange for not doing guaranteed
   legendaries on it?
+* It probably wouldn't be difficult to nerf the drop rates while inside "slaughter"
+  type arenas, which for TPS is just Abandoned Training Facility and Holodome
+  Onslaught.
 
 Other Notes
 -----------
