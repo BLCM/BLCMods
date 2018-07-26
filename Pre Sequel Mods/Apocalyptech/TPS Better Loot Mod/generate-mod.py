@@ -1333,6 +1333,15 @@ items = {
             ('sky_rocket', 15, 'GD_GrenadeMods.A_Item_Custom.GM_SkyRocket', 0.05),
             ],
         },
+    'ozkit': {
+        'GD_Itempools.MoonItemPools.Pool_MoonItem_06_Legendary': [
+            ('cathartic', 5, 'GD_MoonItems.A_Item_Unique.A_Poopdeck', 1),
+            ('freedom', 6, 'GD_MoonItems.A_Item_Unique.A_Freedom', 1),
+            ('invigoration', 7, 'GD_MoonItems.A_Item_Unique.A_Invigoration', 1),
+            ('systems_purge', 8, 'GD_MoonItems.A_Item_Unique.A_SystemsPurge', 1),
+            ('perdy_lights', 9, 'GD_Pet_MoonItems.A_Item_Unique.A_AntiAir_PerdyLights', 1),
+            ],
+        },
     }
 for (itemtype, itemdict) in items.items():
     for (pool, itemlist) in itemdict.items():
