@@ -328,6 +328,12 @@ Changelog
      category in the mod, rather than separate files
    * Removed "standalone" and "standalone offline" variants *(this is now much better
      managed by BLCMM)*
+ * Added three extra drop quality presets, for a total of five:
+   * Excellent (formerly "Lootsplosion")
+   * Very Good
+   * Good (formerly "Reasonable")
+   * Improved
+   * Stock-ish
  * Added wider selection of boss unique drop rate selections
  * Added a category to choose drop quantities for bosses, in addition to the drop rates
  * Allow customized legendary pool by providing options for adding uniques, rather
@@ -338,6 +344,7 @@ Changelog
    purposes.  No real need to have them in there in the first place, and it just made
    checking/unchecking the mod fraught with potential unintended side effects.
  * Added a byline in the header comments
+ * Alphabetized a few categories which needed it, and some general reorganization
 
 **v1.0.3**, April 25, 2018:
  * Renamed mod files to have a `.txt` extension.
