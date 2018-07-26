@@ -322,7 +322,13 @@ Changelog
    * Removed "standalone" and "standalone offline" variants *(this is now much better
      managed by BLCMM)*
  * Added wider selection of boss unique drop rate selections
+ * Allow customized legendary pool by providing options for adding uniques, seraphs,
+   and pearls individually rather than hardcoding them all at once.  Moved that category
+   up to being a top-level category as well.
  * Force some early-game gear unlocks to always happen
+ * Removed disabled-by-default categories which I'd had in there for my own testing
+   purposes.  No real need to have them in there in the first place, and it just made
+   checking/unchecking the mod fraught with potential unintended side effects.
  * Added a byline in the header comments
 
 **v1.0.3**, April 25, 2018:
