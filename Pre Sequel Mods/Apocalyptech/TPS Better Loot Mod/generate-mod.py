@@ -281,6 +281,121 @@ class ConfigExcellent(ConfigBase):
     ultimate_badass_pool_clap_glitch_1 = 1
     ultimate_badass_pool_clap_glitch_2 = 0.8
 
+class ConfigVeryGood(ConfigBase):
+    """
+    Alternate config for inbetween the former Lootsplosion and Reasonable
+    presets.
+    """
+
+    profile_name = 'Very Good'
+    profile_name_orig = None
+    profile_desc = 'Inbetween the former "Lootsplosion" and "Reasonable" presets.'
+
+    # Custom weapon drop scaling
+    weapon_base_common = 15
+    weapon_base_uncommon = 35
+    weapon_base_rare = 25
+    weapon_base_veryrare = 10
+    weapon_base_glitch = 3
+    weapon_base_legendary = .5
+
+    # Custom weapon drop scaling for Claptastic Voyage
+    weapon_clap_base_common = 15
+    weapon_clap_base_uncommon = 35
+    weapon_clap_base_rare = 25
+    weapon_clap_base_veryrare = 10
+    weapon_clap_base_glitch = 6
+    weapon_clap_base_legendary = .5
+
+    # Custom ozkit drop scaling (identical to weapons)
+    ozkit_base_common = weapon_base_common
+    ozkit_base_uncommon = weapon_base_uncommon
+    ozkit_base_rare = weapon_base_rare
+    ozkit_base_veryrare = weapon_base_veryrare
+    ozkit_base_legendary = weapon_base_legendary
+
+    # Custom COM drop scaling (identical to weapons, apart from buffing
+    # legendary rates a bit)
+    com_base_common = weapon_base_common
+    com_base_uncommon = weapon_base_uncommon
+    com_base_rare = weapon_base_rare
+    com_base_veryrare = weapon_base_veryrare
+    com_base_legendary = .8
+
+    # Custom grenade drop scaling (identical to weapons)
+    grenade_base_common = weapon_base_common
+    grenade_base_uncommon = weapon_base_uncommon
+    grenade_base_rare = weapon_base_rare
+    grenade_base_veryrare = weapon_base_veryrare
+    grenade_base_legendary = weapon_base_legendary
+
+    # Custom shield drop scaling (identical to weapons)
+    shield_base_common = weapon_base_common
+    shield_base_uncommon = weapon_base_uncommon
+    shield_base_rare = weapon_base_rare
+    shield_base_veryrare = weapon_base_veryrare
+    shield_base_legendary = weapon_base_legendary
+
+    # Drop rates for "regular" treasure chests
+    treasure_base_common = 20
+    treasure_base_uncommon = 40
+    treasure_base_rare = 25
+    treasure_base_veryrare = 7
+    treasure_base_glitch = 7
+    treasure_base_legendary = 1
+
+    # Drop rates for "epic" treasure chests
+    epic_base_uncommon = 15
+    epic_base_rare = 45
+    epic_base_veryrare = 23
+    epic_base_glitch = 15
+    epic_base_legendary = 1.8
+    epic_base_legendary_dbl = 3.6
+
+    # Drop rates for Glitched Epic treasure chests.  This is basically just
+    # the same as regular, but with increased probabilities for Glitch.
+    epic_glitch_base_uncommon = 15
+    epic_glitch_base_rare = 45
+    epic_glitch_base_veryrare = 23
+    epic_glitch_base_glitch = 35
+    epic_glitch_base_legendary_dbl = 3.6
+
+    # Badass pool probabilities (NOTE: these are *not* weights)
+    badass_pool_veryrare = 0.3
+    badass_pool_glitch = 0.22
+    badass_pool_epicchest = 0.1
+
+    # Claptastic Voyage Badass pool probabilities (NOTE: these are *not* weights)
+    badass_pool_clap_veryrare = 0.15
+    badass_pool_clap_glitch = 0.33
+    badass_pool_clap_epicchest = 0.1
+
+    # Super Badass pool probabilities (NOTE: these are *not* weights)
+    super_badass_pool_rare = 1
+    super_badass_pool_veryrare = .8
+    super_badass_pool_glitch = .6
+    super_badass_pool_legendary = .1
+    super_badass_pool_epicchest = 1
+
+    # Ultimate Badass pool probabilities (NOTE: these are *not* weights)
+    ultimate_badass_pool_veryrare_1 = 1
+    ultimate_badass_pool_veryrare_2 = 0.2
+    ultimate_badass_pool_glitch_1 = 1
+    ultimate_badass_pool_glitch_2 = 0
+    ultimate_badass_pool_legendary_1 = 0.5
+    ultimate_badass_pool_legendary_2 = 0.5
+    ultimate_badass_pool_legendary_3 = 0
+    ultimate_badass_pool_epicchest_1 = 1
+    ultimate_badass_pool_epicchest_2 = 0.5
+    ultimate_badass_pool_epicchest_3 = 0
+
+    # A few tweaks to the ultimate badass pool for Claptastic Voyage (the
+    # legendary + epic chest drops are untouched)
+    ultimate_badass_pool_clap_veryrare_1 = 0.7
+    ultimate_badass_pool_clap_veryrare_2 = 0.1
+    ultimate_badass_pool_clap_glitch_1 = 1
+    ultimate_badass_pool_clap_glitch_2 = 0.4
+
 class ConfigGood(ConfigBase):
     """
     Alternate config which has slightly-more-reasonable drop rates for stuff
@@ -335,11 +450,6 @@ class ConfigGood(ConfigBase):
     shield_base_rare = weapon_base_rare
     shield_base_veryrare = weapon_base_veryrare
     shield_base_legendary = weapon_base_legendary
-
-    # Boss drop rates
-    boss_drop_uniques = 0.5
-    boss_drop_rares = 0.25
-    holodome_drop_uniques = 0.1
 
     # Drop rates for "regular" treasure chests
     treasure_base_common = 32.5
@@ -404,6 +514,7 @@ class ConfigGood(ConfigBase):
 # The profiles we'll generate
 profiles = [
     ConfigExcellent(),
+    ConfigVeryGood(),
     ConfigGood(),
     ]
 
@@ -1555,6 +1666,7 @@ with open(input_filename, 'r') as df:
         mp=mp,
         base=ConfigBase(),
         drop_quality_excellent=qualities['Excellent'],
+        drop_quality_verygood=qualities['Very Good'],
         drop_quality_good=qualities['Good'],
         boss_drops_guaranteed=boss_drops['guaranteed'],
         boss_drops_veryimproved=boss_drops['veryimproved'],
