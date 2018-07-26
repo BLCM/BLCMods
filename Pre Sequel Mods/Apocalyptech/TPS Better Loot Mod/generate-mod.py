@@ -395,6 +395,63 @@ profiles = [
     ConfigGood(),
     ]
 
+class QtyExcellent(Config):
+    """
+    Excellent drop quantities - bosses will drop as many items as they
+    have unique items in their pools.  Formerly this was the "Lootsplosion"
+    defaults.
+    """
+
+    qty_index = 'excellent'
+    qty_label = 'Excellent Drop Quantities (formerly "Lootsplosion")'
+
+    quantity_default_two = 2
+    quantity_default_three = 3
+
+    quantity_swagman = 3
+
+    # Note that the Sentinel's drops in the raid version drop twice,
+    # which is why we're setting 2 rather than 4 here.
+    quantity_sentinel_raid = 2
+
+class QtyImproved(Config):
+    """
+    Improved drop quantities - bosses with more than one unique item will
+    spawn more than one, though not necessarily as many as there are items
+    in the pool.
+    """
+
+    qty_index = 'improved'
+    qty_label = 'Improved Drop Quantities'
+
+    quantity_default_two = 2
+    quantity_default_three = 2
+
+    quantity_swagman = 2
+
+    # Note that the Sentinel's drops in the raid version drop twice,
+    # which is why we're setting 2 rather than 4 here.
+    quantity_sentinel_raid = 1
+
+class QtyStock(Config):
+    """
+    Stock drop quantities - bosses will only ever drop a single item from
+    their unique drop pools.  (This is the same as the game's stock drop
+    quantities.
+    """
+
+    qty_index = 'stock'
+    qty_label = 'Stock Drop Quantities (just one per boss)'
+
+    quantity_default_two = 1
+    quantity_default_three = 1
+
+    quantity_swagman = 1
+
+    # Note that the Sentinel's drops in the raid version drop twice,
+    # which is why we're setting 2 rather than 4 here.
+    quantity_sentinel_raid = 1
+
 ###
 ### Hotfixes; these are handled a little differently than everything
 ### else.
@@ -1432,6 +1489,16 @@ for profile in profiles:
                 mp=mp,
                 )
 
+###
+### Generate our drop quantity category strings
+###
+boss_quantities = {}
+for qty in [QtyExcellent(), QtyImproved(), QtyStock()]:
+    with open('input-file-quantity.txt') as df:
+        boss_quantities[qty.qty_index] = df.read().format(
+                config=qty,
+                mp=mp,
+                )
 
 ###
 ### Generate our boss unique drop strings
@@ -1480,6 +1547,9 @@ with open(input_filename, 'r') as df:
         boss_drops_improved=boss_drops['improved'],
         boss_drops_slightimproved=boss_drops['slight'],
         boss_drops_stock=boss_drops['stock'],
+        boss_quantity_excellent=boss_quantities['excellent'],
+        boss_quantity_improved=boss_quantities['improved'],
+        boss_quantity_stock=boss_quantities['stock'],
         early_game_unlocks=early_game_unlocks,
         )
 mp.human_str_to_blcm_filename(mod_str, output_filename)
