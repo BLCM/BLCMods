@@ -292,6 +292,11 @@ objects throughout the game.  The generation script makes use of
 symlink, if you're on Mac or Linux) `modprocessor.py` into this directory
 in order to run the script.
 
+Likewise, `generate-mod.py` makes use of some data introspection abilities
+available in my FT/BLCMM Explorer project.  You'll need to copy (or, again,
+symlink) FT Explorer's `ftexplorer` and `resources` dirs into this directory to
+generate the mod.
+
 Credits
 -------
 

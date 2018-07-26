@@ -48,6 +48,18 @@ except ModuleNotFoundError:
     print('')
     sys.exit(1)
 
+try:
+    from ftexplorer.data import Data
+except ModuleNotFoundError:
+    print('')
+    print('****************************************************************')
+    print('To run this script, you will need to copy or symlink the')
+    print('"ftexplorer" and "resources" dirs from my ft-explorer project so')
+    print('they exist here as well.  Sorry for the bother!')
+    print('****************************************************************')
+    print('')
+    sys.exit(1)
+
 ###
 ### Output variables
 ###
@@ -486,181 +498,156 @@ for (number, rarity) in [
                 idx,
                 gunprob))
 
-# Guaranteed Luneshine for Unique/Legendary weapons.  This is generated
-# automatically by `gen_guaranteed_luneshine.py`.  Note that removing the
-# "None" Luneshine attachment entirely would result in vanilla guns being
-# removed from inventory, if loaded with this mod active, but we're okay
-# if we just set `bDisabled` to `True`.
-mp.register_str('guaranteed_luneshine_0',
-    'level None set gd_cork_weap_assaultrifle.A_Weapons_Legendary.AR_Dahl_5_MajorTom:WeaponPartListCollectionDefinition_23 Accessory2PartData.WeightedParts[0].bDisabled True')
-mp.register_str('guaranteed_luneshine_1',
-    'level None set gd_cork_weap_assaultrifle.A_Weapons_Legendary.AR_Jakobs_5_HammerBreaker:WeaponPartListCollectionDefinition_27 Accessory2PartData.WeightedParts[0].bDisabled True')
-mp.register_str('guaranteed_luneshine_2',
-    'level None set gd_cork_weap_assaultrifle.A_Weapons_Legendary.AR_Torgue_5_KerBoom:WeaponPartListCollectionDefinition_31 Accessory2PartData.WeightedParts[0].bDisabled True')
-mp.register_str('guaranteed_luneshine_3',
-    'level None set gd_cork_weap_assaultrifle.A_Weapons_Legendary.AR_Vladof_5_Shredifier:WeaponPartListCollectionDefinition_35 Accessory2PartData.WeightedParts[0].bDisabled True')
-mp.register_str('guaranteed_luneshine_4',
-    'level None set gd_cork_weap_assaultrifle.A_Weapons_Unique.AR_Jakobs_3_Wallop:WeaponPartListCollectionDefinition_36 Accessory2PartData.WeightedParts[0].bDisabled True')
-mp.register_str('guaranteed_luneshine_5',
-    'level None set gd_cork_weap_assaultrifle.A_Weapons_Unique.AR_Vladof_3_Hail:WeaponPartListCollectionDefinition_37 Accessory2PartData.WeightedParts[0].bDisabled True')
-mp.register_str('guaranteed_luneshine_6',
-    'level None set gd_cork_weap_assaultrifle.A_Weapons_Unique.AR_Vladof_3_IceScream:WeaponPartListCollectionDefinition_38 Accessory2PartData.WeightedParts[0].bDisabled True')
-mp.register_str('guaranteed_luneshine_7',
-    'level None set gd_cork_weap_assaultrifle.A_Weapons_Unique.AR_Vladof_3_OldPainful:WeaponPartListCollectionDefinition_39 Accessory2PartData.WeightedParts[0].bDisabled True')
-mp.register_str('guaranteed_luneshine_8',
-    'level None set GD_Cork_Weap_Lasers.A_Weapons_Legendary.Laser_Dahl_5_Ricochet:WeaponPartListCollectionDefinition_52 Accessory2PartData.WeightedParts[0].bDisabled True')
-mp.register_str('guaranteed_luneshine_9',
-    'level None set GD_Cork_Weap_Lasers.A_Weapons_Legendary.Laser_Old_Hyperion_5_Excalibastard:WeaponPartListCollectionDefinition_53 Accessory2PartData.WeightedParts[0].bDisabled True')
-mp.register_str('guaranteed_luneshine_10',
-    'level None set GD_Cork_Weap_Lasers.A_Weapons_Legendary.Laser_Tediore_5_Tesla:WeaponPartListCollectionDefinition_54 Accessory2PartData.WeightedParts[0].bDisabled True')
-mp.register_str('guaranteed_luneshine_11',
-    'level None set GD_Cork_Weap_Lasers.A_Weapons_Unique.Laser_Dahl_3_Firestarta:WeaponPartListCollectionDefinition_56 Accessory2PartData.WeightedParts[0].bDisabled True')
-mp.register_str('guaranteed_luneshine_12',
-    'level None set GD_Cork_Weap_Lasers.A_Weapons_Unique.Laser_Hyperion_3_Mining:WeaponPartListCollectionDefinition_57 Accessory2PartData.WeightedParts[0].bDisabled True')
-mp.register_str('guaranteed_luneshine_13',
-    'level None set GD_Cork_Weap_Lasers.A_Weapons_Unique.Laser_Maliwan_3_Blizzard:WeaponPartListCollectionDefinition_58 Accessory2PartData.WeightedParts[0].bDisabled True')
-mp.register_str('guaranteed_luneshine_14',
-    'level None set GD_Cork_Weap_Lasers.A_Weapons_Unique.Laser_Maliwan_3_VibraPulse:WeaponPartListCollectionDefinition_59 Accessory2PartData.WeightedParts[0].bDisabled True')
-mp.register_str('guaranteed_luneshine_15',
-    'level None set GD_Cork_Weap_Lasers.A_Weapons_Unique.Laser_Maliwan_4_Egun:WeaponPartListCollectionDefinition_8 Accessory2PartData.WeightedParts[0].bDisabled True')
-mp.register_str('guaranteed_luneshine_16',
-    'level None set GD_Cork_Weap_Lasers.A_Weapons_Unique.Laser_Maliwan_4_Rosie:WeaponPartListCollectionDefinition_60 Accessory2PartData.WeightedParts[0].bDisabled True')
-mp.register_str('guaranteed_luneshine_17',
-    'level None set GD_Cork_Weap_Lasers.A_Weapons_Unique.Laser_Maliwan_4_SavorySideSaber:WeaponPartListCollectionDefinition_61 Accessory2PartData.WeightedParts[0].bDisabled True')
-mp.register_str('guaranteed_luneshine_18',
-    'level None set GD_Cork_Weap_Lasers.A_Weapons_Unique.Laser_Tediore_3_Vandergraffen:WeaponPartListCollectionDefinition_62 Accessory2PartData.WeightedParts[0].bDisabled True')
-mp.register_str('guaranteed_luneshine_19',
-    'level None set GD_Cork_Weap_Launchers.A_Weapons_Legendary.RL_Bandit_5_BadaBoom:WeaponPartListCollectionDefinition_66 Accessory2PartData.WeightedParts[0].bDisabled True')
-mp.register_str('guaranteed_luneshine_20',
-    'level None set GD_Cork_Weap_Launchers.A_Weapons_Legendary.RL_Bandit_5_Thingy:WeaponPartListCollectionDefinition_67 Accessory2PartData.WeightedParts[0].bDisabled True')
-mp.register_str('guaranteed_luneshine_21',
-    'level None set GD_Cork_Weap_Launchers.A_Weapons_Legendary.RL_Maliwan_5_Cryophobia:WeaponPartListCollectionDefinition_71 Accessory2PartData.WeightedParts[0].bDisabled True')
-mp.register_str('guaranteed_luneshine_22',
-    'level None set GD_Cork_Weap_Launchers.A_Weapons_Legendary.RL_Torgue_5_Nukem:WeaponPartListCollectionDefinition_75 Accessory2PartData.WeightedParts[0].bDisabled True')
-mp.register_str('guaranteed_luneshine_23',
-    'level None set GD_Cork_Weap_Launchers.A_Weapons_Legendary.RL_Vladof_5_Mongol:WeaponPartListCollectionDefinition_79 Accessory2PartData.WeightedParts[0].bDisabled True')
-mp.register_str('guaranteed_luneshine_24',
-    'level None set GD_Cork_Weap_Launchers.A_Weapons_Unique.RL_Tediore_3_Rocketeer:WeaponPartListCollectionDefinition_81 Accessory2PartData.WeightedParts[0].bDisabled True')
-mp.register_str('guaranteed_luneshine_25',
-    'level None set GD_Cork_Weap_Launchers.A_Weapons_Unique.RL_Torgue_3_Creamer:WeaponPartListCollectionDefinition_82 Accessory2PartData.WeightedParts[0].bDisabled True')
-mp.register_str('guaranteed_luneshine_26',
-    'level None set GD_Cork_Weap_Pistol.A_Weapons_Legendary.Pistol_Bandit_5_Zim:WeaponPartListCollectionDefinition_86 Accessory2PartData.WeightedParts[0].bDisabled True')
-mp.register_str('guaranteed_luneshine_27',
-    'level None set GD_Cork_Weap_Pistol.A_Weapons_Legendary.Pistol_Dahl_5_Blowfly:WeaponPartListCollectionDefinition_90 Accessory2PartData.WeightedParts[0].bDisabled True')
-mp.register_str('guaranteed_luneshine_28',
-    'level None set GD_Cork_Weap_Pistol.A_Weapons_Legendary.Pistol_Jakobs_5_Maggie:WeaponPartListCollectionDefinition_94 Accessory2PartData.WeightedParts[0].bDisabled True')
-mp.register_str('guaranteed_luneshine_29',
-    'level None set GD_Cork_Weap_Pistol.A_Weapons_Legendary.Pistol_Tediore_5_Shooterang:WeaponPartListCollectionDefinition_98 Accessory2PartData.WeightedParts[0].bDisabled True')
-mp.register_str('guaranteed_luneshine_30',
-    'level None set GD_Cork_Weap_Pistol.A_Weapons_Legendary.Pistol_Torgue_5_88Fragnum:WeaponPartListCollectionDefinition_102 Accessory2PartData.WeightedParts[0].bDisabled True')
-mp.register_str('guaranteed_luneshine_31',
-    'level None set GD_Cork_Weap_Pistol.A_Weapons_Unique.Pistol_Dahl_3_GwensOtherHead:WeaponPartListCollectionDefinition_103 Accessory2PartData.WeightedParts[0].bDisabled True')
-mp.register_str('guaranteed_luneshine_32',
-    'level None set GD_Cork_Weap_Pistol.A_Weapons_Unique.Pistol_Hyperion_3_Fibber:WeaponPartListCollectionDefinition_106 Accessory2PartData.WeightedParts[0].bDisabled True')
-mp.register_str('guaranteed_luneshine_33',
-    'level None set GD_Cork_Weap_Pistol.A_Weapons_Unique.Pistol_Hyperion_3_Globber:WeaponPartListCollectionDefinition_107 Accessory2PartData.WeightedParts[0].bDisabled True')
-mp.register_str('guaranteed_luneshine_34',
-    'level None set GD_Cork_Weap_Pistol.A_Weapons_Unique.Pistol_Hyperion_3_LadyFist:WeaponPartListCollectionDefinition_108 Accessory2PartData.WeightedParts[0].bDisabled True')
-mp.register_str('guaranteed_luneshine_35',
-    'level None set GD_Cork_Weap_Pistol.A_Weapons_Unique.Pistol_Jakobs_3_Smasher:WeaponPartListCollectionDefinition_109 Accessory2PartData.WeightedParts[0].bDisabled True')
-mp.register_str('guaranteed_luneshine_36',
-    'level None set GD_Cork_Weap_Pistol.A_Weapons_Unique.Pistol_Maliwan_3_Moxxis_Probe:WeaponPartListCollectionDefinition_11 Accessory2PartData.WeightedParts[0].bDisabled True')
-mp.register_str('guaranteed_luneshine_37',
-    'level None set GD_Cork_Weap_SMG.A_Weapons_Legendary.SMG_Dahl_5_Torrent:WeaponPartListCollectionDefinition_141 Accessory2PartData.WeightedParts[0].bDisabled True')
-mp.register_str('guaranteed_luneshine_38',
-    'level None set GD_Cork_Weap_SMG.A_Weapons_Legendary.SMG_Hyperion_5_Bitch:WeaponPartListCollectionDefinition_145 Accessory2PartData.WeightedParts[0].bDisabled True')
-mp.register_str('guaranteed_luneshine_39',
-    'level None set GD_Cork_Weap_SMG.A_Weapons_Legendary.SMG_Maliwan_5_HellFire:WeaponPartListCollectionDefinition_149 Accessory2PartData.WeightedParts[0].bDisabled True')
-mp.register_str('guaranteed_luneshine_40',
-    'level None set GD_Cork_Weap_SMG.A_Weapons_Legendary.SMG_Tediore_5_IVF:WeaponPartListCollectionDefinition_153 Accessory2PartData.WeightedParts[0].bDisabled True')
-mp.register_str('guaranteed_luneshine_41',
-    'level None set GD_Cork_Weap_SMG.A_Weapons_Unique.SMG_Bandit_3_MeatGrinder:WeaponPartListCollectionDefinition_157 Accessory2PartData.WeightedParts[0].bDisabled True')
-mp.register_str('guaranteed_luneshine_42',
-    'level None set GD_Cork_Weap_SMG.A_Weapons_Unique.SMG_Maliwan_3_BadTouch:WeaponPartListCollectionDefinition_158 Accessory2PartData.WeightedParts[0].bDisabled True')
-mp.register_str('guaranteed_luneshine_43',
-    'level None set GD_Cork_Weap_SMG.A_Weapons_Unique.SMG_Maliwan_3_GoodTouch:WeaponPartListCollectionDefinition_159 Accessory2PartData.WeightedParts[0].bDisabled True')
-mp.register_str('guaranteed_luneshine_44',
-    'level None set GD_Cork_Weap_Shotgun.A_Weapons_Legendary.SG_Bandit_5_SledgesShotgun:WeaponPartListCollectionDefinition_113 Accessory2PartData.WeightedParts[0].bDisabled True')
-mp.register_str('guaranteed_luneshine_45',
-    'level None set GD_Cork_Weap_Shotgun.A_Weapons_Legendary.SG_Hyperion_5_ConferenceCall:WeaponPartListCollectionDefinition_117 Accessory2PartData.WeightedParts[0].bDisabled True')
-mp.register_str('guaranteed_luneshine_46',
-    'level None set GD_Cork_Weap_Shotgun.A_Weapons_Legendary.SG_Jakobs_5_Striker:WeaponPartListCollectionDefinition_121 Accessory2PartData.WeightedParts[0].bDisabled True')
-mp.register_str('guaranteed_luneshine_47',
-    'level None set GD_Cork_Weap_Shotgun.A_Weapons_Legendary.SG_Torgue_5_Flakker:WeaponPartListCollectionDefinition_125 Accessory2PartData.WeightedParts[0].bDisabled True')
-mp.register_str('guaranteed_luneshine_48',
-    'level None set GD_Cork_Weap_Shotgun.A_Weapons_Unique.SG_Bandit_3_Boganella:WeaponPartListCollectionDefinition_126 Accessory2PartData.WeightedParts[0].bDisabled True')
-mp.register_str('guaranteed_luneshine_49',
-    'level None set GD_Cork_Weap_Shotgun.A_Weapons_Unique.SG_Jakobs_3_Moonface:WeaponPartListCollectionDefinition_128 Accessory2PartData.WeightedParts[0].bDisabled True')
-mp.register_str('guaranteed_luneshine_50',
-    'level None set GD_Cork_Weap_Shotgun.A_Weapons_Unique.SG_Old_Hyperion_3_Bullpup:WeaponPartListCollectionDefinition_131 Accessory2PartData.WeightedParts[0].bDisabled True')
-mp.register_str('guaranteed_luneshine_51',
-    'level None set GD_Cork_Weap_Shotgun.A_Weapons_Unique.SG_Tediore_3_Octo:WeaponPartListCollectionDefinition_134 Accessory2PartData.WeightedParts[0].bDisabled True')
-mp.register_str('guaranteed_luneshine_52',
-    'level None set GD_Cork_Weap_Shotgun.A_Weapons_Unique.SG_Torgue_3_JackOCannon:WeaponPartListCollectionDefinition_135 Accessory2PartData.WeightedParts[0].bDisabled True')
-mp.register_str('guaranteed_luneshine_53',
-    'level None set GD_Cork_Weap_Shotgun.A_Weapons_Unique.SG_Torgue_3_Torguemada:WeaponPartListCollectionDefinition_136 Accessory2PartData.WeightedParts[0].bDisabled True')
-mp.register_str('guaranteed_luneshine_54',
-    'level None set GD_Cork_Weap_Shotgun.A_Weapons_Unique.SG_Torgue_3_Wombat:WeaponPartListCollectionDefinition_137 Accessory2PartData.WeightedParts[0].bDisabled True')
-mp.register_str('guaranteed_luneshine_55',
-    'level None set GD_Cork_Weap_SniperRifles.A_Weapons_Legendary.Sniper_Dahl_5_Pitchfork:WeaponPartListCollectionDefinition_167 Accessory2PartData.WeightedParts[0].bDisabled True')
-mp.register_str('guaranteed_luneshine_56',
-    'level None set GD_Cork_Weap_SniperRifles.A_Weapons_Legendary.Sniper_Hyperion_5_Invader:WeaponPartListCollectionDefinition_171 Accessory2PartData.WeightedParts[0].bDisabled True')
-mp.register_str('guaranteed_luneshine_57',
-    'level None set GD_Cork_Weap_SniperRifles.A_Weapons_Legendary.Sniper_Jakobs_5_Skullmasher:WeaponPartListCollectionDefinition_175 Accessory2PartData.WeightedParts[0].bDisabled True')
-mp.register_str('guaranteed_luneshine_58',
-    'level None set GD_Cork_Weap_SniperRifles.A_Weapons_Legendary.Sniper_Maliwan_5_Magma:WeaponPartListCollectionDefinition_179 Accessory2PartData.WeightedParts[0].bDisabled True')
-mp.register_str('guaranteed_luneshine_59',
-    'level None set GD_Cork_Weap_SniperRifles.A_Weapons_Unique.Sniper_Dahl_3_WetWeek:WeaponPartListCollectionDefinition_184 Accessory2PartData.WeightedParts[0].bDisabled True')
-mp.register_str('guaranteed_luneshine_60',
-    'level None set GD_Cork_Weap_SniperRifles.A_Weapons_Unique.Sniper_Jakobs_3_Razorback:WeaponPartListCollectionDefinition_185 Accessory2PartData.WeightedParts[0].bDisabled True')
-mp.register_str('guaranteed_luneshine_61',
-    'level None set GD_Cork_Weap_SniperRifles.A_Weapons_Unique.Sniper_Maliwan_3_ChereAmie:WeaponPartListCollectionDefinition_186 Accessory2PartData.WeightedParts[0].bDisabled True')
-mp.register_str('guaranteed_luneshine_62',
-    'level None set GD_Cork_Weap_SniperRifles.A_Weapons_Unique.Sniper_Vladof_3_TheMachine:WeaponPartListCollectionDefinition_187 Accessory2PartData.WeightedParts[0].bDisabled True')
-mp.register_str('guaranteed_luneshine_63',
-    'level None set GD_Cypressure_Weapons.A_Weapons_Unique.SG_Hyperion_3_CompanyMan:WeaponPartListCollectionDefinition_235 Accessory2PartData.WeightedParts[0].bDisabled True')
-mp.register_str('guaranteed_luneshine_64',
-    'level None set GD_Cypressure_Weapons.A_Weapons_Unique.SG_Torgue_3_Landscaper2:WeaponPartListCollectionDefinition_236 Accessory2PartData.WeightedParts[0].bDisabled True')
-mp.register_str('guaranteed_luneshine_65',
-    'level None set GD_Cypressure_Weapons.A_Weapons_Unique.SMG_Bandit_3_FastTalker:WeaponPartListCollectionDefinition_237 Accessory2PartData.WeightedParts[0].bDisabled True')
-mp.register_str('guaranteed_luneshine_66',
-    'level None set GD_Ma_Weapons.A_Weapons_Legendary.AR_Bandit_5_Fusillade:WeaponPartListCollectionDefinition_221 Accessory2PartData.WeightedParts[0].bDisabled True')
-mp.register_str('guaranteed_luneshine_67',
-    'level None set GD_Ma_Weapons.A_Weapons_Legendary.Laser_Hyperion_5_LongestYard:WeaponPartListCollectionDefinition_222 Accessory2PartData.WeightedParts[0].bDisabled True')
-mp.register_str('guaranteed_luneshine_68',
-    'level None set GD_Ma_Weapons.A_Weapons_Legendary.Laser_Maliwan_5_FusionBeam:WeaponPartListCollectionDefinition_223 Accessory2PartData.WeightedParts[0].bDisabled True')
-mp.register_str('guaranteed_luneshine_69',
-    'level None set GD_Ma_Weapons.A_Weapons_Legendary.Laser_Maliwan_5_Thunderfire:WeaponPartListCollectionDefinition_224 Accessory2PartData.WeightedParts[0].bDisabled True')
-mp.register_str('guaranteed_luneshine_70',
-    'level None set GD_Ma_Weapons.A_Weapons_Legendary.Laser_Tediore_5_LaserDisker:WeaponPartListCollectionDefinition_225 Accessory2PartData.WeightedParts[0].bDisabled True')
-mp.register_str('guaranteed_luneshine_71',
-    'level None set GD_Ma_Weapons.A_Weapons_Legendary.Pistol_Jakobs_5_LuckCannon:WeaponPartListCollectionDefinition_226 Accessory2PartData.WeightedParts[0].bDisabled True')
-mp.register_str('guaranteed_luneshine_72',
-    'level None set GD_Ma_Weapons.A_Weapons_Legendary.Pistol_Vladof_5_Expander:WeaponPartListCollectionDefinition_234 Accessory2PartData.WeightedParts[0].bDisabled True')
-mp.register_str('guaranteed_luneshine_73',
-    'level None set GD_Ma_Weapons.A_Weapons_Legendary.RL_Tediore_5_KanedasLaser:WeaponPartListCollectionDefinition_227 Accessory2PartData.WeightedParts[0].bDisabled True')
-mp.register_str('guaranteed_luneshine_74',
-    'level None set GD_Ma_Weapons.A_Weapons_Legendary.SG_Jakobs_5_Flayer:WeaponPartListCollectionDefinition_238 Accessory2PartData.WeightedParts[0].bDisabled True')
-mp.register_str('guaranteed_luneshine_75',
-    'level None set GD_Ma_Weapons.A_Weapons_Legendary.SMG_Hyperion_5_CheatCode:WeaponPartListCollectionDefinition_228 Accessory2PartData.WeightedParts[0].bDisabled True')
-mp.register_str('guaranteed_luneshine_76',
-    'level None set GD_Ma_Weapons.A_Weapons_Legendary.Sniper_Old_Hyperion_5_OmniCannon:WeaponPartListCollectionDefinition_229 Accessory2PartData.WeightedParts[0].bDisabled True')
-mp.register_str('guaranteed_luneshine_77',
-    'level None set GD_Ma_Weapons.A_Weapons_Unique.Laser_Maliwan_3_Enlightenment:WeaponPartListCollectionDefinition_230 Accessory2PartData.WeightedParts[0].bDisabled True')
-mp.register_str('guaranteed_luneshine_78',
-    'level None set GD_Ma_Weapons.A_Weapons_Unique.Laser_Maliwan_3_Minac:WeaponPartListCollectionDefinition_231 Accessory2PartData.WeightedParts[0].bDisabled True')
-mp.register_str('guaranteed_luneshine_79',
-    'level None set GD_Ma_Weapons.A_Weapons_Unique.Pistol_Bandit_3_PartyPopper:WeaponPartListCollectionDefinition_232 Accessory2PartData.WeightedParts[0].bDisabled True')
-mp.register_str('guaranteed_luneshine_80',
-    'level None set GD_Ma_Weapons.A_Weapons_Unique.Pistol_Maliwan_3_HardReboot:WeaponPartListCollectionDefinition_233 Accessory2PartData.WeightedParts[0].bDisabled True')
-mp.register_str('guaranteed_luneshine_81',
-    'level None set GD_Weap_Pistol.A_Weapons_Legendary.Pistol_Hyperion_5_LogansGun:WeaponPartListCollectionDefinition_202 Accessory2PartData.WeightedParts[0].bDisabled True')
-mp.register_str('guaranteed_luneshine_82',
-    'level None set GD_Weap_SMG.A_Weapons_Unique.SMG_Dahl_3_Fridgia:WeaponPartListCollectionDefinition_207 Accessory2PartData.WeightedParts[0].bDisabled True')
-mp.register_str('guaranteed_luneshine_83',
-    'level None set GD_Weap_SMG.A_Weapons_Unique.SMG_Maliwan_3_Frostfire:WeaponPartListCollectionDefinition_209 Accessory2PartData.WeightedParts[0].bDisabled True')
-mp.register_str('guaranteed_luneshine_84',
-    'level None set GD_Weap_SniperRifles.A_Weapons_Unique.Sniper_Hyperion_3_FremingtonsEdge:WeaponPartListCollectionDefinition_215 Accessory2PartData.WeightedParts[0].bDisabled True')
+# Generate statements to ensure that all legendary/unique items will spawn with
+# Lunshine (at least, if world Luneshine drops are enabled).
+weapons = [
+    # Some of these are commented because they have custom Luneshine attachments
+    # already, or are glitch guns.  Wanted it to be clear that they were omitted
+    # on purpose, which is why they're here but commented.
+    'gd_cork_weap_assaultrifle.A_Weapons_Legendary.AR_Dahl_5_MajorTom',
+    'gd_cork_weap_assaultrifle.A_Weapons_Legendary.AR_Jakobs_5_HammerBreaker',
+    'gd_cork_weap_assaultrifle.A_Weapons_Legendary.AR_Torgue_5_KerBoom',
+    'gd_cork_weap_assaultrifle.A_Weapons_Legendary.AR_Vladof_5_Shredifier',
+    'gd_cork_weap_assaultrifle.A_Weapons_Unique.AR_Jakobs_3_Wallop',
+    'gd_cork_weap_assaultrifle.A_Weapons_Unique.AR_Vladof_3_Hail',
+    'gd_cork_weap_assaultrifle.A_Weapons_Unique.AR_Vladof_3_IceScream',
+    'gd_cork_weap_assaultrifle.A_Weapons_Unique.AR_Vladof_3_OldPainful',
+    'GD_Cork_Weap_Lasers.A_Weapons_Legendary.Laser_Dahl_5_Ricochet',
+    'GD_Cork_Weap_Lasers.A_Weapons_Legendary.Laser_Dahl_5_ZX1',
+    'GD_Cork_Weap_Lasers.A_Weapons_Legendary.Laser_Old_Hyperion_5_Excalibastard',
+    'GD_Cork_Weap_Lasers.A_Weapons_Legendary.Laser_Tediore_5_Tesla',
+    'GD_Cork_Weap_Lasers.A_Weapons_Unique.Laser_Dahl_3_Firestarta',
+    'GD_Cork_Weap_Lasers.A_Weapons_Unique.Laser_Hyperion_3_Mining',
+    'GD_Cork_Weap_Lasers.A_Weapons_Unique.Laser_Maliwan_3_Blizzard',
+    'GD_Cork_Weap_Lasers.A_Weapons_Unique.Laser_Maliwan_3_VibraPulse',
+    'GD_Cork_Weap_Lasers.A_Weapons_Unique.Laser_Maliwan_4_Egun',
+    'GD_Cork_Weap_Lasers.A_Weapons_Unique.Laser_Maliwan_4_Rosie',
+    'GD_Cork_Weap_Lasers.A_Weapons_Unique.Laser_Maliwan_4_SavorySideSaber',
+    'GD_Cork_Weap_Lasers.A_Weapons_Unique.Laser_Tediore_3_Vandergraffen',
+    'GD_Cork_Weap_Launchers.A_Weapons_Legendary.RL_Bandit_5_BadaBoom',
+    'GD_Cork_Weap_Launchers.A_Weapons_Legendary.RL_Bandit_5_Thingy',
+    'GD_Cork_Weap_Launchers.A_Weapons_Legendary.RL_Maliwan_5_Cryophobia',
+    'GD_Cork_Weap_Launchers.A_Weapons_Legendary.RL_Torgue_5_Nukem',
+    'GD_Cork_Weap_Launchers.A_Weapons_Legendary.RL_Vladof_5_Mongol',
+    'GD_Cork_Weap_Launchers.A_Weapons_Unique.RL_Tediore_3_Rocketeer',
+    'GD_Cork_Weap_Launchers.A_Weapons_Unique.RL_Torgue_3_Creamer',
+    'GD_Cork_Weap_Pistol.A_Weapons_Legendary.Pistol_Bandit_5_Zim',
+    'GD_Cork_Weap_Pistol.A_Weapons_Legendary.Pistol_Dahl_5_Blowfly',
+    'GD_Cork_Weap_Pistol.A_Weapons_Legendary.Pistol_Jakobs_5_Maggie',
+    'GD_Cork_Weap_Pistol.A_Weapons_Legendary.Pistol_Tediore_5_Shooterang',
+    'GD_Cork_Weap_Pistol.A_Weapons_Legendary.Pistol_Torgue_5_88Fragnum',
+    'GD_Cork_Weap_Pistol.A_Weapons_Unique.Pistol_Dahl_3_GwensOtherHead',
+    'GD_Cork_Weap_Pistol.A_Weapons_Unique.Pistol_Hyperion_3_Fibber',
+    'GD_Cork_Weap_Pistol.A_Weapons_Unique.Pistol_Hyperion_3_Globber',
+    'GD_Cork_Weap_Pistol.A_Weapons_Unique.Pistol_Hyperion_3_LadyFist',
+    'GD_Cork_Weap_Pistol.A_Weapons_Unique.Pistol_Jakobs_3_Smasher',
+    'GD_Cork_Weap_Pistol.A_Weapons_Unique.Pistol_Jakobs_CyberColt',
+    'GD_Cork_Weap_Pistol.A_Weapons_Unique.Pistol_Maliwan_3_Moxxis_Probe',
+    'GD_Cork_Weap_SMG.A_Weapons_Legendary.SMG_Dahl_5_Torrent',
+    'GD_Cork_Weap_SMG.A_Weapons_Legendary.SMG_Hyperion_5_Bitch',
+    'GD_Cork_Weap_SMG.A_Weapons_Legendary.SMG_Maliwan_5_HellFire',
+    'GD_Cork_Weap_SMG.A_Weapons_Legendary.SMG_Tediore_5_IVF',
+    #'GD_Cork_Weap_SMG.A_Weapons_Unique.SMG_Bandit_3_MareksMouth',
+    'GD_Cork_Weap_SMG.A_Weapons_Unique.SMG_Bandit_3_MeatGrinder',
+    'GD_Cork_Weap_SMG.A_Weapons_Unique.SMG_Maliwan_3_BadTouch',
+    'GD_Cork_Weap_SMG.A_Weapons_Unique.SMG_Maliwan_3_GoodTouch',
+    'GD_Cork_Weap_SMG.A_Weapons_Unique.SMG_Old_Hyperion_BlackSnake',
+    'GD_Cork_Weap_Shotgun.A_Weapons_Legendary.SG_Bandit_5_SledgesShotgun',
+    'GD_Cork_Weap_Shotgun.A_Weapons_Legendary.SG_Hyperion_5_ConferenceCall',
+    'GD_Cork_Weap_Shotgun.A_Weapons_Legendary.SG_Jakobs_5_Striker',
+    'GD_Cork_Weap_Shotgun.A_Weapons_Legendary.SG_Torgue_5_Flakker',
+    'GD_Cork_Weap_Shotgun.A_Weapons_Unique.SG_Bandit_3_Boganella',
+    'GD_Cork_Weap_Shotgun.A_Weapons_Unique.SG_Jakobs_3_Moonface',
+    'GD_Cork_Weap_Shotgun.A_Weapons_Unique.SG_Jakobs_Boomacorn',
+    'GD_Cork_Weap_Shotgun.A_Weapons_Unique.SG_Jakobs_TooScoops',
+    'GD_Cork_Weap_Shotgun.A_Weapons_Unique.SG_Old_Hyperion_3_Bullpup',
+    'GD_Cork_Weap_Shotgun.A_Weapons_Unique.SG_Tediore_3_Octo',
+    'GD_Cork_Weap_Shotgun.A_Weapons_Unique.SG_Torgue_3_JackOCannon',
+    'GD_Cork_Weap_Shotgun.A_Weapons_Unique.SG_Torgue_3_Torguemada',
+    'GD_Cork_Weap_Shotgun.A_Weapons_Unique.SG_Torgue_3_Wombat',
+    'GD_Cork_Weap_SniperRifles.A_Weapons_Legendary.Sniper_Dahl_5_Pitchfork',
+    'GD_Cork_Weap_SniperRifles.A_Weapons_Legendary.Sniper_Hyperion_5_Invader',
+    'GD_Cork_Weap_SniperRifles.A_Weapons_Legendary.Sniper_Jakobs_5_Skullmasher',
+    'GD_Cork_Weap_SniperRifles.A_Weapons_Legendary.Sniper_Maliwan_5_Magma',
+    #'GD_Cork_Weap_SniperRifles.A_Weapons_Legendary.Sniper_Vladof_5_Longnail',
+    'GD_Cork_Weap_SniperRifles.A_Weapons_Unique.Sniper_Dahl_3_WetWeek',
+    'GD_Cork_Weap_SniperRifles.A_Weapons_Unique.Sniper_Jakobs_3_Razorback',
+    'GD_Cork_Weap_SniperRifles.A_Weapons_Unique.Sniper_Maliwan_3_ChereAmie',
+    'GD_Cork_Weap_SniperRifles.A_Weapons_Unique.Sniper_Vladof_3_TheMachine',
+    'GD_Cypressure_Weapons.A_Weapons_Unique.AR_Bandit_3_BossNova',
+    'GD_Cypressure_Weapons.A_Weapons_Unique.SG_Hyperion_3_CompanyMan',
+    'GD_Cypressure_Weapons.A_Weapons_Unique.SG_Torgue_3_Landscaper2',
+    'GD_Cypressure_Weapons.A_Weapons_Unique.SMG_Bandit_3_FastTalker',
+    'GD_Ma_Weapons.A_Weapons_Legendary.AR_Bandit_5_Fusillade',
+    'GD_Ma_Weapons.A_Weapons_Legendary.Laser_Hyperion_5_LongestYard',
+    'GD_Ma_Weapons.A_Weapons_Legendary.Laser_Maliwan_5_FusionBeam',
+    'GD_Ma_Weapons.A_Weapons_Legendary.Laser_Maliwan_5_Thunderfire',
+    'GD_Ma_Weapons.A_Weapons_Legendary.Laser_Tediore_5_LaserDisker',
+    'GD_Ma_Weapons.A_Weapons_Legendary.Pistol_Jakobs_5_LuckCannon',
+    'GD_Ma_Weapons.A_Weapons_Legendary.Pistol_Vladof_5_Expander',
+    'GD_Ma_Weapons.A_Weapons_Legendary.RL_Tediore_5_KanedasLaser',
+    'GD_Ma_Weapons.A_Weapons_Legendary.SG_Jakobs_5_Flayer',
+    'GD_Ma_Weapons.A_Weapons_Legendary.SMG_Hyperion_5_CheatCode',
+    'GD_Ma_Weapons.A_Weapons_Legendary.Sniper_Old_Hyperion_5_OmniCannon',
+    #'GD_Ma_Weapons.A_Weapons_Unique.Laser_Dahl_6_Glitch_HeartfullSplodger',
+    'GD_Ma_Weapons.A_Weapons_Unique.Laser_Maliwan_3_Enlightenment',
+    'GD_Ma_Weapons.A_Weapons_Unique.Laser_Maliwan_3_Minac',
+    'GD_Ma_Weapons.A_Weapons_Unique.Pistol_Bandit_3_PartyPopper',
+    'GD_Ma_Weapons.A_Weapons_Unique.Pistol_Maliwan_3_HardReboot',
+    #'GD_Ma_Weapons.A_Weapons_Unique.SMG_Bandit_6_Glitch_CutieKiller',
+    #'GD_Petunia_Weapons.AssaultRifles.AR_Bandit_3_CryBaby',
+    'GD_Petunia_Weapons.Launchers.RL_Vladof_5_Menace',
+    'GD_Petunia_Weapons.Pistols.Pistol_Hyperion_3_T4sr',
+    'GD_Petunia_Weapons.SMGs.SMG_Tediore_3_Boxxy',
+    'GD_Petunia_Weapons.Shotguns.SG_Tediore_3_PartyLine',
+    'GD_Petunia_Weapons.Snipers.Sniper_Jakobs_3_Plunkett',
+    'GD_Weap_Pistol.A_Weapons_Legendary.Pistol_Hyperion_5_LogansGun',
+    'GD_Weap_SMG.A_Weapons_Unique.SMG_Dahl_3_Fridgia',
+    'GD_Weap_SMG.A_Weapons_Unique.SMG_Maliwan_3_Frostfire',
+    'GD_Weap_SniperRifles.A_Weapons_Unique.Sniper_Hyperion_3_FremingtonsEdge',
+    ]
+data = Data('TPS')
+guaranteed_luneshine_statements = []
+for weapon_name in weapons:
+    weapon_struct = data.get_struct_by_full_object(weapon_name)
+    runtime_parts = Data.get_struct_attr_obj(weapon_struct, 'RuntimePartListCollection')
+    if runtime_parts:
+        part_struct = data.get_struct_by_full_object(runtime_parts)
+        acc2_parts = part_struct['Accessory2PartData']['WeightedParts']
+        if 'Launchers' in weapon_name or 'KanedasLaser' in weapon_name:
+            proper_num = 8
+        else:
+            proper_num = 9
+        do_full_create = False
+        if len(acc2_parts) == proper_num:
+            found_none = False
+            found_disabled = False
+            for idx, part in enumerate(acc2_parts):
+                if part['Part'] == "WeaponPartDefinition'GD_Weap_Accessories.Moonstone.Moonstone_Attachment_None'":
+                    none_idx = idx
+                    found_none = True
+                if part['bDisabled'] == 'True':
+                    found_disabled = True
+
+            if found_disabled:
+                do_full_create = True
+            elif found_none:
+                guaranteed_luneshine_statements.append(
+                    'level None set {} Accessory2PartData.WeightedParts[{}].bDisabled True'.format(
+                        runtime_parts, none_idx))
+            else:
+                raise Exception('{}: No "None" attachment found'.format(weapon_name))
+        else:
+            do_full_create = True
+
+        # At this point, we could take any `runtime_parts` object with `do_full_create`
+        # set to `True`, and set its entire `Accessory2PartData` array to allow
+        # luneshine.  This is handled by the Luneshine On Uniques mod, rather
+        # than here, because the items created with luneshine would be
+        # sanity-checked if the mods aren't loaded and sanity checks aren't
+        # disabled, which I don't want to do in this mod.
+
+guaranteed_luneshine = "\n\n".join(['{}{}'.format(' '*(4*5), s) for s in guaranteed_luneshine_statements])
 
 # Fix some container drop pools which reference an item (Pool_BuffDrinks_Euphoria)
 # which doesn't actually exist, causing that loot possibility to never actually
@@ -1551,6 +1538,7 @@ with open(input_filename, 'r') as df:
         boss_quantity_improved=boss_quantities['improved'],
         boss_quantity_stock=boss_quantities['stock'],
         early_game_unlocks=early_game_unlocks,
+        guaranteed_luneshine=guaranteed_luneshine,
         )
 mp.human_str_to_blcm_filename(mod_str, output_filename)
 print('Wrote mod to: {}'.format(output_filename))
