@@ -7,10 +7,11 @@ TPS
     #
     # All sorts of tweaks to loot in general, with the aim of basically making all
     # the loot drops in the game "better".  In the default configuration, there is
-    # a very increased chance of blues/purples/etech/legendary items across the
-    # board, slightly more Eridium, and far better badass and boss drops.  Also
+    # a very increased chance of blues/purples/glitch/legendary items across the
+    # board, slightly more Moonstone, and far better badass and boss drops.  Also
     # basically all game items will be available as regular world drops, including
-    # legendaries, uniques, pearls, and seraph items.
+    # uniques.  Glitch weapons are available outside the Claptastic Voyage DLC,
+    # though they're more common when in the DLC levels.
     #
     # The specifics of much of the mod, however, including drop quality, can be
     # configured below.  Every section apart from "Base Mod Configuration" is
@@ -20,7 +21,7 @@ TPS
 
         # This category is mostly considered stuff you'll be unlikely to toggle on/off
         # individually.  The categories which are intended to be user-settable are all below
-        # this one, starting with "Legendary and E-Tech Pool Adjustments" and ending with
+        # this one, starting with "Legendary Pool Adjustments" and ending with
         # the Common Pistol Chest Configuration section.
         #   
         # It's not really a "base" config -- at lot of the "meat" of the mod is in the
@@ -181,6 +182,10 @@ TPS
         #</More Frequent Moonstone>
 
         #<Better Containers>
+
+            # Improve the loot gained from various container types.  Note that the main
+            # treasure/epic chest pool tweaks happen in the "Drop Quality" section of the
+            # mod, below.
 
             #<Better Moonstone Chests>
 
@@ -1031,6 +1036,9 @@ TPS
         #</Better Containers>
 
         #<Better Enemy Drops>
+
+            # Note that some more enemy drop tweaking happens in the "Drop Quality"
+            # section, below.
 
             #<Boss Drop Normalization>
 
@@ -1907,10 +1915,11 @@ TPS
 
     #</Remove Level-Based Loot Restrictions (superset of UCP 2.1)>
 
-    #<Legendary Loot Pool Improvements>
+    #<Legendary Pool Improvements>
 
-        # Various categories to improve various aspects of the loot enemies spawn with.
-        # These can be toggled on or off to suit your desired preferences.
+        # Categories to alter what items are in the global legendary pools.  Mostly this
+        # is just adding in unique items to the pools.  This omits a couple of items, such
+        # as the Monster Trap grenade, but is otherwise complete.
 
         #<Base Setup for Pools (don't uncheck this if you choose anything below here)><lock>
 
@@ -3027,7 +3036,7 @@ TPS
 
         #</Add Unique Glitch Weapons to Legendary Pools>
 
-    #</Legendary Loot Pool Improvements>
+    #</Legendary Pool Improvements>
 
     #<Drop Quality (choose one)><MUT>
 

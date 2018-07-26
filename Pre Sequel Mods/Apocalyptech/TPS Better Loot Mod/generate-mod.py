@@ -1413,15 +1413,24 @@ for profile in profiles:
             profile.weapon_base_glitch,
             profile.weapon_base_legendary,
             ], fixedlen=True)
-    # We're assuming that all items have the same percentages, which at the
-    # moment is true.  It's possible that at some point in the future that'll
-    # become Not True, and we'll have more work to do.
+    profile.set_balanced_pct_reports('drop_weapon_clap', [
+            profile.weapon_clap_base_common,
+            profile.weapon_clap_base_uncommon,
+            profile.weapon_clap_base_rare,
+            profile.weapon_clap_base_veryrare,
+            profile.weapon_clap_base_glitch,
+            profile.weapon_clap_base_legendary,
+            ], fixedlen=True)
+    # We're assuming that all items have the same percentages, which is NOT
+    # actually true - COM legendaries are *slightly* more likely than
+    # legendaries from the other item types.  At some point in the future
+    # perhaps we'll make a note of that and fix up the displays.
     profile.set_balanced_pct_reports('drop_items', [
-            profile.com_base_common,
-            profile.com_base_uncommon,
-            profile.com_base_rare,
-            profile.com_base_veryrare,
-            profile.com_base_legendary,
+            profile.grenade_base_common,
+            profile.grenade_base_uncommon,
+            profile.grenade_base_rare,
+            profile.grenade_base_veryrare,
+            profile.grenade_base_legendary,
             ], fixedlen=True)
     profile.set_balanced_pct_reports('treasure_weapon', [
             profile.treasure_base_common,
@@ -1445,6 +1454,13 @@ for profile in profiles:
             profile.epic_base_glitch,
             profile.epic_base_legendary,
             ], fixedlen=True)
+    profile.set_balanced_pct_reports('epic_glitch_weapon', [
+            profile.epic_glitch_base_uncommon,
+            profile.epic_glitch_base_rare,
+            profile.epic_glitch_base_veryrare,
+            profile.epic_glitch_base_glitch,
+            profile.epic_glitch_base_legendary_dbl,
+            ], fixedlen=True)
     profile.set_balanced_pct_reports('epic_items', [
             profile.epic_base_uncommon,
             profile.epic_base_rare,
@@ -1456,6 +1472,11 @@ for profile in profiles:
             profile.badass_pool_glitch,
             profile.badass_pool_epicchest,
             ])
+    profile.set_badass_qty_reports('regular_clap', [
+            profile.badass_pool_clap_veryrare,
+            profile.badass_pool_clap_glitch,
+            profile.badass_pool_clap_epicchest,
+            ])
     profile.set_badass_qty_reports('super', [
             profile.super_badass_pool_rare,
             profile.super_badass_pool_veryrare,
@@ -1466,6 +1487,12 @@ for profile in profiles:
     profile.set_badass_qty_reports('ultimate', [
             profile.ultimate_badass_pool_veryrare_1 + profile.ultimate_badass_pool_veryrare_2,
             profile.ultimate_badass_pool_glitch_1 + profile.ultimate_badass_pool_glitch_2,
+            profile.ultimate_badass_pool_legendary_1 + profile.ultimate_badass_pool_legendary_2 + profile.ultimate_badass_pool_legendary_3,
+            profile.ultimate_badass_pool_epicchest_1 + profile.ultimate_badass_pool_epicchest_2 + profile.ultimate_badass_pool_epicchest_3,
+            ])
+    profile.set_badass_qty_reports('ultimate_clap', [
+            profile.ultimate_badass_pool_clap_veryrare_1 + profile.ultimate_badass_pool_clap_veryrare_2,
+            profile.ultimate_badass_pool_clap_glitch_1 + profile.ultimate_badass_pool_clap_glitch_2,
             profile.ultimate_badass_pool_legendary_1 + profile.ultimate_badass_pool_legendary_2 + profile.ultimate_badass_pool_legendary_3,
             profile.ultimate_badass_pool_epicchest_1 + profile.ultimate_badass_pool_epicchest_2 + profile.ultimate_badass_pool_epicchest_3,
             ])

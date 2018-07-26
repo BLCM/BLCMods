@@ -11,10 +11,11 @@
 			<comment>#</comment>
 			<comment># All sorts of tweaks to loot in general, with the aim of basically making all</comment>
 			<comment># the loot drops in the game "better".  In the default configuration, there is</comment>
-			<comment># a very increased chance of blues/purples/etech/legendary items across the</comment>
-			<comment># board, slightly more Eridium, and far better badass and boss drops.  Also</comment>
+			<comment># a very increased chance of blues/purples/glitch/legendary items across the</comment>
+			<comment># board, slightly more Moonstone, and far better badass and boss drops.  Also</comment>
 			<comment># basically all game items will be available as regular world drops, including</comment>
-			<comment># legendaries, uniques, pearls, and seraph items.</comment>
+			<comment># uniques.  Glitch weapons are available outside the Claptastic Voyage DLC,</comment>
+			<comment># though they're more common when in the DLC levels.</comment>
 			<comment>#</comment>
 			<comment># The specifics of much of the mod, however, including drop quality, can be</comment>
 			<comment># configured below.  Every section apart from "Base Mod Configuration" is</comment>
@@ -22,7 +23,7 @@
 			<category name="Base Mod Configuration">
 				<comment># This category is mostly considered stuff you'll be unlikely to toggle on/off</comment>
 				<comment># individually.  The categories which are intended to be user-settable are all below</comment>
-				<comment># this one, starting with "Legendary and E-Tech Pool Adjustments" and ending with</comment>
+				<comment># this one, starting with "Legendary Pool Adjustments" and ending with</comment>
 				<comment># the Common Pistol Chest Configuration section.</comment>
 				<comment>#</comment>
 				<comment># It's not really a "base" config -- at lot of the "meat" of the mod is in the</comment>
@@ -197,6 +198,9 @@
 					<code profiles="default">set GD_Itempools.DropWeights.DropODDS_MoonstoneCluster:ConstantAttributeValueResolver_1 ConstantValue 0.05</code>
 				</category>
 				<category name="Better Containers">
+					<comment># Improve the loot gained from various container types.  Note that the main</comment>
+					<comment># treasure/epic chest pool tweaks happen in the "Drop Quality" section of the</comment>
+					<comment># mod, below.</comment>
 					<category name="Better Moonstone Chests">
 						<comment># Make Moonstone chests only drop legendaries.  If you're paying 40E you should</comment>
 						<comment># be getting something for your trouble.</comment>
@@ -324,6 +328,8 @@
 					</category>
 				</category>
 				<category name="Better Enemy Drops">
+					<comment># Note that some more enemy drop tweaking happens in the "Drop Quality"</comment>
+					<comment># section, below.</comment>
 					<category name="Boss Drop Normalization">
 						<comment>#  Make loot pools for bosses have equal probabilities for all items</comment>
 						<category name="Empyrean Sentinel">
@@ -1390,9 +1396,10 @@
 					</hotfix>
 				</category>
 			</category>
-			<category name="Legendary Loot Pool Improvements">
-				<comment># Various categories to improve various aspects of the loot enemies spawn with.</comment>
-				<comment># These can be toggled on or off to suit your desired preferences.</comment>
+			<category name="Legendary Pool Improvements">
+				<comment># Categories to alter what items are in the global legendary pools.  Mostly this</comment>
+				<comment># is just adding in unique items to the pools.  This omits a couple of items, such</comment>
+				<comment># as the Monster Trap grenade, but is otherwise complete.</comment>
 				<category name="Base Setup for Pools (don't uncheck this if you choose anything below here)" locked="true">
 					<comment># Initializes the various Legendary drop pools in a way which lets us choose</comment>
 					<comment># what else to put in them (via hotfix) in the next categories.</comment>
@@ -1591,6 +1598,43 @@
 			<category name="Drop Quality (choose one)" MUT="true">
 				<category name="Excellent Quality (formerly \"Lootsplosion\")">
 					<comment># Original "Lootsplosion" presets.  This is the version I prefer.</comment>
+					<comment>#</comment>
+					<comment># NOTE: There will be two weapons columns in some categories - "Main" refers to drops when</comment>
+					<comment># in the main game levels, and "Clap" refers to drops when in Claptastic Voyage levels.</comment>
+					<comment>#</comment>
+					<comment># World Drop Rates (regular enemies):</comment>
+					<comment>#</comment>
+					<comment>#                        Main     Clap</comment>
+					<comment>#                     Weapons  Weapons  Items</comment>
+					<comment>#     Common (white):      4%       4%     4%</comment>
+					<comment>#   Uncommon (green):     39%      37%    40%</comment>
+					<comment>#        Rare (blue):     30%      29%    31%</comment>
+					<comment># Very Rare (purple):     23%      22%    24%</comment>
+					<comment>#      Glitch (pink):      4%       7%    --</comment>
+					<comment># Legendary (orange):   0.92%       1%  0.95%</comment>
+					<comment>#</comment>
+					<comment># Additional gear likely to be dropped by Badass enemies:</comment>
+					<comment># (NOTE: "Super" and "Ultimate" actually refer to specific boss-type enemies in</comment>
+					<comment># the game, not the more generic badasses you more commonly encounter.)</comment>
+					<comment>#</comment>
+					<comment>#                       Main    Clap |   All |     Main      Clap</comment>
+					<comment>#                     Badass  Badass | Super | Ultimate  Ultimate</comment>
+					<comment>#        Rare (blue):     --      -- |     1 |       --        --</comment>
+					<comment># Very Rare (purple):    0.4     0.2 |     1 |      1.5       1.2</comment>
+					<comment>#      Glitch (pink):    0.3     0.5 |     1 |      1.5       1.8</comment>
+					<comment># Legendary (orange):     --      -- |     1 |     1.75      1.75</comment>
+					<comment>#  "Epic" chest drop:    0.1     0.1 |     1 |        2         2</comment>
+					<comment>#</comment>
+					<comment># Treasure Chests:</comment>
+					<comment>#</comment>
+					<comment>#                           Regular Chests  |   "Epic" Chests  |  Glitched "Epic" Chests</comment>
+					<comment>#                           Weapons  Items  |  Weapons  Items  |  Weapons</comment>
+					<comment>#           Common (white):      0%     0%  |       0%     0%  |       0%</comment>
+					<comment>#         Uncommon (green):      0%     0%  |       0%     0%  |       0%</comment>
+					<comment>#              Rare (blue):     29%    32%  |       0%     0%  |       0%</comment>
+					<comment>#       Very Rare (purple):     58%    64%  |      64%    88%  |      36%</comment>
+					<comment># E-Tech (brighter purple):     10%    --   |      27%    --   |      44%</comment>
+					<comment>#       Legendary (orange):      4%     4%  |       9%    13%  |      20%</comment>
 					<category name="Better Enemy Drops">
 						<comment># Note that the majority of the drop tweaks happen in the main section of</comment>
 						<comment># the mod.</comment>
@@ -1688,6 +1732,43 @@
 				</category>
 				<category name="Good Quality (formerly \"Reasonable\")">
 					<comment># Original "Reasonable" presets.  Attempts to be somewhat restrained.</comment>
+					<comment>#</comment>
+					<comment># NOTE: There will be two weapons columns in some categories - "Main" refers to drops when</comment>
+					<comment># in the main game levels, and "Clap" refers to drops when in Claptastic Voyage levels.</comment>
+					<comment>#</comment>
+					<comment># World Drop Rates (regular enemies):</comment>
+					<comment>#</comment>
+					<comment>#                        Main     Clap</comment>
+					<comment>#                     Weapons  Weapons  Items</comment>
+					<comment>#     Common (white):     33%      32%    33%</comment>
+					<comment>#   Uncommon (green):     35%      35%    36%</comment>
+					<comment>#        Rare (blue):     25%      25%    26%</comment>
+					<comment># Very Rare (purple):      5%       4%     5%</comment>
+					<comment>#      Glitch (pink):      2%       4%    --</comment>
+					<comment># Legendary (orange):   0.25%    0.25%  0.26%</comment>
+					<comment>#</comment>
+					<comment># Additional gear likely to be dropped by Badass enemies:</comment>
+					<comment># (NOTE: "Super" and "Ultimate" actually refer to specific boss-type enemies in</comment>
+					<comment># the game, not the more generic badasses you more commonly encounter.)</comment>
+					<comment>#</comment>
+					<comment>#                       Main    Clap |   All |     Main      Clap</comment>
+					<comment>#                     Badass  Badass | Super | Ultimate  Ultimate</comment>
+					<comment>#        Rare (blue):     --      -- |     1 |       --        --</comment>
+					<comment># Very Rare (purple):    0.2     0.1 |   0.4 |        1       0.4</comment>
+					<comment>#      Glitch (pink):   0.15    0.25 |  0.15 |      0.4         1</comment>
+					<comment># Legendary (orange):     --      -- |  0.03 |     0.08      0.08</comment>
+					<comment>#  "Epic" chest drop:    0.1     0.1 |     1 |        3         3</comment>
+					<comment>#</comment>
+					<comment># Treasure Chests:</comment>
+					<comment>#</comment>
+					<comment>#                           Regular Chests  |   "Epic" Chests  |  Glitched "Epic" Chests</comment>
+					<comment>#                           Weapons  Items  |  Weapons  Items  |  Weapons</comment>
+					<comment>#           Common (white):     32%    33%  |       0%     0%  |       0%</comment>
+					<comment>#         Uncommon (green):     40%    41%  |      25%    26%  |      25%</comment>
+					<comment>#              Rare (blue):     20%    20%  |      49%    52%  |      49%</comment>
+					<comment>#       Very Rare (purple):      5%     5%  |      20%    21%  |      10%</comment>
+					<comment># E-Tech (brighter purple):      3%    --   |       5%    --   |      15%</comment>
+					<comment>#       Legendary (orange):   0.50%  0.51%  |       1%     1%  |       2%</comment>
 					<category name="Better Enemy Drops">
 						<comment># Note that the majority of the drop tweaks happen in the main section of</comment>
 						<comment># the mod.</comment>
