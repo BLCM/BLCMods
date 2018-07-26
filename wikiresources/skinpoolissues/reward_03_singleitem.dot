@@ -1,0 +1,71 @@
+digraph reward {
+
+    labelloc = "t";
+    fontsize = 22;
+    label = <Fig. 3: Single Item in Each Freed Pool<br/>(everything is fine, reward still works)>
+
+    {
+        node [shape=octagon style=filled fillcolor=aquamarine1];
+        thing [label=<Mission Reward /<br/>Challenge Reward /<br/>Enemy Drop>];
+    }
+    {
+        node [shape=rectangle style=filled fillcolor=green];
+        reward [label="Reward Pool"]
+    }
+    {
+        node [shape=rectangle style=filled fillcolor=gold];
+        pool_ass [label="Assassin Pool"];
+        pool_merc [label="Mercenary Pool"];
+        pool_siren [label="Siren Pool"];
+        pool_soldier [label="Soldier Pool"];
+        pool_psycho [label="Psycho Pool"];
+        pool_mech [label="Mechromancer Pool"];
+    }
+    {
+        node [style=filled fillcolor=goldenrod4];
+        skin_ass [label="Assassin Skin"];
+        skin_merc [label="Mercenary Skin"];
+        skin_siren [label="Siren Skin"];
+        skin_soldier [label="Soldier Skin"];
+        skin_psycho [label="Psycho Skin"];
+        skin_mech [label="Mechromancer Skin"];
+    }
+    {
+        node [shape=diamond style="filled,rounded" fillcolor=deepskyblue2];
+        item_1 [label="(an item)"];
+        item_2 [label="(an item)"];
+        item_3 [label="(an item)"];
+        item_4 [label="(an item)"];
+        item_5 [label="(an item)"];
+        item_6 [label="(an item)"];
+    }
+
+    thing -> reward;
+
+    reward -> skin_ass;
+    reward -> skin_merc;
+    reward -> skin_siren;
+    reward -> skin_soldier;
+    reward -> skin_psycho;
+    reward -> skin_mech;
+
+    // Items
+    pool_ass -> item_4;
+    pool_merc -> item_3;
+    pool_siren -> item_2;
+    pool_soldier -> item_1;
+    pool_psycho -> item_6;
+    pool_mech -> item_5;
+
+    // Some structural arrangements
+    {
+        edge [style=invis];
+        skin_merc -> pool_ass;
+        skin_siren -> pool_merc;
+        skin_soldier -> pool_siren;
+        item_4 -> pool_soldier;
+        item_3 -> pool_psycho;
+        item_2 -> pool_mech;
+    }
+
+}
