@@ -322,6 +322,7 @@ Changelog
    * Removed "standalone" and "standalone offline" variants *(this is now much better
      managed by BLCMM)*
  * Added wider selection of boss unique drop rate selections
+ * Force some early-game gear unlocks to always happen
  * Added a byline in the header comments
 
 **v1.0.3**, April 25, 2018:

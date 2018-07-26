@@ -2658,6 +2658,13 @@ for (label, key, unique_pct, rare_pct, holodome_pct) in [
                 )
 
 ###
+### Read in our early game unlocks
+###
+
+with open('input-file-earlyunlock.txt') as df:
+    early_game_unlocks = df.read()
+
+###
 ### Everything below this point is constructing the actual patch file
 ###
 
@@ -2675,6 +2682,7 @@ with open(input_filename, 'r') as df:
         boss_drops_improved=boss_drops['improved'],
         boss_drops_slightimproved=boss_drops['slight'],
         boss_drops_stock=boss_drops['stock'],
+        early_game_unlocks=early_game_unlocks,
         )
 mp.human_str_to_blcm_filename(mod_str, output_filename)
 print('Wrote mod to: {}'.format(output_filename))
