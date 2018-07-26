@@ -1704,6 +1704,104 @@ TPS
                 # Some enemies in the game don't drop as I think they should, so this buffs
                 # some of them
 
+                #<Elder Opha / Virtuous Opha>
+
+                    # Make Elder Opha and Virtuous Opha drop from the badass pool,
+                    # rather than standard.
+
+                    level None set GD_Population_Eridian_Opha.AIPawn_Bal.PawnBalance_Opha_Heavy DefaultItemPoolIncludedLists[0] ItemPoolListDefinition'GD_Itempools.ListDefs.BadassEnemyGunsAndGear'
+
+                    level None set GD_Population_Eridian_Opha.AIPawn_Bal.PawnBalance_Opha_BadAss DefaultItemPoolIncludedLists[0] ItemPoolListDefinition'GD_Itempools.ListDefs.BadassEnemyGunsAndGear'
+
+                #</Elder Opha / Virtuous Opha>
+
+                #<EOS/SH4D0W-TP Loot Shower>
+
+                    # This actually isn't much different from stock, though we add in explicit
+                    # Glitch drops, plus some extra money+moonstone.
+
+                    {mp:eos_drop_144}
+
+                    {mp:eos_drop_145}
+
+                    {mp:eos_drop_146}
+
+                    {mp:eos_drop_147}
+
+                    {mp:eos_drop_148}
+
+                    {mp:eos_drop_149}
+
+                    {mp:eos_drop_150}
+
+                    {mp:eos_drop_151}
+
+                    {mp:eos_drop_153}
+
+                    {mp:eos_drop_154}
+
+                    {mp:eos_drop_155}
+
+                    {mp:eos_drop_156}
+
+                    {mp:eos_drop_157}
+
+                    {mp:eos_drop_158}
+
+                    {mp:eos_drop_159}
+
+                    {mp:eos_drop_160}
+
+                    {mp:eos_drop_161}
+
+                #</EOS/SH4D0W-TP Loot Shower>
+
+                #<Empyrean Sentinel (raid version) Pool>
+
+                    # The raid version of the Empyrean Sentinel contains two chances to drop
+                    # the ZX-1: one from its own pool, and one from the Colonel Zarpedon pool
+                    # which it also drops from.  This removes the ZX-1 from the Sentinel's
+                    # pool so that the ZX-1 isn't weighted any more than it already is.
+
+                    set GD_Itempools.Runnables.Pool_FinalBossRaid BalancedItems
+                    (
+                        ( 
+                            ItmPoolDefinition=None, 
+                            InvBalanceDefinition=WeaponBalanceDefinition'GD_Cork_Weap_SniperRifles.A_Weapons_Legendary.Sniper_Vladof_5_Longnail', 
+                            Probability=( 
+                                BaseValueConstant=0.000000, 
+                                BaseValueAttribute=None, 
+                                InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common', 
+                                BaseValueScaleConstant=1.000000 
+                            ), 
+                            bDropOnDeath=True 
+                        ),
+                        (
+                            ItmPoolDefinition=None, 
+                            InvBalanceDefinition=InventoryBalanceDefinition'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Nova_Singularity', 
+                            Probability=( 
+                                BaseValueConstant=0.000000, 
+                                BaseValueAttribute=None, 
+                                InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common', 
+                                BaseValueScaleConstant=1.000000 
+                            ), 
+                            bDropOnDeath=True 
+                        ),
+                        (
+                            ItmPoolDefinition=None, 
+                            InvBalanceDefinition=InventoryBalanceDefinition'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Absorption_PrismaticBulwark', 
+                            Probability=( 
+                                BaseValueConstant=0.000000, 
+                                BaseValueAttribute=None, 
+                                InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common', 
+                                BaseValueScaleConstant=1.000000 
+                            ), 
+                            bDropOnDeath=True 
+                        )
+                    )
+
+                #</Empyrean Sentinel (raid version) Pool>
+
                 #<Flameknuckle (playthrough 1)>
 
                     # Makes Flameknuckle drop from the Badass pool on playthrough one
@@ -1733,6 +1831,16 @@ TPS
 
                 #</Flameknuckle (Holodome Onslaught)>
 
+                #<Lost Legion Eternal>
+
+                    # When they start to ascend, Lost Legion Eternal troops drop from
+                    # Pool_Weapons_Laser_EnemyUse.  We change this to the main Laser pool
+                    # instead, so it uses our custom weights.
+
+                    level None set GD_DahlFanatic.Character.AIDef_DahlFanatic:AIBehaviorProviderDefinition_0.Behavior_SpawnItems_0 ItemPoolList[0].ItemPool ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_Lasers'
+
+                #</Lost Legion Eternal>
+
                 #<Nel>
 
                     # Make Nel drop from the epic chest pools, rather than
@@ -1754,26 +1862,13 @@ TPS
 
                 #</Nel>
 
-                #<Lost Legion Eternal>
+                #<Powersuit Felicity (Holodome Onslaught)>
 
-                    # When they start to ascend, Lost Legion Eternal troops drop from
-                    # Pool_Weapons_Laser_EnemyUse.  We change this to the main Laser pool
-                    # instead, so it uses our custom weights.
+                    # Makes Powersuit Felicity drop from the Badass pool
 
-                    level None set GD_DahlFanatic.Character.AIDef_DahlFanatic:AIBehaviorProviderDefinition_0.Behavior_SpawnItems_0 ItemPoolList[0].ItemPool ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_Lasers'
+                    level Eridian_Slaughter_P set GD_DahlCombatSuit_Felicity.Population.PawnBalance_DahlCombatSuit_Felicity DefaultItemPoolIncludedLists (ItemPoolListDefinition'GD_Itempools.ListDefs.BadassEnemyGunsAndGear')
 
-                #</Lost Legion Eternal>
-
-                #<Elder Opha / Virtuous Opha>
-
-                    # Make Elder Opha and Virtuous Opha drop from the badass pool,
-                    # rather than standard.
-
-                    level None set GD_Population_Eridian_Opha.AIPawn_Bal.PawnBalance_Opha_Heavy DefaultItemPoolIncludedLists[0] ItemPoolListDefinition'GD_Itempools.ListDefs.BadassEnemyGunsAndGear'
-
-                    level None set GD_Population_Eridian_Opha.AIPawn_Bal.PawnBalance_Opha_BadAss DefaultItemPoolIncludedLists[0] ItemPoolListDefinition'GD_Itempools.ListDefs.BadassEnemyGunsAndGear'
-
-                #</Elder Opha / Virtuous Opha>
+                #</Powersuit Felicity (Holodome Onslaught)>
 
                 #<Teh Earworm>
 
@@ -1822,101 +1917,6 @@ TPS
                     )
 
                 #</Teh Earworm>
-
-                #<Tweak Empyrean Sentinel (raid version) Pool>
-
-                    # The raid version of the Empyrean Sentinel contains two chances to drop
-                    # the ZX-1: one from its own pool, and one from the Colonel Zarpedon pool
-                    # which it also drops from.  This removes the ZX-1 from the Sentinel's
-                    # pool so that the ZX-1 isn't weighted any more than it already is.
-
-                    set GD_Itempools.Runnables.Pool_FinalBossRaid BalancedItems
-                    (
-                        ( 
-                            ItmPoolDefinition=None, 
-                            InvBalanceDefinition=WeaponBalanceDefinition'GD_Cork_Weap_SniperRifles.A_Weapons_Legendary.Sniper_Vladof_5_Longnail', 
-                            Probability=( 
-                                BaseValueConstant=0.000000, 
-                                BaseValueAttribute=None, 
-                                InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common', 
-                                BaseValueScaleConstant=1.000000 
-                            ), 
-                            bDropOnDeath=True 
-                        ),
-                        (
-                            ItmPoolDefinition=None, 
-                            InvBalanceDefinition=InventoryBalanceDefinition'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Nova_Singularity', 
-                            Probability=( 
-                                BaseValueConstant=0.000000, 
-                                BaseValueAttribute=None, 
-                                InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common', 
-                                BaseValueScaleConstant=1.000000 
-                            ), 
-                            bDropOnDeath=True 
-                        ),
-                        (
-                            ItmPoolDefinition=None, 
-                            InvBalanceDefinition=InventoryBalanceDefinition'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Absorption_PrismaticBulwark', 
-                            Probability=( 
-                                BaseValueConstant=0.000000, 
-                                BaseValueAttribute=None, 
-                                InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common', 
-                                BaseValueScaleConstant=1.000000 
-                            ), 
-                            bDropOnDeath=True 
-                        )
-                    )
-
-                #</Tweak Empyrean Sentinel (raid version) Pool>
-
-                #<Improved EOS/SH4D0W-TP Loot Shower>
-
-                    # This actually isn't much different from stock, though we add in explicit
-                    # Glitch drops, plus some extra money+moonstone.
-
-                    {mp:eos_drop_144}
-
-                    {mp:eos_drop_145}
-
-                    {mp:eos_drop_146}
-
-                    {mp:eos_drop_147}
-
-                    {mp:eos_drop_148}
-
-                    {mp:eos_drop_149}
-
-                    {mp:eos_drop_150}
-
-                    {mp:eos_drop_151}
-
-                    {mp:eos_drop_153}
-
-                    {mp:eos_drop_154}
-
-                    {mp:eos_drop_155}
-
-                    {mp:eos_drop_156}
-
-                    {mp:eos_drop_157}
-
-                    {mp:eos_drop_158}
-
-                    {mp:eos_drop_159}
-
-                    {mp:eos_drop_160}
-
-                    {mp:eos_drop_161}
-
-                #</Improved EOS/SH4D0W-TP Loot Shower>
-
-                #<Powersuit Felicity (Holodome Onslaught)>
-
-                    # Makes Powersuit Felicity drop from the Badass pool
-
-                    level Eridian_Slaughter_P set GD_DahlCombatSuit_Felicity.Population.PawnBalance_DahlCombatSuit_Felicity DefaultItemPoolIncludedLists (ItemPoolListDefinition'GD_Itempools.ListDefs.BadassEnemyGunsAndGear')
-
-                #</Powersuit Felicity (Holodome Onslaught)>
 
             #</Better Individual Enemy Drops>
 
