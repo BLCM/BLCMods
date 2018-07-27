@@ -17,7 +17,7 @@ and the like.
 In the default configuration, this mod is a spiritual cousin of my own
 Better Loot mod.  You'll be up against enemies using purples, glitches,
 and even legendaries.  Gear quality can be customized easily in
-FilterTool/BLCMM, so you can still play using something close to the stock
+BLCMM, so you can still play using something close to the stock
 Borderlands gear quality.  Regardless of gear quality configuration, Badass
 enemies will have better gear than their ordinary counterparts.
 
@@ -35,9 +35,8 @@ full details of how you've got it configured, and I can take a look.
 Usage/Installation
 ------------------
 
-This mod must be imported into FilterTool/BLCMM with `Developer tools` ->
-`Add single mod`.  Choose the file `TPS Cold Dead Hands.txt` and
-have at it!
+This mod must be imported into BLCMM using `File -> Import single mod`.
+Choose the file `TPS Cold Dead Hands.blcm` and have at it!
 
 Mod Details
 -----------
@@ -95,7 +94,7 @@ from the start of the battle which gun you'll receive.
 ### Configuration
 
 There are several categories you can use to customize various aspects of the
-mod, when loaded into FilterTool/BLCMM:
+mod, when loaded into BLCMM:
 
 * **Legendary Loot Pool Improvements**: This section improves the global legendary pool
   by adding all uniques and glitch uniques.  (There are only two Glitch
@@ -218,18 +217,13 @@ Mod Construction / Implementation Details
 *(This section is only relevant for someone looking to edit the mod in the
 same way I do, or just someone curious about my mod construction techniques.
 If you're just looking to run the mod, see the "Usage" section above.  The
-mod can, of course, be edited directly in FilterTool/BLCMM as well, once it's
+mod can, of course, be edited directly in BLCMM as well, once it's
 been imported.)*
 
-This mod is actually generated using a simple little Python script named
-`generate-source.py`.  The script makes use of `hotfix.py` from the parent
-directory.  You'd need to copy (or symlink, if you're on Mac or Linux)
-`hotfix.py` into this directory in order to run the script.
-
-To generate the end result file, I actually run the small shell script
-`create.sh` in this directory, which just does the following:
-
-    ./generate-source.py && ../conv_to_mod.py -f "TPS Cold Dead Hands"
+This mod is generated using Python script named `generate-mod.py`.
+The script makes use of `modprocessor.py` from my Borderlands 2 mod
+directory.  You'll need to copy (or symlink, if you're on Mac or Linux)
+`modprocessor.py` into this directory in order to run the script.
 
 Bugs
 ====
@@ -284,8 +278,8 @@ for the full text.
 Changelog
 =========
 
-**v1.0.1**, unreleased:
- * Nothing, yet.
+**v1.1.0**, unreleased:
+ * Converted to BLCM format *(BLCMM is now required; FilterTool is not supported)*
 
 **v1.0.0**, July 9, 2018 (commit `502a6d1e2a96a76750299b930e267074e6dc260e`):
  * Initial public release

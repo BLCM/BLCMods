@@ -1,3 +1,4 @@
+TPS
 #<{mod_name}>
 
     # {mod_name} v{mod_version}
@@ -857,9 +858,21 @@
 
                     # Ensure that moonstone chests always provide gear
 
-                    {hotfixes:moonstone_disable_0}
+                    level None set GD_Itempools.EnemyDropPools.Pool_GunsAndGear_06_Legendary_Moonstone BalancedItems[0].Probability
+                    (
+                        BaseValueConstant=0,
+                        BaseValueAttribute=None, 
+                        InitializationDefinition=None,
+                        BaseValueScaleConstant=0
+                    )
 
-                    {hotfixes:moonstone_disable_1}
+                    level None set GD_Itempools.EnemyDropPools.Pool_GunsAndGear_06_Legendary_Moonstone BalancedItems[1].Probability
+                    (
+                        BaseValueConstant=0,
+                        BaseValueAttribute=None, 
+                        InitializationDefinition=None,
+                        BaseValueScaleConstant=0
+                    )
 
                 #</Main Weapon/Shield-Removing Hotfixes for Chests>
 
@@ -1132,41 +1145,54 @@
 
                 #<Lockers>
 
-                    {hotfixes:lockers_0}
+                    {mp:lockers_0}
 
-                    {hotfixes:lockers_0_point}
+                    {mp:lockers_0_point}
 
-                    {hotfixes:lockers_1}
+                    {mp:lockers_1}
 
-                    {hotfixes:lockers_1_point}
+                    {mp:lockers_1_point}
 
-                    {hotfixes:lockers_2}
+                    {mp:lockers_2}
 
-                    {hotfixes:lockers_2_point}
+                    {mp:lockers_2_point}
 
-                    {hotfixes:lockers_3}
+                    level None set GD_Itempools.ListDefs.StorageLockerLoot LootData[5].ItemAttachments[1].PoolProbability.BaseValueConstant 0
 
                 #</Lockers>
 
                 #<Cardboard Boxes>
 
-                    {hotfixes:cardboard_0}
+                    {mp:cardboard_0}
 
-                    {hotfixes:cardboard_0_point}
+                    {mp:cardboard_0_point}
 
                 #</Cardboard Boxes>
 
                 #<Dumpsters>
 
-                    {hotfixes:dumpsters_0}
+                    level None set GD_Itempools.LootablePools.Pool_Dumpster_Guns BalancedItems
+                    (
+                        (
+                            ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.LootablePools.Pool_Locker_Items_CashAndAmmo',
+                            InvBalanceDefinition=None,
+                            Probability=(
+                                BaseValueConstant=1,
+                                BaseValueAttribute=None,
+                                InitializationDefinition=None,
+                                BaseValueScaleConstant=1
+                            ),
+                            bDropOnDeath=False
+                        )
+                    )
 
                 #</Dumpsters>
 
                 #<Bandit Coolers>
 
-                    {hotfixes:cooler_0}
+                    {mp:cooler_0}
 
-                    {hotfixes:cooler_0_point}
+                    {mp:cooler_0_point}
 
                 #</Bandit Coolers>
 
@@ -1176,7 +1202,299 @@
                     # safes, which improves on safe performance in a number of ways.
                     # Removing the shield possibility, though.
 
-                    {hotfixes:safes_0}
+                    level None set GD_Balance_Treasure.LootableGrades.ObjectGrade_Safe DefaultLoot
+                    (
+                        ( 
+                            ConfigurationName="Moonstone", 
+                            LootGameStageVarianceFormula=None, 
+                            Weight=( 
+                                BaseValueConstant=1.000000, 
+                                BaseValueAttribute=None, 
+                                InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common', 
+                                BaseValueScaleConstant=1.000000 
+                            ), 
+                            ItemAttachments=( 
+                                ( 
+                                    ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Moonstone', 
+                                    PoolProbability=( 
+                                        BaseValueConstant=1.000000, 
+                                        BaseValueAttribute=None, 
+                                        InitializationDefinition=None, 
+                                        BaseValueScaleConstant=1.000000 
+                                    ), 
+                                    AttachmentPointName="Ammo4" 
+                                ), 
+                                ( 
+                                    ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Moonstone', 
+                                    PoolProbability=( 
+                                        BaseValueConstant=1.000000, 
+                                        BaseValueAttribute=None, 
+                                        InitializationDefinition=None, 
+                                        BaseValueScaleConstant=1.000000 
+                                    ), 
+                                    AttachmentPointName="Ammo1" 
+                                ), 
+                                ( 
+                                    ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Money_1_BIG', 
+                                    PoolProbability=( 
+                                        BaseValueConstant=1.000000, 
+                                        BaseValueAttribute=None, 
+                                        InitializationDefinition=None, 
+                                        BaseValueScaleConstant=1.000000 
+                                    ), 
+                                    AttachmentPointName="Ammo2" 
+                                ), 
+                                ( 
+                                    ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Money_1_BIG', 
+                                    PoolProbability=( 
+                                        BaseValueConstant=1.000000, 
+                                        BaseValueAttribute=None, 
+                                        InitializationDefinition=None, 
+                                        BaseValueScaleConstant=0.800000 
+                                    ), 
+                                    AttachmentPointName="Ammo5" 
+                                ), 
+                                ( 
+                                    ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Moonstone', 
+                                    PoolProbability=( 
+                                        BaseValueConstant=1.000000, 
+                                        BaseValueAttribute=None, 
+                                        InitializationDefinition=None, 
+                                        BaseValueScaleConstant=0.800000 
+                                    ), 
+                                    AttachmentPointName="Ammo3" 
+                                ) 
+                            ) 
+                        ),
+                        ( 
+                            ConfigurationName="Eridium", 
+                            LootGameStageVarianceFormula=None, 
+                            Weight=( 
+                                BaseValueConstant=1.000000, 
+                                BaseValueAttribute=None, 
+                                InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common', 
+                                BaseValueScaleConstant=1.000000 
+                            ), 
+                            ItemAttachments=( 
+                                ( 
+                                    ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Moonstone_Cluster', 
+                                    PoolProbability=( 
+                                        BaseValueConstant=1.000000, 
+                                        BaseValueAttribute=None, 
+                                        InitializationDefinition=None, 
+                                        BaseValueScaleConstant=1.000000 
+                                    ), 
+                                    AttachmentPointName="Ammo4" 
+                                ), 
+                                ( 
+                                    ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Money_1_BIG', 
+                                    PoolProbability=( 
+                                        BaseValueConstant=1.000000, 
+                                        BaseValueAttribute=None, 
+                                        InitializationDefinition=None, 
+                                        BaseValueScaleConstant=1.000000 
+                                    ), 
+                                    AttachmentPointName="Ammo1" 
+                                ), 
+                                ( 
+                                    ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Money_1_BIG', 
+                                    PoolProbability=( 
+                                        BaseValueConstant=1.000000, 
+                                        BaseValueAttribute=None, 
+                                        InitializationDefinition=None, 
+                                        BaseValueScaleConstant=1.000000 
+                                    ), 
+                                    AttachmentPointName="Ammo2" 
+                                ), 
+                                ( 
+                                    ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Money_1_BIG', 
+                                    PoolProbability=( 
+                                        BaseValueConstant=1.000000, 
+                                        BaseValueAttribute=None, 
+                                        InitializationDefinition=None, 
+                                        BaseValueScaleConstant=0.800000 
+                                    ), 
+                                    AttachmentPointName="Ammo5" 
+                                ), 
+                                ( 
+                                    ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Money_1_BIG', 
+                                    PoolProbability=( 
+                                        BaseValueConstant=1.000000, 
+                                        BaseValueAttribute=None, 
+                                        InitializationDefinition=None, 
+                                        BaseValueScaleConstant=0.800000 
+                                    ), 
+                                    AttachmentPointName="Ammo3" 
+                                ) 
+                            ) 
+                        ),
+                        ( 
+                            ConfigurationName="Safe_Cash", 
+                            LootGameStageVarianceFormula=None, 
+                            Weight=( 
+                                BaseValueConstant=1.000000, 
+                                BaseValueAttribute=None, 
+                                InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common', 
+                                BaseValueScaleConstant=1.000000 
+                            ), 
+                            ItemAttachments=( 
+                                ( 
+                                    ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Money_1_BIG', 
+                                    PoolProbability=( 
+                                        BaseValueConstant=1.000000, 
+                                        BaseValueAttribute=None, 
+                                        InitializationDefinition=None, 
+                                        BaseValueScaleConstant=1.000000 
+                                    ), 
+                                    AttachmentPointName="Ammo1" 
+                                ), 
+                                ( 
+                                    ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Money_1_BIG', 
+                                    PoolProbability=( 
+                                        BaseValueConstant=1.000000, 
+                                        BaseValueAttribute=None, 
+                                        InitializationDefinition=None, 
+                                        BaseValueScaleConstant=0.800000 
+                                    ), 
+                                    AttachmentPointName="Ammo2" 
+                                ), 
+                                ( 
+                                    ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Money_1_BIG', 
+                                    PoolProbability=( 
+                                        BaseValueConstant=1.000000, 
+                                        BaseValueAttribute=None, 
+                                        InitializationDefinition=None, 
+                                        BaseValueScaleConstant=1.000000 
+                                    ), 
+                                    AttachmentPointName="Ammo3" 
+                                ), 
+                                ( 
+                                    ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Money_1_BIG', 
+                                    PoolProbability=( 
+                                        BaseValueConstant=1.000000, 
+                                        BaseValueAttribute=None, 
+                                        InitializationDefinition=None, 
+                                        BaseValueScaleConstant=1.000000 
+                                    ), 
+                                    AttachmentPointName="Ammo4" 
+                                ), 
+                                ( 
+                                    ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Money_1_BIG', 
+                                    PoolProbability=( 
+                                        BaseValueConstant=1.000000, 
+                                        BaseValueAttribute=None, 
+                                        InitializationDefinition=None, 
+                                        BaseValueScaleConstant=0.800000 
+                                    ), 
+                                    AttachmentPointName="Ammo5" 
+                                ) 
+                            ) 
+                        ),
+                        ( 
+                            ConfigurationName="Grenade", 
+                            LootGameStageVarianceFormula=None, 
+                            Weight=( 
+                                BaseValueConstant=1.000000, 
+                                BaseValueAttribute=None, 
+                                InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_3_Uncommoner', 
+                                BaseValueScaleConstant=1.000000 
+                            ), 
+                            ItemAttachments=( 
+                                ( 
+                                    ItemPool=ItemPoolDefinition'GD_Itempools.GrenadeModPools.Pool_GrenadeMods_06_Legendary', 
+                                    PoolProbability=( 
+                                        BaseValueConstant=1.000000, 
+                                        BaseValueAttribute=None, 
+                                        InitializationDefinition=None, 
+                                        BaseValueScaleConstant=1.000000 
+                                    ), 
+                                    AttachmentPointName="Grenade" 
+                                ), 
+                                ( 
+                                    ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Ammo_Grenades', 
+                                    PoolProbability=( 
+                                        BaseValueConstant=1.000000, 
+                                        BaseValueAttribute=None, 
+                                        InitializationDefinition=None, 
+                                        BaseValueScaleConstant=1.000000 
+                                    ), 
+                                    AttachmentPointName="Shield" 
+                                ), 
+                                ( 
+                                    ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Money_1_BIG', 
+                                    PoolProbability=( 
+                                        BaseValueConstant=1.000000, 
+                                        BaseValueAttribute=None, 
+                                        InitializationDefinition=None, 
+                                        BaseValueScaleConstant=1.000000 
+                                    ), 
+                                    AttachmentPointName="Ammo1" 
+                                ), 
+                                ( 
+                                    ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Money_1_BIG', 
+                                    PoolProbability=( 
+                                        BaseValueConstant=1.000000, 
+                                        BaseValueAttribute=None, 
+                                        InitializationDefinition=None, 
+                                        BaseValueScaleConstant=1.000000 
+                                    ), 
+                                    AttachmentPointName="Ammo2" 
+                                ), 
+                                ( 
+                                    ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Ammo_Grenades', 
+                                    PoolProbability=( 
+                                        BaseValueConstant=1.000000, 
+                                        BaseValueAttribute=None, 
+                                        InitializationDefinition=None, 
+                                        BaseValueScaleConstant=1.000000 
+                                    ), 
+                                    AttachmentPointName="Ammo5" 
+                                ) 
+                            ) 
+                        ),
+                        ( 
+                            ConfigurationName="MoonItem", 
+                            LootGameStageVarianceFormula=None, 
+                            Weight=( 
+                                BaseValueConstant=1.000000, 
+                                BaseValueAttribute=None, 
+                                InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_3_Uncommoner', 
+                                BaseValueScaleConstant=1.000000 
+                            ), 
+                            ItemAttachments=( 
+                                ( 
+                                    ItemPool=ItemPoolDefinition'GD_Itempools.MoonItemPools.Pool_MoonItem_06_Legendary', 
+                                    PoolProbability=( 
+                                        BaseValueConstant=1.000000, 
+                                        BaseValueAttribute=None, 
+                                        InitializationDefinition=None, 
+                                        BaseValueScaleConstant=0.500000 
+                                    ), 
+                                    AttachmentPointName="Grenade" 
+                                ), 
+                                ( 
+                                    ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Money_1_BIG', 
+                                    PoolProbability=( 
+                                        BaseValueConstant=1.000000, 
+                                        BaseValueAttribute=None, 
+                                        InitializationDefinition=None, 
+                                        BaseValueScaleConstant=1.000000 
+                                    ), 
+                                    AttachmentPointName="Ammo1" 
+                                ), 
+                                ( 
+                                    ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Money_1_BIG', 
+                                    PoolProbability=( 
+                                        BaseValueConstant=1.000000, 
+                                        BaseValueAttribute=None, 
+                                        InitializationDefinition=None, 
+                                        BaseValueScaleConstant=1.000000 
+                                    ), 
+                                    AttachmentPointName="Ammo2" 
+                                ) 
+                            ) 
+                        )
+                    )
 
                 #</Safes>
 
@@ -1191,19 +1509,19 @@
             # the number of items in shield + weapon machines to 2, and removing the
             # item of the day from the weapons machine.
 
-            {hotfixes:vendor_nerf_0}
+            level None set GD_ItemPools_Shop.Items.Shoppool_Weapons_FlatChance Quantity.BaseValueConstant 2
 
-            {hotfixes:vendor_nerf_1}
+            level None set GD_ItemPools_Shop.HealthShop.HealthShop_Items Quantity.BaseValueConstant 2
 
-            {hotfixes:vendor_nerf_2}
+            level None set GD_ItemPools_Shop.WeaponPools.Shoppool_IOTD_WeaponMachine Quantity.BaseValueConstant 0
 
-            {hotfixes:vendor_nerf_3}
+            {mp:vendor_nerf_3}
 
-            {hotfixes:vendor_nerf_4}
+            {mp:vendor_nerf_4}
 
-            {hotfixes:vendor_nerf_5}
+            {mp:vendor_nerf_5}
 
-            {hotfixes:vendor_nerf_6}
+            {mp:vendor_nerf_6}
 
         #</Nerf Vending Machines>
 
@@ -1310,17 +1628,17 @@
                 # has a shield or a weapon.  This fixes that bug, while also ensuring
                 # compatibility for folks not using UCP.
 
-                {hotfixes:flameknuckle_pool_0}
+                level MoonShotIntro_P set GD_DahlPowersuit_Knuckle.Population.PawnBalance_DahlPowersuit_Knuckle DefaultItemPoolList[1].PoolProbability.BaseValueConstant 0
 
-                {hotfixes:flameknuckle_pool_1}
+                level MoonShotIntro_P set GD_DahlPowersuit_Knuckle.Population.PawnBalance_DahlSergeantFlameKnuckle PlayThroughs[0].CustomItemPoolIncludedLists ()
 
-                {hotfixes:flameknuckle_pool_2}
+                level MoonShotIntro_P set GD_DahlPowersuit_Knuckle.Population.PawnBalance_DahlSergeantFlameKnuckle PlayThroughs[0].CustomItemPoolList ()
 
-                {hotfixes:flameknuckle_pool_3}
+                level MoonShotIntro_P set GD_DahlPowersuit_Knuckle.Population.PawnBalance_DahlSergeantFlameKnuckle PlayThroughs[1].CustomItemPoolIncludedLists ()
 
-                {hotfixes:flameknuckle_pool_4}
+                level MoonShotIntro_P set GD_DahlPowersuit_Knuckle.Population.PawnBalance_DahlSergeantFlameKnuckle PlayThroughs[1].CustomItemPoolList ()
 
-                {hotfixes:flameknuckle_pool_5}
+                {mp:flameknuckle_pool_5}
 
             #</Flame Knuckle Pool>
 
@@ -1331,13 +1649,13 @@
                 # removed, sets us up to use our badass equip pool for shields, and
                 # normalizes his drops across playthroughs.
 
-                {hotfixes:flameknuckle_holodome_pool_0}
+                level Eridian_Slaughter_P set GD_DahlPowersuit_KnuckleRepaired.Population.PawnBalance_DahlSergeantFlameKnuckle PlayThroughs[1].CustomItemPoolIncludedLists ()
 
-                {hotfixes:flameknuckle_holodome_pool_1}
+                level Eridian_Slaughter_P set GD_DahlPowersuit_KnuckleRepaired.Population.PawnBalance_DahlSergeantFlameKnuckle PlayThroughs[1].CustomItemPoolList ()
 
-                {hotfixes:flameknuckle_holodome_pool_2}
+                level Eridian_Slaughter_P set GD_DahlPowersuit_KnuckleRepaired.Population.PawnBalance_DahlSergeantFlameKnuckle DefaultItemPoolIncludedLists (ItemPoolListDefinition'GD_Itempools.ListDefs.BadassEnemyGunsAndGear')
 
-                {hotfixes:flameknuckle_holodome_pool_3}
+                {mp:flameknuckle_holodome_pool_3}
 
             #</Flame Knuckle Pool (Holodome)>
 
@@ -1347,9 +1665,9 @@
                 # launchers.  We're going to continue doing so, using their original pool,
                 # since they're the only ones who use it.
 
-                {hotfixes:badass_outlaw_equip_0}
+                {mp:badass_outlaw_equip_0}
 
-                {hotfixes:badass_outlaw_equip_1}
+                {mp:badass_outlaw_equip_1}
 
             #</Badass Outlaw Pool>
 
@@ -1359,7 +1677,7 @@
                 # custom flamethrower attack.  We're going to disable that, so he won't
                 # actually drop a weapon.
 
-                {hotfixes:corporal_bob_pool_0}
+                {mp:corporal_bob_pool_0}
 
             #</Corporal Bob>
 
@@ -1369,7 +1687,7 @@
                 # snipers, and we've got to play a little game with that to make our uniques
                 # handling work properly.
 
-                {hotfixes:dahl_sniper_setup}
+                {mp:dahl_sniper_setup}
 
             #</Lost Legion Sniper Pool Setup>
 
@@ -1381,7 +1699,7 @@
                 # altogether.  Say they've gotta use the smartmatter-or-whatever as energy
                 # for their ascension or something.  :)
 
-                {hotfixes:lost_legion_eternal_0}
+                level None set GD_DahlFanatic.Character.AIDef_DahlFanatic:AIBehaviorProviderDefinition_0.Behavior_SpawnItems_0 ItemPoolList[0].PoolProbability.BaseValueConstant 0
 
             #</Lost Legion Eternal>
 
@@ -1454,19 +1772,19 @@
             # Initializes the various Legendary drop pools in a way which lets us choose
             # what else to put in them (via hotfix) in the next categories.
 
-            {hotfixes:weapon_pool_clear_assaultrifles}
+            {mp:weapon_pool_clear_assaultrifles}
 
-            {hotfixes:weapon_pool_clear_launchers}
+            {mp:weapon_pool_clear_launchers}
 
-            {hotfixes:weapon_pool_clear_pistols}
+            {mp:weapon_pool_clear_pistols}
 
-            {hotfixes:weapon_pool_clear_shotguns}
+            {mp:weapon_pool_clear_shotguns}
 
-            {hotfixes:weapon_pool_clear_smg}
+            {mp:weapon_pool_clear_smg}
 
-            {hotfixes:weapon_pool_clear_sniperrifles}
+            {mp:weapon_pool_clear_sniperrifles}
 
-            {hotfixes:weapon_pool_clear_lasers}
+            {mp:weapon_pool_clear_lasers}
 
             set GD_Itempools.ShieldPools.Pool_Shields_Absorption_06_Legendary BalancedItems
             (
@@ -1771,25 +2089,49 @@
 
                 #<Remove Ol'Painful>
 
-                    {hotfixes:remove_olpainful}
+                    level None set GD_Itempools.WeaponPools.Pool_Weapons_AssaultRifles_04_Rare BalancedItems[5].Probability
+                    (
+                        BaseValueConstant=0,
+                        BaseValueAttribute=None, 
+                        InitializationDefinition=None,
+                        BaseValueScaleConstant=0
+                    )
 
                 #</Remove Ol'Painful>
 
                 #<Remove Boomacorn>
 
-                    {hotfixes:remove_boomacorn}
+                    level None set GD_Itempools.WeaponPools.Pool_Weapons_Shotguns_04_Rare BalancedItems[6].Probability
+                    (
+                        BaseValueConstant=0,
+                        BaseValueAttribute=None, 
+                        InitializationDefinition=None,
+                        BaseValueScaleConstant=0
+                    )
 
                 #</Remove Boomacorn>
 
                 #<Remove Jack-O-Cannon>
 
-                    {hotfixes:remove_jackocannon}
+                    level None set GD_Itempools.WeaponPools.Pool_Weapons_Shotguns_04_Rare BalancedItems[7].Probability
+                    (
+                        BaseValueConstant=0,
+                        BaseValueAttribute=None, 
+                        InitializationDefinition=None,
+                        BaseValueScaleConstant=0
+                    )
 
                 #</Remove Jack-O-Cannon>
 
                 #<Remove The Machine>
 
-                    {hotfixes:remove_themachine}
+                    level None set GD_Itempools.WeaponPools.Pool_Weapons_SniperRifles_04_Rare BalancedItems[6].Probability
+                    (
+                        BaseValueConstant=0,
+                        BaseValueAttribute=None, 
+                        InitializationDefinition=None,
+                        BaseValueScaleConstant=0
+                    )
 
                 #</Remove The Machine>
 
@@ -1797,23 +2139,23 @@
 
 {other:legendary_unique_adds}
 
-            {hotfixes:shield_asteroidbelt}
+            {mp:shield_asteroidbelt}
 
-            {hotfixes:shield_slammer}
+            {mp:shield_slammer}
 
-            {hotfixes:shield_haymaker}
+            {mp:shield_haymaker}
 
-            {hotfixes:shield_m0rq}
+            {mp:shield_m0rq}
 
-            {hotfixes:shield_shieldofages}
+            {mp:shield_shieldofages}
 
-            {hotfixes:shield_sunshine}
+            {mp:shield_sunshine}
 
-            {hotfixes:shield_rapidrelease}
+            {mp:shield_rapidrelease}
 
-            {hotfixes:shield_naught}
+            {mp:shield_naught}
 
-            {hotfixes:dahl_sniper_unique}
+            level None set GD_DahlSniper.WeaponPools.Pool_Weapons_HypSniper_EnemyUse_NoScheduling BalancedItems[12].Probability.BaseValueScaleConstant 1
 
         #</Add Uniques to Legendary Weapon + Shield Pools>
 
@@ -1833,37 +2175,37 @@
             # weapon type to equip rocket launchers.  This is pretty fun in Normal,
             # but is probably a bit much for people playing UVHM.
 
-            {hotfixes:rocket_enable_reg_all}
+            {mp:rocket_enable_reg_all}
 
-            {hotfixes:rocket_enable_reg_ar}
+            {mp:rocket_enable_reg_ar}
 
-            {hotfixes:rocket_enable_reg_lasers}
+            {mp:rocket_enable_reg_lasers}
 
-            {hotfixes:rocket_enable_badass_all}
+            {mp:rocket_enable_badass_all}
 
-            {hotfixes:rocket_enable_badass_ar}
+            {mp:rocket_enable_badass_ar}
 
-            {hotfixes:rocket_enable_badass_lasers}
+            {mp:rocket_enable_badass_lasers}
 
         #</Include Rocket Launchers>
 
         #<Exclude Rocket Launchers>
 
-            ## The only enemies who will equip rocket launchers are the ones who are<off>
-            ## specifically set to use launchers exclusively.  (This is the Borderlands<off>
-            ## default behavior)<off>
+            # The only enemies who will equip rocket launchers are the ones who are
+            # specifically set to use launchers exclusively.  (This is the Borderlands
+            # default behavior)
 
-            {hotfixes:rocket_disable_reg_all}
+            {mp:rocket_disable_reg_all}
 
-            {hotfixes:rocket_disable_reg_ar}
+            {mp:rocket_disable_reg_ar}
 
-            {hotfixes:rocket_disable_reg_lasers}
+            {mp:rocket_disable_reg_lasers}
 
-            {hotfixes:rocket_disable_badass_all}
+            {mp:rocket_disable_badass_all}
 
-            {hotfixes:rocket_disable_badass_ar}
+            {mp:rocket_disable_badass_ar}
 
-            {hotfixes:rocket_disable_badass_lasers}
+            {mp:rocket_disable_badass_lasers}
 
         #</Exclude Rocket Launchers>
 
@@ -1926,12 +2268,12 @@
 
         #<Leave Shield Chances at TPS Defaults (few shields in early game)>
 
-            ## By default, very few early-game enemies, apart from the very first<off>
-            ## level, have shields.  This option keeps that default.  Note that<off>
-            ## shields will be very thin on the ground for much of the early<off>
-            ## game, with this option!<off>
+            # By default, very few early-game enemies, apart from the very first
+            # level, have shields.  This option keeps that default.  Note that
+            # shields will be very thin on the ground for much of the early
+            # game, with this option!
 
-            {hotfixes:moreshields_dummy}
+            level MoreShieldsDummy_P set GD_MoreShieldsDummy DummyAttribute 1
 
         #</Leave Shield Chances at TPS Defaults (few shields in early game)>
 
@@ -1944,14 +2286,14 @@
             # With this option, Stalkers have the standard shield they've always had in
             # Borderlands, and will not drop a shield when killed.
 
-            {hotfixes:stalker_dummy}
+            level StalkerDummy_P set GD_StalkerDummy DummyAttribute 1
 
         #</Standard Game (no shield drops)>
 
         #<Equip and Drop "Real" Shields>
 
-            ## Stalkers will equip and drop "real" shields, just like other shielded<off>
-            ## enemies in the game.<off>
+            # Stalkers will equip and drop "real" shields, just like other shielded
+            # enemies in the game.
 
 {stalker_shields_real}
 
@@ -1966,14 +2308,14 @@
             # With this option, Eridian Guardians have the standard shield they've always
             # had in TPS, and will not drop a shield when killed.
 
-            {hotfixes:guardian_dummy}
+            level GuardianDummy_P set GD_GuardianDummy DummyAttribute 1
 
         #</Standard Game (no shield drops)>
 
         #<Equip and Drop "Real" Shields>
 
-            ## Eridian Guardians will equip and drop "real" shields, just like other<off>
-            ## shielded enemies in the game.<off>
+            # Eridian Guardians will equip and drop "real" shields, just like other
+            # shielded enemies in the game.
 
 {guardian_shields_real}
 
@@ -1989,14 +2331,14 @@
             # Bugs, Viruses, etc) have the standard shield they've always had in TPS, and
             # will not drop a shield when killed.
 
-            {hotfixes:clapcreature_dummy}
+            level ClaptasticCreatureDummy_P set GD_ClaptasticCreatureDummy DummyAttribute 1
 
         #</Standard Game (no shield drops)>
 
         #<Equip and Drop "Real" Shields>
 
-            ## Claptastic Voyage creatures will equip and drop "real" shields, just like<off>
-            ## other shielded enemies in the game.<off>
+            # Claptastic Voyage creatures will equip and drop "real" shields, just like
+            # other shielded enemies in the game.
 
 {clapcreature_shields_real}
 
@@ -2008,20 +2350,20 @@
 
         #<Do Not Provide Common Pistols (no changes from vanilla TPS)>
 
-            {hotfixes:toarms_dummy}
+            level ToArmsDummy_P set GD_ToArmsDummy DummyAttribute 1
 
         #</Do Not Provide Common Pistols (no changes from vanilla TPS)>
 
         #<Provide Common Pistol chests near drop point (removes ozkit-only chests)>
 
-            ## The mission "To Arms!" was already rather annoying to begin with, but<off>
-            ## depending on this mod's configuration, it's actually one of the harder ones<off>
-            ## to complete.  Enabling this option will cause a few chests to appear in the<off>
-            ## same room as the dead drop, which always contain common pistols.  It uses<off>
-            ## the previously-OzKit-only chests found near Dierdre to do this, so those<off>
-            ## chests will no longer be ozkit chests if you have this enabled.<off>
+            # The mission "To Arms!" was already rather annoying to begin with, but
+            # depending on this mod's configuration, it's actually one of the harder ones
+            # to complete.  Enabling this option will cause a few chests to appear in the
+            # same room as the dead drop, which always contain common pistols.  It uses
+            # the previously-OzKit-only chests found near Dierdre to do this, so those
+            # chests will no longer be ozkit chests if you have this enabled.
 
-            #set GD_Itempools.ListDefs.AmmoCrateLoot_OzKitsOnly LootData
+            set GD_Itempools.ListDefs.AmmoCrateLoot_OzKitsOnly LootData
             (
                 ( 
                     ConfigurationName="AmmoCrate", 
@@ -2069,35 +2411,75 @@
                         ) 
                     ) 
                 )
-            )<off>
+            )
 
-            {hotfixes:toarms_banditammo_type_0}
+            level Moon_P set Moon_P.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_31 PopulationDef PopulationDefinition'GD_Population_Treasure.Lootables.Crate_Military_OzKitsOnly'
 
-            {hotfixes:toarms_banditammo_loc_0}
+            level Moon_P set Moon_P.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_31 Location
+            (
+                X=-8960,
+                Y=10660,
+                Z=-948.618042
+            )
 
-            {hotfixes:toarms_banditammo_rot_0}
+            level Moon_P set Moon_P.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_31 Rotation
+            (
+                Pitch=45,
+                Yaw=-33960,
+                Roll=94
+            )
 
-            {hotfixes:toarms_banditammo_type_1}
+            level Moon_P set Moon_P.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_24 PopulationDef PopulationDefinition'GD_Population_Treasure.Lootables.Crate_Military_OzKitsOnly'
 
-            {hotfixes:toarms_banditammo_loc_1}
+            level Moon_P set Moon_P.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_24 Location
+            (
+                X=-9160,
+                Y=10630,
+                Z=-948.618042
+            )
 
-            {hotfixes:toarms_banditammo_rot_1}
+            level Moon_P set Moon_P.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_24 Rotation
+            (
+                Pitch=68, 
+                Yaw=-30284, 
+                Roll=77 
+            )
 
-            {hotfixes:toarms_banditammo_type_2}
+            level Moon_P set Moon_P.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_4 PopulationDef PopulationDefinition'GD_Population_Treasure.Lootables.Crate_Military_OzKitsOnly'
 
-            {hotfixes:toarms_banditammo_loc_2}
+            level Moon_P set Moon_P.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_4 Location
+            (
+                X=-8493,
+                Y=10731,
+                Z=-948.618042
+            )
 
-            {hotfixes:toarms_banditammo_rot_2}
+            level Moon_P set Moon_P.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_4 Rotation
+            (
+                Pitch=0, 
+                Yaw=14931, 
+                Roll=0 
+            )
 
-            {hotfixes:toarms_banditammo_type_3}
+            level Moon_P set Moon_P.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_146 PopulationDef PopulationDefinition'GD_Population_Treasure.Lootables.Crate_Military_OzKitsOnly'
 
-            {hotfixes:toarms_banditammo_loc_3}
+            level Moon_P set Moon_P.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_146 Location
+            (
+                X=-8443,
+                Y=10531,
+                Z=-948.618042
+            )
 
-            {hotfixes:toarms_banditammo_rot_3}
+            level Moon_P set Moon_P.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_146 Rotation
+            (
+                Pitch=0, 
+                Yaw=17931, 
+                Roll=0 
+            )
 
-            {hotfixes:toarms_ozchange0}
+            level Moon_P set Moon_P.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_85 PopulationDef PopulationDefinition'GD_Population_Treasure.Lootables.Crate_Military'
 
-            {hotfixes:toarms_ozchange1}
+            level Moon_P set Moon_P.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_367 PopulationDef PopulationDefinition'GD_Population_Treasure.Lootables.Crate_Military'
 
         #</Provide Common Pistol chests near drop point (removes ozkit-only chests)>
 
