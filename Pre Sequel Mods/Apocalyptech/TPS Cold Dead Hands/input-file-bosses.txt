@@ -10,13 +10,39 @@
 
             #<Base Game>
 
-                #<Flame Knuckle>
+                #<Belly>
 
-                    # Flame Knuckle drops the Nukem, so equip that.
+                    # UCP adds the Fabled Tortoise (in addition to the default Striker).
+                    # Equip both.
 
-                    {mp:flameknuckle_use_pool_0}
+                    set GD_Itempools.Runnables.Pool_Belly bAutoReadyItems True
 
-                #</Flame Knuckle>
+                    {mp:belly_pool_0}
+
+                    {mp:belly_pool_1}
+
+                    {mp:belly_pool_2}
+
+                    {mp:belly_pool_3}
+
+                #</Belly>
+
+                #<Bruce>
+
+                    # UCP adds Sledge's Shotgun, in addition to his usual Supernova
+                    # shield.  Equip them both.
+
+                    set GD_Itempools.Runnables.Pool_Bruce bAutoReadyItems True
+
+                    {mp:bruce_pool_0}
+
+                    {mp:bruce_pool_1}
+
+                    {mp:bruce_pool_2}
+
+                    {mp:bruce_pool_3}
+
+                #</Bruce>
 
                 #<Deadlift>
 
@@ -51,6 +77,104 @@
                     {mp:deadlift_pool_pumpkin_3}
 
                 #</Deadlift>
+
+                #<Drongo Bones>
+
+                    # UCP adds in Maggie to his usual Fatale.  Equip 'em both!
+
+                    {mp:drongobones_pool_0}
+
+                    {mp:drongobones_pool_1}
+
+                    {mp:drongobones_pool_2}
+
+                #</Drongo Bones>
+
+                #<Eghood>
+
+                    # Equip his Blowfly.  UCP adds a Leech drop, so we're handling that, too.
+
+                    {mp:eghood_pool_0}
+
+                    {mp:eghood_pool_1}
+
+                    {mp:eghood_pool_2}
+
+                #</Eghood>
+
+                #<Fair Dinkum>
+
+                    # UCP adds Cradle, so equip that.  (It also adds the Pandemic, and
+                    # we're making sure we're compat with that change.)
+
+                    {mp:fairdinkum_pool_0}
+
+                    {mp:fairdinkum_pool_1}
+
+                    {mp:fairdinkum_pool_2}
+
+                #</Fair Dinkum>
+
+                #<Flame Knuckle>
+
+                    # Flame Knuckle drops the Nukem, so equip that.
+
+                    {mp:flameknuckle_use_pool_0}
+
+                #</Flame Knuckle>
+
+                #<Lazlo>
+
+                    # UCP adds Shooterang to his usual Freezeasy, so equip either.
+
+                    {mp:lazlo_pool_0}
+
+                    {mp:lazlo_pool_1}
+
+                #</Lazlo>
+
+                #<Lost Legion Courier>
+
+                    # This guy's only encountered during the mission "Red, then Dead" and
+                    # doesn't ordinarily have any unique drops (even with UCP enabled).
+                    # The Powersuit Noob, the next main enemy during that mission was
+                    # changed by UCP to drop the Major Tom, but the powersuits don't
+                    # actually use/equip "real" weapons.  So, just because I like having
+                    # these weapons equippable, I'm adding Major Tom to the Courier as
+                    # well.
+
+                    {mp:courier_pool_0}
+
+                    {mp:courier_pool_1}
+
+                #</Lost Legion Courier>
+
+                #<Lost Legion Powersuit Noob>
+
+                    # UCP adds the Major Tom, in addition to the Shooting Star he usually
+                    # drops.  Powersuits don't use "real" weapons but we can equip the
+                    # shield.
+
+                    {mp:powersuit_noob_pool_0}
+
+                    {mp:powersuit_noob_pool_1}
+
+                    {mp:powersuit_noob_pool_2}
+
+                #</Lost Legion Powersuit Noob>
+
+                #<Magma Rivers>
+
+                    # UCP adds Magma, so equip that.  (It also adds the Fire Bee, and
+                    # we're making sure we're compat with that change.)
+
+                    {mp:magmarivers_pool_0}
+
+                    {mp:magmarivers_pool_1}
+
+                    {mp:magmarivers_pool_2}
+
+                #</Magma Rivers>
 
                 #<Nel>
 
@@ -103,44 +227,22 @@
 
                 #</Oscar>
 
-                #<Magma Rivers>
+                #<Red>
 
-                    # UCP adds Magma, so equip that.  (It also adds the Fire Bee, and
-                    # we're making sure we're compat with that change.)
+                    # UCP adds Badaboom and Bigg Thumppr (and removes Black Snake, which
+                    # was changed to being a mission reward).  Equip those.
 
-                    {mp:magmarivers_pool_0}
+                    set GD_Itempools.Runnables.Pool_Red_Rare bAutoReadyItems True
 
-                    {mp:magmarivers_pool_1}
+                    {mp:red_pool_0}
 
-                    {mp:magmarivers_pool_2}
+                    {mp:red_pool_1}
 
-                #</Magma Rivers>
+                    {mp:red_pool_2}
 
-                #<Fair Dinkum>
+                    {mp:red_pool_3}
 
-                    # UCP adds Cradle, so equip that.  (It also adds the Pandemic, and
-                    # we're making sure we're compat with that change.)
-
-                    {mp:fairdinkum_pool_0}
-
-                    {mp:fairdinkum_pool_1}
-
-                    {mp:fairdinkum_pool_2}
-
-                #</Fair Dinkum>
-
-                #<Wally Wrong>
-
-                    # UCP adds Logan's Gun, so equip that.  (It also adds the Storm Front, and
-                    # we're making sure we're compat with that change.)
-
-                    {mp:wallywrong_pool_0}
-
-                    {mp:wallywrong_pool_1}
-
-                    {mp:wallywrong_pool_2}
-
-                #</Wally Wrong>
+                #</Red>
 
                 #<Swagman>
 
@@ -161,120 +263,18 @@
 
                 #</Swagman>
 
-                #<Bruce>
+                #<Wally Wrong>
 
-                    # UCP adds Sledge's Shotgun, in addition to his usual Supernova
-                    # shield.  Equip them both.
+                    # UCP adds Logan's Gun, so equip that.  (It also adds the Storm Front, and
+                    # we're making sure we're compat with that change.)
 
-                    set GD_Itempools.Runnables.Pool_Bruce bAutoReadyItems True
+                    {mp:wallywrong_pool_0}
 
-                    {mp:bruce_pool_0}
+                    {mp:wallywrong_pool_1}
 
-                    {mp:bruce_pool_1}
+                    {mp:wallywrong_pool_2}
 
-                    {mp:bruce_pool_2}
-
-                    {mp:bruce_pool_3}
-
-                #</Bruce>
-
-                #<Red>
-
-                    # UCP adds Badaboom and Bigg Thumppr (and removes Black Snake, which
-                    # was changed to being a mission reward).  Equip those.
-
-                    set GD_Itempools.Runnables.Pool_Red_Rare bAutoReadyItems True
-
-                    {mp:red_pool_0}
-
-                    {mp:red_pool_1}
-
-                    {mp:red_pool_2}
-
-                    {mp:red_pool_3}
-
-                #</Red>
-
-                #<Belly>
-
-                    # UCP adds the Fabled Tortoise (in addition to the default Striker).
-                    # Equip both.
-
-                    set GD_Itempools.Runnables.Pool_Belly bAutoReadyItems True
-
-                    {mp:belly_pool_0}
-
-                    {mp:belly_pool_1}
-
-                    {mp:belly_pool_2}
-
-                    {mp:belly_pool_3}
-
-                #</Belly>
-
-                #<Drongo Bones>
-
-                    # UCP adds in Maggie to his usual Fatale.  Equip 'em both!
-
-                    {mp:drongobones_pool_0}
-
-                    {mp:drongobones_pool_1}
-
-                    {mp:drongobones_pool_2}
-
-                #</Drongo Bones>
-
-                #<Lazlo>
-
-                    # UCP adds Shooterang to his usual Freezeasy, so equip either.
-
-                    {mp:lazlo_pool_0}
-
-                    {mp:lazlo_pool_1}
-
-                #</Lazlo>
-
-                #<Eghood>
-
-                    # Equip his Blowfly.  UCP adds a Leech drop, so we're handling that, too.
-
-                    {mp:eghood_pool_0}
-
-                    {mp:eghood_pool_1}
-
-                    {mp:eghood_pool_2}
-
-                #</Eghood>
-
-                #<Lost Legion Courier>
-
-                    # This guy's only encountered during the mission "Red, then Dead" and
-                    # doesn't ordinarily have any unique drops (even with UCP enabled).
-                    # The Powersuit Noob, the next main enemy during that mission was
-                    # changed by UCP to drop the Major Tom, but the powersuits don't
-                    # actually use/equip "real" weapons.  So, just because I like having
-                    # these weapons equippable, I'm adding Major Tom to the Courier as
-                    # well.
-
-                    {mp:courier_pool_0}
-
-                    {mp:courier_pool_1}
-
-                #</Lost Legion Courier>
-
-                #<Lost Legion Powersuit Noob>
-
-                    # UCP adds the Major Tom, in addition to the Shooting Star he usually
-                    # drops.  Powersuits don't use "real" weapons but we can equip the
-                    # shield.
-
-                    {mp:powersuit_noob_pool_0}
-
-                    {mp:powersuit_noob_pool_1}
-
-                    {mp:powersuit_noob_pool_2}
-
-                #</Lost Legion Powersuit Noob>
+                #</Wally Wrong>
 
             #</Base Game>
 

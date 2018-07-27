@@ -295,6 +295,8 @@ Changelog
    very beginning of the game
  * Forced some early-game unlocks from Early Bloomer to be active at all times,
    regardless of whether that option is selected
+ * Alphabetized a few categories which were in need of it (mostly in the
+   categories which deal with specific enemies)
 
 **v1.0.0**, July 9, 2018 (commit `502a6d1e2a96a76750299b930e267074e6dc260e`):
  * Initial public release

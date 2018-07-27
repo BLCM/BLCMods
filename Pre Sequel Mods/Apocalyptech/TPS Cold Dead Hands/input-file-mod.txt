@@ -1643,6 +1643,28 @@ TPS
 
         #<Other Pool Tweaks>
 
+            #<Badass Outlaw Pool>
+
+                # Badass Outlaws use their own custom equip pool, split 80% lasers and 20%
+                # launchers.  We're going to continue doing so, using their original pool,
+                # since they're the only ones who use it.
+
+                {mp:badass_outlaw_equip_0}
+
+                {mp:badass_outlaw_equip_1}
+
+            #</Badass Outlaw Pool>
+
+            #<Corporal Bob>
+
+                # Corporal Bob has a weapon assigned to him in his pool, but he uses a
+                # custom flamethrower attack.  We're going to disable that, so he won't
+                # actually drop a weapon.
+
+                {mp:corporal_bob_pool_0}
+
+            #</Corporal Bob>
+
             #<Flame Knuckle Pool>
 
                 # TPS UCP 2.0 introduced a bug in Flame Knuckle's pool where he no longer
@@ -1680,38 +1702,6 @@ TPS
 
             #</Flame Knuckle Pool (Holodome)>
 
-            #<Badass Outlaw Pool>
-
-                # Badass Outlaws use their own custom equip pool, split 80% lasers and 20%
-                # launchers.  We're going to continue doing so, using their original pool,
-                # since they're the only ones who use it.
-
-                {mp:badass_outlaw_equip_0}
-
-                {mp:badass_outlaw_equip_1}
-
-            #</Badass Outlaw Pool>
-
-            #<Corporal Bob>
-
-                # Corporal Bob has a weapon assigned to him in his pool, but he uses a
-                # custom flamethrower attack.  We're going to disable that, so he won't
-                # actually drop a weapon.
-
-                {mp:corporal_bob_pool_0}
-
-            #</Corporal Bob>
-
-            #<Lost Legion Sniper Pool Setup>
-
-                # Lost Legion Snipers have their own equip pool which limits them to Dahl
-                # snipers, and we've got to play a little game with that to make our uniques
-                # handling work properly.
-
-                {mp:dahl_sniper_setup}
-
-            #</Lost Legion Sniper Pool Setup>
-
             #<Lost Legion Eternal>
 
                 # When ascending, Lost Legion Eternal (and Eternal) drop from a random
@@ -1723,6 +1713,16 @@ TPS
                 level None set GD_DahlFanatic.Character.AIDef_DahlFanatic:AIBehaviorProviderDefinition_0.Behavior_SpawnItems_0 ItemPoolList[0].PoolProbability.BaseValueConstant 0
 
             #</Lost Legion Eternal>
+
+            #<Lost Legion Sniper Pool Setup>
+
+                # Lost Legion Snipers have their own equip pool which limits them to Dahl
+                # snipers, and we've got to play a little game with that to make our uniques
+                # handling work properly.
+
+                {mp:dahl_sniper_setup}
+
+            #</Lost Legion Sniper Pool Setup>
 
         #</Other Pool Tweaks>
 
@@ -1788,7 +1788,7 @@ TPS
         # Various categories to improve various aspects of the loot enemies spawn with.
         # These can be toggled on or off to suit your desired preferences.
 
-        #<Legendary Weapon + Shield Pool Base Setup (don't uncheck this if you choose anything below here)>
+        #<Legendary Weapon + Shield Pool Base Setup (don't uncheck this if you choose anything below here)><lock>
 
             # Initializes the various Legendary drop pools in a way which lets us choose
             # what else to put in them (via hotfix) in the next categories.
