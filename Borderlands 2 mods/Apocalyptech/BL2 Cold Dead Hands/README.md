@@ -156,6 +156,14 @@ quality, when loaded into BLCMM:
   pool, and improves the global legendary pool by adding all uniques,
   pearls, and seraphs.  These options can all be toggled individually.
 
+* **Rocket Launchers in Global Equip Pools**: By default, this mod adds in rocket
+  launchers to the main enemy equip pools.  This is generally fine in Normal (though
+  it will make for some more challenging fights), but in UVHM especially it can get
+  a bit much.  This section will let you decide how likely rocket-launcher-using
+  enemies are: from Full (about 7.7%), down to not allowing launcher use at all.
+  (Enemies which are specifically set to use rocket launchers will still use RLs
+  regardless, of course.)
+
 * **Enemy Gear Quality**: This is a mutually-exclusive category (so you can
   only choose one of the options), and defines how good the enemy gear is.
   The default ("Excellent Gear") is more or less at the Better Loot mod's
@@ -337,6 +345,10 @@ for the full text.
 
 Changelog
 =========
+
+**v1.1.2** - unreleased:
+ * Added more options for rocket launcher equip chances other than the binary
+   choice from previous versions.
 
 **v1.1.1** - July 22, 2018 (commit `483c10f4e54d16b40dd4ebe8e787a0580f377d32`)
  * Included fix, thanks to 55tumbl, so that enemies using Roid/Maylay shields 

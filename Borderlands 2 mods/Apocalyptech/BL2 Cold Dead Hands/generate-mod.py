@@ -2591,23 +2591,6 @@ for config in [regular, badass]:
                 (config.rarity_pool_ar, 1),
             ])
 
-    # Hotfixes to enable rocket launchers for all our general-purpose pools.
-    for (pooltype, pool) in [
-            ('all', config.equip_pool_all),
-            ('ar', config.equip_pool_ar),
-            ('pistols', config.equip_pool_pistols),
-            ('shotguns', config.equip_pool_shotguns),
-            ('smg', config.equip_pool_smg),
-            ]:
-        mp.register_str('rocket_enable_{}_{}'.format(config.hotfix_prefix, pooltype),
-                'level None set {} BalancedItems[5].Probability.BaseValueScaleConstant 1'.format(
-                    pool
-                    ))
-        mp.register_str('rocket_disable_{}_{}'.format(config.hotfix_prefix, pooltype),
-                'level None set {} BalancedItems[5].Probability.BaseValueScaleConstant 0'.format(
-                    pool
-                    ))
-
 # Make Torgue DLC equip pools drop on death.
 mp.register_str('torgue_angel_equip',
     'level None set GD_Iris_ItemPoolsEnemyUse.WeaponPools.Pool_AngelGang_All_ButLaunchers_Use BalancedItems {}'.format(get_balanced_items([
@@ -2690,6 +2673,47 @@ for idx in range(7):
         'GD_Population_Midget.Balance.Unique.PawnBalance_LaneyDwarf{}'.format(idx+1),
         3,
         level='Fridge_P')
+
+# Set up our possible rocket launcher probabilities
+launcher_probability = {}
+totalish_weight = DropConfig.drop_prob_pistols + DropConfig.drop_prob_ar + \
+        DropConfig.drop_prob_smg + DropConfig.drop_prob_shotguns + \
+        DropConfig.drop_prob_snipers
+for (label, prob) in [
+        ('Full', 1),
+        ('3/4', .75),
+        ('Half', .5),
+        ('1/4', .25),
+        ('0%', 0),
+        ]:
+    launcher_weight = DropConfig.drop_prob_launchers * prob
+    if prob == 0:
+        equip_prob_str = '0%'
+        equip_prob_str_full = 'a 0%'
+    else:
+        equip_prob_str = '{:0.1f}%'.format(launcher_weight/(totalish_weight+launcher_weight)*100)
+        if equip_prob_str[-3:] == '.0%':
+            equip_prob_str = '{}%'.format(equip_prob_str[:-3])
+        equip_prob_str_full = 'about a {}'.format(equip_prob_str)
+    title = '{} Rocket Launcher Equip Probability ({})'.format(label, equip_prob_str)
+    for config in [regular, badass]:
+
+        for (pooltype, pool) in [
+                ('all', config.equip_pool_all),
+                ('ar', config.equip_pool_ar),
+                ('pistols', config.equip_pool_pistols),
+                ('shotguns', config.equip_pool_shotguns),
+                ('smg', config.equip_pool_smg),
+                ]:
+            mp.register_str('rocket_set_{}_{}'.format(config.hotfix_prefix, pooltype),
+                    'level None set {} BalancedItems[5].Probability.BaseValueScaleConstant {}'.format(pool, prob))
+
+    with open('input-file-launchers.txt') as df:
+        launcher_probability[label] = df.read().format(
+                section_title=title,
+                equip_prob_str=equip_prob_str_full,
+                mp=mp,
+                )
 
 # Legendary Pool management
 unique_hotfixes = []
@@ -4356,6 +4380,11 @@ with open('input-file-mod.txt') as df:
         stalker_shields_maylay="\n\n".join(stalker_shields_maylay_list),
         skinpool_setup=skinpool_setup,
         early_game_unlocks=early_game_unlocks,
+        launchers_100=launcher_probability['Full'],
+        launchers_75=launcher_probability['3/4'],
+        launchers_50=launcher_probability['Half'],
+        launchers_25=launcher_probability['1/4'],
+        launchers_0=launcher_probability['0%'],
         )
 
 ###
