@@ -122,6 +122,7 @@ mod, when loaded into BLCMM:
   have equipped.  To give a percent chance of dropping the lower rarities, to
   prevent an overabundance of unwanted gear, you can opt to do so in here.
   Purples, Glitches, and Legendaries will always drop, though.
+  Selecting this option makes the drops in TPS pretty similar to BL1-style drops.
 
 * **Boss Unique Weapon Frequency**: This is another mutually-exclusive
   category, so you can only choose one option.  It will let you choose how
