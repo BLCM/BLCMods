@@ -340,6 +340,7 @@ Changelog
    rather than hardcoding them all at once.  Moved that category up to being a
    top-level category as well.
  * Force some early-game gear unlocks to always happen
+ * Fixed Swagman drop quantity
  * Removed disabled-by-default categories which I'd had in there for my own testing
    purposes.  No real need to have them in there in the first place, and it just made
    checking/unchecking the mod fraught with potential unintended side effects.
