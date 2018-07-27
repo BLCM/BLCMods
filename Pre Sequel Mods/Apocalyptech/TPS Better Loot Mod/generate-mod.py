@@ -65,7 +65,7 @@ except ModuleNotFoundError:
 ###
 
 mod_name = 'TPS Better Loot Mod'
-mod_version = '1.1.0'
+mod_version = '1.1.1-prerelease'
 input_filename = 'input-file-mod.txt'
 output_filename = '{}.blcm'.format(mod_name)
 
