@@ -245,9 +245,8 @@ be interested in:
 Compatibility
 -------------
 
-This mod is compatible with UCP 4.1, and in fact requires that UCP 4.1's skinpool
-changes be in place.  UCP 4.0 isn't supported with this mod -- be sure to be
-using the most recent.
+This mod is compatible with UCP 4.1.  UCP 4.0 isn't supported with this mod --
+be sure to be using the most recent.
 
 Cold Dead Hands will obviously conflict with other mods with similar aims.
 theNocturni's "Enemy Enhancer" is one obvious conflict, though the
