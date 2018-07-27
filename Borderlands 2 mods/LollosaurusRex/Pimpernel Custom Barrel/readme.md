@@ -1,6 +1,6 @@
 ### Pimpernel Custom Barrel
 
-Would you enjoy theA E S T H E T I C of different barrels on your Pimpernel?
+Would you enjoy the A E S T H E T I C of different barrels on your Pimpernel?
 Are you frustrated with being stuck with the ugly Dahl barrel?
 
 Then THIS mod is for you!
