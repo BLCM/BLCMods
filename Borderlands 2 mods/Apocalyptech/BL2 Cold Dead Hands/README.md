@@ -93,6 +93,7 @@ from the start of the battle which gun you'll receive.
 * Some chests have not had their weapons/shields removed.  This list is
   probably not exhaustive, and I haven't really tested many of these to find
   out:
+  * Golden Chest is completely untouched
   * Roland's Chest in Sanctuary will probably contain actual gear.
   * Dice Chests (from the Tiny Tina DLC) are probably unaffected.  Weapons
     are sparse enough during that DLC as it is.
