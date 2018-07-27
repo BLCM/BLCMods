@@ -51,7 +51,7 @@ except ModuleNotFoundError:
 ###
 
 mod_name = 'BL2 Cold Dead Hands'
-mod_version = '1.1.0'
+mod_version = '1.1.1'
 output_filename = '{}.blcm'.format(mod_name)
 
 ###
@@ -4326,6 +4326,10 @@ for (label, key, unique_pct, rare_pct) in [
 with open('input-file-skinpools.txt') as df:
     skinpool_setup = df.read()
 
+# Load in our early-game unlocks
+with open('input-file-early.txt') as df:
+    early_game_unlocks = df.read()
+
 ###
 ### Generate the mod string
 ###
@@ -4351,6 +4355,7 @@ with open('input-file-mod.txt') as df:
         stalker_shields_real="\n\n".join(stalker_shields_real_list),
         stalker_shields_maylay="\n\n".join(stalker_shields_maylay_list),
         skinpool_setup=skinpool_setup,
+        early_game_unlocks=early_game_unlocks,
         )
 
 ###
