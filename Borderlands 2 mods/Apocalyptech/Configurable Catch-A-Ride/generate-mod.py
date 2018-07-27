@@ -31,14 +31,14 @@
 import sys
 
 try:
-    from hotfixes import Hotfixes
+    from modprocessor import ModProcessor
 except ModuleNotFoundError:
     print('')
-    print('****************************************************************')
-    print('To run this script, you will need to copy or symlink hotfixes.py')
+    print('********************************************************************')
+    print('To run this script, you will need to copy or symlink modprocessor.py')
     print('from the parent directory, so it exists here as well.  Sorry for')
     print('the bother!')
-    print('****************************************************************')
+    print('********************************************************************')
     print('')
     sys.exit(1)
 
@@ -48,7 +48,7 @@ except ModuleNotFoundError:
 
 mod_name = 'Configurable Catch-A-Ride'
 mod_version = '1.0.0'
-output_filename = '{}.txt'.format(mod_name)
+output_filename = '{}.blcm'.format(mod_name)
 
 ###
 ### Support classes
@@ -64,31 +64,22 @@ class Vehicle(object):
         self.station_class = station_class
         self.vehicle_class = vehicle_class
 
-    def get_set(self, prefix, hfs, on_station, active=True):
+    def get_set(self, prefix, on_station):
         retlist = []
         p = ' '*4
-        if active:
-            line_start = ''
-            line_end = ''
-        else:
-            line_start = '#'
-            line_end = '<off>'
 
         if self.label[0].lower() in 'aeiou':
             article = 'an'
         else:
             article = 'a'
         
-        retlist.append('#<Spawn {} {}>{}'.format(article, self.label, line_end))
-        retlist.append('{}{}set {} VehicleName {}{}'.format(
-            p, line_start, on_station.station_class, self.ingame_label, line_end,
+        retlist.append('#<Spawn {} {}>'.format(article, self.label))
+        retlist.append('{}set {} VehicleName {}'.format(
+            p, on_station.station_class, self.ingame_label,
             ))
-        hotfix_id = '{}_{}'.format(on_station.vehicle_id, self.vehicle_id)
-        hfs.add_level_hotfix(hotfix_id, 'CatchARide',
-            ',{},PathToVSSDefinition,,{}'.format(on_station.station_class,
-                self.vehicle_class),
-            activated=active)
-        retlist.append('{}{}'.format(p, hfs.get_hotfix_xml(hotfix_id)))
+        retlist.append('{}level None set {} PathToVSSDefinition {}'.format(
+            p, on_station.station_class, self.vehicle_class,
+            ))
         retlist.append('#</Spawn {} {}>'.format(article, self.label))
 
         # Return
@@ -96,8 +87,7 @@ class Vehicle(object):
 
 class Vehicles(object):
 
-    def __init__(self, hfs, prefix):
-        self.hfs = hfs
+    def __init__(self, prefix):
         self.prefix = prefix
         self.vehicle_dict = {}
         self.vehicle_list = []
@@ -114,10 +104,10 @@ class Vehicles(object):
         p = ' '*4
         retlist = []
         retlist.append('#<{}><MUT>'.format(vehicle.label))
-        retlist.extend(vehicle.get_set(p, hfs, vehicle))
+        retlist.extend(vehicle.get_set(p, vehicle))
         for v2 in self.vehicle_list:
             if v2 != vehicle:
-                retlist.extend(v2.get_set(p, hfs, vehicle, active=False))
+                retlist.extend(v2.get_set(p, vehicle))
         retlist.append('#</{}>'.format(vehicle.label))
         return "\n\n".join(['{}{}'.format(self.prefix, s) for s in retlist])
 
@@ -125,9 +115,7 @@ class Vehicles(object):
 ### Vehicles
 ###
 
-hfs = Hotfixes()
-
-vehicles = Vehicles(hfs, prefix=' '*(4))
+vehicles = Vehicles(prefix=' '*(4))
 vehicles.add_vehicle(Vehicle('runnermg',
         'Runner (Machine Gun)', 'Light Runner MG',
         'GD_Globals.VehicleSpawnStation.VSSUI_MGRunner',
@@ -183,7 +171,8 @@ vehicles.add_vehicle(Vehicle('boatshock',
 ### Generate the mod string
 ###
 
-mod_str = """#<{mod_name}>
+mod_str = """BL2
+#<{mod_name}>
 
     # {mod_name} v{mod_version}
     # by FromDarkHell + Apocalyptech
@@ -226,6 +215,6 @@ mod_str = """#<{mod_name}>
 ### Output to a file.
 ###
 
-with open(output_filename, 'w') as df:
-    df.write(mod_str)
+mp = ModProcessor()
+mp.human_str_to_blcm_filename(mod_str, output_filename)
 print('Wrote mod file to: {}'.format(output_filename))

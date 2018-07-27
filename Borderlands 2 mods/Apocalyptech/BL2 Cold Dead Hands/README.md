@@ -16,32 +16,56 @@ and the like.
 
 In the default configuration, this mod is a spiritual cousin of my own
 Better Loot mod.  You'll be up against enemies using purples, gemstones,
-and even legendaries.  Gear quality can be customized easily in
-FilterTool/BLCMM, so you can still play using something close to the stock
-Borderlands gear quality.  Regardless of gear quality configuration, Badass
-enemies will have better gear than their ordinary counterparts.
+and even legendaries.  Gear quality can be customized easily in BLCMM,
+so you can still play using something close to the stock Borderlands gear
+quality.  Regardless of gear quality configuration, Badass enemies will
+have better gear than their ordinary counterparts.
 
 Grenade Mods, Class Mods, and Relics will still be acquired as per usual -
 via world drops, chests, and the like.
 
+**NOTE:** This mod has a *lot* of user-configurable options (detailed below
+in the "Configuration" section).  In fact, there's 11,520 theoretically-supported
+permutations of the options.  Needless to say, I have not thoroughly tested
+all combinations to ensure that everything works as it should.  if you encounter
+strange behavior, definitely look me up on Discord, github, or email, with
+full details of how you've got it configured, and I can take a look.
+
+* [Requirements](#requirements)
+* [Usage/Installation](#usageinstallation)
+* [Mod Details](#mod-details)
+  * [Exceptions](#exceptions)
+  * [Other Pool Tweaks](#other-pool-tweaks)
+  * [Configuration](#configuration)
+  * [Implications](#implications)
+* [Compatibility](#compatibility)
+* [Mod Construction / Implementation Details](#mod-construction--implementation-details)
+* [Bugs](#bugs)
+* [Ideas/TODO](#ideastodo)
+* [Licenses](#licenses)
+* [Changelog](#changelog)
+
 Requirements
 ------------
 
-This mod should be able to be used mostly on its own, but it does require
-one specific category of UCP to be active:
+Cold Dead Hands should theoretically be fully standalone, as of version 1.1
+(it no longer requires any part of UCP).  It's received the most testing
+in conjunction with UCP 4.1, but let me know if there are any problems when
+running without.
 
-* `Loot Pool & Drop Changes -> Skinpool Fixes (Don't uncheck this)`
+Note that Cold Dead Hands is probably incompatible with any version of
+BL2 Reborn, and may cause crashes or other instability if run together
+with that.
 
-This is required to free up the custom loot pools that we use to equip enemies
-with.  If for whatever reason you'd like to run this mod by itself without UCP,
-make sure to at least enable/copy that folder over.
+Cold Dead Hands assumes that you have all Borderlands DLC (including the
+Headhunter packs, though it's possible that it'll work fine if you don't
+have those).
 
 Usage/Installation
 ------------------
 
-This mod must be imported into FilterTool/BLCMM with `Developer tools` ->
-`Add single mod`.  Choose the file `BL2 Cold Dead Hands.txt` and
-have at it!
+This mod must be imported into BLCMM with `File -> Import single mod`.
+Choose the file `BL2 Cold Dead Hands.blcm` and have at it!
 
 Mod Details
 -----------
@@ -50,6 +74,8 @@ As stated above, enemies who use guns and shields will always drop that gun
 and shield.  Creatures like Stalkers and Skeletons, and devices like turrets,
 will NOT drop a shield, even if they spawn with one.  (Stalker shield drops
 can be optionally toggled on.)  Shielded loaders will drop shields, though.
+This mod will cause weapon-using enemies to use their UCP drops, whether
+you have UCP installed.
 
 Bosses with unique drops who don't actually use weapons/shields (ie: most
 "creature" enemies like Knuckedragger, machines like BNK3R, melee-only
@@ -67,6 +93,7 @@ from the start of the battle which gun you'll receive.
 * Some chests have not had their weapons/shields removed.  This list is
   probably not exhaustive, and I haven't really tested many of these to find
   out:
+  * Golden Chest is completely untouched
   * Roland's Chest in Sanctuary will probably contain actual gear.
   * Dice Chests (from the Tiny Tina DLC) are probably unaffected.  Weapons
     are sparse enough during that DLC as it is.
@@ -74,12 +101,17 @@ from the start of the battle which gun you'll receive.
     gear:
     * Shotgun chest at the end of Windshear Waste
     * Slag Gun oven in the Wattle Gobbler Headhunter Pack
+    * Red chest in Torgue arena
+  * Snowman's head in Tundra Express
+  * Slot machines
+  * Torgue vending machines
 
 * Doc Mercy has to be using an E-Tech blaster for Medical Mystery to make
   sense, so I've chosen to keep that rather than having him use an Infinity
   on you.  So Doc Mercy will drop an Infinity even though he's not actually
   using one.  If someone has a clever way to make a loot pool change in
-  response to a mission being active or not, I'd love to hear it!
+  response to a mission being active or not, I'd love to hear it!  (Digistruct
+  Doc Mercy will alternate between E-tech level ARs and the Infinity, though)
 
 * Mad Mike will retain at least a 50% chance of spawning with a random
   rocket launcher, even on "guaranteed" unique loot configurations.
@@ -95,6 +127,9 @@ from the start of the battle which gun you'll receive.
   a shield normally, the Manly Man would only nerf the fight, which I'm
   not keen to do.  So H3RL-E may drop the Manly Man without actually having
   it equipped.
+
+* Paladins (from the Dragon Keep DLC) will not equip/drop real shields; having
+  a real shield messes with their behavior too much.
 
 * The Tributes (from the Wattle Gobbler Headhunter Pack) will have a 2/3rds
   chance of dropping the unique items that UCP adds to their drop pools
@@ -114,8 +149,8 @@ from the start of the battle which gun you'll receive.
 
 ### Configuration
 
-There are four main categories which you can use to customize the gear
-quality, when loaded into FilterTool/BLCMM:
+There are various categories which you can use to customize the gear
+quality, when loaded into BLCMM:
 
 * **Loot Pool Improvements**: This section adds gemstones into the global E-Tech
   pool, and improves the global legendary pool by adding all uniques,
@@ -129,6 +164,13 @@ quality, when loaded into FilterTool/BLCMM:
   equipment, so choosing the "Stock" preset here may hamper your own gear
   loadout.  Epic treasure chests will no longer help out, etc.
 
+* **Rarity Drop Rates**: This is another mutually-exclusive category.  In the
+  default configuration, enemies will *always* drop the weapon+shield that they
+  have equipped.  To give a percent chance of dropping the lower rarities, to
+  prevent an overabundance of unwanted gear, you can opt to do so in here.
+  Purples, E-Tech, Gemstones, and Legendaries will always drop, though.
+  Selecting this option makes the drops in BL2 pretty similar to BL1-style drops.
+
 * **Boss Unique Weapon Frequency**: This is another mutually-exclusive
   category, so you can only choose one option.  It will let you choose how
   often bosses will equip/drop their unique loot.  The default is
@@ -141,12 +183,27 @@ quality, when loaded into FilterTool/BLCMM:
   shields so that they work like other shielded enemies with Cold Dead Hands,
   so you'll get stalkers using Novas and Maylay shields, and they'll drop them
   when killed.  Additionally, if you want to make them very deadly in general,
-  you can specify that they *only* use Maylay shields.  **Warning:** there
-  seems to be some strange interaction with Maylay shields and Stalkers where
-  the roid damage buff is far greater than the number listed on the card.
-  Stalkers using Maylay shields are very likely to hit like a ton of bricks,
-  when their shields are depleted.  Use with caution!  Or with abandon!  It's
-  up to you!
+  you can specify that they *only* use Maylay shields.
+
+* **Remove Level-Based Loot Restrictions**: This Allows all weapon, shield,
+  grenade, COM, shield, relic, and ammo types from the very beginning of the
+  game.  If you have the quality of gear pumped up, it's possible that some
+  early-game enemies might not otherwise be properly equipped unless you've got
+  something like this which unlocks everything.  This is a duplicate of my
+  BL2 Early Bloomer mod, and is also included inside BL2 Better Loot, though
+  there's no problems with having it enabled in multiple places.  Note that if
+  you have "Excellent Gear" or "Better Gear" selected *without* this option
+  being active, you may end up with some oddities like E-Techs without elements.
+
+Additionally, there's one category in the "Main Mod" section which you may
+be interested in:
+
+* `Main Mod -> Disable World Weapon/Shield Drops -> Remove Weapons and Shields
+  from Containers`: This section is what removes all weapons/shields from
+  treasure chests and other containers in the game.  If this bothers you, feel
+  free to uncheck this option.  (This might be especially useful if you've
+  opted to keep some of the stock rarity values, or disabled rocket launchers
+  in the global equip pools, etc.)
 
 ### Implications
 
@@ -180,13 +237,17 @@ quality, when loaded into FilterTool/BLCMM:
 Compatibility
 -------------
 
-This mod is compatible with UCP, and in fact requires that UCP's skinpool
-changes be in place.
+This mod is compatible with UCP 4.1, and in fact requires that UCP 4.1's skinpool
+changes be in place.  UCP 4.0 isn't supported with this mod -- be sure to be
+using the most recent.
 
-This will obviously conflict with other mods with similar aims.
+Cold Dead Hands will obviously conflict with other mods with similar aims.
 theNocturni's "Enemy Enhancer" is one obvious conflict, though the
 non-loot-pool parts of Enemy Enhancer would still be active (such as
 faster enemy animations, etc).
+
+**Note:** Cold Dead Hands is incompatible with BL2 Reborn, and using the
+two together has been known to cause crashes.
 
 This mod overwrites/disables much of the functionality in my own "Better
 Loot" mod, but it's designed to work fine with both enabled (so long as
@@ -194,29 +255,19 @@ this mod appears later in your patch file).  The "Better Loot" improvements
 to Class Mods, Grenades, Relics, Raid Boss drops, etc, should help out
 against the increased enemy difficulty here, in fact.
 
-My own "Early Bloomer" mod will unlock all gear from the beginning of the
-game, so enable that if you want early-game bandits to have the best gear
-possible.  Note that Better Loot already includes Early Bloomer, so if
-you're running Better Loot, you wouldn't have to bother.
-
 Mod Construction / Implementation Details
 -----------------------------------------
 
 *(This section is only relevant for someone looking to edit the mod in the
 same way I do, or just someone curious about my mod construction techniques.
 If you're just looking to run the mod, see the "Usage" section above.  The
-mod can, of course, be edited directly in FilterTool/BLCMM as well, once it's
+mod can, of course, be edited directly in BLCMM as well, once it's
 been imported.)*
 
-This mod is actually generated using a simple little Python script named
-`generate-source.py`.  The script makes use of `hotfix.py` from the parent
+This mod is actually generated using a Python script named
+`generate-mod.py`.  The script makes use of `modprocessor.py` from the parent
 directory.  You'd need to copy (or symlink, if you're on Mac or Linux)
-`hotfix.py` into this directory in order to run the script.
-
-To generate the end result file, I actually run the small shell script
-`create.sh` in this directory, which just does the following:
-
-    ./generate-source.py && ../conv_to_mod.py -f "BL2 Cold Dead Hands"
+`modprocessor.py` into this directory in order to run the script.
 
 Bugs
 ====
@@ -228,12 +279,17 @@ Known issues with the mod:
   unnatural-looking way.  For now I'm just coping; there's a couple different
   ways to fix that (enumerated below) but I don't particularly care to do
   either at the moment.
+* As a side-effect of the way we have to make use of loot pools, skin drops
+  from various enemies will be broken (it's that or break skin rewards for
+  challenges/missions).  Cold Dead Hands breaks skin drops for the following:
+  creepers, skags, chubbies/tubbies, spiderants, and threshers.
 
 Ideas/TODO
 ==========
 
-Things to think about:
-
+* Because gemstones were added into the E-Tech pool, the Medical Mystery
+  mission might accidentally reward you a gemstone weapon rather than
+  E-Tech.
 * Restrict weapon manufacturer by level?  (Only Jakobs in Lynchwood, etc?)
 * Might be nifty to restrict weapon manufacturer by enemy type, though that
   would require eating up more skinpools (the by-level idea could reuse all
@@ -247,6 +303,24 @@ Things to think about:
      to spawn weapons/shields attach to different locations, or just not at
      all.  The problem here is that's just a fair amount of busywork I don't
      care to do.
+* Various lootsplosion-style events provide weapons (and maybe shields), and
+  should possibly be nerfed.  I've left them as-is for awhile mostly out of
+  laziness, and partly because I think they probably *should* continue to give
+  some gear, even if they violate the spirit of the mod.  This list is
+  probably not exhaustive, but:
+  * BNK3R lootsplosion
+  * Warrior lootsplosion
+  * Good, Bad, Mordecai lootsplosion
+  * Handsome Dragon lootsplosion
+* Add in a toggle to allow Shield Surveyors to use/drop "real" shields?
+* I don't think this is possible, but have enemies drop their guns when they
+  go into a "no gun" state?  I couldn't even figure out a way to do it
+  with TPS's Ascending Dahl troops, and they've already got behaviors to
+  drop gear built-in, though.
+  * Enraged Goliaths
+  * Loaders having their limbs knocked off
+* A loader or two in End of the Line can spawn without limbs, but will still
+  drop a gun.  Not sure if I can get that to not drop...
 
 Licenses
 ========
@@ -264,5 +338,58 @@ for the full text.
 Changelog
 =========
 
-**v1.0.0** - June 2, 2018
+**v1.1.1** - July 22, 2018
+ * Included fix, thanks to 55tumbl, so that enemies using Roid/Maylay shields 
+   receive the intended melee damage boost, instead of the extremely powerful
+   attacks that they were doing.
+ * Updated bundled BL2 Early Bloomer to v1.1.1, to include a couple of items
+   which weren't properly unlocked previously.
+ * Removed some outdated wording in the mod header comments
+
+**v1.1.0** - July 17, 2018 (commit `7a654f0ac8e8682814395f335ecdb6358b138984`)
+ * Converted to BLCM format *(we now require BLCMM; FilterTool is not supported)*
+ * Updated for UCP 4.1 Compatibility *(various loot pool reassignments)*
+ * Added an option to have enemy guns not drop all the time (at least at lower
+   rarities), as we have in the TPS version of this mod.  This is, more or less,
+   BL1-style loot drops, apparently.
+ * Added an option to not have rocket launchers in the global equip pools, mostly
+   for help in UVHM where facing launcher-using enemies is *suuper* deadly.
+ * Added in my BL2 Early Bloomer mod to enable all item/weapon types from the
+   very beginning of the game.
+ * Forced some early-game unlocks from Early Bloomer to be active at all times,
+   regardless of whether that option is selected, to prevent early-game enemies
+   from having no equipment.
+ * Reorganized the section which disables world weapon/shield drops so that
+   disabling weapons/shields in chests is easily toggleable via a single
+   category.
+ * Specific enemy tweaks:
+   * Added bosses from Digistruct Peak:
+      * Bone Head 3.0 equips Bone Shredder / Shredifier
+      * Digi Doc Mercy has a 50% chance to equip the Infinity
+      * Digi Assassins all equip as they do in Southpaw Steam and Power
+   * Set Nomad Pyros to equip/drop real ARs in Normal (formerly they would only do
+     so in TVHM+)
+   * Fixed Boom and Bewm to drop their shotguns properly
+   * Made Badass Creepers and Chubby/Tubby enemies use our unique-drop-chance
+     selection for their unique drops
+   * Removed putting "real" shields on Jack's Digistruct Clones during the
+     storyline Warrior battle, and from the Handsome Sorcerer's Clones during
+     the Dragon Keep DLC final battle.
+ * Changed some enemy shield pools so they can't spawn Turtle shields, since
+   Turtle shields can potentially cause the enemy to become literally unkillable,
+   with the right combination of shield parts, rarity, and level:
+    * Midget Rats
+    * Laney's Dwarves
+    * Hyperion Hawks
+    * Psycho Snow Midgets
+ * Included necessary skinpool reassignment code in the mod itself, so we don't
+   rely on anything from UCP.
+ * Fixes some errant commas in various statements (didn't affect the mod itself
+   but was causing some syntax warnings in BLCMM)
+ * Cosmetic changes in Enemy Gear Quality comments:
+   * Ensure that reported rarity percentages report "1%" instead of "1.0%".
+   * Condense regular/badass percentages onto the same lines
+ * Alphabetized boss lists in "Boss Unique Weapon Frequency" section
+
+**v1.0.0** - June 2, 2018 (commit `e69036bad26493073be7bd82207266aac77d2577`)
  * Initial Release

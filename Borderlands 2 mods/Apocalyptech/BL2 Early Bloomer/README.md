@@ -10,25 +10,24 @@ from the beginning.
 There's no problem with having both this and UCP enabled -- it'll just mean
 that a few statements get executed twice.
 
-This mod was copied directly from a section of my Better Loot mod.  If you're
-running Better Loot, you already have this mod active, so there's no reason to
-import it again.
+This mod was originally copied directly from a section of my Better Loot mod.
+If you're running Better Loot, you already have this mod active, so there's
+no reason to import it again.
 
 Usage
 =====
 
-This mod must be imported into FilterTool/BLCMM with `Developer tools` ->
-`Add single mod`.  Choose the file `BL2 Early Bloomer.txt` and have
-at it!
+This mod must be imported into BLCMM with `File -> Import single mod`.
+Choose the file `BL2 Early Bloomer.blcm` and have at it!
 
 Compatibility
 =============
 
-Note that the "`Exhaustive Weapon/Item Part Unlocks`" section overwrites part
-data for many weapons/grenades/COMs/etc to allow all parts to spawn in the
-early game.  This may interfere with any other mods which alter part data, so
-it probably makes sense to have this mod as high up in the list as possible,
-so other mods can override.
+v1.0.0 of this mod could potentially get in the way of various grenade/COM
+mods due to editing the whole parts list structures directly.  The current
+version (v1.1.0 and up) should play much more nicely with custom objects,
+and should theoretically not cause any problems.  (This is actually what
+the TPS version of this mod already does.)
 
 Mod Construction / Implementation Details
 =========================================
@@ -36,13 +35,16 @@ Mod Construction / Implementation Details
 *(This section is only relevant for someone looking to edit the mod in the
 same way I do, or just someone curious about my mod construction techniques.
 If you're just looking to run the mod, see the "Usage" section above.  The
-mod can, of course, be edited directly in FilterTool/BLCMM as well, once it's
-been imported.)*
+mod can, of course, be edited directly in BLCMM as well, once it's been
+imported.)*
 
-This mod is generated using a simple little Python script named
-`generate-mod.py`.  The script makes use of `hotfix.py` from the parent
-directory.  You'd need to copy (or symlink, if you're on Mac or Linux)
-`hotfix.py` into this directory in order to run the script.
+This mod is generated using a Python script named `generate-mod.py`.  The
+script makes use of `modprocesor.py` from the parent directory.  You'd need
+to copy (or symlink, if you're on Mac or Linux) `modprocessor.py` into this
+directory in order to run the script.  Likewise, `generate-mod.py` makes
+use of some data introspection abilities available in my FT/BLCMM Explorer
+project.  You'll need to copy (or, again, symlink) FT Explorer's `ftexplorer`
+and `resources` dirs into this directory to generate the mod.
 
 Licenses
 ========
@@ -59,6 +61,21 @@ for the full text.
 
 Changelog
 =========
+
+**v1.1.1**, July 21, 2018:
+ * Extra grenade mods unlocked:
+   * Captain Blade's Midnight Star
+   * O-Negative
+ * Extra relics unlocked:
+   * Blood of the Ancients
+   * Blood of the Seraphs
+ * Unlocked extra variants of base Stockpile Relic
+ * Added byline in mod header comments
+
+**v1.1.0**, July 11, 2018:
+ * Converted to BLCMM format (no longer compatible with FilterTool)
+ * Updated part unlock mechanism to play more nicely with custom objects.
+   Should no longer conflict with custom grenade/COM mods, for instance.
 
 **v1.0.0**, May 23, 2018:
  * Initial public release

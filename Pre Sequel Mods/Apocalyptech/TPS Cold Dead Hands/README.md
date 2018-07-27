@@ -67,6 +67,7 @@ from the start of the battle which gun you'll receive.
 * Some chests have not had their weapons/shields removed.  This list is
   probably not exhaustive, and I haven't really tested many of these to find
   out.  Regardless, the drops from these chests should be unaltered:
+  * Golden Chest is completely untouched
   * Zarpedon's chest in Pity's Fall
   * Moxxi's chest in Concordia
   * The couple mission-specific chests in Research + Development

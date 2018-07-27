@@ -57,6 +57,15 @@ are for characters who are actually playing the game.  For a singleplayer
 game, that means you'll only ever get COMs for your one character, for
 instance.
 
+Configurable Catch-A-Ride
+-------------------------
+
+This mod is a souped-up version of FromDarkHell's "CarReplacements" mod,
+which changed some of the Catch-A-Ride locations so that you can spawn
+various types of vehicles throughout all the game's content.  That version
+just had a few hardcoded replacements, though.  This one lets you fully
+customize every single Catch-A-Ride slot in the game!
+
 Guaranteed Omnd-Omnd-Ohk
 ------------------------
 
@@ -197,6 +206,10 @@ if it already exists.  You can use the `-f` or `--force` option to automatically
 overwrite without confirmation.  You can also use `-h` or `--help` as you'd hope,
 though there's no features not already mentioned here.
 
+I intend to convert all of my mods which make use of this to use `modprocessor.py`
+instead, once BLCMM is out and I have enough free time, so this utility's time is
+numbered.
+
 hotfixes.py
 -----------
 
@@ -204,6 +217,22 @@ This is actually a helper library script used by the generation script for a
 couple of my mods, to make dealing with hotfixes a bit easier.  It's pretty
 straightforward, though unless you're me, you're unlikely to ever bother with
 it.
+
+I intend to convert all of my mods which make use of this to use `modprocessor.py`
+instead, once BLCMM is out and I have enough free time, so this utility's time is
+numbered.
+
+modprocessor.py
+---------------
+
+This is my latest mod-construction library, which lets me build mods
+programmatically the way I'm used to while exporting in a BLCMM-compatible
+file format.  This one's mostly intended to be used by my generation code
+itself, but it can be invoked on the commandline just like `conv_to_mod.py`.
+It uses a custom intermediate file format which is very similar to
+FilterTool's format, which then gets converted to BLCMM.  That way I can
+easily continue to use code-assisted templates for mod construction, which
+is the way I still prefer to do things.
 
 Licenses
 ========
