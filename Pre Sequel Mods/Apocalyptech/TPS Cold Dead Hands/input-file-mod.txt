@@ -17,7 +17,28 @@ TPS
 
     #<Main Mod (best to leave all this checked)>
 
-        #<Skinpool Setup>
+        #<Early Game Gear Unlocks><lock>
+
+            # This is a copy of UCP's Early Game Unlocks, which allows various weapon and
+            # shield levels from the very beginning of the game.
+
+            set GD_Itempools.Scheduling.Gamestage_02:ConstantAttributeValueResolver_0 ConstantValue 1
+
+            set GD_Itempools.Scheduling.Gamestage_03:ConstantAttributeValueResolver_0 ConstantValue 1
+
+            set GD_Itempools.Scheduling.Gamestage_04:ConstantAttributeValueResolver_0 ConstantValue 1
+
+            set GD_Itempools.Scheduling.Gamestage_05:ConstantAttributeValueResolver_0 ConstantValue 1
+
+            set GD_Itempools.Scheduling.Gamestage_06:ConstantAttributeValueResolver_0 ConstantValue 1
+
+            set GD_Itempools.Scheduling.Gamestage_07:ConstantAttributeValueResolver_0 ConstantValue 1
+
+            set GD_Itempools.Scheduling.Gamestage_08:ConstantAttributeValueResolver_0 ConstantValue 1
+
+        #</Early Game Gear Unlocks>
+
+        #<Skinpool Setup><lock>
 
             # This section is copied directly from my "TPS Skinpool Reassignments" mod,
             # which frees up some 600 skin/head pools for use in mods.  I expect that
@@ -2484,5 +2505,22 @@ TPS
         #</Provide Common Pistol chests near drop point (removes ozkit-only chests)>
 
     #</Provide Common Pistols for "To Arms!" mission? (choose one)>
+
+    #<Remove Level-Based Loot Restrictions>
+
+        # Allows all weapon, shield, grenade, COM, shield, ozkit, and ammo types from the
+        # very beginning of the game.  If you have the quality of gear pumped up, it's
+        # possible that some early-game enemies might not otherwise be properly equipped
+        # unless you've got something like this which unlocks everything.
+        #
+        # Copied from TPS Early Bloomer v1.1.1 by Apocalyptech, though some of the unlocks
+        # were moved up into the main section of this mod.
+        #
+        # This section is already also included in TPS Better Loot, but there's no problem
+        # with having it enabled in both.
+
+{level_based_unlocks}
+
+    #</Remove Level-Based Loot Restrictions>
 
 #</{mod_name}>

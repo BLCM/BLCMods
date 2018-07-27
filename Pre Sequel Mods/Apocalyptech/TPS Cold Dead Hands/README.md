@@ -25,7 +25,7 @@ Grenade Mods, Class Mods, and Oz Kits will still be acquired as per usual -
 via world drops, chests, and the like.
 
 **NOTE:** This mod has a *lot* of user-configurable options (detailed below
-in the "Configuration" section).  In fact, there's 30,720 theoretically-supported
+in the "Configuration" section).  In fact, there's 61,440 theoretically-supported
 permutations of the options (though to be fair, there's only about 480 which
 are closely-related).  Needless to say, I have not thoroughly tested out all
 combinations to ensure that everything works as it should.  If you encounter
@@ -162,6 +162,16 @@ mod, when loaded into BLCMM:
   three common pistols each, in the same room as the drop location.  This
   should compensate nicely for hardly ever getting common items ingame.
 
+* **Remove Level-Based Loot Restrictions**: This Allows all weapon, shield,
+  grenade, COM, shield, ozkit, and ammo types from the very beginning of the
+  game.  If you have the quality of gear pumped up, it's possible that some
+  early-game enemies might not otherwise be properly equipped unless you've got
+  something like this which unlocks everything.  This is a duplicate of my
+  TPS Early Bloomer mod, and is also included inside TPS Better Loot, though
+  there's no problems with having it enabled in multiple places.  Note that
+  some early-game gear is already unlocked in the main area of the mod, so
+  this just goes a few steps further.
+
 Additionally, there's one category in the "Main Mod" section which you may
 be interested in:
 
@@ -281,6 +291,10 @@ Changelog
 
 **v1.1.0**, unreleased:
  * Converted to BLCM format *(BLCMM is now required; FilterTool is not supported)*
+ * Added in my TPS Early Bloomer mod to enable all item/weapon types from the
+   very beginning of the game
+ * Forced some early-game unlocks from Early Bloomer to be active at all times,
+   regardless of whether that option is selected
 
 **v1.0.0**, July 9, 2018 (commit `502a6d1e2a96a76750299b930e267074e6dc260e`):
  * Initial public release

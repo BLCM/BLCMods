@@ -3326,6 +3326,10 @@ for (label, key, unique_pct, rare_pct) in [
 with open('input-file-skinpools.txt') as df:
     skinpool_setup = df.read()
 
+# Load in early-game unlocks
+with open('input-file-early.txt') as df:
+    level_based_unlocks = df.read()
+
 ###
 ### Generate the mod string
 ###
@@ -3356,6 +3360,7 @@ with open('input-file-mod.txt') as df:
         guardian_shields_real="\n\n".join(guardian_shields_real_list),
         clapcreature_shields_real="\n\n".join(clapcreature_shields_real_list),
         skinpool_setup=skinpool_setup,
+        level_based_unlocks=level_based_unlocks,
         )
 
 ###
