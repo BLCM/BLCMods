@@ -341,6 +341,8 @@ Changelog
    top-level category as well.
  * Force some early-game gear unlocks to always happen
  * Fixed Swagman drop quantity
+ * Fixed a UCP 2.1 error which prevents Flame Knuckle from equipping a weapon or
+   shield in Playthrough 1.
  * Removed disabled-by-default categories which I'd had in there for my own testing
    purposes.  No real need to have them in there in the first place, and it just made
    checking/unchecking the mod fraught with potential unintended side effects.

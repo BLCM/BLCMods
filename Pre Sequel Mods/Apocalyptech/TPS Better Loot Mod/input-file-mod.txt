@@ -1640,13 +1640,58 @@ TPS
 
                 #<Flameknuckle (playthrough 1)>
 
-                    # Makes Flameknuckle drop from the Badass pool on playthrough one
-                    # (ordinarily this only happens on Playthrough 2+).
+                    #<Drop from Badass Pool>
 
-                    level MoonShotIntro_P set GD_DahlPowersuit_Knuckle.Population.PawnBalance_DahlSergeantFlameKnuckle PlayThroughs[0].CustomItemPoolIncludedLists
-                    (
-                        ItemPoolListDefinition'GD_Itempools.ListDefs.BadassEnemyGunsAndGear'
-                    )
+                        # Makes Flameknuckle drop from the Badass pool on playthrough one
+                        # (ordinarily this only happens on Playthrough 2+).
+
+                        level MoonShotIntro_P set GD_DahlPowersuit_Knuckle.Population.PawnBalance_DahlSergeantFlameKnuckle PlayThroughs[0].CustomItemPoolIncludedLists
+                        (
+                            ItemPoolListDefinition'GD_Itempools.ListDefs.BadassEnemyGunsAndGear'
+                        )
+
+                    #</Drop from Badass Pool>
+
+                    #<Fix Equip Pool>
+
+                        # UCP 2.1 has a command to have Flameknuckle have a chance to drop
+                        # the Nukem even on Normal mode, but the command inadvertantly
+                        # removes his equip pools on Normal.  This fixes that problem, so
+                        # he'll equip like he should.
+                        
+                        level MoonShotIntro_P set GD_DahlPowersuit_Knuckle.Population.PawnBalance_DahlSergeantFlameKnuckle PlayThroughs[0].CustomItemPoolList
+                        (
+                            (
+                                ItemPool = ItemPoolDefinition'GD_Itempools.Runnables.Pool_FlameKnuckle',
+                                PoolProbability =
+                                (
+                                    BaseValueConstant = 0.000000,
+                                    BaseValueAttribute = AttributeDefinition'GD_Itempools.DropWeights.DropODDS_BossUniqueRares',
+                                    InitializationDefinition = None,
+                                    BaseValueScaleConstant = 1.000000
+                                )
+                            ),
+                            ( 
+                                ItemPool=ItemPoolDefinition'GD_DahlPowersuit_Knuckle.WeaponPools.Pool_Weapons_KnuckleLaser_EnemyUse', 
+                                PoolProbability=( 
+                                    BaseValueConstant=1.000000, 
+                                    BaseValueAttribute=None, 
+                                    InitializationDefinition=None, 
+                                    BaseValueScaleConstant=1.000000 
+                                ) 
+                            ),
+                            (
+                                ItemPool=ItemPoolDefinition'GD_ItempoolsEnemyUse.Shields.Pool_Shields_Standard_EnemyUse', 
+                                PoolProbability=( 
+                                    BaseValueConstant=1.000000, 
+                                    BaseValueAttribute=None, 
+                                    InitializationDefinition=None, 
+                                    BaseValueScaleConstant=1.000000 
+                                ) 
+                            )
+                        )
+
+                    #</Fix Equip Pool>
 
                 #</Flameknuckle (playthrough 1)>
 
