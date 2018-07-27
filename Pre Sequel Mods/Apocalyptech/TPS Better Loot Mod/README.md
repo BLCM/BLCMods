@@ -374,7 +374,7 @@ for the full text.
 Changelog
 =========
 
-**v1.1.0**, (unreleased):
+**v1.1.0**, July 27, 2018:
  * Converted to BLCM format *(BLCMM is now required; FilterTool is not supported)*
  * Merged all versions into a single master file
    * "Lootsplosion" and "Reasonable" variants are options in a mutually-exclusive
@@ -402,10 +402,10 @@ Changelog
  * Added a byline in the header comments
  * Alphabetized a few categories which needed it, and some general reorganization
 
-**v1.0.3**, April 25, 2018:
+**v1.0.3**, April 25, 2018 (commit `2618668b068b93a397820dcbabcae9bf83a67fd8`):
  * Renamed mod files to have a `.txt` extension.
 
-**v1.0.2**, April 12, 2018:
+**v1.0.2**, April 12, 2018 (commit `ab6d3690552f622078e1863fa66f584ab678cd29`):
  * Fixed Iwajira / Volcantis / Odjurymir's drop pool so that the Hail isn't vastly
    preferred over the other drops.
 
