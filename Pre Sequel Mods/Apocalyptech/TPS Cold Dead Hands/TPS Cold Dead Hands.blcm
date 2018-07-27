@@ -1006,10 +1006,12 @@
 				</category>
 			</category>
 			<category name="Rocket Launchers in Global Equip Pools (choose one)" MUT="true">
-				<category name="Include Rocket Launchers">
-					<comment># Allow any enemy in the game which isn't specifically tied to a single</comment>
-					<comment># weapon type to equip rocket launchers.  This is pretty fun in Normal,</comment>
-					<comment># but is probably a bit much for people playing UVHM.</comment>
+				<category name="Full Rocket Launcher Equip Probability (6.7%)">
+					<comment># Any enemy in the game which isn't restricted to a single weapon type will</comment>
+					<comment># have about a 6.7% chance of equipping/dropping a rocket launcher.</comment>
+					<comment>#</comment>
+					<comment># Enemies who are hardcoded to *always* use launchers will, of course,</comment>
+					<comment># continue to do so regardless of this setting.</comment>
 					<hotfix name="ApocHotfix" level="None">
 						<code profiles="default">set GD_CustomItemPools_Marigold.Prototype.MarigoldSkin07 BalancedItems[5].Probability.BaseValueScaleConstant 1</code>
 						<code profiles="default">set GD_CustomItemPools_Marigold.Baroness.MarigoldSkin11 BalancedItems[5].Probability.BaseValueScaleConstant 1</code>
@@ -1019,10 +1021,57 @@
 						<code profiles="default">set GD_CustomItemPools_Marigold.Prototype.MarigoldSkin13 BalancedItems[5].Probability.BaseValueScaleConstant 1</code>
 					</hotfix>
 				</category>
-				<category name="Exclude Rocket Launchers">
-					<comment># The only enemies who will equip rocket launchers are the ones who are</comment>
-					<comment># specifically set to use launchers exclusively.  (This is the Borderlands</comment>
-					<comment># default behavior)</comment>
+				<category name="3/4 Rocket Launcher Equip Probability (5.1%)">
+					<comment># Any enemy in the game which isn't restricted to a single weapon type will</comment>
+					<comment># have about a 5.1% chance of equipping/dropping a rocket launcher.</comment>
+					<comment>#</comment>
+					<comment># Enemies who are hardcoded to *always* use launchers will, of course,</comment>
+					<comment># continue to do so regardless of this setting.</comment>
+					<hotfix name="ApocHotfix" level="None">
+						<code profiles="">set GD_CustomItemPools_Marigold.Prototype.MarigoldSkin07 BalancedItems[5].Probability.BaseValueScaleConstant 0.75</code>
+						<code profiles="">set GD_CustomItemPools_Marigold.Baroness.MarigoldSkin11 BalancedItems[5].Probability.BaseValueScaleConstant 0.75</code>
+						<code profiles="">set GD_CustomItemPools_Marigold.Prototype.MarigoldSkin11 BalancedItems[5].Probability.BaseValueScaleConstant 0.75</code>
+						<code profiles="">set GD_CustomItemPools_Marigold.Enforcer.MarigoldSkin13 BalancedItems[5].Probability.BaseValueScaleConstant 0.75</code>
+						<code profiles="">set GD_CustomItemPools_Marigold.Gladiator.MarigoldSkin13 BalancedItems[5].Probability.BaseValueScaleConstant 0.75</code>
+						<code profiles="">set GD_CustomItemPools_Marigold.Prototype.MarigoldSkin13 BalancedItems[5].Probability.BaseValueScaleConstant 0.75</code>
+					</hotfix>
+				</category>
+				<category name="Half Rocket Launcher Equip Probability (3.4%)">
+					<comment># Any enemy in the game which isn't restricted to a single weapon type will</comment>
+					<comment># have about a 3.4% chance of equipping/dropping a rocket launcher.</comment>
+					<comment>#</comment>
+					<comment># Enemies who are hardcoded to *always* use launchers will, of course,</comment>
+					<comment># continue to do so regardless of this setting.</comment>
+					<hotfix name="ApocHotfix" level="None">
+						<code profiles="">set GD_CustomItemPools_Marigold.Prototype.MarigoldSkin07 BalancedItems[5].Probability.BaseValueScaleConstant 0.5</code>
+						<code profiles="">set GD_CustomItemPools_Marigold.Baroness.MarigoldSkin11 BalancedItems[5].Probability.BaseValueScaleConstant 0.5</code>
+						<code profiles="">set GD_CustomItemPools_Marigold.Prototype.MarigoldSkin11 BalancedItems[5].Probability.BaseValueScaleConstant 0.5</code>
+						<code profiles="">set GD_CustomItemPools_Marigold.Enforcer.MarigoldSkin13 BalancedItems[5].Probability.BaseValueScaleConstant 0.5</code>
+						<code profiles="">set GD_CustomItemPools_Marigold.Gladiator.MarigoldSkin13 BalancedItems[5].Probability.BaseValueScaleConstant 0.5</code>
+						<code profiles="">set GD_CustomItemPools_Marigold.Prototype.MarigoldSkin13 BalancedItems[5].Probability.BaseValueScaleConstant 0.5</code>
+					</hotfix>
+				</category>
+				<category name="1/4 Rocket Launcher Equip Probability (1.8%)">
+					<comment># Any enemy in the game which isn't restricted to a single weapon type will</comment>
+					<comment># have about a 1.8% chance of equipping/dropping a rocket launcher.</comment>
+					<comment>#</comment>
+					<comment># Enemies who are hardcoded to *always* use launchers will, of course,</comment>
+					<comment># continue to do so regardless of this setting.</comment>
+					<hotfix name="ApocHotfix" level="None">
+						<code profiles="">set GD_CustomItemPools_Marigold.Prototype.MarigoldSkin07 BalancedItems[5].Probability.BaseValueScaleConstant 0.25</code>
+						<code profiles="">set GD_CustomItemPools_Marigold.Baroness.MarigoldSkin11 BalancedItems[5].Probability.BaseValueScaleConstant 0.25</code>
+						<code profiles="">set GD_CustomItemPools_Marigold.Prototype.MarigoldSkin11 BalancedItems[5].Probability.BaseValueScaleConstant 0.25</code>
+						<code profiles="">set GD_CustomItemPools_Marigold.Enforcer.MarigoldSkin13 BalancedItems[5].Probability.BaseValueScaleConstant 0.25</code>
+						<code profiles="">set GD_CustomItemPools_Marigold.Gladiator.MarigoldSkin13 BalancedItems[5].Probability.BaseValueScaleConstant 0.25</code>
+						<code profiles="">set GD_CustomItemPools_Marigold.Prototype.MarigoldSkin13 BalancedItems[5].Probability.BaseValueScaleConstant 0.25</code>
+					</hotfix>
+				</category>
+				<category name="0% Rocket Launcher Equip Probability (0%)">
+					<comment># Any enemy in the game which isn't restricted to a single weapon type will</comment>
+					<comment># have a 0% chance of equipping/dropping a rocket launcher.</comment>
+					<comment>#</comment>
+					<comment># Enemies who are hardcoded to *always* use launchers will, of course,</comment>
+					<comment># continue to do so regardless of this setting.</comment>
 					<hotfix name="ApocHotfix" level="None">
 						<code profiles="">set GD_CustomItemPools_Marigold.Prototype.MarigoldSkin07 BalancedItems[5].Probability.BaseValueScaleConstant 0</code>
 						<code profiles="">set GD_CustomItemPools_Marigold.Baroness.MarigoldSkin11 BalancedItems[5].Probability.BaseValueScaleConstant 0</code>

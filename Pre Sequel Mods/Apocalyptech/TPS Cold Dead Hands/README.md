@@ -101,13 +101,13 @@ mod, when loaded into BLCMM:
   uniques: the Heartfull Splodger and the Cutie Killer).  Those options can
   be toggled individually.
 
-* **Rocket Launchers in Global Equip Pools**: This is a mutually-exclusive category
-  (so you can only choose one of the options).  By default, this mod adds in rocket
-  launchers to the main enemy equip pools.  This is fine in Normal (though it will
-  make for some more challenging fights), but in UVHM it can get a bit much.  If
-  playing in UVHM, you may want to disable enemy rocket launchers.  (Enemies which
-  are specifically set to use rocket launchers will still use RLs regardless, of
-  course.)
+* **Rocket Launchers in Global Equip Pools**: By default, this mod adds in rocket
+  launchers to the main enemy equip pools.  This is generally fine in Normal (though
+  it will make for some more challenging fights), but in UVHM especially it can get
+  a bit much.  This section will let you decide how likely rocket-launcher-using
+  enemies are: from Full (about 6.7%), down to not allowing launcher use at all.
+  (Enemies which are specifically set to use rocket launchers will still use RLs
+  regardless, of course.)
 
 * **Enemy Gear Quality**: This is another mutually-exclusive category,
   and defines how good the enemy gear is.  The default ("Excellent Gear") is
@@ -291,6 +291,8 @@ Changelog
 
 **v1.1.0**, unreleased:
  * Converted to BLCM format *(BLCMM is now required; FilterTool is not supported)*
+ * Added more options for rocket launcher equip chances other than the binary
+   choice from previous versions.
  * Added in my TPS Early Bloomer mod to enable all item/weapon types from the
    very beginning of the game
  * Forced some early-game unlocks from Early Bloomer to be active at all times,
