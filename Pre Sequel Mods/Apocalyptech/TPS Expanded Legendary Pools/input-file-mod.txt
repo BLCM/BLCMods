@@ -23,6 +23,72 @@ TPS
             # Initializes the various Legendary drop pools in a way which lets us choose
             # what else to put in them (via hotfix) in the next categories.
 
+            #<Add Legendary Oz Kit Pool to Global Drop Pools>
+
+                # Ordinarily, Legendary Oz Kits don't drop in the same way that every
+                # other legendary item can, so this section adds that in.
+
+                set GD_Itempools.MoonItemPools.Pool_MoonItem_All BalancedItems
+                (
+                    ( 
+                        ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.MoonItemPools.Pool_MoonItem_01_Common', 
+                        InvBalanceDefinition=None, 
+                        Probability=( 
+                            BaseValueConstant=1.000000, 
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common', 
+                            BaseValueScaleConstant=1.000000 
+                        ), 
+                        bDropOnDeath=True 
+                    ),
+                    (
+                        ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.MoonItemPools.Pool_MoonItem_02_Uncommon', 
+                        InvBalanceDefinition=None, 
+                        Probability=( 
+                            BaseValueConstant=1.000000, 
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_2_Uncommon', 
+                            BaseValueScaleConstant=1.000000 
+                        ), 
+                        bDropOnDeath=True 
+                    ),
+                    (
+                        ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.MoonItemPools.Pool_MoonItem_04_Rare', 
+                        InvBalanceDefinition=None, 
+                        Probability=( 
+                            BaseValueConstant=1.000000, 
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_4_Rare', 
+                            BaseValueScaleConstant=1.000000 
+                        ), 
+                        bDropOnDeath=True 
+                    ),
+                    (
+                        ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.MoonItemPools.Pool_MoonItem_05_VeryRare', 
+                        InvBalanceDefinition=None, 
+                        Probability=( 
+                            BaseValueConstant=1.000000, 
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_5_VeryRare', 
+                            BaseValueScaleConstant=1.000000 
+                        ), 
+                        bDropOnDeath=True 
+                    ),
+                    ( 
+                        ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.MoonItemPools.Pool_MoonItem_06_Legendary', 
+                        InvBalanceDefinition=None, 
+                        Probability=( 
+                            BaseValueConstant=1.000000, 
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_6_Legendary', 
+                            BaseValueScaleConstant=3.000000 
+                        ), 
+                        bDropOnDeath=True 
+                    )
+                )
+
+            #</Add Legendary Oz Kit Pool to Global Drop Pools>
+
             #<Legendary Class Mod Pools Setup>
 
                 set GD_Cork_Itempools.ClassModPools.Pool_ClassMod_Enforcer_05_Legendary BalancedItems
@@ -1222,5 +1288,15 @@ TPS
         #</Add Undesirable Items>
 
     #</Add Undesirable Items to Pools (disabled by default)>
+
+    #<Legendary Drop Rate Adjustment (defaults to 2x)><MUT>
+
+{leg_scale_2x}
+
+{leg_scale_3x}  
+
+{leg_scale_base}
+
+    #</Legendary Drop Rate Adjustment (defaults to 2x)>
 
 #</{mod_name}>

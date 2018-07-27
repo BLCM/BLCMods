@@ -42,6 +42,13 @@ The relevant bits in the Python script are:
 
 Should be self-explanatory enough.  If it's not, this isn't the mod for you.
 
+TODO
+====
+
+ * This probably doesn't actually do the right thing in Marigold; should
+   probably have the Marigold pools redirect over to the main ones or
+   something.
+
 Licenses
 ========
 
