@@ -51,6 +51,18 @@ Simply choose the file `TPS Expanded Legendary Pools.blcm` and have at it!
   double the drop rate.  This can optionally be reverted down to stock values,
   or increased further to 3x.
 
+TODO
+====
+
+* This isn't actually necessarily a TODO, but I wonder if it makes sense to have
+  an option in here to allow glitch weapons to spawn in the main game areas, like
+  the BL2 version of this mod does with Gemstones. At the moment I've continued
+  to be inclined to say no, since Glitch weapons aren't hard to come by in
+  Claptastic Voyage, compared to gemstones from BL2, which were practically
+  nonexistant.  It feels like adding glitches to the main game would be more the
+  remit of something like Better Loot, which already does just that.  I could
+  probably be convinced to add it as an option to this mod, though...
+
 Mod Construction / Implementation Details
 =========================================
 
