@@ -58,8 +58,8 @@ loot_drop_quantity = 5
 
 # Force Pool_GunsAndGear to always drop the specified pool, if `force_gunsandgear_drop`
 # is True.  Useful for testing out how individual pools are behaving.
-force_gunsandgear_drop = False
-force_gunsandgear_drop_type = 'GD_Itempools.ClassModPools.Pool_ClassMod_06_Legendary'
+force_gunsandgear_drop = True
+force_gunsandgear_drop_type = 'GD_Itempools.MoonItemPools.Pool_MoonItem_All'
 
 # Force Pool_GunsAndGear to always drop the specified item, if
 # `force_gunsandgear_specific` is True.  Useful for seeing what exactly an
