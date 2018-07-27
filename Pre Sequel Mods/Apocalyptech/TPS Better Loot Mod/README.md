@@ -224,6 +224,7 @@ easily persuaded otherwise if someone feels strongly about it.
 There's also a few drop pools / containers / etc which I've purposefully
 left alone:
 
+* Golden Chest
 * Cash Boxes
 * Ammo Chests
 * Cardboard Boxes
