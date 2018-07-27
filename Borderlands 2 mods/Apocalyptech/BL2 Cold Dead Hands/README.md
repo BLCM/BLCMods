@@ -345,7 +345,7 @@ for the full text.
 Changelog
 =========
 
-**v1.1.2** - July 27, 2018:
+**v1.1.2** - July 27, 2018 (commit `7b6a65ac43fb61276062ec2d829c6fc163979ef7`):
  * Added more options for rocket launcher equip chances other than the binary
    choice from previous versions.
 
