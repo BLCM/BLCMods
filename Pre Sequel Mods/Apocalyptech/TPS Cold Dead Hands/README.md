@@ -289,7 +289,7 @@ for the full text.
 Changelog
 =========
 
-**v1.1.0**, unreleased:
+**v1.1.0**, July 27, 2018:
  * Converted to BLCM format *(BLCMM is now required; FilterTool is not supported)*
  * Added more options for rocket launcher equip chances other than the binary
    choice from previous versions.
