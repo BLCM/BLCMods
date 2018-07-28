@@ -5,5 +5,5 @@ I've currently organized my mod into 3 catagories
 - RiseOfTheSeraphs
 - Seperate Weapons
 
-Please don't steal my stuff a claim it as your own.
+Please don't steal my stuff and claim it as your own.
 That's just mean :C
