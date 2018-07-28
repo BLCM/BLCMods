@@ -2,7 +2,31 @@
 # vim: set expandtab tabstop=4 shiftwidth=4:
 import re
 import sys
-from ftexplorer.data import Data
+
+try:
+    from modprocessor import ModProcessor
+    mp = ModProcessor()
+except ModuleNotFoundError:
+    print('')
+    print('********************************************************************')
+    print('To run this script, you will need to copy or symlink modprocessor.py')
+    print('from the parent directory, so it exists here as well.  Sorry for')
+    print('the bother!')
+    print('********************************************************************')
+    print('')
+    sys.exit(1)
+
+try:
+    from ftexplorer.data import Data
+except ModuleNotFoundError:
+    print('')
+    print('****************************************************************')
+    print('To run this script, you will need to copy or symlink the')
+    print('"ftexplorer" and "resources" dirs from my ft-explorer project so')
+    print('they exist here as well.  Sorry for the bother!')
+    print('****************************************************************')
+    print('')
+    sys.exit(1)
 
 # Copyright (c) 2018, CJ Kucera
 # All rights reserved.
@@ -31,6 +55,11 @@ from ftexplorer.data import Data
 
 # Generates the mod file.  Uses my own ft-explorer data classes to do all
 # the introspection to find what needs updating and what doesn't
+
+# Control Vars
+mod_name = 'More Loot Midget Containers'
+mod_version = '1.1.0'
+output_filename = '{}.blcm'.format(mod_name)
 
 # What to change
 control = {
@@ -154,19 +183,24 @@ control = {
             ],
     }
 
-transform_count = 0
 level_transforms = {}
+lines = []
 for game, levelnames in control.items():
-    print('#<More Loot Midget Containers>')
-    print('')
-    print('    # More Loot Midget Containers v1.0.2')
-    print('    # Licensed under Public Domain / CC0 1.0 Universal')
-    print('    #')
-    print('    # For levels which support loot-midget-spawning containers, converts')
-    print('    # all possible containers to loot-midget-spawning varieties.  Some')
-    print('    # levels (such as Thousand Cuts) already have every possible container')
-    print('    # set to have loot midget spawns.')
-    print('')
+    lines.append('BL2')
+    lines.append('#<{}>'.format(mod_name))
+    lines.append('')
+    lines.append('    # {} v{}'.format(mod_name, mod_version))
+    lines.append('    # by Apocalyptech')
+    lines.append('    # Licensed under Public Domain / CC0 1.0 Universal')
+    lines.append('    #')
+    lines.append('    # For levels which support loot-midget-spawning containers, converts')
+    lines.append('    # all possible containers to loot-midget-spawning varieties.  Some')
+    lines.append('    # levels (such as Thousand Cuts) already have every possible container')
+    lines.append('    # set to have loot midget spawns.')
+    lines.append('    #')
+    lines.append('    # Note that this mod has been superceded by mopioid\'s "Loot Midget World!"')
+    lines.append('    # https://github.com/BLCM/BLCMods/blob/master/Borderlands%202%20mods/mopioid/LootMidgetWorld.blcm')
+    lines.append('')
     data = Data(game)
     for (english, levelname, transforms) in levelnames:
         
@@ -191,28 +225,30 @@ for game, levelnames in control.items():
                         if childstruct['PopulationDef'] != 'None':
                             popdef = childstruct['PopulationDef'].split("'", 2)[1]
                             if popdef in transforms:
-                                transform_count += 1
                                 if not got_hit:
-                                    print('    #<{}>'.format(english))
-                                    print('')
+                                    lines.append('    #<{}>'.format(english))
+                                    lines.append('')
                                     got_hit = True
                                 if english not in level_transforms:
                                     level_transforms[english] = 1
                                 else:
                                     level_transforms[english] += 1
-                                print('        #<hotfix><key>"SparkLevelPatchEntry-ApocMaxLootMidgets{num}"</key><value>"{level},{objectname},PopulationDef,,PopulationDefinition\'{popdef}\'"</value><on>'.format(
-                                    num=transform_count,
+                                lines.append("        level {level} set {objectname} PopulationDef PopulationDefinition'{popdef}'".format(
                                     level=levelname,
                                     objectname='{}.{}'.format(package, child.name),
                                     popdef=transforms[popdef],
                                     ))
-                                print('')
+                                lines.append('')
 
         if got_hit:
-            print('    #</{}>'.format(english))
-            print('')
+            lines.append('    #</{}>'.format(english))
+            lines.append('')
 
-    print('#</More Loot Midget Containers>')
+    lines.append('#</{}>'.format(mod_name))
+
+# Write out to the file
+mp.human_str_to_blcm_filename("\n".join(lines), output_filename)
+print('Wrote mod to {}'.format(output_filename))
 
 # A bit of reporting at the end
 print('')
