@@ -43,6 +43,5 @@ Weapon Features:
 
 A picture of the rename
 https://imgur.com/vXHgFTa
-
 A picture of the weapon 
 https://imgur.com/u0s0Tys
