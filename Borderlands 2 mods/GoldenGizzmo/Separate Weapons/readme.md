@@ -4,7 +4,7 @@ This is where I'll be keeping all my seperate new weapons that I've created.
 
 Currently Includes:
 
-[-- The Capacitor --]
+[-- **The Capacitor** --]
 
 - Replaces the Triquetra
 - An E-tech Jakobs shotgun
@@ -23,7 +23,7 @@ https://imgur.com/ryFwFYT
 
 - Special credit to Exotek for fixing the flaps and some skin errors
 
-[-- The Gizzmo --]
+[-- **The Gizzmo** --]
 
 - Replaces the Pocket Rocket
 - Shoots 2 bullets instead of 1
@@ -37,7 +37,7 @@ https://imgur.com/03N8Vv1
 - The gun is purple rarity to stand out in the Torgue Vendors.
 - Now shoots standard Torgue gyrojets to be more compatible with other mods.
 
-[-- Java Powerhouse --]
+[-- **Java Powerhouse** --]
 
 - Replaces the Black Hole
 - A huge change to the Black Hole shield
@@ -54,7 +54,7 @@ https://imgur.com/ysywYSz
 - The recharge rate is increase in order for the nova to proc more often.
 - Mostly nova shields do dissapointing damage at higher levels, hence the massive increase in power, yet it's not insane enough to make   Gaige invincible.
 
-[-- Koffee --]
+[-- **The Koffee** --]
 
 - Replaces the Roaster
 - Only comes in fire element
@@ -70,7 +70,7 @@ https://imgur.com/uftzImr
 - Meaning that you need to fire this weapon differently to achieve success.
 - Also since it's a Bandit e-tech, the prazma melts, leaving residue, adds to the liquid-like theme in my eyes.
 
-[-- The Switch It! --]
+[-- **The Switch It!** --]
 
 - Replaces the Deliverence
 - Only shoots one bullet
