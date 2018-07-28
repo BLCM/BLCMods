@@ -546,11 +546,10 @@ class ModProcessor(object):
         self.line('</body>', odf, 1)
         self.line('</BLCMM>', odf)
 
-        if len(self.set_commands) > 0:
-            self.line('', odf)
-            self.line('#Commands:', odf)
-            for cmd in self.set_commands:
-                self.line(cmd, odf)
+        self.line('', odf)
+        self.line('#Commands:', odf)
+        for cmd in self.set_commands:
+            self.line(cmd, odf)
 
         if len(self.hotfix_commands) > 0:
             self.line('', odf)
