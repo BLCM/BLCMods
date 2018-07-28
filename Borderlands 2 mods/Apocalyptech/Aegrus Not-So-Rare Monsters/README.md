@@ -7,7 +7,7 @@ useful if you're looking to complete the
 [I Like My Monsters Rare](http://borderlands.wikia.com/wiki/I_Like_My_Monsters_Rare)
 mission without having to do any extra farming.
 
-There are two mutually-exclusive options when loaded into FilterTool:
+There are two mutually-exclusive options when loaded into BLCMM:
 
 1. Normalize spawn rates so that they're about as common as other
    creature types (slightly less for Drifters, since there's no
