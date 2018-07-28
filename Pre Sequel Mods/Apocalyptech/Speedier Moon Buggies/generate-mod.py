@@ -31,14 +31,15 @@
 import sys
 
 try:
-    from hotfixes import Hotfixes
+    from modprocessor import ModProcessor
+    mp = ModProcessor()
 except ModuleNotFoundError:
     print('')
-    print('****************************************************************')
-    print('To run this script, you will need to copy or symlink hotfixes.py')
+    print('********************************************************************')
+    print('To run this script, you will need to copy or symlink modprocessor.py')
     print('from the parent directory, so it exists here as well.  Sorry for')
     print('the bother!')
-    print('****************************************************************')
+    print('********************************************************************')
     print('')
     sys.exit(1)
 
@@ -47,8 +48,8 @@ except ModuleNotFoundError:
 ###
 
 mod_name = 'Speedier Moon Buggies'
-mod_version = '1.0.0'
-output_filename = '{}.txt'.format(mod_name)
+mod_version = '1.1.0'
+output_filename = '{}.blcm'.format(mod_name)
 
 ###
 ### Generate hotfixes!
@@ -72,94 +73,35 @@ for (label, vehicle_name, class_name) in [
             ),
         ]:
 
-    hfs = Hotfixes(nameprefix=label)
-
-    # Default: 4500
-    hfs.add_demand_hotfix('max_speed', 'MoonBuggy',
-        '{},{},MaxSpeed,,8000'.format(demand_name, vehicle_name))
-
-    # Default: 5000
-    hfs.add_demand_hotfix('ground_speed', 'MoonBuggy',
-        '{},{},GroundSpeed,,6000'.format(demand_name, vehicle_name))
-
-    # Default: 5000
-    hfs.add_demand_hotfix('ground_speed_base', 'MoonBuggy',
-        '{},{},GroundSpeedBaseValue,,6000'.format(demand_name, vehicle_name))
-
-    # Default: 2000
-    hfs.add_demand_hotfix('afterburner_speed', 'MoonBuggy',
-        '{},{},AfterburnerSpeed,,4000'.format(demand_name, class_name))
-
-    # Default: 900
-    hfs.add_demand_hotfix('afterburner_activation_speed', 'MoonBuggy',
-        '{},{},AfterburnerActivationSpeed,,400'.format(demand_name, class_name))
-
-    # Default: 700
-    hfs.add_demand_hotfix('afterburner_force', 'MoonBuggy',
-        '{},{},AfterburnerForceMagnitude,,1800'.format(demand_name, class_name))
-
-    # Default: 4
-    # (actually, y'know what?  Let's just leave that.  4 already feels generous enough.
-    # We're improving the regen rate below.  That'll do.)
-    #hfs.add_demand_hotfix('afterburner_boost_time', 'MoonBuggy',
-    #    '{},{},AfterburnerBoostTime,,4'.format(demand_name, class_name))
-
     hotfix_strings[label] = """{prefix_label}#<{label} Moon Buggy>
 
-{prefix}{hotfixes:max_speed}
+{prefix}demand {demand_name} set {vehicle_name} MaxSpeed 8000
 
-{prefix}{hotfixes:ground_speed}
+{prefix}demand {demand_name} set {vehicle_name} GroundSpeed 6000
 
-{prefix}{hotfixes:ground_speed_base}
+{prefix}demand {demand_name} set {vehicle_name} GroundSpeedBaseValue 6000
 
-{prefix}{hotfixes:afterburner_speed}
+{prefix}demand {demand_name} set {class_name} AfterburnerSpeed 4000
 
-{prefix}{hotfixes:afterburner_activation_speed}
+{prefix}demand {demand_name} set {class_name} AfterburnerActivationSpeed 400
 
-{prefix}{hotfixes:afterburner_force}
+{prefix}demand {demand_name} set {class_name} AfterburnerForceMagnitude 1800
 
 {prefix_label}#</{label} Moon Buggy>""".format(
         prefix_label=prefix_label,
         prefix=prefix,
         label=label,
-        hotfixes=hfs,
+        demand_name=demand_name,
+        vehicle_name=vehicle_name,
+        class_name=class_name,
         )
-
-###
-### Common Hotfixes
-###
-
-hfs = Hotfixes(nameprefix=label)
-
-# Default: 100
-hfs.add_demand_hotfix('afterburner_total', 'MoonBuggy',
-    '{},{},BaseMaxValue.BaseValueConstant,,150'.format(demand_name, afterburner_name))
-
-# Default: 20
-hfs.add_demand_hotfix('afterburner_regen_rate', 'MoonBuggy',
-    '{},{},BaseOnIdleRegenerationRate,,30'.format(demand_name, afterburner_name))
-
-# Default: 5
-hfs.add_demand_hotfix('afterburner_regen_delay', 'MoonBuggy',
-    '{},{},BaseOnIdleRegenerationDelay,,2.5'.format(demand_name, afterburner_name))
-
-# Default: 0.75
-hfs.add_demand_hotfix('throttle_speed', 'MoonBuggy',
-    '{},{},ThrottleSpeed,,10'.format(demand_name, handling_name))
-
-# Default: -0.2
-hfs.add_demand_hotfix('reverse_throttle', 'MoonBuggy',
-    '{},{},ReverseThrottle,,-10'.format(demand_name, handling_name))
-
-# Default: 10
-hfs.add_demand_hotfix('brake_torque', 'MoonBuggy',
-    '{},{},MaxBrakeTorque,,15'.format(demand_name, handling_name))
 
 ###
 ### Generate the mod string
 ###
 
-mod_str = """#<{mod_name}>
+mod_str = """TPS
+#<{mod_name}>
 
     # {mod_name} v{mod_version}
     # by Apocalyptech
@@ -174,17 +116,17 @@ mod_str = """#<{mod_name}>
 
     #<Common Attributes>
 
-        {hotfixes:afterburner_total}
+        demand {demand_name} set {afterburner_name} BaseMaxValue.BaseValueConstant 150
 
-        {hotfixes:afterburner_regen_rate}
+        demand {demand_name} set {afterburner_name} BaseOnIdleRegenerationRate 30
 
-        {hotfixes:afterburner_regen_delay}
+        demand {demand_name} set {afterburner_name} BaseOnIdleRegenerationDelay 2.5
 
-        {hotfixes:throttle_speed}
+        demand {demand_name} set {handling_name} ThrottleSpeed 10
 
-        {hotfixes:reverse_throttle}
+        demand {demand_name} set {handling_name} ReverseThrottle -10
 
-        {hotfixes:brake_torque}
+        demand {demand_name} set {handling_name} MaxBrakeTorque 15
 
     #</Common Attributes>
 
@@ -194,13 +136,14 @@ mod_str = """#<{mod_name}>
         mod_version=mod_version,
         laser=hotfix_strings['Laser'],
         missile=hotfix_strings['Missile Pod'],
-        hotfixes=hfs,
+        demand_name=demand_name,
+        afterburner_name=afterburner_name,
+        handling_name=handling_name,
         )
 
 ###
 ### Output to a file.
 ###
 
-with open(output_filename, 'w') as df:
-    df.write(mod_str)
+mp.human_str_to_blcm_filename(mod_str, output_filename)
 print('Wrote mod file to: {}'.format(output_filename))

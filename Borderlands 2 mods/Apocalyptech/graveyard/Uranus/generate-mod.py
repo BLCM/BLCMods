@@ -31,14 +31,15 @@
 import sys
 
 try:
-    from hotfixes import Hotfixes
+    from modprocessor import ModProcessor
+    mp = ModProcessor()
 except ModuleNotFoundError:
     print('')
-    print('****************************************************************')
-    print('To run this script, you will need to copy or symlink hotfixes.py')
+    print('********************************************************************')
+    print('To run this script, you will need to copy or symlink modprocessor.py')
     print('from the parent directory, so it exists here as well.  Sorry for')
     print('the bother!')
-    print('****************************************************************')
+    print('********************************************************************')
     print('')
     sys.exit(1)
 
@@ -48,20 +49,18 @@ except ModuleNotFoundError:
 
 mod_name = 'Uranus'
 mod_version = '1.0.0-prerelease'
-output_filename = '{}.txt'.format(mod_name)
+output_filename = '{}.blcm'.format(mod_name)
 scaling = 0.4
 
 ###
 ### Generate hotfixes!
 ###
 
-hfs = Hotfixes()
-
 # Convenience wrapper
 def hotfix(name, classname, attr, value):
-    global hfs
-    hfs.add_level_hotfix(name, 'Uranus',
-        '{},{},{},,{}'.format('Stockade_P', classname, attr, value))
+    global mp
+    mp.register_str(name,
+        'level {} set {} {} {}'.format('Stockade_P', classname, attr, value))
 
 hotfix('name',
     'GD_Population_Loader.Balance.Unique.PawnBalance_LoaderGiant',
@@ -71,8 +70,7 @@ hotfix('name',
 hotfix('pool',
     'GD_Population_Loader.Balance.Unique.PawnBalance_LoaderGiant',
     'DefaultItemPoolList',
-    """
-    (
+    """(
         (
             ItemPool = ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Money_1',
             PoolProbability = 
@@ -83,8 +81,7 @@ hotfix('pool',
                 BaseValueScaleConstant = 1.000000
             )
         )
-    )
-    """)
+    )""")
 
 hotfix('pool_included',
     'GD_Population_Loader.Balance.Unique.PawnBalance_LoaderGiant',
@@ -94,8 +91,7 @@ hotfix('pool_included',
 hotfix('attributes',
     'GD_LoaderUltimateBadass.Character.CharClass_LoaderUltimateBadass',
     'AttributeStartingValues',
-    """
-    (
+    """(
         (
             Attribute = AttributeDefinition'GD_Balance_HealthAndDamage.AIParameters.Attribute_HealthMultiplier',
             BaseValue = 
@@ -146,8 +142,7 @@ hotfix('attributes',
                 BaseValueScaleConstant = 1.000000
             )
         )
-    )"""
-    )
+    )""")
 
 # Don't think this works
 hotfix('pitch',
@@ -230,7 +225,8 @@ hotfix('testing',
 ### Generate the mod string
 ###
 
-mod_str = """#<{mod_name}>
+mod_str = """BL2
+#<{mod_name}>
 
     # {mod_name} v{mod_version}
     # by Apocalyptech
@@ -239,43 +235,42 @@ mod_str = """#<{mod_name}>
     # Just makes a few balance adjustments to Saturn is all.
     # Shouldn't be such a pushover anymore.
 
-    {hotfixes:name}
+    {mp:name}
 
-    {hotfixes:pool}
+    {mp:pool}
 
-    {hotfixes:pool_included}
+    {mp:pool_included}
 
-    {hotfixes:attributes}
+    {mp:attributes}
 
-    {hotfixes:body_scale}
+    {mp:body_scale}
 
-    {hotfixes:turret_scale}
+    {mp:turret_scale}
 
-    {hotfixes:arm_scale_0}
+    {mp:arm_scale_0}
 
-    {hotfixes:arm_scale_1}
+    {mp:arm_scale_1}
 
-    {hotfixes:arm_scale_2}
+    {mp:arm_scale_2}
 
-    {hotfixes:arm_scale_3}
+    {mp:arm_scale_3}
 
-    {hotfixes:collisioncube_scale_0}
+    {mp:collisioncube_scale_0}
 
-    {hotfixes:collisioncube_scale_1}
+    {mp:collisioncube_scale_1}
 
-    {hotfixes:testing}
+    {mp:testing}
 
 #</{mod_name}>
 """.format(
         mod_name=mod_name,
         mod_version=mod_version,
-        hotfixes=hfs,
+        mp=mp,
         )
 
 ###
 ### Output to a file.
 ###
 
-with open(output_filename, 'w') as df:
-    df.write(mod_str)
+mp.human_str_to_blcm_filename(mod_str, output_filename)
 print('Wrote mod file to: {}'.format(output_filename))
