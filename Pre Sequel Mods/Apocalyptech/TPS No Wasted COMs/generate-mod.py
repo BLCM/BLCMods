@@ -31,14 +31,15 @@
 import sys
 
 try:
-    from hotfixes import Hotfixes
+    from modprocessor import ModProcessor
+    mp = ModProcessor()
 except ModuleNotFoundError:
     print('')
-    print('****************************************************************')
-    print('To run this script, you will need to copy or symlink hotfixes.py')
+    print('********************************************************************')
+    print('To run this script, you will need to copy or symlink modprocessor.py')
     print('from the parent directory, so it exists here as well.  Sorry for')
     print('the bother!')
-    print('****************************************************************')
+    print('********************************************************************')
     print('')
     sys.exit(1)
 
@@ -47,14 +48,13 @@ except ModuleNotFoundError:
 ###
 
 mod_name = 'TPS No Wasted COMs'
-mod_version = '1.0.1'
-output_filename = '{}-source.txt'.format(mod_name)
+mod_version = '1.1.0'
+output_filename = '{}.blcm'.format(mod_name)
 
 ###
 ### Generate hotfixes!
 ###
 
-hfs = Hotfixes()
 pools = [
         ('01_Common',
             'GD_Itempools.ClassModPools.Pool_ClassMod_01_Common',
@@ -129,8 +129,7 @@ characters = [
 def generate_balanced_items(items):
     stanzas = []
     for item in items:
-        stanzas.append("""
-            ( 
+        stanzas.append("""( 
                 ItmPoolDefinition=ItemPoolDefinition'{}', 
                 InvBalanceDefinition=None, 
                 Probability=( 
@@ -140,8 +139,7 @@ def generate_balanced_items(items):
                     BaseValueScaleConstant=1.000000 
                 ), 
                 bDropOnDeath=True 
-            )
-            """.format(item))
+            )""".format(item))
     return '({})'.format(','.join(stanzas))
 initial_sets = {}
 for (weight, pool, individual_weight) in pools:
@@ -163,14 +161,11 @@ for (weight, pool, individual_weight) in pools:
 # to override that.
 for (weight, pool, individual_weight) in pools:
     for idx in range(6):
-        hfs.add_level_hotfix('com_id_clear_{}_{}'.format(weight, idx),
-            'COMIDClear',
-            """,{pool},
-            BalancedItems[{idx}].Probability.InitializationDefinition,,
-            None
-            """.format(
+        mp.register_str('com_id_clear_{}_{}'.format(weight, idx),
+            'level None set {pool} BalancedItems[{idx}].Probability.InitializationDefinition None'.format(
                 pool=pool,
-                idx=idx))
+                idx=idx,
+                ))
 
 # OnDemand hotfixes for each player class
 for idx, (streaming, pool_reg, pool_chronicler, pool_petunia) in enumerate(characters):
@@ -178,14 +173,8 @@ for idx, (streaming, pool_reg, pool_chronicler, pool_petunia) in enumerate(chara
     short = streaming.split('_')[-2]
 
     for (weight, pool, individual_weight) in pools:
-        hfs.add_demand_hotfix('com_{}_set_{}'.format(short, weight),
-            'COM{}Set'.format(short),
-            """
-            {streaming},
-            {pool},
-            BalancedItems[{idx}].Probability.BaseValueConstant,,
-            1
-            """.format(
+        mp.register_str('com_{}_set_{}'.format(short, weight),
+            'demand {streaming} set {pool} BalancedItems[{idx}].Probability.BaseValueConstant 1'.format(
                     streaming=streaming,
                     pool=pool,
                     idx=idx,
@@ -195,9 +184,11 @@ for idx, (streaming, pool_reg, pool_chronicler, pool_petunia) in enumerate(chara
 ### Generate the mod string
 ###
 
-mod_str = """#<{mod_name}>
+mod_str = """TPS
+#<{mod_name}>
 
     # {mod_name} v{mod_version}
+    # by Apocalyptech
     # Licensed under Public Domain / CC0 1.0 Universal
     #
     # Sets the game to only drop COMs for the player classes who are actually
@@ -239,125 +230,125 @@ mod_str = """#<{mod_name}>
         # Something hotfix-like modifies the InitializationDefinition of these pools
         # on level load, so we need a level-load hotfix to clear it out.
 
-        {hotfixes:com_id_clear_01_Common_0}
+        {mp:com_id_clear_01_Common_0}
         
-        {hotfixes:com_id_clear_01_Common_1}
+        {mp:com_id_clear_01_Common_1}
         
-        {hotfixes:com_id_clear_01_Common_2}
+        {mp:com_id_clear_01_Common_2}
         
-        {hotfixes:com_id_clear_01_Common_3}
+        {mp:com_id_clear_01_Common_3}
         
-        {hotfixes:com_id_clear_01_Common_4}
+        {mp:com_id_clear_01_Common_4}
         
-        {hotfixes:com_id_clear_01_Common_5}
+        {mp:com_id_clear_01_Common_5}
 
-        {hotfixes:com_id_clear_01_Common_1st_0}
+        {mp:com_id_clear_01_Common_1st_0}
         
-        {hotfixes:com_id_clear_01_Common_1st_1}
+        {mp:com_id_clear_01_Common_1st_1}
         
-        {hotfixes:com_id_clear_01_Common_1st_2}
+        {mp:com_id_clear_01_Common_1st_2}
         
-        {hotfixes:com_id_clear_01_Common_1st_3}
+        {mp:com_id_clear_01_Common_1st_3}
         
-        {hotfixes:com_id_clear_01_Common_1st_4}
+        {mp:com_id_clear_01_Common_1st_4}
         
-        {hotfixes:com_id_clear_01_Common_1st_5}
+        {mp:com_id_clear_01_Common_1st_5}
 
-        {hotfixes:com_id_clear_02_Uncommon_0}
+        {mp:com_id_clear_02_Uncommon_0}
         
-        {hotfixes:com_id_clear_02_Uncommon_1}
+        {mp:com_id_clear_02_Uncommon_1}
         
-        {hotfixes:com_id_clear_02_Uncommon_2}
+        {mp:com_id_clear_02_Uncommon_2}
         
-        {hotfixes:com_id_clear_02_Uncommon_3}
+        {mp:com_id_clear_02_Uncommon_3}
         
-        {hotfixes:com_id_clear_02_Uncommon_4}
+        {mp:com_id_clear_02_Uncommon_4}
         
-        {hotfixes:com_id_clear_02_Uncommon_5}
+        {mp:com_id_clear_02_Uncommon_5}
 
-        {hotfixes:com_id_clear_04_Rare_0}
+        {mp:com_id_clear_04_Rare_0}
         
-        {hotfixes:com_id_clear_04_Rare_1}
+        {mp:com_id_clear_04_Rare_1}
         
-        {hotfixes:com_id_clear_04_Rare_2}
+        {mp:com_id_clear_04_Rare_2}
         
-        {hotfixes:com_id_clear_04_Rare_3}
+        {mp:com_id_clear_04_Rare_3}
         
-        {hotfixes:com_id_clear_04_Rare_4}
+        {mp:com_id_clear_04_Rare_4}
         
-        {hotfixes:com_id_clear_04_Rare_5}
+        {mp:com_id_clear_04_Rare_5}
 
-        {hotfixes:com_id_clear_05_VeryRare_0}
+        {mp:com_id_clear_05_VeryRare_0}
         
-        {hotfixes:com_id_clear_05_VeryRare_1}
+        {mp:com_id_clear_05_VeryRare_1}
         
-        {hotfixes:com_id_clear_05_VeryRare_2}
+        {mp:com_id_clear_05_VeryRare_2}
         
-        {hotfixes:com_id_clear_05_VeryRare_3}
+        {mp:com_id_clear_05_VeryRare_3}
         
-        {hotfixes:com_id_clear_05_VeryRare_4}
+        {mp:com_id_clear_05_VeryRare_4}
         
-        {hotfixes:com_id_clear_05_VeryRare_5}
+        {mp:com_id_clear_05_VeryRare_5}
 
-        {hotfixes:com_id_clear_06_Legendary_0}
+        {mp:com_id_clear_06_Legendary_0}
         
-        {hotfixes:com_id_clear_06_Legendary_1}
+        {mp:com_id_clear_06_Legendary_1}
         
-        {hotfixes:com_id_clear_06_Legendary_2}
+        {mp:com_id_clear_06_Legendary_2}
         
-        {hotfixes:com_id_clear_06_Legendary_3}
+        {mp:com_id_clear_06_Legendary_3}
         
-        {hotfixes:com_id_clear_06_Legendary_4}
+        {mp:com_id_clear_06_Legendary_4}
         
-        {hotfixes:com_id_clear_06_Legendary_5}
+        {mp:com_id_clear_06_Legendary_5}
 
-        {hotfixes:com_id_clear_06_Celestial_0}
+        {mp:com_id_clear_06_Celestial_0}
         
-        {hotfixes:com_id_clear_06_Celestial_1}
+        {mp:com_id_clear_06_Celestial_1}
         
-        {hotfixes:com_id_clear_06_Celestial_2}
+        {mp:com_id_clear_06_Celestial_2}
         
-        {hotfixes:com_id_clear_06_Celestial_3}
+        {mp:com_id_clear_06_Celestial_3}
         
-        {hotfixes:com_id_clear_06_Celestial_4}
+        {mp:com_id_clear_06_Celestial_4}
         
-        {hotfixes:com_id_clear_06_Celestial_5}
+        {mp:com_id_clear_06_Celestial_5}
 
-        {hotfixes:com_id_clear_06_EridianVanquisher_0}
+        {mp:com_id_clear_06_EridianVanquisher_0}
         
-        {hotfixes:com_id_clear_06_EridianVanquisher_1}
+        {mp:com_id_clear_06_EridianVanquisher_1}
         
-        {hotfixes:com_id_clear_06_EridianVanquisher_2}
+        {mp:com_id_clear_06_EridianVanquisher_2}
         
-        {hotfixes:com_id_clear_06_EridianVanquisher_3}
+        {mp:com_id_clear_06_EridianVanquisher_3}
         
-        {hotfixes:com_id_clear_06_EridianVanquisher_4}
+        {mp:com_id_clear_06_EridianVanquisher_4}
 
-        {hotfixes:com_id_clear_06_EridianVanquisher_5}
+        {mp:com_id_clear_06_EridianVanquisher_5}
 
-        {hotfixes:com_id_clear_07_Chronicler_0}
+        {mp:com_id_clear_07_Chronicler_0}
         
-        {hotfixes:com_id_clear_07_Chronicler_1}
+        {mp:com_id_clear_07_Chronicler_1}
         
-        {hotfixes:com_id_clear_07_Chronicler_2}
+        {mp:com_id_clear_07_Chronicler_2}
         
-        {hotfixes:com_id_clear_07_Chronicler_3}
+        {mp:com_id_clear_07_Chronicler_3}
         
-        {hotfixes:com_id_clear_07_Chronicler_4}
+        {mp:com_id_clear_07_Chronicler_4}
 
-        {hotfixes:com_id_clear_07_Chronicler_5}
+        {mp:com_id_clear_07_Chronicler_5}
 
-        {hotfixes:com_id_clear_Petunia_0}
+        {mp:com_id_clear_Petunia_0}
         
-        {hotfixes:com_id_clear_Petunia_1}
+        {mp:com_id_clear_Petunia_1}
         
-        {hotfixes:com_id_clear_Petunia_2}
+        {mp:com_id_clear_Petunia_2}
         
-        {hotfixes:com_id_clear_Petunia_3}
+        {mp:com_id_clear_Petunia_3}
         
-        {hotfixes:com_id_clear_Petunia_4}
+        {mp:com_id_clear_Petunia_4}
 
-        {hotfixes:com_id_clear_Petunia_5}
+        {mp:com_id_clear_Petunia_5}
 
     #</Level Clear>
 
@@ -365,25 +356,25 @@ mod_str = """#<{mod_name}>
 
         # Allows Lawbringer COM drops when that class joins
 
-        {hotfixes:com_Lawbringer_set_01_Common}
+        {mp:com_Lawbringer_set_01_Common}
 
-        {hotfixes:com_Lawbringer_set_01_Common_1st}
+        {mp:com_Lawbringer_set_01_Common_1st}
         
-        {hotfixes:com_Lawbringer_set_02_Uncommon}
+        {mp:com_Lawbringer_set_02_Uncommon}
         
-        {hotfixes:com_Lawbringer_set_04_Rare}
+        {mp:com_Lawbringer_set_04_Rare}
         
-        {hotfixes:com_Lawbringer_set_05_VeryRare}
+        {mp:com_Lawbringer_set_05_VeryRare}
         
-        {hotfixes:com_Lawbringer_set_06_Legendary}
+        {mp:com_Lawbringer_set_06_Legendary}
         
-        {hotfixes:com_Lawbringer_set_06_Celestial}
+        {mp:com_Lawbringer_set_06_Celestial}
         
-        {hotfixes:com_Lawbringer_set_06_EridianVanquisher}
+        {mp:com_Lawbringer_set_06_EridianVanquisher}
 
-        {hotfixes:com_Lawbringer_set_07_Chronicler}
+        {mp:com_Lawbringer_set_07_Chronicler}
 
-        {hotfixes:com_Lawbringer_set_Petunia}
+        {mp:com_Lawbringer_set_Petunia}
 
     #</Lawbringer>
 
@@ -391,25 +382,25 @@ mod_str = """#<{mod_name}>
 
         # Allows Prototype COM drops when that class joins
 
-        {hotfixes:com_Prototype_set_01_Common}
+        {mp:com_Prototype_set_01_Common}
 
-        {hotfixes:com_Prototype_set_01_Common_1st}
+        {mp:com_Prototype_set_01_Common_1st}
         
-        {hotfixes:com_Prototype_set_02_Uncommon}
+        {mp:com_Prototype_set_02_Uncommon}
         
-        {hotfixes:com_Prototype_set_04_Rare}
+        {mp:com_Prototype_set_04_Rare}
         
-        {hotfixes:com_Prototype_set_05_VeryRare}
+        {mp:com_Prototype_set_05_VeryRare}
         
-        {hotfixes:com_Prototype_set_06_Legendary}
+        {mp:com_Prototype_set_06_Legendary}
         
-        {hotfixes:com_Prototype_set_06_Celestial}
+        {mp:com_Prototype_set_06_Celestial}
         
-        {hotfixes:com_Prototype_set_06_EridianVanquisher}
+        {mp:com_Prototype_set_06_EridianVanquisher}
 
-        {hotfixes:com_Prototype_set_07_Chronicler}
+        {mp:com_Prototype_set_07_Chronicler}
 
-        {hotfixes:com_Prototype_set_Petunia}
+        {mp:com_Prototype_set_Petunia}
 
     #</Prototype>
 
@@ -417,25 +408,25 @@ mod_str = """#<{mod_name}>
 
         # Allows Enforcer COM drops when that class joins
 
-        {hotfixes:com_Enforcer_set_01_Common}
+        {mp:com_Enforcer_set_01_Common}
 
-        {hotfixes:com_Enforcer_set_01_Common_1st}
+        {mp:com_Enforcer_set_01_Common_1st}
         
-        {hotfixes:com_Enforcer_set_02_Uncommon}
+        {mp:com_Enforcer_set_02_Uncommon}
         
-        {hotfixes:com_Enforcer_set_04_Rare}
+        {mp:com_Enforcer_set_04_Rare}
         
-        {hotfixes:com_Enforcer_set_05_VeryRare}
+        {mp:com_Enforcer_set_05_VeryRare}
         
-        {hotfixes:com_Enforcer_set_06_Legendary}
+        {mp:com_Enforcer_set_06_Legendary}
         
-        {hotfixes:com_Enforcer_set_06_Celestial}
+        {mp:com_Enforcer_set_06_Celestial}
         
-        {hotfixes:com_Enforcer_set_06_EridianVanquisher}
+        {mp:com_Enforcer_set_06_EridianVanquisher}
 
-        {hotfixes:com_Enforcer_set_07_Chronicler}
+        {mp:com_Enforcer_set_07_Chronicler}
 
-        {hotfixes:com_Enforcer_set_Petunia}
+        {mp:com_Enforcer_set_Petunia}
 
     #</Enforcer>
 
@@ -443,25 +434,25 @@ mod_str = """#<{mod_name}>
 
         # Allows Gladiator COM drops when that class joins
 
-        {hotfixes:com_Gladiator_set_01_Common}
+        {mp:com_Gladiator_set_01_Common}
 
-        {hotfixes:com_Gladiator_set_01_Common_1st}
+        {mp:com_Gladiator_set_01_Common_1st}
         
-        {hotfixes:com_Gladiator_set_02_Uncommon}
+        {mp:com_Gladiator_set_02_Uncommon}
         
-        {hotfixes:com_Gladiator_set_04_Rare}
+        {mp:com_Gladiator_set_04_Rare}
         
-        {hotfixes:com_Gladiator_set_05_VeryRare}
+        {mp:com_Gladiator_set_05_VeryRare}
         
-        {hotfixes:com_Gladiator_set_06_Legendary}
+        {mp:com_Gladiator_set_06_Legendary}
         
-        {hotfixes:com_Gladiator_set_06_Celestial}
+        {mp:com_Gladiator_set_06_Celestial}
         
-        {hotfixes:com_Gladiator_set_06_EridianVanquisher}
+        {mp:com_Gladiator_set_06_EridianVanquisher}
 
-        {hotfixes:com_Gladiator_set_07_Chronicler}
+        {mp:com_Gladiator_set_07_Chronicler}
 
-        {hotfixes:com_Gladiator_set_Petunia}
+        {mp:com_Gladiator_set_Petunia}
 
     #</Gladiator>
 
@@ -469,25 +460,25 @@ mod_str = """#<{mod_name}>
 
         # Allows Baroness COM drops when that class joins
 
-        {hotfixes:com_Baroness_set_01_Common}
+        {mp:com_Baroness_set_01_Common}
 
-        {hotfixes:com_Baroness_set_01_Common_1st}
+        {mp:com_Baroness_set_01_Common_1st}
         
-        {hotfixes:com_Baroness_set_02_Uncommon}
+        {mp:com_Baroness_set_02_Uncommon}
         
-        {hotfixes:com_Baroness_set_04_Rare}
+        {mp:com_Baroness_set_04_Rare}
         
-        {hotfixes:com_Baroness_set_05_VeryRare}
+        {mp:com_Baroness_set_05_VeryRare}
         
-        {hotfixes:com_Baroness_set_06_Legendary}
+        {mp:com_Baroness_set_06_Legendary}
         
-        {hotfixes:com_Baroness_set_06_Celestial}
+        {mp:com_Baroness_set_06_Celestial}
         
-        {hotfixes:com_Baroness_set_06_EridianVanquisher}
+        {mp:com_Baroness_set_06_EridianVanquisher}
 
-        {hotfixes:com_Baroness_set_07_Chronicler}
+        {mp:com_Baroness_set_07_Chronicler}
 
-        {hotfixes:com_Baroness_set_Petunia}
+        {mp:com_Baroness_set_Petunia}
 
     #</Baroness>
 
@@ -495,25 +486,25 @@ mod_str = """#<{mod_name}>
 
         # Allows Doppelganer COM drops when that class joins
 
-        {hotfixes:com_Doppel_set_01_Common}
+        {mp:com_Doppel_set_01_Common}
 
-        {hotfixes:com_Doppel_set_01_Common_1st}
+        {mp:com_Doppel_set_01_Common_1st}
         
-        {hotfixes:com_Doppel_set_02_Uncommon}
+        {mp:com_Doppel_set_02_Uncommon}
         
-        {hotfixes:com_Doppel_set_04_Rare}
+        {mp:com_Doppel_set_04_Rare}
         
-        {hotfixes:com_Doppel_set_05_VeryRare}
+        {mp:com_Doppel_set_05_VeryRare}
         
-        {hotfixes:com_Doppel_set_06_Legendary}
+        {mp:com_Doppel_set_06_Legendary}
         
-        {hotfixes:com_Doppel_set_06_Celestial}
+        {mp:com_Doppel_set_06_Celestial}
         
-        {hotfixes:com_Doppel_set_06_EridianVanquisher}
+        {mp:com_Doppel_set_06_EridianVanquisher}
 
-        {hotfixes:com_Doppel_set_07_Chronicler}
+        {mp:com_Doppel_set_07_Chronicler}
 
-        {hotfixes:com_Doppel_set_Petunia}
+        {mp:com_Doppel_set_Petunia}
 
     #</Doppelganger>
 
@@ -521,7 +512,7 @@ mod_str = """#<{mod_name}>
 """.format(
         mod_name=mod_name,
         mod_version=mod_version,
-        hotfixes=hfs,
+        mp=mp,
         set_01_Common=initial_sets['01_Common'],
         set_01_Common_1st=initial_sets['01_Common_1st'],
         set_02_Uncommon=initial_sets['02_Uncommon'],
@@ -538,6 +529,5 @@ mod_str = """#<{mod_name}>
 ### Output to a file.
 ###
 
-with open(output_filename, 'w') as df:
-    df.write(mod_str)
+mp.human_str_to_blcm_filename(mod_str, output_filename)
 print('Wrote mod file to: {}'.format(output_filename))
