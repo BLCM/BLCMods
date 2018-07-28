@@ -54,6 +54,22 @@ https://imgur.com/ysywYSz
 - The recharge rate is increase in order for the nova to proc more often.
 - Mostly nova shields do dissapointing damage at higher levels, hence the massive increase in power, yet it's not insane enough to make   Gaige invincible.
 
+[-- Koffee --]
+
+- Replaces the Roaster
+- Only comes in fire element
+- Fires around 10 Bandit e-tech rockets
+- The projectiles are slow moving and arch pretty hard
+
+A picture
+https://imgur.com/uftzImr
+
+- This weapon is of course based off coffee.
+- When you fire, you shoot a giant blob of purple lava-like prazma that's a little hot.
+- The projectile arch pretty hard, so the main goal was to trade range for damage.
+- Meaning that you need to fire this weapon differently to achieve success.
+- Also since it's a Bandit e-tech, the prazma melts, leaving residue, adds to the liquid-like theme in my eyes.
+
 [-- The Switch It! --]
 
 - Replaces the Deliverence
