@@ -4,7 +4,7 @@ This is where I'll be keeping all my gear that's either too small or doesn't rea
 
 Currently Includes:
 
-[-- AGL Loaders --]
+[-- **AGL Loaders** --]
 
 - Changes the name of Angelic Guards to AGL Loaders, that's it
 
@@ -14,7 +14,7 @@ Currently Includes:
 A Picture
 https://imgur.com/4rrLoH7
 
-[-- Flame of the Firehawk Skin --]
+[-- **Flame of the Firehawk Skin** --]
 
 - A simple change to the FOTF to give it the purple Dahl skin
 - It gives it a similar look to the Sunshine from TPS as well as adding a fire look
@@ -22,7 +22,7 @@ https://imgur.com/4rrLoH7
 A Picture 
 https://imgur.com/9id2reQ
 
-[-- Krusty Krawmerax Challenge --]
+[-- **Krusty Krawmerax Challenge** --]
 
 - This mod is made for those who enjoy the adventure of farming for the Norfleet and the Twister, very strong and but very hard to get.
 - Since there's no real reason to farm Son of Crawmerax, I decided to give him a unique pearlescent rocket launcher called the Crab Cannon which is an   extremely rare drop.
