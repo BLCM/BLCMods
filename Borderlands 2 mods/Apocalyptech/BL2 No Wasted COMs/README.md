@@ -20,8 +20,8 @@ to drop both Siren and Mechromancer COMs.
 Usage
 =====
 
-This mod must be run by adding it into FilterTool with `Developer tools` ->
-`Add single mod`.  Choose the file `BL2 No Wasted COMs.txt` and have at it!
+This mod must be added to BLCMM using `File -> Import single mod`.
+Choose the file `BL2 No Wasted COMs.blcm` and have at it!
 
 Mod Construction / Implementation Details
 =========================================
@@ -29,15 +29,13 @@ Mod Construction / Implementation Details
 *(This section is only relevant for someone looking to edit the mod in the
 same way I do, or just someone curious about my mod construction techniques.
 If you're just looking to run the mod, see the "Usage" section above.  The
-mod can, of course, be edited directly in FilterTool/BLCMM as well, once it's
+mod can, of course, be edited directly in BLCMM as well, once it's
 been imported.)*
 
-This mod is actually generated using a simple little Python script named
-`generate-source.py`, and a companion `create.sh`.  The script makes use of
-`hotfix.py` from the parent directory.  You'd need to copy (or symlink, if
-you're on Mac or Linux) `hotfix.py` into this directory in order to run the
-script.  It also needs my `conv_to_mod.py` to be available in the parent
-directory.
+This mod is generated using a Python script named `generate-mod.py`.
+The script makes use of `modprocessor.py` from the parent directory.
+You'll need to copy (or symlink, if you're on Mac or Linux) `modprocessor.py`
+into this directory in order to run the script.
 
 License
 =======
@@ -50,6 +48,10 @@ This mod itself is licensed under
 
 Changelog
 =========
+
+**v1.1.0**, July 27, 2018:
+ * Converted to BLCM format *(BLCMM is now required; FilterTool is not supported)*
+ * Added a byline to the mod header comments
 
 **v1.0.1**, April 25, 2018:
  * Changed mod to have a `.txt` extension

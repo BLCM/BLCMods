@@ -29,14 +29,15 @@
 import sys
 
 try:
-    from hotfixes import Hotfixes
+    from modprocessor import ModProcessor
+    mp = ModProcessor()
 except ModuleNotFoundError:
     print('')
-    print('****************************************************************')
-    print('To run this script, you will need to copy or symlink hotfixes.py')
+    print('********************************************************************')
+    print('To run this script, you will need to copy or symlink modprocessor.py')
     print('from the parent directory, so it exists here as well.  Sorry for')
     print('the bother!')
-    print('****************************************************************')
+    print('********************************************************************')
     print('')
     sys.exit(1)
 
@@ -45,8 +46,8 @@ except ModuleNotFoundError:
 ###
 
 mod_name = 'BL2 Movement Speed Cheats'
-mod_version = '1.2.0'
-output_filename = '{}.txt'.format(mod_name)
+mod_version = '1.3.0'
+output_filename = '{}.blcm'.format(mod_name)
 
 ###
 ### Generation
@@ -55,24 +56,12 @@ output_filename = '{}.txt'.format(mod_name)
 segments = {}
 
 # Loop through a number of control vars
-first_profile = True
 for (profile_name, profile_desc,
             (ground_speed, air_speed, injured_speed, crouched_pct, jump_z, air_control_pct, ladder_speed)
             ) in [
         ('reasonable', 'Reasonable Improvements', (650,  700,  300, 1,   750, .8, 400)),
         ('extreme',    'Extreme Improvements',    (1000, 1100, 500, 1,   900, .9, 600)),
         ('stock',      'Stock Values',            (440,  500,  150, 0.5, 630, .11, 200))]:
-
-    # Set up a new hotfix object
-    hfs = Hotfixes(nameprefix=profile_name.capitalize())
-
-    # Disable everything but the first option, by default
-    if first_profile:
-        line_prefix = ''
-        line_suffix = ''
-    else:
-        line_prefix = '#'
-        line_suffix = '<off>'
 
     char_segments = {}
     for (name, streaming_obj, player_obj) in [
@@ -84,78 +73,61 @@ for (profile_name, profile_desc,
             ('Zero', 'GD_Assassin_Streaming.Pawn_Assassin', 'GD_Assassin.Character.CharClass_Assassin'),
             ]:
         (pkg, shortobj) = streaming_obj.split('.', 1)
-        hfs.add_demand_hotfix('{}GroundSpeed'.format(name),
-            '{}GroundSpeed'.format(name),
-            '{},{},GroundSpeed,,{}'.format(pkg, streaming_obj, ground_speed),
-            activated=first_profile)
-        hfs.add_demand_hotfix('{}GroundSpeedBaseValue'.format(name),
-            '{}GroundSpeedBaseValue'.format(name),
-            '{},{},GroundSpeedBaseValue,,{}'.format(pkg, streaming_obj, ground_speed),
-            activated=first_profile)
-        hfs.add_demand_hotfix('{}AirSpeed'.format(name),
-            '{}AirSpeed'.format(name),
-            '{},{},AirSpeed,,{}'.format(pkg, streaming_obj, air_speed),
-            activated=first_profile)
-        hfs.add_demand_hotfix('{}AirSpeedBaseValue'.format(name),
-            '{}AirSpeedBaseValue'.format(name),
-            '{},{},AirSpeedBaseValue,,{}'.format(pkg, streaming_obj, air_speed),
-            activated=first_profile)
-        hfs.add_demand_hotfix('{}JumpZ'.format(name),
-            '{}JumpZ'.format(name),
-            '{},{},JumpZ,,{}'.format(pkg, streaming_obj, jump_z),
-            activated=first_profile)
-        hfs.add_demand_hotfix('{}JumpZBaseValue'.format(name),
-            '{}JumpZBaseValue'.format(name),
-            '{},{},JumpZBaseValue,,{}'.format(pkg, streaming_obj, jump_z),
-            activated=first_profile)
-        hfs.add_demand_hotfix('{}CrouchedPct'.format(name),
-            '{}CrouchedPct'.format(name),
-            '{},{},CrouchedPct,,{}'.format(pkg, streaming_obj, crouched_pct),
-            activated=first_profile)
-        segment_fmt = """#<{name}>{line_suffix}
+        mp.register_str('GroundSpeed',
+            'demand {} set {} GroundSpeed {}'.format(pkg, streaming_obj, ground_speed))
+        mp.register_str('GroundSpeedBaseValue',
+            'demand {} set {} GroundSpeedBaseValue {}'.format(pkg, streaming_obj, ground_speed))
+        mp.register_str('AirSpeed',
+            'demand {} set {} AirSpeed {}'.format(pkg, streaming_obj, air_speed))
+        mp.register_str('AirSpeedBaseValue',
+            'demand {} set {} AirSpeedBaseValue {}'.format(pkg, streaming_obj, air_speed))
+        mp.register_str('JumpZ',
+            'demand {} set {} JumpZ {}'.format(pkg, streaming_obj, jump_z))
+        mp.register_str('JumpZBaseValue',
+            'demand {} set {} JumpZBaseValue {}'.format(pkg, streaming_obj, jump_z))
+        mp.register_str('CrouchedPct',
+            'demand {} set {} CrouchedPct {}'.format(pkg, streaming_obj, crouched_pct))
+        char_segments[name] = """#<{name}>
 
-                {line_prefix}# The set statements apply the settings initially{line_suffix}
+                # The set statements apply the settings initially
 
-                {line_prefix}set {player_obj} GroundSpeed {ground_speed}{line_suffix}
+                set {player_obj} GroundSpeed {ground_speed}
 
-                {line_prefix}set {player_obj} AirSpeed {air_speed}{line_suffix}
+                set {player_obj} AirSpeed {air_speed}
 
-                {line_prefix}set {player_obj} CrouchedPct {crouched_pct}{line_suffix}
+                set {player_obj} CrouchedPct {crouched_pct}
 
-                {line_prefix}set {player_obj} JumpZ {jump_z}{line_suffix}
+                set {player_obj} JumpZ {jump_z}
 
-                {line_prefix}# The hotfixes apply once you respawn or exit FFYL{line_suffix}
-                {line_prefix}# (These may be a bit overboard.  Not sure if you need the BaseValue{line_suffix}
-                {line_prefix}# ones, or if the BaseValue ones are the only ones you need, etc.){line_suffix}
+                # The hotfixes apply once you respawn or exit FFYL
+                # (These may be a bit overboard.  Not sure if you need the BaseValue
+                # ones, or if the BaseValue ones are the only ones you need, etc.)
 
-                {{hotfixes:{name}GroundSpeed}}
+                {mp:GroundSpeed}
 
-                {{hotfixes:{name}GroundSpeedBaseValue}}
+                {mp:GroundSpeedBaseValue}
 
-                {{hotfixes:{name}AirSpeed}}
+                {mp:AirSpeed}
 
-                {{hotfixes:{name}AirSpeedBaseValue}}
+                {mp:AirSpeedBaseValue}
 
-                {{hotfixes:{name}JumpZ}}
+                {mp:JumpZ}
 
-                {{hotfixes:{name}JumpZBaseValue}}
+                {mp:JumpZBaseValue}
 
-                {{hotfixes:{name}CrouchedPct}}
+                {mp:CrouchedPct}
 
             #</{name}>""".format(
                 name=name,
-                line_prefix=line_prefix,
-                line_suffix=line_suffix,
                 player_obj=player_obj,
                 ground_speed=ground_speed,
                 air_speed=air_speed,
                 crouched_pct=crouched_pct,
                 jump_z=jump_z,
+                mp=mp,
                 )
 
-        char_segments[name] = segment_fmt.format(hotfixes=hfs)
-
-    segments[profile_name] = """#<{profile_desc}>{line_suffix}
+    segments[profile_name] = """#<{profile_desc}>
 
             {axton}
 
@@ -169,22 +141,20 @@ for (profile_name, profile_desc,
 
             {zero}
 
-            #<Global Movement Vars>{line_suffix}
+            #<Global Movement Vars>
 
-                {line_prefix}# These variables aren't player-specific, and don't seem to require hotfixes{line_suffix}
-                {line_prefix}# to apply post-death-or-FFYL{line_suffix}
+                # These variables aren't player-specific, and don't seem to require hotfixes
+                # to apply post-death-or-FFYL
 
-                {line_prefix}set GD_PlayerShared.injured.PlayerInjuredDefinition InjuredMovementSpeed {injured_speed}{line_suffix}
+                set GD_PlayerShared.injured.PlayerInjuredDefinition InjuredMovementSpeed {injured_speed}
 
-                {line_prefix}set GD_Globals.General.Globals PlayerAirControl {air_control_pct}{line_suffix}
+                set GD_Globals.General.Globals PlayerAirControl {air_control_pct}
 
-                {line_prefix}set Engine.Pawn LadderSpeed {ladder_speed}{line_suffix}
+                set Engine.Pawn LadderSpeed {ladder_speed}
 
             #</Global Movement Vars>
 
         #</{profile_desc}>""".format(
-            line_prefix=line_prefix,
-            line_suffix=line_suffix,
             profile_desc=profile_desc,
             axton=char_segments['Axton'],
             gaige=char_segments['Gaige'],
@@ -197,11 +167,11 @@ for (profile_name, profile_desc,
             ladder_speed=ladder_speed,
             )
 
-    first_profile = False
-
-mod_str = """#<{mod_name}>
+mod_str = """BL2
+#<{mod_name}>
 
     # {mod_name} v{mod_version}
+    # by Apocalyptech
     # Licensed under Public Domain / CC0 1.0 Universal
     #
     # Ups the movement speed of all characters (including while crouched and during
@@ -225,6 +195,5 @@ mod_str = """#<{mod_name}>
     stock=segments['stock'],
     )
 
-with open(output_filename, 'w') as df:
-    df.write(mod_str)
+mp.human_str_to_blcm_filename(mod_str, output_filename)
 print('Wrote mod file to: {}'.format(output_filename))
