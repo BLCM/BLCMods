@@ -1,8 +1,9 @@
 Apocalyptech's Borderlands 2 Mods
 =================================
 
-This is a collection of the mods that I've put together for BL2.  My TPS
-mods are likewise stored [in my Pre-Sequel dir](/Pre Sequel Mods/).
+This is a collection of the mods that I've put together for BL2.  I've got
+an area in the `Pre Sequel Mods` directory as well, so feel free to check
+that out (though damned if I can get this README to link to it).
 
 The mods found in the main BLCMods repo are intended to be the full, most
 recently-released version.  I do most of my work on mods
