@@ -1,0 +1,33 @@
+<BLCMM v="1">
+#<!!!You opened a file saved with BLCMM in FilterTool. Please update to BLCMM to properly open this file!!!>
+	<head>
+		<type name="BL2" offline="false"/>
+	</head>
+	<body>
+		<category name="Torgue Brand Tweaks V 1.1a by Orudeon">
+			<comment>Alters Torgue weapons to improve quality of life issues.</comment>
+			<category name="Projectiles">
+				<comment>Doubles projectile speed of all common Torgue guns.</comment>
+				<code profiles="default">set GD_Weap_Pistol.FiringModes.Bullets_Pistol_Torgue_GyroJet Speed 1600</code>
+				<code profiles="default">set GD_Weap_Shotgun.FiringModes.Bullets_Shotgun_Torgue_GyroJet Speed 1200</code>
+				<code profiles="default">set GD_Weap_AssaultRifle.FiringModes.Bullets_Assault_Torgue_GyroJet Speed 2000</code>
+			</category>
+			<category name="Pistols">
+				<comment>Increases explosion radius by 50%.</comment>
+				<code profiles="default">set GD_Weap_Pistol.FiringModes.Bullets_Pistol_Torgue_GyroJet:Behavior_Explode_5 DamageRadiusFormula (BaseValueConstant=90.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.250000)</code>
+			</category>
+			<category name="12 Pounder">
+				<comment>Gives the 12 Pounder two additional rockets in its magazine.</comment>
+				<code profiles="default">set GD_Orchid_BossWeapons.Launcher.L_Barrel_Torgue_12Pounder WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))</code>
+			</category>
+		</category>
+	</body>
+</BLCMM>
+
+#Commands:
+set GD_Weap_Pistol.FiringModes.Bullets_Pistol_Torgue_GyroJet Speed 1600
+set GD_Weap_Shotgun.FiringModes.Bullets_Shotgun_Torgue_GyroJet Speed 1200
+set GD_Weap_AssaultRifle.FiringModes.Bullets_Assault_Torgue_GyroJet Speed 2000
+set GD_Weap_Pistol.FiringModes.Bullets_Pistol_Torgue_GyroJet:Behavior_Explode_5 DamageRadiusFormula (BaseValueConstant=90.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.250000)
+set GD_Orchid_BossWeapons.Launcher.L_Barrel_Torgue_12Pounder WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
