@@ -31,14 +31,15 @@
 import sys
 
 try:
-    from hotfixes import Hotfixes
+    from modprocessor import ModProcessor
+    mp = ModProcessor()
 except ModuleNotFoundError:
     print('')
-    print('****************************************************************')
-    print('To run this script, you will need to copy or symlink hotfixes.py')
+    print('********************************************************************')
+    print('To run this script, you will need to copy or symlink modprocessor.py')
     print('from the parent directory, so it exists here as well.  Sorry for')
     print('the bother!')
-    print('****************************************************************')
+    print('********************************************************************')
     print('')
     sys.exit(1)
 
@@ -47,14 +48,13 @@ except ModuleNotFoundError:
 ###
 
 mod_name = 'BL2 No Wasted COMs'
-mod_version = '1.0.1'
-output_filename = '{}-source.txt'.format(mod_name)
+mod_version = '1.1.0'
+output_filename = '{}.blcm'.format(mod_name)
 
 ###
 ### Generate hotfixes!
 ###
 
-hfs = Hotfixes()
 pools = [
         ('01_Common',
             'GD_Itempools.ClassModPools.Pool_ClassMod_01_Common',
@@ -121,8 +121,7 @@ characters = [
 def generate_balanced_items(items):
     stanzas = []
     for item in items:
-        stanzas.append("""
-            ( 
+        stanzas.append("""( 
                 ItmPoolDefinition=ItemPoolDefinition'{}', 
                 InvBalanceDefinition=None, 
                 Probability=( 
@@ -132,8 +131,7 @@ def generate_balanced_items(items):
                     BaseValueScaleConstant=1.000000 
                 ), 
                 bDropOnDeath=True 
-            )
-            """.format(item))
+            )""".format(item))
     return '({})'.format(','.join(stanzas))
 initial_sets = {}
 for (weight, pool, individual_weight) in pools:
@@ -155,14 +153,11 @@ for (weight, pool, individual_weight) in pools:
 # to override that.
 for (weight, pool, individual_weight) in pools:
     for idx in range(6):
-        hfs.add_level_hotfix('com_id_clear_{}_{}'.format(weight, idx),
-            'COMIDClear',
-            """,{pool},
-            BalancedItems[{idx}].Probability.InitializationDefinition,,
-            None
-            """.format(
+        mp.register_str('com_id_clear_{}_{}'.format(weight, idx),
+            'level None set {pool} BalancedItems[{idx}].Probability.InitializationDefinition None'.format(
                 pool=pool,
-                idx=idx))
+                idx=idx
+                ))
 
 # OnDemand hotfixes for each player class
 for idx, (streaming, pool_reg, pool_aster, pool_lobelia) in enumerate(characters):
@@ -170,14 +165,8 @@ for idx, (streaming, pool_reg, pool_aster, pool_lobelia) in enumerate(characters
     short = streaming.split('_')[-2]
 
     for (weight, pool, individual_weight) in pools:
-        hfs.add_demand_hotfix('com_{}_set_{}'.format(short, weight),
-            'COM{}Set'.format(short),
-            """
-            {streaming},
-            {pool},
-            BalancedItems[{idx}].Probability.BaseValueConstant,,
-            1
-            """.format(
+        mp.register_str('com_{}_set_{}'.format(short, weight),
+            'demand {streaming} set {pool} BalancedItems[{idx}].Probability.BaseValueConstant 1'.format(
                     streaming=streaming,
                     pool=pool,
                     idx=idx,
@@ -187,9 +176,11 @@ for idx, (streaming, pool_reg, pool_aster, pool_lobelia) in enumerate(characters
 ### Generate the mod string
 ###
 
-mod_str = """#<{mod_name}>
+mod_str = """BL2
+#<{mod_name}>
 
     # {mod_name} v{mod_version}
+    # by Apocalyptech
     # Licensed under Public Domain / CC0 1.0 Universal
     #
     # Sets the game to only drop COMs for the player classes who are actually
@@ -227,101 +218,101 @@ mod_str = """#<{mod_name}>
         # Something hotfix-like modifies the InitializationDefinition of these pools
         # on level load, so we need a level-load hotfix to clear it out.
 
-        {hotfixes:com_id_clear_01_Common_0}
+        {mp:com_id_clear_01_Common_0}
         
-        {hotfixes:com_id_clear_01_Common_1}
+        {mp:com_id_clear_01_Common_1}
         
-        {hotfixes:com_id_clear_01_Common_2}
+        {mp:com_id_clear_01_Common_2}
         
-        {hotfixes:com_id_clear_01_Common_3}
+        {mp:com_id_clear_01_Common_3}
         
-        {hotfixes:com_id_clear_01_Common_4}
+        {mp:com_id_clear_01_Common_4}
         
-        {hotfixes:com_id_clear_01_Common_5}
+        {mp:com_id_clear_01_Common_5}
 
-        {hotfixes:com_id_clear_02_Uncommon_0}
+        {mp:com_id_clear_02_Uncommon_0}
         
-        {hotfixes:com_id_clear_02_Uncommon_1}
+        {mp:com_id_clear_02_Uncommon_1}
         
-        {hotfixes:com_id_clear_02_Uncommon_2}
+        {mp:com_id_clear_02_Uncommon_2}
         
-        {hotfixes:com_id_clear_02_Uncommon_3}
+        {mp:com_id_clear_02_Uncommon_3}
         
-        {hotfixes:com_id_clear_02_Uncommon_4}
+        {mp:com_id_clear_02_Uncommon_4}
         
-        {hotfixes:com_id_clear_02_Uncommon_5}
+        {mp:com_id_clear_02_Uncommon_5}
 
-        {hotfixes:com_id_clear_04_Rare_0}
+        {mp:com_id_clear_04_Rare_0}
         
-        {hotfixes:com_id_clear_04_Rare_1}
+        {mp:com_id_clear_04_Rare_1}
         
-        {hotfixes:com_id_clear_04_Rare_2}
+        {mp:com_id_clear_04_Rare_2}
         
-        {hotfixes:com_id_clear_04_Rare_3}
+        {mp:com_id_clear_04_Rare_3}
         
-        {hotfixes:com_id_clear_04_Rare_4}
+        {mp:com_id_clear_04_Rare_4}
         
-        {hotfixes:com_id_clear_04_Rare_5}
+        {mp:com_id_clear_04_Rare_5}
 
-        {hotfixes:com_id_clear_05_VeryRare_0}
+        {mp:com_id_clear_05_VeryRare_0}
         
-        {hotfixes:com_id_clear_05_VeryRare_1}
+        {mp:com_id_clear_05_VeryRare_1}
         
-        {hotfixes:com_id_clear_05_VeryRare_2}
+        {mp:com_id_clear_05_VeryRare_2}
         
-        {hotfixes:com_id_clear_05_VeryRare_3}
+        {mp:com_id_clear_05_VeryRare_3}
         
-        {hotfixes:com_id_clear_05_VeryRare_4}
+        {mp:com_id_clear_05_VeryRare_4}
         
-        {hotfixes:com_id_clear_05_VeryRare_5}
+        {mp:com_id_clear_05_VeryRare_5}
 
-        {hotfixes:com_id_clear_06_Legendary_0}
+        {mp:com_id_clear_06_Legendary_0}
         
-        {hotfixes:com_id_clear_06_Legendary_1}
+        {mp:com_id_clear_06_Legendary_1}
         
-        {hotfixes:com_id_clear_06_Legendary_2}
+        {mp:com_id_clear_06_Legendary_2}
         
-        {hotfixes:com_id_clear_06_Legendary_3}
+        {mp:com_id_clear_06_Legendary_3}
         
-        {hotfixes:com_id_clear_06_Legendary_4}
+        {mp:com_id_clear_06_Legendary_4}
         
-        {hotfixes:com_id_clear_06_Legendary_5}
+        {mp:com_id_clear_06_Legendary_5}
 
-        {hotfixes:com_id_clear_06_SlayerOfTerramorphous_0}
+        {mp:com_id_clear_06_SlayerOfTerramorphous_0}
         
-        {hotfixes:com_id_clear_06_SlayerOfTerramorphous_1}
+        {mp:com_id_clear_06_SlayerOfTerramorphous_1}
         
-        {hotfixes:com_id_clear_06_SlayerOfTerramorphous_2}
+        {mp:com_id_clear_06_SlayerOfTerramorphous_2}
         
-        {hotfixes:com_id_clear_06_SlayerOfTerramorphous_3}
+        {mp:com_id_clear_06_SlayerOfTerramorphous_3}
         
-        {hotfixes:com_id_clear_06_SlayerOfTerramorphous_4}
+        {mp:com_id_clear_06_SlayerOfTerramorphous_4}
 
-        {hotfixes:com_id_clear_06_SlayerOfTerramorphous_5}
+        {mp:com_id_clear_06_SlayerOfTerramorphous_5}
 
-        {hotfixes:com_id_clear_00_Aster_0}
+        {mp:com_id_clear_00_Aster_0}
         
-        {hotfixes:com_id_clear_00_Aster_1}
+        {mp:com_id_clear_00_Aster_1}
         
-        {hotfixes:com_id_clear_00_Aster_2}
+        {mp:com_id_clear_00_Aster_2}
         
-        {hotfixes:com_id_clear_00_Aster_3}
+        {mp:com_id_clear_00_Aster_3}
         
-        {hotfixes:com_id_clear_00_Aster_4}
+        {mp:com_id_clear_00_Aster_4}
 
-        {hotfixes:com_id_clear_00_Aster_5}
+        {mp:com_id_clear_00_Aster_5}
 
-        {hotfixes:com_id_clear_Lobelia_0}
+        {mp:com_id_clear_Lobelia_0}
         
-        {hotfixes:com_id_clear_Lobelia_1}
+        {mp:com_id_clear_Lobelia_1}
         
-        {hotfixes:com_id_clear_Lobelia_2}
+        {mp:com_id_clear_Lobelia_2}
         
-        {hotfixes:com_id_clear_Lobelia_3}
+        {mp:com_id_clear_Lobelia_3}
         
-        {hotfixes:com_id_clear_Lobelia_4}
+        {mp:com_id_clear_Lobelia_4}
 
-        {hotfixes:com_id_clear_Lobelia_5}
+        {mp:com_id_clear_Lobelia_5}
 
     #</Level Clear>
 
@@ -329,21 +320,21 @@ mod_str = """#<{mod_name}>
 
         # Allows Assassin COM drops when that class joins
 
-        {hotfixes:com_Assassin_set_01_Common}
+        {mp:com_Assassin_set_01_Common}
         
-        {hotfixes:com_Assassin_set_02_Uncommon}
+        {mp:com_Assassin_set_02_Uncommon}
         
-        {hotfixes:com_Assassin_set_04_Rare}
+        {mp:com_Assassin_set_04_Rare}
         
-        {hotfixes:com_Assassin_set_05_VeryRare}
+        {mp:com_Assassin_set_05_VeryRare}
         
-        {hotfixes:com_Assassin_set_06_Legendary}
+        {mp:com_Assassin_set_06_Legendary}
         
-        {hotfixes:com_Assassin_set_06_SlayerOfTerramorphous}
+        {mp:com_Assassin_set_06_SlayerOfTerramorphous}
 
-        {hotfixes:com_Assassin_set_00_Aster}
+        {mp:com_Assassin_set_00_Aster}
 
-        {hotfixes:com_Assassin_set_Lobelia}
+        {mp:com_Assassin_set_Lobelia}
 
     #</Assassin>
 
@@ -351,21 +342,21 @@ mod_str = """#<{mod_name}>
 
         # Allows Mercenary COM drops when that class joins
 
-        {hotfixes:com_Mercenary_set_01_Common}
+        {mp:com_Mercenary_set_01_Common}
         
-        {hotfixes:com_Mercenary_set_02_Uncommon}
+        {mp:com_Mercenary_set_02_Uncommon}
         
-        {hotfixes:com_Mercenary_set_04_Rare}
+        {mp:com_Mercenary_set_04_Rare}
         
-        {hotfixes:com_Mercenary_set_05_VeryRare}
+        {mp:com_Mercenary_set_05_VeryRare}
         
-        {hotfixes:com_Mercenary_set_06_Legendary}
+        {mp:com_Mercenary_set_06_Legendary}
         
-        {hotfixes:com_Mercenary_set_06_SlayerOfTerramorphous}
+        {mp:com_Mercenary_set_06_SlayerOfTerramorphous}
 
-        {hotfixes:com_Mercenary_set_00_Aster}
+        {mp:com_Mercenary_set_00_Aster}
 
-        {hotfixes:com_Mercenary_set_Lobelia}
+        {mp:com_Mercenary_set_Lobelia}
 
     #</Mercenary>
 
@@ -373,21 +364,21 @@ mod_str = """#<{mod_name}>
 
         # Allows Siren COM drops when that class joins
 
-        {hotfixes:com_Siren_set_01_Common}
+        {mp:com_Siren_set_01_Common}
         
-        {hotfixes:com_Siren_set_02_Uncommon}
+        {mp:com_Siren_set_02_Uncommon}
         
-        {hotfixes:com_Siren_set_04_Rare}
+        {mp:com_Siren_set_04_Rare}
         
-        {hotfixes:com_Siren_set_05_VeryRare}
+        {mp:com_Siren_set_05_VeryRare}
         
-        {hotfixes:com_Siren_set_06_Legendary}
+        {mp:com_Siren_set_06_Legendary}
         
-        {hotfixes:com_Siren_set_06_SlayerOfTerramorphous}
+        {mp:com_Siren_set_06_SlayerOfTerramorphous}
 
-        {hotfixes:com_Siren_set_00_Aster}
+        {mp:com_Siren_set_00_Aster}
 
-        {hotfixes:com_Siren_set_Lobelia}
+        {mp:com_Siren_set_Lobelia}
 
     #</Siren>
 
@@ -395,21 +386,21 @@ mod_str = """#<{mod_name}>
 
         # Allows Soldier COM drops when that class joins
 
-        {hotfixes:com_Soldier_set_01_Common}
+        {mp:com_Soldier_set_01_Common}
         
-        {hotfixes:com_Soldier_set_02_Uncommon}
+        {mp:com_Soldier_set_02_Uncommon}
         
-        {hotfixes:com_Soldier_set_04_Rare}
+        {mp:com_Soldier_set_04_Rare}
         
-        {hotfixes:com_Soldier_set_05_VeryRare}
+        {mp:com_Soldier_set_05_VeryRare}
         
-        {hotfixes:com_Soldier_set_06_Legendary}
+        {mp:com_Soldier_set_06_Legendary}
         
-        {hotfixes:com_Soldier_set_06_SlayerOfTerramorphous}
+        {mp:com_Soldier_set_06_SlayerOfTerramorphous}
 
-        {hotfixes:com_Soldier_set_00_Aster}
+        {mp:com_Soldier_set_00_Aster}
 
-        {hotfixes:com_Soldier_set_Lobelia}
+        {mp:com_Soldier_set_Lobelia}
 
     #</Soldier>
 
@@ -417,21 +408,21 @@ mod_str = """#<{mod_name}>
 
         # Allows Psycho COM drops when that class joins
 
-        {hotfixes:com_Psycho_set_01_Common}
+        {mp:com_Psycho_set_01_Common}
         
-        {hotfixes:com_Psycho_set_02_Uncommon}
+        {mp:com_Psycho_set_02_Uncommon}
         
-        {hotfixes:com_Psycho_set_04_Rare}
+        {mp:com_Psycho_set_04_Rare}
         
-        {hotfixes:com_Psycho_set_05_VeryRare}
+        {mp:com_Psycho_set_05_VeryRare}
         
-        {hotfixes:com_Psycho_set_06_Legendary}
+        {mp:com_Psycho_set_06_Legendary}
         
-        {hotfixes:com_Psycho_set_06_SlayerOfTerramorphous}
+        {mp:com_Psycho_set_06_SlayerOfTerramorphous}
 
-        {hotfixes:com_Psycho_set_00_Aster}
+        {mp:com_Psycho_set_00_Aster}
 
-        {hotfixes:com_Psycho_set_Lobelia}
+        {mp:com_Psycho_set_Lobelia}
 
     #</Psycho>
 
@@ -439,21 +430,21 @@ mod_str = """#<{mod_name}>
 
         # Allows Mechromancer COM drops when that class joins
 
-        {hotfixes:com_Mechro_set_01_Common}
+        {mp:com_Mechro_set_01_Common}
         
-        {hotfixes:com_Mechro_set_02_Uncommon}
+        {mp:com_Mechro_set_02_Uncommon}
         
-        {hotfixes:com_Mechro_set_04_Rare}
+        {mp:com_Mechro_set_04_Rare}
         
-        {hotfixes:com_Mechro_set_05_VeryRare}
+        {mp:com_Mechro_set_05_VeryRare}
         
-        {hotfixes:com_Mechro_set_06_Legendary}
+        {mp:com_Mechro_set_06_Legendary}
         
-        {hotfixes:com_Mechro_set_06_SlayerOfTerramorphous}
+        {mp:com_Mechro_set_06_SlayerOfTerramorphous}
 
-        {hotfixes:com_Mechro_set_00_Aster}
+        {mp:com_Mechro_set_00_Aster}
 
-        {hotfixes:com_Mechro_set_Lobelia}
+        {mp:com_Mechro_set_Lobelia}
 
     #</Mechromancer>
 
@@ -461,7 +452,7 @@ mod_str = """#<{mod_name}>
 """.format(
         mod_name=mod_name,
         mod_version=mod_version,
-        hotfixes=hfs,
+        mp=mp,
         set_01_Common=initial_sets['01_Common'],
         set_02_Uncommon=initial_sets['02_Uncommon'],
         set_04_Rare=initial_sets['04_Rare'],
@@ -476,6 +467,5 @@ mod_str = """#<{mod_name}>
 ### Output to a file.
 ###
 
-with open(output_filename, 'w') as df:
-    df.write(mod_str)
+mp.human_str_to_blcm_filename(mod_str, output_filename)
 print('Wrote mod file to: {}'.format(output_filename))
