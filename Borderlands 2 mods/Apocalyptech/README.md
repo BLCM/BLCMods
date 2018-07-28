@@ -171,12 +171,12 @@ convert my custom mod-building format into a BLCM-style mod file as well.
 conv_to_human.py
 ----------------
 
-**NOTE:** This has *not* been updated yet to support the newer-style BLCM format;
-an updated version of this utility is still forthcoming.
-
-This utility can take an existing FilterTool-style patch/mod file, or the output
-from an `obj dump <foo>` from the Borderlands console, and convert it into a
-much easier-to-read-and-edit multiline file.
+This utility takes FT or BLCMM files and converts them to something extremely
+close to the custom format which `modprocessor.py` uses, and converts any
+single-line statements into multiline, if appropriate.  The file generated
+may not be 100% compatible with `modprocessor.py` -- I only really use this
+tool for manual verification and comparison, so it's not worth it to make it
+100%.  This can also be used on `obj dump` output to make that nicer as well.
 
 For instance, if you've got a file which contains the following:
 
@@ -198,14 +198,9 @@ For instance, if you've got a file which contains the following:
         bDropOnDeath=True
     )
 
-Much nicer!  For instance, to convert the main UCP patch to something more
-readable, you could do:
-
-    $ ./conv_to_human.py Patch.txt Patch-unpacked.txt
-
-Or whatever.  If you don't specify any filenames, this util will read/write
-to STDIN/STDOUT.  You an also use `-` as either of the filenames, if you
-wanted to use STDIN/STDOUT for one end but not the other.
+If you don't specify any filenames, this util will read/write to STDIN/STDOUT.
+You an also use `-` as either of the filenames, if you wanted to use
+STDIN/STDOUT for one end but not the other.
 
 The utility will ask you to overwrite the output file, if it's specified and
 already exists.  You can use the `-f` or `--force` option to automatically
