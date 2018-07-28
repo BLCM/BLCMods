@@ -297,6 +297,7 @@ A handful of containers will only ever drop common-level gear:
 There's also a few drop pools / containers / etc which I've purposefully
 left alone:
 
+* Golden Chest
 * Money Boxes / Laundry Machines / Toilets / etc
 * Loot Midgets
 

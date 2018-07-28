@@ -5,7 +5,7 @@
 	</head>
 	<body>
 		<category name="BL2 Cold Dead Hands">
-			<comment># BL2 Cold Dead Hands v1.1.1</comment>
+			<comment># BL2 Cold Dead Hands v1.1.2</comment>
 			<comment># by Apocalyptech</comment>
 			<comment># Licensed under Public Domain / CC0 1.0 Universal</comment>
 			<comment>#</comment>
@@ -1520,10 +1520,12 @@
 				</category>
 			</category>
 			<category name="Rocket Launchers in Global Equip Pools (choose one)" MUT="true">
-				<category name="Include Rocket Launchers">
-					<comment># Allow any enemy in the game which isn't specifically tied to a single</comment>
-					<comment># weapon type to equip rocket launchers.  This is pretty fun in Normal,</comment>
-					<comment># but is probably a bit much for people playing UVHM.</comment>
+				<category name="Full Rocket Launcher Equip Probability (7.7%)">
+					<comment># Any enemy in the game which isn't restricted to a single weapon type will</comment>
+					<comment># have about a 7.7% chance of equipping/dropping a rocket launcher.</comment>
+					<comment>#</comment>
+					<comment># Enemies who are hardcoded to *always* use launchers will, of course,</comment>
+					<comment># continue to do so regardless of this setting.</comment>
 					<hotfix name="ApocHotfix" level="None">
 						<code profiles="default">set GD_CustomItemPools_MainGame.Siren.MinecraftSkins BalancedItems[5].Probability.BaseValueScaleConstant 1</code>
 						<code profiles="default">set GD_CustomItemPools_MainGame.Soldier.MinecraftSkins BalancedItems[5].Probability.BaseValueScaleConstant 1</code>
@@ -1537,10 +1539,69 @@
 						<code profiles="default">set GD_CustomItemPools_Lilac.Psycho.White BalancedItems[5].Probability.BaseValueScaleConstant 1</code>
 					</hotfix>
 				</category>
-				<category name="Exclude Rocket Launchers">
-					<comment># The only enemies who will equip rocket launchers are the ones who are</comment>
-					<comment># specifically set to use launchers exclusively.  (This is the Borderlands</comment>
-					<comment># default behavior)</comment>
+				<category name="3/4 Rocket Launcher Equip Probability (5.9%)">
+					<comment># Any enemy in the game which isn't restricted to a single weapon type will</comment>
+					<comment># have about a 5.9% chance of equipping/dropping a rocket launcher.</comment>
+					<comment>#</comment>
+					<comment># Enemies who are hardcoded to *always* use launchers will, of course,</comment>
+					<comment># continue to do so regardless of this setting.</comment>
+					<hotfix name="ApocHotfix" level="None">
+						<code profiles="">set GD_CustomItemPools_MainGame.Siren.MinecraftSkins BalancedItems[5].Probability.BaseValueScaleConstant 0.75</code>
+						<code profiles="">set GD_CustomItemPools_MainGame.Soldier.MinecraftSkins BalancedItems[5].Probability.BaseValueScaleConstant 0.75</code>
+						<code profiles="">set GD_CustomItemPools_Lilac.Psycho.PurpleDark BalancedItems[5].Probability.BaseValueScaleConstant 0.75</code>
+						<code profiles="">set GD_CustomItemPools_MainGame.Assassin.PurpleDark BalancedItems[5].Probability.BaseValueScaleConstant 0.75</code>
+						<code profiles="">set GD_CustomItemPools_MainGame.Mercenary.PurpleDark BalancedItems[5].Probability.BaseValueScaleConstant 0.75</code>
+						<code profiles="">set GD_CustomItemPools_MainGame.Assassin.RedPattern BalancedItems[5].Probability.BaseValueScaleConstant 0.75</code>
+						<code profiles="">set GD_CustomItemPools_MainGame.Mercenary.RedPattern BalancedItems[5].Probability.BaseValueScaleConstant 0.75</code>
+						<code profiles="">set GD_CustomItemPools_MainGame.Soldier.RedPattern BalancedItems[5].Probability.BaseValueScaleConstant 0.75</code>
+						<code profiles="">set GD_CustomItemPools_tulip.Mechro.RedPattern BalancedItems[5].Probability.BaseValueScaleConstant 0.75</code>
+						<code profiles="">set GD_CustomItemPools_Lilac.Psycho.White BalancedItems[5].Probability.BaseValueScaleConstant 0.75</code>
+					</hotfix>
+				</category>
+				<category name="Half Rocket Launcher Equip Probability (4%)">
+					<comment># Any enemy in the game which isn't restricted to a single weapon type will</comment>
+					<comment># have about a 4% chance of equipping/dropping a rocket launcher.</comment>
+					<comment>#</comment>
+					<comment># Enemies who are hardcoded to *always* use launchers will, of course,</comment>
+					<comment># continue to do so regardless of this setting.</comment>
+					<hotfix name="ApocHotfix" level="None">
+						<code profiles="">set GD_CustomItemPools_MainGame.Siren.MinecraftSkins BalancedItems[5].Probability.BaseValueScaleConstant 0.5</code>
+						<code profiles="">set GD_CustomItemPools_MainGame.Soldier.MinecraftSkins BalancedItems[5].Probability.BaseValueScaleConstant 0.5</code>
+						<code profiles="">set GD_CustomItemPools_Lilac.Psycho.PurpleDark BalancedItems[5].Probability.BaseValueScaleConstant 0.5</code>
+						<code profiles="">set GD_CustomItemPools_MainGame.Assassin.PurpleDark BalancedItems[5].Probability.BaseValueScaleConstant 0.5</code>
+						<code profiles="">set GD_CustomItemPools_MainGame.Mercenary.PurpleDark BalancedItems[5].Probability.BaseValueScaleConstant 0.5</code>
+						<code profiles="">set GD_CustomItemPools_MainGame.Assassin.RedPattern BalancedItems[5].Probability.BaseValueScaleConstant 0.5</code>
+						<code profiles="">set GD_CustomItemPools_MainGame.Mercenary.RedPattern BalancedItems[5].Probability.BaseValueScaleConstant 0.5</code>
+						<code profiles="">set GD_CustomItemPools_MainGame.Soldier.RedPattern BalancedItems[5].Probability.BaseValueScaleConstant 0.5</code>
+						<code profiles="">set GD_CustomItemPools_tulip.Mechro.RedPattern BalancedItems[5].Probability.BaseValueScaleConstant 0.5</code>
+						<code profiles="">set GD_CustomItemPools_Lilac.Psycho.White BalancedItems[5].Probability.BaseValueScaleConstant 0.5</code>
+					</hotfix>
+				</category>
+				<category name="1/4 Rocket Launcher Equip Probability (2%)">
+					<comment># Any enemy in the game which isn't restricted to a single weapon type will</comment>
+					<comment># have about a 2% chance of equipping/dropping a rocket launcher.</comment>
+					<comment>#</comment>
+					<comment># Enemies who are hardcoded to *always* use launchers will, of course,</comment>
+					<comment># continue to do so regardless of this setting.</comment>
+					<hotfix name="ApocHotfix" level="None">
+						<code profiles="">set GD_CustomItemPools_MainGame.Siren.MinecraftSkins BalancedItems[5].Probability.BaseValueScaleConstant 0.25</code>
+						<code profiles="">set GD_CustomItemPools_MainGame.Soldier.MinecraftSkins BalancedItems[5].Probability.BaseValueScaleConstant 0.25</code>
+						<code profiles="">set GD_CustomItemPools_Lilac.Psycho.PurpleDark BalancedItems[5].Probability.BaseValueScaleConstant 0.25</code>
+						<code profiles="">set GD_CustomItemPools_MainGame.Assassin.PurpleDark BalancedItems[5].Probability.BaseValueScaleConstant 0.25</code>
+						<code profiles="">set GD_CustomItemPools_MainGame.Mercenary.PurpleDark BalancedItems[5].Probability.BaseValueScaleConstant 0.25</code>
+						<code profiles="">set GD_CustomItemPools_MainGame.Assassin.RedPattern BalancedItems[5].Probability.BaseValueScaleConstant 0.25</code>
+						<code profiles="">set GD_CustomItemPools_MainGame.Mercenary.RedPattern BalancedItems[5].Probability.BaseValueScaleConstant 0.25</code>
+						<code profiles="">set GD_CustomItemPools_MainGame.Soldier.RedPattern BalancedItems[5].Probability.BaseValueScaleConstant 0.25</code>
+						<code profiles="">set GD_CustomItemPools_tulip.Mechro.RedPattern BalancedItems[5].Probability.BaseValueScaleConstant 0.25</code>
+						<code profiles="">set GD_CustomItemPools_Lilac.Psycho.White BalancedItems[5].Probability.BaseValueScaleConstant 0.25</code>
+					</hotfix>
+				</category>
+				<category name="0% Rocket Launcher Equip Probability (0%)">
+					<comment># Any enemy in the game which isn't restricted to a single weapon type will</comment>
+					<comment># have a 0% chance of equipping/dropping a rocket launcher.</comment>
+					<comment>#</comment>
+					<comment># Enemies who are hardcoded to *always* use launchers will, of course,</comment>
+					<comment># continue to do so regardless of this setting.</comment>
 					<hotfix name="ApocHotfix" level="None">
 						<code profiles="">set GD_CustomItemPools_MainGame.Siren.MinecraftSkins BalancedItems[5].Probability.BaseValueScaleConstant 0</code>
 						<code profiles="">set GD_CustomItemPools_MainGame.Soldier.MinecraftSkins BalancedItems[5].Probability.BaseValueScaleConstant 0</code>

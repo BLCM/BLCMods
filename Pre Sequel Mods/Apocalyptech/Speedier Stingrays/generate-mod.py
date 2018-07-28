@@ -31,14 +31,15 @@
 import sys
 
 try:
-    from hotfixes import Hotfixes
+    from modprocessor import ModProcessor
+    mp = ModProcessor()
 except ModuleNotFoundError:
     print('')
-    print('****************************************************************')
-    print('To run this script, you will need to copy or symlink hotfixes.py')
+    print('********************************************************************')
+    print('To run this script, you will need to copy or symlink modprocessor.py')
     print('from the parent directory, so it exists here as well.  Sorry for')
     print('the bother!')
-    print('****************************************************************')
+    print('********************************************************************')
     print('')
     sys.exit(1)
 
@@ -47,8 +48,8 @@ except ModuleNotFoundError:
 ###
 
 mod_name = 'Speedier Stingrays'
-mod_version = '1.0.0'
-output_filename = '{}.txt'.format(mod_name)
+mod_version = '1.1.0'
+output_filename = '{}.blcm'.format(mod_name)
 
 ###
 ### Generate hotfixes!
@@ -72,92 +73,35 @@ for (label, vehicle_name, class_name) in [
             ),
         ]:
 
-    hfs = Hotfixes(nameprefix=label)
-
-    # Default: 2400
-    hfs.add_demand_hotfix('max_speed', 'Stingray',
-        '{},{},MaxSpeed,,3400'.format(demand_name, vehicle_name))
-
-    # Default: 3000
-    hfs.add_demand_hotfix('full_air_speed', 'Stingray',
-        '{},{},FullAirSpeed,,4000'.format(demand_name, vehicle_name))
-
-    # Default: 10000
-    hfs.add_demand_hotfix('afterburner_speed', 'Stingray',
-        '{},{},AfterburnerSpeed,,14000'.format(demand_name, class_name))
-
-    # Default: 150
-    hfs.add_demand_hotfix('afterburner_force', 'Stingray',
-        '{},{},AfterburnerForceMagnitude,,200'.format(demand_name, class_name))
-
-    # Default: 2
-    hfs.add_demand_hotfix('afterburner_boost_time', 'Stingray',
-        '{},{},AfterburnerBoostTime,,3.5'.format(demand_name, class_name))
-
-    # Default: 27500
-    hfs.add_demand_hotfix('afterburner_impulse_z', 'Stingray',
-        '{},{},AfterburnerImpulse.Z,,32500'.format(demand_name, class_name))
-
     hotfix_strings[label] = """{prefix_label}#<{label} Stingray>
 
-{prefix}{hotfixes:max_speed}
+{prefix}demand {demand_name} set {vehicle_name} MaxSpeed 3400
 
-{prefix}{hotfixes:full_air_speed}
+{prefix}demand {demand_name} set {vehicle_name} FullAirSpeed 4000
 
-{prefix}{hotfixes:afterburner_speed}
+{prefix}demand {demand_name} set {class_name} AfterburnerSpeed 14000
 
-{prefix}{hotfixes:afterburner_force}
+{prefix}demand {demand_name} set {class_name} AfterburnerForceMagnitude 200
 
-{prefix}{hotfixes:afterburner_boost_time}
+{prefix}demand {demand_name} set {class_name} AfterburnerBoostTime 3.5
 
-{prefix}{hotfixes:afterburner_impulse_z}
+{prefix}demand {demand_name} set {class_name} AfterburnerImpulse.Z 32500
 
 {prefix_label}#</{label} Stingray>""".format(
         prefix_label=prefix_label,
         prefix=prefix,
         label=label,
-        hotfixes=hfs,
+        demand_name=demand_name,
+        vehicle_name=vehicle_name,
+        class_name=class_name,
         )
-
-###
-### Common Hotfixes
-###
-
-hfs = Hotfixes(nameprefix=label)
-
-# Default: 30
-hfs.add_demand_hotfix('afterburner_total', 'Stingray',
-    '{},{},BaseMaxValue.BaseValueConstant,,45'.format(demand_name, afterburner_name))
-
-# Default: 20
-hfs.add_demand_hotfix('afterburner_regen_rate', 'Stingray',
-    '{},{},BaseOnIdleRegenerationRate,,25'.format(demand_name, afterburner_name))
-
-# Default: 1.5
-hfs.add_demand_hotfix('afterburner_regen_delay', 'Stingray',
-    '{},{},BaseOnIdleRegenerationDelay,,1.2'.format(demand_name, afterburner_name))
-
-# Default: 800
-hfs.add_demand_hotfix('thrust_forward', 'Stingray',
-    '{},{},MaxThrustForce,,1600'.format(demand_name, handling_name))
-
-# Default: 800
-hfs.add_demand_hotfix('thrust_reverse', 'Stingray',
-    '{},{},MaxReverseForce,,1600'.format(demand_name, handling_name))
-
-# Default: 1050
-hfs.add_demand_hotfix('thrust_side', 'Stingray',
-    '{},{},MaxStrafeForce,,2000'.format(demand_name, handling_name))
-
-# Default: 2000
-hfs.add_demand_hotfix('turn_torque', 'Stingray',
-    '{},{},TurnTorqueMax,,4000'.format(demand_name, handling_name))
 
 ###
 ### Generate the mod string
 ###
 
-mod_str = """#<{mod_name}>
+mod_str = """TPS
+#<{mod_name}>
 
     # {mod_name} v{mod_version}
     # by Apocalyptech
@@ -172,19 +116,19 @@ mod_str = """#<{mod_name}>
 
     #<Common Attributes>
 
-        {hotfixes:afterburner_total}
+        demand {demand_name} set {afterburner_name} BaseMaxValue.BaseValueConstant 45
 
-        {hotfixes:afterburner_regen_rate}
+        demand {demand_name} set {afterburner_name} BaseOnIdleRegenerationRate 25
 
-        {hotfixes:afterburner_regen_delay}
+        demand {demand_name} set {afterburner_name} BaseOnIdleRegenerationDelay 1.2
 
-        {hotfixes:thrust_forward}
+        demand {demand_name} set {handling_name} MaxThrustForce 1600
 
-        {hotfixes:thrust_reverse}
+        demand {demand_name} set {handling_name} MaxReverseForce 1600
 
-        {hotfixes:thrust_side}
+        demand {demand_name} set {handling_name} MaxStrafeForce 2000
 
-        {hotfixes:turn_torque}
+        demand {demand_name} set {handling_name} TurnTorqueMax 4000
 
     #</Common Attributes>
 
@@ -194,13 +138,14 @@ mod_str = """#<{mod_name}>
         mod_version=mod_version,
         flak=hotfix_strings['Flak Cannon'],
         cryo=hotfix_strings['Cryo Rocket'],
-        hotfixes=hfs,
+        demand_name=demand_name,
+        afterburner_name=afterburner_name,
+        handling_name=handling_name,
         )
 
 ###
 ### Output to a file.
 ###
 
-with open(output_filename, 'w') as df:
-    df.write(mod_str)
+mp.human_str_to_blcm_filename(mod_str, output_filename)
 print('Wrote mod file to: {}'.format(output_filename))

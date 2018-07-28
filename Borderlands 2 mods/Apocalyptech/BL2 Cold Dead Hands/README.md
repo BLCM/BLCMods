@@ -93,6 +93,7 @@ from the start of the battle which gun you'll receive.
 * Some chests have not had their weapons/shields removed.  This list is
   probably not exhaustive, and I haven't really tested many of these to find
   out:
+  * Golden Chest is completely untouched
   * Roland's Chest in Sanctuary will probably contain actual gear.
   * Dice Chests (from the Tiny Tina DLC) are probably unaffected.  Weapons
     are sparse enough during that DLC as it is.
@@ -154,6 +155,14 @@ quality, when loaded into BLCMM:
 * **Loot Pool Improvements**: This section adds gemstones into the global E-Tech
   pool, and improves the global legendary pool by adding all uniques,
   pearls, and seraphs.  These options can all be toggled individually.
+
+* **Rocket Launchers in Global Equip Pools**: By default, this mod adds in rocket
+  launchers to the main enemy equip pools.  This is generally fine in Normal (though
+  it will make for some more challenging fights), but in UVHM especially it can get
+  a bit much.  This section will let you decide how likely rocket-launcher-using
+  enemies are: from Full (about 7.7%), down to not allowing launcher use at all.
+  (Enemies which are specifically set to use rocket launchers will still use RLs
+  regardless, of course.)
 
 * **Enemy Gear Quality**: This is a mutually-exclusive category (so you can
   only choose one of the options), and defines how good the enemy gear is.
@@ -236,9 +245,8 @@ be interested in:
 Compatibility
 -------------
 
-This mod is compatible with UCP 4.1, and in fact requires that UCP 4.1's skinpool
-changes be in place.  UCP 4.0 isn't supported with this mod -- be sure to be
-using the most recent.
+This mod is compatible with UCP 4.1.  UCP 4.0 isn't supported with this mod --
+be sure to be using the most recent.
 
 Cold Dead Hands will obviously conflict with other mods with similar aims.
 theNocturni's "Enemy Enhancer" is one obvious conflict, though the
@@ -337,7 +345,11 @@ for the full text.
 Changelog
 =========
 
-**v1.1.1** - July 22, 2018
+**v1.1.2** - July 27, 2018:
+ * Added more options for rocket launcher equip chances other than the binary
+   choice from previous versions.
+
+**v1.1.1** - July 22, 2018 (commit `483c10f4e54d16b40dd4ebe8e787a0580f377d32`)
  * Included fix, thanks to 55tumbl, so that enemies using Roid/Maylay shields 
    receive the intended melee damage boost, instead of the extremely powerful
    attacks that they were doing.
