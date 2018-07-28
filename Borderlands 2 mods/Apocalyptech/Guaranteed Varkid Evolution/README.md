@@ -42,7 +42,7 @@ This mod itself is licensed under
 Changelog
 =========
 
-**v1.1.0**, April 25, 2018:
+**v1.1.0**, July 27, 2018:
  * Converted to BLCM format *(BLCMM is now required; FilterTool is not supported)*
  * Added a byline to the mod header comments
 
