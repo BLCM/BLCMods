@@ -1,0 +1,115 @@
+digraph reward {
+
+    labelloc = "t";
+    fontsize = 22;
+    label = <Fig. 5: Vanilla Borderlands Challenge/Mission Reward Pools>
+
+    {
+        node [shape=octagon style=filled fillcolor=aquamarine1];
+        thing [label=<Mission Reward /<br/>Challenge Reward<br/>(not enemy drops)>];
+    }
+    {
+        node [shape=rectangle style=filled fillcolor=green];
+        reward [label="Reward Pool"]
+    }
+    {
+        node [shape=rectangle style=filled fillcolor=gold];
+        pool_ass [label="Assassin Pool"];
+        pool_merc [label="Mercenary Pool"];
+        pool_siren [label="Siren Pool"];
+        pool_soldier [label="Soldier Pool"];
+        pool_psycho [label="Psycho Pool"];
+        pool_mech [label="Mechromancer Pool"];
+    }
+    {
+        node [style=filled fillcolor=goldenrod4];
+        skin_ass [label="Assassin Skin"];
+        skin_merc [label="Mercenary Skin"];
+        skin_siren [label="Siren Skin"];
+        skin_soldier [label="Soldier Skin"];
+        skin_psycho [label="Psycho Skin"];
+        skin_mech [label="Mechromancer Skin"];
+    }
+
+    thing -> reward;
+
+    reward -> pool_ass;
+    reward -> pool_merc;
+    reward -> pool_siren;
+    reward -> pool_soldier;
+    reward -> pool_psycho;
+    reward -> pool_mech;
+
+    pool_ass -> skin_ass;
+    pool_merc -> skin_merc;
+    pool_siren -> skin_siren;
+    pool_soldier -> skin_soldier;
+    pool_psycho -> skin_psycho;
+    pool_mech -> skin_mech;
+
+    subgraph cluster_ass {
+        label = <Only drops for<br/>Assassin>;
+        fontsize = 10;
+        labelloc = b;
+        style = filled;
+        color = cornsilk2;
+        fillcolor = cornsilk1;
+        pool_ass;
+        skin_ass;
+    }
+
+    subgraph cluster_merc {
+        label = <Only drops for<br/>Mercenary>;
+        fontsize = 10;
+        labelloc = b;
+        style = filled;
+        color = cornsilk2;
+        fillcolor = cornsilk1;
+        pool_merc;
+        skin_merc;
+    }
+
+    subgraph cluster_siren {
+        label = <Only drops for<br/>Siren>;
+        fontsize = 10;
+        labelloc = b;
+        style = filled;
+        color = cornsilk2;
+        fillcolor = cornsilk1;
+        pool_siren;
+        skin_siren;
+    }
+
+    subgraph cluster_soldier {
+        label = <Only drops for<br/>Soldier>;
+        fontsize = 10;
+        labelloc = b;
+        style = filled;
+        color = cornsilk2;
+        fillcolor = cornsilk1;
+        pool_soldier;
+        skin_soldier;
+    }
+
+    subgraph cluster_psycho {
+        label = <Only drops for<br/>Psycho>;
+        fontsize = 10;
+        labelloc = b;
+        style = filled;
+        color = cornsilk2;
+        fillcolor = cornsilk1;
+        pool_psycho;
+        skin_psycho;
+    }
+
+    subgraph cluster_mech {
+        label = <Only drops for<br/>Mechromancer>;
+        fontsize = 10;
+        labelloc = b;
+        style = filled;
+        color = cornsilk2;
+        fillcolor = cornsilk1;
+        pool_mech;
+        skin_mech;
+    }
+}

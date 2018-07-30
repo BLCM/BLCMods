@@ -93,6 +93,7 @@ from the start of the battle which gun you'll receive.
 * Some chests have not had their weapons/shields removed.  This list is
   probably not exhaustive, and I haven't really tested many of these to find
   out:
+  * Golden Chest is completely untouched
   * Roland's Chest in Sanctuary will probably contain actual gear.
   * Dice Chests (from the Tiny Tina DLC) are probably unaffected.  Weapons
     are sparse enough during that DLC as it is.
@@ -155,6 +156,14 @@ quality, when loaded into BLCMM:
   pool, and improves the global legendary pool by adding all uniques,
   pearls, and seraphs.  These options can all be toggled individually.
 
+* **Rocket Launchers in Global Equip Pools**: By default, this mod adds in rocket
+  launchers to the main enemy equip pools.  This is generally fine in Normal (though
+  it will make for some more challenging fights), but in UVHM especially it can get
+  a bit much.  This section will let you decide how likely rocket-launcher-using
+  enemies are: from Full (about 7.7%), down to not allowing launcher use at all.
+  (Enemies which are specifically set to use rocket launchers will still use RLs
+  regardless, of course.)
+
 * **Enemy Gear Quality**: This is a mutually-exclusive category (so you can
   only choose one of the options), and defines how good the enemy gear is.
   The default ("Excellent Gear") is more or less at the Better Loot mod's
@@ -182,12 +191,7 @@ quality, when loaded into BLCMM:
   shields so that they work like other shielded enemies with Cold Dead Hands,
   so you'll get stalkers using Novas and Maylay shields, and they'll drop them
   when killed.  Additionally, if you want to make them very deadly in general,
-  you can specify that they *only* use Maylay shields.  **Warning:** there
-  seems to be some strange interaction with Maylay shields and Stalkers where
-  the roid damage buff is far greater than the number listed on the card.
-  Stalkers using Maylay shields are very likely to hit like a ton of bricks,
-  when their shields are depleted.  Use with caution!  Or with abandon!  It's
-  up to you!
+  you can specify that they *only* use Maylay shields.
 
 * **Remove Level-Based Loot Restrictions**: This Allows all weapon, shield,
   grenade, COM, shield, relic, and ammo types from the very beginning of the
@@ -241,9 +245,8 @@ be interested in:
 Compatibility
 -------------
 
-This mod is compatible with UCP 4.1, and in fact requires that UCP 4.1's skinpool
-changes be in place.  UCP 4.0 isn't supported with this mod -- be sure to be
-using the most recent.
+This mod is compatible with UCP 4.1.  UCP 4.0 isn't supported with this mod --
+be sure to be using the most recent.
 
 Cold Dead Hands will obviously conflict with other mods with similar aims.
 theNocturni's "Enemy Enhancer" is one obvious conflict, though the
@@ -342,7 +345,19 @@ for the full text.
 Changelog
 =========
 
-**v1.1.0** - July 17, 2018
+**v1.1.2** - July 27, 2018:
+ * Added more options for rocket launcher equip chances other than the binary
+   choice from previous versions.
+
+**v1.1.1** - July 22, 2018 (commit `483c10f4e54d16b40dd4ebe8e787a0580f377d32`)
+ * Included fix, thanks to 55tumbl, so that enemies using Roid/Maylay shields 
+   receive the intended melee damage boost, instead of the extremely powerful
+   attacks that they were doing.
+ * Updated bundled BL2 Early Bloomer to v1.1.1, to include a couple of items
+   which weren't properly unlocked previously.
+ * Removed some outdated wording in the mod header comments
+
+**v1.1.0** - July 17, 2018 (commit `7a654f0ac8e8682814395f335ecdb6358b138984`)
  * Converted to BLCM format *(we now require BLCMM; FilterTool is not supported)*
  * Updated for UCP 4.1 Compatibility *(various loot pool reassignments)*
  * Added an option to have enemy guns not drop all the time (at least at lower

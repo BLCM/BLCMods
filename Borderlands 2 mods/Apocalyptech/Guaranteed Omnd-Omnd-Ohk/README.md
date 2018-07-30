@@ -14,9 +14,8 @@ generally, without going as overboard as this mod does.
 Usage
 =====
 
-This mod must be imported into FilterTool/BLCMM with `Developer tools` ->
-`Add single mod`.  Choose the file `Guaranteed Omnd-Omnd-Ohk.txt` and have
-at it!
+This mod must be imported into BLCMM using `File -> Import single mod`.
+Choose the file `Guaranteed Omnd-Omnd-Ohk.blcm` and have at it!
 
 License
 =======
@@ -26,6 +25,10 @@ This mod itself is licensed under
 
 Changelog
 =========
+
+**v1.1.0**, July 27, 2018:
+ * Converted to BLCM format *(BLCMM is now required; FilterTool is not supported)*
+ * Added a byline to the mod header comments
 
 **v1.0.1**, March 1, 2018:
  * Renamed the mod file to have a `.txt` extension
