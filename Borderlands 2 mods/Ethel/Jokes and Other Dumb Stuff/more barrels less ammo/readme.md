@@ -1,0 +1,1 @@
+replaces all ammo crates with barrels

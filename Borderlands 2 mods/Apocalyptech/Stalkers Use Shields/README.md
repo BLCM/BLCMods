@@ -6,11 +6,6 @@ equip them with "real" shields, of the sort your character finds and equips
 throughout the game, though.  Optionally, and for a greater challenge, you
 can opt to equip them with only Maylay shields.
 
-**WARNING:** There seems to be some interaction between Stalkers and Maylay
-shields where the Roid damage increase may be far in excess of what's
-listed on the card.  A Stalker with a depleted Maylay shield is likely to
-hit like a ton of bricks.  You've been warned!
-
 This mod was basically taken straight out of my Cold Dead Hands mod.  If
 you're already running Cold Dead Hands, the exact same functionality is
 available in there, so there's no reason to run both.  The main difference
@@ -49,10 +44,7 @@ in various ways, when loaded into BLCMM:
 * **Shield Selection**: By default, Stalkers will just pull from the main
   shield pools, but you can optionally have them *only* use Maylay shields
   in here.  This is another mutually-exclusive category, so only one can be
-  chosen.  Note that there seems to be some strange interaction between
-  Stalkers and Maylay shields which make them do far more damage than the
-  buff listed on the shield card, so beware!  Stalkers with depleted Maylay
-  shields are likely to be quite deadly.
+  chosen.
 
 Compatibility
 -------------
@@ -104,6 +96,11 @@ for the full text.
 
 Changelog
 =========
+
+**v1.1.1** - July 22, 2018
+ * Included fix, thanks to 55tumbl, so that enemies using Roid/Maylay shields
+   receive the intended melee damage boost, instead of the extremely powerful
+   attacks that they were doing.
 
 **v1.1.0** - July 18, 2018
  * Converted to BLCM format *(Requires BLCMM now, will not work with FilterTool)*

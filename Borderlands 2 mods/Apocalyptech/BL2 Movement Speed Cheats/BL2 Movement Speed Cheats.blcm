@@ -1,0 +1,424 @@
+<BLCMM v="1">
+#<!!!You opened a file saved with BLCMM in FilterTool. Please update to BLCMM to properly open this file!!!>
+	<head>
+		<type name="BL2" offline="false"/>
+	</head>
+	<body>
+		<category name="BL2 Movement Speed Cheats">
+			<comment># BL2 Movement Speed Cheats v1.3.0</comment>
+			<comment># by Apocalyptech</comment>
+			<comment># Licensed under Public Domain / CC0 1.0 Universal</comment>
+			<comment>#</comment>
+			<comment># Ups the movement speed of all characters (including while crouched and during</comment>
+			<comment># FFYL), increases jump height a bit, and provides much more air control.</comment>
+			<category name="Movement Speed Buffs (Pick One)" MUT="true">
+				<category name="Reasonable Improvements">
+					<category name="Axton">
+						<comment># The set statements apply the settings initially</comment>
+						<code profiles="default">set GD_Soldier.Character.CharClass_Soldier GroundSpeed 650</code>
+						<code profiles="default">set GD_Soldier.Character.CharClass_Soldier AirSpeed 700</code>
+						<code profiles="default">set GD_Soldier.Character.CharClass_Soldier CrouchedPct 1</code>
+						<code profiles="default">set GD_Soldier.Character.CharClass_Soldier JumpZ 750</code>
+						<comment># The hotfixes apply once you respawn or exit FFYL</comment>
+						<comment># (These may be a bit overboard.  Not sure if you need the BaseValue</comment>
+						<comment># ones, or if the BaseValue ones are the only ones you need, etc.)</comment>
+						<hotfix name="ApocHotfix" package="GD_Soldier_Streaming">
+							<code profiles="default">set GD_Soldier_Streaming.Pawn_Soldier GroundSpeed 650</code>
+							<code profiles="default">set GD_Soldier_Streaming.Pawn_Soldier GroundSpeedBaseValue 650</code>
+							<code profiles="default">set GD_Soldier_Streaming.Pawn_Soldier AirSpeed 700</code>
+							<code profiles="default">set GD_Soldier_Streaming.Pawn_Soldier AirSpeedBaseValue 700</code>
+							<code profiles="default">set GD_Soldier_Streaming.Pawn_Soldier JumpZ 750</code>
+							<code profiles="default">set GD_Soldier_Streaming.Pawn_Soldier JumpZBaseValue 750</code>
+							<code profiles="default">set GD_Soldier_Streaming.Pawn_Soldier CrouchedPct 1</code>
+						</hotfix>
+					</category>
+					<category name="Gaige">
+						<comment># The set statements apply the settings initially</comment>
+						<code profiles="default">set GD_Tulip_Mechromancer.Character.CharClass_Mechromancer GroundSpeed 650</code>
+						<code profiles="default">set GD_Tulip_Mechromancer.Character.CharClass_Mechromancer AirSpeed 700</code>
+						<code profiles="default">set GD_Tulip_Mechromancer.Character.CharClass_Mechromancer CrouchedPct 1</code>
+						<code profiles="default">set GD_Tulip_Mechromancer.Character.CharClass_Mechromancer JumpZ 750</code>
+						<comment># The hotfixes apply once you respawn or exit FFYL</comment>
+						<comment># (These may be a bit overboard.  Not sure if you need the BaseValue</comment>
+						<comment># ones, or if the BaseValue ones are the only ones you need, etc.)</comment>
+						<hotfix name="ApocHotfix" package="GD_Tulip_Mechro_Streaming">
+							<code profiles="default">set GD_Tulip_Mechro_Streaming.Pawn_Mechromancer GroundSpeed 650</code>
+							<code profiles="default">set GD_Tulip_Mechro_Streaming.Pawn_Mechromancer GroundSpeedBaseValue 650</code>
+							<code profiles="default">set GD_Tulip_Mechro_Streaming.Pawn_Mechromancer AirSpeed 700</code>
+							<code profiles="default">set GD_Tulip_Mechro_Streaming.Pawn_Mechromancer AirSpeedBaseValue 700</code>
+							<code profiles="default">set GD_Tulip_Mechro_Streaming.Pawn_Mechromancer JumpZ 750</code>
+							<code profiles="default">set GD_Tulip_Mechro_Streaming.Pawn_Mechromancer JumpZBaseValue 750</code>
+							<code profiles="default">set GD_Tulip_Mechro_Streaming.Pawn_Mechromancer CrouchedPct 1</code>
+						</hotfix>
+					</category>
+					<category name="Krieg">
+						<comment># The set statements apply the settings initially</comment>
+						<code profiles="default">set GD_Lilac_PlayerClass.Character.CharClass_LilacPlayerClass GroundSpeed 650</code>
+						<code profiles="default">set GD_Lilac_PlayerClass.Character.CharClass_LilacPlayerClass AirSpeed 700</code>
+						<code profiles="default">set GD_Lilac_PlayerClass.Character.CharClass_LilacPlayerClass CrouchedPct 1</code>
+						<code profiles="default">set GD_Lilac_PlayerClass.Character.CharClass_LilacPlayerClass JumpZ 750</code>
+						<comment># The hotfixes apply once you respawn or exit FFYL</comment>
+						<comment># (These may be a bit overboard.  Not sure if you need the BaseValue</comment>
+						<comment># ones, or if the BaseValue ones are the only ones you need, etc.)</comment>
+						<hotfix name="ApocHotfix" package="GD_Lilac_Psycho_Streaming">
+							<code profiles="default">set GD_Lilac_Psycho_Streaming.Pawn_LilacPlayerClass GroundSpeed 650</code>
+							<code profiles="default">set GD_Lilac_Psycho_Streaming.Pawn_LilacPlayerClass GroundSpeedBaseValue 650</code>
+							<code profiles="default">set GD_Lilac_Psycho_Streaming.Pawn_LilacPlayerClass AirSpeed 700</code>
+							<code profiles="default">set GD_Lilac_Psycho_Streaming.Pawn_LilacPlayerClass AirSpeedBaseValue 700</code>
+							<code profiles="default">set GD_Lilac_Psycho_Streaming.Pawn_LilacPlayerClass JumpZ 750</code>
+							<code profiles="default">set GD_Lilac_Psycho_Streaming.Pawn_LilacPlayerClass JumpZBaseValue 750</code>
+							<code profiles="default">set GD_Lilac_Psycho_Streaming.Pawn_LilacPlayerClass CrouchedPct 1</code>
+						</hotfix>
+					</category>
+					<category name="Maya">
+						<comment># The set statements apply the settings initially</comment>
+						<code profiles="default">set GD_Siren.Character.CharClass_Siren GroundSpeed 650</code>
+						<code profiles="default">set GD_Siren.Character.CharClass_Siren AirSpeed 700</code>
+						<code profiles="default">set GD_Siren.Character.CharClass_Siren CrouchedPct 1</code>
+						<code profiles="default">set GD_Siren.Character.CharClass_Siren JumpZ 750</code>
+						<comment># The hotfixes apply once you respawn or exit FFYL</comment>
+						<comment># (These may be a bit overboard.  Not sure if you need the BaseValue</comment>
+						<comment># ones, or if the BaseValue ones are the only ones you need, etc.)</comment>
+						<hotfix name="ApocHotfix" package="GD_Siren_Streaming">
+							<code profiles="default">set GD_Siren_Streaming.Pawn_Siren GroundSpeed 650</code>
+							<code profiles="default">set GD_Siren_Streaming.Pawn_Siren GroundSpeedBaseValue 650</code>
+							<code profiles="default">set GD_Siren_Streaming.Pawn_Siren AirSpeed 700</code>
+							<code profiles="default">set GD_Siren_Streaming.Pawn_Siren AirSpeedBaseValue 700</code>
+							<code profiles="default">set GD_Siren_Streaming.Pawn_Siren JumpZ 750</code>
+							<code profiles="default">set GD_Siren_Streaming.Pawn_Siren JumpZBaseValue 750</code>
+							<code profiles="default">set GD_Siren_Streaming.Pawn_Siren CrouchedPct 1</code>
+						</hotfix>
+					</category>
+					<category name="Salvador">
+						<comment># The set statements apply the settings initially</comment>
+						<code profiles="default">set GD_Mercenary.Character.CharClass_Mercenary GroundSpeed 650</code>
+						<code profiles="default">set GD_Mercenary.Character.CharClass_Mercenary AirSpeed 700</code>
+						<code profiles="default">set GD_Mercenary.Character.CharClass_Mercenary CrouchedPct 1</code>
+						<code profiles="default">set GD_Mercenary.Character.CharClass_Mercenary JumpZ 750</code>
+						<comment># The hotfixes apply once you respawn or exit FFYL</comment>
+						<comment># (These may be a bit overboard.  Not sure if you need the BaseValue</comment>
+						<comment># ones, or if the BaseValue ones are the only ones you need, etc.)</comment>
+						<hotfix name="ApocHotfix" package="GD_Mercenary_Streaming">
+							<code profiles="default">set GD_Mercenary_Streaming.Pawn_Mercenary GroundSpeed 650</code>
+							<code profiles="default">set GD_Mercenary_Streaming.Pawn_Mercenary GroundSpeedBaseValue 650</code>
+							<code profiles="default">set GD_Mercenary_Streaming.Pawn_Mercenary AirSpeed 700</code>
+							<code profiles="default">set GD_Mercenary_Streaming.Pawn_Mercenary AirSpeedBaseValue 700</code>
+							<code profiles="default">set GD_Mercenary_Streaming.Pawn_Mercenary JumpZ 750</code>
+							<code profiles="default">set GD_Mercenary_Streaming.Pawn_Mercenary JumpZBaseValue 750</code>
+							<code profiles="default">set GD_Mercenary_Streaming.Pawn_Mercenary CrouchedPct 1</code>
+						</hotfix>
+					</category>
+					<category name="Zero">
+						<comment># The set statements apply the settings initially</comment>
+						<code profiles="default">set GD_Assassin.Character.CharClass_Assassin GroundSpeed 650</code>
+						<code profiles="default">set GD_Assassin.Character.CharClass_Assassin AirSpeed 700</code>
+						<code profiles="default">set GD_Assassin.Character.CharClass_Assassin CrouchedPct 1</code>
+						<code profiles="default">set GD_Assassin.Character.CharClass_Assassin JumpZ 750</code>
+						<comment># The hotfixes apply once you respawn or exit FFYL</comment>
+						<comment># (These may be a bit overboard.  Not sure if you need the BaseValue</comment>
+						<comment># ones, or if the BaseValue ones are the only ones you need, etc.)</comment>
+						<hotfix name="ApocHotfix" package="GD_Assassin_Streaming">
+							<code profiles="default">set GD_Assassin_Streaming.Pawn_Assassin GroundSpeed 650</code>
+							<code profiles="default">set GD_Assassin_Streaming.Pawn_Assassin GroundSpeedBaseValue 650</code>
+							<code profiles="default">set GD_Assassin_Streaming.Pawn_Assassin AirSpeed 700</code>
+							<code profiles="default">set GD_Assassin_Streaming.Pawn_Assassin AirSpeedBaseValue 700</code>
+							<code profiles="default">set GD_Assassin_Streaming.Pawn_Assassin JumpZ 750</code>
+							<code profiles="default">set GD_Assassin_Streaming.Pawn_Assassin JumpZBaseValue 750</code>
+							<code profiles="default">set GD_Assassin_Streaming.Pawn_Assassin CrouchedPct 1</code>
+						</hotfix>
+					</category>
+					<category name="Global Movement Vars">
+						<comment># These variables aren't player-specific, and don't seem to require hotfixes</comment>
+						<comment># to apply post-death-or-FFYL</comment>
+						<code profiles="default">set GD_PlayerShared.injured.PlayerInjuredDefinition InjuredMovementSpeed 300</code>
+						<code profiles="default">set GD_Globals.General.Globals PlayerAirControl 0.8</code>
+						<code profiles="default">set Engine.Pawn LadderSpeed 400</code>
+					</category>
+				</category>
+				<category name="Extreme Improvements">
+					<category name="Axton">
+						<comment># The set statements apply the settings initially</comment>
+						<code profiles="">set GD_Soldier.Character.CharClass_Soldier GroundSpeed 1000</code>
+						<code profiles="">set GD_Soldier.Character.CharClass_Soldier AirSpeed 1100</code>
+						<code profiles="">set GD_Soldier.Character.CharClass_Soldier CrouchedPct 1</code>
+						<code profiles="">set GD_Soldier.Character.CharClass_Soldier JumpZ 900</code>
+						<comment># The hotfixes apply once you respawn or exit FFYL</comment>
+						<comment># (These may be a bit overboard.  Not sure if you need the BaseValue</comment>
+						<comment># ones, or if the BaseValue ones are the only ones you need, etc.)</comment>
+						<hotfix name="ApocHotfix" package="GD_Soldier_Streaming">
+							<code profiles="">set GD_Soldier_Streaming.Pawn_Soldier GroundSpeed 1000</code>
+							<code profiles="">set GD_Soldier_Streaming.Pawn_Soldier GroundSpeedBaseValue 1000</code>
+							<code profiles="">set GD_Soldier_Streaming.Pawn_Soldier AirSpeed 1100</code>
+							<code profiles="">set GD_Soldier_Streaming.Pawn_Soldier AirSpeedBaseValue 1100</code>
+							<code profiles="">set GD_Soldier_Streaming.Pawn_Soldier JumpZ 900</code>
+							<code profiles="">set GD_Soldier_Streaming.Pawn_Soldier JumpZBaseValue 900</code>
+							<code profiles="">set GD_Soldier_Streaming.Pawn_Soldier CrouchedPct 1</code>
+						</hotfix>
+					</category>
+					<category name="Gaige">
+						<comment># The set statements apply the settings initially</comment>
+						<code profiles="">set GD_Tulip_Mechromancer.Character.CharClass_Mechromancer GroundSpeed 1000</code>
+						<code profiles="">set GD_Tulip_Mechromancer.Character.CharClass_Mechromancer AirSpeed 1100</code>
+						<code profiles="">set GD_Tulip_Mechromancer.Character.CharClass_Mechromancer CrouchedPct 1</code>
+						<code profiles="">set GD_Tulip_Mechromancer.Character.CharClass_Mechromancer JumpZ 900</code>
+						<comment># The hotfixes apply once you respawn or exit FFYL</comment>
+						<comment># (These may be a bit overboard.  Not sure if you need the BaseValue</comment>
+						<comment># ones, or if the BaseValue ones are the only ones you need, etc.)</comment>
+						<hotfix name="ApocHotfix" package="GD_Tulip_Mechro_Streaming">
+							<code profiles="">set GD_Tulip_Mechro_Streaming.Pawn_Mechromancer GroundSpeed 1000</code>
+							<code profiles="">set GD_Tulip_Mechro_Streaming.Pawn_Mechromancer GroundSpeedBaseValue 1000</code>
+							<code profiles="">set GD_Tulip_Mechro_Streaming.Pawn_Mechromancer AirSpeed 1100</code>
+							<code profiles="">set GD_Tulip_Mechro_Streaming.Pawn_Mechromancer AirSpeedBaseValue 1100</code>
+							<code profiles="">set GD_Tulip_Mechro_Streaming.Pawn_Mechromancer JumpZ 900</code>
+							<code profiles="">set GD_Tulip_Mechro_Streaming.Pawn_Mechromancer JumpZBaseValue 900</code>
+							<code profiles="">set GD_Tulip_Mechro_Streaming.Pawn_Mechromancer CrouchedPct 1</code>
+						</hotfix>
+					</category>
+					<category name="Krieg">
+						<comment># The set statements apply the settings initially</comment>
+						<code profiles="">set GD_Lilac_PlayerClass.Character.CharClass_LilacPlayerClass GroundSpeed 1000</code>
+						<code profiles="">set GD_Lilac_PlayerClass.Character.CharClass_LilacPlayerClass AirSpeed 1100</code>
+						<code profiles="">set GD_Lilac_PlayerClass.Character.CharClass_LilacPlayerClass CrouchedPct 1</code>
+						<code profiles="">set GD_Lilac_PlayerClass.Character.CharClass_LilacPlayerClass JumpZ 900</code>
+						<comment># The hotfixes apply once you respawn or exit FFYL</comment>
+						<comment># (These may be a bit overboard.  Not sure if you need the BaseValue</comment>
+						<comment># ones, or if the BaseValue ones are the only ones you need, etc.)</comment>
+						<hotfix name="ApocHotfix" package="GD_Lilac_Psycho_Streaming">
+							<code profiles="">set GD_Lilac_Psycho_Streaming.Pawn_LilacPlayerClass GroundSpeed 1000</code>
+							<code profiles="">set GD_Lilac_Psycho_Streaming.Pawn_LilacPlayerClass GroundSpeedBaseValue 1000</code>
+							<code profiles="">set GD_Lilac_Psycho_Streaming.Pawn_LilacPlayerClass AirSpeed 1100</code>
+							<code profiles="">set GD_Lilac_Psycho_Streaming.Pawn_LilacPlayerClass AirSpeedBaseValue 1100</code>
+							<code profiles="">set GD_Lilac_Psycho_Streaming.Pawn_LilacPlayerClass JumpZ 900</code>
+							<code profiles="">set GD_Lilac_Psycho_Streaming.Pawn_LilacPlayerClass JumpZBaseValue 900</code>
+							<code profiles="">set GD_Lilac_Psycho_Streaming.Pawn_LilacPlayerClass CrouchedPct 1</code>
+						</hotfix>
+					</category>
+					<category name="Maya">
+						<comment># The set statements apply the settings initially</comment>
+						<code profiles="">set GD_Siren.Character.CharClass_Siren GroundSpeed 1000</code>
+						<code profiles="">set GD_Siren.Character.CharClass_Siren AirSpeed 1100</code>
+						<code profiles="">set GD_Siren.Character.CharClass_Siren CrouchedPct 1</code>
+						<code profiles="">set GD_Siren.Character.CharClass_Siren JumpZ 900</code>
+						<comment># The hotfixes apply once you respawn or exit FFYL</comment>
+						<comment># (These may be a bit overboard.  Not sure if you need the BaseValue</comment>
+						<comment># ones, or if the BaseValue ones are the only ones you need, etc.)</comment>
+						<hotfix name="ApocHotfix" package="GD_Siren_Streaming">
+							<code profiles="">set GD_Siren_Streaming.Pawn_Siren GroundSpeed 1000</code>
+							<code profiles="">set GD_Siren_Streaming.Pawn_Siren GroundSpeedBaseValue 1000</code>
+							<code profiles="">set GD_Siren_Streaming.Pawn_Siren AirSpeed 1100</code>
+							<code profiles="">set GD_Siren_Streaming.Pawn_Siren AirSpeedBaseValue 1100</code>
+							<code profiles="">set GD_Siren_Streaming.Pawn_Siren JumpZ 900</code>
+							<code profiles="">set GD_Siren_Streaming.Pawn_Siren JumpZBaseValue 900</code>
+							<code profiles="">set GD_Siren_Streaming.Pawn_Siren CrouchedPct 1</code>
+						</hotfix>
+					</category>
+					<category name="Salvador">
+						<comment># The set statements apply the settings initially</comment>
+						<code profiles="">set GD_Mercenary.Character.CharClass_Mercenary GroundSpeed 1000</code>
+						<code profiles="">set GD_Mercenary.Character.CharClass_Mercenary AirSpeed 1100</code>
+						<code profiles="">set GD_Mercenary.Character.CharClass_Mercenary CrouchedPct 1</code>
+						<code profiles="">set GD_Mercenary.Character.CharClass_Mercenary JumpZ 900</code>
+						<comment># The hotfixes apply once you respawn or exit FFYL</comment>
+						<comment># (These may be a bit overboard.  Not sure if you need the BaseValue</comment>
+						<comment># ones, or if the BaseValue ones are the only ones you need, etc.)</comment>
+						<hotfix name="ApocHotfix" package="GD_Mercenary_Streaming">
+							<code profiles="">set GD_Mercenary_Streaming.Pawn_Mercenary GroundSpeed 1000</code>
+							<code profiles="">set GD_Mercenary_Streaming.Pawn_Mercenary GroundSpeedBaseValue 1000</code>
+							<code profiles="">set GD_Mercenary_Streaming.Pawn_Mercenary AirSpeed 1100</code>
+							<code profiles="">set GD_Mercenary_Streaming.Pawn_Mercenary AirSpeedBaseValue 1100</code>
+							<code profiles="">set GD_Mercenary_Streaming.Pawn_Mercenary JumpZ 900</code>
+							<code profiles="">set GD_Mercenary_Streaming.Pawn_Mercenary JumpZBaseValue 900</code>
+							<code profiles="">set GD_Mercenary_Streaming.Pawn_Mercenary CrouchedPct 1</code>
+						</hotfix>
+					</category>
+					<category name="Zero">
+						<comment># The set statements apply the settings initially</comment>
+						<code profiles="">set GD_Assassin.Character.CharClass_Assassin GroundSpeed 1000</code>
+						<code profiles="">set GD_Assassin.Character.CharClass_Assassin AirSpeed 1100</code>
+						<code profiles="">set GD_Assassin.Character.CharClass_Assassin CrouchedPct 1</code>
+						<code profiles="">set GD_Assassin.Character.CharClass_Assassin JumpZ 900</code>
+						<comment># The hotfixes apply once you respawn or exit FFYL</comment>
+						<comment># (These may be a bit overboard.  Not sure if you need the BaseValue</comment>
+						<comment># ones, or if the BaseValue ones are the only ones you need, etc.)</comment>
+						<hotfix name="ApocHotfix" package="GD_Assassin_Streaming">
+							<code profiles="">set GD_Assassin_Streaming.Pawn_Assassin GroundSpeed 1000</code>
+							<code profiles="">set GD_Assassin_Streaming.Pawn_Assassin GroundSpeedBaseValue 1000</code>
+							<code profiles="">set GD_Assassin_Streaming.Pawn_Assassin AirSpeed 1100</code>
+							<code profiles="">set GD_Assassin_Streaming.Pawn_Assassin AirSpeedBaseValue 1100</code>
+							<code profiles="">set GD_Assassin_Streaming.Pawn_Assassin JumpZ 900</code>
+							<code profiles="">set GD_Assassin_Streaming.Pawn_Assassin JumpZBaseValue 900</code>
+							<code profiles="">set GD_Assassin_Streaming.Pawn_Assassin CrouchedPct 1</code>
+						</hotfix>
+					</category>
+					<category name="Global Movement Vars">
+						<comment># These variables aren't player-specific, and don't seem to require hotfixes</comment>
+						<comment># to apply post-death-or-FFYL</comment>
+						<code profiles="">set GD_PlayerShared.injured.PlayerInjuredDefinition InjuredMovementSpeed 500</code>
+						<code profiles="">set GD_Globals.General.Globals PlayerAirControl 0.9</code>
+						<code profiles="">set Engine.Pawn LadderSpeed 600</code>
+					</category>
+				</category>
+				<category name="Stock Values">
+					<category name="Axton">
+						<comment># The set statements apply the settings initially</comment>
+						<code profiles="">set GD_Soldier.Character.CharClass_Soldier GroundSpeed 440</code>
+						<code profiles="">set GD_Soldier.Character.CharClass_Soldier AirSpeed 500</code>
+						<code profiles="">set GD_Soldier.Character.CharClass_Soldier CrouchedPct 0.5</code>
+						<code profiles="">set GD_Soldier.Character.CharClass_Soldier JumpZ 630</code>
+						<comment># The hotfixes apply once you respawn or exit FFYL</comment>
+						<comment># (These may be a bit overboard.  Not sure if you need the BaseValue</comment>
+						<comment># ones, or if the BaseValue ones are the only ones you need, etc.)</comment>
+						<hotfix name="ApocHotfix" package="GD_Soldier_Streaming">
+							<code profiles="">set GD_Soldier_Streaming.Pawn_Soldier GroundSpeed 440</code>
+							<code profiles="">set GD_Soldier_Streaming.Pawn_Soldier GroundSpeedBaseValue 440</code>
+							<code profiles="">set GD_Soldier_Streaming.Pawn_Soldier AirSpeed 500</code>
+							<code profiles="">set GD_Soldier_Streaming.Pawn_Soldier AirSpeedBaseValue 500</code>
+							<code profiles="">set GD_Soldier_Streaming.Pawn_Soldier JumpZ 630</code>
+							<code profiles="">set GD_Soldier_Streaming.Pawn_Soldier JumpZBaseValue 630</code>
+							<code profiles="">set GD_Soldier_Streaming.Pawn_Soldier CrouchedPct 0.5</code>
+						</hotfix>
+					</category>
+					<category name="Gaige">
+						<comment># The set statements apply the settings initially</comment>
+						<code profiles="">set GD_Tulip_Mechromancer.Character.CharClass_Mechromancer GroundSpeed 440</code>
+						<code profiles="">set GD_Tulip_Mechromancer.Character.CharClass_Mechromancer AirSpeed 500</code>
+						<code profiles="">set GD_Tulip_Mechromancer.Character.CharClass_Mechromancer CrouchedPct 0.5</code>
+						<code profiles="">set GD_Tulip_Mechromancer.Character.CharClass_Mechromancer JumpZ 630</code>
+						<comment># The hotfixes apply once you respawn or exit FFYL</comment>
+						<comment># (These may be a bit overboard.  Not sure if you need the BaseValue</comment>
+						<comment># ones, or if the BaseValue ones are the only ones you need, etc.)</comment>
+						<hotfix name="ApocHotfix" package="GD_Tulip_Mechro_Streaming">
+							<code profiles="">set GD_Tulip_Mechro_Streaming.Pawn_Mechromancer GroundSpeed 440</code>
+							<code profiles="">set GD_Tulip_Mechro_Streaming.Pawn_Mechromancer GroundSpeedBaseValue 440</code>
+							<code profiles="">set GD_Tulip_Mechro_Streaming.Pawn_Mechromancer AirSpeed 500</code>
+							<code profiles="">set GD_Tulip_Mechro_Streaming.Pawn_Mechromancer AirSpeedBaseValue 500</code>
+							<code profiles="">set GD_Tulip_Mechro_Streaming.Pawn_Mechromancer JumpZ 630</code>
+							<code profiles="">set GD_Tulip_Mechro_Streaming.Pawn_Mechromancer JumpZBaseValue 630</code>
+							<code profiles="">set GD_Tulip_Mechro_Streaming.Pawn_Mechromancer CrouchedPct 0.5</code>
+						</hotfix>
+					</category>
+					<category name="Krieg">
+						<comment># The set statements apply the settings initially</comment>
+						<code profiles="">set GD_Lilac_PlayerClass.Character.CharClass_LilacPlayerClass GroundSpeed 440</code>
+						<code profiles="">set GD_Lilac_PlayerClass.Character.CharClass_LilacPlayerClass AirSpeed 500</code>
+						<code profiles="">set GD_Lilac_PlayerClass.Character.CharClass_LilacPlayerClass CrouchedPct 0.5</code>
+						<code profiles="">set GD_Lilac_PlayerClass.Character.CharClass_LilacPlayerClass JumpZ 630</code>
+						<comment># The hotfixes apply once you respawn or exit FFYL</comment>
+						<comment># (These may be a bit overboard.  Not sure if you need the BaseValue</comment>
+						<comment># ones, or if the BaseValue ones are the only ones you need, etc.)</comment>
+						<hotfix name="ApocHotfix" package="GD_Lilac_Psycho_Streaming">
+							<code profiles="">set GD_Lilac_Psycho_Streaming.Pawn_LilacPlayerClass GroundSpeed 440</code>
+							<code profiles="">set GD_Lilac_Psycho_Streaming.Pawn_LilacPlayerClass GroundSpeedBaseValue 440</code>
+							<code profiles="">set GD_Lilac_Psycho_Streaming.Pawn_LilacPlayerClass AirSpeed 500</code>
+							<code profiles="">set GD_Lilac_Psycho_Streaming.Pawn_LilacPlayerClass AirSpeedBaseValue 500</code>
+							<code profiles="">set GD_Lilac_Psycho_Streaming.Pawn_LilacPlayerClass JumpZ 630</code>
+							<code profiles="">set GD_Lilac_Psycho_Streaming.Pawn_LilacPlayerClass JumpZBaseValue 630</code>
+							<code profiles="">set GD_Lilac_Psycho_Streaming.Pawn_LilacPlayerClass CrouchedPct 0.5</code>
+						</hotfix>
+					</category>
+					<category name="Maya">
+						<comment># The set statements apply the settings initially</comment>
+						<code profiles="">set GD_Siren.Character.CharClass_Siren GroundSpeed 440</code>
+						<code profiles="">set GD_Siren.Character.CharClass_Siren AirSpeed 500</code>
+						<code profiles="">set GD_Siren.Character.CharClass_Siren CrouchedPct 0.5</code>
+						<code profiles="">set GD_Siren.Character.CharClass_Siren JumpZ 630</code>
+						<comment># The hotfixes apply once you respawn or exit FFYL</comment>
+						<comment># (These may be a bit overboard.  Not sure if you need the BaseValue</comment>
+						<comment># ones, or if the BaseValue ones are the only ones you need, etc.)</comment>
+						<hotfix name="ApocHotfix" package="GD_Siren_Streaming">
+							<code profiles="">set GD_Siren_Streaming.Pawn_Siren GroundSpeed 440</code>
+							<code profiles="">set GD_Siren_Streaming.Pawn_Siren GroundSpeedBaseValue 440</code>
+							<code profiles="">set GD_Siren_Streaming.Pawn_Siren AirSpeed 500</code>
+							<code profiles="">set GD_Siren_Streaming.Pawn_Siren AirSpeedBaseValue 500</code>
+							<code profiles="">set GD_Siren_Streaming.Pawn_Siren JumpZ 630</code>
+							<code profiles="">set GD_Siren_Streaming.Pawn_Siren JumpZBaseValue 630</code>
+							<code profiles="">set GD_Siren_Streaming.Pawn_Siren CrouchedPct 0.5</code>
+						</hotfix>
+					</category>
+					<category name="Salvador">
+						<comment># The set statements apply the settings initially</comment>
+						<code profiles="">set GD_Mercenary.Character.CharClass_Mercenary GroundSpeed 440</code>
+						<code profiles="">set GD_Mercenary.Character.CharClass_Mercenary AirSpeed 500</code>
+						<code profiles="">set GD_Mercenary.Character.CharClass_Mercenary CrouchedPct 0.5</code>
+						<code profiles="">set GD_Mercenary.Character.CharClass_Mercenary JumpZ 630</code>
+						<comment># The hotfixes apply once you respawn or exit FFYL</comment>
+						<comment># (These may be a bit overboard.  Not sure if you need the BaseValue</comment>
+						<comment># ones, or if the BaseValue ones are the only ones you need, etc.)</comment>
+						<hotfix name="ApocHotfix" package="GD_Mercenary_Streaming">
+							<code profiles="">set GD_Mercenary_Streaming.Pawn_Mercenary GroundSpeed 440</code>
+							<code profiles="">set GD_Mercenary_Streaming.Pawn_Mercenary GroundSpeedBaseValue 440</code>
+							<code profiles="">set GD_Mercenary_Streaming.Pawn_Mercenary AirSpeed 500</code>
+							<code profiles="">set GD_Mercenary_Streaming.Pawn_Mercenary AirSpeedBaseValue 500</code>
+							<code profiles="">set GD_Mercenary_Streaming.Pawn_Mercenary JumpZ 630</code>
+							<code profiles="">set GD_Mercenary_Streaming.Pawn_Mercenary JumpZBaseValue 630</code>
+							<code profiles="">set GD_Mercenary_Streaming.Pawn_Mercenary CrouchedPct 0.5</code>
+						</hotfix>
+					</category>
+					<category name="Zero">
+						<comment># The set statements apply the settings initially</comment>
+						<code profiles="">set GD_Assassin.Character.CharClass_Assassin GroundSpeed 440</code>
+						<code profiles="">set GD_Assassin.Character.CharClass_Assassin AirSpeed 500</code>
+						<code profiles="">set GD_Assassin.Character.CharClass_Assassin CrouchedPct 0.5</code>
+						<code profiles="">set GD_Assassin.Character.CharClass_Assassin JumpZ 630</code>
+						<comment># The hotfixes apply once you respawn or exit FFYL</comment>
+						<comment># (These may be a bit overboard.  Not sure if you need the BaseValue</comment>
+						<comment># ones, or if the BaseValue ones are the only ones you need, etc.)</comment>
+						<hotfix name="ApocHotfix" package="GD_Assassin_Streaming">
+							<code profiles="">set GD_Assassin_Streaming.Pawn_Assassin GroundSpeed 440</code>
+							<code profiles="">set GD_Assassin_Streaming.Pawn_Assassin GroundSpeedBaseValue 440</code>
+							<code profiles="">set GD_Assassin_Streaming.Pawn_Assassin AirSpeed 500</code>
+							<code profiles="">set GD_Assassin_Streaming.Pawn_Assassin AirSpeedBaseValue 500</code>
+							<code profiles="">set GD_Assassin_Streaming.Pawn_Assassin JumpZ 630</code>
+							<code profiles="">set GD_Assassin_Streaming.Pawn_Assassin JumpZBaseValue 630</code>
+							<code profiles="">set GD_Assassin_Streaming.Pawn_Assassin CrouchedPct 0.5</code>
+						</hotfix>
+					</category>
+					<category name="Global Movement Vars">
+						<comment># These variables aren't player-specific, and don't seem to require hotfixes</comment>
+						<comment># to apply post-death-or-FFYL</comment>
+						<code profiles="">set GD_PlayerShared.injured.PlayerInjuredDefinition InjuredMovementSpeed 150</code>
+						<code profiles="">set GD_Globals.General.Globals PlayerAirControl 0.11</code>
+						<code profiles="">set Engine.Pawn LadderSpeed 200</code>
+					</category>
+				</category>
+			</category>
+		</category>
+	</body>
+</BLCMM>
+
+#Commands:
+set GD_Soldier.Character.CharClass_Soldier GroundSpeed 650
+set GD_Soldier.Character.CharClass_Soldier AirSpeed 700
+set GD_Soldier.Character.CharClass_Soldier CrouchedPct 1
+set GD_Soldier.Character.CharClass_Soldier JumpZ 750
+set GD_Tulip_Mechromancer.Character.CharClass_Mechromancer GroundSpeed 650
+set GD_Tulip_Mechromancer.Character.CharClass_Mechromancer AirSpeed 700
+set GD_Tulip_Mechromancer.Character.CharClass_Mechromancer CrouchedPct 1
+set GD_Tulip_Mechromancer.Character.CharClass_Mechromancer JumpZ 750
+set GD_Lilac_PlayerClass.Character.CharClass_LilacPlayerClass GroundSpeed 650
+set GD_Lilac_PlayerClass.Character.CharClass_LilacPlayerClass AirSpeed 700
+set GD_Lilac_PlayerClass.Character.CharClass_LilacPlayerClass CrouchedPct 1
+set GD_Lilac_PlayerClass.Character.CharClass_LilacPlayerClass JumpZ 750
+set GD_Siren.Character.CharClass_Siren GroundSpeed 650
+set GD_Siren.Character.CharClass_Siren AirSpeed 700
+set GD_Siren.Character.CharClass_Siren CrouchedPct 1
+set GD_Siren.Character.CharClass_Siren JumpZ 750
+set GD_Mercenary.Character.CharClass_Mercenary GroundSpeed 650
+set GD_Mercenary.Character.CharClass_Mercenary AirSpeed 700
+set GD_Mercenary.Character.CharClass_Mercenary CrouchedPct 1
+set GD_Mercenary.Character.CharClass_Mercenary JumpZ 750
+set GD_Assassin.Character.CharClass_Assassin GroundSpeed 650
+set GD_Assassin.Character.CharClass_Assassin AirSpeed 700
+set GD_Assassin.Character.CharClass_Assassin CrouchedPct 1
+set GD_Assassin.Character.CharClass_Assassin JumpZ 750
+set GD_PlayerShared.injured.PlayerInjuredDefinition InjuredMovementSpeed 300
+set GD_Globals.General.Globals PlayerAirControl 0.8
+set Engine.Pawn LadderSpeed 400
+
+#Direct-Execute Warning:
+say WARNING: "BL2 Movement Speed Cheats" must be imported into BLCMM to run properly with UCP or other mods.
+
+#Hotfixes:
+set Transient.SparkServiceConfiguration_6 Keys ("SparkLevelPatchEntry-GBX_fixes1","SparkLevelPatchEntry-GBX_fixes2","SparkLevelPatchEntry-GBX_fixes3","SparkLevelPatchEntry-GBX_fixes4","SparkLevelPatchEntry-GBX_fixes5","SparkLevelPatchEntry-GBX_Fixes6","SparkLevelPatchEntry-GBX_Fixes7","SparkLevelPatchEntry-GBX_Fixes8","SparkLevelPatchEntry-GBX_Fixes9","SparkLevelPatchEntry-GBX_fixes10","SparkLevelPatchEntry-GBX_fixes11","SparkLevelPatchEntry-GBX_fixes12","SparkLevelPatchEntry-GBX_fixes13","SparkLevelPatchEntry-GBX_fixes14","SparkOnDemandPatchEntry-GBX_fixes15","SparkOnDemandPatchEntry-GBX_fixes16","SparkOnDemandPatchEntry-GBX_fixes17","SparkOnDemandPatchEntry-GBX_fixes18","SparkOnDemandPatchEntry-GBX_fixes19","SparkPatchEntry-GBX_fixes20","SparkPatchEntry-GBX_fixes21","SparkPatchEntry-GBX_fixes22","SparkPatchEntry-GBX_fixes23","SparkOnDemandPatchEntry-ApocHotfix1","SparkOnDemandPatchEntry-ApocHotfix2","SparkOnDemandPatchEntry-ApocHotfix3","SparkOnDemandPatchEntry-ApocHotfix4","SparkOnDemandPatchEntry-ApocHotfix5","SparkOnDemandPatchEntry-ApocHotfix6","SparkOnDemandPatchEntry-ApocHotfix7","SparkOnDemandPatchEntry-ApocHotfix8","SparkOnDemandPatchEntry-ApocHotfix9","SparkOnDemandPatchEntry-ApocHotfix10","SparkOnDemandPatchEntry-ApocHotfix11","SparkOnDemandPatchEntry-ApocHotfix12","SparkOnDemandPatchEntry-ApocHotfix13","SparkOnDemandPatchEntry-ApocHotfix14","SparkOnDemandPatchEntry-ApocHotfix15","SparkOnDemandPatchEntry-ApocHotfix16","SparkOnDemandPatchEntry-ApocHotfix17","SparkOnDemandPatchEntry-ApocHotfix18","SparkOnDemandPatchEntry-ApocHotfix19","SparkOnDemandPatchEntry-ApocHotfix20","SparkOnDemandPatchEntry-ApocHotfix21","SparkOnDemandPatchEntry-ApocHotfix22","SparkOnDemandPatchEntry-ApocHotfix23","SparkOnDemandPatchEntry-ApocHotfix24","SparkOnDemandPatchEntry-ApocHotfix25","SparkOnDemandPatchEntry-ApocHotfix26","SparkOnDemandPatchEntry-ApocHotfix27","SparkOnDemandPatchEntry-ApocHotfix28","SparkOnDemandPatchEntry-ApocHotfix29","SparkOnDemandPatchEntry-ApocHotfix30","SparkOnDemandPatchEntry-ApocHotfix31","SparkOnDemandPatchEntry-ApocHotfix32","SparkOnDemandPatchEntry-ApocHotfix33","SparkOnDemandPatchEntry-ApocHotfix34","SparkOnDemandPatchEntry-ApocHotfix35","SparkOnDemandPatchEntry-ApocHotfix36","SparkOnDemandPatchEntry-ApocHotfix37","SparkOnDemandPatchEntry-ApocHotfix38","SparkOnDemandPatchEntry-ApocHotfix39","SparkOnDemandPatchEntry-ApocHotfix40","SparkOnDemandPatchEntry-ApocHotfix41","SparkOnDemandPatchEntry-ApocHotfix42")
+set Transient.SparkServiceConfiguration_6 Values (",GD_Balance.WeightingPlayerCount.BugmorphCocoon_PerPlayers_Phase1,ConditionalInitialization.ConditionalExpressionList[4].BaseValueIfTrue.BaseValueConstant,0.700000,.8",",GD_Balance.WeightingPlayerCount.BugmorphCocoon_PerPlayers_Phase2,ConditionalInitialization.ConditionalExpressionList[4].BaseValueIfTrue.BaseValueConstant,0.400000,.5",",GD_Balance.WeightingPlayerCount.BugmorphCocoon_PerPlayers_Phase3,ConditionalInitialization.ConditionalExpressionList[4].BaseValueIfTrue.BaseValueConstant,0.200000,.3",",GD_Balance.WeightingPlayerCount.BugmorphCocoon_PerPlayers_Phase4,ConditionalInitialization.ConditionalExpressionList[4].BaseValueIfTrue.BaseValueConstant,0.100000,.2",",GD_Balance.WeightingPlayerCount.BugmorphCocoon_PerPlayers_Phase5,ConditionalInitialization.ConditionalExpressionList[4].BaseValueIfTrue.BaseValueConstant,0.075000,.1","SouthpawFactory_P,GD_Population_Marauder.Balance.Unique.PawnBalance_Assassin1,DefaultItemPoolList[3].PoolProbability.BaseValueScaleConstant,0.250000,1","SouthpawFactory_P,GD_Population_Nomad.Balance.Unique.PawnBalance_Assassin2,DefaultItemPoolList[4].PoolProbability.BaseValueScaleConstant,0.250000,1","SouthpawFactory_P,GD_Population_Psycho.Balance.Unique.PawnBalance_Assassin3,DefaultItemPoolList[1].PoolProbability.BaseValueScaleConstant,0.250000,1","SouthpawFactory_P,GD_Population_Rat.Balance.Unique.PawnBalance_Assassin4,DefaultItemPoolList[3].PoolProbability.BaseValueScaleConstant,0.250000,1",",GD_Sage_Rare_Scaylion.Population.PawnBalance_Sage_Rare_Scaylion,DefaultItemPoolList[1].PoolProbability.BaseValueScaleConstant,1.000000,100",",GD_Sage_Rare_Drifter.Balance.PawnBalance_Sage_Rare_Drifter,DefaultItemPoolList[0].PoolProbability.BaseValueScaleConstant,1.000000,100",",GD_Sage_Rare_Rhino.Population.PawnBalance_Sage_Rare_Rhino,DefaultItemPoolList[1].PoolProbability.BaseValueScaleConstant,1.000000,100",",GD_Sage_Rare_Skag.Population.PawnBalance_Sage_Rare_Skag,DefaultItemPoolList[1].PoolProbability.BaseValueScaleConstant,1.000000,100",",GD_Sage_Rare_Spore.Population.PawnBalance_Sage_Rare_Spore,DefaultItemPoolList[0].PoolProbability.BaseValueScaleConstant,1.000000,100","GD_Assassin_Streaming,GD_Assassin_Skills.Sniping.Velocity,SkillEffectDefinitions[0].ModifierType,MT_PostAdd,MT_Scale","GD_Tulip_Mechro_Streaming,GD_Tulip_Mechromancer_Skills.LittleBigTrouble.WiresDontTalk,SkillEffectDefinitions,,((AttributeToModify=D_Attributes.DamageTypeModifers.InstigatedShockDamageModifier,bIncludeDuelingTargets=False,bIncludeSelfAsTarget=False,bOnlyEffectTargetsInRange=False,bExcludeNonPlayerCharacters=False,EffectTarget=TARGET_Self,TargetInstanceDataName=,TargetCriteria=CRITERIA_None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.030000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),GradeToStartApplyingEffect=1,PerGradeUpgradeInterval=1,PerGradeUpgrade=(BaseValueConstant=0.030000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),BonusUpgradeList=),(AttributeToModify=D_Attributes.DamageTypeModifers.InstigatedShockStatusDamageModifier,bIncludeDuelingTargets=False,bIncludeSelfAsTarget=False,bOnlyEffectTargetsInRange=False,bExcludeNonPlayerCharacters=False,EffectTarget=TARGET_Self,TargetInstanceDataName=,TargetCriteria=CRITERIA_None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.030000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),GradeToStartApplyingEffect=1,PerGradeUpgradeInterval=1,PerGradeUpgrade=(BaseValueConstant=0.030000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),BonusUpgradeList=))","GD_Siren_Streaming,GD_Siren_Skills.Misc.Init_BlightPhoenix_DamageCalc_Part2,ValueFormula.Level.InitializationDefinition,AttributeInitializationDefinition'GD_Balance_HealthAndDamage.HealthAndDamage.Init_PlayerMeleeDamage',AttributeInitializationDefinition'GD_Balance_HealthAndDamage.HealthAndDamage.Init_PlayerSkillDamage'","GD_Siren_Streaming,GD_Siren_Skills.Misc.Init_BlightPhoenix_DamageCalc_Part2,ValueFormula.Level.BaseValueScaleConstant,1.000000,3.5","GD_Assassin_Streaming,GD_Assassin_Skills.Misc.Att_DeathMark_BonusDamage,BaseValue.BaseValueConstant,0.200000,.8","GD_Itempools.Runnables.Pool_FourAssassins,BalancedItems[1].Probability.InitializationDefinition,None,GD_Balance.Weighting.Weight_1_Common","GD_Shields.Projectiles.Proj_LegendaryBoosterShield:BehaviorProviderDefinition_1.Behavior_Explode_140,BehaviorSequences[0].BehaviorData2[7].Behavior.StatusEffectDamage.BaseValueAttribute,None,D_Attributes.Projectile.ProjectileDamage","GD_Shields.Projectiles.Proj_LegendaryBoosterShield:BehaviorProviderDefinition_1.Behavior_Explode_140,BehaviorSequences[0].BehaviorData2[7].Behavior.StatusEffectDamage.BaseValueScaleConstant,1.000000,.25","GD_Shields.Projectiles.Proj_LegendaryBoosterShield:BehaviorProviderDefinition_1.Behavior_Explode_140,BehaviorSequences[0].BehaviorData2[7].Behavior.StatusEffectChance.BaseValueConstant,1.000000,20","GD_Soldier_Streaming,GD_Soldier_Streaming.Pawn_Soldier,GroundSpeed,,650","GD_Soldier_Streaming,GD_Soldier_Streaming.Pawn_Soldier,GroundSpeedBaseValue,,650","GD_Soldier_Streaming,GD_Soldier_Streaming.Pawn_Soldier,AirSpeed,,700","GD_Soldier_Streaming,GD_Soldier_Streaming.Pawn_Soldier,AirSpeedBaseValue,,700","GD_Soldier_Streaming,GD_Soldier_Streaming.Pawn_Soldier,JumpZ,,750","GD_Soldier_Streaming,GD_Soldier_Streaming.Pawn_Soldier,JumpZBaseValue,,750","GD_Soldier_Streaming,GD_Soldier_Streaming.Pawn_Soldier,CrouchedPct,,1","GD_Tulip_Mechro_Streaming,GD_Tulip_Mechro_Streaming.Pawn_Mechromancer,GroundSpeed,,650","GD_Tulip_Mechro_Streaming,GD_Tulip_Mechro_Streaming.Pawn_Mechromancer,GroundSpeedBaseValue,,650","GD_Tulip_Mechro_Streaming,GD_Tulip_Mechro_Streaming.Pawn_Mechromancer,AirSpeed,,700","GD_Tulip_Mechro_Streaming,GD_Tulip_Mechro_Streaming.Pawn_Mechromancer,AirSpeedBaseValue,,700","GD_Tulip_Mechro_Streaming,GD_Tulip_Mechro_Streaming.Pawn_Mechromancer,JumpZ,,750","GD_Tulip_Mechro_Streaming,GD_Tulip_Mechro_Streaming.Pawn_Mechromancer,JumpZBaseValue,,750","GD_Tulip_Mechro_Streaming,GD_Tulip_Mechro_Streaming.Pawn_Mechromancer,CrouchedPct,,1","GD_Lilac_Psycho_Streaming,GD_Lilac_Psycho_Streaming.Pawn_LilacPlayerClass,GroundSpeed,,650","GD_Lilac_Psycho_Streaming,GD_Lilac_Psycho_Streaming.Pawn_LilacPlayerClass,GroundSpeedBaseValue,,650","GD_Lilac_Psycho_Streaming,GD_Lilac_Psycho_Streaming.Pawn_LilacPlayerClass,AirSpeed,,700","GD_Lilac_Psycho_Streaming,GD_Lilac_Psycho_Streaming.Pawn_LilacPlayerClass,AirSpeedBaseValue,,700","GD_Lilac_Psycho_Streaming,GD_Lilac_Psycho_Streaming.Pawn_LilacPlayerClass,JumpZ,,750","GD_Lilac_Psycho_Streaming,GD_Lilac_Psycho_Streaming.Pawn_LilacPlayerClass,JumpZBaseValue,,750","GD_Lilac_Psycho_Streaming,GD_Lilac_Psycho_Streaming.Pawn_LilacPlayerClass,CrouchedPct,,1","GD_Siren_Streaming,GD_Siren_Streaming.Pawn_Siren,GroundSpeed,,650","GD_Siren_Streaming,GD_Siren_Streaming.Pawn_Siren,GroundSpeedBaseValue,,650","GD_Siren_Streaming,GD_Siren_Streaming.Pawn_Siren,AirSpeed,,700","GD_Siren_Streaming,GD_Siren_Streaming.Pawn_Siren,AirSpeedBaseValue,,700","GD_Siren_Streaming,GD_Siren_Streaming.Pawn_Siren,JumpZ,,750","GD_Siren_Streaming,GD_Siren_Streaming.Pawn_Siren,JumpZBaseValue,,750","GD_Siren_Streaming,GD_Siren_Streaming.Pawn_Siren,CrouchedPct,,1","GD_Mercenary_Streaming,GD_Mercenary_Streaming.Pawn_Mercenary,GroundSpeed,,650","GD_Mercenary_Streaming,GD_Mercenary_Streaming.Pawn_Mercenary,GroundSpeedBaseValue,,650","GD_Mercenary_Streaming,GD_Mercenary_Streaming.Pawn_Mercenary,AirSpeed,,700","GD_Mercenary_Streaming,GD_Mercenary_Streaming.Pawn_Mercenary,AirSpeedBaseValue,,700","GD_Mercenary_Streaming,GD_Mercenary_Streaming.Pawn_Mercenary,JumpZ,,750","GD_Mercenary_Streaming,GD_Mercenary_Streaming.Pawn_Mercenary,JumpZBaseValue,,750","GD_Mercenary_Streaming,GD_Mercenary_Streaming.Pawn_Mercenary,CrouchedPct,,1","GD_Assassin_Streaming,GD_Assassin_Streaming.Pawn_Assassin,GroundSpeed,,650","GD_Assassin_Streaming,GD_Assassin_Streaming.Pawn_Assassin,GroundSpeedBaseValue,,650","GD_Assassin_Streaming,GD_Assassin_Streaming.Pawn_Assassin,AirSpeed,,700","GD_Assassin_Streaming,GD_Assassin_Streaming.Pawn_Assassin,AirSpeedBaseValue,,700","GD_Assassin_Streaming,GD_Assassin_Streaming.Pawn_Assassin,JumpZ,,750","GD_Assassin_Streaming,GD_Assassin_Streaming.Pawn_Assassin,JumpZBaseValue,,750","GD_Assassin_Streaming,GD_Assassin_Streaming.Pawn_Assassin,CrouchedPct,,1")
+

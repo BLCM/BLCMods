@@ -546,11 +546,10 @@ class ModProcessor(object):
         self.line('</body>', odf, 1)
         self.line('</BLCMM>', odf)
 
-        if len(self.set_commands) > 0:
-            self.line('', odf)
-            self.line('#Commands:', odf)
-            for cmd in self.set_commands:
-                self.line(cmd, odf)
+        self.line('', odf)
+        self.line('#Commands:', odf)
+        for cmd in self.set_commands:
+            self.line(cmd, odf)
 
         if len(self.hotfix_commands) > 0:
             self.line('', odf)
@@ -593,6 +592,94 @@ class ModProcessor(object):
         generated strings in place without too much fuss.
         """
         return self.format_strings[format_str]
+
+    def get_balanced_items(self, items):
+        """
+        Returns a string containing a BalancedItems array with the given `items`.
+        Each element of the list `items` should be a tuple, the first element
+        being the itempool class name, the second being the weight of that
+        item, and the third (optional) being an `invbalance` (or None).  If `None`,
+        the item will be put into the ItmPoolDefinition attribute - otherwise it
+        will be put into the InvBalanceDefinition attribute, with the given
+        `invbalance` string as the type of object being linked to (most commonly
+        either WeaponBalanceDefinition or InventoryBalanceDefinition).  An
+        optional fourth element will be the BaseValueScaleConstant of the item,
+        which will default to 1, otherwise.  An optional *fifth* element can be
+        specified to determine whether or not the item/pool will be Actually
+        Dropped (defaults to `True`).
+
+        This *could* be a staticmethod, but since we're always gonna have a
+        ModProcessor object around anyway, who cares.
+        """
+        bal_items = []
+        new_items = []
+        for item in items:
+            if len(item) == 2:
+                new_items.append((item[0], item[1], None, 1, True))
+            elif len(item) == 3:
+                new_items.append((item[0], item[1], item[2], 1, True))
+            elif len(item) == 4:
+                new_items.append((item[0], item[1], item[2], item[3], True))
+            else:
+                new_items.append((item[0], item[1], item[2], item[3], item[4]))
+        for (classname, weight, invbalance, scale, item_drop) in new_items:
+            if classname:
+                if invbalance:
+                    itmpool = 'None'
+                    invbal = "{}'{}'".format(invbalance, classname)
+                else:
+                    itmpool = "ItemPoolDefinition'{}'".format(classname)
+                    invbal = 'None'
+            else:
+                itmpool = 'None'
+                invbal = 'None'
+            if item_drop:
+                drop_string = 'True'
+            else:
+                drop_string = 'False'
+            bal_items.append("""(
+                    ItmPoolDefinition={},
+                    InvBalanceDefinition={},
+                    Probability=(
+                        BaseValueConstant={},
+                        BaseValueAttribute=None,
+                        InitializationDefinition=None,
+                        BaseValueScaleConstant={}
+                    ),
+                    bDropOnDeath={}
+                )""".format(itmpool, invbal, weight, round(scale, 6), drop_string))
+        return '({})'.format(','.join(bal_items))
+
+    def set_bi_item_pool(self, reg_name, classname, index, item,
+            level='None', weight=1, scale=1, invbalance=None):
+        """
+        Sets an entire BalancedItem structure as a hotfix, and saves it as the
+        given `reg_name`.  The class to set is given in `classname`.  The given
+        `index` of the BalancedItems structure will be set to `item`.  If
+        `invbalance` is not given, it will default to `ItemPoolDefinition`.
+        An optional `level` can be specified (will default to `None` otherwise),
+        and `weight` and `scale` can be used to specify a weight other than `1`.
+        """
+        if invbalance:
+            itmpool = 'None'
+            invbal = "{}'{}'".format(invbalance, item)
+        else:
+            itmpool = "ItemPoolDefinition'{}'".format(item)
+            invbal = 'None'
+        self.register_str(reg_name,
+                """level {} set {} BalancedItems[{}]
+                (
+                    ItmPoolDefinition={},
+                    InvBalanceDefinition={},
+                    Probability=(
+                        BaseValueConstant={},
+                        BaseValueAttribute=None,
+                        InitializationDefinition=None,
+                        BaseValueScaleConstant={}
+                    ),
+                    bDropOnDeath=True
+                )""".format(level, classname, index, itmpool, invbal, weight, scale)
+            )
 
 if __name__ == '__main__':
 

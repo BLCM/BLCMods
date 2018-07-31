@@ -46,7 +46,7 @@ except ModuleNotFoundError:
 ###
 
 mod_name = 'Stalkers Use Shields'
-mod_version = '1.1.0'
+mod_version = '1.1.1'
 output_filename = '{}.blcm'.format(mod_name)
 
 ###

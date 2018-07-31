@@ -8,6 +8,7 @@ Ask me for permission first if you wish to use larger portions of this code, mak
 
 *- Do not re-upload any of those files anywhere.*
 
+
 # Overview
 
 The **Cloud Kill Dynamic Nerf** nerfs Cloud Kill, uh well, dynamically. That is, Cloud Kill gets nerfed *a lot* in the early levels, and *a lot less* (or pretty much not at all) in the end game. Several options are available.
@@ -17,10 +18,10 @@ The **Cloud Kill Dynamic Nerf** nerfs Cloud Kill, uh well, dynamically. That is,
 
 The Cloud Kill Dynamic Nerf is compatible with the Skill Scaling Patch.
 It should be compatible with most other mods, as long as they do not touch Cloud Kill and/or Blight Phoenix.
-
 If they do touch Cloud Kill and/or Blight Phoenix, it will probably still be fine as long as you add the Cloud Kill Dynamic Nerf at the end. It may also not be fine at all. (Note that, in practice, Blight Phoenix is left unchanged by this mod.. it did lose a few of its internal organs, but with no noticeable consequences).
 
 One of the options of the Cloud Kill Dynamic Nerf (True Maya) is included as an optional nerf in the Unofficial Community Patch, as of version 4.1.
+
 
 
 

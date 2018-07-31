@@ -41,14 +41,15 @@ except ModuleNotFoundError:
     sys.exit(1)
 
 try:
-    from hotfixes import Hotfixes
+    from modprocessor import ModProcessor
+    mp = ModProcessor()
 except ModuleNotFoundError:
     print('')
-    print('****************************************************************')
-    print('To run this script, you will need to copy or symlink hotfixes.py')
+    print('********************************************************************')
+    print('To run this script, you will need to copy or symlink modprocessor.py')
     print('from the parent directory, so it exists here as well.  Sorry for')
     print('the bother!')
-    print('****************************************************************')
+    print('********************************************************************')
     print('')
     sys.exit(1)
 
@@ -57,15 +58,15 @@ except ModuleNotFoundError:
 ###
 
 mod_name = 'TPS Skinpool Reassignments'
-mod_version = '1.0.0'
-output_filename = '{}.txt'.format(mod_name)
+mod_version = '1.1.0'
+output_filename = '{}.blcm'.format(mod_name)
+output_source_filename = '{}-source.txt'.format(mod_name)
 
 ###
 ### Processing the mod
 ###
 
 data = Data('TPS')
-hfs = Hotfixes()
 free_count = 0
 prefix = ' '*(2*4)
 hotfix_output = []
@@ -82,24 +83,21 @@ for keyed in sorted(data.get_all_by_type('KeyedItemPoolDefinition')):
         (junk, actualcustom, junk2) = innerpool['BalancedItems'][0]['InvBalanceDefinition'].split("'")
 
         # Hotfix to unlink the intermediate pool
-        hf_id = 'unlink_{}'.format(free_count)
-        hfs.add_level_hotfix(hf_id, 'TPSSkinpool',
-            ',{},BalancedItems[{}].ItmPoolDefinition,,None'.format(
+        hotfix_output.append(
+            '{}level None set {} BalancedItems[{}].ItmPoolDefinition None'.format(
+                prefix,
                 keyed,
                 bi_idx,
                 ))
-        hotfix_output.append('{}{}'.format(prefix, hfs.get_hotfix_xml(hf_id)))
 
         # And a hotfix to link to the actual skin/head
-        hf_id = 'link_{}'.format(free_count)
-        hfs.add_level_hotfix(hf_id, 'TPSSkinpool',
-            """,{},BalancedItems[{}].InvBalanceDefinition,,
-            InventoryBalanceDefinition'{}'""".format(
+        hotfix_output.append(
+            "{}level None set {} BalancedItems[{}].InvBalanceDefinition InventoryBalanceDefinition'{}'".format(
+                prefix,
                 keyed,
                 bi_idx,
                 actualcustom,
                 ))
-        hotfix_output.append('{}{}'.format(prefix, hfs.get_hotfix_xml(hf_id)))
 
         # Increment our counter
         free_count += 1
@@ -110,7 +108,8 @@ hotfix_str = "\n\n".join(hotfix_output)
 ### Generate the mod string
 ###
 
-mod_str = """#<{mod_name}>
+mod_str = """TPS
+#<{mod_name}>
 
     # {mod_name} v{mod_version}
     # by Apocalyptech (based on the BL2 UCP section with the same purpose)
@@ -142,9 +141,15 @@ mod_str = """#<{mod_name}>
 ### Output to a file.
 ###
 
-with open(output_filename, 'w') as df:
-    df.write(mod_str)
+mp.human_str_to_blcm_filename(mod_str, output_filename)
 print('Wrote mod file to: {}'.format(output_filename))
+
+###
+### Also output to a source file, for other mods of mine to easily include
+###
+with open(output_source_filename, 'w') as df:
+    df.write(mod_str)
+print('Wrote source file to: {}'.format(output_source_filename))
 
 ###
 ### Also write out our list of saved pools to stderr, in a

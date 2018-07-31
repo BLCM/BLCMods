@@ -15,9 +15,8 @@ a TPS mod.
 Usage
 =====
 
-This mod must be imported into FilterTool/BLCMM with `Developer tools` ->
-`Add single mod`.  Choose the file `TPS Skinpool Reassignments.txt` and have
-at it!
+This mod must be imported into BLCMM using `File -> Import single mod`.
+Choose the file `TPS Skinpool Reassignments.blcm` and have at it!
 
 Mod Construction / Implementation Details
 =========================================
@@ -25,16 +24,17 @@ Mod Construction / Implementation Details
 *(This section is only relevant for someone looking to edit the mod in the
 same way I do, or just someone curious about my mod construction techniques.
 If you're just looking to run the mod, see the "Usage" section above.  The
-mod can, of course, be edited directly in FilterTool/BLCMM as well, once it's
+mod can, of course, be edited directly in BLCMM as well, once it's
 been imported.)*
 
-This mod is generated using a simple little Python script named
-`generate-mod.py`.  The script makes use of `hotfix.py` from the parent
-directory.  You'd need to copy (or symlink, if you're on Mac or Linux)
-`hotfix.py` into this directory in order to run the script.  It also makes
+This mod is generated using a Python script named `generate-mod.py`.  The
+script makes use of `modprocessor.py` from Apocalyptech's BL2 mod
+directory.  You'll need to copy (or symlink, if you're on Mac or Linux)
+`modprocessor.py` into this directory in order to run the script.  It also makes
 use of some data libraries from my own
-[FilterTool Explorer](https://github.com/apocalyptech/ft-explorer) project,
-so a few of *those* directories need to be copied/symlinked in here as well.
+[FT/BLCMM Explorer](https://github.com/apocalyptech/ft-explorer) project.
+That project's `resources` and `ftexplorer` directories will need to be
+copied (or symlinked) in here as well.
 
 Licenses
 ========
@@ -51,6 +51,9 @@ for the full text.
 
 Changelog
 =========
+
+**v1.1.0**, July 28, 2018:
+ * Converted to BLCM format *(BLCMM is now required; FilterTool will not work)*
 
 **v1.0.0**, June 9, 2018:
  * Initial public release
