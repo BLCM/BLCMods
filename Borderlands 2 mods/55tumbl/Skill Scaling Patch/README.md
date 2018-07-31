@@ -39,7 +39,7 @@ You can find [here](http://blstats.com/skilldamage.php) all the damage values at
 **Scorn**: made to scale like other skills.   
 * Damage increase of +60% at level 30, +100% at level 50, +144% at 72, +160% at OP8
 
-**Immolate**: compensate for the double dip in damage penalty against higher level enemies in the OP levels (the special mechanics of this skill made it so that it was doing only about 20% damage versus a level 80 enemy, while other skills and weapons were doing 45% damage).   
+**Immolate**: compensate for the double dip in damage penalty against higher level enemies in the OP levels (the special mechanics of this skill made it so that it was doing only about 20% damage versus a level 80 enemy, while other skills and weapons are doing 45% damage).   
 * No effect up to level 72. Damage increase in the OP levels, up to +122% at OP8.
 
 ## Krieg
@@ -65,7 +65,7 @@ You can find [here](http://blstats.com/skilldamage.php) all the damage values at
 
 **Deathtrap**: Fixed a bug that made the interaction between Make it Sparkle and Sharing is Caring (with a roid shield) completely broken.
 
-**Electrical Burn**: compensate for the double dip in damage penalty against higher level enemies in the OP levels (the special mechanics of this skill made it so that it was doing only about 20% damage versus a level 80 enemy, while other skills and weapons were doing 45% damage).   
+**Electrical Burn**: compensate for the double dip in damage penalty against higher level enemies in the OP levels (the special mechanics of this skill made it so that it was doing only about 20% damage versus a level 80 enemy, while other skills and weapons are doing 45% damage).   
 * No effect up to level 72. Damage increase in the OP levels, up to +122% at OP8.
 
 ## Axton
@@ -89,5 +89,6 @@ Thanks to Koby for making me want to do something about it, and inviting me to S
 
 # Change log
 
+* [2018-07-31] v2.0: Added the Immolate & Electrical Burn fixes.
 * [2018-07-18] v1.1: Fixed a small issue with the calculation of the Phalanx Shield Capacity. Switched to BLCMM-compatible format.
 * [2018-06-24] v1.0.
