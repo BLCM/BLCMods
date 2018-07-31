@@ -39,6 +39,9 @@ You can find [here](http://blstats.com/skilldamage.php) all the damage values at
 **Scorn**: made to scale like other skills.   
 * Damage increase of +60% at level 30, +100% at level 50, +144% at 72, +160% at OP8
 
+**Immolate**: compensate for the double dip in damage penalty against higher level enemies in the OP levels (the special mechanics of this skill made it so that it was doing only about 20% damage versus a level 80 enemy, while other skills and weapons were doing 45% damage).   
+* No effect up to level 72. Damage increase in the OP levels, up to +122% at OP8.
+
 ## Krieg
 
 **Light the Fuse**: removed the level 72 cap.
@@ -61,6 +64,9 @@ You can find [here](http://blstats.com/skilldamage.php) all the damage values at
 * All of this should now be exactly the same as it is on console.
 
 **Deathtrap**: Fixed a bug that made the interaction between Make it Sparkle and Sharing is Caring (with a roid shield) completely broken.
+
+**Electrical Burn**: compensate for the double dip in damage penalty against higher level enemies in the OP levels (the special mechanics of this skill made it so that it was doing only about 20% damage versus a level 80 enemy, while other skills and weapons were doing 45% damage).   
+* No effect up to level 72. Damage increase in the OP levels, up to +122% at OP8.
 
 ## Axton
 **Sabre Turret**: Tried to make its damage scale the way it was supposed to (and actually does, on console). Unlike Deathtrap, I couldn't figure out a way to do it perfectly, so I got as close as I could. I'll update if I find a better solution.
