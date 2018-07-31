@@ -18,7 +18,7 @@ Concerning Deathtrap and the Sabre Turret, the main problem addressed by this pa
 
 The Skill Scaling Patch can be used as a standalone, for a vanilla experience with less bugs, and to meet Deathtrap and the Sabre Turret the way they were supposed to be (and actually are, on console).
 
-The Skill Scaling Patch is included in the Unofficial Community Patch, as of version 4.1.
+The Skill Scaling Patch (v1.0) is included in the Unofficial Community Patch, as of version 4.1.
 
 You can also try to merge it with other mods, using [BLCMM](https://www.youtube.com/watch?v=VkRgUqru3oU&t=27s). However, this may create serious incompatibilities if the other mods affect the skills modified by the Skill Scaling Patch, or even skills in general. I'd recommend adding the Skill Scaling Patch after other mods, and disabling any changes affecting the mentioned skills, in those other mods. 
 
