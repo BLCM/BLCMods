@@ -1,4 +1,12 @@
-*All files and content provided here were written by me (55tumbl), unless stated otherwise. They are free for personal use. You may use these mods in videos, or for streaming, as long as you give proper credit and let me know about it. You may re-use small bits of code (e.g. formulas, etc) for your own purposes as long as you give proper credit and let me know about it. Ask permission if you wish to use larger portions of this code, make a modified/improved version, include it in a mod pack, etc. Do not re-upload any of those files anywhere.*
+*All files and content provided here were written by me (55tumbl), unless stated otherwise.*
+
+*- They are free for personal use. I do decline any responsability in case it blows up in your face somehow, or any other misuse.
+You may use these mods in videos, or for streaming, as long as you give me proper and visible credit. I'd appreciate you letting me know about it.*
+
+*- You may re-use small bits of code (e.g. formulas, behavior modifications, etc) for your own purposes as long as you give me proper and visible credit, and let me know about it.
+Ask me for permission first if you wish to use larger portions of this code, make a modified/improved version, include it in a mod pack, etc.*
+
+*- Do not re-upload any of those files anywhere.*
 
 # Overview
 
@@ -31,6 +39,9 @@ You can find [here](http://blstats.com/skilldamage.php) all the damage values at
 **Scorn**: made to scale like other skills.   
 * Damage increase of +60% at level 30, +100% at level 50, +144% at 72, +160% at OP8
 
+**Immolate**: compensate for the double dip in damage penalty against higher level enemies in the OP levels (the special mechanics of this skill made it so that it was doing only about 20% damage versus a level 80 enemy, while other skills and weapons are doing 45% damage).   
+* No effect up to level 72. Damage increase in the OP levels, up to +122% at OP8.
+
 ## Krieg
 
 **Light the Fuse**: removed the level 72 cap.
@@ -54,6 +65,9 @@ You can find [here](http://blstats.com/skilldamage.php) all the damage values at
 
 **Deathtrap**: Fixed a bug that made the interaction between Make it Sparkle and Sharing is Caring (with a roid shield) completely broken.
 
+**Electrical Burn**: compensate for the double dip in damage penalty against higher level enemies in the OP levels (the special mechanics of this skill made it so that it was doing only about 20% damage versus a level 80 enemy, while other skills and weapons are doing 45% damage).   
+* No effect up to level 72. Damage increase in the OP levels, up to +122% at OP8.
+
 ## Axton
 **Sabre Turret**: Tried to make its damage scale the way it was supposed to (and actually does, on console). Unlike Deathtrap, I couldn't figure out a way to do it perfectly, so I got as close as I could. I'll update if I find a better solution.
 * This affects the damage of the bullets, the Scorched Earth Rockets, Nuke, and the capacity of the Phalanx Shield.
@@ -75,5 +89,6 @@ Thanks to Koby for making me want to do something about it, and inviting me to S
 
 # Change log
 
+* [2018-07-31] v2.0: Added the Immolate & Electrical Burn fixes.
 * [2018-07-18] v1.1: Fixed a small issue with the calculation of the Phalanx Shield Capacity. Switched to BLCMM-compatible format.
 * [2018-06-24] v1.0.
