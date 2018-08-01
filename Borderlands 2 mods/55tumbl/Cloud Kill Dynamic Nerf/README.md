@@ -1,5 +1,13 @@
+*All files and content provided here were written by me (55tumbl), unless stated otherwise.*
 
-*All files and content provided here were written by me (55tumbl), unless stated otherwise. They are free for personal use. You may use these mods in videos, or for streaming, as long as you give proper credit and let me know about it. You may re-use small bits of code (e.g. formulas, etc) for your own purposes as long as you give proper credit and let me know about it. Ask permission if you wish to use larger portions of this code, make a modified/improved version, include it in a mod pack, etc. Do not re-upload any of those files anywhere.*
+*- They are free for personal use. I do decline any responsability in case it blows up in your face somehow, or any other misuse.
+You may use these mods in videos, or for streaming, as long as you give me proper credit. I would appreciate you letting me know about it.*
+
+*- You may re-use small bits of code (e.g. formulas, behavior modifications, etc) for your own purposes as long as you give me proper credit, and let me know about it.
+Ask me for permission first if you wish to use larger portions of this code, make a modified/improved version, include it in a mod pack, etc.*
+
+*- Do not re-upload any of those files anywhere.*
+
 
 # Overview
 
@@ -10,14 +18,11 @@ The **Cloud Kill Dynamic Nerf** nerfs Cloud Kill, uh well, dynamically. That is,
 
 The Cloud Kill Dynamic Nerf is compatible with the Skill Scaling Patch.
 It should be compatible with most other mods, as long as they do not touch Cloud Kill and/or Blight Phoenix.
-
 If they do touch Cloud Kill and/or Blight Phoenix, it will probably still be fine as long as you add the Cloud Kill Dynamic Nerf at the end. It may also not be fine at all. (Note that, in practice, Blight Phoenix is left unchanged by this mod.. it did lose a few of its internal organs, but with no noticeable consequences).
 
 One of the options of the Cloud Kill Dynamic Nerf (True Maya) is included as an optional nerf in the Unofficial Community Patch, as of version 4.1.
 
-If they do touch Cloud Kill and/or Blight Phoenix, it will probably still be fine as long as you add the Cloud Kill Dynamic Nerf at the end. It may also not be fine at all.
 
-(Note that, in practice, Blight Phoenix is left unchanged by this mod.. it did lose a few of its internal organs, but with no noticeable consequences).
 
 
 # Options
