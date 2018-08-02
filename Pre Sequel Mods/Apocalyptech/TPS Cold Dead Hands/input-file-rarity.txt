@@ -1,0 +1,157 @@
+        #<{section_label}>
+
+            #
+            # Main Game equip chances:
+            #
+            #                     Regular  Badass
+            #     Common (white):   {regular:pct_common}%   {badass:pct_common}%
+            #   Uncommon (green):   {regular:pct_uncommon}%   {badass:pct_uncommon}%
+            #        Rare (blue):   {regular:pct_rare}%   {badass:pct_rare}%
+            # Very Rare (purple):   {regular:pct_veryrare}%   {badass:pct_veryrare}%
+            #      Glitch (pink):   {regular:pct_glitch}%   {badass:pct_glitch}%
+            # Legendary (orange):   {regular:pct_legendary}%   {badass:pct_legendary}%
+            #
+            # Claptastic Voyage equip chances:
+            #
+            #                     Regular  Badass
+            #     Common (white):   {regular:pct_clap_common}%   {badass:pct_clap_common}%
+            #   Uncommon (green):   {regular:pct_clap_uncommon}%   {badass:pct_clap_uncommon}%
+            #        Rare (blue):   {regular:pct_clap_rare}%   {badass:pct_clap_rare}%
+            # Very Rare (purple):   {regular:pct_clap_veryrare}%   {badass:pct_clap_veryrare}%
+            #      Glitch (pink):   {regular:pct_clap_glitch}%   {badass:pct_clap_glitch}%
+            # Legendary (orange):   {regular:pct_clap_legendary}%   {badass:pct_clap_legendary}%
+            #
+
+            #<Regular Enemies>
+
+                # Assault Rifles
+
+                {regular:set_rarity_ar}
+
+                # Launchers
+
+                {regular:set_rarity_launchers}
+
+                # Pistols
+
+                {regular:set_rarity_pistols}
+
+                # SMGs
+
+                {regular:set_rarity_smg}
+
+                # Shotguns
+
+                {regular:set_rarity_shotguns}
+
+                # Snipers
+
+                {regular:set_rarity_snipers}
+
+                # Lasers
+
+                {regular:set_rarity_lasers}
+
+                # Shields
+
+                set {regular:equip_pool_shields} bAutoReadyItems True
+
+                {regular:set_shields}
+
+            #</Regular Enemies>
+
+            #<Badass Enemies>
+
+                # Assault Rifles
+
+                {badass:set_rarity_ar}
+
+                # Launchers
+
+                {badass:set_rarity_launchers}
+
+                # Pistols
+
+                {badass:set_rarity_pistols}
+
+                # SMGs
+
+                {badass:set_rarity_smg}
+
+                # Shotguns
+
+                {badass:set_rarity_shotguns}
+
+                # Snipers
+
+                {badass:set_rarity_snipers}
+
+                # Lasers
+
+                {badass:set_rarity_lasers}
+
+                # Shields
+
+                set {badass:equip_pool_shields} bAutoReadyItems True
+
+                {badass:set_shields}
+
+            #</Badass Enemies>
+
+            #<Game Intro Dahl Soldier Pools>
+
+                # The Dahl soldiers in the beginning of the game have some custom loot
+                # pools.  We're expanding the pools a bit, though we're making sure nothing
+                # higher than blue-rarity will spawn, and blue will be less likely than
+                # usual.  Also nerfs the shield equip pool during the opening level.
+
+{intro_pool_support_str}
+
+            #</Game Intro Dahl Soldier Pools>
+
+            #<Lost Legion Snipers>
+
+                # Lost Legion Snipers have their own equip pool which restricts them to
+                # some specific Dahl sniper rifles.  We're expanding that a bit, though
+                # keeping the Dahl restriction.
+
+                {mp:dahl_sniper_activate_0}
+
+                {mp:dahl_sniper_activate_1}
+
+                {mp:dahl_sniper_activate_2}
+
+                {mp:dahl_sniper_activate_3}
+
+                {mp:dahl_sniper_activate_4}
+
+                {mp:dahl_sniper_activate_5}
+
+                {mp:dahl_sniper_activate_6}
+
+                {mp:dahl_sniper_activate_7}
+
+                {mp:dahl_sniper_activate_8}
+
+                {mp:dahl_sniper_activate_9}
+
+                {mp:dahl_sniper_activate_10}
+
+                {mp:dahl_sniper_activate_11}
+
+                {mp:dahl_sniper_activate_12}
+
+            #</Lost Legion Snipers>
+
+            #<Claptastic Voyage Support>
+
+                # To support increased Glitch weights in Claptastic Voyage, we're using
+                # hotfixes to alter the glitch rate depending on if we're in a Claptastic
+                # Voyage level or not.  This saves us a bunch of skinpools which we'd
+                # otherwise have to reserve.
+
+{claptastic_support_str}
+
+            #</Claptastic Voyage Support>
+
+        #</{section_label}>

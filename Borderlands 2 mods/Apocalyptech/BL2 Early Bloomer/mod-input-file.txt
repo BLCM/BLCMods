@@ -1,0 +1,189 @@
+BL2
+#<{mod_name}>
+
+    # {mod_name} v{mod_version}
+    # by Apocalyptech
+    # Licensed under Public Domain / CC0 1.0 Universal
+    #
+    # This mod is an improvement on the similar section from UCP 4.0 which unlocks various
+    # equipment in the game.  In addition to the basic early-game weapon unlocks that UCP
+    # provides, this additionally allows Relics, Class Mods, all shield types, all grenade
+    # types, and probably just about everything to spawn from the beginning.
+    #
+    # There's no problem with having both this and UCP enabled -- it'll just mean
+    # that a few statements get executed twice.
+
+    #<UCP 4.0 Duplicates>
+
+        set GD_Itempools.Scheduling.Gamestage_07:ConstantAttributeValueResolver_0 ConstantValue 1
+
+        set GD_Itempools.Scheduling.Gamestage_03:ConstantAttributeValueResolver_0 ConstantValue 1
+
+        set GD_Itempools.Scheduling.Gamestage_02:ConstantAttributeValueResolver_0 ConstantValue 1
+
+    #</UCP 4.0 Duplicates>
+
+    #<Additional Unlocks>
+
+        # These take care of a ton of other stuff, like other weapon types (rocket launchers,
+        # etc), Relics, etc.  Note that we omit Gamestage_24 on purpose here, because
+        # that is used to determine Weapon Slot SDU rewards during playthrough 1 in
+        # the main storyline.  Nothing else in the game uses 24, so we're leaving it.
+
+        set GD_Itempools.Scheduling.Gamestage_04:ConstantAttributeValueResolver_0 ConstantValue 1
+
+        set GD_Itempools.Scheduling.Gamestage_05:ConstantAttributeValueResolver_0 ConstantValue 1
+
+        set GD_Itempools.Scheduling.Gamestage_06:ConstantAttributeValueResolver_0 ConstantValue 1
+
+        set GD_Itempools.Scheduling.Gamestage_08:ConstantAttributeValueResolver_0 ConstantValue 1
+
+        set GD_Itempools.Scheduling.Gamestage_09:ConstantAttributeValueResolver_0 ConstantValue 1
+
+        set GD_Itempools.Scheduling.Gamestage_10:ConstantAttributeValueResolver_0 ConstantValue 1
+
+        set GD_Itempools.Scheduling.Gamestage_11:ConstantAttributeValueResolver_0 ConstantValue 1
+
+        set GD_Itempools.Scheduling.Gamestage_12:ConstantAttributeValueResolver_0 ConstantValue 1
+
+        set GD_Itempools.Scheduling.Gamestage_13:ConstantAttributeValueResolver_0 ConstantValue 1
+
+        set GD_Itempools.Scheduling.Gamestage_14:ConstantAttributeValueResolver_0 ConstantValue 1
+
+        set GD_Itempools.Scheduling.Gamestage_15:ConstantAttributeValueResolver_0 ConstantValue 1
+
+        set GD_Itempools.Scheduling.Gamestage_16:ConstantAttributeValueResolver_0 ConstantValue 1
+
+        set GD_Itempools.Scheduling.Gamestage_17:ConstantAttributeValueResolver_0 ConstantValue 1
+
+        set GD_Itempools.Scheduling.Gamestage_18:ConstantAttributeValueResolver_0 ConstantValue 1
+
+        set GD_Itempools.Scheduling.Gamestage_19:ConstantAttributeValueResolver_0 ConstantValue 1
+
+        set GD_Itempools.Scheduling.Gamestage_20:ConstantAttributeValueResolver_0 ConstantValue 1
+
+        set GD_Itempools.Scheduling.Gamestage_21:ConstantAttributeValueResolver_0 ConstantValue 1
+
+        set GD_Itempools.Scheduling.Gamestage_22:ConstantAttributeValueResolver_0 ConstantValue 1
+
+        set GD_Itempools.Scheduling.Gamestage_23:ConstantAttributeValueResolver_0 ConstantValue 1
+
+    #</Additional Unlocks>
+
+    #<Class Mods>
+
+        # Class Mods have their own set of scheduling parameters
+
+        set GD_Itempools.Scheduling.LootSchedule_ClassMod_01_Common:ConstantAttributeValueResolver_0 ConstantValue 1
+
+        set GD_Itempools.Scheduling.LootSchedule_ClassMod_02_Uncommon:ConstantAttributeValueResolver_0 ConstantValue 1
+
+        set GD_Itempools.Scheduling.LootSchedule_ClassMod_03_Rare:ConstantAttributeValueResolver_0 ConstantValue 1
+
+        set GD_Itempools.Scheduling.LootSchedule_ClassMod_04_VeryRare:ConstantAttributeValueResolver_0 ConstantValue 1
+
+        set GD_Itempools.Scheduling.LootSchedule_ClassMod_05_Legendary:ConstantAttributeValueResolver_0 ConstantValue 1
+
+    #</Class Mods>
+
+    #<Grenade Mods>
+
+        # The various grenade mod components are restricted by level
+
+        set GD_GrenadeMods.BalanceAttributes.MinGameStage_CorrosiveGrenade:ConstantAttributeValueResolver_0 ConstantValue 1
+
+        set GD_GrenadeMods.BalanceAttributes.MinGameStage_Homing:ConstantAttributeValueResolver_0 ConstantValue 1
+
+        set GD_GrenadeMods.BalanceAttributes.MinGameStage_IncendiaryGrenade:ConstantAttributeValueResolver_0 ConstantValue 1
+
+        set GD_GrenadeMods.BalanceAttributes.MinGameStage_Longbow:ConstantAttributeValueResolver_0 ConstantValue 1
+
+        set GD_GrenadeMods.BalanceAttributes.MinGameStage_Rubberized:ConstantAttributeValueResolver_0 ConstantValue 1
+
+        set GD_GrenadeMods.BalanceAttributes.MinGameStage_ShockGrenade:ConstantAttributeValueResolver_0 ConstantValue 1
+
+        set GD_GrenadeMods.BalanceAttributes.MinGameStage_SlagGrenade:ConstantAttributeValueResolver_0 ConstantValue 1
+
+        set GD_GrenadeMods.BalanceAttributes.MinGameStage_Sticky:ConstantAttributeValueResolver_0 ConstantValue 1
+
+        # These definitions could be done with "set" as with other stuff, but
+        # it's actually a little more convenient to do 'em with hotfixes
+
+{grenade_unlock}
+
+        level None set GD_Iris_SeraphItems.ONegative.Iris_Seraph_GrenadeMod_ONegative_Balance Manufacturers[0].Grades[0].GameStageRequirement.MinGameStage 1
+
+        level None set GD_Orchid_GrenadeMods.A_Item_Custom.GM_Blade Manufacturers[0].Grades[0].GameStageRequirement.MinGameStage 1
+
+    #</Grenade Mods>
+
+    #<Relics>
+
+        # A few relics require some special attention not covered in the
+        # exhaustive unlocks section below.
+
+        level None set GD_Artifacts.A_Item.A_Stockpile Manufacturers[1].Grades[0].GameStageRequirement.MinGameStage 1
+
+        level None set GD_Artifacts.A_Item.A_Stockpile Manufacturers[2].Grades[0].GameStageRequirement.MinGameStage 1
+
+        level None set GD_Artifacts.A_Item.A_Stockpile_Rare Manufacturers[1].Grades[0].GameStageRequirement.MinGameStage 1
+
+        level None set GD_Artifacts.A_Item.A_Stockpile_Rare Manufacturers[2].Grades[0].GameStageRequirement.MinGameStage 1
+
+        level None set GD_Gladiolus_Artifacts.A_Item.A_VitalityStockpile_VeryRare Manufacturers[0].Grades[0].GameStageRequirement.MinGameStage 1
+
+        level None set GD_Gladiolus_Artifacts.A_Item.A_VitalityStockpile_VeryRare Manufacturers[1].Grades[0].GameStageRequirement.MinGameStage 1
+
+        level None set GD_Orchid_Artifacts.A_Item_Unique.A_SeraphBloodRelic Manufacturers[0].Grades[0].GameStageRequirement.MinGameStage 1
+
+    #</Relics>
+
+    #<Lobelia Pearlescent Pool>
+
+        # Ordinarily, Pearlescent weapons which come from this pool won't drop until
+        # level 61 or so.  (So far I've only seen the Chubby pool as something using
+        # this drop pool, but other things might too.)
+
+        set GD_Lobelia_Itempools.WeaponPools.Pool_Lobelia_Pearlescent_Weapons_All MinGameStageRequirement None
+
+    #</Lobelia Pearlescent Pool>
+
+    #<Rocket Ammo and Grenades in Early Game>
+
+        # Lets rocket ammo and grenades be available in world drops and vending
+        # machines right from the start of the game.  (Grenades already pop up
+        # pretty early, actually, but this should get 'em right from level 1.)
+
+        level None set GD_ItemGrades.Ammo_Shop.ItemGrade_AmmoShop_RocketLauncher Manufacturers[0].Grades[0].GameStageRequirement.MinGameStage 1
+
+        level None set GD_ItemGrades.Ammo.ItemGrade_Ammo_RocketLauncher Manufacturers[0].Grades[0].GameStageRequirement.MinGameStage 1
+
+        level None set GD_ItemGrades.Ammo_Shop.ItemGrade_AmmoShop_Grenade Manufacturers[0].Grades[0].GameStageRequirement.MinGameStage 1
+
+        level None set GD_ItemGrades.Ammo.ItemGrade_Ammo_Grenade Manufacturers[0].Grades[0].GameStageRequirement.MinGameStage 1
+
+    #</Rocket Ammo and Grenades in Early Game>
+
+    #<Better Loot Compatibility>
+
+        # This section is here for compatibility with my own "Better Loot" mod,
+        # though there are no ill effects to have this enabled without Better
+        # Loot present.  So, no need to disable!
+
+{better_loot_compat}
+
+    #</Better Loot Compatibility>
+
+    #<Exhaustive Weapon/Item Part Unlocks>
+
+        # This is an absurd set of commands which sets every weapon/item part
+        # to be able to spawn from the very beginning.  This is what will allow
+        # all element types from the beginning game, and various grenade delivery
+        # types, etc.  Realistically we'd only need a subset of these, but we
+        # include all fixes for unique/legendary partlists as well.
+
+{exhaustive_unlocks}
+
+    #</Exhaustive Weapon/Item Part Unlocks>
+
+#</{mod_name}>

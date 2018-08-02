@@ -1,0 +1,137 @@
+Apocalyptech's Borderlands: The Pre-Sequel Mods
+===============================================
+
+This is a collection of the mods that I've put together for TPS.  I've got
+an area in the `Borderlands 2 mods` directory as well, so feel free to check
+that out (though damned if I can get this README to link to it).
+
+The mods found in the main BLCMods repo are intended to be the full, most
+recently-released version.  I do most of my work on mods
+[in my own BLCMods Fork](https://github.com/apocalyptech/BLCMods/), so you
+can head over there to see if I have anything in the works, if you want.
+Note that my larger mods (Better Loot and Cold Dead Hands) have their own
+branches, so you can browse in `bl2betterloot`, `bl2colddeadhands`,
+`tpsbetterloot`, or `tpscolddeadhands`, in addition to `master`, if you like.
+
+* [Mod List](#mod-list)
+  * [Guaranteed Phonic](#guaranteed-phonic)
+  * [Luneshine on Uniques](#luneshine-on-uniques)
+  * [Speedier Moon Buggies](#speedier-moon-buggies)
+  * [Speedier Stingrays](#speedier-stingrays)
+  * [TPS Better Loot Mod](#tps-better-loot-mod)
+  * [TPS Cold Dead Hands](#tps-cold-dead-hands)
+  * [TPS Early Bloomer](#tps-early-bloomer)
+  * [TPS Expanded Legendary Pools](#tps-expanded-legendary-pools)
+  * [TPS Movement Speed Cheats](#tps-movement-speed-cheats)
+  * [TPS No Wasted COMs](#tps-no-wasted-coms)
+  * [TPS Skinpool Reassignments](#tps-skinpool-reassignments)
+* [Utilities](#utilities)
+* [Licenses](#licenses)
+
+Mod List
+========
+
+### Guaranteed Phonic
+
+Guarantees the spawn of Phonic Kraggon (or Phuper Phonic Kraggon) in Serenity's
+Waste.
+
+### Luneshine on Uniques
+
+Adds Luneshine attachments to several Unique/Legendary weapons which didn't
+previously have them.  **WARNING:** This will generate weapons which TPS will
+delete from your inventory, if it's started up without this mod enabled.
+
+### Speedier Moon Buggies
+
+This mod improves the speed of both varieties of Moon Buggies in Borderlands: The
+Pre-Sequel, mostly with an eye to ensuring that the few early-game jumps are 
+a bit easier to hit when using the buggy.   The jump back from Concordia to the
+main Serenity's Waste area, for instance, is usually easily missed if you don't
+happen to aim for the right part of the bridge.  With this mod, I've been able
+to get that one at 100% regardless of which part of the bridge I'm aiming at.
+
+### Speedier Stingrays
+
+This mod improves the speed of both varieties of Stingrays in Borderlands: The
+Pre-Sequel.  Stingrays were already quite good, but this makes traversing the
+icy wastes even speedier.  In addition to a general speed improvement, this
+increases the afterburner charge and improves handling quite a bit.
+
+### TPS Better Loot Mod
+
+This mod's general goal is to make loot drops in The Pre-Sequel "better",
+as in skewing very much towards the rarer loot.  Legendaries/Uniques will
+drop far more frequently than they do in vanilla TPS, glitch/luneshine
+weapons will spawn in the main world, etc.
+
+It's essentially a cheat mod, intended for those TPS players like myself who
+tend to play in Normal most of the time, dislike grinding, get bored easily by
+the uninteresting and drab loot that typically gets dropped in-game, and who
+often end up just resorting to Gibbed to be able to play around with some
+better gear.  The README in the mod dir itself should provide a lot more info.
+
+### TPS Cold Dead Hands
+
+This mod completely revamps the way in which weapons and shields are
+acquired during the game.  Instead of dropping weapons/shields from a
+random loot pool, enemies will now *always* drop the specific gun and
+shield that they're using.  In the default configuration, enemy gear
+quality is also improved considerably.
+
+### TPS Early Bloomer
+
+Unlocks all weapons/items to be able to spawn right at the beginning of the game.
+A more powerful version of the same functionality provided by UCP.  (This is
+technically a subset of Better Loot; if you're already running Better Loot then
+you already have this.)
+
+### TPS Expanded Legendary Pools
+
+This mod adds all legendary items across DLCs into the global legendary loot
+pools, and by default adds all uniques and glitch uniques into the
+legendary pools, too.
+
+### TPS Movement Speed Cheats
+
+This mod increases movement speed of all TPS characters (including while
+crouched, and while in FFYL).  It also increases the jump height a bit, and
+increases air control by quite a lot.  If you're looking to zip through
+some levels like there's no tomorrow, this is for you.
+
+### TPS No Wasted COMs
+
+This mod changes the Class Mod drop pools such that the only COMs which drop
+are for characters who are actually playing the game.  For a singleplayer
+game, that means you'll only ever get COMs for your one character, for
+instance.
+
+### TPS Skinpool Reassignments
+
+This mod serves the same purpose as BL2 UCP's "`Loot Pool & Drop Changes ->
+Skinpool Fixes (Don't uncheck this)`" section, but for TPS.  Specifically, it
+frees up 624 skin/head pools for use by TPS mods.  This is possible because the
+default skin/head pool structure uses an effectively unnecessary intermediate
+pool inbetween the pool that's actually used for drops and the skins/heads
+themselves.
+
+Utilities
+=========
+
+Most of the mods in here are constructed programmatically in Python, and
+require a utility library stored in my Borderlands 2 directory, `modprocessor.py`.
+To generate any of these mods from the master files, you'd have to copy
+or symlink that from my BL2 dir.
+
+Licenses
+========
+
+All the code here is licensed under the
+[3-clause BSD license](https://opensource.org/licenses/BSD-3-Clause),
+which should be permissive enough to do just about whatever with.
+
+Mods under this folder are licensed under
+[Public Domain / CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/).
+
+See [COPYING-code.txt](COPYING-code.txt) and [COPYING-mods.txt](COPYING-mods.txt)
+for the full text.

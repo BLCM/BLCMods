@@ -1,0 +1,43 @@
+#<Landscaper>
+
+	#<Description>
+
+		Mod author: WarMocK
+	
+		Release Date: 07-01-2018
+	
+		Version: 1.0.0
+	
+		Summary:
+		
+		- Changes the firing pattern of the Landscaper to a triangle with a central pellet in the middle
+		
+		- Reduced the pellet count to 8 when compared to the UCP version
+		
+		- Changed the damage accordingly to keep the damage output the same
+    
+    - The pellets now count as grenades
+		
+		- OPTIONAL: no self-damage from the grenades (enabled by default!)
+
+    #</Description>
+
+	#<Code>
+
+		set GD_Weap_Shotgun.FiringModes.Bullets_Shotgun_Torgue_Landscaper FiringPatternLines ((StartPoint=(Pitch=0,Yaw=0,Roll=0),EndPoint=(Pitch=0,Yaw=0,Roll=0),bUseStartPointOnly=True,CustomWaveMotion=(bUseCustomWaveMotion=False,WaveFreq=(X=0.000000,Y=0.000000,Z=0.000000),WaveAmp=(X=0.000000,Y=0.000000,Z=0.000000),WavePhase=(X=0.000000,Y=0.000000,Z=0.000000))),(StartPoint=(Pitch=912,Yaw=0,Roll=0),EndPoint=(Pitch=0,Yaw=0,Roll=0),bUseStartPointOnly=True,CustomWaveMotion=(bUseCustomWaveMotion=False,WaveFreq=(X=0.000000,Y=0.000000,Z=0.000000),WaveAmp=(X=0.000000,Y=0.000000,Z=0.000000),WavePhase=(X=0.000000,Y=0.000000,Z=0.000000))),(StartPoint=(Pitch=-410,Yaw=819,Roll=0),EndPoint=(Pitch=0,Yaw=0,Roll=0),bUseStartPointOnly=True,CustomWaveMotion=(bUseCustomWaveMotion=False,WaveFreq=(X=0.000000,Y=0.000000,Z=0.000000),WaveAmp=(X=0.000000,Y=0.000000,Z=0.000000),WavePhase=(X=0.000000,Y=0.000000,Z=0.000000))),(StartPoint=(Pitch=-410,Yaw=-819,Roll=0),EndPoint=(Pitch=0,Yaw=0,Roll=0),bUseStartPointOnly=True,CustomWaveMotion=(bUseCustomWaveMotion=False,WaveFreq=(X=0.000000,Y=0.000000,Z=0.000000),WaveAmp=(X=0.000000,Y=0.000000,Z=0.000000),WavePhase=(X=0.000000,Y=0.000000,Z=0.000000))))
+
+		set GD_Weap_Shotgun.Projectiles.Projectile_Landscaper:BehaviorProviderDefinition_0.Behavior_Explode_0 DamageSource Class'WillowGame.WillowDmgSource_Grenade'
+
+		set GD_Weap_Shotgun.Barrel.SG_Barrel_Jakobs_Landscaper AttributeSlotUpgrades ((SlotName="WeaponFireRate",GradeIncrease=-2,bActivateSlot=True),(SlotName="WeaponReloadSpeed",GradeIncrease=-4,bActivateSlot=True),(SlotName="WeaponDamage",GradeIncrease=12,bActivateSlot=True),(SlotName="WeaponAccuracyImpulse",GradeIncrease=-3,bActivateSlot=True))
+
+		set GD_Weap_Shotgun.Barrel.SG_Barrel_Jakobs_Landscaper WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-3.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=3.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=2.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+		#<OPTIONAL: Disable to turn self-damage back on if you want it hardcore>
+
+			set GD_Weap_Shotgun.Projectiles.Projectile_Landscaper:BehaviorProviderDefinition_0.Behavior_Explode_0 InstigatorSelfDamageScale 0.000000
+
+		#</OPTIONAL: Disable to turn self-damage back on if you want it hardcore>
+	
+	#</Code>
+	
+#</Landscaper>

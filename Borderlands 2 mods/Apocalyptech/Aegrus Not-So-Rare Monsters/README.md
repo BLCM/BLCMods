@@ -7,7 +7,7 @@ useful if you're looking to complete the
 [I Like My Monsters Rare](http://borderlands.wikia.com/wiki/I_Like_My_Monsters_Rare)
 mission without having to do any extra farming.
 
-There are two mutually-exclusive options when loaded into FilterTool:
+There are two mutually-exclusive options when loaded into BLCMM:
 
 1. Normalize spawn rates so that they're about as common as other
    creature types (slightly less for Drifters, since there's no
@@ -21,12 +21,29 @@ There are two mutually-exclusive options when loaded into FilterTool:
 Usage
 =====
 
-The best way to use this mod is to add it into FilterTool with
-`Developer tools` -> `Add single mod`.  Choose the file `Aegrus Not-So-Rare
-Monsters` and have at it!
+This mod must be imported into BLCMM using `File -> Import single mod`.
+Choose the file `Aegrus Not-So-Rare Monsters.blcm` and have at it!
 
 License
 =======
 
 This mod is licensed under
 [Public Domain / CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/).
+
+Changelog
+=========
+
+**v1.1.0**, July 27, 2018:
+ * Converted to BLCM format *(BLCMM is required; FilterTool is no longer supported)*
+ * Added a byline in the mod comment headers
+
+**v1.0.2**, April 25, 2018:
+ * Renamed file to have a .txt extension.
+
+**v1.0.1**, April 25, 2018:
+ * Tweaked comments in the mod file a bit, to look better inside FT/BLCMM.
+ * Removed the `Transient.SparkServiceConfiguration_6` set statements at the
+   bottom of the file, to enforce needing to run this via FT/BLCMM.
+
+**v1.0.0**, February 26, 2018:
+ * Initial public release

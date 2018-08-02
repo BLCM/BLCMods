@@ -1,0 +1,194 @@
+#<SKINSHIELD_-ABSORPTION>
+
+    - This is a resource file for Absorption skin shield. You need to set your prefered <skin_type_id> i.e. (GD_Runner_Items_MainGame.Runner.Skin_Blood) for all the properties in this resource file.
+
+    - Categories marked with [-] does not affect your stats, but you still need to set your <skin_type_id> to all the properties there. 
+
+    - ExternalAttributes are default for all shields and there is some other thing you could use it for, but that is not the topic of all of this right now. 
+
+    - Obviously the stuff marked with [+] is what you need to edit to make a proper working skinshield.
+
+    - Also no need to set ShieldType and everything else as I will have resource files for each shield type individually.
+
+    #<- ENABLER>
+
+        set <skin_type_id> OverridePool None
+
+        set <skin_type_id> CustomizationDef None
+
+        set <skin_type_id> PrimaryColor (R=0.000000,G=0.000000,B=0.000000,A=0.000000)
+
+        set <skin_type_id> SecondaryColor (R=0.000000,G=0.000000,B=0.000000,A=0.000000)
+
+        set <skin_type_id> TertiaryColor (R=0.000000,G=0.000000,B=0.000000,A=0.000000)
+
+        set <skin_type_id> ItemCardTopStatString None
+
+        set <skin_type_id> bPlayerUseItemOnPickup False
+
+        set <skin_type_id> bAIUseItemOnPickup False
+
+        set <skin_type_id> bUseCoopRange False
+
+        set <skin_type_id> UsedStatId None
+
+        set <skin_type_id> ObjectArchetype ShieldDefinition'WillowGame.Default__ShieldDefinition'
+
+        set <skin_type_id> Class Class'WillowGame.ShieldDefinition'
+
+    #</- ENABLER>
+
+    #<- DEFAULT SHIELD PROPERTIES>
+
+        set <skin_type_id> ShieldType SHT_Absorption
+
+        set <skin_type_id> ShieldPrimeMechanism SPM_AlwaysPrimed
+
+        set <skin_type_id> ShieldTypeFlashFrameName absorb
+
+        set <skin_type_id> PrimedFlashFrameName absorb
+
+        set <skin_type_id> ShieldPhysicalMaterial PhysicalMaterial'GD_PhysicalMaterial_Shield.PhysicalMaterials.PhysMat_GenericShield'
+
+        set <skin_type_id> bUseMeshCompositing False
+
+        set <skin_type_id> NonCompositeStaticMesh None
+
+        set <skin_type_id> OverrideMaterial None
+
+        set <skin_type_id> GestaltMesh GestaltSkeletalMeshDefinition'Item_Shields.Gestalt.GestaltDef_Shields'
+
+        set <skin_type_id> AlphaParts ItemPartListDefinition'GD_Shields.Body.PartsList_Body_Absorption'
+
+        set <skin_type_id> BetaParts ItemPartListDefinition'GD_Shields.Battery.PartsList_Battery_Standard'
+
+        set <skin_type_id> GammaParts ItemPartListDefinition'GD_Shields.Capacitor.PartsList_Capacitor_Standard'
+
+        set <skin_type_id> DeltaParts ItemPartListDefinition'GD_Shields.Accessory.PartsList_Accessory_Absorption'
+
+        set <skin_type_id> MaterialParts ItemPartListDefinition'GD_Shields.Material.PartsList_Materials_Absorption'
+
+        set <skin_type_id> BehaviorProviderDefinition (BehaviorProviderDefinition'GD_Shields.A_Item.Shield_Absorption:BehaviorProviderDefinition_5')
+
+        set <skin_type_id> ExternalAttributeEffects ((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.ShieldResourcePool.ShieldMaxValue',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance_HealthAndDamage.Shields.Init_ShieldItem_CapacityMaxValue',BaseValueScaleConstant=1.000000)),(AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.ShieldResourcePool.ShieldOnIdleRegenerationDelay',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'GD_Shields.Misc.Att_UniversalShieldBaseDelayConstant',InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.ShieldResourcePool.ShieldOnIdleRegenerationRate',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance_HealthAndDamage.Shields.Init_ShieldItem_BaseRegenRatePercentage',BaseValueScaleConstant=1.000000)))
+
+        set <skin_type_id> InventoryClass Class'WillowGame.WillowShield'
+
+        set <skin_type_id> bUsesPlayerLevelRequirement True
+
+        set <skin_type_id> bIsConsumable False
+
+        set <skin_type_id> PickupFlagIcon Texture2D'fx_shared_items.Textures.ItemCards.Shield'
+
+        set <skin_type_id> PickupSounds ((Event=AkEvent'Ake_Obj_Pickup.Obj_Pickup.Ak_Play_Obj_Pickup_Shield',Cue=None,Expressions=))
+
+        set <skin_type_id> PhysicsAsset PhysicsAsset'Item_Shields.Physics.Phat_Shield'
+
+        set <skin_type_id> PickupMessage Acquired a Basic Orb Shield
+
+        set <skin_type_id> PlayerUseLevelBonus (BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance_Inventory.LevelRequirement.Init_BaseGearLevelRequirementBonus',BaseValueScaleConstant=1.000000)
+
+        set <skin_type_id> UIMeshRotation (Pitch=0,Yaw=32768,Roll=32768)
+
+        set <skin_type_id> Presentation InventoryCardPresentationDefinition'GD_InventoryPresentations.Definitions.Shield'
+
+        set <skin_type_id> PurchasedStatID STAT_PLAYER_SHIELD_PURCHASED
+
+        set <skin_type_id> bItemNameIsFullName True
+
+    #</- DEFAULT SHIELD PROPERTIES>
+
+    - Place to give name to your shield. Full name is already enabled.
+
+    #<+ NAME>
+
+        set <skin_type_id> ItemName <insert_name_here>
+
+    #</+ NAME>
+
+    - In this section are the presentations. There are 2 default ones unique to absorption shields only. You need to add the one from your prefered <skin_type_id> to this list and then edit accordingly.
+
+    #<+ PRESENTATIONS>
+
+        set <skin_type_id> CustomPresentations (AttributePresentationDefinition'GD_Shields.A_Item.Shield_Absorption:AttributePresentationDefinition_2',AttributePresentationDefinition'GD_Shields.A_Item.Shield_Absorption:AttributePresentationDefinition_1')
+
+        set <prefered_skin_AttributePresentationDefinition> Description Have fun!<br>[funstat]Exo
+
+        set <prefered_skin_AttributePresentationDefinition> TextColor (B=70,G=70,R=220,A=255)
+
+        set <prefered_skin_AttributePresentationDefinition> BasePriority 1000.000000
+
+    #</+ PRESENTATIONS>
+
+    - Now the rarity comes from the balance (PartListCollection) itself. If you choose the RARE one, the rarity will be blue (Rare). You can override that by setting the BaseValueConstant i.e to 5 for a legendary.
+
+    #<+ RARITY>
+
+        set <skin_type_id> BaseRarity (BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+
+    #</+ RARITY>
+
+    - All the UI stuff that are shown on the shield card you want your shield to do. The values here need to reflect the attributes from AttributeSlotEffects, if you want them to be shown that is.
+
+    #<+ UISTAT>
+
+        set <skin_type_id> UIStatList ((bDisplayAsModifierOnly=False,AttributeStyle=ATTRSTYLE_JustNumber,SupplementalAttributeStyle=ATTRSTYLE_JustNumber,StatCombinationMethod=SCM_Multiply,Attribute=ResourcePoolAttributeDefinition'D_Attributes.ShieldResourcePool.ShieldMaxValue',ConstraintAttribute=None,SupplementalAttributeExpression=(AttributeOperand1=None,ComparisonOperator=OPERATOR_EqualTo,Operand2Usage=OPERAND_PreferAttribute,AttributeOperand2=None,ConstantOperand2=0.000000),SupplementalAttributeToAppend=None),(bDisplayAsModifierOnly=False,AttributeStyle=ATTRSTYLE_JustNumber,SupplementalAttributeStyle=ATTRSTYLE_JustNumber,StatCombinationMethod=SCM_Multiply,Attribute=ResourcePoolAttributeDefinition'D_Attributes.ShieldResourcePool.ShieldOnIdleRegenerationRate',ConstraintAttribute=None,SupplementalAttributeExpression=(AttributeOperand1=None,ComparisonOperator=OPERATOR_EqualTo,Operand2Usage=OPERAND_PreferAttribute,AttributeOperand2=None,ConstantOperand2=0.000000),SupplementalAttributeToAppend=None),(bDisplayAsModifierOnly=False,AttributeStyle=ATTRSTYLE_JustNumber,SupplementalAttributeStyle=ATTRSTYLE_JustNumber,StatCombinationMethod=SCM_Multiply,Attribute=ResourcePoolAttributeDefinition'D_Attributes.ShieldResourcePool.ShieldOnIdleRegenerationDelay',ConstraintAttribute=None,SupplementalAttributeExpression=(AttributeOperand1=None,ComparisonOperator=OPERATOR_EqualTo,Operand2Usage=OPERAND_PreferAttribute,AttributeOperand2=None,ConstantOperand2=0.000000),SupplementalAttributeToAppend=None),(bDisplayAsModifierOnly=False,AttributeStyle=ATTRSTYLE_ModifierText,SupplementalAttributeStyle=ATTRSTYLE_JustNumber,StatCombinationMethod=SCM_Multiply,Attribute=AttributeDefinition'D_Attributes.Shield.PercentChanceToAbsorbAmmo',ConstraintAttribute=None,SupplementalAttributeExpression=(AttributeOperand1=None,ComparisonOperator=OPERATOR_EqualTo,Operand2Usage=OPERAND_PreferAttribute,AttributeOperand2=None,ConstantOperand2=0.000000),SupplementalAttributeToAppend=None))
+
+    #</+ UISTAT>
+
+    - This is the place where you set your shield Capacity, Recharge Rate, Delay, Special Effects, Passives... you name it. Note that everything needs to be reflected in the upgrades as well. 
+
+    - If you for example have slot that you named "BulletReflection" or whatever, you need to enable the very same slot in the AttributeSlotUpgrades as well.
+
+    #<+ ATTRIBUTE EFFECTS AND SLOTS>
+
+        set <skin_type_id> AttributeSlotEffects ((SlotName="Capacity",bExternalSlot=True,bRunEffectsAsSkill=False,AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.ShieldResourcePool.ShieldMaxValue',ConstraintAttribute=None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),PerGradeUpgrade=(BaseValueConstant=0.030000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bIncludeInFunStats=False,bIncludeAlliesAsTarget=False,bEnforceMinimumGrade=False,bEnforceMaximumGrade=False,MinimumGrade=0,MaximumGrade=0,TargetInstanceDataName=),(SlotName="RechargeRate",bExternalSlot=True,bRunEffectsAsSkill=False,AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.ShieldResourcePool.ShieldOnIdleRegenerationRate',ConstraintAttribute=None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),PerGradeUpgrade=(BaseValueConstant=0.030000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bIncludeInFunStats=False,bIncludeAlliesAsTarget=False,bEnforceMinimumGrade=False,bEnforceMaximumGrade=False,MinimumGrade=0,MaximumGrade=0,TargetInstanceDataName=),(SlotName="RechargeDelay",bExternalSlot=True,bRunEffectsAsSkill=False,AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.ShieldResourcePool.ShieldOnIdleRegenerationDelay',ConstraintAttribute=None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),PerGradeUpgrade=(BaseValueConstant=-0.040000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bIncludeInFunStats=False,bIncludeAlliesAsTarget=False,bEnforceMinimumGrade=False,bEnforceMaximumGrade=False,MinimumGrade=0,MaximumGrade=0,TargetInstanceDataName=),(SlotName="FireResist",bExternalSlot=True,bRunEffectsAsSkill=False,AttributeToModify=AttributeDefinition'D_Attributes.StatusEffectModifiers.IgniteChanceResistanceModifier',ConstraintAttribute=None,ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),PerGradeUpgrade=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bIncludeInFunStats=False,bIncludeAlliesAsTarget=False,bEnforceMinimumGrade=False,bEnforceMaximumGrade=False,MinimumGrade=0,MaximumGrade=0,TargetInstanceDataName=),(SlotName="ShockResist",bExternalSlot=True,bRunEffectsAsSkill=False,AttributeToModify=AttributeDefinition'D_Attributes.StatusEffectModifiers.ShockChanceResistanceModifier',ConstraintAttribute=None,ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),PerGradeUpgrade=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bIncludeInFunStats=False,bIncludeAlliesAsTarget=False,bEnforceMinimumGrade=False,bEnforceMaximumGrade=False,MinimumGrade=0,MaximumGrade=0,TargetInstanceDataName=),(SlotName="CorrosiveResist",bExternalSlot=True,bRunEffectsAsSkill=False,AttributeToModify=AttributeDefinition'D_Attributes.StatusEffectModifiers.CorrosiveChanceResistanceModifier',ConstraintAttribute=None,ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),PerGradeUpgrade=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bIncludeInFunStats=False,bIncludeAlliesAsTarget=False,bEnforceMinimumGrade=False,bEnforceMaximumGrade=False,MinimumGrade=0,MaximumGrade=0,TargetInstanceDataName=),(SlotName="ExplosiveDamageResistance",bExternalSlot=True,bRunEffectsAsSkill=False,AttributeToModify=DesignerAttributeDefinition'GD_Shields.Misc.Att_Shield_ExplosiveDamageResistance',ConstraintAttribute=None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=DesignerAttributeDefinition'GD_Shields.Misc.Att_ShieldResistance_Base',InitializationDefinition=None,BaseValueScaleConstant=1.000000),PerGradeUpgrade=(BaseValueConstant=0.000000,BaseValueAttribute=DesignerAttributeDefinition'GD_Shields.Misc.Att_ShieldResistance_PerGradeUpgrade',InitializationDefinition=None,BaseValueScaleConstant=1.000000),bIncludeInFunStats=False,bIncludeAlliesAsTarget=False,bEnforceMinimumGrade=False,bEnforceMaximumGrade=False,MinimumGrade=0,MaximumGrade=0,TargetInstanceDataName=),(SlotName="MaxHealth",bExternalSlot=True,bRunEffectsAsSkill=False,AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.HealthResourcePool.HealthMaxValue',ConstraintAttribute=None,ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),PerGradeUpgrade=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance_HealthAndDamage.HealthAndDamage.Init_HealthBonusFromShields_Formula',BaseValueScaleConstant=0.030000),bIncludeInFunStats=False,bIncludeAlliesAsTarget=False,bEnforceMinimumGrade=False,bEnforceMaximumGrade=False,MinimumGrade=0,MaximumGrade=0,TargetInstanceDataName=),(SlotName="Special01",bExternalSlot=False,bRunEffectsAsSkill=False,AttributeToModify=AttributeDefinition'D_Attributes.Shield.PercentChanceToAbsorbAmmo',ConstraintAttribute=None,ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.150000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),PerGradeUpgrade=(BaseValueConstant=0.008000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bIncludeInFunStats=False,bIncludeAlliesAsTarget=False,bEnforceMinimumGrade=False,bEnforceMaximumGrade=False,MinimumGrade=0,MaximumGrade=0,TargetInstanceDataName=),(SlotName="Special02",bExternalSlot=False,bRunEffectsAsSkill=False,AttributeToModify=AttributeDefinition'D_Attributes.Shield.PercentDamageToNegateWhenAmmoAbsorbed',ConstraintAttribute=None,ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),PerGradeUpgrade=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bIncludeInFunStats=False,bIncludeAlliesAsTarget=False,bEnforceMinimumGrade=False,bEnforceMaximumGrade=False,MinimumGrade=0,MaximumGrade=0,TargetInstanceDataName=))
+
+        set <skin_type_id> AttributeSlotUpgrades ((SlotName="Capacity",GradeIncrease=0,bActivateSlot=True),(SlotName="RechargeRate",GradeIncrease=0,bActivateSlot=True),(SlotName="RechargeDelay",GradeIncrease=0,bActivateSlot=True),(SlotName="Special01",GradeIncrease=0,bActivateSlot=True),(SlotName="Special02",GradeIncrease=0,bActivateSlot=True))
+
+    #</+ ATTRIBUTE EFFECTS AND SLOTS>
+
+    - This is one of the trickiest parts now. Since you cant add unique skins to this shield yet, you need to use default ones. Depending which rarity you select here, that one material will be used for your shield.
+
+    - Note that this affects your shield stats as well. My suggestion is to first pick the material you want to use, then get to balancing your shield in AttributeSlotEffects.
+
+    #<+ BALANCE>
+
+        #<+ MANUFACTURER>
+
+            set <skin_balance_id> Manufacturers ((Manufacturer=ManufacturerDefinition'GD_Manufacturers.Manufacturers.Vladof',Grades=((GradeModifiers=(ExpLevel=1,CustomInventoryDefinition=None),GameStageRequirement=(MinGameStage=1,MaxGameStage=100),MinSpawnProbabilityModifier=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),MaxSpawnProbabilityModifier=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))))
+
+        #</+ MANUFACTURER>
+
+        #<+ SKINS | STATS><MUT>
+
+            #<VERY_RARE>
+
+                set <skin_balance_id> PartListCollection ItemPartListCollectionDefinition'GD_Shields.A_Item.Shield_Absorption_04_VeryRare'
+
+            #</VERY_RARE>
+
+            #<RARE>
+
+                #set <skin_balance_id> PartListCollection ItemPartListCollectionDefinition'GD_Shields.A_Item.Shield_Absorption_03_Rare'<off>
+
+            #</RARE>
+
+            #<UNCOMMON>
+
+                #set <skin_balance_id> PartListCollection ItemPartListCollectionDefinition'GD_Shields.A_Item.Shield_Absorption_02_Uncommon'<off>
+
+            #</UNCOMMON>
+
+            #<COMMON>
+
+                #set <skin_balance_id> PartListCollection ItemPartListCollectionDefinition'GD_Shields.A_Item.Shield_Absorption_01_Common'<off>
+
+            #</COMMON>
+
+        #</+ SKINS | STATS>
+
+    #</+ BALANCE>
+
+#</SKINSHIELD_-ABSORPTION>
+

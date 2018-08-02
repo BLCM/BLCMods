@@ -13,17 +13,22 @@ generally, without going as overboard as this mod does.
 Usage
 =====
 
-The best way to use this mod is to add it into FilterTool with
-`Developer tools` -> `Add single mod`.  Choose the file `Guaranteed Varkid
-Evolution` and have at it!
+This mod must be imported into BLCMM using `File -> Import single mod`.
+Choose the file `Guaranteed Varkid Evolution.blcm` and have at it!
 
 Mod Construction / Implementation Details
 =========================================
 
-This mod is actually generated using a simple little Python script named
-`generate-mod.py`.  The script makes use of `hotfix.py` from the parent
-directory.  You'd need to copy (or symlink, if you're on Mac or Linux)
-`hotfix.py` into this directory in order to run the script.
+*(This section is only relevant for someone looking to edit the mod in the
+same way I do, or just someone curious about my mod construction techniques.
+If you're just looking to run the mod, see the "Usage" section above.  The
+mod can, of course, be edited directly in BLCMM as well, once it's
+been imported.)*
+
+This mod is generated using a Python script named `generate-mod.py`.  The
+script makes use of `modprocessor.py` from the parent directory.  You'll
+need to copy (or symlink, if you're on Mac or Linux) `modprocessor.py`
+into this directory in order to run the script.
 
 License
 =======
@@ -33,3 +38,21 @@ The `generate-mod.py` script itself is licensed under the
 
 This mod itself is licensed under
 [Public Domain / CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/).
+
+Changelog
+=========
+
+**v1.1.0**, July 27, 2018:
+ * Converted to BLCM format *(BLCMM is now required; FilterTool is not supported)*
+ * Added a byline to the mod header comments
+
+**v1.0.2**, April 25, 2018:
+ * Renamed the mod to have a `.txt` extension.
+
+**v1.0.1**, April 25, 2018:
+ * Tweaked comments in the mod file a bit, to look better inside FT/BLCMM.
+ * Removed the `Transient.SparkServiceConfiguration_6` set statements at the
+   bottom of the file, to enforce needing to run this via FT/BLCMM.
+
+**v1.0.0**, February 26, 2018:
+ * Initial public release

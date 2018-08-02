@@ -14,6 +14,10 @@ This folder contains mods that are related to Krieg
 	   makes LtF scale to OP8, and also increases the thrown dynamite's radius by 33%
 	
 	   you may want to disable the community patch's buff of LtF when using this.
+	   
+	3. SlagDoTKrieg.txt
+	   allows Slag DoT to proc Elemental Empathy and Elemental Elation.
+	   this will have no effect unless you are using a mod that gives slag a DoT.
 
  #2. Krieg Tweaks(fixes?)
  
@@ -34,20 +38,18 @@ This folder contains mods that are related to Krieg
 	
 	   this makes it so that you can see both
 
-	4. KillSkillSlots.txt
-	   makes it so that Blood Bath and Fuel the Fire are displayed in separate slots, thus preventing their overlapping each other.
  
-	5. EtP.txt 
+	4. EtP.txt 
 	   Embrace the Pain doesnt affect the fire rate of your thrown buzzaxes. The reason is that it is set to be deactivated when you're in Blood Axe Rampage
 	
 	   this makes it so that Embrace the Pain stays on while you're in Blood Axe Rampage, thus keeping your roid shield delay long and giving you faster buzz axe throwing speed
  
-	6. BloodTwitch.txt 
+	5. BloodTwitch.txt 
 	   turns Blood Twitch into a passive skill, but lowers the Swap Speed to compensate
 	
 	   so at 5/5 Blood Twitch, each bloodlust stack will give you 0.9% swap speed, meaning youll have 90% swap speed with 100 stacks
  
-	7. BloodEuphoria.txt- last updated:4/25
+	6. BloodEuphoria.txt- last updated:4/25
 	
 	   Included in Community Patch 3.0 as a gamechanger! 
 
@@ -57,7 +59,7 @@ This folder contains mods that are related to Krieg
 	
 	   Blood Euphoria: when killskills end, you heal 0.2n% per bloodlust stacks you have.
  
-	8. RavingRant.txt 
+	7. RavingRant.txt 
 	   already included in Community Patch since 2.0, so dont use it if you use Community patch 2.0 or above
 	brings back Krieg's Raving Retribution lines.
 	

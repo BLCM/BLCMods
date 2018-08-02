@@ -31,14 +31,15 @@
 import sys
 
 try:
-    from hotfixes import Hotfixes
+    from modprocessor import ModProcessor
+    mp = ModProcessor()
 except ModuleNotFoundError:
     print('')
-    print('****************************************************************')
-    print('To run this script, you will need to copy or symlink hotfixes.py')
+    print('********************************************************************')
+    print('To run this script, you will need to copy or symlink modprocessor.py')
     print('from the parent directory, so it exists here as well.  Sorry for')
     print('the bother!')
-    print('****************************************************************')
+    print('********************************************************************')
     print('')
     sys.exit(1)
 
@@ -47,66 +48,63 @@ except ModuleNotFoundError:
 ###
 
 mod_name = 'Guaranteed Varkid Evolution'
-output_filename = '{}'.format(mod_name)
+mod_version = '1.1.0'
+output_filename = '{}.blcm'.format(mod_name)
 
 ###
 ### Generate hotfixes!
 ###
 
-hfs = Hotfixes()
-
 for morph in range(1,6):
-    hfs.add_level_hotfix('varkid_clear_{}'.format(morph),
-        'VarkidMorphClear',
-        ',GD_Balance.WeightingPlayerCount.BugmorphCocoon_PerPlayers_Phase{},ConditionalInitialization.ConditionalExpressionList,,()'.format(morph))
-    hfs.add_level_hotfix('varkid_default_{}'.format(morph),
-        'VarkidMorphDefault',
-        ',GD_Balance.WeightingPlayerCount.BugmorphCocoon_PerPlayers_Phase{},ConditionalInitialization.DefaultBaseValue.BaseValueConstant,,1.0'.format(morph))
+    mp.register_str('varkid_clear_{}'.format(morph),
+        'level None set GD_Balance.WeightingPlayerCount.BugmorphCocoon_PerPlayers_Phase{} ConditionalInitialization.ConditionalExpressionList ()'.format(morph))
+    mp.register_str('varkid_default_{}'.format(morph),
+        'level None set GD_Balance.WeightingPlayerCount.BugmorphCocoon_PerPlayers_Phase{} ConditionalInitialization.DefaultBaseValue.BaseValueConstant 1.0'.format(morph))
 
 ###
 ### Generate the mod string
 ###
 
-mod_str = """#<{mod_name}>
+mod_str = """BL2
+#<{mod_name}>
 
+    # {mod_name} v{mod_version}
+    # by Apocalyptech
+    # Licensed under Public Domain / CC0 1.0 Universal
+    #
     # Guarantees evolution of all varkids, regardless of playthrough or
     # player count.  Leave one alive and you'll get Vermivorous eventually.
 
-    {hotfixes:varkid_clear_1}
+    {mp:varkid_clear_1}
 
-    {hotfixes:varkid_clear_2}
+    {mp:varkid_clear_2}
 
-    {hotfixes:varkid_clear_3}
+    {mp:varkid_clear_3}
 
-    {hotfixes:varkid_clear_4}
+    {mp:varkid_clear_4}
 
-    {hotfixes:varkid_clear_5}
+    {mp:varkid_clear_5}
 
-    {hotfixes:varkid_default_1}
+    {mp:varkid_default_1}
 
-    {hotfixes:varkid_default_2}
+    {mp:varkid_default_2}
 
-    {hotfixes:varkid_default_3}
+    {mp:varkid_default_3}
 
-    {hotfixes:varkid_default_4}
+    {mp:varkid_default_4}
 
-    {hotfixes:varkid_default_5}
-
-    # Licensed under Public Domain / CC0 1.0 Universal
+    {mp:varkid_default_5}
 
 #</{mod_name}>
-
-{transient_defs}
 """.format(
         mod_name=mod_name,
-        hotfixes=hfs,
-        transient_defs=hfs.get_transient_defs(),
+        mod_version=mod_version,
+        mp=mp,
         )
 
 ###
 ### Output to a file.
 ###
 
-with open(output_filename, 'w') as df:
-    df.write(mod_str)
+mp.human_str_to_blcm_filename(mod_str, output_filename)
 print('Wrote mod file to: {}'.format(output_filename))

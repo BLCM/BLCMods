@@ -1,0 +1,26 @@
+############################################################
+#                                                          #
+#   Make "Nasty Surprise" a Bandit Legendary Grenade Mod   #
+#                                                          #
+############################################################
+
+
+
+# Note: This patch makes use of the unused Bandit Legendary Material: "GD_GrenadeMods.Material.Material_Bandit_5_Legendary". You have to use one of the following Gibbed Codes to get it.
+
+
+
+GIBBED CODES:
+
+Nasty Surprise
+- Explosive: BL2(BwAAAACBoAAHD0roIBBQ6P//EEMBgwEDDoMOAwxDHQMSwwkDL8M=)
+- Fire:      BL2(BwAAAAAJlQAHD0roIBBQ6P//EEMBwwoDDoMOAwxDHQMSAwoDL8M=)
+- Corrosive: BL2(BwAAAAAlmQAHD0roIBBQ6P//EEMBAwsDDoMOAwxDHQMSgwkDL8M=)
+- Shock:     BL2(BwAAAAAjFQAHD0roIBBQ6P//EEMBQwsDDoMOAwxDHQMSQwoDL8M=)
+- Slag:      BL2(BwAAAACT4gAHD0roIBBQ6P//EEMBgwsDDoMOAwxDHQMSgwoDL8M=)
+
+
+
+set GD_GrenadeMods.A_Item_Legendary.GM_NastySurprise Manufacturers ((Manufacturer=ManufacturerDefinition'GD_Manufacturers.Manufacturers.Bandit',Grades=((GradeModifiers=(ExpLevel=1,CustomInventoryDefinition=None),GameStageRequirement=(MinGameStage=1,MaxGameStage=100),MinSpawnProbabilityModifier=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),MaxSpawnProbabilityModifier=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))))
+
+set GD_GrenadeMods.PartLists.Parts_NastySurprise MaterialPartData (bEnabled=True,WeightedParts=((Part=GrenadeModPartDefinition'GD_GrenadeMods.Material.Material_Bandit_5_Legendary',Manufacturers=((Manufacturer=ManufacturerDefinition'GD_Manufacturers.Manufacturers.Bandit',DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=2)))

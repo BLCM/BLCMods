@@ -1,0 +1,314 @@
+        #<{boss_label}>
+
+            #<Generic Boss Drop Weights (for non-weapon-using bosses)>
+
+                set GD_Itempools.DropWeights.DropODDS_BossUniques:ConstantAttributeValueResolver_0 ConstantValue {unique_pct}
+
+                set GD_Itempools.DropWeights.DropODDS_BossUniqueRares:ConstantAttributeValueResolver_0 ConstantValue {rare_pct}
+
+            #</Generic Boss Drop Weights (for non-weapon-using bosses)>
+
+            #<Base Game>
+
+                #<Belly>
+
+                    # UCP adds the Fabled Tortoise (in addition to the default Striker).
+                    # Equip both.
+
+                    set GD_Itempools.Runnables.Pool_Belly bAutoReadyItems True
+
+                    {mp:belly_pool_0}
+
+                    {mp:belly_pool_1}
+
+                    {mp:belly_pool_2}
+
+                    {mp:belly_pool_3}
+
+                #</Belly>
+
+                #<Bruce>
+
+                    # UCP adds Sledge's Shotgun, in addition to his usual Supernova
+                    # shield.  Equip them both.
+
+                    set GD_Itempools.Runnables.Pool_Bruce bAutoReadyItems True
+
+                    {mp:bruce_pool_0}
+
+                    {mp:bruce_pool_1}
+
+                    {mp:bruce_pool_2}
+
+                    {mp:bruce_pool_3}
+
+                #</Bruce>
+
+                #<Deadlift>
+
+                    # UCP adds the Min Min Lighter (in addition to his default
+                    # Vandergraffen), and the Kala shield.  We're NOT going to have
+                    # Deadlift equip/drop the Kala in Playthrough 1 (Normal), though,
+                    # because a Kala-using Deadlift at that point makes the fight far
+                    # harder than it should be.  We're setting the Kala to drop from
+                    # Nel in all playthroughs to compensate, though of course that's
+                    # not a fight you can expect to take on until very late in the
+                    # game.  For the Min Min Lighter, Deadlift already makes use of
+                    # our drop style for the Vandergraffen, interestingly.
+
+                    {mp:deadlift_pool_0}
+
+                    {mp:deadlift_pool_base_1}
+
+                    {mp:deadlift_pool_mercday_1}
+
+                    {mp:deadlift_pool_pandoracorn_1}
+
+                    {mp:deadlift_pool_pumpkin_1}
+
+                    {mp:deadlift_pool_2}
+
+                    {mp:deadlift_pool_base_3}
+
+                    {mp:deadlift_pool_mercday_3}
+
+                    {mp:deadlift_pool_pandoracorn_3}
+
+                    {mp:deadlift_pool_pumpkin_3}
+
+                #</Deadlift>
+
+                #<Drongo Bones>
+
+                    # UCP adds in Maggie to his usual Fatale.  Equip 'em both!
+
+                    {mp:drongobones_pool_0}
+
+                    {mp:drongobones_pool_1}
+
+                    {mp:drongobones_pool_2}
+
+                #</Drongo Bones>
+
+                #<Eghood>
+
+                    # Equip his Blowfly.  UCP adds a Leech drop, so we're handling that, too.
+
+                    {mp:eghood_pool_0}
+
+                    {mp:eghood_pool_1}
+
+                    {mp:eghood_pool_2}
+
+                #</Eghood>
+
+                #<Fair Dinkum>
+
+                    # UCP adds Cradle, so equip that.  (It also adds the Pandemic, and
+                    # we're making sure we're compat with that change.)
+
+                    {mp:fairdinkum_pool_0}
+
+                    {mp:fairdinkum_pool_1}
+
+                    {mp:fairdinkum_pool_2}
+
+                #</Fair Dinkum>
+
+                #<Flame Knuckle>
+
+                    # Flame Knuckle drops the Nukem, so equip that.
+
+                    {mp:flameknuckle_use_pool_0}
+
+                #</Flame Knuckle>
+
+                #<Lazlo>
+
+                    # UCP adds Shooterang to his usual Freezeasy, so equip either.
+
+                    {mp:lazlo_pool_0}
+
+                    {mp:lazlo_pool_1}
+
+                #</Lazlo>
+
+                #<Lost Legion Courier>
+
+                    # This guy's only encountered during the mission "Red, then Dead" and
+                    # doesn't ordinarily have any unique drops (even with UCP enabled).
+                    # The Powersuit Noob, the next main enemy during that mission was
+                    # changed by UCP to drop the Major Tom, but the powersuits don't
+                    # actually use/equip "real" weapons.  So, just because I like having
+                    # these weapons equippable, I'm adding Major Tom to the Courier as
+                    # well.
+
+                    {mp:courier_pool_0}
+
+                    {mp:courier_pool_1}
+
+                #</Lost Legion Courier>
+
+                #<Lost Legion Powersuit Noob>
+
+                    # UCP adds the Major Tom, in addition to the Shooting Star he usually
+                    # drops.  Powersuits don't use "real" weapons but we can equip the
+                    # shield.
+
+                    {mp:powersuit_noob_pool_0}
+
+                    {mp:powersuit_noob_pool_1}
+
+                    {mp:powersuit_noob_pool_2}
+
+                #</Lost Legion Powersuit Noob>
+
+                #<Magma Rivers>
+
+                    # UCP adds Magma, so equip that.  (It also adds the Fire Bee, and
+                    # we're making sure we're compat with that change.)
+
+                    {mp:magmarivers_pool_0}
+
+                    {mp:magmarivers_pool_1}
+
+                    {mp:magmarivers_pool_2}
+
+                #</Magma Rivers>
+
+                #<Nel>
+
+                    # UCP adds a few weapons to Nel, which we don't care about because
+                    # he's a melee-only enemy, but since we're not using the Kala on
+                    # Deadlift (in Playthrough 1, anyway), we're reassigning it over
+                    # here to Nel. We also disable a bunch of specific weapon drops.
+
+                    {mp:nel_pool_0}
+
+                    {mp:nel_pool_1}
+
+                    {mp:nel_pool_disable_15}
+
+                    {mp:nel_pool_disable_16}
+
+                    {mp:nel_pool_disable_17}
+
+                    {mp:nel_pool_disable_18}
+
+                    {mp:nel_pool_disable_19}
+
+                    {mp:nel_pool_disable_20}
+
+                    {mp:nel_pool_disable_21}
+
+                #</Nel>
+
+                #<Oscar>
+
+                    # UCP adds the Reogenator shield to Oscar.  We're using the same pool
+                    # that UCP uses, to reduce the number of pools we need in Triton Flats.
+
+                    set GD_Itempools.Runnables.Pool_ScavBadassMidget bAutoReadyItems True
+
+                    {mp:oscar_pool_0}
+
+                    level Moon_P set GD_Population_Scavengers.Balance.Psychos.PawnBalance_ScavSuicidePsycho_Oscar DefaultItemPoolList
+                    (
+                        (
+                            ItemPool=ItemPoolDefinition'GD_Itempools.Runnables.Pool_ScavBadassMidget',
+                            PoolProbability=(
+                                BaseValueConstant=1.000000,
+                                BaseValueAttribute=None,
+                                InitializationDefinition=None,
+                                BaseValueScaleConstant=1.000000
+                            )
+                        )
+                    )
+
+                #</Oscar>
+
+                #<Red>
+
+                    # UCP adds Badaboom and Bigg Thumppr (and removes Black Snake, which
+                    # was changed to being a mission reward).  Equip those.
+
+                    set GD_Itempools.Runnables.Pool_Red_Rare bAutoReadyItems True
+
+                    {mp:red_pool_0}
+
+                    {mp:red_pool_1}
+
+                    {mp:red_pool_2}
+
+                    {mp:red_pool_3}
+
+                #</Red>
+
+                #<Swagman>
+
+                    # UCP sets Swagman to drop from a collection of five guns.  We're
+                    # setting him to be able to equip/drop all of them.
+
+                    set GD_Itempools.Runnables.Pool_ScavBadassSpacemanMidget bAutoReadyItems True
+
+                    {mp:swagman_pool_0}
+
+                    {mp:swagman_pool_1}
+
+                    {mp:swagman_pool_2}
+
+                    {mp:swagman_pool_3}
+
+                    {mp:swagman_pool_4}
+
+                #</Swagman>
+
+                #<Wally Wrong>
+
+                    # UCP adds Logan's Gun, so equip that.  (It also adds the Storm Front, and
+                    # we're making sure we're compat with that change.)
+
+                    {mp:wallywrong_pool_0}
+
+                    {mp:wallywrong_pool_1}
+
+                    {mp:wallywrong_pool_2}
+
+                #</Wally Wrong>
+
+            #</Base Game>
+
+            #<Claptastic Voyage>
+
+                # Most Claptastic Voyage bosses don't actually use weapons, alas.
+
+                #<5H4D0W-TP>
+
+                    # 5H4D0W-TP can drop both the Laser Disker and the Rerouter.  Equip
+                    # them both.  We actually improve his laser equip no matter what.
+
+                    {mp:shadowtrap_pool_0}
+
+                    {mp:shadowtrap_pool_1}
+
+                    {mp:shadowtrap_pool_2}
+
+                    {mp:shadowtrap_pool_3}
+
+                #</5H4D0W-TP>
+
+            #</Claptastic Voyage>
+
+            #<Holodome Onslaught>
+
+                #<Flame Knuckle>
+
+                    # Flame Knuckle drops the Nukem, so equip that.
+
+                    {mp:flameknuckle_use_pool_1}
+
+                #</Flame Knuckle>
+
+            #</Holodome Onslaught>
+
+        #</{boss_label}>

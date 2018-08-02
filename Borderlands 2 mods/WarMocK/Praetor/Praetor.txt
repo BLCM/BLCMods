@@ -1,0 +1,61 @@
+#<Praetor>
+
+	#<Description>
+
+		Mod author: WarMocK
+
+		Release Date: 07-13-2018
+
+		Version: 1.0.0
+
+		Summary:
+
+		- Replaces the Tidal Wave
+
+		- Fires only two projectiles
+
+		- Very high accuracy
+
+		- Consumes 2 ammo per shot
+
+		- Extremely high damage per pellet
+
+		- Always spawns with a bayonet and maybe an additional accessory
+
+		- + 100 % melee damage
+
+		- Increased critical damage
+
+    #</Description>
+
+	#<Code>
+
+		set GD_Weap_Shotgun.ManufacturerMaterials.Mat_Jakobs_3_TidalWave bIsGestaltMode True
+
+		set GD_Weap_Shotgun.ManufacturerMaterials.Mat_Jakobs_3_TidalWave GestaltModeSkeletalMeshName Acc_Bayonet2
+
+		set GD_Weap_Shotgun.ManufacturerMaterials.Mat_Jakobs_3_TidalWave ExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.DamageSourceModifiers.InstigatedMeleeDamageModifier',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+		set GD_Weap_Shotgun.ManufacturerMaterials.Mat_Jakobs_3_TidalWave bUseWeaponMelee True
+
+		set GD_Weap_Shotgun.Name.Title.Title__Unique_TidalWave PartName Praetor
+
+		set GD_Weap_Shotgun.Name.Title.Title__Unique_TidalWave:AttributePresentationDefinition_8 NoConstraintText Rip and tear, until it's done!
+
+		set GD_Weap_Shotgun.A_Weapons_Unique.SG_Jakobs_3_TidalWave:WeaponPartListCollectionDefinition_145 Accessory1PartData (bEnabled=True,WeightedParts=((Part=WeaponPartDefinition'GD_Weap_Shotgun.Accessory.SG_Accessory_None',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=5),(Part=WeaponPartDefinition'GD_Weap_Shotgun.Accessory.SG_Accessory_MoonClip',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=4),(Part=WeaponPartDefinition'GD_Weap_Shotgun.Accessory.SG_Accessory_ShotgunShell',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=4),(Part=WeaponPartDefinition'GD_Weap_Shotgun.Accessory.SG_Accessory_Tech_1',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=4),(Part=WeaponPartDefinition'GD_Weap_Shotgun.Accessory.SG_Accessory_Tech_2',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=4),(Part=WeaponPartDefinition'GD_Weap_Shotgun.Accessory.SG_Accessory_Tech_3',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=4),(Part=WeaponPartDefinition'GD_Weap_Shotgun.Accessory.SG_Accessory_VerticalGrip',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=4)))
+
+		set GD_Weap_Shotgun.Barrel.SG_Barrel_Jakobs_TidalWave CustomFiringModeDefinition None
+
+		set GD_Weap_Shotgun.Barrel.SG_Barrel_Jakobs_TidalWave WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-7.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Jakobs',InitializationDefinition=None,BaseValueScaleConstant=10.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Jakobs',InitializationDefinition=None,BaseValueScaleConstant=2.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponPerShotAccuracyImpulse',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Jakobs',InitializationDefinition=None,BaseValueScaleConstant=-2.500000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Jakobs',InitializationDefinition=None,BaseValueScaleConstant=-12.50000)),(AttributeToModify=AttributeDefinition'D_Attributes.GameplayAttributes.PlayerCriticalHitBonus',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+		set GD_Weap_Shotgun.Barrel.SG_Barrel_Jakobs_TidalWave AttributeSlotUpgrades ((SlotName="WeaponFireRate",GradeIncrease=-8,bActivateSlot=True),(SlotName="WeaponReloadSpeed",GradeIncrease=6,bActivateSlot=True),(SlotName="WeaponDamage",GradeIncrease=18,bActivateSlot=True),(SlotName="WeaponAccuracyImpulse",GradeIncrease=-7,bActivateSlot=True))
+
+		set GD_Weap_Shotgun.Barrel.SG_Barrel_Jakobs_TidalWave WeaponCardAttributes ((Attribute=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',PriorityIncrease=0.500000),(Attribute=AttributeDefinition'D_Attributes.DamageSourceModifiers.InstigatedMeleeDamageModifier',PriorityIncrease=0.500000))
+
+		set Common_GunMaterials.Materials.Shotgun.Mati_JakobsUniqueSG_Wave VectorParameterValues ((ParameterName="p_AColorHilight",ParameterValue=(R=0.8737912,G=0.381476,B=0.064999,A=1.000000),ExpressionGUID=(A=384292798,B=1221323751,C=-2145405772,D=1872194118)),(ParameterName="p_AColorMidtone",ParameterValue=(R=0.128116,G=0.117760,B=0.069603,A=1.000000),ExpressionGUID=(A=1102826245,B=1256298978,C=-1429881438,D=-507521102)),(ParameterName="p_AColorShadow",ParameterValue=(R=0.002931,G=0.001878,B=0.000560,A=1.000000),ExpressionGUID=(A=1481234158,B=1129012376,C=-688827739,D=-2119135160)),(ParameterName="p_BColorHilight",ParameterValue=(R=0.083511,G=0.096653,B=0.099444,A=1.000000),ExpressionGUID=(A=170714760,B=1132476783,C=-275668290,D=655702143)),(ParameterName="p_BColorMidtone",ParameterValue=(R=0.015018,G=0.017417,B=0.022099,A=1.000000),ExpressionGUID=(A=473594356,B=1338758895,C=824823946,D=864253813)),(ParameterName="p_BColorShadow",ParameterValue=(R=0.028876,G=0.029326,B=0.060771,A=1.000000),ExpressionGUID=(A=-429590341,B=1156435294,C=-1015192901,D=687313413)),(ParameterName="p_CColorHilight",ParameterValue=(R=1.000000,G=0.988279,B=0.453059,A=1.000000),ExpressionGUID=(A=759765673,B=1280874949,C=257367956,D=-932702788)),(ParameterName="p_CColorMidtone",ParameterValue=(R=0.138116,G=0.077760,B=0.049603,A=1.000000),ExpressionGUID=(A=110180441,B=1232792373,C=-1232281417,D=-1030626065)),(ParameterName="p_CColorShadow",ParameterValue=(R=0.072345,G=0.110493,B=0.071425,A=1.000000),ExpressionGUID=(A=716329441,B=1214803259,C=-238071112,D=-1004122047)),(ParameterName="p_ReflectColor",ParameterValue=(R=3.906431,G=1.770016,B=0.431778,A=1.000000),ExpressionGUID=(A=295058103,B=1318551573,C=-2045449573,D=-547597976)),(ParameterName="p_ReflectionChannelScale",ParameterValue=(R=0.200000,G=0.100000,B=1.000000,A=1.000000),ExpressionGUID=(A=1869386622,B=1303200947,C=-1616405849,D=714558284)),(ParameterName="p_DecalScalePosition",ParameterValue=(R=10.298660,G=49.402500,B=0.535500,A=0.553000),ExpressionGUID=(A=395540170,B=1243133493,C=-1264190552,D=123075385)),(ParameterName="p_PatternScalePosition",ParameterValue=(R=8.950000,G=7.548400,B=-0.030200,A=1.000000),ExpressionGUID=(A=-2005018406,B=1132497243,C=-39915121,D=208423616)),(ParameterName="p_DecalChannel",ParameterValue=(R=0.000000,G=0.000000,B=0.000000,A=0.000000),ExpressionGUID=(A=1757499073,B=1097055033,C=-1266029657,D=1038353636)),(ParameterName="p_PatternChannelScale",ParameterValue=(R=1.000000,G=0.000000,B=0.000000,A=0.000000),ExpressionGUID=(A=439432319,B=1091149893,C=-1991909502,D=1816944627)),(ParameterName="p_PatternColor",ParameterValue=(R=1.306407,G=0.969467,B=1.381660,A=1.000000),ExpressionGUID=(A=676539706,B=1125682796,C=1871983293,D=-2049503601)))
+
+		set Common_GunMaterials.Materials.Shotgun.Mati_JakobsUniqueSG_Wave TextureParameterValues ((ParameterName="p_Masks",ParameterValue=Texture2D'Weap_Shotguns.Tex.Weap_Shotgun_Comp',ExpressionGUID=(A=-330624041,B=1167251458,C=-335191907,D=-166684394)),(ParameterName="p_Diffuse",ParameterValue=Texture2D'Common_GunMaterials.CompTextures.Weap_LauncherShotgunPistol_Comp',ExpressionGUID=(A=1757607260,B=1326539502,C=-317215581,D=-565807463)),(ParameterName="p_NormalScopesEmissive",ParameterValue=Texture2D'Weap_Shotguns.Tex.Weap_Shotgun_Nor',ExpressionGUID=(A=-1743872746,B=1126171774,C=119496871,D=-1952271718)),(ParameterName="P_SimpleReflect",ParameterValue=Texture2D'Common_GunMaterials.Patterns.Pattern_Jakobs_CaseHardened',ExpressionGUID=(A=-858148940,B=1327945772,C=148462268,D=1899047224)),(ParameterName="p_Decal",ParameterValue=Texture2D'Common_GunMaterials.Patterns.Pattern_JakobsEpic_SpaltedMaple',ExpressionGUID=(A=-923052711,B=1309861752,C=584229786,D=-1229888527)),(ParameterName="p_Pattern",ParameterValue=Texture2D'Common_GunMaterials.Patterns.Pattern_JakobsEpic_SpaltedMaple',ExpressionGUID=(A=534250533,B=1202550002,C=1578302861,D=-717876416)))
+
+	#</Code>
+
+#</Praetor>
