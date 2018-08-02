@@ -1,4 +1,4 @@
-### Pimpernel Customization Mod 2.0 by Lollo(saurusRex)
+### Pimpernel Customization Mod 2.1 by Lollo(saurusRex)
 
 ----------------------------------------------------------------------------------------------------------------------
 
