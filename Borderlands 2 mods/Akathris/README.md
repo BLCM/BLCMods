@@ -35,3 +35,20 @@ There are some stat, name, and red text changes but you can pick and chose what 
 This one actually does something lol, has options for less Sal screms (Thanks to Mike/soze)
 Can also toggle Gunzerk if ya wanna
 And has health regen and lifesteal options
+
+
+
+-DorkHeck = loser
+
+Self explanatory, makes DorkHeck a confirmed loser lul Just some friendly banter dont reeee me
+
+
+
+-Constant Reaper
+
+Makes Reaper give it's bonus regardless of enemy health
+
+
+-BAR Modify
+
+Changes how the BAR system works in various ways
