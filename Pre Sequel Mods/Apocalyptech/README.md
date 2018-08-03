@@ -14,6 +14,7 @@ branches, so you can browse in `bl2betterloot`, `bl2colddeadhands`,
 `tpsbetterloot`, or `tpscolddeadhands`, in addition to `master`, if you like.
 
 * [Mod List](#mod-list)
+  * [AdBlocker 2000](#adblocker-2000)
   * [Guaranteed Phonic](#guaranteed-phonic)
   * [Luneshine on Uniques](#luneshine-on-uniques)
   * [Speedier Moon Buggies](#speedier-moon-buggies)
@@ -30,6 +31,13 @@ branches, so you can browse in `bl2betterloot`, `bl2colddeadhands`,
 
 Mod List
 ========
+
+### AdBlocker 2000
+
+Tired of running headlong into those damned pop-up ads in Nexus and
+Motherlessboard?  Rage no longer!  A quick install of our fresh new
+*AdBlocker 2000* will clear those right up.  Never be bothered by those
+pesky ads again!
 
 ### Guaranteed Phonic
 
