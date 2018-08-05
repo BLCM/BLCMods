@@ -16,7 +16,7 @@ Many of the important skills in her vanilla configuration are taken away (e.g. W
 Her health and health regeneration skills are boosted to allow for a more aggressive and close quarter gameplay, incl. with depleted shields.
 Most class mods have been adapted, and some new ones (Legendary Banshee,...) are introduced. I recommend starting a new playthrough to build her progressively.
 
-This is kind of a beta version: it is fully functional, but the balance is still not perfect and is subject to further changes, so check for updates.
+This is kind of a beta version: it should be fully functional, but the balance is still not perfect and is subject to further changes, so check for updates.
 Feedback on the matter would be appreciated. 
 
 [Trailer Video](https://www.youtube.com/watch?v=x4PDKIh6TII)
