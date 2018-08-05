@@ -17,6 +17,7 @@ branches, so you can browse in `bl2betterloot`, `bl2colddeadhands`,
   * [AdBlocker 2000](#adblocker-2000)
   * [Guaranteed Phonic](#guaranteed-phonic)
   * [Luneshine on Uniques](#luneshine-on-uniques)
+  * [No SpyBugs in The Cortex](#no-spybugs-in-the-cortex)
   * [Speedier Moon Buggies](#speedier-moon-buggies)
   * [Speedier Stingrays](#speedier-stingrays)
   * [TPS Better Loot Mod](#tps-better-loot-mod)
@@ -49,6 +50,18 @@ Waste.
 Adds Luneshine attachments to several Unique/Legendary weapons which didn't
 previously have them.  **WARNING:** This will generate weapons which TPS will
 delete from your inventory, if it's started up without this mod enabled.
+
+### No SpyBugs in The Cortex
+
+SpyBugs are ordinarily minor annoyances at worst.  When they spawn during a
+Mutator arena match in The Cortex, though, they can become quite annoying,
+since the arena won't continue until all enemies have been destroyed, and
+the SpyBugs can be quite reluctant to decloak sometimes.  Which leaves the
+vault hunters shooting desperately in the air, guided only by the minimap
+and some sound effects.
+
+This mod disables SpyBugs in The Cortex, so they won't spawn at all in
+there.  That's it!
 
 ### Speedier Moon Buggies
 
