@@ -1,0 +1,391 @@
+<BLCMM v="1">
+#<!!!You opened a file saved with BLCMM in FilterTool. Please update to BLCMM to properly open this file!!!>
+	<head>
+		<type name="BL2" offline="false"/>
+	</head>
+	<body>
+		<category name="BL2 Configurable Slot Machines">
+			<comment># BL2 Configurable Slot Machines v1.0.0</comment>
+			<comment># by Apocalyptech</comment>
+			<comment># Licensed under Public Domain / CC0 1.0 Universal</comment>
+			<comment>#</comment>
+			<comment># Allows you to configure the base game's slot machines (of the sort in Sanctuary, and</comment>
+			<comment># possibly the ones carried by One-Armed Bandits).  The default configuration is</comment>
+			<comment># identical to the stock slot machines - you must choose some options to actually have</comment>
+			<comment># any changes take effect.</comment>
+			<comment>#</comment>
+			<comment># Keep in mind that increasing the frequency of one kind of item can end up impacting</comment>
+			<comment># the frequencies of other items.  Categories with "Quality" in the title should keep</comment>
+			<comment># the frequencies the same.</comment>
+			<comment>#</comment>
+			<comment># Also note that if you're in developer mode in BLCMM v1.1.6, most of this mod will</comment>
+			<comment># complain that things will be overwritten by the game -- that's actually an error on</comment>
+			<comment># BLCMM's part, and should hopefully be fixed by v1.1.7.</comment>
+			<category name="Mod Setup" locked="true">
+				<comment># These are some statements which are required for some of the later statements</comment>
+				<comment># to work properly.</comment>
+				<hotfix name="ApocHotfix" level="None">
+					<code profiles="default">set gd_slotmachine.SlotMachine:BehaviorProviderDefinition_0 BehaviorSequences[1].BehaviorData2[16].LinkedVariables.ArrayIndexAndLength 0</code>
+					<code profiles="default">set gd_slotmachine.SlotMachine:BehaviorProviderDefinition_0 BehaviorSequences[1].BehaviorData2[46].LinkedVariables.ArrayIndexAndLength 0</code>
+					<code profiles="default">set gd_slotmachine.SlotMachine:BehaviorProviderDefinition_0 BehaviorSequences[1].BehaviorData2[116].LinkedVariables.ArrayIndexAndLength 0</code>
+					<code profiles="default">set gd_slotmachine.SlotMachine:BehaviorProviderDefinition_0 BehaviorSequences[1].BehaviorData2[128].LinkedVariables.ArrayIndexAndLength 0</code>
+					<code profiles="default">set gd_slotmachine.SlotMachine:BehaviorProviderDefinition_0 BehaviorSequences[1].BehaviorData2[133].LinkedVariables.ArrayIndexAndLength 0</code>
+				</hotfix>
+			</category>
+			<category name="Weapons">
+				<category name="Weapon Quality" MUT="true">
+					<category name="Stock Quality">
+						<comment>#     White: 55%</comment>
+						<comment>#     Green: 41%</comment>
+						<comment>#      Blue: 4.1%</comment>
+						<comment>#    Purple: 0.41%</comment>
+						<comment># Legendary: 0.04%</comment>
+						<category name="Statements">
+							<hotfix name="ApocHotfix" level="None">
+								<code profiles="default">set gd_slotmachine.SlotMachine:BehaviorProviderDefinition_0.Behavior_RandomBranch_34 Conditions[0] 40</code>
+								<code profiles="default">set gd_slotmachine.SlotMachine:BehaviorProviderDefinition_0.Behavior_RandomBranch_34 Conditions[1] 30</code>
+								<code profiles="default">set gd_slotmachine.SlotMachine:BehaviorProviderDefinition_0.Behavior_RandomBranch_34 Conditions[2] 3</code>
+								<code profiles="default">set gd_slotmachine.SlotMachine:BehaviorProviderDefinition_0.Behavior_RandomBranch_34 Conditions[3] 0.3</code>
+								<code profiles="default">set gd_slotmachine.SlotMachine:BehaviorProviderDefinition_0.Behavior_RandomBranch_34 Conditions[4] 0.03</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Improved Quality">
+						<comment>#     White: 35%</comment>
+						<comment>#     Green: 48%</comment>
+						<comment>#      Blue: 14%</comment>
+						<comment>#    Purple: 3.1%</comment>
+						<comment># Legendary: 0.48%</comment>
+						<category name="Statements">
+							<hotfix name="ApocHotfix" level="None">
+								<code profiles="">set gd_slotmachine.SlotMachine:BehaviorProviderDefinition_0.Behavior_RandomBranch_34 Conditions[0] 26</code>
+								<code profiles="">set gd_slotmachine.SlotMachine:BehaviorProviderDefinition_0.Behavior_RandomBranch_34 Conditions[1] 35</code>
+								<code profiles="">set gd_slotmachine.SlotMachine:BehaviorProviderDefinition_0.Behavior_RandomBranch_34 Conditions[2] 10</code>
+								<code profiles="">set gd_slotmachine.SlotMachine:BehaviorProviderDefinition_0.Behavior_RandomBranch_34 Conditions[3] 2.3</code>
+								<code profiles="">set gd_slotmachine.SlotMachine:BehaviorProviderDefinition_0.Behavior_RandomBranch_34 Conditions[4] 0.35</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Better Quality">
+						<comment>#     White: 15%</comment>
+						<comment>#     Green: 45%</comment>
+						<comment>#      Blue: 30%</comment>
+						<comment>#    Purple: 7.6%</comment>
+						<comment># Legendary: 1.5%</comment>
+						<category name="Statements">
+							<hotfix name="ApocHotfix" level="None">
+								<code profiles="">set gd_slotmachine.SlotMachine:BehaviorProviderDefinition_0.Behavior_RandomBranch_34 Conditions[0] 11</code>
+								<code profiles="">set gd_slotmachine.SlotMachine:BehaviorProviderDefinition_0.Behavior_RandomBranch_34 Conditions[1] 33</code>
+								<code profiles="">set gd_slotmachine.SlotMachine:BehaviorProviderDefinition_0.Behavior_RandomBranch_34 Conditions[2] 22</code>
+								<code profiles="">set gd_slotmachine.SlotMachine:BehaviorProviderDefinition_0.Behavior_RandomBranch_34 Conditions[3] 5.5</code>
+								<code profiles="">set gd_slotmachine.SlotMachine:BehaviorProviderDefinition_0.Behavior_RandomBranch_34 Conditions[4] 1.1</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Excellent Quality">
+						<comment>#     White: 7%</comment>
+						<comment>#     Green: 21%</comment>
+						<comment>#      Blue: 41%</comment>
+						<comment>#    Purple: 28%</comment>
+						<comment># Legendary: 3.4%</comment>
+						<category name="Statements">
+							<hotfix name="ApocHotfix" level="None">
+								<code profiles="">set gd_slotmachine.SlotMachine:BehaviorProviderDefinition_0.Behavior_RandomBranch_34 Conditions[0] 5.1</code>
+								<code profiles="">set gd_slotmachine.SlotMachine:BehaviorProviderDefinition_0.Behavior_RandomBranch_34 Conditions[1] 15</code>
+								<code profiles="">set gd_slotmachine.SlotMachine:BehaviorProviderDefinition_0.Behavior_RandomBranch_34 Conditions[2] 30</code>
+								<code profiles="">set gd_slotmachine.SlotMachine:BehaviorProviderDefinition_0.Behavior_RandomBranch_34 Conditions[3] 20</code>
+								<code profiles="">set gd_slotmachine.SlotMachine:BehaviorProviderDefinition_0.Behavior_RandomBranch_34 Conditions[4] 2.5</code>
+							</hotfix>
+						</category>
+					</category>
+				</category>
+				<category name="Weapon Type Distribution" MUT="true">
+					<category name="Stock Type Distribution">
+						<comment>#               Pistols: 22%</comment>
+						<comment># AR/Shotgun/SMG/Sniper: 73%</comment>
+						<comment>#             Launchers: 5.1%</comment>
+						<category name="Statements">
+							<hotfix name="ApocHotfix" level="None">
+								<code profiles="default">set gd_slotmachine.SlotMachine:BehaviorProviderDefinition_0.Behavior_RandomBranch_28 Conditions[0] 0.3</code>
+								<code profiles="default">set gd_slotmachine.SlotMachine:BehaviorProviderDefinition_0.Behavior_RandomBranch_28 Conditions[1] 1</code>
+								<code profiles="default">set gd_slotmachine.SlotMachine:BehaviorProviderDefinition_0.Behavior_RandomBranch_28 Conditions[2] 0.07</code>
+								<code profiles="default">set gd_slotmachine.SlotMachine:BehaviorProviderDefinition_0.Behavior_RandomBranch_29 Conditions[0] 0.3</code>
+								<code profiles="default">set gd_slotmachine.SlotMachine:BehaviorProviderDefinition_0.Behavior_RandomBranch_29 Conditions[1] 1</code>
+								<code profiles="default">set gd_slotmachine.SlotMachine:BehaviorProviderDefinition_0.Behavior_RandomBranch_29 Conditions[2] 0.07</code>
+								<code profiles="default">set gd_slotmachine.SlotMachine:BehaviorProviderDefinition_0.Behavior_RandomBranch_31 Conditions[0] 0.3</code>
+								<code profiles="default">set gd_slotmachine.SlotMachine:BehaviorProviderDefinition_0.Behavior_RandomBranch_31 Conditions[1] 1</code>
+								<code profiles="default">set gd_slotmachine.SlotMachine:BehaviorProviderDefinition_0.Behavior_RandomBranch_31 Conditions[2] 0.07</code>
+								<code profiles="default">set gd_slotmachine.SlotMachine:BehaviorProviderDefinition_0.Behavior_RandomBranch_32 Conditions[0] 0.3</code>
+								<code profiles="default">set gd_slotmachine.SlotMachine:BehaviorProviderDefinition_0.Behavior_RandomBranch_32 Conditions[1] 1</code>
+								<code profiles="default">set gd_slotmachine.SlotMachine:BehaviorProviderDefinition_0.Behavior_RandomBranch_32 Conditions[2] 0.07</code>
+								<code profiles="default">set gd_slotmachine.SlotMachine:BehaviorProviderDefinition_0.Behavior_RandomBranch_33 Conditions[0] 0.3</code>
+								<code profiles="default">set gd_slotmachine.SlotMachine:BehaviorProviderDefinition_0.Behavior_RandomBranch_33 Conditions[1] 1</code>
+								<code profiles="default">set gd_slotmachine.SlotMachine:BehaviorProviderDefinition_0.Behavior_RandomBranch_33 Conditions[2] 0.07</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Totally Even Distribution">
+						<comment>#               Pistols: 17%</comment>
+						<comment># AR/Shotgun/SMG/Sniper: 67%</comment>
+						<comment>#             Launchers: 17%</comment>
+						<category name="Statements">
+							<hotfix name="ApocHotfix" level="None">
+								<code profiles="">set gd_slotmachine.SlotMachine:BehaviorProviderDefinition_0.Behavior_RandomBranch_28 Conditions[0] 10</code>
+								<code profiles="">set gd_slotmachine.SlotMachine:BehaviorProviderDefinition_0.Behavior_RandomBranch_28 Conditions[1] 40</code>
+								<code profiles="">set gd_slotmachine.SlotMachine:BehaviorProviderDefinition_0.Behavior_RandomBranch_28 Conditions[2] 10</code>
+								<code profiles="">set gd_slotmachine.SlotMachine:BehaviorProviderDefinition_0.Behavior_RandomBranch_29 Conditions[0] 10</code>
+								<code profiles="">set gd_slotmachine.SlotMachine:BehaviorProviderDefinition_0.Behavior_RandomBranch_29 Conditions[1] 40</code>
+								<code profiles="">set gd_slotmachine.SlotMachine:BehaviorProviderDefinition_0.Behavior_RandomBranch_29 Conditions[2] 10</code>
+								<code profiles="">set gd_slotmachine.SlotMachine:BehaviorProviderDefinition_0.Behavior_RandomBranch_31 Conditions[0] 10</code>
+								<code profiles="">set gd_slotmachine.SlotMachine:BehaviorProviderDefinition_0.Behavior_RandomBranch_31 Conditions[1] 40</code>
+								<code profiles="">set gd_slotmachine.SlotMachine:BehaviorProviderDefinition_0.Behavior_RandomBranch_31 Conditions[2] 10</code>
+								<code profiles="">set gd_slotmachine.SlotMachine:BehaviorProviderDefinition_0.Behavior_RandomBranch_32 Conditions[0] 10</code>
+								<code profiles="">set gd_slotmachine.SlotMachine:BehaviorProviderDefinition_0.Behavior_RandomBranch_32 Conditions[1] 40</code>
+								<code profiles="">set gd_slotmachine.SlotMachine:BehaviorProviderDefinition_0.Behavior_RandomBranch_32 Conditions[2] 10</code>
+								<code profiles="">set gd_slotmachine.SlotMachine:BehaviorProviderDefinition_0.Behavior_RandomBranch_33 Conditions[0] 10</code>
+								<code profiles="">set gd_slotmachine.SlotMachine:BehaviorProviderDefinition_0.Behavior_RandomBranch_33 Conditions[1] 40</code>
+								<code profiles="">set gd_slotmachine.SlotMachine:BehaviorProviderDefinition_0.Behavior_RandomBranch_33 Conditions[2] 10</code>
+							</hotfix>
+						</category>
+					</category>
+				</category>
+			</category>
+			<category name="Money">
+				<category name="Money Quality" MUT="true">
+					<category name="Stock Quality">
+						<comment># 1x Money: 74%</comment>
+						<comment># 2x Money: 19%</comment>
+						<comment># 3x Money: 7.4%</comment>
+						<category name="Statements">
+							<hotfix name="ApocHotfix" level="None">
+								<code profiles="default">set gd_slotmachine.SlotMachine:BehaviorProviderDefinition_0.Behavior_RandomBranch_30 Conditions[0] 1</code>
+								<code profiles="default">set gd_slotmachine.SlotMachine:BehaviorProviderDefinition_0.Behavior_RandomBranch_30 Conditions[1] 0.25</code>
+								<code profiles="default">set gd_slotmachine.SlotMachine:BehaviorProviderDefinition_0.Behavior_RandomBranch_30 Conditions[2] 0.1</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Improved Quality">
+						<comment># 1x Money: 49%</comment>
+						<comment># 2x Money: 35%</comment>
+						<comment># 3x Money: 16%</comment>
+						<category name="Statements">
+							<hotfix name="ApocHotfix" level="None">
+								<code profiles="">set gd_slotmachine.SlotMachine:BehaviorProviderDefinition_0.Behavior_RandomBranch_30 Conditions[0] 49</code>
+								<code profiles="">set gd_slotmachine.SlotMachine:BehaviorProviderDefinition_0.Behavior_RandomBranch_30 Conditions[1] 35</code>
+								<code profiles="">set gd_slotmachine.SlotMachine:BehaviorProviderDefinition_0.Behavior_RandomBranch_30 Conditions[2] 16</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Better Quality">
+						<comment># 1x Money: 33%</comment>
+						<comment># 2x Money: 33%</comment>
+						<comment># 3x Money: 33%</comment>
+						<category name="Statements">
+							<hotfix name="ApocHotfix" level="None">
+								<code profiles="">set gd_slotmachine.SlotMachine:BehaviorProviderDefinition_0.Behavior_RandomBranch_30 Conditions[0] 33</code>
+								<code profiles="">set gd_slotmachine.SlotMachine:BehaviorProviderDefinition_0.Behavior_RandomBranch_30 Conditions[1] 33</code>
+								<code profiles="">set gd_slotmachine.SlotMachine:BehaviorProviderDefinition_0.Behavior_RandomBranch_30 Conditions[2] 33</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Excellent Quality">
+						<comment># 1x Money: 10%</comment>
+						<comment># 2x Money: 30%</comment>
+						<comment># 3x Money: 60%</comment>
+						<category name="Statements">
+							<hotfix name="ApocHotfix" level="None">
+								<code profiles="">set gd_slotmachine.SlotMachine:BehaviorProviderDefinition_0.Behavior_RandomBranch_30 Conditions[0] 10</code>
+								<code profiles="">set gd_slotmachine.SlotMachine:BehaviorProviderDefinition_0.Behavior_RandomBranch_30 Conditions[1] 30</code>
+								<code profiles="">set gd_slotmachine.SlotMachine:BehaviorProviderDefinition_0.Behavior_RandomBranch_30 Conditions[2] 60</code>
+							</hotfix>
+						</category>
+					</category>
+				</category>
+				<category name="Money Frequency" MUT="true">
+					<category name="Stock Drops">
+						<hotfix name="ApocHotfix" level="None">
+							<code profiles="default">set gd_slotmachine.SlotMachine:BehaviorProviderDefinition_0.Behavior_RandomBranch_34 Conditions[8] 50</code>
+						</hotfix>
+					</category>
+					<category name="Doubled Money Drops">
+						<hotfix name="ApocHotfix" level="None">
+							<code profiles="">set gd_slotmachine.SlotMachine:BehaviorProviderDefinition_0.Behavior_RandomBranch_34 Conditions[8] 100</code>
+						</hotfix>
+					</category>
+					<category name="Halved Money Drops">
+						<hotfix name="ApocHotfix" level="None">
+							<code profiles="">set gd_slotmachine.SlotMachine:BehaviorProviderDefinition_0.Behavior_RandomBranch_34 Conditions[8] 25</code>
+						</hotfix>
+					</category>
+					<category name="No Money Drops">
+						<hotfix name="ApocHotfix" level="None">
+							<code profiles="">set gd_slotmachine.SlotMachine:BehaviorProviderDefinition_0.Behavior_RandomBranch_34 Conditions[8] 0</code>
+						</hotfix>
+					</category>
+				</category>
+			</category>
+			<category name="Eridium Quality + Frequency" MUT="true">
+				<category name="Stock Quality and Frequency">
+					<comment># Quality chances:</comment>
+					<comment>#</comment>
+					<comment>#    4x Eridium: 72%</comment>
+					<comment>#    8x Eridium: 22%</comment>
+					<comment>#   12x Eridium: 6.5%</comment>
+					<category name="Statements">
+						<hotfix name="ApocHotfix" level="None">
+							<code profiles="default">set gd_slotmachine.SlotMachine:BehaviorProviderDefinition_0.Behavior_RandomBranch_34 Conditions[5] 5</code>
+							<code profiles="default">set gd_slotmachine.SlotMachine:BehaviorProviderDefinition_0.Behavior_RandomBranch_34 Conditions[6] 1.5</code>
+							<code profiles="default">set gd_slotmachine.SlotMachine:BehaviorProviderDefinition_0.Behavior_RandomBranch_34 Conditions[7] 0.45</code>
+						</hotfix>
+					</category>
+				</category>
+				<category name="Stock Quality, Doubled Frequency">
+					<comment># Quality chances:</comment>
+					<comment>#</comment>
+					<comment>#    4x Eridium: 72%</comment>
+					<comment>#    8x Eridium: 22%</comment>
+					<comment>#   12x Eridium: 6.5%</comment>
+					<category name="Statements">
+						<hotfix name="ApocHotfix" level="None">
+							<code profiles="">set gd_slotmachine.SlotMachine:BehaviorProviderDefinition_0.Behavior_RandomBranch_34 Conditions[5] 10</code>
+							<code profiles="">set gd_slotmachine.SlotMachine:BehaviorProviderDefinition_0.Behavior_RandomBranch_34 Conditions[6] 3</code>
+							<code profiles="">set gd_slotmachine.SlotMachine:BehaviorProviderDefinition_0.Behavior_RandomBranch_34 Conditions[7] 0.9</code>
+						</hotfix>
+					</category>
+				</category>
+				<category name="Better Quality, Stock Frequency">
+					<comment># Quality chances:</comment>
+					<comment>#</comment>
+					<comment>#    4x Eridium: 33%</comment>
+					<comment>#    8x Eridium: 33%</comment>
+					<comment>#   12x Eridium: 33%</comment>
+					<category name="Statements">
+						<hotfix name="ApocHotfix" level="None">
+							<code profiles="">set gd_slotmachine.SlotMachine:BehaviorProviderDefinition_0.Behavior_RandomBranch_34 Conditions[5] 2.3</code>
+							<code profiles="">set gd_slotmachine.SlotMachine:BehaviorProviderDefinition_0.Behavior_RandomBranch_34 Conditions[6] 2.3</code>
+							<code profiles="">set gd_slotmachine.SlotMachine:BehaviorProviderDefinition_0.Behavior_RandomBranch_34 Conditions[7] 2.3</code>
+						</hotfix>
+					</category>
+				</category>
+				<category name="Better Quality, Doubled Frequency">
+					<comment># Quality chances:</comment>
+					<comment>#</comment>
+					<comment>#    4x Eridium: 33%</comment>
+					<comment>#    8x Eridium: 33%</comment>
+					<comment>#   12x Eridium: 33%</comment>
+					<category name="Statements">
+						<hotfix name="ApocHotfix" level="None">
+							<code profiles="">set gd_slotmachine.SlotMachine:BehaviorProviderDefinition_0.Behavior_RandomBranch_34 Conditions[5] 4.6</code>
+							<code profiles="">set gd_slotmachine.SlotMachine:BehaviorProviderDefinition_0.Behavior_RandomBranch_34 Conditions[6] 4.6</code>
+							<code profiles="">set gd_slotmachine.SlotMachine:BehaviorProviderDefinition_0.Behavior_RandomBranch_34 Conditions[7] 4.6</code>
+						</hotfix>
+					</category>
+				</category>
+				<category name="Excellent Quality, Stock Frequency">
+					<comment># Quality chances:</comment>
+					<comment>#</comment>
+					<comment>#    4x Eridium: 19%</comment>
+					<comment>#    8x Eridium: 33%</comment>
+					<comment>#   12x Eridium: 49%</comment>
+					<category name="Statements">
+						<hotfix name="ApocHotfix" level="None">
+							<code profiles="">set gd_slotmachine.SlotMachine:BehaviorProviderDefinition_0.Behavior_RandomBranch_34 Conditions[5] 1.3</code>
+							<code profiles="">set gd_slotmachine.SlotMachine:BehaviorProviderDefinition_0.Behavior_RandomBranch_34 Conditions[6] 2.3</code>
+							<code profiles="">set gd_slotmachine.SlotMachine:BehaviorProviderDefinition_0.Behavior_RandomBranch_34 Conditions[7] 3.4</code>
+						</hotfix>
+					</category>
+				</category>
+				<category name="Excellent Quality, Doubled Frequency">
+					<comment># Quality chances:</comment>
+					<comment>#</comment>
+					<comment>#    4x Eridium: 19%</comment>
+					<comment>#    8x Eridium: 33%</comment>
+					<comment>#   12x Eridium: 49%</comment>
+					<category name="Statements">
+						<hotfix name="ApocHotfix" level="None">
+							<code profiles="">set gd_slotmachine.SlotMachine:BehaviorProviderDefinition_0.Behavior_RandomBranch_34 Conditions[5] 2.6</code>
+							<code profiles="">set gd_slotmachine.SlotMachine:BehaviorProviderDefinition_0.Behavior_RandomBranch_34 Conditions[6] 4.6</code>
+							<code profiles="">set gd_slotmachine.SlotMachine:BehaviorProviderDefinition_0.Behavior_RandomBranch_34 Conditions[7] 6.8</code>
+						</hotfix>
+					</category>
+				</category>
+			</category>
+			<category name="Skin Frequency" MUT="true">
+				<category name="Stock Drops">
+					<hotfix name="ApocHotfix" level="None">
+						<code profiles="default">set gd_slotmachine.SlotMachine:BehaviorProviderDefinition_0.Behavior_RandomBranch_34 Conditions[10] 10</code>
+					</hotfix>
+				</category>
+				<category name="Doubled Skin Drops">
+					<hotfix name="ApocHotfix" level="None">
+						<code profiles="">set gd_slotmachine.SlotMachine:BehaviorProviderDefinition_0.Behavior_RandomBranch_34 Conditions[10] 20</code>
+					</hotfix>
+				</category>
+				<category name="Halved Skin Drops">
+					<hotfix name="ApocHotfix" level="None">
+						<code profiles="">set gd_slotmachine.SlotMachine:BehaviorProviderDefinition_0.Behavior_RandomBranch_34 Conditions[10] 5</code>
+					</hotfix>
+				</category>
+				<category name="No Skin Drops">
+					<hotfix name="ApocHotfix" level="None">
+						<code profiles="">set gd_slotmachine.SlotMachine:BehaviorProviderDefinition_0.Behavior_RandomBranch_34 Conditions[10] 0</code>
+					</hotfix>
+				</category>
+			</category>
+			<category name="Grenade Frequency" MUT="true">
+				<category name="Stock Drops">
+					<hotfix name="ApocHotfix" level="None">
+						<code profiles="default">set gd_slotmachine.SlotMachine:BehaviorProviderDefinition_0.Behavior_RandomBranch_34 Conditions[9] 15</code>
+					</hotfix>
+				</category>
+				<category name="Doubled Grenade Drops">
+					<hotfix name="ApocHotfix" level="None">
+						<code profiles="">set gd_slotmachine.SlotMachine:BehaviorProviderDefinition_0.Behavior_RandomBranch_34 Conditions[9] 30</code>
+					</hotfix>
+				</category>
+				<category name="Halved Grenade Drops">
+					<hotfix name="ApocHotfix" level="None">
+						<code profiles="">set gd_slotmachine.SlotMachine:BehaviorProviderDefinition_0.Behavior_RandomBranch_34 Conditions[9] 7.5</code>
+					</hotfix>
+				</category>
+				<category name="No Grenade Drops">
+					<hotfix name="ApocHotfix" level="None">
+						<code profiles="">set gd_slotmachine.SlotMachine:BehaviorProviderDefinition_0.Behavior_RandomBranch_34 Conditions[9] 0</code>
+					</hotfix>
+				</category>
+			</category>
+			<category name="No Reward Frequency" MUT="true">
+				<category name="Stock Weight">
+					<hotfix name="ApocHotfix" level="None">
+						<code profiles="default">set gd_slotmachine.SlotMachine:BehaviorProviderDefinition_0.Behavior_RandomBranch_34 Conditions[11] 40</code>
+					</hotfix>
+				</category>
+				<category name="Doubled No-Reward Freqency">
+					<hotfix name="ApocHotfix" level="None">
+						<code profiles="">set gd_slotmachine.SlotMachine:BehaviorProviderDefinition_0.Behavior_RandomBranch_34 Conditions[11] 80</code>
+					</hotfix>
+				</category>
+				<category name="Halved No-Reward Frequency">
+					<hotfix name="ApocHotfix" level="None">
+						<code profiles="">set gd_slotmachine.SlotMachine:BehaviorProviderDefinition_0.Behavior_RandomBranch_34 Conditions[11] 20</code>
+					</hotfix>
+				</category>
+				<category name="Always Get Reward">
+					<hotfix name="ApocHotfix" level="None">
+						<code profiles="">set gd_slotmachine.SlotMachine:BehaviorProviderDefinition_0.Behavior_RandomBranch_34 Conditions[11] 0</code>
+					</hotfix>
+				</category>
+			</category>
+		</category>
+	</body>
+</BLCMM>
+
+#Commands:
+
+#Direct-Execute Warning:
+say WARNING: "BL2 Configurable Slot Machines" must be imported into BLCMM to run properly with UCP or other mods.
+
+#Hotfixes:
+set Transient.SparkServiceConfiguration_6 Keys ("SparkLevelPatchEntry-GBX_fixes1","SparkLevelPatchEntry-GBX_fixes2","SparkLevelPatchEntry-GBX_fixes3","SparkLevelPatchEntry-GBX_fixes4","SparkLevelPatchEntry-GBX_fixes5","SparkLevelPatchEntry-GBX_Fixes6","SparkLevelPatchEntry-GBX_Fixes7","SparkLevelPatchEntry-GBX_Fixes8","SparkLevelPatchEntry-GBX_Fixes9","SparkLevelPatchEntry-GBX_fixes10","SparkLevelPatchEntry-GBX_fixes11","SparkLevelPatchEntry-GBX_fixes12","SparkLevelPatchEntry-GBX_fixes13","SparkLevelPatchEntry-GBX_fixes14","SparkOnDemandPatchEntry-GBX_fixes15","SparkOnDemandPatchEntry-GBX_fixes16","SparkOnDemandPatchEntry-GBX_fixes17","SparkOnDemandPatchEntry-GBX_fixes18","SparkOnDemandPatchEntry-GBX_fixes19","SparkPatchEntry-GBX_fixes20","SparkPatchEntry-GBX_fixes21","SparkPatchEntry-GBX_fixes22","SparkPatchEntry-GBX_fixes23","SparkLevelPatchEntry-ApocHotfix1","SparkLevelPatchEntry-ApocHotfix2","SparkLevelPatchEntry-ApocHotfix3","SparkLevelPatchEntry-ApocHotfix4","SparkLevelPatchEntry-ApocHotfix5","SparkLevelPatchEntry-ApocHotfix6","SparkLevelPatchEntry-ApocHotfix7","SparkLevelPatchEntry-ApocHotfix8","SparkLevelPatchEntry-ApocHotfix9","SparkLevelPatchEntry-ApocHotfix10","SparkLevelPatchEntry-ApocHotfix11","SparkLevelPatchEntry-ApocHotfix12","SparkLevelPatchEntry-ApocHotfix13","SparkLevelPatchEntry-ApocHotfix14","SparkLevelPatchEntry-ApocHotfix15","SparkLevelPatchEntry-ApocHotfix16","SparkLevelPatchEntry-ApocHotfix17","SparkLevelPatchEntry-ApocHotfix18","SparkLevelPatchEntry-ApocHotfix19","SparkLevelPatchEntry-ApocHotfix20","SparkLevelPatchEntry-ApocHotfix21","SparkLevelPatchEntry-ApocHotfix22","SparkLevelPatchEntry-ApocHotfix23","SparkLevelPatchEntry-ApocHotfix24","SparkLevelPatchEntry-ApocHotfix25","SparkLevelPatchEntry-ApocHotfix26","SparkLevelPatchEntry-ApocHotfix27","SparkLevelPatchEntry-ApocHotfix28","SparkLevelPatchEntry-ApocHotfix29","SparkLevelPatchEntry-ApocHotfix30","SparkLevelPatchEntry-ApocHotfix31","SparkLevelPatchEntry-ApocHotfix32","SparkLevelPatchEntry-ApocHotfix33","SparkLevelPatchEntry-ApocHotfix34","SparkLevelPatchEntry-ApocHotfix35")
+set Transient.SparkServiceConfiguration_6 Values (",GD_Balance.WeightingPlayerCount.BugmorphCocoon_PerPlayers_Phase1,ConditionalInitialization.ConditionalExpressionList[4].BaseValueIfTrue.BaseValueConstant,0.700000,.8",",GD_Balance.WeightingPlayerCount.BugmorphCocoon_PerPlayers_Phase2,ConditionalInitialization.ConditionalExpressionList[4].BaseValueIfTrue.BaseValueConstant,0.400000,.5",",GD_Balance.WeightingPlayerCount.BugmorphCocoon_PerPlayers_Phase3,ConditionalInitialization.ConditionalExpressionList[4].BaseValueIfTrue.BaseValueConstant,0.200000,.3",",GD_Balance.WeightingPlayerCount.BugmorphCocoon_PerPlayers_Phase4,ConditionalInitialization.ConditionalExpressionList[4].BaseValueIfTrue.BaseValueConstant,0.100000,.2",",GD_Balance.WeightingPlayerCount.BugmorphCocoon_PerPlayers_Phase5,ConditionalInitialization.ConditionalExpressionList[4].BaseValueIfTrue.BaseValueConstant,0.075000,.1","SouthpawFactory_P,GD_Population_Marauder.Balance.Unique.PawnBalance_Assassin1,DefaultItemPoolList[3].PoolProbability.BaseValueScaleConstant,0.250000,1","SouthpawFactory_P,GD_Population_Nomad.Balance.Unique.PawnBalance_Assassin2,DefaultItemPoolList[4].PoolProbability.BaseValueScaleConstant,0.250000,1","SouthpawFactory_P,GD_Population_Psycho.Balance.Unique.PawnBalance_Assassin3,DefaultItemPoolList[1].PoolProbability.BaseValueScaleConstant,0.250000,1","SouthpawFactory_P,GD_Population_Rat.Balance.Unique.PawnBalance_Assassin4,DefaultItemPoolList[3].PoolProbability.BaseValueScaleConstant,0.250000,1",",GD_Sage_Rare_Scaylion.Population.PawnBalance_Sage_Rare_Scaylion,DefaultItemPoolList[1].PoolProbability.BaseValueScaleConstant,1.000000,100",",GD_Sage_Rare_Drifter.Balance.PawnBalance_Sage_Rare_Drifter,DefaultItemPoolList[0].PoolProbability.BaseValueScaleConstant,1.000000,100",",GD_Sage_Rare_Rhino.Population.PawnBalance_Sage_Rare_Rhino,DefaultItemPoolList[1].PoolProbability.BaseValueScaleConstant,1.000000,100",",GD_Sage_Rare_Skag.Population.PawnBalance_Sage_Rare_Skag,DefaultItemPoolList[1].PoolProbability.BaseValueScaleConstant,1.000000,100",",GD_Sage_Rare_Spore.Population.PawnBalance_Sage_Rare_Spore,DefaultItemPoolList[0].PoolProbability.BaseValueScaleConstant,1.000000,100","GD_Assassin_Streaming,GD_Assassin_Skills.Sniping.Velocity,SkillEffectDefinitions[0].ModifierType,MT_PostAdd,MT_Scale","GD_Tulip_Mechro_Streaming,GD_Tulip_Mechromancer_Skills.LittleBigTrouble.WiresDontTalk,SkillEffectDefinitions,,((AttributeToModify=D_Attributes.DamageTypeModifers.InstigatedShockDamageModifier,bIncludeDuelingTargets=False,bIncludeSelfAsTarget=False,bOnlyEffectTargetsInRange=False,bExcludeNonPlayerCharacters=False,EffectTarget=TARGET_Self,TargetInstanceDataName=,TargetCriteria=CRITERIA_None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.030000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),GradeToStartApplyingEffect=1,PerGradeUpgradeInterval=1,PerGradeUpgrade=(BaseValueConstant=0.030000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),BonusUpgradeList=),(AttributeToModify=D_Attributes.DamageTypeModifers.InstigatedShockStatusDamageModifier,bIncludeDuelingTargets=False,bIncludeSelfAsTarget=False,bOnlyEffectTargetsInRange=False,bExcludeNonPlayerCharacters=False,EffectTarget=TARGET_Self,TargetInstanceDataName=,TargetCriteria=CRITERIA_None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.030000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),GradeToStartApplyingEffect=1,PerGradeUpgradeInterval=1,PerGradeUpgrade=(BaseValueConstant=0.030000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),BonusUpgradeList=))","GD_Siren_Streaming,GD_Siren_Skills.Misc.Init_BlightPhoenix_DamageCalc_Part2,ValueFormula.Level.InitializationDefinition,AttributeInitializationDefinition'GD_Balance_HealthAndDamage.HealthAndDamage.Init_PlayerMeleeDamage',AttributeInitializationDefinition'GD_Balance_HealthAndDamage.HealthAndDamage.Init_PlayerSkillDamage'","GD_Siren_Streaming,GD_Siren_Skills.Misc.Init_BlightPhoenix_DamageCalc_Part2,ValueFormula.Level.BaseValueScaleConstant,1.000000,3.5","GD_Assassin_Streaming,GD_Assassin_Skills.Misc.Att_DeathMark_BonusDamage,BaseValue.BaseValueConstant,0.200000,.8","GD_Itempools.Runnables.Pool_FourAssassins,BalancedItems[1].Probability.InitializationDefinition,None,GD_Balance.Weighting.Weight_1_Common","GD_Shields.Projectiles.Proj_LegendaryBoosterShield:BehaviorProviderDefinition_1.Behavior_Explode_140,BehaviorSequences[0].BehaviorData2[7].Behavior.StatusEffectDamage.BaseValueAttribute,None,D_Attributes.Projectile.ProjectileDamage","GD_Shields.Projectiles.Proj_LegendaryBoosterShield:BehaviorProviderDefinition_1.Behavior_Explode_140,BehaviorSequences[0].BehaviorData2[7].Behavior.StatusEffectDamage.BaseValueScaleConstant,1.000000,.25","GD_Shields.Projectiles.Proj_LegendaryBoosterShield:BehaviorProviderDefinition_1.Behavior_Explode_140,BehaviorSequences[0].BehaviorData2[7].Behavior.StatusEffectChance.BaseValueConstant,1.000000,20",",gd_slotmachine.SlotMachine:BehaviorProviderDefinition_0,BehaviorSequences[1].BehaviorData2[16].LinkedVariables.ArrayIndexAndLength,,0",",gd_slotmachine.SlotMachine:BehaviorProviderDefinition_0,BehaviorSequences[1].BehaviorData2[46].LinkedVariables.ArrayIndexAndLength,,0",",gd_slotmachine.SlotMachine:BehaviorProviderDefinition_0,BehaviorSequences[1].BehaviorData2[116].LinkedVariables.ArrayIndexAndLength,,0",",gd_slotmachine.SlotMachine:BehaviorProviderDefinition_0,BehaviorSequences[1].BehaviorData2[128].LinkedVariables.ArrayIndexAndLength,,0",",gd_slotmachine.SlotMachine:BehaviorProviderDefinition_0,BehaviorSequences[1].BehaviorData2[133].LinkedVariables.ArrayIndexAndLength,,0",",gd_slotmachine.SlotMachine:BehaviorProviderDefinition_0.Behavior_RandomBranch_34,Conditions[0],,40",",gd_slotmachine.SlotMachine:BehaviorProviderDefinition_0.Behavior_RandomBranch_34,Conditions[1],,30",",gd_slotmachine.SlotMachine:BehaviorProviderDefinition_0.Behavior_RandomBranch_34,Conditions[2],,3",",gd_slotmachine.SlotMachine:BehaviorProviderDefinition_0.Behavior_RandomBranch_34,Conditions[3],,0.3",",gd_slotmachine.SlotMachine:BehaviorProviderDefinition_0.Behavior_RandomBranch_34,Conditions[4],,0.03",",gd_slotmachine.SlotMachine:BehaviorProviderDefinition_0.Behavior_RandomBranch_28,Conditions[0],,0.3",",gd_slotmachine.SlotMachine:BehaviorProviderDefinition_0.Behavior_RandomBranch_28,Conditions[1],,1",",gd_slotmachine.SlotMachine:BehaviorProviderDefinition_0.Behavior_RandomBranch_28,Conditions[2],,0.07",",gd_slotmachine.SlotMachine:BehaviorProviderDefinition_0.Behavior_RandomBranch_29,Conditions[0],,0.3",",gd_slotmachine.SlotMachine:BehaviorProviderDefinition_0.Behavior_RandomBranch_29,Conditions[1],,1",",gd_slotmachine.SlotMachine:BehaviorProviderDefinition_0.Behavior_RandomBranch_29,Conditions[2],,0.07",",gd_slotmachine.SlotMachine:BehaviorProviderDefinition_0.Behavior_RandomBranch_31,Conditions[0],,0.3",",gd_slotmachine.SlotMachine:BehaviorProviderDefinition_0.Behavior_RandomBranch_31,Conditions[1],,1",",gd_slotmachine.SlotMachine:BehaviorProviderDefinition_0.Behavior_RandomBranch_31,Conditions[2],,0.07",",gd_slotmachine.SlotMachine:BehaviorProviderDefinition_0.Behavior_RandomBranch_32,Conditions[0],,0.3",",gd_slotmachine.SlotMachine:BehaviorProviderDefinition_0.Behavior_RandomBranch_32,Conditions[1],,1",",gd_slotmachine.SlotMachine:BehaviorProviderDefinition_0.Behavior_RandomBranch_32,Conditions[2],,0.07",",gd_slotmachine.SlotMachine:BehaviorProviderDefinition_0.Behavior_RandomBranch_33,Conditions[0],,0.3",",gd_slotmachine.SlotMachine:BehaviorProviderDefinition_0.Behavior_RandomBranch_33,Conditions[1],,1",",gd_slotmachine.SlotMachine:BehaviorProviderDefinition_0.Behavior_RandomBranch_33,Conditions[2],,0.07",",gd_slotmachine.SlotMachine:BehaviorProviderDefinition_0.Behavior_RandomBranch_30,Conditions[0],,1",",gd_slotmachine.SlotMachine:BehaviorProviderDefinition_0.Behavior_RandomBranch_30,Conditions[1],,0.25",",gd_slotmachine.SlotMachine:BehaviorProviderDefinition_0.Behavior_RandomBranch_30,Conditions[2],,0.1",",gd_slotmachine.SlotMachine:BehaviorProviderDefinition_0.Behavior_RandomBranch_34,Conditions[8],,50",",gd_slotmachine.SlotMachine:BehaviorProviderDefinition_0.Behavior_RandomBranch_34,Conditions[5],,5",",gd_slotmachine.SlotMachine:BehaviorProviderDefinition_0.Behavior_RandomBranch_34,Conditions[6],,1.5",",gd_slotmachine.SlotMachine:BehaviorProviderDefinition_0.Behavior_RandomBranch_34,Conditions[7],,0.45",",gd_slotmachine.SlotMachine:BehaviorProviderDefinition_0.Behavior_RandomBranch_34,Conditions[10],,10",",gd_slotmachine.SlotMachine:BehaviorProviderDefinition_0.Behavior_RandomBranch_34,Conditions[9],,15",",gd_slotmachine.SlotMachine:BehaviorProviderDefinition_0.Behavior_RandomBranch_34,Conditions[11],,40")
+

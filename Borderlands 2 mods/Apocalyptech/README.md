@@ -17,6 +17,7 @@ branches, so you can browse in `bl2betterloot`, `bl2colddeadhands`,
   * [Aegrus Not-So-Rare Monsters](#aegrus-not-so-rare-monsters)
   * [BL2 Better Loot Mod](#bl2-better-loot-mod)
   * [BL2 Cold Dead Hands](#bl2-cold-dead-hands)
+  * [BL2 Configurable Slot Machines](#bl2-configurable-slot-machines)
   * [BL2 Early Bloomer](#bl2-early-bloomer)
   * [BL2 Expanded Legendary Pools](#bl2-expanded-legendary-pools)
   * [BL2 Movement Speed Cheats](#bl2-movement-speed-cheats)
@@ -64,6 +65,13 @@ acquired during the game.  Instead of dropping weapons/shields from a
 random loot pool, enemies will now *always* drop the specific gun and
 shield that they're using.  In the default configuration, enemy gear
 quality is also improved considerably.
+
+### BL2 Configurable Slot Machines
+
+This mod allows you to configure just about every facet of the base game's
+slot machines, of the sort found in Sanctuary (and, I believe, on One-Armed
+Bandits).  The default configuration leaves the slot machines exactly how
+they are in the base game -- you **must** configure the options you want.
 
 ### BL2 Early Bloomer
 
