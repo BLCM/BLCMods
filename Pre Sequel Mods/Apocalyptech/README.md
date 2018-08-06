@@ -18,6 +18,7 @@ branches, so you can browse in `bl2betterloot`, `bl2colddeadhands`,
   * [Guaranteed M0RQ, Cutie Killer, and Heartfull Splodger](#guaranteed-m0rq-cutie-killer-and-heartfull-splodger)
   * [Guaranteed Phonic](#guaranteed-phonic)
   * [Luneshine on Uniques](#luneshine-on-uniques)
+  * [No Broken Chests Near Denial Subroutine](#no-broken-chests-near-denial-subroutine)
   * [No SpyBugs in The Cortex](#no-spybugs-in-the-cortex)
   * [Speedier Moon Buggies](#speedier-moon-buggies)
   * [Speedier Stingrays](#speedier-stingrays)
@@ -62,6 +63,13 @@ Waste.
 Adds Luneshine attachments to several Unique/Legendary weapons which didn't
 previously have them.  **WARNING:** This will generate weapons which TPS will
 delete from your inventory, if it's started up without this mod enabled.
+
+### No Broken Chests Near Denial Subroutine
+
+The Denial Subroutine arena (in Cluster 99002 0V3RL00K) has six bandit
+"coolers" which don't actually work -- they open and spawn their items, but the
+items can't actually be picked up.  This mod changes them to be the round ammo
+chests instead, so at least they work.
 
 ### No SpyBugs in The Cortex
 
