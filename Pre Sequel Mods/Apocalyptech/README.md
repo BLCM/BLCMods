@@ -24,6 +24,7 @@ branches, so you can browse in `bl2betterloot`, `bl2colddeadhands`,
   * [Speedier Stingrays](#speedier-stingrays)
   * [TPS Better Loot Mod](#tps-better-loot-mod)
   * [TPS Cold Dead Hands](#tps-cold-dead-hands)
+  * [TPS Configurable Slot Machines](#tps-configurable-slot-machines)
   * [TPS Early Bloomer](#tps-early-bloomer)
   * [TPS Expanded Legendary Pools](#tps-expanded-legendary-pools)
   * [TPS Movement Speed Cheats](#tps-movement-speed-cheats)
@@ -119,6 +120,13 @@ acquired during the game.  Instead of dropping weapons/shields from a
 random loot pool, enemies will now *always* drop the specific gun and
 shield that they're using.  In the default configuration, enemy gear
 quality is also improved considerably.
+
+### TPS Configurable Slot Machines
+
+This mod allows you to configure just about every facet of the base game's
+slot machines, of the sort found in Concordia.  The default configuration
+leaves the slot machines exactly how they are in the base game -- you **must**
+configure the options you want.
 
 ### TPS Early Bloomer
 
