@@ -15,6 +15,7 @@ branches, so you can browse in `bl2betterloot`, `bl2colddeadhands`,
 
 * [Mod List](#mod-list)
   * [AdBlocker 2000](#adblocker-2000)
+  * [Guaranteed M0RQ, Cutie Killer, and Heartfull Splodger](#guaranteed-m0rq-cutie-killer-and-heartfull-splodger)
   * [Guaranteed Phonic](#guaranteed-phonic)
   * [Luneshine on Uniques](#luneshine-on-uniques)
   * [No SpyBugs in The Cortex](#no-spybugs-in-the-cortex)
@@ -39,6 +40,17 @@ Tired of running headlong into those damned pop-up ads in Nexus and
 Motherlessboard?  Rage no longer!  A quick install of our fresh new
 *AdBlocker 2000* will clear those right up.  Never be bothered by those
 pesky ads again!
+
+### Guaranteed M0RQ, Cutie Killer, and Heartfull Splodger
+
+There are three chests hidden around in the Claptastic Voyage DLC which
+provide, respectively, the M0RQ shield, and the unique glitch weapons
+Cutie Killer and Heartfull Splodger.  These chests are intended to only
+be available once per playthrough, but some bug in Borderlands can
+sometimes cause the chests to spawn already open, which prevents the
+player from receiving the loot during the current playthrough.  This
+mod simply makes it so that those chests will always spawn in an
+openable state, so the player can always get that loot.
 
 ### Guaranteed Phonic
 
