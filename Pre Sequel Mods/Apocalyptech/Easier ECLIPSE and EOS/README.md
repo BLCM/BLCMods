@@ -1,12 +1,12 @@
 Easier ECLIPSE and EOS
 ======================
 
-The ECLIPSE and EOS boss fights, at the end of the Claptastic Voyage DLC,
-are an unexpected and for some users unpleasant jump in difficulty.
-Outside of raid bosses, neither TPS nor Claptastic Voyage contains battles
-which are nearly so difficult.  This mod is aimed at users who don't feel
-like fighting their way through both ECLIPSE and EOS at their full
-strength.
+This mod makes the ECLIPSE and EOS boss fights at the end of the Claptastic
+Voyage DLC easier in a variety of ways.  The default settings in the mod
+aim to have the bosses remain quite dangerous -- the goal isn't really to
+make them super easy.  That said, I'm not great at balancing, so it's
+possible I've gone too far in some areas, or not far enough in others.  Let
+me know if anything needs tweaking!
 
 The mod has one section per boss, so you can configure their difficulty
 independently.  There are four options for each boss:
@@ -17,14 +17,17 @@ independently.  There are four options for each boss:
 * Stock Difficulty
 
 You can use the last option to have one of the bosses remain unchanged, if
-you'd only wanted to nerf one of the two.
+you'd only wanted to nerf one of the two.  The "Easier" default is the one
+which intends to have the bosses still be quite dangerous.
 
 Note that this mod doesn't address all aspects of the boss fights -- EOS
 will still be out of range of beam lasers, and the stomp damage from
-ECLIPSE is probably mostly unchanged, for instance.  I'm also not
-especially good at balancing in general, so if you feel that anything in
-here goes too far, or not far enough (for the given selection), definitely
-let me know and I can tweak the values in here.
+ECLIPSE is probably mostly unchanged, for instance.  The overall strategy
+during the fights will not change much either.  EOS's Eye of Helios attack
+will remain quite devastating, for instance, so stay out of the way.
+
+It's perhaps worth noting that this has only really been tested in Normal
+mode.
 
 Usage
 =====
