@@ -1,0 +1,38 @@
+<BLCMM v="1">
+#<!!!You opened a file saved with BLCMM in FilterTool. Please update to BLCMM to properly open this file!!!>
+	<head>
+		<type name="BL2" offline="false"/>
+		<profiles>
+			<profile name="default" current="true"/>
+		</profiles>
+	</head>
+	<body>
+		<category name="Burst-Fire Rockets">
+			<category name="Description">
+				<comment>By Aaron0000</comment>
+				<comment>Replaces the accuracy accessory of Rocket Launchers. Changes it to give rocket launchers a 3-round burst fire at the cost of reduced damage and accuracy.</comment>
+				<comment>Comes with custom prefixes: Maliwan = Resurging, Tediore = Repeating, Torgue = Triple Entendre, Bandit = bang bang, Vladof = Troynoy.</comment>
+				<comment>Atlas Reborn also has an optional prefix located at the bottom. Activate this file after Atlas Reborn to enable the prefix properly.</comment>
+			</category>
+			<category name="Code">
+				<code profiles="default">set GD_Weap_Launchers.Accessory.RL_Accessory_BodyMod_2_Acc WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0.500000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-0.7500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=10.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponAutomaticBurstCount',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=3.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-0.700000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponBurstInterval',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=-0.500000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.500000)))</code>
+				<code profiles="default">set GD_Weap_Launchers.Name.Prefix_Scav.Prefix_BodyMod2_Accuracy PartName bang bang</code>
+				<code profiles="default">set GD_Weap_Launchers.Name.Prefix_Maliwan.Prefix_BodyMod2_Accuracy PartName Resurging</code>
+				<code profiles="default">set GD_Weap_Launchers.Name.Prefix_Tediore.Prefix_BodyMod2_Accuracy PartName Repeating</code>
+				<code profiles="default">set GD_Weap_Launchers.Name.Prefix_Torgue.Prefix_BodyMod2_Accuracy PartName Triple Entendre</code>
+				<code profiles="default">set GD_Weap_Launchers.Name.Prefix_Vladof.Prefix_BodyMod2_Accuracy PartName Troynoy</code>
+			</category>
+			<category name="Atlas Prefix">
+				<code profiles="">set GD_Weap_Launchers.Name.Prefix_Vladof.Prefix_BodyMod2_Accuracy PartName Extreme</code>
+			</category>
+		</category>
+	</body>
+</BLCMM>
+
+#Commands:
+set GD_Weap_Launchers.Accessory.RL_Accessory_BodyMod_2_Acc WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0.500000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-0.7500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=10.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponAutomaticBurstCount',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=3.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-0.700000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponBurstInterval',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=-0.500000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.500000)))
+set GD_Weap_Launchers.Name.Prefix_Scav.Prefix_BodyMod2_Accuracy PartName bang bang
+set GD_Weap_Launchers.Name.Prefix_Maliwan.Prefix_BodyMod2_Accuracy PartName Resurging
+set GD_Weap_Launchers.Name.Prefix_Tediore.Prefix_BodyMod2_Accuracy PartName Repeating
+set GD_Weap_Launchers.Name.Prefix_Torgue.Prefix_BodyMod2_Accuracy PartName Triple Entendre
+set GD_Weap_Launchers.Name.Prefix_Vladof.Prefix_BodyMod2_Accuracy PartName Troynoy

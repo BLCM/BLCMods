@@ -1,0 +1,58 @@
+<BLCMM v="1">
+#<!!!You opened a file saved with BLCMM in FilterTool. Please update to BLCMM to properly open this file!!!>
+	<head>
+		<type name="TPS" offline="false"/>
+		<profiles>
+			<profile name="default" current="true"/>
+		</profiles>
+	</head>
+	<body>
+		<category name="Proper Laser Grip">
+			<comment>By Koby</comment>
+			<comment>Swaps the meshes of Laser Front Grips and Laser Stocks, so the Grip is easier visible without having to turn the Laser to look at the Front Grip.</comment>
+			<comment>Basically, the Front Grip is now the Stock and the Stock is now the Front Grip.</comment>
+			<comment>Credit to Mopioid for the mesh-swap idea.</comment>
+			<category name="Code">
+				<category name="Front Grip Change">
+					<category name="Dahl">
+						<code profiles="default">set GD_Cork_Weap_Lasers.FrontGrip.Laser_FrontGrip_Dahl GestaltModeSkeletalMeshName Laser_Stock_Dahl</code>
+					</category>
+					<category name="Hyperion">
+						<code profiles="default">set GD_Cork_Weap_Lasers.FrontGrip.Laser_FrontGrip_Hyperion GestaltModeSkeletalMeshName Laser_Stock_Hyperion</code>
+					</category>
+					<category name="Maliwan">
+						<code profiles="default">set GD_Cork_Weap_Lasers.FrontGrip.Laser_FrontGrip_Maliwan GestaltModeSkeletalMeshName Laser_Stock_Maliwan</code>
+					</category>
+					<category name="Tediore">
+						<code profiles="default">set GD_Cork_Weap_Lasers.FrontGrip.Laser_FrontGrip_Tediore GestaltModeSkeletalMeshName Laser_Stock_Tediore</code>
+					</category>
+				</category>
+				<category name="Stock Change">
+					<category name="Dahl">
+						<code profiles="default">set GD_Cork_Weap_Lasers.Stock.Laser_Stock_Dahl GestaltModeSkeletalMeshName Laser_FrontGrip_Dahl</code>
+					</category>
+					<category name="Hyperion">
+						<code profiles="default">set GD_Cork_Weap_Lasers.Stock.Laser_Stock_Hyperion GestaltModeSkeletalMeshName Laser_FrontGrip_Hyperion</code>
+					</category>
+					<category name="Maliwan">
+						<code profiles="default">set GD_Cork_Weap_Lasers.Stock.Laser_Stock_Maliwan GestaltModeSkeletalMeshName Laser_FrontGrip_Maliwan</code>
+					</category>
+					<category name="Tediore">
+						<code profiles="default">set GD_Cork_Weap_Lasers.Stock.Laser_Stock_Tediore GestaltModeSkeletalMeshName Laser_FrontGrip_Tediore</code>
+					</category>
+				</category>
+			</category>
+		</category>
+	</body>
+</BLCMM>
+
+#Commands:
+set GD_Cork_Weap_Lasers.FrontGrip.Laser_FrontGrip_Dahl GestaltModeSkeletalMeshName Laser_Stock_Dahl
+set GD_Cork_Weap_Lasers.FrontGrip.Laser_FrontGrip_Hyperion GestaltModeSkeletalMeshName Laser_Stock_Hyperion
+set GD_Cork_Weap_Lasers.FrontGrip.Laser_FrontGrip_Maliwan GestaltModeSkeletalMeshName Laser_Stock_Maliwan
+set GD_Cork_Weap_Lasers.FrontGrip.Laser_FrontGrip_Tediore GestaltModeSkeletalMeshName Laser_Stock_Tediore
+set GD_Cork_Weap_Lasers.Stock.Laser_Stock_Dahl GestaltModeSkeletalMeshName Laser_FrontGrip_Dahl
+set GD_Cork_Weap_Lasers.Stock.Laser_Stock_Hyperion GestaltModeSkeletalMeshName Laser_FrontGrip_Hyperion
+set GD_Cork_Weap_Lasers.Stock.Laser_Stock_Maliwan GestaltModeSkeletalMeshName Laser_FrontGrip_Maliwan
+set GD_Cork_Weap_Lasers.Stock.Laser_Stock_Tediore GestaltModeSkeletalMeshName Laser_FrontGrip_Tediore
+

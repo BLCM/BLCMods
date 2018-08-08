@@ -18,13 +18,13 @@
 
         8] Increase revive speed (In coop, +50%)
 
-        9] Increase player sprint speed 
+        9] Increase player sprint speed
 
         10] Decrease FFYL duration. If you will fall more than 2 times - hello respawn station
 
         11] Get rid off bullet spongy enemies
 
-        12] Reduce your ammo pool. For balance reasons. 
+        12] Reduce your ammo pool. For balance reasons.
 
         13] Remove "Reload Cancel" on most weapons
 
@@ -35,8 +35,12 @@
         16] Change skill tree fov, some text colors
 
         Changes in update:
+        
+        1] Jakobs revolves were changed
 
-        Added 'optional' section
+        2] Added bob settings
+        
+        3] Nerfed Gunzerker ammo regen
 
         Be sure to check it
 
@@ -53,8 +57,6 @@
     #<Core>
 
         #<Settings>
-
-            set WillowGame.SprintDefinition BobScalar 1.05
 
             set WillowGame.SprintDefinition FovModifier 0.15
 
@@ -254,7 +256,9 @@
 
             set GD_Weap_Shotgun.FiringModes.Bullets_Shotgun_Torgue_Landscaper:Behavior_Explode_3 DamageFormula (BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=5.000000)
 
-            set GD_Weap_Launchers.Projectiles.Projectile_TedioreReloadLauncher:BehaviorProviderDefinition_0.Behavior_Explode_67 (BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.Projectile.ProjectileDamage',InitializationDefinition=None,BaseValueScaleConstant=1.750000)
+            set GD_Weap_Launchers.Projectiles.Projectile_TedioreReloadLauncher:BehaviorProviderDefinition_0.Behavior_Explode_67 DamageFormula (BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.Projectile.ProjectileDamage',InitializationDefinition=None,BaseValueScaleConstant=1.750000)
+
+            set GD_Weap_AssaultRifle.Projectiles.Projectile_Rocket_Vladof:BehaviorProviderDefinition_0.Behavior_Explode_9 DamageFormula (BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.Projectile.ProjectileDamage',InitializationDefinition=None,BaseValueScaleConstant=2.950000)
 
             set GD_Weap_Launchers.Projectiles.Projectile_Rocket_Torgue_Nukem:BehaviorProviderDefinition_0.Behavior_Explode_6 DamageFormula (BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.Projectile.ProjectileDamage',InitializationDefinition=None,BaseValueScaleConstant=3.000000)
 
@@ -364,6 +368,10 @@
 
                 #<Dahl AR>
 
+                    set GD_Weap_AssaultRifle.A_Weapons.WT_Dahl_AssaultRifle DryFireSounds ((Event=AkEvent'Ake_Wep_Assault_Rifles.Rifle_BT.Ak_Play_Wep_Rifle_BT_Bolt_Close',Cue=None,Expressions=))
+
+                    set GD_Weap_AssaultRifle.A_Weapons.WT_Dahl_AssaultRifle EquipSounds ((Event=AkEvent'Ake_Obj_Pickup.Obj_Pickup_Equip.Ak_Play_Obj_Pickup_Equip_Rifle',Cue=None,Expressions=))
+
                     set GD_Weap_AssaultRifle.A_Weapons.WT_Dahl_AssaultRifle FractalWanderSpeed 1
 
                     set GD_Weap_AssaultRifle.A_Weapons.WT_Dahl_AssaultRifle FractalWanderLacunarity 0.800000
@@ -392,6 +400,10 @@
 
                 #<Jakobs AR>
 
+                    set GD_Weap_AssaultRifle.A_Weapons.WT_Jakobs_AssaultRifle DryFireSounds ((Event=AkEvent'Ake_Wep_Assault_Rifles.Rifle_BT.Ak_Play_Wep_Rifle_BT_Bolt_Close',Cue=None,Expressions=))
+
+                    set GD_Weap_AssaultRifle.A_Weapons.WT_Jakobs_AssaultRifle EquipSounds ((Event=AkEvent'Ake_Obj_Pickup.Obj_Pickup_Equip.Ak_Play_Obj_Pickup_Equip_Rifle',Cue=None,Expressions=))
+
                     set GD_Weap_AssaultRifle.A_Weapons.WT_Jakobs_AssaultRifle FireRate 0.175000
 
                     set GD_Weap_AssaultRifle.A_Weapons.WT_Jakobs_AssaultRifle WeaponKickSpeed 75.75
@@ -416,6 +428,10 @@
 
                 #<Torgue AR>
 
+                    set GD_Weap_AssaultRifle.A_Weapons.WT_Torgue_AssaultRifle DryFireSounds ((Event=AkEvent'Ake_Wep_Assault_Rifles.Rifle_BT.Ak_Play_Wep_Rifle_BT_Bolt_Close',Cue=None,Expressions=))
+
+                    set GD_Weap_AssaultRifle.A_Weapons.WT_Torgue_AssaultRifle EquipSounds ((Event=AkEvent'Ake_Obj_Pickup.Obj_Pickup_Equip.Ak_Play_Obj_Pickup_Equip_Rifle',Cue=None,Expressions=))
+
                     set GD_Weap_AssaultRifle.A_Weapons.WT_Torgue_AssaultRifle PerShotAccuracyImpulse 0.55
 
                     set GD_Weap_AssaultRifle.A_Weapons.WT_Torgue_AssaultRifle RecoilAnimScaleCurve (Points=((InVal=10.000000,OutVal=1.700000,ArriveTangent=0.000000,LeaveTangent=0.000000,InterpMode=CIM_Linear),(InVal=10.000000,OutVal=1.000000,ArriveTangent=0.000000,LeaveTangent=0.000000,InterpMode=CIM_Linear)),InterpMethod=IMT_UseFixedTangentEvalAndNewAutoTangents)
@@ -423,6 +439,10 @@
                 #</Torgue AR>
 
                 #<Bandit AR>
+
+                    set GD_Weap_AssaultRifle.A_Weapons.WT_Bandit_AssaultRifle DryFireSounds ((Event=AkEvent'Ake_Wep_Assault_Rifles.Rifle_BT.Ak_Play_Wep_Rifle_BT_Bolt_Close',Cue=None,Expressions=))
+
+                    set GD_Weap_AssaultRifle.A_Weapons.WT_Bandit_AssaultRifle EquipSounds ((Event=AkEvent'Ake_Obj_Pickup.Obj_Pickup_Equip.Ak_Play_Obj_Pickup_Equip_Rifle',Cue=None,Expressions=))
 
                     set GD_Weap_AssaultRifle.A_Weapons.WT_Bandit_AssaultRifle RecoilAnimScaleCurve (Points=((InVal=10.000000,OutVal=1.500000,ArriveTangent=0.000000,LeaveTangent=0.000000,InterpMode=CIM_Linear),(InVal=10.000000,OutVal=12.000000,ArriveTangent=0.000000,LeaveTangent=0.000000,InterpMode=CIM_Linear)),InterpMethod=IMT_UseFixedTangentEvalAndNewAutoTangents)
 
@@ -499,6 +519,8 @@
                 #</Bandit Shotgun>
 
                 #<Hyperion Shotgun>
+
+                    Ake_Wep_Assault_Rifles.Rifle_BT.Ak_Play_Wep_Rifle_BT_Bolt_Close
 
                     set GD_Weap_Shotgun.A_Weapons.WT_Hyperion_Shotgun DryFireSounds ((Event=AkEvent'Ake_Wep_Assault_Rifles.Rifle_BT.Ak_Play_Wep_Rifle_BT_Bolt_Close',Cue=None,Expressions=))
 
@@ -926,6 +948,20 @@
 
                 #</Bandit Launcher>
 
+                #<Tediore Launcher>
+
+                    set GD_Weap_Launchers.A_Weapons.WT_Bandit_Launcher InstantHitDamage (BaseValueConstant=20.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance_HealthAndDamage.HealthAndDamage.Init_WeaponDamage',BaseValueScaleConstant=35.000000)
+
+                    set GD_Weap_Launchers.A_Weapons.WT_Bandit_Launcher DryFireSounds ((Event=AkEvent'Ake_Wep_Assault_Rifles.Rifle_BT.Ak_Play_Wep_Rifle_BT_Bolt_Close',Cue=None,Expressions=))
+
+                    set GD_Weap_Launchers.A_Weapons.WT_Bandit_Launcher EquipSounds ((Event=AkEvent'Ake_Obj_Pickup.Obj_Pickup_Equip.Ak_Play_Obj_Pickup_Equip_Rifle',Cue=None,Expressions=))
+
+                    set GD_Weap_Launchers.A_Weapons.WT_Bandit_Launcher ReloadTime 0.95
+
+                    set GD_Weap_Launchers.A_Weapons.WT_Bandit_Launcher FireRate 2
+
+                #</Tediore Launcher>
+
             #</Launchers [Done]>
 
             #<Pistols [Done]>
@@ -964,7 +1000,7 @@
 
                     #<Jakobs Pistol>
 
-                        set GD_Weap_Pistol.A_Weapons.WeaponType_Jakobs_Pistol InstantHitDamage (BaseValueConstant=20.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance_HealthAndDamage.HealthAndDamage.Init_WeaponDamage',BaseValueScaleConstant=10.000000)
+                        set GD_Weap_Pistol.A_Weapons.WeaponType_Jakobs_Pistol InstantHitDamage (BaseValueConstant=20.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance_HealthAndDamage.HealthAndDamage.Init_WeaponDamage',BaseValueScaleConstant=14.500000)
 
                     #</Jakobs Pistol>
 
@@ -988,13 +1024,17 @@
 
                     set GD_Weap_Pistol.A_Weapons.WeaponType_Vladof_Pistol PerShotAccuracyImpulse 0.15
 
-                    set GD_Weap_Pistol.A_Weapons.WeaponType_Jakobs_Pistol LongFireIntervalModPower 1550.000000
+                    set GD_Weap_Pistol.A_Weapons.WeaponType_Jakobs_Pistol ClipSize 4
+
+                    set GD_Weap_Pistol.A_Weapons.WeaponType_Jakobs_Pistol Spread 1.350000 
+
+                    set GD_Weap_Pistol.A_Weapons.WeaponType_Jakobs_Pistol PerShotAccuracyImpulse 8.000000
+
+                    set GD_Weap_Pistol.A_Weapons.WeaponType_Jakobs_Pistol ReloadTime 1.800000
 
                     set GD_Weap_Pistol.A_Weapons.WeaponType_Jakobs_Pistol WeaponKickSpeed 125.75
 
                     set GD_Weap_Pistol.A_Weapons.WeaponType_Jakobs_Pistol MinimumVerticalPercentage 0.15
-
-                    set GD_Weap_Pistol.A_Weapons.WeaponType_Jakobs_Pistol RecoilAnimScaleCurve (Points=((InVal=25.000000,OutVal=123.500000,ArriveTangent=0.000000,LeaveTangent=0.000000,InterpMode=CIM_Linear),(InVal=115.000000,OutVal=127.800000,ArriveTangent=0.000000,LeaveTangent=0.000000,InterpMode=CIM_Linear)),InterpMethod=IMT_UseFixedTangentEvalAndNewAutoTangents)
 
                     set GD_Weap_Pistol.A_Weapons.WeaponType_Jakobs_Pistol WeaponKickLeft 11
 
@@ -1002,13 +1042,17 @@
 
                     set GD_Weap_Pistol.A_Weapons.WeaponType_Jakobs_Pistol WeaponKickDown 7.55
 
-                    set GD_Weap_Pistol.A_Weapons.WeaponType_Jakobs_Pistol ZoomedRecoilAnimScale 152.0
+                    set GD_Weap_Pistol.A_Weapons.WeaponType_Jakobs_Pistol ZoomedRecoilAnimScale 1 
+
+                    set GD_Weap_Pistol.A_Weapons.WeaponType_Jakobs_Pistol ShotCost 2
 
                     set GD_Weap_Pistol.A_Weapons.WeaponType_Jakobs_Pistol:AttributePresentationDefinition_3 NoConstraintText Deals [skill]a lot[-skill] of damage<br>[funstat]but recoil is a thing
 
                     set GD_Weap_Pistol.A_Weapons.WeaponType_Jakobs_Pistol WeaponKickRight 7
 
                     set GD_Weap_Pistol.A_Weapons.WeaponType_Jakobs_Pistol DryFireSounds ((Event=AkEvent'Ake_Wep_Assault_Rifles.Rifle_BT.Ak_Play_Wep_Rifle_BT_Bolt_Close',Cue=None,Expressions=))
+
+                    set GD_Weap_Pistol.A_Weapons.WeaponType_Jakobs_Pistol RecoilAnimScaleCurve (Points=((InVal=1.200000,OutVal=1.200000,ArriveTangent=0.000000,LeaveTangent=0.000000,InterpMode=CIM_Linear),(InVal=1.200000,OutVal=1.200000,ArriveTangent=0.000000,LeaveTangent=0.000000,InterpMode=CIM_Linear)),InterpMethod=IMT_UseFixedTangentEvalAndNewAutoTangents)
 
                     set GD_Weap_Pistol.A_Weapons.WeaponType_Jakobs_Pistol EquipSounds ((Event=AkEvent'Ake_Obj_Pickup.Obj_Pickup_Equip.Ak_Play_Obj_Pickup_Equip_Rifle',Cue=None,Expressions=)) AkEvent'Ake_Wep_Assault_Rifles.Rifle_Vladof.Ak_Play_Wep_Rifle_Vladof_Shot_Short'
 
@@ -1018,7 +1062,7 @@
 
                     set GD_Weap_Pistol.A_Weapons.WeaponType_Jakobs_Pistol FractalWanderPersistence 3.000000
 
-                    set GD_Weap_Pistol.A_Weapons.WeaponType_Jakobs_Pistol FireRate 0.20
+                    set GD_Weap_Pistol.A_Weapons.WeaponType_Jakobs_Pistol FireRate 0.60
 
                     set GD_Weap_Pistol.A_Weapons.WeaponType_Jakobs_Pistol ReloadCompletePercent 0.9000
 
@@ -1107,6 +1151,12 @@
                 #</Vladof pistol>
 
                 #<Hyperion Pistol>
+
+                    #<Nerf Ladyfist>
+
+                        set GD_Weap_Pistol.Barrel.Pistol_Barrel_Dahl_LadyFist ExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.GameplayAttributes.PlayerCriticalHitBonus',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.250000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))
+
+                    #</Nerf Ladyfist>
 
                     set GD_Weap_Pistol.A_Weapons.WeaponType_Hyperion_Pistol ExternalAttributeEffects ((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AccuracyResourcePool.AccuracyMinValue',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AccuracyResourcePool.AccuracyMaxValue',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AccuracyResourcePool.AccuracyOnIdleRegenerationRate',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=18.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.GameplayAttributes.PlayerCriticalHitBonus',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=8.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))
 
@@ -1250,69 +1300,123 @@
 
             #<hotfix><key>"SparkLevelPatchEntry-Overrided10"</key><value>",GD_Ammodrops.Shop.AmmoShop_Repeater_Pistol_Clip,ExternalAttributeEffects,,((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Repeater_Pistol.Ammo_Repeater_Pistol_CurrentValue',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=InventoryAttributeDefinition'GD_Ammodrops.AmmoPickup_Amounts.AmmoAmountShop_Repeater',InitializationDefinition=None,BaseValueScaleConstant=0.200000))"</value><on>
 
+            #<Other>
+
+                #<hotfix><key>"SparkLevelPatchEntry-ReloadAnim1"</key><value>",GD_PlayerShared.WeaponHolds1st.WeaponHold_Player_Pistol,WeaponActions,,((Posture=BWAP_All,Actions=((Action=BWA_FireRecoil,Expression=None,Animations=((Expression=ExpressionTree'GD_PlayerShared.WeaponHolds1st.WeaponHold_Player_Pistol:ExpressionTree_2',SpecialMove=SpecialMove_FirstPerson'GD_PlayerShared.Anims1st.WeaponAnim_Fire_Revolver_Recoil'),(Expression=ExpressionTree'GD_PlayerShared.WeaponHolds1st.WeaponHold_Player_Pistol:ExpressionTree_3',SpecialMove=SpecialMove_FirstPerson'GD_PlayerShared.Anims1st.WeaponAnim_Fire_Revolver_Recoil'))),(Action=BWA_Reload,Expression=ExpressionTree'GD_PlayerShared.WeaponHolds1st.WeaponHold_Player_Pistol:ExpressionTree_0',Animations=((Expression=AttributeExpressionEvaluator'GD_PlayerShared.WeaponHolds1st.WeaponHold_Player_Pistol:AttributeExpressionEvaluator_20',SpecialMove=SpecialMove_FirstPerson'GD_PlayerShared.Anims1st.WeaponAnim_Reload_Jakobs_Var2'),(Expression=AttributeExpressionEvaluator'GD_PlayerShared.WeaponHolds1st.WeaponHold_Player_Pistol:AttributeExpressionEvaluator_21',SpecialMove=SpecialMove_FirstPerson'GD_PlayerShared.Anims1st.WeaponAnim_Reload_Jakobs_Fast_Var2'))))))"</value><on>
+
+                #<Nerf nah>
+
+                    #<hotfix><key>"SparkOnDemandPatchEntry-NerfIt1"</key><value>"GD_Mercenary_Streaming,GD_Mercenary_Skills.ActionSkill.Skill_Gunzerking,SkillEffectDefinitions[5].BaseModifierValue.BaseValueConstant,,0.5"</value><on>
+
+                    #<hotfix><key>"SparkOnDemandPatchEntry-NerfIt2"</key><value>"GD_Mercenary_Streaming,GD_Mercenary_Skills.ActionSkill.Skill_Gunzerking,SkillEffectDefinitions[6].BaseModifierValue.BaseValueConstant,,0.5"</value><on>
+
+                    #<hotfix><key>"SparkOnDemandPatchEntry-NerfIt3"</key><value>"GD_Mercenary_Streaming,GD_Mercenary_Skills.ActionSkill.Skill_Gunzerking,SkillEffectDefinitions[7].BaseModifierValue.BaseValueConstant,,0.5"</value><on>
+
+                    #<hotfix><key>"SparkOnDemandPatchEntry-NerfIt4"</key><value>"GD_Mercenary_Streaming,GD_Mercenary_Skills.ActionSkill.Skill_Gunzerking,SkillEffectDefinitions[8].BaseModifierValue.BaseValueConstant,,0.5"</value><on>
+
+                    #<hotfix><key>"SparkOnDemandPatchEntry-NerfIt5"</key><value>"GD_Mercenary_Streaming,GD_Mercenary_Skills.ActionSkill.Skill_Gunzerking,SkillEffectDefinitions[9].BaseModifierValue.BaseValueConstant,,0.5"</value><on>
+
+                #</Nerf nah>
+
+            #</Other>
+
         #</Spark keys>
 
     #</Core>
 
     #<Optional>
 
+        #<Bob Settings><MUT>
+
+            #<Standart>
+
+                #set WillowGame.SprintDefinition BobScalar 1.05<off>
+
+            #</Standart>
+
+            #<A bit reduced>
+
+                #set WillowGame.SprintDefinition BobScalar 0.85<off>
+
+            #</A bit reduced>
+
+            #<Reduced>
+
+                set WillowGame.SprintDefinition BobScalar 0.45
+
+            #</Reduced>
+
+            #<Hard to notice>
+
+                #set WillowGame.SprintDefinition BobScalar 0.22<off>
+
+            #</Hard to notice>
+
+            #<Disabled [Not recommended]>
+
+                #set WillowGame.SprintDefinition BobScalar 0<off>
+
+            #</Disabled [Not recommended]>
+
+        #</Bob Settings>
+
         #<Do you want Auto-Ammo Pickup?><MUT>
 
             #<No>
 
-                #set GD_Ammodrops.Pickups.AmmoDrop_Assault_Rifle_Bullets bAutomaticallyPickup False<off>
+                set GD_Ammodrops.Pickups.AmmoDrop_Assault_Rifle_Bullets bAutomaticallyPickup False
 
-                #set GD_Ammodrops.Pickups.AmmoDrop_Patrol_SMG_Clip bAutomaticallyPickup False<off>
+                set GD_Ammodrops.Pickups.AmmoDrop_Patrol_SMG_Clip bAutomaticallyPickup False
 
-                #set GD_Ammodrops.Pickups.AmmoDrop_Repeater_Pistol_Clip bAutomaticallyPickup False<off>
+                set GD_Ammodrops.Pickups.AmmoDrop_Repeater_Pistol_Clip bAutomaticallyPickup False
 
-                #set GD_Ammodrops.Pickups.AmmoDrop_Rocket_Launcher bAutomaticallyPickup False<off>
+                set GD_Ammodrops.Pickups.AmmoDrop_Rocket_Launcher bAutomaticallyPickup False
 
-                #set GD_Ammodrops.Pickups.AmmoDrop_Shotgun_Shells bAutomaticallyPickup False<off>
+                set GD_Ammodrops.Pickups.AmmoDrop_Shotgun_Shells bAutomaticallyPickup False
 
-                #set GD_Ammodrops.Pickups.AmmoDrop_Sniper_Rifle_Cartridges bAutomaticallyPickup False<off>
+                set GD_Ammodrops.Pickups.AmmoDrop_Sniper_Rifle_Cartridges bAutomaticallyPickup False
 
-                #set GD_Ammodrops.Pickups_BossOnly.AmmoDropBoss_Assault_Rifle_Bullets bAutomaticallyPickup False<off>
+                set GD_Ammodrops.Pickups_BossOnly.AmmoDropBoss_Assault_Rifle_Bullets bAutomaticallyPickup False
 
-                #set GD_Ammodrops.Pickups_BossOnly.AmmoDropBoss_Grenade_Protean bAutomaticallyPickup False<off>
+                set GD_Ammodrops.Pickups_BossOnly.AmmoDropBoss_Grenade_Protean bAutomaticallyPickup False
 
-                #set GD_Ammodrops.Pickups_BossOnly.AmmoDropBoss_Patrol_SMG_Clip bAutomaticallyPickup False<off>
+                set GD_Ammodrops.Pickups_BossOnly.AmmoDropBoss_Patrol_SMG_Clip bAutomaticallyPickup False
 
-                #set GD_Ammodrops.Pickups_BossOnly.AmmoDropBoss_Repeater_Pistol_Clip bAutomaticallyPickup False<off>
+                set GD_Ammodrops.Pickups_BossOnly.AmmoDropBoss_Repeater_Pistol_Clip bAutomaticallyPickup False
 
-                #set GD_Ammodrops.Pickups_BossOnly.AmmoDropBoss_Shotgun_Shells bAutomaticallyPickup False<off>
+                set GD_Ammodrops.Pickups_BossOnly.AmmoDropBoss_Shotgun_Shells bAutomaticallyPickup False
 
             #</No>
 
             #<Yes>
 
-                set GD_Ammodrops.Pickups.AmmoDrop_Assault_Rifle_Bullets bAutomaticallyPickup True 
+                #set GD_Ammodrops.Pickups.AmmoDrop_Assault_Rifle_Bullets bAutomaticallyPickup True<off>
 
-                set GD_Ammodrops.Pickups.AmmoDrop_Patrol_SMG_Clip bAutomaticallyPickup True 
+                #set GD_Ammodrops.Pickups.AmmoDrop_Patrol_SMG_Clip bAutomaticallyPickup True<off>
 
-                set GD_Ammodrops.Pickups.AmmoDrop_Repeater_Pistol_Clip bAutomaticallyPickup True 
+                #set GD_Ammodrops.Pickups.AmmoDrop_Repeater_Pistol_Clip bAutomaticallyPickup True<off>
 
-                set GD_Ammodrops.Pickups.AmmoDrop_Rocket_Launcher bAutomaticallyPickup True 
+                #set GD_Ammodrops.Pickups.AmmoDrop_Rocket_Launcher bAutomaticallyPickup True<off>
 
-                set GD_Ammodrops.Pickups.AmmoDrop_Shotgun_Shells bAutomaticallyPickup True 
+                #set GD_Ammodrops.Pickups.AmmoDrop_Shotgun_Shells bAutomaticallyPickup True<off>
 
-                set GD_Ammodrops.Pickups.AmmoDrop_Sniper_Rifle_Cartridges bAutomaticallyPickup True 
+                #set GD_Ammodrops.Pickups.AmmoDrop_Sniper_Rifle_Cartridges bAutomaticallyPickup True<off>
 
-                set GD_Ammodrops.Pickups_BossOnly.AmmoDropBoss_Assault_Rifle_Bullets bAutomaticallyPickup True 
+                #set GD_Ammodrops.Pickups_BossOnly.AmmoDropBoss_Assault_Rifle_Bullets bAutomaticallyPickup True<off>
 
-                set GD_Ammodrops.Pickups_BossOnly.AmmoDropBoss_Grenade_Protean bAutomaticallyPickup True 
+                #set GD_Ammodrops.Pickups_BossOnly.AmmoDropBoss_Grenade_Protean bAutomaticallyPickup True<off>
 
-                set GD_Ammodrops.Pickups_BossOnly.AmmoDropBoss_Patrol_SMG_Clip bAutomaticallyPickup True 
+                #set GD_Ammodrops.Pickups_BossOnly.AmmoDropBoss_Patrol_SMG_Clip bAutomaticallyPickup True<off>
 
-                set GD_Ammodrops.Pickups_BossOnly.AmmoDropBoss_Repeater_Pistol_Clip bAutomaticallyPickup True 
+                #set GD_Ammodrops.Pickups_BossOnly.AmmoDropBoss_Repeater_Pistol_Clip bAutomaticallyPickup True<off>
 
-                set GD_Ammodrops.Pickups_BossOnly.AmmoDropBoss_Shotgun_Shells bAutomaticallyPickup True
+                #set GD_Ammodrops.Pickups_BossOnly.AmmoDropBoss_Shotgun_Shells bAutomaticallyPickup True<off>
 
             #</Yes>
 
         #</Do you want Auto-Ammo Pickup?>
 
-        #<Buff Animation Speed? [+50%]><MUT>
+        #<Buff animation Speed? [+50%] [Expect glitches]><MUT>
 
             #<Yes>
 
@@ -1342,81 +1446,81 @@
 
             #<No>
 
-                set WillowGame.SpecialMove_Cringe playrate 1 
+                #set WillowGame.SpecialMove_Cringe playrate 1<off>
 
-                set WillowGame.SpecialMove_Motion playrate 1 
+                #set WillowGame.SpecialMove_Motion playrate 1<off>
 
-                set WillowGame.SpecialMove_Cloak playrate 1 
+                #set WillowGame.SpecialMove_Cloak playrate 1<off>
 
-                set WillowGame.SpecialMove_Dodge playrate 1 
+                #set WillowGame.SpecialMove_Dodge playrate 1<off>
 
-                set WillowGame.SpecialMove_Turn playrate 1 
+                #set WillowGame.SpecialMove_Turn playrate 1<off>
 
-                set WillowGame.SpecialMove_Perch playrate 1 
+                #set WillowGame.SpecialMove_Perch playrate 1<off>
 
-                set WillowGame.SpecialMove_PerchLoop playrate 1 
+                #set WillowGame.SpecialMove_PerchLoop playrate 1<off>
 
-                set WillowGame.SpecialMove_PerchRandomLoop playrate 1 
+                #set WillowGame.SpecialMove_PerchRandomLoop playrate 1<off>
 
-                set WillowGame.SpecialMove_Spawned playrate 1 
+                #set WillowGame.SpecialMove_Spawned playrate 1<off>
 
-                set WillowGame.SpecialMove_Vehicle playrate 1 
+                #set WillowGame.SpecialMove_Vehicle playrate 1<off>
 
-                set WillowGame.WillowAnimDefinition playrate 1
+                #set WillowGame.WillowAnimDefinition playrate 1<off>
 
             #</No>
 
-        #</Buff Animation Speed? [+50%]>
+        #</Buff animation Speed? [+50%] [Expect glitches]>
 
         #<Enable weapon 'sway effect'?><MUT>
 
             #<Yes>
 
-                #<hotfix><key>"SparkOnDemandPatchEntry-Sway1"</key><value>"GD_Tulip_Mechro_Streaming,GD_Tulip_Mechro_Streaming.Pawn_Mechromancer,BobBaseValue,,0.015000"</value><off>
+                #<hotfix><key>"SparkOnDemandPatchEntry-Sway1"</key><value>"GD_Tulip_Mechro_Streaming,GD_Tulip_Mechro_Streaming.Pawn_Mechromancer,BobBaseValue,,0.015000"</value><on>
 
-                #<hotfix><key>"SparkOnDemandPatchEntry-Sway2"</key><value>"GD_Tulip_Mechro_Streaming,GD_Tulip_Mechro_Streaming.Pawn_Mechromancer,Bob,,0.015000"</value><off>
+                #<hotfix><key>"SparkOnDemandPatchEntry-Sway2"</key><value>"GD_Tulip_Mechro_Streaming,GD_Tulip_Mechro_Streaming.Pawn_Mechromancer,Bob,,0.015000"</value><on>
 
-                #<hotfix><key>"SparkOnDemandPatchEntry-Sway3"</key><value>"GD_Tulip_Mechro_Streaming,GD_Tulip_Mechro_Streaming.Pawn_Mechromancer,bWeaponBob,,True"</value><off>
+                #<hotfix><key>"SparkOnDemandPatchEntry-Sway3"</key><value>"GD_Tulip_Mechro_Streaming,GD_Tulip_Mechro_Streaming.Pawn_Mechromancer,bWeaponBob,,True"</value><on>
 
-                #<hotfix><key>"SparkOnDemandPatchEntry-Sway4"</key><value>"GD_Siren_Streaming,GD_Siren_Streaming.Pawn_Siren,BobBaseValue,,0.015000"</value><off>
+                #<hotfix><key>"SparkOnDemandPatchEntry-Sway4"</key><value>"GD_Siren_Streaming,GD_Siren_Streaming.Pawn_Siren,BobBaseValue,,0.015000"</value><on>
 
-                #<hotfix><key>"SparkOnDemandPatchEntry-Sway5"</key><value>"GD_Siren_Streaming,GD_Siren_Streaming.Pawn_Siren,Bob,,0.015000"</value><off>
+                #<hotfix><key>"SparkOnDemandPatchEntry-Sway5"</key><value>"GD_Siren_Streaming,GD_Siren_Streaming.Pawn_Siren,Bob,,0.015000"</value><on>
 
-                #<hotfix><key>"SparkOnDemandPatchEntry-Sway6"</key><value>"GD_Siren_Streaming,GD_Siren_Streaming.Pawn_Siren,bWeaponBob,,True"</value><off>
+                #<hotfix><key>"SparkOnDemandPatchEntry-Sway6"</key><value>"GD_Siren_Streaming,GD_Siren_Streaming.Pawn_Siren,bWeaponBob,,True"</value><on>
 
-                #<hotfix><key>"SparkOnDemandPatchEntry-Sway7"</key><value>"GD_Mercenary_Streaming,GD_Mercenary_Streaming.Pawn_Mercenary,BobBaseValue,,0.015000"</value><off>
+                #<hotfix><key>"SparkOnDemandPatchEntry-Sway7"</key><value>"GD_Mercenary_Streaming,GD_Mercenary_Streaming.Pawn_Mercenary,BobBaseValue,,0.015000"</value><on>
 
-                #<hotfix><key>"SparkOnDemandPatchEntry-Sway8"</key><value>"GD_Mercenary_Streaming,GD_Mercenary_Streaming.Pawn_Mercenary,Bob,,0.015000"</value><off>
+                #<hotfix><key>"SparkOnDemandPatchEntry-Sway8"</key><value>"GD_Mercenary_Streaming,GD_Mercenary_Streaming.Pawn_Mercenary,Bob,,0.015000"</value><on>
 
-                #<hotfix><key>"SparkOnDemandPatchEntry-Sway9"</key><value>"GD_Mercenary_Streaming,GD_Mercenary_Streaming.Pawn_Mercenary,bWeaponBob,,True"</value><off>
+                #<hotfix><key>"SparkOnDemandPatchEntry-Sway9"</key><value>"GD_Mercenary_Streaming,GD_Mercenary_Streaming.Pawn_Mercenary,bWeaponBob,,True"</value><on>
 
-                #<hotfix><key>"SparkOnDemandPatchEntry-Sway10"</key><value>"GD_Lilac_Psycho_Streaming,GD_Lilac_Psycho_Streaming.Pawn_LilacPlayerClass,BobBaseValue,,0.015000"</value><off>
+                #<hotfix><key>"SparkOnDemandPatchEntry-Sway10"</key><value>"GD_Lilac_Psycho_Streaming,GD_Lilac_Psycho_Streaming.Pawn_LilacPlayerClass,BobBaseValue,,0.015000"</value><on>
 
-                #<hotfix><key>"SparkOnDemandPatchEntry-Sway11"</key><value>"GD_Lilac_Psycho_Streaming,GD_Lilac_Psycho_Streaming.Pawn_LilacPlayerClass,Bob,,0.015000"</value><off>
+                #<hotfix><key>"SparkOnDemandPatchEntry-Sway11"</key><value>"GD_Lilac_Psycho_Streaming,GD_Lilac_Psycho_Streaming.Pawn_LilacPlayerClass,Bob,,0.015000"</value><on>
 
-                #<hotfix><key>"SparkOnDemandPatchEntry-Sway12"</key><value>"GD_Lilac_Psycho_Streaming,GD_Lilac_Psycho_Streaming.Pawn_LilacPlayerClass,bWeaponBob,,True"</value><off>
+                #<hotfix><key>"SparkOnDemandPatchEntry-Sway12"</key><value>"GD_Lilac_Psycho_Streaming,GD_Lilac_Psycho_Streaming.Pawn_LilacPlayerClass,bWeaponBob,,True"</value><on>
 
-                #<hotfix><key>"SparkOnDemandPatchEntry-Sway13"</key><value>"GD_Assassin_Streaming,GD_Assassin_Streaming.Pawn_Assassin,BobBaseValue,,0.015000"</value><off>
+                #<hotfix><key>"SparkOnDemandPatchEntry-Sway13"</key><value>"GD_Assassin_Streaming,GD_Assassin_Streaming.Pawn_Assassin,BobBaseValue,,0.015000"</value><on>
 
-                #<hotfix><key>"SparkOnDemandPatchEntry-Sway14"</key><value>"GD_Assassin_Streaming,GD_Assassin_Streaming.Pawn_Assassin,Bob,,0.015000"</value><off>
+                #<hotfix><key>"SparkOnDemandPatchEntry-Sway14"</key><value>"GD_Assassin_Streaming,GD_Assassin_Streaming.Pawn_Assassin,Bob,,0.015000"</value><on>
 
-                #<hotfix><key>"SparkOnDemandPatchEntry-Sway15"</key><value>"GD_Assassin_Streaming,GD_Assassin_Streaming.Pawn_Assassin,bWeaponBob,,True"</value><off>
+                #<hotfix><key>"SparkOnDemandPatchEntry-Sway15"</key><value>"GD_Assassin_Streaming,GD_Assassin_Streaming.Pawn_Assassin,bWeaponBob,,True"</value><on>
 
-                #<hotfix><key>"SparkOnDemandPatchEntry-Sway16"</key><value>"GD_Soldier_Streaming,GD_Soldier_Streaming.Pawn_Soldier,WalkBob,,(X=0.000000,Y=0.000000,Z=0.000000)"</value><off>
+                #<hotfix><key>"SparkOnDemandPatchEntry-Sway16"</key><value>"GD_Soldier_Streaming,GD_Soldier_Streaming.Pawn_Soldier,WalkBob,,(X=0.000000,Y=0.000000,Z=0.000000)"</value><on>
 
-                #<hotfix><key>"SparkOnDemandPatchEntry-Sway17"</key><value>"GD_Soldier_Streaming,GD_Soldier_Streaming.Pawn_Soldier,BobBaseValue,,0.015000"</value><off>
+                #<hotfix><key>"SparkOnDemandPatchEntry-Sway17"</key><value>"GD_Soldier_Streaming,GD_Soldier_Streaming.Pawn_Soldier,BobBaseValue,,0.015000"</value><on>
 
-                #<hotfix><key>"SparkOnDemandPatchEntry-Sway18"</key><value>"GD_Soldier_Streaming,GD_Soldier_Streaming.Pawn_Soldier,Bob,,0.015000"</value><off>
+                #<hotfix><key>"SparkOnDemandPatchEntry-Sway18"</key><value>"GD_Soldier_Streaming,GD_Soldier_Streaming.Pawn_Soldier,Bob,,0.015000"</value><on>
 
-                #<hotfix><key>"SparkOnDemandPatchEntry-Sway19"</key><value>"GD_Soldier_Streaming,GD_Soldier_Streaming.Pawn_Soldier,bWeaponBob,,True"</value><off>
+                #<hotfix><key>"SparkOnDemandPatchEntry-Sway19"</key><value>"GD_Soldier_Streaming,GD_Soldier_Streaming.Pawn_Soldier,bWeaponBob,,True"</value><on>
 
             #</Yes>
 
-            #<No>
+            #<No [Not recommended]>
 
-                Lmao empty
+                #Lmao empty<off>
 
-            #</No>
+            #</No [Not recommended]>
 
         #</Enable weapon 'sway effect'?>
 
@@ -1424,7 +1528,7 @@
 
 #</Combat Plus>
 
-set Transient.SparkServiceConfiguration_6 Keys ("SparkLevelPatchEntry-Hyperion1","SparkOnDemandPatchEntry-Tests1","SparkOnDemandPatchEntry-Tests2","SparkOnDemandPatchEntry-Tests3","SparkOnDemandPatchEntry-Tests4","SparkOnDemandPatchEntry-Tests5","SparkOnDemandPatchEntry-Tests6","SparkLevelPatchEntry-Overrided1","SparkLevelPatchEntry-Overrided2","SparkLevelPatchEntry-Overrided3","SparkLevelPatchEntry-Overrided4","SparkLevelPatchEntry-Overrided5","SparkLevelPatchEntry-Overrided6","SparkLevelPatchEntry-Overrided7","SparkLevelPatchEntry-Overrided8","SparkLevelPatchEntry-Overrided9","SparkLevelPatchEntry-Overrided10")
+set Transient.SparkServiceConfiguration_6 Keys ("SparkLevelPatchEntry-Hyperion1","SparkOnDemandPatchEntry-Tests1","SparkOnDemandPatchEntry-Tests2","SparkOnDemandPatchEntry-Tests3","SparkOnDemandPatchEntry-Tests4","SparkOnDemandPatchEntry-Tests5","SparkOnDemandPatchEntry-Tests6","SparkLevelPatchEntry-Overrided1","SparkLevelPatchEntry-Overrided2","SparkLevelPatchEntry-Overrided3","SparkLevelPatchEntry-Overrided4","SparkLevelPatchEntry-Overrided5","SparkLevelPatchEntry-Overrided6","SparkLevelPatchEntry-Overrided7","SparkLevelPatchEntry-Overrided8","SparkLevelPatchEntry-Overrided9","SparkLevelPatchEntry-Overrided10","SparkLevelPatchEntry-ReloadAnim1","SparkOnDemandPatchEntry-NerfIt1","SparkOnDemandPatchEntry-NerfIt2","SparkOnDemandPatchEntry-NerfIt3","SparkOnDemandPatchEntry-NerfIt4","SparkOnDemandPatchEntry-NerfIt5","SparkOnDemandPatchEntry-Sway1","SparkOnDemandPatchEntry-Sway2","SparkOnDemandPatchEntry-Sway3","SparkOnDemandPatchEntry-Sway4","SparkOnDemandPatchEntry-Sway5","SparkOnDemandPatchEntry-Sway6","SparkOnDemandPatchEntry-Sway7","SparkOnDemandPatchEntry-Sway8","SparkOnDemandPatchEntry-Sway9","SparkOnDemandPatchEntry-Sway10","SparkOnDemandPatchEntry-Sway11","SparkOnDemandPatchEntry-Sway12","SparkOnDemandPatchEntry-Sway13","SparkOnDemandPatchEntry-Sway14","SparkOnDemandPatchEntry-Sway15","SparkOnDemandPatchEntry-Sway16","SparkOnDemandPatchEntry-Sway17","SparkOnDemandPatchEntry-Sway18","SparkOnDemandPatchEntry-Sway19")
 
-set Transient.SparkServiceConfiguration_6 Values (",GD_Weap_SniperRifles.A_Weapons.WeaponType_Hyperion_Sniper,ExternalAttributeEffects[3].BaseModifierValue.BaseValueConstant,,17.45","GD_Soldier_Streaming,GD_Soldier.Character.CharClass_Soldier,SprintingPct,,1.75","GD_Assassin_Streaming,GD_Assassin.Character.CharClass_Assassin,SprintingPct,,1.75","GD_Lilac_Psycho_Streaming,GD_Lilac_PlayerClass.Character.CharClass_LilacPlayerClass,SprintingPct,,1.65","GD_Mercenary_Streaming,GD_Mercenary.Character.CharClass_Mercenary,SprintingPct,,1.75","GD_Siren_Streaming,GD_Siren.Character.CharClass_Siren,SprintingPct,,1.75","GD_Tulip_Mechro_Streaming,GD_Tulip_Mechromancer.Character.CharClass_Mechromancer,SprintingPct,,1.75",",GD_Ammodrops.Pickups.AmmoDrop_Sniper_Rifle_Cartridges,bAutomaticallyPickup,,False",",GD_Ammodrops.Shop.AmmoShop_Assault_Rifle_Bullets,bAutomaticallyPickup,,False",",GD_Ammodrops.Shop.AmmoShop_Patrol_SMG_Clip,bAutomaticallyPickup,,False",",GD_Ammodrops.Shop.AmmoShop_Repeater_Pistol_Clip,bAutomaticallyPickup,,False",",GD_Ammodrops.Shop.AmmoShop_Rocket_Launcher,bAutomaticallyPickup,,False",",GD_Ammodrops.Shop.AmmoShop_Rocket_Launcher,ExternalAttributeEffects,,((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Rocket_Launcher.Ammo_Rocket_Launcher_CurrentValue',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=InventoryAttributeDefinition'GD_Ammodrops.AmmoPickup_Amounts.AmmoAmountShop_Launcher',InitializationDefinition=None,BaseValueScaleConstant=0.500000))",",GD_Ammodrops.Shop.AmmoShop_Shotgun_Shells,bAutomaticallyPickup,,False",",GD_Ammodrops.Shop.AmmoShop_Shotgun_Shells,ExternalAttributeEffects,,((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Combat_Shotgun.Ammo_Combat_Shotgun_CurrentValue',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=InventoryAttributeDefinition'GD_Ammodrops.AmmoPickup_Amounts.AmmoAmountShop_Shotgun',InitializationDefinition=None,BaseValueScaleConstant=0.400000))",",GD_Ammodrops.Pickups.AmmoDrop_Sniper_Rifle_Cartridges,ExternalAttributeEffects,,((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Sniper_Rifle.Ammo_Sniper_Rifle_CurrentValue',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Ammodrops.AttributeInitialization.Init_AmmoAmountShared_SniperRifle',BaseValueScaleConstant=0.400000))",",GD_Ammodrops.Shop.AmmoShop_Repeater_Pistol_Clip,ExternalAttributeEffects,,((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Repeater_Pistol.Ammo_Repeater_Pistol_CurrentValue',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=InventoryAttributeDefinition'GD_Ammodrops.AmmoPickup_Amounts.AmmoAmountShop_Repeater',InitializationDefinition=None,BaseValueScaleConstant=0.200000))")
+set Transient.SparkServiceConfiguration_6 Values (",GD_Weap_SniperRifles.A_Weapons.WeaponType_Hyperion_Sniper,ExternalAttributeEffects[3].BaseModifierValue.BaseValueConstant,,17.45","GD_Soldier_Streaming,GD_Soldier.Character.CharClass_Soldier,SprintingPct,,1.75","GD_Assassin_Streaming,GD_Assassin.Character.CharClass_Assassin,SprintingPct,,1.75","GD_Lilac_Psycho_Streaming,GD_Lilac_PlayerClass.Character.CharClass_LilacPlayerClass,SprintingPct,,1.65","GD_Mercenary_Streaming,GD_Mercenary.Character.CharClass_Mercenary,SprintingPct,,1.75","GD_Siren_Streaming,GD_Siren.Character.CharClass_Siren,SprintingPct,,1.75","GD_Tulip_Mechro_Streaming,GD_Tulip_Mechromancer.Character.CharClass_Mechromancer,SprintingPct,,1.75",",GD_Ammodrops.Pickups.AmmoDrop_Sniper_Rifle_Cartridges,bAutomaticallyPickup,,False",",GD_Ammodrops.Shop.AmmoShop_Assault_Rifle_Bullets,bAutomaticallyPickup,,False",",GD_Ammodrops.Shop.AmmoShop_Patrol_SMG_Clip,bAutomaticallyPickup,,False",",GD_Ammodrops.Shop.AmmoShop_Repeater_Pistol_Clip,bAutomaticallyPickup,,False",",GD_Ammodrops.Shop.AmmoShop_Rocket_Launcher,bAutomaticallyPickup,,False",",GD_Ammodrops.Shop.AmmoShop_Rocket_Launcher,ExternalAttributeEffects,,((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Rocket_Launcher.Ammo_Rocket_Launcher_CurrentValue',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=InventoryAttributeDefinition'GD_Ammodrops.AmmoPickup_Amounts.AmmoAmountShop_Launcher',InitializationDefinition=None,BaseValueScaleConstant=0.500000))",",GD_Ammodrops.Shop.AmmoShop_Shotgun_Shells,bAutomaticallyPickup,,False",",GD_Ammodrops.Shop.AmmoShop_Shotgun_Shells,ExternalAttributeEffects,,((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Combat_Shotgun.Ammo_Combat_Shotgun_CurrentValue',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=InventoryAttributeDefinition'GD_Ammodrops.AmmoPickup_Amounts.AmmoAmountShop_Shotgun',InitializationDefinition=None,BaseValueScaleConstant=0.400000))",",GD_Ammodrops.Pickups.AmmoDrop_Sniper_Rifle_Cartridges,ExternalAttributeEffects,,((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Sniper_Rifle.Ammo_Sniper_Rifle_CurrentValue',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Ammodrops.AttributeInitialization.Init_AmmoAmountShared_SniperRifle',BaseValueScaleConstant=0.400000))",",GD_Ammodrops.Shop.AmmoShop_Repeater_Pistol_Clip,ExternalAttributeEffects,,((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AmmoResource_Repeater_Pistol.Ammo_Repeater_Pistol_CurrentValue',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=InventoryAttributeDefinition'GD_Ammodrops.AmmoPickup_Amounts.AmmoAmountShop_Repeater',InitializationDefinition=None,BaseValueScaleConstant=0.200000))",",GD_PlayerShared.WeaponHolds1st.WeaponHold_Player_Pistol,WeaponActions,,((Posture=BWAP_All,Actions=((Action=BWA_FireRecoil,Expression=None,Animations=((Expression=ExpressionTree'GD_PlayerShared.WeaponHolds1st.WeaponHold_Player_Pistol:ExpressionTree_2',SpecialMove=SpecialMove_FirstPerson'GD_PlayerShared.Anims1st.WeaponAnim_Fire_Revolver_Recoil'),(Expression=ExpressionTree'GD_PlayerShared.WeaponHolds1st.WeaponHold_Player_Pistol:ExpressionTree_3',SpecialMove=SpecialMove_FirstPerson'GD_PlayerShared.Anims1st.WeaponAnim_Fire_Revolver_Recoil'))),(Action=BWA_Reload,Expression=ExpressionTree'GD_PlayerShared.WeaponHolds1st.WeaponHold_Player_Pistol:ExpressionTree_0',Animations=((Expression=AttributeExpressionEvaluator'GD_PlayerShared.WeaponHolds1st.WeaponHold_Player_Pistol:AttributeExpressionEvaluator_20',SpecialMove=SpecialMove_FirstPerson'GD_PlayerShared.Anims1st.WeaponAnim_Reload_Jakobs_Var2'),(Expression=AttributeExpressionEvaluator'GD_PlayerShared.WeaponHolds1st.WeaponHold_Player_Pistol:AttributeExpressionEvaluator_21',SpecialMove=SpecialMove_FirstPerson'GD_PlayerShared.Anims1st.WeaponAnim_Reload_Jakobs_Fast_Var2'))))))","GD_Mercenary_Streaming,GD_Mercenary_Skills.ActionSkill.Skill_Gunzerking,SkillEffectDefinitions[5].BaseModifierValue.BaseValueConstant,,0.5","GD_Mercenary_Streaming,GD_Mercenary_Skills.ActionSkill.Skill_Gunzerking,SkillEffectDefinitions[6].BaseModifierValue.BaseValueConstant,,0.5","GD_Mercenary_Streaming,GD_Mercenary_Skills.ActionSkill.Skill_Gunzerking,SkillEffectDefinitions[7].BaseModifierValue.BaseValueConstant,,0.5","GD_Mercenary_Streaming,GD_Mercenary_Skills.ActionSkill.Skill_Gunzerking,SkillEffectDefinitions[8].BaseModifierValue.BaseValueConstant,,0.5","GD_Mercenary_Streaming,GD_Mercenary_Skills.ActionSkill.Skill_Gunzerking,SkillEffectDefinitions[9].BaseModifierValue.BaseValueConstant,,0.5","GD_Tulip_Mechro_Streaming,GD_Tulip_Mechro_Streaming.Pawn_Mechromancer,BobBaseValue,,0.015000","GD_Tulip_Mechro_Streaming,GD_Tulip_Mechro_Streaming.Pawn_Mechromancer,Bob,,0.015000","GD_Tulip_Mechro_Streaming,GD_Tulip_Mechro_Streaming.Pawn_Mechromancer,bWeaponBob,,True","GD_Siren_Streaming,GD_Siren_Streaming.Pawn_Siren,BobBaseValue,,0.015000","GD_Siren_Streaming,GD_Siren_Streaming.Pawn_Siren,Bob,,0.015000","GD_Siren_Streaming,GD_Siren_Streaming.Pawn_Siren,bWeaponBob,,True","GD_Mercenary_Streaming,GD_Mercenary_Streaming.Pawn_Mercenary,BobBaseValue,,0.015000","GD_Mercenary_Streaming,GD_Mercenary_Streaming.Pawn_Mercenary,Bob,,0.015000","GD_Mercenary_Streaming,GD_Mercenary_Streaming.Pawn_Mercenary,bWeaponBob,,True","GD_Lilac_Psycho_Streaming,GD_Lilac_Psycho_Streaming.Pawn_LilacPlayerClass,BobBaseValue,,0.015000","GD_Lilac_Psycho_Streaming,GD_Lilac_Psycho_Streaming.Pawn_LilacPlayerClass,Bob,,0.015000","GD_Lilac_Psycho_Streaming,GD_Lilac_Psycho_Streaming.Pawn_LilacPlayerClass,bWeaponBob,,True","GD_Assassin_Streaming,GD_Assassin_Streaming.Pawn_Assassin,BobBaseValue,,0.015000","GD_Assassin_Streaming,GD_Assassin_Streaming.Pawn_Assassin,Bob,,0.015000","GD_Assassin_Streaming,GD_Assassin_Streaming.Pawn_Assassin,bWeaponBob,,True","GD_Soldier_Streaming,GD_Soldier_Streaming.Pawn_Soldier,WalkBob,,(X=0.000000,Y=0.000000,Z=0.000000)","GD_Soldier_Streaming,GD_Soldier_Streaming.Pawn_Soldier,BobBaseValue,,0.015000","GD_Soldier_Streaming,GD_Soldier_Streaming.Pawn_Soldier,Bob,,0.015000","GD_Soldier_Streaming,GD_Soldier_Streaming.Pawn_Soldier,bWeaponBob,,True")
 

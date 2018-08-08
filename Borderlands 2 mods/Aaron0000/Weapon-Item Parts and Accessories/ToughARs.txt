@@ -1,0 +1,55 @@
+<BLCMM v="1">
+#<!!!You opened a file saved with BLCMM in FilterTool. Please update to BLCMM to properly open this file!!!>
+	<head>
+		<type name="BL2" offline="false"/>
+		<profiles>
+			<profile name="default" current="true"/>
+		</profiles>
+	</head>
+	<body>
+		<category name="Defense-Boosting Assault Rifle Accessory">
+			<category name="Description">
+				<comment>By Aaron0000</comment>
+				<comment>Replaces the foregrip accessory of Assault Rifles. Changes it to boost damage resistance (35%) instead of recoil reduction.</comment>
+				<comment>Comes with custom prefixes: Jakobs = Hearty, Dahl = Hardened, Torgue = Meaty, Bandit = tuf stuf, Vladof = Resilient.</comment>
+				<comment>Atlas Reborn also has an optional prefix located at the bottom. Activate this file after Atlas Reborn to enable the prefix properly.</comment>
+				<comment>Credit to "JOE!" for adding the little snippet in the cards saying it boosts defense.</comment>
+			</category>
+			<category name="Code">
+				<code profiles="default">set GD_Weap_AssaultRifle.Accessory.AR_Accessory_Foregrip_Stability ExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.DamageTypeModifers.IncendiaryImpactDamageModifier',ConstraintAttribute=None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-0.350000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.DamageTypeModifers.ShockImpactDamageModifier',ConstraintAttribute=None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-0.350000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.DamageTypeModifers.CorrosiveImpactDamageModifier',ConstraintAttribute=None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-0.350000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.DamageTypeModifers.ExplosiveImpactDamageModifier',ConstraintAttribute=None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-0.350000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.DamageTypeModifers.AmpImpactDamageModifier',ConstraintAttribute=None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-0.350000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.DamageTypeModifers.NormalImpactDamageModifier',ConstraintAttribute=None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-0.350000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))</code>
+				<code profiles="default">set GD_Weap_AssaultRifle.Accessory.AR_Accessory_Foregrip_Stability AttributeSlotUpgrades ((SlotName="WeaponAccuracyImpulse",GradeIncrease=0,bActivateSlot=True),(SlotName="AccuracyRegen",GradeIncrease=0,bActivateSlot=True))</code>
+				<code profiles="default">set GD_Weap_AssaultRifle.Name.Prefix_Bandit.Prefix_Foregrip_Stability PartName tuf stuf</code>
+				<code profiles="default">set GD_Weap_AssaultRifle.Name.Prefix_Dahl.Prefix_Foregrip_Stability PartName Hardened</code>
+				<code profiles="default">set GD_Weap_AssaultRifle.Name.Prefix_Torgue.Prefix_Foregrip_Stability PartName Meaty</code>
+				<code profiles="default">set GD_Weap_AssaultRifle.Name.Prefix_Jakobs.Prefix_Foregrip_Stability PartName Hearty</code>
+				<code profiles="default">set GD_Weap_AssaultRifle.Name.Prefix_Vladof.Prefix_Foregrip_Stability PartName Resilient</code>
+				<category name="Atlas Prefix:">
+					<code profiles="">set GD_Weap_AssaultRifle.Name.Prefix_Vladof.Prefix_Foregrip_Stability PartName Unassailable</code>
+				</category>
+				<category name="SnS Prefix:">
+					<code profiles="">set GD_Weap_AssaultRifle.Name.Prefix_Bandit.Prefix_Foregrip_Stability PartName Supermassive</code>
+				</category>
+				<category name="Prefixes">
+					<comment>Changes the AR foregrip accessory to state that damage resistance is increased.</comment>
+					<code profiles="default">set GD_Weap_AssaultRifle.Accessory.AR_Accessory_Foregrip_Stability:AttributePresentationDefinition_0 NoConstraintText Increases [skill]damage resistance[-skill] by [skill]35%[-skill]</code>
+					<comment>Alters the Stability text for SMG and Sniper to use the Pistol text, and thus the right stat.</comment>
+					<code profiles="default">set GD_Weap_SMG.Accessory.SMG_Accessory_Stock1_Stabilized CustomPresentations (AttributePresentationDefinition'GD_Weap_Pistol.Accessory.Pistol_Accessory_Stock_Stability:AttributePresentationDefinition_0')</code>
+					<code profiles="default">set GD_Weap_SniperRifles.Accessory.Sniper_Accessory_Foregrip_Stability CustomPresentations (AttributePresentationDefinition'GD_Weap_Pistol.Accessory.Pistol_Accessory_Stock_Stability:AttributePresentationDefinition_0')</code>
+				</category>
+			</category>
+		</category>
+	</body>
+</BLCMM>
+
+#Commands:
+set GD_Weap_AssaultRifle.Accessory.AR_Accessory_Foregrip_Stability ExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.DamageTypeModifers.IncendiaryImpactDamageModifier',ConstraintAttribute=None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-0.350000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.DamageTypeModifers.ShockImpactDamageModifier',ConstraintAttribute=None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-0.350000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.DamageTypeModifers.CorrosiveImpactDamageModifier',ConstraintAttribute=None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-0.350000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.DamageTypeModifers.ExplosiveImpactDamageModifier',ConstraintAttribute=None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-0.350000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.DamageTypeModifers.AmpImpactDamageModifier',ConstraintAttribute=None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-0.350000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.DamageTypeModifers.NormalImpactDamageModifier',ConstraintAttribute=None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-0.350000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+set GD_Weap_AssaultRifle.Accessory.AR_Accessory_Foregrip_Stability AttributeSlotUpgrades ((SlotName="WeaponAccuracyImpulse",GradeIncrease=0,bActivateSlot=True),(SlotName="AccuracyRegen",GradeIncrease=0,bActivateSlot=True))
+set GD_Weap_AssaultRifle.Name.Prefix_Bandit.Prefix_Foregrip_Stability PartName tuf stuf
+set GD_Weap_AssaultRifle.Name.Prefix_Dahl.Prefix_Foregrip_Stability PartName Hardened
+set GD_Weap_AssaultRifle.Name.Prefix_Torgue.Prefix_Foregrip_Stability PartName Meaty
+set GD_Weap_AssaultRifle.Name.Prefix_Jakobs.Prefix_Foregrip_Stability PartName Hearty
+set GD_Weap_AssaultRifle.Name.Prefix_Vladof.Prefix_Foregrip_Stability PartName Resilient
+set GD_Weap_AssaultRifle.Accessory.AR_Accessory_Foregrip_Stability:AttributePresentationDefinition_0 NoConstraintText Increases [skill]damage resistance[-skill] by [skill]35%[-skill]
+set GD_Weap_SMG.Accessory.SMG_Accessory_Stock1_Stabilized CustomPresentations (AttributePresentationDefinition'GD_Weap_Pistol.Accessory.Pistol_Accessory_Stock_Stability:AttributePresentationDefinition_0')
+set GD_Weap_SniperRifles.Accessory.Sniper_Accessory_Foregrip_Stability CustomPresentations (AttributePresentationDefinition'GD_Weap_Pistol.Accessory.Pistol_Accessory_Stock_Stability:AttributePresentationDefinition_0')
+

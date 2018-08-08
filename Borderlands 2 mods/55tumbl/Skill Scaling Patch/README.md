@@ -1,20 +1,28 @@
+*All files and content provided here were written by me (55tumbl), unless stated otherwise.*
+
+*- They are free for personal use. I do decline any responsability in case it blows up in your face somehow, or any other misuse.
+You may use these mods in videos, or for streaming, as long as you give me proper credit. I would appreciate you letting me know about it.*
+
+*- You may re-use small bits of code (e.g. formulas, behavior modifications, etc) for your own purposes as long as you give me proper credit, and let me know about it.
+Ask me for permission first if you wish to use larger portions of this code, make a modified/improved version, include it in a mod pack, etc.*
+
+*- Do not re-upload any of those files anywhere.*
+
 # Overview
 
-The Skill Scaling Patch fixes a number of bugs or inconsistencies about the way skills scale with level, and across playthroughs. It is not meant to "fix" the balance of the game according to my personnal preferences, but merely to make it work as was (most probably) intended. It does clearly improve some aspects of the balance, though. The skills that are the most affected are Ruin (Maya), Light the Fuse (Krieg), Deathtrap and all its damage abilities (Gaige), the Sabre Turret and all its damage abilities (Axton).
+The Skill Scaling Patch fixes a number of bugs or inconsistencies about the way skills scale with level, and across playthroughs. It is not meant to "fix" the balance of the game according to my personal preferences, but merely to make it work as was (most probably) intended. It does clearly improve some aspects of the balance, though. The skills that are the most affected are Ruin (Maya), Light the Fuse (Krieg), Deathtrap and all its damage abilities (Gaige), the Sabre Turret and all its damage abilities (Axton).
 
 Concerning Deathtrap and the Sabre Turret, the main problem addressed by this patch was actually not present on console. With the Skill Scaling Patch, their damage output should thus be identical (or close) to what it is on console. And that makes a huge difference on their end-game viability.
 
 # Compatibility
 
-The Skill Scaling Patch can be used as a standalone, for a vanilla experience with less bugs, and to meet Deathtrap and the Sabre Turret the way they were supposed to be (and actually are, on console). For that, use the SkillScalingPatch_SA.txt file, which includes the latest Gearbox hotfixes.
+The Skill Scaling Patch can be used as a standalone, for a vanilla experience with less bugs, and to meet Deathtrap and the Sabre Turret the way they were supposed to be (and actually are, on console).
 
-You can also try to merge it with other mods. However, this may create serious incompatibilities if the other mods affect the skills modified by the Skill Scaling Patch, or even skills in general. Notably, if you want to use it with the UCP: open the UCP with the FilterTool, add SkillScalingPatch.txt from the FilterTool menu (Developer Tools > Add single mod), and make sure to disable the following UCP changes in Buffs > Changes to Skills:
-* For Axton: Turret Buff, Double Up, Gemeni, Laser Sight, Nuke, PhalanxShield, Scorched Earth, Sentry
-* For Maya: Ruin, (Scorn optional)
-* For Gaige: Annoyed Android, Explosive Clap, Laser Stare, Make it Sparkle, One Two Boom, Robot Rampage, Sharing is Caring, (Made of Sterner stuff optional)
-* For Krieg: Light the Fuse
+The Skill Scaling Patch (v1.0) is included in the Unofficial Community Patch, as of version 4.1.
 
-# Detailed change log
+You can also try to merge it with other mods, using [BLCMM](https://www.youtube.com/watch?v=VkRgUqru3oU&t=27s). However, this may create serious incompatibilities if the other mods affect the skills modified by the Skill Scaling Patch, or even skills in general. I'd recommend adding the Skill Scaling Patch after other mods, and disabling any changes affecting the mentioned skills, in those other mods. 
+
+# Detailed changes
 
 You can find [here](http://blstats.com/skilldamage.php) all the damage values at different levels/playthroughs, on console and on PC/mac (with or without the Skill Scaling Patch).
 
@@ -30,6 +38,9 @@ You can find [here](http://blstats.com/skilldamage.php) all the damage values at
 
 **Scorn**: made to scale like other skills.   
 * Damage increase of +60% at level 30, +100% at level 50, +144% at 72, +160% at OP8
+
+**Immolate**: compensate for the double dip in damage penalty against higher level enemies in the OP levels (the special mechanics of this skill made it so that it was doing only about 20% damage versus a level 80 enemy, while other skills and weapons are doing 45% damage).   
+* No effect up to level 72. Damage increase in the OP levels, up to +122% at OP8.
 
 ## Krieg
 
@@ -54,6 +65,9 @@ You can find [here](http://blstats.com/skilldamage.php) all the damage values at
 
 **Deathtrap**: Fixed a bug that made the interaction between Make it Sparkle and Sharing is Caring (with a roid shield) completely broken.
 
+**Electrical Burn**: compensate for the double dip in damage penalty against higher level enemies in the OP levels (the special mechanics of this skill made it so that it was doing only about 20% damage versus a level 80 enemy, while other skills and weapons are doing 45% damage).   
+* No effect up to level 72. Damage increase in the OP levels, up to +122% at OP8.
+
 ## Axton
 **Sabre Turret**: Tried to make its damage scale the way it was supposed to (and actually does, on console). Unlike Deathtrap, I couldn't figure out a way to do it perfectly, so I got as close as I could. I'll update if I find a better solution.
 * This affects the damage of the bullets, the Scorched Earth Rockets, Nuke, and the capacity of the Phalanx Shield.
@@ -73,5 +87,8 @@ This was all written by me.
 Thanks to Koby for making me want to do something about it, and inviting me to Shadow's Evil Hideout Discord channel. And thanks to all the folks there who answered my questions and helped me get started.
 
 
+# Change log
 
-
+* [2018-07-31] v2.0: Added the Immolate & Electrical Burn fixes.
+* [2018-07-18] v1.1: Fixed a small issue with the calculation of the Phalanx Shield Capacity. Switched to BLCMM-compatible format.
+* [2018-06-24] v1.0.
