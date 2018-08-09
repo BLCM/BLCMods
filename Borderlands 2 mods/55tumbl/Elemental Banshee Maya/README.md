@@ -113,3 +113,7 @@ except for the modified visual effects on Ruin (credits & thanks to Koby).
 
 Thanks to the people who made this kind of modding possible and practical (Shadowevil, LightChaosMan, etc).    
 Thanks to Apocalyptech for his BPD graph generator, this thing is so damn useful.
+
+# Change log
+[2018-08-09] v1.1: Fixed an error in the calculation of reflected bullet damage for Kinetic Reflection. 
+[2018-08-05] v1.0.
