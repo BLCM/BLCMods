@@ -65,6 +65,8 @@ You can find [here](http://blstats.com/skilldamage.php) all the damage values at
 
 **Deathtrap**: Fixed a bug that made the interaction between Make it Sparkle and Sharing is Caring (with a roid shield) completely broken.
 
+**Deathtrap**: Made his ranged shock attack (used against flying and non-phaselockable targets) benefit from all his melee damage bonuses, including roid damage from Sharing is Caring, and Make it Sparkle. This makes his damage output more consistent against different types of enemies. The animation was modified so that the damage is spread over 2 damage ticks instead of 7 (per shock beam), but the overall damage should be exactly the same in absence of any melee damage bonuses.
+
 **Electrical Burn**: compensate for the double dip in damage penalty against higher level enemies in the OP levels (the special mechanics of this skill made it so that it was doing only about 20% damage versus a level 80 enemy, while other skills and weapons are doing 45% damage).   
 * No effect up to level 72. Damage increase in the OP levels, up to +122% at OP8.
 
@@ -89,6 +91,7 @@ Thanks to Koby for making me want to do something about it, and inviting me to S
 
 # Change log
 
+* [2018-08-09] v2.1: Added the modifications to Deathtrap's ranged shock attacks.
 * [2018-07-31] v2.0: Added the Immolate & Electrical Burn fixes.
 * [2018-07-18] v1.1: Fixed a small issue with the calculation of the Phalanx Shield Capacity. Switched to BLCMM-compatible format.
 * [2018-06-24] v1.0.
