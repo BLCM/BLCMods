@@ -1,6 +1,10 @@
 No Broken Chests Near Denial Subroutine
 =======================================
 
+**NOTE:** This mod is now included as a basic part of TPS UCP 2.2, so if
+you're using TPS UCP 2.2 or higher, there's no longer any reason to use
+this mod directly!  (It won't hurt anything to have both enabled, though.)
+
 The Denial Subroutine arena (in Cluster 99002 0V3RL00K) has six bandit
 "coolers" which don't actually work -- they open and spawn their items, but the
 items can't actually be picked up.  This mod changes them to be the round ammo

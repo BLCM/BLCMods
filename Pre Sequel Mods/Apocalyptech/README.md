@@ -45,6 +45,9 @@ pesky ads again!
 
 ### Guaranteed M0RQ, Cutie Killer, and Heartfull Splodger
 
+*(Included in TPS UCP 2.2 in the base patch - no need to use this one
+separately if you're already using TPS UCP 2.2!)*
+
 There are three chests hidden around in the Claptastic Voyage DLC which
 provide, respectively, the M0RQ shield, and the unique glitch weapons
 Cutie Killer and Heartfull Splodger.  These chests are intended to only
@@ -55,6 +58,9 @@ mod simply makes it so that those chests will always spawn in an
 openable state, so the player can always get that loot.
 
 ### Guaranteed Phonic
+
+*(Included as an optional selection in TPS UCP 2.2 - no need to use this
+one separately if you're already using TPS UCP 2.2!)*
 
 Guarantees the spawn of Phonic Kraggon (or Phuper Phonic Kraggon) in Serenity's
 Waste.
@@ -67,12 +73,18 @@ delete from your inventory, if it's started up without this mod enabled.
 
 ### No Broken Chests Near Denial Subroutine
 
+*(Included in TPS UCP 2.2 in the base patch - no need to use this one
+separately if you're already using TPS UCP 2.2!)*
+
 The Denial Subroutine arena (in Cluster 99002 0V3RL00K) has six bandit
 "coolers" which don't actually work -- they open and spawn their items, but the
 items can't actually be picked up.  This mod changes them to be the round ammo
 chests instead, so at least they work.
 
 ### No SpyBugs in The Cortex
+
+*(Included as an optional selection in TPS UCP 2.2 - no need to use this
+one separately if you're already using TPS UCP 2.2!)*
 
 SpyBugs are ordinarily minor annoyances at worst.  When they spawn during a
 Mutator arena match in The Cortex, though, they can become quite annoying,
@@ -150,12 +162,18 @@ some levels like there's no tomorrow, this is for you.
 
 ### TPS No Wasted COMs
 
+*(Included as an optional selection in TPS UCP 2.2 - no need to use this
+one separately if you're already using TPS UCP 2.2!)*
+
 This mod changes the Class Mod drop pools such that the only COMs which drop
 are for characters who are actually playing the game.  For a singleplayer
 game, that means you'll only ever get COMs for your one character, for
 instance.
 
 ### TPS Skinpool Reassignments
+
+*(Included in TPS UCP 2.2 in the base patch - no need to use this one
+separately if you're already using TPS UCP 2.2!)*
 
 This mod serves the same purpose as BL2 UCP's "`Loot Pool & Drop Changes ->
 Skinpool Fixes (Don't uncheck this)`" section, but for TPS.  Specifically, it

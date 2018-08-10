@@ -1,6 +1,10 @@
 Guaranteed M0RQ, Cutie Killer, and Heartfull Splodger
 =====================================================
 
+**NOTE:** This mod is now included as a basic part of TPS UCP 2.2, so if
+you're using TPS UCP 2.2 or higher, there's no longer any reason to use
+this mod directly!  (It won't hurt anything to have both enabled, though.)
+
 There are three chests hidden around in the Claptastic Voyage DLC which
 provide, respectively, the M0RQ shield, and the unique glitch weapons
 Cutie Killer and Heartfull Splodger.  These chests are intended to only
