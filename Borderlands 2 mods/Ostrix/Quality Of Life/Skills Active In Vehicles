@@ -1,0 +1,26 @@
+<BLCMM v="1">
+#<!!!You opened a file saved with BLCMM in FilterTool. Please update to BLCMM to properly open this file!!!>
+	<head>
+		<type name="BL2" offline="false"/>
+	</head>
+	<body>
+		<category name="Skills Active In Vehicles">
+			<category name="Description">
+				<comment>This mod simply makes skills (including Action Skills) function while you're in a vehicle,</comment>
+				<comment>therefore rendering the SkillConstraints that every skill shares redundant.</comment>
+				<comment>But this way it requires much less code, and a much simpler, smaller mod.</comment>
+			</category>
+			<category name="Driver of Vehicle">
+				<code profiles="Solo">set GD_PlayerShared.SkillConstraints.SkillConstraint_OnFootOrRidingInBack:VehiclePassengerExpressionEvaluator_0 bDriver True</code>
+			</category>
+			<category name="Passenger of Vehicle">
+				<code profiles="Solo">set GD_PlayerShared.SkillConstraints.SkillConstraint_OnFootOrRidingInBack:VehiclePassengerExpressionEvaluator_0 bPassenger True</code>
+			</category>
+		</category>
+	</body>
+</BLCMM>
+
+#Commands:
+set GD_PlayerShared.SkillConstraints.SkillConstraint_OnFootOrRidingInBack:VehiclePassengerExpressionEvaluator_0 bDriver True
+set GD_PlayerShared.SkillConstraints.SkillConstraint_OnFootOrRidingInBack:VehiclePassengerExpressionEvaluator_0 bPassenger True
+
