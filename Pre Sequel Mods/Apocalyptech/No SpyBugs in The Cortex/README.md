@@ -1,6 +1,11 @@
 No SpyBugs in The Cortex
 ========================
 
+**NOTE:** This mod is now included as an optional selection in TPS UCP 2.2's
+"Optionals" category, so if you're using TPS UCP 2.2 or higher, there's no
+longer any need to use this mod directly!  (It won't hurt anything to have
+both enabled, though.)
+
 SpyBugs are ordinarily minor annoyances at worst.  When they spawn during a
 Mutator arena match in The Cortex, though, they can become quite annoying,
 since the arena won't continue until all enemies have been destroyed, and

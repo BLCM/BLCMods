@@ -1,9 +1,6 @@
-DISCLAIMER
-
-All of the assets used in my mods are written by me unless stated otherwise.
-
-You are NOT allowed to upload these files to other sites under any circumstances.
-
-You MUST get permission from me before you are allowed to modify my files to improve it.
-
-You MUST get permission from me before you are allowed to use any of the assets in this file.
+Koby's mods (including BL2 Reborn) have been discontinued.  Individual mods
+may reappear at Nexus or here at some point, but in the meantime DO NOT
+come into Shadow's Discord (or any other place, really) asking where the
+mods are, or where you can get the files, or even why they've been
+discontinued.  You will have to content yourself with just Not Using These
+Mods.
