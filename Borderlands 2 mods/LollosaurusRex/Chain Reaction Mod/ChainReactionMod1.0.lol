@@ -12,14 +12,15 @@
 			<comment>\____/\____/\____/\____/\____/</comment>
 			<category name="Description">
 				<comment>Chain Reaction Mod by Lollo</comment>
-				<comment>Changes the percentage chance to reflect per level of Chain Reaction. </comment>
+				<comment>Changes the percentage chance to reflect per point allocated in Chain Reaction. </comment>
 				<comment>Choices of: 8% (default), 9% (45% at 5/5, 99% at 11/5), 20% (100% at 5/5), and 100% (with a single point)</comment>
 				<comment>    Note: Values above 100% have no further effect.</comment>
 				<comment> </comment>
-				<comment>Mod made by me. Feel free to cannabalize it, but please DO NOT REHOST IT. :)</comment>
+				<comment>Mod made by me. Feel free to cannabalize it, but please DO NOT REHOST IT! </comment>
+				<comment>Thanks :)</comment>
 			</category>
 			<category name="Chance to Reflect" MUT="true">
-				<category name="Default (8% per level)">
+				<category name="Default (8% per point)">
 					<hotfix name="Chain Reaction Buff" package="GD_Siren_Streaming">
 						<code profiles="default">set GD_Siren_Skills.Cataclysm.ChainReaction SkillEffectDefinitions[0].AttributeToModify AttributeDefinition'D_Attributes.BulletReflection.BulletReflectionOffEnemyChance'</code>
 						<code profiles="default">set GD_Siren_Skills.Cataclysm.ChainReaction SkillEffectDefinitions[0].BaseModifierValue.BaseValueConstant 0.08</code>
@@ -28,7 +29,7 @@
 						<code profiles="default">set GD_Siren_Skills.Cataclysm.ChainReaction:AttributePresentationDefinition_0 Description Ricochet Chance: $NUMBER$</code>
 					</hotfix>
 				</category>
-				<category name="Slightly Buffed (9% per level)">
+				<category name="Slightly Buffed (9% per point)">
 					<hotfix name="Chain Reaction Buff" package="GD_Siren_Streaming">
 						<code profiles="">set GD_Siren_Skills.Cataclysm.ChainReaction SkillEffectDefinitions[0].AttributeToModify AttributeDefinition'D_Attributes.BulletReflection.BulletReflectionOffEnemyChance'</code>
 						<code profiles="">set GD_Siren_Skills.Cataclysm.ChainReaction SkillEffectDefinitions[0].BaseModifierValue.BaseValueConstant 0.09</code>
@@ -37,7 +38,7 @@
 						<code profiles="">set GD_Siren_Skills.Cataclysm.ChainReaction:AttributePresentationDefinition_0 Description Ricochet Chance: $NUMBER$</code>
 					</hotfix>
 				</category>
-				<category name="Pretty Heckin' Buffed (20% per level)">
+				<category name="Pretty Heckin' Buffed (20% per point)">
 					<hotfix name="Chain Reaction Buff" package="GD_Siren_Streaming">
 						<code profiles="">set GD_Siren_Skills.Cataclysm.ChainReaction SkillEffectDefinitions[0].AttributeToModify AttributeDefinition'D_Attributes.BulletReflection.BulletReflectionOffEnemyChance'</code>
 						<code profiles="">set GD_Siren_Skills.Cataclysm.ChainReaction SkillEffectDefinitions[0].BaseModifierValue.BaseValueConstant 0.20</code>
@@ -46,7 +47,7 @@
 						<code profiles="">set GD_Siren_Skills.Cataclysm.ChainReaction:AttributePresentationDefinition_0 Description Ricochet Chance: $NUMBER$</code>
 					</hotfix>
 				</category>
-				<category name="SUPER BUFFED (100% per level)">
+				<category name="SUPER BUFFED (100% per point)">
 					<hotfix name="Chain Reaction Buff" package="GD_Siren_Streaming">
 						<code profiles="">set GD_Siren_Skills.Cataclysm.ChainReaction SkillEffectDefinitions[0].AttributeToModify AttributeDefinition'D_Attributes.BulletReflection.BulletReflectionOffEnemyChance'</code>
 						<code profiles="">set GD_Siren_Skills.Cataclysm.ChainReaction SkillEffectDefinitions[0].BaseModifierValue.BaseValueConstant 1.00</code>
