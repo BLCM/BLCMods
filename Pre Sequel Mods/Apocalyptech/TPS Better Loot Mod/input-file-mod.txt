@@ -1,0 +1,3317 @@
+TPS
+#<{mod_name}>
+
+    # {mod_name} v{mod_version}
+    # by Apocalyptech
+    # Licensed under Public Domain / CC0 1.0 Universal
+    #
+    # All sorts of tweaks to loot in general, with the aim of basically making all
+    # the loot drops in the game "better".  In the default configuration, there is
+    # a very increased chance of blues/purples/glitch/legendary items across the
+    # board, slightly more Moonstone, and far better badass and boss drops.  Also
+    # basically all game items will be available as regular world drops, including
+    # uniques.  Glitch weapons are available outside the Claptastic Voyage DLC,
+    # though they're more common when in the DLC levels.
+    #
+    # The specifics of much of the mod, however, including drop quality, can be
+    # configured below.  Every section apart from "Base Mod Configuration" is
+    # intended to be user-configurable.
+
+    #<Base Mod Configuration>
+
+        # This category is mostly considered stuff you'll be unlikely to toggle on/off
+        # individually.  The categories which are intended to be user-settable are all below
+        # this one, starting with "Legendary Pool Improvements" and ending with
+        # the Common Pistol Chest Configuration section.
+        #   
+        # It's not really a "base" config -- at lot of the "meat" of the mod is in the
+        # user-selectable areas, but I was at a loss for a better name for it.
+
+        #<Base Early Game Unlocks><lock>
+
+            # To prevent the possibility of enemies spawning in the early game without any
+            # weapons, we're forcing a number of unlocks to happen right away.  In terms of
+            # unlocks, we'll always assume that the game's effectively running at level 8.
+
+            set GD_Itempools.Scheduling.Gamestage_02:ConstantAttributeValueResolver_0 ConstantValue 1
+
+            set GD_Itempools.Scheduling.Gamestage_03:ConstantAttributeValueResolver_0 ConstantValue 1
+
+            set GD_Itempools.Scheduling.Gamestage_04:ConstantAttributeValueResolver_0 ConstantValue 1
+
+            set GD_Itempools.Scheduling.Gamestage_05:ConstantAttributeValueResolver_0 ConstantValue 1
+
+            set GD_Itempools.Scheduling.Gamestage_06:ConstantAttributeValueResolver_0 ConstantValue 1
+
+            set GD_Itempools.Scheduling.Gamestage_07:ConstantAttributeValueResolver_0 ConstantValue 1
+
+            set GD_Itempools.Scheduling.Gamestage_08:ConstantAttributeValueResolver_0 ConstantValue 1
+
+        #</Base Early Game Unlocks>
+
+        #<Loot Pool Tweaks>
+
+            #<Normalize Gun Type Drops>
+
+                # In the vanilla game, pistols are the most likely drop, followed by
+                # ARs/SMGs/Shotguns, then snipers/lasers, and then launchers.  This
+                # normalizes the probabilities for Pistols/ARs/SMGs/Shotguns, and
+                # makes snipers, lasers, and launchers more likely (though still not
+                # as likely as the others)
+
+                {mp:normalize_weapon_types_Common_Pistol}
+
+                {mp:normalize_weapon_types_Uncommon_Pistol}
+
+                {mp:normalize_weapon_types_Rare_Pistol}
+
+                {mp:normalize_weapon_types_VeryRare_Pistol}
+
+                {mp:normalize_weapon_types_Legendary_Pistol}
+
+                {mp:normalize_weapon_types_Common_AR}
+
+                {mp:normalize_weapon_types_Uncommon_AR}
+
+                {mp:normalize_weapon_types_Rare_AR}
+
+                {mp:normalize_weapon_types_VeryRare_AR}
+
+                {mp:normalize_weapon_types_Legendary_AR}
+
+                {mp:normalize_weapon_types_Common_SMG}
+
+                {mp:normalize_weapon_types_Uncommon_SMG}
+
+                {mp:normalize_weapon_types_Rare_SMG}
+
+                {mp:normalize_weapon_types_VeryRare_SMG}
+
+                {mp:normalize_weapon_types_Legendary_SMG}
+
+                {mp:normalize_weapon_types_Common_Shotgun}
+
+                {mp:normalize_weapon_types_Uncommon_Shotgun}
+
+                {mp:normalize_weapon_types_Rare_Shotgun}
+
+                {mp:normalize_weapon_types_VeryRare_Shotgun}
+
+                {mp:normalize_weapon_types_Legendary_Shotgun}
+
+                {mp:normalize_weapon_types_Common_Sniper}
+
+                {mp:normalize_weapon_types_Uncommon_Sniper}
+
+                {mp:normalize_weapon_types_Rare_Sniper}
+
+                {mp:normalize_weapon_types_VeryRare_Sniper}
+
+                {mp:normalize_weapon_types_Legendary_Sniper}
+
+                {mp:normalize_weapon_types_Common_Launcher}
+
+                {mp:normalize_weapon_types_Uncommon_Launcher}
+
+                {mp:normalize_weapon_types_Rare_Launcher}
+
+                {mp:normalize_weapon_types_VeryRare_Launcher}
+
+                {mp:normalize_weapon_types_Legendary_Launcher}
+
+                {mp:normalize_weapon_types_Common_Laser}
+
+                {mp:normalize_weapon_types_Uncommon_Laser}
+
+                {mp:normalize_weapon_types_Rare_Laser}
+
+                {mp:normalize_weapon_types_VeryRare_Laser}
+
+                {mp:normalize_weapon_types_Legendary_Laser}
+
+            #</Normalize Gun Type Drops>
+
+            #<Luneshine Drops>
+
+                #<Enable Luneshine in World Drops (Duplicate of UCP)>
+
+                    # Enables Luneshine in world drops.  This section is a duplicate of the
+                    # UCP section which does the same thing.
+
+                    set GD_Weap_Accessories.Moonstone.Moonstone_Attachment_Boominator PartSubType WPS_Normal
+
+                    set GD_Weap_Accessories.Moonstone.Moonstone_Attachment_None PartSubType WPS_Normal
+
+                    set GD_Weap_Accessories.Moonstone.Moonstone_Attachment_Serenity PartSubType WPS_Normal
+
+                    set GD_Weap_Accessories.Moonstone.Moonstone_Attachment_FastLearner PartSubType WPS_Normal
+
+                    set GD_Weap_Accessories.Moonstone.Moonstone_Attachment_Punisher PartSubType WPS_Normal
+
+                    set GD_Weap_Accessories.Moonstone.Moonstone_Attachment_PiercingRounds PartSubType WPS_Normal
+
+                    set GD_Weap_Accessories.Moonstone.Moonstone_Attachment_Oxygenator PartSubType WPS_Normal
+
+                    set GD_Weap_Accessories.Moonstone.Moonstone_Attachment_Safeguard PartSubType WPS_Normal
+
+                    set GD_Weap_Accessories.Moonstone.Moonstone_Attachment_HardenUp PartSubType WPS_Normal
+
+                #</Enable Luneshine in World Drops (Duplicate of UCP)>
+
+                #<Guaranteed Luneshine for Legendaries and Uniques>
+
+                    # Guarantee that all legendaries + uniques which support Luneshine will
+                    # always spawn with Luneshine
+
+{guaranteed_luneshine}
+
+                #</Guaranteed Luneshine for Legendaries and Uniques>
+
+            #</Luneshine Drops>
+
+        #</Loot Pool Tweaks>
+
+        #<More Frequent Moonstone>
+
+            # Makes Moonstone drop a little more frequently
+
+            set GD_Itempools.DropWeights.DropODDS_Moonstone:ConstantAttributeValueResolver_1 ConstantValue {base:moonstone_drop}
+
+            set GD_Itempools.DropWeights.DropODDS_MoonstoneCluster:ConstantAttributeValueResolver_1 ConstantValue {base:moonstone_cluster_drop}
+
+        #</More Frequent Moonstone>
+
+        #<Better Containers>
+
+            # Improve the loot gained from various container types.  Note that the main
+            # treasure/epic chest pool tweaks happen in the "Drop Quality" section of the
+            # mod, below.
+
+            #<Better Moonstone Chests>
+
+                # Make Moonstone chests only drop legendaries.  If you're paying 40E you should
+                # be getting something for your trouble.
+
+                set GD_Itempools.Treasure_ChestPools.Pool_EpicChestMoonstone_Weapons_LongGuns BalancedItems
+                (
+                    ( 
+                        ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_AssaultRifles_06_Legendary', 
+                        InvBalanceDefinition=None, 
+                        Probability=( 
+                            BaseValueConstant=1.000000, 
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=None,
+                            BaseValueScaleConstant=1.000000 
+                        ), 
+                        bDropOnDeath=True 
+                    ),
+                    ( 
+                        ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_Shotguns_06_Legendary', 
+                        InvBalanceDefinition=None, 
+                        Probability=( 
+                            BaseValueConstant=1.000000, 
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=None,
+                            BaseValueScaleConstant=1.000000 
+                        ), 
+                        bDropOnDeath=True 
+                    ),
+                    ( 
+                        ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_SMG_06_Legendary', 
+                        InvBalanceDefinition=None, 
+                        Probability=( 
+                            BaseValueConstant=1.000000, 
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=None,
+                            BaseValueScaleConstant=1.000000 
+                        ), 
+                        bDropOnDeath=True 
+                    ),
+                    ( 
+                        ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_SniperRifles_06_Legendary', 
+                        InvBalanceDefinition=None, 
+                        Probability=( 
+                            BaseValueConstant=1.000000, 
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=None,
+                            BaseValueScaleConstant=1.000000 
+                        ), 
+                        bDropOnDeath=True 
+                    ),
+                    ( 
+                        ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_Lasers_06_Legendary', 
+                        InvBalanceDefinition=None, 
+                        Probability=( 
+                            BaseValueConstant=1.000000, 
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=None,
+                            BaseValueScaleConstant=1.000000 
+                        ), 
+                        bDropOnDeath=True 
+                    )
+                )
+
+                set GD_Itempools.WeaponPools.Pool_Weapons_Pistols_Moonstone BalancedItems
+                (
+                    ( 
+                        ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_Pistols_06_Legendary', 
+                        InvBalanceDefinition=None, 
+                        Probability=( 
+                            BaseValueConstant=1.000000, 
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=None,
+                            BaseValueScaleConstant=1.000000 
+                        ), 
+                        bDropOnDeath=True 
+                    )
+                )
+
+                set GD_Itempools.WeaponPools.Pool_Weapons_Launchers_Moonstone BalancedItems
+                (
+                    ( 
+                        ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_Launchers_06_Legendary', 
+                        InvBalanceDefinition=None, 
+                        Probability=( 
+                            BaseValueConstant=1.000000, 
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=None,
+                            BaseValueScaleConstant=1.000000 
+                        ), 
+                        bDropOnDeath=True 
+                    )
+                )
+
+                set GD_Itempools.ShieldPools.Pool_Shields_All_Moonstone BalancedItems
+                (
+                    ( 
+                        ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ShieldPools.Pool_Shields_All_06_Legendary', 
+                        InvBalanceDefinition=None, 
+                        Probability=( 
+                            BaseValueConstant=1.000000, 
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=None,
+                            BaseValueScaleConstant=1.000000 
+                        ), 
+                        bDropOnDeath=True 
+                    )
+                )
+
+                set GD_Itempools.GrenadeModPools.Pool_GrenadeMods_All_Moonstone BalancedItems
+                (
+                    ( 
+                        ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.GrenadeModPools.Pool_GrenadeMods_06_Legendary', 
+                        InvBalanceDefinition=None, 
+                        Probability=( 
+                            BaseValueConstant=1.000000, 
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=None,
+                            BaseValueScaleConstant=1.000000 
+                        ), 
+                        bDropOnDeath=True 
+                    )
+                )
+
+                set GD_Itempools.ClassModPools.Pool_ClassMod_All_Moonstone BalancedItems
+                (
+                    ( 
+                        ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ClassModPools.Pool_ClassMod_06_Legendary', 
+                        InvBalanceDefinition=None, 
+                        Probability=( 
+                            BaseValueConstant=1.000000, 
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=None,
+                            BaseValueScaleConstant=1.000000 
+                        ), 
+                        bDropOnDeath=True 
+                    )
+                )
+
+                set GD_Itempools.MoonItemPools.Pool_MoonItem_All_Moonstone BalancedItems
+                (
+                    ( 
+                        ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.MoonItemPools.Pool_MoonItem_06_Legendary', 
+                        InvBalanceDefinition=None, 
+                        Probability=( 
+                            BaseValueConstant=1.000000, 
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=None,
+                            BaseValueScaleConstant=1.000000 
+                        ), 
+                        bDropOnDeath=True 
+                    )
+                )
+
+            #</Better Moonstone Chests>
+
+            #<Better Lockers>
+
+                # Any gear dropped by lockers will always be Blue rarity.  This could
+                # technically be seen as a bit of a nerf given the rest of this mod, since
+                # lockers could previously drop legendaries if you were lucky enough, but
+                # I like the blue locker loot thing.
+
+                set GD_Itempools.LootablePools.Pool_Locker_Items_SMGsAndPistols BalancedItems
+                (
+                    ( 
+                        ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_Pistols_04_Rare',
+                        InvBalanceDefinition=None, 
+                        Probability=( 
+                            BaseValueConstant=0.000000, 
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_2_Uncommon', 
+                            BaseValueScaleConstant=1.000000 
+                        ), 
+                        bDropOnDeath=False 
+                    ),
+                    (
+                        ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_SMG_04_Rare',
+                        InvBalanceDefinition=None, 
+                        Probability=( 
+                            BaseValueConstant=0.000000, 
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_3_Uncommoner', 
+                            BaseValueScaleConstant=1.000000 
+                        ), 
+                        bDropOnDeath=True 
+                    )
+                )
+
+                level None set GD_Itempools.ListDefs.StorageLockerLoot LootData[4].ItemAttachments[0].ItemPool ItemPoolDefinition'GD_Itempools.ShieldPools.Pool_Shields_All_04_Rare'
+
+                level None set GD_Itempools.ListDefs.StorageLockerLoot LootData[5].ItemAttachments[1].ItemPool ItemPoolDefinition'GD_Itempools.GrenadeModPools.Pool_GrenadeMods_04_Rare'
+
+            #</Better Lockers>
+
+            #<Better Safes>
+
+                # Improves Safes - the amount of money is increased, Moonstone results are
+                # far more common, and if there is gear drops, they are guaranteed
+                # legendaries
+
+                level None set GD_Balance_Treasure.LootableGrades.ObjectGrade_Safe DefaultLoot
+                (
+                    ( 
+                        ConfigurationName="Moonstone", 
+                        LootGameStageVarianceFormula=None, 
+                        Weight=( 
+                            BaseValueConstant=1.000000, 
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common', 
+                            BaseValueScaleConstant=1.000000 
+                        ), 
+                        ItemAttachments=( 
+                            ( 
+                                ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Moonstone', 
+                                PoolProbability=( 
+                                    BaseValueConstant=1.000000, 
+                                    BaseValueAttribute=None, 
+                                    InitializationDefinition=None, 
+                                    BaseValueScaleConstant=1.000000 
+                                ), 
+                                AttachmentPointName="Ammo4" 
+                            ), 
+                            ( 
+                                ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Moonstone', 
+                                PoolProbability=( 
+                                    BaseValueConstant=1.000000, 
+                                    BaseValueAttribute=None, 
+                                    InitializationDefinition=None, 
+                                    BaseValueScaleConstant=1.000000 
+                                ), 
+                                AttachmentPointName="Ammo1" 
+                            ), 
+                            ( 
+                                ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Money_1_BIG', 
+                                PoolProbability=( 
+                                    BaseValueConstant=1.000000, 
+                                    BaseValueAttribute=None, 
+                                    InitializationDefinition=None, 
+                                    BaseValueScaleConstant=1.000000 
+                                ), 
+                                AttachmentPointName="Ammo2" 
+                            ), 
+                            ( 
+                                ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Money_1_BIG', 
+                                PoolProbability=( 
+                                    BaseValueConstant=1.000000, 
+                                    BaseValueAttribute=None, 
+                                    InitializationDefinition=None, 
+                                    BaseValueScaleConstant=0.800000 
+                                ), 
+                                AttachmentPointName="Ammo5" 
+                            ), 
+                            ( 
+                                ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Moonstone', 
+                                PoolProbability=( 
+                                    BaseValueConstant=1.000000, 
+                                    BaseValueAttribute=None, 
+                                    InitializationDefinition=None, 
+                                    BaseValueScaleConstant=0.800000 
+                                ), 
+                                AttachmentPointName="Ammo3" 
+                            ) 
+                        ) 
+                    ),
+                    ( 
+                        ConfigurationName="Eridium", 
+                        LootGameStageVarianceFormula=None, 
+                        Weight=( 
+                            BaseValueConstant=1.000000, 
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common', 
+                            BaseValueScaleConstant=1.000000 
+                        ), 
+                        ItemAttachments=( 
+                            ( 
+                                ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Moonstone_Cluster', 
+                                PoolProbability=( 
+                                    BaseValueConstant=1.000000, 
+                                    BaseValueAttribute=None, 
+                                    InitializationDefinition=None, 
+                                    BaseValueScaleConstant=1.000000 
+                                ), 
+                                AttachmentPointName="Ammo4" 
+                            ), 
+                            ( 
+                                ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Money_1_BIG', 
+                                PoolProbability=( 
+                                    BaseValueConstant=1.000000, 
+                                    BaseValueAttribute=None, 
+                                    InitializationDefinition=None, 
+                                    BaseValueScaleConstant=1.000000 
+                                ), 
+                                AttachmentPointName="Ammo1" 
+                            ), 
+                            ( 
+                                ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Money_1_BIG', 
+                                PoolProbability=( 
+                                    BaseValueConstant=1.000000, 
+                                    BaseValueAttribute=None, 
+                                    InitializationDefinition=None, 
+                                    BaseValueScaleConstant=1.000000 
+                                ), 
+                                AttachmentPointName="Ammo2" 
+                            ), 
+                            ( 
+                                ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Money_1_BIG', 
+                                PoolProbability=( 
+                                    BaseValueConstant=1.000000, 
+                                    BaseValueAttribute=None, 
+                                    InitializationDefinition=None, 
+                                    BaseValueScaleConstant=0.800000 
+                                ), 
+                                AttachmentPointName="Ammo5" 
+                            ), 
+                            ( 
+                                ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Money_1_BIG', 
+                                PoolProbability=( 
+                                    BaseValueConstant=1.000000, 
+                                    BaseValueAttribute=None, 
+                                    InitializationDefinition=None, 
+                                    BaseValueScaleConstant=0.800000 
+                                ), 
+                                AttachmentPointName="Ammo3" 
+                            ) 
+                        ) 
+                    ),
+                    ( 
+                        ConfigurationName="Safe_Cash", 
+                        LootGameStageVarianceFormula=None, 
+                        Weight=( 
+                            BaseValueConstant=1.000000, 
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common', 
+                            BaseValueScaleConstant=1.000000 
+                        ), 
+                        ItemAttachments=( 
+                            ( 
+                                ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Money_1_BIG', 
+                                PoolProbability=( 
+                                    BaseValueConstant=1.000000, 
+                                    BaseValueAttribute=None, 
+                                    InitializationDefinition=None, 
+                                    BaseValueScaleConstant=1.000000 
+                                ), 
+                                AttachmentPointName="Ammo1" 
+                            ), 
+                            ( 
+                                ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Money_1_BIG', 
+                                PoolProbability=( 
+                                    BaseValueConstant=1.000000, 
+                                    BaseValueAttribute=None, 
+                                    InitializationDefinition=None, 
+                                    BaseValueScaleConstant=0.800000 
+                                ), 
+                                AttachmentPointName="Ammo2" 
+                            ), 
+                            ( 
+                                ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Money_1_BIG', 
+                                PoolProbability=( 
+                                    BaseValueConstant=1.000000, 
+                                    BaseValueAttribute=None, 
+                                    InitializationDefinition=None, 
+                                    BaseValueScaleConstant=1.000000 
+                                ), 
+                                AttachmentPointName="Ammo3" 
+                            ), 
+                            ( 
+                                ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Money_1_BIG', 
+                                PoolProbability=( 
+                                    BaseValueConstant=1.000000, 
+                                    BaseValueAttribute=None, 
+                                    InitializationDefinition=None, 
+                                    BaseValueScaleConstant=1.000000 
+                                ), 
+                                AttachmentPointName="Ammo4" 
+                            ), 
+                            ( 
+                                ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Money_1_BIG', 
+                                PoolProbability=( 
+                                    BaseValueConstant=1.000000, 
+                                    BaseValueAttribute=None, 
+                                    InitializationDefinition=None, 
+                                    BaseValueScaleConstant=0.800000 
+                                ), 
+                                AttachmentPointName="Ammo5" 
+                            ) 
+                        ) 
+                    ),
+                    ( 
+                        ConfigurationName="Grenade", 
+                        LootGameStageVarianceFormula=None, 
+                        Weight=( 
+                            BaseValueConstant=1.000000, 
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_3_Uncommoner', 
+                            BaseValueScaleConstant=1.000000 
+                        ), 
+                        ItemAttachments=( 
+                            ( 
+                                ItemPool=ItemPoolDefinition'GD_Itempools.GrenadeModPools.Pool_GrenadeMods_06_Legendary', 
+                                PoolProbability=( 
+                                    BaseValueConstant=1.000000, 
+                                    BaseValueAttribute=None, 
+                                    InitializationDefinition=None, 
+                                    BaseValueScaleConstant=1.000000 
+                                ), 
+                                AttachmentPointName="Grenade" 
+                            ), 
+                            ( 
+                                ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Ammo_Grenades', 
+                                PoolProbability=( 
+                                    BaseValueConstant=1.000000, 
+                                    BaseValueAttribute=None, 
+                                    InitializationDefinition=None, 
+                                    BaseValueScaleConstant=1.000000 
+                                ), 
+                                AttachmentPointName="Shield" 
+                            ), 
+                            ( 
+                                ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Money_1_BIG', 
+                                PoolProbability=( 
+                                    BaseValueConstant=1.000000, 
+                                    BaseValueAttribute=None, 
+                                    InitializationDefinition=None, 
+                                    BaseValueScaleConstant=1.000000 
+                                ), 
+                                AttachmentPointName="Ammo1" 
+                            ), 
+                            ( 
+                                ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Money_1_BIG', 
+                                PoolProbability=( 
+                                    BaseValueConstant=1.000000, 
+                                    BaseValueAttribute=None, 
+                                    InitializationDefinition=None, 
+                                    BaseValueScaleConstant=1.000000 
+                                ), 
+                                AttachmentPointName="Ammo2" 
+                            ), 
+                            ( 
+                                ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Ammo_Grenades', 
+                                PoolProbability=( 
+                                    BaseValueConstant=1.000000, 
+                                    BaseValueAttribute=None, 
+                                    InitializationDefinition=None, 
+                                    BaseValueScaleConstant=1.000000 
+                                ), 
+                                AttachmentPointName="Ammo5" 
+                            ) 
+                        ) 
+                    ),
+                    ( 
+                        ConfigurationName="Shield", 
+                        LootGameStageVarianceFormula=None, 
+                        Weight=( 
+                            BaseValueConstant=1.000000, 
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_3_Uncommoner', 
+                            BaseValueScaleConstant=1.000000 
+                        ), 
+                        ItemAttachments=( 
+                            ( 
+                                ItemPool=ItemPoolDefinition'GD_Itempools.ShieldPools.Pool_Shields_All_06_Legendary', 
+                                PoolProbability=( 
+                                    BaseValueConstant=1.000000, 
+                                    BaseValueAttribute=None, 
+                                    InitializationDefinition=None, 
+                                    BaseValueScaleConstant=1.000000 
+                                ), 
+                                AttachmentPointName="Shield" 
+                            ), 
+                            ( 
+                                ItemPool=ItemPoolDefinition'GD_Itempools.MoonItemPools.Pool_MoonItem_06_Legendary', 
+                                PoolProbability=( 
+                                    BaseValueConstant=1.000000, 
+                                    BaseValueAttribute=None, 
+                                    InitializationDefinition=None, 
+                                    BaseValueScaleConstant=0.500000 
+                                ), 
+                                AttachmentPointName="Grenade" 
+                            ), 
+                            ( 
+                                ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Money_1_BIG', 
+                                PoolProbability=( 
+                                    BaseValueConstant=1.000000, 
+                                    BaseValueAttribute=None, 
+                                    InitializationDefinition=None, 
+                                    BaseValueScaleConstant=1.000000 
+                                ), 
+                                AttachmentPointName="Ammo1" 
+                            ), 
+                            ( 
+                                ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Money_1_BIG', 
+                                PoolProbability=( 
+                                    BaseValueConstant=1.000000, 
+                                    BaseValueAttribute=None, 
+                                    InitializationDefinition=None, 
+                                    BaseValueScaleConstant=1.000000 
+                                ), 
+                                AttachmentPointName="Ammo2" 
+                            ) 
+                        ) 
+                    ),
+                    ( 
+                        ConfigurationName="Pistol", 
+                        LootGameStageVarianceFormula=None, 
+                        Weight=( 
+                            BaseValueConstant=1.000000, 
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_3_Uncommoner', 
+                            BaseValueScaleConstant=1.000000 
+                        ), 
+                        ItemAttachments=( 
+                            ( 
+                                ItemPool=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_Pistols_06_Legendary', 
+                                PoolProbability=( 
+                                    BaseValueConstant=1.000000, 
+                                    BaseValueAttribute=None, 
+                                    InitializationDefinition=None, 
+                                    BaseValueScaleConstant=1.000000 
+                                ), 
+                                AttachmentPointName="Grenade" 
+                            ), 
+                            ( 
+                                ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Ammo_Repeater', 
+                                PoolProbability=( 
+                                    BaseValueConstant=1.000000, 
+                                    BaseValueAttribute=None, 
+                                    InitializationDefinition=None, 
+                                    BaseValueScaleConstant=1.000000 
+                                ), 
+                                AttachmentPointName="Shield" 
+                            ), 
+                            ( 
+                                ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Money_1_BIG', 
+                                PoolProbability=( 
+                                    BaseValueConstant=1.000000, 
+                                    BaseValueAttribute=None, 
+                                    InitializationDefinition=None, 
+                                    BaseValueScaleConstant=1.000000 
+                                ), 
+                                AttachmentPointName="Ammo1" 
+                            ), 
+                            ( 
+                                ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Money_1_BIG', 
+                                PoolProbability=( 
+                                    BaseValueConstant=1.000000, 
+                                    BaseValueAttribute=None, 
+                                    InitializationDefinition=None, 
+                                    BaseValueScaleConstant=1.000000 
+                                ), 
+                                AttachmentPointName="Ammo2" 
+                            ), 
+                            ( 
+                                ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Money_1_BIG', 
+                                PoolProbability=( 
+                                    BaseValueConstant=1.000000, 
+                                    BaseValueAttribute=None, 
+                                    InitializationDefinition=None, 
+                                    BaseValueScaleConstant=1.000000 
+                                ), 
+                                AttachmentPointName="Ammo5" 
+                            ) 
+                        ) 
+                    )
+                )
+
+            #</Better Safes>
+
+            #<Fix Broken Shield Pools>
+
+                # Various chests in the game have a possible "Shields" item pool which will
+                # never actually trigger in-game because they include an invalid item in the
+                # pool.  This fixes the pool so that it can be chosen again.
+
+                {mp:euphoria_fix_0}
+
+                {mp:euphoria_fix_1}
+
+                {mp:euphoria_fix_2}
+
+                {mp:euphoria_fix_3}
+
+                {mp:euphoria_fix_4}
+
+                {mp:euphoria_fix_5}
+
+            #</Fix Broken Shield Pools>
+
+            #<Improve Zarpedon's Chest>
+
+                # Improves Col. Zarpedon's chest on the Drakensburg (in Pity's Fall)
+
+                level Wreck_P set GD_Balance_Treasure.ChestGradesUnique.Balance_Chest_ZarpedonsStash DefaultLoot[0].ItemAttachments
+                (
+                    ( 
+                        ItemPool=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_CybercColt', 
+                        PoolProbability=( 
+                            BaseValueConstant=1.000000, 
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=None, 
+                            BaseValueScaleConstant=1.000000 
+                        ), 
+                        InvBalanceDefinition=None, 
+                        AttachmentPointName="Gun1" 
+                    ), 
+                    ( 
+                        ItemPool=ItemPoolDefinition'GD_Itempools.Treasure_ChestPools.Pool_EpicChest_Weapons_LongGuns', 
+                        PoolProbability=( 
+                            BaseValueConstant=1.000000, 
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=None, 
+                            BaseValueScaleConstant=1.000000 
+                        ), 
+                        InvBalanceDefinition=None, 
+                        AttachmentPointName="Gun2" 
+                    ), 
+                    ( 
+                        ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Ammo_All_DropAlways', 
+                        PoolProbability=( 
+                            BaseValueConstant=1.000000, 
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=None, 
+                            BaseValueScaleConstant=1.000000 
+                        ), 
+                        InvBalanceDefinition=None, 
+                        AttachmentPointName="Ammo1" 
+                    ), 
+                    ( 
+                        ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Ammo_All_DropAlways', 
+                        PoolProbability=( 
+                            BaseValueConstant=1.000000, 
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=None, 
+                            BaseValueScaleConstant=1.000000 
+                        ), 
+                        InvBalanceDefinition=None, 
+                        AttachmentPointName="Ammo2" 
+                    ), 
+                    ( 
+                        ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Ammo_All_DropAlways', 
+                        PoolProbability=( 
+                            BaseValueConstant=1.000000, 
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=None, 
+                            BaseValueScaleConstant=1.000000 
+                        ), 
+                        InvBalanceDefinition=None, 
+                        AttachmentPointName="Ammo3" 
+                    ), 
+                    ( 
+                        ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Ammo_All_DropAlways', 
+                        PoolProbability=( 
+                            BaseValueConstant=1.000000, 
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=None, 
+                            BaseValueScaleConstant=1.000000 
+                        ), 
+                        InvBalanceDefinition=None, 
+                        AttachmentPointName="Ammo4" 
+                    ), 
+                    ( 
+                        ItemPool=ItemPoolDefinition'GD_Itempools.Treasure_ChestPools.Pool_EpicChest_GrenadeMods', 
+                        PoolProbability=( 
+                            BaseValueConstant=1.000000, 
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=None, 
+                            BaseValueScaleConstant=1.000000 
+                        ), 
+                        InvBalanceDefinition=None, 
+                        AttachmentPointName="Grenade1" 
+                    ), 
+                    ( 
+                        ItemPool=ItemPoolDefinition'GD_Itempools.Treasure_ChestPools.Pool_EpicChest_GrenadeMods', 
+                        PoolProbability=( 
+                            BaseValueConstant=1.000000, 
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=None, 
+                            BaseValueScaleConstant=1.000000 
+                        ), 
+                        InvBalanceDefinition=None, 
+                        AttachmentPointName="Grenade2" 
+                    ), 
+                    ( 
+                        ItemPool=ItemPoolDefinition'GD_Itempools.Treasure_ChestPools.Pool_EpicChest_GrenadeMods', 
+                        PoolProbability=( 
+                            BaseValueConstant=1.000000, 
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=None, 
+                            BaseValueScaleConstant=1.000000 
+                        ), 
+                        InvBalanceDefinition=None, 
+                        AttachmentPointName="Grenade3" 
+                    ), 
+                    ( 
+                        ItemPool=ItemPoolDefinition'GD_Itempools.Treasure_ChestPools.Pool_EpicChest_GrenadeMods', 
+                        PoolProbability=( 
+                            BaseValueConstant=1.000000, 
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=None, 
+                            BaseValueScaleConstant=1.000000 
+                        ), 
+                        InvBalanceDefinition=None, 
+                        AttachmentPointName="Grenade4" 
+                    ) 
+                ) 
+
+            #</Improve Zarpedon's Chest>
+
+            #<Improve "Picking Up The Pieces" Laser Chest>
+
+                # Improves the laser weapons found in the mission chest for "Picking up the
+                # Pieces", at Lunar Launching Station.  From white to blue rarity.
+
+                level RandDFacility_P set GD_Co_Side_PickingUp_Data.ListDefs.WeaponChestLaser LootData[0].ItemAttachments[0].ItemPool ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_Lasers_04_Rare'
+
+                level RandDFacility_P set GD_Co_Side_PickingUp_Data.ListDefs.WeaponChestLaser LootData[0].ItemAttachments[1].ItemPool ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_Lasers_04_Rare'
+
+            #</Improve "Picking Up The Pieces" Laser Chest>
+
+            #<Improve Mutator Arena Chests>
+
+                # Improves the Mutator Arena (in The Cortex, via the mission l33t h4X0rz) in
+                # a few ways.
+
+                #<Better Probabilities>
+
+                    # Changes to the weights used (these are keyed off of the difficulty
+                    # scale)
+
+                    {mp:mutator_weight_uncommon_0}
+
+                    {mp:mutator_weight_uncommon_1}
+
+                    {mp:mutator_weight_uncommon_2}
+
+                    {mp:mutator_weight_uncommon_3}
+
+                    {mp:mutator_weight_uncommon_4}
+
+                    {mp:mutator_weight_uncommon_5}
+
+                    {mp:mutator_weight_uncommon_6}
+
+                    {mp:mutator_weight_uncommon_7}
+
+                    {mp:mutator_weight_uncommon_8}
+
+                    {mp:mutator_weight_rare_0}
+
+                    {mp:mutator_weight_rare_1}
+
+                    {mp:mutator_weight_rare_2}
+
+                    {mp:mutator_weight_rare_3}
+
+                    {mp:mutator_weight_rare_4}
+
+                    {mp:mutator_weight_rare_5}
+
+                    {mp:mutator_weight_rare_6}
+
+                    {mp:mutator_weight_rare_7}
+
+                    {mp:mutator_weight_rare_8}
+
+                    {mp:mutator_weight_veryrare_0}
+
+                    {mp:mutator_weight_veryrare_1}
+
+                    {mp:mutator_weight_veryrare_2}
+
+                    {mp:mutator_weight_veryrare_3}
+
+                    {mp:mutator_weight_veryrare_4}
+
+                    {mp:mutator_weight_veryrare_5}
+
+                    {mp:mutator_weight_veryrare_6}
+
+                    {mp:mutator_weight_veryrare_7}
+
+                    {mp:mutator_weight_veryrare_8}
+
+                    {mp:mutator_weight_legendary_0}
+
+                    {mp:mutator_weight_legendary_1}
+
+                    {mp:mutator_weight_legendary_2}
+
+                    {mp:mutator_weight_legendary_3}
+
+                    {mp:mutator_weight_legendary_4}
+
+                    {mp:mutator_weight_legendary_5}
+
+                    {mp:mutator_weight_legendary_6}
+
+                    {mp:mutator_weight_legendary_7}
+
+                    {mp:mutator_weight_legendary_8}
+
+                #</Better Probabilities>
+
+                #<Better Contents>
+
+                    # Improve the contents of the chests
+
+                    {mp:mutator_common_coms}
+
+                    {mp:mutator_common_grenades}
+
+                    {mp:mutator_common_ozkits}
+
+                    {mp:mutator_common_shields}
+
+                    {mp:mutator_common_launchers}
+
+                    {mp:mutator_common_longguns}
+
+                    {mp:mutator_common_pistols}
+
+                    {mp:mutator_red_coms}
+
+                    {mp:mutator_red_grenades}
+
+                    {mp:mutator_red_ozkits}
+
+                    {mp:mutator_red_shields}
+
+                    {mp:mutator_red_launchers}
+
+                    {mp:mutator_red_launchers_glitch}
+
+                    {mp:mutator_red_longguns}
+
+                    {mp:mutator_red_longguns_glitch}
+
+                    {mp:mutator_red_pistols}
+
+                    {mp:mutator_red_pistols_glitch}
+
+                #</Better Contents>
+
+            #</Improve Mutator Arena Chests>
+
+        #</Better Containers>
+
+        #<Better Enemy Drops>
+
+            # Note that some more enemy drop tweaking happens in the "Drop Quality"
+            # section, below.
+
+            #<Boss Drop Normalization>
+
+                #  Make loot pools for bosses have equal probabilities for all items
+
+                #<Empyrean Sentinel>
+
+                    # Technically what we're removing here is a check on playthrough.
+
+                    level None set GD_Itempools.Runnables.Pool_FinalBoss_Head BalancedItems[0].Probability.InitializationDefinition None
+
+                    level None set GD_Itempools.Runnables.Pool_FinalBoss_Head BalancedItems[1].Probability.InitializationDefinition None
+
+                #</Empyrean Sentinel>
+
+                #<Empyrean Sentinel (raid)>
+
+                    # Technically what we're removing here is a check on playthrough.
+
+                    level None set GD_Itempools.Runnables.Pool_FinalBossRaid_Head BalancedItems[0].Probability.InitializationDefinition None
+
+                    level None set GD_Itempools.Runnables.Pool_FinalBossRaid_Head BalancedItems[1].Probability.InitializationDefinition None
+
+                #</Empyrean Sentinel (raid)>
+
+                #<Iwajira / Volcantis / Odjurymir>
+
+                    # The Hail gets added to the pool with a scale of 8 via some kind of
+                    # not-a-hotfix-but-acts-like-a-hotfix.  This nerfs that down to 1.
+
+                    level Moonsurface_P set GD_Itempools.Runnables.Pool_Rockzilla BalancedItems[2].Probability.BaseValueScaleConstant 1
+
+                #</Iwajira / Volcantis / Odjurymir>
+
+            #</Boss Drop Normalization>
+
+            #<Better Raid Boss Drops>
+
+                # There are only a few enemies which use this pool, namely: Iwajira,
+                # Volcantis, Odjurymir, Raum-Kampfjet Mark V, and the final boss of
+                # the game.  Not actually changing this TOO much, apart from improving
+                # the rarity of dropped loot, since these bosses seem to drop from
+                # various pools multiple times.
+
+                set GD_Itempools.ListDefs.RaidBossEnemyGunsAndGear ItemPools
+                (
+                    ( 
+                        ItemPool=ItemPoolDefinition'GD_Itempools.EnemyDropPools.Pool_GunsAndGear_05_VeryRare', 
+                        PoolProbability=( 
+                            BaseValueConstant=1.000000, 
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=None, 
+                            BaseValueScaleConstant=1.000000 
+                        ) 
+                    ),
+                    (
+                        ItemPool=ItemPoolDefinition'GD_Itempools.EnemyDropPools.Pool_GunsAndGear_04_Rare', 
+                        PoolProbability=( 
+                            BaseValueConstant=1.000000, 
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=None, 
+                            BaseValueScaleConstant=1.000000 
+                        ) 
+                    ),
+                    (
+                        ItemPool=ItemPoolDefinition'GD_Itempools.EnemyDropPools.Pool_GunsAndGear_06_Legendary', 
+                        PoolProbability=( 
+                            BaseValueConstant=1.000000, 
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=None, 
+                            BaseValueScaleConstant=1.000000 
+                        ) 
+                    ),
+                    (
+                        ItemPool=ItemPoolDefinition'GD_Itempools.GeneralItemPools.Pool_GunsAndGearDropNumPlayersPlusOne', 
+                        PoolProbability=( 
+                            BaseValueConstant=1.000000, 
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=None, 
+                            BaseValueScaleConstant=1.000000 
+                        ) 
+                    ),
+                    (
+                        ItemPool=ItemPoolDefinition'GD_Itempools.GeneralItemPools.Pool_GunsAndGear', 
+                        PoolProbability=( 
+                            BaseValueConstant=1.000000, 
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=AttributeInitializationDefinition'GD_Balance.WeightingPlayerCount.GearDrops_PerPlayer', 
+                            BaseValueScaleConstant=1.000000 
+                        ) 
+                    ),
+                    (
+                        ItemPool=ItemPoolDefinition'GD_Ma_ItemPools.WeaponPools.Pool_Weapons_All_Glitch_Marigold', 
+                        PoolProbability=( 
+                            BaseValueConstant=1.000000, 
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=AttributeInitializationDefinition'GD_Balance.WeightingPlayerCount.GearDrops_PerPlayer', 
+                            BaseValueScaleConstant=1.000000 
+                        ) 
+                    ),
+                    (
+                        ItemPool=ItemPoolDefinition'GD_Itempools.EnemyDropPools.Pool_GunsAndGear_06_Legendary', 
+                        PoolProbability=( 
+                            BaseValueConstant=1.000000, 
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=AttributeInitializationDefinition'GD_Balance.WeightingPlayerCount.GearDrops_PerPlayer', 
+                            BaseValueScaleConstant=1.000000 
+                        ) 
+                    ),
+                    (
+                        ItemPool=ItemPoolDefinition'GD_Itempools.EnemyDropPools.Pool_GunsAndGear_04_Rare', 
+                        PoolProbability=( 
+                            BaseValueConstant=1.000000, 
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=AttributeInitializationDefinition'GD_Balance.WeightingPlayerCount.GearDrops_PerPlayer', 
+                            BaseValueScaleConstant=1.000000 
+                        ) 
+                    ),
+                    (
+                        ItemPool=ItemPoolDefinition'GD_Itempools.EnemyDropPools.Pool_GunsAndGear_05_VeryRare', 
+                        PoolProbability=( 
+                            BaseValueConstant=1.000000, 
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=AttributeInitializationDefinition'GD_Balance.WeightingPlayerCount.GearDrops_PerPlayer', 
+                            BaseValueScaleConstant=1.000000 
+                        ) 
+                    ),
+                    (
+                        ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Money_1or2', 
+                        PoolProbability=( 
+                            BaseValueConstant=1.000000, 
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=None, 
+                            BaseValueScaleConstant=1.000000 
+                        ) 
+                    ),
+                    (
+                        ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Money_1or2', 
+                        PoolProbability=( 
+                            BaseValueConstant=1.000000, 
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=None, 
+                            BaseValueScaleConstant=1.000000 
+                        ) 
+                    ),
+                    (
+                        ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Money_1or2', 
+                        PoolProbability=( 
+                            BaseValueConstant=1.000000, 
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=None, 
+                            BaseValueScaleConstant=1.000000 
+                        ) 
+                    ),
+                    (
+                        ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Money_1or2', 
+                        PoolProbability=( 
+                            BaseValueConstant=1.000000, 
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=None, 
+                            BaseValueScaleConstant=1.000000 
+                        ) 
+                    ),
+                    (
+                        ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Money_1or2', 
+                        PoolProbability=( 
+                            BaseValueConstant=1.000000, 
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=None, 
+                            BaseValueScaleConstant=1.000000 
+                        ) 
+                    ),
+                    (
+                        ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Money_1or2', 
+                        PoolProbability=( 
+                            BaseValueConstant=1.000000, 
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=None, 
+                            BaseValueScaleConstant=1.000000 
+                        ) 
+                    ),
+                    (
+                        ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Moonstone_Cluster', 
+                        PoolProbability=( 
+                            BaseValueConstant=1.000000, 
+                            BaseValueAttribute=AttributeDefinition'GD_Itempools.DropWeights.DropODDS_MoonstoneCluster', 
+                            InitializationDefinition=None, 
+                            BaseValueScaleConstant=100.000000 
+                        ) 
+                    ),
+                    (
+                        ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Moonstone', 
+                        PoolProbability=( 
+                            BaseValueConstant=1.000000, 
+                            BaseValueAttribute=AttributeDefinition'GD_Itempools.DropWeights.DropODDS_Moonstone', 
+                            InitializationDefinition=None, 
+                            BaseValueScaleConstant=200.000000 
+                        ) 
+                    ),
+                    (
+                        ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Moonstone', 
+                        PoolProbability=( 
+                            BaseValueConstant=1.000000, 
+                            BaseValueAttribute=AttributeDefinition'GD_Itempools.DropWeights.DropODDS_Moonstone', 
+                            InitializationDefinition=None, 
+                            BaseValueScaleConstant=200.000000 
+                        ) 
+                    ),
+                    (
+                        ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Health_All', 
+                        PoolProbability=( 
+                            BaseValueConstant=0.000000, 
+                            BaseValueAttribute=AttributeDefinition'GD_Itempools.DropWeights.DropODDS_Health', 
+                            InitializationDefinition=None, 
+                            BaseValueScaleConstant=1.000000 
+                        ) 
+                    ),
+                    (
+                        ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Health_All', 
+                        PoolProbability=( 
+                            BaseValueConstant=0.000000, 
+                            BaseValueAttribute=AttributeDefinition'GD_Itempools.DropWeights.DropODDS_Health', 
+                            InitializationDefinition=None, 
+                            BaseValueScaleConstant=1.000000 
+                        ) 
+                    ),
+                    (
+                        ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Oxygen_Instant', 
+                        PoolProbability=( 
+                            BaseValueConstant=0.000000, 
+                            BaseValueAttribute=AttributeDefinition'GD_Itempools.DropWeights.DropODDS_Oxygen', 
+                            InitializationDefinition=None, 
+                            BaseValueScaleConstant=1.000000 
+                        ) 
+                    ),
+                    (
+                        ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Oxygen_Instant', 
+                        PoolProbability=( 
+                            BaseValueConstant=0.000000, 
+                            BaseValueAttribute=AttributeDefinition'GD_Itempools.DropWeights.DropODDS_Oxygen', 
+                            InitializationDefinition=None, 
+                            BaseValueScaleConstant=1.000000 
+                        ) 
+                    ),
+                    (
+                        ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Ammo_All_DropAlways', 
+                        PoolProbability=( 
+                            BaseValueConstant=0.000000, 
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=AttributeInitializationDefinition'GD_Balance.WeightingPlayerCount.AmmoDrops_PerPlayer', 
+                            BaseValueScaleConstant=1.000000 
+                        ) 
+                    ),
+                    (
+                        ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Ammo_All_DropAlways', 
+                        PoolProbability=( 
+                            BaseValueConstant=0.000000, 
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=AttributeInitializationDefinition'GD_Balance.WeightingPlayerCount.AmmoDrops_PerPlayer', 
+                            BaseValueScaleConstant=1.000000 
+                        ) 
+                    ),
+                    (
+                        ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Ammo_All_DropAlways', 
+                        PoolProbability=( 
+                            BaseValueConstant=0.000000, 
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=AttributeInitializationDefinition'GD_Balance.WeightingPlayerCount.AmmoDrops_PerPlayer', 
+                            BaseValueScaleConstant=1.000000 
+                        ) 
+                    ),
+                    (
+                        ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Ammo_All_DropAlways', 
+                        PoolProbability=( 
+                            BaseValueConstant=0.000000, 
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=AttributeInitializationDefinition'GD_Balance.WeightingPlayerCount.AmmoDrops_PerPlayer', 
+                            BaseValueScaleConstant=1.000000 
+                        ) 
+                    ),
+                    (
+                        ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Ammo_All_NeedOnly', 
+                        PoolProbability=( 
+                            BaseValueConstant=0.000000, 
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=AttributeInitializationDefinition'GD_Balance.WeightingPlayerCount.AmmoDrops_PerPlayer', 
+                            BaseValueScaleConstant=0.250000 
+                        ) 
+                    ),
+                    (
+                        ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Ammo_All_Emergency', 
+                        PoolProbability=( 
+                            BaseValueConstant=1.000000, 
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=None, 
+                            BaseValueScaleConstant=1.000000 
+                        ) 
+                    )
+                )
+
+            #</Better Raid Boss Drops>
+
+            #<Better Chubby Drops>
+
+                # Chubbies in TPS don't have a specific unique loot pool, and the only
+                # type of Chubby in the game is Stalkers.  So it's a bit silly to even
+                # bother with this, but we'll improve their drop pool anyway.  One
+                # guaranteed legendary, and the rest from the epic loot chest pool.
+
+                set GD_Itempools.ListDefs.ChubbyEnemyGunsAndGear ItemPools
+                (
+                    ( 
+                        ItemPool=ItemPoolDefinition'GD_Itempools.EnemyDropPools.Pool_GunsAndGear_06_Legendary',
+                        PoolProbability=( 
+                            BaseValueConstant=1.000000, 
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=None, 
+                            BaseValueScaleConstant=1.000000 
+                        ) 
+                    ),
+                    (
+                        ItemPool=ItemPoolDefinition'GD_Itempools.Treasure_ChestPools.Pool_EpicChest_Weapons_GunsAndGear',
+                        PoolProbability=( 
+                            BaseValueConstant=1.000000, 
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=None, 
+                            BaseValueScaleConstant=1.000000 
+                        ) 
+                    ),
+                    (
+                        ItemPool=ItemPoolDefinition'GD_Itempools.Treasure_ChestPools.Pool_EpicChest_Weapons_GunsAndGear',
+                        PoolProbability=( 
+                            BaseValueConstant=1.000000, 
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=None, 
+                            BaseValueScaleConstant=1.000000 
+                        ) 
+                    ),
+                    (
+                        ItemPool=ItemPoolDefinition'GD_Itempools.Treasure_ChestPools.Pool_EpicChest_Weapons_GunsAndGear',
+                        PoolProbability=( 
+                            BaseValueConstant=1.000000, 
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=None, 
+                            BaseValueScaleConstant=1.000000 
+                        ) 
+                    ),
+                    (
+                        ItemPool=ItemPoolDefinition'GD_Itempools.Treasure_ChestPools.Pool_EpicChest_Weapons_GunsAndGear', 
+                        PoolProbability=( 
+                            BaseValueConstant=1.000000, 
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=AttributeInitializationDefinition'GD_Balance.WeightingPlayerCount.GearDrops_PerPlayer', 
+                            BaseValueScaleConstant=1.000000 
+                        ) 
+                    ),
+                    (
+                        ItemPool=ItemPoolDefinition'GD_Itempools.Treasure_ChestPools.Pool_EpicChest_Weapons_GunsAndGear', 
+                        PoolProbability=( 
+                            BaseValueConstant=1.000000, 
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=AttributeInitializationDefinition'GD_Balance.WeightingPlayerCount.GearDrops_PerPlayer', 
+                            BaseValueScaleConstant=1.000000 
+                        ) 
+                    ),
+                    (
+                        ItemPool=ItemPoolDefinition'GD_Itempools.VehicleSkins.Pool_VehicleSkins_All', 
+                        PoolProbability=( 
+                            BaseValueConstant=0.000000, 
+                            BaseValueAttribute=AttributeDefinition'GD_Itempools.DropWeights.DropODDS_VehicleSkins', 
+                            InitializationDefinition=None, 
+                            BaseValueScaleConstant=10.000000 
+                        ) 
+                    ),
+                    (
+                        ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Money_1_BIG', 
+                        PoolProbability=( 
+                            BaseValueConstant=1.000000, 
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=None, 
+                            BaseValueScaleConstant=1.000000 
+                        ) 
+                    ),
+                    (
+                        ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Moonstone_Cluster', 
+                        PoolProbability=( 
+                            BaseValueConstant=1.000000, 
+                            BaseValueAttribute=None,
+                            InitializationDefinition=None, 
+                            BaseValueScaleConstant=1.000000 
+                        ) 
+                    ),
+                    (
+                        ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Moonstone_Cluster', 
+                        PoolProbability=( 
+                            BaseValueConstant=1.000000, 
+                            BaseValueAttribute=None,
+                            InitializationDefinition=None, 
+                            BaseValueScaleConstant=1.000000 
+                        ) 
+                    ),
+                    (
+                        ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Moonstone_Cluster', 
+                        PoolProbability=( 
+                            BaseValueConstant=1.000000, 
+                            BaseValueAttribute=None,
+                            InitializationDefinition=None, 
+                            BaseValueScaleConstant=1.000000 
+                        ) 
+                    ),
+                    (
+                        ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Moonstone', 
+                        PoolProbability=( 
+                            BaseValueConstant=1.000000, 
+                            BaseValueAttribute=None,
+                            InitializationDefinition=None, 
+                            BaseValueScaleConstant=1.000000 
+                        ) 
+                    ),
+                    (
+                        ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Moonstone', 
+                        PoolProbability=( 
+                            BaseValueConstant=1.000000, 
+                            BaseValueAttribute=None,
+                            InitializationDefinition=None, 
+                            BaseValueScaleConstant=1.000000 
+                        ) 
+                    ),
+                    (
+                        ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Moonstone', 
+                        PoolProbability=( 
+                            BaseValueConstant=1.000000, 
+                            BaseValueAttribute=None,
+                            InitializationDefinition=None, 
+                            BaseValueScaleConstant=1.000000 
+                        ) 
+                    ),
+                    (
+                        ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Moonstone', 
+                        PoolProbability=( 
+                            BaseValueConstant=1.000000, 
+                            BaseValueAttribute=None,
+                            InitializationDefinition=None, 
+                            BaseValueScaleConstant=1.000000 
+                        ) 
+                    ),
+                    (
+                        ItemPool=ItemPoolDefinition'GD_Itempools.BuffDrinkPools.Pool_BuffDrinks_HealingInstant', 
+                        PoolProbability=( 
+                            BaseValueConstant=1.000000, 
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=None, 
+                            BaseValueScaleConstant=1.000000 
+                        ) 
+                    ),
+                    (
+                        ItemPool=ItemPoolDefinition'GD_Itempools.BuffDrinkPools.Pool_BuffDrinks_OxygenInstant', 
+                        PoolProbability=( 
+                            BaseValueConstant=1.000000, 
+                            BaseValueAttribute=AttributeDefinition'GD_Itempools.DropWeights.DropODDS_Oxygen', 
+                            InitializationDefinition=None, 
+                            BaseValueScaleConstant=1.000000 
+                        ) 
+                    ),
+                    (
+                        ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Ammo_All_NeedOnly', 
+                        PoolProbability=( 
+                            BaseValueConstant=0.000000, 
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=AttributeInitializationDefinition'GD_Balance.WeightingPlayerCount.AmmoDrops_PerPlayer', 
+                            BaseValueScaleConstant=0.250000 
+                        ) 
+                    ),
+                    (
+                        ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Ammo_All_Emergency', 
+                        PoolProbability=( 
+                            BaseValueConstant=1.000000, 
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=None, 
+                            BaseValueScaleConstant=1.000000 
+                        ) 
+                    )
+                )
+
+            #</Better Chubby Drops>
+
+            #<Claptastic Voyage Legendary Drop Rates>
+
+                # Some enemies from the Claptastic Voyage DLC have the chance to drop
+                # a unique legendary, at a default drop rate of 0.1%.  We're going to
+                # bump that up a little bit.
+
+                set GD_Ma_ItemPools.DropWeights.DropODDS_RareDropLegendary_Marigold:ConstantAttributeValueResolver_0 ConstantValue .015
+
+            #</Claptastic Voyage Legendary Drop Rates>
+
+            #<Better Individual Enemy Drops>
+
+                # Some enemies in the game don't drop as I think they should, so this buffs
+                # some of them
+
+                #<Elder Opha / Virtuous Opha>
+
+                    # Make Elder Opha and Virtuous Opha drop from the badass pool,
+                    # rather than standard.
+
+                    level None set GD_Population_Eridian_Opha.AIPawn_Bal.PawnBalance_Opha_Heavy DefaultItemPoolIncludedLists[0] ItemPoolListDefinition'GD_Itempools.ListDefs.BadassEnemyGunsAndGear'
+
+                    level None set GD_Population_Eridian_Opha.AIPawn_Bal.PawnBalance_Opha_BadAss DefaultItemPoolIncludedLists[0] ItemPoolListDefinition'GD_Itempools.ListDefs.BadassEnemyGunsAndGear'
+
+                #</Elder Opha / Virtuous Opha>
+
+                #<EOS/SH4D0W-TP Loot Shower>
+
+                    # This actually isn't much different from stock, though we add in explicit
+                    # Glitch drops, plus some extra money+moonstone.
+
+                    {mp:eos_drop_144}
+
+                    {mp:eos_drop_145}
+
+                    {mp:eos_drop_146}
+
+                    {mp:eos_drop_147}
+
+                    {mp:eos_drop_148}
+
+                    {mp:eos_drop_149}
+
+                    {mp:eos_drop_150}
+
+                    {mp:eos_drop_151}
+
+                    {mp:eos_drop_153}
+
+                    {mp:eos_drop_154}
+
+                    {mp:eos_drop_155}
+
+                    {mp:eos_drop_156}
+
+                    {mp:eos_drop_157}
+
+                    {mp:eos_drop_158}
+
+                    {mp:eos_drop_159}
+
+                    {mp:eos_drop_160}
+
+                    {mp:eos_drop_161}
+
+                #</EOS/SH4D0W-TP Loot Shower>
+
+                #<Empyrean Sentinel (raid version) Pool>
+
+                    # The raid version of the Empyrean Sentinel contains two chances to drop
+                    # the ZX-1: one from its own pool, and one from the Colonel Zarpedon pool
+                    # which it also drops from.  This removes the ZX-1 from the Sentinel's
+                    # pool so that the ZX-1 isn't weighted any more than it already is.
+
+                    set GD_Itempools.Runnables.Pool_FinalBossRaid BalancedItems
+                    (
+                        ( 
+                            ItmPoolDefinition=None, 
+                            InvBalanceDefinition=WeaponBalanceDefinition'GD_Cork_Weap_SniperRifles.A_Weapons_Legendary.Sniper_Vladof_5_Longnail', 
+                            Probability=( 
+                                BaseValueConstant=0.000000, 
+                                BaseValueAttribute=None, 
+                                InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common', 
+                                BaseValueScaleConstant=1.000000 
+                            ), 
+                            bDropOnDeath=True 
+                        ),
+                        (
+                            ItmPoolDefinition=None, 
+                            InvBalanceDefinition=InventoryBalanceDefinition'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Nova_Singularity', 
+                            Probability=( 
+                                BaseValueConstant=0.000000, 
+                                BaseValueAttribute=None, 
+                                InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common', 
+                                BaseValueScaleConstant=1.000000 
+                            ), 
+                            bDropOnDeath=True 
+                        ),
+                        (
+                            ItmPoolDefinition=None, 
+                            InvBalanceDefinition=InventoryBalanceDefinition'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Absorption_PrismaticBulwark', 
+                            Probability=( 
+                                BaseValueConstant=0.000000, 
+                                BaseValueAttribute=None, 
+                                InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common', 
+                                BaseValueScaleConstant=1.000000 
+                            ), 
+                            bDropOnDeath=True 
+                        )
+                    )
+
+                #</Empyrean Sentinel (raid version) Pool>
+
+                #<Flameknuckle (playthrough 1)>
+
+                    #<Drop from Badass Pool>
+
+                        # Makes Flameknuckle drop from the Badass pool on playthrough one
+                        # (ordinarily this only happens on Playthrough 2+).
+
+                        level MoonShotIntro_P set GD_DahlPowersuit_Knuckle.Population.PawnBalance_DahlSergeantFlameKnuckle PlayThroughs[0].CustomItemPoolIncludedLists
+                        (
+                            ItemPoolListDefinition'GD_Itempools.ListDefs.BadassEnemyGunsAndGear'
+                        )
+
+                    #</Drop from Badass Pool>
+
+                    #<Fix Equip Pool>
+
+                        # UCP 2.1 has a command to have Flameknuckle have a chance to drop
+                        # the Nukem even on Normal mode, but the command inadvertantly
+                        # removes his equip pools on Normal.  This fixes that problem, so
+                        # he'll equip like he should.
+                        
+                        level MoonShotIntro_P set GD_DahlPowersuit_Knuckle.Population.PawnBalance_DahlSergeantFlameKnuckle PlayThroughs[0].CustomItemPoolList
+                        (
+                            (
+                                ItemPool = ItemPoolDefinition'GD_Itempools.Runnables.Pool_FlameKnuckle',
+                                PoolProbability =
+                                (
+                                    BaseValueConstant = 0.000000,
+                                    BaseValueAttribute = AttributeDefinition'GD_Itempools.DropWeights.DropODDS_BossUniqueRares',
+                                    InitializationDefinition = None,
+                                    BaseValueScaleConstant = 1.000000
+                                )
+                            ),
+                            ( 
+                                ItemPool=ItemPoolDefinition'GD_DahlPowersuit_Knuckle.WeaponPools.Pool_Weapons_KnuckleLaser_EnemyUse', 
+                                PoolProbability=( 
+                                    BaseValueConstant=1.000000, 
+                                    BaseValueAttribute=None, 
+                                    InitializationDefinition=None, 
+                                    BaseValueScaleConstant=1.000000 
+                                ) 
+                            ),
+                            (
+                                ItemPool=ItemPoolDefinition'GD_ItempoolsEnemyUse.Shields.Pool_Shields_Standard_EnemyUse', 
+                                PoolProbability=( 
+                                    BaseValueConstant=1.000000, 
+                                    BaseValueAttribute=None, 
+                                    InitializationDefinition=None, 
+                                    BaseValueScaleConstant=1.000000 
+                                ) 
+                            )
+                        )
+
+                    #</Fix Equip Pool>
+
+                #</Flameknuckle (playthrough 1)>
+
+                #<Flameknuckle (Holodome Onslaught)>
+
+                    # The stock Flameknuckle found in the Holodome Onslaught weirdly drops
+                    # some specific white+green gear.  Upgrading that to purple+glitch.
+
+                    {mp:flameknuckle_holodome_drop_17}
+
+                    {mp:flameknuckle_holodome_drop_18}
+
+                    {mp:flameknuckle_holodome_drop_19}
+
+                    {mp:flameknuckle_holodome_drop_20}
+
+                    level Eridian_Slaughter_P set GD_DahlPowersuit_KnuckleRepaired.Population.PawnBalance_DahlSergeantFlameKnuckle DefaultItemPoolList[21].ItemPool ItemPoolDefinition'GD_Ma_ItemPools.WeaponPools.Pool_Weapons_All_Glitch_Marigold'
+
+                #</Flameknuckle (Holodome Onslaught)>
+
+                #<Lost Legion Eternal>
+
+                    # When they start to ascend, Lost Legion Eternal troops drop from
+                    # Pool_Weapons_Laser_EnemyUse.  We change this to the main Laser pool
+                    # instead, so it uses our custom weights.
+
+                    level None set GD_DahlFanatic.Character.AIDef_DahlFanatic:AIBehaviorProviderDefinition_0.Behavior_SpawnItems_0 ItemPoolList[0].ItemPool ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_Lasers'
+
+                #</Lost Legion Eternal>
+
+                #<Nel>
+
+                    # Make Nel drop from the epic chest pools, rather than
+                    # specific rarity levels
+
+                    {mp:nel_drops_15}
+
+                    {mp:nel_drops_16}
+
+                    {mp:nel_drops_17}
+
+                    {mp:nel_drops_18}
+
+                    {mp:nel_drops_19}
+
+                    {mp:nel_drops_20}
+
+                    {mp:nel_drops_21}
+
+                #</Nel>
+
+                #<Powersuit Felicity (Holodome Onslaught)>
+
+                    # Makes Powersuit Felicity drop from the Badass pool
+
+                    level Eridian_Slaughter_P set GD_DahlCombatSuit_Felicity.Population.PawnBalance_DahlCombatSuit_Felicity DefaultItemPoolIncludedLists (ItemPoolListDefinition'GD_Itempools.ListDefs.BadassEnemyGunsAndGear')
+
+                #</Powersuit Felicity (Holodome Onslaught)>
+
+                #<Teh Earworm>
+
+                    # You fight and kill Teh Earworm three times over the course of the You
+                    # Can Stop The Music mission, and given our guaranteed-drop section, this
+                    # would end up dropping three Longest Yards.  Rather than bump the drop
+                    # probabilities down (which could result in not getting ANY drops from
+                    # that pool, we're adding the the Zim and the Min Min Lighter to its drop
+                    # pool, so you'll at least get some variety in the drops.
+
+                    set GD_Ma_ItemPools.Runnables.Pool_EarWorm_Marigold BalancedItems
+                    (
+                        ( 
+                            ItmPoolDefinition=None, 
+                            InvBalanceDefinition=WeaponBalanceDefinition'GD_Ma_Weapons.A_Weapons_Legendary.Laser_Hyperion_5_LongestYard', 
+                            Probability=( 
+                                BaseValueConstant=0.000000, 
+                                BaseValueAttribute=None, 
+                                InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common', 
+                                BaseValueScaleConstant=1.000000 
+                            ), 
+                            bDropOnDeath=True 
+                        ),
+                        ( 
+                            ItmPoolDefinition=None, 
+                            InvBalanceDefinition=WeaponBalanceDefinition'GD_Cork_Weap_Pistol.A_Weapons_Legendary.Pistol_Bandit_5_Zim', 
+                            Probability=( 
+                                BaseValueConstant=0.000000, 
+                                BaseValueAttribute=None, 
+                                InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common', 
+                                BaseValueScaleConstant=1.000000 
+                            ), 
+                            bDropOnDeath=True 
+                        ),
+                        ( 
+                            ItmPoolDefinition=None, 
+                            InvBalanceDefinition=WeaponBalanceDefinition'GD_Cork_Weap_Lasers.A_Weapons_Legendary.Laser_Tediore_5_Tesla', 
+                            Probability=( 
+                                BaseValueConstant=0.000000, 
+                                BaseValueAttribute=None, 
+                                InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common', 
+                                BaseValueScaleConstant=1.000000 
+                            ), 
+                            bDropOnDeath=True 
+                        )
+                    )
+
+                #</Teh Earworm>
+
+            #</Better Individual Enemy Drops>
+
+            #<Enemy Drop Nerfs>
+
+                # The Pre-Sequel is, in general, far more generous with loot than BL2 was, and
+                # sometimes that tendency, in conjunction with everything else in this mod,
+                # creates a situation where far too much is getting dropped, even for me.
+                # (This happens in the later BL2 DLCs as well, actually.)  This section nerfs
+                # various drops so that it's not totally overwhelming.
+
+                #<Bosses>
+
+                    #<Felicity Rampant>
+
+                        # Felicity Rampant drops twice from the Super Badass pool, in addition
+                        # to the unique pool loot.  Given the rest of this mod, and especially
+                        # given the room full of epic chests just after, it's a bit much.
+                        # This will convert one of the Super Badass drops to be a couple of
+                        # standard enemy drops.
+
+                        level DahlFactory_Boss set GD_ProtoWarBot_CoreBody.Character.AIDef_ProtoWarBot_CoreBody:AIBehaviorProviderDefinition_0.Behavior_SpawnItems_10 ItemPoolIncludedLists[0] ItemPoolListDefinition'GD_Itempools.ListDefs.StandardEnemyGunsAndGear'
+
+                        level DahlFactory_Boss set GD_ProtoWarBot_CoreBody.Character.AIDef_ProtoWarBot_CoreBody:AIBehaviorProviderDefinition_0.Behavior_SpawnItems_11 ItemPoolIncludedLists (ItemPoolListDefinition'GD_Itempools.ListDefs.SuperBadassEnemyGunsAndGear')
+
+                        # I believe these next two are the same thing, but for playthrough 2+
+
+                        level DahlFactory_Boss set GD_ProtoWarBot_CoreBody.Character.AIDef_ProtoWarBot_CoreBody:AIBehaviorProviderDefinition_0.Behavior_SpawnItems_20 ItemPoolIncludedLists[0] ItemPoolListDefinition'GD_Itempools.ListDefs.StandardEnemyGunsAndGear'
+
+                        level DahlFactory_Boss set GD_ProtoWarBot_CoreBody.Character.AIDef_ProtoWarBot_CoreBody:AIBehaviorProviderDefinition_0.Behavior_SpawnItems_21 ItemPoolIncludedLists (ItemPoolListDefinition'GD_Itempools.ListDefs.SuperBadassEnemyGunsAndGear')
+
+                    #</Felicity Rampant>
+
+                    #<The Sentinel (non-raid)>
+
+                        # The Sentinel drops twice from the UltimateBadass pool by default,
+                        # which is pretty excessive when paired with the Empyrian Sentinel
+                        # drops as well.  Reduce it to only drop once.
+
+                        level InnerCore_P set GD_Population_FinalBossCork.Balance.PawnBalance_FinalBossCork DefaultItemPoolIncludedLists
+                        (
+                            ItemPoolListDefinition'GD_Itempools.ListDefs.UltimateBadassEnemyGunsAndGear'
+                        )
+
+                    #</The Sentinel (non-raid)>
+
+                    #<The Empyrean Sentinel (non-raid)>
+
+                        # By default, the Empyrean Sentinel (non-raid version) drops three
+                        # times from UltimateBadass and twice from RaidBoss (plus some drops
+                        # from a number of custom drop pools).  We're leaving the custom
+                        # drop pool rates alone, but we're going to change the otehr drop
+                        # rates to: 2x Regular Badass, 2x Super Badass, 1x Ultimate.
+
+                        level InnerCore_P set GD_FinalBossCorkBig.IOs.IO_LootSpew:BehaviorProviderDefinition_0.Behavior_SpawnItems_81 ItemPoolIncludedLists[0] ItemPoolListDefinition'GD_Itempools.ListDefs.BadassEnemyGunsAndGear'
+
+                        level InnerCore_P set GD_FinalBossCorkBig.IOs.IO_LootSpew:BehaviorProviderDefinition_0.Behavior_SpawnItems_84 ItemPoolIncludedLists[0] ItemPoolListDefinition'GD_Itempools.ListDefs.SuperBadassEnemyGunsAndGear'
+
+                        level InnerCore_P set GD_FinalBossCorkBig.IOs.IO_LootSpew:BehaviorProviderDefinition_0.Behavior_SpawnItems_86 ItemPoolIncludedLists[0] ItemPoolListDefinition'GD_Itempools.ListDefs.SuperBadassEnemyGunsAndGear'
+
+                    #</The Empyrean Sentinel (non-raid)>
+
+                    #<The Empyrean Sentinel (raid)>
+
+                        # By deafult, the Empyrean Sentinel (raid version) drops twice from
+                        # the UltimateBadass pool and once from RaidBoss.  This actually
+                        # requires less nerfing than the non-raid version; we're just going
+                        # to change one of the Ultimate drops to Super, and restrict the
+                        # number of unique-pool drops to 2.
+
+                        level InnerCore_P set GD_FinalBossCorkBig.IOs.IO_LootSpew:BehaviorProviderDefinition_0.Behavior_SpawnItems_83 ItemPoolIncludedLists[0] ItemPoolListDefinition'GD_Itempools.ListDefs.SuperBadassEnemyGunsAndGear'
+
+                        level InnerCore_P set GD_FinalBossCorkBig.IOs.IO_LootSpew:BehaviorProviderDefinition_0.Behavior_SpawnItems_88 ItemPoolList
+                        (
+                            ( 
+                                ItemPool=ItemPoolDefinition'GD_Itempools.Runnables.Pool_ColZarpedon', 
+                                PoolProbability=( 
+                                    BaseValueConstant=0.000000, 
+                                    BaseValueAttribute=AttributeDefinition'GD_Itempools.DropWeights.DropODDS_BossUniques', 
+                                    InitializationDefinition=None, 
+                                    BaseValueScaleConstant=1.000000 
+                                ) 
+                            )
+                        )
+
+                    #</The Empyrean Sentinel (raid)>
+
+                #</Bosses>
+
+                #<Non-Boss Enemies>
+
+                    # Some enemies in TPS use the main "Boss Uniques" and "Boss Unique Rares"
+                    # probabilities for a chance to drop legendary loot.  That might be okay,
+                    # given the usual Boss Uniques constants, but since we buff those in this mod,
+                    # these enemies start dropping loot way too much.  So, these are actually some
+                    # nerfs to bring those probabilities back down to a reasonable level.
+
+                    #<Badass Kraggons>
+
+                        level None set GD_Cork_Population_EleBeast.Balance.PawnBalance_ElementalSpitterBadass DefaultItemPoolList[0].PoolProbability
+                        (
+                            BaseValueConstant=0.100000, 
+                            BaseValueAttribute=None,
+                            InitializationDefinition=None, 
+                            BaseValueScaleConstant=1.000000 
+                        )
+
+                    #</Badass Kraggons>
+
+                    #<Tork Dredgers>
+
+                        level None set GD_Population_Tork.Balance.PawnBalance_TorkDredger DefaultItemPoolList[0].PoolProbability
+                        (
+                            BaseValueConstant=0.100000, 
+                            BaseValueAttribute=None,
+                            InitializationDefinition=None, 
+                            BaseValueScaleConstant=0.125000 
+                        )
+
+                    #</Tork Dredgers>
+
+                    #<Guard.Clapdog>
+
+                        # This one's slightly different - there's a duplicate pool definition, so
+                        # we're disabling one of them entirely
+
+                        level None set GD_Ma_Pop_ClaptrapForces.Balance.PawnBalance_ClapDawg DefaultItemPoolList[0].PoolProbability
+                        (
+                            BaseValueConstant=0.000000, 
+                            BaseValueAttribute=None,
+                            InitializationDefinition=None, 
+                            BaseValueScaleConstant=0.000000 
+                        )
+
+                    #</Guard.Clapdog>
+
+                #</Non-Boss Enemies>
+
+            #</Enemy Drop Nerfs>
+
+        #</Better Enemy Drops>
+
+    #</Base Mod Configuration>
+
+    #<Remove Level-Based Loot Restrictions (superset of UCP 2.1)>
+
+        # This should allow all loot to spawn at the very beginning of the game, including
+        # all types of weapons, part types, elements, etc.  This is a superset of similar
+        # functionality already present in UCP 2.1, though this does more than what UCP
+        # does.  There is no conflict with having both enabled at the same time, though
+        # UCP goes about it in a different way than we do here.
+        #
+        # Copied from TPS Early Bloomer v1.1.0 by Apocalyptech, though with a few of the
+        # unlocks moved into the main mod section.
+        #
+        # This section is already also included in TPS Cold Dead Hands, but there's no problem
+        # with having it enabled in both.
+
+{early_game_unlocks}
+
+    #</Remove Level-Based Loot Restrictions (superset of UCP 2.1)>
+
+    #<Legendary Pool Improvements>
+
+        # Categories to alter what items are in the global legendary pools.  Mostly this
+        # is just adding in unique items to the pools.  This omits a couple of items, such
+        # as the Monster Trap grenade, but is otherwise complete.
+
+        #<Base Setup for Pools (don't uncheck this if you choose anything below here)><lock>
+
+            # Initializes the various Legendary drop pools in a way which lets us choose
+            # what else to put in them (via hotfix) in the next categories.
+
+            #<Legendary Class Mod Pools Setup>
+
+                set GD_Cork_Itempools.ClassModPools.Pool_ClassMod_Enforcer_05_Legendary BalancedItems
+                (
+                    (
+                        ItmPoolDefinition=None, 
+                        InvBalanceDefinition=InventoryBalanceDefinition'GD_Cork_ItemGrades.ClassMods.BalDef_ClassMod_Enforcer_05_Legendary', 
+                        Probability=( 
+                            BaseValueConstant=1.000000, 
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=None,
+                            BaseValueScaleConstant=1.000000 
+                        ), 
+                        bDropOnDeath=True 
+                    ),
+                    (
+                        ItmPoolDefinition=None, 
+                        InvBalanceDefinition=InventoryBalanceDefinition'GD_Petunia_ItemGrades.ClassMods.BalDef_Pet_ClassMod_Enforcer_07_Chronicler', 
+                        Probability=( 
+                            BaseValueConstant=1.000000, 
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=None,
+                            BaseValueScaleConstant=1.000000 
+                        ), 
+                        bDropOnDeath=True 
+                    ),
+                    (
+                        ItmPoolDefinition=None, 
+                        InvBalanceDefinition=InventoryBalanceDefinition'GD_Cork_ItemGrades.ClassMods.BalDef_ClassMod_Enforcer_06_EridianVanquisher', 
+                        Probability=( 
+                            BaseValueConstant=1.000000, 
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=None,
+                            BaseValueScaleConstant=1.000000 
+                        ), 
+                        bDropOnDeath=True 
+                    )
+                )
+
+                set GD_Cork_Itempools.ClassModPools.Pool_ClassMod_Gladiator_05_Legendary BalancedItems
+                (
+                    (
+                        ItmPoolDefinition=None, 
+                        InvBalanceDefinition=InventoryBalanceDefinition'GD_Cork_ItemGrades.ClassMods.BalDef_ClassMod_Gladiator_05_Legendary', 
+                        Probability=( 
+                            BaseValueConstant=1.000000, 
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=None,
+                            BaseValueScaleConstant=1.000000 
+                        ), 
+                        bDropOnDeath=True 
+                    ),
+                    (
+                        ItmPoolDefinition=None, 
+                        InvBalanceDefinition=InventoryBalanceDefinition'GD_Petunia_ItemGrades.ClassMods.BalDef_Pet_ClassMod_Gladiator_07_Chronicler', 
+                        Probability=( 
+                            BaseValueConstant=1.000000, 
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=None,
+                            BaseValueScaleConstant=1.000000 
+                        ), 
+                        bDropOnDeath=True 
+                    ),
+                    (
+                        ItmPoolDefinition=None, 
+                        InvBalanceDefinition=InventoryBalanceDefinition'GD_Cork_ItemGrades.ClassMods.BalDef_ClassMod_Gladiator_06_EridianVanquisher', 
+                        Probability=( 
+                            BaseValueConstant=1.000000, 
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=None,
+                            BaseValueScaleConstant=1.000000 
+                        ), 
+                        bDropOnDeath=True 
+                    )
+                )
+
+                set GD_Cork_Itempools.ClassModPools.Pool_ClassMod_Lawbringer_05_Legendary BalancedItems
+                (
+                    (
+                        ItmPoolDefinition=None, 
+                        InvBalanceDefinition=InventoryBalanceDefinition'GD_Cork_ItemGrades.ClassMods.BalDef_ClassMod_Lawbringer_05_Legendary', 
+                        Probability=( 
+                            BaseValueConstant=1.000000, 
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=None,
+                            BaseValueScaleConstant=1.000000 
+                        ), 
+                        bDropOnDeath=True 
+                    ),
+                    (
+                        ItmPoolDefinition=None, 
+                        InvBalanceDefinition=InventoryBalanceDefinition'GD_Petunia_ItemGrades.ClassMods.BalDef_Pet_ClassMod_Lawbringer_07_Chronicler', 
+                        Probability=( 
+                            BaseValueConstant=1.000000, 
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=None,
+                            BaseValueScaleConstant=1.000000 
+                        ), 
+                        bDropOnDeath=True 
+                    ),
+                    (
+                        ItmPoolDefinition=None, 
+                        InvBalanceDefinition=InventoryBalanceDefinition'GD_Cork_ItemGrades.ClassMods.BalDef_ClassMod_Lawbringer_06_EridianVanquisher', 
+                        Probability=( 
+                            BaseValueConstant=1.000000, 
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=None,
+                            BaseValueScaleConstant=1.000000 
+                        ), 
+                        bDropOnDeath=True 
+                    )
+                )
+
+                set GD_Cork_Itempools.ClassModPools.Pool_ClassMod_Prototype_05_Legendary BalancedItems
+                (
+                    (
+                        ItmPoolDefinition=None, 
+                        InvBalanceDefinition=InventoryBalanceDefinition'GD_Cork_ItemGrades.ClassMods.BalDef_ClassMod_Prototype_05_Legendary', 
+                        Probability=( 
+                            BaseValueConstant=1.000000, 
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=None,
+                            BaseValueScaleConstant=1.000000 
+                        ), 
+                        bDropOnDeath=True 
+                    ),
+                    (
+                        ItmPoolDefinition=None, 
+                        InvBalanceDefinition=InventoryBalanceDefinition'GD_Petunia_ItemGrades.ClassMods.BalDef_Pet_ClassMod_Prototype_07_Chronicler', 
+                        Probability=( 
+                            BaseValueConstant=1.000000, 
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=None,
+                            BaseValueScaleConstant=1.000000 
+                        ), 
+                        bDropOnDeath=True 
+                    ),
+                    (
+                        ItmPoolDefinition=None, 
+                        InvBalanceDefinition=InventoryBalanceDefinition'GD_Cork_ItemGrades.ClassMods.BalDef_ClassMod_Prototype_06_EridianVanquisher', 
+                        Probability=( 
+                            BaseValueConstant=1.000000, 
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=None,
+                            BaseValueScaleConstant=1.000000 
+                        ), 
+                        bDropOnDeath=True 
+                    )
+                )
+
+                set GD_Crocus_Itempools.ClassModPools.Pool_ClassMod_Baroness_05_Legendary BalancedItems
+                (
+                    (
+                        ItmPoolDefinition=None, 
+                        InvBalanceDefinition=InventoryBalanceDefinition'GD_Crocus_ItemGrades.ClassMods.BalDef_ClassMod_Baroness_05_Legendary', 
+                        Probability=( 
+                            BaseValueConstant=1.000000, 
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=None,
+                            BaseValueScaleConstant=1.000000 
+                        ), 
+                        bDropOnDeath=True 
+                    ),
+                    (
+                        ItmPoolDefinition=None, 
+                        InvBalanceDefinition=InventoryBalanceDefinition'GD_Crocus_ItemGrades.ClassMods.BalDef_ClassMod_Baroness_07_ChroniclerOfElpis', 
+                        Probability=( 
+                            BaseValueConstant=1.000000, 
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=None,
+                            BaseValueScaleConstant=1.000000 
+                        ), 
+                        bDropOnDeath=True 
+                    ),
+                    (
+                        ItmPoolDefinition=None, 
+                        InvBalanceDefinition=InventoryBalanceDefinition'GD_Crocus_ItemGrades.ClassMods.BalDef_ClassMod_Baroness_06_EridianVanquisher', 
+                        Probability=( 
+                            BaseValueConstant=1.000000, 
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=None,
+                            BaseValueScaleConstant=1.000000 
+                        ), 
+                        bDropOnDeath=True 
+                    )
+                )
+
+                set GD_Quince_Itempools.ClassModPools.Pool_ClassMod_Doppelganger_05_Legendary BalancedItems
+                (
+                    (
+                        ItmPoolDefinition=None, 
+                        InvBalanceDefinition=InventoryBalanceDefinition'GD_Quince_ItemGrades.ClassMods.BalDef_ClassMod_Doppelganger_05_Legendary', 
+                        Probability=( 
+                            BaseValueConstant=1.000000, 
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=None,
+                            BaseValueScaleConstant=1.000000 
+                        ), 
+                        bDropOnDeath=True 
+                    ),
+                    (
+                        ItmPoolDefinition=None, 
+                        InvBalanceDefinition=InventoryBalanceDefinition'GD_Petunia_ItemGrades.ClassMods.BalDef_Pet_ClassMod_Doppel_07_Chronicler', 
+                        Probability=( 
+                            BaseValueConstant=1.000000, 
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=None,
+                            BaseValueScaleConstant=1.000000 
+                        ), 
+                        bDropOnDeath=True 
+                    ),
+                    (
+                        ItmPoolDefinition=None, 
+                        InvBalanceDefinition=InventoryBalanceDefinition'GD_Quince_ItemGrades.ClassMods.BalDef_ClassMod_Doppelganger_06_EridianVanquisher', 
+                        Probability=( 
+                            BaseValueConstant=1.000000, 
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=None,
+                            BaseValueScaleConstant=1.000000 
+                        ), 
+                        bDropOnDeath=True 
+                    )
+                )
+
+            #</Legendary Class Mod Pools Setup>
+
+            #<Legendary Grenade Mod Pool Setup>
+
+                set GD_Itempools.GrenadeModPools.Pool_GrenadeMods_06_Legendary BalancedItems
+                (
+                    (
+                        ItmPoolDefinition=None, 
+                        InvBalanceDefinition=InventoryBalanceDefinition'GD_Cork_GrenadeMods.A_Item_Legendary.GM_BonusPackage', 
+                        Probability=( 
+                            BaseValueConstant=1.000000, 
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=None,
+                            BaseValueScaleConstant=1.000000 
+                        ), 
+                        bDropOnDeath=True 
+                    ),
+                    (
+                        ItmPoolDefinition=None, 
+                        InvBalanceDefinition=InventoryBalanceDefinition'GD_GrenadeMods.A_Item_Legendary.GM_BouncingBonny', 
+                        Probability=( 
+                            BaseValueConstant=1.000000, 
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=None,
+                            BaseValueScaleConstant=1.000000 
+                        ), 
+                        bDropOnDeath=True 
+                    ),
+                    (
+                        ItmPoolDefinition=None, 
+                        InvBalanceDefinition=InventoryBalanceDefinition'GD_GrenadeMods.A_Item_Legendary.GM_FireBee', 
+                        Probability=( 
+                            BaseValueConstant=1.000000, 
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=None,
+                            BaseValueScaleConstant=1.000000 
+                        ), 
+                        bDropOnDeath=True 
+                    ),
+                    (
+                        ItmPoolDefinition=None, 
+                        InvBalanceDefinition=InventoryBalanceDefinition'GD_GrenadeMods.A_Item_Legendary.GM_FourSeasons', 
+                        Probability=( 
+                            BaseValueConstant=1.000000, 
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=None,
+                            BaseValueScaleConstant=1.000000 
+                        ), 
+                        bDropOnDeath=True 
+                    ),
+                    (
+                        ItmPoolDefinition=None, 
+                        InvBalanceDefinition=InventoryBalanceDefinition'GD_GrenadeMods.A_Item_Legendary.GM_Leech', 
+                        Probability=( 
+                            BaseValueConstant=1.000000, 
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=None,
+                            BaseValueScaleConstant=1.000000 
+                        ), 
+                        bDropOnDeath=True 
+                    ),
+                    (
+                        ItmPoolDefinition=None, 
+                        InvBalanceDefinition=InventoryBalanceDefinition'GD_Ma_GrenadeMods.A_Item_Legendary.GM_Meganade', 
+                        Probability=( 
+                            BaseValueConstant=1.000000, 
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=None,
+                            BaseValueScaleConstant=1.000000 
+                        ), 
+                        bDropOnDeath=True 
+                    ),
+                    (
+                        ItmPoolDefinition=None, 
+                        InvBalanceDefinition=InventoryBalanceDefinition'GD_GrenadeMods.A_Item_Legendary.GM_NastySurprise', 
+                        Probability=( 
+                            BaseValueConstant=1.000000, 
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=None,
+                            BaseValueScaleConstant=1.000000 
+                        ), 
+                        bDropOnDeath=True 
+                    ),
+                    (
+                        ItmPoolDefinition=None, 
+                        InvBalanceDefinition=InventoryBalanceDefinition'GD_GrenadeMods.A_Item_Legendary.GM_Pandemic', 
+                        Probability=( 
+                            BaseValueConstant=1.000000, 
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=None,
+                            BaseValueScaleConstant=1.000000 
+                        ), 
+                        bDropOnDeath=True 
+                    ),
+                    (
+                        ItmPoolDefinition=None, 
+                        InvBalanceDefinition=InventoryBalanceDefinition'GD_Cork_GrenadeMods.A_Item_Legendary.GM_Quasar', 
+                        Probability=( 
+                            BaseValueConstant=1.000000, 
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=None,
+                            BaseValueScaleConstant=1.000000 
+                        ), 
+                        bDropOnDeath=True 
+                    ),
+                    (
+                        ItmPoolDefinition=None, 
+                        InvBalanceDefinition=InventoryBalanceDefinition'GD_GrenadeMods.A_Item_Legendary.GM_RollingThunder', 
+                        Probability=( 
+                            BaseValueConstant=1.000000, 
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=None,
+                            BaseValueScaleConstant=1.000000 
+                        ), 
+                        bDropOnDeath=True 
+                    ),
+                    (
+                        ItmPoolDefinition=None, 
+                        InvBalanceDefinition=InventoryBalanceDefinition'GD_GrenadeMods.A_Item_Legendary.GM_StormFront', 
+                        Probability=( 
+                            BaseValueConstant=1.000000, 
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=None,
+                            BaseValueScaleConstant=1.000000 
+                        ), 
+                        bDropOnDeath=True 
+                    ),
+                    (
+                        ItmPoolDefinition=None, 
+                        InvBalanceDefinition=None,
+                        Probability=( 
+                            BaseValueConstant=0,
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=None,
+                            BaseValueScaleConstant=1.000000 
+                        ), 
+                        bDropOnDeath=True 
+                    ),
+                    (
+                        ItmPoolDefinition=None, 
+                        InvBalanceDefinition=None,
+                        Probability=( 
+                            BaseValueConstant=0,
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=None,
+                            BaseValueScaleConstant=1.000000 
+                        ), 
+                        bDropOnDeath=True 
+                    ),
+                    (
+                        ItmPoolDefinition=None, 
+                        InvBalanceDefinition=None,
+                        Probability=( 
+                            BaseValueConstant=0,
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=None,
+                            BaseValueScaleConstant=1.000000 
+                        ), 
+                        bDropOnDeath=True 
+                    ),
+                    (
+                        ItmPoolDefinition=None, 
+                        InvBalanceDefinition=None,
+                        Probability=( 
+                            BaseValueConstant=0,
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=None,
+                            BaseValueScaleConstant=1.000000 
+                        ), 
+                        bDropOnDeath=True 
+                    ),
+                    (
+                        ItmPoolDefinition=None, 
+                        InvBalanceDefinition=None,
+                        Probability=( 
+                            BaseValueConstant=0,
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=None,
+                            BaseValueScaleConstant=1
+                        ), 
+                        bDropOnDeath=True 
+                    )
+                )
+
+            #</Legendary Grenade Mod Pool Setup>
+
+            #<Legendary OzKit Pool Setup>
+
+                set GD_Itempools.MoonItemPools.Pool_MoonItem_06_Legendary BalancedItems
+                (
+                    (
+                        ItmPoolDefinition=None, 
+                        InvBalanceDefinition=InventoryBalanceDefinition'GD_MoonItems.A_Item_Unique.A_Oxidizer', 
+                        Probability=( 
+                            BaseValueConstant=1.000000, 
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=None,
+                            BaseValueScaleConstant=1.000000 
+                        ), 
+                        bDropOnDeath=True 
+                    ),
+                    (
+                        ItmPoolDefinition=None, 
+                        InvBalanceDefinition=InventoryBalanceDefinition'GD_MoonItems.A_Item_Unique.A_MoonlightSaga', 
+                        Probability=( 
+                            BaseValueConstant=1.000000, 
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=None,
+                            BaseValueScaleConstant=1.000000 
+                        ), 
+                        bDropOnDeath=True 
+                    ),
+                    (
+                        ItmPoolDefinition=None, 
+                        InvBalanceDefinition=InventoryBalanceDefinition'GD_MoonItems.A_Item_Unique.A_AckAck', 
+                        Probability=( 
+                            BaseValueConstant=1.000000, 
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=None,
+                            BaseValueScaleConstant=1.000000 
+                        ), 
+                        bDropOnDeath=True 
+                    ),
+                    (
+                        ItmPoolDefinition=None, 
+                        InvBalanceDefinition=InventoryBalanceDefinition'GD_MoonItems.A_Item_Unique.A_Astrotech', 
+                        Probability=( 
+                            BaseValueConstant=1.000000, 
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=None,
+                            BaseValueScaleConstant=1.000000 
+                        ), 
+                        bDropOnDeath=True 
+                    ),
+                    (
+                        ItmPoolDefinition=None, 
+                        InvBalanceDefinition=InventoryBalanceDefinition'GD_MoonItems.A_Item_Unique.A_SupportRelay', 
+                        Probability=( 
+                            BaseValueConstant=1.000000, 
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=None,
+                            BaseValueScaleConstant=1.000000 
+                        ), 
+                        bDropOnDeath=True 
+                    ),
+                    (
+                        ItmPoolDefinition=None, 
+                        InvBalanceDefinition=None,
+                        Probability=( 
+                            BaseValueConstant=0,
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=None,
+                            BaseValueScaleConstant=1.000000 
+                        ), 
+                        bDropOnDeath=True 
+                    ),
+                    (
+                        ItmPoolDefinition=None, 
+                        InvBalanceDefinition=None,
+                        Probability=( 
+                            BaseValueConstant=0,
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=None,
+                            BaseValueScaleConstant=1.000000 
+                        ), 
+                        bDropOnDeath=True 
+                    ),
+                    (
+                        ItmPoolDefinition=None, 
+                        InvBalanceDefinition=None,
+                        Probability=( 
+                            BaseValueConstant=0,
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=None,
+                            BaseValueScaleConstant=1.000000 
+                        ), 
+                        bDropOnDeath=True 
+                    ),
+                    (
+                        ItmPoolDefinition=None, 
+                        InvBalanceDefinition=None,
+                        Probability=( 
+                            BaseValueConstant=0,
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=None,
+                            BaseValueScaleConstant=1.000000 
+                        ), 
+                        bDropOnDeath=True 
+                    ),
+                    (
+                        ItmPoolDefinition=None, 
+                        InvBalanceDefinition=None,
+                        Probability=( 
+                            BaseValueConstant=0,
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=None,
+                            BaseValueScaleConstant=1.000000 
+                        ), 
+                        bDropOnDeath=True 
+                    ),
+                )
+
+            #</Legendary OzKit Pool Setup>
+
+            #<Legendary Shield Pools Setup>
+
+                set GD_Itempools.ShieldPools.Pool_Shields_Absorption_06_Legendary BalancedItems
+                (
+                    ( 
+                        ItmPoolDefinition=None, 
+                        InvBalanceDefinition=InventoryBalanceDefinition'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Absorption_05_LegendaryShock', 
+                        Probability=( 
+                            BaseValueConstant=1.000000, 
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=None, 
+                            BaseValueScaleConstant=1.000000 
+                        ), 
+                        bDropOnDeath=True 
+                    ),
+                    (
+                        ItmPoolDefinition=None, 
+                        InvBalanceDefinition=InventoryBalanceDefinition'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Absorption_05_LegendaryNormal', 
+                        Probability=( 
+                            BaseValueConstant=1.000000, 
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=None, 
+                            BaseValueScaleConstant=1.000000 
+                        ), 
+                        bDropOnDeath=True 
+                    ),
+                    (
+                        ItmPoolDefinition=None, 
+                        InvBalanceDefinition=InventoryBalanceDefinition'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Absorption_PrismaticBulwark', 
+                        Probability=( 
+                            BaseValueConstant=1.000000, 
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=None, 
+                            BaseValueScaleConstant=1.000000 
+                        ), 
+                        bDropOnDeath=True 
+                    )
+                )
+
+                set GD_Itempools.ShieldPools.Pool_Shields_Booster_06_Legendary BalancedItems
+                (
+                    (
+                        ItmPoolDefinition=None, 
+                        InvBalanceDefinition=InventoryBalanceDefinition'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Booster_05_Legendary', 
+                        Probability=( 
+                            BaseValueConstant=1.000000, 
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=None,
+                            BaseValueScaleConstant=1.000000 
+                        ), 
+                        bDropOnDeath=True 
+                    ),
+                    (
+                        ItmPoolDefinition=None, 
+                        InvBalanceDefinition=None,
+                        Probability=( 
+                            BaseValueConstant=0.000000, 
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=None,
+                            BaseValueScaleConstant=1.000000 
+                        ), 
+                        bDropOnDeath=True 
+                    ),
+                    (
+                        ItmPoolDefinition=None, 
+                        InvBalanceDefinition=None,
+                        Probability=( 
+                            BaseValueConstant=0.000000, 
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=None,
+                            BaseValueScaleConstant=1.000000 
+                        ), 
+                        bDropOnDeath=True 
+                    )
+                )
+
+                set GD_Itempools.ShieldPools.Pool_Shields_Chimera_06_Legendary BalancedItems
+                (
+                    (
+                        ItmPoolDefinition=None, 
+                        InvBalanceDefinition=InventoryBalanceDefinition'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Chimera_05_Legendary', 
+                        Probability=( 
+                            BaseValueConstant=1.000000, 
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=None,
+                            BaseValueScaleConstant=1.000000 
+                        ), 
+                        bDropOnDeath=True 
+                    ),
+                    (
+                        ItmPoolDefinition=None, 
+                        InvBalanceDefinition=None,
+                        Probability=( 
+                            BaseValueConstant=0.000000, 
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=None,
+                            BaseValueScaleConstant=1.000000 
+                        ), 
+                        bDropOnDeath=True 
+                    ),
+                    (
+                        ItmPoolDefinition=None, 
+                        InvBalanceDefinition=None,
+                        Probability=( 
+                            BaseValueConstant=0.000000, 
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=None,
+                            BaseValueScaleConstant=1.000000 
+                        ), 
+                        bDropOnDeath=True 
+                    )
+                )
+
+                set GD_Itempools.ShieldPools.Pool_Shields_Impact_06_Legendary BalancedItems
+                (
+                    (
+                        ItmPoolDefinition=None, 
+                        InvBalanceDefinition=InventoryBalanceDefinition'GD_Ma_Shields.A_Item_Legendary.ItemGrade_Gear_Shield_Impact_05_Rerouter',
+                        Probability=( 
+                            BaseValueConstant=1.000000, 
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=None,
+                            BaseValueScaleConstant=1.000000 
+                        ), 
+                        bDropOnDeath=True 
+                    )
+                )
+
+                set GD_Itempools.ShieldPools.Pool_Shields_Juggernaut_06_Legendary BalancedItems
+                (
+                    (
+                        ItmPoolDefinition=None, 
+                        InvBalanceDefinition=InventoryBalanceDefinition'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Juggernaut_05_Legendary', 
+                        Probability=( 
+                            BaseValueConstant=1.000000, 
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=None,
+                            BaseValueScaleConstant=1.000000 
+                        ), 
+                        bDropOnDeath=True 
+                    ),
+                    (
+                        ItmPoolDefinition=None, 
+                        InvBalanceDefinition=None,
+                        Probability=( 
+                            BaseValueConstant=0.000000, 
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=None,
+                            BaseValueScaleConstant=1.000000 
+                        ), 
+                        bDropOnDeath=True 
+                    )
+                )
+
+                set GD_Itempools.ShieldPools.Pool_Shields_NovaShields_All_06_Legendary BalancedItems
+                (
+                    (
+                        ItmPoolDefinition=None, 
+                        InvBalanceDefinition=InventoryBalanceDefinition'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Nova_Singularity', 
+                        Probability=( 
+                            BaseValueConstant=1.000000, 
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=None,
+                            BaseValueScaleConstant=1.000000 
+                        ), 
+                        bDropOnDeath=True 
+                    ),
+                    (
+                        ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ShieldPools.Pool_Shields_NovaShields_Explosive_06_Legendary', 
+                        InvBalanceDefinition=None, 
+                        Probability=( 
+                            BaseValueConstant=1.000000, 
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=None,
+                            BaseValueScaleConstant=1.000000 
+                        ), 
+                        bDropOnDeath=True 
+                    ),
+                    (
+                        ItmPoolDefinition=None, 
+                        InvBalanceDefinition=InventoryBalanceDefinition'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Nova_Supernova', 
+                        Probability=( 
+                            BaseValueConstant=1.000000, 
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=None,
+                            BaseValueScaleConstant=1.000000 
+                        ), 
+                        bDropOnDeath=True 
+                    ),
+                    (
+                        ItmPoolDefinition=None, 
+                        InvBalanceDefinition=None,
+                        Probability=( 
+                            BaseValueConstant=0.000000, 
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=None,
+                            BaseValueScaleConstant=1.000000 
+                        ), 
+                        bDropOnDeath=True 
+                    ),
+                    (
+                        ItmPoolDefinition=None, 
+                        InvBalanceDefinition=None,
+                        Probability=( 
+                            BaseValueConstant=0.000000, 
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=None,
+                            BaseValueScaleConstant=1.000000 
+                        ), 
+                        bDropOnDeath=True 
+                    )
+                )
+
+                set GD_Itempools.ShieldPools.Pool_Shields_Roid_06_Legendary BalancedItems
+                (
+                    ( 
+                        ItmPoolDefinition=None, 
+                        InvBalanceDefinition=InventoryBalanceDefinition'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Roid_05_Legendary', 
+                        Probability=( 
+                            BaseValueConstant=1.000000, 
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=None, 
+                            BaseValueScaleConstant=1.000000 
+                        ), 
+                        bDropOnDeath=True 
+                    ),
+                    (
+                        ItmPoolDefinition=None, 
+                        InvBalanceDefinition=InventoryBalanceDefinition'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Roid_ShootingStar', 
+                        Probability=( 
+                            BaseValueConstant=1.000000, 
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=None, 
+                            BaseValueScaleConstant=1.000000 
+                        ), 
+                        bDropOnDeath=True 
+                    ),
+                    (
+                        ItmPoolDefinition=None, 
+                        InvBalanceDefinition=InventoryBalanceDefinition'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Roid_Avalanche', 
+                        Probability=( 
+                            BaseValueConstant=1.000000, 
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=None, 
+                            BaseValueScaleConstant=1.000000 
+                        ), 
+                        bDropOnDeath=True 
+                    )
+                )
+
+                set GD_Itempools.ShieldPools.Pool_Shields_SpikeShields_All_06_Legendary BalancedItems
+                (
+                    ( 
+                        ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ShieldPools.Pool_Shields_SpikeShields_Corrosive_06_Legendary',
+                        InvBalanceDefinition=None, 
+                        Probability=( 
+                            BaseValueConstant=1.000000, 
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=None, 
+                            BaseValueScaleConstant=1.000000 
+                        ), 
+                        bDropOnDeath=True 
+                    )
+                )
+
+                set GD_Itempools.ShieldPools.Pool_Shields_Standard_06_Legendary BalancedItems
+                (
+                    (
+                        ItmPoolDefinition=None, 
+                        InvBalanceDefinition=InventoryBalanceDefinition'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Standard_05_Legendary', 
+                        Probability=( 
+                            BaseValueConstant=1.000000, 
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=None,
+                            BaseValueScaleConstant=1.000000 
+                        ), 
+                        bDropOnDeath=True 
+                    ),
+                    (
+                        ItmPoolDefinition=None, 
+                        InvBalanceDefinition=None,
+                        Probability=( 
+                            BaseValueConstant=0.000000, 
+                            BaseValueAttribute=None, 
+                            InitializationDefinition=None,
+                            BaseValueScaleConstant=1.000000 
+                        ), 
+                        bDropOnDeath=True 
+                    )
+                )
+
+                #<Normalize Legendary Shield Probabilities>
+
+                    # Makes sure that the main legendary shield pool weights the various
+                    # sub-pools such that there's a roughly equal chance for any of the
+                    # shields in here.  This also adds Impact shields to the mix, which
+                    # wouldn't show up otherwise.
+
+                    set GD_Itempools.ShieldPools.Pool_Shields_All_06_Legendary BalancedItems
+                    (
+                        ( 
+                            ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ShieldPools.Pool_Shields_Standard_06_Legendary', 
+                            InvBalanceDefinition=None, 
+                            Probability=( 
+                                BaseValueConstant=1.000000, 
+                                BaseValueAttribute=None, 
+                                InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common', 
+                                BaseValueScaleConstant=1.000000 
+                            ), 
+                            bDropOnDeath=True 
+                        ),
+                        (
+                            ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ShieldPools.Pool_Shields_NovaShields_All_06_Legendary', 
+                            InvBalanceDefinition=None, 
+                            Probability=( 
+                                BaseValueConstant=1.000000, 
+                                BaseValueAttribute=None, 
+                                InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common', 
+                                BaseValueScaleConstant=3.000000 
+                            ), 
+                            bDropOnDeath=True 
+                        ),
+                        (
+                            ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ShieldPools.Pool_Shields_Roid_06_Legendary', 
+                            InvBalanceDefinition=None, 
+                            Probability=( 
+                                BaseValueConstant=1.000000, 
+                                BaseValueAttribute=None, 
+                                InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common', 
+                                BaseValueScaleConstant=3.000000 
+                            ), 
+                            bDropOnDeath=True 
+                        ),
+                        (
+                            ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ShieldPools.Pool_Shields_SpikeShields_All_06_Legendary', 
+                            InvBalanceDefinition=None, 
+                            Probability=( 
+                                BaseValueConstant=1.000000, 
+                                BaseValueAttribute=None, 
+                                InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common', 
+                                BaseValueScaleConstant=1.000000 
+                            ), 
+                            bDropOnDeath=True 
+                        ),
+                        (
+                            ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ShieldPools.Pool_Shields_Juggernaut_06_Legendary', 
+                            InvBalanceDefinition=None, 
+                            Probability=( 
+                                BaseValueConstant=1.000000, 
+                                BaseValueAttribute=None, 
+                                InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common', 
+                                BaseValueScaleConstant=1.000000 
+                            ), 
+                            bDropOnDeath=True 
+                        ),
+                        (
+                            ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ShieldPools.Pool_Shields_Booster_06_Legendary', 
+                            InvBalanceDefinition=None, 
+                            Probability=( 
+                                BaseValueConstant=1.000000, 
+                                BaseValueAttribute=None, 
+                                InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common', 
+                                BaseValueScaleConstant=1.000000 
+                            ), 
+                            bDropOnDeath=True 
+                        ),
+                        (
+                            ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ShieldPools.Pool_Shields_Absorption_06_Legendary', 
+                            InvBalanceDefinition=None, 
+                            Probability=( 
+                                BaseValueConstant=1.000000, 
+                                BaseValueAttribute=None, 
+                                InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common', 
+                                BaseValueScaleConstant=3.000000 
+                            ), 
+                            bDropOnDeath=True 
+                        ),
+                        (
+                            ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ShieldPools.Pool_Shields_Chimera_06_Legendary', 
+                            InvBalanceDefinition=None, 
+                            Probability=( 
+                                BaseValueConstant=1.000000, 
+                                BaseValueAttribute=None, 
+                                InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common', 
+                                BaseValueScaleConstant=1.000000 
+                            ), 
+                            bDropOnDeath=True 
+                        ),
+                        (
+                            ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ShieldPools.Pool_Shields_Impact_06_Legendary',
+                            InvBalanceDefinition=None, 
+                            Probability=( 
+                                BaseValueConstant=1.000000, 
+                                BaseValueAttribute=None, 
+                                InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common', 
+                                BaseValueScaleConstant=1.000000 
+                            ), 
+                            bDropOnDeath=True 
+                        )
+                    )
+
+                #</Normalize Legendary Shield Probabilities>
+
+            #</Legendary Shield Pools Setup>
+
+            #<Legendary Weapon Pools Setup>
+
+                {mp:weapon_pool_clear_assaultrifles}
+
+                {mp:weapon_pool_clear_launchers}
+
+                {mp:weapon_pool_clear_pistols}
+
+                {mp:weapon_pool_clear_shotguns}
+
+                {mp:weapon_pool_clear_smg}
+
+                {mp:weapon_pool_clear_sniperrifles}
+
+                {mp:weapon_pool_clear_lasers}
+
+            #</Legendary Weapon Pools Setup>
+
+        #</Base Setup for Pools (don't uncheck this if you choose anything below here)>
+
+        #<Remove Unique "Shift" Weapons from Global Rare Pools>
+
+            # TPS includes four Unique weapons in with the global world blue/rare
+            # drops, since they don't otherwise have specific drops.  This happens
+            # for the Boomacorn, Ol'Painful, Jack-O-Cannon, and The Machine.  Since
+            # we're adding these to our Legendary pool, and we're increasing blue/rare
+            # drops anyway, let's take these out of the global pools.
+
+            #<Remove Ol'Painful>
+
+                level None set GD_Itempools.WeaponPools.Pool_Weapons_AssaultRifles_04_Rare BalancedItems[5].Probability
+                (
+                    BaseValueConstant=0,
+                    BaseValueAttribute=None, 
+                    InitializationDefinition=None,
+                    BaseValueScaleConstant=0
+                )
+
+            #</Remove Ol'Painful>
+
+            #<Remove Boomacorn>
+
+                level None set GD_Itempools.WeaponPools.Pool_Weapons_Shotguns_04_Rare BalancedItems[6].Probability
+                (
+                    BaseValueConstant=0,
+                    BaseValueAttribute=None, 
+                    InitializationDefinition=None,
+                    BaseValueScaleConstant=0
+                )
+
+            #</Remove Boomacorn>
+
+            #<Remove Jack-O-Cannon>
+
+                level None set GD_Itempools.WeaponPools.Pool_Weapons_Shotguns_04_Rare BalancedItems[7].Probability
+                (
+                    BaseValueConstant=0,
+                    BaseValueAttribute=None, 
+                    InitializationDefinition=None,
+                    BaseValueScaleConstant=0
+                )
+
+            #</Remove Jack-O-Cannon>
+
+            #<Remove The Machine>
+
+                level None set GD_Itempools.WeaponPools.Pool_Weapons_SniperRifles_04_Rare BalancedItems[6].Probability
+                (
+                    BaseValueConstant=0,
+                    BaseValueAttribute=None, 
+                    InitializationDefinition=None,
+                    BaseValueScaleConstant=0
+                )
+
+            #</Remove The Machine>
+
+        #</Remove Unique "Shift" Weapons from Global Rare Pools>
+
+        #<Add Uniques to Legendary Pools>
+
+            #<Grenade Mods>
+
+                # This list purposefully omits the Monster Trap, since there's no actual
+                # point outside of its mission, and has a much-reduced chance for the
+                # Contraband Sky Rocket, though the Sky Rocket *does* have a chance to
+                # drop.
+
+                {mp:grenade_baby_boomer}
+
+                {mp:grenade_data_scrubber}
+
+                {mp:grenade_kiss_of_death}
+
+                {mp:grenade_snowball}
+
+                {mp:grenade_sky_rocket}
+
+            #</Grenade Mods>
+
+            #<Oz Kits>
+
+                # Note that we purposefully exclude Springs' Oz Kit from here, since it's
+                # basically just a common Duality Oz Kit, and not terribly special in its
+                # own right.
+
+                {mp:ozkit_cathartic}
+
+                {mp:ozkit_freedom}
+
+                {mp:ozkit_invigoration}
+
+                {mp:ozkit_systems_purge}
+
+                {mp:ozkit_perdy_lights}
+
+            #</Oz Kits>
+
+            #<Shields>
+
+                {mp:shield_asteroidbelt}
+
+                {mp:shield_slammer}
+
+                {mp:shield_haymaker}
+
+                {mp:shield_m0rq}
+
+                {mp:shield_shieldofages}
+
+                {mp:shield_sunshine}
+
+                {mp:shield_rapidrelease}
+
+                {mp:shield_naught}
+
+                #<Normalize Probabilities>
+
+                    # Makes sure that the main legendary shield pool weights the various
+                    # sub-pools such that there's a roughly equal chance for any of the
+                    # shields in here.
+
+                    level None set GD_Itempools.ShieldPools.Pool_Shields_All_06_Legendary BalancedItems[0].Probability.BaseValueScaleConstant 2
+
+                    level None set GD_Itempools.ShieldPools.Pool_Shields_All_06_Legendary BalancedItems[1].Probability.BaseValueScaleConstant 5
+
+                    level None set GD_Itempools.ShieldPools.Pool_Shields_All_06_Legendary BalancedItems[2].Probability.BaseValueScaleConstant 3
+
+                    level None set GD_Itempools.ShieldPools.Pool_Shields_All_06_Legendary BalancedItems[3].Probability.BaseValueScaleConstant 1
+
+                    level None set GD_Itempools.ShieldPools.Pool_Shields_All_06_Legendary BalancedItems[4].Probability.BaseValueScaleConstant 2
+
+                    level None set GD_Itempools.ShieldPools.Pool_Shields_All_06_Legendary BalancedItems[5].Probability.BaseValueScaleConstant 3
+
+                    level None set GD_Itempools.ShieldPools.Pool_Shields_All_06_Legendary BalancedItems[6].Probability.BaseValueScaleConstant 3
+
+                    level None set GD_Itempools.ShieldPools.Pool_Shields_All_06_Legendary BalancedItems[7].Probability.BaseValueScaleConstant 3
+
+                    level None set GD_Itempools.ShieldPools.Pool_Shields_All_06_Legendary BalancedItems[8].Probability.BaseValueScaleConstant 1
+
+                #</Normalize Probabilities>
+
+            #</Shields>
+
+            #<Weapons>
+
+{mp:legendary_unique_adds}
+
+            #</Weapons>
+
+        #</Add Uniques to Legendary Pools>
+
+        #<Add Unique Glitch Weapons to Legendary Pools>
+
+{mp:legendary_uniqueglitch_adds}
+
+        #</Add Unique Glitch Weapons to Legendary Pools>
+
+    #</Legendary Pool Improvements>
+
+    #<Drop Quality (choose one)><MUT>
+
+{drop_quality_excellent}
+
+{drop_quality_verygood}
+
+{drop_quality_good}
+
+{drop_quality_improved}
+
+{drop_quality_stock}
+
+    #</Drop Quality (choose one)>
+
+    #<Boss Unique Drop Rate (choose one)><MUT>
+
+{boss_drops_guaranteed}
+
+{boss_drops_veryimproved}
+
+{boss_drops_improved}
+
+{boss_drops_slightimproved}
+
+{boss_drops_stock}
+
+    #</Boss Unique Drop Rate (choose one)>
+
+    #<Boss Unique Drop Quantities (choose one)><MUT>
+
+{boss_quantity_excellent}
+
+{boss_quantity_improved}
+
+{boss_quantity_stock}
+
+    #</Boss Unique Drop Quantities (choose one)>
+
+    #<Provide Common Pistol Chests for "To Arms!" mission (choose one)><MUT>
+
+        #<Don't Provide Common Pistol Chest (improve OzKit-Only Chests, though)>
+
+            # In Triton Flats, near where Dierdre is found, there are two chests which
+            # will always contain only OzKits (there's also an ECHO from a disappointed
+            # OzKit graphic designer in there).  This section will bump up the rarity of
+            # those OzKits to be greens and blues.
+
+            set GD_Itempools.ListDefs.AmmoCrateLoot_OzKitsOnly LootData
+            (
+                ( 
+                    ConfigurationName="AmmoCrate", 
+                    bIgnoreGameStageRestrictions=False, 
+                    LootGameStageVarianceFormula=None, 
+                    Weight=( 
+                        BaseValueConstant=100.000000, 
+                        BaseValueAttribute=None, 
+                        InitializationDefinition=None, 
+                        BaseValueScaleConstant=1.000000 
+                    ), 
+                    ItemAttachments=( 
+                        ( 
+                            ItemPool=ItemPoolDefinition'GD_Itempools.MoonItemPools.Pool_MoonItem_02_Uncommon', 
+                            PoolProbability=( 
+                                BaseValueConstant=1.000000, 
+                                BaseValueAttribute=None, 
+                                InitializationDefinition=None, 
+                                BaseValueScaleConstant=1.000000 
+                            ), 
+                            InvBalanceDefinition=None, 
+                            AttachmentPointName="Ammo1" 
+                        ), 
+                        ( 
+                            ItemPool=ItemPoolDefinition'GD_Itempools.MoonItemPools.Pool_MoonItem_04_Rare', 
+                            PoolProbability=( 
+                                BaseValueConstant=1.000000, 
+                                BaseValueAttribute=None, 
+                                InitializationDefinition=None, 
+                                BaseValueScaleConstant=1.000000 
+                            ), 
+                            InvBalanceDefinition=None, 
+                            AttachmentPointName="Ammo2" 
+                        ), 
+                        ( 
+                            ItemPool=ItemPoolDefinition'GD_Itempools.MoonItemPools.Pool_MoonItem_02_Uncommon', 
+                            PoolProbability=( 
+                                BaseValueConstant=1.000000, 
+                                BaseValueAttribute=None, 
+                                InitializationDefinition=None, 
+                                BaseValueScaleConstant=1.000000 
+                            ), 
+                            InvBalanceDefinition=None, 
+                            AttachmentPointName="Ammo3" 
+                        ) 
+                    ) 
+                )
+            )
+
+        #</Don't Provide Common Pistol Chest (improve OzKit-Only Chests, though)>
+
+        #<Provide Common Pistol Chests (removes OzKit-only chests)>
+
+            # The mission "To Arms!" was already rather annoying to begin with, but with this
+            # mod enabled, it's actually one of the harder ones to complete, especially if
+            # you're also using some vendor improvements.  Enabling this folder will cause a
+            # few chests to appear in the same room as the dead drop, which always contain
+            # common pistols.  It uses the previously-OzKit-only chests found near Deirdre
+            # to do this, so those chests will no longer be ozkit chests if you have this
+            # enabled.
+
+            set GD_Itempools.ListDefs.AmmoCrateLoot_OzKitsOnly LootData
+            (
+                ( 
+                    ConfigurationName="AmmoCrate", 
+                    bIgnoreGameStageRestrictions=False, 
+                    LootGameStageVarianceFormula=None, 
+                    Weight=( 
+                        BaseValueConstant=100.000000, 
+                        BaseValueAttribute=None, 
+                        InitializationDefinition=None, 
+                        BaseValueScaleConstant=1.000000 
+                    ), 
+                    ItemAttachments=( 
+                        ( 
+                            ItemPool=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_Pistols_01_Common', 
+                            PoolProbability=( 
+                                BaseValueConstant=1.000000, 
+                                BaseValueAttribute=None, 
+                                InitializationDefinition=None, 
+                                BaseValueScaleConstant=1.000000 
+                            ), 
+                            InvBalanceDefinition=None, 
+                            AttachmentPointName="Ammo1" 
+                        ), 
+                        ( 
+                            ItemPool=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_Pistols_01_Common', 
+                            PoolProbability=( 
+                                BaseValueConstant=1.000000, 
+                                BaseValueAttribute=None, 
+                                InitializationDefinition=None, 
+                                BaseValueScaleConstant=1.000000 
+                            ), 
+                            InvBalanceDefinition=None, 
+                            AttachmentPointName="Ammo2" 
+                        ), 
+                        ( 
+                            ItemPool=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_Pistols_01_Common', 
+                            PoolProbability=( 
+                                BaseValueConstant=1.000000, 
+                                BaseValueAttribute=None, 
+                                InitializationDefinition=None, 
+                                BaseValueScaleConstant=1.000000 
+                            ), 
+                            InvBalanceDefinition=None, 
+                            AttachmentPointName="Ammo3" 
+                        ) 
+                    ) 
+                )
+            )
+
+            level Moon_P set Moon_P.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_31 PopulationDef PopulationDefinition'GD_Population_Treasure.Lootables.Crate_Military_OzKitsOnly'
+
+            level Moon_P set Moon_P.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_31 Location
+            (
+                X=-8960,
+                Y=10660,
+                Z=-948.618042
+            )
+
+            level Moon_P set Moon_P.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_31 Rotation
+            (
+                Pitch=45,
+                Yaw=-33960,
+                Roll=94
+            )
+
+            level Moon_P set Moon_P.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_24 PopulationDef PopulationDefinition'GD_Population_Treasure.Lootables.Crate_Military_OzKitsOnly'
+
+            level Moon_P set Moon_P.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_24 Location
+            (
+                X=-9160,
+                Y=10630,
+                Z=-948.618042
+            )
+
+            level Moon_P set Moon_P.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_24 Rotation
+            (
+                Pitch=68, 
+                Yaw=-30284, 
+                Roll=77 
+            )
+
+            level Moon_P set Moon_P.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_4 PopulationDef PopulationDefinition'GD_Population_Treasure.Lootables.Crate_Military_OzKitsOnly'
+
+            level Moon_P set Moon_P.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_4 Location
+            (
+                X=-8493,
+                Y=10731,
+                Z=-948.618042
+            )
+
+            level Moon_P set Moon_P.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_4 Rotation
+            (
+                Pitch=0, 
+                Yaw=14931, 
+                Roll=0 
+            )
+
+            level Moon_P set Moon_P.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_146 PopulationDef PopulationDefinition'GD_Population_Treasure.Lootables.Crate_Military_OzKitsOnly'
+
+            level Moon_P set Moon_P.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_146 Location
+            (
+                X=-8443,
+                Y=10531,
+                Z=-948.618042
+            )
+
+            level Moon_P set Moon_P.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_146 Rotation
+            (
+                Pitch=0, 
+                Yaw=17931, 
+                Roll=0 
+            )
+
+            level Moon_P set Moon_P.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_85 PopulationDef PopulationDefinition'GD_Population_Treasure.Lootables.Crate_Military'
+
+            level Moon_P set Moon_P.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_367 PopulationDef PopulationDefinition'GD_Population_Treasure.Lootables.Crate_Military'
+
+        #</Provide Common Pistol Chests (removes OzKit-only chests)>
+
+    #</Provide Common Pistol Chests for "To Arms!" mission (choose one)>
+
+#</{mod_name}>

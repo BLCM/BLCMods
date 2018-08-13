@@ -9,10 +9,11 @@ who often end up just resorting to Gibbed to be able to play around with
 some better gear.  The goal, personally, was to get the loot drops in-game
 to a point where I never felt tempted to open up Gibbed.
 
-This patch is set up to play nicely with FilterTool, and basically
-everything in here can be toggled on or off inside FilterTool as you'd
-hope, on an item-by-item basis.  Basically every bullet point in the
-"Overview" section is its own "folder" once imported into FilterTool.
+The mod must be loaded into BLCMM, and nearly all of the mod can be toggled
+on or off inside BLCMM as you'd hope, on an item-by-item basis.  Basically
+every bullet point in the "Overview" section is its own "folder" once imported.
+See the [Configuration](#configuration) section for the most obvious
+configuration areas.
 
 Compared to the BL2 Better Loot mod, rare loot has a slightly decreased chance
 of dropping in this mod, but TPS gives you many more opportunities to drop
@@ -24,48 +25,50 @@ for Zarpedon herself), and an increased number of Badasses in general.  So
 despite the nerfed drop rates, you may find this to be even more generous than
 the BL2 version is.
 
+* [Usage/Installation](#usageinstallation)
+* [Mod Overview](#mod-overview)
+  * [Configuration](#configuration)
+* [Compatibility](#compatibility)
+  * [UCP](#ucp)
+  * [Other Mods](#other-mods)
+* [Loot Purposefully Excluded from Pools](#loot-purposefully-excluded-from-pools)
+* [Other Recommended Mods](#other-recommended-mods)
+* [TODO](#todo)
+* [Other Notes](#other-notes)
+* [Mod Construction / Implementation Details](#mod-construction--implementation-details)
+* [Credits](#credits)
+* [Licenses](#licenses)
+* [Changelog](#changelog)
+
 Usage/Installation
-------------------
+==================
 
-The recommended way to use this mod is with FilterTool/UCP.  In FilterTool,
-select `Developer Tools` -> `Add Single Mod` and then select one of these
-two files:
+This mod must be imported into BLCMM using `File -> Import single mod`.
+Simply choose the file `TPS Better Loot.blcm` and have at it!
 
-* `TPS Better Loot Mod (Lootsplosion) - UCP Compat.txt` - Default drop weights
-  which I'm personally happy with.  Many folks may find these a bit extreme.
-  This version probably makes more sense in Normal mode than it does in UVHM.
-* `TPS Better Loot Mod (Reasonable Drops) - UCP Compat.txt` - More reasonable
-  drop weights.  This version may be more suitable for UVHM, where lots
-  of Legendary drops might be excessive. *(Work in Progress - needs
-  tweaking+testing, etc)*
+Previous versions of this mod had various options, including offline and
+standalone variants, but these are no longer provided.  BLCMM itself provides
+all that functionality very easily now.  Even if you intend to use nothing
+but this single mod, be sure to import into BLCMM and use the file that it
+saves.
 
-Once the mod has been added, you'll have a new folder for this mod
-underneath the `mods` folder at the bottom, and can turn parts on or off at
-will.
-
-If for whatever reason you don't want to use FilterTool, there is also
-a standalone version at `TPS Better Loot Mod (*) - Standalone Offline.txt`.
-Simply copy the file into the game's `steamassets/binaries` directory with
-an easy-to-type filename, and then run `exec <filename>` from the console
-to load it on its own.  It works quite well by itself.
-
-The only actual differences between the UCP and Standalone versions are
-that the "Standalone" versions contain all of the original Gearbox hotfix
-data, and set up the hotfix commands for execution by Borderlands, whereas
-the "UCP Compat" version lets FilterTool/UCP take care of that for you.
-The "Offline" in the filename just means that it's using offline-style
-hotfixes, which work better in TPS regardless of whether you're online or
-offline.
-
-All versions are fully FilterTool compatible.
+The previous "Lootsplosion" and "Reasonable" variants have been merged into
+the single mod file, and you can now choose various aspects of the mod in
+several "mutually exclusive" categories, meaning that you can only choose
+one of the options in each.  This way you can tailor the mod to what you want
+to do a little bit more easily.  See the [Configuration](#configuration) section
+for more detail.
 
 Mod Overview
-------------
+============
+
+*(Note that various behaviors in here can be changed by selecting from various
+options in the mod file itself.)*
 
 * Adds all legendaries + uniques (weapons, grenade mods, class mods,
   shields, oz kits) into the global "legendary" loot pools, so
   you'll start seeing those much more frequently.
-* Loot will skew much more rare, in general.  You should expect to see
+* By default, loot will skew much more rare.  You should expect to see
   those legendaries/uniques far more frequently than in vanilla TPS.
 * Glitch weapons spawn in the main game (though they will be more common
   in the Claptastic Voyage DLC)
@@ -102,6 +105,7 @@ Mod Overview
       contain blue-rarity lasers instead of white.
 * Boss drop pools are generally improved, and bosses are guaranteed to drop as
   many items from their unique drop pool as are in that pool.
+  *(Though that can be configured easily.)*
   * Bosses with just a single unique drop will therefore be guaranteed to drop
     that item.
   * If a boss has more than one in their drop pool, you may get duplicates
@@ -161,13 +165,60 @@ Mod Overview
 gear will end up as possible Grinder results when trying to grind for
 legendaries.
 
+### Configuration
+
+There are a few categories in the mod which are explicitly intended to be
+user-changeable:
+
+* **Remove Level-Based Loot Restrictions** - This is active by default, and allows
+  basically all item/weapon types, elements, grenades, COMs, etc, from the very
+  beginning of the game.  It can be toggled off if you'd prefer that to not be the
+  case.  The mod actually unlocks a good amount of gear in the main section of the
+  mod already, so many things will be unlocked whether or not you select this
+  option.  This section is a copy of my own TPS Early Bloomer mod, though there's
+  no harm in having both active at the same time.
+* **Legendary Pool Improvements** - The default configuration adds all
+  unique weapons/items into the main global loot pools, so all items can
+  technically be found just about anywhere.  You can tweak which groups of
+  items/weapons get added by going in here and disabling any you don't want
+  to drop.
+* **Drop Quality** - This is the main section which determines the quality of
+  drops that you'll get throughout the game.  The choices range from "Excellent"
+  (which used to be called "Lootsplosion," pre-1.1.0), all the way down to
+  "Stock-ish", which is pretty close to the stock/vanilla TPS drop rates, though
+  it's actually a *bit* better.  If you expand any of those categories, you'll
+  see the exact percentages that it provides.  The default setting is Excellent.
+* **Boss Unique Drop Rate** - This section lets you choose how often bosses drop
+  their unique items/weapons.  The default setting is to make bosses always drop
+  their unique gear, but it can be configured all the way down to the stock/vanilla
+  drop rates.
+* **Boss Unique Drop Quantities** - This section lets you define how *many* unique
+  drops a boss will drop.  In the default configuration, if a boss has two unique
+  drops, it'll drop two items from that pool.  It may end up being two of the same
+  item, but it could also be one of each.  For enemies with huge loot pools, this
+  can end up producing quite a few legendary drops.  For instance, the Empyrean
+  Sentinel will drop four by default.  This section lets you specify the quantities
+  you want, though, and can be configured to go back to just a single drop, as TPS
+  does by default.
+* **Provide Common Pistol Chests for "To Arms!" mission** - If you leave the gear
+  quality buffed up, as it is in the default configuration, the mission "To Arms!"
+  amusingly becomes one of the most difficult in the game, since common-level
+  gear will be hard to come by, especially if you're using a mod to boost vendors.
+  This category will allow you to choose to have four chests right next to the
+  weapon drop, in Triton Flats, which each contain three common-rarity pistols,
+  which should make that mission easy enough.  Doing so will make the OzKit-only
+  chests near Dierdre turn into regular ammo chests.  If you don't select the
+  common pistol chests, the OzKit-only chests will receive a slight bump in
+  quality.
+
 Compatibility
--------------
+=============
 
 ### UCP ###
 
 This mod is mostly compatible with UCP 2.1, even though UCP touches a lot of
-the same objects that this mod does.  Exceptions:
+the same objects that this mod does.  The few cases where we touch the same
+data, our version is "better" in terms of the loot that it provides:
 
 * This mod's `Better Enemy Drops -> Better Chubby Drops` overrides UCP's
   `Patch 2.1 -> Chubby SpawnRate and Loot -> Addition Of Holodome Com/
@@ -210,7 +261,7 @@ Obviously this mod will conflict with other mods which play with the same
 variables, though I'm not aware of any in specific at the moment.
 
 Loot Purposefully Excluded from Pools
--------------------------------------
+=====================================
 
 There's some gear which I felt shouldn't be in the pools at all.  I am
 quite willing to hear counterarguments; my mind could probably be pretty
@@ -218,12 +269,14 @@ easily persuaded otherwise if someone feels strongly about it.
 
 * Springs' Oz Kit
 * Cracked Sash (Shield)
+* Monster Trap (Grenade)
 * The Contraband Sky Rocket grenade and "Probe" pistol *can* spawn, but
   have a much decreased chance compared to all the other legendaries.
 
 There's also a few drop pools / containers / etc which I've purposefully
 left alone:
 
+* Golden Chest
 * Cash Boxes
 * Ammo Chests
 * Cardboard Boxes
@@ -241,7 +294,7 @@ Some other stuff not done:
   nerf those down.
 
 Other Recommended Mods
-----------------------
+======================
 
 * My own "Luneshine on Uniques" mod will add Luneshine attachments to ten
   uniques/legendaries which don't otherwise support them.  Weapons generated by
@@ -255,14 +308,16 @@ Other Recommended Mods
   stocks.
 
 TODO
-----
+====
 
-* I haven't done any testing in TVHM/UVHM, or in anything but singleplayer mode.
 * Maybe decrease Moonstone chest cost in exchange for not doing guaranteed
   legendaries on it?
+* It probably wouldn't be difficult to nerf the drop rates while inside "slaughter"
+  type arenas, which for TPS is just Abandoned Training Facility and Holodome
+  Onslaught.
 
 Other Notes
------------
+===========
 
 As with the BL2 Better Loot mod, enemy drops can get rather excessive if you're in an
 area which generates a lot of badasses, and The Pre-Sequel is already fairly generous
@@ -276,39 +331,29 @@ the way they are for now, though I could probably be talked into nerfing things 
 bit...
 
 Mod Construction / Implementation Details
------------------------------------------
+=========================================
 
 *(This section is only relevant for someone looking to edit the mod in the
 same way I do, or just someone curious about my mod construction techniques.
 If you're just looking to run the mod, see the "Usage" section above.  The
-mod can, of course, be edited directly in FilterTool/BLCMM as well, once it's
-been imported.)*
+mod can, of course, be edited directly in BLCMM as well, once it's been
+imported.)*
 
-I actually generate this mod using a simple little Python script named
-`generate-source.py`, which enables me to do things like set the rarity
-drop levels from a single location at the top of the file, and have it
-apply to a number of different objects throughout the game.  That script
-outputs to a human-readable multiline text file which can't actually be
-read directly by FilterTool/Borderlands -- it must be processed by my
-`conv_to_mod.py` script which you'll find in my BL2 mod directory.
+I generate this mod using a Python script named `generate-mod.py`, which
+enables me to do things like set the rarity drop levels from a single
+location at the top of the file, and have it apply to a number of different
+objects throughout the game.  The generation script makes use of
+`modprocessor.py` from my BL2 mod directory.  You'd need to copy (or
+symlink, if you're on Mac or Linux) `modprocessor.py` into this directory
+in order to run the script.
 
-The generation script makes use of `hotfix.py` from my BL2 mod directory.
-You'd need to copy (or symlink, if you're on Mac or Linux) `hotfix.py`
-into this directory in order to run the script.
-
-To generate the end result file, I actually run the small shell script
-`create.sh` in this directory, which effectively just does the following:
-
-    ./generate-source.py && \
-        ../conv_to_mod.py -f "TPS Better Loot Mod (Lootsplosion) - UCP Compat" && \
-        ../conv_to_mod.py -f "TPS Better Loot Mod (Lootsplosion) - Standalone Offline"
-
-*(It's actually slightly more complicated now that I'm exporting multiple
-profiles of the same mod (Lootsplosion vs. Reasonable), but that's basically
-what it does.)*
+Likewise, `generate-mod.py` makes use of some data introspection abilities
+available in my FT/BLCMM Explorer project.  You'll need to copy (or, again,
+symlink) FT Explorer's `ftexplorer` and `resources` dirs into this directory to
+generate the mod.
 
 Credits
--------
+=======
 
 * A set of statements to allow Luneshine spawns in the world drops was
   taken from UCP.
@@ -329,10 +374,38 @@ for the full text.
 Changelog
 =========
 
-**v1.0.3**, April 25, 2018:
+**v1.1.0**, July 27, 2018:
+ * Converted to BLCM format *(BLCMM is now required; FilterTool is not supported)*
+ * Merged all versions into a single master file
+   * "Lootsplosion" and "Reasonable" variants are options in a mutually-exclusive
+     category in the mod, rather than separate files
+   * Removed "standalone" and "standalone offline" variants *(this is now much better
+     managed by BLCMM)*
+ * Added three extra drop quality presets, for a total of five:
+   * Excellent (formerly "Lootsplosion")
+   * Very Good
+   * Good (formerly "Reasonable")
+   * Improved
+   * Stock-ish
+ * Added wider selection of boss unique drop rate selections
+ * Added a category to choose drop quantities for bosses, in addition to the drop rates
+ * Allow customized legendary pool by providing options for adding uniques, rather
+   rather than hardcoding them all at once.  Moved that category up to being a
+   top-level category as well.
+ * Force some early-game gear unlocks to always happen
+ * Fixed Swagman drop quantity
+ * Fixed a UCP 2.1 error which prevents Flame Knuckle from equipping a weapon or
+   shield in Playthrough 1.
+ * Removed disabled-by-default categories which I'd had in there for my own testing
+   purposes.  No real need to have them in there in the first place, and it just made
+   checking/unchecking the mod fraught with potential unintended side effects.
+ * Added a byline in the header comments
+ * Alphabetized a few categories which needed it, and some general reorganization
+
+**v1.0.3**, April 25, 2018 (commit `2618668b068b93a397820dcbabcae9bf83a67fd8`):
  * Renamed mod files to have a `.txt` extension.
 
-**v1.0.2**, April 12, 2018:
+**v1.0.2**, April 12, 2018 (commit `ab6d3690552f622078e1863fa66f584ab678cd29`):
  * Fixed Iwajira / Volcantis / Odjurymir's drop pool so that the Hail isn't vastly
    preferred over the other drops.
 

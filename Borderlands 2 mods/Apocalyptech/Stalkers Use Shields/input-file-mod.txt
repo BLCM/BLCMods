@@ -1,3 +1,4 @@
+BL2
 #<{mod_name}>
 
     # {mod_name} v{mod_version}
@@ -7,20 +8,38 @@
     # Stalkers always have shields, of course, but this mod gives them
     # "real" shields of the sort that your character can equip.
     # Optionally, and for greater challenge, you can opt to give them only
-    # Maylay shields.  WARNING: The Roid damage seems to be far greater than
-    # the card's listed damage, for Stalkers, so they will hit like a ton of
-    # bricks with Maylay shields.
-    #
-    # This mod requires that the UCP option "Skinpool Fixes (Don't uncheck
-    # this)" is enabled!  If you want to run this without UCP, make sure to
-    # at least copy that category over.
+    # Maylay shields.
+
+    #<Skinpool Setup><lock>
+
+        # This section is copied directly from UCP's Skinpool Reassignments section,
+        # which frees up some 600 skin/head pools for use in mods.  I'm including it
+        # in here so that no part of UCP is actually required, and this mod is
+        # theoretically able to function completely standalone.
+
+{skinpool_setup}
+
+    #</Skinpool Setup>
+
+    #<Fix Enemy Roid/Maylay Shield Damage>
+
+        # The base calculation which the game does to determine enemy melee damage
+        # doesn't correctly deal with Roid/Maylay shields -- enemies get a FAR
+        # greater boost from these shields than they should.  This was never a problem
+        # with the base game, since enemies couldn't use those shields, but since they
+        # can in this mod, it makes Roid-using enemies much more difficult.  This fixes
+        # the equation up, courtesy 55tumbl.  Thanks for that!
+
+        level None set GD_Balance_HealthAndDamage.HealthAndDamage.Init_EnemyNonWeaponDamage ValueFormula.Offset.BaseValueScaleConstant 0.125
+
+    #</Fix Enemy Roid/Maylay Shield Damage>
 
     #<Legendary Pool Setup (optionally add uniques + seraphs)>
 
         # This category does some basic setup which then lets us alter
         # the legendary shield pools dynamically in the next category.
 
-        #<Base Pool Initialization>
+        #<Base Pool Initialization><lock>
 
             set GD_Itempools.ShieldPools.Pool_Shields_Absorption_06_Legendary BalancedItems
             (
@@ -393,39 +412,39 @@
 
         #<Add Uniques to Legendary Shield Pools>
 
-            {hotfixes:shield_1340}
+            {mp:shield_1340}
 
-            {hotfixes:shield_equitas}
+            {mp:shield_equitas}
 
-            {hotfixes:shield_potogold}
+            {mp:shield_potogold}
 
-            {hotfixes:shield_deadlybloom}
+            {mp:shield_deadlybloom}
 
-            {hotfixes:shield_order}
+            {mp:shield_order}
 
-            {hotfixes:shield_lovethumper}
+            {mp:shield_lovethumper}
 
-            {hotfixes:shield_manlyman}
+            {mp:shield_manlyman}
 
-            {hotfixes:shield_roughrider}
+            {mp:shield_roughrider}
 
         #</Add Uniques to Legendary Shield Pools>
 
         #<Add Seraphs to Legendary Shield Pools>
 
-            {hotfixes:shield_sponge}
+            {mp:shield_sponge}
 
-            {hotfixes:shield_bigboomblaster}
+            {mp:shield_bigboomblaster}
 
-            {hotfixes:shield_evolution}
+            {mp:shield_evolution}
 
-            {hotfixes:shield_hoplite}
+            {mp:shield_hoplite}
 
-            {hotfixes:shield_punchee}
+            {mp:shield_punchee}
 
-            {hotfixes:shield_antagonist}
+            {mp:shield_antagonist}
 
-            {hotfixes:shield_blockade}
+            {mp:shield_blockade}
 
         #</Add Seraphs to Legendary Shield Pools>
 
@@ -451,17 +470,14 @@
 
         #</Equip Regular Shields>
 
-        #<Equip only Maylay Shields><off>
+        #<Equip only Maylay Shields>
 
-            ## Stalkers will always equip Maylay shields.  WARNING: the Maylay<off>
-            ## effect seems to be multiplied beyond usual on Stalkers for some reason; this<off>
-            ## will probably make Stalkers hit VERY hard when their shields are down.<off>
-            ## You've been warned!<off>
+            # Stalkers will always equip Maylay shields.
 
 {stalker_shields_maylay}
 
         #</Equip only Maylay Shields>
 
-    #</Shield Selection (choose one)><MUT>
+    #</Shield Selection (choose one)>
 
 #</{mod_name}>

@@ -31,14 +31,15 @@
 import sys
 
 try:
-    from hotfixes import Hotfixes
+    from modprocessor import ModProcessor
+    mp = ModProcessor()
 except ModuleNotFoundError:
     print('')
-    print('****************************************************************')
-    print('To run this script, you will need to copy or symlink hotfixes.py')
+    print('********************************************************************')
+    print('To run this script, you will need to copy or symlink modprocessor.py')
     print('from the parent directory, so it exists here as well.  Sorry for')
     print('the bother!')
-    print('****************************************************************')
+    print('********************************************************************')
     print('')
     sys.exit(1)
 
@@ -47,8 +48,8 @@ except ModuleNotFoundError:
 ###
 
 mod_name = 'Speedier Sandskiffs'
-mod_version = '1.0.0'
-output_filename = '{}.txt'.format(mod_name)
+mod_version = '1.1.0'
+output_filename = '{}.blcm'.format(mod_name)
 
 ###
 ### Generate hotfixes!
@@ -78,67 +79,43 @@ for (label, demand_name, vehicle_name, class_name) in [
             ),
         ]:
 
-    hfs = Hotfixes(nameprefix=label)
-
-    hfs.add_demand_hotfix('max_speed', 'Skiff',
-        '{},{},MaxSpeed,,7000'.format(demand_name, vehicle_name))
-
-    hfs.add_demand_hotfix('flying_speed', 'Skiff',
-        '{},{},FlyingSpeed,,4000'.format(demand_name, vehicle_name))
-
-    hfs.add_demand_hotfix('afterburner_speed', 'Skiff',
-        '{},{},AfterburnerSpeed,,7000'.format(demand_name, class_name))
-
-    hfs.add_demand_hotfix('afterburner_activation_speed', 'Skiff',
-        '{},{},AfterburnerActivationSpeed,,250'.format(demand_name, class_name))
-
-    hfs.add_demand_hotfix('afterburner_boost_time', 'Skiff',
-        '{},{},AfterburnerBoostTime,,25'.format(demand_name, class_name))
-
-    hfs.add_demand_hotfix('throttle_speed', 'Skiff',
-        '{},{},ThrottleSpeed,,100'.format(demand_name, handling_name))
-
-    hfs.add_demand_hotfix('afterburner_total', 'Skiff',
-        '{},{},BaseMaxValue.BaseValueConstant,,200'.format(demand_name, afterburner_name))
-
-    hfs.add_demand_hotfix('afterburner_regen_rate', 'Skiff',
-        '{},{},BaseOnIdleRegenerationRate,,50'.format(demand_name, afterburner_name))
-
-    hfs.add_demand_hotfix('afterburner_regen_delay', 'Skiff',
-        '{},{},BaseOnIdleRegenerationDelay,,2'.format(demand_name, afterburner_name))
-
     hotfix_strings[label] = """{prefix_label}#<{label} Skiff>
 
-{prefix}{hotfixes:max_speed}
+{prefix}demand {demand_name} set {vehicle_name} MaxSpeed 7000
 
-{prefix}{hotfixes:flying_speed}
+{prefix}demand {demand_name} set {vehicle_name} FlyingSpeed 4000
 
-{prefix}{hotfixes:afterburner_speed}
+{prefix}demand {demand_name} set {class_name} AfterburnerSpeed 7000
 
-{prefix}{hotfixes:afterburner_activation_speed}
+{prefix}demand {demand_name} set {class_name} AfterburnerActivationSpeed 250
 
-{prefix}{hotfixes:afterburner_boost_time}
+{prefix}demand {demand_name} set {class_name} AfterburnerBoostTime 25
 
-{prefix}{hotfixes:throttle_speed}
+{prefix}demand {demand_name} set {handling_name} ThrottleSpeed 100
 
-{prefix}{hotfixes:afterburner_total}
+{prefix}demand {demand_name} set {afterburner_name} BaseMaxValue.BaseValueConstant 200
 
-{prefix}{hotfixes:afterburner_regen_rate}
+{prefix}demand {demand_name} set {afterburner_name} BaseOnIdleRegenerationRate 50
 
-{prefix}{hotfixes:afterburner_regen_delay}
+{prefix}demand {demand_name} set {afterburner_name} BaseOnIdleRegenerationDelay 2
 
 {prefix_label}#</{label} Skiff>""".format(
         prefix_label=prefix_label,
         prefix=prefix,
         label=label,
-        hotfixes=hfs,
+        demand_name=demand_name,
+        vehicle_name=vehicle_name,
+        class_name=class_name,
+        handling_name=handling_name,
+        afterburner_name=afterburner_name,
         )
 
 ###
 ### Generate the mod string
 ###
 
-mod_str = """#<{mod_name}>
+mod_str = """BL2
+#<{mod_name}>
 
     # {mod_name} v{mod_version}
     # by Apocalyptech
@@ -166,6 +143,5 @@ mod_str = """#<{mod_name}>
 ### Output to a file.
 ###
 
-with open(output_filename, 'w') as df:
-    df.write(mod_str)
+mp.human_str_to_blcm_filename(mod_str, output_filename)
 print('Wrote mod file to: {}'.format(output_filename))

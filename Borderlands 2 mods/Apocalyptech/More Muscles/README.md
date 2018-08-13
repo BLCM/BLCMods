@@ -8,8 +8,8 @@ playthrough of the level.
 Usage
 =====
 
-This mod must be imported into FilterTool/BLCMM with `Developer tools` ->
-`Add single mod`.  Choose the file `More Muscles.txt` and have at it!
+This mod must be imported into BLCMM using `File -> Import single mod`.
+Choose the file `More Muscles.blcm` and have at it!
 
 License
 =======
@@ -19,6 +19,10 @@ This mod itself is licensed under
 
 Changelog
 =========
+
+**v1.1.0**, July 27, 2018:
+ * Converted to BLCM format *(BLCMM is now required; FilterTool is not supported)*
+ * Added a byline to the mod header comments
 
 **v1.0.0**, May 21, 2018:
  * Initial public release
