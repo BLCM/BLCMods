@@ -202,6 +202,204 @@
 					</category>
 				</category>
 			</category>
+			<category name="EOS" MUT="true">
+				<category name="Easier EOS">
+					<category name="Health and Shield Multiplier">
+						<comment># For some reason completely unbeknownst to me, some of our earlier statements</comment>
+						<comment># which modify ECLIPSE end up altering the EOS AIPawnBalanceDefinition;</comment>
+						<comment># specifically, they remove its PlayThroughs[0].AttributeStartingValues</comment>
+						<comment># array.  Damned if I know why.  It's the sets to the AttributeStartingValues</comment>
+						<comment># array in GD_Ma_VoltronTrap.Character.CharClass_LoaderUltimateBadass which</comment>
+						<comment># does it, which makes no bloody sense at all.  They're two totally different</comment>
+						<comment># objects.  And not even the same *kind* of object.  I don't know.  Weird.</comment>
+						<comment># Anyway, we have to recreate it entirely in here.  We *could* just use</comment>
+						<comment># the CharClass instead, and leave them blank here, of course, but it's a</comment>
+						<comment># point of pride to keep this in here, at this point.</comment>
+						<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+							<code profiles="default">set GD_Ma_Pop_BossFights.Balance.PawnBalance_Helios PlayThroughs[0].AttributeStartingValues ((Attribute = AttributeDefinition'GD_Balance_HealthAndDamage.AIParameters.Attribute_HealthMultiplier',BaseValue =(BaseValueConstant = 170,BaseValueAttribute = None,InitializationDefinition = None,BaseValueScaleConstant = 1.000000)),(Attribute = AttributeDefinition'GD_Balance_HealthAndDamage.AIParameters.Attribute_EnemyShieldMaxValueMultiplier',BaseValue =(BaseValueConstant = 90,BaseValueAttribute = None,InitializationDefinition = None,BaseValueScaleConstant = 1.000000)))</code>
+						</hotfix>
+					</category>
+					<category name="\"Non-Weapon\" Damage Multiplier">
+						<comment># This ends up affecting most of EOS's attacks</comment>
+						<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+							<code profiles="default">set GD_Ma_Helios.Character.CharClass_Ma_Helios AttributeStartingValues[1].BaseValue.BaseValueConstant 6</code>
+						</hotfix>
+					</category>
+					<category name="Turrets">
+						<category name="Regular Turret Health">
+							<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+								<code profiles="default">set GD_Ma_HeliosTurret.Character.CharClass_Ma_HeliosTurret AttributeStartingValues[1].BaseValue.BaseValueConstant 20</code>
+							</hotfix>
+						</category>
+						<category name="Regular Turret Damage">
+							<comment># I'm actually not totally sure what buffs these up to begin with, but we can scale the final damage var pretty easily.</comment>
+							<comment># (I'm guessing it's the non-weapon multiplier, above, though I'm not sure how)</comment>
+							<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+								<code profiles="default">set GD_Ma_HeliosTurret.Weapons.Ma_HeliosTurret_WeaponType InstantHitDamage.BaseValueScaleConstant 0.9</code>
+							</hotfix>
+						</category>
+						<category name="Rocket Launcher Turret Health">
+							<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+								<code profiles="default">set GD_Ma_EosRocketTurret.Character.CharClass_Ma_EosRocketTurret AttributeStartingValues[1].BaseValue.BaseValueConstant 20</code>
+							</hotfix>
+						</category>
+						<category name="Rocket Launcher Damage">
+							<comment># I'm actually not totally sure what buffs these up to begin with, but we can scale the final damage var pretty easily.</comment>
+							<comment># (I'm guessing it's the non-weapon multiplier, above, though I'm not sure how)</comment>
+							<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+								<code profiles="default">set GD_Ma_EosRocketTurret.Projectiles.Projectile_Rocket:BehaviorProviderDefinition_0.Behavior_Explode_351 DamageFormula.BaseValueScaleConstant 0.9</code>
+							</hotfix>
+						</category>
+					</category>
+				</category>
+				<category name="Even Easier EOS (comparatively speaking, anyway)">
+					<category name="Health and Shield Multiplier">
+						<comment># For some reason completely unbeknownst to me, some of our earlier statements</comment>
+						<comment># which modify ECLIPSE end up altering the EOS AIPawnBalanceDefinition;</comment>
+						<comment># specifically, they remove its PlayThroughs[0].AttributeStartingValues</comment>
+						<comment># array.  Damned if I know why.  It's the sets to the AttributeStartingValues</comment>
+						<comment># array in GD_Ma_VoltronTrap.Character.CharClass_LoaderUltimateBadass which</comment>
+						<comment># does it, which makes no bloody sense at all.  They're two totally different</comment>
+						<comment># objects.  And not even the same *kind* of object.  I don't know.  Weird.</comment>
+						<comment># Anyway, we have to recreate it entirely in here.  We *could* just use</comment>
+						<comment># the CharClass instead, and leave them blank here, of course, but it's a</comment>
+						<comment># point of pride to keep this in here, at this point.</comment>
+						<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+							<code profiles="">set GD_Ma_Pop_BossFights.Balance.PawnBalance_Helios PlayThroughs[0].AttributeStartingValues ((Attribute = AttributeDefinition'GD_Balance_HealthAndDamage.AIParameters.Attribute_HealthMultiplier',BaseValue =(BaseValueConstant = 120,BaseValueAttribute = None,InitializationDefinition = None,BaseValueScaleConstant = 1.000000)),(Attribute = AttributeDefinition'GD_Balance_HealthAndDamage.AIParameters.Attribute_EnemyShieldMaxValueMultiplier',BaseValue =(BaseValueConstant = 60,BaseValueAttribute = None,InitializationDefinition = None,BaseValueScaleConstant = 1.000000)))</code>
+						</hotfix>
+					</category>
+					<category name="\"Non-Weapon\" Damage Multiplier">
+						<comment># This ends up affecting most of EOS's attacks</comment>
+						<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+							<code profiles="">set GD_Ma_Helios.Character.CharClass_Ma_Helios AttributeStartingValues[1].BaseValue.BaseValueConstant 5</code>
+						</hotfix>
+					</category>
+					<category name="Turrets">
+						<category name="Regular Turret Health">
+							<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+								<code profiles="">set GD_Ma_HeliosTurret.Character.CharClass_Ma_HeliosTurret AttributeStartingValues[1].BaseValue.BaseValueConstant 15</code>
+							</hotfix>
+						</category>
+						<category name="Regular Turret Damage">
+							<comment># I'm actually not totally sure what buffs these up to begin with, but we can scale the final damage var pretty easily.</comment>
+							<comment># (I'm guessing it's the non-weapon multiplier, above, though I'm not sure how)</comment>
+							<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+								<code profiles="">set GD_Ma_HeliosTurret.Weapons.Ma_HeliosTurret_WeaponType InstantHitDamage.BaseValueScaleConstant 0.4</code>
+							</hotfix>
+						</category>
+						<category name="Rocket Launcher Turret Health">
+							<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+								<code profiles="">set GD_Ma_EosRocketTurret.Character.CharClass_Ma_EosRocketTurret AttributeStartingValues[1].BaseValue.BaseValueConstant 15</code>
+							</hotfix>
+						</category>
+						<category name="Rocket Launcher Damage">
+							<comment># I'm actually not totally sure what buffs these up to begin with, but we can scale the final damage var pretty easily.</comment>
+							<comment># (I'm guessing it's the non-weapon multiplier, above, though I'm not sure how)</comment>
+							<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+								<code profiles="">set GD_Ma_EosRocketTurret.Projectiles.Projectile_Rocket:BehaviorProviderDefinition_0.Behavior_Explode_351 DamageFormula.BaseValueScaleConstant 0.8</code>
+							</hotfix>
+						</category>
+					</category>
+				</category>
+				<category name="Total Chump">
+					<category name="Health and Shield Multiplier">
+						<comment># For some reason completely unbeknownst to me, some of our earlier statements</comment>
+						<comment># which modify ECLIPSE end up altering the EOS AIPawnBalanceDefinition;</comment>
+						<comment># specifically, they remove its PlayThroughs[0].AttributeStartingValues</comment>
+						<comment># array.  Damned if I know why.  It's the sets to the AttributeStartingValues</comment>
+						<comment># array in GD_Ma_VoltronTrap.Character.CharClass_LoaderUltimateBadass which</comment>
+						<comment># does it, which makes no bloody sense at all.  They're two totally different</comment>
+						<comment># objects.  And not even the same *kind* of object.  I don't know.  Weird.</comment>
+						<comment># Anyway, we have to recreate it entirely in here.  We *could* just use</comment>
+						<comment># the CharClass instead, and leave them blank here, of course, but it's a</comment>
+						<comment># point of pride to keep this in here, at this point.</comment>
+						<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+							<code profiles="">set GD_Ma_Pop_BossFights.Balance.PawnBalance_Helios PlayThroughs[0].AttributeStartingValues ((Attribute = AttributeDefinition'GD_Balance_HealthAndDamage.AIParameters.Attribute_HealthMultiplier',BaseValue =(BaseValueConstant = 40,BaseValueAttribute = None,InitializationDefinition = None,BaseValueScaleConstant = 1.000000)),(Attribute = AttributeDefinition'GD_Balance_HealthAndDamage.AIParameters.Attribute_EnemyShieldMaxValueMultiplier',BaseValue =(BaseValueConstant = 10,BaseValueAttribute = None,InitializationDefinition = None,BaseValueScaleConstant = 1.000000)))</code>
+						</hotfix>
+					</category>
+					<category name="\"Non-Weapon\" Damage Multiplier">
+						<comment># This ends up affecting most of EOS's attacks</comment>
+						<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+							<code profiles="">set GD_Ma_Helios.Character.CharClass_Ma_Helios AttributeStartingValues[1].BaseValue.BaseValueConstant 2</code>
+						</hotfix>
+					</category>
+					<category name="Turrets">
+						<category name="Regular Turret Health">
+							<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+								<code profiles="">set GD_Ma_HeliosTurret.Character.CharClass_Ma_HeliosTurret AttributeStartingValues[1].BaseValue.BaseValueConstant 5</code>
+							</hotfix>
+						</category>
+						<category name="Regular Turret Damage">
+							<comment># I'm actually not totally sure what buffs these up to begin with, but we can scale the final damage var pretty easily.</comment>
+							<comment># (I'm guessing it's the non-weapon multiplier, above, though I'm not sure how)</comment>
+							<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+								<code profiles="">set GD_Ma_HeliosTurret.Weapons.Ma_HeliosTurret_WeaponType InstantHitDamage.BaseValueScaleConstant 0.4</code>
+							</hotfix>
+						</category>
+						<category name="Rocket Launcher Turret Health">
+							<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+								<code profiles="">set GD_Ma_EosRocketTurret.Character.CharClass_Ma_EosRocketTurret AttributeStartingValues[1].BaseValue.BaseValueConstant 5</code>
+							</hotfix>
+						</category>
+						<category name="Rocket Launcher Damage">
+							<comment># I'm actually not totally sure what buffs these up to begin with, but we can scale the final damage var pretty easily.</comment>
+							<comment># (I'm guessing it's the non-weapon multiplier, above, though I'm not sure how)</comment>
+							<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+								<code profiles="">set GD_Ma_EosRocketTurret.Projectiles.Projectile_Rocket:BehaviorProviderDefinition_0.Behavior_Explode_351 DamageFormula.BaseValueScaleConstant 0.4</code>
+							</hotfix>
+						</category>
+					</category>
+				</category>
+				<category name="Stock Difficulty">
+					<category name="Health and Shield Multiplier">
+						<comment># For some reason completely unbeknownst to me, some of our earlier statements</comment>
+						<comment># which modify ECLIPSE end up altering the EOS AIPawnBalanceDefinition;</comment>
+						<comment># specifically, they remove its PlayThroughs[0].AttributeStartingValues</comment>
+						<comment># array.  Damned if I know why.  It's the sets to the AttributeStartingValues</comment>
+						<comment># array in GD_Ma_VoltronTrap.Character.CharClass_LoaderUltimateBadass which</comment>
+						<comment># does it, which makes no bloody sense at all.  They're two totally different</comment>
+						<comment># objects.  And not even the same *kind* of object.  I don't know.  Weird.</comment>
+						<comment># Anyway, we have to recreate it entirely in here.  We *could* just use</comment>
+						<comment># the CharClass instead, and leave them blank here, of course, but it's a</comment>
+						<comment># point of pride to keep this in here, at this point.</comment>
+						<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+							<code profiles="">set GD_Ma_Pop_BossFights.Balance.PawnBalance_Helios PlayThroughs[0].AttributeStartingValues ((Attribute = AttributeDefinition'GD_Balance_HealthAndDamage.AIParameters.Attribute_HealthMultiplier',BaseValue =(BaseValueConstant = 220,BaseValueAttribute = None,InitializationDefinition = None,BaseValueScaleConstant = 1.000000)),(Attribute = AttributeDefinition'GD_Balance_HealthAndDamage.AIParameters.Attribute_EnemyShieldMaxValueMultiplier',BaseValue =(BaseValueConstant = 130,BaseValueAttribute = None,InitializationDefinition = None,BaseValueScaleConstant = 1.000000)))</code>
+						</hotfix>
+					</category>
+					<category name="\"Non-Weapon\" Damage Multiplier">
+						<comment># This ends up affecting most of EOS's attacks</comment>
+						<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+							<code profiles="">set GD_Ma_Helios.Character.CharClass_Ma_Helios AttributeStartingValues[1].BaseValue.BaseValueConstant 8</code>
+						</hotfix>
+					</category>
+					<category name="Turrets">
+						<category name="Regular Turret Health">
+							<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+								<code profiles="">set GD_Ma_HeliosTurret.Character.CharClass_Ma_HeliosTurret AttributeStartingValues[1].BaseValue.BaseValueConstant 35</code>
+							</hotfix>
+						</category>
+						<category name="Regular Turret Damage">
+							<comment># I'm actually not totally sure what buffs these up to begin with, but we can scale the final damage var pretty easily.</comment>
+							<comment># (I'm guessing it's the non-weapon multiplier, above, though I'm not sure how)</comment>
+							<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+								<code profiles="">set GD_Ma_HeliosTurret.Weapons.Ma_HeliosTurret_WeaponType InstantHitDamage.BaseValueScaleConstant 1</code>
+							</hotfix>
+						</category>
+						<category name="Rocket Launcher Turret Health">
+							<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+								<code profiles="">set GD_Ma_EosRocketTurret.Character.CharClass_Ma_EosRocketTurret AttributeStartingValues[1].BaseValue.BaseValueConstant 25</code>
+							</hotfix>
+						</category>
+						<category name="Rocket Launcher Damage">
+							<comment># I'm actually not totally sure what buffs these up to begin with, but we can scale the final damage var pretty easily.</comment>
+							<comment># (I'm guessing it's the non-weapon multiplier, above, though I'm not sure how)</comment>
+							<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+								<code profiles="">set GD_Ma_EosRocketTurret.Projectiles.Projectile_Rocket:BehaviorProviderDefinition_0.Behavior_Explode_351 DamageFormula.BaseValueScaleConstant 1</code>
+							</hotfix>
+						</category>
+					</category>
+				</category>
+			</category>
 		</category>
 	</body>
 </BLCMM>
@@ -212,6 +410,6 @@
 say WARNING: "Easier ECLIPSE and EOS" must be imported into BLCMM to run properly with UCP or other mods.
 
 #Hotfixes:
-set Transient.SparkServiceConfiguration_6 Keys ("SparkOnDemandPatchEntry-GBX_Fixes1","SparkOnDemandPatchEntry-GBX_Fixes2","SparkOnDemandPatchEntry-GBX_Fixes3","SparkPatchEntry-GBX_Fixes4","SparkPatchEntry-GBX_Fixes5","SparkPatchEntry-GBX_Fixes6","SparkPatchEntry-GBX_Fixes7","SparkPatchEntry-GBX_Fixes8","SparkPatchEntry-GBX_Fixes9","SparkPatchEntry-GBX_Fixes10","SparkPatchEntry-GBX_Fixes11","SparkPatchEntry-GBX_Fixes12","SparkPatchEntry-GBX_Fixes13","SparkPatchEntry-GBX_Fixes14","SparkLevelPatchEntry-GBX_Fixes15","SparkLevelPatchEntry-GBX_Fixes16","SparkLevelPatchEntry-GBX_Fixes17","SparkLevelPatchEntry-GBX_Fixes18","SparkLevelPatchEntry-GBX_Fixes19","SparkLevelPatchEntry-GBX_Fixes20","SparkLevelPatchEntry-GBX_Fixes21","SparkLevelPatchEntry-ApocHotfix1","SparkLevelPatchEntry-ApocHotfix2","SparkLevelPatchEntry-ApocHotfix3","SparkLevelPatchEntry-ApocHotfix4","SparkLevelPatchEntry-ApocHotfix5","SparkLevelPatchEntry-ApocHotfix6","SparkLevelPatchEntry-ApocHotfix7","SparkLevelPatchEntry-ApocHotfix8","SparkLevelPatchEntry-ApocHotfix9","SparkLevelPatchEntry-ApocHotfix10","SparkLevelPatchEntry-ApocHotfix11")
-set Transient.SparkServiceConfiguration_6 Values ("GD_Gladiator_Streaming,GD_Gladiator_Skills.Projectiles.ShieldProjectile:BehaviorProviderDefinition_0,BehaviorSequences[0].BehaviorData2[26].LinkedVariables.ArrayIndexAndLength,2686977,0","GD_Gladiator_Streaming,GD_Gladiator_Skills.Projectiles.ShieldProjectile:BehaviorProviderDefinition_0,BehaviorSequences[0].BehaviorData2[49].LinkedVariables.ArrayIndexAndLength,8323073,0","GD_Gladiator_Streaming,GD_Gladiator_Skills.Projectiles.ShieldProjectile:BehaviorProviderDefinition_0.OzBehavior_ActorList_1,BehaviorSequences[0].BehaviorData2[32].Behavior.SearchRadius,500.000000,2048","GD_Ma_Chapter03.M_Ma_Chapter03:Objset_cmp_Pt0_06_ReopenDataStream,Objectiveset_cmp.ObjectiveDefinitions,,(GD_Ma_Chapter03.M_Ma_Chapter03:Pt0_06_ReopenDataStream,GD_Ma_Chapter03.M_Ma_Chapter03:Pt0_04_GetToDataStream,GD_Ma_Chapter03.M_Ma_Chapter03:RetrieveHSource)","Weap_Pistol.GestaltDef_Pistol_GestaltSkeletalMesh:SkeletalMeshSocket_260,RelativeLocation,,(X=-0.05,Y=55.0,Z=13.7)","Weap_Pistol.GestaltDef_Pistol_GestaltSkeletalMesh:SkeletalMeshSocket_268,RelativeLocation,,(X=0.02,Y=36.0,Z=15.45)","Weap_Pistol.GestaltDef_Pistol_GestaltSkeletalMesh:SkeletalMeshSocket_270,RelativeLocation.Z,,14.2","GD_Shields.Projectiles.Proj_LegendaryBoosterShield:BehaviorProviderDefinition_1.Behavior_Explode_140,BehaviorSequences[0].BehaviorData2[7].Behavior.StatusEffectDamage.BaseValueAttribute,None,D_Attributes.Projectile.ProjectileDamage","GD_Shields.Projectiles.Proj_LegendaryBoosterShield:BehaviorProviderDefinition_1.Behavior_Explode_140,BehaviorSequences[0].BehaviorData2[7].Behavior.StatusEffectDamage.BaseValueScaleConstant,1.000000,.25","GD_Shields.Projectiles.Proj_LegendaryBoosterShield:BehaviorProviderDefinition_1.Behavior_Explode_140,BehaviorSequences[0].BehaviorData2[7].Behavior.StatusEffectChance.BaseValueConstant,1.000000,20","GD_Itempools.WeaponPools.Pool_Weapons_SniperRifles_04_Rare,BalancedItems,,+(ItmPoolDefinition=None,InvBalanceDefinition=GD_Cork_Weap_SniperRifles.A_Weapons_Unique.Sniper_Vladof_3_TheMachine,Probability=(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=GD_Balance.Weighting.Weight_2_Uncommon,BaseValueScaleConstant=1),bDropOnDeath=True)","GD_Itempools.WeaponPools.Pool_Weapons_AssaultRifles_04_Rare,BalancedItems,,+(ItmPoolDefinition=None,InvBalanceDefinition=gd_cork_weap_assaultrifle.A_Weapons_Unique.AR_Vladof_3_OldPainful,Probability=(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=GD_Balance.Weighting.Weight_2_Uncommon,BaseValueScaleConstant=1),bDropOnDeath=True)","GD_Itempools.WeaponPools.Pool_Weapons_Shotguns_04_Rare,BalancedItems,,+(ItmPoolDefinition=None,InvBalanceDefinition=GD_Cork_Weap_Shotgun.A_Weapons_Unique.SG_Jakobs_Boomacorn,Probability=(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=GD_Balance.Weighting.Weight_2_Uncommon,BaseValueScaleConstant=1),bDropOnDeath=True)","GD_Itempools.WeaponPools.Pool_Weapons_Shotguns_04_Rare,BalancedItems,,+(ItmPoolDefinition=None,InvBalanceDefinition=GD_Cork_Weap_Shotgun.A_Weapons_Unique.SG_Torgue_3_JackOCannon,Probability=(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=GD_Balance.Weighting.Weight_2_Uncommon,BaseValueScaleConstant=1),bDropOnDeath=True)",",GD_Population_Scavengers.Balance.Outlaws.PawnBalance_ScavWastelandWalker,PlayThroughs[0].CustomItemPoolList,,+(ItemPool=GD_Itempools.Runnables.Pool_ScavBadassSpacemanMidget,PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=GD_Itempools.DropWeights.DropODDS_BossUniqueRares,InitializationDefinition=None,BaseValueScaleConstant=1.000000))",",GD_Population_Scavengers.Balance.Outlaws.PawnBalance_ScavWastelandWalker,PlayThroughs[1].CustomItemPoolList,,+(ItemPool=GD_Itempools.Runnables.Pool_ScavBadassSpacemanMidget,PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=GD_Itempools.DropWeights.DropODDS_BossUniqueRares,InitializationDefinition=None,BaseValueScaleConstant=1.000000))","Laser_P,GD_Challenges.Co_LevelChallenges.EyeOfHelios_TreadCarefully,ChallengeType,ECT_DesignerTriggered,ECT_LevelObject","Outlands_P,Outlands_SideMissions.TheWorld:PersistentLevel.Main_Sequence.WillowSeqEvent_MissionRemoteEvent_0,OutputLinks[0].Links[0].LinkedOp,GearboxSeqAct_TriggerDialogName'Outlands_SideMissions.TheWorld:PersistentLevel.Main_Sequence.GearboxSeqAct_TriggerDialogName_48',Outlands_SideMissions.TheWorld:PersistentLevel.Main_Sequence.WillowSeqAct_MissionCustomEvent_14","Outlands_P,Outlands_SideMissions.TheWorld:PersistentLevel.Main_Sequence.WillowSeqAct_MissionCustomEvent_14,OutputLinks[0].Links,,((LinkedOp=GearboxSeqAct_TriggerDialogName'Outlands_SideMissions.TheWorld:PersistentLevel.Main_Sequence.GearboxSeqAct_TriggerDialogName_48',InputLinkIdx=0))","Outlands_P,Outlands_SideMissions.TheWorld:PersistentLevel.Main_Sequence.GearboxSeqAct_TriggerDialogName_49,OutputLinks[0].Links,,()","Outlands_P,Outlands_SideMissions.TheWorld:PersistentLevel.WillowPopulationEncounter_0,Waves[2].MemberOpportunities,,(PopulationOpportunityDen'Outlands_SideMissions.TheWorld:PersistentLevel.PopulationOpportunityDen_2',PopulationOpportunityDen'Outlands_SideMissions.TheWorld:PersistentLevel.PopulationOpportunityDen_8',None)","Ma_FinalBoss_P,GD_Ma_VoltronTrap.Character.CharClass_LoaderUltimateBadass,AttributeStartingValues[0].BaseValue.BaseValueConstant,,120","Ma_FinalBoss_P,GD_Ma_VoltronTrap.Character.CharClass_LoaderUltimateBadass,AttributeStartingValues[6].BaseValue.BaseValueConstant,,110","Ma_FinalBoss_P,GD_Ma_VoltronTrap.Character.CharClass_LoaderUltimateBadass,AttributeStartingValues[1].BaseValue.BaseValueConstant,,6","Ma_FinalBoss_P,GD_Ma_VoltronTrap.Anims.Anim_LoaderUltimateBadass_ArmGun_Loop:BehaviorProviderDefinition_32.Behavior_AIThrowProjectileAtTarget_7,ChildProjectileBaseValues[0].BaseValue.BaseValueScaleConstant,,0.35","Ma_FinalBoss_P,GD_Ma_VoltronTrap.Projectiles.Proj_RocketLaunch,SpeedFormula.BaseValueConstant,,1300","Ma_FinalBoss_P,GD_Ma_VoltronTrap.Anims.Anim_LoaderUltimateBadass_Missile_Loop:BehaviorProviderDefinition_32.Behavior_SpawnProjectile_50,ChildProjectileBaseValues[0].BaseValue.BaseValueScaleConstant,,0.8","Ma_FinalBoss_P,GD_Ma_VoltronTrap.Anims.Anim_LoaderUltimateBadass_Missile_Loop:BehaviorProviderDefinition_32.Behavior_SpawnProjectile_51,ChildProjectileBaseValues[0].BaseValue.BaseValueScaleConstant,,0.8","Ma_FinalBoss_P,GD_Ma_VoltronTrap.Anims.Anim_LoaderUltimateBadass_Missile_Loop:BehaviorProviderDefinition_32.Behavior_SpawnProjectile_52,ChildProjectileBaseValues[0].BaseValue.BaseValueScaleConstant,,0.8","Ma_FinalBoss_P,GD_Ma_VoltronTrap.Anims.Anim_LoaderUltimateBadass_Missile_Loop:BehaviorProviderDefinition_32.Behavior_SpawnProjectile_53,ChildProjectileBaseValues[0].BaseValue.BaseValueScaleConstant,,0.8","Ma_FinalBoss_P,GD_Ma_VoltronTrap.Projectiles.Proj_ShockBall:BehaviorProviderDefinition_0.Behavior_Explode_5,StatusEffectDamage.BaseValueScaleConstant,,0.5","Ma_FinalBoss_P,GD_Ma_VoltronTrap.Projectiles.Proj_ShockBall:BehaviorProviderDefinition_0.Behavior_Explode_5,StatusEffectChance.BaseValueScaleConstant,,1")
+set Transient.SparkServiceConfiguration_6 Keys ("SparkOnDemandPatchEntry-GBX_Fixes1","SparkOnDemandPatchEntry-GBX_Fixes2","SparkOnDemandPatchEntry-GBX_Fixes3","SparkPatchEntry-GBX_Fixes4","SparkPatchEntry-GBX_Fixes5","SparkPatchEntry-GBX_Fixes6","SparkPatchEntry-GBX_Fixes7","SparkPatchEntry-GBX_Fixes8","SparkPatchEntry-GBX_Fixes9","SparkPatchEntry-GBX_Fixes10","SparkPatchEntry-GBX_Fixes11","SparkPatchEntry-GBX_Fixes12","SparkPatchEntry-GBX_Fixes13","SparkPatchEntry-GBX_Fixes14","SparkLevelPatchEntry-GBX_Fixes15","SparkLevelPatchEntry-GBX_Fixes16","SparkLevelPatchEntry-GBX_Fixes17","SparkLevelPatchEntry-GBX_Fixes18","SparkLevelPatchEntry-GBX_Fixes19","SparkLevelPatchEntry-GBX_Fixes20","SparkLevelPatchEntry-GBX_Fixes21","SparkLevelPatchEntry-ApocHotfix1","SparkLevelPatchEntry-ApocHotfix2","SparkLevelPatchEntry-ApocHotfix3","SparkLevelPatchEntry-ApocHotfix4","SparkLevelPatchEntry-ApocHotfix5","SparkLevelPatchEntry-ApocHotfix6","SparkLevelPatchEntry-ApocHotfix7","SparkLevelPatchEntry-ApocHotfix8","SparkLevelPatchEntry-ApocHotfix9","SparkLevelPatchEntry-ApocHotfix10","SparkLevelPatchEntry-ApocHotfix11","SparkLevelPatchEntry-ApocHotfix12","SparkLevelPatchEntry-ApocHotfix13","SparkLevelPatchEntry-ApocHotfix14","SparkLevelPatchEntry-ApocHotfix15","SparkLevelPatchEntry-ApocHotfix16","SparkLevelPatchEntry-ApocHotfix17")
+set Transient.SparkServiceConfiguration_6 Values ("GD_Gladiator_Streaming,GD_Gladiator_Skills.Projectiles.ShieldProjectile:BehaviorProviderDefinition_0,BehaviorSequences[0].BehaviorData2[26].LinkedVariables.ArrayIndexAndLength,2686977,0","GD_Gladiator_Streaming,GD_Gladiator_Skills.Projectiles.ShieldProjectile:BehaviorProviderDefinition_0,BehaviorSequences[0].BehaviorData2[49].LinkedVariables.ArrayIndexAndLength,8323073,0","GD_Gladiator_Streaming,GD_Gladiator_Skills.Projectiles.ShieldProjectile:BehaviorProviderDefinition_0.OzBehavior_ActorList_1,BehaviorSequences[0].BehaviorData2[32].Behavior.SearchRadius,500.000000,2048","GD_Ma_Chapter03.M_Ma_Chapter03:Objset_cmp_Pt0_06_ReopenDataStream,Objectiveset_cmp.ObjectiveDefinitions,,(GD_Ma_Chapter03.M_Ma_Chapter03:Pt0_06_ReopenDataStream,GD_Ma_Chapter03.M_Ma_Chapter03:Pt0_04_GetToDataStream,GD_Ma_Chapter03.M_Ma_Chapter03:RetrieveHSource)","Weap_Pistol.GestaltDef_Pistol_GestaltSkeletalMesh:SkeletalMeshSocket_260,RelativeLocation,,(X=-0.05,Y=55.0,Z=13.7)","Weap_Pistol.GestaltDef_Pistol_GestaltSkeletalMesh:SkeletalMeshSocket_268,RelativeLocation,,(X=0.02,Y=36.0,Z=15.45)","Weap_Pistol.GestaltDef_Pistol_GestaltSkeletalMesh:SkeletalMeshSocket_270,RelativeLocation.Z,,14.2","GD_Shields.Projectiles.Proj_LegendaryBoosterShield:BehaviorProviderDefinition_1.Behavior_Explode_140,BehaviorSequences[0].BehaviorData2[7].Behavior.StatusEffectDamage.BaseValueAttribute,None,D_Attributes.Projectile.ProjectileDamage","GD_Shields.Projectiles.Proj_LegendaryBoosterShield:BehaviorProviderDefinition_1.Behavior_Explode_140,BehaviorSequences[0].BehaviorData2[7].Behavior.StatusEffectDamage.BaseValueScaleConstant,1.000000,.25","GD_Shields.Projectiles.Proj_LegendaryBoosterShield:BehaviorProviderDefinition_1.Behavior_Explode_140,BehaviorSequences[0].BehaviorData2[7].Behavior.StatusEffectChance.BaseValueConstant,1.000000,20","GD_Itempools.WeaponPools.Pool_Weapons_SniperRifles_04_Rare,BalancedItems,,+(ItmPoolDefinition=None,InvBalanceDefinition=GD_Cork_Weap_SniperRifles.A_Weapons_Unique.Sniper_Vladof_3_TheMachine,Probability=(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=GD_Balance.Weighting.Weight_2_Uncommon,BaseValueScaleConstant=1),bDropOnDeath=True)","GD_Itempools.WeaponPools.Pool_Weapons_AssaultRifles_04_Rare,BalancedItems,,+(ItmPoolDefinition=None,InvBalanceDefinition=gd_cork_weap_assaultrifle.A_Weapons_Unique.AR_Vladof_3_OldPainful,Probability=(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=GD_Balance.Weighting.Weight_2_Uncommon,BaseValueScaleConstant=1),bDropOnDeath=True)","GD_Itempools.WeaponPools.Pool_Weapons_Shotguns_04_Rare,BalancedItems,,+(ItmPoolDefinition=None,InvBalanceDefinition=GD_Cork_Weap_Shotgun.A_Weapons_Unique.SG_Jakobs_Boomacorn,Probability=(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=GD_Balance.Weighting.Weight_2_Uncommon,BaseValueScaleConstant=1),bDropOnDeath=True)","GD_Itempools.WeaponPools.Pool_Weapons_Shotguns_04_Rare,BalancedItems,,+(ItmPoolDefinition=None,InvBalanceDefinition=GD_Cork_Weap_Shotgun.A_Weapons_Unique.SG_Torgue_3_JackOCannon,Probability=(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=GD_Balance.Weighting.Weight_2_Uncommon,BaseValueScaleConstant=1),bDropOnDeath=True)",",GD_Population_Scavengers.Balance.Outlaws.PawnBalance_ScavWastelandWalker,PlayThroughs[0].CustomItemPoolList,,+(ItemPool=GD_Itempools.Runnables.Pool_ScavBadassSpacemanMidget,PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=GD_Itempools.DropWeights.DropODDS_BossUniqueRares,InitializationDefinition=None,BaseValueScaleConstant=1.000000))",",GD_Population_Scavengers.Balance.Outlaws.PawnBalance_ScavWastelandWalker,PlayThroughs[1].CustomItemPoolList,,+(ItemPool=GD_Itempools.Runnables.Pool_ScavBadassSpacemanMidget,PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=GD_Itempools.DropWeights.DropODDS_BossUniqueRares,InitializationDefinition=None,BaseValueScaleConstant=1.000000))","Laser_P,GD_Challenges.Co_LevelChallenges.EyeOfHelios_TreadCarefully,ChallengeType,ECT_DesignerTriggered,ECT_LevelObject","Outlands_P,Outlands_SideMissions.TheWorld:PersistentLevel.Main_Sequence.WillowSeqEvent_MissionRemoteEvent_0,OutputLinks[0].Links[0].LinkedOp,GearboxSeqAct_TriggerDialogName'Outlands_SideMissions.TheWorld:PersistentLevel.Main_Sequence.GearboxSeqAct_TriggerDialogName_48',Outlands_SideMissions.TheWorld:PersistentLevel.Main_Sequence.WillowSeqAct_MissionCustomEvent_14","Outlands_P,Outlands_SideMissions.TheWorld:PersistentLevel.Main_Sequence.WillowSeqAct_MissionCustomEvent_14,OutputLinks[0].Links,,((LinkedOp=GearboxSeqAct_TriggerDialogName'Outlands_SideMissions.TheWorld:PersistentLevel.Main_Sequence.GearboxSeqAct_TriggerDialogName_48',InputLinkIdx=0))","Outlands_P,Outlands_SideMissions.TheWorld:PersistentLevel.Main_Sequence.GearboxSeqAct_TriggerDialogName_49,OutputLinks[0].Links,,()","Outlands_P,Outlands_SideMissions.TheWorld:PersistentLevel.WillowPopulationEncounter_0,Waves[2].MemberOpportunities,,(PopulationOpportunityDen'Outlands_SideMissions.TheWorld:PersistentLevel.PopulationOpportunityDen_2',PopulationOpportunityDen'Outlands_SideMissions.TheWorld:PersistentLevel.PopulationOpportunityDen_8',None)","Ma_FinalBoss_P,GD_Ma_VoltronTrap.Character.CharClass_LoaderUltimateBadass,AttributeStartingValues[0].BaseValue.BaseValueConstant,,120","Ma_FinalBoss_P,GD_Ma_VoltronTrap.Character.CharClass_LoaderUltimateBadass,AttributeStartingValues[6].BaseValue.BaseValueConstant,,110","Ma_FinalBoss_P,GD_Ma_VoltronTrap.Character.CharClass_LoaderUltimateBadass,AttributeStartingValues[1].BaseValue.BaseValueConstant,,6","Ma_FinalBoss_P,GD_Ma_VoltronTrap.Anims.Anim_LoaderUltimateBadass_ArmGun_Loop:BehaviorProviderDefinition_32.Behavior_AIThrowProjectileAtTarget_7,ChildProjectileBaseValues[0].BaseValue.BaseValueScaleConstant,,0.35","Ma_FinalBoss_P,GD_Ma_VoltronTrap.Projectiles.Proj_RocketLaunch,SpeedFormula.BaseValueConstant,,1300","Ma_FinalBoss_P,GD_Ma_VoltronTrap.Anims.Anim_LoaderUltimateBadass_Missile_Loop:BehaviorProviderDefinition_32.Behavior_SpawnProjectile_50,ChildProjectileBaseValues[0].BaseValue.BaseValueScaleConstant,,0.8","Ma_FinalBoss_P,GD_Ma_VoltronTrap.Anims.Anim_LoaderUltimateBadass_Missile_Loop:BehaviorProviderDefinition_32.Behavior_SpawnProjectile_51,ChildProjectileBaseValues[0].BaseValue.BaseValueScaleConstant,,0.8","Ma_FinalBoss_P,GD_Ma_VoltronTrap.Anims.Anim_LoaderUltimateBadass_Missile_Loop:BehaviorProviderDefinition_32.Behavior_SpawnProjectile_52,ChildProjectileBaseValues[0].BaseValue.BaseValueScaleConstant,,0.8","Ma_FinalBoss_P,GD_Ma_VoltronTrap.Anims.Anim_LoaderUltimateBadass_Missile_Loop:BehaviorProviderDefinition_32.Behavior_SpawnProjectile_53,ChildProjectileBaseValues[0].BaseValue.BaseValueScaleConstant,,0.8","Ma_FinalBoss_P,GD_Ma_VoltronTrap.Projectiles.Proj_ShockBall:BehaviorProviderDefinition_0.Behavior_Explode_5,StatusEffectDamage.BaseValueScaleConstant,,0.5","Ma_FinalBoss_P,GD_Ma_VoltronTrap.Projectiles.Proj_ShockBall:BehaviorProviderDefinition_0.Behavior_Explode_5,StatusEffectChance.BaseValueScaleConstant,,1","Ma_FinalBoss_P,GD_Ma_Pop_BossFights.Balance.PawnBalance_Helios,PlayThroughs[0].AttributeStartingValues,,((Attribute = AttributeDefinition'GD_Balance_HealthAndDamage.AIParameters.Attribute_HealthMultiplier',BaseValue =(BaseValueConstant = 170,BaseValueAttribute = None,InitializationDefinition = None,BaseValueScaleConstant = 1.000000)),(Attribute = AttributeDefinition'GD_Balance_HealthAndDamage.AIParameters.Attribute_EnemyShieldMaxValueMultiplier',BaseValue =(BaseValueConstant = 90,BaseValueAttribute = None,InitializationDefinition = None,BaseValueScaleConstant = 1.000000)))","Ma_FinalBoss_P,GD_Ma_Helios.Character.CharClass_Ma_Helios,AttributeStartingValues[1].BaseValue.BaseValueConstant,,6","Ma_FinalBoss_P,GD_Ma_HeliosTurret.Character.CharClass_Ma_HeliosTurret,AttributeStartingValues[1].BaseValue.BaseValueConstant,,20","Ma_FinalBoss_P,GD_Ma_HeliosTurret.Weapons.Ma_HeliosTurret_WeaponType,InstantHitDamage.BaseValueScaleConstant,,0.9","Ma_FinalBoss_P,GD_Ma_EosRocketTurret.Character.CharClass_Ma_EosRocketTurret,AttributeStartingValues[1].BaseValue.BaseValueConstant,,20","Ma_FinalBoss_P,GD_Ma_EosRocketTurret.Projectiles.Projectile_Rocket:BehaviorProviderDefinition_0.Behavior_Explode_351,DamageFormula.BaseValueScaleConstant,,0.9")
 

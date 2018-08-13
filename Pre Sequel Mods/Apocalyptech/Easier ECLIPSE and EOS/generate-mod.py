@@ -226,9 +226,172 @@ for config in [EclipseEasier(), EclipseWeak(), EclipseChump(), EclipseStock()]:
 mod_list.append('#</ECLIPSE>')
 
 ###
+### EOS
+###
+
+mod_list.append('#<EOS><MUT>')
+
+class EosStock(Config):
+    """
+    Stock definitions for ECLIPSE
+    """
+
+    # Not going to do anything with the yellow sticky-grenade things that EOS
+    # lobs at you when its turrets are down.  They're at GD_Ma_Helios.Projectiles.Proj_SpamGrenade.
+    # Would be pretty trivial to do so if we wanted, though.
+
+    label = 'Stock Difficulty'
+
+    health_mult = 220
+    shield_mult = 130
+    nonweapon_damage_mult = 8
+
+    turret_health_scale = 35
+    turret_damage_scale = 1
+    rocket_launcher_health_scale = 25
+    rocket_damage_scale = 1
+
+class EosEasier(Config):
+    """
+    Easier definitions for ECLIPSE
+    """
+
+    label = 'Easier EOS'
+
+    health_mult = 170
+    shield_mult = 90
+    nonweapon_damage_mult = 6
+
+    turret_health_scale = 20
+    turret_damage_scale = 0.9
+    rocket_launcher_health_scale = 20
+    rocket_damage_scale = 0.9
+
+class EosWeak(Config):
+    """
+    Weak definitions for ECLIPSE
+    """
+
+    label = 'Even Easier EOS (comparatively speaking, anyway)'
+
+    health_mult = 120
+    shield_mult = 60
+    nonweapon_damage_mult = 5
+
+    turret_health_scale = 15
+    turret_damage_scale = 0.4
+    rocket_launcher_health_scale = 15
+    rocket_damage_scale = 0.8
+
+class EosChump(Config):
+    """
+    And, why not.  Total shrimp of a boss.
+    """
+
+    label = 'Total Chump'
+
+    health_mult = 40
+    shield_mult = 10
+    nonweapon_damage_mult = 2
+
+    turret_health_scale = 5
+    turret_damage_scale = 0.4
+    rocket_launcher_health_scale = 5
+    rocket_damage_scale = 0.4
+
+for config in [EosEasier(), EosWeak(), EosChump(), EosStock()]:
+    mod_list.append("""
+        #<{config:label}>
+
+            #<Health and Shield Multiplier>
+
+                # For some reason completely unbeknownst to me, some of our earlier statements
+                # which modify ECLIPSE end up altering the EOS AIPawnBalanceDefinition;
+                # specifically, they remove its PlayThroughs[0].AttributeStartingValues
+                # array.  Damned if I know why.  It's the sets to the AttributeStartingValues
+                # array in GD_Ma_VoltronTrap.Character.CharClass_LoaderUltimateBadass which
+                # does it, which makes no bloody sense at all.  They're two totally different
+                # objects.  And not even the same *kind* of object.  I don't know.  Weird.
+                # Anyway, we have to recreate it entirely in here.  We *could* just use
+                # the CharClass instead, and leave them blank here, of course, but it's a
+                # point of pride to keep this in here, at this point.
+
+                level Ma_FinalBoss_P set GD_Ma_Pop_BossFights.Balance.PawnBalance_Helios PlayThroughs[0].AttributeStartingValues
+                (
+                    (
+                        Attribute = AttributeDefinition'GD_Balance_HealthAndDamage.AIParameters.Attribute_HealthMultiplier',
+                        BaseValue =
+                        (
+                            BaseValueConstant = {config:health_mult},
+                            BaseValueAttribute = None,
+                            InitializationDefinition = None,
+                            BaseValueScaleConstant = 1.000000
+                        )
+                    ),
+                    (
+                        Attribute = AttributeDefinition'GD_Balance_HealthAndDamage.AIParameters.Attribute_EnemyShieldMaxValueMultiplier',
+                        BaseValue =
+                        (
+                            BaseValueConstant = {config:shield_mult},
+                            BaseValueAttribute = None,
+                            InitializationDefinition = None,
+                            BaseValueScaleConstant = 1.000000
+                        )
+                    )
+                )
+
+            #</Health and Shield Multiplier>
+
+            #<"Non-Weapon" Damage Multiplier>
+
+                # This ends up affecting most of EOS's attacks
+
+                level Ma_FinalBoss_P set GD_Ma_Helios.Character.CharClass_Ma_Helios AttributeStartingValues[1].BaseValue.BaseValueConstant {config:nonweapon_damage_mult}
+
+            #</"Non-Weapon" Damage Multiplier>
+
+            #<Turrets>
+
+                #<Regular Turret Health>
+
+                    level Ma_FinalBoss_P set GD_Ma_HeliosTurret.Character.CharClass_Ma_HeliosTurret AttributeStartingValues[1].BaseValue.BaseValueConstant {config:turret_health_scale}
+
+                #</Regular Turret Health>
+
+                #<Regular Turret Damage>
+
+                    # I'm actually not totally sure what buffs these up to begin with, but we can scale the final damage var pretty easily.
+                    # (I'm guessing it's the non-weapon multiplier, above, though I'm not sure how)
+
+                    level Ma_FinalBoss_P set GD_Ma_HeliosTurret.Weapons.Ma_HeliosTurret_WeaponType InstantHitDamage.BaseValueScaleConstant {config:turret_damage_scale}
+
+                #</Regular Turret Damage>
+
+                #<Rocket Launcher Turret Health>
+
+                    level Ma_FinalBoss_P set GD_Ma_EosRocketTurret.Character.CharClass_Ma_EosRocketTurret AttributeStartingValues[1].BaseValue.BaseValueConstant {config:rocket_launcher_health_scale}
+
+                #</Rocket Launcher Turret Health>
+
+                #<Rocket Launcher Damage>
+
+                    # I'm actually not totally sure what buffs these up to begin with, but we can scale the final damage var pretty easily.
+                    # (I'm guessing it's the non-weapon multiplier, above, though I'm not sure how)
+
+                    level Ma_FinalBoss_P set GD_Ma_EosRocketTurret.Projectiles.Projectile_Rocket:BehaviorProviderDefinition_0.Behavior_Explode_351 DamageFormula.BaseValueScaleConstant {config:rocket_damage_scale}
+
+                #</Rocket Launcher Damage>
+
+            #</Turrets>
+
+        #</{config:label}>
+        """.format(config=config))
+
+###
 ### Close out the mod
 ###
 
+mod_list.append('#</EOS>')
 mod_list.append('#</{}>'.format(mod_name))
 
 ###
