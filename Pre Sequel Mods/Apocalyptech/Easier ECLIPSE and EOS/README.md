@@ -15,8 +15,10 @@ independently.  There are four options for each boss:
 * Even Easier
 * Total Chump
 * Stock Difficulty
+* Infinite Badass Difficulty (This is a buff, not a nerf!  In case you
+  were feeling masochistic.)
 
-You can use the last option to have one of the bosses remain unchanged, if
+You can use the "stock" option to have one of the bosses remain unchanged, if
 you'd only wanted to nerf one of the two.  The "Easier" default is the one
 which intends to have the bosses still be quite dangerous.
 
@@ -27,7 +29,7 @@ during the fights will not change much either.  EOS's Eye of Helios attack
 will remain quite devastating, for instance, so stay out of the way.
 
 It's perhaps worth noting that this has only really been tested in Normal
-mode.
+mode, and hasn't really received a lot of playtesting in general.
 
 Usage
 =====

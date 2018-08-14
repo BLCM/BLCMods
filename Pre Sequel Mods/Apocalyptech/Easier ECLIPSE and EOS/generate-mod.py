@@ -53,6 +53,25 @@ output_filename = '{}.blcm'.format(mod_name)
 ### Control classes
 ###
 
+class EclipseUltimate(Config):
+    """
+    Buff ECLIPSE instead of nerfing him.  'cause why not?
+    """
+
+    label = 'Infinite Badass Difficulty (this is a buff, not a nerf!)'
+
+    health_mult = 240
+    shield_mult = 200
+    nonweapon_damage_mult = 9
+
+    arm_laser_damage_scale = 0.7
+
+    rocket_speed = 1900
+    rocket_damage_scale = 1.2
+
+    shock_orb_damage_scale = 1
+    shock_orb_effect_chance_scale = 2
+
 class EclipseStock(Config):
     """
     Stock definitions for ECLIPSE
@@ -97,7 +116,7 @@ class EclipseWeak(Config):
     Weak definitions for ECLIPSE
     """
 
-    label = 'Even Easier ECLIPSE (comparatively speaking, anyway)'
+    label = 'Even Easier ECLIPSE'
 
     health_mult = 60
     shield_mult = 60
@@ -145,6 +164,9 @@ mod_list.append("""TPS
     # Makes the boss fights against ECLIPSE and EOS easier.  Each has a few different
     # options, and can be toggled independently of each other (including setting them
     # to the stock values, in case you want to nerf one but not the other).
+    #
+    # Should you be feeling masochistic, there's also an option which buffs both of
+    # them, rather than nerfing.
 
     #<ECLIPSE><MUT>
 
@@ -153,7 +175,7 @@ mod_list.append("""TPS
 ###
 ### ECLIPSE
 ###
-for config in [EclipseEasier(), EclipseWeak(), EclipseChump(), EclipseStock()]:
+for config in [EclipseEasier(), EclipseWeak(), EclipseChump(), EclipseStock(), EclipseUltimate()]:
     mod_list.append("""
         #<{config:label}>
 
@@ -230,6 +252,50 @@ mod_list.append('#</ECLIPSE>')
 ###
 
 mod_list.append('#<EOS><MUT>')
+
+class EosUltimate(Config):
+    """
+    Buff EOS instead of nerfing him.  'cause why not?
+    """
+
+    label = 'Infinite Badass Difficulty (this is a buff, not a nerf!)'
+
+    health_mult = 290
+    shield_mult = 170
+    nonweapon_damage_mult = 11
+
+    turret_health_scale = 45
+    turret_damage_scale = 2
+    rocket_launcher_health_scale = 40
+    rocket_damage_scale = 2
+
+    moonshot_damage_scale_0 = 15
+    moonshot_damage_scale_1 = 20
+
+    moonshot_badass_pawn = 'GD_Ma_Pop_Glitches.Balance.PawnBalance_BadassGlitch'
+    moonshot_regular_pawn_0 = 'GD_Ma_Pop_ClaptrapForces.Population.Uniques.PopDef_ShadowClone_Eos'
+    moonshot_regular_pawn_1 = 'GD_Ma_Pop_Glitches.Population.PopDef_Glitch'
+    moonshot_regular_pawn_2 = 'GD_Ma_Pop_Virus.Population.PopDef_VirusLauncher'
+    moonshot_regular_pawn_3 = 'GD_Ma_Pop_Virus.Population.PopDef_Virus'
+    moonshot_regular_pawn_4 = 'GD_Ma_Pop_Virus.Population.PopDef_ParasiticVirus'
+
+    # I *think* this is for the first bit of the battle
+    moonshot_regular_pawn_0_weight_0 = 1.0
+    moonshot_regular_pawn_1_weight_0 = 0.6
+    moonshot_regular_pawn_2_weight_0 = 1.0
+    moonshot_regular_pawn_3_weight_0 = 0.6
+    moonshot_regular_pawn_4_weight_0 = 1.0
+
+    # And then this is after EOS is hurt a bit
+    moonshot_regular_pawn_0_weight_1 = 1.0
+    moonshot_regular_pawn_1_weight_1 = 0.3
+    moonshot_regular_pawn_2_weight_1 = 2.0
+    moonshot_regular_pawn_3_weight_1 = 0.5
+    moonshot_regular_pawn_4_weight_1 = 1.2
+
+    eye_of_helios_delay = 0
+    eye_of_helios_damage_scale = 99
+    eye_of_helios_damage_radius = 2000
 
 class EosStock(Config):
     """
@@ -328,7 +394,7 @@ class EosWeak(Config):
     Weak definitions for ECLIPSE
     """
 
-    label = 'Even Easier EOS (comparatively speaking, anyway)'
+    label = 'Even Easier EOS'
 
     health_mult = 120
     shield_mult = 60
@@ -411,7 +477,7 @@ class EosChump(Config):
     eye_of_helios_damage_scale = 70
     eye_of_helios_damage_radius = 1000
 
-for config in [EosEasier(), EosWeak(), EosChump(), EosStock()]:
+for config in [EosEasier(), EosWeak(), EosChump(), EosStock(), EosUltimate()]:
     mod_list.append("""
         #<{config:label}>
 
