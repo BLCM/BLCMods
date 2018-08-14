@@ -275,6 +275,10 @@ class EosStock(Config):
     moonshot_regular_pawn_3_weight_1 = 1.0
     moonshot_regular_pawn_4_weight_1 = 1.0
 
+    eye_of_helios_delay = 0
+    eye_of_helios_damage_scale = 99
+    eye_of_helios_damage_radius = 1500
+
 class EosEasier(Config):
     """
     Easier definitions for ECLIPSE
@@ -314,6 +318,10 @@ class EosEasier(Config):
     moonshot_regular_pawn_2_weight_1 = 0.5
     moonshot_regular_pawn_3_weight_1 = 1.0
     moonshot_regular_pawn_4_weight_1 = 1.0
+
+    eye_of_helios_delay = 0.5
+    eye_of_helios_damage_scale = 90
+    eye_of_helios_damage_radius = 1300
 
 class EosWeak(Config):
     """
@@ -355,6 +363,10 @@ class EosWeak(Config):
     moonshot_regular_pawn_3_weight_1 = 1.0
     moonshot_regular_pawn_4_weight_1 = 0.8
 
+    eye_of_helios_delay = 1
+    eye_of_helios_damage_scale = 80
+    eye_of_helios_damage_radius = 1200
+
 class EosChump(Config):
     """
     And, why not.  Total shrimp of a boss.
@@ -394,6 +406,10 @@ class EosChump(Config):
     moonshot_regular_pawn_2_weight_1 = 1.0
     moonshot_regular_pawn_3_weight_1 = 1.0
     moonshot_regular_pawn_4_weight_1 = 1.0
+
+    eye_of_helios_delay = 2
+    eye_of_helios_damage_scale = 70
+    eye_of_helios_damage_radius = 1000
 
 for config in [EosEasier(), EosWeak(), EosChump(), EosStock()]:
     mod_list.append("""
@@ -543,6 +559,32 @@ for config in [EosEasier(), EosWeak(), EosChump(), EosStock()]:
                 #</Spawn Weights>
 
             #</Moonshot Attack>
+
+            #<Eye of Helios>
+
+                #<Attack Delay>
+
+                    # Increasing the delay here will also have the effect of shortening the laser beam by that much.
+                    # I'd love to figure out how to inject this delay *before* the laser-charging animation comes
+                    # on, but the BPDs for EOS are just hideous, and I found this first, and it works, so I'm just
+                    # leaving it there.  :)  It's easy to extend the laser duration by adding a delay to COLD[205]
+                    # but the eye closes according to its original schedule, and I hadn't found where that timing was.
+
+                    level Ma_FinalBoss_P set GD_Ma_Helios.Character.AiDef_Ma_Helios:AIBehaviorProviderDefinition_0 BehaviorSequences[0].ConsolidatedOutputLinkData[203].ActivateDelay {config:eye_of_helios_delay}
+
+                #</Attack Delay>
+
+                #<Attack Damage + Radius>
+
+                    # I actually don't intend on nerfing this too much; it should remain a very deadly attack
+
+                    level Ma_FinalBoss_P set GD_Ma_ShadowTrapEye.Character.AIDef_EyeOfHelios:AIBehaviorProviderDefinition_0.Behavior_FireBeam_88 DamagePerSecondFormula.BaseValueScaleConstant {config:eye_of_helios_damage_scale}
+
+                    level Ma_FinalBoss_P set GD_Ma_ShadowTrapEye.Character.AIDef_EyeOfHelios:AIBehaviorProviderDefinition_0.Behavior_FireBeam_88 RadiusToDoDamageAroundImpact.BaseValueConstant {config:eye_of_helios_damage_radius}
+
+                #</Attack Damage + Radius>
+
+            #</Eye of Helios>
 
         #</{config:label}>
         """.format(config=config))
