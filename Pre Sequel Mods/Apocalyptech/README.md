@@ -15,6 +15,7 @@ branches, so you can browse in `bl2betterloot`, `bl2colddeadhands`,
 
 * [Mod List](#mod-list)
   * [AdBlocker 2000](#adblocker-2000)
+  * [Easier ECLIPSE and EOS](#easier-eclipse-and-eos)
   * [Guaranteed M0RQ, Cutie Killer, and Heartfull Splodger](#guaranteed-m0rq-cutie-killer-and-heartfull-splodger)
   * [Guaranteed Phonic](#guaranteed-phonic)
   * [Luneshine on Uniques](#luneshine-on-uniques)
@@ -42,6 +43,13 @@ Tired of running headlong into those damned pop-up ads in Nexus and
 Motherlessboard?  Rage no longer!  A quick install of our fresh new
 *AdBlocker 2000* will clear those right up.  Never be bothered by those
 pesky ads again!
+
+### Easier ECLIPSE and EOS
+
+This mod makes the ECLIPSE and EOS boss fights at the end of the Claptastic
+Voyage DLC easier in a variety of ways.  The default settings in the mod
+aim to have the bosses remain quite dangerous -- the goal isn't really to
+make them *super* easy (except on the "Total Chump" option).
 
 ### Guaranteed M0RQ, Cutie Killer, and Heartfull Splodger
 
