@@ -251,6 +251,30 @@ class EosStock(Config):
     rocket_launcher_health_scale = 25
     rocket_damage_scale = 1
 
+    moonshot_damage_scale_0 = 12
+    moonshot_damage_scale_1 = 15
+
+    moonshot_badass_pawn = 'GD_Ma_Pop_Glitches.Balance.PawnBalance_BadassGlitch'
+    moonshot_regular_pawn_0 = 'GD_Ma_Pop_ClaptrapForces.Population.Uniques.PopDef_ShadowClone_Eos'
+    moonshot_regular_pawn_1 = 'GD_Ma_Pop_Glitches.Population.PopDef_Glitch'
+    moonshot_regular_pawn_2 = 'GD_Ma_Pop_Virus.Population.PopDef_VirusLauncher'
+    moonshot_regular_pawn_3 = 'GD_Ma_Pop_Virus.Population.PopDef_Virus'
+    moonshot_regular_pawn_4 = 'GD_Ma_Pop_Virus.Population.PopDef_ParasiticVirus'
+
+    # I *think* this is for the first bit of the battle
+    moonshot_regular_pawn_0_weight_0 = 0.4
+    moonshot_regular_pawn_1_weight_0 = 1.0
+    moonshot_regular_pawn_2_weight_0 = 0.25
+    moonshot_regular_pawn_3_weight_0 = 1.0
+    moonshot_regular_pawn_4_weight_0 = 1.0
+
+    # And then this is after EOS is hurt a bit
+    moonshot_regular_pawn_0_weight_1 = 0.25
+    moonshot_regular_pawn_1_weight_1 = 1.0
+    moonshot_regular_pawn_2_weight_1 = 1.0
+    moonshot_regular_pawn_3_weight_1 = 1.0
+    moonshot_regular_pawn_4_weight_1 = 1.0
+
 class EosEasier(Config):
     """
     Easier definitions for ECLIPSE
@@ -266,6 +290,30 @@ class EosEasier(Config):
     turret_damage_scale = 0.9
     rocket_launcher_health_scale = 20
     rocket_damage_scale = 0.9
+
+    moonshot_damage_scale_0 = 10
+    moonshot_damage_scale_1 = 13
+
+    moonshot_badass_pawn = 'GD_Ma_Pop_Glitches.Balance.PawnBalance_BadassGlitch'
+    moonshot_regular_pawn_0 = 'GD_Ma_Pop_ClaptrapForces.Population.Uniques.PopDef_ShadowClone_Eos'
+    moonshot_regular_pawn_1 = 'GD_Ma_Pop_Glitches.Population.PopDef_Glitch'
+    moonshot_regular_pawn_2 = 'GD_Ma_Pop_Virus.Population.PopDef_VirusLauncher'
+    moonshot_regular_pawn_3 = 'GD_Ma_Pop_Virus.Population.PopDef_Virus'
+    moonshot_regular_pawn_4 = 'GD_Ma_Pop_Virus.Population.PopDef_ParasiticVirus'
+
+    # I *think* this is for the first bit of the battle
+    moonshot_regular_pawn_0_weight_0 = 0.2
+    moonshot_regular_pawn_1_weight_0 = 1.0
+    moonshot_regular_pawn_2_weight_0 = 0.2
+    moonshot_regular_pawn_3_weight_0 = 1.0
+    moonshot_regular_pawn_4_weight_0 = 0.9
+
+    # And then this is after EOS is hurt a bit
+    moonshot_regular_pawn_0_weight_1 = 0.25
+    moonshot_regular_pawn_1_weight_1 = 1.0
+    moonshot_regular_pawn_2_weight_1 = 0.5
+    moonshot_regular_pawn_3_weight_1 = 1.0
+    moonshot_regular_pawn_4_weight_1 = 1.0
 
 class EosWeak(Config):
     """
@@ -283,6 +331,30 @@ class EosWeak(Config):
     rocket_launcher_health_scale = 15
     rocket_damage_scale = 0.8
 
+    moonshot_damage_scale_0 = 8
+    moonshot_damage_scale_1 = 10
+
+    moonshot_badass_pawn = 'GD_Ma_Pop_Virus.Balance.PawnBalance_VirusLauncher'
+    moonshot_regular_pawn_0 = 'GD_Ma_Pop_ClaptrapForces.Population.Uniques.PopDef_ShadowClone_Eos'
+    moonshot_regular_pawn_1 = 'GD_Ma_Pop_Glitches.Population.PopDef_Glitch'
+    moonshot_regular_pawn_2 = 'GD_Ma_Pop_Glitches.Mixes.PopDef_Glitches_Mix_FinalBoss_Weak'
+    moonshot_regular_pawn_3 = 'GD_Ma_Pop_Virus.Population.PopDef_Virus'
+    moonshot_regular_pawn_4 = 'GD_Ma_Pop_Virus.Population.PopDef_ParasiticVirus'
+
+    # I *think* this is for the first bit of the battle
+    moonshot_regular_pawn_0_weight_0 = 0
+    moonshot_regular_pawn_1_weight_0 = 1.0
+    moonshot_regular_pawn_2_weight_0 = 1.0
+    moonshot_regular_pawn_3_weight_0 = 1.0
+    moonshot_regular_pawn_4_weight_0 = 0.4
+
+    # And then this is after EOS is hurt a bit
+    moonshot_regular_pawn_0_weight_1 = 0.25
+    moonshot_regular_pawn_1_weight_1 = 1.0
+    moonshot_regular_pawn_2_weight_1 = 1.0
+    moonshot_regular_pawn_3_weight_1 = 1.0
+    moonshot_regular_pawn_4_weight_1 = 0.8
+
 class EosChump(Config):
     """
     And, why not.  Total shrimp of a boss.
@@ -298,6 +370,30 @@ class EosChump(Config):
     turret_damage_scale = 0.4
     rocket_launcher_health_scale = 5
     rocket_damage_scale = 0.4
+
+    moonshot_damage_scale_0 = 4
+    moonshot_damage_scale_1 = 6
+
+    moonshot_badass_pawn = 'GD_Ma_Pop_Virus.Balance.PawnBalance_ParasiticVirus'
+    moonshot_regular_pawn_0 = 'GD_Ma_Pop_ClaptrapForces.Population.Uniques.PopDef_ShadowClone_Eos'
+    moonshot_regular_pawn_1 = 'GD_Ma_Pop_Glitches.Population.PopDef_Glitch'
+    moonshot_regular_pawn_2 = 'GD_Ma_Pop_Glitches.Mixes.PopDef_Glitches_Mix_FinalBoss_Weak'
+    moonshot_regular_pawn_3 = 'GD_Ma_Pop_Virus.Population.PopDef_Virus'
+    moonshot_regular_pawn_4 = 'GD_Ma_Pop_Glitches.Mixes.PopDef_Glitches_Mix_FinalBoss_Weak'
+
+    # I *think* this is for the first bit of the battle
+    moonshot_regular_pawn_0_weight_0 = 0
+    moonshot_regular_pawn_1_weight_0 = 1.0
+    moonshot_regular_pawn_2_weight_0 = 1.0
+    moonshot_regular_pawn_3_weight_0 = 1.0
+    moonshot_regular_pawn_4_weight_0 = 1.0
+
+    # And then this is after EOS is hurt a bit
+    moonshot_regular_pawn_0_weight_1 = 0
+    moonshot_regular_pawn_1_weight_1 = 1.0
+    moonshot_regular_pawn_2_weight_1 = 1.0
+    moonshot_regular_pawn_3_weight_1 = 1.0
+    moonshot_regular_pawn_4_weight_1 = 1.0
 
 for config in [EosEasier(), EosWeak(), EosChump(), EosStock()]:
     mod_list.append("""
@@ -383,6 +479,62 @@ for config in [EosEasier(), EosWeak(), EosChump(), EosStock()]:
                 #</Rocket Launcher Damage>
 
             #</Turrets>
+
+            #<Moonshot Attack>
+
+                #<Overall Damage>
+
+                    level Ma_FinalBoss_P set GD_Ma_Helios.Projectiles.Proj_MoonShotCannon:BehaviorProviderDefinition_0.Behavior_Explode_5 DamageFormula.BaseValueScaleConstant {config:moonshot_damage_scale_0}
+
+                    level Ma_FinalBoss_P set GD_Ma_Helios.Projectiles.Proj_MoonShotCannon:BehaviorProviderDefinition_0.Behavior_Explode_6 DamageFormula.BaseValueScaleConstant {config:moonshot_damage_scale_1}
+
+                #</Overall Damage>
+
+                #<Spawned Reinforcements>
+
+                    level Ma_FinalBoss_P set GD_Ma_Helios.Projectiles.Proj_MoonShotCannon:BehaviorProviderDefinition_0.Behavior_SpawnFromPopulationSystem_1.PopulationFactoryBalancedAIPawn_0 PawnBalanceDefinition AIPawnBalanceDefinition'{config:moonshot_badass_pawn}'
+
+                    level Ma_FinalBoss_P set GD_Ma_Helios.Projectiles.Proj_MoonShotCannon:BehaviorProviderDefinition_0.Behavior_SpawnFromPopulationSystem_20.PopulationFactoryPopulationDefinition_0 PopulationDef WillowPopulationDefinition'{config:moonshot_regular_pawn_1}'
+
+                    level Ma_FinalBoss_P set GD_Ma_Helios.Projectiles.Proj_MoonShotCannon:BehaviorProviderDefinition_0.Behavior_SpawnFromPopulationSystem_21.PopulationFactoryPopulationDefinition_0 PopulationDef WillowPopulationDefinition'{config:moonshot_regular_pawn_0}'
+
+                    level Ma_FinalBoss_P set GD_Ma_Helios.Projectiles.Proj_MoonShotCannon:BehaviorProviderDefinition_0.Behavior_SpawnFromPopulationSystem_22.PopulationFactoryPopulationDefinition_0 PopulationDef WillowPopulationDefinition'{config:moonshot_regular_pawn_2}'
+
+                    level Ma_FinalBoss_P set GD_Ma_Helios.Projectiles.Proj_MoonShotCannon:BehaviorProviderDefinition_0.Behavior_SpawnFromPopulationSystem_23.PopulationFactoryPopulationDefinition_0 PopulationDef WillowPopulationDefinition'{config:moonshot_regular_pawn_4}'
+
+                    level Ma_FinalBoss_P set GD_Ma_Helios.Projectiles.Proj_MoonShotCannon:BehaviorProviderDefinition_0.Behavior_SpawnFromPopulationSystem_24.PopulationFactoryPopulationDefinition_0 PopulationDef WillowPopulationDefinition'{config:moonshot_regular_pawn_3}'
+
+                #</Spawned Reinforcements>
+
+                #<Spawn Weights>
+
+                    level Ma_FinalBoss_P set GD_Ma_Helios.Projectiles.Proj_MoonShotCannon:BehaviorProviderDefinition_0 BehaviorSequences[2].BehaviorData2[3].LinkedVariables.ArrayIndexAndLength 0
+
+                    level Ma_FinalBoss_P set GD_Ma_Helios.Projectiles.Proj_MoonShotCannon:BehaviorProviderDefinition_0 BehaviorSequences[2].BehaviorData2[16].LinkedVariables.ArrayIndexAndLength 0
+
+                    level Ma_FinalBoss_P set GD_Ma_Helios.Projectiles.Proj_MoonShotCannon:BehaviorProviderDefinition_0.Behavior_RandomBranch_11 Conditions[0] {config:moonshot_regular_pawn_0_weight_0}
+
+                    level Ma_FinalBoss_P set GD_Ma_Helios.Projectiles.Proj_MoonShotCannon:BehaviorProviderDefinition_0.Behavior_RandomBranch_11 Conditions[1] {config:moonshot_regular_pawn_1_weight_0}
+
+                    level Ma_FinalBoss_P set GD_Ma_Helios.Projectiles.Proj_MoonShotCannon:BehaviorProviderDefinition_0.Behavior_RandomBranch_11 Conditions[2] {config:moonshot_regular_pawn_2_weight_0}
+
+                    level Ma_FinalBoss_P set GD_Ma_Helios.Projectiles.Proj_MoonShotCannon:BehaviorProviderDefinition_0.Behavior_RandomBranch_11 Conditions[3] {config:moonshot_regular_pawn_3_weight_0}
+
+                    level Ma_FinalBoss_P set GD_Ma_Helios.Projectiles.Proj_MoonShotCannon:BehaviorProviderDefinition_0.Behavior_RandomBranch_11 Conditions[4] {config:moonshot_regular_pawn_4_weight_0}
+
+                    level Ma_FinalBoss_P set GD_Ma_Helios.Projectiles.Proj_MoonShotCannon:BehaviorProviderDefinition_0.Behavior_RandomBranch_12 Conditions[0] {config:moonshot_regular_pawn_0_weight_1}
+
+                    level Ma_FinalBoss_P set GD_Ma_Helios.Projectiles.Proj_MoonShotCannon:BehaviorProviderDefinition_0.Behavior_RandomBranch_12 Conditions[1] {config:moonshot_regular_pawn_1_weight_1}
+
+                    level Ma_FinalBoss_P set GD_Ma_Helios.Projectiles.Proj_MoonShotCannon:BehaviorProviderDefinition_0.Behavior_RandomBranch_12 Conditions[2] {config:moonshot_regular_pawn_2_weight_1}
+
+                    level Ma_FinalBoss_P set GD_Ma_Helios.Projectiles.Proj_MoonShotCannon:BehaviorProviderDefinition_0.Behavior_RandomBranch_12 Conditions[3] {config:moonshot_regular_pawn_3_weight_1}
+
+                    level Ma_FinalBoss_P set GD_Ma_Helios.Projectiles.Proj_MoonShotCannon:BehaviorProviderDefinition_0.Behavior_RandomBranch_12 Conditions[4] {config:moonshot_regular_pawn_4_weight_1}
+
+                #</Spawn Weights>
+
+            #</Moonshot Attack>
 
         #</{config:label}>
         """.format(config=config))
