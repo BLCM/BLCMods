@@ -4,12 +4,12 @@ Easier ECLIPSE and EOS
 This mod makes the ECLIPSE and EOS boss fights at the end of the Claptastic
 Voyage DLC easier in a variety of ways.  The default settings in the mod
 aim to have the bosses remain quite dangerous -- the goal isn't really to
-make them super easy.  That said, I'm not great at balancing, so it's
-possible I've gone too far in some areas, or not far enough in others.  Let
-me know if anything needs tweaking!
+make them *super* easy (except on the "Total Chump" option).  That said,
+I'm not great at balancing, so it's possible I've gone too far in some areas,
+or not far enough in others.  Let me know if anything needs tweaking!
 
 The mod has one section per boss, so you can configure their difficulty
-independently.  There are four options for each boss:
+independently.  There are five options for each boss:
 
 * Easier (the default)
 * Even Easier
@@ -63,5 +63,5 @@ This mod itself is licensed under
 Changelog
 =========
 
-**v1.0.0**, Unreleased:
+**v1.0.0**, August 14, 2018:
  * Initial public release
