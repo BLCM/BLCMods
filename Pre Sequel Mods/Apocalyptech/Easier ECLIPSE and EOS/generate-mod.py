@@ -297,6 +297,16 @@ class EosUltimate(Config):
     eye_of_helios_damage_scale = 99
     eye_of_helios_damage_radius = 2000
 
+    minion_regular_population = 'GD_Ma_Pop_Glitches.Population.PopDef_BadassGlitch'
+    minion_regular_max_active = 3
+    minion_regular_max_total = 20
+    minion_regular_respawn_delay = 0.2
+
+    minion_badass_population = 'GD_Ma_Pop_Glitches.Population.PopDef_BadassGlitch'
+    minion_badass_max_active = 1
+    minion_badass_max_total = 20
+    minion_badass_respawn_delay = 0.2
+
 class EosStock(Config):
     """
     Stock definitions for ECLIPSE
@@ -345,6 +355,16 @@ class EosStock(Config):
     eye_of_helios_damage_scale = 99
     eye_of_helios_damage_radius = 1500
 
+    minion_regular_population = 'GD_Ma_Pop_Glitches.Mixes.PopDef_Glitches_Mix_FinalBoss_Weak'
+    minion_regular_max_active = 3
+    minion_regular_max_total = 10
+    minion_regular_respawn_delay = 0.5
+
+    minion_badass_population = 'GD_Ma_Pop_Glitches.Population.PopDef_BadassGlitch'
+    minion_badass_max_active = 1
+    minion_badass_max_total = 4
+    minion_badass_respawn_delay = 0.5
+
 class EosEasier(Config):
     """
     Easier definitions for ECLIPSE
@@ -388,6 +408,16 @@ class EosEasier(Config):
     eye_of_helios_delay = 0.5
     eye_of_helios_damage_scale = 90
     eye_of_helios_damage_radius = 1300
+
+    minion_regular_population = 'GD_Ma_Pop_Glitches.Mixes.PopDef_Glitches_Mix_FinalBoss_Weak'
+    minion_regular_max_active = 3
+    minion_regular_max_total = 10
+    minion_regular_respawn_delay = 1.5
+
+    minion_badass_population = 'GD_Ma_Pop_Glitches.Population.PopDef_BadassGlitch'
+    minion_badass_max_active = 1
+    minion_badass_max_total = 2
+    minion_badass_respawn_delay = 3
 
 class EosWeak(Config):
     """
@@ -433,6 +463,16 @@ class EosWeak(Config):
     eye_of_helios_damage_scale = 80
     eye_of_helios_damage_radius = 1200
 
+    minion_regular_population = 'GD_Ma_Pop_Glitches.Mixes.PopDef_Glitches_Mix_FinalBoss_Weak'
+    minion_regular_max_active = 2
+    minion_regular_max_total = 6
+    minion_regular_respawn_delay = 3
+
+    minion_badass_population = 'GD_Ma_Pop_Glitches.Population.PopDef_BadassGlitch'
+    minion_badass_max_active = 1
+    minion_badass_max_total = 1
+    minion_badass_respawn_delay = 6
+
 class EosChump(Config):
     """
     And, why not.  Total shrimp of a boss.
@@ -476,6 +516,16 @@ class EosChump(Config):
     eye_of_helios_delay = 2
     eye_of_helios_damage_scale = 70
     eye_of_helios_damage_radius = 1000
+
+    minion_regular_population = 'GD_Ma_Pop_Glitches.Mixes.PopDef_Glitches_Mix_FinalBoss_Weak'
+    minion_regular_max_active = 2
+    minion_regular_max_total = 4
+    minion_regular_respawn_delay = 5
+
+    minion_badass_population = 'GD_Ma_Pop_Glitches.Mixes.PopDef_Glitches_Mix_FinalBoss_Weak'
+    minion_badass_max_active = 0
+    minion_badass_max_total = 0
+    minion_badass_respawn_delay = 20
 
 for config in [EosEasier(), EosWeak(), EosChump(), EosStock(), EosUltimate()]:
     mod_list.append("""
@@ -651,6 +701,78 @@ for config in [EosEasier(), EosWeak(), EosChump(), EosStock(), EosUltimate()]:
                 #</Attack Damage + Radius>
 
             #</Eye of Helios>
+
+            #<Between-Wave Enemy Spawns>
+
+                #<Regular Enemies>
+
+                    #<Spawn Pool>
+
+                        level Ma_FinalBoss_P set Ma_FinalBoss_Game.TheWorld:PersistentLevel.PopulationOpportunityDen_4 PopulationDef WillowPopulationDefinition'{config:minion_regular_population}'
+
+                    #</Spawn Pool>
+
+                    #<Max Active>
+
+                        level Ma_FinalBoss_P set Ma_FinalBoss_Game.TheWorld:PersistentLevel.PopulationOpportunityDen_4 MaxActiveActorsIsNormal {config:minion_regular_max_active}
+
+                        level Ma_FinalBoss_P set Ma_FinalBoss_Game.TheWorld:PersistentLevel.PopulationOpportunityDen_4 MaxActiveActorsThreatened {config:minion_regular_max_active}
+
+                        level Ma_FinalBoss_P set Ma_FinalBoss_Game.TheWorld:PersistentLevel.PopulationOpportunityDen_4 SpawnData.MaxActiveActors {config:minion_regular_max_active}
+
+                    #</Max Active>
+
+                    #<Total Spawned>
+
+                        level Ma_FinalBoss_P set Ma_FinalBoss_Game.TheWorld:PersistentLevel.PopulationOpportunityDen_4 MaxTotalActors {config:minion_regular_max_total}
+
+                        level Ma_FinalBoss_P set Ma_FinalBoss_Game.TheWorld:PersistentLevel.PopulationOpportunityDen_4 MaxTotalActorsFormula.BaseValueConstant {config:minion_regular_max_total}
+
+                    #</Total Spawned>
+
+                    #<Respawn Delay>
+
+                        level Ma_FinalBoss_P set Ma_FinalBoss_Game.TheWorld:PersistentLevel.PopulationOpportunityDen_4 RespawnDelay {config:minion_regular_respawn_delay}
+
+                    #</Respawn Delay>
+
+                #</Regular Enemies>
+
+                #<Badass Enemies>
+
+                    #<Spawn Pool>
+
+                        level Ma_FinalBoss_P set Ma_FinalBoss_Game.TheWorld:PersistentLevel.PopulationOpportunityDen_1 PopulationDef WillowPopulationDefinition'{config:minion_badass_population}'
+
+                    #</Spawn Pool>
+
+                    #<Max Active>
+
+                        level Ma_FinalBoss_P set Ma_FinalBoss_Game.TheWorld:PersistentLevel.PopulationOpportunityDen_1 MaxActiveActorsIsNormal {config:minion_badass_max_active}
+
+                        level Ma_FinalBoss_P set Ma_FinalBoss_Game.TheWorld:PersistentLevel.PopulationOpportunityDen_1 MaxActiveActorsThreatened {config:minion_badass_max_active}
+
+                        level Ma_FinalBoss_P set Ma_FinalBoss_Game.TheWorld:PersistentLevel.PopulationOpportunityDen_1 SpawnData.MaxActiveActors {config:minion_badass_max_active}
+
+                    #</Max Active>
+
+                    #<Total Spawned>
+
+                        level Ma_FinalBoss_P set Ma_FinalBoss_Game.TheWorld:PersistentLevel.PopulationOpportunityDen_1 MaxTotalActors {config:minion_badass_max_total}
+
+                        level Ma_FinalBoss_P set Ma_FinalBoss_Game.TheWorld:PersistentLevel.PopulationOpportunityDen_1 MaxTotalActorsFormula.BaseValueConstant {config:minion_badass_max_total}
+
+                    #</Total Spawned>
+
+                    #<Respawn Delay>
+
+                        level Ma_FinalBoss_P set Ma_FinalBoss_Game.TheWorld:PersistentLevel.PopulationOpportunityDen_1 RespawnDelay {config:minion_badass_respawn_delay}
+
+                    #</Respawn Delay>
+
+                #</Badass Enemies>
+
+            #</Between-Wave Enemy Spawns>
 
         #</{config:label}>
         """.format(config=config))
