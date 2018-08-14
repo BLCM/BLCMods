@@ -448,35 +448,43 @@ for config in [EosEasier(), EosWeak(), EosChump(), EosStock()]:
 
             #<Turrets>
 
-                #<Regular Turret Health>
+                #<Regular Turrets>
 
-                    level Ma_FinalBoss_P set GD_Ma_HeliosTurret.Character.CharClass_Ma_HeliosTurret AttributeStartingValues[1].BaseValue.BaseValueConstant {config:turret_health_scale}
+                    #<Health>
 
-                #</Regular Turret Health>
+                        level Ma_FinalBoss_P set GD_Ma_HeliosTurret.Character.CharClass_Ma_HeliosTurret AttributeStartingValues[1].BaseValue.BaseValueConstant {config:turret_health_scale}
 
-                #<Regular Turret Damage>
+                    #</Health>
 
-                    # I'm actually not totally sure what buffs these up to begin with, but we can scale the final damage var pretty easily.
-                    # (I'm guessing it's the non-weapon multiplier, above, though I'm not sure how)
+                    #<Damage>
 
-                    level Ma_FinalBoss_P set GD_Ma_HeliosTurret.Weapons.Ma_HeliosTurret_WeaponType InstantHitDamage.BaseValueScaleConstant {config:turret_damage_scale}
+                        # I'm actually not totally sure what buffs these up to begin with, but we can scale the final damage var pretty easily.
+                        # (I'm guessing it's the non-weapon multiplier, above, though I'm not sure how)
 
-                #</Regular Turret Damage>
+                        level Ma_FinalBoss_P set GD_Ma_HeliosTurret.Weapons.Ma_HeliosTurret_WeaponType InstantHitDamage.BaseValueScaleConstant {config:turret_damage_scale}
 
-                #<Rocket Launcher Turret Health>
+                    #</Damage>
+                
+                #</Regular Turrets>
 
-                    level Ma_FinalBoss_P set GD_Ma_EosRocketTurret.Character.CharClass_Ma_EosRocketTurret AttributeStartingValues[1].BaseValue.BaseValueConstant {config:rocket_launcher_health_scale}
+                #<Rocket Launchers>
 
-                #</Rocket Launcher Turret Health>
+                    #<Health>
 
-                #<Rocket Launcher Damage>
+                        level Ma_FinalBoss_P set GD_Ma_EosRocketTurret.Character.CharClass_Ma_EosRocketTurret AttributeStartingValues[1].BaseValue.BaseValueConstant {config:rocket_launcher_health_scale}
 
-                    # I'm actually not totally sure what buffs these up to begin with, but we can scale the final damage var pretty easily.
-                    # (I'm guessing it's the non-weapon multiplier, above, though I'm not sure how)
+                    #</Health>
 
-                    level Ma_FinalBoss_P set GD_Ma_EosRocketTurret.Projectiles.Projectile_Rocket:BehaviorProviderDefinition_0.Behavior_Explode_351 DamageFormula.BaseValueScaleConstant {config:rocket_damage_scale}
+                    #<Damage>
 
-                #</Rocket Launcher Damage>
+                        # I'm actually not totally sure what buffs these up to begin with, but we can scale the final damage var pretty easily.
+                        # (I'm guessing it's the non-weapon multiplier, above, though I'm not sure how)
+
+                        level Ma_FinalBoss_P set GD_Ma_EosRocketTurret.Projectiles.Projectile_Rocket:BehaviorProviderDefinition_0.Behavior_Explode_351 DamageFormula.BaseValueScaleConstant {config:rocket_damage_scale}
+
+                    #</Damage>
+
+                #</Rocket Launchers>
 
             #</Turrets>
 
