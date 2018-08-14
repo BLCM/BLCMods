@@ -15,7 +15,7 @@ independently.  There are four options for each boss:
 * Even Easier
 * Total Chump
 * Stock Difficulty
-* Infinite Badass Difficulty (This is a buff, not a nerf!  In case you
+* Mega Badass Difficulty (This is a buff, not a nerf!  In case you
   were feeling masochistic.)
 
 You can use the "stock" option to have one of the bosses remain unchanged, if

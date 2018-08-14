@@ -58,7 +58,7 @@ class EclipseUltimate(Config):
     Buff ECLIPSE instead of nerfing him.  'cause why not?
     """
 
-    label = 'Infinite Badass Difficulty (this is a buff, not a nerf!)'
+    label = 'Mega Badass Difficulty (this is a buff, not a nerf!)'
 
     health_mult = 240
     shield_mult = 200
@@ -258,7 +258,7 @@ class EosUltimate(Config):
     Buff EOS instead of nerfing him.  'cause why not?
     """
 
-    label = 'Infinite Badass Difficulty (this is a buff, not a nerf!)'
+    label = 'Mega Badass Difficulty (this is a buff, not a nerf!)'
 
     health_mult = 290
     shield_mult = 170
