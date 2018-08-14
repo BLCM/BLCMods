@@ -269,6 +269,8 @@ class EosUltimate(Config):
     rocket_launcher_health_scale = 40
     rocket_damage_scale = 2
 
+    sticky_grenade_damage_scale = 1.3
+
     moonshot_damage_scale_0 = 15
     moonshot_damage_scale_1 = 20
 
@@ -327,6 +329,8 @@ class EosStock(Config):
     rocket_launcher_health_scale = 25
     rocket_damage_scale = 1
 
+    sticky_grenade_damage_scale = 1
+
     moonshot_damage_scale_0 = 12
     moonshot_damage_scale_1 = 15
 
@@ -367,19 +371,21 @@ class EosStock(Config):
 
 class EosEasier(Config):
     """
-    Easier definitions for ECLIPSE
+    Easier definitions for EOS
     """
 
     label = 'Easier EOS'
 
-    health_mult = 170
-    shield_mult = 90
-    nonweapon_damage_mult = 6
+    health_mult = 160
+    shield_mult = 85
+    nonweapon_damage_mult = 5.5
 
     turret_health_scale = 20
-    turret_damage_scale = 0.9
+    turret_damage_scale = 0.8
     rocket_launcher_health_scale = 20
-    rocket_damage_scale = 0.9
+    rocket_damage_scale = 0.8
+
+    sticky_grenade_damage_scale = 0.8
 
     moonshot_damage_scale_0 = 10
     moonshot_damage_scale_1 = 13
@@ -428,12 +434,14 @@ class EosWeak(Config):
 
     health_mult = 120
     shield_mult = 60
-    nonweapon_damage_mult = 5
+    nonweapon_damage_mult = 4.5
 
     turret_health_scale = 15
     turret_damage_scale = 0.4
     rocket_launcher_health_scale = 15
-    rocket_damage_scale = 0.8
+    rocket_damage_scale = 0.7
+
+    sticky_grenade_damage_scale = 0.5
 
     moonshot_damage_scale_0 = 8
     moonshot_damage_scale_1 = 10
@@ -488,6 +496,8 @@ class EosChump(Config):
     turret_damage_scale = 0.4
     rocket_launcher_health_scale = 5
     rocket_damage_scale = 0.4
+
+    sticky_grenade_damage_scale = 0.3
 
     moonshot_damage_scale_0 = 4
     moonshot_damage_scale_1 = 6
@@ -619,6 +629,15 @@ for config in [EosEasier(), EosWeak(), EosChump(), EosStock(), EosUltimate()]:
                 #</Rocket Launchers>
 
             #</Turrets>
+
+            #<Sticky Grenades>
+
+                # These are the yellow grenades that EOS throws out during the final phase, or
+                # when all of his turrets have been destroyed
+
+                level Ma_FinalBoss_P set GD_Ma_Helios.Projectiles.Proj_SpamGrenade:BehaviorProviderDefinition_1.Behavior_Explode_11 DamageFormula.BaseValueScaleConstant {config:sticky_grenade_damage_scale}
+
+            #</Sticky Grenades>
 
             #<Moonshot Attack>
 
