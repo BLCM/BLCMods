@@ -8,8 +8,8 @@ This readme is just here so you know that there are readme files in every mod fo
 But here is a quick synopsis :
 
 - ProperWeaponBodies :
-	- Swaps green and blue weapon bodies because that makes more sense like this.
-	- Allows you to change some weapon bodies because they have unique bodies so why not.
+	- Swaps green and blue weapon bodies because that makes more sense like this. (https://imgur.com/WHq2sdp)
+	- Allows you to change some weapon bodies because they have unique bodies so why not. (Images soon)
 	- ONLY VISUAL CHANGES, NO ACTUAL STATS ARE AFFECTED.
 
 - MatchingBarrels : (not out yet)
