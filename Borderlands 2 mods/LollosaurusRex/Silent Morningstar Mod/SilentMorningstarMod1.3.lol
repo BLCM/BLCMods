@@ -13,7 +13,7 @@
 			<category name="Description">
 				<comment>Silent Morningstar Mod 1.0 by Lollo</comment>
 				<comment></comment>
-				<comment>Allows of the choice of silencing the Morningstar voice (or don't, I'm not your boss).</comment>
+				<comment>Allows for the choice of silencing the Morningstar voice (or don't, I'm not your boss).</comment>
 				<comment>This was designed with Morningstar Crit-stacking in mind.</comment>
 				<comment>No longer shall you have to mute dialog!</comment>
 				<comment></comment>
