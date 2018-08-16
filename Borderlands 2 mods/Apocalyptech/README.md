@@ -18,6 +18,7 @@ branches, so you can browse in `bl2betterloot`, `bl2colddeadhands`,
   * [BL2 Better Loot Mod](#bl2-better-loot-mod)
   * [BL2 Cold Dead Hands](#bl2-cold-dead-hands)
   * [BL2 Configurable Slot Machines](#bl2-configurable-slot-machines)
+  * [BL2 Container TimeSaver XL](#bl2-container-timesaver-xl)
   * [BL2 Early Bloomer](#bl2-early-bloomer)
   * [BL2 Expanded Legendary Pools](#bl2-expanded-legendary-pools)
   * [BL2 Movement Speed Cheats](#bl2-movement-speed-cheats)
@@ -72,6 +73,17 @@ This mod allows you to configure just about every facet of the base game's
 slot machines, of the sort found in Sanctuary (and, I believe, on One-Armed
 Bandits).  The default configuration leaves the slot machines exactly how
 they are in the base game -- you **must** configure the options you want.
+
+### BL2 Container TimeSaver XL
+
+Are you a busy, on-the-go Vault Hunter who just doesn't have the
+*time* for such luxuries as waiting for loot chests to open?  Are
+those Hyperion weapon crates leaving you tapping your watch and
+sneaking glances at your day calendar?  Is the hunt for more ammo
+filling you with near-terminal waves of impatience?
+
+Well, fret no longer!  This mod increases the opening animations
+of all containers in BL2 by 5x.
 
 ### BL2 Early Bloomer
 
