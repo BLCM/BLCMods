@@ -21,6 +21,7 @@ branches, so you can browse in `bl2betterloot`, `bl2colddeadhands`,
   * [BL2 Container TimeSaver XL](#bl2-container-timesaver-xl)
   * [BL2 Early Bloomer](#bl2-early-bloomer)
   * [BL2 Expanded Legendary Pools](#bl2-expanded-legendary-pools)
+  * [BL2 Fast Travel TimeSaver XL](#bl2-fast-travel-timesaver-xl)
   * [BL2 Movement Speed Cheats](#bl2-movement-speed-cheats)
   * [BL2 No Wasted COMs](#bl2-no-wasted-coms)
   * [Configurable Catch-A-Ride](#configurable-catch-a-ride)
@@ -99,6 +100,14 @@ pools, and by default adds all uniques, seraphs, and pearlescents into the
 legendary pools, too.  The mod will also by default add in gemstone weapons
 into the E-Tech pool, and add the Dragon Keep "Alignment" Class Mods to the
 global class mod drops.
+
+### BL2 Fast Travel TimeSaver
+
+This simple little mod speeds up the animations of Fast Travel stations
+becoming active.  This is mostly just useful for the handful of stations
+which initially start closed, when the level loads -- if you start your game
+right outside one of these stations and want to warp away, you've got to
+wait for the animation to complete before doing so.
 
 ### BL2 Movement Speed Cheats
 
