@@ -26,6 +26,7 @@ branches, so you can browse in `bl2betterloot`, `bl2colddeadhands`,
   * [TPS Better Loot Mod](#tps-better-loot-mod)
   * [TPS Cold Dead Hands](#tps-cold-dead-hands)
   * [TPS Configurable Slot Machines](#tps-configurable-slot-machines)
+  * [TPS Container TimeSaver XL](#tps-container-timesaver-xl)
   * [TPS Early Bloomer](#tps-early-bloomer)
   * [TPS Expanded Legendary Pools](#tps-expanded-legendary-pools)
   * [TPS Movement Speed Cheats](#tps-movement-speed-cheats)
@@ -147,6 +148,17 @@ This mod allows you to configure just about every facet of the base game's
 slot machines, of the sort found in Concordia.  The default configuration
 leaves the slot machines exactly how they are in the base game -- you **must**
 configure the options you want.
+
+### TPS Container TimeSaver XL
+
+Are you a busy, on-the-go Vault Hunter who just doesn't have the
+*time* for such luxuries as waiting for loot chests to open?  Are
+those Hyperion weapon crates leaving you tapping your watch and
+sneaking glances at your day calendar?  Is the hunt for more ammo
+filling you with near-terminal waves of impatience?
+
+Well, fret no longer!  This mod increases the opening animations
+of all containers in TPS by 5x.
 
 ### TPS Early Bloomer
 
