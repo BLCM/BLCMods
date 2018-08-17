@@ -18,6 +18,7 @@ branches, so you can browse in `bl2betterloot`, `bl2colddeadhands`,
   * [Easier ECLIPSE and EOS](#easier-eclipse-and-eos)
   * [Guaranteed M0RQ, Cutie Killer, and Heartfull Splodger](#guaranteed-m0rq-cutie-killer-and-heartfull-splodger)
   * [Guaranteed Phonic](#guaranteed-phonic)
+  * [Infinite Air Boosts](#infinite-air-boosts)
   * [Luneshine on Uniques](#luneshine-on-uniques)
   * [No Broken Chests Near Denial Subroutine](#no-broken-chests-near-denial-subroutine)
   * [No SpyBugs in The Cortex](#no-spybugs-in-the-cortex)
@@ -73,6 +74,13 @@ one separately if you're already using TPS UCP 2.2!)*
 
 Guarantees the spawn of Phonic Kraggon (or Phuper Phonic Kraggon) in Serenity's
 Waste.
+
+### Infinite Air Boosts
+
+Removes the restriction of one-air-boost-per-jump, so you can just keep on
+boosting forever!  Well, that's not *totally* true -- you still need to have
+Oxygen in order to boost.  Still, if you're in an atmosphere, you can
+pretty much just keep going until your keyboard gives out.
 
 ### Luneshine on Uniques
 
