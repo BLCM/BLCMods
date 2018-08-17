@@ -26,6 +26,14 @@ Usage/Installation
 This mod must be imported into BLCMM using `File -> Import single mod`.
 Choose the file `BL2 Container TimeSaver XL.blcm` and have at it!
 
+Bugs
+====
+
+Sound effects for the containers haven't changed at all, and still
+use their pre-speedup timing.  So especially on the larger chests,
+you'll probably get sound effects a second or two after the chest
+is already opened.
+
 License
 =======
 
