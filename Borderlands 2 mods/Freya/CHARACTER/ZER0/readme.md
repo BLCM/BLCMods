@@ -100,5 +100,9 @@ Mike: Mod author
 LightChaosman, Apocalyptech, FromDarkHell, C0dycode and Bugworm: Creating the wonderful Borderlands Community Mod Manager (BLCMM)
 Apocalyptech: His beautiful BPD / Kismet graph
 
+## Legendary Class Mods
+
+https://imgur.com/a/CJg9Ecy
+
 # Change log 
 - v1.0: Initial release
