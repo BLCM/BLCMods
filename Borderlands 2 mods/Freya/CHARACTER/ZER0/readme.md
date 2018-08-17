@@ -19,7 +19,7 @@ Compatible with any mod that isn't Zer0 related.
 
 ## Spectre (Decepti0n)
 
-Action Skill. Press F to create a holographic decoy and gain adaptive armor for a few seconds. The longer you are invisible the more damage your attacks deal, ending the invisibility sooner by meleeing your enemy results in a shoter Spectre cooldown.
+Action Skill. Press F to create a holographic decoy and gain adaptive armor for a few seconds. The longer you are invisible the more damage your attacks deal, ending the invisibility sooner by meleeing your enemy results in a shorter Spectre cooldown.
 
 ## Deadeye (Sniping)
 
