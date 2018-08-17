@@ -29,6 +29,7 @@ branches, so you can browse in `bl2betterloot`, `bl2colddeadhands`,
   * [Guaranteed Varkid Evolution](#guaranteed-varkid-evolution)
   * [More Loot Midget Containers](#more-loot-midget-containers)
   * [More Muscles](#more-muscles)
+  * [No Crushers in Lair of Infinite Agony](#no-crushers-in-lair-of-infinite-agony)
   * [Speedier Sandskiffs](#speedier-sandskiffs)
   * [Stalkers Use Shields](#stalkers-use-shields)
 * [Utilities](#utilities)
@@ -158,6 +159,14 @@ midgets, but there'll be more than there were.
 This simple mod improves the spawn rate for Muscles, a unique Bruiser who
 appears in Thousand Cuts.  He will be fairly likely to appear during a full
 playthrough of the level.
+
+### No Crushers in Lair of Infinite Agony
+
+There is a little puzzle in Lair of Infinite Agony where the player
+must traverse a short hallway with four sections of the floor which
+cycle up and down, threatening to crush the player.  It's not a
+difficult puzzle, but waiting around and instadeath aren't what I
+play Borderlands for.  This mod disables them!
 
 ### Speedier Sandskiffs
 
