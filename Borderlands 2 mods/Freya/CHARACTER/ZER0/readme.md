@@ -45,7 +45,7 @@ Action Skill. Press F to create a holographic decoy and gain adaptive armor for 
 - Tier 6
   - Critical Ascensi0n: Scoring a Critical Hit increases your Gun Damage and Critical Hit Damage. This effect can stack up to 999 times. Stacks slowly decay if you haven't scored a critical hit in a while.
 
-## Cunnng
+## Cunning
 
 - Tier 1
   - Sleight 0f Hand (Fast Hands): Increases Reload Speed. Additionally, increases your Magazine Size.
