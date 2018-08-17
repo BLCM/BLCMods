@@ -1,0 +1,96 @@
+#<Moxxi's Load (Rolling Thunder Replacement)>
+
+    - MIRV Grenade that spawns Transfusion when damaging an enemy
+
+    - The BP & Meteor Shower skins are slightly broken, but are the same for most of the part (missing it's pattern)
+
+    #<Card>
+
+        #<Name>
+
+            set GD_GrenadeMods.Title.Title_RollingThunder PartName Moxxi's Load
+
+        #</Name>
+
+        #<Red Text>
+
+            set GD_GrenadeMods.Delivery.Delivery_RollingThunder:AttributePresentationDefinition_4 Description It's okay honey, I've handled more.<br><font color="#FFFFFF">[funstat]Spawns a number of [skill]child grenades[-skill] that seek out to you and [health]give you health[-health] when [skill]damaging[-skill] an enemy.
+
+            set GD_GrenadeMods.Delivery.Delivery_RollingThunder:AttributePresentationDefinition_4 BasePriority 1000.000000
+
+        #</Red Text>
+
+        #<Other stuff that I don't remember>
+
+            set GD_GrenadeMods.Delivery.Delivery_RollingThunder FlashIconPartName longbow
+
+            set GD_GrenadeMods.Delivery.Delivery_RollingThunder CustomPresentations (AttributePresentationDefinition'GD_GrenadeMods.Delivery.Delivery_RollingThunder:AttributePresentationDefinition_4')
+
+        #</Other stuff that I don't remember>
+
+    #</Card>
+
+    #<Projectiles>
+
+        #<MIRV & Transfusion>
+
+            set GD_GrenadeMods.Delivery.Delivery_RollingThunder SetProjectileSequenceState ((Action=CHANGE_Enable,SequenceName="Payload_Transfusion"),(Action=CHANGE_Enable,SequenceName="Payload_Mirv"),(Action=CHANGE_Enable,SequenceName="Special_Sticky"),(Action=CHANGE_Enable,SequenceName="Special_Exploder"))
+
+        #</MIRV & Transfusion>
+
+        #<Longbow Grenade>
+
+            set GD_GrenadeMods.Delivery.Delivery_RollingThunder CustomProjectileDefinition ProjectileDefinition'GD_GrenadeMods.Projectiles.Grenade_Longbow'
+
+        #</Longbow Grenade>
+
+    #</Projectiles>
+
+    #<Skin>
+
+        #<Model>
+
+            set GD_GrenadeMods.Delivery.Delivery_RollingThunder GestaltModeSkeletalMeshName Grenade_Longbow
+
+        #</Model>
+
+        #<Skin>
+
+            set Weap_Grenades.Materials.Mati_GrenadeTorgueEpic ScalarParameterValues ((ParameterName="p_EpicLegendaryEmissScale",ParameterValue=0.500000,ExpressionGUID=(A=-1238431930,B=1279875673,C=1603858352,D=-1915353401))
+
+            set Weap_Grenades.Materials.Mati_GrenadeTorgueEpic TextureParameterValues ((ParameterName="p_Masks",ParameterValue=Texture2D'Weap_Grenades.Textures.Grenades_Comp',ExpressionGUID=(A=1119835015,B=1217668104,C=-731293559,D=-1637979052)),(ParameterName="p_CustomPattern",ParameterValue=Texture2D'Common_GunMaterials.Patterns.Patter_DahlUniqueHearts',ExpressionGUID=(A=2068997063,B=1272990424,C=-753953389,D=740074929)),(ParameterName="p_Diffuse",ParameterValue=Texture2D'Weap_Grenades.Textures.Grenades_Dif',ExpressionGUID=(A=-799570247,B=1300675618,C=1585420178,D=1764712970)),(ParameterName="p_Normal",ParameterValue=Texture2D'Weap_Grenades.Textures.Grenades_Nrm',ExpressionGUID=(A=-650386323,B=1201950419,C=548909745,D=194260177)),(ParameterName="P_SimpleReflect",ParameterValue=Texture2D'Common_GunMaterials.Env.GlossyB',ExpressionGUID=(A=974440054,B=1280265041,C=-1735236951,D=1941115906)),(ParameterName="p_EpicEmiss",ParameterValue=Texture2D'Weap_Grenades.Textures.Grenades_Nrm',ExpressionGUID=(A=660262091,B=1291427372,C=-1255432812,D=988169546))
+
+            set Weap_Grenades.Materials.Mati_GrenadeTorgueEpic VectorParameterValues ((ParameterName="p_AColorHilight",ParameterValue=(R=0.1000000,G=0.1000000,B=0.1000000,A=1.000000),ExpressionGUID=(A=170014760,B=1132076783,C=-275608290,D=650702143)),(ParameterName="p_AColorMidtone",ParameterValue=(R=0.0100000,G=0.0100000,B=0.0100000,A=1.000000),ExpressionGUID=(A=473504356,B=1338058895,C=824823046,D=864253013)),(ParameterName="p_AColorShadow",ParameterValue=(R=0.0100000,G=0.0100000,B=0.0100000,A=1.000000),ExpressionGUID=(A=-429590041,B=1156405294,C=-1015192900,D=687313410)),(ParameterName="p_BColorHilight",ParameterValue=(R=1.1000000,G=0.1000000,B=0.1000000,A=1.000000),ExpressionGUID=(A=170714760,B=1132476783,C=-275668290,D=655702143)),(ParameterName="p_BColorMidtone",ParameterValue=(R=1.1000000,G=0.6000000,B=0.6000000,A=1.000000),ExpressionGUID=(A=473594356,B=1338758895,C=824823946,D=864253813)),(ParameterName="p_BColorShadow",ParameterValue=(R=0.500000,G=0.100000,B=0.1000000,A=1.000000),ExpressionGUID=(A=-429590341,B=1156435294,C=-1015192901,D=687313413)),(ParameterName="p_CColorHilight",ParameterValue=(R=1.0000000,G=0.000000,B=0.000000,A=1.000000),ExpressionGUID=(A=170714760,B=1132476783,C=-275668290,D=655702143)),(ParameterName="p_CColorMidtone",ParameterValue=(R=0.1000000,G=0.0500000,B=0.1000000,A=1.000000),ExpressionGUID=(A=473594356,B=1338758895,C=824823946,D=864253813)),(ParameterName="p_CColorShadow",ParameterValue=(R=1.5000000,G=1.000000,B=1.000000,A=1.000000),ExpressionGUID=(A=-429590341,B=1156435294,C=-1015192901,D=687313413)),(ParameterName="p_EmissiveColor",ParameterValue=(R=0.321035,G=0.000000,B=2.519165,A=1.000000),ExpressionGUID=(A=-2074486426,B=1296399582,C=-2021314681,D=-350758005)),(ParameterName="p_ReflectColor",ParameterValue=(R=1.000000,G=1.000000,B=1.00000,A=1.000000),ExpressionGUID=(A=295058103,B=1318551573,C=-2045449573,D=-547597976)),(ParameterName="p_ReflectionChannelScale",ParameterValue=(R=1.000000,G=1.000000,B=0.900000,A=1.000000),ExpressionGUID=(A=295058103,B=1318551573,C=-2045449573,D=-547597976)),(ParameterName="p_PatternColor",ParameterValue=(R=2.000000,G=2.000000,B=2.000000,A=1.000000),ExpressionGUID=(A=676539706,B=1125682796,C=1871983293,D=-2049503601)),(ParameterName="p_PatternScalePosition",ParameterValue=(R=12.000000,G=8.000000,B=6.000000,A=1.000000),ExpressionGUID=(A=-2005018406,B=1132497243,C=-39915121,D=208423616)),(ParameterName="p_PatternChannelScale",ParameterValue=(R=0.000000,G=1.000000,B=0.9000000,A=1.000000),ExpressionGUID=(A=439432319,B=1091149893,C=-1991909502,D=1816944627)),(ParameterName="p_DecalColor",ParameterValue=(R=0.800000,G=1.600000,B=1.600000,A=1.000000),ExpressionGUID=(A=1691998600,B=1239094551,C=2074257317,D=1844701893)),(ParameterName="p_DecalScalePosition",ParameterValue=(R=17.100000,G=24.100000,B=0.400000,A=.500000),ExpressionGUID=(A=395540170,B=1243133493,C=-1264190552,D=123075385)),(ParameterName="p_DecalChannel",ParameterValue=(R=1.000000,G=1.000000,B=1.000000,A=1.000000),ExpressionGUID=(A=1869386622,B=1303200947,C=-1616405849,D=714558284)))
+
+        #</Skin>
+
+    #</Skin>
+
+    #<Stats>
+
+        set GD_GrenadeMods.Delivery.Delivery_RollingThunder ItemAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.GrenadeMod.GrenadeDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.400000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+        set GD_GrenadeMods.Delivery.Delivery_RollingThunder AttributeSlotUpgrades ((SlotName="ChildCount",GradeIncrease=6,bActivateSlot=True),(SlotName="FuseTime",GradeIncrease=2,bActivateSlot=False))
+
+        set GD_GrenadeMods.A_Item_Legendary.GrenadeMod_RollingThunder AttributeSlotEffects ((SlotName="Damage",bExternalSlot=False,bRunEffectsAsSkill=False,AttributeToModify=AttributeDefinition'D_Attributes.GrenadeMod.GrenadeDamage',ConstraintAttribute=None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),PerGradeUpgrade=(BaseValueConstant=0.070000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bIncludeInFunStats=False,bIncludeAlliesAsTarget=False,bEnforceMinimumGrade=False,bEnforceMaximumGrade=False,MinimumGrade=0,MaximumGrade=0,TargetInstanceDataName=),(SlotName="DamageRadius",bExternalSlot=False,bRunEffectsAsSkill=False,AttributeToModify=AttributeDefinition'D_Attributes.GrenadeMod.BlastRadius',ConstraintAttribute=None,ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),PerGradeUpgrade=(BaseValueConstant=45.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bIncludeInFunStats=False,bIncludeAlliesAsTarget=False,bEnforceMinimumGrade=True,bEnforceMaximumGrade=False,MinimumGrade=-1,MaximumGrade=0,TargetInstanceDataName=),(SlotName="ChildCount",bExternalSlot=False,bRunEffectsAsSkill=False,AttributeToModify=AttributeDefinition'D_Attributes.GrenadeMod.NumberOfChildProjectiles',ConstraintAttribute=None,ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=4.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),PerGradeUpgrade=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bIncludeInFunStats=True,bIncludeAlliesAsTarget=False,bEnforceMinimumGrade=True,bEnforceMaximumGrade=False,MinimumGrade=0,MaximumGrade=0,TargetInstanceDataName=),(SlotName="FuseTime",bExternalSlot=False,bRunEffectsAsSkill=False,AttributeToModify=AttributeDefinition'D_Attributes.GrenadeMod.FuseTime',ConstraintAttribute=None,ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.600000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),PerGradeUpgrade=(BaseValueConstant=0.600000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bIncludeInFunStats=False,bIncludeAlliesAsTarget=False,bEnforceMinimumGrade=True,bEnforceMaximumGrade=False,MinimumGrade=0,MaximumGrade=0,TargetInstanceDataName=),(SlotName="IsExplosive",bExternalSlot=False,bRunEffectsAsSkill=False,AttributeToModify=AttributeDefinition'D_Attributes.GrenadeMod.GrenadeDamage',ConstraintAttribute=None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),PerGradeUpgrade=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bIncludeInFunStats=False,bIncludeAlliesAsTarget=False,bEnforceMinimumGrade=True,bEnforceMaximumGrade=False,MinimumGrade=0,MaximumGrade=0,TargetInstanceDataName=)
+
+    #</Stats>
+
+    #<Skin Fix for BP & Meteor Shower>
+
+        #<Meteor Shower>
+
+            set GD_Iris_SeraphItems.MeteorShower.Iris_Seraph_GrenadeMod_MeteorShower_Part_Payload MaterialVectorParameterValues ((ParameterName="p_AColorHilight",ParameterValue=(R=0.383275,G=0.581389,B=1.601734,A=1.000000),ExpressionGUID=(A=-67213585,B=1174064151,C=1145077917,D=1667997837)),(ParameterName="p_AColorMidtone",ParameterValue=(R=1.414041,G=1.414041,B=1.414041,A=1.000000),ExpressionGUID=(A=-1550299660,B=1092871385,C=2005712271,D=1137646452)),(ParameterName="p_AColorShadow",ParameterValue=(R=0.682556,G=0.849806,B=1.436485,A=1.000000),ExpressionGUID=(A=-1237912396,B=1340481589,C=-1751132997,D=-2061419252)),(ParameterName="p_BColorHilight",ParameterValue=(R=0.486473,G=0.842811,B=1.630533,A=1.000000),ExpressionGUID=(A=-1787455778,B=1335579629,C=-1975783242,D=-231296165)),(ParameterName="p_BColorMidtone",ParameterValue=(R=1.000000,G=1.000000,B=1.000000,A=1.000000),ExpressionGUID=(A=-1780197305,B=1189365699,C=-763074648,D=-1560762514)),(ParameterName="p_BColorShadow",ParameterValue=(R=0.457317,G=0.557050,B=0.834223,A=1.000000),ExpressionGUID=(A=1978592701,B=1268422324,C=1382217095,D=-1197365110)),(ParameterName="p_CColorHilight",ParameterValue=(R=0.231273,G=0.244471,B=0.248610,A=1.000000),ExpressionGUID=(A=-161410073,B=1301459859,C=656112266,D=-1829908056)),(ParameterName="p_CColorMidtone",ParameterValue=(R=0.143641,G=0.141627,B=0.142146,A=1.000000),ExpressionGUID=(A=-1973617110,B=1112754116,C=-1762340418,D=-1714413755)),(ParameterName="p_CColorShado",ParameterValue=(R=0.047750,G=0.186600,B=0.375677,A=1.000000),ExpressionGUID=(A=-745392642,B=1091735077,C=-335222092,D=1274265523)),(ParameterName="p_PatternColor",ParameterValue=(R=0.526167,G=0.623712,B=0.712681,A=1.000000),ExpressionGUID=(A=-448074940,B=1159310716,C=-1837627249,D=-1702500821)),(ParameterName="p_PatternScalePosition",ParameterValue=(R=1.000000,G=8.500000,B=0.580000,A=0.493500),ExpressionGUID=(A=-890992185,B=1266714301,C=-2091612998,D=1000426871)),(ParameterName="p_PatternChannelScale",ParameterValue=(R=0.00000,G=0.000000,B=0.000000,A=0.000000),ExpressionGUID=(A=1831406463,B=1086737730,C=-923441504,D=-1373427117)),(ParameterName="p_EmissiveColor",ParameterValue=(R=1.321035,G=0.000000,B=2.519165,A=1.000000),ExpressionGUID=(A=-500078987,B=1335605199,C=-1319117688,D=173232637)),(ParameterName="p_ReflectionChannelScale",ParameterValue=(R=1.500000,G=0.000000,B=0.000000,A=1.000000),ExpressionGUID=(A=-123504864,B=1135465386,C=276674187,D=1280409926)),(ParameterName="p_ReflectColor",ParameterValue=(R=2.580730,G=2.575897,B=2.585563,A=1.000000),ExpressionGUID=(A=-137725129,B=1232248266,C=-1881647942,D=1919783776)))
+
+        #</Meteor Shower>
+
+        #<Bonus Package>
+
+            set GD_GrenadeMods.Payload.Payload_BonusPackage MaterialVectorParameterValues ((ParameterName="p_AColorHilight",ParameterValue=(R=0.383275,G=0.581389,B=1.601734,A=1.000000),ExpressionGUID=(A=-67213585,B=1174064151,C=1145077917,D=1667997837)),(ParameterName="p_AColorMidtone",ParameterValue=(R=1.414041,G=1.414041,B=1.414041,A=1.000000),ExpressionGUID=(A=-1550299660,B=1092871385,C=2005712271,D=1137646452)),(ParameterName="p_AColorShadow",ParameterValue=(R=0.682556,G=0.849806,B=1.436485,A=1.000000),ExpressionGUID=(A=-1237912396,B=1340481589,C=-1751132997,D=-2061419252)),(ParameterName="p_BColorHilight",ParameterValue=(R=0.486473,G=0.842811,B=1.630533,A=1.000000),ExpressionGUID=(A=-1787455778,B=1335579629,C=-1975783242,D=-231296165)),(ParameterName="p_BColorMidtone",ParameterValue=(R=1.000000,G=1.000000,B=1.000000,A=1.000000),ExpressionGUID=(A=-1780197305,B=1189365699,C=-763074648,D=-1560762514)),(ParameterName="p_BColorShadow",ParameterValue=(R=0.457317,G=0.557050,B=0.834223,A=1.000000),ExpressionGUID=(A=1978592701,B=1268422324,C=1382217095,D=-1197365110)),(ParameterName="p_CColorHilight",ParameterValue=(R=0.231273,G=0.244471,B=0.248610,A=1.000000),ExpressionGUID=(A=-161410073,B=1301459859,C=656112266,D=-1829908056)),(ParameterName="p_CColorMidtone",ParameterValue=(R=0.143641,G=0.141627,B=0.142146,A=1.000000),ExpressionGUID=(A=-1973617110,B=1112754116,C=-1762340418,D=-1714413755)),(ParameterName="p_CColorShado",ParameterValue=(R=0.047750,G=0.186600,B=0.375677,A=1.000000),ExpressionGUID=(A=-745392642,B=1091735077,C=-335222092,D=1274265523)),(ParameterName="p_PatternColor",ParameterValue=(R=0.526167,G=0.623712,B=0.712681,A=1.000000),ExpressionGUID=(A=-448074940,B=1159310716,C=-1837627249,D=-1702500821)),(ParameterName="p_PatternScalePosition",ParameterValue=(R=1.000000,G=8.500000,B=0.580000,A=0.493500),ExpressionGUID=(A=-890992185,B=1266714301,C=-2091612998,D=1000426871)),(ParameterName="p_PatternChannelScale",ParameterValue=(R=0.00000,G=0.000000,B=0.000000,A=0.000000),ExpressionGUID=(A=1831406463,B=1086737730,C=-923441504,D=-1373427117)),(ParameterName="p_EmissiveColor",ParameterValue=(R=1.321035,G=0.000000,B=2.519165,A=1.000000),ExpressionGUID=(A=-500078987,B=1335605199,C=-1319117688,D=173232637)),(ParameterName="p_ReflectionChannelScale",ParameterValue=(R=1.500000,G=0.000000,B=0.000000,A=1.000000),ExpressionGUID=(A=-123504864,B=1135465386,C=276674187,D=1280409926)),(ParameterName="p_ReflectColor",ParameterValue=(R=2.580730,G=2.575897,B=2.585563,A=1.000000),ExpressionGUID=(A=-137725129,B=1232248266,C=-1881647942,D=1919783776)))
+
+        #</Bonus Package>
+
+    #</Skin Fix for BP & Meteor Shower>
+
+#</Moxxi's Load (Rolling Thunder Replacement)>
+
