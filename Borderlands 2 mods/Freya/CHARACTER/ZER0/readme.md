@@ -1,7 +1,9 @@
 *Everything in this mod is written by Mike and Freya unless mentioned otherwise.*
 
 *- Mods are free for personal use and are also allowed to be edited to their needs.*
+
 *- If you want to use code from the mod for your own mod (that will be public) please let us know.*
+
 *- Using this mod for a modpack is allowed with permission from one of the mod author(s).*
 
 # Note
