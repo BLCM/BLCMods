@@ -14,7 +14,7 @@ Any other things that are not shown like replacements for class mods (that aren'
 
 If you are experiencing issues with the UCP and Zer0 Rework merged, please disable the following (thanks Apocalyptech!):
 - Cosmetic Changes -> Kazy -> Legendary COM Reskins -> Zer0 - Kazy
-- Gear Changes -> Class Mods -> Class Mod TItles
+- Gear Changes -> Class Mods -> Class Mod Titles
 - Gear Changes -> Class Mods -> Zer0
 - Gear Changes -> Class Mods -> Changes to Slayer of Terra -> Zer0
 - Skill Changes -> Zer0
