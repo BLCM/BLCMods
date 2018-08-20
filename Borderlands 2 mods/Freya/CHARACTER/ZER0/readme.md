@@ -9,7 +9,9 @@
 # Note
 
 This mod is not done at all, balance will always subject to change.
+
 Any other things that are not shown like replacements for class mods (that aren't Legendary) are shown in the file.
+
 If you are experiencing issues with the UCP and Zer0 Rework merged, please disable the following (thanks Apocalyptech!):
 - Cosmetic Changes -> Kazy -> Legendary COM Reskins -> Zer0 - Kazy
 - Gear Changes -> Class Mods -> Class Mod TItles
