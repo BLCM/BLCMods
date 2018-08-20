@@ -103,10 +103,10 @@ Action Skill. Press F to create a holographic decoy and gain adaptive armor for 
 
 ## Credits
 
-Freya: Mod author
-Mike: Mod author
-LightChaosman, Apocalyptech, FromDarkHell, C0dycode and Bugworm: Creating the wonderful Borderlands Community Mod Manager (BLCMM)
-Apocalyptech: His beautiful BPD / Kismet graph
+- Freya: Mod author
+- Mike: Mod author
+- LightChaosman, Apocalyptech, FromDarkHell, C0dycode and Bugworm: Creating the wonderful Borderlands Community Mod Manager (BLCMM)
+- Apocalyptech: His beautiful BPD / Kismet graph
 
 ## Legendary Class Mods
 
