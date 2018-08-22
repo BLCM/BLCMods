@@ -1,0 +1,88 @@
+<BLCMM v="1">
+#<!!!You opened a file saved with BLCMM in FilterTool. Please update to BLCMM to properly open this file!!!>
+	<head>
+		<type name="BL2" offline="false"/>
+		<profiles>
+			<profile name="default" current="true"/>
+		</profiles>
+	</head>
+	<body>
+		<category name="Better Slot Machines">
+			<comment>This mod buffs Slot Machines</comment>
+			<comment>About changes:</comment>
+			<comment>Vanilla Game: Roll cost was almost tripled</comment>
+			<comment>Added Vending machine near Slot Machines [Appears only in Flying Sanctuary]</comment>
+			<comment>    * Legendary drop rates were buffed by a lot.</comment>
+			<comment>    * Blue drop rates were tripled</comment>
+			<comment>    * Purple drop rates were increased by 8 times</comment>
+			<comment>    * Eridium Jackpot chance was buffed a bit [0.45 > 0.55]</comment>
+			<comment></comment>
+			<comment>Torgue Slot Machine:</comment>
+			<comment>    * Legendary drop chance was buffed a lot</comment>
+			<comment></comment>
+			<comment>Tiny Tina Slot Machine - Now can drop all pearls</comment>
+			<comment>    * Pearl chance: x7    </comment>
+			<comment>    * Dice chance: +100%</comment>
+			<category name="Buff them">
+				<category name="Vanilla Game">
+					<category name="Cost Increase">
+						<hotfix name="RollCost" level="None">
+							<code profiles="default">set GD_Economy.BaseCost.Att_BaseCost_SlotMachine_PullCost:ConstantAttributeValueResolver_0 ConstantValue 85.000000</code>
+						</hotfix>
+					</category>
+					<category name="Blue">
+						<hotfix name="SlotMachines" level="None">
+							<code profiles="default">set gd_slotmachine.SlotMachine:BehaviorProviderDefinition_0.Behavior_RandomBranch_34 Conditions[2] 14.500000</code>
+						</hotfix>
+					</category>
+					<category name="Purple">
+						<hotfix name="SlotMachines" level="None">
+							<code profiles="default">set gd_slotmachine.SlotMachine:BehaviorProviderDefinition_0.Behavior_RandomBranch_34 Conditions[3] 3.500000</code>
+						</hotfix>
+					</category>
+					<category name="Legendary">
+						<hotfix name="SlotMachines" level="None">
+							<code profiles="default">set gd_slotmachine.SlotMachine:BehaviorProviderDefinition_0.Behavior_RandomBranch_34 Conditions[4] 2.250000</code>
+						</hotfix>
+					</category>
+					<category name="Eridium Jackpot">
+						<hotfix name="SlotMachines" level="None">
+							<code profiles="default">set gd_slotmachine.SlotMachine:BehaviorProviderDefinition_0.Behavior_RandomBranch_34 Conditions[7] 0.550000</code>
+						</hotfix>
+					</category>
+					<category name="Replacers">
+						<hotfix name="Replacers" level="None">
+							<code profiles="default">set SanctuaryAir_P.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_66 PopulationDef PopulationDefinition'GD_Population_Shopping.VendingMachine.VendingMachine_Weapons'</code>
+							<code profiles="default">set SanctuaryAir_P.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_66 DrawScale 0.6</code>
+							<code profiles="default">set SanctuaryAir_P.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_66 Rotation (Pitch=0,Yaw=66500,Roll=0)</code>
+							<code profiles="default">set SanctuaryAir_P.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_66 Location (X=4383.125488,Y=6344.760254,Z=3697.000000)</code>
+						</hotfix>
+					</category>
+				</category>
+				<category name="Torgue DLC">
+					<hotfix name="TorgueSlot" level="None">
+						<code profiles="default">set GD_Iris_SlotMachine.Iris_SlotMachine:BehaviorProviderDefinition_0.Behavior_RandomBranch_1199 Conditions[4] 2.025000</code>
+					</hotfix>
+				</category>
+				<category name="Tiny Tina DLC">
+					<hotfix name="TinaDLC" level="None">
+						<code profiles="default">set GD_Aster_EridiumSlotMachine.EridiumSlotMachine:BehaviorProviderDefinition_0.Behavior_RandomBranch_780 Conditions[4] 0.360000</code>
+						<code profiles="default">set GD_Aster_EridiumSlotMachine.EridiumSlotMachine:BehaviorProviderDefinition_0.Behavior_RandomBranch_780 Conditions[10] 18.000000</code>
+					</hotfix>
+					<hotfix name="TinaSlotPool" level="None">
+						<code profiles="default">set GD_Aster_EridiumSlotMachine.EridiumSlotMachine:BehaviorProviderDefinition_0.Behavior_SpawnItems_1400 ItemPoolList ((ItemPool=ItemPoolDefinition'GD_Gladiolus_Itempools.WeaponPools.Pool_Weapons_Pistols_07_Pearl',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))</code>
+						<code profiles="default">set GD_Aster_EridiumSlotMachine.EridiumSlotMachine:BehaviorProviderDefinition_0.Behavior_SpawnItems_1402 ItemPoolList ((ItemPool=ItemPoolDefinition'GD_Gladiolus_Itempools.WeaponPools.Pool_Weapons_Launchers_07_Pearl',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))</code>
+						<code profiles="default">set GD_Aster_EridiumSlotMachine.EridiumSlotMachine:BehaviorProviderDefinition_0.Behavior_SpawnItems_1403 ItemPoolList ((ItemPool=ItemPoolDefinition'GD_Gladiolus_Itempools.WeaponPools.Pool_Weapons_All_07_Pearl',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))</code>
+					</hotfix>
+				</category>
+			</category>
+		</category>
+	</body>
+</BLCMM>
+
+#Commands:
+
+#Hotfixes:
+set Transient.SparkServiceConfiguration_6 Keys ("SparkLevelPatchEntry-GBX_fixes1","SparkLevelPatchEntry-GBX_fixes2","SparkLevelPatchEntry-GBX_fixes3","SparkLevelPatchEntry-GBX_fixes4","SparkLevelPatchEntry-GBX_fixes5","SparkLevelPatchEntry-GBX_Fixes6","SparkLevelPatchEntry-GBX_Fixes7","SparkLevelPatchEntry-GBX_Fixes8","SparkLevelPatchEntry-GBX_Fixes9","SparkLevelPatchEntry-GBX_fixes10","SparkLevelPatchEntry-GBX_fixes11","SparkLevelPatchEntry-GBX_fixes12","SparkLevelPatchEntry-GBX_fixes13","SparkLevelPatchEntry-GBX_fixes14","SparkOnDemandPatchEntry-GBX_fixes15","SparkOnDemandPatchEntry-GBX_fixes16","SparkOnDemandPatchEntry-GBX_fixes17","SparkOnDemandPatchEntry-GBX_fixes18","SparkOnDemandPatchEntry-GBX_fixes19","SparkPatchEntry-GBX_fixes20","SparkPatchEntry-GBX_fixes21","SparkPatchEntry-GBX_fixes22","SparkPatchEntry-GBX_fixes23","SparkLevelPatchEntry-RollCost1","SparkLevelPatchEntry-SlotMachines1","SparkLevelPatchEntry-SlotMachines2","SparkLevelPatchEntry-SlotMachines3","SparkLevelPatchEntry-SlotMachines4","SparkLevelPatchEntry-Replacers1","SparkLevelPatchEntry-Replacers2","SparkLevelPatchEntry-Replacers3","SparkLevelPatchEntry-Replacers4","SparkLevelPatchEntry-TorgueSlot1","SparkLevelPatchEntry-TinaDLC1","SparkLevelPatchEntry-TinaDLC2","SparkLevelPatchEntry-TinaSlotPool1","SparkLevelPatchEntry-TinaSlotPool2","SparkLevelPatchEntry-TinaSlotPool3")
+set Transient.SparkServiceConfiguration_6 Values (",GD_Balance.WeightingPlayerCount.BugmorphCocoon_PerPlayers_Phase1,ConditionalInitialization.ConditionalExpressionList[4].BaseValueIfTrue.BaseValueConstant,0.700000,.8",",GD_Balance.WeightingPlayerCount.BugmorphCocoon_PerPlayers_Phase2,ConditionalInitialization.ConditionalExpressionList[4].BaseValueIfTrue.BaseValueConstant,0.400000,.5",",GD_Balance.WeightingPlayerCount.BugmorphCocoon_PerPlayers_Phase3,ConditionalInitialization.ConditionalExpressionList[4].BaseValueIfTrue.BaseValueConstant,0.200000,.3",",GD_Balance.WeightingPlayerCount.BugmorphCocoon_PerPlayers_Phase4,ConditionalInitialization.ConditionalExpressionList[4].BaseValueIfTrue.BaseValueConstant,0.100000,.2",",GD_Balance.WeightingPlayerCount.BugmorphCocoon_PerPlayers_Phase5,ConditionalInitialization.ConditionalExpressionList[4].BaseValueIfTrue.BaseValueConstant,0.075000,.1","SouthpawFactory_P,GD_Population_Marauder.Balance.Unique.PawnBalance_Assassin1,DefaultItemPoolList[3].PoolProbability.BaseValueScaleConstant,0.250000,1","SouthpawFactory_P,GD_Population_Nomad.Balance.Unique.PawnBalance_Assassin2,DefaultItemPoolList[4].PoolProbability.BaseValueScaleConstant,0.250000,1","SouthpawFactory_P,GD_Population_Psycho.Balance.Unique.PawnBalance_Assassin3,DefaultItemPoolList[1].PoolProbability.BaseValueScaleConstant,0.250000,1","SouthpawFactory_P,GD_Population_Rat.Balance.Unique.PawnBalance_Assassin4,DefaultItemPoolList[3].PoolProbability.BaseValueScaleConstant,0.250000,1",",GD_Sage_Rare_Scaylion.Population.PawnBalance_Sage_Rare_Scaylion,DefaultItemPoolList[1].PoolProbability.BaseValueScaleConstant,1.000000,100",",GD_Sage_Rare_Drifter.Balance.PawnBalance_Sage_Rare_Drifter,DefaultItemPoolList[0].PoolProbability.BaseValueScaleConstant,1.000000,100",",GD_Sage_Rare_Rhino.Population.PawnBalance_Sage_Rare_Rhino,DefaultItemPoolList[1].PoolProbability.BaseValueScaleConstant,1.000000,100",",GD_Sage_Rare_Skag.Population.PawnBalance_Sage_Rare_Skag,DefaultItemPoolList[1].PoolProbability.BaseValueScaleConstant,1.000000,100",",GD_Sage_Rare_Spore.Population.PawnBalance_Sage_Rare_Spore,DefaultItemPoolList[0].PoolProbability.BaseValueScaleConstant,1.000000,100","GD_Assassin_Streaming,GD_Assassin_Skills.Sniping.Velocity,SkillEffectDefinitions[0].ModifierType,MT_PostAdd,MT_Scale","GD_Tulip_Mechro_Streaming,GD_Tulip_Mechromancer_Skills.LittleBigTrouble.WiresDontTalk,SkillEffectDefinitions,,((AttributeToModify=D_Attributes.DamageTypeModifers.InstigatedShockDamageModifier,bIncludeDuelingTargets=False,bIncludeSelfAsTarget=False,bOnlyEffectTargetsInRange=False,bExcludeNonPlayerCharacters=False,EffectTarget=TARGET_Self,TargetInstanceDataName=,TargetCriteria=CRITERIA_None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.030000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),GradeToStartApplyingEffect=1,PerGradeUpgradeInterval=1,PerGradeUpgrade=(BaseValueConstant=0.030000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),BonusUpgradeList=),(AttributeToModify=D_Attributes.DamageTypeModifers.InstigatedShockStatusDamageModifier,bIncludeDuelingTargets=False,bIncludeSelfAsTarget=False,bOnlyEffectTargetsInRange=False,bExcludeNonPlayerCharacters=False,EffectTarget=TARGET_Self,TargetInstanceDataName=,TargetCriteria=CRITERIA_None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.030000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),GradeToStartApplyingEffect=1,PerGradeUpgradeInterval=1,PerGradeUpgrade=(BaseValueConstant=0.030000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),BonusUpgradeList=))","GD_Siren_Streaming,GD_Siren_Skills.Misc.Init_BlightPhoenix_DamageCalc_Part2,ValueFormula.Level.InitializationDefinition,AttributeInitializationDefinition'GD_Balance_HealthAndDamage.HealthAndDamage.Init_PlayerMeleeDamage',AttributeInitializationDefinition'GD_Balance_HealthAndDamage.HealthAndDamage.Init_PlayerSkillDamage'","GD_Siren_Streaming,GD_Siren_Skills.Misc.Init_BlightPhoenix_DamageCalc_Part2,ValueFormula.Level.BaseValueScaleConstant,1.000000,3.5","GD_Assassin_Streaming,GD_Assassin_Skills.Misc.Att_DeathMark_BonusDamage,BaseValue.BaseValueConstant,0.200000,.8","GD_Itempools.Runnables.Pool_FourAssassins,BalancedItems[1].Probability.InitializationDefinition,None,GD_Balance.Weighting.Weight_1_Common","GD_Shields.Projectiles.Proj_LegendaryBoosterShield:BehaviorProviderDefinition_1.Behavior_Explode_140,BehaviorSequences[0].BehaviorData2[7].Behavior.StatusEffectDamage.BaseValueAttribute,None,D_Attributes.Projectile.ProjectileDamage","GD_Shields.Projectiles.Proj_LegendaryBoosterShield:BehaviorProviderDefinition_1.Behavior_Explode_140,BehaviorSequences[0].BehaviorData2[7].Behavior.StatusEffectDamage.BaseValueScaleConstant,1.000000,.25","GD_Shields.Projectiles.Proj_LegendaryBoosterShield:BehaviorProviderDefinition_1.Behavior_Explode_140,BehaviorSequences[0].BehaviorData2[7].Behavior.StatusEffectChance.BaseValueConstant,1.000000,20",",GD_Economy.BaseCost.Att_BaseCost_SlotMachine_PullCost:ConstantAttributeValueResolver_0,ConstantValue,,85.000000",",gd_slotmachine.SlotMachine:BehaviorProviderDefinition_0.Behavior_RandomBranch_34,Conditions[2],,14.500000",",gd_slotmachine.SlotMachine:BehaviorProviderDefinition_0.Behavior_RandomBranch_34,Conditions[3],,3.500000",",gd_slotmachine.SlotMachine:BehaviorProviderDefinition_0.Behavior_RandomBranch_34,Conditions[4],,2.250000",",gd_slotmachine.SlotMachine:BehaviorProviderDefinition_0.Behavior_RandomBranch_34,Conditions[7],,0.550000",",SanctuaryAir_P.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_66,PopulationDef,,PopulationDefinition'GD_Population_Shopping.VendingMachine.VendingMachine_Weapons'",",SanctuaryAir_P.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_66,DrawScale,,0.6",",SanctuaryAir_P.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_66,Rotation,,(Pitch=0,Yaw=66500,Roll=0)",",SanctuaryAir_P.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_66,Location,,(X=4383.125488,Y=6344.760254,Z=3697.000000)",",GD_Iris_SlotMachine.Iris_SlotMachine:BehaviorProviderDefinition_0.Behavior_RandomBranch_1199,Conditions[4],,2.025000",",GD_Aster_EridiumSlotMachine.EridiumSlotMachine:BehaviorProviderDefinition_0.Behavior_RandomBranch_780,Conditions[4],,0.360000",",GD_Aster_EridiumSlotMachine.EridiumSlotMachine:BehaviorProviderDefinition_0.Behavior_RandomBranch_780,Conditions[10],,18.000000",",GD_Aster_EridiumSlotMachine.EridiumSlotMachine:BehaviorProviderDefinition_0.Behavior_SpawnItems_1400,ItemPoolList,,((ItemPool=ItemPoolDefinition'GD_Gladiolus_Itempools.WeaponPools.Pool_Weapons_Pistols_07_Pearl',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))",",GD_Aster_EridiumSlotMachine.EridiumSlotMachine:BehaviorProviderDefinition_0.Behavior_SpawnItems_1402,ItemPoolList,,((ItemPool=ItemPoolDefinition'GD_Gladiolus_Itempools.WeaponPools.Pool_Weapons_Launchers_07_Pearl',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))",",GD_Aster_EridiumSlotMachine.EridiumSlotMachine:BehaviorProviderDefinition_0.Behavior_SpawnItems_1403,ItemPoolList,,((ItemPool=ItemPoolDefinition'GD_Gladiolus_Itempools.WeaponPools.Pool_Weapons_All_07_Pearl',PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))")
+
