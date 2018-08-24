@@ -5,6 +5,9 @@ This mod is a seraph overhaul that aims to bring a fresh experience to the late 
 
 NOTE: This mod uses hotfixes, you must add this as a mod in filter tool for the drops to work.
 
+IMPORTANT: Since the 4.1 Patch, you will need to disable the Afterburner buff under UCP 4.1/GearChanges/Relics.
+           Because of the changes from the patch, it will mess with the Monster of the Serahps physcial look, however it still functions            the same.
+
 Includes:
 - 10 New Weapons (Including Aaron0000's Destroyer, Battle Bee's Pulverizer and B33PB00PJOE's Florentine)
 - 2 New Grenades

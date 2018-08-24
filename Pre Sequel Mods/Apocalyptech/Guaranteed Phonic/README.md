@@ -1,6 +1,11 @@
 Guaranteed Phonic
 =================
 
+**NOTE:** This mod is now included as an optional selection in TPS UCP 2.2's
+"Optionals" category, so if you're using TPS UCP 2.2 or higher, there's no
+longer any need to use this mod directly!  (It won't hurt anything to have
+both enabled, though.)
+
 This is a super simple mod which just guarantees the spawn of Phonic Kraggon
 (or Phuper Phonic Kraggon) in Serenity's Waste.  Not much to say about it
 otherwise!
