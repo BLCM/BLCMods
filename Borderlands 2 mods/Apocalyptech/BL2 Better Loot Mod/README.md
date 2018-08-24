@@ -426,7 +426,10 @@ for the full text.
 Changelog
 =========
 
-**v1.3.1**, August 24, 2018:
+**v1.3.2**, unreleased:
+ * Nothing yet
+
+**v1.3.1**, August 24, 2018 (commit `fa26171a4536f54becc59ef426333ebfdd8db070`):
  * The Ogre is now properly considered a Legendary, not a Unique, and will
    be in the legendary pool regardless of whether you have Uniques added
    or not.
