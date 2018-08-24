@@ -1,0 +1,27 @@
+# Backbone of the Seraphs
+# Created by GoldenGizzmo
+
+# Replaces the Blood Relic
+# Improves cooldown of actions skills by a high amount
+# This effect works for the whole team
+# Made to compete with the Bone of the Ancients
+
+# A picture
+# https://imgur.com/Lh8zyaC
+
+# Each relic in my pack is based off one of the original Vault Hunters.
+# This one is based off Axton.
+
+-- Rename and RedText --
+
+set GD_Orchid_Artifacts.A_Item_Unique.Artifact_SeraphBloodRelic ItemName Backbone of the Seraphs
+set GD_Orchid_Artifacts.Body.Body_SeraphBloodRelic:AttributePresentationDefinition_2 Description Now commencing radio silence...
+set GD_Orchid_Artifacts.Body.Body_SeraphBloodRelic:AttributePresentationDefinition_0 Description Improves [skill]action skill cooldown rate[-skill].
+set GD_Orchid_Artifacts.Body.Body_SeraphBloodRelic:AttributePresentationDefinition_3 Description ...For everyone.
+
+-- Stats --
+
+set GD_Orchid_Artifacts.A_Item_Unique.Artifact_SeraphBloodRelic UIStatList ((bDisplayAsModifierOnly=True,AttributeStyle=ATTRSTYLE_ModifierText,SupplementalAttributeStyle=ATTRSTYLE_JustNumber,StatCombinationMethod=SCM_Multiply,Attribute=AttributeDefinition'D_Attributes.ActiveSkillCooldownResource.ActiveSkillCooldownConsumptionRate',ConstraintAttribute=AttributeDefinition'GD_ClassMods.Misc.Att_TeamConstraint',SupplementalAttributeExpression=(AttributeOperand1=None,ComparisonOperator=OPERATOR_EqualTo,Operand2Usage=OPERAND_PreferAttribute,AttributeOperand2=None,ConstantOperand2=0.000000),SupplementalAttributeToAppend=None))
+set GD_Orchid_Artifacts.A_Item_Unique.Artifact_SeraphBloodRelic AttributeSlotEffects ((SlotName="Effect1",bExternalSlot=True,bRunEffectsAsSkill=True,AttributeToModify=AttributeDefinition'D_Attributes.ActiveSkillCooldownResource.ActiveSkillCooldownConsumptionRate',ConstraintAttribute=AttributeDefinition'GD_ClassMods.Misc.Att_TeamConstraint',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.100000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_ClassMods.Misc.Init_StatBonus_Weak',BaseValueScaleConstant=0.003200),PerGradeUpgrade=(BaseValueConstant=0.010000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bIncludeInFunStats=False,bIncludeAlliesAsTarget=True,bEnforceMinimumGrade=True,bEnforceMaximumGrade=False,MinimumGrade=0,MaximumGrade=0,TargetInstanceDataName=))
+set GD_Orchid_Artifacts.A_Item_Unique.Artifact_SeraphBloodRelic AttributeSlotUpgrades ((SlotName="Effect1",GradeIncrease=0,bActivateSlot=True))
+set GD_Orchid_Artifacts.Body.Body_SeraphBloodRelic MaterialVectorParameterValues ((ParameterName="p_EmissiveColor",ParameterValue=(R=6.002561,G=2.040000,B=0.044722,A=2.000000),ExpressionGUID=(A=0,B=0,C=0,D=0)),(ParameterName="Ring_ScaleSpeedOffset",ParameterValue=(R=10.000000,G=0.650000,B=0.430000,A=1.000000),ExpressionGUID=(A=0,B=0,C=0,D=0)))

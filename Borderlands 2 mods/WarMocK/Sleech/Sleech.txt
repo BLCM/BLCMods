@@ -1,0 +1,71 @@
+#<Sleech>
+	
+	#<Description>
+	
+		Mod author: WarMocK
+	
+		Release Date: 05-31-2018
+		
+		Last Update: 06-30-2018
+	
+		Version: 1.2.0
+	
+		Summary: Changes how both the Breath of Terramorphous and the Leech grenade mod work in Borderlands 2
+		
+		- The Breath of Terramorphous now slags enemies instead of burning them to a crisp
+		
+		- All three Leech grenade types now also slag enemies
+		
+		- Slag chance for both grenade mods: 100 % (hey, they're legendary grenade mods after all)
+		
+		- The DoT now deals about 50 % more damage
+	
+	#</Description>
+	
+	#<Code>
+	
+		set GD_GrenadeMods.Title.Title_LeechIncendiary PartName Incendiary (S)Leech
+		
+		set GD_GrenadeMods.Title.Title_LeechCorrosive PartName Corrosive (S)Leech
+		
+		set GD_GrenadeMods.Title.Title_LeechShock PartName Shock (S)Leech
+		
+		set GD_GrenadeMods.Projectiles.Grenade_Longbow:BehaviorProviderDefinition_1.Behavior_Explode_111 OverrideName none
+		
+		set GD_GrenadeMods.Projectiles.Grenade_Longbow:BehaviorProviderDefinition_1.Behavior_Explode_111 Definition ExplosionDefinition'GD_Explosions.Slag.Explosion_SlagMaster'
+		
+		set GD_GrenadeMods.Projectiles.Grenade_Rubberized:BehaviorProviderDefinition_1.Behavior_Explode_154 OverrideName none
+		
+		set GD_GrenadeMods.Projectiles.Grenade_Rubberized:BehaviorProviderDefinition_1.Behavior_Explode_154 Definition ExplosionDefinition'GD_Explosions.Slag.Explosion_SlagMaster'
+		
+		set GD_GrenadeMods.Projectiles.Grenade_Lob:BehaviorProviderDefinition_1.Behavior_Explode_44 OverrideName none
+		
+		set GD_GrenadeMods.Projectiles.Grenade_Lob:BehaviorProviderDefinition_1.Behavior_Explode_44 Definition ExplosionDefinition'GD_Explosions.Slag.Explosion_SlagMaster'
+		
+		set GD_GrenadeMods.Projectiles.Grenade_Homing:BehaviorProviderDefinition_1.Behavior_Explode_0 OverrideName none
+		
+		set GD_GrenadeMods.Projectiles.Grenade_Homing:BehaviorProviderDefinition_1.Behavior_Explode_0 Definition ExplosionDefinition'GD_Explosions.Slag.Explosion_SlagMaster'
+		
+		set GD_GrenadeMods.Projectiles.Grenade_FlameSpurtChild:BehaviorProviderDefinition_1.Behavior_SpawnProjectile_10 ChildProjectileBaseValues ((Attribute=AttributeDefinition'D_Attributes.Projectile.ProjectileDamage',BaseValue=(BaseValueConstant=200.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.Projectile.ProjectileDamage',InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(Attribute=AttributeDefinition'D_Attributes.Projectile.ProjectileMomentumTransfer',BaseValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.Projectile.ProjectileMomentumTransfer',InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(Attribute=AttributeDefinition'D_Attributes.Projectile.ProjectileStatusEffectDamage',BaseValue=(BaseValueConstant=150.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.Projectile.ProjectileStatusEffectDamage',InitializationDefinition=None,BaseValueScaleConstant=2.000000)),(Attribute=AttributeDefinition'D_Attributes.Projectile.ProjectileStatusEffectChanceModifier',BaseValue=(BaseValueConstant=1.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.Projectile.ProjectileStatusEffectChanceModifier',InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(Attribute=AttributeDefinition'D_Attributes.Projectile.ProjectileDamageRadius',BaseValue=(BaseValueConstant=250.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.Projectile.ProjectileDamageRadius',InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(Attribute=AttributeDefinition'D_Attributes.Projectile.FuseTime',BaseValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.Projectile.FuseTime',InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(Attribute=AttributeDefinition'D_Attributes.Projectile.NumberOfChildProjectiles',BaseValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+		set GD_GrenadeMods.Projectiles.Grenade_FlameSpurtChild BodyComposition (Attachments=((Data=(Name=,Type=IDT_ActorComponent,Replication=IDR_Server,MaxSwitchValue=0,BitsRequiredForMaxSwitchValue=0,Bool=False,DeleteByOwner=False,Int=0,Float=0.000000,Vector=(X=0.000000,Y=0.000000,Z=0.000000),Object=None,ComponentData=(Component=CylinderComponent'GD_GrenadeMods.Projectiles.Grenade_FlameSpurtChild:CylinderComponent_1258',CollisionType=COLLIDE_CustomDefault,bAttachToMesh=False,bIsUsable=False,bIsSecondaryUsable=False,MeshSocketName=,HitRegionDefinition=None,InteractIcon=None,SecondaryInteractIcon=None),String=,BodyCompositionIndex=1),ParentAttachmentIdentifier="CylinderComponent",AttachmentBaseInstanceDataIndex=-1,SwitchIdentifier=0),(Data=(Name="EffectsSwitch",Type=IDT_Switch,Replication=IDR_Server,MaxSwitchValue=1,BitsRequiredForMaxSwitchValue=1,Bool=False,DeleteByOwner=False,Int=0,Float=0.000000,Vector=(X=0.000000,Y=0.000000,Z=0.000000),Object=None,ComponentData=(Component=None,CollisionType=COLLIDE_CustomDefault,bAttachToMesh=False,bIsUsable=False,bIsSecondaryUsable=False,MeshSocketName=,HitRegionDefinition=None,InteractIcon=None,SecondaryInteractIcon=None),String=,BodyCompositionIndex=2),ParentAttachmentIdentifier=,AttachmentBaseInstanceDataIndex=-1,SwitchIdentifier=0),(Data=(Name=,Type=IDT_ActorComponent,Replication=IDR_Server,MaxSwitchValue=0,BitsRequiredForMaxSwitchValue=0,Bool=False,DeleteByOwner=False,Int=0,Float=0.000000,Vector=(X=0.000000,Y=0.000000,Z=0.000000),Object=None,ComponentData=(Component=ParticleSystemComponent'GD_GrenadeMods.Projectiles.Grenade_SingularityChild:ParticleSystemComponent_17451',CollisionType=COLLIDE_CustomDefault,bAttachToMesh=False,bIsUsable=False,bIsSecondaryUsable=False,MeshSocketName=,HitRegionDefinition=None,InteractIcon=None,SecondaryInteractIcon=None),String=,BodyCompositionIndex=3),ParentAttachmentIdentifier=,AttachmentBaseInstanceDataIndex=1,SwitchIdentifier=1),(Data=(Name="DamageSwitch",Type=IDT_Switch,Replication=IDR_Server,MaxSwitchValue=1,BitsRequiredForMaxSwitchValue=1,Bool=False,DeleteByOwner=False,Int=0,Float=0.000000,Vector=(X=0.000000,Y=0.000000,Z=0.000000),Object=None,ComponentData=(Component=None,CollisionType=COLLIDE_CustomDefault,bAttachToMesh=False,bIsUsable=False,bIsSecondaryUsable=False,MeshSocketName=,HitRegionDefinition=None,InteractIcon=None,SecondaryInteractIcon=None),String=,BodyCompositionIndex=4),ParentAttachmentIdentifier=,AttachmentBaseInstanceDataIndex=-1,SwitchIdentifier=0),(Data=(Name=,Type=IDT_ActorTemplate,Replication=IDR_Server,MaxSwitchValue=0,BitsRequiredForMaxSwitchValue=0,Bool=False,DeleteByOwner=True,Int=0,Float=0.000000,Vector=(X=0.000000,Y=0.000000,Z=0.000000),Object=WillowDamageArea'GD_GrenadeMods.Projectiles.Grenade_FlameSpurtChild:WillowDamageArea_498',ComponentData=(Component=None,CollisionType=COLLIDE_TouchAll,bAttachToMesh=False,bIsUsable=False,bIsSecondaryUsable=False,MeshSocketName=,HitRegionDefinition=None,InteractIcon=None,SecondaryInteractIcon=None),String=,BodyCompositionIndex=5),ParentAttachmentIdentifier=,AttachmentBaseInstanceDataIndex=3,SwitchIdentifier=1)),MaxExpectedComponents=0,HasHomingTargetComponents=False)
+
+		set GD_GrenadeMods.Projectiles.Grenade_FlameSpurtChild:WillowDamageArea_498 DamageTypeDefinition WillowDamageTypeDefinition'GD_Amp.DamageType.DmgType_Amp_Impact'
+
+		set GD_GrenadeMods.Payload.Payload_Leech SetProjectileSequenceState ((Action=CHANGE_Enable,SequenceName="Payload_Leech"),(Action=CHANGE_Enable,SequenceName="Payload_FlameSpurt"))
+		
+		set GD_GrenadeMods.Title.Title_LeechIncendiary AttributeSlotUpgrades ((SlotName="StatusEffectDamage_Incendiary",GradeIncrease=12,bActivateSlot=True))
+		
+		set GD_GrenadeMods.Title.Title_LeechCorrosive AttributeSlotUpgrades ((SlotName="StatusEffectDamage_Corrosive",GradeIncrease=12,bActivateSlot=True))
+		
+		set GD_GrenadeMods.Title.Title_LeechShock AttributeSlotUpgrades ((SlotName="StatusEffectDamage_Shock",GradeIncrease=12,bActivateSlot=True))
+		
+		set GD_GrenadeMods.Payload.Payload_Leech CustomPresentations (AttributePresentationDefinition'GD_GrenadeMods.Payload.Payload_Leech:AttributePresentationDefinition_4',AttributePresentationDefinition'GD_Amp.DamageType.DmgType_Amp_Impact:AttributePresentationDefinition_1')
+		
+		set GD_GrenadeMods.Payload.Payload_FlameSpurt CustomPresentations (AttributePresentationDefinition'GD_GrenadeMods.Payload.Payload_FlameSpurt:AttributePresentationDefinition_4',AttributePresentationDefinition'GD_Amp.DamageType.DmgType_Amp_Impact:AttributePresentationDefinition_1')
+
+		set GD_GrenadeMods.Payload.Payload_FlameSpurt AttributeSlotUpgrades ((SlotName="Damage",GradeIncrease=28,bActivateSlot=True))
+		
+	#</Code>
+	
+#</Sleech>

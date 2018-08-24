@@ -1,0 +1,38 @@
+<BLCMM v="1">
+#<!!!You opened a file saved with BLCMM in FilterTool. Please update to BLCMM to properly open this file!!!>
+	<head>
+		<type name="TPS" offline="false"/>
+		<profiles>
+			<profile name="default" current="true"/>
+		</profiles>
+	</head>
+	<body>
+		<category name="Speed-Boosting Shotgun Accessory">
+			<category name="Description">
+				<comment>By Aaron0000</comment>
+				<comment>Replaces the shotgun shell accessory of Shotguns. Changes it to boost movement speed instead of general boosts to stats.</comment>
+				<comment>Comes with custom prefixes: Jakobs = Stallion's, Hyperion = Expedient, Torgue = Slick, Bandit = haul ass, Tediore = Fast.</comment>
+			</category>
+			<category name="Code">
+				<code profiles="default">set GD_Weap_Shotgun.Accessory.SG_Accessory_ShotgunShell ExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.GameplayAttributes.FootSpeed',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.350000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))</code>
+				<code profiles="default">set GD_Weap_Shotgun.Accessory.SG_Accessory_ShotgunShell AttributeSlotUpgrades ((SlotName="WeaponDamage",GradeIncrease=0,bActivateSlot=True),(SlotName="WeaponReloadSpeed",GradeIncrease=0,bActivateSlot=True),(SlotName="WeaponMagSize",GradeIncrease=0,bActivateSlot=True),(SlotName="WeaponFireRate",GradeIncrease=0,bActivateSlot=True))</code>
+				<category name="Prefixes">
+					<code profiles="default">set GD_Weap_Shotgun.Name.Prefix_Bandit.Prefix_ShotgunShell_GeneralBoost PartName haul ass</code>
+					<code profiles="default">set GD_Weap_Shotgun.Name.Prefix_Torgue.Prefix_ShotgunShell_GeneralBoost PartName Lubed</code>
+					<code profiles="default">set GD_Weap_Shotgun.Name.Prefix_Hyperion.Prefix_ShotgunShell_GeneralBoost PartName Expedient</code>
+					<code profiles="default">set GD_Weap_Shotgun.Name.Prefix_Jakobs.Prefix_ShotgunShell_GeneralBoost PartName Stallion's</code>
+					<code profiles="default">set GD_Weap_Shotgun.Name.Prefix_Tediore.Prefix_ShotgunShell_GeneralBoost PartName Fast</code>
+				</category>
+			</category>
+		</category>
+	</body>
+</BLCMM>
+
+#Commands:
+set GD_Weap_Shotgun.Accessory.SG_Accessory_ShotgunShell ExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.GameplayAttributes.FootSpeed',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.350000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+set GD_Weap_Shotgun.Accessory.SG_Accessory_ShotgunShell AttributeSlotUpgrades ((SlotName="WeaponDamage",GradeIncrease=0,bActivateSlot=True),(SlotName="WeaponReloadSpeed",GradeIncrease=0,bActivateSlot=True),(SlotName="WeaponMagSize",GradeIncrease=0,bActivateSlot=True),(SlotName="WeaponFireRate",GradeIncrease=0,bActivateSlot=True))
+set GD_Weap_Shotgun.Name.Prefix_Bandit.Prefix_ShotgunShell_GeneralBoost PartName haul ass
+set GD_Weap_Shotgun.Name.Prefix_Torgue.Prefix_ShotgunShell_GeneralBoost PartName Lubed
+set GD_Weap_Shotgun.Name.Prefix_Hyperion.Prefix_ShotgunShell_GeneralBoost PartName Expedient
+set GD_Weap_Shotgun.Name.Prefix_Jakobs.Prefix_ShotgunShell_GeneralBoost PartName Stallion's
+set GD_Weap_Shotgun.Name.Prefix_Tediore.Prefix_ShotgunShell_GeneralBoost PartName Fast

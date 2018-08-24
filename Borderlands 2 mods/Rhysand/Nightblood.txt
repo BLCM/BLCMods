@@ -1,14 +1,18 @@
 #<Nightblood>
 
   #<Description>
-
+    This is meant to be a sword for melee zer0. That is what I made it for anyways, I'm sure some people will find other crazy uses for it.
+    Changelog: 
+      5/19/2018 - Increased health drain from 3% to 10%; added splash damage for further increased slag chance. 
+      Note: This mod creates splash on the Kitten, and then steals that splash and puts it on this weapon. The only difference that should be noticed on the Kitten is that it has splash now.
     +350% Melee Damage.
     +99.9% Slag chance - Nightblood is meant to be only slag. Use other elements at your own risk.
     +85% Life Steal.
     +250% Critical Damage Bonus.
     +50% Movement Speed.
+    Added Splash.
     CURSE: +100% Melee Damage Taken.
-    CURSE: Constant 3% health drain while equipped.
+    CURSE: Constant 10% health drain while equipped.
     Replaces Rapier - Received as a mission reward from the "Message in a Bottle" mission in Hayter's Folly.
     Perfect Gibbed Code: BL2(hwAAAAD6XAGEZoIDCwGFkmIoxBCDUAHDIYYIDBYYZBDSIATDwIHw) - Slag.
     By Rhysand.
@@ -21,7 +25,7 @@
 
       set GD_Orchid_BossWeapons.Name.Title.Title__Unique_Cutlass PartName Nightblood
       set GD_Orchid_BossWeapons.Name.Title.Title__Unique_Cutlass CustomPresentations (AttributePresentationDefinition'GD_Orchid_BossWeapons.Name.Title.Title__Unique_Cutlass:AttributePresentationDefinition_0')
-      set GD_Orchid_BossWeapons.Name.Title.Title__Unique_Cutlass:AttributePresentationDefinition_0 NoConstraintText <font color="#000000">Hello. Would you like to destroy some evil today?<font color="#00ffff"><br>- Curse of the Porcelain Fist.<br>- +350% Dealt Melee Damage.<br>- +100% Received Melee Damage.<font color="#dc0027"><br>- Curse of the Devoured Soul.<br>- +3% Constant Health Drain.<br>- +1000% Slag Chance.<br>- +250% Critical Hit Damage.<br>- +85% Life Steal.<br>- +50% Movement Speed.
+      set GD_Orchid_BossWeapons.Name.Title.Title__Unique_Cutlass:AttributePresentationDefinition_0 NoConstraintText <font color="#000000">Hello. Would you like to destroy some evil today?<font color="#00ffff"><br>- Curse of the Porcelain Fist.<br>- +350% Dealt Melee Damage.<br>- +100% Received Melee Damage.<font color="#dc0027"><br>- Curse of the Devoured Soul.<br>- +10% Constant Health Drain.<br>- +1000% Slag Chance.<br>- +250% Critical Hit Damage.<br>- +85% Life Steal.<br>- +50% Movement Speed.
       set GD_Orchid_BossWeapons.AssaultRifle.AR_Barrel_Bandit_Rapier Rarity (BaseValueConstant=9.000000)
       set GD_Orchid_BossWeapons.ManufacturerMaterials.Mat_Vladof_2_Rapier WeaponCardAttributes ()
       set GD_Orchid_BossWeapons.AssaultRifle.AR_Accessory_Bayonet_Rapier WeaponCardAttributes ()
@@ -38,7 +42,13 @@
 
       #<Weapon Attribute Effects>
 
-        set GD_Orchid_BossWeapons.AssaultRifle.AR_Barrel_Bandit_Rapier WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponStatusEffectChanceModifier',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=10.090000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-1.500000,BaseValueAttribute=none,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponPerShotAccuracyImpulse',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-9.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+        set GD_Orchid_BossWeapons.AssaultRifle.AR_Barrel_Bandit_Rapier WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponStatusEffectChanceModifier',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=99999.090000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-1.500000,BaseValueAttribute=none,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponPerShotAccuracyImpulse',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-9.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+        set GD_Iris_Weapons.FiringModes.Bullet_Assault_Kitten OnAnyImpact (Behavior_Explode'GD_Weap_SniperRifles.FiringModes.Bullet_Sniper_Maliwan:Behavior_Explode_5')
+        set GD_Iris_Weapons.FiringModes.Bullet_Assault_Kitten ExplosionOverrideDefinition ExplosionCollectionDefinition'GD_Weap_Shared_Effects.Default_Elemental_Explosions'
+        set GD_Iris_Weapons.FiringModes.Bullet_Assault_Kitten ExplosionOverideInstanceDataName ExplosionOverride
+        set GD_Orchid_BossWeapons.AssaultRifle.AR_Barrel_Bandit_Rapier CustomFiringModeDefinition FiringModeDefinition'GD_Iris_Weapons.FiringModes.Bullet_Assault_Kitten'
+
 
       #</Weapon Attribute Effects>
 

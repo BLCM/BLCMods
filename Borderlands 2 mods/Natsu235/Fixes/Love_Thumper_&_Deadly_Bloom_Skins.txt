@@ -1,0 +1,26 @@
+#########################################################
+#                                                       #
+#   Fix "Love Thumper" & "Deadly Bloom" Swapped Skins   #
+#                                                       #
+#########################################################
+
+
+
+# NOTE 1: "Love Thumper" Shield Parts are referring to Very Rare -> "GD_Shields.Material.Material4_VeryRare_Roid_LoveThumper"
+
+# NOTE 2: "Deadly Bloom" Shield Parts are referring to Legendary -> "GD_Shields.Material.Material5_Legendary_Nova_DeadlyBloom"
+
+
+
+# Fix "Love Thumper" Very Rare Torgue Shield Skin #
+
+set GD_Shields.Material.Material4_VeryRare_Roid_LoveThumper Material MaterialInstanceConstant'Item_Shields.Materials.Mati_ShieldTorgueEpic'
+
+
+# Fix "Deadly Bloom" Legendary Torgue Shield Skin and Rarity #
+
+set GD_Shields.Material.Material5_Legendary_Nova_DeadlyBloom Material MaterialInstanceConstant'Item_Shields.Materials.Mati_ShieldTorgueLegendary'
+
+set GD_Shields.Material.Material5_Legendary_Nova_DeadlyBloom MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'
+
+set GD_Shields.Material.Material5_Legendary_Nova_DeadlyBloom Rarity (BaseValueConstant=5.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)

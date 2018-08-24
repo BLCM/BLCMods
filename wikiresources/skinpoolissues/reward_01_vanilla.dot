@@ -1,0 +1,49 @@
+digraph reward {
+
+    labelloc = "t";
+    fontsize = 22;
+    label = <Fig. 1: Vanilla Borderlands Reward Pools>
+
+    {
+        node [shape=octagon style=filled fillcolor=aquamarine1];
+        thing [label=<Mission Reward /<br/>Challenge Reward /<br/>Enemy Drop>];
+    }
+    {
+        node [shape=rectangle style=filled fillcolor=green];
+        reward [label="Reward Pool"]
+    }
+    {
+        node [shape=rectangle style=filled fillcolor=gold];
+        pool_ass [label="Assassin Pool"];
+        pool_merc [label="Mercenary Pool"];
+        pool_siren [label="Siren Pool"];
+        pool_soldier [label="Soldier Pool"];
+        pool_psycho [label="Psycho Pool"];
+        pool_mech [label="Mechromancer Pool"];
+    }
+    {
+        node [style=filled fillcolor=goldenrod4];
+        skin_ass [label="Assassin Skin"];
+        skin_merc [label="Mercenary Skin"];
+        skin_siren [label="Siren Skin"];
+        skin_soldier [label="Soldier Skin"];
+        skin_psycho [label="Psycho Skin"];
+        skin_mech [label="Mechromancer Skin"];
+    }
+
+    thing -> reward;
+
+    reward -> pool_ass;
+    reward -> pool_merc;
+    reward -> pool_siren;
+    reward -> pool_soldier;
+    reward -> pool_psycho;
+    reward -> pool_mech;
+
+    pool_ass -> skin_ass;
+    pool_merc -> skin_merc;
+    pool_siren -> skin_siren;
+    pool_soldier -> skin_soldier;
+    pool_psycho -> skin_psycho;
+    pool_mech -> skin_mech;
+}

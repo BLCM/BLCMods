@@ -1,0 +1,33 @@
+//////////////////////////////////////////////////////////////////////////////////////////////
+Veruc redux, the Private
+
+		//Title
+		set GD_Weap_AssaultRifle.Name.Title_Dahl.Title_Legendary_Veruc PartName Private
+
+		
+		//Red Text
+		set GD_Weap_AssaultRifle.Name.Title_Dahl.Title_Legendary_Veruc:AttributePresentationDefinition_8 NoConstraintText Sometimes you can learn something from the rookies...
+		
+		//Firing Mode
+		set GD_Weap_AssaultRifle.Barrel.AR_Barrel_Dahl_Veruc CustomFiringModeDefinition FiringModeDefinition'GD_Weap_Pistol.FiringModes.Bullet_Pistol_Dahl_Hornet'
+
+		//External Attributes
+		set GD_Weap_AssaultRifle.Barrel.AR_Barrel_Dahl_Veruc ExternalAttributeEffects ()
+
+		//Weapon Attributes
+		set GD_Weap_AssaultRifle.Barrel.AR_Barrel_Dahl_Veruc WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.5000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.250000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.002200,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=5.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponReloadSpeed',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+		//Zoom Attributes
+		set GD_Weap_AssaultRifle.Barrel.AR_Barrel_Dahl_Veruc ZoomWeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponAutomaticBurstCount',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=30.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Dahl',InitializationDefinition=None,BaseValueScaleConstant=9999.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-1.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+		
+		##VECTORS
+		set Common_GunMaterials.Materials.AssaultRifle.Mati_DahlLegendaryAR VectorParameterValues ((ParameterName="p_AColorHilight",ParameterValue=(R=0.800000,G=0.800000,B=0.800000,A=1.000000),ExpressionGUID=(A=170714760,B=1132476783,C=-275668290,D=655702143)),(ParameterName="p_AColorMidtone",ParameterValue=(R=1.000000,G=1.000000,B=1.000000,A=1.000000),ExpressionGUID=(A=473594356,B=1338758895,C=824823946,D=864253813)),(ParameterName="p_AColorShadow",ParameterValue=(R=0.600000,G=0.000000,B=0.000000,A=1.000000),ExpressionGUID=(A=-429590341,B=1156435294,C=-1015192901,D=687313413)),(ParameterName="p_CColorHilight",ParameterValue=(R=0.355000,G=0.000000,B=0.000000,A=1.000000),ExpressionGUID=(A=170714760,B=1132476783,C=-275668290,D=655702143)),(ParameterName="p_CColorMidtone",ParameterValue=(R=0.455000,G=0.000000,B=0.000000,A=1.000000),ExpressionGUID=(A=473594356,B=1338758895,C=824823946,D=864253813)),(ParameterName="p_CColorShadow",ParameterValue=(R=0.555000,G=0.000000,B=0.000000,A=1.000000),ExpressionGUID=(A=-429590341,B=1156435294,C=-1015192901,D=687313413)),(ParameterName="p_BColorHilight",ParameterValue=(R=0.800000,G=0.800000,B=0.800000,A=1.000000),ExpressionGUID=(A=170714760,B=1132476783,C=-275668290,D=655702143)),(ParameterName="p_BColorMidtone",ParameterValue=(R=0.900000,G=0.900000,B=0.900000,A=1.000000),ExpressionGUID=(A=473594356,B=1338758895,C=824823946,D=864253813)),(ParameterName="p_BColorShadow",ParameterValue=(R=1.000000,G=1.000000,B=1.000000,A=1.000000),ExpressionGUID=(A=-429590341,B=1156435294,C=-1015192901,D=687313413),(ParameterName="p_CColorShadow",ParameterValue=(R=0.000000,G=1.000000,B=0.000000,A=1.000000),ExpressionGUID=(A=-429590341,B=1156435294,C=-1015192901,D=687313413)))
+
+		##TEX
+		set Common_GunMaterials.Materials.AssaultRifle.Mati_DahlLegendaryAR TextureParameterValues ((ParameterName="P_SimpleReflect",ParameterValue=Texture2D'Common_GunMaterials.Patterns.Pattern_Lightning',ExpressionGUID=(A=-858148940,B=1327945772,C=148462268,D=1899047224)),(ParameterName="p_Pattern",ParameterValue=Texture2D'Common_GunMaterials.Patterns.Pattern_JakobsEpic_Zebrawood',ExpressionGUID=(A=534250533,B=1202550002,C=1578302861,D=-717876416)),(ParameterName="p_NormalScopesEmissive",ParameterValue=Texture2D'Weap_AssaultRifles.Tex.Weap_AssaultRifle_Nrm',ExpressionGUID=(A=-1743872746,B=1126171774,C=119496871,D=-1952271718)),(ParameterName="p_Diffuse",ParameterValue=Texture2D'Common_GunMaterials.CompTextures.Weap_AssaultSubSniper_Comp',ExpressionGUID=(A=1757607260,B=1326539502,C=-317215581,D=-565807463)),(ParameterName="p_Masks",ParameterValue=Texture2D'Weap_AssaultRifles.Tex.Weap_AssaultRifle_Comp',ExpressionGUID=(A=-330624041,B=1167251458,C=-335191907,D=-166684394)),(ParameterName="p_Decal",ParameterValue=Texture2D'Common_GunMaterials.Patterns.Pattern_Jakobs_CaseHardened',ExpressionGUID=(A=-923052711,B=1309861752,C=584229786,D=-1229888527)))
+
+		##SCALE
+		set Common_GunMaterials.Materials.AssaultRifle.Mati_DahlLegendaryAR ScalarParameterValues ((ParameterName="p_HighlightsIntensity",ParameterValue=0.200000,ExpressionGUID=(A=-1257568432,B=1277066486,C=-723473993,D=-1144384173)),(ParameterName="p_ShadowsIntensity",ParameterValue=1.000000,ExpressionGUID=(A=437293753,B=1205147708,C=-775723903,D=1480014964)),(ParameterName="p_ReflectColorScale",ParameterValue=1.000000,ExpressionGUID=(A=1875785607,B=1186033550,C=-1822263113,D=-1465755701)),(ParameterName="p_ReplacePattern",ParameterValue=1.000000,ExpressionGUID=(A=-2084339847,B=1096440125,C=439008937,D=45433490)),(ParameterName="p_DecalRotate",ParameterValue=0.200000,ExpressionGUID=(A=-276527909,B=1298581551,C=856978878,D=743944047)),(ParameterName="p_ReplaceDecal",ParameterValue=1.000000,ExpressionGUID=(A=85863466,B=1257609701,C=-728575820,D=1337098176)),(ParameterName="p_UseFullColorDecal",ParameterValue=0.000000,ExpressionGUID=(A=-1064329812,B=1077705328,C=339664807,D=1869745420)))
+
+/end/
+//////////////////////////////////////////////////////////////////////////////////////////////

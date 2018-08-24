@@ -1,0 +1,31 @@
+<BLCMM v="1">
+#<!!!You opened a file saved with BLCMM in FilterTool. Please update to BLCMM to properly open this file!!!>
+	<head>
+		<type name="BL2" offline="false"/>
+		<profiles>
+			<profile name="default" current="true"/>
+		</profiles>
+	</head>
+	<body>
+		<category name="Borderlands HUD Remover">
+			<category name="Description">
+				<comment># This mod disables all HUD, more specifically the HUD outside of your menus (Skills, BAR, Missions).</comment>
+				<comment># But you can decide to disable all UI elements such as Skills, BAR, Missions.</comment>
+			</category>
+			<category name="Coding">
+				<category name="General HUD UI">
+					<code profiles="default">set UI_HUD.HUD_Definition View3DScale 0.0</code>
+					<code profiles="default">set UI_HUD.HUD_Definition InjuredStringReplacements ()</code>
+				</category>
+				<category name="Status Menu (Skills, BAR, Quests, etc)">
+					<code profiles="">set UI_StatusMenu.StatusMenu_Definition View3DScale 0.000000</code>
+				</category>
+			</category>
+		</category>
+	</body>
+</BLCMM>
+
+#Commands:
+set UI_HUD.HUD_Definition View3DScale 0.0
+set UI_HUD.HUD_Definition InjuredStringReplacements ()
+

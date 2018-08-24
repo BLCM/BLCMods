@@ -5,7 +5,7 @@ Example is my Xiphos, it's powerful, but not OP. On the other hand, my MostOPMod
 I hope you guys enjoy the mods I release.
 If you want to add me on Steam, click this [link](http://steamcommunity.com/id/greemking).
 
-Click [here](https://www.youtube.com/channel/UCc0sqBDDpS2MI1QWq0NMM5A) to vist my channel.
+Click [here](https://www.youtube.com/ch/Greeem) to vist my channel.
 
 Here's some of the Borderlands (Mods) videos I've made.
  > [Eridium Hurricane](https://youtu.be/UI9DWv1JTNs) |
@@ -16,6 +16,11 @@ Here's some of the Borderlands (Mods) videos I've made.
 You may come to find that you like my OP weapons, and I thank you. If you don't like them, don't use them. It's simple.
 
 I haven't "quit" modding, I'm just not doing it as frequently as my ideas have ran out. Feel free to PM me on Steam if you have a unique idea you'd want to see be made into a mod. 
+
+Click [here](https://greem.xyz/SIVA) to join my Discord server.
+If you don't want to join that, you can add me on Discord @Greem#1337. 
+
+I might be coming back to modding...stay tuned.
 
 Anyways, have a good day!
 > -> Greem

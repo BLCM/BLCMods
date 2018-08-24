@@ -1,0 +1,43 @@
+<BLCMM v="1">
+#<!!!You opened a file saved with BLCMM in FilterTool. Please update to BLCMM to properly open this file!!!>
+	<head>
+		<type name="BL2" offline="false"/>
+		<profiles>
+			<profile name="default" current="true"/>
+		</profiles>
+	</head>
+	<body>
+		<category name="Slowhand">
+			<category name="Description">
+				<comment>Until another edition of the Unofficial Community Patch happens, here's some adjustments for the Slowhand in the mean time.</comment>
+				<comment>Changes;</comment>
+				<comment>Reduced the fire rate.</comment>
+				<comment>Reduced projectile speed by 33%.</comment>
+				<comment>Added an option to toggle the splash's source of damage between Shotgun and Grenade (default is Shotgun in vanilla, Grenade in UCP).</comment>
+				<comment>Added self-damage back (at a minimal amount of damage).</comment>
+			</category>
+			<category name="Code">
+				<code profiles="default">set GD_Iris_Weapons.Shotguns.SG_Barrel_Alien_SlowHand WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-3.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=10.50000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponStatusEffectChanceModifier',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=5.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-9999.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.300000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))</code>
+				<code profiles="default">set GD_Iris_Weapons.Projectiles.Projectile_SplatBall_SlowHand SpeedFormula (BaseValueConstant=1600.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)</code>
+				<code profiles="default">set GD_Iris_Weapons.Projectiles.Projectile_SplatBall_SlowHand:BehaviorProviderDefinition_0.Behavior_Explode_5 DamageRadiusFormula (BaseValueConstant=400.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)</code>
+				<code profiles="default">set GD_Iris_Weapons.Projectiles.Projectile_SplatBall_SlowHand:BehaviorProviderDefinition_0.Behavior_Explode_5 InstigatorSelfDamageScale 0.100000</code>
+				<category name="Splash Damage Source (Shotgun or Grenade)" MUT="true">
+					<category name="Shotgun (Default)">
+						<code profiles="default">set GD_Iris_Weapons.Projectiles.Projectile_SplatBall_SlowHand:BehaviorProviderDefinition_0.Behavior_Explode_5 DamageSource Class'WillowGame.WillowDmgSource_Shotgun'</code>
+					</category>
+					<category name="Grenade">
+						<code profiles="">set GD_Iris_Weapons.Projectiles.Projectile_SplatBall_SlowHand:BehaviorProviderDefinition_0.Behavior_Explode_5 DamageSource Class'WillowGame.WillowDmgSource_Grenade'</code>
+					</category>
+				</category>
+			</category>
+		</category>
+	</body>
+</BLCMM>
+
+#Commands:
+set GD_Iris_Weapons.Shotguns.SG_Barrel_Alien_SlowHand WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-3.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=10.50000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponStatusEffectChanceModifier',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=5.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-9999.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.300000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+set GD_Iris_Weapons.Projectiles.Projectile_SplatBall_SlowHand SpeedFormula (BaseValueConstant=1600.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+set GD_Iris_Weapons.Projectiles.Projectile_SplatBall_SlowHand:BehaviorProviderDefinition_0.Behavior_Explode_5 DamageRadiusFormula (BaseValueConstant=400.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+set GD_Iris_Weapons.Projectiles.Projectile_SplatBall_SlowHand:BehaviorProviderDefinition_0.Behavior_Explode_5 InstigatorSelfDamageScale 0.100000
+set GD_Iris_Weapons.Projectiles.Projectile_SplatBall_SlowHand:BehaviorProviderDefinition_0.Behavior_Explode_5 DamageSource Class'WillowGame.WillowDmgSource_Shotgun'
+
