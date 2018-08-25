@@ -9,7 +9,7 @@ the second is that it stops bouncing when an ennemy is hit.
 Bouncing is the whole point of this grenade, so why should it stop ?  
 This mod makes it bounce non-stop.
 
-#### What does it do ?
+### What does it do ?
 
 It changes the rolling thunder to make it decent (yes, really).  
 Here is what I changed :
