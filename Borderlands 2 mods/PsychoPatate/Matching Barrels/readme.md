@@ -22,5 +22,3 @@ Simple mod to make unique weapons have the barrel from their manufacturer.
 #### Changelog
 V.1.1 (23/08/18)
 - Fixed Veritas's logo to better fit the Vladof barrel.
-=======
-- It doesn't change most shotgun barrels, because it's stupid to put a triple barrel on a shotgun that uses 2 ammo per shot (only the **Butcher** and **Shotgun 1340** changed)
