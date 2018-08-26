@@ -18,8 +18,10 @@ branches, so you can browse in `bl2betterloot`, `bl2colddeadhands`,
   * [BL2 Better Loot Mod](#bl2-better-loot-mod)
   * [BL2 Cold Dead Hands](#bl2-cold-dead-hands)
   * [BL2 Configurable Slot Machines](#bl2-configurable-slot-machines)
+  * [BL2 Container TimeSaver XL](#bl2-container-timesaver-xl)
   * [BL2 Early Bloomer](#bl2-early-bloomer)
   * [BL2 Expanded Legendary Pools](#bl2-expanded-legendary-pools)
+  * [BL2 Fast Travel TimeSaver XL](#bl2-fast-travel-timesaver-xl)
   * [BL2 Movement Speed Cheats](#bl2-movement-speed-cheats)
   * [BL2 No Wasted COMs](#bl2-no-wasted-coms)
   * [Configurable Catch-A-Ride](#configurable-catch-a-ride)
@@ -27,6 +29,7 @@ branches, so you can browse in `bl2betterloot`, `bl2colddeadhands`,
   * [Guaranteed Varkid Evolution](#guaranteed-varkid-evolution)
   * [More Loot Midget Containers](#more-loot-midget-containers)
   * [More Muscles](#more-muscles)
+  * [No Crushers in Lair of Infinite Agony](#no-crushers-in-lair-of-infinite-agony)
   * [Speedier Sandskiffs](#speedier-sandskiffs)
   * [Stalkers Use Shields](#stalkers-use-shields)
 * [Utilities](#utilities)
@@ -73,6 +76,17 @@ slot machines, of the sort found in Sanctuary (and, I believe, on One-Armed
 Bandits).  The default configuration leaves the slot machines exactly how
 they are in the base game -- you **must** configure the options you want.
 
+### BL2 Container TimeSaver XL
+
+Are you a busy, on-the-go Vault Hunter who just doesn't have the
+*time* for such luxuries as waiting for loot chests to open?  Are
+those Hyperion weapon crates leaving you tapping your watch and
+sneaking glances at your day calendar?  Is the hunt for more ammo
+filling you with near-terminal waves of impatience?
+
+Well, fret no longer!  This mod increases the opening animations
+of all containers in BL2 by 5x.
+
 ### BL2 Early Bloomer
 
 Unlocks all weapons/items to be able to spawn right at the beginning of the game.
@@ -87,6 +101,14 @@ pools, and by default adds all uniques, seraphs, and pearlescents into the
 legendary pools, too.  The mod will also by default add in gemstone weapons
 into the E-Tech pool, and add the Dragon Keep "Alignment" Class Mods to the
 global class mod drops.
+
+### BL2 Fast Travel TimeSaver
+
+This simple little mod speeds up the animations of Fast Travel stations
+becoming active.  This is mostly just useful for the handful of stations
+which initially start closed, when the level loads -- if you start your game
+right outside one of these stations and want to warp away, you've got to
+wait for the animation to complete before doing so.
 
 ### BL2 Movement Speed Cheats
 
@@ -137,6 +159,14 @@ midgets, but there'll be more than there were.
 This simple mod improves the spawn rate for Muscles, a unique Bruiser who
 appears in Thousand Cuts.  He will be fairly likely to appear during a full
 playthrough of the level.
+
+### No Crushers in Lair of Infinite Agony
+
+There is a little puzzle in Lair of Infinite Agony where the player
+must traverse a short hallway with four sections of the floor which
+cycle up and down, threatening to crush the player.  It's not a
+difficult puzzle, but waiting around and instadeath aren't what I
+play Borderlands for.  This mod disables them!
 
 ### Speedier Sandskiffs
 
