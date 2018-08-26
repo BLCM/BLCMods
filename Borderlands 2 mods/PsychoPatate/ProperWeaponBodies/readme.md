@@ -3,7 +3,7 @@
 
 #### Intro
 Why does green Bandit shotguns and pistols appear to have bigger mag than blue weapons ?
-That doesn't make sense to me, so that mod fixes that.
+That doesn't make sense to me, so this mod fixes that.
 
 #### What does it do ?
 - Swaps green and blue bodies on some weapon types.
@@ -12,7 +12,8 @@ That doesn't make sense to me, so that mod fixes that.
 
 #### About green and blue bodies :
 By default, this mod only changes pistols (not Tediore ones) and shotguns bodies.  
-The other weapon types are named as "Not recommended", not because it will break things, but because it doesn't look good.
+The other weapon types are named as "Not recommended", not because it will break things, but because it doesn't look good.  
+But you can swap whatever weapon type you want, just by enabling/disabling lines using BLCMM.
 
 #### About unique bodies :
 Some weapons have unique bodies, that means we can change them !  
