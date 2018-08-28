@@ -1,0 +1,1094 @@
+<BLCMM v="1">
+#<!!!You opened a file saved with BLCMM in FilterTool. Please update to BLCMM to properly open this file!!!>
+	<head>
+		<type name="TPS" offline="false"/>
+	</head>
+	<body>
+		<category name="Easier ECLIPSE and EOS">
+			<comment># Easier ECLIPSE and EOS v1.0.0</comment>
+			<comment># by Apocalyptech</comment>
+			<comment># Licensed under Public Domain / CC0 1.0 Universal</comment>
+			<comment>#</comment>
+			<comment># Makes the boss fights against ECLIPSE and EOS easier.  Each has a few different</comment>
+			<comment># options, and can be toggled independently of each other (including setting them</comment>
+			<comment># to the stock values, in case you want to nerf one but not the other).</comment>
+			<comment>#</comment>
+			<comment># Should you be feeling masochistic, there's also an option which buffs both of</comment>
+			<comment># them, rather than nerfing.</comment>
+			<category name="ECLIPSE" MUT="true">
+				<category name="Easier ECLIPSE">
+					<category name="Health Multiplier">
+						<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+							<code profiles="default">set GD_Ma_VoltronTrap.Character.CharClass_LoaderUltimateBadass AttributeStartingValues[0].BaseValue.BaseValueConstant 120</code>
+						</hotfix>
+					</category>
+					<category name="Shield Multiplier">
+						<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+							<code profiles="default">set GD_Ma_VoltronTrap.Character.CharClass_LoaderUltimateBadass AttributeStartingValues[6].BaseValue.BaseValueConstant 110</code>
+						</hotfix>
+					</category>
+					<category name="\"Non-Weapon\" Damage Multiplier">
+						<comment># This ends up affecting most of ECLIPSE's attacks, such as arm lasers,</comment>
+						<comment># rocket attacks, and shock balls.  Could affect other damage output from</comment>
+						<comment># him as well.  The extra damage reduction done in the individual</comment>
+						<comment># categories below will be on top of this tweak.</comment>
+						<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+							<code profiles="default">set GD_Ma_VoltronTrap.Character.CharClass_LoaderUltimateBadass AttributeStartingValues[1].BaseValue.BaseValueConstant 6</code>
+						</hotfix>
+					</category>
+					<category name="Arm Lasers">
+						<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+							<code profiles="default">set GD_Ma_VoltronTrap.Anims.Anim_LoaderUltimateBadass_ArmGun_Loop:BehaviorProviderDefinition_32.Behavior_AIThrowProjectileAtTarget_7 ChildProjectileBaseValues[0].BaseValue.BaseValueScaleConstant 0.35</code>
+						</hotfix>
+					</category>
+					<category name="Rockets">
+						<category name="Rocket Speed">
+							<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+								<code profiles="default">set GD_Ma_VoltronTrap.Projectiles.Proj_RocketLaunch SpeedFormula.BaseValueConstant 1300</code>
+							</hotfix>
+						</category>
+						<category name="Rocket Damage Scale">
+							<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+								<code profiles="default">set GD_Ma_VoltronTrap.Anims.Anim_LoaderUltimateBadass_Missile_Loop:BehaviorProviderDefinition_32.Behavior_SpawnProjectile_50 ChildProjectileBaseValues[0].BaseValue.BaseValueScaleConstant 0.8</code>
+								<code profiles="default">set GD_Ma_VoltronTrap.Anims.Anim_LoaderUltimateBadass_Missile_Loop:BehaviorProviderDefinition_32.Behavior_SpawnProjectile_51 ChildProjectileBaseValues[0].BaseValue.BaseValueScaleConstant 0.8</code>
+								<code profiles="default">set GD_Ma_VoltronTrap.Anims.Anim_LoaderUltimateBadass_Missile_Loop:BehaviorProviderDefinition_32.Behavior_SpawnProjectile_52 ChildProjectileBaseValues[0].BaseValue.BaseValueScaleConstant 0.8</code>
+								<code profiles="default">set GD_Ma_VoltronTrap.Anims.Anim_LoaderUltimateBadass_Missile_Loop:BehaviorProviderDefinition_32.Behavior_SpawnProjectile_53 ChildProjectileBaseValues[0].BaseValue.BaseValueScaleConstant 0.8</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Shock Orbs">
+						<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+							<code profiles="default">set GD_Ma_VoltronTrap.Projectiles.Proj_ShockBall:BehaviorProviderDefinition_0.Behavior_Explode_5 StatusEffectDamage.BaseValueScaleConstant 0.5</code>
+							<code profiles="default">set GD_Ma_VoltronTrap.Projectiles.Proj_ShockBall:BehaviorProviderDefinition_0.Behavior_Explode_5 StatusEffectChance.BaseValueScaleConstant 1</code>
+						</hotfix>
+					</category>
+				</category>
+				<category name="Even Easier ECLIPSE">
+					<category name="Health Multiplier">
+						<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+							<code profiles="">set GD_Ma_VoltronTrap.Character.CharClass_LoaderUltimateBadass AttributeStartingValues[0].BaseValue.BaseValueConstant 60</code>
+						</hotfix>
+					</category>
+					<category name="Shield Multiplier">
+						<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+							<code profiles="">set GD_Ma_VoltronTrap.Character.CharClass_LoaderUltimateBadass AttributeStartingValues[6].BaseValue.BaseValueConstant 60</code>
+						</hotfix>
+					</category>
+					<category name="\"Non-Weapon\" Damage Multiplier">
+						<comment># This ends up affecting most of ECLIPSE's attacks, such as arm lasers,</comment>
+						<comment># rocket attacks, and shock balls.  Could affect other damage output from</comment>
+						<comment># him as well.  The extra damage reduction done in the individual</comment>
+						<comment># categories below will be on top of this tweak.</comment>
+						<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+							<code profiles="">set GD_Ma_VoltronTrap.Character.CharClass_LoaderUltimateBadass AttributeStartingValues[1].BaseValue.BaseValueConstant 5</code>
+						</hotfix>
+					</category>
+					<category name="Arm Lasers">
+						<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+							<code profiles="">set GD_Ma_VoltronTrap.Anims.Anim_LoaderUltimateBadass_ArmGun_Loop:BehaviorProviderDefinition_32.Behavior_AIThrowProjectileAtTarget_7 ChildProjectileBaseValues[0].BaseValue.BaseValueScaleConstant 0.2</code>
+						</hotfix>
+					</category>
+					<category name="Rockets">
+						<category name="Rocket Speed">
+							<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+								<code profiles="">set GD_Ma_VoltronTrap.Projectiles.Proj_RocketLaunch SpeedFormula.BaseValueConstant 1100</code>
+							</hotfix>
+						</category>
+						<category name="Rocket Damage Scale">
+							<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+								<code profiles="">set GD_Ma_VoltronTrap.Anims.Anim_LoaderUltimateBadass_Missile_Loop:BehaviorProviderDefinition_32.Behavior_SpawnProjectile_50 ChildProjectileBaseValues[0].BaseValue.BaseValueScaleConstant 0.6</code>
+								<code profiles="">set GD_Ma_VoltronTrap.Anims.Anim_LoaderUltimateBadass_Missile_Loop:BehaviorProviderDefinition_32.Behavior_SpawnProjectile_51 ChildProjectileBaseValues[0].BaseValue.BaseValueScaleConstant 0.6</code>
+								<code profiles="">set GD_Ma_VoltronTrap.Anims.Anim_LoaderUltimateBadass_Missile_Loop:BehaviorProviderDefinition_32.Behavior_SpawnProjectile_52 ChildProjectileBaseValues[0].BaseValue.BaseValueScaleConstant 0.6</code>
+								<code profiles="">set GD_Ma_VoltronTrap.Anims.Anim_LoaderUltimateBadass_Missile_Loop:BehaviorProviderDefinition_32.Behavior_SpawnProjectile_53 ChildProjectileBaseValues[0].BaseValue.BaseValueScaleConstant 0.6</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Shock Orbs">
+						<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+							<code profiles="">set GD_Ma_VoltronTrap.Projectiles.Proj_ShockBall:BehaviorProviderDefinition_0.Behavior_Explode_5 StatusEffectDamage.BaseValueScaleConstant 0.4</code>
+							<code profiles="">set GD_Ma_VoltronTrap.Projectiles.Proj_ShockBall:BehaviorProviderDefinition_0.Behavior_Explode_5 StatusEffectChance.BaseValueScaleConstant 0.8</code>
+						</hotfix>
+					</category>
+				</category>
+				<category name="Total Chump">
+					<category name="Health Multiplier">
+						<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+							<code profiles="">set GD_Ma_VoltronTrap.Character.CharClass_LoaderUltimateBadass AttributeStartingValues[0].BaseValue.BaseValueConstant 5</code>
+						</hotfix>
+					</category>
+					<category name="Shield Multiplier">
+						<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+							<code profiles="">set GD_Ma_VoltronTrap.Character.CharClass_LoaderUltimateBadass AttributeStartingValues[6].BaseValue.BaseValueConstant 5</code>
+						</hotfix>
+					</category>
+					<category name="\"Non-Weapon\" Damage Multiplier">
+						<comment># This ends up affecting most of ECLIPSE's attacks, such as arm lasers,</comment>
+						<comment># rocket attacks, and shock balls.  Could affect other damage output from</comment>
+						<comment># him as well.  The extra damage reduction done in the individual</comment>
+						<comment># categories below will be on top of this tweak.</comment>
+						<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+							<code profiles="">set GD_Ma_VoltronTrap.Character.CharClass_LoaderUltimateBadass AttributeStartingValues[1].BaseValue.BaseValueConstant 2</code>
+						</hotfix>
+					</category>
+					<category name="Arm Lasers">
+						<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+							<code profiles="">set GD_Ma_VoltronTrap.Anims.Anim_LoaderUltimateBadass_ArmGun_Loop:BehaviorProviderDefinition_32.Behavior_AIThrowProjectileAtTarget_7 ChildProjectileBaseValues[0].BaseValue.BaseValueScaleConstant 0.1</code>
+						</hotfix>
+					</category>
+					<category name="Rockets">
+						<category name="Rocket Speed">
+							<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+								<code profiles="">set GD_Ma_VoltronTrap.Projectiles.Proj_RocketLaunch SpeedFormula.BaseValueConstant 550</code>
+							</hotfix>
+						</category>
+						<category name="Rocket Damage Scale">
+							<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+								<code profiles="">set GD_Ma_VoltronTrap.Anims.Anim_LoaderUltimateBadass_Missile_Loop:BehaviorProviderDefinition_32.Behavior_SpawnProjectile_50 ChildProjectileBaseValues[0].BaseValue.BaseValueScaleConstant 0.2</code>
+								<code profiles="">set GD_Ma_VoltronTrap.Anims.Anim_LoaderUltimateBadass_Missile_Loop:BehaviorProviderDefinition_32.Behavior_SpawnProjectile_51 ChildProjectileBaseValues[0].BaseValue.BaseValueScaleConstant 0.2</code>
+								<code profiles="">set GD_Ma_VoltronTrap.Anims.Anim_LoaderUltimateBadass_Missile_Loop:BehaviorProviderDefinition_32.Behavior_SpawnProjectile_52 ChildProjectileBaseValues[0].BaseValue.BaseValueScaleConstant 0.2</code>
+								<code profiles="">set GD_Ma_VoltronTrap.Anims.Anim_LoaderUltimateBadass_Missile_Loop:BehaviorProviderDefinition_32.Behavior_SpawnProjectile_53 ChildProjectileBaseValues[0].BaseValue.BaseValueScaleConstant 0.2</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Shock Orbs">
+						<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+							<code profiles="">set GD_Ma_VoltronTrap.Projectiles.Proj_ShockBall:BehaviorProviderDefinition_0.Behavior_Explode_5 StatusEffectDamage.BaseValueScaleConstant 0.2</code>
+							<code profiles="">set GD_Ma_VoltronTrap.Projectiles.Proj_ShockBall:BehaviorProviderDefinition_0.Behavior_Explode_5 StatusEffectChance.BaseValueScaleConstant 0.5</code>
+						</hotfix>
+					</category>
+				</category>
+				<category name="Stock Difficulty">
+					<category name="Health Multiplier">
+						<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+							<code profiles="">set GD_Ma_VoltronTrap.Character.CharClass_LoaderUltimateBadass AttributeStartingValues[0].BaseValue.BaseValueConstant 180</code>
+						</hotfix>
+					</category>
+					<category name="Shield Multiplier">
+						<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+							<code profiles="">set GD_Ma_VoltronTrap.Character.CharClass_LoaderUltimateBadass AttributeStartingValues[6].BaseValue.BaseValueConstant 160</code>
+						</hotfix>
+					</category>
+					<category name="\"Non-Weapon\" Damage Multiplier">
+						<comment># This ends up affecting most of ECLIPSE's attacks, such as arm lasers,</comment>
+						<comment># rocket attacks, and shock balls.  Could affect other damage output from</comment>
+						<comment># him as well.  The extra damage reduction done in the individual</comment>
+						<comment># categories below will be on top of this tweak.</comment>
+						<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+							<code profiles="">set GD_Ma_VoltronTrap.Character.CharClass_LoaderUltimateBadass AttributeStartingValues[1].BaseValue.BaseValueConstant 7</code>
+						</hotfix>
+					</category>
+					<category name="Arm Lasers">
+						<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+							<code profiles="">set GD_Ma_VoltronTrap.Anims.Anim_LoaderUltimateBadass_ArmGun_Loop:BehaviorProviderDefinition_32.Behavior_AIThrowProjectileAtTarget_7 ChildProjectileBaseValues[0].BaseValue.BaseValueScaleConstant 0.4</code>
+						</hotfix>
+					</category>
+					<category name="Rockets">
+						<category name="Rocket Speed">
+							<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+								<code profiles="">set GD_Ma_VoltronTrap.Projectiles.Proj_RocketLaunch SpeedFormula.BaseValueConstant 1500</code>
+							</hotfix>
+						</category>
+						<category name="Rocket Damage Scale">
+							<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+								<code profiles="">set GD_Ma_VoltronTrap.Anims.Anim_LoaderUltimateBadass_Missile_Loop:BehaviorProviderDefinition_32.Behavior_SpawnProjectile_50 ChildProjectileBaseValues[0].BaseValue.BaseValueScaleConstant 1</code>
+								<code profiles="">set GD_Ma_VoltronTrap.Anims.Anim_LoaderUltimateBadass_Missile_Loop:BehaviorProviderDefinition_32.Behavior_SpawnProjectile_51 ChildProjectileBaseValues[0].BaseValue.BaseValueScaleConstant 1</code>
+								<code profiles="">set GD_Ma_VoltronTrap.Anims.Anim_LoaderUltimateBadass_Missile_Loop:BehaviorProviderDefinition_32.Behavior_SpawnProjectile_52 ChildProjectileBaseValues[0].BaseValue.BaseValueScaleConstant 1</code>
+								<code profiles="">set GD_Ma_VoltronTrap.Anims.Anim_LoaderUltimateBadass_Missile_Loop:BehaviorProviderDefinition_32.Behavior_SpawnProjectile_53 ChildProjectileBaseValues[0].BaseValue.BaseValueScaleConstant 1</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Shock Orbs">
+						<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+							<code profiles="">set GD_Ma_VoltronTrap.Projectiles.Proj_ShockBall:BehaviorProviderDefinition_0.Behavior_Explode_5 StatusEffectDamage.BaseValueScaleConstant 0.5</code>
+							<code profiles="">set GD_Ma_VoltronTrap.Projectiles.Proj_ShockBall:BehaviorProviderDefinition_0.Behavior_Explode_5 StatusEffectChance.BaseValueScaleConstant 1</code>
+						</hotfix>
+					</category>
+				</category>
+				<category name="Mega Badass Difficulty (this is a buff, not a nerf!)">
+					<category name="Health Multiplier">
+						<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+							<code profiles="">set GD_Ma_VoltronTrap.Character.CharClass_LoaderUltimateBadass AttributeStartingValues[0].BaseValue.BaseValueConstant 240</code>
+						</hotfix>
+					</category>
+					<category name="Shield Multiplier">
+						<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+							<code profiles="">set GD_Ma_VoltronTrap.Character.CharClass_LoaderUltimateBadass AttributeStartingValues[6].BaseValue.BaseValueConstant 200</code>
+						</hotfix>
+					</category>
+					<category name="\"Non-Weapon\" Damage Multiplier">
+						<comment># This ends up affecting most of ECLIPSE's attacks, such as arm lasers,</comment>
+						<comment># rocket attacks, and shock balls.  Could affect other damage output from</comment>
+						<comment># him as well.  The extra damage reduction done in the individual</comment>
+						<comment># categories below will be on top of this tweak.</comment>
+						<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+							<code profiles="">set GD_Ma_VoltronTrap.Character.CharClass_LoaderUltimateBadass AttributeStartingValues[1].BaseValue.BaseValueConstant 9</code>
+						</hotfix>
+					</category>
+					<category name="Arm Lasers">
+						<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+							<code profiles="">set GD_Ma_VoltronTrap.Anims.Anim_LoaderUltimateBadass_ArmGun_Loop:BehaviorProviderDefinition_32.Behavior_AIThrowProjectileAtTarget_7 ChildProjectileBaseValues[0].BaseValue.BaseValueScaleConstant 0.7</code>
+						</hotfix>
+					</category>
+					<category name="Rockets">
+						<category name="Rocket Speed">
+							<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+								<code profiles="">set GD_Ma_VoltronTrap.Projectiles.Proj_RocketLaunch SpeedFormula.BaseValueConstant 1900</code>
+							</hotfix>
+						</category>
+						<category name="Rocket Damage Scale">
+							<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+								<code profiles="">set GD_Ma_VoltronTrap.Anims.Anim_LoaderUltimateBadass_Missile_Loop:BehaviorProviderDefinition_32.Behavior_SpawnProjectile_50 ChildProjectileBaseValues[0].BaseValue.BaseValueScaleConstant 1.2</code>
+								<code profiles="">set GD_Ma_VoltronTrap.Anims.Anim_LoaderUltimateBadass_Missile_Loop:BehaviorProviderDefinition_32.Behavior_SpawnProjectile_51 ChildProjectileBaseValues[0].BaseValue.BaseValueScaleConstant 1.2</code>
+								<code profiles="">set GD_Ma_VoltronTrap.Anims.Anim_LoaderUltimateBadass_Missile_Loop:BehaviorProviderDefinition_32.Behavior_SpawnProjectile_52 ChildProjectileBaseValues[0].BaseValue.BaseValueScaleConstant 1.2</code>
+								<code profiles="">set GD_Ma_VoltronTrap.Anims.Anim_LoaderUltimateBadass_Missile_Loop:BehaviorProviderDefinition_32.Behavior_SpawnProjectile_53 ChildProjectileBaseValues[0].BaseValue.BaseValueScaleConstant 1.2</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Shock Orbs">
+						<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+							<code profiles="">set GD_Ma_VoltronTrap.Projectiles.Proj_ShockBall:BehaviorProviderDefinition_0.Behavior_Explode_5 StatusEffectDamage.BaseValueScaleConstant 1</code>
+							<code profiles="">set GD_Ma_VoltronTrap.Projectiles.Proj_ShockBall:BehaviorProviderDefinition_0.Behavior_Explode_5 StatusEffectChance.BaseValueScaleConstant 2</code>
+						</hotfix>
+					</category>
+				</category>
+			</category>
+			<category name="EOS" MUT="true">
+				<category name="Easier EOS">
+					<category name="Health and Shield Multiplier">
+						<comment># For some reason completely unbeknownst to me, some of our earlier statements</comment>
+						<comment># which modify ECLIPSE end up altering the EOS AIPawnBalanceDefinition;</comment>
+						<comment># specifically, they remove its PlayThroughs[0].AttributeStartingValues</comment>
+						<comment># array.  Damned if I know why.  It's the sets to the AttributeStartingValues</comment>
+						<comment># array in GD_Ma_VoltronTrap.Character.CharClass_LoaderUltimateBadass which</comment>
+						<comment># does it, which makes no bloody sense at all.  They're two totally different</comment>
+						<comment># objects.  And not even the same *kind* of object.  I don't know.  Weird.</comment>
+						<comment># Anyway, we have to recreate it entirely in here.  We *could* just use</comment>
+						<comment># the CharClass instead, and leave them blank here, of course, but it's a</comment>
+						<comment># point of pride to keep this in here, at this point.</comment>
+						<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+							<code profiles="default">set GD_Ma_Pop_BossFights.Balance.PawnBalance_Helios PlayThroughs[0].AttributeStartingValues ((Attribute = AttributeDefinition'GD_Balance_HealthAndDamage.AIParameters.Attribute_HealthMultiplier',BaseValue =(BaseValueConstant = 160,BaseValueAttribute = None,InitializationDefinition = None,BaseValueScaleConstant = 1.000000)),(Attribute = AttributeDefinition'GD_Balance_HealthAndDamage.AIParameters.Attribute_EnemyShieldMaxValueMultiplier',BaseValue =(BaseValueConstant = 85,BaseValueAttribute = None,InitializationDefinition = None,BaseValueScaleConstant = 1.000000)))</code>
+						</hotfix>
+					</category>
+					<category name="\"Non-Weapon\" Damage Multiplier">
+						<comment># This ends up affecting most of EOS's attacks</comment>
+						<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+							<code profiles="default">set GD_Ma_Helios.Character.CharClass_Ma_Helios AttributeStartingValues[1].BaseValue.BaseValueConstant 5.5</code>
+						</hotfix>
+					</category>
+					<category name="Turrets">
+						<category name="Regular Turrets">
+							<category name="Health">
+								<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+									<code profiles="default">set GD_Ma_HeliosTurret.Character.CharClass_Ma_HeliosTurret AttributeStartingValues[1].BaseValue.BaseValueConstant 20</code>
+								</hotfix>
+							</category>
+							<category name="Damage">
+								<comment># I'm actually not totally sure what buffs these up to begin with, but we can scale the final damage var pretty easily.</comment>
+								<comment># (I'm guessing it's the non-weapon multiplier, above, though I'm not sure how)</comment>
+								<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+									<code profiles="default">set GD_Ma_HeliosTurret.Weapons.Ma_HeliosTurret_WeaponType InstantHitDamage.BaseValueScaleConstant 0.8</code>
+								</hotfix>
+							</category>
+						</category>
+						<category name="Rocket Launchers">
+							<category name="Health">
+								<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+									<code profiles="default">set GD_Ma_EosRocketTurret.Character.CharClass_Ma_EosRocketTurret AttributeStartingValues[1].BaseValue.BaseValueConstant 20</code>
+								</hotfix>
+							</category>
+							<category name="Damage">
+								<comment># I'm actually not totally sure what buffs these up to begin with, but we can scale the final damage var pretty easily.</comment>
+								<comment># (I'm guessing it's the non-weapon multiplier, above, though I'm not sure how)</comment>
+								<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+									<code profiles="default">set GD_Ma_EosRocketTurret.Projectiles.Projectile_Rocket:BehaviorProviderDefinition_0.Behavior_Explode_351 DamageFormula.BaseValueScaleConstant 0.8</code>
+								</hotfix>
+							</category>
+						</category>
+					</category>
+					<category name="Sticky Grenades">
+						<comment># These are the yellow grenades that EOS throws out during the final phase, or</comment>
+						<comment># when all of his turrets have been destroyed</comment>
+						<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+							<code profiles="default">set GD_Ma_Helios.Projectiles.Proj_SpamGrenade:BehaviorProviderDefinition_1.Behavior_Explode_11 DamageFormula.BaseValueScaleConstant 0.8</code>
+						</hotfix>
+					</category>
+					<category name="Moonshot Attack">
+						<category name="Overall Damage">
+							<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+								<code profiles="default">set GD_Ma_Helios.Projectiles.Proj_MoonShotCannon:BehaviorProviderDefinition_0.Behavior_Explode_5 DamageFormula.BaseValueScaleConstant 10</code>
+								<code profiles="default">set GD_Ma_Helios.Projectiles.Proj_MoonShotCannon:BehaviorProviderDefinition_0.Behavior_Explode_6 DamageFormula.BaseValueScaleConstant 13</code>
+							</hotfix>
+						</category>
+						<category name="Spawned Reinforcements">
+							<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+								<code profiles="default">set GD_Ma_Helios.Projectiles.Proj_MoonShotCannon:BehaviorProviderDefinition_0.Behavior_SpawnFromPopulationSystem_1.PopulationFactoryBalancedAIPawn_0 PawnBalanceDefinition AIPawnBalanceDefinition'GD_Ma_Pop_Glitches.Balance.PawnBalance_BadassGlitch'</code>
+								<code profiles="default">set GD_Ma_Helios.Projectiles.Proj_MoonShotCannon:BehaviorProviderDefinition_0.Behavior_SpawnFromPopulationSystem_20.PopulationFactoryPopulationDefinition_0 PopulationDef WillowPopulationDefinition'GD_Ma_Pop_Glitches.Population.PopDef_Glitch'</code>
+								<code profiles="default">set GD_Ma_Helios.Projectiles.Proj_MoonShotCannon:BehaviorProviderDefinition_0.Behavior_SpawnFromPopulationSystem_21.PopulationFactoryPopulationDefinition_0 PopulationDef WillowPopulationDefinition'GD_Ma_Pop_ClaptrapForces.Population.Uniques.PopDef_ShadowClone_Eos'</code>
+								<code profiles="default">set GD_Ma_Helios.Projectiles.Proj_MoonShotCannon:BehaviorProviderDefinition_0.Behavior_SpawnFromPopulationSystem_22.PopulationFactoryPopulationDefinition_0 PopulationDef WillowPopulationDefinition'GD_Ma_Pop_Virus.Population.PopDef_VirusLauncher'</code>
+								<code profiles="default">set GD_Ma_Helios.Projectiles.Proj_MoonShotCannon:BehaviorProviderDefinition_0.Behavior_SpawnFromPopulationSystem_23.PopulationFactoryPopulationDefinition_0 PopulationDef WillowPopulationDefinition'GD_Ma_Pop_Virus.Population.PopDef_ParasiticVirus'</code>
+								<code profiles="default">set GD_Ma_Helios.Projectiles.Proj_MoonShotCannon:BehaviorProviderDefinition_0.Behavior_SpawnFromPopulationSystem_24.PopulationFactoryPopulationDefinition_0 PopulationDef WillowPopulationDefinition'GD_Ma_Pop_Virus.Population.PopDef_Virus'</code>
+							</hotfix>
+						</category>
+						<category name="Spawn Weights">
+							<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+								<code profiles="default">set GD_Ma_Helios.Projectiles.Proj_MoonShotCannon:BehaviorProviderDefinition_0 BehaviorSequences[2].BehaviorData2[3].LinkedVariables.ArrayIndexAndLength 0</code>
+								<code profiles="default">set GD_Ma_Helios.Projectiles.Proj_MoonShotCannon:BehaviorProviderDefinition_0 BehaviorSequences[2].BehaviorData2[16].LinkedVariables.ArrayIndexAndLength 0</code>
+								<code profiles="default">set GD_Ma_Helios.Projectiles.Proj_MoonShotCannon:BehaviorProviderDefinition_0.Behavior_RandomBranch_11 Conditions[0] 0.2</code>
+								<code profiles="default">set GD_Ma_Helios.Projectiles.Proj_MoonShotCannon:BehaviorProviderDefinition_0.Behavior_RandomBranch_11 Conditions[1] 1.0</code>
+								<code profiles="default">set GD_Ma_Helios.Projectiles.Proj_MoonShotCannon:BehaviorProviderDefinition_0.Behavior_RandomBranch_11 Conditions[2] 0.2</code>
+								<code profiles="default">set GD_Ma_Helios.Projectiles.Proj_MoonShotCannon:BehaviorProviderDefinition_0.Behavior_RandomBranch_11 Conditions[3] 1.0</code>
+								<code profiles="default">set GD_Ma_Helios.Projectiles.Proj_MoonShotCannon:BehaviorProviderDefinition_0.Behavior_RandomBranch_11 Conditions[4] 0.9</code>
+								<code profiles="default">set GD_Ma_Helios.Projectiles.Proj_MoonShotCannon:BehaviorProviderDefinition_0.Behavior_RandomBranch_12 Conditions[0] 0.25</code>
+								<code profiles="default">set GD_Ma_Helios.Projectiles.Proj_MoonShotCannon:BehaviorProviderDefinition_0.Behavior_RandomBranch_12 Conditions[1] 1.0</code>
+								<code profiles="default">set GD_Ma_Helios.Projectiles.Proj_MoonShotCannon:BehaviorProviderDefinition_0.Behavior_RandomBranch_12 Conditions[2] 0.5</code>
+								<code profiles="default">set GD_Ma_Helios.Projectiles.Proj_MoonShotCannon:BehaviorProviderDefinition_0.Behavior_RandomBranch_12 Conditions[3] 1.0</code>
+								<code profiles="default">set GD_Ma_Helios.Projectiles.Proj_MoonShotCannon:BehaviorProviderDefinition_0.Behavior_RandomBranch_12 Conditions[4] 1.0</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Eye of Helios">
+						<category name="Attack Delay">
+							<comment># Increasing the delay here will also have the effect of shortening the laser beam by that much.</comment>
+							<comment># I'd love to figure out how to inject this delay *before* the laser-charging animation comes</comment>
+							<comment># on, but the BPDs for EOS are just hideous, and I found this first, and it works, so I'm just</comment>
+							<comment># leaving it there.  :)  It's easy to extend the laser duration by adding a delay to COLD[205]</comment>
+							<comment># but the eye closes according to its original schedule, and I hadn't found where that timing was.</comment>
+							<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+								<code profiles="default">set GD_Ma_Helios.Character.AiDef_Ma_Helios:AIBehaviorProviderDefinition_0 BehaviorSequences[0].ConsolidatedOutputLinkData[203].ActivateDelay 0.5</code>
+							</hotfix>
+						</category>
+						<category name="Attack Damage + Radius">
+							<comment># I actually don't intend on nerfing this too much; it should remain a very deadly attack</comment>
+							<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+								<code profiles="default">set GD_Ma_ShadowTrapEye.Character.AIDef_EyeOfHelios:AIBehaviorProviderDefinition_0.Behavior_FireBeam_88 DamagePerSecondFormula.BaseValueScaleConstant 90</code>
+								<code profiles="default">set GD_Ma_ShadowTrapEye.Character.AIDef_EyeOfHelios:AIBehaviorProviderDefinition_0.Behavior_FireBeam_88 RadiusToDoDamageAroundImpact.BaseValueConstant 1300</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Between-Wave Enemy Spawns">
+						<category name="Regular Enemies">
+							<category name="Spawn Pool">
+								<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+									<code profiles="default">set Ma_FinalBoss_Game.TheWorld:PersistentLevel.PopulationOpportunityDen_4 PopulationDef WillowPopulationDefinition'GD_Ma_Pop_Glitches.Mixes.PopDef_Glitches_Mix_FinalBoss_Weak'</code>
+								</hotfix>
+							</category>
+							<category name="Max Active">
+								<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+									<code profiles="default">set Ma_FinalBoss_Game.TheWorld:PersistentLevel.PopulationOpportunityDen_4 MaxActiveActorsIsNormal 3</code>
+									<code profiles="default">set Ma_FinalBoss_Game.TheWorld:PersistentLevel.PopulationOpportunityDen_4 MaxActiveActorsThreatened 3</code>
+									<code profiles="default">set Ma_FinalBoss_Game.TheWorld:PersistentLevel.PopulationOpportunityDen_4 SpawnData.MaxActiveActors 3</code>
+								</hotfix>
+							</category>
+							<category name="Total Spawned">
+								<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+									<code profiles="default">set Ma_FinalBoss_Game.TheWorld:PersistentLevel.PopulationOpportunityDen_4 MaxTotalActors 10</code>
+									<code profiles="default">set Ma_FinalBoss_Game.TheWorld:PersistentLevel.PopulationOpportunityDen_4 MaxTotalActorsFormula.BaseValueConstant 10</code>
+								</hotfix>
+							</category>
+							<category name="Respawn Delay">
+								<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+									<code profiles="default">set Ma_FinalBoss_Game.TheWorld:PersistentLevel.PopulationOpportunityDen_4 RespawnDelay 1.5</code>
+								</hotfix>
+							</category>
+						</category>
+						<category name="Badass Enemies">
+							<category name="Spawn Pool">
+								<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+									<code profiles="default">set Ma_FinalBoss_Game.TheWorld:PersistentLevel.PopulationOpportunityDen_1 PopulationDef WillowPopulationDefinition'GD_Ma_Pop_Glitches.Population.PopDef_BadassGlitch'</code>
+								</hotfix>
+							</category>
+							<category name="Max Active">
+								<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+									<code profiles="default">set Ma_FinalBoss_Game.TheWorld:PersistentLevel.PopulationOpportunityDen_1 MaxActiveActorsIsNormal 1</code>
+									<code profiles="default">set Ma_FinalBoss_Game.TheWorld:PersistentLevel.PopulationOpportunityDen_1 MaxActiveActorsThreatened 1</code>
+									<code profiles="default">set Ma_FinalBoss_Game.TheWorld:PersistentLevel.PopulationOpportunityDen_1 SpawnData.MaxActiveActors 1</code>
+								</hotfix>
+							</category>
+							<category name="Total Spawned">
+								<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+									<code profiles="default">set Ma_FinalBoss_Game.TheWorld:PersistentLevel.PopulationOpportunityDen_1 MaxTotalActors 2</code>
+									<code profiles="default">set Ma_FinalBoss_Game.TheWorld:PersistentLevel.PopulationOpportunityDen_1 MaxTotalActorsFormula.BaseValueConstant 2</code>
+								</hotfix>
+							</category>
+							<category name="Respawn Delay">
+								<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+									<code profiles="default">set Ma_FinalBoss_Game.TheWorld:PersistentLevel.PopulationOpportunityDen_1 RespawnDelay 3</code>
+								</hotfix>
+							</category>
+						</category>
+					</category>
+				</category>
+				<category name="Even Easier EOS">
+					<category name="Health and Shield Multiplier">
+						<comment># For some reason completely unbeknownst to me, some of our earlier statements</comment>
+						<comment># which modify ECLIPSE end up altering the EOS AIPawnBalanceDefinition;</comment>
+						<comment># specifically, they remove its PlayThroughs[0].AttributeStartingValues</comment>
+						<comment># array.  Damned if I know why.  It's the sets to the AttributeStartingValues</comment>
+						<comment># array in GD_Ma_VoltronTrap.Character.CharClass_LoaderUltimateBadass which</comment>
+						<comment># does it, which makes no bloody sense at all.  They're two totally different</comment>
+						<comment># objects.  And not even the same *kind* of object.  I don't know.  Weird.</comment>
+						<comment># Anyway, we have to recreate it entirely in here.  We *could* just use</comment>
+						<comment># the CharClass instead, and leave them blank here, of course, but it's a</comment>
+						<comment># point of pride to keep this in here, at this point.</comment>
+						<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+							<code profiles="">set GD_Ma_Pop_BossFights.Balance.PawnBalance_Helios PlayThroughs[0].AttributeStartingValues ((Attribute = AttributeDefinition'GD_Balance_HealthAndDamage.AIParameters.Attribute_HealthMultiplier',BaseValue =(BaseValueConstant = 120,BaseValueAttribute = None,InitializationDefinition = None,BaseValueScaleConstant = 1.000000)),(Attribute = AttributeDefinition'GD_Balance_HealthAndDamage.AIParameters.Attribute_EnemyShieldMaxValueMultiplier',BaseValue =(BaseValueConstant = 60,BaseValueAttribute = None,InitializationDefinition = None,BaseValueScaleConstant = 1.000000)))</code>
+						</hotfix>
+					</category>
+					<category name="\"Non-Weapon\" Damage Multiplier">
+						<comment># This ends up affecting most of EOS's attacks</comment>
+						<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+							<code profiles="">set GD_Ma_Helios.Character.CharClass_Ma_Helios AttributeStartingValues[1].BaseValue.BaseValueConstant 4.5</code>
+						</hotfix>
+					</category>
+					<category name="Turrets">
+						<category name="Regular Turrets">
+							<category name="Health">
+								<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+									<code profiles="">set GD_Ma_HeliosTurret.Character.CharClass_Ma_HeliosTurret AttributeStartingValues[1].BaseValue.BaseValueConstant 15</code>
+								</hotfix>
+							</category>
+							<category name="Damage">
+								<comment># I'm actually not totally sure what buffs these up to begin with, but we can scale the final damage var pretty easily.</comment>
+								<comment># (I'm guessing it's the non-weapon multiplier, above, though I'm not sure how)</comment>
+								<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+									<code profiles="">set GD_Ma_HeliosTurret.Weapons.Ma_HeliosTurret_WeaponType InstantHitDamage.BaseValueScaleConstant 0.4</code>
+								</hotfix>
+							</category>
+						</category>
+						<category name="Rocket Launchers">
+							<category name="Health">
+								<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+									<code profiles="">set GD_Ma_EosRocketTurret.Character.CharClass_Ma_EosRocketTurret AttributeStartingValues[1].BaseValue.BaseValueConstant 15</code>
+								</hotfix>
+							</category>
+							<category name="Damage">
+								<comment># I'm actually not totally sure what buffs these up to begin with, but we can scale the final damage var pretty easily.</comment>
+								<comment># (I'm guessing it's the non-weapon multiplier, above, though I'm not sure how)</comment>
+								<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+									<code profiles="">set GD_Ma_EosRocketTurret.Projectiles.Projectile_Rocket:BehaviorProviderDefinition_0.Behavior_Explode_351 DamageFormula.BaseValueScaleConstant 0.7</code>
+								</hotfix>
+							</category>
+						</category>
+					</category>
+					<category name="Sticky Grenades">
+						<comment># These are the yellow grenades that EOS throws out during the final phase, or</comment>
+						<comment># when all of his turrets have been destroyed</comment>
+						<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+							<code profiles="">set GD_Ma_Helios.Projectiles.Proj_SpamGrenade:BehaviorProviderDefinition_1.Behavior_Explode_11 DamageFormula.BaseValueScaleConstant 0.5</code>
+						</hotfix>
+					</category>
+					<category name="Moonshot Attack">
+						<category name="Overall Damage">
+							<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+								<code profiles="">set GD_Ma_Helios.Projectiles.Proj_MoonShotCannon:BehaviorProviderDefinition_0.Behavior_Explode_5 DamageFormula.BaseValueScaleConstant 8</code>
+								<code profiles="">set GD_Ma_Helios.Projectiles.Proj_MoonShotCannon:BehaviorProviderDefinition_0.Behavior_Explode_6 DamageFormula.BaseValueScaleConstant 10</code>
+							</hotfix>
+						</category>
+						<category name="Spawned Reinforcements">
+							<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+								<code profiles="">set GD_Ma_Helios.Projectiles.Proj_MoonShotCannon:BehaviorProviderDefinition_0.Behavior_SpawnFromPopulationSystem_1.PopulationFactoryBalancedAIPawn_0 PawnBalanceDefinition AIPawnBalanceDefinition'GD_Ma_Pop_Virus.Balance.PawnBalance_VirusLauncher'</code>
+								<code profiles="">set GD_Ma_Helios.Projectiles.Proj_MoonShotCannon:BehaviorProviderDefinition_0.Behavior_SpawnFromPopulationSystem_20.PopulationFactoryPopulationDefinition_0 PopulationDef WillowPopulationDefinition'GD_Ma_Pop_Glitches.Population.PopDef_Glitch'</code>
+								<code profiles="">set GD_Ma_Helios.Projectiles.Proj_MoonShotCannon:BehaviorProviderDefinition_0.Behavior_SpawnFromPopulationSystem_21.PopulationFactoryPopulationDefinition_0 PopulationDef WillowPopulationDefinition'GD_Ma_Pop_ClaptrapForces.Population.Uniques.PopDef_ShadowClone_Eos'</code>
+								<code profiles="">set GD_Ma_Helios.Projectiles.Proj_MoonShotCannon:BehaviorProviderDefinition_0.Behavior_SpawnFromPopulationSystem_22.PopulationFactoryPopulationDefinition_0 PopulationDef WillowPopulationDefinition'GD_Ma_Pop_Glitches.Mixes.PopDef_Glitches_Mix_FinalBoss_Weak'</code>
+								<code profiles="">set GD_Ma_Helios.Projectiles.Proj_MoonShotCannon:BehaviorProviderDefinition_0.Behavior_SpawnFromPopulationSystem_23.PopulationFactoryPopulationDefinition_0 PopulationDef WillowPopulationDefinition'GD_Ma_Pop_Virus.Population.PopDef_ParasiticVirus'</code>
+								<code profiles="">set GD_Ma_Helios.Projectiles.Proj_MoonShotCannon:BehaviorProviderDefinition_0.Behavior_SpawnFromPopulationSystem_24.PopulationFactoryPopulationDefinition_0 PopulationDef WillowPopulationDefinition'GD_Ma_Pop_Virus.Population.PopDef_Virus'</code>
+							</hotfix>
+						</category>
+						<category name="Spawn Weights">
+							<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+								<code profiles="">set GD_Ma_Helios.Projectiles.Proj_MoonShotCannon:BehaviorProviderDefinition_0 BehaviorSequences[2].BehaviorData2[3].LinkedVariables.ArrayIndexAndLength 0</code>
+								<code profiles="">set GD_Ma_Helios.Projectiles.Proj_MoonShotCannon:BehaviorProviderDefinition_0 BehaviorSequences[2].BehaviorData2[16].LinkedVariables.ArrayIndexAndLength 0</code>
+								<code profiles="">set GD_Ma_Helios.Projectiles.Proj_MoonShotCannon:BehaviorProviderDefinition_0.Behavior_RandomBranch_11 Conditions[0] 0</code>
+								<code profiles="">set GD_Ma_Helios.Projectiles.Proj_MoonShotCannon:BehaviorProviderDefinition_0.Behavior_RandomBranch_11 Conditions[1] 1.0</code>
+								<code profiles="">set GD_Ma_Helios.Projectiles.Proj_MoonShotCannon:BehaviorProviderDefinition_0.Behavior_RandomBranch_11 Conditions[2] 1.0</code>
+								<code profiles="">set GD_Ma_Helios.Projectiles.Proj_MoonShotCannon:BehaviorProviderDefinition_0.Behavior_RandomBranch_11 Conditions[3] 1.0</code>
+								<code profiles="">set GD_Ma_Helios.Projectiles.Proj_MoonShotCannon:BehaviorProviderDefinition_0.Behavior_RandomBranch_11 Conditions[4] 0.4</code>
+								<code profiles="">set GD_Ma_Helios.Projectiles.Proj_MoonShotCannon:BehaviorProviderDefinition_0.Behavior_RandomBranch_12 Conditions[0] 0.25</code>
+								<code profiles="">set GD_Ma_Helios.Projectiles.Proj_MoonShotCannon:BehaviorProviderDefinition_0.Behavior_RandomBranch_12 Conditions[1] 1.0</code>
+								<code profiles="">set GD_Ma_Helios.Projectiles.Proj_MoonShotCannon:BehaviorProviderDefinition_0.Behavior_RandomBranch_12 Conditions[2] 1.0</code>
+								<code profiles="">set GD_Ma_Helios.Projectiles.Proj_MoonShotCannon:BehaviorProviderDefinition_0.Behavior_RandomBranch_12 Conditions[3] 1.0</code>
+								<code profiles="">set GD_Ma_Helios.Projectiles.Proj_MoonShotCannon:BehaviorProviderDefinition_0.Behavior_RandomBranch_12 Conditions[4] 0.8</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Eye of Helios">
+						<category name="Attack Delay">
+							<comment># Increasing the delay here will also have the effect of shortening the laser beam by that much.</comment>
+							<comment># I'd love to figure out how to inject this delay *before* the laser-charging animation comes</comment>
+							<comment># on, but the BPDs for EOS are just hideous, and I found this first, and it works, so I'm just</comment>
+							<comment># leaving it there.  :)  It's easy to extend the laser duration by adding a delay to COLD[205]</comment>
+							<comment># but the eye closes according to its original schedule, and I hadn't found where that timing was.</comment>
+							<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+								<code profiles="">set GD_Ma_Helios.Character.AiDef_Ma_Helios:AIBehaviorProviderDefinition_0 BehaviorSequences[0].ConsolidatedOutputLinkData[203].ActivateDelay 1</code>
+							</hotfix>
+						</category>
+						<category name="Attack Damage + Radius">
+							<comment># I actually don't intend on nerfing this too much; it should remain a very deadly attack</comment>
+							<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+								<code profiles="">set GD_Ma_ShadowTrapEye.Character.AIDef_EyeOfHelios:AIBehaviorProviderDefinition_0.Behavior_FireBeam_88 DamagePerSecondFormula.BaseValueScaleConstant 80</code>
+								<code profiles="">set GD_Ma_ShadowTrapEye.Character.AIDef_EyeOfHelios:AIBehaviorProviderDefinition_0.Behavior_FireBeam_88 RadiusToDoDamageAroundImpact.BaseValueConstant 1200</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Between-Wave Enemy Spawns">
+						<category name="Regular Enemies">
+							<category name="Spawn Pool">
+								<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+									<code profiles="">set Ma_FinalBoss_Game.TheWorld:PersistentLevel.PopulationOpportunityDen_4 PopulationDef WillowPopulationDefinition'GD_Ma_Pop_Glitches.Mixes.PopDef_Glitches_Mix_FinalBoss_Weak'</code>
+								</hotfix>
+							</category>
+							<category name="Max Active">
+								<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+									<code profiles="">set Ma_FinalBoss_Game.TheWorld:PersistentLevel.PopulationOpportunityDen_4 MaxActiveActorsIsNormal 2</code>
+									<code profiles="">set Ma_FinalBoss_Game.TheWorld:PersistentLevel.PopulationOpportunityDen_4 MaxActiveActorsThreatened 2</code>
+									<code profiles="">set Ma_FinalBoss_Game.TheWorld:PersistentLevel.PopulationOpportunityDen_4 SpawnData.MaxActiveActors 2</code>
+								</hotfix>
+							</category>
+							<category name="Total Spawned">
+								<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+									<code profiles="">set Ma_FinalBoss_Game.TheWorld:PersistentLevel.PopulationOpportunityDen_4 MaxTotalActors 6</code>
+									<code profiles="">set Ma_FinalBoss_Game.TheWorld:PersistentLevel.PopulationOpportunityDen_4 MaxTotalActorsFormula.BaseValueConstant 6</code>
+								</hotfix>
+							</category>
+							<category name="Respawn Delay">
+								<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+									<code profiles="">set Ma_FinalBoss_Game.TheWorld:PersistentLevel.PopulationOpportunityDen_4 RespawnDelay 3</code>
+								</hotfix>
+							</category>
+						</category>
+						<category name="Badass Enemies">
+							<category name="Spawn Pool">
+								<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+									<code profiles="">set Ma_FinalBoss_Game.TheWorld:PersistentLevel.PopulationOpportunityDen_1 PopulationDef WillowPopulationDefinition'GD_Ma_Pop_Glitches.Population.PopDef_BadassGlitch'</code>
+								</hotfix>
+							</category>
+							<category name="Max Active">
+								<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+									<code profiles="">set Ma_FinalBoss_Game.TheWorld:PersistentLevel.PopulationOpportunityDen_1 MaxActiveActorsIsNormal 1</code>
+									<code profiles="">set Ma_FinalBoss_Game.TheWorld:PersistentLevel.PopulationOpportunityDen_1 MaxActiveActorsThreatened 1</code>
+									<code profiles="">set Ma_FinalBoss_Game.TheWorld:PersistentLevel.PopulationOpportunityDen_1 SpawnData.MaxActiveActors 1</code>
+								</hotfix>
+							</category>
+							<category name="Total Spawned">
+								<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+									<code profiles="">set Ma_FinalBoss_Game.TheWorld:PersistentLevel.PopulationOpportunityDen_1 MaxTotalActors 1</code>
+									<code profiles="">set Ma_FinalBoss_Game.TheWorld:PersistentLevel.PopulationOpportunityDen_1 MaxTotalActorsFormula.BaseValueConstant 1</code>
+								</hotfix>
+							</category>
+							<category name="Respawn Delay">
+								<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+									<code profiles="">set Ma_FinalBoss_Game.TheWorld:PersistentLevel.PopulationOpportunityDen_1 RespawnDelay 6</code>
+								</hotfix>
+							</category>
+						</category>
+					</category>
+				</category>
+				<category name="Total Chump">
+					<category name="Health and Shield Multiplier">
+						<comment># For some reason completely unbeknownst to me, some of our earlier statements</comment>
+						<comment># which modify ECLIPSE end up altering the EOS AIPawnBalanceDefinition;</comment>
+						<comment># specifically, they remove its PlayThroughs[0].AttributeStartingValues</comment>
+						<comment># array.  Damned if I know why.  It's the sets to the AttributeStartingValues</comment>
+						<comment># array in GD_Ma_VoltronTrap.Character.CharClass_LoaderUltimateBadass which</comment>
+						<comment># does it, which makes no bloody sense at all.  They're two totally different</comment>
+						<comment># objects.  And not even the same *kind* of object.  I don't know.  Weird.</comment>
+						<comment># Anyway, we have to recreate it entirely in here.  We *could* just use</comment>
+						<comment># the CharClass instead, and leave them blank here, of course, but it's a</comment>
+						<comment># point of pride to keep this in here, at this point.</comment>
+						<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+							<code profiles="">set GD_Ma_Pop_BossFights.Balance.PawnBalance_Helios PlayThroughs[0].AttributeStartingValues ((Attribute = AttributeDefinition'GD_Balance_HealthAndDamage.AIParameters.Attribute_HealthMultiplier',BaseValue =(BaseValueConstant = 40,BaseValueAttribute = None,InitializationDefinition = None,BaseValueScaleConstant = 1.000000)),(Attribute = AttributeDefinition'GD_Balance_HealthAndDamage.AIParameters.Attribute_EnemyShieldMaxValueMultiplier',BaseValue =(BaseValueConstant = 10,BaseValueAttribute = None,InitializationDefinition = None,BaseValueScaleConstant = 1.000000)))</code>
+						</hotfix>
+					</category>
+					<category name="\"Non-Weapon\" Damage Multiplier">
+						<comment># This ends up affecting most of EOS's attacks</comment>
+						<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+							<code profiles="">set GD_Ma_Helios.Character.CharClass_Ma_Helios AttributeStartingValues[1].BaseValue.BaseValueConstant 2</code>
+						</hotfix>
+					</category>
+					<category name="Turrets">
+						<category name="Regular Turrets">
+							<category name="Health">
+								<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+									<code profiles="">set GD_Ma_HeliosTurret.Character.CharClass_Ma_HeliosTurret AttributeStartingValues[1].BaseValue.BaseValueConstant 5</code>
+								</hotfix>
+							</category>
+							<category name="Damage">
+								<comment># I'm actually not totally sure what buffs these up to begin with, but we can scale the final damage var pretty easily.</comment>
+								<comment># (I'm guessing it's the non-weapon multiplier, above, though I'm not sure how)</comment>
+								<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+									<code profiles="">set GD_Ma_HeliosTurret.Weapons.Ma_HeliosTurret_WeaponType InstantHitDamage.BaseValueScaleConstant 0.4</code>
+								</hotfix>
+							</category>
+						</category>
+						<category name="Rocket Launchers">
+							<category name="Health">
+								<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+									<code profiles="">set GD_Ma_EosRocketTurret.Character.CharClass_Ma_EosRocketTurret AttributeStartingValues[1].BaseValue.BaseValueConstant 5</code>
+								</hotfix>
+							</category>
+							<category name="Damage">
+								<comment># I'm actually not totally sure what buffs these up to begin with, but we can scale the final damage var pretty easily.</comment>
+								<comment># (I'm guessing it's the non-weapon multiplier, above, though I'm not sure how)</comment>
+								<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+									<code profiles="">set GD_Ma_EosRocketTurret.Projectiles.Projectile_Rocket:BehaviorProviderDefinition_0.Behavior_Explode_351 DamageFormula.BaseValueScaleConstant 0.4</code>
+								</hotfix>
+							</category>
+						</category>
+					</category>
+					<category name="Sticky Grenades">
+						<comment># These are the yellow grenades that EOS throws out during the final phase, or</comment>
+						<comment># when all of his turrets have been destroyed</comment>
+						<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+							<code profiles="">set GD_Ma_Helios.Projectiles.Proj_SpamGrenade:BehaviorProviderDefinition_1.Behavior_Explode_11 DamageFormula.BaseValueScaleConstant 0.3</code>
+						</hotfix>
+					</category>
+					<category name="Moonshot Attack">
+						<category name="Overall Damage">
+							<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+								<code profiles="">set GD_Ma_Helios.Projectiles.Proj_MoonShotCannon:BehaviorProviderDefinition_0.Behavior_Explode_5 DamageFormula.BaseValueScaleConstant 4</code>
+								<code profiles="">set GD_Ma_Helios.Projectiles.Proj_MoonShotCannon:BehaviorProviderDefinition_0.Behavior_Explode_6 DamageFormula.BaseValueScaleConstant 6</code>
+							</hotfix>
+						</category>
+						<category name="Spawned Reinforcements">
+							<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+								<code profiles="">set GD_Ma_Helios.Projectiles.Proj_MoonShotCannon:BehaviorProviderDefinition_0.Behavior_SpawnFromPopulationSystem_1.PopulationFactoryBalancedAIPawn_0 PawnBalanceDefinition AIPawnBalanceDefinition'GD_Ma_Pop_Virus.Balance.PawnBalance_ParasiticVirus'</code>
+								<code profiles="">set GD_Ma_Helios.Projectiles.Proj_MoonShotCannon:BehaviorProviderDefinition_0.Behavior_SpawnFromPopulationSystem_20.PopulationFactoryPopulationDefinition_0 PopulationDef WillowPopulationDefinition'GD_Ma_Pop_Glitches.Population.PopDef_Glitch'</code>
+								<code profiles="">set GD_Ma_Helios.Projectiles.Proj_MoonShotCannon:BehaviorProviderDefinition_0.Behavior_SpawnFromPopulationSystem_21.PopulationFactoryPopulationDefinition_0 PopulationDef WillowPopulationDefinition'GD_Ma_Pop_ClaptrapForces.Population.Uniques.PopDef_ShadowClone_Eos'</code>
+								<code profiles="">set GD_Ma_Helios.Projectiles.Proj_MoonShotCannon:BehaviorProviderDefinition_0.Behavior_SpawnFromPopulationSystem_22.PopulationFactoryPopulationDefinition_0 PopulationDef WillowPopulationDefinition'GD_Ma_Pop_Glitches.Mixes.PopDef_Glitches_Mix_FinalBoss_Weak'</code>
+								<code profiles="">set GD_Ma_Helios.Projectiles.Proj_MoonShotCannon:BehaviorProviderDefinition_0.Behavior_SpawnFromPopulationSystem_23.PopulationFactoryPopulationDefinition_0 PopulationDef WillowPopulationDefinition'GD_Ma_Pop_Glitches.Mixes.PopDef_Glitches_Mix_FinalBoss_Weak'</code>
+								<code profiles="">set GD_Ma_Helios.Projectiles.Proj_MoonShotCannon:BehaviorProviderDefinition_0.Behavior_SpawnFromPopulationSystem_24.PopulationFactoryPopulationDefinition_0 PopulationDef WillowPopulationDefinition'GD_Ma_Pop_Virus.Population.PopDef_Virus'</code>
+							</hotfix>
+						</category>
+						<category name="Spawn Weights">
+							<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+								<code profiles="">set GD_Ma_Helios.Projectiles.Proj_MoonShotCannon:BehaviorProviderDefinition_0 BehaviorSequences[2].BehaviorData2[3].LinkedVariables.ArrayIndexAndLength 0</code>
+								<code profiles="">set GD_Ma_Helios.Projectiles.Proj_MoonShotCannon:BehaviorProviderDefinition_0 BehaviorSequences[2].BehaviorData2[16].LinkedVariables.ArrayIndexAndLength 0</code>
+								<code profiles="">set GD_Ma_Helios.Projectiles.Proj_MoonShotCannon:BehaviorProviderDefinition_0.Behavior_RandomBranch_11 Conditions[0] 0</code>
+								<code profiles="">set GD_Ma_Helios.Projectiles.Proj_MoonShotCannon:BehaviorProviderDefinition_0.Behavior_RandomBranch_11 Conditions[1] 1.0</code>
+								<code profiles="">set GD_Ma_Helios.Projectiles.Proj_MoonShotCannon:BehaviorProviderDefinition_0.Behavior_RandomBranch_11 Conditions[2] 1.0</code>
+								<code profiles="">set GD_Ma_Helios.Projectiles.Proj_MoonShotCannon:BehaviorProviderDefinition_0.Behavior_RandomBranch_11 Conditions[3] 1.0</code>
+								<code profiles="">set GD_Ma_Helios.Projectiles.Proj_MoonShotCannon:BehaviorProviderDefinition_0.Behavior_RandomBranch_11 Conditions[4] 1.0</code>
+								<code profiles="">set GD_Ma_Helios.Projectiles.Proj_MoonShotCannon:BehaviorProviderDefinition_0.Behavior_RandomBranch_12 Conditions[0] 0</code>
+								<code profiles="">set GD_Ma_Helios.Projectiles.Proj_MoonShotCannon:BehaviorProviderDefinition_0.Behavior_RandomBranch_12 Conditions[1] 1.0</code>
+								<code profiles="">set GD_Ma_Helios.Projectiles.Proj_MoonShotCannon:BehaviorProviderDefinition_0.Behavior_RandomBranch_12 Conditions[2] 1.0</code>
+								<code profiles="">set GD_Ma_Helios.Projectiles.Proj_MoonShotCannon:BehaviorProviderDefinition_0.Behavior_RandomBranch_12 Conditions[3] 1.0</code>
+								<code profiles="">set GD_Ma_Helios.Projectiles.Proj_MoonShotCannon:BehaviorProviderDefinition_0.Behavior_RandomBranch_12 Conditions[4] 1.0</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Eye of Helios">
+						<category name="Attack Delay">
+							<comment># Increasing the delay here will also have the effect of shortening the laser beam by that much.</comment>
+							<comment># I'd love to figure out how to inject this delay *before* the laser-charging animation comes</comment>
+							<comment># on, but the BPDs for EOS are just hideous, and I found this first, and it works, so I'm just</comment>
+							<comment># leaving it there.  :)  It's easy to extend the laser duration by adding a delay to COLD[205]</comment>
+							<comment># but the eye closes according to its original schedule, and I hadn't found where that timing was.</comment>
+							<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+								<code profiles="">set GD_Ma_Helios.Character.AiDef_Ma_Helios:AIBehaviorProviderDefinition_0 BehaviorSequences[0].ConsolidatedOutputLinkData[203].ActivateDelay 2</code>
+							</hotfix>
+						</category>
+						<category name="Attack Damage + Radius">
+							<comment># I actually don't intend on nerfing this too much; it should remain a very deadly attack</comment>
+							<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+								<code profiles="">set GD_Ma_ShadowTrapEye.Character.AIDef_EyeOfHelios:AIBehaviorProviderDefinition_0.Behavior_FireBeam_88 DamagePerSecondFormula.BaseValueScaleConstant 70</code>
+								<code profiles="">set GD_Ma_ShadowTrapEye.Character.AIDef_EyeOfHelios:AIBehaviorProviderDefinition_0.Behavior_FireBeam_88 RadiusToDoDamageAroundImpact.BaseValueConstant 1000</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Between-Wave Enemy Spawns">
+						<category name="Regular Enemies">
+							<category name="Spawn Pool">
+								<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+									<code profiles="">set Ma_FinalBoss_Game.TheWorld:PersistentLevel.PopulationOpportunityDen_4 PopulationDef WillowPopulationDefinition'GD_Ma_Pop_Glitches.Mixes.PopDef_Glitches_Mix_FinalBoss_Weak'</code>
+								</hotfix>
+							</category>
+							<category name="Max Active">
+								<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+									<code profiles="">set Ma_FinalBoss_Game.TheWorld:PersistentLevel.PopulationOpportunityDen_4 MaxActiveActorsIsNormal 2</code>
+									<code profiles="">set Ma_FinalBoss_Game.TheWorld:PersistentLevel.PopulationOpportunityDen_4 MaxActiveActorsThreatened 2</code>
+									<code profiles="">set Ma_FinalBoss_Game.TheWorld:PersistentLevel.PopulationOpportunityDen_4 SpawnData.MaxActiveActors 2</code>
+								</hotfix>
+							</category>
+							<category name="Total Spawned">
+								<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+									<code profiles="">set Ma_FinalBoss_Game.TheWorld:PersistentLevel.PopulationOpportunityDen_4 MaxTotalActors 4</code>
+									<code profiles="">set Ma_FinalBoss_Game.TheWorld:PersistentLevel.PopulationOpportunityDen_4 MaxTotalActorsFormula.BaseValueConstant 4</code>
+								</hotfix>
+							</category>
+							<category name="Respawn Delay">
+								<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+									<code profiles="">set Ma_FinalBoss_Game.TheWorld:PersistentLevel.PopulationOpportunityDen_4 RespawnDelay 5</code>
+								</hotfix>
+							</category>
+						</category>
+						<category name="Badass Enemies">
+							<category name="Spawn Pool">
+								<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+									<code profiles="">set Ma_FinalBoss_Game.TheWorld:PersistentLevel.PopulationOpportunityDen_1 PopulationDef WillowPopulationDefinition'GD_Ma_Pop_Glitches.Mixes.PopDef_Glitches_Mix_FinalBoss_Weak'</code>
+								</hotfix>
+							</category>
+							<category name="Max Active">
+								<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+									<code profiles="">set Ma_FinalBoss_Game.TheWorld:PersistentLevel.PopulationOpportunityDen_1 MaxActiveActorsIsNormal 0</code>
+									<code profiles="">set Ma_FinalBoss_Game.TheWorld:PersistentLevel.PopulationOpportunityDen_1 MaxActiveActorsThreatened 0</code>
+									<code profiles="">set Ma_FinalBoss_Game.TheWorld:PersistentLevel.PopulationOpportunityDen_1 SpawnData.MaxActiveActors 0</code>
+								</hotfix>
+							</category>
+							<category name="Total Spawned">
+								<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+									<code profiles="">set Ma_FinalBoss_Game.TheWorld:PersistentLevel.PopulationOpportunityDen_1 MaxTotalActors 0</code>
+									<code profiles="">set Ma_FinalBoss_Game.TheWorld:PersistentLevel.PopulationOpportunityDen_1 MaxTotalActorsFormula.BaseValueConstant 0</code>
+								</hotfix>
+							</category>
+							<category name="Respawn Delay">
+								<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+									<code profiles="">set Ma_FinalBoss_Game.TheWorld:PersistentLevel.PopulationOpportunityDen_1 RespawnDelay 20</code>
+								</hotfix>
+							</category>
+						</category>
+					</category>
+				</category>
+				<category name="Stock Difficulty">
+					<category name="Health and Shield Multiplier">
+						<comment># For some reason completely unbeknownst to me, some of our earlier statements</comment>
+						<comment># which modify ECLIPSE end up altering the EOS AIPawnBalanceDefinition;</comment>
+						<comment># specifically, they remove its PlayThroughs[0].AttributeStartingValues</comment>
+						<comment># array.  Damned if I know why.  It's the sets to the AttributeStartingValues</comment>
+						<comment># array in GD_Ma_VoltronTrap.Character.CharClass_LoaderUltimateBadass which</comment>
+						<comment># does it, which makes no bloody sense at all.  They're two totally different</comment>
+						<comment># objects.  And not even the same *kind* of object.  I don't know.  Weird.</comment>
+						<comment># Anyway, we have to recreate it entirely in here.  We *could* just use</comment>
+						<comment># the CharClass instead, and leave them blank here, of course, but it's a</comment>
+						<comment># point of pride to keep this in here, at this point.</comment>
+						<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+							<code profiles="">set GD_Ma_Pop_BossFights.Balance.PawnBalance_Helios PlayThroughs[0].AttributeStartingValues ((Attribute = AttributeDefinition'GD_Balance_HealthAndDamage.AIParameters.Attribute_HealthMultiplier',BaseValue =(BaseValueConstant = 220,BaseValueAttribute = None,InitializationDefinition = None,BaseValueScaleConstant = 1.000000)),(Attribute = AttributeDefinition'GD_Balance_HealthAndDamage.AIParameters.Attribute_EnemyShieldMaxValueMultiplier',BaseValue =(BaseValueConstant = 130,BaseValueAttribute = None,InitializationDefinition = None,BaseValueScaleConstant = 1.000000)))</code>
+						</hotfix>
+					</category>
+					<category name="\"Non-Weapon\" Damage Multiplier">
+						<comment># This ends up affecting most of EOS's attacks</comment>
+						<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+							<code profiles="">set GD_Ma_Helios.Character.CharClass_Ma_Helios AttributeStartingValues[1].BaseValue.BaseValueConstant 8</code>
+						</hotfix>
+					</category>
+					<category name="Turrets">
+						<category name="Regular Turrets">
+							<category name="Health">
+								<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+									<code profiles="">set GD_Ma_HeliosTurret.Character.CharClass_Ma_HeliosTurret AttributeStartingValues[1].BaseValue.BaseValueConstant 35</code>
+								</hotfix>
+							</category>
+							<category name="Damage">
+								<comment># I'm actually not totally sure what buffs these up to begin with, but we can scale the final damage var pretty easily.</comment>
+								<comment># (I'm guessing it's the non-weapon multiplier, above, though I'm not sure how)</comment>
+								<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+									<code profiles="">set GD_Ma_HeliosTurret.Weapons.Ma_HeliosTurret_WeaponType InstantHitDamage.BaseValueScaleConstant 1</code>
+								</hotfix>
+							</category>
+						</category>
+						<category name="Rocket Launchers">
+							<category name="Health">
+								<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+									<code profiles="">set GD_Ma_EosRocketTurret.Character.CharClass_Ma_EosRocketTurret AttributeStartingValues[1].BaseValue.BaseValueConstant 25</code>
+								</hotfix>
+							</category>
+							<category name="Damage">
+								<comment># I'm actually not totally sure what buffs these up to begin with, but we can scale the final damage var pretty easily.</comment>
+								<comment># (I'm guessing it's the non-weapon multiplier, above, though I'm not sure how)</comment>
+								<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+									<code profiles="">set GD_Ma_EosRocketTurret.Projectiles.Projectile_Rocket:BehaviorProviderDefinition_0.Behavior_Explode_351 DamageFormula.BaseValueScaleConstant 1</code>
+								</hotfix>
+							</category>
+						</category>
+					</category>
+					<category name="Sticky Grenades">
+						<comment># These are the yellow grenades that EOS throws out during the final phase, or</comment>
+						<comment># when all of his turrets have been destroyed</comment>
+						<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+							<code profiles="">set GD_Ma_Helios.Projectiles.Proj_SpamGrenade:BehaviorProviderDefinition_1.Behavior_Explode_11 DamageFormula.BaseValueScaleConstant 1</code>
+						</hotfix>
+					</category>
+					<category name="Moonshot Attack">
+						<category name="Overall Damage">
+							<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+								<code profiles="">set GD_Ma_Helios.Projectiles.Proj_MoonShotCannon:BehaviorProviderDefinition_0.Behavior_Explode_5 DamageFormula.BaseValueScaleConstant 12</code>
+								<code profiles="">set GD_Ma_Helios.Projectiles.Proj_MoonShotCannon:BehaviorProviderDefinition_0.Behavior_Explode_6 DamageFormula.BaseValueScaleConstant 15</code>
+							</hotfix>
+						</category>
+						<category name="Spawned Reinforcements">
+							<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+								<code profiles="">set GD_Ma_Helios.Projectiles.Proj_MoonShotCannon:BehaviorProviderDefinition_0.Behavior_SpawnFromPopulationSystem_1.PopulationFactoryBalancedAIPawn_0 PawnBalanceDefinition AIPawnBalanceDefinition'GD_Ma_Pop_Glitches.Balance.PawnBalance_BadassGlitch'</code>
+								<code profiles="">set GD_Ma_Helios.Projectiles.Proj_MoonShotCannon:BehaviorProviderDefinition_0.Behavior_SpawnFromPopulationSystem_20.PopulationFactoryPopulationDefinition_0 PopulationDef WillowPopulationDefinition'GD_Ma_Pop_Glitches.Population.PopDef_Glitch'</code>
+								<code profiles="">set GD_Ma_Helios.Projectiles.Proj_MoonShotCannon:BehaviorProviderDefinition_0.Behavior_SpawnFromPopulationSystem_21.PopulationFactoryPopulationDefinition_0 PopulationDef WillowPopulationDefinition'GD_Ma_Pop_ClaptrapForces.Population.Uniques.PopDef_ShadowClone_Eos'</code>
+								<code profiles="">set GD_Ma_Helios.Projectiles.Proj_MoonShotCannon:BehaviorProviderDefinition_0.Behavior_SpawnFromPopulationSystem_22.PopulationFactoryPopulationDefinition_0 PopulationDef WillowPopulationDefinition'GD_Ma_Pop_Virus.Population.PopDef_VirusLauncher'</code>
+								<code profiles="">set GD_Ma_Helios.Projectiles.Proj_MoonShotCannon:BehaviorProviderDefinition_0.Behavior_SpawnFromPopulationSystem_23.PopulationFactoryPopulationDefinition_0 PopulationDef WillowPopulationDefinition'GD_Ma_Pop_Virus.Population.PopDef_ParasiticVirus'</code>
+								<code profiles="">set GD_Ma_Helios.Projectiles.Proj_MoonShotCannon:BehaviorProviderDefinition_0.Behavior_SpawnFromPopulationSystem_24.PopulationFactoryPopulationDefinition_0 PopulationDef WillowPopulationDefinition'GD_Ma_Pop_Virus.Population.PopDef_Virus'</code>
+							</hotfix>
+						</category>
+						<category name="Spawn Weights">
+							<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+								<code profiles="">set GD_Ma_Helios.Projectiles.Proj_MoonShotCannon:BehaviorProviderDefinition_0 BehaviorSequences[2].BehaviorData2[3].LinkedVariables.ArrayIndexAndLength 0</code>
+								<code profiles="">set GD_Ma_Helios.Projectiles.Proj_MoonShotCannon:BehaviorProviderDefinition_0 BehaviorSequences[2].BehaviorData2[16].LinkedVariables.ArrayIndexAndLength 0</code>
+								<code profiles="">set GD_Ma_Helios.Projectiles.Proj_MoonShotCannon:BehaviorProviderDefinition_0.Behavior_RandomBranch_11 Conditions[0] 0.4</code>
+								<code profiles="">set GD_Ma_Helios.Projectiles.Proj_MoonShotCannon:BehaviorProviderDefinition_0.Behavior_RandomBranch_11 Conditions[1] 1.0</code>
+								<code profiles="">set GD_Ma_Helios.Projectiles.Proj_MoonShotCannon:BehaviorProviderDefinition_0.Behavior_RandomBranch_11 Conditions[2] 0.25</code>
+								<code profiles="">set GD_Ma_Helios.Projectiles.Proj_MoonShotCannon:BehaviorProviderDefinition_0.Behavior_RandomBranch_11 Conditions[3] 1.0</code>
+								<code profiles="">set GD_Ma_Helios.Projectiles.Proj_MoonShotCannon:BehaviorProviderDefinition_0.Behavior_RandomBranch_11 Conditions[4] 1.0</code>
+								<code profiles="">set GD_Ma_Helios.Projectiles.Proj_MoonShotCannon:BehaviorProviderDefinition_0.Behavior_RandomBranch_12 Conditions[0] 0.25</code>
+								<code profiles="">set GD_Ma_Helios.Projectiles.Proj_MoonShotCannon:BehaviorProviderDefinition_0.Behavior_RandomBranch_12 Conditions[1] 1.0</code>
+								<code profiles="">set GD_Ma_Helios.Projectiles.Proj_MoonShotCannon:BehaviorProviderDefinition_0.Behavior_RandomBranch_12 Conditions[2] 1.0</code>
+								<code profiles="">set GD_Ma_Helios.Projectiles.Proj_MoonShotCannon:BehaviorProviderDefinition_0.Behavior_RandomBranch_12 Conditions[3] 1.0</code>
+								<code profiles="">set GD_Ma_Helios.Projectiles.Proj_MoonShotCannon:BehaviorProviderDefinition_0.Behavior_RandomBranch_12 Conditions[4] 1.0</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Eye of Helios">
+						<category name="Attack Delay">
+							<comment># Increasing the delay here will also have the effect of shortening the laser beam by that much.</comment>
+							<comment># I'd love to figure out how to inject this delay *before* the laser-charging animation comes</comment>
+							<comment># on, but the BPDs for EOS are just hideous, and I found this first, and it works, so I'm just</comment>
+							<comment># leaving it there.  :)  It's easy to extend the laser duration by adding a delay to COLD[205]</comment>
+							<comment># but the eye closes according to its original schedule, and I hadn't found where that timing was.</comment>
+							<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+								<code profiles="">set GD_Ma_Helios.Character.AiDef_Ma_Helios:AIBehaviorProviderDefinition_0 BehaviorSequences[0].ConsolidatedOutputLinkData[203].ActivateDelay 0</code>
+							</hotfix>
+						</category>
+						<category name="Attack Damage + Radius">
+							<comment># I actually don't intend on nerfing this too much; it should remain a very deadly attack</comment>
+							<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+								<code profiles="">set GD_Ma_ShadowTrapEye.Character.AIDef_EyeOfHelios:AIBehaviorProviderDefinition_0.Behavior_FireBeam_88 DamagePerSecondFormula.BaseValueScaleConstant 99</code>
+								<code profiles="">set GD_Ma_ShadowTrapEye.Character.AIDef_EyeOfHelios:AIBehaviorProviderDefinition_0.Behavior_FireBeam_88 RadiusToDoDamageAroundImpact.BaseValueConstant 1500</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Between-Wave Enemy Spawns">
+						<category name="Regular Enemies">
+							<category name="Spawn Pool">
+								<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+									<code profiles="">set Ma_FinalBoss_Game.TheWorld:PersistentLevel.PopulationOpportunityDen_4 PopulationDef WillowPopulationDefinition'GD_Ma_Pop_Glitches.Mixes.PopDef_Glitches_Mix_FinalBoss_Weak'</code>
+								</hotfix>
+							</category>
+							<category name="Max Active">
+								<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+									<code profiles="">set Ma_FinalBoss_Game.TheWorld:PersistentLevel.PopulationOpportunityDen_4 MaxActiveActorsIsNormal 3</code>
+									<code profiles="">set Ma_FinalBoss_Game.TheWorld:PersistentLevel.PopulationOpportunityDen_4 MaxActiveActorsThreatened 3</code>
+									<code profiles="">set Ma_FinalBoss_Game.TheWorld:PersistentLevel.PopulationOpportunityDen_4 SpawnData.MaxActiveActors 3</code>
+								</hotfix>
+							</category>
+							<category name="Total Spawned">
+								<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+									<code profiles="">set Ma_FinalBoss_Game.TheWorld:PersistentLevel.PopulationOpportunityDen_4 MaxTotalActors 10</code>
+									<code profiles="">set Ma_FinalBoss_Game.TheWorld:PersistentLevel.PopulationOpportunityDen_4 MaxTotalActorsFormula.BaseValueConstant 10</code>
+								</hotfix>
+							</category>
+							<category name="Respawn Delay">
+								<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+									<code profiles="">set Ma_FinalBoss_Game.TheWorld:PersistentLevel.PopulationOpportunityDen_4 RespawnDelay 0.5</code>
+								</hotfix>
+							</category>
+						</category>
+						<category name="Badass Enemies">
+							<category name="Spawn Pool">
+								<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+									<code profiles="">set Ma_FinalBoss_Game.TheWorld:PersistentLevel.PopulationOpportunityDen_1 PopulationDef WillowPopulationDefinition'GD_Ma_Pop_Glitches.Population.PopDef_BadassGlitch'</code>
+								</hotfix>
+							</category>
+							<category name="Max Active">
+								<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+									<code profiles="">set Ma_FinalBoss_Game.TheWorld:PersistentLevel.PopulationOpportunityDen_1 MaxActiveActorsIsNormal 1</code>
+									<code profiles="">set Ma_FinalBoss_Game.TheWorld:PersistentLevel.PopulationOpportunityDen_1 MaxActiveActorsThreatened 1</code>
+									<code profiles="">set Ma_FinalBoss_Game.TheWorld:PersistentLevel.PopulationOpportunityDen_1 SpawnData.MaxActiveActors 1</code>
+								</hotfix>
+							</category>
+							<category name="Total Spawned">
+								<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+									<code profiles="">set Ma_FinalBoss_Game.TheWorld:PersistentLevel.PopulationOpportunityDen_1 MaxTotalActors 4</code>
+									<code profiles="">set Ma_FinalBoss_Game.TheWorld:PersistentLevel.PopulationOpportunityDen_1 MaxTotalActorsFormula.BaseValueConstant 4</code>
+								</hotfix>
+							</category>
+							<category name="Respawn Delay">
+								<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+									<code profiles="">set Ma_FinalBoss_Game.TheWorld:PersistentLevel.PopulationOpportunityDen_1 RespawnDelay 0.5</code>
+								</hotfix>
+							</category>
+						</category>
+					</category>
+				</category>
+				<category name="Mega Badass Difficulty (this is a buff, not a nerf!)">
+					<category name="Health and Shield Multiplier">
+						<comment># For some reason completely unbeknownst to me, some of our earlier statements</comment>
+						<comment># which modify ECLIPSE end up altering the EOS AIPawnBalanceDefinition;</comment>
+						<comment># specifically, they remove its PlayThroughs[0].AttributeStartingValues</comment>
+						<comment># array.  Damned if I know why.  It's the sets to the AttributeStartingValues</comment>
+						<comment># array in GD_Ma_VoltronTrap.Character.CharClass_LoaderUltimateBadass which</comment>
+						<comment># does it, which makes no bloody sense at all.  They're two totally different</comment>
+						<comment># objects.  And not even the same *kind* of object.  I don't know.  Weird.</comment>
+						<comment># Anyway, we have to recreate it entirely in here.  We *could* just use</comment>
+						<comment># the CharClass instead, and leave them blank here, of course, but it's a</comment>
+						<comment># point of pride to keep this in here, at this point.</comment>
+						<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+							<code profiles="">set GD_Ma_Pop_BossFights.Balance.PawnBalance_Helios PlayThroughs[0].AttributeStartingValues ((Attribute = AttributeDefinition'GD_Balance_HealthAndDamage.AIParameters.Attribute_HealthMultiplier',BaseValue =(BaseValueConstant = 290,BaseValueAttribute = None,InitializationDefinition = None,BaseValueScaleConstant = 1.000000)),(Attribute = AttributeDefinition'GD_Balance_HealthAndDamage.AIParameters.Attribute_EnemyShieldMaxValueMultiplier',BaseValue =(BaseValueConstant = 170,BaseValueAttribute = None,InitializationDefinition = None,BaseValueScaleConstant = 1.000000)))</code>
+						</hotfix>
+					</category>
+					<category name="\"Non-Weapon\" Damage Multiplier">
+						<comment># This ends up affecting most of EOS's attacks</comment>
+						<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+							<code profiles="">set GD_Ma_Helios.Character.CharClass_Ma_Helios AttributeStartingValues[1].BaseValue.BaseValueConstant 11</code>
+						</hotfix>
+					</category>
+					<category name="Turrets">
+						<category name="Regular Turrets">
+							<category name="Health">
+								<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+									<code profiles="">set GD_Ma_HeliosTurret.Character.CharClass_Ma_HeliosTurret AttributeStartingValues[1].BaseValue.BaseValueConstant 45</code>
+								</hotfix>
+							</category>
+							<category name="Damage">
+								<comment># I'm actually not totally sure what buffs these up to begin with, but we can scale the final damage var pretty easily.</comment>
+								<comment># (I'm guessing it's the non-weapon multiplier, above, though I'm not sure how)</comment>
+								<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+									<code profiles="">set GD_Ma_HeliosTurret.Weapons.Ma_HeliosTurret_WeaponType InstantHitDamage.BaseValueScaleConstant 2</code>
+								</hotfix>
+							</category>
+						</category>
+						<category name="Rocket Launchers">
+							<category name="Health">
+								<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+									<code profiles="">set GD_Ma_EosRocketTurret.Character.CharClass_Ma_EosRocketTurret AttributeStartingValues[1].BaseValue.BaseValueConstant 40</code>
+								</hotfix>
+							</category>
+							<category name="Damage">
+								<comment># I'm actually not totally sure what buffs these up to begin with, but we can scale the final damage var pretty easily.</comment>
+								<comment># (I'm guessing it's the non-weapon multiplier, above, though I'm not sure how)</comment>
+								<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+									<code profiles="">set GD_Ma_EosRocketTurret.Projectiles.Projectile_Rocket:BehaviorProviderDefinition_0.Behavior_Explode_351 DamageFormula.BaseValueScaleConstant 2</code>
+								</hotfix>
+							</category>
+						</category>
+					</category>
+					<category name="Sticky Grenades">
+						<comment># These are the yellow grenades that EOS throws out during the final phase, or</comment>
+						<comment># when all of his turrets have been destroyed</comment>
+						<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+							<code profiles="">set GD_Ma_Helios.Projectiles.Proj_SpamGrenade:BehaviorProviderDefinition_1.Behavior_Explode_11 DamageFormula.BaseValueScaleConstant 1.3</code>
+						</hotfix>
+					</category>
+					<category name="Moonshot Attack">
+						<category name="Overall Damage">
+							<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+								<code profiles="">set GD_Ma_Helios.Projectiles.Proj_MoonShotCannon:BehaviorProviderDefinition_0.Behavior_Explode_5 DamageFormula.BaseValueScaleConstant 15</code>
+								<code profiles="">set GD_Ma_Helios.Projectiles.Proj_MoonShotCannon:BehaviorProviderDefinition_0.Behavior_Explode_6 DamageFormula.BaseValueScaleConstant 20</code>
+							</hotfix>
+						</category>
+						<category name="Spawned Reinforcements">
+							<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+								<code profiles="">set GD_Ma_Helios.Projectiles.Proj_MoonShotCannon:BehaviorProviderDefinition_0.Behavior_SpawnFromPopulationSystem_1.PopulationFactoryBalancedAIPawn_0 PawnBalanceDefinition AIPawnBalanceDefinition'GD_Ma_Pop_Glitches.Balance.PawnBalance_BadassGlitch'</code>
+								<code profiles="">set GD_Ma_Helios.Projectiles.Proj_MoonShotCannon:BehaviorProviderDefinition_0.Behavior_SpawnFromPopulationSystem_20.PopulationFactoryPopulationDefinition_0 PopulationDef WillowPopulationDefinition'GD_Ma_Pop_Glitches.Population.PopDef_Glitch'</code>
+								<code profiles="">set GD_Ma_Helios.Projectiles.Proj_MoonShotCannon:BehaviorProviderDefinition_0.Behavior_SpawnFromPopulationSystem_21.PopulationFactoryPopulationDefinition_0 PopulationDef WillowPopulationDefinition'GD_Ma_Pop_ClaptrapForces.Population.Uniques.PopDef_ShadowClone_Eos'</code>
+								<code profiles="">set GD_Ma_Helios.Projectiles.Proj_MoonShotCannon:BehaviorProviderDefinition_0.Behavior_SpawnFromPopulationSystem_22.PopulationFactoryPopulationDefinition_0 PopulationDef WillowPopulationDefinition'GD_Ma_Pop_Virus.Population.PopDef_VirusLauncher'</code>
+								<code profiles="">set GD_Ma_Helios.Projectiles.Proj_MoonShotCannon:BehaviorProviderDefinition_0.Behavior_SpawnFromPopulationSystem_23.PopulationFactoryPopulationDefinition_0 PopulationDef WillowPopulationDefinition'GD_Ma_Pop_Virus.Population.PopDef_ParasiticVirus'</code>
+								<code profiles="">set GD_Ma_Helios.Projectiles.Proj_MoonShotCannon:BehaviorProviderDefinition_0.Behavior_SpawnFromPopulationSystem_24.PopulationFactoryPopulationDefinition_0 PopulationDef WillowPopulationDefinition'GD_Ma_Pop_Virus.Population.PopDef_Virus'</code>
+							</hotfix>
+						</category>
+						<category name="Spawn Weights">
+							<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+								<code profiles="">set GD_Ma_Helios.Projectiles.Proj_MoonShotCannon:BehaviorProviderDefinition_0 BehaviorSequences[2].BehaviorData2[3].LinkedVariables.ArrayIndexAndLength 0</code>
+								<code profiles="">set GD_Ma_Helios.Projectiles.Proj_MoonShotCannon:BehaviorProviderDefinition_0 BehaviorSequences[2].BehaviorData2[16].LinkedVariables.ArrayIndexAndLength 0</code>
+								<code profiles="">set GD_Ma_Helios.Projectiles.Proj_MoonShotCannon:BehaviorProviderDefinition_0.Behavior_RandomBranch_11 Conditions[0] 1.0</code>
+								<code profiles="">set GD_Ma_Helios.Projectiles.Proj_MoonShotCannon:BehaviorProviderDefinition_0.Behavior_RandomBranch_11 Conditions[1] 0.6</code>
+								<code profiles="">set GD_Ma_Helios.Projectiles.Proj_MoonShotCannon:BehaviorProviderDefinition_0.Behavior_RandomBranch_11 Conditions[2] 1.0</code>
+								<code profiles="">set GD_Ma_Helios.Projectiles.Proj_MoonShotCannon:BehaviorProviderDefinition_0.Behavior_RandomBranch_11 Conditions[3] 0.6</code>
+								<code profiles="">set GD_Ma_Helios.Projectiles.Proj_MoonShotCannon:BehaviorProviderDefinition_0.Behavior_RandomBranch_11 Conditions[4] 1.0</code>
+								<code profiles="">set GD_Ma_Helios.Projectiles.Proj_MoonShotCannon:BehaviorProviderDefinition_0.Behavior_RandomBranch_12 Conditions[0] 1.0</code>
+								<code profiles="">set GD_Ma_Helios.Projectiles.Proj_MoonShotCannon:BehaviorProviderDefinition_0.Behavior_RandomBranch_12 Conditions[1] 0.3</code>
+								<code profiles="">set GD_Ma_Helios.Projectiles.Proj_MoonShotCannon:BehaviorProviderDefinition_0.Behavior_RandomBranch_12 Conditions[2] 2.0</code>
+								<code profiles="">set GD_Ma_Helios.Projectiles.Proj_MoonShotCannon:BehaviorProviderDefinition_0.Behavior_RandomBranch_12 Conditions[3] 0.5</code>
+								<code profiles="">set GD_Ma_Helios.Projectiles.Proj_MoonShotCannon:BehaviorProviderDefinition_0.Behavior_RandomBranch_12 Conditions[4] 1.2</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Eye of Helios">
+						<category name="Attack Delay">
+							<comment># Increasing the delay here will also have the effect of shortening the laser beam by that much.</comment>
+							<comment># I'd love to figure out how to inject this delay *before* the laser-charging animation comes</comment>
+							<comment># on, but the BPDs for EOS are just hideous, and I found this first, and it works, so I'm just</comment>
+							<comment># leaving it there.  :)  It's easy to extend the laser duration by adding a delay to COLD[205]</comment>
+							<comment># but the eye closes according to its original schedule, and I hadn't found where that timing was.</comment>
+							<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+								<code profiles="">set GD_Ma_Helios.Character.AiDef_Ma_Helios:AIBehaviorProviderDefinition_0 BehaviorSequences[0].ConsolidatedOutputLinkData[203].ActivateDelay 0</code>
+							</hotfix>
+						</category>
+						<category name="Attack Damage + Radius">
+							<comment># I actually don't intend on nerfing this too much; it should remain a very deadly attack</comment>
+							<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+								<code profiles="">set GD_Ma_ShadowTrapEye.Character.AIDef_EyeOfHelios:AIBehaviorProviderDefinition_0.Behavior_FireBeam_88 DamagePerSecondFormula.BaseValueScaleConstant 99</code>
+								<code profiles="">set GD_Ma_ShadowTrapEye.Character.AIDef_EyeOfHelios:AIBehaviorProviderDefinition_0.Behavior_FireBeam_88 RadiusToDoDamageAroundImpact.BaseValueConstant 2000</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Between-Wave Enemy Spawns">
+						<category name="Regular Enemies">
+							<category name="Spawn Pool">
+								<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+									<code profiles="">set Ma_FinalBoss_Game.TheWorld:PersistentLevel.PopulationOpportunityDen_4 PopulationDef WillowPopulationDefinition'GD_Ma_Pop_Glitches.Population.PopDef_BadassGlitch'</code>
+								</hotfix>
+							</category>
+							<category name="Max Active">
+								<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+									<code profiles="">set Ma_FinalBoss_Game.TheWorld:PersistentLevel.PopulationOpportunityDen_4 MaxActiveActorsIsNormal 3</code>
+									<code profiles="">set Ma_FinalBoss_Game.TheWorld:PersistentLevel.PopulationOpportunityDen_4 MaxActiveActorsThreatened 3</code>
+									<code profiles="">set Ma_FinalBoss_Game.TheWorld:PersistentLevel.PopulationOpportunityDen_4 SpawnData.MaxActiveActors 3</code>
+								</hotfix>
+							</category>
+							<category name="Total Spawned">
+								<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+									<code profiles="">set Ma_FinalBoss_Game.TheWorld:PersistentLevel.PopulationOpportunityDen_4 MaxTotalActors 20</code>
+									<code profiles="">set Ma_FinalBoss_Game.TheWorld:PersistentLevel.PopulationOpportunityDen_4 MaxTotalActorsFormula.BaseValueConstant 20</code>
+								</hotfix>
+							</category>
+							<category name="Respawn Delay">
+								<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+									<code profiles="">set Ma_FinalBoss_Game.TheWorld:PersistentLevel.PopulationOpportunityDen_4 RespawnDelay 0.2</code>
+								</hotfix>
+							</category>
+						</category>
+						<category name="Badass Enemies">
+							<category name="Spawn Pool">
+								<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+									<code profiles="">set Ma_FinalBoss_Game.TheWorld:PersistentLevel.PopulationOpportunityDen_1 PopulationDef WillowPopulationDefinition'GD_Ma_Pop_Glitches.Population.PopDef_BadassGlitch'</code>
+								</hotfix>
+							</category>
+							<category name="Max Active">
+								<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+									<code profiles="">set Ma_FinalBoss_Game.TheWorld:PersistentLevel.PopulationOpportunityDen_1 MaxActiveActorsIsNormal 1</code>
+									<code profiles="">set Ma_FinalBoss_Game.TheWorld:PersistentLevel.PopulationOpportunityDen_1 MaxActiveActorsThreatened 1</code>
+									<code profiles="">set Ma_FinalBoss_Game.TheWorld:PersistentLevel.PopulationOpportunityDen_1 SpawnData.MaxActiveActors 1</code>
+								</hotfix>
+							</category>
+							<category name="Total Spawned">
+								<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+									<code profiles="">set Ma_FinalBoss_Game.TheWorld:PersistentLevel.PopulationOpportunityDen_1 MaxTotalActors 20</code>
+									<code profiles="">set Ma_FinalBoss_Game.TheWorld:PersistentLevel.PopulationOpportunityDen_1 MaxTotalActorsFormula.BaseValueConstant 20</code>
+								</hotfix>
+							</category>
+							<category name="Respawn Delay">
+								<hotfix name="ApocHotfix" level="Ma_FinalBoss_P">
+									<code profiles="">set Ma_FinalBoss_Game.TheWorld:PersistentLevel.PopulationOpportunityDen_1 RespawnDelay 0.2</code>
+								</hotfix>
+							</category>
+						</category>
+					</category>
+				</category>
+			</category>
+		</category>
+	</body>
+</BLCMM>
+
+#Commands:
+
+#Direct-Execute Warning:
+say WARNING: "Easier ECLIPSE and EOS" must be imported into BLCMM to run properly with UCP or other mods.
+
+#Hotfixes:
+set Transient.SparkServiceConfiguration_6 Keys ("SparkOnDemandPatchEntry-GBX_Fixes1","SparkOnDemandPatchEntry-GBX_Fixes2","SparkOnDemandPatchEntry-GBX_Fixes3","SparkPatchEntry-GBX_Fixes4","SparkPatchEntry-GBX_Fixes5","SparkPatchEntry-GBX_Fixes6","SparkPatchEntry-GBX_Fixes7","SparkPatchEntry-GBX_Fixes8","SparkPatchEntry-GBX_Fixes9","SparkPatchEntry-GBX_Fixes10","SparkPatchEntry-GBX_Fixes11","SparkPatchEntry-GBX_Fixes12","SparkPatchEntry-GBX_Fixes13","SparkPatchEntry-GBX_Fixes14","SparkLevelPatchEntry-GBX_Fixes15","SparkLevelPatchEntry-GBX_Fixes16","SparkLevelPatchEntry-GBX_Fixes17","SparkLevelPatchEntry-GBX_Fixes18","SparkLevelPatchEntry-GBX_Fixes19","SparkLevelPatchEntry-GBX_Fixes20","SparkLevelPatchEntry-GBX_Fixes21","SparkLevelPatchEntry-ApocHotfix1","SparkLevelPatchEntry-ApocHotfix2","SparkLevelPatchEntry-ApocHotfix3","SparkLevelPatchEntry-ApocHotfix4","SparkLevelPatchEntry-ApocHotfix5","SparkLevelPatchEntry-ApocHotfix6","SparkLevelPatchEntry-ApocHotfix7","SparkLevelPatchEntry-ApocHotfix8","SparkLevelPatchEntry-ApocHotfix9","SparkLevelPatchEntry-ApocHotfix10","SparkLevelPatchEntry-ApocHotfix11","SparkLevelPatchEntry-ApocHotfix12","SparkLevelPatchEntry-ApocHotfix13","SparkLevelPatchEntry-ApocHotfix14","SparkLevelPatchEntry-ApocHotfix15","SparkLevelPatchEntry-ApocHotfix16","SparkLevelPatchEntry-ApocHotfix17","SparkLevelPatchEntry-ApocHotfix18","SparkLevelPatchEntry-ApocHotfix19","SparkLevelPatchEntry-ApocHotfix20","SparkLevelPatchEntry-ApocHotfix21","SparkLevelPatchEntry-ApocHotfix22","SparkLevelPatchEntry-ApocHotfix23","SparkLevelPatchEntry-ApocHotfix24","SparkLevelPatchEntry-ApocHotfix25","SparkLevelPatchEntry-ApocHotfix26","SparkLevelPatchEntry-ApocHotfix27","SparkLevelPatchEntry-ApocHotfix28","SparkLevelPatchEntry-ApocHotfix29","SparkLevelPatchEntry-ApocHotfix30","SparkLevelPatchEntry-ApocHotfix31","SparkLevelPatchEntry-ApocHotfix32","SparkLevelPatchEntry-ApocHotfix33","SparkLevelPatchEntry-ApocHotfix34","SparkLevelPatchEntry-ApocHotfix35","SparkLevelPatchEntry-ApocHotfix36","SparkLevelPatchEntry-ApocHotfix37","SparkLevelPatchEntry-ApocHotfix38","SparkLevelPatchEntry-ApocHotfix39","SparkLevelPatchEntry-ApocHotfix40","SparkLevelPatchEntry-ApocHotfix41","SparkLevelPatchEntry-ApocHotfix42","SparkLevelPatchEntry-ApocHotfix43","SparkLevelPatchEntry-ApocHotfix44","SparkLevelPatchEntry-ApocHotfix45","SparkLevelPatchEntry-ApocHotfix46","SparkLevelPatchEntry-ApocHotfix47","SparkLevelPatchEntry-ApocHotfix48","SparkLevelPatchEntry-ApocHotfix49","SparkLevelPatchEntry-ApocHotfix50","SparkLevelPatchEntry-ApocHotfix51","SparkLevelPatchEntry-ApocHotfix52","SparkLevelPatchEntry-ApocHotfix53","SparkLevelPatchEntry-ApocHotfix54","SparkLevelPatchEntry-ApocHotfix55")
+set Transient.SparkServiceConfiguration_6 Values ("GD_Gladiator_Streaming,GD_Gladiator_Skills.Projectiles.ShieldProjectile:BehaviorProviderDefinition_0,BehaviorSequences[0].BehaviorData2[26].LinkedVariables.ArrayIndexAndLength,2686977,0","GD_Gladiator_Streaming,GD_Gladiator_Skills.Projectiles.ShieldProjectile:BehaviorProviderDefinition_0,BehaviorSequences[0].BehaviorData2[49].LinkedVariables.ArrayIndexAndLength,8323073,0","GD_Gladiator_Streaming,GD_Gladiator_Skills.Projectiles.ShieldProjectile:BehaviorProviderDefinition_0.OzBehavior_ActorList_1,BehaviorSequences[0].BehaviorData2[32].Behavior.SearchRadius,500.000000,2048","GD_Ma_Chapter03.M_Ma_Chapter03:Objset_cmp_Pt0_06_ReopenDataStream,Objectiveset_cmp.ObjectiveDefinitions,,(GD_Ma_Chapter03.M_Ma_Chapter03:Pt0_06_ReopenDataStream,GD_Ma_Chapter03.M_Ma_Chapter03:Pt0_04_GetToDataStream,GD_Ma_Chapter03.M_Ma_Chapter03:RetrieveHSource)","Weap_Pistol.GestaltDef_Pistol_GestaltSkeletalMesh:SkeletalMeshSocket_260,RelativeLocation,,(X=-0.05,Y=55.0,Z=13.7)","Weap_Pistol.GestaltDef_Pistol_GestaltSkeletalMesh:SkeletalMeshSocket_268,RelativeLocation,,(X=0.02,Y=36.0,Z=15.45)","Weap_Pistol.GestaltDef_Pistol_GestaltSkeletalMesh:SkeletalMeshSocket_270,RelativeLocation.Z,,14.2","GD_Shields.Projectiles.Proj_LegendaryBoosterShield:BehaviorProviderDefinition_1.Behavior_Explode_140,BehaviorSequences[0].BehaviorData2[7].Behavior.StatusEffectDamage.BaseValueAttribute,None,D_Attributes.Projectile.ProjectileDamage","GD_Shields.Projectiles.Proj_LegendaryBoosterShield:BehaviorProviderDefinition_1.Behavior_Explode_140,BehaviorSequences[0].BehaviorData2[7].Behavior.StatusEffectDamage.BaseValueScaleConstant,1.000000,.25","GD_Shields.Projectiles.Proj_LegendaryBoosterShield:BehaviorProviderDefinition_1.Behavior_Explode_140,BehaviorSequences[0].BehaviorData2[7].Behavior.StatusEffectChance.BaseValueConstant,1.000000,20","GD_Itempools.WeaponPools.Pool_Weapons_SniperRifles_04_Rare,BalancedItems,,+(ItmPoolDefinition=None,InvBalanceDefinition=GD_Cork_Weap_SniperRifles.A_Weapons_Unique.Sniper_Vladof_3_TheMachine,Probability=(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=GD_Balance.Weighting.Weight_2_Uncommon,BaseValueScaleConstant=1),bDropOnDeath=True)","GD_Itempools.WeaponPools.Pool_Weapons_AssaultRifles_04_Rare,BalancedItems,,+(ItmPoolDefinition=None,InvBalanceDefinition=gd_cork_weap_assaultrifle.A_Weapons_Unique.AR_Vladof_3_OldPainful,Probability=(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=GD_Balance.Weighting.Weight_2_Uncommon,BaseValueScaleConstant=1),bDropOnDeath=True)","GD_Itempools.WeaponPools.Pool_Weapons_Shotguns_04_Rare,BalancedItems,,+(ItmPoolDefinition=None,InvBalanceDefinition=GD_Cork_Weap_Shotgun.A_Weapons_Unique.SG_Jakobs_Boomacorn,Probability=(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=GD_Balance.Weighting.Weight_2_Uncommon,BaseValueScaleConstant=1),bDropOnDeath=True)","GD_Itempools.WeaponPools.Pool_Weapons_Shotguns_04_Rare,BalancedItems,,+(ItmPoolDefinition=None,InvBalanceDefinition=GD_Cork_Weap_Shotgun.A_Weapons_Unique.SG_Torgue_3_JackOCannon,Probability=(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=GD_Balance.Weighting.Weight_2_Uncommon,BaseValueScaleConstant=1),bDropOnDeath=True)",",GD_Population_Scavengers.Balance.Outlaws.PawnBalance_ScavWastelandWalker,PlayThroughs[0].CustomItemPoolList,,+(ItemPool=GD_Itempools.Runnables.Pool_ScavBadassSpacemanMidget,PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=GD_Itempools.DropWeights.DropODDS_BossUniqueRares,InitializationDefinition=None,BaseValueScaleConstant=1.000000))",",GD_Population_Scavengers.Balance.Outlaws.PawnBalance_ScavWastelandWalker,PlayThroughs[1].CustomItemPoolList,,+(ItemPool=GD_Itempools.Runnables.Pool_ScavBadassSpacemanMidget,PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=GD_Itempools.DropWeights.DropODDS_BossUniqueRares,InitializationDefinition=None,BaseValueScaleConstant=1.000000))","Laser_P,GD_Challenges.Co_LevelChallenges.EyeOfHelios_TreadCarefully,ChallengeType,ECT_DesignerTriggered,ECT_LevelObject","Outlands_P,Outlands_SideMissions.TheWorld:PersistentLevel.Main_Sequence.WillowSeqEvent_MissionRemoteEvent_0,OutputLinks[0].Links[0].LinkedOp,GearboxSeqAct_TriggerDialogName'Outlands_SideMissions.TheWorld:PersistentLevel.Main_Sequence.GearboxSeqAct_TriggerDialogName_48',Outlands_SideMissions.TheWorld:PersistentLevel.Main_Sequence.WillowSeqAct_MissionCustomEvent_14","Outlands_P,Outlands_SideMissions.TheWorld:PersistentLevel.Main_Sequence.WillowSeqAct_MissionCustomEvent_14,OutputLinks[0].Links,,((LinkedOp=GearboxSeqAct_TriggerDialogName'Outlands_SideMissions.TheWorld:PersistentLevel.Main_Sequence.GearboxSeqAct_TriggerDialogName_48',InputLinkIdx=0))","Outlands_P,Outlands_SideMissions.TheWorld:PersistentLevel.Main_Sequence.GearboxSeqAct_TriggerDialogName_49,OutputLinks[0].Links,,()","Outlands_P,Outlands_SideMissions.TheWorld:PersistentLevel.WillowPopulationEncounter_0,Waves[2].MemberOpportunities,,(PopulationOpportunityDen'Outlands_SideMissions.TheWorld:PersistentLevel.PopulationOpportunityDen_2',PopulationOpportunityDen'Outlands_SideMissions.TheWorld:PersistentLevel.PopulationOpportunityDen_8',None)","Ma_FinalBoss_P,GD_Ma_VoltronTrap.Character.CharClass_LoaderUltimateBadass,AttributeStartingValues[0].BaseValue.BaseValueConstant,,120","Ma_FinalBoss_P,GD_Ma_VoltronTrap.Character.CharClass_LoaderUltimateBadass,AttributeStartingValues[6].BaseValue.BaseValueConstant,,110","Ma_FinalBoss_P,GD_Ma_VoltronTrap.Character.CharClass_LoaderUltimateBadass,AttributeStartingValues[1].BaseValue.BaseValueConstant,,6","Ma_FinalBoss_P,GD_Ma_VoltronTrap.Anims.Anim_LoaderUltimateBadass_ArmGun_Loop:BehaviorProviderDefinition_32.Behavior_AIThrowProjectileAtTarget_7,ChildProjectileBaseValues[0].BaseValue.BaseValueScaleConstant,,0.35","Ma_FinalBoss_P,GD_Ma_VoltronTrap.Projectiles.Proj_RocketLaunch,SpeedFormula.BaseValueConstant,,1300","Ma_FinalBoss_P,GD_Ma_VoltronTrap.Anims.Anim_LoaderUltimateBadass_Missile_Loop:BehaviorProviderDefinition_32.Behavior_SpawnProjectile_50,ChildProjectileBaseValues[0].BaseValue.BaseValueScaleConstant,,0.8","Ma_FinalBoss_P,GD_Ma_VoltronTrap.Anims.Anim_LoaderUltimateBadass_Missile_Loop:BehaviorProviderDefinition_32.Behavior_SpawnProjectile_51,ChildProjectileBaseValues[0].BaseValue.BaseValueScaleConstant,,0.8","Ma_FinalBoss_P,GD_Ma_VoltronTrap.Anims.Anim_LoaderUltimateBadass_Missile_Loop:BehaviorProviderDefinition_32.Behavior_SpawnProjectile_52,ChildProjectileBaseValues[0].BaseValue.BaseValueScaleConstant,,0.8","Ma_FinalBoss_P,GD_Ma_VoltronTrap.Anims.Anim_LoaderUltimateBadass_Missile_Loop:BehaviorProviderDefinition_32.Behavior_SpawnProjectile_53,ChildProjectileBaseValues[0].BaseValue.BaseValueScaleConstant,,0.8","Ma_FinalBoss_P,GD_Ma_VoltronTrap.Projectiles.Proj_ShockBall:BehaviorProviderDefinition_0.Behavior_Explode_5,StatusEffectDamage.BaseValueScaleConstant,,0.5","Ma_FinalBoss_P,GD_Ma_VoltronTrap.Projectiles.Proj_ShockBall:BehaviorProviderDefinition_0.Behavior_Explode_5,StatusEffectChance.BaseValueScaleConstant,,1","Ma_FinalBoss_P,GD_Ma_Pop_BossFights.Balance.PawnBalance_Helios,PlayThroughs[0].AttributeStartingValues,,((Attribute = AttributeDefinition'GD_Balance_HealthAndDamage.AIParameters.Attribute_HealthMultiplier',BaseValue =(BaseValueConstant = 160,BaseValueAttribute = None,InitializationDefinition = None,BaseValueScaleConstant = 1.000000)),(Attribute = AttributeDefinition'GD_Balance_HealthAndDamage.AIParameters.Attribute_EnemyShieldMaxValueMultiplier',BaseValue =(BaseValueConstant = 85,BaseValueAttribute = None,InitializationDefinition = None,BaseValueScaleConstant = 1.000000)))","Ma_FinalBoss_P,GD_Ma_Helios.Character.CharClass_Ma_Helios,AttributeStartingValues[1].BaseValue.BaseValueConstant,,5.5","Ma_FinalBoss_P,GD_Ma_HeliosTurret.Character.CharClass_Ma_HeliosTurret,AttributeStartingValues[1].BaseValue.BaseValueConstant,,20","Ma_FinalBoss_P,GD_Ma_HeliosTurret.Weapons.Ma_HeliosTurret_WeaponType,InstantHitDamage.BaseValueScaleConstant,,0.8","Ma_FinalBoss_P,GD_Ma_EosRocketTurret.Character.CharClass_Ma_EosRocketTurret,AttributeStartingValues[1].BaseValue.BaseValueConstant,,20","Ma_FinalBoss_P,GD_Ma_EosRocketTurret.Projectiles.Projectile_Rocket:BehaviorProviderDefinition_0.Behavior_Explode_351,DamageFormula.BaseValueScaleConstant,,0.8","Ma_FinalBoss_P,GD_Ma_Helios.Projectiles.Proj_SpamGrenade:BehaviorProviderDefinition_1.Behavior_Explode_11,DamageFormula.BaseValueScaleConstant,,0.8","Ma_FinalBoss_P,GD_Ma_Helios.Projectiles.Proj_MoonShotCannon:BehaviorProviderDefinition_0.Behavior_Explode_5,DamageFormula.BaseValueScaleConstant,,10","Ma_FinalBoss_P,GD_Ma_Helios.Projectiles.Proj_MoonShotCannon:BehaviorProviderDefinition_0.Behavior_Explode_6,DamageFormula.BaseValueScaleConstant,,13","Ma_FinalBoss_P,GD_Ma_Helios.Projectiles.Proj_MoonShotCannon:BehaviorProviderDefinition_0.Behavior_SpawnFromPopulationSystem_1.PopulationFactoryBalancedAIPawn_0,PawnBalanceDefinition,,AIPawnBalanceDefinition'GD_Ma_Pop_Glitches.Balance.PawnBalance_BadassGlitch'","Ma_FinalBoss_P,GD_Ma_Helios.Projectiles.Proj_MoonShotCannon:BehaviorProviderDefinition_0.Behavior_SpawnFromPopulationSystem_20.PopulationFactoryPopulationDefinition_0,PopulationDef,,WillowPopulationDefinition'GD_Ma_Pop_Glitches.Population.PopDef_Glitch'","Ma_FinalBoss_P,GD_Ma_Helios.Projectiles.Proj_MoonShotCannon:BehaviorProviderDefinition_0.Behavior_SpawnFromPopulationSystem_21.PopulationFactoryPopulationDefinition_0,PopulationDef,,WillowPopulationDefinition'GD_Ma_Pop_ClaptrapForces.Population.Uniques.PopDef_ShadowClone_Eos'","Ma_FinalBoss_P,GD_Ma_Helios.Projectiles.Proj_MoonShotCannon:BehaviorProviderDefinition_0.Behavior_SpawnFromPopulationSystem_22.PopulationFactoryPopulationDefinition_0,PopulationDef,,WillowPopulationDefinition'GD_Ma_Pop_Virus.Population.PopDef_VirusLauncher'","Ma_FinalBoss_P,GD_Ma_Helios.Projectiles.Proj_MoonShotCannon:BehaviorProviderDefinition_0.Behavior_SpawnFromPopulationSystem_23.PopulationFactoryPopulationDefinition_0,PopulationDef,,WillowPopulationDefinition'GD_Ma_Pop_Virus.Population.PopDef_ParasiticVirus'","Ma_FinalBoss_P,GD_Ma_Helios.Projectiles.Proj_MoonShotCannon:BehaviorProviderDefinition_0.Behavior_SpawnFromPopulationSystem_24.PopulationFactoryPopulationDefinition_0,PopulationDef,,WillowPopulationDefinition'GD_Ma_Pop_Virus.Population.PopDef_Virus'","Ma_FinalBoss_P,GD_Ma_Helios.Projectiles.Proj_MoonShotCannon:BehaviorProviderDefinition_0,BehaviorSequences[2].BehaviorData2[3].LinkedVariables.ArrayIndexAndLength,,0","Ma_FinalBoss_P,GD_Ma_Helios.Projectiles.Proj_MoonShotCannon:BehaviorProviderDefinition_0,BehaviorSequences[2].BehaviorData2[16].LinkedVariables.ArrayIndexAndLength,,0","Ma_FinalBoss_P,GD_Ma_Helios.Projectiles.Proj_MoonShotCannon:BehaviorProviderDefinition_0.Behavior_RandomBranch_11,Conditions[0],,0.2","Ma_FinalBoss_P,GD_Ma_Helios.Projectiles.Proj_MoonShotCannon:BehaviorProviderDefinition_0.Behavior_RandomBranch_11,Conditions[1],,1.0","Ma_FinalBoss_P,GD_Ma_Helios.Projectiles.Proj_MoonShotCannon:BehaviorProviderDefinition_0.Behavior_RandomBranch_11,Conditions[2],,0.2","Ma_FinalBoss_P,GD_Ma_Helios.Projectiles.Proj_MoonShotCannon:BehaviorProviderDefinition_0.Behavior_RandomBranch_11,Conditions[3],,1.0","Ma_FinalBoss_P,GD_Ma_Helios.Projectiles.Proj_MoonShotCannon:BehaviorProviderDefinition_0.Behavior_RandomBranch_11,Conditions[4],,0.9","Ma_FinalBoss_P,GD_Ma_Helios.Projectiles.Proj_MoonShotCannon:BehaviorProviderDefinition_0.Behavior_RandomBranch_12,Conditions[0],,0.25","Ma_FinalBoss_P,GD_Ma_Helios.Projectiles.Proj_MoonShotCannon:BehaviorProviderDefinition_0.Behavior_RandomBranch_12,Conditions[1],,1.0","Ma_FinalBoss_P,GD_Ma_Helios.Projectiles.Proj_MoonShotCannon:BehaviorProviderDefinition_0.Behavior_RandomBranch_12,Conditions[2],,0.5","Ma_FinalBoss_P,GD_Ma_Helios.Projectiles.Proj_MoonShotCannon:BehaviorProviderDefinition_0.Behavior_RandomBranch_12,Conditions[3],,1.0","Ma_FinalBoss_P,GD_Ma_Helios.Projectiles.Proj_MoonShotCannon:BehaviorProviderDefinition_0.Behavior_RandomBranch_12,Conditions[4],,1.0","Ma_FinalBoss_P,GD_Ma_Helios.Character.AiDef_Ma_Helios:AIBehaviorProviderDefinition_0,BehaviorSequences[0].ConsolidatedOutputLinkData[203].ActivateDelay,,0.5","Ma_FinalBoss_P,GD_Ma_ShadowTrapEye.Character.AIDef_EyeOfHelios:AIBehaviorProviderDefinition_0.Behavior_FireBeam_88,DamagePerSecondFormula.BaseValueScaleConstant,,90","Ma_FinalBoss_P,GD_Ma_ShadowTrapEye.Character.AIDef_EyeOfHelios:AIBehaviorProviderDefinition_0.Behavior_FireBeam_88,RadiusToDoDamageAroundImpact.BaseValueConstant,,1300","Ma_FinalBoss_P,Ma_FinalBoss_Game.TheWorld:PersistentLevel.PopulationOpportunityDen_4,PopulationDef,,WillowPopulationDefinition'GD_Ma_Pop_Glitches.Mixes.PopDef_Glitches_Mix_FinalBoss_Weak'","Ma_FinalBoss_P,Ma_FinalBoss_Game.TheWorld:PersistentLevel.PopulationOpportunityDen_4,MaxActiveActorsIsNormal,,3","Ma_FinalBoss_P,Ma_FinalBoss_Game.TheWorld:PersistentLevel.PopulationOpportunityDen_4,MaxActiveActorsThreatened,,3","Ma_FinalBoss_P,Ma_FinalBoss_Game.TheWorld:PersistentLevel.PopulationOpportunityDen_4,SpawnData.MaxActiveActors,,3","Ma_FinalBoss_P,Ma_FinalBoss_Game.TheWorld:PersistentLevel.PopulationOpportunityDen_4,MaxTotalActors,,10","Ma_FinalBoss_P,Ma_FinalBoss_Game.TheWorld:PersistentLevel.PopulationOpportunityDen_4,MaxTotalActorsFormula.BaseValueConstant,,10","Ma_FinalBoss_P,Ma_FinalBoss_Game.TheWorld:PersistentLevel.PopulationOpportunityDen_4,RespawnDelay,,1.5","Ma_FinalBoss_P,Ma_FinalBoss_Game.TheWorld:PersistentLevel.PopulationOpportunityDen_1,PopulationDef,,WillowPopulationDefinition'GD_Ma_Pop_Glitches.Population.PopDef_BadassGlitch'","Ma_FinalBoss_P,Ma_FinalBoss_Game.TheWorld:PersistentLevel.PopulationOpportunityDen_1,MaxActiveActorsIsNormal,,1","Ma_FinalBoss_P,Ma_FinalBoss_Game.TheWorld:PersistentLevel.PopulationOpportunityDen_1,MaxActiveActorsThreatened,,1","Ma_FinalBoss_P,Ma_FinalBoss_Game.TheWorld:PersistentLevel.PopulationOpportunityDen_1,SpawnData.MaxActiveActors,,1","Ma_FinalBoss_P,Ma_FinalBoss_Game.TheWorld:PersistentLevel.PopulationOpportunityDen_1,MaxTotalActors,,2","Ma_FinalBoss_P,Ma_FinalBoss_Game.TheWorld:PersistentLevel.PopulationOpportunityDen_1,MaxTotalActorsFormula.BaseValueConstant,,2","Ma_FinalBoss_P,Ma_FinalBoss_Game.TheWorld:PersistentLevel.PopulationOpportunityDen_1,RespawnDelay,,3")
+

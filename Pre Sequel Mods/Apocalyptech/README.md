@@ -15,8 +15,10 @@ branches, so you can browse in `bl2betterloot`, `bl2colddeadhands`,
 
 * [Mod List](#mod-list)
   * [AdBlocker 2000](#adblocker-2000)
+  * [Easier ECLIPSE and EOS](#easier-eclipse-and-eos)
   * [Guaranteed M0RQ, Cutie Killer, and Heartfull Splodger](#guaranteed-m0rq-cutie-killer-and-heartfull-splodger)
   * [Guaranteed Phonic](#guaranteed-phonic)
+  * [Infinite Air Boosts](#infinite-air-boosts)
   * [Luneshine on Uniques](#luneshine-on-uniques)
   * [No Broken Chests Near Denial Subroutine](#no-broken-chests-near-denial-subroutine)
   * [No SpyBugs in The Cortex](#no-spybugs-in-the-cortex)
@@ -25,6 +27,7 @@ branches, so you can browse in `bl2betterloot`, `bl2colddeadhands`,
   * [TPS Better Loot Mod](#tps-better-loot-mod)
   * [TPS Cold Dead Hands](#tps-cold-dead-hands)
   * [TPS Configurable Slot Machines](#tps-configurable-slot-machines)
+  * [TPS Container TimeSaver XL](#tps-container-timesaver-xl)
   * [TPS Early Bloomer](#tps-early-bloomer)
   * [TPS Expanded Legendary Pools](#tps-expanded-legendary-pools)
   * [TPS Movement Speed Cheats](#tps-movement-speed-cheats)
@@ -42,6 +45,13 @@ Tired of running headlong into those damned pop-up ads in Nexus and
 Motherlessboard?  Rage no longer!  A quick install of our fresh new
 *AdBlocker 2000* will clear those right up.  Never be bothered by those
 pesky ads again!
+
+### Easier ECLIPSE and EOS
+
+This mod makes the ECLIPSE and EOS boss fights at the end of the Claptastic
+Voyage DLC easier in a variety of ways.  The default settings in the mod
+aim to have the bosses remain quite dangerous -- the goal isn't really to
+make them *super* easy (except on the "Total Chump" option).
 
 ### Guaranteed M0RQ, Cutie Killer, and Heartfull Splodger
 
@@ -64,6 +74,13 @@ one separately if you're already using TPS UCP 2.2!)*
 
 Guarantees the spawn of Phonic Kraggon (or Phuper Phonic Kraggon) in Serenity's
 Waste.
+
+### Infinite Air Boosts
+
+Removes the restriction of one-air-boost-per-jump, so you can just keep on
+boosting forever!  Well, that's not *totally* true -- you still need to have
+Oxygen in order to boost.  Still, if you're in an atmosphere, you can
+pretty much just keep going until your keyboard gives out.
 
 ### Luneshine on Uniques
 
@@ -139,6 +156,17 @@ This mod allows you to configure just about every facet of the base game's
 slot machines, of the sort found in Concordia.  The default configuration
 leaves the slot machines exactly how they are in the base game -- you **must**
 configure the options you want.
+
+### TPS Container TimeSaver XL
+
+Are you a busy, on-the-go Vault Hunter who just doesn't have the
+*time* for such luxuries as waiting for loot chests to open?  Are
+those Hyperion weapon crates leaving you tapping your watch and
+sneaking glances at your day calendar?  Is the hunt for more ammo
+filling you with near-terminal waves of impatience?
+
+Well, fret no longer!  This mod increases the opening animations
+of all containers in TPS by 5x.
 
 ### TPS Early Bloomer
 
