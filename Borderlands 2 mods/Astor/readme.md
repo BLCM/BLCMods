@@ -5,7 +5,7 @@
  - Give a better reward than in the original game... because let's face it, a green weapon/item (AKA Uncommon) isn't really a "reward"!
  - This Mod will give you the choice between 2 weapons/items instead of a single one, so it will double the chance to get a weapon/item with desired parts... and reduce the time spent doing "farming".
 
- ![](https://i.imgur.com/AqQ6TTj.png)
+![](https://i.imgur.com/AqQ6TTj.png)
  
 The main reason why I resurrected (and rebuild from scratch) the "Double Quest Reward" Mod is mainly because in the great Koby's original Mod -unfortunately now extinct!-, some Unique weapon/items (Lady Fist, Rocksalt, Dahlminator, Buffalo, Landscaper, Deadly Bloom, Sandhawk, Pimpernel, etc...) where removed from the rewards, and that doesn't make sense to me.
 
@@ -26,7 +26,9 @@ For those who were familiar with the previous Mod, the weapon/Item marked with a
  - New weapon/item rewards (like the Tidal Wave in Capture The Flag) 
  - ... or restored Unique weapon/item "gone" in the original Koby's Mod. 
  
-Feel Free to use the BLCMM tool to change whatever you don't like.
+Feel Free to use the BLCMM tool to pick the option of your choice.
+
+![](https://i.imgur.com/jU3Ef7j.png)
 
 #### Other Recommended Mods:
 
@@ -44,7 +46,8 @@ v1.0.0, September 1, 2018
  - Initial public release
 
 v1.0.1, September 2, 2018
- - Added a option to upgrade the customization skin/head rewards to weapon/item rewards
+ - Added a option to upgrade the customization skin/head rewards to weapon/item rewards for 9 missions
+ - In the mission Uncle Teddy, if you give the plans to Una, the reward will be the Lady Fist, and if you give the plans to Hyperion you will have the choice between 2 options: The Bitch (Legendary SMG Hyperion) or The Commerce (Unique Shock SMG Hyperion)
 
 #### To do:
 
