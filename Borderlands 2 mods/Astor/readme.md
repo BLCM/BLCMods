@@ -23,7 +23,7 @@ The Tidal Wave, which apparently is not a weapon reward anywhere anymore is now 
 
 For those who were familiar with the previous Mod, the weapon/Item marked with a (*) are: 
  - Upgrade (like the Bitch/Commerce in Uncle Teddy) 
- - New weapon/item rewards (like the Tidal Wave in Capture The Flag) 
+ - New Unique weapon/item rewards (like the Tidal Wave in Capture The Flag) 
  - ... or restored Unique weapon/item "gone" in the original Koby's Mod. 
  
 Feel Free to use the BLCMM tool to pick the option of your choice.
@@ -46,7 +46,14 @@ v1.0.0, September 1, 2018
  - Initial public release
 
 v1.0.1, September 2, 2018
- - Added a option to upgrade the customization skin/head rewards to weapon/item rewards for 9 missions
+ - Added a option to upgrade the customization skin/head rewards to a Blue weapon/item rewards for 7 missions:
+   - Bad Hair Day (Southern Shelf)   
+   - Mighty Morphin' (Tundra Express)
+   - Perfectly Peaceful (Caustic caverns)   
+   - Shielded Favors (Southern Shelf)	  
+   - Symbiosis (Southern Shelf)	  
+   - The Name Game (Three Horns - Divide)	  
+   - This Town Ain't Big Enough (Southern Shelf)
  - In the mission Uncle Teddy, if you give the plans to Una, the reward will be the Lady Fist, and if you give the plans to Hyperion you will have the choice between 2 options: The Bitch (Legendary SMG Hyperion) or The Commerce (Unique Shock SMG Hyperion)
 
 #### To do:
