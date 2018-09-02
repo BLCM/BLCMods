@@ -48,6 +48,7 @@ v1.0.1, September 2, 2018
 
 #### To do:
 
+- [x] Bring back some Unique weapon/Item as mission rewards for the main game
 - [x] Upgrade the customization skin/head rewards to weapon/item rewards for the main game
 - [ ] Upgrade the customization skin/head rewards to weapon/item rewards for the DLCs
 - [ ] Mission given by Hammerlock in the main game will be rewarded with a Jakobs weapon/item
