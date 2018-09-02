@@ -46,14 +46,16 @@ v1.0.0, September 1, 2018
  - Initial public release
 
 v1.0.1, September 2, 2018
- - Added a option to upgrade the customization skin/head rewards to a Blue weapon/item rewards for 7 missions:
-   - Bad Hair Day (Southern Shelf)   
-   - Mighty Morphin' (Tundra Express)
-   - Perfectly Peaceful (Caustic caverns)   
-   - Shielded Favors (Southern Shelf)	  
-   - Symbiosis (Southern Shelf)	  
-   - The Name Game (Three Horns - Divide)	  
-   - This Town Ain't Big Enough (Southern Shelf)
+ - Added a option to upgrade the customization skin/head rewards to a Blue weapon/item rewards for 9 missions:
+   - Capture The Flag (Sawtooth Cauldron) 
+   - In Memoriam (Three Horns - Divide)
+   - No Vacancy (Three Horns - Valley)
+   - Shielded FavoThree Horns - Valleyrs (Southern Shelf) 
+   - Statuesque (Opportunity)
+   - Symbiosis (Southern Shelf) 
+   - The Cold Shoulder (The Fridge)
+   - The Overlooked #1: Medicine Man (The Highlands)
+   - To Grandmother's House We Go (Eridium Blight)
  - In the mission Uncle Teddy, if you give the plans to Una, the reward will be the Lady Fist, and if you give the plans to Hyperion you will have the choice between 2 options: The Bitch (Legendary SMG Hyperion) or The Commerce (Unique Shock SMG Hyperion)
 
 #### To do:
