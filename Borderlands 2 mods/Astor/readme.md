@@ -14,6 +14,12 @@ This Read Me is just here as a quick synopsis, for detailed informations, each M
  
  * * * * *
  
+## [Quest Reward] Dr Zed E-Tech Geek
+
+- The 7 Missions given by Dr Zed in the main game will be rewarded with a E-Tech weapon/item, with the choice between 2 E-Tech weapons/items instead of a single one.
+ 
+ * * * * * 
+ 
 ## [Quest Reward] Hammerlock Jakobs Sponsor
 
 - The 8 Missions given by Hammerlock in the main game will be rewarded with a Jakobs weapon/item, with the choice between 2 Blue weapons/items instead of a single one.
