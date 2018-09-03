@@ -11,7 +11,10 @@
     - Symbiosis (Southern Shelf)	  
     - The Name Game (Three Horns - Divide)	  
     - This Town Ain't Big Enough (Southern Shelf)
-- This Mod will give you the choice between 2 weapons/items instead of a single one, so it will double the chance to get a weapon/item with desired parts..
+	
+_**Note:** This Mod will give you the choice between 2 weapons/items instead of a single one, so it will double the chance to get a weapon/item with desired parts._	
+
+_**Another Note:** The Slap Happy, even if it's a Hammerlock mission will keep his Unique Shotgun Octo Reward... for now!_
 
 ### Changelog:
 
