@@ -1,4 +1,4 @@
-## Double Quest Reward "Redux"
+## Double Quest Reward Redux
 
 #### What do this mod?
 
