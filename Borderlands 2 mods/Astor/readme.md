@@ -34,14 +34,32 @@ A big thanks to @Shadowevil and his great - [BLCMM (Borderlands Community Mod Ma
  
 ## Disclaimer
 
-All files and content provided here were written by me (Astor), unless stated otherwise.
+- Please remain seated until the web page has come to a complete stop. 
 
-- They are free for personal use. You may use these mods in videos, or for streaming, as long as you give me proper credit. I would appreciate you letting me know about it.
+- All files and content provided here were written by me (Astor), unless stated otherwise.
+
+- This product is meant for recreational use only. Some assembly required. Batteries not included.
+
+- They are free for personal use. No purchase necessary.
+
+- You may use these mods in videos, or for streaming, as long as you give me proper credit. I would appreciate you letting me know about it.
 
 - You may re-use small bits of code (e.g. formulas, behavior modifications, etc) for your own purposes as long as you give me proper credit, and let me know about it. 
 
 - Ask me for permission first if you wish to use larger portions of this code, make a modified/improved version, include it in a mod pack, etc...
 
 - Do not re-upload any of those files anywhere.
+
+- Not responsible for direct, indirect, incidental or consequential damages resulting from any defect, error or failure to perform.
+
+- Do not eat. Not a toy. Use only as directed.
+
+- Keep away from pets and small children.
+
+ * * * * *
+ 
+## Warning 
+ 
+_**Discontinue use of this product if any of the following occurs:** itching, aching, vertigo, dizziness, ringing in your ears, vomiting, giddiness, aural or visual hallucinations, tingling in extremities, loss of balance or coordination, slurred speech, temporary blindness, drowsiness, insomnia, profuse sweating, shivering, or heart palpitations._
 
  * * * * *
