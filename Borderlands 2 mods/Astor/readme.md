@@ -3,7 +3,7 @@
 
 I'm Astor, and I apologize in advance for grammar and/or syntax errors, but my mother tongue is French.
 
-This Read Me is just here as a quick synopsis, for detailed informations, each Mod has is own Read Me (and even a Changelog), so don't hesitate to give a look on it.
+This Read Me is just here as a quick synopsis, for detailed informations, each Mod has is own Read Me (and even a Changelog), so don't hesitate -whoosh!- to give a look on it.
 
  * * * * *
 
