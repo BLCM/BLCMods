@@ -2,16 +2,16 @@
 
 ### What do this mod?
 
-- The Mission given by Hammerlock in the main game will be rewarded with a Jakobs weapon/item
-- This Mod will give you the choice between 2 weapons/items instead of a single one, so it will double the chance to get a weapon/item with desired parts... and reduce the time spent doing "farming".
-  - In the Mission Bad Hair Day (Southern Shelf) the reward is now a Blue Shotgun Torgue (if the fur is given to Clap-Trap) or a Blue Sniper Jakobs (if the fur is given to Hammerlock)
-    - The reward for the other missions given by Hammerlock are now rewarded by a Blue Jakobs weapon/item:   
+- The 8 missions given by Hammerlock in the main game will be rewarded with a Jakobs weapon/item
+  - In the Mission Bad Hair Day (Southern Shelf) the reward is now a Blue Sniper Jakobs (if the fur is given to Hammerlock) or a Blue Shotgun Torgue (if the fur is given to Clap-Trap).
+  - The reward for the other missions given by Hammerlock are now rewarded by a Blue Jakobs weapon/item:   
     - Mighty Morphin' (Tundra Express)
     - Perfectly Peaceful (Caustic caverns)   
     - Shielded Favors (Southern Shelf)	  
     - Symbiosis (Southern Shelf)	  
     - The Name Game (Three Horns - Divide)	  
     - This Town Ain't Big Enough (Southern Shelf)
+- This Mod will give you the choice between 2 weapons/items instead of a single one, so it will double the chance to get a weapon/item with desired parts..
 
 ### Changelog:
 
