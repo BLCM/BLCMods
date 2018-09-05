@@ -1,4 +1,3 @@
-
 ## Bonjour
 
 I'm Astor, and I apologize in advance for grammar and/or syntax errors, but my mother tongue is French.
