@@ -6,14 +6,14 @@ After searching a while, I discover that, a -very!- long time ago, Dahl made the
 
 This is where you can find it... 
 
-![Discord Solver - Where to find it](https://i.imgur.com/uHTxuc6.png)
+![Discord Solver - Where to find it](https://i.imgur.com/uHTxuc6.png "Don't worry guys... even if my screen capture show French text, my mods are in English")
 
 What special with this weapon?
 
 - Shot two explosive bullet for the cost of one bullet (can be doubled if you use the Aaron00000's "Double Anarchy" mod).
 - Keep almost all his Unique weapon specificity (very high firerate, variable burst-fire round, etc), but with explosive bullet. (I "just" low the initial damage and the accuracy to balance the weapon). 
 
-![Discord Solver - Lascaux Version](https://i.imgur.com/EyebWpL.png)
+![Discord Solver - Lascaux Version](https://i.imgur.com/EyebWpL.png "Don't worry guys... even if my screen capture show French text, my mods are in English")
 
 
 ### Options: 
@@ -37,7 +37,7 @@ A great mod to check for the Discord Solver Lascaux version:
 
 - [Double Anarchy v4](https://github.com/BLCM/BLCMods/blob/master/Borderlands%202%20mods/Aaron0000/Weapon-Item%20Parts%20and%20Accessories/DoubleAnarchyv4.txt) by [Aaron00000](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/Aaron0000) : Changes the SMGs accuracy accessory into the Double Accessory from Borderlands 1... and your Discord Solver will shot 4 bullets/projectiles at the cost on 2 ammo.
 
-![Discord Solver with Double Anarchy Mod](https://i.imgur.com/fkJRAqD.png)
+![Discord Solver Lascaux Version with Double Anarchy Mod](https://i.imgur.com/fkJRAqD.png "Don't worry guys... even if my screen capture show French text, my mods are in English")
 
 ### Credits:
 
