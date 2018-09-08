@@ -17,7 +17,7 @@ Concerning Deathtrap and the Sabre Turret, the main problem addressed by this pa
 
 ## Skill Changes
 
-Various changes to character skills. Not really fixes of bug/inconsistencies, so not included in my Skill Scaling Patch.
+Various changes to character skills, not (or maybe not yet) included in my Skill Scaling Patch.
 
 **Phaselock Tweak** makes it so that Phaselock stays active for its base duration after hitting an immune target, so that Wreck / Elated / Chain Reaction give all their bonuses.
 
