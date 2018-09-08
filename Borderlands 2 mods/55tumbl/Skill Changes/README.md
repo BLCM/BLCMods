@@ -8,6 +8,28 @@ Ask me for permission first if you wish to use larger portions of this code, mak
 
 *- Do not re-upload any of those files anywhere.*
 
+# Phaselock Tweak
+
+This **Phaselock Tweak** only affects the behaviour of Phaselock against targets that are immune to it. It does not change anything about the way Phaselock works with regular targets.
+
+After hitting a non-phaselockable target, Phaselock remains artificially active for the base phaselock duration of 5 seconds (not affected by Suspension). During that time, Chain Reaction, Elated, and Wreck are active (if specced into) and give all their bonuses. Phaselock cooldown will only start after this phase is finished (even if not specced into Wreck/Elated/Chain Reaction)
+
+### Compatibility
+This Phaselock Tweak is compatible with the Skill Scaling Patch.
+It should be compatible with most other mods, as long as they do not touch Phaselock. There shouldn't be any compatibility issues with the UCP. It is definitely not compatible with my Elemental Banshee Maya
+
+### Credits
+
+This was all written by me.
+
+Thanks to Orudeon for encouraging me to get some more phaselock BPD fun.
+
+### Change log
+* [2018-09-08] v1.0.
+
+
+
+
 
 # Cloud Kill Dynamic Nerf
 
@@ -50,21 +72,3 @@ Thanks to the Order of the Impending Storm for balancing Cloud Kill so well in t
 
 
 
-# Phaselock Tweak
-
-This **Phaselock Tweak** only affects the behaviour of Phaselock against targets that are immune to it. It does not change anything about the way Phaselock works with regular targets.
-
-After hitting a non-phaselockable target, Phaselock remains artificially active for the base phaselock duration of 5 seconds (not affected by Suspension). During that time, Chain Reaction, Elated, and Wreck are active (if specced into) and give all their bonuses. Phaselock cooldown will only start after this phase is finished (even if not specced into Wreck/Elated/Chain Reaction)
-
-### Compatibility
-This Phaselock Tweak is compatible with the Skill Scaling Patch.
-It should be compatible with most other mods, as long as they do not touch Phaselock. There shouldn't be any compatibility issues with the UCP. It is definitely not compatible with my Elemental Banshee Maya
-
-### Credits
-
-This was all written by me.
-
-Thanks to Orudeon for encouraging me to get some more phaselock BPD fun.
-
-### Change log
-* [2018-09-08] v1.0.
