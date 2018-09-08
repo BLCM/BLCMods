@@ -8,13 +8,15 @@ This is where you can find it...
 
 ![Discord Solver - Where to find it](https://i.imgur.com/uHTxuc6.png "Don't worry guys... even if my screen capture show French text, my mods are in English")
 
-What special with this weapon?
+## What special with this weapon?
 
 - Shot two explosive bullet for the cost of one bullet (can be doubled if you use the Aaron00000's "Double Anarchy" mod).
-- Keep almost all his Unique weapon specificity (very high firerate, variable burst-fire round, etc), but with explosive bullet. (I "just" low the initial damage and the accuracy to balance the weapon). 
+- Keep almost all his Unique weapon specificity (very high firerate, variable burst-fire round, etc), but I change the Fire Mode to Explosive bullet... and I add some Grenade Damage too  
+- Finally, to balance this "a bit too powerful" submachine gut, I "just" reduce the initial damage and the accuracy too (more missing shot... but not that much).
 
 ![Discord Solver - Lascaux Version](https://i.imgur.com/EyebWpL.png "Don't worry guys... even if my screen capture show French text, my mods are in English")
 
+**Note:** As the Discord Solver can be found submerged in a shallow pool in a cave, it's make sense to me to keep his Vanilla "Lascaux" skin (similar to the Lascaux cave paintings).
 
 ### Options: 
 
@@ -41,7 +43,7 @@ A great mod to check for the Discord Solver Lascaux version:
 
 ### Credits:
 
-I find a lot of informations on the Ressource page from the [Wiki](https://github.com/BLCM/BLCMods/wiki) of course, but also on the [Resources page](https://github.com/BLCM/BLCMods/tree/af3b2d17629ab3f7f7a5f7bb68b489c5e13b0498/Borderlands%202%20mods/Dave/Resources) from [Dave](https://github.com/BLCM/BLCMods/tree/af3b2d17629ab3f7f7a5f7bb68b489c5e13b0498/Borderlands%202%20mods/Dave) , so thanks for your work, @DaveRabbit
+I find a lot of useful informations on the Ressource page from the [Wiki](https://github.com/BLCM/BLCMods/wiki) of course, but also on the [Resources page](https://github.com/BLCM/BLCMods/tree/af3b2d17629ab3f7f7a5f7bb68b489c5e13b0498/Borderlands%202%20mods/Dave/Resources) from [Dave](https://github.com/BLCM/BLCMods/tree/af3b2d17629ab3f7f7a5f7bb68b489c5e13b0498/Borderlands%202%20mods/Dave) , so thanks for your work, @DaveRabbit 
 
 ### Changelog:
 
@@ -50,7 +52,7 @@ v1.0.0, September 8, 2018
  
  ### To do:
 
-- [ ] Show the Explosive icon on the weapon card (cosmetic)
+- [ ] Show the Explosive icon on the weapon card (it's just cosmetic but I cannot find "how to" now)
 - [ ] Make (again) a new playthrough to be sure that all work correctly.
 - [ ] Clean the code and remove all my ~~shitty~~ notes. 
 
@@ -59,7 +61,7 @@ v1.0.0, September 8, 2018
 - 100% compatible with UCP 4.1
 - Just be aware from the following: 
   - This mod use the Pocket Rocket Firing Mode, so if you use any mode that changes the attributes from the Pocket Rocket, it will affect this mod, and obviously the firing of the Discord Solver. In this case, you can toggle the Firing Mode between Pocket Rocket to GyroJet explosive bullet.
-  - This mode use Grenade Damage for the Splash Format, so if you are going to use the Discord Solver with :warning: Maya Character :warning:, don't forget to toggle the Grenade Damage to Reaper Splash Damage.
+  - This mode use Grenade Damage for the Splash Format, so if you are going to use the Discord Solver with a Siren character :warning: Maya :warning: , don't forget to toggle the Grenade Damage to Reaper Splash Damage.
 
 ### Note: 
 
