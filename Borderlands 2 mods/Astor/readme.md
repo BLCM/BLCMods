@@ -41,7 +41,7 @@ This Read Me is just here as a quick synopsis, for detailed informations, each M
  
 ## Acknowledgement
 
-A ~~big~~ huge thanks to @LightChaosman and his great - [BLCMM (Borderlands Community Mod Manager)](https://github.com/BLCM/BLCMods/wiki/Borderlands-Community-Mod-Manager) tool who make the Mods creation a real pleasure. 
+A ~~big~~ huge thanks to @LightChaosman and his great - [BLCMM (Borderlands Community Mod Manager) tool](https://github.com/BLCM/BLCMods/wiki/Borderlands-Community-Mod-Manager) tool who make the Mods creation a real pleasure. 
 
  * * * * *
  
@@ -62,6 +62,6 @@ A ~~big~~ huge thanks to @LightChaosman and his great - [BLCMM (Borderlands Comm
  
 ## Warning 
  
-_**Discontinue use of this product if any of the following occurs:** itching, aching, vertigo, dizziness, ringing in your ears, vomiting, giddiness, aural or visual hallucinations, tingling in extremities, loss of balance or coordination, slurred speech, temporary blindness, drowsiness, insomnia, profuse sweating, shivering, or heart palpitations._
+_**Discontinue use of my mods if any of the following occurs:** itching, aching, vertigo, dizziness, ringing in your ears, vomiting, giddiness, aural or visual hallucinations, tingling in extremities, loss of balance or coordination, slurred speech, temporary blindness, drowsiness, insomnia, profuse sweating, shivering, or heart palpitations._
 
  * * * * *
