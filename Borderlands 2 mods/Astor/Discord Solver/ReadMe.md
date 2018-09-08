@@ -20,14 +20,14 @@ This is where you can find it...
   
 Not clear? ... Well, perhaps it will be more easy to compare the difference in a table:  
   
-| Tech Specs      | Lascaux: Vanilla      | Discord Solver #1: Lascaux  | Discord Solver #2: Moxxi        | 
+| Tech Specs      | Lascaux: Vanilla      | Discord Solver #1: Lascaux  | Discord Solver #2: Moxxi  | 
 | -------------   | -------------         | -------------               | -------------             | 
-| Bullet:         | Standard              | Explosive                   | Explosive              | 
-| Burst Count:    | 9 to 14 rounds        | 9 to 14 rounds              | 9 to 14 rounds         | 
-| Critical Hit:   | None                  | None                        | 70%                    | 
+| Bullet:         | Standard              | Explosive                   | Explosive                 | 
+| Burst Count:    | 9 to 14 rounds        | 9 to 14 rounds              | 9 to 14 rounds            | 
+| Critical Hit:   | None                  | None                        | 70%                       | 
 | Element:        | Never Elemental       | Explosive                   | Explosive                 | 
 | Element Chance: | None                  | None                        | None                      | 
-| Fire Cost:      | 1 ammo fire 2 bullets | 1 ammo fire 2 bullets       | 1 ammo fire 2 bullets  | 
+| Fire Cost:      | 1 ammo fire 2 bullets | 1 ammo fire 2 bullets       | 1 ammo fire 2 bullets     | 
 | Lifesteal:      | None                  | None                        | 2.5% of damage dealt      | 
 | Skin:           | Lascaux (Vanilla)     | Lascaux (Vanilla)           | Moxxi Signature           | 
 | Rarity:         | Unique                | Unique                      | Unique or Moxxi           | 
@@ -50,13 +50,13 @@ This Mod has few options & fix, so feel free to use the BLCMM tool to select the
 
 - Moxxi Version:  
   - The Moxxi's Lifesteal can be toggle between the "Classic" instant healing or with Orb Transfusion (similar to the SR Chère-Amie)
-  - The Discord Solver Moxxi Version can become the reward given by Moxxi for the mission "Hell Hath No Fury" in Opportunity (see picture below).
+  - The Discord Solver Moxxi Version can become the reward given by Moxxi for the mission "Hell Hath No Fury" in Opportunity (see picture below)... on this way you can pick up your 1st Discord Sover in Frostburn Canyon (Level 7-10) and get another one as Mission Reward (Level 25-30) in Opportunity.
 
 ... and few fix:
 
 - Both Version:
   - Fix for Orudeon's "Bayonet Enhancements" (Bayonet in slot 2)
-  - Fix for Koby "Rarity Color Fix": Unique (just in case if you use this old mod)
+  - Fix for Koby "Rarity Color Fix": Unique or Moxxi (just in case if you use this old mod)
 - Moxxi Version:
   - Fix for Akathis "No More Moxxi Lifesteal" - 1.5% passive health regeneration instead of 2.5% Lifesteal
   
@@ -66,29 +66,17 @@ This Mod has few options & fix, so feel free to use the BLCMM tool to select the
 
 ### Other Recommended Mods:
 
-A great mod to check for the Discord Solver Moxxi version:
+A great mod to check for the Discord Solver:
 
-- [No More Moxxi Lifesteal v2.0](https://github.com/BLCM/BLCMods/blob/master/Borderlands%202%20mods/Akathris/NoMoreMoxxiLifestealv2.0.txt) by [Akathris](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/Akathris) . His Mod is self explanatory: removes lifesteal from Moxxi weapons and changes it to passive health regeneration.
+- Moxxi Version [No More Moxxi Lifesteal v2.0](https://github.com/BLCM/BLCMods/blob/master/Borderlands%202%20mods/Akathris/NoMoreMoxxiLifestealv2.0.txt) by [Akathris](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/Akathris) . His Mod is self explanatory: removes lifesteal from Moxxi weapons and changes it to passive health regeneration.
 
-- [Double Anarchy v4](https://github.com/BLCM/BLCMods/blob/master/Borderlands%202%20mods/Aaron0000/Weapon-Item%20Parts%20and%20Accessories/DoubleAnarchyv4.txt) by [Aaron00000](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/Aaron0000) : Changes the SMGs accuracy accessory into the Double Accessory from Borderlands 1... and your Discord Solver will shot 4 bullets/projectiles at the cost on 2 ammo.
+- Both Version: [Double Anarchy v4](https://github.com/BLCM/BLCMods/blob/master/Borderlands%202%20mods/Aaron0000/Weapon-Item%20Parts%20and%20Accessories/DoubleAnarchyv4.txt) by [Aaron00000](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/Aaron0000) : Changes the SMGs accuracy accessory into the Double Accessory from Borderlands 1... and your Discord Solver will shot 4 bullets/projectiles at the cost on 2 ammo.
 
 ![Discord Solver Lascaux Version with Double Anarchy Mod](https://i.imgur.com/fkJRAqD.png "Don't worry guys... even if my screen capture show French text, my mods are in English")
 
 ### Credits:
 
 I find a lot of useful informations on the Ressource page from the [Wiki](https://github.com/BLCM/BLCMods/wiki) of course, but also on the [Resources page](https://github.com/BLCM/BLCMods/tree/af3b2d17629ab3f7f7a5f7bb68b489c5e13b0498/Borderlands%202%20mods/Dave/Resources) and the great [Dave'S BL2 Skin Modding Guide](https://cdn.rawgit.com/BLCM/BLCMods/bb1933f7/Borderlands%202%20mods/Dave/DAVE%27S%20BL2%20SKIN%20MODDING%20GUIDE.pdf) ... all that made by [Dave](https://github.com/BLCM/BLCMods/tree/af3b2d17629ab3f7f7a5f7bb68b489c5e13b0498/Borderlands%202%20mods/Dave) , so thanks for your work, @DaveRabbit 
-
-### Changelog:
-
-v1.0.0, September 8, 2018
- - Initial public release
- 
- ### To do:
-
-- [ ] Show the Explosive icon on the weapon card (it's just cosmetic but I cannot find "how to" now)
-- [ ] Change the black parts of the weapon into a "brushed gold" color, for a look more Creamer style (it's just cosmetic but I have no idea how to do it)
-- [ ] Make (again) a new playthrough to be sure that all work correctly.
-- [ ] Clean the code and remove all my ~~shitty~~ notes. 
 
 ### Compatibility:
 
@@ -99,7 +87,7 @@ v1.0.0, September 8, 2018
 
 ### Note: 
 
-Any critique would be appreciated as this is my 2nd weapon... and by the way, please leave constructive criticism if you make a video. 
+Any critique would be appreciated because I am new in weapon modding... and by the way, please leave constructive criticism if you make a video. 
 Enjoy!
 
 ### Disclaimer
