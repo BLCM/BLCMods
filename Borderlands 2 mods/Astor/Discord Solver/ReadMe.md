@@ -20,18 +20,17 @@ This is where you can find it...
   
 Not clear? ... Well, perhaps it will be more easy to compare the difference in a table:  
   
-| Tech            | Lascaux               | Discord Solver #1        | Discord Solver #2         | 
-| Specs           | Vanilla Version       | SMG Lascaux Version      | SMG Moxxi Version         | 
-| -------------   | -------------         | -------------            | -------------             | 
-| Bullet:         | Standard              | Explosive (1)            | Explosive (1)             | 
-| Burst Count:    | 9 to 14 rounds        | 9 to 14 rounds (2)       | 9 to 14 rounds (2)        | 
-| Critical Hit:   | None                  | None                     | 70% (3)                   | 
-| Element:        | Never Elemental       | Explosive                | Explosive                 | 
-| Element Chance: | None                  | None                     | None                      | 
-| Fire Cost:      | 1 ammo fire 2 bullets | 1 ammo fire 2 bullets(4) | 1 ammo fire 2 bullets (4) | 
-| Lifesteal:      | None                  | None                     | 2.5% of damage dealt      | 
-| Skin:           | Lascaux(Vanilla)      | Lascaux (Vanilla) (5)    | Moxxi Signature           | 
-| Rarity:         | Unique (6)            | Unique (6)               | Unique or Moxxi           | 
+| Tech Specs      | Lascaux: Vanilla      | Discord Solver #1: Lascaux  | Discord Solver #2: Moxxi        | 
+| -------------   | -------------         | -------------               | -------------             | 
+| Bullet:         | Standard              | Explosive                   | Explosive              | 
+| Burst Count:    | 9 to 14 rounds        | 9 to 14 rounds              | 9 to 14 rounds         | 
+| Critical Hit:   | None                  | None                        | 70%                    | 
+| Element:        | Never Elemental       | Explosive                   | Explosive                 | 
+| Element Chance: | None                  | None                        | None                      | 
+| Fire Cost:      | 1 ammo fire 2 bullets | 1 ammo fire 2 bullets       | 1 ammo fire 2 bullets  | 
+| Lifesteal:      | None                  | None                        | 2.5% of damage dealt      | 
+| Skin:           | Lascaux (Vanilla)     | Lascaux (Vanilla)           | Moxxi Signature           | 
+| Rarity:         | Unique                | Unique                      | Unique or Moxxi           | 
   
   
 ![Discord Solver - Lascaux vs Moxxi Version](https://i.imgur.com/ySWyM5T.png "Don't worry guys... even if my screen capture show French text, my mods are in English")
@@ -60,6 +59,7 @@ This Mod has few options & fix, so feel free to use the BLCMM tool to select the
   - Fix for Koby "Rarity Color Fix": Unique (just in case if you use this old mod)
 - Moxxi Version:
   - Fix for Akathis "No More Moxxi Lifesteal" - 1.5% passive health regeneration instead of 2.5% Lifesteal
+  
 ![Discord Solver as reward for Moxxi mission](https://i.imgur.com/8JPt8ap.png "Don't worry guys... even if my screen capture show French text, my mods are in English") 
 
 **Note:** You can toggle between the choice from 2 Moxxi Discord Solver or between the choice from 1 Moxxi Discord Solver & 1 Kiss of Death. 
@@ -115,4 +115,3 @@ All files and content provided here were written by me (Astor), unless stated ot
 - Do not re-upload this mod or any of my mods anywhere without my explicit permission... ANYWHERE!
 
 * * * * *
-
