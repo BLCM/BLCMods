@@ -16,7 +16,7 @@ After hitting a non-phaselockable target, Phaselock remains artificially active 
 
 ### Compatibility
 This Phaselock Tweak is compatible with the Skill Scaling Patch.
-It should be compatible with most other mods, as long as they do not touch Phaselock. There shouldn't be any compatibility issues with the UCP. It is definitely not compatible with my Elemental Banshee Maya
+It should be compatible with most other mods, as long as they do not touch Phaselock behaviour. There shouldn't be any compatibility issues with the UCP. It is definitely not compatible with my Elemental Banshee Maya
 
 ### Credits
 
