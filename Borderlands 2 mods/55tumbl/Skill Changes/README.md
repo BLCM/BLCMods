@@ -52,7 +52,7 @@ Thanks to the Order of the Impending Storm for balancing Cloud Kill so well in t
 
 # Phaselock Tweak
 
-This **Phaselock Tweak** mod only affects the behaviour of Phaselock against targets that are immune to it. It does not change anything about the way Phaselock works with regular targets.
+This **Phaselock Tweak** only affects the behaviour of Phaselock against targets that are immune to it. It does not change anything about the way Phaselock works with regular targets.
 
 After hitting a non-phaselockable target, Phaselock remains artificially active for the base phaselock duration of 5 seconds (not affected by Suspension). During that time, Chain Reaction, Elated, and Wreck are active (if specced into) and give all their bonuses. Phaselock cooldown will only start after this phase is finished (even if not specced into Wreck/Elated/Chain Reaction)
 
@@ -64,7 +64,7 @@ It should be compatible with most other mods, as long as they do not touch Phase
 
 This was all written by me.
 
-THanks to Orudeon for encouraging me to get more phaselock BPD fun.
+Thanks to Orudeon for encouraging me to get some more phaselock BPD fun.
 
 ### Change log
 * [2018-09-08] v1.0.
