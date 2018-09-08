@@ -41,7 +41,7 @@ This Read Me is just here as a quick synopsis, for detailed informations, each M
  
 ## Acknowledgement
 
-A ~~big~~ huge thanks to @LightChaosman and his great - [BLCMM (Borderlands Community Mod Manager) tool](https://github.com/BLCM/BLCMods/wiki/Borderlands-Community-Mod-Manager) tool who make the Mods creation a real pleasure. 
+A ~~big~~ huge thanks to @LightChaosman and his great - [BLCMM (Borderlands Community Mod Manager)](https://github.com/BLCM/BLCMods/wiki/Borderlands-Community-Mod-Manager) tool who make the Mods creation a real pleasure. 
 
  * * * * *
  
