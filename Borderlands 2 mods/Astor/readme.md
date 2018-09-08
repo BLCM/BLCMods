@@ -23,7 +23,7 @@ This Read Me is just here as a quick synopsis, for detailed informations, each M
 
 ## [Quest Reward] [Hammerlock Jakobs Sponsor v1.0.1](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/Astor/Hammerlock%20Jakobs%20Sponsor) 
 
-- Hammerlock give Jakobs weapon/item reward for few of his mission in the main game, but not all of them... Now he will... and with the choice between 2 Blue weapons/items instead of a single one!
+- I noticed that Hammerlock give Jakobs weapon/item reward for few of his mission in the main game, but not all of them... Now he will... and with the choice between 2 Blue weapons/items instead of a single one!
  
  * * * * *
  
@@ -35,7 +35,7 @@ This Read Me is just here as a quick synopsis, for detailed informations, each M
  
 ## Acknowledgement
 
-A big thanks to @LightChaosman and his great [BLCMM (Borderlands Community Mod Manager)](https://github.com/BLCM/BLCMods/wiki/Borderlands-Community-Mod-Manager) tool who make the Mods creation a real pleasure. 
+A ~~big~~ huge thanks to @LightChaosman and his great - [BLCMM (Borderlands Community Mod Manager) tool](https://github.com/BLCM/BLCMods/wiki/Borderlands-Community-Mod-Manager) tool who make the Mods creation a real pleasure. 
 
  * * * * *
  
