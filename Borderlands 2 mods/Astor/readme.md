@@ -23,13 +23,19 @@ This Read Me is just here as a quick synopsis, for detailed informations, each M
 
 ## [Quest Reward] [Hammerlock Jakobs Sponsor v1.0.1](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/Astor/Hammerlock%20Jakobs%20Sponsor) 
 
-- I noticed that Hammerlock give Jakobs weapon/item reward for few of his mission in the main game, but not all of them... Now he will... and with the choice between 2 Blue weapons/items instead of a single one!
+- Hammerlock give Jakobs weapon/item reward for few of his mission in the main game, but not all of them... Now he will... and with the choice between 2 Blue weapons/items instead of a single one!
  
  * * * * *
  
  ## [New Weapon] [SMG Dahl Discord Solver - Lascaux Version v1.0.0]
 
  - I noticed that Torgue never made any SMG with explosive bullet... in fact, this kind of machine gun don't exist at all in BL2... After searching a while, I discover that, a -very!- long time ago, Dahl made the Discord Solver, a SMG who fire explosive bullet... and a lost weapon can still be found submerged in a shallow pool in Frostburn Canyon... just waiting that you pick it up!
+
+* * * * *
+
+ ## [New Weapon] [SMG Dahl Discord Solver - Moxxi Version v1.0.0]
+
+ - Identical as the Lascaux Version (just above), but as usual for the Vanilla Moxxi weapons, this Moxxi SMG will give you the benefice of 70% Critical Hit Bonus and 2.5% lifesteal on damage dealt... and can become the reward given by Moxxi for the mission "Hell Hath No Fury" in Opportunity.
 
 * * * * *
  
