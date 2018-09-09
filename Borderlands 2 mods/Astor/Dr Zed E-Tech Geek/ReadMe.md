@@ -43,6 +43,11 @@ The best thing to do in this case is probably to disable my mod (but don't worry
 - [ ] Make (again) a new playthrough to be sure that all the rewards are given correctly.
 - [ ] Clean the code and remove all my ~~shitty~~ notes. 
 
+### Credits & Thanks:
+
+I find a lot of useful informations on the Ressource page from the [Wiki](https://github.com/BLCM/BLCMods/wiki) of course, but also all the Mission Names and Mission Objectives on the [Resources page](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/FromDarkHell/Resources) from [FromDarkHell](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/FromDarkHell) , so thanks for your work, @FromDarkHell 
+
+
 ### Disclaimer
 
 All files and content provided here were written by me (Astor), unless stated otherwise.

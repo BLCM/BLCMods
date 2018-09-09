@@ -26,12 +26,15 @@ v1.0.0, September 2, 2018
 v1.0.1, September 5, 2018
 - Added Stalker of Stalkers in The Highlands... Ooops! I totally forget this mission... perhaps because the "Turn In" is done in a letter box in Overlook!
 
-
 ### To do:
 
 - [x] Check twice if I don't forget a Hammerlock mission somewhere (again).
 - [ ] Make (again) a new playthrough to be sure that all the rewards are given correctly.
 - [ ] Clean the code and remove all my ~~shitty~~ notes.
+
+### Credits & Thanks:
+
+I find a lot of useful informations on the Ressource page from the [Wiki](https://github.com/BLCM/BLCMods/wiki) of course, but also all the Mission Names and Mission Objectives on the [Resources page](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/FromDarkHell/Resources) from [FromDarkHell](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/FromDarkHell) , so thanks for your work, @FromDarkHell 
 
 ### Disclaimer
 
