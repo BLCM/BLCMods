@@ -1,10 +1,16 @@
-### Ammo Mod 1.0 by Lollo
-This is a simple mod that allows you change the amount of ammo you get from each ammo pickup. 
-Each ammo type has several options for the amount you want to receive: x1 (default), x1.5, x2, and Ludicrous.
+### Ammo Mod 1.1 by Lollo for BL2 and TPS
 
-Thanks to a bunch of the modders around here for being around to help me make my first mod.
+With help from many people on the Shadowevil discord
 
-Bit of a warning, if you use any of the Combat Rifle options it will either overwrite the UCP change to rifle ammo
-or it will be overwritten by the UCP.
+and the authors of the Unofficial Community Patch
 
-Feel free to change this code however you like but please, DO NOT REHOST IT
+This modifies the amount of ammo you get from world pickups.
+
+Each ammo type has several options for the amount you want. Most have x1 (default), x1.5, x2, and Ludicrous
+
+Fully compatible with both BL2 and TPS
+------- You will receive an error message about immporting a mod from BL2 or TPS. Ignore this. -------
+
+Mod made by me. Feel free to cannabalize it, but please DO NOT REHOST IT! 
+
+Thanks :)
