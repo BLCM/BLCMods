@@ -1,8 +1,6 @@
 ### Ammo Mod 1.1 by Lollo for BL2 and TPS
 
-With help from many people on the Shadowevil discord
-
-and the authors of the Unofficial Community Patch
+With help from many people on the Shadowevil discord and the authors of the Unofficial Community Patch.
 
 This modifies the amount of ammo you get from world pickups.
 
