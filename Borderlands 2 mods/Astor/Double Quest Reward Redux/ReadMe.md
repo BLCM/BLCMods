@@ -3,7 +3,7 @@
 ### What do this mod?
 
  - This Mod will give you the choice between 2 Unique weapons/items instead of a single one, so it will double the chance to get a weapon/item with desired parts... and reduce the time spent doing "farming".
- - Upgrade the customization skin/head rewards to a Blue weapon/item rewards for 9 missions, because once you (already) get them during the 1st playthrough, you don't care anymore
+ - Upgrade the customization skin/head rewards to a Blue weapon/item rewards for 9 missions, because once you (already) get them during the 1st playthrough, you don't care anymore.
 
 ![Octo as reward for Capture The Flag in Sawtooth Cauldron](https://i.imgur.com/ObFnzWS.png)
  
