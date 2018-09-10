@@ -61,7 +61,8 @@ v1.0.3, September 6, 2018
   - "Move" the Octo (Unique shotgun Tediore) reward from Slap Happy (Hammerlock mission) in The Highlands: Outwash to Capture The Flag in Sawtooth Cauldron, on this way, my Mod Hammerlock Jakobs Sponsor can reward the Tidal Wave (Unique shotgun Jakobs) with the Slap Happy mission.
 
 v1.0.4, September 10, 2018  
-  - Added a 3rd option in Uncle Teddy mission: the choice between 1 Commerce and 1 Bitch you give the plans to Hyperion. 
+  - Added a 3rd option in Uncle Teddy mission: the choice between 1 Commerce and 1 Bitch you give the plans to Hyperion.
+  - Added a option for the Moxxi Discord Solver given by Moxxi for the mission "Hell Hath No Fury" in Opportunity. 
 
 ### To do:
 
