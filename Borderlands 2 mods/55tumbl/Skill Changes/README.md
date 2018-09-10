@@ -10,7 +10,7 @@ Ask me for permission first if you wish to use larger portions of this code, mak
 
 # Phaselock Tweaks
 
-This mod includes 3 different alterations to Phaselocks behavior. Each one can be (de)selected independently of the others.
+This mod includes 3 different alterations to Phaselock's behavior. Each one can be (de)selected independently of the others.
 
 * **Always activate Wreck/Elated/Chain Reaction**: this only affects the behaviour of Phaselock against targets that are immune to it. It does not change anything about the way Phaselock works with regular targets. After hitting a non-phaselockable target, Phaselock remains artificially active for the base phaselock duration of 5 seconds (not affected by Suspension). During that time, Chain Reaction, Elated, and Wreck are active (if specced into) and give all their bonuses. Phaselock cooldown will only start after this phase is finished (even if not specced into Wreck/Elated/Chain Reaction)
 
