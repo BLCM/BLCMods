@@ -7,7 +7,7 @@ This Read Me is just here as a quick synopsis, for detailed informations, each M
 
  * * * * *
  
-## [Quest Reward] [Double Quest Reward Redux v1.0.3](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/Astor/Double%20Quest%20Reward%20Redux)
+## [Quest Reward] [Double Quest Reward Redux v1.0.3]
 
  - Upgrade the customization skin/head rewards to a Blue weapon/item rewards for 9 missions.
  - Choice between 2 Unique weapons/items instead of a single one, so it will double the chance to get a Unique weapon/item with desired parts.
@@ -15,13 +15,13 @@ This Read Me is just here as a quick synopsis, for detailed informations, each M
  
  * * * * *
  
-## [Quest Reward] [Dr Zed E-Tech Geek v1.0.0](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/Astor/Dr%20Zed%20E-Tech%20Geek)
+## [Quest Reward] [Dr Zed E-Tech Geek v1.0.0]
 
 - The 7 Missions given by Dr Zed in the main game will be rewarded with a E-Tech weapon/item, with the choice between 2 E-Tech weapons/items instead of a single one.
  
  * * * * * 
 
-## [Quest Reward] [Hammerlock Jakobs Sponsor v1.0.1](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/Astor/Hammerlock%20Jakobs%20Sponsor) 
+## [Quest Reward] [Hammerlock Jakobs Sponsor v1.0.1]
 
 - Hammerlock give Jakobs weapon/item reward for few of his mission in the main game, but not all of them... Now he will... and with the choice between 2 Blue weapons/items instead of a single one!
  
@@ -29,13 +29,18 @@ This Read Me is just here as a quick synopsis, for detailed informations, each M
  
  ## [New Weapon] [SMG Dahl Discord Solver - Lascaux Version v1.0.0]
 
- - I noticed that Torgue never made any SMG with explosive bullet... in fact, this kind of machine gun don't exist at all in BL2... After searching a while, I discover that, a -very!- long time ago, Dahl made the Discord Solver, a SMG who fire explosive bullet... and a lost weapon can still be found submerged in a shallow pool in Frostburn Canyon... just waiting that you pick it up!
+In their early days in the making of weapons, Dahl, in collaboration with Torgue create the Discord Solver, a SMG who fire explosive bullet. 
+Unfortunately, the agreement between the two weapons manufacturers did not last long, and the production of the SMG stopped quickly -How ironic for a weapon that's named Discord Solver!- and Torgue created the Pocket Rocket.
+
+Anyway, remnant of the past, a *"lost"* Discord Solver (probably dropped by a bandit?) can still be found... submerged in a shallow pool in Frostburn Canyon.
 
 * * * * *
 
  ## [New Weapon] [SMG Dahl Discord Solver - Moxxi Version v1.0.0]
 
- - Identical as the Lascaux Version (just above), but as usual for the Vanilla Moxxi weapons, this Moxxi SMG will give you the benefice of 70% Critical Hit Bonus and 2.5% lifesteal on damage dealt... and can become the reward given by Moxxi for the mission "Hell Hath No Fury" in Opportunity.
+ It would seem that Moxxi still has a specimen of the Discord Solver in her private Signature collection of weapons, but no one has ever seen it, not even Marcus ... so maybe it's just a legend after all? 
+ 
+ ... or perhaps this weapon can become the reward given by Moxxi for the mission "Hell Hath No Fury" in Opportunity...  Who know? 
 
 * * * * *
  

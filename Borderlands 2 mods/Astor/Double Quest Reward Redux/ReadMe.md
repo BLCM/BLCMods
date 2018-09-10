@@ -38,10 +38,6 @@ There's a few things which I'd considered adding to this mod, but were already w
 
 - [Better Quest](https://github.com/BLCM/BLCMods/blob/master/Borderlands%202%20mods/Hemaxhu/Quest%20Rewards/Better%20Quests) by [Hemaxu](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/Hemaxhu) : His Mod give you weapon/item rewards above 'Green' level up to a Legendary, and does NOT replaces unique rewards.
 
-### Credits:
-
-- This mod was totally build from scratch, but was strongly inspired by the -unfortunately now defunct!- "Double Quest Rewards" Mod initially created by Koby (among many others great Mods), hence the "Redux" in its name.
-
 ### Changelog:
 
 v1.0.0, September 1, 2018
@@ -64,6 +60,10 @@ v1.0.2, September 3, 2018
 v1.0.3, September 6, 2018
   - "Move" the Octo (Unique shotgun Tediore) reward from Slap Happy (Hammerlock mission) in The Highlands: Outwash to Capture The Flag in Sawtooth Cauldron, on this way, my Mod Hammerlock Jakobs Sponsor can reward the Tidal Wave (Unique shotgun Jakobs) with the Slap Happy mission.
 
+v1.0., September 10, 2018  
+  - Added a 3rd option in Uncle teddy: the choice between 1 Commerce and 1 Bitch you give the plans to Hyperion. 
+
+
 ### To do:
 
 - [x] Bring back some Unique weapon/Item as mission rewards for the main game
@@ -75,6 +75,12 @@ v1.0.3, September 6, 2018
 - [ ] Erase this to-do list.
 
 So, yes... in the future, more addition will be done in this Mod (who by the way is my first one), but only when I will find some free time, so stay tuned :wink:
+
+### Credits a Thanks:
+
+I find a lot of useful informations on the Ressource page from the [Wiki](https://github.com/BLCM/BLCMods/wiki) of course, but also all the Mission Names and Mission Objectives on the [Resources page](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/FromDarkHell/Resources) from [FromDarkHell](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/FromDarkHell) , so thanks for your work, @FromDarkHell 
+
+Note: This mod was totally build from scratch, but was (strongly) inspired by the -unfortunately now defunct!- "Double Quest Rewards" Mod initially created by Koby (among many others great Mods), hence the "Redux" in its name.
 
 ### Disclaimer
 
