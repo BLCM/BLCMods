@@ -19,7 +19,7 @@ Concerning Deathtrap and the Sabre Turret, the main problem addressed by this pa
 
 Various changes to character skills, not (or maybe not yet) included in my Skill Scaling Patch.
 
-**Phaselock Tweak** makes it so that Phaselock stays active for its base duration after hitting an immune target, so that Wreck / Elated / Chain Reaction give all their bonuses.
+**Phaselock Tweaks** Contains a few alterations to Phaselock's behaviour: 1) Make it so that Phaselock stays active for its base duration after hitting an immune target, so that Wreck / Elated / Chain Reaction give all their bonuses. 2) Delay Helios so that it happens after Converge and Ruin. 3) Give Helios its intended visual effects.
 
 **Cloud Kill Dynamic Nerf** nerfs Cloud Kill, uh well, dynamically. That is, Cloud Kill gets nerfed *a lot* in the early levels, and *a lot less* (or pretty much not at all) in the end game. Several options are available.
 
