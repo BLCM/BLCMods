@@ -1,6 +1,7 @@
 ## Discord Solver (Moxxi Version)
  
-In their early days in their making of weapons, Dahl, in collaboration with Torgue created the Discord Solver, a SMG who fire explosive bullet. 
+In their early days in their making of weapons, Dahl, in collaboration with Torgue created the Discord Solver, a SMG who shot Gyrojet explosive bullet. 
+ 
 Unfortunately, the agreement between the two weapons manufacturers did not last long, and the production of the SMG stopped quickly -How ironic for a weapon that's named Discord Solver!- and Torgue seized the patents to create the Pocket Rocket.
 
 It would seem that Moxxi still has a specimen of the Discord Solver in her private Signature collection of weapons, but no one has ever seen it, not even Marcus ... so maybe it's just a legend after all?
@@ -13,9 +14,9 @@ This is where you can find it...
 
 ## What special with this weapon?
 
-- Shot two explosive bullet for the cost of one bullet (can be doubled if you use the Aaron00000's "Double Anarchy" mod).
-- Keep almost all his Unique weapon specificity (very high firerate, variable burst-fire round, etc), but I change the Fire Mode to Explosive bullet... and I add some Grenade Damage too  
-- Finally, to balance this "a bit too powerful" submachine gun, I "just" reduce the initial damage and the accuracy too (more powerful weapon, but more missing shot... but not that much)
+- Shot two Gyrojet explosive bullet for the cost of one bullet (can be doubled if you use the Aaron00000's "Double Anarchy" mod).
+- Keep almost all his Unique weapon specificity (very high firerate, variable burst-fire round, etc), but I change the Fire Mode to Explosive bullet... 
+- Impact explosion boosted by Grenade Damage. 
 - As usual for the Vanilla Moxxi weapons, this Moxxi SMG will give you the benefice of 70% Critical hit bonus and 2.5% lifesteal on damage dealt.
 
 ![Discord Solver - Moxxi Version](https://i.imgur.com/QXo8ljS.png "Don't worry guys... even if my screen capture show French text, my mods are in English")
