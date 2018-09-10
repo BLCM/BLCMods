@@ -14,7 +14,7 @@
     - The Name Game (Three Horns - Divide)	  
     - This Town Ain't Big Enough (Southern Shelf)
   	
-![Jakobs pistol as reward for Handsome Jack Here! in Southern Shelf](https://i.imgur.com/1TWYXxs.png)
+![Jakobs pistol as reward for Handsome Jack Here! in Southern Shelf](https://i.imgur.com/1TWYXxs.png "Don't worry guys... even if my screen capture show French text, my mods are in English")
 	
 _**Note:** As for my Double Quest Reward "Redux", this Mod will give you the choice between 2 weapons/items instead of a single one, so it will double the chance to get a weapon/item with desired parts._	
 
