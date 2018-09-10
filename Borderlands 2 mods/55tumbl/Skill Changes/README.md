@@ -8,11 +8,16 @@ Ask me for permission first if you wish to use larger portions of this code, mak
 
 *- Do not re-upload any of those files anywhere.*
 
-# Phaselock Tweak
+# Phaselock Tweaks
 
-This **Phaselock Tweak** only affects the behaviour of Phaselock against targets that are immune to it. It does not change anything about the way Phaselock works with regular targets.
+This mod includes 3 different alterations to Phaselocks behavior. Each one can be (de)selected independently of the others.
 
-After hitting a non-phaselockable target, Phaselock remains artificially active for the base phaselock duration of 5 seconds (not affected by Suspension). During that time, Chain Reaction, Elated, and Wreck are active (if specced into) and give all their bonuses. Phaselock cooldown will only start after this phase is finished (even if not specced into Wreck/Elated/Chain Reaction)
+* **Always activate Wreck/Elated/Chain Reaction**: this only affects the behaviour of Phaselock against targets that are immune to it. It does not change anything about the way Phaselock works with regular targets. After hitting a non-phaselockable target, Phaselock remains artificially active for the base phaselock duration of 5 seconds (not affected by Suspension). During that time, Chain Reaction, Elated, and Wreck are active (if specced into) and give all their bonuses. Phaselock cooldown will only start after this phase is finished (even if not specced into Wreck/Elated/Chain Reaction)
+
+* **Delay Helios so that it happens after Converge and Ruin**: This makes Helios proc 1.25 seconds later in the Phaselock chain of events. The initial Helios explosion should now happen after the target is slagged. To be honest, it really does not change much since about 80% of Helios' damage is in the Burn DOT (which did already benefit from Ruin's slag). What's probably a much bigger deal is that Helios now also happens after Converge, and may thus hit more enemies.
+
+* **Give Helios its visual effects**: This is purely visual: fixed a bug (I think) that deleted what seems to be the visual effects intended from Helios.
+
 
 ### Compatibility
 This Phaselock Tweak is compatible with the Skill Scaling Patch.
@@ -25,6 +30,7 @@ This was all written by me.
 Thanks to Orudeon for encouraging me to get some more phaselock BPD fun.
 
 ### Change log
+* [2018-09-09] v1.1. Added the Helios stuff.
 * [2018-09-08] v1.0.
 
 
