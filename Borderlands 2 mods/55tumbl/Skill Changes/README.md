@@ -16,7 +16,7 @@ This mod includes 3 different alterations to Phaselock's behavior. Each one can 
 
 * **Delay Helios so that it happens after Converge and Ruin**: This makes Helios proc 1.25 seconds later in the Phaselock chain of events. The initial Helios explosion should now happen after the target is slagged. To be honest, it really does not change much since about 80% of Helios' damage is in the Burn DOT (which did already benefit from Ruin's slag). What's probably a much bigger deal is that Helios now also happens after Converge, and may thus hit more enemies.
 
-* **Give Helios its visual effects**: This is purely visual: fixed a bug (I think) that deleted what seems to be the visual effects intended from Helios.
+* **Give Helios its visual effects**: This is purely visual: fixed a bug (I think) that deleted what seem to be the visual effects intended for Helios.
 
 
 ### Compatibility
