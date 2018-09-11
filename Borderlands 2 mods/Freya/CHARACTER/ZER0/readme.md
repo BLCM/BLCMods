@@ -10,6 +10,8 @@
 
 This mod is not done at all, balance will always subject to change.
 
+Yes, amp shields do infact instantly make you go out of Spectre, we do not know the cause nor will we change it since we're afraid of amp shields being too strong in Spectre.
+
 Any other things that are not shown like replacements for class mods (that aren't Legendary) are shown in the file.
 
 If you are experiencing issues with the UCP and Zer0 Rework merged, please disable the following (thanks Apocalyptech!):
