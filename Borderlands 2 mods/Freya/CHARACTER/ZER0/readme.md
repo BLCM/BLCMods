@@ -6,7 +6,7 @@
 
 *- Using this mod for a modpack is allowed with permission from one of the mod author(s).*
 
-# Note
+# Notes
 
 This mod is not done at all, balance will always subject to change.
 
