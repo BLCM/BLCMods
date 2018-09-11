@@ -72,7 +72,7 @@ Action Skill. Press F to create a holographic decoy and gain adaptive armor for 
   - Bl00dy Trails (Innervate): While Spectre is active you gain increased Movement Speed, Double Shot Chance as well as increased Fire Rate
 
 - Tier 5
-  - Serpent's Prey (Tw0 Fang): Increases your Damage Over Time Damage. Additionally, whites are less common and rare loot is more common.
+  - Serpent's Prey (Tw0 Fang): Increases your Damage Over Time Damage. Additionally, whites are less common.
 
 - Tier 6
   - Death Bl0ssom: No changes besides Explosive being replaced with Slag.
@@ -85,8 +85,8 @@ Action Skill. Press F to create a holographic decoy and gain adaptive armor for 
 
 - Tier 2
   - Death Sentence (Grim): Kill Skill. Killing an enemy causes your shields to quickly regenerate and increases your Melee Damage for a few seconds.
-  - Resurgence: Killing an enemy with a melee attack or a corrosive attack restores health. The lower your hp, the more hp you receive.
-
+  - Resurgence: No changes
+  
 - Tier 3
   - Warri0r's Rage (F0ll0wthr0ugh): Kill Skill. Killing an enemy increases your Melee Damage and Movement Speed with the sacrifice of some of your health.
   - Execute: Melee Override Skill. While Spectre is active you can dash forward, when an enemy is under your crosshairs you can dash into them. Press V to dash forward a short distance and perform a poisonous melee attack, dealing massive damage.
@@ -114,3 +114,4 @@ https://imgur.com/a/CJg9Ecy
 
 # Change log 
 - v1.0: Initial release
+- v1.1: Clean up of some code, misinformation fixed and Behavior Edits for Action Skill
