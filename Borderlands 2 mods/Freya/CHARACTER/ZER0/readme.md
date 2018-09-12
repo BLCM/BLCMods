@@ -53,7 +53,8 @@ Action Skill. Press F to create a holographic decoy and gain adaptive armor for 
   - At One With The Gun: Greatly improves your Weapon Damage when shooting from the hip. Additionally, increases Reload Speed and Magazine Size.
 
 - Tier 6
-  - Critical Ascensi0n: Scoring a Critical Hit increases your Gun Damage and Critical Hit Damage. This effect can stack up to 999 times. Stacks slowly decay if you haven't scored a critical hit in a while.
+  - Critical Ascensi0n: Scoring a Critical Hit increases your Gun Damage and Critical Hit Damage but you lose 0.5% of your max health per stack. This effect can stack up to 999 times. Stacks will start decaying after 15 seconds if you haven't scored a critical hit in awhile. You can only get a stack of Critical Ascensi0n every 2 seconds.
+
 
 ## Cunning
 
