@@ -30,6 +30,7 @@ This was all written by me.
 Thanks to Orudeon for encouraging me to get some more phaselock BPD fun.
 
 ### Change log
+* [2018-09-12] v1.2. Fixed a bug that got Phaselock stuck after a death during the artificial Phaselock time.
 * [2018-09-09] v1.1. Added the Helios stuff.
 * [2018-09-08] v1.0.
 
