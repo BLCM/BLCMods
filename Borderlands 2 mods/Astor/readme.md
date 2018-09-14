@@ -3,31 +3,36 @@
 
 I'm Astor, and I apologize in advance for some grammar and/or syntax errors, but my mother tongue is French.
 
+You are on BL2-Mods repository, where you can find all my Mods for Borderlands 2. (For the TPS Mods, please go to the TPS-Mods section) 
+
 This Read Me is just here as a quick synopsis, for detailed informations, each Mod has is own Read Me (and even a Changelog), so don't hesitate -whoosh!- to give a look on it.
 
  * * * * *
  
-## [Quest Reward] [Double Quest Reward Redux v1.0.3]
+## [Quest Reward] Double Quest Reward Redux v1.0.4
 
  - Upgrade the customization skin/head rewards to a Blue weapon/item rewards for 9 missions.
  - Choice between 2 Unique weapons/items instead of a single one, so it will double the chance to get a Unique weapon/item with desired parts.
- - In the mission Uncle Teddy, if you give the plans to Hyperion you will have the choice between 2 options: The Bitch (Legendary SMG Hyperion) or The Commerce (Unique Shock SMG Hyperion)
+ - In the mission Uncle Teddy, if you give the plans to Hyperion you will have 3 options: 
+   - the choice between 2 Bitch (Legendary SMG Hyperion) 
+   - the choice between 2 Commerce (Unique Shock SMG Hyperion)
+   - the choice between 1 Bitch (Legendary SMG Hyperion) or 1 Commerce (Unique Shock SMG Hyperion)
  
  * * * * *
  
-## [Quest Reward] [Dr Zed E-Tech Geek v1.0.0]
+## [Quest Reward] Dr Zed E-Tech Geek v1.0.0
 
 - The 7 Missions given by Dr Zed in the main game will be rewarded with a E-Tech weapon/item, with the choice between 2 E-Tech weapons/items instead of a single one.
  
  * * * * * 
 
-## [Quest Reward] [Hammerlock Jakobs Sponsor v1.0.1]
+## [Quest Reward] Hammerlock Jakobs Sponsor v1.0.1
 
 - Hammerlock give Jakobs weapon/item reward for few of his mission in the main game, but not all of them... Now he will... and with the choice between 2 Blue weapons/items instead of a single one!
  
  * * * * *
  
- ## [New Weapon] [SMG Dahl Discord Solver - Lascaux Version v1.0.0]
+ ## [New Weapon] SMG Dahl Discord Solver - Lascaux Edition v1.0.1
 
 In their early days in the making of weapons, Dahl, in collaboration with Torgue create the Discord Solver, a SMG who fire explosive bullet. 
 Unfortunately, the agreement between the two weapons manufacturers did not last long, and the production of the SMG stopped quickly -How ironic for a weapon that's named Discord Solver!- and Torgue created the Pocket Rocket.
@@ -36,7 +41,7 @@ Anyway, remnant of the past, a *"lost"* Discord Solver (probably dropped by a ba
 
 * * * * *
 
- ## [New Weapon] [SMG Dahl Discord Solver - Moxxi Version v1.0.0]
+ ## [New Weapon] SMG Dahl Discord Solver - Moxxi Edition v1.0.1
 
  It would seem that Moxxi still has a specimen of the Discord Solver in her private Signature collection of weapons, but no one has ever seen it, not even Marcus ... so maybe it's just a legend after all? 
  
