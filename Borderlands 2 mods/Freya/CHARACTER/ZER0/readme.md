@@ -29,7 +29,7 @@ Compatible with any mod that isn't Zer0 related.
 
 ## Spectre (Decepti0n)
 
-Action Skill. Press F to create a holographic decoy and gain adaptive armor for a few seconds. The longer you are invisible the more damage your attacks deal, ending the invisibility sooner by meleeing your enemy results in a shorter Spectre cooldown.
+Action Skill. Press F to create a holographic decoy and gain adaptive armor for a few seconds. The longer you are in Spectre the more damage your attacks deal, ending Spectre sooner by meleeing your enemy results in a shorter Spectre cooldown.
 
 ## Deadeye (Sniping)
 
@@ -83,7 +83,7 @@ Action Skill. Press F to create a holographic decoy and gain adaptive armor for 
 ## Bloodshed
 
 - Tier 1
-  - Backstab: No changes besides it's particle.
+  - Killing Bl0w: No changes.
   - Ir0n Skin (Ir0n Hand): Increases your Shield Capacity and Max Health.
 
 - Tier 2
@@ -94,9 +94,10 @@ Action Skill. Press F to create a holographic decoy and gain adaptive armor for 
   - Warri0r's Rage (F0ll0wthr0ugh): Kill Skill. Killing an enemy increases your Melee Damage and Movement Speed with the sacrifice of some of your health.
   - Execute: Melee Override Skill. While Spectre is active you can dash forward, when an enemy is under your crosshairs you can dash into them. Press V to dash forward a short distance and perform a poisonous melee attack, dealing massive damage.
   - Killing Blow: No changes.
+  - Predat0r's Blood (Backstab): Increases melee damage and gives you and your team health regen.
 
 - Tier 4
-  - D0uble Edged (Be Like Water): Shooting an enemy increases the gun damage of your next shot. Melee attacks increases your movement speed and drains health.
+  - D0uble Edged (Be Like Water): Shooting an enemy increases the gun damage of your next shot. Melee attacks increases your movement speed and drains shield.
 
 - Tier 5
   - Elemental Disc0urage (Like The Wind): When your shields are up, you deal increased Melee and Gun Damage. Additionally, you become highly resistant to Damage Over Times.
@@ -120,3 +121,4 @@ https://imgur.com/a/CJg9Ecy
 - v1.1: Clean up of some code, misinformation fixed and Behavior Edits for Action Skill
 - v1.2: Renamed Assassin Hologram to Predat0r Hologram, Added ADS Speed to Spectre and Critical Ascension now gives you worse Recharge Rate instead of worse Max Health.
 - v1.3: Fixed a bug with Critical Ascension gaining +15 seconds for every stack lost
+- v1.4: Buffed Spectre's Melee Damage, worded Spectre's Description better, replaced Backstab with Predat0r's Bl00d and changed D0uble Edged's health drain into shield drain.
