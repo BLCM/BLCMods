@@ -10,6 +10,3 @@ necessary for you to start running mods on your own.  (The previous tool, Filter
 supported, and has been replaced by BLCMM.)
 
 A [Wiki](https://github.com/BLCM/BLCMods/wiki) has been established! Share and gain modding knowledge
-
-We are now on the [GBX Forums](https://forums.gearboxsoftware.com/t/unofficial-community-patch-thread/1557735)! 
-However please only talk about Shadow's Patch and not any custom patches
