@@ -1,4 +1,4 @@
-## Double Quest Reward "Redux"
+## Double Quest Reward Redux
 
 ### What do this mod?
 
@@ -30,6 +30,20 @@ Feel Free to use the BLCMM tool to select the option of your choice.
 
 ![BLCMM - Pick the option of your choice](https://i.imgur.com/jU3Ef7j.png "Don't worry guys... even if my screen capture show French text, my mods are in English")
 
+### Compatibility:
+
+- 100% compatible with UCP 4.1
+- Should be compatible with most other mods, as long as they do not touch the Quest Reward.
+- This mod was tested:
+  - Stand alone 
+  - With [UCP Patch](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/Community%20Patch%20Team)   
+  - With [UCP Patch](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/Community%20Patch%20Team)  & [Better Quest](https://github.com/BLCM/BLCMods/blob/master/Borderlands%202%20mods/Hemaxhu/Quest%20Rewards/Better%20Quests) by [Hemaxu](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/Hemaxhu) .
+  - With [UCP Patch](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/Community%20Patch%20Team)  & [Better Loot](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/Apocalyptech/BL2%20Better%20Loot%20Mod) by [Apocalyptech](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/Apocalyptech)
+  - With [UCP Patch](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/Community%20Patch%20Team)  & [Cold Dead Hands](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/Apocalyptech/BL2%20Cold%20Dead%20Hands) by [Apocalyptech](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/Apocalyptech)
+
+
+To be sure to get this mod working correctly (as intended), don't forget to place it **AFTER** UCP 4.1 and Better Quest (Better Loot & Cold Dead Hands can be placed anywhere regarding my mod). 
+
 ### Other Recommended Mods:
 
 There's a few things which I'd considered adding to this mod, but were already well-covered in other mods, so instead I'll just mention them here:
@@ -40,27 +54,27 @@ There's a few things which I'd considered adding to this mod, but were already w
 
 ### Changelog:
 
-v1.0.0, September 1, 2018
- - Initial public release
+- v1.0.0, September 1, 2018
+  - Initial public release
 
-v1.0.1, September 2, 2018
- - Upgrade the customization skin/head rewards to a Blue weapon/item rewards for 8 missions:
-   - Capture The Flag (Sawtooth Cauldron) 
-   - In Memoriam (Three Horns - Divide)
-   - No Vacancy (Three Horns - Valley)
-   - Shielded Favors (Southern Shelf) 
-   - Statuesque (Opportunity) 
-   - The Cold Shoulder (The Fridge)
-   - The Overlooked #1: Medicine Man (The Highlands)
-   - To Grandmother's House We Go (Eridium Blight)
+- v1.0.1, September 2, 2018
+  - Upgrade the customization skin/head rewards to a Blue weapon/item rewards for 8 missions:
+  - Capture The Flag (Sawtooth Cauldron) 
+  - In Memoriam (Three Horns - Divide)
+  - No Vacancy (Three Horns - Valley)
+  - Shielded Favors (Southern Shelf) 
+  - Statuesque (Opportunity) 
+  - The Cold Shoulder (The Fridge)
+  - The Overlooked #1: Medicine Man (The Highlands)
+  - To Grandmother's House We Go (Eridium Blight)
    
-v1.0.2, September 3, 2018   
- - In the mission Uncle Teddy, if you give the plans to Una, the reward will be the Lady Fist, and if you give the plans to Hyperion you will have the choice to toggle between 2 options: The Bitch (Legendary SMG Hyperion) or The Commerce (Unique Shock SMG Hyperion)
+- v1.0.2, September 3, 2018   
+  - In the mission Uncle Teddy, if you give the plans to Una, the reward will be the Lady Fist, and if you give the plans to Hyperion you will have the choice to toggle between 2 options: The Bitch (Legendary SMG Hyperion) or The Commerce (Unique Shock SMG Hyperion)
  
-v1.0.3, September 6, 2018
+- v1.0.3, September 6, 2018
   - "Move" the Octo (Unique shotgun Tediore) reward from Slap Happy (Hammerlock mission) in The Highlands: Outwash to Capture The Flag in Sawtooth Cauldron, on this way, my Mod Hammerlock Jakobs Sponsor can reward the Tidal Wave (Unique shotgun Jakobs) with the Slap Happy mission.
 
-v1.0.4, September 10, 2018  
+- v1.0.4, September 10, 2018  
   - Added a 3rd option in Uncle Teddy mission: the choice between 1 Commerce and 1 Bitch you give the plans to Hyperion.
   - Added a option for the Moxxi Discord Solver given by Moxxi for the mission "Hell Hath No Fury" in Opportunity. 
 
@@ -76,7 +90,7 @@ v1.0.4, September 10, 2018
 
 So, yes... in the future, more addition will be done in this Mod (who by the way is my first one), but only when I will find some free time, so stay tuned :wink:
 
-### Credits a Thanks:
+### Credits & Thanks:
 
 I find a lot of useful informations on the Ressource page from the [Wiki](https://github.com/BLCM/BLCMods/wiki) of course, but also all the Mission Names and Mission Objectives on the [Resources page](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/FromDarkHell/Resources) from [FromDarkHell](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/FromDarkHell) , so thanks for your work, @FromDarkHell 
 
