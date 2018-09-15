@@ -118,3 +118,4 @@ https://imgur.com/a/CJg9Ecy
 # Change log 
 - v1.0: Initial release
 - v1.1: Clean up of some code, misinformation fixed and Behavior Edits for Action Skill
+- v1.2: Renamed Assassin Hologram to Predat0r Hologram, Added ADS Speed to Spectre and Critical Ascension now gives you worse Recharge Rate instead of worse Max Health.
