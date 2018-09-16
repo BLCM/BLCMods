@@ -1,4 +1,5 @@
-## Discord Solver (Moxxi Version)
+
+## SMG Dahl Discord Solver (Moxxi Edition)
  
 In their early days in their making of weapons, Dahl, in collaboration with Torgue created the Discord Solver, a SMG who shot GyroJet explosive bullet. 
  
@@ -16,28 +17,32 @@ This is where you can find it...
 
 - Keep (almost) of all his Unique weapon specificity: very high firerate, variable burst-fire round, shot two bullets for the cost of one ammo, etc... for more details, see [Borderlands Wiki](http://borderlands.wikia.com/wiki/Lascaux)  
 - Initial damage reduced by 20%, but...
-  - FireMode modified to shoot GyroJet Explosive bullet. 
-  - Shot two GyroJet explosive bullet for the cost of one ammo (can be doubled if you use the Aaron00000's "Double Anarchy" mod).
-  - Impact Explosion boosted by Grenade Damage.  
+  - FireMode upgraded to shoot the Pocket Rocket GyroJet Explosive bullet. 
+  - Shot two GyroJet explosive bullet simultaneously for the cost of one ammo (can be doubled if you use the Aaron00000's "Double Anarchy" mod).
+  - Explosion Radius incrasead by 50%.
+  - Impact Explosion boosted by Grenade Damage. 
+  - Firing Mode Sound upgraded to GyroJet Explosive bullet sound (less Ratatatatatata and more Kaboom) 
 - As usual for the Vanilla Moxxi weapons, this Moxxi SMG will give you the benefice of:
   - 70% Critical hit bonus
   - 2.5% lifesteal on damage dealt.
 
-![Discord Solver - Moxxi Version](https://i.imgur.com/QXo8ljS.png "Don't worry guys... even if my screen capture show French text, my mods are in English")
+![Discord Solver Moxxi Signature Classic and Cartier](https://i.imgur.com/nfzLNMm.png "Don't worry guys... even if my screen capture show French text, my mods are in English")
 
-**Note:** As this version of the Discord Solver is a Moxxi weapon, she get a ~~vivid red~~ ... gorgeous Moxxi Signature skin.
+**Note:** As this version of the Discord Solver is a Moxxi weapon, you can choose between 2 Moxxi Signature skin : the *Classic* or the *Cartier* skin
 
 ### Options: 
 
 This Mod has few options & fix, so feel free to use the BLCMM tool to select the best option that suit you.
 
-- The Bullet Speed Mode has a toggle option between Normal/Double/Triple Speed
-- The Firing Mode has a toggle option between Pocket Rocket or GyroJet explosive bullet (see Compatibility below)
+- The GyroJet Explosive Bullet Speed has a toggle option between Normal/Double/Triple Speed
 - The Explosion Impact Type has a toggle option between Explosive/Explosive ForceFlinch/None
 - The Splash Format has a toggle option between Grenade/Rocket/Reaper (see Compatibility below)
+- The Moxxi's Lifesteal can be toggle between the "Classic" instant healing or with Orb Transfusion (similar to the SR Chère-Amie)
 - The Weapon Card has a toggle option between Show/Hide the additional informations.
-- The Moxxi's Lifesteal can be toggle between the "Classic" instant healing or with Orb Transfusion (similar to the SR ChÃ¨re-Amie)
-- The Discord Solver Moxxi Version can become the reward given by Moxxi for the mission "Hell Hath No Fury" in Opportunity (see picture below).
+- The Moxxi weapon skin has a toggle option between:
+  - The Moxxi Signature *Classic* Edition ("Red Fire" in the RL Creamer/SG Heart Breaker style) which is timeless and can be used in any occasion.
+  - The Moxxi Signature *Cartier* Edition ("Red Cartier" in the style from the renowned French jeweler) which is very stylish and sophisticated, and by the way the all time favorite from Aurelia the Baroness.
+- The Discord Solver Moxxi Edition can become the reward given by Moxxi for the mission "Hell Hath No Fury" in Opportunity (see picture below).
 
 ... and few fix:
 
@@ -66,8 +71,12 @@ This Mod has few options & fix, so feel free to use the BLCMM tool to select the
 
 - v1.0.0, September 8, 2018
   - Initial public release
-- v1.0.1, September 15, 2018  
-  - Added Fix for Orudeon's "Bayonet Enhancements" (Bayonet in slot 2) + Bayonet Buff
+- v1.0.1, September 12, 2018  
+  - Added Fix for Orudeon's Bayonet Enhancements (Bayonet in slot 2) + Bayonet Buff
+- v1.0.2, September 14, 2018  
+  - Added GyroJet sound
+- v1.0.3, September 16, 2018
+  - Added Moxxi Signature *Classic* skin   
  
 ### Compatibility:
 
@@ -80,36 +89,12 @@ This Mod has few options & fix, so feel free to use the BLCMM tool to select the
   - To be sure to get the fix Orudeon's Bayonet Enhancements and/or Orudeon's Bayonet Buff working correctly (as intended), don't forget to place my mod **AFTER** Orudeon's Bayonet Enhancements & Bayonet Buff. 
   
   - This Mod **KEEP** the specific burst from the Lascaux, so if you use the Bandit Brand Tweaks v1.2 by Orudeon, there is a option that reduce the burst to five-shot bursts.  To get back the specific burst, just open your Orudeon's Bandit Brand Tweaks folder, go to: *SMG/Burst Count/* (if you use the Gears Overhaul Orudeon's Mod v1.35, the path will be: *Brands Tweaks/Bandit Brand Tweaks v1.2 by Orudeon/SMG/Burst Count/*) and uncheck the following line:  
-```
-[ ] set GD_Weap_SMG.Barrel.SMG_Barrel_Bandit_Lascaux ZoomWeaponAttributeEffects ((AttributeToModify = AttributeDefinition'D_Attributes.Weapon.WeaponAutomaticBurstCount',ModifierType = MT_PreAdd,BaseModifierValue = (BaseValueConstant = 1.000000, BaseValueAttribute = None, InitializationDefinition = None, BaseValueScaleConstant = 1.000000)))
-``` 
+  ```
+  [ ] set GD_Weap_SMG.Barrel.SMG_Barrel_Bandit_Lascaux ZoomWeaponAttributeEffects ((AttributeToModify = AttributeDefinition'D_Attributes.Weapon.WeaponAutomaticBurstCount',ModifierType = MT_PreAdd,BaseModifierValue = (BaseValueConstant = 1.000000, BaseValueAttribute = None, InitializationDefinition = None, BaseValueScaleConstant = 1.000000)))
+  ``` 
   - This mod use the Pocket Rocket Firing Mode, so if you use any mode that changes the attributes from the Pocket Rocket, it will affect this mod, and obviously the firing of the Discord Solver. In this case, Just revert the modification done previously to the Pocket Rocket.
   
   - This mode use Grenade Damage for the Splash Format, so if you are going to use the Discord Solver with a Siren character :warning: Maya :warning: , don't forget to toggle the Grenade Damage to Reaper Splash Damage.
-  
-### Troubleshooting:
-
-If a option or a fix don't work as intended, it's not because the Mod is not well coded, but probably (read: in 90% of cases) because this option is overwritten by another mod.
-
-#### What's go wrong?
-
-It's simply because 2 commands work on the same parameter, and one is overwritten by the other.
-
-Better to explain that with a exemple, isn't?
-
-Let's take 2 of my mods:
-
-1.  The *Double Quest Rewards*, which give the choice between 2 *Kiss of Death* given by Moxxi for the mission *Hell Hath No Fury*.  
- 
-2. The option in *SMG Dahl Discord Solver - Moxxi Edition*, which give the choice betwen 2 *SMG Dahl Discord Solver - Moxxi Edition* given by Moxxi for the mission *Hell Hath No Fury*. 
-
-You activate the option to have the choice between 2 *SMG Dahl Discord Solver - Moxxi Edition* given by Moxxi for the mission *Hell Hath No Fury*, but you still receive the choice from 2 *Kiss of Death* instead of the choice beteen 2 *SMG Dahl Discord Solver* as desired.
-
-Left picture: The mod *SMG Dahl Discord Solver - Moxxi Edition* is placed **BEFORE** the Mod *Double Quest Rewards*, and the option which give the choice betwen 2 *SMG Dahl Discord Solver - Moxxi Edition* appear in *Dark Green*, that's mean, that another bunch of code overwrite this command (in this case the choice from 2 *Kiss of Death* from the Mod *Double Quest Rewards*)... and yes, that's don't work.
-
-Right picture: To fix this overwriting problem and get the code working as intended, the mod *SMG Dahl Discord Solver - Moxxi Edition* must be moved **AFTER** *Double Quest Rewards*. Once done, the reward will appear in *Light Green*, meaning that the code will work correctly, and you will have the choice betwen 2 *SMG Dahl Discord Solver - Moxxi Edition* for the mission *Hell Hath No Fury*
-![Fix or option not working as intended](https://i.imgur.com/a0eZEVB.png "Don't worry guys... even if my screen capture show French text, my mods are in English")
-To summarize: Dark Green = don't work (is overwritten) / Light Green = work (overwrite)... by moving the mod at the end of your patch, the problem will be solved.  
 
 ### Other Recommended Mods:
 
@@ -121,12 +106,13 @@ A great mod to check for the Discord Solver Moxxi version:
   
 ### To do:
 
+- [x] Change the black parts of the weapon into a "brushed gold" color, for a look more Creamer style (Thanks to PsychoPatate for his help)
 - [ ] Show the Explosive icon on the weapon card (it's just cosmetic but I cannot find "how to" now)
-- [ ] Change the black parts of the weapon into a "brushed gold" color, for a look more Creamer style (it's just cosmetic but I have no idea how to do it)
-- [ ] Make (again) a new playthrough to be sure that all work correctly.
+- [ ] Make (again) fews kills to be sure that all work correctly.
 - [ ] Clean the code and remove all my ~~shitty~~ notes. 
 
 ### Credits & Thanks:
+First of all, I need thanks [PsychoPatate](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/PsychoPatate "PsychoPatate") for his help -and his patience!-  when I was getting nowhere fast (in French: "lorsque je pédalais dans la semoule" :wink:) to realise my 1st *Moxxi Signature Classic* skin; so a big -and special- thanks to you @PsychoPatate.
 
 I find a lot of useful informations on the Resource page from the [Wiki](https://github.com/BLCM/BLCMods/wiki) of course, but also on the [Resources page](https://github.com/BLCM/BLCMods/tree/af3b2d17629ab3f7f7a5f7bb68b489c5e13b0498/Borderlands%202%20mods/Dave/Resources) and the great [Dave'S BL2 Skin Modding Guide](https://cdn.rawgit.com/BLCM/BLCMods/bb1933f7/Borderlands%202%20mods/Dave/DAVE%27S%20BL2%20SKIN%20MODDING%20GUIDE.pdf) ... all that made by [Dave](https://github.com/BLCM/BLCMods/tree/af3b2d17629ab3f7f7a5f7bb68b489c5e13b0498/Borderlands%202%20mods/Dave) , so thanks for your great work, @DaveRabbit
 
