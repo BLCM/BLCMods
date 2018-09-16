@@ -1,0 +1,151 @@
+<BLCMM v="1">
+#<!!!You opened a file saved with BLCMM in FilterTool. Please update to BLCMM to properly open this file!!!>
+	<head>
+		<type name="BL2" offline="false"/>
+	</head>
+	<body>
+		<category name="Discord Solver - SMG Dahl Lascaux Edition v1.0.2">
+			<comment>Mod author: Astor</comment>
+			<comment>Release Date: 08 September 2018</comment>
+			<comment>Version: 1.0.2 - See ReadMe for Changelog ;)</comment>
+			<comment>Replace Unique SMG Dahl lascaux</comment>
+			<comment>SMG who fires 2 GyroJet explosive bullets at the cost of 1 ammo. </comment>
+			<comment>Note: Spawn in non-elemental only (explosive bullet). </comment>
+			<category name="Where the magic happen (don't uncheck this)">
+				<category name="Attributes">
+					<code profiles="">set GD_Weap_SMG.Barrel.SMG_Barrel_Bandit_Lascaux AttributeSlotUpgrades ((SlotName="AccuracyMin",GradeIncrease=20,bActivateSlot=True),(SlotName="WeaponDamage",GradeIncrease=-10,bActivateSlot=True),(SlotName="WeaponMagSize",GradeIncrease=2,bActivateSlot=True),(SlotName="WeaponSpread",GradeIncrease=2,bActivateSlot=True))</code>
+				</category>
+				<category name="Card, Name & Red Text">
+					<code profiles="">set GD_Weap_SMG.Name.Title.Title__Unique_Lascaux PartName Discord Solver</code>
+				</category>
+				<category name="Non-Elemental Lock">
+					<code profiles="">set GD_Weap_SMG.A_Weapons_Unique.SMG_Dahl_3_Lascaux:WeaponPartListCollectionDefinition_176 ElementalPartData (bEnabled=True,WeightedParts=((Part=WeaponPartDefinition'GD_Weap_SMG.elemental.SMG_Elemental_None',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0),(Part=WeaponPartDefinition'GD_Weap_SMG.elemental.SMG_Elemental_Fire',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=0,DefaultWeightIndex=0),(Part=WeaponPartDefinition'GD_Weap_SMG.elemental.SMG_Elemental_Corrosive',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=0,DefaultWeightIndex=0),(Part=WeaponPartDefinition'GD_Weap_SMG.elemental.SMG_Elemental_Shock',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=0,DefaultWeightIndex=0),(Part=WeaponPartDefinition'GD_Weap_SMG.elemental.SMG_Elemental_Slag',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=0,DefaultWeightIndex=0)))</code>
+				</category>
+				<category name="Pocket Rocket Firing Mode">
+					<category name="Explosion Damage">
+						<code profiles="">set GD_Iris_Weapons.FiringModes.Bullets_Pistol_Torgue_PocketRocket:Behavior_Explode_5 DamageFormula (BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',InitializationDefinition=None,BaseValueScaleConstant=0.500000)</code>
+					</category>
+					<category name="Explosion Definition">
+						<code profiles="">set GD_Iris_Weapons.FiringModes.Bullets_Pistol_Torgue_PocketRocket:Behavior_Explode_5 Definition ExplosionDefinition'GD_Explosions.explosive.Explosion_ExplosiveMaster'</code>
+					</category>
+					<category name="Explosion Radius">
+						<comment>Explosion radius Incrasead by 50%.</comment>
+						<code profiles="">set GD_Iris_Weapons.FiringModes.Bullets_Pistol_Torgue_PocketRocket:Behavior_Explode_5 DamageRadiusFormula (BaseValueConstant=90.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)</code>
+					</category>
+					<category name="Status Effect">
+						<code profiles="">set GD_Iris_Weapons.FiringModes.Bullets_Pistol_Torgue_PocketRocket:Behavior_Explode_5 StatusEffectDamage (BaseValueConstant=1.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.Weapon.WeaponStatusEffectDamage',InitializationDefinition=None,BaseValueScaleConstant=1.000000)</code>
+					</category>
+				</category>
+				<category name="FiringMode GyroJet Sound">
+					<code profiles="">set GD_Weap_SMG.FiringModes.Bullet_SMG_Lascaux SoundDefinition FiringModeSoundDefinition'GD_Weap_Bullet_Tech_Sounds.Sound_Definitions.Gyrojet_Projectile'</code>
+				</category>
+			</category>
+			<category name="Explosion Impact (open to change a option)" MUT="true">
+				<category name="Explosive Impact (default)">
+					<code profiles="">set GD_Weap_SMG.FiringModes.Bullet_SMG_Lascaux DamageTypeDefinition WillowDamageTypeDefinition'GD_Explosive.DamageType.DmgType_Explosive_Impact'</code>
+				</category>
+				<category name="Explosive ForceFlinch Impact">
+					<code profiles="">set GD_Weap_SMG.FiringModes.Bullet_SMG_Lascaux DamageTypeDefinition WillowDamageTypeDefinition'GD_Explosive.DamageType.DmgType_Explosive_Impact_ForceFlinch'</code>
+				</category>
+				<category name="None">
+					<code profiles="">set GD_Weap_SMG.FiringModes.Bullet_SMG_Lascaux DamageTypeDefinition WillowDamageTypeDefinition None</code>
+				</category>
+			</category>
+			<category name="GyroJet Bullet Impact Response" MUT="true">
+				<category name="Explosive on Flesh / Shield / Armor & Anything Else">
+					<code profiles="">set GD_Weap_SMG.FiringModes.Bullet_SMG_Lascaux ImpactResponses ((DamageSurfaceType=DMGSURFACE_Flesh,bDisableRegularBulletDamage=False,Behaviors=(Behavior_Explode'GD_Weap_Pistol.FiringModes.Bullets_Pistol_Torgue_GyroJet:Behavior_Explode_5')),(DamageSurfaceType=DMGSURFACE_Armor,bDisableRegularBulletDamage=False,Behaviors=(Behavior_Explode'GD_Weap_Pistol.FiringModes.Bullets_Pistol_Torgue_GyroJet:Behavior_Explode_5')),(DamageSurfaceType=DMGSURFACE_Shield,bDisableRegularBulletDamage=False,Behaviors=(Behavior_Explode'GD_Weap_Pistol.FiringModes.Bullets_Pistol_Torgue_GyroJet:Behavior_Explode_5')),(DamageSurfaceType=DMGSURFACE_Generic,bDisableRegularBulletDamage=True,Behaviors=(Behavior_Explode'GD_Weap_Pistol.FiringModes.Bullets_Pistol_Torgue_GyroJet:Behavior_Explode_5')))</code>
+				</category>
+				<category name="Explosive on Flesh / Shield / Armor">
+					<code profiles="">set GD_Weap_SMG.FiringModes.Bullet_SMG_Lascaux ImpactResponses ((DamageSurfaceType=DMGSURFACE_Flesh,bDisableRegularBulletDamage=False,Behaviors=(Behavior_Explode'GD_Weap_Pistol.FiringModes.Bullets_Pistol_Torgue_GyroJet:Behavior_Explode_5')),(DamageSurfaceType=DMGSURFACE_Armor,bDisableRegularBulletDamage=False,Behaviors=(Behavior_Explode'GD_Weap_Pistol.FiringModes.Bullets_Pistol_Torgue_GyroJet:Behavior_Explode_5')),(DamageSurfaceType=DMGSURFACE_Shield,bDisableRegularBulletDamage=False,Behaviors=(Behavior_Explode'GD_Weap_Pistol.FiringModes.Bullets_Pistol_Torgue_GyroJet:Behavior_Explode_5')))</code>
+				</category>
+			</category>
+			<category name="GyroJet Bullet Cost (open to change a option)" MUT="true">
+				<category name="Reduced Cost: 2 bullets cost 1 ammo (default)">
+					<code profiles="">set GD_Weap_SMG.Barrel.SMG_Barrel_Bandit_Lascaux WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.800000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))</code>
+				</category>
+				<category name="Normal Cost: 2 bullets cost 2 ammo">
+					<code profiles="">set GD_Weap_SMG.Barrel.SMG_Barrel_Bandit_Lascaux WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.800000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))</code>
+				</category>
+			</category>
+			<category name="GyroJet Bullet Speed (open to change a option)" MUT="true">
+				<category name="Normal Speed: 6.000 (default)">
+					<code profiles="">set GD_Weap_SMG.FiringModes.Bullet_SMG_Lascaux Speed 6000.000000</code>
+				</category>
+				<category name="Double Speed Boost: 12.000">
+					<code profiles="">set GD_Weap_SMG.FiringModes.Bullet_SMG_Lascaux Speed 12000.000000</code>
+				</category>
+				<category name="Triple Speed Boost: 24.000">
+					<code profiles="">set GD_Weap_SMG.FiringModes.Bullet_SMG_Lascaux Speed 2400.000000</code>
+				</category>
+			</category>
+			<category name="Splash Format (open to change a option)" MUT="true">
+				<category name="Grenade (default)">
+					<code profiles="">set GD_Iris_Weapons.FiringModes.Bullets_Pistol_Torgue_PocketRocket:Behavior_Explode_5 DamageSource Class'WillowGame.WillowDmgSource_Grenade'</code>
+				</category>
+				<category name="Rocket">
+					<code profiles="">set GD_Iris_Weapons.FiringModes.Bullets_Pistol_Torgue_PocketRocket:Behavior_Explode_5 DamageSource Class'WillowGame.WillowDmgSource_Rocket'</code>
+				</category>
+				<category name="Shotgun (Reaper)">
+					<code profiles="">set GD_Iris_Weapons.FiringModes.Bullets_Pistol_Torgue_PocketRocket:Behavior_Explode_5 DamageSource Class'WillowGame.WillowDmgSource_Shotgun'</code>
+				</category>
+			</category>
+			<category name="Bayonet Slot & Buff (open to change a option)" MUT="true">
+				<category name="Vanilla version (Bayonet in slot 1)">
+					<code profiles="">set GD_Weap_SMG.A_Weapons_Unique.SMG_Dahl_3_Lascaux:WeaponPartListCollectionDefinition_176 Accessory1PartData (bEnabled=True,WeightedParts=((Part=WeaponPartDefinition'GD_Weap_SMG.Accessory.SMG_Accessory_None',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=3),(Part=WeaponPartDefinition'GD_Weap_SMG.Accessory.SMG_Accessory_Bayonet_1',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=3),(Part=WeaponPartDefinition'GD_Weap_SMG.Accessory.SMG_Accessory_Body1_Accurate',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=3),(Part=WeaponPartDefinition'GD_Weap_SMG.Accessory.SMG_Accessory_Body2_Damage',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=3),(Part=WeaponPartDefinition'GD_Weap_SMG.Accessory.SMG_Accessory_Body3_Accelerated',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=3),(Part=WeaponPartDefinition'GD_Weap_SMG.Accessory.SMG_Accessory_Stock1_Stabilized',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=3),(Part=WeaponPartDefinition'GD_Weap_SMG.Accessory.SMG_Accessory_Stock2_Reload',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=3)))</code>
+					<code profiles="">set WeaponPartDefinition'GD_Weap_SMG.Barrel.SMG_Barrel_Bandit_Lascaux' ExternalAttributeEffects ((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AccuracyResourcePool.AccuracyMinValue',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-1.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))</code>
+					<code profiles="">set WeaponPartDefinition'GD_Weap_SMG.Barrel.SMG_Barrel_Bandit_Lascaux' WeaponCardAttributes ((Attribute=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',PriorityIncrease=0.500000))</code>
+				</category>
+				<category name="Custom version (Bayonet in slot 1 + Always spawn with accessory)">
+					<code profiles="">set GD_Weap_SMG.A_Weapons_Unique.SMG_Dahl_3_Lascaux:WeaponPartListCollectionDefinition_176 Accessory1PartData (bEnabled=True,WeightedParts=((Part=WeaponPartDefinition'GD_Weap_SMG.Accessory.SMG_Accessory_None',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=0,DefaultWeightIndex=0),(Part=WeaponPartDefinition'GD_Weap_SMG.Accessory.SMG_Accessory_Bayonet_1',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=4),(Part=WeaponPartDefinition'GD_Weap_SMG.Accessory.SMG_Accessory_Body1_Accurate',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=4),(Part=WeaponPartDefinition'GD_Weap_SMG.Accessory.SMG_Accessory_Body2_Damage',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=4),(Part=WeaponPartDefinition'GD_Weap_SMG.Accessory.SMG_Accessory_Body3_Accelerated',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=4),(Part=WeaponPartDefinition'GD_Weap_SMG.Accessory.SMG_Accessory_Stock1_Stabilized',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=4),(Part=WeaponPartDefinition'GD_Weap_SMG.Accessory.SMG_Accessory_Stock2_Reload',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=4)))</code>
+					<code profiles="">set WeaponPartDefinition'GD_Weap_SMG.Barrel.SMG_Barrel_Bandit_Lascaux' ExternalAttributeEffects ((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AccuracyResourcePool.AccuracyMinValue',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-1.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))</code>
+					<code profiles="">set WeaponPartDefinition'GD_Weap_SMG.Barrel.SMG_Barrel_Bandit_Lascaux' WeaponCardAttributes ((Attribute=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',PriorityIncrease=0.500000))</code>
+				</category>
+				<category name="Fix for Bayonet Enhancements v1.6">
+					<comment>Fix for Bayonet Enhancements v1.6 by Orudeon</comment>
+					<comment>- Bayonet spawn in slot 2 (instead of slot 1)</comment>
+					<comment>- Always spawn with a accessory in slot 1</comment>
+					<category name="Fix BE v1.6 (but can be used stand-alone)">
+						<code profiles="">set GD_Weap_SMG.A_Weapons_Unique.SMG_Dahl_3_Lascaux:WeaponPartListCollectionDefinition_176 Accessory1PartData (bEnabled=True,WeightedParts=((Part=WeaponPartDefinition'GD_Weap_SMG.Accessory.SMG_Accessory_None',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=0,DefaultWeightIndex=0),(Part=WeaponPartDefinition'GD_Weap_SMG.Accessory.SMG_Accessory_Bayonet_1',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=0,DefaultWeightIndex=0),(Part=WeaponPartDefinition'GD_Weap_SMG.Accessory.SMG_Accessory_Body1_Accurate',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=4),(Part=WeaponPartDefinition'GD_Weap_SMG.Accessory.SMG_Accessory_Body2_Damage',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=4),(Part=WeaponPartDefinition'GD_Weap_SMG.Accessory.SMG_Accessory_Body3_Accelerated',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=4),(Part=WeaponPartDefinition'GD_Weap_SMG.Accessory.SMG_Accessory_Stock1_Stabilized',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=4),(Part=WeaponPartDefinition'GD_Weap_SMG.Accessory.SMG_Accessory_Stock2_Reload',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=4)))</code>
+						<code profiles="">set GD_Weap_SMG.A_Weapons_Unique.SMG_Dahl_3_Lascaux:WeaponPartListCollectionDefinition_176 Accessory2PartData (bEnabled=True,WeightedParts=((Part=WeaponPartDefinition'GD_Weap_SMG.Accessory.SMG_Accessory_None',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=0,DefaultWeightIndex=0),(Part=WeaponPartDefinition'GD_Weap_SMG.Accessory.SMG_Accessory_Bayonet_1',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=1)))</code>
+						<code profiles="">set WeaponPartDefinition'GD_Weap_SMG.Barrel.SMG_Barrel_Bandit_Lascaux' ExternalAttributeEffects ((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AccuracyResourcePool.AccuracyMinValue',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-1.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))</code>
+						<code profiles="">set WeaponPartDefinition'GD_Weap_SMG.Barrel.SMG_Barrel_Bandit_Lascaux' WeaponCardAttributes ((Attribute=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',PriorityIncrease=0.500000))</code>
+					</category>
+				</category>
+				<category name="Fix for Bayonet Enhancements v1.6 + Bayonet Buff">
+					<comment>Fix for Bayonet Enhancements v1.6 by Orudeon + Bayonet Buff </comment>
+					<comment>- Always spawn with a accessory in slot 1</comment>
+					<comment>- Always spawn with a bayonet in slot 2 </comment>
+					<comment>- Gain 100% bonus melee damage (up from 50%)</comment>
+					<category name="Fix BE v1.6 + BB (but can be used stand-alone)">
+						<code profiles="">set GD_Weap_SMG.A_Weapons_Unique.SMG_Dahl_3_Lascaux:WeaponPartListCollectionDefinition_176 Accessory1PartData (bEnabled=True,WeightedParts=((Part=WeaponPartDefinition'GD_Weap_SMG.Accessory.SMG_Accessory_None',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=0,DefaultWeightIndex=0),(Part=WeaponPartDefinition'GD_Weap_SMG.Accessory.SMG_Accessory_Bayonet_1',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=0,DefaultWeightIndex=0),(Part=WeaponPartDefinition'GD_Weap_SMG.Accessory.SMG_Accessory_Body1_Accurate',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=4),(Part=WeaponPartDefinition'GD_Weap_SMG.Accessory.SMG_Accessory_Body2_Damage',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=4),(Part=WeaponPartDefinition'GD_Weap_SMG.Accessory.SMG_Accessory_Body3_Accelerated',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=4),(Part=WeaponPartDefinition'GD_Weap_SMG.Accessory.SMG_Accessory_Stock1_Stabilized',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=4),(Part=WeaponPartDefinition'GD_Weap_SMG.Accessory.SMG_Accessory_Stock2_Reload',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=4)))</code>
+						<code profiles="">set GD_Weap_SMG.A_Weapons_Unique.SMG_Dahl_3_Lascaux:WeaponPartListCollectionDefinition_176 Accessory2PartData (bEnabled=True,WeightedParts=((Part=WeaponPartDefinition'GD_Weap_SMG.Accessory.SMG_Accessory_None',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=0,DefaultWeightIndex=0),(Part=WeaponPartDefinition'GD_Weap_SMG.Accessory.SMG_Accessory_Bayonet_1',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=1)))</code>
+						<code profiles="">set WeaponPartDefinition'GD_Weap_SMG.Barrel.SMG_Barrel_Bandit_Lascaux' ExternalAttributeEffects ((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AccuracyResourcePool.AccuracyMinValue',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-1.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.DamageSourceModifiers.InstigatedMeleeDamageModifier',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))</code>
+						<code profiles="">set WeaponPartDefinition'GD_Weap_SMG.Barrel.SMG_Barrel_Bandit_Lascaux' WeaponCardAttributes ((Attribute=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',PriorityIncrease=0.500000),(Attribute=AttributeDefinition'D_Attributes.DamageSourceModifiers.InstigatedMeleeDamageModifier',PriorityIncrease=0.500000))</code>
+					</category>
+				</category>
+			</category>
+			<category name="Show the new stats on the weapon card (On by Default)" MUT="true">
+				<category name="Yes please! Show the Explosive Gyrojet Bullet stuff">
+					<code profiles="">set GD_Weap_SMG.Name.Title.Title__Unique_Lascaux:AttributePresentationDefinition_8 NoConstraintText It's never a good idea to argue with me... NEVER!<br><font color = "#FFFFFF">[funstat]Shot [explosive]Explosive[-explosive] GyroJet bullets.</font></code>
+				</category>
+				<category name="Argh! No! Remove the Explosive Gyrojet Bullet stuff">
+					<code profiles="">set GD_Weap_SMG.Name.Title.Title__Unique_Lascaux:AttributePresentationDefinition_8 NoConstraintText It's never a good idea to argue with me... NEVER!</code>
+				</category>
+			</category>
+			<category name="Fix for Koby Rarity Color Fix (just in case if you use it)">
+				<comment>Leave unchecked if you use the vanilla rarity system</comment>
+				<category name="Discord Solver (Lascaux) \"Unique\" Rarity">
+					<code profiles="">set GD_Weap_SMG.Barrel.SMG_Barrel_Bandit_Lascaux rarity (BaseValueConstant=45.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)</code>
+				</category>
+			</category>
+			<category name="Bunch of Code">
+				<code profiles="">set GD_Weap_SMG.Name.Title.Title__Unique_Lascaux DamageTypeDefinition DAMAGE_TYPE_Explosive</code>
+				<code profiles="">set GD_Weap_SMG.Name.Title.Title__Unique_Lascaux DamageTypeIcon DAMAGE_TYPE_Explosive</code>
+				<code profiles="">set GD_Weap_SMG.FiringModes.Bullet_SMG_Lascaux AirFriction -10</code>
+			</category>
+		</category>
+	</body>
+</BLCMM>
+
+#Commands:
+
