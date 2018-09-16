@@ -53,7 +53,7 @@ Action Skill. Press F to create a holographic decoy and gain adaptive armor for 
   - At One With The Gun: Greatly improves your Weapon Damage when shooting from the hip. Additionally, increases Reload Speed and Magazine Size.
 
 - Tier 6
-  - Critical Ascensi0n: Scoring a Critical Hit increases your Gun Damage and Critical Hit Damage but you lose 0.5% of your max health per stack. This effect can stack up to 999 times. Stacks will start decaying after 15 seconds if you haven't scored a critical hit in awhile. You can only get a stack of Critical Ascensi0n every 2 seconds.
+  - Critical Ascensi0n: Scoring a Critical Hit increases your Gun Damage and Critical Hit Damage but you lose 0.5% of your max health per stack. This effect can stack up to 999 times. Stacks will start decaying after 15 seconds if you haven't scored a critical hit in awhile. You can only get 1 stack of Critical Ascensi0n every second.
 
 
 ## Cunning
@@ -87,7 +87,7 @@ Action Skill. Press F to create a holographic decoy and gain adaptive armor for 
   - Ir0n Skin (Ir0n Hand): Increases your Shield Capacity and Max Health.
 
 - Tier 2
-  - Death Sentence (Grim): Kill Skill. Killing an enemy causes your shields to quickly regenerate and increases your Melee Damage for a few seconds.
+  - Death Sentence (Grim): Kill Skill. Killing an enemy increases your Melee Damage and Damage Resistance for a few seconds.
   - Resurgence: No changes
   
 - Tier 3
@@ -122,3 +122,4 @@ https://imgur.com/a/CJg9Ecy
 - v1.2: Renamed Assassin Hologram to Predat0r Hologram, Added ADS Speed to Spectre and Critical Ascension now gives you worse Recharge Rate instead of worse Max Health.
 - v1.3: Fixed a bug with Critical Ascension gaining +15 seconds for every stack lost
 - v1.4: Buffed Spectre's Melee Damage, worded Spectre's Description better, buffed CA, replaced Backstab with Predat0r's Bl00d and changed D0uble Edged's health drain into shield drain.
+- v1.5: Changed the Critical Ascension 2 second delay to 1 second, fixed Elemental Discourage DoT Resistance not working, changed Death Sentence's shield regen with damage resistance.
