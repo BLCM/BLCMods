@@ -42,7 +42,7 @@ Action Skill. Press F to create a holographic decoy and gain adaptive armor for 
   - Sharpsh00ter (Kill C0nfirmed): Aiming down the sights with your gun grants you increased Critical Hit Damage. Additionally, your Aim Steadiness is incresaed. The longer you aim down the sights, the greater the bonus.
 
 - Tier 3
-  - All in 0ne (0ne Sh0t 0ne Kill): The first shot fired from a fully-loaded magazine has a significant damage boost.
+  - Rampart (0ne Sh0t 0ne Kill): When below 50% health, you and your allies gain bonus Weapon Damage.
   - B0re: Your shots pierce through enemies. If your shot hits an enemy after piercing an enemy it deals increased damage. B0re does not work with rockets and some special projectiles. Additionally, while Spectre is active, your visor will highlight enemy crit locations.
   - Penetrat0r (Precisi0n): Your bullets have a chance to ignore shields.
 
@@ -123,3 +123,4 @@ https://imgur.com/a/CJg9Ecy
 - v1.3: Fixed a bug with Critical Ascension gaining +15 seconds for every stack lost
 - v1.4: Buffed Spectre's Melee Damage, worded Spectre's Description better, buffed CA, replaced Backstab with Predat0r's Bl00d and changed D0uble Edged's health drain into shield drain.
 - v1.5: Changed the Critical Ascension 2 second delay to 1 second, fixed Elemental Discourage DoT Resistance not working, changed Death Sentence's shield regen with damage resistance.
+- v1.6: Added an optional to remove Spectre's Cloak Effect (this is purely cosmetic.), Reworked All in 0ne (0ne Sh0t 0ne Kill), Fixed Predat0r's Bl00d (Backstab's) Attribute Presentation not displaying correctly on COMs.
