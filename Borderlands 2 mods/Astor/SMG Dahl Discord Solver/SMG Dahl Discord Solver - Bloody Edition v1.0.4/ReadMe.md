@@ -1,4 +1,5 @@
-## SMG Dahl Discord Solver (Lascaux Edition)
+
+## SMG Dahl Discord Solver (Bloody Edition)
  
 In their early days in their making of weapons, Dahl, in collaboration with Torgue created the Discord Solver, a SMG who shot GyroJet explosive bullet. 
 
@@ -10,25 +11,26 @@ This is where you can find it....
 
 ![Discord Solver - Where to find it](https://i.imgur.com/uHTxuc6.png "Don't worry guys... even if my screen capture show French text, my mods are in English")
 
+**Note:** If you are too lazy to walk to Frostburn Canyon, you will find the Gibbed Codes below.
+
 ## What special with this weapon?
 
 - Keep (almost) of all his Unique weapon specificity: very high firerate, variable burst-fire round, shot two bullets for the cost of one ammo, etc... for more details, see [Borderlands Wiki](http://borderlands.wikia.com/wiki/Lascaux) 
 - Initial damage reduced by 20%, but...
   - FireMode modified to shoot the Pocket Rocket GyroJet Explosive bullet. 
+  - The speed from the GyroJet Explosive bullet is 20x faster when fired by a SMG than a pistol (but it's still 20% slower than a normal bullet fired by a SMG) 
   - Shot two GyroJet explosive bullet simultaneously for the cost of one ammo (can be doubled if you use the Aaron00000's "Double Anarchy" mod).
-  - Explosion Radius incrasead by 50%.
   - Impact Explosion boosted by Grenade Damage.
-  - Firing Mode Sound upgraded to GyroJet Explosive bullet sound (less Ratatatatatata and more Kaboom)  
+  - Firing Mode Sound upgraded to GyroJet bullet sound. 
 
-![Discord Solver - Lascaux Version](https://i.imgur.com/EyebWpL.png "Don't worry guys... even if my screen capture show French text, my mods are in English")
-
-**Note:** As the Discord Solver can be found submerged in a shallow pool in a cave, it's make sense to me to keep his Vanilla "Lascaux" skin (similar to the Lascaux cave paintings).
+![Discord Solver - Bloody Edition](https://i.imgur.com/jTwGJgh.png "Don't worry guys... even if my screen capture show French text, my mods are in English")
+Of course, the weapon skin is grunge... What did you expect for a weapon which stay forgetten in a pool in a cave since so long ? A pristine and shiny weapon perhaps? Well, no... she is dirty and all rusted! Be happy that this submachine gun is still able to shot fews bullets!
 
 ### Options: 
 
 This Mod has few options & fix, so feel free to use the BLCMM tool to select the best option that suit you.
 
-- The GyroJet Explosive Bullet Speed has a toggle option between Normal/Double/Triple Speed
+- The GyroJet Explosive Bullet Speed has a toggle option between 5x/10x/15x/20x Speed Boost
 - The Explosion Impact Type has a toggle option between Explosive/Explosive ForceFlinch/None
 - The Splash Format has a toggle option between Grenade/Rocket/Reaper (see Compatibility below)
 - The Weapon Card has a toggle option between Show/Hide the additional informations
@@ -37,7 +39,7 @@ This Mod has few options & fix, so feel free to use the BLCMM tool to select the
 
 - Fix for Orudeon's "Bayonet Enhancements" (Bayonet in slot 2)
 - Fix for Orudeon's "Bayonet Enhancements" (Bayonet in slot 2) + Bayonet Buff
-- Fix for Koby "Rarity Color Fix": Unique (just in case if you use this old mod)  
+- Fix for Koby "Rarity Color Fix": AfterMarket (just in case if you use this old mod)  
 
 ## Gibbed codes:
 
@@ -59,7 +61,17 @@ This Mod has few options & fix, so feel free to use the BLCMM tool to select the
   - Added Fix for Orudeon's Bayonet Enhancements (Bayonet in slot 2) + Bayonet Buff
 - v1.0.2, September 14, 2018  
   - Added GyroJet sound  
-
+- v1.0.3, September 17, 2018  
+  - Added a Bloody skin
+- v1.0.4, September 20, 2018  
+  - Added a Grunge skin
+  - Balance the weapon, and clean the code  
+  - Added French Translation (Weapon Card)
+  - Cosmetic:
+    - The bullet casings is ejected correctly on the right side.
+    - When the shot is fired, the muzzle "split" explosive residues
+   
+  
 ### Compatibility:
 
 - 100% compatible with [UCP Patch](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/Community%20Patch%20Team)
@@ -80,17 +92,18 @@ This Mod has few options & fix, so feel free to use the BLCMM tool to select the
    
 ### Other Recommended Mods:
 
-A great mod to check for the Discord Solver Lascaux version:
+A great mod to check for the Discord Solver Bloody version:
 
 - [Double Anarchy v4](https://github.com/BLCM/BLCMods/blob/master/Borderlands%202%20mods/Aaron0000/Weapon-Item%20Parts%20and%20Accessories/DoubleAnarchyv4.txt) by [Aaron00000](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/Aaron0000) : Changes the SMGs accuracy accessory into the Double Accessory from Borderlands 1... and your Discord Solver will shot 4 bullets/projectiles at the cost on 2 ammo.
 
-![Discord Solver Lascaux Version with Double Anarchy Mod](https://i.imgur.com/fkJRAqD.png "Don't worry guys... even if my screen capture show French text, my mods are in English")  
+![Discord Solver Lascaux Version with Double Anarchy Mod](https://i.imgur.com/fR8Wi97.png "Don't worry guys... even if my screen capture show French text, my mods are in English")
  
 ### To do:
 
+- [x] Make a new ~~nice and shiny~~ grunge and bloody skin.
 - [ ] Show the Explosive icon on the weapon card (it's just cosmetic but I cannot find "how to" now)
-- [ ] Make (again) few kills to be sure that all work correctly.
-- [ ] Clean the code and remove all my ~~shitty~~ notes. 
+- [ ] Make (again) few kills to be sure that the submachine gun work correctly.
+- [ ] Clean the code and remove all my ~~shitty~~ smart notes. 
   
 ### Credits & Thanks:
 
