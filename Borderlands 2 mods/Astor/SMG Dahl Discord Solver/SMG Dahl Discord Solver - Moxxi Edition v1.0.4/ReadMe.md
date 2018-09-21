@@ -1,4 +1,5 @@
 
+
 ## SMG Dahl Discord Solver (Moxxi Edition)
  
 In their early days in their making of weapons, Dahl, in collaboration with Torgue created the Discord Solver, a SMG who shot GyroJet explosive bullet. 
@@ -17,11 +18,11 @@ This is where you can find it...
 
 - Keep (almost) of all his Unique weapon specificity: very high firerate, variable burst-fire round, shot two bullets for the cost of one ammo, etc... for more details, see [Borderlands Wiki](http://borderlands.wikia.com/wiki/Lascaux)  
 - Initial damage reduced by 20%, but...
-  - FireMode upgraded to shoot the Pocket Rocket GyroJet Explosive bullet. 
+  - FireMode upgraded to shoot the Pocket Rocket GyroJet Explosive bullet.
+  - The speed from the GyroJet Explosive bullet is 20x faster when fired by a SMG than a pistol (but it's still 20% slower than a normal bullet fired by a SMG) 
   - Shot two GyroJet explosive bullet simultaneously for the cost of one ammo (can be doubled if you use the Aaron00000's "Double Anarchy" mod).
-  - Explosion Radius incrasead by 50%.
   - Impact Explosion boosted by Grenade Damage. 
-  - Firing Mode Sound upgraded to GyroJet Explosive bullet sound (less Ratatatatatata and more Kaboom) 
+  - Firing Mode Sound upgraded to GyroJet Explosive bullet sound. 
 - As usual for the Vanilla Moxxi weapons, this Moxxi SMG will give you the benefice of:
   - 70% Critical hit bonus
   - 2.5% lifesteal on damage dealt.
@@ -34,7 +35,7 @@ This is where you can find it...
 
 This Mod has few options & fix, so feel free to use the BLCMM tool to select the best option that suit you.
 
-- The GyroJet Explosive Bullet Speed has a toggle option between Normal/Double/Triple Speed
+- The GyroJet Explosive Bullet Speed has a toggle option between 5x/10x/15x/20x Speed Boost
 - The Explosion Impact Type has a toggle option between Explosive/Explosive ForceFlinch/None
 - The Splash Format has a toggle option between Grenade/Rocket/Reaper (see Compatibility below)
 - The Moxxi's Lifesteal can be toggle between the "Classic" instant healing or with Orb Transfusion (similar to the SR Chère-Amie)
@@ -76,7 +77,13 @@ This Mod has few options & fix, so feel free to use the BLCMM tool to select the
 - v1.0.2, September 14, 2018  
   - Added GyroJet sound
 - v1.0.3, September 16, 2018
-  - Added Moxxi Signature *Classic* skin   
+  - Added Moxxi Signature *Classic* skin
+- v1.0.4, September 20, 2018  
+  - Balance the weapon, and clean the code  
+  - Added French Translation (Weapon Card)
+  - Cosmetic:
+    - The bullet casings is ejected correctly on the right side.
+    - When the shot is fired, the muzzle "split" explosive residues
  
 ### Compatibility:
 

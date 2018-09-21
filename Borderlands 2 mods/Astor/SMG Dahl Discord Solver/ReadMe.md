@@ -1,4 +1,5 @@
-## Discord Solver (Lascaux & Moxxi Version)
+
+## SMG Dahl Discord Solver (Bloody & Moxxi Version)
 
 In their early days in their making of weapons, Dahl, in collaboration with Torgue created the Discord Solver, a SMG who shot GyroJet explosive bullet. 
 
@@ -18,10 +19,10 @@ This is where you can find it...
   - Keep (almost) of all his Unique weapon specificity: very high firerate, variable burst-fire round, shot two bullets for the cost of one ammo, etc... for more details, see [Borderlands Wiki](http://borderlands.wikia.com/wiki/Lascaux) 
   - Initial damage reduced by 20%, but...
     - FireMode modified to shoot the Pocket Rocket GyroJet Explosive bullet. 
+    - The speed from the GyroJet Explosive bullet is 20x faster when fired by a SMG than a pistol (but it's still 20% slower than a normal bullet fired by a SMG) 
     - Shot two GyroJet explosive bullet simultaneously for the cost of one ammo (can be doubled if you use the Aaron00000's "Double Anarchy" mod).
-	- Explosion Radius incrasead by 50%.
     - Impact Explosion boosted by Grenade Damage.
-    - Firing Mode Sound upgraded to GyroJet Explosive bullet sound (less Ratatatatatata and more Kaboom)	
+    - Firing Mode Sound upgraded to GyroJet bullet sound.
 - Moxxi Version:
   - As usual for the Vanilla Moxxi weapons, this Moxxi SMG will give you the benefice of:
     - 70% Critical hit bonus
@@ -29,7 +30,7 @@ This is where you can find it...
 	
 Not clear? ... Well, perhaps it will be more easy to compare the difference in a table:  
   
-| Tech Specs      | Lascaux: Vanilla      | Discord Solver #1: Lascaux  | Discord Solver #2: Moxxi  | 
+| Tech Specs      | Lascaux: Vanilla      | Discord Solver #1: Bloody   | Discord Solver #2: Moxxi  | 
 | -------------   | -------------         | -------------               | -------------             | 
 | Bullet:         | Standard              | GyroJets                    | GyroJets                  | 
 | Burst Count:    | 9 to 14 rounds        | 9 to 14 rounds              | 9 to 14 rounds            | 
@@ -38,23 +39,21 @@ Not clear? ... Well, perhaps it will be more easy to compare the difference in a
 | Element Chance: | None                  | None                        | None                      | 
 | Fire Cost:      | 2 bullets cost 1 ammo | 2 bullets cost 1 ammo       | 2 bullets cost 1 ammo     | 
 | Lifesteal:      | N/A                   | N/A                         | 2.5% of damage dealt      | 
-| Skin:           | Lascaux (Vanilla)     | Lascaux (Vanilla)           | Moxxi Signature           | 
+| Skin:           | Lascaux (Vanilla)     | Bloody                      | Moxxi Signature           | 
 | Rarity:         | Unique                | Unique                      | Moxxi                     | 
   
   
-![Discord Solver - Lascaux vs Moxxi Version](https://i.imgur.com/ySWyM5T.png "Don't worry guys... even if my screen capture show French text, my mods are in English")
-
-**Note:** As the Discord Solver can be found submerged in a shallow pool in a cave, it's make sense to me to keep his Vanilla "Lascaux" skin (similar to the Lascaux cave paintings), but the Moxxi version, she get a ~~vivid red~~ ... gorgeous Moxxi Signature skin.
+![Discord Solver - Bloody vs Moxxi Edition](https://i.imgur.com/eaFQ7En.png "Don't worry guys... even if my screen capture show French text, my mods are in English")
 
 ### Options: 
 
 This Mod has few options & fix, so feel free to use the BLCMM tool to select the best option that suit you.
 
 - Both Version:
-  - The Bullet Speed Mode has a toggle option between Normal/Double/Triple Speed
+  - The GyroJet Explosive Bullet Speed has a toggle option between 5x/10x/15x/20x Speed Boost
   - The Explosion Impact Type has a toggle option between Explosive/Explosive ForceFlinch/None
   - The Splash Format has a toggle option between Grenade/Rocket/Reaper (see Compatibility below)
-  - The Weapon Card has a toggle option between Show/Hide the additional informations.
+  - The Weapon Card has a toggle option between Show/Hide the additional informations... and English/French too.
 - The Moxxi weapon skin has a toggle option between:
   - The Moxxi Signature *Classic* Edition ("Red Fire" in the RL Creamer/SG Heart Breaker style) which is timeless and can be used in any occasion.
   - The Moxxi Signature *Cartier* Edition ("Red Cartier" in the style from the renowned French jeweler) which is very stylish and sophisticated, and by the way the all time favorite from Aurelia the Baroness.
@@ -99,7 +98,7 @@ A great mod to check for the Discord Solver:
 
 - Both Version: [Double Anarchy v4](https://github.com/BLCM/BLCMods/blob/master/Borderlands%202%20mods/Aaron0000/Weapon-Item%20Parts%20and%20Accessories/DoubleAnarchyv4.txt) by [Aaron00000](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/Aaron0000) : Changes the SMGs accuracy accessory into the Double Accessory from Borderlands 1... and your Discord Solver will shot 4 bullets/projectiles at the cost on 2 ammo.
 
-![Discord Solver Lascaux Version with Double Anarchy Mod](https://i.imgur.com/fkJRAqD.png "Don't worry guys... even if my screen capture show French text, my mods are in English")  
+![Discord Solver Lascaux Version with Double Anarchy Mod](https://i.imgur.com/fR8Wi97.png "Don't worry guys... even if my screen capture show French text, my mods are in English") 
   
 ### Credits & Thanks:
 
