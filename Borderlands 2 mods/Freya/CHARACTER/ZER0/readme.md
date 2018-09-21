@@ -50,10 +50,10 @@ Action Skill. Press F to create a holographic decoy and gain adaptive armor for 
   - Surviv0r (Vel0city): While Spectre is active, you gain Movement Speed, Health Regeneration and Critical Hit Damage.
 
 - Tier 5
-  - At One With The Gun: Greatly improves your Weapon Damage when shooting from the hip. Additionally, increases Reload Speed and Magazine Size.
+  - At One With The Gun: Greatly improves your Accuracy when shooting from the hip. Additionally, increases Reload Speed and Magazine Size.
 
 - Tier 6
-  - Critical Ascensi0n: Scoring a Critical Hit increases your Gun Damage and Critical Hit Damage but you lose 0.5% of your max health per stack. This effect can stack up to 999 times. Stacks will start decaying after 15 seconds if you haven't scored a critical hit in awhile. You can only get 1 stack of Critical Ascensi0n every second.
+  - Critical Ascensi0n: Scoring a Critical Hit increases your Gun Damage and Critical Hit Damage but you lose 0.5% of your max health per stack. This effect can stack up to 999 times. Stacks will start decaying after 10 seconds if you haven't scored a critical hit in awhile. You can only get 1 stack of Critical Ascensi0n every second.
 
 
 ## Cunning
@@ -124,3 +124,4 @@ https://imgur.com/a/CJg9Ecy
 - v1.4: Buffed Spectre's Melee Damage, worded Spectre's Description better, buffed CA, replaced Backstab with Predat0r's Bl00d and changed D0uble Edged's health drain into shield drain.
 - v1.5: Changed the Critical Ascension 2 second delay to 1 second, fixed Elemental Discourage DoT Resistance not working, changed Death Sentence's shield regen with damage resistance.
 - v1.6: Added an optional to remove Spectre's Cloak Effect (this is purely cosmetic.), Reworked All in 0ne (0ne Sh0t 0ne Kill), Fixed Predat0r's Bl00d (Backstab's) Attribute Presentation not displaying correctly on COMs.
+- v1.7: Nerfed Rampart, Nerfed Optics, Nerfed CA to be 10 seconds a stack and fixed some stacking issues, changed At 0ne With The Gun to boost Accuracy instead of Weapon Damage when hipfiring.
