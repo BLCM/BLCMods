@@ -1,6 +1,10 @@
 TPS Skinpool Reassignments
 ==========================
 
+**NOTE:** This mod is now included as a basic part of TPS UCP 2.2, so if
+you're using TPS UCP 2.2 or higher, there's no longer any reason to use
+this mod directly!  (It won't hurt anything to have both enabled, though.)
+
 This mod serves the same purpose as BL2 UCP's "`Loot Pool & Drop Changes ->
 Skinpool Fixes (Don't uncheck this)`" section, but for TPS.  Specifically, it
 frees up 624 skin/head pools for use by TPS mods.  This is possible because the

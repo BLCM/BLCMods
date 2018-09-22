@@ -30,6 +30,7 @@ import io
 import re
 import os
 import sys
+import codecs
 import argparse
 
 # Takes input from either a Borderlands mod file (FT or BLCMM format), or from
@@ -434,9 +435,9 @@ if __name__ == '__main__':
 
     # Open our input filehandle, if we have to
     if using_std_input:
-        df_in = sys.stdin
+        df_in = codecs.getreader('latin1')(sys.stdin.detach())
     else:
-        df_in = open(args.input, 'r')
+        df_in = open(args.input, 'r', encoding='latin1')
 
     # Read in the entire input file so that we can do stuff like seek() even
     # if it's stdin

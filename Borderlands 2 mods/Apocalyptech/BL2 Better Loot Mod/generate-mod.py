@@ -52,7 +52,7 @@ except ModuleNotFoundError:
 ###
 
 mod_name = 'BL2 Better Loot Mod'
-mod_version = '1.3.0'
+mod_version = '1.3.1'
 output_filename = '{}.blcm'.format(mod_name)
 
 ###
@@ -1081,10 +1081,10 @@ for (guntype, legendaries, uniques, pearls, seraphs) in [
                 'GD_Weap_AssaultRifle.A_Weapons_Legendary.AR_Jakobs_5_HammerBuster',
                 'GD_Weap_AssaultRifle.A_Weapons_Legendary.AR_Torgue_5_KerBlaster',
                 'GD_Weap_AssaultRifle.A_Weapons_Legendary.AR_Vladof_5_Sherdifier',
+                'GD_Aster_Weapons.AssaultRifles.AR_Bandit_3_Ogre',
             ],
             [
                 # Uniques
-                'GD_Aster_Weapons.AssaultRifles.AR_Bandit_3_Ogre',
                 'GD_Iris_Weapons.AssaultRifles.AR_Torgue_3_BoomPuppy',
                 'GD_Iris_Weapons.AssaultRifles.AR_Vladof_3_Kitten',
                 'GD_Orchid_BossWeapons.AssaultRifle.AR_Jakobs_3_Stinkpot',

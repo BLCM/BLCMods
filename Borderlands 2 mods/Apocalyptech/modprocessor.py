@@ -681,6 +681,24 @@ class ModProcessor(object):
                 )""".format(level, classname, index, itmpool, invbal, weight, scale)
             )
 
+class Config(object):
+    """
+    Class to help with our templating.  Basically just an object which allows
+    us to use object attributes as format strings.
+    """
+
+    def __format__(self, formatstr):
+        """
+        A bit of magic so that we can use our values in format strings
+        """
+        attr = getattr(self, formatstr)
+        if type(attr) == str:
+            return attr
+        elif type(attr) == int or type(attr) == float:
+            return str(attr)
+        else:
+            return attr()
+
 if __name__ == '__main__':
 
     parser = argparse.ArgumentParser(
