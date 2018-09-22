@@ -1,0 +1,839 @@
+<BLCMM v="1">
+#<!!!You opened a file saved with BLCMM in FilterTool. Please update to BLCMM to properly open this file!!!>
+	<head>
+		<type name="TPS" offline="false"/>
+	</head>
+	<body>
+		<category name="Skill System Tweaks For TPS">
+			<comment>-------------------------------------------------------</comment>
+			<comment>Made by Coleby & Hajo with some help from Apocalyptech</comment>
+			<comment>-------------------------------------------------------</comment>
+			<comment>Gain 2 Skill Points per level instead of 1</comment>
+			<comment>-------------------------------------------------------</comment>
+			<comment>Allocate up to 10 Skill Points on almost every skill</comment>
+			<comment>-------------------------------------------------------</comment>
+			<comment>NOTE: Some skills' maximum grades were not changed,</comment>
+			<comment>due to balance concerns. They can be enabled under the</comment>
+			<comment>"Disabled by default" section. Feel free to enable</comment>
+			<comment>them if you like.</comment>
+			<comment>-------------------------------------------------------</comment>
+			<comment>WARNING: Activate this mod (load the patch file)</comment>
+			<comment>before loading your character, otherwise you will</comment>
+			<comment>notice that you lost some skill points (which can be</comment>
+			<comment>recovered by simply going back to the main menu and</comment>
+			<comment>loading your patch file).</comment>
+			<comment>-------------------------------------------------------</comment>
+			<category name="2 Skill Points per level">
+				<code profiles="default">set GD_Globals.Skills.INI_SkillPointsPerLevelUp ConditionalInitialization (bEnabled=True,ConditionalExpressionList=((BaseValueIfTrue=(BaseValueConstant=2,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),Expressions=((AttributeOperand1=AttributeDefinition'D_Attributes.ExperienceResourcePool.PlayerExperienceLevel',ComparisonOperator=OPERATOR_GreaterThanOrEqual,Operand2Usage=OPERAND_PreferAttribute,AttributeOperand2=None,ConstantOperand2=1)))),DefaultBaseValue=(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1))</code>
+				<code profiles="default">set GD_Globals.Skills.INI_TotalSkillPointsForCurrentLevel ConditionalInitialization (bEnabled=True,ConditionalExpressionList=((BaseValueIfTrue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Globals.Skills.INI_TotalSkillPointsForCurrentLevelFormula',BaseValueScaleConstant=1.000000),Expressions=((AttributeOperand1=AttributeDefinition'D_Attributes.ExperienceResourcePool.PlayerExperienceLevel',ComparisonOperator=OPERATOR_GreaterThanOrEqual,Operand2Usage=OPERAND_PreferAttribute,AttributeOperand2=None,ConstantOperand2=2.000000)))),DefaultBaseValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))</code>
+				<code profiles="default">set GD_Globals.Skills.INI_TotalSkillPointsForCurrentLevelFormula ValueFormula (bEnabled=True,Multiplier=(BaseValueConstant=2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),Level=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.ExperienceResourcePool.PlayerExperienceLevel',InitializationDefinition=None,BaseValueScaleConstant=1.000000),Power=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),Offset=(BaseValueConstant=-1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))</code>
+			</category>
+			<category name="Action Skill Changes">
+				<category name="Athena">
+					<category name="Extended Aspis Duration">
+						<hotfix name="Athena" package="GD_Gladiator_Streaming">
+							<code profiles="default">set GD_Gladiator_Skills.ActionSkill.Skill_Gladiator SkillEffectDefinitions ((AttributeToModify=AttributeDefinition'D_Attributes.ActiveSkillCooldownResource.ActiveSkillCooldownConsumptionRate',bIncludeDuelingTargets=False,bIncludeSelfAsTarget=False,bOnlyEffectTargetsInRange=False,bExcludeNonPlayerCharacters=False,EffectTarget=TARGET_Self,TargetInstanceDataName=,TargetCriteria=CRITERIA_None,ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),GradeToStartApplyingEffect=0,PerGradeUpgradeInterval=1,PerGradeUpgrade=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),BonusUpgradeList=),(AttributeToModify=AttributeDefinition'D_Attributes.SkillAttributes.SkillDuration',bIncludeDuelingTargets=False,bIncludeSelfAsTarget=False,bOnlyEffectTargetsInRange=False,bExcludeNonPlayerCharacters=False,EffectTarget=TARGET_Self,TargetInstanceDataName=,TargetCriteria=CRITERIA_None,ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=20,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Gladiator_Skills.Misc.Init_HoldTheLine_DurationCalc',BaseValueScaleConstant=1.000000),GradeToStartApplyingEffect=0,PerGradeUpgradeInterval=1,PerGradeUpgrade=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),BonusUpgradeList=),(AttributeToModify=DesignerAttributeDefinition'GD_Gladiator_Skills.ActionSkill.Cooldown_Shield_UI',bIncludeDuelingTargets=False,bIncludeSelfAsTarget=False,bOnlyEffectTargetsInRange=False,bExcludeNonPlayerCharacters=False,EffectTarget=TARGET_Self,TargetInstanceDataName=,TargetCriteria=CRITERIA_None,ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=DesignerAttributeDefinition'GD_Gladiator_Skills.ActionSkill.Cooldown_Shield',InitializationDefinition=None,BaseValueScaleConstant=1.000000),GradeToStartApplyingEffect=0,PerGradeUpgradeInterval=1,PerGradeUpgrade=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),BonusUpgradeList=),(AttributeToModify=DesignerAttributeDefinition'GD_Gladiator_Skills.Misc.Att_Gladiator_AegisAngle_UI',bIncludeDuelingTargets=False,bIncludeSelfAsTarget=False,bOnlyEffectTargetsInRange=False,bExcludeNonPlayerCharacters=False,EffectTarget=TARGET_Self,TargetInstanceDataName=,TargetCriteria=CRITERIA_None,ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=90.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),GradeToStartApplyingEffect=1,PerGradeUpgradeInterval=1,PerGradeUpgrade=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),BonusUpgradeList=),(AttributeToModify=None,bIncludeDuelingTargets=False,bIncludeSelfAsTarget=False,bOnlyEffectTargetsInRange=False,bExcludeNonPlayerCharacters=False,EffectTarget=TARGET_Self,TargetInstanceDataName=,TargetCriteria=CRITERIA_None,ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=20,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),GradeToStartApplyingEffect=1,PerGradeUpgradeInterval=1,PerGradeUpgrade=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),BonusUpgradeList=))</code>
+							<code profiles="default">set GD_Gladiator_Skills.Misc.Att_HoldTheLine_DurationPerLvl BaseValue (BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)</code>
+						</hotfix>
+					</category>
+				</category>
+				<category name="Wilhelm">
+					<category name="Extended Wolf and Saint Duration">
+						<hotfix name="Wilhelm" package="GD_Enforcer_Streaming">
+							<code profiles="default">set GD_Enforcer_Skills.ActionSkill.Skill_AirPower SkillEffectDefinitions ((AttributeToModify=AttributeDefinition'D_Attributes.ActiveSkillCooldownResource.ActiveSkillCooldownConsumptionRate',bIncludeDuelingTargets=False,bIncludeSelfAsTarget=False,bOnlyEffectTargetsInRange=False,bExcludeNonPlayerCharacters=False,EffectTarget=TARGET_Self,TargetInstanceDataName=,TargetCriteria=CRITERIA_None,ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),GradeToStartApplyingEffect=0,PerGradeUpgradeInterval=1,PerGradeUpgrade=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),BonusUpgradeList=),(AttributeToModify=None,bIncludeDuelingTargets=False,bIncludeSelfAsTarget=False,bOnlyEffectTargetsInRange=False,bExcludeNonPlayerCharacters=False,EffectTarget=TARGET_None,TargetInstanceDataName=,TargetCriteria=CRITERIA_None,ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=DesignerAttributeDefinition'GD_Enforcer_Skills.ActionSkill.Cooldown_Drone',InitializationDefinition=None,BaseValueScaleConstant=1.000000),GradeToStartApplyingEffect=1,PerGradeUpgradeInterval=1,PerGradeUpgrade=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),BonusUpgradeList=),(AttributeToModify=AttributeDefinition'D_Attributes.SkillAttributes.SkillDuration',bIncludeDuelingTargets=False,bIncludeSelfAsTarget=False,bOnlyEffectTargetsInRange=False,bExcludeNonPlayerCharacters=False,EffectTarget=TARGET_Self,TargetInstanceDataName=,TargetCriteria=CRITERIA_None,ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=60,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Enforcer_Skills.Misc.Init_AuxillaryTanks_DurationCalc',BaseValueScaleConstant=1.000000),GradeToStartApplyingEffect=1,PerGradeUpgradeInterval=1,PerGradeUpgrade=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),BonusUpgradeList=),(AttributeToModify=DesignerAttributeDefinition'GD_Enforcer_Skills.ActionSkill.SkillDuration_UI',bIncludeDuelingTargets=False,bIncludeSelfAsTarget=False,bOnlyEffectTargetsInRange=False,bExcludeNonPlayerCharacters=False,EffectTarget=TARGET_Self,TargetInstanceDataName=,TargetCriteria=CRITERIA_None,ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=60,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),GradeToStartApplyingEffect=1,PerGradeUpgradeInterval=1,PerGradeUpgrade=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),BonusUpgradeList=),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponPerShotAccuracyImpulse',bIncludeDuelingTargets=False,bIncludeSelfAsTarget=False,bOnlyEffectTargetsInRange=False,bExcludeNonPlayerCharacters=False,EffectTarget=TARGET_None,TargetInstanceDataName=,TargetCriteria=CRITERIA_None,ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=DesignerAttributeDefinition'GD_Enforcer_Skills.Misc.Att_SupportDrone_BaseHealingRate',InitializationDefinition=None,BaseValueScaleConstant=1.000000),GradeToStartApplyingEffect=0,PerGradeUpgradeInterval=1,PerGradeUpgrade=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),BonusUpgradeList=))</code>
+							<code profiles="default">set GD_Enforcer_Skills.Misc.Att_AuxillaryTanks_DurationPerLvl BaseValue (BaseValueConstant=6,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)</code>
+						</hotfix>
+					</category>
+				</category>
+			</category>
+			<category name="Disabled by default">
+				<category name="Wilhelm">
+					<category name="Hunter-Killer Tree">
+						<category name="Scramble Skill">
+							<hotfix name="HunterKiller" package="GD_Enforcer_Streaming">
+								<code profiles="">set GD_Enforcer_Skills.HunterKiller.Scramble MaxGrade 10</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Dreadnought Tree">
+						<category name="Kinetic Armor Skill">
+							<hotfix name="Dreadnought" package="GD_Enforcer_Streaming">
+								<code profiles="">set GD_Enforcer_Skills.Dreadnought.KineticArmor MaxGrade 10</code>
+							</hotfix>
+						</category>
+					</category>
+				</category>
+				<category name="Nisha">
+					<category name="Law & Order Tree">
+						<category name="No Pain No Gain Skill">
+							<hotfix name="Law & Order" package="GD_Lawbringer_Streaming">
+								<code profiles="">set GD_Lawbringer_Skills.Order.NoPainNoGain MaxGrade 10</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Fan the Hammer Tree">
+						<category name="Saddle Up Skill">
+							<hotfix name="Fan the Hammer" package="GD_Lawbringer_Streaming">
+								<code profiles="">set GD_Lawbringer_Skills.FanTheHammer.SaddleUp MaxGrade 10</code>
+							</hotfix>
+						</category>
+						<category name="Magnificent Six Skill">
+							<hotfix name="Fan the Hammer" package="GD_Lawbringer_Streaming">
+								<code profiles="">set GD_Lawbringer_Skills.FanTheHammer.MagnificentSix MaxGrade 10</code>
+							</hotfix>
+						</category>
+						<category name="Bottled Courage Skill">
+							<hotfix name="Fan the Hammer" package="GD_Lawbringer_Streaming">
+								<code profiles="">set GD_Lawbringer_Skills.FanTheHammer.BottledCourage MaxGrade 10</code>
+							</hotfix>
+						</category>
+						<category name="Faster'n'You Skill">
+							<hotfix name="Fan the Hammer" package="GD_Lawbringer_Streaming">
+								<code profiles="">set GD_Lawbringer_Skills.FanTheHammer.FasterNYou MaxGrade 10</code>
+							</hotfix>
+						</category>
+						<category name="Hells Coming With Me Skill">
+							<hotfix name="Fan the Hammer" package="GD_Lawbringer_Streaming">
+								<code profiles="">set GD_Lawbringer_Skills.FanTheHammer.HellsCominWithMe MaxGrade 10</code>
+							</hotfix>
+						</category>
+						<category name="High Noon Skill">
+							<hotfix name="Fan the Hammer" package="GD_Lawbringer_Streaming">
+								<code profiles="">set GD_Lawbringer_Skills.FanTheHammer.HighNoon MaxGrade 10</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="The Riflewoman Tree">
+						<category name="Quick Shot Skill">
+							<hotfix name="The Riflewoman" package="GD_Lawbringer_Streaming">
+								<code profiles="">set GD_Lawbringer_Skills.Riflewoman.QuickShot MaxGrade 10</code>
+							</hotfix>
+						</category>
+						<category name="Trick Shot Skill">
+							<hotfix name="The Riflewoman" package="GD_Lawbringer_Streaming">
+								<code profiles="">set GD_Lawbringer_Skills.Riflewoman.TrickShot MaxGrade 10</code>
+							</hotfix>
+						</category>
+						<category name="Tombstone Skill">
+							<hotfix name="The Riflewoman" package="GD_Lawbringer_Streaming">
+								<code profiles="">set GD_Lawbringer_Skills.Riflewoman.Tombstone MaxGrade 10</code>
+							</hotfix>
+						</category>
+					</category>
+				</category>
+				<category name="Claptrap">
+					<category name="Boomtrap Tree">
+						<category name="Kill Bot Skill">
+							<hotfix name="Boomtrap" package="GD_Prototype_Streaming">
+								<code profiles="">set GD_Prototype_Skills.Boomtrap.KillBot MaxGrade 10</code>
+							</hotfix>
+						</category>
+						<category name="Coincidental Combustion Skill">
+							<hotfix name="Boomtrap" package="GD_Prototype_Streaming">
+								<code profiles="">set GD_Prototype_Skills.Boomtrap.CoincidentalCombustion MaxGrade 10</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="I Love You Guys Tree">
+						<category name="Through Thick And Thin Skill">
+							<hotfix name="I Love You Guys" package="GD_Prototype_Streaming">
+								<code profiles="">set GD_Prototype_Skills.ILoveYouGuys.ThroughThickAndThin MaxGrade 10</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Fragmented Fragtrap Tree">
+						<category name="Death Machine Skill">
+							<hotfix name="Fragmented Fragtrap" package="GD_Prototype_Streaming">
+								<code profiles="">set GD_Prototype_Skills.Fragmented.DeathMachine MaxGrade 10</code>
+							</hotfix>
+						</category>
+						<category name="Float Like A Bee Skill">
+							<hotfix name="Fragmented Fragtrap" package="GD_Prototype_Streaming">
+								<code profiles="">set GD_Prototype_Skills.Fragmented.FloatLikeABee MaxGrade 10</code>
+							</hotfix>
+						</category>
+					</category>
+				</category>
+				<category name="Jack">
+					<category name="The Hero of this Story Tree">
+						<category name="Take Their Freedom Skill">
+							<hotfix name="The Hero of this Story" package="Quince_Doppel_Streaming">
+								<code profiles="">set Quince_Doppel_Hero.Skills.TakeTheirFreedom MaxGrade 10</code>
+							</hotfix>
+						</category>
+						<category name="Persistence Skill">
+							<hotfix name="The Hero of this Story" package="Quince_Doppel_Streaming">
+								<code profiles="">set Quince_Doppel_Hero.Skills.Persistence MaxGrade 10</code>
+							</hotfix>
+						</category>
+						<category name="Resolute Skill">
+							<hotfix name="The Hero of this Story" package="Quince_Doppel_Streaming">
+								<code profiles="">set Quince_Doppel_Hero.Skills.Resolute MaxGrade 10</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Greater Good Tree">
+						<category name="Collaborate Skill">
+							<hotfix name="Greater Good" package="Quince_Doppel_Streaming">
+								<code profiles="">set Quince_Doppel_GreaterGood.Skills.Collaborate MaxGrade 10</code>
+							</hotfix>
+						</category>
+						<category name="Synergy Skill">
+							<hotfix name="Greater Good" package="Quince_Doppel_Streaming">
+								<code profiles="">set Quince_Doppel_GreaterGood.Skills.Synergy MaxGrade 10</code>
+							</hotfix>
+						</category>
+						<category name="Winning Skill">
+							<hotfix name="Greater Good" package="Quince_Doppel_Streaming">
+								<code profiles="">set Quince_Doppel_GreaterGood.Skills.Winning MaxGrade 10</code>
+							</hotfix>
+						</category>
+						<category name="Believe Skill">
+							<hotfix name="Greater Good" package="Quince_Doppel_Streaming">
+								<code profiles="">set Quince_Doppel_GreaterGood.Skills.Believe MaxGrade 10</code>
+							</hotfix>
+						</category>
+						<category name="Delegation Skill">
+							<hotfix name="Greater Good" package="Quince_Doppel_Streaming">
+								<code profiles="">set Quince_Doppel_GreaterGood.Skills.Delegation MaxGrade 10</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Free Enterprise Tree">
+						<category name="Compound Interest Skill">
+							<hotfix name="Free Enterprise" package="Quince_Doppel_Streaming">
+								<code profiles="">set Quince_Doppel_FreeEnterprise.Skills.CompoundInterest MaxGrade 10</code>
+							</hotfix>
+						</category>
+						<category name="Taxation of Trade Routes Skill">
+							<hotfix name="Free Enterprise" package="Quince_Doppel_Streaming">
+								<code profiles="">set Quince_Doppel_FreeEnterprise.Skills.TaxationofTradeRoutes MaxGrade 10</code>
+							</hotfix>
+						</category>
+						<category name="Absolute Advantage Skill">
+							<hotfix name="Free Enterprise" package="Quince_Doppel_Streaming">
+								<code profiles="">set Quince_Doppel_FreeEnterprise.Skills.AbsoluteAdvantage MaxGrade 10</code>
+							</hotfix>
+						</category>
+						<category name="Supply And Demand">
+							<hotfix name="Free Enterprise" package="Quince_Doppel_Streaming">
+								<code profiles="">set Quince_Doppel_FreeEnterprise.Skills.SupplyAndDemand MaxGrade 10</code>
+							</hotfix>
+						</category>
+					</category>
+				</category>
+				<category name="Aurelia">
+					<category name="The Huntress Tree">
+						<category name="Culling The Herd Skill">
+							<hotfix name="The Huntress" package="Crocus_Baroness_Streaming">
+								<code profiles="">set Crocus_Baroness_Huntress.Skills.CullingTheHerd MaxGrade 10</code>
+							</hotfix>
+						</category>
+						<category name="Warning Shot Skill">
+							<hotfix name="The Huntress" package="Crocus_Baroness_Streaming">
+								<code profiles="">set Crocus_Baroness_Huntress.Skills.WarningShot MaxGrade 10</code>
+							</hotfix>
+						</category>
+						<category name="Prudent Prudence Skill">
+							<hotfix name="The Huntress" package="Crocus_Baroness_Streaming">
+								<code profiles="">set Crocus_Baroness_Huntress.Skills.PrudentPrudence MaxGrade 10</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Cold Money Tree">
+						<category name="Frostbite Skill">
+							<hotfix name="Cold Money" package="Crocus_Baroness_Streaming">
+								<code profiles="">set Crocus_Baroness_ColdMoney.Skills.Frostbite MaxGrade 10</code>
+							</hotfix>
+						</category>
+						<category name="Cold Advance Skill">
+							<hotfix name="Cold Money" package="Crocus_Baroness_Streaming">
+								<code profiles="">set Crocus_Baroness_ColdMoney.Skills.ColdAdvance MaxGrade 10</code>
+							</hotfix>
+						</category>
+						<category name="Whiteout Skill">
+							<hotfix name="Cold Money" package="Crocus_Baroness_Streaming">
+								<code profiles="">set Crocus_Baroness_ColdMoney.Skills.Whiteout MaxGrade 10</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Contractual Aristocracy Tree">
+						<category name="Protect Your Assets Skill">
+							<hotfix name="Contractual Aristocracy" package="Crocus_Baroness_Streaming">
+								<code profiles="">set Crocus_Baroness_Servant.Skills.ProtectYourAssets MaxGrade 10</code>
+							</hotfix>
+						</category>
+						<category name="Keep Your Chin Up Skill">
+							<hotfix name="Contractual Aristocracy" package="Crocus_Baroness_Streaming">
+								<code profiles="">set Crocus_Baroness_Servant.Skills.KeepYourChinUp MaxGrade 10</code>
+							</hotfix>
+						</category>
+						<category name="Podsnappery Skill">
+							<hotfix name="Contractual Aristocracy" package="Crocus_Baroness_Streaming">
+								<code profiles="">set Crocus_Baroness_Servant.Skills.Podsnappery MaxGrade 10</code>
+							</hotfix>
+						</category>
+					</category>
+				</category>
+			</category>
+			<category name="Enabled by default">
+				<category name="Athena">
+					<category name="Phalanx Tree">
+						<category name="Ivictus Skill">
+							<hotfix name="Phalanx" package="GD_Gladiator_Streaming">
+								<code profiles="default">set GD_Gladiator_Skills.Phalanx.Invictus MaxGrade 10</code>
+							</hotfix>
+						</category>
+						<category name="Ephodos Skill">
+							<hotfix name="Phalanx" package="GD_Gladiator_Streaming">
+								<code profiles="default">set GD_Gladiator_Skills.Phalanx.Ephodos MaxGrade 10</code>
+							</hotfix>
+						</category>
+						<category name="Vanguard Skill">
+							<hotfix name="Phalanx" package="GD_Gladiator_Streaming">
+								<code profiles="default">set GD_Gladiator_Skills.Phalanx.Vanguard MaxGrade 10</code>
+							</hotfix>
+						</category>
+						<category name="Hold The Line Skill">
+							<hotfix name="Phalanx" package="GD_Gladiator_Streaming">
+								<code profiles="default">set GD_Gladiator_Skills.Phalanx.HoldTheLine MaxGrade 10</code>
+							</hotfix>
+						</category>
+						<category name="United Front Skill">
+							<hotfix name="Phalanx" package="GD_Gladiator_Streaming">
+								<code profiles="default">set GD_Gladiator_Skills.Phalanx.UnitedFront MaxGrade 10</code>
+							</hotfix>
+						</category>
+						<category name="Stalwart Skill">
+							<hotfix name="Phalanx" package="GD_Gladiator_Streaming">
+								<code profiles="default">set GD_Gladiator_Skills.Phalanx.Stalwart MaxGrade 10</code>
+							</hotfix>
+						</category>
+						<category name="Returning Fire Skill">
+							<hotfix name="Phalanx" package="GD_Gladiator_Streaming">
+								<code profiles="default">set GD_Gladiator_Skills.Phalanx.ReturningFire MaxGrade 10</code>
+							</hotfix>
+						</category>
+						<category name="Prepare For Glory Skill">
+							<hotfix name="Phalanx" package="GD_Gladiator_Streaming">
+								<code profiles="default">set GD_Gladiator_Skills.Phalanx.PrepareForGlory MaxGrade 10</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Xiphos Tree">
+						<category name="Gun Kata Skill">
+							<hotfix name="Xiphos" package="GD_Gladiator_Streaming">
+								<code profiles="default">set GD_Gladiator_Skills.Xiphos.Gun-Kata MaxGrade 10</code>
+							</hotfix>
+						</category>
+						<category name="Clarity Of Purpose Skill">
+							<hotfix name="Xiphos" package="GD_Gladiator_Streaming">
+								<code profiles="default">set GD_Gladiator_Skills.Xiphos.ClarityOfPurpose MaxGrade 10</code>
+							</hotfix>
+						</category>
+						<category name="Mercurial Skill">
+							<hotfix name="Xiphos" package="GD_Gladiator_Streaming">
+								<code profiles="default">set GD_Gladiator_Skills.Xiphos.Mercurial MaxGrade 10</code>
+							</hotfix>
+						</category>
+						<category name="Omega-Senshu Skill">
+							<hotfix name="Xiphos" package="GD_Gladiator_Streaming">
+								<code profiles="default">set GD_Gladiator_Skills.Xiphos.FinalVictory MaxGrade 10</code>
+							</hotfix>
+						</category>
+						<category name="Bloodlust Skill">
+							<hotfix name="Xiphos" package="GD_Gladiator_Streaming">
+								<code profiles="default">set GD_Gladiator_Skills.Xiphos.Bloodlust MaxGrade 10</code>
+							</hotfix>
+						</category>
+						<category name="Tear Skill">
+							<hotfix name="Xiphos" package="GD_Gladiator_Streaming">
+								<code profiles="default">set GD_Gladiator_Skills.Xiphos.Tear MaxGrade 10</code>
+							</hotfix>
+						</category>
+						<category name="You've Got Red on You Skill">
+							<hotfix name="Xiphos" package="GD_Gladiator_Streaming">
+								<code profiles="default">set GD_Gladiator_Skills.Xiphos.YouveGotRedonYou MaxGrade 10</code>
+							</hotfix>
+						</category>
+						<category name="Fury of the Arena Skill">
+							<hotfix name="Xiphos" package="GD_Gladiator_Streaming">
+								<code profiles="default">set GD_Gladiator_Skills.Xiphos.FuryOfTheArena MaxGrade 10</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Ceraunic Storm Tree">
+						<category name="Storm Weaving Skill">
+							<hotfix name="CeraunicStorm" package="GD_Gladiator_Streaming">
+								<code profiles="default">set GD_Gladiator_Skills.CeraunicStorm.StormWeaving MaxGrade 10</code>
+							</hotfix>
+						</category>
+						<category name="Gathering Tempest Skill">
+							<hotfix name="CeraunicStorm" package="GD_Gladiator_Streaming">
+								<code profiles="default">set GD_Gladiator_Skills.CeraunicStorm.GatheringTempest MaxGrade 10</code>
+							</hotfix>
+						</category>
+						<category name="Conduit Skill">
+							<hotfix name="CeraunicStorm" package="GD_Gladiator_Streaming">
+								<code profiles="default">set GD_Gladiator_Skills.CeraunicStorm.Conduit_V2 MaxGrade 10</code>
+							</hotfix>
+						</category>
+						<category name="Unrelenting Skill">
+							<hotfix name="CeraunicStorm" package="GD_Gladiator_Streaming">
+								<code profiles="default">set GD_Gladiator_Skills.CeraunicStorm.Unrelenting MaxGrade 10</code>
+							</hotfix>
+						</category>
+						<category name="Superconductor Skill">
+							<hotfix name="CeraunicStorm" package="GD_Gladiator_Streaming">
+								<code profiles="default">set GD_Gladiator_Skills.CeraunicStorm.Superconductor MaxGrade 10</code>
+							</hotfix>
+						</category>
+						<category name="Elemental Barrage Skill">
+							<hotfix name="CeraunicStorm" package="GD_Gladiator_Streaming">
+								<code profiles="default">set GD_Gladiator_Skills.CeraunicStorm.ElementalBarrage MaxGrade 10</code>
+							</hotfix>
+						</category>
+						<category name="Overload Skill">
+							<hotfix name="CeraunicStorm" package="GD_Gladiator_Streaming">
+								<code profiles="default">set GD_Gladiator_Skills.CeraunicStorm.Overload MaxGrade 10</code>
+							</hotfix>
+						</category>
+						<category name="Flash Freeze Skill">
+							<hotfix name="CeraunicStorm" package="GD_Gladiator_Streaming">
+								<code profiles="default">set GD_Gladiator_Skills.CeraunicStorm.FlashFreeze MaxGrade 10</code>
+							</hotfix>
+						</category>
+					</category>
+				</category>
+				<category name="Wilhelm">
+					<category name="Hunter-Killer Tree">
+						<category name="Afterburner Skill">
+							<hotfix name="HunterKiller" package="GD_Enforcer_Streaming">
+								<code profiles="default">set GD_Enforcer_Skills.HunterKiller.Afterburner MaxGrade 10</code>
+							</hotfix>
+						</category>
+						<category name="Fire Support Skill">
+							<hotfix name="HunterKiller" package="GD_Enforcer_Streaming">
+								<code profiles="default">set GD_Enforcer_Skills.HunterKiller.FireSupport MaxGrade 10</code>
+							</hotfix>
+						</category>
+						<category name="Venom Bolts Skill">
+							<hotfix name="HunterKiller" package="GD_Enforcer_Streaming">
+								<code profiles="default">set GD_Enforcer_Skills.HunterKiller.VenomBolts MaxGrade 10</code>
+							</hotfix>
+						</category>
+						<category name="Suppression Skill">
+							<hotfix name="HunterKiller" package="GD_Enforcer_Streaming">
+								<code profiles="default">set GD_Enforcer_Skills.HunterKiller.Suppression MaxGrade 10</code>
+							</hotfix>
+						</category>
+						<category name="Rolling Thunder Skill">
+							<hotfix name="HunterKiller" package="GD_Enforcer_Streaming">
+								<code profiles="default">set GD_Enforcer_Skills.HunterKiller.RollingThunder MaxGrade 10</code>
+							</hotfix>
+						</category>
+						<category name="Cold War Skill">
+							<hotfix name="HunterKiller" package="GD_Enforcer_Streaming">
+								<code profiles="default">set GD_Enforcer_Skills.HunterKiller.ColdWar MaxGrade 10</code>
+							</hotfix>
+						</category>
+						<category name="Escalation Skill">
+							<hotfix name="HunterKiller" package="GD_Enforcer_Streaming">
+								<code profiles="default">set GD_Enforcer_Skills.HunterKiller.Escalation MaxGrade 10</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Cyber Commando Tree">
+						<category name="Laser Focus Skill">
+							<hotfix name="CyberCommando" package="GD_Enforcer_Streaming">
+								<code profiles="default">set GD_Enforcer_Skills.CyberCommando.LezerFighter MaxGrade 10</code>
+							</hotfix>
+						</category>
+						<category name="Man and Machine Skill">
+							<hotfix name="CyberCommando" package="GD_Enforcer_Streaming">
+								<code profiles="default">set GD_Enforcer_Skills.CyberCommando.ManandMachine MaxGrade 10</code>
+							</hotfix>
+						</category>
+						<category name="First to Fight Skill">
+							<hotfix name="CyberCommando" package="GD_Enforcer_Streaming">
+								<code profiles="default">set GD_Enforcer_Skills.CyberCommando.FirsttoFight MaxGrade 10</code>
+							</hotfix>
+						</category>
+						<category name="Targeting Scope Skill">
+							<hotfix name="CyberCommando" package="GD_Enforcer_Streaming">
+								<code profiles="default">set GD_Enforcer_Skills.CyberCommando.HyZ33TargetingScope MaxGrade 10</code>
+							</hotfix>
+						</category>
+						<category name="Emergency Response Skill">
+							<hotfix name="CyberCommando" package="GD_Enforcer_Streaming">
+								<code profiles="default">set GD_Enforcer_Skills.CyberCommando.EmergencyResponse MaxGrade 10</code>
+							</hotfix>
+						</category>
+						<category name="Divert Power Skill">
+							<hotfix name="CyberCommando" package="GD_Enforcer_Streaming">
+								<code profiles="default">set GD_Enforcer_Skills.CyberCommando.DivertPower MaxGrade 10</code>
+							</hotfix>
+						</category>
+						<category name="Meteor Slam Skill">
+							<hotfix name="CyberCommando" package="GD_Enforcer_Streaming">
+								<code profiles="default">set GD_Enforcer_Skills.CyberCommando.DeathFromAbove MaxGrade 10</code>
+							</hotfix>
+						</category>
+						<category name="Welcome To The Gun Show Skill">
+							<hotfix name="CyberCommando" package="GD_Enforcer_Streaming">
+								<code profiles="default">set GD_Enforcer_Skills.CyberCommando.WelcomeToTheGunShow MaxGrade 10</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Dreadnought Tree">
+						<category name="Auxillary Tanks Skill">
+							<hotfix name="Dreadnought" package="GD_Enforcer_Streaming">
+								<code profiles="default">set GD_Enforcer_Skills.Dreadnought.AuxillaryTanks MaxGrade 10</code>
+							</hotfix>
+						</category>
+						<category name="Fortify Skill">
+							<hotfix name="Dreadnought" package="GD_Enforcer_Streaming">
+								<code profiles="default">set GD_Enforcer_Skills.Dreadnought.Fortify MaxGrade 10</code>
+							</hotfix>
+						</category>
+						<category name="Energize Skill">
+							<hotfix name="Dreadnought" package="GD_Enforcer_Streaming">
+								<code profiles="default">set GD_Enforcer_Skills.Dreadnought.Energize MaxGrade 10</code>
+							</hotfix>
+						</category>
+						<category name="Heat Sinks Skill">
+							<hotfix name="Dreadnought" package="GD_Enforcer_Streaming">
+								<code profiles="default">set GD_Enforcer_Skills.Dreadnought.HeatSinks MaxGrade 10</code>
+							</hotfix>
+						</category>
+						<category name="Rapid Reinforcement Skill">
+							<hotfix name="Dreadnought" package="GD_Enforcer_Streaming">
+								<code profiles="default">set GD_Enforcer_Skills.Dreadnought.RapidReinforcement MaxGrade 10</code>
+							</hotfix>
+						</category>
+						<category name="Hazmat Containment Systems Skill">
+							<hotfix name="Dreadnought" package="GD_Enforcer_Streaming">
+								<code profiles="default">set GD_Enforcer_Skills.Dreadnought.HazmatContainmentSystems MaxGrade 10</code>
+							</hotfix>
+						</category>
+						<category name="Hard To Kill Skill">
+							<hotfix name="Dreadnought" package="GD_Enforcer_Streaming">
+								<code profiles="default">set GD_Enforcer_Skills.Dreadnought.HardToKill MaxGrade 10</code>
+							</hotfix>
+						</category>
+					</category>
+				</category>
+				<category name="Nisha">
+					<category name="Law & Order Tree">
+						<category name="The Third Degree Skill">
+							<hotfix name="Law & Order" package="GD_Lawbringer_Streaming">
+								<code profiles="default">set GD_Lawbringer_Skills.Order.TheThirdDegree MaxGrade 10</code>
+							</hotfix>
+						</category>
+						<category name="Wanted Skill">
+							<hotfix name="Law & Order" package="GD_Lawbringer_Streaming">
+								<code profiles="default">set GD_Lawbringer_Skills.Order.Wanted MaxGrade 10</code>
+							</hotfix>
+						</category>
+						<category name="Due Process Skill">
+							<hotfix name="Law & Order" package="GD_Lawbringer_Streaming">
+								<code profiles="default">set GD_Lawbringer_Skills.Order.DueProcess MaxGrade 10</code>
+							</hotfix>
+						</category>
+						<category name="Jurisdiction Skill">
+							<hotfix name="Law & Order" package="GD_Lawbringer_Streaming">
+								<code profiles="default">set GD_Lawbringer_Skills.Order.Jurisdiction MaxGrade 10</code>
+							</hotfix>
+						</category>
+						<category name="Rarin To Go Skill">
+							<hotfix name="Law & Order" package="GD_Lawbringer_Streaming">
+								<code profiles="default">set GD_Lawbringer_Skills.Order.RarinToGo MaxGrade 10</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Fan the Hammer Tree">
+						<category name="Ruthless Skill">
+							<hotfix name="Fan the Hammer" package="GD_Lawbringer_Streaming">
+								<code profiles="default">set GD_Lawbringer_Skills.FanTheHammer.Ruthless MaxGrade 10</code>
+							</hotfix>
+						</category>
+						<category name="Gunslinger Skill">
+							<hotfix name="Fan the Hammer" package="GD_Lawbringer_Streaming">
+								<code profiles="default">set GD_Lawbringer_Skills.FanTheHammer.Gunslinger MaxGrade 10</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="The Riflewoman Tree">
+						<category name="Snap Shot Skill">
+							<hotfix name="The Riflewoman" package="GD_Lawbringer_Streaming">
+								<code profiles="default">set GD_Lawbringer_Skills.Riflewoman.SnapShot MaxGrade 10</code>
+							</hotfix>
+						</category>
+						<category name="Bona Fide Grit Skill">
+							<hotfix name="The Riflewoman" package="GD_Lawbringer_Streaming">
+								<code profiles="default">set GD_Lawbringer_Skills.Riflewoman.BonaFideGrit MaxGrade 10</code>
+							</hotfix>
+						</category>
+						<category name="Crack Shot Skill">
+							<hotfix name="The Riflewoman" package="GD_Lawbringer_Streaming">
+								<code profiles="default">set GD_Lawbringer_Skills.Riflewoman.CrackShot MaxGrade 10</code>
+							</hotfix>
+						</category>
+						<category name="Hot Lead Skill">
+							<hotfix name="The Riflewoman" package="GD_Lawbringer_Streaming">
+								<code profiles="default">set GD_Lawbringer_Skills.Riflewoman.HotLead MaxGrade 10</code>
+							</hotfix>
+						</category>
+					</category>
+				</category>
+				<category name="Claptrap">
+					<category name="Boomtrap Tree">
+						<category name="Drop The Hammer Skill">
+							<hotfix name="Boomtrap" package="GD_Prototype_Streaming">
+								<code profiles="default">set GD_Prototype_Skills.Boomtrap.DropTheHammer MaxGrade 10</code>
+							</hotfix>
+						</category>
+						<category name="Repulsive Skill">
+							<hotfix name="Boomtrap" package="GD_Prototype_Streaming">
+								<code profiles="default">set GD_Prototype_Skills.Boomtrap.Repulsive MaxGrade 10</code>
+							</hotfix>
+						</category>
+						<category name="Load'N'Spload Skill">
+							<hotfix name="Boomtrap" package="GD_Prototype_Streaming">
+								<code profiles="default">set GD_Prototype_Skills.Boomtrap.LoadNSplode MaxGrade 10</code>
+							</hotfix>
+						</category>
+						<category name="Start With A Bang Skill">
+							<hotfix name="Boomtrap" package="GD_Prototype_Streaming">
+								<code profiles="default">set GD_Prototype_Skills.Boomtrap.StartWithABang MaxGrade 10</code>
+							</hotfix>
+						</category>
+						<category name="Hyperion Punch Skill">
+							<hotfix name="Boomtrap" package="GD_Prototype_Streaming">
+								<code profiles="default">set GD_Prototype_Skills.Boomtrap.HyperionPunch MaxGrade 10</code>
+							</hotfix>
+						</category>
+						<category name="One Last Thing Skill">
+							<hotfix name="Boomtrap" package="GD_Prototype_Streaming">
+								<code profiles="default">set GD_Prototype_Skills.Boomtrap.OneLastThing MaxGrade 10</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="I Love You Guys Tree">
+						<category name="Best Buds 4 Life Skill">
+							<hotfix name="I Love You Guys" package="GD_Prototype_Streaming">
+								<code profiles="default">set GD_Prototype_Skills.ILoveYouGuys.BestBuds4Life MaxGrade 10</code>
+							</hotfix>
+						</category>
+						<category name="Maniacal Laughter Skill">
+							<hotfix name="I Love You Guys" package="GD_Prototype_Streaming">
+								<code profiles="default">set GD_Prototype_Skills.ILoveYouGuys.ManiacalLaughter MaxGrade 10</code>
+							</hotfix>
+						</category>
+						<category name="All The Things Are Awesome Skill">
+							<hotfix name="I Love You Guys" package="GD_Prototype_Streaming">
+								<code profiles="default">set GD_Prototype_Skills.ILoveYouGuys.AllTheThingsAreAwesome MaxGrade 10</code>
+							</hotfix>
+						</category>
+						<category name="Wax Off Wax On Skill">
+							<hotfix name="I Love You Guys" package="GD_Prototype_Streaming">
+								<code profiles="default">set GD_Prototype_Skills.ILoveYouGuys.WaxOffWaxOn MaxGrade 10</code>
+							</hotfix>
+						</category>
+						<category name="Pain Simulator Is Painful Skill">
+							<hotfix name="I Love You Guys" package="GD_Prototype_Streaming">
+								<code profiles="default">set GD_Prototype_Skills.ILoveYouGuys.PainSimulatorIsPainful MaxGrade 10</code>
+							</hotfix>
+						</category>
+						<category name="Kick Him While Hes Up Skill">
+							<hotfix name="I Love You Guys" package="GD_Prototype_Streaming">
+								<code profiles="default">set GD_Prototype_Skills.ILoveYouGuys.KickHimWhileHesUp MaxGrade 10</code>
+							</hotfix>
+						</category>
+						<category name="Organized Guns Are Happy Skill">
+							<hotfix name="I Love You Guys" package="GD_Prototype_Streaming">
+								<code profiles="default">set GD_Prototype_Skills.ILoveYouGuys.OrganizedGunsAreHappyGuns MaxGrade 10</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Fragmented Fragtrap Tree">
+						<category name="Surpise? Stabilize! Skill">
+							<hotfix name="Fragmented Fragtrap" package="GD_Prototype_Streaming">
+								<code profiles="default">set GD_Prototype_Skills.Fragmented.SurprisedStabalize MaxGrade 10</code>
+							</hotfix>
+						</category>
+						<category name="Blue Shell Skill">
+							<hotfix name="Fragmented Fragtrap" package="GD_Prototype_Streaming">
+								<code profiles="default">set GD_Prototype_Skills.Fragmented.BlueShell MaxGrade 10</code>
+							</hotfix>
+						</category>
+						<category name="Grenade Vent Skill">
+							<hotfix name="Fragmented Fragtrap" package="GD_Prototype_Streaming">
+								<code profiles="default">set GD_Prototype_Skills.Fragmented.GrenadeVent MaxGrade 10</code>
+							</hotfix>
+						</category>
+						<category name="Cryogenic Exhaust Manifold Skill">
+							<hotfix name="Fragmented Fragtrap" package="GD_Prototype_Streaming">
+								<code profiles="default">set GD_Prototype_Skills.Fragmented.CryogenicExhaustManifold MaxGrade 10</code>
+							</hotfix>
+						</category>
+					</category>
+				</category>
+				<category name="Jack">
+					<category name="The Hero of this Story Tree">
+						<category name="Best Foot Forward Skill">
+							<hotfix name="The Hero of this Story" package="Quince_Doppel_Streaming">
+								<code profiles="default">set Quince_Doppel_Hero.Skills.BestFootForward MaxGrade 10</code>
+							</hotfix>
+						</category>
+						<category name="Bolster Skill">
+							<hotfix name="The Hero of this Story" package="Quince_Doppel_Streaming">
+								<code profiles="default">set Quince_Doppel_Hero.Skills.Bolster MaxGrade 10</code>
+							</hotfix>
+						</category>
+						<category name="Just Compensation Skill">
+							<hotfix name="The Hero of this Story" package="Quince_Doppel_Streaming">
+								<code profiles="default">set Quince_Doppel_Hero.Skills.JustCompensation MaxGrade 10</code>
+							</hotfix>
+						</category>
+						<category name="Hero Pose Skill">
+							<hotfix name="The Hero of this Story" package="Quince_Doppel_Streaming">
+								<code profiles="default">set Quince_Doppel_Hero.Skills.HeroPose MaxGrade 10</code>
+							</hotfix>
+						</category>
+						<category name="Lean On Me Skill">
+							<hotfix name="The Hero of this Story" package="Quince_Doppel_Streaming">
+								<code profiles="default">set Quince_Doppel_Hero.Skills.LeanOnMe MaxGrade 10</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Greater Good Tree">
+						<category name="Integrity Skill">
+							<hotfix name="Greater Good" package="Quince_Doppel_Streaming">
+								<code profiles="default">set Quince_Doppel_GreaterGood.Skills.Integrity MaxGrade 10</code>
+							</hotfix>
+						</category>
+						<category name="Teamwork Skill">
+							<hotfix name="Greater Good" package="Quince_Doppel_Streaming">
+								<code profiles="default">set Quince_Doppel_GreaterGood.Skills.Teamwork MaxGrade 10</code>
+							</hotfix>
+						</category>
+						<category name="Optimism Skill">
+							<hotfix name="Greater Good" package="Quince_Doppel_Streaming">
+								<code profiles="default">set Quince_Doppel_GreaterGood.Skills.Optimism MaxGrade 10</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Free Enterprise Tree">
+						<category name="High Frequency Trading Skill">
+							<hotfix name="Free Enterprise" package="Quince_Doppel_Streaming">
+								<code profiles="default">set Quince_Doppel_FreeEnterprise.Skills.HighFrequencyTrading MaxGrade 10</code>
+							</hotfix>
+						</category>
+						<category name="Incentives Skill">
+							<hotfix name="Free Enterprise" package="Quince_Doppel_Streaming">
+								<code profiles="default">set Quince_Doppel_FreeEnterprise.Skills.Incentives MaxGrade 10</code>
+							</hotfix>
+						</category>
+						<category name="Marginal Benefit Skill">
+							<hotfix name="Free Enterprise" package="Quince_Doppel_Streaming">
+								<code profiles="default">set Quince_Doppel_FreeEnterprise.Skills.MarginalBenefit MaxGrade 10</code>
+							</hotfix>
+						</category>
+						<category name="Company Man Skill">
+							<hotfix name="Free Enterprise" package="Quince_Doppel_Streaming">
+								<code profiles="default">set Quince_Doppel_FreeEnterprise.Skills.CompanyMan MaxGrade 10</code>
+							</hotfix>
+						</category>
+					</category>
+				</category>
+				<category name="Aurelia">
+					<category name="The Huntress Tree">
+						<category name="Markswoman Skill">
+							<hotfix name="The Huntress" package="Crocus_Baroness_Streaming">
+								<code profiles="default">set Crocus_Baroness_Huntress.Skills.Markswoman MaxGrade 10</code>
+							</hotfix>
+						</category>
+						<category name="Only The Best Skill">
+							<hotfix name="The Huntress" package="Crocus_Baroness_Streaming">
+								<code profiles="default">set Crocus_Baroness_Huntress.Skills.OnlyTheBest MaxGrade 10</code>
+							</hotfix>
+						</category>
+						<category name="I Never Miss Skill">
+							<hotfix name="The Huntress" package="Crocus_Baroness_Streaming">
+								<code profiles="default">set Crocus_Baroness_Huntress.Skills.INeverMiss MaxGrade 10</code>
+							</hotfix>
+						</category>
+						<category name="Wait For It Skill">
+							<hotfix name="The Huntress" package="Crocus_Baroness_Streaming">
+								<code profiles="default">set Crocus_Baroness_Huntress.Skills.WaitForIt MaxGrade 10</code>
+							</hotfix>
+						</category>
+						<category name="Large Calibur Skill">
+							<hotfix name="The Huntress" package="Crocus_Baroness_Streaming">
+								<code profiles="default">set Crocus_Baroness_Huntress.Skills.LargeCalibur MaxGrade 10</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Cold Money Tree">
+						<category name="Avalanche Skill">
+							<hotfix name="Cold Money" package="Crocus_Baroness_Streaming">
+								<code profiles="default">set Crocus_Baroness_ColdMoney.Skills.Avalanche MaxGrade 10</code>
+							</hotfix>
+						</category>
+						<category name="Bitter Riposte Skill">
+							<hotfix name="Cold Money" package="Crocus_Baroness_Streaming">
+								<code profiles="default">set Crocus_Baroness_ColdMoney.Skills.BitterRiposte MaxGrade 10</code>
+							</hotfix>
+						</category>
+						<category name="Short Summer Skill">
+							<hotfix name="Cold Money" package="Crocus_Baroness_Streaming">
+								<code profiles="default">set Crocus_Baroness_ColdMoney.Skills.ShortSummer MaxGrade 10</code>
+							</hotfix>
+						</category>
+						<category name="Frigid Touch Skill">
+							<hotfix name="Cold Money" package="Crocus_Baroness_Streaming">
+								<code profiles="default">set Crocus_Baroness_ColdMoney.Skills.FrigidTouch MaxGrade 10</code>
+							</hotfix>
+						</category>
+						<category name="Winters Veil Skill">
+							<hotfix name="Cold Money" package="Crocus_Baroness_Streaming">
+								<code profiles="default">set Crocus_Baroness_ColdMoney.Skills.WintersVeil MaxGrade 10</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Contractual Aristocracy Tree">
+						<category name="Quality Not Quantitiy Skill">
+							<hotfix name="Contractual Aristocracy" package="Crocus_Baroness_Streaming">
+								<code profiles="default">set Crocus_Baroness_Servant.Skills.QualityNotQuantity MaxGrade 10</code>
+							</hotfix>
+						</category>
+						<category name="Next To Cleanliness">
+							<hotfix name="Contractual Aristocracy" package="Crocus_Baroness_Streaming">
+								<code profiles="default">set Crocus_Baroness_Servant.Skills.NextToCleanliness MaxGrade 10</code>
+							</hotfix>
+						</category>
+						<category name="Save The Queen Skill">
+							<hotfix name="Contractual Aristocracy" package="Crocus_Baroness_Streaming">
+								<code profiles="default">set Crocus_Baroness_Servant.Skills.SaveTheQueen MaxGrade 10</code>
+							</hotfix>
+						</category>
+					</category>
+				</category>
+			</category>
+		</category>
+	</body>
+</BLCMM>
+
+#Commands:
+set GD_Globals.Skills.INI_SkillPointsPerLevelUp ConditionalInitialization (bEnabled=True,ConditionalExpressionList=((BaseValueIfTrue=(BaseValueConstant=2,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),Expressions=((AttributeOperand1=AttributeDefinition'D_Attributes.ExperienceResourcePool.PlayerExperienceLevel',ComparisonOperator=OPERATOR_GreaterThanOrEqual,Operand2Usage=OPERAND_PreferAttribute,AttributeOperand2=None,ConstantOperand2=1)))),DefaultBaseValue=(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1))
+set GD_Globals.Skills.INI_TotalSkillPointsForCurrentLevel ConditionalInitialization (bEnabled=True,ConditionalExpressionList=((BaseValueIfTrue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Globals.Skills.INI_TotalSkillPointsForCurrentLevelFormula',BaseValueScaleConstant=1.000000),Expressions=((AttributeOperand1=AttributeDefinition'D_Attributes.ExperienceResourcePool.PlayerExperienceLevel',ComparisonOperator=OPERATOR_GreaterThanOrEqual,Operand2Usage=OPERAND_PreferAttribute,AttributeOperand2=None,ConstantOperand2=2.000000)))),DefaultBaseValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))
+set GD_Globals.Skills.INI_TotalSkillPointsForCurrentLevelFormula ValueFormula (bEnabled=True,Multiplier=(BaseValueConstant=2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),Level=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.ExperienceResourcePool.PlayerExperienceLevel',InitializationDefinition=None,BaseValueScaleConstant=1.000000),Power=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),Offset=(BaseValueConstant=-1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))
+
+#Direct-Execute Warning:
+say WARNING: "Skill System Tweaks For TPS" must be imported into BLCMM to run properly with UCP or other mods.
+
+#Hotfixes:
+set Transient.SparkServiceConfiguration_6 Keys ("SparkOnDemandPatchEntry-GBX_Fixes1","SparkOnDemandPatchEntry-GBX_Fixes2","SparkOnDemandPatchEntry-GBX_Fixes3","SparkPatchEntry-GBX_Fixes4","SparkPatchEntry-GBX_Fixes5","SparkPatchEntry-GBX_Fixes6","SparkPatchEntry-GBX_Fixes7","SparkPatchEntry-GBX_Fixes8","SparkPatchEntry-GBX_Fixes9","SparkPatchEntry-GBX_Fixes10","SparkPatchEntry-GBX_Fixes11","SparkPatchEntry-GBX_Fixes12","SparkPatchEntry-GBX_Fixes13","SparkPatchEntry-GBX_Fixes14","SparkLevelPatchEntry-GBX_Fixes15","SparkLevelPatchEntry-GBX_Fixes16","SparkLevelPatchEntry-GBX_Fixes17","SparkLevelPatchEntry-GBX_Fixes18","SparkLevelPatchEntry-GBX_Fixes19","SparkLevelPatchEntry-GBX_Fixes20","SparkLevelPatchEntry-GBX_Fixes21","SparkOnDemandPatchEntry-Athena1","SparkOnDemandPatchEntry-Athena2","SparkOnDemandPatchEntry-Wilhelm1","SparkOnDemandPatchEntry-Wilhelm2","SparkOnDemandPatchEntry-Phalanx1","SparkOnDemandPatchEntry-Phalanx2","SparkOnDemandPatchEntry-Phalanx3","SparkOnDemandPatchEntry-Phalanx4","SparkOnDemandPatchEntry-Phalanx5","SparkOnDemandPatchEntry-Phalanx6","SparkOnDemandPatchEntry-Phalanx7","SparkOnDemandPatchEntry-Phalanx8","SparkOnDemandPatchEntry-Xiphos1","SparkOnDemandPatchEntry-Xiphos2","SparkOnDemandPatchEntry-Xiphos3","SparkOnDemandPatchEntry-Xiphos4","SparkOnDemandPatchEntry-Xiphos5","SparkOnDemandPatchEntry-Xiphos6","SparkOnDemandPatchEntry-Xiphos7","SparkOnDemandPatchEntry-Xiphos8","SparkOnDemandPatchEntry-CeraunicStorm1","SparkOnDemandPatchEntry-CeraunicStorm2","SparkOnDemandPatchEntry-CeraunicStorm3","SparkOnDemandPatchEntry-CeraunicStorm4","SparkOnDemandPatchEntry-CeraunicStorm5","SparkOnDemandPatchEntry-CeraunicStorm6","SparkOnDemandPatchEntry-CeraunicStorm7","SparkOnDemandPatchEntry-CeraunicStorm8","SparkOnDemandPatchEntry-HunterKiller1","SparkOnDemandPatchEntry-HunterKiller2","SparkOnDemandPatchEntry-HunterKiller3","SparkOnDemandPatchEntry-HunterKiller4","SparkOnDemandPatchEntry-HunterKiller5","SparkOnDemandPatchEntry-HunterKiller6","SparkOnDemandPatchEntry-HunterKiller7","SparkOnDemandPatchEntry-CyberCommando1","SparkOnDemandPatchEntry-CyberCommando2","SparkOnDemandPatchEntry-CyberCommando3","SparkOnDemandPatchEntry-CyberCommando4","SparkOnDemandPatchEntry-CyberCommando5","SparkOnDemandPatchEntry-CyberCommando6","SparkOnDemandPatchEntry-CyberCommando7","SparkOnDemandPatchEntry-CyberCommando8","SparkOnDemandPatchEntry-Dreadnought1","SparkOnDemandPatchEntry-Dreadnought2","SparkOnDemandPatchEntry-Dreadnought3","SparkOnDemandPatchEntry-Dreadnought4","SparkOnDemandPatchEntry-Dreadnought5","SparkOnDemandPatchEntry-Dreadnought6","SparkOnDemandPatchEntry-Dreadnought7","SparkOnDemandPatchEntry-Law & Order1","SparkOnDemandPatchEntry-Law & Order2","SparkOnDemandPatchEntry-Law & Order3","SparkOnDemandPatchEntry-Law & Order4","SparkOnDemandPatchEntry-Law & Order5","SparkOnDemandPatchEntry-Fan the Hammer1","SparkOnDemandPatchEntry-Fan the Hammer2","SparkOnDemandPatchEntry-The Riflewoman1","SparkOnDemandPatchEntry-The Riflewoman2","SparkOnDemandPatchEntry-The Riflewoman3","SparkOnDemandPatchEntry-The Riflewoman4","SparkOnDemandPatchEntry-Boomtrap1","SparkOnDemandPatchEntry-Boomtrap2","SparkOnDemandPatchEntry-Boomtrap3","SparkOnDemandPatchEntry-Boomtrap4","SparkOnDemandPatchEntry-Boomtrap5","SparkOnDemandPatchEntry-Boomtrap6","SparkOnDemandPatchEntry-I Love You Guys1","SparkOnDemandPatchEntry-I Love You Guys2","SparkOnDemandPatchEntry-I Love You Guys3","SparkOnDemandPatchEntry-I Love You Guys4","SparkOnDemandPatchEntry-I Love You Guys5","SparkOnDemandPatchEntry-I Love You Guys6","SparkOnDemandPatchEntry-I Love You Guys7","SparkOnDemandPatchEntry-Fragmented Fragtrap1","SparkOnDemandPatchEntry-Fragmented Fragtrap2","SparkOnDemandPatchEntry-Fragmented Fragtrap3","SparkOnDemandPatchEntry-Fragmented Fragtrap4","SparkOnDemandPatchEntry-The Hero of this Story1","SparkOnDemandPatchEntry-The Hero of this Story2","SparkOnDemandPatchEntry-The Hero of this Story3","SparkOnDemandPatchEntry-The Hero of this Story4","SparkOnDemandPatchEntry-The Hero of this Story5","SparkOnDemandPatchEntry-Greater Good1","SparkOnDemandPatchEntry-Greater Good2","SparkOnDemandPatchEntry-Greater Good3","SparkOnDemandPatchEntry-Free Enterprise1","SparkOnDemandPatchEntry-Free Enterprise2","SparkOnDemandPatchEntry-Free Enterprise3","SparkOnDemandPatchEntry-Free Enterprise4","SparkOnDemandPatchEntry-The Huntress1","SparkOnDemandPatchEntry-The Huntress2","SparkOnDemandPatchEntry-The Huntress3","SparkOnDemandPatchEntry-The Huntress4","SparkOnDemandPatchEntry-The Huntress5","SparkOnDemandPatchEntry-Cold Money1","SparkOnDemandPatchEntry-Cold Money2","SparkOnDemandPatchEntry-Cold Money3","SparkOnDemandPatchEntry-Cold Money4","SparkOnDemandPatchEntry-Cold Money5","SparkOnDemandPatchEntry-Contractual Aristocracy1","SparkOnDemandPatchEntry-Contractual Aristocracy2","SparkOnDemandPatchEntry-Contractual Aristocracy3")
+set Transient.SparkServiceConfiguration_6 Values ("GD_Gladiator_Streaming,GD_Gladiator_Skills.Projectiles.ShieldProjectile:BehaviorProviderDefinition_0,BehaviorSequences[0].BehaviorData2[26].LinkedVariables.ArrayIndexAndLength,2686977,0","GD_Gladiator_Streaming,GD_Gladiator_Skills.Projectiles.ShieldProjectile:BehaviorProviderDefinition_0,BehaviorSequences[0].BehaviorData2[49].LinkedVariables.ArrayIndexAndLength,8323073,0","GD_Gladiator_Streaming,GD_Gladiator_Skills.Projectiles.ShieldProjectile:BehaviorProviderDefinition_0.OzBehavior_ActorList_1,BehaviorSequences[0].BehaviorData2[32].Behavior.SearchRadius,500.000000,2048","GD_Ma_Chapter03.M_Ma_Chapter03:Objset_cmp_Pt0_06_ReopenDataStream,Objectiveset_cmp.ObjectiveDefinitions,,(GD_Ma_Chapter03.M_Ma_Chapter03:Pt0_06_ReopenDataStream,GD_Ma_Chapter03.M_Ma_Chapter03:Pt0_04_GetToDataStream,GD_Ma_Chapter03.M_Ma_Chapter03:RetrieveHSource)","Weap_Pistol.GestaltDef_Pistol_GestaltSkeletalMesh:SkeletalMeshSocket_260,RelativeLocation,,(X=-0.05,Y=55.0,Z=13.7)","Weap_Pistol.GestaltDef_Pistol_GestaltSkeletalMesh:SkeletalMeshSocket_268,RelativeLocation,,(X=0.02,Y=36.0,Z=15.45)","Weap_Pistol.GestaltDef_Pistol_GestaltSkeletalMesh:SkeletalMeshSocket_270,RelativeLocation.Z,,14.2","GD_Shields.Projectiles.Proj_LegendaryBoosterShield:BehaviorProviderDefinition_1.Behavior_Explode_140,BehaviorSequences[0].BehaviorData2[7].Behavior.StatusEffectDamage.BaseValueAttribute,None,D_Attributes.Projectile.ProjectileDamage","GD_Shields.Projectiles.Proj_LegendaryBoosterShield:BehaviorProviderDefinition_1.Behavior_Explode_140,BehaviorSequences[0].BehaviorData2[7].Behavior.StatusEffectDamage.BaseValueScaleConstant,1.000000,.25","GD_Shields.Projectiles.Proj_LegendaryBoosterShield:BehaviorProviderDefinition_1.Behavior_Explode_140,BehaviorSequences[0].BehaviorData2[7].Behavior.StatusEffectChance.BaseValueConstant,1.000000,20","GD_Itempools.WeaponPools.Pool_Weapons_SniperRifles_04_Rare,BalancedItems,,+(ItmPoolDefinition=None,InvBalanceDefinition=GD_Cork_Weap_SniperRifles.A_Weapons_Unique.Sniper_Vladof_3_TheMachine,Probability=(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=GD_Balance.Weighting.Weight_2_Uncommon,BaseValueScaleConstant=1),bDropOnDeath=True)","GD_Itempools.WeaponPools.Pool_Weapons_AssaultRifles_04_Rare,BalancedItems,,+(ItmPoolDefinition=None,InvBalanceDefinition=gd_cork_weap_assaultrifle.A_Weapons_Unique.AR_Vladof_3_OldPainful,Probability=(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=GD_Balance.Weighting.Weight_2_Uncommon,BaseValueScaleConstant=1),bDropOnDeath=True)","GD_Itempools.WeaponPools.Pool_Weapons_Shotguns_04_Rare,BalancedItems,,+(ItmPoolDefinition=None,InvBalanceDefinition=GD_Cork_Weap_Shotgun.A_Weapons_Unique.SG_Jakobs_Boomacorn,Probability=(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=GD_Balance.Weighting.Weight_2_Uncommon,BaseValueScaleConstant=1),bDropOnDeath=True)","GD_Itempools.WeaponPools.Pool_Weapons_Shotguns_04_Rare,BalancedItems,,+(ItmPoolDefinition=None,InvBalanceDefinition=GD_Cork_Weap_Shotgun.A_Weapons_Unique.SG_Torgue_3_JackOCannon,Probability=(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=GD_Balance.Weighting.Weight_2_Uncommon,BaseValueScaleConstant=1),bDropOnDeath=True)",",GD_Population_Scavengers.Balance.Outlaws.PawnBalance_ScavWastelandWalker,PlayThroughs[0].CustomItemPoolList,,+(ItemPool=GD_Itempools.Runnables.Pool_ScavBadassSpacemanMidget,PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=GD_Itempools.DropWeights.DropODDS_BossUniqueRares,InitializationDefinition=None,BaseValueScaleConstant=1.000000))",",GD_Population_Scavengers.Balance.Outlaws.PawnBalance_ScavWastelandWalker,PlayThroughs[1].CustomItemPoolList,,+(ItemPool=GD_Itempools.Runnables.Pool_ScavBadassSpacemanMidget,PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=GD_Itempools.DropWeights.DropODDS_BossUniqueRares,InitializationDefinition=None,BaseValueScaleConstant=1.000000))","Laser_P,GD_Challenges.Co_LevelChallenges.EyeOfHelios_TreadCarefully,ChallengeType,ECT_DesignerTriggered,ECT_LevelObject","Outlands_P,Outlands_SideMissions.TheWorld:PersistentLevel.Main_Sequence.WillowSeqEvent_MissionRemoteEvent_0,OutputLinks[0].Links[0].LinkedOp,GearboxSeqAct_TriggerDialogName'Outlands_SideMissions.TheWorld:PersistentLevel.Main_Sequence.GearboxSeqAct_TriggerDialogName_48',Outlands_SideMissions.TheWorld:PersistentLevel.Main_Sequence.WillowSeqAct_MissionCustomEvent_14","Outlands_P,Outlands_SideMissions.TheWorld:PersistentLevel.Main_Sequence.WillowSeqAct_MissionCustomEvent_14,OutputLinks[0].Links,,((LinkedOp=GearboxSeqAct_TriggerDialogName'Outlands_SideMissions.TheWorld:PersistentLevel.Main_Sequence.GearboxSeqAct_TriggerDialogName_48',InputLinkIdx=0))","Outlands_P,Outlands_SideMissions.TheWorld:PersistentLevel.Main_Sequence.GearboxSeqAct_TriggerDialogName_49,OutputLinks[0].Links,,()","Outlands_P,Outlands_SideMissions.TheWorld:PersistentLevel.WillowPopulationEncounter_0,Waves[2].MemberOpportunities,,(PopulationOpportunityDen'Outlands_SideMissions.TheWorld:PersistentLevel.PopulationOpportunityDen_2',PopulationOpportunityDen'Outlands_SideMissions.TheWorld:PersistentLevel.PopulationOpportunityDen_8',None)","GD_Gladiator_Streaming,GD_Gladiator_Skills.ActionSkill.Skill_Gladiator,SkillEffectDefinitions,,((AttributeToModify=AttributeDefinition'D_Attributes.ActiveSkillCooldownResource.ActiveSkillCooldownConsumptionRate',bIncludeDuelingTargets=False,bIncludeSelfAsTarget=False,bOnlyEffectTargetsInRange=False,bExcludeNonPlayerCharacters=False,EffectTarget=TARGET_Self,TargetInstanceDataName=,TargetCriteria=CRITERIA_None,ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),GradeToStartApplyingEffect=0,PerGradeUpgradeInterval=1,PerGradeUpgrade=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),BonusUpgradeList=),(AttributeToModify=AttributeDefinition'D_Attributes.SkillAttributes.SkillDuration',bIncludeDuelingTargets=False,bIncludeSelfAsTarget=False,bOnlyEffectTargetsInRange=False,bExcludeNonPlayerCharacters=False,EffectTarget=TARGET_Self,TargetInstanceDataName=,TargetCriteria=CRITERIA_None,ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=20,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Gladiator_Skills.Misc.Init_HoldTheLine_DurationCalc',BaseValueScaleConstant=1.000000),GradeToStartApplyingEffect=0,PerGradeUpgradeInterval=1,PerGradeUpgrade=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),BonusUpgradeList=),(AttributeToModify=DesignerAttributeDefinition'GD_Gladiator_Skills.ActionSkill.Cooldown_Shield_UI',bIncludeDuelingTargets=False,bIncludeSelfAsTarget=False,bOnlyEffectTargetsInRange=False,bExcludeNonPlayerCharacters=False,EffectTarget=TARGET_Self,TargetInstanceDataName=,TargetCriteria=CRITERIA_None,ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=DesignerAttributeDefinition'GD_Gladiator_Skills.ActionSkill.Cooldown_Shield',InitializationDefinition=None,BaseValueScaleConstant=1.000000),GradeToStartApplyingEffect=0,PerGradeUpgradeInterval=1,PerGradeUpgrade=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),BonusUpgradeList=),(AttributeToModify=DesignerAttributeDefinition'GD_Gladiator_Skills.Misc.Att_Gladiator_AegisAngle_UI',bIncludeDuelingTargets=False,bIncludeSelfAsTarget=False,bOnlyEffectTargetsInRange=False,bExcludeNonPlayerCharacters=False,EffectTarget=TARGET_Self,TargetInstanceDataName=,TargetCriteria=CRITERIA_None,ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=90.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),GradeToStartApplyingEffect=1,PerGradeUpgradeInterval=1,PerGradeUpgrade=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),BonusUpgradeList=),(AttributeToModify=None,bIncludeDuelingTargets=False,bIncludeSelfAsTarget=False,bOnlyEffectTargetsInRange=False,bExcludeNonPlayerCharacters=False,EffectTarget=TARGET_Self,TargetInstanceDataName=,TargetCriteria=CRITERIA_None,ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=11.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),GradeToStartApplyingEffect=1,PerGradeUpgradeInterval=1,PerGradeUpgrade=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),BonusUpgradeList=))","GD_Gladiator_Streaming,GD_Gladiator_Skills.Misc.Att_HoldTheLine_DurationPerLvl,BaseValue,,(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)","GD_Enforcer_Streaming,GD_Enforcer_Skills.ActionSkill.Skill_AirPower,SkillEffectDefinitions,,((AttributeToModify=AttributeDefinition'D_Attributes.ActiveSkillCooldownResource.ActiveSkillCooldownConsumptionRate',bIncludeDuelingTargets=False,bIncludeSelfAsTarget=False,bOnlyEffectTargetsInRange=False,bExcludeNonPlayerCharacters=False,EffectTarget=TARGET_Self,TargetInstanceDataName=,TargetCriteria=CRITERIA_None,ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),GradeToStartApplyingEffect=0,PerGradeUpgradeInterval=1,PerGradeUpgrade=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),BonusUpgradeList=),(AttributeToModify=None,bIncludeDuelingTargets=False,bIncludeSelfAsTarget=False,bOnlyEffectTargetsInRange=False,bExcludeNonPlayerCharacters=False,EffectTarget=TARGET_None,TargetInstanceDataName=,TargetCriteria=CRITERIA_None,ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=DesignerAttributeDefinition'GD_Enforcer_Skills.ActionSkill.Cooldown_Drone',InitializationDefinition=None,BaseValueScaleConstant=1.000000),GradeToStartApplyingEffect=1,PerGradeUpgradeInterval=1,PerGradeUpgrade=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),BonusUpgradeList=),(AttributeToModify=AttributeDefinition'D_Attributes.SkillAttributes.SkillDuration',bIncludeDuelingTargets=False,bIncludeSelfAsTarget=False,bOnlyEffectTargetsInRange=False,bExcludeNonPlayerCharacters=False,EffectTarget=TARGET_Self,TargetInstanceDataName=,TargetCriteria=CRITERIA_None,ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=60,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Enforcer_Skills.Misc.Init_AuxillaryTanks_DurationCalc',BaseValueScaleConstant=1.000000),GradeToStartApplyingEffect=1,PerGradeUpgradeInterval=1,PerGradeUpgrade=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),BonusUpgradeList=),(AttributeToModify=DesignerAttributeDefinition'GD_Enforcer_Skills.ActionSkill.SkillDuration_UI',bIncludeDuelingTargets=False,bIncludeSelfAsTarget=False,bOnlyEffectTargetsInRange=False,bExcludeNonPlayerCharacters=False,EffectTarget=TARGET_Self,TargetInstanceDataName=,TargetCriteria=CRITERIA_None,ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=60,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),GradeToStartApplyingEffect=1,PerGradeUpgradeInterval=1,PerGradeUpgrade=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),BonusUpgradeList=),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponPerShotAccuracyImpulse',bIncludeDuelingTargets=False,bIncludeSelfAsTarget=False,bOnlyEffectTargetsInRange=False,bExcludeNonPlayerCharacters=False,EffectTarget=TARGET_None,TargetInstanceDataName=,TargetCriteria=CRITERIA_None,ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=DesignerAttributeDefinition'GD_Enforcer_Skills.Misc.Att_SupportDrone_BaseHealingRate',InitializationDefinition=None,BaseValueScaleConstant=1.000000),GradeToStartApplyingEffect=0,PerGradeUpgradeInterval=1,PerGradeUpgrade=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),BonusUpgradeList=))","GD_Enforcer_Streaming,GD_Enforcer_Skills.Misc.Att_AuxillaryTanks_DurationPerLvl,BaseValue,,(BaseValueConstant=6,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)","GD_Gladiator_Streaming,GD_Gladiator_Skills.Phalanx.Invictus,MaxGrade,,10","GD_Gladiator_Streaming,GD_Gladiator_Skills.Phalanx.Ephodos,MaxGrade,,10","GD_Gladiator_Streaming,GD_Gladiator_Skills.Phalanx.Vanguard,MaxGrade,,10","GD_Gladiator_Streaming,GD_Gladiator_Skills.Phalanx.HoldTheLine,MaxGrade,,10","GD_Gladiator_Streaming,GD_Gladiator_Skills.Phalanx.UnitedFront,MaxGrade,,10","GD_Gladiator_Streaming,GD_Gladiator_Skills.Phalanx.Stalwart,MaxGrade,,10","GD_Gladiator_Streaming,GD_Gladiator_Skills.Phalanx.ReturningFire,MaxGrade,,10","GD_Gladiator_Streaming,GD_Gladiator_Skills.Phalanx.PrepareForGlory,MaxGrade,,10","GD_Gladiator_Streaming,GD_Gladiator_Skills.Xiphos.Gun-Kata,MaxGrade,,10","GD_Gladiator_Streaming,GD_Gladiator_Skills.Xiphos.ClarityOfPurpose,MaxGrade,,10","GD_Gladiator_Streaming,GD_Gladiator_Skills.Xiphos.Mercurial,MaxGrade,,10","GD_Gladiator_Streaming,GD_Gladiator_Skills.Xiphos.FinalVictory,MaxGrade,,10","GD_Gladiator_Streaming,GD_Gladiator_Skills.Xiphos.Bloodlust,MaxGrade,,10","GD_Gladiator_Streaming,GD_Gladiator_Skills.Xiphos.Tear,MaxGrade,,10","GD_Gladiator_Streaming,GD_Gladiator_Skills.Xiphos.YouveGotRedonYou,MaxGrade,,10","GD_Gladiator_Streaming,GD_Gladiator_Skills.Xiphos.FuryOfTheArena,MaxGrade,,10","GD_Gladiator_Streaming,GD_Gladiator_Skills.CeraunicStorm.StormWeaving,MaxGrade,,10","GD_Gladiator_Streaming,GD_Gladiator_Skills.CeraunicStorm.GatheringTempest,MaxGrade,,10","GD_Gladiator_Streaming,GD_Gladiator_Skills.CeraunicStorm.Conduit_V2,MaxGrade,,10","GD_Gladiator_Streaming,GD_Gladiator_Skills.CeraunicStorm.Unrelenting,MaxGrade,,10","GD_Gladiator_Streaming,GD_Gladiator_Skills.CeraunicStorm.Superconductor,MaxGrade,,10","GD_Gladiator_Streaming,GD_Gladiator_Skills.CeraunicStorm.ElementalBarrage,MaxGrade,,10","GD_Gladiator_Streaming,GD_Gladiator_Skills.CeraunicStorm.Overload,MaxGrade,,10","GD_Gladiator_Streaming,GD_Gladiator_Skills.CeraunicStorm.FlashFreeze,MaxGrade,,10","GD_Enforcer_Streaming,GD_Enforcer_Skills.HunterKiller.Afterburner,MaxGrade,,10","GD_Enforcer_Streaming,GD_Enforcer_Skills.HunterKiller.FireSupport,MaxGrade,,10","GD_Enforcer_Streaming,GD_Enforcer_Skills.HunterKiller.VenomBolts,MaxGrade,,10","GD_Enforcer_Streaming,GD_Enforcer_Skills.HunterKiller.Suppression,MaxGrade,,10","GD_Enforcer_Streaming,GD_Enforcer_Skills.HunterKiller.RollingThunder,MaxGrade,,10","GD_Enforcer_Streaming,GD_Enforcer_Skills.HunterKiller.ColdWar,MaxGrade,,10","GD_Enforcer_Streaming,GD_Enforcer_Skills.HunterKiller.Escalation,MaxGrade,,10","GD_Enforcer_Streaming,GD_Enforcer_Skills.CyberCommando.LezerFighter,MaxGrade,,10","GD_Enforcer_Streaming,GD_Enforcer_Skills.CyberCommando.ManandMachine,MaxGrade,,10","GD_Enforcer_Streaming,GD_Enforcer_Skills.CyberCommando.FirsttoFight,MaxGrade,,10","GD_Enforcer_Streaming,GD_Enforcer_Skills.CyberCommando.HyZ33TargetingScope,MaxGrade,,10","GD_Enforcer_Streaming,GD_Enforcer_Skills.CyberCommando.EmergencyResponse,MaxGrade,,10","GD_Enforcer_Streaming,GD_Enforcer_Skills.CyberCommando.DivertPower,MaxGrade,,10","GD_Enforcer_Streaming,GD_Enforcer_Skills.CyberCommando.DeathFromAbove,MaxGrade,,10","GD_Enforcer_Streaming,GD_Enforcer_Skills.CyberCommando.WelcomeToTheGunShow,MaxGrade,,10","GD_Enforcer_Streaming,GD_Enforcer_Skills.Dreadnought.AuxillaryTanks,MaxGrade,,10","GD_Enforcer_Streaming,GD_Enforcer_Skills.Dreadnought.Fortify,MaxGrade,,10","GD_Enforcer_Streaming,GD_Enforcer_Skills.Dreadnought.Energize,MaxGrade,,10","GD_Enforcer_Streaming,GD_Enforcer_Skills.Dreadnought.HeatSinks,MaxGrade,,10","GD_Enforcer_Streaming,GD_Enforcer_Skills.Dreadnought.RapidReinforcement,MaxGrade,,10","GD_Enforcer_Streaming,GD_Enforcer_Skills.Dreadnought.HazmatContainmentSystems,MaxGrade,,10","GD_Enforcer_Streaming,GD_Enforcer_Skills.Dreadnought.HardToKill,MaxGrade,,10","GD_Lawbringer_Streaming,GD_Lawbringer_Skills.Order.TheThirdDegree,MaxGrade,,10","GD_Lawbringer_Streaming,GD_Lawbringer_Skills.Order.Wanted,MaxGrade,,10","GD_Lawbringer_Streaming,GD_Lawbringer_Skills.Order.DueProcess,MaxGrade,,10","GD_Lawbringer_Streaming,GD_Lawbringer_Skills.Order.Jurisdiction,MaxGrade,,10","GD_Lawbringer_Streaming,GD_Lawbringer_Skills.Order.RarinToGo,MaxGrade,,10","GD_Lawbringer_Streaming,GD_Lawbringer_Skills.FanTheHammer.Ruthless,MaxGrade,,10","GD_Lawbringer_Streaming,GD_Lawbringer_Skills.FanTheHammer.Gunslinger,MaxGrade,,10","GD_Lawbringer_Streaming,GD_Lawbringer_Skills.Riflewoman.SnapShot,MaxGrade,,10","GD_Lawbringer_Streaming,GD_Lawbringer_Skills.Riflewoman.BonaFideGrit,MaxGrade,,10","GD_Lawbringer_Streaming,GD_Lawbringer_Skills.Riflewoman.CrackShot,MaxGrade,,10","GD_Lawbringer_Streaming,GD_Lawbringer_Skills.Riflewoman.HotLead,MaxGrade,,10","GD_Prototype_Streaming,GD_Prototype_Skills.Boomtrap.DropTheHammer,MaxGrade,,10","GD_Prototype_Streaming,GD_Prototype_Skills.Boomtrap.Repulsive,MaxGrade,,10","GD_Prototype_Streaming,GD_Prototype_Skills.Boomtrap.LoadNSplode,MaxGrade,,10","GD_Prototype_Streaming,GD_Prototype_Skills.Boomtrap.StartWithABang,MaxGrade,,10","GD_Prototype_Streaming,GD_Prototype_Skills.Boomtrap.HyperionPunch,MaxGrade,,10","GD_Prototype_Streaming,GD_Prototype_Skills.Boomtrap.OneLastThing,MaxGrade,,10","GD_Prototype_Streaming,GD_Prototype_Skills.ILoveYouGuys.BestBuds4Life,MaxGrade,,10","GD_Prototype_Streaming,GD_Prototype_Skills.ILoveYouGuys.ManiacalLaughter,MaxGrade,,10","GD_Prototype_Streaming,GD_Prototype_Skills.ILoveYouGuys.AllTheThingsAreAwesome,MaxGrade,,10","GD_Prototype_Streaming,GD_Prototype_Skills.ILoveYouGuys.WaxOffWaxOn,MaxGrade,,10","GD_Prototype_Streaming,GD_Prototype_Skills.ILoveYouGuys.PainSimulatorIsPainful,MaxGrade,,10","GD_Prototype_Streaming,GD_Prototype_Skills.ILoveYouGuys.KickHimWhileHesUp,MaxGrade,,10","GD_Prototype_Streaming,GD_Prototype_Skills.ILoveYouGuys.OrganizedGunsAreHappyGuns,MaxGrade,,10","GD_Prototype_Streaming,GD_Prototype_Skills.Fragmented.SurprisedStabalize,MaxGrade,,10","GD_Prototype_Streaming,GD_Prototype_Skills.Fragmented.BlueShell,MaxGrade,,10","GD_Prototype_Streaming,GD_Prototype_Skills.Fragmented.GrenadeVent,MaxGrade,,10","GD_Prototype_Streaming,GD_Prototype_Skills.Fragmented.CryogenicExhaustManifold,MaxGrade,,10","Quince_Doppel_Streaming,Quince_Doppel_Hero.Skills.BestFootForward,MaxGrade,,10","Quince_Doppel_Streaming,Quince_Doppel_Hero.Skills.Bolster,MaxGrade,,10","Quince_Doppel_Streaming,Quince_Doppel_Hero.Skills.JustCompensation,MaxGrade,,10","Quince_Doppel_Streaming,Quince_Doppel_Hero.Skills.HeroPose,MaxGrade,,10","Quince_Doppel_Streaming,Quince_Doppel_Hero.Skills.LeanOnMe,MaxGrade,,10","Quince_Doppel_Streaming,Quince_Doppel_GreaterGood.Skills.Integrity,MaxGrade,,10","Quince_Doppel_Streaming,Quince_Doppel_GreaterGood.Skills.Teamwork,MaxGrade,,10","Quince_Doppel_Streaming,Quince_Doppel_GreaterGood.Skills.Optimism,MaxGrade,,10","Quince_Doppel_Streaming,Quince_Doppel_FreeEnterprise.Skills.HighFrequencyTrading,MaxGrade,,10","Quince_Doppel_Streaming,Quince_Doppel_FreeEnterprise.Skills.Incentives,MaxGrade,,10","Quince_Doppel_Streaming,Quince_Doppel_FreeEnterprise.Skills.MarginalBenefit,MaxGrade,,10","Quince_Doppel_Streaming,Quince_Doppel_FreeEnterprise.Skills.CompanyMan,MaxGrade,,10","Crocus_Baroness_Streaming,Crocus_Baroness_Huntress.Skills.Markswoman,MaxGrade,,10","Crocus_Baroness_Streaming,Crocus_Baroness_Huntress.Skills.OnlyTheBest,MaxGrade,,10","Crocus_Baroness_Streaming,Crocus_Baroness_Huntress.Skills.INeverMiss,MaxGrade,,10","Crocus_Baroness_Streaming,Crocus_Baroness_Huntress.Skills.WaitForIt,MaxGrade,,10","Crocus_Baroness_Streaming,Crocus_Baroness_Huntress.Skills.LargeCalibur,MaxGrade,,10","Crocus_Baroness_Streaming,Crocus_Baroness_ColdMoney.Skills.Avalanche,MaxGrade,,10","Crocus_Baroness_Streaming,Crocus_Baroness_ColdMoney.Skills.BitterRiposte,MaxGrade,,10","Crocus_Baroness_Streaming,Crocus_Baroness_ColdMoney.Skills.ShortSummer,MaxGrade,,10","Crocus_Baroness_Streaming,Crocus_Baroness_ColdMoney.Skills.FrigidTouch,MaxGrade,,10","Crocus_Baroness_Streaming,Crocus_Baroness_ColdMoney.Skills.WintersVeil,MaxGrade,,10","Crocus_Baroness_Streaming,Crocus_Baroness_Servant.Skills.QualityNotQuantity,MaxGrade,,10","Crocus_Baroness_Streaming,Crocus_Baroness_Servant.Skills.NextToCleanliness,MaxGrade,,10","Crocus_Baroness_Streaming,Crocus_Baroness_Servant.Skills.SaveTheQueen,MaxGrade,,10")
+

@@ -1,0 +1,22 @@
+<BLCMM v="1">
+#<!!!You opened a file saved with BLCMM in FilterTool. Please update to BLCMM to properly open this file!!!>
+	<head>
+		<type name="BL2" offline="false"/>
+	</head>
+	<body>
+		<category name="Zero Capacity Manly Man Shield">
+			<comment>=================================================================================</comment>
+			<comment>Made by Coleby</comment>
+			<comment>=================================================================================</comment>
+			<comment>This mod makes the Manly Man Shield have 0 capacity,</comment>
+			<comment>allowing the use of skills which requires an empty shield to work,</comment>
+			<comment>while still applying it's effect. In addition, it has +75% Additive Melee Damage.</comment>
+			<comment>=================================================================================</comment>
+			<code profiles="default">set GD_Orchid_Shields.A_Item_Custom.Shield_Blade ExternalAttributeEffects ((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.ShieldResourcePool.ShieldMaxValue',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance_HealthAndDamage.Shields.Init_ShieldItem_CapacityMaxValue',BaseValueScaleConstant=1)),(AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.ShieldResourcePool.ShieldOnIdleRegenerationDelay',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0,BaseValueAttribute=AttributeDefinition'GD_Shields.Misc.Att_UniversalShieldBaseDelayConstant',InitializationDefinition=None,BaseValueScaleConstant=1)),(AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.ShieldResourcePool.ShieldOnIdleRegenerationRate',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance_HealthAndDamage.Shields.Init_ShieldItem_BaseRegenRatePercentage',BaseValueScaleConstant=1)),(AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.ShieldResourcePool.ShieldConsumptionRate',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=100000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)),(AttributeToModify=AttributeDefinition'D_Attributes.DamageSourceModifiers.InstigatedMeleeDamageModifier',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.75,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)))</code>
+		</category>
+	</body>
+</BLCMM>
+
+#Commands:
+set GD_Orchid_Shields.A_Item_Custom.Shield_Blade ExternalAttributeEffects ((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.ShieldResourcePool.ShieldMaxValue',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance_HealthAndDamage.Shields.Init_ShieldItem_CapacityMaxValue',BaseValueScaleConstant=1)),(AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.ShieldResourcePool.ShieldOnIdleRegenerationDelay',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0,BaseValueAttribute=AttributeDefinition'GD_Shields.Misc.Att_UniversalShieldBaseDelayConstant',InitializationDefinition=None,BaseValueScaleConstant=1)),(AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.ShieldResourcePool.ShieldOnIdleRegenerationRate',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance_HealthAndDamage.Shields.Init_ShieldItem_BaseRegenRatePercentage',BaseValueScaleConstant=1)),(AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.ShieldResourcePool.ShieldConsumptionRate',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=100000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)),(AttributeToModify=AttributeDefinition'D_Attributes.DamageSourceModifiers.InstigatedMeleeDamageModifier',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.75,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)))
+
