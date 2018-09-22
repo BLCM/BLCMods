@@ -339,6 +339,7 @@ Bugs
 TODO
 ====
 
+* Config option to specify the rarity of gear found in lockers?
 * Can we increase boss drop counts depending on player count?
 * Untested components from Torgue DLC *(I'm afraid that's my least favorite
   DLC, to the point of not really liking it much, so I suspect that these
