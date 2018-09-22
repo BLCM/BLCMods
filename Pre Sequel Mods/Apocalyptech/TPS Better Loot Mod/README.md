@@ -310,6 +310,7 @@ Other Recommended Mods
 TODO
 ====
 
+* Configurable section for defining the rarity of loot in lockers?
 * Maybe decrease Moonstone chest cost in exchange for not doing guaranteed
   legendaries on it?
 * It probably wouldn't be difficult to nerf the drop rates while inside "slaughter"
