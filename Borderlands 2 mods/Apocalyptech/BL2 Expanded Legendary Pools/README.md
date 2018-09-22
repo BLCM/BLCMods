@@ -99,5 +99,10 @@ for the full text.
 Changelog
 =========
 
+**v1.0.1**, August 24, 2018:
+ * The Ogre is now properly considered a Legendary, not a Unique, and will
+   be in the legendary pool regardless of whether you have Uniques added
+   or not.
+
 **v1.0.0**, July 22, 2018:
  * Initial public release

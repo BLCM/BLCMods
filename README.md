@@ -7,6 +7,8 @@ If your mod has specific considerations you should make it clear how to install.
 
 Check out the [Wiki](https://github.com/BL2CP/BLCMods/wiki). If you want to find specific mods by category, check [repository with sorted mods](https://github.com/BLCM/ModCabinet/wiki).
 
+As of Aug, 8, 2018, the "issues" tab has been disabled due tp repetitive questions, if you have any problems, please see [The FaQ for patching](https://github.com/BLCM/BLCMods/wiki/Patching-FaQ) and/or [The FaQ for super randomizer](https://github.com/BLCM/BLCMods/wiki/Randomizer-FaQ), if the answer is not in those articles, please go to `#patch-mod-troubleshooting` on the [Discord](https://discord.gg/shadowevil).
+
 ***
 
 ## Requirements
@@ -33,7 +35,7 @@ If you wish to contribute a mod:
 
 If you are part of [BLCM](https://github.com/BLCM) you do not need to fork or pull request, simply drag and drop the file/folder to your directory
 
-#### If you are an author and suspect that someone(s) contribution may be stolen, uploaded without approval, is against your personal policy for the distribution, modification of, derivative, and/or usage of their mod as a base to build upon, please contract an admin and/or the uploader to find a compromise. Do please however remember that there are situations where a mod is so simple enough that attempts to recreate it and/or its effects on gameplay simply is not possible without the equivalent of ( what would seem to be) copy-pasting it, under such times it will be allowed.
+#### If you are an author or user and suspect that someone(s) contribution may be stolen, uploaded without approval, is against your personal policy for the distribution, modification of, derivative, and/or usage of their mod as a base to build upon, please contract an admin and/or the uploader to find a compromise. Do please however remember that there are situations where a mod is so simple enough that attempts to recreate it and/or its effects on gameplay simply is not possible without the equivalent of ( what would seem to be) copy-pasting it, under such times it will be allowed.
 
 ***
 

@@ -1,6 +1,11 @@
 TPS No Wasted COMs
 ==================
 
+**NOTE:** This mod is now included as an optional selection in TPS UCP 2.2's
+"Optionals" category, so if you're using TPS UCP 2.2 or higher, there's no
+longer any need to use this mod directly!  (It won't hurt anything to have
+both enabled, though.)
+
 This mod changes the Class Mod drop pools such that the only COMs which drop
 are for characters who are actually playing the game.  For a singleplayer
 game, that means you'll only ever get COMs for your one character, for
