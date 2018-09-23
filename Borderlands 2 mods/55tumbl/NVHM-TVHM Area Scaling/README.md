@@ -59,4 +59,4 @@ This was all written by me.
 
 # Change log
 
-* [2018-09-24] v1.0.
+* [2018-09-23] v1.0.
