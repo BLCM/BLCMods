@@ -1,7 +1,8 @@
 
-## SMG Dahl Discord Solver (Bloody & Moxxi Version)
 
-In their early days in their making of weapons, Dahl, in collaboration with Torgue created the Discord Solver, a SMG who shot GyroJet explosive bullet. 
+## SMG Dahl Discord Solver (Bloody/Grunge & Moxxi Version)
+
+In their early days in their making of weapons, Dahl, in collaboration with Torgue created the Discord Solver, a SMG which shot GyroJet explosive bullet. 
 
 Unfortunately, the agreement between the two weapons manufacturers did not last long, and the production of the SMG stopped quickly -How ironic for a weapon that's named Discord Solver!- and Torgue seized the patents to create the Pocket Rocket.
 
@@ -16,33 +17,43 @@ This is where you can find it...
 ## What special with this weapon?
 
 - Both Version:
-  - Keep (almost) of all his Unique weapon specificity: very high firerate, variable burst-fire round, shot two bullets for the cost of one ammo, etc... for more details, see [Borderlands Wiki](http://borderlands.wikia.com/wiki/Lascaux) 
-  - Initial damage reduced by 20%, but...
-    - FireMode modified to shoot the Pocket Rocket GyroJet Explosive bullet. 
-    - The speed from the GyroJet Explosive bullet is 20x faster when fired by a SMG than a pistol (but it's still 20% slower than a normal bullet fired by a SMG) 
-    - Shot two GyroJet explosive bullet simultaneously for the cost of one ammo (can be doubled if you use the Aaron00000's "Double Anarchy" mod).
+  - Keep (almost) of all the Lascaux Unique Dahl SMG specificity: very high firerate, variable burst-fire round, chance to shot two bullets for the cost of one ammo, etc... for more details, see [Borderlands Wiki](http://borderlands.wikia.com/wiki/Lascaux) 
+  - Initial (too good) accuracy reduced, slower fireate, and slower reload, but...
+    - FireMode modified to shoot the Pistol GyroJet Explosive Bullet. 
+    - The speed from the GyroJet Explosive bullet is 5x faster when fired by a SMG than a pistol (but it's still a lot more slower than a normal bullet fired by a SMG) 
+    - Chance  to shot two GyroJet explosive bullet simultaneously for the cost of one ammo (can be doubled if you use the Aaron00000's "Double Anarchy" mod).
     - Impact Explosion boosted by Grenade Damage.
     - Firing Mode Sound upgraded to GyroJet bullet sound.
+    - MuzzleFlash upgraded to Explosive Bullet.
+    - Explosive Elemental Color Glow (similar to Torgue weapons)
 - Moxxi Version:
   - As usual for the Vanilla Moxxi weapons, this Moxxi SMG will give you the benefice of:
     - 70% Critical hit bonus
-    - 2.5% lifesteal on damage dealt. 
+    - 2.5% lifesteal on damage dealt
+    - A greater chance to get a extra bullet free 
 	
 Not clear? ... Well, perhaps it will be more easy to compare the difference in a table:  
   
-| Tech Specs      | Lascaux: Vanilla      | Discord Solver #1: Bloody   | Discord Solver #2: Moxxi  | 
-| -------------   | -------------         | -------------               | -------------             | 
-| Bullet:         | Standard              | GyroJets                    | GyroJets                  | 
-| Burst Count:    | 9 to 14 rounds        | 9 to 14 rounds              | 9 to 14 rounds            | 
-| Critical Hit:   | None                  | None                        | 70%                       | 
-| Element:        | Never Elemental       | Never Elemental             | Never Elemental           | 
-| Element Chance: | None                  | None                        | None                      | 
-| Fire Cost:      | 2 bullets cost 1 ammo | 2 bullets cost 1 ammo       | 2 bullets cost 1 ammo     | 
-| Lifesteal:      | N/A                   | N/A                         | 2.5% of damage dealt      | 
-| Skin:           | Lascaux (Vanilla)     | Bloody                      | Moxxi Signature           | 
-| Rarity:         | Unique                | Unique                      | Moxxi                     | 
-  
-  
+| -Tech Specs-          | Lascaux: Vanilla      | Discord Solver #1: Bloody   | Discord Solver #2: Moxxi  | 
+| -------------       | -------------         | -------------               | -------------             |  
+| **Bullet Tech:**   |                   |                           |           | 
+| Bullet Type:        | Standard              | GyroJets Explosive          | GyroJets Explosive        |
+| Fire Cost:          | 1 bullets cost 1 ammo | 1 bullets cost 1 ammo       | 1 bullets cost 1 ammo     |
+| Bullet Speed:       | 20.000                | 5x GyroJet Speed Boost      | 5x GyroJet Speed Boost   |
+| Burst Count:        | 9 to 14 rounds        | 9 to 14 rounds              | 9 to 14 rounds            | 
+| **Explosive Tech:** |                     |                           |           |
+| Element:            | Never Elemental       | Explosive                   | Explosive           | 
+| Explosion Chance:   | None                  | 100%                        | 100%                       |
+| Impact:             | Normal                | Explosive                   | Explosive           |  
+| Explosion Radius:   | None                  | 90                          | 90         |  
+| Splash Format:      | None                  | Grenade Boost               | Grenade Boost         |  
+| **Other:** |                     |                           |           |
+| Extra (free) Bullet:| 100% Chance           | 20% Chance                  | 30% Chance     |
+| Critical Hit:       | None                  | None                        | 70%                       |  
+| Lifesteal:          | N/A                   | N/A                         | 2.5% of damage dealt      | 
+| Skin:               | Lascaux (Vanilla)     | Bloody / Grunge             | Moxxi Signature           | 
+| Rarity:             | Unique                | Unique                      | Moxxi                     | 
+
 ![Discord Solver - Bloody vs Moxxi Edition](https://i.imgur.com/eaFQ7En.png "Don't worry guys... even if my screen capture show French text, my mods are in English")
 
 ### Options: 
@@ -50,14 +61,22 @@ Not clear? ... Well, perhaps it will be more easy to compare the difference in a
 This Mod has few options & fix, so feel free to use the BLCMM tool to select the best option that suit you.
 
 - Both Version:
-  - The GyroJet Explosive Bullet Speed has a toggle option between 5x/10x/15x/20x Speed Boost
-  - The Explosion Impact Type has a toggle option between Explosive/Explosive ForceFlinch/None
   - The Splash Format has a toggle option between Grenade/Rocket/Reaper (see Compatibility below)
-  - The Weapon Card has a toggle option between Show/Hide the additional informations... and English/French too.
-- The Moxxi weapon skin has a toggle option between:
-  - The Moxxi Signature *Classic* Edition ("Red Fire" in the RL Creamer/SG Heart Breaker style) which is timeless and can be used in any occasion.
-  - The Moxxi Signature *Cartier* Edition ("Red Cartier" in the style from the renowned French jeweler) which is very stylish and sophisticated, and by the way the all time favorite from Aurelia the Baroness.
-- The Discord Solver Moxxi Edition can become the reward given by Moxxi for the mission "Hell Hath No Fury" in Opportunity (see picture below).
+  - The Weapon Card has a toggle option between English/French.
+  - The Explosive Elemental Color Glow has a toggle option between On/Off
+
+- Bloody Version:
+  - The Bloody skin has a toogle option between:
+    - The Bloody Skin: Grunge and bloody
+    - The Grunge Skin: Grunge (without blood)
+    - The original Lascaux Skin 
+
+- Moxxi Version:
+   - The Discord Solver Moxxi Edition can become the reward given by Moxxi for the mission "Hell Hath No Fury" in Opportunity (see picture below).
+  - The Moxxi skin has a toggle option between:
+    - The Moxxi Signature *Classic* Edition ("Red Fire" in the RL Creamer/SG Heart Breaker style) which is timeless and can be used in any occasion.
+    - The Moxxi Signature *Cartier* Edition ("Red Cartier" in the style from the renowned French jeweler) which is very stylish and sophisticated, and by the way the all time favorite from Aurelia the Baroness.
+  
 
 ... and few fix:
 
@@ -86,7 +105,7 @@ This Mod has few options & fix, so feel free to use the BLCMM tool to select the
   ```
   [ ] set GD_Weap_SMG.Barrel.SMG_Barrel_Bandit_Lascaux ZoomWeaponAttributeEffects ((AttributeToModify = AttributeDefinition'D_Attributes.Weapon.WeaponAutomaticBurstCount',ModifierType = MT_PreAdd,BaseModifierValue = (BaseValueConstant = 1.000000, BaseValueAttribute = None, InitializationDefinition = None, BaseValueScaleConstant = 1.000000)))
   ``` 
-  - This mod use the Pocket Rocket Firing Mode, so if you use any mode that changes the attributes from the Pocket Rocket, it will affect this mod, and obviously the firing of the Discord Solver. In this case, Just revert the modification done previously to the Pocket Rocket.
+  - This mod use the *Pistol GyroJet Firing Mode*, so if you use any mode that changes the attributes from the Pistol GyroJet Firing Mode, it will affect this mod, and obviously the firing of the Discord Solver. In this case, Just revert the modification done previously to the Pistol GyroJet Firing Mode.
   
   - This mode use Grenade Damage for the Splash Format, so if you are going to use the Discord Solver with a Siren character :warning: Maya :warning: , don't forget to toggle the Grenade Damage to Reaper Splash Damage.
   
