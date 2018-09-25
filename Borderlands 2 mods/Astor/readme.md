@@ -32,7 +32,7 @@ This Read Me is just here as a quick synopsis, for detailed informations, each M
  
  * * * * *
  
- ## [New Weapon] SMG Dahl Discord Solver - Lascaux Edition v1.0.1
+ ## [New Weapon] SMG Dahl Discord Solver - Lascaux Edition v1.1.0
 
 In their early days in the making of weapons, Dahl, in collaboration with Torgue create the Discord Solver, a SMG who fire explosive bullet. 
 Unfortunately, the agreement between the two weapons manufacturers did not last long, and the production of the SMG stopped quickly -How ironic for a weapon that's named Discord Solver!- and Torgue created the Pocket Rocket.
@@ -41,7 +41,7 @@ Anyway, remnant of the past, a *"lost"* Discord Solver (probably dropped by a ba
 
 * * * * *
 
- ## [New Weapon] SMG Dahl Discord Solver - Moxxi Edition v1.0.1
+ ## [New Weapon] SMG Dahl Discord Solver - Moxxi Edition v1.1.0
 
  It would seem that Moxxi still has a specimen of the Discord Solver in her private Signature collection of weapons, but no one has ever seen it, not even Marcus ... so maybe it's just a legend after all? 
  
