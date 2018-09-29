@@ -10,7 +10,7 @@ Ask me for permission first if you wish to use larger portions of this code, mak
 
 # Overview
 
-**Disclaimer: This mod has not yet been properly tested!**
+**Warning: This mod has not yet been properly tested!**
 So, yeah, hopefully it works, but maybe it really doesn't. I'm putting it here in case some people are interested in testing it out...
 because I don't have the time/possibility to test all this myself for the moment.
 
