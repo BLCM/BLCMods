@@ -30,11 +30,18 @@ This Read Me is just here as a quick synopsis, for detailed informations, each M
 
 - Hammerlock give Jakobs weapon/item reward for few of his mission in the main game, but not all of them... Now he will... and with the choice between 2 Blue weapons/items instead of a single one!
  
+  * * * * *
+ 
+ ## [New Weapon] Plasma Caster Dahl Prototype SX-1 v1.0.0
+
+The Prototype SX-1 was great and really a powerful and dangerous weapon, except that the plasma ball will only explode when coming in contact with a enemy and the missed shots disintegrate instantly "pschitt" like a damp squib (without exploding!) in a tiny cloud of pink smoke.
+
  * * * * *
  
- ## [New Weapon] SMG Dahl Discord Solver - Lascaux Edition v1.1.0
+ ## [New Weapon] SMG Dahl Discord Solver - Bloody Edition v1.1.0
 
 In their early days in the making of weapons, Dahl, in collaboration with Torgue create the Discord Solver, a SMG who fire explosive bullet. 
+
 Unfortunately, the agreement between the two weapons manufacturers did not last long, and the production of the SMG stopped quickly -How ironic for a weapon that's named Discord Solver!- and Torgue created the Pocket Rocket.
 
 Anyway, remnant of the past, a *"lost"* Discord Solver (probably dropped by a bandit?) can still be found... submerged in a shallow pool in Frostburn Canyon.

@@ -1,5 +1,6 @@
 
 
+
 ## SMG Dahl Discord Solver (Bloody Edition)
  
 In their early days in their making of weapons, Dahl, in collaboration with Torgue created the Discord Solver, a SMG who shot GyroJet explosive bullet. 
@@ -28,13 +29,13 @@ This is where you can find it....
     - MuzzleFlash upgraded to Explosive Bullet.
     - Explosive Elemental Color Glow (similar to Torgue weapons)
 
-![Discord Solver - Bloody Edition](https://i.imgur.com/jTwGJgh.png "Don't worry guys... even if my screen capture show French text, my mods are in English")
-Of course, the weapon skin is grunge... What did you expect for a weapon which stay forgetten in a pool in a cave since so long? A pristine and shiny weapon perhaps? Well, no... she is dirty and all rusted! Be happy that this old submachine gun is still able to shot fews bullets!
+![Discord Solver - Bloody Edition](https://imgur.com/TBkblD3.png "Don't worry guys... even if my screen capture show French text, my mods are in English")
+Of course, the weapon skin is grunge... What did you expect for a weapon which stay forgetten in a pool in a cave since a eternity? A pristine and shiny weapon perhaps? Well, no... she is dirty and all rusted! Be happy that this old submachine gun is still able to shot fews bullets!
 
 This Mod has few options & fix, so feel free to use the BLCMM tool to select the best option that suit you.
 - The Splash Format has a toggle option between Grenade/Rocket/Reaper (see Compatibility below)
- - The Weapon Card has a toggle option between English/French.
-  - The Explosive Elemental Color Glow has a toggle option between On/Off
+- The Weapon Card has a toggle option between English/French.
+- The Explosive Elemental Color Glow has a toggle option between On/Off
 
 
   - The Bloody skin has a toogle option between:
@@ -104,7 +105,9 @@ This Mod has few options & fix, so feel free to use the BLCMM tool to select the
 A great mod to check for the Discord Solver Bloody version:
 
 - [Double Anarchy v4](https://github.com/BLCM/BLCMods/blob/master/Borderlands%202%20mods/Aaron0000/Weapon-Item%20Parts%20and%20Accessories/DoubleAnarchyv4.txt) by [Aaron00000](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/Aaron0000) : Changes the SMGs accuracy accessory into the Double Accessory from Borderlands 1... and your Discord Solver will have a chance to shot 4 GyroJet explosive bullets (instead of 2) at the ridiculous cost on 2 ammo.
- 
+
+![Discord Solver - Double Anarchy](https://imgur.com/dZW6K2J.png "Don't worry guys... even if my screen capture show French text, my mods are in English")
+
 ### To do:
 
 - [x] Make a new ~~nice and shiny~~ grunge and bloody skin.
