@@ -1,5 +1,6 @@
 
 
+
 ## SMG Dahl Discord Solver (Bloody/Grunge & Moxxi Version)
 
 In their early days in their making of weapons, Dahl, in collaboration with Torgue created the Discord Solver, a SMG which shot GyroJet explosive bullet. 
@@ -54,7 +55,7 @@ Not clear? ... Well, perhaps it will be more easy to compare the difference in a
 | Skin:               | Lascaux (Vanilla)     | Bloody / Grunge             | Moxxi Signature           | 
 | Rarity:             | Unique                | Unique                      | Moxxi                     | 
 
-![Discord Solver - Bloody vs Moxxi Edition](https://i.imgur.com/eaFQ7En.png "Don't worry guys... even if my screen capture show French text, my mods are in English")
+![Discord Solver - Bloody vs Moxxi Edition](https://imgur.com/hJBO69B.png "Don't worry guys... even if my screen capture show French text, my mods are in English")
 
 ### Options: 
 
@@ -117,11 +118,11 @@ A great mod to check for the Discord Solver:
 
 - Both Version: [Double Anarchy v4](https://github.com/BLCM/BLCMods/blob/master/Borderlands%202%20mods/Aaron0000/Weapon-Item%20Parts%20and%20Accessories/DoubleAnarchyv4.txt) by [Aaron00000](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/Aaron0000) : Changes the SMGs accuracy accessory into the Double Accessory from Borderlands 1... and your Discord Solver will shot 4 bullets/projectiles at the cost on 2 ammo.
 
-![Discord Solver Lascaux Version with Double Anarchy Mod](https://i.imgur.com/fR8Wi97.png "Don't worry guys... even if my screen capture show French text, my mods are in English") 
+![Discord Solver Lascaux Version with Double Anarchy Mod](https://imgur.com/dZW6K2J.png "Don't worry guys... even if my screen capture show French text, my mods are in English") 
   
 ### Credits & Thanks:
 
-First of all, I need thanks [PsychoPatate](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/PsychoPatate "PsychoPatate") for his help -and his patience!-  when I was getting nowhere fast (in French: "lorsque je pédalais dans la semoule" :wink:) to realise my 1st *Moxxi Signature Classic* skin; so a big -and special- thanks to you @PsychoPatate.
+First of all, I need thanks [PsychoPatate](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/PsychoPatate "PsychoPatate") for his help -and his patience!-  when I was getting nowhere fast (in French: "lorsque je pÃ©dalais dans la semoule" :wink:) to realise my 1st *Moxxi Signature Classic* skin; so a big -and special- thanks to you @PsychoPatate.
 
 I find a lot of useful informations on the Resource page from the [Wiki](https://github.com/BLCM/BLCMods/wiki) of course, but also on the [Resources page](https://github.com/BLCM/BLCMods/tree/af3b2d17629ab3f7f7a5f7bb68b489c5e13b0498/Borderlands%202%20mods/Dave/Resources) and the great [Dave'S BL2 Skin Modding Guide](https://cdn.rawgit.com/BLCM/BLCMods/bb1933f7/Borderlands%202%20mods/Dave/DAVE%27S%20BL2%20SKIN%20MODDING%20GUIDE.pdf) ... all that made by [Dave](https://github.com/BLCM/BLCMods/tree/af3b2d17629ab3f7f7a5f7bb68b489c5e13b0498/Borderlands%202%20mods/Dave) , so thanks for your work, @DaveRabbit 
 
