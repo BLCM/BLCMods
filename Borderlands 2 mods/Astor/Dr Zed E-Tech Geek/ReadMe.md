@@ -28,7 +28,7 @@ _**Note:** As for my Double Quest Reward "Redux", this Mod will give you the cho
 
 To be sure to get this mod working correctly (as intended), don't forget to place it **AFTER** UCP 4.1 and Better Quest. 
 
-**Know Issue:** Gemstone Rewards instead of E-Tech Rewards
+**Know Issue:** Gemstone Rewards instead of E-Tech Rewards.
 
 - To "trick" the E-Tech weapon rewards with only few weapons by type available (Splatgun: 1 Bandit, 1 Hyperion & 1 Tediore - Total 3 Splatgun for all brands), I use the following E-Tech pool:
 
@@ -49,14 +49,13 @@ Unfortunately, there is no way I can fix that, so the best thing to do in this c
  
 ### To do:
 
-- [ ] Check twice if I don't forget a Dr Zed mission somewhere.
+- [x] Check twice if I don't forget a Dr Zed mission somewhere.
 - [ ] Make (again) a new playthrough to be sure that all the rewards are given correctly.
 - [ ] Clean the code and remove all my ~~shitty~~ notes. 
 
 ### Credits & Thanks:
 
 I find a lot of useful informations on the Resource page from the [Wiki](https://github.com/BLCM/BLCMods/wiki) of course, but also all the Mission Names and Mission Objectives on the [Resources page](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/FromDarkHell/Resources) from [FromDarkHell](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/FromDarkHell) , so thanks for your work, @FromDarkHell 
-
 
 ### Disclaimer
 
