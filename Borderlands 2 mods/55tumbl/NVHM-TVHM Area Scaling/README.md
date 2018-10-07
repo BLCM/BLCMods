@@ -59,4 +59,5 @@ This was all written by me.
 
 # Change log
 
+* [2018-10-08] v1.1. Fixed a bug that made some areas, sometimes, scale to level 1 in TVHM.
 * [2018-09-23] v1.0.
