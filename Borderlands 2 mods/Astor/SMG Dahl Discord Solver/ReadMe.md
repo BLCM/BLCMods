@@ -35,21 +35,21 @@ This is where you can find it...
 	
 Not clear? ... Well, perhaps it will be more easy to compare the difference in a table:  
   
-| -Tech Specs-          | Lascaux: Vanilla      | Discord Solver #1: Bloody   | Discord Solver #2: Moxxi  | 
+| -Tech Specs-        | Lascaux: Vanilla      | Discord Solver #1: Bloody   | Discord Solver #2: Moxxi  | 
 | -------------       | -------------         | -------------               | -------------             |  
-| **Bullet Tech:**   |                   |                           |           | 
+| **Bullet Tech:**    |                       |                             |                           | 
 | Bullet Type:        | Standard              | GyroJets Explosive          | GyroJets Explosive        |
 | Fire Cost:          | 1 bullets cost 1 ammo | 1 bullets cost 1 ammo       | 1 bullets cost 1 ammo     |
-| Bullet Speed:       | 20.000                | 5x GyroJet Speed Boost      | 5x GyroJet Speed Boost   |
+| Bullet Speed:       | 20.000                | 5x GyroJet Speed Boost      | 5x GyroJet Speed Boost    |
 | Burst Count:        | 9 to 14 rounds        | 9 to 14 rounds              | 9 to 14 rounds            | 
-| **Explosive Tech:** |                     |                           |           |
-| Element:            | Never Elemental       | Explosive                   | Explosive           | 
-| Explosion Chance:   | None                  | 100%                        | 100%                       |
-| Impact:             | Normal                | Explosive                   | Explosive           |  
-| Explosion Radius:   | None                  | 90                          | 90         |  
-| Splash Format:      | None                  | Grenade Boost               | Grenade Boost         |  
-| **Other:** |                     |                           |           |
-| Extra (free) Bullet:| 100% Chance           | 20% Chance                  | 30% Chance     |
+| **Explosive Tech:** |                       |                             |                           |
+| Element:            | Never Elemental       | Explosive                   | Explosive                 | 
+| Explosion Chance:   | None                  | 100%                        | 100%                      |
+| Impact:             | Normal                | Explosive                   | Explosive                 |  
+| Explosion Radius:   | None                  | 90                          | 90                        |  
+| Splash Format:      | None                  | Grenade Boost               | Grenade Boost             |  
+| **Other:**          |                       |                             |                           |
+| Extra (free) Bullet:| 100% Chance           | 20% Chance                  | 30% Chance                |
 | Critical Hit:       | None                  | None                        | 70%                       |  
 | Lifesteal:          | N/A                   | N/A                         | 2.5% of damage dealt      | 
 | Skin:               | Lascaux (Vanilla)     | Bloody / Grunge             | Moxxi Signature           | 
@@ -84,6 +84,7 @@ This Mod has few options & fix, so feel free to use the BLCMM tool to select the
 - Both Version:
   - Fix for Orudeon's "Bayonet Enhancements" (Bayonet in slot 2)
   - Fix for Orudeon's "Bayonet Enhancements" (Bayonet in slot 2) + Bayonet Buff
+  - Fix for Bayonet Buff in Slot 1
   - Fix for Koby "Rarity Color Fix": Unique (just in case if you use this old mod)
 - Moxxi Version:
   - Fix for Akathis "No More Moxxi Lifesteal" - 1.5% passive health regeneration instead of 2.5% Lifesteal
@@ -116,7 +117,7 @@ A great mod to check for the Discord Solver:
 
 - Moxxi Version: [No More Moxxi Lifesteal v2.0](https://github.com/BLCM/BLCMods/blob/master/Borderlands%202%20mods/Akathris/NoMoreMoxxiLifestealv2.0.txt) by [Akathris](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/Akathris) . His Mod is self explanatory: removes lifesteal from Moxxi weapons and changes it to passive health regeneration.
 
-- Both Version: [Double Anarchy v4](https://github.com/BLCM/BLCMods/blob/master/Borderlands%202%20mods/Aaron0000/Weapon-Item%20Parts%20and%20Accessories/DoubleAnarchyv4.txt) by [Aaron00000](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/Aaron0000) : Changes the SMGs accuracy accessory into the Double Accessory from Borderlands 1... and your Discord Solver will shot 4 bullets/projectiles at the cost on 2 ammo.
+- Both Version: [Double Anarchy v4](https://github.com/BLCM/BLCMods/blob/master/Borderlands%202%20mods/Aaron0000/Weapon-Item%20Parts%20and%20Accessories/DoubleAnarchyv4.txt) by [Aaron00000](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/Aaron0000) : Changes the SMGs accuracy accessory into the Double Accessory from Borderlands 1... and your Discord Solver will shot 2 GyroJet Explosive bullets at the cost on 2 ammo, and will have a chance to be doubled and shot 4 GyroJet Explosive bullets at the ridiculous cost on 2 ammo.
 
 ![Discord Solver Lascaux Version with Double Anarchy Mod](https://imgur.com/dZW6K2J.png "Don't worry guys... even if my screen capture show French text, my mods are in English") 
   
