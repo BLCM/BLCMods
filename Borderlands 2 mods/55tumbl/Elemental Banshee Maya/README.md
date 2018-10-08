@@ -115,7 +115,12 @@ Thanks to the people who made this kind of modding possible and practical (Shado
 Thanks to Apocalyptech for his BPD graph generator, this thing is so damn useful.
 
 # Change log
-[2018-10-08] v1.3: Phaselock now stays active for 5 seconds after hitting an immune target (and activates thus Shriek, Elated, and Pins and Needles); Direct damage of Phaselock vs. immune target is slightly decreased to compensate; Fixed Cloud Kill status effect damage; Fixed some visual issues with overlapping icons.
+[2018-10-08] v1.3:
+* Phaselock now stays active for 5 seconds after hitting an immune target (and activates thus Shriek, Elated, and Pins and Needles);
+* Direct damage of Phaselock vs. immune target is slightly decreased to compensate;
+* Fixed Cloud Kill status effect damage;
+* Fixed some visual issues with overlapping icons.
+
 [2018-09-12] v1.2: Fixed a bug that deactivated Nephilim when riding a vehicle.   
 [2018-08-09] v1.1: Fixed an error in the calculation of reflected bullet damage for Kinetic Reflection.    
 [2018-08-05] v1.0.
