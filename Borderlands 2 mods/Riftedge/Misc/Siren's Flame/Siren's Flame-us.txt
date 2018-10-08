@@ -1,0 +1,66 @@
+#<Siren's flame>
+
+    set PlayerInput Bindings ((Name="six",Command="set GD_Weap_SMG.FiringModes.Bullet_SMG_HellFire PartSysTemplate FX_CHAR_Shared_Shield.Particles.SpikeShields.Part_Shield_Spike_Fire | set GD_Weap_SMG.FiringModes.Bullet_SMG_HellFire:Behavior_Explode_5 Definition GD_Explosions.Incendiary.Explosion_IncendiaryMaster_ShieldNova | set GD_Weap_SMG.FiringModes.Bullet_SMG_HellFire Lifetime 0.7 | set GD_Weap_SMG.FiringModes.Bullet_SMG_HellFire:Behavior_Explode_5 DamageRadiusFormula (BaseValueConstant=50.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0.500000) | set GD_Weap_SMG.FiringModes.Bullet_SMG_HellFire:Behavior_Explode_5 DamageFormula (BaseValueConstant=0.000000,BaseValueAttribute=D_Attributes.Shield.ImpactShield_DamageBonus,InitializationDefinition=None,BaseValueScaleConstant=1.250000) | set GD_Weap_SMG.FiringModes.Bullet_SMG_HellFire SoundDefinition None",Control=false,Shift=false,Alt=false,LeftTrigger=false,RightTrigger=false,bIgnoreCtrl=false,bIgnoreShift=false,bIgnoreAlt=false),(Name="five",Command="set GD_Weap_SMG.FiringModes.Bullet_SMG_HellFire PartSysTemplate FX_WEP_Explosions.Particles.Incendiary.Part_Incendiary_Bullet_Burst | set GD_Weap_SMG.FiringModes.Bullet_SMG_HellFire:Behavior_Explode_5 Definition GD_Explosions.Incendiary.Explosion_AlienSplat_IncendiaryMaster | set GD_Weap_SMG.FiringModes.Bullet_SMG_HellFire Lifetime 0.5 | set GD_Weap_SMG.FiringModes.Bullet_SMG_HellFire:Behavior_Explode_5 DamageRadiusFormula (BaseValueConstant=50.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=7.000000) | set GD_Weap_SMG.FiringModes.Bullet_SMG_HellFire:Behavior_Explode_5 DamageFormula (BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',InitializationDefinition=None,BaseValueScaleConstant=0.500000) | set GD_Weap_SMG.FiringModes.Bullet_SMG_HellFire SoundDefinition GD_Weap_Shotgun.FiringModes.SplatGunSoundDefinition",Control=false,Shift=false,Alt=false,LeftTrigger=false,RightTrigger=false,bIgnoreCtrl=false,bIgnoreShift=false,bIgnoreAlt=false),(Name="seven",Command="set GD_Weap_SMG.FiringModes.Bullet_SMG_HellFire SoundDefinition GD_Weap_SMG.FiringModes.TheBane_SoundDefinition",Control=false,Shift=false,Alt=false,LeftTrigger=false,RightTrigger=false,bIgnoreCtrl=false,bIgnoreShift=false,bIgnoreAlt=false))
+
+    set GD_Weap_SMG.Name.Title_Maliwan.Title_Legendary_HellFire PartName Siren's flame
+
+    set GD_Weap_SMG.Name.Title_Maliwan.Title_Legendary_HellFire:AttributePresentationDefinition_8 NoConstraintText <font color="#FF5151">Energy fluctuates between two circuits in this Hellfire...What leads to this phenomenon? (The only Hellfire that served Lilith and Maya)<br><font color="#FF6600">[funstat]Scatter Mode(Num5)-Decrease splash damage, increase splash radius, less damage time.<br><font color="#B766AD">[funstat]Restriction Mode(Num6)-Increase splash damage, decrease splash radius, more damage time. Amp shields compatibility.<br><font color="#00FFFF">[funstat]By Biorespawn 2018.7.20<br><font color="#FFFFFF">[funstat]Consume [skill]2 ammo[-skill] per shot.
+
+    set GD_Weap_SMG.FiringModes.Bullet_SMG_HellFire FireType EWWFT_Beam
+
+    set GD_Weap_SMG.FiringModes.Bullet_SMG_HellFire BeamLockBehavior LBL_Never
+
+    set GD_Weap_SMG.FiringModes.Bullet_SMG_HellFire DamageTypeDefinition GD_Incendiary.DamageType.DmgType_Incendiary_Impact
+
+    set GD_Weap_SMG.FiringModes.Bullet_SMG_HellFire PartSysTemplate FX_WEP_Explosions.Particles.Incendiary.Part_Incendiary_Bullet_Burst
+
+    set GD_Weap_SMG.FiringModes.Bullet_SMG_HellFire ProjectileDefinition None
+
+    set GD_Weap_SMG.FiringModes.Bullet_SMG_HellFire ExplosionOverideInstanceDataName None
+
+    set GD_Weap_SMG.FiringModes.Bullet_SMG_HellFire ExplosionOverrideDefinition None
+
+    set GD_Weap_SMG.FiringModes.Bullet_SMG_HellFire ConditionalPartSysTemplate None
+
+    set GD_Weap_SMG.FiringModes.Bullet_SMG_HellFire bSuppressImpactEffects False
+
+    set GD_Weap_SMG.FiringModes.Bullet_SMG_HellFire Lifetime 0.5
+
+    set GD_Weap_SMG.FiringModes.Bullet_SMG_HellFire BeamMaxLength 20000
+
+    set GD_Weap_SMG.FiringModes.Bullet_SMG_HellFire BeamMaxLockOnDistance 20000
+
+    set GD_Weap_SMG.FiringModes.Bullet_SMG_HellFire:Behavior_Explode_5 Definition GD_Explosions.Incendiary.Explosion_AlienSplat_IncendiaryMaster
+
+    set GD_Weap_SMG.FiringModes.Bullet_SMG_HellFire:Behavior_Explode_5 DamageRadiusFormula (BaseValueConstant=50.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=7.000000)
+
+    set GD_Weap_SMG.FiringModes.Bullet_SMG_HellFire:Behavior_Explode_5 DamageFormula (BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',InitializationDefinition=None,BaseValueScaleConstant=0.500000)
+
+    set GD_Weap_SMG.FiringModes.Bullet_SMG_HellFire SoundDefinition GD_Weap_Shotgun.FiringModes.SplatGunSoundDefinition
+
+    set GD_Weap_SMG.Barrel.SMG_Barrel_Maliwan_HellFire WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponStatusEffectChanceModifier',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponStatusEffectDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.200000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+    set GD_Weap_SMG.Barrel.SMG_Barrel_Maliwan_HellFire AttributeSlotUpgrades ((SlotName="WeaponSpread",GradeIncrease=2,bActivateSlot=True),(SlotName="AccuracyMax",GradeIncrease=2,bActivateSlot=True),(SlotName="WeaponMagSize",GradeIncrease=4,bActivateSlot=True),(SlotName="WeaponDamage",GradeIncrease=-10,bActivateSlot=True))
+
+    #<Hotfixes>
+
+        #<hotfix><key>"SparkLevelPatchEntry-HellFire1"</key><value>",GD_Weap_SMG.FiringModes.Bullet_SMG_HellFire:Behavior_Explode_5,Definition,,GD_Explosions.Incendiary.Explosion_AlienSplat_IncendiaryMaster"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-HellFire2"</key><value>",GD_Weap_SMG.FiringModes.Bullet_SMG_HellFire,Lifetime,,0.5"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-HellFire3"</key><value>",GD_Weap_SMG.FiringModes.Bullet_SMG_HellFire:Behavior_Explode_5,DamageRadiusFormula,,(BaseValueConstant=50.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=7.000000)"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-HellFire4"</key><value>",GD_Weap_SMG.FiringModes.Bullet_SMG_HellFire:Behavior_Explode_5,DamageFormula,,(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',InitializationDefinition=None,BaseValueScaleConstant=0.500000)"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-HellFire5"</key><value>",GD_Weap_SMG.FiringModes.Bullet_SMG_HellFire,PartSysTemplate,,FX_WEP_Explosions.Particles.Incendiary.Part_Incendiary_Bullet_Burst"</value><on>
+
+        #<hotfix><key>"SparkLevelPatchEntry-HellFire6"</key><value>",GD_Weap_SMG.FiringModes.Bullet_SMG_HellFire,SoundDefinition,,GD_Weap_Shotgun.FiringModes.SplatGunSoundDefinition"</value><on>
+
+    #</Hotfixes>
+
+#</Siren's flame>
+
+set Transient.SparkServiceConfiguration_6 Keys ("SparkLevelPatchEntry-HellFire1","SparkLevelPatchEntry-HellFire2","SparkLevelPatchEntry-HellFire3","SparkLevelPatchEntry-HellFire4","SparkLevelPatchEntry-HellFire5","SparkLevelPatchEntry-HellFire6")
+
+set Transient.SparkServiceConfiguration_6 Values (",GD_Weap_SMG.FiringModes.Bullet_SMG_HellFire:Behavior_Explode_5,Definition,,GD_Explosions.Incendiary.Explosion_AlienSplat_IncendiaryMaster",",GD_Weap_SMG.FiringModes.Bullet_SMG_HellFire,Lifetime,,0.5",",GD_Weap_SMG.FiringModes.Bullet_SMG_HellFire:Behavior_Explode_5,DamageRadiusFormula,,(BaseValueConstant=50.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=7.000000)",",GD_Weap_SMG.FiringModes.Bullet_SMG_HellFire:Behavior_Explode_5,DamageFormula,,(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',InitializationDefinition=None,BaseValueScaleConstant=0.500000)",",GD_Weap_SMG.FiringModes.Bullet_SMG_HellFire,PartSysTemplate,,FX_WEP_Explosions.Particles.Incendiary.Part_Incendiary_Bullet_Burst",",GD_Weap_SMG.FiringModes.Bullet_SMG_HellFire,SoundDefinition,,GD_Weap_Shotgun.FiringModes.SplatGunSoundDefinition")
+

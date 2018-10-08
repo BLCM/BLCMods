@@ -1,3 +1,4 @@
+BL2
 #<{mod_name}>
 
     # {mod_name} v{mod_version}
@@ -13,12 +14,33 @@
     # types.  Various options for controlling the quality of gear used by enemies (and
     # thus available to yourself) can be found below.  See the README file for full
     # details.
-    #
-    # This mod requires that the UCP option "Skinpool Fixes (Don't uncheck this)" is
-    # enabled!  If you want to run this without UCP, make sure to at least copy that
-    # category over.
 
     #<Main Mod (best to leave all this checked)>
+
+        #<Early Game Gear Unlocks><lock>
+
+            # This is a copy of UCP's Early Game Unlocks, which allows various weapon and
+            # shield levels from the very beginning of the game.  Without this in place,
+            # early-game enemies can spawn without ANY equipped gear, which is weird.
+
+            set GD_Itempools.Scheduling.Gamestage_02:ConstantAttributeValueResolver_0 ConstantValue 1
+
+            set GD_Itempools.Scheduling.Gamestage_03:ConstantAttributeValueResolver_0 ConstantValue 1
+
+            set GD_Itempools.Scheduling.Gamestage_07:ConstantAttributeValueResolver_0 ConstantValue 1
+
+        #</Early Game Gear Unlocks>
+
+        #<Skinpool Setup><lock>
+
+            # This section is copied directly from UCP's Skinpool Reassignments section,
+            # which frees up some 600 skin/head pools for use in mods.  I'm including it
+            # in here so that no part of UCP is actually required, and this mod is
+            # theoretically able to function completely standalone.
+
+{skinpool_setup}
+
+        #</Skinpool Setup>
 
         #<Disable World Weapon/Shield Drops>
 
@@ -30,13 +52,579 @@
             # Note that this doesn't *completely* get rid of world weapon/shield drops, but it
             # should get rid of the vast majority of them.
 
-            #<Main Weapon/Shield-Removing Hotfixes>
+            #<Remove Weapons and Shields from Enemy Drops>
+
+                #<Main Weapon/Shield-Removing Hotfixes for Enemies>
 
 {other:disable_world_sets}
 
-            #</Main Weapon/Shield-Removing Hotfixes>
+                #</Main Weapon/Shield-Removing Hotfixes for Enemies>
 
-            #<Other Container Tweaks>
+                #<Badass+ Drop Pools>
+
+                    # Various Badass-and-up pools explicitly use some pools which we don't
+                    # actually want to touch directly.  Rather than hotfixing these, for Better
+                    # Loot compatibility, we're just going to redefine these pools entirely.
+                    #
+                    # These definitions were taken from my Better Loot mod, and have enhanced
+                    # eridium+cash rewards compared to the stock pools.
+
+                    #<Badass Enemies>
+
+                        set GD_Itempools.ListDefs.BadassEnemyGunsAndGear ItemPools
+                        (
+                            (
+                                ItemPool=ItemPoolDefinition'GD_Itempools.GeneralItemPools.Pool_GunsAndGear',
+                                PoolProbability=(
+                                    BaseValueConstant=1.000000,
+                                    BaseValueAttribute=None,
+                                    InitializationDefinition=None,
+                                    BaseValueScaleConstant=1.000000
+                                )
+                            ),
+                            (
+                                ItemPool=ItemPoolDefinition'GD_Itempools.Treasure_ChestPools.Pool_EpicChest_Weapons_GunsAndGear',
+                                PoolProbability=(
+                                    BaseValueConstant=1.000000,
+                                    BaseValueAttribute=None,
+                                    InitializationDefinition=None,
+                                    BaseValueScaleConstant=1.000000
+                                )
+                            ),
+                            (
+                                ItemPool=ItemPoolDefinition'GD_Itempools.VehicleSkins.Pool_VehicleSkins_All',
+                                PoolProbability=(
+                                    BaseValueConstant=0.000000,
+                                    BaseValueAttribute=AttributeDefinition'GD_Itempools.DropWeights.DropODDS_VehicleSkins',
+                                    InitializationDefinition=None,
+                                    BaseValueScaleConstant=1.000000
+                                )
+                            ),
+                            (
+                                ItemPool=KeyedItemPoolDefinition'GD_CustomItemPools_MainGame.Rewards.Head10',
+                                PoolProbability=(
+                                    BaseValueConstant=0.005000,
+                                    BaseValueAttribute=None,
+                                    InitializationDefinition=None,
+                                    BaseValueScaleConstant=1.000000
+                                )
+                            ),
+                            (
+                                ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Money_1_BIG',
+                                PoolProbability=(
+                                    BaseValueConstant=1.000000,
+                                    BaseValueAttribute=None,
+                                    InitializationDefinition=None,
+                                    BaseValueScaleConstant=1.000000
+                                )
+                            ),
+                            (
+                                ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Eridium_Bar',
+                                PoolProbability=(
+                                    BaseValueConstant=1.000000,
+                                    BaseValueAttribute=AttributeDefinition'GD_Itempools.DropWeights.DropODDS_EridiumBar',
+                                    InitializationDefinition=None,
+                                    BaseValueScaleConstant=10.000000
+                                )
+                            ),
+                            (
+                                ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Eridium_Stick',
+                                PoolProbability=(
+                                    BaseValueConstant=1.000000,
+                                    BaseValueAttribute=None,
+                                    InitializationDefinition=None,
+                                    BaseValueScaleConstant=1.000000
+                                )
+                            ),
+                            (
+                                ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Eridium_Stick',
+                                PoolProbability=(
+                                    BaseValueConstant=1.000000,
+                                    BaseValueAttribute=None,
+                                    InitializationDefinition=None,
+                                    BaseValueScaleConstant=0.500000
+                                )
+                            ),
+                            (
+                                ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Health_All',
+                                PoolProbability=(
+                                    BaseValueConstant=0.000000,
+                                    BaseValueAttribute=AttributeDefinition'GD_Itempools.DropWeights.DropODDS_Health',
+                                    InitializationDefinition=None,
+                                    BaseValueScaleConstant=1.000000
+                                )
+                            ),
+                            (
+                                ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Ammo_All_NeedOnly',
+                                PoolProbability=(
+                                    BaseValueConstant=0.000000,
+                                    BaseValueAttribute=None,
+                                    InitializationDefinition=AttributeInitializationDefinition'GD_Balance.WeightingPlayerCount.AmmoDrops_PerPlayer',
+                                    BaseValueScaleConstant=0.500000
+                                )
+                            ),
+                            (
+                                ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Ammo_All_Emergency',
+                                PoolProbability=(
+                                    BaseValueConstant=1.000000,
+                                    BaseValueAttribute=None,
+                                    InitializationDefinition=None,
+                                    BaseValueScaleConstant=1.000000
+                                )
+                            )
+                        )
+
+                        set GD_Itempools.ListDefs.BadassEnemyWeightedShotgun ItemPools
+                        (
+                            (
+                                ItemPool=ItemPoolDefinition'GD_Itempools.GeneralItemPools.Pool_GunsAndGear',
+                                PoolProbability=(
+                                    BaseValueConstant=1.000000,
+                                    BaseValueAttribute=None,
+                                    InitializationDefinition=None,
+                                    BaseValueScaleConstant=1.000000
+                                )
+                            ),
+                            (
+                                ItemPool=ItemPoolDefinition'GD_Itempools.Treasure_ChestPools.Pool_EpicChest_Weapons_GunsAndGear',
+                                PoolProbability=(
+                                    BaseValueConstant=1.000000,
+                                    BaseValueAttribute=None,
+                                    InitializationDefinition=None,
+                                    BaseValueScaleConstant=1
+                                )
+                            ),
+                            (
+                                ItemPool=ItemPoolDefinition'GD_Itempools.VehicleSkins.Pool_VehicleSkins_All',
+                                PoolProbability=(
+                                    BaseValueConstant=0.000000,
+                                    BaseValueAttribute=AttributeDefinition'GD_Itempools.DropWeights.DropODDS_VehicleSkins',
+                                    InitializationDefinition=None,
+                                    BaseValueScaleConstant=1.000000
+                                )
+                            ),
+                            (
+                                ItemPool=KeyedItemPoolDefinition'GD_CustomItemPools_MainGame.Rewards.Head10',
+                                PoolProbability=(
+                                    BaseValueConstant=0.005000,
+                                    BaseValueAttribute=None,
+                                    InitializationDefinition=None,
+                                    BaseValueScaleConstant=1.000000
+                                )
+                            ),
+                            (
+                                ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Money_1_BIG',
+                                PoolProbability=(
+                                    BaseValueConstant=1.000000,
+                                    BaseValueAttribute=None,
+                                    InitializationDefinition=None,
+                                    BaseValueScaleConstant=1.000000
+                                )
+                            ),
+                            (
+                                ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Eridium_Bar',
+                                PoolProbability=(
+                                    BaseValueConstant=1.000000,
+                                    BaseValueAttribute=AttributeDefinition'GD_Itempools.DropWeights.DropODDS_EridiumBar',
+                                    InitializationDefinition=None,
+                                    BaseValueScaleConstant=10.000000
+                                )
+                            ),
+                            (
+                                ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Eridium_Stick',
+                                PoolProbability=(
+                                    BaseValueConstant=1.000000,
+                                    BaseValueAttribute=None,
+                                    InitializationDefinition=None,
+                                    BaseValueScaleConstant=1.000000
+                                )
+                            ),
+                            (
+                                ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Eridium_Stick',
+                                PoolProbability=(
+                                    BaseValueConstant=1.000000,
+                                    BaseValueAttribute=None,
+                                    InitializationDefinition=None,
+                                    BaseValueScaleConstant=0.500000
+                                )
+                            ),
+                            (
+                                ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Health_All',
+                                PoolProbability=(
+                                    BaseValueConstant=0.000000,
+                                    BaseValueAttribute=AttributeDefinition'GD_Itempools.DropWeights.DropODDS_Health',
+                                    InitializationDefinition=None,
+                                    BaseValueScaleConstant=1.000000
+                                )
+                            ),
+                            (
+                                ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Ammo_All_NeedOnly',
+                                PoolProbability=(
+                                    BaseValueConstant=0.000000,
+                                    BaseValueAttribute=None,
+                                    InitializationDefinition=AttributeInitializationDefinition'GD_Balance.WeightingPlayerCount.AmmoDrops_PerPlayer',
+                                    BaseValueScaleConstant=0.500000
+                                )
+                            ),
+                            (
+                                ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Ammo_All_Emergency',
+                                PoolProbability=(
+                                    BaseValueConstant=1.000000,
+                                    BaseValueAttribute=None,
+                                    InitializationDefinition=None,
+                                    BaseValueScaleConstant=1.000000
+                                )
+                            )
+                        )
+
+                    #</Badass Enemies>
+
+                    #<Super Badass Enemies>
+
+                        # This is actually enemies like Bad Maw, Badass Constructors...
+
+                        set GD_Itempools.ListDefs.SuperBadassEnemyGunsAndGear ItemPools
+                        (
+                            (
+                                ItemPool=ItemPoolDefinition'GD_Itempools.GeneralItemPools.Pool_GunsAndGear',
+                                PoolProbability=(
+                                    BaseValueConstant=1.000000,
+                                    BaseValueAttribute=None,
+                                    InitializationDefinition=AttributeInitializationDefinition'GD_Balance.WeightingPlayerCount.GearDrops_PerPlayer',
+                                    BaseValueScaleConstant=1.000000
+                                )
+                            ),
+                            (
+                                ItemPool=ItemPoolDefinition'GD_Itempools.Treasure_ChestPools.Pool_EpicChest_Weapons_GunsAndGear',
+                                PoolProbability=(
+                                    BaseValueConstant=1.000000,
+                                    BaseValueAttribute=None,
+                                    InitializationDefinition=None,
+                                    BaseValueScaleConstant=1
+                                )
+                            ),
+                            (
+                                ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Money_1_BIG',
+                                PoolProbability=(
+                                    BaseValueConstant=1.000000,
+                                    BaseValueAttribute=None,
+                                    InitializationDefinition=None,
+                                    BaseValueScaleConstant=1.000000
+                                )
+                            ),
+                            (
+                                ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Money_1_BIG',
+                                PoolProbability=(
+                                    BaseValueConstant=1.000000,
+                                    BaseValueAttribute=None,
+                                    InitializationDefinition=None,
+                                    BaseValueScaleConstant=1.000000
+                                )
+                            ),
+                            (
+                                ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Money_1_BIG',
+                                PoolProbability=(
+                                    BaseValueConstant=1.000000,
+                                    BaseValueAttribute=None,
+                                    InitializationDefinition=None,
+                                    BaseValueScaleConstant=1.000000
+                                )
+                            ),
+                            (
+                                ItemPool=ItemPoolDefinition'GD_Itempools.VehicleSkins.Pool_VehicleSkins_All',
+                                PoolProbability=(
+                                    BaseValueConstant=0.000000,
+                                    BaseValueAttribute=AttributeDefinition'GD_Itempools.DropWeights.DropODDS_VehicleSkins',
+                                    InitializationDefinition=None,
+                                    BaseValueScaleConstant=10.000000
+                                )
+                            ),
+                            (
+                                ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Eridium_Bar',
+                                PoolProbability=(
+                                    BaseValueConstant=1.000000,
+                                    BaseValueAttribute=None,
+                                    InitializationDefinition=None,
+                                    BaseValueScaleConstant=1.000000
+                                )
+                            ),
+                            (
+                                ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Eridium_Stick',
+                                PoolProbability=(
+                                    BaseValueConstant=1.000000,
+                                    BaseValueAttribute=None,
+                                    InitializationDefinition=None,
+                                    BaseValueScaleConstant=1.000000
+                                )
+                            ),
+                            (
+                                ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Eridium_Stick',
+                                PoolProbability=(
+                                    BaseValueConstant=1.000000,
+                                    BaseValueAttribute=None,
+                                    InitializationDefinition=None,
+                                    BaseValueScaleConstant=1.000000
+                                )
+                            ),
+                            (
+                                ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Eridium_Stick',
+                                PoolProbability=(
+                                    BaseValueConstant=1.000000,
+                                    BaseValueAttribute=None,
+                                    InitializationDefinition=None,
+                                    BaseValueScaleConstant=1.000000
+                                )
+                            ),
+                            (
+                                ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Health_All',
+                                PoolProbability=(
+                                    BaseValueConstant=0.000000,
+                                    BaseValueAttribute=AttributeDefinition'GD_Itempools.DropWeights.DropODDS_Health',
+                                    InitializationDefinition=None,
+                                    BaseValueScaleConstant=1.000000
+                                )
+                            ),
+                            (
+                                ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Ammo_All_NeedOnly',
+                                PoolProbability=(
+                                    BaseValueConstant=0.000000,
+                                    BaseValueAttribute=None,
+                                    InitializationDefinition=AttributeInitializationDefinition'GD_Balance.WeightingPlayerCount.AmmoDrops_PerPlayer',
+                                    BaseValueScaleConstant=0.250000
+                                )
+                            ),
+                            (
+                                ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Ammo_All_Emergency',
+                                PoolProbability=(
+                                    BaseValueConstant=1.000000,
+                                    BaseValueAttribute=None,
+                                    InitializationDefinition=None,
+                                    BaseValueScaleConstant=1.000000
+                                )
+                            )
+                        )
+
+                    #</Super Badass Enemies>
+
+                    #<Ultimate Badass Enemies>
+
+                        # This is actually enemies like Saturn, Slappy, King Mong, etc.
+
+                        set GD_Itempools.ListDefs.UltimateBadassEnemyGunsAndGear ItemPools
+                        (
+                            (
+                                ItemPool=ItemPoolDefinition'GD_Itempools.Treasure_ChestPools.Pool_EpicChest_Weapons_GunsAndGear',
+                                PoolProbability=(
+                                    BaseValueConstant=1.000000,
+                                    BaseValueAttribute=None,
+                                    InitializationDefinition=None,
+                                    BaseValueScaleConstant=1
+                                )
+                            ),
+                            (
+                                ItemPool=ItemPoolDefinition'GD_Itempools.Treasure_ChestPools.Pool_EpicChest_Weapons_GunsAndGear',
+                                PoolProbability=(
+                                    BaseValueConstant=1.000000,
+                                    BaseValueAttribute=None,
+                                    InitializationDefinition=None,
+                                    BaseValueScaleConstant=1
+                                )
+                            ),
+                            (
+                                ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Money_1_BIG',
+                                PoolProbability=(
+                                    BaseValueConstant=1.000000,
+                                    BaseValueAttribute=None,
+                                    InitializationDefinition=None,
+                                    BaseValueScaleConstant=1.000000
+                                )
+                            ),
+                            (
+                                ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Money_1_BIG',
+                                PoolProbability=(
+                                    BaseValueConstant=1.000000,
+                                    BaseValueAttribute=None,
+                                    InitializationDefinition=None,
+                                    BaseValueScaleConstant=1.000000
+                                )
+                            ),
+                            (
+                                ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Money_1_BIG',
+                                PoolProbability=(
+                                    BaseValueConstant=1.000000,
+                                    BaseValueAttribute=None,
+                                    InitializationDefinition=None,
+                                    BaseValueScaleConstant=1.000000
+                                )
+                            ),
+                            (
+                                ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Money_1_BIG',
+                                PoolProbability=(
+                                    BaseValueConstant=1.000000,
+                                    BaseValueAttribute=None,
+                                    InitializationDefinition=None,
+                                    BaseValueScaleConstant=1.000000
+                                )
+                            ),
+                            (
+                                ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Money_1_BIG',
+                                PoolProbability=(
+                                    BaseValueConstant=1.000000,
+                                    BaseValueAttribute=None,
+                                    InitializationDefinition=None,
+                                    BaseValueScaleConstant=1.000000
+                                )
+                            ),
+                            (
+                                ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Money_1_BIG',
+                                PoolProbability=(
+                                    BaseValueConstant=1.000000,
+                                    BaseValueAttribute=None,
+                                    InitializationDefinition=None,
+                                    BaseValueScaleConstant=1.000000
+                                )
+                            ),
+                            (
+                                ItemPool=ItemPoolDefinition'GD_Itempools.VehicleSkins.Pool_VehicleSkins_All',
+                                PoolProbability=(
+                                    BaseValueConstant=0.000000,
+                                    BaseValueAttribute=AttributeDefinition'GD_Itempools.DropWeights.DropODDS_VehicleSkins',
+                                    InitializationDefinition=None,
+                                    BaseValueScaleConstant=10.000000
+                                )
+                            ),
+                            (
+                                ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Eridium_Bar',
+                                PoolProbability=(
+                                    BaseValueConstant=1.000000,
+                                    BaseValueAttribute=None,
+                                    InitializationDefinition=None,
+                                    BaseValueScaleConstant=1.000000
+                                )
+                            ),
+                            (
+                                ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Eridium_Bar',
+                                PoolProbability=(
+                                    BaseValueConstant=1.000000,
+                                    BaseValueAttribute=None,
+                                    InitializationDefinition=None,
+                                    BaseValueScaleConstant=1.000000
+                                )
+                            ),
+                            (
+                                ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Eridium_Bar',
+                                PoolProbability=(
+                                    BaseValueConstant=1.000000,
+                                    BaseValueAttribute=AttributeDefinition'GD_Itempools.DropWeights.DropODDS_EridiumBar',
+                                    InitializationDefinition=None,
+                                    BaseValueScaleConstant=1.000000
+                                )
+                            ),
+                            (
+                                ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Eridium_Stick',
+                                PoolProbability=(
+                                    BaseValueConstant=1.000000,
+                                    BaseValueAttribute=None,
+                                    InitializationDefinition=None,
+                                    BaseValueScaleConstant=1.000000
+                                )
+                            ),
+                            (
+                                ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Eridium_Stick',
+                                PoolProbability=(
+                                    BaseValueConstant=1.000000,
+                                    BaseValueAttribute=None,
+                                    InitializationDefinition=None,
+                                    BaseValueScaleConstant=1.000000
+                                )
+                            ),
+                            (
+                                ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Eridium_Stick',
+                                PoolProbability=(
+                                    BaseValueConstant=1.000000,
+                                    BaseValueAttribute=None,
+                                    InitializationDefinition=None,
+                                    BaseValueScaleConstant=1.000000
+                                )
+                            ),
+                            (
+                                ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Eridium_Stick',
+                                PoolProbability=(
+                                    BaseValueConstant=1.000000,
+                                    BaseValueAttribute=AttributeDefinition'GD_Itempools.DropWeights.DropODDS_EridiumStick',
+                                    InitializationDefinition=None,
+                                    BaseValueScaleConstant=100.000000
+                                )
+                            ),
+                            (
+                                ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Eridium_Stick',
+                                PoolProbability=(
+                                    BaseValueConstant=1.000000,
+                                    BaseValueAttribute=AttributeDefinition'GD_Itempools.DropWeights.DropODDS_EridiumStick',
+                                    InitializationDefinition=None,
+                                    BaseValueScaleConstant=100.000000
+                                )
+                            ),
+                            (
+                                ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Health_All',
+                                PoolProbability=(
+                                    BaseValueConstant=0.000000,
+                                    BaseValueAttribute=AttributeDefinition'GD_Itempools.DropWeights.DropODDS_Health',
+                                    InitializationDefinition=None,
+                                    BaseValueScaleConstant=1.000000
+                                )
+                            ),
+                            (
+                                ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Ammo_All_DropAlways',
+                                PoolProbability=(
+                                    BaseValueConstant=0.000000,
+                                    BaseValueAttribute=None,
+                                    InitializationDefinition=AttributeInitializationDefinition'GD_Balance.WeightingPlayerCount.AmmoDrops_PerPlayer',
+                                    BaseValueScaleConstant=1.000000
+                                )
+                            ),
+                            (
+                                ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Ammo_All_DropAlways',
+                                PoolProbability=(
+                                    BaseValueConstant=0.000000,
+                                    BaseValueAttribute=None,
+                                    InitializationDefinition=AttributeInitializationDefinition'GD_Balance.WeightingPlayerCount.AmmoDrops_PerPlayer',
+                                    BaseValueScaleConstant=1.000000
+                                )
+                            ),
+                            (
+                                ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Ammo_All_NeedOnly',
+                                PoolProbability=(
+                                    BaseValueConstant=0.000000,
+                                    BaseValueAttribute=None,
+                                    InitializationDefinition=AttributeInitializationDefinition'GD_Balance.WeightingPlayerCount.AmmoDrops_PerPlayer',
+                                    BaseValueScaleConstant=0.250000
+                                )
+                            ),
+                            (
+                                ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Ammo_All_Emergency',
+                                PoolProbability=(
+                                    BaseValueConstant=1.000000,
+                                    BaseValueAttribute=None,
+                                    InitializationDefinition=None,
+                                    BaseValueScaleConstant=1.000000
+                                )
+                            )
+                        )
+
+                    #</Ultimate Badass Enemies>
+
+                #</Badass+ Drop Pools>
+
+            #</Remove Weapons and Shields from Enemy Drops>
+
+            #<Remove Weapons and Shields from Containers>
+
+                #<Main Weapon/Shield-Removing Hotfixes for Chests>
+
+{other:disable_world_chest_sets}
+
+                #</Main Weapon/Shield-Removing Hotfixes for Chests>
 
                 #<Epic Treasure Chests>
 
@@ -177,7 +765,7 @@
                                 BaseValueConstant=1.000000,
                                 BaseValueAttribute=None,
                                 InitializationDefinition=None,
-                                BaseValueScaleConstant=1.000000,
+                                BaseValueScaleConstant=1.000000
                             ),
                             bDropOnDeath=True
                         )
@@ -192,7 +780,7 @@
                                 BaseValueConstant=1.000000,
                                 BaseValueAttribute=None,
                                 InitializationDefinition=None,
-                                BaseValueScaleConstant=1.000000,
+                                BaseValueScaleConstant=1.000000
                             ),
                             bDropOnDeath=True
                         )
@@ -207,7 +795,7 @@
                                 BaseValueConstant=1.000000,
                                 BaseValueAttribute=None,
                                 InitializationDefinition=None,
-                                BaseValueScaleConstant=1.000000,
+                                BaseValueScaleConstant=1.000000
                             ),
                             bDropOnDeath=True
                         )
@@ -222,7 +810,7 @@
                                 BaseValueConstant=1.000000,
                                 BaseValueAttribute=None,
                                 InitializationDefinition=None,
-                                BaseValueScaleConstant=1.000000,
+                                BaseValueScaleConstant=1.000000
                             ),
                             bDropOnDeath=True
                         )
@@ -241,7 +829,7 @@
                                 BaseValueConstant=1.000000,
                                 BaseValueAttribute=None,
                                 InitializationDefinition=None,
-                                BaseValueScaleConstant=1.000000,
+                                BaseValueScaleConstant=1.000000
                             ),
                             bDropOnDeath=True
                         )
@@ -256,7 +844,7 @@
                                 BaseValueConstant=1.000000,
                                 BaseValueAttribute=None,
                                 InitializationDefinition=None,
-                                BaseValueScaleConstant=1.000000,
+                                BaseValueScaleConstant=1.000000
                             ),
                             bDropOnDeath=True
                         )
@@ -271,7 +859,7 @@
                                 BaseValueConstant=1.000000,
                                 BaseValueAttribute=None,
                                 InitializationDefinition=None,
-                                BaseValueScaleConstant=1.000000,
+                                BaseValueScaleConstant=1.000000
                             ),
                             bDropOnDeath=True
                         )
@@ -286,7 +874,7 @@
                                 BaseValueConstant=1.000000,
                                 BaseValueAttribute=None,
                                 InitializationDefinition=None,
-                                BaseValueScaleConstant=1.000000,
+                                BaseValueScaleConstant=1.000000
                             ),
                             bDropOnDeath=True
                         )
@@ -296,51 +884,64 @@
 
                 #<Lockers>
 
-                    {hotfixes:lockers_0}
+                    {mp:lockers_0}
 
-                    {hotfixes:lockers_0_point}
+                    {mp:lockers_0_point}
 
-                    {hotfixes:lockers_1}
+                    {mp:lockers_1}
 
-                    {hotfixes:lockers_1_point}
+                    {mp:lockers_1_point}
 
-                    {hotfixes:lockers_2}
+                    {mp:lockers_2}
 
-                    {hotfixes:lockers_2_point}
+                    {mp:lockers_2_point}
 
-                    {hotfixes:lockers_3}
+                    {mp:lockers_3}
 
-                    {hotfixes:lockers_3_point}
+                    {mp:lockers_3_point}
 
-                    {hotfixes:lockers_4}
+                    {mp:lockers_4}
 
-                    {hotfixes:lockers_4_point}
+                    {mp:lockers_4_point}
 
                 #</Lockers>
 
                 #<Cardboard Boxes>
 
-                    {hotfixes:cardboard_0}
+                    {mp:cardboard_0}
 
-                    {hotfixes:cardboard_0_point}
+                    {mp:cardboard_0_point}
 
                 #</Cardboard Boxes>
 
                 #<Dumpsters>
 
-                    {hotfixes:dumpsters_0}
+                    level None set GD_Itempools.LootablePools.Pool_Dumpster_Guns BalancedItems
+                    (
+                        (
+                            ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.LootablePools.Pool_Locker_Items_CashAndAmmo',
+                            InvBalanceDefinition=None,
+                            Probability=(
+                                BaseValueConstant=1,
+                                BaseValueAttribute=None,
+                                InitializationDefinition=None,
+                                BaseValueScaleConstant=1
+                            ),
+                            bDropOnDeath=False
+                        )
+                    )
 
                 #</Dumpsters>
 
                 #<Bandit Coolers>
 
-                    {hotfixes:cooler_0}
+                    {mp:cooler_0}
 
-                    {hotfixes:cooler_0_point}
+                    {mp:cooler_0_point}
 
-                    {hotfixes:cooler_1}
+                    {mp:cooler_1}
 
-                    {hotfixes:cooler_1_point}
+                    {mp:cooler_1_point}
 
                 #</Bandit Coolers>
 
@@ -350,567 +951,303 @@
                     # safes, which improves on safe performance in a number of ways.
                     # Removing the shield possibility, though.
 
-                    {hotfixes:safes_0}
+                    level None set GD_Balance_Treasure.LootableGrades.ObjectGrade_Safe DefaultLoot
+                    (
+                        (
+                            ConfigurationName="EridiumStick",
+                            LootGameStageVarianceFormula=None,
+                            Weight=(
+                                BaseValueConstant=1.000000,
+                                BaseValueAttribute=None,
+                                InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',
+                                BaseValueScaleConstant=1.000000
+                            ),
+                            ItemAttachments=(
+                                (
+                                    ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Eridium_Stick',
+                                    PoolProbability=(
+                                        BaseValueConstant=1.000000,
+                                        BaseValueAttribute=None,
+                                        InitializationDefinition=None,
+                                        BaseValueScaleConstant=1.000000
+                                    ),
+                                    AttachmentPointName="Ammo4"
+                                ),
+                                (
+                                    ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Eridium_Stick',
+                                    PoolProbability=(
+                                        BaseValueConstant=1.000000,
+                                        BaseValueAttribute=None,
+                                        InitializationDefinition=None,
+                                        BaseValueScaleConstant=1.000000
+                                    ),
+                                    AttachmentPointName="Ammo1"
+                                ),
+                                (
+                                    ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Money_1_BIG',
+                                    PoolProbability=(
+                                        BaseValueConstant=1.000000,
+                                        BaseValueAttribute=None,
+                                        InitializationDefinition=None,
+                                        BaseValueScaleConstant=1.000000
+                                    ),
+                                    AttachmentPointName="Ammo2"
+                                ),
+                                (
+                                    ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Money_1_BIG',
+                                    PoolProbability=(
+                                        BaseValueConstant=1.000000,
+                                        BaseValueAttribute=None,
+                                        InitializationDefinition=None,
+                                        BaseValueScaleConstant=0.800000
+                                    ),
+                                    AttachmentPointName="Ammo5"
+                                ),
+                                (
+                                    ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Eridium_Stick',
+                                    PoolProbability=(
+                                        BaseValueConstant=1.000000,
+                                        BaseValueAttribute=None,
+                                        InitializationDefinition=None,
+                                        BaseValueScaleConstant=0.800000
+                                    ),
+                                    AttachmentPointName="Ammo3"
+                                )
+                            )
+                        ),
+                        (
+                            ConfigurationName="Eridium",
+                            LootGameStageVarianceFormula=None,
+                            Weight=(
+                                BaseValueConstant=1.000000,
+                                BaseValueAttribute=None,
+                                InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',
+                                BaseValueScaleConstant=1.000000
+                            ),
+                            ItemAttachments=(
+                                (
+                                    ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Eridium_Bar',
+                                    PoolProbability=(
+                                        BaseValueConstant=1.000000,
+                                        BaseValueAttribute=None,
+                                        InitializationDefinition=None,
+                                        BaseValueScaleConstant=1.000000
+                                    ),
+                                    AttachmentPointName="Ammo4"
+                                ),
+                                (
+                                    ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Money_1_BIG',
+                                    PoolProbability=(
+                                        BaseValueConstant=1.000000,
+                                        BaseValueAttribute=None,
+                                        InitializationDefinition=None,
+                                        BaseValueScaleConstant=1.000000
+                                    ),
+                                    AttachmentPointName="Ammo1"
+                                ),
+                                (
+                                    ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Money_1_BIG',
+                                    PoolProbability=(
+                                        BaseValueConstant=1.000000,
+                                        BaseValueAttribute=None,
+                                        InitializationDefinition=None,
+                                        BaseValueScaleConstant=1.000000
+                                    ),
+                                    AttachmentPointName="Ammo2"
+                                ),
+                                (
+                                    ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Money_1_BIG',
+                                    PoolProbability=(
+                                        BaseValueConstant=1.000000,
+                                        BaseValueAttribute=None,
+                                        InitializationDefinition=None,
+                                        BaseValueScaleConstant=0.800000
+                                    ),
+                                    AttachmentPointName="Ammo5"
+                                ),
+                                (
+                                    ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Money_1_BIG',
+                                    PoolProbability=(
+                                        BaseValueConstant=1.000000,
+                                        BaseValueAttribute=None,
+                                        InitializationDefinition=None,
+                                        BaseValueScaleConstant=0.800000
+                                    ),
+                                    AttachmentPointName="Ammo3"
+                                )
+                            )
+                        ),
+                        (
+                            ConfigurationName="Safe_Cash",
+                            LootGameStageVarianceFormula=None,
+                            Weight=(
+                                BaseValueConstant=1.000000,
+                                BaseValueAttribute=None,
+                                InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',
+                                BaseValueScaleConstant=1.000000
+                            ),
+                            ItemAttachments=(
+                                (
+                                    ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Money_1_BIG',
+                                    PoolProbability=(
+                                        BaseValueConstant=1.000000,
+                                        BaseValueAttribute=None,
+                                        InitializationDefinition=None,
+                                        BaseValueScaleConstant=1.000000
+                                    ),
+                                    AttachmentPointName="Ammo1"
+                                ),
+                                (
+                                    ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Money_1_BIG',
+                                    PoolProbability=(
+                                        BaseValueConstant=1.000000,
+                                        BaseValueAttribute=None,
+                                        InitializationDefinition=None,
+                                        BaseValueScaleConstant=0.800000
+                                    ),
+                                    AttachmentPointName="Ammo2"
+                                ),
+                                (
+                                    ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Money_1_BIG',
+                                    PoolProbability=(
+                                        BaseValueConstant=1.000000,
+                                        BaseValueAttribute=None,
+                                        InitializationDefinition=None,
+                                        BaseValueScaleConstant=1.000000
+                                    ),
+                                    AttachmentPointName="Ammo3"
+                                ),
+                                (
+                                    ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Money_1_BIG',
+                                    PoolProbability=(
+                                        BaseValueConstant=1.000000,
+                                        BaseValueAttribute=None,
+                                        InitializationDefinition=None,
+                                        BaseValueScaleConstant=1.000000
+                                    ),
+                                    AttachmentPointName="Ammo4"
+                                ),
+                                (
+                                    ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Money_1_BIG',
+                                    PoolProbability=(
+                                        BaseValueConstant=1.000000,
+                                        BaseValueAttribute=None,
+                                        InitializationDefinition=None,
+                                        BaseValueScaleConstant=0.800000
+                                    ),
+                                    AttachmentPointName="Ammo5"
+                                )
+                            )
+                        ),
+                        (
+                            ConfigurationName="Grenade",
+                            LootGameStageVarianceFormula=None,
+                            Weight=(
+                                BaseValueConstant=1.000000,
+                                BaseValueAttribute=None,
+                                InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_3_Uncommoner',
+                                BaseValueScaleConstant=1.000000
+                            ),
+                            ItemAttachments=(
+                                (
+                                    ItemPool=ItemPoolDefinition'GD_Itempools.GrenadeModPools.Pool_GrenadeMods_06_Legendary',
+                                    PoolProbability=(
+                                        BaseValueConstant=1.000000,
+                                        BaseValueAttribute=None,
+                                        InitializationDefinition=None,
+                                        BaseValueScaleConstant=1.000000
+                                    ),
+                                    AttachmentPointName="Grenade"
+                                ),
+                                (
+                                    ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Ammo_Grenades',
+                                    PoolProbability=(
+                                        BaseValueConstant=1.000000,
+                                        BaseValueAttribute=None,
+                                        InitializationDefinition=None,
+                                        BaseValueScaleConstant=1.000000
+                                    ),
+                                    AttachmentPointName="Shield"
+                                ),
+                                (
+                                    ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Money_1_BIG',
+                                    PoolProbability=(
+                                        BaseValueConstant=1.000000,
+                                        BaseValueAttribute=None,
+                                        InitializationDefinition=None,
+                                        BaseValueScaleConstant=1.000000
+                                    ),
+                                    AttachmentPointName="Ammo1"
+                                ),
+                                (
+                                    ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Money_1_BIG',
+                                    PoolProbability=(
+                                        BaseValueConstant=1.000000,
+                                        BaseValueAttribute=None,
+                                        InitializationDefinition=None,
+                                        BaseValueScaleConstant=1.000000
+                                    ),
+                                    AttachmentPointName="Ammo2"
+                                ),
+                                (
+                                    ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Ammo_Grenades',
+                                    PoolProbability=(
+                                        BaseValueConstant=1.000000,
+                                        BaseValueAttribute=None,
+                                        InitializationDefinition=None,
+                                        BaseValueScaleConstant=1.000000
+                                    ),
+                                    AttachmentPointName="Ammo5"
+                                )
+                            )
+                        ),
+                        (
+                            ConfigurationName="Relic",
+                            LootGameStageVarianceFormula=None,
+                            Weight=(
+                                BaseValueConstant=1.000000,
+                                BaseValueAttribute=None,
+                                InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_3_Uncommoner',
+                                BaseValueScaleConstant=1.000000
+                            ),
+                            ItemAttachments=(
+                                (
+                                    ItemPool=ItemPoolDefinition'GD_Itempools.ArtifactPools.Pool_ArtifactsReward',
+                                    PoolProbability=(
+                                        BaseValueConstant=1.000000,
+                                        BaseValueAttribute=None,
+                                        InitializationDefinition=None,
+                                        BaseValueScaleConstant=0.500000
+                                    ),
+                                    AttachmentPointName="Grenade"
+                                ),
+                                (
+                                    ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Money_1_BIG',
+                                    PoolProbability=(
+                                        BaseValueConstant=1.000000,
+                                        BaseValueAttribute=None,
+                                        InitializationDefinition=None,
+                                        BaseValueScaleConstant=1.000000
+                                    ),
+                                    AttachmentPointName="Ammo1"
+                                ),
+                                (
+                                    ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Money_1_BIG',
+                                    PoolProbability=(
+                                        BaseValueConstant=1.000000,
+                                        BaseValueAttribute=None,
+                                        InitializationDefinition=None,
+                                        BaseValueScaleConstant=1.000000
+                                    ),
+                                    AttachmentPointName="Ammo2"
+                                )
+                            )
+                        )
+                    )
 
                 #</Safes>
 
-            #</Other Container Tweaks>
-
-            #<Badass+ Drop Pools>
-
-                # Various Badass-and-up pools explicitly use some pools which we don't
-                # actually want to touch directly.  Rather than hotfixing these, for Better
-                # Loot compatibility, we're just going to redefine these pools entirely.
-                #
-                # These definitions were taken from my Better Loot mod, and have enhanced
-                # eridium+cash rewards compared to the stock pools.
-
-                #<Badass Enemies>
-
-                    set GD_Itempools.ListDefs.BadassEnemyGunsAndGear ItemPools
-                    (
-                        (
-                            ItemPool=ItemPoolDefinition'GD_Itempools.GeneralItemPools.Pool_GunsAndGear',
-                            PoolProbability=(
-                                BaseValueConstant=1.000000,
-                                BaseValueAttribute=None,
-                                InitializationDefinition=None,
-                                BaseValueScaleConstant=1.000000
-                            )
-                        ),
-                        (
-                            ItemPool=ItemPoolDefinition'GD_Itempools.Treasure_ChestPools.Pool_EpicChest_Weapons_GunsAndGear',
-                            PoolProbability=(
-                                BaseValueConstant=1.000000,
-                                BaseValueAttribute=None,
-                                InitializationDefinition=None,
-                                BaseValueScaleConstant=1.000000,
-                            )
-                        ),
-                        (
-                            ItemPool=ItemPoolDefinition'GD_Itempools.VehicleSkins.Pool_VehicleSkins_All',
-                            PoolProbability=(
-                                BaseValueConstant=0.000000,
-                                BaseValueAttribute=AttributeDefinition'GD_Itempools.DropWeights.DropODDS_VehicleSkins',
-                                InitializationDefinition=None,
-                                BaseValueScaleConstant=1.000000
-                            )
-                        ),
-                        (
-                            ItemPool=KeyedItemPoolDefinition'GD_CustomItemPools_MainGame.Rewards.Head10',
-                            PoolProbability=(
-                                BaseValueConstant=0.005000,
-                                BaseValueAttribute=None,
-                                InitializationDefinition=None,
-                                BaseValueScaleConstant=1.000000
-                            )
-                        ),
-                        (
-                            ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Money_1_BIG',
-                            PoolProbability=(
-                                BaseValueConstant=1.000000,
-                                BaseValueAttribute=None,
-                                InitializationDefinition=None,
-                                BaseValueScaleConstant=1.000000
-                            )
-                        ),
-                        (
-                            ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Eridium_Bar',
-                            PoolProbability=(
-                                BaseValueConstant=1.000000,
-                                BaseValueAttribute=AttributeDefinition'GD_Itempools.DropWeights.DropODDS_EridiumBar',
-                                InitializationDefinition=None,
-                                BaseValueScaleConstant=10.000000
-                            )
-                        ),
-                        (
-                            ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Eridium_Stick',
-                            PoolProbability=(
-                                BaseValueConstant=1.000000,
-                                BaseValueAttribute=None,
-                                InitializationDefinition=None,
-                                BaseValueScaleConstant=1.000000
-                            )
-                        ),
-                        (
-                            ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Eridium_Stick',
-                            PoolProbability=(
-                                BaseValueConstant=1.000000,
-                                BaseValueAttribute=None,
-                                InitializationDefinition=None,
-                                BaseValueScaleConstant=0.500000
-                            )
-                        ),
-                        (
-                            ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Health_All',
-                            PoolProbability=(
-                                BaseValueConstant=0.000000,
-                                BaseValueAttribute=AttributeDefinition'GD_Itempools.DropWeights.DropODDS_Health',
-                                InitializationDefinition=None,
-                                BaseValueScaleConstant=1.000000
-                            )
-                        ),
-                        (
-                            ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Ammo_All_NeedOnly',
-                            PoolProbability=(
-                                BaseValueConstant=0.000000,
-                                BaseValueAttribute=None,
-                                InitializationDefinition=AttributeInitializationDefinition'GD_Balance.WeightingPlayerCount.AmmoDrops_PerPlayer',
-                                BaseValueScaleConstant=0.500000
-                            )
-                        ),
-                        (
-                            ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Ammo_All_Emergency',
-                            PoolProbability=(
-                                BaseValueConstant=1.000000,
-                                BaseValueAttribute=None,
-                                InitializationDefinition=None,
-                                BaseValueScaleConstant=1.000000
-                            )
-                        )
-                    )
-
-                    set GD_Itempools.ListDefs.BadassEnemyWeightedShotgun ItemPools
-                    (
-                        (
-                            ItemPool=ItemPoolDefinition'GD_Itempools.GeneralItemPools.Pool_GunsAndGear',
-                            PoolProbability=(
-                                BaseValueConstant=1.000000,
-                                BaseValueAttribute=None,
-                                InitializationDefinition=None,
-                                BaseValueScaleConstant=1.000000
-                            )
-                        ),
-                        (
-                            ItemPool=ItemPoolDefinition'GD_Itempools.Treasure_ChestPools.Pool_EpicChest_Weapons_GunsAndGear',
-                            PoolProbability=(
-                                BaseValueConstant=1.000000,
-                                BaseValueAttribute=None,
-                                InitializationDefinition=None,
-                                BaseValueScaleConstant=1,
-                            )
-                        ),
-                        (
-                            ItemPool=ItemPoolDefinition'GD_Itempools.VehicleSkins.Pool_VehicleSkins_All',
-                            PoolProbability=(
-                                BaseValueConstant=0.000000,
-                                BaseValueAttribute=AttributeDefinition'GD_Itempools.DropWeights.DropODDS_VehicleSkins',
-                                InitializationDefinition=None,
-                                BaseValueScaleConstant=1.000000
-                            )
-                        ),
-                        (
-                            ItemPool=KeyedItemPoolDefinition'GD_CustomItemPools_MainGame.Rewards.Head10',
-                            PoolProbability=(
-                                BaseValueConstant=0.005000,
-                                BaseValueAttribute=None,
-                                InitializationDefinition=None,
-                                BaseValueScaleConstant=1.000000
-                            )
-                        ),
-                        (
-                            ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Money_1_BIG',
-                            PoolProbability=(
-                                BaseValueConstant=1.000000,
-                                BaseValueAttribute=None,
-                                InitializationDefinition=None,
-                                BaseValueScaleConstant=1.000000
-                            )
-                        ),
-                        (
-                            ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Eridium_Bar',
-                            PoolProbability=(
-                                BaseValueConstant=1.000000,
-                                BaseValueAttribute=AttributeDefinition'GD_Itempools.DropWeights.DropODDS_EridiumBar',
-                                InitializationDefinition=None,
-                                BaseValueScaleConstant=10.000000
-                            )
-                        ),
-                        (
-                            ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Eridium_Stick',
-                            PoolProbability=(
-                                BaseValueConstant=1.000000,
-                                BaseValueAttribute=None,
-                                InitializationDefinition=None,
-                                BaseValueScaleConstant=1.000000
-                            )
-                        ),
-                        (
-                            ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Eridium_Stick',
-                            PoolProbability=(
-                                BaseValueConstant=1.000000,
-                                BaseValueAttribute=None,
-                                InitializationDefinition=None,
-                                BaseValueScaleConstant=0.500000
-                            )
-                        ),
-                        (
-                            ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Health_All',
-                            PoolProbability=(
-                                BaseValueConstant=0.000000,
-                                BaseValueAttribute=AttributeDefinition'GD_Itempools.DropWeights.DropODDS_Health',
-                                InitializationDefinition=None,
-                                BaseValueScaleConstant=1.000000
-                            )
-                        ),
-                        (
-                            ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Ammo_All_NeedOnly',
-                            PoolProbability=(
-                                BaseValueConstant=0.000000,
-                                BaseValueAttribute=None,
-                                InitializationDefinition=AttributeInitializationDefinition'GD_Balance.WeightingPlayerCount.AmmoDrops_PerPlayer',
-                                BaseValueScaleConstant=0.500000
-                            )
-                        ),
-                        (
-                            ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Ammo_All_Emergency',
-                            PoolProbability=(
-                                BaseValueConstant=1.000000,
-                                BaseValueAttribute=None,
-                                InitializationDefinition=None,
-                                BaseValueScaleConstant=1.000000
-                            )
-                        )
-                    )
-
-                #</Badass Enemies>
-
-                #<Super Badass Enemies>
-
-                    # This is actually enemies like Bad Maw, Badass Constructors...
-
-                    set GD_Itempools.ListDefs.SuperBadassEnemyGunsAndGear ItemPools
-                    (
-                        (
-                            ItemPool=ItemPoolDefinition'GD_Itempools.GeneralItemPools.Pool_GunsAndGear',
-                            PoolProbability=(
-                                BaseValueConstant=1.000000,
-                                BaseValueAttribute=None,
-                                InitializationDefinition=AttributeInitializationDefinition'GD_Balance.WeightingPlayerCount.GearDrops_PerPlayer',
-                                BaseValueScaleConstant=1.000000
-                            )
-                        ),
-                        (
-                            ItemPool=ItemPoolDefinition'GD_Itempools.Treasure_ChestPools.Pool_EpicChest_Weapons_GunsAndGear',
-                            PoolProbability=(
-                                BaseValueConstant=1.000000,
-                                BaseValueAttribute=None,
-                                InitializationDefinition=None,
-                                BaseValueScaleConstant=1,
-                            )
-                        ),
-                        (
-                            ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Money_1_BIG',
-                            PoolProbability=(
-                                BaseValueConstant=1.000000,
-                                BaseValueAttribute=None,
-                                InitializationDefinition=None,
-                                BaseValueScaleConstant=1.000000
-                            )
-                        ),
-                        (
-                            ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Money_1_BIG',
-                            PoolProbability=(
-                                BaseValueConstant=1.000000,
-                                BaseValueAttribute=None,
-                                InitializationDefinition=None,
-                                BaseValueScaleConstant=1.000000
-                            )
-                        ),
-                        (
-                            ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Money_1_BIG',
-                            PoolProbability=(
-                                BaseValueConstant=1.000000,
-                                BaseValueAttribute=None,
-                                InitializationDefinition=None,
-                                BaseValueScaleConstant=1.000000
-                            )
-                        ),
-                        (
-                            ItemPool=ItemPoolDefinition'GD_Itempools.VehicleSkins.Pool_VehicleSkins_All',
-                            PoolProbability=(
-                                BaseValueConstant=0.000000,
-                                BaseValueAttribute=AttributeDefinition'GD_Itempools.DropWeights.DropODDS_VehicleSkins',
-                                InitializationDefinition=None,
-                                BaseValueScaleConstant=10.000000
-                            )
-                        ),
-                        (
-                            ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Eridium_Bar',
-                            PoolProbability=(
-                                BaseValueConstant=1.000000,
-                                BaseValueAttribute=None,
-                                InitializationDefinition=None,
-                                BaseValueScaleConstant=1.000000
-                            )
-                        ),
-                        (
-                            ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Eridium_Stick',
-                            PoolProbability=(
-                                BaseValueConstant=1.000000,
-                                BaseValueAttribute=None,
-                                InitializationDefinition=None,
-                                BaseValueScaleConstant=1.000000
-                            )
-                        ),
-                        (
-                            ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Eridium_Stick',
-                            PoolProbability=(
-                                BaseValueConstant=1.000000,
-                                BaseValueAttribute=None,
-                                InitializationDefinition=None,
-                                BaseValueScaleConstant=1.000000
-                            )
-                        ),
-                        (
-                            ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Eridium_Stick',
-                            PoolProbability=(
-                                BaseValueConstant=1.000000,
-                                BaseValueAttribute=None,
-                                InitializationDefinition=None,
-                                BaseValueScaleConstant=1.000000
-                            )
-                        ),
-                        (
-                            ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Health_All',
-                            PoolProbability=(
-                                BaseValueConstant=0.000000,
-                                BaseValueAttribute=AttributeDefinition'GD_Itempools.DropWeights.DropODDS_Health',
-                                InitializationDefinition=None,
-                                BaseValueScaleConstant=1.000000
-                            )
-                        ),
-                        (
-                            ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Ammo_All_NeedOnly',
-                            PoolProbability=(
-                                BaseValueConstant=0.000000,
-                                BaseValueAttribute=None,
-                                InitializationDefinition=AttributeInitializationDefinition'GD_Balance.WeightingPlayerCount.AmmoDrops_PerPlayer',
-                                BaseValueScaleConstant=0.250000
-                            )
-                        ),
-                        (
-                            ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Ammo_All_Emergency',
-                            PoolProbability=(
-                                BaseValueConstant=1.000000,
-                                BaseValueAttribute=None,
-                                InitializationDefinition=None,
-                                BaseValueScaleConstant=1.000000
-                            )
-                        )
-                    )
-
-                #</Super Badass Enemies>
-
-                #<Ultimate Badass Enemies>
-
-                    # This is actually enemies like Saturn, Slappy, King Mong, etc.
-
-                    set GD_Itempools.ListDefs.UltimateBadassEnemyGunsAndGear ItemPools
-                    (
-                        (
-                            ItemPool=ItemPoolDefinition'GD_Itempools.Treasure_ChestPools.Pool_EpicChest_Weapons_GunsAndGear',
-                            PoolProbability=(
-                                BaseValueConstant=1.000000,
-                                BaseValueAttribute=None,
-                                InitializationDefinition=None,
-                                BaseValueScaleConstant=1,
-                            )
-                        ),
-                        (
-                            ItemPool=ItemPoolDefinition'GD_Itempools.Treasure_ChestPools.Pool_EpicChest_Weapons_GunsAndGear',
-                            PoolProbability=(
-                                BaseValueConstant=1.000000,
-                                BaseValueAttribute=None,
-                                InitializationDefinition=None,
-                                BaseValueScaleConstant=1,
-                            )
-                        ),
-                        (
-                            ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Money_1_BIG',
-                            PoolProbability=(
-                                BaseValueConstant=1.000000,
-                                BaseValueAttribute=None,
-                                InitializationDefinition=None,
-                                BaseValueScaleConstant=1.000000
-                            )
-                        ),
-                        (
-                            ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Money_1_BIG',
-                            PoolProbability=(
-                                BaseValueConstant=1.000000,
-                                BaseValueAttribute=None,
-                                InitializationDefinition=None,
-                                BaseValueScaleConstant=1.000000
-                            )
-                        ),
-                        (
-                            ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Money_1_BIG',
-                            PoolProbability=(
-                                BaseValueConstant=1.000000,
-                                BaseValueAttribute=None,
-                                InitializationDefinition=None,
-                                BaseValueScaleConstant=1.000000
-                            )
-                        ),
-                        (
-                            ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Money_1_BIG',
-                            PoolProbability=(
-                                BaseValueConstant=1.000000,
-                                BaseValueAttribute=None,
-                                InitializationDefinition=None,
-                                BaseValueScaleConstant=1.000000
-                            )
-                        ),
-                        (
-                            ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Money_1_BIG',
-                            PoolProbability=(
-                                BaseValueConstant=1.000000,
-                                BaseValueAttribute=None,
-                                InitializationDefinition=None,
-                                BaseValueScaleConstant=1.000000
-                            )
-                        ),
-                        (
-                            ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Money_1_BIG',
-                            PoolProbability=(
-                                BaseValueConstant=1.000000,
-                                BaseValueAttribute=None,
-                                InitializationDefinition=None,
-                                BaseValueScaleConstant=1.000000
-                            )
-                        ),
-                        (
-                            ItemPool=ItemPoolDefinition'GD_Itempools.VehicleSkins.Pool_VehicleSkins_All',
-                            PoolProbability=(
-                                BaseValueConstant=0.000000,
-                                BaseValueAttribute=AttributeDefinition'GD_Itempools.DropWeights.DropODDS_VehicleSkins',
-                                InitializationDefinition=None,
-                                BaseValueScaleConstant=10.000000
-                            )
-                        ),
-                        (
-                            ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Eridium_Bar',
-                            PoolProbability=(
-                                BaseValueConstant=1.000000,
-                                BaseValueAttribute=None,
-                                InitializationDefinition=None,
-                                BaseValueScaleConstant=1.000000
-                            )
-                        ),
-                        (
-                            ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Eridium_Bar',
-                            PoolProbability=(
-                                BaseValueConstant=1.000000,
-                                BaseValueAttribute=None,
-                                InitializationDefinition=None,
-                                BaseValueScaleConstant=1.000000
-                            )
-                        ),
-                        (
-                            ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Eridium_Bar',
-                            PoolProbability=(
-                                BaseValueConstant=1.000000,
-                                BaseValueAttribute=AttributeDefinition'GD_Itempools.DropWeights.DropODDS_EridiumBar',
-                                InitializationDefinition=None,
-                                BaseValueScaleConstant=1.000000
-                            )
-                        ),
-                        (
-                            ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Eridium_Stick',
-                            PoolProbability=(
-                                BaseValueConstant=1.000000,
-                                BaseValueAttribute=None,
-                                InitializationDefinition=None,
-                                BaseValueScaleConstant=1.000000
-                            )
-                        ),
-                        (
-                            ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Eridium_Stick',
-                            PoolProbability=(
-                                BaseValueConstant=1.000000,
-                                BaseValueAttribute=None,
-                                InitializationDefinition=None,
-                                BaseValueScaleConstant=1.000000
-                            )
-                        ),
-                        (
-                            ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Eridium_Stick',
-                            PoolProbability=(
-                                BaseValueConstant=1.000000,
-                                BaseValueAttribute=None,
-                                InitializationDefinition=None,
-                                BaseValueScaleConstant=1.000000
-                            )
-                        ),
-                        (
-                            ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Eridium_Stick',
-                            PoolProbability=(
-                                BaseValueConstant=1.000000,
-                                BaseValueAttribute=AttributeDefinition'GD_Itempools.DropWeights.DropODDS_EridiumStick',
-                                InitializationDefinition=None,
-                                BaseValueScaleConstant=100.000000
-                            )
-                        ),
-                        (
-                            ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Eridium_Stick',
-                            PoolProbability=(
-                                BaseValueConstant=1.000000,
-                                BaseValueAttribute=AttributeDefinition'GD_Itempools.DropWeights.DropODDS_EridiumStick',
-                                InitializationDefinition=None,
-                                BaseValueScaleConstant=100.000000
-                            )
-                        ),
-                        (
-                            ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Health_All',
-                            PoolProbability=(
-                                BaseValueConstant=0.000000,
-                                BaseValueAttribute=AttributeDefinition'GD_Itempools.DropWeights.DropODDS_Health',
-                                InitializationDefinition=None,
-                                BaseValueScaleConstant=1.000000
-                            )
-                        ),
-                        (
-                            ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Ammo_All_DropAlways',
-                            PoolProbability=(
-                                BaseValueConstant=0.000000,
-                                BaseValueAttribute=None,
-                                InitializationDefinition=AttributeInitializationDefinition'GD_Balance.WeightingPlayerCount.AmmoDrops_PerPlayer',
-                                BaseValueScaleConstant=1.000000
-                            )
-                        ),
-                        (
-                            ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Ammo_All_DropAlways',
-                            PoolProbability=(
-                                BaseValueConstant=0.000000,
-                                BaseValueAttribute=None,
-                                InitializationDefinition=AttributeInitializationDefinition'GD_Balance.WeightingPlayerCount.AmmoDrops_PerPlayer',
-                                BaseValueScaleConstant=1.000000
-                            )
-                        ),
-                        (
-                            ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Ammo_All_NeedOnly',
-                            PoolProbability=(
-                                BaseValueConstant=0.000000,
-                                BaseValueAttribute=None,
-                                InitializationDefinition=AttributeInitializationDefinition'GD_Balance.WeightingPlayerCount.AmmoDrops_PerPlayer',
-                                BaseValueScaleConstant=0.250000
-                            )
-                        ),
-                        (
-                            ItemPool=ItemPoolDefinition'GD_Itempools.AmmoAndResourcePools.Pool_Ammo_All_Emergency',
-                            PoolProbability=(
-                                BaseValueConstant=1.000000,
-                                BaseValueAttribute=None,
-                                InitializationDefinition=None,
-                                BaseValueScaleConstant=1.000000
-                            )
-                        )
-                    )
-
-                #</Ultimate Badass Enemies>
-
-            #</Badass+ Drop Pools>
+            #</Remove Weapons and Shields from Containers>
 
         #</Disable World Weapon/Shield Drops>
 
@@ -922,19 +1259,19 @@
             # Instead we're restricting the number of items in shield + weapon machines to
             # 2, and removing the item of the day from the weapons machine.
 
-            {hotfixes:vendor_nerf_0}
+            level None set GD_ItemPools_Shop.Items.Shoppool_Weapons_FlatChance Quantity.BaseValueConstant 2
 
-            {hotfixes:vendor_nerf_1}
+            level None set GD_ItemPools_Shop.HealthShop.HealthShop_Items Quantity.BaseValueConstant 2
 
-            {hotfixes:vendor_nerf_2}
+            level None set GD_ItemPools_Shop.WeaponPools.Shoppool_FeaturedItem_WeaponMachine Quantity.BaseValueConstant 0
 
-            {hotfixes:vendor_nerf_3}
+            {mp:vendor_nerf_0}
 
-            {hotfixes:vendor_nerf_4}
+            {mp:vendor_nerf_1}
 
-            {hotfixes:vendor_nerf_5}
+            {mp:vendor_nerf_2}
 
-            {hotfixes:vendor_nerf_6}
+            {mp:vendor_nerf_3}
 
         #</Nerf Vending Machines>
 
@@ -991,6 +1328,12 @@
                 set {regular:equip_pool_only_shotguns} bAutoReadyItems True
 
                 {regular:set_equip_only_shotguns}
+
+                # Only Assault Rifles
+
+                set {regular:equip_pool_only_ar} bAutoReadyItems True
+
+                {regular:set_equip_only_ar}
 
             #</Regular Enemies>
 
@@ -1078,11 +1421,11 @@
                 # as possible equips for them, though.  Badass gang members will be
                 # changed to use our global badass equip pools.
 
-                {hotfixes:torgue_angel_equip}
+                {mp:torgue_angel_equip}
 
-                {hotfixes:torgue_dragon_equip}
+                {mp:torgue_dragon_equip}
 
-                {hotfixes:torgue_torgue_equip}
+                {mp:torgue_torgue_equip}
 
             #</Torgue DLC Pools>
 
@@ -1090,41 +1433,54 @@
 
         #<Other Pool Tweaks>
 
-            # A few other pools need some tweaking
+            # Any other pools which need tweaking
 
             #<"Medical Mystery" E-Tech Pool>
 
                 # This is used by a couple other enemies in addition to Dr. Mercy.
 
-                {hotfixes:medicalmystery}
+                {mp:medicalmystery}
 
             #</"Medical Mystery" E-Tech Pool>
 
-            #<Motor Momma Drop Pool>
+            #<Badass Creeper Drops>
 
-                # UCP adds some stuff to Motor Momma's drop pool but messes around a bit
-                # with the order of her DefaultItemPoolList.  These couple of hotfixes
-                # will normalize it so that our shield replacement works regardless of
-                # whether UCP itself is active.
+                # This is not, strictly speaking, the remit of this mod, but since we
+                # happen to fix the other couple instances of this for No-Beard and Big
+                # Sleep, we may as well fix it here. Basically the chances of Badass
+                # Creepers dropping their unique gear is a fixed percentage, rather than
+                # using the global DropODDS vars.  This resets it to use the DropODDS
+                # vars, so that the drops follow the user choice of boss drop chance,
+                # below.
 
-                {hotfixes:motor_momma_0}
+                level Caverns_P set GD_Population_Creeper.Balance.PawnBalance_CreeperBadass DefaultItemPoolList[0].PoolProbability
+                (
+                    BaseValueConstant=0.000000,
+                    BaseValueAttribute=AttributeDefinition'GD_Itempools.DropWeights.DropODDS_BossUniques',
+                    InitializationDefinition=None,
+                    BaseValueScaleConstant=1.250000
+                )
 
-                {hotfixes:motor_momma_1}
+            #</Badass Creeper Drops>
 
-            #</Motor Momma Drop Pool>
+            #<Chubby/Tubby Enemy Drops>
 
-            #<Piston Drop Pool>
+                # This is not, strictly speaking, the remit of this mod, but since we
+                # happen to fix the other couple instances of this for No-Beard and Big
+                # Sleep, we may as well fix it here. Basically the chances of Chubbies
+                # dropping their unique gear is a fixed percentage, rather than using
+                # the global DropODDs vars.  This resets it to use the DropODDS vars,
+                # so that the drops follow the user choice of boss drop chance, below.
 
-                # UCP adds some stuff to Piston's drop pool but messes around with the
-                # order of the pools in his DefaultItemPoolList.  To keep compatibility in
-                # case someone wants to run Cold Dead Hands without UCP, we're hotfixing
-                # the pool lists to normalize things.
+                level None set GD_Itempools.ListDefs.ChubbyEnemyGunsAndGear ItemPools[0].PoolProbability
+                (
+                    BaseValueConstant=0.000000,
+                    BaseValueAttribute=AttributeDefinition'GD_Itempools.DropWeights.DropODDS_BossUniques',
+                    InitializationDefinition=None,
+                    BaseValueScaleConstant=2.000000
+                )
 
-                {hotfixes:piston_0}
-
-                {hotfixes:piston_1}
-
-            #</Piston Drop Pool>
+            #</Chubby/Tubby Enemy Drops>
 
         #</Other Pool Tweaks>
 
@@ -1160,19 +1516,19 @@
                     # Better Loot gives all these a chance to drop gemstone weapons.  We'll
                     # just get rid of that entirely.
 
-                    {hotfixes:laney_dwarf_pool_0}
+                    {mp:laney_dwarf_pool_0}
 
-                    {hotfixes:laney_dwarf_pool_1}
+                    {mp:laney_dwarf_pool_1}
 
-                    {hotfixes:laney_dwarf_pool_2}
+                    {mp:laney_dwarf_pool_2}
 
-                    {hotfixes:laney_dwarf_pool_3}
+                    {mp:laney_dwarf_pool_3}
 
-                    {hotfixes:laney_dwarf_pool_4}
+                    {mp:laney_dwarf_pool_4}
 
-                    {hotfixes:laney_dwarf_pool_5}
+                    {mp:laney_dwarf_pool_5}
 
-                    {hotfixes:laney_dwarf_pool_6}
+                    {mp:laney_dwarf_pool_6}
 
                 #</Laney's Dwarves>
 
@@ -1219,6 +1575,19 @@
             #</Revert Boss Drop Improved Quantities>
 
         #</Compatibility with Better Loot Mod>
+
+        #<Fix Enemy Roid/Maylay Shield Damage>
+
+            # The base calculation which the game does to determine enemy melee damage
+            # doesn't correctly deal with Roid/Maylay shields -- enemies get a FAR
+            # greater boost from these shields than they should.  This was never a problem
+            # with the base game, since enemies couldn't use those shields, but since they
+            # can in CDH, it makes Roid-using enemies much more difficult.  This fixes the
+            # equation up, courtesy 55tumbl.  Thanks for that!
+
+            level None set GD_Balance_HealthAndDamage.HealthAndDamage.Init_EnemyNonWeaponDamage ValueFormula.Offset.BaseValueScaleConstant 0.125
+
+        #</Fix Enemy Roid/Maylay Shield Damage>
 
     #</Main Mod (best to leave all this checked)>
 
@@ -1797,22 +2166,22 @@
 
         #</Add Gemstones to E-Tech Pools (duplicate from Better Loot)>
 
-        #<Legendary Weapon + Shield Pool Base Setup (don't uncheck this if you choose anything below here)>
+        #<Legendary Weapon + Shield Pool Base Setup (don't uncheck this if you choose anything below here)><lock>
 
             # Initializes the various Legendary drop pools in a way which lets us choose
             # what else to put in them (via hotfix) in the next categories.
 
-            {hotfixes:weapon_pool_clear_assaultrifles}
+            {mp:weapon_pool_clear_assaultrifles}
 
-            {hotfixes:weapon_pool_clear_launchers}
+            {mp:weapon_pool_clear_launchers}
 
-            {hotfixes:weapon_pool_clear_pistols}
+            {mp:weapon_pool_clear_pistols}
 
-            {hotfixes:weapon_pool_clear_shotguns}
+            {mp:weapon_pool_clear_shotguns}
 
-            {hotfixes:weapon_pool_clear_smg}
+            {mp:weapon_pool_clear_smg}
 
-            {hotfixes:weapon_pool_clear_sniperrifles}
+            {mp:weapon_pool_clear_sniperrifles}
 
             set GD_Itempools.ShieldPools.Pool_Shields_Absorption_06_Legendary BalancedItems
             (
@@ -2187,21 +2556,21 @@
 
 {other:legendary_unique_adds}
 
-            {hotfixes:shield_1340}
+            {mp:shield_1340}
 
-            {hotfixes:shield_equitas}
+            {mp:shield_equitas}
 
-            {hotfixes:shield_potogold}
+            {mp:shield_potogold}
 
-            {hotfixes:shield_deadlybloom}
+            {mp:shield_deadlybloom}
 
-            {hotfixes:shield_order}
+            {mp:shield_order}
 
-            {hotfixes:shield_lovethumper}
+            {mp:shield_lovethumper}
 
-            {hotfixes:shield_manlyman}
+            {mp:shield_manlyman}
 
-            {hotfixes:shield_roughrider}
+            {mp:shield_roughrider}
 
         #</Add Uniques to Legendary Weapon + Shield Pools>
 
@@ -2215,23 +2584,37 @@
 
 {other:legendary_seraph_adds}
 
-            {hotfixes:shield_sponge}
+            {mp:shield_sponge}
 
-            {hotfixes:shield_bigboomblaster}
+            {mp:shield_bigboomblaster}
 
-            {hotfixes:shield_evolution}
+            {mp:shield_evolution}
 
-            {hotfixes:shield_hoplite}
+            {mp:shield_hoplite}
 
-            {hotfixes:shield_punchee}
+            {mp:shield_punchee}
 
-            {hotfixes:shield_antagonist}
+            {mp:shield_antagonist}
 
-            {hotfixes:shield_blockade}
+            {mp:shield_blockade}
 
         #</Add Seraphs to Legendary Weapon + Shield Pools>
 
     #</Loot Pool Improvements (Gemstones/Uniques/Pearls/Seraphs)>
+
+    #<Rocket Launchers in Global Equip Pools (choose one)><MUT>
+
+{launchers_100}
+
+{launchers_75}
+
+{launchers_50}
+
+{launchers_25}
+
+{launchers_0}
+
+    #</Rocket Launchers in Global Equip Pools (choose one)>
 
     #<Enemy Gear Quality (choose one)><MUT>
 
@@ -2242,6 +2625,14 @@
 {rarity_stock}
 
     #</Enemy Gear Quality (choose one)>
+
+    #<Rarity Drop Rates (choose one)><MUT>
+
+{rarity_drop_prob_guaranteed}
+
+{rarity_drop_prob_variable}
+
+    #</Rarity Drop Rates (choose one)>
 
     #<Boss Unique Weapon Frequency (choose one)><MUT>
 
@@ -2264,30 +2655,44 @@
             # With this option, Stalkers have the standard shield they've always had in
             # Borderlands, and will not drop a shield when killed.
 
-            {hotfixes:stalker_dummy}
+            level StalkerDummy_P set GD_Dummy DummyAttribute 1
 
         #</Standard Game (no shield drops)>
 
-        #<Equip and Drop "Real" Shields><off>
+        #<Equip and Drop "Real" Shields>
 
-            ## Stalkers will equip and drop "real" shields, just like other shielded<off>
-            ## enemies in the game.<off>
+            # Stalkers will equip and drop "real" shields, just like other shielded
+            # enemies in the game.
 
 {stalker_shields_real}
 
         #</Equip and Drop "Real" Shields>
 
-        #<Equip and Drop only Maylay Shields><off>
+        #<Equip and Drop only Maylay Shields>
 
-            ## Stalkers will always equip and drop Maylay shields.  WARNING: the Maylay<off>
-            ## effect seems to be multiplied beyond usual on Stalkers for some reason; this<off>
-            ## will probably make Stalkers hit VERY hard when their shields are down.<off>
-            ## You've been warned!<off>
+            # Stalkers will always equip and drop Maylay shields.
 
 {stalker_shields_maylay}
 
         #</Equip and Drop only Maylay Shields>
 
-    #</Stalker Shield Behavior (choose one)><MUT>
+    #</Stalker Shield Behavior (choose one)>
+
+    #<Remove Level-Based Loot Restrictions>
+
+        # Allows all weapon, shield, grenade, COM, shield, relic, and ammo types from the
+        # very beginning of the game.  If you have the quality of gear pumped up, it's
+        # possible that some early-game enemies might not otherwise be properly equipped
+        # unless you've got something like this which unlocks everything.
+        #
+        # Copied from BL2 Early Bloomer v1.1.1 by Apocalyptech, though the UCP duplicates
+        # were moved up into the main section of this mod.
+        #
+        # This section is already also included in BL2 Better Loot, but there's no problem
+        # with having it enabled in both.
+
+{early_game_unlocks}
+
+    #</Remove Level-Based Loot Restrictions>
 
 #</{mod_name}>

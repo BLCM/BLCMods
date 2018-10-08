@@ -1,130 +1,135 @@
-        #<{section_label}>{line_suffix}
+        #<{section_label}>
 
-            {line_prefix}# Drop chances from regular enemies:{line_suffix}
-            {line_prefix}#{line_suffix}
-            {line_prefix}#           Common (white): {regular:pct_common}%{line_suffix}
-            {line_prefix}#         Uncommon (green): {regular:pct_uncommon}%{line_suffix}
-            {line_prefix}#              Rare (blue): {regular:pct_rare}%{line_suffix}
-            {line_prefix}#       Very Rare (purple): {regular:pct_veryrare}%{line_suffix}
-            {line_prefix}# E-Tech (brighter purple): {regular:pct_alien}%{line_suffix}
-            {line_prefix}#       Legendary (orange): {regular:pct_legendary}%{line_suffix}
-            {line_prefix}#{line_suffix}
-            {line_prefix}# Drop chances from badass enemies:{line_suffix}
-            {line_prefix}#{line_suffix}
-            {line_prefix}#           Common (white): {badass:pct_common}%{line_suffix}
-            {line_prefix}#         Uncommon (green): {badass:pct_uncommon}%{line_suffix}
-            {line_prefix}#              Rare (blue): {badass:pct_rare}%{line_suffix}
-            {line_prefix}#       Very Rare (purple): {badass:pct_veryrare}%{line_suffix}
-            {line_prefix}# E-Tech (brighter purple): {badass:pct_alien}%{line_suffix}
-            {line_prefix}#       Legendary (orange): {badass:pct_legendary}%{line_suffix}
+            # Equip chances:
+            #
+            #                           Regular  Badass
+            #           Common (white):   {regular:pct_common}%   {badass:pct_common}%
+            #         Uncommon (green):   {regular:pct_uncommon}%   {badass:pct_uncommon}%
+            #              Rare (blue):   {regular:pct_rare}%   {badass:pct_rare}%
+            #       Very Rare (purple):   {regular:pct_veryrare}%   {badass:pct_veryrare}%
+            # E-Tech (brighter purple):   {regular:pct_alien}%   {badass:pct_alien}%
+            #       Legendary (orange):   {regular:pct_legendary}%   {badass:pct_legendary}%
 
-            #<Regular Enemies>{line_suffix}
+            #<Regular Enemies>
 
-                {line_prefix}# Assault Rifles{line_suffix}
+                # Assault Rifles
 
-                {line_prefix}{regular:set_rarity_ar}{line_suffix}
+                {regular:set_rarity_ar}
 
-                {line_prefix}# Launchers{line_suffix}
+                # Launchers
 
-                {line_prefix}{regular:set_rarity_launchers}{line_suffix}
+                {regular:set_rarity_launchers}
 
-                {line_prefix}# Pistols{line_suffix}
+                # Pistols
 
-                {line_prefix}{regular:set_rarity_pistols}{line_suffix}
+                {regular:set_rarity_pistols}
 
-                {line_prefix}# SMGs{line_suffix}
+                # SMGs
 
-                {line_prefix}{regular:set_rarity_smg}{line_suffix}
+                {regular:set_rarity_smg}
 
-                {line_prefix}# Shotguns{line_suffix}
+                # Shotguns
 
-                {line_prefix}{regular:set_rarity_shotguns}{line_suffix}
+                {regular:set_rarity_shotguns}
 
-                {line_prefix}# Snipers{line_suffix}
+                # Snipers
 
-                {line_prefix}{regular:set_rarity_snipers}{line_suffix}
+                {regular:set_rarity_snipers}
 
-                {line_prefix}# Shields{line_suffix}
+                # Shields
 
-                {line_prefix}set {regular:pool_shields} bAutoReadyItems True{line_suffix}
+                set {regular:pool_shields} bAutoReadyItems True
 
-                {line_prefix}{regular:set_shields}{line_suffix}
+                {regular:set_shields}
 
-                {line_prefix}# Optional Stalker Shields{line_suffix}
+                # Optional Stalker Shields
 
-                {line_prefix}set {regular:stalker_shields} bAutoReadyItems True{line_suffix}
+                set {regular:stalker_shields} bAutoReadyItems True
 
-                {line_prefix}{regular:set_stalker_shields}{line_suffix}
+                {regular:set_stalker_shields}
+
+                # Shields Minus Turtles (some enemies become unkillable if equipped with a
+                # turtle shield with a large enough health penalty)
+
+                set {regular:pool_shields_noturtle} bAutoReadyItems True
+
+                {regular:set_shields_noturtle}
 
             #</Regular Enemies>
 
-            #<Badass Enemies>{line_suffix}
+            #<Badass Enemies>
 
-                {line_prefix}# Assault Rifles{line_suffix}
+                # Assault Rifles
 
-                {line_prefix}{badass:set_rarity_ar}{line_suffix}
+                {badass:set_rarity_ar}
 
-                {line_prefix}# Launchers{line_suffix}
+                # Launchers
 
-                {line_prefix}{badass:set_rarity_launchers}{line_suffix}
+                {badass:set_rarity_launchers}
 
-                {line_prefix}# Pistols{line_suffix}
+                # Pistols
 
-                {line_prefix}{badass:set_rarity_pistols}{line_suffix}
+                {badass:set_rarity_pistols}
 
-                {line_prefix}# SMGs{line_suffix}
+                # SMGs
 
-                {line_prefix}{badass:set_rarity_smg}{line_suffix}
+                {badass:set_rarity_smg}
 
-                {line_prefix}# Shotguns{line_suffix}
+                # Shotguns
 
-                {line_prefix}{badass:set_rarity_shotguns}{line_suffix}
+                {badass:set_rarity_shotguns}
 
-                {line_prefix}# Snipers{line_suffix}
+                # Snipers
 
-                {line_prefix}{badass:set_rarity_snipers}{line_suffix}
+                {badass:set_rarity_snipers}
 
-                {line_prefix}# Shields{line_suffix}
+                # Shields
 
-                {line_prefix}set {badass:pool_shields} bAutoReadyItems True{line_suffix}
+                set {badass:pool_shields} bAutoReadyItems True
 
-                {line_prefix}{badass:set_shields}{line_suffix}
+                {badass:set_shields}
 
-                {line_prefix}# Optional Stalker Shields{line_suffix}
+                # Optional Stalker Shields
 
-                {line_prefix}set {badass:stalker_shields} bAutoReadyItems True{line_suffix}
+                set {badass:stalker_shields} bAutoReadyItems True
 
-                {line_prefix}{badass:set_stalker_shields}{line_suffix}
+                {badass:set_stalker_shields}
 
-                {line_prefix}# Jack's Body Double{line_suffix}
+                # Boom + Bewm
 
-                {body_double_equip_hotfix_string}
+                level SouthernShelf_P set GD_BoomBoom.WeaponPools.Pool_Weapons_Shotguns_BoomBoom bAutoReadyItems True
+
+                {mp:boom_bewm_shotguns}
+
+                # Jack's Body Double
+
+                {mp:body_double_equip}
 
             #</Badass Enemies>
 
-            #<Torgue DLC Enemies (Regular)>{line_suffix}
+            #<Torgue DLC Enemies (Regular)>
 
-                {line_prefix}# Make sure that regular Torgue enemies use our own weights.{line_suffix}
+                # Make sure that regular Torgue enemies use our own weights.
 
-                {torguehotfixes:angel_pistols}
+                {mp:angel_pistols}
 
-                {torguehotfixes:angel_shotguns}
+                {mp:angel_shotguns}
 
-                {torguehotfixes:angel_smg}
+                {mp:angel_smg}
 
-                {torguehotfixes:angel_snipers}
+                {mp:angel_snipers}
 
-                {torguehotfixes:dragon_pistols}
+                {mp:dragon_pistols}
 
-                {torguehotfixes:dragon_smg}
+                {mp:dragon_smg}
 
-                {torguehotfixes:dragon_snipers}
+                {mp:dragon_snipers}
 
-                {torguehotfixes:torgue_pistols}
+                {mp:torgue_pistols}
 
-                {torguehotfixes:torgue_shotguns}
+                {mp:torgue_shotguns}
 
-                {torguehotfixes:torgue_ar}
+                {mp:torgue_ar}
 
             #</Torgue DLC Enemies (Regular)>
 

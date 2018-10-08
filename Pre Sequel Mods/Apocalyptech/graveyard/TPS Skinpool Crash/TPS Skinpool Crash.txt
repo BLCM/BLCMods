@@ -1,0 +1,115 @@
+#<TPS Skinpool Crash>
+
+    # This is a very bizarre situation where some combination of sets/hotfixes on skinpools might end up causing
+    # a crash-to-desktop of TPS.  This is presumably related to DLC skinpools, which apparently might not be
+    # entirely resilient to being hotfixed in some circumstances.
+    #
+    # To reproduce the crash:
+    #   1) This case only actually works when using Doppelganger skinpools.  Even Baroness skinpools work fine
+    #      in this case.  So choose the "Doppelganger" section (or try the other ones to verify that it does
+    #      NOT crash)
+    #   2) Load a savegame with your char at the Fast Travel in Triton Flats
+    #   3) Zip over to the Crisis Scar entrance (the main one, where SC4V-TP hangs out)
+    #   4) Game crashes halfway through loading Crisis Scar
+    #
+    # I think that also happens when going to Sanctuary, or probably to other maps leading out of Triton Flats.
+    # Weirdly, if you load a game alrady *at* the Crisis Scar entrance, the crash will NOT happen.  It WILL
+    # happen if you start at Crisis Scar, head over to the Fast Travel, and then go back again, though.  Go
+    # figure.
+    #
+    # As I say: it's weird.  There's four statements in each character's section -- the first one, which
+    # clears out an entry in a skinpool, is a bit superfluous and can be removed without changing the
+    # crash behavior.  Without it, though, the BalancedItems stanza would be in a weird state, so I left it in.
+    #
+    # For the remaining three statements, if you remove *any* one of them, the crash does not occur.  This
+    # is especially weird for the middle one, the `set` on a pool totally not referenced by either of the
+    # surrounding pools, but doing so seems to be necessary to trigger the crash.
+    #
+    # If anyone can figure out a reason why this might happen other than "DLC Skinpools might not be trustable"
+    # I'd love to hear about it.
+
+    #<Character Pool Selection><MUT>
+
+        #<Doppelganger (causes crash)>
+
+            #<hotfix><key>"SparkLevelPatchEntry-ApocTPSSkinpool1"</key><value>",GD_CustomItemPools_MainGame.Rewards.GreenPattern,BalancedItems[5].ItmPoolDefinition,,None"</value><on>
+
+            #<hotfix><key>"SparkLevelPatchEntry-ApocTPSSkinpool2"</key><value>",GD_CustomItemPools_MainGame.Rewards.GreenPattern,BalancedItems[5].InvBalanceDefinition,,InventoryBalanceDefinition'GD_Doppel_Items_Quince.BalanceDefs.Doppel_Skin_GreenA'"</value><on>
+
+            set GD_CustomItemPools_Quince.Doppel.GreenBoldAccent BalancedItems ()
+
+            #<hotfix><key>"SparkLevelPatchEntry-ApocBossVeryimprovedBossPool1"</key><value>"Moon_P,GD_CustomItemPools_Quince.Doppel.GreenPattern,BalancedItems,,()"</value><on>
+
+        #</Doppelganger (causes crash)>
+
+        #<Baroness (does not cause crash)>
+
+            #<hotfix><key>"SparkLevelPatchEntry-ApocTPSSkinpool3"</key><value>",GD_CustomItemPools_MainGame.Rewards.GreenPattern,BalancedItems[4].ItmPoolDefinition,,None"</value><off>
+
+            #<hotfix><key>"SparkLevelPatchEntry-ApocTPSSkinpool4"</key><value>",GD_CustomItemPools_MainGame.Rewards.GreenPattern,BalancedItems[4].InvBalanceDefinition,,InventoryBalanceDefinition'GD_Baroness_Items_crocus.BalanceDefs.Baroness_Skin_GreenA'"</value><off>
+
+            #set GD_CustomItemPools_crocus.Baroness.GreenBoldAccent BalancedItems ()<off>
+
+            #<hotfix><key>"SparkLevelPatchEntry-ApocBossVeryimprovedBossPool2"</key><value>"Moon_P,GD_CustomItemPools_crocus.Baroness.GreenPattern,BalancedItems,,()"</value><off>
+
+        #</Baroness (does not cause crash)>
+
+        #<Gladiator (does not cause crash)>
+
+            #<hotfix><key>"SparkLevelPatchEntry-ApocTPSSkinpool5"</key><value>",GD_CustomItemPools_MainGame.Rewards.GreenPattern,BalancedItems[3].ItmPoolDefinition,,None"</value><off>
+
+            #<hotfix><key>"SparkLevelPatchEntry-ApocTPSSkinpool6"</key><value>",GD_CustomItemPools_MainGame.Rewards.GreenPattern,BalancedItems[3].InvBalanceDefinition,,InventoryBalanceDefinition'GD_Gladiator_Items_MainGame.BalanceDefs.Gladiator_Skin_GreenA'"</value><off>
+
+            #set GD_CustomItemPools_MainGame.Gladiator.GreenBoldAccent BalancedItems ()<off>
+
+            #<hotfix><key>"SparkLevelPatchEntry-ApocBossVeryimprovedBossPool3"</key><value>"Moon_P,GD_CustomItemPools_MainGame.Gladiator.GreenPattern,BalancedItems,,()"</value><off>
+
+        #</Gladiator (does not cause crash)>
+
+        #<Enforcer (does not cause crash)>
+
+            #<Does Not Crash (imported from weird_works_enforcer.ft)>
+
+                #<hotfix><key>"SparkLevelPatchEntry-ApocTPSSkinpool7"</key><value>",GD_CustomItemPools_MainGame.Rewards.GreenPattern,BalancedItems[2].ItmPoolDefinition,,None"</value><off>
+
+                #<hotfix><key>"SparkLevelPatchEntry-ApocTPSSkinpool8"</key><value>",GD_CustomItemPools_MainGame.Rewards.GreenPattern,BalancedItems[2].InvBalanceDefinition,,InventoryBalanceDefinition'GD_Enforcer_Items_MainGame.BalanceDefs.Enforcer_Skin_GreenA'"</value><off>
+
+                #set GD_CustomItemPools_MainGame.Enforcer.GreenBoldAccent BalancedItems ()<off>
+
+                #<hotfix><key>"SparkLevelPatchEntry-ApocBossVeryimprovedBossPool4"</key><value>"Moon_P,GD_CustomItemPools_MainGame.Enforcer.GreenPattern,BalancedItems,,()"</value><off>
+
+            #</Does Not Crash (imported from weird_works_enforcer.ft)>
+
+        #</Enforcer (does not cause crash)>
+
+        #<Lawbringer (does not cause crash)>
+
+            #<hotfix><key>"SparkLevelPatchEntry-ApocTPSSkinpool9"</key><value>",GD_CustomItemPools_MainGame.Rewards.GreenPattern,BalancedItems[0].ItmPoolDefinition,,None"</value><off>
+
+            #<hotfix><key>"SparkLevelPatchEntry-ApocTPSSkinpool10"</key><value>",GD_CustomItemPools_MainGame.Rewards.GreenPattern,BalancedItems[0].InvBalanceDefinition,,InventoryBalanceDefinition'GD_Lawbringer_Items_MainGame.BalanceDefs.Lawbringer_Skin_GreenA'"</value><off>
+
+            #set GD_CustomItemPools_MainGame.Lawbringer.GreenBoldAccent BalancedItems ()<off>
+
+            #<hotfix><key>"SparkLevelPatchEntry-ApocBossVeryimprovedBossPool5"</key><value>"Moon_P,GD_CustomItemPools_MainGame.Lawbringer.GreenPattern,BalancedItems,,()"</value><off>
+
+        #</Lawbringer (does not cause crash)>
+
+        #<Prototype (does not cause crash)>
+
+            #<hotfix><key>"SparkLevelPatchEntry-ApocTPSSkinpool11"</key><value>",GD_CustomItemPools_MainGame.Rewards.GreenPattern,BalancedItems[1].ItmPoolDefinition,,None"</value><off>
+
+            #<hotfix><key>"SparkLevelPatchEntry-ApocTPSSkinpool12"</key><value>",GD_CustomItemPools_MainGame.Rewards.GreenPattern,BalancedItems[1].InvBalanceDefinition,,InventoryBalanceDefinition'GD_Prototype_Items_MainGame.BalanceDefs.Prototype_Skin_GreenA'"</value><off>
+
+            #set GD_CustomItemPools_MainGame.Prototype.GreenBoldAccent BalancedItems ()<off>
+
+            #<hotfix><key>"SparkLevelPatchEntry-ApocBossVeryimprovedBossPool6"</key><value>"Moon_P,GD_CustomItemPools_MainGame.Prototype.GreenPattern,BalancedItems,,()"</value><off>
+
+        #</Prototype (does not cause crash)>
+
+    #</Character Pool Selection>
+
+#</TPS Skinpool Crash>
+
+set Transient.SparkServiceConfiguration_6 Keys ("SparkLevelPatchEntry-ApocTPSSkinpool1","SparkLevelPatchEntry-ApocTPSSkinpool2","SparkLevelPatchEntry-ApocBossVeryimprovedBossPool1")
+set Transient.SparkServiceConfiguration_6 Values (",GD_CustomItemPools_MainGame.Rewards.GreenPattern,BalancedItems[5].ItmPoolDefinition,,None",",GD_CustomItemPools_MainGame.Rewards.GreenPattern,BalancedItems[5].InvBalanceDefinition,,InventoryBalanceDefinition'GD_Doppel_Items_Quince.BalanceDefs.Doppel_Skin_GreenA'","Moon_P,GD_CustomItemPools_Quince.Doppel.GreenPattern,BalancedItems,,()")
+

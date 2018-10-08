@@ -1,0 +1,95 @@
+digraph reward {
+
+    labelloc = "t";
+    fontsize = 22;
+    label = <Fig. 8: No skin rewards at all, with all 2+ Items>
+
+    {
+        node [shape=octagon style=filled fillcolor=aquamarine1];
+        thing [label=<Mission Reward /<br/>Challenge Reward /<br/>(not enemy drops)>];
+    }
+    {
+        node [shape=rectangle style=filled fillcolor=green];
+        reward [label="Reward Pool"]
+    }
+    {
+        node [shape=rectangle style=filled fillcolor=gold];
+        pool_ass [label="Assassin Pool"];
+        pool_merc [label="Mercenary Pool"];
+        pool_siren [label="Siren Pool"];
+        pool_soldier [label="Soldier Pool"];
+        pool_psycho [label="Psycho Pool"];
+        pool_mech [label="Mechromancer Pool"];
+    }
+    {
+        node [style=filled fillcolor=red];
+        skin_ass [label="Assassin Skin"];
+        skin_merc [label="Mercenary Skin"];
+        skin_siren [label="Siren Skin"];
+        skin_soldier [label="Soldier Skin"];
+        skin_psycho [label="Psycho Skin"];
+        skin_mech [label="Mechromancer Skin"];
+    }
+    {
+        node [shape=diamond style="filled,rounded" fillcolor=deepskyblue2];
+        item_1 [label="(an item)"];
+        item_2 [label="(an item)"];
+        item_3 [label="(an item)"];
+        item_4 [label="(an item)"];
+        item_5 [label="(an item)"];
+        item_6 [label="(an item)"];
+        item_7 [label="(an item)"];
+        item_8 [label="(an item)"];
+        item_9 [label="(an item)"];
+        item_10 [label="(an item)"];
+        item_11 [label="(an item)"];
+        item_12 [label="(an item)"];
+    }
+
+    thing -> reward;
+
+    reward -> skin_ass [style=invis];
+    reward -> skin_merc [style=invis];
+    reward -> skin_siren [style=invis];
+    reward -> skin_soldier [style=invis];
+    reward -> skin_psycho [style=invis];
+    reward -> skin_mech [style=invis];
+
+    // Items
+    pool_ass -> item_1;
+    pool_ass -> item_2;
+    pool_merc -> item_3;
+    pool_merc -> item_4;
+    pool_siren -> item_5;
+    pool_siren -> item_6;
+    pool_soldier -> item_7;
+    pool_soldier -> item_8;
+    pool_psycho -> item_9;
+    pool_psycho -> item_10;
+    pool_mech -> item_11;
+    pool_mech -> item_12;
+
+    // Some structural arrangements
+    {
+        edge [style=invis];
+        skin_ass -> pool_ass;
+        skin_merc -> pool_ass;
+
+        skin_siren -> pool_merc;
+        skin_soldier -> pool_merc;
+
+        skin_psycho -> pool_siren;
+        skin_mech -> pool_siren;
+
+        item_1 -> pool_soldier;
+        item_2 -> pool_soldier;
+
+        item_3 -> pool_psycho;
+        item_4 -> pool_psycho;
+
+        item_5 -> pool_mech;
+        item_6 -> pool_mech;
+
+    }
+
+}

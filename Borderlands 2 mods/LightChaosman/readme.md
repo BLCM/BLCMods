@@ -6,6 +6,7 @@ All mods below are suported by FilterTool.
 * RefundSubSequence: Regain a small amount of cooldown while subsequence is active.
 * NoDamageNumbers: Removes damage numbers from the game. Less visual polution, more visible crit spots, all that good stuff.
 * Enemy_Randomizer: Replaced most enemies with a random one.
+* EasierEarlyGameExperience: Tweaks the exp system: no more penalty for car kills, less penalty for low level enemies, more reward for high level enemies
 
 * ChaoticTeams: Share skills with allies and enemies
 
