@@ -29,8 +29,16 @@ This Read Me is just here as a quick synopsis, for detailed informations, each M
 ## [Quest Reward] Hammerlock Jakobs Sponsor v1.0.1
 
 - Hammerlock give Jakobs weapon/item reward for few of his mission in the main game, but not all of them... Now he will... and with the choice between 2 Blue weapons/items instead of a single one!
- 
-  * * * * *
+
+* * * * *
+
+## [Skin] Moxxi Signature Classic Reskin Pack
+
+- Did you ever noticed that only the half from the Moxxi gears have almost a nice Moxxi Signature Classic skin... and a half have somewhat totally different... which looks more like Tiny Tina weapon skin than Moxxi weapon skin!
+
+Now with the *Moxxi Signature Classic Reskin Pack*, all the skin are uniform.
+  
+* * * * *
  
  ## [New Weapon] Plasma Caster Dahl Prototype SX-1 v1.0.0
 
