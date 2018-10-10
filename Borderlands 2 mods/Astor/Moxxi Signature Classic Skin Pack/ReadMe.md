@@ -17,7 +17,7 @@ That doesn't make sense to me... and it's just not prettier!
 
 But now with the *Moxxi Signature Classic Skin Pack*, there are all uniform to look like an actual manufacturer.
 
-![Moxxi Signature Classic Gear ](https://imgur.com/PSZkKsf.png "Don't worry guys... even if my screen capture show French text, my mods are in English")
+![Moxxi Signature Classic Gear ](https://imgur.com/Y7eGuJ2.png "Don't worry guys... even if my screen capture show French text, my mods are in English")
 ### Changelog:
 
 - v1.0.0, October 10, 2018
