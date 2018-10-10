@@ -46,13 +46,13 @@ Now with the *Moxxi Signature Classic Reskin Pack*, all the skin are uniform.
 
 * * * * *
  
- ## [New Weapon] Plasma Caster Dahl Prototype SX-1
+ ## [Weapon] Plasma Caster Dahl Prototype SX-1
 
 The Prototype SX-1 was great and really a powerful and dangerous weapon, except that the plasma ball will only explode when coming in contact with a enemy and the missed shots disintegrate instantly "pschitt" like a damp squib (without exploding!) in a tiny cloud of pink smoke.
 
  * * * * *
  
- ## [New Weapon] SMG Dahl Discord Solver - Bloody Edition
+ ## [Weapon] SMG Dahl Discord Solver - Bloody Edition
 
 In their early days in the making of weapons, Dahl, in collaboration with Torgue create the Discord Solver, a SMG who fire explosive bullet. 
 
@@ -62,7 +62,7 @@ Anyway, remnant of the past, a *"lost"* Discord Solver (probably dropped by a ba
 
 * * * * *
 
- ## [New Weapon] SMG Dahl Discord Solver - Moxxi Edition
+ ## [Weapon] SMG Dahl Discord Solver - Moxxi Edition
 
  It would seem that Moxxi still has a specimen of the Discord Solver in her private Signature collection of weapons, but no one has ever seen it, not even Marcus ... so maybe it's just a legend after all? 
  
