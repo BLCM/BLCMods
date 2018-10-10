@@ -26,6 +26,15 @@ v1.0.0, September 2, 2018
 v1.0.1, September 5, 2018
 - Added Stalker of Stalkers in The Highlands... Ooops! I totally forget this mission... perhaps because the "Turn In" is done in a letter box in Overlook!
 
+### Compatibility:
+
+- 100% compatible with UCP 4.1
+- Should be compatible with most other mods, as long as they do not touch the Quest Reward.
+- This mod was tested -and work nicely!- with:
+  - [UCP Patch](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/Community%20Patch%20Team)   
+  - [Better Quest](https://github.com/BLCM/BLCMods/blob/master/Borderlands%202%20mods/Hemaxhu/Quest%20Rewards/Better%20Quests) by [Hemaxu](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/Hemaxhu) .
+
+To be sure to get this mod working correctly (as intended), don't forget to place it **AFTER** UCP 4.1 and Better Quest. 
 
 ### To do:
 
