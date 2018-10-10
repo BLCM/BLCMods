@@ -37,7 +37,7 @@ Feel Free to use the BLCMM tool to select the option of your choice.
 - This mod was tested -and work nicely!- with:
   - [UCP Patch](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/Community%20Patch%20Team)   
   - [Better Quest](https://github.com/BLCM/BLCMods/blob/master/Borderlands%202%20mods/Hemaxhu/Quest%20Rewards/Better%20Quests) by [Hemaxu](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/Hemaxhu).
-  - [Better Loot](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/Apocalyptech/BL2%20Better%20Loot%20Mod) & [Cold Dead Hands](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/Apocalyptech/BL2%20Cold%20Dead%20Hands)by [Apocalyptech](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/Apocalyptech)  
+  - [Better Loot](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/Apocalyptech/BL2%20Better%20Loot%20Mod) & [Cold Dead Hands](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/Apocalyptech/BL2%20Cold%20Dead%20Hands) by [Apocalyptech](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/Apocalyptech)  
 
 To be sure to get this mod working correctly (as intended), don't forget to place it **AFTER** UCP 4.1 and Better Quest (Better Loot & Cold Dead Hands can be placed anywhere regarding my mod). 
 
