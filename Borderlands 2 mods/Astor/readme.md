@@ -9,7 +9,7 @@ This Read Me is just here as a quick synopsis, for detailed informations, each M
 
  * * * * *
  
-## [Quest Reward] Double Quest Reward Redux v1.0.4
+## [Quest Reward] Double Quest Reward Redux
 
  - Upgrade the customization skin/head rewards to a Blue weapon/item rewards for 9 missions.
  - Choice between 2 Unique weapons/items instead of a single one, so it will double the chance to get a Unique weapon/item with desired parts.
@@ -20,33 +20,39 @@ This Read Me is just here as a quick synopsis, for detailed informations, each M
  
  * * * * *
  
-## [Quest Reward] Dr Zed E-Tech Geek v1.0.0
+## [Quest Reward] Dr Zed E-Tech Geek
 
 - The 7 Missions given by Dr Zed in the main game will be rewarded with a E-Tech weapon/item, with the choice between 2 E-Tech weapons/items instead of a single one.
  
  * * * * * 
 
-## [Quest Reward] Hammerlock Jakobs Sponsor v1.0.1
+## [Quest Reward] Hammerlock Jakobs Sponsor
 
 - Hammerlock give Jakobs weapon/item reward for few of his mission in the main game, but not all of them... Now he will... and with the choice between 2 Blue weapons/items instead of a single one!
 
 * * * * *
 
-## [Skin] Moxxi Signature Classic Reskin Pack
+## [Skin] Moxxi Signature Classic Skin Pack
 
 - Did you ever noticed that only the half from the Moxxi gears have almost a nice Moxxi Signature Classic skin... and a half have somewhat totally different... which looks more like Tiny Tina weapon skin than Moxxi weapon skin!
 
 Now with the *Moxxi Signature Classic Reskin Pack*, all the skin are uniform.
   
 * * * * *
+
+## [Skin] Moxxi Signature Elegance Skin Pack
+
+- Inspired from the *Santos*, a well know French jeweller watch... with the color from the golden screws inserted into a (silver) brushed steel bracelet, and the addition from the red similar to the little *Cartier* box... Et voila!
+
+* * * * *
  
- ## [New Weapon] Plasma Caster Dahl Prototype SX-1 v1.0.0
+ ## [New Weapon] Plasma Caster Dahl Prototype SX-1
 
 The Prototype SX-1 was great and really a powerful and dangerous weapon, except that the plasma ball will only explode when coming in contact with a enemy and the missed shots disintegrate instantly "pschitt" like a damp squib (without exploding!) in a tiny cloud of pink smoke.
 
  * * * * *
  
- ## [New Weapon] SMG Dahl Discord Solver - Bloody Edition v1.1.0
+ ## [New Weapon] SMG Dahl Discord Solver - Bloody Edition
 
 In their early days in the making of weapons, Dahl, in collaboration with Torgue create the Discord Solver, a SMG who fire explosive bullet. 
 
@@ -56,7 +62,7 @@ Anyway, remnant of the past, a *"lost"* Discord Solver (probably dropped by a ba
 
 * * * * *
 
- ## [New Weapon] SMG Dahl Discord Solver - Moxxi Edition v1.1.0
+ ## [New Weapon] SMG Dahl Discord Solver - Moxxi Edition
 
  It would seem that Moxxi still has a specimen of the Discord Solver in her private Signature collection of weapons, but no one has ever seen it, not even Marcus ... so maybe it's just a legend after all? 
  
