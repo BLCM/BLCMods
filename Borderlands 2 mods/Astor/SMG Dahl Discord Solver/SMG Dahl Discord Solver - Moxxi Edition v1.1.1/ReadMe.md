@@ -1,7 +1,4 @@
 
-
-
-
 ## SMG Dahl Discord Solver (Moxxi Edition)
  
 In their early days in their making of weapons, Dahl, in collaboration with Torgue created the Discord Solver, a SMG who shot GyroJet explosive bullet. 
@@ -14,7 +11,7 @@ Anyway, remnant of the past, a *"lost"* Discord Solver (probably dropped by a ba
 
 This is where you can find it... 
 
-![Discord Solver - Where to find it](https://i.imgur.com/uHTxuc6.png "Don't worry guys... even if my screen capture show French text, my mods are in English")
+![Discord Solver - Where to find it](https://imgur.com/cQkATCz.jpg "Don't worry guys... even if my screen capture show French text, my mods are in English")
 
 
 ## What special with this weapon?
@@ -32,9 +29,9 @@ This is where you can find it...
     - 2.5% lifesteal on damage dealt
     - A greater chance to get a extra bullet free 
 
-![Discord Solver Moxxi Signature Classic and Cartier](https://imgur.com/7V3SSin.png "Don't worry guys... even if my screen capture show French text, my mods are in English")
+![Discord Solver Moxxi Signature Classic and Cartier](https://imgur.com/7pEjhq7.jpg "Don't worry guys... even if my screen capture show French text, my mods are in English")
 
-**Note:** As this version of the Discord Solver is a Moxxi weapon, you can choose between 2 Moxxi Signature skin : the *Classic* or the *Cartier* skin
+**Note:** As this version of the Discord Solver is a Moxxi weapon, you can choose between 3 Moxxi Signature skin : the *Classic* skin, the *Elegance* skin or the *Pinky* skin
 
 ### Options: 
 
@@ -43,13 +40,11 @@ This Mod has few options & fix, so feel free to use the BLCMM tool to select the
 - The Splash Format has a toggle option between Grenade/Rocket/Reaper (see Compatibility below)
 -  The Weapon Card has a toggle option between English/French.
  - The Explosive Elemental Color Glow has a toggle option between On/Off
-
-
-
   - The Discord Solver Moxxi Edition can become the reward given by Moxxi for the mission "Hell Hath No Fury" in Opportunity (see picture below).
   - The Moxxi skin has a toggle option between:
     - The Moxxi Signature *Classic* Edition ("Red Fire" in the RL Creamer/SG Heart Breaker style) which is timeless and can be used in any occasion.
-    - The Moxxi Signature *Cartier* Edition ("Red Cartier" in the style from the renowned French jeweler) which is very stylish and sophisticated, and by the way the all time favorite from Aurelia the Baroness.
+    - The Moxxi Signature *Elegance* Edition ("Red Cartier" in the style from the renowned French jeweler) which is very stylish and sophisticated, and by the way the all time favorite from Aurelia the Baroness.
+    - The Moxxi Signature *Pinky* Edition: To feel the glamour in pink, like a Barbie girl in a Barbie world.
 
 ... and few fix:
 
@@ -59,7 +54,7 @@ This Mod has few options & fix, so feel free to use the BLCMM tool to select the
 - Fix for Bayonet Buff in Slot 1
 - Fix for Koby "Rarity Color Fix": Unique (just in case if you use this old mod)
 
-![Discord Solver as reward for Moxxi mission](https://i.imgur.com/8JPt8ap.png "Don't worry guys... even if my screen capture show French text, my mods are in English") 
+![Discord Solver as reward for Moxxi mission](https://imgur.com/5f32G5e.jpg "Don't worry guys... even if my screen capture show French text, my mods are in English") 
 
 **Note:** You can toggle between the choice from 2 Moxxi Discord Solver or between the choice from 1 Moxxi Discord Solver & 1 Kiss of Death. 
 
@@ -95,7 +90,8 @@ This Mod has few options & fix, so feel free to use the BLCMM tool to select the
   - Totally revamp the FireMode
 - v1.1.1, October 06, 2018  
   - Added fix for Bayonet Buff in Slot 1: Bayonet gain 100% bonus melee damage (up from 50%)  
- 
+- v1.1.2, October 15, 2018  
+  - Added Moxxi Signature Pinky Skin  
 
 ### Compatibility:
 
@@ -123,8 +119,7 @@ A great mod to check for the Discord Solver Moxxi version:
 
 - [Double Anarchy v4](https://github.com/BLCM/BLCMods/blob/master/Borderlands%202%20mods/Aaron0000/Weapon-Item%20Parts%20and%20Accessories/DoubleAnarchyv4.txt) by [Aaron00000](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/Aaron0000) : Changes the SMGs accuracy accessory into the Double Accessory from Borderlands 1... and your Discord Solver will shot 2 GyroJet Explosive bullets at the cost on 2 ammo, and will have a chance to be doubled and shot 4 GyroJet Explosive bullets at the ridiculous cost on 2 ammo.   
 
-![Discord Solver - Double Anarchy](https://imgur.com/dZW6K2J.png "Don't worry guys... even if my screen capture show French text, my mods are in English")
-
+![Discord Solver - Double Anarchy](https://imgur.com/UGVHFHX.jpg "Don't worry guys... even if my screen capture show French text, my mods are in English")
   
 ### To do:
 
@@ -132,9 +127,8 @@ A great mod to check for the Discord Solver Moxxi version:
 - [x] Clean the code and remove all my ~~shitty~~ notes. 
 - [ ] Make (again) fews kills to be sure that all work correctly.
 
-
 ### Credits & Thanks:
-First of all, I need thanks [PsychoPatate](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/PsychoPatate "PsychoPatate") for his help -and his patience!-  when I was getting nowhere fast (in French: "lorsque je pédalais dans la semoule" :wink:) to realise my 1st *Moxxi Signature Classic* skin; so a big -and special- thanks to you @PsychoPatate.
+First of all, I need thanks [PsychoPatate](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/PsychoPatate "PsychoPatate") for his help -and his patience!-  when I was getting nowhere fast (in French: "lorsque je pÃ©dalais dans la semoule" :wink:) to realise my 1st *Moxxi Signature Classic* skin; so a big -and special- thanks to you @PsychoPatate.
 
 I find a lot of useful informations on the Resource page from the [Wiki](https://github.com/BLCM/BLCMods/wiki) of course, but also on the [Resources page](https://github.com/BLCM/BLCMods/tree/af3b2d17629ab3f7f7a5f7bb68b489c5e13b0498/Borderlands%202%20mods/Dave/Resources) and the great [Dave'S BL2 Skin Modding Guide](https://cdn.rawgit.com/BLCM/BLCMods/bb1933f7/Borderlands%202%20mods/Dave/DAVE%27S%20BL2%20SKIN%20MODDING%20GUIDE.pdf) ... all that made by [Dave](https://github.com/BLCM/BLCMods/tree/af3b2d17629ab3f7f7a5f7bb68b489c5e13b0498/Borderlands%202%20mods/Dave) , so thanks for your great work, @DaveRabbit
 

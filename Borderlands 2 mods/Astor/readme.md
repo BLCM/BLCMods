@@ -36,7 +36,7 @@ This Read Me is just here as a quick synopsis, for detailed informations, each M
 
 - Did you ever noticed that only the half from the Moxxi gears have almost a nice Moxxi Signature Classic skin... and a half have somewhat totally different... which looks more like Tiny Tina weapon skin than Moxxi weapon skin!
 
-Now with the *Moxxi Signature Classic Reskin Pack*, all the skin are uniform.
+Now with the *Moxxi Signature Classic Skin Pack*, there are all uniform to look like an actual manufacturer.
   
 * * * * *
 
@@ -45,14 +45,20 @@ Now with the *Moxxi Signature Classic Reskin Pack*, all the skin are uniform.
 - Inspired from the *Santos*, a well know French jeweller watch... with the color from the golden screws inserted into a (silver) brushed steel bracelet, and the addition from the red similar to the little *Cartier* box... Et voila!
 
 * * * * *
+
+## [Skin] Moxxi Signature Pinky Skin Pack
+
+- Like a Barbie girl in a Barbie world, you can now feel the glamour in pink with the *Moxxi Signature Pinky Skin Pack*.
+
+* * * * *
  
- ## [New Weapon] Plasma Caster Dahl Prototype SX-1
+## [Weapon] Plasma Caster Dahl Prototype SX-1
 
 The Prototype SX-1 was great and really a powerful and dangerous weapon, except that the plasma ball will only explode when coming in contact with a enemy and the missed shots disintegrate instantly "pschitt" like a damp squib (without exploding!) in a tiny cloud of pink smoke.
 
  * * * * *
  
- ## [New Weapon] SMG Dahl Discord Solver - Bloody Edition
+## [Weapon] SMG Dahl Discord Solver - Bloody Edition
 
 In their early days in the making of weapons, Dahl, in collaboration with Torgue create the Discord Solver, a SMG who fire explosive bullet. 
 
@@ -62,11 +68,11 @@ Anyway, remnant of the past, a *"lost"* Discord Solver (probably dropped by a ba
 
 * * * * *
 
- ## [New Weapon] SMG Dahl Discord Solver - Moxxi Edition
+## [Weapon] SMG Dahl Discord Solver - Moxxi Edition
 
- It would seem that Moxxi still has a specimen of the Discord Solver in her private Signature collection of weapons, but no one has ever seen it, not even Marcus ... so maybe it's just a legend after all? 
+It would seem that Moxxi still has a specimen of the Discord Solver in her private Signature collection of weapons, but no one has ever seen it, not even Marcus ... so maybe it's just a legend after all? 
  
- ... or perhaps this weapon can become the reward given by Moxxi for the mission "Hell Hath No Fury" in Opportunity...  Who know? 
+... or perhaps this weapon can become the reward given by Moxxi for the mission "Hell Hath No Fury" in Opportunity...  Who know? 
 
 * * * * *
  
