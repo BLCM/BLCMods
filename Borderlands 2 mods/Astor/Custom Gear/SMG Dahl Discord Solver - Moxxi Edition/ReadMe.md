@@ -29,6 +29,28 @@ This is where you can find it...
     - 70% Critical hit bonus
     - 2.5% lifesteal on damage dealt
     - A greater chance to get a extra bullet free 
+	
+Not clear? ... Well, perhaps it will be more easy to compare the difference in a table:  
+  
+| -Tech Specs-        | Lascaux: Vanilla      | Discord Solver #2: Moxxi   | 
+| -------------       | -------------         |  -------------             |  
+| **Bullet Tech:**    |                       |                            | 
+| Bullet Type:        | Standard              |  GyroJets Explosive        |
+| Fire Cost:          | 1 bullets cost 1 ammo |  1 bullets cost 1 ammo     |
+| Bullet Speed:       | 20.000                |  5x GyroJet Speed Boost    |
+| Burst Count:        | 9 to 14 rounds        |  9 to 14 rounds            | 
+| **Explosive Tech:** |                       |                            |
+| Element:            | Never Elemental       |  Explosive                 | 
+| Explosion Chance:   | None                  |  100%                      |
+| Impact:             | Normal                | Explosive                  |  
+| Explosion Radius:   | None                  |  90                        |  
+| Splash Format:      | None                  |  Grenade Boost             |  
+| **Other:**          |                       |                            |
+| Extra (free) Bullet:| 100% Chance           |  30% Chance                |
+| Critical Hit:       | None                  |  70%                       |  
+| Lifesteal:          | N/A                   |  2.5% of damage dealt      | 
+| Skin:               | Lascaux (Vanilla)     |  Moxxi Signature           | 
+| Rarity:             | Unique                |  Moxxi                     | 	
 
 ![Discord Solver Moxxi Signature Classic and Cartier](https://imgur.com/W8VaHzJ.jpg "Don't worry guys... even if my screen capture show French text, my mods are in English")
 

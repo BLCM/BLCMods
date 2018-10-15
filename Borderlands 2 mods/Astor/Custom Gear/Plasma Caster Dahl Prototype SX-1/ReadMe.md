@@ -1,11 +1,11 @@
 
 ## Plasma Caster Dahl Prototype SX-1 
  
-After the commercial failure of the Discord Solver, a rogue engineer of Dahl took the plans and secretly worked on the realization of a Plasma Caster capable of firing explosive projectiles Gyrojet coated in a plasma ball.
+After the commercial failure of the Discord Solver, a rogue engineer at Dahl took the plans and secretly worked on the realization of a Plasma Caster capable of firing explosive projectiles Gyrojet coated in a plasma ball.
 
-The prototype was great and really a powerful and dangerous weapon, except that the plasma ball will only explose when coming in contact with a enemy and the missed shots disintegrate instantly "pschitt" like a damp squib (without exploding!) in a tiny cloud of pink smoke.
+The prototype was really a powerful and dangerous weapon, except that the plasma ball will only explose when in contact with a enemy and the missed shots disintegrate instantly -without exploding!- in a tiny cloud of pink smoke.
 
-Remorseful of his dishonest activity, he decided to get rid of his prototype forever by submerging his weapon in a shallow pool in a cave in Frostburn Canyon.
+Remorseful of his dishonest activity, he decided to get rid of his prototype forever by submerged it in a shallow pool in a cave in Frostburn Canyon.
 
 This is where you can find it.... 
 
@@ -16,7 +16,7 @@ This is where you can find it....
 
 ## What special with this weapon?
 
-- Keep the typical fire pattern from the Lascaux Unique Dahl SMG (for more details, see [Borderlands Wiki](http://borderlands.wikia.com/wiki/Lascaux)) mixed  with the Dahl Plasma Caster specificity (for more details again, see [Borderlands Wiki](http://borderlands.wikia.com/wiki/Plasma_Caster)), and get the chance to shot a extra explosive plasma projectile for the cost of two ammo.
+- Keep the typical fire pattern from the Lascaux Unique Dahl SMG (for more details, see [Borderlands Wiki](http://borderlands.wikia.com/wiki/Lascaux)) mixed  with the Plasma caster specificity, and get the chance to shot a extra explosive plasma projectile for the cost of two ammo.
 - Initial (too good) accuracy reduced, slower fireate, and slower reload, but...
   - FireMode modified to shoot the Pocket Rocket GyroJet Explosive Bullet embedded in a plasma ball (but exploding only in contact with a enemy). 
   - The speed from the GyroJet Explosive bullet is 3x faster when fired by a E-Tech Plasma Caster than a Pocket Rocket pistol (but it's still a lot more slower than a normal projectile fired by a Plasma Caster) 
@@ -25,6 +25,27 @@ This is where you can find it....
    - Firing Mode Sound upgraded to Plasma Caster sound.
    - MuzzleFlash upgraded to Plasma Caster.
    - Explosive Elemental Color Glow (similar to Torgue weapons)
+
+Not clear? ... Well, perhaps it will be more easy to compare the difference in a table:  
+  
+| -Tech Specs-        | SMG Dahl Lascaux: Vanilla      | Plasma Caster Dahl Prototype SX-1      |   
+| -------------       | -------------                  | -------------                          |   
+| **Bullet Tech:**    |                                |                                        |          
+| Bullet Type:        | Standard                       | GyroJets Explosive                     | 
+| Fire Cost:          | 1 bullets cost 1 ammo          | 1 bullets cost 2 ammo                  | 
+| Bullet Speed:       | 20.000 (Lascaux) / 6.000 (Plasma Caster)| 5x Pocket Rocket Speed Boost  | 
+| Burst Count:        | 9 to 14 rounds                 | 5 rounds                               | 
+| **Explosive Tech:** |                                |                                        |           
+| Element:            | Never Elemental                | Explosive                              | 
+| Explosion Chance:   | None                           | 100% (on enemy only)                   | 
+| Impact:             | Normal                         | Explosive (on enemy only)              |  
+| Explosion Radius:   | None                           | 180                                    |  
+| Splash Format:      | None                           | Grenade Boost                          | 
+| **Other:**          |                                |                                        |           
+| Extra (free) Bullet:| 100% Chance                    | 20% Chance                             | 
+| Critical Hit:       | None                           | None                                   | 
+| Skin:               | Lascaux (Vanilla)              | Prototype SX-1                         | 
+| Rarity:             | Unique                         | Unique                                 | 
 
 ![Prototype SX-1](https://imgur.com/lE00YK0.png "Don't worry guys... even if my screen capture show French text, my mods are in English")
 
@@ -61,7 +82,7 @@ This Mod has few options & fix, so feel free to use the BLCMM tool to select the
 
 - Just be aware from the following:
 
-  - This mod use the *Pocket Rocket Explosive GyroJet Firing Mode*, so if you use any mode that changes the attributes from the Pistol GyroJet Firing Mode, it will affect this mod, and obviously the firing of the Prototype SX-1. In this case, Just revert the modification done previously to the Pocket Rocket Explosive GyroJet Firing Mode.
+  - This mod use the *Pocket Rocket Explosive GyroJet Firing Mode*, so if you use any mode that changes the attributes from the Pocket Rocket Firing Mode, it will affect this mod, and obviously the firing of the Prototype SX-1. In this case, Just revert the modification done previously to the Pocket Rocket Firing Mode.
   
   - This mode use Grenade Damage for the Splash Format, so if you are going to use the Prototype SX-1 with a Siren character :warning: Maya :warning: , don't forget to toggle the Grenade Damage to Reaper Splash Damage.
    
@@ -87,7 +108,7 @@ Oh! I almost forget... I also follow step-by-step this [How to make a modded wea
 
 ### Note: 
 
-Any critique would be appreciated as this is my 1st weapon... and by the way, please leave constructive criticism if you make a video. 
+Any critique would be appreciated as this is my 2nd weapon... and by the way, please leave constructive criticism if you make a video. 
 Enjoy!
 
 ### Disclaimer

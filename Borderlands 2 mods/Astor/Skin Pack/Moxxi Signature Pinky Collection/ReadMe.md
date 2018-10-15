@@ -1,4 +1,4 @@
-## Moxxi Signature Pinky Skin Pack
+## Moxxi Signature Pinky Collection
 
 Recently, when a friend showed me his latest acquisitions for his Hot Wheels collection, I noticed the *Corvette Stingray (Barbie) Pink 2018*: all Pink & White! 
 
@@ -16,7 +16,7 @@ I keep the vanilla pink color, colorize the metal part in white, adapt the Moxxi
 
 ![Moxxi Signature Pinky Skin - Collection](https://imgur.com/YuDj2OC.jpg "Don't worry guys... even if my screen capture show French text, my mods are in English")
 
-And now, like a Barbie girl in a Barbie world; you can feel the glamour in pink with the *Moxxi Signature Pinky Skin Pack*.
+And now, like a Barbie girl in a Barbie world; you can feel the glamour in pink with the *Moxxi Signature Pinky Collection*.
 
 ### Changelog:
 - v1.0.0, October 15, 2018

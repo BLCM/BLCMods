@@ -36,7 +36,9 @@ Left picture: The mod *SMG Dahl Discord Solver - Moxxi Edition* is placed **BEFO
 Right picture: To fix this overwriting problem and get the code working as intended, the mod *SMG Dahl Discord Solver - Moxxi Edition* must be moved **AFTER** *Double Quest Rewards*. Once done, the reward will appear in *Light Green*, meaning that the code will work correctly, and you will have the choice betwen 2 *SMG Dahl Discord Solver - Moxxi Edition* for the mission *Hell Hath No Fury*.
 
 ![Fix or option not working as intended](https://i.imgur.com/a0eZEVB.png "Don't worry guys... even if my screen capture show French text, my mods are in English")
+
 #### To summarize: 
+
 1. **Correct:**
  *- White* = work (normal set command code)
  *- Blue* = work (hotfix)

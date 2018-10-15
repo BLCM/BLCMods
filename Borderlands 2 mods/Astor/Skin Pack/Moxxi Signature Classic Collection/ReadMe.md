@@ -1,5 +1,5 @@
 
-## Moxxi Signature Classic Skin Pack
+## Moxxi Signature Classic Collection
 
 Did you ever noticed that only the half from the Moxxi gears have almost* a nice Moxxi Signature Classic skin?
 
@@ -15,7 +15,7 @@ Did you ever noticed that only the half from the Moxxi gears have almost* a nice
 
 That doesn't make sense to me... and it's just not prettier!
 
-But now with the *Moxxi Signature Classic Skin Pack*, there are all uniform to look like an actual manufacturer.
+But now with the *Moxxi Signature Classic Collection*, there are all uniform to look like an actual manufacturer.
 
 ![Moxxi Signature Classic Gear ](https://imgur.com/Y7eGuJ2.png "Don't worry guys... even if my screen capture show French text, my mods are in English")
 ### Changelog:
@@ -39,7 +39,7 @@ I find a lot of useful informations on the  great [Dave'S BL2 Skin Modding Guide
   
 ### Note: 
 
-Any critique would be appreciated as this is my 1st skin pack... and by the way, please leave constructive criticism if you make a video. 
+Any critique would be appreciated as this is my 1st Collection... and by the way, please leave constructive criticism if you make a video. 
 Enjoy!
 
 ### Disclaimer

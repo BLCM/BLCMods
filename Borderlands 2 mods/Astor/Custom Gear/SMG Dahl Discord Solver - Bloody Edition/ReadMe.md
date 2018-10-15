@@ -28,6 +28,28 @@ This is where you can find it....
     - Firing Mode Sound upgraded to GyroJet bullet sound.
     - MuzzleFlash upgraded to Explosive Bullet.
     - Explosive Elemental Color Glow (similar to Torgue weapons)
+	
+Not clear? ... Well, perhaps it will be more easy to compare the difference in a table:  
+  
+| -Tech Specs-        | Lascaux: Vanilla      | Discord Solver #1: Bloody   | 
+| -------------       | -------------         | -------------               |  
+| **Bullet Tech:**    |                       |                             |                           
+| Bullet Type:        | Standard              | GyroJets Explosive          | 
+| Fire Cost:          | 1 bullets cost 1 ammo | 1 bullets cost 1 ammo       | 
+| Bullet Speed:       | 20.000                | 5x GyroJet Speed Boost      | 
+| Burst Count:        | 9 to 14 rounds        | 9 to 14 rounds              | 
+| **Explosive Tech:** |                       |                             |                           
+| Element:            | Never Elemental       | Explosive                   | 
+| Explosion Chance:   | None                  | 100%                        | 
+| Impact:             | Normal                | Explosive                   | 
+| Explosion Radius:   | None                  | 90                          | 
+| Splash Format:      | None                  | Grenade Boost               |
+| **Other:**          |                       |                             |                           
+| Extra (free) Bullet:| 100% Chance           | 20% Chance                  | 
+| Critical Hit:       | None                  | None                        |   
+| Lifesteal:          | N/A                   | N/A                         | 
+| Skin:               | Lascaux (Vanilla)     | Bloody / Grunge             | 
+| Rarity:             | Unique                | Unique                      | 	
 
 ![Discord Solver - Bloody Edition](https://imgur.com/TBkblD3.png "Don't worry guys... even if my screen capture show French text, my mods are in English")
 Of course, the weapon skin is grunge... What did you expect for a weapon which stay forgetten in a pool in a cave since a eternity? A pristine and shiny weapon perhaps? Well, no... she is dirty and all rusted! Be happy that this old submachine gun is still able to shot fews bullets!

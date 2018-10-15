@@ -1,6 +1,6 @@
 
 
-## Moxxi Signature Elegance Skin Pack
+## Moxxi Signature Elegance Collection
 
 The idea is really very simple as it come from the *Santos*, a well know French jeweller watch.
 
@@ -9,7 +9,7 @@ I reproduce the color from the golden screws inserted into a (silver) brushed st
 
 ![Moxxi Signature Elegance Gear ](https://imgur.com/zCJd7K0.png "Don't worry guys... even if my screen capture show French text, my mods are in English")
 
-Et Voila! Here is the *Moxxi Signature Elegance Skin Pack*.
+Et Voila! Here is the *Moxxi Signature Elegance Collection*.
 
 ### Changelog:
 - v1.0.0, October 10, 2018
