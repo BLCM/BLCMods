@@ -1,4 +1,5 @@
 
+
 ## SMG Dahl Discord Solver (Moxxi Edition)
  
 In their early days in their making of weapons, Dahl, in collaboration with Torgue created the Discord Solver, a SMG who shot GyroJet explosive bullet. 
