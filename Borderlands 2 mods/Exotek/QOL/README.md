@@ -1,8 +1,18 @@
-# No More Orders
+# Mod Descriptions
+
+## No More Orders
 
 - You **don't** need to have **Doctor's Orders** quest **active** anymore in order to farm **Loot Midgets** in Wildlife Exploitation Preserve.
 
 Alternative download link on [nexusmods.com](https://www.nexusmods.com/borderlands2/mods/65)
+
+***
+
+## Optional Objectives +
+
+- Optional objectives now **reward XP** depending on the objective difficulty. In addition, some of the optional objectives reward extra **Eridium** as well. 
+
+Alternative download link on [nexusmods.com](https://www.nexusmods.com/borderlands2/mods/66)
 
 ***
 
