@@ -5,25 +5,31 @@
  
 ## [Custom Weapon] Plasma Caster Dahl Prototype SX-1
 
-- The Prototype SX-1 was great and really a powerful and dangerous weapon, except that the plasma ball will only explode when coming in contact with a enemy and the missed shots disintegrate instantly "pschitt" like a damp squib (without exploding!) in a tiny cloud of pink smoke.
+The Prototype SX-1 was great and really a powerful and dangerous weapon, except that the plasma ball will only explode when coming in contact with a enemy and the missed shots disintegrate instantly "pschitt" like a damp squib (without exploding!) in a tiny cloud of pink smoke.
+
+ * * * * *
+
+## [Custom Gear] Plasma Caster Hyperion Finesse - Circuit Board Edition
+
+In their early days in their making of weapons, Hyperion, seized Alien Technology plans and created the Finesse: a Plasma Caster which fire SEAPP (Smart Elemental Adaptive Plasma Projectile), a Alien Plasma Projectile which adapt his Elemental following the kind of impact: Incendiary on flesh / Shock on shield / Corrosive on armor. 
 
  * * * * *
  
 ## [Custom Weapon] SMG Dahl Discord Solver - Bloody Edition
 
-- In their early days in the making of weapons, Dahl, in collaboration with Torgue create the Discord Solver, a SMG who fire explosive bullet.
+In their early days in the making of weapons, Dahl, in collaboration with Torgue create the Discord Solver, a SMG who fire explosive bullet.
   
-  Unfortunately, the agreement between the two weapons manufacturers did not last long, and the production of the SMG stopped quickly -How ironic for a weapon that's named Discord Solver!- and Torgue created the Pocket Rocket.
+Unfortunately, the agreement between the two weapons manufacturers did not last long, and the production of the SMG stopped quickly -How ironic for a weapon that's named Discord Solver!- and Torgue created the Pocket Rocket.
 
-  Anyway, remnant of the past, a *"lost"* Discord Solver (probably dropped by a bandit?) can still be found... submerged in a shallow pool in Frostburn Canyon.
+Anyway, remnant of the past, a *"lost"* Discord Solver (probably dropped by a bandit?) can still be found... submerged in a shallow pool in Frostburn Canyon.
 
 * * * * *
 
 ## [Custom Weapon] SMG Dahl Discord Solver - Moxxi Edition
 
-- It would seem that Moxxi still has a specimen of the Discord Solver in her private Signature collection of weapons, but no one has ever seen it, not even Marcus... so maybe it's just a legend after all? 
+It would seem that Moxxi still has a specimen of the Discord Solver in her private Signature collection of weapons, but no one has ever seen it, not even Marcus... so maybe it's just a legend after all? 
  
-  ... or perhaps this weapon can become the reward given by Moxxi for the mission "Hell Hath No Fury" in Opportunity...  Who know? 
+... or perhaps this weapon can become the reward given by Moxxi for the mission "Hell Hath No Fury" in Opportunity...  Who know? 
 
 * * * * *
  
