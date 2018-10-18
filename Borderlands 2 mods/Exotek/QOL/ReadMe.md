@@ -6,7 +6,7 @@ Alternative download link on [nexusmods.com](https://www.nexusmods.com/borderlan
 
 ***
 
-## Disclaimer
+> ## Disclaimer
 
 - All of the assets used in my mods are written by me unless stated otherwise,
 - You are not allowed to upload these files to other sites under any circumstances,
