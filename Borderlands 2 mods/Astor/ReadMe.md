@@ -4,90 +4,44 @@ I'm Astor, and I apologize in advance for some grammar and/or syntax errors, but
 
 You are on BL2-Mods repository, where you can find all my Mods for Borderlands 2. (For the TPS Mods, please go to the TPS-Mods section) 
 
-This Read Me is just here as a quick synopsis, for detailed informations, each Mod has is own Read Me (and even a Changelog), so don't hesitate -whoosh!- to give a look on it.
+This ReadMe is just here as a quick synopsis, for detailed informations, each Mod has is own ReadMe (and even a Changelog), so don't hesitate -whoosh!- to give a look on it.
 
 * * * * *
 
-## [To Read First] Compatibility & Troubleshooting
+## To Read First: 
 
-A small reading information to clearly understand why a option or a fix in my mods don't work as intended, and how to simply fix it!
-
-* * * * *
- 
-## [Custom Gear] Plasma Caster Dahl Prototype SX-1
-
-The Prototype SX-1 was great and really a powerful and dangerous weapon, except that the plasma ball will only explode when coming in contact with a enemy and the missed shots disintegrate instantly "pschitt" like a damp squib (without exploding!) in a tiny cloud of pink smoke.
-
- * * * * *
- 
-## [Custom Gear] SMG Dahl Discord Solver - Bloody Edition
-
-In their early days in the making of weapons, Dahl, in collaboration with Torgue create the Discord Solver, a SMG who fire explosive bullet. 
-
-Unfortunately, the agreement between the two weapons manufacturers did not last long, and the production of the SMG stopped quickly -How ironic for a weapon that's named Discord Solver!- and Torgue created the Pocket Rocket.
-
-Anyway, remnant of the past, a *"lost"* Discord Solver (probably dropped by a bandit?) can still be found... submerged in a shallow pool in Frostburn Canyon.
-
-* * * * *
-
-## [Custom Gear] SMG Dahl Discord Solver - Moxxi Edition
-
-It would seem that Moxxi still has a specimen of the Discord Solver in her private Signature collection of weapons, but no one has ever seen it, not even Marcus ... so maybe it's just a legend after all? 
- 
-... or perhaps this weapon can become the reward given by Moxxi for the mission "Hell Hath No Fury" in Opportunity...  Who know? 
-
-* * * * * 
- 
-## [Quest Reward] Double Quest Reward Redux
-
- - Upgrade the customization skin/head rewards to a Blue weapon/item rewards for 9 missions.
- - Choice between 2 Unique weapons/items instead of a single one, so it will double the chance to get a Unique weapon/item with desired parts.
- - In the mission Uncle Teddy, if you give the plans to Hyperion you will have 3 options: 
-   - the choice between 2 Bitch (Legendary SMG Hyperion) 
-   - the choice between 2 Commerce (Unique Shock SMG Hyperion)
-   - the choice between 1 Bitch (Legendary SMG Hyperion) or 1 Commerce (Unique Shock SMG Hyperion)
- 
- * * * * *
- 
-## [Quest Reward] Dr Zed E-Tech Geek
-
-The 7 Missions given by Dr Zed in the main game will be rewarded with a E-Tech weapon/item, with the choice between 2 E-Tech weapons/items instead of a single one.
- 
-* * * * * 
-
-## [Quest Reward] Hammerlock Jakobs Sponsor
-
-Hammerlock give Jakobs weapon/item reward for few of his mission in the main game, but not all of them... Now he will... and with the choice between 2 Blue weapons/items instead of a single one!
-
-* * * * *
-
-## [Skin Pack] Moxxi Signature Classic Collection
-
-Did you ever noticed that only the half from the Moxxi gears have almost a nice Moxxi Signature Classic skin... and a half have somewhat totally different... which looks more like Tiny Tina weapon skin than Moxxi weapon skin!
-
-Now with the *Moxxi Signature Classic Collection* based on Creamer/Hear Breaker vanilla skin, there are all uniform to look like an actual manufacturer.
-  
-* * * * *
-
-## [Skin Pack] Moxxi Signature Elegance Collection
-
-Inspired from the *Santos*, a well know French jeweller watch... with the color from the golden screws inserted into a (silver) brushed steel bracelet, and the addition from the red similar to the little *Cartier* box... Et voila!
-
-* * * * *
-
-## [Skin Pack] Moxxi Signature Pinky Collection
-
-Like a Barbie girl in a Barbie world, you can now feel the glamour in pink with the *Moxxi Signature Pinky Collection* based on Slow Hand / Good Touch vanilla skin.
+- **Compatibility & Troubleshooting:** a small reading information to clearly understand why a option or a fix in my mods don't work as intended, and how to simply fix it!
 
 * * * * *
  
+## Custom Gear: 
+- **Plasma Caster Dahl Prototype SX-1:** a Plasma Caster which fire GyroJet explosive bullet.
+- **Plasma Caster Hyperion Finesse - Circuit Board Edition:** a  Plasma Projectile which adapt his Elemental following the kind of impact:  Incendiary on flesh / Shock on shield / Corrosive on armor.
+- **SMG Dahl Discord Solver - Bloody Edition:** a submachine gun which fire GyroJet explosive bullet.
+- **SMG Dahl Discord Solver - Moxxi Edition:** same weapon as the Bloody Edition (above), but with usual Moxxi's bonus (Critical Hit & Lifesteal) added.
+
+* * * * *
  
+## Quest Reward: 
+- **Double Quest Reward Redux:** give you the choice to be rewarded between 2 Unique weapons/items instead of a single one
+- **Dr Zed E-Tech Geek:** the missions given by Dr Zed give you the choice to be rewarded between 2 E-Tech weapons.
+- **Hammerlock Jakobs Sponsor:** the missions given by Hammerlock give you the choice to be rewarded between 2 Jakobs weapons.
+
+* * * * *
+
+## Skin Pack: 
+- **Moxxi Signature Classic Collection:** based on Creamer/Hear Breaker vanilla skin, now the Moxxi skins are uniformized to look like an actual manufacturer.
+- **Moxxi Signature Elegance Collection:** the red similar to the little _Cartier_ box, with golden part inserted into (silver) brushed steel, this is the French elegance. 
+- **Moxxi Signature Pinky Collection:** based on Slow Hand / Good Touch vanilla skin, now the Moxxi skins are uniformized to look like an actual manufacturer.
+
+* * * * *
+
 ## Acknowledgement
 
-A ~~big~~ huge thanks to @LightChaosman and his great - [BLCMM (Borderlands Community Mod Manager) tool](https://github.com/BLCM/BLCMods/wiki/Borderlands-Community-Mod-Manager) tool who make the Mods creation a real pleasure. 
+A ~~big~~ huge thanks to @LightChaosman and his great - [BLCMM (Borderlands Community Mod Manager)](https://github.com/BLCM/BLCMods/wiki/Borderlands-Community-Mod-Manager) tool who make the Mods creation a real pleasure. 
 
- * * * * *
- 
+* * * * *
+
 ## Disclaimer
 
 - Please remain seated until the web page has come to a complete stop. 
@@ -101,10 +55,10 @@ A ~~big~~ huge thanks to @LightChaosman and his great - [BLCMM (Borderlands Comm
 - Do not eat. Not a toy. Use only as directed.
 - Keep away from pets and small children.
 
- * * * * *
+* * * * *
  
 ## Warning 
  
 _**Discontinue use of my mods if any of the following occurs:** itching, aching, vertigo, dizziness, ringing in your ears, vomiting, giddiness, aural or visual hallucinations, tingling in extremities, loss of balance or coordination, slurred speech, temporary blindness, drowsiness, insomnia, profuse sweating, shivering, or heart palpitations._
 
- * * * * *
+* * * * *

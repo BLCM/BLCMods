@@ -1,26 +1,22 @@
-
-## Bonjour
+﻿## Bonjour
 
 I'm Astor, and I apologize in advance for some grammar and/or syntax errors, but my mother tongue is French.
 
-You are on TPS-Mods repository, where you can find all my TPS Mods. (For the BL2 Mods, please go to the BL2-Mods section) 
+You are on TPS-Mods repository, where you can find all my Pre-Sequel (AKA Borderlands-The Pre-Sequel) Mods. (For the BL2 Mods, please go to the BL2-Mods section) 
 
 This Read Me is just here as a quick synopsis, for detailed informations, each Mod has is own Read Me (and even a Changelog), so don't hesitate -whoosh!- to give a look on it.
 
  * * * * *
  
-## [Work in progress] [TPS - Double Quest Reward v1.0.0]
+## Skin Pack:
 
- - This Mod will give you the choice between 2 Unique weapons/items instead of a single one, so it will double the chance to get a Unique weapon/item with desired parts, and will upgrade the customization skin/head rewards to a Blue weapon/item rewards.
-
- 
- Will be released soon
+- **Moxxi Signature Elegance Collection:** the red similar to the little *Cartier* box, with discrete golden part inserted into (silver) brushed steel, this is the French elegance.
  
 * * * * *
  
 ## Acknowledgement
 
-A ~~big~~ huge thanks to @LightChaosman and his great - [BLCMM (Borderlands Community Mod Manager)](https://github.com/BLCM/BLCMods/wiki/Borderlands-Community-Mod-Manager) tool who make the Mods creation a real pleasure. 
+A ~~big~~ huge thanks to @LightChaosman and his great - [BLCMM (Borderlands Community Mod Manager) tool](https://github.com/BLCM/BLCMods/wiki/Borderlands-Community-Mod-Manager) tool who make the Mods creation a real pleasure. 
 
  * * * * *
  
