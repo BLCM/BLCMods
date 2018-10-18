@@ -1,4 +1,4 @@
-## Compatibility & Troubleshooting
+﻿## Compatibility & Troubleshooting
  
  
 ### Compatibility:
