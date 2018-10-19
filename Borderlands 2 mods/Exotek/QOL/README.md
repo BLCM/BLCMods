@@ -5,12 +5,15 @@
 > - You must get permission from me before you are allowed to modify my files to improve them,
 > - You are allowed to use the assets in this file without permission as long as you credit me.
 
+***
+
 # Mod Descriptions
 
 ## Legendary Class Mods +
 
 > - Previously this mod was called "fix". I was annoyed by the fact that DLC COMs didn't had passive effects like the vanilla ones do.
 - Makes all legendary Class Mods from UVHM.U2 to have red text special/passive effects.
+
 
 ### Commando
 
@@ -23,7 +26,6 @@
 **[Legendary Ranger]** *''Wanna know why I got these scars?''*
 - Increases **Shield Capacity** of all your shields by **+100%**.
 
-*
 
 ### Assassin
 
@@ -36,7 +38,6 @@
 **[Legendary Sniper]** *''Boom! Headshot.''*
 - Your **Sniper Rifles** have **50%** chance to **ignore** enemy shields.
 
-**
 
 ### Siren
 
@@ -49,6 +50,7 @@
 **[Legendary Nurse]** *''A friend in need is a friend indeed.''*
 - Increases **Elemental Effect Damage Resistance** by **50%** for the **entire team**.
 
+
 ### Gunzerker
 
 **[Legendary Gunzerker]** *''Nobody puts this baby in a corner.''*
@@ -59,6 +61,7 @@
 
 **[Legendary Titan]** *''Challenge accepted.''*
 - Increases your **Bullet Damage Resistance** by **50%**. In addition you have a **chance** to **deflect bullets** back at nearby enemies.
+
 
 ### Mechromancer
 
@@ -73,6 +76,7 @@
 
 **[Legendary Roboteer]** *''Science, my sweetest valentine!''*
 - Increases **health** for **Deathtrap** by **+50%**. In addition Deathtrap's **Shield Recharge Delay** is increased by **4** seconds.
+
 
 ### Psycho
 
