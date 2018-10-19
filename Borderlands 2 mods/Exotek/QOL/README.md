@@ -5,10 +5,9 @@
 > - Previously this mod was called "fix". I was annoyed by the fact that DLC COMs didn't had passive effects like the vanilla ones do.
 - Makes all legendary Class Mods from UVHM.U2 to have red text special/passive effects.
 
-#### Commando
+### Commando
 
-- **Legendary Engineer**
-    **''Engineered for perfection.''**
+- **[Legendary Engineer]** *''Engineered for perfection.''*
     - Increases **Damage** and **Fire Rate** of your **Sabre Turret** by **+50%**.
     
 - **Legendary Pointman**
