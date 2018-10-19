@@ -7,17 +7,27 @@
 
 ### Commando
 
-- **[Legendary Engineer]** *''Engineered for perfection.''*
-    - Increases **Damage** and **Fire Rate** of your **Sabre Turret** by **+50%**.
-    
-- **Legendary Pointman**
-    **''Point taken.''**
-    - Increases your **Elemental Effect Damage Resistance** by **100%**.
-    
-- **Legendary Ranger**
-    **''Wanna know why I got these scars?''**
-    - Increases **Shield Capacity** of all your shields by **+100%**.
+**[Legendary Engineer]** *''Engineered for perfection.''*
+- Increases **Damage** and **Fire Rate** of your **Sabre Turret** by **+50%**.
 
+**[Legendary Pointman]** *''Point taken.''*
+- Increases your **Elemental Effect Damage Resistance** by **100%**.
+
+**[Legendary Ranger]** *''Wanna know why I got these scars?''*
+- Increases **Shield Capacity** of all your shields by **+100%**.
+
+### Assassin
+
+**[Legendary Killer]** *''Well, that escalated quickly.''*
+- Increases your **kill skill duration** by **30%**.
+
+**[Legendary Ninja]** *''In the midst of combat, keep stillness inside of you.''*
+- Doubles your **Execute** range. In addition increases your **Action Skill Cooldown Rate** by **+25%**.
+
+**[Legendary Sniper]** *''Boom! Headshot.''*
+- Your **Sniper Rifles** have **50%** chance to **ignore** enemy shields.
+
+***
 
 ## No More Orders
 
