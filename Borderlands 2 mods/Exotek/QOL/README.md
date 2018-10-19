@@ -12,8 +12,9 @@
 ## Legendary Class Mods +
 
 > - Previously this mod was called "fix". I was annoyed by the fact that DLC COMs didn't had passive effects like the vanilla ones do.
-- Makes all legendary Class Mods from UVHM.U2 to have red text special/passive effects.
 
+- Makes all legendary Class Mods from UVHM.U2 to have red text special/passive effects.
+- [Screenshots](https://imgur.com/a/nktSD3L)
 
 ### Commando
 
