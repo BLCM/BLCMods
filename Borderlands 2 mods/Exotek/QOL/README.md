@@ -66,6 +66,8 @@
 
 ### Mechromancer
 
+- All COMs now have a legendary skin material.
+
 **[Legendary Mechromancer]** *''I am such a B.A.''*
 - Fixed red text.
 
@@ -80,6 +82,8 @@
 
 
 ### Psycho
+
+- All COMs now have a legendary skin material.
 
 **[Legendary Reaper]** *''This is gonna get ugly.''*
 - Increases the time before your **Bloodlust** stacks start to **decay** by **2** seconds.
