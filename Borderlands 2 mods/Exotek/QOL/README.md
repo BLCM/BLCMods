@@ -23,6 +23,8 @@
 **[Legendary Ranger]** *''Wanna know why I got these scars?''*
 - Increases **Shield Capacity** of all your shields by **+100%**.
 
+*
+
 ### Assassin
 
 **[Legendary Killer]** *''Well, that escalated quickly.''*
@@ -33,6 +35,8 @@
 
 **[Legendary Sniper]** *''Boom! Headshot.''*
 - Your **Sniper Rifles** have **50%** chance to **ignore** enemy shields.
+
+**
 
 ### Siren
 
