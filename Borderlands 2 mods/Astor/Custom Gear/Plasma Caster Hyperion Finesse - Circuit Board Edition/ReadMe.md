@@ -10,31 +10,37 @@ The Plasma Caster Hyperion Finesse can be a drop from Assassin Wot fought during
 
 ![Plasma Caster Finesse - Assasin Wot](https://imgur.com/N2sZWmh.jpg "Don't worry guys... even if my screen capture show French text, my mods are in English")
 
-Note: If you are too lazy to fight Assassin Wot, you will find the Gibbed Codes below.
+**Note:** If you are too lazy to fight Assassin Wot, you will find the Gibbed Codes below.
 
 ## What special with this weapon?
 
-- Fire SEAPP (Smart Elemental Adaptive Plasma Projectile): a Alien Plasma Projectile which adapt his Elemental following the kind of impact:
+- Fire SEAPP (Smart Elemental Adaptive Plasma Projectile) exploding only in contact with a enemy: a Alien Plasma Projectile which adapt his Elemental following the kind of impact:
   - Incendiary on flesh
   - Shock on shield
   - Corrosive on armor
-- Elemental splash damage boosted by grenade
+- Elemental splash damage boosted by grenade (only when hitting a enemy).
 - Shot one SEAPP for the cost of 2 ammo (can be doubled if you use the Aaron00000's "Double Anarchy" mod).
+- Cosmetic:
+  - MuzzleFlash upgraded to Plasma Caster.
+  - E-Tech Elemental Color Glow ("inside" the flaps).
+  - Firing Mode Sound upgraded to Plasma Caster sound.
   
 Not clear? ... Well, perhaps it will be more easy to compare the difference in a table:    
   
 | Tech Specs        | SMG Commerce (Vanilla) | Plasma Caster Finesse |  
 | -------------     | -------------          | -------------         | 
 | **Bullet Tech:**  |                        |                       |                                
-| Bullet:           | Standard               | SEAPP                 | 
-| Fire Cost:        | 1 bullets cost 1 ammo  | 1 SEAPP cost 2 ammo   | 
+| Bullet:           | Standard               | SEAPP (Smart Elemental Adaptive Plasma Projectile)| 
+| Fire Cost:        | 1 bullet cost 1 ammo  | 1 SEAPP cost 2 ammo   |
+| Bullet Speed:     | 17.000 (Commerce) / 6.000 (Plasma Caster)| 4.500| 
 |**Elemental Tech:**|                        |                       |                                 
 | Elemental:        | Shock                  | Elemental Adaptive    | 
 | Shock dmg/sec:    | 7644,8 (level 72)      | 7644,8 (level 72)     | 
 | Corrosive dmg/sec:| N/A                    | 7644,8 (level 72)     | 
 | Fire dmg/sec:     | N/A                    | 7644,8 (level 72)     | 
-| Elemental Chance: | 10/11,5%               | 15%                   |  
-| Splash Format:    | None                   | Grenade               |  
+| Elemental Chance: | 10/12%                 | 20%                   |  
+| Impact:           | Piercing round         | Elemental Splash (on enemy only)| 
+| Splash Format:    | None                   | Grenade               | 
 |**Other:**         |                        |                       | 
 | Critical Hit:     | None                   | None                  | 
 | Skin:             | Commerce (Vanilla skin)| Circuit Board skin    | 
@@ -42,15 +48,16 @@ Not clear? ... Well, perhaps it will be more easy to compare the difference in a
   
   
 ![Plasma Caster Finesse - Circuit Board Edition](https://imgur.com/FGWsUWG.jpg "Don't worry guys... even if my screen capture show French text, my mods are in English")
-The Circuit Board skins... as its name suggests, looks like a circuit board... and you have the choice between 2 Circuit Board skin: the Blue Circuit Board or the Yellow Circuit Board!
+**Note:** The Circuit Board skins... as its name suggests, looks like a circuit board... and you have the choice between 2 Circuit Board skin: the Blue Circuit Board or the Yellow Circuit Board!
 
 ## Options: 
 This Mod has few options & fix, so feel free to use the BLCMM tool to select the best option that suit you:
+
 - The Splash Format has a toggle option between Grenade/Rocket/Reaper (see Compatibility below)
 - The Weapon Card has a toggle option between English/French.
 - The E-Tech Elemental Color Glow has a toggle option between On/Off
 - The skin has a toggle option between the Blue Circuit Board/Yellow Circuit Board/Vanilla Commerce Skin
-- Fix for Koby "Rarity Color Fix": AfterMarket/Legendary (just in case if you use this old mod) 
+- Fix for Koby "Rarity Color": AfterMarket/Legendary (just in case if you use this old mod) 
 
 ## Compatibility:
 
