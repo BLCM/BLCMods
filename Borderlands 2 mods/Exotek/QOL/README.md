@@ -34,7 +34,7 @@
 - Increases your **kill skill duration** by **30%**.
 
 **[Legendary Ninja]** *''In the midst of combat, keep stillness inside of you.''*
-- Doubles your **Execute** range. In addition increases your **Action Skill Cooldown Rate** by **+25%**.
+- Doubles your **Execute** range. In addition, increases your **Action Skill Cooldown Rate** by **+25%**.
 
 **[Legendary Sniper]** *''Boom! Headshot.''*
 - Your **Sniper Rifles** have **50%** chance to **ignore** enemy shields.
@@ -61,7 +61,7 @@
 - Increases **ammo pools** of all your weapons by **25%**.
 
 **[Legendary Titan]** *''Challenge accepted.''*
-- Increases your **Bullet Damage Resistance** by **50%**. In addition you have a **chance** to **deflect bullets** back at nearby enemies.
+- Increases your **Bullet Damage Resistance** by **50%**. In addition, you have a **chance** to **deflect bullets** back at nearby enemies.
 
 
 ### Mechromancer
@@ -78,7 +78,7 @@
 - Increases **Shield Capacity** and **Shock Damage** for **Deathtrap** by **+100%**.
 
 **[Legendary Roboteer]** *''Science, my sweetest valentine!''*
-- Increases **health** for **Deathtrap** by **+50%**. In addition Deathtrap's **Shield Recharge Delay** is increased by **4** seconds.
+- Increases **health** for **Deathtrap** by **+50%**. In addition, Deathtrap's **Shield Recharge Delay** is increased by **4** seconds.
 
 
 ### Psycho
@@ -92,7 +92,7 @@
 - Reduces the chance of attacking yourself when using **Silence The Voices**.
 
 **[Legendary Torch]** *''Embrace the deep dark warmth.''*
-- Increases **Melee Attack Override Cooldown Rate** by **+100%**. In addition increases your **Elemental Effect Damage Resistance** by **50%**.
+- Increases **Melee Attack Override Cooldown Rate** by **+100%**. In addition, increases your **Elemental Effect Damage Resistance** by **50%**.
 
 Alternative download link on [nexusmods.com](https://www.nexusmods.com/borderlands2/mods/85)
 
