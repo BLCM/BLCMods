@@ -94,6 +94,8 @@
 **[Legendary Torch]** *''Embrace the deep dark warmth.''*
 - Increases **Melee Attack Override Cooldown Rate** by **+100%**. In addition increases your **Elemental Effect Damage Resistance** by **50%**.
 
+Alternative download link on [nexusmods.com](https://www.nexusmods.com/borderlands2/mods/85)
+
 ***
 
 ## No More Orders
