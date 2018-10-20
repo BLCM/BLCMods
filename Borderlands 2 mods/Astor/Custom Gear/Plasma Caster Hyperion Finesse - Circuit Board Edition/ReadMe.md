@@ -27,7 +27,7 @@ The Plasma Caster Hyperion Finesse can be a drop from Assassin Wot fought during
   
 Not clear? ... Well, perhaps it will be more easy to compare the difference in a table:    
   
-| Tech Specs        | SMG Commerce (Vanilla) | Plasma Caster Finesse |  
+| Tech Specs        | SMG Commerce (Vanilla) | Plasma Caster Finesse - Circuit Board Edition |  
 | -------------     | -------------          | -------------         | 
 | **Bullet Tech:**  |                        |                       |                                
 | Bullet:           | Standard               | SEAPP (Smart Elemental Adaptive Plasma Projectile)| 
@@ -42,7 +42,8 @@ Not clear? ... Well, perhaps it will be more easy to compare the difference in a
 | Impact:           | Piercing round         | Elemental Splash (on enemy only)| 
 | Splash Format:    | None                   | Grenade               | 
 |**Other:**         |                        |                       | 
-| Critical Hit:     | None                   | None                  | 
+| Critical Hit:     | None                   | None                  |
+| Mission Reward:   | N/A                    | *Uncle Teddy* (Arid Nexus - Badlands)|
 | Skin:             | Commerce (Vanilla skin)| Circuit Board skin    | 
 | Rarity:           | Unique                 | Unique / Legendary    | 
   
@@ -57,7 +58,12 @@ This Mod has few options & fix, so feel free to use the BLCMM tool to select the
 - The Weapon Card has a toggle option between English/French.
 - The E-Tech Elemental Color Glow has a toggle option between On/Off
 - The skin has a toggle option between the Blue Circuit Board/Yellow Circuit Board/Vanilla Commerce Skin
-- Fix for Koby "Rarity Color": AfterMarket/Legendary (just in case if you use this old mod) 
+- The *Plasma Caster Finesse- Circuit Board Edition* can become the reward given by Hyperion for the mission *Uncle Teddy*  in Arid Nexus - Badlands. (see picture below) 
+- Fix for Koby *Rarity Color*: AfterMarket (just in case if you use this old mod) 
+
+![Finesse as reward for Hyperion mission](https://imgur.com/CeuGBS7.jpg "Don't worry guys... even if my screen capture show French text, my mods are in English") 
+
+**Note:** You can toggle between the choice from 2 *Plasma Caster Finesse- Circuit Board Edition* or between the choice from 1 *Plasma Caster Finesse- Circuit Board Edition* & 1 SMG *Bitch* (Legendary).
 
 ## Compatibility:
 
