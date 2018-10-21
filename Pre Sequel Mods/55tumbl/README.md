@@ -14,4 +14,3 @@ Ask me for permission first if you wish to use larger portions of this code, mak
 NT-AreaScaling makes all areas and side-missions progressively scale up according to your advancement in the main mission, in Normal mode and TVHM.
 Level restrictions on the DLCs are lifted, so they can be played anytime during NVHM/TVHM, and they should also scale up according to the progress in the main game story.
 
-**Warning: This mod has not yet been properly tested!**
