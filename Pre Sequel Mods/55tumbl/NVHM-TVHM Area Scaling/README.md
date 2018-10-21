@@ -10,13 +10,9 @@ Ask me for permission first if you wish to use larger portions of this code, mak
 
 # Overview
 
-**Warning: This mod has not yet been properly tested!**
-So, yeah, hopefully it works, but maybe it really doesn't. I'm putting it here in case some people are interested in testing it out...
-because I don't have the time/possibility to test all this myself for the moment.
-
 NT-AreaScaling makes all areas and side-missions progressively scale up according to your advancement in the main mission, in Normal mode and TVHM. Level restrictions on the DLCs are lifted, so they can be played anytime during NVHM/TVHM, and they will also scale up according to the progress in the main game story.
 
-This means that (if it's all working as intended) you should for example be able to go back and farm RedBelly for a Striker at level 18. Or start Claptastic Voyage at level 8, do a couple missions before coming back to the main game, and return to finish the DLC at level 28. Unlike UVHM, the areas/missions will not always be exactly at your level (but close enough, as long as you keep up with the main story). However, NT-AreaScaling does not change anything else about the Normal and TVHM playthroughs and their balance.
+This means that you should for example be able to go back and farm RedBelly for a Striker at level 18. Or start Claptastic Voyage at level 8, do a couple missions before coming back to the main game, and return to finish the DLC at level 28. Unlike UVHM, the areas/missions will not always be exactly at your level (but close enough, as long as you keep up with the main story). However, NT-AreaScaling does not change anything else about the Normal and TVHM playthroughs and their balance.
 
 
 # Compatibility
@@ -57,4 +53,5 @@ This was all written by me.
 
 # Change log
 
+* [2018-10-21] v1.1. Removed some useless bits, and made small changes in the area level definitions.
 * [2018-09-30] v1.0. (beta - out for testing)
