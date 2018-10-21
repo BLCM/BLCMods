@@ -1,0 +1,191 @@
+<BLCMM v="1">
+#<!!!You opened a file saved with BLCMM in FilterTool. Please update to BLCMM to properly open this file!!!>
+	<head>
+		<type name="BL2" offline="false"/>
+		<profiles>
+			<profile name="default" current="true"/>
+		</profiles>
+	</head>
+	<body>
+		<category name="Loot Despawner">
+			<comment>Mod written by GitHub: (Our Lord And Savior Gabe Newell) / NexusMods: (OB4MA)</comment>
+			<comment>Changes the rarity of objects to make this a bit easier to customize.</comment>
+			<comment>Includes an ammo mod written by Lollosaurus Rex.</comment>
+			<category name="Changed Item Rarity Life Span (Edited Default Times)" MUT="true">
+				<category name="Recommended - Trash Despawns In 1 Minute, Purples And Gemstones In 10 Minutes, Legendaries And Above In 30 Minutes">
+					<category name="Code">
+						<hotfix name="RecoRarity" level="None">
+							<code profiles="default">set GD_Globals.General.Globals RarityLevelColors[0].DropLifeSpanType DROP_VeryShortLived</code>
+							<code profiles="default">set GD_Globals.General.Globals RarityLevelColors[1].DropLifeSpanType DROP_VeryShortLived</code>
+							<code profiles="default">set GD_Globals.General.Globals RarityLevelColors[2].DropLifeSpanType DROP_VeryShortLived</code>
+							<code profiles="default">set GD_Globals.General.Globals RarityLevelColors[3].DropLifeSpanType DROP_VeryShortLived</code>
+							<code profiles="default">set GD_Globals.General.Globals RarityLevelColors[4].DropLifeSpanType DROP_ShortLived</code>
+						</hotfix>
+						<hotfix name="Legendary" level="None">
+							<code profiles="default">set GD_Globals.General.Globals RarityLevelColors[5].DropLifeSpanType DROP_LongLived</code>
+							<code profiles="default">set GD_Globals.General.Globals RarityLevelColors[5].RarityRating RARITY_VeryRare</code>
+						</hotfix>
+						<hotfix name="RecoRarity" level="None">
+							<code profiles="default">set GD_Globals.General.Globals RarityLevelColors[6].DropLifeSpanType DROP_VeryShortLived</code>
+							<code profiles="default">set GD_Globals.General.Globals RarityLevelColors[7].DropLifeSpanType DROP_LongLived</code>
+							<code profiles="default">set GD_Globals.General.Globals RarityLevelColors[8].DropLifeSpanType DROP_LongLived</code>
+							<code profiles="default">set GD_Globals.General.Globals RarityLevelColors[9].DropLifeSpanType DROP_VeryShortLived</code>
+							<code profiles="default">set GD_Globals.General.Globals RarityLevelColors[10].DropLifeSpanType DROP_VeryShortLived</code>
+							<code profiles="default">set GD_Globals.General.Globals RarityLevelColors[11].DropLifeSpanType DROP_VeryShortLived</code>
+							<code profiles="default">set GD_Globals.General.Globals RarityLevelColors[12].DropLifeSpanType DROP_ShortLived</code>
+							<code profiles="default">set GD_Globals.General.Globals RarityLevelColors[13].DropLifeSpanType DROP_LongLived</code>
+							<code profiles="default">set GD_Globals.General.Globals RarityLevelColors[14].DropLifeSpanType DROP_VeryShortLived</code>
+							<code profiles="default">set GD_Globals.General.Globals RarityLevelColors[15].DropLifeSpanType DROP_VeryShortLived</code>
+							<code profiles="default">set GD_Globals.General.Globals RarityLevelColors[16].DropLifeSpanType DROP_LongLived</code>
+						</hotfix>
+					</category>
+				</category>
+			</category>
+			<category name="Customize Loot Despawn Times Per Rarity">
+				<comment>Edit the numbers in each of these to customize it to your liking.</comment>
+				<comment>All default values are the base game ones.</comment>
+				<comment>60.000000 is equal to one minute in real life.</comment>
+				<comment>Yes, you can make things theoretically not spawn by changing the timer to 0.000000</comment>
+				<category name="Legendaries - Pearlescents - Seraphs">
+					<hotfix name="Name" level="None">
+						<code profiles="">set Default__WillowPickup LongLivedDropLifeSpan 1800.000000</code>
+					</hotfix>
+				</category>
+				<category name="Purples - Gemstones (UCP)">
+					<hotfix name="Name" level="None">
+						<code profiles="">set Default__WillowPickup ShortLivedDropLifeSpan 600.000000</code>
+					</hotfix>
+				</category>
+				<category name="White - Green - Blue">
+					<hotfix name="Name" level="None">
+						<code profiles="">set Default__WillowPickup VeryShortLivedDropLifeSpan 60.000000</code>
+					</hotfix>
+				</category>
+				<category name="How Fast Items Shrink Before Despawning">
+					<hotfix name="Name" level="None">
+						<code profiles="">set Default__WillowPickup PickupShrinkDuration 15.000000</code>
+					</hotfix>
+				</category>
+			</category>
+			<comment>====================================================</comment>
+			<comment>====================================================</comment>
+			<category name="Lollosaurus Rex's Ammo Mod">
+				<category name="AmmoMod 1.0 by Lollo">
+					<comment>Mod written by Lollo/Lollosaurus_Rex</comment>
+					<comment>Guided with the help of several people from the Shadowevil Discord server.</comment>
+					<comment>Also written with the help of the authors of the Unofficial Community Patch.</comment>
+					<comment> </comment>
+					<comment>This modifies the amount of ammo you get from world pickups, not vendors.</comment>
+					<comment>Each ammo type has several options for the amount you want. All have x1 (default), x1.5, x2, and Ludicrous at 500/1000 with the exception of grenades.</comment>
+					<comment> </comment>
+					<comment>May conflict with UCP Assault Rifle ammo changes. Can be loaded after UCP for overwrite of changes or before to apply UCP changes instead.</comment>
+					<category name="Combat Rifle Ammo" MUT="true">
+						<category name="Default 18/36">
+							<code profiles="">set GD_Ammodrops.AmmoPickup_Amounts.AmmoAmount_CombatRifle:ConditionalAttributeValueResolver_0 ValueExpressions (bEnabled=True,ConditionalExpressionList=((BaseValueIfTrue=(BaseValueConstant=36.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),Expressions=((AttributeOperand1=AttributeDefinition'D_Attributes.Balance.PlayThroughCount',ComparisonOperator=OPERATOR_EqualTo,Operand2Usage=OPERAND_PreferAttribute,AttributeOperand2=None,ConstantOperand2=2.000000)))),DefaultBaseValue=(BaseValueConstant=18.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))</code>
+						</category>
+						<category name="x1.5 27/54">
+							<code profiles="">set GD_Ammodrops.AmmoPickup_Amounts.AmmoAmount_CombatRifle:ConditionalAttributeValueResolver_0 ValueExpressions (bEnabled=True,ConditionalExpressionList=((BaseValueIfTrue=(BaseValueConstant=54.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),Expressions=((AttributeOperand1=AttributeDefinition'D_Attributes.Balance.PlayThroughCount',ComparisonOperator=OPERATOR_EqualTo,Operand2Usage=OPERAND_PreferAttribute,AttributeOperand2=None,ConstantOperand2=2.000000)))),DefaultBaseValue=(BaseValueConstant=27.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))</code>
+						</category>
+						<category name="x2 36/72">
+							<code profiles="">set GD_Ammodrops.AmmoPickup_Amounts.AmmoAmount_CombatRifle:ConditionalAttributeValueResolver_0 ValueExpressions (bEnabled=True,ConditionalExpressionList=((BaseValueIfTrue=(BaseValueConstant=72.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),Expressions=((AttributeOperand1=AttributeDefinition'D_Attributes.Balance.PlayThroughCount',ComparisonOperator=OPERATOR_EqualTo,Operand2Usage=OPERAND_PreferAttribute,AttributeOperand2=None,ConstantOperand2=2.000000)))),DefaultBaseValue=(BaseValueConstant=36.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))</code>
+						</category>
+						<category name="Ludicrous">
+							<code profiles="">set GD_Ammodrops.AmmoPickup_Amounts.AmmoAmount_CombatRifle:ConditionalAttributeValueResolver_0 ValueExpressions (bEnabled=True,ConditionalExpressionList=((BaseValueIfTrue=(BaseValueConstant=1000.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),Expressions=((AttributeOperand1=AttributeDefinition'D_Attributes.Balance.PlayThroughCount',ComparisonOperator=OPERATOR_EqualTo,Operand2Usage=OPERAND_PreferAttribute,AttributeOperand2=None,ConstantOperand2=2.000000)))),DefaultBaseValue=(BaseValueConstant=500.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))</code>
+						</category>
+					</category>
+					<category name="Pistol Ammo" MUT="true">
+						<category name="Default 18/36">
+							<code profiles="">set GD_Ammodrops.AmmoPickup_Amounts.AmmoAmount_Repeater:ConditionalAttributeValueResolver_0 ValueExpressions (bEnabled=True,ConditionalExpressionList=((BaseValueIfTrue=(BaseValueConstant=36.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),Expressions=((AttributeOperand1=AttributeDefinition'D_Attributes.Balance.PlayThroughCount',ComparisonOperator=OPERATOR_EqualTo,Operand2Usage=OPERAND_PreferAttribute,AttributeOperand2=None,ConstantOperand2=2.000000)))),DefaultBaseValue=(BaseValueConstant=18.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))</code>
+						</category>
+						<category name="x1.5 27/54">
+							<code profiles="">set GD_Ammodrops.AmmoPickup_Amounts.AmmoAmount_Repeater:ConditionalAttributeValueResolver_0 ValueExpressions (bEnabled=True,ConditionalExpressionList=((BaseValueIfTrue=(BaseValueConstant=54.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),Expressions=((AttributeOperand1=AttributeDefinition'D_Attributes.Balance.PlayThroughCount',ComparisonOperator=OPERATOR_EqualTo,Operand2Usage=OPERAND_PreferAttribute,AttributeOperand2=None,ConstantOperand2=2.000000)))),DefaultBaseValue=(BaseValueConstant=27.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))</code>
+						</category>
+						<category name="x2 36/72">
+							<code profiles="">set GD_Ammodrops.AmmoPickup_Amounts.AmmoAmount_Repeater:ConditionalAttributeValueResolver_0 ValueExpressions (bEnabled=True,ConditionalExpressionList=((BaseValueIfTrue=(BaseValueConstant=72.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),Expressions=((AttributeOperand1=AttributeDefinition'D_Attributes.Balance.PlayThroughCount',ComparisonOperator=OPERATOR_EqualTo,Operand2Usage=OPERAND_PreferAttribute,AttributeOperand2=None,ConstantOperand2=2.000000)))),DefaultBaseValue=(BaseValueConstant=36.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))</code>
+						</category>
+						<category name="Ludicrous">
+							<code profiles="">set GD_Ammodrops.AmmoPickup_Amounts.AmmoAmount_Repeater:ConditionalAttributeValueResolver_0 ValueExpressions (bEnabled=True,ConditionalExpressionList=((BaseValueIfTrue=(BaseValueConstant=1000.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),Expressions=((AttributeOperand1=AttributeDefinition'D_Attributes.Balance.PlayThroughCount',ComparisonOperator=OPERATOR_EqualTo,Operand2Usage=OPERAND_PreferAttribute,AttributeOperand2=None,ConstantOperand2=2.000000)))),DefaultBaseValue=(BaseValueConstant=500.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))</code>
+						</category>
+					</category>
+					<category name="Shotgun Ammo" MUT="true">
+						<category name="Default 8/16">
+							<code profiles="">set GD_Ammodrops.AmmoPickup_Amounts.AmmoAmount_Shotgun:ConditionalAttributeValueResolver_0 ValueExpressions (bEnabled=True,ConditionalExpressionList=((BaseValueIfTrue=(BaseValueConstant=16.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),Expressions=((AttributeOperand1=AttributeDefinition'D_Attributes.Balance.PlayThroughCount',ComparisonOperator=OPERATOR_EqualTo,Operand2Usage=OPERAND_PreferAttribute,AttributeOperand2=None,ConstantOperand2=2.000000)))),DefaultBaseValue=(BaseValueConstant=8.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))</code>
+						</category>
+						<category name="x1.5 12/24">
+							<code profiles="">set GD_Ammodrops.AmmoPickup_Amounts.AmmoAmount_Shotgun:ConditionalAttributeValueResolver_0 ValueExpressions (bEnabled=True,ConditionalExpressionList=((BaseValueIfTrue=(BaseValueConstant=24.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),Expressions=((AttributeOperand1=AttributeDefinition'D_Attributes.Balance.PlayThroughCount',ComparisonOperator=OPERATOR_EqualTo,Operand2Usage=OPERAND_PreferAttribute,AttributeOperand2=None,ConstantOperand2=2.000000)))),DefaultBaseValue=(BaseValueConstant=12.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))</code>
+						</category>
+						<category name="x2 16/32">
+							<code profiles="">set GD_Ammodrops.AmmoPickup_Amounts.AmmoAmount_Shotgun:ConditionalAttributeValueResolver_0 ValueExpressions (bEnabled=True,ConditionalExpressionList=((BaseValueIfTrue=(BaseValueConstant=32.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),Expressions=((AttributeOperand1=AttributeDefinition'D_Attributes.Balance.PlayThroughCount',ComparisonOperator=OPERATOR_EqualTo,Operand2Usage=OPERAND_PreferAttribute,AttributeOperand2=None,ConstantOperand2=2.000000)))),DefaultBaseValue=(BaseValueConstant=16.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))</code>
+						</category>
+						<category name="Ludicrous">
+							<code profiles="">set GD_Ammodrops.AmmoPickup_Amounts.AmmoAmount_Shotgun:ConditionalAttributeValueResolver_0 ValueExpressions (bEnabled=True,ConditionalExpressionList=((BaseValueIfTrue=(BaseValueConstant=1000.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),Expressions=((AttributeOperand1=AttributeDefinition'D_Attributes.Balance.PlayThroughCount',ComparisonOperator=OPERATOR_EqualTo,Operand2Usage=OPERAND_PreferAttribute,AttributeOperand2=None,ConstantOperand2=2.000000)))),DefaultBaseValue=(BaseValueConstant=500.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))</code>
+						</category>
+					</category>
+					<category name="SMG Ammo" MUT="true">
+						<category name="Default 24/48">
+							<code profiles="">set GD_Ammodrops.AmmoPickup_Amounts.AmmoAmount_SMG:ConditionalAttributeValueResolver_0 ValueExpressions (bEnabled=True,ConditionalExpressionList=((BaseValueIfTrue=(BaseValueConstant=48.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),Expressions=((AttributeOperand1=AttributeDefinition'D_Attributes.Balance.PlayThroughCount',ComparisonOperator=OPERATOR_EqualTo,Operand2Usage=OPERAND_PreferAttribute,AttributeOperand2=None,ConstantOperand2=2.000000)))),DefaultBaseValue=(BaseValueConstant=24.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))</code>
+						</category>
+						<category name="x1.5 36/72">
+							<code profiles="">set GD_Ammodrops.AmmoPickup_Amounts.AmmoAmount_SMG:ConditionalAttributeValueResolver_0 ValueExpressions (bEnabled=True,ConditionalExpressionList=((BaseValueIfTrue=(BaseValueConstant=72.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),Expressions=((AttributeOperand1=AttributeDefinition'D_Attributes.Balance.PlayThroughCount',ComparisonOperator=OPERATOR_EqualTo,Operand2Usage=OPERAND_PreferAttribute,AttributeOperand2=None,ConstantOperand2=2.000000)))),DefaultBaseValue=(BaseValueConstant=36.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))</code>
+						</category>
+						<category name="x2 48/96">
+							<code profiles="">set GD_Ammodrops.AmmoPickup_Amounts.AmmoAmount_SMG:ConditionalAttributeValueResolver_0 ValueExpressions (bEnabled=True,ConditionalExpressionList=((BaseValueIfTrue=(BaseValueConstant=96.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),Expressions=((AttributeOperand1=AttributeDefinition'D_Attributes.Balance.PlayThroughCount',ComparisonOperator=OPERATOR_EqualTo,Operand2Usage=OPERAND_PreferAttribute,AttributeOperand2=None,ConstantOperand2=2.000000)))),DefaultBaseValue=(BaseValueConstant=48.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))</code>
+						</category>
+						<category name="Ludicrous">
+							<code profiles="">set GD_Ammodrops.AmmoPickup_Amounts.AmmoAmount_SMG:ConditionalAttributeValueResolver_0 ValueExpressions (bEnabled=True,ConditionalExpressionList=((BaseValueIfTrue=(BaseValueConstant=1000.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),Expressions=((AttributeOperand1=AttributeDefinition'D_Attributes.Balance.PlayThroughCount',ComparisonOperator=OPERATOR_EqualTo,Operand2Usage=OPERAND_PreferAttribute,AttributeOperand2=None,ConstantOperand2=2.000000)))),DefaultBaseValue=(BaseValueConstant=500.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))</code>
+						</category>
+					</category>
+					<category name="Sniper Rifle Ammo" MUT="true">
+						<category name="Default 6/12">
+							<code profiles="">set GD_Ammodrops.AmmoPickup_Amounts.AmmoAmount_SniperRifle:ConditionalAttributeValueResolver_0 ValueExpressions (bEnabled=True,ConditionalExpressionList=((BaseValueIfTrue=(BaseValueConstant=12.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),Expressions=((AttributeOperand1=AttributeDefinition'D_Attributes.Balance.PlayThroughCount',ComparisonOperator=OPERATOR_EqualTo,Operand2Usage=OPERAND_PreferAttribute,AttributeOperand2=None,ConstantOperand2=2.000000)))),DefaultBaseValue=(BaseValueConstant=6.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))</code>
+						</category>
+						<category name="x1.5 9/18">
+							<code profiles="">set GD_Ammodrops.AmmoPickup_Amounts.AmmoAmount_SniperRifle:ConditionalAttributeValueResolver_0 ValueExpressions (bEnabled=True,ConditionalExpressionList=((BaseValueIfTrue=(BaseValueConstant=18.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),Expressions=((AttributeOperand1=AttributeDefinition'D_Attributes.Balance.PlayThroughCount',ComparisonOperator=OPERATOR_EqualTo,Operand2Usage=OPERAND_PreferAttribute,AttributeOperand2=None,ConstantOperand2=2.000000)))),DefaultBaseValue=(BaseValueConstant=9.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))</code>
+						</category>
+						<category name="x2 12/24">
+							<code profiles="">set GD_Ammodrops.AmmoPickup_Amounts.AmmoAmount_SniperRifle:ConditionalAttributeValueResolver_0 ValueExpressions (bEnabled=True,ConditionalExpressionList=((BaseValueIfTrue=(BaseValueConstant=24.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),Expressions=((AttributeOperand1=AttributeDefinition'D_Attributes.Balance.PlayThroughCount',ComparisonOperator=OPERATOR_EqualTo,Operand2Usage=OPERAND_PreferAttribute,AttributeOperand2=None,ConstantOperand2=2.000000)))),DefaultBaseValue=(BaseValueConstant=12.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))</code>
+						</category>
+						<category name="Ludicrous">
+							<code profiles="">set GD_Ammodrops.AmmoPickup_Amounts.AmmoAmount_SniperRifle:ConditionalAttributeValueResolver_0 ValueExpressions (bEnabled=True,ConditionalExpressionList=((BaseValueIfTrue=(BaseValueConstant=1000.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),Expressions=((AttributeOperand1=AttributeDefinition'D_Attributes.Balance.PlayThroughCount',ComparisonOperator=OPERATOR_EqualTo,Operand2Usage=OPERAND_PreferAttribute,AttributeOperand2=None,ConstantOperand2=2.000000)))),DefaultBaseValue=(BaseValueConstant=500.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))</code>
+						</category>
+					</category>
+					<category name="Rocket Launcher Ammo" MUT="true">
+						<category name="Default 4/8">
+							<code profiles="">set GD_Ammodrops.AmmoPickup_Amounts.AmmoAmount_Launcher:ConditionalAttributeValueResolver_0 ValueExpressions (bEnabled=True,ConditionalExpressionList=((BaseValueIfTrue=(BaseValueConstant=8.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),Expressions=((AttributeOperand1=AttributeDefinition'D_Attributes.Balance.PlayThroughCount',ComparisonOperator=OPERATOR_EqualTo,Operand2Usage=OPERAND_PreferAttribute,AttributeOperand2=None,ConstantOperand2=2.000000)))),DefaultBaseValue=(BaseValueConstant=4.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))</code>
+						</category>
+						<category name="x1.5 6/12">
+							<code profiles="">set GD_Ammodrops.AmmoPickup_Amounts.AmmoAmount_Launcher:ConditionalAttributeValueResolver_0 ValueExpressions (bEnabled=True,ConditionalExpressionList=((BaseValueIfTrue=(BaseValueConstant=12.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),Expressions=((AttributeOperand1=AttributeDefinition'D_Attributes.Balance.PlayThroughCount',ComparisonOperator=OPERATOR_EqualTo,Operand2Usage=OPERAND_PreferAttribute,AttributeOperand2=None,ConstantOperand2=2.000000)))),DefaultBaseValue=(BaseValueConstant=6.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))</code>
+						</category>
+						<category name="x2 8/16">
+							<code profiles="">set GD_Ammodrops.AmmoPickup_Amounts.AmmoAmount_Launcher:ConditionalAttributeValueResolver_0 ValueExpressions (bEnabled=True,ConditionalExpressionList=((BaseValueIfTrue=(BaseValueConstant=16.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),Expressions=((AttributeOperand1=AttributeDefinition'D_Attributes.Balance.PlayThroughCount',ComparisonOperator=OPERATOR_EqualTo,Operand2Usage=OPERAND_PreferAttribute,AttributeOperand2=None,ConstantOperand2=2.000000)))),DefaultBaseValue=(BaseValueConstant=8.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))</code>
+						</category>
+						<category name="Ludicrous">
+							<code profiles="">set GD_Ammodrops.AmmoPickup_Amounts.AmmoAmount_Launcher:ConditionalAttributeValueResolver_0 ValueExpressions (bEnabled=True,ConditionalExpressionList=((BaseValueIfTrue=(BaseValueConstant=1000.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),Expressions=((AttributeOperand1=AttributeDefinition'D_Attributes.Balance.PlayThroughCount',ComparisonOperator=OPERATOR_EqualTo,Operand2Usage=OPERAND_PreferAttribute,AttributeOperand2=None,ConstantOperand2=2.000000)))),DefaultBaseValue=(BaseValueConstant=500.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))</code>
+						</category>
+					</category>
+					<category name="Grenades" MUT="true">
+						<category name="Default (1)">
+							<code profiles="">set GD_Ammodrops.AmmoPickup_Amounts.AmmoAmount_Grenades:ConditionalAttributeValueResolver_0 ValueExpressions (bEnabled=True,ConditionalExpressionList=((BaseValueIfTrue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),Expressions=((AttributeOperand1=AttributeDefinition'D_Attributes.Balance.PlayThroughCount',ComparisonOperator=OPERATOR_EqualTo,Operand2Usage=OPERAND_PreferAttribute,AttributeOperand2=None,ConstantOperand2=2.000000)))),DefaultBaseValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))</code>
+						</category>
+						<category name="2">
+							<code profiles="">set GD_Ammodrops.AmmoPickup_Amounts.AmmoAmount_Grenades:ConditionalAttributeValueResolver_0 ValueExpressions (bEnabled=True,ConditionalExpressionList=((BaseValueIfTrue=(BaseValueConstant=2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),Expressions=((AttributeOperand1=AttributeDefinition'D_Attributes.Balance.PlayThroughCount',ComparisonOperator=OPERATOR_EqualTo,Operand2Usage=OPERAND_PreferAttribute,AttributeOperand2=None,ConstantOperand2=2.000000)))),DefaultBaseValue=(BaseValueConstant=2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))</code>
+						</category>
+						<category name="5">
+							<code profiles="">set GD_Ammodrops.AmmoPickup_Amounts.AmmoAmount_Grenades:ConditionalAttributeValueResolver_0 ValueExpressions (bEnabled=True,ConditionalExpressionList=((BaseValueIfTrue=(BaseValueConstant=5.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),Expressions=((AttributeOperand1=AttributeDefinition'D_Attributes.Balance.PlayThroughCount',ComparisonOperator=OPERATOR_EqualTo,Operand2Usage=OPERAND_PreferAttribute,AttributeOperand2=None,ConstantOperand2=2.000000)))),DefaultBaseValue=(BaseValueConstant=5.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))</code>
+						</category>
+						<category name="10">
+							<code profiles="">set GD_Ammodrops.AmmoPickup_Amounts.AmmoAmount_Grenades:ConditionalAttributeValueResolver_0 ValueExpressions (bEnabled=True,ConditionalExpressionList=((BaseValueIfTrue=(BaseValueConstant=10.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),Expressions=((AttributeOperand1=AttributeDefinition'D_Attributes.Balance.PlayThroughCount',ComparisonOperator=OPERATOR_EqualTo,Operand2Usage=OPERAND_PreferAttribute,AttributeOperand2=None,ConstantOperand2=2.000000)))),DefaultBaseValue=(BaseValueConstant=10.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))</code>
+						</category>
+					</category>
+				</category>
+			</category>
+		</category>
+	</body>
+</BLCMM>
+
+#Commands:
+
+#Hotfixes:
+set Transient.SparkServiceConfiguration_6 Keys ("SparkLevelPatchEntry-GBX_fixes1","SparkLevelPatchEntry-GBX_fixes2","SparkLevelPatchEntry-GBX_fixes3","SparkLevelPatchEntry-GBX_fixes4","SparkLevelPatchEntry-GBX_fixes5","SparkLevelPatchEntry-GBX_Fixes6","SparkLevelPatchEntry-GBX_Fixes7","SparkLevelPatchEntry-GBX_Fixes8","SparkLevelPatchEntry-GBX_Fixes9","SparkLevelPatchEntry-GBX_fixes10","SparkLevelPatchEntry-GBX_fixes11","SparkLevelPatchEntry-GBX_fixes12","SparkLevelPatchEntry-GBX_fixes13","SparkLevelPatchEntry-GBX_fixes14","SparkOnDemandPatchEntry-GBX_fixes15","SparkOnDemandPatchEntry-GBX_fixes16","SparkOnDemandPatchEntry-GBX_fixes17","SparkOnDemandPatchEntry-GBX_fixes18","SparkOnDemandPatchEntry-GBX_fixes19","SparkPatchEntry-GBX_fixes20","SparkPatchEntry-GBX_fixes21","SparkPatchEntry-GBX_fixes22","SparkPatchEntry-GBX_fixes23","SparkLevelPatchEntry-RecoRarity1","SparkLevelPatchEntry-RecoRarity2","SparkLevelPatchEntry-RecoRarity3","SparkLevelPatchEntry-RecoRarity4","SparkLevelPatchEntry-RecoRarity5","SparkLevelPatchEntry-Legendary1","SparkLevelPatchEntry-Legendary2","SparkLevelPatchEntry-RecoRarity6","SparkLevelPatchEntry-RecoRarity7","SparkLevelPatchEntry-RecoRarity8","SparkLevelPatchEntry-RecoRarity9","SparkLevelPatchEntry-RecoRarity10","SparkLevelPatchEntry-RecoRarity11","SparkLevelPatchEntry-RecoRarity12","SparkLevelPatchEntry-RecoRarity13","SparkLevelPatchEntry-RecoRarity14","SparkLevelPatchEntry-RecoRarity15","SparkLevelPatchEntry-RecoRarity16")
+set Transient.SparkServiceConfiguration_6 Values (",GD_Balance.WeightingPlayerCount.BugmorphCocoon_PerPlayers_Phase1,ConditionalInitialization.ConditionalExpressionList[4].BaseValueIfTrue.BaseValueConstant,0.700000,.8",",GD_Balance.WeightingPlayerCount.BugmorphCocoon_PerPlayers_Phase2,ConditionalInitialization.ConditionalExpressionList[4].BaseValueIfTrue.BaseValueConstant,0.400000,.5",",GD_Balance.WeightingPlayerCount.BugmorphCocoon_PerPlayers_Phase3,ConditionalInitialization.ConditionalExpressionList[4].BaseValueIfTrue.BaseValueConstant,0.200000,.3",",GD_Balance.WeightingPlayerCount.BugmorphCocoon_PerPlayers_Phase4,ConditionalInitialization.ConditionalExpressionList[4].BaseValueIfTrue.BaseValueConstant,0.100000,.2",",GD_Balance.WeightingPlayerCount.BugmorphCocoon_PerPlayers_Phase5,ConditionalInitialization.ConditionalExpressionList[4].BaseValueIfTrue.BaseValueConstant,0.075000,.1","SouthpawFactory_P,GD_Population_Marauder.Balance.Unique.PawnBalance_Assassin1,DefaultItemPoolList[3].PoolProbability.BaseValueScaleConstant,0.250000,1","SouthpawFactory_P,GD_Population_Nomad.Balance.Unique.PawnBalance_Assassin2,DefaultItemPoolList[4].PoolProbability.BaseValueScaleConstant,0.250000,1","SouthpawFactory_P,GD_Population_Psycho.Balance.Unique.PawnBalance_Assassin3,DefaultItemPoolList[1].PoolProbability.BaseValueScaleConstant,0.250000,1","SouthpawFactory_P,GD_Population_Rat.Balance.Unique.PawnBalance_Assassin4,DefaultItemPoolList[3].PoolProbability.BaseValueScaleConstant,0.250000,1",",GD_Sage_Rare_Scaylion.Population.PawnBalance_Sage_Rare_Scaylion,DefaultItemPoolList[1].PoolProbability.BaseValueScaleConstant,1.000000,100",",GD_Sage_Rare_Drifter.Balance.PawnBalance_Sage_Rare_Drifter,DefaultItemPoolList[0].PoolProbability.BaseValueScaleConstant,1.000000,100",",GD_Sage_Rare_Rhino.Population.PawnBalance_Sage_Rare_Rhino,DefaultItemPoolList[1].PoolProbability.BaseValueScaleConstant,1.000000,100",",GD_Sage_Rare_Skag.Population.PawnBalance_Sage_Rare_Skag,DefaultItemPoolList[1].PoolProbability.BaseValueScaleConstant,1.000000,100",",GD_Sage_Rare_Spore.Population.PawnBalance_Sage_Rare_Spore,DefaultItemPoolList[0].PoolProbability.BaseValueScaleConstant,1.000000,100","GD_Assassin_Streaming,GD_Assassin_Skills.Sniping.Velocity,SkillEffectDefinitions[0].ModifierType,MT_PostAdd,MT_Scale","GD_Tulip_Mechro_Streaming,GD_Tulip_Mechromancer_Skills.LittleBigTrouble.WiresDontTalk,SkillEffectDefinitions,,((AttributeToModify=D_Attributes.DamageTypeModifers.InstigatedShockDamageModifier,bIncludeDuelingTargets=False,bIncludeSelfAsTarget=False,bOnlyEffectTargetsInRange=False,bExcludeNonPlayerCharacters=False,EffectTarget=TARGET_Self,TargetInstanceDataName=,TargetCriteria=CRITERIA_None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.030000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),GradeToStartApplyingEffect=1,PerGradeUpgradeInterval=1,PerGradeUpgrade=(BaseValueConstant=0.030000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),BonusUpgradeList=),(AttributeToModify=D_Attributes.DamageTypeModifers.InstigatedShockStatusDamageModifier,bIncludeDuelingTargets=False,bIncludeSelfAsTarget=False,bOnlyEffectTargetsInRange=False,bExcludeNonPlayerCharacters=False,EffectTarget=TARGET_Self,TargetInstanceDataName=,TargetCriteria=CRITERIA_None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.030000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),GradeToStartApplyingEffect=1,PerGradeUpgradeInterval=1,PerGradeUpgrade=(BaseValueConstant=0.030000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),BonusUpgradeList=))","GD_Siren_Streaming,GD_Siren_Skills.Misc.Init_BlightPhoenix_DamageCalc_Part2,ValueFormula.Level.InitializationDefinition,AttributeInitializationDefinition'GD_Balance_HealthAndDamage.HealthAndDamage.Init_PlayerMeleeDamage',AttributeInitializationDefinition'GD_Balance_HealthAndDamage.HealthAndDamage.Init_PlayerSkillDamage'","GD_Siren_Streaming,GD_Siren_Skills.Misc.Init_BlightPhoenix_DamageCalc_Part2,ValueFormula.Level.BaseValueScaleConstant,1.000000,3.5","GD_Assassin_Streaming,GD_Assassin_Skills.Misc.Att_DeathMark_BonusDamage,BaseValue.BaseValueConstant,0.200000,.8","GD_Itempools.Runnables.Pool_FourAssassins,BalancedItems[1].Probability.InitializationDefinition,None,GD_Balance.Weighting.Weight_1_Common","GD_Shields.Projectiles.Proj_LegendaryBoosterShield:BehaviorProviderDefinition_1.Behavior_Explode_140,BehaviorSequences[0].BehaviorData2[7].Behavior.StatusEffectDamage.BaseValueAttribute,None,D_Attributes.Projectile.ProjectileDamage","GD_Shields.Projectiles.Proj_LegendaryBoosterShield:BehaviorProviderDefinition_1.Behavior_Explode_140,BehaviorSequences[0].BehaviorData2[7].Behavior.StatusEffectDamage.BaseValueScaleConstant,1.000000,.25","GD_Shields.Projectiles.Proj_LegendaryBoosterShield:BehaviorProviderDefinition_1.Behavior_Explode_140,BehaviorSequences[0].BehaviorData2[7].Behavior.StatusEffectChance.BaseValueConstant,1.000000,20",",GD_Globals.General.Globals,RarityLevelColors[0].DropLifeSpanType,,DROP_VeryShortLived",",GD_Globals.General.Globals,RarityLevelColors[1].DropLifeSpanType,,DROP_VeryShortLived",",GD_Globals.General.Globals,RarityLevelColors[2].DropLifeSpanType,,DROP_VeryShortLived",",GD_Globals.General.Globals,RarityLevelColors[3].DropLifeSpanType,,DROP_VeryShortLived",",GD_Globals.General.Globals,RarityLevelColors[4].DropLifeSpanType,,DROP_ShortLived",",GD_Globals.General.Globals,RarityLevelColors[5].DropLifeSpanType,,DROP_LongLived",",GD_Globals.General.Globals,RarityLevelColors[5].RarityRating,,RARITY_VeryRare",",GD_Globals.General.Globals,RarityLevelColors[6].DropLifeSpanType,,DROP_VeryShortLived",",GD_Globals.General.Globals,RarityLevelColors[7].DropLifeSpanType,,DROP_LongLived",",GD_Globals.General.Globals,RarityLevelColors[8].DropLifeSpanType,,DROP_LongLived",",GD_Globals.General.Globals,RarityLevelColors[9].DropLifeSpanType,,DROP_VeryShortLived",",GD_Globals.General.Globals,RarityLevelColors[10].DropLifeSpanType,,DROP_VeryShortLived",",GD_Globals.General.Globals,RarityLevelColors[11].DropLifeSpanType,,DROP_VeryShortLived",",GD_Globals.General.Globals,RarityLevelColors[12].DropLifeSpanType,,DROP_ShortLived",",GD_Globals.General.Globals,RarityLevelColors[13].DropLifeSpanType,,DROP_LongLived",",GD_Globals.General.Globals,RarityLevelColors[14].DropLifeSpanType,,DROP_VeryShortLived",",GD_Globals.General.Globals,RarityLevelColors[15].DropLifeSpanType,,DROP_VeryShortLived",",GD_Globals.General.Globals,RarityLevelColors[16].DropLifeSpanType,,DROP_LongLived")
+
