@@ -14,3 +14,11 @@
 
 ## No Muzzleflashes
 - Removes muzzleflashes from weapons
+
+## Pyro Pete Loot Pool Fixer (by Mike)
+- Makes it so you get the Seraph Item from Pete if you bloodsplode him (or 1 shot him)
+
+# Credits
+
+- Nocturni (Less Cluttering Particles) for allowing us to use parts of his "splash" mod
+
