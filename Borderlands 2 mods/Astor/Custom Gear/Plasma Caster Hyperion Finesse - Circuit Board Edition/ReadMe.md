@@ -71,6 +71,7 @@ This Mod has few options & fix, so feel free to use the BLCMM tool to select the
 - Just be aware from the following:
   - This mod use the following Firing Mode: Pocket Rocket/Tinderbox/Hornet/Twister, so if you use any mod wich changes the attributes from any of these Firing Mode, it will affect this mod, and obviously the firing of the Finesse. In this case, just revert the modification done previously to these Firing Mode.
   - This mode use Grenade Damage for the Splash Format, so if you are going to use the Plasma Caster Finesse with a Siren character :warning: Maya :warning: , don't forget to toggle the Grenade Damage to Reaper Splash Damage.
+  - This Mod as a option which make the *Discord Solver - Circuit Board Edition* becoming the reward given by Hyperion for the mission *Uncle Teddy*  in Arid Nexus - Badlands, so be sure that you place this mod **AFTER** my mod *Double Quest Reward Redux* or any other mod modifying the Quest Reward.
 
 ## Gibbed codes:
 
