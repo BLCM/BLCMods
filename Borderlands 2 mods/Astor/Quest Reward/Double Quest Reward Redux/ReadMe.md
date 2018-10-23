@@ -1,4 +1,4 @@
-﻿## Double Quest Reward Redux
+## Double Quest Reward Redux
 
 ### What do this mod?
 
@@ -72,8 +72,11 @@ There's a few things which I'd considered adding to this mod, but were already w
   - "Move" the Octo (Unique shotgun Tediore) reward from Slap Happy (Hammerlock mission) in The Highlands: Outwash to Capture The Flag in Sawtooth Cauldron, on this way, my Mod Hammerlock Jakobs Sponsor can reward the Tidal Wave (Unique shotgun Jakobs) with the Slap Happy mission.
 
 - v1.0.4, September 10, 2018  
-  - Added a 3rd option in Uncle Teddy mission: the choice between 1 Commerce and 1 Bitch you give the plans to Hyperion.
-  - Added a option for the Moxxi Discord Solver given by Moxxi for the mission "Hell Hath No Fury" in Opportunity. 
+  - Added a 3rd option in *Uncle Teddy* mission in Arid Nexus - Badlands: the choice between 1 Plasma Caster Finesse or 1 SMG Bitch you give the plans to Hyperion.
+  - Added a option for the Moxxi Discord Solver given by Moxxi for the mission *Hell Hath No Fury* in Opportunity. 
+
+- v1.0.5, October 25, 2018 
+  - Added DLC 1 - Captain Scarlett and Her Pirate's Booty
 
 ### To do:
 
