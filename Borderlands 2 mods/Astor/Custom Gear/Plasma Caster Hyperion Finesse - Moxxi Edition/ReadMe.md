@@ -1,4 +1,4 @@
-## Plasma Caster Hyperion Finesse - Circuit Board Edition
+## Plasma Caster Hyperion Finesse - Moxxi Edition
 
 In their early days in their making of weapons, Hyperion, seized Alien Technology plans and created the Finesse: a Plasma Caster which fire SEAPP (Smart Elemental Adaptive Plasma Projectile). 
 
@@ -6,11 +6,11 @@ Unfortunately, the mastery of this Alien technology was in its infancy, and espe
 
 ## Where to find it?
 
-The Plasma Caster Hyperion Finesse can be a drop from Assassin Wot fought during the side mission *Assassinate the Assassins* (Southpaw Steam & Power)... and can also drop from (the same) Assassin Wot at the end of the *A History of Simulated Violence* mission (Digistruct Peak). 
+The Plasma Caster Hyperion Finesse can be a drop from Assassin Wot fought during the side mission *Assassinate the Assassins* (Southpaw Steam & Power)... and can also drop from (the same) Assassin Wot at the end of the *A History of Simulated Violence* mission (Digistruct Peak)... or can become the reward given by Moxxi for the mission "Hell Hath No Fury" in Opportunity (see in *options* below) 
 
 ![Plasma Caster Finesse - Assasin Wot](https://imgur.com/N2sZWmh.jpg "Don't worry guys... even if my screen capture show French text, my mods are in English")
 
-**Note:** If you are too lazy to fight Assassin Wot, you will find the Gibbed Codes below.
+**Note:** Yep! Assassin Wot is this guy... butf you are too lazy to fight him, you will find the Gibbed Codes below.
 
 ## What special with this weapon?
 
@@ -20,14 +20,17 @@ The Plasma Caster Hyperion Finesse can be a drop from Assassin Wot fought during
   - Corrosive on armor
 - Elemental splash damage boosted by grenade (only when hitting a enemy).
 - Shot one SEAPP for the cost of 2 ammo (can be doubled if you use the Aaron00000's "Double Anarchy" mod).
+- As usual for the Vanilla Moxxi weapons, this Moxxi Plasma Caster will give you the benefice of:
+  - 70% Critical hit bonus
+  - 2.5% lifesteal on damage dealt 
 - Cosmetic:
   - MuzzleFlash upgraded to Plasma Caster.
   - E-Tech Elemental Color Glow ("inside" the flaps).
   - Firing Mode Sound upgraded to Plasma Caster sound.
-  
+
 Not clear? ... Well, perhaps it will be more easy to compare the difference in a table:    
   
-| Tech Specs        | SMG Commerce (Vanilla) | Plasma Caster Finesse - Circuit Board Edition |  
+| Tech Specs        | SMG Commerce (Vanilla) | Plasma Caster Finesse - Moxxi Edition |  
 | -------------     | -------------          | -------------         | 
 | **Bullet Tech:**  |                        |                       |                                
 | Bullet:           | Standard               | SEAPP (Smart Elemental Adaptive Plasma Projectile)| 
@@ -42,14 +45,15 @@ Not clear? ... Well, perhaps it will be more easy to compare the difference in a
 | Impact:           | Piercing round         | Elemental Splash (on enemy only)| 
 | Splash Format:    | None                   | Grenade               | 
 |**Other:**         |                        |                       | 
-| Critical Hit:     | None                   | None                  |
-| Mission Reward:   | N/A                    | *Uncle Teddy* (Arid Nexus - Badlands)|
-| Skin:             | Commerce (Vanilla skin)| Circuit Board skin    | 
-| Rarity:           | Unique                 | Unique / Legendary    | 
+| Critical Hit:     | None                   | 70%                   |
+| Lifesteal   :     | None                   | 2.5%                  | 
+| Mission Reward:   | N/A                    | *Hell Hath No Fury* (Opportunity)| 
+| Skin:             | Commerce (Vanilla skin)| Moxxi skin            | 
+| Rarity:           | Unique                 | Moxxi Rarity          | 
+
   
-  
-![Plasma Caster Finesse - Circuit Board Edition](https://imgur.com/FGWsUWG.jpg "Don't worry guys... even if my screen capture show French text, my mods are in English")
-**Note:** The Circuit Board skins... as its name suggests, looks like a circuit board... and you have the choice between 2 Circuit Board skin: the Blue Circuit Board or the Yellow Circuit Board!
+![Discord Solver Moxxi Signature Classic and Cartier](https://imgur.com/1ziVoro.jpg "Don't worry guys... even if my screen capture show French text, my mods are in English")
+**Note:** As this version of the Finesse is a Moxxi weapon, you can choose between 3 Moxxi Signature skin : the Classic skin, the Elegance skin or the Pinky skin.
 
 ## Options: 
 This Mod has few options & fix, so feel free to use the BLCMM tool to select the best option that suit you:
@@ -57,21 +61,29 @@ This Mod has few options & fix, so feel free to use the BLCMM tool to select the
 - The Splash Format has a toggle option between Grenade/Rocket/Reaper (see Compatibility below)
 - The Weapon Card has a toggle option between English/French.
 - The E-Tech Elemental Color Glow has a toggle option between On/Off
-- The skin has a toggle option between the Blue Circuit Board/Yellow Circuit Board/Vanilla Commerce Skin
-- The *Plasma Caster Finesse- Circuit Board Edition* can become the reward given by Hyperion for the mission *Uncle Teddy*  in Arid Nexus - Badlands. (see picture below) 
-- Fix for Koby *Rarity Color*: AfterMarket (just in case if you use this old mod) 
+- The Moxxi skin has a toggle option between:
+  - The *Moxxi Signature Classic Edition* ("Red Fire" in the RL Creamer/SG Heart Breaker style) which is timeless and can be used in any occasion.
+  - The *Moxxi Signature Elegance Edition* ("Red Cartier" in the style from the renowned French jeweler) which is very stylish and sophisticated, and by the way the all time favorite from Aurelia the Baroness.
+  - The *Moxxi Signature Pinky Edition*: To feel the glamour in pink, like a Barbie girl in a Barbie world.
+- The *Plasma Caster Finesse Moxxi Edition* can become the reward given by Moxxi for the mission *Hell Hath No Fury* in Opportunity (see picture below).  
 
-![Finesse as reward for Hyperion mission](https://imgur.com/CeuGBS7.jpg "Don't worry guys... even if my screen capture show French text, my mods are in English") 
+... and few fix:
 
-**Note:** You can toggle between the choice from 2 *Plasma Caster Finesse- Circuit Board Edition* or between the choice from 1 *Plasma Caster Finesse- Circuit Board Edition* & 1 SMG *Bitch* (Legendary).
+  - Fix for Akathis *No More Moxxi Lifesteal* - 1.5% passive health regeneration instead of 2.5% Lifesteal
+  - Fix for Koby *Rarity Color*: Moxxi Rarity (just in case if you use this old mod) 
+
+![Discord Solver as reward for Moxxi mission](https://imgur.com/zuvQYLV.jpg "Don't worry guys... even if my screen capture show French text, my mods are in English") 
+
+**Note:** You can toggle between the choice from 2 *Plasma Caster Hyperion Finesse - Moxxi Edition* or between the choice from 1 *Plasma Caster Hyperion Finesse - Moxxi Edition* & 1 grenade *Kiss of Death*. 
 
 ## Compatibility:
 
 - 100% compatible with [UCP Patch](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/Community%20Patch%20Team).
+- Should be compatible with most other mods, as long as they do not modify the Pocket Rocket/Tinderbox/Hornet/Twister Firing Mode.
 - Just be aware from the following:
   - This mod use the following Firing Mode: Pocket Rocket/Tinderbox/Hornet/Twister, so if you use any mod wich changes the attributes from any of these Firing Mode, it will affect this mod, and obviously the firing of the Finesse. In this case, just revert the modification done previously to these Firing Mode.
   - This mode use Grenade Damage for the Splash Format, so if you are going to use the Plasma Caster Finesse with a Siren character :warning: Maya :warning: , don't forget to toggle the Grenade Damage to Reaper Splash Damage.
-  - This Mod as a option which make the *Discord Solver - Circuit Board Edition* becoming the reward given by Hyperion for the mission *Uncle Teddy*  in Arid Nexus - Badlands, so be sure that you place this mod **AFTER** my mod *Double Quest Reward Redux* or any other mod modifying the Quest Reward.
+  - This Mod as a option which make the *Plasma Caster Hyperion Finesse - Moxxi Edition* becoming the reward given by Moxxi for the mission "Hell Hath No Fury" in Opportunity, so be sure that you place this mod **AFTER** my mod *Double Quest Reward Redux* or any other mod modifying the Quest Reward.
 
 ## Gibbed codes:
 
@@ -89,6 +101,12 @@ This Mod has few options & fix, so feel free to use the BLCMM tool to select the
 
 v1.0.0, October 20, 2018
  - Initial public release
+
+### Other Recommended Mods:
+
+A great mod to check for the Finesse Moxxi version:
+
+- [No More Moxxi Lifesteal v2.0](https://github.com/BLCM/BLCMods/blob/master/Borderlands%202%20mods/Akathris/NoMoreMoxxiLifestealv2.0.txt) by [Akathris](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/Akathris). His Mod is self explanatory: removes lifesteal from Moxxi weapons and changes it to passive health regeneration.
   
 ## Credits & Thanks:
 

@@ -1,4 +1,4 @@
-﻿## SMG Dahl Discord Solver (Bloody Edition)
+## SMG Dahl Discord Solver (Bloody Edition)
  
 In their early days in their making of weapons, Dahl, in collaboration with Torgue created the Discord Solver, a SMG who shot GyroJet explosive bullet. 
 
@@ -15,16 +15,17 @@ This is where you can find it....
 
 ## What special with this weapon?
 
-- Both Version:
-  - Keep (almost) of all the Lascaux Unique Dahl SMG specificity: very high firerate, variable burst-fire round, chance to shot two bullets for the cost of one ammo, etc... for more details, see [Borderlands Wiki](http://borderlands.wikia.com/wiki/Lascaux) 
-  - Initial (too good) accuracy reduced, slower fireate, and slower reload, but...
-    - FireMode modified to shoot the Pistol GyroJet Explosive Bullet. 
-    - The speed from the GyroJet Explosive bullet is 5x faster when fired by a SMG than a pistol (but it's still a lot more slower than a normal bullet fired by a SMG) 
-    - Chance  to shot two GyroJet explosive bullet simultaneously for the cost of one ammo (can be doubled if you use the Aaron00000's "Double Anarchy" mod).
-    - Impact Explosion boosted by Grenade Damage.
-    - Firing Mode Sound upgraded to GyroJet bullet sound.
+
+- Keep (almost) of all the Lascaux Unique Dahl SMG specificity: very high firerate, variable burst-fire round, chance to shot two bullets for the cost of one ammo, etc... for more details, see [Borderlands Wiki](http://borderlands.wikia.com/wiki/Lascaux) 
+- Initial (too good) accuracy reduced, slower fireate, and slower reload, but...
+  - FireMode modified to shoot the Pistol GyroJet Explosive Bullet. 
+  - The speed from the GyroJet Explosive bullet is 5x faster when fired by a SMG than a pistol (but it's still a lot more slower than a normal bullet fired by a SMG) 
+  - Chance  to shot two GyroJet explosive bullet simultaneously for the cost of one ammo (can be doubled if you use the Aaron00000's "Double Anarchy" mod).
+  - Impact Explosion boosted by Grenade Damage.
+- Cosmetic: 
     - MuzzleFlash upgraded to Explosive Bullet.
     - Explosive Elemental Color Glow (similar to Torgue weapons)
+    - Firing Mode Sound upgraded to GyroJet bullet sound.
 	
 Not clear? ... Well, perhaps it will be more easy to compare the difference in a table:  
   
@@ -36,7 +37,7 @@ Not clear? ... Well, perhaps it will be more easy to compare the difference in a
 | Bullet Speed:       | 20.000                | 5x GyroJet Speed Boost      | 
 | Burst Count:        | 9 to 14 rounds        | 9 to 14 rounds              | 
 | **Explosive Tech:** |                       |                             |                           
-| Element:            | Never Elemental       | Explosive                   | 
+| Element:            | N/A                   | Explosive                   | 
 | Explosion Chance:   | None                  | 100%                        | 
 | Impact:             | Normal                | Explosive                   | 
 | Explosion Radius:   | None                  | 90                          | 
@@ -51,23 +52,22 @@ Not clear? ... Well, perhaps it will be more easy to compare the difference in a
 ![Discord Solver - Bloody Edition](https://imgur.com/TBkblD3.png "Don't worry guys... even if my screen capture show French text, my mods are in English")
 Of course, the weapon skin is grunge... What did you expect for a weapon which stay forgetten in a pool in a cave since a eternity? A pristine and shiny weapon perhaps? Well, no... she is dirty and all rusted! Be happy that this old submachine gun is still able to shot fews bullets!
 
-This Mod has few options & fix, so feel free to use the BLCMM tool to select the best option that suit you.
+This Mod has few options, so feel free to use the BLCMM tool to select the best option that suit you.
+
 - The Splash Format has a toggle option between Grenade/Rocket/Reaper (see Compatibility below)
 - The Weapon Card has a toggle option between English/French.
-- The Explosive Elemental Color Glow has a toggle option between On/Off
-
-
-  - The Bloody skin has a toogle option between:
+- The Bloody skin has a toogle option between:
     - The Bloody Skin: Grunge and bloody
     - The Grunge Skin: Grunge (without blood)
-    - The original Lascaux Skin 
+    - The original Lascaux Skin
+- The Explosive Elemental Color Glow has a toggle option between On/Off  
 
 ... and few fix:
 
 - Fix for Orudeon's "Bayonet Enhancements" (Bayonet in slot 2) + Bayonet Buff
 - Fix for Orudeon's "Bayonet Enhancements" (Bayonet in slot 2)
 - Fix for Bayonet Buff in Slot 1
-- Fix for Koby "Rarity Color Fix": AfterMarket (just in case if you use this old mod)  
+- Fix for Koby "Rarity Color": AfterMarket (just in case if you use this old mod)  
 
 ## Gibbed codes:
 
@@ -85,21 +85,9 @@ This Mod has few options & fix, so feel free to use the BLCMM tool to select the
 
 - v1.0.0, September 8, 2018
   - Initial public release
-- v1.0.1, September 12, 2018  
-  - Added Fix for Orudeon's Bayonet Enhancements (Bayonet in slot 2) + Bayonet Buff: : Bayonet gain 100% bonus melee damage (up from 50%)
-- v1.0.2, September 14, 2018  
-  - Added GyroJet bullet firing sound  
-- v1.0.3, September 17, 2018  
-  - Added a Bloody skin
-- v1.0.4, September 20, 2018  
-  - Added a Grunge skin
-  - Balance the weapon, and clean the code  
-  - Added French Translation (Weapon Card)
-  - Cosmetic:
-    - The bullet casings is ejected correctly on the right side.
-    - When the shot is fired, the muzzle "split" explosive residues
 - v1.1.0, September 25, 2018  
-   - Totally revamp the FireMode  
+   - Totally revamp the FireMode
+   - Clean the code  
 - v1.1.1, October 06, 2018  
    - Added fix for Bayonet Buff in Slot 1: Bayonet gain 100% bonus melee damage (up from 50%)    
 
