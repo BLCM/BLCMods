@@ -14,7 +14,7 @@ The Plasma Caster Hyperion Finesse can be a drop from Assassin Wot fought during
 
 ## What special with this weapon?
 
-- Fire SEAPP (Smart Elemental Adaptive Plasma Projectile) exploding only in contact with a enemy: a Alien Plasma Projectile which adapt his Elemental following the kind of impact:
+- Fire SEAPP (Smart Elemental Adaptive Plasma Projectile) exploding only in contact with a enemy and adapting his Elemental Splash following the kind of impact:
   - Incendiary on flesh
   - Shock on shield
   - Corrosive on armor
@@ -31,15 +31,16 @@ Not clear? ... Well, perhaps it will be more easy to compare the difference in a
 | -------------     | -------------          | -------------         | 
 | **Bullet Tech:**  |                        |                       |                                
 | Bullet:           | Standard               | SEAPP (Smart Elemental Adaptive Plasma Projectile)| 
-| Fire Cost:        | 1 bullet cost 1 ammo  | 1 SEAPP cost 2 ammo   |
-| Bullet Speed:     | 17.000 (Commerce) / 6.000 (Plasma Caster)| 4.500| 
+| Bullet Damage:    | SMG Standard           | -20% from Plasma Projectile Damage|
+| Fire Cost:        | 1 bullet cost 1 ammo  | 1 SEAPP cost 2 ammos   |
+| Bullet Speed:     | 17.000 (Commerce) / 6.000 (Plasma Caster)| 6.000| 
 |**Elemental Tech:**|                        |                       |                                 
-| Elemental:        | Shock                  | Elemental Adaptive    | 
-| Shock dmg/sec:    | 7644,8 (level 72)      | 7644,8 (level 72)     | 
-| Corrosive dmg/sec:| N/A                    | 7644,8 (level 72)     | 
-| Fire dmg/sec:     | N/A                    | 7644,8 (level 72)     | 
-| Elemental Chance: | 10/12%                 | 20%                   |  
-| Impact:           | Piercing round         | Elemental Splash (on enemy only)| 
+| Elemental:        | Shock                  | Adaptive (Corrosive/Fire/Shock)| 
+| Shock dmg/sec:    | 7644,8                 | 10.167,6 (+33%)       | 
+| Corrosive dmg/sec:| N/A                    | 10.167,6 (+33%)       | 
+| Fire dmg/sec:     | N/A                    | 10.167,6 (+33%)       | 
+| Elemental Chance: | 10/12%                 | 15/17% (+5%)          |  
+| Impact:           | Piercing round         | Adaptive Elemental Splash (on enemy only)| 
 | Splash Format:    | None                   | Grenade               | 
 |**Other:**         |                        |                       | 
 | Critical Hit:     | None                   | None                  |
@@ -47,19 +48,25 @@ Not clear? ... Well, perhaps it will be more easy to compare the difference in a
 | Skin:             | Commerce (Vanilla skin)| Circuit Board skin    | 
 | Rarity:           | Unique                 | Unique / Legendary    | 
   
-  
+To summarize: elemental effect damage is improved by 33%, elemental chance by a small amount (±5%), get the benefit from Maliwan Sniper bullet splash (50%), but the initial base damage is lowered by 20% to compensate. 
+
 ![Plasma Caster Finesse - Circuit Board Edition](https://imgur.com/FGWsUWG.jpg "Don't worry guys... even if my screen capture show French text, my mods are in English")
-**Note:** The Circuit Board skins... as its name suggests, looks like a circuit board... and you have the choice between 2 Circuit Board skin: the Blue Circuit Board or the Yellow Circuit Board!
+**Note:** The Circuit Board skins... as its name suggests, looks like a circuit board... and you have the choice between 2 Circuit Board skin: the *Blue Circuit Board* or the *Yellow Circuit Board*!
 
 ## Options: 
 This Mod has few options & fix, so feel free to use the BLCMM tool to select the best option that suit you:
 
 - The Splash Format has a toggle option between Grenade/Rocket/Reaper (see Compatibility below)
 - The Weapon Card has a toggle option between English/French.
-- The E-Tech Elemental Color Glow has a toggle option between On/Off
-- The skin has a toggle option between the Blue Circuit Board/Yellow Circuit Board/Vanilla Commerce Skin
+- The Elemental Color Glow has a toggle option between:
+  - E-Tech Elemental Color (Vanilla)
+  - Explosive Elemental Color (Alternate)
+- The skin has a toggle option between:
+  - The *Blue* Circuit Board
+  - The *Yellow* Circuit Board
+  - The Vanilla Commerce Skin
 - The *Plasma Caster Finesse- Circuit Board Edition* can become the reward given by Hyperion for the mission *Uncle Teddy*  in Arid Nexus - Badlands. (see picture below) 
-- Fix for Koby *Rarity Color*: AfterMarket (just in case if you use this old mod) 
+- Fix for Koby *Rarity Color*: *AfterMarket* (just in case if you use this old mod) 
 
 ![Finesse as reward for Hyperion mission](https://imgur.com/CeuGBS7.jpg "Don't worry guys... even if my screen capture show French text, my mods are in English") 
 
@@ -68,8 +75,9 @@ This Mod has few options & fix, so feel free to use the BLCMM tool to select the
 ## Compatibility:
 
 - 100% compatible with [UCP Patch](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/Community%20Patch%20Team).
+- Should be compatible with most other mods, as long as they do not modify the *Tinderbox/Hornet/Twister Firing Mode*.
 - Just be aware from the following:
-  - This mod use the following Firing Mode: Pocket Rocket/Tinderbox/Hornet/Twister, so if you use any mod wich changes the attributes from any of these Firing Mode, it will affect this mod, and obviously the firing of the Finesse. In this case, just revert the modification done previously to these Firing Mode.
+  - This mod use the following Firing Mode: Tinderbox/Hornet/Twister, so if you use any mod wich changes the attributes from any of these Firing Mode, it will affect this mod, and obviously the firing of the Finesse. In this case, just revert the modification done previously to these Firing Mode.
   - This mode use Grenade Damage for the Splash Format, so if you are going to use the Plasma Caster Finesse with a Siren character :warning: Maya :warning: , don't forget to toggle the Grenade Damage to Reaper Splash Damage.
   - This Mod as a option which make the *Discord Solver - Circuit Board Edition* becoming the reward given by Hyperion for the mission *Uncle Teddy*  in Arid Nexus - Badlands, so be sure that you place this mod **AFTER** my mod *Double Quest Reward Redux* or any other mod modifying the Quest Reward.
 
@@ -87,8 +95,12 @@ This Mod has few options & fix, so feel free to use the BLCMM tool to select the
 
 ## Changelog:
 
-v1.0.0, October 20, 2018
- - Initial public release
+- v1.0.0, October 20, 2018
+  - Initial public release
+- v1.0.1, October 22, 2018
+  - The Plasma Caster Finesse - Circuit Board Edition can become the reward given by Hyperion for the mission Uncle Teddy in Arid Nexus - Badlands.
+- v1.0.2, October 25, 2018
+  - Correct the wrong line of code (was *Set WeaponTypeDefinition'GD_Weap_SMG.A_Weapons...* instead of *Set GD_Weap_SMG.A_Weapons...*) repeated 9 times by using copy/paste to go faster.
   
 ## Credits & Thanks:
 
