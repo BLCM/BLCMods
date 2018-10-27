@@ -1,6 +1,6 @@
-## SMG Dahl Discord Solver (Moxxi Edition)
+## SMG Dahl Discord Solver - Moxxi Edition
  
-In their early days in their making of weapons, Dahl, in collaboration with Torgue created the Discord Solver, a SMG who shot GyroJet explosive bullet. 
+In their early days in their making of weapons, Dahl, in collaboration with Torgue created the Discord Solver, a SMG which shot GyroJet explosive bullet. 
  
 Unfortunately, the agreement between the two weapons manufacturers did not last long, and the production of the SMG stopped quickly -How ironic for a weapon that's named Discord Solver!- and Torgue seized the patents to create the Pocket Rocket.
 
@@ -13,7 +13,7 @@ This is where you can find it...
 ![Discord Solver - Where to find it](https://imgur.com/cQkATCz.jpg "Don't worry guys... even if my screen capture show French text, my mods are in English")
 
 
-## What special with this weapon?
+### What special with this weapon?
 - Keep (almost) of all the Lascaux Unique Dahl SMG specificity: very high firerate, variable burst-fire round, chance to shot two bullets for the cost of one ammo, etc... for more details, see [Borderlands Wiki](http://borderlands.wikia.com/wiki/Lascaux) 
   - Initial (too good) accuracy reduced, slower fireate, and slower reload, but...
     - FireMode modified to shoot the *Pistol GyroJet Explosive Bullet*. 
@@ -35,6 +35,7 @@ Not clear? ... Well, perhaps it will be more easy to compare the difference in a
 | -------------       | -------------         |  -------------            |  
 | **Bullet Tech:**    |                       |                           | 
 | Bullet Type:        | Standard              | GyroJets Explosive        |
+| Bullet Damage:      | SMG Standard          | -20% from SMG Standard    |
 | Fire Cost:          | 1 bullet cost 1 ammo  | 1 bullet cost 1 ammo      |
 | Bullet Speed:       | 20.000                | 5x GyroJet Speed Boost    |
 | Burst Count:        | 9 to 14 rounds        | 9 to 14 rounds            | 
@@ -52,9 +53,11 @@ Not clear? ... Well, perhaps it will be more easy to compare the difference in a
 | Skin:               | Lascaux (Vanilla)     | Moxxi Signature           | 
 | Rarity:             | Unique                | Moxxi                     | 	
 
+To summarize: To compensate the benefit from GyroJet Explosive bonus, the initial base damage is lowered by 20%.
+
 ![Discord Solver Moxxi Signature Classic and Cartier](https://imgur.com/W8VaHzJ.jpg "Don't worry guys... even if my screen capture show French text, my mods are in English")
 
-**Note:** As this version of the Discord Solver is a Moxxi weapon, you can choose between 3 Moxxi Signature skin : the *Classic* skin, the *Elegance* skin or the *Pinky* skin
+**Note:** As this version of the Discord Solver is a Moxxi weapon, you can choose between 3 Moxxi Signature skin : the *Classic* skin, the *Elegance* skin or the *Pinky* skin.
 
 ### Options: 
 
@@ -63,8 +66,8 @@ This Mod has few options & fix, so feel free to use the BLCMM tool to select the
 - The Splash Format has a toggle option between Grenade/Rocket/Reaper (see Compatibility below)
 -  The Weapon Card has a toggle option between English/French.
 - The Elemental Color Glow has a toggle option between:
+  - Explosive Elemental Color (similar to Torgue weapons) 
   - E-Tech Elemental Color (Vanilla)
-  - Explosive Elemental Color (Alternate)
 - The Moxxi skin has a toggle option between:
   - The *Moxxi Signature **Classic** Edition* ("Red Fire" in the RL Creamer/SG Heart Breaker style) which is timeless and can be used in any occasion.
   - The *Moxxi Signature **Elegance** Edition* ("Red Cartier" in the style from the renowned French jeweler) which is very stylish and sophisticated, and by the way the all time favorite from Aurelia the Baroness.
@@ -104,7 +107,7 @@ This Mod has few options & fix, so feel free to use the BLCMM tool to select the
   - This Mod as a option which make the *Discord Solver - Moxxi Edition* becoming the reward given by Moxxi for the mission *Hell Hath No Fury* in Opportunity, so be sure that you place this mod **AFTER** my mod *Double Quest Reward Redux* or any other mod modifying the Quest Reward.
  
 
-## Gibbed codes:
+### Gibbed codes:
 
 | Prefix               | Accessory       | Gibbed code                 | 
 | -------------        | -------------   | -------------               | 
@@ -131,10 +134,15 @@ This Mod has few options & fix, so feel free to use the BLCMM tool to select the
   - Correct the wrong line of code (was *Set WeaponTypeDefinition'GD_Weap_SMG.A_Weapons...* instead of *Set GD_Weap_SMG.A_Weapons...*) repeated 9 times by using copy/paste to go faster.
 ### Other Recommended Mods:
 
-A great mod to check for the Discord Solver Moxxi version:
+Some great mods to check for the *Discord Solver - Moxxi Edition*:
 
 - [No More Moxxi Lifesteal v2.0](https://github.com/BLCM/BLCMods/blob/master/Borderlands%202%20mods/Akathris/NoMoreMoxxiLifestealv2.0.txt) by [Akathris](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/Akathris). His Mod is self explanatory: removes lifesteal from Moxxi weapons and changes it to passive health regeneration.
-  
+
+- [Plasma Caster Hyperion Finesse - Moxxi Edition](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/Astor/Custom%20Gear/Plasma%20Caster%20Hyperion%20Finesse%20-%20Moxxi%20Edition) by [Astor](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/Astor). A Plasma Caster which fire SEAPP (Smart Elemental Adaptive Plasma Projectile)  adapting his Elemental following the kind of impact.
+
+![Finesse Moxxi Signature Classic and Cartier](https://imgur.com/1ziVoro.jpg "Don't worry guys... even if my screen capture show French text, my mods are in English")
+As this version of the Finesse is a Moxxi weapon, you can choose between 3 Moxxi Signature skin : the Classic skin, the Elegance skin or the Pinky skin.
+
 ### To do:
 
 - [x] Clean the code and remove all my ~~shitty~~ notes. 

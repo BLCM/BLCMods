@@ -1,4 +1,4 @@
-﻿## Compatibility & Troubleshooting
+## Compatibility & Troubleshooting
  
  
 ### Compatibility:
@@ -13,7 +13,7 @@ Before being released, all my mods are tested with:
 
 If a option or a fix don't work as intended, it's not because the Mod is not well coded, but probably because this code is overwritten by another mod.
 
-#### What's go wrong?
+### What's go wrong?
 
 It's simply because 2 commands work on the same parameter, and one is overwritten by the other.
 
@@ -37,7 +37,7 @@ Right picture: To fix this overwriting problem and get the code working as inten
 
 ![Fix or option not working as intended](https://i.imgur.com/a0eZEVB.png "Don't worry guys... even if my screen capture show French text, my mods are in English")
 
-#### To summarize: 
+### To summarize: 
 
 1. **Correct:**
  *- White* = work (normal set command code)

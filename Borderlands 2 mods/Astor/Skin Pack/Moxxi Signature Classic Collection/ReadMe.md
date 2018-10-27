@@ -1,4 +1,4 @@
-﻿## Moxxi Signature Classic Collection
+## Moxxi Signature Classic Collection
 
 Did you ever noticed that only the half from the Moxxi gears have almost* a nice Moxxi Signature Classic skin?
 
@@ -17,6 +17,7 @@ That doesn't make sense to me... and it's just not prettier!
 But now with the *Moxxi Signature Classic Collection*, there are all uniform to look like an actual manufacturer.
 
 ![Moxxi Signature Classic Gear ](https://imgur.com/Y7eGuJ2.png "Don't worry guys... even if my screen capture show French text, my mods are in English")
+
 ### Changelog:
 
 - v1.0.0, October 10, 2018
@@ -28,7 +29,22 @@ But now with the *Moxxi Signature Classic Collection*, there are all uniform to 
 
 ### To do:
 
-- [ ] Clean the code and remove all my ~~shitty~~ notes. 
+- [ ] Clean the code and remove all my ~~shitty~~ notes.
+ 
+### Other Recommended Mods:
+
+Some great mods to check for the *Moxxi Signature Classic Collection*:
+
+- [SMG Dahl Discord Solver - Moxxi Edition](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/Astor/Custom%20Gear/SMG%20Dahl%20Discord%20Solver%20-%20Moxxi%20Edition) by [Astor](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/Astor). A SMG which shot GyroJet explosive bullet.
+
+![Discord Solver Moxxi Signature Classic and Cartier](https://imgur.com/W8VaHzJ.jpg "Don't worry guys... even if my screen capture show French text, my mods are in English")
+
+As this version of the Discord Solver is a Moxxi weapon, you can choose between 3 Moxxi Signature skin : the *Classic* skin, the *Elegance* skin or the *Pinky* skin.
+
+- [Plasma Caster Hyperion Finesse - Moxxi Edition](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/Astor/Custom%20Gear/Plasma%20Caster%20Hyperion%20Finesse%20-%20Moxxi%20Edition) by [Astor](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/Astor). A Plasma Caster which fire SEAPP (Smart Elemental Adaptive Plasma Projectile)  adapting his Elemental following the kind of impact.
+
+![Finesse Moxxi Signature Classic and Cartier](https://imgur.com/1ziVoro.jpg "Don't worry guys... even if my screen capture show French text, my mods are in English")
+As this version of the Finesse is a Moxxi weapon, you can choose between 3 Moxxi Signature skin : the Classic skin, the Elegance skin or the Pinky skin.
 
 ### Credits & Thanks:
 

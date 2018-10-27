@@ -13,7 +13,7 @@ This is where you can find it....
 **Note:** If you are too lazy to walk to Frostburn Canyon, you will find the Gibbed Codes below.
 
 
-## What special with this weapon?
+### What special with this weapon?
 
 
 - Keep (almost) of all the Lascaux Unique Dahl SMG specificity: very high firerate, variable burst-fire round, chance to shot two bullets for the cost of one ammo, etc... for more details, see [Borderlands Wiki](http://borderlands.wikia.com/wiki/Lascaux) 
@@ -32,8 +32,9 @@ Not clear? ... Well, perhaps it will be more easy to compare the difference in a
 | -Tech Specs-        | Lascaux: Vanilla      | Discord Solver #1: Bloody   | 
 | -------------       | -------------         | -------------               |  
 | **Bullet Tech:**    |                       |                             |                           
-| Bullet Type:        | Standard              | GyroJets Explosive          | 
-| Fire Cost:          | 1 bullet cost 1 ammo | 1 bullet cost 1 ammo       | 
+| Bullet Type:        | Standard              | GyroJets Explosive          |
+| Bullet Damage:      | SMG Standard          | -20% from SMG Standard      |
+| Fire Cost:          | 1 bullet cost 1 ammo  | 1 bullet cost 1 ammo        | 
 | Bullet Speed:       | 20.000                | 5x GyroJet Speed Boost      | 
 | Burst Count:        | 9 to 14 rounds        | 9 to 14 rounds              | 
 | **Explosive Tech:** |                       |                             |                           
@@ -49,6 +50,8 @@ Not clear? ... Well, perhaps it will be more easy to compare the difference in a
 | Skin:               | Lascaux (Vanilla)     | Bloody / Grunge             | 
 | Rarity:             | Unique                | Unique                      | 	
 
+To summarize: To compensate the benefit from GyroJet Explosive bonus, the initial base damage is lowered by 20%.
+
 ![Discord Solver - Bloody Edition](https://imgur.com/TBkblD3.png "Don't worry guys... even if my screen capture show French text, my mods are in English")
 Of course, the weapon skin is grunge... What did you expect for a weapon which stay forgetten in a pool in a cave since a eternity? A pristine and shiny weapon perhaps? Well, no... she is dirty and all rusted! Be happy that this old submachine gun is still able to shot fews bullets!
 
@@ -57,12 +60,12 @@ This Mod has few options, so feel free to use the BLCMM tool to select the best 
 - The Splash Format has a toggle option between Grenade/Rocket/Reaper (see Compatibility below)
 - The Weapon Card has a toggle option between English/French.
 - The Bloody skin has a toogle option between:
-    - The *Bloody* Skin: Grunge and bloody
-    - The *Grunge* Skin: Grunge (without blood)
-    - The original Lascaux Skin
+  - The *Bloody* Skin: Grunge and bloody
+  - The *Grunge* Skin: Grunge (without blood)
+  - The original Lascaux Skin
 - The Elemental Color Glow has a toggle option between:
+  - Explosive Elemental Color (similar to  Torgue weapons) 
   - E-Tech Elemental Color (Vanilla)
-  - Explosive Elemental Color (Alternate)
 
 ... and few fix:
 
@@ -71,7 +74,7 @@ This Mod has few options, so feel free to use the BLCMM tool to select the best 
 - Fix for Orudeon's *Bayonet Buff* in Slot 1
 - Fix for Koby *Rarity Color*: *AfterMarket* rarity (just in case if you use this old mod)  
 
-## Gibbed codes:
+### Gibbed codes:
 
 | Prefix               | Accessory       | Gibbed code                 | 
 | -------------        | -------------   | -------------               | 

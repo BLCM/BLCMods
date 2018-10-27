@@ -1,4 +1,4 @@
-﻿## Dr Zed E-Tech Geek
+## Dr Zed E-Tech Geek
 
 ### What do this mod?
 
@@ -11,7 +11,7 @@
   - Monster Mash: Part 3 (Frostburn Canyon)  
   - Neither Rain Nor Sleet Nor Skags (Three Horns - Valley)
 	
-_**Note:** As for my Double Quest Reward "Redux", this Mod will give you the choice between 2 weapons/items instead of a single one, so it will double the chance to get a weapon/item with desired parts._
+_**Note:** As for my *Double Quest Reward Redux*, this Mod will give you the choice between 2 weapons/items instead of a single one, so it will double the chance to get a weapon/item with desired parts._
 
 ### Changelog:
 
@@ -20,13 +20,13 @@ _**Note:** As for my Double Quest Reward "Redux", this Mod will give you the cho
 
 ### Compatibility:
 
-- 100% compatible with UCP 4.1
+- 100% compatible with [UCP Patch](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/Community%20Patch%20Team)
 - Should be compatible with most other mods, as long as they do not touch the Quest Reward.
 - This mod was tested -and work nicely!- with:
   - [UCP Patch](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/Community%20Patch%20Team)   
   - [Better Quest](https://github.com/BLCM/BLCMods/blob/master/Borderlands%202%20mods/Hemaxhu/Quest%20Rewards/Better%20Quests) by [Hemaxu](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/Hemaxhu) .
 
-To be sure to get this mod working correctly (as intended), don't forget to place it **AFTER** UCP 4.1 and Better Quest. 
+To be sure to get this mod working correctly (as intended), don't forget to place it **AFTER** *UCP Patch* and *Better Quest*.
 
 **Know Issue:** Gemstone Rewards instead of E-Tech Rewards.
 
@@ -41,7 +41,7 @@ GD_Itempools.WeaponPools.Pool_Weapons_SMG_05_VeryRare_Alien
 GD_Itempools.WeaponPools.Pool_Weapons_SnipersRifles_05_VeryRare_Alien
 ```
 
-Apocalyptech's "Better Loot" & "Cold Dead Hands" mod aren't incompatible with my mod, but they use the same E-Tech pools to inject Gemstone weapons on it... so if you receive a Gemstone weapon instead of a E-Tech weapon, you know the reason.
+Apocalyptech's *Better Loot* & *Cold Dead Hands* mod aren't incompatible with my mod, but they use the same E-Tech pools to inject Gemstone weapons on it... so if you receive a Gemstone weapon instead of a E-Tech weapon, you know the reason.
 
 Unfortunately, there is no way I can fix that, so the best thing to do in this case is probably to disable my mod (but don't worry, it's not a big deal!) or toggle off the "Add Gemstones to E-Tech Pools" option in BL & CDH... the choice is your.
 
