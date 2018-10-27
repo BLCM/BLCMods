@@ -9,13 +9,13 @@
 			<comment>Release Date: 01 October 2018</comment>
 			<comment>Version: 1.0.1 - See ReadMe for Changelog ;)</comment>
 			<comment>Replace Unique SMG Dahl Lascaux</comment>
-			<comment>Plasma Caster Dahl which fires Pocket Rocket GyroJet explosive E-Tech bullet. </comment>
+			<comment>Plasma Caster Dahl which fires Pocket Rocket GyroJet explosive E-Tech plasma projectile. </comment>
 			<comment>/!\ This Mod uses attributes from the Pocket Rocket. Any mod that changes it will affect this mod. /!\ </comment>
 			<comment>/!\ If the weapon don't work as intended, revert the modification done previously to the Pocket Rocket. /!\</comment>
 			<category name="Where the magic happen (don't uncheck this)">
 				<category name="RAW Stats">
 					<category name="Attribute Slot Upgrades">
-						<code profiles="default">set GD_Weap_SMG.Barrel.SMG_Barrel_Bandit_Lascaux AttributeSlotUpgrades ((SlotName="AccuracyMin",GradeIncrease=20,bActivateSlot=True),(SlotName="WeaponDamage",GradeIncrease=2,bActivateSlot=True))</code>
+						<code profiles="default">set GD_Weap_SMG.Barrel.SMG_Barrel_Bandit_Lascaux AttributeSlotUpgrades ((SlotName="AccuracyMin",GradeIncrease=20,bActivateSlot=True),(SlotName="WeaponDamage",GradeIncrease=10,bActivateSlot=True),(SlotName="WeaponMagSize",GradeIncrease=7,bActivateSlot=True),(SlotName="WeaponSpread",GradeIncrease=7,bActivateSlot=True))</code>
 					</category>
 					<category name="Weapon Card Attributes">
 						<category name="Custom Presentation">
@@ -26,7 +26,7 @@
 						</category>
 					</category>
 					<category name="Weapon Attribute Effects">
-						<code profiles="default">set GD_Weap_SMG.Barrel.SMG_Barrel_Bandit_Lascaux WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponExtraShotChance',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.200000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.800000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponPerShotAccuracyImpulse',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponPerShotAccuracyImpulse',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Hyperion',InitializationDefinition=None,BaseValueScaleConstant=3.000000)))</code>
+						<code profiles="default">set GD_Weap_SMG.Barrel.SMG_Barrel_Bandit_Lascaux WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-0.200000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponExtraShotChance',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.200000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.800000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponPerShotAccuracyImpulse',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-2.100000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponPerShotAccuracyImpulse',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Hyperion',InitializationDefinition=None,BaseValueScaleConstant=3.000000)))</code>
 					</category>
 					<category name="External Attribute Effect">
 						<code profiles="default">set GD_Weap_SMG.Barrel.SMG_Barrel_Bandit_Lascaux ExternalAttributeEffects ((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AccuracyResourcePool.AccuracyMinValue',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-1.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))</code>
@@ -41,44 +41,35 @@
 					<code profiles="default">set GD_Weap_SMG.FiringModes.Bullet_SMG_Lascaux ImpactResponses ((DamageSurfaceType=DMGSURFACE_Flesh,bDisableRegularBulletDamage=False,Behaviors=(Behavior_Explode'GD_Iris_Weapons.FiringModes.Bullets_Pistol_Torgue_PocketRocket:Behavior_Explode_5')),(DamageSurfaceType=DMGSURFACE_Armor,bDisableRegularBulletDamage=False,Behaviors=(Behavior_Explode'GD_Iris_Weapons.FiringModes.Bullets_Pistol_Torgue_PocketRocket:Behavior_Explode_5')),(DamageSurfaceType=DMGSURFACE_Shield,bDisableRegularBulletDamage=False,Behaviors=(Behavior_Explode'GD_Iris_Weapons.FiringModes.Bullets_Pistol_Torgue_PocketRocket:Behavior_Explode_5')),(DamageSurfaceType=DMGSURFACE_Generic,bDisableRegularBulletDamage=False,Behaviors=(Behavior_Explode'GD_Weap_SMG.FiringModes.Bullet_Plasma_Default:Behavior_Explode_5')))</code>
 					<code profiles="default">set GD_Weap_SMG.FiringModes.Bullet_SMG_Lascaux OnAnyImpact (Behavior_Explode'GD_Weap_SMG.FiringModes.Bullet_Plasma_Default:Behavior_Explode_5')</code>
 				</category>
-				<category name="Pocket Rocket Firing Mode">
-					<category name="Explosion Damage">
-						<code profiles="default">set GD_Iris_Weapons.FiringModes.Bullets_Pistol_Torgue_PocketRocket:Behavior_Explode_5 DamageFormula (BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',InitializationDefinition=None,BaseValueScaleConstant=1.000000)</code>
-					</category>
-					<category name="Explosion Definition">
-						<code profiles="default">set GD_Iris_Weapons.FiringModes.Bullets_Pistol_Torgue_PocketRocket:Behavior_Explode_5 Definition ExplosionDefinition'GD_Explosions.explosive.Explosion_ExplosiveMaster'</code>
-					</category>
-					<category name="Explosion Radius">
-						<code profiles="default">set GD_Iris_Weapons.FiringModes.Bullets_Pistol_Torgue_PocketRocket:Behavior_Explode_5 DamageRadiusFormula (BaseValueConstant=180.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)</code>
-					</category>
-					<category name="Status Effect">
-						<code profiles="default">set GD_Iris_Weapons.FiringModes.Bullets_Pistol_Torgue_PocketRocket:Behavior_Explode_5 StatusEffectDamage (BaseValueConstant=1.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.Weapon.WeaponStatusEffectDamage',InitializationDefinition=None,BaseValueScaleConstant=1.000000)</code>
-					</category>
-					<category name="Explosive Impact">
-						<code profiles="default">set GD_Iris_Weapons.FiringModes.Bullets_Pistol_Torgue_PocketRocket:Behavior_Explode_5 DamageTypeDefinition WillowDamageTypeDefinition'GD_Explosive.DamageType.DmgType_Explosive_Impact'</code>
-					</category>
-					<category name="Power Rocket Bullet Speed Boost (x3)">
-						<code profiles="default">set GD_Weap_SMG.FiringModes.Bullet_SMG_Lascaux Speed 2100.000000</code>
-					</category>
-				</category>
 				<category name="Plasma Caster FX">
 					<category name="Plasma Caster Barrel Visual">
 						<code profiles="default">set GD_Weap_SMG.Barrel.SMG_Barrel_Bandit_Lascaux GestaltModeSkeletalMeshName SMG_Barrel_Alien</code>
 					</category>
 					<category name="Plasma Caster Firing Mode Visual">
 						<code profiles="default">set GD_Weap_SMG.FiringModes.Bullet_SMG_Lascaux BeamTraceNumSteps 6.000000</code>
-						<comment>setGD_Weap_SMG.FiringModes.Bullet_SMG_Lascaux ConditionalPartSysTemplate EffectCollectionDefinition'GD_Weap_SMG.Effects.SMG_ETech_Tracers'</comment>
 						<code profiles="default">set GD_Weap_SMG.FiringModes.Bullet_SMG_Lascaux Lifetime 5.000000</code>
-						<comment>setGD_Weap_SMG.FiringModes.Bullet_SMG_Lascaux PartSysTemplate ParticleSystem'FX_WEP_Trails.Particles.Alien.Part_Wep_Tracer_Alien_SMG'</comment>
 						<code profiles="default">set GD_Weap_SMG.FiringModes.Bullet_SMG_Lascaux TraceInterval 0.200000</code>
 					</category>
 					<category name="Plasma Caster Firing Sound">
 						<code profiles="default">set GD_Weap_SMG.FiringModes.Bullet_SMG_Lascaux SoundDefinition FiringModeSoundDefinition'GD_Weap_SMG.FiringModes.PlasmaSoundDefinition'</code>
 					</category>
 				</category>
-				<category name="Plasma Projectile Explosion Override">
-					<code profiles="default">set GD_Weap_SMG.FiringModes.Bullet_SMG_Lascaux ExplosionOverideInstanceDataName ExplosionOverride</code>
-					<code profiles="default">set GD_Weap_SMG.FiringModes.Bullet_SMG_Lascaux ExplosionOverrideDefinition ExplosionCollectionDefinition'GD_Weap_SMG.Explosions.Plasma_Elemental_Explosions'</code>
+				<category name="Pocket Rocket Bullet Speed Boost (x5)">
+					<code profiles="default">set GD_Weap_SMG.FiringModes.Bullet_SMG_Lascaux Speed 3500.000000</code>
+				</category>
+				<category name="Pocket Rocket Firing Mode">
+					<category name="Plasma Projectile Explosion">
+						<code profiles="default">set GD_Iris_Weapons.FiringModes.Bullets_Pistol_Torgue_PocketRocket:Behavior_Explode_5 DamageRadiusFormula (BaseValueConstant=180.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)</code>
+						<code profiles="default">set GD_Iris_Weapons.FiringModes.Bullets_Pistol_Torgue_PocketRocket:Behavior_Explode_5 DamageFormula (BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',InitializationDefinition=None,BaseValueScaleConstant=1.000000)</code>
+						<code profiles="default">set GD_Iris_Weapons.FiringModes.Bullets_Pistol_Torgue_PocketRocket:Behavior_Explode_5 Definition ExplosionDefinition'GD_Explosions.explosive.Explosion_ExplosiveMaster'</code>
+						<code profiles="default">set GD_Iris_Weapons.FiringModes.Bullets_Pistol_Torgue_PocketRocket:Behavior_Explode_5 StatusEffectDamage (BaseValueConstant=1.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.Weapon.WeaponStatusEffectDamage',InitializationDefinition=None,BaseValueScaleConstant=1.000000)</code>
+						<code profiles="default">set GD_Iris_Weapons.FiringModes.Bullets_Pistol_Torgue_PocketRocket:Behavior_Explode_5 DamageTypeDefinition WillowDamageTypeDefinition'GD_Explosive.DamageType.DmgType_Explosive_Impact'</code>
+					</category>
+					<category name="Plasma Projectile Explosion Override">
+						<code profiles="default">set GD_Weap_SMG.FiringModes.Bullet_SMG_Lascaux ExplosionOverideInstanceDataName ExplosionOverride</code>
+						<code profiles="default">set GD_Weap_SMG.FiringModes.Bullet_SMG_Lascaux ExplosionOverrideDefinition ExplosionCollectionDefinition'GD_Weap_SMG.Explosions.Plasma_Elemental_Explosions'</code>
+						<code profiles="default">set GD_Weap_SMG.FiringModes.Bullet_SMG_Lascaux DamageTypeDefinition WillowDamageTypeDefinition'GD_Explosive.DamageType.DmgType_Explosive_Impact'</code>
+					</category>
 				</category>
 				<category name="MuzzleFlash E-Tech">
 					<code profiles="default">set GD_Weap_SMG.Barrel.SMG_Barrel_Bandit_Lascaux MuzzleFlashPSTemplates EffectCollectionDefinition'GD_Weap_SMG.Effects.SMG_ETech_MuzzleFlashes'</code>
@@ -148,7 +139,7 @@
 				</category>
 			</category>
 			<category name="Elemental Emissive Color (open to change a option)" MUT="true">
-				<category name="Explosive Emissive Color (Alternative Version)">
+				<category name="Explosive Emissive Color (similar to Torgue weapons)">
 					<category name="Elemental Weapon + Flaps Color">
 						<code profiles="default">set GD_Weap_SMG.Barrel.SMG_Barrel_Bandit_Lascaux MaterialVectorParameterValues ((ParameterName="p_EmissiveColor",ParameterValue=(R=3.480000,G=1.450000,B=0.460000,A=0.000000),ExpressionGUID=(A=1475816242,B=1139906328,C=-187360584,D=-1825963319)))</code>
 					</category>
@@ -167,11 +158,9 @@
 					</category>
 				</category>
 			</category>
-			<category name="Rarity Upgrade (open to change a option)">
-				<category name="Fix for Koby Rarity Color Fix (just in case if you use it)">
-					<category name="Prototype SX-1 (Lascaux) \"Aftermarket\" Rarity">
-						<code profiles="default">set GD_Weap_SMG.Barrel.SMG_Barrel_Bandit_Lascaux rarity (BaseValueConstant=45.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)</code>
-					</category>
+			<category name="Fix for Koby Rarity Color (just in case if you use it)">
+				<category name="Prototype SX-1 (Lascaux) \"Aftermarket\" Rarity">
+					<code profiles="default">set GD_Weap_SMG.Barrel.SMG_Barrel_Bandit_Lascaux rarity (BaseValueConstant=45.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)</code>
 				</category>
 			</category>
 		</category>
@@ -179,27 +168,28 @@
 </BLCMM>
 
 #Commands:
-set GD_Weap_SMG.Barrel.SMG_Barrel_Bandit_Lascaux AttributeSlotUpgrades ((SlotName="AccuracyMin",GradeIncrease=20,bActivateSlot=True),(SlotName="WeaponDamage",GradeIncrease=2,bActivateSlot=True))
+set GD_Weap_SMG.Barrel.SMG_Barrel_Bandit_Lascaux AttributeSlotUpgrades ((SlotName="AccuracyMin",GradeIncrease=20,bActivateSlot=True),(SlotName="WeaponDamage",GradeIncrease=10,bActivateSlot=True),(SlotName="WeaponMagSize",GradeIncrease=7,bActivateSlot=True),(SlotName="WeaponSpread",GradeIncrease=7,bActivateSlot=True))
 set GD_Weap_SMG.ManufacturerMaterials.Mat_Dahl_3_Lascaux CustomPresentations (AttributePresentationDefinition'GD_Weap_Pistol.ManufacturerMaterials.Mat_Maliwan_3_Rubi:AttributePresentationDefinition_1',AttributePresentationDefinition'GD_Explosive.DamageType.DmgType_Explosive_Impact:AttributePresentationDefinition_2',)
 set GD_Weap_SMG.Barrel.SMG_Barrel_Bandit_Lascaux WeaponCardAttributes ((Attribute=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',PriorityIncrease=0.500000))
-set GD_Weap_SMG.Barrel.SMG_Barrel_Bandit_Lascaux WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponExtraShotChance',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.200000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.800000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponPerShotAccuracyImpulse',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponPerShotAccuracyImpulse',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Hyperion',InitializationDefinition=None,BaseValueScaleConstant=3.000000)))
+set GD_Weap_SMG.Barrel.SMG_Barrel_Bandit_Lascaux WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-0.200000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponExtraShotChance',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.200000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.800000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponPerShotAccuracyImpulse',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-2.100000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponPerShotAccuracyImpulse',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Hyperion',InitializationDefinition=None,BaseValueScaleConstant=3.000000)))
 set GD_Weap_SMG.Barrel.SMG_Barrel_Bandit_Lascaux ExternalAttributeEffects ((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AccuracyResourcePool.AccuracyMinValue',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-1.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
 set GD_Weap_SMG.Barrel.SMG_Barrel_Bandit_Lascaux ZoomWeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponAutomaticBurstCount',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
 set GD_Weap_SMG.FiringModes.Bullet_SMG_Lascaux ImpactResponses ((DamageSurfaceType=DMGSURFACE_Flesh,bDisableRegularBulletDamage=False,Behaviors=(Behavior_Explode'GD_Iris_Weapons.FiringModes.Bullets_Pistol_Torgue_PocketRocket:Behavior_Explode_5')),(DamageSurfaceType=DMGSURFACE_Armor,bDisableRegularBulletDamage=False,Behaviors=(Behavior_Explode'GD_Iris_Weapons.FiringModes.Bullets_Pistol_Torgue_PocketRocket:Behavior_Explode_5')),(DamageSurfaceType=DMGSURFACE_Shield,bDisableRegularBulletDamage=False,Behaviors=(Behavior_Explode'GD_Iris_Weapons.FiringModes.Bullets_Pistol_Torgue_PocketRocket:Behavior_Explode_5')),(DamageSurfaceType=DMGSURFACE_Generic,bDisableRegularBulletDamage=False,Behaviors=(Behavior_Explode'GD_Weap_SMG.FiringModes.Bullet_Plasma_Default:Behavior_Explode_5')))
 set GD_Weap_SMG.FiringModes.Bullet_SMG_Lascaux OnAnyImpact (Behavior_Explode'GD_Weap_SMG.FiringModes.Bullet_Plasma_Default:Behavior_Explode_5')
-set GD_Iris_Weapons.FiringModes.Bullets_Pistol_Torgue_PocketRocket:Behavior_Explode_5 DamageFormula (BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',InitializationDefinition=None,BaseValueScaleConstant=1.000000)
-set GD_Iris_Weapons.FiringModes.Bullets_Pistol_Torgue_PocketRocket:Behavior_Explode_5 Definition ExplosionDefinition'GD_Explosions.explosive.Explosion_ExplosiveMaster'
-set GD_Iris_Weapons.FiringModes.Bullets_Pistol_Torgue_PocketRocket:Behavior_Explode_5 DamageRadiusFormula (BaseValueConstant=180.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
-set GD_Iris_Weapons.FiringModes.Bullets_Pistol_Torgue_PocketRocket:Behavior_Explode_5 StatusEffectDamage (BaseValueConstant=1.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.Weapon.WeaponStatusEffectDamage',InitializationDefinition=None,BaseValueScaleConstant=1.000000)
-set GD_Iris_Weapons.FiringModes.Bullets_Pistol_Torgue_PocketRocket:Behavior_Explode_5 DamageTypeDefinition WillowDamageTypeDefinition'GD_Explosive.DamageType.DmgType_Explosive_Impact'
-set GD_Weap_SMG.FiringModes.Bullet_SMG_Lascaux Speed 2100.000000
 set GD_Weap_SMG.Barrel.SMG_Barrel_Bandit_Lascaux GestaltModeSkeletalMeshName SMG_Barrel_Alien
 set GD_Weap_SMG.FiringModes.Bullet_SMG_Lascaux BeamTraceNumSteps 6.000000
 set GD_Weap_SMG.FiringModes.Bullet_SMG_Lascaux Lifetime 5.000000
 set GD_Weap_SMG.FiringModes.Bullet_SMG_Lascaux TraceInterval 0.200000
 set GD_Weap_SMG.FiringModes.Bullet_SMG_Lascaux SoundDefinition FiringModeSoundDefinition'GD_Weap_SMG.FiringModes.PlasmaSoundDefinition'
+set GD_Weap_SMG.FiringModes.Bullet_SMG_Lascaux Speed 3500.000000
+set GD_Iris_Weapons.FiringModes.Bullets_Pistol_Torgue_PocketRocket:Behavior_Explode_5 DamageRadiusFormula (BaseValueConstant=180.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+set GD_Iris_Weapons.FiringModes.Bullets_Pistol_Torgue_PocketRocket:Behavior_Explode_5 DamageFormula (BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+set GD_Iris_Weapons.FiringModes.Bullets_Pistol_Torgue_PocketRocket:Behavior_Explode_5 Definition ExplosionDefinition'GD_Explosions.explosive.Explosion_ExplosiveMaster'
+set GD_Iris_Weapons.FiringModes.Bullets_Pistol_Torgue_PocketRocket:Behavior_Explode_5 StatusEffectDamage (BaseValueConstant=1.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.Weapon.WeaponStatusEffectDamage',InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+set GD_Iris_Weapons.FiringModes.Bullets_Pistol_Torgue_PocketRocket:Behavior_Explode_5 DamageTypeDefinition WillowDamageTypeDefinition'GD_Explosive.DamageType.DmgType_Explosive_Impact'
 set GD_Weap_SMG.FiringModes.Bullet_SMG_Lascaux ExplosionOverideInstanceDataName ExplosionOverride
 set GD_Weap_SMG.FiringModes.Bullet_SMG_Lascaux ExplosionOverrideDefinition ExplosionCollectionDefinition'GD_Weap_SMG.Explosions.Plasma_Elemental_Explosions'
+set GD_Weap_SMG.FiringModes.Bullet_SMG_Lascaux DamageTypeDefinition WillowDamageTypeDefinition'GD_Explosive.DamageType.DmgType_Explosive_Impact'
 set GD_Weap_SMG.Barrel.SMG_Barrel_Bandit_Lascaux MuzzleFlashPSTemplates EffectCollectionDefinition'GD_Weap_SMG.Effects.SMG_ETech_MuzzleFlashes'
 set GD_Weap_SMG.Barrel.SMG_Barrel_Bandit_Lascaux ParticleEffects ParticleSystem'FX_WEP_Alien.Particles.Part_SMG_Alien_Slag_Muzzleflash'
 set GD_Weap_SMG.Barrel.SMG_Barrel_Bandit_Lascaux ShellCasingPSCTemplate ParticleSystem'FX_WEP_Pistol.Particles.Part_Pistol_Shells'

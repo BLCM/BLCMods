@@ -13,7 +13,7 @@ This is where you can find it....
 **Note:** If you are too lazy to walk to Frostburn Canyon, you will find the Gibbed Codes below.
 
 
-## What special with this weapon?
+### What special with this weapon?
 
 - Keep the typical fire pattern from the Lascaux Unique Dahl SMG (for more details, see [Borderlands Wiki](http://borderlands.wikia.com/wiki/Lascaux)) mixed  with the Plasma caster specificity, and get the chance to shot a extra explosive plasma projectile for the cost of two ammo.
 - Initial (too good) accuracy reduced, slower fireate, and slower reload, but...
@@ -32,6 +32,7 @@ Not clear? ... Well, perhaps it will be more easy to compare the difference in a
 | -------------       | -------------                  | -------------                          |   
 | **Bullet Tech:**    |                                |                                        |          
 | Bullet Type:        | Standard                       | Pocket Rocket GyroJets Explosive                     | 
+| Bullet Damage:      | SMG Standard                   | -20% from Plasma Projectile Damage|
 | Fire Cost:          | 1 bullets cost 1 ammo          | 1 bullets cost 2 ammo                  | 
 | Bullet Speed:       | 20.000 (Lascaux) / 6.000 (Plasma Caster)| 5x Pocket Rocket Speed Boost  | 
 | Burst Count:        | 9 to 14 rounds                 | 5 rounds                               | 
@@ -47,6 +48,8 @@ Not clear? ... Well, perhaps it will be more easy to compare the difference in a
 | Skin:               | Lascaux (Vanilla)              | Prototype SX-1                         | 
 | Rarity:             | Unique                         | Unique                                 | 
 
+To summarize: To compensate the benefit from Pocket Rocket GyroJets Explosive bonus, the Plasma Projectile initial base damage is lowered by 20%.
+
 ![Prototype SX-1](https://imgur.com/lE00YK0.png "Don't worry guys... even if my screen capture show French text, my mods are in English")
 
 **Note:** Those who are a little bit curious will recognize the inspiration from the name (SX-1) and the skin color (Blue/Grey & White) coming straight from the Belgian comics book *The Adventures of Blake & Mortimer: The Secret of the Swordfish* by E.P. Jacobs.
@@ -55,11 +58,11 @@ This Mod has few options & fix, so feel free to use the BLCMM tool to select the
 - The Splash Format has a toggle option between Grenade/Rocket/Reaper (see Compatibility below)  
 - The Weapon Card has a toggle option between English/French.  
 - The Elemental Color Glow has a toggle option between:
-  - E-Tech Elemental Color (Vanilla)
-  - Explosive Elemental Color (Alternate) 
+  - Explosive Elemental Color (similar to  Torgue weapons) 
+  - E-Tech Elemental Color (Vanilla) 
 - Fix for Koby *Rarity Color*: *AfterMarket* (just in case if you use this old mod)  
 
-## Gibbed codes:
+### Gibbed codes:
 
 | Prefix               | Accessory       | Gibbed code                 | 
 | -------------        | -------------   | -------------               | 

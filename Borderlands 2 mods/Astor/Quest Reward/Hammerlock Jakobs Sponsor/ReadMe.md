@@ -1,4 +1,4 @@
-﻿## Hammerlock Jakobs Sponsor
+## Hammerlock Jakobs Sponsor
 
 ### What do this mod?
 
@@ -34,13 +34,13 @@ v1.0.2, October 15, 2018
 
 ### Compatibility:
 
-- 100% compatible with UCP 4.1
+- 100% compatible with [UCP Patch](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/Community%20Patch%20Team)
 - Should be compatible with most other mods, as long as they do not touch the Quest Reward.
 - This mod was tested -and work nicely!- with:
   - [UCP Patch](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/Community%20Patch%20Team)   
   - [Better Quest](https://github.com/BLCM/BLCMods/blob/master/Borderlands%202%20mods/Hemaxhu/Quest%20Rewards/Better%20Quests) by [Hemaxu](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/Hemaxhu) .
 
-To be sure to get this mod working correctly (as intended), don't forget to place it **AFTER** UCP 4.1 and Better Quest. 
+To be sure to get this mod working correctly (as intended), don't forget to place it **AFTER** *UCP Patch* and *Better Quest*. (*Better Loot* & *Cold Dead Hands* can be placed anywhere regarding my mod).  
 
 ### To do:
 

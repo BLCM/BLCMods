@@ -9,13 +9,13 @@
 			<comment>Release Date: 08 September 2018</comment>
 			<comment>Version: 1.1.2 - See ReadMe for Changelog ;)</comment>
 			<comment>Replace Unique SMG Dahl Lascaux</comment>
-			<comment>Unique SMG Dahl which fires GyroJet explosive bullet. </comment>
-			<comment>/!\ This Mod uses attributes from the Pistol GyroJet Explosive Bullet. Any mod that changes it will affect this mod. /!\ </comment>
-			<comment>/!\ If the weapon don't work as intended, revert the modification done previously to the Pistol GyroJet Explosive Bullet. /!\</comment>
+			<comment>Unique SMG Dahl which fires Torgue Pistol GyroJet explosive bullet. </comment>
+			<comment>/!\ This Mod uses attributes from the Torgue Pistol GyroJet explosive bullet. Any mod that changes it will affect this mod. /!\ </comment>
+			<comment>/!\ If the weapon don't work as intended, revert the modification done previously to the Torgue Pistol GyroJet explosive bullet. /!\</comment>
 			<category name="Where the magic happen (don't uncheck this)">
 				<category name="RAW Stats">
 					<category name="Attribute Slot Upgrades">
-						<code profiles="">set GD_Weap_SMG.Barrel.SMG_Barrel_Bandit_Lascaux AttributeSlotUpgrades ((SlotName="AccuracyMin",GradeIncrease=20,bActivateSlot=True),(SlotName="WeaponDamage",GradeIncrease=2,bActivateSlot=True))</code>
+						<code profiles="">set GD_Weap_SMG.Barrel.SMG_Barrel_Bandit_Lascaux AttributeSlotUpgrades ((SlotName="AccuracyMin",GradeIncrease=20,bActivateSlot=True),(SlotName="WeaponDamage",GradeIncrease=0,bActivateSlot=True))</code>
 					</category>
 					<category name="Weapon Card Attributes">
 						<category name="Custom Presentation">
@@ -23,13 +23,16 @@
 						</category>
 					</category>
 					<category name="Weapon Attribute Effects">
-						<code profiles="">set GD_Weap_SMG.Barrel.SMG_Barrel_Bandit_Lascaux WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponPerShotAccuracyImpulse',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-2.100000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponExtraShotChance',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.200000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=6.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-0.100000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))</code>
+						<code profiles="">set GD_Weap_SMG.Barrel.SMG_Barrel_Bandit_Lascaux WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-0.200000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponExtraShotChance',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.200000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=6.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponPerShotAccuracyImpulse',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-2.100000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))</code>
 					</category>
 					<category name="Zoom Attribute Effect">
 						<code profiles="">set GD_Weap_SMG.Barrel.SMG_Barrel_Bandit_Lascaux ZoomWeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponAutomaticBurstCount',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=6.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))</code>
 					</category>
 				</category>
-				<category name="Firing Mode GyroJet Bullet">
+				<category name="Explosive Damage Type">
+					<code profiles="">set GD_Weap_SMG.FiringModes.Bullet_SMG_Lascaux DamageTypeDefinition WillowDamageTypeDefinition'GD_Explosive.DamageType.DmgType_Explosive_Impact'</code>
+				</category>
+				<category name="Firing Mode Pistol GyroJet Bullet">
 					<category name="GyroJet Bullet Explosion">
 						<category name="Explosion Damage">
 							<code profiles="">set GD_Weap_Pistol.FiringModes.Bullets_Pistol_Torgue_GyroJet:Behavior_Explode_5 DamageFormula (BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',InitializationDefinition=None,BaseValueScaleConstant=1.000000)</code>
@@ -38,8 +41,8 @@
 							<code profiles="">set GD_Weap_Pistol.FiringModes.Bullets_Pistol_Torgue_GyroJet:Behavior_Explode_5 Definition ExplosionDefinition'GD_Explosions.explosive.Explosion_ExplosiveMaster'</code>
 						</category>
 						<category name="Explosion Radius">
-							<comment>Increases explosion radius by 50%.</comment>
-							<code profiles="">set GD_Weap_Pistol.FiringModes.Bullets_Pistol_Torgue_GyroJet:Behavior_Explode_5 DamageRadiusFormula (BaseValueConstant=90.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)</code>
+							<comment>Increases explosion radius by 50% (to be in range with Orudeon's Torgue Brand Tweaks).</comment>
+							<code profiles="">set GD_Weap_Pistol.FiringModes.Bullets_Pistol_Torgue_GyroJet:Behavior_Explode_5 DamageRadiusFormula (BaseValueConstant=90.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.250000)</code>
 						</category>
 						<category name="Explosive Impact">
 							<code profiles="">set GD_Weap_Pistol.FiringModes.Bullets_Pistol_Torgue_GyroJet:Behavior_Explode_5 DamageTypeDefinition WillowDamageTypeDefinition'GD_Explosive.DamageType.DmgType_Explosive_Impact'</code>
@@ -52,7 +55,7 @@
 						<code profiles="">set GD_Weap_SMG.FiringModes.Bullet_SMG_Lascaux ImpactResponses ((DamageSurfaceType=DMGSURFACE_Flesh,bDisableRegularBulletDamage=False,Behaviors=(Behavior_Explode'GD_Weap_Pistol.FiringModes.Bullets_Pistol_Torgue_GyroJet:Behavior_Explode_5')),(DamageSurfaceType=DMGSURFACE_Armor,bDisableRegularBulletDamage=False,Behaviors=(Behavior_Explode'GD_Weap_Pistol.FiringModes.Bullets_Pistol_Torgue_GyroJet:Behavior_Explode_5')),(DamageSurfaceType=DMGSURFACE_Shield,bDisableRegularBulletDamage=False,Behaviors=(Behavior_Explode'GD_Weap_Pistol.FiringModes.Bullets_Pistol_Torgue_GyroJet:Behavior_Explode_5')),(DamageSurfaceType=DMGSURFACE_Generic,bDisableRegularBulletDamage=False,Behaviors=(Behavior_Explode'GD_Weap_Pistol.FiringModes.Bullets_Pistol_Torgue_GyroJet:Behavior_Explode_5')))</code>
 						<code profiles="">set GD_Weap_SMG.FiringModes.Bullet_SMG_Lascaux OnAnyImpact (Behavior_Explode'GD_Weap_Pistol.FiringModes.Bullets_Pistol_Torgue_GyroJet:Behavior_Explode_5')</code>
 					</category>
-					<category name="GyroJet Bullet Speed Boost">
+					<category name="GyroJet Bullet Speed Boost (5x)">
 						<code profiles="">set GD_Weap_SMG.FiringModes.Bullet_SMG_Lascaux Speed 3500.000000</code>
 					</category>
 				</category>
@@ -161,15 +164,15 @@
 					<code profiles="">set Common_GunMaterials.Materials.SMG.Mati_DahlUniqueSMG_Lascaux ScalarParameterValues ((ParameterName="p_DecalRotate",ParameterValue=-1.383800,ExpressionGUID=(A=-276527909,B=1298581551,C=856978878,D=743944047)))</code>
 				</category>
 			</category>
-			<category name="Elemental  Emissive Color (open to change this option)" MUT="true">
-				<category name="Explosive Emissive Color (Alternative Version)">
+			<category name="Elemental Emissive Color (open to change this option)" MUT="true">
+				<category name="Explosive Emissive Color (similar to Torgue weapons)">
 					<code profiles="">set GD_Weap_SMG.Barrel.SMG_Barrel_Bandit_Lascaux MaterialVectorParameterValues ((ParameterName="p_EmissiveColor",ParameterValue=(R=3.480000,G=1.450000,B=0.460000,A=0.000000),ExpressionGUID=(A=1475816242,B=1139906328,C=-187360584,D=-1825963319)))</code>
 				</category>
 				<category name="E-Tech Emissive Color (Vanilla Version)">
 					<code profiles="">set GD_Weap_SMG.Barrel.SMG_Barrel_Bandit_Lascaux MaterialVectorParameterValues ((ParameterName="p_EmissiveColor",ParameterValue=(R=1.200000,G=0.000000,B=0.600000,A=1.000000),ExpressionGUID=(A=1475816242,B=1139906328,C=-187360584,D=-1825963319)))</code>
 				</category>
 			</category>
-			<category name="Fix for Koby Rarity Color Fix (just in case if you use it)">
+			<category name="Fix for Koby Rarity Color (just in case if you use it)">
 				<comment>Leave unchecked if you use the vanilla rarity system</comment>
 				<category name="Discord Solver (Lascaux) \"Aftermarket\" Rarity">
 					<code profiles="">set GD_Weap_SMG.Barrel.SMG_Barrel_Bandit_Lascaux rarity (BaseValueConstant=45.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)</code>

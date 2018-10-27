@@ -1,9 +1,9 @@
-﻿## Moxxi Signature Elegance Collection
+## Moxxi Signature Elegance Collection
 
 The idea is really very simple as it come from the *Santos*, a well know French jeweller watch.
 
 ![Moxxi Signature Elegance Gear ](https://imgur.com/h2lelSo.png "Don't worry guys... even if my screen capture show French text, my mods are in English")
-I reproduce the color from the golden screws inserted into a (silver) brushed steel bracelet, and the addition from the red similar to the little *Cartier* box...
+First, I take the red color similar to the little Cartier box, next I made the metal part looking like (silver) steel... add some discrete decorative gold parts like the golden screws inserted into a brushed steel bracelet... finally adapt the Moxxi logo in a more appropriate size when necessary... and repeat the same work on all the Moxxi weapons...
 
 ![Moxxi Signature Elegance Gear ](https://imgur.com/zCJd7K0.png "Don't worry guys... even if my screen capture show French text, my mods are in English")
 
@@ -19,7 +19,22 @@ Et Voila! Here is the *Moxxi Signature Elegance Collection*.
 
 ### To do:
 
-- [ ] Clean the code and remove all my ~~shitty~~ notes. 
+- [ ] Clean the code and remove all my ~~shitty~~ notes.
+
+### Other Recommended Mods:
+
+Some great mods to check for the *Moxxi Signature Elegance Collection*:
+
+- [SMG Dahl Discord Solver - Moxxi Edition](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/Astor/Custom%20Gear/SMG%20Dahl%20Discord%20Solver%20-%20Moxxi%20Edition) by [Astor](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/Astor). A SMG which shot GyroJet explosive bullet.
+
+![Discord Solver Moxxi Signature Classic and Cartier](https://imgur.com/W8VaHzJ.jpg "Don't worry guys... even if my screen capture show French text, my mods are in English")
+
+As this version of the Discord Solver is a Moxxi weapon, you can choose between 3 Moxxi Signature skin : the *Classic* skin, the *Elegance* skin or the *Pinky* skin.
+
+- [Plasma Caster Hyperion Finesse - Moxxi Edition](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/Astor/Custom%20Gear/Plasma%20Caster%20Hyperion%20Finesse%20-%20Moxxi%20Edition) by [Astor](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/Astor). A Plasma Caster which fire SEAPP (Smart Elemental Adaptive Plasma Projectile)  adapting his Elemental following the kind of impact.
+
+![Finesse Moxxi Signature Classic and Cartier](https://imgur.com/1ziVoro.jpg "Don't worry guys... even if my screen capture show French text, my mods are in English")
+As this version of the Finesse is a Moxxi weapon, you can choose between 3 Moxxi Signature skin : the Classic skin, the Elegance skin or the Pinky skin.  
 
 ### Credits & Thanks:
 
