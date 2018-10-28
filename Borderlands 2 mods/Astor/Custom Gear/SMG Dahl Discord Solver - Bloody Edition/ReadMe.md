@@ -13,14 +13,14 @@ This is where you can find it....
 **Note:** If you are too lazy to walk to Frostburn Canyon, you will find the Gibbed Codes below.
 
 
-## What special with this weapon?
+### What special with this weapon?
 
 
 - Keep (almost) of all the Lascaux Unique Dahl SMG specificity: very high firerate, variable burst-fire round, chance to shot two bullets for the cost of one ammo, etc... for more details, see [Borderlands Wiki](http://borderlands.wikia.com/wiki/Lascaux) 
 - Initial (too good) accuracy reduced, slower fireate, and slower reload, but...
-  - FireMode modified to shoot the Pistol GyroJet Explosive Bullet. 
+  - FireMode modified to shoot the *Pistol GyroJet Explosive Bullet*. 
   - The speed from the GyroJet Explosive bullet is 5x faster when fired by a SMG than a pistol (but it's still a lot more slower than a normal bullet fired by a SMG) 
-  - Chance  to shot two GyroJet explosive bullet simultaneously for the cost of one ammo (can be doubled if you use the Aaron00000's "Double Anarchy" mod).
+  - Chance to shot two GyroJet explosive bullet simultaneously for the cost of one ammo (can be doubled if you use the Aaron00000's "Double Anarchy" mod).
   - Impact Explosion boosted by Grenade Damage.
 - Cosmetic: 
     - MuzzleFlash upgraded to Explosive Bullet.
@@ -32,8 +32,9 @@ Not clear? ... Well, perhaps it will be more easy to compare the difference in a
 | -Tech Specs-        | Lascaux: Vanilla      | Discord Solver #1: Bloody   | 
 | -------------       | -------------         | -------------               |  
 | **Bullet Tech:**    |                       |                             |                           
-| Bullet Type:        | Standard              | GyroJets Explosive          | 
-| Fire Cost:          | 1 bullets cost 1 ammo | 1 bullets cost 1 ammo       | 
+| Bullet Type:        | Standard              | GyroJets Explosive          |
+| Bullet Damage:      | SMG Standard          | -20% from SMG Standard      |
+| Fire Cost:          | 1 bullet cost 1 ammo  | 1 bullet cost 1 ammo        | 
 | Bullet Speed:       | 20.000                | 5x GyroJet Speed Boost      | 
 | Burst Count:        | 9 to 14 rounds        | 9 to 14 rounds              | 
 | **Explosive Tech:** |                       |                             |                           
@@ -49,6 +50,8 @@ Not clear? ... Well, perhaps it will be more easy to compare the difference in a
 | Skin:               | Lascaux (Vanilla)     | Bloody / Grunge             | 
 | Rarity:             | Unique                | Unique                      | 	
 
+To summarize: To compensate the benefit from GyroJet Explosive bonus, the initial base damage is lowered by 20%.
+
 ![Discord Solver - Bloody Edition](https://imgur.com/TBkblD3.png "Don't worry guys... even if my screen capture show French text, my mods are in English")
 Of course, the weapon skin is grunge... What did you expect for a weapon which stay forgetten in a pool in a cave since a eternity? A pristine and shiny weapon perhaps? Well, no... she is dirty and all rusted! Be happy that this old submachine gun is still able to shot fews bullets!
 
@@ -57,19 +60,21 @@ This Mod has few options, so feel free to use the BLCMM tool to select the best 
 - The Splash Format has a toggle option between Grenade/Rocket/Reaper (see Compatibility below)
 - The Weapon Card has a toggle option between English/French.
 - The Bloody skin has a toogle option between:
-    - The Bloody Skin: Grunge and bloody
-    - The Grunge Skin: Grunge (without blood)
-    - The original Lascaux Skin
-- The Explosive Elemental Color Glow has a toggle option between On/Off  
+  - The *Bloody* Skin: Grunge and bloody
+  - The *Grunge* Skin: Grunge (without blood)
+  - The original Lascaux Skin
+- The Elemental Color Glow has a toggle option between:
+  - Explosive Elemental Color (similar to  Torgue weapons) 
+  - E-Tech Elemental Color (Vanilla)
 
 ... and few fix:
 
-- Fix for Orudeon's "Bayonet Enhancements" (Bayonet in slot 2) + Bayonet Buff
-- Fix for Orudeon's "Bayonet Enhancements" (Bayonet in slot 2)
-- Fix for Bayonet Buff in Slot 1
-- Fix for Koby "Rarity Color": AfterMarket (just in case if you use this old mod)  
+- Fix for Orudeon's *Bayonet Enhancements* (Bayonet in slot 2) + Orudeon's *Bayonet Buff*
+- Fix for Orudeon's *Bayonet Enhancements* (Bayonet in slot 2)
+- Fix for Orudeon's *Bayonet Buff* in Slot 1
+- Fix for Koby *Rarity Color*: *AfterMarket* rarity (just in case if you use this old mod)  
 
-## Gibbed codes:
+### Gibbed codes:
 
 | Prefix               | Accessory       | Gibbed code                 | 
 | -------------        | -------------   | -------------               | 
@@ -89,13 +94,15 @@ This Mod has few options, so feel free to use the BLCMM tool to select the best 
    - Totally revamp the FireMode
    - Clean the code  
 - v1.1.1, October 06, 2018  
-   - Added fix for Bayonet Buff in Slot 1: Bayonet gain 100% bonus melee damage (up from 50%)    
+   - Added fix for Bayonet Buff in Slot 1: Bayonet gain 100% bonus melee damage (up from 50%)
+- v1.1.2, October 25, 2018
+  - Correct the wrong line of code (was *Set WeaponTypeDefinition'GD_Weap_SMG.A_Weapons...* instead of *Set GD_Weap_SMG.A_Weapons...*) repeated 9 times by using copy/paste to go faster.-     
 
 ### Compatibility:
 
 - 100% compatible with [UCP Patch](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/Community%20Patch%20Team)
 
-- Should be compatible with most other mods, as long as they do not modify the Pocket Rocket Firing Mode.
+- Should be compatible with most other mods, as long as they do not modify the *Pistol Explosive GyroJet Bullet*.
 
 - Just be aware from the following:
 
@@ -105,13 +112,13 @@ This Mod has few options, so feel free to use the BLCMM tool to select the best 
   ```
   [ ] set GD_Weap_SMG.Barrel.SMG_Barrel_Bandit_Lascaux ZoomWeaponAttributeEffects ((AttributeToModify = AttributeDefinition'D_Attributes.Weapon.WeaponAutomaticBurstCount',ModifierType = MT_PreAdd,BaseModifierValue = (BaseValueConstant = 1.000000, BaseValueAttribute = None, InitializationDefinition = None, BaseValueScaleConstant = 1.000000)))
   ``` 
-  - This mod use the *Pistol GyroJet Firing Mode*, so if you use any mode that changes the attributes from the Pistol GyroJet Firing Mode, it will affect this mod, and obviously the firing of the Discord Solver. In this case, Just revert the modification done previously to the Pistol GyroJet Firing Mode.
+  - This mod use the *Pistol Explosive GyroJet Bullet*, so if you use any mode that changes the attributes from this Firing Mode, it will affect this mod, and obviously the firing of the *Discord Solver*. In this case, just revert the modification done previously to it.
   
   - This mode use Grenade Damage for the Splash Format, so if you are going to use the Discord Solver with a Siren character :warning: Maya :warning: , don't forget to toggle the Grenade Damage to Reaper Splash Damage.
    
 ### Other Recommended Mods:
 
-A great mod to check for the Discord Solver Bloody version:
+A great mod to check for the Discord Solver Bloody Edition:
 
 - [Double Anarchy v4](https://github.com/BLCM/BLCMods/blob/master/Borderlands%202%20mods/Aaron0000/Weapon-Item%20Parts%20and%20Accessories/DoubleAnarchyv4.txt) by [Aaron00000](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/Aaron0000) : Changes the SMGs accuracy accessory into the Double Accessory from Borderlands 1... and your Discord Solver will shot 2 GyroJet Explosive bullets at the cost on 2 ammo, and will have a chance to be doubled and shot 4 GyroJet Explosive bullets at the ridiculous cost on 2 ammo.
 

@@ -1,6 +1,6 @@
-## SMG Dahl Discord Solver (Moxxi Edition)
+## SMG Dahl Discord Solver - Moxxi Edition
  
-In their early days in their making of weapons, Dahl, in collaboration with Torgue created the Discord Solver, a SMG who shot GyroJet explosive bullet. 
+In their early days in their making of weapons, Dahl, in collaboration with Torgue created the Discord Solver, a SMG which shot GyroJet explosive bullet. 
  
 Unfortunately, the agreement between the two weapons manufacturers did not last long, and the production of the SMG stopped quickly -How ironic for a weapon that's named Discord Solver!- and Torgue seized the patents to create the Pocket Rocket.
 
@@ -13,12 +13,12 @@ This is where you can find it...
 ![Discord Solver - Where to find it](https://imgur.com/cQkATCz.jpg "Don't worry guys... even if my screen capture show French text, my mods are in English")
 
 
-## What special with this weapon?
+### What special with this weapon?
 - Keep (almost) of all the Lascaux Unique Dahl SMG specificity: very high firerate, variable burst-fire round, chance to shot two bullets for the cost of one ammo, etc... for more details, see [Borderlands Wiki](http://borderlands.wikia.com/wiki/Lascaux) 
   - Initial (too good) accuracy reduced, slower fireate, and slower reload, but...
-    - FireMode modified to shoot the Pistol GyroJet Explosive Bullet. 
+    - FireMode modified to shoot the *Pistol GyroJet Explosive Bullet*. 
     - The speed from the GyroJet Explosive bullet is 5x faster when fired by a SMG than a pistol (but it's still a lot more slower than a normal bullet fired by a SMG) 
-    - Chance  to shot two GyroJet explosive bullet simultaneously for the cost of one ammo (can be doubled if you use the Aaron00000's "Double Anarchy" mod).
+    - Chance to shot two GyroJet explosive bullet simultaneously for the cost of one ammo (can be doubled if you use the Aaron00000's "Double Anarchy" mod).
     - Impact Explosion boosted by Grenade Damage.
 - Cosmetic:
   - MuzzleFlash upgraded to Explosive Bullet.
@@ -35,6 +35,7 @@ Not clear? ... Well, perhaps it will be more easy to compare the difference in a
 | -------------       | -------------         |  -------------            |  
 | **Bullet Tech:**    |                       |                           | 
 | Bullet Type:        | Standard              | GyroJets Explosive        |
+| Bullet Damage:      | SMG Standard          | -20% from SMG Standard    |
 | Fire Cost:          | 1 bullet cost 1 ammo  | 1 bullet cost 1 ammo      |
 | Bullet Speed:       | 20.000                | 5x GyroJet Speed Boost    |
 | Burst Count:        | 9 to 14 rounds        | 9 to 14 rounds            | 
@@ -52,9 +53,11 @@ Not clear? ... Well, perhaps it will be more easy to compare the difference in a
 | Skin:               | Lascaux (Vanilla)     | Moxxi Signature           | 
 | Rarity:             | Unique                | Moxxi                     | 	
 
+To summarize: To compensate the benefit from GyroJet Explosive bonus, the initial base damage is lowered by 20%.
+
 ![Discord Solver Moxxi Signature Classic and Cartier](https://imgur.com/W8VaHzJ.jpg "Don't worry guys... even if my screen capture show French text, my mods are in English")
 
-**Note:** As this version of the Discord Solver is a Moxxi weapon, you can choose between 3 Moxxi Signature skin : the *Classic* skin, the *Elegance* skin or the *Pinky* skin
+**Note:** As this version of the Discord Solver is a Moxxi weapon, you can choose between 3 Moxxi Signature skin : the *Classic* skin, the *Elegance* skin or the *Pinky* skin.
 
 ### Options: 
 
@@ -62,20 +65,22 @@ This Mod has few options & fix, so feel free to use the BLCMM tool to select the
 
 - The Splash Format has a toggle option between Grenade/Rocket/Reaper (see Compatibility below)
 -  The Weapon Card has a toggle option between English/French.
-- The Explosive Elemental Color Glow has a toggle option between On/Off
-- The Discord Solver Moxxi Edition can become the reward given by Moxxi for the mission "Hell Hath No Fury" in Opportunity (see picture below).
+- The Elemental Color Glow has a toggle option between:
+  - Explosive Elemental Color (similar to Torgue weapons) 
+  - E-Tech Elemental Color (Vanilla)
 - The Moxxi skin has a toggle option between:
-  - The Moxxi Signature *Classic* Edition ("Red Fire" in the RL Creamer/SG Heart Breaker style) which is timeless and can be used in any occasion.
-  - The Moxxi Signature *Elegance* Edition ("Red Cartier" in the style from the renowned French jeweler) which is very stylish and sophisticated, and by the way the all time favorite from Aurelia the Baroness.
-  - The Moxxi Signature *Pinky* Edition: To feel the glamour in pink, like a Barbie girl in a Barbie world.
+  - The *Moxxi Signature **Classic** Edition* ("Red Fire" in the RL Creamer/SG Heart Breaker style) which is timeless and can be used in any occasion.
+  - The *Moxxi Signature **Elegance** Edition* ("Red Cartier" in the style from the renowned French jeweler) which is very stylish and sophisticated, and by the way the all time favorite from Aurelia the Baroness.
+  - The *Moxxi Signature **Pinky** Edition*: (*Outrageous Pink* in the Good Touch/SlowHand style) to feel the glamour in pink, like a Barbie girl in a Barbie world.
+- The *Discord Solver Moxxi Edition* can become the reward given by Moxxi for the mission "Hell Hath No Fury" in Opportunity (see picture below).
 
 ... and few fix:
 
-- Fix for Akathis "No More Moxxi Lifesteal" - 1.5% passive health regeneration instead of 2.5% Lifesteal
-- Fix for Orudeon's "Bayonet Enhancements" (Bayonet in slot 2) + Bayonet Buff
-- Fix for Orudeon's "Bayonet Enhancements" (Bayonet in slot 2)
+- Fix for Akathis *No More Moxxi Lifesteal* - 1.5% passive health regeneration instead of 2.5% Lifesteal
+- Fix for Orudeon's *Bayonet Enhancements* (Bayonet in slot 2) + Bayonet Buff
+- Fix for Orudeon's *Bayonet Enhancements* (Bayonet in slot 2)
 - Fix for Bayonet Buff in Slot 1
-- Fix for Koby "Rarity Color Fix": Moxxi Rarity (just in case if you use this old mod)
+- Fix for Koby *Rarity Color*: *Moxxi* Rarity (just in case if you use this old mod)
 
 ![Discord Solver as reward for Moxxi mission](https://imgur.com/5f32G5e.jpg "Don't worry guys... even if my screen capture show French text, my mods are in English") 
 
@@ -85,24 +90,24 @@ This Mod has few options & fix, so feel free to use the BLCMM tool to select the
 
 - 100% compatible with [UCP Patch](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/Community%20Patch%20Team)
 
-- Should be compatible with most other mods, as long as they do not modify the Pocket Rocket Firing Mode.
+- Should be compatible with most other mods, as long as they do not modify the *Pistol Explosive GyroJet Bullet*.
 
 - Just be aware from the following:
 
   - To be sure to get the fix Orudeon's Bayonet Enhancements and/or Orudeon's Bayonet Buff working correctly (as intended), don't forget to place my mod **AFTER** Orudeon's Bayonet Enhancements & Bayonet Buff. 
  
-  - This Mod **KEEP** the specific burst from the Lascaux, so if you use the Bandit Brand Tweaks v1.2 by Orudeon, there is a option that reduce the burst to five-shot bursts.  To get back the specific burst, just open your Orudeon's Bandit Brand Tweaks folder, go to: *SMG/Burst Count/* (if you use the Gears Overhaul Orudeon's Mod v1.35, the path will be: *Brands Tweaks/Bandit Brand Tweaks v1.2 by Orudeon/SMG/Burst Count/*) and uncheck the following line:  
+  - This Mod **KEEP** the specific burst from the *Unique SMG Lascaux*, so if you use the Bandit Brand Tweaks v1.2 by Orudeon, there is a option that reduce the burst to five-shot bursts. To get back the specific burst, just open your Orudeon's Bandit Brand Tweaks folder, go to: *SMG/Burst Count/* (if you use the Gears Overhaul Orudeon's Mod v1.35, the path will be: *Brands Tweaks/Bandit Brand Tweaks v1.2 by Orudeon/SMG/Burst Count/*) and uncheck the following line:  
   ```
   [ ] set GD_Weap_SMG.Barrel.SMG_Barrel_Bandit_Lascaux ZoomWeaponAttributeEffects ((AttributeToModify = AttributeDefinition'D_Attributes.Weapon.WeaponAutomaticBurstCount',ModifierType = MT_PreAdd,BaseModifierValue = (BaseValueConstant = 1.000000, BaseValueAttribute = None, InitializationDefinition = None, BaseValueScaleConstant = 1.000000)))
   ``` 
-  - This mod use the *Pistol GyroJet Firing Mode*, so if you use any mode that changes the attributes from the Pistol GyroJet Firing Mode, it will affect this mod, and obviously the firing of the Discord Solver. In this case, Just revert the modification done previously to the Pistol GyroJet Firing Mode.
+  - This mod use the *Pistol Explosive GyroJet Bullet*, so if you use any mode that changes the attributes from this Firing Mode, it will affect this mod, and obviously the firing of the *Discord Solver*. In this case, just revert the modification done previously to it.
   
   - This mode use Grenade Damage for the Splash Format, so if you are going to use the Discord Solver with a Siren character :warning: Maya :warning: , don't forget to toggle the Grenade Damage to Reaper Splash Damage.
    
   - This Mod as a option which make the *Discord Solver - Moxxi Edition* becoming the reward given by Moxxi for the mission *Hell Hath No Fury* in Opportunity, so be sure that you place this mod **AFTER** my mod *Double Quest Reward Redux* or any other mod modifying the Quest Reward.
  
 
-## Gibbed codes:
+### Gibbed codes:
 
 | Prefix               | Accessory       | Gibbed code                 | 
 | -------------        | -------------   | -------------               | 
@@ -124,14 +129,20 @@ This Mod has few options & fix, so feel free to use the BLCMM tool to select the
 - v1.1.1, October 06, 2018  
   - Added fix for Bayonet Buff in Slot 1: Bayonet gain 100% bonus melee damage (up from 50%)  
 - v1.1.2, October 15, 2018  
-  - Added Moxxi Signature *Pinky* Skin  
-
+  - Added Moxxi Signature *Pinky* Skin   
+- v1.1.3, October 25, 2018
+  - Correct the wrong line of code (was *Set WeaponTypeDefinition'GD_Weap_SMG.A_Weapons...* instead of *Set GD_Weap_SMG.A_Weapons...*) repeated 9 times by using copy/paste to go faster.
 ### Other Recommended Mods:
 
-A great mod to check for the Discord Solver Moxxi version:
+Some great mods to check for the *Discord Solver - Moxxi Edition*:
 
 - [No More Moxxi Lifesteal v2.0](https://github.com/BLCM/BLCMods/blob/master/Borderlands%202%20mods/Akathris/NoMoreMoxxiLifestealv2.0.txt) by [Akathris](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/Akathris). His Mod is self explanatory: removes lifesteal from Moxxi weapons and changes it to passive health regeneration.
-  
+
+- [Plasma Caster Hyperion Finesse - Moxxi Edition](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/Astor/Custom%20Gear/Plasma%20Caster%20Hyperion%20Finesse%20-%20Moxxi%20Edition) by [Astor](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/Astor). A Plasma Caster which fire SEAPP (Smart Elemental Adaptive Plasma Projectile)  adapting his Elemental following the kind of impact.
+
+![Finesse Moxxi Signature Classic and Cartier](https://imgur.com/1ziVoro.jpg "Don't worry guys... even if my screen capture show French text, my mods are in English")
+As this version of the Finesse is a Moxxi weapon, you can choose between 3 Moxxi Signature skin : the Classic skin, the Elegance skin or the Pinky skin.
+
 ### To do:
 
 - [x] Clean the code and remove all my ~~shitty~~ notes. 
