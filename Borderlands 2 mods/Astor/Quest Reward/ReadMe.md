@@ -1,15 +1,11 @@
-﻿This Read Me is just here as a quick synopsis, for detailed informations, each Mod has is own Read Me (and even a Changelog), so don't hesitate -whoosh!- to give a look on it.
+This Read Me is just here as a quick synopsis, for detailed informations, each Mod has is own Read Me (and even a Changelog), so don't hesitate -whoosh!- to give a look on it.
 
  * * * * *
  
 ## [Quest Reward] Double Quest Reward Redux
 
- - Upgrade the customization skin/head rewards to a Blue weapon/item rewards for 9 missions.
- - Choice between 2 Unique weapons/items instead of a single one, so it will double the chance to get a Unique weapon/item with desired parts.
- - In the mission Uncle Teddy, if you give the plans to Hyperion you will have 3 options: 
-   - the choice between 2 Bitch (Legendary SMG Hyperion) 
-   - the choice between 2 Commerce (Unique Shock SMG Hyperion)
-   - the choice between 1 Bitch (Legendary SMG Hyperion) or 1 Commerce (Unique Shock SMG Hyperion)
+- Give you the choice between 2 Unique weapons/items instead of a single one, so it will double the chance to get a Unique weapon/item with desired parts.
+- Upgrade the customization skin/head rewards to a Blue weapon/item rewards for 9 missions.
  
  * * * * *
  
