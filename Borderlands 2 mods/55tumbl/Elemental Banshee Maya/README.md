@@ -115,6 +115,11 @@ Thanks to the people who made this kind of modding possible and practical (Shado
 Thanks to Apocalyptech for his BPD graph generator, this thing is so damn useful.
 
 # Change log
+
+[2018-10-29] v1.4:
+* Fixed a bug that deactivated Nephilim when riding a vehicle (for real this time, hopefully);
+* Fixed a visual issue with Siren Song stacks flickering when in a vehicle.
+
 [2018-10-08] v1.3:
 * Phaselock now stays active for 5 seconds after hitting an immune target (and activates thus Shriek, Elated, and Pins and Needles);
 * Direct damage of Phaselock vs. immune target is slightly decreased to compensate;
