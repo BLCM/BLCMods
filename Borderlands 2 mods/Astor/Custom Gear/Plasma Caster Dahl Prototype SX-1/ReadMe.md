@@ -103,9 +103,9 @@ A great mod to check for the *Plasma Caster Dahl Prototype SX-1*:
 
 ### To do:
 
-- [ ] Make a nice and shiny SX-1 skin.
+- [x] Make a nice and shiny SX-1 skin.
 - [ ] Clean the code and remove all my ~~shitty~~ smart notes. 
-- [ ] Make (again) few kills to be sure that the submachine gun work correctly.
+- [ ] Make (again) few kills to be sure that the Plasma Caster work correctly.
   
 ### Credits & Thanks:
 
