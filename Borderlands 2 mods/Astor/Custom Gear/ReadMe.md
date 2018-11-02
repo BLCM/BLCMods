@@ -1,4 +1,4 @@
-﻿This Read Me is just here as a quick synopsis, for detailed informations, each Mod has is own Read Me (and even a Changelog), so don't hesitate -whoosh!- to give a look on it.
+This Read Me is just here as a quick synopsis, for detailed informations, each Mod has is own Read Me (and even a Changelog), so don't hesitate -whoosh!- to give a look on it.
 
 
 * * * * *
@@ -9,9 +9,15 @@ The Prototype SX-1 was great and really a powerful and dangerous weapon, except 
 
  * * * * *
 
-## [Custom Gear] Plasma Caster Hyperion Finesse - Circuit Board Edition
+## [Custom Weapon] Plasma Caster Hyperion Finesse - Circuit Board Edition
 
 In their early days in their making of weapons, Hyperion, seized Alien Technology plans and created the Finesse: a Plasma Caster which fire SEAPP (Smart Elemental Adaptive Plasma Projectile), a Alien Plasma Projectile which adapt his Elemental following the kind of impact: Incendiary on flesh / Shock on shield / Corrosive on armor. 
+
+ * * * * *
+
+## [Custom Weapon] Plasma Caster Hyperion Finesse - Moxxi Edition
+
+A Plasma Caster which fire SEAPP (Smart Elemental Adaptive Plasma Projectile), a Alien Plasma Projectile which adapt his Elemental following the kind of impact: Incendiary on flesh / Shock on shield / Corrosive on armor, with, as usual for the Vanilla Moxxi weapons, the benefice of 70% Critical hit bonus + 2.5% lifesteal on damage dealt.
 
  * * * * *
  
@@ -23,13 +29,19 @@ Unfortunately, the agreement between the two weapons manufacturers did not last 
 
 Anyway, remnant of the past, a *"lost"* Discord Solver (probably dropped by a bandit?) can still be found... submerged in a shallow pool in Frostburn Canyon.
 
-* * * * *
-
 ## [Custom Weapon] SMG Dahl Discord Solver - Moxxi Edition
 
 It would seem that Moxxi still has a specimen of the Discord Solver in her private Signature collection of weapons, but no one has ever seen it, not even Marcus... so maybe it's just a legend after all? 
  
 ... or perhaps this weapon can become the reward given by Moxxi for the mission "Hell Hath No Fury" in Opportunity...  Who know? 
+
+* * * * *
+
+## [Custom Weapon] SMG Hyperion Splish Splash - Stendhal Edition
+
+A SMG which fire SEAMB (Smart Elemental Adaptive Maliwan Bullet), a Elemental Explosive bullet adapting his Elemental following the kind of impact: Incendiary on flesh / Shock on shield / Corrosive on armor... and Explosive on anything else.
+
+
 
 * * * * *
  
