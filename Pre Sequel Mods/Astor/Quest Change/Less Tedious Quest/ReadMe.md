@@ -1,21 +1,19 @@
-## TPS - Moxxi Signature Elegance Collection
+## Less Tedious Quest
 
-Is that the Moxxi's weapons skins in TPS? ... seriously? ... but not ever 2 skins are the same!?! 
+As the title suggests it, makes a few timed **failable** optional mission less tedious to complete:
 
-![TPS - Moxxi Signature Elegance Gear](https://imgur.com/JbYPZTA.jpg "Don't worry guys... even if my screen capture show French text, my mods are in English")
+- **Option #1: Extended time**
+  - **Pop Racing** in Triton Flats - Time limit increased to 3:00 (instead of 1:30)
+  - **Recruitement Drive** in Triton Flats - Time limit increased to 9:00 (instead of 4:30)
+  - **The Don** in Vorago Solitude - Time limit increased to 6:00 (instead of 4:30)
 
-Argh! It's not pretty at all... Let's fix that!
-
-![TPS - Moxxi Signature Elegance Gear idea](https://imgur.com/B8enEhH.jpg "Don't worry guys... even if my screen capture show French text, my mods are in English")
-
-First, I take the red color similar to the little *Cartier* box, next I made the metal part looking like (silver) steel... add some discrete decorative gold parts like the golden screws inserted into a brushed steel bracelet... finally adapt the Moxxi logo in a more appropriate size when necessary... and repeat the same work on all the Moxxi weapons...
-
-![TPS - Moxxi Signature Elegance Gear](https://imgur.com/fHX8Ljf.jpg "Don't worry guys... even if my screen capture show French text, my mods are in English")
-
-Et Voila! Here is the *TPS - Moxxi Signature Elegance Collection*... and now the Moxxi's weapons are all uniform and look like an actual manufacturer.
+- **Option #2: No time limit**
+  - **Pop Racing** in Triton Flats - Time limit increased to 3:00 (instead of 1:30)
+  - **Recruitement Drive** in Triton Flats - No Time limit 
+  - **The Don** in Vorago Solitude - No time limit 
 
 ### Changelog:
-- v1.0.0, October 20, 2018
+- v1.0.0, November 5, 2018
   - Initial public release
  
 ### Compatibility:
@@ -24,8 +22,7 @@ Et Voila! Here is the *TPS - Moxxi Signature Elegance Collection*... and now the
 
 ### To do:
 
-- [x] Clean the code and remove all my ~~shitty~~ smart notes.
-- [ ] Rotate some logo position (Heart Breaker, Creamer, Good Touch, Bad Touch)... but for now, TPS totally ignore my "DecalRotate" command :disappointed:
+- [ ] Clean the code and remove all my ~~shitty~~ smart notes.
 
 ### Credits & Thanks:
 
