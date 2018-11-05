@@ -34,6 +34,12 @@ use their pre-speedup timing.  So especially on the larger chests,
 you'll probably get sound effects a second or two after the chest
 is already opened.
 
+Also: apparently this will prevent the second compass piece in the
+Scarlett DLC (in Hayter's Folly) from being given out.  Will
+fix that "shortly", where "shortly" hopefully equals early
+November 2018.  If it's later than that and you still see this note
+in here, hop on the Discord and berate me about it.
+
 License
 =======
 
