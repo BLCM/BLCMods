@@ -335,6 +335,9 @@ Bugs
 * The mission Medical Mystery: X-Com-municate is supposed to reward an
   E-Tech pistol, but because we add gemstones into the E-Tech pool (at least
   by default), you may end up with a gemstone weapon instead.
+* There's a syntax error in `Base Mod Configuration -> Better Enemy Drops ->
+  Better Miscellaneous Boss Drops -> Butt Stallion Endgame Improvements`.
+  Fix it!
 
 TODO
 ====
