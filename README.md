@@ -62,4 +62,4 @@ If you wish to contribute a modpack (or a compilation of mods):
 
 - Installing the files follows methods discussed on the [Wiki](https://github.com/BLCM/BLCMods/wiki/Tutorial%3A-Enabling-Console)
 
-#### The usage of "master files" has become strongly discouraged as Borderlands 2/TPS modding has become more complex. The use of master files will often end up breaking parts or all of the mods you're trying to use. Instead, always import mods into FilterTool, and only execute the single patch file that it saves.
+#### The usage of "master files" has become strongly discouraged as Borderlands 2/TPS modding has become more complex. The use of master files will often end up breaking parts or all of the mods you're trying to use. Instead, always import mods into BLCMM, and only execute the single patch file that it saves.
