@@ -21,6 +21,7 @@ This mod itself is licensed under
 
 Changelog
 =========
+
 **v1.0.2**, November 6, 2018:
  * Figured out a way to allow splash damage to destroy the blocks as
    well, actually!  A very short-lived v1.0.1, it seems.
