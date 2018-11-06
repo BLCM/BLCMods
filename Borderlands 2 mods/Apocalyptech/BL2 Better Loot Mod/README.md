@@ -430,8 +430,9 @@ for the full text.
 Changelog
 =========
 
-**v1.3.2**, unreleased:
- * Nothing yet
+**v1.3.2**, November 6, 2018:
+ * Fixed a small typo which would otherwise cause an error to be flagged in a
+   forthcoming version of BLCMM.  (No actual functional changes, though.)
 
 **v1.3.1**, August 24, 2018 (commit `fa26171a4536f54becc59ef426333ebfdd8db070`):
  * The Ogre is now properly considered a Legendary, not a Unique, and will
