@@ -427,7 +427,10 @@ for the full text.
 Changelog
 =========
 
-**v1.3.2**, November 6, 2018:
+**v1.3.3**, unreleased:
+ * Nothing yet.
+
+**v1.3.2**, November 6, 2018 (commit `2e729a97a0279f6815254242a65649f9a4438f0e`):
  * Fixed a small typo which would otherwise cause an error to be flagged in a
    forthcoming version of BLCMM.  (No actual functional changes, though.)
 
