@@ -1,19 +1,11 @@
-## Less Tedious Quest
+## No More Reload Message
 
-As the title suggests it, makes a few timed **-failable!-** optional mission less tedious to complete:
+As the title suggests it, removes the *Reload Message* which pop-up (too) often on the screen!
 
-- **Option #1: *Extended time***
-  - ***Pop Racing*** in Triton Flats - Time limit increased to 3:00 (instead of 1:30)
-  - ***Recruitement Drive*** in Triton Flats - Time limit increased to 9:00 (instead of 4:30)
-  - ***The Don*** in Vorago Solitude - Time limit increased to 6:00 (instead of 4:30)
-
-- **Option #2: *No time limit***
-  - ***Pop Racing*** in Triton Flats - Time limit increased to 3:00 (instead of 1:30)
-  - ***Recruitement Drive*** in Triton Flats - No Time limit 
-  - ***The Don*** in Vorago Solitude - No time limit 
+**Note:** Just removes the *Reload Message*, **NOT** the necessity to reload your weapon
 
 ### Changelog:
-- v1.0.0, November 5, 2018
+- v1.0.0, November 6, 2018
   - Initial public release
  
 ### Compatibility:
@@ -22,6 +14,7 @@ As the title suggests it, makes a few timed **-failable!-** optional mission les
 
 ### To do:
 
+- [ ] Check if I don't forget a Unique weapons somewhere in the game (maybe in DLC?).
 - [ ] Clean the code and remove all my ~~shitty~~ smart notes.
 
 ### Credits & Thanks:

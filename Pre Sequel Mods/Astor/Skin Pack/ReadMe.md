@@ -2,13 +2,13 @@ This Read Me is just here as a quick synopsis, for detailed informations, each M
 
 ## [Skin Pack] Moxxi Signature Elegance Collection
 
-Inspired from the *Santos*, a well know French jeweler watch... with the color from the golden screws inserted into a (silver) brushed steel bracelet, and the addition from the red similar to the little *Cartier* box... Et voila!
+- Inspired from the *Santos*, a well know French jeweler watch... with the color from the golden screws inserted into a (silver) brushed steel bracelet, and the addition from the red similar to the little *Cartier* box... Et voila!
 
 * * * * *
  
 ## Acknowledgement
 
-A ~~big~~ huge thanks to @LightChaosman and his great - [BLCMM (Borderlands Community Mod Manager) tool](https://github.com/BLCM/BLCMods/wiki/Borderlands-Community-Mod-Manager) tool who make the Mods creation a real pleasure. 
+A ~~big~~ huge thanks to @LightChaosman and his great - [BLCMM (Borderlands Community Mod Manager)](https://github.com/BLCM/BLCMods/wiki/Borderlands-Community-Mod-Manager) tool who make the Mods creation a real pleasure. 
 
  * * * * *
  

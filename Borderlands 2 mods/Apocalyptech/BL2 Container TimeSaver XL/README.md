@@ -34,6 +34,18 @@ use their pre-speedup timing.  So especially on the larger chests,
 you'll probably get sound effects a second or two after the chest
 is already opened.
 
+TODO
+====
+
+v1.0.0 of this mod missed a few things needed for two chests
+from the Scarlett DLC, containing pieces of the compass needed
+to get through the mission quests.  Obviously my generation of
+this thing missed those, so it's possible it missed some others.
+Should do a more thorough search through the data to find out
+if there's anything else I missed.  (Also I should move over
+to using TPS-style delay modifications instead of just setting
+nearly everything to zero, really.)
+
 License
 =======
 
@@ -44,6 +56,12 @@ See [COPYING-mods.txt](../COPYING-mods.txt) for the full text.
 
 Changelog
 =========
+
+**v1.0.1** - November 6, 2018
+ * Fixed the compass piece container in Hayter's Folly (which was otherwise
+   blocking completion of the Scarlett DLC story missions)
+ * Fixed the compass piece container on the Hyperion convoy in Wurmwater (which
+   was otherwise blocking completion of the Scarlett DLC story missions)
 
 **v1.0.0** - August 16, 2018
  * Initial Release
