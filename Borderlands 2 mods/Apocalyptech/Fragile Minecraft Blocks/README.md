@@ -2,10 +2,8 @@ Fragile Minecraft Blocks
 ========================
 
 Causes the Minecraft blocks (in the little secret area of Caustic Caverns) to
-be extremely fragile.  Damage of nearly any sort will destroy them immediately
-now: a single melee strike will do, but also most guns, etc.  Area-effect damage,
-such as from a Splasher Blaster, or some grenade types, will still *not* destroy
-these blocks, though.
+be extremely fragile.  Damage of any sort will destroy them immediately now:
+a single melee strike will do, but also guns, grenades, and anything else.
 
 Happy mining!
 
@@ -23,6 +21,9 @@ This mod itself is licensed under
 
 Changelog
 =========
+**v1.0.2**, November 6, 2018:
+ * Figured out a way to allow splash damage to destroy the blocks as
+   well, actually!  A very short-lived v1.0.1, it seems.
 
 **v1.0.1**, November 6, 2018:
  * Updated README and description, to reflect that area-effect damage
