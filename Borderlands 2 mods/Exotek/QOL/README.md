@@ -16,6 +16,8 @@
 - Makes all legendary Class Mods from UVHM.U2 to have red text special/passive effects.
 - [Screenshots](https://imgur.com/a/nktSD3L)
 
+- Now **UCP compatible**. Choose the version you want to use via MUT categories. UCP versions **disabled** by default.
+
 ### Commando
 
 **[Legendary Engineer]** *''Engineered for perfection.''*
