@@ -26,6 +26,9 @@
 **[Legendary Pointman]** *''Point taken.''*
 - Increases your **Elemental Effect Damage Resistance** by **100%**.
 
+> **[Legendary Grenadier]** *''Explosive results.''*
+> - Slowly **regenerates grenade ammo** over time.
+
 **[Legendary Ranger]** *''Wanna know why I got these scars?''*
 - Increases **Shield Capacity** of all your shields by **+100%**.
 
