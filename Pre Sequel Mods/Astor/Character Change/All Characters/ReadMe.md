@@ -1,8 +1,8 @@
 This Read Me is just here as a quick synopsis, for detailed informations, each Mod has is own Read Me (and even a Changelog), so don't hesitate -whoosh!- to give a look on it.
 
-## [Quality of Life] No More Reload Message
+## [Character Change] Throw Grenade in FFYL
 
-- As the title suggests it, this simple Mod removes the (annoying) *Reload Message* which pop-up (too) often on the screen!
+- As the title suggests it, now you can throw grenades when you are in FFYL, and with any character.
 
 * * * * *
  

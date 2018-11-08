@@ -6,10 +6,19 @@ You are on TPS-Mods repository, where you can find all my Pre-Sequel (AKA Border
 
 This Read Me is just here as a quick synopsis, for detailed informations, each Mod has is own Read Me (and even a Changelog), so don't hesitate -whoosh!- to give a look on it.
 
+## Characters Change:
+
+### All Characters:
+
+- **Throw Grenade in FFYL:** Now you can throw grenades when you are in FFYL.
+
+
+* * * * *
+
 
 ## Quality of Life: 
 
-- **No More Reload Message:** Removes the Reload message which pop-up (too) often on the screen!
+- **No More Reload Message:** Removes the (annoying) *Reload Message* which pop-up (too) often on the screen!
 
 
 * * * * *
@@ -22,7 +31,7 @@ This Read Me is just here as a quick synopsis, for detailed informations, each M
  
 ## Skin Pack:
 
-- **Moxxi Signature Elegance Collection:** the red similar to the little *Cartier* box, with discrete golden part inserted into (silver) brushed steel, this is the French elegance.
+- **Moxxi Signature Elegance Collection:** The red similar to the little *Cartier* box, with discrete golden part inserted into (silver) brushed steel, this is the French elegance.
  
 * * * * *
  

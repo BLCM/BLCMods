@@ -26,11 +26,11 @@ As the title suggests it, makes a few timed **-failable!-** optional mission les
 
 ### Credits & Thanks:
 
-Without the great [Dave'S BL2 Skin Modding Guide](https://cdn.rawgit.com/BLCM/BLCMods/bb1933f7/Borderlands%202%20mods/Dave/DAVE%27S%20BL2%20SKIN%20MODDING%20GUIDE.pdf) ... I won't be able to make any skin, so thanks for your great work, @DaveRabbit
+Inspired by [Quest Fix](https://github.com/BLCM/BLCMods/blob/master/Borderlands%202%20mods/FromDarkHell/Quest%20Changes/QuestFix.txt) created for BL2 by [FromDarkHell](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/FromDarkHell). I just adapted his idea to the few timed optional mission from TPS. All the credits go to him for the idea.
   
 ### Note: 
 
-Any critique would be appreciated as I am still beginner to make weapon skin... and by the way, please leave constructive criticism if you make a video. 
+Any critique would be appreciated as I am still beginner to make Mods... and by the way, please leave constructive criticism if you make a video. 
 Enjoy!
 
 ### Disclaimer
