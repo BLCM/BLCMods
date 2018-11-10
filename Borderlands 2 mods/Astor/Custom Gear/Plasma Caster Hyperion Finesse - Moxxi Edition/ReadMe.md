@@ -116,7 +116,7 @@ Some great mods to check for the *Finesse - Moxxi Edition*:
 
 - [No More Moxxi Lifesteal v2.0](https://github.com/BLCM/BLCMods/blob/master/Borderlands%202%20mods/Akathris/NoMoreMoxxiLifestealv2.0.txt) by [Akathris](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/Akathris). His Mod is self explanatory: removes lifesteal from Moxxi weapons and changes it to passive health regeneration.
 
-- [SMG Dahl Discord Solver - Moxxi Edition](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/Astor/Custom%20Gear/SMG%20Dahl%20Discord%20Solver%20-%20Moxxi%20Edition) by [Astor](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/Astor). A SMG which shot GyroJet explosive bullet.
+- [SMG Dahl Discord Solver - Moxxi Edition](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/Astor/Custom%20Gear/SMG%20Dahl%20Discord%20Solver%20-%20Moxxi%20Edition) by... well... [myself](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/Astor). A SMG which shot GyroJet explosive bullet.
  
 ![Discord Solver Moxxi Signature Classic and Cartier](https://imgur.com/W8VaHzJ.jpg "Don't worry guys... even if my screen capture show French text, my mods are in English")
 

@@ -31,20 +31,20 @@ Ah! You noticed that *"given by Moxxi as reward for the mission Hell Hath No Fur
 
 Look on the example with picture below to understand why:
 
-Left picture: The mod *SMG Dahl Discord Solver - Moxxi Edition* is placed **BEFORE** the Mod *Double Quest Rewards*, and the option which give the choice betwen 2 *SMG Dahl Discord Solver - Moxxi Edition* appear in *Dark Green*, that's mean, that another bunch of code overwrite this command (in this case the choice from 2 *Kiss of Death* from the Mod *Double Quest Rewards*)... and yes, that's don't work... but you noticed the big red wrong logo, isn't?
+**Left picture:** The mod *SMG Dahl Discord Solver - Moxxi Edition* is placed **BEFORE** the Mod *Double Quest Rewards*, and the option which give the choice betwen 2 *SMG Dahl Discord Solver - Moxxi Edition* appear in *Dark Green*, that's mean, that another bunch of code overwrite this command (in this case the choice from 2 *Kiss of Death* from the Mod *Double Quest Rewards*)... and yes, that's don't work... but you noticed the big red wrong logo, isn't?
 
-Right picture: To fix this overwriting problem and get the code working as intended, the mod *SMG Dahl Discord Solver - Moxxi Edition* must be moved **AFTER** *Double Quest Rewards*. Once done, the reward will appear in *Light Green*, meaning that the code will work correctly, and you will have the choice betwen 2 *SMG Dahl Discord Solver - Moxxi Edition* for the mission *Hell Hath No Fury*.
+**Right picture:** To fix this overwriting problem and get the code working as intended, the mod *SMG Dahl Discord Solver - Moxxi Edition* must be moved **AFTER** *Double Quest Rewards*. Once done, the reward will appear in *Light Green*, meaning that the code will work correctly, and you will have the choice betwen 2 *SMG Dahl Discord Solver - Moxxi Edition* for the mission *Hell Hath No Fury*.
 
 ![Fix or option not working as intended](https://i.imgur.com/a0eZEVB.png "Don't worry guys... even if my screen capture show French text, my mods are in English")
 
 ### To summarize: 
 
 1. **Correct:**
- *- White* = work (normal set command code)
- *- Blue* = work (hotfix)
- *- Light Green* = work (overwrite)
+ - *White* = work (normal set command code)
+ - *Blue* = work (hotfix)
+ - *Light Green* = work (overwrite)
 2. **Incorrect:**
- *Dark Green* = don't work (is overwritten)... by moving the mod at the end of your patch, the problem will be solved in 90% of cases.  
+ - *Dark Green* = don't work (is overwritten)... by moving the mod at the end of your patch, the problem will be solved in 90% of cases.  
 
 ### Note: 
 I know that all these informations already are mentionned in the wiki page [Functional Changes from FilterTool to BLCMM](https://github.com/BLCM/BLCMods/wiki/Functional-Changes-from-FilterTool-to-BLCMM), so these additional explanations are just for those who don't get the memo :wink:
