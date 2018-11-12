@@ -17,7 +17,7 @@ If a option or a fix don't work as intended, it's not because the Mod is not wel
 
 It's simply because 2 commands work on the same parameter, and one is overwritten by the other.
 
-Better to explain that with a exemple, isn't?
+Better to explain that with a example, isn't?
 
 Let's take 2 of my mods:
 
@@ -35,7 +35,7 @@ Look on the example with picture below to understand why:
 
 **Right picture:** To fix this overwriting problem and get the code working as intended, the mod *SMG Dahl Discord Solver - Moxxi Edition* must be moved **AFTER** *Double Quest Rewards*. Once done, the reward will appear in *Light Green*, meaning that the code will work correctly, and you will have the choice betwen 2 *SMG Dahl Discord Solver - Moxxi Edition* for the mission *Hell Hath No Fury*.
 
-![Fix or option not working as intended](https://i.imgur.com/a0eZEVB.png "Don't worry guys... even if my screen capture show French text, my mods are in English")
+![Fix or option not working as intended](https://imgur.com/0o4jpLD.jpg "Don't worry guys... even if my screen capture show French text, my mods are in English")
 
 ### To summarize: 
 
