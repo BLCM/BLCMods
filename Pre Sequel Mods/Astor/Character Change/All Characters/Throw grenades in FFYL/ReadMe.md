@@ -1,11 +1,9 @@
-## No More Reload Message
+## Throw Grenades in FFYL
 
-As the title suggests it, removes the (annoying) *Reload Message* which pop-up (too) often on the screen!
-
-**Note:** Just removes the *Reload Message*, **NOT** the necessity to reload your weapon!
+As the title suggests it, now you can throw grenades when you are in *Fight For Your Life*, and with any character!
 
 ### Changelog:
-- v1.0.0, November 6, 2018
+- v1.0.0, November 8, 2018
   - Initial public release
  
 ### Compatibility:
@@ -14,12 +12,11 @@ As the title suggests it, removes the (annoying) *Reload Message* which pop-up (
 
 ### To do:
 
-- [ ] Check if I don't forget a Unique weapons somewhere in the game (maybe in DLC?).
-- [ ] Clean the code and remove all my ~~shitty~~ smart notes.
+- [ ] Well, nothing I guess?
 
 ### Credits & Thanks:
 
-Inspired by [Fuck Reload Messages](https://github.com/BLCM/BLCMods/blob/af3b2d17629ab3f7f7a5f7bb68b489c5e13b0498/Borderlands%202%20mods/soze/fuckreloadmessages.txt) created for BL2 by [Soze](https://github.com/BLCM/BLCMods/tree/af3b2d17629ab3f7f7a5f7bb68b489c5e13b0498/Borderlands%202%20mods/soze). I just adapted his idea to make it compatible with TPS by adding the *Laser Reload* part, the *SCAV Reload* part (which in fact is *Bandit Reload*) and few Unique weapons. All the credits go to him for the idea. 
+Inspired by [Throw Grenade in FFYL](https://github.com/BLCM/BLCMods/blob/master/Borderlands%202%20mods/AngrierPat/Quality%20of%20life%20changes/Throw%20Grenades%20in%20FFYL) created for BL2 by [AngrierPat](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/AngrierPat). I just adapted her idea to make it compatible with TPS. All the credits go to her for the idea. 
   
 ### Note: 
 

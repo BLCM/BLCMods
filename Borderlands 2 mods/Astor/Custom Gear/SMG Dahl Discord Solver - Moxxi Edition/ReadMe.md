@@ -138,7 +138,7 @@ Some great mods to check for the *Discord Solver - Moxxi Edition*:
 
 - [No More Moxxi Lifesteal v2.0](https://github.com/BLCM/BLCMods/blob/master/Borderlands%202%20mods/Akathris/NoMoreMoxxiLifestealv2.0.txt) by [Akathris](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/Akathris). His Mod is self explanatory: removes lifesteal from Moxxi weapons and changes it to passive health regeneration.
 
-- [Plasma Caster Hyperion Finesse - Moxxi Edition](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/Astor/Custom%20Gear/Plasma%20Caster%20Hyperion%20Finesse%20-%20Moxxi%20Edition) by [Astor](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/Astor). A Plasma Caster which fire SEAPP (Smart Elemental Adaptive Plasma Projectile)  adapting his Elemental following the kind of impact.
+- [Plasma Caster Hyperion Finesse - Moxxi Edition](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/Astor/Custom%20Gear/Plasma%20Caster%20Hyperion%20Finesse%20-%20Moxxi%20Edition) by... well... [myself](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/Astor). A Plasma Caster which fire SEAPP (Smart Elemental Adaptive Plasma Projectile)  adapting his Elemental following the kind of impact.
 
 ![Finesse Moxxi Signature Classic and Cartier](https://imgur.com/1ziVoro.jpg "Don't worry guys... even if my screen capture show French text, my mods are in English")
 As this version of the Finesse is a Moxxi weapon, you can choose between 3 Moxxi Signature skin : the Classic skin, the Elegance skin or the Pinky skin.
