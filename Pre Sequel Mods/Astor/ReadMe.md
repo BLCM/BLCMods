@@ -6,15 +6,31 @@ You are on TPS-Mods repository, where you can find all my Pre-Sequel (AKA Border
 
 This Read Me is just here as a quick synopsis, for detailed informations, each Mod has is own Read Me (and even a Changelog), so don't hesitate -whoosh!- to give a look on it.
 
-## Characters Change:
+* * * * *
 
-### All Characters:
+## To Read First: 
 
-- **Throw Grenade in FFYL:** Now you can throw grenades when you are in FFYL.
-
+- **Compatibility & Troubleshooting:** a small reading information to clearly understand why a option or a fix in my mods don't work as intended, and how to simply fix it!
 
 * * * * *
 
+## Characters Change:
+
+- ### All Characters:
+
+  - **Throw Grenade in FFYL:** Now you can throw grenades while in FFYL.
+
+* * * * *
+
+## Gears Upgrade:
+     
+- ### Items:
+  
+   - #### Shields:
+
+      - ***Black Hole* On Steroids:** Now, the singularity effect is very useful for drawing in enemies for a second wind, and can often kill common enemies in a single blast.
+
+* * * * *
 
 ## Quality of Life: 
 

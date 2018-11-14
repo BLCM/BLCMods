@@ -1,6 +1,6 @@
 ## Throw Grenades in FFYL
 
-As the title suggests it, now you can throw grenades when you are in *Fight For Your Life*, and with any character!
+Similar to Axton's Gunpowder Skill *Do or Die* in BL2, you can now throw grenades when you are in *Fight For Your Life*, and with any character!
 
 ### Changelog:
 - v1.0.0, November 8, 2018
@@ -16,7 +16,7 @@ As the title suggests it, now you can throw grenades when you are in *Fight For 
 
 ### Credits & Thanks:
 
-Inspired by [Throw Grenade in FFYL](https://github.com/BLCM/BLCMods/blob/master/Borderlands%202%20mods/AngrierPat/Quality%20of%20life%20changes/Throw%20Grenades%20in%20FFYL) created for BL2 by [AngrierPat](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/AngrierPat). I just adapted her idea to make it compatible with TPS. All the credits go to her for the idea. 
+Inspired by [Throw Grenade in FFYL](https://github.com/BLCM/BLCMods/blob/master/Borderlands%202%20mods/AngrierPat/Quality%20of%20life%20changes/Throw%20Grenades%20in%20FFYL) created for BL2 by [AngrierPat](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/AngrierPat). Such a Mod didn't seem to exist for TPS, though, so I took it upon myself to create one. All the credits go to [AngrierPat](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/AngrierPat) for the idea. 
   
 ### Note: 
 
