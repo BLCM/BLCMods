@@ -1,0 +1,42 @@
+<BLCMM v="1">
+#<!!!You opened a file saved with BLCMM in FilterTool. Please update to BLCMM to properly open this file!!!>
+	<head>
+		<type name="TPS" offline="false"/>
+	</head>
+	<body>
+		<category name="TPS Fast Travel Enabler">
+			<comment>By apple1417</comment>
+			<comment>Allows traveling back to all one way stations</comment>
+			<category name="Titan Robot Embarkation">
+				<code profiles="default">set GD_FastTravelStations.DahlFactoryBoss bSendOnly False</code>
+				<code profiles="default">set GD_FastTravelStations.DahlFactoryBoss AccessibilityTime FTAT_Always</code>
+			</category>
+			<category name="Eye Of Helios">
+				<code profiles="default">set GD_FastTravelStations.LaserBoss bSendOnly False</code>
+			</category>
+			<category name="00773 Vault Excavation Site">
+				<comment>Will show at the bottom of the list if this is disabled</comment>
+				<category name="Re-order to be next to Cluster 00773">
+					<code profiles="default">set GD_Ma_FastTravelStations.Ma_StationsList FastTravelStationOrderList (FastTravelStationDefinition'GD_FastTravelStations.Spaceport', FastTravelStationDefinition'GD_Ma_FastTravelStations.Ma_Deck13_FT', FastTravelStationDefinition'GD_Ma_FastTravelStations.Ma_Nexus_FT' FastTravelStationDefinition'GD_Ma_FastTravelStations.Ma_LeftCluster_FT', FastTravelStationDefinition'GD_Ma_FastTravelStations.Ma_LeftCluster_1way_FT', FastTravelStationDefinition'GD_Ma_FastTravelStations.Ma_RightCluster_FT', FastTravelStationDefinition'GD_Ma_FastTravelStations.Ma_Sub_FT', FastTravelStationDefinition'GD_Ma_FastTravelStations.MA_SubSub_FT', FastTravelStationDefinition'GD_Ma_FastTravelStations.Ma_FinalBoss_FT')</code>
+				</category>
+				<code profiles="default">set GD_Ma_FastTravelStations.Ma_LeftCluster_1way_FT bSendOnly False</code>
+			</category>
+			<category name="Sub-Subconscious">
+				<code profiles="default">set GD_Ma_FastTravelStations.MA_SubSub_FT bSendOnly False</code>
+			</category>
+			<category name="Deck 13.5">
+				<code profiles="default">set GD_Ma_FastTravelStations.Ma_FinalBoss_FT bSendOnly False</code>
+			</category>
+		</category>
+	</body>
+</BLCMM>
+
+#Commands:
+set GD_FastTravelStations.DahlFactoryBoss bSendOnly False
+set GD_FastTravelStations.DahlFactoryBoss AccessibilityTime FTAT_Always
+set GD_FastTravelStations.LaserBoss bSendOnly False
+set GD_Ma_FastTravelStations.Ma_StationsList FastTravelStationOrderList (FastTravelStationDefinition'GD_FastTravelStations.Spaceport', FastTravelStationDefinition'GD_Ma_FastTravelStations.Ma_Deck13_FT', FastTravelStationDefinition'GD_Ma_FastTravelStations.Ma_Nexus_FT' FastTravelStationDefinition'GD_Ma_FastTravelStations.Ma_LeftCluster_FT', FastTravelStationDefinition'GD_Ma_FastTravelStations.Ma_LeftCluster_1way_FT', FastTravelStationDefinition'GD_Ma_FastTravelStations.Ma_RightCluster_FT', FastTravelStationDefinition'GD_Ma_FastTravelStations.Ma_Sub_FT', FastTravelStationDefinition'GD_Ma_FastTravelStations.MA_SubSub_FT', FastTravelStationDefinition'GD_Ma_FastTravelStations.Ma_FinalBoss_FT')
+set GD_Ma_FastTravelStations.Ma_LeftCluster_1way_FT bSendOnly False
+set GD_Ma_FastTravelStations.MA_SubSub_FT bSendOnly False
+set GD_Ma_FastTravelStations.Ma_FinalBoss_FT bSendOnly False
+
