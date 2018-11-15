@@ -2,9 +2,9 @@ This Read Me is just here as a quick synopsis, for detailed informations, each M
 
 ## Characters Change:
 
-### All Characters:
+- ### All Characters:
 
-- **Throw Grenade in FFYL:** Now you can throw grenades when you are in FFYL.
+  - **Throw Grenade in FFYL:** Now you can throw grenades while in FFYL.
 
 * * * * *
  
