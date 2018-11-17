@@ -1,0 +1,47 @@
+<BLCMM v="1">
+#<!!!You opened a file saved with BLCMM in FilterTool. Please update to BLCMM to properly open this file!!!>
+	<head>
+		<type name="TPS" offline="false"/>
+	</head>
+	<body>
+		<category name="SuperNova Missing Material Fix v1.0.0">
+			<comment>Mod author: Astor</comment>
+			<comment>Release Date: 20 November 2018</comment>
+			<comment>Version: 1.0.0 - See ReadMe for Changelog ;)</comment>
+			<category name="Description">
+				<comment>Fixes the 4 random materials issue from SuperNova to always spawn with the Epic material,</comment>
+				<comment>and give it a Legendary skin.</comment>
+				<comment>More informations regarding this bug in the vanilla game on the ReadMe file.</comment>
+				<comment>Optional: You can choose to apply (or not) a "Legendary Shield Properties Upgrade" by toggle option</comment>
+			</category>
+			<category name="Always spawn with Epic Material">
+				<comment>Makes it always spawn with the best material available (Epic = VeryRare)</comment>
+				<code profiles="default">set GD_Shields.A_Item.Shield_Nova_Fire_Supernova MaterialParts (bEnabled=True,WeightedParts=((Part=ShieldPartDefinition'GD_Shields.Material.Material1_Common_NovaSpike_Maliwan',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=0,DefaultWeightIndex=0)),((Part=ShieldPartDefinition'GD_Shields.Material.Material2_Uncommon_NovaSpike_Maliwan',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=0,DefaultWeightIndex=0)),((Part=ShieldPartDefinition'GD_Shields.Material.Material3_Rare_NovaSpike_Maliwan',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=0,DefaultWeightIndex=0)),((Part=ShieldPartDefinition'GD_Shields.Material.Material4_VeryRare_NovaSpike_Maliwan',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=4)))</code>
+			</category>
+			<category name="Supernova Legendary Skin Fix">
+				<comment>Change SuperNova Epic (purple) skin into a Legendary skin.</comment>
+				<code profiles="default">set GD_Shields.Material.Material4_VeryRare_NovaSpike_Maliwan Material Item_Shields.Materials.Mati_ShieldMaliwanLegendary</code>
+			</category>
+			<category name="Legendary Shield Properties Upgrade (Open to choose a option)" MUT="true">
+				<category name="No Upgrades (similar to the Flame of the Firehawk in BL2)">
+					<code profiles="default">set GD_Shields.Material.Material4_VeryRare_NovaSpike_Maliwan AttributeSlotUpgrades ((SlotName="Capacity",GradeIncrease=12,bActivateSlot=False),(SlotName="Special01",GradeIncrease=18,bActivateSlot=False),(SlotName="Special02",GradeIncrease=18,bActivateSlot=False),)</code>
+				</category>
+				<category name="Capacity Upgraded only">
+					<code profiles="">set GD_Shields.Material.Material4_VeryRare_NovaSpike_Maliwan AttributeSlotUpgrades ((SlotName="Capacity",GradeIncrease=16,bActivateSlot=False),(SlotName="Special01",GradeIncrease=18,bActivateSlot=False),(SlotName="Special02",GradeIncrease=18,bActivateSlot=False),)</code>
+				</category>
+				<category name="Capacity + Nova Damage Upgraded">
+					<code profiles="">set GD_Shields.Material.Material4_VeryRare_NovaSpike_Maliwan AttributeSlotUpgrades ((SlotName="Capacity",GradeIncrease=16,bActivateSlot=False),(SlotName="Special01",GradeIncrease=24,bActivateSlot=False),(SlotName="Special02",GradeIncrease=18,bActivateSlot=False),)</code>
+				</category>
+				<category name="Full Upgrade: Capacity + Nova Damage + Nova Radius Upgraded">
+					<code profiles="">set GD_Shields.Material.Material4_VeryRare_NovaSpike_Maliwan AttributeSlotUpgrades ((SlotName="Capacity",GradeIncrease=16,bActivateSlot=False),(SlotName="Special01",GradeIncrease=24,bActivateSlot=False),(SlotName="Special02",GradeIncrease=24,bActivateSlot=False),)</code>
+				</category>
+			</category>
+		</category>
+	</body>
+</BLCMM>
+
+#Commands:
+set GD_Shields.A_Item.Shield_Nova_Fire_Supernova MaterialParts (bEnabled=True,WeightedParts=((Part=ShieldPartDefinition'GD_Shields.Material.Material1_Common_NovaSpike_Maliwan',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=0,DefaultWeightIndex=0)),((Part=ShieldPartDefinition'GD_Shields.Material.Material2_Uncommon_NovaSpike_Maliwan',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=0,DefaultWeightIndex=0)),((Part=ShieldPartDefinition'GD_Shields.Material.Material3_Rare_NovaSpike_Maliwan',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=0,DefaultWeightIndex=0)),((Part=ShieldPartDefinition'GD_Shields.Material.Material4_VeryRare_NovaSpike_Maliwan',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=4)))
+set GD_Shields.Material.Material4_VeryRare_NovaSpike_Maliwan Material Item_Shields.Materials.Mati_ShieldMaliwanLegendary
+set GD_Shields.Material.Material4_VeryRare_NovaSpike_Maliwan AttributeSlotUpgrades ((SlotName="Capacity",GradeIncrease=12,bActivateSlot=False),(SlotName="Special01",GradeIncrease=18,bActivateSlot=False),(SlotName="Special02",GradeIncrease=18,bActivateSlot=False),)
+
