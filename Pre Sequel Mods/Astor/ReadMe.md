@@ -20,6 +20,16 @@ This Read Me is just here as a quick synopsis, for detailed informations, each M
 
   - **Throw Grenade in FFYL:** Now you can throw grenades while in FFYL.
 
+- ### Aurelia 
+  - ***Cold As Ice* in FFYL:** You can throw your *Frost Diadem Shard* (*Cold As Ice* ability) while in *Fight For Your Live*.
+
+* * * * *
+
+## Fixes:
+
+
+- ***SuperNova* Missing Material Fix:** My modest contribution to fix the *Missing Material* bug which makes the *SuperNova* spawn with four different materials rather than just the predefined one and affecting the shield capacity, nova damage, and nova radius.
+
 * * * * *
 
 ## Gears Upgrade:

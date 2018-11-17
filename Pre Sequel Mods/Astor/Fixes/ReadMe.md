@@ -1,13 +1,8 @@
 This Read Me is just here as a quick synopsis, for detailed informations, each Mod has is own Read Me (and even a Changelog), so don't hesitate -whoosh!- to give a look on it.
 
-## Characters Change:
+## Gears Fix:
 
-- ### All Characters:
-
-  - **Throw Grenade in FFYL:** Now you can throw grenades while in FFYL.
-
-- ### Aurelia 
-  - ***Cold As Ice* in FFYL:** You can throw your *Frost Diadem Shard* (*Cold As Ice* ability) while in *Fight For Your Live*.
+- ***SuperNova* Missing Material Fix:** My modest contribution to fix the *Missing Material* bug which makes the *SuperNova* spawn with four different materials rather than just the predefined one and affecting the shield capacity, nova damage, and nova radius.
 
 * * * * *
  
