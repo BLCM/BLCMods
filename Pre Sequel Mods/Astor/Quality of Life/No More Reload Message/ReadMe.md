@@ -2,7 +2,7 @@
 
 As the title suggests it, removes the (annoying) *Reload Message* which pop-up (too) often on the screen!
 
-**Note:** Just removes the *Reload Message*, **NOT** the necessity to reload your weapon!
+__Note:__ Just removes the *Reload Message*, **NOT** the necessity to reload your weapon!
 
 ### Changelog:
 - v1.0.0, November 6, 2018

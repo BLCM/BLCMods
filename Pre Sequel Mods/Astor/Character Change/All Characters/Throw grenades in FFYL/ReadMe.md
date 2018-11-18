@@ -12,7 +12,7 @@ Similar to Axton's Gunpowder Skill *Do or Die* in BL2, you can now throw grenade
 
 ### To do:
 
-- [ ] Well, nothing I guess?
+- [ ] Well... it seems to work correctly, so nothing I guess?
 
 ### Credits & Thanks:
 

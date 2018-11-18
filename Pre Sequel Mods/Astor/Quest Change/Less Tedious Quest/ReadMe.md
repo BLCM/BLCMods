@@ -1,27 +1,27 @@
 ## Less Tedious Quest
 
-As the title suggests it, makes a few timed and objective count **-failable!-** optional mission less tedious to complete:
+As the title suggests it, makes a few timed and objective count __-failable!-__ optional mission less tedious to complete:
 
 ### Objective Count Missions:
 
-- ***Let Turrets Kill Scavs*** (during *Let's Build a Robot Army* multi-stage main mission) can be toggle from 12 to 10/8/6.
+- __*Let Turrets Kill Scavs*__ (during *Let's Build a Robot Army* multi-stage main mission) can be toggle from 12 to 10/8/6.
   
 
 ### Timed Missions:
 
-- **Option #1: *Extended time***
-  - ***Pop Racing*** in Triton Flats - Time limit increased to 3:00 (instead of 1:30)
-  - ***Recruitement Drive*** in Triton Flats - Time limit increased to 9:00 (instead of 4:30)
-  - ***The Don*** in Vorago Solitude - Time limit increased to 6:00 (instead of 4:30)
+- __Option #1: *Extended time*__
+  - __*Pop Racing*__ in Triton Flats - Time limit increased to 3:00 (instead of 1:30)
+  - __*Recruitement Drive*__ in Triton Flats - Time limit increased to 9:00 (instead of 4:30)
+  - __*The Don*__ in Vorago Solitude - Time limit increased to 6:00 (instead of 4:30)
 
-- **Option #2: *No time limit***
-  - ***Pop Racing*** in Triton Flats - Time limit increased to 3:00 (instead of 1:30)
-  - ***Recruitement Drive*** in Triton Flats - No Time limit 
-  - ***The Don*** in Vorago Solitude - No time limit 
+- __Option #2: *No time limit*__
+  - __*Pop Racing*__ in Triton Flats - Time limit increased to 3:00 (instead of 1:30)
+  - __*Recruitement Drive*__ in Triton Flats - No Time limit 
+  - __*The Don*__ in Vorago Solitude - No time limit 
 
 ![Pop Racing](https://imgur.com/UxQuyBN.jpeg "Don't worry guys... even if my screen capture show French text, my mods are in English")
 
-**Note:** *Pop Racing* optional mission with double time (3:00 instead of 1:30) countdown... you can even fall in lava and grab a new car during the race, you'll still have enough time eat a picnic at the roadside before passing -winner!- the finish line!
+__Note:__ *Pop Racing* optional mission with double time (3:00 instead of 1:30) countdown... you can even fall in lava and grab a new car during the race, you'll still have enough time eat a picnic at the roadside before passing -winner!- the finish line!
 
 
 
@@ -29,7 +29,7 @@ As the title suggests it, makes a few timed and objective count **-failable!-** 
 - v1.0.0, November 5, 2018
   - Initial public release
 - v1.0.1, November 12, 2018
-  - Add ***Objective Count Missions:** Let Turrets Kill Scavs*
+  - Add __*Objective Count Missions:__ Let Turrets Kill Scavs*
 
 ### Compatibility:
 
@@ -37,6 +37,7 @@ As the title suggests it, makes a few timed and objective count **-failable!-** 
 
 ### To do:
 
+- [ ] Make again a new playtrought to be sure that I don't miss a timed or objective count __-failable!-__ optional mission somewhere.
 - [ ] Clean the code and remove all my ~~shitty~~ smart notes.
 
 ### Credits & Thanks:
