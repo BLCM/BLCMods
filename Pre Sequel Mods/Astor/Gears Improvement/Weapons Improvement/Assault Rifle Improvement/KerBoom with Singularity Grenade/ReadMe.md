@@ -1,26 +1,22 @@
-## *Black Hole* On Steroids
+## *KerBoom* with Singularity Grenade
 
-To be competitive with the Maliwan's shield *Supernova*, the singularity ability is boosted to make better use of pulling nearby enemies towards the wearer when the shield charge is depleted, then explodes in a huge devastating nova shock.
+Turns the *KerBoom* into a useful weapon:
 
-Now, the singularity effect is very useful for drawing in enemies for a second wind, and can often kill common enemies in a single blast.
-
-It can also be used to break enemy attack patterns, drag enemies out of cover and wipe them out with a combination of nova and gunfire before they recover completely from the stun effect, making it a viable offensive shield as well.
-
+- Shot 1 rockets, which spawn 1 singularity child grenade.
+- No self-damage on the rocket and the grenade.
+- Cuts the cost of ammo to 2 per shot (instead of 4) and effectively doubles the magazine.
+ 
 ### Where to find it?
 
-The *Black Hole* can be obtained randomly from any suitable loot source but has an increased chance to drop from *Colonel Zarpedon* in *Eye of Helios* and *The Invincible Empyrean Sentinel* in *Eleseer*. 
+The *KerBoom* can be obtained randomly from any suitable loot source, and has an increased chance to drop from *Boomer* encountered in the south-east corner of *Outlands Spur* during the mission *Nothing Is Never an Option*. 
 
 ### Changelog:
-- v1.0.0, November 15, 2018
+- v1.0.0, November 20, 2018
   - Initial public release
  
 ### Compatibility:
 
 - 100% compatible with the latest version of [TPS Community Patch](https://github.com/BLCM/BLCMods/tree/master/Pre%20Sequel%20Mods/Community%20Patch)
-
-- Should be compatible with most other mods, as long as they do not touch the Legendary Nova Shield (see *know issue* just below).
-
-- **Know issue:** I noticed that a part (mainly the low capaticity coupled with the quick recharge effect) of the improvement done at the *Black Hole* apply to another Maliwan Legendary Shield, the *Supernova* and -unintentionally!- makes it even better... so I won't try to fix it.
 
 ### To do:
 
