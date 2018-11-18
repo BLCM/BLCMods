@@ -1,6 +1,6 @@
 ## *SuperNova* Missing Material Fix
 
-The Missing Material bug (and its consequences), as explained on **[Borderlands Wiki - Supernova](https://borderlands.fandom.com/wiki/Supernova)** page:
+The Missing Material bug (and its consequences), as explained on __[Borderlands Wiki - Supernova](https://borderlands.fandom.com/wiki/Supernova)__ page:
 
 > Due to a coding bug, it is possible for the *Supernova* to spawn with four different materials rather than just the predefined one. Normally, a Legendary shield has a predefined material, either custom or the standard Epic rarity material. **The material difference affects the shield capacity, nova damage, and nova radius, even when all other parts are the same.**
 >
@@ -13,32 +13,28 @@ The Missing Material bug (and its consequences), as explained on **[Borderlands 
 
 To explain the *Missing Material* bug in a simple way, when a Legendary or Unique shield spawn, it has his own predefined material... for example:
 
-***Sunshine*** - Unique Maliwan Rare (Blue) Nova shield 
+__*Sunshine*__ - Unique Maliwan Rare (Blue) Nova shield 
  
-`ItemPartListDefinition'GD_Shields.Material.PartsList_Materials_Nova_Sunshine'`
+```ItemPartListDefinition'GD_Shields.Material.PartsList_Materials_Nova_Sunshine'```
 
-***Deadly Bloom*** - Unique Maliwan Epic (Purple) Nova shield
+__*Deadly Bloom*__ - Unique Maliwan Epic (Purple) Nova shield
  
-`ItemPartListDefinition'GD_Shields.Material.PartsList_Materials_Nova_DeadlyBloom'`
+```ItemPartListDefinition'GD_Shields.Material.PartsList_Materials_Nova_DeadlyBloom'```
 
-***Black Hole*** - Legendary Maliwan Nova shield
+__*Black Hole*__ - Legendary Maliwan Nova shield
  
-`ItemPartListDefinition'GD_Shields.Material.PartsList_Materials_Nova_Singularity'`
+```ItemPartListDefinition'GD_Shields.Material.PartsList_Materials_Nova_Singularity'```
 
-***SuperNova*** - Legendary Maliwan Nova shield... instead to have his own predefined material (like above), it has the following:
+_*SuperNova*__ - Legendary Maliwan Nova shield... instead to have his own predefined material (like above), it has the following:
 
-`MaterialParts=ItemPartListDefinition'GD_Shields.Material.PartsList_Materials_NovaSpike_Maliwan'`
+```MaterialParts=ItemPartListDefinition'GD_Shields.Material.PartsList_Materials_NovaSpike_Maliwan'```
 
 ...which include four different materials: 
 
-
-`ShieldPartDefinition'GD_Shields.Material.Material1_Common_NovaSpike_Maliwan'`
-
-`ShieldPartDefinition'GD_Shields.Material.Material2_Uncommon_NovaSpike_Maliwan'`
-
-`ShieldPartDefinition'GD_Shields.Material.Material3_Rare_NovaSpike_Maliwan'`
-
-`ShieldPartDefinition'GD_Shields.Material.Material4_VeryRare_NovaSpike_Maliwan'`
+```ShieldPartDefinition'GD_Shields.Material.Material1_Common_NovaSpike_Maliwan'```
+```ShieldPartDefinition'GD_Shields.Material.Material2_Uncommon_NovaSpike_Maliwan'```
+```ShieldPartDefinition'GD_Shields.Material.Material3_Rare_NovaSpike_Maliwan'```
+```ShieldPartDefinition'GD_Shields.Material.Material4_VeryRare_NovaSpike_Maliwan'```
 
 ... and that's the reason why the *SuperNova* can spawn with four random different materials affecting the shield capacity, Nova damage, and Nova radius.
 
@@ -67,33 +63,37 @@ Obviously, with the *Epic Material* selected, the *SuperNova* has the properties
 
 As the *Supernova* use now a the *Epic (Purple) Material*, it will have a *Epic (Purple) Skin*, so even if it's better than a random Epic/Rare/Common/Uncommon skin, I give it a legit Legendary Maliwan Skin.
 
-![TPS - Moxxi Signature Elegance Gear](https://imgur.com/2J1QGKs.jpg "Don't worry guys... even if my screen capture show French text, my mods are in English")
+![SuperNova Missing Material Fix](https://imgur.com/2J1QGKs.jpg "Don't worry guys... even if my screen capture show French text, my mods are in English")
 
-### **Optional Legendary Shield Properties Upgrade** 
+### Legendary Value fix:
+
+As the Monetary value, is linked to the *Epic Material* used, I upgrade the Epic (purple) Monetary Value to Legendary Monetary Value.
+
+### Optional Legendary Shield Properties Upgrade 
 
 There is a toggle option to upgrade the *Material Grade Bonuses* from the *SuperNova* properties:
 
-**No Upgrade** (shield properties similar to the Maliwan Legendary *Flame of the Firehawk* in BL2)
+__No Upgrade:__ (shield properties similar to the Maliwan Legendary *Flame of the Firehawk* in BL2)
 
 | -Material Grade Bonuses- | Capacity      | Special 01 (Nova Damage) | Special 02 (Nova Radius) | 
 | -------------            | ------------- | -------------            |-------------             |
 | Legendary                | 12            | 18                       | 18                       |
 
 
-**Capacity Upgraded Only**
+__Capacity Upgraded Only__
 
 
 | -Material Grade Bonuses- | Capacity      | Special 01 (Nova Damage) | Special 02 (Nova Radius) | 
 | -------------            | ------------- | -------------            |-------------             |
 | Legendary                | 16            | 18                       | 18                       |
 
-**Capacity + Nova Damage Upgraded**
+__Capacity + Nova Damage Upgraded__
 
 | -Material Grade Bonuses- | Capacity      | Special 01 (Nova Damage) | Special 02 (Nova Radius) | 
 | -------------            | ------------- | -------------            |-------------             |
 | Legendary                | 16            | 24                       | 18                       |
 
-**Full Upgrade** (Capacity + Nova Damage + Nova Radius Upgraded)
+__Full Upgrade:__ (Capacity + Nova Damage + Nova Radius Upgraded)
 
 | -Material Grade Bonuses- | Capacity      | Special 01 (Nova Damage) | Special 02 (Nova Radius) | 
 | -------------            | ------------- | -------------            |-------------             |
@@ -102,8 +102,7 @@ There is a toggle option to upgrade the *Material Grade Bonuses* from the *Super
 
 On this way, instead to have the properties from a *Unique Epic (Purple) Shield*, the *SuperNova* can become a (real) *Legendary shield* and the solution applied must be safe for the *Sanity Check*.
 
-Note: No change done to the lootpool, as the *SuperNova* is already in the (correct) Legendary pool.
-
+__Note:__ No change done to the lootpool, as the *SuperNova* is already in the (correct) Legendary pool.
 
 Enjoy!
 
@@ -114,7 +113,6 @@ Enjoy!
 ### Compatibility:
 
 - 100% compatible with the latest version of [TPS Community Patch](https://github.com/BLCM/BLCMods/tree/master/Pre%20Sequel%20Mods/Community%20Patch)
-
 - Should be compatible with most other mods, as long as they do not touch the *Legendary Nova Shield Properties* or *Nova Spike Properties*
 
 ### To do:
@@ -139,6 +137,3 @@ All files and content provided here were written by me (Astor), unless stated ot
 - Do not re-upload this mod or any of my mods anywhere without my explicit permission... ANYWHERE!
 
 * * * * *
-
-
-
