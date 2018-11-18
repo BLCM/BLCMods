@@ -27,7 +27,6 @@ This Read Me is just here as a quick synopsis, for detailed informations, each M
 
 ## Fixes:
 
-
 - ***SuperNova* Missing Material Fix:** My modest contribution to fix the *Missing Material* bug which makes the *SuperNova* spawn with four different materials rather than just the predefined one and affecting the shield capacity, nova damage, and nova radius.
 
 * * * * *
@@ -40,12 +39,18 @@ This Read Me is just here as a quick synopsis, for detailed informations, each M
 
       - ***Black Hole* On Steroids:** Now, the singularity effect is very useful for drawing in enemies for a second wind, and can often kill common enemies in a single blast.
 
+## Weapons Improvement:
+
+- ### Assault Rifle Improvement:
+
+  - ***KerBoom* with Singularity Grenade:** Turns the KerBoom into a useful weapon by
+shooting 1 rockets, which spawn 1 singularity child grenade.
+
 * * * * *
 
 ## Quality of Life: 
 
 - **No More Reload Message:** Removes the (annoying) *Reload Message* which pop-up (too) often on the screen!
-
 
 * * * * *
 

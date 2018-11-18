@@ -2,26 +2,20 @@ This Read Me is just here as a quick synopsis, for detailed informations, each M
 
 ## Gears Improvement:
 
-- ### Items Improvement:  
+- ### Weapons Improvement:
 
-  - #### Shields Improvement:
+  - #### Assault Rifle Improvement: 
 
-     - ***Black Hole* On Steroids:** Now, the singularity effect is very useful for drawing in enemies for a second wind, and can often kill common enemies in a single blast.
-
-## Weapons Improvement:
-
-- ### Assault Rifle Improvement:
-
-  - ***KerBoom* with Singularity Grenade:** Turns the KerBoom into a useful weapon by
+     - ***KerBoom* with Singularity Grenade:** Turns the KerBoom into a useful weapon by
 shooting 1 rockets, which spawn 1 singularity child grenade.
-
+ 
 * * * * *
  
 ## Acknowledgement
 
 A ~~big~~ huge thanks to @LightChaosman and his great - [BLCMM (Borderlands Community Mod Manager)](https://github.com/BLCM/BLCMods/wiki/Borderlands-Community-Mod-Manager) tool who make the Mods creation a real pleasure. 
 
-* * * * *
+ * * * * *
  
 ## Disclaimer
 
@@ -35,4 +29,4 @@ All files and content provided here were written by me (Astor), unless stated ot
 
 - Do not re-upload this mod or any of my mods anywhere without my explicit permission... ANYWHERE!
 
-* * * * *
+ * * * * *
