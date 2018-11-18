@@ -12,11 +12,11 @@ The *KerBoom* can be obtained randomly from any suitable loot source, and has an
 
 ### Changelog:
 - v1.0.0, November 20, 2018
-  - Initial public release
+  - Initial public release.
  
 ### Compatibility:
 
-- 100% compatible with the latest version of [TPS Community Patch](https://github.com/BLCM/BLCMods/tree/master/Pre%20Sequel%20Mods/Community%20Patch)
+- 100% compatible with the latest version of [TPS Community Patch](https://github.com/BLCM/BLCMods/tree/master/Pre%20Sequel%20Mods/Community%20Patch).
 
 ### To do:
 

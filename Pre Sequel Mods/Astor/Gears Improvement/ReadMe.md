@@ -6,13 +6,13 @@ This Read Me is just here as a quick synopsis, for detailed informations, each M
 
   - #### Shields Improvement:
 
-     - ***Black Hole* On Steroids:** Now, the singularity effect is very useful for drawing in enemies for a second wind, and can often kill common enemies in a single blast.
+     - __*Black Hole* On Steroids:__ Now, the singularity effect is very useful for drawing in enemies for a second wind, and can often kill common enemies in a single blast.
 
-## Weapons Improvement:
+- ### Weapons Improvement:
 
-- ### Assault Rifle Improvement:
+  - ### Assault Rifle Improvement:
 
-  - ***KerBoom* with Singularity Grenade:** Turns the KerBoom into a useful weapon by
+    - __*KerBoom* with Singularity Grenade:__ Turns the KerBoom into a useful weapon by
 shooting 1 rockets, which spawn 1 singularity child grenade.
 
 * * * * *

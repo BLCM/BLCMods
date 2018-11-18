@@ -18,16 +18,18 @@ This Read Me is just here as a quick synopsis, for detailed informations, each M
 
 - ### All Characters:
 
-  - **Throw Grenade in FFYL:** Now you can throw grenades while in FFYL.
+  - __Throw Grenade in FFYL:__ Now you can throw grenades while in FFYL.
 
 - ### Aurelia 
-  - ***Cold As Ice* in FFYL:** You can throw your *Frost Diadem Shard* (*Cold As Ice* ability) while in *Fight For Your Live*.
+  - __*Cold As Ice* in FFYL:__ You can throw your *Frost Diadem Shard* (*Cold As Ice* ability) while in *Fight For Your Live*.
 
 * * * * *
 
 ## Fixes:
 
-- ***SuperNova* Missing Material Fix:** My modest contribution to fix the *Missing Material* bug which makes the *SuperNova* spawn with four different materials rather than just the predefined one and affecting the shield capacity, nova damage, and nova radius.
+- __*Deadly Bloom* Legendary Rarity & Skin Fix:__ The *Deadly Bloom* regain his *legit* Legendary rarity and skin.
+
+- __*SuperNova* Missing Material Fix:__ My modest contribution to fix the *Missing Material* bug which makes the *SuperNova* spawn with four different materials rather than just the predefined one and affecting the shield capacity, nova damage, and nova radius.
 
 * * * * *
 
@@ -37,32 +39,32 @@ This Read Me is just here as a quick synopsis, for detailed informations, each M
   
    - #### Shields Improvement:
 
-      - ***Black Hole* On Steroids:** Now, the singularity effect is very useful for drawing in enemies for a second wind, and can often kill common enemies in a single blast.
+      - __*Black Hole* On Steroids:__ Now, the singularity effect is very useful for drawing in enemies for a second wind, and can often kill common enemies in a single blast.
 
 ## Weapons Improvement:
 
 - ### Assault Rifle Improvement:
 
-  - ***KerBoom* with Singularity Grenade:** Turns the KerBoom into a useful weapon by
+  - __*KerBoom* with Singularity Grenade:__ Turns the KerBoom into a useful weapon by
 shooting 1 rockets, which spawn 1 singularity child grenade.
 
 * * * * *
 
 ## Quality of Life: 
 
-- **No More Reload Message:** Removes the (annoying) *Reload Message* which pop-up (too) often on the screen!
+- __No More Reload Message:__ Removes the (annoying) *Reload Message* which pop-up (too) often on the screen!
 
 * * * * *
 
 ## Quest Change:
 
-- **Less Tedious Quests:** Makes a few timed **-failable!-** optional mission less tedious to complete.
+- __Less Tedious Quests:__ Makes a few timed __-*failable!*-__ optional mission less tedious to complete.
 
 * * * * *
  
 ## Skin Pack:
 
-- **Moxxi Signature Elegance Collection:** The red similar to the little *Cartier* box, with discrete golden part inserted into (silver) brushed steel, this is the French elegance.
+- __Moxxi Signature Elegance Collection:__ The red similar to the little *Cartier* box, with discrete golden part inserted into (silver) brushed steel, this is the French elegance.
  
 * * * * *
  
@@ -70,7 +72,7 @@ shooting 1 rockets, which spawn 1 singularity child grenade.
 
 A ~~big~~ huge thanks to @LightChaosman and his great - [BLCMM (Borderlands Community Mod Manager)](https://github.com/BLCM/BLCMods/wiki/Borderlands-Community-Mod-Manager) tool who make the Mods creation a real pleasure. 
 
- * * * * *
+* * * * *
  
 ## Disclaimer
 
@@ -85,10 +87,10 @@ A ~~big~~ huge thanks to @LightChaosman and his great - [BLCMM (Borderlands Comm
 - Do not eat. Not a toy. Use only as directed.
 - Keep away from pets and small children.
 
- * * * * *
+* * * * *
  
 ## Warning 
  
 _**Discontinue use of my mods if any of the following occurs:** itching, aching, vertigo, dizziness, ringing in your ears, vomiting, giddiness, aural or visual hallucinations, tingling in extremities, loss of balance or coordination, slurred speech, temporary blindness, drowsiness, insomnia, profuse sweating, shivering, or heart palpitations._
 
- * * * * *
+* * * * *
