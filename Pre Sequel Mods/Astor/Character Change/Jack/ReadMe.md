@@ -1,17 +1,8 @@
 This Read Me is just here as a quick synopsis, for detailed informations, each Mod has is own Read Me (and even a Changelog), so don't hesitate -whoosh!- to give a look on it.
 
-## Characters Change:
+## [Character Change] Jack - DigiJack in FFYL
 
-- ### All Characters:
-
-  - __Throw Grenade in FFYL:__ Now you can throw grenades while in FFYL.
-
-- ### Aurelia 
-  - __*Cold As Ice* in FFYL:__ You can throw your *Frost Diadem Shard* (*Cold As Ice* ability) while in *Fight For Your Live*.
-
-- ### Jack:
-
-  - __*DigiJack* in FFYL:__ You can summon your *DigiJack* to fight alongside you while in *Fight For Your Live*.
+- As the title suggests it, you can summon your *DigiJack* to fight alongside you while in *Fight For Your Live*.
 
 * * * * *
  
