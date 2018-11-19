@@ -10,34 +10,42 @@ This ReadMe is just here as a quick synopsis, for detailed informations, each Mo
 
 ## To Read First: 
 
-- **Compatibility & Troubleshooting:** a small reading information to clearly understand why a option or a fix in my mods don't work as intended, and how to simply fix it!
+- **Compatibility & Troubleshooting:** A small reading information to clearly understand why a option or a fix in my mods don't work as intended, and how to simply fix it!
 
 * * * * *
 
 ## Character Change 
 - **Gaige's Deathtrap in FFYL:** You can summon *Deathtrap* to fight alongside you while in *Fight For Your Live*.
- 
-## Custom Gear: 
-- **Plasma Caster Dahl Prototype SX-1:** a Plasma Caster which fire GyroJet explosive bullet.
-- **Plasma Caster Hyperion Finesse - Circuit Board Edition:** a Plasma Projectile which adapt his Elemental following the kind of impact: Incendiary on flesh / Shock on shield / Corrosive on armor.
-- **Plasma Caster Hyperion Finesse - Moxxi Edition:** same weapon as the Circuit Board Edition (above), but with usual Moxxi's bonus (Critical Hit & Lifesteal) added.
-- **SMG Dahl Discord Solver - Bloody Edition:** a submachine gun which fire GyroJet explosive bullet.
-- **SMG Dahl Discord Solver - Moxxi Edition:** same weapon as the Bloody Edition (above), but with usual Moxxi's bonus (Critical Hit & Lifesteal) added.
-- **SMG Hyperion Splish Splash - Stendhal Edition:** a SMG which fire SEAMB (Smart Elemental Adaptive Maliwan Bullet) which adapt his Elemental following the kind of impact: Incendiary on flesh / Shock on shield / Corrosive on armor... and Explosive on anything else.
+
+* * * * *
+
+## Custom Gear:
+
+- ### Plasma Caster:
+
+  - **Plasma Caster Dahl Prototype SX-1:** A Plasma Caster which fire GyroJet explosive bullet.
+  - **Plasma Caster Hyperion Finesse - Circuit Board Edition:** A Plasma Projectile which adapt his Elemental following the kind of impact: Incendiary on flesh / Shock on shield / Corrosive on armor.
+  - **Plasma Caster Hyperion Finesse - Moxxi Edition:** Same weapon as the Circuit Board Edition (above), but with usual Moxxi's bonus (Critical Hit & Lifesteal) added.
+
+- ### SMG:
+
+  - **SMG Dahl Discord Solver - Bloody Edition:** A submachine gun which fire GyroJet explosive bullet.
+  - **SMG Dahl Discord Solver - Moxxi Edition:** Same weapon as the Bloody Edition (above), but with usual Moxxi's bonus (Critical Hit & Lifesteal) added.
+  - **SMG Hyperion Splish Splash - Stendhal Edition:** A SMG which fire SEAMB (Smart Elemental Adaptive Maliwan Bullet) which adapt his Elemental following the kind of impact: Incendiary on flesh / Shock on shield / Corrosive on armor... and Explosive on anything else.
 
 * * * * *
  
 ## Quest Reward: 
-- **Double Quest Reward Redux:** give you the choice to be rewarded between 2 Unique weapons/items instead of a single one.
-- **Dr Zed E-Tech Geek:** the missions given by Dr Zed give you the choice to be rewarded between 2 E-Tech weapons.
-- **Hammerlock Jakobs Sponsor:** the missions given by Hammerlock give you the choice to be rewarded between 2 Jakobs weapons.
+- **Double Quest Reward Redux:** Gives you the choice to be rewarded between 2 Unique weapons/items instead of a single one.
+- **Dr Zed E-Tech Geek:** The missions given by Dr Zed give you the choice to be rewarded between 2 E-Tech weapons.
+- **Hammerlock Jakobs Sponsor:** The missions given by Hammerlock give you the choice to be rewarded between 2 Jakobs weapons.
 
 * * * * *
 
 ## Skin Pack: 
-- **Moxxi Signature Classic Collection:** based on Creamer/Hear Breaker vanilla skin, now the Moxxi skins are uniformized to look like an actual manufacturer.
-- **Moxxi Signature Elegance Collection:** the red similar to the little _Cartier_ box, with golden part inserted into (silver) brushed steel, this is the French elegance. 
-- **Moxxi Signature Pinky Collection:** based on Slow Hand / Good Touch vanilla skin, now the Moxxi skins are uniformized to look like an actual manufacturer.
+- **Moxxi Signature Classic Collection:** Based on Creamer/Hear Breaker vanilla skin, now the Moxxi skins are uniformized to look like an actual manufacturer.
+- **Moxxi Signature Elegance Collection:** The red similar to the little _Cartier_ box, with golden part inserted into (silver) brushed steel, this is the French elegance. 
+- **Moxxi Signature Pinky Collection:** Based on Slow Hand / Good Touch vanilla skin, now the Moxxi skins are uniformized to look like an actual manufacturer.
 
 * * * * *
 
