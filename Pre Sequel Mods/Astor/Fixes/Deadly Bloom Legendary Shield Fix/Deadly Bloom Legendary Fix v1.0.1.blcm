@@ -4,7 +4,7 @@
 		<type name="TPS" offline="false"/>
 	</head>
 	<body>
-		<category name="Deadly Bloom Legendary Fix v1.0.0">
+		<category name="Deadly Bloom Legendary Fix v1.0.1">
 			<comment>Mod author: Astor</comment>
 			<comment>Release Date: 20 November 2018</comment>
 			<comment>Version: 1.0.0 - See ReadMe for Changelog ;)</comment>
@@ -12,6 +12,7 @@
 				<comment>Fixes the Deadly Bloom's Rarity and Skin as both are Epic (purple) instead of Legendary,</comment>
 				<comment>... and it must be a Legendary shield because it's a Legendary by code.</comment>
 				<comment>More informations regarding this bug on the ReadMe page</comment>
+				<comment>Optional: You can choose to apply (or not) a "Legendary Properties Upgrade" by toggle option</comment>
 			</category>
 			<category name="Deadly Bloom Legendary Rarity Fix">
 				<code profiles="">set GD_Shields.Material.Material5_Legendary_Nova_DeadlyBloom Rarity (BaseValueConstant=0.000000,BaseValueAttribute=InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity5_Legendary',InitializationDefinition=None,BaseValueScaleConstant=1.000000)</code>
@@ -23,6 +24,14 @@
 			<category name="Deadly Bloom Legendary Skin Fix">
 				<code profiles="default">set GD_Shields.Material.Material5_Legendary_Nova_DeadlyBloom Material Item_Shields.Materials.Mati_ShieldVladovLegendary</code>
 			</category>
+			<category name="Deadly Bloom Legendary Properties Upgrade (Open to change a option)" MUT="true">
+				<category name="No Upgrade (Similar to Epic Values)">
+					<code profiles="default">set GD_Shields.Material.Material5_Legendary_Nova_DeadlyBloom AttributeSlotUpgrades ((SlotName="Capacity",GradeIncrease=12,bActivateSlot=False),(SlotName="RechargeRate",GradeIncrease=50,bActivateSlot=False),(SlotName="RechargeDelay",GradeIncrease=-10,bActivateSlot=False),(SlotName="Special01",GradeIncrease=12,bActivateSlot=False),(SlotName="Special02",GradeIncrease=12,bActivateSlot=False))</code>
+				</category>
+				<category name="Upgrade to Legendary values">
+					<code profiles="">set GD_Shields.Material.Material5_Legendary_Nova_DeadlyBloom AttributeSlotUpgrades ((SlotName="Capacity",GradeIncrease=16,bActivateSlot=False),(SlotName="RechargeRate",GradeIncrease=50,bActivateSlot=False),(SlotName="RechargeDelay",GradeIncrease=-10,bActivateSlot=False),(SlotName="Special01",GradeIncrease=18,bActivateSlot=False),(SlotName="Special02",GradeIncrease=18,bActivateSlot=False))</code>
+				</category>
+			</category>
 		</category>
 	</body>
 </BLCMM>
@@ -31,4 +40,5 @@
 set GD_Shields.Titles.Title_ExplosiveNova02_DeadlyBloom Rarity (BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
 set GD_Shields.Material.Material5_Legendary_Nova_DeadlyBloom MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'
 set GD_Shields.Material.Material5_Legendary_Nova_DeadlyBloom Material Item_Shields.Materials.Mati_ShieldVladovLegendary
+set GD_Shields.Material.Material5_Legendary_Nova_DeadlyBloom AttributeSlotUpgrades ((SlotName="Capacity",GradeIncrease=12,bActivateSlot=False),(SlotName="RechargeRate",GradeIncrease=50,bActivateSlot=False),(SlotName="RechargeDelay",GradeIncrease=-10,bActivateSlot=False),(SlotName="Special01",GradeIncrease=12,bActivateSlot=False),(SlotName="Special02",GradeIncrease=12,bActivateSlot=False))
 

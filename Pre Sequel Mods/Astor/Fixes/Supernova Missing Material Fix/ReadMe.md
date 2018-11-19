@@ -71,7 +71,7 @@ As the Monetary value, is linked to the *Epic Material* used, I upgrade the Epic
 
 ### Optional Legendary Shield Properties Upgrade 
 
-There is a toggle option to upgrade the *Material Grade Bonuses* from the *SuperNova* properties:
+There is a toggle option to upgrade the *SuperNova* basic stats (Capavity/Nova Damage/Nova Radius) to create a real legendary variant for more frequent supernova destruction.
 
 __No Upgrade:__ (shield properties similar to the Maliwan Legendary *Flame of the Firehawk* in BL2)
 
@@ -79,9 +79,7 @@ __No Upgrade:__ (shield properties similar to the Maliwan Legendary *Flame of th
 | -------------            | ------------- | -------------            |-------------             |
 | Legendary                | 12            | 18                       | 18                       |
 
-
 __Capacity Upgraded Only__
-
 
 | -Material Grade Bonuses- | Capacity      | Special 01 (Nova Damage) | Special 02 (Nova Radius) | 
 | -------------            | ------------- | -------------            |-------------             |
@@ -99,10 +97,13 @@ __Full Upgrade:__ (Capacity + Nova Damage + Nova Radius Upgraded)
 | -------------            | ------------- | -------------            |-------------             |
 | Legendary                | 16            | 24                       | 24                       |
 
-
 On this way, instead to have the properties from a *Unique Epic (Purple) Shield*, the *SuperNova* can become a (real) *Legendary shield* and the solution applied must be safe for the *Sanity Check*.
 
-__Note:__ No change done to the lootpool, as the *SuperNova* is already in the (correct) Legendary pool.
+### Legendary Shield Lootpool:
+
+At least, no change needed to be done to the lootpool, as the *SuperNova* is already in the (correct) Legendary pool.
+
+__Note:__ The *SuperNova* can be randomly obtained in the grinder by grinding three Legendary shields (like any other Legendary shield)
 
 Enjoy!
 
