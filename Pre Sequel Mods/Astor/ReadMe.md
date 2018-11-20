@@ -10,7 +10,7 @@ This Read Me is just here as a quick synopsis, for detailed informations, each M
 
 ## To Read First: 
 
-- **Compatibility & Troubleshooting:** a small reading information to clearly understand why a option or a fix in my mods don't work as intended, and how to simply fix it!
+- __Compatibility & Troubleshooting:__ a small reading information to clearly understand why a option or a fix in my mods don't work as intended, and how to simply fix it!
 
 * * * * *
 
@@ -18,16 +18,18 @@ This Read Me is just here as a quick synopsis, for detailed informations, each M
 
 - ### All Characters:
 
-  - __Throw Grenade in FFYL:__ Now you can throw grenades while in FFYL.
+  - __Throw Grenade in FFYL:__ Now you can throw grenades while in FFYL, with any character.
 
 - ### Aurelia 
   - __*Cold As Ice* in FFYL:__ You can throw your *Frost Diadem Shard* (*Cold As Ice* ability) while in *Fight For Your Live*.
 
+- ### Jack:
+  - __*DigiJack* in FFYL:__ You can summon your *DigiJack* to fight alongside you while in *Fight For Your Live*.
 * * * * *
 
 ## Fixes:
 
-- __*Deadly Bloom* Legendary Rarity & Skin Fix:__ The *Deadly Bloom* regain his *legit* Legendary rarity and skin.
+- __*Deadly Bloom* Legendary Fix:__ Fix the *Deadly Bloom* Legendary bug by makes it regain his *legit* Legendary rarity, value & skin.
 
 - __*SuperNova* Missing Material Fix:__ My modest contribution to fix the *Missing Material* bug which makes the *SuperNova* spawn with four different materials rather than just the predefined one and affecting the shield capacity, nova damage, and nova radius.
 
@@ -39,7 +41,7 @@ This Read Me is just here as a quick synopsis, for detailed informations, each M
   
    - #### Shields Improvement:
 
-      - __*Black Hole* On Steroids:__ Now, the singularity effect is very useful for drawing in enemies for a second wind, and can often kill common enemies in a single blast.
+     - __*Black Hole* & *SuperNova* On Steroids:__ Since my mod *SuperNova*'s Missing Material Fix share the Black Hole's *Unique (predefined) Material* for these both shields, this Mod includes the *Black Hole* and *SuperNova*... and my stand-alone fix *Supernova Missing Material Fix* because it's mandatory to make this Mod working correctly.
 
 ## Weapons Improvement:
 

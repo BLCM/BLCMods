@@ -2,9 +2,25 @@ This Read Me is just here as a quick synopsis, for detailed informations, each M
 
 * * * * *
  
-## [Character Change] Gaige's Deathtrap in FFYL
+## [Custom Weapon] SMG Dahl Discord Solver - Bloody Edition
 
-You can summon *Deathtrap* to fight alongside you while in *Fight For Your Live*.
+In their early days in the making of weapons, Dahl, in collaboration with Torgue create the Discord Solver, a SMG who fire explosive bullet.
+  
+Unfortunately, the agreement between the two weapons manufacturers did not last long, and the production of the SMG stopped quickly -How ironic for a weapon that's named Discord Solver!- and Torgue created the Pocket Rocket.
+
+Anyway, remnant of the past, a *"lost"* Discord Solver (probably dropped by a bandit?) can still be found... submerged in a shallow pool in Frostburn Canyon.
+
+## [Custom Weapon] SMG Dahl Discord Solver - Moxxi Edition
+
+It would seem that Moxxi still has a specimen of the Discord Solver in her private Signature collection of weapons, but no one has ever seen it, not even Marcus... so maybe it's just a legend after all? 
+ 
+... or perhaps this weapon can become the reward given by Moxxi for the mission "Hell Hath No Fury" in Opportunity...  Who know? 
+
+* * * * *
+
+## [Custom Weapon] SMG Hyperion Splish Splash - Stendhal Edition
+
+A SMG which fire SEAMB (Smart Elemental Adaptive Maliwan Bullet), a Elemental Explosive bullet adapting his Elemental following the kind of impact: Incendiary on flesh / Shock on shield / Corrosive on armor... and Explosive on anything else.
 
 * * * * *
  

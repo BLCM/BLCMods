@@ -4,10 +4,14 @@ This Read Me is just here as a quick synopsis, for detailed informations, each M
 
 - ### All Characters:
 
-  - **Throw Grenade in FFYL:** Now you can throw grenades while in FFYL.
+  - __Throw Grenade in FFYL:__ Now you can throw grenades while in FFYL.
 
 - ### Aurelia 
-  - ***Cold As Ice* in FFYL:** You can throw your *Frost Diadem Shard* (*Cold As Ice* ability) while in *Fight For Your Live*.
+  - __*Cold As Ice* in FFYL:__ You can throw your *Frost Diadem Shard* (*Cold As Ice* ability) while in *Fight For Your Live*.
+
+- ### Jack:
+
+  - __*DigiJack* in FFYL:__ You can summon your *DigiJack* to fight alongside you while in *Fight For Your Live*.
 
 * * * * *
  
@@ -15,7 +19,7 @@ This Read Me is just here as a quick synopsis, for detailed informations, each M
 
 A ~~big~~ huge thanks to @LightChaosman and his great - [BLCMM (Borderlands Community Mod Manager)](https://github.com/BLCM/BLCMods/wiki/Borderlands-Community-Mod-Manager) tool who make the Mods creation a real pleasure. 
 
- * * * * *
+* * * * *
  
 ## Disclaimer
 
@@ -29,4 +33,4 @@ All files and content provided here were written by me (Astor), unless stated ot
 
 - Do not re-upload this mod or any of my mods anywhere without my explicit permission... ANYWHERE!
 
- * * * * *
+* * * * *

@@ -4,8 +4,7 @@ This Read Me is just here as a quick synopsis, for detailed informations, each M
 
 - ### Shields Improvement:
 
-  - __*Black Hole* On Steroids:__ Now, the singularity effect is very useful for drawing in enemies for a second wind, and can often kill common enemies in a single blast.
-  
+  - __*Black Hole* & *SuperNova* On Steroids:__ Since my mod *SuperNova*'s Missing Material Fix share the Black Hole's *Unique (predefined) Material* for these both shields, this Mod includes the *Black Hole* and *SuperNova*... and my stand-alone fix *Supernova Missing Material Fix* because it's mandatory to make this Mod working correctly.
 
 * * * * *
  

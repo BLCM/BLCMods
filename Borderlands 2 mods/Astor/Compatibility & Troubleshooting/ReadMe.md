@@ -27,7 +27,7 @@ Let's take 2 of my mods:
 
 You activate the option to have the choice between 2 *SMG Dahl Discord Solver - Moxxi Edition* given by Moxxi as reward for the mission *Hell Hath No Fury*, but you still receive the choice from 2 *Kiss of Death* instead of the choice between 2 *SMG Dahl Discord Solver* as desired. :cry:
 
-Ah! You noticed that *"given by Moxxi as reward for the mission Hell Hath No Fury"* was present in the 2 mods, so you get the idea.   :thought_balloon:
+Ah! You noticed that *"given by Moxxi as reward for the mission Hell Hath No Fury"* was present in the 2 mods, so you get the idea. :thought_balloon:
 
 Look on the example with picture below to understand why:
 
