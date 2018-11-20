@@ -30,12 +30,11 @@ Obviously, if I make any modification in the actual *Item_Shields.Materials.Mati
 My solution to solve this problem "properly", was to borrow the *Item_Shields.Materials.Mati_ShieldVladofLegendary* from the Vladof Legendary Shields skin and use it for the *Deadly Bloom*. :relieved:
 
 ![Deadly Bloom Legendary Rarity, Value & Skin Fix](https://imgur.com/5q2qCWI.jpg "Don't worry guys... even if my screen capture show French text, my mods are in English")
-
 __Note:__ The *Vertical Lines Pattern* are gone, but the *Deadly Bloom* look better with the Legendary shield skin borrowed to Vladof... at least in my eyes :smile: 
 
 ### Optional Legendary Shield Properties Upgrade: 
 
-There is a toggle option to upgrade the *Deadly Bloom* basic stats (Capavity/Nova Damage/Nova Radius) to create a real legendary variant.
+There is a toggle option to upgrade the *Deadly Bloom* basic stats (Capacity/Nova Damage/Nova Radius) to create a real legendary variant for bigger explosive supernova destruction.
 
 __No Upgrade:__ shield properties similar Epic (purple) values.
 
@@ -66,7 +65,9 @@ Enjoy!
 - v1.0.0, November 20, 2018
   - Initial public release
 - v1.0.1, November 25, 2018
-  - Add Optional Legendary Properties Upgrade 
+  - Add Optional Legendary Properties Upgrade
+- v1.0.2, November 30, 2018
+  - Add Optional TPS Rarity Color Fix (with toggle option)  
  
 ### Compatibility:
 

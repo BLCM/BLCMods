@@ -1,6 +1,12 @@
-## *Black Hole* On Steroids
+## *Black Hole* & *SuperNova* On Steroids
 
-To be competitive with the Maliwan's shield *Supernova*, the singularity ability from the *Black Hole* is boosted to make better use of ~~sucking~~ pulling nearby enemies towards the wearer when the shield charge is depleted, then explodes in a devastating nova shock.
+Since my mod *SuperNova*'s Missing Material Fix share the Black Hole's *Unique (predefined) Material* for these both shields, this Mod includes the *Black Hole* and *SuperNova*... and my stand-alone fix *Supernova Missing Material Fix* because it's mandatory to make this Mod working correctly.
+
+![Black Hole On Steroids vs SuperNova On Steroids](https://imgur.com/fpgwhBk.jpg "Don't worry guys... even if my screen capture show French text, my mods are in English")
+
+### *Black Hole* On Steroids
+
+To make it more competitive with the others shields, the singularity ability from the *Black Hole* is boosted to make better use of ~~sucking~~ pulling nearby enemies towards the wearer when the shield charge is depleted, then explodes in a devastating nova shock.
 
 The others improvements are a *Capacity* twice smaller, coupled with a *Recharge Rate* twice faster and *Recharge Delay* 3.5x faster (to get more often shock nova release) makes the *Black Hole* really... I want to say "shocking", but it would be a bad pun for shock nova shield... so let say destructive! 
 
@@ -26,21 +32,42 @@ The *Black Hole* can be obtained randomly from any suitable loot source but has 
 
 ![Zarpedon & Sentinel](https://imgur.com/zoEeIUQ.jpg "Don't worry guys... even if my screen capture show French text, my mods are in English")
 
+### *SuperNova* On Steroids
+
+A lowered capacity coupled with a faster recharge makes the SuperNova really devastating when exploding (more often) in a huge and powerful Incendiary Nova blast.
+
+The major improvements are a *Capacity* twice smaller, coupled with a *Recharge Rate* twice faster and *Recharge Delay* 3.5x faster (to get incendiary nova release more often) makes the *SuperNova* really... I want to say "arousing", but it would be a bad pun for incendiary nova shield... so let say to cause more troubles to your ennemy!
+
+| SuperNova lvl 50    | Vanilla Version  | Version On Steroids | Change         | 
+| -------------       | -------------    | -------------       | -------------  |                             
+| Capacity:           | 10242            | 4785                | (2x Smaller)   | 
+| Recharge Rate:      | 1750             | 3584                | (2x Faster)    | 
+| Recharge Delay:     | 4,06             | 1,17                | (3.5x Faster)  | 
+| Nova Damage:        | 20285            | 25760               | (25% Stronger) | 
+| Nova Radius:        | 2056             | 3080                | (50% Bigger)   | 
+
+To get better result in ~~vacum~~... ~~vaacum~~... ~~vaccuum~~... Arrrrgh!... in space, the *Nova Damage* and *Nova Radius* were improved too, respectively 20% & 50%; because, you know... no oxygene, no fire!
+
+![SuperNova On Steroids](https://imgur.com/2rgHgq4.jpg "Don't worry guys... even if my screen capture show French text, my mods are in English")
+
+### Where to find it?
+
+The *SuperNova* has an increased chance to drop from *Bruce* (a Badass Outlaw) during the mission *Another Pickle* in *Crisis Scar*, or from *Maureen* (Deirdre's psycho twin sister), driving a Missile Moon Buggy during the mission *Wherefore Art Thou?* in *Triton Flats*.
+
 ### Changelog:
-- v1.0.0, November 15, 2018
+- v1.0.0, November 25, 2018
   - Initial public release.
-- v1.0.1, November 20, 2018
-  - Fix the issue from a part of the improvement done to the *Black Hole* applying to the *Supernova* by making a *Supernova Missing Material Fix* (available in *Fixes* folder).
  
 ### Compatibility:
 
 - 100% compatible with the latest version of [TPS Community Patch](https://github.com/BLCM/BLCMods/tree/master/Pre%20Sequel%20Mods/Community%20Patch)
-- Should be compatible with most other mods, as long as they do not touch the Legendary Nova Shield (see *know issue* just below).
-- ~~**Know issue:** I noticed that a part (mainly the low capacity coupled with the quick recharge effect) of the improvement done at the Black Hole apply to another Maliwan Legendary Shield, the Supernova and -unintentionally!- makes it even better... so I won't try to fix it.~~  __Solved by making a *Supernova Missing Material Fix*__ (available in *Fixes*)
+- Should be compatible with most other mods, as long as they do not touch to the *Black Hole* and/or *SuperNova* Properties.
+ 
+:warning: This Mod is compatible with my *Supernova Missing Material Fix*, but must be placed __AFTER__ *Supernova Missing Material Fix*. :warning:
 
 ### To do:
 
-- [x] Fix the *Supernova* issue.
+- [ ] Fix the SuperNova skin which still mix few parts from the Random Material bug.
 - [ ] Well... it seems to work correctly, so nothing I guess?
 
 ### Credits & Thanks:
