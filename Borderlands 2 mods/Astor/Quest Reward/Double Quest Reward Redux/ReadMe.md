@@ -11,7 +11,7 @@
 
 ![Octo as reward for Capture The Flag in Sawtooth Cauldron](https://i.imgur.com/ObFnzWS.png "Don't worry guys... even if my screen capture show French text, my mods are in English")
  
-**Note:** The main reason why I resurrected (and rebuild from scratch) the "Double Quest Reward" Mod is mainly because in the great Koby's original Mod -unfortunately now extinct!-, some Unique weapon/items (Lady Fist, Rocksalt, Dahlminator, Buffalo, Landscaper, Sandhawk, Pimpernel, etc...) where removed from the rewards, and that doesn't make sense to me.
+__Note:__ The main reason why I resurrected (and rebuild from scratch) the "Double Quest Reward" Mod is mainly because in the great Koby's original Mod -unfortunately now extinct!-, some Unique weapon/items (Lady Fist, Rocksalt, Dahlminator, Buffalo, Landscaper, Sandhawk, Pimpernel, etc...) where removed from the rewards, and that doesn't make sense to me.
 
 The case of the removal from the Lady Fist really upset me, because during the mission Uncle Teddy, just after finding the 6th echo, Una Baha say: 
 
@@ -26,8 +26,8 @@ The Tidal Wave, which apparently is not a weapon reward anywhere anymore is now 
 ### Note: 
 
 For those who were familiar with the previous Mod, the weapon/Item marked with a (*) are:
- - Upgrade (like the Bitch/Commerce in Uncle Teddy) 
- - New Unique weapon/item rewards (like the Tidal Wave in Slap Happy) 
+ - Upgrade (like the Bitch/Commerce in Uncle Teddy mission) 
+ - New Unique weapon/item rewards (like the Tidal Wave in Slap Happy mission) 
  - ... or restored Unique weapon/item rewards "gone" in the original Koby's Mod. 
  
 Feel Free to use the BLCMM tool to select the option of your choice.
@@ -56,31 +56,26 @@ There's a few things which I'd considered adding to this mod, but were already w
 ### Changelog:
 
 - v1.0.0, September 1, 2018
-  - Added the choice between 2 Unique weapons/items instead of a single one for the main game
+  - Added the choice between 2 Unique weapons/items instead of a single one for the main game.
   - Initial public release
 
 - v1.0.1, September 5, 2018
-  - Upgrade the customization skin/head rewards to a Blue weapon/item rewards for 8 missions:
-  - Capture The Flag (Sawtooth Cauldron) 
-  - In Memoriam (Three Horns - Divide)
-  - No Vacancy (Three Horns - Valley)
-  - Shielded Favors (Southern Shelf) 
-  - Statuesque (Opportunity) 
-  - The Cold Shoulder (The Fridge)
-  - The Overlooked #1: Medicine Man (The Highlands)
-  - To Grandmother's House We Go (Eridium Blight)
+  - Upgrade the customization skin/head rewards to a Blue weapon/item rewards for 8 missions.
    
 - v1.0.2, September 10, 2018   
-  - In the mission Uncle Teddy, if you give the plans to Una, the reward will be the Lady Fist, and if you give the plans to Hyperion you will have the choice to toggle between 2 options: Choice between 2 Bitch (Legendary SMG Hyperion) or 2 Commerce (Unique Shock SMG Hyperion)
+  - In the mission *Uncle Teddy*, if you give the plans to Una, the reward will be the *Lady Fist*, and if you give the plans to Hyperion you will have the choice to toggle between 2 options: 2 *Bitch* (Legendary SMG Hyperion) or 2 *Commerce* (Unique Shock SMG Hyperion)
  
 - v1.0.3, September 21, 2018
-  - "Move" the Octo (Unique shotgun Tediore) reward from Slap Happy (Hammerlock mission) in The Highlands: Outwash to Capture The Flag in Sawtooth Cauldron, on this way, my Mod Hammerlock Jakobs Sponsor can reward the Tidal Wave (Unique shotgun Jakobs) with the Slap Happy mission.
+  - "Move" the *Octo* (Unique shotgun Tediore) reward from *Slap Happy* (Hammerlock mission) in The Highlands: Outwash to *Capture The Flag in Sawtooth Cauldron*, on this way, my Mod Hammerlock Jakobs Sponsor can reward the *Tidal Wave* (Unique shotgun Jakobs) with the *Slap Happy* mission.
 
 - v1.0.4, September 30, 2018  
-  - Added a 3rd option in *Uncle Teddy* mission in Arid Nexus - Badlands: the choice between 1 Unique SMG Commerce or 1 Legendary SMG Bitch you give the plans to Hyperion.
+  - Added a 3rd option in *Uncle Teddy* mission in *Arid Nexus - Badlands*: the choice between 1 Unique SMG *Commerce* or 1 Legendary SMG *Bitch* you give the plans to Hyperion.
 
 - v1.0.5, October 25, 2018 
-  - Added the choice between 2 Unique weapons/items instead of a single one for DLC 1 - Captain Scarlett and Her Pirate's Booty.
+  - Added the choice between 2 Unique weapons/items instead of a single one for DLC 1 - *Captain Scarlett and Her Pirate's Booty*.
+
+- v1.0.6, Novembre 22, 2018
+  - Added Moxxi's weapons as reward for the 5 rounds in *Creature Slaughter* Arena in *Wildlife Exploitation Preserve* (instead of just the Creamer as reward for the 5th round) 
 
 ### To do:
 
