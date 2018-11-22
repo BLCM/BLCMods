@@ -9,6 +9,8 @@ The *Booster Shields* can be obtained randomly from any suitable loot source.
 ### Changelog:
 - v1.0.0, November 21, 2018
   - Initial public release
+- v1.0.1, November 25, 2018
+  - Add a French/English language option (with toggle option)
  
 ### Compatibility:
 
