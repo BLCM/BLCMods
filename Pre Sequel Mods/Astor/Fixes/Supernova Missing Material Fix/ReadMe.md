@@ -6,8 +6,6 @@ Used independantly, the fix will resolve the *Missing/Random Material* bug (and 
 
 ![SuperNova Missing Material Fix](https://imgur.com/oyaBnu1.jpg "Don't worry guys... even if my screen capture show French text, my mods are in English")
 
-If you're using *Black Hole & SuperNova On Steroids*, there's no longer any reason to use this fix... but it won't hurt anything to have both enabled, though!
-
 * * * * *
 
 ## What is the *SuperNova* Missing Material Bug?
@@ -86,8 +84,8 @@ To resorb these differences caused by the new shared *Black Hole's Unique Materi
 | -------------       | -------------                  | -------------       |                              
 | Capacity:           | 10242                          | 10310               |  
 | Recharge Rate:      | 1750                           | 1751                |  
-| Recharge Delay:     | 4,06                           | 4,01                |  
-| Nova Damage:        | 20285                          | 21007               |  
+| Recharge Delay:     | 4,06                           | 4,06                |  
+| Nova Damage:        | 20285                          | 21887               |  
 | Nova Radius:        | 2056                           | 2052                | 
 
 ### Step 3: Legendary Skin Fix
@@ -107,7 +105,7 @@ At least, no change needed to be done to the lootpool, as the *SuperNova* is alr
 __Note:__ The *SuperNova* can be randomly obtained in the grinder by grinding three Legendary shields (like any other Legendary shield)
 
 ![SuperNova Missing Material Fix](https://imgur.com/oyaBnu1.jpg "Don't worry guys... even if my screen capture show French text, my mods are in English")
-Et voila... Missing/Random Material Fix done!
+Et voila... *SuperNova Missing Material Fix* done... and Random Material bug resolved!
 
 Enjoy!
 

@@ -2,7 +2,7 @@
 
 A picture worth 1.000 words, so let's start with a picture...
 
-![Striker Vanilla VS Stiker Fandir Edition](https://imgur.com/vNpTxvT.jpg "Don't worry guys... even if my screen capture show French text, my mods are in English")
+![Striker Vanilla VS Stiker Real Fandir Edition](https://imgur.com/vNpTxvT.jpg "Don't worry guys... even if my screen capture show French text, my mods are in English")
  
 - Always fires thirteen pellets (Fandir? Thirteen), but deals significantly less damage per pellet.
 - The spread becomes slighty tighter to help its functionality as a Crit shotgun.
@@ -10,7 +10,7 @@ A picture worth 1.000 words, so let's start with a picture...
 
 The *Striker Real Fandir Edition* becomes an excellent weapon for *Nisha's Showdown skill* as the pellet spread is so precise that usually each do critical damage.
 
-![Stiker's Doc Prefix and Punisher Luneshine](https://imgur.com/YmaJTyg.jpg "Don't worry guys... even if my screen capture show French text, my mods are in English")
+![Stiker with Doc Prefix and Punisher Luneshine](https://imgur.com/YmaJTyg.jpg "Don't worry guys... even if my screen capture show French text, my mods are in English")
 __Note:__ With both the *Doc's Prefix* and the *Punisher Luneshine* it's possible to obtain a +138% percent critical bonus on a *Striker Real Fandir Edition*... not bad for a 13 pellet shotgun! 
  
 ### Where to find it?

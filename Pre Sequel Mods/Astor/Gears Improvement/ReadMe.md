@@ -6,7 +6,7 @@ This Read Me is just here as a quick synopsis, for detailed informations, each M
 
   - #### Shields Improvement:
 
-   - __*Booster Shields* Auto Pick-Up:__ Automatically pick-up, however, to balance the auto pick-up advantage, the restoration value is reduced from ±20%.
+    - __*Booster Shields* Auto Pick-Up:__ Like Money and Ammunition, now the booster shield automatically pick-up... just walk on it and it's your!
 
 - ### Weapons Improvement:
 
