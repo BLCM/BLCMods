@@ -6,16 +6,13 @@ This Read Me is just here as a quick synopsis, for detailed informations, each M
 
   - #### Shields Improvement:
 
-    - __*Black Hole* & *SuperNova* On Steroids:__ Since my mod *SuperNova*'s Missing Material Fix share the Black Hole's *Unique (predefined) Material* for these both shields, this Mod includes the *Black Hole* and *SuperNova*... and my stand-alone fix *Supernova Missing Material Fix* because it's mandatory to make this Mod working correctly.
-
    - __*Booster Shields* Auto Pick-Up:__ Automatically pick-up, however, to balance the auto pick-up advantage, the restoration value is reduced from ±20%.
 
 - ### Weapons Improvement:
 
   - ### Assault Rifle Improvement:
 
-    - __*KerBoom* with Singularity Grenade:__ Turns the KerBoom into a useful weapon by
-shooting 1 rockets, which spawn 1 singularity child grenade.
+    - __*KerBoom* with Singularity Grenade:__ Turns the KerBoom into a useful weapon by shooting 1 rockets, which spawn 1 singularity child grenade.
 
 * * * * *
  
