@@ -13,6 +13,8 @@ Such a fix didn't seem to exist for TPS, though, so I took it upon myself to cre
 
 With a simple tweak, the *Deadly Bloom* has regained his *legit* Legendary rarity, instead of the Epic (purple) rarity.
 
+__Note:__ If you use the "TPS Color Rarity Fix" Mod, you can select this option instead of the Vanilla rarity.
+
 ### Step 02: Legendary Value fix:
 
 With another simple tweak, the *Monetary Value* from the *Deadly Bloom* is adapted to his (recovered) Legendary rarity.
