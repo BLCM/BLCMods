@@ -1,8 +1,8 @@
 ## *Black Hole* & *SuperNova* On Steroids
 
-Since my mod *SuperNova*'s Missing Material Fix share the Black Hole's *Unique (predefined) Material* for these both shields, this Mod includes the *Black Hole* and *SuperNova*... and my stand-alone fix *Supernova Missing Material Fix* because it's mandatory to make this Mod working correctly.
+__Note:__ Since my mod *SuperNova's Missing Material Fix* share the Black Hole's *Unique (predefined) Material* for these both shields, this *On Steroids* Mod includes the *Black Hole* and *SuperNova*... and my stand-alone fix *Supernova Missing Material Fix* because it's mandatory to make this Mod working correctly.
 
-![Black Hole On Steroids vs SuperNova On Steroids](https://imgur.com/fpgwhBk.jpg "Don't worry guys... even if my screen capture show French text, my mods are in English")
+![Black Hole On Steroids vs SuperNova On Steroids](https://imgur.com/KWQPcyi.jpg "Don't worry guys... even if my screen capture show French text, my mods are in English")
 
 ### *Black Hole* On Steroids
 
@@ -63,12 +63,11 @@ The *SuperNova* has an increased chance to drop from *Bruce* (a Badass Outlaw) d
 - 100% compatible with the latest version of [TPS Community Patch](https://github.com/BLCM/BLCMods/tree/master/Pre%20Sequel%20Mods/Community%20Patch)
 - Should be compatible with most other mods, as long as they do not touch to the *Black Hole* and/or *SuperNova* Properties.
  
-:warning: This Mod is compatible with my *Supernova Missing Material Fix*, but must be placed __AFTER__ *Supernova Missing Material Fix*. :warning:
+:warning: This Mod includes my *Supernova Missing Material Fix*, so if you're already  using it, there's no longer any reason to use the stand-alone fix version... but it won't hurt anything to have both enabled, though... in this case, this *Black Hole & SuperNova On Steroids* Mod must be placed __AFTER__ the *Supernova Missing Material Fix*. 
 
 ### To do:
 
-- [ ] Fix the SuperNova skin which still mix few parts from the Random Material bug.
-- [ ] Well... it seems to work correctly, so nothing I guess?
+- [ ] Create a new skin to make the difference faster between the *Black Hole* of *SuperNova*.
 
 ### Credits & Thanks:
 
