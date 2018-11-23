@@ -1,5 +1,15 @@
 ## *SuperNova* Missing Material Fix
 
+__Note:__ This fix is the stand-alone version from the one include in my Mod: *Black Hole & SuperNova On Steroids* (available in *Gears Improvement*)
+
+Used independantly, the fix will resolve the *Missing/Random Material* bug (and the Properties consequences) from the *SuperNova* and restore (as close as possible) the Properties with the best Material available previously, which was the Epic (purple) Material.
+
+![SuperNova Missing Material Fix](https://imgur.com/oyaBnu1.jpg "Don't worry guys... even if my screen capture show French text, my mods are in English")
+
+* * * * *
+
+## What is the *SuperNova* Missing Material Bug?
+
 The Missing Material bug (and its consequences), as explained on __[Borderlands Wiki - Supernova](https://borderlands.fandom.com/wiki/Supernova)__ page:
 
 > Due to a coding bug, it is possible for the *Supernova* to spawn with four different materials rather than just the predefined one. Normally, a Legendary shield has a predefined material, either custom or the standard Epic rarity material. __The material difference affects the shield capacity, nova damage, and nova radius, even when all other parts are the same.__
@@ -49,17 +59,17 @@ Not clear? ... Well, perhaps it will be more easy to compare (and understand) ho
 
 ### My modest contribution to fix this (naughty) bug:
 
-If I modify any properties from the actual Material (Common/Uncommon/Rare/Epic) wich actually spawn with the *SuperNova*, this will modify all the Common/Uncommon/Rare/Epic Maliwan Spike Shield and the Common/Uncommon/Rare/Epic Maliwan Nova Shield... so the only way to solve this *Missing Material* bug, it's to borrow a *Unique (predefined) Material* to another Legendary shield.
+If I modify any properties from the actual Material (Common/Uncommon/Rare/Epic) wich actually spawn randomly with the *SuperNova*, this will modify all the Common/Uncommon/Rare/Epic Maliwan Spike Shield and the Common/Uncommon/Rare/Epic Maliwan Nova Shield... so the only way to solve this *Missing Material* bug properly, it's to borrow a *Unique (predefined) Material* to another Legendary shield.
 
 ### Step 1: Missing Material Fix
 
 To keep the thing simple, as the *SuperNova* is a Legendary Maliwan shield, I will borrow the Missing Material from the *Black Hole* which is another Legendary Maliwan shield, and make the *SuperNova* always spawn with this *Unique (predefined) Material*.
 
-So yes, now, the *Black Hole* and the *SuperNova* share the same Unique Material, which mean that any modification made to this Unique Material will apply on both shields... and obviously that *-unfortunately!-* the *Black Hole* Unique Material already modifies the *SuperNova* Properties.
+So yes, now, the *Black Hole* and the *SuperNova* share the same Unique Material, which mean that any modification made to this Unique Material will apply on both shields... and obviously the *Black Hole* Unique Material already modifies the *SuperNova* Properties.
 
 ### Step 2: Unique Properties Fix
 
-Yep! Ironically, I solve a problem by creating another one, but now as the *SuperNova* has Unique Properties, it can be solved easily.
+Yep! Ironically, I solve one problem by creating another one, but now as the *SuperNova* has Unique Properties, it can be solved easily.
 
 Since the *SuperNova* share the ```GD_Shields.Material.PartsList_Materials_Nova_Singularity``` from the *Black Hole*, the *Material Grade Bonuses* from the *Black Hole* applies the *SuperNova*, and of course, they are different... very different:
 
@@ -74,17 +84,19 @@ To resorb these differences caused by the new shared *Black Hole's Unique Materi
 | -------------       | -------------                  | -------------       |                              
 | Capacity:           | 10242                          | 10310               |  
 | Recharge Rate:      | 1750                           | 1751                |  
-| Recharge Delay:     | 4,06                           | 4,01                |  
-| Nova Damage:        | 20285                          | 21007               |  
+| Recharge Delay:     | 4,06                           | 4,06                |  
+| Nova Damage:        | 20285                          | 21887               |  
 | Nova Radius:        | 2056                           | 2052                | 
 
 ### Step 3: Legendary Skin Fix
 
-As the *Supernova* use now a the Black Hole's *Unique (predefined) Material*, it will have a Legendary skin instead of a random Epic/Rare/Common/Uncommon skin. 
+As the *Supernova* use now a the Black Hole's *Unique (predefined) Material*, it will have a Legendary Maliwan skin instead of a random Epic/Rare/Common/Uncommon skin.
+
+__Know Issue:__ It's purely cosmetic, but the the *Black Hole* of *SuperNova* share the same skin.
 
 ### Step 4: Legendary Value fix:
 
-As the Monetary value, is linked to the Black Hole's *Unique (predefined) Material* used, the random Epic/Rare/Common/Uncommon Monetary Value is upgraded to Legendary Monetary Value.
+As the Monetary value is linked to the Black Hole's *Unique (predefined) Material* used, the random Epic/Rare/Common/Uncommon Monetary Value is upgraded to Legendary Monetary Value.
 
 ### Step 4: Legendary Shield Lootpool:
 
@@ -93,7 +105,7 @@ At least, no change needed to be done to the lootpool, as the *SuperNova* is alr
 __Note:__ The *SuperNova* can be randomly obtained in the grinder by grinding three Legendary shields (like any other Legendary shield)
 
 ![SuperNova Missing Material Fix](https://imgur.com/oyaBnu1.jpg "Don't worry guys... even if my screen capture show French text, my mods are in English")
-Et voila... Missing/Random Material Fix done!
+Et voila... *SuperNova Missing Material Fix* done... and Random Material bug resolved!
 
 Enjoy!
 
@@ -105,13 +117,14 @@ Enjoy!
 
 - 100% compatible with the latest version of [TPS Community Patch](https://github.com/BLCM/BLCMods/tree/master/Pre%20Sequel%20Mods/Community%20Patch)
 - Should be compatible with most other mods, as long as they do not touch to the *Black Hole Properties*
+- __Know Issue:__ It's purely cosmetic, but the the *Black Hole* of *SuperNova* share the same skin.
 
-:warning: This Fix __IS NOT COMPATIBLE__ with my mod *Black Hole On Steroids*, choose *Black Hole & SuperNova On Steroids* which __IS COMPATIBLE__ instead. :warning:
+:warning: This fix is already includes my *Black Hole & SuperNova On Steroids* Mod, so if you're already using it, there's no longer any reason to use this fix... but it won't hurt anything to have both enabled, though... in this case, this *Supernova Missing Material Fix* must be placed __BEFORE__ the *Black Hole & SuperNova On Steroids*.
+
 
 ### To do:
 
-- [ ] Fix the SuperNova skin which still mix few parts from the Random Material.
-- [ ] Might be tweaked later... if a better solution is found?
+- [ ] Create a new skin to make the difference faster between the *Black Hole* of *SuperNova*.
   
 ### Note: 
 

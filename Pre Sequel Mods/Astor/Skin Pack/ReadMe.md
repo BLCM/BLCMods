@@ -1,8 +1,8 @@
 This Read Me is just here as a quick synopsis, for detailed informations, each Mod has is own Read Me (and even a Changelog), so don't hesitate -whoosh!- to give a look on it.
 
-## [Skin Pack] Moxxi Signature Elegance Collection
+## Skin Pack 
 
-- Inspired from the *Santos*, a well know French jeweler watch... with the color from the golden screws inserted into a (silver) brushed steel bracelet, and the addition from the red similar to the little *Cartier* box... Et voila!
+- __Moxxi Signature Elegance Collection:__ Inspired from the *Santos*, a well know French jeweler watch... with the color from the golden screws inserted into a (silver) brushed steel bracelet, and the addition from the red similar to the little *Cartier* box... Et voila!
 
 * * * * *
  

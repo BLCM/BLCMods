@@ -1,18 +1,10 @@
 This Read Me is just here as a quick synopsis, for detailed informations, each Mod has is own Read Me (and even a Changelog), so don't hesitate -whoosh!- to give a look on it.
 
-## Gears Improvement:
+## Custom Weapons:
 
-- ### Items Improvement:  
-
-  - #### Shields Improvement:
-
-    - __*Booster Shields* Auto Pick-Up:__ Like Money and Ammunition, now the booster shield automatically pick-up... just walk on it and it's your!
-
-- ### Weapons Improvement:
-
-  - ### Assault Rifle Improvement:
-
-    - __*KerBoom* with Singularity Grenade:__ Turns the KerBoom into a useful weapon by shooting 1 rockets, which spawn 1 singularity child grenade.
+- ### Custom Shotgun:
+  
+  - __*Striker* Real Fandir Edition:__ Always fires thirteen pellets (Fandir? Thirteen), but deals significantly less damage per pellet. 
 
 * * * * *
  
@@ -20,7 +12,7 @@ This Read Me is just here as a quick synopsis, for detailed informations, each M
 
 A ~~big~~ huge thanks to @LightChaosman and his great - [BLCMM (Borderlands Community Mod Manager)](https://github.com/BLCM/BLCMods/wiki/Borderlands-Community-Mod-Manager) tool who make the Mods creation a real pleasure. 
 
-* * * * *
+ * * * * *
  
 ## Disclaimer
 
@@ -34,4 +26,4 @@ All files and content provided here were written by me (Astor), unless stated ot
 
 - Do not re-upload this mod or any of my mods anywhere without my explicit permission... ANYWHERE!
 
-* * * * *
+ * * * * *

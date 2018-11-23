@@ -23,13 +23,11 @@ As the title suggests it, makes a few timed and objective count __-failable!-__ 
 
 __Note:__ *Pop Racing* optional mission with double time (3:00 instead of 1:30) countdown... you can even fall in lava and grab a new car during the race, you'll still have enough time eat a picnic at the roadside before passing -winner!- the finish line!
 
-
-
 ### Changelog:
 - v1.0.0, November 5, 2018
   - Initial public release
 - v1.0.1, November 12, 2018
-  - Add __*Objective Count Missions:__ Let Turrets Kill Scavs*
+  - Add __*Objective Count Missions:*__ Let Turrets Kill Scavs
 
 ### Compatibility:
 

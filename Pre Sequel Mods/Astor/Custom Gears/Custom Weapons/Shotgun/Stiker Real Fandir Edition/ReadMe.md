@@ -1,16 +1,26 @@
-## *Booster Shields* Auto Pick-Up v1.0.0
+## *Striker* Real Fandir Edition
 
-*Booster Shields* now automatically pick-up, however, to balance the auto pick-up advantage, the restoration value is reduced from ±20%.
+A picture worth 1.000 words, so let's start with a picture...
 
+![Striker Vanilla VS Stiker Real Fandir Edition](https://imgur.com/vNpTxvT.jpg "Don't worry guys... even if my screen capture show French text, my mods are in English")
+ 
+- Always fires thirteen pellets (Fandir? Thirteen), but deals significantly less damage per pellet.
+- The spread becomes slighty tighter to help its functionality as a Crit shotgun.
+- As he won't gain pellets from the Vertical Grip accessory, he will never spawn with it.
+
+The *Striker Real Fandir Edition* becomes an excellent weapon for *Nisha's Showdown skill* as the pellet spread is so precise that usually each do critical damage.
+
+![Stiker with Doc Prefix and Punisher Luneshine](https://imgur.com/YmaJTyg.jpg "Don't worry guys... even if my screen capture show French text, my mods are in English")
+__Note:__ With both the *Doc's Prefix* and the *Punisher Luneshine* it's possible to obtain a +138% percent critical bonus on a *Striker Real Fandir Edition*... not bad for a 13 pellet shotgun! 
+ 
 ### Where to find it?
 
-The *Booster Shields* can be obtained randomly from any suitable loot source. 
+The *Striker* can be obtained randomly from any suitable loot source but has an increased chance to drop from *Red Belly* in *Crisis Scar*. 
 
 ### Changelog:
-- v1.0.0, November 21, 2018
+
+- v1.0.0, November 25, 2018
   - Initial public release
-- v1.0.1, November 25, 2018
-  - Add a French/English language option (with toggle option)
  
 ### Compatibility:
 
@@ -19,10 +29,6 @@ The *Booster Shields* can be obtained randomly from any suitable loot source.
 ### To do:
 
 - [ ] Well... it seems to work correctly, so nothing I guess?
-
-### Credits & Thanks:
-
-Inspired by [Gear Overhaul 1.36](https://github.com/BLCM/BLCMods/blob/master/Borderlands%202%20mods/Orudeon/Gear%20Overhaul%201.36.txt) created for BL2 by [Orudeon](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/Orudeon). Such a Mod didn't seem to exist for TPS, though, so I took it upon myself to create some gears improvements (one by one). All the credits go to [Orudeon](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/Orudeon) for the idea.
   
 ### Note: 
 
