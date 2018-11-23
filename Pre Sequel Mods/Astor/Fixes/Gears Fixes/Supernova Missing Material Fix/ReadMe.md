@@ -111,7 +111,7 @@ Enjoy!
 
 ### Changelog:
 - v1.0.0, November 17, 2018
-  - Initial public release 
+  - Initial public release. 
 
 ### Compatibility:
 

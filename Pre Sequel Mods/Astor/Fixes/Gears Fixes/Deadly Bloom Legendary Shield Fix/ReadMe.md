@@ -69,11 +69,11 @@ Enjoy!
 ### Changelog:
 
 - v1.0.0, November 20, 2018
-  - Initial public release
+  - Initial public release.
 - v1.0.1, November 25, 2018
-  - Add Optional Legendary Properties Upgrade
+  - Add Optional Legendary Properties Upgrade.
 - v1.0.2, November 30, 2018
-  - Add Optional TPS Rarity Color Fix (with toggle option)  
+  - Add Optional TPS Rarity Color Fix (with toggle option).  
  
 ### Compatibility:
 
