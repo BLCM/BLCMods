@@ -39,12 +39,11 @@ public class AllegiancePanelGenerated extends javax.swing.JPanel {
         jRadioButton8 = new javax.swing.JRadioButton();
         jLabel2 = new javax.swing.JLabel();
         jRadioButton9 = new javax.swing.JRadioButton();
-        JRadioButton10 = new javax.swing.JRadioButton();
+        eridianButton = new javax.swing.JRadioButton();
         moxxiButton = new javax.swing.JRadioButton();
         jRadioButton12 = new javax.swing.JRadioButton();
         jLabel3 = new javax.swing.JLabel();
         charComboBox = new javax.swing.JComboBox<>();
-        jRadioButton13 = new javax.swing.JRadioButton();
 
         jLabel1.setText("Standard Manufacturers");
 
@@ -57,10 +56,10 @@ public class AllegiancePanelGenerated extends javax.swing.JPanel {
         jRadioButton2.setText(Manufacturer.DAHL.toString());
 
         buttonGroup.add(jRadioButton3);
-        jRadioButton3.setText(Manufacturer.JAKOBS.toString());
+        jRadioButton3.setText(Manufacturer.HYPERION.toString());
 
         buttonGroup.add(jRadioButton4);
-        jRadioButton4.setText(Manufacturer.MALIWAN.toString());
+        jRadioButton4.setText(Manufacturer.JAKOBS.toString());
 
         buttonGroup.add(jRadioButton5);
         jRadioButton5.setText(Manufacturer.MALIWAN.toString());
@@ -79,11 +78,11 @@ public class AllegiancePanelGenerated extends javax.swing.JPanel {
         buttonGroup.add(jRadioButton9);
         jRadioButton9.setText(Manufacturer.ANSHIN.toString());
 
-        buttonGroup.add(JRadioButton10);
-        JRadioButton10.setText(Manufacturer.ERIDIAN.toString());
-        JRadioButton10.addActionListener(new java.awt.event.ActionListener() {
+        buttonGroup.add(eridianButton);
+        eridianButton.setText(Manufacturer.ERIDIAN.toString());
+        eridianButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                JRadioButton10ActionPerformed(evt);
+                eridianButtonActionPerformed(evt);
             }
         });
 
@@ -93,11 +92,9 @@ public class AllegiancePanelGenerated extends javax.swing.JPanel {
         buttonGroup.add(jRadioButton12);
         jRadioButton12.setText(Manufacturer.PANGOLIN.toString());
 
-        jLabel3.setText("Select a character you're NOT playing as");
+        jLabel3.setText("Select someone you're NOT playing as");
 
-        charComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Salvador", "Claptrap" }));
-
-        jRadioButton13.setText(Manufacturer.STOCK.toString());
+        charComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -106,7 +103,6 @@ public class AllegiancePanelGenerated extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jRadioButton13)
                     .addComponent(jLabel1)
                     .addComponent(jRadioButton9)
                     .addComponent(jLabel2)
@@ -120,13 +116,13 @@ public class AllegiancePanelGenerated extends javax.swing.JPanel {
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jRadioButton12)
-                            .addComponent(JRadioButton10)
+                            .addComponent(eridianButton)
                             .addComponent(jRadioButton6)
                             .addComponent(jRadioButton2)
                             .addComponent(jRadioButton4)
                             .addComponent(jRadioButton8)))
-                    .addComponent(charComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel3))
+                    .addComponent(jLabel3)
+                    .addComponent(charComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -155,36 +151,33 @@ public class AllegiancePanelGenerated extends javax.swing.JPanel {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jRadioButton9)
-                    .addComponent(JRadioButton10))
+                    .addComponent(eridianButton))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(moxxiButton)
                     .addComponent(jRadioButton12))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jRadioButton13)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(charComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(15, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void JRadioButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JRadioButton10ActionPerformed
+    private void eridianButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eridianButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_JRadioButton10ActionPerformed
+    }//GEN-LAST:event_eridianButtonActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    protected javax.swing.JRadioButton JRadioButton10;
     protected javax.swing.ButtonGroup buttonGroup;
     protected javax.swing.JComboBox<String> charComboBox;
+    protected javax.swing.JRadioButton eridianButton;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     protected javax.swing.JRadioButton jRadioButton1;
     protected javax.swing.JRadioButton jRadioButton12;
-    protected javax.swing.JRadioButton jRadioButton13;
     protected javax.swing.JRadioButton jRadioButton2;
     protected javax.swing.JRadioButton jRadioButton3;
     protected javax.swing.JRadioButton jRadioButton4;

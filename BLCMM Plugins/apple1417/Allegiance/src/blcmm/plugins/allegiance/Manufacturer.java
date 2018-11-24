@@ -13,7 +13,6 @@ public enum Manufacturer {
     ANSHIN("Anshin", "GD_Manufacturers.Manufacturers.Anshin"),
     ERIDIAN("Eridian", "GD_Manufacturers.Artifacts."),
     MOXXI("Moxxi", "GD_Manufacturers.Manufacturers.Moxxi"),
-    STOCK("Stock", "GD_Manufacturers.Manufacturers.Stock"),
     PANGOLIN("Pangolin", "GD_Manufacturers.Manufacturers.Pangolin");
     
     

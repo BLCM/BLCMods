@@ -1,13 +1,15 @@
 package blcmm.plugins.allegiance;
 
 import blcmm.data.lib.DataManager;
+import blcmm.model.HotfixType;
+import blcmm.model.assist.BLCharacter;
 import javax.swing.JRadioButton;
 import javax.swing.ButtonModel;
-import javax.swing.DefaultComboBoxModel;
 import java.util.HashMap;
 import java.util.EnumSet;
-import blcmm.model.assist.BLCharacter;
 import blcmm.plugins.pseudo_model.PCategory;
+import blcmm.plugins.pseudo_model.PHotfix;
+import javax.swing.DefaultComboBoxModel;
 
 /*
   So while netbeans may have let me import the default project all nicely, it's
@@ -16,13 +18,13 @@ import blcmm.plugins.pseudo_model.PCategory;
 */
 public class AllegiancePanel extends AllegiancePanelGenerated {
     
-    private boolean isBL2 = DataManager.getBL2();
     private HashMap<ButtonModel, Manufacturer> manuMap;
-    
+    private boolean isBL2;
     public AllegiancePanel() {
         super();
         
-        // We have to change some stuff based on what game it is
+        isBL2 = DataManager.getBL2();
+        eridianButton.setEnabled(isBL2);
         moxxiButton.setEnabled(!isBL2);
         EnumSet<BLCharacter> characters = isBL2 ? BLCharacter.BL2Chars
                                                 : BLCharacter.TPSChars;
@@ -42,10 +44,9 @@ public class AllegiancePanel extends AllegiancePanelGenerated {
             jRadioButton7,
             jRadioButton8,
             jRadioButton9,
-            JRadioButton10,
+            eridianButton,
             moxxiButton,
-            jRadioButton12,
-            jRadioButton13
+            jRadioButton12
         };
 
         // Swing is awkward and won't return the enum directly so I need this
@@ -57,23 +58,56 @@ public class AllegiancePanel extends AllegiancePanelGenerated {
     
     public PCategory generate() {
         if (buttonGroup.getSelection() == null) {return null;}
-        BLCharacter blChar = BLCharacter.values()[
-                charComboBox.getSelectedIndex()+ (isBL2 ? 0 : 6)];
         Manufacturer manu = manuMap.get(buttonGroup.getSelection());
+        BLCharacter blChar = BLCharacter.values()[
+                charComboBox.getSelectedIndex() + (isBL2 ? 0 : 6)];
         
         PCategory root = new PCategory(String.format(
-            "%s Allegiance (to %s)",
+            "%s Allegiance (No %s)",
             manu.toString(),
             blChar.getCharacterName()
         ));
         
-        InventoryDumpProcessor processor = new InventoryDumpProcessor(
-            blChar, manu, root
-        );
-
+        // This will deal with everything but class mods and moxxtails
         DataManager.streamAllDumpsOfClassAndSubclasses("InventoryBalanceDefinition",
-                processor);
+                new InventoryDumpProcessor(manu, root));
+        /*
+          "ClassModBalanceDefinition"s don't include a manufacturer, instead they
+           contain a list of "ClassModDefinition"s, which each contain a
+           "ManufacturerOverride"
+          Because of this different format they need their own dump processor
+        */
+        DataManager.streamAllDumpsOfClassAndSubclasses("ClassModBalanceDefinition",
+                new ClassModDumpProcessor(manu, root, blChar));
         
+        /*
+          Moxxtails are a UsableItemDefinition so they won't be picked up by
+           InventoryDumpProcessor, and they also need hotfixes, which it can't
+           deal with, so we do them here instead
+          There are also few enough that I can hardcode them
+        */
+        if (!DataManager.getBL2() && manu != Manufacturer.MOXXI) {
+            String[] allMoxxtails = new String[] {
+                "GD_Moxxtails.Balance.ItemGrade_AmmoPickup",
+                "GD_Moxxtails.Balance.ItemGrade_DamagePickup",
+                "GD_Moxxtails.Balance.ItemGrade_DefensePickup",
+                "GD_Moxxtails.Balance.ItemGrade_ElementalPickup",
+                "GD_Moxxtails.Balance.ItemGrade_HealthPickup",
+                "GD_Moxxtails.Balance.ItemGrade_MeleePickup",
+                "GD_Moxxtails.Balance.ItemGrade_OxygenPickup",
+                "GD_Moxxtails.Balance.ItemGrade_SpeedPickup"
+            };
+            for (String moxxtail : allMoxxtails) {
+             root.addChild(new PHotfix(
+                     moxxtail,
+                     "Manufacturers",
+                     "(Manufacturer=ManufacturerDefinition'GD_Manufacturers.Manufacturers.Moxxi',Grades=((GradeModifiers=(ExpLevel=10,CustomInventoryDefinition=None),GameStageRequirement=(MinGameStage=81,MaxGameStage=100),MinSpawnProbabilityModifier=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),MaxSpawnProbabilityModifier=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))))",
+                     HotfixType.LEVEL,
+                     "Spaceport_P",
+                     "DisableMoxxtails"
+             ));
+            }
+        }
         return root;
     }
 }
