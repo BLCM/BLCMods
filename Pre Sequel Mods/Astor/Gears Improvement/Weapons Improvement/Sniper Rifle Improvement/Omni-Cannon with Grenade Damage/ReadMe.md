@@ -1,22 +1,18 @@
-## *KerBoom* with Singularity Grenade
+## *Omni-Cannon* with Grenade Damage
 
-Turns the *KerBoom* into a useful weapon:
-
-- Shot 1 rockets, which spawn 1 singularity child grenade.
-- No self-damage on the rocket and the grenade.
-- Cuts the cost of ammo to 2 per shot (instead of 4) and effectively doubles the magazine.
+While TPS Patch 2.2 upgrades to the *Omni-Cannon* have made it a MUCH more valuable piece, it still does not become viable enough for most characters; but with this Grenade Damage Bonus added, the *Omni-Cannon* will become one of the BEST sniper rifle in TPS.
  
 ### Where to find it?
 
-The *KerBoom* can be obtained randomly from any suitable loot source, and has an increased chance to drop from *Boomer* encountered in the south-east corner of *Outlands Spur* during the mission *Nothing Is Never an Option*. 
+The *Omni-Cannon* can be obtained randomly from any suitable loot source and has an increased chance to drop from *The Sponx* located in *The Temple of Boom* (during *Claptastic Voyage* DLC). 
 
 ### Changelog:
-- v1.0.0, November 20, 2018
-  - Initial public release.
+- v1.0.0, November 15, 2018
+  - Initial public release
  
 ### Compatibility:
 
-- 100% compatible with the latest version of [TPS Community Patch](https://github.com/BLCM/BLCMods/tree/master/Pre%20Sequel%20Mods/Community%20Patch).
+- 100% compatible with the latest version of [TPS Community Patch](https://github.com/BLCM/BLCMods/tree/master/Pre%20Sequel%20Mods/Community%20Patch)
 
 ### Help! The Mod doesn't work !?!
 

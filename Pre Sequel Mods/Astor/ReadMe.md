@@ -52,7 +52,7 @@ This Read Me is just here as a quick synopsis, for detailed informations, each M
 
 ## UCP 2.2 Fixes:
 
-- __*Buff Volcano* Fix:__ Fix the faulty line of code in *TPS Patch 2.2.* to make the +50% Radius Damage (280 instead of 190) applying correctly.
+- __Buff *Volcano* Fix:__ Fix the faulty line of code in *TPS Patch 2.2.* to make the +50% Radius Damage (280 instead of 190) applying correctly.
 
 * * * * *
 
@@ -70,11 +70,15 @@ This Read Me is just here as a quick synopsis, for detailed informations, each M
 
     - __*KerBoom* with Singularity Grenade:__ Turns the KerBoom into a useful weapon by shooting 1 rockets, which spawn 1 singularity child grenade.
 
+- ### Sniper Rifle Improvement:
+
+  - ***Omni-Cannon* with Grenade Damage:** with this *Grenade Damage Bonus* added, the *Omni-Cannon* will become one of the BEST sniper rifle in TPS.
+
 * * * * *
 
 ## Quality of Life: 
 
-- __*More Pick-Up Radius:*__ It's a all simple Mod but somewhat large, in a sense, change!
+- __More Pick-Up Radius:__ It's a all simple Mod but somewhat large, in a sense, change!
 
 - __No More Reload Message:__ Removes the (annoying) *Reload Message* which pop-up (too) often on the screen!
 

@@ -1,0 +1,32 @@
+<BLCMM v="1">
+#<!!!You opened a file saved with BLCMM in FilterTool. Please update to BLCMM to properly open this file!!!>
+	<head>
+		<type name="TPS" offline="false"/>
+		<profiles>
+			<profile name="default" current="true"/>
+		</profiles>
+	</head>
+	<body>
+		<category name="Omni-Cannon with Grenade Damage v1.0.0">
+			<comment>Mod author: Astor</comment>
+			<comment>Release Date: 15 November 2018</comment>
+			<comment>Version: 1.0.0 - See ReadMe for Changelog ;)</comment>
+			<category name="Description">
+				<comment>While TPS UCP 2.2 upgrades to the Omni-Cannon have made it a MUCH more valuable piece,</comment>
+				<comment>it still does not become viable enough for most characters; but with this Grenade Damage Bonus added,  </comment>
+				<comment>the Omni-Cannon will become one of the BEST snipers in TPS. </comment>
+			</category>
+			<category name="Grenade Damage Bonus">
+				<code profiles="default">set GD_Ma_Weapons.FiringModes.Bullet_Sniper_OmniCannon:Behavior_Explode_34 DamageSource Class'WillowGame.WillowDmgSource_Grenade'</code>
+			</category>
+			<category name="Fix for SPLASH (UCP 2.2)">
+				<code profiles="default">set GD_Ma_Weapons.FiringModes.Bullet_Sniper_OmniCannon:Behavior_Explode_34 DamageFormula (BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',InitializationDefinition=None,BaseValueScaleConstant=1.000000)</code>
+			</category>
+		</category>
+	</body>
+</BLCMM>
+
+#Commands:
+set GD_Ma_Weapons.FiringModes.Bullet_Sniper_OmniCannon:Behavior_Explode_34 DamageSource Class'WillowGame.WillowDmgSource_Grenade'
+set GD_Ma_Weapons.FiringModes.Bullet_Sniper_OmniCannon:Behavior_Explode_34 DamageFormula (BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+
