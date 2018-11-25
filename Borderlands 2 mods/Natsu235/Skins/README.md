@@ -2,4 +2,4 @@
 
 ### Storm
 
-![Storm Skin](storm.jpg)
+![Storm Skin](../Images/storm.jpg)
