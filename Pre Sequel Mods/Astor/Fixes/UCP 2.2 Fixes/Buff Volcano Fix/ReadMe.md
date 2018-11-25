@@ -1,26 +1,22 @@
-## *KerBoom* with Singularity Grenade
+## *Buff Volcano* Fix
 
-Turns the *KerBoom* into a useful weapon:
+Fix a faulty line of code find in *TPS Patch 2.2.* which prevented the *+50% Radius Damage* improvement to run.
 
-- Shot 1 rockets, which spawn 1 singularity child grenade.
-- No self-damage on the rocket and the grenade.
-- Cuts the cost of ammo to 2 per shot (instead of 4) and effectively doubles the magazine.
- 
-### Where to find it?
+![Buff Volcano Fix](https://imgur.com/dYEJvPH.jpg "Don't worry guys... even if my screen capture show French text, my mods are in English")
 
-The *KerBoom* can be obtained randomly from any suitable loot source, and has an increased chance to drop from *Boomer* encountered in the south-east corner of *Outlands Spur* during the mission *Nothing Is Never an Option*. 
+Now, the *+50% Radius Damage* (280 instead of 190) on the *Volcano* apply as intended.
 
 ### Changelog:
-- v1.0.0, November 20, 2018
+
+- v1.0.0, November 25, 2018
   - Initial public release.
  
 ### Compatibility:
 
-- 100% compatible with the latest version of [TPS Community Patch](https://github.com/BLCM/BLCMods/tree/master/Pre%20Sequel%20Mods/Community%20Patch).
+- 100% compatible with the latest version of [TPS Community Patch](https://github.com/BLCM/BLCMods/tree/master/Pre%20Sequel%20Mods/Community%20Patch)
 
-### Help! The Mod doesn't work !?!
+:warning: Be aware to place this fix __AFTER__ the Mod *UCP 2.2*
 
-Read this little [Compatibility & Troubleshooting](https://github.com/BLCM/BLCMods/tree/master/Pre%20Sequel%20Mods/Astor/Compatibility%20%26%20Troubleshooting) page... It's not that hard!  :wink:
 
 ### To do:
 

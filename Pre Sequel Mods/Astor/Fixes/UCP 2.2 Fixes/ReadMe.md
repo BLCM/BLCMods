@@ -1,22 +1,8 @@
 This Read Me is just here as a quick synopsis, for detailed informations, each Mod has is own Read Me (and even a Changelog), so don't hesitate -whoosh!- to give a look on it.
 
-* * * * *
+## UCP 2.2 Fixes:
 
-## Items Improvement:  
-
-- #### Shields Improvement:
-
-  - __*Booster Shields* Auto Pick-Up:__ Like Money and Ammunition, now the booster shield automatically pick-up... just walk on it and it's your!
-
-## Weapons Improvement:
-
-- ### Assault Rifle Improvement:
-
-  - __*KerBoom* with Singularity Grenade:__ Turns the KerBoom into a useful weapon by shooting 1 rockets, which spawn 1 singularity child grenade.
-
-- ### Sniper Rifle Improvement:
-
-  - ***Omni-Cannon* with Grenade Damage:** with this *Grenade Damage Bonus* added, the *Omni-Cannon* will become one of the BEST sniper rifle in TPS.
+- __*Buff Volcano* Fix:__ Fix the faulty line of code in *TPS Patch 2.2.* to make the +50% Radius Damage (280 instead of 190) applying correctly.
 
 * * * * *
  

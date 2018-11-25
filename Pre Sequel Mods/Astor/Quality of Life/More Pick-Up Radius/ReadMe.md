@@ -1,30 +1,22 @@
-## *KerBoom* with Singularity Grenade
+## More Pick-Up Radius
 
-Turns the *KerBoom* into a useful weapon:
-
-- Shot 1 rockets, which spawn 1 singularity child grenade.
-- No self-damage on the rocket and the grenade.
-- Cuts the cost of ammo to 2 per shot (instead of 4) and effectively doubles the magazine.
- 
-### Where to find it?
-
-The *KerBoom* can be obtained randomly from any suitable loot source, and has an increased chance to drop from *Boomer* encountered in the south-east corner of *Outlands Spur* during the mission *Nothing Is Never an Option*. 
+This very simple Mod with toggle option, double or triple your pick-up radius for money, ammunitions, etc...
 
 ### Changelog:
-- v1.0.0, November 20, 2018
-  - Initial public release.
+- v1.0.0, November 25, 2018
+  - Initial public release
  
 ### Compatibility:
 
-- 100% compatible with the latest version of [TPS Community Patch](https://github.com/BLCM/BLCMods/tree/master/Pre%20Sequel%20Mods/Community%20Patch).
-
-### Help! The Mod doesn't work !?!
-
-Read this little [Compatibility & Troubleshooting](https://github.com/BLCM/BLCMods/tree/master/Pre%20Sequel%20Mods/Astor/Compatibility%20%26%20Troubleshooting) page... It's not that hard!  :wink:
+- 100% compatible with the latest version of [TPS Community Patch](https://github.com/BLCM/BLCMods/tree/master/Pre%20Sequel%20Mods/Community%20Patch)
 
 ### To do:
 
 - [ ] Well... it seems to work correctly, so nothing I guess?
+
+### Credits & Thanks:
+
+Inspired by [Travel Portal Disabler](https://github.com/BLCM/BLCMods/blob/master/Borderlands%202%20mods/FromDarkHell/Quality%20of%20Life/TravelPortalDisabler.blcm) created for BL2 by [FromDarkHell](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/FromDarkHell). Such a Mod didn't seem to exist for TPS, though, so I took it upon myself to create one. All the credits go to [FromDarkHell](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/FromDarkHell) for the idea. 
   
 ### Note: 
 

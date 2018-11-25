@@ -1,22 +1,10 @@
 This Read Me is just here as a quick synopsis, for detailed informations, each Mod has is own Read Me (and even a Changelog), so don't hesitate -whoosh!- to give a look on it.
 
-* * * * *
+## Gears Fixes:
 
-## Items Improvement:  
+- __*Deadly Bloom* Legendary Fix:__ Fix the *Deadly Bloom* Legendary bug by makes it regain his *legit* Legendary rarity, value & skin.
 
-- #### Shields Improvement:
-
-  - __*Booster Shields* Auto Pick-Up:__ Like Money and Ammunition, now the booster shield automatically pick-up... just walk on it and it's your!
-
-## Weapons Improvement:
-
-- ### Assault Rifle Improvement:
-
-  - __*KerBoom* with Singularity Grenade:__ Turns the KerBoom into a useful weapon by shooting 1 rockets, which spawn 1 singularity child grenade.
-
-- ### Sniper Rifle Improvement:
-
-  - ***Omni-Cannon* with Grenade Damage:** with this *Grenade Damage Bonus* added, the *Omni-Cannon* will become one of the BEST sniper rifle in TPS.
+- __*SuperNova* Missing Material Fix:__ My modest contribution to fix the *Missing Material* bug which makes the *SuperNova* spawn with four different materials rather than just the predefined one and affecting the shield capacity, nova damage, and nova radius.
 
 * * * * *
  

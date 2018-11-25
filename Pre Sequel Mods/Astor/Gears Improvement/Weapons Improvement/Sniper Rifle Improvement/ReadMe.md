@@ -2,19 +2,7 @@ This Read Me is just here as a quick synopsis, for detailed informations, each M
 
 * * * * *
 
-## Items Improvement:  
-
-- #### Shields Improvement:
-
-  - __*Booster Shields* Auto Pick-Up:__ Like Money and Ammunition, now the booster shield automatically pick-up... just walk on it and it's your!
-
-## Weapons Improvement:
-
-- ### Assault Rifle Improvement:
-
-  - __*KerBoom* with Singularity Grenade:__ Turns the KerBoom into a useful weapon by shooting 1 rockets, which spawn 1 singularity child grenade.
-
-- ### Sniper Rifle Improvement:
+## Sniper Rifle Improvement:
 
   - ***Omni-Cannon* with Grenade Damage:** with this *Grenade Damage Bonus* added, the *Omni-Cannon* will become one of the BEST sniper rifle in TPS.
 
