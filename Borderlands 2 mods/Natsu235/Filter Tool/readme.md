@@ -16,14 +16,22 @@ Update v2.0
 
 Added:
 * Different Colors to each Fibber Barrel			(*Colored_Fibber_Barrels.txt*)
-* Fire Icon to Hide of Terramorphous				(*Hide_of_Terra_Better_Hud.txt*)
-* Slag Icon & Slag Shield Bar Outline to Antagonist	(*Antagonist_Better_Hud.txt*)
+* Fire Icon to the Hide of Terramorphous			(*Hide_of_Terra_Better_Hud.txt*)
+* Slag Icon & Shield Bar Outline to the Antagonist	(*Antagonist_Better_Hud.txt*)
 
 Updated:
 * Fixed some grammatical errors
 * Renamed files:
 	- *Fixes/Crossfire_Fusetime.txt* -> *Fixes/Crossfire_Fuse_Time.txt*
 	- *Fixes/Love_Thumper_Deadly_Bloom_Skins.txt* -> *Fixes/Love_Thumper_&_Deadly_Bloom_Skins.txt*
+
+### 11/25/2018
+
+Update v3.0
+
+Added:
+* TPS Rerouter Skin over the The Bee				(*Skins/TPS_Rerouter.txt*)
+* TPS M0RQ Skin over the Neogenator					(*Skins/TPS_M0RQ.txt*)
 
 
 ## Gibbed Codes
