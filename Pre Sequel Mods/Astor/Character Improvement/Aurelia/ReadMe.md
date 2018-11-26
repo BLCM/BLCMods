@@ -1,8 +1,10 @@
 This Read Me is just here as a quick synopsis, for detailed informations, each Mod has is own Read Me (and even a Changelog), so don't hesitate -whoosh!- to give a look on it.
 
-## [Character Change] Aurelia - Cold As Ice in FFYL
+* * * * *
 
-As the title suggest it, you can now throw your *Frost Diadem Shard* (*Cold As Ice* ability) while in *Fight For Your Live*.
+## Aurelia:
+
+- __Cold As Ice in FFYL:__ As the title suggest it, you can now throw your *Frost Diadem Shard* (*Cold As Ice* ability) while in *Fight For Your Live*.
 
 * * * * *
  

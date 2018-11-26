@@ -1,8 +1,10 @@
 This Read Me is just here as a quick synopsis, for detailed informations, each Mod has is own Read Me (and even a Changelog), so don't hesitate -whoosh!- to give a look on it.
 
-## [Character Change] Jack - DigiJack in FFYL
+* * * * *
 
-- As the title suggests it, you can summon your *DigiJack* to fight alongside you while in *Fight For Your Live*.
+## Jack: 
+
+- __DigiJack in FFYL:__ As the title suggests it, you can summon your *DigiJack* to fight alongside you while in *Fight For Your Live*.
 
 * * * * *
  

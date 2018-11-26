@@ -1,8 +1,10 @@
 This Read Me is just here as a quick synopsis, for detailed informations, each Mod has is own Read Me (and even a Changelog), so don't hesitate -whoosh!- to give a look on it.
 
-## [Character Change] Throw Grenade in FFYL
+* * * * *
 
-- As the title suggests it, now you can throw grenades when you are in FFYL, and with any character.
+## All Characters:
+
+- __Throw Grenade in FFYL:__ Now you can throw grenades while in FFYL.
 
 * * * * *
  
