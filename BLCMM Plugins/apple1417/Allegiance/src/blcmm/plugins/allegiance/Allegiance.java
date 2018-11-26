@@ -9,7 +9,7 @@ import javax.swing.JProgressBar;
 public class Allegiance extends BLCMMModelPlugin {
     AllegiancePanel panel;
     public Allegiance() {
-        super(true, true, "apple1417", "1.0");
+        super(true, true, "apple1417", "1.1");
     }
 
     @Override
