@@ -1,8 +1,8 @@
-#####################################################
-#                                                   #
-#   Replace "Cryo" with "Slag" from Borderlands 2   #
-#                                                   #
-#####################################################
+#############################################################################
+#                                                                           #
+#   Replace the "Cryo" Element with the "Slag" Element from Borderlands 2   #
+#                                                                           #
+#############################################################################
 
 
 
@@ -477,7 +477,7 @@ set Ake_Cork_Wep_Ice.Ak_Play_Cork_Wep_Ice_Freed ShortId 755751131
 
 #set GD_ColZ.StatusEffect.Status_FakeSlag bNoStatusEffectChanceFalloff True
 
-set FX_CO_Damage_Ice.Particles.Part_FrozenScreenStatusIce FixedRelativeBoundingBox (Min=(X=-17.600000,Y=-17.600000,Z=-17.600000),Max=(X=17.600000,Y=17.600000,Z=17.600000),IsValid=1)
+#set FX_CO_Damage_Ice.Particles.Part_FrozenScreenStatusIce FixedRelativeBoundingBox (Min=(X=-17.600000,Y=-17.600000,Z=-17.600000),Max=(X=17.600000,Y=17.600000,Z=17.600000),IsValid=1)
 
 #set FX_CO_Damage_Ice.Particles.Part_FrozenScreenStatusIce:ParticleModuleColor_0 StartColor (Distribution=None,Type=0,Op=1,LookupTableNumElements=1,LookupTableChunkSize=3,LookupTable=(0.000000,1.000000,1.000000,0.000000,1.000000,1.000000,0.000000,1.000000),LookupTableTimeScale=0.000000,LookupTableStartTime=0.000000)
 
@@ -781,6 +781,12 @@ set FX_CO_Wep_Ice_Px.Particles.Part_Ice_ImpactFX:ParticleModuleColorOverLife_72 
 set FX_CO_Wep_Ice_Px.Particles.Part_Ice_ImpactFX:ParticleModuleColorOverLife_72 AlphaOverLife (Distribution=None,Type=0,Op=1,LookupTableNumElements=1,LookupTableChunkSize=1,LookupTable=(0.000000,50.000000,50.000000,44.852001,32.576000,17.924000,5.647999,0.500000,0.466667,0.433333,0.400000,0.366667,0.333333,0.300000,0.266667,0.233333,0.200000,0.166667,0.133333,0.100000,0.066667,0.033333,0.000000),LookupTableTimeScale=20.000000,LookupTableStartTime=0.000000)
 
 
+
+set FX_CO_Wep_Ice.Particles.Part_Ice_ImpactFX:ParticleSpriteEmitter_55.ParticleLODLevel_49 UpdateModules ()
+
+set FX_CO_Wep_Ice.Particles.Part_Ice_ImpactFX:ParticleSpriteEmitter_56.ParticleLODLevel_52 UpdateModules (ParticleModuleAcceleration'FX_CO_Wep_Ice.Particles.Part_Ice_ImpactFX:ParticleModuleAcceleration_2',ParticleModuleVelocityOverLifetime'FX_CO_Wep_Ice.Particles.Part_Ice_ImpactFX:ParticleModuleVelocityOverLifetime_6')
+
+
 - Grenades Impact -
 
 set FX_CO_Wep_Ice.Particles.Part_InFlight_Ice StopLoopingAudioEvent None
@@ -859,7 +865,7 @@ set FX_CO_Wep_Ice.Particles.Part_InFlight_Ice:ParticleModuleColorOverLife_10 Alp
 
 set GD_Cork_Weap_Launchers.Name.Title_Legendary_Cryophobia PartName Paranoia
 
-set GD_Cork_Weap_Launchers.Name.Title_Legendary_Cryophobia:AttributePresentationDefinition_8 NoConstraintText Science!
+set GD_Cork_Weap_Launchers.Name.Title_Legendary_Cryophobia:AttributePresentationDefinition_8 NoConstraintText Fear it!
 
 set GD_Cork_Weap_Launchers.A_Weapons_Legendary.RL_Maliwan_5_Cryophobia:WeaponPartListCollectionDefinition_71 ElementalPartData (bDisabled=False,Part=WeaponPartDefinition'GD_Weap_Launchers.Elemental.RL_Elemental_Fire',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=3,MaxGameStageIndex=1,DefaultWeightIndex=4),(bDisabled=False,Part=WeaponPartDefinition'GD_Weap_Launchers.Elemental.RL_Elemental_Corrosive',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=5,MaxGameStageIndex=1,DefaultWeightIndex=4),(bDisabled=False,Part=WeaponPartDefinition'GD_Weap_Launchers.Elemental.RL_Elemental_Shock',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=3,MaxGameStageIndex=1,DefaultWeightIndex=4),(bDisabled=False,Part=WeaponPartDefinition'GD_Weap_Launchers.Elemental.RL_Elemental_Ice',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=6,MaxGameStageIndex=1,DefaultWeightIndex=4)))
 
