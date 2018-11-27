@@ -12,7 +12,8 @@ Randomize Points for next tier ( ![Points For Next Tier](https://puu.sh/BZbWs/cc
 Randomize Layout ( ![Layout Randomized](https://puu.sh/BZbXY/96467f16d3.png) )
   Randomizes the layout of the skill tree creating things like: ![Skills](https://cdn.discordapp.com/attachments/446105169055318027/510593338869678080/unknown.png)
 ## Help it doesn't work
-[Read. Its not that hard](https://github.com/BLCM/BLCMods/blob/master/Borderlands%202%20mods/FromDarkHell/BLCMM%20Plugins/README.md)
+[Read. Its not that hard](https://github.com/BLCM/BLCMods/blob/master/BLCMM%20Plugins/FromDarkHell/README.md
+)
 
 ## Credits
 Thanks to:
