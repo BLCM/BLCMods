@@ -105,7 +105,7 @@ public class AllegiancePanelGenerated extends javax.swing.JPanel {
 
         relicCheckBox.setText("Allow Allegiance Relic");
 
-        jLabel4.setText("Increase value of money drops");
+        jLabel4.setText("Money drop value multiplier");
 
         moneySpinner.setModel(new javax.swing.SpinnerNumberModel(Float.valueOf(1.0f), Float.valueOf(1.0f), Float.valueOf(100.0f), Float.valueOf(1.0f)));
 
