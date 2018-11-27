@@ -14,7 +14,7 @@ This Read Me is just here as a quick synopsis, for detailed informations, each M
 
 * * * * *
 
-## Characters Change:
+## Characters Improvement:
 
 - ### All Characters:
 
@@ -34,7 +34,7 @@ This Read Me is just here as a quick synopsis, for detailed informations, each M
 
   - #### Custom Shield:
 
-   - __*Black Hole* & *SuperNova* On Steroids:__ Since my *SuperNova*'s Missing Material Fix share the Black Hole's *Unique (predefined) Material* for these both shields, this Mod includes the *Black Hole* and *SuperNova*... and my stand-alone fix *Supernova Missing Material Fix* because it's mandatory to make this Mod working correctly.
+    - __*Black Hole* & *SuperNova* On Steroids:__ Since my *SuperNova*'s Missing Material Fix share the Black Hole's *Unique (predefined) Material* for these both shields, this Mod includes the *Black Hole* and *SuperNova*... and my stand-alone fix *Supernova Missing Material Fix* because it's mandatory to make this Mod working correctly.
 
 - ### Custom Weapons:
 
@@ -83,6 +83,8 @@ This Read Me is just here as a quick synopsis, for detailed informations, each M
 ## Quality of Life: 
 
 - __More Pick-Up Radius:__ It's a all simple Mod but somewhat large, in a sense, change!
+
+- __No More *Fast Travel* Animation:__ Disables the useless (and annoying) teleporter voyage animation!
 
 - __No More Reload Message:__ Removes the (annoying) *Reload Message* which pop-up (too) often on the screen!
 
