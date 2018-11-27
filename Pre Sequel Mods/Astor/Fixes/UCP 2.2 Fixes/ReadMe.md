@@ -1,8 +1,10 @@
 This Read Me is just here as a quick synopsis, for detailed informations, each Mod has is own Read Me (and even a Changelog), so don't hesitate -whoosh!- to give a look on it.
 
+* * * * *
+
 ## UCP 2.2 Fixes:
 
-- __*Buff Volcano* Fix:__ Fix the faulty line of code in *TPS Patch 2.2.* to make the +50% Radius Damage (280 instead of 190) applying correctly.
+- __*Buff Volcano* Fix:__ Corrects the faulty line of code in *TPS Patch 2.2.* to make the +50% Radius Damage (280 instead of 190) applying correctly.
 
 * * * * *
  
