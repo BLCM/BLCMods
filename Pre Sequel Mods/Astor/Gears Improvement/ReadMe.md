@@ -4,7 +4,7 @@ This Read Me is just here as a quick synopsis, for detailed informations, each M
 
 ## Items Improvement:  
 
-- #### Shields Improvement:
+- ### Shields Improvement:
 
   - __*Booster Shields* Auto Pick-Up:__ Like Money and Ammunition, now the booster shield automatically pick-up... just walk on it and it's your!
 
@@ -16,7 +16,7 @@ This Read Me is just here as a quick synopsis, for detailed informations, each M
 
 - ### Sniper Rifle Improvement:
 
-  - ***Omni-Cannon* with Grenade Damage:** with this *Grenade Damage Bonus* added, the *Omni-Cannon* will become one of the BEST sniper rifle in TPS.
+  - __*Omni-Cannon* with Grenade Damage:__ with this *Grenade Damage Bonus* added, the *Omni-Cannon* will become one of the BEST sniper rifle in TPS.
 
 * * * * *
  
