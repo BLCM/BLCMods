@@ -6,14 +6,19 @@ While TPS Patch 2.2 upgrades to the *Omni-Cannon* have made it a MUCH more valua
 
 The *Omni-Cannon* can be obtained randomly from any suitable loot source and has an increased chance to drop from *The Sponx* located in *The Temple of Boom* (during *Claptastic Voyage* DLC). 
 
+![The Sponx](https://imgur.com/NTPJ4mV.jpg "Don't worry guys... even if my screen capture show French text, my mods are in English")
+
 ### Changelog:
 - v1.0.0, November 15, 2018
   - Initial public release
+- v1.0.1, November 30, 2018
+  - Include the *UCP 2.2 Buff Volcano Fix*
  
 ### Compatibility:
 
 - 100% compatible with the latest version of [TPS Community Patch](https://github.com/BLCM/BLCMods/tree/master/Pre%20Sequel%20Mods/Community%20Patch)
 
+:warning: This Mod includes my *UCP 2.2 Buff Volcano Fix* which apply correctly the *+50% Radius Damage* buff, so if you're already  using it, there's no longer any reason to use the stand-alone fix version... but it won't hurt anything to have both enabled, though... in this case, this *Omni-Cannon with Grenade Damage* Mod must be placed __AFTER__ the *UCP 2.2 Buff Volcano Fix*. 
 ### Help! The Mod doesn't work !?!
 
 Read this little [Compatibility & Troubleshooting](https://github.com/BLCM/BLCMods/tree/master/Pre%20Sequel%20Mods/Astor/Compatibility%20%26%20Troubleshooting) page... It's not that hard!  :wink:
