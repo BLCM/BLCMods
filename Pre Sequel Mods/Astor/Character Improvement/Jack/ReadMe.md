@@ -2,21 +2,9 @@ This Read Me is just here as a quick synopsis, for detailed informations, each M
 
 * * * * *
 
-## Items Improvement:  
+## Jack: 
 
-- ### Shields Improvement:
-
-  - __*Booster Shields* Auto Pick-Up:__ Like Money and Ammunition, now the booster shield automatically pick-up... just walk on it and it's your!
-
-## Weapons Improvement:
-
-- ### Assault Rifle Improvement:
-
-  - __*KerBoom* with Singularity Grenade:__ Turns the KerBoom into a useful weapon by shooting 1 rockets, which spawn 1 singularity child grenade.
-
-- ### Sniper Rifle Improvement:
-
-  - __*Omni-Cannon* with Grenade Damage:__ with this *Grenade Damage Bonus* added, the *Omni-Cannon* will become one of the BEST sniper rifle in TPS.
+- __DigiJack in FFYL:__ As the title suggests it, you can summon your *DigiJack* to fight alongside you while in *Fight For Your Live*.
 
 * * * * *
  

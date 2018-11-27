@@ -1,8 +1,8 @@
 This Read Me is just here as a quick synopsis, for detailed informations, each Mod has is own Read Me (and even a Changelog), so don't hesitate -whoosh!- to give a look on it.
 
-## [Character Change] Throw Grenade in FFYL
-
-- As the title suggests it, now you can throw grenades when you are in FFYL, and with any character.
+## Shotgun Improvement:
+ 
+- __*Moonscaper* No Self-Damage:__ Made the grenades not inflicting self-damage to fixes the issue of where the delayed explosion would (repeatedly) put you down.
 
 * * * * *
  

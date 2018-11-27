@@ -32,13 +32,13 @@ This Read Me is just here as a quick synopsis, for detailed informations, each M
 
 - ### Custom Items:
 
-  - ### Custom Shield:
+  - #### Custom Shield:
 
    - __*Black Hole* & *SuperNova* On Steroids:__ Since my *SuperNova*'s Missing Material Fix share the Black Hole's *Unique (predefined) Material* for these both shields, this Mod includes the *Black Hole* and *SuperNova*... and my stand-alone fix *Supernova Missing Material Fix* because it's mandatory to make this Mod working correctly.
 
 - ### Custom Weapons:
 
-  - ### Custom Shotgun:
+  - #### Custom Shotgun:
   
     - __*Striker* Real Fandir Edition:__ Always fires thirteen pellets (Fandir? Thirteen), but deals significantly less damage per pellet. 
 
@@ -66,13 +66,17 @@ This Read Me is just here as a quick synopsis, for detailed informations, each M
 
 - ### Weapons Improvement:
 
-  - ### Assault Rifle Improvement:
+  - #### Assault Rifle Improvement:
 
     - __*KerBoom* with Singularity Grenade:__ Turns the KerBoom into a useful weapon by shooting 1 rockets, which spawn 1 singularity child grenade.
 
-- ### Sniper Rifle Improvement:
+  - #### Shotgun Improvement:
+ 
+    - __*Moonscaper* No Self-Damage:__ Made the grenades not inflicting self-damage to fixes the issue of where the delayed explosion would (repeatedly) put you down.
 
-  - ***Omni-Cannon* with Grenade Damage:** with this *Grenade Damage Bonus* added, the *Omni-Cannon* will become one of the BEST sniper rifle in TPS.
+  - #### Sniper Rifle Improvement:
+
+    - ***Omni-Cannon* with Grenade Damage:** with this *Grenade Damage Bonus* added, the *Omni-Cannon* will become one of the BEST sniper rifle in TPS.
 
 * * * * *
 
