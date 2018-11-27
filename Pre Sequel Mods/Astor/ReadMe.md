@@ -46,13 +46,13 @@ This Read Me is just here as a quick synopsis, for detailed informations, each M
 
 ## Gears Fixes:
 
-- __*Deadly Bloom* Legendary Fix:__ Fix the *Deadly Bloom* Legendary bug by makes it regain his *legit* Legendary rarity, value & skin.
+- __*Deadly Bloom* Legendary Fix:__ Corrects the *Deadly Bloom* Legendary bug by makes it regain his *legit* Legendary rarity, value & skin.
 
 - __*SuperNova* Missing Material Fix:__ My modest contribution to fix the *Missing Material* bug which makes the *SuperNova* spawn with four different materials rather than just the predefined one and affecting the shield capacity, nova damage, and nova radius.
 
 ## UCP 2.2 Fixes:
 
-- __Buff *Volcano* Fix:__ Fix the faulty line of code in *TPS Patch 2.2.* to make the +50% Radius Damage (280 instead of 190) applying correctly.
+- __Buff *Volcano* Fix:__ Corrects the faulty line of code in *TPS Patch 2.2.* to make the +50% Radius Damage (280 instead of 190) applying correctly.
 
 * * * * *
 
@@ -69,11 +69,11 @@ This Read Me is just here as a quick synopsis, for detailed informations, each M
   - #### Assault Rifle Improvement:
 
     - __*KerBoom* with Singularity Grenade:__ Turns the KerBoom into a useful weapon by shooting 1 rockets, which spawn 1 singularity child grenade.
-
+  
   - #### Shotgun Improvement:
  
     - __*Moonscaper* No Self-Damage:__ Made the grenades not inflicting self-damage to fixes the issue of where the delayed explosion would (repeatedly) put you down.
-
+  
   - #### Sniper Rifle Improvement:
 
     - ***Omni-Cannon* with Grenade Damage:** with this *Grenade Damage Bonus* added, the *Omni-Cannon* will become one of the BEST sniper rifle in TPS.
@@ -88,9 +88,11 @@ This Read Me is just here as a quick synopsis, for detailed informations, each M
 
 * * * * *
 
-## Quest Change:
+## Quest Improvement:
 
-- __Less Tedious Quests:__ Makes a few timed __-*failable!*-__ optional mission less tedious to complete.
+- __Double Quest Reward:__ Give you the choice between 2 Unique weapons/items instead of a single one, so it will double the chance to get a Unique weapon/item with desired element/part/accessory.
+
+- __Less Tedious Quest:__ Makes a few timed __-*failable!*-__ optional mission less tedious to complete.
 
 * * * * *
  
