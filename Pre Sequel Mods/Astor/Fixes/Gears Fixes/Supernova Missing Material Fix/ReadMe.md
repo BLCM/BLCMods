@@ -121,10 +121,20 @@ Enjoy!
 
 :warning: This fix is already includes my *Black Hole & SuperNova On Steroids* Mod, so if you're already using it, there's no longer any reason to use this fix... but it won't hurt anything to have both enabled, though... in this case, this *Supernova Missing Material Fix* must be placed __BEFORE__ the *Black Hole & SuperNova On Steroids*.
 
+### Help! The Mod doesn't work !?!
+
+Read this little [Compatibility & Troubleshooting](https://github.com/BLCM/BLCMods/tree/master/Pre%20Sequel%20Mods/Astor/Compatibility%20%26%20Troubleshooting) page... It's not that hard!  :wink:
 
 ### To do:
 
 - [ ] Create a new skin to make the difference faster between the *Black Hole* of *SuperNova*.
+
+### Other Recommended Mods:
+
+Two essential fixes done by [Natsu235](https://github.com/BLCM/BLCMods/tree/af3b2d17629ab3f7f7a5f7bb68b489c5e13b0498/Pre%20Sequel%20Mods/Natsu235) to check without delay:
+
+1. [Probe Fixed Element:](https://github.com/BLCM/BLCMods/blob/af3b2d17629ab3f7f7a5f7bb68b489c5e13b0498/Pre%20Sequel%20Mods/Natsu235/Fixes/Probe_Fixed_Element.txt) Fix the *Probe* element not changing during the Mission *Torgue-o! Torgue-o!*
+2. [Cryo Grenades:](https://github.com/BLCM/BLCMods/blob/af3b2d17629ab3f7f7a5f7bb68b489c5e13b0498/Pre%20Sequel%20Mods/Natsu235/Fixes/Cryo_Grenades.txt) Fix the Slag leftover Prefix and Attribute from all the *Cryo Grenades* 
   
 ### Note: 
 

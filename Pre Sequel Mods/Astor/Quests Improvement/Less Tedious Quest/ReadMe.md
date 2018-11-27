@@ -33,6 +33,10 @@ __Note:__ *Pop Racing* optional mission with double time (3:00 instead of 1:30) 
 
 - 100% compatible with the latest version of [TPS Community Patch](https://github.com/BLCM/BLCMods/tree/master/Pre%20Sequel%20Mods/Community%20Patch)
 
+### Help! The Mod doesn't work !?!
+
+Read this little [Compatibility & Troubleshooting](https://github.com/BLCM/BLCMods/tree/master/Pre%20Sequel%20Mods/Astor/Compatibility%20%26%20Troubleshooting) page... It's not that hard!  :wink:
+
 ### To do:
 
 - [ ] Make again a new playtrought to be sure that I don't miss a timed or objective count __-failable!-__ optional mission somewhere.

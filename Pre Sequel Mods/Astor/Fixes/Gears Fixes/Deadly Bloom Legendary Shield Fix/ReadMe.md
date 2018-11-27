@@ -80,11 +80,22 @@ Enjoy!
 - 100% compatible with the latest version of [TPS Community Patch](https://github.com/BLCM/BLCMods/tree/master/Pre%20Sequel%20Mods/Community%20Patch)
 - Should be compatible with most other mods, as long as they do not touch the *Legendary Nova Shield Properties* or *Legendary Nova Spike Properties*
 
+### Help! The Mod doesn't work !?!
+
+Read this little [Compatibility & Troubleshooting](https://github.com/BLCM/BLCMods/tree/master/Pre%20Sequel%20Mods/Astor/Compatibility%20%26%20Troubleshooting) page... It's not that hard!  :wink:
+
 ### To do:
 
 - [ ] Find a way to get back the *Vertical Lines Pattern* for the skin.
 - [ ] Might be tweaked later... if a better solution is found?
-  
+
+### Other Recommended Mods:
+
+Two essential fixes done by [Natsu235](https://github.com/BLCM/BLCMods/tree/af3b2d17629ab3f7f7a5f7bb68b489c5e13b0498/Pre%20Sequel%20Mods/Natsu235) to check without delay:
+
+1. [Probe Fixed Element:](https://github.com/BLCM/BLCMods/blob/af3b2d17629ab3f7f7a5f7bb68b489c5e13b0498/Pre%20Sequel%20Mods/Natsu235/Fixes/Probe_Fixed_Element.txt) Fix the *Probe* element not changing during the Mission *Torgue-o! Torgue-o!*
+2. [Cryo Grenades:](https://github.com/BLCM/BLCMods/blob/af3b2d17629ab3f7f7a5f7bb68b489c5e13b0498/Pre%20Sequel%20Mods/Natsu235/Fixes/Cryo_Grenades.txt) Fix the Slag leftover Prefix and Attribute from all the *Cryo Grenades* 
+
 ### Note: 
 
 Any critique would be appreciated as I am still beginner to make Mods... and by the way, please leave constructive criticism if you make a video. 

@@ -17,10 +17,20 @@ Now, the *+50% Radius Damage* (280 instead of 190) on the *Volcano* apply as int
 
 :warning: Be aware to place this fix __AFTER__ the Mod *UCP 2.2*
 
+### Help! The Mod doesn't work !?!
+
+Read this little [Compatibility & Troubleshooting](https://github.com/BLCM/BLCMods/tree/master/Pre%20Sequel%20Mods/Astor/Compatibility%20%26%20Troubleshooting) page... It's not that hard!  :wink:
 
 ### To do:
 
 - [ ] Well... it seems to work correctly, so nothing I guess?
+
+### Other Recommended Mods:
+
+Two essential fixes done by [Natsu235](https://github.com/BLCM/BLCMods/tree/af3b2d17629ab3f7f7a5f7bb68b489c5e13b0498/Pre%20Sequel%20Mods/Natsu235) to check without delay:
+
+1. [Probe Fixed Element:](https://github.com/BLCM/BLCMods/blob/af3b2d17629ab3f7f7a5f7bb68b489c5e13b0498/Pre%20Sequel%20Mods/Natsu235/Fixes/Probe_Fixed_Element.txt) Fix the *Probe* element not changing during the Mission *Torgue-o! Torgue-o!*
+2. [Cryo Grenades:](https://github.com/BLCM/BLCMods/blob/af3b2d17629ab3f7f7a5f7bb68b489c5e13b0498/Pre%20Sequel%20Mods/Natsu235/Fixes/Cryo_Grenades.txt) Fix the Slag leftover Prefix and Attribute from all the *Cryo Grenades*   
   
 ### Note: 
 
