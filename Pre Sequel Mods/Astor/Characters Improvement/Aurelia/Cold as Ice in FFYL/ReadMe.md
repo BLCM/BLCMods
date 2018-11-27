@@ -1,6 +1,6 @@
-## Jack's DigiJack in FFYL
+## Aurelia's Cold As Ice in FFYL
 
-You can summon your *DigiJack* to fight alongside you while in Fight For Your Live.
+You can throw your *Frost Diadem Shard* (*Cold As Ice* ability) while in Fight For Your Live.
 
 ### Changelog:
 - v1.0.0, November 15, 2018
@@ -9,6 +9,10 @@ You can summon your *DigiJack* to fight alongside you while in Fight For Your Li
 ### Compatibility:
 
 - 100% compatible with the latest version of [TPS Community Patch](https://github.com/BLCM/BLCMods/tree/master/Pre%20Sequel%20Mods/Community%20Patch)
+
+### Help! The Mod doesn't work !?!
+
+Read this little [Compatibility & Troubleshooting](https://github.com/BLCM/BLCMods/tree/master/Pre%20Sequel%20Mods/Astor/Compatibility%20%26%20Troubleshooting) page... It's not that hard!  :wink:
 
 ### To do:
 

@@ -1,22 +1,22 @@
-## Throw Grenades in FFYL
+## Jack's DigiJack in FFYL
 
-Similar to Axton's Gunpowder Skill *Do or Die* in BL2, you can now throw grenades when you are in *Fight For Your Life*, and with any character!
+You can summon your *DigiJack* to fight alongside you while in Fight For Your Live.
 
 ### Changelog:
-- v1.0.0, November 8, 2018
+- v1.0.0, November 15, 2018
   - Initial public release
  
 ### Compatibility:
 
-- 100% compatible with [TPS Community Patch](https://github.com/BLCM/BLCMods/tree/master/Pre%20Sequel%20Mods/Community%20Patch)
+- 100% compatible with the latest version of [TPS Community Patch](https://github.com/BLCM/BLCMods/tree/master/Pre%20Sequel%20Mods/Community%20Patch)
+
+### Help! The Mod doesn't work !?!
+
+Read this little [Compatibility & Troubleshooting](https://github.com/BLCM/BLCMods/tree/master/Pre%20Sequel%20Mods/Astor/Compatibility%20%26%20Troubleshooting) page... It's not that hard!  :wink:
 
 ### To do:
 
 - [ ] Well... it seems to work correctly, so nothing I guess?
-
-### Credits & Thanks:
-
-Inspired by [Throw Grenade in FFYL](https://github.com/BLCM/BLCMods/blob/master/Borderlands%202%20mods/AngrierPat/Quality%20of%20life%20changes/Throw%20Grenades%20in%20FFYL) created for BL2 by [AngrierPat](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/AngrierPat). Such a Mod didn't seem to exist for TPS, though, so I took it upon myself to create one. All the credits go to [AngrierPat](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/AngrierPat) for the idea. 
   
 ### Note: 
 
