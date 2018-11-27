@@ -8,3 +8,10 @@ Also has a few QoL changes to go along with these new stations:
 - Re-enables the level transition from the Lunar Launching Station to the Eye of Helios
 - Lets Flameknuckle respawn
 - Lets Zarpedon respawn, optionally skipping the powersuit phase and adding its drops to the second phase
+
+### Item Level Uncapper
+This mod is useless by itself, it should be used alongside the hexedit to increase the player level cap.    
+Fixes the level cap of most items so that they continue spawning past level 100.    
+Note that there may still be various other issues with an increased level cap, this only fixes that most items stopped spawning.
+
+[Also see the BL2 Version](https://github.com/BLCM/BLCMods/blob/master/Borderlands%202%20mods/apple1417/ItemLevelUncapper.blcm)
