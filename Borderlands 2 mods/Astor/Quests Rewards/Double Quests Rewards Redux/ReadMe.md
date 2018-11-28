@@ -1,4 +1,4 @@
-## Double Quest Reward Redux
+## Double Quests Rewards Redux
 
 ### What do this mod?
 
@@ -15,19 +15,19 @@ __Note:__ The main reason why I resurrected (and rebuild from scratch) the "Doub
 
 The case of the removal from the Lady Fist really upset me, because during the mission Uncle Teddy, just after finding the 6th echo, Una Baha say: 
 
- > *"Great - that was just what I was hopin' to hear! Now, if you can find the blueprints for the weapon design they ripped off, I'll give you the first gun my uncle ever gave me."* 
+ > *Great - that was just what I was hopin' to hear! Now, if you can find the blueprints for the weapon design they ripped off, I'll give you the first gun my uncle ever gave me.* 
 
-By saying "I'll give you the first gun my uncle ever gave me", it make sense to me that she will give her personal weapon given by T.K. Baha (the Lady Fist, as red text refers, in reference to the Lady Finger, a gun retrieved from the grave of T.K. Baha's wife in Borderlands 1) as reward instead of any Blue Hyperion pistol. 
+By saying *I'll give you the first gun my uncle ever gave me*, it make sense to me that she will give her personal weapon given by *T.K. Baha* (the *Lady Fist*, as red text refers, in reference to the *Lady Finger*, a gun retrieved from the grave of T.K. Baha's wife in Borderlands 1) as reward instead of any Blue Hyperion pistol. 
 
-Now, Una will offer the Lady Fist, which is a Hyperion pistol, while Hyperion will offer The Bitch (or The Commerce if you choose this option) which are both Hyperion SMG... but in any case the Tidal Wave, like in the original game, who was ironically a Unique Jakobs weapon!
+Now, Una will offer the *Lady Fist*, which is a Hyperion pistol, while Hyperion will offer The *Bitch* (or The *Commerce* if you choose this option) which are both Hyperion SMG... but in any case the *Tidal Wave*, like in the original game, who was ironically a Unique Jakobs weapon!
 
-The Tidal Wave, which apparently is not a weapon reward anywhere anymore is now becoming a reward for the mission "Slap Happy" in The Highlands - Outwash)" (If you use the UCP patch 4.1, the Octo is now a possible drop by Old Slappy)
+The *Tidal Wave*, which apparently is not a weapon reward anywhere anymore is now becoming a reward for the mission *Slap Happy* in *The Highlands - Outwash*) (If you use the UCP patch 4.1, the Octo is now a possible drop by Old Slappy)
 
 ### Note: 
 
 For those who were familiar with the previous Mod, the weapon/Item marked with a (*) are:
- - Upgrade (like the Bitch/Commerce in Uncle Teddy mission) 
- - New Unique weapon/item rewards (like the Tidal Wave in Slap Happy mission) 
+ - Upgrade (like the Bitch/Commerce in *Uncle Teddy* mission) 
+ - New Unique weapon/item rewards (like the *Tidal Wave* in *Slap Happy* mission) 
  - ... or restored Unique weapon/item rewards "gone" in the original Koby's Mod. 
  
 Feel Free to use the BLCMM tool to select the option of your choice.
@@ -44,6 +44,10 @@ Feel Free to use the BLCMM tool to select the option of your choice.
   - [Better Loot](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/Apocalyptech/BL2%20Better%20Loot%20Mod) & [Cold Dead Hands](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/Apocalyptech/BL2%20Cold%20Dead%20Hands) by [Apocalyptech](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/Apocalyptech)  
 
 :warning: To be sure to get this mod working correctly (as intended), don't forget to place it **AFTER** *UCP Patch* and *Better Quest*. (*Better Loot* & *Cold Dead Hands* can be placed anywhere regarding my mod). 
+
+### Help! The Mod doesn't work !?!
+
+Read this little [Compatibility & Troubleshooting](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/Astor/Compatibility%20%26%20Troubleshooting) page... It's not that hard!  :wink:
 
 ### Other Recommended Mods:
 

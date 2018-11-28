@@ -26,9 +26,11 @@ _**Note:** As for my *Double Quest Reward Redux*, this Mod will give you the cho
   - [UCP Patch](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/Community%20Patch%20Team)   
   - [Better Quest](https://github.com/BLCM/BLCMods/blob/master/Borderlands%202%20mods/Hemaxhu/Quest%20Rewards/Better%20Quests) by [Hemaxu](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/Hemaxhu) .
 
-To be sure to get this mod working correctly (as intended), don't forget to place it **AFTER** *UCP Patch* and *Better Quest*.
+__Note:__ To be sure to get this mod working correctly (as intended), don't forget to place it **AFTER** *UCP Patch* and *Better Quest*.
 
-**Know Issue:** Gemstone Rewards instead of E-Tech Rewards.
+###Know Issue: 
+
+#### Gemstone Rewards instead of E-Tech Rewards.
 
 - To "trick" the E-Tech weapon rewards with only few weapons by type available (Splatgun: 1 Bandit, 1 Hyperion & 1 Tediore - Total 3 Splatgun for all brands), I use the following E-Tech pool:
 
@@ -46,6 +48,10 @@ Apocalyptech's *Better Loot* & *Cold Dead Hands* mod aren't incompatible with my
 Unfortunately, there is no way I can fix that, so the best thing to do in this case is probably to disable my mod (but don't worry, it's not a big deal!) or toggle off the "Add Gemstones to E-Tech Pools" option in BL & CDH... the choice is your.
 
 ![Better Loot & Cold Dead Hands compatibility](https://i.imgur.com/YlSxMbs.png)
+
+### Help! The Mod doesn't work !?!
+
+Read this little [Compatibility & Troubleshooting](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/Astor/Compatibility%20%26%20Troubleshooting) page... It's not that hard!  :wink:
  
 ### To do:
 
