@@ -8,7 +8,7 @@ This Read Me is just here as a quick synopsis, for detailed informations, each M
 
   - ***KerBoom* with Singularity Grenade:** Turns the KerBoom into a useful weapon by shooting 1 rockets, which spawn 1 singularity child grenade.
 
-- ### Shotgun Improvement:
+- ### Shotgun:
  
   - __*Moonscaper* No Self-Damage:__ Made the grenades not inflicting self-damage to fixes the issue of where the delayed explosion would (repeatedly) put you down.
 
