@@ -6,6 +6,10 @@ You can summon *Deathtrap* to fight alongside you while in Fight For Your Live.
 
 - 100% compatible with [UCP Patch](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/Community%20Patch%20Team).
 
+### Help! The Mod doesn't work !?!
+
+Read this little [Compatibility & Troubleshooting](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/Astor/Compatibility%20%26%20Troubleshooting) page... It's not that hard!  :wink:
+
 ### Changelog:
 
 v1.0.0, November 17, 2018
