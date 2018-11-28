@@ -1,22 +1,12 @@
-﻿This Read Me is just here as a quick synopsis, for detailed informations, each Mod has is own Read Me (and even a Changelog), so don't hesitate -whoosh!- to give a look on it.
+This Read Me is just here as a quick synopsis, for detailed informations, each Mod has is own Read Me (and even a Changelog), so don't hesitate -whoosh!- to give a look on it.
 
-## [Skin Pack] Moxxi Signature Classic Collection
+## Skin Pack: 
 
-Did you ever noticed that only the half from the Moxxi gears have almost a nice Moxxi Signature Classic skin... and a half have somewhat totally different... which looks more like Tiny Tina weapon skin than Moxxi weapon skin!
+- __Moxxi Signature Classic Collection:__ Based on *Creamer/Hear Breaker* vanilla skin, now the Moxxi weapons skins are uniformized to look like an actual manufacturer.
 
-Now with the *Moxxi Signature Classic Collection* based on Creamer/Hear Breaker vanilla skin, there are all uniform to look like an actual manufacturer.
-  
-* * * * *
+- __Moxxi Signature Elegance Collection:__ The red similar to the little _Cartier_ box, with golden part inserted into (silver) brushed steel, this is the French elegance. 
 
-## [Skin Pack] Moxxi Signature Elegance Collection
-
-Inspired from the *Santos*, a well know French jeweler watch... with the color from the golden screws inserted into a (silver) brushed steel bracelet, and the addition from the red similar to the little *Cartier* box... Et voila!
-
-* * * * *
-
-## [Skin Pack] Moxxi Signature Pinky Collection
-
-Like a Barbie girl in a Barbie world, you can now feel the glamor in pink with the *Moxxi Signature Pinky Collection* based on Slow Hand / Good Touch vanilla skin.
+- __Moxxi Signature Pinky Collection:__ Based on *Slow Hand/Good Touch* vanilla skin, now the Moxxi weapons skins are uniformized to look like an actual manufacturer.
 
 * * * * *
  

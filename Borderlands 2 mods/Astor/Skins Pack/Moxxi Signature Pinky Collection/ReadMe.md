@@ -1,21 +1,34 @@
-## Moxxi Signature Elegance Collection
+## Moxxi Signature Pinky Collection
 
-The idea is really very simple as it come from the *Santos*, a well know French jeweller watch.
+Recently, when a friend showed me his latest acquisitions for his Hot Wheels collection, I noticed the *Corvette Stingray (Barbie) Pink 2018*: all Pink & White! 
 
-![Moxxi Signature Elegance Gear ](https://imgur.com/h2lelSo.png "Don't worry guys... even if my screen capture show French text, my mods are in English")
-First, I take the red color similar to the little Cartier box, next I made the metal part looking like (silver) steel... add some discrete decorative gold parts like the golden screws inserted into a brushed steel bracelet... finally adapt the Moxxi logo in a more appropriate size when necessary... and repeat the same work on all the Moxxi weapons...
+![Moxxi Signature Pinky Skin - Barbie Corvette Hotwheels](https://imgur.com/q9HC6vU.jpg "Don't worry guys... even if my screen capture show French text, my mods are in English")
 
-![Moxxi Signature Elegance Gear ](https://imgur.com/zCJd7K0.png "Don't worry guys... even if my screen capture show French text, my mods are in English")
+That make me think immediately that girls can be very serious about colors... at least regarding the pink color... and I won't be surprised that some of them really like the Moxxi weapons with a pink skin, but unfortunately, there is only fews available.
 
-Et Voila! Here is the *Moxxi Signature Elegance Collection*.
+![Moxxi Signature Pinky Skin - Vanilla Pink Skin](https://imgur.com/MFd8ZMQ.jpg "Don't worry guys... even if my screen capture show French text, my mods are in English")
+
+So, I decided to adapt the Moxxi Signature Pink Skin slighty...
+
+![Moxxi Signature Pinky Skin - Vanilla Pink Skin vs Pinky Skin](https://imgur.com/PMcjD1O.jpg "Don't worry guys... even if my screen capture show French text, my mods are in English")
+
+I keep the vanilla pink color, colorize the metal part in white, adapt the Moxxi logo in a more appropriate size when necessary... and repeat the same work on all the Moxxi weapons.
+
+![Moxxi Signature Pinky Skin - Collection](https://imgur.com/YuDj2OC.jpg "Don't worry guys... even if my screen capture show French text, my mods are in English")
+
+And now, like a Barbie girl in a Barbie world; you can feel the glamour in pink with the *Moxxi Signature Pinky Collection*.
 
 ### Changelog:
-- v1.0.0, October 10, 2018
+- v1.0.0, October 15, 2018
   - Initial public release
  
 ### Compatibility:
 
 - 100% compatible with [UCP Patch](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/Community%20Patch%20Team)
+
+### Help! The Mod doesn't work !?!
+
+Read this little [Compatibility & Troubleshooting](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/Astor/Compatibility%20%26%20Troubleshooting) page... It's not that hard!  :wink:
 
 ### To do:
 
@@ -23,7 +36,7 @@ Et Voila! Here is the *Moxxi Signature Elegance Collection*.
 
 ### Other Recommended Mods:
 
-Some great mods to check for the *Moxxi Signature Elegance Collection*:
+Some great mods to check for the *Moxxi Signature Pinky Collection*:
 
 - [SMG Dahl Discord Solver - Moxxi Edition](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/Astor/Custom%20Gear/SMG%20Dahl%20Discord%20Solver%20-%20Moxxi%20Edition) by... well... [myself](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/Astor). A SMG which shot GyroJet explosive bullet.
 
@@ -34,7 +47,7 @@ As this version of the Discord Solver is a Moxxi weapon, you can choose between 
 - [Plasma Caster Hyperion Finesse - Moxxi Edition](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/Astor/Custom%20Gear/Plasma%20Caster%20Hyperion%20Finesse%20-%20Moxxi%20Edition) by... well... [myself](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/Astor). A Plasma Caster which fire SEAPP (Smart Elemental Adaptive Plasma Projectile)  adapting his Elemental following the kind of impact.
 
 ![Finesse Moxxi Signature Classic and Cartier](https://imgur.com/1ziVoro.jpg "Don't worry guys... even if my screen capture show French text, my mods are in English")
-As this version of the Finesse is a Moxxi weapon, you can choose between 3 Moxxi Signature skin : the Classic skin, the Elegance skin or the Pinky skin.  
+As this version of the Finesse is a Moxxi weapon, you can choose between 3 Moxxi Signature skin : the Classic skin, the Elegance skin or the Pinky skin.   
 
 ### Credits & Thanks:
 

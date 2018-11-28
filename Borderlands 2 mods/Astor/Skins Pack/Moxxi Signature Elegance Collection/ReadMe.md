@@ -1,25 +1,15 @@
-## Moxxi Signature Classic Collection
+## Moxxi Signature Elegance Collection
 
-Did you ever noticed that only the half from the Moxxi gears have almost* a nice Moxxi Signature Classic skin?
+The idea is really very simple as it come from the *Santos*, a well know French jeweller watch.
 
-![Moxxi Signature Gear Half almost uniform Moxxi Signature Skin](https://i.imgur.com/cR5GSYs.png "Don't worry guys... even if my screen capture show French text, my mods are in English")
+![Moxxi Signature Elegance Gear ](https://imgur.com/h2lelSo.png "Don't worry guys... even if my screen capture show French text, my mods are in English")
+First, I take the red color similar to the little Cartier box, next I made the metal part looking like (silver) steel... add some discrete decorative gold parts like the golden screws inserted into a brushed steel bracelet... finally adapt the Moxxi logo in a more appropriate size when necessary... and repeat the same work on all the Moxxi weapons...
 
-(*) almost because:
-1. The SMG Bad Touch wear a deeper red, and all the metal part are red coated, giving plastic toy look!
-2. There is some Grey metal part located on the rifle butt from the SR Chère Amie.
+![Moxxi Signature Elegance Gear ](https://imgur.com/zCJd7K0.png "Don't worry guys... even if my screen capture show French text, my mods are in English")
 
-... and a half have somewhat totally different... which looks more like Tiny Tina weapon skin than Moxxi weapon skin
-
-![Moxxi Signature Gear Half somewhat pink](https://imgur.com/KVfBrMT.png "Don't worry guys... even if my screen capture show French text, my mods are in English")
-
-That doesn't make sense to me... and it's just not prettier!
-
-But now with the *Moxxi Signature Classic Collection*, there are all uniform to look like an actual manufacturer.
-
-![Moxxi Signature Classic Gear ](https://imgur.com/Y7eGuJ2.png "Don't worry guys... even if my screen capture show French text, my mods are in English")
+Et Voila! Here is the *Moxxi Signature Elegance Collection*.
 
 ### Changelog:
-
 - v1.0.0, October 10, 2018
   - Initial public release
  
@@ -27,13 +17,17 @@ But now with the *Moxxi Signature Classic Collection*, there are all uniform to 
 
 - 100% compatible with [UCP Patch](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/Community%20Patch%20Team)
 
+### Help! The Mod doesn't work !?!
+
+Read this little [Compatibility & Troubleshooting](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/Astor/Compatibility%20%26%20Troubleshooting) page... It's not that hard!  :wink:
+
 ### To do:
 
 - [ ] Clean the code and remove all my ~~shitty~~ notes.
- 
+
 ### Other Recommended Mods:
 
-Some great mods to check for the *Moxxi Signature Classic Collection*:
+Some great mods to check for the *Moxxi Signature Elegance Collection*:
 
 - [SMG Dahl Discord Solver - Moxxi Edition](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/Astor/Custom%20Gear/SMG%20Dahl%20Discord%20Solver%20-%20Moxxi%20Edition) by... well... [myself](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/Astor). A SMG which shot GyroJet explosive bullet.
 
@@ -44,17 +38,15 @@ As this version of the Discord Solver is a Moxxi weapon, you can choose between 
 - [Plasma Caster Hyperion Finesse - Moxxi Edition](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/Astor/Custom%20Gear/Plasma%20Caster%20Hyperion%20Finesse%20-%20Moxxi%20Edition) by... well... [myself](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/Astor). A Plasma Caster which fire SEAPP (Smart Elemental Adaptive Plasma Projectile)  adapting his Elemental following the kind of impact.
 
 ![Finesse Moxxi Signature Classic and Cartier](https://imgur.com/1ziVoro.jpg "Don't worry guys... even if my screen capture show French text, my mods are in English")
-As this version of the Finesse is a Moxxi weapon, you can choose between 3 Moxxi Signature skin : the Classic skin, the Elegance skin or the Pinky skin.
+As this version of the Finesse is a Moxxi weapon, you can choose between 3 Moxxi Signature skin : the Classic skin, the Elegance skin or the Pinky skin.  
 
 ### Credits & Thanks:
 
-First of all, I need thanks [PsychoPatate](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/PsychoPatate "PsychoPatate") for his help, his kindness, his video tutorial -and his patience!-  when I was getting nowhere fast (in French: "lorsque je pédalais dans la semoule" :wink:) to realize my 1st *Moxxi Signature Classic* skin for the Discod Solver; so a big -and special- thanks to you @PsychoPatate.
-
-I find a lot of useful informations on the  great [Dave'S BL2 Skin Modding Guide](https://cdn.rawgit.com/BLCM/BLCMods/bb1933f7/Borderlands%202%20mods/Dave/DAVE%27S%20BL2%20SKIN%20MODDING%20GUIDE.pdf) ... all that made by [Dave](https://github.com/BLCM/BLCMods/tree/af3b2d17629ab3f7f7a5f7bb68b489c5e13b0498/Borderlands%202%20mods/Dave) , so thanks for your great work, @DaveRabbit
+Without the great [Dave'S BL2 Skin Modding Guide](https://cdn.rawgit.com/BLCM/BLCMods/bb1933f7/Borderlands%202%20mods/Dave/DAVE%27S%20BL2%20SKIN%20MODDING%20GUIDE.pdf) ... I won't be able to make any skin, so thanks for your great work, @DaveRabbit
   
 ### Note: 
 
-Any critique would be appreciated as this is my 1st Collection... and by the way, please leave constructive criticism if you make a video. 
+Any critique would be appreciated as I am still beginner to make weapon skin... and by the way, please leave constructive criticism if you make a video. 
 Enjoy!
 
 ### Disclaimer
