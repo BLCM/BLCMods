@@ -15,7 +15,6 @@ This is where you can find it....
 
 ### What special with this weapon?
 
-
 - Keep (almost) of all the Lascaux Unique Dahl SMG specificity: very high firerate, variable burst-fire round, chance to shot two bullets for the cost of one ammo, etc... for more details, see [Borderlands Wiki](http://borderlands.wikia.com/wiki/Lascaux) 
 - Initial (too good) accuracy reduced, slower fireate, and slower reload, but...
   - FireMode modified to shoot the *Pistol GyroJet Explosive Bullet*. 
@@ -115,6 +114,10 @@ This Mod has few options, so feel free to use the BLCMM tool to select the best 
   - This mod use the *Pistol Explosive GyroJet Bullet*, so if you use any mode that changes the attributes from this Firing Mode, it will affect this mod, and obviously the firing of the *Discord Solver*. In this case, just revert the modification done previously to it.
   
   - This mode use Grenade Damage for the Splash Format, so if you are going to use the Discord Solver with a Siren character :warning: Maya :warning: , don't forget to toggle the Grenade Damage to Reaper Splash Damage.
+
+### Help! The Mod doesn't work !?!
+
+Read this little [Compatibility & Troubleshooting](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/Astor/Compatibility%20%26%20Troubleshooting) page... It's not that hard!  :wink:
    
 ### Other Recommended Mods:
 

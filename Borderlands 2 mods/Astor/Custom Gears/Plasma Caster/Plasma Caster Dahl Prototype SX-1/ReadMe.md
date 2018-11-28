@@ -12,7 +12,6 @@ This is where you can find it....
 
 **Note:** If you are too lazy to walk to Frostburn Canyon, you will find the Gibbed Codes below.
 
-
 ### What special with this weapon?
 
 - Keep the typical fire pattern from the Lascaux Unique Dahl SMG (for more details, see [Borderlands Wiki](http://borderlands.wikia.com/wiki/Lascaux)) mixed  with the Plasma caster specificity, and get the chance to shot a extra explosive plasma projectile for the cost of two ammo.
@@ -61,25 +60,6 @@ This Mod has few options & fix, so feel free to use the BLCMM tool to select the
   - Explosive Elemental Color (similar to  Torgue weapons) 
   - E-Tech Elemental Color (Vanilla) 
 - Fix for Koby *Rarity Color*: *AfterMarket* (just in case if you use this old mod)  
-
-### Gibbed codes:
-
-| Prefix               | Accessory       | Gibbed code                 | 
-| -------------        | -------------   | -------------               | 
-| Stopping Lascaux     | Damage          | BL2(hwAAAAC/BQBB6ANBBIFEcmIpwQKNJQGLChYGLBRY/v8vY+nBYo3l) |  
-| Flying Lascaux       | Bullet Speed    | BL2(hwAAAABZNABB6ANBBIFEcmIpwQKNJQGLChYGLBVY/v8vYxnCYo3l) |
-| Deft Lascaux         | Accuracy        | BL2(hwAAAAAmawBB6ANBBIFEcmIpwQKNJQGLChYGLBNY/v8vY7nBYo3l) |
-| Stoic Lascaux        | Stability       | BL2(hwAAAAD4IwBB6ANBBIFEcmIpwQKNJQGLChYGLBZY/v8vY0nCYo3l) |
-| Skirmish Lascaux     | Reload Speed    | BL2(hwAAAABCAABB6ANBBIFEcmIpwQKNJQGLChYGLBdY/v8vY3HCYo3l) |
-| ~~Bladed Lascaux~~   | ~~Melee~~       | E-Tech Plasma Caster **NEVER** spawn with a blade.        |
-| Smooth Lascaux       | No Accessory    | BL2(hwAAAAAj3gBB6ANBBIFEcmIpwQKNJQGLChYGLBFY/v8vY0FAYo3l) |
-
-### Changelog:
-
-- v1.0.0, October 1, 2018
-  - Initial public release
-- v1.0.1, October 25, 2018
-  - Correct the wrong line of code (was *Set WeaponTypeDefinition'GD_Weap_SMG.A_Weapons...* instead of *Set GD_Weap_SMG.A_Weapons...*) repeated 9 times by using copy/paste to go faster.
   
 ### Compatibility:
 
@@ -92,7 +72,30 @@ This Mod has few options & fix, so feel free to use the BLCMM tool to select the
   - This mod use the *Pocket Rocket Explosive GyroJet Firing Mode*, so if you use any mode that changes the attributes from this Firing Mode, it will affect this mod, and obviously the firing mode of the *Plasma Caster Dahl Prototype SX-1*. In this case, just revert the modification done previously to it.
   
   - This mode use Grenade Damage for the Splash Format, so if you are going to use the Prototype SX-1 with a Siren character :warning: Maya :warning: , don't forget to toggle the Grenade Damage to Reaper Splash Damage.
-   
+
+### Help! The Mod doesn't work !?!
+
+Read this little [Compatibility & Troubleshooting](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/Astor/Compatibility%20%26%20Troubleshooting) page... It's not that hard!  :wink:
+
+### Gibbed codes:
+
+| Prefix               | Accessory       | Gibbed code                 | 
+| -------------        | -------------   | -------------               | 
+| Stopping Lascaux     | Damage          | BL2(hwAAAAC/BQBB6ANBBIFEcmIpwQKNJQGLChYGLBRY/v8vY+nBYo3l) |  
+| Flying Lascaux       | Bullet Speed    | BL2(hwAAAABZNABB6ANBBIFEcmIpwQKNJQGLChYGLBVY/v8vYxnCYo3l) |
+| Deft Lascaux         | Accuracy        | BL2(hwAAAAAmawBB6ANBBIFEcmIpwQKNJQGLChYGLBNY/v8vY7nBYo3l) |
+| Stoic Lascaux        | Stability       | BL2(hwAAAAD4IwBB6ANBBIFEcmIpwQKNJQGLChYGLBZY/v8vY0nCYo3l) |
+| Skirmish Lascaux     | Reload Speed    | BL2(hwAAAABCAABB6ANBBIFEcmIpwQKNJQGLChYGLBdY/v8vY3HCYo3l) |
+| ~~Bladed Lascaux~~   | ~~Melee~~       | E-Tech Plasma Caster **NEVER** spawn with a blade.        |
+| Smooth Lascaux       | No Accessory    | BL2(hwAAAAAj3gBB6ANBBIFEcmIpwQKNJQGLChYGLBFY/v8vY0FAYo3l) |   
+
+### Changelog:
+
+- v1.0.0, October 1, 2018
+  - Initial public release
+- v1.0.1, October 25, 2018
+  - Correct the wrong line of code (was *Set WeaponTypeDefinition'GD_Weap_SMG.A_Weapons...* instead of *Set GD_Weap_SMG.A_Weapons...*) repeated 9 times by using copy/paste to go faster.
+
 ### Other Recommended Mods:
 
 A great mod to check for the *Plasma Caster Dahl Prototype SX-1*:

@@ -1,22 +1,16 @@
 This Read Me is just here as a quick synopsis, for detailed informations, each Mod has is own Read Me (and even a Changelog), so don't hesitate -whoosh!- to give a look on it.
 
 * * * * *
- 
-## [Custom Weapon] Plasma Caster Dahl Prototype SX-1
 
-The Prototype SX-1 was great and really a powerful and dangerous weapon, except that the plasma ball will only explode when coming in contact with a enemy and the missed shots disintegrate instantly "pschitt" like a damp squib (without exploding!) in a tiny cloud of pink smoke.
+## Custom Gears:
 
-* * * * *
+- ### Plasma Caster:
 
-## [Custom Weapon] Plasma Caster Hyperion Finesse - Circuit Board Edition
-
-In their early days in their making of weapons, Hyperion, seized Alien Technology plans and created the Finesse: a Plasma Caster which fire SEAPP (Smart Elemental Adaptive Plasma Projectile), a Alien Plasma Projectile which adapt his Elemental following the kind of impact: Incendiary on flesh / Shock on shield / Corrosive on armor. 
-
-* * * * *
-
-## [Custom Weapon] Plasma Caster Hyperion Finesse - Moxxi Edition
-
-A Plasma Caster which fire SEAPP (Smart Elemental Adaptive Plasma Projectile), a Alien Plasma Projectile which adapt his Elemental following the kind of impact: Incendiary on flesh / Shock on shield / Corrosive on armor, with, as usual for the Vanilla Moxxi weapons, the benefice of 70% Critical hit bonus + 2.5% lifesteal on damage dealt.
+  - __Plasma Caster Dahl Prototype SX-1:__ A Plasma Caster which fire GyroJet explosive bullet.
+  
+  - __Plasma Caster Hyperion Finesse - Circuit Board Edition:__ A Plasma Projectile which adapt his Elemental following the kind of impact: Incendiary on flesh / Shock on shield / Corrosive on armor.
+  
+  - __Plasma Caster Hyperion Finesse - Moxxi Edition:__ Same weapon as the Circuit Board Edition (above), but with usual Moxxi's bonus (Critical Hit & Lifesteal) added.
 
 * * * * *
  

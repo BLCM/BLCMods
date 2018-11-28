@@ -105,8 +105,11 @@ This Mod has few options & fix, so feel free to use the BLCMM tool to select the
   - This mode use Grenade Damage for the Splash Format, so if you are going to use the Discord Solver with a Siren character :warning: Maya :warning: , don't forget to toggle the Grenade Damage to Reaper Splash Damage.
    
   - This Mod as a option which make the *Discord Solver - Moxxi Edition* becoming the reward given by Moxxi for the mission *Hell Hath No Fury* in Opportunity, so be sure that you place this mod **AFTER** my mod *Double Quest Reward Redux* or any other mod modifying the Quest Reward.
- 
 
+### Help! The Mod doesn't work !?!
+
+Read this little [Compatibility & Troubleshooting](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/Astor/Compatibility%20%26%20Troubleshooting) page... It's not that hard!  :wink:
+ 
 ### Gibbed codes:
 
 | Prefix               | Accessory       | Gibbed code                 | 
