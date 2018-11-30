@@ -8,6 +8,8 @@ This Read Me is just here as a quick synopsis, for detailed informations, each M
 
   - __*Booster Shields* Auto Pick-Up:__ Like Money and Ammunition, now the booster shield automatically pick-up... just walk on it and it's your!
 
+  - __*Whiskey Tango Foxtrot* Twofold:__ Double the *IED (Improvised Explosive Device) boosters* dropped to increase the *Whiskey Tango Foxtrot* offensive capability.
+
 ## Weapons Improvement:
 
 - ### Assault Rifle Improvement:

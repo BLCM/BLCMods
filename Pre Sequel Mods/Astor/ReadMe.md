@@ -17,7 +17,6 @@ This Read Me is just here as a quick synopsis, for detailed informations, each M
 ## Characters Improvement:
 
 - ### All Characters:
-
   - __Throw Grenade in FFYL:__ Now you can throw grenades while in FFYL, with any character.
 
 - ### Aurelia 
@@ -25,6 +24,9 @@ This Read Me is just here as a quick synopsis, for detailed informations, each M
 
 - ### Jack:
   - __*DigiJack* in FFYL:__ You can summon your *DigiJack* to fight alongside you while in *Fight For Your Live*.
+
+- ### Wilhelm: 
+  - __*Wolf & Saint in FFYL:*__ You can summon *Wolf* (red combat drone) and/or *Saint* (white support drone) to fight alongside you while in *Fight For Your Live*.
 
 * * * * *
 
@@ -47,7 +49,7 @@ This Read Me is just here as a quick synopsis, for detailed informations, each M
 ## Gears Fixes:
 
 - __*Deadly Bloom* Legendary Fix:__ Corrects the *Deadly Bloom* Legendary bug by makes it regain his *legit* Legendary rarity, value & skin.
-
+ 
 - __*SuperNova* Missing Material Fix:__ My modest contribution to fix the *Missing Material* bug which makes the *SuperNova* spawn with four different materials rather than just the predefined one and affecting the shield capacity, nova damage, and nova radius.
 
 ## UCP 2.2 Fixes:
@@ -63,6 +65,8 @@ This Read Me is just here as a quick synopsis, for detailed informations, each M
   - #### Shields Improvement:
     
     - __*Booster Shields* Auto Pick-Up:__ Automatically pick-up, however, to balance the auto pick-up advantage, the restoration value is reduced from ±20%.
+    
+    - __*Whiskey Tango Foxtrot* Twofold:__ Double the *IED (Improvised Explosive Device) boosters* dropped to increase the *Whiskey Tango Foxtrot* offensive capability.
 
 - ### Weapons Improvement:
 
