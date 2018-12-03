@@ -1,15 +1,15 @@
-## *Omni-Cannon* with Grenade Damage
+## No More Fast Travel Animation
 
-While TPS Patch 2.2 upgrades to the *Omni-Cannon* have made it a MUCH more valuable piece, it still does not become viable enough for most characters; but with this Grenade Damage Bonus added, the *Omni-Cannon* will become one of the BEST sniper rifle in TPS.
- 
-### Where to find it?
+You all the the *Fast Travel/Respawn Animation*... 
 
-The *Omni-Cannon* can be obtained randomly from any suitable loot source and has an increased chance to drop from *The Sponx* located in *The Temple of Boom* (during *Claptastic Voyage* DLC). 
+![Fast Travel - Respawn animation](https://imgur.com/iUpx84M.gif "Don't worry guys... even if my screen capture show French text, my mods are in English")
 
-![The Sponx](https://imgur.com/NTPJ4mV.jpg "Don't worry guys... even if my screen capture show French text, my mods are in English")
+At first, it's actually makes respawning fun... like "Please die again!"... but after few playtroughs, this become a little bit boring!
+
+As the title suggests it, this Mod disables the useless (and annoying) *Fast Travel/Respawn Animation*!
 
 ### Changelog:
-- v1.0.0, November 15, 2018
+- v1.0.0, November 30, 2018
   - Initial public release
  
 ### Compatibility:
@@ -23,6 +23,10 @@ Read this little [Compatibility & Troubleshooting](https://github.com/BLCM/BLCMo
 ### To do:
 
 - [ ] Well... it seems to work correctly, so nothing I guess?
+
+### Credits & Thanks:
+
+Inspired by [Travel Portal Disabler](https://github.com/BLCM/BLCMods/blob/master/Borderlands%202%20mods/FromDarkHell/Quality%20of%20Life/TravelPortalDisabler.blcm) created for BL2 by [FromDarkHell](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/FromDarkHell). Such a Mod didn't seem to exist for TPS, though, so I took it upon myself to create one. All the credits go to [FromDarkHell](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/FromDarkHell) for the idea. 
   
 ### Note: 
 

@@ -1,15 +1,9 @@
-## *Omni-Cannon* with Grenade Damage
+## Wilhem's Wolf & Saint in FFYL
 
-While TPS Patch 2.2 upgrades to the *Omni-Cannon* have made it a MUCH more valuable piece, it still does not become viable enough for most characters; but with this Grenade Damage Bonus added, the *Omni-Cannon* will become one of the BEST sniper rifle in TPS.
- 
-### Where to find it?
-
-The *Omni-Cannon* can be obtained randomly from any suitable loot source and has an increased chance to drop from *The Sponx* located in *The Temple of Boom* (during *Claptastic Voyage* DLC). 
-
-![The Sponx](https://imgur.com/NTPJ4mV.jpg "Don't worry guys... even if my screen capture show French text, my mods are in English")
+You can summon *Wolf* (red combat drone) and/or *Saint* (white support drone) to fight alongside you while in Fight For Your Live.
 
 ### Changelog:
-- v1.0.0, November 15, 2018
+- v1.0.0, November 30, 2018
   - Initial public release
  
 ### Compatibility:

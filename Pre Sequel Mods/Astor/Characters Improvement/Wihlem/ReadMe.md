@@ -2,19 +2,9 @@ This Read Me is just here as a quick synopsis, for detailed informations, each M
 
 * * * * *
 
-## Weapons Improvement:
+## Wilhem: 
 
-- ### Assault Rifle Improvement:
-
-  - ***KerBoom* with Singularity Grenade:** Turns the KerBoom into a useful weapon by shooting 1 rockets, which spawn 1 singularity child grenade.
-
-- ### Shotgun:
- 
-  - __*Moonscaper* No Self-Damage:__ Made the grenades not inflicting self-damage to fixes the issue of where the delayed explosion would (repeatedly) put you down.
-
-- ### Sniper Rifle Improvement:
-
-  - ***Omni-Cannon* with Grenade Damage:** with this *Grenade Damage Bonus* added, the *Omni-Cannon* will become one of the BEST sniper rifle in TPS. 
+- __*Wolf & Saint* in FFYL:__ You can summon *Wolf* (red combat drone) and/or *Saint* (white support drone) to fight alongside you while in *Fight For Your Live*.
 
 * * * * *
  

@@ -4,7 +4,7 @@ This Read Me is just here as a quick synopsis, for detailed informations, each M
 
 ## Jack: 
 
-- __DigiJack in FFYL:__ As the title suggests it, you can summon your *DigiJack* to fight alongside you while in *Fight For Your Live*.
+- __*DigiJack* in FFYL:__ As the title suggests it, you can summon your *DigiJack* to fight alongside you while in *Fight For Your Live*.
 
 * * * * *
  

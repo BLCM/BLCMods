@@ -5,15 +5,16 @@ This Read Me is just here as a quick synopsis, for detailed informations, each M
 ## Characters Improvemnt:
 
 - ### All Characters:
-
-  - __Throw Grenade in FFYL:__ Now you can throw grenades while in FFYL.
+  - __Throw Grenade in FFYL:__ Now you can throw grenades while in FFYL, with any character.
 
 - ### Aurelia 
   - __*Cold As Ice* in FFYL:__ You can throw your *Frost Diadem Shard* (*Cold As Ice* ability) while in *Fight For Your Live*.
 
 - ### Jack:
-
   - __*DigiJack* in FFYL:__ You can summon your *DigiJack* to fight alongside you while in *Fight For Your Live*.
+
+- ### Wilhem: 
+  - __*Wolf & Saint in FFYL:*__ You can summon *Wolf* (red combat drone) and/or *Saint* (white support drone) to fight alongside you while in *Fight For Your Live*.
 
 * * * * *
  

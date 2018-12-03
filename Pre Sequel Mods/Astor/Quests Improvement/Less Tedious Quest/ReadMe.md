@@ -9,13 +9,18 @@ As the title suggests it, makes a few timed and objective count __-failable!-__ 
 
 ### Timed Missions:
 
-- __Option #1: *Extended time*__
+- __Option #1: *Extended time by 50%*__
+  - __*Pop Racing*__ in Triton Flats - Time limit increased to 2:15 (instead of 1:30)
+  - __*Recruitement Drive*__ in Triton Flats - Time limit increased to 6:45 (instead of 4:30)
+  - __*The Don*__ in Vorago Solitude - Time limit increased to 6:45 (instead of 4:30)
+
+- __Option #2: *Extended time by 100%*__
   - __*Pop Racing*__ in Triton Flats - Time limit increased to 3:00 (instead of 1:30)
   - __*Recruitement Drive*__ in Triton Flats - Time limit increased to 9:00 (instead of 4:30)
-  - __*The Don*__ in Vorago Solitude - Time limit increased to 6:00 (instead of 4:30)
+  - __*The Don*__ in Vorago Solitude - Time limit increased to 9:00 (instead of 4:30)
 
-- __Option #2: *No time limit*__
-  - __*Pop Racing*__ in Triton Flats - Time limit increased to 3:00 (instead of 1:30)
+- __Option #3: *No time limit*__
+  - __*Pop Racing*__ in Triton Flats - Time limit increased to 50:00 (instead of 1:30)
   - __*Recruitement Drive*__ in Triton Flats - No Time limit 
   - __*The Don*__ in Vorago Solitude - No time limit 
 
