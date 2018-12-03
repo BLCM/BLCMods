@@ -7,11 +7,14 @@
 		</profiles>
 	</head>
 	<body>
-		<category name="Item level Uncapper">
+		<category name="Item Level Uncapper">
 			<comment>By apple1417</comment>
 			<comment>This mod is useless by itself, it should be used alongside the hexedit to increase the player level cap</comment>
 			<comment>Fixes the level cap of most items so that they continue spawning past level 100</comment>
-			<comment>Note that there may still be various other issues with an increased level cap, this only fixes that most items stopped spawning</comment>
+			<comment>Note that items past level 127 will overflow upon save-quit, and that gibbed won't let you create items</comment>
+			<comment> past 127, so past that point you'll have to pick up everything you use within the same session.</comment>
+			<comment>Also note that there may still be various other issues with an increased level cap, this only fixes that</comment>
+			<comment> most items stopped spawning</comment>
 			<category name="Guns">
 				<hotfix name="ItemLevelUncapper" level="">
 					<code profiles="default">set InventoryBalanceDefinition'GD_CannonTurret.Weapon.ItemGrade_CannonTurret' Manufacturers ((manufacturer=ManufacturerDefinition'GD_Manufacturers.Manufacturers.Tediore',grades=((grademodifiers=(explevel=1,custominventorydefinition=None),gamestagerequirement=(mingamestage=1,maxgamestage=500),minspawnprobabilitymodifier=(basevalueconstant=1.000000,basevalueattribute=None,initializationdefinition=None,basevaluescaleconstant=1.000000),maxspawnprobabilitymodifier=(basevalueconstant=1.000000,basevalueattribute=None,initializationdefinition=None,basevaluescaleconstant=1.000000)))))</code>
@@ -4145,6 +4148,13 @@
 				<code profiles="default">set ItemPartListDefinition'GD_MoonItems.Upgrade.PartList_Upgrade' ConsolidatedAttributeInitData ((basevalueconstant=1.000000,basevalueattribute=None,initializationdefinition=None,basevaluescaleconstant=1.000000),(basevalueconstant=500.000000,basevalueattribute=None,initializationdefinition=None,basevaluescaleconstant=1.000000))</code>
 				<code profiles="default">set ItemPartListDefinition'GD_StorageDeckUpgrade.RightSide.RightSideParts' ConsolidatedAttributeInitData ((basevalueconstant=1.000000,basevalueattribute=None,initializationdefinition=None,basevaluescaleconstant=1.000000),(basevalueconstant=500.000000,basevalueattribute=None,initializationdefinition=None,basevaluescaleconstant=1.000000),(basevalueconstant=5.000000,basevalueattribute=None,initializationdefinition=None,basevaluescaleconstant=1.000000),(basevalueconstant=10.000000,basevalueattribute=None,initializationdefinition=None,basevaluescaleconstant=1.000000))</code>
 				<code profiles="default">set ItemPartListDefinition'WillowGame.Default__ItemPartListDefinition' ConsolidatedAttributeInitData ((basevalueconstant=1.000000,basevalueattribute=None,initializationdefinition=None,basevaluescaleconstant=1.000000),(basevalueconstant=500.000000,basevalueattribute=None,initializationdefinition=None,basevaluescaleconstant=1.000000),(basevalueconstant=5.000000,basevalueattribute=None,initializationdefinition=None,basevaluescaleconstant=1.000000),(basevalueconstant=10.000000,basevalueattribute=None,initializationdefinition=None,basevaluescaleconstant=1.000000))</code>
+			</category>
+			<category name="Softer Scaling (OPTIONAL)">
+				<comment>This dramatically changes scaling in hopes of preventing overflows at level 255</comment>
+				<comment>Reaching this level is not practical but it's a nice fix in any case</comment>
+				<category name="Code">
+					<code profiles="">set ConstantAttributeValueResolver'GD_Balance_HealthAndDamage.HealthAndDamage.Att_UniversalBalanceScaler:ConstantAttributeValueResolver_0' ConstantValue 1.05</code>
+				</category>
 			</category>
 		</category>
 	</body>
