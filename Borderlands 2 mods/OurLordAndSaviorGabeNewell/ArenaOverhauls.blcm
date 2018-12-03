@@ -1,0 +1,355 @@
+<BLCMM v="1">
+#<!!!You opened a file saved with BLCMM in FilterTool. Please update to BLCMM to properly open this file!!!>
+	<head>
+		<type name="BL2" offline="false"/>
+	</head>
+	<body>
+		<category name="Arena Overhauls">
+			<comment>Mod written by GitHub: Our Lord And Savior Gabe Newell / NexusMods: OB4MA</comment>
+			<comment>This mod moves various things around in three combat arenas.  This includes vending machines, buff shrines, arena quest givers, zone entering location, respawn location and rotation, as well an an option to disable death costs.</comment>
+			<category name="Fink's Slaughterhouse">
+				<category name="Bandit Slaughter">
+					<category name="Options">
+						<category name="Vending Machines">
+							<category name="Weapon Vendor">
+								<hotfix name="Weapon Vendor" level="BanditSlaughter_P">
+									<code profiles="default">set BanditSlaughter_Combat.TheWorld:PersistentLevel.PopulationOpportunityPoint_3 Location (X=17096.099609,Y=3477.697021,Z=11850.002930)</code>
+									<code profiles="default">set BanditSlaughter_Combat.TheWorld:PersistentLevel.PopulationOpportunityPoint_3 Rotation (Pitch=-2900,Yaw=69616,Roll=16384)</code>
+								</hotfix>
+							</category>
+							<category name="Health Vendor">
+								<hotfix name="Health Vendor" level="BanditSlaughter_P">
+									<code profiles="default">set BanditSlaughter_P.TheWorld:PersistentLevel.PopulationOpportunityPoint_2 Location (X=17176.730469,Y=3302.711914,Z=11800.367188)</code>
+									<code profiles="default">set BanditSlaughter_P.TheWorld:PersistentLevel.PopulationOpportunityPoint_2 Rotation (Pitch=-1300,Yaw=69756,Roll=8650)</code>
+								</hotfix>
+							</category>
+							<category name="Ammo Vendor">
+								<hotfix name="Ammo Vendor" level="BanditSlaughter_P">
+									<code profiles="default">set BanditSlaughter_P.TheWorld:PersistentLevel.PopulationOpportunityPoint_0 Location (X=17212.333984,Y=3195.003906,Z=11746.858398)</code>
+									<code profiles="default">set BanditSlaughter_P.TheWorld:PersistentLevel.PopulationOpportunityPoint_0 Rotation (Pitch=-1300,Yaw=69756,Roll=0)</code>
+								</hotfix>
+							</category>
+						</category>
+						<category name="Spawn / Respawn Points">
+							<category name="Spawn">
+								<hotfix name="Name" level="BanditSlaughter_P">
+									<code profiles="default">set BanditSlaughter_P.TheWorld:PersistentLevel.StationTeleporterExitPoint_4 Location (X=17570.394531,Y=3601.935059,Z=11859.449219)</code>
+									<code profiles="default">set BanditSlaughter_P.TheWorld:PersistentLevel.StationTeleporterExitPoint_5 Location (X=17570.394531,Y=3601.935059,Z=11859.449219)</code>
+									<code profiles="default">set BanditSlaughter_P.TheWorld:PersistentLevel.StationTeleporterExitPoint_6 Location (X=17570.394531,Y=3601.935059,Z=11859.449219)</code>
+									<code profiles="default">set BanditSlaughter_P.TheWorld:PersistentLevel.StationTeleporterExitPoint_7 Location (X=17570.394531,Y=3601.935059,Z=11859.449219)</code>
+									<code profiles="default">set BanditSlaughter_P.TheWorld:PersistentLevel.StationTeleporterExitPoint_4 Rotation (Pitch=64096,Yaw=-28116,Roll=0)</code>
+									<code profiles="default">set BanditSlaughter_P.TheWorld:PersistentLevel.StationTeleporterExitPoint_5 Rotation (Pitch=64096,Yaw=-28116,Roll=0)</code>
+									<code profiles="default">set BanditSlaughter_P.TheWorld:PersistentLevel.StationTeleporterExitPoint_6 Rotation (Pitch=64096,Yaw=-28116,Roll=0)</code>
+									<code profiles="default">set BanditSlaughter_P.TheWorld:PersistentLevel.StationTeleporterExitPoint_7 Rotation (Pitch=64096,Yaw=-28116,Roll=0)</code>
+									<code profiles="default">set BanditSlaughter_P.TheWorld:PersistentLevel.ResurrectTravelStation_0 bFastTravelEnabled False</code>
+								</hotfix>
+							</category>
+							<category name="Respawn">
+								<hotfix name="Name" level="BanditSlaughter_P">
+									<code profiles="default">set BanditSlaughter_P.TheWorld:PersistentLevel.StationTeleporterExitPoint_0 Location (X=18409.5332,Y=6812.925293,Z=13368.6377)</code>
+									<code profiles="default">set BanditSlaughter_P.TheWorld:PersistentLevel.StationTeleporterExitPoint_1 Location (X=18560.72266,Y=6687.949707,Z=13368.23828)</code>
+									<code profiles="default">set BanditSlaughter_P.TheWorld:PersistentLevel.StationTeleporterExitPoint_2 Location (X=18694.57227,Y=6554.904297,Z=13368.19922)</code>
+									<code profiles="default">set BanditSlaughter_P.TheWorld:PersistentLevel.StationTeleporterExitPoint_3 Location (X=18873.19531,Y=6386.665527,Z=13368.03223)</code>
+								</hotfix>
+							</category>
+						</category>
+						<category name="Fink's Location">
+							<hotfix name="Name" level="BanditSlaughter_P">
+								<code profiles="default">set BanditSlaughter_Combat.TheWorld:PersistentLevel.WillowAIPawn_23 Location (X=17347.55859,Y=3495.696045,Z=11840.26172)</code>
+							</hotfix>
+							<code profiles="default">set GD_Z1_BanditSlaughter.M_BanditSlaughter5 bRepeatable True</code>
+						</category>
+						<category name="Support Windows Can Be Shot Through (Bullets, Rockets, Grenades)">
+							<hotfix name="Name" level="BanditSlaughter_P">
+								<code profiles="default">set BanditSlaughter_Combat.TheWorld:PersistentLevel.StaticMeshCollectionActor_41.StaticMeshActor_SMC_48 CollideActors False</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="No Death Cost">
+						<category name="Code">
+							<hotfix name="Name" level="BanditSlaughter_P">
+								<code profiles="default">set GD_Balance_Inventory.Commerce.DeathPenaltyCost ValueFormula (bEnabled=True,Multiplier=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),Level=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.Currency.CreditsOnHand',InitializationDefinition=None,BaseValueScaleConstant=1.000000),Power=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),Offset=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))</code>
+							</hotfix>
+							<hotfix name="Name" level="Fridge_P">
+								<code profiles="default">set GD_Balance_Inventory.Commerce.DeathPenaltyCost ValueFormula (bEnabled=True,Multiplier=(BaseValueConstant=0.070000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),Level=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.Currency.CreditsOnHand',InitializationDefinition=None,BaseValueScaleConstant=1.000000),Power=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),Offset=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))</code>
+							</hotfix>
+						</category>
+					</category>
+				</category>
+			</category>
+			<category name="Ore Chasm">
+				<category name="Robot Slaughter">
+					<category name="Options">
+						<category name="Vending Machines">
+							<category name="Weapon Vendor">
+								<hotfix name="Weapon Vendor" level="RobotSlaughter_P">
+									<code profiles="default">set RobotSlaughter_Dynamic.TheWorld:PersistentLevel.PopulationOpportunityPoint_2 Location (X=-42211.289063,Y=-63825.339844,Z=3382.673340)</code>
+									<code profiles="default">set RobotSlaughter_Dynamic.TheWorld:PersistentLevel.PopulationOpportunityPoint_2 Rotation (Pitch=0,Yaw=113207,Roll=0)</code>
+								</hotfix>
+							</category>
+							<category name="Health Vendor">
+								<hotfix name="Health Vendor" level="RobotSlaughter_P">
+									<code profiles="default">set RobotSlaughter_P.TheWorld:PersistentLevel.PopulationOpportunityPoint_2 Location (X=-41955.871094,Y=-63850.429688,Z=3382.551758)</code>
+									<code profiles="default">set RobotSlaughter_P.TheWorld:PersistentLevel.PopulationOpportunityPoint_2 Rotation (Pitch=0,Yaw=48336,Roll=0)</code>
+								</hotfix>
+							</category>
+							<category name="Ammo Vendor">
+								<hotfix name="Ammo Vendor" level="RobotSlaughter_P">
+									<code profiles="default">set RobotSlaughter_P.TheWorld:PersistentLevel.PopulationOpportunityPoint_3 Location (X=-41720.898438,Y=-63873.640625,Z=3391.744873)</code>
+									<code profiles="default">set RobotSlaughter_P.TheWorld:PersistentLevel.PopulationOpportunityPoint_3 Rotation (Pitch=0,Yaw=113916,Roll=0)</code>
+								</hotfix>
+							</category>
+						</category>
+						<category name="Spawn / Respawn Points">
+							<category name="Spawn">
+								<hotfix name="Name" level="RobotSlaughter_P">
+									<code profiles="default">set RobotSlaughter_P.TheWorld:PersistentLevel.StationTeleporterExitPoint_4 Location (X=-42547.148438,Y=-62940.027344,Z=3499.615723)</code>
+									<code profiles="default">set RobotSlaughter_P.TheWorld:PersistentLevel.StationTeleporterExitPoint_5 Location (X=-42547.148438,Y=-62940.027344,Z=3499.615723)</code>
+									<code profiles="default">set RobotSlaughter_P.TheWorld:PersistentLevel.StationTeleporterExitPoint_6 Location (X=-42547.148438,Y=-62940.027344,Z=3499.615723)</code>
+									<code profiles="default">set RobotSlaughter_P.TheWorld:PersistentLevel.StationTeleporterExitPoint_7 Location (X=-42547.148438,Y=-62940.027344,Z=3499.615723)</code>
+									<code profiles="default">set RobotSlaughter_P.TheWorld:PersistentLevel.StationTeleporterExitPoint_4 Rotation (Pitch=65416,Yaw=16956,Roll=0)</code>
+									<code profiles="default">set RobotSlaughter_P.TheWorld:PersistentLevel.StationTeleporterExitPoint_5 Rotation (Pitch=65416,Yaw=16956,Roll=0)</code>
+									<code profiles="default">set RobotSlaughter_P.TheWorld:PersistentLevel.StationTeleporterExitPoint_6 Rotation (Pitch=65416,Yaw=16956,Roll=0)</code>
+									<code profiles="default">set RobotSlaughter_P.TheWorld:PersistentLevel.StationTeleporterExitPoint_7 Rotation (Pitch=65416,Yaw=16956,Roll=0)</code>
+									<code profiles="default">set RobotSlaughter_P.TheWorld:PersistentLevel.ResurrectTravelStation_0 bFastTravelEnabled False</code>
+								</hotfix>
+							</category>
+							<category name="Respawn">
+								<hotfix name="Name" level="RobotSlaughter_P">
+									<code profiles="default">set RobotSlaughter_P.TheWorld:PersistentLevel.StationTeleporterExitPoint_8 Location (X=-45487.621094,Y=-61275.832031,Z=5611.370117)</code>
+									<code profiles="default">set RobotSlaughter_P.TheWorld:PersistentLevel.StationTeleporterExitPoint_9 Location (X=-45487.621094,Y=-61275.832031,Z=5611.370117)</code>
+									<code profiles="default">set RobotSlaughter_P.TheWorld:PersistentLevel.StationTeleporterExitPoint_10 Location (X=-45487.621094,Y=-61275.832031,Z=5611.370117)</code>
+									<code profiles="default">set RobotSlaughter_P.TheWorld:PersistentLevel.StationTeleporterExitPoint_11 Location (X=-45487.621094,Y=-61275.832031,Z=5611.370117)</code>
+									<code profiles="default">set RobotSlaughter_P.TheWorld:PersistentLevel.StationTeleporterExitPoint_8 Rotation (Pitch=63531,Yaw=82316,Roll=0)</code>
+									<code profiles="default">set RobotSlaughter_P.TheWorld:PersistentLevel.StationTeleporterExitPoint_9 Rotation (Pitch=63531,Yaw=82316,Roll=0)</code>
+									<code profiles="default">set RobotSlaughter_P.TheWorld:PersistentLevel.StationTeleporterExitPoint_10 Rotation (Pitch=63531,Yaw=82316,Roll=0)</code>
+									<code profiles="default">set RobotSlaughter_P.TheWorld:PersistentLevel.StationTeleporterExitPoint_11 Rotation (Pitch=63531,Yaw=82316,Roll=0)</code>
+								</hotfix>
+							</category>
+						</category>
+						<category name="No Barrels By NPC" locked="true">
+							<hotfix name="Barrel Mix" level="RobotSlaughter_P">
+								<code profiles="default">set RobotSlaughter_P.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_5 Location (X=-43943.285156,Y=-61248.449219,Z=3575.793213)</code>
+							</hotfix>
+							<code profiles="default">set GD_Z3_RobotSlaughter.M_RobotSlaughter_5 bRepeatable True</code>
+						</category>
+						<category name="Innuendobot 5000 Location" locked="true">
+							<hotfix name="Name" level="RobotSlaughter_P">
+								<code profiles="default">set RobotSlaughter_P.TheWorld:PersistentLevel.WillowAIPawn_0 Location (X=-42572.27734,Y=-62585.80469,Z=3505.695801)</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="No Death Cost">
+						<category name="Code">
+							<hotfix name="Name" level="Ash_P">
+								<code profiles="default">set GD_Balance_Inventory.Commerce.DeathPenaltyCost ValueFormula (bEnabled=True,Multiplier=(BaseValueConstant=0.070000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),Level=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.Currency.CreditsOnHand',InitializationDefinition=None,BaseValueScaleConstant=1.000000),Power=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),Offset=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))</code>
+							</hotfix>
+							<hotfix name="Name" level="RobotSlaughter_P">
+								<code profiles="default">set GD_Balance_Inventory.Commerce.DeathPenaltyCost ValueFormula (bEnabled=True,Multiplier=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),Level=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.Currency.CreditsOnHand',InitializationDefinition=None,BaseValueScaleConstant=1.000000),Power=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),Offset=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))</code>
+							</hotfix>
+						</category>
+					</category>
+				</category>
+			</category>
+			<category name="Murderlin's Temple">
+				<category name="Options" MUT="true">
+					<category name="Magic Slaughter">
+						<category name="Options">
+							<category name="Vending Machines">
+								<category name="Weapon Vendor">
+									<hotfix name="Weapon Vendor" level="TempleSlaughter_P">
+										<code profiles="default">set TempleSlaughter_P.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_86 Location (X=-1239.688599,Y=-1160.180054,Z=-21.75403595)</code>
+										<code profiles="default">set TempleSlaughter_P.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_86 Rotation (Pitch=0,Yaw=-16384,Roll=0)</code>
+									</hotfix>
+								</category>
+								<category name="Health Vendor">
+									<hotfix name="Health Vendor" level="TempleSlaughter_P">
+										<code profiles="default">set TempleSlaughter_Combat.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_85 Location (X=-915.6399536,Y=-1161.278564,Z=-21.75403595)</code>
+										<code profiles="default">set TempleSlaughter_Combat.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_85 Rotation (Pitch=0,Yaw=-16384,Roll=0)</code>
+									</hotfix>
+								</category>
+								<category name="Ammo Vendor">
+									<hotfix name="Ammo Vendor" level="TempleSlaughter_P">
+										<code profiles="default">set TempleSlaughter_Combat.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_86 Location (X=-1078.08374,Y=-1160.705688,Z=-21.75403595)</code>
+										<code profiles="default">set TempleSlaughter_Combat.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_86 Rotation (Pitch=0,Yaw=-16384,Roll=0)</code>
+									</hotfix>
+								</category>
+							</category>
+							<category name="Shrines">
+								<hotfix name="Damage Shrine" level="TempleSlaughter_P">
+									<code profiles="default">set TempleSlaughter_Combat.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_33 Location (X=-1071.436523,Y=-2545.893555,Z=89.75403595)</code>
+								</hotfix>
+								<hotfix name="Ammo Shrine" level="TempleSlaughter_P">
+									<code profiles="default">set TempleSlaughter_Combat.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_30 Location (X=-1166.857666,Y=-2545.746094,Z=89.75403595)</code>
+									<code profiles="default">set TempleSlaughter_Combat.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_9 Location (X=-1269.394409,Y=-2545.195312,Z=89.75403595)</code>
+									<code profiles="default">set TempleSlaughter_P.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_7 Location (X=-1361.932373,Y=-2545.765625,Z=89.75403595)</code>
+									<code profiles="default">set TempleSlaughter_P.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_33 Location (X=-1450.549072,Y=-2545.957275,Z=89.75403595)</code>
+									<code profiles="default">set TempleSlaughter_P.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_31 Location (X=-1538.998657,Y=-2545.823486,Z=89.75403595)</code>
+									<code profiles="default">set TempleSlaughter_P.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_30 Location (X=-1637.541382,Y=-2545.956787,Z=89.75403595)</code>
+									<code profiles="default">set TempleSlaughter_P.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_0 Location (X=-1752.693359,Y=-2545.957275,Z=89.75403595)</code>
+								</hotfix>
+							</category>
+							<category name="Spawn / Respawn Points">
+								<category name="Spawn">
+									<hotfix name="Name" level="TempleSlaughter_P">
+										<code profiles="default">set TempleSlaughter_Combat.TheWorld:PersistentLevel.StationTeleporterExitPoint_3 Location (X=-118.239380,Y=-2083.597412,Z=89.754036)</code>
+										<code profiles="default">set TempleSlaughter_Combat.TheWorld:PersistentLevel.StationTeleporterExitPoint_2 Location (X=-118.239380,Y=-2083.597412,Z=89.754036)</code>
+										<code profiles="default">set TempleSlaughter_Combat.TheWorld:PersistentLevel.StationTeleporterExitPoint_1 Location (X=-118.239380,Y=-2083.597412,Z=89.754036)</code>
+										<code profiles="default">set TempleSlaughter_Combat.TheWorld:PersistentLevel.StationTeleporterExitPoint_0 Location (X=-118.239380,Y=-2083.597412,Z=89.754036)</code>
+										<code profiles="default">set TempleSlaughter_Combat.TheWorld:PersistentLevel.StationTeleporterExitPoint_3 Rotation (Pitch=65051,Yaw=-16108,Roll=0)</code>
+										<code profiles="default">set TempleSlaughter_Combat.TheWorld:PersistentLevel.StationTeleporterExitPoint_2 Rotation (Pitch=65051,Yaw=-16108,Roll=0)</code>
+										<code profiles="default">set TempleSlaughter_Combat.TheWorld:PersistentLevel.StationTeleporterExitPoint_1 Rotation (Pitch=65051,Yaw=-16108,Roll=0)</code>
+										<code profiles="default">set TempleSlaughter_Combat.TheWorld:PersistentLevel.StationTeleporterExitPoint_0 Rotation (Pitch=65051,Yaw=-16108,Roll=0)</code>
+										<code profiles="default">set TempleSlaughter_P.TheWorld:PersistentLevel.ResurrectTravelStation_0 bFastTravelEnabled False</code>
+									</hotfix>
+								</category>
+								<category name="Respawn">
+									<hotfix name="Ammo Shrine" level="TempleSlaughter_P">
+										<code profiles="default">set TempleSlaughter_P.TheWorld:PersistentLevel.StationTeleporterExitPoint_8 Location (X=-928.0109253,Y=5192.962402,Z=2688.290039)</code>
+										<code profiles="default">set TempleSlaughter_P.TheWorld:PersistentLevel.StationTeleporterExitPoint_9 Location (X=-704.7446289,Y=5202.624512,Z=2688.290039)</code>
+										<code profiles="default">set TempleSlaughter_P.TheWorld:PersistentLevel.StationTeleporterExitPoint_10 Location (X=-161.6116638,Y=5229.725098,Z=2688.290039)</code>
+										<code profiles="default">set TempleSlaughter_P.TheWorld:PersistentLevel.StationTeleporterExitPoint_11 Location (X=59.69287872,Y=5232.01416,Z=2688.290039)</code>
+										<code profiles="default">set TempleSlaughter_P.TheWorld:PersistentLevel.StationTeleporterExitPoint_8 Rotation (Pitch=0,Yaw=-16384,Roll=0)</code>
+										<code profiles="default">set TempleSlaughter_P.TheWorld:PersistentLevel.StationTeleporterExitPoint_9 Rotation (Pitch=0,Yaw=-16384,Roll=0)</code>
+										<code profiles="default">set TempleSlaughter_P.TheWorld:PersistentLevel.StationTeleporterExitPoint_10 Rotation (Pitch=0,Yaw=-16384,Roll=0)</code>
+										<code profiles="default">set TempleSlaughter_P.TheWorld:PersistentLevel.StationTeleporterExitPoint_11 Rotation (Pitch=0,Yaw=-16384,Roll=0)</code>
+									</hotfix>
+								</category>
+							</category>
+							<category name="Murderlin's Location">
+								<hotfix name="Name" level="TempleSlaughter_P">
+									<code profiles="default">set TempleSlaughter_Combat.TheWorld:PersistentLevel.WillowAIPawn_0 Location (X=-120.049484,Y=-2445.306885,Z=89.754036)</code>
+								</hotfix>
+							</category>
+							<category name="Support Windows Can Be Shot Through (Bullets, Rockets, Grenades)">
+								<hotfix name="Name" level="TempleSlaughter_P">
+									<code profiles="default">set TempleSlaughter_P.TheWorld:PersistentLevel.StaticMeshCollectionActor_532.StaticMeshActor_SMC_9 CollideActors False</code>
+									<code profiles="default">set TempleSlaughter_P.TheWorld:PersistentLevel.StaticMeshCollectionActor_532.StaticMeshActor_SMC_342 CollideActors False</code>
+									<code profiles="default">set TempleSlaughter_P.TheWorld:PersistentLevel.StaticMeshCollectionActor_532.StaticMeshActor_SMC_345 CollideActors False</code>
+									<code profiles="default">set TempleSlaughter_P.TheWorld:PersistentLevel.StaticMeshCollectionActor_532.StaticMeshActor_SMC_246 CollideActors False</code>
+								</hotfix>
+							</category>
+						</category>
+					</category>
+					<category name="Babysitting">
+						<category name="Code">
+							<category name="Spawn / Respawn Points">
+								<category name="Spawn">
+									<hotfix name="Name" level="TempleSlaughter_P">
+										<code profiles="">set TempleSlaughter_Combat.TheWorld:PersistentLevel.StationTeleporterExitPoint_0 Location (X=4808.302734,Y=16937.1543,Z=3615.74585)</code>
+										<code profiles="">set TempleSlaughter_Combat.TheWorld:PersistentLevel.StationTeleporterExitPoint_1 Location (X=4699.625488Y=17035.33203,Z=3620.711426)</code>
+										<code profiles="">set TempleSlaughter_Combat.TheWorld:PersistentLevel.StationTeleporterExitPoint_2 Location (X=4599.400879,Y=17115.17383,Z=3625.761719)</code>
+										<code profiles="">set TempleSlaughter_Combat.TheWorld:PersistentLevel.StationTeleporterExitPoint_3 Location (X=4441.781738,Y=17241.63867,Z=3629.939209)</code>
+									</hotfix>
+								</category>
+								<category name="Respawn">
+									<hotfix name="Ammo Shrine" level="TempleSlaughter_P">
+										<code profiles="">set TempleSlaughter_P.TheWorld:PersistentLevel.StationTeleporterExitPoint_8 Location (X=3573.069336,Y=12732.7832,Z=3809.602539)</code>
+										<code profiles="">set TempleSlaughter_P.TheWorld:PersistentLevel.StationTeleporterExitPoint_9 Location (X=3435.999512,Y=12736.67578,Z=3809.602539)</code>
+										<code profiles="">set TempleSlaughter_P.TheWorld:PersistentLevel.StationTeleporterExitPoint_10 Location (X=3266.148682,Y=12729.61914,Z=3809.602539)</code>
+										<code profiles="">set TempleSlaughter_P.TheWorld:PersistentLevel.StationTeleporterExitPoint_11 Location (X=3379.348389,Y=12512.20605,Z=3809.602539)</code>
+									</hotfix>
+								</category>
+							</category>
+							<category name="Murderlin's Location">
+								<hotfix name="Name" level="TempleSlaughter_P">
+									<code profiles="">set TempleSlaughter_Combat.TheWorld:PersistentLevel.WillowAIPawn_0 Location (X=6537.974121,Y=19173.449222,Z=3789.753418)</code>
+								</hotfix>
+							</category>
+							<category name="Ammo Vending Machine">
+								<hotfix name="Name" level="TempleSlaughter_P">
+									<code profiles="">set TempleSlaughter_Combat.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_86 Location (X=6286.435547,Y=18911.99609,Z=4364.925781)</code>
+								</hotfix>
+							</category>
+						</category>
+					</category>
+				</category>
+				<category name="No Death Cost">
+					<category name="Code">
+						<hotfix name="Name" level="TempleSlaughter_P">
+							<code profiles="default">set GD_Balance_Inventory.Commerce.DeathPenaltyCost ValueFormula (bEnabled=True,Multiplier=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),Level=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.Currency.CreditsOnHand',InitializationDefinition=None,BaseValueScaleConstant=1.000000),Power=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),Offset=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))</code>
+						</hotfix>
+						<hotfix name="Name" level="Village_P">
+							<code profiles="default">set GD_Balance_Inventory.Commerce.DeathPenaltyCost ValueFormula (bEnabled=True,Multiplier=(BaseValueConstant=0.070000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),Level=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.Currency.CreditsOnHand',InitializationDefinition=None,BaseValueScaleConstant=1.000000),Power=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),Offset=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))</code>
+						</hotfix>
+					</category>
+				</category>
+			</category>
+			<category name="Natural Selection Annex">
+				<category name="Options">
+					<category name="Vending Machines">
+						<category name="Ammo Vendor">
+							<hotfix name="Ammo Vendor" level="CreatureSlaughter_P">
+								<code profiles="default">set CreatureSlaughter_P.TheWorld:PersistentLevel.PopulationOpportunityPoint_2 Location (X=-3934.751953,Y=-1034.613281,Z=-17.818832)</code>
+								<code profiles="default">set CreatureSlaughter_P.TheWorld:PersistentLevel.PopulationOpportunityPoint_2 Rotation (Pitch=0,Yaw=-20852,Roll=0)</code>
+							</hotfix>
+						</category>
+						<category name="Health Vendor">
+							<hotfix name="Health Vendor" level="CreatureSlaughter_P">
+								<code profiles="default">set CreatureSlaughter_P.TheWorld:PersistentLevel.PopulationOpportunityPoint_3 Location (X=-3720.869385,Y=-1123.773682,Z=0.426407)</code>
+								<code profiles="default">set CreatureSlaughter_P.TheWorld:PersistentLevel.PopulationOpportunityPoint_3 Rotation (Pitch=0,Yaw=-20572,Roll=0)</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Spawn / Respawn Points">
+						<category name="Respawn">
+							<hotfix name="Name" level="CreatureSlaughter_P">
+								<code profiles="default">set CreatureSlaughter_P.TheWorld:PersistentLevel.StationTeleporterExitPoint_16 Location (X=-8618.043945,Y=-2000.097046,Z=936.434265)</code>
+								<code profiles="default">set CreatureSlaughter_P.TheWorld:PersistentLevel.StationTeleporterExitPoint_16 Rotation (Pitch=61951,Yaw=65128,Roll=0)</code>
+								<code profiles="default">set CreatureSlaughter_P.TheWorld:PersistentLevel.StationTeleporterExitPoint_17 Location (X=-8618.133789,Y=-1823.811157,Z=936.434265)</code>
+								<code profiles="default">set CreatureSlaughter_P.TheWorld:PersistentLevel.StationTeleporterExitPoint_17 Rotation (Pitch=62031,Yaw=64608,Roll=0)</code>
+								<code profiles="default">set CreatureSlaughter_P.TheWorld:PersistentLevel.StationTeleporterExitPoint_18 Location (X=-8618.125977,Y=-1654.904663,Z=936.434265)</code>
+								<code profiles="default">set CreatureSlaughter_P.TheWorld:PersistentLevel.StationTeleporterExitPoint_18 Rotation (Pitch=62071,Yaw=64408,Roll=0)</code>
+								<code profiles="default">set CreatureSlaughter_P.TheWorld:PersistentLevel.StationTeleporterExitPoint_19 Location (X=-8618.069336,Y=-1463.420898,Z=936.434265)</code>
+								<code profiles="default">set CreatureSlaughter_P.TheWorld:PersistentLevel.StationTeleporterExitPoint_19 Rotation (Pitch=62171,Yaw=64208,Roll=0)</code>
+								<code profiles="default">set CreatureSlaughter_P.TheWorld:PersistentLevel.ResurrectTravelStation_1 bFastTravelEnabled False</code>
+							</hotfix>
+						</category>
+						<category name="Spawn">
+							<hotfix name="Name" level="CreatureSlaughter_P">
+								<code profiles="default">set CreatureSlaughter_P.TheWorld:PersistentLevel.StationTeleporterExitPoint_8 Location (X=-3971.274170,Y=-889.492615,Z=123.163200)</code>
+								<code profiles="default">set CreatureSlaughter_P.TheWorld:PersistentLevel.StationTeleporterExitPoint_8 Rotation (Pitch=64760,Yaw=61654,Roll=0)</code>
+								<code profiles="default">set CreatureSlaughter_P.TheWorld:PersistentLevel.StationTeleporterExitPoint_9 Location (X=-3971.274170,Y=-889.492615,Z=123.163200)</code>
+								<code profiles="default">set CreatureSlaughter_P.TheWorld:PersistentLevel.StationTeleporterExitPoint_9 Rotation (Pitch=64760,Yaw=61654,Roll=0)</code>
+								<code profiles="default">set CreatureSlaughter_P.TheWorld:PersistentLevel.StationTeleporterExitPoint_10 Location (X=-3971.274170,Y=-889.492615,Z=123.163200)</code>
+								<code profiles="default">set CreatureSlaughter_P.TheWorld:PersistentLevel.StationTeleporterExitPoint_10 Rotation (Pitch=64760,Yaw=61654,Roll=0)</code>
+								<code profiles="default">set CreatureSlaughter_P.TheWorld:PersistentLevel.StationTeleporterExitPoint_11 Location (X=-3971.274170,Y=-889.492615,Z=123.163200)</code>
+								<code profiles="default">set CreatureSlaughter_P.TheWorld:PersistentLevel.StationTeleporterExitPoint_11 Rotation (Pitch=64760,Yaw=61654,Roll=0)</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Captain Cabrera's Location">
+						<hotfix name="Name" level="CreatureSlaughter_P">
+							<code profiles="default">set CreatureSlaughter_P.TheWorld:PersistentLevel.WillowAIPawn_5 Location (X=-3639.250732,Y=-1015.547180,Z=114.354279)</code>
+							<code profiles="default">set CreatureSlaughter_P.TheWorld:PersistentLevel.WillowAIPawn_5 Rotation (Pitch=64853,Yaw=-35707,Roll=0)</code>
+						</hotfix>
+						<code profiles="default">set GD_Z2_CreatureSlaughter.M_CreatureSlaughter_5 bRepeatable True</code>
+					</category>
+				</category>
+				<category name="No Death Cost">
+					<category name="Code">
+						<hotfix name="Name" level="CreatureSlaughter_P">
+							<code profiles="default">set GD_Balance_Inventory.Commerce.DeathPenaltyCost ValueFormula (bEnabled=True,Multiplier=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),Level=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.Currency.CreditsOnHand',InitializationDefinition=None,BaseValueScaleConstant=1.000000),Power=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),Offset=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))</code>
+						</hotfix>
+						<hotfix name="Name" level="PandoraPark_P">
+							<code profiles="default">set GD_Balance_Inventory.Commerce.DeathPenaltyCost ValueFormula (bEnabled=True,Multiplier=(BaseValueConstant=0.070000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),Level=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.Currency.CreditsOnHand',InitializationDefinition=None,BaseValueScaleConstant=1.000000),Power=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),Offset=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))</code>
+						</hotfix>
+					</category>
+				</category>
+			</category>
+		</category>
+	</body>
+</BLCMM>
+
+#Commands:
+set GD_Z1_BanditSlaughter.M_BanditSlaughter5 bRepeatable True
+set GD_Z3_RobotSlaughter.M_RobotSlaughter_5 bRepeatable True
+set GD_Z2_CreatureSlaughter.M_CreatureSlaughter_5 bRepeatable True
+
+#Direct-Execute Warning:
+say WARNING: "Arena Overhauls" must be imported into BLCMM to run properly with UCP or other mods.
+
+#Hotfixes:
+set Transient.SparkServiceConfiguration_6 Keys ("SparkLevelPatchEntry-GBX_fixes1","SparkLevelPatchEntry-GBX_fixes2","SparkLevelPatchEntry-GBX_fixes3","SparkLevelPatchEntry-GBX_fixes4","SparkLevelPatchEntry-GBX_fixes5","SparkLevelPatchEntry-GBX_Fixes6","SparkLevelPatchEntry-GBX_Fixes7","SparkLevelPatchEntry-GBX_Fixes8","SparkLevelPatchEntry-GBX_Fixes9","SparkLevelPatchEntry-GBX_fixes10","SparkLevelPatchEntry-GBX_fixes11","SparkLevelPatchEntry-GBX_fixes12","SparkLevelPatchEntry-GBX_fixes13","SparkLevelPatchEntry-GBX_fixes14","SparkOnDemandPatchEntry-GBX_fixes15","SparkOnDemandPatchEntry-GBX_fixes16","SparkOnDemandPatchEntry-GBX_fixes17","SparkOnDemandPatchEntry-GBX_fixes18","SparkOnDemandPatchEntry-GBX_fixes19","SparkPatchEntry-GBX_fixes20","SparkPatchEntry-GBX_fixes21","SparkPatchEntry-GBX_fixes22","SparkPatchEntry-GBX_fixes23","SparkLevelPatchEntry-Weapon Vendor1","SparkLevelPatchEntry-Weapon Vendor2","SparkLevelPatchEntry-Health Vendor1","SparkLevelPatchEntry-Health Vendor2","SparkLevelPatchEntry-Ammo Vendor1","SparkLevelPatchEntry-Ammo Vendor2","SparkLevelPatchEntry-Name1","SparkLevelPatchEntry-Name2","SparkLevelPatchEntry-Name3","SparkLevelPatchEntry-Name4","SparkLevelPatchEntry-Name5","SparkLevelPatchEntry-Name6","SparkLevelPatchEntry-Name7","SparkLevelPatchEntry-Name8","SparkLevelPatchEntry-Name9","SparkLevelPatchEntry-Name10","SparkLevelPatchEntry-Name11","SparkLevelPatchEntry-Name12","SparkLevelPatchEntry-Name13","SparkLevelPatchEntry-Name14","SparkLevelPatchEntry-Name15","SparkLevelPatchEntry-Name16","SparkLevelPatchEntry-Name17","SparkLevelPatchEntry-Weapon Vendor3","SparkLevelPatchEntry-Weapon Vendor4","SparkLevelPatchEntry-Health Vendor3","SparkLevelPatchEntry-Health Vendor4","SparkLevelPatchEntry-Ammo Vendor3","SparkLevelPatchEntry-Ammo Vendor4","SparkLevelPatchEntry-Name18","SparkLevelPatchEntry-Name19","SparkLevelPatchEntry-Name20","SparkLevelPatchEntry-Name21","SparkLevelPatchEntry-Name22","SparkLevelPatchEntry-Name23","SparkLevelPatchEntry-Name24","SparkLevelPatchEntry-Name25","SparkLevelPatchEntry-Name26","SparkLevelPatchEntry-Name27","SparkLevelPatchEntry-Name28","SparkLevelPatchEntry-Name29","SparkLevelPatchEntry-Name30","SparkLevelPatchEntry-Name31","SparkLevelPatchEntry-Name32","SparkLevelPatchEntry-Name33","SparkLevelPatchEntry-Name34","SparkLevelPatchEntry-Barrel Mix1","SparkLevelPatchEntry-Name35","SparkLevelPatchEntry-Name36","SparkLevelPatchEntry-Name37","SparkLevelPatchEntry-Weapon Vendor5","SparkLevelPatchEntry-Weapon Vendor6","SparkLevelPatchEntry-Health Vendor5","SparkLevelPatchEntry-Health Vendor6","SparkLevelPatchEntry-Ammo Vendor5","SparkLevelPatchEntry-Ammo Vendor6","SparkLevelPatchEntry-Damage Shrine1","SparkLevelPatchEntry-Ammo Shrine1","SparkLevelPatchEntry-Ammo Shrine2","SparkLevelPatchEntry-Ammo Shrine3","SparkLevelPatchEntry-Ammo Shrine4","SparkLevelPatchEntry-Ammo Shrine5","SparkLevelPatchEntry-Ammo Shrine6","SparkLevelPatchEntry-Ammo Shrine7","SparkLevelPatchEntry-Name38","SparkLevelPatchEntry-Name39","SparkLevelPatchEntry-Name40","SparkLevelPatchEntry-Name41","SparkLevelPatchEntry-Name42","SparkLevelPatchEntry-Name43","SparkLevelPatchEntry-Name44","SparkLevelPatchEntry-Name45","SparkLevelPatchEntry-Name46","SparkLevelPatchEntry-Ammo Shrine8","SparkLevelPatchEntry-Ammo Shrine9","SparkLevelPatchEntry-Ammo Shrine10","SparkLevelPatchEntry-Ammo Shrine11","SparkLevelPatchEntry-Ammo Shrine12","SparkLevelPatchEntry-Ammo Shrine13","SparkLevelPatchEntry-Ammo Shrine14","SparkLevelPatchEntry-Ammo Shrine15","SparkLevelPatchEntry-Name47","SparkLevelPatchEntry-Name48","SparkLevelPatchEntry-Name49","SparkLevelPatchEntry-Name50","SparkLevelPatchEntry-Name51","SparkLevelPatchEntry-Name52","SparkLevelPatchEntry-Name53","SparkLevelPatchEntry-Ammo Vendor7","SparkLevelPatchEntry-Ammo Vendor8","SparkLevelPatchEntry-Health Vendor7","SparkLevelPatchEntry-Health Vendor8","SparkLevelPatchEntry-Name54","SparkLevelPatchEntry-Name55","SparkLevelPatchEntry-Name56","SparkLevelPatchEntry-Name57","SparkLevelPatchEntry-Name58","SparkLevelPatchEntry-Name59","SparkLevelPatchEntry-Name60","SparkLevelPatchEntry-Name61","SparkLevelPatchEntry-Name62","SparkLevelPatchEntry-Name63","SparkLevelPatchEntry-Name64","SparkLevelPatchEntry-Name65","SparkLevelPatchEntry-Name66","SparkLevelPatchEntry-Name67","SparkLevelPatchEntry-Name68","SparkLevelPatchEntry-Name69","SparkLevelPatchEntry-Name70","SparkLevelPatchEntry-Name71","SparkLevelPatchEntry-Name72","SparkLevelPatchEntry-Name73","SparkLevelPatchEntry-Name74")
+set Transient.SparkServiceConfiguration_6 Values (",GD_Balance.WeightingPlayerCount.BugmorphCocoon_PerPlayers_Phase1,ConditionalInitialization.ConditionalExpressionList[4].BaseValueIfTrue.BaseValueConstant,0.700000,.8",",GD_Balance.WeightingPlayerCount.BugmorphCocoon_PerPlayers_Phase2,ConditionalInitialization.ConditionalExpressionList[4].BaseValueIfTrue.BaseValueConstant,0.400000,.5",",GD_Balance.WeightingPlayerCount.BugmorphCocoon_PerPlayers_Phase3,ConditionalInitialization.ConditionalExpressionList[4].BaseValueIfTrue.BaseValueConstant,0.200000,.3",",GD_Balance.WeightingPlayerCount.BugmorphCocoon_PerPlayers_Phase4,ConditionalInitialization.ConditionalExpressionList[4].BaseValueIfTrue.BaseValueConstant,0.100000,.2",",GD_Balance.WeightingPlayerCount.BugmorphCocoon_PerPlayers_Phase5,ConditionalInitialization.ConditionalExpressionList[4].BaseValueIfTrue.BaseValueConstant,0.075000,.1","SouthpawFactory_P,GD_Population_Marauder.Balance.Unique.PawnBalance_Assassin1,DefaultItemPoolList[3].PoolProbability.BaseValueScaleConstant,0.250000,1","SouthpawFactory_P,GD_Population_Nomad.Balance.Unique.PawnBalance_Assassin2,DefaultItemPoolList[4].PoolProbability.BaseValueScaleConstant,0.250000,1","SouthpawFactory_P,GD_Population_Psycho.Balance.Unique.PawnBalance_Assassin3,DefaultItemPoolList[1].PoolProbability.BaseValueScaleConstant,0.250000,1","SouthpawFactory_P,GD_Population_Rat.Balance.Unique.PawnBalance_Assassin4,DefaultItemPoolList[3].PoolProbability.BaseValueScaleConstant,0.250000,1",",GD_Sage_Rare_Scaylion.Population.PawnBalance_Sage_Rare_Scaylion,DefaultItemPoolList[1].PoolProbability.BaseValueScaleConstant,1.000000,100",",GD_Sage_Rare_Drifter.Balance.PawnBalance_Sage_Rare_Drifter,DefaultItemPoolList[0].PoolProbability.BaseValueScaleConstant,1.000000,100",",GD_Sage_Rare_Rhino.Population.PawnBalance_Sage_Rare_Rhino,DefaultItemPoolList[1].PoolProbability.BaseValueScaleConstant,1.000000,100",",GD_Sage_Rare_Skag.Population.PawnBalance_Sage_Rare_Skag,DefaultItemPoolList[1].PoolProbability.BaseValueScaleConstant,1.000000,100",",GD_Sage_Rare_Spore.Population.PawnBalance_Sage_Rare_Spore,DefaultItemPoolList[0].PoolProbability.BaseValueScaleConstant,1.000000,100","GD_Assassin_Streaming,GD_Assassin_Skills.Sniping.Velocity,SkillEffectDefinitions[0].ModifierType,MT_PostAdd,MT_Scale","GD_Tulip_Mechro_Streaming,GD_Tulip_Mechromancer_Skills.LittleBigTrouble.WiresDontTalk,SkillEffectDefinitions,,((AttributeToModify=D_Attributes.DamageTypeModifers.InstigatedShockDamageModifier,bIncludeDuelingTargets=False,bIncludeSelfAsTarget=False,bOnlyEffectTargetsInRange=False,bExcludeNonPlayerCharacters=False,EffectTarget=TARGET_Self,TargetInstanceDataName=,TargetCriteria=CRITERIA_None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.030000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),GradeToStartApplyingEffect=1,PerGradeUpgradeInterval=1,PerGradeUpgrade=(BaseValueConstant=0.030000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),BonusUpgradeList=),(AttributeToModify=D_Attributes.DamageTypeModifers.InstigatedShockStatusDamageModifier,bIncludeDuelingTargets=False,bIncludeSelfAsTarget=False,bOnlyEffectTargetsInRange=False,bExcludeNonPlayerCharacters=False,EffectTarget=TARGET_Self,TargetInstanceDataName=,TargetCriteria=CRITERIA_None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.030000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),GradeToStartApplyingEffect=1,PerGradeUpgradeInterval=1,PerGradeUpgrade=(BaseValueConstant=0.030000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),BonusUpgradeList=))","GD_Siren_Streaming,GD_Siren_Skills.Misc.Init_BlightPhoenix_DamageCalc_Part2,ValueFormula.Level.InitializationDefinition,AttributeInitializationDefinition'GD_Balance_HealthAndDamage.HealthAndDamage.Init_PlayerMeleeDamage',AttributeInitializationDefinition'GD_Balance_HealthAndDamage.HealthAndDamage.Init_PlayerSkillDamage'","GD_Siren_Streaming,GD_Siren_Skills.Misc.Init_BlightPhoenix_DamageCalc_Part2,ValueFormula.Level.BaseValueScaleConstant,1.000000,3.5","GD_Assassin_Streaming,GD_Assassin_Skills.Misc.Att_DeathMark_BonusDamage,BaseValue.BaseValueConstant,0.200000,.8","GD_Itempools.Runnables.Pool_FourAssassins,BalancedItems[1].Probability.InitializationDefinition,None,GD_Balance.Weighting.Weight_1_Common","GD_Shields.Projectiles.Proj_LegendaryBoosterShield:BehaviorProviderDefinition_1.Behavior_Explode_140,BehaviorSequences[0].BehaviorData2[7].Behavior.StatusEffectDamage.BaseValueAttribute,None,D_Attributes.Projectile.ProjectileDamage","GD_Shields.Projectiles.Proj_LegendaryBoosterShield:BehaviorProviderDefinition_1.Behavior_Explode_140,BehaviorSequences[0].BehaviorData2[7].Behavior.StatusEffectDamage.BaseValueScaleConstant,1.000000,.25","GD_Shields.Projectiles.Proj_LegendaryBoosterShield:BehaviorProviderDefinition_1.Behavior_Explode_140,BehaviorSequences[0].BehaviorData2[7].Behavior.StatusEffectChance.BaseValueConstant,1.000000,20","BanditSlaughter_P,BanditSlaughter_Combat.TheWorld:PersistentLevel.PopulationOpportunityPoint_3,Location,,(X=17096.099609,Y=3477.697021,Z=11850.002930)","BanditSlaughter_P,BanditSlaughter_Combat.TheWorld:PersistentLevel.PopulationOpportunityPoint_3,Rotation,,(Pitch=-2900,Yaw=69616,Roll=16384)","BanditSlaughter_P,BanditSlaughter_P.TheWorld:PersistentLevel.PopulationOpportunityPoint_2,Location,,(X=17176.730469,Y=3302.711914,Z=11800.367188)","BanditSlaughter_P,BanditSlaughter_P.TheWorld:PersistentLevel.PopulationOpportunityPoint_2,Rotation,,(Pitch=-1300,Yaw=69756,Roll=8650)","BanditSlaughter_P,BanditSlaughter_P.TheWorld:PersistentLevel.PopulationOpportunityPoint_0,Location,,(X=17212.333984,Y=3195.003906,Z=11746.858398)","BanditSlaughter_P,BanditSlaughter_P.TheWorld:PersistentLevel.PopulationOpportunityPoint_0,Rotation,,(Pitch=-1300,Yaw=69756,Roll=0)","BanditSlaughter_P,BanditSlaughter_P.TheWorld:PersistentLevel.StationTeleporterExitPoint_4,Location,,(X=17570.394531,Y=3601.935059,Z=11859.449219)","BanditSlaughter_P,BanditSlaughter_P.TheWorld:PersistentLevel.StationTeleporterExitPoint_5,Location,,(X=17570.394531,Y=3601.935059,Z=11859.449219)","BanditSlaughter_P,BanditSlaughter_P.TheWorld:PersistentLevel.StationTeleporterExitPoint_6,Location,,(X=17570.394531,Y=3601.935059,Z=11859.449219)","BanditSlaughter_P,BanditSlaughter_P.TheWorld:PersistentLevel.StationTeleporterExitPoint_7,Location,,(X=17570.394531,Y=3601.935059,Z=11859.449219)","BanditSlaughter_P,BanditSlaughter_P.TheWorld:PersistentLevel.StationTeleporterExitPoint_4,Rotation,,(Pitch=64096,Yaw=-28116,Roll=0)","BanditSlaughter_P,BanditSlaughter_P.TheWorld:PersistentLevel.StationTeleporterExitPoint_5,Rotation,,(Pitch=64096,Yaw=-28116,Roll=0)","BanditSlaughter_P,BanditSlaughter_P.TheWorld:PersistentLevel.StationTeleporterExitPoint_6,Rotation,,(Pitch=64096,Yaw=-28116,Roll=0)","BanditSlaughter_P,BanditSlaughter_P.TheWorld:PersistentLevel.StationTeleporterExitPoint_7,Rotation,,(Pitch=64096,Yaw=-28116,Roll=0)","BanditSlaughter_P,BanditSlaughter_P.TheWorld:PersistentLevel.ResurrectTravelStation_0,bFastTravelEnabled,,False","BanditSlaughter_P,BanditSlaughter_P.TheWorld:PersistentLevel.StationTeleporterExitPoint_0,Location,,(X=18409.5332,Y=6812.925293,Z=13368.6377)","BanditSlaughter_P,BanditSlaughter_P.TheWorld:PersistentLevel.StationTeleporterExitPoint_1,Location,,(X=18560.72266,Y=6687.949707,Z=13368.23828)","BanditSlaughter_P,BanditSlaughter_P.TheWorld:PersistentLevel.StationTeleporterExitPoint_2,Location,,(X=18694.57227,Y=6554.904297,Z=13368.19922)","BanditSlaughter_P,BanditSlaughter_P.TheWorld:PersistentLevel.StationTeleporterExitPoint_3,Location,,(X=18873.19531,Y=6386.665527,Z=13368.03223)","BanditSlaughter_P,BanditSlaughter_Combat.TheWorld:PersistentLevel.WillowAIPawn_23,Location,,(X=17347.55859,Y=3495.696045,Z=11840.26172)","BanditSlaughter_P,BanditSlaughter_Combat.TheWorld:PersistentLevel.StaticMeshCollectionActor_41.StaticMeshActor_SMC_48,CollideActors,,False","BanditSlaughter_P,GD_Balance_Inventory.Commerce.DeathPenaltyCost,ValueFormula,,(bEnabled=True,Multiplier=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),Level=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.Currency.CreditsOnHand',InitializationDefinition=None,BaseValueScaleConstant=1.000000),Power=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),Offset=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))","Fridge_P,GD_Balance_Inventory.Commerce.DeathPenaltyCost,ValueFormula,,(bEnabled=True,Multiplier=(BaseValueConstant=0.070000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),Level=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.Currency.CreditsOnHand',InitializationDefinition=None,BaseValueScaleConstant=1.000000),Power=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),Offset=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))","RobotSlaughter_P,RobotSlaughter_Dynamic.TheWorld:PersistentLevel.PopulationOpportunityPoint_2,Location,,(X=-42211.289063,Y=-63825.339844,Z=3382.673340)","RobotSlaughter_P,RobotSlaughter_Dynamic.TheWorld:PersistentLevel.PopulationOpportunityPoint_2,Rotation,,(Pitch=0,Yaw=113207,Roll=0)","RobotSlaughter_P,RobotSlaughter_P.TheWorld:PersistentLevel.PopulationOpportunityPoint_2,Location,,(X=-41955.871094,Y=-63850.429688,Z=3382.551758)","RobotSlaughter_P,RobotSlaughter_P.TheWorld:PersistentLevel.PopulationOpportunityPoint_2,Rotation,,(Pitch=0,Yaw=48336,Roll=0)","RobotSlaughter_P,RobotSlaughter_P.TheWorld:PersistentLevel.PopulationOpportunityPoint_3,Location,,(X=-41720.898438,Y=-63873.640625,Z=3391.744873)","RobotSlaughter_P,RobotSlaughter_P.TheWorld:PersistentLevel.PopulationOpportunityPoint_3,Rotation,,(Pitch=0,Yaw=113916,Roll=0)","RobotSlaughter_P,RobotSlaughter_P.TheWorld:PersistentLevel.StationTeleporterExitPoint_4,Location,,(X=-42547.148438,Y=-62940.027344,Z=3499.615723)","RobotSlaughter_P,RobotSlaughter_P.TheWorld:PersistentLevel.StationTeleporterExitPoint_5,Location,,(X=-42547.148438,Y=-62940.027344,Z=3499.615723)","RobotSlaughter_P,RobotSlaughter_P.TheWorld:PersistentLevel.StationTeleporterExitPoint_6,Location,,(X=-42547.148438,Y=-62940.027344,Z=3499.615723)","RobotSlaughter_P,RobotSlaughter_P.TheWorld:PersistentLevel.StationTeleporterExitPoint_7,Location,,(X=-42547.148438,Y=-62940.027344,Z=3499.615723)","RobotSlaughter_P,RobotSlaughter_P.TheWorld:PersistentLevel.StationTeleporterExitPoint_4,Rotation,,(Pitch=65416,Yaw=16956,Roll=0)","RobotSlaughter_P,RobotSlaughter_P.TheWorld:PersistentLevel.StationTeleporterExitPoint_5,Rotation,,(Pitch=65416,Yaw=16956,Roll=0)","RobotSlaughter_P,RobotSlaughter_P.TheWorld:PersistentLevel.StationTeleporterExitPoint_6,Rotation,,(Pitch=65416,Yaw=16956,Roll=0)","RobotSlaughter_P,RobotSlaughter_P.TheWorld:PersistentLevel.StationTeleporterExitPoint_7,Rotation,,(Pitch=65416,Yaw=16956,Roll=0)","RobotSlaughter_P,RobotSlaughter_P.TheWorld:PersistentLevel.ResurrectTravelStation_0,bFastTravelEnabled,,False","RobotSlaughter_P,RobotSlaughter_P.TheWorld:PersistentLevel.StationTeleporterExitPoint_8,Location,,(X=-45487.621094,Y=-61275.832031,Z=5611.370117)","RobotSlaughter_P,RobotSlaughter_P.TheWorld:PersistentLevel.StationTeleporterExitPoint_9,Location,,(X=-45487.621094,Y=-61275.832031,Z=5611.370117)","RobotSlaughter_P,RobotSlaughter_P.TheWorld:PersistentLevel.StationTeleporterExitPoint_10,Location,,(X=-45487.621094,Y=-61275.832031,Z=5611.370117)","RobotSlaughter_P,RobotSlaughter_P.TheWorld:PersistentLevel.StationTeleporterExitPoint_11,Location,,(X=-45487.621094,Y=-61275.832031,Z=5611.370117)","RobotSlaughter_P,RobotSlaughter_P.TheWorld:PersistentLevel.StationTeleporterExitPoint_8,Rotation,,(Pitch=63531,Yaw=82316,Roll=0)","RobotSlaughter_P,RobotSlaughter_P.TheWorld:PersistentLevel.StationTeleporterExitPoint_9,Rotation,,(Pitch=63531,Yaw=82316,Roll=0)","RobotSlaughter_P,RobotSlaughter_P.TheWorld:PersistentLevel.StationTeleporterExitPoint_10,Rotation,,(Pitch=63531,Yaw=82316,Roll=0)","RobotSlaughter_P,RobotSlaughter_P.TheWorld:PersistentLevel.StationTeleporterExitPoint_11,Rotation,,(Pitch=63531,Yaw=82316,Roll=0)","RobotSlaughter_P,RobotSlaughter_P.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_5,Location,,(X=-43943.285156,Y=-61248.449219,Z=3575.793213)","RobotSlaughter_P,RobotSlaughter_P.TheWorld:PersistentLevel.WillowAIPawn_0,Location,,(X=-42572.27734,Y=-62585.80469,Z=3505.695801)","Ash_P,GD_Balance_Inventory.Commerce.DeathPenaltyCost,ValueFormula,,(bEnabled=True,Multiplier=(BaseValueConstant=0.070000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),Level=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.Currency.CreditsOnHand',InitializationDefinition=None,BaseValueScaleConstant=1.000000),Power=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),Offset=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))","RobotSlaughter_P,GD_Balance_Inventory.Commerce.DeathPenaltyCost,ValueFormula,,(bEnabled=True,Multiplier=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),Level=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.Currency.CreditsOnHand',InitializationDefinition=None,BaseValueScaleConstant=1.000000),Power=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),Offset=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))","TempleSlaughter_P,TempleSlaughter_P.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_86,Location,,(X=-1239.688599,Y=-1160.180054,Z=-21.75403595)","TempleSlaughter_P,TempleSlaughter_P.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_86,Rotation,,(Pitch=0,Yaw=-16384,Roll=0)","TempleSlaughter_P,TempleSlaughter_Combat.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_85,Location,,(X=-915.6399536,Y=-1161.278564,Z=-21.75403595)","TempleSlaughter_P,TempleSlaughter_Combat.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_85,Rotation,,(Pitch=0,Yaw=-16384,Roll=0)","TempleSlaughter_P,TempleSlaughter_Combat.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_86,Location,,(X=-1078.08374,Y=-1160.705688,Z=-21.75403595)","TempleSlaughter_P,TempleSlaughter_Combat.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_86,Rotation,,(Pitch=0,Yaw=-16384,Roll=0)","TempleSlaughter_P,TempleSlaughter_Combat.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_33,Location,,(X=-1071.436523,Y=-2545.893555,Z=89.75403595)","TempleSlaughter_P,TempleSlaughter_Combat.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_30,Location,,(X=-1166.857666,Y=-2545.746094,Z=89.75403595)","TempleSlaughter_P,TempleSlaughter_Combat.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_9,Location,,(X=-1269.394409,Y=-2545.195312,Z=89.75403595)","TempleSlaughter_P,TempleSlaughter_P.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_7,Location,,(X=-1361.932373,Y=-2545.765625,Z=89.75403595)","TempleSlaughter_P,TempleSlaughter_P.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_33,Location,,(X=-1450.549072,Y=-2545.957275,Z=89.75403595)","TempleSlaughter_P,TempleSlaughter_P.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_31,Location,,(X=-1538.998657,Y=-2545.823486,Z=89.75403595)","TempleSlaughter_P,TempleSlaughter_P.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_30,Location,,(X=-1637.541382,Y=-2545.956787,Z=89.75403595)","TempleSlaughter_P,TempleSlaughter_P.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_0,Location,,(X=-1752.693359,Y=-2545.957275,Z=89.75403595)","TempleSlaughter_P,TempleSlaughter_Combat.TheWorld:PersistentLevel.StationTeleporterExitPoint_3,Location,,(X=-118.239380,Y=-2083.597412,Z=89.754036)","TempleSlaughter_P,TempleSlaughter_Combat.TheWorld:PersistentLevel.StationTeleporterExitPoint_2,Location,,(X=-118.239380,Y=-2083.597412,Z=89.754036)","TempleSlaughter_P,TempleSlaughter_Combat.TheWorld:PersistentLevel.StationTeleporterExitPoint_1,Location,,(X=-118.239380,Y=-2083.597412,Z=89.754036)","TempleSlaughter_P,TempleSlaughter_Combat.TheWorld:PersistentLevel.StationTeleporterExitPoint_0,Location,,(X=-118.239380,Y=-2083.597412,Z=89.754036)","TempleSlaughter_P,TempleSlaughter_Combat.TheWorld:PersistentLevel.StationTeleporterExitPoint_3,Rotation,,(Pitch=65051,Yaw=-16108,Roll=0)","TempleSlaughter_P,TempleSlaughter_Combat.TheWorld:PersistentLevel.StationTeleporterExitPoint_2,Rotation,,(Pitch=65051,Yaw=-16108,Roll=0)","TempleSlaughter_P,TempleSlaughter_Combat.TheWorld:PersistentLevel.StationTeleporterExitPoint_1,Rotation,,(Pitch=65051,Yaw=-16108,Roll=0)","TempleSlaughter_P,TempleSlaughter_Combat.TheWorld:PersistentLevel.StationTeleporterExitPoint_0,Rotation,,(Pitch=65051,Yaw=-16108,Roll=0)","TempleSlaughter_P,TempleSlaughter_P.TheWorld:PersistentLevel.ResurrectTravelStation_0,bFastTravelEnabled,,False","TempleSlaughter_P,TempleSlaughter_P.TheWorld:PersistentLevel.StationTeleporterExitPoint_8,Location,,(X=-928.0109253,Y=5192.962402,Z=2688.290039)","TempleSlaughter_P,TempleSlaughter_P.TheWorld:PersistentLevel.StationTeleporterExitPoint_9,Location,,(X=-704.7446289,Y=5202.624512,Z=2688.290039)","TempleSlaughter_P,TempleSlaughter_P.TheWorld:PersistentLevel.StationTeleporterExitPoint_10,Location,,(X=-161.6116638,Y=5229.725098,Z=2688.290039)","TempleSlaughter_P,TempleSlaughter_P.TheWorld:PersistentLevel.StationTeleporterExitPoint_11,Location,,(X=59.69287872,Y=5232.01416,Z=2688.290039)","TempleSlaughter_P,TempleSlaughter_P.TheWorld:PersistentLevel.StationTeleporterExitPoint_8,Rotation,,(Pitch=0,Yaw=-16384,Roll=0)","TempleSlaughter_P,TempleSlaughter_P.TheWorld:PersistentLevel.StationTeleporterExitPoint_9,Rotation,,(Pitch=0,Yaw=-16384,Roll=0)","TempleSlaughter_P,TempleSlaughter_P.TheWorld:PersistentLevel.StationTeleporterExitPoint_10,Rotation,,(Pitch=0,Yaw=-16384,Roll=0)","TempleSlaughter_P,TempleSlaughter_P.TheWorld:PersistentLevel.StationTeleporterExitPoint_11,Rotation,,(Pitch=0,Yaw=-16384,Roll=0)","TempleSlaughter_P,TempleSlaughter_Combat.TheWorld:PersistentLevel.WillowAIPawn_0,Location,,(X=-120.049484,Y=-2445.306885,Z=89.754036)","TempleSlaughter_P,TempleSlaughter_P.TheWorld:PersistentLevel.StaticMeshCollectionActor_532.StaticMeshActor_SMC_9,CollideActors,,False","TempleSlaughter_P,TempleSlaughter_P.TheWorld:PersistentLevel.StaticMeshCollectionActor_532.StaticMeshActor_SMC_342,CollideActors,,False","TempleSlaughter_P,TempleSlaughter_P.TheWorld:PersistentLevel.StaticMeshCollectionActor_532.StaticMeshActor_SMC_345,CollideActors,,False","TempleSlaughter_P,TempleSlaughter_P.TheWorld:PersistentLevel.StaticMeshCollectionActor_532.StaticMeshActor_SMC_246,CollideActors,,False","TempleSlaughter_P,GD_Balance_Inventory.Commerce.DeathPenaltyCost,ValueFormula,,(bEnabled=True,Multiplier=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),Level=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.Currency.CreditsOnHand',InitializationDefinition=None,BaseValueScaleConstant=1.000000),Power=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),Offset=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))","Village_P,GD_Balance_Inventory.Commerce.DeathPenaltyCost,ValueFormula,,(bEnabled=True,Multiplier=(BaseValueConstant=0.070000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),Level=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.Currency.CreditsOnHand',InitializationDefinition=None,BaseValueScaleConstant=1.000000),Power=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),Offset=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))","CreatureSlaughter_P,CreatureSlaughter_P.TheWorld:PersistentLevel.PopulationOpportunityPoint_2,Location,,(X=-3934.751953,Y=-1034.613281,Z=-17.818832)","CreatureSlaughter_P,CreatureSlaughter_P.TheWorld:PersistentLevel.PopulationOpportunityPoint_2,Rotation,,(Pitch=0,Yaw=-20852,Roll=0)","CreatureSlaughter_P,CreatureSlaughter_P.TheWorld:PersistentLevel.PopulationOpportunityPoint_3,Location,,(X=-3720.869385,Y=-1123.773682,Z=0.426407)","CreatureSlaughter_P,CreatureSlaughter_P.TheWorld:PersistentLevel.PopulationOpportunityPoint_3,Rotation,,(Pitch=0,Yaw=-20572,Roll=0)","CreatureSlaughter_P,CreatureSlaughter_P.TheWorld:PersistentLevel.StationTeleporterExitPoint_16,Location,,(X=-8618.043945,Y=-2000.097046,Z=936.434265)","CreatureSlaughter_P,CreatureSlaughter_P.TheWorld:PersistentLevel.StationTeleporterExitPoint_16,Rotation,,(Pitch=61951,Yaw=65128,Roll=0)","CreatureSlaughter_P,CreatureSlaughter_P.TheWorld:PersistentLevel.StationTeleporterExitPoint_17,Location,,(X=-8618.133789,Y=-1823.811157,Z=936.434265)","CreatureSlaughter_P,CreatureSlaughter_P.TheWorld:PersistentLevel.StationTeleporterExitPoint_17,Rotation,,(Pitch=62031,Yaw=64608,Roll=0)","CreatureSlaughter_P,CreatureSlaughter_P.TheWorld:PersistentLevel.StationTeleporterExitPoint_18,Location,,(X=-8618.125977,Y=-1654.904663,Z=936.434265)","CreatureSlaughter_P,CreatureSlaughter_P.TheWorld:PersistentLevel.StationTeleporterExitPoint_18,Rotation,,(Pitch=62071,Yaw=64408,Roll=0)","CreatureSlaughter_P,CreatureSlaughter_P.TheWorld:PersistentLevel.StationTeleporterExitPoint_19,Location,,(X=-8618.069336,Y=-1463.420898,Z=936.434265)","CreatureSlaughter_P,CreatureSlaughter_P.TheWorld:PersistentLevel.StationTeleporterExitPoint_19,Rotation,,(Pitch=62171,Yaw=64208,Roll=0)","CreatureSlaughter_P,CreatureSlaughter_P.TheWorld:PersistentLevel.ResurrectTravelStation_1,bFastTravelEnabled,,False","CreatureSlaughter_P,CreatureSlaughter_P.TheWorld:PersistentLevel.StationTeleporterExitPoint_8,Location,,(X=-3971.274170,Y=-889.492615,Z=123.163200)","CreatureSlaughter_P,CreatureSlaughter_P.TheWorld:PersistentLevel.StationTeleporterExitPoint_8,Rotation,,(Pitch=64760,Yaw=61654,Roll=0)","CreatureSlaughter_P,CreatureSlaughter_P.TheWorld:PersistentLevel.StationTeleporterExitPoint_9,Location,,(X=-3971.274170,Y=-889.492615,Z=123.163200)","CreatureSlaughter_P,CreatureSlaughter_P.TheWorld:PersistentLevel.StationTeleporterExitPoint_9,Rotation,,(Pitch=64760,Yaw=61654,Roll=0)","CreatureSlaughter_P,CreatureSlaughter_P.TheWorld:PersistentLevel.StationTeleporterExitPoint_10,Location,,(X=-3971.274170,Y=-889.492615,Z=123.163200)","CreatureSlaughter_P,CreatureSlaughter_P.TheWorld:PersistentLevel.StationTeleporterExitPoint_10,Rotation,,(Pitch=64760,Yaw=61654,Roll=0)","CreatureSlaughter_P,CreatureSlaughter_P.TheWorld:PersistentLevel.StationTeleporterExitPoint_11,Location,,(X=-3971.274170,Y=-889.492615,Z=123.163200)","CreatureSlaughter_P,CreatureSlaughter_P.TheWorld:PersistentLevel.StationTeleporterExitPoint_11,Rotation,,(Pitch=64760,Yaw=61654,Roll=0)","CreatureSlaughter_P,CreatureSlaughter_P.TheWorld:PersistentLevel.WillowAIPawn_5,Location,,(X=-3639.250732,Y=-1015.547180,Z=114.354279)","CreatureSlaughter_P,CreatureSlaughter_P.TheWorld:PersistentLevel.WillowAIPawn_5,Rotation,,(Pitch=64853,Yaw=-35707,Roll=0)","CreatureSlaughter_P,GD_Balance_Inventory.Commerce.DeathPenaltyCost,ValueFormula,,(bEnabled=True,Multiplier=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),Level=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.Currency.CreditsOnHand',InitializationDefinition=None,BaseValueScaleConstant=1.000000),Power=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),Offset=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))","PandoraPark_P,GD_Balance_Inventory.Commerce.DeathPenaltyCost,ValueFormula,,(bEnabled=True,Multiplier=(BaseValueConstant=0.070000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),Level=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.Currency.CreditsOnHand',InitializationDefinition=None,BaseValueScaleConstant=1.000000),Power=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),Offset=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))")
+
