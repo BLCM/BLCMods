@@ -13,7 +13,7 @@ This Read Me is just here as a quick synopsis, for detailed informations, each M
 - ### Jack:
   - __*DigiJack* in FFYL:__ You can summon your *DigiJack* to fight alongside you while in *Fight For Your Live*.
 
-- ### Wilhem: 
+- ### Wilhelm: 
   - __*Wolf & Saint in FFYL:*__ You can summon *Wolf* (red combat drone) and/or *Saint* (white support drone) to fight alongside you while in *Fight For Your Live*.
 
 * * * * *
