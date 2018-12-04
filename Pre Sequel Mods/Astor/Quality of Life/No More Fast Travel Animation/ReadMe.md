@@ -1,6 +1,6 @@
 ## No More Fast Travel Animation
 
-You all the the *Fast Travel/Respawn Animation*... 
+You all know the *Fast Travel/Respawn Animation*... 
 
 ![Fast Travel - Respawn animation](https://imgur.com/iUpx84M.gif "Don't worry guys... even if my screen capture show French text, my mods are in English")
 
