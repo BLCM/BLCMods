@@ -1,7 +1,7 @@
 ## Compatibility & Troubleshooting
- 
- 
+  
 ### Compatibility:
+
 Before being released, all my mods are tested with:
 
 1. [TPS Patch 2.2](https://github.com/BLCM/BLCMods/tree/master/Pre%20Sequel%20Mods/Community%20Patch/Community%20Patch%202.2) by [Community Patch](https://github.com/BLCM/BLCMods/tree/master/Pre%20Sequel%20Mods/Community%20Patch) 
