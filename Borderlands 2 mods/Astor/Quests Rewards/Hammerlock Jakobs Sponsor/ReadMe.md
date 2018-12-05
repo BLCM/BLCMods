@@ -1,36 +1,28 @@
 ## Hammerlock Jakobs Sponsor
 
-### What do this mod?
+- ### Borderlands 2 - Main Game:	
+  - The 10 missions given by Hammerlock in the main game are rewarded with a Jakobs weapon/item
+    
+__Note:__ In the Mission Bad Hair Day (Southern Shelf) the Hammerlock reward is now a Blue Sniper Jakobs or a Blue Shotgun Torgue (if the fur is given to Clap-Trap).
 
-- The 10 missions given by Hammerlock in the main game will be rewarded with a Jakobs weapon/item
-  - In the Mission Bad Hair Day (Southern Shelf) the Hammerlock reward is now a Blue Sniper Jakobs or a Blue Shotgun Torgue (if the fur is given to Clap-Trap).
-  - The reward for the other missions given by Hammerlock are now rewarded by a Blue Jakobs weapon/item: 
-    - Handsome Jack Here! (Southern Shelf)
-    - Mighty Morphin' (Tundra Express)
-    - Perfectly Peaceful (Caustic Caverns)   
-    - Shielded Favors (Southern Shelf)
-    - Stalker of Stalkers (The Highlands)
-    - Symbiosis (Southern Shelf)	  
-    - The Name Game (Three Horns - Divide)	  
-    - This Town Ain't Big Enough (Southern Shelf)
-	
-- The single mission given by Hammerlock in the DLC Captain Scarlett and Her Pirate's Booty will be rewarded with a Purple Jakobs Shotgun
-  - Grendel (Hayter's Folly) 
+- ###Campaign DLC:	
+  - __DLC Campaign 1:__ The single mission given by Hammerlock in *Captain Scarlett and Her Pirate's Booty* is rewarded with a Jakobs weapon/item
+  - __DLC Campaign 3:__ The 4 missions given by Hammerlock in *Sir Hammerlock's Big Game Hunt* are rewarded with a Jakobs weapon/item
  	
 ![Jakobs pistol as reward for Handsome Jack Here! in Southern Shelf](https://imgur.com/F3u9ezy.jpg "Don't worry guys... even if my screen capture show French text, my mods are in English")
 	
-_**Note:** As for my Double Quest Reward "Redux", this Mod will give you the choice between 2 weapons/items instead of a single one, so it will double the chance to get a weapon/item with desired parts._	
+*__Note:__ As for my Double Quest Reward "Redux", this Mod will give you the choice between 2 weapons/items instead of a single one, so it will double the chance to get a weapon/item with desired accessory/parts.*	
 
 ### Changelog:
 
-v1.0.0, September 2, 2018
- - Initial public release
- 
-v1.0.1, September 5, 2018
-- Added Stalker of Stalkers in The Highlands... Ooops! I totally forget this mission... perhaps because the "Turn In" is done in a letter box in Overlook!
-
-v1.0.2, October 15, 2018
-- Added Jakobs Weapon reward for Grendel in Hayter's Folly (DLC Captain Scarlett and Her Pirate's Booty)
+- v1.0.0, September 2, 2018
+  - Initial public release
+- v1.0.1, September 5, 2018
+  - Added Stalker of Stalkers in The Highlands... Ooops! I totally forget this mission... perhaps because the "Turn In" is done in a letter box in Overlook!
+- v1.0.2, October 15, 2018
+  - Added Jakobs weapon reward for DLC Campaign 1 - *Captain Scarlett and Her Pirate's Booty*
+- v1.0.3, November 30, 2018
+  - Added Jakobs weapon reward for DLC Campaign 3 - *Sir Hammerlock's Big Game Hunt*
 
 ### Compatibility:
 
@@ -40,7 +32,7 @@ v1.0.2, October 15, 2018
   - [UCP Patch](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/Community%20Patch%20Team)   
   - [Better Quest](https://github.com/BLCM/BLCMods/blob/master/Borderlands%202%20mods/Hemaxhu/Quest%20Rewards/Better%20Quests) by [Hemaxu](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/Hemaxhu) .
 
-Note: To be sure to get this mod working correctly (as intended), don't forget to place it **AFTER** *UCP Patch* and *Better Quest*. (*Better Loot* & *Cold Dead Hands* can be placed anywhere regarding my mod).  
+Note: To be sure to get this mod working correctly (as intended), don't forget to place it __AFTER__ *UCP Patch* and *Better Quest*. (*Better Loot* & *Cold Dead Hands* can be placed anywhere regarding my mod).  
 
 ### Help! The Mod doesn't work !?!
 

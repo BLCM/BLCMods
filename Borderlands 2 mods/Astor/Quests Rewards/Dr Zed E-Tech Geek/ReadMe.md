@@ -1,17 +1,16 @@
 ## Dr Zed E-Tech Geek
 
-### What do this mod?
-
-- The 7 missions given by Dr Zed in the main game will be rewarded with a E-Tech weapon/item:
-  - Arms Dealing (The Highlands)
-  - Medical Mystery (Three Horns - Valley)
-  - Medical Mystery: X-Com-municate (Three Horns - Valley)
-  - Monster Mash: Part 1 (The Dust)
-  - Monster Mash: Part 2 (Arid Nexus - Boneyard)
-  - Monster Mash: Part 3 (Frostburn Canyon)  
-  - Neither Rain Nor Sleet Nor Skags (Three Horns - Valley)
+- ### Borderlands 2 - Main Game:
+  - The 7 missions given by Dr Zed in the main game will be rewarded with a E-Tech weapon/item:
+    - Arms Dealing (The Highlands)
+    - Medical Mystery (Three Horns - Valley)
+    - Medical Mystery: X-Com-municate (Three Horns - Valley)
+    - Monster Mash: Part 1 (The Dust)
+    - Monster Mash: Part 2 (Arid Nexus - Boneyard)
+    - Monster Mash: Part 3 (Frostburn Canyon)  
+    - Neither Rain Nor Sleet Nor Skags (Three Horns - Valley)
 	
-_**Note:** As for my *Double Quest Reward Redux*, this Mod will give you the choice between 2 weapons/items instead of a single one, so it will double the chance to get a weapon/item with desired parts._
+__Note:__ As for my *Double Quest Reward Redux*, this Mod will give you the choice between 2 weapons/items instead of a single one, so it will double the chance to get a weapon/item with desired parts.
 
 ### Changelog:
 

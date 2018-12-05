@@ -1,4 +1,4 @@
-## Wilhem's Wolf & Saint in FFYL
+## Wilhelm's Wolf & Saint in FFYL
 
 You can summon *Wolf* (red combat drone) and/or *Saint* (white support drone) to fight alongside you while in Fight For Your Live.
 

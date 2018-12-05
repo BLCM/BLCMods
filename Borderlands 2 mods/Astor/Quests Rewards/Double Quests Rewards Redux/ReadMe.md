@@ -1,13 +1,20 @@
 ## Double Quests Rewards Redux
 
-### What do this mod?
 
- - This Mod will give you the choice between 2 Unique weapons/items instead of a single one, so it will double the chance to get a weapon/item with desired element/parts/accessory... and reduce the time spent doing "farming".
- - Upgrade the customization skin/head rewards to a Blue weapon/item rewards for 9 missions, because once you (already) get them during the 1st playthrough, you don't care anymore
- - The following non-campign DLC Arena are include in the *Borderlands 2 - Main Game*:
+- ### Borderlands 2 - Main Game:
+  - This Mod will give you the choice between 2 Unique weapons/items instead of a single one, so it will double the chance to get a weapon/item with desired element/parts/accessory... and reduce the time spent doing "farming".
+  
+__Note:__ The following non-campaign DLC Arena are include in the *Borderlands 2 - Main Game*:
    - *Fink's Slaughterhouse* in *The Fridge*
    - *Creature Slaughterdome* in *Wildlife Exploitation Preserve*
    - *Hyperion Slaughter* in *Eridium Blight*
+
+- ###Campaign DLC: 	
+  - __DLC Campaign 1:__ Gives you the choice between 2 Unique weapons/items during some missions in *Captain Scarlett and Her Pirate's Booty*
+  - __DLC Campaign 3:__ Gives you the choice between 2 Unique weapons/items during some missions in *Sir Hammerlock's Big Game Hunt*.
+
+- ###Non-Campaign DLC:	
+  - __*Creature Slaughterdome*__ Gives you the choice between 2 Moxxi's weapons as reward for the 5 rounds in *Creature Slaughter* Arena in *Wildlife Exploitation Preserve* (instead of just the Creamer as reward for the 5th round)
 
 ![Octo as reward for Capture The Flag in Sawtooth Cauldron](https://i.imgur.com/ObFnzWS.png "Don't worry guys... even if my screen capture show French text, my mods are in English")
  
@@ -60,26 +67,21 @@ There's a few things which I'd considered adding to this mod, but were already w
 ### Changelog:
 
 - v1.0.0, September 1, 2018
-  - Added the choice between 2 Unique weapons/items instead of a single one for the main game.
   - Initial public release
-
 - v1.0.1, September 5, 2018
-  - Upgrade the customization skin/head rewards to a Blue weapon/item rewards for 8 missions.
-   
+  - Upgrade the customization skin/head rewards to a Blue weapon/item rewards for 8 missions.  
 - v1.0.2, September 10, 2018   
-  - In the mission *Uncle Teddy*, if you give the plans to Una, the reward will be the *Lady Fist*, and if you give the plans to Hyperion you will have the choice to toggle between 2 options: 2 *Bitch* (Legendary SMG Hyperion) or 2 *Commerce* (Unique Shock SMG Hyperion)
- 
+  - In the mission *Uncle Teddy*, if you give the plans to Una, the reward will be the *Lady Fist*, and if you give the plans to Hyperion you will have the choice to toggle between 2 options: 2 *Bitch* (Legendary SMG Hyperion) or 2 *Commerce* (Unique Shock SMG Hyperion) 
 - v1.0.3, September 21, 2018
   - "Move" the *Octo* (Unique shotgun Tediore) reward from *Slap Happy* (Hammerlock mission) in The Highlands: Outwash to *Capture The Flag in Sawtooth Cauldron*, on this way, my Mod Hammerlock Jakobs Sponsor can reward the *Tidal Wave* (Unique shotgun Jakobs) with the *Slap Happy* mission.
-
 - v1.0.4, September 30, 2018  
   - Added a 3rd option in *Uncle Teddy* mission in *Arid Nexus - Badlands*: the choice between 1 Unique SMG *Commerce* or 1 Legendary SMG *Bitch* you give the plans to Hyperion.
-
 - v1.0.5, October 25, 2018 
   - Added the choice between 2 Unique weapons/items instead of a single one for DLC 1 - *Captain Scarlett and Her Pirate's Booty*.
-
 - v1.0.6, Novembre 22, 2018
-  - Added Moxxi's weapons as reward for the 5 rounds in *Creature Slaughter* Arena in *Wildlife Exploitation Preserve* (instead of just the Creamer as reward for the 5th round) 
+  - Added Moxxi's weapons as reward for the 5 rounds in *Creature Slaughter* Arena in *Wildlife Exploitation Preserve* (instead of just the Creamer as reward for the 5th round)
+- v1.0.7, Novembre 30, 2018
+  - Added the choice between 2 Unique weapons/items instead of a single one for DLC Campaign 3 - *Sir Hammerlock's Big Game Hunt*  
 
 ### To do:
 

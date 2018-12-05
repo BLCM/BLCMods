@@ -1,15 +1,9 @@
-## No More Fast Travel Animation
+## Shorter Fast Travel Waiting Time
 
-You all know the *Fast Travel/Respawn Animation*... 
-
-![Fast Travel - Respawn animation](https://imgur.com/iUpx84M.gif "Don't worry guys... even if my screen capture show French text, my mods are in English")
-
-At first, it's actually makes respawning fun... like "Please die again!"... but after few playtroughs, this become a little bit boring!
-
-As the title suggests it, this Mod disables the useless (and annoying) *Fast Travel/Respawn Animation*!
+This mod is for you as it reduces the useless (and annoying) Fast Travel waiting time in co-op.
 
 ### Changelog:
-- v1.0.0, November 30, 2018
+- v1.0.0, December 5, 2018
   - Initial public release
  
 ### Compatibility:
