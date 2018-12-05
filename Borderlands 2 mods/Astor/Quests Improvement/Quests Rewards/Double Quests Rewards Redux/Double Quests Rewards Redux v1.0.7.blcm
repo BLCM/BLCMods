@@ -1,0 +1,834 @@
+<BLCMM v="1">
+#<!!!You opened a file saved with BLCMM in FilterTool. Please update to BLCMM to properly open this file!!!>
+	<head>
+		<type name="BL2" offline="false"/>
+		<profiles>
+			<profile name="default" current="true"/>
+		</profiles>
+	</head>
+	<body>
+		<category name="Double Quests Rewards Redux v1.0.7">
+			<comment>Mod author: Astor</comment>
+			<comment>Release Date: 5 December 2018</comment>
+			<comment>Version: 1.0.7 - See ReadMe for Changelog ;)</comment>
+			<comment>Summary: Reduce the time spent doing "farming" by doubling the chance to get a weapon/item with desired parts or accessory.</comment>
+			<category name="Full Description">
+				<comment>For those who were familiar with the previous Mod, the weapon/Item marqued with a (*) are upgrade </comment>
+				<comment>(like the Bitch/Commerce in Uncle Teddy), new rewards (like the SG Octo in Capture The Flag) </comment>
+				<comment>or restored Unique weapon/item "gone" in the original Koby's Mod. </comment>
+				<comment></comment>
+				<comment>Note: This mod was totally build from scratch, but was stongly inspired by the -unfortunately now defunct!- </comment>
+				<comment>"Double Quest Rewards" Mod created by Koby (among many others great Mods), hence the "redux" in its name. </comment>
+			</category>
+			<category name="Borderlands 2 - Main Game">
+				<category name="Arid Nexus - Badlands (open to change a option)">
+					<category name="Data Mining">
+						<comment>Blue Relic reward - Unchanged</comment>
+					</category>
+					<category name="Get to Know Jack">
+						<comment>Blue Sniper Rifle reward - Unchanged</comment>
+					</category>
+					<category name="Hungry Like The Skag (Stomper)">
+						<hotfix name="Reward2X" level="None">
+							<code profiles="default">set GD_Z3_HungryLikeSkag.M_HungryLikeSkag Reward.RewardItems (WeaponBalanceDefinition'GD_Weap_AssaultRifle.A_Weapons_Unique.AR_Jakobs_3_Stomper',WeaponBalanceDefinition'GD_Weap_AssaultRifle.A_Weapons_Unique.AR_Jakobs_3_Stomper')</code>
+						</hotfix>
+					</category>
+					<category name="Uncle Teddy (open to change a option)" MUT="true">
+						<comment>Pick the Commerce (Unique Hyperion SMG) option if you think that receive the Bitch (Legendary Hyperion SMG) </comment>
+						<comment>as reward from Hyperion for a very simple mission is a bit too much.</comment>
+						<category name="Uncle Teddy (Lady Fist* from Uma Baha or choice from 2 Bitch* from Hyperion)">
+							<hotfix name="Reward2X" level="None">
+								<code profiles="">set GD_Z3_UncleTeddy.M_UncleTeddy Reward.RewardItems (WeaponBalanceDefinition'GD_Weap_Pistol.A_Weapons_Unique.Pistol_Hyperion_3_LadyFist',WeaponBalanceDefinition'GD_Weap_Pistol.A_Weapons_Unique.Pistol_Hyperion_3_LadyFist')</code>
+								<code profiles="">set GD_Z3_UncleTeddy.M_UncleTeddy AlternativeReward.RewardItems (WeaponBalanceDefinition'GD_Weap_SMG.A_Weapons_Legendary.SMG_Hyperion_5_Bitch',WeaponBalanceDefinition'GD_Weap_SMG.A_Weapons_Legendary.SMG_Hyperion_5_Bitch')</code>
+							</hotfix>
+						</category>
+						<category name="Uncle Teddy (Lady Fist* from Uma Baha or choice from 2 Commerce* from Hyperion)">
+							<hotfix name="Reward2X" level="None">
+								<code profiles="default">set GD_Z3_UncleTeddy.M_UncleTeddy Reward.RewardItems (WeaponBalanceDefinition'GD_Weap_Pistol.A_Weapons_Unique.Pistol_Hyperion_3_LadyFist',WeaponBalanceDefinition'GD_Weap_Pistol.A_Weapons_Unique.Pistol_Hyperion_3_LadyFist')</code>
+								<code profiles="default">set GD_Z3_UncleTeddy.M_UncleTeddy AlternativeReward.RewardItems (WeaponBalanceDefinition'GD_Weap_SMG.A_Weapons_Unique.SMG_Hyperion_3_Commerce',WeaponBalanceDefinition'GD_Weap_SMG.A_Weapons_Unique.SMG_Hyperion_3_Commerce')</code>
+							</hotfix>
+						</category>
+						<category name="Uncle Teddy (Lady Fist* from Uma Baha or choice from 1 Commerce* and 1 Bitch* from Hyperion)">
+							<hotfix name="Reward2X" level="None">
+								<code profiles="">set GD_Z3_UncleTeddy.M_UncleTeddy Reward.RewardItems (WeaponBalanceDefinition'GD_Weap_Pistol.A_Weapons_Unique.Pistol_Hyperion_3_LadyFist',WeaponBalanceDefinition'GD_Weap_Pistol.A_Weapons_Unique.Pistol_Hyperion_3_LadyFist')</code>
+								<code profiles="">set GD_Z3_UncleTeddy.M_UncleTeddy AlternativeReward.RewardItems (WeaponBalanceDefinition'GD_Weap_SMG.A_Weapons_Unique.SMG_Hyperion_3_Commerce',WeaponBalanceDefinition'GD_Weap_SMG.A_Weapons_Legendary.SMG_Hyperion_5_Bitch')</code>
+							</hotfix>
+						</category>
+					</category>
+				</category>
+				<category name="Arid Nexus - Boneyard">
+					<category name="Monster Mash (Part 2)">
+						<comment>Green SMG or Grenade reward - Unchanged</comment>
+					</category>
+					<category name="This Just In">
+						<comment>No weapon/item reward - Unchanged</comment>
+					</category>
+				</category>
+				<category name="Bloodshot Ramparts">
+					<category name="Out of Body Experience (Shield 1340* or SG 1340*)">
+						<hotfix name="Reward2X" level="None">
+							<code profiles="default">set GD_Z3_OutOfBody.M_OutOfBody Reward.RewardItems (WeaponBalanceDefinition'GD_Weap_Shotgun.A_Weapons_Unique.SG_Hyperion_3_Shotgun1340',WeaponBalanceDefinition'GD_Weap_Shotgun.A_Weapons_Unique.SG_Hyperion_3_Shotgun1340')</code>
+							<code profiles="default">set GD_Z3_OutOfBody.M_OutOfBody AlternativeReward.RewardItems (InventoryBalanceDefinition'GD_Shields.A_Item.Shield_Absorption_1341',InventoryBalanceDefinition'GD_Shields.A_Item.Shield_Absorption_1341')</code>
+						</hotfix>
+					</category>
+				</category>
+				<category name="Bloodshot Stronghold">
+					<category name="A Dam Fine Rescue">
+						<comment>No weapon/item reward - Unchanged</comment>
+					</category>
+					<category name="Splinter Group (RockSalt*)">
+						<hotfix name="Reward2X" level="None">
+							<code profiles="default">set GD_Z2_SplinterGroup.M_SplinterGroup Reward.RewardItems (WeaponBalanceDefinition'GD_Weap_Shotgun.A_Weapons_Unique.SG_Bandit_3_RokSalt',WeaponBalanceDefinition'GD_Weap_Shotgun.A_Weapons_Unique.SG_Bandit_3_RokSalt')</code>
+						</hotfix>
+					</category>
+				</category>
+				<category name="Caustic Caverns">
+					<category name="Minecart Mischief">
+						<comment>No weapon/item reward - Unchanged</comment>
+					</category>
+					<category name="Perfectly Peaceful">
+						<comment>Eridium Reward</comment>
+					</category>
+					<category name="Safe and Sound (Heartbreaker or Lucrative Opportunity)">
+						<hotfix name="Reward2X" level="None">
+							<code profiles="default">set GD_Z2_SafeAndSound.M_SafeAndSound Reward.RewardItems (InventoryBalanceDefinition'GD_Artifacts.A_Item_Unique.A_Opportunity',InventoryBalanceDefinition'GD_Artifacts.A_Item_Unique.A_Opportunity')</code>
+							<code profiles="default">set GD_Z2_SafeAndSound.M_SafeAndSound AlternativeReward.RewardItems (WeaponBalanceDefinition'GD_Weap_Shotgun.A_Weapons_Unique.SG_Hyperion_3_HeartBreaker',WeaponBalanceDefinition'GD_Weap_Shotgun.A_Weapons_Unique.SG_Hyperion_3_HeartBreaker')</code>
+						</hotfix>
+					</category>
+					<category name="The Lost Treasure (Dahlminator*)">
+						<hotfix name="Reward2X" level="None">
+							<code profiles="default">set GD_Z3_LostTreasure.M_LostTreasure Reward.RewardItems (WeaponBalanceDefinition'GD_Weap_Pistol.A_Weapons_Unique.Pistol_Dahl_3_Dahlminator',WeaponBalanceDefinition'GD_Weap_Pistol.A_Weapons_Unique.Pistol_Dahl_3_Dahlminator')</code>
+						</hotfix>
+					</category>
+				</category>
+				<category name="Control Core Angel">
+					<category name="Where Angels Fear to Tread (Part 1)">
+						<comment>No weapon/item reward - Unchanged</comment>
+					</category>
+					<category name="Where Angels Fear to Tread (Part 2)">
+						<comment>No weapon/item reward - Stay Unchanged</comment>
+						<comment>You just come out from the Marcus's Store Room... and you </comment>
+						<comment>still need some extra valuable reward... Seriously! </comment>
+					</category>
+				</category>
+				<category name="Eridium Blight">
+					<category name="A Real Boy">
+						<category name="A Real Boy #1: Clothes Make the Man">
+							<comment>Green Sniper Rifle or Shield reward - Unchanged</comment>
+						</category>
+						<category name="A Real Boy #2: Face Time">
+							<comment>Green Shotgun or SMG reward - Unchanged</comment>
+						</category>
+						<category name="A Real Boy #3: Human (Fibber)">
+							<hotfix name="Reward2X" level="None">
+								<code profiles="default">set GD_Z2_ARealBoy.M_ARealBoy_Human Reward.RewardItems (WeaponBalanceDefinition'GD_Weap_Pistol.A_Weapons_Unique.Pistol_Hyperion_3_Fibber',WeaponBalanceDefinition'GD_Weap_Pistol.A_Weapons_Unique.Pistol_Hyperion_3_Fibber')</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Customer Service">
+						<comment>Blue SMG or Grenade reward - Unchanged</comment>
+					</category>
+					<category name="One Chasm (Non-Campaign DLC)">
+						<category name="Hyperion Slaughter">
+							<category name="Hyperion Slaughter: Round 1">
+								<comment>No weapon/item reward - Unchanged</comment>
+							</category>
+							<category name="Hyperion Slaughter: Round 2">
+								<comment>No weapon/item reward - Unchanged</comment>
+							</category>
+							<category name="Hyperion Slaughter: Round 3">
+								<comment>No weapon/item reward - Unchanged</comment>
+							</category>
+							<category name="Hyperion Slaughter: Round 4">
+								<comment>No weapon/item reward - Unchanged</comment>
+							</category>
+							<category name="Hyperion Slaughter: Round 5 (Chère-Amie)">
+								<hotfix name="Reward2X" level="None">
+									<code profiles="default">set GD_Z3_RobotSlaughter.M_RobotSlaughter_5 Reward.RewardItems (WeaponBalanceDefinition'GD_Weap_SniperRifles.A_Weapons_Unique.Sniper_Maliwan_3_ChereAmie',WeaponBalanceDefinition'GD_Weap_SniperRifles.A_Weapons_Unique.Sniper_Maliwan_3_ChereAmie')</code>
+								</hotfix>
+							</category>
+						</category>
+					</category>
+					<category name="Kill Yourself (Only Eridium reward if you jump)">
+						<comment>No weapon/item reward - Stay unchanged</comment>
+						<comment>Extra valuable reward are only for the brave and you fail!</comment>
+					</category>
+					<category name="To Grandmother's House We Go (Blue Pistol Dahl*)">
+						<comment>Pick this option if you need have the choice between 2 Blue Pistol Dahl.</comment>
+						<hotfix name="Reward2X" level="None">
+							<code profiles="default">set GD_Z3_GrandmotherHouse.M_GrandmotherHouse Reward.RewardItems (WeaponBalanceDefinition'GD_Weap_Pistol.A_Weapons.Pistol_Dahl_3_Rare',WeaponBalanceDefinition'GD_Weap_Pistol.A_Weapons.Pistol_Dahl_3_Rare')</code>
+						</hotfix>
+					</category>
+				</category>
+				<category name="Frostburn Canyon">
+					<category name="Cult Following">
+						<category name="Cult Following #1: Eternal Flame">
+							<comment>Green SMG or Shield - Unchanged</comment>
+						</category>
+						<category name="Cult Following #2: False Idols">
+							<comment>Green Assault Rifle or Grenade reward - Unchanged</comment>
+						</category>
+						<category name="Cult Following #3: Lighting the Match">
+							<comment>Green Sniper Rifle reward - Unchanged</comment>
+						</category>
+						<category name="Cult Following #4: The Enkindling (Flame of the Firehawk*)">
+							<hotfix name="Reward2X" level="None">
+								<code profiles="default">set GD_Z1_ChildrenOfPhoenix.M_TheEnkindling Reward.RewardItems (InventoryBalanceDefinition'GD_Shields.A_Item.Shield_Nova_Fire_Phoenix',InventoryBalanceDefinition'GD_Shields.A_Item.Shield_Nova_Fire_Phoenix')</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Hunting the Firehawk">
+						<comment>Class Mod reward - Unchanged</comment>
+					</category>
+					<category name="Monster Mash (Part 3)">
+						<comment>No weapon/item reward - Unchanged</comment>
+					</category>
+				</category>
+				<category name="Lynchwood">
+					<category name="3:10 to Kaboom">
+						<comment>Blue Grenade reward - Unchanged</comment>
+					</category>
+					<category name="Animal Rescue">
+						<category name="Animal Rescue #1: Medicine">
+							<comment>No weapon/item reward - Unchanged</comment>
+						</category>
+						<category name="Animal Rescue #2: Food">
+							<comment>No weapon/item reward - Unchanged</comment>
+						</category>
+						<category name="Animal Rescue #3: Shelter">
+							<comment>Blue Pistol or Shield reward - Unchanged</comment>
+						</category>
+					</category>
+					<category name="Breaking the Bank">
+						<comment>No weapon/item reward - Unchanged</comment>
+					</category>
+					<category name="Demon Hunter (Buffalo*)">
+						<hotfix name="Reward2X" level="None">
+							<code profiles="default">set GD_Z2_DemonHunter.M_DemonHunter Reward.RewardItems (WeaponBalanceDefinition'GD_Weap_SniperRifles.A_Weapons_Unique.Sniper_Jakobs_3_Buffalo',WeaponBalanceDefinition'GD_Weap_SniperRifles.A_Weapons_Unique.Sniper_Jakobs_3_Buffalo')</code>
+						</hotfix>
+					</category>
+					<category name="Showdown (Deputy's Badge)">
+						<hotfix name="Reward2X" level="None">
+							<code profiles="default">set GD_Z2_KillTheSheriff.M_KillTheSheriff Reward.RewardItems (InventoryBalanceDefinition'GD_Artifacts.A_Item_Unique.A_Deputy',InventoryBalanceDefinition'GD_Artifacts.A_Item_Unique.A_Deputy')</code>
+						</hotfix>
+					</category>
+					<category name="The Bane (Bane)">
+						<hotfix name="Reward2X" level="None">
+							<code profiles="default">set GD_Z3_Bane.M_Bane Reward.RewardItems (WeaponBalanceDefinition'GD_Weap_SMG.A_Weapons_Unique.SMG_Hyperion_3_Bane',WeaponBalanceDefinition'GD_Weap_SMG.A_Weapons_Unique.SMG_Hyperion_3_Bane')</code>
+						</hotfix>
+					</category>
+				</category>
+				<category name="Opportunity">
+					<category name="Hell Hath No Fury (Kiss Of Death*)">
+						<category name="I need have the choice between 2 grenades Kiss Of Death">
+							<hotfix name="Reward2X" level="None">
+								<code profiles="">set GD_Z2_HellHathNo.M_FloodingHyperionCity Reward.RewardItems (InventoryBalanceDefinition'GD_GrenadeMods.A_Item_Custom.GM_KissOfDeath',InventoryBalanceDefinition'GD_GrenadeMods.A_Item_Custom.GM_KissOfDeath')</code>
+							</hotfix>
+							<comment>Pick this option if you need have the choice between 2 Grenades Kiss Of Death.</comment>
+						</category>
+					</category>
+					<category name="Home Movie (Blue Stockpile Relic*)">
+						<comment>Pick this option if you need have the choice between 2 Blue Stockpile Relic.</comment>
+						<hotfix name="Reward2X" level="None">
+							<code profiles="default">set GD_Z2_HomeMovies.M_HomeMovies Reward.RewardItems (InventoryBalanceDefinition'GD_Artifacts.A_Item.A_Stockpile',InventoryBalanceDefinition'GD_Artifacts.A_Item.A_Stockpile')</code>
+						</hotfix>
+					</category>
+					<category name="Statuesque (Blue Shotgun Torgue*)">
+						<comment>Pick this option if you need have the choice between 2 Blue Shotgun Torgue.</comment>
+						<hotfix name="Reward2X" level="None">
+							<code profiles="default">set GD_Z2_HyperionStatue.M_MonumentsVandalism Reward.RewardItems (WeaponBalanceDefinition'GD_Weap_Shotgun.A_Weapons.SG_Torgue_3_Rare',WeaponBalanceDefinition'GD_Weap_Shotgun.A_Weapons.SG_Torgue_3_Rare')</code>
+						</hotfix>
+					</category>
+					<category name="The Man Who Would Be Jack">
+						<comment>No weapon/item reward - Unchanged</comment>
+					</category>
+					<category name="Written by the Victor (Only a hefty cash reward)">
+						<comment>Initially no weapon/item reward - Stay unchanged because the speaker from </comment>
+						<comment>the information kiosk say:</comment>
+						<comment>"Having suffered through the collection of lies that was the Hyperion Hall</comment>
+						<comment>was the Hyperion Hall of History, you earned a hefty cash reward."</comment>
+					</category>
+				</category>
+				<category name="Sanctuary">
+					<category name="Bearer of Bad News (Scorpio)">
+						<hotfix name="Reward2X" level="None">
+							<code profiles="default">set GD_Z1_BearerBadNews.M_BearerBadNews Reward.RewardItems (WeaponBalanceDefinition'GD_Weap_AssaultRifle.A_Weapons_Unique.AR_Dahl_3_Scorpio',WeaponBalanceDefinition'GD_Weap_AssaultRifle.A_Weapons_Unique.AR_Dahl_3_Scorpio')</code>
+						</hotfix>
+					</category>
+					<category name="BFFs (Order)">
+						<hotfix name="Reward2X" level="None">
+							<code profiles="default">set GD_Z1_BFFs.M_BFFs Reward.RewardItems (InventoryBalanceDefinition'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Roid_Order',InventoryBalanceDefinition'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Roid_Order')</code>
+						</hotfix>
+					</category>
+					<category name="Claptrap's Birthday Bash!">
+						<comment>Green Pistol or Assault Rifle reward - Unchanged</comment>
+					</category>
+					<category name="Claptrap's Secret Stash">
+						<comment>Access to the Secret Stash - Unchanged</comment>
+					</category>
+					<category name="Do No Harm">
+						<comment>No weapon/item reward - Unchanged</comment>
+					</category>
+					<category name="Plan B">
+						<comment>Blue Relic reward - Unchanged</comment>
+					</category>
+					<category name="Rising Action">
+						<comment>No weapon/item reward - Unchanged</comment>
+					</category>
+					<category name="Rock, Paper, Genocide">
+						<category name="Rock, Paper, Genocide #1: Fire Weapons!">
+							<comment>No weapon/item reward - Unchanged</comment>
+						</category>
+						<category name="Rock, Paper, Genocide #2: Shock Weapons!">
+							<comment>No weapon/item reward - Unchanged</comment>
+						</category>
+						<category name="Rock, Paper, Genocide #3: Corrosive Weapons!">
+							<comment>No weapon/item reward - Unchanged</comment>
+						</category>
+						<category name="Rock, Paper, Genocide #4: Slag Weapons!">
+							<comment>No weapon/item reward - Unchanged</comment>
+						</category>
+					</category>
+					<category name="Torture Chairs">
+						<comment>No weapon/item reward - Unchanged</comment>
+					</category>
+					<category name="Won't Get Fooled Again (Law)">
+						<hotfix name="Reward2X" level="None">
+							<code profiles="default">set GD_Z1_WontGetFooled.M_WontGetFooled Reward.RewardItems (WeaponBalanceDefinition'GD_Weap_Pistol.A_Weapons_Unique.Pistol_Jakobs_3_Law',WeaponBalanceDefinition'GD_Weap_Pistol.A_Weapons_Unique.Pistol_Jakobs_3_Law')</code>
+						</hotfix>
+					</category>
+				</category>
+				<category name="Sawtooth Cauldron">
+					<category name="Capture The Flag (Octo*)">
+						<comment>Initially the reward for this mission was the "Jakobs Family Skin", and now can be remplaced by the choice </comment>
+						<comment>between 2 Octo (Unique Tediore Shotgun).</comment>
+						<hotfix name="Reward2X" level="None">
+							<code profiles="default">set GD_Z3_CaptureTheFlags.M_CaptureTheFlags Reward.RewardItems (WeaponBalanceDefinition'GD_Weap_Shotgun.A_Weapons_Unique.SG_Tediore_3_Octo',WeaponBalanceDefinition'GD_Weap_Shotgun.A_Weapons_Unique.SG_Tediore_3_Octo')</code>
+						</hotfix>
+					</category>
+					<category name="The Chosen One (Evil Smasher)">
+						<hotfix name="Reward2X" level="None">
+							<code profiles="default">set GD_Z3_ChosenOne.M_ChosenOne Reward.RewardItems (WeaponBalanceDefinition'GD_Weap_AssaultRifle.A_Weapons_Unique.AR_Torgue_3_EvilSmasher',WeaponBalanceDefinition'GD_Weap_AssaultRifle.A_Weapons_Unique.AR_Torgue_3_EvilSmasher')</code>
+						</hotfix>
+					</category>
+					<category name="The Great Escape">
+						<comment>No weapon/item reward - Unchanged</comment>
+					</category>
+					<category name="Toil and Trouble">
+						<comment>No weapon/item reward - Unchanged</comment>
+					</category>
+				</category>
+				<category name="Southern Shelf">
+					<category name="Bad Hair Day (Shotgun Torgue or Sniper Jakobs)">
+						<comment>Shotgun Torgue (ClapTrap) or Sniper Rifle Jakobs (Hammerlock)</comment>
+					</category>
+					<category name="Best Minion Ever">
+						<comment>No weapon/item reward - Unchanged</comment>
+					</category>
+					<category name="Handsome Jack Here!">
+						<comment>Pistol Reward</comment>
+					</category>
+					<category name="Symbiosis (Head #6)">
+						<comment>Head #6 Reward</comment>
+					</category>
+					<category name="This Town Ain't Big Enough">
+						<comment>Assault Rifle Reward</comment>
+					</category>
+				</category>
+				<category name="Southpaw Steam & Power">
+					<category name="Assassinate the Assassins">
+						<comment>Green Pistol or SMG - Unchanged</comment>
+					</category>
+				</category>
+				<category name="Terramorphous Peak">
+					<category name="You. Will. Die. (Seriously.)">
+						<comment>Slayer of Terramorphous Class Mod - Unchanged</comment>
+					</category>
+				</category>
+				<category name="The Dust">
+					<category name="Clan War">
+						<category name="Clan War #1: Starting the War">
+							<comment>Green Assault Rifle or Pistol reward - Unchanged</comment>
+						</category>
+						<category name="Clan War #2: First Place">
+							<comment>Green Shotgun or Grenade reward - Unchanged</comment>
+						</category>
+						<category name="Clan War #5: Trailer Trashing (Veritas)">
+							<hotfix name="Reward2X" level="None">
+								<code profiles="default">set GD_Z2_TrailerTrashin.M_TrailerTrashin Reward.RewardItems (WeaponBalanceDefinition'GD_Weap_Pistol.A_Weapons_Unique.Pistol_Vladof_3_Veritas',WeaponBalanceDefinition'GD_Weap_Pistol.A_Weapons_Unique.Pistol_Vladof_3_Veritas')</code>
+							</hotfix>
+						</category>
+						<category name="Clan War #7: Zafords vs. Hodunks (Chulain* or Landscaper*)">
+							<hotfix name="Reward2X" level="None">
+								<code profiles="default">set GD_Z2_DuelingBanjos.M_DuelingBanjos Reward.RewardItems (WeaponBalanceDefinition'GD_Weap_SMG.A_Weapons_Unique.SMG_Maliwan_3_Chulainn',WeaponBalanceDefinition'GD_Weap_SMG.A_Weapons_Unique.SMG_Maliwan_3_Chulainn')</code>
+								<code profiles="default">set GD_Z2_DuelingBanjos.M_DuelingBanjos AlternativeReward.RewardItems (WeaponBalanceDefinition'GD_Weap_Shotgun.A_Weapons_Unique.SG_Torgue_3_Landscaper',WeaponBalanceDefinition'GD_Weap_Shotgun.A_Weapons_Unique.SG_Torgue_3_Landscaper')</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Positive Self Image (Afterburner*)">
+						<hotfix name="Reward2X" level="None">
+							<code profiles="default">set GD_Z3_PositiveSelfImage.M_PositiveSelfImage Reward.RewardItems (ItemPoolDefinition'GD_Artifacts.A_Item_Unique.Artifact_Afterburner',ItemPoolDefinition'GD_Artifacts.A_Item_Unique.Artifact_Afterburner')</code>
+						</hotfix>
+					</category>
+					<category name="Rakkaholics (Sloth or Rubi)">
+						<hotfix name="Reward2X" level="None">
+							<code profiles="default">set GD_Z2_Rakkaholics.M_Rakkaholics Reward.RewardItems (WeaponBalanceDefinition'GD_Weap_SniperRifles.A_Weapons_Unique.Sniper_Dahl_3_Sloth',WeaponBalanceDefinition'GD_Weap_SniperRifles.A_Weapons_Unique.Sniper_Dahl_3_Sloth')</code>
+							<code profiles="default">set GD_Z2_Rakkaholics.M_Rakkaholics AlternativeReward.RewardItems (WeaponBalanceDefinition'GD_Weap_Pistol.A_Weapons_Unique.Pistol_Maliwan_3_Rubi',WeaponBalanceDefinition'GD_Weap_Pistol.A_Weapons_Unique.Pistol_Maliwan_3_Rubi')</code>
+						</hotfix>
+					</category>
+					<category name="The Good, the Bad, and the Mordecai (Moxxi's Endowment)">
+						<hotfix name="Reward2X" level="None">
+							<code profiles="default">set GD_Z3_GoodBadMordecai.M_GoodBadMordecai Reward.RewardItems (InventoryBalanceDefinition'GD_Artifacts.A_Item_Unique.A_Endowment',InventoryBalanceDefinition'GD_Artifacts.A_Item_Unique.A_Endowment')</code>
+						</hotfix>
+					</category>
+					<category name="Too Close For Missiles">
+						<comment>Green Assault Rifle or SMG reward - Unchanged</comment>
+					</category>
+					<category name="Monster Mash (Part 1)">
+						<comment>Green Assault Riffle or Grenade reward - Unchanged</comment>
+					</category>
+				</category>
+				<category name="The Fridge">
+					<category name="Fink's Slaughterhouse (Non-Campaign DLC)">
+						<category name="Bandit Slaughter">
+							<category name="Bandit Slaughter: Round 1">
+								<comment>No weapon/item reward - Unchanged</comment>
+							</category>
+							<category name="Bandit Slaughter: Round 2">
+								<comment>No weapon/item reward - Unchanged</comment>
+							</category>
+							<category name="Bandit Slaughter: Round 3">
+								<comment>No weapon/item reward - Unchanged</comment>
+							</category>
+							<category name="Bandit Slaughter: Round 4">
+								<comment>No weapon/item reward - Unchanged</comment>
+							</category>
+							<category name="Bandit Slaughter: Round 5 (Hail)">
+								<hotfix name="Reward2X" level="None">
+									<code profiles="default">set GD_Z1_BanditSlaughter.M_BanditSlaughter5 Reward.RewardItems (WeaponBalanceDefinition'GD_Weap_AssaultRifle.A_Weapons_Unique.AR_Vladof_3_Hail',WeaponBalanceDefinition'GD_Weap_AssaultRifle.A_Weapons_Unique.AR_Vladof_3_Hail')</code>
+								</hotfix>
+							</category>
+						</category>
+					</category>
+					<category name="Note for Self-Person (Roaster*)">
+						<hotfix name="Reward2X" level="None">
+							<code profiles="default">set gd_z2_notetoself.M_NoteToSelf Reward.RewardItems (WeaponBalanceDefinition'GD_Weap_Launchers.A_Weapons_Unique.RL_Bandit_3_Roaster',WeaponBalanceDefinition'GD_Weap_Launchers.A_Weapons_Unique.RL_Bandit_3_Roaster')</code>
+						</hotfix>
+					</category>
+					<category name="Swallowed Whole">
+						<comment>No weapon/item reward - Unchanged</comment>
+					</category>
+					<category name="The Cold Shoulder (Blue Shotgun Tediore*)">
+						<comment>Pick this option if you need have the choice between 2 Blue Shotgun Tediore.</comment>
+						<hotfix name="Reward2X" level="None">
+							<code profiles="default">set GD_Z3_ColdShoulder.M_ColdShoulder Reward.RewardItems (WeaponBalanceDefinition'GD_Weap_Shotgun.A_Weapons.SG_Tediore_3_Rare',WeaponBalanceDefinition'GD_Weap_Shotgun.A_Weapons.SG_Tediore_3_Rare')</code>
+						</hotfix>
+					</category>
+				</category>
+				<category name="The Highlands">
+					<category name="Arms Dealing">
+						<comment>Green Shield or Blue Relic reward - Unchanged</comment>
+					</category>
+					<category name="Best Mother's Day Ever (LoveThumper)">
+						<hotfix name="Reward2X" level="None">
+							<code profiles="default">set GD_Z2_MothersDayGift.BalanceDefs.M_MothersDayGift Reward.RewardItems (InventoryBalanceDefinition'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Roid_04_LoveThumper',InventoryBalanceDefinition'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Roid_04_LoveThumper')</code>
+						</hotfix>
+					</category>
+					<category name="Bright Lights, Flying City">
+						<comment>Green Class Mod reward - Unchanged</comment>
+					</category>
+					<category name="Hidden Journals">
+						<comment>No weapon/item reward - Unchanged</comment>
+					</category>
+					<category name="Hyperion Contract 873 (Morningstar)">
+						<hotfix name="Reward2X" level="None">
+							<code profiles="default">set GD_Z3_HyperionContract873.M_HyperionContract873 Reward.RewardItems (WeaponBalanceDefinition'GD_Weap_SniperRifles.A_Weapons_Unique.Sniper_Hyperion_3_Morningstar',WeaponBalanceDefinition'GD_Weap_SniperRifles.A_Weapons_Unique.Sniper_Hyperion_3_Morningstar')</code>
+						</hotfix>
+					</category>
+					<category name="Stalker of Stalkers">
+						<comment>Bushwack (Jakobs Shotgun) or Dahl Booster Shield reward - Unchanged</comment>
+					</category>
+					<category name="The Overlooked">
+						<category name="The Overlooked #1: Medicine Man (Blue SMG Tediore*)">
+							<comment>Pick this option if you need have the choice between 2 Blue SMG Tediore (normally with Maliwan barrel if comes with element).</comment>
+							<hotfix name="Reward2X" level="None">
+								<code profiles="default">set GD_Z2_Overlooked.M_Overlooked Reward.RewardItems (WeaponBalanceDefinition'GD_Weap_SMG.A_Weapons.SMG_Tediore_3_Rare',WeaponBalanceDefinition'GD_Weap_SMG.A_Weapons.SMG_Tediore_3_Rare')</code>
+							</hotfix>
+						</category>
+						<category name="The Overlooked #2: Shields Up">
+							<comment>Green SMG or Shield reward - Unchanged</comment>
+						</category>
+						<category name="The Overlooked #3: This is Only a Test">
+							<comment>Green SMG or Shield reward - Unchanged</comment>
+						</category>
+					</category>
+				</category>
+				<category name="The Highlands - Outwash">
+					<category name="Slap-Happy (Octo)">
+						<comment>Initially the reward for this mission was the Octo (Unique Shotgun Tediore), and, because</comment>
+						<comment>it's a Hammerlock mission, it can be now be remplaced by the choice between 2 Tidal Wave (Unique Jakoks Shotgun)</comment>
+						<comment>in my Mod "Hammerlock Jakobs Sponsor".</comment>
+					</category>
+				</category>
+				<category name="The Holy Spirits">
+					<category name="Clan War">
+						<category name="Clan War #3: Reach the Dead Drop">
+							<comment>No weapon/item reward - Unchanged</comment>
+						</category>
+						<category name="Clan War #4: End of the Rainbow (Triquetra*)">
+							<hotfix name="Reward2X" level="None">
+								<code profiles="default">set GD_Z2_LuckysDirtyMoney.M_LuckysDirtyMoney Reward.RewardItems (WeaponBalanceDefinition'GD_Weap_Shotgun.A_Weapons_Unique.SG_Jakobs_3_Triquetra',WeaponBalanceDefinition'GD_Weap_Shotgun.A_Weapons_Unique.SG_Jakobs_3_Triquetra')</code>
+							</hotfix>
+						</category>
+						<category name="Clan War #6: Wakey Wakey (Aequitas)">
+							<hotfix name="Reward2X" level="None">
+								<code profiles="default">set GD_Z2_WakeyWakey.M_WakeyWakey Reward.RewardItems (WeaponBalanceDefinition'GD_Weap_Pistol.A_Weapons_Unique.Pistol_Vladof_3_Veritas',WeaponBalanceDefinition'GD_Weap_Pistol.A_Weapons_Unique.Pistol_Vladof_3_Veritas')</code>
+							</hotfix>
+						</category>
+					</category>
+				</category>
+				<category name="Thousand Cuts">
+					<category name="Defend Slab Tower">
+						<comment>No weapon/item reward - Unchanged</comment>
+					</category>
+					<category name="Poetic License">
+						<comment>Green Assault Rifle or Sniper Rifle reward - Unchanged</comment>
+					</category>
+					<category name="Rocko's Modern Strife">
+						<comment>No weapon/item reward - Unchanged</comment>
+					</category>
+					<category name="Shoot This Guy in the Face">
+						<comment>No weapon/item reward - Unchanged</comment>
+					</category>
+					<category name="The Once and Future Slab">
+						<comment>Blue Rocket launcher or Shield reward - Unchanged</comment>
+					</category>
+				</category>
+				<category name="Three Horns - Divide">
+					<category name="In Memoriam (Blue Pistol Bandit*)">
+						<comment>Pick this option if you need have the choice between 2 Pistol Bandit.</comment>
+						<hotfix name="Reward2X" level="None">
+							<code profiles="default">set GD_Z1_InMemoriam.M_InMemoriam Reward.RewardItems (WeaponBalanceDefinition'GD_Weap_Pistol.A_Weapons.Pistol_Bandit_3_Rare',WeaponBalanceDefinition'GD_Weap_Pistol.A_Weapons.Pistol_Bandit_3_Rare')</code>
+						</hotfix>
+					</category>
+					<category name="The Name Game">
+						<comment>Shotgun or shield Reward</comment>
+					</category>
+					<category name="The Road to Sanctuary">
+						<comment>Green Assault Rifle or Shotgun - Unchanged</comment>
+					</category>
+				</category>
+				<category name="Three Horns - Valley">
+					<category name="Medical Mystery">
+						<comment>E-Tech Pistol reward - Unchanged</comment>
+					</category>
+					<category name="Medical Mystery: X-Com-municate">
+						<comment>E-Tech Pistol reward - Unchanged</comment>
+					</category>
+					<category name="Neither Rain Nor Sleet Nor Skags">
+						<comment>Green Assault Rifle or Grenade reward - Unchanged</comment>
+					</category>
+					<category name="No Vacancy (Blue Pistol Maliwan*)">
+						<comment>Pick this option if you need have the choice between 2 Blue Pistol Maliwan.</comment>
+						<hotfix name="Reward2X" level="None">
+							<code profiles="default">set GD_Z1_NoVacancy.BalanceDefs.M_NoVacancy Reward.RewardItems (WeaponBalanceDefinition'GD_Weap_Pistol.A_Weapons.Pistol_Maliwan_3_Rare',WeaponBalanceDefinition'GD_Weap_Pistol.A_Weapons.Pistol_Maliwan_3_Rare')</code>
+						</hotfix>
+					</category>
+					<category name="The Ice Man Cometh">
+						<comment>Green Grenade or Shield reward - Unchanged</comment>
+					</category>
+				</category>
+				<category name="Tundra Express">
+					<category name="A Train to Catch">
+						<comment>No weapon/item reward - Unchanged</comment>
+					</category>
+					<category name="Mighty Morphin' ">
+						<comment>SMG Reward</comment>
+					</category>
+					<category name="Mine, All Mine">
+						<comment>No weapon/item reward - Unchanged</comment>
+					</category>
+					<category name="No Hard Feelings">
+						<comment>Green Shotgun or Assault Rifle reward - Unchanged</comment>
+					</category>
+					<category name="The Pretty Good Train Robbery (Fuster Cluck)">
+						<hotfix name="Reward2X" level="None">
+							<code profiles="default">set GD_Z1_TrainRobbery.M_TrainRobbery Reward.RewardItems (InventoryBalanceDefinition'GD_GrenadeMods.A_Item_Custom.GM_FusterCluck',InventoryBalanceDefinition'GD_GrenadeMods.A_Item_Custom.GM_FusterCluck')</code>
+						</hotfix>
+					</category>
+					<category name="You Are Cordially Invited">
+						<category name="You Are Cordially Invited #1: Party Prep">
+							<comment>No weapon/item reward - Unchanged</comment>
+						</category>
+						<category name="You Are Cordially Invited #2: RSVP">
+							<comment>No weapon/item reward - Unchanged</comment>
+						</category>
+						<category name="You Are Cordially Invited #3: Tea Party (Teapot)">
+							<hotfix name="Reward2X" level="None">
+								<code profiles="default">set GD_Z1_CordiallyInvited.M_CordiallyInvited03 Reward.RewardItems (WeaponBalanceDefinition'GD_Weap_Pistol.A_Weapons_Unique.Pistol_Dahl_3_Teapot',WeaponBalanceDefinition'GD_Weap_Pistol.A_Weapons_Unique.Pistol_Dahl_3_Teapot')</code>
+							</hotfix>
+						</category>
+					</category>
+				</category>
+				<category name="Vault of the Warrior">
+					<category name="The Talon of God">
+						<comment>No weapon/item reward for the final mission, but hey... the Warrior drop a lot of stuff!</comment>
+					</category>
+				</category>
+				<category name="Wildlife Exploitation Preserve">
+					<category name="Animal Rights (Trespasser)">
+						<hotfix name="Reward2X" level="None">
+							<code profiles="default">set GD_Z2_FreeWilly.M_FreeWilly Reward.RewardItems (WeaponBalanceDefinition'GD_Weap_SniperRifles.A_Weapons_Unique.Sniper_Jakobs_3_Tresspasser',WeaponBalanceDefinition'GD_Weap_SniperRifles.A_Weapons_Unique.Sniper_Jakobs_3_Tresspasser')</code>
+						</hotfix>
+					</category>
+					<category name="Creature Slaughterdome (Non-Campaign DLC)">
+						<category name="Creature Slaughter (Moxxi's Weapons)">
+							<category name="Creature Slaughter: Round 1 (Rubi or Crit*)">
+								<comment>Gives you the choice between 2 Moxxi's weapons: Pistol Rubi or SMG Crit</comment>
+								<comment>Initial Reward: No weapon/item reward</comment>
+								<hotfix name="Reward2X" level="None">
+									<code profiles="default">set GD_Z2_CreatureSlaughter.M_CreatureSlaughter_1 Reward.RewardItems (WeaponBalanceDefinition'GD_Weap_Pistol.A_Weapons_Unique.Pistol_Maliwan_3_Rubi',WeaponBalanceDefinition'GD_Aster_Weapons.SMGs.SMG_Maliwan_3_Crit')</code>
+								</hotfix>
+							</category>
+							<category name="Creature Slaughter: Round 2 (Heart Breaker or Slowhand*)">
+								<comment>Gives you the choice between 2 Moxxi's weapons: SG Heart Breaker or Slowhand</comment>
+								<comment>Initial Reward: No weapon/item reward</comment>
+								<hotfix name="Reward2X" level="None">
+									<code profiles="default">set GD_Z2_CreatureSlaughter.M_CreatureSlaughter_2 Reward.RewardItems (WeaponBalanceDefinition'GD_Weap_Shotgun.A_Weapons_Unique.SG_Hyperion_3_HeartBreaker',WeaponBalanceDefinition'GD_Iris_Weapons.Shotguns.SG_Hyperion_3_SlowHand')</code>
+								</hotfix>
+							</category>
+							<category name="Creature Slaughter: Round 3 (Good Touch or Bad Touch*)">
+								<comment>Gives you the choice between 2 Moxxi's weapons: SMG Good Touch or Bad Touch</comment>
+								<comment>Initial Reward: No weapon/item reward</comment>
+								<hotfix name="Reward2X" level="None">
+									<code profiles="default">set GD_Z2_CreatureSlaughter.M_CreatureSlaughter_3 Reward.RewardItems (WeaponBalanceDefinition'GD_Weap_SMG.A_Weapons_Unique.SMG_Maliwan_3_GoodTouch',WeaponBalanceDefinition'GD_Weap_SMG.A_Weapons_Unique.SMG_Maliwan_3_BadTouch')</code>
+								</hotfix>
+							</category>
+							<category name="Creature Slaughter: Round 4 (Kitten or Hail*)">
+								<comment>Gives you the choice between 2 Moxxi's weapons: AR Kitten or Hail</comment>
+								<comment>Initial Reward: No weapon/item reward</comment>
+								<hotfix name="Reward2X" level="None">
+									<code profiles="default">set GD_Z2_CreatureSlaughter.M_CreatureSlaughter_4 Reward.RewardItems (WeaponBalanceDefinition'GD_Iris_Weapons.AssaultRifles.AR_Vladof_3_Kitten',WeaponBalanceDefinition'GD_Weap_AssaultRifle.A_Weapons_Unique.AR_Vladof_3_Hail')</code>
+								</hotfix>
+							</category>
+							<category name="Creature Slaughter: Round 5 (Creamer or Chere-Amie*)">
+								<comment>Gives you the choice between 2 Moxxi's weapons: Creamer or Chere-Amie</comment>
+								<comment>Initial Reward: Creamer</comment>
+								<hotfix name="Reward2X" level="None">
+									<code profiles="default">set GD_Z2_CreatureSlaughter.M_CreatureSlaughter_5 Reward.RewardItems (WeaponBalanceDefinition'GD_Weap_Launchers.A_Weapons_Unique.RL_Torgue_3_Creamer',WeaponBalanceDefinition'GD_Weap_SniperRifles.A_Weapons_Unique.Sniper_Maliwan_3_ChereAmie')</code>
+								</hotfix>
+							</category>
+						</category>
+					</category>
+					<category name="Doctor's Orders">
+						<comment>Green Pistol or Blue Relic reward - Unchanged</comment>
+					</category>
+					<category name="Wildlife Preservation">
+						<comment>No weapon/item reward - Unchanged</comment>
+					</category>
+				</category>
+				<category name="Windshear Waste">
+					<category name="Blindsided">
+						<comment>(No weapon/item Reward) Unchanged</comment>
+					</category>
+					<category name="Cleaning Up the Berg">
+						<comment>Green Shield Reward Unchanged</comment>
+					</category>
+					<category name="My First Gun">
+						<comment>The "Crappy Starter Pistol" is already upgraded if you use the "Gearbox Guns Plus" by Aaron</comment>
+						<comment>You can get it here: https://bit.ly/2C9zMaz </comment>
+					</category>
+				</category>
+			</category>
+			<category name="DLC 1 - Captain Scarlett and Her Pirate's Booty">
+				<category name="Hayter's Folly">
+					<category name="Message In A Bottle #3 (Rapier)">
+						<hotfix name="Reward2X" level="None">
+							<code profiles="default">set GD_Orchid_SM_Message.M_Orchid_MessageInABottle3 Reward.RewardItems (WeaponBalanceDefinition'GD_Orchid_BossWeapons.AssaultRifle.AR_Vladof_3_Rapier',WeaponBalanceDefinition'GD_Orchid_BossWeapons.AssaultRifle.AR_Vladof_3_Rapier')</code>
+						</hotfix>
+					</category>
+					<category name="Grendel">
+						<comment>Hammerlock Mission</comment>
+					</category>
+					<category name="Two Easy Pieces">
+						<comment>No weapon/item reward - Unchanged</comment>
+					</category>
+				</category>
+				<category name="Magnys Lighthouse">
+					<category name="Freedom of Speech">
+						<comment>Green Grenade or Blue Rocket Launcher reward - Unchanged</comment>
+					</category>
+					<category name="Let There Be Light">
+						<comment>No weapon/item reward - Unchanged</comment>
+					</category>
+					<category name="Message In A Bottle #4 (Captain Blade's Midnight Star Grenade)">
+						<hotfix name="Reward2X" level="None">
+							<code profiles="default">set GD_Orchid_SM_Message.M_Orchid_MessageInABottle4 Reward.RewardItems (InventoryBalanceDefinition'GD_Orchid_GrenadeMods.A_Item_Custom.GrenadeMod_Blade',InventoryBalanceDefinition'GD_Orchid_GrenadeMods.A_Item_Custom.GrenadeMod_Blade')</code>
+						</hotfix>
+					</category>
+					<category name="X Marks The Spot">
+						<comment>Head Customization reward - Unchanged (Final Mission)</comment>
+						<comment>You just come out from the treasure room... and you still </comment>
+						<comment>need some extra valuable reward... Seriously! </comment>
+					</category>
+				</category>
+				<category name="Oasis">
+					<category name="A Warm Welcome">
+						<comment>Green Assault Rifle or Shield reward - Unchanged</comment>
+					</category>
+					<category name="Burying The Past">
+						<comment>No weapon/item reward - Unchanged</comment>
+					</category>
+					<category name="Fire Water">
+						<comment>No weapon/item reward - Unchanged</comment>
+					</category>
+					<category name="Giving Jocko A Leg Up">
+						<comment>Pistol reward - Unchanged</comment>
+					</category>
+					<category name="Man's Best Friend">
+						<comment>Assault Rifle reward - Unchanged</comment>
+					</category>
+					<category name="Message In A Bottle #1 (Orphan Maker)">
+						<hotfix name="Reward2X" level="None">
+							<code profiles="default">set GD_Orchid_SM_Message.M_Orchid_MessageInABottle1 Reward.RewardItems (WeaponBalanceDefinition'GD_Orchid_BossWeapons.Shotgun.SG_Jakobs_3_OrphanMaker',WeaponBalanceDefinition'GD_Orchid_BossWeapons.Shotgun.SG_Jakobs_3_OrphanMaker')</code>
+						</hotfix>
+					</category>
+					<category name="My Life For A Sandskiff">
+						<comment>No weapon/item reward - Unchanged</comment>
+					</category>
+					<category name="Wingman">
+						<comment>No weapon/item reward - Unchanged</comment>
+					</category>
+				</category>
+				<category name="The Rustyards">
+					<category name="Catch a Ride, and Also Tetanus">
+						<comment>No weapon/item reward - Unchanged</comment>
+					</category>
+					<category name="Crazy About You">
+						<comment>Grenade or Pistol reward - Unchanged</comment>
+					</category>
+					<category name="Just Desserts For Desert Deserters (Jolly Roger*)">
+						<hotfix name="Reward2X" level="None">
+							<code profiles="default">set GD_Orchid_SM_Deserters.M_Orchid_Deserters Reward.RewardItems (WeaponBalanceDefinition'GD_Orchid_BossWeapons.Shotgun.SG_Bandit_3_JollyRoger',WeaponBalanceDefinition'GD_Orchid_BossWeapons.Shotgun.SG_Bandit_3_JollyRoger')</code>
+						</hotfix>
+					</category>
+					<category name="Message In A Bottle #5 (Captain Blade's Otto Idol*)">
+						<hotfix name="Reward2X" level="None">
+							<code profiles="">set GD_Orchid_SM_Message.M_Orchid_MessageInABottle6 Reward.RewardItems (InventoryBalanceDefinition'GD_Orchid_Artifacts.A_Item_Unique.Artifact_Blade',InventoryBalanceDefinition'GD_Orchid_Artifacts.A_Item_Unique.Artifact_Blade')</code>
+						</hotfix>
+					</category>
+					<category name="The Hermit">
+						<comment>No weapon/item reward - Unchanged</comment>
+					</category>
+				</category>
+				<category name="Washburne Refinery">
+					<category name="Don't Copy That Floppy (Pimpernel*)">
+						<hotfix name="Reward2X" level="None">
+							<code profiles="default">set GD_Orchid_SM_FloppyCopy.M_Orchid_DontCopyThatFloppy Reward.RewardItems (WeaponBalanceDefinition'GD_Orchid_BossWeapons.SniperRifles.Sniper_Maliwan_3_Pimpernel',WeaponBalanceDefinition'GD_Orchid_BossWeapons.SniperRifles.Sniper_Maliwan_3_Pimpernel')</code>
+						</hotfix>
+					</category>
+					<category name="I Know It When I See It">
+						<comment>No weapon/item reward - Unchanged</comment>
+					</category>
+					<category name="Whoops (Sandhawk*)">
+						<hotfix name="Reward2X" level="None">
+							<code profiles="default">set GD_Orchid_Plot_Mission07.M_Orchid_PlotMission07 Reward.RewardItems (WeaponBalanceDefinition'GD_Orchid_BossWeapons.SMG.SMG_Dahl_3_SandHawk',WeaponBalanceDefinition'GD_Orchid_BossWeapons.SMG.SMG_Dahl_3_SandHawk')</code>
+						</hotfix>
+					</category>
+				</category>
+				<category name="Wurmwater">
+					<category name="A Study in Scarlett">
+						<comment>Shotgun reward - Unchanged</comment>
+					</category>
+					<category name="Declaration Against Independents">
+						<comment>No weapon/item reward - Unchanged</comment>
+					</category>
+					<category name="Faster than the Speed of Love">
+						<comment>No weapon/item reward - Unchanged</comment>
+					</category>
+					<category name="Message In A Bottle #2 (Captain Blade's Manly Man Shield)">
+						<hotfix name="Reward2X" level="None">
+							<code profiles="default">set GD_Orchid_SM_Message.M_Orchid_MessageInABottle2 Reward.RewardItems (InventoryBalanceDefinition'GD_Orchid_Shields.A_Item_Custom.S_BladeShield',InventoryBalanceDefinition'GD_Orchid_Shields.A_Item_Custom.S_BladeShield')</code>
+						</hotfix>
+					</category>
+					<category name="Smells Like Victory">
+						<comment>Shield or SMG reward - Unchanged</comment>
+					</category>
+					<category name="Ye Scurvy Dogs">
+						<comment>No weapon/item reward - Unchanged</comment>
+					</category>
+				</category>
+			</category>
+			<category name="DLC 3 - Sir Hammerlock's Big Game Hunt">
+				<category name="Ardorton Station">
+					<category name="A-Hunting We Will Go">
+						<comment>XP Reward (Hammerlock Mission)</comment>
+					</category>
+					<category name="Follow The Glow">
+						<comment>Money Reward</comment>
+					</category>
+					<category name="Urine, You're Out">
+						<comment>XP Reward</comment>
+					</category>
+				</category>
+				<category name="Candlerakk's Crag">
+					<category name="Big Feet">
+						<comment>XP Reward (Hammerlock Mission)</comment>
+					</category>
+					<category name="Now You See It">
+						<comment>Initial Reward: Rocket Launcher</comment>
+					</category>
+					<category name="Voracidous the Invincible">
+						<comment>XP Reward</comment>
+					</category>
+				</category>
+				<category name="Hunter's Grotto">
+					<category name="An Acquired Taste">
+						<comment>XP Reward (Hammerlock Mission)</comment>
+					</category>
+					<category name="Egg on Your Face">
+						<comment>Initial Reward: XP</comment>
+					</category>
+					<category name="I Like My Monsters Rare">
+						<comment>Skin Customization reward - Unchanged</comment>
+					</category>
+					<category name="Palling Around">
+						<comment>Initial Reward: Blue Shotgun (Hammerlock Mission)</comment>
+					</category>
+					<category name="Savage Lands">
+						<comment>Money reward - Unchanged</comment>
+					</category>
+					<category name="Still Just a Borok in a Cage">
+						<comment>XP Reward</comment>
+					</category>
+				</category>
+				<category name="H.S.S. Terminus">
+					<category name="The Fall of Nakayama">
+						<comment>Head Customization Reward</comment>
+					</category>
+				</category>
+				<category name="Scylla's Grove">
+					<category name="Ol' Pukey">
+						<comment>XP Reward</comment>
+					</category>
+					<category name="Professor Nakayama, I Presume?">
+						<comment>Assault Rifle or shield reward - Unchanged</comment>
+					</category>
+					<category name="The Rakk Dahlia Murder">
+						<comment>Relic Reward</comment>
+					</category>
+					<category name="Nakayama-rama">
+						<comment>XP Reward</comment>
+					</category>
+				</category>
+			</category>
+		</category>
+	</body>
+</BLCMM>
+
+#Commands:
+
+#Hotfixes:
+set Transient.SparkServiceConfiguration_6 Keys ("SparkLevelPatchEntry-GBX_fixes1","SparkLevelPatchEntry-GBX_fixes2","SparkLevelPatchEntry-GBX_fixes3","SparkLevelPatchEntry-GBX_fixes4","SparkLevelPatchEntry-GBX_fixes5","SparkLevelPatchEntry-GBX_Fixes6","SparkLevelPatchEntry-GBX_Fixes7","SparkLevelPatchEntry-GBX_Fixes8","SparkLevelPatchEntry-GBX_Fixes9","SparkLevelPatchEntry-GBX_fixes10","SparkLevelPatchEntry-GBX_fixes11","SparkLevelPatchEntry-GBX_fixes12","SparkLevelPatchEntry-GBX_fixes13","SparkLevelPatchEntry-GBX_fixes14","SparkOnDemandPatchEntry-GBX_fixes15","SparkOnDemandPatchEntry-GBX_fixes16","SparkOnDemandPatchEntry-GBX_fixes17","SparkOnDemandPatchEntry-GBX_fixes18","SparkOnDemandPatchEntry-GBX_fixes19","SparkPatchEntry-GBX_fixes20","SparkPatchEntry-GBX_fixes21","SparkPatchEntry-GBX_fixes22","SparkPatchEntry-GBX_fixes23","SparkLevelPatchEntry-Reward2X1","SparkLevelPatchEntry-Reward2X2","SparkLevelPatchEntry-Reward2X3","SparkLevelPatchEntry-Reward2X4","SparkLevelPatchEntry-Reward2X5","SparkLevelPatchEntry-Reward2X6","SparkLevelPatchEntry-Reward2X7","SparkLevelPatchEntry-Reward2X8","SparkLevelPatchEntry-Reward2X9","SparkLevelPatchEntry-Reward2X10","SparkLevelPatchEntry-Reward2X11","SparkLevelPatchEntry-Reward2X12","SparkLevelPatchEntry-Reward2X13","SparkLevelPatchEntry-Reward2X14","SparkLevelPatchEntry-Reward2X15","SparkLevelPatchEntry-Reward2X16","SparkLevelPatchEntry-Reward2X17","SparkLevelPatchEntry-Reward2X18","SparkLevelPatchEntry-Reward2X19","SparkLevelPatchEntry-Reward2X20","SparkLevelPatchEntry-Reward2X21","SparkLevelPatchEntry-Reward2X22","SparkLevelPatchEntry-Reward2X23","SparkLevelPatchEntry-Reward2X24","SparkLevelPatchEntry-Reward2X25","SparkLevelPatchEntry-Reward2X26","SparkLevelPatchEntry-Reward2X27","SparkLevelPatchEntry-Reward2X28","SparkLevelPatchEntry-Reward2X29","SparkLevelPatchEntry-Reward2X30","SparkLevelPatchEntry-Reward2X31","SparkLevelPatchEntry-Reward2X32","SparkLevelPatchEntry-Reward2X33","SparkLevelPatchEntry-Reward2X34","SparkLevelPatchEntry-Reward2X35","SparkLevelPatchEntry-Reward2X36","SparkLevelPatchEntry-Reward2X37","SparkLevelPatchEntry-Reward2X38","SparkLevelPatchEntry-Reward2X39","SparkLevelPatchEntry-Reward2X40","SparkLevelPatchEntry-Reward2X41","SparkLevelPatchEntry-Reward2X42","SparkLevelPatchEntry-Reward2X43","SparkLevelPatchEntry-Reward2X44","SparkLevelPatchEntry-Reward2X45","SparkLevelPatchEntry-Reward2X46","SparkLevelPatchEntry-Reward2X47","SparkLevelPatchEntry-Reward2X48","SparkLevelPatchEntry-Reward2X49","SparkLevelPatchEntry-Reward2X50","SparkLevelPatchEntry-Reward2X51","SparkLevelPatchEntry-Reward2X52","SparkLevelPatchEntry-Reward2X53","SparkLevelPatchEntry-Reward2X54","SparkLevelPatchEntry-Reward2X55")
+set Transient.SparkServiceConfiguration_6 Values (",GD_Balance.WeightingPlayerCount.BugmorphCocoon_PerPlayers_Phase1,ConditionalInitialization.ConditionalExpressionList[4].BaseValueIfTrue.BaseValueConstant,0.700000,.8",",GD_Balance.WeightingPlayerCount.BugmorphCocoon_PerPlayers_Phase2,ConditionalInitialization.ConditionalExpressionList[4].BaseValueIfTrue.BaseValueConstant,0.400000,.5",",GD_Balance.WeightingPlayerCount.BugmorphCocoon_PerPlayers_Phase3,ConditionalInitialization.ConditionalExpressionList[4].BaseValueIfTrue.BaseValueConstant,0.200000,.3",",GD_Balance.WeightingPlayerCount.BugmorphCocoon_PerPlayers_Phase4,ConditionalInitialization.ConditionalExpressionList[4].BaseValueIfTrue.BaseValueConstant,0.100000,.2",",GD_Balance.WeightingPlayerCount.BugmorphCocoon_PerPlayers_Phase5,ConditionalInitialization.ConditionalExpressionList[4].BaseValueIfTrue.BaseValueConstant,0.075000,.1","SouthpawFactory_P,GD_Population_Marauder.Balance.Unique.PawnBalance_Assassin1,DefaultItemPoolList[3].PoolProbability.BaseValueScaleConstant,0.250000,1","SouthpawFactory_P,GD_Population_Nomad.Balance.Unique.PawnBalance_Assassin2,DefaultItemPoolList[4].PoolProbability.BaseValueScaleConstant,0.250000,1","SouthpawFactory_P,GD_Population_Psycho.Balance.Unique.PawnBalance_Assassin3,DefaultItemPoolList[1].PoolProbability.BaseValueScaleConstant,0.250000,1","SouthpawFactory_P,GD_Population_Rat.Balance.Unique.PawnBalance_Assassin4,DefaultItemPoolList[3].PoolProbability.BaseValueScaleConstant,0.250000,1",",GD_Sage_Rare_Scaylion.Population.PawnBalance_Sage_Rare_Scaylion,DefaultItemPoolList[1].PoolProbability.BaseValueScaleConstant,1.000000,100",",GD_Sage_Rare_Drifter.Balance.PawnBalance_Sage_Rare_Drifter,DefaultItemPoolList[0].PoolProbability.BaseValueScaleConstant,1.000000,100",",GD_Sage_Rare_Rhino.Population.PawnBalance_Sage_Rare_Rhino,DefaultItemPoolList[1].PoolProbability.BaseValueScaleConstant,1.000000,100",",GD_Sage_Rare_Skag.Population.PawnBalance_Sage_Rare_Skag,DefaultItemPoolList[1].PoolProbability.BaseValueScaleConstant,1.000000,100",",GD_Sage_Rare_Spore.Population.PawnBalance_Sage_Rare_Spore,DefaultItemPoolList[0].PoolProbability.BaseValueScaleConstant,1.000000,100","GD_Assassin_Streaming,GD_Assassin_Skills.Sniping.Velocity,SkillEffectDefinitions[0].ModifierType,MT_PostAdd,MT_Scale","GD_Tulip_Mechro_Streaming,GD_Tulip_Mechromancer_Skills.LittleBigTrouble.WiresDontTalk,SkillEffectDefinitions,,((AttributeToModify=D_Attributes.DamageTypeModifers.InstigatedShockDamageModifier,bIncludeDuelingTargets=False,bIncludeSelfAsTarget=False,bOnlyEffectTargetsInRange=False,bExcludeNonPlayerCharacters=False,EffectTarget=TARGET_Self,TargetInstanceDataName=,TargetCriteria=CRITERIA_None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.030000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),GradeToStartApplyingEffect=1,PerGradeUpgradeInterval=1,PerGradeUpgrade=(BaseValueConstant=0.030000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),BonusUpgradeList=),(AttributeToModify=D_Attributes.DamageTypeModifers.InstigatedShockStatusDamageModifier,bIncludeDuelingTargets=False,bIncludeSelfAsTarget=False,bOnlyEffectTargetsInRange=False,bExcludeNonPlayerCharacters=False,EffectTarget=TARGET_Self,TargetInstanceDataName=,TargetCriteria=CRITERIA_None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.030000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),GradeToStartApplyingEffect=1,PerGradeUpgradeInterval=1,PerGradeUpgrade=(BaseValueConstant=0.030000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),BonusUpgradeList=))","GD_Siren_Streaming,GD_Siren_Skills.Misc.Init_BlightPhoenix_DamageCalc_Part2,ValueFormula.Level.InitializationDefinition,AttributeInitializationDefinition'GD_Balance_HealthAndDamage.HealthAndDamage.Init_PlayerMeleeDamage',AttributeInitializationDefinition'GD_Balance_HealthAndDamage.HealthAndDamage.Init_PlayerSkillDamage'","GD_Siren_Streaming,GD_Siren_Skills.Misc.Init_BlightPhoenix_DamageCalc_Part2,ValueFormula.Level.BaseValueScaleConstant,1.000000,3.5","GD_Assassin_Streaming,GD_Assassin_Skills.Misc.Att_DeathMark_BonusDamage,BaseValue.BaseValueConstant,0.200000,.8","GD_Itempools.Runnables.Pool_FourAssassins,BalancedItems[1].Probability.InitializationDefinition,None,GD_Balance.Weighting.Weight_1_Common","GD_Shields.Projectiles.Proj_LegendaryBoosterShield:BehaviorProviderDefinition_1.Behavior_Explode_140,BehaviorSequences[0].BehaviorData2[7].Behavior.StatusEffectDamage.BaseValueAttribute,None,D_Attributes.Projectile.ProjectileDamage","GD_Shields.Projectiles.Proj_LegendaryBoosterShield:BehaviorProviderDefinition_1.Behavior_Explode_140,BehaviorSequences[0].BehaviorData2[7].Behavior.StatusEffectDamage.BaseValueScaleConstant,1.000000,.25","GD_Shields.Projectiles.Proj_LegendaryBoosterShield:BehaviorProviderDefinition_1.Behavior_Explode_140,BehaviorSequences[0].BehaviorData2[7].Behavior.StatusEffectChance.BaseValueConstant,1.000000,20",",GD_Z3_HungryLikeSkag.M_HungryLikeSkag,Reward.RewardItems,,(WeaponBalanceDefinition'GD_Weap_AssaultRifle.A_Weapons_Unique.AR_Jakobs_3_Stomper',WeaponBalanceDefinition'GD_Weap_AssaultRifle.A_Weapons_Unique.AR_Jakobs_3_Stomper')",",GD_Z3_UncleTeddy.M_UncleTeddy,Reward.RewardItems,,(WeaponBalanceDefinition'GD_Weap_Pistol.A_Weapons_Unique.Pistol_Hyperion_3_LadyFist',WeaponBalanceDefinition'GD_Weap_Pistol.A_Weapons_Unique.Pistol_Hyperion_3_LadyFist')",",GD_Z3_UncleTeddy.M_UncleTeddy,AlternativeReward.RewardItems,,(WeaponBalanceDefinition'GD_Weap_SMG.A_Weapons_Unique.SMG_Hyperion_3_Commerce',WeaponBalanceDefinition'GD_Weap_SMG.A_Weapons_Unique.SMG_Hyperion_3_Commerce')",",GD_Z3_OutOfBody.M_OutOfBody,Reward.RewardItems,,(WeaponBalanceDefinition'GD_Weap_Shotgun.A_Weapons_Unique.SG_Hyperion_3_Shotgun1340',WeaponBalanceDefinition'GD_Weap_Shotgun.A_Weapons_Unique.SG_Hyperion_3_Shotgun1340')",",GD_Z3_OutOfBody.M_OutOfBody,AlternativeReward.RewardItems,,(InventoryBalanceDefinition'GD_Shields.A_Item.Shield_Absorption_1341',InventoryBalanceDefinition'GD_Shields.A_Item.Shield_Absorption_1341')",",GD_Z2_SplinterGroup.M_SplinterGroup,Reward.RewardItems,,(WeaponBalanceDefinition'GD_Weap_Shotgun.A_Weapons_Unique.SG_Bandit_3_RokSalt',WeaponBalanceDefinition'GD_Weap_Shotgun.A_Weapons_Unique.SG_Bandit_3_RokSalt')",",GD_Z2_SafeAndSound.M_SafeAndSound,Reward.RewardItems,,(InventoryBalanceDefinition'GD_Artifacts.A_Item_Unique.A_Opportunity',InventoryBalanceDefinition'GD_Artifacts.A_Item_Unique.A_Opportunity')",",GD_Z2_SafeAndSound.M_SafeAndSound,AlternativeReward.RewardItems,,(WeaponBalanceDefinition'GD_Weap_Shotgun.A_Weapons_Unique.SG_Hyperion_3_HeartBreaker',WeaponBalanceDefinition'GD_Weap_Shotgun.A_Weapons_Unique.SG_Hyperion_3_HeartBreaker')",",GD_Z3_LostTreasure.M_LostTreasure,Reward.RewardItems,,(WeaponBalanceDefinition'GD_Weap_Pistol.A_Weapons_Unique.Pistol_Dahl_3_Dahlminator',WeaponBalanceDefinition'GD_Weap_Pistol.A_Weapons_Unique.Pistol_Dahl_3_Dahlminator')",",GD_Z2_ARealBoy.M_ARealBoy_Human,Reward.RewardItems,,(WeaponBalanceDefinition'GD_Weap_Pistol.A_Weapons_Unique.Pistol_Hyperion_3_Fibber',WeaponBalanceDefinition'GD_Weap_Pistol.A_Weapons_Unique.Pistol_Hyperion_3_Fibber')",",GD_Z3_RobotSlaughter.M_RobotSlaughter_5,Reward.RewardItems,,(WeaponBalanceDefinition'GD_Weap_SniperRifles.A_Weapons_Unique.Sniper_Maliwan_3_ChereAmie',WeaponBalanceDefinition'GD_Weap_SniperRifles.A_Weapons_Unique.Sniper_Maliwan_3_ChereAmie')",",GD_Z3_GrandmotherHouse.M_GrandmotherHouse,Reward.RewardItems,,(WeaponBalanceDefinition'GD_Weap_Pistol.A_Weapons.Pistol_Dahl_3_Rare',WeaponBalanceDefinition'GD_Weap_Pistol.A_Weapons.Pistol_Dahl_3_Rare')",",GD_Z1_ChildrenOfPhoenix.M_TheEnkindling,Reward.RewardItems,,(InventoryBalanceDefinition'GD_Shields.A_Item.Shield_Nova_Fire_Phoenix',InventoryBalanceDefinition'GD_Shields.A_Item.Shield_Nova_Fire_Phoenix')",",GD_Z2_DemonHunter.M_DemonHunter,Reward.RewardItems,,(WeaponBalanceDefinition'GD_Weap_SniperRifles.A_Weapons_Unique.Sniper_Jakobs_3_Buffalo',WeaponBalanceDefinition'GD_Weap_SniperRifles.A_Weapons_Unique.Sniper_Jakobs_3_Buffalo')",",GD_Z2_KillTheSheriff.M_KillTheSheriff,Reward.RewardItems,,(InventoryBalanceDefinition'GD_Artifacts.A_Item_Unique.A_Deputy',InventoryBalanceDefinition'GD_Artifacts.A_Item_Unique.A_Deputy')",",GD_Z3_Bane.M_Bane,Reward.RewardItems,,(WeaponBalanceDefinition'GD_Weap_SMG.A_Weapons_Unique.SMG_Hyperion_3_Bane',WeaponBalanceDefinition'GD_Weap_SMG.A_Weapons_Unique.SMG_Hyperion_3_Bane')",",GD_Z2_HomeMovies.M_HomeMovies,Reward.RewardItems,,(InventoryBalanceDefinition'GD_Artifacts.A_Item.A_Stockpile',InventoryBalanceDefinition'GD_Artifacts.A_Item.A_Stockpile')",",GD_Z2_HyperionStatue.M_MonumentsVandalism,Reward.RewardItems,,(WeaponBalanceDefinition'GD_Weap_Shotgun.A_Weapons.SG_Torgue_3_Rare',WeaponBalanceDefinition'GD_Weap_Shotgun.A_Weapons.SG_Torgue_3_Rare')",",GD_Z1_BearerBadNews.M_BearerBadNews,Reward.RewardItems,,(WeaponBalanceDefinition'GD_Weap_AssaultRifle.A_Weapons_Unique.AR_Dahl_3_Scorpio',WeaponBalanceDefinition'GD_Weap_AssaultRifle.A_Weapons_Unique.AR_Dahl_3_Scorpio')",",GD_Z1_BFFs.M_BFFs,Reward.RewardItems,,(InventoryBalanceDefinition'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Roid_Order',InventoryBalanceDefinition'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Roid_Order')",",GD_Z1_WontGetFooled.M_WontGetFooled,Reward.RewardItems,,(WeaponBalanceDefinition'GD_Weap_Pistol.A_Weapons_Unique.Pistol_Jakobs_3_Law',WeaponBalanceDefinition'GD_Weap_Pistol.A_Weapons_Unique.Pistol_Jakobs_3_Law')",",GD_Z3_CaptureTheFlags.M_CaptureTheFlags,Reward.RewardItems,,(WeaponBalanceDefinition'GD_Weap_Shotgun.A_Weapons_Unique.SG_Tediore_3_Octo',WeaponBalanceDefinition'GD_Weap_Shotgun.A_Weapons_Unique.SG_Tediore_3_Octo')",",GD_Z3_ChosenOne.M_ChosenOne,Reward.RewardItems,,(WeaponBalanceDefinition'GD_Weap_AssaultRifle.A_Weapons_Unique.AR_Torgue_3_EvilSmasher',WeaponBalanceDefinition'GD_Weap_AssaultRifle.A_Weapons_Unique.AR_Torgue_3_EvilSmasher')",",GD_Z2_TrailerTrashin.M_TrailerTrashin,Reward.RewardItems,,(WeaponBalanceDefinition'GD_Weap_Pistol.A_Weapons_Unique.Pistol_Vladof_3_Veritas',WeaponBalanceDefinition'GD_Weap_Pistol.A_Weapons_Unique.Pistol_Vladof_3_Veritas')",",GD_Z2_DuelingBanjos.M_DuelingBanjos,Reward.RewardItems,,(WeaponBalanceDefinition'GD_Weap_SMG.A_Weapons_Unique.SMG_Maliwan_3_Chulainn',WeaponBalanceDefinition'GD_Weap_SMG.A_Weapons_Unique.SMG_Maliwan_3_Chulainn')",",GD_Z2_DuelingBanjos.M_DuelingBanjos,AlternativeReward.RewardItems,,(WeaponBalanceDefinition'GD_Weap_Shotgun.A_Weapons_Unique.SG_Torgue_3_Landscaper',WeaponBalanceDefinition'GD_Weap_Shotgun.A_Weapons_Unique.SG_Torgue_3_Landscaper')",",GD_Z3_PositiveSelfImage.M_PositiveSelfImage,Reward.RewardItems,,(ItemPoolDefinition'GD_Artifacts.A_Item_Unique.Artifact_Afterburner',ItemPoolDefinition'GD_Artifacts.A_Item_Unique.Artifact_Afterburner')",",GD_Z2_Rakkaholics.M_Rakkaholics,Reward.RewardItems,,(WeaponBalanceDefinition'GD_Weap_SniperRifles.A_Weapons_Unique.Sniper_Dahl_3_Sloth',WeaponBalanceDefinition'GD_Weap_SniperRifles.A_Weapons_Unique.Sniper_Dahl_3_Sloth')",",GD_Z2_Rakkaholics.M_Rakkaholics,AlternativeReward.RewardItems,,(WeaponBalanceDefinition'GD_Weap_Pistol.A_Weapons_Unique.Pistol_Maliwan_3_Rubi',WeaponBalanceDefinition'GD_Weap_Pistol.A_Weapons_Unique.Pistol_Maliwan_3_Rubi')",",GD_Z3_GoodBadMordecai.M_GoodBadMordecai,Reward.RewardItems,,(InventoryBalanceDefinition'GD_Artifacts.A_Item_Unique.A_Endowment',InventoryBalanceDefinition'GD_Artifacts.A_Item_Unique.A_Endowment')",",GD_Z1_BanditSlaughter.M_BanditSlaughter5,Reward.RewardItems,,(WeaponBalanceDefinition'GD_Weap_AssaultRifle.A_Weapons_Unique.AR_Vladof_3_Hail',WeaponBalanceDefinition'GD_Weap_AssaultRifle.A_Weapons_Unique.AR_Vladof_3_Hail')",",gd_z2_notetoself.M_NoteToSelf,Reward.RewardItems,,(WeaponBalanceDefinition'GD_Weap_Launchers.A_Weapons_Unique.RL_Bandit_3_Roaster',WeaponBalanceDefinition'GD_Weap_Launchers.A_Weapons_Unique.RL_Bandit_3_Roaster')",",GD_Z3_ColdShoulder.M_ColdShoulder,Reward.RewardItems,,(WeaponBalanceDefinition'GD_Weap_Shotgun.A_Weapons.SG_Tediore_3_Rare',WeaponBalanceDefinition'GD_Weap_Shotgun.A_Weapons.SG_Tediore_3_Rare')",",GD_Z2_MothersDayGift.BalanceDefs.M_MothersDayGift,Reward.RewardItems,,(InventoryBalanceDefinition'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Roid_04_LoveThumper',InventoryBalanceDefinition'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Roid_04_LoveThumper')",",GD_Z3_HyperionContract873.M_HyperionContract873,Reward.RewardItems,,(WeaponBalanceDefinition'GD_Weap_SniperRifles.A_Weapons_Unique.Sniper_Hyperion_3_Morningstar',WeaponBalanceDefinition'GD_Weap_SniperRifles.A_Weapons_Unique.Sniper_Hyperion_3_Morningstar')",",GD_Z2_Overlooked.M_Overlooked,Reward.RewardItems,,(WeaponBalanceDefinition'GD_Weap_SMG.A_Weapons.SMG_Tediore_3_Rare',WeaponBalanceDefinition'GD_Weap_SMG.A_Weapons.SMG_Tediore_3_Rare')",",GD_Z2_LuckysDirtyMoney.M_LuckysDirtyMoney,Reward.RewardItems,,(WeaponBalanceDefinition'GD_Weap_Shotgun.A_Weapons_Unique.SG_Jakobs_3_Triquetra',WeaponBalanceDefinition'GD_Weap_Shotgun.A_Weapons_Unique.SG_Jakobs_3_Triquetra')",",GD_Z2_WakeyWakey.M_WakeyWakey,Reward.RewardItems,,(WeaponBalanceDefinition'GD_Weap_Pistol.A_Weapons_Unique.Pistol_Vladof_3_Veritas',WeaponBalanceDefinition'GD_Weap_Pistol.A_Weapons_Unique.Pistol_Vladof_3_Veritas')",",GD_Z1_InMemoriam.M_InMemoriam,Reward.RewardItems,,(WeaponBalanceDefinition'GD_Weap_Pistol.A_Weapons.Pistol_Bandit_3_Rare',WeaponBalanceDefinition'GD_Weap_Pistol.A_Weapons.Pistol_Bandit_3_Rare')",",GD_Z1_NoVacancy.BalanceDefs.M_NoVacancy,Reward.RewardItems,,(WeaponBalanceDefinition'GD_Weap_Pistol.A_Weapons.Pistol_Maliwan_3_Rare',WeaponBalanceDefinition'GD_Weap_Pistol.A_Weapons.Pistol_Maliwan_3_Rare')",",GD_Z1_TrainRobbery.M_TrainRobbery,Reward.RewardItems,,(InventoryBalanceDefinition'GD_GrenadeMods.A_Item_Custom.GM_FusterCluck',InventoryBalanceDefinition'GD_GrenadeMods.A_Item_Custom.GM_FusterCluck')",",GD_Z1_CordiallyInvited.M_CordiallyInvited03,Reward.RewardItems,,(WeaponBalanceDefinition'GD_Weap_Pistol.A_Weapons_Unique.Pistol_Dahl_3_Teapot',WeaponBalanceDefinition'GD_Weap_Pistol.A_Weapons_Unique.Pistol_Dahl_3_Teapot')",",GD_Z2_FreeWilly.M_FreeWilly,Reward.RewardItems,,(WeaponBalanceDefinition'GD_Weap_SniperRifles.A_Weapons_Unique.Sniper_Jakobs_3_Tresspasser',WeaponBalanceDefinition'GD_Weap_SniperRifles.A_Weapons_Unique.Sniper_Jakobs_3_Tresspasser')",",GD_Z2_CreatureSlaughter.M_CreatureSlaughter_1,Reward.RewardItems,,(WeaponBalanceDefinition'GD_Weap_Pistol.A_Weapons_Unique.Pistol_Maliwan_3_Rubi',WeaponBalanceDefinition'GD_Aster_Weapons.SMGs.SMG_Maliwan_3_Crit')",",GD_Z2_CreatureSlaughter.M_CreatureSlaughter_2,Reward.RewardItems,,(WeaponBalanceDefinition'GD_Weap_Shotgun.A_Weapons_Unique.SG_Hyperion_3_HeartBreaker',WeaponBalanceDefinition'GD_Iris_Weapons.Shotguns.SG_Hyperion_3_SlowHand')",",GD_Z2_CreatureSlaughter.M_CreatureSlaughter_3,Reward.RewardItems,,(WeaponBalanceDefinition'GD_Weap_SMG.A_Weapons_Unique.SMG_Maliwan_3_GoodTouch',WeaponBalanceDefinition'GD_Weap_SMG.A_Weapons_Unique.SMG_Maliwan_3_BadTouch')",",GD_Z2_CreatureSlaughter.M_CreatureSlaughter_4,Reward.RewardItems,,(WeaponBalanceDefinition'GD_Iris_Weapons.AssaultRifles.AR_Vladof_3_Kitten',WeaponBalanceDefinition'GD_Weap_AssaultRifle.A_Weapons_Unique.AR_Vladof_3_Hail')",",GD_Z2_CreatureSlaughter.M_CreatureSlaughter_5,Reward.RewardItems,,(WeaponBalanceDefinition'GD_Weap_Launchers.A_Weapons_Unique.RL_Torgue_3_Creamer',WeaponBalanceDefinition'GD_Weap_SniperRifles.A_Weapons_Unique.Sniper_Maliwan_3_ChereAmie')",",GD_Orchid_SM_Message.M_Orchid_MessageInABottle3,Reward.RewardItems,,(WeaponBalanceDefinition'GD_Orchid_BossWeapons.AssaultRifle.AR_Vladof_3_Rapier',WeaponBalanceDefinition'GD_Orchid_BossWeapons.AssaultRifle.AR_Vladof_3_Rapier')",",GD_Orchid_SM_Message.M_Orchid_MessageInABottle4,Reward.RewardItems,,(InventoryBalanceDefinition'GD_Orchid_GrenadeMods.A_Item_Custom.GrenadeMod_Blade',InventoryBalanceDefinition'GD_Orchid_GrenadeMods.A_Item_Custom.GrenadeMod_Blade')",",GD_Orchid_SM_Message.M_Orchid_MessageInABottle1,Reward.RewardItems,,(WeaponBalanceDefinition'GD_Orchid_BossWeapons.Shotgun.SG_Jakobs_3_OrphanMaker',WeaponBalanceDefinition'GD_Orchid_BossWeapons.Shotgun.SG_Jakobs_3_OrphanMaker')",",GD_Orchid_SM_Deserters.M_Orchid_Deserters,Reward.RewardItems,,(WeaponBalanceDefinition'GD_Orchid_BossWeapons.Shotgun.SG_Bandit_3_JollyRoger',WeaponBalanceDefinition'GD_Orchid_BossWeapons.Shotgun.SG_Bandit_3_JollyRoger')",",GD_Orchid_SM_FloppyCopy.M_Orchid_DontCopyThatFloppy,Reward.RewardItems,,(WeaponBalanceDefinition'GD_Orchid_BossWeapons.SniperRifles.Sniper_Maliwan_3_Pimpernel',WeaponBalanceDefinition'GD_Orchid_BossWeapons.SniperRifles.Sniper_Maliwan_3_Pimpernel')",",GD_Orchid_Plot_Mission07.M_Orchid_PlotMission07,Reward.RewardItems,,(WeaponBalanceDefinition'GD_Orchid_BossWeapons.SMG.SMG_Dahl_3_SandHawk',WeaponBalanceDefinition'GD_Orchid_BossWeapons.SMG.SMG_Dahl_3_SandHawk')",",GD_Orchid_SM_Message.M_Orchid_MessageInABottle2,Reward.RewardItems,,(InventoryBalanceDefinition'GD_Orchid_Shields.A_Item_Custom.S_BladeShield',InventoryBalanceDefinition'GD_Orchid_Shields.A_Item_Custom.S_BladeShield')")
+

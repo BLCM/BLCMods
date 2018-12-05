@@ -10,42 +10,67 @@ This ReadMe is just here as a quick synopsis, for detailed informations, each Mo
 
 ## To Read First: 
 
-- **Compatibility & Troubleshooting:** A small reading information to clearly understand why a option or a fix in my mods don't work as intended, and how to simply fix it!
+- __Compatibility & Troubleshooting:__ A small reading information to clearly understand why a option or a fix in my mods don't work as intended, and how to simply fix it!
 
 * * * * *
 
-## Character Change 
-- **Gaige's Deathtrap in FFYL:** You can summon *Deathtrap* to fight alongside you while in *Fight For Your Live*.
+## Characters Improvement 
+
+- __Gaige's Deathtrap in FFYL:__ You can summon *Deathtrap* to fight alongside you while in *Fight For Your Live*.
 
 * * * * *
 
-## Custom Gear:
+## Custom Gears:
 
 - ### Plasma Caster:
 
-  - **Plasma Caster Dahl Prototype SX-1:** A Plasma Caster which fire GyroJet explosive bullet.
-  - **Plasma Caster Hyperion Finesse - Circuit Board Edition:** A Plasma Projectile which adapt his Elemental following the kind of impact: Incendiary on flesh / Shock on shield / Corrosive on armor.
-  - **Plasma Caster Hyperion Finesse - Moxxi Edition:** Same weapon as the Circuit Board Edition (above), but with usual Moxxi's bonus (Critical Hit & Lifesteal) added.
+  - __Plasma Caster Dahl *Prototype SX-1*:__ A Plasma Caster which fire GyroJet explosive bullet.
+  
+  - __Plasma Caster Hyperion *Finesse* - Circuit Board Edition:__ A Plasma Projectile which adapt his Elemental following the kind of impact: Incendiary on flesh / Shock on shield / Corrosive on armor.
+  
+  - __Plasma Caster Hyperion *Finesse* - Moxxi Edition:__ Same weapon as the Circuit Board Edition (above), but with usual Moxxi's bonus (Critical Hit & Lifesteal) added.
 
 - ### SMG:
 
-  - **SMG Dahl Discord Solver - Bloody Edition:** A submachine gun which fire GyroJet explosive bullet.
-  - **SMG Dahl Discord Solver - Moxxi Edition:** Same weapon as the Bloody Edition (above), but with usual Moxxi's bonus (Critical Hit & Lifesteal) added.
-  - **SMG Hyperion Splish Splash - Stendhal Edition:** A SMG which fire SEAMB (Smart Elemental Adaptive Maliwan Bullet) which adapt his Elemental following the kind of impact: Incendiary on flesh / Shock on shield / Corrosive on armor... and Explosive on anything else.
+  - __SMG Dahl *Discord Solver* - Bloody Edition:__ A submachine gun which fire GyroJet explosive bullet.
+  
+  - __SMG Dahl *Discord Solver* - Moxxi Edition:__ Same weapon as the Bloody Edition (above), but with usual Moxxi's bonus (Critical Hit & Lifesteal) added.
+  
+  - __SMG Hyperion *Splish Splash* - Stendhal Edition:__ A SMG which fire SEAMB (Smart Elemental Adaptive Maliwan Bullet) which adapt his Elemental following the kind of impact: Incendiary on flesh / Shock on shield / Corrosive on armor... and Explosive on anything else.
 
 * * * * *
+
+## Gears Improvement:
+
+- ### Shotgun Improvement:
  
-## Quest Reward: 
-- **Double Quest Reward Redux:** Gives you the choice to be rewarded between 2 Unique weapons/items instead of a single one.
-- **Dr Zed E-Tech Geek:** The missions given by Dr Zed give you the choice to be rewarded between 2 E-Tech weapons.
-- **Hammerlock Jakobs Sponsor:** The missions given by Hammerlock give you the choice to be rewarded between 2 Jakobs weapons.
+  - __*Landscaper* No Self-Damage:__ Made the grenades not inflicting self-damage to fixes the issue of where the delayed explosion would (repeatedly) put you down.
 
 * * * * *
 
-## Skin Pack: 
-- **Moxxi Signature Classic Collection:** Based on Creamer/Hear Breaker vanilla skin, now the Moxxi skins are uniformized to look like an actual manufacturer.
-- **Moxxi Signature Elegance Collection:** The red similar to the little _Cartier_ box, with golden part inserted into (silver) brushed steel, this is the French elegance. 
-- **Moxxi Signature Pinky Collection:** Based on Slow Hand / Good Touch vanilla skin, now the Moxxi skins are uniformized to look like an actual manufacturer.
+## Quests Improvement:
+
+- ### Quests Rewards: 
+
+  - __Double Quests Rewards Redux:__ Gives you the choice to be rewarded between 2 Unique weapons/items instead of a single one.
+
+  - __Dr Zed E-Tech Geek:__ The missions given by Dr Zed give you the choice to be rewarded between 2 E-Tech weapons.
+
+  - __Hammerlock Jakobs Sponsor:__ The missions given by Hammerlock give you the choice to be rewarded between 2 Jakobs weapons.
+
+- ### Less Tedious Quests:
+
+  - __Less Tedious Quests:__ As the title suggests it, makes a few timed **-failable!-** optional mission less tedious to complete.
+
+* * * * *
+
+## Skins Pack: 
+
+- __Moxxi Signature Classic Collection:__ Based on *Creamer/Hear Breaker* vanilla skin, now the Moxxi weapons skins are uniformized to look like an actual manufacturer.
+
+- __Moxxi Signature Elegance Collection:__ The red similar to the little _Cartier_ box, with golden part inserted into (silver) brushed steel, this is the French elegance. 
+
+- __Moxxi Signature Pinky Collection:__ Based on *Slow Hand/Good Touch* vanilla skin, now the Moxxi weapons skins are uniformized to look like an actual manufacturer.
 
 * * * * *
 
