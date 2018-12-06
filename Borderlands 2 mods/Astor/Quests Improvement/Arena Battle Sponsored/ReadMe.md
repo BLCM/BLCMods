@@ -30,50 +30,22 @@ Read this little [Compatibility & Troubleshooting](https://github.com/BLCM/BLCMo
 
 ### Other Recommended Mods:
 
-There's a few things which I'd considered adding to this mod, but were already well-covered in other mods, so instead I'll just mention them here:
-
-- [GearboxGunsPlus](https://github.com/BLCM/BLCMods/blob/eca477d33671be540718c816662cb08f4f0ad1cd/Borderlands%202%20mods/Aaron0000/Gear%20Packs/GearboxGunsPlus.txt) by [Aaron00000](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/Aaron0000): His Mod spruces up the Gearbox guns (include the ~~crappy pistol~~ Basic Repeater) and changes the rarity of the Gearbox weapons (Assault Rifle, SMG & Sniper Rifle) to Blue.
-
 - [Better Quest](https://github.com/BLCM/BLCMods/blob/master/Borderlands%202%20mods/Hemaxhu/Quest%20Rewards/Better%20Quests) by [Hemaxu](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/Hemaxhu): His Mod give you weapon/item rewards above 'Green' level up to a Legendary, and does NOT replaces unique rewards.
 
 ### Changelog:
 
-- v1.0.0, September 1, 2018
+- v1.0.0, Decembre 7, 2018
   - Initial public release
-- v1.0.1, September 5, 2018
-  - Upgrade the customization skin/head rewards to a Blue weapon/item rewards for 8 missions.  
-- v1.0.2, September 10, 2018   
-  - In the mission *Uncle Teddy*, if you give the plans to Una, the reward will be the *Lady Fist*, and if you give the plans to Hyperion you will have the choice to toggle between 2 options: 2 *Bitch* (Legendary SMG Hyperion) or 2 *Commerce* (Unique Shock SMG Hyperion) 
-- v1.0.3, September 21, 2018
-  - "Move" the *Octo* (Unique shotgun Tediore) reward from *Slap Happy* (Hammerlock mission) in The Highlands: Outwash to *Capture The Flag in Sawtooth Cauldron*, on this way, my Mod Hammerlock Jakobs Sponsor can reward the *Tidal Wave* (Unique shotgun Jakobs) with the *Slap Happy* mission.
-- v1.0.4, September 30, 2018  
-  - Added a 3rd option in *Uncle Teddy* mission in *Arid Nexus - Badlands*: the choice between 1 Unique SMG *Commerce* or 1 Legendary SMG *Bitch* you give the plans to Hyperion.
-- v1.0.5, October 25, 2018 
-  - Added the choice between 2 Unique weapons/items instead of a single one for DLC 1 - *Captain Scarlett and Her Pirate's Booty*.
-- v1.0.6, Novembre 22, 2018
-  - Added Maliwan weapons as reward for the rounds 1-4 and the choice between 2 Moxxi's weapons as reward for the 5th round in *Creature Slaughter* Arena in *Wildlife Exploitation Preserve* (instead of just the Creamer as reward for the 5th round)
-- v1.0.7, Novembre 30, 2018
-  - Added the choice between 2 Unique weapons/items instead of a single one for DLC Campaign 3 - *Sir Hammerlock's Big Game Hunt*
-- v1.0.8, Decembre 7, 2018
-  - Added Bandit weapons as reward for the rounds 1-4 and the choice between 2 Moxxi's weapons for the round 5th in *Fink's Slaughterhouse* Arena in *The Fridge* (instead of just the Hail as reward for the 5th round)  
-
+ 
 ### To do:
 
-- [x] Bring back some Unique weapon/Item as mission rewards for the main game.
-- [x] Upgrade the customization skin/head rewards to weapon/item rewards for the main game.
-- [x] Bring back some Unique weapon/Item as mission rewards for the DLCs.
-- [ ] Upgrade the customization skin/head rewards to weapon/item rewards for the DLCs.
 - [ ] Make (again) a new playthrough to be sure that all the Unique weapon/item rewards are given correctly.
 - [ ] Clean the code and remove all my ~~shitty~~ notes.
 - [ ] Erase this to-do list.
 
-So, yes... in the future, more addition will be done in this Mod (who by the way is my first one), but only when I will find some free time, so stay tuned :wink:
-
 ### Credits & Thanks:
 
 I find a lot of useful informations on the Resource page from the [Wiki](https://github.com/BLCM/BLCMods/wiki) of course, but also all the Mission Names and Mission Objectives on the [Resources page](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/FromDarkHell/Resources) from [FromDarkHell](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/FromDarkHell), so thanks for your work, @FromDarkHell 
-
-Note: This mod was totally build from scratch, but was (strongly) inspired by the -unfortunately now defunct!- "Double Quest Rewards" Mod initially created by Koby (among many others great Mods), hence the "Redux" in its name.
 
 ### Disclaimer
 
