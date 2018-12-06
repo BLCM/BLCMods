@@ -1,24 +1,6 @@
 ## Double Quests Rewards Redux
 
-
-- ### Borderlands 2 - Main Game:
-  - This Mod will give you the choice between 2 Unique weapons/items instead of a single one, so it will double the chance to get a weapon/item with desired element/parts/accessory... and reduce the time spent doing "farming".
-  
-__Note:__ The following non-campaign DLC Arena are include in the *Borderlands 2 - Main Game*:
-   - *Fink's Slaughterhouse* in *The Fridge*
-   - *Creature Slaughterdome* in *Wildlife Exploitation Preserve*
-   - *Hyperion Slaughter* in *Eridium Blight*
-
-- ###Campaign DLC: 	
-  - __DLC Campaign 1:__ Gives you the choice between 2 Unique weapons/items during some missions in *Captain Scarlett and Her Pirate's Booty*
-  - __DLC Campaign 3:__ Gives you the choice between 2 Unique weapons/items during some missions in *Sir Hammerlock's Big Game Hunt*.
-
-- ###Non-Campaign DLC:	
-  - __*Creature Slaughterdome*__ Gives you the choice between 2 Moxxi's weapons as reward for the 5 rounds in *Creature Slaughter* Arena in *Wildlife Exploitation Preserve* (instead of just the Creamer as reward for the 5th round)
-
-![Octo as reward for Capture The Flag in Sawtooth Cauldron](https://i.imgur.com/ObFnzWS.png "Don't worry guys... even if my screen capture show French text, my mods are in English")
- 
-__Note:__ The main reason why I resurrected (and rebuild from scratch) the "Double Quest Reward" Mod is mainly because in the great Koby's original Mod -unfortunately now extinct!-, some Unique weapon/items (Lady Fist, Rocksalt, Dahlminator, Buffalo, Landscaper, Sandhawk, Pimpernel, etc...) where removed from the rewards, and that doesn't make sense to me.
+The main reason why I resurrected (and rebuild from scratch) the "Double Quest Reward" Mod is mainly because in the great Koby's original Mod -unfortunately now extinct!-, some Unique weapon/items (Lady Fist, Rocksalt, Dahlminator, Buffalo, Landscaper, Sandhawk, Pimpernel, etc...) where removed from the rewards, and that doesn't make sense to me.
 
 The case of the removal from the Lady Fist really upset me, because during the mission Uncle Teddy, just after finding the 6th echo, Una Baha say: 
 
@@ -29,6 +11,38 @@ By saying *I'll give you the first gun my uncle ever gave me*, it make sense to 
 Now, Una will offer the *Lady Fist*, which is a Hyperion pistol, while Hyperion will offer The *Bitch* (or The *Commerce* if you choose this option) which are both Hyperion SMG... but in any case the *Tidal Wave*, like in the original game, who was ironically a Unique Jakobs weapon!
 
 The *Tidal Wave*, which apparently is not a weapon reward anywhere anymore is now becoming a reward for the mission *Slap Happy* in *The Highlands - Outwash*) (If you use the UCP patch 4.1, the Octo is now a possible drop by Old Slappy)
+
+## Double Quests Rewards
+
+- ### Borderlands 2 - Main Game:
+  - This Mod will give you the choice between 2 Unique weapons/items instead of a single one, so it will double the chance to get a weapon/item with desired element/parts/accessory... and reduce the time spent doing "farming".
+  
+![Octo as reward for Capture The Flag in Sawtooth Cauldron](https://i.imgur.com/ObFnzWS.png "Don't worry guys... even if my screen capture show French text, my mods are in English")
+
+
+- ### Campaign DLC: 	
+  - __DLC 1: *Captain Scarlett and Her Pirate's Booty*__ Gives you the choice between 2 Unique weapons/items during some missions in *Captain Scarlett and Her Pirate's Booty*
+  - __DLC 3: *Sir Hammerlock's Big Game Hunt*__ Gives you the choice between 2 Unique weapons/items during some missions in *Sir Hammerlock's Big Game Hunt*.
+
+- ### Headhunter DLC:
+  - __Headhunter 1__ - *TK Baha's Bloody Harvest*: Unchanged for now.
+  - __Headhunter 2__ - *The Horrible Hunger of the Ravenous Wattle Gobbler*: Unchanged for now.
+  - __Headhunter 3__ - *How Marcus Saved Mercenary Day*: Unchanged for now.
+  - __Headhunter 4__ - *Mad Moxxi and the Wedding Day Massacre*: Unchanged for now.
+  - __Headhunter 5__ - *Sir Hammerlock vs. the Son of Crawmerax*: Unchanged for now.
+
+- ### Non-Campaign DLC:	
+  - __*Creature Slaughterdome:*__ Gives you the choice between 2 Maliwan weapons as reward for the 5 rounds in *Creature Slaughter* Arena in *Wildlife Exploitation Preserve* (instead of just the *Creamer* as reward for the 5th round)
+  - __*Fink's Slaughterhouse:*__ Gives you the choice between 2 Bandit weapons as reward for the 5 rounds in *Hyperion Slaughter* Arena in *The Fridge* (instead of just the *Hail* as reward for the 5th round)
+  - __*Hyperion Circle Of Slaughter:*__ Gives you the choice between 2 Hyperion weapons as reward for the 5 rounds in *Hyperion Slaughter* Arena in *One Chasm* (instead of just the *Chère-Amie* as reward for the 5th round)
+
+| -Arena DLC-       | Creature Slaughterdome | Fink's Slaughterhouse                    | 
+| ------------- | -------------          | -------------                            | 
+| Round 1:      | Choice from 2 Rare (Blue) Maliwan Pistol | Choice from 2 Rare (Blue) Bandit Pistol  | 
+| Round 2:      | Choice from 2 Rare (Blue) Maliwan SMG | Choice from 2 Rare (Blue) Bandit SMG     | 
+| Round 3:      | Choice from 2 Rare (Blue) Maliwan Sniper Rifle | Choice from 2 Rare (Blue) Bandit Assault Rifle| 
+| Round 4:      | Choice from 2 Rare (Blue) Maliwan Nova or Spike Shield | Choice from 2 Rare (Blue) Bandit Shotgun | 
+| Round 5:      |  Choice from Moxxi's Good Touch or Bad Touch| Choice from Moxxi's Creamer or Chère-Amie       |  
 
 ### Note: 
 
@@ -79,9 +93,11 @@ There's a few things which I'd considered adding to this mod, but were already w
 - v1.0.5, October 25, 2018 
   - Added the choice between 2 Unique weapons/items instead of a single one for DLC 1 - *Captain Scarlett and Her Pirate's Booty*.
 - v1.0.6, Novembre 22, 2018
-  - Added Moxxi's weapons as reward for the 5 rounds in *Creature Slaughter* Arena in *Wildlife Exploitation Preserve* (instead of just the Creamer as reward for the 5th round)
+  - Added Maliwan weapons as reward for the rounds 1-4 and the choice between 2 Moxxi's weapons as reward for the 5th round in *Creature Slaughter* Arena in *Wildlife Exploitation Preserve* (instead of just the Creamer as reward for the 5th round)
 - v1.0.7, Novembre 30, 2018
-  - Added the choice between 2 Unique weapons/items instead of a single one for DLC Campaign 3 - *Sir Hammerlock's Big Game Hunt*  
+  - Added the choice between 2 Unique weapons/items instead of a single one for DLC Campaign 3 - *Sir Hammerlock's Big Game Hunt*
+- v1.0.8, Decembre 7, 2018
+  - Added Bandit weapons as reward for the rounds 1-4 and the choice between 2 Moxxi's weapons for the round 5th in *Fink's Slaughterhouse* Arena in *The Fridge* (instead of just the Hail as reward for the 5th round)  
 
 ### To do:
 

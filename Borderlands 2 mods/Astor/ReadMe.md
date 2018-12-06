@@ -50,7 +50,7 @@ This ReadMe is just here as a quick synopsis, for detailed informations, each Mo
 
 ## Quests Improvement:
 
-- ### Quests Rewards: 
+- ### Better Quests Rewards: 
 
   - __Double Quests Rewards Redux:__ Gives you the choice to be rewarded between 2 Unique weapons/items instead of a single one.
 
