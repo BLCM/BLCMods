@@ -1,40 +1,10 @@
-## Double Quests Rewards Redux
+## Arena Battle Sponsored
 
-The main reason why I resurrected (and rebuild from scratch) the "Double Quest Reward" Mod is mainly because in the great Koby's original Mod -unfortunately now extinct!-, some Unique weapon/items (Lady Fist, Rocksalt, Dahlminator, Buffalo, Landscaper, Sandhawk, Pimpernel, etc...) where removed from the rewards, and that doesn't make sense to me.
+The weapons manufacturers are now sponsor in battle arena
 
-The case of the removal from the Lady Fist really upset me, because during the mission Uncle Teddy, just after finding the 6th echo, Una Baha say: 
-
- > *Great - that was just what I was hopin' to hear! Now, if you can find the blueprints for the weapon design they ripped off, I'll give you the first gun my uncle ever gave me.* 
-
-By saying *I'll give you the first gun my uncle ever gave me*, it make sense to me that she will give her personal weapon given by *T.K. Baha* (the *Lady Fist*, as red text refers, in reference to the *Lady Finger*, a gun retrieved from the grave of T.K. Baha's wife in Borderlands 1) as reward instead of any Blue Hyperion pistol. 
-
-Now, Una will offer the *Lady Fist*, which is a Hyperion pistol, while Hyperion will offer The *Bitch* (or The *Commerce* if you choose this option) which are both Hyperion SMG... but in any case the *Tidal Wave*, like in the original game, who was ironically a Unique Jakobs weapon!
-
-The *Tidal Wave*, which apparently is not a weapon reward anywhere anymore is now becoming a reward for the mission *Slap Happy* in *The Highlands - Outwash*) (If you use the UCP patch 4.1, the Octo is now a possible drop by Old Slappy)
-
-## Double Quests Rewards
-
-- ### Borderlands 2 - Main Game:
-  - This Mod will give you the choice between 2 Unique weapons/items instead of a single one, so it will double the chance to get a weapon/item with desired element/parts/accessory... and reduce the time spent doing "farming".
-  
-![Octo as reward for Capture The Flag in Sawtooth Cauldron](https://i.imgur.com/ObFnzWS.png "Don't worry guys... even if my screen capture show French text, my mods are in English")
-
-
-- ### Campaign DLC: 	
-  - __DLC 1: *Captain Scarlett and Her Pirate's Booty*__ Gives you the choice between 2 Unique weapons/items during some missions in *Captain Scarlett and Her Pirate's Booty*
-  - __DLC 3: *Sir Hammerlock's Big Game Hunt*__ Gives you the choice between 2 Unique weapons/items during some missions in *Sir Hammerlock's Big Game Hunt*.
-
-- ### Headhunter DLC:
-  - __Headhunter 1__ - *TK Baha's Bloody Harvest*: Unchanged for now.
-  - __Headhunter 2__ - *The Horrible Hunger of the Ravenous Wattle Gobbler*: Unchanged for now.
-  - __Headhunter 3__ - *How Marcus Saved Mercenary Day*: Unchanged for now.
-  - __Headhunter 4__ - *Mad Moxxi and the Wedding Day Massacre*: Unchanged for now.
-  - __Headhunter 5__ - *Sir Hammerlock vs. the Son of Crawmerax*: Unchanged for now.
-
-- ### Non-Campaign DLC:	
-  - __*Creature Slaughterdome:*__ Gives you the choice between 2 Maliwan weapons as reward for the 5 rounds in *Creature Slaughter* Arena in *Wildlife Exploitation Preserve* (instead of just the *Creamer* as reward for the 5th round)
-  - __*Fink's Slaughterhouse:*__ Gives you the choice between 2 Bandit weapons as reward for the 5 rounds in *Hyperion Slaughter* Arena in *The Fridge* (instead of just the *Hail* as reward for the 5th round)
-  - __*Hyperion Circle Of Slaughter:*__ Gives you the choice between 2 Hyperion weapons as reward for the 5 rounds in *Hyperion Slaughter* Arena in *One Chasm* (instead of just the *Chère-Amie* as reward for the 5th round)
+- ### Borderlands 2 - Main Game:	
+  - __*Creature Slaughterdome:*__ Gives you the choice between 2 Maliwan weapons as reward for the rounds 1-4 and the choice between 2 Moxxi's weapons for the 5th round in *Creature Slaughter* Arena in *Wildlife Exploitation Preserve* (instead of just the *Creamer* as reward for the 5th round)
+  - __*Fink's Slaughterhouse:*__ Gives you the choice between 2 Bandit weapons as reward for the rounds 1-4 and the choice between 2 Moxxi's weapons for the 5th round in *Hyperion Slaughter* Arena in *The Fridge* (instead of just the *Hail* as reward for the 5th round)
 
 | -Arena DLC-       | Creature Slaughterdome | Fink's Slaughterhouse                    | 
 | ------------- | -------------          | -------------                            | 
@@ -44,27 +14,15 @@ The *Tidal Wave*, which apparently is not a weapon reward anywhere anymore is no
 | Round 4:      | Choice from 2 Rare (Blue) Maliwan Nova or Spike Shield | Choice from 2 Rare (Blue) Bandit Shotgun | 
 | Round 5:      |  Choice from Moxxi's Good Touch or Bad Touch| Choice from Moxxi's Creamer or Chère-Amie       |  
 
-### Note: 
-
-For those who were familiar with the previous Mod, the weapon/Item marked with a (*) are:
- - Upgrade (like the Bitch/Commerce in *Uncle Teddy* mission) 
- - New Unique weapon/item rewards (like the *Tidal Wave* in *Slap Happy* mission) 
- - ... or restored Unique weapon/item rewards "gone" in the original Koby's Mod. 
- 
-Feel Free to use the BLCMM tool to select the option of your choice.
-
-![BLCMM - Pick the option of your choice](https://i.imgur.com/jU3Ef7j.png "Don't worry guys... even if my screen capture show French text, my mods are in English")
-
 ### Compatibility:
 
 - 100% compatible with [UCP Patch](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/Community%20Patch%20Team)
 - Should be compatible with most other mods, as long as they do not touch the Quest Rewards.
-- *Double Quest Reward Redux* was tested -and work nicely!- with:
+- *Arena Battle Sponsored* was tested -and work nicely!- with:
   - [UCP Patch](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/Community%20Patch%20Team)   
-  - [Better Quest](https://github.com/BLCM/BLCMods/blob/master/Borderlands%202%20mods/Hemaxhu/Quest%20Rewards/Better%20Quests) by [Hemaxu](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/Hemaxhu).
   - [Better Loot](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/Apocalyptech/BL2%20Better%20Loot%20Mod) & [Cold Dead Hands](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/Apocalyptech/BL2%20Cold%20Dead%20Hands) by [Apocalyptech](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/Apocalyptech)  
 
-:warning: To be sure to get this mod working correctly (as intended), don't forget to place it **AFTER** *UCP Patch* and *Better Quest*. (*Better Loot* & *Cold Dead Hands* can be placed anywhere regarding my mod). 
+:warning: If you use [Better Quest](https://github.com/BLCM/BLCMods/blob/master/Borderlands%202%20mods/Hemaxhu/Quest%20Rewards/Better%20Quests) by [Hemaxu](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/Hemaxhu) mod, to be sure to get this mod working correctly (as intended), activate the *Hemaxu's Better Quest* Fix at the end of *Arena Battle Sponsored* mod, __AND__ don't forget to place this mod __AFTER__ *UCP Patch* and *Better Quest* (*Better Loot* & *Cold Dead Hands* can be placed anywhere regarding my mod).
 
 ### Help! The Mod doesn't work !?!
 
