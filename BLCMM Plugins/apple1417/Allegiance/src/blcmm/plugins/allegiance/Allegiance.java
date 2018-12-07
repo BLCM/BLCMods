@@ -9,7 +9,7 @@ import javax.swing.JProgressBar;
 public class Allegiance extends BLCMMModelPlugin {
     AllegiancePanel panel;
     public Allegiance() {
-        super(true, true, "apple1417", "1.1");
+        super(true, true, "apple1417", "1.2");
     }
 
     @Override
@@ -26,7 +26,7 @@ public class Allegiance extends BLCMMModelPlugin {
     @Override
     public String[] getRequiredDataClasses() {
         return new String[] {
-            "InventoryBalanceDefinition",
+            "ItemPoolDefinition",
             "ClassModDefinition"
         };
     }
@@ -38,6 +38,6 @@ public class Allegiance extends BLCMMModelPlugin {
 
     @Override
     public JProgressBar getProgressBar() {
-        return null;
+        return panel.getProgressBar();
     }
 }
