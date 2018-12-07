@@ -31,19 +31,6 @@ The *Tidal Wave*, which apparently is not a weapon reward anywhere anymore is no
   - __Headhunter 4__ - *Mad Moxxi and the Wedding Day Massacre*: Unchanged for now.
   - __Headhunter 5__ - *Sir Hammerlock vs. the Son of Crawmerax*: Unchanged for now.
 
-- ### Non-Campaign DLC:	
-  - __*Creature Slaughterdome:*__ Gives you the choice between 2 Maliwan weapons as reward for the 5 rounds in *Creature Slaughter* Arena in *Wildlife Exploitation Preserve* (instead of just the *Creamer* as reward for the 5th round)
-  - __*Fink's Slaughterhouse:*__ Gives you the choice between 2 Bandit weapons as reward for the 5 rounds in *Hyperion Slaughter* Arena in *The Fridge* (instead of just the *Hail* as reward for the 5th round)
-  - __*Hyperion Circle Of Slaughter:*__ Gives you the choice between 2 Hyperion weapons as reward for the 5 rounds in *Hyperion Slaughter* Arena in *One Chasm* (instead of just the *Chère-Amie* as reward for the 5th round)
-
-| -Arena DLC-       | Creature Slaughterdome | Fink's Slaughterhouse                    | 
-| ------------- | -------------          | -------------                            | 
-| Round 1:      | Choice from 2 Rare (Blue) Maliwan Pistol | Choice from 2 Rare (Blue) Bandit Pistol  | 
-| Round 2:      | Choice from 2 Rare (Blue) Maliwan SMG | Choice from 2 Rare (Blue) Bandit SMG     | 
-| Round 3:      | Choice from 2 Rare (Blue) Maliwan Sniper Rifle | Choice from 2 Rare (Blue) Bandit Assault Rifle| 
-| Round 4:      | Choice from 2 Rare (Blue) Maliwan Nova or Spike Shield | Choice from 2 Rare (Blue) Bandit Shotgun | 
-| Round 5:      |  Choice from Moxxi's Good Touch or Bad Touch| Choice from Moxxi's Creamer or Chère-Amie       |  
-
 ### Note: 
 
 For those who were familiar with the previous Mod, the weapon/Item marked with a (*) are:
@@ -92,12 +79,9 @@ There's a few things which I'd considered adding to this mod, but were already w
   - Added a 3rd option in *Uncle Teddy* mission in *Arid Nexus - Badlands*: the choice between 1 Unique SMG *Commerce* or 1 Legendary SMG *Bitch* you give the plans to Hyperion.
 - v1.0.5, October 25, 2018 
   - Added the choice between 2 Unique weapons/items instead of a single one for DLC 1 - *Captain Scarlett and Her Pirate's Booty*.
-- v1.0.6, Novembre 22, 2018
-  - Added Maliwan weapons as reward for the rounds 1-4 and the choice between 2 Moxxi's weapons as reward for the 5th round in *Creature Slaughter* Arena in *Wildlife Exploitation Preserve* (instead of just the Creamer as reward for the 5th round)
-- v1.0.7, Novembre 30, 2018
+- v1.0.6, December 5, 2018
   - Added the choice between 2 Unique weapons/items instead of a single one for DLC Campaign 3 - *Sir Hammerlock's Big Game Hunt*
-- v1.0.8, Decembre 7, 2018
-  - Added Bandit weapons as reward for the rounds 1-4 and the choice between 2 Moxxi's weapons for the round 5th in *Fink's Slaughterhouse* Arena in *The Fridge* (instead of just the Hail as reward for the 5th round)  
+
 
 ### To do:
 
