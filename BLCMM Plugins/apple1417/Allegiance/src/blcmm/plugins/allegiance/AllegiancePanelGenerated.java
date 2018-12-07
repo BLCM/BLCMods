@@ -43,12 +43,11 @@ public class AllegiancePanelGenerated extends javax.swing.JPanel {
         eridianButton = new javax.swing.JRadioButton();
         moxxiButton = new javax.swing.JRadioButton();
         jRadioButton12 = new javax.swing.JRadioButton();
-        jLabel3 = new javax.swing.JLabel();
-        charComboBox = new javax.swing.JComboBox<>();
         jLabel5 = new javax.swing.JLabel();
         relicCheckBox = new javax.swing.JCheckBox();
         jLabel4 = new javax.swing.JLabel();
         moneySpinner = new javax.swing.JSpinner();
+        applyModel = new javax.swing.JCheckBox();
 
         jLabel1.setText("Standard Manufacturers");
 
@@ -97,17 +96,16 @@ public class AllegiancePanelGenerated extends javax.swing.JPanel {
         manuButtonGroup.add(jRadioButton12);
         jRadioButton12.setText(Manufacturer.PANGOLIN.toString());
 
-        jLabel3.setText("Select someone you're NOT playing as");
-
-        charComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-
         jLabel5.setText("Optionals");
 
         relicCheckBox.setText("Allow Allegiance Relic");
 
         jLabel4.setText("Money drop value multiplier");
 
-        moneySpinner.setModel(new javax.swing.SpinnerNumberModel(Float.valueOf(1.0f), Float.valueOf(1.0f), Float.valueOf(100.0f), Float.valueOf(1.0f)));
+        moneySpinner.setModel(new javax.swing.SpinnerNumberModel(Float.valueOf(1.0f), Float.valueOf(0.1f), Float.valueOf(10.0f), Float.valueOf(0.1f)));
+
+        applyModel.setSelected(true);
+        applyModel.setText("Apply ontop of existing patch");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -122,14 +120,13 @@ public class AllegiancePanelGenerated extends javax.swing.JPanel {
                                 .addComponent(jLabel4)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(moneySpinner, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(charComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(relicCheckBox)
                             .addComponent(jLabel5))
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(applyModel)
                             .addComponent(jLabel1)
-                            .addComponent(jLabel3)
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jRadioButton3)
@@ -180,14 +177,12 @@ public class AllegiancePanelGenerated extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(moxxiButton)
                     .addComponent(jRadioButton12))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(charComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel5)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(relicCheckBox)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(applyModel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
@@ -202,11 +197,10 @@ public class AllegiancePanelGenerated extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    protected javax.swing.JComboBox<String> charComboBox;
+    protected javax.swing.JCheckBox applyModel;
     protected javax.swing.JRadioButton eridianButton;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     protected javax.swing.JRadioButton jRadioButton1;
