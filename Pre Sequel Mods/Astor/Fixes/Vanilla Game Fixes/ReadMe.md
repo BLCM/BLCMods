@@ -2,7 +2,7 @@ This Read Me is just here as a quick synopsis, for detailed informations, each M
 
 * * * * *
 
-## Gears Fixes:
+## Vanilla Game Fixes:
 
 - __*Deadly Bloom* Legendary Fix:__ Corrects the *Deadly Bloom* Legendary bug by makes it regain his *legit* Legendary rarity, value & skin.
 
