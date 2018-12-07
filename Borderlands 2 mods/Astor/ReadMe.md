@@ -50,7 +50,7 @@ This ReadMe is just here as a quick synopsis, for detailed informations, each Mo
 
 ## Quests Improvement:
 
-- __Arena Battle Sponsored:__ The weapons manufacturers are now sponsor in battle arena.
+- __Battle Arena Sponsored:__ The Battle Arena are now fully sponsored by weapons manufacturers.
 
 - __Double Quests Rewards Redux:__ Gives you the choice to be rewarded between 2 Unique weapons/items instead of a single one.
 
