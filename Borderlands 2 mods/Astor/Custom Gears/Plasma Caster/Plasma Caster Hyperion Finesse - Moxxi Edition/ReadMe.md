@@ -72,7 +72,10 @@ This Mod has few options & fix, so feel free to use the BLCMM tool to select the
   - The *Moxxi Signature **Classic** Edition* (*Red Fire* in the RL Creamer/SG Heart Breaker style) which is timeless and can be used in any occasion.
   - The *Moxxi Signature **Elegance** Edition* (*Red Cartier* in the style from the renowned French jeweler) which is very stylish and sophisticated, and by the way the all time favorite from Aurelia the Baroness.
   - The *Moxxi Signature **Pinky** Edition*: (*Outrageous Pink* in the Good Touch/SlowHand style) to feel the glamour in pink, like a Barbie girl in a Barbie world.
-- The *Plasma Caster Finesse Moxxi Edition* can become the reward given by Moxxi for the mission *Hell Hath No Fury* in Opportunity (see picture below).  
+- Moxxi's Reward Options:
+  - The *Plasma Caster Finesse Moxxi Edition* can become the reward given by Moxxi for the mission *Hell Hath No Fury* in Opportunity (see picture below).
+  - The *Plasma Caster Finesse Moxxi Edition* can become the reward given by Moxxi for the *Round 3 Rematch* in *Twelve O'Clock High* (*The Forge*). 
+  
 
 ... and few fix:
 
@@ -91,6 +94,7 @@ This Mod has few options & fix, so feel free to use the BLCMM tool to select the
   - This mod use the following Firing Mode: Tinderbox/Hornet/Twister, so if you use any mod wich changes the attributes from any of these Firing Mode, it will affect this mod, and obviously the Firing Mode of the Finesse. In this case, just revert the modification done previously to these Firing Mode.
   - This mode use Grenade Damage for the Splash Format, so if you are going to use the Plasma Caster Finesse with a Siren character :warning: Maya :warning: , don't forget to toggle the Grenade Damage to Reaper Splash Damage.
   - This Mod as a option which make the *Plasma Caster Hyperion Finesse - Moxxi Edition* becoming the reward given by Moxxi for the mission "Hell Hath No Fury" in Opportunity, so be sure that you place this mod **AFTER** my mod *Double Quest Reward Redux* or any other mod modifying the Quest Reward.
+  - This Mod as a option which make the *Plasma Caster Hyperion Finesse - Moxxi Edition* becoming the reward given by Moxxi for the *Round 3 Rematch* in *Twelve O'Clock High* in *The Forge*, so be sure that you place this mod **AFTER** my mod *Battle Arena Sponsored* or any other mod modifying the Quest Reward.
 
 ### Help! The Mod doesn't work !?!
 
@@ -114,6 +118,9 @@ Read this little [Compatibility & Troubleshooting](https://github.com/BLCM/BLCMo
   - Initial public release
 - v1.0.1, October 25, 2018
   - Correct the wrong line of code (was *Set WeaponTypeDefinition'GD_Weap_SMG.A_Weapons...* instead of *Set GD_Weap_SMG.A_Weapons...*) repeated 9 times by using copy/paste to go faster.
+- v1.0.2, December 10, 2018
+  - Add a toggle option to receive the Finesse as reward to Twelve O'Clock High Round 3 Rematch
+
 ### Other Recommended Mods:
 
 Some great mods to check for the *Finesse - Moxxi Edition*:
