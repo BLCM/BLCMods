@@ -28,7 +28,9 @@ The normal battles rounds from the following *Battle Arena* are now fully sponso
 | Round 4:         | Choice from 2 random Rare (Blue) Dahl Sniper Rifle          |
 | Round 5:         | Choice from 2 Moxxi's weapons: __*Crit*__ or __*Chere-Amie*__ | 
 | Badass Round:    | Choice from 2 Gemstones weapons (UCP Reward) or 2 Legendary Dahl Weapons (__*Veruc*__ or __*Pitchfork*__) |
- 
+
+__Note:__ If you use my custom weapon mod: *Discord Solver Moxxi Edition*, this new Moxxi's weapon can replace the reward given above (*Crit* or *Chere-Amie*) by Moxxi for the *Magic Slaughter Round 5* in *Murderlin's Temple* Arena (Flamerock Refuge).
+
 ## Hyperion Sponsor
 
 - ### *Hyperion Circle Of Slaughter* sponsored by *Hyperion*
@@ -78,6 +80,8 @@ The normal battles rounds from the following *Battle Arena* are now fully sponso
 | Round 2:         | Choice from 2 random Rare (Blue) Tediore SMG        | 
 | Round 3:         | Choice from 2 random Rare (Blue) Tediore Shotgun    |  
 | Round 3 Rematch: | Choice from 2 Moxxi's weapons: __*Heart Breaker*__ or __*Slow Hand*__ |
+
+__Note:__ If you use my custom weapon mod: *Plasma Caster Finesse Moxxi Edition*, this new Moxxi's weapon can replace the reward given above (*Heart Breaker* or *Slow Hand*) by Moxxi for the *Round 3 Rematch* in *Twelve O'Clock High* Arena (The Forge).
 
 ## Torgue Sponsor
 
