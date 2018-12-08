@@ -72,7 +72,9 @@ This Mod has few options & fix, so feel free to use the BLCMM tool to select the
   - The *Moxxi Signature **Classic** Edition* ("Red Fire" in the RL Creamer/SG Heart Breaker style) which is timeless and can be used in any occasion.
   - The *Moxxi Signature **Elegance** Edition* ("Red Cartier" in the style from the renowned French jeweler) which is very stylish and sophisticated, and by the way the all time favorite from Aurelia the Baroness.
   - The *Moxxi Signature **Pinky** Edition*: (*Outrageous Pink* in the Good Touch/SlowHand style) to feel the glamour in pink, like a Barbie girl in a Barbie world.
-- The *Discord Solver Moxxi Edition* can become the reward given by Moxxi for the mission "Hell Hath No Fury" in Opportunity (see picture below).
+- Moxxi's Reward options:
+  - The *Discord Solver Moxxi Edition* can become the reward given by Moxxi for the mission "Hell Hath No Fury" in Opportunity (see picture below).
+ - The *Discord Solver Moxxi Edition* can become the reward given by Moxxi for *Magic Slaughter Round 5* in *Murderlin's Temple* Arena (*Flamerock Refuge*).
 
 ... and few fix:
 
@@ -93,19 +95,19 @@ This Mod has few options & fix, so feel free to use the BLCMM tool to select the
 - Should be compatible with most other mods, as long as they do not modify the *Pistol Explosive GyroJet Bullet*.
 
 - Just be aware from the following:
-
   - To be sure to get the fix Orudeon's Bayonet Enhancements and/or Orudeon's Bayonet Buff working correctly (as intended), don't forget to place my mod **AFTER** Orudeon's Bayonet Enhancements & Bayonet Buff. 
- 
-  - This Mod **KEEP** the specific burst from the *Unique SMG Lascaux*, so if you use the Bandit Brand Tweaks v1.2 by Orudeon, there is a option that reduce the burst to five-shot bursts. To get back the specific burst, just open your Orudeon's Bandit Brand Tweaks folder, go to: *SMG/Burst Count/* (if you use the Gears Overhaul Orudeon's Mod v1.35, the path will be: *Brands Tweaks/Bandit Brand Tweaks v1.2 by Orudeon/SMG/Burst Count/*) and uncheck the following line:  
-  ```
-  [ ] set GD_Weap_SMG.Barrel.SMG_Barrel_Bandit_Lascaux ZoomWeaponAttributeEffects ((AttributeToModify = AttributeDefinition'D_Attributes.Weapon.WeaponAutomaticBurstCount',ModifierType = MT_PreAdd,BaseModifierValue = (BaseValueConstant = 1.000000, BaseValueAttribute = None, InitializationDefinition = None, BaseValueScaleConstant = 1.000000)))
-  ``` 
   - This mod use the *Pistol Explosive GyroJet Bullet*, so if you use any mode that changes the attributes from this Firing Mode, it will affect this mod, and obviously the firing of the *Discord Solver*. In this case, just revert the modification done previously to it.
-  
   - This mode use Grenade Damage for the Splash Format, so if you are going to use the Discord Solver with a Siren character :warning: Maya :warning: , don't forget to toggle the Grenade Damage to Reaper Splash Damage.
-   
   - This Mod as a option which make the *Discord Solver - Moxxi Edition* becoming the reward given by Moxxi for the mission *Hell Hath No Fury* in Opportunity, so be sure that you place this mod **AFTER** my mod *Double Quest Reward Redux* or any other mod modifying the Quest Reward.
+  - This Mod as a option which make the *Discord Solver - Moxxi Edition* becoming the reward given by Moxxi for the *Magic Slaughter Round 5* in *Murderlin's Temple* Arena (*Flamerock Refuge*), so be sure that you place this mod **AFTER** my mod *Battle Arena Sponsored* or any other mod modifying the Quest Reward.
 
+### Know Issues:
+
+- This Mod **KEEP** the specific burst from the *Unique SMG Lascaux*, so if you use the *Bandit Brand Tweaks v1.2* by *Orudeon*, there is a option that reduce the burst to five-shot bursts. 
+To get back the specific *Lascaux* burst, just open your *Orudeon's Bandit Brand Tweaks* folder, go to: *SMG/Burst Count/* (if you use the Gears Overhaul Orudeon's Mod v1.35, the path will be: *Brands Tweaks/Bandit Brand Tweaks v1.2 by Orudeon/SMG/Burst Count/*) and uncheck the following line:  
+```
+  [ ] set GD_Weap_SMG.Barrel.SMG_Barrel_Bandit_Lascaux ZoomWeaponAttributeEffects ((AttributeToModify = AttributeDefinition'D_Attributes.Weapon.WeaponAutomaticBurstCount',ModifierType = MT_PreAdd,BaseModifierValue = (BaseValueConstant = 1.000000, BaseValueAttribute = None, InitializationDefinition = None, BaseValueScaleConstant = 1.000000)))
+``` 
 ### Help! The Mod doesn't work !?!
 
 Read this little [Compatibility & Troubleshooting](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/Astor/Compatibility%20%26%20Troubleshooting) page... It's not that hard!  :wink:
@@ -135,6 +137,9 @@ Read this little [Compatibility & Troubleshooting](https://github.com/BLCM/BLCMo
   - Added Moxxi Signature *Pinky* Skin   
 - v1.1.3, October 25, 2018
   - Correct the wrong line of code (was *Set WeaponTypeDefinition'GD_Weap_SMG.A_Weapons...* instead of *Set GD_Weap_SMG.A_Weapons...*) repeated 9 times by using copy/paste to go faster.
+- v1.1.4, December 10, 2018
+  - Add a toggle option to receive the Discord Solver as Reward to Magic Slaughter Round 5?
+
 ### Other Recommended Mods:
 
 Some great mods to check for the *Discord Solver - Moxxi Edition*:
