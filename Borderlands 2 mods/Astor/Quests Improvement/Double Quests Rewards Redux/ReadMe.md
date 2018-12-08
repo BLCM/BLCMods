@@ -80,7 +80,7 @@ There's a few things which I'd considered adding to this mod, but were already w
 - v1.0.5, October 25, 2018 
   - Added the choice between 2 Unique weapons/items instead of a single one for DLC 1 - *Captain Scarlett and Her Pirate's Booty*.
 - v1.0.6, December 5, 2018
-  - Added the choice between 2 Unique weapons/items instead of a single one for DLC Campaign 3 - *Sir Hammerlock's Big Game Hunt*
+  - Added the choice between 2 Unique weapons/items instead of a single one for DLC 3 - *Sir Hammerlock's Big Game Hunt*
 
 
 ### To do:
