@@ -74,7 +74,7 @@ This Mod has few options & fix, so feel free to use the BLCMM tool to select the
   - The *Moxxi Signature **Pinky** Edition*: (*Outrageous Pink* in the Good Touch/SlowHand style) to feel the glamour in pink, like a Barbie girl in a Barbie world.
 - Moxxi's Reward options:
   - The *Discord Solver Moxxi Edition* can become the reward given by Moxxi for the mission "Hell Hath No Fury" in Opportunity (see picture below).
- - The *Discord Solver Moxxi Edition* can become the reward given by Moxxi for *Magic Slaughter Round 5* in *Murderlin's Temple* Arena (*Flamerock Refuge*).
+  - The *Discord Solver Moxxi Edition* can become the reward given by Moxxi for *Magic Slaughter Round 5* in *Murderlin's Temple* Arena (*Flamerock Refuge*).
 
 ... and few fix:
 
