@@ -22,6 +22,10 @@ Et Voila! Here is the *TPS - Moxxi Signature Elegance Collection*... and now the
 
 - 100% compatible with the latest version of [TPS Community Patch](https://github.com/BLCM/BLCMods/tree/master/Pre%20Sequel%20Mods/Community%20Patch).
 
+### Help! The Mod doesn't work !?!
+
+Read this little [Compatibility & Troubleshooting](https://github.com/BLCM/BLCMods/tree/master/Pre%20Sequel%20Mods/Astor/Compatibility%20%26%20Troubleshooting) page... It's not that hard!  :wink:
+
 ### To do:
 
 - [x] Clean the code and remove all my ~~shitty~~ smart notes.
@@ -29,7 +33,7 @@ Et Voila! Here is the *TPS - Moxxi Signature Elegance Collection*... and now the
 
 ### Credits & Thanks:
 
-Without the great [Dave'S BL2 Skin Modding Guide](https://cdn.rawgit.com/BLCM/BLCMods/bb1933f7/Borderlands%202%20mods/Dave/DAVE%27S%20BL2%20SKIN%20MODDING%20GUIDE.pdf) ... I won't be able to make any skin, so thanks for your great work, @DaveRabbit
+Without the great [Dave'S BL2 Skin Modding Guide](https://cdn.rawgit.com/BLCM/BLCMods/bb1933f7/Borderlands%202%20mods/Dave/DAVE%27S%20BL2%20SKIN%20MODDING%20GUIDE.pdf)... I won't be able to make any skin, so thanks for your great work, @DaveRabbit
   
 ### Note: 
 

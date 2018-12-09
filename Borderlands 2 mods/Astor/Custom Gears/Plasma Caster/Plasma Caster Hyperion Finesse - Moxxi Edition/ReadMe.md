@@ -51,8 +51,9 @@ Not clear? ... Well, perhaps it will be more easy to compare the difference in a
 |**Other:**         |                        |                       | 
 | Critical Hit:     | None                   | 70%                   |
 | Lifesteal   :     | None                   | 2.5%                  | 
-| Mission Reward:   | N/A                    | *Hell Hath No Fury* (Opportunity)| 
-| Skin:             | Commerce (Vanilla skin)| Moxxi skin            | 
+| Mission Reward:   | N/A                    | *Hell Hath No Fury* (Opportunity)|
+| Battle Reward:    | N/A                    | *Twelve O'Clock High - Round 3 Rematch* (The Forge)| 
+| Skin:             | Commerce (Vanilla skin)| Moxxi skins: Classic, Elegance or Pinky            | 
 | Rarity:           | Unique                 | Moxxi Rarity          | 
 
 To summarize: elemental effect damage is improved by 33%, elemental chance by a small amount (±5%), get the benefit from Maliwan Sniper bullet splash (50%), but the initial base damage is lowered by 20% to compensate the elemental adaptive splash. 
@@ -69,9 +70,9 @@ This Mod has few options & fix, so feel free to use the BLCMM tool to select the
   - E-Tech Elemental Color (Vanilla)
   - Explosive Elemental Color (similar to  Torgue weapons)
 - The Moxxi skin has a toggle option between:
-  - The *Moxxi Signature **Classic** Edition* (*Red Fire* in the RL Creamer/SG Heart Breaker style) which is timeless and can be used in any occasion.
-  - The *Moxxi Signature **Elegance** Edition* (*Red Cartier* in the style from the renowned French jeweler) which is very stylish and sophisticated, and by the way the all time favorite from Aurelia the Baroness.
-  - The *Moxxi Signature **Pinky** Edition*: (*Outrageous Pink* in the Good Touch/SlowHand style) to feel the glamour in pink, like a Barbie girl in a Barbie world.
+  - The *Moxxi Signature __Classic__ Edition* (*Red Fire* in the RL Creamer/SG Heart Breaker style) which is timeless and can be used in any occasion.
+  - The *Moxxi Signature __Elegance__ Edition* (*Red Cartier* in the style from the renowned French jeweler) which is very stylish and sophisticated, and by the way the all time favorite from Aurelia the Baroness.
+  - The *Moxxi Signature __Pinky__ Edition*: (*Outrageous Pink* in the Good Touch/SlowHand style) to feel the glamour in pink, like a Barbie girl in a Barbie world.
 - Moxxi's Reward Options:
   - The *Plasma Caster Finesse Moxxi Edition* can become the reward given by Moxxi for the mission *Hell Hath No Fury* in Opportunity (see picture below).
   - The *Plasma Caster Finesse Moxxi Edition* can become the reward given by Moxxi for the *Round 3 Rematch* in *Twelve O'Clock High* (*The Forge*). 

@@ -65,6 +65,10 @@ The *SuperNova* has an increased chance to drop from *Bruce* (a Badass Outlaw) d
  
 :warning: This Mod includes my *Supernova Missing Material Fix*, so if you're already  using it, there's no longer any reason to use the stand-alone fix version... but it won't hurt anything to have both enabled, though... in this case, this *Black Hole & SuperNova On Steroids* Mod must be placed __AFTER__ the *Supernova Missing Material Fix*. 
 
+### Help! The Mod doesn't work !?!
+
+Read this little [Compatibility & Troubleshooting](https://github.com/BLCM/BLCMods/tree/master/Pre%20Sequel%20Mods/Astor/Compatibility%20%26%20Troubleshooting) page... It's not that hard!  :wink:
+
 ### To do:
 
 - [ ] Create a new skin to make the difference faster between the *Black Hole* of *SuperNova*.
