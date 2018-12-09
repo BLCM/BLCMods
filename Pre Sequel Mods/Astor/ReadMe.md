@@ -86,6 +86,12 @@ This Read Me is just here as a quick synopsis, for detailed informations, each M
 
 * * * * *
 
+## Moxxi Skins Pack:
+
+- __Moxxi Signature Elegance Collection:__ The red similar to the little *Cartier* box, with discrete golden part inserted into (silver) brushed steel, this is the French elegance.
+ 
+* * * * *
+
 ## Quality of Life: 
 
 - __More Pick-Up Radius:__ It's a all simple Mod but somewhat large, in a sense, change!
@@ -104,12 +110,6 @@ This Read Me is just here as a quick synopsis, for detailed informations, each M
 
 - __Less Tedious Quest:__ Makes a few timed __-*failable!*-__ optional mission less tedious to complete.
 
-* * * * *
- 
-## Skin Pack:
-
-- __Moxxi Signature Elegance Collection:__ The red similar to the little *Cartier* box, with discrete golden part inserted into (silver) brushed steel, this is the French elegance.
- 
 * * * * *
  
 ## Acknowledgement
