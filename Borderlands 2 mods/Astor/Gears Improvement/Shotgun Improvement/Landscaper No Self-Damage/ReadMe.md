@@ -1,4 +1,4 @@
-## *Landsaper* No Self-Damage
+## *Landscaper* No Self-Damage
 
 Made the child grenades not inflicting self-damage to fixes the issue of where they would (constantly) put you down. Now, the *Landscaper* becomes viable for *second wind* as you will not automatically go down again from the self-damage.
 
@@ -7,7 +7,7 @@ Made the child grenades not inflicting self-damage to fixes the issue of where t
 The *Landscaper* can be obtained by completing the mission *Clan War: Zafords vs. Hodunks* and siding with the Hodunks. 
 
 ### Changelog:
-- v1.0.0, November 30, 2018
+- v1.0.0, December 8, 2018
   - Initial public release     
 
 ### Compatibility:
@@ -24,9 +24,9 @@ Read this little [Compatibility & Troubleshooting](https://github.com/BLCM/BLCMo
   
 ### Credits & Thanks:
 
-I find a lot of useful informations on the Resource page from the [Wiki](https://github.com/BLCM/BLCMods/wiki) of course, but also on the [Resources page](https://github.com/BLCM/BLCMods/tree/af3b2d17629ab3f7f7a5f7bb68b489c5e13b0498/Borderlands%202%20mods/Dave/Resources) and the great [Dave'S BL2 Skin Modding Guide](https://cdn.rawgit.com/BLCM/BLCMods/bb1933f7/Borderlands%202%20mods/Dave/DAVE%27S%20BL2%20SKIN%20MODDING%20GUIDE.pdf) ... all that made by [Dave](https://github.com/BLCM/BLCMods/tree/af3b2d17629ab3f7f7a5f7bb68b489c5e13b0498/Borderlands%202%20mods/Dave) , so thanks for your great work, @DaveRabbit 
+I find a lot of useful informations on the Resource page from the [Wiki](https://github.com/BLCM/BLCMods/wiki) of course, but also on the [Resources page](https://github.com/BLCM/BLCMods/tree/af3b2d17629ab3f7f7a5f7bb68b489c5e13b0498/Borderlands%202%20mods/Dave/Resources) and the great [Dave'S BL2 Skin Modding Guide](https://cdn.rawgit.com/BLCM/BLCMods/bb1933f7/Borderlands%202%20mods/Dave/DAVE%27S%20BL2%20SKIN%20MODDING%20GUIDE.pdf)... all that made by [Dave](https://github.com/BLCM/BLCMods/tree/af3b2d17629ab3f7f7a5f7bb68b489c5e13b0498/Borderlands%202%20mods/Dave) , so thanks for your great work, @DaveRabbit 
 
-Oh! I almost forget... I also follow step-by-step this [How to make a modded weapon](https://github.com/BLCM/BLCMods/blob/master/Borderlands%202%20mods/Tsunami-s%20Guns%20Cannons%20And%20Flamethrowers/(((How%20to%20make%20a%20modded%20weapon))).txt) guide writing by [Tsunami](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/Tsunami-s%20Guns%20Cannons%20And%20Flamethrowers) , thanks to you too, @Tsunami7900
+Oh! I almost forget... I also follow step-by-step this [How to make a modded weapon](https://github.com/BLCM/BLCMods/blob/master/Borderlands%202%20mods/Tsunami-s%20Guns%20Cannons%20And%20Flamethrowers/(((How%20to%20make%20a%20modded%20weapon))).txt) guide writing by [Tsunami](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/Tsunami-s%20Guns%20Cannons%20And%20Flamethrowers), thanks to you too, @Tsunami7900
 
 ### Note: 
 
