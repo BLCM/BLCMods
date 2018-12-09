@@ -49,8 +49,9 @@ Not clear? ... Well, perhaps it will be more easy to compare the difference in a
 | Extra (free) Bullet:| 100% Chance           | 30% Chance                |
 | Critical Hit:       | None                  | 70%                       |  
 | Lifesteal:          | N/A                   | 2.5% of damage dealt      |
-| Mission Reward:     | N/A                   | *Hell Hath No Fury* (Opportunity)| 
-| Skin:               | Lascaux (Vanilla)     | Moxxi Signature           | 
+| Mission Reward:     | N/A                   | *Hell Hath No Fury* (Opportunity)|
+| Battle Reward:      | N/A                   | *Magic Slaughter Round 5* (Murderlin's Temple)| 
+| Skin:               | Lascaux (Vanilla)     | Moxxi skins: Classic, Elegance or Pinky | 
 | Rarity:             | Unique                | Moxxi                     | 	
 
 To summarize: To compensate the benefit from GyroJet Explosive bonus, the initial base damage is lowered by 20%.
@@ -69,9 +70,9 @@ This Mod has few options & fix, so feel free to use the BLCMM tool to select the
   - Explosive Elemental Color (similar to Torgue weapons) 
   - E-Tech Elemental Color (Vanilla)
 - The Moxxi skin has a toggle option between:
-  - The *Moxxi Signature **Classic** Edition* ("Red Fire" in the RL Creamer/SG Heart Breaker style) which is timeless and can be used in any occasion.
-  - The *Moxxi Signature **Elegance** Edition* ("Red Cartier" in the style from the renowned French jeweler) which is very stylish and sophisticated, and by the way the all time favorite from Aurelia the Baroness.
-  - The *Moxxi Signature **Pinky** Edition*: (*Outrageous Pink* in the Good Touch/SlowHand style) to feel the glamour in pink, like a Barbie girl in a Barbie world.
+  - The *Moxxi Signature __Classic__ Edition* ("Red Fire" in the RL Creamer/SG Heart Breaker style) which is timeless and can be used in any occasion.
+  - The *Moxxi Signature __Elegance__ Edition* ("Red Cartier" in the style from the renowned French jeweler) which is very stylish and sophisticated, and by the way the all time favorite from Aurelia the Baroness.
+  - The *Moxxi Signature __Pinky__ Edition*: (*Outrageous Pink* in the Good Touch/SlowHand style) to feel the glamour in pink, like a Barbie girl in a Barbie world.
 - Moxxi's Reward options:
   - The *Discord Solver Moxxi Edition* can become the reward given by Moxxi for the mission "Hell Hath No Fury" in Opportunity (see picture below).
   - The *Discord Solver Moxxi Edition* can become the reward given by Moxxi for *Magic Slaughter Round 5* in *Murderlin's Temple* Arena (*Flamerock Refuge*).
@@ -103,7 +104,7 @@ This Mod has few options & fix, so feel free to use the BLCMM tool to select the
 
 ### Know Issues:
 
-- This Mod **KEEP** the specific burst from the *Unique SMG Lascaux*, so if you use the *Bandit Brand Tweaks v1.2* by *Orudeon*, there is a option that reduce the burst to five-shot bursts. 
+- This Mod __KEEP__ the specific burst from the *Unique SMG Lascaux*, so if you use the *Bandit Brand Tweaks v1.2* by *Orudeon*, there is a option that reduce the burst to five-shot bursts. 
 To get back the specific *Lascaux* burst, just open your *Orudeon's Bandit Brand Tweaks* folder, go to: *SMG/Burst Count/* (if you use the Gears Overhaul Orudeon's Mod v1.35, the path will be: *Brands Tweaks/Bandit Brand Tweaks v1.2 by Orudeon/SMG/Burst Count/*) and uncheck the following line:  
 ```
   [ ] set GD_Weap_SMG.Barrel.SMG_Barrel_Bandit_Lascaux ZoomWeaponAttributeEffects ((AttributeToModify = AttributeDefinition'D_Attributes.Weapon.WeaponAutomaticBurstCount',ModifierType = MT_PreAdd,BaseModifierValue = (BaseValueConstant = 1.000000, BaseValueAttribute = None, InitializationDefinition = None, BaseValueScaleConstant = 1.000000)))
