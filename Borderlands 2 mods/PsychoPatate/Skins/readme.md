@@ -2,7 +2,7 @@
 
 ### Skinless unique weapons
 **[Full Album Link](https://imgur.com/a/Z7q5ma1)**
-![Image](https://i.imgur.com/oBeX4Dd.jpg)
+![Image](https://i.imgur.com/cYscIfy.jpg)
 ![Image](https://i.imgur.com/fq9z1LR.jpg)
 ![Image](https://i.imgur.com/WF1XdSt.jpg)
 
