@@ -14,6 +14,8 @@ This Read Me is just here as a quick synopsis, for detailed informations, each M
 
 - ### Assault Rifle Improvement:
 
+  - __*Cry Baby* Presto:__ Hustle the *Cry Baby's red/yellow bullet speed* from 5.000 (defaut vanilla game value) to 25.000 (standard AR bullet speed).
+
   - __*KerBoom* with Singularity Grenade:__ Turns the KerBoom into a useful weapon by shooting 1 rockets, which spawn 1 singularity child grenade.
 
 - ### Shotgun:
