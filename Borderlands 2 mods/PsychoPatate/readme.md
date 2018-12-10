@@ -28,7 +28,9 @@ I mainly do visual mods and skins, and here is a quick synopsis :
 
 ---
 ## Skins
-- Cleaner and/or colorful reskin of some weapons : **[Images](https://imgur.com/a/xyvMPoa)**
 - Skins for weapons that doesn't already have a skin. **[Images](https://imgur.com/a/Z7q5ma1)**
+![Image](https://i.imgur.com/fq9z1LR.jpg)
+- Cleaner and/or colorful reskin of some weapons : **[Images](https://imgur.com/a/xyvMPoa)**
+![Image](https://i.imgur.com/oeEkXkh.jpg)
 
 ---
