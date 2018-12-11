@@ -88,7 +88,9 @@ This Read Me is just here as a quick synopsis, for detailed informations, each M
 
 * * * * *
 
-## Moxxi Skins Pack:
+## Moxxi Skins Packs:
+
+- __Moxxi Signature Classic Collection:__ Based on *Creamer/Heart Breaker* vanilla skin, now the Moxxi weapons skins are uniformized to look like an actual manufacturer.
 
 - __Moxxi Signature Elegance Collection:__ The red similar to the little *Cartier* box, with discrete golden part inserted into (silver) brushed steel, this is the French elegance.
  
