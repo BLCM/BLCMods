@@ -27,8 +27,11 @@ This is where you can find it...
 - As usual for the Vanilla Moxxi weapons, this Moxxi SMG will give you the benefice of:
     - 70% Critical hit bonus
     - 2.5% lifesteal on damage dealt
-    - A greater chance to get a extra bullet free 
-	
+    - A greater chance to get a extra bullet free
+    - Spawn with the *Miss Moxxi's* prefix 
+
+![Miss Moxxi's Discord Solver](https://imgur.com/D6BoaOH.jpg "Don't worry guys... even if my screen capture show French text, my mods are in English")
+
 Not clear? ... Well, perhaps it will be more easy to compare the difference in a table:  
   
 | -Tech Specs-        | Lascaux: Vanilla      | Discord Solver #2: Moxxi Edition| 
@@ -49,8 +52,8 @@ Not clear? ... Well, perhaps it will be more easy to compare the difference in a
 | Extra (free) Bullet:| 100% Chance           | 30% Chance                |
 | Critical Hit:       | None                  | 70%                       |  
 | Lifesteal:          | N/A                   | 2.5% of damage dealt      |
-| Mission Reward:     | N/A                   | *Hell Hath No Fury* (Opportunity)|
-| Battle Reward:      | N/A                   | *Magic Slaughter Round 5* (Murderlin's Temple)| 
+| Mission Reward:     | N/A                   | *Hell Hath No Fury* (Opportunity) |
+| Battle Reward:      | N/A                   | *Magic Slaughter Round 5* (Murderlin's Temple) | 
 | Skin:               | Lascaux (Vanilla)     | Moxxi skins: Classic, Elegance or Pinky | 
 | Rarity:             | Unique                | Moxxi                     | 	
 
@@ -140,6 +143,8 @@ Read this little [Compatibility & Troubleshooting](https://github.com/BLCM/BLCMo
   - Correct the wrong line of code (was *Set WeaponTypeDefinition'GD_Weap_SMG.A_Weapons...* instead of *Set GD_Weap_SMG.A_Weapons...*) repeated 9 times by using copy/paste to go faster.
 - v1.1.4, December 10, 2018
   - Add a toggle option to receive the Discord Solver as Reward to Magic Slaughter Round 5?
+- v1.1.5, December 12, 2018
+  - Able to spawn with the *Miss Moxxi* prefix
 
 ### Other Recommended Mods:
 
