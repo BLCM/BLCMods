@@ -1,4 +1,4 @@
-### Proper Weapon Bodies V.1.0 (16/08/18) by PsychoPatate
+### Proper Weapon Bodies V.1.1 (02/10/18) by PsychoPatate
 ---
 
 #### Intro
@@ -27,3 +27,7 @@ But you can put whatever body variation that you want, or leave unchecked for de
 full list : https://imgur.com/a/mgewZSD  
 Here is an example :
 ![Image](https://i.imgur.com/ViD8CxT.gif)
+
+#### Changelog
+V.1.1 (02/10/18)
+- Some tweaking in the code but no actual changes.

@@ -1,9 +1,8 @@
-### Unforgiven Skin V.1.0 (23/08/18) by PsychoPatate
+### Unforgiven Skin V.1.1 (09/12/18) by PsychoPatate
 ---
 
-#### Intro
 The closest skin to the Bekah and Godfinger I could do.  
 Looks good imo.
 
 #### Gallery
-![Image](https://i.imgur.com/tqFOrGb.jpg)
+![Image](https://i.imgur.com/pGNDBE7.jpg)
