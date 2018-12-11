@@ -1,8 +1,8 @@
 This Read Me is just here as a quick synopsis, for detailed informations, each Mod has is own Read Me (and even a Changelog), so don't hesitate -whoosh!- to give a look on it.
 
-## Skin Pack: 
+## Moxxi Skin Packs: 
 
-- __Moxxi Signature Classic Collection:__ Based on *Creamer/Hear Breaker* vanilla skin, now the Moxxi weapons skins are uniformized to look like an actual manufacturer.
+- __Moxxi Signature Classic Collection:__ Based on *Creamer/Heart Breaker* vanilla skin, now the Moxxi weapons skins are uniformized to look like an actual manufacturer.
 
 - __Moxxi Signature Elegance Collection:__ The red similar to the little _Cartier_ box, with golden part inserted into (silver) brushed steel, this is the French elegance. 
 
