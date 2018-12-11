@@ -48,6 +48,16 @@ This ReadMe is just here as a quick synopsis, for detailed informations, each Mo
 
 * * * * *
 
+## Moxxi Skins Packs: 
+
+- __Moxxi Signature Classic Collection:__ Based on *Creamer/Heart Breaker* vanilla skin, now the Moxxi weapons skins are uniformized to look like an actual manufacturer.
+
+- __Moxxi Signature Elegance Collection:__ The red similar to the little _Cartier_ box, with golden part inserted into (silver) brushed steel, this is the French elegance. 
+
+- __Moxxi Signature Pinky Collection:__ Based on *Slow Hand/Good Touch* vanilla skin, now the Moxxi weapons skins are uniformized to look like an actual manufacturer.
+
+* * * * *
+
 ## Quests Improvement:
 
 - __Battle Arena Sponsored:__ The Battle Arena are now fully sponsored by weapons manufacturers.
@@ -59,16 +69,6 @@ This ReadMe is just here as a quick synopsis, for detailed informations, each Mo
 - __Hammerlock Jakobs Sponsor:__ The missions given by Hammerlock give you the choice to be rewarded between 2 Jakobs weapons.
 
 - __Less Tedious Quests:__ As the title suggests it, makes a few timed **-failable!-** optional mission less tedious to complete.
-
-* * * * *
-
-## Skins Pack: 
-
-- __Moxxi Signature Classic Collection:__ Based on *Creamer/Hear Breaker* vanilla skin, now the Moxxi weapons skins are uniformized to look like an actual manufacturer.
-
-- __Moxxi Signature Elegance Collection:__ The red similar to the little _Cartier_ box, with golden part inserted into (silver) brushed steel, this is the French elegance. 
-
-- __Moxxi Signature Pinky Collection:__ Based on *Slow Hand/Good Touch* vanilla skin, now the Moxxi weapons skins are uniformized to look like an actual manufacturer.
 
 * * * * *
 
