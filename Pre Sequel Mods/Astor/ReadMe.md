@@ -60,6 +60,12 @@ This Read Me is just here as a quick synopsis, for detailed informations, each M
 
 * * * * *
 
+## French Translation:
+
+- __UCP French Translation__ un simple patch de traduction qui permet d'obtenir en Français tous ajouts de texte (Anglais) du Mod *UCP 2.2*.
+
+* * * * *
+
 ## Gears Improvement:
      
 - ### Items Improvement:
