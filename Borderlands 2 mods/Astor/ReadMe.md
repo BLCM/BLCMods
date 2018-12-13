@@ -40,6 +40,12 @@ This ReadMe is just here as a quick synopsis, for detailed informations, each Mo
 
 * * * * *
 
+## French Translation:
+
+- __Orudeon's Bandit Brand Tweaks:__ a simple translation Mod that allows you to obtain in French any text additions (in English) from the Mod *Orudeon's Bandit Brand Tweaks*.
+
+* * * * *
+
 ## Gears Improvement:
 
 - ### Shotgun Improvement:
