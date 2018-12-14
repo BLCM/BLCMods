@@ -23,13 +23,16 @@ The *Plasma Caster Hyperion Finesse* can be a drop from Assassin Wot fought duri
   - Corrosive on armor
 - Elemental splash damage boosted by grenade (only when hitting a enemy).
 - Shot one SEAPP for the cost of 2 ammo (can be doubled if you use the Aaron00000's "Double Anarchy" mod).
-- As usual for the Vanilla Moxxi weapons, this Moxxi Plasma Caster will give you the benefice of:
-  - 70% Critical hit bonus
-  - 2.5% lifesteal on damage dealt 
 - Cosmetic:
   - MuzzleFlash upgraded to Plasma Caster.
   - E-Tech Elemental Color Glow ("inside" the flaps).
   - Firing Mode Sound upgraded to Plasma Caster sound.
+- As usual for the Vanilla Moxxi weapons, this Moxxi Plasma Caster will give you the benefice of:
+  - 70% Critical hit bonus
+  - 2.5% lifesteal on damage dealt 
+  - Spawn with the *Miss Moxxi's* prefix
+
+![Miss Moxxi's Discord Solver](https://imgur.com/5PXjYRO.jpg "Don't worry guys... even if my screen capture show French text, my mods are in English")
 
 Not clear? ... Well, perhaps it will be more easy to compare the difference in a table:    
   
@@ -38,7 +41,7 @@ Not clear? ... Well, perhaps it will be more easy to compare the difference in a
 | **Bullet Tech:**  |                        |                       |                                
 | Bullet:           | Standard               | SEAPP (Smart Elemental Adaptive Plasma Projectile)| 
 | Bullet Damage:    | SMG Standard           | -20% from Plasma Projectile Damage|
-| Fire Cost:        | 1 bullet cost 1 ammo  | 1 SEAPP cost 2 ammos   |
+| Fire Cost:        | 1 bullet cost 1 ammo   | 1 SEAPP cost 2 ammos   |
 | Bullet Speed:     | 17.000 (Commerce) / 6.000 (Plasma Caster)| 6.000| 
 |**Elemental Tech:**|                        |                       |                                 
 | Elemental:        | Shock                  | Adaptive (Corrosive/Fire/Shock)| 
@@ -121,6 +124,8 @@ Read this little [Compatibility & Troubleshooting](https://github.com/BLCM/BLCMo
   - Correct the wrong line of code (was *Set WeaponTypeDefinition'GD_Weap_SMG.A_Weapons...* instead of *Set GD_Weap_SMG.A_Weapons...*) repeated 9 times by using copy/paste to go faster.
 - v1.0.2, December 10, 2018
   - Add a toggle option to receive the Finesse as reward to Twelve O'Clock High Round 3 Rematch
+- v1.0.3, December 14, 2018
+  - Able to spawn with the *Miss Moxxi* prefix
 
 ### Other Recommended Mods:
 
