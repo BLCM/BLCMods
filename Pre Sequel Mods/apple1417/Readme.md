@@ -1,6 +1,12 @@
 ### Experimental
 As the name might suggest, contains experimental changes which you probably shouldn't run if you don't know what you're doing.
 
+### Grenade Status Chance Displayer
+Shows the status effect chance on grenades.    
+Note that just like weapons, the exact chance varies based on the health type (flesh/shield/armour) you use it on, so it won't always be completely accurate.
+
+[Also see the BL2 Version](https://github.com/BLCM/BLCMods/blob/master/Borderlands%202%20mods/apple1417/GrenadeStatusChanceDisplayer.blcm)
+
 ### Fast Travel Helper
 Allows you re-enable the previously one-way only fast travel stations and lets you move them to any map without a station.    
 Also has a few QoL changes to go along with these new stations:
