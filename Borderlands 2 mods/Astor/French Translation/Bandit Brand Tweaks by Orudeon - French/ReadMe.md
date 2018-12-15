@@ -1,4 +1,4 @@
-## *Orudeon's Bandit Brand Tweaks* Traduction Française
+## *Orudeon's Bandit Brand Tweaks* - Traduction Française
 
 Vous jouez à *Borderlands 2* en version Française et vous avez entièrement raison car les acteurs de doublage Français (Christophe Lemoine pour *Le Beau Jack*, Sophie Riffont pour *Moxxi*, Sylvain Lemarié pour *Marcus Kincaid*,  Isabelle Volpe pour *Tiny Tina*, Frédéric Souterelle pour *Sir Hammerlock*, Caroline Pascal pour *Gaige*, etc...) on fait un excellent travail.
 
@@ -13,7 +13,7 @@ __Note:__ Si vous avez oublié la formule magique, contentez-vous d'activer le M
 
 ### Notes de mise à jour:
 
-- v1.0.0, 15 Décembre 2018 
+- v1.0.0, 13 Décembre 2018 
   - Première publication publique
  
 ### Compatibilité:
