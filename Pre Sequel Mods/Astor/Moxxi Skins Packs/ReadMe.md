@@ -6,7 +6,9 @@ This Read Me is just here as a quick synopsis, for detailed informations, each M
 
 - __Moxxi Signature Classic Collection:__ Based on *Creamer/Heart Breaker* vanilla skin, now the Moxxi weapons skins are uniformized to look like an actual manufacturer.
 
-- __Moxxi Signature Elegance Collection:__ Inspired from the *Santos*, a well know French jeweler watch... with the color from the golden screws inserted into a (silver) brushed steel bracelet, and the addition from the red similar to the little *Cartier* box... Et voila!
+- __Moxxi Signature Elegance Collection:__ The red similar to the little *Cartier* box, with discrete golden part inserted into (silver) brushed steel, this is the French elegance.
+
+- __Moxxi Signature Pinky Collection:__ Based on *Slow Hand/Good Touch* BL2's vanilla skin, now the Moxxi weapons skins are uniformized to look like an actual manufacturer.
 
 * * * * *
  
