@@ -2,7 +2,9 @@
 
 I'm Astor, and I apologize in advance for some grammar and/or syntax errors, but my mother tongue is French.
 
-You are on BL2-Mods repository, where you can find all my Mods for Borderlands 2. (For the TPS Mods, please go to the TPS-Mods section) 
+You are on BL2-Mods repository, where you can find all my Mods for Borderlands 2. (For the *The Pre-Sequel* Mods, please [__go to the *TPS-Mods*__](https://github.com/BLCM/BLCMods/tree/master/Pre%20Sequel%20Mods/Astor) repository) 
+
+ 
 
 This ReadMe is just here as a quick synopsis, for detailed informations, each Mod has is own ReadMe (and even a Changelog), so don't hesitate -whoosh!- to give a look on it.
 
