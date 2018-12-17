@@ -25,7 +25,7 @@ Because the PsychoPatch is mainly visual changes, it's better to **look** at the
 - Bandit Gemstone (Quartz) now has a red-pink glow
 - Dahl Gemstone (Emerald) now has a light green glow
 - Vladof Gemstone (Garnet) now has a dark red glow
-- Standalone mod **[here]()**
+- Standalone mod **[here](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/PsychoPatate/No%20Misleading%20Orange%20Glow)**
 
 **Proper Weapon Bodies :**
 - Swaps the Green and Blue rarity bodies of pistols and some shotguns because it makes more sense
