@@ -8,6 +8,8 @@ This Read Me is just here as a quick synopsis, for detailed informations, each M
 
 - __*Tediore Brand Overhaul by Orudeon* French Translation:__ a simple translation Mod that allows you to obtain in French any text additions (in English) from the Mod *Orudeon's Tediore Brand Overhaul V1.35*.
 
+- __*Tough Assault Rifles by Aaron0000* French Translation:__ a simple translation Mod that allows you to obtain in French any text additions (in English) from the Mod *Aaron0000' Tough Assault Rifles*.
+
 * * * * *
  
 ## Acknowledgement
