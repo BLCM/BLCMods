@@ -7,6 +7,10 @@ This readme is just here so you know that there are readme files in every mod fo
 
 I mainly do visual mods and skins, and here is a quick synopsis :
 
+## PsychoPatch
+- A bundle of visual changes, tweaks and fixes I made.
+
+---
 ## Proper Weapon Bodies
 - Swaps green and blue weapon bodies because it makes more sense that way.
 - Allows you to change some weapon bodies because they have unique bodies so why not.
@@ -19,8 +23,9 @@ I mainly do visual mods and skins, and here is a quick synopsis :
 - **ONLY VISUAL CHANGES, NO ACTUAL STATS ARE AFFECTED.**
 
 ---
-## No Glow On Non-Elemental Gemstone
-- Removes the orange glow on non-elemental gemstone weapons.
+## No Misleading Orange Glow  
+(previously known as "No Glow On Non-Elemental Gemstone")
+- Changes or removes the orange glow on some non-elemental weapons.
 
 ---
 ## Actual Rolling Thunder
