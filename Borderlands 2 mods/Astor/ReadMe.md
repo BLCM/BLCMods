@@ -48,9 +48,11 @@ This ReadMe is just here as a quick synopsis, for detailed informations, each Mo
 
 - __*Jakobs Brand Tweaks by Orudeon* French Translation:__ a simple translation Mod that allows you to obtain in French any text additions (in English) from the Mod *Orudeon's Jakobs Brand Tweaks v1.4*.
 
-- __*Tediore Brand Overhaul by Orudeon* French Translation:__ a simple translation Mod that allows you to obtain in French any text additions (in English) from the Mod *Orudeon's Tediore Brand Overhaul V1.35*.
+- __*Tough Assault Rifles by Aaron0000* French Translation:__ a simple translation Mod that allows you to obtain in French any text additions (in English) from the Mod *Aaron0000's Revolvers*.
 
-- __*Tough Assault Rifles by Aaron0000* French Translation:__ a simple translation Mod that allows you to obtain in French any text additions (in English) from the Mod *Aaron0000' Tough Assault Rifles*.
+- __*Revolvers by Aaron0000* French Translation:__ a simple translation Mod that allows you to obtain in French any text additions (in English) from the Mod *Orudeon's Tediore Brand Overhaul V1.35*.
+
+- __*Tough Assault Rifles by Aaron0000* French Translation:__ a simple translation Mod that allows you to obtain in French any text additions (in English) from the Mod *Aaron0000's Tough Assault Rifles*.
 
 * * * * *
 
