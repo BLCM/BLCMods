@@ -1,28 +1,26 @@
-## *Orudeon's Tediore Brand Overhaul* - Traduction Française
+## *Aaron0000's Revolvers* - Traduction Française
 
 Vous jouez à *Borderlands 2* en version Française et vous avez entièrement raison car les acteurs de doublage Français (Christophe Lemoine pour *Le Beau Jack*, Sophie Riffont pour *Moxxi*, Sylvain Lemarié pour *Marcus Kincaid*,  Isabelle Volpe pour *Tiny Tina*, Frédéric Souterelle pour *Sir Hammerlock*, Caroline Pascal pour *Gaige*, etc...) on fait un excellent travail.
 
-Le Mod *Orudeon's Tediore Brand Overhaul Traduction Française* est un simple patch de traduction qui permet d'obtenir en Français tous ajouts de textes (Anglais) du Mod *Orudeon's Tediore Brand Overhaul*.
-
-Ce Mod comprend la traduction Française des ajouts Anglais de la version *Tediore Brand Overhaul V1.35 by Orudeon & Aaron0000*. 
+Le Mod *Aaron0000's Revolvers Traduction Française* est un simple patch de traduction qui permet d'obtenir en Français tous ajouts de textes (Anglais) du Mod *Aaron0000's Revolvers*.
 
 Placez ce Mod de traduction en toute dernière place de vos Mods puis prononcez la formule magique.
 
-![BL2 - Orudeon Tediore Brand Overhaul French Translation](https://imgur.com/f66s9gv.jpg "Don't worry guys... even if my screen capture show French text, my mods are in English")
+![BL2 - Aaron0000's Revolvers French Translation](https://imgur.com/TgXHsBN.jpg "Don't worry guys... even if my screen capture show French text, my mods are in English")
 __Note:__ Si vous avez oublié la formule magique, contentez-vous d'activer le Mod... cela devrait fonctionner également :wink:
 
 ### Notes de mise à jour:
 
-- v1.0.0, 15 Décembre 2018 
+- v1.0.0, 18 Décembre 2018 
   - Première publication publique
  
 ### Compatibilité:
 
 - 100% compatible avec:
   - la dernière version de [BL2 Community Patch](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/Community%20Patch%20Team)
-  - la dernière version (V1.35a) de [Tediore Brand Overhaul](https://github.com/BLCM/BLCMods/blob/master/Borderlands%202%20mods/Orudeon/Tediore%20Brand%20Overhaul%20V1.35a%20by%20Orudeon.txt) de [Orudeon](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/Orudeon)
+  - la dernière version de [Revolvers](https://github.com/BLCM/BLCMods/blob/master/Borderlands%202%20mods/Aaron0000/Weapon-Item%20Parts%20and%20Accessories/Revolvers.txt) de [Aaron0000](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/Aaron0000)
 
-:warning: N'oubliez pas de placer ce Mod __APRES__ le Mod *Orudeon's Tediore Brand Overhaul* :warning:
+:warning: N'oubliez pas de placer ce Mod __APRES__ le Mod *Aaron0000's Revolvers* :warning:
 
 ### Aidez-moi! Le Mod ne fonctionne pas !?!
 
