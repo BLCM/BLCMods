@@ -20,7 +20,7 @@ __Note:__ Si vous avez oublié la formule magique, contentez-vous d'activer le M
 
 - 100% compatible avec:
   - la dernière version de [BL2 Community Patch](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/Community%20Patch%20Team)
-  - la dernière version de (V1.35a) [Tediore Brand Overhaul](https://github.com/BLCM/BLCMods/blob/master/Borderlands%202%20mods/Orudeon/Tediore%20Brand%20Overhaul%20V1.35a%20by%20Orudeon.txt) de [Orudeon](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/Orudeon)
+  - la dernière version (V1.35a) de [Tediore Brand Overhaul](https://github.com/BLCM/BLCMods/blob/master/Borderlands%202%20mods/Orudeon/Tediore%20Brand%20Overhaul%20V1.35a%20by%20Orudeon.txt) de [Orudeon](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/Orudeon)
 
 :warning: N'oubliez pas de placer ce Mod __APRES__ le Mod *Orudeon's Tediore Brand Overhaul* :warning:
 
