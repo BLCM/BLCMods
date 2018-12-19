@@ -1,6 +1,6 @@
 ## Shorter Fast Travel Waiting Time
 
-This mod is for you as it reduces the useless (and annoying) Fast Travel waiting time in co-op.
+This mod is for you as it reduces the useless (and annoying) Fast Travel waiting time in co-op from 5 seconds (default Vanilla Game Value) to 2 seconds (similar to the first Borderlands).
 
 ### Changelog:
 - v1.0.0, December 5, 2018
@@ -17,10 +17,6 @@ Read this little [Compatibility & Troubleshooting](https://github.com/BLCM/BLCMo
 ### To do:
 
 - [ ] Well... it seems to work correctly, so nothing I guess?
-
-### Credits & Thanks:
-
-Inspired by [Travel Portal Disabler](https://github.com/BLCM/BLCMods/blob/master/Borderlands%202%20mods/FromDarkHell/Quality%20of%20Life/TravelPortalDisabler.blcm) created for BL2 by [FromDarkHell](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/FromDarkHell). Such a Mod didn't seem to exist for TPS, though, so I took it upon myself to create one. All the credits go to [FromDarkHell](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/FromDarkHell) for the idea. 
   
 ### Note: 
 
