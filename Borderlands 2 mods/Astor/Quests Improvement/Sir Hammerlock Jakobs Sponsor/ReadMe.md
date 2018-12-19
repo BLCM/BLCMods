@@ -1,13 +1,13 @@
-## Hammerlock Jakobs Sponsor
+## Sir Hammerlock's Jakobs Sponsor
 
 - ### Borderlands 2 - Main Game:	
-  - The 10 missions given by Hammerlock in the main game are rewarded with a Jakobs weapon/item
+  - The 10 missions given by Sir Hammerlock in the main game are rewarded with a Jakobs weapon/item
     
 __Note:__ In the Mission Bad Hair Day (Southern Shelf) the Hammerlock reward is now a Blue Sniper Jakobs or a Blue Shotgun Torgue (if the fur is given to Clap-Trap).
 
 - ###Campaign DLC:	
-  - __DLC Campaign 1:__ The single mission given by Hammerlock in *Captain Scarlett and Her Pirate's Booty* is rewarded with a Jakobs weapon/item
-  - __DLC Campaign 3:__ The 4 missions given by Hammerlock in *Sir Hammerlock's Big Game Hunt* are rewarded with a Jakobs weapon/item
+  - __DLC Campaign 1:__ The single mission given by Sir Hammerlock in *Captain Scarlett and Her Pirate's Booty* is rewarded with a Jakobs weapon/item
+  - __DLC Campaign 3:__ The 4 missions given by Sir Hammerlock in *Sir Hammerlock's Big Game Hunt* are rewarded with a Jakobs weapon/item
  	
 ![Jakobs pistol as reward for Handsome Jack Here! in Southern Shelf](https://imgur.com/F3u9ezy.jpg "Don't worry guys... even if my screen capture show French text, my mods are in English")
 	
@@ -48,7 +48,7 @@ Read this little [Compatibility & Troubleshooting](https://github.com/BLCM/BLCMo
 
 All files and content provided here were written by me (Astor), unless stated otherwise.
 
-- They are free for personal use. You may use these mods in videos, or for streaming, as long as you give me proper credit. I would appreciate that you'll letting me know about it, and at least, provide a link to [Github.com/BLCM/BLCMods/Borderlands 2 mods/Astor](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/Astor) .
+- They are free for personal use. You may use these mods in videos, or for streaming, as long as you give me proper credit. I would appreciate that you'll letting me know about it, and at least, provide a link to [Github.com/BLCM/BLCMods/Borderlands 2 mods/Astor](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/Astor).
 
 - You may re-use small bits of code (e.g. formulas, behavior modifications, etc) for your own purposes, and let me know about it.
  
