@@ -32,7 +32,7 @@ Not clear? ... Well, perhaps it will be more easy to compare the difference in a
 | **Bullet Tech:**    |                                |                                        |          
 | Bullet Type:        | Standard                       | Pocket Rocket GyroJets Explosive                     | 
 | Bullet Damage:      | SMG Standard                   | -20% from Plasma Projectile Damage|
-| Fire Cost:          | 1 bullets cost 1 ammo          | 1 bullets cost 2 ammo                  | 
+| Fire Cost:          | 1 bullets cost 1 ammo          | 1 bullet cost 2 ammos                  | 
 | Bullet Speed:       | 20.000 (Lascaux) / 6.000 (Plasma Caster)| 5x Pocket Rocket Speed Boost  | 
 | Burst Count:        | 9 to 14 rounds                 | 5 rounds                               | 
 | **Explosive Tech:** |                                |                                        |           

@@ -10,9 +10,9 @@ This Read Me is just here as a quick synopsis, for detailed informations, each M
 
 - __Dr Zed E-Tech Geek:__ The missions given by Dr Zed give you the choice to be rewarded between 2 E-Tech weapons.
 
-- __Hammerlock Jakobs Sponsor:__ The missions given by Hammerlock give you the choice to be rewarded between 2 Jakobs weapons/items.
-
 - __Less Tedious Quests:__ As the title suggests it, makes a few timed **-failable!-** optional mission less tedious to complete.
+
+- __Sir Hammerlock's Jakobs Sponsor:__ The missions given by Sir Hammerlock give you the choice to be rewarded between 2 Jakobs weapons/items.
 
 * * * * *
  
