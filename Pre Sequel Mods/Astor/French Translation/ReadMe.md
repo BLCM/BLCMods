@@ -6,9 +6,11 @@ This Read Me is just here as a quick synopsis, for detailed informations, each M
 
 * * * * *
  
-## Acknowledgement
+## Credits:
 
-A ~~big~~ huge thanks to @LightChaosman and his great - [BLCMM (Borderlands Community Mod Manager)](https://github.com/BLCM/BLCMods/wiki/Borderlands-Community-Mod-Manager) tool who make the Mods creation a real pleasure. 
+I am __NOT__ the author for the mod listed above, and I __DON'T__ modify it in anyway... so I cannot be can not be held responsible if the Mod blow up in your face! 
+
+Undeniably, to create such great mods, all the credits go to each respective authors... but perhaps I deserve a little credit too... at least to translate the new/additional line(s) of code ```Description``` in French without doing (too much) spelling mistakes :smirk: 
 
 * * * * *
  

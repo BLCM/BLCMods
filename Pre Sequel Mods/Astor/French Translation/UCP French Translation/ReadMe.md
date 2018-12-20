@@ -16,7 +16,7 @@ __Note:__ Si vous avez oublié la formule magique, contentez-vous d'activer le M
  
 ### Compatibilité:
 
-- 100% compatible avec la dernière version de [TPS Community Patch](https://github.com/BLCM/BLCMods/tree/master/Pre%20Sequel%20Mods/Community%20Patch)
+- 100% compatible avec la dernière version (v2.2) de [TPS Community Patch](https://github.com/BLCM/BLCMods/tree/master/Pre%20Sequel%20Mods/Community%20Patch)
 
 :warning: N'oubliez pas de placer ce Mod __APRES__ le Mod *UCP 2.2* :warning:
 
