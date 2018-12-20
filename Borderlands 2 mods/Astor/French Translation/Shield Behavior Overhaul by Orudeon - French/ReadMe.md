@@ -1,8 +1,8 @@
-## *Orudeon's Shield Behavior Overhaul * - Traduction Française
+## *Orudeon's Shield Behavior Overhaul* - Traduction Française
 
 Vous jouez à *Borderlands 2* en version Française et vous avez entièrement raison car les acteurs de doublage Français (Christophe Lemoine pour *Le Beau Jack*, Sophie Riffont pour *Moxxi*, Sylvain Lemarié pour *Marcus Kincaid*,  Isabelle Volpe pour *Tiny Tina*, Frédéric Souterelle pour *Sir Hammerlock*, Caroline Pascal pour *Gaige*, etc...) on fait un excellent travail.
 
-Le Mod *Orudeon's Shield Behavior Overhaul Traduction Française* est un simple patch de traduction qui permet d'obtenir en Français tous ajouts de textes (Anglais) du Mod *Orudeon's Shield Behavior Overhaul *.
+Le Mod *Orudeon's Shield Behavior Overhaul Traduction Française* est un simple patch de traduction qui permet d'obtenir en Français tous ajouts de textes (Anglais) du Mod *Orudeon's Shield Behavior Overhaul*.
 
 Ce Mod comprend la traduction Française des ajouts Anglais de la version *Shield Behavior Overhaul V1.3a by Orudeon*. 
 
