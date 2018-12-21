@@ -8,7 +8,7 @@ This Read Me is just here as a quick synopsis, for detailed informations, each M
  
 ## Credits:
 
-I am __NOT__ the author for the mod listed above, and I __DON'T__ modify it in anyway... so I cannot be can not be held responsible if the Mod blow up in your face! 
+I am __NOT__ the author for the mod listed above, and I __DON'T__ modify it in anyway... so I cannot be held responsible if the Mod blow up in your face! 
 
 Undeniably, to create such great mods, all the credits go to each respective authors... but perhaps I deserve a little credit too... at least to translate the new/additional line(s) of code ```Description``` in French without doing (too much) spelling mistakes :smirk: 
 
