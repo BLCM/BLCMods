@@ -44,17 +44,19 @@ This ReadMe is just here as a quick synopsis, for detailed informations, each Mo
 
 ## French Translation:
 
-- __*Bandit Brand Tweaks by Orudeon* French Translation:__ a simple translation Mod that allows you to obtain in French any text additions (in English) from the Mod *Orudeon's Bandit Brand Tweaks v1.21*.
+- __*Bandit Brand Tweaks by Orudeon* French Translation:__ a simple *Add-On Translation Mod* that allows you to obtain in French any text additions (in English) from the Mod *Orudeon's Bandit Brand Tweaks v1.21*.
 
-- __*Jakobs Brand Tweaks by Orudeon* French Translation:__ a simple translation Mod that allows you to obtain in French any text additions (in English) from the Mod *Orudeon's Jakobs Brand Tweaks v1.4*.
+- __*Jakobs Brand Tweaks by Orudeon* French Translation:__ a simple *Add-On Translation Mod* that allows you to obtain in French any text additions (in English) from the Mod *Orudeon's Jakobs Brand Tweaks v1.4*.
 
-- __*Revolvers by Aaron0000* French Translation:__ a simple translation Mod that allows you to obtain in French any text additions (in English) from the Mod *Orudeon's Tediore Brand Overhaul V1.35*.
+- __*Revolvers by Aaron0000* French Translation:__ a simple *Add-On Translation Mod* that allows you to obtain in French any text additions (in English) from the Mod *Orudeon's Tediore Brand Overhaul V1.35*.
 
-- __*Shield Behavior Overgaul by Orudeon* French Translation:__ a simple translation Mod that allows you to obtain in French any text additions (in English) from the Mod *Orudeon's Shield Behavior Overgaul v1.3a*.
+- __*Shield Behavior Overgaul by Orudeon* French Translation:__ a simple *Add-On Translation Mod* that allows you to obtain in French any text additions (in English) from the Mod *Orudeon's Shield Behavior Overgaul v1.3a*.
 
-- __*Tediore Brand Overgaul by Orudeon* French Translation:__ a simple translation Mod that allows you to obtain in French any text additions (in English) from the Mod *Orudeon's Tediore Brand Overgaul v1.35*.
+- __*Shield Stat Tweaks by Orudeon* French Translation:__ a simple *Add-On Translation Mod* that allows you to obtain in French any text additions (in English) from the Mod *Orudeon's Shield Stat Tweaks v1.1*.
 
-- __*Tough Assault Rifles by Aaron0000* French Translation:__ a simple translation Mod that allows you to obtain in French any text additions (in English) from the Mod *Aaron0000's Revolvers*.
+- __*Tediore Brand Overgaul by Orudeon* French Translation:__ a simple *Add-On Translation Mod* that allows you to obtain in French any text additions (in English) from the Mod *Orudeon's Tediore Brand Overgaul v1.35*.
+
+- __*Tough Assault Rifles by Aaron0000* French Translation:__ a simple *Add-On Translation Mod* that allows you to obtain in French any text additions (in English) from the Mod *Aaron0000's Revolvers*.
 
 * * * * *
 
