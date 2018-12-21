@@ -2,9 +2,9 @@
 
 Vous jouez à *Borderlands 2* en version Française et vous avez entièrement raison car les acteurs de doublage Français (Christophe Lemoine pour *Le Beau Jack*, Sophie Riffont pour *Moxxi*, Sylvain Lemarié pour *Marcus Kincaid*,  Isabelle Volpe pour *Tiny Tina*, Frédéric Souterelle pour *Sir Hammerlock*, Caroline Pascal pour *Gaige*, etc...) on fait un excellent travail.
 
-Le Mod *Orudeon's Jakobs Brand Tweaks Traduction Française* est un simple patch de traduction qui permet d'obtenir en Français tous ajouts de textes (Anglais) du Mod *Orudeon's Jakobs Brand Tweaks.
+Le Mod *Orudeon's Jakobs Brand Tweaks Traduction Française* est un simple patch de traduction, a ajouter après le Mod original, qui permet d'obtenir en Français tous ajouts de textes (Anglais) du Mod *Orudeon's Jakobs Brand Tweaks.
 
-Ce Mod comprend la traduction Française des ajouts Anglais de la version *Jakobs Brand Tweaks v1.4 by Orudeon* 
+Ce Mod comprend la traduction Française des ajouts Anglais de la version *Jakobs Brand Tweaks v1.4 by Orudeon*, mais pas le Mod original bien évidemment. 
 
 Placez ce Mod de traduction en toute dernière place de vos Mods puis prononcez la formule magique.
 
