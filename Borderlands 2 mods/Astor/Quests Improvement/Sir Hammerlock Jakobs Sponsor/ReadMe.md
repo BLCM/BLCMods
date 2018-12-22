@@ -5,13 +5,12 @@
     
 __Note:__ In the Mission Bad Hair Day (Southern Shelf) the Hammerlock reward is now a Blue Sniper Jakobs or a Blue Shotgun Torgue (if the fur is given to Clap-Trap).
 
-- ###Campaign DLC:	
+- ### Campaign DLC:	
   - __DLC Campaign 1:__ The single mission given by Sir Hammerlock in *Captain Scarlett and Her Pirate's Booty* is rewarded with a Jakobs weapon/item
   - __DLC Campaign 3:__ The 4 missions given by Sir Hammerlock in *Sir Hammerlock's Big Game Hunt* are rewarded with a Jakobs weapon/item
  	
 ![Jakobs pistol as reward for Handsome Jack Here! in Southern Shelf](https://imgur.com/F3u9ezy.jpg "Don't worry guys... even if my screen capture show French text, my mods are in English")
-	
-*__Note:__ As for my Double Quest Reward "Redux", this Mod will give you the choice between 2 weapons/items instead of a single one, so it will double the chance to get a weapon/item with desired accessory/parts.*	
+__Note:__ As for my *Double Quest Reward Redux*, this Mod will give you the choice between 2 weapons/items instead of a single one, so it will double the chance to get a weapon/item with desired accessory/parts.	
 
 ### Changelog:
 
