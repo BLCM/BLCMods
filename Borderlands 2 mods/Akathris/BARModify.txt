@@ -7,46 +7,103 @@
 		</profiles>
 	</head>
 	<body>
-		<category name="BAR Modifications">
-			<category name="Choose which stats you want and don't want (Don't check any if you want to keep all bonuses)" MUT="true">
-				<category name="Remove all damage related stats">
-					<code profiles="">set globals BadassRewards (BadassRewardDefinition'GD_Challenges.BadassRewards.BARD_Health_Max',BadassRewardDefinition'GD_Challenges.BadassRewards.BARD_Shield_Max',BadassRewardDefinition'GD_Challenges.BadassRewards.BARD_Shield_RechargeDelay',BadassRewardDefinition'GD_Challenges.BadassRewards.BARD_Shield_RechargeRate',BadassRewardDefinition'GD_Challenges.BadassRewards.BARD_Gun_Accuracy',BadassRewardDefinition'GD_Challenges.BadassRewards.BARD_Gun_FireRate',BadassRewardDefinition'GD_Challenges.BadassRewards.BARD_Gun_RecoilReduction',BadassRewardDefinition'GD_Challenges.BadassRewards.BARD_Gun_ReloadSpeed',BadassRewardDefinition'GD_Challenges.BadassRewards.BARD_StatusEffect_ProcChance')</code>
+		<category name="BAR Modifications v2.fuk me">
+			<category name="{Check only one} Choose which stats you want and don't want (Don't check any if you want to keep all bonuses)">
+				<category name="Removes specific groups of bonuses" MUT="true">
+					<category name="Remove all damage related stats">
+						<code profiles="">set globals BadassRewards (BadassRewardDefinition'GD_Challenges.BadassRewards.BARD_Health_Max',BadassRewardDefinition'GD_Challenges.BadassRewards.BARD_Shield_Max',BadassRewardDefinition'GD_Challenges.BadassRewards.BARD_Shield_RechargeDelay',BadassRewardDefinition'GD_Challenges.BadassRewards.BARD_Shield_RechargeRate',BadassRewardDefinition'GD_Challenges.BadassRewards.BARD_Gun_Accuracy',BadassRewardDefinition'GD_Challenges.BadassRewards.BARD_Gun_FireRate',BadassRewardDefinition'GD_Challenges.BadassRewards.BARD_Gun_RecoilReduction',BadassRewardDefinition'GD_Challenges.BadassRewards.BARD_Gun_ReloadSpeed',BadassRewardDefinition'GD_Challenges.BadassRewards.BARD_StatusEffect_ProcChance')</code>
+					</category>
+					<category name="Remove all survivability stats">
+						<code profiles="">set globals BadassRewards (BadassRewardDefinition'GD_Challenges.BadassRewards.BARD_Melee_Damage',BadassRewardDefinition'GD_Challenges.BadassRewards.BARD_Grenade_Damage',BadassRewardDefinition'GD_Challenges.BadassRewards.BARD_Gun_Accuracy',BadassRewardDefinition'GD_Challenges.BadassRewards.BARD_Gun_Damage',BadassRewardDefinition'GD_Challenges.BadassRewards.BARD_Gun_FireRate',BadassRewardDefinition'GD_Challenges.BadassRewards.BARD_Gun_RecoilReduction',BadassRewardDefinition'GD_Challenges.BadassRewards.BARD_Gun_ReloadSpeed',BadassRewardDefinition'GD_Challenges.BadassRewards.BARD_StatusEffect_ProcChance',BadassRewardDefinition'GD_Challenges.BadassRewards.BARD_StatusEffect_Damage',BadassRewardDefinition'GD_Challenges.BadassRewards.BARD_CriticalHitDamage')</code>
+					</category>
+					<category name="Remove all shield related stats">
+						<code profiles="">set globals BadassRewards (BadassRewardDefinition'GD_Challenges.BadassRewards.BARD_Health_Max',BadassRewardDefinition'GD_Challenges.BadassRewards.BARD_Melee_Damage',BadassRewardDefinition'GD_Challenges.BadassRewards.BARD_Grenade_Damage',BadassRewardDefinition'GD_Challenges.BadassRewards.BARD_Gun_Accuracy',BadassRewardDefinition'GD_Challenges.BadassRewards.BARD_Gun_Damage',BadassRewardDefinition'GD_Challenges.BadassRewards.BARD_Gun_FireRate',BadassRewardDefinition'GD_Challenges.BadassRewards.BARD_Gun_RecoilReduction',BadassRewardDefinition'GD_Challenges.BadassRewards.BARD_Gun_ReloadSpeed',BadassRewardDefinition'GD_Challenges.BadassRewards.BARD_StatusEffect_ProcChance',BadassRewardDefinition'GD_Challenges.BadassRewards.BARD_StatusEffect_Damage',BadassRewardDefinition'GD_Challenges.BadassRewards.BARD_CriticalHitDamage')</code>
+					</category>
+					<category name="Remove health stat">
+						<code profiles="">set globals BadassRewards (BadassRewardDefinition'GD_Challenges.BadassRewards.BARD_Shield_Max',BadassRewardDefinition'GD_Challenges.BadassRewards.BARD_Shield_RechargeDelay',BadassRewardDefinition'GD_Challenges.BadassRewards.BARD_Shield_RechargeRate',BadassRewardDefinition'GD_Challenges.BadassRewards.BARD_Melee_Damage',BadassRewardDefinition'GD_Challenges.BadassRewards.BARD_Grenade_Damage',BadassRewardDefinition'GD_Challenges.BadassRewards.BARD_Gun_Accuracy',BadassRewardDefinition'GD_Challenges.BadassRewards.BARD_Gun_Damage',BadassRewardDefinition'GD_Challenges.BadassRewards.BARD_Gun_FireRate',BadassRewardDefinition'GD_Challenges.BadassRewards.BARD_Gun_RecoilReduction',BadassRewardDefinition'GD_Challenges.BadassRewards.BARD_Gun_ReloadSpeed',BadassRewardDefinition'GD_Challenges.BadassRewards.BARD_StatusEffect_ProcChance',BadassRewardDefinition'GD_Challenges.BadassRewards.BARD_StatusEffect_Damage',BadassRewardDefinition'GD_Challenges.BadassRewards.BARD_CriticalHitDamage')</code>
+					</category>
+					<category name="Remove misc stats (Fire rate, reload speed, accuracy, recoil reduction)">
+						<code profiles="">set globals BadassRewards (BadassRewardDefinition'GD_Challenges.BadassRewards.BARD_Health_Max',BadassRewardDefinition'GD_Challenges.BadassRewards.BARD_Shield_Max',BadassRewardDefinition'GD_Challenges.BadassRewards.BARD_Shield_RechargeDelay',BadassRewardDefinition'GD_Challenges.BadassRewards.BARD_Shield_RechargeRate',BadassRewardDefinition'GD_Challenges.BadassRewards.BARD_Melee_Damage',BadassRewardDefinition'GD_Challenges.BadassRewards.BARD_Grenade_Damage',BadassRewardDefinition'GD_Challenges.BadassRewards.BARD_Gun_Damage',BadassRewardDefinition'GD_Challenges.BadassRewards.BARD_StatusEffect_ProcChance',BadassRewardDefinition'GD_Challenges.BadassRewards.BARD_StatusEffect_Damage',BadassRewardDefinition'GD_Challenges.BadassRewards.BARD_CriticalHitDamage')</code>
+					</category>
+					<category name="Remove elemental based stats">
+						<code profiles="">set globals BadassRewards (BadassRewardDefinition'GD_Challenges.BadassRewards.BARD_Health_Max',BadassRewardDefinition'GD_Challenges.BadassRewards.BARD_Shield_Max',BadassRewardDefinition'GD_Challenges.BadassRewards.BARD_Shield_RechargeDelay',BadassRewardDefinition'GD_Challenges.BadassRewards.BARD_Shield_RechargeRate',BadassRewardDefinition'GD_Challenges.BadassRewards.BARD_Melee_Damage',BadassRewardDefinition'GD_Challenges.BadassRewards.BARD_Grenade_Damage',BadassRewardDefinition'GD_Challenges.BadassRewards.BARD_Gun_Accuracy',BadassRewardDefinition'GD_Challenges.BadassRewards.BARD_Gun_Damage',BadassRewardDefinition'GD_Challenges.BadassRewards.BARD_Gun_FireRate',BadassRewardDefinition'GD_Challenges.BadassRewards.BARD_Gun_RecoilReduction',BadassRewardDefinition'GD_Challenges.BadassRewards.BARD_Gun_ReloadSpeed',BadassRewardDefinition'GD_Challenges.BadassRewards.BARD_CriticalHitDamage')</code>
+					</category>
 				</category>
-				<category name="Remove all survivability stats">
-					<code profiles="">set globals BadassRewards (BadassRewardDefinition'GD_Challenges.BadassRewards.BARD_Melee_Damage',BadassRewardDefinition'GD_Challenges.BadassRewards.BARD_Grenade_Damage',BadassRewardDefinition'GD_Challenges.BadassRewards.BARD_Gun_Accuracy',BadassRewardDefinition'GD_Challenges.BadassRewards.BARD_Gun_Damage',BadassRewardDefinition'GD_Challenges.BadassRewards.BARD_Gun_FireRate',BadassRewardDefinition'GD_Challenges.BadassRewards.BARD_Gun_RecoilReduction',BadassRewardDefinition'GD_Challenges.BadassRewards.BARD_Gun_ReloadSpeed',BadassRewardDefinition'GD_Challenges.BadassRewards.BARD_StatusEffect_ProcChance',BadassRewardDefinition'GD_Challenges.BadassRewards.BARD_StatusEffect_Damage',BadassRewardDefinition'GD_Challenges.BadassRewards.BARD_CriticalHitDamage')</code>
-				</category>
-				<category name="Remove all shield related stats">
-					<code profiles="">set globals BadassRewards (BadassRewardDefinition'GD_Challenges.BadassRewards.BARD_Health_Max',BadassRewardDefinition'GD_Challenges.BadassRewards.BARD_Melee_Damage',BadassRewardDefinition'GD_Challenges.BadassRewards.BARD_Grenade_Damage',BadassRewardDefinition'GD_Challenges.BadassRewards.BARD_Gun_Accuracy',BadassRewardDefinition'GD_Challenges.BadassRewards.BARD_Gun_Damage',BadassRewardDefinition'GD_Challenges.BadassRewards.BARD_Gun_FireRate',BadassRewardDefinition'GD_Challenges.BadassRewards.BARD_Gun_RecoilReduction',BadassRewardDefinition'GD_Challenges.BadassRewards.BARD_Gun_ReloadSpeed',BadassRewardDefinition'GD_Challenges.BadassRewards.BARD_StatusEffect_ProcChance',BadassRewardDefinition'GD_Challenges.BadassRewards.BARD_StatusEffect_Damage',BadassRewardDefinition'GD_Challenges.BadassRewards.BARD_CriticalHitDamage')</code>
-				</category>
-				<category name="Remove health stat">
-					<code profiles="">set globals BadassRewards (BadassRewardDefinition'GD_Challenges.BadassRewards.BARD_Shield_Max',BadassRewardDefinition'GD_Challenges.BadassRewards.BARD_Shield_RechargeDelay',BadassRewardDefinition'GD_Challenges.BadassRewards.BARD_Shield_RechargeRate',BadassRewardDefinition'GD_Challenges.BadassRewards.BARD_Melee_Damage',BadassRewardDefinition'GD_Challenges.BadassRewards.BARD_Grenade_Damage',BadassRewardDefinition'GD_Challenges.BadassRewards.BARD_Gun_Accuracy',BadassRewardDefinition'GD_Challenges.BadassRewards.BARD_Gun_Damage',BadassRewardDefinition'GD_Challenges.BadassRewards.BARD_Gun_FireRate',BadassRewardDefinition'GD_Challenges.BadassRewards.BARD_Gun_RecoilReduction',BadassRewardDefinition'GD_Challenges.BadassRewards.BARD_Gun_ReloadSpeed',BadassRewardDefinition'GD_Challenges.BadassRewards.BARD_StatusEffect_ProcChance',BadassRewardDefinition'GD_Challenges.BadassRewards.BARD_StatusEffect_Damage',BadassRewardDefinition'GD_Challenges.BadassRewards.BARD_CriticalHitDamage')</code>
-				</category>
-				<category name="Remove elemental based stats">
-					<code profiles="">set globals BadassRewards (BadassRewardDefinition'GD_Challenges.BadassRewards.BARD_Health_Max',BadassRewardDefinition'GD_Challenges.BadassRewards.BARD_Shield_Max',BadassRewardDefinition'GD_Challenges.BadassRewards.BARD_Shield_RechargeDelay',BadassRewardDefinition'GD_Challenges.BadassRewards.BARD_Shield_RechargeRate',BadassRewardDefinition'GD_Challenges.BadassRewards.BARD_Melee_Damage',BadassRewardDefinition'GD_Challenges.BadassRewards.BARD_Grenade_Damage',BadassRewardDefinition'GD_Challenges.BadassRewards.BARD_Gun_Accuracy',BadassRewardDefinition'GD_Challenges.BadassRewards.BARD_Gun_Damage',BadassRewardDefinition'GD_Challenges.BadassRewards.BARD_Gun_FireRate',BadassRewardDefinition'GD_Challenges.BadassRewards.BARD_Gun_RecoilReduction',BadassRewardDefinition'GD_Challenges.BadassRewards.BARD_Gun_ReloadSpeed',BadassRewardDefinition'GD_Challenges.BadassRewards.BARD_CriticalHitDamage')</code>
-				</category>
-				<category name="Remove misc stats (Fire rate, reload speed, accuracy, recoil reduction)">
-					<code profiles="">set globals BadassRewards (BadassRewardDefinition'GD_Challenges.BadassRewards.BARD_Health_Max',BadassRewardDefinition'GD_Challenges.BadassRewards.BARD_Shield_Max',BadassRewardDefinition'GD_Challenges.BadassRewards.BARD_Shield_RechargeDelay',BadassRewardDefinition'GD_Challenges.BadassRewards.BARD_Shield_RechargeRate',BadassRewardDefinition'GD_Challenges.BadassRewards.BARD_Melee_Damage',BadassRewardDefinition'GD_Challenges.BadassRewards.BARD_Grenade_Damage',BadassRewardDefinition'GD_Challenges.BadassRewards.BARD_Gun_Damage',BadassRewardDefinition'GD_Challenges.BadassRewards.BARD_StatusEffect_ProcChance',BadassRewardDefinition'GD_Challenges.BadassRewards.BARD_StatusEffect_Damage',BadassRewardDefinition'GD_Challenges.BadassRewards.BARD_CriticalHitDamage')</code>
+				<category name="{KILL ME} Select the one that removes the bonuses you don't want {NOT FINISHED AND WON'T BE FOR THE NEXT 30 YEARS}">
+					<category name="Only one bonus" MUT="true">
+						<category name="Just health">
+							<code profiles="">set globals BadassRewards (BadassRewardDefinition'GD_Challenges.BadassRewards.BARD_Health_Max')</code>
+						</category>
+						<category name="Just max shield">
+							<code profiles="">set globals BadassRewards (BadassRewardDefinition'GD_Challenges.BadassRewards.BARD_Shield_Max')</code>
+						</category>
+						<category name="Just recharge delay">
+							<code profiles="">set globals BadassRewards (BadassRewardDefinition'GD_Challenges.BadassRewards.BARD_Shield_RechargeDelay')</code>
+						</category>
+						<category name="Just recharge rate">
+							<code profiles="">set globals BadassRewards (BadassRewardDefinition'GD_Challenges.BadassRewards.BARD_Shield_RechargeRate')</code>
+						</category>
+						<category name="Just melee damage">
+							<code profiles="">set globals BadassRewards (BadassRewardDefinition'GD_Challenges.BadassRewards.BARD_Melee_Damage')</code>
+						</category>
+						<category name="Just grenade damage">
+							<code profiles="">set globals BadassRewards (BadassRewardDefinition'GD_Challenges.BadassRewards.BARD_Grenade_Damage')</code>
+						</category>
+						<category name="Just accuracy">
+							<code profiles="">set globals BadassRewards (BadassRewardDefinition'GD_Challenges.BadassRewards.BARD_Gun_Accuracy')</code>
+						</category>
+						<category name="Just gun damage">
+							<code profiles="">set globals BadassRewards (BadassRewardDefinition'GD_Challenges.BadassRewards.BARD_Gun_Damage')</code>
+						</category>
+						<category name="Just fire rate">
+							<code profiles="">set globals BadassRewards (BadassRewardDefinition'GD_Challenges.BadassRewards.BARD_Gun_FireRate')</code>
+						</category>
+						<category name="Just recoil reduction">
+							<code profiles="">set globals BadassRewards (BadassRewardDefinition'GD_Challenges.BadassRewards.BARD_Gun_RecoilReduction')</code>
+						</category>
+						<category name="Just reload speed">
+							<code profiles="">set globals BadassRewards (BadassRewardDefinition'GD_Challenges.BadassRewards.BARD_Gun_ReloadSpeed')</code>
+						</category>
+						<category name="Just ele eff chance">
+							<code profiles="">set globals BadassRewards (BadassRewardDefinition'GD_Challenges.BadassRewards.BARD_StatusEffect_ProcChance')</code>
+						</category>
+						<category name="Just ele damage">
+							<code profiles="">set globals BadassRewards (BadassRewardDefinition'GD_Challenges.BadassRewards.BARD_StatusEffect_Damage')</code>
+						</category>
+						<category name="Just crit damage">
+							<code profiles="">set globals BadassRewards (BadassRewardDefinition'GD_Challenges.BadassRewards.BARD_CriticalHitDamage')</code>
+						</category>
+					</category>
 				</category>
 			</category>
-			<category name="Percent of challenges needed to prestige (30%)">
-				<code profiles="default">set globals PercentChallengeCompletionNeededForPrestige 0.30</code>
-			</category>
-			<category name="Amount of BAR needed to get a token (500)">
-				<code profiles="default">set globals BadassRanksForToken (BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Challenges.RewardBalance.Init_BadassRanksRequiredForToken',BaseValueScaleConstant=500.000000)</code>
-			</category>
-			<category name="Thing that make 500 always be the BAR needed for a token">
-				<code profiles="default">set GD_Challenges.RewardBalance.Init_BadassRanksRequiredForToken ValueFormula (bEnabled=True,Multiplier=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),Level=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'GD_Challenges.RewardBalance.Att_BadassTokenTestRank',InitializationDefinition=None,BaseValueScaleConstant=1.000000),Power=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),Offset=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))</code>
-			</category>
-			<category name="Thing that makes you always get a 1% bonus">
-				<code profiles="default">set GD_Challenges.BadassSkill.Att_BadassBonusDiminisher:ConstantAttributeValueResolver_0 ConstantValue 1.000</code>
+			<category name="Optional stuffs">
+				<category name="Bonus never goes below 1%">
+					<code profiles="">set GD_Challenges.BadassSkill.Att_BadassBonusDiminisher:ConstantAttributeValueResolver_0 ConstantValue 1.000</code>
+				</category>
+				<category name="(Probably works lol) Percent of challenges needed to prestige (30%)">
+					<code profiles="">set globals PercentChallengeCompletionNeededForPrestige 0.30</code>
+				</category>
+				<category name="BAR needed for one token" MUT="true">
+					<category name="250 BAR">
+						<code profiles="">set globals BadassRanksForToken (BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Challenges.RewardBalance.Init_BadassRanksRequiredForToken',BaseValueScaleConstant=250.000000)</code>
+					</category>
+					<category name="500 BAR">
+						<code profiles="">set globals BadassRanksForToken (BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Challenges.RewardBalance.Init_BadassRanksRequiredForToken',BaseValueScaleConstant=500.000000)</code>
+					</category>
+					<category name="750 BAR">
+						<code profiles="">set globals BadassRanksForToken (BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Challenges.RewardBalance.Init_BadassRanksRequiredForToken',BaseValueScaleConstant=750.000000)</code>
+					</category>
+					<category name="1000 BAR">
+						<code profiles="">set globals BadassRanksForToken (BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Challenges.RewardBalance.Init_BadassRanksRequiredForToken',BaseValueScaleConstant=1000.000000)</code>
+					</category>
+				</category>
+				<category name="Thing that makes (number) always be the BAR needed for a token {If you use \"BAR needed for one token make sure you have this as well}">
+					<code profiles="">set GD_Challenges.RewardBalance.Init_BadassRanksRequiredForToken ValueFormula (bEnabled=True,Multiplier=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),Level=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'GD_Challenges.RewardBalance.Att_BadassTokenTestRank',InitializationDefinition=None,BaseValueScaleConstant=1.000000),Power=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),Offset=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))</code>
+				</category>
 			</category>
 		</category>
 	</body>
 </BLCMM>
 
 #Commands:
-set globals PercentChallengeCompletionNeededForPrestige 0.30
-set globals BadassRanksForToken (BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Challenges.RewardBalance.Init_BadassRanksRequiredForToken',BaseValueScaleConstant=500.000000)
-set GD_Challenges.RewardBalance.Init_BadassRanksRequiredForToken ValueFormula (bEnabled=True,Multiplier=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),Level=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'GD_Challenges.RewardBalance.Att_BadassTokenTestRank',InitializationDefinition=None,BaseValueScaleConstant=1.000000),Power=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),Offset=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))
-set GD_Challenges.BadassSkill.Att_BadassBonusDiminisher:ConstantAttributeValueResolver_0 ConstantValue 1.000
 
