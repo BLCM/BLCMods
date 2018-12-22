@@ -1,10 +1,15 @@
 ## Battle Arena Sponsored
 
+![Battle Arena sponsored](https://imgur.com/1EFdkmY.jpg "Don't worry guys... even if my screen capture show French text, my mods are in English")
+
 The normal battles rounds from the following *Battle Arena* are now fully sponsored by weapons manufacturers... and of course, the reward for the final round is still a Moxxi's weapon.
 
 ## Bandit Sponsor
 
-- ### *Fink's Slaughterhouse* sponsored by *Bandit* 
+![Bandit Slaughterdome sponsored by Bandit](https://imgur.com/4zlFeu7.jpg "Don't worry guys... even if my screen capture show French text, my mods are in English")
+
+- ### *Fink's Slaughterhouse* sponsored by *Bandit*
+ 
   - Gives you the choice between 2 random Bandit weapons as reward for the rounds 1-4 and the choice between 2 Moxxi's weapons for the 5th round in *Bandit Slaughterhouse* Arena in *The Fridge* (instead of just the *Hail* as reward for the 5th round)
 
 | Battle        | Fink's Slaughterhouse                                         | 
@@ -17,7 +22,10 @@ The normal battles rounds from the following *Battle Arena* are now fully sponso
 
 ## Dahl Sponsor 
 
+![Murderlin's Temple sponsored by Dahl](https://imgur.com/Lw4RU8e.jpg "Don't worry guys... even if my screen capture show French text, my mods are in English")
+
 - ### *Murderlin's Temple* sponsored by *Dahl*
+
   - Gives you the choice between 2 random Dahl weapons as reward for the rounds 1-4 and the choice between 2 Moxxi's weapons for the 5th round in *Murderlin's Temple* Arena in *Flamerock Refuge* (instead of just the *Orc* as reward for the 5th round)... and a Legendary weapon for the Badass Round.
 
 | Battle           | Murderlin's Temple                                          |
@@ -33,7 +41,10 @@ __Note:__ If you use my custom weapon mod: *Discord Solver Moxxi Edition*, this 
 
 ## Hyperion Sponsor
 
+![Hyperion Slaughterdome sponsored by Hyperion](https://imgur.com/4JbwkRj.jpg "Don't worry guys... even if my screen capture show French text, my mods are in English")
+
 - ### *Hyperion Circle Of Slaughter* sponsored by *Hyperion*
+  
   - Gives you the choice between 2 random Hyperion weapons as reward for the rounds 1-4 and the choice between 2 Moxxi's weapons for the 5th round in *Hyperion Slaughter* Arena in *One Chasm* (instead of just the *Chère-Amie* as reward for the 5th round)
 
 | Battle        | Hyperion Circle Of Slaughter                                       |
@@ -46,7 +57,10 @@ __Note:__ If you use my custom weapon mod: *Discord Solver Moxxi Edition*, this 
 
 ## Jakobs Sponsor
 
+![Bar Room Blitz sponsored by Jakobs](https://imgur.com/cVXObJu.jpg "Don't worry guys... even if my screen capture show French text, my mods are in English")
+
 - ### *Bar Room Blitz* sponsored by *Jakobs*
+  
   - Gives you the choice between 2 random Jakobs weapons as reward for the rounds 1-3 and the choice between 2 Moxxi's weapons for the Rematch round in *Bar Room Blitz* Arena in *Pyro Pete's Bar* (instead of just... well... nothing as reward for the Rematch Round)
 
 | Battle           | Bar Room Blitz                                 |
@@ -58,7 +72,10 @@ __Note:__ If you use my custom weapon mod: *Discord Solver Moxxi Edition*, this 
 
 ## Maliwan Sponsor
 
+![Creature Slaughterdome sponsored by Maliwan](https://imgur.com/VZxSd9y.jpg "Don't worry guys... even if my screen capture show French text, my mods are in English")
+
 - ### *Creature Slaughterdome* sponsored by *Maliwan* 
+  
   - Gives you the choice between 2 random Maliwan weapons as reward for the rounds 1-4 and the choice between 2 Moxxi's weapons for the 5th round in *Creature Slaughter* Arena in *Wildlife Exploitation Preserve* (instead of just the *Creamer* as reward for the 5th round)
  
 | Battle        | Creature Slaughterdome                                             | 
@@ -71,7 +88,10 @@ __Note:__ If you use my custom weapon mod: *Discord Solver Moxxi Edition*, this 
 
 ## Tediore Sponsor
 
+![Twelve O'Clock High sponsored by Tediore](https://imgur.com/PAX7uta.jpg "Don't worry guys... even if my screen capture show French text, my mods are in English")
+
 - ### *Twelve O'Clock High* sponsored by *Tediore*
+  
   - Gives you the choice between 2 random Tediore weapons as reward for the rounds 1-3 and the choice between 2 Moxxi's weapons for the Rematch round in *Twelve O'Clock High* Arena in *The Forge* (instead of just... well... nothing as reward for the Rematch round)
 
 | Battle           | Twelve O'Clock High                                 |
@@ -85,7 +105,10 @@ __Note:__ If you use my custom weapon mod: *Plasma Caster Finesse Moxxi Edition*
 
 ## Torgue Sponsor
 
+![Appetite For Destruction sponsored by Torgue](https://imgur.com/YdlCWLE.jpg "Don't worry guys... even if my screen capture show French text, my mods are in English")
+
 - ### *Appetite For Destruction* sponsored by *Torgue*
+  
   - Gives you the choice between 2 random Torgue weapons as reward for the rounds 2-3 and the choice between 2 Moxxi's weapons for the Rematch round in *Appetite For Destruction* Arena in *Torgue Arena* (instead of just the *Blue Shield or Grenade* as reward for the Rematch round)
 
 | Battle           | Appetite For Destruction                                 |
@@ -97,7 +120,10 @@ __Note:__ If you use my custom weapon mod: *Plasma Caster Finesse Moxxi Edition*
 
 ## Vladof Sponsor
 
+![The Death Race sponsored by Vladof](https://imgur.com/CInFS5W.jpg "Don't worry guys... even if my screen capture show French text, my mods are in English")
+
 - ### *The Death Race* sponsored by *Vladof*
+  
   - Gives you the choice between 2 random Vladof weapons as reward for the rounds 1-3 and the choice between 2 Moxxi's weapons for the Rematch race in *The Death Race* Arena in *Badass Crater of Badassitude* (instead of just... well... nothing as reward for the Rematch Race)
 
 | Race            | The Death Race                                            |
