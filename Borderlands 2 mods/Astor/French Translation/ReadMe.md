@@ -1,10 +1,12 @@
 This Read Me is just here as a quick synopsis, for detailed informations, each Mod has is own Read Me (and even a Changelog), so don't hesitate -whoosh!- to give a look on it.
 
-## French Translation:
+## French Translation Add-On:
 
 - __*Bandit Brand Tweaks by Orudeon* French Translation:__ a simple *Add-On Translation Mod* that allows you to obtain in French any text additions (in English) from the Mod *Orudeon's Bandit Brand Tweaks v1.21*.
 
 - __*Jakobs Brand Tweaks by Orudeon* French Translation:__ a simple *Add-On Translation Mod* that allows you to obtain in French any text additions (in English) from the Mod *Orudeon's Jakobs Brand Tweaks v1.4*.
+
+- __*Prefix Rework by AngrierPat* French Translation:__ a simple *Add-On Translation Mod* that allows you to obtain in French any text additions (in English) from the Mod *AngrierPat's Prefix Rework v2.1a*.
 
 - __*Revolvers by Aaron0000* French Translation:__ a simple *Add-On Translation Mod* that allows you to obtain in French any text additions (in English) from the Mod *Aaron0000's Revolvers*.
 
