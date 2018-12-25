@@ -2,7 +2,9 @@
 
 I'm Astor, and I apologize in advance for some grammar and/or syntax errors, but my mother tongue is French.
 
-You are on TPS-Mods repository, where you can find all my Pre-Sequel (AKA Borderlands-The Pre-Sequel) Mods. (For the *Borderlands 2* Mods, please [__go to the *BL2-Mods*__](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/Astor) repository) 
+You are on my Pre-Sequel Mods repository, where you can find all my TPS Mods. 
+
+For the *BL2* Mods, please go to the nearest New-U Station and [__fast-travel to the *Borderlands 2 Mods*__](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/Astor) repository. 
 
 This ReadMe is just here as a quick synopsis, for detailed informations, each Mod has is own ReadMe (and even a Changelog), so don't hesitate -whoosh!- to give a look on it.
 
@@ -62,7 +64,7 @@ This ReadMe is just here as a quick synopsis, for detailed informations, each Mo
 
 ## French Translation:
 
-- __UCP French Translation:__ a simple translation Mod that allows you to obtain in French any text additions (in English) from the Mod *UCP 2.2*.
+- __UCP 2.2 - French Add-On:__ a simple translation Mod that allows you to obtain in French any text additions (in English) from the Mod *UCP 2.2*.
 
 * * * * *
 

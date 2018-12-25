@@ -2,7 +2,7 @@ This Read Me is just here as a quick synopsis, for detailed informations, each M
 
 ## French Translation:
 
-- __UCP French Translation:__ a simple translation Mod that allows you to obtain in French any text additions (in English) from the Mod *UCP 2.2*.
+- __UCP 2.2 - French Add-On:__ a simple translation Mod that allows you to obtain in French any text additions (in English) from the Mod *UCP 2.2*.
 
 * * * * *
  
