@@ -9,20 +9,20 @@ On top of that, the *Cry Baby* has 2 differents FiringModes which shot 2 types o
 
 Not clear? Maybe it will be more clear in a table:
 
-| Assault Rifle            | Bullet Type     | Bullet Speed  | 
-| -------------            | -------------   | ------------- |  
-| - TPS Standard AR-       |                 |               |
-| Torgue                   | GyroJet         | 1000          |
-| Others Manufacturers     | Standard        | 25000         |
-| - TPS Unique AR-         |                 |               |
-| Hail                     | Standard        | 2400          |
-| __*Cry Baby - Default*__ | *Red Bullet*    | 5000          | 
-| __*Cry Baby - Wiggle*__  | *Yellow Bullet* | 5000          |
-| Major Tom                | Standard        | 25000         |
-| Hammer Breaker           | Standard        | 25000         |
-| - BL2 Standard AR-       |                 |               |
-| Assault Rifle            | Standard        | 25000         |
-| E-Tech - Blaster         | E-Tech          | 8000          |
+| Assault Rifle            | Bullet Type     | Bullet Speed   | 
+| -------------            | :-------------: | -------------: |  
+| - TPS Standard AR-       |                 |                |
+| Torgue                   | GyroJet         | 1.000          |
+| Others Manufacturers     | Standard        | 25.000         |
+| - TPS Unique AR-         |                 |                |
+| Hail                     | Standard        | 2.400          |
+| __*Cry Baby - Default*__ | *Red Bullet*    | 5.000          | 
+| __*Cry Baby - Wiggle*__  | *Yellow Bullet* | 5.000          |
+| Major Tom                | Standard        | 25.000         |
+| Hammer Breaker           | Standard        | 25.000         |
+| - BL2 Standard AR-       |                 |                |
+| Assault Rifle            | Standard        | 25.000         |
+| E-Tech - Blaster         | E-Tech          | 8.000          |
 
 So yes, even in comparaison with a *BL2 AR E-Tech - Blaster*, the red/yellow bullet speed is a bit (too) slow...
 
