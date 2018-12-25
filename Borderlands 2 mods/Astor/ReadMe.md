@@ -48,6 +48,8 @@ This ReadMe is just here as a quick synopsis, for detailed informations, each Mo
 
 - __*Jakobs Brand Tweaks by Orudeon* French Translation:__ a simple *Add-On Translation Mod* that allows you to obtain in French any text additions (in English) from the Mod *Orudeon's Jakobs Brand Tweaks v1.4*.
 
+- __*Prefix Rework by AngrierPat* French Translation:__ a simple *Add-On Translation Mod* that allows you to obtain in French any text additions (in English) from the Mod *AngrierPat's Prefix Rework v2.1a*.
+
 - __*Revolvers by Aaron0000* French Translation:__ a simple *Add-On Translation Mod* that allows you to obtain in French any text additions (in English) from the Mod *Orudeon's Tediore Brand Overhaul V1.35*.
 
 - __*Shield Behavior Overgaul by Orudeon* French Translation:__ a simple *Add-On Translation Mod* that allows you to obtain in French any text additions (in English) from the Mod *Orudeon's Shield Behavior Overgaul v1.3a*.
@@ -86,14 +88,14 @@ This ReadMe is just here as a quick synopsis, for detailed informations, each Mo
 
 ## Quests Improvement:
 
-- __Battle Arena Sponsored:__ The Battle Arena are now fully sponsored by weapons manufacturers.
-
 - __Double Quests Rewards Redux:__ Gives you the choice to be rewarded between 2 Unique weapons/items instead of a single one.
 
 - __Dr Zed E-Tech Geek:__ The missions given by Dr Zed give you the choice to be rewarded between 2 E-Tech weapons.
 
 - __Less Tedious Quests:__ As the title suggests it, makes a few timed **-failable!-** optional mission less tedious to complete.
-
+ 
+- __Moxxi's Battle Arena Sponsored:__ Each Moxxi's Battle Arena are now fully sponsored by weapons manufacturers.
+ 
 - __Sir Hammerlock's Jakobs Sponsor:__ The missions given by Sir Hammerlock give you the choice to be rewarded between 2 Jakobs weapons/items.
 
 * * * * *
