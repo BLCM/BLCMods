@@ -4,13 +4,13 @@ This Read Me is just here as a quick synopsis, for detailed informations, each M
  
 ## Quests Improvement:
 
-- __Battle Arena Sponsored:__ The Battle Arena are now fully sponsored by weapons manufacturers.
-
 - __Double Quests Rewards Redux:__ Gives you the choice to be rewarded between 2 Unique weapons/items instead of a single one.
 
 - __Dr Zed E-Tech Geek:__ The missions given by Dr Zed give you the choice to be rewarded between 2 E-Tech weapons.
 
 - __Less Tedious Quests:__ As the title suggests it, makes a few timed **-failable!-** optional mission less tedious to complete.
+
+- __Moxxi's Battle Arena Sponsored:__ Each Moxxi's Battle Arena are now fully sponsored by weapons manufacturers.
 
 - __Sir Hammerlock's Jakobs Sponsor:__ The missions given by Sir Hammerlock give you the choice to be rewarded between 2 Jakobs weapons/items.
 
