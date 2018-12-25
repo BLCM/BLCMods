@@ -4,11 +4,11 @@ Made the child grenades not inflicting self-damage to fixes the issue of where t
  
 ### Where to find it?
 
-Initially, the *Moonscaper* is a exclusive reward for buying the *Tales from the Borderlands Season Pass* and can be obtained from the *Shift Vending Machine* in Concordia, but UCP 2.2 rewards it for the mission *BoomShakalaka* in 
-*Outlands Canyon*. 
+Initially, the *Moonscaper* is a exclusive reward for buying the *Tales from the Borderlands Season Pass* and can be obtained from the *Shift Vending Machine* in Concordia, but UCP 2.2 rewards it for the mission *BoomShakalaka* in *Outlands Canyon*. 
 
 ### Changelog:
-- v1.0.0, November 30, 2018
+
+- v1.0.0, December 15, 2018
   - Initial public release
  
 ### Compatibility:
