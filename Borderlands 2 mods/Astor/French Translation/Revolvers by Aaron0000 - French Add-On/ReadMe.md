@@ -4,13 +4,15 @@ Vous jouez à *Borderlands 2* en version Française et vous avez entièrement ra
 
 Le Mod *Aaron0000's Revolvers Traduction Française* est un simple patch de traduction, a ajouter après le Mod original, qui permet d'obtenir en Français tous ajouts de textes (Anglais) du Mod *Aaron0000's Revolvers*.
 
-__Note:__ Ce Mod comprend la traduction Française des ajouts Anglais de la version *Aaron0000's Revolvers*, mais pas le Mod original bien évidemment.
+![BL2 - Aaron0000's Revolvers French Translation](https://imgur.com/TgXHsBN.jpg "Don't worry guys... even if my screen capture show French text, my mods are in English")
 
 ### Utilisation:
 
-Placez ce Mod de traduction après le Mod original, ou a la toute dernière place de vos Mods, puis prononcez la formule magique.
+Ce Mod comprend la traduction Française des ajouts Anglais de la version *Aaron0000's Revolvers*, mais pas le Mod original bien évidemment.
 
-![BL2 - Aaron0000's Revolvers French Translation](https://imgur.com/TgXHsBN.jpg "Don't worry guys... even if my screen capture show French text, my mods are in English")
+Placez ce Mod de traduction juste après le mod à traduire puis prononcez la formule magique.
+
+![BL2 - French Add-On](https://imgur.com/noX3979.jpg "Don't worry guys... even if my screen capture show French text, my mods are in English")
 __Note:__ Si vous avez oublié la formule magique, contentez-vous d'activer le Mod... cela devrait fonctionner également :wink:
 
 ### Notes de mise à jour:
