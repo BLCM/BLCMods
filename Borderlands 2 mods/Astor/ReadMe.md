@@ -60,6 +60,8 @@ This ReadMe is just here as a quick synopsis, for detailed informations, each Mo
 
 - __*Tough Assault Rifles by Aaron0000* French Translation:__ a simple *Add-On Translation Mod* that allows you to obtain in French any text additions (in English) from the Mod *Aaron0000's Revolvers*.
 
+- __*UCP 4.1 by Community Patch Team* French Translation:__ a simple *Add-On Translation Mod* that allows you to obtain in French any text additions (in English) from the Mod *Community Patch Team's UCP 4.1*.
+
 * * * * *
 
 ## Gears Improvement:
