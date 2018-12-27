@@ -2,14 +2,15 @@
 
 Vous jouez à *Borderlands 2* en version Française et vous avez entièrement raison car les acteurs de doublage Français (Christophe Lemoine pour *Le Beau Jack*, Sophie Riffont pour *Moxxi*, Sylvain Lemarié pour *Marcus Kincaid*,  Isabelle Volpe pour *Tiny Tina*, Frédéric Souterelle pour *Sir Hammerlock*, Caroline Pascal pour *Gaige*, etc...) on fait un excellent travail.
 
-Le Mod *AngrierPat's Prefix Rework Traduction Française* est un simple patch de traduction qui permet d'obtenir en Français tous ajouts de textes (Anglais) du Mod *AngrierPat's Prefix Rework*.
-
-__Note:__ Ce Mod comprend la traduction Française des ajouts Anglais de la version *Prefix Rework by AngrierPat*. 
+Le Mod *AngrierPat's Prefix Rework Traduction Française* est un simple patch de traduction qui permet d'obtenir en Français tous ajouts de textes (Anglais) du Mod *AngrierPat's Prefix Rework*. 
 
 ### Utilisation:
 
-Placez ce Mod de traduction en toute dernière place de vos Mods puis prononcez la formule magique.
+Ce Mod comprend la traduction Française des ajouts Anglais de la version *Prefix Rework by Orudeon & AngrierPat*.
 
+Placez ce Mod de traduction juste après le mod à traduire puis prononcez la formule magique.
+
+![BL2 - French Add-On](https://imgur.com/noX3979.jpg "Don't worry guys... even if my screen capture show French text, my mods are in English")
 __Note:__ Si vous avez oublié la formule magique, contentez-vous d'activer le Mod... cela devrait fonctionner également :wink:
 
 ### Notes de mise à jour:
@@ -21,7 +22,7 @@ __Note:__ Si vous avez oublié la formule magique, contentez-vous d'activer le M
 
 - 100% compatible avec:
   - la dernière version de [BL2 Community Patch](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/Community%20Patch%20Team)
-  - la dernière version (v2.1a) de [AngrierPat's Prefix Rework](https://github.com/BLCM/BLCMods/blob/master/Borderlands%202%20mods/Orudeon/Prefix%20Rework%20V2.1a%20by%20AngrierPat.txt) de [Orudeon](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/Orudeon)
+  - la dernière version (v2.1a) de [AngrierPat's Prefix Rework](https://github.com/BLCM/BLCMods/blob/master/Borderlands%202%20mods/Orudeon/Prefix%20Rework%20V2.1a%20by%20AngrierPat.txt) de [Orudeon & AngrierPat](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/Orudeon)
 
 :warning: N'oubliez pas de placer ce Mod __APRES__ le Mod *AngrierPat's Prefix Rework* :warning:
 
