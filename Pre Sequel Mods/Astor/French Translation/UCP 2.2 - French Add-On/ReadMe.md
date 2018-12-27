@@ -13,6 +13,8 @@ __Note:__ Si vous avez oublié la formule magique, contentez-vous d'activer le M
 
 - v1.0.0, 15 Décembre 2018
   - Première publication publique
+- v1.0.1, 27 Décembre 2018 
+  - Ajout d'un message de confirmation à l'écran __*Le Mod de traduction Française est activé*__. 
  
 ### Compatibilité:
 
