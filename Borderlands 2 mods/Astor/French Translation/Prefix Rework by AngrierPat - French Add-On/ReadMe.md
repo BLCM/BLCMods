@@ -10,7 +10,7 @@ Ce Mod comprend la traduction Française des ajouts Anglais de la version *Prefi
 
 Placez ce Mod de traduction juste après le mod à traduire puis prononcez la formule magique.
 
-![BL2 - French Add-On](https://imgur.com/noX3979.jpg "Don't worry guys... even if my screen capture show French text, my mods are in English")
+![BL2 - French Add-On](https://imgur.com/UfPtPcg.jpg "Oui, oui! Comme sur la photo... C'est facile, non?")
 __Note:__ Si vous avez oublié la formule magique, contentez-vous d'activer le Mod... cela devrait fonctionner également :wink:
 
 ### Notes de mise à jour:

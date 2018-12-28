@@ -4,7 +4,7 @@ Vous jouez à *Borderlands 2* en version Française et vous avez entièrement ra
 
 Le Mod *Orudeon's Tediore Brand Overhaul Traduction Française* est un simple patch de traduction, a ajouter après le Mod original, qui permet d'obtenir en Français tous ajouts de textes (Anglais) du Mod *Orudeon's Tediore Brand Overhaul*.
 
-![BL2 - Orudeon Tediore Brand Overhaul French Translation](https://imgur.com/f66s9gv.jpg "Don't worry guys... even if my screen capture show French text, my mods are in English")
+![BL2 - Orudeon Tediore Brand Overhaul French Translation](https://imgur.com/f66s9gv.jpg "Go away Brits & Yankees, there is nothing for you here!")
 
 ### Utilisation:
 
@@ -12,7 +12,7 @@ Ce Mod comprend la traduction Française des ajouts Anglais de la version *Tedio
 
 Placez ce Mod de traduction juste après le mod à traduire puis prononcez la formule magique.
 
-![BL2 - French Add-On](https://imgur.com/noX3979.jpg "Don't worry guys... even if my screen capture show French text, my mods are in English")
+![BL2 - French Add-On](https://imgur.com/UfPtPcg.jpg "Oui, oui! Comme sur la photo... C'est facile, non?")
 __Note:__ Si vous avez oublié la formule magique, contentez-vous d'activer le Mod... cela devrait fonctionner également :wink:
 
 ### Notes de mise à jour:

@@ -6,21 +6,21 @@ Le Mod *Orudeon's Shield Behavior Overhaul Traduction Française* est un simple 
 
 ### Orudeon's Shield Behavior Overhaul - Bouclier Amplificateur de tir
 
-![BL2 - Orudeon Shield Behavior Overhaul French Translation](https://imgur.com/LUHPS6i.jpg "Don't worry guys... even if my screen capture show French text, my mods are in English")
+![BL2 - Orudeon Shield Behavior Overhaul French Translation](https://imgur.com/LUHPS6i.jpg "Go away Brits & Yankees, there is nothing for you here!")
 
 ### Orudeon's Shield Behavior Overhaul - Bouclier à Pointe Corrosive
 
-![BL2 - Orudeon Shield Behavior Overhaul French Translation](https://imgur.com/iAkBCK9.jpg "Don't worry guys... even if my screen capture show French text, my mods are in English")
+![BL2 - Orudeon Shield Behavior Overhaul French Translation](https://imgur.com/iAkBCK9.jpg "Go away Brits & Yankees, there is nothing for you here!")
 
 ### Orudeon's Shield Behavior Overhaul - Bouclier à Pointe Explosive
 
-![BL2 - Orudeon Shield Behavior Overhaul French Translation](https://imgur.com/WrI5Bxu.jpg "Don't worry guys... even if my screen capture show French text, my mods are in English")
+![BL2 - Orudeon Shield Behavior Overhaul French Translation](https://imgur.com/WrI5Bxu.jpg "Go away Brits & Yankees, there is nothing for you here!")
 
 ### Orudeon's Shield Behavior Overhaul - Bouclier à Pointe Incendiaire
-![BL2 - Orudeon Shield Behavior Overhaul French Translation](https://imgur.com/FiNEmrP.jpg "Don't worry guys... even if my screen capture show French text, my mods are in English")
+![BL2 - Orudeon Shield Behavior Overhaul French Translation](https://imgur.com/FiNEmrP.jpg "Go away Brits & Yankees, there is nothing for you here!")
 
 ### Orudeon's Shield Behavior Overhaul - Bouclier à Pointe Electrique
-![BL2 - Orudeon Shield Behavior Overhaul French Translation](https://imgur.com/EAMKb69.jpg "Don't worry guys... even if my screen capture show French text, my mods are in English")
+![BL2 - Orudeon Shield Behavior Overhaul French Translation](https://imgur.com/EAMKb69.jpg "Go away Brits & Yankees, there is nothing for you here!")
 
 ### Utilisation:
 
@@ -30,7 +30,7 @@ Placez ce Mod de traduction juste après le mod à traduire puis prononcez la fo
 
 Placez ce Mod de traduction juste après le mod à traduire puis prononcez la formule magique.
 
-![BL2 - French Add-On](https://imgur.com/noX3979.jpg "Don't worry guys... even if my screen capture show French text, my mods are in English")
+![BL2 - French Add-On](https://imgur.com/UfPtPcg.jpg "Oui, oui! Comme sur la photo... C'est facile, non?")
 __Note:__ Si vous avez oublié la formule magique, contentez-vous d'activer le Mod... cela devrait fonctionner également :wink:
 
 __Note:__ Si vous avez oublié la formule magique, contentez-vous d'activer le Mod... cela devrait fonctionner également :wink:
