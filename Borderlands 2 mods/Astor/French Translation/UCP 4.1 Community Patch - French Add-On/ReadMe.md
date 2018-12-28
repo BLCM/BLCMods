@@ -6,7 +6,7 @@ Le Mod *Community Patch Team's UCP 4.1 Traduction Française* est un simple patc
 
 Ce Mod comprend la traduction Française des ajouts Anglais de la version *UCP 4.1* du Community Patch Team.
 
-![BL2 - UCP 4.1 French Translation](https://imgur.com/E7yuwNu.jpg "Don't worry guys... even if my screen capture show French text, my mods are in English")
+![BL2 - UCP 4.1 French Translation](https://imgur.com/E7yuwNu.jpg "Go away Brits & Yankees, there is nothing for you here!")
 
 ### Utilisation:
 
@@ -14,14 +14,16 @@ Ce Mod comprend la traduction Française des ajouts Anglais de la version *UCP 4
 
 Placez ce Mod de traduction juste après le mod à traduire puis prononcez la formule magique.
 
-![BL2 - French Add-On](https://imgur.com/noX3979.jpg "Don't worry guys... even if my screen capture show French text, my mods are in English")
+![BL2 - French Add-On](https://imgur.com/UfPtPcg.jpg "Oui, oui! Comme sur la photo... C'est facile, non?")
 __Note:__ Si vous avez oublié la formule magique, contentez-vous d'activer le Mod... cela devrait fonctionner également :wink:
 
 ### Notes de mise à jour:
 
 - v1.0.0, 27 Décembre 2018
   - Première publication publique
- 
+- v1.0.1, 28 Décembre 2018
+  - Ajout de 2 compétences de Salvador dans *Optional/Nerfs* (un oubli!). 
+
 ### Compatibilité:
 
 - 100% compatible avec la dernière version de [UCP 4.1](https://github.com/BLCM/BLCMods/blob/6ad6e7c89b8c55eed9091a2676bd5414cdc0b78b/Borderlands%202%20mods/Community%20Patch%20Team/Patch.txt) du [Community Patch Team](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/Community%20Patch%20Team) 
