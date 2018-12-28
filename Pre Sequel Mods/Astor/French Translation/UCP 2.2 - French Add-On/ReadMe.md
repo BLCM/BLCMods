@@ -2,11 +2,15 @@
 
 Vous jouez à *Borderlands: The Pre-Sequel* en version Française et vous avez entièrement raison car les acteurs de doublage Français (Christophe Lemoine pour *Le Beau Jack*, Sophie Riffont pour *Moxxi*, Sylvain Lemarié pour *Marcus Kincaid*, Barbara Beretta pour *Athéna*, Annie Milon pour *Nisha*, etc...) on fait un excellent travail.
 
-Le Mod *UCP 2.2 Traduction Française* est un simple patch de traduction qui permet d'obtenir en Français tous ajouts de textes (Anglais) du Mod *UCP 2.2*.
+Le Mod *UCP 2.2 Traduction Française* est un simple patch de traduction qui permet d'obtenir en Français tous ajouts de textes (Anglais) du Mod *UCP 2.2 Traduction Française*.
 
-Placez ce Mod de traduction en toute dernière place de vos Mods puis prononcez la formule magique.
+Ce Mod comprend la traduction Française des ajouts Anglais de la version *UCP 2.2* du Community Patch Team.
 
-![TPS - UCP French Translation](https://imgur.com/TPbbJI0.jpg "Don't worry guys... even if my screen capture show French text, my mods are in English")
+### Utilisation:
+
+Placez ce Mod de traduction juste après le mod à traduire puis prononcez la formule magique.
+
+![TPS - UCP French Translation](https://imgur.com/TPbbJI0.jpg "Go away Brits & Yankees, there is nothing for you here!")
 __Note:__ Si vous avez oublié la formule magique, contentez-vous d'activer le Mod... cela devrait fonctionner également :wink:
 
 ### Notes de mise à jour:
