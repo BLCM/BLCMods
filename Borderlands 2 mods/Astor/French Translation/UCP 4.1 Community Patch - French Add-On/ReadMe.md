@@ -4,8 +4,6 @@ Vous jouez à *Borderlands 2* en version Française et vous avez entièrement ra
 
 Le Mod *Community Patch Team's UCP 4.1 Traduction Française* est un simple patch de traduction qui permet d'obtenir en Français tous ajouts de textes (Anglais) du Mod *Community Patch Team's UCP 4.1*.
 
-Ce Mod comprend la traduction Française des ajouts Anglais de la version *UCP 4.1* du Community Patch Team.
-
 ![BL2 - UCP 4.1 French Translation](https://imgur.com/E7yuwNu.jpg "Go away Brits & Yankees, there is nothing for you here!")
 
 ### Utilisation:
