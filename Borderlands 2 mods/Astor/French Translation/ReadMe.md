@@ -8,6 +8,8 @@ This Read Me is just here as a quick synopsis, for detailed informations, each M
 
 - __*Prefix Rework by AngrierPat* French Translation:__ a simple *Add-On Translation Mod* that allows you to obtain in French any text additions (in English) from the Mod *AngrierPat's Prefix Rework v2.1a*.
 
+- __*Relic Overhaul by Orudeon* French Translation:__ a simple *Add-On Translation Mod* that allows you to obtain in French any text additions (in English) from the Mod *Orudeon's Relic Overhaul v1.1b*.
+
 - __*Revolvers by Aaron0000* French Translation:__ a simple *Add-On Translation Mod* that allows you to obtain in French any text additions (in English) from the Mod *Aaron0000's Revolvers*.
 
 - __*Shield Behavior Overgaul by Orudeon* French Translation:__ a simple *Add-On Translation Mod* that allows you to obtain in French any text additions (in English) from the Mod *Orudeon's Shield Behavior Overgaul v1.3a*.
