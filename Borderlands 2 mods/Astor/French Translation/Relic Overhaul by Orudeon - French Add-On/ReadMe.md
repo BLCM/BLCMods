@@ -4,6 +4,26 @@ Vous jouez à *Borderlands 2* en version Française et vous avez entièrement ra
 
 Le Mod *Orudeon's Relic Overhaul Traduction Française* est un simple patch de traduction, a ajouter après le Mod original, qui permet d'obtenir en Français tous ajouts de textes (Anglais) du Mod *Orudeon's Relic Overhaul*.
 
+### Orudeon's Relic Overhaul - Os des Anciens
+
+![BL2 - Orudeon's Relic Overhaul French Translation](https://imgur.com/kee8ilK.jpg "Go away Brits & Yankees, there is nothing for you here!")
+
+### Orudeon's Relic Overhaul - Relique d'Agilité
+
+![BL2 - Orudeon's Relic Overhaul French Translation](https://imgur.com/cisloef.jpg "Go away Brits & Yankees, there is nothing for you here!")
+
+### Orudeon's Relic Overhaul - Relique de Protection
+
+![BL2 - Orudeon's Relic Overhaul French Translation](https://imgur.com/qH1pzHH.jpg "Go away Brits & Yankees, there is nothing for you here!")
+
+### Orudeon's Relic Overhaul - Relique de Résistance
+
+![BL2 - Orudeon's Relic Overhaul French Translation](https://imgur.com/gg9Sit0.jpg "Go away Brits & Yankees, there is nothing for you here!")
+
+### Orudeon's Relic Overhaul - Sang des Séraphins
+
+![BL2 - Orudeon's Relic Overhaul French Translation](https://imgur.com/irh4tjn.jpg "Go away Brits & Yankees, there is nothing for you here!")
+
 ### Utilisation:
 
 Ce Mod comprend la traduction Française des ajouts Anglais de la version *Relic Overhaul V1.1b by Orudeon*, mais pas le Mod original bien évidemment. 
@@ -15,7 +35,7 @@ __Note:__ Si vous avez oublié la formule magique, contentez-vous d'activer le M
 
 ### Notes de mise à jour:
 
-- v1.0.0, 22 Décembre 2018 
+- v1.0.0, 29 Décembre 2018 
   - Première publication publique
  
 ### Compatibilité:
