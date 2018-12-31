@@ -14,11 +14,11 @@ This Read Me is just here as a quick synopsis, for detailed informations, each M
 
 - __*Revolvers by Aaron0000* French Translation:__ a simple *Add-On Translation Mod* that allows you to obtain in French any text additions (in English) from the Mod *Aaron0000's Revolvers*.
 
-- __*Shield Behavior Overgaul by Orudeon* French Translation:__ a simple *Add-On Translation Mod* that allows you to obtain in French any text additions (in English) from the Mod *Orudeon's Shield Behavior Overgaul v1.3a*.
+- __*Shield Behavior Overhaul by Orudeon* French Translation:__ a simple *Add-On Translation Mod* that allows you to obtain in French any text additions (in English) from the Mod *Orudeon's Shield Behavior Overgaul v1.3a*.
 
 - __*Shield Stat Tweaks by Orudeon* French Translation:__ a simple *Add-On Translation Mod* that allows you to obtain in French any text additions (in English) from the Mod *Orudeon's Shield Stat Tweaks v1.1*.
 
-- __*Tediore Brand Overgaul by Orudeon* French Translation:__ a simple *Add-On Translation Mod* that allows you to obtain in French any text additions (in English) from the Mod *Orudeon's Tediore Brand Overgaul v1.35*.
+- __*Tediore Brand Overhaul by Orudeon* French Translation:__ a simple *Add-On Translation Mod* that allows you to obtain in French any text additions (in English) from the Mod *Orudeon's Tediore Brand Overgaul v1.35*.
 
 - __*Tough Assault Rifles by Aaron0000* French Translation:__ a simple *Add-On Translation Mod* that allows you to obtain in French any text additions (in English) from the Mod *Aaron0000's Tough Assault Rifles*.
 
