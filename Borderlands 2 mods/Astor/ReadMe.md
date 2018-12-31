@@ -42,7 +42,7 @@ This ReadMe is just here as a quick synopsis, for detailed informations, each Mo
 
 * * * * *
 
-## French Translation:
+## French Translation Add-On:
 
 - ### *Community Patch UCP 4.1*:
 
