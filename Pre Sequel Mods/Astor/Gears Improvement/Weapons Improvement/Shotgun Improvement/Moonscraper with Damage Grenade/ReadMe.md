@@ -8,7 +8,7 @@ Initially, the *Moonscaper* is a exclusive reward for buying the *Tales from the
 
 ### Changelog:
 
-- v1.0.0, January 01, 2018
+- v1.0.0, January 01, 2019
   - Initial public release
  
 ### Compatibility:
