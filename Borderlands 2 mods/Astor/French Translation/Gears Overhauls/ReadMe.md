@@ -2,14 +2,6 @@ This Read Me is just here as a quick synopsis, for detailed informations, each M
 
 ## French Translation Add-On:
 
-- ### *Community Patch UCP 4.1*:
-
-  - __*UCP 4.1 by Community Patch Team* French Translation:__ a simple *Add-On Translation Mod* that allows you to obtain in French any text additions (in English) from the Mod *Community Patch Team's UCP 4.1*.
-
-- ### *Gameplay Overhauls*:
-
-  - __*Slag Overhaul by B33PB00PJOE* French Translation:__ a simple *Add-On Translation Mod* that allows you to obtain in French any text additions (in English) from the Mod *B33PB00PJOE's Slag Overhaul*.
-
 - ### *Gears Overhauls*:
 
   - __*Bandit Brand Tweaks by Orudeon* French Translation:__ a simple *Add-On Translation Mod* that allows you to obtain in French any text additions (in English) from the Mod *Orudeon's Bandit Brand Tweaks v1.21*.
@@ -29,12 +21,6 @@ This Read Me is just here as a quick synopsis, for detailed informations, each M
   - __*Tediore Brand Overhaul by Orudeon* French Translation:__ a simple *Add-On Translation Mod* that allows you to obtain in French any text additions (in English) from the Mod *Orudeon's Tediore Brand Overgaul v1.35*.
 
   - __*Tough Assault Rifles by Aaron0000* French Translation:__ a simple *Add-On Translation Mod* that allows you to obtain in French any text additions (in English) from the Mod *Aaron0000's Tough Assault Rifles*.
-
-- ### *Single Gear Replacement*:
-
-  - __*Marcus Gundropper by FromDarkHell* French Translation:__ a simple *Add-On Translation Mod* that allows you to obtain in French any text additions (in English) from the Mod *FromDarkHell's Marcus Gundropper*.
-
-  - __*Profanity of the Seraphs by GoldenGizzmo* French Translation:__ a simple *Add-On Translation Mod* that allows you to obtain in French any text additions (in English) from the Mod *GoldenGizzmo's Profanity of the Seraphs*.
 
 * * * * *
 

@@ -6,7 +6,7 @@ Le Mod *AngrierPat's Prefix Rework Traduction Française* est un simple patch de
 
 ### Utilisation:
 
-Ce Mod comprend la traduction Française des ajouts Anglais de la version *Prefix Rework by Orudeon & AngrierPat*.
+Ce Mod comprend la traduction Française des ajouts Anglais de la version *Prefix Rework by Orudeon & AngrierPat*, mais pas le Mod original bien évidemment.
 
 Placez ce Mod de traduction juste après le mod à traduire puis prononcez la formule magique.
 
