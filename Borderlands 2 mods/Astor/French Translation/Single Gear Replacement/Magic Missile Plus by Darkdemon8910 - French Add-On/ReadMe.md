@@ -1,12 +1,12 @@
-## *B33PB00PJOE's Slag Overhaul* - Traduction Française
+## *Darkdemon8910's Magic Missile Plus* - Traduction Française
 
 Vous jouez à *Borderlands 2* en version Française et vous avez entièrement raison car les acteurs de doublage Français (Christophe Lemoine pour *Le Beau Jack*, Sophie Riffont pour *Moxxi*, Sylvain Lemarié pour *Marcus Kincaid*,  Isabelle Volpe pour *Tiny Tina*, Frédéric Souterelle pour *Sir Hammerlock*, Caroline Pascal pour *Gaige*, etc...) on fait un excellent travail.
 
-Le Mod *B33PB00PJOE's Slag Overhaul Traduction Française* est un simple patch de traduction qui permet d'obtenir en Français tous ajouts de textes (Anglais) du Mod *B33PB00PJOE's Slag Overhaul*. 
+Le Mod *Darkdemon8910's Magic Missile Plus Traduction Française* est un simple patch de traduction qui permet d'obtenir en Français tous ajouts de textes (Anglais) du Mod *Darkdemon8910's Magic Missile Plus*.
 
 ### Utilisation:
 
-Ce Mod comprend la traduction Française des ajouts Anglais de la version *Slag Overhaul by B33PB00PJOE*, mais pas le Mod original bien évidemment.
+Ce Mod comprend la traduction Française des ajouts Anglais de la version *Darkdemon8910's Magic Missile Plus*, mais pas le Mod original bien évidemment. 
 
 Placez ce Mod de traduction juste après le mod à traduire puis prononcez la formule magique.
 
@@ -15,16 +15,16 @@ __Note:__ Si vous avez oublié la formule magique, contentez-vous d'activer le M
 
 ### Notes de mise à jour:
 
-- v1.0.0, 02 Janvier 2019 
+- v1.0.0, 03 Janvier 2019 
   - Première publication publique
  
 ### Compatibilité:
 
 - 100% compatible avec:
   - la dernière version de [BL2 Community Patch](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/Community%20Patch%20Team)
-  - la dernière version de [Slag Overhaul](https://github.com/BLCM/BLCMods/blob/master/Borderlands%202%20mods/B33PB00PJOE/SlagOverhaul.txt) de [B33PB00PJOE](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/B33PB00PJOE)
+  - la dernière version de [Magic Missile Plus](https://github.com/BLCM/BLCMods/blob/af3b2d17629ab3f7f7a5f7bb68b489c5e13b0498/Borderlands%202%20mods/Darkdemon8910/MagicMissilePlus.txt) de [Darkdemon8910](https://github.com/BLCM/BLCMods/tree/af3b2d17629ab3f7f7a5f7bb68b489c5e13b0498/Borderlands%202%20mods/Darkdemon8910)
 
-:warning: N'oubliez pas de placer ce Mod __APRES__ le Mod *B33PB00PJOE's Slag Overhaul* :warning:
+:warning: N'oubliez pas de placer ce Mod __APRES__ le Mod *Darkdemon8910's Magic Missile Plus* :warning:
 
 ### Aidez-moi! Le Mod ne fonctionne pas !?!
 
