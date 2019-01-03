@@ -14,13 +14,13 @@ These changes apply repeatedly. So varkids can skip one, two, three,... etc evol
 Odds for skipping multiple evolutions naturally decreases with how many are skipped.
 
 The purpose of this mod is to speed up varkid farming, and make it more enjoyable, by 
-A) making varkids reach ulti or vermi faster
-B) by giving lower evolutions a small chance to drop the loot of ultis and vermi
+1) making varkids reach ulti or vermi faster
+2) by giving lower evolutions a small chance to drop the loot of ultis and vermi
 
 Bonus: Since each varkid has 3 chances to go into a tubby, tubby varkid farming is also faster with this mod.
 
 FAQ:
-Does this mean a varkid can go straight from larval to vermi? yes
-Does this mean a larval varkid can drop the norfleet? yes... (like 1 in 820 thousand or so, but yes)
-Does this mean we can now get vermi in NVHM? no
-But it still means an ultimate can drop a norfleet in NVHM, right? nope
+* Does this mean a varkid can go straight from larval to vermi? yes
+* Does this mean a larval varkid can drop the norfleet? yes... (like 1 in 820 thousand or so, but yes)
+* Does this mean we can now get vermi in NVHM? no
+* But it still means an ultimate can drop a norfleet in NVHM, right? nope
