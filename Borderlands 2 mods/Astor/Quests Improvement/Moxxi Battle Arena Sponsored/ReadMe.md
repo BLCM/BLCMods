@@ -1,6 +1,6 @@
 ## Moxxi's Battle Arena Sponsored
 
-![Battle Arena sponsored](https://imgur.com/7FSdxqv.jpg "Don't worry guys... even if my screen capture show French text, my mods are in English")
+![Battle Arena sponsored](https://imgur.com/nlDEFR4.jpg "Don't worry guys... even if my screen capture show French text, my mods are in English")
 
 The normal battles rounds from the following *Moxxi's Battle Arena* are now fully sponsored by weapons manufacturers... and of course, the reward for the final round is still a Moxxi's weapon.
 
