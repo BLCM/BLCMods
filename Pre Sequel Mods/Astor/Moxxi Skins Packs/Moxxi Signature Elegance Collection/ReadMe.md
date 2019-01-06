@@ -1,5 +1,7 @@
 ## TPS - Moxxi Signature Elegance Collection
 
+![TPS - Moxxi Signature Elegance Gear](https://imgur.com/p1lT4hn.jpg "Don't worry guys... even if my screen capture show French text, my mods are in English")
+
 Is that the Moxxi's weapons skins in TPS? ... seriously? ... but not ever 2 skins are the same!?! 
 
 ![TPS - Moxxi Signature Elegance Gear](https://imgur.com/JbYPZTA.jpg "Don't worry guys... even if my screen capture show French text, my mods are in English")
