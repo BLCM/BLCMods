@@ -1,11 +1,13 @@
 ## Moxxi Signature Elegance Collection
 
+![Moxxi Signature Elegance Gear ](https://imgur.com/omToL4y.jpg "Don't worry guys... even if my screen capture show French text, my mods are in English")
+
 The idea is really very simple as it come from the *Santos*, a well know French jeweller watch.
 
-![Moxxi Signature Elegance Gear ](https://imgur.com/h2lelSo.png "Don't worry guys... even if my screen capture show French text, my mods are in English")
+![Moxxi Signature Elegance Gear ](https://imgur.com/h2lelSo.jpg "Don't worry guys... even if my screen capture show French text, my mods are in English")
 First, I take the red color similar to the little Cartier box, next I made the metal part looking like (silver) steel... add some discrete decorative gold parts like the golden screws inserted into a brushed steel bracelet... finally adapt the Moxxi logo in a more appropriate size when necessary... and repeat the same work on all the Moxxi weapons...
 
-![Moxxi Signature Elegance Gear ](https://imgur.com/zCJd7K0.png "Don't worry guys... even if my screen capture show French text, my mods are in English")
+![Moxxi Signature Elegance Gear ](https://imgur.com/zCJd7K0.jpg "Don't worry guys... even if my screen capture show French text, my mods are in English")
 
 Et Voila! Here is the *Moxxi Signature Elegance Collection*.
 

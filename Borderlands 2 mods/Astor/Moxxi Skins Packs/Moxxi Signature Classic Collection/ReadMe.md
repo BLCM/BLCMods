@@ -1,8 +1,10 @@
 ## Moxxi Signature Classic Collection
 
+![Moxxi Signature Gear Half almost uniform Moxxi Signature Skin](https://imgur.com/V47GTlD.jpg "Don't worry guys... even if my screen capture show French text, my mods are in English")
+
 Did you ever noticed that only the half from the Moxxi gears have almost* a nice Moxxi Signature Classic skin?
 
-![Moxxi Signature Gear Half almost uniform Moxxi Signature Skin](https://i.imgur.com/cR5GSYs.png "Don't worry guys... even if my screen capture show French text, my mods are in English")
+![Moxxi Signature Gear Half almost uniform Moxxi Signature Skin](https://i.imgur.com/cR5GSYs.jpg "Don't worry guys... even if my screen capture show French text, my mods are in English")
 
 (*) almost because:
 1. The SMG Bad Touch wear a deeper red, and all the metal part are red coated, giving plastic toy look!
@@ -10,13 +12,13 @@ Did you ever noticed that only the half from the Moxxi gears have almost* a nice
 
 ... and a half have somewhat totally different... which looks more like Tiny Tina weapon skin than Moxxi weapon skin
 
-![Moxxi Signature Gear Half somewhat pink](https://imgur.com/KVfBrMT.png "Don't worry guys... even if my screen capture show French text, my mods are in English")
+![Moxxi Signature Gear Half somewhat pink](https://imgur.com/KVfBrMT.jpg "Don't worry guys... even if my screen capture show French text, my mods are in English")
 
 That doesn't make sense to me... and it's just not prettier!
 
 But now with the *Moxxi Signature Classic Collection*, there are all uniform to look like an actual manufacturer.
 
-![Moxxi Signature Classic Gear ](https://imgur.com/Y7eGuJ2.png "Don't worry guys... even if my screen capture show French text, my mods are in English")
+![Moxxi Signature Classic Gear ](https://imgur.com/Y7eGuJ2.jpg "Don't worry guys... even if my screen capture show French text, my mods are in English")
 
 ### Changelog:
 
