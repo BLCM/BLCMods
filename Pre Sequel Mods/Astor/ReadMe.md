@@ -91,7 +91,9 @@ This ReadMe is just here as a quick synopsis, for detailed informations, each Mo
     - __*Moonscaper* No Self-Damage:__ Made the grenades not inflicting self-damage to fixes the issue of where the delayed explosion would (repeatedly) put you down.
   
     - __*Moonscaper* with Grenade Damage:__ Replace the *Rocket Damage* by *Grenade Damage*, on this way the damage can be increased by Character Skill.
-  
+
+    - __*Wombat* No Self-Damage:__ Made the grenades not inflicting self-damage to fixes the issue of where the delayed explosion would (repeatedly) put you down.
+
   - #### Sniper Rifle Improvement:
 
     - __*Omni-Cannon* with Grenade Damage:__ with this *Grenade Damage Bonus* added, the *Omni-Cannon* will become one of the BEST sniper rifle in TPS.
