@@ -6,7 +6,7 @@ This Read Me is just here as a quick synopsis, for detailed informations, each M
 
   - __*Slag Overhaul by B33PB00PJOE* French Translation:__ a simple *Add-On Translation Mod* that allows you to obtain in French any text additions (in English) from the Mod *B33PB00PJOE's Slag Overhaul*.
 
-- __*UVHM-RB by Aaron0000* French Translation:__ a simple *Add-On Translation Mod* that allows you to obtain in French any text additions (in English) from the Mod *UVHM-RB by Aaron0000*.
+  - __*UVHM-RB by Aaron0000* French Translation:__ a simple *Add-On Translation Mod* that allows you to obtain in French any text additions (in English) from the Mod *UVHM-RB by Aaron0000*.
 
 * * * * *
 
