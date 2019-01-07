@@ -1,6 +1,6 @@
 ## Moxxi Signature Classic Collection
 
-![Moxxi Signature Gear Half almost uniform Moxxi Signature Skin](https://imgur.com/V47GTlD.jpg "Don't worry guys... even if my screen capture show French text, my mods are in English")
+![BL2 - Moxxi Signature Classic Collection](https://imgur.com/F9hjeuF.jpg "Don't worry guys... even if my screen capture show French text, my mods are in English")
 
 Did you ever noticed that only the half from the Moxxi gears have almost* a nice Moxxi Signature Classic skin?
 

@@ -1,6 +1,6 @@
 ## Moxxi Signature Elegance Collection
 
-![Moxxi Signature Elegance Gear ](https://imgur.com/omToL4y.jpg "Don't worry guys... even if my screen capture show French text, my mods are in English")
+![BL2 - Moxxi Signature Elegance Collection](https://imgur.com/XGnKHcl.jpg "Don't worry guys... even if my screen capture show French text, my mods are in English")
 
 The idea is really very simple as it come from the *Santos*, a well know French jeweller watch.
 

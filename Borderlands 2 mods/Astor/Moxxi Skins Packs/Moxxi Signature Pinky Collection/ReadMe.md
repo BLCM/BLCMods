@@ -1,6 +1,6 @@
 ## Moxxi Signature Pinky Collection
 
-![Moxxi Signature Pinky Skin - Barbie Corvette Hotwheels](https://imgur.com/wuDn7Rk.jpg "Don't worry guys... even if my screen capture show French text, my mods are in English")
+![BL2 - Moxxi Signature Pinky Collection](https://imgur.com/1qW9MHI.jpg "Don't worry guys... even if my screen capture show French text, my mods are in English")
 
 Recently, when a friend showed me his latest acquisitions for his Hot Wheels collection, I noticed the *Corvette Stingray (Barbie) Pink 2018*: all Pink & White! 
 
