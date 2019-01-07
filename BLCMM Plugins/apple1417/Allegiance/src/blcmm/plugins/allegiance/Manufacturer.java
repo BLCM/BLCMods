@@ -21,10 +21,10 @@ public enum Manufacturer {
         "GD_Artifacts.A_Item.A_AllegianceG"),
     VLADOF("Vladof", "GD_Manufacturers.Manufacturers.Vladof",
         "GD_Artifacts.A_Item.A_AllegianceH"),
-    ANSHIN("Anshin", "GD_Manufacturers.Manufacturers.Anshin", "  placeholder  "),
-    ERIDIAN("Eridian", "GD_Manufacturers.Artifacts.", "  placeholder  "),
-    MOXXI("Moxxi", "GD_Manufacturers.Manufacturers.Moxxi", "  placeholder  "),
-    PANGOLIN("Pangolin", "GD_Manufacturers.Manufacturers.Pangolin", "  placeholder  ");
+    ANSHIN("Anshin", "GD_Manufacturers.Manufacturers.Anshin", ""),
+    ERIDIAN("Eridian", "GD_Manufacturers.Artifacts.", ""),
+    MOXXI("Moxxi", "GD_Manufacturers.Manufacturers.Moxxi", ""),
+    PANGOLIN("Pangolin", "GD_Manufacturers.Manufacturers.Pangolin", "");
     
     
     private String name;

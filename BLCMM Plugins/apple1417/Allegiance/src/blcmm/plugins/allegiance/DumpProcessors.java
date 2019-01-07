@@ -6,7 +6,6 @@ import blcmm.data.lib.BorderlandsStruct;
 import blcmm.data.lib.DataManager;
 import blcmm.data.lib.DataManager.Dump;
 import blcmm.model.HotfixType;
-import blcmm.plugins.BLCMMPlugin;
 import blcmm.plugins.pseudo_model.PCategory;
 import blcmm.plugins.pseudo_model.PCommand;
 import blcmm.plugins.pseudo_model.PHotfix;
@@ -42,36 +41,41 @@ public class DumpProcessors {
         private PCategory misc;
         
         private JProgressBar bar;
-        private String manuClass;
-        private String manuName;
-        private String manuRelic;
-        private boolean applyModel;
-        
         private ApplyablePModel currentModel;
+        private float convertChance;
         private boolean isBL2;
+        private HashSet<String> modified;
+        
+        private HashSet<String> manuClass;
+        private HashSet<String> manuName;
+        private HashSet<String> manuRelic;
+        
         private HashSet<String> blacklist;
         
-        private HashSet<String> modified;
         public ItemPoolDefinition(
             PCategory root,
             JProgressBar bar,
-            Manufacturer manu,
+            ApplyablePModel currentModel,
+            HashSet<Manufacturer> allowedManus,
             boolean allowRelic,
-            boolean applyModel
+            float convertChance
         ) {
             
             this.bar = bar;
-            manuClass = manu.getClas();
-            manuName = manu.getBaseName();
-            manuRelic = allowRelic ? manu.getRelic() : "  placeholder  ";
-            this.applyModel = applyModel;
+            this.currentModel = currentModel;
+            this.convertChance = convertChance;
             isBL2 = DataManager.getBL2();
             modified = new HashSet<String>();
-
-            if (applyModel) {
-                currentModel = new ApplyablePModel(
-                    BLCMMPlugin.getCurrentlyOpenedBLCMMModel()
-                );
+            
+            manuClass = new HashSet<String>();
+            manuName = new HashSet<String>();
+            manuRelic = new HashSet<String>();
+            for (Manufacturer manu : allowedManus) {
+                manuClass.add(manu.getClas());
+                manuName.add(manu.getBaseName());
+                if (allowRelic) {
+                    manuRelic.add(manu.getRelic());
+                }
             }
             
             guns = new PCategory("Guns");
@@ -86,10 +90,10 @@ public class DumpProcessors {
             root.addChild(shields);
             root.addChild(grenades);
             root.addChild(classMods);
-            if (manu != Manufacturer.ERIDIAN) {
+            if (!allowedManus.contains(Manufacturer.ERIDIAN)) {
                 root.addChild(relics);
             }
-            if (!isBL2 && manu != Manufacturer.MOXXI) {
+            if (!isBL2 && !allowedManus.contains(Manufacturer.MOXXI)) {
                 root.addChild(moxxtails);
             }
             root.addChild(misc);
@@ -116,14 +120,19 @@ public class DumpProcessors {
                 blacklist.add("ItemPoolDefinition'GD_Aster_AmuletDoNothingData.BalanceDefs.IP_MysteryAmulet'");
                 blacklist.add("ItemPoolDefinition'GD_Aster_RolandNPC.Weapon.Pool_AsterRoland_AssaultRifles'");
                 blacklist.add("ItemPoolDefinition'GD_BoomBoom.WeaponPools.Pool_Weapons_Shotguns_BoomBoom'");
+                blacklist.add("ItemPoolDefinition'GD_Flynt.Weapons.Pool_Weapons_FlyntUse'");
                 blacklist.add("ItemPoolDefinition'GD_HarkGutter.WeaponPools.Weapons_PistolsHark'");
+                blacklist.add("ItemPoolDefinition'GD_Iris_BlimpBoss.SpecialTurret01.ItemPool_Iris_BlimpSpecialTurret01'");
+                blacklist.add("ItemPoolDefinition'GD_Iris_MotorMama.Weapons.Pool_Launcher_Custom'");
                 blacklist.add("ItemPoolDefinition'GD_ItemPools_Shop.HealthShop.HealthShop_InstaHealth_1'");
                 blacklist.add("ItemPoolDefinition'GD_Itempools.GeneralItemPools.Pool_StorageDeckUpgrades'");
                 blacklist.add("ItemPoolDefinition'GD_Jack.WeaponPools.Pool_Weapons_AssaultRifles_01_JackBots_Common'");
+                blacklist.add("ItemPoolDefinition'GD_JackCloneShared.WeaponPools.JackClone_Weapons_Base'");
                 blacklist.add("ItemPoolDefinition'GD_JacksBodyDouble.WeaponPools.Pool_Weapons_HyperionSMG_02_Uncommon'");
                 blacklist.add("ItemPoolDefinition'GD_JohnMamaril.WeaponPools.JohnMamarilAssaultUse'");
                 blacklist.add("ItemPoolDefinition'GD_JohnMamaril.WeaponPools.JohnMamarilVeryRarePistolUse'");
                 blacklist.add("ItemPoolDefinition'GD_Knight_Paladin.Shields.Pool_Shields_Standard_EnemyPaladin_Use'");
+                blacklist.add("ItemPoolDefinition'GD_Leprechaun.Weapons.Pool_Weapons_Shotguns_Leprechaun'");
                 blacklist.add("ItemPoolDefinition'GD_MarshallFriedman.WeaponPools.Weapons_SniperRifles_Marshall'");
                 blacklist.add("ItemPoolDefinition'GD_MordecaiNPC.WeaponPools.Pool_Weapons_SniperRifles_Mordecai'");
                 blacklist.add("ItemPoolDefinition'GD_Sage_Hammerlock.WeaponPools.Pool_Weapons_SniperRifles_Hammerlock'");
@@ -181,9 +190,7 @@ public class DumpProcessors {
                 itemDump,
                 "BalancedItems"
             );
-            if (applyModel) {
-                currentModel.applyTo(currentObject);
-            }
+            currentModel.applyTo(currentObject);
             BorderlandsArray allItems = currentObject
                 .getArrayField("BalancedItems");
             
@@ -191,20 +198,21 @@ public class DumpProcessors {
                 return;
             }
             
-            boolean changed = false;
+            int changedAmount = 0;
+            int initalSize = allItems.size();
             for (int i = 0; i < allItems.size(); i++) {
                 BorderlandsStruct item = (BorderlandsStruct) allItems.get(i);
                 String invDef = item.getString("InvBalanceDefinition");
                 
                 if (invDef == null
                     || invDef.equals("None")
-                    || invDef.contains(manuRelic)
-                    || invDef.contains("EnemyUse") // Shield Boosters
+                    || invDef.contains("EnemyUse")
                     || invDef.contains("CustomItemPools") // Skins
                     || invDef.contains("GD_CustomItems") // SDUs
                     || invDef.contains("SeraphCrystal")
-                    || invDef.contains("ShieldChargerPickup")
+                    || invDef.contains("ShieldChargerPickup") // Shield Boosters
                     || invDef.contains("TorgueToken")
+                    || containsFromSet(invDef, manuRelic)
                 ) {
 
                     continue;
@@ -221,9 +229,7 @@ public class DumpProcessors {
                     "InventoryDefinition",
                     "RuntimePartListCollection"
                 );
-                if (applyModel) {
-                    currentModel.applyTo(manuObject);
-                }
+                currentModel.applyTo(manuObject);
 
                 BorderlandsArray allManus = manuObject
                     .getArrayField("Manufacturers");
@@ -239,12 +245,13 @@ public class DumpProcessors {
                         .getString("Manufacturer");
 
                     // We need to allow money as well as stuff like ammo
-                    if (manu.contains(manuClass)
+                    if (containsFromSet(manu, manuClass)
                         || manu.contains("GD_Currency.Manufacturers.Cash_Manufacturer")
                         || manu.contains("GD_Manufacturers.Manufacturers.Stock")) {
 
                         continue;
                     }
+                    
                 } else {
                     // As a backup we can try check the weapon name
                     if (!invDef.startsWith("WeaponBalanceDefinition")) {
@@ -257,30 +264,50 @@ public class DumpProcessors {
                         ),
                         "AssociatedWeaponType"
                     );
-                    if (applyModel) {
-                        currentModel.applyTo(partList);
-                    }
+                    currentModel.applyTo(partList);
 
-                    String type = partList.getStringField("AssociatedWeaponType")
-                            .toLowerCase();
-                    if (type.contains(manuName.toLowerCase())) {
+                    String type = partList.getStringField("AssociatedWeaponType");
+                    if (containsFromSet(type, manuName, true)) {
                         continue;
                     }
+                    
                 }
 
-                changed = true;
+                changedAmount++;
                 modified.add(itemName);
-                item.set("InvBalanceDefinition", "InventoryBalanceDefinition'GD_ItemGrades.Currency.ItemGrade_Currency_Money_Big'");
+                /*
+                  Normally we just replace invalid items with money piles
+                  If we want to increase the amount of useful items we instead
+                   remove those items, making it more likely 
+                */
+                if (Math.random() < convertChance) {
+                    allItems.remove(i);
+                    i--;
+                } else {
+                    item.set("InvBalanceDefinition", "InventoryBalanceDefinition'GD_ItemGrades.Currency.ItemGrade_Currency_Money_Big'");
+                }
             }
             
-            if (changed) {
+            /*
+              If we're converting items and have ended up with an item pool
+               that's empty or made entirely of money then we instead replace
+               everything with the normal world drop pool
+              This lets items continue dropping from those pools
+            */
+            if (convertChance > 0 && changedAmount >= initalSize) {
+                saveAndSortCommand(new PCommand(
+                    itemName,
+                    "BalancedItems",
+                    "((ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.GeneralItemPools.Pool_GunsAndGear',InvBalanceDefinition=None,Probability=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',BaseValueScaleConstant=1.000000),bDropOnDeath=True))"
+                ));
+            } else if (changedAmount != 0) {
                 saveAndSortCommand(new PCommand(
                     itemName,
                     "BalancedItems",
                     allItems.toString()
                 ));
             }
-        }
+        }            
         
         private void multiManu(String clas) {
             if (modified.contains(clas)) {
@@ -291,15 +318,13 @@ public class DumpProcessors {
                 DataManager.getDump(clas),
                 "Manufacturers"
             );
-            if (applyModel) {
-                currentModel.applyTo(currentObject);
-            }
+            currentModel.applyTo(currentObject);
             BorderlandsArray allManus = currentObject
                 .getArrayField("Manufacturers");
             
             for (int i = 0; i < allManus.size(); i++) {
                 String manu = ((BorderlandsStruct) allManus.get(i)).getString("Manufacturer");
-                if (!(manu.contains(manuClass)
+                if (!(containsFromSet(manu, manuClass)
                     || manu.contains("GD_Currency.Manufacturers.Cash_Manufacturer")
                     || manu.contains("GD_Manufacturers.Manufacturers.Stock"))) {
                     
@@ -313,7 +338,7 @@ public class DumpProcessors {
                         "500",
                         HotfixType.LEVEL,
                         "",
-                        "LimitTo" + manuName
+                        "LimitManufacturers"
                     ));
                 }
             }
@@ -350,17 +375,26 @@ public class DumpProcessors {
     public static class ClassModDefinition implements Consumer<Dump> {
         private PCategory classMods;
         private JProgressBar bar;
-        private String manuClass;
+        private ApplyablePModel currentModel;
+        private HashSet<String> manuClass;
         private HashSet<String> blackList;
+        
         public ClassModDefinition(
             PCategory classMods,
             JProgressBar bar,
-            Manufacturer manu
+            ApplyablePModel currentModel,
+            HashSet<Manufacturer> allowedManus
         ) {
             this.classMods = classMods;
             this.bar = bar;
-            manuClass = manu.getClas();
+            this. currentModel = currentModel;
             
+            manuClass = new HashSet<String>();
+            for (Manufacturer manu : allowedManus) {
+                manuClass.add(manu.getClas());
+            }
+            
+            // TODO: When the update comes these'll be filtered out by default
             blackList = new HashSet<String>();
             blackList.add("ClassModDefinition'WillowGame.Default__ClassModDefinition'");
             blackList.add("CrossDLCClassModDefinition'WillowGame.Default__CrossDLCClassModDefinition'");
@@ -377,12 +411,33 @@ public class DumpProcessors {
                 itemDump,
                 "ManufacturerOverride"
             );
-            if (!item.getStringField("ManufacturerOverride").contains(manuClass)) {
+            currentModel.applyTo(item);
+            if (!containsFromSet(item.getStringField("ManufacturerOverride"), manuClass)) {
                 classMods.addChild(new PCommand(String.format(
                     "set %s RequiredPlayerClass GD_PlayerClassId.FakeChar",
                     item.getFullyQuantizedName()
                 )));
             }
         }
+    }
+    
+
+    private static boolean containsFromSet(String searchIn, HashSet<String> set,
+            boolean ignoreCase) {
+        if (ignoreCase) {
+            searchIn = searchIn.toLowerCase();
+        }
+        for (String item : set) {
+            if (ignoreCase) {
+                item = item.toLowerCase();
+            }
+            if (searchIn.contains(item)) {
+                return true;
+            }
+        }
+        return false;
+    }
+    private static boolean containsFromSet(String searchIn, HashSet<String> set) {
+        return containsFromSet(searchIn, set, false);
     }
 }

@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package blcmm.plugins.allegiance;
+import java.awt.Cursor;
 
 /**
  *
@@ -27,85 +28,243 @@ public class AllegiancePanelGenerated extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        manuButtonGroup = new javax.swing.ButtonGroup();
-        strictButtonGroup = new javax.swing.ButtonGroup();
+        manufacturers = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jRadioButton1 = new javax.swing.JRadioButton();
-        jRadioButton2 = new javax.swing.JRadioButton();
-        jRadioButton3 = new javax.swing.JRadioButton();
-        jRadioButton4 = new javax.swing.JRadioButton();
-        jRadioButton5 = new javax.swing.JRadioButton();
-        jRadioButton6 = new javax.swing.JRadioButton();
-        jRadioButton7 = new javax.swing.JRadioButton();
-        jRadioButton8 = new javax.swing.JRadioButton();
         jLabel2 = new javax.swing.JLabel();
-        jRadioButton9 = new javax.swing.JRadioButton();
-        eridianButton = new javax.swing.JRadioButton();
-        moxxiButton = new javax.swing.JRadioButton();
-        jRadioButton12 = new javax.swing.JRadioButton();
+        banditCheckBox = new javax.swing.JCheckBox();
+        dahlCheckBox = new javax.swing.JCheckBox();
+        hyperionCheckBox = new javax.swing.JCheckBox();
+        jakobsCheckBox = new javax.swing.JCheckBox();
+        maliwanCheckBox = new javax.swing.JCheckBox();
+        tedioreCheckBox = new javax.swing.JCheckBox();
+        torgueCheckBox = new javax.swing.JCheckBox();
+        vladofCheckBox = new javax.swing.JCheckBox();
+        anshinCheckBox = new javax.swing.JCheckBox();
+        eridianCheckBox = new javax.swing.JCheckBox();
+        moxxiCheckBox = new javax.swing.JCheckBox();
+        pangolinCheckBox = new javax.swing.JCheckBox();
+        optionals = new javax.swing.JPanel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         relicCheckBox = new javax.swing.JCheckBox();
-        jLabel4 = new javax.swing.JLabel();
+        modelCheckBox = new javax.swing.JCheckBox();
+        moneyValue = new javax.swing.JPanel();
         moneySpinner = new javax.swing.JSpinner();
-        applyModel = new javax.swing.JCheckBox();
+        moneySlider = new javax.swing.JSlider();
+        convertValue = new javax.swing.JPanel();
+        convertSpinner = new javax.swing.JSpinner();
+        convertSlider = new javax.swing.JSlider();
 
+        jLabel1.setFont(jLabel1.getFont().deriveFont(jLabel1.getFont().getStyle() | java.awt.Font.BOLD));
         jLabel1.setText("Standard Manufacturers");
 
-        manuButtonGroup.add(jRadioButton1);
-        jRadioButton1.setSelected(true);
-        jRadioButton1.setText(Manufacturer.BANDIT.toString()
-        );
-
-        manuButtonGroup.add(jRadioButton2);
-        jRadioButton2.setText(Manufacturer.DAHL.toString());
-
-        manuButtonGroup.add(jRadioButton3);
-        jRadioButton3.setText(Manufacturer.HYPERION.toString());
-
-        manuButtonGroup.add(jRadioButton4);
-        jRadioButton4.setText(Manufacturer.JAKOBS.toString());
-
-        manuButtonGroup.add(jRadioButton5);
-        jRadioButton5.setText(Manufacturer.MALIWAN.toString());
-
-        manuButtonGroup.add(jRadioButton6);
-        jRadioButton6.setText(Manufacturer.TEDIORE.toString());
-
-        manuButtonGroup.add(jRadioButton7);
-        jRadioButton7.setText(Manufacturer.TORGUE.toString());
-
-        manuButtonGroup.add(jRadioButton8);
-        jRadioButton8.setText(Manufacturer.VLADOF.toString());
-
+        jLabel2.setFont(jLabel2.getFont().deriveFont(jLabel2.getFont().getStyle() | java.awt.Font.BOLD));
         jLabel2.setText("Unconvetional Manufacturers");
 
-        manuButtonGroup.add(jRadioButton9);
-        jRadioButton9.setText(Manufacturer.ANSHIN.toString());
+        banditCheckBox.setFont(banditCheckBox.getFont());
+        banditCheckBox.setSelected(true);
+        banditCheckBox.setText(Manufacturer.BANDIT.toString());
 
-        manuButtonGroup.add(eridianButton);
-        eridianButton.setText(Manufacturer.ERIDIAN.toString());
-        eridianButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                eridianButtonActionPerformed(evt);
-            }
-        });
+        dahlCheckBox.setFont(dahlCheckBox.getFont());
+        dahlCheckBox.setText(Manufacturer.DAHL.toString());
 
-        manuButtonGroup.add(moxxiButton);
-        moxxiButton.setText(Manufacturer.MOXXI.toString());
+        hyperionCheckBox.setFont(hyperionCheckBox.getFont());
+        hyperionCheckBox.setText(Manufacturer.HYPERION.toString());
 
-        manuButtonGroup.add(jRadioButton12);
-        jRadioButton12.setText(Manufacturer.PANGOLIN.toString());
+        jakobsCheckBox.setFont(jakobsCheckBox.getFont());
+        jakobsCheckBox.setText(Manufacturer.JAKOBS.toString());
 
-        jLabel5.setText("Optionals");
+        maliwanCheckBox.setFont(maliwanCheckBox.getFont());
+        maliwanCheckBox.setText(Manufacturer.MALIWAN.toString());
 
+        tedioreCheckBox.setFont(tedioreCheckBox.getFont());
+        tedioreCheckBox.setText(Manufacturer.TEDIORE.toString());
+
+        torgueCheckBox.setFont(torgueCheckBox.getFont());
+        torgueCheckBox.setText(Manufacturer.TORGUE.toString());
+
+        vladofCheckBox.setFont(vladofCheckBox.getFont());
+        vladofCheckBox.setText(Manufacturer.VLADOF.toString());
+
+        anshinCheckBox.setFont(anshinCheckBox.getFont());
+        anshinCheckBox.setText(Manufacturer.ANSHIN.toString());
+
+        eridianCheckBox.setFont(eridianCheckBox.getFont());
+        eridianCheckBox.setText(Manufacturer.ERIDIAN.toString());
+
+        moxxiCheckBox.setFont(moxxiCheckBox.getFont());
+        moxxiCheckBox.setText(Manufacturer.MOXXI.toString());
+
+        pangolinCheckBox.setFont(pangolinCheckBox.getFont());
+        pangolinCheckBox.setText(Manufacturer.PANGOLIN.toString());
+
+        javax.swing.GroupLayout manufacturersLayout = new javax.swing.GroupLayout(manufacturers);
+        manufacturers.setLayout(manufacturersLayout);
+        manufacturersLayout.setHorizontalGroup(
+            manufacturersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(manufacturersLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(manufacturersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel1)
+                    .addGroup(manufacturersLayout.createSequentialGroup()
+                        .addGroup(manufacturersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(maliwanCheckBox)
+                            .addComponent(torgueCheckBox)
+                            .addComponent(hyperionCheckBox)
+                            .addComponent(banditCheckBox)
+                            .addComponent(anshinCheckBox)
+                            .addComponent(moxxiCheckBox))
+                        .addGap(18, 18, 18)
+                        .addGroup(manufacturersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(dahlCheckBox)
+                            .addComponent(jakobsCheckBox)
+                            .addComponent(tedioreCheckBox)
+                            .addComponent(vladofCheckBox)
+                            .addComponent(eridianCheckBox)
+                            .addComponent(pangolinCheckBox)))
+                    .addComponent(jLabel2))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        manufacturersLayout.setVerticalGroup(
+            manufacturersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(manufacturersLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(manufacturersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(banditCheckBox)
+                    .addComponent(dahlCheckBox))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(manufacturersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(hyperionCheckBox)
+                    .addComponent(jakobsCheckBox))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(manufacturersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(maliwanCheckBox)
+                    .addComponent(tedioreCheckBox))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(manufacturersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(torgueCheckBox)
+                    .addComponent(vladofCheckBox))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(manufacturersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(anshinCheckBox)
+                    .addComponent(eridianCheckBox))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(manufacturersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(moxxiCheckBox)
+                    .addComponent(pangolinCheckBox))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jLabel3.setFont(jLabel3.getFont().deriveFont(jLabel3.getFont().getStyle() | java.awt.Font.BOLD));
+        jLabel3.setText("Optionals");
+
+        jLabel4.setFont(jLabel4.getFont());
+        jLabel4.setText("Money drop value multiplier");
+        jLabel4.setToolTipText("Makes money you pick up in the world worth more (or less), to offset the reduced amount of items");
+
+        jLabel5.setFont(jLabel5.getFont());
+        jLabel5.setText("Percent extra useful drops");
+        jLabel5.setToolTipText("Converts drops that would normally be removed into useful ones");
+
+        relicCheckBox.setFont(relicCheckBox.getFont());
         relicCheckBox.setText("Allow Allegiance Relic");
 
-        jLabel4.setText("Money drop value multiplier");
+        modelCheckBox.setFont(modelCheckBox.getFont());
+        modelCheckBox.setSelected(true);
+        modelCheckBox.setText("Apply ontop of existing patch");
 
+        moneySpinner.setFont(moneySpinner.getFont());
         moneySpinner.setModel(new javax.swing.SpinnerNumberModel(Float.valueOf(1.0f), Float.valueOf(0.1f), Float.valueOf(10.0f), Float.valueOf(0.1f)));
 
-        applyModel.setSelected(true);
-        applyModel.setText("Apply ontop of existing patch");
+        moneySlider.setMaximum(50);
+        moneySlider.setMinimum(-50);
+        moneySlider.setValue(0);
+
+        javax.swing.GroupLayout moneyValueLayout = new javax.swing.GroupLayout(moneyValue);
+        moneyValue.setLayout(moneyValueLayout);
+        moneyValueLayout.setHorizontalGroup(
+            moneyValueLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(moneyValueLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(moneySlider, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(moneySpinner, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+        moneyValueLayout.setVerticalGroup(
+            moneyValueLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(moneyValueLayout.createSequentialGroup()
+                .addGap(1, 1, 1)
+                .addGroup(moneyValueLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(moneySpinner)
+                    .addComponent(moneySlider, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        convertSpinner.setFont(convertSpinner.getFont());
+        convertSpinner.setModel(new javax.swing.SpinnerNumberModel(0, 0, 100, 1));
+
+        convertSlider.setValue(0);
+
+        javax.swing.GroupLayout convertValueLayout = new javax.swing.GroupLayout(convertValue);
+        convertValue.setLayout(convertValueLayout);
+        convertValueLayout.setHorizontalGroup(
+            convertValueLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(convertValueLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(convertSlider, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(convertSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+        convertValueLayout.setVerticalGroup(
+            convertValueLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(convertValueLayout.createSequentialGroup()
+                .addGap(1, 1, 1)
+                .addGroup(convertValueLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(convertSpinner)
+                    .addComponent(convertSlider, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout optionalsLayout = new javax.swing.GroupLayout(optionals);
+        optionals.setLayout(optionalsLayout);
+        optionalsLayout.setHorizontalGroup(
+            optionalsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(moneyValue, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(optionalsLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(optionalsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(modelCheckBox)
+                    .addComponent(jLabel3)
+                    .addComponent(relicCheckBox)
+                    .addComponent(jLabel4)
+                    .addComponent(jLabel5))
+                .addContainerGap(10, Short.MAX_VALUE))
+            .addComponent(convertValue, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        optionalsLayout.setVerticalGroup(
+            optionalsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(optionalsLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(relicCheckBox)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(modelCheckBox)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel4)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(moneyValue, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel5)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(convertValue, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -113,110 +272,49 @@ public class AllegiancePanelGenerated extends javax.swing.JPanel {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel4)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(moneySpinner, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(relicCheckBox)
-                            .addComponent(jLabel5))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(applyModel)
-                            .addComponent(jLabel1)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jRadioButton3)
-                                    .addComponent(jRadioButton1)
-                                    .addComponent(jRadioButton5)
-                                    .addComponent(jRadioButton7)
-                                    .addComponent(moxxiButton))
-                                .addGap(18, 18, 18)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jRadioButton2)
-                                    .addComponent(jRadioButton4)
-                                    .addComponent(jRadioButton6)
-                                    .addComponent(jRadioButton8)
-                                    .addComponent(eridianButton)
-                                    .addComponent(jRadioButton12)))
-                            .addComponent(jRadioButton9)
-                            .addComponent(jLabel2))
-                        .addGap(0, 0, Short.MAX_VALUE))))
+                .addComponent(manufacturers, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(optionals, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jRadioButton1)
-                    .addComponent(jRadioButton2))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jRadioButton3)
-                    .addComponent(jRadioButton4))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jRadioButton5)
-                    .addComponent(jRadioButton6))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jRadioButton7)
-                    .addComponent(jRadioButton8))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jRadioButton9)
-                    .addComponent(eridianButton))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(moxxiButton)
-                    .addComponent(jRadioButton12))
-                .addGap(18, 18, 18)
-                .addComponent(jLabel5)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(relicCheckBox)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(applyModel)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4)
-                    .addComponent(moneySpinner, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(optionals, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(manufacturers, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void eridianButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eridianButtonActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_eridianButtonActionPerformed
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    protected javax.swing.JCheckBox applyModel;
-    protected javax.swing.JRadioButton eridianButton;
+    protected javax.swing.JCheckBox anshinCheckBox;
+    protected javax.swing.JCheckBox banditCheckBox;
+    protected javax.swing.JSlider convertSlider;
+    protected javax.swing.JSpinner convertSpinner;
+    private javax.swing.JPanel convertValue;
+    protected javax.swing.JCheckBox dahlCheckBox;
+    protected javax.swing.JCheckBox eridianCheckBox;
+    protected javax.swing.JCheckBox hyperionCheckBox;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    protected javax.swing.JRadioButton jRadioButton1;
-    protected javax.swing.JRadioButton jRadioButton12;
-    protected javax.swing.JRadioButton jRadioButton2;
-    protected javax.swing.JRadioButton jRadioButton3;
-    protected javax.swing.JRadioButton jRadioButton4;
-    protected javax.swing.JRadioButton jRadioButton5;
-    protected javax.swing.JRadioButton jRadioButton6;
-    protected javax.swing.JRadioButton jRadioButton7;
-    protected javax.swing.JRadioButton jRadioButton8;
-    protected javax.swing.JRadioButton jRadioButton9;
-    protected javax.swing.ButtonGroup manuButtonGroup;
+    protected javax.swing.JCheckBox jakobsCheckBox;
+    protected javax.swing.JCheckBox maliwanCheckBox;
+    private javax.swing.JPanel manufacturers;
+    protected javax.swing.JCheckBox modelCheckBox;
+    protected javax.swing.JSlider moneySlider;
     protected javax.swing.JSpinner moneySpinner;
-    protected javax.swing.JRadioButton moxxiButton;
+    private javax.swing.JPanel moneyValue;
+    protected javax.swing.JCheckBox moxxiCheckBox;
+    private javax.swing.JPanel optionals;
+    protected javax.swing.JCheckBox pangolinCheckBox;
     protected javax.swing.JCheckBox relicCheckBox;
-    protected javax.swing.ButtonGroup strictButtonGroup;
+    protected javax.swing.JCheckBox tedioreCheckBox;
+    protected javax.swing.JCheckBox torgueCheckBox;
+    protected javax.swing.JCheckBox vladofCheckBox;
     // End of variables declaration//GEN-END:variables
 }
