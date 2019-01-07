@@ -1,6 +1,6 @@
 ## TPS - Moxxi Signature Classic Collection
 
-![TPS - Moxxi Signature Elegance Gear](https://imgur.com/KlEkPrV.jpg "Don't worry guys... even if my screen capture show French text, my mods are in English")
+![TPS - Moxxi Signature Classic Collection](https://imgur.com/xn7T0pr.jpg "Don't worry guys... even if my screen capture show French text, my mods are in English")
 
 Is that the Moxxi's weapons skins in TPS? ... seriously? ... but not ever 2 skins are the same!?! 
 
@@ -10,9 +10,15 @@ That doesn't make sense to me... and it's just not prettier!
 
 Where is gone the Orange/Red Fire color from the original BL2 *Creamer/Heart Breaker* vanilla skin ???
 
+I decided to totally restore the BL2 Classic Moxxi Skin...
+
+![Moxxi Signature Classic Skin - Vanilla Pink Skin vs Pinky Skin](https://imgur.com/aYiBzCJ.jpg "Don't worry guys... even if my screen capture show French text, my mods are in English")
+
+I change the vanilla color to the BL2 Classic Orange/Red Fire color, colorize the metal part, adapt the Moxxi logo in a more appropriate size when necessary... and repeat the same work on all the Moxxi weapons.
+
 ![TPS - Moxxi Signature Classic Collection](https://imgur.com/LT6cLyc.jpg "Don't worry guys... even if my screen capture show French text, my mods are in English")
 
-Let's go back to the original Moxxi's weapons skins with the *Moxxi Signature Classic Collection*, and now there are all uniform to look like an actual manufacturer.
+Now, with the *Moxxi Signature Classic Collection*, there are all uniform to look like an actual manufacturer.
 
 ### Changelog:
 - v1.0.0, December 12, 2018

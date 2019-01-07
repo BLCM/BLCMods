@@ -1,6 +1,6 @@
 ## TPS - Moxxi Signature Elegance Collection
 
-![TPS - Moxxi Signature Elegance Gear](https://imgur.com/p1lT4hn.jpg "Don't worry guys... even if my screen capture show French text, my mods are in English")
+![TPS - Moxxi Signature Elegance Collection](https://imgur.com/r4fvfDe.jpg "Don't worry guys... even if my screen capture show French text, my mods are in English")
 
 Is that the Moxxi's weapons skins in TPS? ... seriously? ... but not ever 2 skins are the same!?! 
 
@@ -12,10 +12,11 @@ Argh! It's not pretty at all... Let's fix that!
 
 First, I take the red color similar to the little *Cartier* box, next I made the metal part looking like (silver) steel... add some discrete decorative gold parts like the golden screws inserted into a brushed steel bracelet... finally adapt the Moxxi logo in a more appropriate size when necessary... and repeat the same work on all the Moxxi weapons...
 
-![TPS - Moxxi Signature Elegance Gear](https://imgur.com/fHX8Ljf.jpg "Don't worry guys... even if my screen capture show French text, my mods are in English")
+![TPS - Moxxi Signature Elegance Collection](https://imgur.com/V4m4msw.jpg "Don't worry guys... even if my screen capture show French text, my mods are in English")
 
 Et Voila! Here is the *TPS - Moxxi Signature Elegance Collection*... and now the Moxxi's weapons are all uniform and look like an actual manufacturer.
 
+![TPS - Moxxi Signature Elegance Gear](https://imgur.com/fHX8Ljf.jpg "Don't worry guys... even if my screen capture show French text, my mods are in English")
 ### Changelog:
 - v1.0.0, October 20, 2018
   - Initial public release
