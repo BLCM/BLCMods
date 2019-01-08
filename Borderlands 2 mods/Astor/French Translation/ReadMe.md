@@ -12,7 +12,7 @@ This Read Me is just here as a quick synopsis, for detailed informations, each M
 
   - __*UVHM-RB by Aaron0000* French Translation:__ a simple *Add-On Translation Mod* that allows you to obtain in French any text additions (in English) from the Mod *UVHM-RB by Aaron0000*.
 
-- ### *Gears Overhauls*:
+- ### *Gears & Brands Overhauls*:
 
   - __*Bandit Brand Tweaks by Orudeon* French Translation:__ a simple *Add-On Translation Mod* that allows you to obtain in French any text additions (in English) from the Mod *Orudeon's Bandit Brand Tweaks v1.21*.
 
@@ -38,7 +38,7 @@ This Read Me is just here as a quick synopsis, for detailed informations, each M
   
   - __*Magic Missile Plus by Darkdemon8910* French Translation:__ a simple *Add-On Translation Mod* that allows you to obtain in French any text additions (in English) from the Mod *Darkdemon8910's Magic Missile Plus*.
 
-* * * * *
+  - __*Moxxi's Endowment (Health-Leech) by Aaron0000* French Translation:__ a simple *Add-On Translation Mod* that allows you to obtain in French any text additions (in English) from the Mod *Aaron0000's Moxxi's Endowment (Health-Leech)*.
 
 - ### *Single Gear Replacement*:
 

@@ -8,6 +8,8 @@ This Read Me is just here as a quick synopsis, for detailed informations, each M
   
   - __*Magic Missile Plus by Darkdemon8910* French Translation:__ a simple *Add-On Translation Mod* that allows you to obtain in French any text additions (in English) from the Mod *Darkdemon8910's Magic Missile Plus*.
 
+  - __*Moxxi's Endowment (Health-Leech) by Aaron0000* French Translation:__ a simple *Add-On Translation Mod* that allows you to obtain in French any text additions (in English) from the Mod *Aaron0000's Moxxi's Endowment (Health-Leech)*.
+
 * * * * *
 
 ## Credits:
