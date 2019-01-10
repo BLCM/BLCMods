@@ -67,28 +67,26 @@ There's a few things which I'd considered adding to this mod, but were already w
 
 ### Changelog:
 
-- v1.0.0, September 1, 2018
-  - Initial public release
-- v1.0.1, September 5, 2018
-  - Upgrade the customization skin/head rewards to a Blue weapon/item rewards for 8 missions.  
-- v1.0.2, September 10, 2018   
-  - In the mission *Uncle Teddy*, if you give the plans to Una, the reward will be the *Lady Fist*, and if you give the plans to Hyperion you will have the choice to toggle between 2 options: 2 *Bitch* (Legendary SMG Hyperion) or 2 *Commerce* (Unique Shock SMG Hyperion) 
-- v1.0.3, September 21, 2018
-  - "Move" the *Octo* (Unique shotgun Tediore) reward from *Slap Happy* (Hammerlock mission) in The Highlands: Outwash to *Capture The Flag in Sawtooth Cauldron*, on this way, my Mod Hammerlock Jakobs Sponsor can reward the *Tidal Wave* (Unique shotgun Jakobs) with the *Slap Happy* mission.
-- v1.0.4, September 30, 2018  
-  - Added a 3rd option in *Uncle Teddy* mission in *Arid Nexus - Badlands*: the choice between 1 Unique SMG *Commerce* or 1 Legendary SMG *Bitch* you give the plans to Hyperion.
-- v1.0.5, October 25, 2018 
-  - Added the choice between 2 Unique weapons/items instead of a single one for DLC 1 - *Captain Scarlett and Her Pirate's Booty*.
+- v1.0.7, January 10, 2019
+  - Added the choice between 2 Unique weapons/items instead of a single one for DLC 2 - *Mr. Torgue's Campaign of Carnage*
 - v1.0.6, December 5, 2018
   - Added the choice between 2 Unique weapons/items instead of a single one for DLC 3 - *Sir Hammerlock's Big Game Hunt*
-
+- v1.0.5, October 25, 2018 
+  - Added the choice between 2 Unique weapons/items instead of a single one for DLC 1 - *Captain Scarlett and Her Pirate's Booty*.
+- v1.0.4, September 30, 2018  
+  - Added a 3rd option in *Uncle Teddy* mission in *Arid Nexus - Badlands*: the choice between 1 Unique SMG *Commerce* or 1 Legendary SMG *Bitch* you give the plans to Hyperion.
+- v1.0.3, September 21, 2018
+  - "Move" the *Octo* (Unique shotgun Tediore) reward from *Slap Happy* (Hammerlock mission) in The Highlands: Outwash to *Capture The Flag in Sawtooth Cauldron*, on this way, my Mod Hammerlock Jakobs Sponsor can reward the *Tidal Wave* (Unique shotgun Jakobs) with the *Slap Happy* mission.
+- v1.0.2, September 10, 2018   
+  - In the mission *Uncle Teddy*, if you give the plans to Una, the reward will be the *Lady Fist*, and if you give the plans to Hyperion you will have the choice to toggle between 2 options: 2 *Bitch* (Legendary SMG Hyperion) or 2 *Commerce* (Unique Shock SMG Hyperion) 
+- v1.0.1, September 5, 2018
+  - Upgrade the customization skin/head rewards to a Blue weapon/item rewards for 8 missions.
+- v1.0.0, September 1, 2018
+  - Initial public release
 
 ### To do:
 
-- [x] Bring back some Unique weapon/Item as mission rewards for the main game.
-- [x] Upgrade the customization skin/head rewards to weapon/item rewards for the main game.
 - [x] Bring back some Unique weapon/Item as mission rewards for the DLCs.
-- [ ] Upgrade the customization skin/head rewards to weapon/item rewards for the DLCs.
 - [ ] Make (again) a new playthrough to be sure that all the Unique weapon/item rewards are given correctly.
 - [ ] Clean the code and remove all my ~~shitty~~ notes.
 - [ ] Erase this to-do list.
