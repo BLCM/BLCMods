@@ -1,4 +1,4 @@
-## *Boxxy* Fourth-Wall Rebounding
+## *Boxxy* Fourth-Wall Rebouncing
 
 Increases the number of ricochet from the SMG *Boxxy*'s fired bullets from twice ricochets (Vanilla Game Default Value) until 5 ricochets (Similar to Min Min Lighter).
 
