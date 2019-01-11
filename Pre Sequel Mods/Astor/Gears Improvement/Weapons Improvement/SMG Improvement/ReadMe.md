@@ -2,37 +2,9 @@ This Read Me is just here as a quick synopsis, for detailed informations, each M
 
 * * * * *
 
-## Items Improvement:  
-
-- ### Shields Improvement:
-
-  - __*Booster Shields* Auto Pick-Up:__ Like Money and Ammunition, now the booster shield automatically pick-up... just walk on it and it's your!
-
-  - __*Whiskey Tango Foxtrot* Twofold:__ Double the *IED (Improvised Explosive Device) boosters* dropped to increase the *Whiskey Tango Foxtrot* offensive capability.
-
-## Weapons Improvement:
-
-- ### Assault Rifle Improvement:
-
-  - __*Cry Baby* Presto:__ Hustle the *Cry Baby's red/yellow bullet speed* from 5.000 (defaut vanilla game value) to 25.000 (standard AR bullet speed).
-
-  - __*KerBoom* with Singularity Grenade:__ Turns the KerBoom into a useful weapon by shooting 1 rockets, which spawn 1 singularity child grenade.
-
-- ### Shotgun:
- 
-  - __*Moonscaper* No Self-Damage:__ Made the grenades not inflicting self-damage to fixes the issue of where the delayed explosion would (repeatedly) put you down.
-
-  - __*Moonscaper* with Grenade Damage:__ Replace the *Rocket Damage* by *Grenade Damage*, on this way the damage can be increased by Character Skill.
-
-  - __*Wombat* No Self-Damage:__ Made the grenades not inflicting self-damage to fixes the issue of where the delayed explosion would (repeatedly) put you down.
-
-- ### SMG Improvement:
+## SMG Improvement:
 
   - __*Boxxy* Fourth-Wall Rebounding:__ Increases the number of ricochet from the SMG *Boxxy*'s fired bullets.
-
-- ### Sniper Rifle Improvement:
-
-  - __*Omni-Cannon* with Grenade Damage:__ with this *Grenade Damage Bonus* added, the *Omni-Cannon* will become one of the BEST sniper rifle in TPS.
 
 * * * * *
  

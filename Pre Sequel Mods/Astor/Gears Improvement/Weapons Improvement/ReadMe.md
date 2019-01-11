@@ -18,6 +18,10 @@ This Read Me is just here as a quick synopsis, for detailed informations, each M
 
   - __*Wombat* No Self-Damage:__ Made the grenades not inflicting self-damage to fixes the issue of where the delayed explosion would (repeatedly) put you down.
 
+- ### SMG Improvement:
+
+  - __*Boxxy* Fourth-Wall Rebounding:__ Increases the number of ricochet from the SMG *Boxxy*'s fired bullets.
+
 - ### Sniper Rifle Improvement:
 
   - __*Omni-Cannon* with Grenade Damage:__ with this *Grenade Damage Bonus* added, the *Omni-Cannon* will become one of the BEST sniper rifle in TPS. 
