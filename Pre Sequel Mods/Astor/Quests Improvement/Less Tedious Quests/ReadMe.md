@@ -2,7 +2,7 @@
 
 As the title suggests it, makes a few timed and objective count __-failable!-__ optional mission less tedious to complete:
 
-### Objective Count Missions:
+### Objective Count Mission:
 
 Makes a few objective count __-failable!-__ optional mission less tedious, but still a little bit challenging, to complete by decreasing the objective count by 20%, 35% or 50% on the following missions
 
@@ -12,6 +12,7 @@ Makes a few objective count __-failable!-__ optional mission less tedious, but s
 
 Makes a few timed __-failable!-__ optional mission less tedious, but still a little bit challenging, to complete by increasing the countdown time by 50% (x1.5), 100% (x2) or Untimed on the following missions
 
+- __*Kill Meg*__ (Hyperion Hub of Heroism)
 - __*Pop Racing*__ (Triton Flats) 
 - __*Recruitement Drive*__ (Triton Flats) 
 - __*The Don*__ (Vorago Solitude) 
@@ -21,12 +22,15 @@ Makes a few timed __-failable!-__ optional mission less tedious, but still a lit
 __Note:__ *Pop Racing* optional mission with double time (3:00 instead of 1:30) countdown... you can even fall in lava and grab a new car during the race, you'll still have enough time eat a picnic at the roadside before passing -winner!- the finish line!
 
 ### Changelog:
+- v1.0.3, January 12, 2019
+  - Add __*Kill Meg*__ in *Timed Mission*
+- v1.0.2, December 6, 2018
+  - Each quest option can be toggle separately (instead of be grouped).
+- v1.0.1, November 12, 2018
+  - Add __*Let Turrets Kill Scavs*__ in *Objective Count Mission*
 - v1.0.0, November 5, 2018
   - Initial public release
-- v1.0.1, November 12, 2018
-  - Add *Objective Count Missions:* Let Turrets Kill Scavs
-- v1.0.2, December 6, 2018
-  - Each quest option can be toggle separately (instead of be grouped). 
+ 
 
 ### Compatibility:
 
