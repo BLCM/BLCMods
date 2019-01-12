@@ -4,15 +4,15 @@
 		<type name="TPS" offline="false"/>
 	</head>
 	<body>
-		<category name="Less Tedious Quests v1.0.2">
+		<category name="Less Tedious Quests v1.0.3">
 			<comment>Mod author: Astor</comment>
-			<comment>Release Date: 05 November 2018</comment>
-			<comment>Version: 1.0.2 - See ReadMe for Changelog ;)</comment>
+			<comment>Release Date: 12 January 2019</comment>
+			<comment>Version: 1.0.3 - See ReadMe for Changelog ;)</comment>
 			<comment>Makes a few timed and objective count -failable!- optional mission less tedious to complete.</comment>
 			<category name="Objective Count Mission (Open to choose a option)">
 				<category name="Let's Build a Robot Army (Titan Robot Production Plant)" MUT="true">
 					<category name="Vanilla Game (Unchanged)">
-						<code profiles="">set GD_Cork_DahlFactory_Plot.M_Cork_DahlFactory_Plot:TurretKills_Light ObjectiveCount 12</code>
+						<code profiles="default">set GD_Cork_DahlFactory_Plot.M_Cork_DahlFactory_Plot:TurretKills_Light ObjectiveCount 12</code>
 					</category>
 					<category name="Objective Count Decreased by 20%">
 						<category name="Let Turrets Kill Scavs: 10">
@@ -28,12 +28,23 @@
 				</category>
 			</category>
 			<category name="Timed Mission (Open to choose a option)">
+				<category name="Kill Meg (Hyperion Hub of Heroism)" MUT="true">
+					<category name="Increased Time by 50%">
+						<code profiles="">set GD_Co_Kill_Meg.M_Kill_Meg SecondsToComplete 68</code>
+					</category>
+					<category name="Increased Time by 100%">
+						<code profiles="default">set GD_Co_Kill_Meg.M_Kill_Meg SecondsToComplete 90</code>
+					</category>
+					<category name="No Time Limit">
+						<code profiles="">set GD_Co_Kill_Meg.M_Kill_Meg SecondsToComplete 0</code>
+					</category>
+				</category>
 				<category name="Pop Racing (Triton Flats)" MUT="true">
 					<category name="Increased Time by 50%">
 						<code profiles="">set GD_Co_PopRacing.M_Co_PopRacing SecondsToComplete 135</code>
 					</category>
 					<category name="Increased Time by 100%">
-						<code profiles="">set GD_Co_PopRacing.M_Co_PopRacing SecondsToComplete 180</code>
+						<code profiles="default">set GD_Co_PopRacing.M_Co_PopRacing SecondsToComplete 180</code>
 					</category>
 					<category name="No Time Limit">
 						<code profiles="">set GD_Co_PopRacing.M_Co_PopRacing SecondsToComplete 3000</code>
@@ -44,7 +55,7 @@
 						<code profiles="">set GD_Cork_Resistors.M_Resistors SecondsToComplete 405</code>
 					</category>
 					<category name="Increased Time by 100%">
-						<code profiles="">set GD_Cork_Resistors.M_Resistors SecondsToComplete 540</code>
+						<code profiles="default">set GD_Cork_Resistors.M_Resistors SecondsToComplete 540</code>
 					</category>
 					<category name="No Time Limit">
 						<code profiles="">set GD_Cork_Resistors.M_Resistors SecondsToComplete 0</code>
@@ -55,7 +66,7 @@
 						<code profiles="">set GD_Co_Side_TheDon.M_TheDon SecondsToComplete 405</code>
 					</category>
 					<category name="Increased Time by 100%">
-						<code profiles="">set GD_Co_Side_TheDon.M_TheDon SecondsToComplete 540</code>
+						<code profiles="default">set GD_Co_Side_TheDon.M_TheDon SecondsToComplete 540</code>
 					</category>
 					<category name="No Time Limit">
 						<code profiles="">set GD_Co_Side_TheDon.M_TheDon SecondsToComplete 0</code>
@@ -67,4 +78,9 @@
 </BLCMM>
 
 #Commands:
+set GD_Cork_DahlFactory_Plot.M_Cork_DahlFactory_Plot:TurretKills_Light ObjectiveCount 12
+set GD_Co_Kill_Meg.M_Kill_Meg SecondsToComplete 90
+set GD_Co_PopRacing.M_Co_PopRacing SecondsToComplete 180
+set GD_Cork_Resistors.M_Resistors SecondsToComplete 540
+set GD_Co_Side_TheDon.M_TheDon SecondsToComplete 540
 
