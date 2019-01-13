@@ -6,6 +6,8 @@ This Read Me is just here as a quick synopsis, for detailed informations, each M
 
   - __*Bandit Brand Tweaks by Orudeon* French Translation:__ a simple *Add-On Translation Mod* that allows you to obtain in French any text additions (in English) from the Mod *Orudeon's Bandit Brand Tweaks v1.21*.
 
+  - __*Gears Overhaul by Orudeon* French Translation:__ a simple *Add-On Translation Mod* that allows you to obtain in French any text additions (in English) from the Mod *Orudeon's Gears Overhaul v1.36*.
+
   - __*Jakobs Brand Tweaks by Orudeon* French Translation:__ a simple *Add-On Translation Mod* that allows you to obtain in French any text additions (in English) from the Mod *Orudeon's Jakobs Brand Tweaks v1.4*.
 
   - __*Prefix Rework by AngrierPat* French Translation:__ a simple *Add-On Translation Mod* that allows you to obtain in French any text additions (in English) from the Mod *AngrierPat's Prefix Rework v2.1a*.
