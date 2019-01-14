@@ -4,7 +4,7 @@ This Read Me is just here as a quick synopsis, for detailed informations, each M
 
 ## SMG Improvement:
 
-  - __*Boxxy* Fourth-Wall Rebouncing:__ Increases the number of ricochet from the SMG *Boxxy*'s fired bullets.
+  - __*Boxxy* Four-Walls Rebouncing:__ Increases the number of ricochet from the SMG *Boxxy*'s fired bullets.
 
 * * * * *
  

@@ -10,6 +10,10 @@ This Read Me is just here as a quick synopsis, for detailed informations, each M
 
   - __*KerBoom* with Singularity Grenade:__ Turns the KerBoom into a useful weapon by shooting 1 rockets, which spawn 1 singularity child grenade.
 
+- ### SMG Improvement:
+
+  - __*Boxxy* Four-Walls Rebouncing:__ Increases the number of ricochet from the SMG *Boxxy*'s fired bullets.
+
 - ### Shotgun:
  
   - __*Moonscaper* No Self-Damage:__ Made the grenades not inflicting self-damage to fixes the issue of where the delayed explosion would (repeatedly) put you down.
@@ -17,10 +21,6 @@ This Read Me is just here as a quick synopsis, for detailed informations, each M
   - __*Moonscaper* with Grenade Damage:__ Replace the *Rocket Damage* by *Grenade Damage*, on this way the damage can be increased by Character Skill.
 
   - __*Wombat* No Self-Damage:__ Made the grenades not inflicting self-damage to fixes the issue of where the delayed explosion would (repeatedly) put you down.
-
-- ### SMG Improvement:
-
-  - __*Boxxy* Fourth-Wall Rebouncing:__ Increases the number of ricochet from the SMG *Boxxy*'s fired bullets.
 
 - ### Sniper Rifle Improvement:
 
