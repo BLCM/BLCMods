@@ -8,10 +8,6 @@ This Read Me is just here as a quick synopsis, for detailed informations, each M
  
   - __*Stinger* Four-Walls Rebouncing:__ Increases by 5 times the number of ricochet from the Stinger's pistol fired bullets.
 
-- ### Shotgun Improvement:
- 
-  - __*Landscaper* No Self-Damage:__ Made the grenades not inflicting self-damage to fixes the issue of where the delayed explosion would (repeatedly) put you down.
-
 * * * * *
  
 ## Acknowledgement
