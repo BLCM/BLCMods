@@ -4,6 +4,8 @@ This Read Me is just here as a quick synopsis, for detailed informations, each M
 
 - ### *Single Gear Replacement*:
 
+  - __*Godspeed (Afterburner) by Aaron0000* French Translation:__ a simple *Add-On Translation Mod* that allows you to obtain in French any text additions (in English) from the Mod *Aaron0000's Godspeed (Afterburner)*.
+
   - __*Marcus Gundropper by FromDarkHell* French Translation:__ a simple *Add-On Translation Mod* that allows you to obtain in French any text additions (in English) from the Mod *FromDarkHell's Marcus Gundropper*.
 
   - __*Profanity of the Seraphs by GoldenGizzmo* French Translation:__ a simple *Add-On Translation Mod* that allows you to obtain in French any text additions (in English) from the Mod *GoldenGizzmo's Profanity of the Seraphs*.
