@@ -18,6 +18,9 @@
 ## Pyro Pete Loot Pool Fixer (by Mike)
 - Makes it so you get the Seraph Item from Pete if you bloodsplode him (or 1 shot him)
 
+## Krieg Silence the Voices self-damage Delay (by Mike)
+- Makes it so Krieg's StV has a 5 second delay before you can damage yourself again (does not include animation).
+
 # Credits
 
 - Nocturni (Less Cluttering Particles) for allowing us to use parts of his "splash" mod

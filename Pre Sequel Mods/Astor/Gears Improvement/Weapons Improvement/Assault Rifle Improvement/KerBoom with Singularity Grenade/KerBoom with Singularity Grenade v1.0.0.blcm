@@ -1,0 +1,36 @@
+<BLCMM v="1">
+#<!!!You opened a file saved with BLCMM in FilterTool. Please update to BLCMM to properly open this file!!!>
+	<head>
+		<type name="TPS" offline="false"/>
+	</head>
+	<body>
+		<category name="KerBoom with Singularity Grenade v1.0.0">
+			<comment>Mod author: Astor</comment>
+			<comment>Release Date: 15 November 2018</comment>
+			<comment>Version: 1.0.0 - See ReadMe for Changelog ;)</comment>
+			<category name="Description">
+				<comment>Turns the KerBoom into a useful weapon.</comment>
+				<comment>- Shot 1 rocket, which spawn 1 singularity child grenade.</comment>
+				<comment>- No self-damage with the singularity child grenade.</comment>
+				<comment>- Cuts the cost of ammo to 2 per shot, effectively doubles magazine.</comment>
+			</category>
+			<category name="RAW Stats">
+				<code profiles="default">set gd_cork_weap_assaultrifle.Barrel.AR_Barrel_Torgue_KerBoom WeaponCardAttributes ()</code>
+				<code profiles="default">set gd_cork_weap_assaultrifle.Barrel.AR_Barrel_Torgue_KerBoom WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-0.120000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=6.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=4.300000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))</code>
+			</category>
+			<category name="No Self-Damage">
+				<code profiles="default">set gd_cork_weap_assaultrifle.Projectiles.Projectile_KerBoom_Grenade:BehaviorProviderDefinition_0.Behavior_Explode_4 InstigatorSelfDamageScale 0.000000</code>
+			</category>
+			<category name="Singularity Child Grenade">
+				<code profiles="default">set gd_cork_weap_assaultrifle.Projectiles.Projectile_Rocket_KerBoom:BehaviorProviderDefinition_0.Behavior_SpawnProjectile_2 ProjectileDefinition ProjectileDefinition'GD_GrenadeMods.Projectiles.Grenade_SingularityChild'</code>
+			</category>
+		</category>
+	</body>
+</BLCMM>
+
+#Commands:
+set gd_cork_weap_assaultrifle.Barrel.AR_Barrel_Torgue_KerBoom WeaponCardAttributes ()
+set gd_cork_weap_assaultrifle.Barrel.AR_Barrel_Torgue_KerBoom WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-0.120000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=6.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=4.300000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+set gd_cork_weap_assaultrifle.Projectiles.Projectile_KerBoom_Grenade:BehaviorProviderDefinition_0.Behavior_Explode_4 InstigatorSelfDamageScale 0.000000
+set gd_cork_weap_assaultrifle.Projectiles.Projectile_Rocket_KerBoom:BehaviorProviderDefinition_0.Behavior_SpawnProjectile_2 ProjectileDefinition ProjectileDefinition'GD_GrenadeMods.Projectiles.Grenade_SingularityChild'
+

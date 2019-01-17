@@ -57,6 +57,13 @@ See [COPYING-mods.txt](../COPYING-mods.txt) for the full text.
 Changelog
 =========
 
+**v1.0.3** - December 27, 2018
+ * Fixed loot midget chests (including the most obviously-broken ones, the
+   cardboard boxes during Doctor's Orders)
+
+**v1.0.2** - December 5, 2018
+ * Fixed the post-Son-of-Crawmerax epic chests
+
 **v1.0.1** - November 6, 2018
  * Fixed the compass piece container in Hayter's Folly (which was otherwise
    blocking completion of the Scarlett DLC story missions)

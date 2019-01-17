@@ -9,92 +9,1668 @@
 	<body>
 		<category name="Loot Despawner">
 			<comment>Mod written by GitHub: (Our Lord And Savior Gabe Newell) / NexusMods: (OB4MA)</comment>
-			<comment>Changes the rarity of objects to make this a bit easier to customize.</comment>
-			<comment>Includes an ammo mod written by Lollosaurus Rex incase you make Purples, Blues, and Gemstones despawn quickly.</comment>
-			<category name="Changed Item Rarity Life Span (Edited Default Times To Work With Mod)" locked="true">
-				<category name="Recommended - Trash Despawns In 1 Minute, Purples + Blues + Gemstones In 10 Minutes, Legendaries And Above In 30 Minutes">
-					<category name="Code">
+			<comment></comment>
+			<comment></comment>
+			<comment>T U T O R I A L</comment>
+			<comment>\\\\\\\\</comment>
+			<comment>--------</comment>
+			<comment>[1] this section allows you to choose between 5 types of timers for the game to use per item rarity.  As an example you can set Blue items to use the VeryShortLived timer type, which then inherits the times from section [2].</comment>
+			<comment></comment>
+			<comment>[2] this section lets you modify the time, in seconds, for when an item despawns.  This works directly from section [1].</comment>
+			<comment>If you set Blue, White and Green rarity items to use VeryShortLived as their type, then they will all inherit the timer from section [2] in their respective categories.</comment>
+			<comment></comment>
+			<comment>[Optional 1] this allows you to make all blue uniques use a specific rarity class of your choosing. This makes them inherit the types from section [1], specifically, from the Purple, Legendary, E-Tech and Pearlescent Tier 2 rarities.</comment>
+			<comment></comment>
+			<comment>[Optional 2] this is designed for [Optional 1], as it will allow the two affected SMGs from UCP to retain their Purple rarity to prevent quick despawns from the Blue rarity.</comment>
+			<comment>--------</comment>
+			<comment>////////</comment>
+			<comment></comment>
+			<comment></comment>
+			<comment>Some of the Developer Personal Setups make ALL blue uniques move up to purple rarity, so do not be alarmed, you can toggle this off if you want.  Or change your option.</comment>
+			<comment>This is to prevent these unique items from despawning with the rest of the blue items.  If you want to make them Legendary rarity then make your own changes below, as it will overwrite the stuff you choose from my setup.</comment>
+			<comment></comment>
+			<comment>Includes an ammo mod written by Lollosaurus Rex as an option if you make ammo despawn quickly.</comment>
+			<comment>I would suggest checking out my Unique Item Sound Notifier mod too, it can work very well with this mod. https://www.nexusmods.com/borderlands2/mods/95</comment>
+			<comment></comment>
+			<comment>You can use one of my personal setups and make specific changes down below. Your changes will overwrite whatever you didn't like in my setup. That way you don't have to do it all yourself.</comment>
+			<comment></comment>
+			<category name="Developer Personal Setup (Choose One) - If you do not want to customize the entirety of this mod yourself!" MUT="true">
+				<category name="Personal Setup (UCP)">
+					<category name="[1] Customize The Timer Type Per Rarity">
+						<category name="Ammo">
+							<category name="ShortLived">
+								<hotfix name="Ammo" level="None">
+									<code profiles="">set GD_Globals.General.Globals RarityLevelColors[0].DropLifeSpanType DROP_ShortLived</code>
+								</hotfix>
+							</category>
+						</category>
+						<category name="Whites">
+							<category name="VeryShortLived">
+								<hotfix name="White Trash, like myself." level="None">
+									<code profiles="">set GD_Globals.General.Globals RarityLevelColors[1].DropLifeSpanType DROP_VeryShortLived</code>
+								</hotfix>
+							</category>
+						</category>
+						<category name="Greens">
+							<category name="VeryShortLived">
+								<hotfix name="Green is for grass to grow over it." level="None">
+									<code profiles="">set GD_Globals.General.Globals RarityLevelColors[2].DropLifeSpanType DROP_VeryShortLived</code>
+								</hotfix>
+							</category>
+						</category>
+						<category name="Blues">
+							<category name="VeryShortLived">
+								<hotfix name="Blue Rarity: Blue's Clues hint that you shouldn't always leave me on the floor, as I might be unique." level="None">
+									<code profiles="">set GD_Globals.General.Globals RarityLevelColors[3].DropLifeSpanType DROP_VeryShortLived</code>
+								</hotfix>
+							</category>
+						</category>
+						<category name="Purples">
+							<category name="LongLived">
+								<hotfix name="Purple Rarity: hopefully it doesn't give out free purple nurples." level="None">
+									<code profiles="">set GD_Globals.General.Globals RarityLevelColors[4].DropLifeSpanType DROP_LongLived</code>
+								</hotfix>
+							</category>
+						</category>
+						<category name="Legendaries">
+							<category name="LongLived">
+								<hotfix name="Legendary Rarity: everything but the Longbow." level="None">
+									<code profiles="">set GD_Globals.General.Globals RarityLevelColors[5].DropLifeSpanType DROP_LongLived</code>
+								</hotfix>
+							</category>
+						</category>
+						<category name="E-Techs / Longbow (UCP)">
+							<category name="LongLived">
+								<hotfix name="E-Tech Rarity (Magenta): sometimes Terramorphous may drop a grenade with this rarity." level="None">
+									<code profiles="">set GD_Globals.General.Globals RarityLevelColors[6].DropLifeSpanType DROP_LongLived</code>
+								</hotfix>
+							</category>
+						</category>
+						<category name="Legendaries (Again)">
+							<category name="LongLived">
+								<hotfix name="Legendary Rarity: Longbow is the only thing that I know that uses it." level="None">
+									<code profiles="">set GD_Globals.General.Globals RarityLevelColors[7].DropLifeSpanType Drop_LongLived</code>
+								</hotfix>
+							</category>
+						</category>
+						<category name="Blacks / Gemstones (UCP)">
+							<category name="ShortLived">
+								<hotfix name="Black Rarity (Gemstone in UCP)" level="None">
+									<code profiles="">set GD_Globals.General.Globals RarityLevelColors[8].DropLifeSpanType DROP_ShortLived</code>
+								</hotfix>
+							</category>
+						</category>
+						<category name="Health Vial">
+							<category name="VeryShortLived">
+								<hotfix name="Health Vial" level="None">
+									<code profiles="">set GD_Globals.General.Globals RarityLevelColors[9].DropLifeSpanType DROP_VeryShortLived</code>
+								</hotfix>
+							</category>
+						</category>
+						<category name="Rejuvenator">
+							<category name="VeryShortLived">
+								<hotfix name="Uber Health Vial" level="None">
+									<code profiles="">set GD_Globals.General.Globals RarityLevelColors[10].DropLifeSpanType DROP_VeryShortLived</code>
+								</hotfix>
+							</category>
+						</category>
+						<category name="Money">
+							<category name="VeryShortLived">
+								<hotfix name="Money, and useless modded weapons." level="None">
+									<code profiles="">set GD_Globals.General.Globals RarityLevelColors[11].DropLifeSpanType DROP_VeryShortLived</code>
+								</hotfix>
+							</category>
+						</category>
+						<category name="Pearlescents">
+							<category name="LongLived">
+								<hotfix name="Pearlescent Rarity: who needs common loot, anyways?" level="None">
+									<code profiles="">set GD_Globals.General.Globals RarityLevelColors[12].DropLifeSpanType DROP_LongLived</code>
+								</hotfix>
+							</category>
+						</category>
+						<category name="Seraphs">
+							<category name="LongLived">
+								<hotfix name="Seraph Rarity: you killed a lot of Guardians for these items." level="None">
+									<code profiles="">set GD_Globals.General.Globals RarityLevelColors[13].DropLifeSpanType DROP_LongLived</code>
+								</hotfix>
+							</category>
+						</category>
+						<category name="Unknown">
+							<category name="VeryShortLived">
+								<hotfix name="No clue." level="None">
+									<code profiles="">set GD_Globals.General.Globals RarityLevelColors[14].DropLifeSpanType DROP_VeryShortLived</code>
+								</hotfix>
+							</category>
+						</category>
+						<category name="E-Tech Tier 2">
+							<category name="VeryShortLived">
+								<hotfix name="Another Magenta color?" level="None">
+									<code profiles="">set GD_Globals.General.Globals RarityLevelColors[15].DropLifeSpanType DROP_VeryShortLived</code>
+								</hotfix>
+							</category>
+						</category>
+						<category name="Pearlescent Tier 2">
+							<category name="VeryShortLived">
+								<hotfix name="Shield Boosters" level="None">
+									<code profiles="">set GD_Globals.General.Globals RarityLevelColors[16].DropLifeSpanType DROP_VeryShortLived</code>
+								</hotfix>
+							</category>
+						</category>
+					</category>
+					<category name="[2] Customize Loot Despawn Times Per Editable Timer Type">
+						<category name="VeryShortLived">
+							<hotfix name="Name" level="None">
+								<code profiles="">set Default__WillowPickup VeryShortLivedDropLifeSpan 30</code>
+							</hotfix>
+						</category>
+						<category name="ShortLived">
+							<hotfix name="Name" level="None">
+								<code profiles="">set Default__WillowPickup ShortLivedDropLifeSpan 300</code>
+							</hotfix>
+						</category>
+						<category name="LongLived">
+							<hotfix name="Name" level="None">
+								<code profiles="">set Default__WillowPickup LongLivedDropLifeSpan 600</code>
+							</hotfix>
+						</category>
+						<category name="How Fast Items Shrink Before Despawning - Overwritten By Low Despawn Times">
+							<hotfix name="Name" level="None">
+								<code profiles="">set Default__WillowPickup PickupShrinkDuration 5</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="[Optional 1] Change The Rarity Of Unique Blues - Prevents Despawn From No Blues Existing">
+						<category name="Purple">
+							<hotfix name="Name" level="None">
+								<code profiles="">set GD_Weap_AssaultRifle.Barrel.AR_Barrel_Jakobs_Scorpio Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_Weap_AssaultRifle.Barrel.AR_Barrel_Jakobs_Stomper Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_Weap_AssaultRifle.Barrel.AR_Barrel_Vladof_EvilSmasher Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_Weap_AssaultRifle.Barrel.AR_Barrel_Dahl_Hail Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_Orchid_BossWeapons.AssaultRifle.AR_Barrel_Bandit_Rapier Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_Orchid_BossWeapons.AssaultRifle.AR_Barrel_Torgue_Stinkpot Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_Iris_Weapons.AssaultRifles.AR_Barrel_Torgue_BoomPuppy Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_Iris_Weapons.AssaultRifles.AR_Barrel_Vladof_Kitten Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_Sage_Weapons.AssaultRifle.AR_Barrel_Bandit_DamnedCowboy Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_Sage_Weapons.AssaultRifle.AR_Barrel_Vladof_Minigun_Chopper Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_Weap_Pistol.Barrel.Pistol_Barrel_Hyperion_GwensHead Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_Weap_Pistol.Barrel.Pistol_Barrel_Tediore_Teapot Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_Weap_Pistol.Barrel.Fibber.Pistol_Barrel_Bandit_Fibber_2 Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_Weap_Pistol.Barrel.Fibber.Pistol_Barrel_Bandit_Fibber_3 Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_Weap_Pistol.Barrel.Fibber.Pistol_Barrel_Bandit_Fibber_4 Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_Weap_Pistol.Barrel.Pistol_Barrel_Dahl_LadyFist Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_Weap_Pistol.Barrel.Pistol_Barrel_Maliwan_Rubi Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_Weap_Pistol.Barrel.Pistol_Barrel_Dahl_Tinderbox Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_Weap_Pistol.Barrel.Pistol_Barrel_Hyperion_Veritas Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_Weap_Pistol.Barrel.Pistol_Barrel_Tediore_Judge Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_Weap_Pistol.Barrel.Pistol_Barrel_Dahl_Law Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_Aster_Weapons.Pistols.Pistol_Barrel_Bandit_GrogNozzle Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_Orchid_BossWeapons.Pistol.Pistol_Barrel_ScarletsGreed Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_Orchid_BossWeapons.Pistol.Pistol_Barrel_Vladof_Evie Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_Iris_Weapons.Pistols.Pistol_Barrel_Torgue_PocketRocket Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_Sage_Weapons.Pistols.Pistol_Barrel_Jakobs_Rex Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_Weap_Launchers.Barrel.L_Barrel_Tediore_Roaster Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_Weap_Launchers.Barrel.L_Barrel_Torgue_TheHive Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_Orchid_BossWeapons.Launcher.L_Barrel_Torgue_12Pounder Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_Weap_Launchers.Barrel.L_Barrel_Maliwan_Creamer Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_Sage_HarpoonGun.Barrel.Sage_HarpoonGun_Barrel Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_Weap_SniperRifles.Barrel.SR_Barrel_Dahl_Sloth Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_Weap_SniperRifles.Barrel.SR_Barrel_Hyperion_Tresspasser Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_Sage_Weapons.SniperRifles.SR_Barrel_Hyperion_ElephantGun Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_Iris_Weapons.SniperRifles.SR_Barrel_Dahl_Cobra Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_Weap_SniperRifles.Barrel.SR_Barrel_Dahl_FremingtonsEdge Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_Weap_SniperRifles.Barrel.SR_Barrel_Hyperion_ChereAmie Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_Orchid_BossWeapons.SniperRifles.SR_Barrel_Dahl_Pimpernel Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_Weap_SniperRifles.Barrel.SR_Barrel_Maliwan_Morningstar Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_Weap_SniperRifles.Barrel.SR_Barrel_Jakobs_Buffalo Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_Orchid_BossWeapons.SMG.SMG_Barrel_Bandit_SandHawk Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_Weap_SMG.Barrel.SMG_Barrel_Bandit_Lascaux Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_Weap_SMG.Barrel.SMG_Barrel_Dahl_Bane Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_Weap_SMG.Barrel.SMG_Barrel_Tediore_Commerce Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_Weap_SMG.Barrel.SMG_Barrel_Chulainn Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_Weap_Shotgun.Barrel.SG_Barrel_Bandit_Triquetra Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_Weap_Shotgun.Barrel.SG_Barrel_Tediore_Octo Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_Weap_Shotgun.Barrel.SG_Barrel_Tediore_Blockhead Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_Weap_Shotgun.Barrel.SG_Barrel_Hyperion_HeartBreaker Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_Weap_Shotgun.Barrel.SG_Barrel_Tediore_Shotgun1340 Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_Weap_Shotgun.Barrel.SG_Barrel_Jakobs_TidalWave Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_Weap_Shotgun.Barrel.SG_Barrel_Bandit_Dog Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_Weap_Shotgun.Barrel.SG_Barrel_Jakobs_RockSalt Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_Orchid_BossWeapons.Shotgun.SG_Barrel_Bandit_JollyRoger Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_Orchid_BossWeapons.Shotgun.SG_Barrel_Jakobs_OrphanMaker Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_Sage_Weapons.Shotgun.SG_Barrel_Bandit_Hydra Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_Sage_Weapons.Shotgun.SG_Barrel_Torgue_Twister Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_Weap_Shotgun.Barrel.SG_Barrel_Torgue_Teeth Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_Weap_Shotgun.Barrel.SG_Barrel_Jakobs_Landscaper Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_Shields.A_Item.Shield_Roid_Order BaseRarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_Shields.A_Item.Shield_Absorption_Aequitas BaseRarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_Shields.A_Item.Shield_Booster_PotOGold BaseRarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_Shields.A_Item.Shield_Absorption_1340 BaseRarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_Sage_Shields.A_Item_Custom.Shield_Buckler BaseRarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_Orchid_Shields.A_Item_Custom.Shield_Blade BaseRarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_GrenadeMods.A_Item_Custom.GrenadeMod_SkyRocket BaseRarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_GrenadeMods.A_Item_Custom.GrenadeMod_FusterCluck BaseRarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_Orchid_GrenadeMods.A_Item_Custom.GrenadeMod_Blade BaseRarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_GrenadeMods.Payload.Payload_KissOfDeath Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_Artifacts.A_Item_Unique.Artifact_Endowment BaseRarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_Artifacts.A_Item_Unique.Artifact_Opportunity BaseRarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_Artifacts.A_Item_Unique.Artifact_VaultHunter BaseRarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_Artifacts.A_Item_Unique.Artifact_Afterburner BaseRarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_Aster_Artifacts.A_Item_Unique.Artifact_MysteryAmulet BaseRarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_Orchid_Artifacts.A_Item_Unique.Artifact_Blade BaseRarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_Artifacts.A_Item_Unique.Artifact_Deputy BaseRarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_Aster_GrenadeMods.Delivery.Delivery_Fireball Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_Aster_GrenadeMods.Delivery.Delivery_LightningBolt Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_Aster_GrenadeMods.Delivery.Delivery_MagicMissile Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_Aster_GrenadeMods.Delivery.Delivery_MagicMissileRare Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity2_Uncommon'</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="[Optional 2] Remove UCP Good & Bad Touch Rarity Changes - Prevents Despawn From No Blues Existing">
+						<category name="Fix">
+							<hotfix name="Name" level="None">
+								<code profiles="">set GD_Weap_SMG.Barrel.SMG_Barrel_Maliwan_BadTouch Rarity (BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)</code>
+								<code profiles="">set GD_Weap_SMG.Barrel.SMG_Barrel_Maliwan_GoodTouch Rarity (BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)</code>
+							</hotfix>
+						</category>
+					</category>
+				</category>
+				<category name="Personal Setup (UCP) - No Blue Unique Rarity Change">
+					<category name="[1] Customize The Timer Type Per Rarity">
+						<category name="Ammo">
+							<category name="ShortLived">
+								<hotfix name="Ammo" level="None">
+									<code profiles="">set GD_Globals.General.Globals RarityLevelColors[0].DropLifeSpanType DROP_ShortLived</code>
+								</hotfix>
+							</category>
+						</category>
+						<category name="Whites">
+							<category name="VeryShortLived">
+								<hotfix name="White Trash, like myself." level="None">
+									<code profiles="">set GD_Globals.General.Globals RarityLevelColors[1].DropLifeSpanType DROP_VeryShortLived</code>
+								</hotfix>
+							</category>
+						</category>
+						<category name="Greens">
+							<category name="VeryShortLived">
+								<hotfix name="Green is for grass to grow over it." level="None">
+									<code profiles="">set GD_Globals.General.Globals RarityLevelColors[2].DropLifeSpanType DROP_VeryShortLived</code>
+								</hotfix>
+							</category>
+						</category>
+						<category name="Blues">
+							<category name="ShortLived">
+								<hotfix name="Blue Rarity: Blue's Clues hint that you shouldn't always leave me on the floor, as I might be unique." level="None">
+									<code profiles="">set GD_Globals.General.Globals RarityLevelColors[3].DropLifeSpanType DROP_ShortLived</code>
+								</hotfix>
+							</category>
+						</category>
+						<category name="Purples">
+							<category name="LongLived">
+								<hotfix name="Purple Rarity: hopefully it doesn't give out free purple nurples." level="None">
+									<code profiles="">set GD_Globals.General.Globals RarityLevelColors[4].DropLifeSpanType DROP_LongLived</code>
+								</hotfix>
+							</category>
+						</category>
+						<category name="Legendaries">
+							<category name="LongLived">
+								<hotfix name="Legendary Rarity: everything but the Longbow." level="None">
+									<code profiles="">set GD_Globals.General.Globals RarityLevelColors[5].DropLifeSpanType DROP_LongLived</code>
+								</hotfix>
+							</category>
+						</category>
+						<category name="E-Techs / Longbow (UCP)">
+							<category name="LongLived">
+								<hotfix name="E-Tech Rarity (Magenta): sometimes Terramorphous may drop a grenade with this rarity." level="None">
+									<code profiles="">set GD_Globals.General.Globals RarityLevelColors[6].DropLifeSpanType DROP_LongLived</code>
+								</hotfix>
+							</category>
+						</category>
+						<category name="Legendaries (Again)">
+							<category name="LongLived">
+								<hotfix name="Legendary Rarity: Longbow is the only thing that I know that uses it." level="None">
+									<code profiles="">set GD_Globals.General.Globals RarityLevelColors[7].DropLifeSpanType Drop_LongLived</code>
+								</hotfix>
+							</category>
+						</category>
+						<category name="Blacks / Gemstones (UCP)">
+							<category name="ShortLived">
+								<hotfix name="Black Rarity (Gemstone in UCP)" level="None">
+									<code profiles="">set GD_Globals.General.Globals RarityLevelColors[8].DropLifeSpanType DROP_ShortLived</code>
+								</hotfix>
+							</category>
+						</category>
+						<category name="Health Vial">
+							<category name="VeryShortLived">
+								<hotfix name="Health Vial" level="None">
+									<code profiles="">set GD_Globals.General.Globals RarityLevelColors[9].DropLifeSpanType DROP_VeryShortLived</code>
+								</hotfix>
+							</category>
+						</category>
+						<category name="Rejuvenator">
+							<category name="VeryShortLived">
+								<hotfix name="Uber Health Vial" level="None">
+									<code profiles="">set GD_Globals.General.Globals RarityLevelColors[10].DropLifeSpanType DROP_VeryShortLived</code>
+								</hotfix>
+							</category>
+						</category>
+						<category name="Money">
+							<category name="VeryShortLived">
+								<hotfix name="Money, and useless modded weapons." level="None">
+									<code profiles="">set GD_Globals.General.Globals RarityLevelColors[11].DropLifeSpanType DROP_VeryShortLived</code>
+								</hotfix>
+							</category>
+						</category>
+						<category name="Pearlescents">
+							<category name="LongLived">
+								<hotfix name="Pearlescent Rarity: who needs common loot, anyways?" level="None">
+									<code profiles="">set GD_Globals.General.Globals RarityLevelColors[12].DropLifeSpanType DROP_LongLived</code>
+								</hotfix>
+							</category>
+						</category>
+						<category name="Seraphs">
+							<category name="LongLived">
+								<hotfix name="Seraph Rarity: you killed a lot of Guardians for these items." level="None">
+									<code profiles="">set GD_Globals.General.Globals RarityLevelColors[13].DropLifeSpanType DROP_LongLived</code>
+								</hotfix>
+							</category>
+						</category>
+						<category name="Unknown">
+							<category name="VeryShortLived">
+								<hotfix name="No clue." level="None">
+									<code profiles="">set GD_Globals.General.Globals RarityLevelColors[14].DropLifeSpanType DROP_VeryShortLived</code>
+								</hotfix>
+							</category>
+						</category>
+						<category name="E-Tech Tier 2">
+							<category name="VeryShortLived">
+								<hotfix name="Another Magenta color?" level="None">
+									<code profiles="">set GD_Globals.General.Globals RarityLevelColors[15].DropLifeSpanType DROP_VeryShortLived</code>
+								</hotfix>
+							</category>
+						</category>
+						<category name="Pearlescent Tier 2">
+							<category name="VeryShortLived">
+								<hotfix name="Shield Boosters" level="None">
+									<code profiles="">set GD_Globals.General.Globals RarityLevelColors[16].DropLifeSpanType DROP_VeryShortLived</code>
+								</hotfix>
+							</category>
+						</category>
+					</category>
+					<category name="[2] Customize Loot Despawn Times Per Editable Timer Type">
+						<category name="VeryShortLived">
+							<hotfix name="Name" level="None">
+								<code profiles="">set Default__WillowPickup VeryShortLivedDropLifeSpan 30</code>
+							</hotfix>
+						</category>
+						<category name="ShortLived">
+							<hotfix name="Name" level="None">
+								<code profiles="">set Default__WillowPickup ShortLivedDropLifeSpan 300</code>
+							</hotfix>
+						</category>
+						<category name="LongLived">
+							<hotfix name="Name" level="None">
+								<code profiles="">set Default__WillowPickup LongLivedDropLifeSpan 600</code>
+							</hotfix>
+						</category>
+						<category name="How Fast Items Shrink Before Despawning - Overwritten By Low Despawn Times">
+							<hotfix name="Name" level="None">
+								<code profiles="">set Default__WillowPickup PickupShrinkDuration 5</code>
+							</hotfix>
+						</category>
+					</category>
+				</category>
+				<category name="Personal Setup (No UCP)">
+					<category name="[1] Customize The Timer Type Per Rarity">
+						<category name="Ammo">
+							<category name="ShortLived">
+								<hotfix name="Ammo" level="None">
+									<code profiles="">set GD_Globals.General.Globals RarityLevelColors[0].DropLifeSpanType DROP_ShortLived</code>
+								</hotfix>
+							</category>
+						</category>
+						<category name="Whites">
+							<category name="VeryShortLived">
+								<hotfix name="White Trash, like myself." level="None">
+									<code profiles="">set GD_Globals.General.Globals RarityLevelColors[1].DropLifeSpanType DROP_VeryShortLived</code>
+								</hotfix>
+							</category>
+						</category>
+						<category name="Greens">
+							<category name="VeryShortLived">
+								<hotfix name="Green is for grass to grow over it." level="None">
+									<code profiles="">set GD_Globals.General.Globals RarityLevelColors[2].DropLifeSpanType DROP_VeryShortLived</code>
+								</hotfix>
+							</category>
+						</category>
+						<category name="Blues">
+							<category name="VeryShortLived">
+								<hotfix name="Blue Rarity: Blue's Clues hint that you shouldn't always leave me on the floor, as I might be unique." level="None">
+									<code profiles="">set GD_Globals.General.Globals RarityLevelColors[3].DropLifeSpanType DROP_VeryShortLived</code>
+								</hotfix>
+							</category>
+						</category>
+						<category name="Purples">
+							<category name="ShortLived">
+								<hotfix name="Purple Rarity: hopefully it doesn't give out free purple nurples." level="None">
+									<code profiles="">set GD_Globals.General.Globals RarityLevelColors[4].DropLifeSpanType DROP_ShortLived</code>
+								</hotfix>
+							</category>
+						</category>
+						<category name="Legendaries">
+							<category name="LongLived">
+								<hotfix name="Legendary Rarity: everything but the Longbow." level="None">
+									<code profiles="">set GD_Globals.General.Globals RarityLevelColors[5].DropLifeSpanType DROP_LongLived</code>
+								</hotfix>
+							</category>
+						</category>
+						<category name="E-Techs / Longbow (UCP)">
+							<category name="ShortLived">
+								<hotfix name="E-Tech Rarity (Magenta): sometimes Terramorphous may drop a grenade with this rarity." level="None">
+									<code profiles="">set GD_Globals.General.Globals RarityLevelColors[6].DropLifeSpanType DROP_ShortLived</code>
+								</hotfix>
+							</category>
+						</category>
+						<category name="Legendaries (Again)">
+							<category name="LongLived">
+								<hotfix name="Legendary Rarity: Longbow is the only thing that I know that uses it." level="None">
+									<code profiles="">set GD_Globals.General.Globals RarityLevelColors[7].DropLifeSpanType DROP_LongLived</code>
+								</hotfix>
+							</category>
+						</category>
+						<category name="Blacks / Gemstones (UCP)">
+							<category name="LongLived">
+								<hotfix name="Black Rarity (Gemstone in UCP)" level="None">
+									<code profiles="">set GD_Globals.General.Globals RarityLevelColors[8].DropLifeSpanType DROP_LongLived</code>
+								</hotfix>
+							</category>
+						</category>
+						<category name="Health Vial">
+							<category name="VeryShortLived">
+								<hotfix name="Health Vial" level="None">
+									<code profiles="">set GD_Globals.General.Globals RarityLevelColors[9].DropLifeSpanType DROP_VeryShortLived</code>
+								</hotfix>
+							</category>
+						</category>
+						<category name="Rejuvenator">
+							<category name="VeryShortLived">
+								<hotfix name="Uber Health Vial" level="None">
+									<code profiles="">set GD_Globals.General.Globals RarityLevelColors[10].DropLifeSpanType DROP_VeryShortLived</code>
+								</hotfix>
+							</category>
+						</category>
+						<category name="Money">
+							<category name="VeryShortLived">
+								<hotfix name="Money, and useless modded weapons." level="None">
+									<code profiles="">set GD_Globals.General.Globals RarityLevelColors[11].DropLifeSpanType DROP_VeryShortLived</code>
+								</hotfix>
+							</category>
+						</category>
+						<category name="Pearlescents">
+							<category name="LongLived">
+								<hotfix name="Pearlescent Rarity: who needs common loot, anyways?" level="None">
+									<code profiles="">set GD_Globals.General.Globals RarityLevelColors[12].DropLifeSpanType DROP_LongLived</code>
+								</hotfix>
+							</category>
+						</category>
+						<category name="Seraphs">
+							<category name="LongLived">
+								<hotfix name="Seraph Rarity: you killed a lot of Guardians for these items." level="None">
+									<code profiles="">set GD_Globals.General.Globals RarityLevelColors[13].DropLifeSpanType DROP_LongLived</code>
+								</hotfix>
+							</category>
+						</category>
+						<category name="Unknown">
+							<category name="VeryShortLived">
+								<hotfix name="No clue." level="None">
+									<code profiles="">set GD_Globals.General.Globals RarityLevelColors[14].DropLifeSpanType DROP_VeryShortLived</code>
+								</hotfix>
+							</category>
+						</category>
+						<category name="E-Tech Tier 2">
+							<category name="VeryShortLived">
+								<hotfix name="Another Magenta color?" level="None">
+									<code profiles="">set GD_Globals.General.Globals RarityLevelColors[15].DropLifeSpanType DROP_VeryShortLived</code>
+								</hotfix>
+							</category>
+						</category>
+						<category name="Pearlescent Tier 2">
+							<category name="VeryShortLived">
+								<hotfix name="Shield Boosters" level="None">
+									<code profiles="">set GD_Globals.General.Globals RarityLevelColors[16].DropLifeSpanType DROP_VeryShortLived</code>
+								</hotfix>
+							</category>
+						</category>
+					</category>
+					<category name="[2] Customize Loot Despawn Times Per Editable Timer Type">
+						<category name="VeryShortLived">
+							<hotfix name="Name" level="None">
+								<code profiles="">set Default__WillowPickup VeryShortLivedDropLifeSpan 30</code>
+							</hotfix>
+						</category>
+						<category name="ShortLived">
+							<hotfix name="Name" level="None">
+								<code profiles="">set Default__WillowPickup ShortLivedDropLifeSpan 300</code>
+							</hotfix>
+						</category>
+						<category name="LongLived">
+							<hotfix name="Name" level="None">
+								<code profiles="">set Default__WillowPickup LongLivedDropLifeSpan 600</code>
+							</hotfix>
+						</category>
+						<category name="How Fast Items Shrink Before Despawning - Overwritten By Low Despawn Times">
+							<hotfix name="Name" level="None">
+								<code profiles="">set Default__WillowPickup PickupShrinkDuration 0</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="[Optional 1] Change The Rarity Of Unique Blues - Prevents Despawn From No Blues Existing">
+						<category name="Purple">
+							<hotfix name="Name" level="None">
+								<code profiles="">set GD_Weap_AssaultRifle.Barrel.AR_Barrel_Jakobs_Scorpio Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_Weap_AssaultRifle.Barrel.AR_Barrel_Jakobs_Stomper Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_Weap_AssaultRifle.Barrel.AR_Barrel_Vladof_EvilSmasher Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_Weap_AssaultRifle.Barrel.AR_Barrel_Dahl_Hail Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_Orchid_BossWeapons.AssaultRifle.AR_Barrel_Bandit_Rapier Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_Orchid_BossWeapons.AssaultRifle.AR_Barrel_Torgue_Stinkpot Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_Iris_Weapons.AssaultRifles.AR_Barrel_Torgue_BoomPuppy Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_Iris_Weapons.AssaultRifles.AR_Barrel_Vladof_Kitten Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_Sage_Weapons.AssaultRifle.AR_Barrel_Bandit_DamnedCowboy Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_Sage_Weapons.AssaultRifle.AR_Barrel_Vladof_Minigun_Chopper Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_Weap_Pistol.Barrel.Pistol_Barrel_Hyperion_GwensHead Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_Weap_Pistol.Barrel.Pistol_Barrel_Tediore_Teapot Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_Weap_Pistol.Barrel.Fibber.Pistol_Barrel_Bandit_Fibber_2 Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_Weap_Pistol.Barrel.Fibber.Pistol_Barrel_Bandit_Fibber_3 Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_Weap_Pistol.Barrel.Fibber.Pistol_Barrel_Bandit_Fibber_4 Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_Weap_Pistol.Barrel.Pistol_Barrel_Dahl_LadyFist Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_Weap_Pistol.Barrel.Pistol_Barrel_Maliwan_Rubi Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_Weap_Pistol.Barrel.Pistol_Barrel_Dahl_Tinderbox Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_Weap_Pistol.Barrel.Pistol_Barrel_Hyperion_Veritas Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_Weap_Pistol.Barrel.Pistol_Barrel_Tediore_Judge Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_Weap_Pistol.Barrel.Pistol_Barrel_Dahl_Law Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_Aster_Weapons.Pistols.Pistol_Barrel_Bandit_GrogNozzle Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_Orchid_BossWeapons.Pistol.Pistol_Barrel_ScarletsGreed Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_Orchid_BossWeapons.Pistol.Pistol_Barrel_Vladof_Evie Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_Iris_Weapons.Pistols.Pistol_Barrel_Torgue_PocketRocket Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_Sage_Weapons.Pistols.Pistol_Barrel_Jakobs_Rex Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_Weap_Launchers.Barrel.L_Barrel_Tediore_Roaster Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_Weap_Launchers.Barrel.L_Barrel_Torgue_TheHive Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_Orchid_BossWeapons.Launcher.L_Barrel_Torgue_12Pounder Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_Weap_Launchers.Barrel.L_Barrel_Maliwan_Creamer Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_Sage_HarpoonGun.Barrel.Sage_HarpoonGun_Barrel Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_Weap_SniperRifles.Barrel.SR_Barrel_Dahl_Sloth Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_Weap_SniperRifles.Barrel.SR_Barrel_Hyperion_Tresspasser Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_Sage_Weapons.SniperRifles.SR_Barrel_Hyperion_ElephantGun Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_Iris_Weapons.SniperRifles.SR_Barrel_Dahl_Cobra Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_Weap_SniperRifles.Barrel.SR_Barrel_Dahl_FremingtonsEdge Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_Weap_SniperRifles.Barrel.SR_Barrel_Hyperion_ChereAmie Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_Orchid_BossWeapons.SniperRifles.SR_Barrel_Dahl_Pimpernel Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_Weap_SniperRifles.Barrel.SR_Barrel_Maliwan_Morningstar Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_Weap_SniperRifles.Barrel.SR_Barrel_Jakobs_Buffalo Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_Orchid_BossWeapons.SMG.SMG_Barrel_Bandit_SandHawk Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_Weap_SMG.Barrel.SMG_Barrel_Bandit_Lascaux Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_Weap_SMG.Barrel.SMG_Barrel_Dahl_Bane Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_Weap_SMG.Barrel.SMG_Barrel_Tediore_Commerce Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_Weap_SMG.Barrel.SMG_Barrel_Chulainn Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_Weap_Shotgun.Barrel.SG_Barrel_Bandit_Triquetra Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_Weap_Shotgun.Barrel.SG_Barrel_Tediore_Octo Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_Weap_Shotgun.Barrel.SG_Barrel_Tediore_Blockhead Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_Weap_Shotgun.Barrel.SG_Barrel_Hyperion_HeartBreaker Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_Weap_Shotgun.Barrel.SG_Barrel_Tediore_Shotgun1340 Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_Weap_Shotgun.Barrel.SG_Barrel_Jakobs_TidalWave Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_Weap_Shotgun.Barrel.SG_Barrel_Bandit_Dog Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_Weap_Shotgun.Barrel.SG_Barrel_Jakobs_RockSalt Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_Orchid_BossWeapons.Shotgun.SG_Barrel_Bandit_JollyRoger Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_Orchid_BossWeapons.Shotgun.SG_Barrel_Jakobs_OrphanMaker Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_Sage_Weapons.Shotgun.SG_Barrel_Bandit_Hydra Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_Sage_Weapons.Shotgun.SG_Barrel_Torgue_Twister Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_Weap_Shotgun.Barrel.SG_Barrel_Torgue_Teeth Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_Weap_Shotgun.Barrel.SG_Barrel_Jakobs_Landscaper Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_Shields.A_Item.Shield_Roid_Order BaseRarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_Shields.A_Item.Shield_Absorption_Aequitas BaseRarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_Shields.A_Item.Shield_Booster_PotOGold BaseRarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_Shields.A_Item.Shield_Absorption_1340 BaseRarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_Sage_Shields.A_Item_Custom.Shield_Buckler BaseRarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_Orchid_Shields.A_Item_Custom.Shield_Blade BaseRarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_GrenadeMods.A_Item_Custom.GrenadeMod_SkyRocket BaseRarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_GrenadeMods.A_Item_Custom.GrenadeMod_FusterCluck BaseRarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_Orchid_GrenadeMods.A_Item_Custom.GrenadeMod_Blade BaseRarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_GrenadeMods.Payload.Payload_KissOfDeath Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_Artifacts.A_Item_Unique.Artifact_Endowment BaseRarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_Artifacts.A_Item_Unique.Artifact_Opportunity BaseRarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_Artifacts.A_Item_Unique.Artifact_VaultHunter BaseRarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_Artifacts.A_Item_Unique.Artifact_Afterburner BaseRarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_Aster_Artifacts.A_Item_Unique.Artifact_MysteryAmulet BaseRarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_Orchid_Artifacts.A_Item_Unique.Artifact_Blade BaseRarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_Artifacts.A_Item_Unique.Artifact_Deputy BaseRarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_Aster_GrenadeMods.Delivery.Delivery_Fireball Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_Aster_GrenadeMods.Delivery.Delivery_LightningBolt Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_Aster_GrenadeMods.Delivery.Delivery_MagicMissile Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+								<code profiles="">set GD_Aster_GrenadeMods.Delivery.Delivery_MagicMissileRare Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity2_Uncommon'</code>
+							</hotfix>
+						</category>
+					</category>
+				</category>
+				<category name="Personal Setup (No UCP) - No Blue Unique Rarity Change">
+					<category name="[1] Customize The Timer Type Per Rarity">
+						<category name="Ammo">
+							<category name="ShortLived">
+								<hotfix name="Ammo" level="None">
+									<code profiles="">set GD_Globals.General.Globals RarityLevelColors[0].DropLifeSpanType DROP_ShortLived</code>
+								</hotfix>
+							</category>
+						</category>
+						<category name="Whites">
+							<category name="VeryShortLived">
+								<hotfix name="White Trash, like myself." level="None">
+									<code profiles="">set GD_Globals.General.Globals RarityLevelColors[1].DropLifeSpanType DROP_VeryShortLived</code>
+								</hotfix>
+							</category>
+						</category>
+						<category name="Greens">
+							<category name="VeryShortLived">
+								<hotfix name="Green is for grass to grow over it." level="None">
+									<code profiles="">set GD_Globals.General.Globals RarityLevelColors[2].DropLifeSpanType DROP_VeryShortLived</code>
+								</hotfix>
+							</category>
+						</category>
+						<category name="Blues">
+							<category name="ShortLived">
+								<hotfix name="Blue Rarity: Blue's Clues hint that you shouldn't always leave me on the floor, as I might be unique." level="None">
+									<code profiles="">set GD_Globals.General.Globals RarityLevelColors[3].DropLifeSpanType DROP_ShortLived</code>
+								</hotfix>
+							</category>
+						</category>
+						<category name="Purples">
+							<category name="ShortLived">
+								<hotfix name="Purple Rarity: hopefully it doesn't give out free purple nurples." level="None">
+									<code profiles="">set GD_Globals.General.Globals RarityLevelColors[4].DropLifeSpanType DROP_ShortLived</code>
+								</hotfix>
+							</category>
+						</category>
+						<category name="Legendaries">
+							<category name="LongLived">
+								<hotfix name="Legendary Rarity: everything but the Longbow." level="None">
+									<code profiles="">set GD_Globals.General.Globals RarityLevelColors[5].DropLifeSpanType DROP_LongLived</code>
+								</hotfix>
+							</category>
+						</category>
+						<category name="E-Techs / Longbow (UCP)">
+							<category name="ShortLived">
+								<hotfix name="E-Tech Rarity (Magenta): sometimes Terramorphous may drop a grenade with this rarity." level="None">
+									<code profiles="">set GD_Globals.General.Globals RarityLevelColors[6].DropLifeSpanType DROP_ShortLived</code>
+								</hotfix>
+							</category>
+						</category>
+						<category name="Legendaries (Again)">
+							<category name="LongLived">
+								<hotfix name="Legendary Rarity: Longbow is the only thing that I know that uses it." level="None">
+									<code profiles="">set GD_Globals.General.Globals RarityLevelColors[7].DropLifeSpanType DROP_LongLived</code>
+								</hotfix>
+							</category>
+						</category>
+						<category name="Blacks / Gemstones (UCP)">
+							<category name="LongLived">
+								<hotfix name="Black Rarity (Gemstone in UCP)" level="None">
+									<code profiles="">set GD_Globals.General.Globals RarityLevelColors[8].DropLifeSpanType DROP_LongLived</code>
+								</hotfix>
+							</category>
+						</category>
+						<category name="Health Vial">
+							<category name="VeryShortLived">
+								<hotfix name="Health Vial" level="None">
+									<code profiles="">set GD_Globals.General.Globals RarityLevelColors[9].DropLifeSpanType DROP_VeryShortLived</code>
+								</hotfix>
+							</category>
+						</category>
+						<category name="Rejuvenator">
+							<category name="VeryShortLived">
+								<hotfix name="Uber Health Vial" level="None">
+									<code profiles="">set GD_Globals.General.Globals RarityLevelColors[10].DropLifeSpanType DROP_VeryShortLived</code>
+								</hotfix>
+							</category>
+						</category>
+						<category name="Money">
+							<category name="VeryShortLived">
+								<hotfix name="Money, and useless modded weapons." level="None">
+									<code profiles="">set GD_Globals.General.Globals RarityLevelColors[11].DropLifeSpanType DROP_VeryShortLived</code>
+								</hotfix>
+							</category>
+						</category>
+						<category name="Pearlescents">
+							<category name="LongLived">
+								<hotfix name="Pearlescent Rarity: who needs common loot, anyways?" level="None">
+									<code profiles="">set GD_Globals.General.Globals RarityLevelColors[12].DropLifeSpanType DROP_LongLived</code>
+								</hotfix>
+							</category>
+						</category>
+						<category name="Seraphs">
+							<category name="LongLived">
+								<hotfix name="Seraph Rarity: you killed a lot of Guardians for these items." level="None">
+									<code profiles="">set GD_Globals.General.Globals RarityLevelColors[13].DropLifeSpanType DROP_LongLived</code>
+								</hotfix>
+							</category>
+						</category>
+						<category name="Unknown">
+							<category name="VeryShortLived">
+								<hotfix name="No clue." level="None">
+									<code profiles="">set GD_Globals.General.Globals RarityLevelColors[14].DropLifeSpanType DROP_VeryShortLived</code>
+								</hotfix>
+							</category>
+						</category>
+						<category name="E-Tech Tier 2">
+							<category name="VeryShortLived">
+								<hotfix name="Another Magenta color?" level="None">
+									<code profiles="">set GD_Globals.General.Globals RarityLevelColors[15].DropLifeSpanType DROP_VeryShortLived</code>
+								</hotfix>
+							</category>
+						</category>
+						<category name="Pearlescent Tier 2">
+							<category name="VeryShortLived">
+								<hotfix name="Shield Boosters" level="None">
+									<code profiles="">set GD_Globals.General.Globals RarityLevelColors[16].DropLifeSpanType DROP_VeryShortLived</code>
+								</hotfix>
+							</category>
+						</category>
+					</category>
+					<category name="[2] Customize Loot Despawn Times Per Editable Timer Type">
+						<category name="VeryShortLived">
+							<hotfix name="Name" level="None">
+								<code profiles="">set Default__WillowPickup VeryShortLivedDropLifeSpan 30</code>
+							</hotfix>
+						</category>
+						<category name="ShortLived">
+							<hotfix name="Name" level="None">
+								<code profiles="">set Default__WillowPickup ShortLivedDropLifeSpan 300</code>
+							</hotfix>
+						</category>
+						<category name="LongLived">
+							<hotfix name="Name" level="None">
+								<code profiles="">set Default__WillowPickup LongLivedDropLifeSpan 600</code>
+							</hotfix>
+						</category>
+						<category name="How Fast Items Shrink Before Despawning - Overwritten By Low Despawn Times">
+							<hotfix name="Name" level="None">
+								<code profiles="">set Default__WillowPickup PickupShrinkDuration 0</code>
+							</hotfix>
+						</category>
+					</category>
+				</category>
+			</category>
+			<comment></comment>
+			<comment>Do NOT check any of these if you are using one of my setups.</comment>
+			<comment></comment>
+			<comment>============================================================</comment>
+			<category name="[1] Customize The Timer Type Per Rarity">
+				<comment>If you are confused by this section, you are basically telling the game what despawn timer to use from section [2], per item type/rarity.</comment>
+				<comment>Only one type of timer can be chosen per rarity.</comment>
+				<category name="Ammo" MUT="true">
+					<category name="VeryShortLived">
 						<hotfix name="Ammo" level="None">
-							<code profiles="default">set GD_Globals.General.Globals RarityLevelColors[0].DropLifeSpanType DROP_ShortLived</code>
+							<code profiles="">set GD_Globals.General.Globals RarityLevelColors[0].DropLifeSpanType DROP_VeryShortLived</code>
 						</hotfix>
+					</category>
+					<category name="ShortLived">
+						<hotfix name="Ammo" level="None">
+							<code profiles="">set GD_Globals.General.Globals RarityLevelColors[0].DropLifeSpanType DROP_ShortLived</code>
+						</hotfix>
+					</category>
+					<category name="LongLived">
+						<hotfix name="Ammo" level="None">
+							<code profiles="">set GD_Globals.General.Globals RarityLevelColors[0].DropLifeSpanType DROP_LongLived</code>
+						</hotfix>
+					</category>
+					<category name="LiveLongAsLevel">
+						<hotfix name="Ammo" level="None">
+							<code profiles="">set GD_Globals.General.Globals RarityLevelColors[0].DropLifeSpanType DROP_LiveAsLongAsLevel</code>
+						</hotfix>
+					</category>
+					<category name="LiveForever">
+						<hotfix name="Ammo" level="None">
+							<code profiles="">set GD_Globals.General.Globals RarityLevelColors[0].DropLifeSpanType DROP_LiveForever</code>
+						</hotfix>
+					</category>
+				</category>
+				<category name="Whites" MUT="true">
+					<category name="VeryShortLived">
 						<hotfix name="White Trash, like myself." level="None">
-							<code profiles="default">set GD_Globals.General.Globals RarityLevelColors[1].DropLifeSpanType DROP_VeryShortLived</code>
+							<code profiles="">set GD_Globals.General.Globals RarityLevelColors[1].DropLifeSpanType DROP_VeryShortLived</code>
 						</hotfix>
-						<hotfix name="Green is for: to be left for grass to grow over it." level="None">
-							<code profiles="default">set GD_Globals.General.Globals RarityLevelColors[2].DropLifeSpanType DROP_VeryShortLived</code>
+					</category>
+					<category name="ShortLived">
+						<hotfix name="White Trash, like myself." level="None">
+							<code profiles="">set GD_Globals.General.Globals RarityLevelColors[1].DropLifeSpanType DROP_ShortLived</code>
 						</hotfix>
-						<hotfix name="Blue Rarity: Blue's Clue hints that you shouldn't always leave me on the floor, as I might be unique." level="None">
-							<code profiles="default">set GD_Globals.General.Globals RarityLevelColors[3].DropLifeSpanType DROP_ShortLived</code>
+					</category>
+					<category name="LongLived">
+						<hotfix name="White Trash, like myself." level="None">
+							<code profiles="">set GD_Globals.General.Globals RarityLevelColors[1].DropLifeSpanType DROP_LongLived</code>
 						</hotfix>
+					</category>
+					<category name="LiveLongAsLevel">
+						<hotfix name="White Trash, like myself." level="None">
+							<code profiles="">set GD_Globals.General.Globals RarityLevelColors[1].DropLifeSpanType DROP_LiveAsLongAsLevel</code>
+						</hotfix>
+					</category>
+					<category name="LiveForever">
+						<hotfix name="White Trash, like myself." level="None">
+							<code profiles="">set GD_Globals.General.Globals RarityLevelColors[1].DropLifeSpanType DROP_LiveForever</code>
+						</hotfix>
+					</category>
+				</category>
+				<category name="Greens" MUT="true">
+					<category name="VeryShortLived">
+						<hotfix name="Green is for grass to grow over it." level="None">
+							<code profiles="">set GD_Globals.General.Globals RarityLevelColors[2].DropLifeSpanType DROP_VeryShortLived</code>
+						</hotfix>
+					</category>
+					<category name="ShortLived">
+						<hotfix name="Green is for grass to grow over it." level="None">
+							<code profiles="">set GD_Globals.General.Globals RarityLevelColors[2].DropLifeSpanType DROP_ShortLived</code>
+						</hotfix>
+					</category>
+					<category name="LongLived">
+						<hotfix name="Green is for grass to grow over it." level="None">
+							<code profiles="">set GD_Globals.General.Globals RarityLevelColors[2].DropLifeSpanType DROP_LongLived</code>
+						</hotfix>
+					</category>
+					<category name="LiveLongAsLevel">
+						<hotfix name="Green is for grass to grow over it." level="None">
+							<code profiles="">set GD_Globals.General.Globals RarityLevelColors[2].DropLifeSpanType DROP_LiveAsLongAsLevel</code>
+						</hotfix>
+					</category>
+					<category name="LiveForever">
+						<hotfix name="Green is for grass to grow over it." level="None">
+							<code profiles="">set GD_Globals.General.Globals RarityLevelColors[2].DropLifeSpanType DROP_LiveForever</code>
+						</hotfix>
+					</category>
+				</category>
+				<category name="Blues" MUT="true">
+					<category name="VeryShortLived">
+						<hotfix name="Blue Rarity: Blue's Clues hint that you shouldn't always leave me on the floor, as I might be unique." level="None">
+							<code profiles="">set GD_Globals.General.Globals RarityLevelColors[3].DropLifeSpanType DROP_VeryShortLived</code>
+						</hotfix>
+					</category>
+					<category name="ShortLived">
+						<hotfix name="Blue Rarity: Blue's Clues hint that you shouldn't always leave me on the floor, as I might be unique." level="None">
+							<code profiles="">set GD_Globals.General.Globals RarityLevelColors[3].DropLifeSpanType DROP_ShortLived</code>
+						</hotfix>
+					</category>
+					<category name="LongLived">
+						<hotfix name="Blue Rarity: Blue's Clues hint that you shouldn't always leave me on the floor, as I might be unique." level="None">
+							<code profiles="">set GD_Globals.General.Globals RarityLevelColors[3].DropLifeSpanType DROP_LongLived</code>
+						</hotfix>
+					</category>
+					<category name="LiveLongAsLevel">
+						<hotfix name="Blue Rarity: Blue's Clues hint that you shouldn't always leave me on the floor, as I might be unique." level="None">
+							<code profiles="">set GD_Globals.General.Globals RarityLevelColors[3].DropLifeSpanType DROP_LiveAsLongAsLevel</code>
+						</hotfix>
+					</category>
+					<category name="LiveForever">
+						<hotfix name="Blue Rarity: Blue's Clues hint that you shouldn't always leave me on the floor, as I might be unique." level="None">
+							<code profiles="">set GD_Globals.General.Globals RarityLevelColors[3].DropLifeSpanType DROP_LiveForever</code>
+						</hotfix>
+					</category>
+				</category>
+				<category name="Purples" MUT="true">
+					<category name="VeryShortLived">
 						<hotfix name="Purple Rarity: hopefully it doesn't give out free purple nurples." level="None">
-							<code profiles="default">set GD_Globals.General.Globals RarityLevelColors[4].DropLifeSpanType DROP_ShortLived</code>
+							<code profiles="">set GD_Globals.General.Globals RarityLevelColors[4].DropLifeSpanType DROP_VeryShortLived</code>
 						</hotfix>
+					</category>
+					<category name="ShortLived">
+						<hotfix name="Purple Rarity: hopefully it doesn't give out free purple nurples." level="None">
+							<code profiles="">set GD_Globals.General.Globals RarityLevelColors[4].DropLifeSpanType DROP_ShortLived</code>
+						</hotfix>
+					</category>
+					<category name="LongLived">
+						<hotfix name="Purple Rarity: hopefully it doesn't give out free purple nurples." level="None">
+							<code profiles="">set GD_Globals.General.Globals RarityLevelColors[4].DropLifeSpanType DROP_LongLived</code>
+						</hotfix>
+					</category>
+					<category name="LiveLongAsLevel">
+						<hotfix name="Purple Rarity: hopefully it doesn't give out free purple nurples." level="None">
+							<code profiles="">set GD_Globals.General.Globals RarityLevelColors[4].DropLifeSpanType DROP_LiveAsLongAsLevel</code>
+						</hotfix>
+					</category>
+					<category name="LiveForever">
+						<hotfix name="Purple Rarity: hopefully it doesn't give out free purple nurples." level="None">
+							<code profiles="">set GD_Globals.General.Globals RarityLevelColors[4].DropLifeSpanType DROP_LiveForever</code>
+						</hotfix>
+					</category>
+				</category>
+				<category name="Legendaries" MUT="true">
+					<category name="VeryShortLived">
 						<hotfix name="Legendary Rarity: everything but the Longbow." level="None">
-							<code profiles="default">set GD_Globals.General.Globals RarityLevelColors[5].DropLifeSpanType DROP_LongLived</code>
+							<code profiles="">set GD_Globals.General.Globals RarityLevelColors[5].DropLifeSpanType DROP_VeryShortLived</code>
 						</hotfix>
+					</category>
+					<category name="ShortLived">
+						<hotfix name="Legendary Rarity: everything but the Longbow." level="None">
+							<code profiles="">set GD_Globals.General.Globals RarityLevelColors[5].DropLifeSpanType DROP_ShortLived</code>
+						</hotfix>
+					</category>
+					<category name="LongLived">
+						<hotfix name="Legendary Rarity: everything but the Longbow." level="None">
+							<code profiles="">set GD_Globals.General.Globals RarityLevelColors[5].DropLifeSpanType DROP_LongLived</code>
+						</hotfix>
+					</category>
+					<category name="LiveLongAsLevel">
+						<hotfix name="Legendary Rarity: everything but the Longbow." level="None">
+							<code profiles="">set GD_Globals.General.Globals RarityLevelColors[5].DropLifeSpanType DROP_LiveAsLongAsLevel</code>
+						</hotfix>
+					</category>
+					<category name="LiveForever">
+						<hotfix name="Legendary Rarity: everything but the Longbow." level="None">
+							<code profiles="">set GD_Globals.General.Globals RarityLevelColors[5].DropLifeSpanType DROP_LiveForever</code>
+						</hotfix>
+					</category>
+				</category>
+				<category name="E-Techs / Longbow (UCP)" MUT="true">
+					<category name="VeryShortLived">
 						<hotfix name="E-Tech Rarity (Magenta): sometimes Terramorphous may drop a grenade with this rarity." level="None">
-							<code profiles="default">set GD_Globals.General.Globals RarityLevelColors[6].DropLifeSpanType DROP_VeryShortLived</code>
+							<code profiles="">set GD_Globals.General.Globals RarityLevelColors[6].DropLifeSpanType DROP_VeryShortLived</code>
 						</hotfix>
+					</category>
+					<category name="ShortLived">
+						<hotfix name="E-Tech Rarity (Magenta): sometimes Terramorphous may drop a grenade with this rarity." level="None">
+							<code profiles="">set GD_Globals.General.Globals RarityLevelColors[6].DropLifeSpanType DROP_ShortLived</code>
+						</hotfix>
+					</category>
+					<category name="LongLived">
+						<hotfix name="E-Tech Rarity (Magenta): sometimes Terramorphous may drop a grenade with this rarity." level="None">
+							<code profiles="">set GD_Globals.General.Globals RarityLevelColors[6].DropLifeSpanType DROP_LongLived</code>
+						</hotfix>
+					</category>
+					<category name="LiveLongAsLevel">
+						<hotfix name="E-Tech Rarity (Magenta): sometimes Terramorphous may drop a grenade with this rarity." level="None">
+							<code profiles="">set GD_Globals.General.Globals RarityLevelColors[6].DropLifeSpanType DROP_LiveAsLongAsLevel</code>
+						</hotfix>
+					</category>
+					<category name="LiveForever">
+						<hotfix name="E-Tech Rarity (Magenta): sometimes Terramorphous may drop a grenade with this rarity." level="None">
+							<code profiles="">set GD_Globals.General.Globals RarityLevelColors[6].DropLifeSpanType DROP_LiveForever</code>
+						</hotfix>
+					</category>
+				</category>
+				<category name="Legendaries (Again)" MUT="true">
+					<category name="VeryShortLived">
 						<hotfix name="Legendary Rarity: Longbow is the only thing that I know that uses it." level="None">
-							<code profiles="default">set GD_Globals.General.Globals RarityLevelColors[7].DropLifeSpanType DROP_LongLived</code>
+							<code profiles="">set GD_Globals.General.Globals RarityLevelColors[7].DropLifeSpanType DROP_VeryShortLived</code>
 						</hotfix>
-						<hotfix name="Black Rarity (Red in UCP): possibly Moxxi weapons?" level="None">
-							<code profiles="default">set GD_Globals.General.Globals RarityLevelColors[8].DropLifeSpanType DROP_LongLived</code>
+					</category>
+					<category name="ShortLived">
+						<hotfix name="Legendary Rarity: Longbow is the only thing that I know that uses it." level="None">
+							<code profiles="">set GD_Globals.General.Globals RarityLevelColors[7].DropLifeSpanType DROP_ShortLived</code>
 						</hotfix>
+					</category>
+					<category name="LongLived">
+						<hotfix name="Legendary Rarity: Longbow is the only thing that I know that uses it." level="None">
+							<code profiles="">set GD_Globals.General.Globals RarityLevelColors[7].DropLifeSpanType DROP_LongLived</code>
+						</hotfix>
+					</category>
+					<category name="LiveLongAsLevel">
+						<hotfix name="Legendary Rarity: Longbow is the only thing that I know that uses it." level="None">
+							<code profiles="">set GD_Globals.General.Globals RarityLevelColors[7].DropLifeSpanType DROP_LiveAsLongAsLevel</code>
+						</hotfix>
+					</category>
+					<category name="LiveForever">
+						<hotfix name="Legendary Rarity: Longbow is the only thing that I know that uses it." level="None">
+							<code profiles="">set GD_Globals.General.Globals RarityLevelColors[7].DropLifeSpanType DROP_LiveForever</code>
+						</hotfix>
+					</category>
+				</category>
+				<category name="Blacks / Gemstones (UCP)" MUT="true">
+					<category name="VeryShortLived">
+						<hotfix name="Black Rarity (Gemstone in UCP)" level="None">
+							<code profiles="">set GD_Globals.General.Globals RarityLevelColors[8].DropLifeSpanType DROP_VeryShortLived</code>
+						</hotfix>
+					</category>
+					<category name="ShortLived">
+						<hotfix name="Black Rarity (Gemstone in UCP)" level="None">
+							<code profiles="">set GD_Globals.General.Globals RarityLevelColors[8].DropLifeSpanType DROP_ShortLived</code>
+						</hotfix>
+					</category>
+					<category name="LongLived">
+						<hotfix name="Black Rarity (Gemstone in UCP)" level="None">
+							<code profiles="">set GD_Globals.General.Globals RarityLevelColors[8].DropLifeSpanType DROP_LongLived</code>
+						</hotfix>
+					</category>
+					<category name="LiveLongAsLevel">
+						<hotfix name="Black Rarity (Gemstone in UCP)" level="None">
+							<code profiles="">set GD_Globals.General.Globals RarityLevelColors[8].DropLifeSpanType DROP_LiveAsLongAsLevel</code>
+						</hotfix>
+					</category>
+					<category name="LiveForever">
+						<hotfix name="Black Rarity (Gemstone in UCP)" level="None">
+							<code profiles="">set GD_Globals.General.Globals RarityLevelColors[8].DropLifeSpanType DROP_LiveForever</code>
+						</hotfix>
+					</category>
+				</category>
+				<category name="Health Vial" MUT="true">
+					<category name="VeryShortLived">
 						<hotfix name="Health Vial" level="None">
-							<code profiles="default">set GD_Globals.General.Globals RarityLevelColors[9].DropLifeSpanType DROP_VeryShortLived</code>
+							<code profiles="">set GD_Globals.General.Globals RarityLevelColors[9].DropLifeSpanType DROP_VeryShortLived</code>
 						</hotfix>
+					</category>
+					<category name="ShortLived">
+						<hotfix name="Health Vial" level="None">
+							<code profiles="">set GD_Globals.General.Globals RarityLevelColors[9].DropLifeSpanType DROP_ShortLived</code>
+						</hotfix>
+					</category>
+					<category name="LongLived">
+						<hotfix name="Health Vial" level="None">
+							<code profiles="">set GD_Globals.General.Globals RarityLevelColors[9].DropLifeSpanType DROP_LongLived</code>
+						</hotfix>
+					</category>
+					<category name="LiveLongAsLevel">
+						<hotfix name="Health Vial" level="None">
+							<code profiles="">set GD_Globals.General.Globals RarityLevelColors[9].DropLifeSpanType DROP_LiveAsLongAsLevel</code>
+						</hotfix>
+					</category>
+					<category name="LiveForever">
+						<hotfix name="Health Vial" level="None">
+							<code profiles="">set GD_Globals.General.Globals RarityLevelColors[9].DropLifeSpanType DROP_LiveForever</code>
+						</hotfix>
+					</category>
+				</category>
+				<category name="Rejuvenator" MUT="true">
+					<category name="VeryShortLived">
 						<hotfix name="Uber Health Vial" level="None">
-							<code profiles="default">set GD_Globals.General.Globals RarityLevelColors[10].DropLifeSpanType DROP_VeryShortLived</code>
+							<code profiles="">set GD_Globals.General.Globals RarityLevelColors[10].DropLifeSpanType DROP_VeryShortLived</code>
 						</hotfix>
+					</category>
+					<category name="ShortLived">
+						<hotfix name="Uber Health Vial" level="None">
+							<code profiles="">set GD_Globals.General.Globals RarityLevelColors[10].DropLifeSpanType DROP_ShortLived</code>
+						</hotfix>
+					</category>
+					<category name="LongLived">
+						<hotfix name="Uber Health Vial" level="None">
+							<code profiles="">set GD_Globals.General.Globals RarityLevelColors[10].DropLifeSpanType DROP_LongLived</code>
+						</hotfix>
+					</category>
+					<category name="LiveLongAsLevel">
+						<hotfix name="Uber Health Vial" level="None">
+							<code profiles="">set GD_Globals.General.Globals RarityLevelColors[10].DropLifeSpanType DROP_LiveAsLongAsLevel</code>
+						</hotfix>
+					</category>
+					<category name="LiveForever">
+						<hotfix name="Uber Health Vial" level="None">
+							<code profiles="">set GD_Globals.General.Globals RarityLevelColors[10].DropLifeSpanType DROP_LiveForever</code>
+						</hotfix>
+					</category>
+				</category>
+				<category name="Money" MUT="true">
+					<category name="VeryShortLived">
 						<hotfix name="Money, and useless modded weapons." level="None">
-							<code profiles="default">set GD_Globals.General.Globals RarityLevelColors[11].DropLifeSpanType DROP_VeryShortLived</code>
+							<code profiles="">set GD_Globals.General.Globals RarityLevelColors[11].DropLifeSpanType DROP_VeryShortLived</code>
 						</hotfix>
+					</category>
+					<category name="ShortLived">
+						<hotfix name="Money, and useless modded weapons." level="None">
+							<code profiles="">set GD_Globals.General.Globals RarityLevelColors[11].DropLifeSpanType DROP_ShortLived</code>
+						</hotfix>
+					</category>
+					<category name="LongLived">
+						<hotfix name="Money, and useless modded weapons." level="None">
+							<code profiles="">set GD_Globals.General.Globals RarityLevelColors[11].DropLifeSpanType DROP_LongLived</code>
+						</hotfix>
+					</category>
+					<category name="LiveAsLongAsLevel">
+						<hotfix name="Money, and useless modded weapons." level="None">
+							<code profiles="">set GD_Globals.General.Globals RarityLevelColors[11].DropLifeSpanType DROP_LiveAsLongAsLevel</code>
+						</hotfix>
+					</category>
+					<category name="LiveForever">
+						<hotfix name="Money, and useless modded weapons." level="None">
+							<code profiles="">set GD_Globals.General.Globals RarityLevelColors[11].DropLifeSpanType DROP_LiveForever</code>
+						</hotfix>
+					</category>
+				</category>
+				<category name="Pearlescents" MUT="true">
+					<category name="VeryShortLived">
 						<hotfix name="Pearlescent Rarity: who needs common loot, anyways?" level="None">
-							<code profiles="default">set GD_Globals.General.Globals RarityLevelColors[12].DropLifeSpanType DROP_LongLived</code>
+							<code profiles="">set GD_Globals.General.Globals RarityLevelColors[12].DropLifeSpanType DROP_VeryShortLived</code>
 						</hotfix>
+					</category>
+					<category name="ShortLived">
+						<hotfix name="Pearlescent Rarity: who needs common loot, anyways?" level="None">
+							<code profiles="">set GD_Globals.General.Globals RarityLevelColors[12].DropLifeSpanType DROP_ShortLived</code>
+						</hotfix>
+					</category>
+					<category name="LongLived">
+						<hotfix name="Pearlescent Rarity: who needs common loot, anyways?" level="None">
+							<code profiles="">set GD_Globals.General.Globals RarityLevelColors[12].DropLifeSpanType DROP_LongLived</code>
+						</hotfix>
+					</category>
+					<category name="LiveAsLongAsLevel">
+						<hotfix name="Pearlescent Rarity: who needs common loot, anyways?" level="None">
+							<code profiles="">set GD_Globals.General.Globals RarityLevelColors[12].DropLifeSpanType DROP_LiveAsLongAsLevel</code>
+						</hotfix>
+					</category>
+					<category name="LiveForever">
+						<hotfix name="Pearlescent Rarity: who needs common loot, anyways?" level="None">
+							<code profiles="">set GD_Globals.General.Globals RarityLevelColors[12].DropLifeSpanType DROP_LiveForever</code>
+						</hotfix>
+					</category>
+				</category>
+				<category name="Seraphs" MUT="true">
+					<category name="VeryShortLived">
 						<hotfix name="Seraph Rarity: you killed a lot of Guardians for these items." level="None">
-							<code profiles="default">set GD_Globals.General.Globals RarityLevelColors[13].DropLifeSpanType DROP_LongLived</code>
+							<code profiles="">set GD_Globals.General.Globals RarityLevelColors[13].DropLifeSpanType DROP_VeryShortLived</code>
 						</hotfix>
+					</category>
+					<category name="ShortLived">
+						<hotfix name="Seraph Rarity: you killed a lot of Guardians for these items." level="None">
+							<code profiles="">set GD_Globals.General.Globals RarityLevelColors[13].DropLifeSpanType DROP_ShortLived</code>
+						</hotfix>
+					</category>
+					<category name="LongLived">
+						<hotfix name="Seraph Rarity: you killed a lot of Guardians for these items." level="None">
+							<code profiles="">set GD_Globals.General.Globals RarityLevelColors[13].DropLifeSpanType DROP_LongLived</code>
+						</hotfix>
+					</category>
+					<category name="LiveAsLongAsLevel">
+						<hotfix name="Seraph Rarity: you killed a lot of Guardians for these items." level="None">
+							<code profiles="">set GD_Globals.General.Globals RarityLevelColors[13].DropLifeSpanType DROP_LiveAsLongAsLevel</code>
+						</hotfix>
+					</category>
+					<category name="LiveForever">
+						<hotfix name="Seraph Rarity: you killed a lot of Guardians for these items." level="None">
+							<code profiles="">set GD_Globals.General.Globals RarityLevelColors[13].DropLifeSpanType DROP_LiveForever</code>
+						</hotfix>
+					</category>
+				</category>
+				<category name="Unknown" MUT="true">
+					<category name="VeryShortLived">
 						<hotfix name="No clue." level="None">
-							<code profiles="default">set GD_Globals.General.Globals RarityLevelColors[14].DropLifeSpanType DROP_VeryShortLived</code>
+							<code profiles="">set GD_Globals.General.Globals RarityLevelColors[14].DropLifeSpanType DROP_VeryShortLived</code>
 						</hotfix>
+					</category>
+					<category name="ShortLived">
+						<hotfix name="No clue." level="None">
+							<code profiles="">set GD_Globals.General.Globals RarityLevelColors[14].DropLifeSpanType DROP_ShortLived</code>
+						</hotfix>
+					</category>
+					<category name="LongLived">
+						<hotfix name="No clue." level="None">
+							<code profiles="">set GD_Globals.General.Globals RarityLevelColors[14].DropLifeSpanType DROP_LongLived</code>
+						</hotfix>
+					</category>
+					<category name="LiveAsLongAsLevel">
+						<hotfix name="No clue." level="None">
+							<code profiles="">set GD_Globals.General.Globals RarityLevelColors[14].DropLifeSpanType DROP_LiveAsLongAsLevel</code>
+						</hotfix>
+					</category>
+					<category name="LiveForever">
+						<hotfix name="No clue." level="None">
+							<code profiles="">set GD_Globals.General.Globals RarityLevelColors[14].DropLifeSpanType DROP_LiveForever</code>
+						</hotfix>
+					</category>
+				</category>
+				<category name="E-Tech Tier 2" MUT="true">
+					<category name="VeryShortLived">
 						<hotfix name="Another Magenta color?" level="None">
-							<code profiles="default">set GD_Globals.General.Globals RarityLevelColors[15].DropLifeSpanType DROP_VeryShortLived</code>
+							<code profiles="">set GD_Globals.General.Globals RarityLevelColors[15].DropLifeSpanType DROP_VeryShortLived</code>
 						</hotfix>
-						<hotfix name="Shield Boosters?" level="None">
-							<code profiles="default">set GD_Globals.General.Globals RarityLevelColors[16].DropLifeSpanType DROP_ShortLived</code>
+					</category>
+					<category name="ShortLived">
+						<hotfix name="Another Magenta color?" level="None">
+							<code profiles="">set GD_Globals.General.Globals RarityLevelColors[15].DropLifeSpanType DROP_ShortLived</code>
+						</hotfix>
+					</category>
+					<category name="LongLived">
+						<hotfix name="Another Magenta color?" level="None">
+							<code profiles="">set GD_Globals.General.Globals RarityLevelColors[15].DropLifeSpanType DROP_LongLived</code>
+						</hotfix>
+					</category>
+					<category name="LiveAsLongAsLevel">
+						<hotfix name="Another Magenta color?" level="None">
+							<code profiles="">set GD_Globals.General.Globals RarityLevelColors[15].DropLifeSpanType DROP_LiveAsLongAsLevel</code>
+						</hotfix>
+					</category>
+					<category name="LiveForever">
+						<hotfix name="Another Magenta color?" level="None">
+							<code profiles="">set GD_Globals.General.Globals RarityLevelColors[15].DropLifeSpanType DROP_LiveForever</code>
+						</hotfix>
+					</category>
+				</category>
+				<category name="Pearlescent Tier 2" MUT="true">
+					<category name="VeryShortLived">
+						<hotfix name="Shield Boosters" level="None">
+							<code profiles="">set GD_Globals.General.Globals RarityLevelColors[16].DropLifeSpanType DROP_VeryShortLived</code>
+						</hotfix>
+					</category>
+					<category name="ShortLived">
+						<hotfix name="Shield Boosters" level="None">
+							<code profiles="">set GD_Globals.General.Globals RarityLevelColors[16].DropLifeSpanType DROP_ShortLived</code>
+						</hotfix>
+					</category>
+					<category name="LongLived">
+						<hotfix name="Shield Boosters" level="None">
+							<code profiles="">set GD_Globals.General.Globals RarityLevelColors[16].DropLifeSpanType DROP_LongLived</code>
+						</hotfix>
+					</category>
+					<category name="LiveAsLongAsLevel">
+						<hotfix name="Shield Boosters" level="None">
+							<code profiles="">set GD_Globals.General.Globals RarityLevelColors[16].DropLifeSpanType DROP_LiveAsLongAsLevel</code>
+						</hotfix>
+					</category>
+					<category name="LiveForever">
+						<hotfix name="Shield Boosters" level="None">
+							<code profiles="">set GD_Globals.General.Globals RarityLevelColors[16].DropLifeSpanType DROP_LiveForever</code>
 						</hotfix>
 					</category>
 				</category>
 			</category>
-			<category name="Customize Loot Despawn Times Per Rarity">
+			<category name="[2] Customize Loot Despawn Times Per Editable Timer Type">
 				<comment>Edit the numbers in each of these to customize it to your liking.</comment>
 				<comment>All default values are the base game ones.</comment>
 				<comment>60.0 is equal to one minute in real life.</comment>
-				<comment>Yes, you can make things theoretically not spawn by changing the timer to 0.0 and the despawn animation to 0.0</comment>
-				<category name="Legendaries - Pearlescents - Seraphs">
+				<comment>Yes, you can make things theoretically not spawn by changing the timer to 0.01 </comment>
+				<comment>Any despawn timer set to 0.0 will make it stay around until you exit.</comment>
+				<comment>The despawn animation can be set to 0.0 for instant item despawn upon lifetime depletion instead of a shrinking animation.</comment>
+				<category name="VeryShortLived">
 					<hotfix name="Name" level="None">
-						<code profiles="">set Default__WillowPickup LongLivedDropLifeSpan 1800.0</code>
+						<code profiles="">set Default__WillowPickup VeryShortLivedDropLifeSpan 60</code>
 					</hotfix>
 				</category>
-				<category name="Purples - Blues - Ammo - Gemstones (UCP)">
+				<category name="ShortLived">
 					<hotfix name="Name" level="None">
 						<code profiles="">set Default__WillowPickup ShortLivedDropLifeSpan 600.0</code>
 					</hotfix>
 				</category>
-				<category name="White - Green">
+				<category name="LongLived">
 					<hotfix name="Name" level="None">
-						<code profiles="">set Default__WillowPickup VeryShortLivedDropLifeSpan 60.0</code>
+						<code profiles="">set Default__WillowPickup LongLivedDropLifeSpan 1800.0</code>
 					</hotfix>
 				</category>
-				<category name="How Fast Items Shrink Before Despawning">
+				<category name="How Fast Items Shrink Before Despawning - Can be ignored by low despawn times.">
 					<hotfix name="Name" level="None">
 						<code profiles="">set Default__WillowPickup PickupShrinkDuration 15.0</code>
 					</hotfix>
 				</category>
 			</category>
-			<comment>============================================</comment>
+			<category name="[Optional 1] Change The Rarity Of Unique Blues - Prevents despawn from no blues existing.">
+				<comment>This section will convert ALL blue uniques into a higher rarity so that you may set normal blue items to despawn quickly (if you are past their usefulness).</comment>
+				<comment>Make sure to set the despawn timer types in section [1] to what you want these changes to use.</comment>
+				<category name="Options (Choose One)" MUT="true">
+					<category name="Purple">
+						<hotfix name="Name" level="None">
+							<code profiles="">set GD_Weap_AssaultRifle.Barrel.AR_Barrel_Jakobs_Scorpio Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+							<code profiles="">set GD_Weap_AssaultRifle.Barrel.AR_Barrel_Jakobs_Stomper Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+							<code profiles="">set GD_Weap_AssaultRifle.Barrel.AR_Barrel_Vladof_EvilSmasher Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+							<code profiles="">set GD_Weap_AssaultRifle.Barrel.AR_Barrel_Dahl_Hail Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+							<code profiles="">set GD_Orchid_BossWeapons.AssaultRifle.AR_Barrel_Bandit_Rapier Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+							<code profiles="">set GD_Orchid_BossWeapons.AssaultRifle.AR_Barrel_Torgue_Stinkpot Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+							<code profiles="">set GD_Iris_Weapons.AssaultRifles.AR_Barrel_Torgue_BoomPuppy Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+							<code profiles="">set GD_Iris_Weapons.AssaultRifles.AR_Barrel_Vladof_Kitten Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+							<code profiles="">set GD_Sage_Weapons.AssaultRifle.AR_Barrel_Bandit_DamnedCowboy Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+							<code profiles="">set GD_Sage_Weapons.AssaultRifle.AR_Barrel_Vladof_Minigun_Chopper Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+							<code profiles="">set GD_Weap_Pistol.Barrel.Pistol_Barrel_Hyperion_GwensHead Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+							<code profiles="">set GD_Weap_Pistol.Barrel.Pistol_Barrel_Tediore_Teapot Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+							<code profiles="">set GD_Weap_Pistol.Barrel.Fibber.Pistol_Barrel_Bandit_Fibber_2 Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+							<code profiles="">set GD_Weap_Pistol.Barrel.Fibber.Pistol_Barrel_Bandit_Fibber_3 Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+							<code profiles="">set GD_Weap_Pistol.Barrel.Fibber.Pistol_Barrel_Bandit_Fibber_4 Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+							<code profiles="">set GD_Weap_Pistol.Barrel.Pistol_Barrel_Dahl_LadyFist Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+							<code profiles="">set GD_Weap_Pistol.Barrel.Pistol_Barrel_Maliwan_Rubi Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+							<code profiles="">set GD_Weap_Pistol.Barrel.Pistol_Barrel_Dahl_Tinderbox Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+							<code profiles="">set GD_Weap_Pistol.Barrel.Pistol_Barrel_Hyperion_Veritas Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+							<code profiles="">set GD_Weap_Pistol.Barrel.Pistol_Barrel_Tediore_Judge Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+							<code profiles="">set GD_Weap_Pistol.Barrel.Pistol_Barrel_Dahl_Law Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+							<code profiles="">set GD_Aster_Weapons.Pistols.Pistol_Barrel_Bandit_GrogNozzle Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+							<code profiles="">set GD_Orchid_BossWeapons.Pistol.Pistol_Barrel_ScarletsGreed Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+							<code profiles="">set GD_Orchid_BossWeapons.Pistol.Pistol_Barrel_Vladof_Evie Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+							<code profiles="">set GD_Iris_Weapons.Pistols.Pistol_Barrel_Torgue_PocketRocket Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+							<code profiles="">set GD_Sage_Weapons.Pistols.Pistol_Barrel_Jakobs_Rex Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+							<code profiles="">set GD_Weap_Launchers.Barrel.L_Barrel_Tediore_Roaster Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+							<code profiles="">set GD_Weap_Launchers.Barrel.L_Barrel_Torgue_TheHive Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+							<code profiles="">set GD_Orchid_BossWeapons.Launcher.L_Barrel_Torgue_12Pounder Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+							<code profiles="">set GD_Weap_Launchers.Barrel.L_Barrel_Maliwan_Creamer Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+							<code profiles="">set GD_Sage_HarpoonGun.Barrel.Sage_HarpoonGun_Barrel Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+							<code profiles="">set GD_Weap_SniperRifles.Barrel.SR_Barrel_Dahl_Sloth Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+							<code profiles="">set GD_Weap_SniperRifles.Barrel.SR_Barrel_Hyperion_Tresspasser Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+							<code profiles="">set GD_Sage_Weapons.SniperRifles.SR_Barrel_Hyperion_ElephantGun Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+							<code profiles="">set GD_Iris_Weapons.SniperRifles.SR_Barrel_Dahl_Cobra Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+							<code profiles="">set GD_Weap_SniperRifles.Barrel.SR_Barrel_Dahl_FremingtonsEdge Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+							<code profiles="">set GD_Weap_SniperRifles.Barrel.SR_Barrel_Hyperion_ChereAmie Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+							<code profiles="">set GD_Orchid_BossWeapons.SniperRifles.SR_Barrel_Dahl_Pimpernel Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+							<code profiles="">set GD_Weap_SniperRifles.Barrel.SR_Barrel_Maliwan_Morningstar Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+							<code profiles="">set GD_Weap_SniperRifles.Barrel.SR_Barrel_Jakobs_Buffalo Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+							<code profiles="">set GD_Orchid_BossWeapons.SMG.SMG_Barrel_Bandit_SandHawk Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+							<code profiles="">set GD_Weap_SMG.Barrel.SMG_Barrel_Bandit_Lascaux Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+							<code profiles="">set GD_Weap_SMG.Barrel.SMG_Barrel_Dahl_Bane Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+							<code profiles="">set GD_Weap_SMG.Barrel.SMG_Barrel_Tediore_Commerce Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+							<code profiles="">set GD_Weap_SMG.Barrel.SMG_Barrel_Chulainn Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+							<code profiles="">set GD_Weap_Shotgun.Barrel.SG_Barrel_Bandit_Triquetra Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+							<code profiles="">set GD_Weap_Shotgun.Barrel.SG_Barrel_Tediore_Octo Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+							<code profiles="">set GD_Weap_Shotgun.Barrel.SG_Barrel_Tediore_Blockhead Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+							<code profiles="">set GD_Weap_Shotgun.Barrel.SG_Barrel_Hyperion_HeartBreaker Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+							<code profiles="">set GD_Weap_Shotgun.Barrel.SG_Barrel_Tediore_Shotgun1340 Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+							<code profiles="">set GD_Weap_Shotgun.Barrel.SG_Barrel_Jakobs_TidalWave Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+							<code profiles="">set GD_Weap_Shotgun.Barrel.SG_Barrel_Bandit_Dog Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+							<code profiles="">set GD_Weap_Shotgun.Barrel.SG_Barrel_Jakobs_RockSalt Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+							<code profiles="">set GD_Orchid_BossWeapons.Shotgun.SG_Barrel_Bandit_JollyRoger Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+							<code profiles="">set GD_Orchid_BossWeapons.Shotgun.SG_Barrel_Jakobs_OrphanMaker Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+							<code profiles="">set GD_Sage_Weapons.Shotgun.SG_Barrel_Bandit_Hydra Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+							<code profiles="">set GD_Sage_Weapons.Shotgun.SG_Barrel_Torgue_Twister Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+							<code profiles="">set GD_Weap_Shotgun.Barrel.SG_Barrel_Torgue_Teeth Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+							<code profiles="">set GD_Weap_Shotgun.Barrel.SG_Barrel_Jakobs_Landscaper Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+							<code profiles="">set GD_Shields.A_Item.Shield_Roid_Order BaseRarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+							<code profiles="">set GD_Shields.A_Item.Shield_Absorption_Aequitas BaseRarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+							<code profiles="">set GD_Shields.A_Item.Shield_Booster_PotOGold BaseRarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+							<code profiles="">set GD_Shields.A_Item.Shield_Absorption_1340 BaseRarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+							<code profiles="">set GD_Sage_Shields.A_Item_Custom.Shield_Buckler BaseRarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+							<code profiles="">set GD_Orchid_Shields.A_Item_Custom.Shield_Blade BaseRarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+							<code profiles="">set GD_GrenadeMods.A_Item_Custom.GrenadeMod_SkyRocket BaseRarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+							<code profiles="">set GD_GrenadeMods.A_Item_Custom.GrenadeMod_FusterCluck BaseRarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+							<code profiles="">set GD_Orchid_GrenadeMods.A_Item_Custom.GrenadeMod_Blade BaseRarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+							<code profiles="">set GD_GrenadeMods.Payload.Payload_KissOfDeath Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+							<code profiles="">set GD_Artifacts.A_Item_Unique.Artifact_Endowment BaseRarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+							<code profiles="">set GD_Artifacts.A_Item_Unique.Artifact_Opportunity BaseRarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+							<code profiles="">set GD_Artifacts.A_Item_Unique.Artifact_VaultHunter BaseRarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+							<code profiles="">set GD_Artifacts.A_Item_Unique.Artifact_Afterburner BaseRarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+							<code profiles="">set GD_Aster_Artifacts.A_Item_Unique.Artifact_MysteryAmulet BaseRarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+							<code profiles="">set GD_Orchid_Artifacts.A_Item_Unique.Artifact_Blade BaseRarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+							<code profiles="">set GD_Artifacts.A_Item_Unique.Artifact_Deputy BaseRarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+							<code profiles="">set GD_Aster_GrenadeMods.Delivery.Delivery_Fireball Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+							<code profiles="">set GD_Aster_GrenadeMods.Delivery.Delivery_LightningBolt Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+							<code profiles="">set GD_Aster_GrenadeMods.Delivery.Delivery_MagicMissile Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity1_Common'</code>
+							<code profiles="">set GD_Aster_GrenadeMods.Delivery.Delivery_MagicMissileRare Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity2_Uncommon'</code>
+						</hotfix>
+					</category>
+					<category name="E-Tech">
+						<hotfix name="Name" level="None">
+							<code profiles="">set GD_Shields.A_Item.Shield_Roid_Order BaseRarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity3_Rare'</code>
+							<code profiles="">set GD_Shields.A_Item.Shield_Absorption_Aequitas BaseRarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity3_Rare'</code>
+							<code profiles="">set GD_Shields.A_Item.Shield_Booster_PotOGold BaseRarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity3_Rare'</code>
+							<code profiles="">set GD_Shields.A_Item.Shield_Absorption_1340 BaseRarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity3_Rare'</code>
+							<code profiles="">set GD_Sage_Shields.A_Item_Custom.Shield_Buckler BaseRarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity3_Rare'</code>
+							<code profiles="">set GD_Orchid_Shields.A_Item_Custom.Shield_Blade BaseRarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity3_Rare'</code>
+							<code profiles="">set GD_GrenadeMods.A_Item_Custom.GrenadeMod_SkyRocket BaseRarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity3_Rare'</code>
+							<code profiles="">set GD_GrenadeMods.A_Item_Custom.GrenadeMod_FusterCluck BaseRarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity3_Rare'</code>
+							<code profiles="">set GD_Orchid_GrenadeMods.A_Item_Custom.GrenadeMod_Blade BaseRarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity3_Rare'</code>
+							<code profiles="">set GD_GrenadeMods.Payload.Payload_KissOfDeath Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity3_Rare'</code>
+							<code profiles="">set GD_Artifacts.A_Item_Unique.Artifact_Endowment BaseRarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity3_Rare'</code>
+							<code profiles="">set GD_Artifacts.A_Item_Unique.Artifact_Opportunity BaseRarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity3_Rare'</code>
+							<code profiles="">set GD_Artifacts.A_Item_Unique.Artifact_VaultHunter BaseRarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity3_Rare'</code>
+							<code profiles="">set GD_Artifacts.A_Item_Unique.Artifact_Afterburner BaseRarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity3_Rare'</code>
+							<code profiles="">set GD_Aster_Artifacts.A_Item_Unique.Artifact_MysteryAmulet BaseRarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity3_Rare'</code>
+							<code profiles="">set GD_Orchid_Artifacts.A_Item_Unique.Artifact_Blade BaseRarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity3_Rare'</code>
+							<code profiles="">set GD_Artifacts.A_Item_Unique.Artifact_Deputy BaseRarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity3_Rare'</code>
+							<code profiles="">set GD_Weap_AssaultRifle.Barrel.AR_Barrel_Jakobs_Scorpio Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity3_Rare'</code>
+							<code profiles="">set GD_Weap_AssaultRifle.Barrel.AR_Barrel_Jakobs_Stomper Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity3_Rare'</code>
+							<code profiles="">set GD_Weap_AssaultRifle.Barrel.AR_Barrel_Vladof_EvilSmasher Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity3_Rare'</code>
+							<code profiles="">set GD_Weap_AssaultRifle.Barrel.AR_Barrel_Dahl_Hail Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity3_Rare'</code>
+							<code profiles="">set GD_Orchid_BossWeapons.AssaultRifle.AR_Barrel_Bandit_Rapier Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity3_Rare'</code>
+							<code profiles="">set GD_Orchid_BossWeapons.AssaultRifle.AR_Barrel_Torgue_Stinkpot Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity3_Rare'</code>
+							<code profiles="">set GD_Iris_Weapons.AssaultRifles.AR_Barrel_Torgue_BoomPuppy Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity3_Rare'</code>
+							<code profiles="">set GD_Iris_Weapons.AssaultRifles.AR_Barrel_Vladof_Kitten Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity3_Rare'</code>
+							<code profiles="">set GD_Sage_Weapons.AssaultRifle.AR_Barrel_Bandit_DamnedCowboy Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity3_Rare'</code>
+							<code profiles="">set GD_Sage_Weapons.AssaultRifle.AR_Barrel_Vladof_Minigun_Chopper Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity3_Rare'</code>
+							<code profiles="">set GD_Weap_Pistol.Barrel.Pistol_Barrel_Hyperion_GwensHead Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity3_Rare'</code>
+							<code profiles="">set GD_Weap_Pistol.Barrel.Pistol_Barrel_Tediore_Teapot Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity3_Rare'</code>
+							<code profiles="">set GD_Weap_Pistol.Barrel.Fibber.Pistol_Barrel_Bandit_Fibber_2 Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity3_Rare'</code>
+							<code profiles="">set GD_Weap_Pistol.Barrel.Fibber.Pistol_Barrel_Bandit_Fibber_3 Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity3_Rare'</code>
+							<code profiles="">set GD_Weap_Pistol.Barrel.Fibber.Pistol_Barrel_Bandit_Fibber_4 Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity3_Rare'</code>
+							<code profiles="">set GD_Weap_Pistol.Barrel.Pistol_Barrel_Dahl_LadyFist Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity3_Rare'</code>
+							<code profiles="">set GD_Weap_Pistol.Barrel.Pistol_Barrel_Maliwan_Rubi Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity3_Rare'</code>
+							<code profiles="">set GD_Weap_Pistol.Barrel.Pistol_Barrel_Dahl_Tinderbox Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity3_Rare'</code>
+							<code profiles="">set GD_Weap_Pistol.Barrel.Pistol_Barrel_Hyperion_Veritas Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity3_Rare'</code>
+							<code profiles="">set GD_Weap_Pistol.Barrel.Pistol_Barrel_Tediore_Judge Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity3_Rare'</code>
+							<code profiles="">set GD_Weap_Pistol.Barrel.Pistol_Barrel_Dahl_Law Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity3_Rare'</code>
+							<code profiles="">set GD_Aster_Weapons.Pistols.Pistol_Barrel_Bandit_GrogNozzle Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity3_Rare'</code>
+							<code profiles="">set GD_Orchid_BossWeapons.Pistol.Pistol_Barrel_ScarletsGreed Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity3_Rare'</code>
+							<code profiles="">set GD_Orchid_BossWeapons.Pistol.Pistol_Barrel_Vladof_Evie Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity3_Rare'</code>
+							<code profiles="">set GD_Iris_Weapons.Pistols.Pistol_Barrel_Torgue_PocketRocket Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity3_Rare'</code>
+							<code profiles="">set GD_Sage_Weapons.Pistols.Pistol_Barrel_Jakobs_Rex Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity3_Rare'</code>
+							<code profiles="">set GD_Weap_Launchers.Barrel.L_Barrel_Tediore_Roaster Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity3_Rare'</code>
+							<code profiles="">set GD_Weap_Launchers.Barrel.L_Barrel_Torgue_TheHive Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity3_Rare'</code>
+							<code profiles="">set GD_Orchid_BossWeapons.Launcher.L_Barrel_Torgue_12Pounder Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity3_Rare'</code>
+							<code profiles="">set GD_Weap_Launchers.Barrel.L_Barrel_Maliwan_Creamer Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity3_Rare'</code>
+							<code profiles="">set GD_Sage_HarpoonGun.Barrel.Sage_HarpoonGun_Barrel Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity3_Rare'</code>
+							<code profiles="">set GD_Weap_SniperRifles.Barrel.SR_Barrel_Dahl_Sloth Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity3_Rare'</code>
+							<code profiles="">set GD_Weap_SniperRifles.Barrel.SR_Barrel_Hyperion_Tresspasser Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity3_Rare'</code>
+							<code profiles="">set GD_Sage_Weapons.SniperRifles.SR_Barrel_Hyperion_ElephantGun Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity3_Rare'</code>
+							<code profiles="">set GD_Iris_Weapons.SniperRifles.SR_Barrel_Dahl_Cobra Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity3_Rare'</code>
+							<code profiles="">set GD_Weap_SniperRifles.Barrel.SR_Barrel_Dahl_FremingtonsEdge Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity3_Rare'</code>
+							<code profiles="">set GD_Weap_SniperRifles.Barrel.SR_Barrel_Hyperion_ChereAmie Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity3_Rare'</code>
+							<code profiles="">set GD_Orchid_BossWeapons.SniperRifles.SR_Barrel_Dahl_Pimpernel Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity3_Rare'</code>
+							<code profiles="">set GD_Weap_SniperRifles.Barrel.SR_Barrel_Maliwan_Morningstar Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity3_Rare'</code>
+							<code profiles="">set GD_Weap_SniperRifles.Barrel.SR_Barrel_Jakobs_Buffalo Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity3_Rare'</code>
+							<code profiles="">set GD_Orchid_BossWeapons.SMG.SMG_Barrel_Bandit_SandHawk Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity3_Rare'</code>
+							<code profiles="">set GD_Weap_SMG.Barrel.SMG_Barrel_Bandit_Lascaux Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity3_Rare'</code>
+							<code profiles="">set GD_Weap_SMG.Barrel.SMG_Barrel_Dahl_Bane Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity3_Rare'</code>
+							<code profiles="">set GD_Weap_SMG.Barrel.SMG_Barrel_Tediore_Commerce Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity3_Rare'</code>
+							<code profiles="">set GD_Weap_SMG.Barrel.SMG_Barrel_Chulainn Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity3_Rare'</code>
+							<code profiles="">set GD_Weap_Shotgun.Barrel.SG_Barrel_Bandit_Triquetra Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity3_Rare'</code>
+							<code profiles="">set GD_Weap_Shotgun.Barrel.SG_Barrel_Tediore_Octo Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity3_Rare'</code>
+							<code profiles="">set GD_Weap_Shotgun.Barrel.SG_Barrel_Tediore_Blockhead Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity3_Rare'</code>
+							<code profiles="">set GD_Weap_Shotgun.Barrel.SG_Barrel_Hyperion_HeartBreaker Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity3_Rare'</code>
+							<code profiles="">set GD_Weap_Shotgun.Barrel.SG_Barrel_Tediore_Shotgun1340 Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity3_Rare'</code>
+							<code profiles="">set GD_Weap_Shotgun.Barrel.SG_Barrel_Jakobs_TidalWave Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity3_Rare'</code>
+							<code profiles="">set GD_Weap_Shotgun.Barrel.SG_Barrel_Bandit_Dog Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity3_Rare'</code>
+							<code profiles="">set GD_Weap_Shotgun.Barrel.SG_Barrel_Jakobs_RockSalt Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity3_Rare'</code>
+							<code profiles="">set GD_Orchid_BossWeapons.Shotgun.SG_Barrel_Bandit_JollyRoger Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity3_Rare'</code>
+							<code profiles="">set GD_Orchid_BossWeapons.Shotgun.SG_Barrel_Jakobs_OrphanMaker Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity3_Rare'</code>
+							<code profiles="">set GD_Sage_Weapons.Shotgun.SG_Barrel_Bandit_Hydra Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity3_Rare'</code>
+							<code profiles="">set GD_Sage_Weapons.Shotgun.SG_Barrel_Torgue_Twister Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity3_Rare'</code>
+							<code profiles="">set GD_Weap_Shotgun.Barrel.SG_Barrel_Torgue_Teeth Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity3_Rare'</code>
+							<code profiles="">set GD_Weap_Shotgun.Barrel.SG_Barrel_Jakobs_Landscaper Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity3_Rare'</code>
+							<code profiles="">set GD_Aster_GrenadeMods.Delivery.Delivery_Fireball Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity3_Rare'</code>
+							<code profiles="">set GD_Aster_GrenadeMods.Delivery.Delivery_LightningBolt Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity3_Rare'</code>
+							<code profiles="">set GD_Aster_GrenadeMods.Delivery.Delivery_MagicMissile Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity3_Rare'</code>
+							<code profiles="">set GD_Aster_GrenadeMods.Delivery.Delivery_MagicMissileRare Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity2_Uncommon'</code>
+						</hotfix>
+					</category>
+					<category name="Legendary">
+						<hotfix name="Name" level="None">
+							<code profiles="">set GD_Shields.A_Item.Shield_Roid_Order BaseRarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity2_Uncommon'</code>
+							<code profiles="">set GD_Shields.A_Item.Shield_Absorption_Aequitas BaseRarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity2_Uncommon'</code>
+							<code profiles="">set GD_Shields.A_Item.Shield_Booster_PotOGold BaseRarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity2_Uncommon'</code>
+							<code profiles="">set GD_Shields.A_Item.Shield_Absorption_1340 BaseRarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity2_Uncommon'</code>
+							<code profiles="">set GD_Sage_Shields.A_Item_Custom.Shield_Buckler BaseRarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity2_Uncommon'</code>
+							<code profiles="">set GD_Orchid_Shields.A_Item_Custom.Shield_Blade BaseRarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity2_Uncommon'</code>
+							<code profiles="">set GD_GrenadeMods.A_Item_Custom.GrenadeMod_SkyRocket BaseRarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity2_Uncommon'</code>
+							<code profiles="">set GD_GrenadeMods.A_Item_Custom.GrenadeMod_FusterCluck BaseRarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity2_Uncommon'</code>
+							<code profiles="">set GD_Orchid_GrenadeMods.A_Item_Custom.GrenadeMod_Blade BaseRarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity2_Uncommon'</code>
+							<code profiles="">set GD_Aster_GrenadeMods.Delivery.Delivery_Fireball Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity2_Uncommon'</code>
+							<code profiles="">set GD_Aster_GrenadeMods.Delivery.Delivery_LightningBolt Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity2_Uncommon'</code>
+							<code profiles="">set GD_Aster_GrenadeMods.Delivery.Delivery_MagicMissile Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity2_Uncommon'</code>
+							<code profiles="">set GD_GrenadeMods.Payload.Payload_KissOfDeath Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity2_Uncommon'</code>
+							<code profiles="">set GD_Aster_GrenadeMods.Delivery.Delivery_MagicMissileRare Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity2_Uncommon'</code>
+							<code profiles="">set GD_Artifacts.A_Item_Unique.Artifact_Endowment BaseRarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity2_Uncommon'</code>
+							<code profiles="">set GD_Artifacts.A_Item_Unique.Artifact_Opportunity BaseRarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity2_Uncommon'</code>
+							<code profiles="">set GD_Artifacts.A_Item_Unique.Artifact_VaultHunter BaseRarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity2_Uncommon'</code>
+							<code profiles="">set GD_Artifacts.A_Item_Unique.Artifact_Afterburner BaseRarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity2_Uncommon'</code>
+							<code profiles="">set GD_Aster_Artifacts.A_Item_Unique.Artifact_MysteryAmulet BaseRarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity2_Uncommon'</code>
+							<code profiles="">set GD_Orchid_Artifacts.A_Item_Unique.Artifact_Blade BaseRarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity2_Uncommon'</code>
+							<code profiles="">set GD_Artifacts.A_Item_Unique.Artifact_Deputy BaseRarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity2_Uncommon'</code>
+							<code profiles="">set GD_Weap_AssaultRifle.Barrel.AR_Barrel_Jakobs_Scorpio Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity2_Uncommon'</code>
+							<code profiles="">set GD_Weap_AssaultRifle.Barrel.AR_Barrel_Jakobs_Stomper Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity2_Uncommon'</code>
+							<code profiles="">set GD_Weap_AssaultRifle.Barrel.AR_Barrel_Vladof_EvilSmasher Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity2_Uncommon'</code>
+							<code profiles="">set GD_Weap_AssaultRifle.Barrel.AR_Barrel_Dahl_Hail Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity2_Uncommon'</code>
+							<code profiles="">set GD_Orchid_BossWeapons.AssaultRifle.AR_Barrel_Bandit_Rapier Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity2_Uncommon'</code>
+							<code profiles="">set GD_Orchid_BossWeapons.AssaultRifle.AR_Barrel_Torgue_Stinkpot Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity2_Uncommon'</code>
+							<code profiles="">set GD_Iris_Weapons.AssaultRifles.AR_Barrel_Torgue_BoomPuppy Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity2_Uncommon'</code>
+							<code profiles="">set GD_Iris_Weapons.AssaultRifles.AR_Barrel_Vladof_Kitten Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity2_Uncommon'</code>
+							<code profiles="">set GD_Sage_Weapons.AssaultRifle.AR_Barrel_Bandit_DamnedCowboy Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity2_Uncommon'</code>
+							<code profiles="">set GD_Sage_Weapons.AssaultRifle.AR_Barrel_Vladof_Minigun_Chopper Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity2_Uncommon'</code>
+							<code profiles="">set GD_Weap_Pistol.Barrel.Pistol_Barrel_Hyperion_GwensHead Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity2_Uncommon'</code>
+							<code profiles="">set GD_Weap_Pistol.Barrel.Pistol_Barrel_Tediore_Teapot Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity2_Uncommon'</code>
+							<code profiles="">set GD_Weap_Pistol.Barrel.Fibber.Pistol_Barrel_Bandit_Fibber_2 Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity2_Uncommon'</code>
+							<code profiles="">set GD_Weap_Pistol.Barrel.Fibber.Pistol_Barrel_Bandit_Fibber_3 Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity2_Uncommon'</code>
+							<code profiles="">set GD_Weap_Pistol.Barrel.Fibber.Pistol_Barrel_Bandit_Fibber_4 Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity2_Uncommon'</code>
+							<code profiles="">set GD_Weap_Pistol.Barrel.Pistol_Barrel_Dahl_LadyFist Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity2_Uncommon'</code>
+							<code profiles="">set GD_Weap_Pistol.Barrel.Pistol_Barrel_Maliwan_Rubi Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity2_Uncommon'</code>
+							<code profiles="">set GD_Weap_Pistol.Barrel.Pistol_Barrel_Dahl_Tinderbox Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity2_Uncommon'</code>
+							<code profiles="">set GD_Weap_Pistol.Barrel.Pistol_Barrel_Hyperion_Veritas Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity2_Uncommon'</code>
+							<code profiles="">set GD_Weap_Pistol.Barrel.Pistol_Barrel_Tediore_Judge Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity2_Uncommon'</code>
+							<code profiles="">set GD_Weap_Pistol.Barrel.Pistol_Barrel_Dahl_Law Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity2_Uncommon'</code>
+							<code profiles="">set GD_Aster_Weapons.Pistols.Pistol_Barrel_Bandit_GrogNozzle Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity2_Uncommon'</code>
+							<code profiles="">set GD_Orchid_BossWeapons.Pistol.Pistol_Barrel_ScarletsGreed Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity2_Uncommon'</code>
+							<code profiles="">set GD_Orchid_BossWeapons.Pistol.Pistol_Barrel_Vladof_Evie Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity2_Uncommon'</code>
+							<code profiles="">set GD_Iris_Weapons.Pistols.Pistol_Barrel_Torgue_PocketRocket Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity2_Uncommon'</code>
+							<code profiles="">set GD_Sage_Weapons.Pistols.Pistol_Barrel_Jakobs_Rex Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity2_Uncommon'</code>
+							<code profiles="">set GD_Weap_Launchers.Barrel.L_Barrel_Tediore_Roaster Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity2_Uncommon'</code>
+							<code profiles="">set GD_Weap_Launchers.Barrel.L_Barrel_Torgue_TheHive Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity2_Uncommon'</code>
+							<code profiles="">set GD_Orchid_BossWeapons.Launcher.L_Barrel_Torgue_12Pounder Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity2_Uncommon'</code>
+							<code profiles="">set GD_Weap_Launchers.Barrel.L_Barrel_Maliwan_Creamer Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity2_Uncommon'</code>
+							<code profiles="">set GD_Sage_HarpoonGun.Barrel.Sage_HarpoonGun_Barrel Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity2_Uncommon'</code>
+							<code profiles="">set GD_Weap_SniperRifles.Barrel.SR_Barrel_Dahl_Sloth Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity2_Uncommon'</code>
+							<code profiles="">set GD_Weap_SniperRifles.Barrel.SR_Barrel_Hyperion_Tresspasser Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity2_Uncommon'</code>
+							<code profiles="">set GD_Sage_Weapons.SniperRifles.SR_Barrel_Hyperion_ElephantGun Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity2_Uncommon'</code>
+							<code profiles="">set GD_Iris_Weapons.SniperRifles.SR_Barrel_Dahl_Cobra Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity2_Uncommon'</code>
+							<code profiles="">set GD_Weap_SniperRifles.Barrel.SR_Barrel_Dahl_FremingtonsEdge Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity2_Uncommon'</code>
+							<code profiles="">set GD_Weap_SniperRifles.Barrel.SR_Barrel_Hyperion_ChereAmie Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity2_Uncommon'</code>
+							<code profiles="">set GD_Orchid_BossWeapons.SniperRifles.SR_Barrel_Dahl_Pimpernel Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity2_Uncommon'</code>
+							<code profiles="">set GD_Weap_SniperRifles.Barrel.SR_Barrel_Maliwan_Morningstar Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity2_Uncommon'</code>
+							<code profiles="">set GD_Weap_SniperRifles.Barrel.SR_Barrel_Jakobs_Buffalo Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity2_Uncommon'</code>
+							<code profiles="">set GD_Orchid_BossWeapons.SMG.SMG_Barrel_Bandit_SandHawk Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity2_Uncommon'</code>
+							<code profiles="">set GD_Weap_SMG.Barrel.SMG_Barrel_Bandit_Lascaux Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity2_Uncommon'</code>
+							<code profiles="">set GD_Weap_SMG.Barrel.SMG_Barrel_Dahl_Bane Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity2_Uncommon'</code>
+							<code profiles="">set GD_Weap_SMG.Barrel.SMG_Barrel_Tediore_Commerce Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity2_Uncommon'</code>
+							<code profiles="">set GD_Weap_SMG.Barrel.SMG_Barrel_Chulainn Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity2_Uncommon'</code>
+							<code profiles="">set GD_Weap_Shotgun.Barrel.SG_Barrel_Bandit_Triquetra Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity2_Uncommon'</code>
+							<code profiles="">set GD_Weap_Shotgun.Barrel.SG_Barrel_Tediore_Octo Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity2_Uncommon'</code>
+							<code profiles="">set GD_Weap_Shotgun.Barrel.SG_Barrel_Tediore_Blockhead Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity2_Uncommon'</code>
+							<code profiles="">set GD_Weap_Shotgun.Barrel.SG_Barrel_Hyperion_HeartBreaker Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity2_Uncommon'</code>
+							<code profiles="">set GD_Weap_Shotgun.Barrel.SG_Barrel_Tediore_Shotgun1340 Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity2_Uncommon'</code>
+							<code profiles="">set GD_Weap_Shotgun.Barrel.SG_Barrel_Jakobs_TidalWave Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity2_Uncommon'</code>
+							<code profiles="">set GD_Weap_Shotgun.Barrel.SG_Barrel_Bandit_Dog Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity2_Uncommon'</code>
+							<code profiles="">set GD_Weap_Shotgun.Barrel.SG_Barrel_Jakobs_RockSalt Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity2_Uncommon'</code>
+							<code profiles="">set GD_Orchid_BossWeapons.Shotgun.SG_Barrel_Bandit_JollyRoger Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity2_Uncommon'</code>
+							<code profiles="">set GD_Orchid_BossWeapons.Shotgun.SG_Barrel_Jakobs_OrphanMaker Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity2_Uncommon'</code>
+							<code profiles="">set GD_Sage_Weapons.Shotgun.SG_Barrel_Bandit_Hydra Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity2_Uncommon'</code>
+							<code profiles="">set GD_Sage_Weapons.Shotgun.SG_Barrel_Torgue_Twister Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity2_Uncommon'</code>
+							<code profiles="">set GD_Weap_Shotgun.Barrel.SG_Barrel_Torgue_Teeth Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity2_Uncommon'</code>
+							<code profiles="">set GD_Weap_Shotgun.Barrel.SG_Barrel_Jakobs_Landscaper Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity2_Uncommon'</code>
+						</hotfix>
+					</category>
+					<category name="Pearlescent Tier 2">
+						<hotfix name="Name" level="None">
+							<code profiles="">set GD_Shields.A_Item.Shield_Roid_Order BaseRarity.BaseValueAttribute InventoryAttributeDefinition'GD_Aster_SeraphCrystal.Rarity.Aster_Rarity6_Seraph'</code>
+							<code profiles="">set GD_Aster_GrenadeMods.Delivery.Delivery_Fireball Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Aster_SeraphCrystal.Rarity.Aster_Rarity6_Seraph'</code>
+							<code profiles="">set GD_Aster_GrenadeMods.Delivery.Delivery_LightningBolt Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Aster_SeraphCrystal.Rarity.Aster_Rarity6_Seraph'</code>
+							<code profiles="">set GD_Aster_GrenadeMods.Delivery.Delivery_MagicMissile Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Aster_SeraphCrystal.Rarity.Aster_Rarity6_Seraph'</code>
+							<code profiles="">set GD_Shields.A_Item.Shield_Absorption_Aequitas BaseRarity.BaseValueAttribute InventoryAttributeDefinition'GD_Aster_SeraphCrystal.Rarity.Aster_Rarity6_Seraph'</code>
+							<code profiles="">set GD_Shields.A_Item.Shield_Booster_PotOGold BaseRarity.BaseValueAttribute InventoryAttributeDefinition'GD_Aster_SeraphCrystal.Rarity.Aster_Rarity6_Seraph'</code>
+							<code profiles="">set GD_Shields.A_Item.Shield_Absorption_1340 BaseRarity.BaseValueAttribute InventoryAttributeDefinition'GD_Aster_SeraphCrystal.Rarity.Aster_Rarity6_Seraph'</code>
+							<code profiles="">set GD_Sage_Shields.A_Item_Custom.Shield_Buckler BaseRarity.BaseValueAttribute InventoryAttributeDefinition'GD_Aster_SeraphCrystal.Rarity.Aster_Rarity6_Seraph'</code>
+							<code profiles="">set GD_Orchid_Shields.A_Item_Custom.Shield_Blade BaseRarity.BaseValueAttribute InventoryAttributeDefinition'GD_Aster_SeraphCrystal.Rarity.Aster_Rarity6_Seraph'</code>
+							<code profiles="">set GD_GrenadeMods.A_Item_Custom.GrenadeMod_SkyRocket BaseRarity.BaseValueAttribute InventoryAttributeDefinition'GD_Aster_SeraphCrystal.Rarity.Aster_Rarity6_Seraph'</code>
+							<code profiles="">set GD_GrenadeMods.A_Item_Custom.GrenadeMod_FusterCluck BaseRarity.BaseValueAttribute InventoryAttributeDefinition'GD_Aster_SeraphCrystal.Rarity.Aster_Rarity6_Seraph'</code>
+							<code profiles="">set GD_Orchid_GrenadeMods.A_Item_Custom.GrenadeMod_Blade BaseRarity.BaseValueAttribute InventoryAttributeDefinition'GD_Aster_SeraphCrystal.Rarity.Aster_Rarity6_Seraph'</code>
+							<code profiles="">set GD_GrenadeMods.Payload.Payload_KissOfDeath Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Aster_SeraphCrystal.Rarity.Aster_Rarity6_Seraph'</code>
+							<code profiles="">set GD_Artifacts.A_Item_Unique.Artifact_Endowment BaseRarity.BaseValueAttribute InventoryAttributeDefinition'GD_Aster_SeraphCrystal.Rarity.Aster_Rarity6_Seraph'</code>
+							<code profiles="">set GD_Artifacts.A_Item_Unique.Artifact_Opportunity BaseRarity.BaseValueAttribute InventoryAttributeDefinition'GD_Aster_SeraphCrystal.Rarity.Aster_Rarity6_Seraph'</code>
+							<code profiles="">set GD_Artifacts.A_Item_Unique.Artifact_VaultHunter BaseRarity.BaseValueAttribute InventoryAttributeDefinition'GD_Aster_SeraphCrystal.Rarity.Aster_Rarity6_Seraph'</code>
+							<code profiles="">set GD_Artifacts.A_Item_Unique.Artifact_Afterburner BaseRarity.BaseValueAttribute InventoryAttributeDefinition'GD_Aster_SeraphCrystal.Rarity.Aster_Rarity6_Seraph'</code>
+							<code profiles="">set GD_Aster_Artifacts.A_Item_Unique.Artifact_MysteryAmulet BaseRarity.BaseValueAttribute InventoryAttributeDefinition'GD_Aster_SeraphCrystal.Rarity.Aster_Rarity6_Seraph'</code>
+							<code profiles="">set GD_Orchid_Artifacts.A_Item_Unique.Artifact_Blade BaseRarity.BaseValueAttribute InventoryAttributeDefinition'GD_Aster_SeraphCrystal.Rarity.Aster_Rarity6_Seraph'</code>
+							<code profiles="">set GD_Artifacts.A_Item_Unique.Artifact_Deputy BaseRarity.BaseValueAttribute InventoryAttributeDefinition'GD_Aster_SeraphCrystal.Rarity.Aster_Rarity6_Seraph'</code>
+							<code profiles="">set GD_Weap_AssaultRifle.Barrel.AR_Barrel_Jakobs_Scorpio Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Aster_SeraphCrystal.Rarity.Aster_Rarity6_Seraph'</code>
+							<code profiles="">set GD_Weap_AssaultRifle.Barrel.AR_Barrel_Jakobs_Stomper Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Aster_SeraphCrystal.Rarity.Aster_Rarity6_Seraph'</code>
+							<code profiles="">set GD_Weap_AssaultRifle.Barrel.AR_Barrel_Vladof_EvilSmasher Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Aster_SeraphCrystal.Rarity.Aster_Rarity6_Seraph'</code>
+							<code profiles="">set GD_Weap_AssaultRifle.Barrel.AR_Barrel_Dahl_Hail Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Aster_SeraphCrystal.Rarity.Aster_Rarity6_Seraph'</code>
+							<code profiles="">set GD_Orchid_BossWeapons.AssaultRifle.AR_Barrel_Bandit_Rapier Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Aster_SeraphCrystal.Rarity.Aster_Rarity6_Seraph'</code>
+							<code profiles="">set GD_Orchid_BossWeapons.AssaultRifle.AR_Barrel_Torgue_Stinkpot Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Aster_SeraphCrystal.Rarity.Aster_Rarity6_Seraph'</code>
+							<code profiles="">set GD_Iris_Weapons.AssaultRifles.AR_Barrel_Torgue_BoomPuppy Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Aster_SeraphCrystal.Rarity.Aster_Rarity6_Seraph'</code>
+							<code profiles="">set GD_Iris_Weapons.AssaultRifles.AR_Barrel_Vladof_Kitten Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Aster_SeraphCrystal.Rarity.Aster_Rarity6_Seraph'</code>
+							<code profiles="">set GD_Sage_Weapons.AssaultRifle.AR_Barrel_Bandit_DamnedCowboy Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Aster_SeraphCrystal.Rarity.Aster_Rarity6_Seraph'</code>
+							<code profiles="">set GD_Sage_Weapons.AssaultRifle.AR_Barrel_Vladof_Minigun_Chopper Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Aster_SeraphCrystal.Rarity.Aster_Rarity6_Seraph'</code>
+							<code profiles="">set GD_Weap_Pistol.Barrel.Pistol_Barrel_Hyperion_GwensHead Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Aster_SeraphCrystal.Rarity.Aster_Rarity6_Seraph'</code>
+							<code profiles="">set GD_Weap_Pistol.Barrel.Pistol_Barrel_Tediore_Teapot Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Aster_SeraphCrystal.Rarity.Aster_Rarity6_Seraph'</code>
+							<code profiles="">set GD_Weap_Pistol.Barrel.Fibber.Pistol_Barrel_Bandit_Fibber_2 Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Aster_SeraphCrystal.Rarity.Aster_Rarity6_Seraph'</code>
+							<code profiles="">set GD_Weap_Pistol.Barrel.Fibber.Pistol_Barrel_Bandit_Fibber_3 Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Aster_SeraphCrystal.Rarity.Aster_Rarity6_Seraph'</code>
+							<code profiles="">set GD_Weap_Pistol.Barrel.Fibber.Pistol_Barrel_Bandit_Fibber_4 Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Aster_SeraphCrystal.Rarity.Aster_Rarity6_Seraph'</code>
+							<code profiles="">set GD_Weap_Pistol.Barrel.Pistol_Barrel_Dahl_LadyFist Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Aster_SeraphCrystal.Rarity.Aster_Rarity6_Seraph'</code>
+							<code profiles="">set GD_Weap_Pistol.Barrel.Pistol_Barrel_Maliwan_Rubi Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Aster_SeraphCrystal.Rarity.Aster_Rarity6_Seraph'</code>
+							<code profiles="">set GD_Weap_Pistol.Barrel.Pistol_Barrel_Dahl_Tinderbox Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Aster_SeraphCrystal.Rarity.Aster_Rarity6_Seraph'</code>
+							<code profiles="">set GD_Weap_Pistol.Barrel.Pistol_Barrel_Hyperion_Veritas Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Aster_SeraphCrystal.Rarity.Aster_Rarity6_Seraph'</code>
+							<code profiles="">set GD_Weap_Pistol.Barrel.Pistol_Barrel_Tediore_Judge Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Aster_SeraphCrystal.Rarity.Aster_Rarity6_Seraph'</code>
+							<code profiles="">set GD_Weap_Pistol.Barrel.Pistol_Barrel_Dahl_Law Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Aster_SeraphCrystal.Rarity.Aster_Rarity6_Seraph'</code>
+							<code profiles="">set GD_Aster_Weapons.Pistols.Pistol_Barrel_Bandit_GrogNozzle Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Aster_SeraphCrystal.Rarity.Aster_Rarity6_Seraph'</code>
+							<code profiles="">set GD_Orchid_BossWeapons.Pistol.Pistol_Barrel_ScarletsGreed Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Aster_SeraphCrystal.Rarity.Aster_Rarity6_Seraph'</code>
+							<code profiles="">set GD_Orchid_BossWeapons.Pistol.Pistol_Barrel_Vladof_Evie Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Aster_SeraphCrystal.Rarity.Aster_Rarity6_Seraph'</code>
+							<code profiles="">set GD_Iris_Weapons.Pistols.Pistol_Barrel_Torgue_PocketRocket Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Aster_SeraphCrystal.Rarity.Aster_Rarity6_Seraph'</code>
+							<code profiles="">set GD_Sage_Weapons.Pistols.Pistol_Barrel_Jakobs_Rex Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Aster_SeraphCrystal.Rarity.Aster_Rarity6_Seraph'</code>
+							<code profiles="">set GD_Weap_Launchers.Barrel.L_Barrel_Tediore_Roaster Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Aster_SeraphCrystal.Rarity.Aster_Rarity6_Seraph'</code>
+							<code profiles="">set GD_Weap_Launchers.Barrel.L_Barrel_Torgue_TheHive Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Aster_SeraphCrystal.Rarity.Aster_Rarity6_Seraph'</code>
+							<code profiles="">set GD_Orchid_BossWeapons.Launcher.L_Barrel_Torgue_12Pounder Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Aster_SeraphCrystal.Rarity.Aster_Rarity6_Seraph'</code>
+							<code profiles="">set GD_Weap_Launchers.Barrel.L_Barrel_Maliwan_Creamer Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Aster_SeraphCrystal.Rarity.Aster_Rarity6_Seraph'</code>
+							<code profiles="">set GD_Sage_HarpoonGun.Barrel.Sage_HarpoonGun_Barrel Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Aster_SeraphCrystal.Rarity.Aster_Rarity6_Seraph'</code>
+							<code profiles="">set GD_Weap_SniperRifles.Barrel.SR_Barrel_Dahl_Sloth Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Aster_SeraphCrystal.Rarity.Aster_Rarity6_Seraph'</code>
+							<code profiles="">set GD_Weap_SniperRifles.Barrel.SR_Barrel_Hyperion_Tresspasser Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Aster_SeraphCrystal.Rarity.Aster_Rarity6_Seraph'</code>
+							<code profiles="">set GD_Sage_Weapons.SniperRifles.SR_Barrel_Hyperion_ElephantGun Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Aster_SeraphCrystal.Rarity.Aster_Rarity6_Seraph'</code>
+							<code profiles="">set GD_Iris_Weapons.SniperRifles.SR_Barrel_Dahl_Cobra Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Aster_SeraphCrystal.Rarity.Aster_Rarity6_Seraph'</code>
+							<code profiles="">set GD_Weap_SniperRifles.Barrel.SR_Barrel_Dahl_FremingtonsEdge Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Aster_SeraphCrystal.Rarity.Aster_Rarity6_Seraph'</code>
+							<code profiles="">set GD_Weap_SniperRifles.Barrel.SR_Barrel_Hyperion_ChereAmie Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Aster_SeraphCrystal.Rarity.Aster_Rarity6_Seraph'</code>
+							<code profiles="">set GD_Orchid_BossWeapons.SniperRifles.SR_Barrel_Dahl_Pimpernel Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Aster_SeraphCrystal.Rarity.Aster_Rarity6_Seraph'</code>
+							<code profiles="">set GD_Weap_SniperRifles.Barrel.SR_Barrel_Maliwan_Morningstar Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Aster_SeraphCrystal.Rarity.Aster_Rarity6_Seraph'</code>
+							<code profiles="">set GD_Weap_SniperRifles.Barrel.SR_Barrel_Jakobs_Buffalo Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Aster_SeraphCrystal.Rarity.Aster_Rarity6_Seraph'</code>
+							<code profiles="">set GD_Orchid_BossWeapons.SMG.SMG_Barrel_Bandit_SandHawk Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Aster_SeraphCrystal.Rarity.Aster_Rarity6_Seraph'</code>
+							<code profiles="">set GD_Weap_SMG.Barrel.SMG_Barrel_Bandit_Lascaux Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Aster_SeraphCrystal.Rarity.Aster_Rarity6_Seraph'</code>
+							<code profiles="">set GD_Weap_SMG.Barrel.SMG_Barrel_Dahl_Bane Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Aster_SeraphCrystal.Rarity.Aster_Rarity6_Seraph'</code>
+							<code profiles="">set GD_Weap_SMG.Barrel.SMG_Barrel_Tediore_Commerce Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Aster_SeraphCrystal.Rarity.Aster_Rarity6_Seraph'</code>
+							<code profiles="">set GD_Weap_SMG.Barrel.SMG_Barrel_Chulainn Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Aster_SeraphCrystal.Rarity.Aster_Rarity6_Seraph'</code>
+							<code profiles="">set GD_Weap_Shotgun.Barrel.SG_Barrel_Bandit_Triquetra Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Aster_SeraphCrystal.Rarity.Aster_Rarity6_Seraph'</code>
+							<code profiles="">set GD_Weap_Shotgun.Barrel.SG_Barrel_Tediore_Octo Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Aster_SeraphCrystal.Rarity.Aster_Rarity6_Seraph'</code>
+							<code profiles="">set GD_Weap_Shotgun.Barrel.SG_Barrel_Tediore_Blockhead Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Aster_SeraphCrystal.Rarity.Aster_Rarity6_Seraph'</code>
+							<code profiles="">set GD_Weap_Shotgun.Barrel.SG_Barrel_Hyperion_HeartBreaker Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Aster_SeraphCrystal.Rarity.Aster_Rarity6_Seraph'</code>
+							<code profiles="">set GD_Weap_Shotgun.Barrel.SG_Barrel_Tediore_Shotgun1340 Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Aster_SeraphCrystal.Rarity.Aster_Rarity6_Seraph'</code>
+							<code profiles="">set GD_Weap_Shotgun.Barrel.SG_Barrel_Jakobs_TidalWave Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Aster_SeraphCrystal.Rarity.Aster_Rarity6_Seraph'</code>
+							<code profiles="">set GD_Weap_Shotgun.Barrel.SG_Barrel_Bandit_Dog Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Aster_SeraphCrystal.Rarity.Aster_Rarity6_Seraph'</code>
+							<code profiles="">set GD_Weap_Shotgun.Barrel.SG_Barrel_Jakobs_RockSalt Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Aster_SeraphCrystal.Rarity.Aster_Rarity6_Seraph'</code>
+							<code profiles="">set GD_Orchid_BossWeapons.Shotgun.SG_Barrel_Bandit_JollyRoger Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Aster_SeraphCrystal.Rarity.Aster_Rarity6_Seraph'</code>
+							<code profiles="">set GD_Orchid_BossWeapons.Shotgun.SG_Barrel_Jakobs_OrphanMaker Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Aster_SeraphCrystal.Rarity.Aster_Rarity6_Seraph'</code>
+							<code profiles="">set GD_Sage_Weapons.Shotgun.SG_Barrel_Bandit_Hydra Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Aster_SeraphCrystal.Rarity.Aster_Rarity6_Seraph'</code>
+							<code profiles="">set GD_Sage_Weapons.Shotgun.SG_Barrel_Torgue_Twister Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Aster_SeraphCrystal.Rarity.Aster_Rarity6_Seraph'</code>
+							<code profiles="">set GD_Weap_Shotgun.Barrel.SG_Barrel_Torgue_Teeth Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Aster_SeraphCrystal.Rarity.Aster_Rarity6_Seraph'</code>
+							<code profiles="">set GD_Weap_Shotgun.Barrel.SG_Barrel_Jakobs_Landscaper Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Aster_SeraphCrystal.Rarity.Aster_Rarity6_Seraph'</code>
+							<code profiles="">set GD_Aster_GrenadeMods.Delivery.Delivery_MagicMissileRare Rarity.BaseValueAttribute InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity2_Uncommon'</code>
+						</hotfix>
+					</category>
+				</category>
+			</category>
+			<category name="[Optional 2] Remove UCP Good & Bad Touch Rarity Changes - Prevents despawn from no blues existing.">
+				<category name="Fix">
+					<hotfix name="Name" level="None">
+						<code profiles="">set GD_Weap_SMG.Barrel.SMG_Barrel_Maliwan_BadTouch Rarity (BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)</code>
+						<code profiles="">set GD_Weap_SMG.Barrel.SMG_Barrel_Maliwan_GoodTouch Rarity (BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)</code>
+					</hotfix>
+				</category>
+			</category>
+			<category name="Developer Resources">
+				<category name="Types Of Despawn Times">
+					<comment>DROP_VeryShortLived = default time is 1 minute.</comment>
+					<comment>DROP_ShortLived = default time is 10 minutes.</comment>
+					<comment>DROP_LongLived = default time is 30 minutes.</comment>
+					<comment>DROP_LiveAsLongAsLevel = items will not despawn from any timer within the map, but they will despawn if you leave the map and come back.</comment>
+					<comment>DROP_LiveForever = items will persist through map changes and any amount of time until you save & quit.</comment>
+				</category>
+				<category name="Array Rarity Reference">
+					<comment>GD_Globals.General.Globals</comment>
+					<comment>Ammo = [0]</comment>
+					<comment>White = [1]</comment>
+					<comment>Green = [2]</comment>
+					<comment>Blue = [3]</comment>
+					<comment>Purple = [4]</comment>
+					<comment>Legendary = [5]</comment>
+					<comment>E-Tech = [6]</comment>
+					<comment>Vanilla Longbow Sniper = [7]</comment>
+					<comment>Gemstone = [8]</comment>
+					<comment>Health Vial = [9]</comment>
+					<comment>Rejuvanator = [10]</comment>
+					<comment>Money = [11]</comment>
+					<comment>Pearlescent = [12]</comment>
+					<comment>Seraph = [13]</comment>
+					<comment>Unknown = [14]</comment>
+					<comment>E-Tech Tier 2 = [15]</comment>
+					<comment>Pearlescent Tier 2 (Shield Booster) = [16]</comment>
+				</category>
+			</category>
+			<comment>=========================================</comment>
 			<category name="Lollosaurus Rex's Ammo Mod 1.1 for BL2">
 				<comment> _     ____  _     _     ____ </comment>
 				<comment>/ \   /  _ \/ \   / \   /  _ \</comment>
@@ -218,6 +1794,6 @@
 #Commands:
 
 #Hotfixes:
-set Transient.SparkServiceConfiguration_6 Keys ("SparkLevelPatchEntry-GBX_fixes1","SparkLevelPatchEntry-GBX_fixes2","SparkLevelPatchEntry-GBX_fixes3","SparkLevelPatchEntry-GBX_fixes4","SparkLevelPatchEntry-GBX_fixes5","SparkLevelPatchEntry-GBX_Fixes6","SparkLevelPatchEntry-GBX_Fixes7","SparkLevelPatchEntry-GBX_Fixes8","SparkLevelPatchEntry-GBX_Fixes9","SparkLevelPatchEntry-GBX_fixes10","SparkLevelPatchEntry-GBX_fixes11","SparkLevelPatchEntry-GBX_fixes12","SparkLevelPatchEntry-GBX_fixes13","SparkLevelPatchEntry-GBX_fixes14","SparkOnDemandPatchEntry-GBX_fixes15","SparkOnDemandPatchEntry-GBX_fixes16","SparkOnDemandPatchEntry-GBX_fixes17","SparkOnDemandPatchEntry-GBX_fixes18","SparkOnDemandPatchEntry-GBX_fixes19","SparkPatchEntry-GBX_fixes20","SparkPatchEntry-GBX_fixes21","SparkPatchEntry-GBX_fixes22","SparkPatchEntry-GBX_fixes23","SparkLevelPatchEntry-Ammo1","SparkLevelPatchEntry-White Trash, like myself.1","SparkLevelPatchEntry-Green is for: to be left for grass to grow over it.1","SparkLevelPatchEntry-Blue Rarity: Blue's Clue hints that you shouldn't always leave me on the floor, as I might be unique.1","SparkLevelPatchEntry-Purple Rarity: hopefully it doesn't give out free purple nurples.1","SparkLevelPatchEntry-Legendary Rarity: everything but the Longbow.1","SparkLevelPatchEntry-E-Tech Rarity (Magenta): sometimes Terramorphous may drop a grenade with this rarity.1","SparkLevelPatchEntry-Legendary Rarity: Longbow is the only thing that I know that uses it.1","SparkLevelPatchEntry-Black Rarity (Red in UCP): possibly Moxxi weapons?1","SparkLevelPatchEntry-Health Vial1","SparkLevelPatchEntry-Uber Health Vial1","SparkLevelPatchEntry-Money, and useless modded weapons.1","SparkLevelPatchEntry-Pearlescent Rarity: who needs common loot, anyways?1","SparkLevelPatchEntry-Seraph Rarity: you killed a lot of Guardians for these items.1","SparkLevelPatchEntry-No clue.1","SparkLevelPatchEntry-Another Magenta color?1","SparkLevelPatchEntry-Shield Boosters?1")
-set Transient.SparkServiceConfiguration_6 Values (",GD_Balance.WeightingPlayerCount.BugmorphCocoon_PerPlayers_Phase1,ConditionalInitialization.ConditionalExpressionList[4].BaseValueIfTrue.BaseValueConstant,0.700000,.8",",GD_Balance.WeightingPlayerCount.BugmorphCocoon_PerPlayers_Phase2,ConditionalInitialization.ConditionalExpressionList[4].BaseValueIfTrue.BaseValueConstant,0.400000,.5",",GD_Balance.WeightingPlayerCount.BugmorphCocoon_PerPlayers_Phase3,ConditionalInitialization.ConditionalExpressionList[4].BaseValueIfTrue.BaseValueConstant,0.200000,.3",",GD_Balance.WeightingPlayerCount.BugmorphCocoon_PerPlayers_Phase4,ConditionalInitialization.ConditionalExpressionList[4].BaseValueIfTrue.BaseValueConstant,0.100000,.2",",GD_Balance.WeightingPlayerCount.BugmorphCocoon_PerPlayers_Phase5,ConditionalInitialization.ConditionalExpressionList[4].BaseValueIfTrue.BaseValueConstant,0.075000,.1","SouthpawFactory_P,GD_Population_Marauder.Balance.Unique.PawnBalance_Assassin1,DefaultItemPoolList[3].PoolProbability.BaseValueScaleConstant,0.250000,1","SouthpawFactory_P,GD_Population_Nomad.Balance.Unique.PawnBalance_Assassin2,DefaultItemPoolList[4].PoolProbability.BaseValueScaleConstant,0.250000,1","SouthpawFactory_P,GD_Population_Psycho.Balance.Unique.PawnBalance_Assassin3,DefaultItemPoolList[1].PoolProbability.BaseValueScaleConstant,0.250000,1","SouthpawFactory_P,GD_Population_Rat.Balance.Unique.PawnBalance_Assassin4,DefaultItemPoolList[3].PoolProbability.BaseValueScaleConstant,0.250000,1",",GD_Sage_Rare_Scaylion.Population.PawnBalance_Sage_Rare_Scaylion,DefaultItemPoolList[1].PoolProbability.BaseValueScaleConstant,1.000000,100",",GD_Sage_Rare_Drifter.Balance.PawnBalance_Sage_Rare_Drifter,DefaultItemPoolList[0].PoolProbability.BaseValueScaleConstant,1.000000,100",",GD_Sage_Rare_Rhino.Population.PawnBalance_Sage_Rare_Rhino,DefaultItemPoolList[1].PoolProbability.BaseValueScaleConstant,1.000000,100",",GD_Sage_Rare_Skag.Population.PawnBalance_Sage_Rare_Skag,DefaultItemPoolList[1].PoolProbability.BaseValueScaleConstant,1.000000,100",",GD_Sage_Rare_Spore.Population.PawnBalance_Sage_Rare_Spore,DefaultItemPoolList[0].PoolProbability.BaseValueScaleConstant,1.000000,100","GD_Assassin_Streaming,GD_Assassin_Skills.Sniping.Velocity,SkillEffectDefinitions[0].ModifierType,MT_PostAdd,MT_Scale","GD_Tulip_Mechro_Streaming,GD_Tulip_Mechromancer_Skills.LittleBigTrouble.WiresDontTalk,SkillEffectDefinitions,,((AttributeToModify=D_Attributes.DamageTypeModifers.InstigatedShockDamageModifier,bIncludeDuelingTargets=False,bIncludeSelfAsTarget=False,bOnlyEffectTargetsInRange=False,bExcludeNonPlayerCharacters=False,EffectTarget=TARGET_Self,TargetInstanceDataName=,TargetCriteria=CRITERIA_None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.030000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),GradeToStartApplyingEffect=1,PerGradeUpgradeInterval=1,PerGradeUpgrade=(BaseValueConstant=0.030000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),BonusUpgradeList=),(AttributeToModify=D_Attributes.DamageTypeModifers.InstigatedShockStatusDamageModifier,bIncludeDuelingTargets=False,bIncludeSelfAsTarget=False,bOnlyEffectTargetsInRange=False,bExcludeNonPlayerCharacters=False,EffectTarget=TARGET_Self,TargetInstanceDataName=,TargetCriteria=CRITERIA_None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.030000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),GradeToStartApplyingEffect=1,PerGradeUpgradeInterval=1,PerGradeUpgrade=(BaseValueConstant=0.030000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),BonusUpgradeList=))","GD_Siren_Streaming,GD_Siren_Skills.Misc.Init_BlightPhoenix_DamageCalc_Part2,ValueFormula.Level.InitializationDefinition,AttributeInitializationDefinition'GD_Balance_HealthAndDamage.HealthAndDamage.Init_PlayerMeleeDamage',AttributeInitializationDefinition'GD_Balance_HealthAndDamage.HealthAndDamage.Init_PlayerSkillDamage'","GD_Siren_Streaming,GD_Siren_Skills.Misc.Init_BlightPhoenix_DamageCalc_Part2,ValueFormula.Level.BaseValueScaleConstant,1.000000,3.5","GD_Assassin_Streaming,GD_Assassin_Skills.Misc.Att_DeathMark_BonusDamage,BaseValue.BaseValueConstant,0.200000,.8","GD_Itempools.Runnables.Pool_FourAssassins,BalancedItems[1].Probability.InitializationDefinition,None,GD_Balance.Weighting.Weight_1_Common","GD_Shields.Projectiles.Proj_LegendaryBoosterShield:BehaviorProviderDefinition_1.Behavior_Explode_140,BehaviorSequences[0].BehaviorData2[7].Behavior.StatusEffectDamage.BaseValueAttribute,None,D_Attributes.Projectile.ProjectileDamage","GD_Shields.Projectiles.Proj_LegendaryBoosterShield:BehaviorProviderDefinition_1.Behavior_Explode_140,BehaviorSequences[0].BehaviorData2[7].Behavior.StatusEffectDamage.BaseValueScaleConstant,1.000000,.25","GD_Shields.Projectiles.Proj_LegendaryBoosterShield:BehaviorProviderDefinition_1.Behavior_Explode_140,BehaviorSequences[0].BehaviorData2[7].Behavior.StatusEffectChance.BaseValueConstant,1.000000,20",",GD_Globals.General.Globals,RarityLevelColors[0].DropLifeSpanType,,DROP_ShortLived",",GD_Globals.General.Globals,RarityLevelColors[1].DropLifeSpanType,,DROP_VeryShortLived",",GD_Globals.General.Globals,RarityLevelColors[2].DropLifeSpanType,,DROP_VeryShortLived",",GD_Globals.General.Globals,RarityLevelColors[3].DropLifeSpanType,,DROP_ShortLived",",GD_Globals.General.Globals,RarityLevelColors[4].DropLifeSpanType,,DROP_ShortLived",",GD_Globals.General.Globals,RarityLevelColors[5].DropLifeSpanType,,DROP_LongLived",",GD_Globals.General.Globals,RarityLevelColors[6].DropLifeSpanType,,DROP_VeryShortLived",",GD_Globals.General.Globals,RarityLevelColors[7].DropLifeSpanType,,DROP_LongLived",",GD_Globals.General.Globals,RarityLevelColors[8].DropLifeSpanType,,DROP_LongLived",",GD_Globals.General.Globals,RarityLevelColors[9].DropLifeSpanType,,DROP_VeryShortLived",",GD_Globals.General.Globals,RarityLevelColors[10].DropLifeSpanType,,DROP_VeryShortLived",",GD_Globals.General.Globals,RarityLevelColors[11].DropLifeSpanType,,DROP_VeryShortLived",",GD_Globals.General.Globals,RarityLevelColors[12].DropLifeSpanType,,DROP_LongLived",",GD_Globals.General.Globals,RarityLevelColors[13].DropLifeSpanType,,DROP_LongLived",",GD_Globals.General.Globals,RarityLevelColors[14].DropLifeSpanType,,DROP_VeryShortLived",",GD_Globals.General.Globals,RarityLevelColors[15].DropLifeSpanType,,DROP_VeryShortLived",",GD_Globals.General.Globals,RarityLevelColors[16].DropLifeSpanType,,DROP_ShortLived")
+set Transient.SparkServiceConfiguration_6 Keys ("SparkLevelPatchEntry-GBX_fixes1","SparkLevelPatchEntry-GBX_fixes2","SparkLevelPatchEntry-GBX_fixes3","SparkLevelPatchEntry-GBX_fixes4","SparkLevelPatchEntry-GBX_fixes5","SparkLevelPatchEntry-GBX_Fixes6","SparkLevelPatchEntry-GBX_Fixes7","SparkLevelPatchEntry-GBX_Fixes8","SparkLevelPatchEntry-GBX_Fixes9","SparkLevelPatchEntry-GBX_fixes10","SparkLevelPatchEntry-GBX_fixes11","SparkLevelPatchEntry-GBX_fixes12","SparkLevelPatchEntry-GBX_fixes13","SparkLevelPatchEntry-GBX_fixes14","SparkOnDemandPatchEntry-GBX_fixes15","SparkOnDemandPatchEntry-GBX_fixes16","SparkOnDemandPatchEntry-GBX_fixes17","SparkOnDemandPatchEntry-GBX_fixes18","SparkOnDemandPatchEntry-GBX_fixes19","SparkPatchEntry-GBX_fixes20","SparkPatchEntry-GBX_fixes21","SparkPatchEntry-GBX_fixes22","SparkPatchEntry-GBX_fixes23")
+set Transient.SparkServiceConfiguration_6 Values (",GD_Balance.WeightingPlayerCount.BugmorphCocoon_PerPlayers_Phase1,ConditionalInitialization.ConditionalExpressionList[4].BaseValueIfTrue.BaseValueConstant,0.700000,.8",",GD_Balance.WeightingPlayerCount.BugmorphCocoon_PerPlayers_Phase2,ConditionalInitialization.ConditionalExpressionList[4].BaseValueIfTrue.BaseValueConstant,0.400000,.5",",GD_Balance.WeightingPlayerCount.BugmorphCocoon_PerPlayers_Phase3,ConditionalInitialization.ConditionalExpressionList[4].BaseValueIfTrue.BaseValueConstant,0.200000,.3",",GD_Balance.WeightingPlayerCount.BugmorphCocoon_PerPlayers_Phase4,ConditionalInitialization.ConditionalExpressionList[4].BaseValueIfTrue.BaseValueConstant,0.100000,.2",",GD_Balance.WeightingPlayerCount.BugmorphCocoon_PerPlayers_Phase5,ConditionalInitialization.ConditionalExpressionList[4].BaseValueIfTrue.BaseValueConstant,0.075000,.1","SouthpawFactory_P,GD_Population_Marauder.Balance.Unique.PawnBalance_Assassin1,DefaultItemPoolList[3].PoolProbability.BaseValueScaleConstant,0.250000,1","SouthpawFactory_P,GD_Population_Nomad.Balance.Unique.PawnBalance_Assassin2,DefaultItemPoolList[4].PoolProbability.BaseValueScaleConstant,0.250000,1","SouthpawFactory_P,GD_Population_Psycho.Balance.Unique.PawnBalance_Assassin3,DefaultItemPoolList[1].PoolProbability.BaseValueScaleConstant,0.250000,1","SouthpawFactory_P,GD_Population_Rat.Balance.Unique.PawnBalance_Assassin4,DefaultItemPoolList[3].PoolProbability.BaseValueScaleConstant,0.250000,1",",GD_Sage_Rare_Scaylion.Population.PawnBalance_Sage_Rare_Scaylion,DefaultItemPoolList[1].PoolProbability.BaseValueScaleConstant,1.000000,100",",GD_Sage_Rare_Drifter.Balance.PawnBalance_Sage_Rare_Drifter,DefaultItemPoolList[0].PoolProbability.BaseValueScaleConstant,1.000000,100",",GD_Sage_Rare_Rhino.Population.PawnBalance_Sage_Rare_Rhino,DefaultItemPoolList[1].PoolProbability.BaseValueScaleConstant,1.000000,100",",GD_Sage_Rare_Skag.Population.PawnBalance_Sage_Rare_Skag,DefaultItemPoolList[1].PoolProbability.BaseValueScaleConstant,1.000000,100",",GD_Sage_Rare_Spore.Population.PawnBalance_Sage_Rare_Spore,DefaultItemPoolList[0].PoolProbability.BaseValueScaleConstant,1.000000,100","GD_Assassin_Streaming,GD_Assassin_Skills.Sniping.Velocity,SkillEffectDefinitions[0].ModifierType,MT_PostAdd,MT_Scale","GD_Tulip_Mechro_Streaming,GD_Tulip_Mechromancer_Skills.LittleBigTrouble.WiresDontTalk,SkillEffectDefinitions,,((AttributeToModify=D_Attributes.DamageTypeModifers.InstigatedShockDamageModifier,bIncludeDuelingTargets=False,bIncludeSelfAsTarget=False,bOnlyEffectTargetsInRange=False,bExcludeNonPlayerCharacters=False,EffectTarget=TARGET_Self,TargetInstanceDataName=,TargetCriteria=CRITERIA_None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.030000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),GradeToStartApplyingEffect=1,PerGradeUpgradeInterval=1,PerGradeUpgrade=(BaseValueConstant=0.030000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),BonusUpgradeList=),(AttributeToModify=D_Attributes.DamageTypeModifers.InstigatedShockStatusDamageModifier,bIncludeDuelingTargets=False,bIncludeSelfAsTarget=False,bOnlyEffectTargetsInRange=False,bExcludeNonPlayerCharacters=False,EffectTarget=TARGET_Self,TargetInstanceDataName=,TargetCriteria=CRITERIA_None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.030000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),GradeToStartApplyingEffect=1,PerGradeUpgradeInterval=1,PerGradeUpgrade=(BaseValueConstant=0.030000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),BonusUpgradeList=))","GD_Siren_Streaming,GD_Siren_Skills.Misc.Init_BlightPhoenix_DamageCalc_Part2,ValueFormula.Level.InitializationDefinition,AttributeInitializationDefinition'GD_Balance_HealthAndDamage.HealthAndDamage.Init_PlayerMeleeDamage',AttributeInitializationDefinition'GD_Balance_HealthAndDamage.HealthAndDamage.Init_PlayerSkillDamage'","GD_Siren_Streaming,GD_Siren_Skills.Misc.Init_BlightPhoenix_DamageCalc_Part2,ValueFormula.Level.BaseValueScaleConstant,1.000000,3.5","GD_Assassin_Streaming,GD_Assassin_Skills.Misc.Att_DeathMark_BonusDamage,BaseValue.BaseValueConstant,0.200000,.8","GD_Itempools.Runnables.Pool_FourAssassins,BalancedItems[1].Probability.InitializationDefinition,None,GD_Balance.Weighting.Weight_1_Common","GD_Shields.Projectiles.Proj_LegendaryBoosterShield:BehaviorProviderDefinition_1.Behavior_Explode_140,BehaviorSequences[0].BehaviorData2[7].Behavior.StatusEffectDamage.BaseValueAttribute,None,D_Attributes.Projectile.ProjectileDamage","GD_Shields.Projectiles.Proj_LegendaryBoosterShield:BehaviorProviderDefinition_1.Behavior_Explode_140,BehaviorSequences[0].BehaviorData2[7].Behavior.StatusEffectDamage.BaseValueScaleConstant,1.000000,.25","GD_Shields.Projectiles.Proj_LegendaryBoosterShield:BehaviorProviderDefinition_1.Behavior_Explode_140,BehaviorSequences[0].BehaviorData2[7].Behavior.StatusEffectChance.BaseValueConstant,1.000000,20")
 

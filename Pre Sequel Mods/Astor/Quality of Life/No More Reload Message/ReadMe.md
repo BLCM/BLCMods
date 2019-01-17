@@ -1,8 +1,8 @@
 ## No More Reload Message
 
-As the title suggests it, removes the *Reload Message* which pop-up (too) often on the screen!
+As the title suggests it, removes the (annoying) *Reload Message* which pop-up (too) often on the screen!
 
-**Note:** Just removes the *Reload Message*, **NOT** the necessity to reload your weapon
+__Note:__ Just removes the *Reload Message*, **NOT** the necessity to reload your weapon!
 
 ### Changelog:
 - v1.0.0, November 6, 2018
@@ -10,20 +10,23 @@ As the title suggests it, removes the *Reload Message* which pop-up (too) often 
  
 ### Compatibility:
 
-- 100% compatible with [TPS Community Patch](https://github.com/BLCM/BLCMods/tree/master/Pre%20Sequel%20Mods/Community%20Patch)
+- 100% compatible with the latest version of [TPS Community Patch](https://github.com/BLCM/BLCMods/tree/master/Pre%20Sequel%20Mods/Community%20Patch)
+
+### Help! The Mod doesn't work !?!
+
+Read this little [Compatibility & Troubleshooting](https://github.com/BLCM/BLCMods/tree/master/Pre%20Sequel%20Mods/Astor/Compatibility%20%26%20Troubleshooting) page... It's not that hard!  :wink:
 
 ### To do:
 
 - [ ] Check if I don't forget a Unique weapons somewhere in the game (maybe in DLC?).
-- [ ] Clean the code and remove all my ~~shitty~~ smart notes.
 
 ### Credits & Thanks:
 
-Without the great [Dave'S BL2 Skin Modding Guide](https://cdn.rawgit.com/BLCM/BLCMods/bb1933f7/Borderlands%202%20mods/Dave/DAVE%27S%20BL2%20SKIN%20MODDING%20GUIDE.pdf) ... I won't be able to make any skin, so thanks for your great work, @DaveRabbit
+Inspired by [F*ck Reload Messages](https://github.com/BLCM/BLCMods/blob/af3b2d17629ab3f7f7a5f7bb68b489c5e13b0498/Borderlands%202%20mods/soze/fuckreloadmessages.txt) created for BL2 by [Soze](https://github.com/BLCM/BLCMods/tree/af3b2d17629ab3f7f7a5f7bb68b489c5e13b0498/Borderlands%202%20mods/soze). Such a Mod didn't seem to exist for TPS, though, so I took it upon myself to create one... In fact, to make it compatible with TPS it was just necessary to add the *Laser Reload* part, the *SCAV Reload* part (which in fact is *Bandit Reload*) and few Unique weapons... so it wasn't that hard! All the credits go to [Soze](https://github.com/BLCM/BLCMods/tree/af3b2d17629ab3f7f7a5f7bb68b489c5e13b0498/Borderlands%202%20mods/soze) for the idea. 
   
 ### Note: 
 
-Any critique would be appreciated as I am still beginner to make weapon skin... and by the way, please leave constructive criticism if you make a video. 
+Any critique would be appreciated as I am still beginner to make Mods... and by the way, please leave constructive criticism if you make a video. 
 Enjoy!
 
 ### Disclaimer

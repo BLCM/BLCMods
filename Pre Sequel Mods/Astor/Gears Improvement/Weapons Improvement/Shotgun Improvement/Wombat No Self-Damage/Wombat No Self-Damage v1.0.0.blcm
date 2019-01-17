@@ -1,0 +1,24 @@
+<BLCMM v="1">
+#<!!!You opened a file saved with BLCMM in FilterTool. Please update to BLCMM to properly open this file!!!>
+	<head>
+		<type name="TPS" offline="false"/>
+	</head>
+	<body>
+		<category name="Wombat No Self-Damage v1.0.0">
+			<comment>Mod author: Astor</comment>
+			<comment>Release Date: 5 January 2019</comment>
+			<comment>Version: 1.0.0 - See ReadMe for Changelog ;)</comment>
+			<category name="Description">
+				<comment>Made the grenades not inflicting self-damage to fixes the issue of where the 6 seconds delayed explosion would (constantly) put you down.</comment>
+				<comment>Now, the Wombat is viable for second winds as you will not automatically go down again from the self-damage.</comment>
+			</category>
+			<category name="Abracadabra!">
+				<code profiles="default">set GD_Cork_Weap_Shotgun.Projectiles.Projectile_Wombat:BehaviorProviderDefinition_0.Behavior_Explode_6 InstigatorSelfDamageScale 0.000000</code>
+			</category>
+		</category>
+	</body>
+</BLCMM>
+
+#Commands:
+set GD_Cork_Weap_Shotgun.Projectiles.Projectile_Wombat:BehaviorProviderDefinition_0.Behavior_Explode_6 InstigatorSelfDamageScale 0.000000
+

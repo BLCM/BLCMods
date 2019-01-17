@@ -1,0 +1,466 @@
+<BLCMM v="1">
+#<!!!You opened a file saved with BLCMM in FilterTool. Please update to BLCMM to properly open this file!!!>
+	<head>
+		<type name="TPS" offline="false"/>
+	</head>
+	<body>
+		<category name="Double Quest Rewards v1.0.0">
+			<comment>Mod author: Astor</comment>
+			<comment>Release Date: 1 December 2018</comment>
+			<comment>Version: 1.0.0 - See ReadMe for Changelog ;)</comment>
+			<category name="Description">
+				<comment>Reduce the time spent doing "farming" by doubling the chance to get a weapon/item </comment>
+				<comment>with the desired element, parts and/or accessory.</comment>
+				<comment>Note: This mod stay in range with the new rewards given by "Changes to Quests" from UCP 2.2</comment>
+			</category>
+			<category name="The Pre-Sequel - Main Game">
+				<category name="Concordia">
+					<category name="A New Direction (Black Snake/Bossa Nova - UCP 2.2 New Reward)">
+						<comment>UCP 2.2 give the choice between Black Snake/Bossa Nova</comment>
+					</category>
+					<category name="Bunch of Ice Holes (Ice Scream from Nina or Two Scoops from B4R-BOT)">
+						<comment>Give you the choice between 2 Unique AR Ice Scream if you give the ice to Nina or </comment>
+						<comment>2 Unique SG Two Scoops if you give the ice to B4R-BOT (in the Up Over Moxxi's Bar)</comment>
+						<hotfix name="Reward2X" level="None">
+							<code profiles="default">set GD_Co_IceHoles.M_Co_IceHoles Reward.RewardItems (WeaponBalanceDefinition'gd_cork_weap_assaultrifle.A_Weapons_Unique.AR_Vladof_3_IceScream',WeaponBalanceDefinition'gd_cork_weap_assaultrifle.A_Weapons_Unique.AR_Vladof_3_IceScream')</code>
+							<code profiles="default">set GD_Co_IceHoles.M_Co_IceHoles AlternativeReward.RewardItems (WeaponBalanceDefinition'GD_Cork_Weap_Shotgun.A_Weapons_Unique.SG_Jakobs_TooScoops',WeaponBalanceDefinition'GD_Cork_Weap_Shotgun.A_Weapons_Unique.SG_Jakobs_TooScoops')</code>
+						</hotfix>
+					</category>
+					<category name="Don't Shoot the Messenger (Fremington's Edge)">
+						<comment>Give you the choice between 2 Unique SR Fremington's Edge</comment>
+						<hotfix name="Reward2X" level="None">
+							<code profiles="default">set GD_Co_DontShootMessenger.MissionDef.M_DontShootMsgr Reward.RewardItems (WeaponBalanceDefinition'GD_Weap_SniperRifles.A_Weapons_Unique.Sniper_Hyperion_3_FremingtonsEdge',WeaponBalanceDefinition'GD_Weap_SniperRifles.A_Weapons_Unique.Sniper_Hyperion_3_FremingtonsEdge')</code>
+						</hotfix>
+					</category>
+					<category name="Grinders (Bullpup - UCP 2.2 New Reward)">
+						<comment>Give you the choice between 2 Unique SG Bullpup (to stay in range with UCP 2.2 "Changes to Quests")</comment>
+						<comment>Initial Reward: Character customization</comment>
+						<hotfix name="Reward2X" level="None">
+							<code profiles="default">set GD_Cork_Grinding.M_Cork_Grinding Reward.RewardItems (WeaponBalanceDefinition'GD_Cork_Weap_Shotgun.A_Weapons_Unique.SG_Old_Hyperion_3_Bullpup',WeaponBalanceDefinition'GD_Cork_Weap_Shotgun.A_Weapons_Unique.SG_Old_Hyperion_3_Bullpup')</code>
+						</hotfix>
+					</category>
+					<category name="Home Delivery (Tl'kope Razorback)">
+						<comment>Give you the choice between 2 Unique SR Tl'kope Razorback</comment>
+						<hotfix name="Reward2X" level="None">
+							<code profiles="default">set GD_Co_HomeDelivery.M_HomeDelivery Reward.RewardItems (WeaponBalanceDefinition'GD_Cork_Weap_SniperRifles.A_Weapons_Unique.Sniper_Jakobs_3_Razorback',WeaponBalanceDefinition'GD_Cork_Weap_SniperRifles.A_Weapons_Unique.Sniper_Jakobs_3_Razorback')</code>
+						</hotfix>
+					</category>
+					<category name="Let's Build a Robot Army">
+						<comment>Choice between Blue Shotgun/Assault Rifle - Reward unchanged</comment>
+					</category>
+					<category name="Rough Love (Good Touch - UCP 2.2 New Reward)">
+						<comment>Give you the choice between 2 Unique Good Touch (to stay in range with UCP 2.2 "Changes to Quests")</comment>
+						<comment>Initial reward: Green Pistol/Grenade Mod</comment>
+						<hotfix name="Reward2X" level="None">
+							<code profiles="default">set GD_Co_RoughLove.M_Co_RoughLove Reward.RewardItems (WeaponBalanceDefinition'GD_Cork_Weap_SMG.A_Weapons_Unique.SMG_Maliwan_3_GoodTouch',WeaponBalanceDefinition'GD_Cork_Weap_SMG.A_Weapons_Unique.SMG_Maliwan_3_GoodTouch')</code>
+						</hotfix>
+					</category>
+					<category name="Systems Jammed (1st Class Mod)">
+						<comment>1st Class Mod - Reward unchanged</comment>
+					</category>
+					<category name="To Arms (Oz Kit Support Relay)">
+						<comment>Give you the choice between 2 Oz Kit "Support Relay"</comment>
+						<hotfix name="Reward2X" level="None">
+							<code profiles="default">set GD_Co_ToArms.M_Co_ToArms Reward.RewardItems (InventoryBalanceDefinition'GD_MoonItems.A_Item_Unique.A_SupportRelay',InventoryBalanceDefinition'GD_MoonItems.A_Item_Unique.A_SupportRelay')</code>
+						</hotfix>
+					</category>
+					<category name="Wherefore Art Thou? (Contraband Sky Rocket - UCP 2.2 New Reward)">
+						<comment>Give you the choice between 2 Contraband Sky Rocket (to stay in range with UCP 2.2 "Changes to Quests")</comment>
+						<comment>Initial Reward: Green Oz Kit/Shield</comment>
+						<hotfix name="Reward2X" level="None">
+							<code profiles="default">set GD_Co_WhereforeArtThou.M_Co_WhereforeArtThou Reward.RewardItems (InventoryBalanceDefinition'GD_GrenadeMods.A_Item_Custom.GM_SkyRocket',InventoryBalanceDefinition'GD_GrenadeMods.A_Item_Custom.GM_SkyRocket')</code>
+						</hotfix>
+					</category>
+					<category name="Zapped">
+						<category name="Zapped 1.0">
+							<comment>Money - Reward unchanged</comment>
+						</category>
+						<category name="Zapped 2.0">
+							<comment>Money - Reward unchanged</comment>
+						</category>
+						<category name="Zapped 3.0 (Wombat)">
+							<comment>Give you the choice between 2 Unique Torgue Shotgun Wombat </comment>
+							<hotfix name="Reward2X" level="None">
+								<code profiles="default">set GD_Co_Zapped.M_Co_Zapped3 Reward.RewardItems (WeaponBalanceDefinition'GD_Cork_Weap_Shotgun.A_Weapons_Unique.SG_Torgue_3_Wombat',WeaponBalanceDefinition'GD_Cork_Weap_Shotgun.A_Weapons_Unique.SG_Torgue_3_Wombat')</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Wiping the Slate (Smasher - UCP 2.2 New Reward)">
+						<comment>Give you the choice between 2 Unique Jakobs Pistol Smasher (to stay in range with UCP 2.2 "Changes to Quests")</comment>
+						<comment>Initial Reward: Moonstones</comment>
+						<hotfix name="Reward2X" level="None">
+							<code profiles="default">set GD_Co_WipingSlate.M_WipingSlate Reward.RewardItems (WeaponBalanceDefinition'GD_Cork_Weap_Pistol.A_Weapons_Unique.Pistol_Jakobs_3_Smasher',WeaponBalanceDefinition'GD_Cork_Weap_Pistol.A_Weapons_Unique.Pistol_Jakobs_3_Smasher')</code>
+						</hotfix>
+					</category>
+				</category>
+				<category name="Crisis Scar">
+					<category name="The Empty Billabong (Fibber - UCP 2.2 New Reward)">
+						<comment>Give you the choice between 2 Pistol Fibber (to stay in range with UCP 2.2 "Changes to Quests")</comment>
+						<comment>Initial Reward: Money</comment>
+						<hotfix name="Reward2X" level="None">
+							<code profiles="default">set GD_Co_EmptyBillabong.M_EmptyBillaBong Reward.RewardItems (WeaponBalanceDefinition'GD_Cork_Weap_Pistol.A_Weapons_Unique.Pistol_Hyperion_3_Fibber',WeaponBalanceDefinition'GD_Cork_Weap_Pistol.A_Weapons_Unique.Pistol_Hyperion_3_Fibber')</code>
+						</hotfix>
+					</category>
+				</category>
+				<category name="Eleseer">
+					<category name="Sterwin Forever">
+						<comment>Give you the choice between Green Sniper Rifle/Grenade - Reward unchanged</comment>
+					</category>
+					<category name="The Beginning of the End (Ol' Rosie - UCP 2.2 New Reward)">
+						<comment>Give you the choice between 2 Unique Laser Ol' Rosie (to stay in range with UCP 2.2 "Changes to Quests")</comment>
+						<hotfix name="Reward2X" level="None">
+							<code profiles="default">set GD_Co_Chapter11.M_DahlDigsite Reward.RewardItems (WeaponBalanceDefinition'GD_Cork_Weap_Lasers.A_Weapons_Unique.Laser_Maliwan_4_Rosie',WeaponBalanceDefinition'GD_Cork_Weap_Lasers.A_Weapons_Unique.Laser_Maliwan_4_Rosie')</code>
+						</hotfix>
+					</category>
+					<category name="The Bestest Story Ever Told (Random Legendary weapon - UCP 2.2 New Reward)">
+						<comment>Give you the choice between 2 Random Legendary weapons (to stay in range with UCP 2.2 "Changes to Quests")</comment>
+					</category>
+				</category>
+				<category name="Helios Station">
+					<category name="Welcome to Helios (1st Shield)">
+						<comment>1st Shield - Reward unchanged</comment>
+					</category>
+				</category>
+				<category name="Hyperion Hub of Heroism">
+					<category name="An Urgent Message">
+						<comment>Green Grenade Mod/Assault Rifle - Reward unchanged </comment>
+					</category>
+					<category name="Cleanliness Uprising">
+						<comment>Head Customisation - Reward unchanged</comment>
+					</category>
+					<category name="Handsome AI">
+						<comment>XP - Reward unchanged</comment>
+					</category>
+					<category name="Kill Meg">
+						<comment>Green Laser/Class Mod - Reward unchanged </comment>
+					</category>
+					<category name="Paint Job">
+						<comment>XP - Reward unchanged</comment>
+					</category>
+				</category>
+				<category name="Jack's Office">
+					<category name="Boarding Party">
+						<comment>Moonstones - Reward unchanged</comment>
+					</category>
+					<category name="Hot Head">
+						<comment>XP - Reward unchanged</comment>
+					</category>
+					<category name="Quarantine: Infestation">
+						<comment>Moonstones - Reward unchanged</comment>
+					</category>
+					<category name="Science and Violence">
+						<comment>Blue Laser/Grenade Mod - Reward unchanged </comment>
+					</category>
+					<category name="Voice Over (Company Man - UCP 2.2 New Reward)">
+						<comment>Give you the choice between 2 Unique SG Company Man (to stay in range with UCP 2.2 "Changes to lootpools")</comment>
+						<comment>Initial Reward: Moonstones</comment>
+						<hotfix name="Reward2X" level="None">
+							<code profiles="default">set GD_Co_VoiceOver.M_VoiceOver Reward.RewardItems (WeaponBalanceDefinition'GD_Cypressure_Weapons.A_Weapons_Unique.SG_Hyperion_3_CompanyMan',WeaponBalanceDefinition'GD_Cypressure_Weapons.A_Weapons_Unique.SG_Hyperion_3_CompanyMan')</code>
+						</hotfix>
+					</category>
+				</category>
+				<category name="Lunar Launching Station">
+					<category name="Eye to Eye">
+						<comment>Green Grenade Mod/Shield - Reward unchanged</comment>
+					</category>
+					<category name="Lock and Load">
+						<comment>Blue Assault Rifle/SMG - Reward unchanged</comment>
+					</category>
+					<category name="Picking Up the Pieces">
+						<comment>Moonstones - Reward unchanged</comment>
+					</category>
+					<category name="Red, Then Dead (Moonface)">
+						<comment>Give you the choice between 2 Unique SG Moonface</comment>
+						<hotfix name="Reward2X" level="None">
+							<code profiles="default">set GD_Co_Side_Reshirt.M_RedShirt Reward.RewardItems (WeaponBalanceDefinition'GD_Cork_Weap_Shotgun.A_Weapons_Unique.SG_Jakobs_3_Moonface',WeaponBalanceDefinition'GD_Cork_Weap_Shotgun.A_Weapons_Unique.SG_Jakobs_3_Moonface')</code>
+						</hotfix>
+					</category>
+					<category name="Things That Go Boom">
+						<comment>Moonstones - Reward unchanged</comment>
+					</category>
+					<category name="To The Moon (Sunshine)">
+						<comment>Give you the choice between 2 Unique Sunshine</comment>
+						<hotfix name="Reward2X" level="None">
+							<code profiles="default">set GD_Co_Side_EngineerMoonShot.M_EngineerMoonShot Reward.RewardItems (InventoryBalanceDefinition'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Nova_Starburst',InventoryBalanceDefinition'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Nova_Starburst')</code>
+						</hotfix>
+					</category>
+				</category>
+				<category name="Outlands Canyon">
+					<category name="Abandoned Training Facility (DLC Shock Drop Slaughter Pit)">
+						<category name="DAHL Combat Training">
+							<category name="DAHL Combat Training: Round 1 (Probe/Hail - UCP 2.2 New Reward)">
+								<comment>Give you the choice between Moxxi's Pistol Probe or Hail (to stay in range with UCP 2.2 "Changes to Quests")</comment>
+								<comment>Initial Reward: XP</comment>
+								<hotfix name="Reward2X" level="None">
+									<code profiles="default">set GD_Co_MoonSlaughter.M_Co_MoonSlaughter01 Reward.RewardItems (WeaponBalanceDefinition'GD_Cork_Weap_Pistol.A_Weapons_Unique.Pistol_Maliwan_3_Moxxis_Probe',WeaponBalanceDefinition'gd_cork_weap_assaultrifle.A_Weapons_Unique.AR_Vladof_3_Hail')</code>
+								</hotfix>
+							</category>
+							<category name="DAHL Combat Training: Round 2 (Chere-Amie/Vibra-Pulse - UCP 2.2 New Reward)">
+								<comment>Give you the choice between Moxxi's Chere-Amie or Vibra-Pulse (to stay in range with UCP 2.2 "Changes to Quests")</comment>
+								<comment>Initial Reward: XP</comment>
+								<hotfix name="Reward2X" level="None">
+									<code profiles="default">set GD_Co_MoonSlaughter.M_Co_MoonSlaughter02 Reward.RewardItems (WeaponBalanceDefinition'GD_Cork_Weap_SniperRifles.A_Weapons_Unique.Sniper_Maliwan_3_ChereAmie',WeaponBalanceDefinition'GD_Cork_Weap_Lasers.A_Weapons_Unique.Laser_Maliwan_3_VibraPulse')</code>
+								</hotfix>
+							</category>
+							<category name="DAHL Combat Training: Round 3 (Good Touch/Bad Touch - UCP 2.2 New Reward)">
+								<comment>Give you the choice between Moxxi's Good Touch or Bad Touch (Unchanged from UCP 2.2 "Changes to Quests")</comment>
+								<comment>Initial Reward: Green Oz Kit/Class Mod</comment>
+							</category>
+							<category name="DAHL Combat Training: Round 4 (Creamer/Heart Breaker - UCP 2.2 New Reward)">
+								<comment>Give you the choice between Moxxi's Creamer or Heart Breaker (Unchanged from UCP 2.2 "Changes to Quests")</comment>
+								<comment>Initial Reward: Skin Customization</comment>
+							</category>
+							<category name="DAHL Combat Training: Round 5 (Haymaker/Random Moxxi Weapon - UCP 2.2 New Reward)">
+								<comment>Initial Reward: Haymaker</comment>
+								<comment>Give you the choice between Haymaker or Random Moxxi's Weapon (Unchanged from UCP 2.2 "Changes to Quests")</comment>
+							</category>
+						</category>
+					</category>
+					<category name="Another Pickle (Boganella)">
+						<comment>Give you the choice between 2 Unique SG Boganella</comment>
+						<hotfix name="Reward2X" level="None">
+							<code profiles="default">set GD_Cork_AnotherPickle.M_Cork_AnotherPickle Reward.RewardItems (WeaponBalanceDefinition'GD_Cork_Weap_Shotgun.A_Weapons_Unique.SG_Bandit_3_Boganella',WeaponBalanceDefinition'GD_Cork_Weap_Shotgun.A_Weapons_Unique.SG_Bandit_3_Boganella')</code>
+						</hotfix>
+					</category>
+					<category name="Boomshakalaka (Moonscaper - UCP 2.2 New Reward)">
+						<comment>Give you the choice between 2 SG Moonscaper (to stay in range with UCP 2.2 "Changes to Quests")</comment>
+						<comment>Initial Reward: Skin customization</comment>
+						<hotfix name="Reward2X" level="None">
+							<code profiles="default">set GD_Co_Boomshakalaka.M_Boomshakalaka Reward.RewardItems (WeaponBalanceDefinition'GD_Cypressure_Weapons.A_Weapons_Unique.SG_Torgue_3_Landscaper2',WeaponBalanceDefinition'GD_Cypressure_Weapons.A_Weapons_Unique.SG_Torgue_3_Landscaper2')</code>
+						</hotfix>
+					</category>
+					<category name="Space Slam (Fast Talker - UCP 2.2 New Reward)">
+						<comment>Give you the choice between 2 SMG Fast Talker (to stay in range with UCP 2.2 "Changes to Quests")</comment>
+						<comment>Initial Reward: Green Rocket Launcher/Pistol</comment>
+						<hotfix name="Reward2X" level="None">
+							<code profiles="default">set GD_Co_SpaceSlam.M_SpaceSlam Reward.RewardItems (WeaponBalanceDefinition'GD_Cypressure_Weapons.A_Weapons_Unique.SMG_Bandit_3_FastTalker',WeaponBalanceDefinition'GD_Cypressure_Weapons.A_Weapons_Unique.SMG_Bandit_3_FastTalker')</code>
+						</hotfix>
+					</category>
+					<category name="Treasures of ECHO Madre">
+						<comment>Blue SMG/Rocket Launcher - Reward unchanged</comment>
+					</category>
+				</category>
+				<category name="Outlands Spur">
+					<category name="Nothing Is Never an Option (Chere-Amie - UCP 2.2 New Reward)">
+						<comment>Give you the choice between 2 Chere-Amie (to stay in range with UCP 2.2 "Changes to Quests")</comment>
+						<comment>Initial Reward: Green Assault Rifle/Shield</comment>
+						<hotfix name="Reward2X" level="None">
+							<code profiles="default">set GD_Co_YouAskHowHigh.M_Co_YouAskHowHigh Reward.RewardItems (WeaponBalanceDefinition'GD_Cork_Weap_SniperRifles.A_Weapons_Unique.Sniper_Maliwan_3_ChereAmie',WeaponBalanceDefinition'GD_Cork_Weap_SniperRifles.A_Weapons_Unique.Sniper_Maliwan_3_ChereAmie')</code>
+						</hotfix>
+					</category>
+				</category>
+				<category name="Pity's Fall">
+					<category name="Intelligences of the Artificial Persuasion (SDU upgrade)">
+						<comment>SDU upgrade - Reward unchanged</comment>
+					</category>
+					<category name="The Secret Chamber">
+						<comment>Moonstones - Reward unchanged</comment>
+					</category>
+				</category>
+				<category name="Regolith Range">
+					<category name="Last Requests (PerdyLights - UCP 2.2 New Reward)">
+						<comment>Give you the choice between 2 Oz Kit PerdyLights (to stay in range with UCP 2.2 "Changes to Quests")</comment>
+						<comment>Initial Reward: Skin Customization</comment>
+						<hotfix name="Reward2X" level="None">
+							<code profiles="default">set GD_Co_LastRequests.M_LastRequests Reward.RewardItems (InventoryBalanceDefinition'GD_Pet_MoonItems.A_Item_Unique.A_AntiAir_PerdyLights',InventoryBalanceDefinition'GD_Pet_MoonItems.A_Item_Unique.A_AntiAir_PerdyLights')</code>
+						</hotfix>
+					</category>
+				</category>
+				<category name="Research and Development">
+					<category name="Fresh Air (FrostFire - UCP 2.2 New Reward)">
+						<comment>Give you the choice between 2 Unique SMG FrostFire (to stay in range with UCP 2.2 "Changes to Quests")</comment>
+						<comment>Initial Reward: Moonstones</comment>
+						<hotfix name="Reward2X" level="None">
+							<code profiles="default">set GD_Co_Side_FreshAir.M_FreshAir Reward.RewardItems (WeaponBalanceDefinition'GD_Weap_SMG.A_Weapons_Unique.SMG_Maliwan_3_Frostfire',WeaponBalanceDefinition'GD_Weap_SMG.A_Weapons_Unique.SMG_Maliwan_3_Frostfire')</code>
+						</hotfix>
+					</category>
+					<category name="Home Sweet Home (SDU)">
+						<comment>SDU Upgrade - Reward unchanged </comment>
+					</category>
+					<category name="Infinite Loop (Mining Laser from DAN-TRP or Snowball from CLAP-9000)">
+						<comment>Give you the choice between 2 Unique Mining Laser if you put the restraining bolt to DAN-TRP </comment>
+						<comment>or 2 Unique Snowball if you put the restraining bolt to CLAP-9000.</comment>
+						<hotfix name="Reward2X" level="None">
+							<code profiles="default">set GD_Co_Side_Loop.M_InfiniteLoop Reward.RewardItems (WeaponBalanceDefinition'GD_Cork_Weap_Lasers.A_Weapons_Unique.Laser_Hyperion_3_Mining',WeaponBalanceDefinition'GD_Cork_Weap_Lasers.A_Weapons_Unique.Laser_Hyperion_3_Mining')</code>
+							<code profiles="default">set GD_Co_Side_Loop.M_InfiniteLoop AlternativeReward.RewardItems (InventoryBalanceDefinition'GD_GrenadeMods.A_Item_Custom.GM_Snowball',InventoryBalanceDefinition'GD_GrenadeMods.A_Item_Custom.GM_Snowball')</code>
+						</hotfix>
+					</category>
+					<category name="It Ain't Rocket Surgery">
+						<comment>Green Rocket Launcher/Shield - Reward unchanged </comment>
+					</category>
+					<category name="Lab 19 (Octo)">
+						<comment>Give you the choice between 2 Unique SG Octo</comment>
+						<hotfix name="Reward2X" level="None">
+							<code profiles="default">set GD_Co_Side_Lab19.M_Lab19 Reward.RewardItems (WeaponBalanceDefinition'GD_Cork_Weap_Shotgun.A_Weapons_Unique.SG_Tediore_3_Octo',WeaponBalanceDefinition'GD_Cork_Weap_Shotgun.A_Weapons_Unique.SG_Tediore_3_Octo')</code>
+						</hotfix>
+					</category>
+				</category>
+				<category name="Serenity's Waste">
+					<category name="Follow Your Heart">
+						<comment>Choice between Green Pistol/Assault Rifle - Reward unchanged</comment>
+					</category>
+					<category name="Land Among the Stars (Freedom Oz Kit/Invigoration Oz Kit)">
+						<comment>Choice between 2 Unique Oz Kit: Freedom Oz Kit or Invigoration Oz Kit</comment>
+						<comment>Reward unchanged</comment>
+					</category>
+					<category name="Lost Legion Invasion (1st Oz Kit)">
+						<comment>1st Oz Kit - Reward unchanged</comment>
+					</category>
+					<category name="Marooned">
+						<comment>Green Pistol - Reward unchanged</comment>
+					</category>
+					<category name="Nova? No Problem! (Lady Fist - UCP 2.2 New Reward)">
+						<comment>Give you the choice between 2 Pistol LadyFist (to stay in range with UCP 2.2 "Changes to Quests")</comment>
+						<comment>Initial Reward: Moonstones</comment>
+						<hotfix name="Reward2X" level="None">
+							<code profiles="default">set GD_Co_NovaNoProblem.M_NovaNoProblem Reward.RewardItems (WeaponBalanceDefinition'GD_Cork_Weap_Pistol.A_Weapons_Unique.Pistol_Hyperion_3_LadyFist',WeaponBalanceDefinition'GD_Cork_Weap_Pistol.A_Weapons_Unique.Pistol_Hyperion_3_LadyFist')</code>
+						</hotfix>
+					</category>
+					<category name="Tales from Elpis">
+						<comment>Choice between Green Sniper Rifle/Shotgun - Reward unchanged</comment>
+					</category>
+					<category name="Torgue-o! Torgue-o! (Firestarta from Springs or Torguemada from Torgue)">
+						<comment>Give you the choice between 2 Unique Laser Firestarta if you give the light reactor to Springs </comment>
+						<comment>or 2 Unique SG Torguemada if you destroy the light reactor for Torgue.</comment>
+						<hotfix name="Reward2X" level="None">
+							<code profiles="default">set GD_Co_ToroToro.M_ToroToro Reward.RewardItems (WeaponBalanceDefinition'GD_Cork_Weap_Lasers.A_Weapons_Unique.Laser_Dahl_3_Firestarta',WeaponBalanceDefinition'GD_Cork_Weap_Lasers.A_Weapons_Unique.Laser_Dahl_3_Firestarta')</code>
+							<code profiles="default">set GD_Co_ToroToro.M_ToroToro AlternativeReward.RewardItems (WeaponBalanceDefinition'GD_Cork_Weap_Shotgun.A_Weapons_Unique.SG_Torgue_3_Torguemada',WeaponBalanceDefinition'GD_Cork_Weap_Shotgun.A_Weapons_Unique.SG_Torgue_3_Torguemada')</code>
+						</hotfix>
+					</category>
+				</category>
+				<category name="Sub-Level 13">
+					<category name="Sub-Level 13: Part 1">
+						<comment>Money - Reward unchanged</comment>
+					</category>
+					<category name="Sub-Level 13: Part 2 (Green Grenade from Pickle or Laser E-Gun fom Schmidt)">
+						<comment>Give you the choice between 2 Green Grenades if the inverter is returned to Pickle </comment>
+						<comment>or 2 Unique Laser E-Gun if the console is repaired with the inverter (and release Schmidt).</comment>
+						<hotfix name="Reward2X" level="None">
+							<code profiles="default">set GD_Co_SubLevel13.M_Co_SubLevel13Part2 Reward.RewardItems (ItemPoolDefinition'GD_Itempools.GrenadeModPools.Pool_GrenadeMods_02_Uncommon',ItemPoolDefinition'GD_Itempools.GrenadeModPools.Pool_GrenadeMods_02_Uncommon')</code>
+							<code profiles="default">set GD_Co_SubLevel13.M_Co_SubLevel13Part2 AlternativeReward.RewardItems (WeaponBalanceDefinition'GD_Cork_Weap_Lasers.A_Weapons_Unique.Laser_Maliwan_4_Egun',WeaponBalanceDefinition'GD_Cork_Weap_Lasers.A_Weapons_Unique.Laser_Maliwan_4_Egun')</code>
+						</hotfix>
+					</category>
+				</category>
+				<category name="Triton Flats">
+					<category name="All the Little Creatures">
+						<comment>Choice between Green Sniper Rifle/Grenade - Reward unchanged</comment>
+					</category>
+					<category name="No Such Thing as a Free Launch (Volt Thrower)">
+						<comment>Give you the choice between 2 Volt Thrower</comment>
+						<hotfix name="Reward2X" level="None">
+							<code profiles="default">set GD_Cork_Rocketeering.M_Rocketeering Reward.RewardItems (WeaponBalanceDefinition'GD_Cork_Weap_Launchers.A_Weapons_Unique.RL_Tediore_3_Rocketeer',WeaponBalanceDefinition'GD_Cork_Weap_Launchers.A_Weapons_Unique.RL_Tediore_3_Rocketeer')</code>
+						</hotfix>
+					</category>
+					<category name="Pop Racing (Naught - UCP 2.2 New Reward)">
+						<comment>Give you the choice between 2 Naught (to stay in range with UCP 2.2 "Changes to Quests")</comment>
+						<comment>Initial Reward: Green Shotgun/Pistol</comment>
+						<hotfix name="Reward2X" level="None">
+							<code profiles="default">set GD_Co_PopRacing.M_Co_PopRacing Reward.RewardItems (InventoryBalanceDefinition'GD_Ma_Shields.A_Item_Unique.ItemGrade_Gear_Shield_Naught',InventoryBalanceDefinition'GD_Ma_Shields.A_Item_Unique.ItemGrade_Gear_Shield_Naught')</code>
+						</hotfix>
+					</category>
+					<category name="Recruitment Drive">
+						<comment>Choice between Green Shotgun/Assault Rifle - Reward unchanged</comment>
+					</category>
+					<category name="The Voyage of Captain Chef (Bad Touch - UCP 2.2 New Reward)">
+						<comment>Give you the choice between 2 Bad Touch (to stay in range with UCP 2.2 "Changes to Quests")</comment>
+						<comment>Initial Reward: Head customization</comment>
+						<hotfix name="Reward2X" level="None">
+							<code profiles="default">set GD_Co_VoyageOfCaptainChef.M_VoyageOfCaptainChef Reward.RewardItems (WeaponBalanceDefinition'GD_Cork_Weap_SMG.A_Weapons_Unique.SMG_Maliwan_3_BadTouch',WeaponBalanceDefinition'GD_Cork_Weap_SMG.A_Weapons_Unique.SMG_Maliwan_3_BadTouch')</code>
+						</hotfix>
+					</category>
+				</category>
+				<category name="Tycho's Ribs">
+					<category name="Z8N-TP">
+						<comment>Green Oz Kit/Class Mod - Reward unchanged</comment>
+					</category>
+				</category>
+				<category name="Veins of Helios">
+					<category name="Don't Get Cocky">
+						<comment>Green Shotgun/Sniper Rifle - Reward unchanged</comment>
+					</category>
+					<category name="Eradicate! (Globber when sealing the doors or System Purge when destroying Robot)">
+						<comment>Sealing the door give you the choice between 2 Unique Pistol Globber, </comment>
+						<comment>while destroying the robot yields Give you the choice between 2 Unique Oz Kit Systems Purge.</comment>
+						<hotfix name="Reward2X" level="None">
+							<code profiles="default">set GD_Cork_Eradicate.M_Eradicate Reward.RewardItems (InventoryBalanceDefinition'GD_MoonItems.A_Item_Unique.A_SystemsPurge'InventoryBalanceDefinition'GD_MoonItems.A_Item_Unique.A_SystemsPurge')</code>
+							<code profiles="default">set GD_Cork_Eradicate.M_Eradicate AlternativeReward.RewardItems (WeaponBalanceDefinition'GD_Cork_Weap_Pistol.A_Weapons_Unique.Pistol_Hyperion_3_Globber',WeaponBalanceDefinition'GD_Cork_Weap_Pistol.A_Weapons_Unique.Pistol_Hyperion_3_Globber')</code>
+						</hotfix>
+					</category>
+					<category name="In Perfect Hibernation (Fridgia)">
+						<comment>Give you the choice between 2 Unique SMG Fridgia</comment>
+						<hotfix name="Reward2X" level="None">
+							<code profiles="default">set GD_Cork_PerfectHibernation.M_PerfectHibernation Reward.RewardItems (WeaponBalanceDefinition'GD_Weap_SMG.A_Weapons_Unique.SMG_Dahl_3_Fridgia',WeaponBalanceDefinition'GD_Weap_SMG.A_Weapons_Unique.SMG_Dahl_3_Fridgia')</code>
+						</hotfix>
+					</category>
+					<category name="Quarantine: Back On Schedule">
+						<comment>Moonstones - Reward unchanged</comment>
+					</category>
+					<category name="Trouble with Space Hurps">
+						<comment>Skin Customization - Reward unchanged</comment>
+					</category>
+					<category name="Watch Your Step">
+						<comment>XP - Reward unchanged</comment>
+					</category>
+				</category>
+				<category name="Vorago Solitude">
+					<category name="Guardian Hunter (Asteroid Belt if you kill the Master Poacher or Wallop if you deliver Wraiths to him)">
+						<comment>Give you the choice between 2 Unique Shield Asteroid Belt if you kill the Master Poacher </comment>
+						<comment>or 2 Unique AR Wallop if you deliver Wraiths to Master Poacher </comment>
+						<hotfix name="Reward2X" level="None">
+							<code profiles="default">set GD_Co_GuardianHunter.MissionDef.M_GuardianHunter Reward.RewardItems (InventoryBalanceDefinition'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Booster_AsteroidBelt',InventoryBalanceDefinition'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Booster_AsteroidBelt')</code>
+							<code profiles="default">set GD_Co_GuardianHunter.MissionDef.M_GuardianHunter AlternativeReward.RewardItems (WeaponBalanceDefinition'gd_cork_weap_assaultrifle.A_Weapons_Unique.AR_Jakobs_3_Wallop',WeaponBalanceDefinition'gd_cork_weap_assaultrifle.A_Weapons_Unique.AR_Jakobs_3_Wallop')</code>
+						</hotfix>
+					</category>
+					<category name="Return of Captain Chef">
+						<comment>Blue Pistol/Assault Rifle - Reward unchanged</comment>
+					</category>
+					<category name="The Don">
+						<comment>Skin Customization - Reward unchanged</comment>
+					</category>
+					<category name="These are the Bots (Bright Spadroon)">
+						<comment>Give you the choice between 2 Unique Laser Bright Spadroon</comment>
+						<hotfix name="Reward2X" level="None">
+							<code profiles="default">set GD_Co_Side_TheseAreTheBots.M_TheseAreTheBots Reward.RewardItems (WeaponBalanceDefinition'GD_Cork_Weap_Lasers.A_Weapons_Unique.Laser_Maliwan_4_SavorySideSaber',WeaponBalanceDefinition'GD_Cork_Weap_Lasers.A_Weapons_Unique.Laser_Maliwan_4_SavorySideSaber')</code>
+						</hotfix>
+					</category>
+				</category>
+			</category>
+			<category name="DLC Holodrome Slaughter">
+				<category name="Digistructed Madness: Round 1">
+					<comment>Give you the choice between a Customization Skin or Unique Pistol T4sr</comment>
+					<comment>Reward unchanged</comment>
+				</category>
+				<category name="Digistructed Madness: Round 2">
+					<comment>Give you the choice between a Customization Head or Unique SMG Boxxi</comment>
+					<comment>Reward unchanged</comment>
+				</category>
+				<category name="Digistructed Madness: Round 3">
+					<comment>Give you the choice between a Chronicler Class Mod or Unique AR Cry Baby</comment>
+					<comment>Reward unchanged</comment>
+				</category>
+				<category name="Digistructed Madness: Round 4">
+					<comment>Give you the choice between a ClassMod or Unique SG Party Line</comment>
+					<comment>Reward unchanged</comment>
+				</category>
+				<category name="Digistructed Madness: Round 5">
+					<comment>Give you the choice between a Random Unique Weapon from round 1-4 or Unique SR Plunkett</comment>
+					<comment>Reward unchanged</comment>
+				</category>
+				<category name="Digistructed Madness: The Badass Round (Chance for Leg Chronicler COM - UCP 2.2 New Reward)">
+					<comment>Give you the choice between a Blue Weapon or a chance for Leg Chronicler COM (to stay in range with UCP 2.2 "Changes to Quests")</comment>
+					<comment>Initial Reward: Blue Weapon or Blue COM</comment>
+				</category>
+			</category>
+		</category>
+	</body>
+</BLCMM>
+
+#Commands:
+
+#Direct-Execute Warning:
+say WARNING: "Double Quest Rewards v1.0.0" must be imported into BLCMM to run properly with UCP or other mods.
+
+#Hotfixes:
+set Transient.SparkServiceConfiguration_6 Keys ("SparkOnDemandPatchEntry-GBX_Fixes1","SparkOnDemandPatchEntry-GBX_Fixes2","SparkOnDemandPatchEntry-GBX_Fixes3","SparkPatchEntry-GBX_Fixes4","SparkPatchEntry-GBX_Fixes5","SparkPatchEntry-GBX_Fixes6","SparkPatchEntry-GBX_Fixes7","SparkPatchEntry-GBX_Fixes8","SparkPatchEntry-GBX_Fixes9","SparkPatchEntry-GBX_Fixes10","SparkPatchEntry-GBX_Fixes11","SparkPatchEntry-GBX_Fixes12","SparkPatchEntry-GBX_Fixes13","SparkPatchEntry-GBX_Fixes14","SparkLevelPatchEntry-GBX_Fixes15","SparkLevelPatchEntry-GBX_Fixes16","SparkLevelPatchEntry-GBX_Fixes17","SparkLevelPatchEntry-GBX_Fixes18","SparkLevelPatchEntry-GBX_Fixes19","SparkLevelPatchEntry-GBX_Fixes20","SparkLevelPatchEntry-GBX_Fixes21","SparkLevelPatchEntry-Reward2X1","SparkLevelPatchEntry-Reward2X2","SparkLevelPatchEntry-Reward2X3","SparkLevelPatchEntry-Reward2X4","SparkLevelPatchEntry-Reward2X5","SparkLevelPatchEntry-Reward2X6","SparkLevelPatchEntry-Reward2X7","SparkLevelPatchEntry-Reward2X8","SparkLevelPatchEntry-Reward2X9","SparkLevelPatchEntry-Reward2X10","SparkLevelPatchEntry-Reward2X11","SparkLevelPatchEntry-Reward2X12","SparkLevelPatchEntry-Reward2X13","SparkLevelPatchEntry-Reward2X14","SparkLevelPatchEntry-Reward2X15","SparkLevelPatchEntry-Reward2X16","SparkLevelPatchEntry-Reward2X17","SparkLevelPatchEntry-Reward2X18","SparkLevelPatchEntry-Reward2X19","SparkLevelPatchEntry-Reward2X20","SparkLevelPatchEntry-Reward2X21","SparkLevelPatchEntry-Reward2X22","SparkLevelPatchEntry-Reward2X23","SparkLevelPatchEntry-Reward2X24","SparkLevelPatchEntry-Reward2X25","SparkLevelPatchEntry-Reward2X26","SparkLevelPatchEntry-Reward2X27","SparkLevelPatchEntry-Reward2X28","SparkLevelPatchEntry-Reward2X29","SparkLevelPatchEntry-Reward2X30","SparkLevelPatchEntry-Reward2X31","SparkLevelPatchEntry-Reward2X32","SparkLevelPatchEntry-Reward2X33","SparkLevelPatchEntry-Reward2X34","SparkLevelPatchEntry-Reward2X35","SparkLevelPatchEntry-Reward2X36","SparkLevelPatchEntry-Reward2X37","SparkLevelPatchEntry-Reward2X38","SparkLevelPatchEntry-Reward2X39","SparkLevelPatchEntry-Reward2X40")
+set Transient.SparkServiceConfiguration_6 Values ("GD_Gladiator_Streaming,GD_Gladiator_Skills.Projectiles.ShieldProjectile:BehaviorProviderDefinition_0,BehaviorSequences[0].BehaviorData2[26].LinkedVariables.ArrayIndexAndLength,2686977,0","GD_Gladiator_Streaming,GD_Gladiator_Skills.Projectiles.ShieldProjectile:BehaviorProviderDefinition_0,BehaviorSequences[0].BehaviorData2[49].LinkedVariables.ArrayIndexAndLength,8323073,0","GD_Gladiator_Streaming,GD_Gladiator_Skills.Projectiles.ShieldProjectile:BehaviorProviderDefinition_0.OzBehavior_ActorList_1,BehaviorSequences[0].BehaviorData2[32].Behavior.SearchRadius,500.000000,2048","GD_Ma_Chapter03.M_Ma_Chapter03:Objset_cmp_Pt0_06_ReopenDataStream,Objectiveset_cmp.ObjectiveDefinitions,,(GD_Ma_Chapter03.M_Ma_Chapter03:Pt0_06_ReopenDataStream,GD_Ma_Chapter03.M_Ma_Chapter03:Pt0_04_GetToDataStream,GD_Ma_Chapter03.M_Ma_Chapter03:RetrieveHSource)","Weap_Pistol.GestaltDef_Pistol_GestaltSkeletalMesh:SkeletalMeshSocket_260,RelativeLocation,,(X=-0.05,Y=55.0,Z=13.7)","Weap_Pistol.GestaltDef_Pistol_GestaltSkeletalMesh:SkeletalMeshSocket_268,RelativeLocation,,(X=0.02,Y=36.0,Z=15.45)","Weap_Pistol.GestaltDef_Pistol_GestaltSkeletalMesh:SkeletalMeshSocket_270,RelativeLocation.Z,,14.2","GD_Shields.Projectiles.Proj_LegendaryBoosterShield:BehaviorProviderDefinition_1.Behavior_Explode_140,BehaviorSequences[0].BehaviorData2[7].Behavior.StatusEffectDamage.BaseValueAttribute,None,D_Attributes.Projectile.ProjectileDamage","GD_Shields.Projectiles.Proj_LegendaryBoosterShield:BehaviorProviderDefinition_1.Behavior_Explode_140,BehaviorSequences[0].BehaviorData2[7].Behavior.StatusEffectDamage.BaseValueScaleConstant,1.000000,.25","GD_Shields.Projectiles.Proj_LegendaryBoosterShield:BehaviorProviderDefinition_1.Behavior_Explode_140,BehaviorSequences[0].BehaviorData2[7].Behavior.StatusEffectChance.BaseValueConstant,1.000000,20","GD_Itempools.WeaponPools.Pool_Weapons_SniperRifles_04_Rare,BalancedItems,,+(ItmPoolDefinition=None,InvBalanceDefinition=GD_Cork_Weap_SniperRifles.A_Weapons_Unique.Sniper_Vladof_3_TheMachine,Probability=(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=GD_Balance.Weighting.Weight_2_Uncommon,BaseValueScaleConstant=1),bDropOnDeath=True)","GD_Itempools.WeaponPools.Pool_Weapons_AssaultRifles_04_Rare,BalancedItems,,+(ItmPoolDefinition=None,InvBalanceDefinition=gd_cork_weap_assaultrifle.A_Weapons_Unique.AR_Vladof_3_OldPainful,Probability=(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=GD_Balance.Weighting.Weight_2_Uncommon,BaseValueScaleConstant=1),bDropOnDeath=True)","GD_Itempools.WeaponPools.Pool_Weapons_Shotguns_04_Rare,BalancedItems,,+(ItmPoolDefinition=None,InvBalanceDefinition=GD_Cork_Weap_Shotgun.A_Weapons_Unique.SG_Jakobs_Boomacorn,Probability=(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=GD_Balance.Weighting.Weight_2_Uncommon,BaseValueScaleConstant=1),bDropOnDeath=True)","GD_Itempools.WeaponPools.Pool_Weapons_Shotguns_04_Rare,BalancedItems,,+(ItmPoolDefinition=None,InvBalanceDefinition=GD_Cork_Weap_Shotgun.A_Weapons_Unique.SG_Torgue_3_JackOCannon,Probability=(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=GD_Balance.Weighting.Weight_2_Uncommon,BaseValueScaleConstant=1),bDropOnDeath=True)",",GD_Population_Scavengers.Balance.Outlaws.PawnBalance_ScavWastelandWalker,PlayThroughs[0].CustomItemPoolList,,+(ItemPool=GD_Itempools.Runnables.Pool_ScavBadassSpacemanMidget,PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=GD_Itempools.DropWeights.DropODDS_BossUniqueRares,InitializationDefinition=None,BaseValueScaleConstant=1.000000))",",GD_Population_Scavengers.Balance.Outlaws.PawnBalance_ScavWastelandWalker,PlayThroughs[1].CustomItemPoolList,,+(ItemPool=GD_Itempools.Runnables.Pool_ScavBadassSpacemanMidget,PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=GD_Itempools.DropWeights.DropODDS_BossUniqueRares,InitializationDefinition=None,BaseValueScaleConstant=1.000000))","Laser_P,GD_Challenges.Co_LevelChallenges.EyeOfHelios_TreadCarefully,ChallengeType,ECT_DesignerTriggered,ECT_LevelObject","Outlands_P,Outlands_SideMissions.TheWorld:PersistentLevel.Main_Sequence.WillowSeqEvent_MissionRemoteEvent_0,OutputLinks[0].Links[0].LinkedOp,GearboxSeqAct_TriggerDialogName'Outlands_SideMissions.TheWorld:PersistentLevel.Main_Sequence.GearboxSeqAct_TriggerDialogName_48',Outlands_SideMissions.TheWorld:PersistentLevel.Main_Sequence.WillowSeqAct_MissionCustomEvent_14","Outlands_P,Outlands_SideMissions.TheWorld:PersistentLevel.Main_Sequence.WillowSeqAct_MissionCustomEvent_14,OutputLinks[0].Links,,((LinkedOp=GearboxSeqAct_TriggerDialogName'Outlands_SideMissions.TheWorld:PersistentLevel.Main_Sequence.GearboxSeqAct_TriggerDialogName_48',InputLinkIdx=0))","Outlands_P,Outlands_SideMissions.TheWorld:PersistentLevel.Main_Sequence.GearboxSeqAct_TriggerDialogName_49,OutputLinks[0].Links,,()","Outlands_P,Outlands_SideMissions.TheWorld:PersistentLevel.WillowPopulationEncounter_0,Waves[2].MemberOpportunities,,(PopulationOpportunityDen'Outlands_SideMissions.TheWorld:PersistentLevel.PopulationOpportunityDen_2',PopulationOpportunityDen'Outlands_SideMissions.TheWorld:PersistentLevel.PopulationOpportunityDen_8',None)",",GD_Co_IceHoles.M_Co_IceHoles,Reward.RewardItems,,(WeaponBalanceDefinition'gd_cork_weap_assaultrifle.A_Weapons_Unique.AR_Vladof_3_IceScream',WeaponBalanceDefinition'gd_cork_weap_assaultrifle.A_Weapons_Unique.AR_Vladof_3_IceScream')",",GD_Co_IceHoles.M_Co_IceHoles,AlternativeReward.RewardItems,,(WeaponBalanceDefinition'GD_Cork_Weap_Shotgun.A_Weapons_Unique.SG_Jakobs_TooScoops',WeaponBalanceDefinition'GD_Cork_Weap_Shotgun.A_Weapons_Unique.SG_Jakobs_TooScoops')",",GD_Co_DontShootMessenger.MissionDef.M_DontShootMsgr,Reward.RewardItems,,(WeaponBalanceDefinition'GD_Weap_SniperRifles.A_Weapons_Unique.Sniper_Hyperion_3_FremingtonsEdge',WeaponBalanceDefinition'GD_Weap_SniperRifles.A_Weapons_Unique.Sniper_Hyperion_3_FremingtonsEdge')",",GD_Cork_Grinding.M_Cork_Grinding,Reward.RewardItems,,(WeaponBalanceDefinition'GD_Cork_Weap_Shotgun.A_Weapons_Unique.SG_Old_Hyperion_3_Bullpup',WeaponBalanceDefinition'GD_Cork_Weap_Shotgun.A_Weapons_Unique.SG_Old_Hyperion_3_Bullpup')",",GD_Co_HomeDelivery.M_HomeDelivery,Reward.RewardItems,,(WeaponBalanceDefinition'GD_Cork_Weap_SniperRifles.A_Weapons_Unique.Sniper_Jakobs_3_Razorback',WeaponBalanceDefinition'GD_Cork_Weap_SniperRifles.A_Weapons_Unique.Sniper_Jakobs_3_Razorback')",",GD_Co_RoughLove.M_Co_RoughLove,Reward.RewardItems,,(WeaponBalanceDefinition'GD_Cork_Weap_SMG.A_Weapons_Unique.SMG_Maliwan_3_GoodTouch',WeaponBalanceDefinition'GD_Cork_Weap_SMG.A_Weapons_Unique.SMG_Maliwan_3_GoodTouch')",",GD_Co_ToArms.M_Co_ToArms,Reward.RewardItems,,(InventoryBalanceDefinition'GD_MoonItems.A_Item_Unique.A_SupportRelay',InventoryBalanceDefinition'GD_MoonItems.A_Item_Unique.A_SupportRelay')",",GD_Co_WhereforeArtThou.M_Co_WhereforeArtThou,Reward.RewardItems,,(InventoryBalanceDefinition'GD_GrenadeMods.A_Item_Custom.GM_SkyRocket',InventoryBalanceDefinition'GD_GrenadeMods.A_Item_Custom.GM_SkyRocket')",",GD_Co_Zapped.M_Co_Zapped3,Reward.RewardItems,,(WeaponBalanceDefinition'GD_Cork_Weap_Shotgun.A_Weapons_Unique.SG_Torgue_3_Wombat',WeaponBalanceDefinition'GD_Cork_Weap_Shotgun.A_Weapons_Unique.SG_Torgue_3_Wombat')",",GD_Co_WipingSlate.M_WipingSlate,Reward.RewardItems,,(WeaponBalanceDefinition'GD_Cork_Weap_Pistol.A_Weapons_Unique.Pistol_Jakobs_3_Smasher',WeaponBalanceDefinition'GD_Cork_Weap_Pistol.A_Weapons_Unique.Pistol_Jakobs_3_Smasher')",",GD_Co_EmptyBillabong.M_EmptyBillaBong,Reward.RewardItems,,(WeaponBalanceDefinition'GD_Cork_Weap_Pistol.A_Weapons_Unique.Pistol_Hyperion_3_Fibber',WeaponBalanceDefinition'GD_Cork_Weap_Pistol.A_Weapons_Unique.Pistol_Hyperion_3_Fibber')",",GD_Co_Chapter11.M_DahlDigsite,Reward.RewardItems,,(WeaponBalanceDefinition'GD_Cork_Weap_Lasers.A_Weapons_Unique.Laser_Maliwan_4_Rosie',WeaponBalanceDefinition'GD_Cork_Weap_Lasers.A_Weapons_Unique.Laser_Maliwan_4_Rosie')",",GD_Co_VoiceOver.M_VoiceOver,Reward.RewardItems,,(WeaponBalanceDefinition'GD_Cypressure_Weapons.A_Weapons_Unique.SG_Hyperion_3_CompanyMan',WeaponBalanceDefinition'GD_Cypressure_Weapons.A_Weapons_Unique.SG_Hyperion_3_CompanyMan')",",GD_Co_Side_Reshirt.M_RedShirt,Reward.RewardItems,,(WeaponBalanceDefinition'GD_Cork_Weap_Shotgun.A_Weapons_Unique.SG_Jakobs_3_Moonface',WeaponBalanceDefinition'GD_Cork_Weap_Shotgun.A_Weapons_Unique.SG_Jakobs_3_Moonface')",",GD_Co_Side_EngineerMoonShot.M_EngineerMoonShot,Reward.RewardItems,,(InventoryBalanceDefinition'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Nova_Starburst',InventoryBalanceDefinition'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Nova_Starburst')",",GD_Co_MoonSlaughter.M_Co_MoonSlaughter01,Reward.RewardItems,,(WeaponBalanceDefinition'GD_Cork_Weap_Pistol.A_Weapons_Unique.Pistol_Maliwan_3_Moxxis_Probe',WeaponBalanceDefinition'gd_cork_weap_assaultrifle.A_Weapons_Unique.AR_Vladof_3_Hail')",",GD_Co_MoonSlaughter.M_Co_MoonSlaughter02,Reward.RewardItems,,(WeaponBalanceDefinition'GD_Cork_Weap_SniperRifles.A_Weapons_Unique.Sniper_Maliwan_3_ChereAmie',WeaponBalanceDefinition'GD_Cork_Weap_Lasers.A_Weapons_Unique.Laser_Maliwan_3_VibraPulse')",",GD_Cork_AnotherPickle.M_Cork_AnotherPickle,Reward.RewardItems,,(WeaponBalanceDefinition'GD_Cork_Weap_Shotgun.A_Weapons_Unique.SG_Bandit_3_Boganella',WeaponBalanceDefinition'GD_Cork_Weap_Shotgun.A_Weapons_Unique.SG_Bandit_3_Boganella')",",GD_Co_Boomshakalaka.M_Boomshakalaka,Reward.RewardItems,,(WeaponBalanceDefinition'GD_Cypressure_Weapons.A_Weapons_Unique.SG_Torgue_3_Landscaper2',WeaponBalanceDefinition'GD_Cypressure_Weapons.A_Weapons_Unique.SG_Torgue_3_Landscaper2')",",GD_Co_SpaceSlam.M_SpaceSlam,Reward.RewardItems,,(WeaponBalanceDefinition'GD_Cypressure_Weapons.A_Weapons_Unique.SMG_Bandit_3_FastTalker',WeaponBalanceDefinition'GD_Cypressure_Weapons.A_Weapons_Unique.SMG_Bandit_3_FastTalker')",",GD_Co_YouAskHowHigh.M_Co_YouAskHowHigh,Reward.RewardItems,,(WeaponBalanceDefinition'GD_Cork_Weap_SniperRifles.A_Weapons_Unique.Sniper_Maliwan_3_ChereAmie',WeaponBalanceDefinition'GD_Cork_Weap_SniperRifles.A_Weapons_Unique.Sniper_Maliwan_3_ChereAmie')",",GD_Co_LastRequests.M_LastRequests,Reward.RewardItems,,(InventoryBalanceDefinition'GD_Pet_MoonItems.A_Item_Unique.A_AntiAir_PerdyLights',InventoryBalanceDefinition'GD_Pet_MoonItems.A_Item_Unique.A_AntiAir_PerdyLights')",",GD_Co_Side_FreshAir.M_FreshAir,Reward.RewardItems,,(WeaponBalanceDefinition'GD_Weap_SMG.A_Weapons_Unique.SMG_Maliwan_3_Frostfire',WeaponBalanceDefinition'GD_Weap_SMG.A_Weapons_Unique.SMG_Maliwan_3_Frostfire')",",GD_Co_Side_Loop.M_InfiniteLoop,Reward.RewardItems,,(WeaponBalanceDefinition'GD_Cork_Weap_Lasers.A_Weapons_Unique.Laser_Hyperion_3_Mining',WeaponBalanceDefinition'GD_Cork_Weap_Lasers.A_Weapons_Unique.Laser_Hyperion_3_Mining')",",GD_Co_Side_Loop.M_InfiniteLoop,AlternativeReward.RewardItems,,(InventoryBalanceDefinition'GD_GrenadeMods.A_Item_Custom.GM_Snowball',InventoryBalanceDefinition'GD_GrenadeMods.A_Item_Custom.GM_Snowball')",",GD_Co_Side_Lab19.M_Lab19,Reward.RewardItems,,(WeaponBalanceDefinition'GD_Cork_Weap_Shotgun.A_Weapons_Unique.SG_Tediore_3_Octo',WeaponBalanceDefinition'GD_Cork_Weap_Shotgun.A_Weapons_Unique.SG_Tediore_3_Octo')",",GD_Co_NovaNoProblem.M_NovaNoProblem,Reward.RewardItems,,(WeaponBalanceDefinition'GD_Cork_Weap_Pistol.A_Weapons_Unique.Pistol_Hyperion_3_LadyFist',WeaponBalanceDefinition'GD_Cork_Weap_Pistol.A_Weapons_Unique.Pistol_Hyperion_3_LadyFist')",",GD_Co_ToroToro.M_ToroToro,Reward.RewardItems,,(WeaponBalanceDefinition'GD_Cork_Weap_Lasers.A_Weapons_Unique.Laser_Dahl_3_Firestarta',WeaponBalanceDefinition'GD_Cork_Weap_Lasers.A_Weapons_Unique.Laser_Dahl_3_Firestarta')",",GD_Co_ToroToro.M_ToroToro,AlternativeReward.RewardItems,,(WeaponBalanceDefinition'GD_Cork_Weap_Shotgun.A_Weapons_Unique.SG_Torgue_3_Torguemada',WeaponBalanceDefinition'GD_Cork_Weap_Shotgun.A_Weapons_Unique.SG_Torgue_3_Torguemada')",",GD_Co_SubLevel13.M_Co_SubLevel13Part2,Reward.RewardItems,,(ItemPoolDefinition'GD_Itempools.GrenadeModPools.Pool_GrenadeMods_02_Uncommon',ItemPoolDefinition'GD_Itempools.GrenadeModPools.Pool_GrenadeMods_02_Uncommon')",",GD_Co_SubLevel13.M_Co_SubLevel13Part2,AlternativeReward.RewardItems,,(WeaponBalanceDefinition'GD_Cork_Weap_Lasers.A_Weapons_Unique.Laser_Maliwan_4_Egun',WeaponBalanceDefinition'GD_Cork_Weap_Lasers.A_Weapons_Unique.Laser_Maliwan_4_Egun')",",GD_Cork_Rocketeering.M_Rocketeering,Reward.RewardItems,,(WeaponBalanceDefinition'GD_Cork_Weap_Launchers.A_Weapons_Unique.RL_Tediore_3_Rocketeer',WeaponBalanceDefinition'GD_Cork_Weap_Launchers.A_Weapons_Unique.RL_Tediore_3_Rocketeer')",",GD_Co_PopRacing.M_Co_PopRacing,Reward.RewardItems,,(InventoryBalanceDefinition'GD_Ma_Shields.A_Item_Unique.ItemGrade_Gear_Shield_Naught',InventoryBalanceDefinition'GD_Ma_Shields.A_Item_Unique.ItemGrade_Gear_Shield_Naught')",",GD_Co_VoyageOfCaptainChef.M_VoyageOfCaptainChef,Reward.RewardItems,,(WeaponBalanceDefinition'GD_Cork_Weap_SMG.A_Weapons_Unique.SMG_Maliwan_3_BadTouch',WeaponBalanceDefinition'GD_Cork_Weap_SMG.A_Weapons_Unique.SMG_Maliwan_3_BadTouch')",",GD_Cork_Eradicate.M_Eradicate,Reward.RewardItems,,(InventoryBalanceDefinition'GD_MoonItems.A_Item_Unique.A_SystemsPurge'InventoryBalanceDefinition'GD_MoonItems.A_Item_Unique.A_SystemsPurge')",",GD_Cork_Eradicate.M_Eradicate,AlternativeReward.RewardItems,,(WeaponBalanceDefinition'GD_Cork_Weap_Pistol.A_Weapons_Unique.Pistol_Hyperion_3_Globber',WeaponBalanceDefinition'GD_Cork_Weap_Pistol.A_Weapons_Unique.Pistol_Hyperion_3_Globber')",",GD_Cork_PerfectHibernation.M_PerfectHibernation,Reward.RewardItems,,(WeaponBalanceDefinition'GD_Weap_SMG.A_Weapons_Unique.SMG_Dahl_3_Fridgia',WeaponBalanceDefinition'GD_Weap_SMG.A_Weapons_Unique.SMG_Dahl_3_Fridgia')",",GD_Co_GuardianHunter.MissionDef.M_GuardianHunter,Reward.RewardItems,,(InventoryBalanceDefinition'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Booster_AsteroidBelt',InventoryBalanceDefinition'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Booster_AsteroidBelt')",",GD_Co_GuardianHunter.MissionDef.M_GuardianHunter,AlternativeReward.RewardItems,,(WeaponBalanceDefinition'gd_cork_weap_assaultrifle.A_Weapons_Unique.AR_Jakobs_3_Wallop',WeaponBalanceDefinition'gd_cork_weap_assaultrifle.A_Weapons_Unique.AR_Jakobs_3_Wallop')",",GD_Co_Side_TheseAreTheBots.M_TheseAreTheBots,Reward.RewardItems,,(WeaponBalanceDefinition'GD_Cork_Weap_Lasers.A_Weapons_Unique.Laser_Maliwan_4_SavorySideSaber',WeaponBalanceDefinition'GD_Cork_Weap_Lasers.A_Weapons_Unique.Laser_Maliwan_4_SavorySideSaber')")
+
