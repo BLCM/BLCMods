@@ -339,6 +339,18 @@ Bugs
 TODO
 ====
 
+* I define a `cm_base_alignment` var in `generate-mod.py` which was intended
+  to define the weight for dropping Tiny Tina Alignment COMs in the global
+  COM drop pool, but it looks like I'm not actually using it (instead just
+  doubling up on the purple rarity var).  I should either get rid of the
+  var, or start using it but adjust it to match purple (since that's what
+  everyone's been used to for so long)
+* "Normalize" our custom drop pools with the vanilla game, if possible.
+  For instance, when adding the Tiny Tina Alignment COMs, I'd put them
+  physically inbetween purples and legendaries.  Really what I should do
+  is *add* them to the end of the pool, so that any other mods which
+  alter the pool would have a better chance of working, since they might
+  be assuming that the legendary index is unchanged.
 * Config option to specify the rarity of gear found in lockers?
 * Can we increase boss drop counts depending on player count?
 * Untested components from Torgue DLC *(I'm afraid that's my least favorite
