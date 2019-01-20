@@ -4,6 +4,10 @@ This Read Me is just here as a quick synopsis, for detailed informations, each M
 
 ## Items Improvement:  
 
+- ### Grenades Improvement:
+
+  - __*Kiss Of Death* Unbridled:__ Three times longer with double damage... like a passionate kiss!
+
 - ### Shields Improvement:
 
   - __*Booster Shields* Auto Pick-Up:__ Like Money and Ammunition, now the booster shield automatically pick-up... just walk on it and it's your!

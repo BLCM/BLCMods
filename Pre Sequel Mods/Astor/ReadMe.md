@@ -72,6 +72,10 @@ This ReadMe is just here as a quick synopsis, for detailed informations, each Mo
      
 - ### Items Improvement:
   
+  - ### Grenades Improvement:
+
+    - __*Kiss Of Death* Unbridled:__ Three times longer with double damage... like a passionate kiss!
+  
   - #### Shields Improvement:
     
     - __*Booster Shields* Auto Pick-Up:__ Automatically pick-up, however, to balance the auto pick-up advantage, the restoration value is reduced from ±20%.
