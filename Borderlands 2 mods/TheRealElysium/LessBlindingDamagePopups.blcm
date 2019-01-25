@@ -1,0 +1,113 @@
+<BLCMM v="1">
+#<!!!You opened a file saved with BLCMM in FilterTool. Please update to BLCMM to properly open this file!!!>
+	<head>
+		<type name="BL2" offline="false"/>
+	</head>
+	<body>
+		<category name="Less Blinding Damage Popups">
+			<comment>Made by Elysium</comment>
+			<comment>Changes the behavior of damage popups to allow better vision of targets</comment>
+			<comment>Note: x1000 Notation (K) is enabled by default.</comment>
+			<comment>This will still appear even if you hide DoTs,</comment>
+			<comment>You can hide it if you wish, but this will also hide the K on regular damage.</comment>
+			<category name="Raise Damage Popups Location">
+				<hotfix name="PartDynNum" level="None">
+					<code profiles="default">set FX_CHAR_Damage_Matrix.Particles.Part_Dynamic_Number:ParticleModuleLocation_0 StartLocation.LookupTable (0,110,0,0,110,0,0,110)</code>
+					<code profiles="default">set FX_CHAR_Damage_Matrix.Particles.Part_Dynamic_Number:ParticleModuleLocation_1 StartLocation.LookupTable (0,90,90,0,75,90,0,75)</code>
+				</hotfix>
+			</category>
+			<category name="Damage Popups Float Upwards">
+				<hotfix name="PartDynNum" level="None">
+					<code profiles="default">set FX_CHAR_Damage_Matrix.Particles.Part_Dynamic_Number:ParticleModuleAccelerationOverLifetime_0 AccelOverLife.LookupTable (0,0,0,0,0,0,0,0)</code>
+					<code profiles="default">set FX_CHAR_Damage_Matrix.Particles.Part_Dynamic_Number:ParticleModuleVelocity_1 StartVelocity.LookupTable (0,100,0,0,100,0,0,100)</code>
+				</hotfix>
+			</category>
+			<category name="Damage Popups Do Not Shrink">
+				<hotfix name="PartDynNum" level="None">
+					<code profiles="default">set FX_CHAR_Damage_Matrix.Particles.Part_Dynamic_Number:ParticleModuleSizeMultiplyLife_1 LifeMultiplier.LookupTable (1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1)</code>
+					<code profiles="default">set FX_CHAR_Damage_Matrix.Particles.Part_Dynamic_Number:ParticleModuleSizeMultiplyLife_3 LifeMultiplier.LookupTable (1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1)</code>
+				</hotfix>
+			</category>
+			<category name="x1000 Notation (K)" MUT="true">
+				<category name="Hide">
+					<hotfix name="PartDynNum" level="None">
+						<code profiles="">set FX_CHAR_Damage_Matrix.Particles.Part_Dynamic_Number:ParticleModuleColorOverLife_2 ColorOverLife.LookupTable (0,0,0,0,0,0,0,0)</code>
+					</hotfix>
+				</category>
+				<category name="Transparent">
+					<hotfix name="PartDynNum" level="None">
+						<code profiles="">set FX_CHAR_Damage_Matrix.Particles.Part_Dynamic_Number:ParticleModuleColorOverLife_2 ColorOverLife.LookupTable (0,0.33,0.33,0,0,0.33,0,0)</code>
+					</hotfix>
+				</category>
+				<category name="Shrink">
+					<hotfix name="PartDynNum" level="None">
+						<code profiles="">set FX_CHAR_Damage_Matrix.Particles.Part_Dynamic_Number:ParticleModuleSize_2 StartSize.LookupTable (0,160,140,25,0,160,45,0)</code>
+					</hotfix>
+				</category>
+				<category name="Transparent & Shrink">
+					<hotfix name="PartDynNum" level="None">
+						<code profiles="default">set FX_CHAR_Damage_Matrix.Particles.Part_Dynamic_Number:ParticleModuleColorOverLife_2 ColorOverLife.LookupTable (0,0.33,0.33,0,0,0.33,0,0)</code>
+						<code profiles="default">set FX_CHAR_Damage_Matrix.Particles.Part_Dynamic_Number:ParticleModuleSize_2 StartSize.LookupTable (0,160,140,25,0,160,45,0)</code>
+					</hotfix>
+				</category>
+			</category>
+			<category name="DoTs">
+				<category name="Corrosive" MUT="true">
+					<category name="Hide">
+						<code profiles="default">set GD_Corrosive.DamageType.DmgType_Corrosive_Status DamageColor (R=0,G=0,B=0,A=1)</code>
+					</category>
+					<category name="Transparent">
+						<code profiles="">set GD_Corrosive.DamageType.DmgType_Corrosive_Status DamageColor (R=0,G=0.17,B=0,A=1)</code>
+					</category>
+					<category name="Color Change">
+						<code profiles="">set GD_Corrosive.DamageType.DmgType_Corrosive_Status DamageColor (R=0,G=0.35,B=0.05,A=1)</code>
+					</category>
+					<category name="Transparent & Color Change">
+						<code profiles="">set GD_Corrosive.DamageType.DmgType_Corrosive_Status DamageColor (R=0.03,G=0.17,B=0.025,A=1)</code>
+					</category>
+				</category>
+				<category name="Fire" MUT="true">
+					<category name="Hide">
+						<code profiles="default">set GD_Incendiary.DamageType.DmgType_Incendiary_Status DamageColor (R=0,G=0,B=0,A=1)</code>
+					</category>
+					<category name="Transparent">
+						<code profiles="">set GD_Incendiary.DamageType.DmgType_Incendiary_Status DamageColor (R=0.2,G=0.08,B=0,A=1)</code>
+					</category>
+					<category name="Color Change">
+						<code profiles="">set GD_Incendiary.DamageType.DmgType_Incendiary_Status DamageColor (R=1,G=0.05,B=0,A=1)</code>
+					</category>
+					<category name="Transparent & Color Change">
+						<code profiles="">set GD_Incendiary.DamageType.DmgType_Incendiary_Status DamageColor (R=0.17,G=0.04,B=0,A=1)</code>
+					</category>
+				</category>
+				<category name="Shock" MUT="true">
+					<category name="Hide">
+						<code profiles="default">set GD_Shock.DamageType.DmgType_Shock_Status DamageColor (R=0,G=0,B=0,A=1)</code>
+					</category>
+					<category name="Transparent">
+						<code profiles="">set GD_Shock.DamageType.DmgType_Shock_Status DamageColor (R=0.01,G=0.1,B=0.25,A=1)</code>
+					</category>
+					<category name="Color Change">
+						<code profiles="">set GD_Shock.DamageType.DmgType_Shock_Status DamageColor (R=0.01,G=0.05,B=1.5,A=1)</code>
+					</category>
+					<category name="Transparent & Color Change">
+						<code profiles="">set GD_Shock.DamageType.DmgType_Shock_Status DamageColor (R=0.01,G=0.05,B=0.6,A=1)</code>
+					</category>
+				</category>
+			</category>
+		</category>
+	</body>
+</BLCMM>
+
+#Commands:
+set GD_Corrosive.DamageType.DmgType_Corrosive_Status DamageColor (R=0,G=0,B=0,A=1)
+set GD_Incendiary.DamageType.DmgType_Incendiary_Status DamageColor (R=0,G=0,B=0,A=1)
+set GD_Shock.DamageType.DmgType_Shock_Status DamageColor (R=0,G=0,B=0,A=1)
+
+#Direct-Execute Warning:
+say WARNING: "Less Blinding Damage Popups" must be imported into BLCMM to run properly with UCP or other mods.
+
+#Hotfixes:
+set Transient.SparkServiceConfiguration_6 Keys ("SparkLevelPatchEntry-GBX_fixes1","SparkLevelPatchEntry-GBX_fixes2","SparkLevelPatchEntry-GBX_fixes3","SparkLevelPatchEntry-GBX_fixes4","SparkLevelPatchEntry-GBX_fixes5","SparkLevelPatchEntry-GBX_Fixes6","SparkLevelPatchEntry-GBX_Fixes7","SparkLevelPatchEntry-GBX_Fixes8","SparkLevelPatchEntry-GBX_Fixes9","SparkLevelPatchEntry-GBX_fixes10","SparkLevelPatchEntry-GBX_fixes11","SparkLevelPatchEntry-GBX_fixes12","SparkLevelPatchEntry-GBX_fixes13","SparkLevelPatchEntry-GBX_fixes14","SparkOnDemandPatchEntry-GBX_fixes15","SparkOnDemandPatchEntry-GBX_fixes16","SparkOnDemandPatchEntry-GBX_fixes17","SparkOnDemandPatchEntry-GBX_fixes18","SparkOnDemandPatchEntry-GBX_fixes19","SparkPatchEntry-GBX_fixes20","SparkPatchEntry-GBX_fixes21","SparkPatchEntry-GBX_fixes22","SparkPatchEntry-GBX_fixes23","SparkLevelPatchEntry-PartDynNum1","SparkLevelPatchEntry-PartDynNum2","SparkLevelPatchEntry-PartDynNum3","SparkLevelPatchEntry-PartDynNum4","SparkLevelPatchEntry-PartDynNum5","SparkLevelPatchEntry-PartDynNum6","SparkLevelPatchEntry-PartDynNum7","SparkLevelPatchEntry-PartDynNum8")
+set Transient.SparkServiceConfiguration_6 Values (",GD_Balance.WeightingPlayerCount.BugmorphCocoon_PerPlayers_Phase1,ConditionalInitialization.ConditionalExpressionList[4].BaseValueIfTrue.BaseValueConstant,0.700000,.8",",GD_Balance.WeightingPlayerCount.BugmorphCocoon_PerPlayers_Phase2,ConditionalInitialization.ConditionalExpressionList[4].BaseValueIfTrue.BaseValueConstant,0.400000,.5",",GD_Balance.WeightingPlayerCount.BugmorphCocoon_PerPlayers_Phase3,ConditionalInitialization.ConditionalExpressionList[4].BaseValueIfTrue.BaseValueConstant,0.200000,.3",",GD_Balance.WeightingPlayerCount.BugmorphCocoon_PerPlayers_Phase4,ConditionalInitialization.ConditionalExpressionList[4].BaseValueIfTrue.BaseValueConstant,0.100000,.2",",GD_Balance.WeightingPlayerCount.BugmorphCocoon_PerPlayers_Phase5,ConditionalInitialization.ConditionalExpressionList[4].BaseValueIfTrue.BaseValueConstant,0.075000,.1","SouthpawFactory_P,GD_Population_Marauder.Balance.Unique.PawnBalance_Assassin1,DefaultItemPoolList[3].PoolProbability.BaseValueScaleConstant,0.250000,1","SouthpawFactory_P,GD_Population_Nomad.Balance.Unique.PawnBalance_Assassin2,DefaultItemPoolList[4].PoolProbability.BaseValueScaleConstant,0.250000,1","SouthpawFactory_P,GD_Population_Psycho.Balance.Unique.PawnBalance_Assassin3,DefaultItemPoolList[1].PoolProbability.BaseValueScaleConstant,0.250000,1","SouthpawFactory_P,GD_Population_Rat.Balance.Unique.PawnBalance_Assassin4,DefaultItemPoolList[3].PoolProbability.BaseValueScaleConstant,0.250000,1",",GD_Sage_Rare_Scaylion.Population.PawnBalance_Sage_Rare_Scaylion,DefaultItemPoolList[1].PoolProbability.BaseValueScaleConstant,1.000000,100",",GD_Sage_Rare_Drifter.Balance.PawnBalance_Sage_Rare_Drifter,DefaultItemPoolList[0].PoolProbability.BaseValueScaleConstant,1.000000,100",",GD_Sage_Rare_Rhino.Population.PawnBalance_Sage_Rare_Rhino,DefaultItemPoolList[1].PoolProbability.BaseValueScaleConstant,1.000000,100",",GD_Sage_Rare_Skag.Population.PawnBalance_Sage_Rare_Skag,DefaultItemPoolList[1].PoolProbability.BaseValueScaleConstant,1.000000,100",",GD_Sage_Rare_Spore.Population.PawnBalance_Sage_Rare_Spore,DefaultItemPoolList[0].PoolProbability.BaseValueScaleConstant,1.000000,100","GD_Assassin_Streaming,GD_Assassin_Skills.Sniping.Velocity,SkillEffectDefinitions[0].ModifierType,MT_PostAdd,MT_Scale","GD_Tulip_Mechro_Streaming,GD_Tulip_Mechromancer_Skills.LittleBigTrouble.WiresDontTalk,SkillEffectDefinitions,,((AttributeToModify=D_Attributes.DamageTypeModifers.InstigatedShockDamageModifier,bIncludeDuelingTargets=False,bIncludeSelfAsTarget=False,bOnlyEffectTargetsInRange=False,bExcludeNonPlayerCharacters=False,EffectTarget=TARGET_Self,TargetInstanceDataName=,TargetCriteria=CRITERIA_None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.030000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),GradeToStartApplyingEffect=1,PerGradeUpgradeInterval=1,PerGradeUpgrade=(BaseValueConstant=0.030000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),BonusUpgradeList=),(AttributeToModify=D_Attributes.DamageTypeModifers.InstigatedShockStatusDamageModifier,bIncludeDuelingTargets=False,bIncludeSelfAsTarget=False,bOnlyEffectTargetsInRange=False,bExcludeNonPlayerCharacters=False,EffectTarget=TARGET_Self,TargetInstanceDataName=,TargetCriteria=CRITERIA_None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.030000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),GradeToStartApplyingEffect=1,PerGradeUpgradeInterval=1,PerGradeUpgrade=(BaseValueConstant=0.030000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),BonusUpgradeList=))","GD_Siren_Streaming,GD_Siren_Skills.Misc.Init_BlightPhoenix_DamageCalc_Part2,ValueFormula.Level.InitializationDefinition,AttributeInitializationDefinition'GD_Balance_HealthAndDamage.HealthAndDamage.Init_PlayerMeleeDamage',AttributeInitializationDefinition'GD_Balance_HealthAndDamage.HealthAndDamage.Init_PlayerSkillDamage'","GD_Siren_Streaming,GD_Siren_Skills.Misc.Init_BlightPhoenix_DamageCalc_Part2,ValueFormula.Level.BaseValueScaleConstant,1.000000,3.5","GD_Assassin_Streaming,GD_Assassin_Skills.Misc.Att_DeathMark_BonusDamage,BaseValue.BaseValueConstant,0.200000,.8","GD_Itempools.Runnables.Pool_FourAssassins,BalancedItems[1].Probability.InitializationDefinition,None,GD_Balance.Weighting.Weight_1_Common","GD_Shields.Projectiles.Proj_LegendaryBoosterShield:BehaviorProviderDefinition_1.Behavior_Explode_140,BehaviorSequences[0].BehaviorData2[7].Behavior.StatusEffectDamage.BaseValueAttribute,None,D_Attributes.Projectile.ProjectileDamage","GD_Shields.Projectiles.Proj_LegendaryBoosterShield:BehaviorProviderDefinition_1.Behavior_Explode_140,BehaviorSequences[0].BehaviorData2[7].Behavior.StatusEffectDamage.BaseValueScaleConstant,1.000000,.25","GD_Shields.Projectiles.Proj_LegendaryBoosterShield:BehaviorProviderDefinition_1.Behavior_Explode_140,BehaviorSequences[0].BehaviorData2[7].Behavior.StatusEffectChance.BaseValueConstant,1.000000,20",",FX_CHAR_Damage_Matrix.Particles.Part_Dynamic_Number:ParticleModuleLocation_0,StartLocation.LookupTable,,(0,110,0,0,110,0,0,110)",",FX_CHAR_Damage_Matrix.Particles.Part_Dynamic_Number:ParticleModuleLocation_1,StartLocation.LookupTable,,(0,90,90,0,75,90,0,75)",",FX_CHAR_Damage_Matrix.Particles.Part_Dynamic_Number:ParticleModuleAccelerationOverLifetime_0,AccelOverLife.LookupTable,,(0,0,0,0,0,0,0,0)",",FX_CHAR_Damage_Matrix.Particles.Part_Dynamic_Number:ParticleModuleVelocity_1,StartVelocity.LookupTable,,(0,100,0,0,100,0,0,100)",",FX_CHAR_Damage_Matrix.Particles.Part_Dynamic_Number:ParticleModuleSizeMultiplyLife_1,LifeMultiplier.LookupTable,,(1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1)",",FX_CHAR_Damage_Matrix.Particles.Part_Dynamic_Number:ParticleModuleSizeMultiplyLife_3,LifeMultiplier.LookupTable,,(1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1)",",FX_CHAR_Damage_Matrix.Particles.Part_Dynamic_Number:ParticleModuleColorOverLife_2,ColorOverLife.LookupTable,,(0,0.33,0.33,0,0,0.33,0,0)",",FX_CHAR_Damage_Matrix.Particles.Part_Dynamic_Number:ParticleModuleSize_2,StartSize.LookupTable,,(0,160,140,25,0,160,45,0)")
+
