@@ -30,6 +30,8 @@ This Read Me is just here as a quick synopsis, for detailed informations, each M
 
   - __*Wombat* No Self-Damage:__ Made the grenades not inflicting self-damage to fixes the issue of where the delayed explosion would (repeatedly) put you down.
 
+  - __*Wombat* with Grenade Damage: __ Replace the *Rocket Damage* by *Grenade Damage*, on this way the damage can be increased by Character Skill.
+
 - ### SMG Improvement:
 
   - __*Boxxy* Four-Walls Rebouncing:__ Increases the number of ricochet from the SMG *Boxxy*'s fired bullets.
