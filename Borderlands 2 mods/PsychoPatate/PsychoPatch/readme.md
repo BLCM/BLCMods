@@ -43,10 +43,10 @@ Because the PsychoPatch is mainly visual changes, it's better to **look** at the
 - Ogre is now Very Rare (Purple)
 - Longbow is now E-Tech (Magenta)
 - Norfleet is now E-Tech (Magenta)
-- Love Thumper is now Rare (Blue), and has the Rare material
+- Love Thumper now has the Very Rare (Purple) material
 - Pot O' Gold is now Very Rare (Purple)
 - Deadly Bloom is now Legendary (Orange), and has the Legendary material
-- Flame of the Firehawk now has the Legendary material
+- Flame of the Firehawk now has the Legendary (Orange) material
 - Chain Lightning is now Very Rare (Purple)
 - Fire Storm is now Very Rare (Purple)
 
