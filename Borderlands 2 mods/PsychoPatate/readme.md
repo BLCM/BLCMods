@@ -33,11 +33,13 @@ I mainly do visual mods and skins, and here is a quick synopsis :
 
 ---
 ## Skins
-- Skins for weapons that doesn't already have a skin. **[Images](https://imgur.com/a/Z7q5ma1)**
+- Weapons skins : **[Album](https://imgur.com/a/Z7q5ma1)**
 ![Image](https://i.imgur.com/fq9z1LR.jpg)
-- Cleaner and/or colorful reskin of some weapons : **[Images](https://imgur.com/a/xyvMPoa)**
+- Cleaner and/or colorful reskin of some weapons : **[Album](https://imgur.com/a/xyvMPoa)**
 ![Image](https://i.imgur.com/oeEkXkh.jpg)
-- Grenades skins because they don't have unique skins : **[Images](https://imgur.com/a/KK4oHWR)**
+- Grenades skins : **[Album](https://imgur.com/a/KK4oHWR)**
 ![Image](https://i.imgur.com/QXDNpHu.jpg)
+- Shields skins : **[Album](https://imgur.com/a/mdfLCua)**
+![Image](https://i.imgur.com/yvFOdP1.jpg)
 
 ---
