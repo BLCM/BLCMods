@@ -27,6 +27,9 @@ This ReadMe is just here as a quick synopsis, for detailed informations, each Mo
 - ### Jack:
   - __*DigiJack* in FFYL:__ You can summon your *DigiJack* to fight alongside you while in *Fight For Your Live*.
 
+- ### Nisha: 
+  - __*Showdown* in FFYL:__ You can use *Showdown* (Nisha's ability) while in *Fight For Your Life*.
+
 - ### Wilhelm: 
   - __*Wolf & Saint in FFYL:*__ You can summon *Wolf* (red combat drone) and/or *Saint* (white support drone) to fight alongside you while in *Fight For Your Live*.
 
