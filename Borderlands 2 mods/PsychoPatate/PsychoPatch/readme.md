@@ -1,4 +1,4 @@
-### PsychoPatch V.1.0 (17/12/18) by PsychoPatate
+### PsychoPatch V.1.1 (10/01/19) by PsychoPatate
 ---
 
 #### Intro
@@ -32,7 +32,7 @@ Because the PsychoPatch is mainly visual changes, it's better to **look** at the
 - Standalone mod **[here](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/PsychoPatate/Proper%20Weapon%20Bodies)**
 
 **Pink Seraph Shields Core :**
-- Makes the "core"(the glowing thing in the middle of a shield) pink on Seraph shields
+- Makes the "core" (the glowing thing in the middle of a shield) pink on Seraph shields
 
 **Rarity Fixes :**
 - Bad Touch is now Rare (Blue)
@@ -43,10 +43,12 @@ Because the PsychoPatch is mainly visual changes, it's better to **look** at the
 - Ogre is now Very Rare (Purple)
 - Longbow is now E-Tech (Magenta)
 - Norfleet is now E-Tech (Magenta)
-- Love Thumper is now Rare (Blue), and has the Rare material
+- Love Thumper now has the Very Rare (Purple) material
 - Pot O' Gold is now Very Rare (Purple)
 - Deadly Bloom is now Legendary (Orange), and has the Legendary material
-- Flame of the Firehawk now has the Legendary material
+- Flame of the Firehawk now has the Legendary (Orange) material
+- Chain Lightning is now Very Rare (Purple)
+- Fire Storm is now Very Rare (Purple)
 
 **Skin Tweaks :**
 - Moved the logo on **Tediore Very Rare Pistols**
@@ -64,3 +66,10 @@ Because the PsychoPatch is mainly visual changes, it's better to **look** at the
 - Removed the Vladof logo on the **Tunguska**
 - Moved the logo on **Torgue Non-Unique Rocket Launchers**
 - Added and Moved the logo on **Vladof Uncommon, Rare and Very Rare Rocket Launchers**
+
+#### Changelog
+V.1.1 (10/01/19)
+- Added rarity fixes for the Chain lightning and the Fire Storm 
+
+V.1.0 (17/12/18)
+- Initial release

@@ -1,27 +1,30 @@
 ## Sir Hammerlock's Jakobs Sponsor
 
 - ### Borderlands 2 - Main Game:	
-  - The 10 missions given by Sir Hammerlock in the main game are rewarded with a Jakobs weapon/item
+  - The 10 missions given by *Sir Hammerlock* in the main game are rewarded with a *Jakobs* weapon/item.
     
-__Note:__ In the Mission Bad Hair Day (Southern Shelf) the Hammerlock reward is now a Blue Sniper Jakobs or a Blue Shotgun Torgue (if the fur is given to Clap-Trap).
+__Note:__ In the Mission *Bad Hair Day* (Southern Shelf) the Hammerlock reward is now a Blue Sniper *Jakobs* or a Blue Shotgun *Torgue* (if the fur is given to Clap-Trap).
 
 - ### Campaign DLC:	
-  - __DLC Campaign 1:__ The single mission given by Sir Hammerlock in *Captain Scarlett and Her Pirate's Booty* is rewarded with a Jakobs weapon/item
-  - __DLC Campaign 3:__ The 4 missions given by Sir Hammerlock in *Sir Hammerlock's Big Game Hunt* are rewarded with a Jakobs weapon/item
+  - __DLC Campaign 1:__ The single mission given by Sir Hammerlock in *Captain Scarlett and Her Pirate's Booty* is rewarded with a Jakobs weapon.
+  - __DLC Campaign 2:__ The single mission given by Sir Hammerlock in *Mr. Torgue's Campaign of Carnage* is rewarded with a Jakobs weapon. 
+  - __DLC Campaign 3:__ The 4 missions given by Sir Hammerlock in *Sir Hammerlock's Big Game Hunt* are rewarded with a Jakobs weapon/item.
  	
 ![Jakobs pistol as reward for Handsome Jack Here! in Southern Shelf](https://imgur.com/F3u9ezy.jpg "Don't worry guys... even if my screen capture show French text, my mods are in English")
 __Note:__ As for my *Double Quest Reward Redux*, this Mod will give you the choice between 2 weapons/items instead of a single one, so it will double the chance to get a weapon/item with desired accessory/parts.	
 
 ### Changelog:
 
-- v1.0.0, September 2, 2018
-  - Initial public release
-- v1.0.1, September 5, 2018
-  - Added Stalker of Stalkers in The Highlands... Ooops! I totally forget this mission... perhaps because the "Turn In" is done in a letter box in Overlook!
-- v1.0.2, October 15, 2018
-  - Added Jakobs weapon reward for DLC Campaign 1 - *Captain Scarlett and Her Pirate's Booty*
+- v1.0.4, January 22, 2019
+  - Added Jakobs weapon reward for DLC Campaign 2 - *Mr. Torgue's Campaign of Carnage*
 - v1.0.3, November 30, 2018
   - Added Jakobs weapon reward for DLC Campaign 3 - *Sir Hammerlock's Big Game Hunt*
+- v1.0.2, October 15, 2018
+  - Added Jakobs weapon reward for DLC Campaign 1 - *Captain Scarlett and Her Pirate's Booty*
+- v1.0.1, September 5, 2018
+  - Added *Stalker of Stalkers* in *The Highlands*... Ooops! I totally forget this mission... perhaps because the *Turn In* is done in a letter box in *Overlook*!
+- v1.0.0, September 2, 2018
+  - Initial public release
 
 ### Compatibility:
 

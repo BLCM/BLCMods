@@ -1,0 +1,232 @@
+<BLCMM v="1">
+#<!!!You opened a file saved with BLCMM in FilterTool. Please update to BLCMM to properly open this file!!!>
+	<head>
+		<type name="BL2" offline="false"/>
+		<profiles>
+			<profile name="default" current="true"/>
+		</profiles>
+	</head>
+	<body>
+		<category name="Changeable Peak">
+			<category name="Description">
+				<comment># This is a mod that allows you to customize what spawns you get in Digistruct Peak.</comment>
+				<comment># Normally in Vanilla, the game will give you random spawns depending on well randomness.</comment>
+				<comment># I allow you to pick what spawns you want to get.</comment>
+				<comment># The category names are what enemies* that you'll get when you check the option.</comment>
+			</category>
+			<category name="First Combat Area">
+				<category name="Link Counts" locked="true">
+					<hotfix name="CustomPeak" level="TestingZone_P">
+						<code profiles="default">set TESTINGZONE_COMBAT.TheWorld:PersistentLevel.Main_Sequence.First_Combat_Area.SeqAct_RandomSwitch_0 LinkCount 1</code>
+						<code profiles="default">set TESTINGZONE_COMBAT.TheWorld:PersistentLevel.Main_Sequence.First_Combat_Area.SeqAct_RandomSwitch_4 LinkCount 1</code>
+						<code profiles="default">set TESTINGZONE_COMBAT.TheWorld:PersistentLevel.Main_Sequence.First_Combat_Area.SeqAct_RandomSwitch_5 LinkCount 1</code>
+					</hotfix>
+				</category>
+				<category name="Options">
+					<category name="Section #1" MUT="true">
+						<category name="Psychos / Surveyors / Blaster Nomad">
+							<hotfix name="ChangeablePeak" level="None">
+								<code profiles="">set TESTINGZONE_COMBAT.TheWorld:PersistentLevel.Main_Sequence.First_Combat_Area.SeqAct_RandomSwitch_5 OutputLinks ((links=((linkedop=SeqAct_Toggle'TESTINGZONE_COMBAT.TheWorld:PersistentLevel.Main_Sequence.First_Combat_Area.SeqAct_Toggle_20',inputlinkidx=0),(linkedop=SeqAct_Log'TESTINGZONE_COMBAT.TheWorld:PersistentLevel.Main_Sequence.First_Combat_Area.SeqAct_Log_0',inputlinkidx=0)),linkdesc="Link 1",bhasimpulse=False,bdisabled=False,bdisabledpie=False,bclampedmax=False,bclampedmin=False,bhidden=False,bisactivated=False,bmoving=False,linkedop=None,activatedelay=0.000000))</code>
+							</hotfix>
+						</category>
+						<category name="Spidertanks / Skags + Spiderants / Emperor Spiderant">
+							<hotfix name="ChaneablePeak" level="None">
+								<code profiles="default">set TESTINGZONE_COMBAT.TheWorld:PersistentLevel.Main_Sequence.First_Combat_Area.SeqAct_RandomSwitch_5 OutputLinks ((links=((linkedop=SeqAct_Toggle'TESTINGZONE_COMBAT.TheWorld:PersistentLevel.Main_Sequence.First_Combat_Area.SeqAct_Toggle_23',inputlinkidx=0),(linkedop=SeqAct_Log'TESTINGZONE_COMBAT.TheWorld:PersistentLevel.Main_Sequence.First_Combat_Area.SeqAct_Log_1',inputlinkidx=0)),linkdesc="Link 1",bhasimpulse=False,bdisabled=False,bdisabledpie=False,bclampedmax=False,bclampedmin=False,bhidden=False,bisactivated=False,bmoving=False,linkedop=None,activatedelay=0.000000))</code>
+							</hotfix>
+						</category>
+						<category name="Skag + Spiderants / All Badasses / Surveyor">
+							<hotfix name="ChangeablePeak" level="None">
+								<code profiles="">set TESTINGZONE_COMBAT.TheWorld:PersistentLevel.Main_Sequence.First_Combat_Area.SeqAct_RandomSwitch_5 OutputLinks ((links=((linkedop=SeqAct_Toggle'TESTINGZONE_COMBAT.TheWorld:PersistentLevel.Main_Sequence.First_Combat_Area.SeqAct_Toggle_14',inputlinkidx=0),(linkedop=SeqAct_Log'TESTINGZONE_COMBAT.TheWorld:PersistentLevel.Main_Sequence.First_Combat_Area.SeqAct_Log_2',inputlinkidx=0)),linkdesc="Link 1",bhasimpulse=False,bdisabled=False,bdisabledpie=False,bclampedmax=False,bclampedmin=False,bhidden=False,bisactivated=False,bmoving=False,linkedop=None,activatedelay=0.000000))</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Section #2" MUT="true">
+						<category name="Spiderants / All Badasses / (Skag + Scorch + Psychos)">
+							<hotfix name="CustomPeak" level="TestingZone_P">
+								<code profiles="default">set TESTINGZONE_COMBAT.TheWorld:PersistentLevel.Main_Sequence.First_Combat_Area.SeqAct_RandomSwitch_0 OutputLinks ((links=((linkedop=SeqAct_Toggle'TESTINGZONE_COMBAT.TheWorld:PersistentLevel.Main_Sequence.First_Combat_Area.SeqAct_Toggle_24',inputlinkidx=0)),linkdesc="Link 1",bhasimpulse=False,bdisabled=False,bdisabledpie=False,bclampedmax=False,bclampedmin=False,bhidden=False,bisactivated=False,bmoving=False,linkedop=None,activatedelay=0.000000))</code>
+							</hotfix>
+						</category>
+						<category name="Bandits / Loaders / (Surveyor, Scorch, Surveyor)">
+							<hotfix name="ChangeablePeak" level="TestingZone_P">
+								<code profiles="">set TESTINGZONE_COMBAT.TheWorld:PersistentLevel.Main_Sequence.First_Combat_Area.SeqAct_RandomSwitch_0 OutputLinks ((links=((linkedop=SeqAct_Toggle'TESTINGZONE_COMBAT.TheWorld:PersistentLevel.Main_Sequence.First_Combat_Area.SeqAct_Toggle_4',inputlinkidx=0)),linkdesc="Link 1",bhasimpulse=False,bdisabled=False,bdisabledpie=False,bclampedmax=False,bclampedmin=False,bhidden=False,bisactivated=False,bmoving=False,linkedop=None,activatedelay=0.000000))</code>
+							</hotfix>
+						</category>
+						<category name="Constructor / Skags + Spiderants / Scorch">
+							<hotfix name="CustomPeak" level="TestingZone_P">
+								<code profiles="">set TESTINGZONE_COMBAT.TheWorld:PersistentLevel.Main_Sequence.First_Combat_Area.SeqAct_RandomSwitch_0 OutputLinks ((links=((linkedop=SeqAct_Toggle'TESTINGZONE_COMBAT.TheWorld:PersistentLevel.Main_Sequence.First_Combat_Area.SeqAct_Toggle_29',inputlinkidx=0)),linkdesc="Link 1",bhasimpulse=False,bdisabled=False,bdisabledpie=False,bclampedmax=False,bclampedmin=False,bhidden=False,bisactivated=False,bmoving=False,linkedop=None,activatedelay=0.000000))</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Section #3" MUT="true">
+						<category name="Skags + Dukino's Mom">
+							<hotfix name="ChangeablePeak" level="None">
+								<code profiles="default">set TESTINGZONE_COMBAT.TheWorld:PersistentLevel.Main_Sequence.First_Combat_Area.SeqAct_RandomSwitch_4 OutputLinks ((links=((linkedop=SeqAct_Toggle'TESTINGZONE_COMBAT.TheWorld:PersistentLevel.Main_Sequence.First_Combat_Area.SeqAct_Toggle_25',inputlinkidx=0)),linkdesc="Link 1",bhasimpulse=False,bdisabled=False,bdisabledpie=False,bclampedmax=False,bclampedmin=False,bhidden=False,bisactivated=False,bmoving=False,linkedop=None,activatedelay=0.000000))</code>
+							</hotfix>
+						</category>
+						<category name="Psychos + Dukino's Mom">
+							<hotfix name="ChangeablePeak" level="None">
+								<code profiles="">set TESTINGZONE_COMBAT.TheWorld:PersistentLevel.Main_Sequence.First_Combat_Area.SeqAct_RandomSwitch_4 OutputLinks ((links=((linkedop=SeqAct_Toggle'TESTINGZONE_COMBAT.TheWorld:PersistentLevel.Main_Sequence.First_Combat_Area.SeqAct_Toggle_0',inputlinkidx=0)),linkdesc="Link 1",bhasimpulse=False,bdisabled=False,bdisabledpie=False,bclampedmax=False,bclampedmin=False,bhidden=False,bisactivated=False,bmoving=False,linkedop=None,activatedelay=0.000000))</code>
+							</hotfix>
+						</category>
+					</category>
+				</category>
+			</category>
+			<category name="Second Combat Area">
+				<category name="Link Counts" locked="true">
+					<hotfix name="CustomPeak" level="TestingZone_P">
+						<code profiles="default">set TESTINGZONE_COMBAT.TheWorld:PersistentLevel.Main_Sequence.Second_Combat_Area.SeqAct_RandomSwitch_18 LinkCount 1</code>
+						<code profiles="default">set TESTINGZONE_COMBAT.TheWorld:PersistentLevel.Main_Sequence.Second_Combat_Area.SeqAct_RandomSwitch_19 LinkCount 1</code>
+						<code profiles="default">set TESTINGZONE_COMBAT.TheWorld:PersistentLevel.Main_Sequence.Second_Combat_Area.SeqAct_RandomSwitch_20 LinkCount 1</code>
+						<code profiles="default">set TESTINGZONE_COMBAT.TheWorld:PersistentLevel.Main_Sequence.Second_Combat_Area.SeqAct_RandomSwitch_4 LinkCount 1</code>
+					</hotfix>
+				</category>
+				<category name="Options">
+					<category name="Section #1" MUT="true">
+						<category name="Loaders / Skags / Black Queen">
+							<hotfix name="Name" level="None">
+								<code profiles="">set TESTINGZONE_COMBAT.TheWorld:PersistentLevel.Main_Sequence.Second_Combat_Area.SeqAct_RandomSwitch_18 OutputLinks ((links=((linkedop=SeqAct_Toggle'TESTINGZONE_COMBAT.TheWorld:PersistentLevel.Main_Sequence.Second_Combat_Area.SeqAct_Toggle_23',inputlinkidx=0)),linkdesc="Link 1",bhasimpulse=False,bdisabled=False,bdisabledpie=False,bclampedmax=False,bclampedmin=False,bhidden=False,bisactivated=False,bmoving=False,linkedop=None,activatedelay=0.000000))</code>
+							</hotfix>
+						</category>
+						<category name="Surveyors / Black Queen">
+							<hotfix name="Name" level="None">
+								<code profiles="">set TESTINGZONE_COMBAT.TheWorld:PersistentLevel.Main_Sequence.Second_Combat_Area.SeqAct_RandomSwitch_18 OutputLinks ((links=((linkedop=SeqAct_Toggle'TESTINGZONE_COMBAT.TheWorld:PersistentLevel.Main_Sequence.Second_Combat_Area.SeqAct_Toggle_27',inputlinkidx=0)),linkdesc="Link 1",bhasimpulse=False,bdisabled=False,bdisabledpie=False,bclampedmax=False,bclampedmin=False,bhidden=False,bisactivated=False,bmoving=False,linkedop=None,activatedelay=0.000000))</code>
+							</hotfix>
+						</category>
+						<category name="Spiderants / Black Queen">
+							<hotfix name="Name" level="None">
+								<code profiles="default">set TESTINGZONE_COMBAT.TheWorld:PersistentLevel.Main_Sequence.Second_Combat_Area.SeqAct_RandomSwitch_18 OutputLinks ((links=((linkedop=SeqAct_Toggle'TESTINGZONE_COMBAT.TheWorld:PersistentLevel.Main_Sequence.Second_Combat_Area.SeqAct_Toggle_31',inputlinkidx=0)),linkdesc="Link 1",bhasimpulse=False,bdisabled=False,bdisabledpie=False,bclampedmax=False,bclampedmin=False,bhidden=False,bisactivated=False,bmoving=False,linkedop=None,activatedelay=0.000000))</code>
+							</hotfix>
+						</category>
+						<category name="(Bandits + Surveyors) / All Badasses / Black Queen">
+							<hotfix name="Name" level="None">
+								<code profiles="">set TESTINGZONE_COMBAT.TheWorld:PersistentLevel.Main_Sequence.Second_Combat_Area.SeqAct_RandomSwitch_18 OutputLinks ((links=((linkedop=SeqAct_Toggle'TESTINGZONE_COMBAT.TheWorld:PersistentLevel.Main_Sequence.Second_Combat_Area.SeqAct_Toggle_2',inputlinkidx=0)),linkdesc="Link 1",bhasimpulse=False,bdisabled=False,bdisabledpie=False,bclampedmax=False,bclampedmin=False,bhidden=False,bisactivated=False,bmoving=False,linkedop=None,activatedelay=0.000000))</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Section #2" MUT="true">
+						<category name="Bone Head / Turrets / Surveyors">
+							<hotfix name="Name" level="None">
+								<code profiles="default">set TESTINGZONE_COMBAT.TheWorld:PersistentLevel.Main_Sequence.Second_Combat_Area.SeqAct_RandomSwitch_19 OutputLinks ((links=((linkedop=SeqAct_Toggle'TESTINGZONE_COMBAT.TheWorld:PersistentLevel.Main_Sequence.Second_Combat_Area.SeqAct_Toggle_24',inputlinkidx=0)),linkdesc="Link 1",bhasimpulse=False,bdisabled=False,bdisabledpie=False,bclampedmax=False,bclampedmin=False,bhidden=False,bisactivated=False,bmoving=False,linkedop=None,activatedelay=0.000000))</code>
+							</hotfix>
+						</category>
+						<category name="Bone Head / Bone Head / Bandits">
+							<hotfix name="Name" level="None">
+								<code profiles="">set TESTINGZONE_COMBAT.TheWorld:PersistentLevel.Main_Sequence.Second_Combat_Area.SeqAct_RandomSwitch_19 OutputLinks ((links=((linkedop=SeqAct_Toggle'TESTINGZONE_COMBAT.TheWorld:PersistentLevel.Main_Sequence.Second_Combat_Area.SeqAct_Toggle_28',inputlinkidx=0)),linkdesc="Link 1",bhasimpulse=False,bdisabled=False,bdisabledpie=False,bclampedmax=False,bclampedmin=False,bhidden=False,bisactivated=False,bmoving=False,linkedop=None,activatedelay=0.000000))</code>
+							</hotfix>
+						</category>
+						<category name="All Badasses / (Hyperion + Bandits + Surveyor) / Psychos / Bonehead">
+							<hotfix name="Name" level="None">
+								<code profiles="">set TESTINGZONE_COMBAT.TheWorld:PersistentLevel.Main_Sequence.Second_Combat_Area.SeqAct_RandomSwitch_19 OutputLinks ((links=((linkedop=SeqAct_Toggle'TESTINGZONE_COMBAT.TheWorld:PersistentLevel.Main_Sequence.Second_Combat_Area.SeqAct_Toggle_32',inputlinkidx=0)),linkdesc="Link 1",bhasimpulse=False,bdisabled=False,bdisabledpie=False,bclampedmax=False,bclampedmin=False,bhidden=False,bisactivated=False,bmoving=False,linkedop=None,activatedelay=0.000000))</code>
+							</hotfix>
+						</category>
+						<category name="(Bone Head + Bandits) / (Bone Head + Loaders) / (All Badasses)">
+							<hotfix name="Name" level="None">
+								<code profiles="">set TESTINGZONE_COMBAT.TheWorld:PersistentLevel.Main_Sequence.Second_Combat_Area.SeqAct_RandomSwitch_19 OutputLinks ((links=((linkedop=SeqAct_Toggle'TESTINGZONE_COMBAT.TheWorld:PersistentLevel.Main_Sequence.Second_Combat_Area.SeqAct_Toggle_3',inputlinkidx=0)),linkdesc="Link 1",bhasimpulse=False,bdisabled=False,bdisabledpie=False,bclampedmax=False,bclampedmin=False,bhidden=False,bisactivated=False,bmoving=False,linkedop=None,activatedelay=0.000000))</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Section #3" MUT="true">
+						<category name="(Bandits + Psychos + Doc Mercy) / Badass Marauder">
+							<hotfix name="Name" level="None">
+								<code profiles="">set TESTINGZONE_COMBAT.TheWorld:PersistentLevel.Main_Sequence.Second_Combat_Area.SeqAct_RandomSwitch_20 OutputLinks ((links=((linkedop=SeqAct_Toggle'TESTINGZONE_COMBAT.TheWorld:PersistentLevel.Main_Sequence.Second_Combat_Area.SeqAct_Toggle_29',inputlinkidx=0)),linkdesc="Link 1",bhasimpulse=False,bdisabled=False,bdisabledpie=False,bclampedmax=False,bclampedmin=False,bhidden=False,bisactivated=False,bmoving=False,linkedop=None,activatedelay=0.000000))</code>
+							</hotfix>
+						</category>
+						<category name="(Spiderants + Psychos + Doc Mercy) / All Badasses ">
+							<hotfix name="Name" level="None">
+								<code profiles="default">set TESTINGZONE_COMBAT.TheWorld:PersistentLevel.Main_Sequence.Second_Combat_Area.SeqAct_RandomSwitch_20 OutputLinks ((links=((linkedop=SeqAct_Toggle'TESTINGZONE_COMBAT.TheWorld:PersistentLevel.Main_Sequence.Second_Combat_Area.SeqAct_Toggle_33',inputlinkidx=0)),linkdesc="Link 1",bhasimpulse=False,bdisabled=False,bdisabledpie=False,bclampedmax=False,bclampedmin=False,bhidden=False,bisactivated=False,bmoving=False,linkedop=None,activatedelay=0.000000))</code>
+							</hotfix>
+						</category>
+						<category name="(Doc Mercy + Spiderants + Doc Mercy + Bandits + Constructor) / Bandits">
+							<hotfix name="Name" level="None">
+								<code profiles="">set TESTINGZONE_COMBAT.TheWorld:PersistentLevel.Main_Sequence.Second_Combat_Area.SeqAct_RandomSwitch_20 OutputLinks ((links=((linkedop=SeqAct_Toggle'TESTINGZONE_COMBAT.TheWorld:PersistentLevel.Main_Sequence.Second_Combat_Area.SeqAct_Toggle_35',inputlinkidx=0)),linkdesc="Link 1",bhasimpulse=False,bdisabled=False,bdisabledpie=False,bclampedmax=False,bclampedmin=False,bhidden=False,bisactivated=False,bmoving=False,linkedop=None,activatedelay=0.000000))</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Section #4" MUT="true">
+						<category name="Turrets / (Oney + Rouf) / Turrets / (Reeth + Wot)">
+							<hotfix name="Name" level="None">
+								<code profiles="">set TESTINGZONE_COMBAT.TheWorld:PersistentLevel.Main_Sequence.Second_Combat_Area.SeqAct_RandomSwitch_4 OutputLinks ((links=((linkedop=SeqAct_Toggle'TESTINGZONE_COMBAT.TheWorld:PersistentLevel.Main_Sequence.Second_Combat_Area.SeqAct_Toggle_26',inputlinkidx=0)),linkdesc="Link 1",bhasimpulse=False,bdisabled=False,bdisabledpie=False,bclampedmax=False,bclampedmin=False,bhidden=False,bisactivated=False,bmoving=False,linkedop=None,activatedelay=0.000000))</code>
+							</hotfix>
+						</category>
+						<category name="(Reeth + Wot) / Spider-Tank / (Rouf + Oney)">
+							<hotfix name="Name" level="None">
+								<code profiles="default">set TESTINGZONE_COMBAT.TheWorld:PersistentLevel.Main_Sequence.Second_Combat_Area.SeqAct_RandomSwitch_4 OutputLinks ((links=((linkedop=SeqAct_Toggle'TESTINGZONE_COMBAT.TheWorld:PersistentLevel.Main_Sequence.Second_Combat_Area.SeqAct_Toggle_30',inputlinkidx=0)),linkdesc="Link 1",bhasimpulse=False,bdisabled=False,bdisabledpie=False,bclampedmax=False,bclampedmin=False,bhidden=False,bisactivated=False,bmoving=False,linkedop=None,activatedelay=0.000000))</code>
+							</hotfix>
+						</category>
+						<category name="(Wot + Reeth) / Spiderants / (Oney + Rouf)">
+							<hotfix name="Name" level="None">
+								<code profiles="">set TESTINGZONE_COMBAT.TheWorld:PersistentLevel.Main_Sequence.Second_Combat_Area.SeqAct_RandomSwitch_4 OutputLinks ((links=((linkedop=SeqAct_Toggle'TESTINGZONE_COMBAT.TheWorld:PersistentLevel.Main_Sequence.Second_Combat_Area.SeqAct_Toggle_34',inputlinkidx=0)),linkdesc="Link 1",bhasimpulse=False,bdisabled=False,bdisabledpie=False,bclampedmax=False,bclampedmin=False,bhidden=False,bisactivated=False,bmoving=False,linkedop=None,activatedelay=0.000000))</code>
+							</hotfix>
+						</category>
+						<category name="Oney + Wot + Reeth + Rouf">
+							<hotfix name="Name" level="None">
+								<code profiles="">set TESTINGZONE_COMBAT.TheWorld:PersistentLevel.Main_Sequence.Second_Combat_Area.SeqAct_RandomSwitch_4 OutputLinks ((links=((linkedop=SeqAct_Toggle'TESTINGZONE_COMBAT.TheWorld:PersistentLevel.Main_Sequence.Second_Combat_Area.SeqAct_Toggle_0',inputlinkidx=0)),linkdesc="Link 1",bhasimpulse=False,bdisabled=False,bdisabledpie=False,bclampedmax=False,bclampedmin=False,bhidden=False,bisactivated=False,bmoving=False,linkedop=None,activatedelay=0.000000))</code>
+							</hotfix>
+						</category>
+					</category>
+				</category>
+			</category>
+			<category name="Third Combat Area">
+				<category name="Link Counts" locked="true">
+					<hotfix name="CustomPeak" level="TestingZone_P">
+						<code profiles="default">set TESTINGZONE_COMBAT.TheWorld:PersistentLevel.Main_Sequence.Third_Combat_Area.SeqAct_RandomSwitch_21 LinkCount 1</code>
+						<code profiles="default">set TESTINGZONE_COMBAT.TheWorld:PersistentLevel.Main_Sequence.Third_Combat_Area.SeqAct_RandomSwitch_4 LinkCount 1</code>
+					</hotfix>
+				</category>
+				<category name="Options">
+					<category name="Section #1" MUT="true">
+						<category name="Loaders / Turrets / (Surveyors / Badass Slag Skag)">
+							<hotfix name="Name" level="None">
+								<code profiles="default">set TESTINGZONE_COMBAT.TheWorld:PersistentLevel.Main_Sequence.Third_Combat_Area.SeqAct_RandomSwitch_21 OutputLinks ((links=((linkedop=SeqAct_Toggle'TESTINGZONE_COMBAT.TheWorld:PersistentLevel.Main_Sequence.Third_Combat_Area.SeqAct_Toggle_28',inputlinkidx=0)),linkdesc="Link 1",bhasimpulse=False,bdisabled=False,bdisabledpie=False,bclampedmax=False,bclampedmin=False,bhidden=False,bisactivated=False,bmoving=False,linkedop=None,activatedelay=0.000000))</code>
+							</hotfix>
+						</category>
+						<category name="(Skags + Spidertank + Psychos)">
+							<hotfix name="Name" level="None">
+								<code profiles="">set TESTINGZONE_COMBAT.TheWorld:PersistentLevel.Main_Sequence.Third_Combat_Area.SeqAct_RandomSwitch_21 OutputLinks ((links=((linkedop=SeqAct_Toggle'TESTINGZONE_COMBAT.TheWorld:PersistentLevel.Main_Sequence.Third_Combat_Area.SeqAct_Toggle_32',inputlinkidx=0)),linkdesc="Link 1",bhasimpulse=False,bdisabled=False,bdisabledpie=False,bclampedmax=False,bclampedmin=False,bhidden=False,bisactivated=False,bmoving=False,linkedop=None,activatedelay=0.000000))</code>
+							</hotfix>
+						</category>
+						<category name="(Surveyors + Constructor) / All Badasses">
+							<hotfix name="Name" level="None">
+								<code profiles="">set TESTINGZONE_COMBAT.TheWorld:PersistentLevel.Main_Sequence.Third_Combat_Area.SeqAct_RandomSwitch_21 OutputLinks ((links=((linkedop=SeqAct_Toggle'TESTINGZONE_COMBAT.TheWorld:PersistentLevel.Main_Sequence.Third_Combat_Area.SeqAct_Toggle_36',inputlinkidx=0)),linkdesc="Link 1",bhasimpulse=False,bdisabled=False,bdisabledpie=False,bclampedmax=False,bclampedmin=False,bhidden=False,bisactivated=False,bmoving=False,linkedop=None,activatedelay=0.000000))</code>
+							</hotfix>
+						</category>
+						<category name="(Turrets + All Badasses) / (Badass Slag Skag + Bandits)">
+							<hotfix name="Name" level="None">
+								<code profiles="">set TESTINGZONE_COMBAT.TheWorld:PersistentLevel.Main_Sequence.Third_Combat_Area.SeqAct_RandomSwitch_21 OutputLinks ((links=((linkedop=SeqAct_Toggle'TESTINGZONE_COMBAT.TheWorld:PersistentLevel.Main_Sequence.Third_Combat_Area.SeqAct_Toggle_0',inputlinkidx=0)),linkdesc="Link 1",bhasimpulse=False,bdisabled=False,bdisabledpie=False,bclampedmax=False,bclampedmin=False,bhidden=False,bisactivated=False,bmoving=False,linkedop=None,activatedelay=0.000000))</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Section #2" MUT="true">
+						<category name="(EXP Loaders) / (War Loader + Surveyor)">
+							<hotfix name="Name" level="None">
+								<code profiles="default">set TESTINGZONE_COMBAT.TheWorld:PersistentLevel.Main_Sequence.Third_Combat_Area.SeqAct_RandomSwitch_4 OutputLinks ((links=((linkedop=SeqAct_Toggle'TESTINGZONE_COMBAT.TheWorld:PersistentLevel.Main_Sequence.Third_Combat_Area.SeqAct_Toggle_29',inputlinkidx=0)),linkdesc="Link 1",bhasimpulse=False,bdisabled=False,bdisabledpie=False,bclampedmax=False,bclampedmin=False,bhidden=False,bisactivated=False,bmoving=False,linkedop=None,activatedelay=0.000000))</code>
+							</hotfix>
+						</category>
+						<category name="(Bandits) + (All Badasses / Surveyors)">
+							<hotfix name="Name" level="None">
+								<code profiles="">set TESTINGZONE_COMBAT.TheWorld:PersistentLevel.Main_Sequence.Third_Combat_Area.SeqAct_RandomSwitch_4 OutputLinks ((links=((linkedop=SeqAct_Toggle'TESTINGZONE_COMBAT.TheWorld:PersistentLevel.Main_Sequence.Third_Combat_Area.SeqAct_Toggle_33',inputlinkidx=0)),linkdesc="Link 1",bhasimpulse=False,bdisabled=False,bdisabledpie=False,bclampedmax=False,bclampedmin=False,bhidden=False,bisactivated=False,bmoving=False,linkedop=None,activatedelay=0.000000))</code>
+							</hotfix>
+						</category>
+						<category name="(Skags) / (All Badasses + Badass Surveyor)">
+							<hotfix name="Name" level="None">
+								<code profiles="">set TESTINGZONE_COMBAT.TheWorld:PersistentLevel.Main_Sequence.Third_Combat_Area.SeqAct_RandomSwitch_4 OutputLinks ((links=((linkedop=SeqAct_Toggle'TESTINGZONE_COMBAT.TheWorld:PersistentLevel.Main_Sequence.Third_Combat_Area.SeqAct_Toggle_37',inputlinkidx=0)),linkdesc="Link 1",bhasimpulse=False,bdisabled=False,bdisabledpie=False,bclampedmax=False,bclampedmin=False,bhidden=False,bisactivated=False,bmoving=False,linkedop=None,activatedelay=0.000000))</code>
+							</hotfix>
+						</category>
+						<category name="(Spidertank + Surveyor) / (All Badasses + Surveyors)">
+							<hotfix name="Name" level="None">
+								<code profiles="">set TESTINGZONE_COMBAT.TheWorld:PersistentLevel.Main_Sequence.Third_Combat_Area.SeqAct_RandomSwitch_4 OutputLinks ((links=((linkedop=SeqAct_Toggle'TESTINGZONE_COMBAT.TheWorld:PersistentLevel.Main_Sequence.Third_Combat_Area.SeqAct_Toggle_6',inputlinkidx=0)),linkdesc="Link 1",bhasimpulse=False,bdisabled=False,bdisabledpie=False,bclampedmax=False,bclampedmin=False,bhidden=False,bisactivated=False,bmoving=False,linkedop=None,activatedelay=0.000000))</code>
+							</hotfix>
+						</category>
+					</category>
+				</category>
+			</category>
+		</category>
+	</body>
+</BLCMM>
+
+#Commands:
+
+#Hotfixes:
+set Transient.SparkServiceConfiguration_6 Keys ("SparkLevelPatchEntry-GBX_fixes1","SparkLevelPatchEntry-GBX_fixes2","SparkLevelPatchEntry-GBX_fixes3","SparkLevelPatchEntry-GBX_fixes4","SparkLevelPatchEntry-GBX_fixes5","SparkLevelPatchEntry-GBX_Fixes6","SparkLevelPatchEntry-GBX_Fixes7","SparkLevelPatchEntry-GBX_Fixes8","SparkLevelPatchEntry-GBX_Fixes9","SparkLevelPatchEntry-GBX_fixes10","SparkLevelPatchEntry-GBX_fixes11","SparkLevelPatchEntry-GBX_fixes12","SparkLevelPatchEntry-GBX_fixes13","SparkLevelPatchEntry-GBX_fixes14","SparkOnDemandPatchEntry-GBX_fixes15","SparkOnDemandPatchEntry-GBX_fixes16","SparkOnDemandPatchEntry-GBX_fixes17","SparkOnDemandPatchEntry-GBX_fixes18","SparkOnDemandPatchEntry-GBX_fixes19","SparkPatchEntry-GBX_fixes20","SparkPatchEntry-GBX_fixes21","SparkPatchEntry-GBX_fixes22","SparkPatchEntry-GBX_fixes23","SparkLevelPatchEntry-CustomPeak1","SparkLevelPatchEntry-CustomPeak2","SparkLevelPatchEntry-CustomPeak3","SparkLevelPatchEntry-ChaneablePeak1","SparkLevelPatchEntry-CustomPeak4","SparkLevelPatchEntry-ChangeablePeak1","SparkLevelPatchEntry-CustomPeak5","SparkLevelPatchEntry-CustomPeak6","SparkLevelPatchEntry-CustomPeak7","SparkLevelPatchEntry-CustomPeak8","SparkLevelPatchEntry-Name1","SparkLevelPatchEntry-Name2","SparkLevelPatchEntry-Name3","SparkLevelPatchEntry-Name4","SparkLevelPatchEntry-CustomPeak9","SparkLevelPatchEntry-CustomPeak10","SparkLevelPatchEntry-Name5","SparkLevelPatchEntry-Name6")
+set Transient.SparkServiceConfiguration_6 Values (",GD_Balance.WeightingPlayerCount.BugmorphCocoon_PerPlayers_Phase1,ConditionalInitialization.ConditionalExpressionList[4].BaseValueIfTrue.BaseValueConstant,0.700000,.8",",GD_Balance.WeightingPlayerCount.BugmorphCocoon_PerPlayers_Phase2,ConditionalInitialization.ConditionalExpressionList[4].BaseValueIfTrue.BaseValueConstant,0.400000,.5",",GD_Balance.WeightingPlayerCount.BugmorphCocoon_PerPlayers_Phase3,ConditionalInitialization.ConditionalExpressionList[4].BaseValueIfTrue.BaseValueConstant,0.200000,.3",",GD_Balance.WeightingPlayerCount.BugmorphCocoon_PerPlayers_Phase4,ConditionalInitialization.ConditionalExpressionList[4].BaseValueIfTrue.BaseValueConstant,0.100000,.2",",GD_Balance.WeightingPlayerCount.BugmorphCocoon_PerPlayers_Phase5,ConditionalInitialization.ConditionalExpressionList[4].BaseValueIfTrue.BaseValueConstant,0.075000,.1","SouthpawFactory_P,GD_Population_Marauder.Balance.Unique.PawnBalance_Assassin1,DefaultItemPoolList[3].PoolProbability.BaseValueScaleConstant,0.250000,1","SouthpawFactory_P,GD_Population_Nomad.Balance.Unique.PawnBalance_Assassin2,DefaultItemPoolList[4].PoolProbability.BaseValueScaleConstant,0.250000,1","SouthpawFactory_P,GD_Population_Psycho.Balance.Unique.PawnBalance_Assassin3,DefaultItemPoolList[1].PoolProbability.BaseValueScaleConstant,0.250000,1","SouthpawFactory_P,GD_Population_Rat.Balance.Unique.PawnBalance_Assassin4,DefaultItemPoolList[3].PoolProbability.BaseValueScaleConstant,0.250000,1",",GD_Sage_Rare_Scaylion.Population.PawnBalance_Sage_Rare_Scaylion,DefaultItemPoolList[1].PoolProbability.BaseValueScaleConstant,1.000000,100",",GD_Sage_Rare_Drifter.Balance.PawnBalance_Sage_Rare_Drifter,DefaultItemPoolList[0].PoolProbability.BaseValueScaleConstant,1.000000,100",",GD_Sage_Rare_Rhino.Population.PawnBalance_Sage_Rare_Rhino,DefaultItemPoolList[1].PoolProbability.BaseValueScaleConstant,1.000000,100",",GD_Sage_Rare_Skag.Population.PawnBalance_Sage_Rare_Skag,DefaultItemPoolList[1].PoolProbability.BaseValueScaleConstant,1.000000,100",",GD_Sage_Rare_Spore.Population.PawnBalance_Sage_Rare_Spore,DefaultItemPoolList[0].PoolProbability.BaseValueScaleConstant,1.000000,100","GD_Assassin_Streaming,GD_Assassin_Skills.Sniping.Velocity,SkillEffectDefinitions[0].ModifierType,MT_PostAdd,MT_Scale","GD_Tulip_Mechro_Streaming,GD_Tulip_Mechromancer_Skills.LittleBigTrouble.WiresDontTalk,SkillEffectDefinitions,,((AttributeToModify=D_Attributes.DamageTypeModifers.InstigatedShockDamageModifier,bIncludeDuelingTargets=False,bIncludeSelfAsTarget=False,bOnlyEffectTargetsInRange=False,bExcludeNonPlayerCharacters=False,EffectTarget=TARGET_Self,TargetInstanceDataName=,TargetCriteria=CRITERIA_None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.030000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),GradeToStartApplyingEffect=1,PerGradeUpgradeInterval=1,PerGradeUpgrade=(BaseValueConstant=0.030000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),BonusUpgradeList=),(AttributeToModify=D_Attributes.DamageTypeModifers.InstigatedShockStatusDamageModifier,bIncludeDuelingTargets=False,bIncludeSelfAsTarget=False,bOnlyEffectTargetsInRange=False,bExcludeNonPlayerCharacters=False,EffectTarget=TARGET_Self,TargetInstanceDataName=,TargetCriteria=CRITERIA_None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.030000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),GradeToStartApplyingEffect=1,PerGradeUpgradeInterval=1,PerGradeUpgrade=(BaseValueConstant=0.030000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),BonusUpgradeList=))","GD_Siren_Streaming,GD_Siren_Skills.Misc.Init_BlightPhoenix_DamageCalc_Part2,ValueFormula.Level.InitializationDefinition,AttributeInitializationDefinition'GD_Balance_HealthAndDamage.HealthAndDamage.Init_PlayerMeleeDamage',AttributeInitializationDefinition'GD_Balance_HealthAndDamage.HealthAndDamage.Init_PlayerSkillDamage'","GD_Siren_Streaming,GD_Siren_Skills.Misc.Init_BlightPhoenix_DamageCalc_Part2,ValueFormula.Level.BaseValueScaleConstant,1.000000,3.5","GD_Assassin_Streaming,GD_Assassin_Skills.Misc.Att_DeathMark_BonusDamage,BaseValue.BaseValueConstant,0.200000,.8","GD_Itempools.Runnables.Pool_FourAssassins,BalancedItems[1].Probability.InitializationDefinition,None,GD_Balance.Weighting.Weight_1_Common","GD_Shields.Projectiles.Proj_LegendaryBoosterShield:BehaviorProviderDefinition_1.Behavior_Explode_140,BehaviorSequences[0].BehaviorData2[7].Behavior.StatusEffectDamage.BaseValueAttribute,None,D_Attributes.Projectile.ProjectileDamage","GD_Shields.Projectiles.Proj_LegendaryBoosterShield:BehaviorProviderDefinition_1.Behavior_Explode_140,BehaviorSequences[0].BehaviorData2[7].Behavior.StatusEffectDamage.BaseValueScaleConstant,1.000000,.25","GD_Shields.Projectiles.Proj_LegendaryBoosterShield:BehaviorProviderDefinition_1.Behavior_Explode_140,BehaviorSequences[0].BehaviorData2[7].Behavior.StatusEffectChance.BaseValueConstant,1.000000,20","TestingZone_P,TESTINGZONE_COMBAT.TheWorld:PersistentLevel.Main_Sequence.First_Combat_Area.SeqAct_RandomSwitch_0,LinkCount,,1","TestingZone_P,TESTINGZONE_COMBAT.TheWorld:PersistentLevel.Main_Sequence.First_Combat_Area.SeqAct_RandomSwitch_4,LinkCount,,1","TestingZone_P,TESTINGZONE_COMBAT.TheWorld:PersistentLevel.Main_Sequence.First_Combat_Area.SeqAct_RandomSwitch_5,LinkCount,,1",",TESTINGZONE_COMBAT.TheWorld:PersistentLevel.Main_Sequence.First_Combat_Area.SeqAct_RandomSwitch_5,OutputLinks,,((links=((linkedop=SeqAct_Toggle'TESTINGZONE_COMBAT.TheWorld:PersistentLevel.Main_Sequence.First_Combat_Area.SeqAct_Toggle_23',inputlinkidx=0),(linkedop=SeqAct_Log'TESTINGZONE_COMBAT.TheWorld:PersistentLevel.Main_Sequence.First_Combat_Area.SeqAct_Log_1',inputlinkidx=0)),linkdesc=\"Link 1\",bhasimpulse=False,bdisabled=False,bdisabledpie=False,bclampedmax=False,bclampedmin=False,bhidden=False,bisactivated=False,bmoving=False,linkedop=None,activatedelay=0.000000))","TestingZone_P,TESTINGZONE_COMBAT.TheWorld:PersistentLevel.Main_Sequence.First_Combat_Area.SeqAct_RandomSwitch_0,OutputLinks,,((links=((linkedop=SeqAct_Toggle'TESTINGZONE_COMBAT.TheWorld:PersistentLevel.Main_Sequence.First_Combat_Area.SeqAct_Toggle_24',inputlinkidx=0)),linkdesc=\"Link 1\",bhasimpulse=False,bdisabled=False,bdisabledpie=False,bclampedmax=False,bclampedmin=False,bhidden=False,bisactivated=False,bmoving=False,linkedop=None,activatedelay=0.000000))",",TESTINGZONE_COMBAT.TheWorld:PersistentLevel.Main_Sequence.First_Combat_Area.SeqAct_RandomSwitch_4,OutputLinks,,((links=((linkedop=SeqAct_Toggle'TESTINGZONE_COMBAT.TheWorld:PersistentLevel.Main_Sequence.First_Combat_Area.SeqAct_Toggle_25',inputlinkidx=0)),linkdesc=\"Link 1\",bhasimpulse=False,bdisabled=False,bdisabledpie=False,bclampedmax=False,bclampedmin=False,bhidden=False,bisactivated=False,bmoving=False,linkedop=None,activatedelay=0.000000))","TestingZone_P,TESTINGZONE_COMBAT.TheWorld:PersistentLevel.Main_Sequence.Second_Combat_Area.SeqAct_RandomSwitch_18,LinkCount,,1","TestingZone_P,TESTINGZONE_COMBAT.TheWorld:PersistentLevel.Main_Sequence.Second_Combat_Area.SeqAct_RandomSwitch_19,LinkCount,,1","TestingZone_P,TESTINGZONE_COMBAT.TheWorld:PersistentLevel.Main_Sequence.Second_Combat_Area.SeqAct_RandomSwitch_20,LinkCount,,1","TestingZone_P,TESTINGZONE_COMBAT.TheWorld:PersistentLevel.Main_Sequence.Second_Combat_Area.SeqAct_RandomSwitch_4,LinkCount,,1",",TESTINGZONE_COMBAT.TheWorld:PersistentLevel.Main_Sequence.Second_Combat_Area.SeqAct_RandomSwitch_18,OutputLinks,,((links=((linkedop=SeqAct_Toggle'TESTINGZONE_COMBAT.TheWorld:PersistentLevel.Main_Sequence.Second_Combat_Area.SeqAct_Toggle_31',inputlinkidx=0)),linkdesc=\"Link 1\",bhasimpulse=False,bdisabled=False,bdisabledpie=False,bclampedmax=False,bclampedmin=False,bhidden=False,bisactivated=False,bmoving=False,linkedop=None,activatedelay=0.000000))",",TESTINGZONE_COMBAT.TheWorld:PersistentLevel.Main_Sequence.Second_Combat_Area.SeqAct_RandomSwitch_19,OutputLinks,,((links=((linkedop=SeqAct_Toggle'TESTINGZONE_COMBAT.TheWorld:PersistentLevel.Main_Sequence.Second_Combat_Area.SeqAct_Toggle_24',inputlinkidx=0)),linkdesc=\"Link 1\",bhasimpulse=False,bdisabled=False,bdisabledpie=False,bclampedmax=False,bclampedmin=False,bhidden=False,bisactivated=False,bmoving=False,linkedop=None,activatedelay=0.000000))",",TESTINGZONE_COMBAT.TheWorld:PersistentLevel.Main_Sequence.Second_Combat_Area.SeqAct_RandomSwitch_20,OutputLinks,,((links=((linkedop=SeqAct_Toggle'TESTINGZONE_COMBAT.TheWorld:PersistentLevel.Main_Sequence.Second_Combat_Area.SeqAct_Toggle_33',inputlinkidx=0)),linkdesc=\"Link 1\",bhasimpulse=False,bdisabled=False,bdisabledpie=False,bclampedmax=False,bclampedmin=False,bhidden=False,bisactivated=False,bmoving=False,linkedop=None,activatedelay=0.000000))",",TESTINGZONE_COMBAT.TheWorld:PersistentLevel.Main_Sequence.Second_Combat_Area.SeqAct_RandomSwitch_4,OutputLinks,,((links=((linkedop=SeqAct_Toggle'TESTINGZONE_COMBAT.TheWorld:PersistentLevel.Main_Sequence.Second_Combat_Area.SeqAct_Toggle_30',inputlinkidx=0)),linkdesc=\"Link 1\",bhasimpulse=False,bdisabled=False,bdisabledpie=False,bclampedmax=False,bclampedmin=False,bhidden=False,bisactivated=False,bmoving=False,linkedop=None,activatedelay=0.000000))","TestingZone_P,TESTINGZONE_COMBAT.TheWorld:PersistentLevel.Main_Sequence.Third_Combat_Area.SeqAct_RandomSwitch_21,LinkCount,,1","TestingZone_P,TESTINGZONE_COMBAT.TheWorld:PersistentLevel.Main_Sequence.Third_Combat_Area.SeqAct_RandomSwitch_4,LinkCount,,1",",TESTINGZONE_COMBAT.TheWorld:PersistentLevel.Main_Sequence.Third_Combat_Area.SeqAct_RandomSwitch_21,OutputLinks,,((links=((linkedop=SeqAct_Toggle'TESTINGZONE_COMBAT.TheWorld:PersistentLevel.Main_Sequence.Third_Combat_Area.SeqAct_Toggle_28',inputlinkidx=0)),linkdesc=\"Link 1\",bhasimpulse=False,bdisabled=False,bdisabledpie=False,bclampedmax=False,bclampedmin=False,bhidden=False,bisactivated=False,bmoving=False,linkedop=None,activatedelay=0.000000))",",TESTINGZONE_COMBAT.TheWorld:PersistentLevel.Main_Sequence.Third_Combat_Area.SeqAct_RandomSwitch_4,OutputLinks,,((links=((linkedop=SeqAct_Toggle'TESTINGZONE_COMBAT.TheWorld:PersistentLevel.Main_Sequence.Third_Combat_Area.SeqAct_Toggle_29',inputlinkidx=0)),linkdesc=\"Link 1\",bhasimpulse=False,bdisabled=False,bdisabledpie=False,bclampedmax=False,bclampedmin=False,bhidden=False,bisactivated=False,bmoving=False,linkedop=None,activatedelay=0.000000))")
+
