@@ -2,7 +2,7 @@
 
 Vous jouez à *Borderlands 2* en version Française et vous avez entièrement raison car les acteurs de doublage Français (Christophe Lemoine pour *Le Beau Jack*, Sophie Riffont pour *Moxxi*, Sylvain Lemarié pour *Marcus Kincaid*,  Isabelle Volpe pour *Tiny Tina*, Frédéric Souterelle pour *Sir Hammerlock*, Caroline Pascal pour *Gaige*, etc...) on fait un excellent travail.
 
-Le Mod *OLASGN's Manufacturer Sorted Vending Machines* est un simple patch de traduction qui permet d'obtenir en Français tous ajouts de textes (Anglais) du Mod *OurLordAndSaviorGabeNewell's Better Mysterious Amulet*.
+Le Mod *OLASGN's Manufacturer Sorted Vending Machines* est un simple patch de traduction qui permet d'obtenir en Français tous ajouts de textes (Anglais) du Mod *OurLordAndSaviorGabeNewell's Manufacturer Sorted Vending Machines*.
 
 ### Utilisation:
 
