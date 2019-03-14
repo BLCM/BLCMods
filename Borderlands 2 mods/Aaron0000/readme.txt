@@ -1,6 +1,7 @@
 Images of my mods can be seen at;
-Allegiance COMs - https://imgur.com/a/DbPPL
 Accessories and Barrels - https://imgur.com/a/43d1B
+Allegiance COMs - https://imgur.com/a/DbPPL
+Atlas Reborn - https://imgur.com/a/G7AlR
 Big Standard Gear Reskin Pack - https://imgur.com/a/toY5w3u
 BL1 Recreations - https://imgur.com/a/8Vbml
 BL1 Colors - https://imgur.com/a/2EKr8
