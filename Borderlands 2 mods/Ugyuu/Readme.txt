@@ -7,6 +7,4 @@ UI font mods may be re-modified in the way to your liking, but please give me cr
 
 Do not host these files on other websites.
 
-Feedback is extremely appreciated.
-
-If you have feedback for improvements on my mods, i will only make changes to it if i agree on the feedback.
+[NOTE] My mods are slightly to noticably overpowered. This is mostly because i don't have that much experience in bl2.
