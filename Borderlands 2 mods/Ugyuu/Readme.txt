@@ -10,10 +10,3 @@ You may reupload my mods to Nexus, but make sure to note that I've made them, so
 
 ## Note For Visitors
 My mods are slightly to noticably overpowered. This is mostly because i don't have that much experience in bl2.
-
-# H1
-## H2
-### H3
-#### H4
-##### H5
-###### H6
