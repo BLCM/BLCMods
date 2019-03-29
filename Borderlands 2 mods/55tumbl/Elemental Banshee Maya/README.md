@@ -116,6 +116,9 @@ Thanks to Apocalyptech for his BPD graph generator, this thing is so damn useful
 
 # Change log
 
+[2019-03-29] v1.5:
+* Worked around a bug that gave semi-infinite phaselock when the subsequence bubble hits an immune target (thanks to AppleHookah for noticing).
+
 [2018-10-29] v1.4:
 * Fixed a bug that deactivated Nephilim when riding a vehicle (for real this time, hopefully);
 * Fixed a visual issue with Siren Song stacks flickering when in a vehicle.
