@@ -123,6 +123,15 @@
 					</category>
 				</category>
 			</category>
+			<comment></comment>
+			<category name="Grinder Fix For One Load From Main Menu">
+				<category name="Code">
+					<code profiles="default">set Loader.TheWorld:PersistentLevel.WillowInventoryManager_0.WillowInventoryStorage_2 ChestSlots 3</code>
+				</category>
+			</category>
+			<comment>Unfortunately, TPS uses 4 different objects that use this value.  One of which is the Grinder, which results in having to sacrifice 40-200 items to grind once.</comment>
+			<comment>I can do a fix for the very first time that you enter the game from the Main Menu, but if you save and quit and re-enter without restarting, it assigns a completely random object number combination that I cannot fix.</comment>
+			<comment>This is the best that I can do with the capabilities that I have.  Some alternatives to this is to just not use this mod if you are Grinding or only use the Unlimited option as it does not affect capacity numbers directly.</comment>
 		</category>
 	</body>
 </BLCMM>
@@ -130,4 +139,5 @@
 #Commands:
 set WillowInventoryManager InventorySlotMax_Misc 40
 set WillowInventoryStorage ChestSlots 40
+set Loader.TheWorld:PersistentLevel.WillowInventoryManager_0.WillowInventoryStorage_2 ChestSlots 3
 
