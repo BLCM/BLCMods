@@ -10,17 +10,15 @@ Ask me for permission first if you wish to use larger portions of this code, mak
 
 # Overview
 
-The Skill Scaling Patch fixes a number of bugs or inconsistencies about the way skills scale with level, and across playthroughs. It is not meant to "fix" the balance of the game according to my personal preferences, but merely to make it work as was (most probably) intended. It does clearly improve some aspects of the balance, though. The skills that are the most affected are Ruin (Maya), Light the Fuse (Krieg), Deathtrap and all its damage abilities (Gaige), the Sabre Turret and all its damage abilities (Axton).
+The Skill Scaling Patch fixes a number of bugs or inconsistencies in character skills, mostly about the way they scale with level, and across playthroughs. It is not meant to change the balance of the game according to my personal preferences, but to make it work as intended (or at least more consistently), which does improve some aspects of the balance. The skills that are the most affected are Phaselock and Ruin (Maya), Light the Fuse (Krieg), Deathtrap and all its damage abilities (Gaige), the Sabre Turret and all its damage abilities (Axton).
 
 Concerning Deathtrap and the Sabre Turret, the main problem addressed by this patch was actually not present on console. With the Skill Scaling Patch, their damage output should thus be identical (or close) to what it is on console. And that makes a huge difference on their end-game viability.
 
 # Compatibility
 
-The Skill Scaling Patch can be used as a standalone, for a vanilla experience with less bugs, and to meet Deathtrap and the Sabre Turret the way they were supposed to be (and actually are, on console).
-
-The Skill Scaling Patch (v1.0) is included in the Unofficial Community Patch, as of version 4.1.
-
-You can also try to merge it with other mods, using [BLCMM](https://www.youtube.com/watch?v=VkRgUqru3oU&t=27s). However, this may create serious incompatibilities if the other mods affect the skills modified by the Skill Scaling Patch, or even skills in general. I'd recommend adding the Skill Scaling Patch after other mods, and disabling any changes affecting the mentioned skills, in those other mods. 
+The Skill Scaling Patch can be used as a standalone, for a vanilla experience with less bugs, and to meet Deathtrap and the Sabre Turret the way they were supposed to be (and actually are, on console). You can also try to combine it with other mods, using BLCMM. However, this may create incompatibilities if the other mods affect the skills modified by the Skill Scaling Patch, or even skills in general. I'd recommend importing the Skill Scaling Patch after other mods, and disabling any changes affecting the mentioned skills, in those other mods.
+   
+The Skill Scaling Patch (v1.0) is included in the Unofficial Community Patch, as of version 4.1. If you are using the UCP 4.1, you already have most of the Skill Scaling Patch. However, the fixes to Phaselock, Immolate, Made of Sterner Stuff, Electrical Burn, and Deathtrap's Shock ranged attacks are not (yet) included in the UCP. If you want those, you can simply import the current version of the Skill Scaling Patch as a single mod after the UCP. I strongly recommend to disable the Electrical Burn fix, since this skill already receives a very strong (indirect) boost in the UCP.
 
 # Detailed changes
 
@@ -38,6 +36,13 @@ You can find [here](http://blstats.com/skilldamage.php) all the damage values at
 
 **Scorn**: made to scale like other skills.   
 * Damage increase of +60% at level 30, +100% at level 50, +144% at 72, +160% at OP8
+
+**(optional) Phaselock**: activates Wreck/Elated/Chain Reaction after hitting immune target.  
+* After hitting a non-phaselockable target, Phaselock remains artificially active for the base phaselock duration of 5 seconds (not affected by Suspension).
+* During that time, Chain Reaction, Elated, and Wreck are active (if specced into) and give all their bonuses.
+* Phaselock cooldown will only start after this phase is finished (even if not specced into Wreck/Elated/Chain Reaction)
+* It does not change anything about the way Phaselock works with regular targets.
+* When combined with Subsequence, a bug may sometimes happen that will keep Phaselock active for a few additional seconds.
 
 **Immolate**: compensate for the double dip in damage penalty against higher level enemies in the OP levels (the special mechanics of this skill made it so that it was doing only about 20% damage versus a level 80 enemy, while other skills and weapons are doing 45% damage).   
 * No effect up to level 72. Damage increase in the OP levels, up to +122% at OP8.
@@ -65,7 +70,9 @@ You can find [here](http://blstats.com/skilldamage.php) all the damage values at
 
 **Deathtrap**: Fixed a bug that made the interaction between Make it Sparkle and Sharing is Caring (with a roid shield) completely broken.
 
-**Deathtrap**: Made his ranged shock attack (used against flying and non-phaselockable targets) benefit from all his melee damage bonuses, including roid damage from Sharing is Caring, and Make it Sparkle. This makes his damage output more consistent against different types of enemies. The animation was modified so that the damage is spread over 2 damage ticks instead of 7 (per shock beam), but the overall damage should be exactly the same in absence of any melee damage bonuses.
+**(optional) Deathtrap**: Made his ranged shock attack (used against flying and non-phaselockable targets) benefit from all his melee damage bonuses, including roid damage from Sharing is Caring, and Make it Sparkle. This makes his damage output more consistent against different types of enemies. The animation was modified so that the damage is spread over 2 damage ticks instead of 7 (per shock beam), but the overall damage should be exactly the same in absence of any melee damage bonuses.
+
+**Made of Sterner Stuff**: fixed a bug that gave Gaige too much damage reduction against Burn status effect.
 
 **Electrical Burn**: compensate for the double dip in damage penalty against higher level enemies in the OP levels (the special mechanics of this skill made it so that it was doing only about 20% damage versus a level 80 enemy, while other skills and weapons are doing 45% damage).   
 * No effect up to level 72. Damage increase in the OP levels, up to +122% at OP8.
@@ -91,6 +98,7 @@ Thanks to Koby for making me want to do something about it, and inviting me to S
 
 # Change log
 
+* [2019-04-08] v2.5: Added the fix to Made of Sterner Stuff, and included the changes making Phaselock active after hitting an immune target.
 * [2018-08-09] v2.1: Added the modifications to Deathtrap's ranged shock attacks.
 * [2018-07-31] v2.0: Added the Immolate & Electrical Burn fixes.
 * [2018-07-18] v1.1: Fixed a small issue with the calculation of the Phalanx Shield Capacity. Switched to BLCMM-compatible format.
