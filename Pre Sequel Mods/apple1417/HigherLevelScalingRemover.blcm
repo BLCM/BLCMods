@@ -1,0 +1,33 @@
+<BLCMM v="1">
+#<!!!You opened a file saved with BLCMM in FilterTool. Please update to BLCMM to properly open this file!!!>
+	<head>
+		<type name="TPS" offline="false"/>
+		<profiles>
+			<profile name="default" current="true"/>
+		</profiles>
+	</head>
+	<body>
+		<category name="Higher Level Scaling Remover">
+			<comment># By apple1417</comment>
+			<comment># Removes various forms of scaling that happen when there is a large level difference between you and your enemy</comment>
+			<category name="Player damage reduction">
+				<code profiles="default">set GD_Globals.General.Globals PlayerDamageScaleByLevelDifference ((LevelDifference=1,HigherLevelAttackerDmgScale=1.000000,LowerLevelAttackerDmgScale=1.000000))</code>
+			</category>
+			<category name="Enemy extra damage">
+				<code profiles="default">set GD_Globals.General.Globals AIDamageScaleByLevelDifference ((LevelDifference=1,HigherLevelAttackerDmgScale=1.000000,LowerLevelAttackerDmgScale=1.000000))</code>
+			</category>
+			<category name="XP scaling">
+				<code profiles="default">set GD_Globals.General.Globals ExpScaleByLevelDifference ((LevelDifference=1,HigherLevelEnemyExpScale=1.000000,LowerLevelEnemyExpScale=1.000000))</code>
+			</category>
+			<category name="Status Effect Chance">
+				<code profiles="default">set GD_Globals.General.Globals StatusEffectChanceScales ((LevelDifference=1,HigherLevelChanceScale=1.000000,LowerLevelChanceScale=1.000000))</code>
+			</category>
+		</category>
+	</body>
+</BLCMM>
+
+#Commands:
+set GD_Globals.General.Globals PlayerDamageScaleByLevelDifference ((LevelDifference=1,HigherLevelAttackerDmgScale=1.000000,LowerLevelAttackerDmgScale=1.000000))
+set GD_Globals.General.Globals AIDamageScaleByLevelDifference ((LevelDifference=1,HigherLevelAttackerDmgScale=1.000000,LowerLevelAttackerDmgScale=1.000000))
+set GD_Globals.General.Globals ExpScaleByLevelDifference ((LevelDifference=1,HigherLevelEnemyExpScale=1.000000,LowerLevelEnemyExpScale=1.000000))
+set GD_Globals.General.Globals StatusEffectChanceScales ((LevelDifference=1,HigherLevelChanceScale=1.000000,LowerLevelChanceScale=1.000000))
