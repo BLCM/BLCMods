@@ -18,14 +18,15 @@
 			<comment></comment>
 			<comment>Needless to say, this mod requires the Pirate's Booty and Sir Hammerlock's Big Game Hunt DLCs.</comment>
 			<comment></comment>
-			<comment>Known compatability and issues:</comment>
+			<comment>Known compatibility and issues:</comment>
 			<comment></comment>
 			<comment>1. Mod does not work for clients if the host is using it and the client is not.</comment>
 			<comment>2. Works well for clients and host if the host and client are both using this mod.</comment>
 			<comment>3. Works for client if the host is not using it, but causes the host's game to explode and require Alt F4'ing if the host enters the terminal with the new vehicle type selected.</comment>
 			<comment>4. Tiny Vehicles in Ellie's Garage fall down into the corridor below the vehicle lifts.</comment>
+			<comment>5. Sometimes a vehicle will just refuse to spawn, which I have no clue how to fix.  Just try the other vehicle option and hope it works.</comment>
 			<comment></comment>
-			<category name="Making Them Available">
+			<category name="Making All Vehicles Available">
 				<category name="Pirate's Booty Catch-A-Rides">
 					<category name="Code">
 						<hotfix name="Name" level="None">
@@ -138,207 +139,617 @@
 			</category>
 			<category name="Text Changes">
 				<category name="Hovercraft Family">
-					<hotfix name="Name" level="None">
-						<code profiles="default">set GD_OrchidPackageDef.Vehicles.VehicleFamily_Hovercraft FamilyName <font size="70"> <font color="#F57500"> <font size="70"> <font color="#F57500"><font size="70"> <font color="#F57500"> SANDSKIFF</code>
-					</hotfix>
+					<category name="Code">
+						<hotfix name="Name" level="None">
+							<code profiles="default">set GD_OrchidPackageDef.Vehicles.VehicleFamily_Hovercraft FamilyName <font size="70"> <font color="#F57500"> <font size="70"> <font color="#F57500"><font size="70"> <font color="#F57500"> SANDSKIFF</code>
+						</hotfix>
+					</category>
 				</category>
 				<category name="Fan Boat Family">
-					<hotfix name="Name" level="None">
-						<code profiles="default">set GD_SagePackageDef.Vehicles.VehicleFamily_FanBoat FamilyName <font size="70"> <font color="#F57500"> <font size="70"> <font color="#F57500"> <font size="70"> <font color="#F57500"> FAN BOAT</code>
-					</hotfix>
+					<category name="Code">
+						<hotfix name="Name" level="None">
+							<code profiles="default">set GD_SagePackageDef.Vehicles.VehicleFamily_FanBoat FamilyName <font size="70"> <font color="#F57500"> <font size="70"> <font color="#F57500"> <font size="70"> <font color="#F57500"> FAN BOAT</code>
+						</hotfix>
+					</category>
 				</category>
 				<category name="Bandit Technical Family">
-					<hotfix name="Name" level="None">
-						<code profiles="default">set GD_Globals.VehicleSpawnStation.VehicleFamily_BanditTechnical FamilyName <font size="70"> <font color="#F57500"> <font size="45"> <font color="#F57500"> <font size="70"> <font color="#F57500"> TECHNICAL</code>
-					</hotfix>
+					<category name="Code">
+						<hotfix name="Name" level="None">
+							<code profiles="default">set GD_Globals.VehicleSpawnStation.VehicleFamily_BanditTechnical FamilyName <font size="70"> <font color="#F57500"> <font size="45"> <font color="#F57500"> <font size="70"> <font color="#F57500"> TECHNICAL</code>
+						</hotfix>
+					</category>
 				</category>
 				<category name="Light Runner Family">
-					<hotfix name="Name" level="None">
-						<code profiles="default">set GD_Globals.VehicleSpawnStation.VehicleFamily_Runner FamilyName <font size="70"> <font color="#F57500"> <font size="70"> <font color="#F57500"> <font size="70"> <font color="#F57500"> <font color="#F57500"> <font size="70"><font color="#F57500">RUNNER</code>
-					</hotfix>
+					<category name="Code">
+						<hotfix name="Name" level="None">
+							<code profiles="default">set GD_Globals.VehicleSpawnStation.VehicleFamily_Runner FamilyName <font size="70"> <font color="#F57500"> <font size="70"> <font color="#F57500"> <font size="70"> <font color="#F57500"> <font color="#F57500"> <font size="70"><font color="#F57500">RUNNER</code>
+						</hotfix>
+					</category>
 				</category>
 				<category name="Renamed Harpoon Hovercraft">
-					<hotfix name="Name" level="None">
-						<code profiles="default">set GD_OrchidPackageDef.Vehicles.VSSUI_HarpoonHovercraft VehicleName Harpoon Sandskiff</code>
-					</hotfix>
+					<category name="Code">
+						<hotfix name="Name" level="None">
+							<code profiles="default">set GD_OrchidPackageDef.Vehicles.VSSUI_HarpoonHovercraft VehicleName Harpoon Sandskiff</code>
+						</hotfix>
+					</category>
 				</category>
 				<category name="Renamed Rocket Hovercraft">
-					<hotfix name="Name" level="None">
-						<code profiles="default">set GD_OrchidPackageDef.Vehicles.VSSUI_RocketHovercraft VehicleName Rocket Sandskiff</code>
-					</hotfix>
+					<category name="Code">
+						<hotfix name="Name" level="None">
+							<code profiles="default">set GD_OrchidPackageDef.Vehicles.VSSUI_RocketHovercraft VehicleName Rocket Sandskiff</code>
+						</hotfix>
+					</category>
 				</category>
 				<category name="Renamed Sawblade Hovercraft">
-					<hotfix name="Name" level="None">
-						<code profiles="default">set GD_OrchidPackageDef.Vehicles.VSSUI_SawBladeHovercraft VehicleName Sawblade Sandskiff</code>
-					</hotfix>
+					<category name="Code">
+						<hotfix name="Name" level="None">
+							<code profiles="default">set GD_OrchidPackageDef.Vehicles.VSSUI_SawBladeHovercraft VehicleName Sawblade Sandskiff</code>
+						</hotfix>
+					</category>
 				</category>
 				<category name="Renamed MG Runner">
-					<hotfix name="Name" level="None">
-						<code profiles="default">set GD_Globals.VehicleSpawnStation.VSSUI_MGRunner VehicleName Machine Gun Runner</code>
-					</hotfix>
+					<category name="Code">
+						<hotfix name="Name" level="None">
+							<code profiles="default">set GD_Globals.VehicleSpawnStation.VSSUI_MGRunner VehicleName Machine Gun Runner</code>
+						</hotfix>
+					</category>
 				</category>
 				<category name="Renamed Rocket Runner">
-					<hotfix name="Name" level="None">
-						<code profiles="default">set GD_Globals.VehicleSpawnStation.VSSUI_RocketRunner VehicleName Rocket Launcher Runner</code>
-					</hotfix>
+					<category name="Code">
+						<hotfix name="Name" level="None">
+							<code profiles="default">set GD_Globals.VehicleSpawnStation.VSSUI_RocketRunner VehicleName Rocket Launcher Runner</code>
+						</hotfix>
+					</category>
 				</category>
 			</category>
 			<category name="New Vehicle Icons">
-				<category name="Hovercrafts (Bandit Technical copy)">
-					<hotfix name="Name" level="None">
-						<code profiles="default">set GD_OrchidPackageDef.Vehicles.VehicleFamily_Hovercraft VehiclePreviewClip SwfMovie'Orchid_UI_VehicleIcons.VehicleIcons_HarpoonHovercraft'</code>
-					</hotfix>
+				<category name="Hovercrafts (Bandit Technical copy in Vanilla)">
+					<category name="Code">
+						<hotfix name="Name" level="None">
+							<code profiles="default">set GD_OrchidPackageDef.Vehicles.VehicleFamily_Hovercraft VehiclePreviewClip SwfMovie'Orchid_UI_VehicleIcons.VehicleIcons_HarpoonHovercraft'</code>
+						</hotfix>
+					</category>
 				</category>
 				<category name="Fan Boat">
-					<hotfix name="Name" level="None">
-						<code profiles="default">set GD_SagePackageDef.Vehicles.VehicleFamily_FanBoat VehiclePreviewClip SwfMovie'Sage_UI_VehicleIcons.VehicleIcons_IncendiaryFanBoat'</code>
-					</hotfix>
+					<category name="Code">
+						<hotfix name="Name" level="None">
+							<code profiles="default">set GD_SagePackageDef.Vehicles.VehicleFamily_FanBoat VehiclePreviewClip SwfMovie'Sage_UI_VehicleIcons.VehicleIcons_IncendiaryFanBoat'</code>
+						</hotfix>
+					</category>
 				</category>
 				<category name="Bandit Technical">
-					<hotfix name="Name" level="None">
-						<code profiles="default">set GD_Globals.VehicleSpawnStation.VehicleFamily_BanditTechnical VehiclePreviewClip SwfMovie'UI_VehicleIcons.VehicleIcons_BanditTechnicalCatapult'</code>
-					</hotfix>
+					<category name="Code">
+						<hotfix name="Name" level="None">
+							<code profiles="default">set GD_Globals.VehicleSpawnStation.VehicleFamily_BanditTechnical VehiclePreviewClip SwfMovie'UI_VehicleIcons.VehicleIcons_BanditTechnicalCatapult'</code>
+						</hotfix>
+					</category>
 				</category>
 				<category name="Light Runner">
-					<hotfix name="Name" level="None">
-						<code profiles="default">set GD_Globals.VehicleSpawnStation.VehicleFamily_Runner VehiclePreviewClip SwfMovie'UI_VehicleIcons.VehicleIcons_BanditTechnicalMachineGun'</code>
-					</hotfix>
+					<category name="Code">
+						<hotfix name="Name" level="None">
+							<code profiles="default">set GD_Globals.VehicleSpawnStation.VehicleFamily_Runner VehiclePreviewClip SwfMovie'UI_VehicleIcons.VehicleIcons_BanditTechnicalMachineGun'</code>
+						</hotfix>
+					</category>
 				</category>
 			</category>
 			<category name="Vehicle Stations">
 				<category name="Updated Text">
 					<category name="Rename Vehicle Spawn">
-						<code profiles="default">set WillowGame.VehicleSpawnStationGFxMovie SpawnVehicleLabel CLAIM VEHICLE</code>
+						<category name="Code">
+							<code profiles="default">set WillowGame.VehicleSpawnStationGFxMovie SpawnVehicleLabel CLAIM VEHICLE</code>
+						</category>
 					</category>
 					<category name="Rename Respawn Vehicle">
-						<code profiles="default">set WillowGame.VehicleSpawnStationGFxMovie RespawnVehicleLabel REQUEST VEHICLE</code>
+						<category name="Code">
+							<code profiles="default">set WillowGame.VehicleSpawnStationGFxMovie RespawnVehicleLabel REQUEST VEHICLE</code>
+						</category>
 					</category>
 					<category name="Rename Teleport">
-						<code profiles="default">set WillowGame.VehicleSpawnStationGFxMovie TeleportLabel ENTER VEHICLE</code>
+						<category name="Code">
+							<code profiles="default">set WillowGame.VehicleSpawnStationGFxMovie TeleportLabel ENTER VEHICLE</code>
+						</category>
 					</category>
 					<category name="Rename No Skin">
-						<code profiles="default">set WillowGame.VehicleSpawnStationGFxMovie NoSkinAvailableLabel NO PAINT JOBS ARE AVAILABLE</code>
+						<category name="Code">
+							<code profiles="default">set WillowGame.VehicleSpawnStationGFxMovie NoSkinAvailableLabel NO PAINT JOBS ARE AVAILABLE</code>
+						</category>
 					</category>
 					<category name="Rename No Skin Selected">
-						<code profiles="default">set WillowGame.VehicleSpawnStationGFxMovie NoSkinSelectedLabel NO PAINT JOB IS SELECTED</code>
+						<category name="Code">
+							<code profiles="default">set WillowGame.VehicleSpawnStationGFxMovie NoSkinSelectedLabel NO PAINT JOB IS SELECTED</code>
+						</category>
 					</category>
 					<category name="Rename Unlocked">
-						<code profiles="default">set WillowGame.VehicleSpawnStationGFxMovie UnlockedText Paint Jobs:</code>
+						<category name="Code">
+							<code profiles="default">set WillowGame.VehicleSpawnStationGFxMovie UnlockedText Paint Jobs:</code>
+						</category>
 					</category>
 				</category>
 				<category name="Minimized UI Sway">
 					<category name="Vanilla">
-						<hotfix name="Name" level="None">
-							<code profiles="default">set UI_VehicleSpawnStation.VehicleSpawnStation_Definition View3DRot (Pitch=0,Yaw=0,Roll=0)</code>
-							<code profiles="default">set UI_VehicleSpawnStation.VehicleSpawnStation_Definition View3DFOV 1</code>
-						</hotfix>
+						<category name="Code">
+							<hotfix name="Name" level="None">
+								<code profiles="default">set UI_VehicleSpawnStation.VehicleSpawnStation_Definition View3DRot (Pitch=0,Yaw=0,Roll=0)</code>
+								<code profiles="default">set UI_VehicleSpawnStation.VehicleSpawnStation_Definition View3DFOV 1</code>
+							</hotfix>
+						</category>
 					</category>
 					<category name="Pirate's Booty">
-						<hotfix name="Name" level="None">
-							<code profiles="default">set Orchid_UI_VehicleSpawnStation.VehicleSpawnStation_Definition View3DRot (Pitch=0,Yaw=0,Roll=0)</code>
-							<code profiles="default">set Orchid_UI_VehicleSpawnStation.VehicleSpawnStation_Definition View3DFOV 1</code>
-						</hotfix>
+						<category name="Code">
+							<hotfix name="Name" level="None">
+								<code profiles="default">set Orchid_UI_VehicleSpawnStation.VehicleSpawnStation_Definition View3DRot (Pitch=0,Yaw=0,Roll=0)</code>
+								<code profiles="default">set Orchid_UI_VehicleSpawnStation.VehicleSpawnStation_Definition View3DFOV 1</code>
+							</hotfix>
+						</category>
 					</category>
 					<category name="Big Game Hunt">
-						<hotfix name="Name" level="None">
-							<code profiles="default">set Sage_UI_VehicleSpawnStation.VehicleSpawnStation_Definition View3DRot (Pitch=0,Yaw=0,Roll=0)</code>
-							<code profiles="default">set Sage_UI_VehicleSpawnStation.VehicleSpawnStation_Definition View3DFOV 1</code>
-						</hotfix>
+						<category name="Code">
+							<hotfix name="Name" level="None">
+								<code profiles="default">set Sage_UI_VehicleSpawnStation.VehicleSpawnStation_Definition View3DRot (Pitch=0,Yaw=0,Roll=0)</code>
+								<code profiles="default">set Sage_UI_VehicleSpawnStation.VehicleSpawnStation_Definition View3DFOV 1</code>
+							</hotfix>
+						</category>
 					</category>
 					<category name="Default">
-						<hotfix name="Name" level="None">
-							<code profiles="default">set WillowGame.Default__VehicleSpawnStationGFxDefinition View3DRot (Pitch=0,Yaw=0,Roll=0)</code>
-							<code profiles="default">set WillowGame.Default__VehicleSpawnStationGFxDefinition View3DFOV 1</code>
-						</hotfix>
+						<category name="Code">
+							<hotfix name="Name" level="None">
+								<code profiles="default">set WillowGame.Default__VehicleSpawnStationGFxDefinition View3DRot (Pitch=0,Yaw=0,Roll=0)</code>
+								<code profiles="default">set WillowGame.Default__VehicleSpawnStationGFxDefinition View3DFOV 1</code>
+							</hotfix>
+						</category>
 					</category>
 				</category>
 			</category>
 			<category name="Stand On Vehicles">
 				<category name="Bandit Technical">
-					<hotfix name="Name" package="GD_BTech_Streaming">
-						<code profiles="default">set GD_BTech_Streaming.ChassisDefinition.Chassis_CatapultTechnical AllowPawnsToStandOnTopOfVehicle True</code>
-						<code profiles="default">set GD_BTech_Streaming.ChassisDefinition.Chassis_SawBladeTechnical AllowPawnsToStandOnTopOfVehicle True</code>
-					</hotfix>
+					<category name="Catapult">
+						<category name="Code">
+							<hotfix name="Name" package="GD_BTech_Streaming">
+								<code profiles="default">set GD_BTech_Streaming.ChassisDefinition.Chassis_CatapultTechnical AllowPawnsToStandOnTopOfVehicle True</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Sawblade">
+						<category name="Code">
+							<hotfix name="Name" package="GD_BTech_Streaming">
+								<code profiles="default">set GD_BTech_Streaming.ChassisDefinition.Chassis_SawBladeTechnical AllowPawnsToStandOnTopOfVehicle True</code>
+							</hotfix>
+						</category>
+					</category>
 				</category>
 				<category name="Sandskiff">
-					<hotfix name="Name" package="GD_Orchid_HarpoonHovercraft">
-						<code profiles="default">set GD_Orchid_Hovercraft.Vehicle.Chassis_Hovercraft AllowPawnsToStandOnTopOfVehicle True</code>
-					</hotfix>
-					<hotfix name="Name" package="GD_Orchid_RocketHovercraft">
-						<code profiles="default">set GD_Orchid_Hovercraft.Vehicle.Chassis_Hovercraft AllowPawnsToStandOnTopOfVehicle True</code>
-					</hotfix>
-					<hotfix name="Name" package="GD_Orchid_SawHovercraft">
-						<code profiles="default">set GD_Orchid_Hovercraft.Vehicle.Chassis_Hovercraft AllowPawnsToStandOnTopOfVehicle True</code>
-					</hotfix>
+					<category name="Harpoon">
+						<category name="Code">
+							<hotfix name="Name" package="GD_Orchid_HarpoonHovercraft">
+								<code profiles="default">set GD_Orchid_Hovercraft.Vehicle.Chassis_Hovercraft AllowPawnsToStandOnTopOfVehicle True</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Rocket">
+						<category name="Code">
+							<hotfix name="Name" package="GD_Orchid_RocketHovercraft">
+								<code profiles="default">set GD_Orchid_Hovercraft.Vehicle.Chassis_Hovercraft AllowPawnsToStandOnTopOfVehicle True</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Sawblade">
+						<category name="Code">
+							<hotfix name="Name" package="GD_Orchid_SawHovercraft">
+								<code profiles="default">set GD_Orchid_Hovercraft.Vehicle.Chassis_Hovercraft AllowPawnsToStandOnTopOfVehicle True</code>
+							</hotfix>
+						</category>
+					</category>
 				</category>
 				<category name="Runner">
-					<hotfix name="Name" package="GD_Runner_Streaming">
-						<code profiles="default">set GD_Runner_Streaming.Archetype.Chassis_LightRunnerMG AllowPawnsToStandOnTopOfVehicle True</code>
-						<code profiles="default">set GD_Runner_Streaming.Archetype.Chassis_RocketRunner AllowPawnsToStandOnTopOfVehicle True</code>
-					</hotfix>
+					<category name="Machine Gun">
+						<category name="Code">
+							<hotfix name="Name" package="GD_Runner_Streaming">
+								<code profiles="default">set GD_Runner_Streaming.Archetype.Chassis_LightRunnerMG AllowPawnsToStandOnTopOfVehicle True</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Rocket Launcher">
+						<category name="Code">
+							<hotfix name="Name" package="GD_Runner_Streaming">
+								<code profiles="default">set GD_Runner_Streaming.Archetype.Chassis_RocketRunner AllowPawnsToStandOnTopOfVehicle True</code>
+							</hotfix>
+						</category>
+					</category>
 				</category>
 				<category name="Fan Boat">
-					<hotfix name="Name" package="GD_Sage_CorrosiveFanBoat">
-						<code profiles="default">set GD_Sage_CorrosiveFanBoat.ChassisDefinition.Chassis_CorrosiveFanBoat AllowPawnsToStandOnTopOfVehicle True</code>
-					</hotfix>
-					<hotfix name="Name" package="GD_Sage_IncendiaryFanBoat">
-						<code profiles="default">set GD_Sage_IncendiaryFanBoat.ChassisDefinition.Chassis_IncendiaryFanBoat AllowPawnsToStandOnTopOfVehicle True</code>
-					</hotfix>
-					<hotfix name="Name" package="GD_Sage_ShockFanBoat">
-						<code profiles="default">set GD_Sage_ShockFanBoat.ChassisDefinition.Chassis_ShockFanBoat AllowPawnsToStandOnTopOfVehicle True</code>
-					</hotfix>
+					<category name="Corrosive">
+						<category name="Code">
+							<hotfix name="Name" package="GD_Sage_CorrosiveFanBoat">
+								<code profiles="default">set GD_Sage_CorrosiveFanBoat.ChassisDefinition.Chassis_CorrosiveFanBoat AllowPawnsToStandOnTopOfVehicle True</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Incendiary">
+						<category name="Code">
+							<hotfix name="Name" package="GD_Sage_IncendiaryFanBoat">
+								<code profiles="default">set GD_Sage_IncendiaryFanBoat.ChassisDefinition.Chassis_IncendiaryFanBoat AllowPawnsToStandOnTopOfVehicle True</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Shock">
+						<category name="Code">
+							<hotfix name="Name" package="GD_Sage_ShockFanBoat">
+								<code profiles="default">set GD_Sage_ShockFanBoat.ChassisDefinition.Chassis_ShockFanBoat AllowPawnsToStandOnTopOfVehicle True</code>
+							</hotfix>
+						</category>
+					</category>
 				</category>
 			</category>
 			<category name="Tiny Vehicles">
-				<category name="Tiny Catapult Technical">
-					<hotfix name="Name" package="GD_BTech_Streaming">
-						<code profiles="">set GD_BTech_Streaming.Archetype.Vehicle_CatapultTechnical DrawScale 0.5</code>
-					</hotfix>
+				<category name="Tiny Catapult Technical" MUT="true">
+					<category name="0.85">
+						<hotfix name="Name" package="GD_BTech_Streaming">
+							<code profiles="">set GD_BTech_Streaming.Archetype.Vehicle_CatapultTechnical DrawScale 0.85</code>
+						</hotfix>
+					</category>
+					<category name="0.75">
+						<hotfix name="Name" package="GD_BTech_Streaming">
+							<code profiles="">set GD_BTech_Streaming.Archetype.Vehicle_CatapultTechnical DrawScale 0.75</code>
+						</hotfix>
+					</category>
+					<category name="0.65">
+						<hotfix name="Name" package="GD_BTech_Streaming">
+							<code profiles="">set GD_BTech_Streaming.Archetype.Vehicle_CatapultTechnical DrawScale 0.65</code>
+						</hotfix>
+					</category>
+					<category name="0.55">
+						<hotfix name="Name" package="GD_BTech_Streaming">
+							<code profiles="">set GD_BTech_Streaming.Archetype.Vehicle_CatapultTechnical DrawScale 0.55</code>
+						</hotfix>
+					</category>
 				</category>
-				<category name="Tiny Sawblade Technical">
-					<hotfix name="Name" package="GD_BTech_Streaming">
-						<code profiles="">set GD_BTech_Streaming.Archetype.Vehicle_SawBladeTechnical DrawScale 0.5</code>
-					</hotfix>
+				<category name="Tiny Sawblade Technical" MUT="true">
+					<category name="0.85">
+						<hotfix name="Name" package="GD_BTech_Streaming">
+							<code profiles="">set GD_BTech_Streaming.Archetype.Vehicle_SawBladeTechnical DrawScale 0.85</code>
+						</hotfix>
+					</category>
+					<category name="0.75">
+						<hotfix name="Name" package="GD_BTech_Streaming">
+							<code profiles="">set GD_BTech_Streaming.Archetype.Vehicle_SawBladeTechnical DrawScale 0.75</code>
+						</hotfix>
+					</category>
+					<category name="0.65">
+						<hotfix name="Name" package="GD_BTech_Streaming">
+							<code profiles="">set GD_BTech_Streaming.Archetype.Vehicle_SawBladeTechnical DrawScale 0.65</code>
+						</hotfix>
+					</category>
+					<category name="0.55">
+						<hotfix name="Name" package="GD_BTech_Streaming">
+							<code profiles="">set GD_BTech_Streaming.Archetype.Vehicle_SawBladeTechnical DrawScale 0.55</code>
+						</hotfix>
+					</category>
 				</category>
-				<category name="Tiny Machine Gun Runner">
-					<hotfix name="Name" package="GD_Runner_Streaming">
-						<code profiles="">set GD_Runner_Streaming.Archetype.Vehicle_LightRunnerMG DrawScale 0.5</code>
-					</hotfix>
+				<category name="Tiny Machine Gun Runner" MUT="true">
+					<category name="0.85">
+						<hotfix name="Name" package="GD_Runner_Streaming">
+							<code profiles="">set GD_Runner_Streaming.Archetype.Vehicle_LightRunnerMG DrawScale 0.85</code>
+						</hotfix>
+					</category>
+					<category name="0.75">
+						<hotfix name="Name" package="GD_Runner_Streaming">
+							<code profiles="">set GD_Runner_Streaming.Archetype.Vehicle_LightRunnerMG DrawScale 0.75</code>
+						</hotfix>
+					</category>
+					<category name="0.65">
+						<hotfix name="Name" package="GD_Runner_Streaming">
+							<code profiles="">set GD_Runner_Streaming.Archetype.Vehicle_LightRunnerMG DrawScale 0.65</code>
+						</hotfix>
+					</category>
+					<category name="0.55">
+						<hotfix name="Name" package="GD_Runner_Streaming">
+							<code profiles="">set GD_Runner_Streaming.Archetype.Vehicle_LightRunnerMG DrawScale 0.55</code>
+						</hotfix>
+					</category>
 				</category>
-				<category name="Tiny Rocket Launcher Runner">
-					<hotfix name="Name" package="GD_Runner_Streaming">
-						<code profiles="">set GD_Runner_Streaming.Archetype.Vehicle_RocketRunner DrawScale 0.5</code>
-					</hotfix>
+				<category name="Tiny Rocket Launcher Runner" MUT="true">
+					<category name="0.85">
+						<hotfix name="Name" package="GD_Runner_Streaming">
+							<code profiles="">set GD_Runner_Streaming.Archetype.Vehicle_RocketRunner DrawScale 0.85</code>
+						</hotfix>
+					</category>
+					<category name="0.75">
+						<hotfix name="Name" package="GD_Runner_Streaming">
+							<code profiles="">set GD_Runner_Streaming.Archetype.Vehicle_RocketRunner DrawScale 0.75</code>
+						</hotfix>
+					</category>
+					<category name="0.65">
+						<hotfix name="Name" package="GD_Runner_Streaming">
+							<code profiles="">set GD_Runner_Streaming.Archetype.Vehicle_RocketRunner DrawScale 0.65</code>
+						</hotfix>
+					</category>
+					<category name="0.55">
+						<hotfix name="Name" package="GD_Runner_Streaming">
+							<code profiles="">set GD_Runner_Streaming.Archetype.Vehicle_RocketRunner DrawScale 0.5</code>
+						</hotfix>
+					</category>
 				</category>
-				<category name="Tiny Harpoon Sandskiff">
-					<hotfix name="Name" package="GD_Orchid_HarpoonHovercraft">
-						<code profiles="">set GD_Orchid_HarpoonHovercraft.Archetype.Vehicle_HarpoonHovercraft DrawScale 0.5</code>
-					</hotfix>
+				<category name="Tiny Harpoon Sandskiff" MUT="true">
+					<category name="0.85">
+						<hotfix name="Name" package="GD_Orchid_HarpoonHovercraft">
+							<code profiles="">set GD_Orchid_HarpoonHovercraft.Archetype.Vehicle_HarpoonHovercraft DrawScale 0.85</code>
+						</hotfix>
+					</category>
+					<category name="0.75">
+						<hotfix name="Name" package="GD_Orchid_HarpoonHovercraft">
+							<code profiles="">set GD_Orchid_HarpoonHovercraft.Archetype.Vehicle_HarpoonHovercraft DrawScale 0.75</code>
+						</hotfix>
+					</category>
+					<category name="0.65">
+						<hotfix name="Name" package="GD_Orchid_HarpoonHovercraft">
+							<code profiles="">set GD_Orchid_HarpoonHovercraft.Archetype.Vehicle_HarpoonHovercraft DrawScale 0.65</code>
+						</hotfix>
+					</category>
+					<category name="0.55">
+						<hotfix name="Name" package="GD_Orchid_HarpoonHovercraft">
+							<code profiles="">set GD_Orchid_HarpoonHovercraft.Archetype.Vehicle_HarpoonHovercraft DrawScale 0.55</code>
+						</hotfix>
+					</category>
+					<category name="0.45">
+						<hotfix name="Name" package="GD_Orchid_HarpoonHovercraft">
+							<code profiles="">set GD_Orchid_HarpoonHovercraft.Archetype.Vehicle_HarpoonHovercraft DrawScale 0.45</code>
+						</hotfix>
+					</category>
+					<category name="0.35">
+						<hotfix name="Name" package="GD_Orchid_HarpoonHovercraft">
+							<code profiles="">set GD_Orchid_HarpoonHovercraft.Archetype.Vehicle_HarpoonHovercraft DrawScale 0.35</code>
+						</hotfix>
+					</category>
+					<category name="0.25">
+						<hotfix name="Name" package="GD_Orchid_HarpoonHovercraft">
+							<code profiles="">set GD_Orchid_HarpoonHovercraft.Archetype.Vehicle_HarpoonHovercraft DrawScale 0.25</code>
+						</hotfix>
+					</category>
+					<category name="0.15">
+						<hotfix name="Name" package="GD_Orchid_HarpoonHovercraft">
+							<code profiles="">set GD_Orchid_HarpoonHovercraft.Archetype.Vehicle_HarpoonHovercraft DrawScale 0.15</code>
+						</hotfix>
+					</category>
+					<category name="0.05">
+						<hotfix name="Name" package="GD_Orchid_HarpoonHovercraft">
+							<code profiles="">set GD_Orchid_HarpoonHovercraft.Archetype.Vehicle_HarpoonHovercraft DrawScale 0.05</code>
+						</hotfix>
+					</category>
 				</category>
-				<category name="Tiny Rocket Launcher Sandskiff">
-					<hotfix name="Name" package="GD_Orchid_RocketHovercraft">
-						<code profiles="">set GD_Orchid_RocketHovercraft.Archetype.Vehicle_RocketHovercraft DrawScale 0.5</code>
-					</hotfix>
+				<category name="Tiny Rocket Launcher Sandskiff" MUT="true">
+					<category name="0.85">
+						<hotfix name="Name" package="GD_Orchid_RocketHovercraft">
+							<code profiles="">set GD_Orchid_RocketHovercraft.Archetype.Vehicle_RocketHovercraft DrawScale 0.85</code>
+						</hotfix>
+					</category>
+					<category name="0.75">
+						<hotfix name="Name" package="GD_Orchid_RocketHovercraft">
+							<code profiles="">set GD_Orchid_RocketHovercraft.Archetype.Vehicle_RocketHovercraft DrawScale 0.75</code>
+						</hotfix>
+					</category>
+					<category name="0.65">
+						<hotfix name="Name" package="GD_Orchid_RocketHovercraft">
+							<code profiles="">set GD_Orchid_RocketHovercraft.Archetype.Vehicle_RocketHovercraft DrawScale 0.65</code>
+						</hotfix>
+					</category>
+					<category name="0.55">
+						<hotfix name="Name" package="GD_Orchid_RocketHovercraft">
+							<code profiles="">set GD_Orchid_RocketHovercraft.Archetype.Vehicle_RocketHovercraft DrawScale 0.55</code>
+						</hotfix>
+					</category>
+					<category name="0.45">
+						<hotfix name="Name" package="GD_Orchid_RocketHovercraft">
+							<code profiles="">set GD_Orchid_RocketHovercraft.Archetype.Vehicle_RocketHovercraft DrawScale 0.45</code>
+						</hotfix>
+					</category>
+					<category name="0.35">
+						<hotfix name="Name" package="GD_Orchid_RocketHovercraft">
+							<code profiles="">set GD_Orchid_RocketHovercraft.Archetype.Vehicle_RocketHovercraft DrawScale 0.35</code>
+						</hotfix>
+					</category>
+					<category name="0.25">
+						<hotfix name="Name" package="GD_Orchid_RocketHovercraft">
+							<code profiles="">set GD_Orchid_RocketHovercraft.Archetype.Vehicle_RocketHovercraft DrawScale 0.25</code>
+						</hotfix>
+					</category>
+					<category name="0.15">
+						<hotfix name="Name" package="GD_Orchid_RocketHovercraft">
+							<code profiles="">set GD_Orchid_RocketHovercraft.Archetype.Vehicle_RocketHovercraft DrawScale 0.15</code>
+						</hotfix>
+					</category>
+					<category name="0.05">
+						<hotfix name="Name" package="GD_Orchid_RocketHovercraft">
+							<code profiles="">set GD_Orchid_RocketHovercraft.Archetype.Vehicle_RocketHovercraft DrawScale 0.05</code>
+						</hotfix>
+					</category>
 				</category>
-				<category name="Tiny Sawblade Sandskiff">
-					<hotfix name="Name" package="GD_Orchid_SawHovercraft">
-						<code profiles="">set GD_Orchid_SawHovercraft.Archetype.Vehicle_SawBladeHovercraft DrawScale 0.5</code>
-					</hotfix>
+				<category name="Tiny Sawblade Sandskiff" MUT="true">
+					<category name="0.85">
+						<hotfix name="Name" package="GD_Orchid_SawHovercraft">
+							<code profiles="">set GD_Orchid_SawHovercraft.Archetype.Vehicle_SawBladeHovercraft DrawScale 0.85</code>
+						</hotfix>
+					</category>
+					<category name="0.75">
+						<hotfix name="Name" package="GD_Orchid_SawHovercraft">
+							<code profiles="">set GD_Orchid_SawHovercraft.Archetype.Vehicle_SawBladeHovercraft DrawScale 0.75</code>
+						</hotfix>
+					</category>
+					<category name="0.65">
+						<hotfix name="Name" package="GD_Orchid_SawHovercraft">
+							<code profiles="">set GD_Orchid_SawHovercraft.Archetype.Vehicle_SawBladeHovercraft DrawScale 0.65</code>
+						</hotfix>
+					</category>
+					<category name="0.55">
+						<hotfix name="Name" package="GD_Orchid_SawHovercraft">
+							<code profiles="">set GD_Orchid_SawHovercraft.Archetype.Vehicle_SawBladeHovercraft DrawScale 0.55</code>
+						</hotfix>
+					</category>
+					<category name="0.45">
+						<hotfix name="Name" package="GD_Orchid_SawHovercraft">
+							<code profiles="">set GD_Orchid_SawHovercraft.Archetype.Vehicle_SawBladeHovercraft DrawScale 0.45</code>
+						</hotfix>
+					</category>
+					<category name="0.35">
+						<hotfix name="Name" package="GD_Orchid_SawHovercraft">
+							<code profiles="">set GD_Orchid_SawHovercraft.Archetype.Vehicle_SawBladeHovercraft DrawScale 0.35</code>
+						</hotfix>
+					</category>
+					<category name="0.25">
+						<hotfix name="Name" package="GD_Orchid_SawHovercraft">
+							<code profiles="">set GD_Orchid_SawHovercraft.Archetype.Vehicle_SawBladeHovercraft DrawScale 0.25</code>
+						</hotfix>
+					</category>
+					<category name="0.15">
+						<hotfix name="Name" package="GD_Orchid_SawHovercraft">
+							<code profiles="">set GD_Orchid_SawHovercraft.Archetype.Vehicle_SawBladeHovercraft DrawScale 0.15</code>
+						</hotfix>
+					</category>
+					<category name="0.05">
+						<hotfix name="Name" package="GD_Orchid_SawHovercraft">
+							<code profiles="">set GD_Orchid_SawHovercraft.Archetype.Vehicle_SawBladeHovercraft DrawScale 0.05</code>
+						</hotfix>
+					</category>
 				</category>
-				<category name="Tiny Corrosive Fan Boat">
-					<hotfix name="Name" package="GD_Sage_CorrosiveFanBoat">
-						<code profiles="">set GD_Sage_CorrosiveFanBoat.Archetype.Vehicle_CorrosiveFanBoat DrawScale 0.435</code>
-					</hotfix>
+				<category name="Tiny Corrosive Fan Boat" MUT="true">
+					<category name="0.85">
+						<hotfix name="Name" package="GD_Sage_CorrosiveFanBoat">
+							<code profiles="">set GD_Sage_CorrosiveFanBoat.Archetype.Vehicle_CorrosiveFanBoat DrawScale 0.85</code>
+						</hotfix>
+					</category>
+					<category name="0.75">
+						<hotfix name="Name" package="GD_Sage_CorrosiveFanBoat">
+							<code profiles="">set GD_Sage_CorrosiveFanBoat.Archetype.Vehicle_CorrosiveFanBoat DrawScale 0.75</code>
+						</hotfix>
+					</category>
+					<category name="0.65">
+						<hotfix name="Name" package="GD_Sage_CorrosiveFanBoat">
+							<code profiles="">set GD_Sage_CorrosiveFanBoat.Archetype.Vehicle_CorrosiveFanBoat DrawScale 0.65</code>
+						</hotfix>
+					</category>
+					<category name="0.55">
+						<hotfix name="Name" package="GD_Sage_CorrosiveFanBoat">
+							<code profiles="">set GD_Sage_CorrosiveFanBoat.Archetype.Vehicle_CorrosiveFanBoat DrawScale 0.55</code>
+						</hotfix>
+					</category>
+					<category name="0.45">
+						<hotfix name="Name" package="GD_Sage_CorrosiveFanBoat">
+							<code profiles="">set GD_Sage_CorrosiveFanBoat.Archetype.Vehicle_CorrosiveFanBoat DrawScale 0.45</code>
+						</hotfix>
+					</category>
+					<category name="0.35">
+						<hotfix name="Name" package="GD_Sage_CorrosiveFanBoat">
+							<code profiles="">set GD_Sage_CorrosiveFanBoat.Archetype.Vehicle_CorrosiveFanBoat DrawScale 0.35</code>
+						</hotfix>
+					</category>
+					<category name="0.25">
+						<hotfix name="Name" package="GD_Sage_CorrosiveFanBoat">
+							<code profiles="">set GD_Sage_CorrosiveFanBoat.Archetype.Vehicle_CorrosiveFanBoat DrawScale 0.25</code>
+						</hotfix>
+					</category>
+					<category name="0.15">
+						<hotfix name="Name" package="GD_Sage_CorrosiveFanBoat">
+							<code profiles="">set GD_Sage_CorrosiveFanBoat.Archetype.Vehicle_CorrosiveFanBoat DrawScale 0.15</code>
+						</hotfix>
+					</category>
+					<category name="0.05">
+						<hotfix name="Name" package="GD_Sage_CorrosiveFanBoat">
+							<code profiles="">set GD_Sage_CorrosiveFanBoat.Archetype.Vehicle_CorrosiveFanBoat DrawScale 0.05</code>
+						</hotfix>
+					</category>
 				</category>
-				<category name="Tiny Incendiary Fan Boat">
-					<hotfix name="Name" package="GD_Sage_IncendiaryFanBoat">
-						<code profiles="">set GD_Sage_IncendiaryFanBoat.Archetype.Vehicle_IncendiaryFanBoat DrawScale 0.435</code>
-					</hotfix>
+				<category name="Tiny Incendiary Fan Boat" MUT="true">
+					<category name="0.85">
+						<hotfix name="Name" package="GD_Sage_IncendiaryFanBoat">
+							<code profiles="">set GD_Sage_IncendiaryFanBoat.Archetype.Vehicle_IncendiaryFanBoat DrawScale 0.85</code>
+						</hotfix>
+					</category>
+					<category name="0.75">
+						<hotfix name="Name" package="GD_Sage_IncendiaryFanBoat">
+							<code profiles="">set GD_Sage_IncendiaryFanBoat.Archetype.Vehicle_IncendiaryFanBoat DrawScale 0.75</code>
+						</hotfix>
+					</category>
+					<category name="0.65">
+						<hotfix name="Name" package="GD_Sage_IncendiaryFanBoat">
+							<code profiles="">set GD_Sage_IncendiaryFanBoat.Archetype.Vehicle_IncendiaryFanBoat DrawScale 0.65</code>
+						</hotfix>
+					</category>
+					<category name="0.55">
+						<hotfix name="Name" package="GD_Sage_IncendiaryFanBoat">
+							<code profiles="">set GD_Sage_IncendiaryFanBoat.Archetype.Vehicle_IncendiaryFanBoat DrawScale 0.55</code>
+						</hotfix>
+					</category>
+					<category name="0.45">
+						<hotfix name="Name" package="GD_Sage_IncendiaryFanBoat">
+							<code profiles="">set GD_Sage_IncendiaryFanBoat.Archetype.Vehicle_IncendiaryFanBoat DrawScale 0.45</code>
+						</hotfix>
+					</category>
+					<category name="0.35">
+						<hotfix name="Name" package="GD_Sage_IncendiaryFanBoat">
+							<code profiles="">set GD_Sage_IncendiaryFanBoat.Archetype.Vehicle_IncendiaryFanBoat DrawScale 0.35</code>
+						</hotfix>
+					</category>
+					<category name="0.25">
+						<hotfix name="Name" package="GD_Sage_IncendiaryFanBoat">
+							<code profiles="">set GD_Sage_IncendiaryFanBoat.Archetype.Vehicle_IncendiaryFanBoat DrawScale 0.25</code>
+						</hotfix>
+					</category>
+					<category name="0.15">
+						<hotfix name="Name" package="GD_Sage_IncendiaryFanBoat">
+							<code profiles="">set GD_Sage_IncendiaryFanBoat.Archetype.Vehicle_IncendiaryFanBoat DrawScale 0.15</code>
+						</hotfix>
+					</category>
+					<category name="0.05">
+						<hotfix name="Name" package="GD_Sage_IncendiaryFanBoat">
+							<code profiles="">set GD_Sage_IncendiaryFanBoat.Archetype.Vehicle_IncendiaryFanBoat DrawScale 0.05</code>
+						</hotfix>
+					</category>
 				</category>
-				<category name="Tiny Shock Fan Boat">
-					<hotfix name="Name" package="GD_Sage_ShockFanBoat">
-						<code profiles="">set GD_Sage_ShockFanBoat.Archetype.Vehicle_ShockFanBoat DrawScale 0.435</code>
-					</hotfix>
+				<category name="Tiny Shock Fan Boat" MUT="true">
+					<category name="0.85">
+						<hotfix name="Name" package="GD_Sage_ShockFanBoat">
+							<code profiles="">set GD_Sage_ShockFanBoat.Archetype.Vehicle_ShockFanBoat DrawScale 0.85</code>
+						</hotfix>
+					</category>
+					<category name="0.75">
+						<hotfix name="Name" package="GD_Sage_ShockFanBoat">
+							<code profiles="">set GD_Sage_ShockFanBoat.Archetype.Vehicle_ShockFanBoat DrawScale 0.75</code>
+						</hotfix>
+					</category>
+					<category name="0.65">
+						<hotfix name="Name" package="GD_Sage_ShockFanBoat">
+							<code profiles="">set GD_Sage_ShockFanBoat.Archetype.Vehicle_ShockFanBoat DrawScale 0.65</code>
+						</hotfix>
+					</category>
+					<category name="0.55">
+						<hotfix name="Name" package="GD_Sage_ShockFanBoat">
+							<code profiles="">set GD_Sage_ShockFanBoat.Archetype.Vehicle_ShockFanBoat DrawScale 0.55</code>
+						</hotfix>
+					</category>
+					<category name="0.45">
+						<hotfix name="Name" package="GD_Sage_ShockFanBoat">
+							<code profiles="">set GD_Sage_ShockFanBoat.Archetype.Vehicle_ShockFanBoat DrawScale 0.45</code>
+						</hotfix>
+					</category>
+					<category name="0.35">
+						<hotfix name="Name" package="GD_Sage_ShockFanBoat">
+							<code profiles="">set GD_Sage_ShockFanBoat.Archetype.Vehicle_ShockFanBoat DrawScale 0.35</code>
+						</hotfix>
+					</category>
+					<category name="0.25">
+						<hotfix name="Name" package="GD_Sage_ShockFanBoat">
+							<code profiles="">set GD_Sage_ShockFanBoat.Archetype.Vehicle_ShockFanBoat DrawScale 0.25</code>
+						</hotfix>
+					</category>
+					<category name="0.15">
+						<hotfix name="Name" package="GD_Sage_ShockFanBoat">
+							<code profiles="">set GD_Sage_ShockFanBoat.Archetype.Vehicle_ShockFanBoat DrawScale 0.15</code>
+						</hotfix>
+					</category>
+					<category name="0.05">
+						<hotfix name="Name" package="GD_Sage_ShockFanBoat">
+							<code profiles="">set GD_Sage_ShockFanBoat.Archetype.Vehicle_ShockFanBoat DrawScale 0.05</code>
+						</hotfix>
+					</category>
 				</category>
 			</category>
 		</category>
