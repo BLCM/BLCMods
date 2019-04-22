@@ -27,5 +27,7 @@ Also note that there may still be various other issues with an increased level c
 
 [Also see the TPS Version](https://github.com/BLCM/BLCMods/blob/master/Pre%20Sequel%20Mods/apple1417/ItemLevelUncapper.blcm)
 
-### Strength of FIVE Gorillas
-Fixes the inconsistencies in the naming of Gaige's Strength of 5/Five Gorillas Skill.
+### Text Fixes
+Fixes various inconsistencies in text across the game.    
+This includes terminology changes like the Hoplite *decreasing* movement speed while the Fabled Tortoise *reduces* it, as well as small spelling and capitalization changes, such as Kreig's Slayer *of* Terramorphous vs everyone else's Slayer *Of* Terramorphous.    
+In case of conflicts let any other mods overwrite this one.
