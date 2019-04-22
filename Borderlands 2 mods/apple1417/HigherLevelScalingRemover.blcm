@@ -10,17 +10,33 @@
 		<category name="Higher Level Scaling Remover">
 			<comment># By apple1417</comment>
 			<comment># Removes various forms of scaling that happen when there is a large level difference between you and your enemy</comment>
-			<category name="Player damage reduction">
+			<category name="Player Damage Reduction">
 				<code profiles="default">set GD_Globals.General.Globals PlayerDamageScaleByLevelDifference ((LevelDifference=1,HigherLevelAttackerDmgScale=1.000000,LowerLevelAttackerDmgScale=1.000000))</code>
 			</category>
-			<category name="Enemy extra damage">
+			<category name="Extra Enemy Damage">
 				<code profiles="default">set GD_Globals.General.Globals AIDamageScaleByLevelDifference ((LevelDifference=1,HigherLevelAttackerDmgScale=1.000000,LowerLevelAttackerDmgScale=1.000000))</code>
 			</category>
-			<category name="XP scaling">
-				<code profiles="default">set GD_Globals.General.Globals ExpScaleByLevelDifference ((LevelDifference=1,HigherLevelEnemyExpScale=1.000000,LowerLevelEnemyExpScale=1.000000))</code>
+			<category name="XP Boost/Reduction" MUT="true">
+				<category name="Remove boost on higher level enemies">
+					<code profiles="">set GD_Globals.General.Global ExpScaleByLevelDifference ((LevelDifference=1,HigherLevelEnemyExpScale=1.000000,LowerLevelEnemyExpScale=0.900000),(LevelDifference=2,HigherLevelEnemyExpScale=1.000000,LowerLevelEnemyExpScale=0.700000),(LevelDifference=3,HigherLevelEnemyExpScale=1.000000,LowerLevelEnemyExpScale=0.400000),(LevelDifference=4,HigherLevelEnemyExpScale=1.000000,LowerLevelEnemyExpScale=0.150000),(LevelDifference=5,HigherLevelEnemyExpScale=1.000000,LowerLevelEnemyExpScale=0.050000),(LevelDifference=6,HigherLevelEnemyExpScale=1.000000,LowerLevelEnemyExpScale=0.010000))</code>
+				</category>
+				<category name="Remove reduction on lower level enemies">
+					<code profiles="">set GD_Globals.General.Global ExpScaleByLevelDifference ((LevelDifference=1,HigherLevelEnemyExpScale=1.000000,LowerLevelEnemyExpScale=1.000000),(LevelDifference=2,HigherLevelEnemyExpScale=1.030000,LowerLevelEnemyExpScale=1.000000),(LevelDifference=3,HigherLevelEnemyExpScale=1.060000,LowerLevelEnemyExpScale=1.000000),(LevelDifference=4,HigherLevelEnemyExpScale=1.090000,LowerLevelEnemyExpScale=1.000000),(LevelDifference=5,HigherLevelEnemyExpScale=1.120000,LowerLevelEnemyExpScale=1.000000),(LevelDifference=6,HigherLevelEnemyExpScale=1.150000,LowerLevelEnemyExpScale=1.000000))</code>
+				</category>
+				<category name="Remove all scaling">
+					<code profiles="default">set GD_Globals.General.Globals ExpScaleByLevelDifference ((LevelDifference=1,HigherLevelEnemyExpScale=1.000000,LowerLevelEnemyExpScale=1.000000))</code>
+				</category>
 			</category>
-			<category name="Status Effect Chance">
-				<code profiles="default">set GD_Globals.General.Globals StatusEffectChanceScales ((LevelDifference=1,HigherLevelChanceScale=1.000000,LowerLevelChanceScale=1.000000))</code>
+			<category name="Status Effect Chance Boost/Reduction" MUT="true">
+				<category name="Remove boost on lower level enemies">
+					<code profiles="">set GD_Globals.General.Globals StatusEffectChanceScales ((LevelDifference=1,HigherLevelChanceScale=1.000000,LowerLevelChanceScale=0.900000),(LevelDifference=2,HigherLevelChanceScale=1.000000,LowerLevelChanceScale=0.700000),(LevelDifference=3,HigherLevelChanceScale=1.000000,LowerLevelChanceScale=0.500000),(LevelDifference=4,HigherLevelChanceScale=1.000000,LowerLevelChanceScale=0.300000),(LevelDifference=5,HigherLevelChanceScale=1.000000,LowerLevelChanceScale=0.100000),(LevelDifference=6,HigherLevelChanceScale=1.000000,LowerLevelChanceScale=0.000000))</code>
+				</category>
+				<category name="Remove reduction on higher level enemies">
+					<code profiles="">set GD_Globals.General.Globals StatusEffectChanceScales ((LevelDifference=1,HigherLevelChanceScale=1.000000,LowerLevelChanceScale=1.000000),(LevelDifference=2,HigherLevelChanceScale=1.000000,LowerLevelChanceScale=1.000000),(LevelDifference=3,HigherLevelChanceScale=1.100000,LowerLevelChanceScale=1.000000),(LevelDifference=4,HigherLevelChanceScale=1.200000,LowerLevelChanceScale=1.000000),(LevelDifference=5,HigherLevelChanceScale=1.400000,LowerLevelChanceScale=1.000000),(LevelDifference=6,HigherLevelChanceScale=2.000000,LowerLevelChanceScale=1.000000))</code>
+				</category>
+				<category name="Remove all scaling">
+					<code profiles="default">set GD_Globals.General.Globals StatusEffectChanceScales ((LevelDifference=1,HigherLevelChanceScale=1.000000,LowerLevelChanceScale=1.000000))</code>
+				</category>
 			</category>
 		</category>
 	</body>
