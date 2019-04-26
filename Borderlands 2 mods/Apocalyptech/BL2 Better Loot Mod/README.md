@@ -369,6 +369,10 @@ TODO
   Slaughterdome missions (or rather, in the Slaughterdome areas).  That might
   be especially helpful in Murderlin's Temple.
 * Make a Reborn-compatible version of this
+* I'm not really sure why I didn't implement improvements to Loot Midgets
+  before now -- perhaps I was just burnt out and didn't care since they're
+  so uncommon and everything else was already so lootful.  At any rate,
+  perhaps I should do something with 'em after all.
 
 Other Notes
 ===========
