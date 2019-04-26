@@ -9,7 +9,7 @@
 	<body>
 		<category name="PsychoPatch">
 			<category name="Description">
-				<comment>PsychoPatch V.1.0 (17/12/18) by PsychoPatate</comment>
+				<comment>PsychoPatch V.1.1 (10/01/19) by PsychoPatate</comment>
 				<comment></comment>
 				<comment>DISCLAIMER : This mod is not meant to replace the Unofficial Community Patch.</comment>
 				<comment></comment>
@@ -183,8 +183,9 @@
 				<comment>How do I know which rarity is correct ?</comment>
 				<comment>I use these 3 simple rules :</comment>
 				<comment>- Purple/Very Rare weapons cannot spawn without any accessory (prefix bonus) and/or without sights</comment>
-				<comment>- I check the item pools (the Norfleet is not in the "Legendary pool")</comment>
-				<comment>- I just check the ID name of the weapon, weapons IDs follows a certain logic (most of the time)</comment>
+				<comment>- Check the item pools (the Norfleet is not in the "Legendary pool")</comment>
+				<comment>- Check the ID name of the weapon, weapons IDs follows a certain logic (most of the time)</comment>
+				<comment>- Chech the inventory order when sorted by rarity</comment>
 				<category name="Bad Touch is actually Rare">
 					<code profiles="default">set GD_Weap_SMG.Barrel.SMG_Barrel_Maliwan_BadTouch rarity (BaseValueConstant=-1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)</code>
 				</category>
@@ -209,11 +210,10 @@
 				<category name="Norfleet is actually E-Tech">
 					<code profiles="default">set GD_Weap_Launchers.Barrel.L_Barrel_Alien_Maliwan_Norfleet rarity (BaseValueConstant=0.000000,BaseValueAttribute=InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity4_VeryRare_Alien',InitializationDefinition=None,BaseValueScaleConstant=1.000000)</code>
 				</category>
-				<category name="Love Thumper is actually Rare">
-					<code profiles="default">set GD_Shields.Material.Material4_VeryRare_Roid_LoveThumper Rarity (BaseValueConstant=0.000000,BaseValueAttribute=InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity3_Rare',InitializationDefinition=None,BaseValueScaleConstant=1.000000)</code>
-					<code profiles="default">set GD_Shields.Material.Material4_VeryRare_Roid_LoveThumper Material Item_Shields.Materials.Mati_ShieldBanditRare</code>
+				<category name="Love Thumper uses Very Rare Material">
+					<code profiles="default">set GD_Shields.Material.Material4_VeryRare_Roid_LoveThumper Material Item_Shields.Materials.Mati_ShieldBanditEpic</code>
 				</category>
-				<category name="Pot O' Gold is Actually Very Rare">
+				<category name="Pot O' Gold is actually Very Rare">
 					<code profiles="default">set GD_Shields.Material.Material4_VeryRare_Booster_PotOGold Rarity (BaseValueConstant=0.000000,BaseValueAttribute=InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity4_VeryRare',InitializationDefinition=None,BaseValueScaleConstant=1.000000)</code>
 				</category>
 				<category name="Deadly Bloom is actually Legendary">
@@ -222,6 +222,12 @@
 				</category>
 				<category name="Flame Of The Firehawk uses Legendary Material">
 					<code profiles="default">set GD_Shields.Material.Material4_VeryRare_Nova_Phoenix Material Item_Shields.Materials.Mati_ShieldMaliwanLegendary</code>
+				</category>
+				<category name="Chain Lightning is actually Very Rare">
+					<code profiles="default">set GD_Aster_GrenadeMods.Delivery.Delivery_ChainLightning Rarity (BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)</code>
+				</category>
+				<category name="Fire Storm is actually Very Rare">
+					<code profiles="default">set GD_Aster_GrenadeMods.Delivery.Delivery_FireStorm Rarity (BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)</code>
 				</category>
 			</category>
 			<category name="Skin Tweaks">
@@ -331,12 +337,13 @@ set GD_Aster_Weapons.SMGs.SMG_Barrel_Dahl_Orc rarity (BaseValueConstant=-1.00000
 set GD_Aster_Weapons.AssaultRifles.AR_Barrel_Vladof_Ogre rarity (BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
 set GD_Weap_SniperRifles.Barrel.SR_Barrel_Alien_Longbow rarity (BaseValueConstant=3.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
 set GD_Weap_Launchers.Barrel.L_Barrel_Alien_Maliwan_Norfleet rarity (BaseValueConstant=0.000000,BaseValueAttribute=InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity4_VeryRare_Alien',InitializationDefinition=None,BaseValueScaleConstant=1.000000)
-set GD_Shields.Material.Material4_VeryRare_Roid_LoveThumper Rarity (BaseValueConstant=0.000000,BaseValueAttribute=InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity3_Rare',InitializationDefinition=None,BaseValueScaleConstant=1.000000)
-set GD_Shields.Material.Material4_VeryRare_Roid_LoveThumper Material Item_Shields.Materials.Mati_ShieldBanditRare
+set GD_Shields.Material.Material4_VeryRare_Roid_LoveThumper Material Item_Shields.Materials.Mati_ShieldBanditEpic
 set GD_Shields.Material.Material4_VeryRare_Booster_PotOGold Rarity (BaseValueConstant=0.000000,BaseValueAttribute=InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity4_VeryRare',InitializationDefinition=None,BaseValueScaleConstant=1.000000)
 set GD_Shields.Material.Material5_Legendary_Nova_DeadlyBloom Rarity (BaseValueConstant=0.000000,BaseValueAttribute=InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity5_Legendary',InitializationDefinition=None,BaseValueScaleConstant=1.000000)
 set GD_Shields.Material.Material5_Legendary_Nova_DeadlyBloom Material Item_Shields.Materials.Mati_ShieldTorgueLegendary
 set GD_Shields.Material.Material4_VeryRare_Nova_Phoenix Material Item_Shields.Materials.Mati_ShieldMaliwanLegendary
+set GD_Aster_GrenadeMods.Delivery.Delivery_ChainLightning Rarity (BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+set GD_Aster_GrenadeMods.Delivery.Delivery_FireStorm Rarity (BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
 set Common_GunMaterials.Materials.Pistol.Mati_TedioreEpic VectorParameterValues ((ParameterName="p_DecalScalePosition",ParameterValue=(R=16.400799,G=53.012096,B=0.298700,A=0.560700),ExpressionGUID=(A=395540170,B=1243133493,C=-1264190552,D=123075385)))
 set Iris_GunMaterials.Materials.Pistol.Mati_TorgueUniquePistol_PocketRocket VectorParameterValues ((ParameterName="p_DecalScalePosition",ParameterValue=(R=25.609304,G=55.277714,B=0.589700,A=0.480700),ExpressionGUID=(A=395540170,B=1243133493,C=-1264190552,D=123075385)),(ParameterName="p_DecalChannel",ParameterValue=(R=1.000000,G=0.000000,B=0.000000,A=0.000000),ExpressionGUID=(A=1757499073,B=1097055033,C=-1266029657,D=1038353636)),(ParameterName="p_DecalColor",ParameterValue=(R=5.308210,G=5.308210,B=5.308210,A=1.000000),ExpressionGUID=(A=1691998600,B=1239094551,C=2074257317,D=1844701893)))
 set Common_GunMaterials.Materials.Pistol.Mati_TorgueRarePistol VectorParameterValues ((ParameterName="p_DecalChannel",ParameterValue=(R=1.000000,G=0.000000,B=0.000000,A=0.000000),ExpressionGUID=(A=1757499073,B=1097055033,C=-1266029657,D=1038353636)),(ParameterName="p_DecalScalePosition",ParameterValue=(R=19.306900,G=31.886999,B=0.429000,A=0.562000),ExpressionGUID=(A=395540170,B=1243133493,C=-1264190552,D=123075385)))

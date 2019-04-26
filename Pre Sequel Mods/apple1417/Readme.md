@@ -7,6 +7,11 @@ Note that just like weapons, the exact chance varies based on the health type (f
 
 [Also see the BL2 Version](https://github.com/BLCM/BLCMods/blob/master/Borderlands%202%20mods/apple1417/GrenadeStatusChanceDisplayer.blcm)
 
+### Higher Level Scaling Remover
+Removes various forms of scaling that happen when there is a large level difference between you and your enemy.
+
+[Also see the BL2 Version](https://github.com/BLCM/BLCMods/blob/master/Borderlands%202%20mods/apple1417/HigherLevelScalingRemover.blcm)
+
 ### Fast Travel Helper
 Allows you re-enable the previously one-way only fast travel stations and lets you move them to any map without a station.    
 Also has a few QoL changes to go along with these new stations:

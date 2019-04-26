@@ -27,6 +27,9 @@ This ReadMe is just here as a quick synopsis, for detailed informations, each Mo
 - ### Jack:
   - __*DigiJack* in FFYL:__ You can summon your *DigiJack* to fight alongside you while in *Fight For Your Live*.
 
+- ### Nisha: 
+  - __*Showdown* in FFYL:__ You can use *Showdown* (Nisha's ability) while in *Fight For Your Life*.
+
 - ### Wilhelm: 
   - __*Wolf & Saint in FFYL:*__ You can summon *Wolf* (red combat drone) and/or *Saint* (white support drone) to fight alongside you while in *Fight For Your Live*.
 
@@ -72,6 +75,10 @@ This ReadMe is just here as a quick synopsis, for detailed informations, each Mo
      
 - ### Items Improvement:
   
+  - ### Grenades Improvement:
+
+    - __*Kiss Of Death* Unbridled:__ Three times longer with double damage... like a passionate kiss!
+  
   - #### Shields Improvement:
     
     - __*Booster Shields* Auto Pick-Up:__ Automatically pick-up, however, to balance the auto pick-up advantage, the restoration value is reduced from ±20%.
@@ -93,6 +100,8 @@ This ReadMe is just here as a quick synopsis, for detailed informations, each Mo
     - __*Moonscaper* with Grenade Damage:__ Replace the *Rocket Damage* by *Grenade Damage*, on this way the damage can be increased by Character Skill.
 
     - __*Wombat* No Self-Damage:__ Made the grenades not inflicting self-damage to fixes the issue of where the delayed explosion would (repeatedly) put you down.
+
+    - __*Wombat* with Grenade Damage:__ Replace the *Rocket Damage* by *Grenade Damage*, on this way the damage can be increased by Character Skill.
 
   - ### SMG Improvement:
 

@@ -1,0 +1,85 @@
+Dashiku's Repeater - Replaces the Stalker
+
+
+
+- Non elemental
+- Explosive splash + Adaptive splash
+- High magazine size
+- High fire rate
+- Strong ammo regeneration (12/s)
+- Increases movespeed by 25% while held
+- Has the Butcher ammo effect
+
+
+
+#Name/Card#
+set GD_Gladiolus_Weapons.Name.Title.Title_Pearlescent_Stalker PartName Dashiku's Repeater
+set GD_Gladiolus_Weapons.Name.Title.Title_Pearlescent_Stalker:AttributePresentationDefinition_8 NoConstraintText <font color="#ff0235">Extremely reliable!<font color="#FFFFFF"><br>[funstat]Features <font color="#ff9d2d">ad<font color="#2dceff">apt<font color="#3cd824">ive <font color="#dbdbdb">bullets.<font color="#dbdbdb">
+
+#Parts#
+set GD_Gladiolus_Weapons.Pistol.Pistol_Vladof_6_Stalker:WeaponPartListCollectionDefinition_260 ElementalPartData (bEnabled=True,WeightedParts=((Part=WeaponPartDefinition'GD_Weap_Pistol.elemental.Pistol_Elemental_None',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1))
+
+#Barrel#
+set GD_Gladiolus_Weapons.Pistol.Pistol_Barrel_Stalker PrefixList ()
+
+set GD_Gladiolus_Weapons.Pistol.Pistol_Barrel_Stalker ExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.GameplayAttributes.PlayerCurrentWeaponAmmoRegenerationMultiplier',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=12.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.GameplayAttributes.FootSpeed',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.250000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+set GD_Gladiolus_Weapons.Pistol.Pistol_Barrel_Stalker WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=0.400000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponStatusEffectChanceModifier',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.400000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=-0.700000)))
+
+set GD_Gladiolus_Weapons.Pistol.Pistol_Barrel_Stalker WeaponCardAttibutes ()
+set GD_Gladiolus_Weapons.Pistol.Pistol_Barrel_Stalker BoneControllers ()
+set GD_Gladiolus_Weapons.Pistol.Pistol_Barrel_Stalker GestaltModeSkeletalMeshName Pistol_Barrel_Dahl
+
+set GD_Gladiolus_Weapons.Pistol.Pistol_Barrel_Stalker AttributeSlotUpgrades ((SlotName="WeaponSpread",GradeIncrease=10,bActivateSlot=True),(SlotName="AccuracyMax",GradeIncrease=100,bActivateSlot=True),(SlotName="AccuracyMin",GradeIncrease=100,bActivateSlot=True),(SlotName="AccuracyRegen",GradeIncrease=10,bActivateSlot=True),(SlotName="WeaponAccuracyImpulse",GradeIncrease=100,bActivateSlot=True))
+
+set GD_Gladiolus_Weapons.Pistol.Pistol_Barrel_Stalker BehaviorProviderDefinition BehaviorProviderDefinition'GD_Gladiolus_Weapons.Shotgun.SG_Barrel_Torgue_Butcher:BehaviorProviderDefinition_1'
+
+#Bullet#
+set GD_Gladiolus_Weapons.FiringModes.Bullet_Pistol_Stalker NumRicochets 0
+set GD_Gladiolus_Weapons.FiringModes.Bullet_Pistol_Stalker ExplosionOverrideDefinition None
+set GD_Gladiolus_Weapons.FiringModes.Bullet_Pistol_Stalker ExplosionOverideInstanceDataName None
+set GD_Gladiolus_Weapons.FiringModes.Bullet_Pistol_Stalker bSuppressWeaponSpread True
+set GD_Gladiolus_Weapons.FiringModes.Bullet_Pistol_Stalker Acceleration (Z=0.000000)
+set GD_Gladiolus_Weapons.FiringModes.Bullet_Pistol_Stalker AirFriction 0.000000
+set GD_Gladiolus_Weapons.FiringModes.Bullet_Pistol_Stalker bPenetratePawn True
+set GD_Gladiolus_Weapons.FiringModes.Bullet_Pistol_Stalker bBeamChooseRandomBone True
+set GD_Gladiolus_Weapons.FiringModes.Bullet_Pistol_Stalker Speed 30000
+set GD_Gladiolus_Weapons.FiringModes.Bullet_Pistol_Stalker FiringPatternLines ()
+
+set GD_Gladiolus_Weapons.FiringModes.Bullet_Pistol_Stalker OnAnyImpact (Behavior_Explode'GD_Iris_Weapons.FiringModes.Bullet_Sniper_Cobra:Behavior_Explode_5')
+
+set GD_Gladiolus_Weapons.FiringModes.Bullet_Pistol_Stalker ImpactResponses ((DamageSurfaceType=DMGSURFACE_Flesh,bDisableRegularBulletDamage=False,Behaviors=(Behavior_Explode'GD_Weap_Pistol.FiringModes.Bullets_Pistol_Bandit_Tinderbox:Behavior_Explode_5')),(DamageSurfaceType=DMGSURFACE_Armor,bDisableRegularBulletDamage=False,Behaviors=(Behavior_Explode'GD_Weap_Pistol.FiringModes.Bullet_Pistol_Dahl_Teapot:Behavior_Explode_5')),(DamageSurfaceType=DMGSURFACE_Shield,bDisableRegularBulletDamage=False,Behaviors=(Behavior_Explode'GD_Sage_Weapons.FiringModes.Bullet_Shotgun_Twister:Behavior_Explode_5')),(DamageSurfaceType=DMGSURFACE_Generic,bDisableRegularBulletDamage=False,Behaviors=(Behavior_Explode'GD_Iris_Weapons.FiringModes.Bullet_Sniper_Cobra:Behavior_Explode_5')))
+
+#Fire splash#
+set GD_Weap_Pistol.FiringModes.Bullets_Pistol_Bandit_Tinderbox:Behavior_Explode_5 DamageSource Class'WillowGame.WillowDmgSource_Grenade'
+set GD_Weap_Pistol.FiringModes.Bullets_Pistol_Bandit_Tinderbox:Behavior_Explode_5 DamageFormula (BaseValueScaleConstant=0.800000)
+set GD_Weap_Pistol.FiringModes.Bullets_Pistol_Bandit_Tinderbox:Behavior_Explode_5 DamageRadiusFormula (BaseValueConstant=130.000000)
+set GD_Weap_Pistol.FiringModes.Bullets_Pistol_Bandit_Tinderbox:Behavior_Explode_5 Definition ExplosionDefinition'GD_Explosions.Incendiary.Explosion_IncendiaryMaster'
+set GD_Weap_Pistol.FiringModes.Bullets_Pistol_Bandit_Tinderbox:Behavior_Explode_5 StatusEffectChance (BaseValueScaleConstant=1.000000)
+set GD_Weap_Pistol.FiringModes.Bullets_Pistol_Bandit_Tinderbox:Behavior_Explode_5 InstigatorSelfDamageScale 0.000000
+
+#Shock splash#
+set GD_Sage_Weapons.FiringModes.Bullet_Shotgun_Twister:Behavior_Explode_5 DamageSource Class'WillowGame.WillowDmgSource_Grenade'
+set GD_Sage_Weapons.FiringModes.Bullet_Shotgun_Twister:Behavior_Explode_5 DamageFormula (BaseValueScaleConstant=0.800000)
+set GD_Sage_Weapons.FiringModes.Bullet_Shotgun_Twister:Behavior_Explode_5 DamageRadiusFormula (BaseValueConstant=130.000000)
+set GD_Sage_Weapons.FiringModes.Bullet_Shotgun_Twister:Behavior_Explode_5 Definition ExplosionDefinition'GD_Explosions.Shock.Explosion_ShockMaster'
+set GD_Sage_Weapons.FiringModes.Bullet_Shotgun_Twister:Behavior_Explode_5 StatusEffectChance (BaseValueScaleConstant=1.000000)
+set GD_Sage_Weapons.FiringModes.Bullet_Shotgun_Twister:Behavior_Explode_5 InstigatorSelfDamageScale 0.000000
+
+#Corrosive splash#
+set GD_Weap_Pistol.FiringModes.Bullet_Pistol_Dahl_Teapot:Behavior_Explode_5 DamageSource Class'WillowGame.WillowDmgSource_Grenade'
+set GD_Weap_Pistol.FiringModes.Bullet_Pistol_Dahl_Teapot:Behavior_Explode_5 DamageFormula (BaseValueScaleConstant=0.800000)
+set GD_Weap_Pistol.FiringModes.Bullet_Pistol_Dahl_Teapot:Behavior_Explode_5 DamageRadiusFormula (BaseValueConstant=130.000000)
+set GD_Weap_Pistol.FiringModes.Bullet_Pistol_Dahl_Teapot:Behavior_Explode_5 Definition ExplosionDefinition'GD_Explosions.Corrosive.Explosion_CorrosiveMaster'
+set GD_Weap_Pistol.FiringModes.Bullet_Pistol_Dahl_Teapot:Behavior_Explode_5 StatusEffectChance (BaseValueScaleConstant=1.000000)
+set GD_Weap_Pistol.FiringModes.Bullet_Pistol_Dahl_Teapot:Behavior_Explode_5 InstigatorSelfDamageScale 0.000000
+
+#Explosive splash#
+set GD_Iris_Weapons.FiringModes.Bullet_Sniper_Cobra:Behavior_Explode_5 DamageSource Class'WillowGame.WillowDmgSource_Grenade'
+set GD_Iris_Weapons.FiringModes.Bullet_Sniper_Cobra:Behavior_Explode_5 DamageFormula (BaseValueScaleConstant=0.800000)
+set GD_Iris_Weapons.FiringModes.Bullet_Sniper_Cobra:Behavior_Explode_5 DamageRadiusFormula (BaseValueConstant=130.000000)
+set GD_Iris_Weapons.FiringModes.Bullet_Sniper_Cobra:Behavior_Explode_5 Definition ExplosionDefinition'GD_Explosions.Explosive.Explosion_ExplosiveMaster'
+set GD_Iris_Weapons.FiringModes.Bullet_Sniper_Cobra:Behavior_Explode_5 InstigatorSelfDamageScale 0.000000
+
+#Locked - Skin#
+set GD_Gladiolus_Weapons.ManufacturerMaterials.Mat_Vladof_6_Stalker Material MaterialInstanceConstant'Sage_GunMaterials.Materials.Pistol.Mati_JakobsUniquePistol_Rex'

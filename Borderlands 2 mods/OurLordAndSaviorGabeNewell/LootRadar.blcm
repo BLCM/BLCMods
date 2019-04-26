@@ -1,0 +1,410 @@
+<BLCMM v="1">
+#<!!!You opened a file saved with BLCMM in FilterTool. Please update to BLCMM to properly open this file!!!>
+	<head>
+		<type name="BL2" offline="false"/>
+		<profiles>
+			<profile name="default" current="true"/>
+		</profiles>
+	</head>
+	<body>
+		<category name="Loot Radar">
+			<comment></comment>
+			<comment>Mod written by GitHub: Our Lord And Savior Gabe Newell / Nexus Mods: OB4MA</comment>
+			<comment></comment>
+			<comment>This mod adds a $ icon to every selected container in this file, with a custom title and description when viewed in the map.</comment>
+			<comment></comment>
+			<comment>This allows you to find all sorts of hidden chests and stuff that are nearby to you.</comment>
+			<comment>These icons will stay until you leave the map (must get within range again) or loot them.</comment>
+			<comment>So that means that you will not have issues with finding already looted containers!</comment>
+			<comment></comment>
+			<comment>Some of these may or may not work as expected.</comment>
+			<comment>For example, the Glowing Switches only show up if you spawn the chests and reset the area by completing or failing Digistruct Peak.</comment>
+			<comment></comment>
+			<comment>This mod does NOT work off host.  So that means that it will only work if you are hosting.</comment>
+			<comment></comment>
+			<comment>I have not tested how this works for clients who are using or not using this mod.</comment>
+			<comment></comment>
+			<category name="Options">
+				<category name="Chests">
+					<category name="Pirate">
+						<category name="Compass Piece Chest">
+							<hotfix name="Name" level="None">
+								<code profiles="default">set GD_Orchid_TreasureChests.InteractiveObjects.InteractiveObj_Flatbed_PirateChest CompassIcon RadarIconType_Shop</code>
+								<code profiles="default">set GD_Orchid_TreasureChests.InteractiveObjects.InteractiveObj_Flatbed_PirateChest StatusMenuMapInfoBoxHeader Plundered Trinkets</code>
+								<code profiles="default">set GD_Orchid_TreasureChests.InteractiveObjects.InteractiveObj_Flatbed_PirateChest StatusMenuMapInfoBoxDescription Beads, baubles and jewels.<br>Oh, maybe even compass parts.</code>
+							</hotfix>
+						</category>
+						<category name="Pirate Chest - Vault">
+							<hotfix name="Name" level="None">
+								<code profiles="default">set GD_Orchid_TreasureChests.InteractiveObjects.InteractiveObj_PirateChest_EndGame CompassIcon RadarIconType_Shop</code>
+								<code profiles="default">set GD_Orchid_TreasureChests.InteractiveObjects.InteractiveObj_PirateChest_EndGame StatusMenuMapInfoBoxHeader Legendary Treasure</code>
+								<code profiles="default">set GD_Orchid_TreasureChests.InteractiveObjects.InteractiveObj_PirateChest_EndGame StatusMenuMapInfoBoxDescription You have proven yourself worthy of a legend's treasure.</code>
+							</hotfix>
+						</category>
+						<category name="Caravan Red Chest - Wurmwater">
+							<hotfix name="Name" level="None">
+								<code profiles="default">set GD_Orchid_TreasureChests.InteractiveObjects.InteractiveObj_Orchid_Flatbed_EpicChestRed StatusMenuMapInfoBoxDescription Where did it come from?<br>No matter, you are going to steal it anyways.</code>
+								<code profiles="default">set GD_Orchid_TreasureChests.InteractiveObjects.InteractiveObj_Orchid_Flatbed_EpicChestRed StatusMenuMapInfoBoxHeader Plundered Treasure</code>
+								<code profiles="default">set GD_Orchid_TreasureChests.InteractiveObjects.InteractiveObj_Orchid_Flatbed_EpicChestRed CompassIcon RadarIconType_Shop</code>
+							</hotfix>
+						</category>
+						<category name="Red Pirate Chest">
+							<hotfix name="Name" level="None">
+								<code profiles="default">set GD_Orchid_TreasureChests.InteractiveObjects.InteractiveObj_PirateChest_Epic StatusMenuMapInfoBoxDescription A pirate's life for me.<br>Literally.</code>
+								<code profiles="default">set GD_Orchid_TreasureChests.InteractiveObjects.InteractiveObj_PirateChest_Epic StatusMenuMapInfoBoxHeader Pirated Treasure Chest</code>
+								<code profiles="default">set GD_Orchid_TreasureChests.InteractiveObjects.InteractiveObj_PirateChest_Epic CompassIcon RadarIconType_Shop</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Dahl">
+						<category name="Red Dahl Chest">
+							<hotfix name="Name" level="None">
+								<code profiles="default">set GD_Balance_Treasure.InteractiveObjects.InteractiveObj_DahlEpic StatusMenuMapInfoBoxDescription Military grade housing, hopefully with contents to match.</code>
+								<code profiles="default">set GD_Balance_Treasure.InteractiveObjects.InteractiveObj_DahlEpic StatusMenuMapInfoBoxHeader Red Dahl Chest</code>
+								<code profiles="default">set GD_Balance_Treasure.InteractiveObjects.InteractiveObj_DahlEpic CompassIcon RadarIconType_Shop</code>
+							</hotfix>
+						</category>
+						<category name="Digistruct Dahl Chest">
+							<hotfix name="Name" level="None">
+								<code profiles="default">set GD_Lobelia_DahlDigi.InteractiveObjectsUnique.InteractiveObject_DahlEpicCrate_Digi StatusMenuMapInfoBoxDescription Digitized armaments.<br>What's not to love?</code>
+								<code profiles="default">set GD_Lobelia_DahlDigi.InteractiveObjectsUnique.InteractiveObject_DahlEpicCrate_Digi StatusMenuMapInfoBoxHeader Digistructed Red Dahl Chest</code>
+								<code profiles="default">set GD_Lobelia_DahlDigi.InteractiveObjectsUnique.InteractiveObject_DahlEpicCrate_Digi CompassIcon RadarIconType_Shop</code>
+							</hotfix>
+						</category>
+						<category name="Green Dahl Chest">
+							<hotfix name="Name" level="None">
+								<code profiles="default">set GD_Balance_Treasure.InteractiveObjects.InteractiveObj_DahlWeaponChest CompassIcon RadarIconType_Shop</code>
+								<code profiles="default">set GD_Balance_Treasure.InteractiveObjects.InteractiveObj_DahlWeaponChest StatusMenuMapInfoBoxHeader Green Dahl Chest</code>
+								<code profiles="default">set GD_Balance_Treasure.InteractiveObjects.InteractiveObj_DahlWeaponChest StatusMenuMapInfoBoxDescription Military issued container.<br>Probably used for more than just firearms.</code>
+							</hotfix>
+						</category>
+						<category name="Oasis Green Dahl Chest">
+							<hotfix name="Name" level="None">
+								<code profiles="default">set GD_Orchid_LevelChallenges.InteractiveObjects.IO_OasisChallenge_DahlWeaponChest StatusMenuMapInfoBoxDescription For parkour enthusiasts.</code>
+								<code profiles="default">set GD_Orchid_LevelChallenges.InteractiveObjects.IO_OasisChallenge_DahlWeaponChest StatusMenuMapInfoBoxHeader Oasis' Green Dahl Chest</code>
+								<code profiles="default">set GD_Orchid_LevelChallenges.InteractiveObjects.IO_OasisChallenge_DahlWeaponChest CompassIcon RadarIconType_Shop</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Hyperion">
+						<category name="Hyperion Chest">
+							<hotfix name="Name" level="None">
+								<code profiles="default">set GD_Balance_Treasure.InteractiveObjects.InteractiveObj_HyperionChest CompassIcon RadarIconType_Shop</code>
+								<code profiles="default">set GD_Balance_Treasure.InteractiveObjects.InteractiveObj_HyperionChest StatusMenuMapInfoBoxHeader Hyperion Chest</code>
+								<code profiles="default">set GD_Balance_Treasure.InteractiveObjects.InteractiveObj_HyperionChest StatusMenuMapInfoBoxDescription Hopefully there are no surveyors watching..</code>
+							</hotfix>
+						</category>
+						<category name="Garbage Hyperion Chest - Torgue Arena">
+							<hotfix name="Name" level="None">
+								<code profiles="default">set GD_Iris_Balance_Treasure.InteractiveObjects.InteractiveObj_Iris_HyperionChest StatusMenuMapInfoBoxDescription Is it actually worthy of such title?</code>
+								<code profiles="default">set GD_Iris_Balance_Treasure.InteractiveObjects.InteractiveObj_Iris_HyperionChest StatusMenuMapInfoBoxHeader Torgue Approved Chest</code>
+								<code profiles="default">set GD_Iris_Balance_Treasure.InteractiveObjects.InteractiveObj_Iris_HyperionChest CompassIcon RadarIconType_Shop</code>
+							</hotfix>
+						</category>
+						<category name="Hyperion Chest - Terminus">
+							<hotfix name="Name" level="None">
+								<code profiles="default">set GD_Sage_Lootables.InteractiveObjects.InteractiveObj_HyperionChest_EndGame StatusMenuMapInfoBoxDescription He may have not lived up to his expectations, but he at least had some good finds within his lifetime.</code>
+								<code profiles="default">set GD_Sage_Lootables.InteractiveObjects.InteractiveObj_HyperionChest_EndGame CompassIcon RadarIconType_Shop</code>
+								<code profiles="default">set GD_Sage_Lootables.InteractiveObjects.InteractiveObj_HyperionChest_EndGame StatusMenuMapInfoBoxHeader Nakayama's Treasure</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Tiny Tina DLC">
+						<category name="Dice Chest">
+							<hotfix name="Name" level="None">
+								<code profiles="default">set GD_Aster_Lootables.InteractiveObjects.InteractiveObj_DiceChest StatusMenuMapInfoBoxDescription Roll for initiative.</code>
+								<code profiles="default">set GD_Aster_Lootables.InteractiveObjects.InteractiveObj_DiceChest StatusMenuMapInfoBoxHeader Roll The Dice Chest</code>
+								<code profiles="default">set GD_Aster_Lootables.InteractiveObjects.InteractiveObj_DiceChest CompassIcon RadarIconType_Shop</code>
+							</hotfix>
+						</category>
+						<category name="Not A Mimic Chest">
+							<hotfix name="Name" level="None">
+								<code profiles="default">set GD_Aster_Lootables.InteractiveObjects.InteractiveObj_MimicChest_NoMimic CompassIcon RadarIconType_Shop</code>
+								<code profiles="default">set GD_Aster_Lootables.InteractiveObjects.InteractiveObj_MimicChest_NoMimic StatusMenuMapInfoBoxHeader Magical Chest</code>
+								<code profiles="default">set GD_Aster_Lootables.InteractiveObjects.InteractiveObj_MimicChest_NoMimic StatusMenuMapInfoBoxDescription Not really.</code>
+							</hotfix>
+						</category>
+						<category name="Mimic Chest">
+							<hotfix name="Name" level="None">
+								<code profiles="default">set GD_Aster_Lootables.InteractiveObjects.InteractiveObj_MimicChest CompassIcon RadarIconType_Shop</code>
+								<code profiles="default">set GD_Aster_Lootables.InteractiveObjects.InteractiveObj_MimicChest StatusMenuMapInfoBoxHeader Magical Chest</code>
+								<code profiles="default">set GD_Aster_Lootables.InteractiveObjects.InteractiveObj_MimicChest StatusMenuMapInfoBoxDescription Powerful items lie within.</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Bandit Chest">
+						<hotfix name="Name" level="None">
+							<code profiles="default">set GD_Balance_Treasure.InteractiveObjects.InteractiveObj_BanditChest CompassIcon RadarIconType_Shop</code>
+							<code profiles="default">set GD_Balance_Treasure.InteractiveObjects.InteractiveObj_BanditChest StatusMenuMapInfoBoxHeader Bandit Car Trunk</code>
+							<code profiles="default">set GD_Balance_Treasure.InteractiveObjects.InteractiveObj_BanditChest StatusMenuMapInfoBoxDescription Smells of motor oil and feces.</code>
+						</hotfix>
+					</category>
+					<category name="Crawmerax Chest">
+						<hotfix name="Name" level="None">
+							<code profiles="default">set GD_Nasturtium_Lootables.InteractiveObjects.InteractiveObj_NastChest_Epic StatusMenuMapInfoBoxDescription Sun, water and sand.<br>Giant crabs and giant bugs.<br>Pirates.<br>What else could go wrong?</code>
+							<code profiles="default">set GD_Nasturtium_Lootables.InteractiveObjects.InteractiveObj_NastChest_Epic StatusMenuMapInfoBoxHeader Tropical Chest</code>
+							<code profiles="default">set GD_Nasturtium_Lootables.InteractiveObjects.InteractiveObj_NastChest_Epic CompassIcon RadarIconType_Shop</code>
+						</hotfix>
+					</category>
+					<category name="Tribal Chest">
+						<hotfix name="Name" level="None">
+							<code profiles="default">set GD_Sage_Lootables.InteractiveObjects.InteractiveObj_TribalChest StatusMenuMapInfoBoxDescription The shape of the container reminds you of a door opener.</code>
+							<code profiles="default">set GD_Sage_Lootables.InteractiveObjects.InteractiveObj_TribalChest StatusMenuMapInfoBoxHeader Tribal Chest</code>
+							<code profiles="default">set GD_Sage_Lootables.InteractiveObjects.InteractiveObj_TribalChest CompassIcon RadarIconType_Shop</code>
+						</hotfix>
+					</category>
+					<category name="Other">
+						<category name="Red Treasure Chest">
+							<hotfix name="Name" level="None">
+								<code profiles="default">set GD_Balance_Treasure.InteractiveObjects.InteractiveObj_TreasureChest CompassIcon RadarIconType_Shop</code>
+								<code profiles="default">set GD_Balance_Treasure.InteractiveObjects.InteractiveObj_TreasureChest StatusMenuMapInfoBoxHeader Red Treasure Chest</code>
+								<code profiles="default">set GD_Balance_Treasure.InteractiveObjects.InteractiveObj_TreasureChest StatusMenuMapInfoBoxDescription What precious items lie in wait?</code>
+							</hotfix>
+						</category>
+						<category name="Golden Chest">
+							<hotfix name="Name" level="None">
+								<code profiles="default">set GD_Balance_Treasure.InteractiveObjects.InteractiveObj_TreasureChest_Golden CompassIcon RadarIconType_Shop</code>
+								<code profiles="default">set GD_Balance_Treasure.InteractiveObjects.InteractiveObj_TreasureChest_Golden StatusMenuMapInfoBoxHeader Mysterious Golden Chest</code>
+								<code profiles="default">set GD_Balance_Treasure.InteractiveObjects.InteractiveObj_TreasureChest_Golden StatusMenuMapInfoBoxDescription The real mystery is how it contains so many items.<br>Maybe it is an Eridian Artifact..</code>
+							</hotfix>
+						</category>
+						<category name="Metal Chest">
+							<hotfix name="Name" level="None">
+								<code profiles="default">set GD_Balance_Treasure.InteractiveObjects.InteractiveObj_MetalCrate StatusMenuMapInfoBoxDescription Tetanus is the least of your worries.</code>
+								<code profiles="default">set GD_Balance_Treasure.InteractiveObjects.InteractiveObj_MetalCrate StatusMenuMapInfoBoxHeader Metal Chest</code>
+								<code profiles="default">set GD_Balance_Treasure.InteractiveObjects.InteractiveObj_MetalCrate CompassIcon RadarIconType_Shop</code>
+							</hotfix>
+						</category>
+						<category name="Billboard Chests - Badass Crater">
+							<hotfix name="Name" level="None">
+								<code profiles="default">set GD_Iris_ChallengeData.InteractiveObjects.IO_ChallengeChest StatusMenuMapInfoBoxDescription Not for some punk *ss b*tch who can't climb a ladder while being shot at!</code>
+								<code profiles="default">set GD_Iris_ChallengeData.InteractiveObjects.IO_ChallengeChest StatusMenuMapInfoBoxHeader Manly Chest Of Manliness</code>
+								<code profiles="default">set GD_Iris_ChallengeData.InteractiveObjects.IO_ChallengeChest CompassIcon RadarIconType_Shop</code>
+							</hotfix>
+						</category>
+					</category>
+				</category>
+				<category name="Other">
+					<category name="Digistruct Peak Switches">
+						<hotfix name="Name" level="None">
+							<code profiles="default">set GD_Lobelia_DahlDigi.InteractiveObjects.GenericSwitchEridiumCost CompassIcon RadarIconType_Shop</code>
+							<code profiles="default">set GD_Lobelia_DahlDigi.InteractiveObjects.GenericSwitchEridiumCost StatusMenuMapInfoBoxHeader Glowing Switch</code>
+							<code profiles="default">set GD_Lobelia_DahlDigi.InteractiveObjects.GenericSwitchEridiumCost StatusMenuMapInfoBoxDescription If you are lucky, you might get something!</code>
+						</hotfix>
+					</category>
+					<category name="Thanksgiving Boss Pumpkins">
+						<hotfix name="Name" level="None">
+							<code profiles="default">set GD_Allium_Lootables.IO.IO_Hunger_BossLoot CompassIcon RadarIconType_Shop</code>
+							<code profiles="default">set GD_Allium_Lootables.IO.IO_Hunger_BossLoot StatusMenuMapInfoBoxHeader Flesh Hungry Pumpkin</code>
+							<code profiles="default">set GD_Allium_Lootables.IO.IO_Hunger_BossLoot StatusMenuMapInfoBoxDescription Wait, what?<br>Not in the kitchen!</code>
+						</hotfix>
+					</category>
+					<category name="Gwen's Head Cardboard Box">
+						<hotfix name="Name" level="None">
+							<code profiles="default">set GD_EasterEggs.InteractiveObjects.InteractiveObj_WhatsInTheBox CompassIcon RadarIconType_Shop</code>
+							<code profiles="default">set GD_EasterEggs.InteractiveObjects.InteractiveObj_WhatsInTheBox StatusMenuMapInfoBoxHeader A Cardboard Box</code>
+							<code profiles="default">set GD_EasterEggs.InteractiveObjects.InteractiveObj_WhatsInTheBox StatusMenuMapInfoBoxDescription Shipping To: David Mills<br>From: John Doe<br>Shipping Cost: 7</code>
+						</hotfix>
+					</category>
+					<category name="Halloween Boss Pumpkins">
+						<hotfix name="Name" level="None">
+							<code profiles="default">set GD_Flax_Lootables.IOs.IO_Pumpkin_BossLoot StatusMenuMapInfoBoxDescription Blood of strangers used for growing food?<br>Good thing only the undead reside here.</code>
+							<code profiles="default">set GD_Flax_Lootables.IOs.IO_Pumpkin_BossLoot StatusMenuMapInfoBoxHeader Blood Soaked Pumpkins</code>
+							<code profiles="default">set GD_Flax_Lootables.IOs.IO_Pumpkin_BossLoot CompassIcon RadarIconType_Shop</code>
+						</hotfix>
+					</category>
+					<category name="Hyperion Gun Rack">
+						<hotfix name="Name" level="None">
+							<code profiles="default">set GD_Balance_Treasure.InteractiveObjects.InteractiveObj_HypWeaponChest StatusMenuMapInfoBoxDescription You never know when you might need it.</code>
+							<code profiles="default">set GD_Balance_Treasure.InteractiveObjects.InteractiveObj_HypWeaponChest StatusMenuMapInfoBoxHeader Hyperion Weapon Rack</code>
+							<code profiles="default">set GD_Balance_Treasure.InteractiveObjects.InteractiveObj_HypWeaponChest CompassIcon RadarIconType_Shop</code>
+						</hotfix>
+					</category>
+					<category name="Bandit Shit Shack">
+						<hotfix name="Name" level="None">
+							<code profiles="default">set GD_Balance_Treasure.InteractiveObjects.InteractiveObj_BanditWeaponChest CompassIcon RadarIconType_Shop</code>
+							<code profiles="default">set GD_Balance_Treasure.InteractiveObjects.InteractiveObj_BanditWeaponChest StatusMenuMapInfoBoxHeader Bandit Shit Shack</code>
+							<code profiles="default">set GD_Balance_Treasure.InteractiveObjects.InteractiveObj_BanditWeaponChest StatusMenuMapInfoBoxDescription Someone has likely left a surprise inside.</code>
+						</hotfix>
+					</category>
+					<category name="Train Car">
+						<hotfix name="Name" level="None">
+							<code profiles="default">set GD_Allium_Lootables.IOs.IO_LootCar CompassIcon RadarIconType_Shop</code>
+							<code profiles="default">set GD_Allium_Lootables.IOs.IO_LootCar StatusMenuMapInfoBoxHeader The Polar Express</code>
+							<code profiles="default">set GD_Allium_Lootables.IOs.IO_LootCar StatusMenuMapInfoBoxDescription It has presents too?</code>
+						</hotfix>
+					</category>
+				</category>
+				<category name="Midget Containers">
+					<category name="Red Treasure Chest - Midget">
+						<hotfix name="Name" level="None">
+							<code profiles="default">set GD_Balance_Treasure.InteractiveObjectsTrap.MidgetBandit.InteractiveObj_TreasureChest_MidgetBandit CompassIcon RadarIconType_Shop</code>
+							<code profiles="default">set GD_Balance_Treasure.InteractiveObjectsTrap.MidgetBandit.InteractiveObj_TreasureChest_MidgetBandit StatusMenuMapInfoBoxDescription It's probably just a mouse, right?</code>
+							<code profiles="default">set GD_Balance_Treasure.InteractiveObjectsTrap.MidgetBandit.InteractiveObj_TreasureChest_MidgetBandit StatusMenuMapInfoBoxHeader Noisy Red Treasure Chest</code>
+						</hotfix>
+					</category>
+					<category name="Metal Crate - Midget">
+						<hotfix name="Name" level="None">
+							<code profiles="default">set GD_Balance_Treasure.InteractiveObjectsTrap.MidgetHyperion.InteractiveObj_MetalCrate_MidgetHyperion CompassIcon RadarIconType_Shop</code>
+							<code profiles="default">set GD_Balance_Treasure.InteractiveObjectsTrap.MidgetHyperion.InteractiveObj_MetalCrate_MidgetHyperion StatusMenuMapInfoBoxHeader Echoing Metal Chest</code>
+							<code profiles="default">set GD_Balance_Treasure.InteractiveObjectsTrap.MidgetHyperion.InteractiveObj_MetalCrate_MidgetHyperion StatusMenuMapInfoBoxDescription Something seems to be playing from within.</code>
+						</hotfix>
+					</category>
+					<category name="Metal Crate - Midget">
+						<hotfix name="Name" level="None">
+							<code profiles="default">set GD_Balance_Treasure.InteractiveObjectsTrap.MidgetBandit.InteractiveObj_MetalCrate_MidgetBandit StatusMenuMapInfoBoxDescription Hopefully it is not being used as a coffin.. for the living.</code>
+							<code profiles="default">set GD_Balance_Treasure.InteractiveObjectsTrap.MidgetBandit.InteractiveObj_MetalCrate_MidgetBandit StatusMenuMapInfoBoxHeader Clanging Metal Crate</code>
+							<code profiles="default">set GD_Balance_Treasure.InteractiveObjectsTrap.MidgetBandit.InteractiveObj_MetalCrate_MidgetBandit CompassIcon RadarIconType_Shop</code>
+						</hotfix>
+					</category>
+					<category name="Storage Locker - Midget">
+						<hotfix name="Name" level="None">
+							<code profiles="default">set GD_Balance_Treasure.InteractiveObjectsTrap.MidgetHyperion.InteractiveObj_StorageLocker_MidgetHyperion CompassIcon RadarIconType_Shop</code>
+							<code profiles="default">set GD_Balance_Treasure.InteractiveObjectsTrap.MidgetHyperion.InteractiveObj_StorageLocker_MidgetHyperion StatusMenuMapInfoBoxHeader Clanking Storage Locker</code>
+							<code profiles="default">set GD_Balance_Treasure.InteractiveObjectsTrap.MidgetHyperion.InteractiveObj_StorageLocker_MidgetHyperion StatusMenuMapInfoBoxDescription Something is grinding within.</code>
+						</hotfix>
+					</category>
+					<category name="Storage Locker - Midget">
+						<hotfix name="Name" level="None">
+							<code profiles="default">set GD_Balance_Treasure.InteractiveObjectsTrap.MidgetBandit.InteractiveObj_StorageLocker_MidgetBandit StatusMenuMapInfoBoxDescription Sounds like someone got locked in.</code>
+							<code profiles="default">set GD_Balance_Treasure.InteractiveObjectsTrap.MidgetBandit.InteractiveObj_StorageLocker_MidgetBandit StatusMenuMapInfoBoxHeader Banging Storage Locker</code>
+							<code profiles="default">set GD_Balance_Treasure.InteractiveObjectsTrap.MidgetBandit.InteractiveObj_StorageLocker_MidgetBandit CompassIcon RadarIconType_Shop</code>
+						</hotfix>
+					</category>
+					<category name="Toilet - Midget">
+						<hotfix name="Name" level="None">
+							<code profiles="default">set GD_Balance_Treasure.InteractiveObjectsTrap.MidgetHyperion.InteractiveObj_Toilet_MidgetHyperion StatusMenuMapInfoBoxDescription Something large must be inside for that kind of water displacement.</code>
+							<code profiles="default">set GD_Balance_Treasure.InteractiveObjectsTrap.MidgetHyperion.InteractiveObj_Toilet_MidgetHyperion StatusMenuMapInfoBoxHeader Overflowing Toilet</code>
+							<code profiles="default">set GD_Balance_Treasure.InteractiveObjectsTrap.MidgetHyperion.InteractiveObj_Toilet_MidgetHyperion CompassIcon RadarIconType_Shop</code>
+						</hotfix>
+					</category>
+					<category name="Toilet - Midget">
+						<hotfix name="Name" level="None">
+							<code profiles="default">set GD_Balance_Treasure.InteractiveObjectsTrap.MidgetBandit.InteractiveObj_Toilet_MidgetBandit StatusMenuMapInfoBoxDescription Hopefully not another slag experiment.</code>
+							<code profiles="default">set GD_Balance_Treasure.InteractiveObjectsTrap.MidgetBandit.InteractiveObj_Toilet_MidgetBandit StatusMenuMapInfoBoxHeader Rupturing Toilet</code>
+							<code profiles="default">set GD_Balance_Treasure.InteractiveObjectsTrap.MidgetBandit.InteractiveObj_Toilet_MidgetBandit CompassIcon RadarIconType_Shop</code>
+						</hotfix>
+					</category>
+					<category name="Stalker Pile 1 - Midget">
+						<hotfix name="Name" level="None">
+							<code profiles="default">set GD_Balance_Treasure.InteractiveObjectsTrap.MidgetHyperion.InteractiveObj_StalkerPile1_MidgetHyperion CompassIcon RadarIconType_Shop</code>
+							<code profiles="default">set GD_Balance_Treasure.InteractiveObjectsTrap.MidgetHyperion.InteractiveObj_StalkerPile1_MidgetHyperion StatusMenuMapInfoBoxHeader Bulging Stalker Feces</code>
+							<code profiles="default">set GD_Balance_Treasure.InteractiveObjectsTrap.MidgetHyperion.InteractiveObj_StalkerPile1_MidgetHyperion StatusMenuMapInfoBoxDescription Whatever that Stalker ate must have not been digested well.</code>
+						</hotfix>
+					</category>
+					<category name="Stalker Pile 2 - Midget">
+						<hotfix name="Name" level="None">
+							<code profiles="default">set GD_Balance_Treasure.InteractiveObjectsTrap.MidgetHyperion.InteractiveObj_StalkerPile2_MidgetHyperion StatusMenuMapInfoBoxDescription Huh, I guess Stalkers can have digestive issues.</code>
+							<code profiles="default">set GD_Balance_Treasure.InteractiveObjectsTrap.MidgetHyperion.InteractiveObj_StalkerPile2_MidgetHyperion StatusMenuMapInfoBoxHeader Drooping Stalker Feces</code>
+							<code profiles="default">set GD_Balance_Treasure.InteractiveObjectsTrap.MidgetHyperion.InteractiveObj_StalkerPile2_MidgetHyperion CompassIcon RadarIconType_Shop</code>
+						</hotfix>
+					</category>
+					<category name="Dahl Ammo Box - Midget">
+						<hotfix name="Name" level="None">
+							<code profiles="default">set GD_Balance_Treasure.InteractiveObjectsTrap.MidgetHyperion.InteractiveObj_MilitaryCrate_MidgetHyperion StatusMenuMapInfoBoxDescription An audible language emerges from within.<br>Sounds like a plan for a surprise attack.</code>
+							<code profiles="default">set GD_Balance_Treasure.InteractiveObjectsTrap.MidgetHyperion.InteractiveObj_MilitaryCrate_MidgetHyperion StatusMenuMapInfoBoxHeader Chattering Ammo Box</code>
+							<code profiles="default">set GD_Balance_Treasure.InteractiveObjectsTrap.MidgetHyperion.InteractiveObj_MilitaryCrate_MidgetHyperion CompassIcon RadarIconType_Shop</code>
+						</hotfix>
+					</category>
+					<category name="Dahl Ammo Box - Midget">
+						<hotfix name="Name" level="None">
+							<code profiles="default">set GD_Balance_Treasure.InteractiveObjectsTrap.MidgetBandit.InteractiveObj_MilitaryCrate_MidgetBandit StatusMenuMapInfoBoxDescription Something sure is making a lot of noise.</code>
+							<code profiles="default">set GD_Balance_Treasure.InteractiveObjectsTrap.MidgetBandit.InteractiveObj_MilitaryCrate_MidgetBandit StatusMenuMapInfoBoxHeader Detonating Ammo Box</code>
+							<code profiles="default">set GD_Balance_Treasure.InteractiveObjectsTrap.MidgetBandit.InteractiveObj_MilitaryCrate_MidgetBandit CompassIcon RadarIconType_Shop</code>
+						</hotfix>
+					</category>
+					<category name="Laundry Machine - Midget">
+						<hotfix name="Name" level="None">
+							<code profiles="default">set GD_Balance_Treasure.InteractiveObjectsTrap.MidgetHyperion.InteractiveObj_LaundryMachine_MidgetHyperion StatusMenuMapInfoBoxDescription Looks like a trap is ready to be sprung.</code>
+							<code profiles="default">set GD_Balance_Treasure.InteractiveObjectsTrap.MidgetHyperion.InteractiveObj_LaundryMachine_MidgetHyperion StatusMenuMapInfoBoxHeader Springy Laundry Machine</code>
+							<code profiles="default">set GD_Balance_Treasure.InteractiveObjectsTrap.MidgetHyperion.InteractiveObj_LaundryMachine_MidgetHyperion CompassIcon RadarIconType_Shop</code>
+						</hotfix>
+					</category>
+					<category name="Laundry Machine - Midget">
+						<hotfix name="Name" level="None">
+							<code profiles="default">set GD_Balance_Treasure.InteractiveObjectsTrap.MidgetBandit.InteractiveObj_LaundryMachine_MidgetBandit StatusMenuMapInfoBoxDescription Was it used recently?</code>
+							<code profiles="default">set GD_Balance_Treasure.InteractiveObjectsTrap.MidgetBandit.InteractiveObj_LaundryMachine_MidgetBandit StatusMenuMapInfoBoxHeader Leaking Laundry Machine</code>
+							<code profiles="default">set GD_Balance_Treasure.InteractiveObjectsTrap.MidgetBandit.InteractiveObj_LaundryMachine_MidgetBandit CompassIcon RadarIconType_Shop</code>
+						</hotfix>
+					</category>
+					<category name="Dumpster- Midget">
+						<hotfix name="Name" level="None">
+							<code profiles="default">set GD_Balance_Treasure.InteractiveObjectsTrap.MidgetHyperion.InteractiveObj_Dumpster_MidgetHyperion StatusMenuMapInfoBoxDescription An odd sound for sure.</code>
+							<code profiles="default">set GD_Balance_Treasure.InteractiveObjectsTrap.MidgetHyperion.InteractiveObj_Dumpster_MidgetHyperion StatusMenuMapInfoBoxHeader Rattling Dumpster</code>
+							<code profiles="default">set GD_Balance_Treasure.InteractiveObjectsTrap.MidgetHyperion.InteractiveObj_Dumpster_MidgetHyperion CompassIcon RadarIconType_Shop</code>
+						</hotfix>
+					</category>
+					<category name="Dumpster - Midget">
+						<hotfix name="Name" level="None">
+							<code profiles="default">set GD_Balance_Treasure.InteractiveObjectsTrap.MidgetBandit.InteractiveObj_Dumpster_MidgetBandit StatusMenuMapInfoBoxDescription An aroma most foul.</code>
+							<code profiles="default">set GD_Balance_Treasure.InteractiveObjectsTrap.MidgetBandit.InteractiveObj_Dumpster_MidgetBandit StatusMenuMapInfoBoxHeader Foul Smelling Dumpster</code>
+							<code profiles="default">set GD_Balance_Treasure.InteractiveObjectsTrap.MidgetBandit.InteractiveObj_Dumpster_MidgetBandit CompassIcon RadarIconType_Shop</code>
+						</hotfix>
+					</category>
+					<category name="Cardboard Box - Midget">
+						<hotfix name="Name" level="None">
+							<code profiles="default">set GD_Balance_Treasure.InteractiveObjectsTrap.MidgetHyperion.InteractiveObj_CardboardBox_MidgetHyperion StatusMenuMapInfoBoxDescription Probably a small animal.</code>
+							<code profiles="default">set GD_Balance_Treasure.InteractiveObjectsTrap.MidgetHyperion.InteractiveObj_CardboardBox_MidgetHyperion StatusMenuMapInfoBoxHeader Ruffling Cardboard Box</code>
+							<code profiles="default">set GD_Balance_Treasure.InteractiveObjectsTrap.MidgetHyperion.InteractiveObj_CardboardBox_MidgetHyperion CompassIcon RadarIconType_Shop</code>
+						</hotfix>
+					</category>
+					<category name="Cardboard Box - Midget">
+						<hotfix name="Name" level="None">
+							<code profiles="default">set GD_Balance_Treasure.InteractiveObjectsTrap.MidgetBandit.InteractiveObj_CardboardBox_MidgetBandit StatusMenuMapInfoBoxDescription The material is oftly soggy for a box.</code>
+							<code profiles="default">set GD_Balance_Treasure.InteractiveObjectsTrap.MidgetBandit.InteractiveObj_CardboardBox_MidgetBandit StatusMenuMapInfoBoxHeader Soggy Cardboard Box</code>
+							<code profiles="default">set GD_Balance_Treasure.InteractiveObjectsTrap.MidgetBandit.InteractiveObj_CardboardBox_MidgetBandit CompassIcon RadarIconType_Shop</code>
+						</hotfix>
+					</category>
+					<category name="Bandit Cooler - Midget">
+						<hotfix name="Name" level="None">
+							<code profiles="default">set GD_Balance_Treasure.InteractiveObjectsTrap.MidgetBandit.InteractiveObj_BanditCooler_MidgetBandit StatusMenuMapInfoBoxDescription Not so cool afterall, are you?</code>
+							<code profiles="default">set GD_Balance_Treasure.InteractiveObjectsTrap.MidgetBandit.InteractiveObj_BanditCooler_MidgetBandit StatusMenuMapInfoBoxHeader Screaming Bandit Cooler</code>
+							<code profiles="default">set GD_Balance_Treasure.InteractiveObjectsTrap.MidgetBandit.InteractiveObj_BanditCooler_MidgetBandit CompassIcon RadarIconType_Shop</code>
+						</hotfix>
+					</category>
+					<category name="Hyperion Ammo - Midget">
+						<hotfix name="Name" level="None">
+							<code profiles="default">set GD_Balance_Treasure.InteractiveObjectsTrap.MidgetHyperion.InteractiveObj_HyperionAmmo_MidgetHyperion StatusMenuMapInfoBoxHeader Tampered Hyperion Ammo Box</code>
+							<code profiles="default">set GD_Balance_Treasure.InteractiveObjectsTrap.MidgetHyperion.InteractiveObj_HyperionAmmo_MidgetHyperion CompassIcon RadarIconType_Shop</code>
+							<code profiles="default">set GD_Balance_Treasure.InteractiveObjectsTrap.MidgetHyperion.InteractiveObj_HyperionAmmo_MidgetHyperion StatusMenuMapInfoBoxDescription Someone has clearly messed with this.</code>
+						</hotfix>
+					</category>
+					<category name="Outhouse - Midget">
+						<hotfix name="Name" level="None">
+							<code profiles="default">set GD_Balance_Treasure.InteractiveObjectsTrap.MidgetBandit.InteractiveObj_BanditWeaponChest_MidgetBandit StatusMenuMapInfoBoxDescription Something about this strikes fear into your very soul.</code>
+							<code profiles="default">set GD_Balance_Treasure.InteractiveObjectsTrap.MidgetBandit.InteractiveObj_BanditWeaponChest_MidgetBandit StatusMenuMapInfoBoxHeader Furiously Groaning Shit Shack</code>
+							<code profiles="default">set GD_Balance_Treasure.InteractiveObjectsTrap.MidgetBandit.InteractiveObj_BanditWeaponChest_MidgetBandit CompassIcon RadarIconType_Shop</code>
+						</hotfix>
+					</category>
+				</category>
+				<category name="Map Changes - Optimized Icon Viewing">
+					<category name="Code">
+						<code profiles="default">set StatusMenuMapGFxObject MaxScale 700</code>
+						<code profiles="default">set StatusMenuMapGFxObject MinScale 40</code>
+						<code profiles="default">set StatusMenuMapGFxObject PanRate 100</code>
+						<code profiles="default">set StatusMenuMapGFxObject ZoomSpeedFactor 0.1</code>
+						<code profiles="default">set StatusMenuMapGFxObject InfoBoxDistance 10</code>
+						<code profiles="default">set StatusMenuMapGFxObject PanIncrement 0.1</code>
+						<code profiles="default">set StatusMenuMapGFxObject Title_CustomObjective Custom Waypoint</code>
+						<code profiles="default">set StatusMenuMapGFxObject Title_AreaObjective Objective Area</code>
+					</category>
+				</category>
+			</category>
+		</category>
+	</body>
+</BLCMM>
+
+#Commands:
+set StatusMenuMapGFxObject MaxScale 700
+set StatusMenuMapGFxObject MinScale 40
+set StatusMenuMapGFxObject PanRate 100
+set StatusMenuMapGFxObject ZoomSpeedFactor 0.1
+set StatusMenuMapGFxObject InfoBoxDistance 10
+set StatusMenuMapGFxObject PanIncrement 0.1
+set StatusMenuMapGFxObject Title_CustomObjective Custom Waypoint
+set StatusMenuMapGFxObject Title_AreaObjective Objective Area
+
+#Hotfixes:
+set Transient.SparkServiceConfiguration_6 Keys ("SparkLevelPatchEntry-GBX_fixes1","SparkLevelPatchEntry-GBX_fixes2","SparkLevelPatchEntry-GBX_fixes3","SparkLevelPatchEntry-GBX_fixes4","SparkLevelPatchEntry-GBX_fixes5","SparkLevelPatchEntry-GBX_Fixes6","SparkLevelPatchEntry-GBX_Fixes7","SparkLevelPatchEntry-GBX_Fixes8","SparkLevelPatchEntry-GBX_Fixes9","SparkLevelPatchEntry-GBX_fixes10","SparkLevelPatchEntry-GBX_fixes11","SparkLevelPatchEntry-GBX_fixes12","SparkLevelPatchEntry-GBX_fixes13","SparkLevelPatchEntry-GBX_fixes14","SparkOnDemandPatchEntry-GBX_fixes15","SparkOnDemandPatchEntry-GBX_fixes16","SparkOnDemandPatchEntry-GBX_fixes17","SparkOnDemandPatchEntry-GBX_fixes18","SparkOnDemandPatchEntry-GBX_fixes19","SparkPatchEntry-GBX_fixes20","SparkPatchEntry-GBX_fixes21","SparkPatchEntry-GBX_fixes22","SparkPatchEntry-GBX_fixes23","SparkLevelPatchEntry-Name1","SparkLevelPatchEntry-Name2","SparkLevelPatchEntry-Name3","SparkLevelPatchEntry-Name4","SparkLevelPatchEntry-Name5","SparkLevelPatchEntry-Name6","SparkLevelPatchEntry-Name7","SparkLevelPatchEntry-Name8","SparkLevelPatchEntry-Name9","SparkLevelPatchEntry-Name10","SparkLevelPatchEntry-Name11","SparkLevelPatchEntry-Name12","SparkLevelPatchEntry-Name13","SparkLevelPatchEntry-Name14","SparkLevelPatchEntry-Name15","SparkLevelPatchEntry-Name16","SparkLevelPatchEntry-Name17","SparkLevelPatchEntry-Name18","SparkLevelPatchEntry-Name19","SparkLevelPatchEntry-Name20","SparkLevelPatchEntry-Name21","SparkLevelPatchEntry-Name22","SparkLevelPatchEntry-Name23","SparkLevelPatchEntry-Name24","SparkLevelPatchEntry-Name25","SparkLevelPatchEntry-Name26","SparkLevelPatchEntry-Name27","SparkLevelPatchEntry-Name28","SparkLevelPatchEntry-Name29","SparkLevelPatchEntry-Name30","SparkLevelPatchEntry-Name31","SparkLevelPatchEntry-Name32","SparkLevelPatchEntry-Name33","SparkLevelPatchEntry-Name34","SparkLevelPatchEntry-Name35","SparkLevelPatchEntry-Name36","SparkLevelPatchEntry-Name37","SparkLevelPatchEntry-Name38","SparkLevelPatchEntry-Name39","SparkLevelPatchEntry-Name40","SparkLevelPatchEntry-Name41","SparkLevelPatchEntry-Name42","SparkLevelPatchEntry-Name43","SparkLevelPatchEntry-Name44","SparkLevelPatchEntry-Name45","SparkLevelPatchEntry-Name46","SparkLevelPatchEntry-Name47","SparkLevelPatchEntry-Name48","SparkLevelPatchEntry-Name49","SparkLevelPatchEntry-Name50","SparkLevelPatchEntry-Name51","SparkLevelPatchEntry-Name52","SparkLevelPatchEntry-Name53","SparkLevelPatchEntry-Name54","SparkLevelPatchEntry-Name55","SparkLevelPatchEntry-Name56","SparkLevelPatchEntry-Name57","SparkLevelPatchEntry-Name58","SparkLevelPatchEntry-Name59","SparkLevelPatchEntry-Name60","SparkLevelPatchEntry-Name61","SparkLevelPatchEntry-Name62","SparkLevelPatchEntry-Name63","SparkLevelPatchEntry-Name64","SparkLevelPatchEntry-Name65","SparkLevelPatchEntry-Name66","SparkLevelPatchEntry-Name67","SparkLevelPatchEntry-Name68","SparkLevelPatchEntry-Name69","SparkLevelPatchEntry-Name70","SparkLevelPatchEntry-Name71","SparkLevelPatchEntry-Name72","SparkLevelPatchEntry-Name73","SparkLevelPatchEntry-Name74","SparkLevelPatchEntry-Name75","SparkLevelPatchEntry-Name76","SparkLevelPatchEntry-Name77","SparkLevelPatchEntry-Name78","SparkLevelPatchEntry-Name79","SparkLevelPatchEntry-Name80","SparkLevelPatchEntry-Name81","SparkLevelPatchEntry-Name82","SparkLevelPatchEntry-Name83","SparkLevelPatchEntry-Name84","SparkLevelPatchEntry-Name85","SparkLevelPatchEntry-Name86","SparkLevelPatchEntry-Name87","SparkLevelPatchEntry-Name88","SparkLevelPatchEntry-Name89","SparkLevelPatchEntry-Name90","SparkLevelPatchEntry-Name91","SparkLevelPatchEntry-Name92","SparkLevelPatchEntry-Name93","SparkLevelPatchEntry-Name94","SparkLevelPatchEntry-Name95","SparkLevelPatchEntry-Name96","SparkLevelPatchEntry-Name97","SparkLevelPatchEntry-Name98","SparkLevelPatchEntry-Name99","SparkLevelPatchEntry-Name100","SparkLevelPatchEntry-Name101","SparkLevelPatchEntry-Name102","SparkLevelPatchEntry-Name103","SparkLevelPatchEntry-Name104","SparkLevelPatchEntry-Name105","SparkLevelPatchEntry-Name106","SparkLevelPatchEntry-Name107","SparkLevelPatchEntry-Name108","SparkLevelPatchEntry-Name109","SparkLevelPatchEntry-Name110","SparkLevelPatchEntry-Name111","SparkLevelPatchEntry-Name112","SparkLevelPatchEntry-Name113","SparkLevelPatchEntry-Name114","SparkLevelPatchEntry-Name115","SparkLevelPatchEntry-Name116","SparkLevelPatchEntry-Name117","SparkLevelPatchEntry-Name118","SparkLevelPatchEntry-Name119","SparkLevelPatchEntry-Name120","SparkLevelPatchEntry-Name121","SparkLevelPatchEntry-Name122","SparkLevelPatchEntry-Name123","SparkLevelPatchEntry-Name124","SparkLevelPatchEntry-Name125","SparkLevelPatchEntry-Name126","SparkLevelPatchEntry-Name127","SparkLevelPatchEntry-Name128","SparkLevelPatchEntry-Name129","SparkLevelPatchEntry-Name130","SparkLevelPatchEntry-Name131","SparkLevelPatchEntry-Name132","SparkLevelPatchEntry-Name133","SparkLevelPatchEntry-Name134","SparkLevelPatchEntry-Name135","SparkLevelPatchEntry-Name136","SparkLevelPatchEntry-Name137","SparkLevelPatchEntry-Name138","SparkLevelPatchEntry-Name139","SparkLevelPatchEntry-Name140","SparkLevelPatchEntry-Name141","SparkLevelPatchEntry-Name142","SparkLevelPatchEntry-Name143","SparkLevelPatchEntry-Name144")
+set Transient.SparkServiceConfiguration_6 Values (",GD_Balance.WeightingPlayerCount.BugmorphCocoon_PerPlayers_Phase1,ConditionalInitialization.ConditionalExpressionList[4].BaseValueIfTrue.BaseValueConstant,0.700000,.8",",GD_Balance.WeightingPlayerCount.BugmorphCocoon_PerPlayers_Phase2,ConditionalInitialization.ConditionalExpressionList[4].BaseValueIfTrue.BaseValueConstant,0.400000,.5",",GD_Balance.WeightingPlayerCount.BugmorphCocoon_PerPlayers_Phase3,ConditionalInitialization.ConditionalExpressionList[4].BaseValueIfTrue.BaseValueConstant,0.200000,.3",",GD_Balance.WeightingPlayerCount.BugmorphCocoon_PerPlayers_Phase4,ConditionalInitialization.ConditionalExpressionList[4].BaseValueIfTrue.BaseValueConstant,0.100000,.2",",GD_Balance.WeightingPlayerCount.BugmorphCocoon_PerPlayers_Phase5,ConditionalInitialization.ConditionalExpressionList[4].BaseValueIfTrue.BaseValueConstant,0.075000,.1","SouthpawFactory_P,GD_Population_Marauder.Balance.Unique.PawnBalance_Assassin1,DefaultItemPoolList[3].PoolProbability.BaseValueScaleConstant,0.250000,1","SouthpawFactory_P,GD_Population_Nomad.Balance.Unique.PawnBalance_Assassin2,DefaultItemPoolList[4].PoolProbability.BaseValueScaleConstant,0.250000,1","SouthpawFactory_P,GD_Population_Psycho.Balance.Unique.PawnBalance_Assassin3,DefaultItemPoolList[1].PoolProbability.BaseValueScaleConstant,0.250000,1","SouthpawFactory_P,GD_Population_Rat.Balance.Unique.PawnBalance_Assassin4,DefaultItemPoolList[3].PoolProbability.BaseValueScaleConstant,0.250000,1",",GD_Sage_Rare_Scaylion.Population.PawnBalance_Sage_Rare_Scaylion,DefaultItemPoolList[1].PoolProbability.BaseValueScaleConstant,1.000000,100",",GD_Sage_Rare_Drifter.Balance.PawnBalance_Sage_Rare_Drifter,DefaultItemPoolList[0].PoolProbability.BaseValueScaleConstant,1.000000,100",",GD_Sage_Rare_Rhino.Population.PawnBalance_Sage_Rare_Rhino,DefaultItemPoolList[1].PoolProbability.BaseValueScaleConstant,1.000000,100",",GD_Sage_Rare_Skag.Population.PawnBalance_Sage_Rare_Skag,DefaultItemPoolList[1].PoolProbability.BaseValueScaleConstant,1.000000,100",",GD_Sage_Rare_Spore.Population.PawnBalance_Sage_Rare_Spore,DefaultItemPoolList[0].PoolProbability.BaseValueScaleConstant,1.000000,100","GD_Assassin_Streaming,GD_Assassin_Skills.Sniping.Velocity,SkillEffectDefinitions[0].ModifierType,MT_PostAdd,MT_Scale","GD_Tulip_Mechro_Streaming,GD_Tulip_Mechromancer_Skills.LittleBigTrouble.WiresDontTalk,SkillEffectDefinitions,,((AttributeToModify=D_Attributes.DamageTypeModifers.InstigatedShockDamageModifier,bIncludeDuelingTargets=False,bIncludeSelfAsTarget=False,bOnlyEffectTargetsInRange=False,bExcludeNonPlayerCharacters=False,EffectTarget=TARGET_Self,TargetInstanceDataName=,TargetCriteria=CRITERIA_None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.030000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),GradeToStartApplyingEffect=1,PerGradeUpgradeInterval=1,PerGradeUpgrade=(BaseValueConstant=0.030000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),BonusUpgradeList=),(AttributeToModify=D_Attributes.DamageTypeModifers.InstigatedShockStatusDamageModifier,bIncludeDuelingTargets=False,bIncludeSelfAsTarget=False,bOnlyEffectTargetsInRange=False,bExcludeNonPlayerCharacters=False,EffectTarget=TARGET_Self,TargetInstanceDataName=,TargetCriteria=CRITERIA_None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.030000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),GradeToStartApplyingEffect=1,PerGradeUpgradeInterval=1,PerGradeUpgrade=(BaseValueConstant=0.030000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),BonusUpgradeList=))","GD_Siren_Streaming,GD_Siren_Skills.Misc.Init_BlightPhoenix_DamageCalc_Part2,ValueFormula.Level.InitializationDefinition,AttributeInitializationDefinition'GD_Balance_HealthAndDamage.HealthAndDamage.Init_PlayerMeleeDamage',AttributeInitializationDefinition'GD_Balance_HealthAndDamage.HealthAndDamage.Init_PlayerSkillDamage'","GD_Siren_Streaming,GD_Siren_Skills.Misc.Init_BlightPhoenix_DamageCalc_Part2,ValueFormula.Level.BaseValueScaleConstant,1.000000,3.5","GD_Assassin_Streaming,GD_Assassin_Skills.Misc.Att_DeathMark_BonusDamage,BaseValue.BaseValueConstant,0.200000,.8","GD_Itempools.Runnables.Pool_FourAssassins,BalancedItems[1].Probability.InitializationDefinition,None,GD_Balance.Weighting.Weight_1_Common","GD_Shields.Projectiles.Proj_LegendaryBoosterShield:BehaviorProviderDefinition_1.Behavior_Explode_140,BehaviorSequences[0].BehaviorData2[7].Behavior.StatusEffectDamage.BaseValueAttribute,None,D_Attributes.Projectile.ProjectileDamage","GD_Shields.Projectiles.Proj_LegendaryBoosterShield:BehaviorProviderDefinition_1.Behavior_Explode_140,BehaviorSequences[0].BehaviorData2[7].Behavior.StatusEffectDamage.BaseValueScaleConstant,1.000000,.25","GD_Shields.Projectiles.Proj_LegendaryBoosterShield:BehaviorProviderDefinition_1.Behavior_Explode_140,BehaviorSequences[0].BehaviorData2[7].Behavior.StatusEffectChance.BaseValueConstant,1.000000,20",",GD_Orchid_TreasureChests.InteractiveObjects.InteractiveObj_Flatbed_PirateChest,CompassIcon,,RadarIconType_Shop",",GD_Orchid_TreasureChests.InteractiveObjects.InteractiveObj_Flatbed_PirateChest,StatusMenuMapInfoBoxHeader,,Plundered Trinkets",",GD_Orchid_TreasureChests.InteractiveObjects.InteractiveObj_Flatbed_PirateChest,StatusMenuMapInfoBoxDescription,,Beads, baubles and jewels.<br>Oh, maybe even compass parts.",",GD_Orchid_TreasureChests.InteractiveObjects.InteractiveObj_PirateChest_EndGame,CompassIcon,,RadarIconType_Shop",",GD_Orchid_TreasureChests.InteractiveObjects.InteractiveObj_PirateChest_EndGame,StatusMenuMapInfoBoxHeader,,Legendary Treasure",",GD_Orchid_TreasureChests.InteractiveObjects.InteractiveObj_PirateChest_EndGame,StatusMenuMapInfoBoxDescription,,You have proven yourself worthy of a legend's treasure.",",GD_Orchid_TreasureChests.InteractiveObjects.InteractiveObj_Orchid_Flatbed_EpicChestRed,StatusMenuMapInfoBoxDescription,,Where did it come from?<br>No matter, you are going to steal it anyways.",",GD_Orchid_TreasureChests.InteractiveObjects.InteractiveObj_Orchid_Flatbed_EpicChestRed,StatusMenuMapInfoBoxHeader,,Plundered Treasure",",GD_Orchid_TreasureChests.InteractiveObjects.InteractiveObj_Orchid_Flatbed_EpicChestRed,CompassIcon,,RadarIconType_Shop",",GD_Orchid_TreasureChests.InteractiveObjects.InteractiveObj_PirateChest_Epic,StatusMenuMapInfoBoxDescription,,A pirate's life for me.<br>Literally.",",GD_Orchid_TreasureChests.InteractiveObjects.InteractiveObj_PirateChest_Epic,StatusMenuMapInfoBoxHeader,,Pirated Treasure Chest",",GD_Orchid_TreasureChests.InteractiveObjects.InteractiveObj_PirateChest_Epic,CompassIcon,,RadarIconType_Shop",",GD_Balance_Treasure.InteractiveObjects.InteractiveObj_DahlEpic,StatusMenuMapInfoBoxDescription,,Military grade housing, hopefully with contents to match.",",GD_Balance_Treasure.InteractiveObjects.InteractiveObj_DahlEpic,StatusMenuMapInfoBoxHeader,,Red Dahl Chest",",GD_Balance_Treasure.InteractiveObjects.InteractiveObj_DahlEpic,CompassIcon,,RadarIconType_Shop",",GD_Lobelia_DahlDigi.InteractiveObjectsUnique.InteractiveObject_DahlEpicCrate_Digi,StatusMenuMapInfoBoxDescription,,Digitized armaments.<br>What's not to love?",",GD_Lobelia_DahlDigi.InteractiveObjectsUnique.InteractiveObject_DahlEpicCrate_Digi,StatusMenuMapInfoBoxHeader,,Digistructed Red Dahl Chest",",GD_Lobelia_DahlDigi.InteractiveObjectsUnique.InteractiveObject_DahlEpicCrate_Digi,CompassIcon,,RadarIconType_Shop",",GD_Balance_Treasure.InteractiveObjects.InteractiveObj_DahlWeaponChest,CompassIcon,,RadarIconType_Shop",",GD_Balance_Treasure.InteractiveObjects.InteractiveObj_DahlWeaponChest,StatusMenuMapInfoBoxHeader,,Green Dahl Chest",",GD_Balance_Treasure.InteractiveObjects.InteractiveObj_DahlWeaponChest,StatusMenuMapInfoBoxDescription,,Military issued container.<br>Probably used for more than just firearms.",",GD_Orchid_LevelChallenges.InteractiveObjects.IO_OasisChallenge_DahlWeaponChest,StatusMenuMapInfoBoxDescription,,For parkour enthusiasts.",",GD_Orchid_LevelChallenges.InteractiveObjects.IO_OasisChallenge_DahlWeaponChest,StatusMenuMapInfoBoxHeader,,Oasis' Green Dahl Chest",",GD_Orchid_LevelChallenges.InteractiveObjects.IO_OasisChallenge_DahlWeaponChest,CompassIcon,,RadarIconType_Shop",",GD_Balance_Treasure.InteractiveObjects.InteractiveObj_HyperionChest,CompassIcon,,RadarIconType_Shop",",GD_Balance_Treasure.InteractiveObjects.InteractiveObj_HyperionChest,StatusMenuMapInfoBoxHeader,,Hyperion Chest",",GD_Balance_Treasure.InteractiveObjects.InteractiveObj_HyperionChest,StatusMenuMapInfoBoxDescription,,Hopefully there are no surveyors watching..",",GD_Iris_Balance_Treasure.InteractiveObjects.InteractiveObj_Iris_HyperionChest,StatusMenuMapInfoBoxDescription,,Is it actually worthy of such title?",",GD_Iris_Balance_Treasure.InteractiveObjects.InteractiveObj_Iris_HyperionChest,StatusMenuMapInfoBoxHeader,,Torgue Approved Chest",",GD_Iris_Balance_Treasure.InteractiveObjects.InteractiveObj_Iris_HyperionChest,CompassIcon,,RadarIconType_Shop",",GD_Sage_Lootables.InteractiveObjects.InteractiveObj_HyperionChest_EndGame,StatusMenuMapInfoBoxDescription,,He may have not lived up to his expectations, but he at least had some good finds within his lifetime.",",GD_Sage_Lootables.InteractiveObjects.InteractiveObj_HyperionChest_EndGame,CompassIcon,,RadarIconType_Shop",",GD_Sage_Lootables.InteractiveObjects.InteractiveObj_HyperionChest_EndGame,StatusMenuMapInfoBoxHeader,,Nakayama's Treasure",",GD_Aster_Lootables.InteractiveObjects.InteractiveObj_DiceChest,StatusMenuMapInfoBoxDescription,,Roll for initiative.",",GD_Aster_Lootables.InteractiveObjects.InteractiveObj_DiceChest,StatusMenuMapInfoBoxHeader,,Roll The Dice Chest",",GD_Aster_Lootables.InteractiveObjects.InteractiveObj_DiceChest,CompassIcon,,RadarIconType_Shop",",GD_Aster_Lootables.InteractiveObjects.InteractiveObj_MimicChest_NoMimic,CompassIcon,,RadarIconType_Shop",",GD_Aster_Lootables.InteractiveObjects.InteractiveObj_MimicChest_NoMimic,StatusMenuMapInfoBoxHeader,,Magical Chest",",GD_Aster_Lootables.InteractiveObjects.InteractiveObj_MimicChest_NoMimic,StatusMenuMapInfoBoxDescription,,Not really.",",GD_Aster_Lootables.InteractiveObjects.InteractiveObj_MimicChest,CompassIcon,,RadarIconType_Shop",",GD_Aster_Lootables.InteractiveObjects.InteractiveObj_MimicChest,StatusMenuMapInfoBoxHeader,,Magical Chest",",GD_Aster_Lootables.InteractiveObjects.InteractiveObj_MimicChest,StatusMenuMapInfoBoxDescription,,Powerful items lie within.",",GD_Balance_Treasure.InteractiveObjects.InteractiveObj_BanditChest,CompassIcon,,RadarIconType_Shop",",GD_Balance_Treasure.InteractiveObjects.InteractiveObj_BanditChest,StatusMenuMapInfoBoxHeader,,Bandit Car Trunk",",GD_Balance_Treasure.InteractiveObjects.InteractiveObj_BanditChest,StatusMenuMapInfoBoxDescription,,Smells of motor oil and feces.",",GD_Nasturtium_Lootables.InteractiveObjects.InteractiveObj_NastChest_Epic,StatusMenuMapInfoBoxDescription,,Sun, water and sand.<br>Giant crabs and giant bugs.<br>Pirates.<br>What else could go wrong?",",GD_Nasturtium_Lootables.InteractiveObjects.InteractiveObj_NastChest_Epic,StatusMenuMapInfoBoxHeader,,Tropical Chest",",GD_Nasturtium_Lootables.InteractiveObjects.InteractiveObj_NastChest_Epic,CompassIcon,,RadarIconType_Shop",",GD_Sage_Lootables.InteractiveObjects.InteractiveObj_TribalChest,StatusMenuMapInfoBoxDescription,,The shape of the container reminds you of a door opener.",",GD_Sage_Lootables.InteractiveObjects.InteractiveObj_TribalChest,StatusMenuMapInfoBoxHeader,,Tribal Chest",",GD_Sage_Lootables.InteractiveObjects.InteractiveObj_TribalChest,CompassIcon,,RadarIconType_Shop",",GD_Balance_Treasure.InteractiveObjects.InteractiveObj_TreasureChest,CompassIcon,,RadarIconType_Shop",",GD_Balance_Treasure.InteractiveObjects.InteractiveObj_TreasureChest,StatusMenuMapInfoBoxHeader,,Red Treasure Chest",",GD_Balance_Treasure.InteractiveObjects.InteractiveObj_TreasureChest,StatusMenuMapInfoBoxDescription,,What precious items lie in wait?",",GD_Balance_Treasure.InteractiveObjects.InteractiveObj_TreasureChest_Golden,CompassIcon,,RadarIconType_Shop",",GD_Balance_Treasure.InteractiveObjects.InteractiveObj_TreasureChest_Golden,StatusMenuMapInfoBoxHeader,,Mysterious Golden Chest",",GD_Balance_Treasure.InteractiveObjects.InteractiveObj_TreasureChest_Golden,StatusMenuMapInfoBoxDescription,,The real mystery is how it contains so many items.<br>Maybe it is an Eridian Artifact..",",GD_Balance_Treasure.InteractiveObjects.InteractiveObj_MetalCrate,StatusMenuMapInfoBoxDescription,,Tetanus is the least of your worries.",",GD_Balance_Treasure.InteractiveObjects.InteractiveObj_MetalCrate,StatusMenuMapInfoBoxHeader,,Metal Chest",",GD_Balance_Treasure.InteractiveObjects.InteractiveObj_MetalCrate,CompassIcon,,RadarIconType_Shop",",GD_Iris_ChallengeData.InteractiveObjects.IO_ChallengeChest,StatusMenuMapInfoBoxDescription,,Not for some punk *ss b*tch who can't climb a ladder while being shot at!",",GD_Iris_ChallengeData.InteractiveObjects.IO_ChallengeChest,StatusMenuMapInfoBoxHeader,,Manly Chest Of Manliness",",GD_Iris_ChallengeData.InteractiveObjects.IO_ChallengeChest,CompassIcon,,RadarIconType_Shop",",GD_Lobelia_DahlDigi.InteractiveObjects.GenericSwitchEridiumCost,CompassIcon,,RadarIconType_Shop",",GD_Lobelia_DahlDigi.InteractiveObjects.GenericSwitchEridiumCost,StatusMenuMapInfoBoxHeader,,Glowing Switch",",GD_Lobelia_DahlDigi.InteractiveObjects.GenericSwitchEridiumCost,StatusMenuMapInfoBoxDescription,,If you are lucky, you might get something!",",GD_Allium_Lootables.IO.IO_Hunger_BossLoot,CompassIcon,,RadarIconType_Shop",",GD_Allium_Lootables.IO.IO_Hunger_BossLoot,StatusMenuMapInfoBoxHeader,,Flesh Hungry Pumpkin",",GD_Allium_Lootables.IO.IO_Hunger_BossLoot,StatusMenuMapInfoBoxDescription,,Wait, what?<br>Not in the kitchen!",",GD_EasterEggs.InteractiveObjects.InteractiveObj_WhatsInTheBox,CompassIcon,,RadarIconType_Shop",",GD_EasterEggs.InteractiveObjects.InteractiveObj_WhatsInTheBox,StatusMenuMapInfoBoxHeader,,A Cardboard Box",",GD_EasterEggs.InteractiveObjects.InteractiveObj_WhatsInTheBox,StatusMenuMapInfoBoxDescription,,Shipping To: David Mills<br>From: John Doe<br>Shipping Cost: 7",",GD_Flax_Lootables.IOs.IO_Pumpkin_BossLoot,StatusMenuMapInfoBoxDescription,,Blood of strangers used for growing food?<br>Good thing only the undead reside here.",",GD_Flax_Lootables.IOs.IO_Pumpkin_BossLoot,StatusMenuMapInfoBoxHeader,,Blood Soaked Pumpkins",",GD_Flax_Lootables.IOs.IO_Pumpkin_BossLoot,CompassIcon,,RadarIconType_Shop",",GD_Balance_Treasure.InteractiveObjects.InteractiveObj_HypWeaponChest,StatusMenuMapInfoBoxDescription,,You never know when you might need it.",",GD_Balance_Treasure.InteractiveObjects.InteractiveObj_HypWeaponChest,StatusMenuMapInfoBoxHeader,,Hyperion Weapon Rack",",GD_Balance_Treasure.InteractiveObjects.InteractiveObj_HypWeaponChest,CompassIcon,,RadarIconType_Shop",",GD_Balance_Treasure.InteractiveObjects.InteractiveObj_BanditWeaponChest,CompassIcon,,RadarIconType_Shop",",GD_Balance_Treasure.InteractiveObjects.InteractiveObj_BanditWeaponChest,StatusMenuMapInfoBoxHeader,,Bandit Shit Shack",",GD_Balance_Treasure.InteractiveObjects.InteractiveObj_BanditWeaponChest,StatusMenuMapInfoBoxDescription,,Someone has likely left a surprise inside.",",GD_Allium_Lootables.IOs.IO_LootCar,CompassIcon,,RadarIconType_Shop",",GD_Allium_Lootables.IOs.IO_LootCar,StatusMenuMapInfoBoxHeader,,The Polar Express",",GD_Allium_Lootables.IOs.IO_LootCar,StatusMenuMapInfoBoxDescription,,It has presents too?",",GD_Balance_Treasure.InteractiveObjectsTrap.MidgetBandit.InteractiveObj_TreasureChest_MidgetBandit,CompassIcon,,RadarIconType_Shop",",GD_Balance_Treasure.InteractiveObjectsTrap.MidgetBandit.InteractiveObj_TreasureChest_MidgetBandit,StatusMenuMapInfoBoxDescription,,It's probably just a mouse, right?",",GD_Balance_Treasure.InteractiveObjectsTrap.MidgetBandit.InteractiveObj_TreasureChest_MidgetBandit,StatusMenuMapInfoBoxHeader,,Noisy Red Treasure Chest",",GD_Balance_Treasure.InteractiveObjectsTrap.MidgetHyperion.InteractiveObj_MetalCrate_MidgetHyperion,CompassIcon,,RadarIconType_Shop",",GD_Balance_Treasure.InteractiveObjectsTrap.MidgetHyperion.InteractiveObj_MetalCrate_MidgetHyperion,StatusMenuMapInfoBoxHeader,,Echoing Metal Chest",",GD_Balance_Treasure.InteractiveObjectsTrap.MidgetHyperion.InteractiveObj_MetalCrate_MidgetHyperion,StatusMenuMapInfoBoxDescription,,Something seems to be playing from within.",",GD_Balance_Treasure.InteractiveObjectsTrap.MidgetBandit.InteractiveObj_MetalCrate_MidgetBandit,StatusMenuMapInfoBoxDescription,,Hopefully it is not being used as a coffin.. for the living.",",GD_Balance_Treasure.InteractiveObjectsTrap.MidgetBandit.InteractiveObj_MetalCrate_MidgetBandit,StatusMenuMapInfoBoxHeader,,Clanging Metal Crate",",GD_Balance_Treasure.InteractiveObjectsTrap.MidgetBandit.InteractiveObj_MetalCrate_MidgetBandit,CompassIcon,,RadarIconType_Shop",",GD_Balance_Treasure.InteractiveObjectsTrap.MidgetHyperion.InteractiveObj_StorageLocker_MidgetHyperion,CompassIcon,,RadarIconType_Shop",",GD_Balance_Treasure.InteractiveObjectsTrap.MidgetHyperion.InteractiveObj_StorageLocker_MidgetHyperion,StatusMenuMapInfoBoxHeader,,Clanking Storage Locker",",GD_Balance_Treasure.InteractiveObjectsTrap.MidgetHyperion.InteractiveObj_StorageLocker_MidgetHyperion,StatusMenuMapInfoBoxDescription,,Something is grinding within.",",GD_Balance_Treasure.InteractiveObjectsTrap.MidgetBandit.InteractiveObj_StorageLocker_MidgetBandit,StatusMenuMapInfoBoxDescription,,Sounds like someone got locked in.",",GD_Balance_Treasure.InteractiveObjectsTrap.MidgetBandit.InteractiveObj_StorageLocker_MidgetBandit,StatusMenuMapInfoBoxHeader,,Banging Storage Locker",",GD_Balance_Treasure.InteractiveObjectsTrap.MidgetBandit.InteractiveObj_StorageLocker_MidgetBandit,CompassIcon,,RadarIconType_Shop",",GD_Balance_Treasure.InteractiveObjectsTrap.MidgetHyperion.InteractiveObj_Toilet_MidgetHyperion,StatusMenuMapInfoBoxDescription,,Something large must be inside for that kind of water displacement.",",GD_Balance_Treasure.InteractiveObjectsTrap.MidgetHyperion.InteractiveObj_Toilet_MidgetHyperion,StatusMenuMapInfoBoxHeader,,Overflowing Toilet",",GD_Balance_Treasure.InteractiveObjectsTrap.MidgetHyperion.InteractiveObj_Toilet_MidgetHyperion,CompassIcon,,RadarIconType_Shop",",GD_Balance_Treasure.InteractiveObjectsTrap.MidgetBandit.InteractiveObj_Toilet_MidgetBandit,StatusMenuMapInfoBoxDescription,,Hopefully not another slag experiment.",",GD_Balance_Treasure.InteractiveObjectsTrap.MidgetBandit.InteractiveObj_Toilet_MidgetBandit,StatusMenuMapInfoBoxHeader,,Rupturing Toilet",",GD_Balance_Treasure.InteractiveObjectsTrap.MidgetBandit.InteractiveObj_Toilet_MidgetBandit,CompassIcon,,RadarIconType_Shop",",GD_Balance_Treasure.InteractiveObjectsTrap.MidgetHyperion.InteractiveObj_StalkerPile1_MidgetHyperion,CompassIcon,,RadarIconType_Shop",",GD_Balance_Treasure.InteractiveObjectsTrap.MidgetHyperion.InteractiveObj_StalkerPile1_MidgetHyperion,StatusMenuMapInfoBoxHeader,,Bulging Stalker Feces",",GD_Balance_Treasure.InteractiveObjectsTrap.MidgetHyperion.InteractiveObj_StalkerPile1_MidgetHyperion,StatusMenuMapInfoBoxDescription,,Whatever that Stalker ate must have not been digested well.",",GD_Balance_Treasure.InteractiveObjectsTrap.MidgetHyperion.InteractiveObj_StalkerPile2_MidgetHyperion,StatusMenuMapInfoBoxDescription,,Huh, I guess Stalkers can have digestive issues.",",GD_Balance_Treasure.InteractiveObjectsTrap.MidgetHyperion.InteractiveObj_StalkerPile2_MidgetHyperion,StatusMenuMapInfoBoxHeader,,Drooping Stalker Feces",",GD_Balance_Treasure.InteractiveObjectsTrap.MidgetHyperion.InteractiveObj_StalkerPile2_MidgetHyperion,CompassIcon,,RadarIconType_Shop",",GD_Balance_Treasure.InteractiveObjectsTrap.MidgetHyperion.InteractiveObj_MilitaryCrate_MidgetHyperion,StatusMenuMapInfoBoxDescription,,An audible language emerges from within.<br>Sounds like a plan for a surprise attack.",",GD_Balance_Treasure.InteractiveObjectsTrap.MidgetHyperion.InteractiveObj_MilitaryCrate_MidgetHyperion,StatusMenuMapInfoBoxHeader,,Chattering Ammo Box",",GD_Balance_Treasure.InteractiveObjectsTrap.MidgetHyperion.InteractiveObj_MilitaryCrate_MidgetHyperion,CompassIcon,,RadarIconType_Shop",",GD_Balance_Treasure.InteractiveObjectsTrap.MidgetBandit.InteractiveObj_MilitaryCrate_MidgetBandit,StatusMenuMapInfoBoxDescription,,Something sure is making a lot of noise.",",GD_Balance_Treasure.InteractiveObjectsTrap.MidgetBandit.InteractiveObj_MilitaryCrate_MidgetBandit,StatusMenuMapInfoBoxHeader,,Detonating Ammo Box",",GD_Balance_Treasure.InteractiveObjectsTrap.MidgetBandit.InteractiveObj_MilitaryCrate_MidgetBandit,CompassIcon,,RadarIconType_Shop",",GD_Balance_Treasure.InteractiveObjectsTrap.MidgetHyperion.InteractiveObj_LaundryMachine_MidgetHyperion,StatusMenuMapInfoBoxDescription,,Looks like a trap is ready to be sprung.",",GD_Balance_Treasure.InteractiveObjectsTrap.MidgetHyperion.InteractiveObj_LaundryMachine_MidgetHyperion,StatusMenuMapInfoBoxHeader,,Springy Laundry Machine",",GD_Balance_Treasure.InteractiveObjectsTrap.MidgetHyperion.InteractiveObj_LaundryMachine_MidgetHyperion,CompassIcon,,RadarIconType_Shop",",GD_Balance_Treasure.InteractiveObjectsTrap.MidgetBandit.InteractiveObj_LaundryMachine_MidgetBandit,StatusMenuMapInfoBoxDescription,,Was it used recently?",",GD_Balance_Treasure.InteractiveObjectsTrap.MidgetBandit.InteractiveObj_LaundryMachine_MidgetBandit,StatusMenuMapInfoBoxHeader,,Leaking Laundry Machine",",GD_Balance_Treasure.InteractiveObjectsTrap.MidgetBandit.InteractiveObj_LaundryMachine_MidgetBandit,CompassIcon,,RadarIconType_Shop",",GD_Balance_Treasure.InteractiveObjectsTrap.MidgetHyperion.InteractiveObj_Dumpster_MidgetHyperion,StatusMenuMapInfoBoxDescription,,An odd sound for sure.",",GD_Balance_Treasure.InteractiveObjectsTrap.MidgetHyperion.InteractiveObj_Dumpster_MidgetHyperion,StatusMenuMapInfoBoxHeader,,Rattling Dumpster",",GD_Balance_Treasure.InteractiveObjectsTrap.MidgetHyperion.InteractiveObj_Dumpster_MidgetHyperion,CompassIcon,,RadarIconType_Shop",",GD_Balance_Treasure.InteractiveObjectsTrap.MidgetBandit.InteractiveObj_Dumpster_MidgetBandit,StatusMenuMapInfoBoxDescription,,An aroma most foul.",",GD_Balance_Treasure.InteractiveObjectsTrap.MidgetBandit.InteractiveObj_Dumpster_MidgetBandit,StatusMenuMapInfoBoxHeader,,Foul Smelling Dumpster",",GD_Balance_Treasure.InteractiveObjectsTrap.MidgetBandit.InteractiveObj_Dumpster_MidgetBandit,CompassIcon,,RadarIconType_Shop",",GD_Balance_Treasure.InteractiveObjectsTrap.MidgetHyperion.InteractiveObj_CardboardBox_MidgetHyperion,StatusMenuMapInfoBoxDescription,,Probably a small animal.",",GD_Balance_Treasure.InteractiveObjectsTrap.MidgetHyperion.InteractiveObj_CardboardBox_MidgetHyperion,StatusMenuMapInfoBoxHeader,,Ruffling Cardboard Box",",GD_Balance_Treasure.InteractiveObjectsTrap.MidgetHyperion.InteractiveObj_CardboardBox_MidgetHyperion,CompassIcon,,RadarIconType_Shop",",GD_Balance_Treasure.InteractiveObjectsTrap.MidgetBandit.InteractiveObj_CardboardBox_MidgetBandit,StatusMenuMapInfoBoxDescription,,The material is oftly soggy for a box.",",GD_Balance_Treasure.InteractiveObjectsTrap.MidgetBandit.InteractiveObj_CardboardBox_MidgetBandit,StatusMenuMapInfoBoxHeader,,Soggy Cardboard Box",",GD_Balance_Treasure.InteractiveObjectsTrap.MidgetBandit.InteractiveObj_CardboardBox_MidgetBandit,CompassIcon,,RadarIconType_Shop",",GD_Balance_Treasure.InteractiveObjectsTrap.MidgetBandit.InteractiveObj_BanditCooler_MidgetBandit,StatusMenuMapInfoBoxDescription,,Not so cool afterall, are you?",",GD_Balance_Treasure.InteractiveObjectsTrap.MidgetBandit.InteractiveObj_BanditCooler_MidgetBandit,StatusMenuMapInfoBoxHeader,,Screaming Bandit Cooler",",GD_Balance_Treasure.InteractiveObjectsTrap.MidgetBandit.InteractiveObj_BanditCooler_MidgetBandit,CompassIcon,,RadarIconType_Shop",",GD_Balance_Treasure.InteractiveObjectsTrap.MidgetHyperion.InteractiveObj_HyperionAmmo_MidgetHyperion,StatusMenuMapInfoBoxHeader,,Tampered Hyperion Ammo Box",",GD_Balance_Treasure.InteractiveObjectsTrap.MidgetHyperion.InteractiveObj_HyperionAmmo_MidgetHyperion,CompassIcon,,RadarIconType_Shop",",GD_Balance_Treasure.InteractiveObjectsTrap.MidgetHyperion.InteractiveObj_HyperionAmmo_MidgetHyperion,StatusMenuMapInfoBoxDescription,,Someone has clearly messed with this.",",GD_Balance_Treasure.InteractiveObjectsTrap.MidgetBandit.InteractiveObj_BanditWeaponChest_MidgetBandit,StatusMenuMapInfoBoxDescription,,Something about this strikes fear into your very soul.",",GD_Balance_Treasure.InteractiveObjectsTrap.MidgetBandit.InteractiveObj_BanditWeaponChest_MidgetBandit,StatusMenuMapInfoBoxHeader,,Furiously Groaning Shit Shack",",GD_Balance_Treasure.InteractiveObjectsTrap.MidgetBandit.InteractiveObj_BanditWeaponChest_MidgetBandit,CompassIcon,,RadarIconType_Shop")
+

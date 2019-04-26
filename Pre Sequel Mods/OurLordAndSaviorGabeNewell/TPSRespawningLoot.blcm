@@ -1,0 +1,29 @@
+<BLCMM v="1">
+#<!!!You opened a file saved with BLCMM in FilterTool. Please update to BLCMM to properly open this file!!!>
+	<head>
+		<type name="TPS" offline="false"/>
+		<profiles>
+			<profile name="default" current="true"/>
+		</profiles>
+	</head>
+	<body>
+		<category name="TPS - Respawning Loot">
+			<comment>Mod written by GitHub: (Our Lord And Savior Gabe Newell) / Nexus Mods: (OB4MA)</comment>
+			<comment></comment>
+			<comment>This mod makes all objects refresh themselves upon leaving and re-entering the map.</comment>
+			<comment>This allows you to keep getting stuff without save and quitting.</comment>
+			<comment>This refreshes vendors too.  So now the timer for the item of the day is only if you stay in that map for however long.</comment>
+			<comment>As far as I am aware it does NOT affect enemies at all.</comment>
+			<comment></comment>
+			<category name="Super Complicated Stuff - Leave Enabled" locked="true">
+				<category name="Code">
+					<code profiles="default">set GearboxFramework.Default__PopulationDefinition bTotalResetOnLevelLoad True</code>
+				</category>
+			</category>
+		</category>
+	</body>
+</BLCMM>
+
+#Commands:
+set GearboxFramework.Default__PopulationDefinition bTotalResetOnLevelLoad True
+
