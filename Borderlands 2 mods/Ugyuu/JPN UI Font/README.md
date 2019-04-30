@@ -27,8 +27,4 @@ Load your game and the font will be changed to the font used in the Japanese ver
 
 Enjoy!
 
-| |  | || ____|| | | || |  | || |  | |
-| |  | || | __ | \_/ || |  | || |  | |
-| |  | || ||_ | \   / | |  | || |  | |
-| |__| || |_| |  | |  | |__| || |__| |  _
-|______||_____|  |_|  |______||______| |_|
+> ugyuu
