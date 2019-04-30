@@ -1,8 +1,8 @@
 # BORDERLANDS 2 / PRE-SEQUEL UI FONT MOD
 
-This file contains the font replacement for the English version of Borderlands 2 / Pre-Sequel. It will replace the original font by a better one, in my opinion. It is easier to read, and doesn't clutter as much.
+> This file contains the font replacement for the English version of Borderlands 2 / Pre-Sequel. It will replace the original font by a better one, in my opinion. It is easier to read, and doesn't clutter as much.
 
->>> **This works for The Pre-Sequel as well!** <<<
+>> **This works for The Pre-Sequel as well!**
 
 ## NOTES:
 
