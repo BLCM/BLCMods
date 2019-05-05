@@ -10,7 +10,7 @@ Ask me for permission first if you wish to use larger portions of this code, mak
 
 # Overview
 
-The Skill Scaling Patch fixes a number of bugs or inconsistencies in character skills, mostly about the way they scale with level, and across playthroughs. It is not meant to change the balance of the game according to my personal preferences, but to make it work as intended (or at least more consistently), which does improve some aspects of the balance. The skills that are the most affected are Phaselock and Ruin (Maya), Light the Fuse (Krieg), Deathtrap and all its damage abilities (Gaige), the Sabre Turret and all its damage abilities (Axton).
+The Skill Scaling Patch fixes a number of bugs or inconsistencies in character skills, mostly about the way they scale with level, and across playthroughs. It is not meant to change the balance of the game according to my personal preferences, but to make it work as intended (or at least more consistently), which does improve some aspects of the balance. The skills that are the most affected are Phaselock and Ruin (Maya), Light the Fuse (Krieg), Deathtrap and all its damage abilities (Gaige), the Sabre Turret and all its damage abilities (Axton), Steady as She Goes (Salvador).
 
 Concerning Deathtrap and the Sabre Turret, the main problem addressed by this patch was actually not present on console. With the Skill Scaling Patch, their damage output should thus be identical (or close) to what it is on console. And that makes a huge difference on their end-game viability.
 
