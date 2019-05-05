@@ -105,7 +105,7 @@ Thanks to Koby for making me want to do something about it, and inviting me to S
 
 # Change log
 
-* [2019-05-05] v2.6: Added the fix to Steady as She Goes, and worked around an issue that caused semi-infinite Phaselock when a subsequence bubble hits an immune target.
+* [2019-05-05] v2.6: Added the fix to Steady as She Goes.
 * [2019-04-08] v2.5: Added the fix to Made of Sterner Stuff, and included the changes making Phaselock active after hitting an immune target.
 * [2018-08-09] v2.1: Added the modifications to Deathtrap's ranged shock attacks.
 * [2018-07-31] v2.0: Added the Immolate & Electrical Burn fixes.
