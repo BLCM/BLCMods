@@ -21,6 +21,9 @@
 ## Krieg Silence the Voices self-damage Delay (by Mike)
 - Makes it so Krieg's StV has a 5 second delay before you can damage yourself again (does not include animation).
 
+## Free Raid Cost (by Mike)
+- Makes it so all raids are free of cost, meaning you no longer need to waste Eridium on raids.
+
 # Credits
 
 - Nocturni (Less Cluttering Particles) for allowing us to use parts of his "splash" mod
