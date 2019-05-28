@@ -11,7 +11,6 @@ This gear is made to replicate the character's skills / weapons in some way, put
 Melee characters not included.
 
 Beatrix -> DONE
-Benedict -> DONE
 Caldarius -> DONE
 Ghalt -> DONE
 Marquis -> DONE
