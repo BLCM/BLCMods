@@ -9,10 +9,9 @@ FOR EVERY KIND OF BADASS
 
 This is a collection of gear representing some Battleborn characters.
 
-Note: These weapons can be very powerful. Use at your own risk of losing / gaining fun.
-Also, since I'm not updating these anymore, there's a good chance that there will be incompatibilities or bugs.
+Note: These weapons are more powerful than your usual gun Use at your own risk.
 
-This gear is made to replicate the character, it's weapon and the skills that they use, all put into the single gear piece made for them.
+This gear is made to replicate the character's skills / weapons in some way, put into a single piece of gear made for them.
 
 Melee characters not included.
 
