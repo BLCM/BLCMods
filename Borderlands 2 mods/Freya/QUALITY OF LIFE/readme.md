@@ -9,8 +9,8 @@
 ## DoT Renames
 - Removes the "/ sec." part on weapon / grenade cards.
 
-## Less Cluttering Particles
-- Makes particles less cluttering
+## Less Dumb Visuals
+- Aims to make BL2 less cluttered
 
 ## No Muzzleflashes
 - Removes muzzleflashes from weapons
