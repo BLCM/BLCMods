@@ -1,10 +1,6 @@
 ## Skins Preview
 
 
-### Lascaux
-
-![Lascaux Skin](../../Images/Flame.jpg)
-
 ### Storm
 
 ![Storm Skin](../../Images/Storm.jpg)
