@@ -1,5 +1,6 @@
 ## Skins Preview
 
+
 ### Fridgia
 
 ![Fridgia Skin](../Images/Fridgia.jpg)
@@ -15,10 +16,6 @@
 ### BL2 Norfleet
 
 ![BL2 Norfleet Skin](../Images/BL2_Norfleet.jpg)
-
-### BL2 Shredifier
-
-![BL2 Shredifier Skin](../Images/BL2_Shredifier.jpg)
 
 ### BL2 Gub
 
