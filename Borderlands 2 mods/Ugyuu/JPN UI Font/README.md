@@ -1,12 +1,14 @@
 # BORDERLANDS 2 / PRE-SEQUEL UI FONT MOD
 
-> This file contains the font replacement for the English version of Borderlands 2 / Pre-Sequel. It will replace the original font by a better one, in my opinion. It is easier to read, and doesn't clutter as much.
+This folder contains the font replacement for the English version of Borderlands 2 / Pre-Sequel. It will replace the original font with a sleeker, thinner font, which looks better in my opinion. It is easier to read, and doesn't clutter as much.
 
->> **This works for The Pre-Sequel as well!**
+> **This works for The Pre-Sequel as well!**
 
 ## NOTES:
 
-The changes to the fonts will revert if you verify the integrity of the game cache through Steam. If this changed back to normal for you, you'll have to do the change again.
+The changes to the fonts will revert if you verify the integrity of the game cache through Steam. If this changed back to normal for you, you'll have to install the mod again.
+
+There's a good chance that this font "mod" works for other languages too. You just have to replace the "INT" in "GFxUI.INT" to the name of the folder, of the language you've currently set the game to.
 
 ## HOW TO INSTALL:
 
@@ -22,8 +24,7 @@ Right click in the raw file that you've just opened and click "Save As.."
 
 Copy the new GFxUI.INT to 'Borderlands 2/WillowGame/Localization/INT' and Paste it in that folder. Choose to replace if you get a notification of this file already existing.
 
-Load your game and the font will be changed to the font used in the Japanese version.
-
+Load your game to make sure that the font has changed. You'll notice it as soon as the first wall of text appears.
 
 Enjoy!
 
