@@ -10,6 +10,8 @@ The changes to the fonts will revert if you verify the integrity of the game cac
 
 There's a good chance that this font "mod" works for other languages too. You just have to replace the "INT" in "GFxUI.INT" to the name of the folder, of the language you've currently set the game to.
 
+I wish I knew a way to make the game recognize fonts that aren't being used by the game, like Roboto, but I didn't manage to figure that out. Maybe it'll be possible in the future.
+
 ## HOW TO INSTALL:
 
 Make sure not to have the game open while doing this. It's not a good idea.
