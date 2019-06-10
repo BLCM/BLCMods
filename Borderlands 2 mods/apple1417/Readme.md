@@ -1,3 +1,7 @@
+### Anemone Fast Travels
+Super quick fix to let you fast travel to the two new one-way stations.
+I will try to expand this with a few related QoL fixes.
+
 ### Bigger Is Not Always Better
 Allows you to switch the direction of the arrows when comparing items.
 Looking for a low damage gun, high fuse grenade, or low booster chance shield? Now you can make the arrows point in the right direction.
