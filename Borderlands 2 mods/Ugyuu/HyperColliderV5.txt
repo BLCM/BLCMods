@@ -23,14 +23,15 @@ Might or might not break with Vel0city and Accelerate, when boosted beyond 10/5.
 - Very high accuracy, though not perfect if you fire quickly.
 - Bullets penetrate shields.
 - Deals additional explosive damage to armor. (This counts critical hits as well)
-- Low clip size. (5)
+- Low clip size. (6)
 
     #</Features>
 
     #<MiniChangelog>
 
+v5 Increased fire rate and added an additional bullet for a mag size of 6.
 v3 and v4: Critical accuracy fix.
-V2: +150% damage boost, instead of +180%.
+v2: +150% damage boost, instead of +180%.
 
     #</MiniChangelog>
     
@@ -39,8 +40,8 @@ V2: +150% damage boost, instead of +180%.
 set GD_Weap_SniperRifles.Barrel.SR_Barrel_Hyperion_Tresspasser GestaltModeSkeletalMeshName SR_Barrel_Hyperion
 
 set GD_Weap_SniperRifles.Barrel.SR_Barrel_Hyperion_Tresspasser ExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.DamageSourceShieldPenetration.PercentChanceInstigatedBulletDmgIgnoresShields',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=100.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
-set GD_Weap_SniperRifles.Barrel.SR_Barrel_Hyperion_Tresspasser AttributeSlotUpgrades ((SlotName="AccuracyMin",GradeIncrease=4444,bActivateSlot=True),(SlotName="AccuracyMax",GradeIncrease=333,bActivateSlot=True),(SlotName="WeaponSpread",GradeIncrease=2222,bActivateSlot=True),(SlotName="WeaponZoomFOV",GradeIncrease=5,bActivateSlot=True))
-set GD_Weap_SniperRifles.Barrel.SR_Barrel_Hyperion_Tresspasser WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-0.001000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.0000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=-0.550000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.00000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=-9999.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=1.00000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=5.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponReloadSpeed',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+set GD_Weap_SniperRifles.Barrel.SR_Barrel_Hyperion_Tresspasser AttributeSlotUpgrades ((SlotName="AccuracyMin",GradeIncrease=4321,bActivateSlot=True),(SlotName="AccuracyMax",GradeIncrease=50,bActivateSlot=True),(SlotName="WeaponSpread",GradeIncrease=20,bActivateSlot=True),(SlotName="WeaponZoomFOV",GradeIncrease=8,bActivateSlot=True))
+set GD_Weap_SniperRifles.Barrel.SR_Barrel_Hyperion_Tresspasser WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.200000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.0000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.600000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=-0.550000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.00000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=-9999.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=1.00000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=6.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponReloadSpeed',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
 
 set GD_Weap_SniperRifles.Barrel.SR_Barrel_Hyperion_Tresspasser WeaponCardAttributes ((Attribute=AttributeDefinition'D_Attributes.GameplayAttributes.PlayerCriticalHitBonus',PriorityIncrease=1.000000))
 
