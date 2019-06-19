@@ -25,3 +25,5 @@ Feel free to change this mod but please DO NOT REHOST IT
 ![Hyperion](https://i.imgur.com/OKE05y3.jpg)
 
 ![Jakobs & Maliwan](https://i.imgur.com/tR5DO10.jpg)
+
+[Album Link](https://imgur.com/a/2mfin6K)
