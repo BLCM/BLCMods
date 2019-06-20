@@ -7,7 +7,7 @@ If your mod has specific considerations you should make it clear how to install.
 
 Check out the [Wiki](https://github.com/BL2CP/BLCMods/wiki). If you want to find specific mods by category, check [repository with sorted mods](https://github.com/BLCM/ModCabinet/wiki).
 
-As of Aug, 8, 2018, the "issues" tab has been disabled due tp repetitive questions, if you have any problems, please see [The FaQ for patching](https://github.com/BLCM/BLCMods/wiki/Patching-FaQ) and/or [The FaQ for super randomizer](https://github.com/BLCM/BLCMods/wiki/Randomizer-FaQ), if the answer is not in those articles, please go to `#patch-mod-troubleshooting` on the [Discord](https://discord.gg/shadowevil).
+As of Aug, 8, 2018, the "issues" tab has been disabled due to repetitive questions, if you have any problems, please see [The FaQ for patching](https://github.com/BLCM/BLCMods/wiki/Patching-FaQ) and/or [The FaQ for super randomizer](https://github.com/BLCM/BLCMods/wiki/Randomizer-FaQ), if the answer is not in those articles, please go to `#patch-mod-troubleshooting` on the [Discord](https://discord.gg/shadowevil).
 
 ***
 
@@ -62,4 +62,4 @@ If you wish to contribute a modpack (or a compilation of mods):
 
 - Installing the files follows methods discussed on the [Wiki](https://github.com/BLCM/BLCMods/wiki/Tutorial%3A-Enabling-Console)
 
-#### The usage of "master files" has become strongly discouraged as Borderlands 2/TPS modding has become more complex. The use of master files will often end up breaking parts or all of the mods you're trying to use. Instead, always import mods into FilterTool, and only execute the single patch file that it saves.
+#### The usage of "master files" has become strongly discouraged as Borderlands 2/TPS modding has become more complex. The use of master files will often end up breaking parts or all of the mods you're trying to use. Instead, always import mods into BLCMM, and only execute the single patch file that it saves.

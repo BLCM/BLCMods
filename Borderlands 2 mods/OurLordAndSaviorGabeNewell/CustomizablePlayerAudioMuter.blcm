@@ -1,0 +1,1868 @@
+<BLCMM v="1">
+#<!!!You opened a file saved with BLCMM in FilterTool. Please update to BLCMM to properly open this file!!!>
+	<head>
+		<type name="BL2" offline="false"/>
+		<profiles>
+			<profile name="default" current="true"/>
+		</profiles>
+	</head>
+	<body>
+		<category name="Customizable Player Audio Muter">
+			<comment>Mod written by Git Hub: (Our Lord And Savior Gabe Newell) / NexusMods: (OB4MA)</comment>
+			<comment>This mod allows you to disable whatever dialogue there is per player character.</comment>
+			<comment>You can just enable all of them to have completely silent characters while retaining other dialog from NPCs and such.</comment>
+			<comment></comment>
+			<comment>All of the Default & Jack voices are variations of the voice module.</comment>
+			<comment>The "default" (character name option) says it is the one from act 12 but I don't think it is used in-game normally.</comment>
+			<category name="No Sprint Noises">
+				<comment>Yeah, there is an option to choose who gets to breathe while sprinting.</comment>
+				<comment>No Zer0 because he doesn't breathe, or something.</comment>
+				<category name="All">
+					<hotfix name="No Exhaustion" level="None">
+						<code profiles="">set D_Attributes.IsTiredFromSprinting ContextResolverChain[0] </code>
+						<code profiles="">set D_Attributes.IsTiredFromSprinting ValueResolverChain[0] </code>
+					</hotfix>
+				</category>
+				<category name="Gaige">
+					<hotfix name="Name" package="GD_Tulip_Mechro_Streaming">
+						<code profiles="">set GD_Tulip_Mechro_Streaming.BodyClass_Mechromancer:AttributeExpressionEvaluator_20 Expression </code>
+					</hotfix>
+				</category>
+				<category name="Salvador">
+					<hotfix name="Name" package="GD_Mercenary_Streaming">
+						<code profiles="">set GD_Mercenary_Streaming.BodyClass_Mercenary:AttributeExpressionEvaluator_24 Expression </code>
+					</hotfix>
+				</category>
+				<category name="Krieg">
+					<hotfix name="Name" package="GD_Lilac_Psycho_Streaming">
+						<code profiles="">set GD_Lilac_Psycho_Streaming.BodyClass_LilacPlayerClass:AttributeExpressionEvaluator_20 Expression </code>
+					</hotfix>
+				</category>
+				<category name="Axton">
+					<hotfix name="Name" package="GD_Soldier_Streaming">
+						<code profiles="">set GD_Soldier_Streaming.BodyClass_Soldier:AttributeExpressionEvaluator_21 Expression </code>
+					</hotfix>
+				</category>
+				<category name="Maya">
+					<hotfix name="Name" package="GD_Siren_Streaming">
+						<code profiles="">set GD_Siren_Streaming.BodyClass_Siren:AttributeExpressionEvaluator_20 Expression </code>
+					</hotfix>
+				</category>
+			</category>
+			<category name="Salvador">
+				<category name="Categories">
+					<category name="Death">
+						<hotfix name="Name" package="GD_Mercenary_Streaming">
+							<code profiles="">set GD_Dialog_Player.VOBD_Player_Mercenary.DialogGroup_PL_Mercenary TalkActs[0] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Mercenary.DialogName_PL_Mercenary',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+						</hotfix>
+					</category>
+					<category name="Pain - Multiple Options">
+						<category name="Pain">
+							<hotfix name="Name" package="GD_Mercenary_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Mercenary.DialogGroup_PL_Mercenary TalkActs[1] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Mercenary.DialogName_PL_Mercenary',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Pain - Crit">
+							<hotfix name="Name" package="GD_Mercenary_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Mercenary.DialogGroup_PL_Mercenary TalkActs[2] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Mercenary.DialogName_PL_Mercenary',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Pain - Status Effect">
+							<hotfix name="Name" package="GD_Mercenary_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Mercenary.DialogGroup_PL_Mercenary TalkActs[3] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Mercenary.DialogName_PL_Mercenary',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Pain - Slagged">
+							<hotfix name="Name" package="GD_Mercenary_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Mercenary.DialogGroup_PL_Mercenary TalkActs[4] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Mercenary.DialogName_PL_Mercenary',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Melee">
+						<hotfix name="Name" package="GD_Mercenary_Streaming">
+							<code profiles="">set GD_Dialog_Player.VOBD_Player_Mercenary.DialogGroup_PL_Mercenary TalkActs[5] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Mercenary.DialogName_PL_Mercenary',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+						</hotfix>
+					</category>
+					<category name="Complete Challenge">
+						<hotfix name="Name" package="GD_Mercenary_Streaming">
+							<code profiles="">set GD_Dialog_Player.VOBD_Player_Mercenary.DialogGroup_PL_Mercenary TalkActs[6] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Mercenary.DialogName_PL_Mercenary',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+						</hotfix>
+					</category>
+					<category name="Enter Coop Game">
+						<hotfix name="Name" package="GD_Mercenary_Streaming">
+							<code profiles="">set GD_Dialog_Player.VOBD_Player_Mercenary.DialogGroup_PL_Mercenary TalkActs[7] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Mercenary.DialogName_PL_Mercenary',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+						</hotfix>
+					</category>
+					<category name="Find Health Vial">
+						<hotfix name="Name" package="GD_Mercenary_Streaming">
+							<code profiles="">set GD_Dialog_Player.VOBD_Player_Mercenary.DialogGroup_PL_Mercenary TalkActs[8] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Mercenary.DialogName_PL_Mercenary',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+						</hotfix>
+					</category>
+					<category name="Find Rare Item">
+						<hotfix name="Name" package="GD_Mercenary_Streaming">
+							<code profiles="">set GD_Dialog_Player.VOBD_Player_Mercenary.DialogGroup_PL_Mercenary TalkActs[9] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Mercenary.DialogName_PL_Mercenary',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+						</hotfix>
+					</category>
+					<category name="Idle - Multiple Options">
+						<category name="Idle">
+							<hotfix name="Name" package="GD_Mercenary_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Mercenary.DialogGroup_PL_Mercenary TalkActs[10] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Mercenary.DialogName_PL_Mercenary',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Idle - Level Change">
+							<hotfix name="Name" package="GD_Mercenary_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Mercenary.DialogGroup_PL_Mercenary TalkActs[11] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Mercenary.DialogName_PL_Mercenary',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Level Up">
+						<hotfix name="Name" package="GD_Mercenary_Streaming">
+							<code profiles="">set GD_Dialog_Player.VOBD_Player_Mercenary.DialogGroup_PL_Mercenary TalkActs[12] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Mercenary.DialogName_PL_Mercenary',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+						</hotfix>
+					</category>
+					<category name="Open Chest">
+						<hotfix name="Name" package="GD_Mercenary_Streaming">
+							<code profiles="">set GD_Dialog_Player.VOBD_Player_Mercenary.DialogGroup_PL_Mercenary TalkActs[13] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Mercenary.DialogName_PL_Mercenary',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+						</hotfix>
+					</category>
+					<category name="Duel - Multiple Options">
+						<category name="PVP - Enemy Evaluation (Roast)">
+							<hotfix name="Name" package="GD_Mercenary_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Mercenary.DialogGroup_PL_Mercenary TalkActs[14] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Mercenary.DialogName_PL_Mercenary',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="PVP - Receive Duel Invite">
+							<hotfix name="Name" package="GD_Mercenary_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Mercenary.DialogGroup_PL_Mercenary TalkActs[15] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Mercenary.DialogName_PL_Mercenary',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="PVP - Lose">
+							<hotfix name="Name" package="GD_Mercenary_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Mercenary.DialogGroup_PL_Mercenary TalkActs[16] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Mercenary.DialogName_PL_Mercenary',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="PVP - Tie">
+							<hotfix name="Name" package="GD_Mercenary_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Mercenary.DialogGroup_PL_Mercenary TalkActs[17] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Mercenary.DialogName_PL_Mercenary',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="PVP - Win">
+							<hotfix name="Name" package="GD_Mercenary_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Mercenary.DialogGroup_PL_Mercenary TalkActs[43] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Mercenary.DialogName_PL_Mercenary',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Reactions - Multiple Options">
+						<category name="Badass Incoming">
+							<hotfix name="Name" package="GD_Mercenary_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Mercenary.DialogGroup_PL_Mercenary TalkActs[18] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Mercenary.DialogName_PL_Mercenary',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Enemies Incoming">
+							<hotfix name="Name" package="GD_Mercenary_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Mercenary.DialogGroup_PL_Mercenary TalkActs[20] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Mercenary.DialogName_PL_Mercenary',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Fully Explode Enemy (Gib)">
+							<hotfix name="Name" package="GD_Mercenary_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Mercenary.DialogGroup_PL_Mercenary TalkActs[21] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Mercenary.DialogName_PL_Mercenary',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Heal Friend">
+							<hotfix name="Name" package="GD_Mercenary_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Mercenary.DialogGroup_PL_Mercenary TalkActs[22] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Mercenary.DialogName_PL_Mercenary',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Healed By Friend">
+							<hotfix name="Name" package="GD_Mercenary_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Mercenary.DialogGroup_PL_Mercenary TalkActs[23] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Mercenary.DialogName_PL_Mercenary',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Kill Badass">
+							<hotfix name="Name" package="GD_Mercenary_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Mercenary.DialogGroup_PL_Mercenary TalkActs[24] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Mercenary.DialogName_PL_Mercenary',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Kill Streak">
+							<hotfix name="Name" package="GD_Mercenary_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Mercenary.DialogGroup_PL_Mercenary TalkActs[25] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Mercenary.DialogName_PL_Mercenary',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Score Critical Hit">
+							<hotfix name="Name" package="GD_Mercenary_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Mercenary.DialogGroup_PL_Mercenary TalkActs[44] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Mercenary.DialogName_PL_Mercenary',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Kill Enemy With Skill">
+							<hotfix name="Name" package="GD_Mercenary_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Mercenary.DialogGroup_PL_Mercenary TalkActs[39] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Mercenary.DialogName_PL_Mercenary',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="No Ammo Left">
+							<hotfix name="Name" package="GD_Mercenary_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Mercenary.DialogGroup_PL_Mercenary TalkActs[41] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Mercenary.DialogName_PL_Mercenary',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Buff Drink">
+							<hotfix name="Name" package="GD_Mercenary_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Mercenary.DialogGroup_PL_Mercenary TalkActs[38] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Mercenary.DialogName_PL_Mercenary',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Player Menu (Status Menu / Tab Menu) - Multiple Options">
+						<category name="Compare Items">
+							<hotfix name="Name" package="GD_Mercenary_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Mercenary.DialogGroup_PL_Mercenary TalkActs[26] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Mercenary.DialogName_PL_Mercenary',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Equip Powerful Gear">
+							<hotfix name="Name" package="GD_Mercenary_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Mercenary.DialogGroup_PL_Mercenary TalkActs[27] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Mercenary.DialogName_PL_Mercenary',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Open Map">
+							<hotfix name="Name" package="GD_Mercenary_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Mercenary.DialogGroup_PL_Mercenary TalkActs[28] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Mercenary.DialogName_PL_Mercenary',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Open Skill Tree">
+							<hotfix name="Name" package="GD_Mercenary_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Mercenary.DialogGroup_PL_Mercenary TalkActs[29] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Mercenary.DialogName_PL_Mercenary',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Vehicle - Multiple Options">
+						<category name="Catch Air">
+							<hotfix name="Name" package="GD_Mercenary_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Mercenary.DialogGroup_PL_Mercenary TalkActs[30] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Mercenary.DialogName_PL_Mercenary',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Change Seats">
+							<hotfix name="Name" package="GD_Mercenary_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Mercenary.DialogGroup_PL_Mercenary TalkActs[31] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Mercenary.DialogName_PL_Mercenary',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Destroy Other Vehicle">
+							<hotfix name="Name" package="GD_Mercenary_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Mercenary.DialogGroup_PL_Mercenary TalkActs[32] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Mercenary.DialogName_PL_Mercenary',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Flip Car">
+							<hotfix name="Name" package="GD_Mercenary_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Mercenary.DialogGroup_PL_Mercenary TalkActs[33] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Mercenary.DialogName_PL_Mercenary',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Hit Enemy (Run Over)">
+							<hotfix name="Name" package="GD_Mercenary_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Mercenary.DialogGroup_PL_Mercenary TalkActs[34] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Mercenary.DialogName_PL_Mercenary',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Vehicle Low Health">
+							<hotfix name="Name" package="GD_Mercenary_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Mercenary.DialogGroup_PL_Mercenary TalkActs[35] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Mercenary.DialogName_PL_Mercenary',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Hit Other Vehicle">
+							<hotfix name="Name" package="GD_Mercenary_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Mercenary.DialogGroup_PL_Mercenary TalkActs[48] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Mercenary.DialogName_PL_Mercenary',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Fight For Your Life - Multiple Options">
+						<category name="Recovering From Fight For Your Life">
+							<hotfix name="Name" package="GD_Mercenary_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Mercenary.DialogGroup_PL_Mercenary TalkActs[19] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Mercenary.DialogName_PL_Mercenary',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Just Downed">
+							<hotfix name="Name" package="GD_Mercenary_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Mercenary.DialogGroup_PL_Mercenary TalkActs[42] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Mercenary.DialogName_PL_Mercenary',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Jumping - Multiple Options">
+						<category name="Jump">
+							<hotfix name="Name" package="GD_Mercenary_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Mercenary.DialogGroup_PL_Mercenary TalkActs[37] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Mercenary.DialogName_PL_Mercenary',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Land">
+							<hotfix name="Name" package="GD_Mercenary_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Mercenary.DialogGroup_PL_Mercenary TalkActs[36] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Mercenary.DialogName_PL_Mercenary',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Action Skill - Multiple Options">
+						<category name="Start Action Skill">
+							<hotfix name="Name" package="GD_Mercenary_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Mercenary.DialogGroup_PL_Mercenary TalkActs[40] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Mercenary.DialogName_PL_Mercenary',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Action Skill Augment - Come At Me Bro">
+							<hotfix name="Name" package="GD_Mercenary_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Mercenary.DialogGroup_PL_Mercenary TalkActs[47] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Mercenary.DialogName_PL_Mercenary',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=False)</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Grenade">
+						<category name="Throw Grenade">
+							<hotfix name="Name" package="GD_Mercenary_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Mercenary.DialogGroup_PL_Mercenary TalkActs[45] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Mercenary.DialogName_PL_Mercenary',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Default & Jack Voice - Multiple Options">
+						<category name="Jack">
+							<hotfix name="Name" package="GD_Mercenary_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Mercenary.DialogGroup_PL_Mercenary TalkActs[46] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Mercenary.DialogName_PL_Mercenary',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Salvador">
+							<hotfix name="Name" package="GD_Mercenary_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Mercenary.DialogGroup_PL_Mercenary TalkActs[49] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Mercenary.DialogName_PL_Mercenary',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+					</category>
+				</category>
+			</category>
+			<category name="Maya">
+				<category name="Categories">
+					<category name="Death">
+						<hotfix name="Name" package="GD_Siren_Streaming">
+							<code profiles="">set GD_Dialog_Player.VOBD_Player_Siren.DialogGroup_PL_Siren TalkActs[0] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Siren.DialogName_PL_Siren',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+						</hotfix>
+					</category>
+					<category name="Pain">
+						<category name="Pain">
+							<hotfix name="Name" package="GD_Siren_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Siren.DialogGroup_PL_Siren TalkActs[1] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Siren.DialogName_PL_Siren',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Pain - Crit">
+							<hotfix name="Name" package="GD_Siren_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Siren.DialogGroup_PL_Siren TalkActs[2] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Siren.DialogName_PL_Siren',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Pain - Status Effect">
+							<hotfix name="Name" package="GD_Siren_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Siren.DialogGroup_PL_Siren TalkActs[3] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Siren.DialogName_PL_Siren',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Pain - Slagged">
+							<hotfix name="Name" package="GD_Siren_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Siren.DialogGroup_PL_Siren TalkActs[4] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Siren.DialogName_PL_Siren',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Melee">
+						<hotfix name="Name" package="GD_Siren_Streaming">
+							<code profiles="">set GD_Dialog_Player.VOBD_Player_Siren.DialogGroup_PL_Siren TalkActs[5] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Siren.DialogName_PL_Siren',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+						</hotfix>
+					</category>
+					<category name="Complete Challenge">
+						<hotfix name="Name" package="GD_Siren_Streaming">
+							<code profiles="">set GD_Dialog_Player.VOBD_Player_Siren.DialogGroup_PL_Siren TalkActs[6] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Siren.DialogName_PL_Siren',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+						</hotfix>
+					</category>
+					<category name="Enter Coop Game">
+						<hotfix name="Name" package="GD_Siren_Streaming">
+							<code profiles="">set GD_Dialog_Player.VOBD_Player_Siren.DialogGroup_PL_Siren TalkActs[7] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Siren.DialogName_PL_Siren',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+						</hotfix>
+					</category>
+					<category name="Find Health Vial">
+						<hotfix name="Name" package="GD_Siren_Streaming">
+							<code profiles="">set GD_Dialog_Player.VOBD_Player_Siren.DialogGroup_PL_Siren TalkActs[8] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Siren.DialogName_PL_Siren',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+						</hotfix>
+					</category>
+					<category name="Find Rare Item">
+						<hotfix name="Name" package="GD_Siren_Streaming">
+							<code profiles="">set GD_Dialog_Player.VOBD_Player_Siren.DialogGroup_PL_Siren TalkActs[9] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Siren.DialogName_PL_Siren',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+						</hotfix>
+					</category>
+					<category name="Idle">
+						<category name="Idle">
+							<hotfix name="Name" package="GD_Siren_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Siren.DialogGroup_PL_Siren TalkActs[10] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Siren.DialogName_PL_Siren',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Idle - Level Change">
+							<hotfix name="Name" package="GD_Siren_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Siren.DialogGroup_PL_Siren TalkActs[11] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Siren.DialogName_PL_Siren',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Level Up">
+						<hotfix name="Name" package="GD_Siren_Streaming">
+							<code profiles="">set GD_Dialog_Player.VOBD_Player_Siren.DialogGroup_PL_Siren TalkActs[12] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Siren.DialogName_PL_Siren',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+						</hotfix>
+					</category>
+					<category name="Open Chest">
+						<hotfix name="Name" package="GD_Siren_Streaming">
+							<code profiles="">set GD_Dialog_Player.VOBD_Player_Siren.DialogGroup_PL_Siren TalkActs[13] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Siren.DialogName_PL_Siren',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+						</hotfix>
+					</category>
+					<category name="Duel">
+						<category name="PVP - Enemy Evaluation (Roast)">
+							<hotfix name="Name" package="GD_Siren_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Siren.DialogGroup_PL_Siren TalkActs[14] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Siren.DialogName_PL_Siren',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="PVP - Receive Duel Invite">
+							<hotfix name="Name" package="GD_Siren_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Siren.DialogGroup_PL_Siren TalkActs[15] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Siren.DialogName_PL_Siren',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="PVP - Lose">
+							<hotfix name="Name" package="GD_Siren_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Siren.DialogGroup_PL_Siren TalkActs[16] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Siren.DialogName_PL_Siren',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="PVP - Tie">
+							<hotfix name="Name" package="GD_Siren_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Siren.DialogGroup_PL_Siren TalkActs[17] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Siren.DialogName_PL_Siren',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="PVP - Win">
+							<hotfix name="Name" package="GD_Siren_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Siren.DialogGroup_PL_Siren TalkActs[43] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Siren.DialogName_PL_Siren',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Reactions">
+						<category name="Badass Incoming">
+							<hotfix name="Name" package="GD_Siren_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Siren.DialogGroup_PL_Siren TalkActs[18] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Siren.DialogName_PL_Siren',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Enemies Incoming">
+							<hotfix name="Name" package="GD_Siren_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Siren.DialogGroup_PL_Siren TalkActs[20] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Siren.DialogName_PL_Siren',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Fully Explode Enemy (Gib)">
+							<hotfix name="Name" package="GD_Siren_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Siren.DialogGroup_PL_Siren TalkActs[21] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Siren.DialogName_PL_Siren',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Heal Friend">
+							<hotfix name="Name" package="GD_Siren_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Siren.DialogGroup_PL_Siren TalkActs[22] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Siren.DialogName_PL_Siren',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Healed By Friend">
+							<hotfix name="Name" package="GD_Siren_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Siren.DialogGroup_PL_Siren TalkActs[23] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Siren.DialogName_PL_Siren',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Kill Badass">
+							<hotfix name="Name" package="GD_Siren_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Siren.DialogGroup_PL_Siren TalkActs[24] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Siren.DialogName_PL_Siren',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Kill Streak">
+							<hotfix name="Name" package="GD_Siren_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Siren.DialogGroup_PL_Siren TalkActs[25] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Siren.DialogName_PL_Siren',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Score Critical Hit">
+							<hotfix name="Name" package="GD_Siren_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Siren.DialogGroup_PL_Siren TalkActs[44] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Siren.DialogName_PL_Siren',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Kill Enemy With Skill">
+							<hotfix name="Name" package="GD_Siren_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Siren.DialogGroup_PL_Siren TalkActs[40] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Siren.DialogName_PL_Siren',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="No Ammo Left">
+							<hotfix name="Name" package="GD_Siren_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Siren.DialogGroup_PL_Siren TalkActs[41] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Siren.DialogName_PL_Siren',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Buff Drink">
+							<hotfix name="Name" package="GD_Siren_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Siren.DialogGroup_PL_Siren TalkActs[39] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Siren.DialogName_PL_Siren',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Player Menu (Status Menu / Tab Menu)">
+						<category name="Compare Items">
+							<hotfix name="Name" package="GD_Siren_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Siren.DialogGroup_PL_Siren TalkActs[26] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Siren.DialogName_PL_Siren',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Equip Powerful Gear">
+							<hotfix name="Name" package="GD_Siren_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Siren.DialogGroup_PL_Siren TalkActs[27] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Siren.DialogName_PL_Siren',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Open Map">
+							<hotfix name="Name" package="GD_Siren_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Siren.DialogGroup_PL_Siren TalkActs[28] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Siren.DialogName_PL_Siren',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Open Skill Tree">
+							<hotfix name="Name" package="GD_Siren_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Siren.DialogGroup_PL_Siren TalkActs[29] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Siren.DialogName_PL_Siren',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Vehicle">
+						<category name="Catch Air">
+							<hotfix name="Name" package="GD_Siren_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Siren.DialogGroup_PL_Siren TalkActs[30] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Siren.DialogName_PL_Siren',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Change Seats">
+							<hotfix name="Name" package="GD_Siren_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Siren.DialogGroup_PL_Siren TalkActs[31] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Siren.DialogName_PL_Siren',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Destroy Other Vehicle">
+							<hotfix name="Name" package="GD_Siren_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Siren.DialogGroup_PL_Siren TalkActs[32] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Siren.DialogName_PL_Siren',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Flip Car">
+							<hotfix name="Name" package="GD_Siren_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Siren.DialogGroup_PL_Siren TalkActs[33] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Siren.DialogName_PL_Siren',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Hit Enemy (Run Over)">
+							<hotfix name="Name" package="GD_Siren_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Siren.DialogGroup_PL_Siren TalkActs[34] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Siren.DialogName_PL_Siren',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Vehicle Low Health">
+							<hotfix name="Name" package="GD_Siren_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Siren.DialogGroup_PL_Siren TalkActs[35] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Siren.DialogName_PL_Siren',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Hit Other Vehicle?">
+							<hotfix name="Name" package="GD_Siren_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Siren.DialogGroup_PL_Siren TalkActs[47] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Siren.DialogName_PL_Siren',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=False)</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Fight For Your Life">
+						<category name="Recovering From Fight For Your Life">
+							<hotfix name="Name" package="GD_Siren_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Siren.DialogGroup_PL_Siren TalkActs[19] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Siren.DialogName_PL_Siren',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Just Downed">
+							<hotfix name="Name" package="GD_Siren_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Siren.DialogGroup_PL_Siren TalkActs[42] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Siren.DialogName_PL_Siren',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Jumping">
+						<category name="Jump">
+							<hotfix name="Name" package="GD_Siren_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Siren.DialogGroup_PL_Siren TalkActs[37] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Siren.DialogName_PL_Siren',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Land">
+							<hotfix name="Name" package="GD_Siren_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Siren.DialogGroup_PL_Siren TalkActs[36] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Siren.DialogName_PL_Siren',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Action Skill">
+						<category name="Start Action Skill">
+							<hotfix name="Name" package="GD_Siren_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Siren.DialogGroup_PL_Siren TalkActs[38] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Siren.DialogName_PL_Siren',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Grenade">
+						<category name="Throw Grenade">
+							<hotfix name="Name" package="GD_Siren_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Siren.DialogGroup_PL_Siren TalkActs[45] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Siren.DialogName_PL_Siren',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Default & Jack Voice">
+						<category name="Jack">
+							<hotfix name="Name" package="GD_Siren_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Siren.DialogGroup_PL_Siren TalkActs[46] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Siren.DialogName_PL_Siren',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Maya">
+							<hotfix name="Name" package="GD_Siren_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Siren.DialogGroup_PL_Siren TalkActs[48] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Siren.DialogName_PL_Siren',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+					</category>
+				</category>
+			</category>
+			<category name="Axton">
+				<category name="Categories">
+					<category name="Death">
+						<hotfix name="Axton" package="GD_Soldier_Streaming">
+							<code profiles="">set GD_Dialog_Player.VOBD_Player_Soldier.DialogGroup_PL_Soldier TalkActs[0] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Soldier.DialogName_PL_Soldier',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+						</hotfix>
+					</category>
+					<category name="Pain - Multiple Options">
+						<category name="Pain">
+							<hotfix name="Axton" package="GD_Soldier_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Soldier.DialogGroup_PL_Soldier TalkActs[1] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Soldier.DialogName_PL_Soldier',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Pain - Crit">
+							<hotfix name="Axton" package="GD_Soldier_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Soldier.DialogGroup_PL_Soldier TalkActs[2] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Soldier.DialogName_PL_Soldier',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Pain - Status Effect">
+							<hotfix name="Axton" package="GD_Soldier_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Soldier.DialogGroup_PL_Soldier TalkActs[3] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Soldier.DialogName_PL_Soldier',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Pain - Slagged">
+							<hotfix name="Axton" package="GD_Soldier_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Soldier.DialogGroup_PL_Soldier TalkActs[4] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Soldier.DialogName_PL_Soldier',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Melee">
+						<hotfix name="Axton" package="GD_Soldier_Streaming">
+							<code profiles="">set GD_Dialog_Player.VOBD_Player_Soldier.DialogGroup_PL_Soldier TalkActs[5] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Soldier.DialogName_PL_Soldier',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+						</hotfix>
+					</category>
+					<category name="Complete Challenge">
+						<hotfix name="Axton" package="GD_Soldier_Streaming">
+							<code profiles="">set GD_Dialog_Player.VOBD_Player_Soldier.DialogGroup_PL_Soldier TalkActs[6] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Soldier.DialogName_PL_Soldier',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+						</hotfix>
+					</category>
+					<category name="Enter Coop Game">
+						<hotfix name="Axton" package="GD_Soldier_Streaming">
+							<code profiles="">set GD_Dialog_Player.VOBD_Player_Soldier.DialogGroup_PL_Soldier TalkActs[7] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Soldier.DialogName_PL_Soldier',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+						</hotfix>
+					</category>
+					<category name="Find Health Vial">
+						<hotfix name="Axton" package="GD_Soldier_Streaming">
+							<code profiles="">set GD_Dialog_Player.VOBD_Player_Soldier.DialogGroup_PL_Soldier TalkActs[8] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Soldier.DialogName_PL_Soldier',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+						</hotfix>
+					</category>
+					<category name="Find Rare Item">
+						<hotfix name="Axton" package="GD_Soldier_Streaming">
+							<code profiles="">set GD_Dialog_Player.VOBD_Player_Soldier.DialogGroup_PL_Soldier TalkActs[9] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Soldier.DialogName_PL_Soldier',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+						</hotfix>
+					</category>
+					<category name="Idle - Multiple Options">
+						<category name="Idle">
+							<hotfix name="Axton" package="GD_Soldier_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Soldier.DialogGroup_PL_Soldier TalkActs[10] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Soldier.DialogName_PL_Soldier',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Idle - Level Change">
+							<hotfix name="Axton" package="GD_Soldier_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Soldier.DialogGroup_PL_Soldier TalkActs[11] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Soldier.DialogName_PL_Soldier',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Level Up">
+						<hotfix name="Axton" package="GD_Soldier_Streaming">
+							<code profiles="">set GD_Dialog_Player.VOBD_Player_Soldier.DialogGroup_PL_Soldier TalkActs[12] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Soldier.DialogName_PL_Soldier',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+						</hotfix>
+					</category>
+					<category name="Open Chest">
+						<hotfix name="Axton" package="GD_Soldier_Streaming">
+							<code profiles="">set GD_Dialog_Player.VOBD_Player_Soldier.DialogGroup_PL_Soldier TalkActs[13] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Soldier.DialogName_PL_Soldier',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+						</hotfix>
+					</category>
+					<category name="Duel - Multiple Options">
+						<category name="PVP - Enemy Evaluation (Roast)">
+							<hotfix name="Axton" package="GD_Soldier_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Soldier.DialogGroup_PL_Soldier TalkActs[14] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Soldier.DialogName_PL_Soldier',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="PVP - Receive Duel Invite">
+							<hotfix name="Axton" package="GD_Soldier_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Soldier.DialogGroup_PL_Soldier TalkActs[15] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Soldier.DialogName_PL_Soldier',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="PVP - Lose">
+							<hotfix name="Axton" package="GD_Soldier_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Soldier.DialogGroup_PL_Soldier TalkActs[16] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Soldier.DialogName_PL_Soldier',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="PVP - Tie">
+							<hotfix name="Axton" package="GD_Soldier_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Soldier.DialogGroup_PL_Soldier TalkActs[17] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Soldier.DialogName_PL_Soldier',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="PVP - Win">
+							<hotfix name="Axton" package="GD_Soldier_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Soldier.DialogGroup_PL_Soldier TalkActs[43] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Soldier.DialogName_PL_Soldier',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Reactions - Multiple Options">
+						<category name="Badass Incoming">
+							<hotfix name="Axton" package="GD_Soldier_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Soldier.DialogGroup_PL_Soldier TalkActs[18] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Soldier.DialogName_PL_Soldier',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Enemies Incoming">
+							<hotfix name="Axton" package="GD_Soldier_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Soldier.DialogGroup_PL_Soldier TalkActs[20] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Soldier.DialogName_PL_Soldier',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Fully Explode Enemy (Gib)">
+							<hotfix name="Axton" package="GD_Soldier_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Soldier.DialogGroup_PL_Soldier TalkActs[21] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Soldier.DialogName_PL_Soldier',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Heal Friend">
+							<hotfix name="Axton" package="GD_Soldier_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Soldier.DialogGroup_PL_Soldier TalkActs[22] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Soldier.DialogName_PL_Soldier',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Healed By Friend">
+							<hotfix name="Axton" package="GD_Soldier_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Soldier.DialogGroup_PL_Soldier TalkActs[23] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Soldier.DialogName_PL_Soldier',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Kill Badass">
+							<hotfix name="Axton" package="GD_Soldier_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Soldier.DialogGroup_PL_Soldier TalkActs[24] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Soldier.DialogName_PL_Soldier',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Kill Streak">
+							<hotfix name="Axton" package="GD_Soldier_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Soldier.DialogGroup_PL_Soldier TalkActs[25] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Soldier.DialogName_PL_Soldier',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Score Critical Hit">
+							<hotfix name="Axton" package="GD_Soldier_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Soldier.DialogGroup_PL_Soldier TalkActs[44] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Soldier.DialogName_PL_Soldier',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Kill Enemy With Skill">
+							<hotfix name="Axton" package="GD_Soldier_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Soldier.DialogGroup_PL_Soldier TalkActs[39] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Soldier.DialogName_PL_Soldier',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="No Ammo Left">
+							<hotfix name="Axton" package="GD_Soldier_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Soldier.DialogGroup_PL_Soldier TalkActs[41] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Soldier.DialogName_PL_Soldier',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Buff Drink">
+							<hotfix name="Axton" package="GD_Soldier_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Soldier.DialogGroup_PL_Soldier TalkActs[38] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Soldier.DialogName_PL_Soldier',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Player Menu (Status Menu / Tab Menu) - Multiple Options">
+						<category name="Compare Items">
+							<hotfix name="Axton" package="GD_Soldier_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Soldier.DialogGroup_PL_Soldier TalkActs[26] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Soldier.DialogName_PL_Soldier',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Equip Powerful Gear">
+							<hotfix name="Axton" package="GD_Soldier_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Soldier.DialogGroup_PL_Soldier TalkActs[27] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Soldier.DialogName_PL_Soldier',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Open Map">
+							<hotfix name="Axton" package="GD_Soldier_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Soldier.DialogGroup_PL_Soldier TalkActs[28] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Soldier.DialogName_PL_Soldier',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Open Skill Tree">
+							<hotfix name="Axton" package="GD_Soldier_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Soldier.DialogGroup_PL_Soldier TalkActs[29] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Soldier.DialogName_PL_Soldier',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Vehicle - Multiple Options">
+						<category name="Catch Air">
+							<hotfix name="Axton" package="GD_Soldier_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Soldier.DialogGroup_PL_Soldier TalkActs[30] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Soldier.DialogName_PL_Soldier',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Change Seats">
+							<hotfix name="Axton" package="GD_Soldier_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Soldier.DialogGroup_PL_Soldier TalkActs[31] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Soldier.DialogName_PL_Soldier',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Destroy Other Vehicle">
+							<hotfix name="Axton" package="GD_Soldier_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Soldier.DialogGroup_PL_Soldier TalkActs[32] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Soldier.DialogName_PL_Soldier',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Flip Car">
+							<hotfix name="Axton" package="GD_Soldier_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Soldier.DialogGroup_PL_Soldier TalkActs[33] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Soldier.DialogName_PL_Soldier',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Hit Enemy (Run Over)">
+							<hotfix name="Axton" package="GD_Soldier_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Soldier.DialogGroup_PL_Soldier TalkActs[34] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Soldier.DialogName_PL_Soldier',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Vehicle Low Health">
+							<hotfix name="Axton" package="GD_Soldier_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Soldier.DialogGroup_PL_Soldier TalkActs[35] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Soldier.DialogName_PL_Soldier',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Hit Other Vehicle?">
+							<hotfix name="Axton" package="GD_Soldier_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Soldier.DialogGroup_PL_Soldier TalkActs[47] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Soldier.DialogName_PL_Soldier',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=False)</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Fight For Your Life - Multiple Options">
+						<category name="Recovering From Fight For Your Life">
+							<hotfix name="Axton" package="GD_Soldier_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Soldier.DialogGroup_PL_Soldier TalkActs[19] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Soldier.DialogName_PL_Soldier',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Just Downed">
+							<hotfix name="Axton" package="GD_Soldier_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Soldier.DialogGroup_PL_Soldier TalkActs[42] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Soldier.DialogName_PL_Soldier',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Jumping - Multiple Options">
+						<category name="Jump">
+							<hotfix name="Axton" package="GD_Soldier_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Soldier.DialogGroup_PL_Soldier TalkActs[37] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Soldier.DialogName_PL_Soldier',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Land">
+							<hotfix name="Axton" package="GD_Soldier_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Soldier.DialogGroup_PL_Soldier TalkActs[36] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Soldier.DialogName_PL_Soldier',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Action Skill">
+						<category name="Start Action Skill">
+							<hotfix name="Axton" package="GD_Soldier_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Soldier.DialogGroup_PL_Soldier TalkActs[40] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Soldier.DialogName_PL_Soldier',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Grenade">
+						<category name="Throw Grenade">
+							<hotfix name="Axton" package="GD_Soldier_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Soldier.DialogGroup_PL_Soldier TalkActs[45] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Soldier.DialogName_PL_Soldier',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Default & Jack Voice - Multiple Options">
+						<category name="Jack">
+							<hotfix name="Axton" package="GD_Soldier_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Soldier.DialogGroup_PL_Soldier TalkActs[46] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Soldier.DialogName_PL_Soldier',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Axton">
+							<hotfix name="Axton" package="GD_Soldier_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Soldier.DialogGroup_PL_Soldier TalkActs[48] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Soldier.DialogName_PL_Soldier',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+					</category>
+				</category>
+			</category>
+			<category name="Gaige">
+				<category name="Categories">
+					<category name="Death">
+						<hotfix name="Name" package="GD_Tulip_Mechro_Streaming">
+							<code profiles="">set GD_Tulip_Dialog_Player.VOBD_Player_Mechromancer.DialogGroup_PL_Mechromancer TalkActs[0] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Mechromancer.DialogName_PL_Mechromancer',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+						</hotfix>
+					</category>
+					<category name="Pain - Multiple Options">
+						<category name="Pain">
+							<hotfix name="Name" package="GD_Tulip_Mechro_Streaming">
+								<code profiles="">set GD_Tulip_Dialog_Player.VOBD_Player_Mechromancer.DialogGroup_PL_Mechromancer TalkActs[1] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Mechromancer.DialogName_PL_Mechromancer',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Pain - Crit">
+							<hotfix name="Name" package="GD_Tulip_Mechro_Streaming">
+								<code profiles="">set GD_Tulip_Dialog_Player.VOBD_Player_Mechromancer.DialogGroup_PL_Mechromancer TalkActs[2] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Mechromancer.DialogName_PL_Mechromancer',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Pain - Status Effect">
+							<hotfix name="Name" package="GD_Tulip_Mechro_Streaming">
+								<code profiles="">set GD_Tulip_Dialog_Player.VOBD_Player_Mechromancer.DialogGroup_PL_Mechromancer TalkActs[3] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Mechromancer.DialogName_PL_Mechromancer',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Pain - Slagged">
+							<hotfix name="Name" package="GD_Tulip_Mechro_Streaming">
+								<code profiles="">set GD_Tulip_Dialog_Player.VOBD_Player_Mechromancer.DialogGroup_PL_Mechromancer TalkActs[4] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Mechromancer.DialogName_PL_Mechromancer',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Melee">
+						<hotfix name="Name" package="GD_Tulip_Mechro_Streaming">
+							<code profiles="">set GD_Tulip_Dialog_Player.VOBD_Player_Mechromancer.DialogGroup_PL_Mechromancer TalkActs[5] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Mechromancer.DialogName_PL_Mechromancer',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+						</hotfix>
+					</category>
+					<category name="Complete Challenge">
+						<hotfix name="Name" package="GD_Tulip_Mechro_Streaming">
+							<code profiles="">set GD_Tulip_Dialog_Player.VOBD_Player_Mechromancer.DialogGroup_PL_Mechromancer TalkActs[6] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Mechromancer.DialogName_PL_Mechromancer',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+						</hotfix>
+					</category>
+					<category name="Enter Coop Game">
+						<hotfix name="Name" package="GD_Tulip_Mechro_Streaming">
+							<code profiles="">set GD_Tulip_Dialog_Player.VOBD_Player_Mechromancer.DialogGroup_PL_Mechromancer TalkActs[7] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Mechromancer.DialogName_PL_Mechromancer',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+						</hotfix>
+					</category>
+					<category name="Find Health Vial">
+						<hotfix name="Name" package="GD_Tulip_Mechro_Streaming">
+							<code profiles="">set GD_Tulip_Dialog_Player.VOBD_Player_Mechromancer.DialogGroup_PL_Mechromancer TalkActs[8] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Mechromancer.DialogName_PL_Mechromancer',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+						</hotfix>
+					</category>
+					<category name="Find Rare Item">
+						<hotfix name="Name" package="GD_Tulip_Mechro_Streaming">
+							<code profiles="">set GD_Tulip_Dialog_Player.VOBD_Player_Mechromancer.DialogGroup_PL_Mechromancer TalkActs[9] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Mechromancer.DialogName_PL_Mechromancer',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+						</hotfix>
+					</category>
+					<category name="Idle - Multiple Options">
+						<category name="Idle">
+							<hotfix name="Name" package="GD_Tulip_Mechro_Streaming">
+								<code profiles="">set GD_Tulip_Dialog_Player.VOBD_Player_Mechromancer.DialogGroup_PL_Mechromancer TalkActs[10] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Mechromancer.DialogName_PL_Mechromancer',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Idle - Level Change">
+							<hotfix name="Name" package="GD_Tulip_Mechro_Streaming">
+								<code profiles="">set GD_Tulip_Dialog_Player.VOBD_Player_Mechromancer.DialogGroup_PL_Mechromancer TalkActs[11] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Mechromancer.DialogName_PL_Mechromancer',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Level Up">
+						<hotfix name="Name" package="GD_Tulip_Mechro_Streaming">
+							<code profiles="">set GD_Tulip_Dialog_Player.VOBD_Player_Mechromancer.DialogGroup_PL_Mechromancer TalkActs[12] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Mechromancer.DialogName_PL_Mechromancer',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+						</hotfix>
+					</category>
+					<category name="Open Chest">
+						<hotfix name="Name" package="GD_Tulip_Mechro_Streaming">
+							<code profiles="">set GD_Tulip_Dialog_Player.VOBD_Player_Mechromancer.DialogGroup_PL_Mechromancer TalkActs[13] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Mechromancer.DialogName_PL_Mechromancer',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+						</hotfix>
+					</category>
+					<category name="Duel - Multiple Options">
+						<category name="PVP - Enemy Evaluation (Roast)">
+							<hotfix name="Name" package="GD_Tulip_Mechro_Streaming">
+								<code profiles="">set GD_Tulip_Dialog_Player.VOBD_Player_Mechromancer.DialogGroup_PL_Mechromancer TalkActs[14] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Mechromancer.DialogName_PL_Mechromancer',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="PVP - Receive Duel Invite">
+							<hotfix name="Name" package="GD_Tulip_Mechro_Streaming">
+								<code profiles="">set GD_Tulip_Dialog_Player.VOBD_Player_Mechromancer.DialogGroup_PL_Mechromancer TalkActs[15] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Mechromancer.DialogName_PL_Mechromancer',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="PVP - Lose">
+							<hotfix name="Name" package="GD_Tulip_Mechro_Streaming">
+								<code profiles="">set GD_Tulip_Dialog_Player.VOBD_Player_Mechromancer.DialogGroup_PL_Mechromancer TalkActs[16] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Mechromancer.DialogName_PL_Mechromancer',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="PVP - Tie">
+							<hotfix name="Name" package="GD_Tulip_Mechro_Streaming">
+								<code profiles="">set GD_Tulip_Dialog_Player.VOBD_Player_Mechromancer.DialogGroup_PL_Mechromancer TalkActs[17] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Mechromancer.DialogName_PL_Mechromancer',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="PVP - Win">
+							<hotfix name="Name" package="GD_Tulip_Mechro_Streaming">
+								<code profiles="">set GD_Tulip_Dialog_Player.VOBD_Player_Mechromancer.DialogGroup_PL_Mechromancer TalkActs[43] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Mechromancer.DialogName_PL_Mechromancer',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Reactions - Multiple Options">
+						<category name="Badass Incoming">
+							<hotfix name="Name" package="GD_Tulip_Mechro_Streaming">
+								<code profiles="">set GD_Tulip_Dialog_Player.VOBD_Player_Mechromancer.DialogGroup_PL_Mechromancer TalkActs[18] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Mechromancer.DialogName_PL_Mechromancer',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Enemies Incoming">
+							<hotfix name="Name" package="GD_Tulip_Mechro_Streaming">
+								<code profiles="">set GD_Tulip_Dialog_Player.VOBD_Player_Mechromancer.DialogGroup_PL_Mechromancer TalkActs[19] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Mechromancer.DialogName_PL_Mechromancer',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Fully Explode Enemy (Gib)">
+							<hotfix name="Name" package="GD_Tulip_Mechro_Streaming">
+								<code profiles="">set GD_Tulip_Dialog_Player.VOBD_Player_Mechromancer.DialogGroup_PL_Mechromancer TalkActs[21] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Mechromancer.DialogName_PL_Mechromancer',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Heal Friend">
+							<hotfix name="Name" package="GD_Tulip_Mechro_Streaming">
+								<code profiles="">set GD_Tulip_Dialog_Player.VOBD_Player_Mechromancer.DialogGroup_PL_Mechromancer TalkActs[22] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Mechromancer.DialogName_PL_Mechromancer',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Healed By Friend">
+							<hotfix name="Name" package="GD_Tulip_Mechro_Streaming">
+								<code profiles="">set GD_Tulip_Dialog_Player.VOBD_Player_Mechromancer.DialogGroup_PL_Mechromancer TalkActs[23] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Mechromancer.DialogName_PL_Mechromancer',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Kill Badass">
+							<hotfix name="Name" package="GD_Tulip_Mechro_Streaming">
+								<code profiles="">set GD_Tulip_Dialog_Player.VOBD_Player_Mechromancer.DialogGroup_PL_Mechromancer TalkActs[24] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Mechromancer.DialogName_PL_Mechromancer',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Kill Streak">
+							<hotfix name="Name" package="GD_Tulip_Mechro_Streaming">
+								<code profiles="">set GD_Tulip_Dialog_Player.VOBD_Player_Mechromancer.DialogGroup_PL_Mechromancer TalkActs[25] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Mechromancer.DialogName_PL_Mechromancer',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Score Critical Hit">
+							<hotfix name="Name" package="GD_Tulip_Mechro_Streaming">
+								<code profiles="">set GD_Tulip_Dialog_Player.VOBD_Player_Mechromancer.DialogGroup_PL_Mechromancer TalkActs[44] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Mechromancer.DialogName_PL_Mechromancer',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Kill Enemy With Skill">
+							<hotfix name="Name" package="GD_Tulip_Mechro_Streaming">
+								<code profiles="">set GD_Tulip_Dialog_Player.VOBD_Player_Mechromancer.DialogGroup_PL_Mechromancer TalkActs[40] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Mechromancer.DialogName_PL_Mechromancer',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="No Ammo Left">
+							<hotfix name="Name" package="GD_Tulip_Mechro_Streaming">
+								<code profiles="">set GD_Tulip_Dialog_Player.VOBD_Player_Mechromancer.DialogGroup_PL_Mechromancer TalkActs[41] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Mechromancer.DialogName_PL_Mechromancer',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Buff Drink">
+							<hotfix name="Name" package="GD_Tulip_Mechro_Streaming">
+								<code profiles="">set GD_Tulip_Dialog_Player.VOBD_Player_Mechromancer.DialogGroup_PL_Mechromancer TalkActs[39] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Mechromancer.DialogName_PL_Mechromancer',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Player Menu (Status Menu / Tab Menu) - Multiple Options">
+						<category name="Compare Items">
+							<hotfix name="Name" package="GD_Tulip_Mechro_Streaming">
+								<code profiles="">set GD_Tulip_Dialog_Player.VOBD_Player_Mechromancer.DialogGroup_PL_Mechromancer TalkActs[26] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Mechromancer.DialogName_PL_Mechromancer',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Equip Powerful Gear">
+							<hotfix name="Name" package="GD_Tulip_Mechro_Streaming">
+								<code profiles="">set GD_Tulip_Dialog_Player.VOBD_Player_Mechromancer.DialogGroup_PL_Mechromancer TalkActs[27] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Mechromancer.DialogName_PL_Mechromancer',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Open Map">
+							<hotfix name="Name" package="GD_Tulip_Mechro_Streaming">
+								<code profiles="">set GD_Tulip_Dialog_Player.VOBD_Player_Mechromancer.DialogGroup_PL_Mechromancer TalkActs[28] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Mechromancer.DialogName_PL_Mechromancer',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Open Skill Tree">
+							<hotfix name="Name" package="GD_Tulip_Mechro_Streaming">
+								<code profiles="">set GD_Tulip_Dialog_Player.VOBD_Player_Mechromancer.DialogGroup_PL_Mechromancer TalkActs[29] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Mechromancer.DialogName_PL_Mechromancer',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Vehicle - Multiple Options">
+						<category name="Catch Air">
+							<hotfix name="Name" package="GD_Tulip_Mechro_Streaming">
+								<code profiles="">set GD_Tulip_Dialog_Player.VOBD_Player_Mechromancer.DialogGroup_PL_Mechromancer TalkActs[30] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Mechromancer.DialogName_PL_Mechromancer',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Change Seats">
+							<hotfix name="Name" package="GD_Tulip_Mechro_Streaming">
+								<code profiles="">set GD_Tulip_Dialog_Player.VOBD_Player_Mechromancer.DialogGroup_PL_Mechromancer TalkActs[31] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Mechromancer.DialogName_PL_Mechromancer',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Destroy Other Vehicle">
+							<hotfix name="Name" package="GD_Tulip_Mechro_Streaming">
+								<code profiles="">set GD_Tulip_Dialog_Player.VOBD_Player_Mechromancer.DialogGroup_PL_Mechromancer TalkActs[32] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Mechromancer.DialogName_PL_Mechromancer',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Flip Car">
+							<hotfix name="Name" package="GD_Tulip_Mechro_Streaming">
+								<code profiles="">set GD_Tulip_Dialog_Player.VOBD_Player_Mechromancer.DialogGroup_PL_Mechromancer TalkActs[33] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Mechromancer.DialogName_PL_Mechromancer',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Hit Enemy (Run Over)">
+							<hotfix name="Name" package="GD_Tulip_Mechro_Streaming">
+								<code profiles="">set GD_Tulip_Dialog_Player.VOBD_Player_Mechromancer.DialogGroup_PL_Mechromancer TalkActs[34] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Mechromancer.DialogName_PL_Mechromancer',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Vehicle Low Health">
+							<hotfix name="Name" package="GD_Tulip_Mechro_Streaming">
+								<code profiles="">set GD_Tulip_Dialog_Player.VOBD_Player_Mechromancer.DialogGroup_PL_Mechromancer TalkActs[35] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Mechromancer.DialogName_PL_Mechromancer',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Fight For Your Life - Multiple Options">
+						<category name="Recovering From Fight For Your Life">
+							<hotfix name="Name" package="GD_Tulip_Mechro_Streaming">
+								<code profiles="">set GD_Tulip_Dialog_Player.VOBD_Player_Mechromancer.DialogGroup_PL_Mechromancer TalkActs[20] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Mechromancer.DialogName_PL_Mechromancer',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Just Downed">
+							<hotfix name="Name" package="GD_Tulip_Mechro_Streaming">
+								<code profiles="">set GD_Tulip_Dialog_Player.VOBD_Player_Mechromancer.DialogGroup_PL_Mechromancer TalkActs[42] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Mechromancer.DialogName_PL_Mechromancer',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Jumping - Multiple Options">
+						<category name="Jump">
+							<hotfix name="Name" package="GD_Tulip_Mechro_Streaming">
+								<code profiles="">set GD_Tulip_Dialog_Player.VOBD_Player_Mechromancer.DialogGroup_PL_Mechromancer TalkActs[38] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Mechromancer.DialogName_PL_Mechromancer',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Land">
+							<hotfix name="Name" package="GD_Tulip_Mechro_Streaming">
+								<code profiles="">set GD_Tulip_Dialog_Player.VOBD_Player_Mechromancer.DialogGroup_PL_Mechromancer TalkActs[36] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Mechromancer.DialogName_PL_Mechromancer',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Action Skill">
+						<category name="Start Action Skill">
+							<hotfix name="Name" package="GD_Tulip_Mechro_Streaming">
+								<code profiles="">set GD_Tulip_Dialog_Player.VOBD_Player_Mechromancer.DialogGroup_PL_Mechromancer TalkActs[37] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Mechromancer.DialogName_PL_Mechromancer',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Grenade">
+						<category name="Throw Grenade">
+							<hotfix name="Name" package="GD_Tulip_Mechro_Streaming">
+								<code profiles="">set GD_Tulip_Dialog_Player.VOBD_Player_Mechromancer.DialogGroup_PL_Mechromancer TalkActs[45] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Mechromancer.DialogName_PL_Mechromancer',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Breathing">
+						<category name="Start Breathing?">
+							<hotfix name="Name" package="GD_Tulip_Mechro_Streaming">
+								<code profiles="">set GD_Tulip_Dialog_Player.VOBD_Player_Mechromancer.DialogGroup_PL_Mechromancer TalkActs[66] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Mechromancer.DialogName_PL_Mechromancer',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Default & Jack Voice - Multiple Options">
+						<category name="Jack">
+							<hotfix name="Name" package="GD_Tulip_Mechro_Streaming">
+								<code profiles="">set GD_Tulip_Dialog_Player.VOBD_Player_Mechromancer.DialogGroup_PL_Mechromancer TalkActs[46] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Mechromancer.DialogName_PL_Mechromancer',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Gaige">
+							<hotfix name="Name" package="GD_Tulip_Mechro_Streaming">
+								<code profiles="">set GD_Tulip_Dialog_Player.VOBD_Player_Mechromancer.DialogGroup_PL_Mechromancer TalkActs[47] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Mechromancer.DialogName_PL_Mechromancer',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=False)</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Anarchy - Multiple Options">
+						<category name="Anarchy - Close Enough">
+							<hotfix name="Name" package="GD_Tulip_Mechro_Streaming">
+								<code profiles="">set GD_Tulip_Dialog_Player.VOBD_Player_Mechromancer.DialogGroup_PL_Mechromancer TalkActs[48] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Mechromancer.DialogName_PL_Mechromancer',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Anarchy - Gain Claws">
+							<hotfix name="Name" package="GD_Tulip_Mechro_Streaming">
+								<code profiles="">set GD_Tulip_Dialog_Player.VOBD_Player_Mechromancer.DialogGroup_PL_Mechromancer TalkActs[59] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Mechromancer.DialogName_PL_Mechromancer',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Anarchy - Gain Discord">
+							<hotfix name="Name" package="GD_Tulip_Mechro_Streaming">
+								<code profiles="">set GD_Tulip_Dialog_Player.VOBD_Player_Mechromancer.DialogGroup_PL_Mechromancer TalkActs[60] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Mechromancer.DialogName_PL_Mechromancer',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Anarchy - Claw Attack">
+							<hotfix name="Name" package="GD_Tulip_Mechro_Streaming">
+								<code profiles="">set GD_Tulip_Dialog_Player.VOBD_Player_Mechromancer.DialogGroup_PL_Mechromancer TalkActs[64] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Mechromancer.DialogName_PL_Mechromancer',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Anarchy - Fight For Your Life">
+							<hotfix name="Name" package="GD_Tulip_Mechro_Streaming">
+								<code profiles="">set GD_Tulip_Dialog_Player.VOBD_Player_Mechromancer.DialogGroup_PL_Mechromancer TalkActs[65] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Mechromancer.DialogName_PL_Mechromancer',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Anarchy Loss - Relief">
+							<hotfix name="Name" package="GD_Tulip_Mechro_Streaming">
+								<code profiles="">set GD_Tulip_Dialog_Player.VOBD_Player_Mechromancer.DialogGroup_PL_Mechromancer TalkActs[61] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Mechromancer.DialogName_PL_Mechromancer',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Anarchy Loss - Sad">
+							<hotfix name="Name" package="GD_Tulip_Mechro_Streaming">
+								<code profiles="">set GD_Tulip_Dialog_Player.VOBD_Player_Mechromancer.DialogGroup_PL_Mechromancer TalkActs[62] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Mechromancer.DialogName_PL_Mechromancer',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Anarchy Loss - Yay">
+							<hotfix name="Name" package="GD_Tulip_Mechro_Streaming">
+								<code profiles="">set GD_Tulip_Dialog_Player.VOBD_Player_Mechromancer.DialogGroup_PL_Mechromancer TalkActs[63] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Mechromancer.DialogName_PL_Mechromancer',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Gain Anarchy">
+							<hotfix name="Name" package="GD_Tulip_Mechro_Streaming">
+								<code profiles="">set GD_Tulip_Dialog_Player.VOBD_Player_Mechromancer.DialogGroup_PL_Mechromancer TalkActs[49] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Mechromancer.DialogName_PL_Mechromancer',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Gain Anarchy - 10">
+							<hotfix name="Name" package="GD_Tulip_Mechro_Streaming">
+								<code profiles="">set GD_Tulip_Dialog_Player.VOBD_Player_Mechromancer.DialogGroup_PL_Mechromancer TalkActs[50] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Mechromancer.DialogName_PL_Mechromancer',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Gain Anarchy - 2">
+							<hotfix name="Name" package="GD_Tulip_Mechro_Streaming">
+								<code profiles="">set GD_Tulip_Dialog_Player.VOBD_Player_Mechromancer.DialogGroup_PL_Mechromancer TalkActs[51] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Mechromancer.DialogName_PL_Mechromancer',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Gain Anarchy - 3">
+							<hotfix name="Name" package="GD_Tulip_Mechro_Streaming">
+								<code profiles="">set GD_Tulip_Dialog_Player.VOBD_Player_Mechromancer.DialogGroup_PL_Mechromancer TalkActs[52] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Mechromancer.DialogName_PL_Mechromancer',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Gain Anarchy - 4">
+							<hotfix name="Name" package="GD_Tulip_Mechro_Streaming">
+								<code profiles="">set GD_Tulip_Dialog_Player.VOBD_Player_Mechromancer.DialogGroup_PL_Mechromancer TalkActs[53] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Mechromancer.DialogName_PL_Mechromancer',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Gain Anarchy - 5">
+							<hotfix name="Name" package="GD_Tulip_Mechro_Streaming">
+								<code profiles="">set GD_Tulip_Dialog_Player.VOBD_Player_Mechromancer.DialogGroup_PL_Mechromancer TalkActs[54] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Mechromancer.DialogName_PL_Mechromancer',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Gain Anarchy - 6">
+							<hotfix name="Name" package="GD_Tulip_Mechro_Streaming">
+								<code profiles="">set GD_Tulip_Dialog_Player.VOBD_Player_Mechromancer.DialogGroup_PL_Mechromancer TalkActs[55] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Mechromancer.DialogName_PL_Mechromancer',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Gain Anarchy - 7">
+							<hotfix name="Name" package="GD_Tulip_Mechro_Streaming">
+								<code profiles="">set GD_Tulip_Dialog_Player.VOBD_Player_Mechromancer.DialogGroup_PL_Mechromancer TalkActs[56] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Mechromancer.DialogName_PL_Mechromancer',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Gain Anarchy - 8">
+							<hotfix name="Name" package="GD_Tulip_Mechro_Streaming">
+								<code profiles="">set GD_Tulip_Dialog_Player.VOBD_Player_Mechromancer.DialogGroup_PL_Mechromancer TalkActs[57] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Mechromancer.DialogName_PL_Mechromancer',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Gain Anarchy - 9">
+							<hotfix name="Name" package="GD_Tulip_Mechro_Streaming">
+								<code profiles="">set GD_Tulip_Dialog_Player.VOBD_Player_Mechromancer.DialogGroup_PL_Mechromancer TalkActs[58] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Mechromancer.DialogName_PL_Mechromancer',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+					</category>
+				</category>
+			</category>
+			<category name="Krieg">
+				<category name="Categories">
+					<category name="Death">
+						<category name="Pull The Pin (Death Grenade)">
+							<hotfix name="Name" package="GD_Lilac_Psycho_Streaming">
+								<code profiles="">set GD_Lilac_Dialog_Player.VOBD_Player_Psycho.DialogGroup_PL_Psycho TalkActs[61] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Lilac_Dialog_Player.VOBD_Player_Psycho.DialogName_PL_Psycho',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Pain - Multiple Options">
+						<category name="Pain">
+							<hotfix name="Name" package="GD_Lilac_Psycho_Streaming">
+								<code profiles="">set GD_Lilac_Dialog_Player.VOBD_Player_Psycho.DialogGroup_PL_Psycho TalkActs[1] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Lilac_Dialog_Player.VOBD_Player_Psycho.DialogName_PL_Psycho',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+								<code profiles="">set GD_Lilac_Dialog_Player.VOBD_Player_Psycho.DialogGroup_PL_Psycho TalkActs[2] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Lilac_Dialog_Player.VOBD_Player_Psycho.DialogName_PL_Psycho',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Pain - Status Effect">
+							<hotfix name="Name" package="GD_Lilac_Psycho_Streaming">
+								<code profiles="">set GD_Lilac_Dialog_Player.VOBD_Player_Psycho.DialogGroup_PL_Psycho TalkActs[3] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Lilac_Dialog_Player.VOBD_Player_Psycho.DialogName_PL_Psycho',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Pain - Slagged">
+							<hotfix name="Name" package="GD_Lilac_Psycho_Streaming">
+								<code profiles="">set GD_Lilac_Dialog_Player.VOBD_Player_Psycho.DialogGroup_PL_Psycho TalkActs[4] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Lilac_Dialog_Player.VOBD_Player_Psycho.DialogName_PL_Psycho',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Melee">
+						<hotfix name="Name" package="GD_Lilac_Psycho_Streaming">
+							<code profiles="">set GD_Lilac_Dialog_Player.VOBD_Player_Psycho.DialogGroup_PL_Psycho TalkActs[5] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Lilac_Dialog_Player.VOBD_Player_Psycho.DialogName_PL_Psycho',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+						</hotfix>
+					</category>
+					<category name="Complete Challenge">
+						<hotfix name="Name" package="GD_Lilac_Psycho_Streaming">
+							<code profiles="">set GD_Lilac_Dialog_Player.VOBD_Player_Psycho.DialogGroup_PL_Psycho TalkActs[6] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Lilac_Dialog_Player.VOBD_Player_Psycho.DialogName_PL_Psycho',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+						</hotfix>
+					</category>
+					<category name="Enter Coop Game">
+						<hotfix name="Name" package="GD_Lilac_Psycho_Streaming">
+							<code profiles="">set GD_Lilac_Dialog_Player.VOBD_Player_Psycho.DialogGroup_PL_Psycho TalkActs[7] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Lilac_Dialog_Player.VOBD_Player_Psycho.DialogName_PL_Psycho',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+						</hotfix>
+					</category>
+					<category name="Find Health Vial">
+						<hotfix name="Name" package="GD_Lilac_Psycho_Streaming">
+							<code profiles="">set GD_Lilac_Dialog_Player.VOBD_Player_Psycho.DialogGroup_PL_Psycho TalkActs[8] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Lilac_Dialog_Player.VOBD_Player_Psycho.DialogName_PL_Psycho',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+						</hotfix>
+					</category>
+					<category name="Find Rare Item">
+						<hotfix name="Name" package="GD_Lilac_Psycho_Streaming">
+							<code profiles="">set GD_Lilac_Dialog_Player.VOBD_Player_Psycho.DialogGroup_PL_Psycho TalkActs[9] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Lilac_Dialog_Player.VOBD_Player_Psycho.DialogName_PL_Psycho',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+						</hotfix>
+					</category>
+					<category name="Idle - Multiple Options">
+						<category name="Idle">
+							<hotfix name="Name" package="GD_Lilac_Psycho_Streaming">
+								<code profiles="">set GD_Lilac_Dialog_Player.VOBD_Player_Psycho.DialogGroup_PL_Psycho TalkActs[10] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Lilac_Dialog_Player.VOBD_Player_Psycho.DialogName_PL_Psycho',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Idle - Level Change">
+							<hotfix name="Name" package="GD_Lilac_Psycho_Streaming">
+								<code profiles="">set GD_Lilac_Dialog_Player.VOBD_Player_Psycho.DialogGroup_PL_Psycho TalkActs[11] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Lilac_Dialog_Player.VOBD_Player_Psycho.DialogName_PL_Psycho',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Level Up">
+						<hotfix name="Name" package="GD_Lilac_Psycho_Streaming">
+							<code profiles="">set GD_Lilac_Dialog_Player.VOBD_Player_Psycho.DialogGroup_PL_Psycho TalkActs[12] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Lilac_Dialog_Player.VOBD_Player_Psycho.DialogName_PL_Psycho',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+						</hotfix>
+					</category>
+					<category name="Open Chest">
+						<hotfix name="Name" package="GD_Lilac_Psycho_Streaming">
+							<code profiles="">set GD_Lilac_Dialog_Player.VOBD_Player_Psycho.DialogGroup_PL_Psycho TalkActs[13] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Lilac_Dialog_Player.VOBD_Player_Psycho.DialogName_PL_Psycho',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+						</hotfix>
+					</category>
+					<category name="Duel - Multiple Options">
+						<category name="PVP - Enemy Evaluation (Roast)">
+							<hotfix name="Name" package="GD_Lilac_Psycho_Streaming">
+								<code profiles="">set GD_Lilac_Dialog_Player.VOBD_Player_Psycho.DialogGroup_PL_Psycho TalkActs[14] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Lilac_Dialog_Player.VOBD_Player_Psycho.DialogName_PL_Psycho',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="PVP - Receive Duel Invite">
+							<hotfix name="Name" package="GD_Lilac_Psycho_Streaming">
+								<code profiles="">set GD_Lilac_Dialog_Player.VOBD_Player_Psycho.DialogGroup_PL_Psycho TalkActs[15] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Lilac_Dialog_Player.VOBD_Player_Psycho.DialogName_PL_Psycho',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="PVP - Lose">
+							<hotfix name="Name" package="GD_Lilac_Psycho_Streaming">
+								<code profiles="">set GD_Lilac_Dialog_Player.VOBD_Player_Psycho.DialogGroup_PL_Psycho TalkActs[16] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Lilac_Dialog_Player.VOBD_Player_Psycho.DialogName_PL_Psycho',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="PVP - Tie">
+							<hotfix name="Name" package="GD_Lilac_Psycho_Streaming">
+								<code profiles="">set GD_Lilac_Dialog_Player.VOBD_Player_Psycho.DialogGroup_PL_Psycho TalkActs[17] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Lilac_Dialog_Player.VOBD_Player_Psycho.DialogName_PL_Psycho',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="PVP - Win">
+							<hotfix name="Name" package="GD_Lilac_Psycho_Streaming">
+								<code profiles="">set GD_Lilac_Dialog_Player.VOBD_Player_Psycho.DialogGroup_PL_Psycho TalkActs[43] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Lilac_Dialog_Player.VOBD_Player_Psycho.DialogName_PL_Psycho',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Reactions - Multiple Options">
+						<category name="Badass Incoming">
+							<hotfix name="Name" package="GD_Lilac_Psycho_Streaming">
+								<code profiles="">set GD_Lilac_Dialog_Player.VOBD_Player_Psycho.DialogGroup_PL_Psycho TalkActs[18] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Lilac_Dialog_Player.VOBD_Player_Psycho.DialogName_PL_Psycho',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Enemies Incoming">
+							<hotfix name="Name" package="GD_Lilac_Psycho_Streaming">
+								<code profiles="">set GD_Lilac_Dialog_Player.VOBD_Player_Psycho.DialogGroup_PL_Psycho TalkActs[20] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Lilac_Dialog_Player.VOBD_Player_Psycho.DialogName_PL_Psycho',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Fully Explode Enemy (Gib)">
+							<hotfix name="Name" package="GD_Lilac_Psycho_Streaming">
+								<code profiles="">set GD_Lilac_Dialog_Player.VOBD_Player_Psycho.DialogGroup_PL_Psycho TalkActs[21] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Lilac_Dialog_Player.VOBD_Player_Psycho.DialogName_PL_Psycho',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Heal Friend">
+							<hotfix name="Name" package="GD_Lilac_Psycho_Streaming">
+								<code profiles="">set GD_Lilac_Dialog_Player.VOBD_Player_Psycho.DialogGroup_PL_Psycho TalkActs[22] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Lilac_Dialog_Player.VOBD_Player_Psycho.DialogName_PL_Psycho',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Healed By Friend">
+							<hotfix name="Name" package="GD_Lilac_Psycho_Streaming">
+								<code profiles="">set GD_Lilac_Dialog_Player.VOBD_Player_Psycho.DialogGroup_PL_Psycho TalkActs[23] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Lilac_Dialog_Player.VOBD_Player_Psycho.DialogName_PL_Psycho',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Kill Badass">
+							<hotfix name="Name" package="GD_Lilac_Psycho_Streaming">
+								<code profiles="">set GD_Lilac_Dialog_Player.VOBD_Player_Psycho.DialogGroup_PL_Psycho TalkActs[24] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Lilac_Dialog_Player.VOBD_Player_Psycho.DialogName_PL_Psycho',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Kill Streak">
+							<hotfix name="Name" package="GD_Lilac_Psycho_Streaming">
+								<code profiles="">set GD_Lilac_Dialog_Player.VOBD_Player_Psycho.DialogGroup_PL_Psycho TalkActs[25] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Lilac_Dialog_Player.VOBD_Player_Psycho.DialogName_PL_Psycho',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Kill Enemy With Skill">
+							<hotfix name="Name" package="GD_Lilac_Psycho_Streaming">
+								<code profiles="">set GD_Lilac_Dialog_Player.VOBD_Player_Psycho.DialogGroup_PL_Psycho TalkActs[40] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Lilac_Dialog_Player.VOBD_Player_Psycho.DialogName_PL_Psycho',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="No Ammo Left">
+							<hotfix name="Name" package="GD_Lilac_Psycho_Streaming">
+								<code profiles="">set GD_Lilac_Dialog_Player.VOBD_Player_Psycho.DialogGroup_PL_Psycho TalkActs[41] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Lilac_Dialog_Player.VOBD_Player_Psycho.DialogName_PL_Psycho',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Hit Self">
+							<hotfix name="Name" package="GD_Lilac_Psycho_Streaming">
+								<code profiles="">set GD_Lilac_Dialog_Player.VOBD_Player_Psycho.DialogGroup_PL_Psycho TalkActs[50] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Lilac_Dialog_Player.VOBD_Player_Psycho.DialogName_PL_Psycho',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Being On Fire">
+							<hotfix name="Name" package="GD_Lilac_Psycho_Streaming">
+								<code profiles="">set GD_Lilac_Dialog_Player.VOBD_Player_Psycho.DialogGroup_PL_Psycho TalkActs[51] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Lilac_Dialog_Player.VOBD_Player_Psycho.DialogName_PL_Psycho',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Fuel The Rampage - Friendly Fire">
+							<hotfix name="Name" package="GD_Lilac_Psycho_Streaming">
+								<code profiles="">set GD_Lilac_Dialog_Player.VOBD_Player_Psycho.DialogGroup_PL_Psycho TalkActs[52] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Lilac_Dialog_Player.VOBD_Player_Psycho.DialogName_PL_Psycho',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Suicide Grenade?">
+							<hotfix name="Name" package="GD_Lilac_Psycho_Streaming">
+								<code profiles="">set GD_Lilac_Dialog_Player.VOBD_Player_Psycho.DialogGroup_PL_Psycho TalkActs[63] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Lilac_Dialog_Player.VOBD_Player_Psycho.DialogName_PL_Psycho',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Hit Self - Not In Rampage">
+							<hotfix name="Name" package="GD_Lilac_Psycho_Streaming">
+								<code profiles="">set GD_Lilac_Dialog_Player.VOBD_Player_Psycho.DialogGroup_PL_Psycho TalkActs[68] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Lilac_Dialog_Player.VOBD_Player_Psycho.DialogName_PL_Psycho',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Low Health">
+							<hotfix name="Name" package="GD_Lilac_Psycho_Streaming">
+								<code profiles="">set GD_Lilac_Dialog_Player.VOBD_Player_Psycho.DialogGroup_PL_Psycho TalkActs[69] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Lilac_Dialog_Player.VOBD_Player_Psycho.DialogName_PL_Psycho',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Player Menu (Status Menu / Tab Menu) - Multiple Options">
+						<category name="Compare Items">
+							<hotfix name="Name" package="GD_Lilac_Psycho_Streaming">
+								<code profiles="">set GD_Lilac_Dialog_Player.VOBD_Player_Psycho.DialogGroup_PL_Psycho TalkActs[26] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Lilac_Dialog_Player.VOBD_Player_Psycho.DialogName_PL_Psycho',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Equip Powerful Gear">
+							<hotfix name="Name" package="GD_Lilac_Psycho_Streaming">
+								<code profiles="">set GD_Lilac_Dialog_Player.VOBD_Player_Psycho.DialogGroup_PL_Psycho TalkActs[27] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Lilac_Dialog_Player.VOBD_Player_Psycho.DialogName_PL_Psycho',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Open Map">
+							<hotfix name="Name" package="GD_Lilac_Psycho_Streaming">
+								<code profiles="">set GD_Lilac_Dialog_Player.VOBD_Player_Psycho.DialogGroup_PL_Psycho TalkActs[28] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Lilac_Dialog_Player.VOBD_Player_Psycho.DialogName_PL_Psycho',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Open Skill Tree">
+							<hotfix name="Name" package="GD_Lilac_Psycho_Streaming">
+								<code profiles="">set GD_Lilac_Dialog_Player.VOBD_Player_Psycho.DialogGroup_PL_Psycho TalkActs[29] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Lilac_Dialog_Player.VOBD_Player_Psycho.DialogName_PL_Psycho',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Vehicle - Multiple Options">
+						<category name="Catch Air">
+							<hotfix name="Name" package="GD_Lilac_Psycho_Streaming">
+								<code profiles="">set GD_Lilac_Dialog_Player.VOBD_Player_Psycho.DialogGroup_PL_Psycho TalkActs[30] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Lilac_Dialog_Player.VOBD_Player_Psycho.DialogName_PL_Psycho',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Change Seats">
+							<hotfix name="Name" package="GD_Lilac_Psycho_Streaming">
+								<code profiles="">set GD_Lilac_Dialog_Player.VOBD_Player_Psycho.DialogGroup_PL_Psycho TalkActs[31] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Lilac_Dialog_Player.VOBD_Player_Psycho.DialogName_PL_Psycho',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Destroy Other Vehicle">
+							<hotfix name="Name" package="GD_Lilac_Psycho_Streaming">
+								<code profiles="">set GD_Lilac_Dialog_Player.VOBD_Player_Psycho.DialogGroup_PL_Psycho TalkActs[32] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Lilac_Dialog_Player.VOBD_Player_Psycho.DialogName_PL_Psycho',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Hit Enemy (Run Over)">
+							<hotfix name="Name" package="GD_Lilac_Psycho_Streaming">
+								<code profiles="">set GD_Lilac_Dialog_Player.VOBD_Player_Psycho.DialogGroup_PL_Psycho TalkActs[34] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Lilac_Dialog_Player.VOBD_Player_Psycho.DialogName_PL_Psycho',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Hit Other Vehicle?">
+							<hotfix name="Name" package="GD_Lilac_Psycho_Streaming">
+								<code profiles="">set GD_Lilac_Dialog_Player.VOBD_Player_Psycho.DialogGroup_PL_Psycho TalkActs[64] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Lilac_Dialog_Player.VOBD_Player_Psycho.DialogName_PL_Psycho',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Fight For Your Life - Multiple Options">
+						<category name="Second Wind?  Or Second Wind After Redeem The Soul?">
+							<hotfix name="Name" package="GD_Lilac_Psycho_Streaming">
+								<code profiles="">set GD_Lilac_Dialog_Player.VOBD_Player_Psycho.DialogGroup_PL_Psycho TalkActs[53] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Lilac_Dialog_Player.VOBD_Player_Psycho.DialogName_PL_Psycho',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Recovering From Fight For Your Life">
+							<hotfix name="Name" package="GD_Lilac_Psycho_Streaming">
+								<code profiles="">set GD_Lilac_Dialog_Player.VOBD_Player_Psycho.DialogGroup_PL_Psycho TalkActs[19] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Lilac_Dialog_Player.VOBD_Player_Psycho.DialogName_PL_Psycho',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Just Downed">
+							<hotfix name="Name" package="GD_Lilac_Psycho_Streaming">
+								<code profiles="">set GD_Lilac_Dialog_Player.VOBD_Player_Psycho.DialogGroup_PL_Psycho TalkActs[42] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Lilac_Dialog_Player.VOBD_Player_Psycho.DialogName_PL_Psycho',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Jumping - Multiple Options">
+						<category name="Jump">
+							<hotfix name="Name" package="GD_Lilac_Psycho_Streaming">
+								<code profiles="">set GD_Lilac_Dialog_Player.VOBD_Player_Psycho.DialogGroup_PL_Psycho TalkActs[38] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Lilac_Dialog_Player.VOBD_Player_Psycho.DialogName_PL_Psycho',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Land">
+							<hotfix name="Name" package="GD_Lilac_Psycho_Streaming">
+								<code profiles="">set GD_Lilac_Dialog_Player.VOBD_Player_Psycho.DialogGroup_PL_Psycho TalkActs[36] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Lilac_Dialog_Player.VOBD_Player_Psycho.DialogName_PL_Psycho',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Action Skill">
+						<category name="Start Action Skill">
+							<hotfix name="Name" package="GD_Lilac_Psycho_Streaming">
+								<code profiles="">set GD_Lilac_Dialog_Player.VOBD_Player_Psycho.DialogGroup_PL_Psycho TalkActs[37] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Lilac_Dialog_Player.VOBD_Player_Psycho.DialogName_PL_Psycho',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Throw Buzzaxe">
+							<hotfix name="Name" package="GD_Lilac_Psycho_Streaming">
+								<code profiles="">set GD_Lilac_Dialog_Player.VOBD_Player_Psycho.DialogGroup_PL_Psycho TalkActs[45] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Lilac_Dialog_Player.VOBD_Player_Psycho.DialogName_PL_Psycho',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+								<code profiles="">set GD_Lilac_Dialog_Player.VOBD_Player_Psycho.DialogGroup_PL_Psycho TalkActs[65] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Lilac_Dialog_Player.VOBD_Player_Psycho.DialogName_PL_Psycho',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Badass Transformation - Release The Beast">
+							<hotfix name="Name" package="GD_Lilac_Psycho_Streaming">
+								<code profiles="">set GD_Lilac_Dialog_Player.VOBD_Player_Psycho.DialogGroup_PL_Psycho TalkActs[55] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Lilac_Dialog_Player.VOBD_Player_Psycho.DialogName_PL_Psycho',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Badass Pyro?">
+							<hotfix name="Name" package="GD_Lilac_Psycho_Streaming">
+								<code profiles="">set GD_Lilac_Dialog_Player.VOBD_Player_Psycho.DialogGroup_PL_Psycho TalkActs[54] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Lilac_Dialog_Player.VOBD_Player_Psycho.DialogName_PL_Psycho',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Default & Jack Voice - Multiple Options">
+						<category name="Jack">
+							<hotfix name="Name" package="GD_Lilac_Psycho_Streaming">
+								<code profiles="">set GD_Lilac_Dialog_Player.VOBD_Player_Psycho.DialogGroup_PL_Psycho TalkActs[70] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Lilac_Dialog_Player.VOBD_Player_Psycho.DialogName_PL_Psycho',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Already Unused">
+						<hotfix name="Name" package="GD_Lilac_Psycho_Streaming">
+							<code profiles="">set GD_Lilac_Dialog_Player.VOBD_Player_Psycho.DialogGroup_PL_Psycho TalkActs[0] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Lilac_Dialog_Player.VOBD_Player_Psycho.DialogName_PL_Psycho',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							<code profiles="">set GD_Lilac_Dialog_Player.VOBD_Player_Psycho.DialogGroup_PL_Psycho TalkActs[33] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Lilac_Dialog_Player.VOBD_Player_Psycho.DialogName_PL_Psycho',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							<code profiles="">set GD_Lilac_Dialog_Player.VOBD_Player_Psycho.DialogGroup_PL_Psycho TalkActs[35] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Lilac_Dialog_Player.VOBD_Player_Psycho.DialogName_PL_Psycho',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							<code profiles="">set GD_Lilac_Dialog_Player.VOBD_Player_Psycho.DialogGroup_PL_Psycho TalkActs[39] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Lilac_Dialog_Player.VOBD_Player_Psycho.DialogName_PL_Psycho',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							<code profiles="">set GD_Lilac_Dialog_Player.VOBD_Player_Psycho.DialogGroup_PL_Psycho TalkActs[44] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Lilac_Dialog_Player.VOBD_Player_Psycho.DialogName_PL_Psycho',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							<code profiles="">set GD_Lilac_Dialog_Player.VOBD_Player_Psycho.DialogGroup_PL_Psycho TalkActs[46] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Lilac_Dialog_Player.VOBD_Player_Psycho.DialogName_PL_Psycho',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							<code profiles="">set GD_Lilac_Dialog_Player.VOBD_Player_Psycho.DialogGroup_PL_Psycho TalkActs[47] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Lilac_Dialog_Player.VOBD_Player_Psycho.DialogName_PL_Psycho',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=False)</code>
+						</hotfix>
+					</category>
+					<category name="Breathing">
+						<hotfix name="Name" package="GD_Lilac_Psycho_Streaming">
+							<code profiles="">set GD_Lilac_Dialog_Player.VOBD_Player_Psycho.DialogGroup_PL_Psycho TalkActs[48] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Lilac_Dialog_Player.VOBD_Player_Psycho.DialogName_PL_Psycho',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+						</hotfix>
+					</category>
+					<category name="Additional Skills">
+						<category name="Bloodlust Dialogue Group 1">
+							<hotfix name="Name" package="GD_Lilac_Psycho_Streaming">
+								<code profiles="">set GD_Lilac_Dialog_Player.VOBD_Player_Psycho.DialogGroup_PL_Psycho TalkActs[49] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Lilac_Dialog_Player.VOBD_Player_Psycho.DialogName_PL_Psycho',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Bloodlust Dialogue Group 2">
+							<hotfix name="Name" package="GD_Lilac_Psycho_Streaming">
+								<code profiles="">set GD_Lilac_Dialog_Player.VOBD_Player_Psycho.DialogGroup_PL_Psycho TalkActs[56] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Lilac_Dialog_Player.VOBD_Player_Psycho.DialogName_PL_Psycho',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Bloodlust Dialogue Group 3">
+							<hotfix name="Name" package="GD_Lilac_Psycho_Streaming">
+								<code profiles="">set GD_Lilac_Dialog_Player.VOBD_Player_Psycho.DialogGroup_PL_Psycho TalkActs[57] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Lilac_Dialog_Player.VOBD_Player_Psycho.DialogName_PL_Psycho',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Elemental Elation">
+							<hotfix name="Name" package="GD_Lilac_Psycho_Streaming">
+								<code profiles="">set GD_Lilac_Dialog_Player.VOBD_Player_Psycho.DialogGroup_PL_Psycho TalkActs[58] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Lilac_Dialog_Player.VOBD_Player_Psycho.DialogName_PL_Psycho',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Redeem The Soul">
+							<hotfix name="Name" package="GD_Lilac_Psycho_Streaming">
+								<code profiles="">set GD_Lilac_Dialog_Player.VOBD_Player_Psycho.DialogGroup_PL_Psycho TalkActs[59] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Lilac_Dialog_Player.VOBD_Player_Psycho.DialogName_PL_Psycho',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Fuel The Rampage?">
+							<hotfix name="Name" package="GD_Lilac_Psycho_Streaming">
+								<code profiles="">set GD_Lilac_Dialog_Player.VOBD_Player_Psycho.DialogGroup_PL_Psycho TalkActs[60] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Lilac_Dialog_Player.VOBD_Player_Psycho.DialogName_PL_Psycho',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Psychotic Dialogue">
+						<category name="SCREAMS">
+							<hotfix name="Name" package="GD_Lilac_Psycho_Streaming">
+								<code profiles="">set GD_Lilac_Dialog_Player.VOBD_Player_Psycho.DialogGroup_PL_Psycho TalkActs[67] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Lilac_Dialog_Player.VOBD_Player_Psycho.DialogName_PL_Psycho',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="LAUGHTER">
+							<hotfix name="Name" package="GD_Lilac_Psycho_Streaming">
+								<code profiles="">set GD_Lilac_Dialog_Player.VOBD_Player_Psycho.DialogGroup_PL_Psycho TalkActs[66] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Lilac_Dialog_Player.VOBD_Player_Psycho.DialogName_PL_Psycho',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="PSYCHIOTIC FIT">
+							<hotfix name="Name" package="GD_Lilac_Psycho_Streaming">
+								<code profiles="">set GD_Lilac_Dialog_Player.VOBD_Player_Psycho.DialogGroup_PL_Psycho TalkActs[62] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Lilac_Dialog_Player.VOBD_Player_Psycho.DialogName_PL_Psycho',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+					</category>
+				</category>
+			</category>
+			<category name="Zer0">
+				<category name="Categories">
+					<category name="Death">
+						<hotfix name="Name" package="GD_Assassin_Streaming">
+							<code profiles="">set GD_Dialog_Player.VOBD_Player_Assassin.DialogGroup_PL_Assassin TalkActs[0] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Assassin.DialogName_PL_Assassin',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+						</hotfix>
+					</category>
+					<category name="Pain - Multiple Options">
+						<category name="Pain">
+							<hotfix name="Name" package="GD_Assassin_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Assassin.DialogGroup_PL_Assassin TalkActs[1] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Assassin.DialogName_PL_Assassin',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Pain - Crit">
+							<hotfix name="Name" package="GD_Assassin_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Assassin.DialogGroup_PL_Assassin TalkActs[2] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Assassin.DialogName_PL_Assassin',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Pain - Status Effect">
+							<hotfix name="Name" package="GD_Assassin_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Assassin.DialogGroup_PL_Assassin TalkActs[3] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Assassin.DialogName_PL_Assassin',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Pain - Slagged">
+							<hotfix name="Name" package="GD_Assassin_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Assassin.DialogGroup_PL_Assassin TalkActs[4] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Assassin.DialogName_PL_Assassin',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Melee">
+						<hotfix name="Name" package="GD_Assassin_Streaming">
+							<code profiles="">set GD_Dialog_Player.VOBD_Player_Assassin.DialogGroup_PL_Assassin TalkActs[5] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Assassin.DialogName_PL_Assassin',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+						</hotfix>
+					</category>
+					<category name="Complete Challenge">
+						<hotfix name="Name" package="GD_Assassin_Streaming">
+							<code profiles="">set GD_Dialog_Player.VOBD_Player_Assassin.DialogGroup_PL_Assassin TalkActs[6] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Assassin.DialogName_PL_Assassin',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+						</hotfix>
+					</category>
+					<category name="Enter Coop Game">
+						<hotfix name="Name" package="GD_Assassin_Streaming">
+							<code profiles="">set GD_Dialog_Player.VOBD_Player_Assassin.DialogGroup_PL_Assassin TalkActs[7] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Assassin.DialogName_PL_Assassin',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+						</hotfix>
+					</category>
+					<category name="Find Health Vial">
+						<hotfix name="Name" package="GD_Assassin_Streaming">
+							<code profiles="">set GD_Dialog_Player.VOBD_Player_Assassin.DialogGroup_PL_Assassin TalkActs[8] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Assassin.DialogName_PL_Assassin',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+						</hotfix>
+					</category>
+					<category name="Find Rare Item">
+						<hotfix name="Name" package="GD_Assassin_Streaming">
+							<code profiles="">set GD_Dialog_Player.VOBD_Player_Assassin.DialogGroup_PL_Assassin TalkActs[9] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Assassin.DialogName_PL_Assassin',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+						</hotfix>
+					</category>
+					<category name="Idle - Multiple Options">
+						<category name="Idle">
+							<hotfix name="Name" package="GD_Assassin_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Assassin.DialogGroup_PL_Assassin TalkActs[10] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Assassin.DialogName_PL_Assassin',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Idle - Level Change">
+							<hotfix name="Name" package="GD_Assassin_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Assassin.DialogGroup_PL_Assassin TalkActs[11] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Assassin.DialogName_PL_Assassin',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Level Up">
+						<hotfix name="Name" package="GD_Assassin_Streaming">
+							<code profiles="">set GD_Dialog_Player.VOBD_Player_Assassin.DialogGroup_PL_Assassin TalkActs[12] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Assassin.DialogName_PL_Assassin',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+						</hotfix>
+					</category>
+					<category name="Open Chest">
+						<hotfix name="Name" package="GD_Assassin_Streaming">
+							<code profiles="">set GD_Dialog_Player.VOBD_Player_Assassin.DialogGroup_PL_Assassin TalkActs[13] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Assassin.DialogName_PL_Assassin',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+						</hotfix>
+					</category>
+					<category name="Duel - Multiple Options">
+						<category name="PVP - Enemy Evaluation (Roast)">
+							<hotfix name="Name" package="GD_Assassin_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Assassin.DialogGroup_PL_Assassin TalkActs[14] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Assassin.DialogName_PL_Assassin',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="PVP - Receive Duel Invite">
+							<hotfix name="Name" package="GD_Assassin_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Assassin.DialogGroup_PL_Assassin TalkActs[15] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Assassin.DialogName_PL_Assassin',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="PVP - Lose">
+							<hotfix name="Name" package="GD_Assassin_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Assassin.DialogGroup_PL_Assassin TalkActs[16] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Assassin.DialogName_PL_Assassin',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="PVP - Tie">
+							<hotfix name="Name" package="GD_Assassin_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Assassin.DialogGroup_PL_Assassin TalkActs[17] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Assassin.DialogName_PL_Assassin',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="PVP - Win">
+							<hotfix name="Name" package="GD_Assassin_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Assassin.DialogGroup_PL_Assassin TalkActs[43] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Assassin.DialogName_PL_Assassin',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Reactions - Multiple Options">
+						<category name="Badass Incoming">
+							<hotfix name="Name" package="GD_Assassin_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Assassin.DialogGroup_PL_Assassin TalkActs[18] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Assassin.DialogName_PL_Assassin',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Enemies Incoming">
+							<hotfix name="Name" package="GD_Assassin_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Assassin.DialogGroup_PL_Assassin TalkActs[20] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Assassin.DialogName_PL_Assassin',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Fully Explode Enemy (Gib)">
+							<hotfix name="Name" package="GD_Assassin_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Assassin.DialogGroup_PL_Assassin TalkActs[21] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Assassin.DialogName_PL_Assassin',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Heal Friend">
+							<hotfix name="Name" package="GD_Assassin_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Assassin.DialogGroup_PL_Assassin TalkActs[22] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Assassin.DialogName_PL_Assassin',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Healed By Friend">
+							<hotfix name="Name" package="GD_Assassin_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Assassin.DialogGroup_PL_Assassin TalkActs[23] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Assassin.DialogName_PL_Assassin',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Kill Badass">
+							<hotfix name="Name" package="GD_Assassin_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Assassin.DialogGroup_PL_Assassin TalkActs[24] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Assassin.DialogName_PL_Assassin',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Kill Streak">
+							<hotfix name="Name" package="GD_Assassin_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Assassin.DialogGroup_PL_Assassin TalkActs[25] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Assassin.DialogName_PL_Assassin',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Score Critical Hit">
+							<hotfix name="Name" package="GD_Assassin_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Assassin.DialogGroup_PL_Assassin TalkActs[44] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Assassin.DialogName_PL_Assassin',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Kill Enemy With Skill">
+							<hotfix name="Name" package="GD_Assassin_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Assassin.DialogGroup_PL_Assassin TalkActs[40] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Assassin.DialogName_PL_Assassin',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="No Ammo Left">
+							<hotfix name="Name" package="GD_Assassin_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Assassin.DialogGroup_PL_Assassin TalkActs[41] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Assassin.DialogName_PL_Assassin',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Buff Drink">
+							<hotfix name="Name" package="GD_Assassin_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Assassin.DialogGroup_PL_Assassin TalkActs[39] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Assassin.DialogName_PL_Assassin',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Player Menu (Status Menu / Tab Menu) - Multiple Options">
+						<category name="Compare Items">
+							<hotfix name="Name" package="GD_Assassin_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Assassin.DialogGroup_PL_Assassin TalkActs[26] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Assassin.DialogName_PL_Assassin',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Equip Powerful Gear">
+							<hotfix name="Name" package="GD_Assassin_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Assassin.DialogGroup_PL_Assassin TalkActs[27] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Assassin.DialogName_PL_Assassin',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Open Map">
+							<hotfix name="Name" package="GD_Assassin_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Assassin.DialogGroup_PL_Assassin TalkActs[28] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Assassin.DialogName_PL_Assassin',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Open Skill Tree">
+							<hotfix name="Name" package="GD_Assassin_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Assassin.DialogGroup_PL_Assassin TalkActs[29] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Assassin.DialogName_PL_Assassin',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Vehicle - Multiple Options">
+						<category name="Catch Air">
+							<hotfix name="Name" package="GD_Assassin_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Assassin.DialogGroup_PL_Assassin TalkActs[30] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Assassin.DialogName_PL_Assassin',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Change Seats">
+							<hotfix name="Name" package="GD_Assassin_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Assassin.DialogGroup_PL_Assassin TalkActs[31] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Assassin.DialogName_PL_Assassin',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Destroy Other Vehicle">
+							<hotfix name="Name" package="GD_Assassin_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Assassin.DialogGroup_PL_Assassin TalkActs[32] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Assassin.DialogName_PL_Assassin',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Flip Car">
+							<hotfix name="Name" package="GD_Assassin_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Assassin.DialogGroup_PL_Assassin TalkActs[33] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Assassin.DialogName_PL_Assassin',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Hit Enemy (Run Over)">
+							<hotfix name="Name" package="GD_Assassin_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Assassin.DialogGroup_PL_Assassin TalkActs[34] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Assassin.DialogName_PL_Assassin',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Vehicle Low Health">
+							<hotfix name="Name" package="GD_Assassin_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Assassin.DialogGroup_PL_Assassin TalkActs[35] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Assassin.DialogName_PL_Assassin',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Hit Other Vehicle?">
+							<hotfix name="Name" package="GD_Assassin_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Assassin.DialogGroup_PL_Assassin TalkActs[47] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Assassin.DialogName_PL_Assassin',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=False)</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Fight For Your Life - Multiple Options">
+						<category name="Recovering From Fight For Your Life">
+							<hotfix name="Name" package="GD_Assassin_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Assassin.DialogGroup_PL_Assassin TalkActs[19] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Assassin.DialogName_PL_Assassin',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Just Downed">
+							<hotfix name="Name" package="GD_Assassin_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Assassin.DialogGroup_PL_Assassin TalkActs[42] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Assassin.DialogName_PL_Assassin',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Jumping - Multiple Options">
+						<category name="Jump">
+							<hotfix name="Name" package="GD_Assassin_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Assassin.DialogGroup_PL_Assassin TalkActs[38] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Assassin.DialogName_PL_Assassin',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Land">
+							<hotfix name="Name" package="GD_Assassin_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Assassin.DialogGroup_PL_Assassin TalkActs[36] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Assassin.DialogName_PL_Assassin',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Action Skill">
+						<category name="Start Action Skill">
+							<hotfix name="Name" package="GD_Assassin_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Assassin.DialogGroup_PL_Assassin TalkActs[37] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Assassin.DialogName_PL_Assassin',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Grenade">
+						<category name="Throw Grenade">
+							<hotfix name="Name" package="GD_Assassin_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Assassin.DialogGroup_PL_Assassin TalkActs[45] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Assassin.DialogName_PL_Assassin',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Default & Jack Voice - Multiple Options">
+						<category name="Jack">
+							<hotfix name="Name" package="GD_Assassin_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Assassin.DialogGroup_PL_Assassin TalkActs[46] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Assassin.DialogName_PL_Assassin',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+						<category name="Zer0">
+							<hotfix name="Name" package="GD_Assassin_Streaming">
+								<code profiles="">set GD_Dialog_Player.VOBD_Player_Assassin.DialogGroup_PL_Assassin TalkActs[48] (OutputDelay=0,TalkData=((NameTag=WillowDialogNameTag'GD_Dialog_Player.VOBD_Player_Assassin.DialogName_PL_Assassin',TalkAkEvent=AkEvent'None',AkAudioUniqueID=0,Pitch=0)),TalkerVariable=None,OutputAction=None,bInstigatorTalker=True)</code>
+							</hotfix>
+						</category>
+					</category>
+				</category>
+			</category>
+		</category>
+	</body>
+</BLCMM>
+
+#Commands:
+
+#Hotfixes:
+set Transient.SparkServiceConfiguration_6 Keys ("SparkLevelPatchEntry-GBX_fixes1","SparkLevelPatchEntry-GBX_fixes2","SparkLevelPatchEntry-GBX_fixes3","SparkLevelPatchEntry-GBX_fixes4","SparkLevelPatchEntry-GBX_fixes5","SparkLevelPatchEntry-GBX_Fixes6","SparkLevelPatchEntry-GBX_Fixes7","SparkLevelPatchEntry-GBX_Fixes8","SparkLevelPatchEntry-GBX_Fixes9","SparkLevelPatchEntry-GBX_fixes10","SparkLevelPatchEntry-GBX_fixes11","SparkLevelPatchEntry-GBX_fixes12","SparkLevelPatchEntry-GBX_fixes13","SparkLevelPatchEntry-GBX_fixes14","SparkOnDemandPatchEntry-GBX_fixes15","SparkOnDemandPatchEntry-GBX_fixes16","SparkOnDemandPatchEntry-GBX_fixes17","SparkOnDemandPatchEntry-GBX_fixes18","SparkOnDemandPatchEntry-GBX_fixes19","SparkPatchEntry-GBX_fixes20","SparkPatchEntry-GBX_fixes21","SparkPatchEntry-GBX_fixes22","SparkPatchEntry-GBX_fixes23")
+set Transient.SparkServiceConfiguration_6 Values (",GD_Balance.WeightingPlayerCount.BugmorphCocoon_PerPlayers_Phase1,ConditionalInitialization.ConditionalExpressionList[4].BaseValueIfTrue.BaseValueConstant,0.700000,.8",",GD_Balance.WeightingPlayerCount.BugmorphCocoon_PerPlayers_Phase2,ConditionalInitialization.ConditionalExpressionList[4].BaseValueIfTrue.BaseValueConstant,0.400000,.5",",GD_Balance.WeightingPlayerCount.BugmorphCocoon_PerPlayers_Phase3,ConditionalInitialization.ConditionalExpressionList[4].BaseValueIfTrue.BaseValueConstant,0.200000,.3",",GD_Balance.WeightingPlayerCount.BugmorphCocoon_PerPlayers_Phase4,ConditionalInitialization.ConditionalExpressionList[4].BaseValueIfTrue.BaseValueConstant,0.100000,.2",",GD_Balance.WeightingPlayerCount.BugmorphCocoon_PerPlayers_Phase5,ConditionalInitialization.ConditionalExpressionList[4].BaseValueIfTrue.BaseValueConstant,0.075000,.1","SouthpawFactory_P,GD_Population_Marauder.Balance.Unique.PawnBalance_Assassin1,DefaultItemPoolList[3].PoolProbability.BaseValueScaleConstant,0.250000,1","SouthpawFactory_P,GD_Population_Nomad.Balance.Unique.PawnBalance_Assassin2,DefaultItemPoolList[4].PoolProbability.BaseValueScaleConstant,0.250000,1","SouthpawFactory_P,GD_Population_Psycho.Balance.Unique.PawnBalance_Assassin3,DefaultItemPoolList[1].PoolProbability.BaseValueScaleConstant,0.250000,1","SouthpawFactory_P,GD_Population_Rat.Balance.Unique.PawnBalance_Assassin4,DefaultItemPoolList[3].PoolProbability.BaseValueScaleConstant,0.250000,1",",GD_Sage_Rare_Scaylion.Population.PawnBalance_Sage_Rare_Scaylion,DefaultItemPoolList[1].PoolProbability.BaseValueScaleConstant,1.000000,100",",GD_Sage_Rare_Drifter.Balance.PawnBalance_Sage_Rare_Drifter,DefaultItemPoolList[0].PoolProbability.BaseValueScaleConstant,1.000000,100",",GD_Sage_Rare_Rhino.Population.PawnBalance_Sage_Rare_Rhino,DefaultItemPoolList[1].PoolProbability.BaseValueScaleConstant,1.000000,100",",GD_Sage_Rare_Skag.Population.PawnBalance_Sage_Rare_Skag,DefaultItemPoolList[1].PoolProbability.BaseValueScaleConstant,1.000000,100",",GD_Sage_Rare_Spore.Population.PawnBalance_Sage_Rare_Spore,DefaultItemPoolList[0].PoolProbability.BaseValueScaleConstant,1.000000,100","GD_Assassin_Streaming,GD_Assassin_Skills.Sniping.Velocity,SkillEffectDefinitions[0].ModifierType,MT_PostAdd,MT_Scale","GD_Tulip_Mechro_Streaming,GD_Tulip_Mechromancer_Skills.LittleBigTrouble.WiresDontTalk,SkillEffectDefinitions,,((AttributeToModify=D_Attributes.DamageTypeModifers.InstigatedShockDamageModifier,bIncludeDuelingTargets=False,bIncludeSelfAsTarget=False,bOnlyEffectTargetsInRange=False,bExcludeNonPlayerCharacters=False,EffectTarget=TARGET_Self,TargetInstanceDataName=,TargetCriteria=CRITERIA_None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.030000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),GradeToStartApplyingEffect=1,PerGradeUpgradeInterval=1,PerGradeUpgrade=(BaseValueConstant=0.030000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),BonusUpgradeList=),(AttributeToModify=D_Attributes.DamageTypeModifers.InstigatedShockStatusDamageModifier,bIncludeDuelingTargets=False,bIncludeSelfAsTarget=False,bOnlyEffectTargetsInRange=False,bExcludeNonPlayerCharacters=False,EffectTarget=TARGET_Self,TargetInstanceDataName=,TargetCriteria=CRITERIA_None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.030000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),GradeToStartApplyingEffect=1,PerGradeUpgradeInterval=1,PerGradeUpgrade=(BaseValueConstant=0.030000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),BonusUpgradeList=))","GD_Siren_Streaming,GD_Siren_Skills.Misc.Init_BlightPhoenix_DamageCalc_Part2,ValueFormula.Level.InitializationDefinition,AttributeInitializationDefinition'GD_Balance_HealthAndDamage.HealthAndDamage.Init_PlayerMeleeDamage',AttributeInitializationDefinition'GD_Balance_HealthAndDamage.HealthAndDamage.Init_PlayerSkillDamage'","GD_Siren_Streaming,GD_Siren_Skills.Misc.Init_BlightPhoenix_DamageCalc_Part2,ValueFormula.Level.BaseValueScaleConstant,1.000000,3.5","GD_Assassin_Streaming,GD_Assassin_Skills.Misc.Att_DeathMark_BonusDamage,BaseValue.BaseValueConstant,0.200000,.8","GD_Itempools.Runnables.Pool_FourAssassins,BalancedItems[1].Probability.InitializationDefinition,None,GD_Balance.Weighting.Weight_1_Common","GD_Shields.Projectiles.Proj_LegendaryBoosterShield:BehaviorProviderDefinition_1.Behavior_Explode_140,BehaviorSequences[0].BehaviorData2[7].Behavior.StatusEffectDamage.BaseValueAttribute,None,D_Attributes.Projectile.ProjectileDamage","GD_Shields.Projectiles.Proj_LegendaryBoosterShield:BehaviorProviderDefinition_1.Behavior_Explode_140,BehaviorSequences[0].BehaviorData2[7].Behavior.StatusEffectDamage.BaseValueScaleConstant,1.000000,.25","GD_Shields.Projectiles.Proj_LegendaryBoosterShield:BehaviorProviderDefinition_1.Behavior_Explode_140,BehaviorSequences[0].BehaviorData2[7].Behavior.StatusEffectChance.BaseValueConstant,1.000000,20")
+

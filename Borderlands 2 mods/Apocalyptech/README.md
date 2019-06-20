@@ -25,6 +25,7 @@ branches, so you can browse in `bl2betterloot`, `bl2colddeadhands`,
   * [BL2 Movement Speed Cheats](#bl2-movement-speed-cheats)
   * [BL2 No Wasted COMs](#bl2-no-wasted-coms)
   * [Configurable Catch-A-Ride](#configurable-catch-a-ride)
+  * [Fragile Minecraft Blocks](#fragile-minecraft-blocks)
   * [Guaranteed Omnd-Omnd-Ohk](#guaranteed-omnd-omnd-ohk)
   * [Guaranteed Varkid Evolution](#guaranteed-varkid-evolution)
   * [More Loot Midget Containers](#more-loot-midget-containers)
@@ -131,6 +132,12 @@ which changed some of the Catch-A-Ride locations so that you can spawn
 various types of vehicles throughout all the game's content.  That version
 just had a few hardcoded replacements, though.  This one lets you fully
 customize every single Catch-A-Ride slot in the game!
+
+### Fragile Minecraft Blocks
+
+Causes the Minecraft blocks (in the little secret area of Caustic Caverns) to
+be extremely fragile.  Damage of any sort will destroy them immediately now:
+a single melee strike will do, but also guns, grenades, and anything else.
 
 ### Guaranteed Omnd-Omnd-Ohk
 
