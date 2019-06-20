@@ -1,0 +1,35 @@
+<BLCMM v="1">
+#<!!!You opened a file saved with BLCMM in FilterTool. Please update to BLCMM to properly open this file!!!>
+	<head>
+		<type name="BL2" offline="false"/>
+		<profiles>
+			<profile name="default" current="true"/>
+		</profiles>
+	</head>
+	<body>
+		<category name="Respawning Enemies And Allies">
+			<comment>Mod written by GitHub: (Our Lord And Savior Gabe Newell) / Nexus Mods: (OB4MA)</comment>
+			<comment></comment>
+			<comment>This mod makes all enemy and ally spawns refresh upon map exit and re-entering.</comment>
+			<comment>This allows you to keep getting stuff without save and quitting.</comment>
+			<comment>For example, you can farm the Bunker, Doc Mercy, Boll and whoever else who doesn't normally respawn without save and quitting.</comment>
+			<comment>This can be useful for things like Anarchy stacks.</comment>
+			<comment></comment>
+			<category name="Super Complicated Stuff - Leave Enabled" locked="true">
+				<category name="Code">
+					<code profiles="default">set WillowGame.Default__WillowPopulationDefinition bTotalResetOnLevelLoad True</code>
+				</category>
+			</category>
+			<comment></comment>
+			<comment>OPTIONAL: Customize this part to your liking, the default value here is the normal respawn delay.</comment>
+			<comment></comment>
+			<category name="OPTIONAL: Change Respawn Delay For AI.">
+				<code profiles="">set GD_Globals.General.Globals RespawnDelayInSeconds 1500.000000</code>
+			</category>
+		</category>
+	</body>
+</BLCMM>
+
+#Commands:
+set WillowGame.Default__WillowPopulationDefinition bTotalResetOnLevelLoad True
+

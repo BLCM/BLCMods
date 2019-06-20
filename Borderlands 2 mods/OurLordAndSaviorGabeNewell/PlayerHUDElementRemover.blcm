@@ -1,0 +1,322 @@
+<BLCMM v="1">
+#<!!!You opened a file saved with BLCMM in FilterTool. Please update to BLCMM to properly open this file!!!>
+	<head>
+		<type name="BL2" offline="false"/>
+		<profiles>
+			<profile name="default" current="true"/>
+		</profiles>
+	</head>
+	<body>
+		<category name="Player HUD Element Remover">
+			<comment>Mod written by GitHub: Our Lord And Savior Gabe Newell / Nexus Mods: OB4MA</comment>
+			<comment>This mod simply allows you to toggle off various parts of your HUD.</comment>
+			<comment></comment>
+			<comment>Customize portions of your HUD that you would like to disable outright.</comment>
+			<comment></comment>
+			<comment>Don't want to see your level and class mod name either? No problem.</comment>
+			<comment>If you are level 72 and don't care to see your XP Bar, no problem.</comment>
+			<comment>Tired of reload messages or fight for your life health bars? No problem.</comment>
+			<comment></comment>
+			<comment>This really can disable just about everything on your HUD without screwing functionality of anything like ToggleHUD.</comment>
+			<comment></comment>
+			<category name="HUD Element Remover">
+				<category name="Remove HUD Features">
+					<category name="Anchor Change - Leave Enabled" locked="true">
+						<code profiles="default">set UI_HUD.Anchors.Anchor_TopRight AnchorPosition (X=-1000,Y=-1000)</code>
+						<hotfix name="HUD Elements" level="None">
+							<code profiles="default">set UI_HUD.HUD_Definition ScaledElements[0] (ElementName="minimapEcho",Anchor=HUDScalingAnchorDefinition'None')</code>
+						</hotfix>
+					</category>
+					<category name="Level & Class Mod">
+						<category name="Code">
+							<hotfix name="HUD Elements" level="None">
+								<code profiles="">set UI_HUD.HUD_Definition ScaledElements[19] (ElementName="levelClassMod",Anchor=HUDScalingAnchorDefinition'UI_HUD.Anchors.Anchor_TopRight')</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="XP Bar">
+						<category name="Code">
+							<hotfix name="HUD Elements" level="None">
+								<code profiles="">set UI_HUD.HUD_Definition ScaledElements[16] (ElementName="xpbar",Anchor=HUDScalingAnchorDefinition'UI_HUD.Anchors.Anchor_TopRight')</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="XP Gained">
+						<category name="Code">
+							<hotfix name="HUD Elements" level="None">
+								<code profiles="">set UI_HUD.HUD_Definition ScaledElements[17] (ElementName="xp",Anchor=HUDScalingAnchorDefinition'UI_HUD.Anchors.Anchor_TopRight')</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Kill Skill Icons">
+						<category name="Code">
+							<hotfix name="HUD Elements" level="None">
+								<code profiles="">set UI_HUD.HUD_Definition ScaledElements[35] (ElementName="instinctbar",Anchor=HUDScalingAnchorDefinition'UI_HUD.Anchors.Anchor_TopRight')</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Triggered Skills - Passives">
+						<category name="Code">
+							<hotfix name="HUD Elements" level="None">
+								<code profiles="">set UI_HUD.HUD_Definition ScaledElements[18] (ElementName="triggeredSkills",Anchor=HUDScalingAnchorDefinition'UI_HUD.Anchors.Anchor_TopRight')</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Character Abiltiy & Skill Points - Above Health & Shields">
+						<category name="Code">
+							<hotfix name="HUD Elements" level="None">
+								<code profiles="">set UI_HUD.HUD_Definition ScaledElements[14] (ElementName="character",Anchor=HUDScalingAnchorDefinition'UI_HUD.Anchors.Anchor_TopRight')</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Fight For Your Life">
+						<category name="Code">
+							<hotfix name="HUD Elements" level="None">
+								<code profiles="">set UI_HUD.HUD_Definition ScaledElements[6] (ElementName="dying1",Anchor=HUDScalingAnchorDefinition'UI_HUD.Anchors.Anchor_TopRight')</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Second Wind">
+						<category name="Code">
+							<hotfix name="HUD Elements" level="None">
+								<code profiles="">set UI_HUD.HUD_Definition ScaledElements[8] (ElementName="secondwind",Anchor=HUDScalingAnchorDefinition'UI_HUD.Anchors.Anchor_TopRight')</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Use">
+						<category name="Code">
+							<hotfix name="HUD Elements" level="None">
+								<code profiles="">set UI_HUD.HUD_Definition ScaledElements[23] (ElementName="tools",Anchor=HUDScalingAnchorDefinition'UI_HUD.Anchors.Anchor_TopRight')</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Use Secondary - Sanctuary's Real Marcus Vendor">
+						<category name="Code">
+							<hotfix name="HUD Elements" level="None">
+								<code profiles="">set UI_HUD.HUD_Definition ScaledElements[24] (ElementName="toolsSecondary",Anchor=HUDScalingAnchorDefinition'UI_HUD.Anchors.Anchor_TopRight')</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Boss Health Bar">
+						<category name="Code">
+							<hotfix name="HUD Elements" level="None">
+								<code profiles="">set UI_HUD.HUD_Definition ScaledElements[37] (ElementName="bossModule",Anchor=HUDScalingAnchorDefinition'UI_HUD.Anchors.Anchor_TopRight')</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Enemy Name & Health Bar">
+						<category name="Code">
+							<hotfix name="HUD Elements" level="None">
+								<code profiles="">set UI_HUD.HUD_Definition ScaledElements[10] (ElementName="ring",Anchor=HUDScalingAnchorDefinition'UI_HUD.Anchors.Anchor_TopRight')</code>
+							</hotfix>
+						</category>
+						<category name="Enemy Name & Health Bar's inversion">
+							<category name="Sucesfully inverted">
+								<hotfix name="HUD Elements" level="None">
+									<code profiles="">set UI_HUD.HUD_Definition ScaledElements[10] (elementname="ring",anchor=HUDScalingAnchorDefinition'UI_HUD.Anchors.Anchor_CenterCenter')</code>
+								</hotfix>
+							</category>
+						</category>
+					</category>
+					<category name="Minimap">
+						<category name="Code">
+							<hotfix name="HUD Elements" level="None">
+								<code profiles="">set UI_HUD.HUD_Definition ScaledElements[0] (ElementName="minimapEcho",Anchor=HUDScalingAnchorDefinition'UI_HUD.Anchors.Anchor_TopRight')</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Challenges">
+						<category name="Code">
+							<hotfix name="HUD Elements" level="None">
+								<code profiles="">set UI_HUD.HUD_Definition ScaledElements[1] (ElementName="challenges",Anchor=HUDScalingAnchorDefinition'UI_HUD.Anchors.Anchor_TopRight')</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Badass Rank Prompts">
+						<category name="Code">
+							<hotfix name="HUD Elements" level="None">
+								<code profiles="">set UI_HUD.HUD_Definition ScaledElements[2] (ElementName="badassToken",Anchor=HUDScalingAnchorDefinition'UI_HUD.Anchors.Anchor_TopRight')</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Level Up">
+						<category name="Code">
+							<hotfix name="HUD Elements" level="None">
+								<code profiles="">set UI_HUD.HUD_Definition ScaledElements[4] (ElementName="levelup",Anchor=HUDScalingAnchorDefinition'UI_HUD.Anchors.Anchor_TopRight')</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Reload">
+						<category name="Code">
+							<hotfix name="HUD Elements" level="None">
+								<code profiles="">set UI_HUD.HUD_Definition ScaledElements[25] (ElementName="reload",Anchor=HUDScalingAnchorDefinition'UI_HUD.Anchors.Anchor_TopRight')</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Crouch">
+						<category name="Code">
+							<hotfix name="HUD Elements" level="None">
+								<code profiles="">set UI_HUD.HUD_Definition ScaledElements[26] (ElementName="crouch",Anchor=HUDScalingAnchorDefinition'UI_HUD.Anchors.Anchor_TopRight')</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Total Money Bar">
+						<category name="Code">
+							<hotfix name="HUD Elements" level="None">
+								<code profiles="">set UI_HUD.HUD_Definition ScaledElements[32] (ElementName="slotmachine",Anchor=HUDScalingAnchorDefinition'UI_HUD.Anchors.Anchor_TopRight')</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Money Removal - Doesn't Show Exact Value">
+						<category name="Code">
+							<hotfix name="HUD Elements" level="None">
+								<code profiles="">set UI_HUD.HUD_Definition ScaledElements[33] (ElementName="moneyRemoval",Anchor=HUDScalingAnchorDefinition'UI_HUD.Anchors.Anchor_TopRight')</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Eridium Counter - No Total Or Removal Value">
+						<category name="Code">
+							<hotfix name="HUD Elements" level="None">
+								<code profiles="">set UI_HUD.HUD_Definition ScaledElements[34] (ElementName="eridiumCounter",Anchor=HUDScalingAnchorDefinition'UI_HUD.Anchors.Anchor_TopRight')</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Coop Player 1 Info">
+						<category name="Code">
+							<hotfix name="HUD Elements" level="None">
+								<code profiles="">set UI_HUD.HUD_Definition ScaledElements[20] (ElementName="coop1",Anchor=HUDScalingAnchorDefinition'UI_HUD.Anchors.Anchor_TopRight')</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Coop Player 2 Info">
+						<category name="Code">
+							<hotfix name="HUD Elements" level="None">
+								<code profiles="">set UI_HUD.HUD_Definition ScaledElements[21] (ElementName="coop2",Anchor=HUDScalingAnchorDefinition'UI_HUD.Anchors.Anchor_TopRight')</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Coop Player 3 Info">
+						<category name="Code">
+							<hotfix name="HUD Elements" level="None">
+								<code profiles="">set UI_HUD.HUD_Definition ScaledElements[22] (ElementName="coop3",Anchor=HUDScalingAnchorDefinition'UI_HUD.Anchors.Anchor_TopRight')</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Boundry Turret Warning">
+						<category name="Code">
+							<hotfix name="HUD Elements" level="None">
+								<code profiles="">set UI_HUD.HUD_Definition ScaledElements[5] (ElementName="boundry",Anchor=HUDScalingAnchorDefinition'UI_HUD.Anchors.Anchor_TopRight')</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Mission Notifications">
+						<category name="Code">
+							<hotfix name="HUD Elements" level="None">
+								<code profiles="">set UI_HUD.HUD_Definition ScaledElements[27] (ElementName="MissionNotifications",Anchor=HUDScalingAnchorDefinition'UI_HUD.Anchors.Anchor_TopRight')</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="World Discovery Message">
+						<category name="Code">
+							<hotfix name="HUD Elements" level="None">
+								<code profiles="">set UI_HUD.HUD_Definition ScaledElements[36] (ElementName="WorldDiscovery",Anchor=HUDScalingAnchorDefinition'UI_HUD.Anchors.Anchor_TopRight')</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Training">
+						<category name="Code">
+							<hotfix name="HUD Elements" level="None">
+								<code profiles="">set UI_HUD.HUD_Definition ScaledElements[28] (ElementName="training",Anchor=HUDScalingAnchorDefinition'UI_HUD.Anchors.Anchor_TopRight')</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Trading Tips">
+						<category name="Code">
+							<hotfix name="HUD Elements" level="None">
+								<code profiles="">set UI_HUD.HUD_Definition ScaledElements[38] (ElementName="tradingTips",Anchor=HUDScalingAnchorDefinition'UI_HUD.Anchors.Anchor_TopRight')</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Outer Item Comparison">
+						<category name="Code">
+							<hotfix name="HUD Elements" level="None">
+								<code profiles="">set UI_HUD.HUD_Definition ScaledElements[31] (ElementName="outerequip",Anchor=HUDScalingAnchorDefinition'UI_HUD.Anchors.Anchor_TopRight')</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Health">
+						<category name="Code">
+							<hotfix name="HUD Elements" level="None">
+								<code profiles="">set UI_HUD.HUD_Definition ScaledElements[11] (ElementName="health",Anchor=HUDScalingAnchorDefinition'UI_HUD.Anchors.Anchor_TopRight')</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Shield">
+						<category name="Code">
+							<hotfix name="HUD Elements" level="None">
+								<code profiles="">set UI_HUD.HUD_Definition ScaledElements[12] (ElementName="shield",Anchor=HUDScalingAnchorDefinition'UI_HUD.Anchors.Anchor_TopRight')</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Shield Absorb Animation">
+						<category name="Code">
+							<hotfix name="HUD Elements" level="None">
+								<code profiles="">set UI_HUD.HUD_Definition ScaledElements[13] (ElementName="ShieldAbsorb",Anchor=HUDScalingAnchorDefinition'UI_HUD.Anchors.Anchor_TopRight')</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Bullets">
+						<category name="Code">
+							<hotfix name="HUD Elements" level="None">
+								<code profiles="">set UI_HUD.HUD_Definition ScaledElements[29] (ElementName="bullets",Anchor=HUDScalingAnchorDefinition'UI_HUD.Anchors.Anchor_TopRight')</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Grenades">
+						<category name="Code">
+							<hotfix name="HUD Elements" level="None">
+								<code profiles="">set UI_HUD.HUD_Definition ScaledElements[30] (ElementName="grenades",Anchor=HUDScalingAnchorDefinition'UI_HUD.Anchors.Anchor_TopRight')</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Contextual Prompt - Not Sure">
+						<category name="Code">
+							<hotfix name="HUD Elements" level="None">
+								<code profiles="">set UI_HUD.HUD_Definition ScaledElements[3] (ElementName="contextualPrompt",Anchor=HUDScalingAnchorDefinition'UI_HUD.Anchors.Anchor_TopRight')</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Radial - Not Sure">
+						<category name="Code">
+							<hotfix name="HUD Elements" level="None">
+								<code profiles="">set UI_HUD.HUD_Definition ScaledElements[9] (ElementName="radial",Anchor=HUDScalingAnchorDefinition'UI_HUD.Anchors.Anchor_TopRight')</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Flask Buff - Not Sure">
+						<category name="Code">
+							<hotfix name="HUD Elements" level="None">
+								<code profiles="">set UI_HUD.HUD_Definition ScaledElements[15] (ElementName="flaskBuff",Anchor=HUDScalingAnchorDefinition'UI_HUD.Anchors.Anchor_TopRight')</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Active Ability - Not Sure">
+						<category name="Code">
+							<hotfix name="HUD Elements" level="None">
+								<code profiles="">set UI_HUD.HUD_Definition ScaledElements[7] (ElementName="activeAbility",Anchor=HUDScalingAnchorDefinition'UI_HUD.Anchors.Anchor_TopRight')</code>
+							</hotfix>
+						</category>
+					</category>
+				</category>
+			</category>
+		</category>
+	</body>
+</BLCMM>
+
+#Commands:
+set UI_HUD.Anchors.Anchor_TopRight AnchorPosition (X=-1000,Y=-1000)
+
+#Hotfixes:
+set Transient.SparkServiceConfiguration_6 Keys ("SparkLevelPatchEntry-GBX_fixes1","SparkLevelPatchEntry-GBX_fixes2","SparkLevelPatchEntry-GBX_fixes3","SparkLevelPatchEntry-GBX_fixes4","SparkLevelPatchEntry-GBX_fixes5","SparkLevelPatchEntry-GBX_Fixes6","SparkLevelPatchEntry-GBX_Fixes7","SparkLevelPatchEntry-GBX_Fixes8","SparkLevelPatchEntry-GBX_Fixes9","SparkLevelPatchEntry-GBX_fixes10","SparkLevelPatchEntry-GBX_fixes11","SparkLevelPatchEntry-GBX_fixes12","SparkLevelPatchEntry-GBX_fixes13","SparkLevelPatchEntry-GBX_fixes14","SparkOnDemandPatchEntry-GBX_fixes15","SparkOnDemandPatchEntry-GBX_fixes16","SparkOnDemandPatchEntry-GBX_fixes17","SparkOnDemandPatchEntry-GBX_fixes18","SparkOnDemandPatchEntry-GBX_fixes19","SparkPatchEntry-GBX_fixes20","SparkPatchEntry-GBX_fixes21","SparkPatchEntry-GBX_fixes22","SparkPatchEntry-GBX_fixes23","SparkLevelPatchEntry-HUD Elements1")
+set Transient.SparkServiceConfiguration_6 Values (",GD_Balance.WeightingPlayerCount.BugmorphCocoon_PerPlayers_Phase1,ConditionalInitialization.ConditionalExpressionList[4].BaseValueIfTrue.BaseValueConstant,0.700000,.8",",GD_Balance.WeightingPlayerCount.BugmorphCocoon_PerPlayers_Phase2,ConditionalInitialization.ConditionalExpressionList[4].BaseValueIfTrue.BaseValueConstant,0.400000,.5",",GD_Balance.WeightingPlayerCount.BugmorphCocoon_PerPlayers_Phase3,ConditionalInitialization.ConditionalExpressionList[4].BaseValueIfTrue.BaseValueConstant,0.200000,.3",",GD_Balance.WeightingPlayerCount.BugmorphCocoon_PerPlayers_Phase4,ConditionalInitialization.ConditionalExpressionList[4].BaseValueIfTrue.BaseValueConstant,0.100000,.2",",GD_Balance.WeightingPlayerCount.BugmorphCocoon_PerPlayers_Phase5,ConditionalInitialization.ConditionalExpressionList[4].BaseValueIfTrue.BaseValueConstant,0.075000,.1","SouthpawFactory_P,GD_Population_Marauder.Balance.Unique.PawnBalance_Assassin1,DefaultItemPoolList[3].PoolProbability.BaseValueScaleConstant,0.250000,1","SouthpawFactory_P,GD_Population_Nomad.Balance.Unique.PawnBalance_Assassin2,DefaultItemPoolList[4].PoolProbability.BaseValueScaleConstant,0.250000,1","SouthpawFactory_P,GD_Population_Psycho.Balance.Unique.PawnBalance_Assassin3,DefaultItemPoolList[1].PoolProbability.BaseValueScaleConstant,0.250000,1","SouthpawFactory_P,GD_Population_Rat.Balance.Unique.PawnBalance_Assassin4,DefaultItemPoolList[3].PoolProbability.BaseValueScaleConstant,0.250000,1",",GD_Sage_Rare_Scaylion.Population.PawnBalance_Sage_Rare_Scaylion,DefaultItemPoolList[1].PoolProbability.BaseValueScaleConstant,1.000000,100",",GD_Sage_Rare_Drifter.Balance.PawnBalance_Sage_Rare_Drifter,DefaultItemPoolList[0].PoolProbability.BaseValueScaleConstant,1.000000,100",",GD_Sage_Rare_Rhino.Population.PawnBalance_Sage_Rare_Rhino,DefaultItemPoolList[1].PoolProbability.BaseValueScaleConstant,1.000000,100",",GD_Sage_Rare_Skag.Population.PawnBalance_Sage_Rare_Skag,DefaultItemPoolList[1].PoolProbability.BaseValueScaleConstant,1.000000,100",",GD_Sage_Rare_Spore.Population.PawnBalance_Sage_Rare_Spore,DefaultItemPoolList[0].PoolProbability.BaseValueScaleConstant,1.000000,100","GD_Assassin_Streaming,GD_Assassin_Skills.Sniping.Velocity,SkillEffectDefinitions[0].ModifierType,MT_PostAdd,MT_Scale","GD_Tulip_Mechro_Streaming,GD_Tulip_Mechromancer_Skills.LittleBigTrouble.WiresDontTalk,SkillEffectDefinitions,,((AttributeToModify=D_Attributes.DamageTypeModifers.InstigatedShockDamageModifier,bIncludeDuelingTargets=False,bIncludeSelfAsTarget=False,bOnlyEffectTargetsInRange=False,bExcludeNonPlayerCharacters=False,EffectTarget=TARGET_Self,TargetInstanceDataName=,TargetCriteria=CRITERIA_None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.030000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),GradeToStartApplyingEffect=1,PerGradeUpgradeInterval=1,PerGradeUpgrade=(BaseValueConstant=0.030000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),BonusUpgradeList=),(AttributeToModify=D_Attributes.DamageTypeModifers.InstigatedShockStatusDamageModifier,bIncludeDuelingTargets=False,bIncludeSelfAsTarget=False,bOnlyEffectTargetsInRange=False,bExcludeNonPlayerCharacters=False,EffectTarget=TARGET_Self,TargetInstanceDataName=,TargetCriteria=CRITERIA_None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.030000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),GradeToStartApplyingEffect=1,PerGradeUpgradeInterval=1,PerGradeUpgrade=(BaseValueConstant=0.030000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),BonusUpgradeList=))","GD_Siren_Streaming,GD_Siren_Skills.Misc.Init_BlightPhoenix_DamageCalc_Part2,ValueFormula.Level.InitializationDefinition,AttributeInitializationDefinition'GD_Balance_HealthAndDamage.HealthAndDamage.Init_PlayerMeleeDamage',AttributeInitializationDefinition'GD_Balance_HealthAndDamage.HealthAndDamage.Init_PlayerSkillDamage'","GD_Siren_Streaming,GD_Siren_Skills.Misc.Init_BlightPhoenix_DamageCalc_Part2,ValueFormula.Level.BaseValueScaleConstant,1.000000,3.5","GD_Assassin_Streaming,GD_Assassin_Skills.Misc.Att_DeathMark_BonusDamage,BaseValue.BaseValueConstant,0.200000,.8","GD_Itempools.Runnables.Pool_FourAssassins,BalancedItems[1].Probability.InitializationDefinition,None,GD_Balance.Weighting.Weight_1_Common","GD_Shields.Projectiles.Proj_LegendaryBoosterShield:BehaviorProviderDefinition_1.Behavior_Explode_140,BehaviorSequences[0].BehaviorData2[7].Behavior.StatusEffectDamage.BaseValueAttribute,None,D_Attributes.Projectile.ProjectileDamage","GD_Shields.Projectiles.Proj_LegendaryBoosterShield:BehaviorProviderDefinition_1.Behavior_Explode_140,BehaviorSequences[0].BehaviorData2[7].Behavior.StatusEffectDamage.BaseValueScaleConstant,1.000000,.25","GD_Shields.Projectiles.Proj_LegendaryBoosterShield:BehaviorProviderDefinition_1.Behavior_Explode_140,BehaviorSequences[0].BehaviorData2[7].Behavior.StatusEffectChance.BaseValueConstant,1.000000,20",",UI_HUD.HUD_Definition,ScaledElements[0],,(ElementName=\"minimapEcho\",Anchor=HUDScalingAnchorDefinition'None')")
+
