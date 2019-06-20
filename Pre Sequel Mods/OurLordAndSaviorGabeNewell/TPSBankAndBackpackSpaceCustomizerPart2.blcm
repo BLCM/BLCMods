@@ -1,0 +1,143 @@
+<BLCMM v="1">
+#<!!!You opened a file saved with BLCMM in FilterTool. Please update to BLCMM to properly open this file!!!>
+	<head>
+		<type name="TPS" offline="false"/>
+		<profiles>
+			<profile name="default" current="true"/>
+		</profiles>
+	</head>
+	<body>
+		<category name="TPS - Bank & Backpack Space Customizer (Part 2)">
+			<comment>Mod written by GitHub: Our Lord And Savior Gabe Newell / Nexus Mods: OB4MA</comment>
+			<comment></comment>
+			<comment>This is the second part of this two part mod pack.  </comment>
+			<comment></comment>
+			<comment>This particular mod allows you to customize how many Backpack/Inventory slots that you would like at any point.</comment>
+			<comment>The default is 40 and goes all the way up to 200.  Past this point it gets pretty laggy when you open your Backpack or Bank.</comment>
+			<comment></comment>
+			<comment>The "Unlimited Backpack Space" option does not alter your Backpack capacity number, but you can pick up items from the ground as much as you would like.</comment>
+			<comment>However, due to an issue that I've tried and failed to fix, you cannot buy items from a Vendor with this method when it is past your normal or modified capacity.</comment>
+			<comment></comment>
+			<comment>IMPORTANT: make sure to NOT add this mod to any modpack that you use, add PART 1 instead!  DO NOT ADD THIS to a modpack, add PART 1 instead!  Although, make sure to put THIS MOD in your Binaries folder!</comment>
+			<comment></comment>
+			<category name="Backpack Space (Capacity)" MUT="true">
+				<category name="40">
+					<category name="Code">
+						<code profiles="default">set WillowInventoryManager InventorySlotMax_Misc 40</code>
+					</category>
+				</category>
+				<category name="60">
+					<category name="Code">
+						<code profiles="">set WillowInventoryManager InventorySlotMax_Misc 60</code>
+					</category>
+				</category>
+				<category name="80">
+					<category name="Code">
+						<code profiles="">set WillowInventoryManager InventorySlotMax_Misc 80</code>
+					</category>
+				</category>
+				<category name="100">
+					<category name="Code">
+						<code profiles="">set WillowInventoryManager InventorySlotMax_Misc 100</code>
+					</category>
+				</category>
+				<category name="120">
+					<category name="Code">
+						<code profiles="">set WillowInventoryManager InventorySlotMax_Misc 120</code>
+					</category>
+				</category>
+				<category name="140">
+					<category name="Code">
+						<code profiles="">set WillowInventoryManager InventorySlotMax_Misc 140</code>
+					</category>
+				</category>
+				<category name="160">
+					<category name="Code">
+						<code profiles="">set WillowInventoryManager InventorySlotMax_Misc 160</code>
+					</category>
+				</category>
+				<category name="180">
+					<category name="Code">
+						<code profiles="">set WillowInventoryManager InventorySlotMax_Misc 180</code>
+					</category>
+				</category>
+				<category name="200">
+					<category name="Code">
+						<code profiles="">set WillowInventoryManager InventorySlotMax_Misc 200</code>
+					</category>
+				</category>
+			</category>
+			<comment></comment>
+			<category name="Unlimited Backpack Space (Pair With Capacity For Buying Vendor Items)">
+				<category name="\"Unlimited\"">
+					<category name="Code">
+						<code profiles="">set WillowInventoryManager bLimitedInventory False</code>
+					</category>
+				</category>
+			</category>
+			<comment></comment>
+			<category name="Bank Space (Capacity)" MUT="true">
+				<category name="40">
+					<category name="Code">
+						<code profiles="default">set WillowInventoryStorage ChestSlots 40</code>
+					</category>
+				</category>
+				<category name="60">
+					<category name="Code">
+						<code profiles="">set WillowInventoryStorage ChestSlots 60</code>
+					</category>
+				</category>
+				<category name="80">
+					<category name="Code">
+						<code profiles="">set WillowInventoryStorage ChestSlots 80</code>
+					</category>
+				</category>
+				<category name="100">
+					<category name="Code">
+						<code profiles="">set WillowInventoryStorage ChestSlots 100</code>
+					</category>
+				</category>
+				<category name="120">
+					<category name="Code">
+						<code profiles="">set WillowInventoryStorage ChestSlots 120</code>
+					</category>
+				</category>
+				<category name="140">
+					<category name="Code">
+						<code profiles="">set WillowInventoryStorage ChestSlots 140</code>
+					</category>
+				</category>
+				<category name="160">
+					<category name="Code">
+						<code profiles="">set WillowInventoryStorage ChestSlots 160</code>
+					</category>
+				</category>
+				<category name="180">
+					<category name="Code">
+						<code profiles="">set WillowInventoryStorage ChestSlots 180</code>
+					</category>
+				</category>
+				<category name="200">
+					<category name="Code">
+						<code profiles="">set WillowInventoryStorage ChestSlots 200</code>
+					</category>
+				</category>
+			</category>
+			<comment></comment>
+			<category name="Grinder Fix For One Load From Main Menu">
+				<category name="Code">
+					<code profiles="default">set Loader.TheWorld:PersistentLevel.WillowInventoryManager_0.WillowInventoryStorage_2 ChestSlots 3</code>
+				</category>
+			</category>
+			<comment>Unfortunately, TPS uses 4 different objects that use this value.  One of which is the Grinder, which results in having to sacrifice 40-200 items to grind once.</comment>
+			<comment>I can do a fix for the very first time that you enter the game from the Main Menu, but if you save and quit and re-enter without restarting, it assigns a completely random object number combination that I cannot fix.</comment>
+			<comment>This is the best that I can do with the capabilities that I have.  Some alternatives to this is to just not use this mod if you are Grinding or only use the Unlimited option as it does not affect capacity numbers directly.</comment>
+		</category>
+	</body>
+</BLCMM>
+
+#Commands:
+set WillowInventoryManager InventorySlotMax_Misc 40
+set WillowInventoryStorage ChestSlots 40
+set Loader.TheWorld:PersistentLevel.WillowInventoryManager_0.WillowInventoryStorage_2 ChestSlots 3
+

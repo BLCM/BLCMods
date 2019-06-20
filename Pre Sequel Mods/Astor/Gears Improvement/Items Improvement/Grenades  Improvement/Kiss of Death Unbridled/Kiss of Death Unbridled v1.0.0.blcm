@@ -1,0 +1,25 @@
+<BLCMM v="1">
+#<!!!You opened a file saved with BLCMM in FilterTool. Please update to BLCMM to properly open this file!!!>
+	<head>
+		<type name="TPS" offline="false"/>
+	</head>
+	<body>
+		<category name="Kiss of Death Unbridled v1.0.0">
+			<comment>Mod author: Astor</comment>
+			<comment>Release Date: 20 January 2019</comment>
+			<comment>Version: 1.0.0 - See ReadMe for Changelog ;)</comment>
+			<category name="Description">
+				<comment>Double the damages and triple the fuse time.</comment>
+			</category>
+			<category name="Magic Formula">
+				<code profiles="default">set GD_Cork_GrenadeMods.Payload.Payload_KissOfDeath ItemAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.GrenadeMod.BlastRadius',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-0.800000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.GrenadeMod.GrenadeDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-0.400000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.GrenadeMod.FuseTime',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=10.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))</code>
+				<code profiles="default">set GD_GrenadeMods.Projectiles.Grenade_Homing:BehaviorProviderDefinition_1.Behavior_CauseDamage_1 DamageFormula (BaseValueScaleConstant=2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)</code>
+			</category>
+		</category>
+	</body>
+</BLCMM>
+
+#Commands:
+set GD_Cork_GrenadeMods.Payload.Payload_KissOfDeath ItemAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.GrenadeMod.BlastRadius',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-0.800000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.GrenadeMod.GrenadeDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-0.400000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.GrenadeMod.FuseTime',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=10.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+set GD_GrenadeMods.Projectiles.Grenade_Homing:BehaviorProviderDefinition_1.Behavior_CauseDamage_1 DamageFormula (BaseValueScaleConstant=2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+

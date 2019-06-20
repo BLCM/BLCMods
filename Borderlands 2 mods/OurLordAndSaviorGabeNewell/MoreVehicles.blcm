@@ -1,0 +1,772 @@
+<BLCMM v="1">
+#<!!!You opened a file saved with BLCMM in FilterTool. Please update to BLCMM to properly open this file!!!>
+	<head>
+		<type name="BL2" offline="false"/>
+		<profiles>
+			<profile name="default" current="true"/>
+		</profiles>
+	</head>
+	<body>
+		<category name="More Vehicles">
+			<comment>Mod written by GitHub: Our Lord And Savior Gabe Newell / Nexus Mods: OB4MA</comment>
+			<comment></comment>
+			<comment>This mod simply adds every vehicle family to each Catch-A-Ride terminal so that you can choose between a total of 11 different vehicles.</comment>
+			<comment>This does not replace any vehicle with another, so they are all available if a Catch-A-Ride terminal is.</comment>
+			<comment>This mod also has some options to shrink vehicles down to a size that fits everywhere (Fan Boats are huge and can't spawn in most locations).</comment>
+			<comment>You can have vehicles in maps that do not normally allow one to travel into it (specifically for smaller vehicles).</comment>
+			<comment>All player vehicles can now be stood upon.</comment>
+			<comment></comment>
+			<comment>Needless to say, this mod requires the Pirate's Booty and Sir Hammerlock's Big Game Hunt DLCs.</comment>
+			<comment></comment>
+			<comment>Known compatibility and issues:</comment>
+			<comment></comment>
+			<comment>1. Mod does not work for clients if the host is using it and the client is not.</comment>
+			<comment>2. Works well for clients and host if the host and client are both using this mod.</comment>
+			<comment>3. Works for client if the host is not using it, but causes the host's game to explode and require Alt F4'ing if the host enters the terminal with the new vehicle type selected.</comment>
+			<comment>4. Tiny Vehicles in Ellie's Garage fall down into the corridor below the vehicle lifts.</comment>
+			<comment>5. Sometimes a vehicle will just refuse to spawn, which I have no clue how to fix.  Just try the other vehicle option and hope it works.</comment>
+			<comment></comment>
+			<category name="Making All Vehicles Available">
+				<category name="Pirate's Booty Catch-A-Rides">
+					<category name="Code">
+						<hotfix name="Name" level="None">
+							<code profiles="default">set GD_OrchidPackageDef.Vehicles.VehicleFamily_Hovercraft VehicleUIDefinitions (VSSUIDefinition'GD_Globals.VehicleSpawnStation.VSSUI_CatapultTechnical',VSSUIDefinition'GD_Globals.VehicleSpawnStation.VSSUI_SawBladeTechnical',VSSUIDefinition'GD_OrchidPackageDef.Vehicles.VSSUI_HarpoonHovercraft',VSSUIDefinition'GD_OrchidPackageDef.Vehicles.VSSUI_SawBladeHovercraft',VSSUIDefinition'GD_OrchidPackageDef.Vehicles.VSSUI_RocketHovercraft',VSSUIDefinition'GD_SagePackageDef.Vehicles.VSSUI_ShockFanBoat',VSSUIDefinition'GD_SagePackageDef.Vehicles.VSSUI_CorrosiveFanBoat',VSSUIDefinition'GD_SagePackageDef.Vehicles.VSSUI_IncendiaryFanBoat',VSSUIDefinition'GD_Globals.VehicleSpawnStation.VSSUI_MGRunner',VSSUIDefinition'GD_Globals.VehicleSpawnStation.VSSUI_RocketRunner')</code>
+							<code profiles="default">set Orchid_UI_VehicleSpawnStation.VehicleSpawnStation_Definition SupportedTags (EVSSAVAIL_BL2Main,EVSSAVAIL_Land)</code>
+							<code profiles="default">set Orchid_UI_VehicleSpawnStation.VehicleSpawnStation_Definition RequiredTags (EVSSAVAIL_BL2Main,EVSSAVAIL_Land)</code>
+						</hotfix>
+					</category>
+				</category>
+				<category name="Big Game Hunt Catch-A-Rides">
+					<category name="Code">
+						<hotfix name="Name" level="None">
+							<code profiles="default">set GD_SagePackageDef.Vehicles.VehicleFamily_FanBoat VehicleUIDefinitions (VSSUIDefinition'GD_Globals.VehicleSpawnStation.VSSUI_CatapultTechnical',VSSUIDefinition'GD_Globals.VehicleSpawnStation.VSSUI_SawBladeTechnical',VSSUIDefinition'GD_OrchidPackageDef.Vehicles.VSSUI_HarpoonHovercraft',VSSUIDefinition'GD_OrchidPackageDef.Vehicles.VSSUI_SawBladeHovercraft',VSSUIDefinition'GD_OrchidPackageDef.Vehicles.VSSUI_RocketHovercraft',VSSUIDefinition'GD_SagePackageDef.Vehicles.VSSUI_ShockFanBoat',VSSUIDefinition'GD_SagePackageDef.Vehicles.VSSUI_CorrosiveFanBoat',VSSUIDefinition'GD_SagePackageDef.Vehicles.VSSUI_IncendiaryFanBoat',VSSUIDefinition'GD_Globals.VehicleSpawnStation.VSSUI_MGRunner',VSSUIDefinition'GD_Globals.VehicleSpawnStation.VSSUI_RocketRunner')</code>
+							<code profiles="default">set Sage_UI_VehicleSpawnStation.VehicleSpawnStation_Definition SupportedTags (EVSSAVAIL_BL2Main,EVSSAVAIL_Land)</code>
+							<code profiles="default">set Sage_UI_VehicleSpawnStation.VehicleSpawnStation_Definition RequiredTags (EVSSAVAIL_BL2Main,EVSSAVAIL_Land)</code>
+						</hotfix>
+					</category>
+				</category>
+				<category name="Vanilla Catch-A-Rides">
+					<category name="Code">
+						<hotfix name="Name" level="None">
+							<code profiles="default">set GD_Globals.VehicleSpawnStation.VehicleFamily_BanditTechnical VehicleUIDefinitions (VSSUIDefinition'GD_Globals.VehicleSpawnStation.VSSUI_CatapultTechnical',VSSUIDefinition'GD_Globals.VehicleSpawnStation.VSSUI_SawBladeTechnical',VSSUIDefinition'GD_OrchidPackageDef.Vehicles.VSSUI_HarpoonHovercraft',VSSUIDefinition'GD_OrchidPackageDef.Vehicles.VSSUI_SawBladeHovercraft',VSSUIDefinition'GD_OrchidPackageDef.Vehicles.VSSUI_RocketHovercraft',VSSUIDefinition'GD_SagePackageDef.Vehicles.VSSUI_ShockFanBoat',VSSUIDefinition'GD_SagePackageDef.Vehicles.VSSUI_CorrosiveFanBoat',VSSUIDefinition'GD_SagePackageDef.Vehicles.VSSUI_IncendiaryFanBoat',VSSUIDefinition'GD_Globals.VehicleSpawnStation.VSSUI_MGRunner',VSSUIDefinition'GD_Globals.VehicleSpawnStation.VSSUI_RocketRunner')</code>
+							<code profiles="default">set GD_Globals.VehicleSpawnStation.VehicleFamily_Runner VehicleUIDefinitions (VSSUIDefinition'GD_Globals.VehicleSpawnStation.VSSUI_CatapultTechnical',VSSUIDefinition'GD_Globals.VehicleSpawnStation.VSSUI_SawBladeTechnical',VSSUIDefinition'GD_OrchidPackageDef.Vehicles.VSSUI_HarpoonHovercraft',VSSUIDefinition'GD_OrchidPackageDef.Vehicles.VSSUI_SawBladeHovercraft',VSSUIDefinition'GD_OrchidPackageDef.Vehicles.VSSUI_RocketHovercraft',VSSUIDefinition'GD_SagePackageDef.Vehicles.VSSUI_ShockFanBoat',VSSUIDefinition'GD_SagePackageDef.Vehicles.VSSUI_CorrosiveFanBoat',VSSUIDefinition'GD_SagePackageDef.Vehicles.VSSUI_IncendiaryFanBoat',VSSUIDefinition'GD_Globals.VehicleSpawnStation.VSSUI_MGRunner',VSSUIDefinition'GD_Globals.VehicleSpawnStation.VSSUI_RocketRunner')</code>
+							<code profiles="default">set UI_VehicleSpawnStation.VehicleSpawnStation_Definition SupportedTags (EVSSAVAIL_BL2Main,EVSSAVAIL_Land)</code>
+							<code profiles="default">set UI_VehicleSpawnStation.VehicleSpawnStation_Definition RequiredTags (EVSSAVAIL_BL2Main,EVSSAVAIL_Land)</code>
+						</hotfix>
+					</category>
+				</category>
+				<category name="Other Important Code">
+					<category name="Code">
+						<hotfix name="Name" level="None">
+							<code profiles="default">set GD_Globals.General.Globals VehicleFamilyDefinitions (VehicleFamilyDefinition'GD_Globals.VehicleSpawnStation.VehicleFamily_BanditTechnical',VehicleFamilyDefinition'GD_Globals.VehicleSpawnStation.VehicleFamily_Runner',VehicleFamilyDefinition'GD_OrchidPackageDef.Vehicles.VehicleFamily_Hovercraft',VehicleFamilyDefinition'GD_SagePackageDef.Vehicles.VehicleFamily_FanBoat')</code>
+						</hotfix>
+						<code profiles="default">set VehicleFamilyDefinition RequiredTags (EVSSAVAIL_BL2Main,EVSSAVAIL_Land)</code>
+						<code profiles="default">set LevelTravelStationDefinition bAllowVehiclesToThisStation True</code>
+					</category>
+				</category>
+			</category>
+			<category name="Vehicle Types Available">
+				<category name="Harpoon Sandskiff">
+					<category name="Code">
+						<hotfix name="Name" level="None">
+							<code profiles="default">set GD_OrchidPackageDef.Vehicles.VSSUI_HarpoonHovercraft RequiredTags (EVSSAVAIL_BL2Main,EVSSAVAIL_Land)</code>
+						</hotfix>
+					</category>
+				</category>
+				<category name="Rocket Sandskiff">
+					<category name="Code">
+						<hotfix name="Name" level="None">
+							<code profiles="default">set GD_OrchidPackageDef.Vehicles.VSSUI_RocketHovercraft RequiredTags (EVSSAVAIL_BL2Main,EVSSAVAIL_Land)</code>
+						</hotfix>
+					</category>
+				</category>
+				<category name="Sawblade Sandskiff">
+					<category name="Code">
+						<hotfix name="Name" level="None">
+							<code profiles="default">set GD_OrchidPackageDef.Vehicles.VSSUI_SawBladeHovercraft RequiredTags (EVSSAVAIL_BL2Main,EVSSAVAIL_Land)</code>
+						</hotfix>
+					</category>
+				</category>
+				<category name="Corrosive Fan Boat">
+					<category name="Code">
+						<hotfix name="Name" level="None">
+							<code profiles="default">set GD_SagePackageDef.Vehicles.VSSUI_CorrosiveFanBoat RequiredTags (EVSSAVAIL_BL2Main,EVSSAVAIL_Land)</code>
+						</hotfix>
+					</category>
+				</category>
+				<category name="Incendiary Fan Boat">
+					<category name="Code">
+						<hotfix name="Name" level="None">
+							<code profiles="default">set GD_SagePackageDef.Vehicles.VSSUI_IncendiaryFanBoat RequiredTags (EVSSAVAIL_BL2Main,EVSSAVAIL_Land)</code>
+						</hotfix>
+					</category>
+				</category>
+				<category name="Shock Fan Boat">
+					<category name="Code">
+						<hotfix name="Name" level="None">
+							<code profiles="default">set GD_SagePackageDef.Vehicles.VSSUI_ShockFanBoat RequiredTags (EVSSAVAIL_BL2Main,EVSSAVAIL_Land)</code>
+						</hotfix>
+					</category>
+				</category>
+				<category name="Catapult Bandit Technical">
+					<category name="Code">
+						<hotfix name="Name" level="None">
+							<code profiles="default">set GD_Globals.VehicleSpawnStation.VSSUI_CatapultTechnical RequiredTags (EVSSAVAIL_BL2Main,EVSSAVAIL_Land)</code>
+						</hotfix>
+					</category>
+				</category>
+				<category name="Sawblade Bandit Technical">
+					<category name="Code">
+						<hotfix name="Name" level="None">
+							<code profiles="default">set GD_Globals.VehicleSpawnStation.VSSUI_SawBladeTechnical RequiredTags (EVSSAVAIL_BL2Main,EVSSAVAIL_Land)</code>
+						</hotfix>
+					</category>
+				</category>
+				<category name="Rocket Launcher Runner">
+					<category name="Code">
+						<hotfix name="Name" level="None">
+							<code profiles="default">set GD_Globals.VehicleSpawnStation.VSSUI_RocketRunner RequiredTags (EVSSAVAIL_BL2Main,EVSSAVAIL_Land)</code>
+						</hotfix>
+					</category>
+				</category>
+				<category name="Machine Gun Runner">
+					<category name="Code">
+						<hotfix name="Name" level="None">
+							<code profiles="default">set GD_Globals.VehicleSpawnStation.VSSUI_MGRunner RequiredTags (EVSSAVAIL_BL2Main,EVSSAVAIL_Land)</code>
+						</hotfix>
+					</category>
+				</category>
+			</category>
+			<category name="Text Changes">
+				<category name="Hovercraft Family">
+					<category name="Code">
+						<hotfix name="Name" level="None">
+							<code profiles="default">set GD_OrchidPackageDef.Vehicles.VehicleFamily_Hovercraft FamilyName <font size="70"> <font color="#F57500"> <font size="70"> <font color="#F57500"><font size="70"> <font color="#F57500"> SANDSKIFF</code>
+						</hotfix>
+					</category>
+				</category>
+				<category name="Fan Boat Family">
+					<category name="Code">
+						<hotfix name="Name" level="None">
+							<code profiles="default">set GD_SagePackageDef.Vehicles.VehicleFamily_FanBoat FamilyName <font size="70"> <font color="#F57500"> <font size="70"> <font color="#F57500"> <font size="70"> <font color="#F57500"> FAN BOAT</code>
+						</hotfix>
+					</category>
+				</category>
+				<category name="Bandit Technical Family">
+					<category name="Code">
+						<hotfix name="Name" level="None">
+							<code profiles="default">set GD_Globals.VehicleSpawnStation.VehicleFamily_BanditTechnical FamilyName <font size="70"> <font color="#F57500"> <font size="45"> <font color="#F57500"> <font size="70"> <font color="#F57500"> TECHNICAL</code>
+						</hotfix>
+					</category>
+				</category>
+				<category name="Light Runner Family">
+					<category name="Code">
+						<hotfix name="Name" level="None">
+							<code profiles="default">set GD_Globals.VehicleSpawnStation.VehicleFamily_Runner FamilyName <font size="70"> <font color="#F57500"> <font size="70"> <font color="#F57500"> <font size="70"> <font color="#F57500"> <font color="#F57500"> <font size="70"><font color="#F57500">RUNNER</code>
+						</hotfix>
+					</category>
+				</category>
+				<category name="Renamed Harpoon Hovercraft">
+					<category name="Code">
+						<hotfix name="Name" level="None">
+							<code profiles="default">set GD_OrchidPackageDef.Vehicles.VSSUI_HarpoonHovercraft VehicleName Harpoon Sandskiff</code>
+						</hotfix>
+					</category>
+				</category>
+				<category name="Renamed Rocket Hovercraft">
+					<category name="Code">
+						<hotfix name="Name" level="None">
+							<code profiles="default">set GD_OrchidPackageDef.Vehicles.VSSUI_RocketHovercraft VehicleName Rocket Sandskiff</code>
+						</hotfix>
+					</category>
+				</category>
+				<category name="Renamed Sawblade Hovercraft">
+					<category name="Code">
+						<hotfix name="Name" level="None">
+							<code profiles="default">set GD_OrchidPackageDef.Vehicles.VSSUI_SawBladeHovercraft VehicleName Sawblade Sandskiff</code>
+						</hotfix>
+					</category>
+				</category>
+				<category name="Renamed MG Runner">
+					<category name="Code">
+						<hotfix name="Name" level="None">
+							<code profiles="default">set GD_Globals.VehicleSpawnStation.VSSUI_MGRunner VehicleName Machine Gun Runner</code>
+						</hotfix>
+					</category>
+				</category>
+				<category name="Renamed Rocket Runner">
+					<category name="Code">
+						<hotfix name="Name" level="None">
+							<code profiles="default">set GD_Globals.VehicleSpawnStation.VSSUI_RocketRunner VehicleName Rocket Launcher Runner</code>
+						</hotfix>
+					</category>
+				</category>
+			</category>
+			<category name="New Vehicle Icons">
+				<category name="Hovercrafts (Bandit Technical copy in Vanilla)">
+					<category name="Code">
+						<hotfix name="Name" level="None">
+							<code profiles="default">set GD_OrchidPackageDef.Vehicles.VehicleFamily_Hovercraft VehiclePreviewClip SwfMovie'Orchid_UI_VehicleIcons.VehicleIcons_HarpoonHovercraft'</code>
+						</hotfix>
+					</category>
+				</category>
+				<category name="Fan Boat">
+					<category name="Code">
+						<hotfix name="Name" level="None">
+							<code profiles="default">set GD_SagePackageDef.Vehicles.VehicleFamily_FanBoat VehiclePreviewClip SwfMovie'Sage_UI_VehicleIcons.VehicleIcons_IncendiaryFanBoat'</code>
+						</hotfix>
+					</category>
+				</category>
+				<category name="Bandit Technical">
+					<category name="Code">
+						<hotfix name="Name" level="None">
+							<code profiles="default">set GD_Globals.VehicleSpawnStation.VehicleFamily_BanditTechnical VehiclePreviewClip SwfMovie'UI_VehicleIcons.VehicleIcons_BanditTechnicalCatapult'</code>
+						</hotfix>
+					</category>
+				</category>
+				<category name="Light Runner">
+					<category name="Code">
+						<hotfix name="Name" level="None">
+							<code profiles="default">set GD_Globals.VehicleSpawnStation.VehicleFamily_Runner VehiclePreviewClip SwfMovie'UI_VehicleIcons.VehicleIcons_BanditTechnicalMachineGun'</code>
+						</hotfix>
+					</category>
+				</category>
+			</category>
+			<category name="Vehicle Stations">
+				<category name="Updated Text">
+					<category name="Rename Vehicle Spawn">
+						<category name="Code">
+							<code profiles="default">set WillowGame.VehicleSpawnStationGFxMovie SpawnVehicleLabel CLAIM VEHICLE</code>
+						</category>
+					</category>
+					<category name="Rename Respawn Vehicle">
+						<category name="Code">
+							<code profiles="default">set WillowGame.VehicleSpawnStationGFxMovie RespawnVehicleLabel REQUEST VEHICLE</code>
+						</category>
+					</category>
+					<category name="Rename Teleport">
+						<category name="Code">
+							<code profiles="default">set WillowGame.VehicleSpawnStationGFxMovie TeleportLabel ENTER VEHICLE</code>
+						</category>
+					</category>
+					<category name="Rename No Skin">
+						<category name="Code">
+							<code profiles="default">set WillowGame.VehicleSpawnStationGFxMovie NoSkinAvailableLabel NO PAINT JOBS ARE AVAILABLE</code>
+						</category>
+					</category>
+					<category name="Rename No Skin Selected">
+						<category name="Code">
+							<code profiles="default">set WillowGame.VehicleSpawnStationGFxMovie NoSkinSelectedLabel NO PAINT JOB IS SELECTED</code>
+						</category>
+					</category>
+					<category name="Rename Unlocked">
+						<category name="Code">
+							<code profiles="default">set WillowGame.VehicleSpawnStationGFxMovie UnlockedText Paint Jobs:</code>
+						</category>
+					</category>
+				</category>
+				<category name="Minimized UI Sway">
+					<category name="Vanilla">
+						<category name="Code">
+							<hotfix name="Name" level="None">
+								<code profiles="default">set UI_VehicleSpawnStation.VehicleSpawnStation_Definition View3DRot (Pitch=0,Yaw=0,Roll=0)</code>
+								<code profiles="default">set UI_VehicleSpawnStation.VehicleSpawnStation_Definition View3DFOV 1</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Pirate's Booty">
+						<category name="Code">
+							<hotfix name="Name" level="None">
+								<code profiles="default">set Orchid_UI_VehicleSpawnStation.VehicleSpawnStation_Definition View3DRot (Pitch=0,Yaw=0,Roll=0)</code>
+								<code profiles="default">set Orchid_UI_VehicleSpawnStation.VehicleSpawnStation_Definition View3DFOV 1</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Big Game Hunt">
+						<category name="Code">
+							<hotfix name="Name" level="None">
+								<code profiles="default">set Sage_UI_VehicleSpawnStation.VehicleSpawnStation_Definition View3DRot (Pitch=0,Yaw=0,Roll=0)</code>
+								<code profiles="default">set Sage_UI_VehicleSpawnStation.VehicleSpawnStation_Definition View3DFOV 1</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Default">
+						<category name="Code">
+							<hotfix name="Name" level="None">
+								<code profiles="default">set WillowGame.Default__VehicleSpawnStationGFxDefinition View3DRot (Pitch=0,Yaw=0,Roll=0)</code>
+								<code profiles="default">set WillowGame.Default__VehicleSpawnStationGFxDefinition View3DFOV 1</code>
+							</hotfix>
+						</category>
+					</category>
+				</category>
+			</category>
+			<category name="Stand On Vehicles">
+				<category name="Bandit Technical">
+					<category name="Catapult">
+						<category name="Code">
+							<hotfix name="Name" package="GD_BTech_Streaming">
+								<code profiles="default">set GD_BTech_Streaming.ChassisDefinition.Chassis_CatapultTechnical AllowPawnsToStandOnTopOfVehicle True</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Sawblade">
+						<category name="Code">
+							<hotfix name="Name" package="GD_BTech_Streaming">
+								<code profiles="default">set GD_BTech_Streaming.ChassisDefinition.Chassis_SawBladeTechnical AllowPawnsToStandOnTopOfVehicle True</code>
+							</hotfix>
+						</category>
+					</category>
+				</category>
+				<category name="Sandskiff">
+					<category name="Harpoon">
+						<category name="Code">
+							<hotfix name="Name" package="GD_Orchid_HarpoonHovercraft">
+								<code profiles="default">set GD_Orchid_Hovercraft.Vehicle.Chassis_Hovercraft AllowPawnsToStandOnTopOfVehicle True</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Rocket">
+						<category name="Code">
+							<hotfix name="Name" package="GD_Orchid_RocketHovercraft">
+								<code profiles="default">set GD_Orchid_Hovercraft.Vehicle.Chassis_Hovercraft AllowPawnsToStandOnTopOfVehicle True</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Sawblade">
+						<category name="Code">
+							<hotfix name="Name" package="GD_Orchid_SawHovercraft">
+								<code profiles="default">set GD_Orchid_Hovercraft.Vehicle.Chassis_Hovercraft AllowPawnsToStandOnTopOfVehicle True</code>
+							</hotfix>
+						</category>
+					</category>
+				</category>
+				<category name="Runner">
+					<category name="Machine Gun">
+						<category name="Code">
+							<hotfix name="Name" package="GD_Runner_Streaming">
+								<code profiles="default">set GD_Runner_Streaming.Archetype.Chassis_LightRunnerMG AllowPawnsToStandOnTopOfVehicle True</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Rocket Launcher">
+						<category name="Code">
+							<hotfix name="Name" package="GD_Runner_Streaming">
+								<code profiles="default">set GD_Runner_Streaming.Archetype.Chassis_RocketRunner AllowPawnsToStandOnTopOfVehicle True</code>
+							</hotfix>
+						</category>
+					</category>
+				</category>
+				<category name="Fan Boat">
+					<category name="Corrosive">
+						<category name="Code">
+							<hotfix name="Name" package="GD_Sage_CorrosiveFanBoat">
+								<code profiles="default">set GD_Sage_CorrosiveFanBoat.ChassisDefinition.Chassis_CorrosiveFanBoat AllowPawnsToStandOnTopOfVehicle True</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Incendiary">
+						<category name="Code">
+							<hotfix name="Name" package="GD_Sage_IncendiaryFanBoat">
+								<code profiles="default">set GD_Sage_IncendiaryFanBoat.ChassisDefinition.Chassis_IncendiaryFanBoat AllowPawnsToStandOnTopOfVehicle True</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Shock">
+						<category name="Code">
+							<hotfix name="Name" package="GD_Sage_ShockFanBoat">
+								<code profiles="default">set GD_Sage_ShockFanBoat.ChassisDefinition.Chassis_ShockFanBoat AllowPawnsToStandOnTopOfVehicle True</code>
+							</hotfix>
+						</category>
+					</category>
+				</category>
+			</category>
+			<category name="Tiny Vehicles">
+				<category name="Tiny Catapult Technical" MUT="true">
+					<category name="0.85">
+						<hotfix name="Name" package="GD_BTech_Streaming">
+							<code profiles="">set GD_BTech_Streaming.Archetype.Vehicle_CatapultTechnical DrawScale 0.85</code>
+						</hotfix>
+					</category>
+					<category name="0.75">
+						<hotfix name="Name" package="GD_BTech_Streaming">
+							<code profiles="">set GD_BTech_Streaming.Archetype.Vehicle_CatapultTechnical DrawScale 0.75</code>
+						</hotfix>
+					</category>
+					<category name="0.65">
+						<hotfix name="Name" package="GD_BTech_Streaming">
+							<code profiles="">set GD_BTech_Streaming.Archetype.Vehicle_CatapultTechnical DrawScale 0.65</code>
+						</hotfix>
+					</category>
+					<category name="0.55">
+						<hotfix name="Name" package="GD_BTech_Streaming">
+							<code profiles="">set GD_BTech_Streaming.Archetype.Vehicle_CatapultTechnical DrawScale 0.55</code>
+						</hotfix>
+					</category>
+				</category>
+				<category name="Tiny Sawblade Technical" MUT="true">
+					<category name="0.85">
+						<hotfix name="Name" package="GD_BTech_Streaming">
+							<code profiles="">set GD_BTech_Streaming.Archetype.Vehicle_SawBladeTechnical DrawScale 0.85</code>
+						</hotfix>
+					</category>
+					<category name="0.75">
+						<hotfix name="Name" package="GD_BTech_Streaming">
+							<code profiles="">set GD_BTech_Streaming.Archetype.Vehicle_SawBladeTechnical DrawScale 0.75</code>
+						</hotfix>
+					</category>
+					<category name="0.65">
+						<hotfix name="Name" package="GD_BTech_Streaming">
+							<code profiles="">set GD_BTech_Streaming.Archetype.Vehicle_SawBladeTechnical DrawScale 0.65</code>
+						</hotfix>
+					</category>
+					<category name="0.55">
+						<hotfix name="Name" package="GD_BTech_Streaming">
+							<code profiles="">set GD_BTech_Streaming.Archetype.Vehicle_SawBladeTechnical DrawScale 0.55</code>
+						</hotfix>
+					</category>
+				</category>
+				<category name="Tiny Machine Gun Runner" MUT="true">
+					<category name="0.85">
+						<hotfix name="Name" package="GD_Runner_Streaming">
+							<code profiles="">set GD_Runner_Streaming.Archetype.Vehicle_LightRunnerMG DrawScale 0.85</code>
+						</hotfix>
+					</category>
+					<category name="0.75">
+						<hotfix name="Name" package="GD_Runner_Streaming">
+							<code profiles="">set GD_Runner_Streaming.Archetype.Vehicle_LightRunnerMG DrawScale 0.75</code>
+						</hotfix>
+					</category>
+					<category name="0.65">
+						<hotfix name="Name" package="GD_Runner_Streaming">
+							<code profiles="">set GD_Runner_Streaming.Archetype.Vehicle_LightRunnerMG DrawScale 0.65</code>
+						</hotfix>
+					</category>
+					<category name="0.55">
+						<hotfix name="Name" package="GD_Runner_Streaming">
+							<code profiles="">set GD_Runner_Streaming.Archetype.Vehicle_LightRunnerMG DrawScale 0.55</code>
+						</hotfix>
+					</category>
+				</category>
+				<category name="Tiny Rocket Launcher Runner" MUT="true">
+					<category name="0.85">
+						<hotfix name="Name" package="GD_Runner_Streaming">
+							<code profiles="">set GD_Runner_Streaming.Archetype.Vehicle_RocketRunner DrawScale 0.85</code>
+						</hotfix>
+					</category>
+					<category name="0.75">
+						<hotfix name="Name" package="GD_Runner_Streaming">
+							<code profiles="">set GD_Runner_Streaming.Archetype.Vehicle_RocketRunner DrawScale 0.75</code>
+						</hotfix>
+					</category>
+					<category name="0.65">
+						<hotfix name="Name" package="GD_Runner_Streaming">
+							<code profiles="">set GD_Runner_Streaming.Archetype.Vehicle_RocketRunner DrawScale 0.65</code>
+						</hotfix>
+					</category>
+					<category name="0.55">
+						<hotfix name="Name" package="GD_Runner_Streaming">
+							<code profiles="">set GD_Runner_Streaming.Archetype.Vehicle_RocketRunner DrawScale 0.5</code>
+						</hotfix>
+					</category>
+				</category>
+				<category name="Tiny Harpoon Sandskiff" MUT="true">
+					<category name="0.85">
+						<hotfix name="Name" package="GD_Orchid_HarpoonHovercraft">
+							<code profiles="">set GD_Orchid_HarpoonHovercraft.Archetype.Vehicle_HarpoonHovercraft DrawScale 0.85</code>
+						</hotfix>
+					</category>
+					<category name="0.75">
+						<hotfix name="Name" package="GD_Orchid_HarpoonHovercraft">
+							<code profiles="">set GD_Orchid_HarpoonHovercraft.Archetype.Vehicle_HarpoonHovercraft DrawScale 0.75</code>
+						</hotfix>
+					</category>
+					<category name="0.65">
+						<hotfix name="Name" package="GD_Orchid_HarpoonHovercraft">
+							<code profiles="">set GD_Orchid_HarpoonHovercraft.Archetype.Vehicle_HarpoonHovercraft DrawScale 0.65</code>
+						</hotfix>
+					</category>
+					<category name="0.55">
+						<hotfix name="Name" package="GD_Orchid_HarpoonHovercraft">
+							<code profiles="">set GD_Orchid_HarpoonHovercraft.Archetype.Vehicle_HarpoonHovercraft DrawScale 0.55</code>
+						</hotfix>
+					</category>
+					<category name="0.45">
+						<hotfix name="Name" package="GD_Orchid_HarpoonHovercraft">
+							<code profiles="">set GD_Orchid_HarpoonHovercraft.Archetype.Vehicle_HarpoonHovercraft DrawScale 0.45</code>
+						</hotfix>
+					</category>
+					<category name="0.35">
+						<hotfix name="Name" package="GD_Orchid_HarpoonHovercraft">
+							<code profiles="">set GD_Orchid_HarpoonHovercraft.Archetype.Vehicle_HarpoonHovercraft DrawScale 0.35</code>
+						</hotfix>
+					</category>
+					<category name="0.25">
+						<hotfix name="Name" package="GD_Orchid_HarpoonHovercraft">
+							<code profiles="">set GD_Orchid_HarpoonHovercraft.Archetype.Vehicle_HarpoonHovercraft DrawScale 0.25</code>
+						</hotfix>
+					</category>
+					<category name="0.15">
+						<hotfix name="Name" package="GD_Orchid_HarpoonHovercraft">
+							<code profiles="">set GD_Orchid_HarpoonHovercraft.Archetype.Vehicle_HarpoonHovercraft DrawScale 0.15</code>
+						</hotfix>
+					</category>
+					<category name="0.05">
+						<hotfix name="Name" package="GD_Orchid_HarpoonHovercraft">
+							<code profiles="">set GD_Orchid_HarpoonHovercraft.Archetype.Vehicle_HarpoonHovercraft DrawScale 0.05</code>
+						</hotfix>
+					</category>
+				</category>
+				<category name="Tiny Rocket Launcher Sandskiff" MUT="true">
+					<category name="0.85">
+						<hotfix name="Name" package="GD_Orchid_RocketHovercraft">
+							<code profiles="">set GD_Orchid_RocketHovercraft.Archetype.Vehicle_RocketHovercraft DrawScale 0.85</code>
+						</hotfix>
+					</category>
+					<category name="0.75">
+						<hotfix name="Name" package="GD_Orchid_RocketHovercraft">
+							<code profiles="">set GD_Orchid_RocketHovercraft.Archetype.Vehicle_RocketHovercraft DrawScale 0.75</code>
+						</hotfix>
+					</category>
+					<category name="0.65">
+						<hotfix name="Name" package="GD_Orchid_RocketHovercraft">
+							<code profiles="">set GD_Orchid_RocketHovercraft.Archetype.Vehicle_RocketHovercraft DrawScale 0.65</code>
+						</hotfix>
+					</category>
+					<category name="0.55">
+						<hotfix name="Name" package="GD_Orchid_RocketHovercraft">
+							<code profiles="">set GD_Orchid_RocketHovercraft.Archetype.Vehicle_RocketHovercraft DrawScale 0.55</code>
+						</hotfix>
+					</category>
+					<category name="0.45">
+						<hotfix name="Name" package="GD_Orchid_RocketHovercraft">
+							<code profiles="">set GD_Orchid_RocketHovercraft.Archetype.Vehicle_RocketHovercraft DrawScale 0.45</code>
+						</hotfix>
+					</category>
+					<category name="0.35">
+						<hotfix name="Name" package="GD_Orchid_RocketHovercraft">
+							<code profiles="">set GD_Orchid_RocketHovercraft.Archetype.Vehicle_RocketHovercraft DrawScale 0.35</code>
+						</hotfix>
+					</category>
+					<category name="0.25">
+						<hotfix name="Name" package="GD_Orchid_RocketHovercraft">
+							<code profiles="">set GD_Orchid_RocketHovercraft.Archetype.Vehicle_RocketHovercraft DrawScale 0.25</code>
+						</hotfix>
+					</category>
+					<category name="0.15">
+						<hotfix name="Name" package="GD_Orchid_RocketHovercraft">
+							<code profiles="">set GD_Orchid_RocketHovercraft.Archetype.Vehicle_RocketHovercraft DrawScale 0.15</code>
+						</hotfix>
+					</category>
+					<category name="0.05">
+						<hotfix name="Name" package="GD_Orchid_RocketHovercraft">
+							<code profiles="">set GD_Orchid_RocketHovercraft.Archetype.Vehicle_RocketHovercraft DrawScale 0.05</code>
+						</hotfix>
+					</category>
+				</category>
+				<category name="Tiny Sawblade Sandskiff" MUT="true">
+					<category name="0.85">
+						<hotfix name="Name" package="GD_Orchid_SawHovercraft">
+							<code profiles="">set GD_Orchid_SawHovercraft.Archetype.Vehicle_SawBladeHovercraft DrawScale 0.85</code>
+						</hotfix>
+					</category>
+					<category name="0.75">
+						<hotfix name="Name" package="GD_Orchid_SawHovercraft">
+							<code profiles="">set GD_Orchid_SawHovercraft.Archetype.Vehicle_SawBladeHovercraft DrawScale 0.75</code>
+						</hotfix>
+					</category>
+					<category name="0.65">
+						<hotfix name="Name" package="GD_Orchid_SawHovercraft">
+							<code profiles="">set GD_Orchid_SawHovercraft.Archetype.Vehicle_SawBladeHovercraft DrawScale 0.65</code>
+						</hotfix>
+					</category>
+					<category name="0.55">
+						<hotfix name="Name" package="GD_Orchid_SawHovercraft">
+							<code profiles="">set GD_Orchid_SawHovercraft.Archetype.Vehicle_SawBladeHovercraft DrawScale 0.55</code>
+						</hotfix>
+					</category>
+					<category name="0.45">
+						<hotfix name="Name" package="GD_Orchid_SawHovercraft">
+							<code profiles="">set GD_Orchid_SawHovercraft.Archetype.Vehicle_SawBladeHovercraft DrawScale 0.45</code>
+						</hotfix>
+					</category>
+					<category name="0.35">
+						<hotfix name="Name" package="GD_Orchid_SawHovercraft">
+							<code profiles="">set GD_Orchid_SawHovercraft.Archetype.Vehicle_SawBladeHovercraft DrawScale 0.35</code>
+						</hotfix>
+					</category>
+					<category name="0.25">
+						<hotfix name="Name" package="GD_Orchid_SawHovercraft">
+							<code profiles="">set GD_Orchid_SawHovercraft.Archetype.Vehicle_SawBladeHovercraft DrawScale 0.25</code>
+						</hotfix>
+					</category>
+					<category name="0.15">
+						<hotfix name="Name" package="GD_Orchid_SawHovercraft">
+							<code profiles="">set GD_Orchid_SawHovercraft.Archetype.Vehicle_SawBladeHovercraft DrawScale 0.15</code>
+						</hotfix>
+					</category>
+					<category name="0.05">
+						<hotfix name="Name" package="GD_Orchid_SawHovercraft">
+							<code profiles="">set GD_Orchid_SawHovercraft.Archetype.Vehicle_SawBladeHovercraft DrawScale 0.05</code>
+						</hotfix>
+					</category>
+				</category>
+				<category name="Tiny Corrosive Fan Boat" MUT="true">
+					<category name="0.85">
+						<hotfix name="Name" package="GD_Sage_CorrosiveFanBoat">
+							<code profiles="">set GD_Sage_CorrosiveFanBoat.Archetype.Vehicle_CorrosiveFanBoat DrawScale 0.85</code>
+						</hotfix>
+					</category>
+					<category name="0.75">
+						<hotfix name="Name" package="GD_Sage_CorrosiveFanBoat">
+							<code profiles="">set GD_Sage_CorrosiveFanBoat.Archetype.Vehicle_CorrosiveFanBoat DrawScale 0.75</code>
+						</hotfix>
+					</category>
+					<category name="0.65">
+						<hotfix name="Name" package="GD_Sage_CorrosiveFanBoat">
+							<code profiles="">set GD_Sage_CorrosiveFanBoat.Archetype.Vehicle_CorrosiveFanBoat DrawScale 0.65</code>
+						</hotfix>
+					</category>
+					<category name="0.55">
+						<hotfix name="Name" package="GD_Sage_CorrosiveFanBoat">
+							<code profiles="">set GD_Sage_CorrosiveFanBoat.Archetype.Vehicle_CorrosiveFanBoat DrawScale 0.55</code>
+						</hotfix>
+					</category>
+					<category name="0.45">
+						<hotfix name="Name" package="GD_Sage_CorrosiveFanBoat">
+							<code profiles="">set GD_Sage_CorrosiveFanBoat.Archetype.Vehicle_CorrosiveFanBoat DrawScale 0.45</code>
+						</hotfix>
+					</category>
+					<category name="0.35">
+						<hotfix name="Name" package="GD_Sage_CorrosiveFanBoat">
+							<code profiles="">set GD_Sage_CorrosiveFanBoat.Archetype.Vehicle_CorrosiveFanBoat DrawScale 0.35</code>
+						</hotfix>
+					</category>
+					<category name="0.25">
+						<hotfix name="Name" package="GD_Sage_CorrosiveFanBoat">
+							<code profiles="">set GD_Sage_CorrosiveFanBoat.Archetype.Vehicle_CorrosiveFanBoat DrawScale 0.25</code>
+						</hotfix>
+					</category>
+					<category name="0.15">
+						<hotfix name="Name" package="GD_Sage_CorrosiveFanBoat">
+							<code profiles="">set GD_Sage_CorrosiveFanBoat.Archetype.Vehicle_CorrosiveFanBoat DrawScale 0.15</code>
+						</hotfix>
+					</category>
+					<category name="0.05">
+						<hotfix name="Name" package="GD_Sage_CorrosiveFanBoat">
+							<code profiles="">set GD_Sage_CorrosiveFanBoat.Archetype.Vehicle_CorrosiveFanBoat DrawScale 0.05</code>
+						</hotfix>
+					</category>
+				</category>
+				<category name="Tiny Incendiary Fan Boat" MUT="true">
+					<category name="0.85">
+						<hotfix name="Name" package="GD_Sage_IncendiaryFanBoat">
+							<code profiles="">set GD_Sage_IncendiaryFanBoat.Archetype.Vehicle_IncendiaryFanBoat DrawScale 0.85</code>
+						</hotfix>
+					</category>
+					<category name="0.75">
+						<hotfix name="Name" package="GD_Sage_IncendiaryFanBoat">
+							<code profiles="">set GD_Sage_IncendiaryFanBoat.Archetype.Vehicle_IncendiaryFanBoat DrawScale 0.75</code>
+						</hotfix>
+					</category>
+					<category name="0.65">
+						<hotfix name="Name" package="GD_Sage_IncendiaryFanBoat">
+							<code profiles="">set GD_Sage_IncendiaryFanBoat.Archetype.Vehicle_IncendiaryFanBoat DrawScale 0.65</code>
+						</hotfix>
+					</category>
+					<category name="0.55">
+						<hotfix name="Name" package="GD_Sage_IncendiaryFanBoat">
+							<code profiles="">set GD_Sage_IncendiaryFanBoat.Archetype.Vehicle_IncendiaryFanBoat DrawScale 0.55</code>
+						</hotfix>
+					</category>
+					<category name="0.45">
+						<hotfix name="Name" package="GD_Sage_IncendiaryFanBoat">
+							<code profiles="">set GD_Sage_IncendiaryFanBoat.Archetype.Vehicle_IncendiaryFanBoat DrawScale 0.45</code>
+						</hotfix>
+					</category>
+					<category name="0.35">
+						<hotfix name="Name" package="GD_Sage_IncendiaryFanBoat">
+							<code profiles="">set GD_Sage_IncendiaryFanBoat.Archetype.Vehicle_IncendiaryFanBoat DrawScale 0.35</code>
+						</hotfix>
+					</category>
+					<category name="0.25">
+						<hotfix name="Name" package="GD_Sage_IncendiaryFanBoat">
+							<code profiles="">set GD_Sage_IncendiaryFanBoat.Archetype.Vehicle_IncendiaryFanBoat DrawScale 0.25</code>
+						</hotfix>
+					</category>
+					<category name="0.15">
+						<hotfix name="Name" package="GD_Sage_IncendiaryFanBoat">
+							<code profiles="">set GD_Sage_IncendiaryFanBoat.Archetype.Vehicle_IncendiaryFanBoat DrawScale 0.15</code>
+						</hotfix>
+					</category>
+					<category name="0.05">
+						<hotfix name="Name" package="GD_Sage_IncendiaryFanBoat">
+							<code profiles="">set GD_Sage_IncendiaryFanBoat.Archetype.Vehicle_IncendiaryFanBoat DrawScale 0.05</code>
+						</hotfix>
+					</category>
+				</category>
+				<category name="Tiny Shock Fan Boat" MUT="true">
+					<category name="0.85">
+						<hotfix name="Name" package="GD_Sage_ShockFanBoat">
+							<code profiles="">set GD_Sage_ShockFanBoat.Archetype.Vehicle_ShockFanBoat DrawScale 0.85</code>
+						</hotfix>
+					</category>
+					<category name="0.75">
+						<hotfix name="Name" package="GD_Sage_ShockFanBoat">
+							<code profiles="">set GD_Sage_ShockFanBoat.Archetype.Vehicle_ShockFanBoat DrawScale 0.75</code>
+						</hotfix>
+					</category>
+					<category name="0.65">
+						<hotfix name="Name" package="GD_Sage_ShockFanBoat">
+							<code profiles="">set GD_Sage_ShockFanBoat.Archetype.Vehicle_ShockFanBoat DrawScale 0.65</code>
+						</hotfix>
+					</category>
+					<category name="0.55">
+						<hotfix name="Name" package="GD_Sage_ShockFanBoat">
+							<code profiles="">set GD_Sage_ShockFanBoat.Archetype.Vehicle_ShockFanBoat DrawScale 0.55</code>
+						</hotfix>
+					</category>
+					<category name="0.45">
+						<hotfix name="Name" package="GD_Sage_ShockFanBoat">
+							<code profiles="">set GD_Sage_ShockFanBoat.Archetype.Vehicle_ShockFanBoat DrawScale 0.45</code>
+						</hotfix>
+					</category>
+					<category name="0.35">
+						<hotfix name="Name" package="GD_Sage_ShockFanBoat">
+							<code profiles="">set GD_Sage_ShockFanBoat.Archetype.Vehicle_ShockFanBoat DrawScale 0.35</code>
+						</hotfix>
+					</category>
+					<category name="0.25">
+						<hotfix name="Name" package="GD_Sage_ShockFanBoat">
+							<code profiles="">set GD_Sage_ShockFanBoat.Archetype.Vehicle_ShockFanBoat DrawScale 0.25</code>
+						</hotfix>
+					</category>
+					<category name="0.15">
+						<hotfix name="Name" package="GD_Sage_ShockFanBoat">
+							<code profiles="">set GD_Sage_ShockFanBoat.Archetype.Vehicle_ShockFanBoat DrawScale 0.15</code>
+						</hotfix>
+					</category>
+					<category name="0.05">
+						<hotfix name="Name" package="GD_Sage_ShockFanBoat">
+							<code profiles="">set GD_Sage_ShockFanBoat.Archetype.Vehicle_ShockFanBoat DrawScale 0.05</code>
+						</hotfix>
+					</category>
+				</category>
+			</category>
+		</category>
+	</body>
+</BLCMM>
+
+#Commands:
+set VehicleFamilyDefinition RequiredTags (EVSSAVAIL_BL2Main,EVSSAVAIL_Land)
+set LevelTravelStationDefinition bAllowVehiclesToThisStation True
+set WillowGame.VehicleSpawnStationGFxMovie SpawnVehicleLabel CLAIM VEHICLE
+set WillowGame.VehicleSpawnStationGFxMovie RespawnVehicleLabel REQUEST VEHICLE
+set WillowGame.VehicleSpawnStationGFxMovie TeleportLabel ENTER VEHICLE
+set WillowGame.VehicleSpawnStationGFxMovie NoSkinAvailableLabel NO PAINT JOBS ARE AVAILABLE
+set WillowGame.VehicleSpawnStationGFxMovie NoSkinSelectedLabel NO PAINT JOB IS SELECTED
+set WillowGame.VehicleSpawnStationGFxMovie UnlockedText Paint Jobs:
+
+#Hotfixes:
+set Transient.SparkServiceConfiguration_6 Keys ("SparkLevelPatchEntry-GBX_fixes1","SparkLevelPatchEntry-GBX_fixes2","SparkLevelPatchEntry-GBX_fixes3","SparkLevelPatchEntry-GBX_fixes4","SparkLevelPatchEntry-GBX_fixes5","SparkLevelPatchEntry-GBX_Fixes6","SparkLevelPatchEntry-GBX_Fixes7","SparkLevelPatchEntry-GBX_Fixes8","SparkLevelPatchEntry-GBX_Fixes9","SparkLevelPatchEntry-GBX_fixes10","SparkLevelPatchEntry-GBX_fixes11","SparkLevelPatchEntry-GBX_fixes12","SparkLevelPatchEntry-GBX_fixes13","SparkLevelPatchEntry-GBX_fixes14","SparkOnDemandPatchEntry-GBX_fixes15","SparkOnDemandPatchEntry-GBX_fixes16","SparkOnDemandPatchEntry-GBX_fixes17","SparkOnDemandPatchEntry-GBX_fixes18","SparkOnDemandPatchEntry-GBX_fixes19","SparkPatchEntry-GBX_fixes20","SparkPatchEntry-GBX_fixes21","SparkPatchEntry-GBX_fixes22","SparkPatchEntry-GBX_fixes23","SparkLevelPatchEntry-Name1","SparkLevelPatchEntry-Name2","SparkLevelPatchEntry-Name3","SparkLevelPatchEntry-Name4","SparkLevelPatchEntry-Name5","SparkLevelPatchEntry-Name6","SparkLevelPatchEntry-Name7","SparkLevelPatchEntry-Name8","SparkLevelPatchEntry-Name9","SparkLevelPatchEntry-Name10","SparkLevelPatchEntry-Name11","SparkLevelPatchEntry-Name12","SparkLevelPatchEntry-Name13","SparkLevelPatchEntry-Name14","SparkLevelPatchEntry-Name15","SparkLevelPatchEntry-Name16","SparkLevelPatchEntry-Name17","SparkLevelPatchEntry-Name18","SparkLevelPatchEntry-Name19","SparkLevelPatchEntry-Name20","SparkLevelPatchEntry-Name21","SparkLevelPatchEntry-Name22","SparkLevelPatchEntry-Name23","SparkLevelPatchEntry-Name24","SparkLevelPatchEntry-Name25","SparkLevelPatchEntry-Name26","SparkLevelPatchEntry-Name27","SparkLevelPatchEntry-Name28","SparkLevelPatchEntry-Name29","SparkLevelPatchEntry-Name30","SparkLevelPatchEntry-Name31","SparkLevelPatchEntry-Name32","SparkLevelPatchEntry-Name33","SparkLevelPatchEntry-Name34","SparkLevelPatchEntry-Name35","SparkLevelPatchEntry-Name36","SparkLevelPatchEntry-Name37","SparkLevelPatchEntry-Name38","SparkLevelPatchEntry-Name39","SparkLevelPatchEntry-Name40","SparkLevelPatchEntry-Name41","SparkLevelPatchEntry-Name42","SparkOnDemandPatchEntry-Name43","SparkOnDemandPatchEntry-Name44","SparkOnDemandPatchEntry-Name45","SparkOnDemandPatchEntry-Name46","SparkOnDemandPatchEntry-Name47","SparkOnDemandPatchEntry-Name48","SparkOnDemandPatchEntry-Name49","SparkOnDemandPatchEntry-Name50","SparkOnDemandPatchEntry-Name51","SparkOnDemandPatchEntry-Name52")
+set Transient.SparkServiceConfiguration_6 Values (",GD_Balance.WeightingPlayerCount.BugmorphCocoon_PerPlayers_Phase1,ConditionalInitialization.ConditionalExpressionList[4].BaseValueIfTrue.BaseValueConstant,0.700000,.8",",GD_Balance.WeightingPlayerCount.BugmorphCocoon_PerPlayers_Phase2,ConditionalInitialization.ConditionalExpressionList[4].BaseValueIfTrue.BaseValueConstant,0.400000,.5",",GD_Balance.WeightingPlayerCount.BugmorphCocoon_PerPlayers_Phase3,ConditionalInitialization.ConditionalExpressionList[4].BaseValueIfTrue.BaseValueConstant,0.200000,.3",",GD_Balance.WeightingPlayerCount.BugmorphCocoon_PerPlayers_Phase4,ConditionalInitialization.ConditionalExpressionList[4].BaseValueIfTrue.BaseValueConstant,0.100000,.2",",GD_Balance.WeightingPlayerCount.BugmorphCocoon_PerPlayers_Phase5,ConditionalInitialization.ConditionalExpressionList[4].BaseValueIfTrue.BaseValueConstant,0.075000,.1","SouthpawFactory_P,GD_Population_Marauder.Balance.Unique.PawnBalance_Assassin1,DefaultItemPoolList[3].PoolProbability.BaseValueScaleConstant,0.250000,1","SouthpawFactory_P,GD_Population_Nomad.Balance.Unique.PawnBalance_Assassin2,DefaultItemPoolList[4].PoolProbability.BaseValueScaleConstant,0.250000,1","SouthpawFactory_P,GD_Population_Psycho.Balance.Unique.PawnBalance_Assassin3,DefaultItemPoolList[1].PoolProbability.BaseValueScaleConstant,0.250000,1","SouthpawFactory_P,GD_Population_Rat.Balance.Unique.PawnBalance_Assassin4,DefaultItemPoolList[3].PoolProbability.BaseValueScaleConstant,0.250000,1",",GD_Sage_Rare_Scaylion.Population.PawnBalance_Sage_Rare_Scaylion,DefaultItemPoolList[1].PoolProbability.BaseValueScaleConstant,1.000000,100",",GD_Sage_Rare_Drifter.Balance.PawnBalance_Sage_Rare_Drifter,DefaultItemPoolList[0].PoolProbability.BaseValueScaleConstant,1.000000,100",",GD_Sage_Rare_Rhino.Population.PawnBalance_Sage_Rare_Rhino,DefaultItemPoolList[1].PoolProbability.BaseValueScaleConstant,1.000000,100",",GD_Sage_Rare_Skag.Population.PawnBalance_Sage_Rare_Skag,DefaultItemPoolList[1].PoolProbability.BaseValueScaleConstant,1.000000,100",",GD_Sage_Rare_Spore.Population.PawnBalance_Sage_Rare_Spore,DefaultItemPoolList[0].PoolProbability.BaseValueScaleConstant,1.000000,100","GD_Assassin_Streaming,GD_Assassin_Skills.Sniping.Velocity,SkillEffectDefinitions[0].ModifierType,MT_PostAdd,MT_Scale","GD_Tulip_Mechro_Streaming,GD_Tulip_Mechromancer_Skills.LittleBigTrouble.WiresDontTalk,SkillEffectDefinitions,,((AttributeToModify=D_Attributes.DamageTypeModifers.InstigatedShockDamageModifier,bIncludeDuelingTargets=False,bIncludeSelfAsTarget=False,bOnlyEffectTargetsInRange=False,bExcludeNonPlayerCharacters=False,EffectTarget=TARGET_Self,TargetInstanceDataName=,TargetCriteria=CRITERIA_None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.030000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),GradeToStartApplyingEffect=1,PerGradeUpgradeInterval=1,PerGradeUpgrade=(BaseValueConstant=0.030000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),BonusUpgradeList=),(AttributeToModify=D_Attributes.DamageTypeModifers.InstigatedShockStatusDamageModifier,bIncludeDuelingTargets=False,bIncludeSelfAsTarget=False,bOnlyEffectTargetsInRange=False,bExcludeNonPlayerCharacters=False,EffectTarget=TARGET_Self,TargetInstanceDataName=,TargetCriteria=CRITERIA_None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.030000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),GradeToStartApplyingEffect=1,PerGradeUpgradeInterval=1,PerGradeUpgrade=(BaseValueConstant=0.030000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),BonusUpgradeList=))","GD_Siren_Streaming,GD_Siren_Skills.Misc.Init_BlightPhoenix_DamageCalc_Part2,ValueFormula.Level.InitializationDefinition,AttributeInitializationDefinition'GD_Balance_HealthAndDamage.HealthAndDamage.Init_PlayerMeleeDamage',AttributeInitializationDefinition'GD_Balance_HealthAndDamage.HealthAndDamage.Init_PlayerSkillDamage'","GD_Siren_Streaming,GD_Siren_Skills.Misc.Init_BlightPhoenix_DamageCalc_Part2,ValueFormula.Level.BaseValueScaleConstant,1.000000,3.5","GD_Assassin_Streaming,GD_Assassin_Skills.Misc.Att_DeathMark_BonusDamage,BaseValue.BaseValueConstant,0.200000,.8","GD_Itempools.Runnables.Pool_FourAssassins,BalancedItems[1].Probability.InitializationDefinition,None,GD_Balance.Weighting.Weight_1_Common","GD_Shields.Projectiles.Proj_LegendaryBoosterShield:BehaviorProviderDefinition_1.Behavior_Explode_140,BehaviorSequences[0].BehaviorData2[7].Behavior.StatusEffectDamage.BaseValueAttribute,None,D_Attributes.Projectile.ProjectileDamage","GD_Shields.Projectiles.Proj_LegendaryBoosterShield:BehaviorProviderDefinition_1.Behavior_Explode_140,BehaviorSequences[0].BehaviorData2[7].Behavior.StatusEffectDamage.BaseValueScaleConstant,1.000000,.25","GD_Shields.Projectiles.Proj_LegendaryBoosterShield:BehaviorProviderDefinition_1.Behavior_Explode_140,BehaviorSequences[0].BehaviorData2[7].Behavior.StatusEffectChance.BaseValueConstant,1.000000,20",",GD_OrchidPackageDef.Vehicles.VehicleFamily_Hovercraft,VehicleUIDefinitions,,(VSSUIDefinition'GD_Globals.VehicleSpawnStation.VSSUI_CatapultTechnical',VSSUIDefinition'GD_Globals.VehicleSpawnStation.VSSUI_SawBladeTechnical',VSSUIDefinition'GD_OrchidPackageDef.Vehicles.VSSUI_HarpoonHovercraft',VSSUIDefinition'GD_OrchidPackageDef.Vehicles.VSSUI_SawBladeHovercraft',VSSUIDefinition'GD_OrchidPackageDef.Vehicles.VSSUI_RocketHovercraft',VSSUIDefinition'GD_SagePackageDef.Vehicles.VSSUI_ShockFanBoat',VSSUIDefinition'GD_SagePackageDef.Vehicles.VSSUI_CorrosiveFanBoat',VSSUIDefinition'GD_SagePackageDef.Vehicles.VSSUI_IncendiaryFanBoat',VSSUIDefinition'GD_Globals.VehicleSpawnStation.VSSUI_MGRunner',VSSUIDefinition'GD_Globals.VehicleSpawnStation.VSSUI_RocketRunner')",",Orchid_UI_VehicleSpawnStation.VehicleSpawnStation_Definition,SupportedTags,,(EVSSAVAIL_BL2Main,EVSSAVAIL_Land)",",Orchid_UI_VehicleSpawnStation.VehicleSpawnStation_Definition,RequiredTags,,(EVSSAVAIL_BL2Main,EVSSAVAIL_Land)",",GD_SagePackageDef.Vehicles.VehicleFamily_FanBoat,VehicleUIDefinitions,,(VSSUIDefinition'GD_Globals.VehicleSpawnStation.VSSUI_CatapultTechnical',VSSUIDefinition'GD_Globals.VehicleSpawnStation.VSSUI_SawBladeTechnical',VSSUIDefinition'GD_OrchidPackageDef.Vehicles.VSSUI_HarpoonHovercraft',VSSUIDefinition'GD_OrchidPackageDef.Vehicles.VSSUI_SawBladeHovercraft',VSSUIDefinition'GD_OrchidPackageDef.Vehicles.VSSUI_RocketHovercraft',VSSUIDefinition'GD_SagePackageDef.Vehicles.VSSUI_ShockFanBoat',VSSUIDefinition'GD_SagePackageDef.Vehicles.VSSUI_CorrosiveFanBoat',VSSUIDefinition'GD_SagePackageDef.Vehicles.VSSUI_IncendiaryFanBoat',VSSUIDefinition'GD_Globals.VehicleSpawnStation.VSSUI_MGRunner',VSSUIDefinition'GD_Globals.VehicleSpawnStation.VSSUI_RocketRunner')",",Sage_UI_VehicleSpawnStation.VehicleSpawnStation_Definition,SupportedTags,,(EVSSAVAIL_BL2Main,EVSSAVAIL_Land)",",Sage_UI_VehicleSpawnStation.VehicleSpawnStation_Definition,RequiredTags,,(EVSSAVAIL_BL2Main,EVSSAVAIL_Land)",",GD_Globals.VehicleSpawnStation.VehicleFamily_BanditTechnical,VehicleUIDefinitions,,(VSSUIDefinition'GD_Globals.VehicleSpawnStation.VSSUI_CatapultTechnical',VSSUIDefinition'GD_Globals.VehicleSpawnStation.VSSUI_SawBladeTechnical',VSSUIDefinition'GD_OrchidPackageDef.Vehicles.VSSUI_HarpoonHovercraft',VSSUIDefinition'GD_OrchidPackageDef.Vehicles.VSSUI_SawBladeHovercraft',VSSUIDefinition'GD_OrchidPackageDef.Vehicles.VSSUI_RocketHovercraft',VSSUIDefinition'GD_SagePackageDef.Vehicles.VSSUI_ShockFanBoat',VSSUIDefinition'GD_SagePackageDef.Vehicles.VSSUI_CorrosiveFanBoat',VSSUIDefinition'GD_SagePackageDef.Vehicles.VSSUI_IncendiaryFanBoat',VSSUIDefinition'GD_Globals.VehicleSpawnStation.VSSUI_MGRunner',VSSUIDefinition'GD_Globals.VehicleSpawnStation.VSSUI_RocketRunner')",",GD_Globals.VehicleSpawnStation.VehicleFamily_Runner,VehicleUIDefinitions,,(VSSUIDefinition'GD_Globals.VehicleSpawnStation.VSSUI_CatapultTechnical',VSSUIDefinition'GD_Globals.VehicleSpawnStation.VSSUI_SawBladeTechnical',VSSUIDefinition'GD_OrchidPackageDef.Vehicles.VSSUI_HarpoonHovercraft',VSSUIDefinition'GD_OrchidPackageDef.Vehicles.VSSUI_SawBladeHovercraft',VSSUIDefinition'GD_OrchidPackageDef.Vehicles.VSSUI_RocketHovercraft',VSSUIDefinition'GD_SagePackageDef.Vehicles.VSSUI_ShockFanBoat',VSSUIDefinition'GD_SagePackageDef.Vehicles.VSSUI_CorrosiveFanBoat',VSSUIDefinition'GD_SagePackageDef.Vehicles.VSSUI_IncendiaryFanBoat',VSSUIDefinition'GD_Globals.VehicleSpawnStation.VSSUI_MGRunner',VSSUIDefinition'GD_Globals.VehicleSpawnStation.VSSUI_RocketRunner')",",UI_VehicleSpawnStation.VehicleSpawnStation_Definition,SupportedTags,,(EVSSAVAIL_BL2Main,EVSSAVAIL_Land)",",UI_VehicleSpawnStation.VehicleSpawnStation_Definition,RequiredTags,,(EVSSAVAIL_BL2Main,EVSSAVAIL_Land)",",GD_Globals.General.Globals,VehicleFamilyDefinitions,,(VehicleFamilyDefinition'GD_Globals.VehicleSpawnStation.VehicleFamily_BanditTechnical',VehicleFamilyDefinition'GD_Globals.VehicleSpawnStation.VehicleFamily_Runner',VehicleFamilyDefinition'GD_OrchidPackageDef.Vehicles.VehicleFamily_Hovercraft',VehicleFamilyDefinition'GD_SagePackageDef.Vehicles.VehicleFamily_FanBoat')",",GD_OrchidPackageDef.Vehicles.VSSUI_HarpoonHovercraft,RequiredTags,,(EVSSAVAIL_BL2Main,EVSSAVAIL_Land)",",GD_OrchidPackageDef.Vehicles.VSSUI_RocketHovercraft,RequiredTags,,(EVSSAVAIL_BL2Main,EVSSAVAIL_Land)",",GD_OrchidPackageDef.Vehicles.VSSUI_SawBladeHovercraft,RequiredTags,,(EVSSAVAIL_BL2Main,EVSSAVAIL_Land)",",GD_SagePackageDef.Vehicles.VSSUI_CorrosiveFanBoat,RequiredTags,,(EVSSAVAIL_BL2Main,EVSSAVAIL_Land)",",GD_SagePackageDef.Vehicles.VSSUI_IncendiaryFanBoat,RequiredTags,,(EVSSAVAIL_BL2Main,EVSSAVAIL_Land)",",GD_SagePackageDef.Vehicles.VSSUI_ShockFanBoat,RequiredTags,,(EVSSAVAIL_BL2Main,EVSSAVAIL_Land)",",GD_Globals.VehicleSpawnStation.VSSUI_CatapultTechnical,RequiredTags,,(EVSSAVAIL_BL2Main,EVSSAVAIL_Land)",",GD_Globals.VehicleSpawnStation.VSSUI_SawBladeTechnical,RequiredTags,,(EVSSAVAIL_BL2Main,EVSSAVAIL_Land)",",GD_Globals.VehicleSpawnStation.VSSUI_RocketRunner,RequiredTags,,(EVSSAVAIL_BL2Main,EVSSAVAIL_Land)",",GD_Globals.VehicleSpawnStation.VSSUI_MGRunner,RequiredTags,,(EVSSAVAIL_BL2Main,EVSSAVAIL_Land)",",GD_OrchidPackageDef.Vehicles.VehicleFamily_Hovercraft,FamilyName,,<font size=\"70\"> <font color=\"#F57500\"> <font size=\"70\"> <font color=\"#F57500\"><font size=\"70\"> <font color=\"#F57500\"> SANDSKIFF",",GD_SagePackageDef.Vehicles.VehicleFamily_FanBoat,FamilyName,,<font size=\"70\"> <font color=\"#F57500\"> <font size=\"70\"> <font color=\"#F57500\"> <font size=\"70\"> <font color=\"#F57500\"> FAN BOAT",",GD_Globals.VehicleSpawnStation.VehicleFamily_BanditTechnical,FamilyName,,<font size=\"70\"> <font color=\"#F57500\"> <font size=\"45\"> <font color=\"#F57500\"> <font size=\"70\"> <font color=\"#F57500\"> TECHNICAL",",GD_Globals.VehicleSpawnStation.VehicleFamily_Runner,FamilyName,,<font size=\"70\"> <font color=\"#F57500\"> <font size=\"70\"> <font color=\"#F57500\"> <font size=\"70\"> <font color=\"#F57500\"> <font color=\"#F57500\"> <font size=\"70\"><font color=\"#F57500\">RUNNER",",GD_OrchidPackageDef.Vehicles.VSSUI_HarpoonHovercraft,VehicleName,,Harpoon Sandskiff",",GD_OrchidPackageDef.Vehicles.VSSUI_RocketHovercraft,VehicleName,,Rocket Sandskiff",",GD_OrchidPackageDef.Vehicles.VSSUI_SawBladeHovercraft,VehicleName,,Sawblade Sandskiff",",GD_Globals.VehicleSpawnStation.VSSUI_MGRunner,VehicleName,,Machine Gun Runner",",GD_Globals.VehicleSpawnStation.VSSUI_RocketRunner,VehicleName,,Rocket Launcher Runner",",GD_OrchidPackageDef.Vehicles.VehicleFamily_Hovercraft,VehiclePreviewClip,,SwfMovie'Orchid_UI_VehicleIcons.VehicleIcons_HarpoonHovercraft'",",GD_SagePackageDef.Vehicles.VehicleFamily_FanBoat,VehiclePreviewClip,,SwfMovie'Sage_UI_VehicleIcons.VehicleIcons_IncendiaryFanBoat'",",GD_Globals.VehicleSpawnStation.VehicleFamily_BanditTechnical,VehiclePreviewClip,,SwfMovie'UI_VehicleIcons.VehicleIcons_BanditTechnicalCatapult'",",GD_Globals.VehicleSpawnStation.VehicleFamily_Runner,VehiclePreviewClip,,SwfMovie'UI_VehicleIcons.VehicleIcons_BanditTechnicalMachineGun'",",UI_VehicleSpawnStation.VehicleSpawnStation_Definition,View3DRot,,(Pitch=0,Yaw=0,Roll=0)",",UI_VehicleSpawnStation.VehicleSpawnStation_Definition,View3DFOV,,1",",Orchid_UI_VehicleSpawnStation.VehicleSpawnStation_Definition,View3DRot,,(Pitch=0,Yaw=0,Roll=0)",",Orchid_UI_VehicleSpawnStation.VehicleSpawnStation_Definition,View3DFOV,,1",",Sage_UI_VehicleSpawnStation.VehicleSpawnStation_Definition,View3DRot,,(Pitch=0,Yaw=0,Roll=0)",",Sage_UI_VehicleSpawnStation.VehicleSpawnStation_Definition,View3DFOV,,1",",WillowGame.Default__VehicleSpawnStationGFxDefinition,View3DRot,,(Pitch=0,Yaw=0,Roll=0)",",WillowGame.Default__VehicleSpawnStationGFxDefinition,View3DFOV,,1","GD_BTech_Streaming,GD_BTech_Streaming.ChassisDefinition.Chassis_CatapultTechnical,AllowPawnsToStandOnTopOfVehicle,,True","GD_BTech_Streaming,GD_BTech_Streaming.ChassisDefinition.Chassis_SawBladeTechnical,AllowPawnsToStandOnTopOfVehicle,,True","GD_Orchid_HarpoonHovercraft,GD_Orchid_Hovercraft.Vehicle.Chassis_Hovercraft,AllowPawnsToStandOnTopOfVehicle,,True","GD_Orchid_RocketHovercraft,GD_Orchid_Hovercraft.Vehicle.Chassis_Hovercraft,AllowPawnsToStandOnTopOfVehicle,,True","GD_Orchid_SawHovercraft,GD_Orchid_Hovercraft.Vehicle.Chassis_Hovercraft,AllowPawnsToStandOnTopOfVehicle,,True","GD_Runner_Streaming,GD_Runner_Streaming.Archetype.Chassis_LightRunnerMG,AllowPawnsToStandOnTopOfVehicle,,True","GD_Runner_Streaming,GD_Runner_Streaming.Archetype.Chassis_RocketRunner,AllowPawnsToStandOnTopOfVehicle,,True","GD_Sage_CorrosiveFanBoat,GD_Sage_CorrosiveFanBoat.ChassisDefinition.Chassis_CorrosiveFanBoat,AllowPawnsToStandOnTopOfVehicle,,True","GD_Sage_IncendiaryFanBoat,GD_Sage_IncendiaryFanBoat.ChassisDefinition.Chassis_IncendiaryFanBoat,AllowPawnsToStandOnTopOfVehicle,,True","GD_Sage_ShockFanBoat,GD_Sage_ShockFanBoat.ChassisDefinition.Chassis_ShockFanBoat,AllowPawnsToStandOnTopOfVehicle,,True")
+

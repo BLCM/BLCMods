@@ -15,6 +15,6 @@ It changes the rolling thunder to make it decent (yes, really).
 Here is what I changed :
 - It no longer stops and explodes when an ennemy is hit
 - It is no longer a MIRV grenade, that means it only explode once at the end
-- It has 50% mode damages
+- It has 50% more damages
 - Its blast radius is bigger (something like 200 more)
 - It has a fixed fuse time of 100 secondes (but it doesn't actually matter as the bouncing duration hasn't changed)

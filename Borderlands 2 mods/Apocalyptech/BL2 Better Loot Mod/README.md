@@ -339,6 +339,7 @@ Bugs
 TODO
 ====
 
+* Config option to specify the rarity of gear found in lockers?
 * Can we increase boss drop counts depending on player count?
 * Untested components from Torgue DLC *(I'm afraid that's my least favorite
   DLC, to the point of not really liking it much, so I suspect that these
@@ -426,7 +427,11 @@ for the full text.
 Changelog
 =========
 
-**v1.3.1**, August 24, 2018:
+**v1.3.2**, November 6, 2018:
+ * Fixed a small typo which would otherwise cause an error to be flagged in a
+   forthcoming version of BLCMM.  (No actual functional changes, though.)
+
+**v1.3.1**, August 24, 2018 (commit `fa26171a4536f54becc59ef426333ebfdd8db070`):
  * The Ogre is now properly considered a Legendary, not a Unique, and will
    be in the legendary pool regardless of whether you have Uniques added
    or not.

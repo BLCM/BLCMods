@@ -1,0 +1,359 @@
+<BLCMM v="1">
+#<!!!You opened a file saved with BLCMM in FilterTool. Please update to BLCMM to properly open this file!!!>
+	<head>
+		<type name="BL2" offline="false"/>
+		<profiles>
+			<profile name="default" current="true"/>
+		</profiles>
+	</head>
+	<body>
+		<category name="Text Fixes">
+			<comment>By apple1417</comment>
+			<comment>Fixes various inconsistencies in text across the game</comment>
+			<comment>This is probably incomplete, feel free to message me with other inconsistencies</comment>
+			<comment>In case of conflicts let any other mods overwrite this one</comment>
+			<category name="Attributes">
+				<category name="Critical Hit Damage" MUT="true">
+					<category name="Critical Hit Damage">
+						<code profiles="default">set AttributePresentationDefinition'GD_AttributePresentation.ClassMods_Only.AttrPresent_PlayerCriticalHitBonus' Description Critical Hit Damage</code>
+					</category>
+					<category name="Critical Damage">
+						<code profiles="">set AttributePresentationDefinition'GD_AttributePresentation.CriticalHits.AttrPresent_PlayerCriticalHitBonus' Description Critical Damage</code>
+					</category>
+				</category>
+				<category name="Deathtrap Max Health" MUT="true">
+					<category name="Deathtrap Max Health">
+						<hotfix name="TextFixes" package="GD_Tulip_Mechro_Streaming">
+							<code profiles="default">set AttributePresentationDefinition'GD_Tulip_Mechromancer_Skills.BestFriendsForever.TheBetterHalf:AttributePresentationDefinition_1' Description Deathtrap Max Health: $NUMBER$</code>
+						</hotfix>
+					</category>
+					<category name="Deathrap Max Health">
+						<hotfix name="TextFixes" package="GD_Tulip_Mechro_Streaming">
+							<code profiles="">set AttributePresentationDefinition'GD_Tulip_Mechromancer_Skills.BestFriendsForever.PotentAsAPony:AttributePresentationDefinition_1' Description Deathrap Max Health: $NUMBER$</code>
+						</hotfix>
+					</category>
+				</category>
+				<category name="Elemental Effect Damage" MUT="true">
+					<category name="Elemental Effect Damage">
+						<code profiles="default">set AttributePresentationDefinition'GD_Tulip_ClassMods.Att_Presentations.AttrPresent_InstigatedStatusEffectDamageModifier_Tulip' Description Elemental Effect Damage</code>
+					</category>
+					<category name="Elemental Effect Dmg">
+						<code profiles="">set AttributePresentationDefinition'GD_AttributePresentation.Damage.AttrPresent_InstigatedStatusEffectDamageModifier' Description Elemental Effect Dmg</code>
+						<code profiles="">set AttributePresentationDefinition'GD_Lobelia_ClassMods.AttributePresentations.AttrPresent_Lobellia_InstigatedStatusEffectDamageModifier' Description Elemental Effect Dmg</code>
+					</category>
+				</category>
+				<category name="Fight For Your Life Time" MUT="true">
+					<category name="Fight For Your Life Time">
+						<code profiles="default">set AttributePresentationDefinition'GD_Orchid_Artifacts.Attributes.AttrPresent_ArtifactTimeToBeRevivedMultiplier' Description Fight For Your Life Time</code>
+					</category>
+					<category name="Fight for Your Life Time">
+						<code profiles="">set AttributePresentationDefinition'GD_AttributePresentation.Artifacts.AttrPresent_ArtifactTimeToBeRevivedMultiplier' Description Fight for Your Life Time</code>
+					</category>
+				</category>
+				<category name="Health Regen" MUT="true">
+					<category name="Health Regen">
+						<code profiles="default">set AttributePresentationDefinition'GD_AttributePresentation.Health.AttrPresent_HealthActiveRegenerationRate' Description Health Regen</code>
+						<code profiles="default">set AttributePresentationDefinition'GD_AttributePresentation.Health.AttrPresent_HealthPassiveRegenerationRate' Description Health Regen</code>
+					</category>
+					<category name="Health Regeneration">
+						<code profiles="">set AttributePresentationDefinition'GD_AttributePresentation.Artifacts.AttrPresent_ArtifactHealthRegenPercent' Description Health Regeneration</code>
+						<code profiles="">set AttributePresentationDefinition'GD_AttributePresentation.ClassMods_Only.AttrPresent_HealthOnIdleRegenerationRate' Description Health Regeneration</code>
+					</category>
+					<category name="Health Regen / sec.">
+						<code profiles="">set AttributePresentationDefinition'GD_AttributePresentation.Artifacts.AttrPresent_ArtifactHealthRegenPercent' Description Health Regen / sec.</code>
+						<code profiles="">set AttributePresentationDefinition'GD_AttributePresentation.ClassMods_Only.AttrPresent_HealthOnIdleRegenerationRate' Description Health Regen / sec.</code>
+						<code profiles="">set AttributePresentationDefinition'GD_AttributePresentation.Health.AttrPresent_HealthActiveRegenerationRate' Description Health Regen / sec.</code>
+						<code profiles="">set AttributePresentationDefinition'GD_AttributePresentation.Health.AttrPresent_HealthPassiveRegenerationRate' Description Health Regen / sec.</code>
+					</category>
+					<category name="Health Regeneration / sec.">
+						<code profiles="">set AttributePresentationDefinition'GD_AttributePresentation.Artifacts.AttrPresent_ArtifactHealthRegenPercent' Description Health Regeneration / sec.</code>
+						<code profiles="">set AttributePresentationDefinition'GD_AttributePresentation.ClassMods_Only.AttrPresent_HealthOnIdleRegenerationRate' Description Health Regeneration / sec.</code>
+						<code profiles="">set AttributePresentationDefinition'GD_AttributePresentation.Health.AttrPresent_HealthActiveRegenerationRate' Description Health Regeneration / sec.</code>
+						<code profiles="">set AttributePresentationDefinition'GD_AttributePresentation.Health.AttrPresent_HealthPassiveRegenerationRate' Description Health Regeneration / sec.</code>
+					</category>
+				</category>
+				<category name="Max Health" MUT="true">
+					<category name="Max Health">
+						<code profiles="default">set AttributePresentationDefinition'GD_AttributePresentation.Health.AttrPresent_HealthMaxValue' Description Max Health</code>
+					</category>
+					<category name="Maximum Health">
+						<code profiles="">set AttributePresentationDefinition'GD_AttributePresentation.Artifacts.AttrPresent_ArtifactHealthMaxValue_Player' Description Maximum Health</code>
+						<code profiles="">set AttributePresentationDefinition'GD_AttributePresentation.AttrPresent_HealthMaxValue_Player' Description Maximum Health</code>
+						<code profiles="">set AttributePresentationDefinition'GD_AttributePresentation.ClassMods_Only.AttrPresent_HealthMaxValue_Player' Description Maximum Health</code>
+						<code profiles="">set AttributePresentationDefinition'Transient.AttrPresent_Att_ShieldHealhMaxValue' Description Maximum Health</code>
+					</category>
+				</category>
+				<category name="Rare Loot Chance" MUT="true">
+					<category name="Rare Loot Chance">
+						<code profiles="default">set AttributePresentationDefinition'GD_AttributePresentation.Loot.AttrPresent_AwesomeLevel' Description Rare Loot Chance</code>
+					</category>
+					<category name="Rare Item Chance">
+						<code profiles="">set AttributePresentationDefinition'GD_AttributePresentation.Artifacts.AttrPresent_ArtifactRareWeightModifier' Description Rare Item Chance</code>
+						<code profiles="">set AttributePresentationDefinition'GD_Artifacts.Body.Body_VaultHunter:AttributePresentationDefinition_0' Description Increased chance of enemies dropping [skill]rare items[-skill].</code>
+					</category>
+				</category>
+				<category name="Shield Recharge Delay" MUT="true">
+					<category name="Shield Recharge Delay: $NUMBER$">
+						<hotfix name="TextFixes" package="GD_Lilac_Psycho_Streaming">
+							<code profiles="default">set AttributePresentationDefinition'GD_Lilac_Skills_Mania.Skills.EmbraceThePain:AttributePresentationDefinition_32' Description Shield Recharge Delay: $NUMBER$</code>
+							<code profiles="default">set AttributePresentationDefinition'GD_Lilac_Skills_Mania.Skills.FeedTheMeat:AttributePresentationDefinition_32' Description Shield Recharge Delay: $NUMBER$</code>
+						</hotfix>
+					</category>
+					<category name="Shield Recharge Delay: $NUMBER$ sec.">
+						<hotfix name="TextFixes" package="GD_Siren_Streaming">
+							<code profiles="">set AttributePresentationDefinition'GD_Siren_Skills.Motion.Ward:AttributePresentationDefinition_1' Description Shield Recharge Delay: $NUMBER sec.</code>
+						</hotfix>
+						<hotfix name="TextFixes" package="GD_Soldier_Streaming">
+							<code profiles="">set AttributePresentationDefinition'GD_Soldier_Skills.Guerrilla.Willing:AttributePresentationDefinition_1' Description Shield Recharge Delay: $NUMBER sec.</code>
+						</hotfix>
+						<hotfix name="TextFixes" package="GD_Lilac_Psycho_Streaming">
+							<code profiles="">set AttributePresentationDefinition'GD_Lilac_Skills_Mania.Skills.FeedTheMeat:AttributePresentationDefinition_32' Description Shield Recharge Delay: $NUMBER sec.</code>
+						</hotfix>
+					</category>
+					<category name="Shield Recharge Delay: $NUMBER$ secs">
+						<hotfix name="TextFixes" package="GD_Siren_Streaming">
+							<code profiles="">set AttributePresentationDefinition'GD_Siren_Skills.Motion.Ward:AttributePresentationDefinition_1' Description Shield Recharge Delay: $NUMBER secs</code>
+						</hotfix>
+						<hotfix name="TextFixes" package="GD_Soldier_Streaming">
+							<code profiles="">set AttributePresentationDefinition'GD_Soldier_Skills.Guerrilla.Willing:AttributePresentationDefinition_1' Description Shield Recharge Delay: $NUMBER secs</code>
+						</hotfix>
+						<hotfix name="TextFixes" package="GD_Lilac_Psycho_Streaming">
+							<code profiles="">set AttributePresentationDefinition'GD_Lilac_Skills_Mania.Skills.EmbraceThePain:AttributePresentationDefinition_32' Description Shield Recharge Delay: $NUMBER secs</code>
+						</hotfix>
+					</category>
+				</category>
+				<category name="Shock Damage Resistance" MUT="true">
+					<category name="Shock Damage Resistance">
+						<code profiles="default">set AttributePresentationDefinition'GD_AttributePresentation.ClassMods_Only.AttrPresent_ShockImpactDamageModifier' Description Shock Damage Resistance</code>
+					</category>
+					<category name="Shock Damage Resist">
+						<hotfix name="TextFixes" package="GD_Tulip_Mechro_Streaming">
+							<code profiles="">set AttributePresentationDefinition'GD_Tulip_Mechromancer_Skills.LittleBigTrouble.Myelin:AttributePresentationDefinition_45' Description Shock Damage Resist: $NUMBER$</code>
+						</hotfix>
+					</category>
+				</category>
+			</category>
+			<category name="Skills">
+				<category name="All in the Reflexes" MUT="true">
+					<category name="All in the Reflexes">
+						<code profiles="default">set AttributePresentationDefinition'GD_Aster_ClassMods.Attributes.AttrPresent_AllInTheReflexes' Description All in the Reflexes Skill</code>
+					</category>
+					<category name="All In The Reflexes">
+						<code profiles="">set AttributePresentationDefinition'GD_Lobelia_ClassMods.AttributePresentations.AttrPresent_Lobelia_AllInTheReflexes' Description All In The Reflexes Skill</code>
+						<hotfix name="TextFixes" package="GD_Mercenary_Streaming">
+							<code profiles="">set SkillDefinition'GD_Mercenary_Skills.Rampage.AllInTheReflexes' SkillName All In The Reflexes</code>
+						</hotfix>
+					</category>
+				</category>
+				<category name="Headsh0t" MUT="true">
+					<category name="Headsh0t">
+						<code profiles="default">set AttributePresentationDefinition'GD_AttributePresentation.Skills_Assassin.AttrPresent_HeadShot' Description Headsh0t Skill</code>
+					</category>
+					<category name="HeadSh0t">
+						<hotfix name="TextFixes" package="GD_Assassin_Streaming">
+							<code profiles="">set SkillDefinition'GD_Assassin_Skills.Sniping.HeadShot' SkillName HeadSh0t</code>
+						</hotfix>
+						<code profiles="">set AttributePresentationDefinition'GD_AttributePresentation.Skills_Assassin.AttrPresent_HeadShot' Description HeadSh0t Skill</code>
+						<code profiles="">set AttributePresentationDefinition'GD_AttributePresentation.Skills_Assassin.AttrPresent_BoomHeadShot' Description HeadSh0t Skill</code>
+					</category>
+					<category name="Head Sh0t">
+						<hotfix name="TextFixes" package="GD_Assassin_Streaming">
+							<code profiles="">set SkillDefinition'GD_Assassin_Skills.Sniping.HeadShot' SkillName Head Sh0t</code>
+						</hotfix>
+						<code profiles="">set AttributePresentationDefinition'GD_AttributePresentation.Skills_Assassin.AttrPresent_BoomHeadShot' Description Head Sh0t Skill</code>
+					</category>
+				</category>
+				<category name="Salt the Wound" MUT="true">
+					<category name="Salt the Wound">
+						<code profiles="default">set AttributePresentationDefinition'GD_Aster_ClassMods.Attributes.AttrPresent_SaltTheWound' Description Salt the Wound Skill</code>
+					</category>
+					<category name="Salt The Wound">
+						<code profiles="">set AttributePresentationDefinition'GD_Lilac_ClassMods.Att_Presentations.AttrPresent_SaltTheWound' Description Salt the Wound Skill</code>
+						<hotfix name="TextFixes" package="GD_Lilac_Psycho_Streaming">
+							<code profiles="">set SkillDefinition'GD_Lilac_Skills_Mania.Skills.SaltTheWound' SkillName Salt The Wound</code>
+							<code profiles="">set SkillDefinition'GD_Lilac_Skills_Mania.Skills.SaltTheWound' SkillDescription Taking damage from an enemy while your shield is down adds a stack of [skill]Salt The Wound[-skill]. Increases [skill]Melee[-skill] and [skill]Shotgun Damage[-skill] for each stack accrued. Stacks begin to decay after a short time without taking health damage from enemies.</code>
+							<code profiles="">set SkillDefinition'GD_Lilac_Skills_Mania.Skills.SaltTheWound_Stacks' SkillName SkillName Salt The Wound - Stacks/Feedback</code>
+						</hotfix>
+					</category>
+				</category>
+				<category name="Strength of Five Gorillas" MUT="true">
+					<category name="Strength of Five Gorillas">
+						<code profiles="default">set AttributePresentationDefinition'GD_Tulip_ClassMods.Att_Presentations.AttrPresent_StrengthOf5Gorillas' Description Strength of Five Gorillas Skill</code>
+						<code profiles="default">set AttributePresentationDefinition'GD_Lobelia_ClassMods.AttributePresentations.AttrPresent_Lobelia_StrengthOfFiveGorillas' Description Strength of Five Gorillas Skill</code>
+					</category>
+					<category name="Strength of 5 Gorillas">
+						<hotfix name="TextFixes" package="GD_Tulip_Mechro_Streaming">
+							<code profiles="">set SkillDefinition'GD_Tulip_Mechromancer_Skills.LittleBigTrouble.StrengthOfFiveGorillas' SkillName Strength of 5 Gorillas</code>
+						</hotfix>
+						<code profiles="">set AttributePresentationDefinition'GD_Aster_ClassMods.Attributes.AttrPresent_StrengthOfFiveGorillas' Description Strength of 5 Gorillas Skill</code>
+					</category>
+				</category>
+			</category>
+			<category name="Misc">
+				<category name="Booster Shield Drops" MUT="true">
+					<category name="... player-equipped ...">
+						<code profiles="default">set AttributePresentationDefinition'GD_Shields.Pickups.ShieldBooster_Pickup_Legendary:AttributePresentationDefinition_13' Description Spawned from a player-equipped booster shield.</code>
+					</category>
+					<category name="... player equipped ...">
+						<code profiles="">set AttributePresentationDefinition'GD_HealthDrops.A_Item.ShieldBooster_Pickup:AttributePresentationDefinition_13' Description Spawned from a player equipped booster shield.</code>
+						<code profiles="">set AttributePresentationDefinition'GD_Iris_SeraphItems.Misc.Iris_Seraph_ShieldBooster_Pickup:AttributePresentationDefinition_13' Description Spawned from a player equipped booster shield.</code>
+					</category>
+				</category>
+				<category name="Boll's Audio Logs" MUT="true">
+					<category name="... and part of ...">
+						<hotfix name="TextFixes" level="Ice_P">
+							<code profiles="default">set AttributePresentationDefinition'GD_Z1_InMemoriamData.ItemDefs.ID_EchoRecorder2:AttributePresentationDefinition_0' Description Boll's evidence that Lilith (aka the Firehawk) is still alive and part of Roland's resistance.</code>
+							<code profiles="default">set AttributePresentationDefinition'GD_Z1_InMemoriamData.ItemDefs.ID_EchoRecorder3:AttributePresentationDefinition_1' Description Boll's evidence that Lilith (aka the Firehawk) is still alive and part of Roland's resistance.</code>
+							<code profiles="default">set AttributePresentationDefinition'GD_Z1_InMemoriamData.ItemDefs.ID_MO_InMemoriam_DeadDropEcho:AttributePresentationDefinition_2' Description Boll's evidence that Lilith (aka the Firehawk) is still alive and part of Roland's resistance.</code>
+						</hotfix>
+					</category>
+					<category name="... and is part of ...">
+						<hotfix name="TextFixes" level="Ice_P">
+							<code profiles="">set AttributePresentationDefinition'GD_Z1_InMemoriamData.ItemDefs.ID_DeadDropEcho:AttributePresentationDefinition_0' Description Boll's evidence that Lilith (aka the Firehawk) is still alive and is part of Roland's resistance.</code>
+						</hotfix>
+					</category>
+				</category>
+				<category name="Guerrilla Weapon/Shield/Skill Tree" MUT="true">
+					<category name="Guerrilla">
+						<code profiles="default">set ItemNamePartDefinition'GD_Shields.Prefixes.Prefix_Special_Vladof03' PartName Guerrilla</code>
+					</category>
+					<category name="Guerilla">
+						<hotfix name="TextFixes" package="GD_Soldier_Streaming">
+							<code profiles="">set SkillTreeBranchDefinition'GD_Soldier_Skills.SkillTree.Branch_Guerrilla' BranchName GUERILLA</code>
+						</hotfix>
+						<code profiles="">set WeaponNamePartDefinition'GD_Weap_AssaultRifle.Name.Title_Vladof.Title_Barrel_Jakobs_SlowDamage' PartName Guerilla</code>
+					</category>
+				</category>
+				<category name="Helena Pierce's Audio Logs" MUT="true">
+					<category name="An audio log belonging to Helena Pierce ...">
+						<hotfix name="TextFixes" level="SouthernShelf_P">
+							<code profiles="default">set AttributePresentationDefinition'GD_Z1_HandsomeJackHereData.ItemDefs.ID_Echo:AttributePresentationDefinition_0' Description An audio log belonging to Helena Pierce, former administrator of New Haven.</code>
+						</hotfix>
+					</category>
+					<category name="An audio log recorded by Helena Pierce ...">
+						<hotfix name="TextFixes" level="SouthernShelf_P">
+							<code profiles="">set AttributePresentationDefinition'GD_Z1_HandsomeJackHereData.ItemDefs.ID_MO_HandsomeJackHere_Echo1:AttributePresentationDefinition_0' Description An audio log recorded by Helena Pierce, former administrator of New Haven.</code>
+							<code profiles="">set AttributePresentationDefinition'GD_Z1_HandsomeJackHereData.ItemDefs.ID_MO_HandsomeJackHere_Echo2:AttributePresentationDefinition_1' Description An audio log recorded by Helena Pierce, former administrator of New Haven.</code>
+							<code profiles="">set AttributePresentationDefinition'GD_Z1_HandsomeJackHereData.ItemDefs.ID_MO_HandsomeJackHere_MissionGiver:AttributePresentationDefinition_0' Description An audio log recorded by Helena Pierce, former administrator of New Haven.</code>
+						</hotfix>
+					</category>
+				</category>
+				<category name="Increases Max Health." MUT="true">
+					<category name="Increases Max Health.">
+						<code profiles="default">set AttributePresentationDefinition'GD_Artifacts.Body.Body_Vitality:AttributePresentationDefinition_0' Description Increases Maximum Health.</code>
+						<code profiles="default">set AttributePresentationDefinition'GD_Gladiolus_Artifacts.Body.Body_VitalityStockpile:AttributePresentationDefinition_0' Description Increases Maximum Health and Ammo Capacity.</code>
+					</category>
+					<category name="Increases max health.">
+						<code profiles="">set AttributePresentationDefinition'GD_Artifacts.Body.Body_Vitality:AttributePresentationDefinition_0' Description Increases maximum health.</code>
+						<code profiles="">set AttributePresentationDefinition'GD_Gladiolus_Artifacts.Body.Body_VitalityStockpile:AttributePresentationDefinition_0' Description Increases maximum health and ammo capacity.</code>
+					</category>
+					<category name="Increases Maximum Health.">
+						<code profiles="">set AttributePresentationDefinition'GD_Orchid_Artifacts.Body.Body_SeraphBloodRelic:AttributePresentationDefinition_0' Description Increases Maximum Health.</code>
+						<code profiles="">set AttributePresentationDefinition'GD_Orchid_RaidWeapons.Shield.Anshin.Orchid_Seraph_Anshin_Shield:AttributePresentationDefinition_0' Description Increases Maximum Health.</code>
+						<code profiles="">set AttributePresentationDefinition'GD_Sage_Shields.A_Item_Custom.Shield_Buckler:AttributePresentationDefinition_0' Description Increases Maximum Health</code>
+						<code profiles="">set AttributePresentationDefinition'GD_Shields.A_Item.Shield_Chimera:AttributePresentationDefinition_0' Description Increases Maximum Health.</code>
+						<code profiles="">set AttributePresentationDefinition'GD_Shields.A_Item.Shield_Chimera_05_Legendary:AttributePresentationDefinition_0' Description Increases Maximum Health.</code>
+						<code profiles="">set AttributePresentationDefinition'GD_Artifacts.Body.Body_Vitality:AttributePresentationDefinition_0' Description Increases Maximum Health.</code>
+						<code profiles="">set AttributePresentationDefinition'GD_Gladiolus_Artifacts.Body.Body_VitalityStockpile:AttributePresentationDefinition_0' Description Increases Maximum Health and Ammo Capacity.</code>
+					</category>
+					<category name="Increases maximum health.">
+						<code profiles="">set AttributePresentationDefinition'GD_Orchid_Artifacts.Body.Body_SeraphBloodRelic:AttributePresentationDefinition_0' Description Increases maximum health.</code>
+						<code profiles="">set AttributePresentationDefinition'GD_Orchid_RaidWeapons.Shield.Anshin.Orchid_Seraph_Anshin_Shield:AttributePresentationDefinition_0' Description Increases maximum health.</code>
+						<code profiles="">set AttributePresentationDefinition'GD_Sage_Shields.A_Item_Custom.Shield_Buckler:AttributePresentationDefinition_0' Description Increases maximum health</code>
+						<code profiles="">set AttributePresentationDefinition'GD_Shields.A_Item.Shield_Chimera:AttributePresentationDefinition_0' Description Increases maximum health.</code>
+						<code profiles="">set AttributePresentationDefinition'GD_Shields.A_Item.Shield_Chimera_05_Legendary:AttributePresentationDefinition_0' Description Increases maximum health.</code>
+						<code profiles="">set AttributePresentationDefinition'GD_Artifacts.Body.Body_Vitality:AttributePresentationDefinition_0' Description Increases maximum health.</code>
+						<code profiles="">set AttributePresentationDefinition'GD_Gladiolus_Artifacts.Body.Body_VitalityStockpile:AttributePresentationDefinition_0' Description Increases maximum health and ammo capacity.</code>
+					</category>
+					<category name="Increases Health Statistics.">
+						<code profiles="">set AttributePresentationDefinition'GD_Orchid_Artifacts.Body.Body_SeraphBloodRelic:AttributePresentationDefinition_0' Description Increases Health Statistics.</code>
+						<code profiles="">set AttributePresentationDefinition'GD_Orchid_RaidWeapons.Shield.Anshin.Orchid_Seraph_Anshin_Shield:AttributePresentationDefinition_0' Description Increases Health Statistics.</code>
+						<code profiles="">set AttributePresentationDefinition'GD_Sage_Shields.A_Item_Custom.Shield_Buckler:AttributePresentationDefinition_0' Description Increases Health Statistics</code>
+						<code profiles="">set AttributePresentationDefinition'GD_Shields.A_Item.Shield_Chimera:AttributePresentationDefinition_0' Description Increases Health Statistics.</code>
+						<code profiles="">set AttributePresentationDefinition'GD_Shields.A_Item.Shield_Chimera_05_Legendary:AttributePresentationDefinition_0' Description Increases Health Statistics.</code>
+						<code profiles="">set AttributePresentationDefinition'GD_Artifacts.Body.Body_Vitality:AttributePresentationDefinition_0' Description Increases Health Statistics.</code>
+						<code profiles="">set AttributePresentationDefinition'GD_Gladiolus_Artifacts.Body.Body_VitalityStockpile:AttributePresentationDefinition_0' Description Increases Health Statistics and Ammo Capacity.</code>
+					</category>
+					<category name="Increases health statistics.">
+						<code profiles="">set AttributePresentationDefinition'GD_Orchid_Artifacts.Body.Body_SeraphBloodRelic:AttributePresentationDefinition_0' Description Increases health statistics.</code>
+						<code profiles="">set AttributePresentationDefinition'GD_Orchid_RaidWeapons.Shield.Anshin.Orchid_Seraph_Anshin_Shield:AttributePresentationDefinition_0' Description Increases health statistics.</code>
+						<code profiles="">set AttributePresentationDefinition'GD_Sage_Shields.A_Item_Custom.Shield_Buckler:AttributePresentationDefinition_0' Description Increases health statistics</code>
+						<code profiles="">set AttributePresentationDefinition'GD_Shields.A_Item.Shield_Chimera:AttributePresentationDefinition_0' Description Increases health statistics.</code>
+						<code profiles="">set AttributePresentationDefinition'GD_Shields.A_Item.Shield_Chimera_05_Legendary:AttributePresentationDefinition_0' Description Increases health statistics.</code>
+					</category>
+				</category>
+				<category name="Movement Speed increased/decreased" MUT="true">
+					<category name="Movement Speed increased/decreased">
+						<code profiles="default">set AttributePresentationDefinition'GD_Iris_SeraphItems.Hoplite.Iris_Seraph_Shield_Juggernaut:AttributePresentationDefinition_2' Description Movement Speed [skill]decreased[-skill] for [skill]each Hoplite equipped[-skill] in the party.</code>
+						<code profiles="default">set AttributePresentationDefinition'GD_Shields.Titles.Title_Juggernaut04_JuggernautLegendary:AttributePresentationDefinition_3' Description [skill]Movement Speed increased[-skill] when [skill]depleted[-skill].</code>
+						<code profiles="default">set AttributePresentationDefinition'GD_Shields.Titles.Title_Juggernaut04_JuggernautLegendary:AttributePresentationDefinition_1' Description [skill]Movement Speed decreased[-skill] while [skill]active[-skill].</code>
+					</category>
+					<category name="Movement Speed increased/reduced">
+						<code profiles="">set AttributePresentationDefinition'GD_Iris_SeraphItems.Hoplite.Iris_Seraph_Shield_Juggernaut:AttributePresentationDefinition_2' Description Movement Speed [skill]reduced[-skill] for [skill]each Hoplite equipped[-skill] in the party.</code>
+						<code profiles="">set AttributePresentationDefinition'GD_Shields.Titles.Title_Juggernaut04_JuggernautLegendary:AttributePresentationDefinition_3' Description [skill]Movement Speed increased[-skill] when [skill]depleted[-skill].</code>
+						<code profiles="">set AttributePresentationDefinition'GD_Shields.Titles.Title_Juggernaut04_JuggernautLegendary:AttributePresentationDefinition_1' Description [skill]Movement Speed reduced[-skill] while [skill]active[-skill].</code>
+					</category>
+					<category name="Movement speed increased/decreased">
+						<code profiles="">set AttributePresentationDefinition'GD_Shields.Titles.Title_Juggernaut04_JuggernautLegendary:AttributePresentationDefinition_1' Description [skill]Movement speed decreased[-skill] while [skill]active[-skill].</code>
+					</category>
+					<category name="Movement speed increased/reduced">
+						<code profiles="">set AttributePresentationDefinition'GD_Iris_SeraphItems.Hoplite.Iris_Seraph_Shield_Juggernaut:AttributePresentationDefinition_2' Description Movement speed [skill]reduced[-skill] for [skill]each Hoplite equipped[-skill] in the party.</code>
+					</category>
+				</category>
+				<category name="Slayer of Terramorphous" MUT="true">
+					<category name="Slayer of Terramorphous">
+						<code profiles="default">set ItemNamePartDefinition'GD_ClassMods.Prefix_Z_Legendary.Prefix_Z_SlayerOfTerramorphous' PartName Slayer of Terramorphous</code>
+					</category>
+					<category name="Slayer Of Terramorphous">
+						<code profiles="">set ItemNamePartDefinition'GD_Lilac_ClassMods.Prefix_Psycho.Prefix_Z_00_SlayerOfTerramorphous' PartName Slayer Of Terramorphous</code>
+					</category>
+				</category>
+				<category name="Sniper" MUT="true">
+					<category name="Sniper">
+						<code profiles="default">set WeaponNamePartDefinition'GD_Weap_SniperRifles.Name.Title.Title_SniperRifle' PartName Sniper</code>
+						<code profiles="default">set AttributePresentationDefinition'GD_AttributePresentation.Artifacts.AttrPresent_ArtifactModsSniperRifles' Description Sniper</code>
+						<code profiles="default">set AttributePresentationDefinition'GD_AttributePresentation.Weapons.AttrPresent_Weapon_Is_Sniper_Rifle' Description Sniper</code>
+					</category>
+					<category name="Sniper Rifle">
+						<hotfix name="TextFixes" package="GD_Assassin_Streaming">
+							<code profiles="">set AttributePresentationDefinition'GD_Assassin_Skills.Sniping.AtOneWithTheGun:AttributePresentationDefinition_0' Description Sniper Rifle Hip-Shot Accuracy: $NUMBER$</code>
+							<code profiles="">set AttributePresentationDefinition'GD_Assassin_Skills.Sniping.AtOneWithTheGun:AttributePresentationDefinition_2' Description Sniper Rifle Magazine Size: $NUMBER$</code>
+							<code profiles="">set AttributePresentationDefinition'GD_Assassin_Skills.Sniping.AtOneWithTheGun:AttributePresentationDefinition_1' Description Sniper Rifle Reload Speed: $NUMBER$</code>
+						</hotfix>
+					</category>
+				</category>
+			</category>
+		</category>
+	</body>
+</BLCMM>
+
+#Commands:
+set AttributePresentationDefinition'GD_AttributePresentation.ClassMods_Only.AttrPresent_PlayerCriticalHitBonus' Description Critical Hit Damage
+set AttributePresentationDefinition'GD_Tulip_ClassMods.Att_Presentations.AttrPresent_InstigatedStatusEffectDamageModifier_Tulip' Description Elemental Effect Damage
+set AttributePresentationDefinition'GD_Orchid_Artifacts.Attributes.AttrPresent_ArtifactTimeToBeRevivedMultiplier' Description Fight For Your Life Time
+set AttributePresentationDefinition'GD_AttributePresentation.Health.AttrPresent_HealthActiveRegenerationRate' Description Health Regen
+set AttributePresentationDefinition'GD_AttributePresentation.Health.AttrPresent_HealthPassiveRegenerationRate' Description Health Regen
+set AttributePresentationDefinition'GD_AttributePresentation.Health.AttrPresent_HealthMaxValue' Description Max Health
+set AttributePresentationDefinition'GD_AttributePresentation.Loot.AttrPresent_AwesomeLevel' Description Rare Loot Chance
+set AttributePresentationDefinition'GD_AttributePresentation.ClassMods_Only.AttrPresent_ShockImpactDamageModifier' Description Shock Damage Resistance
+set AttributePresentationDefinition'GD_Aster_ClassMods.Attributes.AttrPresent_AllInTheReflexes' Description All in the Reflexes Skill
+set AttributePresentationDefinition'GD_AttributePresentation.Skills_Assassin.AttrPresent_HeadShot' Description Headsh0t Skill
+set AttributePresentationDefinition'GD_Aster_ClassMods.Attributes.AttrPresent_SaltTheWound' Description Salt the Wound Skill
+set AttributePresentationDefinition'GD_Tulip_ClassMods.Att_Presentations.AttrPresent_StrengthOf5Gorillas' Description Strength of Five Gorillas Skill
+set AttributePresentationDefinition'GD_Lobelia_ClassMods.AttributePresentations.AttrPresent_Lobelia_StrengthOfFiveGorillas' Description Strength of Five Gorillas Skill
+set AttributePresentationDefinition'GD_Shields.Pickups.ShieldBooster_Pickup_Legendary:AttributePresentationDefinition_13' Description Spawned from a player-equipped booster shield.
+set ItemNamePartDefinition'GD_Shields.Prefixes.Prefix_Special_Vladof03' PartName Guerrilla
+set AttributePresentationDefinition'GD_Artifacts.Body.Body_Vitality:AttributePresentationDefinition_0' Description Increases Maximum Health.
+set AttributePresentationDefinition'GD_Gladiolus_Artifacts.Body.Body_VitalityStockpile:AttributePresentationDefinition_0' Description Increases Maximum Health and Ammo Capacity.
+set AttributePresentationDefinition'GD_Iris_SeraphItems.Hoplite.Iris_Seraph_Shield_Juggernaut:AttributePresentationDefinition_2' Description Movement Speed [skill]decreased[-skill] for [skill]each Hoplite equipped[-skill] in the party.
+set AttributePresentationDefinition'GD_Shields.Titles.Title_Juggernaut04_JuggernautLegendary:AttributePresentationDefinition_3' Description [skill]Movement Speed increased[-skill] when [skill]depleted[-skill].
+set AttributePresentationDefinition'GD_Shields.Titles.Title_Juggernaut04_JuggernautLegendary:AttributePresentationDefinition_1' Description [skill]Movement Speed decreased[-skill] while [skill]active[-skill].
+set ItemNamePartDefinition'GD_ClassMods.Prefix_Z_Legendary.Prefix_Z_SlayerOfTerramorphous' PartName Slayer of Terramorphous
+set WeaponNamePartDefinition'GD_Weap_SniperRifles.Name.Title.Title_SniperRifle' PartName Sniper
+set AttributePresentationDefinition'GD_AttributePresentation.Artifacts.AttrPresent_ArtifactModsSniperRifles' Description Sniper
+set AttributePresentationDefinition'GD_AttributePresentation.Weapons.AttrPresent_Weapon_Is_Sniper_Rifle' Description Sniper
+
+#Hotfixes:
+set Transient.SparkServiceConfiguration_6 Keys ("SparkLevelPatchEntry-GBX_fixes1","SparkLevelPatchEntry-GBX_fixes2","SparkLevelPatchEntry-GBX_fixes3","SparkLevelPatchEntry-GBX_fixes4","SparkLevelPatchEntry-GBX_fixes5","SparkLevelPatchEntry-GBX_Fixes6","SparkLevelPatchEntry-GBX_Fixes7","SparkLevelPatchEntry-GBX_Fixes8","SparkLevelPatchEntry-GBX_Fixes9","SparkLevelPatchEntry-GBX_fixes10","SparkLevelPatchEntry-GBX_fixes11","SparkLevelPatchEntry-GBX_fixes12","SparkLevelPatchEntry-GBX_fixes13","SparkLevelPatchEntry-GBX_fixes14","SparkOnDemandPatchEntry-GBX_fixes15","SparkOnDemandPatchEntry-GBX_fixes16","SparkOnDemandPatchEntry-GBX_fixes17","SparkOnDemandPatchEntry-GBX_fixes18","SparkOnDemandPatchEntry-GBX_fixes19","SparkPatchEntry-GBX_fixes20","SparkPatchEntry-GBX_fixes21","SparkPatchEntry-GBX_fixes22","SparkPatchEntry-GBX_fixes23","SparkOnDemandPatchEntry-TextFixes1","SparkOnDemandPatchEntry-TextFixes2","SparkOnDemandPatchEntry-TextFixes3","SparkLevelPatchEntry-TextFixes4","SparkLevelPatchEntry-TextFixes5","SparkLevelPatchEntry-TextFixes6","SparkLevelPatchEntry-TextFixes7")
+set Transient.SparkServiceConfiguration_6 Values (",GD_Balance.WeightingPlayerCount.BugmorphCocoon_PerPlayers_Phase1,ConditionalInitialization.ConditionalExpressionList[4].BaseValueIfTrue.BaseValueConstant,0.700000,.8",",GD_Balance.WeightingPlayerCount.BugmorphCocoon_PerPlayers_Phase2,ConditionalInitialization.ConditionalExpressionList[4].BaseValueIfTrue.BaseValueConstant,0.400000,.5",",GD_Balance.WeightingPlayerCount.BugmorphCocoon_PerPlayers_Phase3,ConditionalInitialization.ConditionalExpressionList[4].BaseValueIfTrue.BaseValueConstant,0.200000,.3",",GD_Balance.WeightingPlayerCount.BugmorphCocoon_PerPlayers_Phase4,ConditionalInitialization.ConditionalExpressionList[4].BaseValueIfTrue.BaseValueConstant,0.100000,.2",",GD_Balance.WeightingPlayerCount.BugmorphCocoon_PerPlayers_Phase5,ConditionalInitialization.ConditionalExpressionList[4].BaseValueIfTrue.BaseValueConstant,0.075000,.1","SouthpawFactory_P,GD_Population_Marauder.Balance.Unique.PawnBalance_Assassin1,DefaultItemPoolList[3].PoolProbability.BaseValueScaleConstant,0.250000,1","SouthpawFactory_P,GD_Population_Nomad.Balance.Unique.PawnBalance_Assassin2,DefaultItemPoolList[4].PoolProbability.BaseValueScaleConstant,0.250000,1","SouthpawFactory_P,GD_Population_Psycho.Balance.Unique.PawnBalance_Assassin3,DefaultItemPoolList[1].PoolProbability.BaseValueScaleConstant,0.250000,1","SouthpawFactory_P,GD_Population_Rat.Balance.Unique.PawnBalance_Assassin4,DefaultItemPoolList[3].PoolProbability.BaseValueScaleConstant,0.250000,1",",GD_Sage_Rare_Scaylion.Population.PawnBalance_Sage_Rare_Scaylion,DefaultItemPoolList[1].PoolProbability.BaseValueScaleConstant,1.000000,100",",GD_Sage_Rare_Drifter.Balance.PawnBalance_Sage_Rare_Drifter,DefaultItemPoolList[0].PoolProbability.BaseValueScaleConstant,1.000000,100",",GD_Sage_Rare_Rhino.Population.PawnBalance_Sage_Rare_Rhino,DefaultItemPoolList[1].PoolProbability.BaseValueScaleConstant,1.000000,100",",GD_Sage_Rare_Skag.Population.PawnBalance_Sage_Rare_Skag,DefaultItemPoolList[1].PoolProbability.BaseValueScaleConstant,1.000000,100",",GD_Sage_Rare_Spore.Population.PawnBalance_Sage_Rare_Spore,DefaultItemPoolList[0].PoolProbability.BaseValueScaleConstant,1.000000,100","GD_Assassin_Streaming,GD_Assassin_Skills.Sniping.Velocity,SkillEffectDefinitions[0].ModifierType,MT_PostAdd,MT_Scale","GD_Tulip_Mechro_Streaming,GD_Tulip_Mechromancer_Skills.LittleBigTrouble.WiresDontTalk,SkillEffectDefinitions,,((AttributeToModify=D_Attributes.DamageTypeModifers.InstigatedShockDamageModifier,bIncludeDuelingTargets=False,bIncludeSelfAsTarget=False,bOnlyEffectTargetsInRange=False,bExcludeNonPlayerCharacters=False,EffectTarget=TARGET_Self,TargetInstanceDataName=,TargetCriteria=CRITERIA_None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.030000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),GradeToStartApplyingEffect=1,PerGradeUpgradeInterval=1,PerGradeUpgrade=(BaseValueConstant=0.030000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),BonusUpgradeList=),(AttributeToModify=D_Attributes.DamageTypeModifers.InstigatedShockStatusDamageModifier,bIncludeDuelingTargets=False,bIncludeSelfAsTarget=False,bOnlyEffectTargetsInRange=False,bExcludeNonPlayerCharacters=False,EffectTarget=TARGET_Self,TargetInstanceDataName=,TargetCriteria=CRITERIA_None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.030000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),GradeToStartApplyingEffect=1,PerGradeUpgradeInterval=1,PerGradeUpgrade=(BaseValueConstant=0.030000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),BonusUpgradeList=))","GD_Siren_Streaming,GD_Siren_Skills.Misc.Init_BlightPhoenix_DamageCalc_Part2,ValueFormula.Level.InitializationDefinition,AttributeInitializationDefinition'GD_Balance_HealthAndDamage.HealthAndDamage.Init_PlayerMeleeDamage',AttributeInitializationDefinition'GD_Balance_HealthAndDamage.HealthAndDamage.Init_PlayerSkillDamage'","GD_Siren_Streaming,GD_Siren_Skills.Misc.Init_BlightPhoenix_DamageCalc_Part2,ValueFormula.Level.BaseValueScaleConstant,1.000000,3.5","GD_Assassin_Streaming,GD_Assassin_Skills.Misc.Att_DeathMark_BonusDamage,BaseValue.BaseValueConstant,0.200000,.8","GD_Itempools.Runnables.Pool_FourAssassins,BalancedItems[1].Probability.InitializationDefinition,None,GD_Balance.Weighting.Weight_1_Common","GD_Shields.Projectiles.Proj_LegendaryBoosterShield:BehaviorProviderDefinition_1.Behavior_Explode_140,BehaviorSequences[0].BehaviorData2[7].Behavior.StatusEffectDamage.BaseValueAttribute,None,D_Attributes.Projectile.ProjectileDamage","GD_Shields.Projectiles.Proj_LegendaryBoosterShield:BehaviorProviderDefinition_1.Behavior_Explode_140,BehaviorSequences[0].BehaviorData2[7].Behavior.StatusEffectDamage.BaseValueScaleConstant,1.000000,.25","GD_Shields.Projectiles.Proj_LegendaryBoosterShield:BehaviorProviderDefinition_1.Behavior_Explode_140,BehaviorSequences[0].BehaviorData2[7].Behavior.StatusEffectChance.BaseValueConstant,1.000000,20","GD_Tulip_Mechro_Streaming,AttributePresentationDefinition'GD_Tulip_Mechromancer_Skills.BestFriendsForever.TheBetterHalf:AttributePresentationDefinition_1',Description,,Deathtrap Max Health: $NUMBER$","GD_Lilac_Psycho_Streaming,AttributePresentationDefinition'GD_Lilac_Skills_Mania.Skills.EmbraceThePain:AttributePresentationDefinition_32',Description,,Shield Recharge Delay: $NUMBER$","GD_Lilac_Psycho_Streaming,AttributePresentationDefinition'GD_Lilac_Skills_Mania.Skills.FeedTheMeat:AttributePresentationDefinition_32',Description,,Shield Recharge Delay: $NUMBER$","Ice_P,AttributePresentationDefinition'GD_Z1_InMemoriamData.ItemDefs.ID_EchoRecorder2:AttributePresentationDefinition_0',Description,,Boll's evidence that Lilith (aka the Firehawk) is still alive and part of Roland's resistance.","Ice_P,AttributePresentationDefinition'GD_Z1_InMemoriamData.ItemDefs.ID_EchoRecorder3:AttributePresentationDefinition_1',Description,,Boll's evidence that Lilith (aka the Firehawk) is still alive and part of Roland's resistance.","Ice_P,AttributePresentationDefinition'GD_Z1_InMemoriamData.ItemDefs.ID_MO_InMemoriam_DeadDropEcho:AttributePresentationDefinition_2',Description,,Boll's evidence that Lilith (aka the Firehawk) is still alive and part of Roland's resistance.","SouthernShelf_P,AttributePresentationDefinition'GD_Z1_HandsomeJackHereData.ItemDefs.ID_Echo:AttributePresentationDefinition_0',Description,,An audio log belonging to Helena Pierce, former administrator of New Haven.")
+
