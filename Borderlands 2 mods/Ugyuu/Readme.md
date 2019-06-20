@@ -9,4 +9,4 @@ Do not host these files on other websites without my explicitly written permissi
 You may reupload my mods to Nexus, but make sure to note that I've made them, so.. Credit me. Like the previous statement, you will need my permission.
 
 ## Note For Visitors
-Some of my mods, especially Battleborn weapons, are slightly to noticably overpowered. This is mostly because i don't have that much experience in bl2.
+Some of my mods, especially Battleborn weapons, can be slightly overpowered. This is mostly because i don't have that much experience with Borderlands 2.

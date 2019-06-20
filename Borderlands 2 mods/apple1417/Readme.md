@@ -1,3 +1,7 @@
+### Anemone Fast Travels
+Super quick fix to let you fast travel to the two new one-way stations.
+I will try to expand this with a few related QoL fixes.
+
 ### Bigger Is Not Always Better
 Allows you to switch the direction of the arrows when comparing items.
 Looking for a low damage gun, high fuse grenade, or low booster chance shield? Now you can make the arrows point in the right direction.
@@ -20,12 +24,18 @@ Removes various forms of scaling that happen when there is a large level differe
 [Also see the TPS Version](https://github.com/BLCM/BLCMods/blob/master/Pre%20Sequel%20Mods/apple1417/HigherLevelScalingRemover.blcm)
 
 ### Item Level Uncapper
-This mod is useless by itself, it should be used alongside the hexedit to increase the player level cap.    
-Fixes the level cap of most items so that they continue spawning past level 100.    
-Note that items past level 127 will overflow upon save-quit, and that gibbed won't let you create items past 127, so past that point you'll have to pick up everything you use within the same session.    
-Also note that there may still be various other issues with an increased level cap, this only fixes that most items stopped spawning.
+DEPRECATED - Use the [Python Mod](https://github.com/apple1417/bl-sdk-mods/tree/master/ItemLevelUncapper) instead
 
-[Also see the TPS Version](https://github.com/BLCM/BLCMods/blob/master/Pre%20Sequel%20Mods/apple1417/ItemLevelUncapper.blcm)
+
+~~This mod is useless by itself, it should be used alongside the hexedit to increase the player level cap.    
+Fixes the level cap of most items so that they continue spawning past level 100.    
+Note that items past level 127 will overflow upon save-quit, and that Gibbed's Save Editor won't let you create items past 127, so past that point you'll have to pick up everything you use within the same session.    
+Also note that there may still be various other issues with an increased level cap, this only fixes that most items stopped spawning.~~
+
+~~[Also see the TPS Version](https://github.com/BLCM/BLCMods/blob/master/Pre%20Sequel%20Mods/apple1417/ItemLevelUncapper.blcm)~~
+
+### No Haderax Despawn
+Prevents Haderax from despawning when you die
 
 ### Text Fixes
 Fixes various inconsistencies in text across the game.    

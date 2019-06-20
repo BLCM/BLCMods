@@ -1,0 +1,69 @@
+<BLCMM v="1">
+#<!!!You opened a file saved with BLCMM in FilterTool. Please update to BLCMM to properly open this file!!!>
+	<head>
+		<type name="BL2" offline="false"/>
+		<profiles>
+			<profile name="default" current="true"/>
+		</profiles>
+	</head>
+	<body>
+		<category name="Free Raid Boss Cost">
+			<comment>by MikeyRay</comment>
+			<comment>Makes it so you do not have to pay Eridium to fight raids anymore.</comment>
+			<category name="Terramorphous the Invincible">
+				<hotfix name="TerraCost" level="None">
+					<code profiles="default">set Grass_Cliffs_Dynamic.TheWorld:PersistentLevel.WillowInteractiveObject_173 CostsToUseAmount[0] 0</code>
+					<code profiles="default">set GD_Z2_ThresherRaidData.IO_ThresherRaid_Pedestal:BehaviorProviderDefinition_0.Behavior_SetUsabilityCost_19 CostAmount 0</code>
+				</hotfix>
+			</category>
+			<category name="Ancient Dragons of Destruction">
+				<hotfix name="DragonsCost" level="None">
+					<code profiles="default">set Dungeon_P.TheWorld:PersistentLevel.WillowInteractiveObject_50 CostsToUseAmount[0] 0</code>
+					<code profiles="default">set GD_Aster_RaidBossData.IOs.IO_AsterRaid_Statue:BehaviorProviderDefinition_0.Behavior_SetUsabilityCost_1 CostAmount 0</code>
+				</hotfix>
+			</category>
+			<category name="Pyro Pete the Invincible">
+				<hotfix name="PeteCost" level="None">
+					<code profiles="default">set Iris_DL2_Interior_Raid.TheWorld:PersistentLevel.WillowInteractiveObject_8 CostsToUseAmount[0] 0</code>
+					<code profiles="default">set GD_IrisRaidBossData.InteractiveObjects.IrisRaidBoardPete:BehaviorProviderDefinition_0.Behavior_SetUsabilityCost_7 CostAmount 0</code>
+					<code profiles="default">set GD_IrisRaidBossData.InteractiveObjects.IrisRaidBoardPete:BehaviorProviderDefinition_0.Behavior_SetUsabilityCost_8 CostAmount 0</code>
+					<code profiles="default">set GD_IrisRaidBossData.InteractiveObjects.IrisRaidBoardPete:BehaviorProviderDefinition_0.Behavior_SetUsabilityCost_9 CostAmount 0</code>
+				</hotfix>
+			</category>
+			<category name="The Invincible Son of Crawmerax the Invincible">
+				<hotfix name="CrawCost" level="None">
+					<code profiles="default">set Easter_Boss.TheWorld:PersistentLevel.WillowInteractiveObject_0 CostsToUseAmount[0] 0</code>
+					<code profiles="default">set GD_Nast_Easter_Plot_M01Data.IOs.IO_RaidOffering:BehaviorProviderDefinition_0.Behavior_SetUsabilityCost_25 CostAmount 0</code>
+				</hotfix>
+			</category>
+			<category name="Master Gee the Invincible & Hyperius the Invincible">
+				<hotfix name="GeeCost" level="None">
+					<code profiles="default">set GD_Orchid_RaidData.InteractiveObjects.GenericFloorLever_OrchidRaid:BehaviorProviderDefinition_0.Behavior_SetUsabilityCost_55 CostAmount 0</code>
+					<code profiles="default">set GD_Orchid_RaidData.InteractiveObjects.GenericFloorLever_OrchidRaid:BehaviorProviderDefinition_0.Behavior_SetUsabilityCost_61 CostAmount 0</code>
+					<code profiles="default">set GD_Orchid_RaidData.InteractiveObjects.GenericFloorLever_OrchidRaid:BehaviorProviderDefinition_0.Behavior_SetUsabilityCost_61 ChangeCost CHANGE_Enable</code>
+				</hotfix>
+			</category>
+			<category name="Dexiduous the Invincible">
+				<hotfix name="DexiCost" level="None">
+					<code profiles="default">set Sage_Underground_Combat.TheWorld:PersistentLevel.WillowInteractiveObject_29 CostsToUseAmount[0] 0</code>
+					<code profiles="default">set Sage_Underground_Combat.TheWorld:PersistentLevel.WillowInteractiveObject_30 CostsToUseAmount[0] 0</code>
+					<code profiles="default">set Sage_Underground_Combat.TheWorld:PersistentLevel.WillowInteractiveObject_31 CostsToUseAmount[0] 0</code>
+					<code profiles="default">set Sage_Underground_Combat.TheWorld:PersistentLevel.WillowInteractiveObject_0 CostsToUseAmount[0] 0</code>
+				</hotfix>
+			</category>
+			<category name="Voracidous the Invincible">
+				<hotfix name="VoracCost" level="None">
+					<code profiles="default">set GD_Sage_RaidData.InteractiveObjects.GenericFloorLever_SageRaid:BehaviorProviderDefinition_0.Behavior_SetUsabilityCost_2 CostAmount 0</code>
+					<code profiles="default">set GD_Sage_RaidData.InteractiveObjects.GenericFloorLever_SageRaid:BehaviorProviderDefinition_0.Behavior_SetUsabilityCost_7 CostAmount 0</code>
+				</hotfix>
+			</category>
+		</category>
+	</body>
+</BLCMM>
+
+#Commands:
+
+#Hotfixes:
+set Transient.SparkServiceConfiguration_6 Keys ("SparkLevelPatchEntry-GBX_fixes1","SparkLevelPatchEntry-GBX_fixes2","SparkLevelPatchEntry-GBX_fixes3","SparkLevelPatchEntry-GBX_fixes4","SparkLevelPatchEntry-GBX_fixes5","SparkLevelPatchEntry-GBX_Fixes6","SparkLevelPatchEntry-GBX_Fixes7","SparkLevelPatchEntry-GBX_Fixes8","SparkLevelPatchEntry-GBX_Fixes9","SparkLevelPatchEntry-GBX_fixes10","SparkLevelPatchEntry-GBX_fixes11","SparkLevelPatchEntry-GBX_fixes12","SparkLevelPatchEntry-GBX_fixes13","SparkLevelPatchEntry-GBX_fixes14","SparkOnDemandPatchEntry-GBX_fixes15","SparkOnDemandPatchEntry-GBX_fixes16","SparkOnDemandPatchEntry-GBX_fixes17","SparkOnDemandPatchEntry-GBX_fixes18","SparkOnDemandPatchEntry-GBX_fixes19","SparkPatchEntry-GBX_fixes20","SparkPatchEntry-GBX_fixes21","SparkPatchEntry-GBX_fixes22","SparkPatchEntry-GBX_fixes23","SparkLevelPatchEntry-TerraCost1","SparkLevelPatchEntry-TerraCost2","SparkLevelPatchEntry-DragonsCost1","SparkLevelPatchEntry-DragonsCost2","SparkLevelPatchEntry-PeteCost1","SparkLevelPatchEntry-PeteCost2","SparkLevelPatchEntry-PeteCost3","SparkLevelPatchEntry-PeteCost4","SparkLevelPatchEntry-CrawCost1","SparkLevelPatchEntry-CrawCost2","SparkLevelPatchEntry-GeeCost1","SparkLevelPatchEntry-GeeCost2","SparkLevelPatchEntry-GeeCost3","SparkLevelPatchEntry-DexiCost1","SparkLevelPatchEntry-DexiCost2","SparkLevelPatchEntry-DexiCost3","SparkLevelPatchEntry-DexiCost4","SparkLevelPatchEntry-VoracCost1","SparkLevelPatchEntry-VoracCost2")
+set Transient.SparkServiceConfiguration_6 Values (",GD_Balance.WeightingPlayerCount.BugmorphCocoon_PerPlayers_Phase1,ConditionalInitialization.ConditionalExpressionList[4].BaseValueIfTrue.BaseValueConstant,0.700000,.8",",GD_Balance.WeightingPlayerCount.BugmorphCocoon_PerPlayers_Phase2,ConditionalInitialization.ConditionalExpressionList[4].BaseValueIfTrue.BaseValueConstant,0.400000,.5",",GD_Balance.WeightingPlayerCount.BugmorphCocoon_PerPlayers_Phase3,ConditionalInitialization.ConditionalExpressionList[4].BaseValueIfTrue.BaseValueConstant,0.200000,.3",",GD_Balance.WeightingPlayerCount.BugmorphCocoon_PerPlayers_Phase4,ConditionalInitialization.ConditionalExpressionList[4].BaseValueIfTrue.BaseValueConstant,0.100000,.2",",GD_Balance.WeightingPlayerCount.BugmorphCocoon_PerPlayers_Phase5,ConditionalInitialization.ConditionalExpressionList[4].BaseValueIfTrue.BaseValueConstant,0.075000,.1","SouthpawFactory_P,GD_Population_Marauder.Balance.Unique.PawnBalance_Assassin1,DefaultItemPoolList[3].PoolProbability.BaseValueScaleConstant,0.250000,1","SouthpawFactory_P,GD_Population_Nomad.Balance.Unique.PawnBalance_Assassin2,DefaultItemPoolList[4].PoolProbability.BaseValueScaleConstant,0.250000,1","SouthpawFactory_P,GD_Population_Psycho.Balance.Unique.PawnBalance_Assassin3,DefaultItemPoolList[1].PoolProbability.BaseValueScaleConstant,0.250000,1","SouthpawFactory_P,GD_Population_Rat.Balance.Unique.PawnBalance_Assassin4,DefaultItemPoolList[3].PoolProbability.BaseValueScaleConstant,0.250000,1",",GD_Sage_Rare_Scaylion.Population.PawnBalance_Sage_Rare_Scaylion,DefaultItemPoolList[1].PoolProbability.BaseValueScaleConstant,1.000000,100",",GD_Sage_Rare_Drifter.Balance.PawnBalance_Sage_Rare_Drifter,DefaultItemPoolList[0].PoolProbability.BaseValueScaleConstant,1.000000,100",",GD_Sage_Rare_Rhino.Population.PawnBalance_Sage_Rare_Rhino,DefaultItemPoolList[1].PoolProbability.BaseValueScaleConstant,1.000000,100",",GD_Sage_Rare_Skag.Population.PawnBalance_Sage_Rare_Skag,DefaultItemPoolList[1].PoolProbability.BaseValueScaleConstant,1.000000,100",",GD_Sage_Rare_Spore.Population.PawnBalance_Sage_Rare_Spore,DefaultItemPoolList[0].PoolProbability.BaseValueScaleConstant,1.000000,100","GD_Assassin_Streaming,GD_Assassin_Skills.Sniping.Velocity,SkillEffectDefinitions[0].ModifierType,MT_PostAdd,MT_Scale","GD_Tulip_Mechro_Streaming,GD_Tulip_Mechromancer_Skills.LittleBigTrouble.WiresDontTalk,SkillEffectDefinitions,,((AttributeToModify=D_Attributes.DamageTypeModifers.InstigatedShockDamageModifier,bIncludeDuelingTargets=False,bIncludeSelfAsTarget=False,bOnlyEffectTargetsInRange=False,bExcludeNonPlayerCharacters=False,EffectTarget=TARGET_Self,TargetInstanceDataName=,TargetCriteria=CRITERIA_None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.030000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),GradeToStartApplyingEffect=1,PerGradeUpgradeInterval=1,PerGradeUpgrade=(BaseValueConstant=0.030000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),BonusUpgradeList=),(AttributeToModify=D_Attributes.DamageTypeModifers.InstigatedShockStatusDamageModifier,bIncludeDuelingTargets=False,bIncludeSelfAsTarget=False,bOnlyEffectTargetsInRange=False,bExcludeNonPlayerCharacters=False,EffectTarget=TARGET_Self,TargetInstanceDataName=,TargetCriteria=CRITERIA_None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.030000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),GradeToStartApplyingEffect=1,PerGradeUpgradeInterval=1,PerGradeUpgrade=(BaseValueConstant=0.030000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),BonusUpgradeList=))","GD_Siren_Streaming,GD_Siren_Skills.Misc.Init_BlightPhoenix_DamageCalc_Part2,ValueFormula.Level.InitializationDefinition,AttributeInitializationDefinition'GD_Balance_HealthAndDamage.HealthAndDamage.Init_PlayerMeleeDamage',AttributeInitializationDefinition'GD_Balance_HealthAndDamage.HealthAndDamage.Init_PlayerSkillDamage'","GD_Siren_Streaming,GD_Siren_Skills.Misc.Init_BlightPhoenix_DamageCalc_Part2,ValueFormula.Level.BaseValueScaleConstant,1.000000,3.5","GD_Assassin_Streaming,GD_Assassin_Skills.Misc.Att_DeathMark_BonusDamage,BaseValue.BaseValueConstant,0.200000,.8","GD_Itempools.Runnables.Pool_FourAssassins,BalancedItems[1].Probability.InitializationDefinition,None,GD_Balance.Weighting.Weight_1_Common","GD_Shields.Projectiles.Proj_LegendaryBoosterShield:BehaviorProviderDefinition_1.Behavior_Explode_140,BehaviorSequences[0].BehaviorData2[7].Behavior.StatusEffectDamage.BaseValueAttribute,None,D_Attributes.Projectile.ProjectileDamage","GD_Shields.Projectiles.Proj_LegendaryBoosterShield:BehaviorProviderDefinition_1.Behavior_Explode_140,BehaviorSequences[0].BehaviorData2[7].Behavior.StatusEffectDamage.BaseValueScaleConstant,1.000000,.25","GD_Shields.Projectiles.Proj_LegendaryBoosterShield:BehaviorProviderDefinition_1.Behavior_Explode_140,BehaviorSequences[0].BehaviorData2[7].Behavior.StatusEffectChance.BaseValueConstant,1.000000,20",",Grass_Cliffs_Dynamic.TheWorld:PersistentLevel.WillowInteractiveObject_173,CostsToUseAmount[0],,0",",GD_Z2_ThresherRaidData.IO_ThresherRaid_Pedestal:BehaviorProviderDefinition_0.Behavior_SetUsabilityCost_19,CostAmount,,0",",Dungeon_P.TheWorld:PersistentLevel.WillowInteractiveObject_50,CostsToUseAmount[0],,0",",GD_Aster_RaidBossData.IOs.IO_AsterRaid_Statue:BehaviorProviderDefinition_0.Behavior_SetUsabilityCost_1,CostAmount,,0",",Iris_DL2_Interior_Raid.TheWorld:PersistentLevel.WillowInteractiveObject_8,CostsToUseAmount[0],,0",",GD_IrisRaidBossData.InteractiveObjects.IrisRaidBoardPete:BehaviorProviderDefinition_0.Behavior_SetUsabilityCost_7,CostAmount,,0",",GD_IrisRaidBossData.InteractiveObjects.IrisRaidBoardPete:BehaviorProviderDefinition_0.Behavior_SetUsabilityCost_8,CostAmount,,0",",GD_IrisRaidBossData.InteractiveObjects.IrisRaidBoardPete:BehaviorProviderDefinition_0.Behavior_SetUsabilityCost_9,CostAmount,,0",",Easter_Boss.TheWorld:PersistentLevel.WillowInteractiveObject_0,CostsToUseAmount[0],,0",",GD_Nast_Easter_Plot_M01Data.IOs.IO_RaidOffering:BehaviorProviderDefinition_0.Behavior_SetUsabilityCost_25,CostAmount,,0",",GD_Orchid_RaidData.InteractiveObjects.GenericFloorLever_OrchidRaid:BehaviorProviderDefinition_0.Behavior_SetUsabilityCost_55,CostAmount,,0",",GD_Orchid_RaidData.InteractiveObjects.GenericFloorLever_OrchidRaid:BehaviorProviderDefinition_0.Behavior_SetUsabilityCost_61,CostAmount,,0",",GD_Orchid_RaidData.InteractiveObjects.GenericFloorLever_OrchidRaid:BehaviorProviderDefinition_0.Behavior_SetUsabilityCost_61,ChangeCost,,CHANGE_Enable",",Sage_Underground_Combat.TheWorld:PersistentLevel.WillowInteractiveObject_29,CostsToUseAmount[0],,0",",Sage_Underground_Combat.TheWorld:PersistentLevel.WillowInteractiveObject_30,CostsToUseAmount[0],,0",",Sage_Underground_Combat.TheWorld:PersistentLevel.WillowInteractiveObject_31,CostsToUseAmount[0],,0",",Sage_Underground_Combat.TheWorld:PersistentLevel.WillowInteractiveObject_0,CostsToUseAmount[0],,0",",GD_Sage_RaidData.InteractiveObjects.GenericFloorLever_SageRaid:BehaviorProviderDefinition_0.Behavior_SetUsabilityCost_2,CostAmount,,0",",GD_Sage_RaidData.InteractiveObjects.GenericFloorLever_SageRaid:BehaviorProviderDefinition_0.Behavior_SetUsabilityCost_7,CostAmount,,0")
+

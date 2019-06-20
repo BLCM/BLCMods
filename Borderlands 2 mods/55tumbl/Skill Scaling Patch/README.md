@@ -10,7 +10,7 @@ Ask me for permission first if you wish to use larger portions of this code, mak
 
 # Overview
 
-The Skill Scaling Patch fixes a number of bugs or inconsistencies in character skills, mostly about the way they scale with level, and across playthroughs. It is not meant to change the balance of the game according to my personal preferences, but to make it work as intended (or at least more consistently), which does improve some aspects of the balance. The skills that are the most affected are Phaselock and Ruin (Maya), Light the Fuse (Krieg), Deathtrap and all its damage abilities (Gaige), the Sabre Turret and all its damage abilities (Axton).
+The Skill Scaling Patch fixes a number of bugs or inconsistencies in character skills, mostly about the way they scale with level, and across playthroughs. It is not meant to change the balance of the game according to my personal preferences, but to make it work as intended (or at least more consistently), which does improve some aspects of the balance. The skills that are the most affected are Phaselock and Ruin (Maya), Light the Fuse (Krieg), Deathtrap and all its damage abilities (Gaige), the Sabre Turret and all its damage abilities (Axton), Steady as She Goes (Salvador).
 
 Concerning Deathtrap and the Sabre Turret, the main problem addressed by this patch was actually not present on console. With the Skill Scaling Patch, their damage output should thus be identical (or close) to what it is on console. And that makes a huge difference on their end-game viability.
 
@@ -18,7 +18,7 @@ Concerning Deathtrap and the Sabre Turret, the main problem addressed by this pa
 
 The Skill Scaling Patch can be used as a standalone, for a vanilla experience with less bugs, and to meet Deathtrap and the Sabre Turret the way they were supposed to be (and actually are, on console). You can also try to combine it with other mods, using BLCMM. However, this may create incompatibilities if the other mods affect the skills modified by the Skill Scaling Patch, or even skills in general. I'd recommend importing the Skill Scaling Patch after other mods, and disabling any changes affecting the mentioned skills, in those other mods.
    
-The Skill Scaling Patch (v1.0) is included in the Unofficial Community Patch, as of version 4.1. If you are using the UCP 4.1, you already have most of the Skill Scaling Patch. However, the fixes to Phaselock, Immolate, Made of Sterner Stuff, Electrical Burn, and Deathtrap's Shock ranged attacks are not (yet) included in the UCP. If you want those, you can simply import the current version of the Skill Scaling Patch as a single mod after the UCP. I strongly recommend to disable the Electrical Burn fix, since this skill already receives a very strong (indirect) boost in the UCP.
+The Skill Scaling Patch (v1.0) is included in the Unofficial Community Patch, as of version 4.1. If you are using the UCP 4.1, you already have most of the Skill Scaling Patch. However, the fixes to Phaselock, Immolate, Steady as She Goes, Made of Sterner Stuff, Electrical Burn, and Deathtrap's Shock ranged attacks are not (yet) included in the UCP. If you want those, you can simply import the current version of the Skill Scaling Patch as a single mod after the UCP. I strongly recommend to disable the Electrical Burn fix, since this skill already receives a very strong (indirect) boost in the UCP.
 
 # Detailed changes
 
@@ -89,6 +89,13 @@ You can find [here](http://blstats.com/skilldamage.php) all the damage values at
 
 One issue with this fix is that the damage of the turret is in part calculated from the level of the game, rather than the level of the turret itself. For example, if you join the game of a lower/higher level player, your turret damage will adapt (to some extent), and be lower/higher than it should. I don't think this should be too problematic in practice.
 
+## Salvador
+
+**Steady as She Goes**: fix the effect of this skill on Hyperion weapons.
+* The passive 80% recoil reduction (while gunzerking) becomes an accelerated reverse recoil for Hyperion weapons.
+* The chance to improve accuracy on both guns now actually increases accuracy of Hyperion weapons instead of decreasing it.
+* It still works the same for non-Hyperion weapons, except that the calculation of the amount of accuracy gained is somewhat changed, but in all cases it should be noticeable without being excessive.
+
 # Credits
 
 This was all written by me.
@@ -98,6 +105,7 @@ Thanks to Koby for making me want to do something about it, and inviting me to S
 
 # Change log
 
+* [2019-05-05] v2.6: Added the fix to Steady as She Goes.
 * [2019-04-08] v2.5: Added the fix to Made of Sterner Stuff, and included the changes making Phaselock active after hitting an immune target.
 * [2018-08-09] v2.1: Added the modifications to Deathtrap's ranged shock attacks.
 * [2018-07-31] v2.0: Added the Immolate & Electrical Burn fixes.

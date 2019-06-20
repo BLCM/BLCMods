@@ -9,8 +9,8 @@
 ## DoT Renames
 - Removes the "/ sec." part on weapon / grenade cards.
 
-## Less Cluttering Particles
-- Makes particles less cluttering
+## Less Dumb Visuals
+- Aims to make BL2 less cluttered
 
 ## No Muzzleflashes
 - Removes muzzleflashes from weapons
@@ -20,6 +20,9 @@
 
 ## Krieg Silence the Voices self-damage Delay (by Mike)
 - Makes it so Krieg's StV has a 5 second delay before you can damage yourself again (does not include animation).
+
+## Free Raid Cost (by Mike)
+- Makes it so all raids are free of cost, meaning you no longer need to waste Eridium on raids.
 
 # Credits
 
