@@ -2,7 +2,7 @@
 
 ----------------------------------------------------------------------------------------------------------------------
 
-1.0 -> 1.1: Small bug in code
+**1.0 -> 1.1: Small bug in code**
 
 Hot Mama Barrel Customization Mod by Lollo(saurusRex)
 
