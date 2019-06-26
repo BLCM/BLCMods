@@ -17,4 +17,4 @@ Same for the Pot'o'Gold (although the money drops still don't scale, but that's 
 These fixes will probably be included in UCP 4.1.1, but in the meantime you can just import `fixUCPerrors.blcm` as a single mod.
 
 **`fixVoracHyperiusHealth.blcm`**
-This small mod addresses an issue with Vorac and Hyperius (plus minions) having double health (before level scaling) since the Lilith DLC and latest level cap increase. This was definitely unintended by the devs, but due to some balance modifiers that applies only to players with one or two (but not three, apparently) level cap increases.
+This small mod addresses an issue with Vorac and Hyperius (plus minions) having double health (before level scaling) since the Lilith DLC and latest level cap increase. This was definitely unintended by the devs, but due to some balance modifiers that apply only to players with one or two (but not three, apparently) level cap increases.
