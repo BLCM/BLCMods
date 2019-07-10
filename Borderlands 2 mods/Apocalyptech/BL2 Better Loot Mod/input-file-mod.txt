@@ -4024,6 +4024,23 @@ BL2
 
                     #</Son of Crawmerax (non-raid) Improvements>
 
+                    #<Hector Improvements>
+
+                        # The DLC5 endgame doesn't really need any loot buffing, but it feels weird to have
+                        # so many of the other bosses out-loot the main boss of the DLC, so I'm adding in
+                        # a few more of the Shower_Loot_Boss drops, for giggles.
+
+                        level GaiusSanctuary_P set GD_Anemone_Hector.Death.BodyDeath_Hector:BehaviorProviderDefinition_6.Behavior_SpawnItems_5 ItemPoolIncludedLists
+                        (
+                            ItemPoolListDefinition'GD_Itempools.ListDefs.UltimateBadassEnemyGunsAndGear',
+                            ItemPoolListDefinition'GD_Anemone_ItemPools.ListDefs.Shower_Loot_Boss',
+                            ItemPoolListDefinition'GD_Anemone_ItemPools.ListDefs.Shower_Loot_Boss',
+                            ItemPoolListDefinition'GD_Anemone_ItemPools.ListDefs.Shower_Loot_Boss',
+                            ItemPoolListDefinition'GD_Anemone_ItemPools.ListDefs.Shower_Loot_Boss'
+                        )
+
+                    #</Hector Improvements>
+
                 #</Better Miscellaneous Boss Drops>
 
                 #<Boss Drop Normalization>
