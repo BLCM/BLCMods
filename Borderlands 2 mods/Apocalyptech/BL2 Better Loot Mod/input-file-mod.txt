@@ -3101,9 +3101,9 @@ BL2
 
                 #<Regular Enemy Drop Improvements>
 
-                    # There are a handful of enemy types which are somewhere between regular
-                    # enemies and Badasses, whose drop pools I felt could use a slight buff.
-                    # Some of these get upgraded to dropping from the Badass pool.
+                    # Many of these enemy types fit somewhere between regular enemies and Badasses,
+                    # whose drop pools I felt could use a slight buff.  Some of these get upgraded
+                    # to dropping from the Badass pool.
 
                     #<Arguk the Butcher>
 
@@ -3310,6 +3310,15 @@ BL2
 
                     #</Mortar>
 
+                    #<New Pandora Troops>
+
+                        # New Pandora troops from DLC5 (Commander Lilith) have a small chance to
+                        # drop the Infection Cleaner.  Double that chance (from 0.9% to 1.8%)
+
+                        level None set GD_Anemone_ItemPools.ListDefs.NP_DropSpecific ItemPools[4].PoolProbability.BaseValueConstant 0.018
+
+                    #</New Pandora Troops>
+
                     #<Papa/Jimbo Hodunk>
 
                         # Makes Papa/Jimbo Hodunk drop from the badass pool
@@ -3333,6 +3342,31 @@ BL2
                         level Orchid_WormBelly_P set GD_Orchid_Pop_RakkHive.Character.PawnBalance_Orchid_RakkHive DefaultItemPoolIncludedLists (ItemPoolListDefinition'GD_Itempools.ListDefs.BadassEnemyGunsAndGear')
 
                     #</Roscoe>
+
+                    #<Sandworms (DLC5)>
+
+                        # Sandworms from DLC5 (Commander Lilith) drop the Toothpick and Retainer.
+                        # Triple those chances, given that you don't encounter sandworms too often.
+                        # (In PT1: from 1% to 3%, in PT2: from 2% to 6%.  Sandworm Queens have a
+                        # much better chance to drop 'em.)
+
+                        level None set GD_Anemone_Pop_WildLife.Balance.PawnBalance_InfectedSandWorm PlayThroughs[0].CustomItemPoolList[0].PoolProbability.BaseValueConstant 0.03
+
+                        level None set GD_Anemone_Pop_WildLife.Balance.PawnBalance_InfectedSandWorm PlayThroughs[0].CustomItemPoolList[1].PoolProbability.BaseValueConstant 0.03
+
+                        level None set GD_Anemone_Pop_WildLife.Balance.PawnBalance_InfectedSandWorm PlayThroughs[1].CustomItemPoolList[0].PoolProbability.BaseValueConstant 0.06
+
+                        level None set GD_Anemone_Pop_WildLife.Balance.PawnBalance_InfectedSandWorm PlayThroughs[1].CustomItemPoolList[1].PoolProbability.BaseValueConstant 0.06
+
+                        level None set GD_Anemone_Pop_WildLife.Balance.PawnBalance_SandWorm_Queen PlayThroughs[0].CustomItemPoolList[0].PoolProbability.BaseValueConstant 0.40
+
+                        level None set GD_Anemone_Pop_WildLife.Balance.PawnBalance_SandWorm_Queen PlayThroughs[0].CustomItemPoolList[1].PoolProbability.BaseValueConstant 0.40
+
+                        level None set GD_Anemone_Pop_WildLife.Balance.PawnBalance_SandWorm_Queen PlayThroughs[1].CustomItemPoolList[0].PoolProbability.BaseValueConstant 0.60
+
+                        level None set GD_Anemone_Pop_WildLife.Balance.PawnBalance_SandWorm_Queen PlayThroughs[1].CustomItemPoolList[1].PoolProbability.BaseValueConstant 0.60
+
+                    #</Sandworms (DLC5)>
 
                     #<Shirtless Men>
 
