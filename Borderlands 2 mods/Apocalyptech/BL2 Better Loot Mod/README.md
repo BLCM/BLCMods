@@ -71,6 +71,9 @@ Specifically, this mod does the following:
 * By default, adds all legendaries/uniques/pearls/seraph/effervescent items
   (weapons, grenade mods, class mods, shields, relics) into the global
   "legendary" loot pools, so you'll start seeing those much more frequently.
+  * The Fire Drill, an unused Infinity variant from the Commander Lilith DLC,
+    has been added to the global drop pools.  No other unused weapon from
+    that DLC has been added, though -- there are a few others.
 * By default, loot will skew much more rare.  You should expect to see
   those legendaries/uniques/pearls/seraphs/effervescents far more frequently
   than in vanilla BL2.
@@ -106,6 +109,7 @@ Specifically, this mod does the following:
     somewhat, but gear from safes will always be legendary.
   * Fixes some "shield" loot configurations which had an error and would never
     spawn, previously.
+  * Marcus's Storeroom, from the Commander Lilith DLC, has been vastly improved.
 * Makes Eridium drop 2.5x more often
 * Makes Torgue Tokens more numerous when dropped
 * Boss drop pools are generally improved, and by default, bosses are guaranteed
@@ -129,6 +133,7 @@ Specifically, this mod does the following:
     * Badass Fire Archers
     * Badass Knights
     * Badass Yeti
+    * Infected Badass Sprouts
     * Undead Badass Psychos
     * Wattle Gobble Tributes *(three out of the twelve weren't set to drop anything)*
   * A few more standard enemies have also been set to drop from the badass pool:
@@ -162,6 +167,9 @@ Specifically, this mod does the following:
     * The BLNG Loader (from Wedding Day Massacre) will drop from the badass pool and
       also drop a whole bunch of money.  I've always been mystified why it didn't
       drop a ton of money from the start.
+    * Sandworms from the Commander Lilith DLC will be a bit more likely to drop
+      the Toothpick and Retainer
+    * New Pandora troops will be a bit more likely to drop the Infection Cleaner
 * Improved gifts received in The Talon of God (from Sanctuary residents) to
   be purples and gemstones.
 * Remove early-game loot restrictions.  This is actually a superset of the
