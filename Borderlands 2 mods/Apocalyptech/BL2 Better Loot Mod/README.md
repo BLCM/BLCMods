@@ -446,6 +446,12 @@ Changelog
 **v1.3.3**, unreleased:
  * Nothing yet.
 
+**v1.3.2-and-a-bit**, June 11, 2019 (commit `1f3559e5944d249b68ea18ba67fb1d20ee678189`):
+ * FromDarkHell updated the BLCMods github to fix the majority of
+   DLC5-related weapon part errors, which included this mod.  DLC guns
+   post-Commander-Lilith-DLC were fixed as of this update, though the
+   version number didn't actally get bumped.
+
 **v1.3.2**, November 6, 2018 (commit `2e729a97a0279f6815254242a65649f9a4438f0e`):
  * Fixed a small typo which would otherwise cause an error to be flagged in a
    forthcoming version of BLCMM.  (No actual functional changes, though.)
