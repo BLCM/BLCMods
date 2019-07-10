@@ -1497,6 +1497,18 @@ BL2
 
                 #</Better Talon of God Gifts>
 
+                #<Better DLC5 Loot Showers>
+
+                    # Few people would complain about the loot showers which happen after boss
+                    # fights, in DLC5 (Commander Lilith), but we're going to buff these up
+                    # slightly anyway.  Basically converting a blue to purple and a green to blue.
+
+                    level None set GD_Anemone_ItemPools.ListDefs.Shower_Loot_Boss ItemPools[0].ItemPool GD_Itempools.EnemyDropPools.Pool_GunsAndGear_05_VeryRare
+
+                    level None set GD_Anemone_ItemPools.ListDefs.Shower_Loot_Boss ItemPools[1].ItemPool GD_Itempools.EnemyDropPools.Pool_GunsAndGear_04_Rare
+
+                #</Better DLC5 Loot Showers>
+
             #</Loot Pool Tweaks>
 
             #<Currency Drop Improvements>
@@ -4023,6 +4035,92 @@ BL2
 
                         # A few bosses from DLC5 (Commander Lilith) don't use the usual drop rate
                         # constants for their uniques.  This section normalizes those.
+
+                        #<Cassius>
+
+                            # UCP 5.0 adds Hector's Paradise to Cassius, so we're doing a full set here.
+
+                            level ResearchCenter_P set GD_Anemone_Pop_Cassius.PawnBalance_Anemone_Cassius Playthroughs[0].CustomItemPoolList
+                            (
+                                (
+                                    ItemPool=ItemPoolDefinition'GD_Anemone_ItemPools.GrenadeModPools.Pool_GrenadeMods_07_Antifection',
+                                    PoolProbability=(
+                                        BaseValueConstant=1.000000,
+                                        BaseValueAttribute=AttributeDefinition'GD_Itempools.DropWeights.DropODDS_BossUniques',
+                                        InitializationDefinition=None,
+                                        BaseValueScaleConstant=2.000000
+                                    )
+                                ),
+                                (
+                                    ItemPool=ItemPoolDefinition'GD_CustomItemPools_Anemone.Runner.Pool_Customs_Runner_VeryRare',
+                                    PoolProbability=(
+                                        BaseValueConstant=1.000000,
+                                        BaseValueAttribute=AttributeDefinition'GD_Itempools.DropWeights.DropODDS_BossUniques',
+                                        InitializationDefinition=None,
+                                        BaseValueScaleConstant=2.000000
+                                    )
+                                ),
+                                (
+                                    ItemPool=ItemPoolDefinition'GD_CustomItemPools_Anemone.BanditTech.Pool_Customs_BanditTech_VeryRare',
+                                    PoolProbability=(
+                                        BaseValueConstant=1.000000,
+                                        BaseValueAttribute=AttributeDefinition'GD_Itempools.DropWeights.DropODDS_BossUniques',
+                                        InitializationDefinition=None,
+                                        BaseValueScaleConstant=2.000000
+                                    )
+                                ),
+                                (
+                                    ItemPool=ItemPoolDefinition'GD_Anemone_ItemPools.WeaponPools.Pool_Pistol_Hector_Paradise',
+                                    PoolProbability=(
+                                        BaseValueConstant=1.000000,
+                                        BaseValueAttribute=AttributeDefinition'GD_Itempools.DropWeights.DropODDS_BossUniques',
+                                        InitializationDefinition=None,
+                                        BaseValueScaleConstant=1.000000
+                                    )
+                                )
+                            )
+
+                            level ResearchCenter_P set GD_Anemone_Pop_Cassius.PawnBalance_Anemone_Cassius Playthroughs[1].CustomItemPoolList
+                            (
+                                (
+                                    ItemPool=ItemPoolDefinition'GD_Anemone_ItemPools.GrenadeModPools.Pool_GrenadeMods_07_Antifection',
+                                    PoolProbability=(
+                                        BaseValueConstant=1.000000,
+                                        BaseValueAttribute=AttributeDefinition'GD_Itempools.DropWeights.DropODDS_BossUniques',
+                                        InitializationDefinition=None,
+                                        BaseValueScaleConstant=4.000000
+                                    )
+                                ),
+                                (
+                                    ItemPool=ItemPoolDefinition'GD_CustomItemPools_Anemone.Runner.Pool_Customs_Runner_VeryRare',
+                                    PoolProbability=(
+                                        BaseValueConstant=1.000000,
+                                        BaseValueAttribute=AttributeDefinition'GD_Itempools.DropWeights.DropODDS_BossUniques',
+                                        InitializationDefinition=None,
+                                        BaseValueScaleConstant=2.000000
+                                    )
+                                ),
+                                (
+                                    ItemPool=ItemPoolDefinition'GD_CustomItemPools_Anemone.BanditTech.Pool_Customs_BanditTech_VeryRare',
+                                    PoolProbability=(
+                                        BaseValueConstant=1.000000,
+                                        BaseValueAttribute=AttributeDefinition'GD_Itempools.DropWeights.DropODDS_BossUniques',
+                                        InitializationDefinition=None,
+                                        BaseValueScaleConstant=2.000000
+                                    )
+                                ),
+                                (
+                                    ItemPool=ItemPoolDefinition'GD_Anemone_ItemPools.WeaponPools.Pool_Pistol_Hector_Paradise',
+                                    PoolProbability=(
+                                        BaseValueConstant=1.000000,
+                                        BaseValueAttribute=AttributeDefinition'GD_Itempools.DropWeights.DropODDS_BossUniques',
+                                        InitializationDefinition=None,
+                                        BaseValueScaleConstant=1.000000
+                                    )
+                                )
+                            )
+
+                        #</Cassius>
 
                         #<Lt. Bolson>
 
