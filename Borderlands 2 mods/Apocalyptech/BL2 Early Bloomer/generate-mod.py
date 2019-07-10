@@ -63,7 +63,7 @@ except ModuleNotFoundError:
 ###
 
 mod_name = 'BL2 Early Bloomer'
-mod_version = '1.1.1'
+mod_version = '1.1.2'
 input_filename = 'mod-input-file.txt'
 output_filename = '{}.blcm'.format(mod_name)
 source_output_filename = '{}-source.txt'.format(mod_name)
@@ -72,12 +72,12 @@ source_output_filename = '{}-source.txt'.format(mod_name)
 # without Better Loot installed!
 better_loot_compat_list = []
 for (classname) in [
-        'GD_Aster_ItemGrades.ClassMods.BalDef_ClassMod_Aster_Assassin:ItemPartListCollectionDefinition_28',
-        'GD_Aster_ItemGrades.ClassMods.BalDef_ClassMod_Aster_Mechromancer:ItemPartListCollectionDefinition_29',
-        'GD_Aster_ItemGrades.ClassMods.BalDef_ClassMod_Aster_Merc:ItemPartListCollectionDefinition_30',
-        'GD_Aster_ItemGrades.ClassMods.BalDef_ClassMod_Aster_Psycho:ItemPartListCollectionDefinition_31',
-        'GD_Aster_ItemGrades.ClassMods.BalDef_ClassMod_Aster_Siren:ItemPartListCollectionDefinition_32',
-        'GD_Aster_ItemGrades.ClassMods.BalDef_ClassMod_Aster_Soldier:ItemPartListCollectionDefinition_33',
+        'GD_Aster_ItemGrades.ClassMods.BalDef_ClassMod_Aster_Assassin:ItemPartListCollectionDefinition_42',
+        'GD_Aster_ItemGrades.ClassMods.BalDef_ClassMod_Aster_Mechromancer:ItemPartListCollectionDefinition_43',
+        'GD_Aster_ItemGrades.ClassMods.BalDef_ClassMod_Aster_Merc:ItemPartListCollectionDefinition_44',
+        'GD_Aster_ItemGrades.ClassMods.BalDef_ClassMod_Aster_Psycho:ItemPartListCollectionDefinition_45',
+        'GD_Aster_ItemGrades.ClassMods.BalDef_ClassMod_Aster_Siren:ItemPartListCollectionDefinition_46',
+        'GD_Aster_ItemGrades.ClassMods.BalDef_ClassMod_Aster_Soldier:ItemPartListCollectionDefinition_47',
         ]:
     for i in range(19):
         better_loot_compat_list.append('level None set {} AlphaPartData.WeightedParts[{}].MinGameStageIndex 0'.format(
