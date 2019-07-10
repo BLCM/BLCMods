@@ -1596,7 +1596,7 @@ BL2
                     # a chance to drop all the way up to Legendary, but with our other loot
                     # changes, getting something special from a lockers wouldn't be special anyway.
 
-                    set GD_Itempools.LootablePools.Pool_Locker_Items_SMGsAndPistols BalancedItems
+                    level None set GD_Itempools.LootablePools.Pool_Locker_Items_SMGsAndPistols BalancedItems
                     (
                         (
                             ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_Pistols_04_Rare',
@@ -1627,6 +1627,26 @@ BL2
                     level None set GD_Itempools.ListDefs.StorageLockerLoot LootData[5].ItemAttachments[0].ItemPool ItemPoolDefinition'GD_Itempools.GrenadeModPools.Pool_GrenadeMods_04_Rare'
 
                     level None set GD_Itempools.ListDefs.StorageLockerLoot LootData[6].ItemAttachments[1].ItemPool ItemPoolDefinition'GD_Itempools.GrenadeModPools.Pool_GrenadeMods_04_Rare'
+
+                    # In Paradise Sanctum, we alter locker contents because Marcus's Storeroom should
+                    # be impressive.  These are the default values, so they revert when leaving that
+                    # level.
+
+                    level None set GD_Itempools.ListDefs.StorageLockerLoot LootData[0].Weight.BaseValueScaleConstant 1
+
+                    level None set GD_Itempools.ListDefs.StorageLockerLoot LootData[1].Weight.BaseValueScaleConstant 1
+
+                    level None set GD_Itempools.ListDefs.StorageLockerLoot LootData[2].Weight.BaseValueScaleConstant 1
+
+                    level None set GD_Itempools.ListDefs.StorageLockerLoot LootData[3].Weight.BaseValueScaleConstant 1.5
+
+                    level None set GD_Itempools.ListDefs.StorageLockerLoot LootData[4].Weight.BaseValueScaleConstant 1.2
+
+                    level None set GD_Itempools.ListDefs.StorageLockerLoot LootData[5].Weight.BaseValueScaleConstant 0.8
+
+                    level None set GD_Itempools.ListDefs.StorageLockerLoot LootData[6].Weight.BaseValueScaleConstant 1
+
+                    level None set Prop_Lootables_02.Meshes.Skel_StorageLocker:SkeletalMeshSocket_1 RelativeLocation.Y -97.749992
 
                 #</Better Lockers>
 
@@ -2979,6 +2999,80 @@ BL2
                     #</Improved Non-Mimic Chests>
 
                 #</Tiny Tina DLC Chest Changes>
+
+                #<Marcus's Storeroom>
+
+                    # Marcus's Storeroom, from near the end of DLC5 (Commander Lilith) is pretty
+                    # underwhelming.  Buff everything up in here!  Fortunately there are only two
+                    # other lockers in the level, so we can just remove those and buff up lockers.
+                    # Note that we have to fiddle with the attachment point placement so that
+                    # the larger guns don't look *too* ridiculous there.
+
+                    #<Dahl Epic Chest>
+
+                        level GaiusSanctuary_P set GaiusSanctuary_Interactive.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_7 PopulationDef GD_Population_Treasure.TreasureChests.EpicChest_Dahl
+                        
+                        level GaiusSanctuary_P set GaiusSanctuary_Interactive.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_7 Rotation.Yaw -12288
+
+                    #</Dahl Epic Chest>
+
+                    #<Remove Other Lockers>
+
+                        level GaiusSanctuary_P set GaiusSanctuary_Interactive.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_134 PopulationDef GD_Population_Treasure.Lootables.StrongBox
+
+                        level GaiusSanctuary_P set GaiusSanctuary_Interactive.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_138 PopulationDef GD_Population_Treasure.Lootables.StrongBox
+
+                    #</Remove Other Lockers>
+
+                    #<Locker Improvements>
+
+                        level GaiusSanctuary_P set GD_Itempools.LootablePools.Pool_Locker_Items_SMGsAndPistols BalancedItems
+                        (
+                            (
+                                ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.Treasure_ChestPools.Pool_EpicChest_Weapons_Pistols',
+                                InvBalanceDefinition=None,
+                                Probability=(
+                                    BaseValueConstant=1.000000,
+                                    BaseValueAttribute=None,
+                                    InitializationDefinition=None,
+                                    BaseValueScaleConstant=1.000000
+                                ),
+                                bDropOnDeath=False
+                            ),
+                            (
+                                ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.Treasure_ChestPools.Pool_EpicChest_Weapons_LongGuns',
+                                InvBalanceDefinition=None,
+                                Probability=(
+                                    BaseValueConstant=1.000000,
+                                    BaseValueAttribute=None,
+                                    InitializationDefinition=None,
+                                    BaseValueScaleConstant=1.000000
+                                ),
+                                bDropOnDeath=True
+                            )
+                        )
+
+                        level GaiusSanctuary_P set GD_Itempools.ListDefs.StorageLockerLoot LootData[6].ItemAttachments[1].ItemPool ItemPoolDefinition'GD_Itempools.Treasure_ChestPools.Pool_EpicChest_GrenadeMods'
+
+                        level GaiusSanctuary_P set GD_Itempools.ListDefs.StorageLockerLoot LootData[0].Weight.BaseValueScaleConstant 0
+
+                        level GaiusSanctuary_P set GD_Itempools.ListDefs.StorageLockerLoot LootData[1].Weight.BaseValueScaleConstant 0
+
+                        level GaiusSanctuary_P set GD_Itempools.ListDefs.StorageLockerLoot LootData[2].Weight.BaseValueScaleConstant 0
+
+                        level GaiusSanctuary_P set GD_Itempools.ListDefs.StorageLockerLoot LootData[3].Weight.BaseValueScaleConstant 1
+
+                        level GaiusSanctuary_P set GD_Itempools.ListDefs.StorageLockerLoot LootData[4].Weight.BaseValueScaleConstant 0
+
+                        level GaiusSanctuary_P set GD_Itempools.ListDefs.StorageLockerLoot LootData[5].Weight.BaseValueScaleConstant 0
+
+                        level GaiusSanctuary_P set GD_Itempools.ListDefs.StorageLockerLoot LootData[6].Weight.BaseValueScaleConstant 1
+
+                        level GaiusSanctuary_P set Prop_Lootables_02.Meshes.Skel_StorageLocker:SkeletalMeshSocket_1 RelativeLocation.Y -130
+
+                    #</Locker Improvements>
+
+                #</Marcus's Storeroom>
 
             #</Better Containers>
 
