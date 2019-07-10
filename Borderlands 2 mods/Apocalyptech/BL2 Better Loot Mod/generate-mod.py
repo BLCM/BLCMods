@@ -1689,11 +1689,17 @@ for (label, key, unique_pct, rare_pct) in [
         ]:
 
     with open('input-file-droprate.txt', 'r') as df:
+        hoff_other_pct_pt1 = round(max(1 - unique_pct, 0), 6)
+        hoff_other_pct_pt2 = round(max(1 - (unique_pct*2), 0), 6)
+        unique_dbl_pct = round(min(unique_pct*2, 1), 6)
         boss_drops[key] = df.read().format(
                 section_label='{} ({}% Uniques, {}% Rares)'.format(
                     label, round(unique_pct*100), round(rare_pct*100)),
                 unique_pct=unique_pct,
                 rare_pct=rare_pct,
+                hoff_other_pct_pt1=hoff_other_pct_pt1,
+                hoff_other_pct_pt2=hoff_other_pct_pt2,
+                unique_dbl_pct=unique_dbl_pct,
                 )
 
 ###

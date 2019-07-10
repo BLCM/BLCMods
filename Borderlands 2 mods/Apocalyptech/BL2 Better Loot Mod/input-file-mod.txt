@@ -4019,6 +4019,55 @@ BL2
 
                     #</Tweak Gold Golem Pool>
 
+
+                    #<Lt. Bolson>
+
+                        # Lt. Bolson doesn't use the usual droprate constants; changing that.
+
+                        level OldDust_P set GD_Anemone_Pop_NP.Balance.PawnBalance_Lt_Bolson PlayThroughs[0].CustomItemPoolList[3].PoolProbability
+                        (
+                            BaseValueConstant=1,
+                            BaseValueAttribute=AttributeDefinition'GD_Itempools.DropWeights.DropODDS_BossUniques', 
+                            InitializationDefinition=None,
+                            BaseValueScaleConstant=1
+                        )
+
+                        level OldDust_P set GD_Anemone_Pop_NP.Balance.PawnBalance_Lt_Bolson PlayThroughs[1].CustomItemPoolList[3].PoolProbability
+                        (
+                            BaseValueConstant=1,
+                            BaseValueAttribute=AttributeDefinition'GD_Itempools.DropWeights.DropODDS_BossUniques', 
+                            InitializationDefinition=None,
+                            BaseValueScaleConstant=2
+                        )
+
+                    #</Lt. Bolson>
+
+                    #<Lt. Angvar>
+
+                        # Lt. Angvar has a weird pool where he'll equip one of seven Legendary
+                        # pistols, but only drop it (Cold Dead Hands style) if it's the Infinity.
+                        # We'll just normalize the pool so he'll drop regardless of which weapon
+                        # he's using.  Just for fun, we'll also change the Infinity equip/drop
+                        # to a Fire Drill
+
+                        level Sandworm_P set GD_DahlShared.WeaponPools.Pool_Weapons_Pistols_EnemyUse_Angvar BalancedItems[0].bDropOnDeath True
+
+                        level Sandworm_P set GD_DahlShared.WeaponPools.Pool_Weapons_Pistols_EnemyUse_Angvar BalancedItems[1].bDropOnDeath True
+
+                        level Sandworm_P set GD_DahlShared.WeaponPools.Pool_Weapons_Pistols_EnemyUse_Angvar BalancedItems[2].bDropOnDeath True
+
+                        level Sandworm_P set GD_DahlShared.WeaponPools.Pool_Weapons_Pistols_EnemyUse_Angvar BalancedItems[3].bDropOnDeath True
+
+                        level Sandworm_P set GD_DahlShared.WeaponPools.Pool_Weapons_Pistols_EnemyUse_Angvar BalancedItems[4].bDropOnDeath True
+
+                        level Sandworm_P set GD_DahlShared.WeaponPools.Pool_Weapons_Pistols_EnemyUse_Angvar BalancedItems[5].bDropOnDeath True
+
+                        level Sandworm_P set GD_DahlShared.WeaponPools.Pool_Weapons_Pistols_EnemyUse_Angvar BalancedItems[6].bDropOnDeath True
+
+                        level Sandworm_P set GD_DahlShared.WeaponPools.Pool_Weapons_Pistols_EnemyUse_Angvar BalancedItems[7].InvBalanceDefinition GD_Anemone_Weapons.A_Weapons_Legendary.Pistol_Vladof_5_Infinity_DD
+
+                    #</Lt. Angvar>
+
                 #</Boss Drop Normalization>
 
                 #<Raid Boss Drop Improvements>
