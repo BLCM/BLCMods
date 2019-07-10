@@ -1058,6 +1058,7 @@ for (idx, (classname, propname, loot_idx, attachment_idx)) in enumerate([
         ('GD_Itempools.ListDefs.EpicChestHyperionLoot', 'LootData', 3, 11),
         ('GD_Aster_Lootables.Balance.ObjectGrade_MimicChest_NoMimic', 'DefaultLoot', 4, 11),
         ('GD_Lobelia_DahlDigi.LootableGradesUnique.ObjectGrade_DalhEpicCrate_Digi', 'DefaultLoot', 4, 11),
+        ('GD_Anemone_Treasure.ChestGrades.ObjectGrade_DahlEpic', 'DefaultLoot', 4, 11),
         ]):
     mp.register_str('euphoria_fix_{}'.format(idx),
         'level None set {} {}[{}].ItemAttachments[{}].ItemPool GD_Itempools.BuffDrinkPools.Pool_BuffDrinks_HealingRegen'.format(
