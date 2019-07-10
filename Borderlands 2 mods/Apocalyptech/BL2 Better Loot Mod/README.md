@@ -68,12 +68,12 @@ options in the mod file itself.)*
 
 Specifically, this mod does the following:
 
-* By default, adds all legendaries/uniques/pearls/seraph items (weapons,
-  grenade mods, class mods, shields, relics) into the global "legendary" loot
-  pools, so you'll start seeing those much more frequently.
+* By default, adds all legendaries/uniques/pearls/seraph/effervescent items
+  (weapons, grenade mods, class mods, shields, relics) into the global
+  "legendary" loot pools, so you'll start seeing those much more frequently.
 * By default, loot will skew much more rare.  You should expect to see
-  those legendaries/uniques/pearls/seraphs far more frequently than in
-  vanilla BL2.
+  those legendaries/uniques/pearls/seraphs/effervescents far more frequently
+  than in vanilla BL2.
 * Adds the "Alignment" Class Mods from the Dragon Keep DLC into the global
   Class Mod drop pools (and makes those COMs always drop at at least blue
   rarity).
@@ -185,10 +185,11 @@ user-changeable:
   a copy of my own BL2 Early Bloomer mod, though there's no harm in having both
   active at the same time.
 * **Legendary and E-Tech Pool Adjustments** - The default configuration adds all
-  unique, legendary, seraph, and pearlescent weapons/items (including gemstone
-  weapons) into the main global loot pools, so all items can technically be found
-  just about anywhere.  You can tweak which groups of items/weapons get added by
-  going in here and disabling any you don't want to drop.
+  unique, legendary, seraph, pearlescent, and effevescent weapons/items (including
+  gemstone weapons) into the main global loot pools, so all items can
+  technically be found just about anywhere.  You can tweak which groups of
+  items/weapons get added by going in here and disabling any you don't want to
+  drop.
 * **Drop Quality** - This is the main section which determines the quality of
   drops that you'll get throughout the game.  The choices range from "Excellent"
   (which used to be called "Lootsplosion," pre-1.3.0), all the way down to
@@ -287,6 +288,14 @@ easily persuaded otherwise if someone feels strongly about it.
   technically different items)*
 * "ERROR MESSAGE" Ahab (the one used by Master Gee).  Regular Ahabs will
   still spawn, though.
+* "Winter is Over" relic, which you can get from Ghost in The Burrows.
+  It's a pretty underwhelming relic on its own, and has a guaranteed
+  spawn point anyway.
+
+The effervescent-level relics and shields (Mouthwash, Hard Carry, Retainer,
+and Easy Mode), like effervescent weapons, can be found as world drops,
+but at reduced weights, since those are very special-purpose and have
+clearly-defined acquisition methods.
 
 A handful of containers will only ever drop common-level gear:
 
@@ -444,7 +453,8 @@ Changelog
 =========
 
 **v1.3.3**, unreleased:
- * Nothing yet.
+ * Updated for full DLC5 (Commander Lilith & the Fight For Sanctuary)
+   compatibility.
 
 **v1.3.2-and-a-bit**, June 11, 2019 (commit `1f3559e5944d249b68ea18ba67fb1d20ee678189`):
  * FromDarkHell updated the BLCMods github to fix the majority of
