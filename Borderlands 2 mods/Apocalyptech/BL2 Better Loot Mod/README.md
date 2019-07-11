@@ -373,6 +373,9 @@ TODO
   Slaughterdome missions (or rather, in the Slaughterdome areas).  That might
   be especially helpful in Murderlin's Temple.
 * Make a Reborn-compatible version of this
+* I feel like too many of the New Pandora troops drop from the badass pools,
+  given that there tend to be quite a few of them together.  Various fights
+  have 3+ snipers, etc.  Leaving it for now, but may nerf later...
 
 Other Notes
 ===========
@@ -443,7 +446,7 @@ for the full text.
 Changelog
 =========
 
-**v1.3.3**, unreleased:
+**v1.3.3**, July 11, 2019:
  * Updated for full DLC5 (Commander Lilith & the Fight For Sanctuary)
    compatibility.
  * Slight reorganization of main `GunsAndGear` pool and Class Mod pool to
