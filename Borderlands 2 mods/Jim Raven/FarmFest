@@ -1,26 +1,69 @@
-##############################################################################################
-# 
-# By Jim Raven
-# Makes Farming A lot Less tedious and A ALOT FASTER
-# You should only use this when you are farming for Best parts or really wanna exp fast 
-# As it does affect spawnrates of enemies as well
-# Features 1000% drop rate. THAT DOESNT MEAN ENEMIES WILL DROP 10 STUFF JUST THAT IT WILL ALWAY
-# DROP ON KILL	
-# Respawn of all enemies after 5 seconds.
-# Vendors Will have legendaries "Almost" All the time
-##############################################################################################
+<BLCMM v="1">
+#<!!!You opened a file saved with BLCMM in FilterTool. Please update to BLCMM to properly open this file!!!>
+	<head>
+		<type name="BL2" offline="false"/>
+	</head>
+	<body>
+		<category name="Farmfest" MUT="true">
+			<category name="FarmFest">
+				<comment>##############################################################################################</comment>
+				<comment># By Jim Raven</comment>
+				<comment># Makes Farming A lot Less tedious and A ALOT FASTER</comment>
+				<comment># You should only use this when you are farming for Best parts or really wanna exp fast</comment>
+				<comment># As it does affect spawnrates of enemies as well</comment>
+				<comment># Features 1000% drop rate. THAT DOESNT MEAN ENEMIES WILL DROP 10 STUFF JUST THAT IT WILL ALWAY</comment>
+				<comment># DROP ON KILL</comment>
+				<comment># Respawn of all enemies after 5 seconds.</comment>
+				<comment># Vendors Will have legendaries "Almost" All the time</comment>
+				<comment>##############################################################################################</comment>
+				<category name="Increased legendary odds">
+					<code profiles="default">set GD_Itempools.DropWeights.DropODDs_BossUniques:ConstantAttributeValueResolver_0 ConstantValue 10</code>
+					<code profiles="default">set GD_Itempools.DropWeights.DropODDs_BossUniqueRares:ConstantAttributeValueResolver_0 ConstantValue 10</code>
+				</category>
+				<category name="Global Respawn">
+					<code profiles="default">set globals RespawnDelayInSeconds 5.000000</code>
+				</category>
+				<category name="Vendors Almost always legendary">
+					<code profiles="default">set GD_ItemPools_Shop.Misc.Att_IOTD_Weighting_03_Uncommon:ConstantAttributeValueResolver_1 ConstantValue 0</code>
+					<code profiles="default">set GD_ItemPools_Shop.Misc.Att_IOTD_Weighting_05_VeryRare:ConstantAttributeValueResolver_0 ConstantValue 0.01</code>
+					<code profiles="default">set GD_ItemPools_Shop.Misc.Att_IOTD_Weighting_04_Rare:ConstantAttributeValueResolver_0 ConstantValue 0</code>
+					<code profiles="default">set GD_ItemPools_Shop.Misc.Att_IOTD_Weighting_06_Legendary:ConstantAttributeValueResolver_0 ConstantValue 1</code>
+				</category>
+			</category>
+			<category name="RevertFarmFest (imported from FarmFest Toggle Off.txt)">
+				<category name="Introduction">
+					<comment>By Jim Raven</comment>
+					<comment>This is a mod that does nothing by itself. Its a mod Supposed to be used</comment>
+					<comment>when you want to turn off FarmFest.</comment>
+					<comment>Features : Reverts Drop Rates to Normal Rates</comment>
+					<comment>Reverts Vendors Item of the Day rates to the normal</comment>
+					<comment>Reverts Respawn Time of Mobs to 1500 sec as is the default</comment>
+					<comment>Normally go to Main menu and exec this mod to revert the Farmfest mod.</comment>
+				</category>
+				<category name="Reverts Drop Rates of enemies">
+					<code profiles="">set GD_Itempools.DropWeights.DropODDs_BossUniques:ConstantAttributeValueResolver_0 ConstantValue 0.100000</code>
+					<code profiles="">set GD_Itempools.DropWeights.DropODDs_BossUniqueRares:ConstantAttributeValueResolver_0 ConstantValue 0.330000</code>
+				</category>
+				<category name="Reverts Respawns">
+					<code profiles="">set globals RespawnDelayInSeconds 1500.000000</code>
+				</category>
+				<category name="Reverts Vendors IOTD">
+					<code profiles="">set GD_ItemPools_Shop.Misc.Att_IOTD_Weighting_03_Uncommon:ConstantAttributeValueResolver_1 ConstantValue 4.000000</code>
+					<code profiles="">set GD_ItemPools_Shop.Misc.Att_IOTD_Weighting_04_Rare:ConstantAttributeValueResolver_0 ConstantValue 1.200000</code>
+					<code profiles="">set GD_ItemPools_Shop.Misc.Att_IOTD_Weighting_05_VeryRare:ConstantAttributeValueResolver_0 ConstantValue 0.200000</code>
+					<code profiles="">set GD_ItemPools_Shop.Misc.Att_IOTD_Weighting_06_Legendary:ConstantAttributeValueResolver_0 ConstantValue 0.005500</code>
+				</category>
+			</category>
+		</category>
+	</body>
+</BLCMM>
 
-#Makes Drop Rate for most Legendaries and Blues To 1000% from the normal 10-33%
+#Commands:
 set GD_Itempools.DropWeights.DropODDs_BossUniques:ConstantAttributeValueResolver_0 ConstantValue 10
 set GD_Itempools.DropWeights.DropODDs_BossUniqueRares:ConstantAttributeValueResolver_0 ConstantValue 10
-
-#Makes Respawn Timer of Bosses and enemies to 5 seconds instead of 25 Minutes
 set globals RespawnDelayInSeconds 5.000000
-
-
-#makes vendors have legendaries Almost all the time.
 set GD_ItemPools_Shop.Misc.Att_IOTD_Weighting_03_Uncommon:ConstantAttributeValueResolver_1 ConstantValue 0
-set GD_ItemPools_Shop.Misc.Att_IOTD_Weighting_04_Rare:ConstantAttributeValueResolver_0 ConstantValue 0
 set GD_ItemPools_Shop.Misc.Att_IOTD_Weighting_05_VeryRare:ConstantAttributeValueResolver_0 ConstantValue 0.01
+set GD_ItemPools_Shop.Misc.Att_IOTD_Weighting_04_Rare:ConstantAttributeValueResolver_0 ConstantValue 0
 set GD_ItemPools_Shop.Misc.Att_IOTD_Weighting_06_Legendary:ConstantAttributeValueResolver_0 ConstantValue 1
 
