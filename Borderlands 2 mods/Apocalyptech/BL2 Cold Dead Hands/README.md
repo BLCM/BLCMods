@@ -328,6 +328,9 @@ Ideas/TODO
   * Loaders having their limbs knocked off
 * A loader or two in End of the Line can spawn without limbs, but will still
   drop a gun.  Not sure if I can get that to not drop...
+* Lt. Bolson is capable of throwing a grenade defined in one of his loot pools.
+  I tried to get something like that to work for CDH but failed in the past;
+  I'll have to re-try it and see if I can get grenades into the mod properly.
 
 Licenses
 ========
@@ -344,6 +347,15 @@ for the full text.
 
 Changelog
 =========
+
+**v1.1.3** - unreleased:
+ * Imported updated BL2 Early Bloomer data
+
+**v1.1.2-and-a-bit**, June 11, 2019 (commit `1f3559e5944d249b68ea18ba67fb1d20ee678189`):
+ * FromDarkHell updated the BLCMods github to fix the majority of
+   DLC5-related weapon part errors, which included this mod.  DLC guns
+   post-Commander-Lilith-DLC were fixed as of this update, though the
+   version number didn't actally get bumped.
 
 **v1.1.2** - July 27, 2018 (commit `7b6a65ac43fb61276062ec2d829c6fc163979ef7`):
  * Added more options for rocket launcher equip chances other than the binary
