@@ -46,7 +46,7 @@ except ModuleNotFoundError:
 ###
 
 mod_name = 'BL2 Expanded Legendary Pools'
-mod_version = '1.0.0'
+mod_version = '1.0.2'
 output_filename = '{}.blcm'.format(mod_name)
 input_filename = 'input-file-mod.txt'
 
@@ -58,7 +58,8 @@ input_filename = 'input-file-mod.txt'
 unique_hotfixes = []
 pearl_hotfixes = []
 seraph_hotfixes = []
-for (guntype, legendaries, uniques, pearls, seraphs, num_undesirables) in [
+eff_hotfixes = []
+for (guntype, legendaries, uniques, pearls, seraphs, effs, num_undesirables) in [
         (
             'AssaultRifles',
             [
@@ -69,6 +70,7 @@ for (guntype, legendaries, uniques, pearls, seraphs, num_undesirables) in [
                 'GD_Weap_AssaultRifle.A_Weapons_Legendary.AR_Torgue_5_KerBlaster',
                 'GD_Weap_AssaultRifle.A_Weapons_Legendary.AR_Vladof_5_Sherdifier',
                 'GD_Aster_Weapons.AssaultRifles.AR_Bandit_3_Ogre',
+                'GD_Anemone_Weapons.AssaultRifle.Brothers.AR_Jakobs_5_Brothers',
             ],
             [
                 # Uniques
@@ -94,6 +96,11 @@ for (guntype, legendaries, uniques, pearls, seraphs, num_undesirables) in [
                 'GD_Aster_RaidWeapons.AssaultRifles.Aster_Seraph_Seeker_Balance',
                 'GD_Orchid_RaidWeapons.AssaultRifle.Seraphim.Orchid_Seraph_Seraphim_Balance',
                 'GD_Sage_RaidWeapons.AssaultRifle.Sage_Seraph_LeadStorm_Balance',
+            ],
+            [
+                # Effervescents
+                'GD_Anemone_Weapons.AssaultRifle.AR_Dahl_6_Toothpick',
+                'GD_Anemone_Weapons.AssaultRifle.PeakOpener.AR_Torgue_5_PeakOpener',
             ],
             0,
         ),
@@ -123,6 +130,10 @@ for (guntype, legendaries, uniques, pearls, seraphs, num_undesirables) in [
                 # Seraphs
                 'GD_Orchid_RaidWeapons.RPG.Ahab.Orchid_Seraph_Ahab_Balance',
             ],
+            [
+                # Effervescents
+                'GD_Anemone_Weapons.Rocket_Launcher.WorldBurn.RL_Torgue_5_WorldBurn',
+            ],
             1,
         ),
         (
@@ -137,6 +148,7 @@ for (guntype, legendaries, uniques, pearls, seraphs, num_undesirables) in [
                 'GD_Weap_Pistol.A_Weapons_Legendary.Pistol_Maliwan_5_ThunderballFists',
                 'GD_Weap_Pistol.A_Weapons_Legendary.Pistol_Jakobs_5_Maggie',
                 'GD_Weap_Pistol.A_Weapons_Legendary.Pistol_Hyperion_5_LogansGun',
+                'GD_Anemone_Weapons.A_Weapons_Legendary.Pistol_Dahl_5_Hector_Hornet',
             ],
             [
                 # Uniques
@@ -168,7 +180,10 @@ for (guntype, legendaries, uniques, pearls, seraphs, num_undesirables) in [
                 'GD_Sage_RaidWeapons.Pistol.Sage_Seraph_Infection_Balance',
                 'GD_Aster_RaidWeapons.Pistols.Aster_Seraph_Stinger_Balance',
             ],
-            0,
+            [
+                # Effervescents
+            ],
+            1,
         ),
         (
             'Shotguns',
@@ -179,6 +194,7 @@ for (guntype, legendaries, uniques, pearls, seraphs, num_undesirables) in [
                 'GD_Weap_Shotgun.A_Weapons_Legendary.SG_Torgue_5_Flakker',
                 'GD_Weap_Shotgun.A_Weapons_Legendary.SG_Jakobs_5_Striker',
                 'GD_Weap_Shotgun.A_Weapons_Legendary.SG_Hyperion_5_ConferenceCall',
+                'GD_Anemone_Weapons.Shotgun.Overcompensator.SG_Hyperion_6_Overcompensator',
             ],
             [
                 # Uniques
@@ -209,6 +225,10 @@ for (guntype, legendaries, uniques, pearls, seraphs, num_undesirables) in [
                 'GD_Orchid_RaidWeapons.Shotgun.Spitter.Orchid_Seraph_Spitter_Balance',
                 'GD_Sage_RaidWeapons.Shotgun.Sage_Seraph_Interfacer_Balance',
                 'GD_Aster_RaidWeapons.Shotguns.Aster_Seraph_Omen_Balance',
+            ],
+            [
+                # Effervescents
+                'GD_Anemone_Weapons.Shotguns.SG_Torgue_3_SwordSplosion_Unico',
             ],
             0,
         ),
@@ -246,6 +266,11 @@ for (guntype, legendaries, uniques, pearls, seraphs, num_undesirables) in [
                 'GD_Orchid_RaidWeapons.SMG.Actualizer.Orchid_Seraph_Actualizer_Balance',
                 'GD_Aster_RaidWeapons.SMGs.Aster_Seraph_Florentine_Balance',
             ],
+            [
+                # Effervescents
+                'GD_Anemone_Weapons.A_Weapons_Legendary.SMG_Maliwan_5_HellFire',
+                'GD_Anemone_Weapons.SMG.SMG_Tediore_6_Infection_Cleaner',
+            ],
             0,
         ),
         (
@@ -257,6 +282,7 @@ for (guntype, legendaries, uniques, pearls, seraphs, num_undesirables) in [
                 'GD_Weap_SniperRifles.A_Weapons_Legendary.Sniper_Maliwan_5_Volcano',
                 'GD_Weap_SniperRifles.A_Weapons_Legendary.Sniper_Jakobs_5_Skullmasher',
                 'GD_Weap_SniperRifles.A_Weapons_Legendary.Sniper_Hyperion_5_Invader',
+                'GD_Anemone_Weapons.A_Weapons_Unique.Sniper_Jakobs_3_Morde_Lt',
             ],
             [
                 # Uniques
@@ -281,6 +307,10 @@ for (guntype, legendaries, uniques, pearls, seraphs, num_undesirables) in [
                 'GD_Orchid_RaidWeapons.sniper.Patriot.Orchid_Seraph_Patriot_Balance',
                 'GD_Sage_RaidWeapons.sniper.Sage_Seraph_HawkEye_Balance',
             ],
+            [
+                # Effervescents
+                'GD_Anemone_Weapons.sniper.Sniper_Jakobs_6_Chaude_Mama',
+            ],
             0,
         ),
         ]:
@@ -289,7 +319,7 @@ for (guntype, legendaries, uniques, pearls, seraphs, num_undesirables) in [
     initial_pool = []
     for legendary in legendaries:
         initial_pool.append((legendary, 1, 'WeaponBalanceDefinition'))
-    for i in range(len(uniques) + len(pearls) + len(seraphs) + num_undesirables):
+    for i in range(len(uniques) + len(pearls) + len(seraphs) + len(effs) + num_undesirables):
         initial_pool.append((None, 0))
     mp.register_str('weapon_pool_clear_{}'.format(guntype.lower()),
         'level None set GD_Itempools.WeaponPools.Pool_Weapons_{}_06_Legendary BalancedItems {}'.format(
@@ -360,6 +390,27 @@ for (guntype, legendaries, uniques, pearls, seraphs, num_undesirables) in [
                 seraph
                 ))
 
+    # Hotfixes to add effervescents
+    for (idx, eff) in enumerate(effs):
+        eff_hotfixes.append(
+            """level None set GD_Itempools.WeaponPools.Pool_Weapons_{}_06_Legendary BalancedItems[{}]
+            (
+                ItmPoolDefinition=None,
+                InvBalanceDefinition=WeaponBalanceDefinition'{}',
+                Probability=(
+                    BaseValueConstant=1,
+                    BaseValueAttribute=None,
+                    InitializationDefinition=None,
+                    BaseValueScaleConstant=1
+                ),
+                bDropOnDeath=True
+            )
+            """.format(
+                guntype,
+                len(legendaries) + len(uniques) + len(pearls) + len(seraphs) + idx,
+                eff
+                ))
+
 mp.register_str('legendary_unique_adds', "\n\n".join(
         ['{}{}'.format(' '*(4*4), hotfix) for hotfix in unique_hotfixes]
     ))
@@ -370,6 +421,10 @@ mp.register_str('legendary_pearl_adds', "\n\n".join(
 
 mp.register_str('legendary_seraph_adds', "\n\n".join(
         ['{}{}'.format(' '*(4*4), hotfix) for hotfix in seraph_hotfixes]
+    ))
+
+mp.register_str('legendary_eff_adds', "\n\n".join(
+        ['{}{}'.format(' '*(4*4), hotfix) for hotfix in eff_hotfixes]
     ))
 
 # Legendary shield/grenade pool configuration.  Doing this a bit differently since there's
@@ -405,7 +460,9 @@ items = {
             ('roughrider', 2, 'GD_Sage_Shields.A_Item_Custom.S_BucklerShield', 1),
             ('antagonist', 3, 'GD_Aster_ItemGrades.Shields.Aster_Seraph_Antagonist_Shield_Balance', 1),
             ('blockade', 4, 'GD_Aster_ItemGrades.Shields.Aster_Seraph_Blockade_Shield_Balance', 1),
-            ('cracked_sash', 5, 'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Standard_CrackedSash', 1),
+            ('retainer', 5, 'GD_Anemone_Balance_Treasure.Shields.ItemGrade_Gear_Shield_Worming', 0.33),
+            ('easy_mode', 6, 'GD_Anemone_ItemPools.Shields.ItemGrade_Gear_Shield_Nova_Singularity_Peak', 0.33),
+            ('cracked_sash', 7, 'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Standard_CrackedSash', 1),
             ],
         },
     'grenade': {
@@ -419,8 +476,10 @@ items = {
             ('crossfire', 18, 'GD_Iris_SeraphItems.Crossfire.Iris_Seraph_GrenadeMod_Crossfire_Balance', 1),
             ('meteor_shower', 19, 'GD_Iris_SeraphItems.MeteorShower.Iris_Seraph_GrenadeMod_MeteorShower_Balance', 1),
             ('o_negative', 20, 'GD_Iris_SeraphItems.ONegative.Iris_Seraph_GrenadeMod_ONegative_Balance', 1),
-            ('midnight_star', 21, 'GD_Orchid_GrenadeMods.A_Item_Custom.GM_Blade', 1),
-            ('sky_rocket', 22, 'GD_GrenadeMods.A_Item_Custom.GM_SkyRocket', 1),
+            ('antifection', 21, 'GD_Anemone_GrenadeMods.A_Item_Legendary.GM_Antifection', 1),
+            ('electric_chair', 22, 'GD_Anemone_GrenadeMods.A_Item_Legendary.GM_StormFront', 1),
+            ('midnight_star', 23, 'GD_Orchid_GrenadeMods.A_Item_Custom.GM_Blade', 1),
+            ('sky_rocket', 24, 'GD_GrenadeMods.A_Item_Custom.GM_SkyRocket', 1),
             ],
         },
     'relic': {
@@ -448,8 +507,12 @@ items = {
             ('seraphs_breath', 28, 'GD_Sage_Artifacts.A_Item.A_SeraphBreath', 0.3),
             ('seraphs_might', 29, 'GD_Iris_SeraphItems.Might.Iris_Seraph_Artifact_Might_Balance', 0.3),
             ('seraphs_shadow', 30, 'GD_Aster_Artifacts.A_Item_Unique.A_SeraphShadow', 0.3),
+            # Effervescent:
+            ('mouthwash', 31, 'GD_Anemone_Relics.A_Item_Unique.A_Sheriff', 0.25),
+            ('hard_carry', 32, 'GD_Anemone_Relics.A_Item_Unique.A_Deputy', 0.25),
             # Junk:
-            ('vault_hunter', 31, 'GD_Artifacts.A_Item_Unique.A_VaultHunter', 0.3)
+            ('vault_hunter', 33, 'GD_Artifacts.A_Item_Unique.A_VaultHunter', 0.3),
+            ('winter_is_over', 34, 'GD_Anemone_Relics.A_Item.A_Elemental_Status_Rare', 0.3),
             ],
         },
     'gemstone': {
@@ -487,9 +550,14 @@ items = {
             ('sniper_vladof', 7, 'GD_Aster_Weapons.Snipers.SR_Vladof_4_Garnet', 1),
             ],
         },
+    'pistol': {
+        'GD_Itempools.WeaponPools.Pool_Weapons_Pistols_06_Legendary': [
+            ('fire_drill', 30, 'GD_Anemone_Weapons.A_Weapons_Legendary.Pistol_Vladof_5_Infinity_DD', 1),
+            ],
+        },
     'launcher': {
         'GD_Itempools.WeaponPools.Pool_Weapons_Launchers_06_Legendary': [
-            ('error_message', 12, 'GD_Orchid_BossWeapons.RPG.Ahab.Orchid_Boss_Ahab_Balance_NODROP', 1),
+            ('error_message', 13, 'GD_Orchid_BossWeapons.RPG.Ahab.Orchid_Boss_Ahab_Balance_NODROP', 1),
             ],
         },
     }

@@ -1077,6 +1077,28 @@ BL2
                             BaseValueScaleConstant=1.000000
                         ),
                         bDropOnDeath=True
+                    ),
+                    (
+                        ItmPoolDefinition=None,
+                        InvBalanceDefinition=None,
+                        Probability=(
+                            BaseValueConstant=0.000000,
+                            BaseValueAttribute=None,
+                            InitializationDefinition=None,
+                            BaseValueScaleConstant=1.000000
+                        ),
+                        bDropOnDeath=True
+                    ),
+                    (
+                        ItmPoolDefinition=None,
+                        InvBalanceDefinition=None,
+                        Probability=(
+                            BaseValueConstant=0.000000,
+                            BaseValueAttribute=None,
+                            InitializationDefinition=None,
+                            BaseValueScaleConstant=1.000000
+                        ),
+                        bDropOnDeath=True
                     )
                 )
 
@@ -1215,6 +1237,28 @@ BL2
                         InvBalanceDefinition=InventoryBalanceDefinition'GD_Aster_GrenadeMods.A_Item.GM_FireStorm',
                         Probability=(
                             BaseValueConstant=1.000000,
+                            BaseValueAttribute=None,
+                            InitializationDefinition=None,
+                            BaseValueScaleConstant=1.000000
+                        ),
+                        bDropOnDeath=True
+                    ),
+                    (
+                        ItmPoolDefinition=None,
+                        InvBalanceDefinition=None,
+                        Probability=(
+                            BaseValueConstant=0.000000,
+                            BaseValueAttribute=None,
+                            InitializationDefinition=None,
+                            BaseValueScaleConstant=1.000000
+                        ),
+                        bDropOnDeath=True
+                    ),
+                    (
+                        ItmPoolDefinition=None,
+                        InvBalanceDefinition=None,
+                        Probability=(
+                            BaseValueConstant=0.000000,
                             BaseValueAttribute=None,
                             InitializationDefinition=None,
                             BaseValueScaleConstant=1.000000
@@ -1937,6 +1981,39 @@ BL2
                             BaseValueScaleConstant=0
                         ),
                         bDropOnDeath=True
+                    ),
+                    (
+                        ItmPoolDefinition=None,
+                        InvBalanceDefinition=None,
+                        Probability=(
+                            BaseValueConstant=0,
+                            BaseValueAttribute=None,
+                            InitializationDefinition=None,
+                            BaseValueScaleConstant=0
+                        ),
+                        bDropOnDeath=True
+                    ),
+                    (
+                        ItmPoolDefinition=None,
+                        InvBalanceDefinition=None,
+                        Probability=(
+                            BaseValueConstant=0,
+                            BaseValueAttribute=None,
+                            InitializationDefinition=None,
+                            BaseValueScaleConstant=0
+                        ),
+                        bDropOnDeath=True
+                    ),
+                    (
+                        ItmPoolDefinition=None,
+                        InvBalanceDefinition=None,
+                        Probability=(
+                            BaseValueConstant=0,
+                            BaseValueAttribute=None,
+                            InitializationDefinition=None,
+                            BaseValueScaleConstant=0
+                        ),
+                        bDropOnDeath=True
                     )
                 )
 
@@ -2362,6 +2439,40 @@ BL2
 
         #</Add Seraphs to Legendary Pools>
 
+        #<Add Effervescents to Legendary Pools>
+
+            #<Weapons>
+
+                {mp:legendary_eff_adds}
+
+            #</Weapons>
+
+            #<Shields>
+
+                {mp:shield_retainer}
+
+                {mp:shield_easy_mode}
+
+            #</Shields>
+
+            #<Grenades>
+
+                {mp:grenade_antifection}
+
+                {mp:grenade_electric_chair}
+
+            #</Grenades>
+
+            #<Relics>
+
+                {mp:relic_mouthwash}
+
+                {mp:relic_hard_carry}
+
+            #</Relics>
+
+        #</Add Effervescents to Legendary Pools>
+
     #</Loot Pool Setup>
 
     #<Add Undesirable Items to Pools (disabled by default)><MUT>
@@ -2408,11 +2519,31 @@ BL2
 
             #</ERROR MESSAGE>
 
+            #<Fire Drill>
+
+                # Fire Drill is actually a very good weapon, but it can't drop in the game
+                # ordinarily, and isn't totally finished in the game (it's clearly supposed
+                # to be an Effervescent but is in the Legendary rarity, etc).
+
+                {mp:pistol_fire_drill}
+
+            #</Fire Drill>
+
             #<Vault Hunter's Relic>
 
                 {mp:relic_vault_hunter}
 
             #</Vault Hunter's Relic>
+
+            #<Winter Is Over Relic>
+
+                # There's nothing *wrong* with this relic, but it's pretty underwhelming
+                # on its own, and has a repeatable dedicated loot source anyway, so I'm
+                # excluding it by default.
+
+                {mp:relic_winter_is_over}
+
+            #</Winter Is Over Relic>
 
         #</Add Undesirable Items>
 
