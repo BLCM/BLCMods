@@ -2,12 +2,12 @@ BL2 Expanded Legendary Pools
 ============================
 
 This mod adds all legendary items across DLCs into the global legendary loot
-pools, and by default adds all uniques, seraphs, and pearlescents into the
-legendary pools, too.  This applies to weapons, grenade mods, class mods,
-shields, and even relics.  The mod will also by default add in gemstone weapons
-into the E-Tech pool, and add the Dragon Keep "Alignment" Class Mods to the
-global class mod drops.  These additions, like most of the functionality in
-this mod, can be disabled/configured easily.
+pools, and by default adds all uniques, seraphs, pearlescents, and
+effervescents into the legendary pools, too.  This applies to weapons, grenade
+mods, class mods, shields, and even relics.  The mod will also by default add
+in gemstone weapons into the E-Tech pool, and add the Dragon Keep "Alignment"
+Class Mods to the global class mod drops.  These additions, like most of the
+functionality in this mod, can be disabled/configured easily.
 
 To compensate for the increased number of items which are available in
 the legendary/E-tech pools, this mod also doubles the chances of those
@@ -44,6 +44,7 @@ Simply choose the file `BL2 Expanded Legendary Pools.blcm` and have at it!
   * Add E-Tech Relics to Legendary Pools
   * Add Pearls to Legendary Pools (Weapons Only)
   * Add Seraphs to Legendary Pools
+  * Add Effervescents to Legendary Pools
 * **Add Undesirable Items to Pools (disabled by default)** - There are several
   items which aren't enabled by default, and I've labeled them as
   "undesirables."  You can enable them on an item-by-item basis in the last
@@ -52,7 +53,9 @@ Simply choose the file `BL2 Expanded Legendary Pools.blcm` and have at it!
   * Contraband Sky Rocket
   * Cracked Sash
   * ERROR MESSAGE *(the Ahab version that Master Gee wields)*
+  * Fire Drill
   * Vault Hunter's Relic
+  * Winter Is Over Relic
 * **E-Tech Drop Rate Adjustment (defaults to 2x)** - Since we doubled the
   amount of weapons in the E-Tech pools, it seemed fair to double the drop
   rate.  This can optionally be reverted down to stock values, or increased
@@ -98,6 +101,9 @@ for the full text.
 
 Changelog
 =========
+
+**v1.0.2**, July 11, 2019:
+ * Added in all DLC5 (Commander Lilith & the Fight for Sanctuary) items
 
 **v1.0.1**, August 24, 2018:
  * The Ogre is now properly considered a Legendary, not a Unique, and will
