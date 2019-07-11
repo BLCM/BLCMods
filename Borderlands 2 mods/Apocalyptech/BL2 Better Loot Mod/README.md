@@ -446,7 +446,10 @@ for the full text.
 Changelog
 =========
 
-**v1.3.3**, July 11, 2019:
+**v1.3.4**, unreleased:
+ * Nothing, yet
+
+**v1.3.3**, July 11, 2019 (commit `7b2a237de7fbcbaa7bd583d892529b85400954e5`):
  * Updated for full DLC5 (Commander Lilith & the Fight For Sanctuary)
    compatibility.
  * Slight reorganization of main `GunsAndGear` pool and Class Mod pool to
