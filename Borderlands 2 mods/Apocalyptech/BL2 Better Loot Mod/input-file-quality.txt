@@ -2061,10 +2061,10 @@
                             bDropOnDeath=True
                         ),
                         (
-                            ItmPoolDefinition=ItemPoolDefinition'GD_Aster_ItemPools.ClassModPools.Pool_ClassMod_00_Aster',
+                            ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ClassModPools.Pool_ClassMod_06_Legendary',
                             InvBalanceDefinition=None,
                             Probability=(
-                                BaseValueConstant={config:cm_base_veryrare},
+                                BaseValueConstant={config:cm_base_legendary},
                                 BaseValueAttribute=None,
                                 InitializationDefinition=None,
                                 BaseValueScaleConstant=1
@@ -2072,10 +2072,10 @@
                             bDropOnDeath=True
                         ),
                         (
-                            ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ClassModPools.Pool_ClassMod_06_Legendary',
+                            ItmPoolDefinition=ItemPoolDefinition'GD_Aster_ItemPools.ClassModPools.Pool_ClassMod_00_Aster',
                             InvBalanceDefinition=None,
                             Probability=(
-                                BaseValueConstant={config:cm_base_legendary},
+                                BaseValueConstant={config:cm_base_veryrare},
                                 BaseValueAttribute=None,
                                 InitializationDefinition=None,
                                 BaseValueScaleConstant=1
@@ -2216,17 +2216,6 @@
                                 bDropOnDeath=True
                             ),
                             (
-                                ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ArtifactPools.Pool_ArtifactsReward',
-                                InvBalanceDefinition=None,
-                                Probability=(
-                                    BaseValueConstant=1.000000,
-                                    BaseValueAttribute=None,
-                                    InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_2_Uncommon',
-                                    BaseValueScaleConstant={config:relic_drop_scale_reward}
-                                ),
-                                bDropOnDeath=True
-                            ),
-                            (
                                 ItmPoolDefinition=KeyedItemPoolDefinition'GD_CustomItemPools_MainGame.Rewards.DahlUncommon',
                                 InvBalanceDefinition=None,
                                 Probability=(
@@ -2271,6 +2260,17 @@
                                 bDropOnDeath=True
                             ),
                             (
+                                ItmPoolDefinition=KeyedItemPoolDefinition'GD_CustomItemPools_MainGame.Rewards.YellowNinja',
+                                InvBalanceDefinition=None,
+                                Probability=(
+                                    BaseValueConstant=0.000000,
+                                    BaseValueAttribute=None,
+                                    InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_6_Legendary',
+                                    BaseValueScaleConstant=1.000000
+                                ),
+                                bDropOnDeath=True
+                            ),
+                            (
                                 ItmPoolDefinition=ItemPoolDefinition'GD_CustomItemPools_Peony.AllCustomizationsItemPool',
                                 InvBalanceDefinition=None,
                                 Probability=(
@@ -2289,6 +2289,17 @@
                                     BaseValueAttribute=None,
                                     InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_6_Legendary',
                                     BaseValueScaleConstant=1.000000
+                                ),
+                                bDropOnDeath=True
+                            ),
+                            (
+                                ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.ArtifactPools.Pool_ArtifactsReward',
+                                InvBalanceDefinition=None,
+                                Probability=(
+                                    BaseValueConstant=1.000000,
+                                    BaseValueAttribute=None,
+                                    InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_2_Uncommon',
+                                    BaseValueScaleConstant={config:relic_drop_scale_reward}
                                 ),
                                 bDropOnDeath=True
                             )

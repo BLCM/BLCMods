@@ -362,12 +362,6 @@ TODO
   doubling up on the purple rarity var).  I should either get rid of the
   var, or start using it but adjust it to match purple (since that's what
   everyone's been used to for so long)
-* "Normalize" our custom drop pools with the vanilla game, if possible.
-  For instance, when adding the Tiny Tina Alignment COMs, I'd put them
-  physically inbetween purples and legendaries.  Really what I should do
-  is *add* them to the end of the pool, so that any other mods which
-  alter the pool would have a better chance of working, since they might
-  be assuming that the legendary index is unchanged.
 * Config option to specify the rarity of gear found in lockers?
 * Can we increase boss drop counts depending on player count?
 * Untested components from Torgue DLC *(I'm afraid that's my least favorite
@@ -463,6 +457,10 @@ Changelog
 **v1.3.3**, unreleased:
  * Updated for full DLC5 (Commander Lilith & the Fight For Sanctuary)
    compatibility.
+ * Slight reorganization of main `GunsAndGear` pool and Class Mod pool to
+   provide better compatibility for hypothetical mods which touch those
+   pools and want to be compatible with Better Loot and without.  Not that
+   those exist...
 
 **v1.3.2-and-a-bit**, June 11, 2019 (commit `1f3559e5944d249b68ea18ba67fb1d20ee678189`):
  * FromDarkHell updated the BLCMods github to fix the majority of
