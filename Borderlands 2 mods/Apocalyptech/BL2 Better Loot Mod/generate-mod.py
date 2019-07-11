@@ -307,7 +307,7 @@ class ConfigExcellent(ConfigBase):
     cm_base_uncommon = weapon_base_uncommon
     cm_base_rare = weapon_base_rare
     cm_base_veryrare = weapon_base_veryrare
-    cm_base_alignment = 30
+    cm_base_alignment = 50
     cm_base_legendary = weapon_base_legendary
 
     # Custom grenade drop scaling (identical to weapons)
@@ -396,7 +396,7 @@ class ConfigVeryGood(ConfigBase):
     cm_base_uncommon = weapon_base_uncommon
     cm_base_rare = weapon_base_rare
     cm_base_veryrare = weapon_base_veryrare
-    cm_base_alignment = 7
+    cm_base_alignment = 10
     cm_base_legendary = weapon_base_legendary
 
     # Custom grenade drop scaling (identical to weapons)
@@ -485,7 +485,7 @@ class ConfigGood(ConfigBase):
     cm_base_uncommon = weapon_base_uncommon
     cm_base_rare = weapon_base_rare
     cm_base_veryrare = weapon_base_veryrare
-    cm_base_alignment = 2
+    cm_base_alignment = 5
     cm_base_legendary = weapon_base_legendary
 
     # Custom grenade drop scaling (identical to weapons)
