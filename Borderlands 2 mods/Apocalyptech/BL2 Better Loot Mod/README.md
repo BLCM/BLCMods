@@ -316,7 +316,6 @@ left alone:
 
 * Golden Chest
 * Money Boxes / Laundry Machines / Toilets / etc
-* Loot Midgets
 
 Some other stuff not done:
 
@@ -374,10 +373,6 @@ TODO
   Slaughterdome missions (or rather, in the Slaughterdome areas).  That might
   be especially helpful in Murderlin's Temple.
 * Make a Reborn-compatible version of this
-* I'm not really sure why I didn't implement improvements to Loot Midgets
-  before now -- perhaps I was just burnt out and didn't care since they're
-  so uncommon and everything else was already so lootful.  At any rate,
-  perhaps I should do something with 'em after all.
 
 Other Notes
 ===========
@@ -455,6 +450,7 @@ Changelog
    provide better compatibility for hypothetical mods which touch those
    pools and want to be compatible with Better Loot and without.  Not that
    those exist...
+ * Buffed Loot Midget drop pools.
 
 **v1.3.2-and-a-bit**, June 11, 2019 (commit `1f3559e5944d249b68ea18ba67fb1d20ee678189`):
  * FromDarkHell updated the BLCMods github to fix the majority of
