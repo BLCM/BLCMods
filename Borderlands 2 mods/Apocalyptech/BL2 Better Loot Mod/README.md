@@ -222,7 +222,7 @@ Compatibility
 
 ### UCP
 
-This mod should be fully compatible with UCP 4.1.  It should also probably run
+This mod should be fully compatible with UCP 4.2.  It should also probably run
 fine without, though it's received less testing that way.
 
 ### BL2 Reborn
