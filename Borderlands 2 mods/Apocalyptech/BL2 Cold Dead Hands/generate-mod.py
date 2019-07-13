@@ -486,6 +486,8 @@ class Regular(DropConfig):
             ],
             # Only ARs
             [
+                (0, 'GD_Anemone_Population_Loader.Balance.PawnBalance_LoaderGUN'),
+                (0, 'GD_Anemone_Population_Loader.Balance.PawnBalance_Loader_A_Junk'),
             ],
             # Shields
             [
@@ -643,6 +645,10 @@ class Regular(DropConfig):
                 (1, 0, 'GD_Pop_HallowSkeleton.Balance.PawnBalance_BanditHallowSkeleton'),
                 (2, 0, 'GD_Pop_HallowSkeleton.Balance.PawnBalance_BanditHallowSkeleton'),
                 (0, 1, 'GD_Orchid_Pop_Pirates.Balance.PawnBalance_Orchid_PirateMarauderSMG'),
+                (0, 0, 'GD_Anemone_Pop_NP.Balance.PawnBalance_NP_Scout_IntroNOGunDrop'),
+                (1, 0, 'GD_Anemone_Pop_NP.Balance.PawnBalance_NP_Scout_IntroNOGunDrop'),
+                (0, 0, 'GD_Anemone_Pop_NP.Balance.PawnBalance_SniperBase'),
+                (1, 0, 'GD_Anemone_Pop_NP.Balance.PawnBalance_SniperBase'),
             ],
             # All
             [
@@ -664,6 +670,8 @@ class Regular(DropConfig):
                 (1, 0, 'GD_Orchid_Pop_Pirates.Balance.PawnBalance_Orchid_PirateMidgetShotgun'),
                 (0, 0, 'GD_Population_Midget.Balance.PawnBalance_MidgetShotgun'),
                 (1, 0, 'GD_Population_Midget.Balance.PawnBalance_MidgetShotgun'),
+                (0, 0, 'GD_Anemone_Pop_Infected.Balance.PawnBalance_InfectedBruiser'),
+                (1, 0, 'GD_Anemone_Pop_Infected.Balance.PawnBalance_InfectedBruiser'),
             ],
             # Only ARs
             [
@@ -767,6 +775,10 @@ class Regular(DropConfig):
                 (0, 0, 'GD_RatChef.Balance.PawnBalance_RatChef'),
                 (0, 0, 'GD_RatLab_Digi.Population.PawnBalance_RatLab_Digi'),
                 (1, 0, 'GD_RatLab_Digi.Population.PawnBalance_RatLab_Digi'),
+                (0, 1, 'GD_Anemone_Pop_NP.Balance.PawnBalance_NP_Infecto'),
+                (1, 1, 'GD_Anemone_Pop_NP.Balance.PawnBalance_NP_Infecto'),
+                (0, 1, 'GD_Anemone_Pop_NP.Balance.PawnBalance_NP_Medic'),
+                (1, 1, 'GD_Anemone_Pop_NP.Balance.PawnBalance_NP_Medic'),
             ],
             # Shields (but without Turtle shields)
             [
@@ -1021,6 +1033,7 @@ class Badass(DropConfig):
             ],
             # Only ARs
             [
+                (0, 'GD_Anemone_Population_Loader.Balance.PawnBalance_LoaderBadass'),
             ],
             # Shields
             [
@@ -1079,6 +1092,7 @@ class Badass(DropConfig):
                 (1, 'GD_Population_Sheriff.Balance.PawnBalance_Deputy'),
                 (1, 'GD_Population_Sheriff.Balance.PawnBalance_Sheriff'),
                 (0, 'GD_PsychoBadass_Digi.Population.PawnBalance_PsychoBadass_Digi'),
+                (0, 'GD_Anemone_A_Queen_Digi.Population.PawnBalance_Anemone_TheDarkWeb'),
 
                 # Bosses follow - I'm actually not sure if we want to be doing these or not.
                 (2, 'GD_Iris_Population_MotorMama.Balance.Iris_PawnBalance_MotorMama'),
@@ -1164,9 +1178,15 @@ class Badass(DropConfig):
             ],
             # Only Shotguns
             [
+                (0, 0, 'GD_Anemone_Pop_Infected.Balance.PawnBalance_Infected_BadassBruiser'),
+                (1, 0, 'GD_Anemone_Pop_Infected.Balance.PawnBalance_Infected_BadassBruiser'),
             ],
             # Only ARs
             [
+                (1, 0, 'GD_Anemone_Pop_Bandits.Balance.PawnBalance_MarauderBadass_Leader'),
+                (1, 0, 'GD_Anemone_Pop_Bandits.Balance.PawnBalance_NomadBadass_Leader'),
+                (1, 0, 'GD_Anemone_Pop_Bandits.Balance.PawnBalance_MarauderBadass_Leader'),
+                (1, 0, 'GD_Anemone_Pop_Bandits.Balance.PawnBalance_NomadBadass_Leader'),
             ],
             # Shields
             [
@@ -1224,6 +1244,12 @@ class Badass(DropConfig):
                 (0, 1, 'GD_RaiderMale.Balance.PawnBalance_RaiderMale'),
                 (0, 1, 'GD_Sage_Pop_DrNakayama.Balance.PawnBalance_Sage_DrNakayama'), # again, let's give him all the help we can
                 (0, 0, 'GD_SandMale.Balance.PawnBalance_SandMale'),
+                (0, 1, 'GD_Anemone_Pop_NP.Balance.PawnBalance_NP_BadassSniper'),
+                (1, 1, 'GD_Anemone_Pop_NP.Balance.PawnBalance_NP_BadassSniper'),
+                (0, 1, 'GD_Anemone_Pop_NP.Balance.PawnBalance_NP_Lt_Hoffman'),
+                (1, 0, 'GD_Anemone_Pop_NP.Balance.PawnBalance_NP_Lt_Hoffman'),
+                (0, 1, 'GD_Anemone_Pop_Bandits.Balance.PawnBalance_NomadBadass_Leader'),
+                (1, 1, 'GD_Anemone_Pop_Bandits.Balance.PawnBalance_NomadBadass_Leader'),
             ],
             # Shields (but without Turtle shields)
             [

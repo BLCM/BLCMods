@@ -1482,6 +1482,150 @@ BL2
 
             #</Chubby/Tubby Enemy Drops>
 
+            #<Commander Lilith and the Fight for Sanctuary Changes>
+
+                # The Commander Lilith DLC enemies often use some custom pools to define specific loot.
+                # This lets us be a little more free with just reusing those pools, since nothing else
+                # is using them.  So a number of those enemies have some special-case code in here.
+
+                #<Lt. Tetra>
+
+                    # Lt. Tetra always uses a corrosive e-tech AR; we'll have to settle for just
+                    # any old e-tech AR, so they don't get sanity-checked.
+
+                    level None set GD_Anemone_ItemPoolEnemyUse.Turrets.MedicalMystery_AlienGun_Green BalancedItems[0]
+                    (
+                        ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_AssaultRifles_05_VeryRare_Alien',
+                        InvBalanceDefinition=None,
+                        Probability=(
+                            BaseValueConstant=1.000000,
+                            BaseValueAttribute=None,
+                            InitializationDefinition=None,
+                            BaseValueScaleConstant=1.000000
+                        ),
+                        bDropOnDeath=True
+                    )
+
+                #</Lt. Tetra>
+
+                #<New Pandora Commander>
+
+                    # New Pandora Commanders use a pool which includes various uniques/legendaries.
+                    # Not gonna bother messing with those equip percentages.
+
+                    level None set GD_DahlShared.WeaponPools.Pool_Weapons_Pistols_EnemyUse_DahlSergeant BalancedItems[0].bDropOnDeath True
+
+                    level None set GD_DahlShared.WeaponPools.Pool_Weapons_Pistols_EnemyUse_DahlSergeant BalancedItems[1].bDropOnDeath True
+
+                    level None set GD_DahlShared.WeaponPools.Pool_Weapons_Pistols_EnemyUse_DahlSergeant BalancedItems[2].bDropOnDeath True
+
+                    level None set GD_DahlShared.WeaponPools.Pool_Weapons_Pistols_EnemyUse_DahlSergeant BalancedItems[3].bDropOnDeath True
+
+                    level None set GD_DahlShared.WeaponPools.Pool_Weapons_Pistols_EnemyUse_DahlSergeant BalancedItems[4].bDropOnDeath True
+
+                    level None set GD_DahlShared.WeaponPools.Pool_Weapons_Pistols_EnemyUse_DahlSergeant BalancedItems[5].bDropOnDeath True
+
+                    level None set GD_DahlShared.WeaponPools.Pool_Weapons_Pistols_EnemyUse_DahlSergeant BalancedItems[6].bDropOnDeath True
+
+                    level None set GD_DahlShared.WeaponPools.Pool_Weapons_Pistols_EnemyUse_DahlSergeant BalancedItems[7].bDropOnDeath True
+
+                    level None set GD_DahlShared.WeaponPools.Pool_Weapons_Pistols_EnemyUse_DahlSergeant BalancedItems[8].bDropOnDeath True
+
+                    level None set GD_DahlShared.WeaponPools.Pool_Weapons_Pistols_EnemyUse_DahlSergeant BalancedItems[9].bDropOnDeath True
+
+                #</New Pandora Commander>
+
+                #<New Pandora Heavy>
+
+                    # New Pandora Heavies use, strangely enough, a Dog.  All the time!
+                    # So you'll expect to get lots of Dog drops here.  They also always
+                    # use a Spike shield.  We can do that.
+
+                    level None set GD_DahlShared.WeaponPools.Pool_Dahl_Shotguns_Enforcer BalancedItems[0].bDropOnDeath True
+
+                    level None set GD_DahlShared.WeaponPools.Pool_Enforcer_Shield BalancedItems[0].bDropOnDeath True
+
+                #</New Pandora Heavy>
+
+                #<New Pandora Infectologists>
+
+                    # New Pandora Infectologists always use a slag e-tech AR; we'll have to settle for just
+                    # any old e-tech AR, so they don't get sanity-checked.
+
+                    level None set GD_Anemone_ItemPoolEnemyUse.Turrets.MedicalMystery_AlienGun_Slag BalancedItems[0]
+                    (
+                        ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_AssaultRifles_05_VeryRare_Alien',
+                        InvBalanceDefinition=None,
+                        Probability=(
+                            BaseValueConstant=1.000000,
+                            BaseValueAttribute=None,
+                            InitializationDefinition=None,
+                            BaseValueScaleConstant=1.000000
+                        ),
+                        bDropOnDeath=True
+                    )
+
+                    level None set GD_Anemone_Pop_NP.Balance.PawnBalance_NP_Infecto PlayThroughs[0].CustomItemPoolList[0].ItemPool ItemPoolDefinition'GD_Anemone_ItemPoolEnemyUse.Turrets.MedicalMystery_AlienGun_Slag'
+
+                #</New Pandora Infectologists>
+
+                #<New Pandora Medics>
+
+                    # New Pandora Medics always use a shock e-tech AR; we'll have to settle for just
+                    # any old e-tech AR, so they don't get sanity-checked.
+
+                    level None set GD_Anemone_ItemPoolEnemyUse.Turrets.MedicalMystery_AlienGun_Shock BalancedItems[0]
+                    (
+                        ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_AssaultRifles_05_VeryRare_Alien',
+                        InvBalanceDefinition=None,
+                        Probability=(
+                            BaseValueConstant=1.000000,
+                            BaseValueAttribute=None,
+                            InitializationDefinition=None,
+                            BaseValueScaleConstant=1.000000
+                        ),
+                        bDropOnDeath=True
+                    )
+
+                #</New Pandora Medics>
+
+                #<New Pandora Recruit>
+
+                    # New Pandora Recruits use a pool which includes a Hornet.
+                    # Not gonna bother messing with those equip percentages.
+
+                    level None set GD_DahlShared.WeaponPools.Pool_Weapons_Pistols_EnemyUse_Enlist BalancedItems[0].bDropOnDeath True
+
+                    level None set GD_DahlShared.WeaponPools.Pool_Weapons_Pistols_EnemyUse_Enlist BalancedItems[1].bDropOnDeath True
+
+                    level None set GD_DahlShared.WeaponPools.Pool_Weapons_Pistols_EnemyUse_Enlist BalancedItems[2].bDropOnDeath True
+
+                    level None set GD_DahlShared.WeaponPools.Pool_Weapons_Pistols_EnemyUse_Enlist BalancedItems[3].bDropOnDeath True
+
+                #</New Pandora Recruit>
+
+                #<New Pandora Snipers>
+
+                    # Snipers (and Badass snipers) use a custom etech sniper pool; switching that out
+                    # for our own.
+
+                    level None set GD_Anemone_ItemPoolEnemyUse.WeaponPools.Pool_Weapons_DragonGang_SniperRifles_EnemyUse BalancedItems[0]
+                    (
+                        ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.WeaponPools.Pool_Weapons_SniperRifles_05_VeryRare_Alien',
+                        InvBalanceDefinition=None,
+                        Probability=(
+                            BaseValueConstant=1.000000,
+                            BaseValueAttribute=None,
+                            InitializationDefinition=None,
+                            BaseValueScaleConstant=1.000000
+                        ),
+                        bDropOnDeath=True
+                    )
+
+                #</New Pandora Snipers>
+
+            #</Commander Lilith and the Fight for Sanctuary Changes>
+
         #</Other Pool Tweaks>
 
         #<Enemy Pool Assignments>
