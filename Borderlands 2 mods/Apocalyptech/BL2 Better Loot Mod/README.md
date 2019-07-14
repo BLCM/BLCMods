@@ -447,7 +447,8 @@ Changelog
 =========
 
 **v1.3.4**, unreleased:
- * Nothing, yet
+ * Buffed Chubby/Tubby drops a bit more, will have a guaranteed drop from the
+   "epic chest" pool.
 
 **v1.3.3**, July 11, 2019 (commit `7b2a237de7fbcbaa7bd583d892529b85400954e5`):
  * Updated for full DLC5 (Commander Lilith & the Fight For Sanctuary)
