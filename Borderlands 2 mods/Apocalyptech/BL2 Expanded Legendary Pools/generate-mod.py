@@ -46,13 +46,16 @@ except ModuleNotFoundError:
 ###
 
 mod_name = 'BL2 Expanded Legendary Pools'
-mod_version = '1.0.2'
+mod_version = '1.1.0'
 output_filename = '{}.blcm'.format(mod_name)
 input_filename = 'input-file-mod.txt'
 
 ###
 ### Construct the mod!
 ###
+
+# What percentage of Purple drops should be gemstones?
+pct_gemstones = 0.25
 
 # Legendary Pool management
 unique_hotfixes = []
@@ -516,38 +519,20 @@ items = {
             ],
         },
     'gemstone': {
-        'GD_Itempools.WeaponPools.Pool_Weapons_AssaultRifles_05_VeryRare_Alien': [
-            ('ar_dahl', 3, 'GD_Aster_Weapons.AssaultRifles.AR_Dahl_4_Emerald', 1.2),
-            ('ar_bandit', 4, 'GD_Aster_Weapons.AssaultRifles.AR_Bandit_4_Quartz', 1.2),
-            ('ar_vladof', 5, 'GD_Aster_Weapons.AssaultRifles.AR_Vladof_4_Garnet', 1.2),
-            ('ar_jakobs', 6, 'GD_Aster_Weapons.AssaultRifles.AR_Jakobs_4_Citrine', 1.2),
-            ('ar_torgue', 7, 'GD_Aster_Weapons.AssaultRifles.AR_Torgue_4_Rock', 1.2),
+        'GD_Itempools.WeaponPools.Pool_Weapons_AssaultRifles_05_VeryRare': [
+            ('ar', 5, 'GD_Aster_ItemPools.WeaponPools.Pool_Weapons_ARs_04_Gemstone', 5),
             ],
-        'GD_Itempools.WeaponPools.Pool_Weapons_Pistols_05_VeryRare_Alien': [
-            ('pistol_jakobs', 6, 'GD_Aster_Weapons.Pistols.Pistol_Jakobs_4_Citrine', 1),
-            ('pistol_hyperion', 7, 'GD_Aster_Weapons.Pistols.Pistol_Hyperion_4_Diamond', 1),
-            ('pistol_maliwan', 8, 'GD_Aster_Weapons.Pistols.Pistol_Maliwan_4_Aquamarine', 1),
-            ('pistol_vladof', 9, 'GD_Aster_Weapons.Pistols.Pistol_Vladof_4_Garnet', 1),
-            ('pistol_torgue', 10, 'GD_Aster_Weapons.Pistols.Pistol_Torgue_4_Rock', 1),
+        'GD_Itempools.WeaponPools.Pool_Weapons_Pistols_05_VeryRare': [
+            ('pistol', 8, 'GD_Aster_ItemPools.WeaponPools.Pool_Weapons_Pistols_04_Gemstone', 8),
             ],
-        'GD_Itempools.WeaponPools.Pool_Weapons_Shotguns_05_VeryRare_Alien': [
-            ('sg_torgue', 3, 'GD_Aster_Weapons.Shotguns.SG_Torgue_4_Rock', 1),
-            ('sg_hyperion', 4, 'GD_Aster_Weapons.Shotguns.SG_Hyperion_4_Diamond', 1),
-            ('sg_jakobs', 5, 'GD_Aster_Weapons.Shotguns.SG_Jakobs_4_Citrine', 1),
-            ('sg_tediore', 6, 'GD_Aster_Weapons.Shotguns.SG_Tediore_4_CubicZerconia', 1),
-            ('sg_bandit', 7, 'GD_Aster_Weapons.Shotguns.SG_Bandit_4_Quartz', 1),
+        'GD_Itempools.WeaponPools.Pool_Weapons_Shotguns_05_VeryRare': [
+            ('shotgun', 5, 'GD_Aster_ItemPools.WeaponPools.Pool_Weapons_Shotguns_04_Gemstone', 5),
             ],
-        'GD_Itempools.WeaponPools.Pool_Weapons_SMG_05_VeryRare_Alien': [
-            ('smg_tediore', 5, 'GD_Aster_Weapons.SMGs.SMG_Tediore_4_CubicZerconia', 1),
-            ('smg_bandit', 6, 'GD_Aster_Weapons.SMGs.SMG_Bandit_4_Quartz', 1),
-            ('smg_hyperion', 7, 'GD_Aster_Weapons.SMGs.SMG_Hyperion_4_Diamond', 1),
-            ('smg_dahl', 8, 'GD_Aster_Weapons.SMGs.SMG_Dahl_4_Emerald', 1),
+        'GD_Itempools.WeaponPools.Pool_Weapons_SMG_05_VeryRare': [
+            ('smg', 5, 'GD_Aster_ItemPools.WeaponPools.Pool_Weapons_SMGs_04_Gemstone', 5),
             ],
-        'GD_Itempools.WeaponPools.Pool_Weapons_SniperRifles_05_VeryRare_Alien': [
-            ('sniper_jakobs', 4, 'GD_Aster_Weapons.Snipers.SR_Jakobs_4_Citrine', 1),
-            ('sniper_hyperion', 5, 'GD_Aster_Weapons.Snipers.SR_Hyperion_4_Diamond', 1),
-            ('sniper_dahl', 6, 'GD_Aster_Weapons.Snipers.SR_Dahl_4_Emerald', 1),
-            ('sniper_vladof', 7, 'GD_Aster_Weapons.Snipers.SR_Vladof_4_Garnet', 1),
+        'GD_Itempools.WeaponPools.Pool_Weapons_SniperRifles_05_VeryRare': [
+            ('sniper', 5, 'GD_Aster_ItemPools.WeaponPools.Pool_Weapons_Snipers_04_Gemstone', 5),
             ],
         },
     'pistol': {
@@ -564,32 +549,45 @@ items = {
 for (itemtype, itemdict) in items.items():
     for (pool, itemlist) in itemdict.items():
         for (label, index, itemname, scale) in itemlist:
-            if itemtype == 'gemstone' or itemtype == 'launcher':
-                invbalance = 'WeaponBalanceDefinition'
+            if itemtype == 'gemstone':
+                # Math derived from:  x/(x+n) = r
+                # Where `r` is the desired ratio of gemstones, `x` is the weight
+                # we want to assign to the gemstone pool (ie: the value we're solving
+                # for), and `n` being the current weight of the pool without gems.
+                weight = round((pct_gemstones*scale)/(1-pct_gemstones), 6)
+                mp.set_bi_item_pool('{}_{}'.format(itemtype, label),
+                    pool,
+                    index,
+                    itemname,
+                    weight=weight,
+                    )
             else:
-                invbalance = 'InventoryBalanceDefinition'
-            mp.set_bi_item_pool('{}_{}'.format(itemtype, label),
-                pool,
-                index,
-                itemname,
-                invbalance=invbalance,
-                scale=scale,
-                )
+                if itemtype == 'launcher' or itemtype == 'pistol':
+                    invbalance = 'WeaponBalanceDefinition'
+                else:
+                    invbalance = 'InventoryBalanceDefinition'
+                mp.set_bi_item_pool('{}_{}'.format(itemtype, label),
+                    pool,
+                    index,
+                    itemname,
+                    invbalance=invbalance,
+                    scale=scale,
+                    )
 
-# Load in our etech scales
-etech_scales = {}
-for (key, label, scale_drop, scale_epic, scale_treasure) in [
-        ('base', 'Stock E-Tech Drop Rate', 1, 2.5, 5),
-        ('2x', 'Doubled E-Tech Drop Rate', 2, 5, 10),
-        ('3x', 'Tripled E-Tech Drop Rate', 3, 7.5, 15),
+# Load in our purple scales
+purple_scales = {}
+for (key, label, scale_world, scale_individual, scale_epic, scale_treasure) in [
+        ('base', 'Stock Purple Drop Rate', 1, 1, 2.5, 5),
+        ('1.3x', '1.3x Purple Drop Rate', 1.333333, 1.333333, 3.333333, 6.666666),
+        ('1.6x', '1.6x Purple Drop Rate', 1.666666, 1.666666, 4.166666, 8.333333),
         ]:
-    with open('input-file-etech.txt') as df:
-        etech_scales[key] = df.read().format(
+    with open('input-file-purples.txt') as df:
+        purple_scales[key] = df.read().format(
                 section_label=label,
-                scale_drop=scale_drop,
+                scale_world=scale_world,
+                scale_individual=scale_individual,
                 scale_epic=scale_epic,
                 scale_treasure=scale_treasure,
-                scale_ind=scale_drop,
                 )
 
 # Load in our legendary scales.
@@ -633,9 +631,9 @@ with open(input_filename, 'r') as df:
         mod_name=mod_name,
         mod_version=mod_version,
         mp=mp,
-        etech_scale_base=etech_scales['base'],
-        etech_scale_2x=etech_scales['2x'],
-        etech_scale_3x=etech_scales['3x'],
+        purple_scale_base=purple_scales['base'],
+        purple_scale_13x=purple_scales['1.3x'],
+        purple_scale_16x=purple_scales['1.6x'],
         leg_scale_base=leg_scales['base'],
         leg_scale_2x=leg_scales['2x'],
         leg_scale_3x=leg_scales['3x'],

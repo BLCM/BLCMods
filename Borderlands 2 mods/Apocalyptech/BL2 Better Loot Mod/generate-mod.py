@@ -52,7 +52,7 @@ except ModuleNotFoundError:
 ###
 
 mod_name = 'BL2 Better Loot Mod'
-mod_version = '1.3.3'
+mod_version = '1.3.4'
 output_filename = '{}.blcm'.format(mod_name)
 
 ###
@@ -140,6 +140,15 @@ class ConfigBase(Config):
     drop_prob_shotgun = 100
     drop_prob_sniper = 80
     drop_prob_launcher = 40
+
+    # Percent of purple drops which should be gemstones
+    pct_gemstones = 0.25
+
+    # Extra scaling for e-tech pistols, to make them less common
+    # This can't actually apply everywhere -- when it applies depends
+    # on what parent pools have been called.  Still, this'll help
+    # in various cases.
+    alien_pistol_scale = 0.25
 
     # Drop rates within the "very high roll" pools of dice chests
     dice_vhigh_veryrare = 1
@@ -297,8 +306,8 @@ class ConfigExcellent(ConfigBase):
     weapon_base_common = 8
     weapon_base_uncommon = 85
     weapon_base_rare = 65
-    weapon_base_veryrare = 50
-    weapon_base_alien = 30
+    weapon_base_veryrare = 65
+    weapon_base_alien = 15
     weapon_base_legendary = 3
     weapon_base_iris_cobra = 1
 
@@ -336,16 +345,16 @@ class ConfigExcellent(ConfigBase):
     treasure_base_common = 0
     treasure_base_uncommon = 0
     treasure_base_rare = 20
-    treasure_base_veryrare = 60
-    treasure_base_alien = 30
+    treasure_base_veryrare = 75
+    treasure_base_alien = 15
     treasure_base_legendary = 5
 
     # Drop rates for "epic" treasure chests
     epic_base_common = 0
     epic_base_uncommon = 0
     epic_base_rare = 0
-    epic_base_veryrare = 1
-    epic_base_alien = 1
+    epic_base_veryrare = 1.4
+    epic_base_alien = 0.6
     epic_base_legendary = 0.3
 
     # Badass pool probabilities (NOTE: these are *not* weights)
@@ -386,8 +395,8 @@ class ConfigVeryGood(ConfigBase):
     weapon_base_common = 15
     weapon_base_uncommon = 35
     weapon_base_rare = 25
-    weapon_base_veryrare = 10
-    weapon_base_alien = 7
+    weapon_base_veryrare = 13.5
+    weapon_base_alien = 3.5
     weapon_base_legendary = 0.3
     weapon_base_iris_cobra = 0.3
 
@@ -425,15 +434,15 @@ class ConfigVeryGood(ConfigBase):
     treasure_base_common = 20
     treasure_base_uncommon = 40
     treasure_base_rare = 25
-    treasure_base_veryrare = 7
-    treasure_base_alien = 7
+    treasure_base_veryrare = 10.5
+    treasure_base_alien = 3.5
     treasure_base_legendary = 1
 
     # Drop rates for "epic" treasure chests
     epic_base_uncommon = 15
     epic_base_rare = 49
-    epic_base_veryrare = 25
-    epic_base_alien = 20
+    epic_base_veryrare = 35
+    epic_base_alien = 10
     epic_base_legendary = 1.8
 
     # Badass pool probabilities (NOTE: these are *not* weights)
@@ -475,8 +484,8 @@ class ConfigGood(ConfigBase):
     weapon_base_common = 32.75
     weapon_base_uncommon = 35
     weapon_base_rare = 25
-    weapon_base_veryrare = 5
-    weapon_base_alien = 2
+    weapon_base_veryrare = 6
+    weapon_base_alien = 1
     weapon_base_legendary = 0.25
     weapon_base_iris_cobra = 2
 
@@ -514,15 +523,15 @@ class ConfigGood(ConfigBase):
     treasure_base_common = 32.5
     treasure_base_uncommon = 40
     treasure_base_rare = 20
-    treasure_base_veryrare = 5
-    treasure_base_alien = 3
+    treasure_base_veryrare = 6.5
+    treasure_base_alien = 1.5
     treasure_base_legendary = 0.5
 
     # Drop rates for "epic" treasure chests
     epic_base_uncommon = 25
     epic_base_rare = 49
-    epic_base_veryrare = 15
-    epic_base_alien = 10
+    epic_base_veryrare = 20
+    epic_base_alien = 5
     epic_base_legendary = 1
 
     # Badass pool probabilities (NOTE: these are *not* weights)
@@ -563,8 +572,8 @@ class ConfigImproved(ConfigBase):
     weapon_base_common = 40
     weapon_base_uncommon = 40
     weapon_base_rare = 5
-    weapon_base_veryrare = 0.5
-    weapon_base_alien = 0.5
+    weapon_base_veryrare = 0.75
+    weapon_base_alien = 0.25
     weapon_base_legendary = 0.1
     weapon_base_iris_cobra = 0.1
 
@@ -602,15 +611,15 @@ class ConfigImproved(ConfigBase):
     treasure_base_common = 40
     treasure_base_uncommon = 45
     treasure_base_rare = 10
-    treasure_base_veryrare = 2
-    treasure_base_alien = 2
+    treasure_base_veryrare = 3
+    treasure_base_alien = 1
     treasure_base_legendary = 0.15
 
     # Drop rates for "epic" treasure chests
     epic_base_uncommon = 37
     epic_base_rare = 45
-    epic_base_veryrare = 10
-    epic_base_alien = 7
+    epic_base_veryrare = 13.5
+    epic_base_alien = 3.5
     epic_base_legendary = 0.6
 
     # Badass pool probabilities (NOTE: these are *not* weights)
@@ -654,8 +663,8 @@ class ConfigStock(ConfigBase):
     weapon_base_common = 75
     weapon_base_uncommon = 10
     weapon_base_rare = 1
-    weapon_base_veryrare = .1
-    weapon_base_alien = .1
+    weapon_base_veryrare = .14
+    weapon_base_alien = .06
     weapon_base_legendary = 0.03
     weapon_base_iris_cobra = 0.03
 
@@ -693,15 +702,15 @@ class ConfigStock(ConfigBase):
     treasure_base_common = 5
     treasure_base_uncommon = 6.6
     treasure_base_rare = .35
-    treasure_base_veryrare = .05
-    treasure_base_alien = .05
+    treasure_base_veryrare = .075
+    treasure_base_alien = .025
     treasure_base_legendary = 0
 
     # Drop rates for "epic" treasure chests
     epic_base_uncommon = 10
     epic_base_rare = 1
-    epic_base_veryrare = .25
-    epic_base_alien = .25
+    epic_base_veryrare = .375
+    epic_base_alien = .125
     epic_base_legendary = .03
 
     ###
@@ -888,6 +897,13 @@ for (number, rarity) in [
                 rarity,
                 idx,
                 gunprob))
+        if guntype == 'Pistol' and number == '05':
+            mp.register_str('normalize_weapon_types_{}_{}_alienscale'.format(rarity, guntype),
+                'level None set GD_Itempools.WeaponPools.Pool_Weapons_All_{}_{} BalancedItems[{}].Probability.BaseValueScaleConstant {}'.format(
+                    number,
+                    rarity,
+                    idx,
+                    ConfigBase.alien_pistol_scale))
 
 # Bandit Cooler nerf ("needed" in v1.2.0 'cause of our weighted pool fixes)
 for idx, objname in enumerate([
@@ -1521,38 +1537,20 @@ items = {
             ],
         },
     'gemstone': {
-        'GD_Itempools.WeaponPools.Pool_Weapons_AssaultRifles_05_VeryRare_Alien': [
-            ('ar_dahl', 3, 'GD_Aster_Weapons.AssaultRifles.AR_Dahl_4_Emerald', 1.2),
-            ('ar_bandit', 4, 'GD_Aster_Weapons.AssaultRifles.AR_Bandit_4_Quartz', 1.2),
-            ('ar_vladof', 5, 'GD_Aster_Weapons.AssaultRifles.AR_Vladof_4_Garnet', 1.2),
-            ('ar_jakobs', 6, 'GD_Aster_Weapons.AssaultRifles.AR_Jakobs_4_Citrine', 1.2),
-            ('ar_torgue', 7, 'GD_Aster_Weapons.AssaultRifles.AR_Torgue_4_Rock', 1.2),
+        'GD_Itempools.WeaponPools.Pool_Weapons_AssaultRifles_05_VeryRare': [
+            ('ar', 5, 'GD_Aster_ItemPools.WeaponPools.Pool_Weapons_ARs_04_Gemstone', 5),
             ],
-        'GD_Itempools.WeaponPools.Pool_Weapons_Pistols_05_VeryRare_Alien': [
-            ('pistol_jakobs', 6, 'GD_Aster_Weapons.Pistols.Pistol_Jakobs_4_Citrine', 1),
-            ('pistol_hyperion', 7, 'GD_Aster_Weapons.Pistols.Pistol_Hyperion_4_Diamond', 1),
-            ('pistol_maliwan', 8, 'GD_Aster_Weapons.Pistols.Pistol_Maliwan_4_Aquamarine', 1),
-            ('pistol_vladof', 9, 'GD_Aster_Weapons.Pistols.Pistol_Vladof_4_Garnet', 1),
-            ('pistol_torgue', 10, 'GD_Aster_Weapons.Pistols.Pistol_Torgue_4_Rock', 1),
+        'GD_Itempools.WeaponPools.Pool_Weapons_Pistols_05_VeryRare': [
+            ('pistol', 8, 'GD_Aster_ItemPools.WeaponPools.Pool_Weapons_Pistols_04_Gemstone', 8),
             ],
-        'GD_Itempools.WeaponPools.Pool_Weapons_Shotguns_05_VeryRare_Alien': [
-            ('sg_torgue', 3, 'GD_Aster_Weapons.Shotguns.SG_Torgue_4_Rock', 1),
-            ('sg_hyperion', 4, 'GD_Aster_Weapons.Shotguns.SG_Hyperion_4_Diamond', 1),
-            ('sg_jakobs', 5, 'GD_Aster_Weapons.Shotguns.SG_Jakobs_4_Citrine', 1),
-            ('sg_tediore', 6, 'GD_Aster_Weapons.Shotguns.SG_Tediore_4_CubicZerconia', 1),
-            ('sg_bandit', 7, 'GD_Aster_Weapons.Shotguns.SG_Bandit_4_Quartz', 1),
+        'GD_Itempools.WeaponPools.Pool_Weapons_Shotguns_05_VeryRare': [
+            ('shotgun', 5, 'GD_Aster_ItemPools.WeaponPools.Pool_Weapons_Shotguns_04_Gemstone', 5),
             ],
-        'GD_Itempools.WeaponPools.Pool_Weapons_SMG_05_VeryRare_Alien': [
-            ('smg_tediore', 5, 'GD_Aster_Weapons.SMGs.SMG_Tediore_4_CubicZerconia', 1),
-            ('smg_bandit', 6, 'GD_Aster_Weapons.SMGs.SMG_Bandit_4_Quartz', 1),
-            ('smg_hyperion', 7, 'GD_Aster_Weapons.SMGs.SMG_Hyperion_4_Diamond', 1),
-            ('smg_dahl', 8, 'GD_Aster_Weapons.SMGs.SMG_Dahl_4_Emerald', 1),
+        'GD_Itempools.WeaponPools.Pool_Weapons_SMG_05_VeryRare': [
+            ('smg', 5, 'GD_Aster_ItemPools.WeaponPools.Pool_Weapons_SMGs_04_Gemstone', 5),
             ],
-        'GD_Itempools.WeaponPools.Pool_Weapons_SniperRifles_05_VeryRare_Alien': [
-            ('sniper_jakobs', 4, 'GD_Aster_Weapons.Snipers.SR_Jakobs_4_Citrine', 1),
-            ('sniper_hyperion', 5, 'GD_Aster_Weapons.Snipers.SR_Hyperion_4_Diamond', 1),
-            ('sniper_dahl', 6, 'GD_Aster_Weapons.Snipers.SR_Dahl_4_Emerald', 1),
-            ('sniper_vladof', 7, 'GD_Aster_Weapons.Snipers.SR_Vladof_4_Garnet', 1),
+        'GD_Itempools.WeaponPools.Pool_Weapons_SniperRifles_05_VeryRare': [
+            ('sniper', 5, 'GD_Aster_ItemPools.WeaponPools.Pool_Weapons_Snipers_04_Gemstone', 5),
             ],
         },
     }
@@ -1560,16 +1558,25 @@ for (itemtype, itemdict) in items.items():
     for (pool, itemlist) in itemdict.items():
         for (label, index, itemname, scale) in itemlist:
             if itemtype == 'gemstone':
-                invbalance = 'WeaponBalanceDefinition'
+                # Math derived from:  x/(x+n) = r
+                # Where `r` is the desired ratio of gemstones, `x` is the weight
+                # we want to assign to the gemstone pool (ie: the value we're solving
+                # for), and `n` being the current weight of the pool without gems.
+                weight = round((ConfigBase.pct_gemstones*scale)/(1-ConfigBase.pct_gemstones), 6)
+                mp.set_bi_item_pool('{}_{}'.format(itemtype, label),
+                    pool,
+                    index,
+                    itemname,
+                    weight=weight,
+                    )
             else:
-                invbalance = 'InventoryBalanceDefinition'
-            mp.set_bi_item_pool('{}_{}'.format(itemtype, label),
-                pool,
-                index,
-                itemname,
-                invbalance=invbalance,
-                scale=scale,
-                )
+                mp.set_bi_item_pool('{}_{}'.format(itemtype, label),
+                    pool,
+                    index,
+                    itemname,
+                    invbalance='InventoryBalanceDefinition',
+                    scale=scale,
+                    )
 
 ###
 ### Generate our quality category strings
