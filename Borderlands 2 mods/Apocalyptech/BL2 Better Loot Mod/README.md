@@ -348,9 +348,7 @@ well-covered in other mods, so instead I'll just mention them here.
 Bugs
 ====
 
-* The mission Medical Mystery: X-Com-municate is supposed to reward an
-  E-Tech pistol, but because we add gemstones into the E-Tech pool (at least
-  by default), you may end up with a gemstone weapon instead.
+* Nothing known at the moment
 
 TODO
 ====
@@ -446,9 +444,12 @@ for the full text.
 Changelog
 =========
 
-**v1.3.4**, unreleased:
+**v1.3.4**, July 15, 2019:
  * Buffed Chubby/Tubby drops a bit more, will have a guaranteed drop from the
    "epic chest" pool.
+ * Moved Gemstone weapons from the E-Tech pools to the Purple pools
+   * Medical Mystery will now always correctly reward an E-Tech
+   * Fixed a few gemstone types which weren't actually dropping properly
 
 **v1.3.3**, July 11, 2019 (commit `7b2a237de7fbcbaa7bd583d892529b85400954e5`):
  * Updated for full DLC5 (Commander Lilith & the Fight For Sanctuary)
