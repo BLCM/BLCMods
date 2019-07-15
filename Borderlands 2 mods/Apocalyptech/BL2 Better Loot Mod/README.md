@@ -444,7 +444,10 @@ for the full text.
 Changelog
 =========
 
-**v1.3.4**, July 15, 2019:
+**v1.3.5**, unreleased:
+ * Nothing yet!
+
+**v1.3.4**, July 15, 2019 (commit `6f762b444cb42093dc79659939f278b24de0a943`):
  * Buffed Chubby/Tubby drops a bit more, will have a guaranteed drop from the
    "epic chest" pool.
  * Moved Gemstone weapons from the E-Tech pools to the Purple pools
