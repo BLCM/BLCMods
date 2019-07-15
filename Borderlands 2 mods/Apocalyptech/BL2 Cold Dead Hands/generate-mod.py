@@ -122,6 +122,12 @@ class DropConfig(BaseConfig):
     # Scale for weighted pools
     weight_scale = 2.5
 
+    # What percent of purple drops should be gemstones?
+    pct_gemstones = 0.25
+
+    # Extra scaling for e-tech pistols, to make them less common.
+    alien_pistol_scale = 0.6
+
     # Rarity drop probabilities
     rarity_drop_prob = {
             'guaranteed': {
@@ -322,24 +328,24 @@ class Regular(DropConfig):
             'common': 20,
             'uncommon': 85,
             'rare': 65,
-            'veryrare': 40,
-            'alien': 20,
+            'veryrare': 50,
+            'alien': 10,
             'legendary': 3,
             },
         'better': {
             'common': 32.75,
             'uncommon': 35,
             'rare': 25,
-            'veryrare': 5,
-            'alien': 2,
+            'veryrare': 6,
+            'alien': 1,
             'legendary': 0.25,
             },
         'stock': {
             'common': 80,
             'uncommon': 10,
             'rare': 1,
-            'veryrare': 0.1,
-            'alien': 0.1,
+            'veryrare': 0.14,
+            'alien': 0.06,
             'legendary': 0.03,
             },
         }
@@ -889,16 +895,16 @@ class Badass(DropConfig):
             'common': 0,
             'uncommon': 0,
             'rare': 35,
-            'veryrare': 60,
-            'alien': 55,
+            'veryrare': 87.5,
+            'alien': 27.5,
             'legendary': 10,
             },
         'better': {
             'common': 0,
             'uncommon': 25,
             'rare': 49,
-            'veryrare': 15,
-            'alien': 10,
+            'veryrare': 20,
+            'alien': 5,
             'legendary': 1,
             },
         # There's really not such a thing as a "stock" badass pool we could
@@ -907,8 +913,8 @@ class Badass(DropConfig):
             'common': 0,
             'uncommon': 40,
             'rare': 30,
-            'veryrare': 8,
-            'alien': 3,
+            'veryrare': 9.5,
+            'alien': 1.5,
             'legendary': 0.25,
             },
         }
@@ -979,6 +985,7 @@ class Badass(DropConfig):
                 (0, 'GD_Population_Sheriff.Balance.PawnBalance_Marshal'),
                 (0, 'GD_MarauderBadass_Digi.Population.PawnBalance_MarauderBadass_Digi'),
                 (1, 'GD_ButcherBoss2.Balance.PawnBalance_ButcherBoss2'),
+                (0, 'GD_Anemone_Population_Loader.Balance.PawnBalance_LoaderBadass'),
             ],
             # Pistols
             [
@@ -1031,9 +1038,8 @@ class Badass(DropConfig):
             [
                 (0, 'GD_Population_Engineer.Balance.Unique.PawnBalance_Leprechaun'),
             ],
-            # Only ARs
+            # Only ARs - NOTE!  No actual pool is defined for this for badasses
             [
-                (0, 'GD_Anemone_Population_Loader.Balance.PawnBalance_LoaderBadass'),
             ],
             # Shields
             [
@@ -1150,6 +1156,8 @@ class Badass(DropConfig):
                 (0, 0, 'GD_ZafordBadass.Balance.PawnBalance_ZafordBadass'),
                 (1, 0, 'GD_ZafordBadass.Balance.PawnBalance_ZafordBadass'),
                 (2, 0, 'GD_ZafordBadass.Balance.PawnBalance_ZafordBadass'),
+                (1, 0, 'GD_Anemone_Pop_Bandits.Balance.PawnBalance_MarauderBadass_Leader'),
+                (1, 0, 'GD_Anemone_Pop_Bandits.Balance.PawnBalance_NomadBadass_Leader'),
             ],
             # Pistols
             [
@@ -1181,12 +1189,8 @@ class Badass(DropConfig):
                 (0, 0, 'GD_Anemone_Pop_Infected.Balance.PawnBalance_Infected_BadassBruiser'),
                 (1, 0, 'GD_Anemone_Pop_Infected.Balance.PawnBalance_Infected_BadassBruiser'),
             ],
-            # Only ARs
+            # Only ARs - NOTE!  No actual pool is defined for this for badasses
             [
-                (1, 0, 'GD_Anemone_Pop_Bandits.Balance.PawnBalance_MarauderBadass_Leader'),
-                (1, 0, 'GD_Anemone_Pop_Bandits.Balance.PawnBalance_NomadBadass_Leader'),
-                (1, 0, 'GD_Anemone_Pop_Bandits.Balance.PawnBalance_MarauderBadass_Leader'),
-                (1, 0, 'GD_Anemone_Pop_Bandits.Balance.PawnBalance_NomadBadass_Leader'),
             ],
             # Shields
             [
@@ -1281,7 +1285,7 @@ class Badass(DropConfig):
             # Only Shotguns
             [
             ],
-            # Only ARs
+            # Only ARs - NOTE!  No actual pool is defined for this for badasses
             [
             ],
             # Shields
@@ -1327,7 +1331,7 @@ class Badass(DropConfig):
             # Only Shotguns
             [
             ],
-            # Only ARs
+            # Only ARs - NOTE!  No actual pool is defined for this for badasses
             [
             ],
             # Shields
@@ -1799,8 +1803,8 @@ for (rarity_key, rarity_label) in DropConfig.rarity_presets:
                 ('GD_Itempools.WeaponPools.Pool_Weapons_Pistols_04_Rare', config.weight_rare, None, 1, False),
                 ('GD_Itempools.WeaponPools.Pool_Weapons_Pistols_05_VeryRare', config.weight_veryrare, None, 1, True),
                 ('GD_Itempools.WeaponPools.Pool_Weapons_Pistols_05_VeryRare', config.weight_veryrare, None, 1, False),
-                ('GD_Itempools.WeaponPools.Pool_Weapons_Pistols_05_VeryRare_Alien', config.weight_alien, None, 1, True),
-                ('GD_Itempools.WeaponPools.Pool_Weapons_Pistols_05_VeryRare_Alien', config.weight_alien, None, 1, False),
+                ('GD_Itempools.WeaponPools.Pool_Weapons_Pistols_05_VeryRare_Alien', config.weight_alien * config.alien_pistol_scale, None, 1, True),
+                ('GD_Itempools.WeaponPools.Pool_Weapons_Pistols_05_VeryRare_Alien', config.weight_alien * config.alien_pistol_scale, None, 1, False),
                 ('GD_Itempools.WeaponPools.Pool_Weapons_Pistols_06_Legendary', config.weight_legendary, None, 1, True),
                 ('GD_Itempools.WeaponPools.Pool_Weapons_Pistols_06_Legendary', config.weight_legendary, None, 1, False),
             ])
@@ -2040,8 +2044,8 @@ for (rarity_key, rarity_label) in DropConfig.rarity_presets:
                 ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_AngelGang_Pistols_04_Rare', regular.weight_rare, None, 1, False),
                 ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_AngelGang_Pistols_05_VeryRare', regular.weight_veryrare, None, 1, True),
                 ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_AngelGang_Pistols_05_VeryRare', regular.weight_veryrare, None, 1, False),
-                ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_AngelGang_Pistols_05_VeryRare_Alien', regular.weight_alien, None, 1, True),
-                ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_AngelGang_Pistols_05_VeryRare_Alien', regular.weight_alien, None, 1, False),
+                ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_AngelGang_Pistols_05_VeryRare_Alien', regular.weight_alien * config.alien_pistol_scale, None, 1, True),
+                ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_AngelGang_Pistols_05_VeryRare_Alien', regular.weight_alien * config.alien_pistol_scale, None, 1, False),
                 ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_AngelGang_Pistols_06_Legendary', regular.weight_legendary, None, 1, True),
                 ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_AngelGang_Pistols_06_Legendary', regular.weight_legendary, None, 1, False),
             ])))
@@ -2108,8 +2112,8 @@ for (rarity_key, rarity_label) in DropConfig.rarity_presets:
                 ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_DragonGang_Pistols_04_Rare', regular.weight_rare, None, 1, False),
                 ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_DragonGang_Pistols_05_VeryRare', regular.weight_veryrare, None, 1, True),
                 ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_DragonGang_Pistols_05_VeryRare', regular.weight_veryrare, None, 1, False),
-                ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_DragonGang_Pistols_05_VeryRare_Alien', regular.weight_alien, None, 1, True),
-                ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_DragonGang_Pistols_05_VeryRare_Alien', regular.weight_alien, None, 1, False),
+                ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_DragonGang_Pistols_05_VeryRare_Alien', regular.weight_alien * config.alien_pistol_scale, None, 1, True),
+                ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_DragonGang_Pistols_05_VeryRare_Alien', regular.weight_alien * config.alien_pistol_scale, None, 1, False),
                 ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_DragonGang_Pistols_06_Legendary', regular.weight_legendary, None, 1, True),
                 ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_DragonGang_Pistols_06_Legendary', regular.weight_legendary, None, 1, False),
             ])))
@@ -2159,8 +2163,8 @@ for (rarity_key, rarity_label) in DropConfig.rarity_presets:
                 ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_TorgueGang_Pistols_04_Rare', regular.weight_rare, None, 1, False),
                 ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_TorgueGang_Pistols_05_VeryRare', regular.weight_veryrare, None, 1, True),
                 ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_TorgueGang_Pistols_05_VeryRare', regular.weight_veryrare, None, 1, False),
-                ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_TorgueGang_Pistols_05_VeryRare_Alien', regular.weight_alien, None, 1, True),
-                ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_TorgueGang_Pistols_05_VeryRare_Alien', regular.weight_alien, None, 1, False),
+                ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_TorgueGang_Pistols_05_VeryRare_Alien', regular.weight_alien * config.alien_pistol_scale, None, 1, True),
+                ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_TorgueGang_Pistols_05_VeryRare_Alien', regular.weight_alien * config.alien_pistol_scale, None, 1, False),
                 ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_TorgueGang_Pistols_06_Legendary', regular.weight_legendary, None, 1, True),
                 ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_TorgueGang_Pistols_06_Legendary', regular.weight_legendary, None, 1, False),
             ])))
@@ -2849,6 +2853,38 @@ for (pool, shieldlist) in shields.items():
             index,
             shieldname,
             invbalance='InventoryBalanceDefinition')
+
+# Hotfixes to optionally add Gemstones
+gemstones = {
+    'GD_Itempools.WeaponPools.Pool_Weapons_AssaultRifles_05_VeryRare': [
+        ('ar', 5, 'GD_Aster_ItemPools.WeaponPools.Pool_Weapons_ARs_04_Gemstone', 5),
+        ],
+    'GD_Itempools.WeaponPools.Pool_Weapons_Pistols_05_VeryRare': [
+        ('pistol', 8, 'GD_Aster_ItemPools.WeaponPools.Pool_Weapons_Pistols_04_Gemstone', 8),
+        ],
+    'GD_Itempools.WeaponPools.Pool_Weapons_Shotguns_05_VeryRare': [
+        ('shotgun', 5, 'GD_Aster_ItemPools.WeaponPools.Pool_Weapons_Shotguns_04_Gemstone', 5),
+        ],
+    'GD_Itempools.WeaponPools.Pool_Weapons_SMG_05_VeryRare': [
+        ('smg', 5, 'GD_Aster_ItemPools.WeaponPools.Pool_Weapons_SMGs_04_Gemstone', 5),
+        ],
+    'GD_Itempools.WeaponPools.Pool_Weapons_SniperRifles_05_VeryRare': [
+        ('sniper', 5, 'GD_Aster_ItemPools.WeaponPools.Pool_Weapons_Snipers_04_Gemstone', 5),
+        ],
+    }
+for (pool, gemlist) in gemstones.items():
+    for (label, index, gemname, scale) in gemlist:
+        # Math derived from:  x/(x+n) = r
+        # Where `r` is the desired ratio of gemstones, `x` is the weight
+        # we want to assign to the gemstone pool (ie: the value we're solving
+        # for), and `n` being the current weight of the pool without gems.
+        weight = round((DropConfig.pct_gemstones*scale)/(1-DropConfig.pct_gemstones), 6)
+        mp.set_bi_item_pool('gemstone_{}'.format(label),
+            pool,
+            index,
+            gemname,
+            weight=weight,
+            )
 
 # "Real" Stalker shield hotfixes
 stalker_shields_real_list = []

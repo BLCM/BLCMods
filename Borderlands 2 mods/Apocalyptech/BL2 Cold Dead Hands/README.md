@@ -349,7 +349,12 @@ Changelog
 =========
 
 **v1.1.3** - unreleased:
- * Imported updated BL2 Early Bloomer data
+ * Support for DLC5 (Commander Lilith and the Fight for Sanctuary)
+ * Altered how gemstone weapons are added - they no longer share a pool with E-Techs.
+   * Medical Mystery should now always reward an e-tech, instead of sometimes rewarding
+     a gemstone
+ * Fixed gemstone drops so that all gemstone weapon types can drop (we'd been missing
+   a few, previously, as it turns out)
 
 **v1.1.2-and-a-bit**, June 11, 2019 (commit `1f3559e5944d249b68ea18ba67fb1d20ee678189`):
  * FromDarkHell updated the BLCMods github to fix the majority of
