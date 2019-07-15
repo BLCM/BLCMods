@@ -5,15 +5,15 @@ This mod adds all legendary items across DLCs into the global legendary loot
 pools, and by default adds all uniques, seraphs, pearlescents, and
 effervescents into the legendary pools, too.  This applies to weapons, grenade
 mods, class mods, shields, and even relics.  The mod will also by default add
-in gemstone weapons into the E-Tech pool, and add the Dragon Keep "Alignment"
+in gemstone weapons into the purple drop pool, and add the Dragon Keep "Alignment"
 Class Mods to the global class mod drops.  These additions, like most of the
 functionality in this mod, can be disabled/configured easily.
 
 To compensate for the increased number of items which are available in
-the legendary/E-tech pools, this mod also doubles the chances of those
+the legendary/purple pools, this mod also increases the chances of those
 drops, by default.  An optional configuration section can be used to revert
-those rates to the standard drop rates, or set them to drop three times as
-often, instead.
+those rates to the standard drop rates, or set them to drop even more
+frequently, instead.
 
 This mod was basically taken straight out of BL2 Better Loot, though there
 are a few functional differences.  This mod will **not** play nicely with
@@ -39,7 +39,7 @@ Simply choose the file `BL2 Expanded Legendary Pools.blcm` and have at it!
   pools.  Then all the other options in here can be freely unchecked if you
   want.  For reference here, they are:
   * Add Dragon Keep "Alignment" Class Mods to Global Drop Pool
-  * Add Gemstones to E-Tech Pool
+  * Add Gemstones to Purple Pool
   * Add Uniques to Legendary Pools
   * Add E-Tech Relics to Legendary Pools
   * Add Pearls to Legendary Pools (Weapons Only)
@@ -56,21 +56,16 @@ Simply choose the file `BL2 Expanded Legendary Pools.blcm` and have at it!
   * Fire Drill
   * Vault Hunter's Relic
   * Winter Is Over Relic
-* **E-Tech Drop Rate Adjustment (defaults to 2x)** - Since we doubled the
-  amount of weapons in the E-Tech pools, it seemed fair to double the drop
-  rate.  This can optionally be reverted down to stock values, or increased
-  further to 3x.
-* **Legendary Drop Rate Adjustment (defaults to 2x)** - As with E-Techs, since
+* **Purple Drop Rate Adjustment (defaults to 1.3x)** - Since we added gemstones
+  to the purple pool, it seemed fair to increase its drop rate.  The default
+  increase is 1.3x, which should exactly normalize the drop percentage so you
+  get the same number of purples as before (not counting the gemstone additions).
+  This can optionally be increased further up to 1.6x, or reverted down to stock
+  values.
+* **Legendary Drop Rate Adjustment (defaults to 2x)** - As with purples, since
   we greatly increased the number of items in the Legendary pools, it seemed
   fair to double the drop rate.  This can optionally be reverted down to
   stock values, or increased further to 3x.
-
-Bugs
-====
-
-* The mission Medical Mystery: X-Com-municate is supposed to reward an
-  E-Tech pistol, but because we add gemstones into the E-Tech pool (at least
-  by default), you may end up with a gemstone weapon instead.
 
 Mod Construction / Implementation Details
 =========================================
@@ -101,6 +96,13 @@ for the full text.
 
 Changelog
 =========
+
+**v1.1.0**, July 15, 2019:
+ * Moved Gemstone weapons from the E-Tech pools to the Purple pools
+   * Medical Mystery will now always correctly reward an E-Tech
+   * Fixed a few gemstone types which weren't actually dropping properly
+   * Removed E-Tech pool buff, replaced with Purple pool buff
+   * E-Tech Pistol drop rate is no longer affected by this mod
 
 **v1.0.2**, July 11, 2019:
  * Added in all DLC5 (Commander Lilith & the Fight for Sanctuary) items
