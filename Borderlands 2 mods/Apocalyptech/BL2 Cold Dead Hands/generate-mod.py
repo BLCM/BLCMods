@@ -130,7 +130,6 @@ class DropConfig(BaseConfig):
                     'rare': 1,
                     'veryrare': 1,
                     'alien': 1,
-                    'gemstone': 1,
                     'legendary': 1,
                 },
             'variable': {
@@ -139,13 +138,9 @@ class DropConfig(BaseConfig):
                     'rare': .66,
                     'veryrare': 1,
                     'alien': 1,
-                    'gemstone': 1,
                     'legendary': 1,
                 },
         }
-
-    # Ratio of e-tech pistols to gemstone pistols (overrides specified weights)
-    ratio_pistol_alien_gemstone = 0.3
 
     ###
     ### Statements which'll be filled in later
@@ -179,7 +174,6 @@ class DropConfig(BaseConfig):
     weight_rare = None
     weight_veryrare = None
     weight_alien = None
-    weight_gemstone = None
     weight_legendary = None
     rarity_presets = [
             ('excellent', 'Enemies Have Excellent Gear'),
@@ -197,7 +191,6 @@ class DropConfig(BaseConfig):
     pct_rare = None
     pct_veryrare = None
     pct_alien = None
-    pct_gemstone = None
     pct_legendary = None
 
     # Stalker shield equips
@@ -302,20 +295,17 @@ class DropConfig(BaseConfig):
         self.weight_rare = rarity['rare']
         self.weight_veryrare = rarity['veryrare']
         self.weight_alien = rarity['alien']
-        self.weight_gemstone = rarity['gemstone']
         self.weight_legendary = rarity['legendary']
 
         total_weight = (self.weight_common + self.weight_uncommon +
                 self.weight_rare + self.weight_veryrare +
-                self.weight_alien + self.weight_gemstone +
-                self.weight_legendary)
+                self.weight_alien + self.weight_legendary)
 
         self.pct_common = self._get_pct_chance(self.weight_common, total_weight)
         self.pct_uncommon = self._get_pct_chance(self.weight_uncommon, total_weight)
         self.pct_rare = self._get_pct_chance(self.weight_rare, total_weight)
         self.pct_veryrare = self._get_pct_chance(self.weight_veryrare, total_weight)
         self.pct_alien = self._get_pct_chance(self.weight_alien, total_weight)
-        self.pct_gemstone = self._get_pct_chance(self.weight_gemstone, total_weight)
         self.pct_legendary = self._get_pct_chance(self.weight_legendary, total_weight)
 
 class Regular(DropConfig):
@@ -333,8 +323,7 @@ class Regular(DropConfig):
             'uncommon': 85,
             'rare': 65,
             'veryrare': 40,
-            'alien': 10,
-            'gemstone': 10,
+            'alien': 20,
             'legendary': 3,
             },
         'better': {
@@ -342,8 +331,7 @@ class Regular(DropConfig):
             'uncommon': 35,
             'rare': 25,
             'veryrare': 5,
-            'alien': 1,
-            'gemstone': 1,
+            'alien': 2,
             'legendary': 0.25,
             },
         'stock': {
@@ -351,8 +339,7 @@ class Regular(DropConfig):
             'uncommon': 10,
             'rare': 1,
             'veryrare': 0.1,
-            'alien': 0.05,
-            'gemstone': 0.05,
+            'alien': 0.1,
             'legendary': 0.03,
             },
         }
@@ -903,8 +890,7 @@ class Badass(DropConfig):
             'uncommon': 0,
             'rare': 35,
             'veryrare': 60,
-            'alien': 27.5,
-            'gemstone': 27.5,
+            'alien': 55,
             'legendary': 10,
             },
         'better': {
@@ -912,8 +898,7 @@ class Badass(DropConfig):
             'uncommon': 25,
             'rare': 49,
             'veryrare': 15,
-            'alien': 5,
-            'gemstone': 5,
+            'alien': 10,
             'legendary': 1,
             },
         # There's really not such a thing as a "stock" badass pool we could
@@ -923,8 +908,7 @@ class Badass(DropConfig):
             'uncommon': 40,
             'rare': 30,
             'veryrare': 8,
-            'alien': 1.5,
-            'gemstone': 1.5,
+            'alien': 3,
             'legendary': 0.25,
             },
         }
@@ -1783,8 +1767,6 @@ for (rarity_key, rarity_label) in DropConfig.rarity_presets:
                 ('GD_Itempools.WeaponPools.Pool_Weapons_AssaultRifles_05_VeryRare', config.weight_veryrare, None, 1, False),
                 ('GD_Itempools.WeaponPools.Pool_Weapons_AssaultRifles_05_VeryRare_Alien', config.weight_alien, None, 1, True),
                 ('GD_Itempools.WeaponPools.Pool_Weapons_AssaultRifles_05_VeryRare_Alien', config.weight_alien, None, 1, False),
-                ('GD_Aster_ItemPools.WeaponPools.Pool_Weapons_ARs_04_Gemstone', config.weight_gemstone, None, 1, True),
-                ('GD_Aster_ItemPools.WeaponPools.Pool_Weapons_ARs_04_Gemstone', config.weight_gemstone, None, 1, False),
                 ('GD_Itempools.WeaponPools.Pool_Weapons_AssaultRifles_06_Legendary', config.weight_legendary, None, 1, True),
                 ('GD_Itempools.WeaponPools.Pool_Weapons_AssaultRifles_06_Legendary', config.weight_legendary, None, 1, False),
             ])
@@ -1800,20 +1782,12 @@ for (rarity_key, rarity_label) in DropConfig.rarity_presets:
                 ('GD_Itempools.WeaponPools.Pool_Weapons_Launchers_04_Rare', config.weight_rare, None, 1, False),
                 ('GD_Itempools.WeaponPools.Pool_Weapons_Launchers_05_VeryRare', config.weight_veryrare, None, 1, True),
                 ('GD_Itempools.WeaponPools.Pool_Weapons_Launchers_05_VeryRare', config.weight_veryrare, None, 1, False),
-                # Launchers don't have gemstones, but we're keeping our pools at the same length anyway
                 ('GD_Itempools.WeaponPools.Pool_Weapons_Launchers_05_VeryRare_Alien', config.weight_alien, None, 1, True),
                 ('GD_Itempools.WeaponPools.Pool_Weapons_Launchers_05_VeryRare_Alien', config.weight_alien, None, 1, False),
-                ('GD_Itempools.WeaponPools.Pool_Weapons_Launchers_05_VeryRare_Alien', config.weight_gemstone, None, 1, True),
-                ('GD_Itempools.WeaponPools.Pool_Weapons_Launchers_05_VeryRare_Alien', config.weight_gemstone, None, 1, False),
                 ('GD_Itempools.WeaponPools.Pool_Weapons_Launchers_06_Legendary', config.weight_legendary, None, 1, True),
                 ('GD_Itempools.WeaponPools.Pool_Weapons_Launchers_06_Legendary', config.weight_legendary, None, 1, False),
             ])
 
-        # E-Tech/Gemstone Pistols get weighted a bit differently because E-tech
-        # pistols kind of suck (though UCP does buff them up a bit)
-        total_pistol_alien_gemstone = config.weight_alien + config.weight_gemstone
-        cur_weight_alien = total_pistol_alien_gemstone * config.ratio_pistol_alien_gemstone
-        cur_weight_gemstone = total_pistol_alien_gemstone * (1-config.ratio_pistol_alien_gemstone)
         config.set_rarity_pistols = get_balanced_set(
             config.rarity_pool_pistols,
             [
@@ -1825,10 +1799,8 @@ for (rarity_key, rarity_label) in DropConfig.rarity_presets:
                 ('GD_Itempools.WeaponPools.Pool_Weapons_Pistols_04_Rare', config.weight_rare, None, 1, False),
                 ('GD_Itempools.WeaponPools.Pool_Weapons_Pistols_05_VeryRare', config.weight_veryrare, None, 1, True),
                 ('GD_Itempools.WeaponPools.Pool_Weapons_Pistols_05_VeryRare', config.weight_veryrare, None, 1, False),
-                ('GD_Itempools.WeaponPools.Pool_Weapons_Pistols_05_VeryRare_Alien', cur_weight_alien, None, 1, True),
-                ('GD_Itempools.WeaponPools.Pool_Weapons_Pistols_05_VeryRare_Alien', cur_weight_alien, None, 1, False),
-                ('GD_Aster_ItemPools.WeaponPools.Pool_Weapons_Pistols_04_Gemstone', cur_weight_gemstone, None, 1, True),
-                ('GD_Aster_ItemPools.WeaponPools.Pool_Weapons_Pistols_04_Gemstone', cur_weight_gemstone, None, 1, False),
+                ('GD_Itempools.WeaponPools.Pool_Weapons_Pistols_05_VeryRare_Alien', config.weight_alien, None, 1, True),
+                ('GD_Itempools.WeaponPools.Pool_Weapons_Pistols_05_VeryRare_Alien', config.weight_alien, None, 1, False),
                 ('GD_Itempools.WeaponPools.Pool_Weapons_Pistols_06_Legendary', config.weight_legendary, None, 1, True),
                 ('GD_Itempools.WeaponPools.Pool_Weapons_Pistols_06_Legendary', config.weight_legendary, None, 1, False),
             ])
@@ -1846,8 +1818,6 @@ for (rarity_key, rarity_label) in DropConfig.rarity_presets:
                 ('GD_Itempools.WeaponPools.Pool_Weapons_SMG_05_VeryRare', config.weight_veryrare, None, 1, False),
                 ('GD_Itempools.WeaponPools.Pool_Weapons_SMG_05_VeryRare_Alien', config.weight_alien, None, 1, True),
                 ('GD_Itempools.WeaponPools.Pool_Weapons_SMG_05_VeryRare_Alien', config.weight_alien, None, 1, False),
-                ('GD_Aster_ItemPools.WeaponPools.Pool_Weapons_SMGs_04_Gemstone', config.weight_gemstone, None, 1, True),
-                ('GD_Aster_ItemPools.WeaponPools.Pool_Weapons_SMGs_04_Gemstone', config.weight_gemstone, None, 1, False),
                 ('GD_Itempools.WeaponPools.Pool_Weapons_SMG_06_Legendary', config.weight_legendary, None, 1, True),
                 ('GD_Itempools.WeaponPools.Pool_Weapons_SMG_06_Legendary', config.weight_legendary, None, 1, False),
             ])
@@ -1865,8 +1835,6 @@ for (rarity_key, rarity_label) in DropConfig.rarity_presets:
                 ('GD_Itempools.WeaponPools.Pool_Weapons_Shotguns_05_VeryRare', config.weight_veryrare, None, 1, False),
                 ('GD_Itempools.WeaponPools.Pool_Weapons_Shotguns_05_VeryRare_Alien', config.weight_alien, None, 1, True),
                 ('GD_Itempools.WeaponPools.Pool_Weapons_Shotguns_05_VeryRare_Alien', config.weight_alien, None, 1, False),
-                ('GD_Aster_ItemPools.WeaponPools.Pool_Weapons_Shotguns_04_Gemstone', config.weight_gemstone, None, 1, True),
-                ('GD_Aster_ItemPools.WeaponPools.Pool_Weapons_Shotguns_04_Gemstone', config.weight_gemstone, None, 1, False),
                 ('GD_Itempools.WeaponPools.Pool_Weapons_Shotguns_06_Legendary', config.weight_legendary, None, 1, True),
                 ('GD_Itempools.WeaponPools.Pool_Weapons_Shotguns_06_Legendary', config.weight_legendary, None, 1, False),
             ])
@@ -1884,8 +1852,6 @@ for (rarity_key, rarity_label) in DropConfig.rarity_presets:
                 ('GD_Itempools.WeaponPools.Pool_Weapons_SniperRifles_05_VeryRare', config.weight_veryrare, None, 1, False),
                 ('GD_Itempools.WeaponPools.Pool_Weapons_SniperRifles_05_VeryRare_Alien', config.weight_alien, None, 1, True),
                 ('GD_Itempools.WeaponPools.Pool_Weapons_SniperRifles_05_VeryRare_Alien', config.weight_alien, None, 1, False),
-                ('GD_Aster_ItemPools.WeaponPools.Pool_Weapons_Snipers_04_Gemstone', config.weight_gemstone, None, 1, True),
-                ('GD_Aster_ItemPools.WeaponPools.Pool_Weapons_Snipers_04_Gemstone', config.weight_gemstone, None, 1, False),
                 ('GD_Itempools.WeaponPools.Pool_Weapons_SniperRifles_06_Legendary', config.weight_legendary, None, 1, True),
                 ('GD_Itempools.WeaponPools.Pool_Weapons_SniperRifles_06_Legendary', config.weight_legendary, None, 1, False),
             ])
@@ -2057,8 +2023,6 @@ for (rarity_key, rarity_label) in DropConfig.rarity_presets:
                 ('GD_Weap_SMG.A_Weapons.SMG_Hyperion_4_VeryRare', badass.weight_veryrare, 'WeaponBalanceDefinition', 1, False),
                 ('GD_Weap_SMG.A_Weapons.SMG_Hyperion_5_Alien', badass.weight_alien, 'WeaponBalanceDefinition', 1, True),
                 ('GD_Weap_SMG.A_Weapons.SMG_Hyperion_5_Alien', badass.weight_alien, 'WeaponBalanceDefinition', 1, False),
-                ('GD_Aster_Weapons.SMGs.SMG_Hyperion_4_Diamond', badass.weight_gemstone, 'WeaponBalanceDefinition', 1, True),
-                ('GD_Aster_Weapons.SMGs.SMG_Hyperion_4_Diamond', badass.weight_gemstone, 'WeaponBalanceDefinition', 1, False),
                 ('GD_Weap_SMG.A_Weapons_Legendary.SMG_Hyperion_5_Bitch', badass.weight_legendary, 'WeaponBalanceDefinition', 1, True),
                 ('GD_Weap_SMG.A_Weapons_Legendary.SMG_Hyperion_5_Bitch', badass.weight_legendary, 'WeaponBalanceDefinition', 1, False),
             ])))
@@ -2078,9 +2042,6 @@ for (rarity_key, rarity_label) in DropConfig.rarity_presets:
                 ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_AngelGang_Pistols_05_VeryRare', regular.weight_veryrare, None, 1, False),
                 ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_AngelGang_Pistols_05_VeryRare_Alien', regular.weight_alien, None, 1, True),
                 ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_AngelGang_Pistols_05_VeryRare_Alien', regular.weight_alien, None, 1, False),
-                # We'll have to cope without manufacturer-limited equips for gemstones.  Whatever.
-                ('GD_Aster_ItemPools.WeaponPools.Pool_Weapons_Pistols_04_Gemstone', regular.weight_gemstone, None, 1, True),
-                ('GD_Aster_ItemPools.WeaponPools.Pool_Weapons_Pistols_04_Gemstone', regular.weight_gemstone, None, 1, False),
                 ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_AngelGang_Pistols_06_Legendary', regular.weight_legendary, None, 1, True),
                 ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_AngelGang_Pistols_06_Legendary', regular.weight_legendary, None, 1, False),
             ])))
@@ -2098,9 +2059,6 @@ for (rarity_key, rarity_label) in DropConfig.rarity_presets:
                 ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_AngelGang_Shotguns_05_VeryRare', regular.weight_veryrare, None, 1, False),
                 ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_AngelGang_Shotguns_05_VeryRare_Alien', regular.weight_alien, None, 1, True),
                 ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_AngelGang_Shotguns_05_VeryRare_Alien', regular.weight_alien, None, 1, False),
-                # We'll have to cope without manufacturer-limited equips for gemstones.  Whatever.
-                ('GD_Aster_ItemPools.WeaponPools.Pool_Weapons_Shotguns_04_Gemstone', regular.weight_gemstone, None, 1, True),
-                ('GD_Aster_ItemPools.WeaponPools.Pool_Weapons_Shotguns_04_Gemstone', regular.weight_gemstone, None, 1, False),
                 ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_AngelGang_Shotguns_06_Legendary', regular.weight_legendary, None, 1, True),
                 ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_AngelGang_Shotguns_06_Legendary', regular.weight_legendary, None, 1, False),
             ])))
@@ -2118,9 +2076,6 @@ for (rarity_key, rarity_label) in DropConfig.rarity_presets:
                 ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_AngelGang_SMG_05_VeryRare', regular.weight_veryrare, None, 1, False),
                 ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_AngelGang_SMG_05_VeryRare_Alien', regular.weight_alien, None, 1, True),
                 ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_AngelGang_SMG_05_VeryRare_Alien', regular.weight_alien, None, 1, False),
-                # We'll have to cope without manufacturer-limited equips for gemstones.  Whatever.
-                ('GD_Aster_ItemPools.WeaponPools.Pool_Weapons_SMGs_04_Gemstone', regular.weight_gemstone, None, 1, True),
-                ('GD_Aster_ItemPools.WeaponPools.Pool_Weapons_SMGs_04_Gemstone', regular.weight_gemstone, None, 1, False),
                 ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_AngelGang_SMG_06_Legendary', regular.weight_legendary, None, 1, True),
                 ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_AngelGang_SMG_06_Legendary', regular.weight_legendary, None, 1, False),
             ])))
@@ -2138,9 +2093,6 @@ for (rarity_key, rarity_label) in DropConfig.rarity_presets:
                 ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_AngelGang_SniperRifles_05_VeryRare', regular.weight_veryrare, None, 1, False),
                 ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_AngelGang_SniperRifles_05_VeryRare_Alien', regular.weight_alien, None, 1, True),
                 ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_AngelGang_SniperRifles_05_VeryRare_Alien', regular.weight_alien, None, 1, False),
-                # We'll have to cope without manufacturer-limited equips for gemstones.  Whatever.
-                ('GD_Aster_ItemPools.WeaponPools.Pool_Weapons_Snipers_04_Gemstone', regular.weight_gemstone, None, 1, True),
-                ('GD_Aster_ItemPools.WeaponPools.Pool_Weapons_Snipers_04_Gemstone', regular.weight_gemstone, None, 1, False),
                 ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_AngelGang_SniperRifles_06_Legendary', regular.weight_legendary, None, 1, True),
                 ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_AngelGang_SniperRifles_06_Legendary', regular.weight_legendary, None, 1, False),
             ])))
@@ -2158,9 +2110,6 @@ for (rarity_key, rarity_label) in DropConfig.rarity_presets:
                 ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_DragonGang_Pistols_05_VeryRare', regular.weight_veryrare, None, 1, False),
                 ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_DragonGang_Pistols_05_VeryRare_Alien', regular.weight_alien, None, 1, True),
                 ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_DragonGang_Pistols_05_VeryRare_Alien', regular.weight_alien, None, 1, False),
-                # We'll have to cope without manufacturer-limited equips for gemstones.  Whatever.
-                ('GD_Aster_ItemPools.WeaponPools.Pool_Weapons_Pistols_04_Gemstone', regular.weight_gemstone, None, 1, True),
-                ('GD_Aster_ItemPools.WeaponPools.Pool_Weapons_Pistols_04_Gemstone', regular.weight_gemstone, None, 1, False),
                 ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_DragonGang_Pistols_06_Legendary', regular.weight_legendary, None, 1, True),
                 ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_DragonGang_Pistols_06_Legendary', regular.weight_legendary, None, 1, False),
             ])))
@@ -2178,9 +2127,6 @@ for (rarity_key, rarity_label) in DropConfig.rarity_presets:
                 ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_DragonGang_SMG_05_VeryRare', regular.weight_veryrare, None, 1, False),
                 ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_DragonGang_SMG_05_VeryRare_Alien', regular.weight_alien, None, 1, True),
                 ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_DragonGang_SMG_05_VeryRare_Alien', regular.weight_alien, None, 1, False),
-                # We'll have to cope without manufacturer-limited equips for gemstones.  Whatever.
-                ('GD_Aster_ItemPools.WeaponPools.Pool_Weapons_SMGs_04_Gemstone', regular.weight_gemstone, None, 1, True),
-                ('GD_Aster_ItemPools.WeaponPools.Pool_Weapons_SMGs_04_Gemstone', regular.weight_gemstone, None, 1, False),
                 ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_DragonGang_SMG_06_Legendary', regular.weight_legendary, None, 1, True),
                 ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_DragonGang_SMG_06_Legendary', regular.weight_legendary, None, 1, False),
             ])))
@@ -2198,9 +2144,6 @@ for (rarity_key, rarity_label) in DropConfig.rarity_presets:
                 ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_DragonGang_SniperRifles_05_VeryRare', regular.weight_veryrare, None, 1, False),
                 ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_DragonGang_SniperRifles_05_VeryRare_Alien', regular.weight_alien, None, 1, True),
                 ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_DragonGang_SniperRifles_05_VeryRare_Alien', regular.weight_alien, None, 1, False),
-                # We'll have to cope without manufacturer-limited equips for gemstones.  Whatever.
-                ('GD_Aster_ItemPools.WeaponPools.Pool_Weapons_Snipers_04_Gemstone', regular.weight_gemstone, None, 1, True),
-                ('GD_Aster_ItemPools.WeaponPools.Pool_Weapons_Snipers_04_Gemstone', regular.weight_gemstone, None, 1, False),
                 ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_DragonGang_SniperRifles_06_Legendary', regular.weight_legendary, None, 1, True),
                 ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_DragonGang_SniperRifles_06_Legendary', regular.weight_legendary, None, 1, False),
             ])))
@@ -2218,9 +2161,6 @@ for (rarity_key, rarity_label) in DropConfig.rarity_presets:
                 ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_TorgueGang_Pistols_05_VeryRare', regular.weight_veryrare, None, 1, False),
                 ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_TorgueGang_Pistols_05_VeryRare_Alien', regular.weight_alien, None, 1, True),
                 ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_TorgueGang_Pistols_05_VeryRare_Alien', regular.weight_alien, None, 1, False),
-                # We'll have to cope without manufacturer-limited equips for gemstones.  Whatever.
-                ('GD_Aster_ItemPools.WeaponPools.Pool_Weapons_Pistols_04_Gemstone', regular.weight_gemstone, None, 1, True),
-                ('GD_Aster_ItemPools.WeaponPools.Pool_Weapons_Pistols_04_Gemstone', regular.weight_gemstone, None, 1, False),
                 ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_TorgueGang_Pistols_06_Legendary', regular.weight_legendary, None, 1, True),
                 ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_TorgueGang_Pistols_06_Legendary', regular.weight_legendary, None, 1, False),
             ])))
@@ -2238,9 +2178,6 @@ for (rarity_key, rarity_label) in DropConfig.rarity_presets:
                 ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_TorgueGang_Shotguns_05_VeryRare', regular.weight_veryrare, None, 1, False),
                 ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_TorgueGang_Shotguns_05_VeryRare_Alien', regular.weight_alien, None, 1, True),
                 ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_TorgueGang_Shotguns_05_VeryRare_Alien', regular.weight_alien, None, 1, False),
-                # We'll have to cope without manufacturer-limited equips for gemstones.  Whatever.
-                ('GD_Aster_ItemPools.WeaponPools.Pool_Weapons_Shotguns_04_Gemstone', regular.weight_gemstone, None, 1, True),
-                ('GD_Aster_ItemPools.WeaponPools.Pool_Weapons_Shotguns_04_Gemstone', regular.weight_gemstone, None, 1, False),
                 ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_TorgueGang_Shotguns_06_Legendary', regular.weight_legendary, None, 1, True),
                 ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_TorgueGang_Shotguns_06_Legendary', regular.weight_legendary, None, 1, False),
             ])))
@@ -2258,9 +2195,6 @@ for (rarity_key, rarity_label) in DropConfig.rarity_presets:
                 ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_TorgueGang_AR_05_VeryRare', regular.weight_veryrare, None, 1, False),
                 ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_TorgueGang_AR_05_VeryRare_Alien', regular.weight_alien, None, 1, True),
                 ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_TorgueGang_AR_05_VeryRare_Alien', regular.weight_alien, None, 1, False),
-                # We'll have to cope without manufacturer-limited equips for gemstones.  Whatever.
-                ('GD_Aster_ItemPools.WeaponPools.Pool_Weapons_ARs_04_Gemstone', regular.weight_gemstone, None, 1, True),
-                ('GD_Aster_ItemPools.WeaponPools.Pool_Weapons_ARs_04_Gemstone', regular.weight_gemstone, None, 1, False),
                 ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_TorgueGang_AR_06_Legendary', regular.weight_legendary, None, 1, True),
                 ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_TorgueGang_AR_06_Legendary', regular.weight_legendary, None, 1, False),
             ])))
@@ -2311,7 +2245,7 @@ for (rarity_key, rarity_label) in DropConfig.rarity_drop_prob_presets:
                 continue
             if pool:
                 if pooltype == T_GUN:
-                    rarities = ['common', 'uncommon', 'rare', 'veryrare', 'alien', 'gemstone', 'legendary']
+                    rarities = ['common', 'uncommon', 'rare', 'veryrare', 'alien', 'legendary']
                 elif pooltype == T_SHIELD:
                     rarities = ['common', 'uncommon', 'rare', 'veryrare', 'legendary']
                 elif pooltype == T_SHIELD_NOTURTLE:
@@ -2349,7 +2283,6 @@ for (rarity_key, rarity_label) in DropConfig.rarity_drop_prob_presets:
                 pct_rare=round(regular.rarity_drop_prob[rarity_key]['rare']*100),
                 pct_veryrare=round(regular.rarity_drop_prob[rarity_key]['veryrare']*100),
                 pct_alien=round(regular.rarity_drop_prob[rarity_key]['alien']*100),
-                pct_gemstone=round(regular.rarity_drop_prob[rarity_key]['gemstone']*100),
                 pct_legendary=round(regular.rarity_drop_prob[rarity_key]['legendary']*100),
                 drop_prob_hotfixes="\n\n".join(hotfix_list),
                 )
