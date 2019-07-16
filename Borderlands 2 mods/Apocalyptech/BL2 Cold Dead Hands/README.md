@@ -345,7 +345,7 @@ for the full text.
 Changelog
 =========
 
-**v1.1.3** - unreleased:
+**v1.1.3** - July 16, 2019:
  * Support for DLC5 (Commander Lilith and the Fight for Sanctuary)
    * Changed New Pandora Heavy units to use a mix of powerful shotguns instead
      of just the Dog, and changed them to use any variety of purple spike shields,
@@ -359,7 +359,7 @@ Changelog
  * Fixed gemstone drops so that all gemstone weapon types can drop (we'd been missing
    a few, previously, as it turns out)
 
-**v1.1.2-and-a-bit**, June 11, 2019 (commit `1f3559e5944d249b68ea18ba67fb1d20ee678189`):
+**v1.1.2-and-a-bit** - June 11, 2019 (commit `1f3559e5944d249b68ea18ba67fb1d20ee678189`):
  * FromDarkHell updated the BLCMods github to fix the majority of
    DLC5-related weapon part errors, which included this mod.  DLC guns
    post-Commander-Lilith-DLC were fixed as of this update, though the
