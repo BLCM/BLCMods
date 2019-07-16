@@ -347,6 +347,9 @@ Changelog
 
 **v1.1.3** - unreleased:
  * Support for DLC5 (Commander Lilith and the Fight for Sanctuary)
+   * If using in conjunction with UCP, the extra drops given to Cassius (Hector's
+     Paradise) and Lt. Angvar (Amigo Sincero) have been swapped, to keep Lt. Angvar's
+     focus on pistols.
  * Altered how gemstone weapons are added - they no longer share a pool with E-Techs.
    * Medical Mystery should now always reward an e-tech, instead of sometimes rewarding
      a gemstone
