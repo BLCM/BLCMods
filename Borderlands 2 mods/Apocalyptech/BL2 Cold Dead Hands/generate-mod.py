@@ -4323,6 +4323,29 @@ for (label, key, unique_pct, rare_pct) in [
             level='Helios_P',
             )
 
+    # Lt. Hoffman (ResearchCenter_P pool 0)
+
+    setup_boss_pool('lt_hoffman_pool_0', 'ResearchCenter_P', other.level_pool_0,
+            'GD_Weap_SniperRifles.A_Weapons.Sniper_Vladof_4_VeryRare',
+            [
+                ('GD_Anemone_Weapons.sniper.Sniper_Jakobs_6_Chaude_Mama', unique_pct, 'WeaponBalanceDefinition'),
+            ],
+            )
+
+    set_pt_cipl_item_pool('lt_hoffman_pool_1',
+            'GD_Anemone_Pop_NP.Balance.PawnBalance_NP_Lt_Hoffman',
+            0, 0,
+            other.level_pool_0,
+            level='ResearchCenter_P',
+            )
+
+    set_pt_cipl_item_pool('lt_hoffman_pool_2',
+            'GD_Anemone_Pop_NP.Balance.PawnBalance_NP_Lt_Hoffman',
+            1, 0,
+            other.level_pool_0,
+            level='ResearchCenter_P',
+            )
+
     # Generate the section string
     with open('input-file-bosses.txt', 'r') as df:
         boss_drops[key] = df.read().format(
