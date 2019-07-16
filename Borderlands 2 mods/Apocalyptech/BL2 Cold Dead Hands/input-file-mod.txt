@@ -1624,6 +1624,16 @@ BL2
 
                 #</New Pandora Snipers>
 
+                #<New Pandora Global Drop Pool>
+
+                    # New Pandora troops have a chance to drop the Infection Cleaner by default,
+                    # but we don't want extra weapons dropping from weaponable enemies in here,
+                    # so we're disabling that.
+
+                    level None set GD_Anemone_ItemPools.ListDefs.NP_DropSpecific ItemPools[4].PoolProbability.BaseValueScaleConstant 0
+
+                #</New Pandora Global Drop Pool>
+
             #</Commander Lilith and the Fight for Sanctuary Changes>
 
         #</Other Pool Tweaks>

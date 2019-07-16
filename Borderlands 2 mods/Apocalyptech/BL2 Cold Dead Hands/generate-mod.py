@@ -4260,6 +4260,34 @@ for (label, key, unique_pct, rare_pct) in [
             level='OldDust_P',
             )
 
+    # Lt. Angvar (Sandworm_P, no pools required).
+
+    set_pt_cipl_item_prob('lt_angvar_pool_0',
+            'GD_Anemone_Pop_NP.Balance.PawnBalance_NP_Lt_Angvar',
+            0, 2,
+            level='Sandworm_P',
+            )
+
+    set_pt_cipl_item_prob('lt_angvar_pool_1',
+            'GD_Anemone_Pop_NP.Balance.PawnBalance_NP_Lt_Angvar',
+            1, 2,
+            level='Sandworm_P',
+            )
+
+    # (next two are for UCP compat)
+
+    set_pt_cipl_item_prob('lt_angvar_pool_2',
+            'GD_Anemone_Pop_NP.Balance.PawnBalance_NP_Lt_Angvar',
+            0, 3,
+            level='Sandworm_P',
+            )
+
+    set_pt_cipl_item_prob('lt_angvar_pool_3',
+            'GD_Anemone_Pop_NP.Balance.PawnBalance_NP_Lt_Angvar',
+            1, 3,
+            level='Sandworm_P',
+            )
+
     # Generate the section string
     with open('input-file-bosses.txt', 'r') as df:
         boss_drops[key] = df.read().format(
