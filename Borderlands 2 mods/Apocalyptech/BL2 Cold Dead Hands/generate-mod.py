@@ -785,6 +785,10 @@ class Regular(DropConfig):
                 (1, 1, 'GD_Anemone_Pop_NP.Balance.PawnBalance_NP_Infecto'),
                 (0, 1, 'GD_Anemone_Pop_NP.Balance.PawnBalance_NP_Medic'),
                 (1, 1, 'GD_Anemone_Pop_NP.Balance.PawnBalance_NP_Medic'),
+                (0, 1, 'GD_Anemone_Pop_NP.Balance.PawnBalance_Flamer'),
+                (1, 1, 'GD_Anemone_Pop_NP.Balance.PawnBalance_Flamer'),
+                (0, 1, 'GD_Anemone_Pop_NP.Balance.PawnBalance_Flamer_IntroNOGunDrop'),
+                (1, 1, 'GD_Anemone_Pop_NP.Balance.PawnBalance_Flamer_IntroNOGunDrop'),
             ],
             # Shields (but without Turtle shields)
             [
@@ -1253,6 +1257,16 @@ class Badass(DropConfig):
                 (1, 0, 'GD_Anemone_Pop_NP.Balance.PawnBalance_NP_Lt_Hoffman'),
                 (0, 1, 'GD_Anemone_Pop_Bandits.Balance.PawnBalance_NomadBadass_Leader'),
                 (1, 1, 'GD_Anemone_Pop_Bandits.Balance.PawnBalance_NomadBadass_Leader'),
+                (0, 1, 'GD_Anemone_Pop_Bandits.Balance.PawnBalance_MarauderBadass_Leader'),
+                (1, 1, 'GD_Anemone_Pop_Bandits.Balance.PawnBalance_MarauderBadass_Leader'),
+                (0, 1, 'GD_Anemone_Pop_NP.Balance.PawnBalance_NP_Commander'),
+                (1, 1, 'GD_Anemone_Pop_NP.Balance.PawnBalance_NP_Commander'),
+                (0, 1, 'GD_Anemone_Pop_NP.Balance.PawnBalance_NP_Commander_NOGunDrop'),
+                (1, 1, 'GD_Anemone_Pop_NP.Balance.PawnBalance_NP_Commander_NOGunDrop'),
+                (0, 1, 'GD_Anemone_Pop_NP.Balance.PawnBalance_NP_Lt_Angvar'),
+                (1, 1, 'GD_Anemone_Pop_NP.Balance.PawnBalance_NP_Lt_Angvar'),
+                (0, 1, 'GD_Anemone_Pop_NP.Balance.PawnBalance_NP_Lt_Tetra'),
+                (1, 1, 'GD_Anemone_Pop_NP.Balance.PawnBalance_NP_Lt_Tetra'),
             ],
             # Shields (but without Turtle shields) - NOTE!  No actual pool is defined for this for badasses
             [
