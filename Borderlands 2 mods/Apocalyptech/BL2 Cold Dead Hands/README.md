@@ -347,6 +347,9 @@ Changelog
 
 **v1.1.3** - unreleased:
  * Support for DLC5 (Commander Lilith and the Fight for Sanctuary)
+   * Changed New Pandora Heavy units to use a mix of powerful shotguns instead
+     of just the Dog, and changed them to use any variety of purple spike shields,
+     other than just corrosive.
    * If using in conjunction with UCP, the extra drops given to Cassius (Hector's
      Paradise) and Lt. Angvar (Amigo Sincero) have been swapped, to keep Lt. Angvar's
      focus on pistols.
