@@ -24,15 +24,16 @@ branches, so you can browse in `bl2betterloot`, `bl2colddeadhands`,
   * [BL2 Fast Travel TimeSaver XL](#bl2-fast-travel-timesaver-xl)
   * [BL2 Movement Speed Cheats](#bl2-movement-speed-cheats)
   * [BL2 No Wasted COMs](#bl2-no-wasted-coms)
-  * [Configurable Catch-A-Ride](#configurable-catch-a-ride)
   * [Fragile Minecraft Blocks](#fragile-minecraft-blocks)
   * [Guaranteed Omnd-Omnd-Ohk](#guaranteed-omnd-omnd-ohk)
   * [Guaranteed Varkid Evolution](#guaranteed-varkid-evolution)
-  * [More Loot Midget Containers](#more-loot-midget-containers)
   * [More Muscles](#more-muscles)
   * [No Crushers in Lair of Infinite Agony](#no-crushers-in-lair-of-infinite-agony)
   * [Speedier Sandskiffs](#speedier-sandskiffs)
   * [Stalkers Use Shields](#stalkers-use-shields)
+* [Obsolete Mods](#obsolete-mods)
+  * [Configurable Catch-A-Ride](#configurable-catch-a-ride)
+  * [More Loot Midget Containers](#more-loot-midget-containers)
 * [Utilities](#utilities)
   * [modprocessor.py](#modprocessorpy)
   * [conv_to_human.py](#conv_to_humanpy)
@@ -125,14 +126,6 @@ are for characters who are actually playing the game.  For a singleplayer
 game, that means you'll only ever get COMs for your one character, for
 instance.
 
-### Configurable Catch-A-Ride
-
-This mod is a souped-up version of FromDarkHell's "CarReplacements" mod,
-which changed some of the Catch-A-Ride locations so that you can spawn
-various types of vehicles throughout all the game's content.  That version
-just had a few hardcoded replacements, though.  This one lets you fully
-customize every single Catch-A-Ride slot in the game!
-
 ### Fragile Minecraft Blocks
 
 Causes the Minecraft blocks (in the little secret area of Caustic Caverns) to
@@ -150,16 +143,6 @@ farm OOO without having to gamble on its spawn chances.
 Gives all Varkids a 100% chance of evolution, regardless of player count or
 playthrough.  Mostly just useful if you want to farm Vermivorous without
 having to gamble on its spawn chances.
-
-### More Loot Midget Containers
-
-*Note:* This mod has been obsoleted by [mopioid](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/mopioid)'s
-[Loot Midget World](https://github.com/BLCM/BLCMods/blob/master/Borderlands%202%20mods/mopioid/LootMidgetWorld.blcm) mod.
-
-Alters a few levels (specifically: Arid Nexus Badlands, Hero's Pass, Opportunity,
-Sawtooth Cauldron, and Tundra Express) so that as many containers as possible
-can spawn loot midgets.  This doesn't meant that *all* containers can spawn
-midgets, but there'll be more than there were.
 
 ### More Muscles
 
@@ -184,6 +167,30 @@ Improves the speed (and afterburner capability) of Sandskiffs.
 Stalkers already use shields, of course, but this mod equips them with "real"
 shields, of the sort your characters equip.  Optionally, you can have them
 only use Maylay shields, as well.
+
+Obsolete Mods
+=============
+
+### Configurable Catch-A-Ride
+
+*Note:* This mod has been obsoleted by [Our Lord and Savior Gabe Newell](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/OurLordAndSaviorGabeNewell)'s
+[More Vehicles](https://github.com/BLCM/BLCMods/blob/master/Borderlands%202%20mods/OurLordAndSaviorGabeNewell/MoreVehicles.blcm) mod.
+
+This mod is a souped-up version of FromDarkHell's "CarReplacements" mod,
+which changed some of the Catch-A-Ride locations so that you can spawn
+various types of vehicles throughout all the game's content.  That version
+just had a few hardcoded replacements, though.  This one lets you fully
+customize every single Catch-A-Ride slot in the game!
+
+### More Loot Midget Containers
+
+*Note:* This mod has been obsoleted by [mopioid](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/mopioid)'s
+[Loot Midget World](https://github.com/BLCM/BLCMods/blob/master/Borderlands%202%20mods/mopioid/LootMidgetWorld.blcm) mod.
+
+Alters a few levels (specifically: Arid Nexus Badlands, Hero's Pass, Opportunity,
+Sawtooth Cauldron, and Tundra Express) so that as many containers as possible
+can spawn loot midgets.  This doesn't meant that *all* containers can spawn
+midgets, but there'll be more than there were.
 
 Utilities
 =========
