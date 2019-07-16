@@ -29,6 +29,7 @@ branches, so you can browse in `bl2betterloot`, `bl2colddeadhands`,
   * [Guaranteed Varkid Evolution](#guaranteed-varkid-evolution)
   * [More Muscles](#more-muscles)
   * [No Crushers in Lair of Infinite Agony](#no-crushers-in-lair-of-infinite-agony)
+  * [Sorted Fast Travel](#sorted-fast-travel)
   * [Speedier Sandskiffs](#speedier-sandskiffs)
   * [Stalkers Use Shields](#stalkers-use-shields)
 * [Obsolete Mods](#obsolete-mods)
@@ -157,6 +158,11 @@ must traverse a short hallway with four sections of the floor which
 cycle up and down, threatening to crush the player.  It's not a
 difficult puzzle, but waiting around and instadeath aren't what I
 play Borderlands for.  This mod disables them!
+
+### Sorted Fast Travel
+
+Sorts the fast travel menu by default, and removes "the" prefix from level
+names, so everything sorts properly.
 
 ### Speedier Sandskiffs
 
