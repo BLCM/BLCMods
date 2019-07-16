@@ -1635,7 +1635,7 @@ def set_dl_ia_item_pool(hotfix_name, classname, pool, ld_index, ia_index,
     set_ld_ia_item_pool(hotfix_name, classname, pool, ld_index, ia_index,
         point=point, level=level, main_attr='DefaultLoot')
 
-def setup_boss_pool(hotfix_id, level, pool, default_gear, unique_gear):
+def setup_boss_pool(hotfix_id, level, pool, default_gear, unique_gear, drop_default=True):
     """
     Sets up our specified `pool` using the given `hotfix_id`, active in the
     level `level`.  The "default" ItemPool which the boss ordinarily draws from
@@ -1652,9 +1652,9 @@ def setup_boss_pool(hotfix_id, level, pool, default_gear, unique_gear):
     bal_items_tuples = []
     for (unique, pct, baldef) in unique_gear:
         total_unique += pct
-        bal_items_tuples.append((unique, round(pct, 6), baldef))
+        bal_items_tuples.append((unique, round(pct, 6), baldef, 1, True))
     if default_gear and total_unique < 1:
-        bal_items_tuples.append((default_gear, round(1 - total_unique, 6), None))
+        bal_items_tuples.append((default_gear, round(1 - total_unique, 6), None, 1, drop_default))
     mp.register_str(hotfix_id,
         'level {} set {} BalancedItems {}'.format(
             level,
@@ -4209,6 +4209,42 @@ for (label, key, unique_pct, rare_pct) in [
         level='TestingZone_P',
         prob=1,
         )
+
+    # Lt. Bolson (OldDust_P pool 1)
+
+    setup_boss_pool('lt_bolson_pool_0', 'OldDust_P', other.level_pool_0,
+            'GD_Flynt.Weapons.Pool_Weapons_FlyntUse',
+            [
+                ('GD_Anemone_Weapons.Rocket_Launcher.WorldBurn.RL_Torgue_5_WorldBurn', unique_pct, 'WeaponBalanceDefinition'),
+            ],
+            drop_default=False,
+            )
+
+    set_pt_cipl_item_pool('lt_bolson_pool_1',
+            'GD_Anemone_Pop_NP.Balance.PawnBalance_Lt_Bolson',
+            0, 0,
+            other.level_pool_0,
+            level='OldDust_P',
+            )
+
+    set_pt_cipl_item_pool('lt_bolson_pool_2',
+            'GD_Anemone_Pop_NP.Balance.PawnBalance_Lt_Bolson',
+            1, 0,
+            other.level_pool_0,
+            level='OldDust_P',
+            )
+
+    set_pt_cipl_item_prob('lt_bolson_pool_3',
+            'GD_Anemone_Pop_NP.Balance.PawnBalance_Lt_Bolson',
+            0, 3,
+            level='OldDust_P',
+            )
+
+    set_pt_cipl_item_prob('lt_bolson_pool_4',
+            'GD_Anemone_Pop_NP.Balance.PawnBalance_Lt_Bolson',
+            1, 3,
+            level='OldDust_P',
+            )
 
     # Generate the section string
     with open('input-file-bosses.txt', 'r') as df:
