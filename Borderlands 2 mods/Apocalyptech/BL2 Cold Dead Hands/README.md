@@ -294,9 +294,6 @@ Known issues with the mod:
 Ideas/TODO
 ==========
 
-* Because gemstones were added into the E-Tech pool, the Medical Mystery
-  mission might accidentally reward you a gemstone weapon rather than
-  E-Tech.
 * Restrict weapon manufacturer by level?  (Only Jakobs in Lynchwood, etc?)
 * Might be nifty to restrict weapon manufacturer by enemy type, though that
   would require eating up more skinpools (the by-level idea could reuse all
