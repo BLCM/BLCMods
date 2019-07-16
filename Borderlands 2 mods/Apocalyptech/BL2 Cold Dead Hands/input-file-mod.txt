@@ -1735,7 +1735,7 @@ BL2
 
     #</Main Mod (best to leave all this checked)>
 
-    #<Loot Pool Improvements (Gemstones/Uniques/Pearls/Seraphs)>
+    #<Loot Pool Improvements (Gemstones/Uniques/Pearls/Seraphs/Effervescents)>
 
         # Various categories to improve various aspects of the loot enemies spawn with.
         # These can be toggled on or off to suit your desired preferences.
@@ -2078,6 +2078,28 @@ BL2
                         InvBalanceDefinition=InventoryBalanceDefinition'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Standard_05_Legendary',
                         Probability=(
                             BaseValueConstant=1.000000,
+                            BaseValueAttribute=None,
+                            InitializationDefinition=None,
+                            BaseValueScaleConstant=1.000000
+                        ),
+                        bDropOnDeath=True
+                    ),
+                    (
+                        ItmPoolDefinition=None,
+                        InvBalanceDefinition=None,
+                        Probability=(
+                            BaseValueConstant=0.000000,
+                            BaseValueAttribute=None,
+                            InitializationDefinition=None,
+                            BaseValueScaleConstant=1.000000
+                        ),
+                        bDropOnDeath=True
+                    ),
+                    (
+                        ItmPoolDefinition=None,
+                        InvBalanceDefinition=None,
+                        Probability=(
+                            BaseValueConstant=0.000000,
                             BaseValueAttribute=None,
                             InitializationDefinition=None,
                             BaseValueScaleConstant=1.000000
@@ -2573,6 +2595,16 @@ BL2
 
         #</Add Seraphs to Legendary Weapon + Shield Pools>
 
+        #<Add Effervescents to Legendary Weapon + Shield Pools>
+
+{other:legendary_eff_adds}
+
+            {mp:shield_retainer}
+
+            {mp:shield_easy_mode}
+
+        #</Add Effervescents to Legendary Weapon + Shield Pools>
+
         #<Add Gemstones to Purple Pool>
 
             # Adds Gemstone weapons to the main global purple pool, so that they'll drop
@@ -2590,7 +2622,7 @@ BL2
 
         #</Add Gemstones to Purple Pool>
 
-    #</Loot Pool Improvements (Gemstones/Uniques/Pearls/Seraphs)>
+    #</Loot Pool Improvements (Gemstones/Uniques/Pearls/Seraphs/Effervescents)>
 
     #<Rocket Launchers in Global Equip Pools (choose one)><MUT>
 
