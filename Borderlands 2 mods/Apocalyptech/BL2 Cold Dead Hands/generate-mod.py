@@ -1098,7 +1098,6 @@ class Badass(DropConfig):
                 (1, 'GD_Population_Sheriff.Balance.PawnBalance_Deputy'),
                 (1, 'GD_Population_Sheriff.Balance.PawnBalance_Sheriff'),
                 (0, 'GD_PsychoBadass_Digi.Population.PawnBalance_PsychoBadass_Digi'),
-                (0, 'GD_Anemone_A_Queen_Digi.Population.PawnBalance_Anemone_TheDarkWeb'),
 
                 # Bosses follow - I'm actually not sure if we want to be doing these or not.
                 (2, 'GD_Iris_Population_MotorMama.Balance.Iris_PawnBalance_MotorMama'),
