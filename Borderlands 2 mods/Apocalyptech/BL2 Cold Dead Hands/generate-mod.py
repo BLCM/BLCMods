@@ -4224,7 +4224,7 @@ for (label, key, unique_pct, rare_pct) in [
         prob=1,
         )
 
-    # Lt. Bolson (OldDust_P pool 1)
+    # Lt. Bolson (OldDust_P pool 0)
 
     setup_boss_pool('lt_bolson_pool_0', 'OldDust_P', other.level_pool_0,
             'GD_Flynt.Weapons.Pool_Weapons_FlyntUse',
@@ -4286,6 +4286,41 @@ for (label, key, unique_pct, rare_pct) in [
             'GD_Anemone_Pop_NP.Balance.PawnBalance_NP_Lt_Angvar',
             1, 3,
             level='Sandworm_P',
+            )
+
+    # Lt. Tetra (Helios_P pool 0)
+
+    setup_boss_pool('lt_tetra_pool_0', 'Helios_P', other.level_pool_0,
+            'GD_Itempools.WeaponPools.Pool_Weapons_AssaultRifles_05_VeryRare_Alien',
+            [
+                ('GD_Anemone_Weapons.Shotgun.Overcompensator.SG_Hyperion_6_Overcompensator', unique_pct, 'WeaponBalanceDefinition'),
+            ],
+            )
+
+    set_pt_cipl_item_pool('lt_tetra_pool_1',
+            'GD_Anemone_Pop_NP.Balance.PawnBalance_NP_Lt_Tetra',
+            0, 0,
+            other.level_pool_0,
+            level='Helios_P',
+            )
+
+    set_pt_cipl_item_pool('lt_tetra_pool_2',
+            'GD_Anemone_Pop_NP.Balance.PawnBalance_NP_Lt_Tetra',
+            1, 0,
+            other.level_pool_0,
+            level='Helios_P',
+            )
+
+    set_pt_cipl_item_prob('lt_tetra_pool_3',
+            'GD_Anemone_Pop_NP.Balance.PawnBalance_NP_Lt_Tetra',
+            0, 2,
+            level='Helios_P',
+            )
+
+    set_pt_cipl_item_prob('lt_tetra_pool_4',
+            'GD_Anemone_Pop_NP.Balance.PawnBalance_NP_Lt_Tetra',
+            1, 2,
+            level='Helios_P',
             )
 
     # Generate the section string
