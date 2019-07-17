@@ -1,0 +1,37 @@
+<BLCMM v="1">
+#<!!!You opened a file saved with BLCMM in FilterTool. Please update to BLCMM to properly open this file!!!>
+	<head>
+		<type name="BL2" offline="false"/>
+		<profiles>
+			<profile name="default" current="true"/>
+		</profiles>
+	</head>
+	<body>
+		<category name="Slag Damage to NE Damage">
+			<category name="Description">
+				<comment>Changes the 'Slag Damage' attribute to multiplicative Non-Elemental Damage.</comment>
+				<comment>In vanilla, this means all 'slag damage' elemental relics will now have Non-Elemental Damage instead.</comment>
+				<comment>If you have a mod that enables Slag Bone of the Ancients, your Slag Bone of the Ancients will now become Non-ELemental Bone of the Ancients.</comment>
+				<comment>If you have any skill or item that boosts Slag Damage, they will boost Non-Elemental Damage instead.</comment>
+				<comment></comment>
+				<comment>Probably not compatible with Cryo mods(or any element mod that replaces Slag)</comment>
+				<comment>Also does not affect the UVHM Slag Bonus Damage boost, so you dont have to worry about Slag getting weaker.</comment>
+			</category>
+			<category name="Code">
+				<code profiles="default">set GD_AttributePresentation.Artifacts.AttrPresent_ArtifactInstigatedAmpDamageModifier Icon weaponDamage</code>
+				<code profiles="default">set D_Attributes.DamageTypeModifers.InstigatedAmpDamageModifier:ObjectPropertyAttributeValueResolver_563 PropertyName InstigatedImpactDamageModifier</code>
+				<code profiles="default">set GD_AttributePresentation.Artifacts.AttrPresent_ArtifactInstigatedAmpDamageModifier Description Non-Elemental Damage</code>
+			</category>
+			<category name="Credits and Permissions">
+				<comment>created by: theNocturni</comment>
+				<comment>Permissions: You are free to use this mod in any other mod/modpack without asking for permission so long as you give explicit credit to the author-just dont be like 'I used mods from other people', have the mod & author name written is all.</comment>
+			</category>
+		</category>
+	</body>
+</BLCMM>
+
+#Commands:
+set GD_AttributePresentation.Artifacts.AttrPresent_ArtifactInstigatedAmpDamageModifier Icon weaponDamage
+set D_Attributes.DamageTypeModifers.InstigatedAmpDamageModifier:ObjectPropertyAttributeValueResolver_563 PropertyName InstigatedImpactDamageModifier
+set GD_AttributePresentation.Artifacts.AttrPresent_ArtifactInstigatedAmpDamageModifier Description Non-Elemental Damage
+

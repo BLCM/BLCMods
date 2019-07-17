@@ -1,6 +1,11 @@
 Configurable Catch-A-Ride
 =========================
 
+**NOTE:** This mod is considered deprecated.  [Our Lord and Savior Gabe Newell](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/OurLordAndSaviorGabeNewell)
+has created a better version of this which lets you spawn any vehicle
+from any Fast Travel station, which makes this one fairly obsolete.
+[Get Our Lord and Savior Gabe Newell's "More Vehicles" mod here.](https://github.com/BLCM/BLCMods/blob/master/Borderlands%202%20mods/OurLordAndSaviorGabeNewell/MoreVehicles.blcm)
+
 This mod is a souped-up version of FromDarkHell's "CarReplacements" mod,
 which changed some of the Catch-A-Ride locations so that you can spawn
 various types of vehicles throughout all the game's content.  That version

@@ -31,10 +31,11 @@ in various ways, when loaded into BLCMM:
 
 * **Legendary Pool Setup**: Stalkers have the ability to use legendary
   shields, and as with my Better Loot and Cold Dead Hands mods, this
-  section can optionally add unique and seraph shields into the global
-  "legendary" shield pool, so Stalkers can use them.  Note that this will
-  affect shield drops for the rest of the game, too!  By default, uniques
-  and seraphs are added in.
+  section can optionally add unique, seraph, and effervescent shields into
+  the global "legendary" shield pool, so Stalkers can use them.  Note that
+  this will affect shield drops for the rest of the game, too!  By default,
+  all shields are added in (though effervesecents drop at a lower rate than
+  other shield types).
 
 * **Stalker Shield Quality**: This is a mutually-exclusive category (so you can
   only choose one of the options), and defines how good the shields are.
@@ -96,6 +97,10 @@ for the full text.
 
 Changelog
 =========
+
+**v1.1.2** - July 15, 2019
+ * Added in DLC5 (Commander Lilith and the Fight for Sanctuary) shields, though
+   they drop at a lower rate than other shields.
 
 **v1.1.1** - July 22, 2018
  * Included fix, thanks to 55tumbl, so that enemies using Roid/Maylay shields

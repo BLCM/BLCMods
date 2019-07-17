@@ -51,7 +51,7 @@ except ModuleNotFoundError:
 ###
 
 mod_name = 'BL2 Cold Dead Hands'
-mod_version = '1.1.2'
+mod_version = '1.1.3'
 output_filename = '{}.blcm'.format(mod_name)
 
 ###
@@ -121,6 +121,12 @@ class DropConfig(BaseConfig):
 
     # Scale for weighted pools
     weight_scale = 2.5
+
+    # What percent of purple drops should be gemstones?
+    pct_gemstones = 0.25
+
+    # Extra scaling for e-tech pistols, to make them less common.
+    alien_pistol_scale = 0.6
 
     # Rarity drop probabilities
     rarity_drop_prob = {
@@ -253,16 +259,6 @@ class DropConfig(BaseConfig):
                         pt_idx, cipl_idx),
                     pool))
 
-        # Next, enemies using ItemPoolList[x] in a specific level WillowAIPawn
-        for (pool, classlist) in zip(pool_order, self.enemy_level_ipl):
-            for (level, ipl_idx, classname) in classlist:
-                retlist.append(self._single_assignment_hotfix(
-                    prefix,
-                    classname,
-                    'ItemPoolList[{}].ItemPool'.format(ipl_idx),
-                    pool,
-                    level=level))
-
         # Next, enemies using DefaultLoot[x].ItemAttachments[y]
         for (pool, classlist) in zip(pool_order, self.enemy_dl_ia):
             for (dl_idx, ia_idx, classname) in classlist:
@@ -332,24 +328,24 @@ class Regular(DropConfig):
             'common': 20,
             'uncommon': 85,
             'rare': 65,
-            'veryrare': 40,
-            'alien': 20,
+            'veryrare': 50,
+            'alien': 10,
             'legendary': 3,
             },
         'better': {
             'common': 32.75,
             'uncommon': 35,
             'rare': 25,
-            'veryrare': 5,
-            'alien': 2,
+            'veryrare': 6,
+            'alien': 1,
             'legendary': 0.25,
             },
         'stock': {
             'common': 80,
             'uncommon': 10,
             'rare': 1,
-            'veryrare': 0.1,
-            'alien': 0.1,
+            'veryrare': 0.14,
+            'alien': 0.06,
             'legendary': 0.03,
             },
         }
@@ -496,6 +492,8 @@ class Regular(DropConfig):
             ],
             # Only ARs
             [
+                (0, 'GD_Anemone_Population_Loader.Balance.PawnBalance_LoaderGUN'),
+                (0, 'GD_Anemone_Population_Loader.Balance.PawnBalance_Loader_A_Junk'),
             ],
             # Shields
             [
@@ -653,6 +651,10 @@ class Regular(DropConfig):
                 (1, 0, 'GD_Pop_HallowSkeleton.Balance.PawnBalance_BanditHallowSkeleton'),
                 (2, 0, 'GD_Pop_HallowSkeleton.Balance.PawnBalance_BanditHallowSkeleton'),
                 (0, 1, 'GD_Orchid_Pop_Pirates.Balance.PawnBalance_Orchid_PirateMarauderSMG'),
+                (0, 0, 'GD_Anemone_Pop_NP.Balance.PawnBalance_NP_Scout_IntroNOGunDrop'),
+                (1, 0, 'GD_Anemone_Pop_NP.Balance.PawnBalance_NP_Scout_IntroNOGunDrop'),
+                (0, 0, 'GD_Anemone_Pop_NP.Balance.PawnBalance_SniperBase'),
+                (1, 0, 'GD_Anemone_Pop_NP.Balance.PawnBalance_SniperBase'),
             ],
             # All
             [
@@ -674,6 +676,8 @@ class Regular(DropConfig):
                 (1, 0, 'GD_Orchid_Pop_Pirates.Balance.PawnBalance_Orchid_PirateMidgetShotgun'),
                 (0, 0, 'GD_Population_Midget.Balance.PawnBalance_MidgetShotgun'),
                 (1, 0, 'GD_Population_Midget.Balance.PawnBalance_MidgetShotgun'),
+                (0, 0, 'GD_Anemone_Pop_Infected.Balance.PawnBalance_InfectedBruiser'),
+                (1, 0, 'GD_Anemone_Pop_Infected.Balance.PawnBalance_InfectedBruiser'),
             ],
             # Only ARs
             [
@@ -777,6 +781,14 @@ class Regular(DropConfig):
                 (0, 0, 'GD_RatChef.Balance.PawnBalance_RatChef'),
                 (0, 0, 'GD_RatLab_Digi.Population.PawnBalance_RatLab_Digi'),
                 (1, 0, 'GD_RatLab_Digi.Population.PawnBalance_RatLab_Digi'),
+                (0, 1, 'GD_Anemone_Pop_NP.Balance.PawnBalance_NP_Infecto'),
+                (1, 1, 'GD_Anemone_Pop_NP.Balance.PawnBalance_NP_Infecto'),
+                (0, 1, 'GD_Anemone_Pop_NP.Balance.PawnBalance_NP_Medic'),
+                (1, 1, 'GD_Anemone_Pop_NP.Balance.PawnBalance_NP_Medic'),
+                (0, 1, 'GD_Anemone_Pop_NP.Balance.PawnBalance_Flamer'),
+                (1, 1, 'GD_Anemone_Pop_NP.Balance.PawnBalance_Flamer'),
+                (0, 1, 'GD_Anemone_Pop_NP.Balance.PawnBalance_Flamer_IntroNOGunDrop'),
+                (1, 1, 'GD_Anemone_Pop_NP.Balance.PawnBalance_Flamer_IntroNOGunDrop'),
             ],
             # Shields (but without Turtle shields)
             [
@@ -785,191 +797,6 @@ class Regular(DropConfig):
                 (2, 0, 'GD_Allium_PsychoSnow_Midget.Balance.PawnBalance_PsychoSnow_Midget'),
                 (0, 1, 'GD_Population_Engineer.Balance.PawnBalance_HyperionHawk'),
                 (1, 1, 'GD_Population_Engineer.Balance.PawnBalance_HyperionHawk'),
-            ],
-        )
-
-    enemy_level_ipl = (
-            # ARs
-            [
-                ('Dam_P', 8, 'dam_p.TheWorld:PersistentLevel.WillowAIPawn_20'),
-                ('Damtop_P', 8, 'damtop_p.TheWorld:PersistentLevel.WillowAIPawn_19'),
-                ('Fridge_P', 8, 'Fridge_P.TheWorld:PersistentLevel.WillowAIPawn_178'),
-                ('Fridge_P', 8, 'Fridge_P.TheWorld:PersistentLevel.WillowAIPawn_179'),
-                ('Fridge_P', 8, 'Fridge_P.TheWorld:PersistentLevel.WillowAIPawn_180'),
-                ('Fridge_P', 8, 'Fridge_P.TheWorld:PersistentLevel.WillowAIPawn_181'),
-                ('Fridge_P', 8, 'Fridge_P.TheWorld:PersistentLevel.WillowAIPawn_229'),
-                ('icecanyon_p', 8, 'icecanyon_p.TheWorld:PersistentLevel.WillowAIPawn_72'),
-                ('Iris_DL2_Interior_P', 8, 'Iris_DL2_Interior_P.TheWorld:PersistentLevel.WillowAIPawn_102'),
-                ('Iris_DL2_Interior_P', 8, 'Iris_DL2_Interior_P.TheWorld:PersistentLevel.WillowAIPawn_105'),
-                ('Iris_DL2_Interior_P', 8, 'Iris_DL2_Interior_P.TheWorld:PersistentLevel.WillowAIPawn_108'),
-                ('Iris_DL2_Interior_P', 8, 'Iris_DL2_Interior_P.TheWorld:PersistentLevel.WillowAIPawn_362'),
-                ('Orchid_Refinery_P', 8, 'Orchid_Refinery_P.TheWorld:PersistentLevel.WillowAIPawn_224'),
-            ],
-            # Pistols
-            [
-            ],
-            # Shotguns
-            [
-                ('Grass_Cliffs_P', 7, 'Grass_Cliffs_P.TheWorld:PersistentLevel.WillowAIPawn_253'),
-                ('Interlude_P', 8, 'Interlude_P.TheWorld:PersistentLevel.WillowAIPawn_12'),
-                ('Iris_DL2_Interior_P', 8, 'Iris_DL2_Interior_P.TheWorld:PersistentLevel.WillowAIPawn_101'),
-                ('Iris_DL2_Interior_P', 8, 'Iris_DL2_Interior_P.TheWorld:PersistentLevel.WillowAIPawn_109'),
-                ('Iris_DL2_Interior_P', 8, 'Iris_DL2_Interior_P.TheWorld:PersistentLevel.WillowAIPawn_111'),
-                ('Orchid_ShipGraveyard_P', 7, 'Orchid_ShipGraveyard_P.TheWorld:PersistentLevel.WillowAIPawn_200'),
-                ('Orchid_ShipGraveyard_P', 7, 'Orchid_ShipGraveyard_P.TheWorld:PersistentLevel.WillowAIPawn_203'),
-                ('Orchid_ShipGraveyard_P', 7, 'Orchid_ShipGraveyard_P.TheWorld:PersistentLevel.WillowAIPawn_248'),
-            ],
-            # SMGs
-            [
-                ('dam_p', 7, 'dam_p.TheWorld:PersistentLevel.WillowAIPawn_23'),
-                ('damtop_p', 7, 'damtop_p.TheWorld:PersistentLevel.WillowAIPawn_17'),
-                ('Fridge_P', 8, 'Fridge_P.TheWorld:PersistentLevel.WillowAIPawn_182'),
-                ('Grass_Cliffs_P', 8, 'Grass_Cliffs_P.TheWorld:PersistentLevel.WillowAIPawn_208'),
-                ('Grass_Cliffs_P', 8, 'Grass_Cliffs_P.TheWorld:PersistentLevel.WillowAIPawn_254'),
-                ('SouthpawFactory_P', 7, 'SouthpawFactory_P.TheWorld:PersistentLevel.WillowAIPawn_161'),
-                ('SouthpawFactory_P', 7, 'SouthpawFactory_P.TheWorld:PersistentLevel.WillowAIPawn_162'),
-                ('SouthpawFactory_P', 7, 'SouthpawFactory_P.TheWorld:PersistentLevel.WillowAIPawn_163'),
-                ('SouthpawFactory_P', 7, 'SouthpawFactory_P.TheWorld:PersistentLevel.WillowAIPawn_164'),
-                ('SouthpawFactory_P', 7, 'SouthpawFactory_P.TheWorld:PersistentLevel.WillowAIPawn_210'),
-                ('SouthpawFactory_P', 7, 'SouthpawFactory_P.TheWorld:PersistentLevel.WillowAIPawn_211'),
-                ('SouthpawFactory_P', 7, 'SouthpawFactory_P.TheWorld:PersistentLevel.WillowAIPawn_295'),
-                ('Orchid_ShipGraveyard_P', 9, 'Orchid_ShipGraveyard_P.TheWorld:PersistentLevel.WillowAIPawn_199'),
-                ('Orchid_ShipGraveyard_P', 9, 'Orchid_ShipGraveyard_P.TheWorld:PersistentLevel.WillowAIPawn_201'),
-                ('Luckys_P', 7, 'Luckys_P.TheWorld:PersistentLevel.WillowAIPawn_232'),
-                ('Luckys_P', 7, 'Luckys_P.TheWorld:PersistentLevel.WillowAIPawn_233'),
-                ('Luckys_P', 7, 'Luckys_P.TheWorld:PersistentLevel.WillowAIPawn_234'),
-                ('Luckys_P', 7, 'Luckys_P.TheWorld:PersistentLevel.WillowAIPawn_236'),
-                ('Luckys_P', 7, 'Luckys_P.TheWorld:PersistentLevel.WillowAIPawn_238'),
-                ('Luckys_P', 7, 'Luckys_P.TheWorld:PersistentLevel.WillowAIPawn_240'),
-                ('Luckys_P', 7, 'Luckys_P.TheWorld:PersistentLevel.WillowAIPawn_242'),
-                ('Luckys_P', 7, 'Luckys_P.TheWorld:PersistentLevel.WillowAIPawn_244'),
-                ('Luckys_P', 7, 'Luckys_P.TheWorld:PersistentLevel.WillowAIPawn_245'),
-                ('Luckys_P', 7, 'Luckys_P.TheWorld:PersistentLevel.WillowAIPawn_246'),
-                ('Luckys_P', 7, 'Luckys_P.TheWorld:PersistentLevel.WillowAIPawn_11'),
-                ('Luckys_P', 7, 'Luckys_P.TheWorld:PersistentLevel.WillowAIPawn_12'),
-                ('Luckys_P', 7, 'Luckys_P.TheWorld:PersistentLevel.WillowAIPawn_14'),
-                ('Luckys_P', 7, 'Luckys_P.TheWorld:PersistentLevel.WillowAIPawn_17'),
-                ('Luckys_P', 7, 'Luckys_P.TheWorld:PersistentLevel.WillowAIPawn_19'),
-                ('Luckys_P', 7, 'Luckys_P.TheWorld:PersistentLevel.WillowAIPawn_21'),
-                ('Luckys_P', 7, 'Luckys_P.TheWorld:PersistentLevel.WillowAIPawn_23'),
-                ('Luckys_P', 7, 'Luckys_P.TheWorld:PersistentLevel.WillowAIPawn_7'),
-                ('Luckys_P', 7, 'Luckys_P.TheWorld:PersistentLevel.WillowAIPawn_8'),
-                ('Luckys_P', 7, 'Luckys_P.TheWorld:PersistentLevel.WillowAIPawn_9'),
-                ('Luckys_P', 7, 'Luckys_P.TheWorld:PersistentLevel.WillowAIPawn_187'),
-                ('Luckys_P', 7, 'Luckys_P.TheWorld:PersistentLevel.WillowAIPawn_188'),
-                ('Luckys_P', 7, 'Luckys_P.TheWorld:PersistentLevel.WillowAIPawn_189'),
-                ('Luckys_P', 7, 'Luckys_P.TheWorld:PersistentLevel.WillowAIPawn_191'),
-                ('Luckys_P', 7, 'Luckys_P.TheWorld:PersistentLevel.WillowAIPawn_193'),
-                ('Luckys_P', 7, 'Luckys_P.TheWorld:PersistentLevel.WillowAIPawn_195'),
-                ('Luckys_P', 7, 'Luckys_P.TheWorld:PersistentLevel.WillowAIPawn_197'),
-                ('Luckys_P', 7, 'Luckys_P.TheWorld:PersistentLevel.WillowAIPawn_199'),
-                ('Luckys_P', 7, 'Luckys_P.TheWorld:PersistentLevel.WillowAIPawn_200'),
-                ('Luckys_P', 7, 'Luckys_P.TheWorld:PersistentLevel.WillowAIPawn_184'),
-                ('Luckys_P', 7, 'Luckys_P.TheWorld:PersistentLevel.WillowAIPawn_185'),
-                ('Luckys_P', 7, 'Luckys_P.TheWorld:PersistentLevel.WillowAIPawn_182'),
-            ],
-            # All
-            [
-                ('Iris_DL2_Interior_P', 7, 'Iris_DL2_Interior_P.TheWorld:PersistentLevel.WillowAIPawn_106'),
-                ('Iris_DL2_Interior_P', 7, 'Iris_DL2_Interior_P.TheWorld:PersistentLevel.WillowAIPawn_363'),
-                ('Orchid_SaltFlats_P', 9, 'Orchid_SaltFlats_P.TheWorld:PersistentLevel.WillowAIPawn_230'),
-            ],
-            # Launchers
-            [
-            ],
-            # Snipers
-            [
-                ('Orchid_SaltFlats_P', 8, 'Orchid_SaltFlats_P.TheWorld:PersistentLevel.WillowAIPawn_228'),
-                ('Orchid_SaltFlats_P', 8, 'Orchid_SaltFlats_P.TheWorld:PersistentLevel.WillowAIPawn_229'),
-                ('Orchid_ShipGraveyard_P', 8, 'Orchid_ShipGraveyard_P.TheWorld:PersistentLevel.WillowAIPawn_202'),
-            ],
-            # Only Shotguns
-            [
-            ],
-            # Only ARs
-            [
-            ],
-            # Shields
-            [
-                ('dam_p', 9, 'dam_p.TheWorld:PersistentLevel.WillowAIPawn_20'),
-                ('dam_p', 8, 'dam_p.TheWorld:PersistentLevel.WillowAIPawn_22'),
-                ('dam_p', 9, 'dam_p.TheWorld:PersistentLevel.WillowAIPawn_23'),
-                ('damtop_p', 9, 'damtop_p.TheWorld:PersistentLevel.WillowAIPawn_17'),
-                ('damtop_p', 8, 'damtop_p.TheWorld:PersistentLevel.WillowAIPawn_18'),
-                ('damtop_p', 9, 'damtop_p.TheWorld:PersistentLevel.WillowAIPawn_19'),
-                ('Fridge_P', 9, 'Fridge_P.TheWorld:PersistentLevel.WillowAIPawn_178'),
-                ('Fridge_P', 9, 'Fridge_P.TheWorld:PersistentLevel.WillowAIPawn_179'),
-                ('Fridge_P', 9, 'Fridge_P.TheWorld:PersistentLevel.WillowAIPawn_180'),
-                ('Fridge_P', 9, 'Fridge_P.TheWorld:PersistentLevel.WillowAIPawn_182'),
-                ('Fridge_P', 8, 'Fridge_P.TheWorld:PersistentLevel.WillowAIPawn_227'),
-                ('Fridge_P', 9, 'Fridge_P.TheWorld:PersistentLevel.WillowAIPawn_229'),
-                ('Grass_Cliffs_P', 9, 'Grass_Cliffs_P.TheWorld:PersistentLevel.WillowAIPawn_208'),
-                ('Grass_Cliffs_P', 9, 'Grass_Cliffs_P.TheWorld:PersistentLevel.WillowAIPawn_253'),
-                ('Grass_Cliffs_P', 9, 'Grass_Cliffs_P.TheWorld:PersistentLevel.WillowAIPawn_254'),
-                ('icecanyon_p', 8, 'icecanyon_p.TheWorld:PersistentLevel.WillowAIPawn_71'),
-                ('icecanyon_p', 9, 'icecanyon_p.TheWorld:PersistentLevel.WillowAIPawn_72'),
-                ('Interlude_P', 9, 'Interlude_P.TheWorld:PersistentLevel.WillowAIPawn_12'),
-                ('Iris_DL2_Interior_P', 8, 'Iris_DL2_Interior_P.TheWorld:PersistentLevel.WillowAIPawn_104'),
-                ('Iris_DL2_Interior_P', 9, 'Iris_DL2_Interior_P.TheWorld:PersistentLevel.WillowAIPawn_106'),
-                ('Iris_DL2_Interior_P', 8, 'Iris_DL2_Interior_P.TheWorld:PersistentLevel.WillowAIPawn_107'),
-                ('Iris_DL2_Interior_P', 8, 'Iris_DL2_Interior_P.TheWorld:PersistentLevel.WillowAIPawn_110'),
-                ('Iris_DL2_Interior_P', 9, 'Iris_DL2_Interior_P.TheWorld:PersistentLevel.WillowAIPawn_363'),
-                ('Iris_DL2_Interior_P', 8, 'Iris_DL2_Interior_P.TheWorld:PersistentLevel.WillowAIPawn_364'),
-                ('Luckys_P', 10, 'Luckys_P.TheWorld:PersistentLevel.WillowAIPawn_11'),
-                ('Luckys_P', 10, 'Luckys_P.TheWorld:PersistentLevel.WillowAIPawn_12'),
-                ('Luckys_P', 10, 'Luckys_P.TheWorld:PersistentLevel.WillowAIPawn_14'),
-                ('Luckys_P', 10, 'Luckys_P.TheWorld:PersistentLevel.WillowAIPawn_17'),
-                ('Luckys_P', 10, 'Luckys_P.TheWorld:PersistentLevel.WillowAIPawn_182'),
-                ('Luckys_P', 10, 'Luckys_P.TheWorld:PersistentLevel.WillowAIPawn_184'),
-                ('Luckys_P', 10, 'Luckys_P.TheWorld:PersistentLevel.WillowAIPawn_185'),
-                ('Luckys_P', 10, 'Luckys_P.TheWorld:PersistentLevel.WillowAIPawn_187'),
-                ('Luckys_P', 10, 'Luckys_P.TheWorld:PersistentLevel.WillowAIPawn_188'),
-                ('Luckys_P', 10, 'Luckys_P.TheWorld:PersistentLevel.WillowAIPawn_189'),
-                ('Luckys_P', 10, 'Luckys_P.TheWorld:PersistentLevel.WillowAIPawn_19'),
-                ('Luckys_P', 10, 'Luckys_P.TheWorld:PersistentLevel.WillowAIPawn_191'),
-                ('Luckys_P', 10, 'Luckys_P.TheWorld:PersistentLevel.WillowAIPawn_193'),
-                ('Luckys_P', 10, 'Luckys_P.TheWorld:PersistentLevel.WillowAIPawn_195'),
-                ('Luckys_P', 10, 'Luckys_P.TheWorld:PersistentLevel.WillowAIPawn_197'),
-                ('Luckys_P', 10, 'Luckys_P.TheWorld:PersistentLevel.WillowAIPawn_199'),
-                ('Luckys_P', 10, 'Luckys_P.TheWorld:PersistentLevel.WillowAIPawn_200'),
-                ('Luckys_P', 10, 'Luckys_P.TheWorld:PersistentLevel.WillowAIPawn_21'),
-                ('Luckys_P', 10, 'Luckys_P.TheWorld:PersistentLevel.WillowAIPawn_23'),
-                ('Luckys_P', 10, 'Luckys_P.TheWorld:PersistentLevel.WillowAIPawn_232'),
-                ('Luckys_P', 10, 'Luckys_P.TheWorld:PersistentLevel.WillowAIPawn_233'),
-                ('Luckys_P', 10, 'Luckys_P.TheWorld:PersistentLevel.WillowAIPawn_234'),
-                ('Luckys_P', 10, 'Luckys_P.TheWorld:PersistentLevel.WillowAIPawn_236'),
-                ('Luckys_P', 10, 'Luckys_P.TheWorld:PersistentLevel.WillowAIPawn_238'),
-                ('Luckys_P', 10, 'Luckys_P.TheWorld:PersistentLevel.WillowAIPawn_240'),
-                ('Luckys_P', 10, 'Luckys_P.TheWorld:PersistentLevel.WillowAIPawn_242'),
-                ('Luckys_P', 10, 'Luckys_P.TheWorld:PersistentLevel.WillowAIPawn_244'),
-                ('Luckys_P', 10, 'Luckys_P.TheWorld:PersistentLevel.WillowAIPawn_245'),
-                ('Luckys_P', 10, 'Luckys_P.TheWorld:PersistentLevel.WillowAIPawn_246'),
-                ('Luckys_P', 10, 'Luckys_P.TheWorld:PersistentLevel.WillowAIPawn_7'),
-                ('Luckys_P', 10, 'Luckys_P.TheWorld:PersistentLevel.WillowAIPawn_8'),
-                ('Luckys_P', 10, 'Luckys_P.TheWorld:PersistentLevel.WillowAIPawn_9'),
-                ('Orchid_SaltFlats_P', 9, 'Orchid_SaltFlats_P.TheWorld:PersistentLevel.WillowAIPawn_228'),
-                ('Orchid_SaltFlats_P', 9, 'Orchid_SaltFlats_P.TheWorld:PersistentLevel.WillowAIPawn_229'),
-                ('Orchid_SaltFlats_P', 8, 'Orchid_SaltFlats_P.TheWorld:PersistentLevel.WillowAIPawn_230'),
-                ('Orchid_SaltFlats_P', 8, 'Orchid_SaltFlats_P.TheWorld:PersistentLevel.WillowAIPawn_231'),
-                ('Orchid_SaltFlats_P', 8, 'Orchid_SaltFlats_P.TheWorld:PersistentLevel.WillowAIPawn_277'),
-                ('Orchid_ShipGraveyard_P', 8, 'Orchid_ShipGraveyard_P.TheWorld:PersistentLevel.WillowAIPawn_199'),
-                ('Orchid_ShipGraveyard_P', 8, 'Orchid_ShipGraveyard_P.TheWorld:PersistentLevel.WillowAIPawn_201'),
-                ('Orchid_ShipGraveyard_P', 9, 'Orchid_ShipGraveyard_P.TheWorld:PersistentLevel.WillowAIPawn_202'),
-                ('Orchid_ShipGraveyard_P', 9, 'Orchid_ShipGraveyard_P.TheWorld:PersistentLevel.WillowAIPawn_203'),
-                ('SouthpawFactory_P', 9, 'SouthpawFactory_P.TheWorld:PersistentLevel.WillowAIPawn_161'),
-                ('SouthpawFactory_P', 9, 'SouthpawFactory_P.TheWorld:PersistentLevel.WillowAIPawn_162'),
-                ('SouthpawFactory_P', 9, 'SouthpawFactory_P.TheWorld:PersistentLevel.WillowAIPawn_163'),
-                ('SouthpawFactory_P', 9, 'SouthpawFactory_P.TheWorld:PersistentLevel.WillowAIPawn_164'),
-                ('SouthpawFactory_P', 9, 'SouthpawFactory_P.TheWorld:PersistentLevel.WillowAIPawn_210'),
-                ('SouthpawFactory_P', 9, 'SouthpawFactory_P.TheWorld:PersistentLevel.WillowAIPawn_211'),
-                ('SouthpawFactory_P', 9, 'SouthpawFactory_P.TheWorld:PersistentLevel.WillowAIPawn_295'),
-                ('TundraTrain_P', 12, 'TundraTrain_P.TheWorld:PersistentLevel.WillowAIPawn_40'),
-                ('TundraTrain_P', 12, 'TundraTrain_P.TheWorld:PersistentLevel.WillowAIPawn_41'),
-                ('icecanyon_p', 9, 'icecanyon_p.TheWorld:PersistentLevel.WillowAIPawn_69'),
-                ('icecanyon_p', 9, 'icecanyon_p.TheWorld:PersistentLevel.WillowAIPawn_70'),
-            ],
-            # Shields (but without Turtle shields)
-            [
             ],
         )
 
@@ -1072,16 +899,16 @@ class Badass(DropConfig):
             'common': 0,
             'uncommon': 0,
             'rare': 35,
-            'veryrare': 60,
-            'alien': 55,
+            'veryrare': 87.5,
+            'alien': 27.5,
             'legendary': 10,
             },
         'better': {
             'common': 0,
             'uncommon': 25,
             'rare': 49,
-            'veryrare': 15,
-            'alien': 10,
+            'veryrare': 20,
+            'alien': 5,
             'legendary': 1,
             },
         # There's really not such a thing as a "stock" badass pool we could
@@ -1090,8 +917,8 @@ class Badass(DropConfig):
             'common': 0,
             'uncommon': 40,
             'rare': 30,
-            'veryrare': 8,
-            'alien': 3,
+            'veryrare': 9.5,
+            'alien': 1.5,
             'legendary': 0.25,
             },
         }
@@ -1162,6 +989,7 @@ class Badass(DropConfig):
                 (0, 'GD_Population_Sheriff.Balance.PawnBalance_Marshal'),
                 (0, 'GD_MarauderBadass_Digi.Population.PawnBalance_MarauderBadass_Digi'),
                 (1, 'GD_ButcherBoss2.Balance.PawnBalance_ButcherBoss2'),
+                (0, 'GD_Anemone_Population_Loader.Balance.PawnBalance_LoaderBadass'),
             ],
             # Pistols
             [
@@ -1214,7 +1042,7 @@ class Badass(DropConfig):
             [
                 (0, 'GD_Population_Engineer.Balance.Unique.PawnBalance_Leprechaun'),
             ],
-            # Only ARs
+            # Only ARs - NOTE!  No actual pool is defined for this for badasses
             [
             ],
             # Shields
@@ -1289,7 +1117,7 @@ class Badass(DropConfig):
                 (0, 'GD_Population_Loader.Balance.Unique.PawnBalance_Willhelm'),
                 (0, 'GD_Sage_Raid_BeastMaster.Population.Balance_Sage_Raid_BeastMaster'),
             ],
-            # Shields (but without Turtle shields)
+            # Shields (but without Turtle shields) - NOTE!  No actual pool is defined for this for badasses
             [
             ],
         )
@@ -1331,6 +1159,8 @@ class Badass(DropConfig):
                 (0, 0, 'GD_ZafordBadass.Balance.PawnBalance_ZafordBadass'),
                 (1, 0, 'GD_ZafordBadass.Balance.PawnBalance_ZafordBadass'),
                 (2, 0, 'GD_ZafordBadass.Balance.PawnBalance_ZafordBadass'),
+                (1, 0, 'GD_Anemone_Pop_Bandits.Balance.PawnBalance_MarauderBadass_Leader'),
+                (1, 0, 'GD_Anemone_Pop_Bandits.Balance.PawnBalance_NomadBadass_Leader'),
             ],
             # Pistols
             [
@@ -1359,8 +1189,10 @@ class Badass(DropConfig):
             ],
             # Only Shotguns
             [
+                (0, 0, 'GD_Anemone_Pop_Infected.Balance.PawnBalance_Infected_BadassBruiser'),
+                (1, 0, 'GD_Anemone_Pop_Infected.Balance.PawnBalance_Infected_BadassBruiser'),
             ],
-            # Only ARs
+            # Only ARs - NOTE!  No actual pool is defined for this for badasses
             [
             ],
             # Shields
@@ -1419,58 +1251,24 @@ class Badass(DropConfig):
                 (0, 1, 'GD_RaiderMale.Balance.PawnBalance_RaiderMale'),
                 (0, 1, 'GD_Sage_Pop_DrNakayama.Balance.PawnBalance_Sage_DrNakayama'), # again, let's give him all the help we can
                 (0, 0, 'GD_SandMale.Balance.PawnBalance_SandMale'),
+                (0, 1, 'GD_Anemone_Pop_NP.Balance.PawnBalance_NP_BadassSniper'),
+                (1, 1, 'GD_Anemone_Pop_NP.Balance.PawnBalance_NP_BadassSniper'),
+                (0, 1, 'GD_Anemone_Pop_NP.Balance.PawnBalance_NP_Lt_Hoffman'),
+                (1, 0, 'GD_Anemone_Pop_NP.Balance.PawnBalance_NP_Lt_Hoffman'),
+                (0, 1, 'GD_Anemone_Pop_Bandits.Balance.PawnBalance_NomadBadass_Leader'),
+                (1, 1, 'GD_Anemone_Pop_Bandits.Balance.PawnBalance_NomadBadass_Leader'),
+                (0, 1, 'GD_Anemone_Pop_Bandits.Balance.PawnBalance_MarauderBadass_Leader'),
+                (1, 1, 'GD_Anemone_Pop_Bandits.Balance.PawnBalance_MarauderBadass_Leader'),
+                (0, 1, 'GD_Anemone_Pop_NP.Balance.PawnBalance_NP_Commander'),
+                (1, 1, 'GD_Anemone_Pop_NP.Balance.PawnBalance_NP_Commander'),
+                (0, 1, 'GD_Anemone_Pop_NP.Balance.PawnBalance_NP_Commander_NOGunDrop'),
+                (1, 1, 'GD_Anemone_Pop_NP.Balance.PawnBalance_NP_Commander_NOGunDrop'),
+                (0, 1, 'GD_Anemone_Pop_NP.Balance.PawnBalance_NP_Lt_Angvar'),
+                (1, 1, 'GD_Anemone_Pop_NP.Balance.PawnBalance_NP_Lt_Angvar'),
+                (0, 1, 'GD_Anemone_Pop_NP.Balance.PawnBalance_NP_Lt_Tetra'),
+                (1, 1, 'GD_Anemone_Pop_NP.Balance.PawnBalance_NP_Lt_Tetra'),
             ],
-            # Shields (but without Turtle shields)
-            [
-            ],
-        )
-
-    enemy_level_ipl = (
-            # ARs
-            [
-                ('Ash_P', 8, 'Ash_P.TheWorld:PersistentLevel.WillowAIPawn_3'),
-                ('Ash_P', 8, 'Ash_P.TheWorld:PersistentLevel.WillowAIPawn_47'),
-                ('Damtop_P', 12, 'damtop_p.TheWorld:PersistentLevel.WillowAIPawn_20'),
-                ('Grass_Lynchwood_P', 8, 'Grass_Lynchwood_P.TheWorld:PersistentLevel.WillowAIPawn_0'),
-                ('Grass_Lynchwood_P', 8, 'Grass_Lynchwood_P.TheWorld:PersistentLevel.WillowAIPawn_2'),
-                ('Grass_Lynchwood_P', 8, 'Grass_Lynchwood_P.TheWorld:PersistentLevel.WillowAIPawn_86'),
-                ('Grass_Lynchwood_P', 8, 'Grass_Lynchwood_P.TheWorld:PersistentLevel.WillowAIPawn_87'),
-                ('Grass_Lynchwood_P', 8, 'Grass_Lynchwood_P.TheWorld:PersistentLevel.WillowAIPawn_89'),
-                ('Grass_Lynchwood_P', 8, 'Grass_Lynchwood_P.TheWorld:PersistentLevel.WillowAIPawn_90'),
-                ('icecanyon_p', 8, 'icecanyon_p.TheWorld:PersistentLevel.WillowAIPawn_69'),
-                ('icecanyon_p', 8, 'icecanyon_p.TheWorld:PersistentLevel.WillowAIPawn_70'),
-            ],
-            # Pistols
-            [
-            ],
-            # Shotguns
-            [
-                ('Grass_Lynchwood_P', 8, 'Grass_Lynchwood_P.TheWorld:PersistentLevel.WillowAIPawn_91'),
-            ],
-            # SMGs
-            [
-            ],
-            # All
-            [
-            ],
-            # Launchers
-            [
-            ],
-            # Snipers
-            [
-            ],
-            # Only Shotguns
-            [
-            ],
-            # Only ARs
-            [
-            ],
-            # Shields
-            [
-                ('damtop_p', 13, 'damtop_p.TheWorld:PersistentLevel.WillowAIPawn_20'),
-                ('Fridge_P', 12, 'Fridge_P.TheWorld:PersistentLevel.WillowAIPawn_228'),
-            ],
-            # Shields (but without Turtle shields)
+            # Shields (but without Turtle shields) - NOTE!  No actual pool is defined for this for badasses
             [
             ],
         )
@@ -1500,13 +1298,13 @@ class Badass(DropConfig):
             # Only Shotguns
             [
             ],
-            # Only ARs
+            # Only ARs - NOTE!  No actual pool is defined for this for badasses
             [
             ],
             # Shields
             [
             ],
-            # Shields (but without Turtle shields)
+            # Shields (but without Turtle shields) - NOTE!  No actual pool is defined for this for badasses
             [
             ],
         )
@@ -1546,13 +1344,13 @@ class Badass(DropConfig):
             # Only Shotguns
             [
             ],
-            # Only ARs
+            # Only ARs - NOTE!  No actual pool is defined for this for badasses
             [
             ],
             # Shields
             [
             ],
-            # Shields (but without Turtle shields)
+            # Shields (but without Turtle shields) - NOTE!  No actual pool is defined for this for badasses
             [
             ],
         )
@@ -1729,7 +1527,8 @@ def set_generic_item_prob(hotfix_name, classname, attribute,
         )
 
 def set_bi_item_pool(hotfix_name, classname, index, item,
-        level=None, prob=None, invbalance=None):
+        level=None, prob=None, invbalance=None,
+        scale=1):
     """
     Sets an entire BalancedItem structure
     """
@@ -1753,10 +1552,10 @@ def set_bi_item_pool(hotfix_name, classname, index, item,
                     BaseValueConstant={},
                     BaseValueAttribute=None,
                     InitializationDefinition=None,
-                    BaseValueScaleConstant=1
+                    BaseValueScaleConstant={}
                 ),
                 bDropOnDeath=True
-            )""".format(level, classname, index, itmpool, invbal, prob)
+            )""".format(level, classname, index, itmpool, invbal, prob, scale)
         )
 
 def set_bi_item_prob(hotfix_name, classname, index, level=None,
@@ -1850,7 +1649,7 @@ def set_dl_ia_item_pool(hotfix_name, classname, pool, ld_index, ia_index,
     set_ld_ia_item_pool(hotfix_name, classname, pool, ld_index, ia_index,
         point=point, level=level, main_attr='DefaultLoot')
 
-def setup_boss_pool(hotfix_id, level, pool, default_gear, unique_gear):
+def setup_boss_pool(hotfix_id, level, pool, default_gear, unique_gear, drop_default=True):
     """
     Sets up our specified `pool` using the given `hotfix_id`, active in the
     level `level`.  The "default" ItemPool which the boss ordinarily draws from
@@ -1867,9 +1666,9 @@ def setup_boss_pool(hotfix_id, level, pool, default_gear, unique_gear):
     bal_items_tuples = []
     for (unique, pct, baldef) in unique_gear:
         total_unique += pct
-        bal_items_tuples.append((unique, round(pct, 6), baldef))
+        bal_items_tuples.append((unique, round(pct, 6), baldef, 1, True))
     if default_gear and total_unique < 1:
-        bal_items_tuples.append((default_gear, round(1 - total_unique, 6), None))
+        bal_items_tuples.append((default_gear, round(1 - total_unique, 6), None, 1, drop_default))
     mp.register_str(hotfix_id,
         'level {} set {} BalancedItems {}'.format(
             level,
@@ -2018,8 +1817,8 @@ for (rarity_key, rarity_label) in DropConfig.rarity_presets:
                 ('GD_Itempools.WeaponPools.Pool_Weapons_Pistols_04_Rare', config.weight_rare, None, 1, False),
                 ('GD_Itempools.WeaponPools.Pool_Weapons_Pistols_05_VeryRare', config.weight_veryrare, None, 1, True),
                 ('GD_Itempools.WeaponPools.Pool_Weapons_Pistols_05_VeryRare', config.weight_veryrare, None, 1, False),
-                ('GD_Itempools.WeaponPools.Pool_Weapons_Pistols_05_VeryRare_Alien', config.weight_alien, None, 1, True),
-                ('GD_Itempools.WeaponPools.Pool_Weapons_Pistols_05_VeryRare_Alien', config.weight_alien, None, 1, False),
+                ('GD_Itempools.WeaponPools.Pool_Weapons_Pistols_05_VeryRare_Alien', config.weight_alien * config.alien_pistol_scale, None, 1, True),
+                ('GD_Itempools.WeaponPools.Pool_Weapons_Pistols_05_VeryRare_Alien', config.weight_alien * config.alien_pistol_scale, None, 1, False),
                 ('GD_Itempools.WeaponPools.Pool_Weapons_Pistols_06_Legendary', config.weight_legendary, None, 1, True),
                 ('GD_Itempools.WeaponPools.Pool_Weapons_Pistols_06_Legendary', config.weight_legendary, None, 1, False),
             ])
@@ -2259,8 +2058,8 @@ for (rarity_key, rarity_label) in DropConfig.rarity_presets:
                 ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_AngelGang_Pistols_04_Rare', regular.weight_rare, None, 1, False),
                 ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_AngelGang_Pistols_05_VeryRare', regular.weight_veryrare, None, 1, True),
                 ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_AngelGang_Pistols_05_VeryRare', regular.weight_veryrare, None, 1, False),
-                ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_AngelGang_Pistols_05_VeryRare_Alien', regular.weight_alien, None, 1, True),
-                ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_AngelGang_Pistols_05_VeryRare_Alien', regular.weight_alien, None, 1, False),
+                ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_AngelGang_Pistols_05_VeryRare_Alien', regular.weight_alien * config.alien_pistol_scale, None, 1, True),
+                ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_AngelGang_Pistols_05_VeryRare_Alien', regular.weight_alien * config.alien_pistol_scale, None, 1, False),
                 ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_AngelGang_Pistols_06_Legendary', regular.weight_legendary, None, 1, True),
                 ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_AngelGang_Pistols_06_Legendary', regular.weight_legendary, None, 1, False),
             ])))
@@ -2327,8 +2126,8 @@ for (rarity_key, rarity_label) in DropConfig.rarity_presets:
                 ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_DragonGang_Pistols_04_Rare', regular.weight_rare, None, 1, False),
                 ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_DragonGang_Pistols_05_VeryRare', regular.weight_veryrare, None, 1, True),
                 ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_DragonGang_Pistols_05_VeryRare', regular.weight_veryrare, None, 1, False),
-                ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_DragonGang_Pistols_05_VeryRare_Alien', regular.weight_alien, None, 1, True),
-                ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_DragonGang_Pistols_05_VeryRare_Alien', regular.weight_alien, None, 1, False),
+                ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_DragonGang_Pistols_05_VeryRare_Alien', regular.weight_alien * config.alien_pistol_scale, None, 1, True),
+                ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_DragonGang_Pistols_05_VeryRare_Alien', regular.weight_alien * config.alien_pistol_scale, None, 1, False),
                 ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_DragonGang_Pistols_06_Legendary', regular.weight_legendary, None, 1, True),
                 ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_DragonGang_Pistols_06_Legendary', regular.weight_legendary, None, 1, False),
             ])))
@@ -2378,8 +2177,8 @@ for (rarity_key, rarity_label) in DropConfig.rarity_presets:
                 ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_TorgueGang_Pistols_04_Rare', regular.weight_rare, None, 1, False),
                 ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_TorgueGang_Pistols_05_VeryRare', regular.weight_veryrare, None, 1, True),
                 ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_TorgueGang_Pistols_05_VeryRare', regular.weight_veryrare, None, 1, False),
-                ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_TorgueGang_Pistols_05_VeryRare_Alien', regular.weight_alien, None, 1, True),
-                ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_TorgueGang_Pistols_05_VeryRare_Alien', regular.weight_alien, None, 1, False),
+                ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_TorgueGang_Pistols_05_VeryRare_Alien', regular.weight_alien * config.alien_pistol_scale, None, 1, True),
+                ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_TorgueGang_Pistols_05_VeryRare_Alien', regular.weight_alien * config.alien_pistol_scale, None, 1, False),
                 ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_TorgueGang_Pistols_06_Legendary', regular.weight_legendary, None, 1, True),
                 ('GD_Iris_ItemPools.WeaponPools.Pool_Weapons_TorgueGang_Pistols_06_Legendary', regular.weight_legendary, None, 1, False),
             ])))
@@ -2719,7 +2518,8 @@ for (label, prob) in [
 unique_hotfixes = []
 pearl_hotfixes = []
 seraph_hotfixes = []
-for (guntype, legendaries, uniques, pearls, seraphs) in [
+eff_hotfixes = []
+for (guntype, legendaries, uniques, pearls, seraphs, effs) in [
         (
             'AssaultRifles',
             [
@@ -2729,10 +2529,11 @@ for (guntype, legendaries, uniques, pearls, seraphs) in [
                 'GD_Weap_AssaultRifle.A_Weapons_Legendary.AR_Jakobs_5_HammerBuster',
                 'GD_Weap_AssaultRifle.A_Weapons_Legendary.AR_Torgue_5_KerBlaster',
                 'GD_Weap_AssaultRifle.A_Weapons_Legendary.AR_Vladof_5_Sherdifier',
+                'GD_Aster_Weapons.AssaultRifles.AR_Bandit_3_Ogre',
+                'GD_Anemone_Weapons.AssaultRifle.Brothers.AR_Jakobs_5_Brothers',
             ],
             [
                 # Uniques
-                'GD_Aster_Weapons.AssaultRifles.AR_Bandit_3_Ogre',
                 'GD_Iris_Weapons.AssaultRifles.AR_Torgue_3_BoomPuppy',
                 'GD_Iris_Weapons.AssaultRifles.AR_Vladof_3_Kitten',
                 'GD_Orchid_BossWeapons.AssaultRifle.AR_Jakobs_3_Stinkpot',
@@ -2755,6 +2556,11 @@ for (guntype, legendaries, uniques, pearls, seraphs) in [
                 'GD_Aster_RaidWeapons.AssaultRifles.Aster_Seraph_Seeker_Balance',
                 'GD_Orchid_RaidWeapons.AssaultRifle.Seraphim.Orchid_Seraph_Seraphim_Balance',
                 'GD_Sage_RaidWeapons.AssaultRifle.Sage_Seraph_LeadStorm_Balance',
+            ],
+            [
+                # Effervescents
+                'GD_Anemone_Weapons.AssaultRifle.AR_Dahl_6_Toothpick',
+                'GD_Anemone_Weapons.AssaultRifle.PeakOpener.AR_Torgue_5_PeakOpener',
             ],
         ),
         (
@@ -2783,6 +2589,10 @@ for (guntype, legendaries, uniques, pearls, seraphs) in [
                 # Seraphs
                 'GD_Orchid_RaidWeapons.RPG.Ahab.Orchid_Seraph_Ahab_Balance',
             ],
+            [
+                # Effervescents
+                'GD_Anemone_Weapons.Rocket_Launcher.WorldBurn.RL_Torgue_5_WorldBurn',
+            ],
         ),
         (
             'Pistols',
@@ -2796,6 +2606,8 @@ for (guntype, legendaries, uniques, pearls, seraphs) in [
                 'GD_Weap_Pistol.A_Weapons_Legendary.Pistol_Maliwan_5_ThunderballFists',
                 'GD_Weap_Pistol.A_Weapons_Legendary.Pistol_Jakobs_5_Maggie',
                 'GD_Weap_Pistol.A_Weapons_Legendary.Pistol_Hyperion_5_LogansGun',
+                'GD_Anemone_Weapons.A_Weapons_Legendary.Pistol_Dahl_5_Hector_Hornet',
+                'GD_Anemone_Weapons.A_Weapons_Legendary.Pistol_Vladof_5_Infinity_DD',
             ],
             [
                 # Uniques
@@ -2827,6 +2639,9 @@ for (guntype, legendaries, uniques, pearls, seraphs) in [
                 'GD_Sage_RaidWeapons.Pistol.Sage_Seraph_Infection_Balance',
                 'GD_Aster_RaidWeapons.Pistols.Aster_Seraph_Stinger_Balance',
             ],
+            [
+                # Effervescents
+            ],
         ),
         (
             'Shotguns',
@@ -2837,6 +2652,7 @@ for (guntype, legendaries, uniques, pearls, seraphs) in [
                 'GD_Weap_Shotgun.A_Weapons_Legendary.SG_Torgue_5_Flakker',
                 'GD_Weap_Shotgun.A_Weapons_Legendary.SG_Jakobs_5_Striker',
                 'GD_Weap_Shotgun.A_Weapons_Legendary.SG_Hyperion_5_ConferenceCall',
+                'GD_Anemone_Weapons.Shotgun.Overcompensator.SG_Hyperion_6_Overcompensator',
             ],
             [
                 # Uniques
@@ -2867,6 +2683,10 @@ for (guntype, legendaries, uniques, pearls, seraphs) in [
                 'GD_Orchid_RaidWeapons.Shotgun.Spitter.Orchid_Seraph_Spitter_Balance',
                 'GD_Sage_RaidWeapons.Shotgun.Sage_Seraph_Interfacer_Balance',
                 'GD_Aster_RaidWeapons.Shotguns.Aster_Seraph_Omen_Balance',
+            ],
+            [
+                # Effervescents
+                'GD_Anemone_Weapons.Shotguns.SG_Torgue_3_SwordSplosion_Unico',
             ],
         ),
         (
@@ -2903,6 +2723,11 @@ for (guntype, legendaries, uniques, pearls, seraphs) in [
                 'GD_Orchid_RaidWeapons.SMG.Actualizer.Orchid_Seraph_Actualizer_Balance',
                 'GD_Aster_RaidWeapons.SMGs.Aster_Seraph_Florentine_Balance',
             ],
+            [
+                # Effervescents
+                'GD_Anemone_Weapons.A_Weapons_Legendary.SMG_Maliwan_5_HellFire',
+                'GD_Anemone_Weapons.SMG.SMG_Tediore_6_Infection_Cleaner',
+            ],
         ),
         (
             'SniperRifles',
@@ -2913,6 +2738,7 @@ for (guntype, legendaries, uniques, pearls, seraphs) in [
                 'GD_Weap_SniperRifles.A_Weapons_Legendary.Sniper_Maliwan_5_Volcano',
                 'GD_Weap_SniperRifles.A_Weapons_Legendary.Sniper_Jakobs_5_Skullmasher',
                 'GD_Weap_SniperRifles.A_Weapons_Legendary.Sniper_Hyperion_5_Invader',
+                'GD_Anemone_Weapons.A_Weapons_Unique.Sniper_Jakobs_3_Morde_Lt',
             ],
             [
                 # Uniques
@@ -2937,6 +2763,10 @@ for (guntype, legendaries, uniques, pearls, seraphs) in [
                 'GD_Orchid_RaidWeapons.sniper.Patriot.Orchid_Seraph_Patriot_Balance',
                 'GD_Sage_RaidWeapons.sniper.Sage_Seraph_HawkEye_Balance',
             ],
+            [
+                # Effervescents
+                'GD_Anemone_Weapons.sniper.Sniper_Jakobs_6_Chaude_Mama',
+            ],
         ),
         ]:
 
@@ -2944,7 +2774,7 @@ for (guntype, legendaries, uniques, pearls, seraphs) in [
     initial_pool = []
     for legendary in legendaries:
         initial_pool.append((legendary, 1, 'WeaponBalanceDefinition'))
-    for i in range(len(uniques) + len(pearls) + len(seraphs)):
+    for i in range(len(uniques) + len(pearls) + len(seraphs) + len(effs)):
         initial_pool.append((None, 0))
     mp.register_str('weapon_pool_clear_{}'.format(guntype.lower()),
         'level None set GD_Itempools.WeaponPools.Pool_Weapons_{}_06_Legendary BalancedItems {}'.format(
@@ -3015,6 +2845,27 @@ for (guntype, legendaries, uniques, pearls, seraphs) in [
                 seraph
                 ))
 
+    # Hotfixes to add effervescents
+    for (idx, eff) in enumerate(effs):
+        eff_hotfixes.append(
+            """level None set GD_Itempools.WeaponPools.Pool_Weapons_{}_06_Legendary BalancedItems[{}]
+            (
+                ItmPoolDefinition=None,
+                InvBalanceDefinition=WeaponBalanceDefinition'{}',
+                Probability=(
+                    BaseValueConstant=1,
+                    BaseValueAttribute=None,
+                    InitializationDefinition=None,
+                    BaseValueScaleConstant=1
+                ),
+                bDropOnDeath=True
+            )
+            """.format(
+                guntype,
+                len(legendaries) + len(uniques) + len(pearls) + len(seraphs) + idx,
+                eff
+                ))
+
 other.legendary_unique_adds = "\n\n".join(
         ['{}{}'.format(' '*(4*3), hotfix) for hotfix in unique_hotfixes]
     )
@@ -3027,47 +2878,87 @@ other.legendary_seraph_adds = "\n\n".join(
         ['{}{}'.format(' '*(4*3), hotfix) for hotfix in seraph_hotfixes]
     )
 
+other.legendary_eff_adds = "\n\n".join(
+        ['{}{}'.format(' '*(4*3), hotfix) for hotfix in eff_hotfixes]
+    )
+
 # Legendary shield pool configuration.  Doing this a bit differently since there's
 # not nearly as many shields to handle as weapons.
 
 shields = {
     'GD_Itempools.ShieldPools.Pool_Shields_Absorption_06_Legendary': [
-        ('1340', 2, 'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Absorption_1340'),
-        ('equitas', 3, 'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Absorption_Equitas'),
-        ('sponge', 4, 'GD_Iris_SeraphItems.Sponge.Iris_Seraph_Shield_Sponge_Balance'),
+        ('1340', 2, 'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Absorption_1340', 1),
+        ('equitas', 3, 'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Absorption_Equitas', 1),
+        ('sponge', 4, 'GD_Iris_SeraphItems.Sponge.Iris_Seraph_Shield_Sponge_Balance', 1),
         ],
     'GD_Itempools.ShieldPools.Pool_Shields_Booster_06_Legendary': [
-        ('potogold', 1, 'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Booster_PotOGold'),
-        ('bigboomblaster', 2, 'GD_Iris_SeraphItems.BigBoomBlaster.Iris_Seraph_Shield_Booster_Balance'),
+        ('potogold', 1, 'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Booster_PotOGold', 1),
+        ('bigboomblaster', 2, 'GD_Iris_SeraphItems.BigBoomBlaster.Iris_Seraph_Shield_Booster_Balance', 1),
         ],
     'GD_Itempools.ShieldPools.Pool_Shields_Chimera_06_Legendary': [
-        ('evolution', 1, 'GD_Orchid_RaidWeapons.Shield.Anshin.Orchid_Seraph_Anshin_Shield_Balance')
+        ('evolution', 1, 'GD_Orchid_RaidWeapons.Shield.Anshin.Orchid_Seraph_Anshin_Shield_Balance', 1)
         ],
     'GD_Itempools.ShieldPools.Pool_Shields_Juggernaut_06_Legendary': [
-        ('hoplite', 1, 'GD_Iris_SeraphItems.Hoplite.Iris_Seraph_Shield_Juggernaut_Balance'),
+        ('hoplite', 1, 'GD_Iris_SeraphItems.Hoplite.Iris_Seraph_Shield_Juggernaut_Balance', 1),
         ],
     'GD_Itempools.ShieldPools.Pool_Shields_NovaShields_Explosive_06_Legendary': [
-        ('deadlybloom', 0, 'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Nova_Explosive_DeadlyBloom'),
+        ('deadlybloom', 0, 'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Nova_Explosive_DeadlyBloom', 1),
         ],
     'GD_Itempools.ShieldPools.Pool_Shields_Roid_06_Legendary': [
-        ('order', 1, 'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Roid_Order'),
-        ('lovethumper', 2, 'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Roid_04_LoveThumper'),
-        ('punchee', 3, 'GD_Iris_SeraphItems.Pun-chee.Iris_Seraph_Shield_Pun-chee_Balance'),
+        ('order', 1, 'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Roid_Order', 1),
+        ('lovethumper', 2, 'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Roid_04_LoveThumper', 1),
+        ('punchee', 3, 'GD_Iris_SeraphItems.Pun-chee.Iris_Seraph_Shield_Pun-chee_Balance', 1),
         ],
     'GD_Itempools.ShieldPools.Pool_Shields_Standard_06_Legendary': [
-        ('manlyman', 1, 'GD_Orchid_Shields.A_Item_Custom.S_BladeShield'),
-        ('roughrider', 2, 'GD_Sage_Shields.A_Item_Custom.S_BucklerShield'),
-        ('antagonist', 3, 'GD_Aster_ItemGrades.Shields.Aster_Seraph_Antagonist_Shield_Balance'),
-        ('blockade', 4, 'GD_Aster_ItemGrades.Shields.Aster_Seraph_Blockade_Shield_Balance'),
+        ('manlyman', 1, 'GD_Orchid_Shields.A_Item_Custom.S_BladeShield', 1),
+        ('roughrider', 2, 'GD_Sage_Shields.A_Item_Custom.S_BucklerShield', 1),
+        ('antagonist', 3, 'GD_Aster_ItemGrades.Shields.Aster_Seraph_Antagonist_Shield_Balance', 1),
+        ('blockade', 4, 'GD_Aster_ItemGrades.Shields.Aster_Seraph_Blockade_Shield_Balance', 1),
+        ('retainer', 5, 'GD_Anemone_Balance_Treasure.Shields.ItemGrade_Gear_Shield_Worming', 0.33),
+        ('easy_mode', 6, 'GD_Anemone_ItemPools.Shields.ItemGrade_Gear_Shield_Nova_Singularity_Peak', 0.33),
         ],
     }
 for (pool, shieldlist) in shields.items():
-    for (label, index, shieldname) in shieldlist:
+    for (label, index, shieldname, scale) in shieldlist:
         set_bi_item_pool('shield_{}'.format(label),
             pool,
             index,
             shieldname,
-            invbalance='InventoryBalanceDefinition')
+            invbalance='InventoryBalanceDefinition',
+            scale=scale,
+            )
+
+# Hotfixes to optionally add Gemstones
+gemstones = {
+    'GD_Itempools.WeaponPools.Pool_Weapons_AssaultRifles_05_VeryRare': [
+        ('ar', 5, 'GD_Aster_ItemPools.WeaponPools.Pool_Weapons_ARs_04_Gemstone', 5),
+        ],
+    'GD_Itempools.WeaponPools.Pool_Weapons_Pistols_05_VeryRare': [
+        ('pistol', 8, 'GD_Aster_ItemPools.WeaponPools.Pool_Weapons_Pistols_04_Gemstone', 8),
+        ],
+    'GD_Itempools.WeaponPools.Pool_Weapons_Shotguns_05_VeryRare': [
+        ('shotgun', 5, 'GD_Aster_ItemPools.WeaponPools.Pool_Weapons_Shotguns_04_Gemstone', 5),
+        ],
+    'GD_Itempools.WeaponPools.Pool_Weapons_SMG_05_VeryRare': [
+        ('smg', 5, 'GD_Aster_ItemPools.WeaponPools.Pool_Weapons_SMGs_04_Gemstone', 5),
+        ],
+    'GD_Itempools.WeaponPools.Pool_Weapons_SniperRifles_05_VeryRare': [
+        ('sniper', 5, 'GD_Aster_ItemPools.WeaponPools.Pool_Weapons_Snipers_04_Gemstone', 5),
+        ],
+    }
+for (pool, gemlist) in gemstones.items():
+    for (label, index, gemname, scale) in gemlist:
+        # Math derived from:  x/(x+n) = r
+        # Where `r` is the desired ratio of gemstones, `x` is the weight
+        # we want to assign to the gemstone pool (ie: the value we're solving
+        # for), and `n` being the current weight of the pool without gems.
+        weight = round((DropConfig.pct_gemstones*scale)/(1-DropConfig.pct_gemstones), 6)
+        mp.set_bi_item_pool('gemstone_{}'.format(label),
+            pool,
+            index,
+            gemname,
+            weight=weight,
+            )
 
 # "Real" Stalker shield hotfixes
 stalker_shields_real_list = []
@@ -4332,6 +4223,128 @@ for (label, key, unique_pct, rare_pct) in [
         level='TestingZone_P',
         prob=1,
         )
+
+    # Lt. Bolson (OldDust_P pool 0)
+
+    setup_boss_pool('lt_bolson_pool_0', 'OldDust_P', other.level_pool_0,
+            'GD_Flynt.Weapons.Pool_Weapons_FlyntUse',
+            [
+                ('GD_Anemone_Weapons.Rocket_Launcher.WorldBurn.RL_Torgue_5_WorldBurn', unique_pct, 'WeaponBalanceDefinition'),
+            ],
+            drop_default=False,
+            )
+
+    set_pt_cipl_item_pool('lt_bolson_pool_1',
+            'GD_Anemone_Pop_NP.Balance.PawnBalance_Lt_Bolson',
+            0, 0,
+            other.level_pool_0,
+            level='OldDust_P',
+            )
+
+    set_pt_cipl_item_pool('lt_bolson_pool_2',
+            'GD_Anemone_Pop_NP.Balance.PawnBalance_Lt_Bolson',
+            1, 0,
+            other.level_pool_0,
+            level='OldDust_P',
+            )
+
+    set_pt_cipl_item_prob('lt_bolson_pool_3',
+            'GD_Anemone_Pop_NP.Balance.PawnBalance_Lt_Bolson',
+            0, 3,
+            level='OldDust_P',
+            )
+
+    set_pt_cipl_item_prob('lt_bolson_pool_4',
+            'GD_Anemone_Pop_NP.Balance.PawnBalance_Lt_Bolson',
+            1, 3,
+            level='OldDust_P',
+            )
+
+    # Lt. Angvar (Sandworm_P, no pools required).
+
+    set_pt_cipl_item_prob('lt_angvar_pool_0',
+            'GD_Anemone_Pop_NP.Balance.PawnBalance_NP_Lt_Angvar',
+            0, 2,
+            level='Sandworm_P',
+            )
+
+    set_pt_cipl_item_prob('lt_angvar_pool_1',
+            'GD_Anemone_Pop_NP.Balance.PawnBalance_NP_Lt_Angvar',
+            1, 2,
+            level='Sandworm_P',
+            )
+
+    # (next two are for UCP compat)
+
+    set_pt_cipl_item_prob('lt_angvar_pool_2',
+            'GD_Anemone_Pop_NP.Balance.PawnBalance_NP_Lt_Angvar',
+            0, 3,
+            level='Sandworm_P',
+            )
+
+    set_pt_cipl_item_prob('lt_angvar_pool_3',
+            'GD_Anemone_Pop_NP.Balance.PawnBalance_NP_Lt_Angvar',
+            1, 3,
+            level='Sandworm_P',
+            )
+
+    # Lt. Tetra (Helios_P pool 0)
+
+    setup_boss_pool('lt_tetra_pool_0', 'Helios_P', other.level_pool_0,
+            'GD_Itempools.WeaponPools.Pool_Weapons_AssaultRifles_05_VeryRare_Alien',
+            [
+                ('GD_Anemone_Weapons.Shotgun.Overcompensator.SG_Hyperion_6_Overcompensator', unique_pct, 'WeaponBalanceDefinition'),
+            ],
+            )
+
+    set_pt_cipl_item_pool('lt_tetra_pool_1',
+            'GD_Anemone_Pop_NP.Balance.PawnBalance_NP_Lt_Tetra',
+            0, 0,
+            other.level_pool_0,
+            level='Helios_P',
+            )
+
+    set_pt_cipl_item_pool('lt_tetra_pool_2',
+            'GD_Anemone_Pop_NP.Balance.PawnBalance_NP_Lt_Tetra',
+            1, 0,
+            other.level_pool_0,
+            level='Helios_P',
+            )
+
+    set_pt_cipl_item_prob('lt_tetra_pool_3',
+            'GD_Anemone_Pop_NP.Balance.PawnBalance_NP_Lt_Tetra',
+            0, 2,
+            level='Helios_P',
+            )
+
+    set_pt_cipl_item_prob('lt_tetra_pool_4',
+            'GD_Anemone_Pop_NP.Balance.PawnBalance_NP_Lt_Tetra',
+            1, 2,
+            level='Helios_P',
+            )
+
+    # Lt. Hoffman (ResearchCenter_P pool 0)
+
+    setup_boss_pool('lt_hoffman_pool_0', 'ResearchCenter_P', other.level_pool_0,
+            'GD_Weap_SniperRifles.A_Weapons.Sniper_Vladof_4_VeryRare',
+            [
+                ('GD_Anemone_Weapons.sniper.Sniper_Jakobs_6_Chaude_Mama', unique_pct, 'WeaponBalanceDefinition'),
+            ],
+            )
+
+    set_pt_cipl_item_pool('lt_hoffman_pool_1',
+            'GD_Anemone_Pop_NP.Balance.PawnBalance_NP_Lt_Hoffman',
+            0, 0,
+            other.level_pool_0,
+            level='ResearchCenter_P',
+            )
+
+    set_pt_cipl_item_pool('lt_hoffman_pool_2',
+            'GD_Anemone_Pop_NP.Balance.PawnBalance_NP_Lt_Hoffman',
+            1, 0,
+            other.level_pool_0,
+            level='ResearchCenter_P',
+            )
 
     # Generate the section string
     with open('input-file-bosses.txt', 'r') as df:

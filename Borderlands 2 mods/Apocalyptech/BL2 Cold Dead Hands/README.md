@@ -294,9 +294,6 @@ Known issues with the mod:
 Ideas/TODO
 ==========
 
-* Because gemstones were added into the E-Tech pool, the Medical Mystery
-  mission might accidentally reward you a gemstone weapon rather than
-  E-Tech.
 * Restrict weapon manufacturer by level?  (Only Jakobs in Lynchwood, etc?)
 * Might be nifty to restrict weapon manufacturer by enemy type, though that
   would require eating up more skinpools (the by-level idea could reuse all
@@ -328,6 +325,9 @@ Ideas/TODO
   * Loaders having their limbs knocked off
 * A loader or two in End of the Line can spawn without limbs, but will still
   drop a gun.  Not sure if I can get that to not drop...
+* Lt. Bolson is capable of throwing a grenade defined in one of his loot pools.
+  I tried to get something like that to work for CDH but failed in the past;
+  I'll have to re-try it and see if I can get grenades into the mod properly.
 
 Licenses
 ========
@@ -345,7 +345,27 @@ for the full text.
 Changelog
 =========
 
-**v1.1.2** - July 27, 2018:
+**v1.1.3** - July 16, 2019:
+ * Support for DLC5 (Commander Lilith and the Fight for Sanctuary)
+   * Changed New Pandora Heavy units to use a mix of powerful shotguns instead
+     of just the Dog, and changed them to use any variety of purple spike shields,
+     other than just corrosive.
+   * If using in conjunction with UCP, the extra drops given to Cassius (Hector's
+     Paradise) and Lt. Angvar (Amigo Sincero) have been swapped, to keep Lt. Angvar's
+     focus on pistols.
+ * Altered how gemstone weapons are added - they no longer share a pool with E-Techs.
+   * Medical Mystery should now always reward an e-tech, instead of sometimes rewarding
+     a gemstone
+ * Fixed gemstone drops so that all gemstone weapon types can drop (we'd been missing
+   a few, previously, as it turns out)
+
+**v1.1.2-and-a-bit** - June 11, 2019 (commit `1f3559e5944d249b68ea18ba67fb1d20ee678189`):
+ * FromDarkHell updated the BLCMods github to fix the majority of
+   DLC5-related weapon part errors, which included this mod.  DLC guns
+   post-Commander-Lilith-DLC were fixed as of this update, though the
+   version number didn't actally get bumped.
+
+**v1.1.2** - July 27, 2018 (commit `7b6a65ac43fb61276062ec2d829c6fc163979ef7`):
  * Added more options for rocket launcher equip chances other than the binary
    choice from previous versions.
 

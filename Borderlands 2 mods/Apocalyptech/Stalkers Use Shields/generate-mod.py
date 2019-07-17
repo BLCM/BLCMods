@@ -46,7 +46,7 @@ except ModuleNotFoundError:
 ###
 
 mod_name = 'Stalkers Use Shields'
-mod_version = '1.1.1'
+mod_version = '1.1.2'
 output_filename = '{}.blcm'.format(mod_name)
 
 ###
@@ -297,7 +297,8 @@ def get_balanced_set(objectname, items):
             get_balanced_items(items))
 
 def set_bi_item_pool(hotfix_name, classname, index, item,
-        level=None, prob=None, invbalance=None):
+        level=None, prob=None, invbalance=None,
+        scale=1):
     """
     Sets an entire BalancedItem structure
     """
@@ -321,10 +322,10 @@ def set_bi_item_pool(hotfix_name, classname, index, item,
                 BaseValueConstant={},
                 BaseValueAttribute=None,
                 InitializationDefinition=None,
-                BaseValueScaleConstant=1
+                BaseValueScaleConstant={}
             ),
             bDropOnDeath=True
-        )""".format(level, classname, index, itmpool, invbal, prob))
+        )""".format(level, classname, index, itmpool, invbal, prob, scale))
 
 ###
 ### Code to generate the mod
@@ -373,42 +374,46 @@ for (rarity_key, rarity_label) in DropConfig.rarity_presets:
 # Legendary shield pool configuration.
 shields = {
     'GD_Itempools.ShieldPools.Pool_Shields_Absorption_06_Legendary': [
-        ('1340', 2, 'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Absorption_1340'),
-        ('equitas', 3, 'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Absorption_Equitas'),
-        ('sponge', 4, 'GD_Iris_SeraphItems.Sponge.Iris_Seraph_Shield_Sponge_Balance'),
+        ('1340', 2, 'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Absorption_1340', 1),
+        ('equitas', 3, 'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Absorption_Equitas', 1),
+        ('sponge', 4, 'GD_Iris_SeraphItems.Sponge.Iris_Seraph_Shield_Sponge_Balance', 1),
         ],
     'GD_Itempools.ShieldPools.Pool_Shields_Booster_06_Legendary': [
-        ('potogold', 1, 'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Booster_PotOGold'),
-        ('bigboomblaster', 2, 'GD_Iris_SeraphItems.BigBoomBlaster.Iris_Seraph_Shield_Booster_Balance'),
+        ('potogold', 1, 'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Booster_PotOGold', 1),
+        ('bigboomblaster', 2, 'GD_Iris_SeraphItems.BigBoomBlaster.Iris_Seraph_Shield_Booster_Balance', 1),
         ],
     'GD_Itempools.ShieldPools.Pool_Shields_Chimera_06_Legendary': [
-        ('evolution', 1, 'GD_Orchid_RaidWeapons.Shield.Anshin.Orchid_Seraph_Anshin_Shield_Balance')
+        ('evolution', 1, 'GD_Orchid_RaidWeapons.Shield.Anshin.Orchid_Seraph_Anshin_Shield_Balance', 1)
         ],
     'GD_Itempools.ShieldPools.Pool_Shields_Juggernaut_06_Legendary': [
-        ('hoplite', 1, 'GD_Iris_SeraphItems.Hoplite.Iris_Seraph_Shield_Juggernaut_Balance'),
+        ('hoplite', 1, 'GD_Iris_SeraphItems.Hoplite.Iris_Seraph_Shield_Juggernaut_Balance', 1),
         ],
     'GD_Itempools.ShieldPools.Pool_Shields_NovaShields_Explosive_06_Legendary': [
-        ('deadlybloom', 0, 'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Nova_Explosive_DeadlyBloom'),
+        ('deadlybloom', 0, 'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Nova_Explosive_DeadlyBloom', 1),
         ],
     'GD_Itempools.ShieldPools.Pool_Shields_Roid_06_Legendary': [
-        ('order', 1, 'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Roid_Order'),
-        ('lovethumper', 2, 'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Roid_04_LoveThumper'),
-        ('punchee', 3, 'GD_Iris_SeraphItems.Pun-chee.Iris_Seraph_Shield_Pun-chee_Balance'),
+        ('order', 1, 'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Roid_Order', 1),
+        ('lovethumper', 2, 'GD_ItemGrades.Shields.ItemGrade_Gear_Shield_Roid_04_LoveThumper', 1),
+        ('punchee', 3, 'GD_Iris_SeraphItems.Pun-chee.Iris_Seraph_Shield_Pun-chee_Balance', 1),
         ],
     'GD_Itempools.ShieldPools.Pool_Shields_Standard_06_Legendary': [
-        ('manlyman', 1, 'GD_Orchid_Shields.A_Item_Custom.S_BladeShield'),
-        ('roughrider', 2, 'GD_Sage_Shields.A_Item_Custom.S_BucklerShield'),
-        ('antagonist', 3, 'GD_Aster_ItemGrades.Shields.Aster_Seraph_Antagonist_Shield_Balance'),
-        ('blockade', 4, 'GD_Aster_ItemGrades.Shields.Aster_Seraph_Blockade_Shield_Balance'),
+        ('manlyman', 1, 'GD_Orchid_Shields.A_Item_Custom.S_BladeShield', 1),
+        ('roughrider', 2, 'GD_Sage_Shields.A_Item_Custom.S_BucklerShield', 1),
+        ('antagonist', 3, 'GD_Aster_ItemGrades.Shields.Aster_Seraph_Antagonist_Shield_Balance', 1),
+        ('blockade', 4, 'GD_Aster_ItemGrades.Shields.Aster_Seraph_Blockade_Shield_Balance', 1),
+        ('retainer', 5, 'GD_Anemone_Balance_Treasure.Shields.ItemGrade_Gear_Shield_Worming', 0.33),
+        ('easy_mode', 6, 'GD_Anemone_ItemPools.Shields.ItemGrade_Gear_Shield_Nova_Singularity_Peak', 0.33),
         ],
     }
 for (pool, shieldlist) in shields.items():
-    for (label, index, shieldname) in shieldlist:
+    for (label, index, shieldname, scale) in shieldlist:
         set_bi_item_pool('shield_{}'.format(label),
             pool,
             index,
             shieldname,
-            invbalance='InventoryBalanceDefinition')
+            invbalance='InventoryBalanceDefinition',
+            scale=scale,
+            )
 
 # Regular Stalker shield hotfixes
 stalker_shields_real_list = []
