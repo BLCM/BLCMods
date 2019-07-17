@@ -360,7 +360,7 @@
 
             #</Base Game>
 
-            #<Captain Scarlett DLC>
+            #<Story DLC 1 - Captain Scarlett and Her Pirate's Booty>
 
                 #<Benny the Booster>
 
@@ -448,9 +448,9 @@
 
                 #</Toothless Terry>
 
-            #</Captain Scarlett DLC>
+            #</Story DLC 1 - Captain Scarlett and Her Pirate's Booty>
 
-            #<Torgue DLC>
+            #<Story DLC 2 - Mr. Torgue's Campaign of Carnage>
 
                 #<Motor Momma>
 
@@ -469,9 +469,211 @@
 
                 #</Motor Momma>
 
-            #</Torgue DLC>
+            #</Story DLC 2 - Mr. Torgue's Campaign of Carnage>
 
-            #<Wattle Gobbler Headhunter Pack>
+            #<Story DLC 5 - Commander Lilith and the Fight for Sanctuary>
+
+                #<Cassius>
+
+                    # This is a bit outside the usual remit of this mod, but we're swapping the
+                    # added drops that UCP gives to Lt. Angvar and Cassius.  In UCP, Cassius gets
+                    # the Hector's Paradise while Lt. Angvar gets Amigo Sincero.  Since Angvar
+                    # is otherwise all-pistol, we're swapping them.  This section will have no
+                    # effect if you're not running UCP.
+
+                    level ResearchCenter_P set GD_Anemone_Pop_Cassius.PawnBalance_Anemone_Cassius Playthroughs[0].CustomItemPoolList[3].ItemPool ItemPoolDefinition'GD_Anemone_ItemPools.WeaponPools.Pool_Weapons_Morde_Lt'
+
+                    level ResearchCenter_P set GD_Anemone_Pop_Cassius.PawnBalance_Anemone_Cassius Playthroughs[1].CustomItemPoolList[3].ItemPool ItemPoolDefinition'GD_Anemone_ItemPools.WeaponPools.Pool_Weapons_Morde_Lt'
+
+                #</Cassius>
+
+                #<Lt. Angvar>
+
+                    # In vanilla, Lt. Angvar uses one of a number of legendary pistols but by default
+                    # only the Infinity would drop.  UCP assigns Angvar the Amigo Sincero, but I'd
+                    # really like to keep Angvar all-pistol.  So I'm going to swap that drop with
+                    # the Hector's Paradise from Cassius.  Executive decision!  Anyway, will drop
+                    # all possible pistols.  Going to make Hector's Paradise the most likely one,
+                    # though.
+                    #
+                    # Angvar also has a hardcoded purple drop; getting rid of that.
+
+                    level Sandworm_P set GD_DahlShared.WeaponPools.Pool_Weapons_Pistols_EnemyUse_Angvar BalancedItems
+                    (
+                        (
+                            ItmPoolDefinition = None,
+                            InvBalanceDefinition = WeaponBalanceDefinition'GD_Weap_Pistol.A_Weapons_Legendary.Pistol_Torgue_5_Calla',
+                            Probability =
+                            (
+                                BaseValueConstant = 1.000000,
+                                BaseValueAttribute = None,
+                                InitializationDefinition = AttributeInitializationDefinition'GD_Balance.Weighting.Weight_5_VeryRare',
+                                BaseValueScaleConstant = 1.000000
+                            ),
+                            bDropOnDeath = True
+                        ),
+                        (
+                            ItmPoolDefinition = None,
+                            InvBalanceDefinition = WeaponBalanceDefinition'GD_Weap_Pistol.A_Weapons_Legendary.Pistol_Bandit_5_Gub',
+                            Probability =
+                            (
+                                BaseValueConstant = 1.000000,
+                                BaseValueAttribute = None,
+                                InitializationDefinition = AttributeInitializationDefinition'GD_Balance.Weighting.Weight_5_VeryRare',
+                                BaseValueScaleConstant = 1.000000
+                            ),
+                            bDropOnDeath = True
+                        ),
+                        (
+                            ItmPoolDefinition = None,
+                            InvBalanceDefinition = WeaponBalanceDefinition'GD_Weap_Pistol.A_Weapons_Legendary.Pistol_Dahl_5_Hornet',
+                            Probability =
+                            (
+                                BaseValueConstant = 1.000000,
+                                BaseValueAttribute = None,
+                                InitializationDefinition = AttributeInitializationDefinition'GD_Balance.Weighting.Weight_5_VeryRare',
+                                BaseValueScaleConstant = 1.000000
+                            ),
+                            bDropOnDeath = True
+                        ),
+                        (
+                            ItmPoolDefinition = None,
+                            InvBalanceDefinition = WeaponBalanceDefinition'GD_Weap_Pistol.A_Weapons_Legendary.Pistol_Hyperion_5_LogansGun',
+                            Probability =
+                            (
+                                BaseValueConstant = 1.000000,
+                                BaseValueAttribute = None,
+                                InitializationDefinition = AttributeInitializationDefinition'GD_Balance.Weighting.Weight_5_VeryRare',
+                                BaseValueScaleConstant = 1.000000
+                            ),
+                            bDropOnDeath = True
+                        ),
+                        (
+                            ItmPoolDefinition = None,
+                            InvBalanceDefinition = WeaponBalanceDefinition'GD_Weap_Pistol.A_Weapons_Legendary.Pistol_Jakobs_5_Maggie',
+                            Probability =
+                            (
+                                BaseValueConstant = 1.000000,
+                                BaseValueAttribute = None,
+                                InitializationDefinition = AttributeInitializationDefinition'GD_Balance.Weighting.Weight_5_VeryRare',
+                                BaseValueScaleConstant = 1.000000
+                            ),
+                            bDropOnDeath = True
+                        ),
+                        (
+                            ItmPoolDefinition = None,
+                            InvBalanceDefinition = WeaponBalanceDefinition'GD_Weap_Pistol.A_Weapons_Legendary.Pistol_Maliwan_5_ThunderballFists',
+                            Probability =
+                            (
+                                BaseValueConstant = 1.000000,
+                                BaseValueAttribute = None,
+                                InitializationDefinition = AttributeInitializationDefinition'GD_Balance.Weighting.Weight_5_VeryRare',
+                                BaseValueScaleConstant = 1.000000
+                            ),
+                            bDropOnDeath = True
+                        ),
+                        (
+                            ItmPoolDefinition = None,
+                            InvBalanceDefinition = WeaponBalanceDefinition'GD_Weap_Pistol.A_Weapons_Legendary.Pistol_Tediore_5_Gunerang',
+                            Probability =
+                            (
+                                BaseValueConstant = 1.000000,
+                                BaseValueAttribute = None,
+                                InitializationDefinition = AttributeInitializationDefinition'GD_Balance.Weighting.Weight_5_VeryRare',
+                                BaseValueScaleConstant = 1.000000
+                            ),
+                            bDropOnDeath = True
+                        ),
+                        (
+                            ItmPoolDefinition = None,
+                            InvBalanceDefinition = WeaponBalanceDefinition'GD_Weap_Pistol.A_Weapons_Legendary.Pistol_Vladof_5_Infinity',
+                            Probability =
+                            (
+                                BaseValueConstant = 1.000000,
+                                BaseValueAttribute = None,
+                                InitializationDefinition = AttributeInitializationDefinition'GD_Balance.Weighting.Weight_5_VeryRare',
+                                BaseValueScaleConstant = 1.000000
+                            ),
+                            bDropOnDeath = True
+                        ),
+                        (
+                            ItmPoolDefinition = None,
+                            InvBalanceDefinition = WeaponBalanceDefinition'GD_Anemone_Weapons.A_Weapons_Legendary.Pistol_Dahl_5_Hector_Hornet',
+                            Probability =
+                            (
+                                BaseValueConstant = 1.000000,
+                                BaseValueAttribute = None,
+                                InitializationDefinition = AttributeInitializationDefinition'GD_Balance.Weighting.Weight_5_VeryRare',
+                                BaseValueScaleConstant = 4.000000
+                            ),
+                            bDropOnDeath = True
+                        )
+                    )
+
+                    {mp:lt_angvar_pool_0}
+
+                    {mp:lt_angvar_pool_1}
+
+                    {mp:lt_angvar_pool_2}
+
+                    {mp:lt_angvar_pool_3}
+
+                #</Lt. Angvar> 
+
+                #<Lt. Bolson>
+
+                    # Lt. Bolson has a chance to drop a World Burn.  Like Capt. Flynt, any
+                    # weapon he wields will effectively have a flamethrower attachment as
+                    # well, so have fun with that!  He also equips and uses a very specific
+                    # grenade (Antifection) so we'll go ahead and drop that too.
+
+                    {mp:lt_bolson_pool_0}
+
+                    {mp:lt_bolson_pool_1}
+
+                    {mp:lt_bolson_pool_2}
+
+                    {mp:lt_bolson_pool_3}
+
+                    {mp:lt_bolson_pool_4}
+
+                    level OldDust_P set GD_Anemone_Lt_Bolson.Projectiles.Pool_GrenadeMOD_Bolson BalancedItems[0].bDropOnDeath True
+
+                #</Lt. Bolson>
+
+                #<Lt. Hoffman>
+
+                    # Lt. Hoffman can drop the Hot Mama, and is otherwise fixed to drop a purple
+                    # vladof sniper.
+
+                    {mp:lt_hoffman_pool_0}
+
+                    {mp:lt_hoffman_pool_1}
+
+                    {mp:lt_hoffman_pool_2}
+
+                #</Lt. Hoffman>
+
+                #<Lt. Tetra>
+
+                    # UCP adds the Overcompensator, so we're going to drop that.  Also replace
+                    # the default drop with an E-Tech AR, if appropriate.
+
+                    {mp:lt_tetra_pool_0}
+
+                    {mp:lt_tetra_pool_1}
+
+                    {mp:lt_tetra_pool_2}
+
+                    {mp:lt_tetra_pool_3}
+
+                    {mp:lt_tetra_pool_4}
+
+                #</Lt. Tetra>
+
+            #</Story DLC 5 - Commander Lilith and the Fight for Sanctuary>
+
+            #<Headhunter Pack 2 - The Horrible Hunger of the Ravenous Wattle Gobbler>
 
                 # UCP adds in a ton of unique drops to the various Tributes in this
                 # Headhunter Pack, often with multiple uniques per tribute.  We're
@@ -684,9 +886,9 @@
 
                 #</Rose, Tribute of Opportunity>
 
-            #</Wattle Gobbler Headhunter Pack>
+            #</Headhunter Pack 2 - The Horrible Hunger of the Ravenous Wattle Gobbler>
 
-            #<Son of Crawmerax Headhunter Pack>
+            #<Headhunter Pack 5 - Sir Hammerlock vs. the Son of Crawmerax>
 
                 #<Sparky Flynt>
 
@@ -710,9 +912,9 @@
 
                 #</Sparky Flynt>
 
-            #</Son of Crawmerax Headhunter Pack>
+            #</Headhunter Pack 5 - Sir Hammerlock vs. the Son of Crawmerax>
 
-            #<Digistruct Peak>
+            #<The Raid on Digistruct Peak>
 
                 #<Bone Head 3.0>
 
@@ -806,6 +1008,6 @@
 
                 #</Digistruct Doc Mercy>
 
-            #</Digistruct Peak>
+            #</The Raid on Digistruct Peak>
 
         #</{boss_label}>
