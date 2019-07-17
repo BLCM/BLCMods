@@ -62,6 +62,16 @@ for the full text.
 Changelog
 =========
 
+**v1.1.2**, July 9, 2019:
+ * Update to support Commander Lilith & the Fight for Sanctuary DLC
+   (mostly just fixing Alignment COMs, and adding Overcompensator unlocks)
+
+**v1.1.1-and-a-bit**, June 11, 2019:
+ * FromDarkHell updated the BLCMods github to fix the majority of
+   DLC5-related weapon part errors, which included this mod.  DLC guns
+   post-Commander-Lilith-DLC were fixed as of this update, though the
+   version number didn't actally get bumped.
+
 **v1.1.1**, July 21, 2018:
  * Extra grenade mods unlocked:
    * Captain Blade's Midnight Star

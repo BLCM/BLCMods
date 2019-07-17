@@ -1,6 +1,5 @@
 ### Anemone Fast Travels
 Super quick fix to let you fast travel to the two new one-way stations.
-I will try to expand this with a few related QoL fixes.
 
 ### Bigger Is Not Always Better
 Allows you to switch the direction of the arrows when comparing items.

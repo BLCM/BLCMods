@@ -6,8 +6,8 @@ BL2
     # Licensed under Public Domain / CC0 1.0 Universal
     #
     # Various legendary-and-similar loot pool alterations.  First, gemstones can be added
-    # to the E-Tech pool, and then a series of optional categories which can add uniques,
-    # pearls, and seraphs into the main legendary pools.
+    # to the purples pool, and then a series of optional categories which can add uniques,
+    # pearls, seraphs, and effervescents into the main legendary pools.
     #
     # Don't use this with BL2 Better Loot or BL2 Cold Dead Hands!
 
@@ -17,9 +17,9 @@ BL2
 
             # Various statements to prep our Legendary pools.  Ensures that all of the
             # "standard" legendary items are always in the legendary pool, and leaves
-            # room in the pools so that uniques, seraphs, and pearls can be added in later
-            # if desired.  Also ensures that the "gladiolus" pools point to our main
-            # pools.
+            # room in the pools so that uniques, seraphs, pearls, and effervescents
+            # can be added in later if desired.  Also ensures that the "gladiolus"
+            # pools point to our main pools.
 
             #<Redirect Gladiolus Pools to Main Pools>
 
@@ -119,18 +119,19 @@ BL2
 
             #</Redirect Gladiolus Pools to Main Pools>
 
-            #<E-Tech Weapon Pool Setup>
+            #<Purple Weapon Pool Setup (for Gemstones)>
 
-                # Initializes the various Legendary drop pools in a way which lets us choose
-                # what else to put in them (via hotfix) in the next categories.
+                # Initializes the various Purple drop pools in a way which lets us choose
+                # what else to put in them (via hotfix) in the next categories.  This is
+                # just for gemstones currently.
 
-                set GD_Itempools.WeaponPools.Pool_Weapons_AssaultRifles_05_VeryRare_Alien BalancedItems
+                set GD_Itempools.WeaponPools.Pool_Weapons_AssaultRifles_05_VeryRare BalancedItems
                 (
                     (
                         ItmPoolDefinition=None,
-                        InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_AssaultRifle.A_Weapons.AR_Bandit_5_Alien',
+                        InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_AssaultRifle.A_Weapons.AR_Bandit_4_VeryRare',
                         Probability=(
-                            BaseValueConstant=2.000000,
+                            BaseValueConstant=1.000000,
                             BaseValueAttribute=None,
                             InitializationDefinition=None,
                             BaseValueScaleConstant=1.000000
@@ -139,9 +140,9 @@ BL2
                     ),
                     (
                         ItmPoolDefinition=None,
-                        InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_AssaultRifle.A_Weapons.AR_Dahl_5_Alien',
+                        InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_AssaultRifle.A_Weapons.AR_Dahl_4_VeryRare',
                         Probability=(
-                            BaseValueConstant=2.000000,
+                            BaseValueConstant=1.000000,
                             BaseValueAttribute=None,
                             InitializationDefinition=None,
                             BaseValueScaleConstant=1.000000
@@ -150,9 +151,9 @@ BL2
                     ),
                     (
                         ItmPoolDefinition=None,
-                        InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_AssaultRifle.A_Weapons.AR_Vladof_5_Alien',
+                        InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_AssaultRifle.A_Weapons.AR_Jakobs_4_VeryRare',
                         Probability=(
-                            BaseValueConstant=2.000000,
+                            BaseValueConstant=1.000000,
                             BaseValueAttribute=None,
                             InitializationDefinition=None,
                             BaseValueScaleConstant=1.000000
@@ -161,9 +162,9 @@ BL2
                     ),
                     (
                         ItmPoolDefinition=None,
-                        InvBalanceDefinition=None,
+                        InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_AssaultRifle.A_Weapons.AR_Torgue_4_VeryRare',
                         Probability=(
-                            BaseValueConstant=0,
+                            BaseValueConstant=1.000000,
                             BaseValueAttribute=None,
                             InitializationDefinition=None,
                             BaseValueScaleConstant=1.000000
@@ -172,20 +173,9 @@ BL2
                     ),
                     (
                         ItmPoolDefinition=None,
-                        InvBalanceDefinition=None,
+                        InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_AssaultRifle.A_Weapons.AR_Vladof_4_VeryRare',
                         Probability=(
-                            BaseValueConstant=0,
-                            BaseValueAttribute=None,
-                            InitializationDefinition=None,
-                            BaseValueScaleConstant=1.000000
-                        ),
-                        bDropOnDeath=True
-                    ),
-                    (
-                        ItmPoolDefinition=None,
-                        InvBalanceDefinition=None,
-                        Probability=(
-                            BaseValueConstant=0,
+                            BaseValueConstant=1.000000,
                             BaseValueAttribute=None,
                             InitializationDefinition=None,
                             BaseValueScaleConstant=1.000000
@@ -196,31 +186,20 @@ BL2
                         ItmPoolDefinition=None,
                         InvBalanceDefinition=None,
                         Probability=(
-                            BaseValueConstant=0,
+                            BaseValueConstant=0.000000,
                             BaseValueAttribute=None,
                             InitializationDefinition=None,
-                            BaseValueScaleConstant=1.000000
-                        ),
-                        bDropOnDeath=True
-                    ),
-                    (
-                        ItmPoolDefinition=None,
-                        InvBalanceDefinition=None,
-                        Probability=(
-                            BaseValueConstant=0,
-                            BaseValueAttribute=None,
-                            InitializationDefinition=None,
-                            BaseValueScaleConstant=1.000000
+                            BaseValueScaleConstant=0.000000
                         ),
                         bDropOnDeath=True
                     )
                 )
 
-                set GD_Itempools.WeaponPools.Pool_Weapons_Launchers_05_VeryRare_Alien BalancedItems
+                set GD_Itempools.WeaponPools.Pool_Weapons_Pistols_05_VeryRare BalancedItems
                 (
                     (
                         ItmPoolDefinition=None,
-                        InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_Launchers.A_Weapons.RL_Bandit_5_Alien',
+                        InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_Pistol.A_Weapons.Pistol_Bandit_4_VeryRare',
                         Probability=(
                             BaseValueConstant=1.000000,
                             BaseValueAttribute=None,
@@ -231,7 +210,7 @@ BL2
                     ),
                     (
                         ItmPoolDefinition=None,
-                        InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_Launchers.A_Weapons.RL_Tediore_5_Alien',
+                        InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_Pistol.A_Weapons.Pistol_Tediore_4_VeryRare',
                         Probability=(
                             BaseValueConstant=1.000000,
                             BaseValueAttribute=None,
@@ -242,7 +221,7 @@ BL2
                     ),
                     (
                         ItmPoolDefinition=None,
-                        InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_Launchers.A_Weapons.RL_Vladof_5_Alien',
+                        InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_Pistol.A_Weapons.Pistol_Dahl_4_VeryRare',
                         Probability=(
                             BaseValueConstant=1.000000,
                             BaseValueAttribute=None,
@@ -253,90 +232,123 @@ BL2
                     ),
                     (
                         ItmPoolDefinition=None,
-                        InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_Launchers.A_Weapons.RL_Maliwan_5_Alien',
+                        InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_Pistol.A_Weapons.Pistol_Vladof_4_VeryRare',
                         Probability=(
                             BaseValueConstant=1.000000,
                             BaseValueAttribute=None,
                             InitializationDefinition=None,
                             BaseValueScaleConstant=1.000000
+                        ),
+                        bDropOnDeath=True
+                    ),
+                    (
+                        ItmPoolDefinition=None,
+                        InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_Pistol.A_Weapons.Pistol_Torgue_4_VeryRare',
+                        Probability=(
+                            BaseValueConstant=1.000000,
+                            BaseValueAttribute=None,
+                            InitializationDefinition=None,
+                            BaseValueScaleConstant=1.000000
+                        ),
+                        bDropOnDeath=True
+                    ),
+                    (
+                        ItmPoolDefinition=None,
+                        InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_Pistol.A_Weapons.Pistol_Maliwan_4_VeryRare',
+                        Probability=(
+                            BaseValueConstant=1.000000,
+                            BaseValueAttribute=None,
+                            InitializationDefinition=None,
+                            BaseValueScaleConstant=1.000000
+                        ),
+                        bDropOnDeath=True
+                    ),
+                    (
+                        ItmPoolDefinition=None,
+                        InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_Pistol.A_Weapons.Pistol_Jakobs_4_VeryRare',
+                        Probability=(
+                            BaseValueConstant=1.000000,
+                            BaseValueAttribute=None,
+                            InitializationDefinition=None,
+                            BaseValueScaleConstant=1.000000
+                        ),
+                        bDropOnDeath=True
+                    ),
+                    (
+                        ItmPoolDefinition=None,
+                        InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_Pistol.A_Weapons.Pistol_Hyperion_4_VeryRare',
+                        Probability=(
+                            BaseValueConstant=1.000000,
+                            BaseValueAttribute=None,
+                            InitializationDefinition=None,
+                            BaseValueScaleConstant=1.000000
+                        ),
+                        bDropOnDeath=True
+                    ),
+                    (
+                        ItmPoolDefinition=None,
+                        InvBalanceDefinition=None,
+                        Probability=(
+                            BaseValueConstant=0.000000,
+                            BaseValueAttribute=None,
+                            InitializationDefinition=None,
+                            BaseValueScaleConstant=0.000000
                         ),
                         bDropOnDeath=True
                     )
                 )
 
-                set GD_Itempools.WeaponPools.Pool_Weapons_Pistols_05_VeryRare_Alien BalancedItems
+                set GD_Itempools.WeaponPools.Pool_Weapons_Shotguns_05_VeryRare BalancedItems
                 (
                     (
                         ItmPoolDefinition=None,
-                        InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_Pistol.A_Weapons.Pistol_Bandit_5_Alien',
+                        InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_Shotgun.A_Weapons.SG_Bandit_4_VeryRare',
                         Probability=(
                             BaseValueConstant=1.000000,
                             BaseValueAttribute=None,
                             InitializationDefinition=None,
-                            BaseValueScaleConstant=0.833333
+                            BaseValueScaleConstant=1.000000
                         ),
                         bDropOnDeath=True
                     ),
                     (
                         ItmPoolDefinition=None,
-                        InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_Pistol.A_Weapons.Pistol_Dahl_5_Alien',
+                        InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_Shotgun.A_Weapons.SG_Tediore_4_VeryRare',
                         Probability=(
                             BaseValueConstant=1.000000,
                             BaseValueAttribute=None,
                             InitializationDefinition=None,
-                            BaseValueScaleConstant=0.833333
+                            BaseValueScaleConstant=1.000000
                         ),
                         bDropOnDeath=True
                     ),
                     (
                         ItmPoolDefinition=None,
-                        InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_Pistol.A_Weapons.Pistol_Tediore_5_Alien',
+                        InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_Shotgun.A_Weapons.SG_Torgue_4_VeryRare',
                         Probability=(
                             BaseValueConstant=1.000000,
                             BaseValueAttribute=None,
                             InitializationDefinition=None,
-                            BaseValueScaleConstant=0.833333
+                            BaseValueScaleConstant=1.000000
                         ),
                         bDropOnDeath=True
                     ),
                     (
                         ItmPoolDefinition=None,
-                        InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_Pistol.A_Weapons.Pistol_Vladof_5_Alien',
+                        InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_Shotgun.A_Weapons.SG_Jakobs_4_VeryRare',
                         Probability=(
                             BaseValueConstant=1.000000,
                             BaseValueAttribute=None,
                             InitializationDefinition=None,
-                            BaseValueScaleConstant=0.833333
+                            BaseValueScaleConstant=1.000000
                         ),
                         bDropOnDeath=True
                     ),
                     (
                         ItmPoolDefinition=None,
-                        InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_Pistol.A_Weapons.Pistol_Maliwan_5_Alien',
+                        InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_Shotgun.A_Weapons.SG_Hyperion_4_VeryRare',
                         Probability=(
                             BaseValueConstant=1.000000,
-                            BaseValueAttribute=None,
-                            InitializationDefinition=None,
-                            BaseValueScaleConstant=0.833333
-                        ),
-                        bDropOnDeath=True
-                    ),
-                    (
-                        ItmPoolDefinition=None,
-                        InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_Pistol.A_Weapons.Pistol_Hyperion_5_Alien',
-                        Probability=(
-                            BaseValueConstant=1.000000,
-                            BaseValueAttribute=None,
-                            InitializationDefinition=None,
-                            BaseValueScaleConstant=0.833333
-                        ),
-                        bDropOnDeath=True
-                    ),
-                    (
-                        ItmPoolDefinition=None,
-                        InvBalanceDefinition=None,
-                        Probability=(
-                            BaseValueConstant=0,
                             BaseValueAttribute=None,
                             InitializationDefinition=None,
                             BaseValueScaleConstant=1.000000
@@ -347,88 +359,66 @@ BL2
                         ItmPoolDefinition=None,
                         InvBalanceDefinition=None,
                         Probability=(
-                            BaseValueConstant=0,
+                            BaseValueConstant=0.000000,
                             BaseValueAttribute=None,
                             InitializationDefinition=None,
-                            BaseValueScaleConstant=1.000000
-                        ),
-                        bDropOnDeath=True
-                    ),
-                    (
-                        ItmPoolDefinition=None,
-                        InvBalanceDefinition=None,
-                        Probability=(
-                            BaseValueConstant=0,
-                            BaseValueAttribute=None,
-                            InitializationDefinition=None,
-                            BaseValueScaleConstant=1.000000
-                        ),
-                        bDropOnDeath=True
-                    ),
-                    (
-                        ItmPoolDefinition=None,
-                        InvBalanceDefinition=None,
-                        Probability=(
-                            BaseValueConstant=0,
-                            BaseValueAttribute=None,
-                            InitializationDefinition=None,
-                            BaseValueScaleConstant=1.000000
-                        ),
-                        bDropOnDeath=True
-                    ),
-                    (
-                        ItmPoolDefinition=None,
-                        InvBalanceDefinition=None,
-                        Probability=(
-                            BaseValueConstant=0,
-                            BaseValueAttribute=None,
-                            InitializationDefinition=None,
-                            BaseValueScaleConstant=1.000000
+                            BaseValueScaleConstant=0.000000
                         ),
                         bDropOnDeath=True
                     )
                 )
 
-                set GD_Itempools.WeaponPools.Pool_Weapons_Shotguns_05_VeryRare_Alien BalancedItems
+                set GD_Itempools.WeaponPools.Pool_Weapons_SMG_05_VeryRare BalancedItems
                 (
                     (
                         ItmPoolDefinition=None,
-                        InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_Shotgun.A_Weapons.SG_Bandit_5_Alien',
+                        InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_SMG.A_Weapons.SMG_Bandit_4_VeryRare',
                         Probability=(
                             BaseValueConstant=1.000000,
                             BaseValueAttribute=None,
                             InitializationDefinition=None,
-                            BaseValueScaleConstant=1.666666
+                            BaseValueScaleConstant=1.000000
                         ),
                         bDropOnDeath=True
                     ),
                     (
                         ItmPoolDefinition=None,
-                        InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_Shotgun.A_Weapons.SG_Tediore_5_Alien',
+                        InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_SMG.A_Weapons.SMG_Tediore_4_VeryRare',
                         Probability=(
                             BaseValueConstant=1.000000,
                             BaseValueAttribute=None,
                             InitializationDefinition=None,
-                            BaseValueScaleConstant=1.666666
+                            BaseValueScaleConstant=1.000000
                         ),
                         bDropOnDeath=True
                     ),
                     (
                         ItmPoolDefinition=None,
-                        InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_Shotgun.A_Weapons.SG_Hyperion_5_Alien',
+                        InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_SMG.A_Weapons.SMG_Dahl_4_VeryRare',
                         Probability=(
                             BaseValueConstant=1.000000,
                             BaseValueAttribute=None,
                             InitializationDefinition=None,
-                            BaseValueScaleConstant=1.666666
+                            BaseValueScaleConstant=1.000000
                         ),
                         bDropOnDeath=True
                     ),
                     (
                         ItmPoolDefinition=None,
-                        InvBalanceDefinition=None,
+                        InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_SMG.A_Weapons.SMG_Maliwan_4_VeryRare',
                         Probability=(
-                            BaseValueConstant=0,
+                            BaseValueConstant=1.000000,
+                            BaseValueAttribute=None,
+                            InitializationDefinition=None,
+                            BaseValueScaleConstant=1.000000
+                        ),
+                        bDropOnDeath=True
+                    ),
+                    (
+                        ItmPoolDefinition=None,
+                        InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_SMG.A_Weapons.SMG_Hyperion_4_VeryRare',
+                        Probability=(
+                            BaseValueConstant=1.000000,
                             BaseValueAttribute=None,
                             InitializationDefinition=None,
                             BaseValueScaleConstant=1.000000
@@ -439,53 +429,20 @@ BL2
                         ItmPoolDefinition=None,
                         InvBalanceDefinition=None,
                         Probability=(
-                            BaseValueConstant=0,
+                            BaseValueConstant=0.000000,
                             BaseValueAttribute=None,
                             InitializationDefinition=None,
-                            BaseValueScaleConstant=1.000000
-                        ),
-                        bDropOnDeath=True
-                    ),
-                    (
-                        ItmPoolDefinition=None,
-                        InvBalanceDefinition=None,
-                        Probability=(
-                            BaseValueConstant=0,
-                            BaseValueAttribute=None,
-                            InitializationDefinition=None,
-                            BaseValueScaleConstant=1.000000
-                        ),
-                        bDropOnDeath=True
-                    ),
-                    (
-                        ItmPoolDefinition=None,
-                        InvBalanceDefinition=None,
-                        Probability=(
-                            BaseValueConstant=0,
-                            BaseValueAttribute=None,
-                            InitializationDefinition=None,
-                            BaseValueScaleConstant=1.000000
-                        ),
-                        bDropOnDeath=True
-                    ),
-                    (
-                        ItmPoolDefinition=None,
-                        InvBalanceDefinition=None,
-                        Probability=(
-                            BaseValueConstant=0,
-                            BaseValueAttribute=None,
-                            InitializationDefinition=None,
-                            BaseValueScaleConstant=1.000000
+                            BaseValueScaleConstant=0.000000
                         ),
                         bDropOnDeath=True
                     )
                 )
 
-                set GD_Itempools.WeaponPools.Pool_Weapons_SMG_05_VeryRare_Alien BalancedItems
+                set GD_Itempools.WeaponPools.Pool_Weapons_SniperRifles_05_VeryRare BalancedItems
                 (
                     (
                         ItmPoolDefinition=None,
-                        InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_SMG.A_Weapons.SMG_Bandit_5_Alien',
+                        InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_SniperRifles.A_Weapons.Sniper_Dahl_4_VeryRare',
                         Probability=(
                             BaseValueConstant=1.000000,
                             BaseValueAttribute=None,
@@ -496,7 +453,7 @@ BL2
                     ),
                     (
                         ItmPoolDefinition=None,
-                        InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_SMG.A_Weapons.SMG_Tediore_5_Alien',
+                        InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_SniperRifles.A_Weapons.Sniper_Vladof_4_VeryRare',
                         Probability=(
                             BaseValueConstant=1.000000,
                             BaseValueAttribute=None,
@@ -507,7 +464,7 @@ BL2
                     ),
                     (
                         ItmPoolDefinition=None,
-                        InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_SMG.A_Weapons.SMG_Dahl_5_Alien',
+                        InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_SniperRifles.A_Weapons.Sniper_Maliwan_4_VeryRare',
                         Probability=(
                             BaseValueConstant=1.000000,
                             BaseValueAttribute=None,
@@ -518,7 +475,7 @@ BL2
                     ),
                     (
                         ItmPoolDefinition=None,
-                        InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_SMG.A_Weapons.SMG_Maliwan_5_Alien',
+                        InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_SniperRifles.A_Weapons.Sniper_Jakobs_4_VeryRare',
                         Probability=(
                             BaseValueConstant=1.000000,
                             BaseValueAttribute=None,
@@ -529,7 +486,7 @@ BL2
                     ),
                     (
                         ItmPoolDefinition=None,
-                        InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_SMG.A_Weapons.SMG_Hyperion_5_Alien',
+                        InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_SniperRifles.A_Weapons.Sniper_Hyperion_4_VeryRare',
                         Probability=(
                             BaseValueConstant=1.000000,
                             BaseValueAttribute=None,
@@ -542,141 +499,16 @@ BL2
                         ItmPoolDefinition=None,
                         InvBalanceDefinition=None,
                         Probability=(
-                            BaseValueConstant=0,
+                            BaseValueConstant=0.000000,
                             BaseValueAttribute=None,
                             InitializationDefinition=None,
-                            BaseValueScaleConstant=1.000000
-                        ),
-                        bDropOnDeath=True
-                    ),
-                    (
-                        ItmPoolDefinition=None,
-                        InvBalanceDefinition=None,
-                        Probability=(
-                            BaseValueConstant=0,
-                            BaseValueAttribute=None,
-                            InitializationDefinition=None,
-                            BaseValueScaleConstant=1.000000
-                        ),
-                        bDropOnDeath=True
-                    ),
-                    (
-                        ItmPoolDefinition=None,
-                        InvBalanceDefinition=None,
-                        Probability=(
-                            BaseValueConstant=0,
-                            BaseValueAttribute=None,
-                            InitializationDefinition=None,
-                            BaseValueScaleConstant=1.000000
-                        ),
-                        bDropOnDeath=True
-                    ),
-                    (
-                        ItmPoolDefinition=None,
-                        InvBalanceDefinition=None,
-                        Probability=(
-                            BaseValueConstant=0,
-                            BaseValueAttribute=None,
-                            InitializationDefinition=None,
-                            BaseValueScaleConstant=1.000000
+                            BaseValueScaleConstant=0.000000
                         ),
                         bDropOnDeath=True
                     )
                 )
 
-                set GD_Itempools.WeaponPools.Pool_Weapons_SniperRifles_05_VeryRare_Alien BalancedItems
-                (
-                    (
-                        ItmPoolDefinition=None,
-                        InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_SniperRifles.A_Weapons.Sniper_Dahl_5_Alien',
-                        Probability=(
-                            BaseValueConstant=1.000000,
-                            BaseValueAttribute=None,
-                            InitializationDefinition=None,
-                            BaseValueScaleConstant=1.000000
-                        ),
-                        bDropOnDeath=True
-                    ),
-                    (
-                        ItmPoolDefinition=None,
-                        InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_SniperRifles.A_Weapons.Sniper_Vladof_5_Alien',
-                        Probability=(
-                            BaseValueConstant=1.000000,
-                            BaseValueAttribute=None,
-                            InitializationDefinition=None,
-                            BaseValueScaleConstant=1.000000
-                        ),
-                        bDropOnDeath=True
-                    ),
-                    (
-                        ItmPoolDefinition=None,
-                        InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_SniperRifles.A_Weapons.Sniper_Maliwan_5_Alien',
-                        Probability=(
-                            BaseValueConstant=1.000000,
-                            BaseValueAttribute=None,
-                            InitializationDefinition=None,
-                            BaseValueScaleConstant=1.000000
-                        ),
-                        bDropOnDeath=True
-                    ),
-                    (
-                        ItmPoolDefinition=None,
-                        InvBalanceDefinition=WeaponBalanceDefinition'GD_Weap_SniperRifles.A_Weapons.Sniper_Hyperion_5_Alien',
-                        Probability=(
-                            BaseValueConstant=1.000000,
-                            BaseValueAttribute=None,
-                            InitializationDefinition=None,
-                            BaseValueScaleConstant=1.000000
-                        ),
-                        bDropOnDeath=True
-                    ),
-                    (
-                        ItmPoolDefinition=None,
-                        InvBalanceDefinition=None,
-                        Probability=(
-                            BaseValueConstant=0,
-                            BaseValueAttribute=None,
-                            InitializationDefinition=None,
-                            BaseValueScaleConstant=1.000000
-                        ),
-                        bDropOnDeath=True
-                    ),
-                    (
-                        ItmPoolDefinition=None,
-                        InvBalanceDefinition=None,
-                        Probability=(
-                            BaseValueConstant=0,
-                            BaseValueAttribute=None,
-                            InitializationDefinition=None,
-                            BaseValueScaleConstant=1.000000
-                        ),
-                        bDropOnDeath=True
-                    ),
-                    (
-                        ItmPoolDefinition=None,
-                        InvBalanceDefinition=None,
-                        Probability=(
-                            BaseValueConstant=0,
-                            BaseValueAttribute=None,
-                            InitializationDefinition=None,
-                            BaseValueScaleConstant=1.000000
-                        ),
-                        bDropOnDeath=True
-                    ),
-                    (
-                        ItmPoolDefinition=None,
-                        InvBalanceDefinition=None,
-                        Probability=(
-                            BaseValueConstant=0,
-                            BaseValueAttribute=None,
-                            InitializationDefinition=None,
-                            BaseValueScaleConstant=1.000000
-                        ),
-                        bDropOnDeath=True
-                    )
-                )
-
-            #</E-Tech Weapon Pool Setup>
+            #</Purple Weapon Pool Setup (for Gemstones)>
 
             #<Legendary Weapon Pools Setup>
 
@@ -1077,6 +909,28 @@ BL2
                             BaseValueScaleConstant=1.000000
                         ),
                         bDropOnDeath=True
+                    ),
+                    (
+                        ItmPoolDefinition=None,
+                        InvBalanceDefinition=None,
+                        Probability=(
+                            BaseValueConstant=0.000000,
+                            BaseValueAttribute=None,
+                            InitializationDefinition=None,
+                            BaseValueScaleConstant=1.000000
+                        ),
+                        bDropOnDeath=True
+                    ),
+                    (
+                        ItmPoolDefinition=None,
+                        InvBalanceDefinition=None,
+                        Probability=(
+                            BaseValueConstant=0.000000,
+                            BaseValueAttribute=None,
+                            InitializationDefinition=None,
+                            BaseValueScaleConstant=1.000000
+                        ),
+                        bDropOnDeath=True
                     )
                 )
 
@@ -1215,6 +1069,28 @@ BL2
                         InvBalanceDefinition=InventoryBalanceDefinition'GD_Aster_GrenadeMods.A_Item.GM_FireStorm',
                         Probability=(
                             BaseValueConstant=1.000000,
+                            BaseValueAttribute=None,
+                            InitializationDefinition=None,
+                            BaseValueScaleConstant=1.000000
+                        ),
+                        bDropOnDeath=True
+                    ),
+                    (
+                        ItmPoolDefinition=None,
+                        InvBalanceDefinition=None,
+                        Probability=(
+                            BaseValueConstant=0.000000,
+                            BaseValueAttribute=None,
+                            InitializationDefinition=None,
+                            BaseValueScaleConstant=1.000000
+                        ),
+                        bDropOnDeath=True
+                    ),
+                    (
+                        ItmPoolDefinition=None,
+                        InvBalanceDefinition=None,
+                        Probability=(
+                            BaseValueConstant=0.000000,
                             BaseValueAttribute=None,
                             InitializationDefinition=None,
                             BaseValueScaleConstant=1.000000
@@ -1937,6 +1813,39 @@ BL2
                             BaseValueScaleConstant=0
                         ),
                         bDropOnDeath=True
+                    ),
+                    (
+                        ItmPoolDefinition=None,
+                        InvBalanceDefinition=None,
+                        Probability=(
+                            BaseValueConstant=0,
+                            BaseValueAttribute=None,
+                            InitializationDefinition=None,
+                            BaseValueScaleConstant=0
+                        ),
+                        bDropOnDeath=True
+                    ),
+                    (
+                        ItmPoolDefinition=None,
+                        InvBalanceDefinition=None,
+                        Probability=(
+                            BaseValueConstant=0,
+                            BaseValueAttribute=None,
+                            InitializationDefinition=None,
+                            BaseValueScaleConstant=0
+                        ),
+                        bDropOnDeath=True
+                    ),
+                    (
+                        ItmPoolDefinition=None,
+                        InvBalanceDefinition=None,
+                        Probability=(
+                            BaseValueConstant=0,
+                            BaseValueAttribute=None,
+                            InitializationDefinition=None,
+                            BaseValueScaleConstant=0
+                        ),
+                        bDropOnDeath=True
                     )
                 )
 
@@ -2160,59 +2069,22 @@ BL2
 
         #</Add Dragon Keep "Alignment" Class Mods to Global Drop Pool>
 
-        #<Add Gemstones to E-Tech Pool>
+        #<Add Gemstones to Purple Pool>
 
-            # Adds Gemstone weapons to the main global E-Tech pool, so that they'll drop
-            # in the main world.  This will give gemstones a roughly equal chance of
-            # dropping, compared to E-Techs.
+            # Adds Gemstone weapons to the main global purple pool, so that they'll drop
+            # in the main world.
 
-            {mp:gemstone_ar_dahl}
+            {mp:gemstone_ar}
 
-            {mp:gemstone_ar_bandit}
+            {mp:gemstone_pistol}
 
-            {mp:gemstone_ar_vladof}
+            {mp:gemstone_shotgun}
 
-            {mp:gemstone_ar_jakobs}
+            {mp:gemstone_smg}
 
-            {mp:gemstone_ar_torgue}
+            {mp:gemstone_sniper}
 
-            {mp:gemstone_pistol_jakobs}
-
-            {mp:gemstone_pistol_hyperion}
-
-            {mp:gemstone_pistol_maliwan}
-
-            {mp:gemstone_pistol_vladof}
-
-            {mp:gemstone_pistol_torgue}
-
-            {mp:gemstone_sg_torgue}
-
-            {mp:gemstone_sg_hyperion}
-
-            {mp:gemstone_sg_jakobs}
-
-            {mp:gemstone_sg_tediore}
-
-            {mp:gemstone_sg_bandit}
-
-            {mp:gemstone_smg_tediore}
-
-            {mp:gemstone_smg_bandit}
-
-            {mp:gemstone_smg_hyperion}
-
-            {mp:gemstone_smg_dahl}
-
-            {mp:gemstone_sniper_jakobs}
-
-            {mp:gemstone_sniper_hyperion}
-
-            {mp:gemstone_sniper_dahl}
-
-            {mp:gemstone_sniper_vladof}
-
-        #</Add Gemstones to E-Tech Pool>
+        #</Add Gemstones to Purple Pool>
 
         #<Add Uniques to Legendary Pools>
 
@@ -2362,6 +2234,40 @@ BL2
 
         #</Add Seraphs to Legendary Pools>
 
+        #<Add Effervescents to Legendary Pools>
+
+            #<Weapons>
+
+                {mp:legendary_eff_adds}
+
+            #</Weapons>
+
+            #<Shields>
+
+                {mp:shield_retainer}
+
+                {mp:shield_easy_mode}
+
+            #</Shields>
+
+            #<Grenades>
+
+                {mp:grenade_antifection}
+
+                {mp:grenade_electric_chair}
+
+            #</Grenades>
+
+            #<Relics>
+
+                {mp:relic_mouthwash}
+
+                {mp:relic_hard_carry}
+
+            #</Relics>
+
+        #</Add Effervescents to Legendary Pools>
+
     #</Loot Pool Setup>
 
     #<Add Undesirable Items to Pools (disabled by default)><MUT>
@@ -2408,25 +2314,45 @@ BL2
 
             #</ERROR MESSAGE>
 
+            #<Fire Drill>
+
+                # Fire Drill is actually a very good weapon, but it can't drop in the game
+                # ordinarily, and isn't totally finished in the game (it's clearly supposed
+                # to be an Effervescent but is in the Legendary rarity, etc).
+
+                {mp:pistol_fire_drill}
+
+            #</Fire Drill>
+
             #<Vault Hunter's Relic>
 
                 {mp:relic_vault_hunter}
 
             #</Vault Hunter's Relic>
 
+            #<Winter Is Over Relic>
+
+                # There's nothing *wrong* with this relic, but it's pretty underwhelming
+                # on its own, and has a repeatable dedicated loot source anyway, so I'm
+                # excluding it by default.
+
+                {mp:relic_winter_is_over}
+
+            #</Winter Is Over Relic>
+
         #</Add Undesirable Items>
 
     #</Add Undesirable Items to Pools (disabled by default)>
 
-    #<E-Tech Drop Rate Adjustment (defaults to 2x)><MUT>
+    #<Purple Drop Rate Adjustment (defaults to 1.3x)><MUT>
 
-{etech_scale_2x}
+{purple_scale_13x}
 
-{etech_scale_3x}
+{purple_scale_16x}
 
-{etech_scale_base}
+{purple_scale_base}
 
-    #</E-Tech Drop Rate Adjustment (defaults to 2x)>
+    #</Purple Drop Rate Adjustment (defaults to 2x)>
 
     #<Legendary Drop Rate Adjustment (defaults to 2x)><MUT>
 

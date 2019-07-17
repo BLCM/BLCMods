@@ -1,9 +1,54 @@
         #<{section_label}>
 
-            set GD_Itempools.DropWeights.DropODDS_BossUniques:ConstantAttributeValueResolver_0 ConstantValue {unique_pct}
+            #<Base Constants>
 
-            set GD_Itempools.DropWeights.DropODDS_BossUniqueRares:ConstantAttributeValueResolver_0 ConstantValue {rare_pct}
+                set GD_Itempools.DropWeights.DropODDS_BossUniques:ConstantAttributeValueResolver_0 ConstantValue {unique_pct}
 
-            set GD_Itempools.DropWeights.DropODDS_BossUniquesRareSpawnMonster:ConstantAttributeValueResolver_0 ConstantValue {unique_pct}
+                set GD_Itempools.DropWeights.DropODDS_BossUniqueRares:ConstantAttributeValueResolver_0 ConstantValue {rare_pct}
+
+                set GD_Itempools.DropWeights.DropODDS_BossUniquesRareSpawnMonster:ConstantAttributeValueResolver_0 ConstantValue {unique_pct}
+
+            #</Base Constants>
+
+            #<Lt. Hoffman Pool Tweaks>
+
+                # Lt. Hoffman, from DLC5 (Commander Lilith), has a unique equip pool which
+                # always drops the weapon he's holding, and is split between a purple sniper
+                # rifle and the Hot Mama.  In order to drop at our specified rates, we have
+                # to touch these pools directly.
+
+                level ResearchCenter_P set GD_Anemone_ItemPools.WeaponPools.Pool_Weapons_Hoffman_SR01 BalancedItems[0].Probability
+                (
+                    BaseValueConstant=1,
+                    BaseValueAttribute=None,
+                    InitializationDefinition=None,
+                    BaseValueScaleConstant={hoff_other_pct_pt1}
+                )
+
+                level ResearchCenter_P set GD_Anemone_ItemPools.WeaponPools.Pool_Weapons_Hoffman_SR01 BalancedItems[1].Probability
+                (
+                    BaseValueConstant=1,
+                    BaseValueAttribute=None,
+                    InitializationDefinition=None,
+                    BaseValueScaleConstant={unique_pct}
+                )
+
+                level ResearchCenter_P set GD_Anemone_ItemPools.WeaponPools.Pool_Weapons_Hoffman_SR02 BalancedItems[0].Probability
+                (
+                    BaseValueConstant=1,
+                    BaseValueAttribute=None,
+                    InitializationDefinition=None,
+                    BaseValueScaleConstant={hoff_other_pct_pt2}
+                )
+
+                level ResearchCenter_P set GD_Anemone_ItemPools.WeaponPools.Pool_Weapons_Hoffman_SR02 BalancedItems[1].Probability
+                (
+                    BaseValueConstant=1,
+                    BaseValueAttribute=None,
+                    InitializationDefinition=None,
+                    BaseValueScaleConstant={unique_dbl_pct}
+                )
+
+            #</Lt. Hoffman Pool Tweaks>
 
         #</{section_label}>
