@@ -34,7 +34,7 @@ BL2
 
     #</Fix Enemy Roid/Maylay Shield Damage>
 
-    #<Legendary Pool Setup (optionally add uniques + seraphs)>
+    #<Legendary Pool Setup (optionally add uniques, seraphs, and effervescents)>
 
         # This category does some basic setup which then lets us alter
         # the legendary shield pools dynamically in the next category.
@@ -405,6 +405,28 @@ BL2
                         BaseValueScaleConstant=1.000000
                     ),
                     bDropOnDeath=True
+                ),
+                (
+                    ItmPoolDefinition=None,
+                    InvBalanceDefinition=None,
+                    Probability=(
+                        BaseValueConstant=0.000000,
+                        BaseValueAttribute=None,
+                        InitializationDefinition=None,
+                        BaseValueScaleConstant=1.000000
+                    ),
+                    bDropOnDeath=True
+                ),
+                (
+                    ItmPoolDefinition=None,
+                    InvBalanceDefinition=None,
+                    Probability=(
+                        BaseValueConstant=0.000000,
+                        BaseValueAttribute=None,
+                        InitializationDefinition=None,
+                        BaseValueScaleConstant=1.000000
+                    ),
+                    bDropOnDeath=True
                 )
             )
 
@@ -448,7 +470,15 @@ BL2
 
         #</Add Seraphs to Legendary Shield Pools>
 
-    #</Legendary Pool Setup (optionally add uniques + seraphs)>
+        #<Add Effervescents to Legendary Shield Pools>
+
+            {mp:shield_retainer}
+
+            {mp:shield_easy_mode}
+
+        #</Add Effervescents to Legendary Shield Pools>
+
+    #</Legendary Pool Setup (optionally add uniques, seraphs, and effervescents)>
 
     #<Stalker Shield Quality (choose one)><MUT>
 
