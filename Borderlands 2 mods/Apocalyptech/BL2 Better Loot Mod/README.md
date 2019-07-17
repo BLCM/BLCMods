@@ -68,12 +68,15 @@ options in the mod file itself.)*
 
 Specifically, this mod does the following:
 
-* By default, adds all legendaries/uniques/pearls/seraph items (weapons,
-  grenade mods, class mods, shields, relics) into the global "legendary" loot
-  pools, so you'll start seeing those much more frequently.
+* By default, adds all legendaries/uniques/pearls/seraph/effervescent items
+  (weapons, grenade mods, class mods, shields, relics) into the global
+  "legendary" loot pools, so you'll start seeing those much more frequently.
+  * The Fire Drill, an unused Infinity variant from the Commander Lilith DLC,
+    has been added to the global drop pools.  No other unused weapon from
+    that DLC has been added, though -- there are a few others.
 * By default, loot will skew much more rare.  You should expect to see
-  those legendaries/uniques/pearls/seraphs far more frequently than in
-  vanilla BL2.
+  those legendaries/uniques/pearls/seraphs/effervescents far more frequently
+  than in vanilla BL2.
 * Adds the "Alignment" Class Mods from the Dragon Keep DLC into the global
   Class Mod drop pools (and makes those COMs always drop at at least blue
   rarity).
@@ -106,6 +109,7 @@ Specifically, this mod does the following:
     somewhat, but gear from safes will always be legendary.
   * Fixes some "shield" loot configurations which had an error and would never
     spawn, previously.
+  * Marcus's Storeroom, from the Commander Lilith DLC, has been vastly improved.
 * Makes Eridium drop 2.5x more often
 * Makes Torgue Tokens more numerous when dropped
 * Boss drop pools are generally improved, and by default, bosses are guaranteed
@@ -129,6 +133,7 @@ Specifically, this mod does the following:
     * Badass Fire Archers
     * Badass Knights
     * Badass Yeti
+    * Infected Badass Sprouts
     * Undead Badass Psychos
     * Wattle Gobble Tributes *(three out of the twelve weren't set to drop anything)*
   * A few more standard enemies have also been set to drop from the badass pool:
@@ -162,6 +167,9 @@ Specifically, this mod does the following:
     * The BLNG Loader (from Wedding Day Massacre) will drop from the badass pool and
       also drop a whole bunch of money.  I've always been mystified why it didn't
       drop a ton of money from the start.
+    * Sandworms from the Commander Lilith DLC will be a bit more likely to drop
+      the Toothpick and Retainer
+    * New Pandora troops will be a bit more likely to drop the Infection Cleaner
 * Improved gifts received in The Talon of God (from Sanctuary residents) to
   be purples and gemstones.
 * Remove early-game loot restrictions.  This is actually a superset of the
@@ -185,10 +193,11 @@ user-changeable:
   a copy of my own BL2 Early Bloomer mod, though there's no harm in having both
   active at the same time.
 * **Legendary and E-Tech Pool Adjustments** - The default configuration adds all
-  unique, legendary, seraph, and pearlescent weapons/items (including gemstone
-  weapons) into the main global loot pools, so all items can technically be found
-  just about anywhere.  You can tweak which groups of items/weapons get added by
-  going in here and disabling any you don't want to drop.
+  unique, legendary, seraph, pearlescent, and effevescent weapons/items (including
+  gemstone weapons) into the main global loot pools, so all items can
+  technically be found just about anywhere.  You can tweak which groups of
+  items/weapons get added by going in here and disabling any you don't want to
+  drop.
 * **Drop Quality** - This is the main section which determines the quality of
   drops that you'll get throughout the game.  The choices range from "Excellent"
   (which used to be called "Lootsplosion," pre-1.3.0), all the way down to
@@ -213,7 +222,7 @@ Compatibility
 
 ### UCP
 
-This mod should be fully compatible with UCP 4.1.  It should also probably run
+This mod should be fully compatible with UCP 4.2.  It should also probably run
 fine without, though it's received less testing that way.
 
 ### BL2 Reborn
@@ -287,6 +296,14 @@ easily persuaded otherwise if someone feels strongly about it.
   technically different items)*
 * "ERROR MESSAGE" Ahab (the one used by Master Gee).  Regular Ahabs will
   still spawn, though.
+* "Winter is Over" relic, which you can get from Ghost in The Burrows.
+  It's a pretty underwhelming relic on its own, and has a guaranteed
+  spawn point anyway.
+
+The effervescent-level relics and shields (Mouthwash, Hard Carry, Retainer,
+and Easy Mode), like effervescent weapons, can be found as world drops,
+but at reduced weights, since those are very special-purpose and have
+clearly-defined acquisition methods.
 
 A handful of containers will only ever drop common-level gear:
 
@@ -299,7 +316,6 @@ left alone:
 
 * Golden Chest
 * Money Boxes / Laundry Machines / Toilets / etc
-* Loot Midgets
 
 Some other stuff not done:
 
@@ -332,9 +348,7 @@ well-covered in other mods, so instead I'll just mention them here.
 Bugs
 ====
 
-* The mission Medical Mystery: X-Com-municate is supposed to reward an
-  E-Tech pistol, but because we add gemstones into the E-Tech pool (at least
-  by default), you may end up with a gemstone weapon instead.
+* Nothing known at the moment
 
 TODO
 ====
@@ -357,6 +371,9 @@ TODO
   Slaughterdome missions (or rather, in the Slaughterdome areas).  That might
   be especially helpful in Murderlin's Temple.
 * Make a Reborn-compatible version of this
+* I feel like too many of the New Pandora troops drop from the badass pools,
+  given that there tend to be quite a few of them together.  Various fights
+  have 3+ snipers, etc.  Leaving it for now, but may nerf later...
 
 Other Notes
 ===========
@@ -427,7 +444,29 @@ for the full text.
 Changelog
 =========
 
-**v1.3.2**, November 6, 2018:
+**v1.3.4**, July 15, 2019:
+ * Buffed Chubby/Tubby drops a bit more, will have a guaranteed drop from the
+   "epic chest" pool.
+ * Moved Gemstone weapons from the E-Tech pools to the Purple pools
+   * Medical Mystery will now always correctly reward an E-Tech
+   * Fixed a few gemstone types which weren't actually dropping properly
+
+**v1.3.3**, July 11, 2019 (commit `7b2a237de7fbcbaa7bd583d892529b85400954e5`):
+ * Updated for full DLC5 (Commander Lilith & the Fight For Sanctuary)
+   compatibility.
+ * Slight reorganization of main `GunsAndGear` pool and Class Mod pool to
+   provide better compatibility for hypothetical mods which touch those
+   pools and want to be compatible with Better Loot and without.  Not that
+   those exist...
+ * Buffed Loot Midget drop pools.
+
+**v1.3.2-and-a-bit**, June 11, 2019 (commit `1f3559e5944d249b68ea18ba67fb1d20ee678189`):
+ * FromDarkHell updated the BLCMods github to fix the majority of
+   DLC5-related weapon part errors, which included this mod.  DLC guns
+   post-Commander-Lilith-DLC were fixed as of this update, though the
+   version number didn't actally get bumped.
+
+**v1.3.2**, November 6, 2018 (commit `2e729a97a0279f6815254242a65649f9a4438f0e`):
  * Fixed a small typo which would otherwise cause an error to be flagged in a
    forthcoming version of BLCMM.  (No actual functional changes, though.)
 

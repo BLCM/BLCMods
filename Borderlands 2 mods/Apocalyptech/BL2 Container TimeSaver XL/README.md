@@ -57,6 +57,11 @@ See [COPYING-mods.txt](../COPYING-mods.txt) for the full text.
 Changelog
 =========
 
+**v1.0.4** - July 9, 2019
+ * Added support for Commander Lilith & the Fight for Sanctuary containers.
+   Thanks to Ezeith for doing some initial groundwork on this while I
+   still hadn't had time to go through the DLC!
+
 **v1.0.3** - December 27, 2018
  * Fixed loot midget chests (including the most obviously-broken ones, the
    cardboard boxes during Doctor's Orders)
