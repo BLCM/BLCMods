@@ -2,6 +2,9 @@
 #<!!!You opened a file saved with BLCMM in FilterTool. Please update to BLCMM to properly open this file!!!>
 	<head>
 		<type name="BL2" offline="false"/>
+		<profiles>
+			<profile name="default" current="true"/>
+		</profiles>
 	</head>
 	<body>
 		<category name="Earlier Missions">
@@ -45,14 +48,15 @@
 					<category name="Lynchwood Missions">
 						<comment>The first option allows 'Breaking the Bank, '3:10 to Kaboom', and 'Showdown' to start as soon as you finish 'The Once and Future Slab', as well as make Demon Hunter start immediately after 'Animal Rescue: Shelter'.</comment>
 						<comment>The other option allows all of them to start at 'A Dam Fine Rescue' and breaks canon.</comment>
+						<comment>Lynchwood is also re-rigged to not be so high of a level compared to when you can first reach it from the Dust.</comment>
 					</category>
 					<category name="Early Raid Boss Missions">
-						<comment>You. Will. Die. (Seriously.) - Startable at 'The Once and Future Slab'</comment>
-						<comment>Hyperius the Invincible - Startable at 'Whoops'</comment>
-						<comment>Master Gee the Invincible - Startable at 'Two Easy Pieces' </comment>
+						<comment>You. Will. Die. (Seriously.) - Startable at 'The Once and Future Slab'.</comment>
+						<comment>Hyperius the Invincible - Startable at 'Whoops'.</comment>
+						<comment>Master Gee the Invincible - Startable at 'Two Easy Pieces' .</comment>
 						<comment>Pete the Invincible - Startable at 'Chop-Suey' after killing him the first time.</comment>
-						<comment>Voracidous the Invincible - Startable at 'The Fall of Nakayama'</comment>
-						<comment>Raiders of the Last Boss - Startable at 'A Game of Games'</comment>
+						<comment>Voracidous the Invincible - Startable at 'The Fall of Nakayama'.</comment>
+						<comment>Raiders of the Last Boss - Startable at 'A Game of Games'.</comment>
 					</category>
 				</category>
 			</category>
@@ -378,9 +382,6 @@ set GD_Orchid_Raid.M_Orchid_Raid3 Dependencies (MissionDefinition'GD_Orchid_Plot
 set GD_IrisRaidBoss.M_Iris_RaidPete Dependencies (MissionDefinition'GD_IrisEpisode02.M_IrisEp2_FindBattle')
 set GD_IrisRaidBoss.M_Iris_RaidPete ObjectiveDependency (Objective=MissionObjectiveDefinition'GD_IrisEpisode03.M_IrisEp3_ChopSuey:KillPete',Status=EODS_Complete)
 set GD_Sage_Raid.M_Sage_Raid Dependencies (MissionDefinition'GD_Sage_Ep4.M_Sage_Mission04')
-
-#Direct-Execute Warning:
-say WARNING: "Earlier Missions" must be imported into BLCMM to run properly with UCP or other mods.
 
 #Hotfixes:
 set Transient.SparkServiceConfiguration_6 Keys ("SparkLevelPatchEntry-GBX_fixes1","SparkLevelPatchEntry-GBX_fixes2","SparkLevelPatchEntry-GBX_fixes3","SparkLevelPatchEntry-GBX_fixes4","SparkLevelPatchEntry-GBX_fixes5","SparkLevelPatchEntry-GBX_Fixes6","SparkLevelPatchEntry-GBX_Fixes7","SparkLevelPatchEntry-GBX_Fixes8","SparkLevelPatchEntry-GBX_Fixes9","SparkLevelPatchEntry-GBX_fixes10","SparkLevelPatchEntry-GBX_fixes11","SparkLevelPatchEntry-GBX_fixes12","SparkLevelPatchEntry-GBX_fixes13","SparkLevelPatchEntry-GBX_fixes14","SparkOnDemandPatchEntry-GBX_fixes15","SparkOnDemandPatchEntry-GBX_fixes16","SparkOnDemandPatchEntry-GBX_fixes17","SparkOnDemandPatchEntry-GBX_fixes18","SparkOnDemandPatchEntry-GBX_fixes19","SparkPatchEntry-GBX_fixes20","SparkPatchEntry-GBX_fixes21","SparkPatchEntry-GBX_fixes22","SparkPatchEntry-GBX_fixes23","SparkLevelPatchEntry-Name1","SparkLevelPatchEntry-Name2")
