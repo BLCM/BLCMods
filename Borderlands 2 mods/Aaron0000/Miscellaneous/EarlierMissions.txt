@@ -1,0 +1,388 @@
+<BLCMM v="1">
+#<!!!You opened a file saved with BLCMM in FilterTool. Please update to BLCMM to properly open this file!!!>
+	<head>
+		<type name="BL2" offline="false"/>
+	</head>
+	<body>
+		<category name="Earlier Missions">
+			<category name="Description">
+				<comment>By Aaron0000</comment>
+				<comment>Allows a number of missions in the game to be started sooner than usual.</comment>
+				<category name="Mission List">
+					<comment>Symbiosis - No longer needs 'Shielded Favors' finished.</comment>
+					<comment>The Ice Man Cometh - Startable at 'A Dam Fine Rescue'.</comment>
+					<comment>Slap-Happy - Startable at 'Rising Action' without having to finish 'Mighty Morphin''.</comment>
+					<comment>Splinter Group - Startable at 'A Dam Fine Rescue' after lowering the bridge to Bloodshot Dam.</comment>
+					<comment>'Mine, All Mine' and 'The Pretty Good Train Robbery' - No longer requires grabbing Tina's completed missiles.</comment>
+					<comment>The Cold Shoulder - Startable at 'A Train to Catch' since Scooter won't talk during 'Rising Action'.</comment>
+					<comment>Swallowed Whole - Startable at 'A Train to Catch' since Scooter won't talk during 'Rising Action'.</comment>
+					<comment>Hyperion Contract #873 - Startable at 'Wildlife Preservation'.</comment>
+					<comment>Monster Mash (Part 1 and Part 2) - Startable at 'Hunting the Firehawk' after 'Do No Harm'</comment>
+					<comment>Monster Mash (Part 3) - Startable at 'Data Mining'.</comment>
+					<comment>Grendel - Startable at 'A Study in Scarlett'.</comment>
+					<comment>Catch a Ride and Also Tetanus - Startable at 'The Hermit'.</comment>
+					<comment>Don't Copy That Cloppy - No longer requires finishing 'I Know It When I See It' to start.</comment>
+					<comment>Freedom of Speech - Startable immediately after 'Don't Copy That Floppy'.</comment>
+					<comment>Faster Than the Speed of Love - Startable at 'Two Easy Pieces'.</comment>
+					<comment>Totally Recall - Startable at 'Burn, Baby, Burn'.</comment>
+					<comment>Mother-Lover - Startable at 'Burn, Baby, Burn'.</comment>
+					<comment>My Husband the Skag - Startable at 'Knockin' on Heaven's Door'.</comment>
+					<comment>Commercial Appeal - Startable at 'Knockin' on Heaven's Door'.</comment>
+					<comment>Palling Around - Startable at 'Professor Nakayama, I Presume?'.</comment>
+					<comment>Tree Hugger - Now longer requires handing Davlin the Blood Fruit the first time to appear.</comment>
+					<comment>Sirentology - Startable at 'Shooting the Moon' after following Tina to Fire Control Alpha.</comment>
+					<comment>My Brittle Pony - Startable at 'The Cost of Progress'.</comment>
+					<comment>The Hunt is Vaughn - Startableimmediately after finishing 'The Vaughnguard'.</comment>
+					<comment>Chief Executive Overlord - Startable at 'The Cost of Progress' after finishing his other two missions.</comment>
+					<comment>Trick or Treat - Startable after talking to TK for the first time.</comment>
+					<comment>Grandma Flexington's Story - Startable after talking to Mr. Torgue for the first time.</comment>
+					<comment>Special Delivery - Startable after talking to Tiny Tim for the first time.</comment>
+					<category name="Missions that break canon">
+						<comment>The Name Game - Startable at 'Cleaning Up the Berg'. (Only breaks canon slightly.)</comment>
+						<comment>Animal Rights - Startable at 'Wildlife Preservation'.</comment>
+						<comment>Rakkaholics Anonymous - Startable at 'Wildlife Preservation'.</comment>
+					</category>
+					<category name="Lynchwood Missions">
+						<comment>The first option allows 'Breaking the Bank, '3:10 to Kaboom', and 'Showdown' to start as soon as you finish 'The Once and Future Slab', as well as make Demon Hunter start immediately after 'Animal Rescue: Shelter'.</comment>
+						<comment>The other option allows all of them to start at 'A Dam Fine Rescue' and breaks canon.</comment>
+					</category>
+					<category name="Early Raid Boss Missions">
+						<comment>You. Will. Die. (Seriously.) - Startable at 'The Once and Future Slab'</comment>
+						<comment>Hyperius the Invincible - Startable at 'Whoops'</comment>
+						<comment>Master Gee the Invincible - Startable at 'Two Easy Pieces' </comment>
+						<comment>Pete the Invincible - Startable at 'Chop-Suey' after killing him the first time.</comment>
+						<comment>Voracidous the Invincible - Startable at 'The Fall of Nakayama'</comment>
+						<comment>Raiders of the Last Boss - Startable at 'A Game of Games'</comment>
+					</category>
+				</category>
+			</category>
+			<category name="Code">
+				<category name="Missions still make sense canonically">
+					<category name="Base Game">
+						<category name="Symbiosis - Remove the 'Shielded Favors' requirement">
+							<code profiles="default">set GD_Z1_Symbiosis.M_Symbiosis Dependencies ()</code>
+						</category>
+						<category name="The Ice Man Cometh - Starts at 'A Dam Fine Rescue'">
+							<code profiles="default">set GD_Z1_IceManCometh.M_IceManCometh Dependencies (MissionDefinition'GD_Episode05.M_Ep5_ThePhoenix',MissionDefinition'GD_Z1_NoVacancy.BalanceDefs.M_NoVacancy')</code>
+							<code profiles="default">set GD_Z1_IceManCometh.M_IceManCometh GameStageRegion WillowRegionDefinition'GD_GameStages.Zone1.Canyon'</code>
+						</category>
+						<category name="Splinter Group - Starts at 'A Dam Fine Rescue' after lowering the bridge">
+							<code profiles="default">set GD_Z2_SplinterGroup.M_SplinterGroup Dependencies (MissionDefinition'GD_Episode05.M_Ep5_ThePhoenix')</code>
+							<code profiles="default">set GD_Z2_SplinterGroup.M_SplinterGroup GameStageRegion WillowRegionDefinition'GD_GameStages.Zone1.Dam'</code>
+							<code profiles="default">set GD_Z2_SplinterGroup.M_SplinterGroup ObjectiveDependency (Objective=MissionObjectiveDefinition'GD_Episode06.M_Ep6_RescueRoland:UseBSGateKeyToLowerBridge',Status=EODS_Complete)</code>
+						</category>
+						<category name="Swallowed Whole - Now startable at 'A Train to Catch'">
+							<code profiles="default">set GD_Z3_SwallowedWhole.M_SwallowedWhole Dependencies (MissionDefinition'GD_Episode06.M_Ep6_RescueRoland')</code>
+							<code profiles="default">set GD_Z3_SwallowedWhole.M_SwallowedWhole GameStageRegion WillowRegionDefinition'GD_GameStages.Zone2.Fridge'</code>
+							<code profiles="default">set GD_Z3_SwallowedWhole.M_SwallowedWhole ObjectiveDependency (Objective=None,Status=EODS_Complete)</code>
+						</category>
+						<category name="The Cold Shoulder - Now startable at 'A Train to Catch'">
+							<code profiles="default">set GD_Z3_ColdShoulder.M_ColdShoulder Dependencies (MissionDefinition'GD_Episode06.M_Ep6_RescueRoland')</code>
+							<code profiles="default">set GD_Z3_ColdShoulder.M_ColdShoulder GameStageRegion WillowRegionDefinition'GD_GameStages.Zone2.Fridge'</code>
+							<code profiles="default">set GD_Z3_ColdShoulder.M_ColdShoulder ObjectiveDependency (Objective=None,Status=EODS_Complete)</code>
+						</category>
+						<category name="Slap Happy - Starts at 'Rising Action' without havng to finish 'Mighty Morphin''">
+							<code profiles="default">set GD_Z2_SlapHappy.M_SlapHappy Dependencies (MissionDefinition'GD_Episode07.M_Ep7_ATrainToCatch')</code>
+							<code profiles="default">set GD_Z2_SlapHappy.M_SlapHappy GameStageRegion WillowRegionDefinition'GD_GameStages.Zone2.Fridge'</code>
+							<code profiles="default">set GD_Z2_SlapHappy.M_SlapHappy ObjectiveDependency (Objective=None,Status=EODS_Complete)</code>
+						</category>
+						<category name="'Mine, All Mine' and 'The Pretty Good Train Robbery' - No longer requires collecting Tina's Finished Missiles to start">
+							<code profiles="default">set GD_Z1_MineAllMine.M_MineAllMine ObjectiveDependency (Objective=None,Status=EODS_Complete)</code>
+							<code profiles="default">set GD_Z1_TrainRobbery.M_TrainRobbery ObjectiveDependency (Objective=None,Status=EODS_Complete)</code>
+						</category>
+						<category name="Hyperion Contract #873 - Starts at 'Wildlife Preservation'">
+							<code profiles="default">set GD_Z3_HyperionContract873.M_HyperionContract873 Dependencies (MissionDefinition'GD_Episode09.M_Ep9_GetBackToSanctuary')</code>
+							<code profiles="default">set GD_Z3_HyperionContract873.M_HyperionContract873 GameStageRegion WillowRegionDefinition'GD_GameStages.Zone2.PandoraPark'</code>
+						</category>
+						<category name="Monster Mash">
+							<category name="Monster Mash (Part 1) - Starts at 'A Dam Fine Rescue' after 'Do No Harm'">
+								<code profiles="default">set GD_Z3_MonsterMash1.M_MonsterMash1 Dependencies (MissionDefinition'GD_Episode05.M_Ep5_ThePhoenix'MissionDefinition'GD_Z1_Surgery.M_PerformSurgery')</code>
+								<code profiles="default">set GD_Z3_MonsterMash1.M_MonsterMash1 GameStageRegion WillowRegionDefinition'GD_GameStages.Zone1.Canyon'</code>
+							</category>
+							<category name="Monster Mash (Part 2) - Set level to match 'Monster Mash (Part 1)'">
+								<code profiles="default">set GD_Z3_MonsterMash2.M_MonsterMash2 GameStageRegion WillowRegionDefinition'GD_GameStages.Zone1.Canyon'</code>
+							</category>
+							<category name="Monster Mash (Part 3) - Starts at 'Data Mining'">
+								<code profiles="default">set GD_Z3_MonsterMash3.M_MonsterMash3 Dependencies (MissionDefinition'GD_Z3_MonsterMash2.M_MonsterMash2',MissionDefinition'GD_Episode16.M_Ep16_LockAndLoad')</code>
+								<code profiles="default">set GD_Z3_MonsterMash3.M_MonsterMash3 GameStageRegion WillowRegionDefinition'GD_GameStages.Zone3.OnFireStone'</code>
+							</category>
+						</category>
+					</category>
+					<category name="Campaign DLC">
+						<category name="Captain Scarlett and her Pirate's Booty">
+							<category name="Grendel - Starts at 'A Study in Scarlett'">
+								<code profiles="default">set GD_Orchid_SM_Grendel.M_Orchid_Grendel Dependencies (MissionDefinition'GD_Orchid_Plot_Mission02.M_Orchid_PlotMission02')</code>
+							</category>
+							<category name="Faster Than the Speed of Love - Starts at 'Two Easy Pieces'">
+								<code profiles="default">set GD_Orchid_SM_Race.M_Orchid_Race Dependencies (MissionDefinition'GD_Orchid_Plot_Mission03.M_Orchid_PlotMission03')</code>
+								<code profiles="default">set GD_Orchid_SM_Race.M_Orchid_Race GameStageRegion WillowRegionDefinition'GD_Orchid_GameStages.Regions.Orchid_MissionGamestageB'</code>
+							</category>
+							<category name="Catch a Ride and also Tetanus - Starts at 'The Hermit'">
+								<code profiles="default">set GD_Orchid_SM_Tetanus.M_Orchid_CatchRideTetanus Dependencies (MissionDefinition'GD_Orchid_Plot_Mission04.M_Orchid_PlotMission04')</code>
+								<code profiles="default">set GD_Orchid_SM_Tetanus.M_Orchid_CatchRideTetanus GameStageRegion WillowRegionDefinition'GD_Orchid_GameStages.Regions.Orchid_MissionGamestageC'</code>
+							</category>
+							<category name="Don't Copy That Floppy - No longer requires finishing 'I Know It When I See It' to start">
+								<code profiles="default">set GD_Orchid_SM_FloppyCopy.M_Orchid_DontCopyThatFloppy Dependencies (MissionDefinition'GD_Orchid_Plot_Mission06.M_Orchid_PlotMission06')</code>
+							</category>
+							<category name="Freedom of Speech - Starts immediately after 'I Know it When I See It' and 'Don't Copy That Floppy' are Completed">
+								<code profiles="default">set GD_Orchid_SM_Freedom.M_Orchid_FreedomOfSpeech Dependencies (MissionDefinition'GD_Orchid_SM_KnowIt.M_Orchid_KnowItWhenSeeIt',MissionDefinition'GD_Orchid_SM_FloppyCopy.M_Orchid_DontCopyThatFloppy')</code>
+							</category>
+						</category>
+						<category name="Mr. Torgue's Campaign of Carnage">
+							<category name="Totally Recall - Starts at 'Burn, Baby, Burn'">
+								<code profiles="default">set GD_IrisDL2_ProductRecall.M_IrisDL2_ProductRecall Dependencies (MissionDefinition'GD_IrisEpisode02.M_IrisEp2_CultOfPersonality')</code>
+								<code profiles="default">set GD_IrisDL2_ProductRecall.M_IrisDL2_ProductRecall GameStageRegion WillowRegionDefinition'GD_Iris_GameStages.Regions.Iris_MissionGamestageB'</code>
+							</category>
+							<category name="Mother-Lover - Starts at 'Burn, Baby, Burn'">
+								<code profiles="default">set GD_IrisDL2_DontTalkAbtMama.M_IrisDL2_DontTalkAbtMama Dependencies (MissionDefinition'GD_IrisEpisode02.M_IrisEp2_CultOfPersonality')</code>
+								<code profiles="default">set GD_IrisDL2_DontTalkAbtMama.M_IrisDL2_DontTalkAbtMama GameStageRegion WillowRegionDefinition'GD_Iris_GameStages.Regions.Iris_MissionGamestageB'</code>
+							</category>
+							<category name="My Husband the Skag - Starts at 'Knockin' on Heaven's Door'">
+								<code profiles="default">set GD_IrisDL3_MySkag.M_IrisDL3_MySkag Dependencies (MissionDefinition'GD_IrisEpisode05.M_IrisEp5_CageMatch')</code>
+								<code profiles="default">set GD_IrisDL3_MySkag.M_IrisDL3_MySkag GameStageRegion WillowRegionDefinition'GD_Iris_GameStages.Regions.Iris_MissionGamestageD'</code>
+							</category>
+							<category name="Commercial Appeal - Starts at 'Knockin' on Heaven's Door'">
+								<code profiles="default">set GD_IrisDL3_CommAppeal.M_IrisDL3_CommAppeal Dependencies (MissionDefinition'GD_IrisEpisode05.M_IrisEp5_CageMatch')</code>
+								<code profiles="default">set GD_IrisDL3_CommAppeal.M_IrisDL3_CommAppeal GameStageRegion WillowRegionDefinition'GD_Iris_GameStages.Regions.Iris_MissionGamestageD'</code>
+							</category>
+						</category>
+						<category name="Sir Hammerlock's Big Game Hunt">
+							<category name="Palling Around - Starts at 'Professor Nakayama, I Presume?'">
+								<code profiles="default">set GD_Sage_SM_PallingAround.M_Sage_PallingAround Dependencies (MissionDefinition'GD_Sage_Ep1.M_Sage_Mission01')</code>
+								<code profiles="default">set GD_Sage_SM_PallingAround.M_Sage_PallingAround GameStageRegion WillowRegionDefinition'GD_Sage_GameStages.Regions.Sage_MissionGamestageA_Reward'</code>
+							</category>
+						</category>
+						<category name="Tiny Tina's Assault on Dragon's Keep">
+							<category name="Tree Hugger - Starts at beginning of 'Denial, Anger' Initiative' instead of after giving Davlin the Blood Fruit">
+								<code profiles="default">set GD_Aster_TreeHugger.M_TreeHugger ObjectiveDependency (Objective=None,Status=EODS_Complete)</code>
+							</category>
+							<category name="Raiders of the Last Boss - Startable at 'A Game of Games'">
+								<code profiles="default">set GD_Aster_RaidBoss.M_Aster_RaidBoss ObjectiveDependency (Objective=None,Status=EODS_Complete)</code>
+								<code profiles="default">set GD_Aster_RaidBoss.M_Aster_RaidBoss Dependencies (MissionDefinition'GD_Aster_Plot_Mission04.M_Aster_PlotMission03')</code>
+							</category>
+						</category>
+						<category name="Commander Lilith and the Fighter for Sanctuary">
+							<category name="Sirentology - Starts at 'Shooting the Moon' after following Tina to Fire Control Alpha">
+								<code profiles="default">set GD_Anemone_Side_Sirentology.M_Anemone_Sirentology Dependencies (MissionDefinition'GD_Anemone_Plot_Mission030.M_Anemone_PlotMission030')</code>
+								<code profiles="default">set GD_Anemone_Side_Sirentology.M_Anemone_Sirentology ObjectiveDependency (Objective=MissionObjectiveDefinition'GD_Anemone_Plot_Mission040.M_Anemone_PlotMission040:FollowTina',Status=EODS_Complete)</code>
+								<code profiles="default">set GD_Anemone_Side_Sirentology.M_Anemone_Sirentology GameStageRegion WillowRegionDefinition'GD_Anemone_GameStages.Regions.Anemone_Helios'</code>
+							</category>
+							<category name="My Brittle Pony - Starts at 'The Cost of Progress'">
+								<code profiles="default">set GD_Anemone_Side_MyBrittlePony.M_Anemone_MyBrittlePony Dependencies (MissionDefinition'GD_Anemone_Plot_Mission040.M_Anemone_PlotMission040')</code>
+								<code profiles="default">set GD_Anemone_Side_MyBrittlePony.M_Anemone_MyBrittlePony GameStageRegion WillowRegionDefinition'GD_Anemone_GameStages.Regions.Anemone_ResearchCenter'</code>
+							</category>
+							<category name="The Hunt is Vaughn - Startable immediately after finishing 'The Vaughnguard'">
+								<code profiles="default">set GD_Anemone_Side_VaughnPart2.M_Anemone_VaughnPart2 Dependencies (MissionDefinition'GD_Anemone_Side_VaughnPart1.M_Anemone_VaughnPart1')</code>
+							</category>
+							<category name="Chief Executive Overlord - Startable at 'The Cost of Progress' after finishing his other two missions">
+								<code profiles="default">set GD_Anemone_Side_VaughnPart3.M_Anemone_VaughnPart3 Dependencies (MissionDefinition'GD_Anemone_Side_VaughnPart2.M_Anemone_VaughnPart2',MissionDefinition'GD_Anemone_Plot_Mission030.M_Anemone_PlotMission040')</code>
+							</category>
+						</category>
+					</category>
+					<category name="Headhunter DLC">
+						<category name="T.K. Baha's Bloody Harvest">
+							<category name="Trick or Treat  - Now startable as soon as you talk to T.K. Baha for the first time">
+								<code profiles="default">set GD_FlaxMissions.M_TrickOrTreat Dependencies ()</code>
+								<code profiles="default">set GD_FlaxMissions.M_TrickOrTreat ObjectiveDependency (Objective=MissionObjectiveDefinition'GD_FlaxMissions.M_BloodHarvest:FindTKBaha',Status=EODS_Complete)</code>
+							</category>
+						</category>
+						<category name="The Horrible Hunger of the Ravenous Wattle Gobbler">
+							<category name="Grandma Flexington's Story - Now startable after talking to Mr. Torgue for the first time">
+								<code profiles="default">set GD_Allium_GrandmaFlexington.M_ListenToGrandma Dependencies ()</code>
+								<code profiles="default">set GD_Allium_GrandmaFlexington.M_ListenToGrandma ObjectiveDependency (Objective=MissionObjectiveDefinition'GD_Allium_TG_Plot_Mission01.M_Allium_ThanksgivingMission01:TalkToTorgue',Status=EODS_Complete)</code>
+							</category>
+						</category>
+						<category name="How Marcus Saved Mercenary Day">
+							<category name="Special Delivery - Now startable as soon as you talk to Tiny Tim for the first time">
+								<code profiles="default">set GD_Allium_Delivery.M_Delivery Dependencies ()</code>
+								<code profiles="default">set GD_Allium_Delivery.M_Delivery ObjectiveDependency (Objective=MissionObjectiveDefinition'GD_Allium_KillSnowman.M_KillSnowman:TalkToTim',Status=EODS_Complete)</code>
+							</category>
+						</category>
+					</category>
+				</category>
+				<category name="Missions break canon but are convienient">
+					<category name="The Name Game - Starts at 'Cleaning Up the Berg'">
+						<code profiles="default">set GD_Z1_NameGame.M_NameGame Dependencies (MissionDefinition'GD_Episode02.M_Ep2_Henchman')</code>
+						<code profiles="default">set GD_Z1_NameGame.M_NameGame ObjectiveDependency (Objective=MissionObjectiveDefinition'GD_Episode02.M_Ep2a_MoreGuns:Waitforpower',Status=EODS_Complete)</code>
+						<code profiles="default">set GD_Z1_NameGame.M_NameGame GameStageRegion WillowRegionDefinition'GD_GameStages.Zone1.Waterfront_A'</code>
+					</category>
+					<category name="Animals Rights - Starts at 'Wildlife Preservation'">
+						<code profiles="default">set GD_Z2_FreeWilly.M_FreeWilly Dependencies (MissionDefinition'GD_Episode09.M_Ep9_GetBackToSanctuary')</code>
+						<code profiles="default">set GD_Z2_FreeWilly.M_FreeWilly GameStageRegion WillowRegionDefinition'GD_GameStages.Zone2.PandoraPark'</code>
+					</category>
+					<category name="Rakkaholics Anonymous - Startable at 'Wildlife Preservation'">
+						<code profiles="default">set GD_Z2_Rakkaholics.M_Rakkaholics Dependencies (MissionDefinition'GD_Episode09.M_Ep9_GetBackToSanctuary')</code>
+						<code profiles="default">set GD_Z2_Rakkaholics.M_Rakkaholics GameStageRegion WillowRegionDefinition'GD_GameStages.Zone2.PandoraPark'</code>
+					</category>
+				</category>
+				<category name="Lynchwood Missions">
+					<category name="Lower Lynchwood's levels">
+						<hotfix name="Name" level="None">
+							<code profiles="default">set GD_GameStages.Balance.Balance_P1_Zone2 BalanceByRegion[7] (Region=WillowRegionDefinition'GD_GameStages.Zone2.Lynchwood',MinDefaultGameStage=(BaseValueConstant=12.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),MaxDefaultGameStage=(BaseValueConstant=14.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),DefaultAwesomeLevel=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bSpecifyBoostAbovePlayer=False,GameStageIncreaseAbovePlayer=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),MissionOverrides=((Mission=MissionDefinition'GD_Episode09.M_Ep9_GetBackToSanctuary',MinGameStage=(BaseValueConstant=18.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),MaxGameStage=(BaseValueConstant=20.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),AwesomeLevel=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(Mission=MissionDefinition'GD_Episode11.M_Ep11_LikeATonOf',MinGameStage=(BaseValueConstant=21.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),MaxGameStage=(BaseValueConstant=23.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),AwesomeLevel=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(Mission=MissionDefinition'GD_Episode13.M_Ep13_KillAngel',MinGameStage=(BaseValueConstant=24.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),MaxGameStage=(BaseValueConstant=26.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),AwesomeLevel=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(Mission=MissionDefinition'GD_Episode16.M_Ep16_LockAndLoad',MinGameStage=(BaseValueConstant=28.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),MaxGameStage=(BaseValueConstant=30.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),AwesomeLevel=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))))</code>
+							<code profiles="default">set GD_GameStages.Balance.Balance_P2_Zone2 BalanceByRegion[7] (Region=WillowRegionDefinition'GD_GameStages.Zone2.Lynchwood',MinDefaultGameStage=(BaseValueConstant=36.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),MaxDefaultGameStage=(BaseValueConstant=19.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),DefaultAwesomeLevel=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bSpecifyBoostAbovePlayer=False,GameStageIncreaseAbovePlayer=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),MissionOverrides=((Mission=MissionDefinition'GD_Episode09.M_Ep9_GetBackToSanctuary',MinGameStage=(BaseValueConstant=40.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),MaxGameStage=(BaseValueConstant=42.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),AwesomeLevel=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(Mission=MissionDefinition'GD_Episode11.M_Ep11_LikeATonOf',MinGameStage=(BaseValueConstant=43.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),MaxGameStage=(BaseValueConstant=45.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),AwesomeLevel=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(Mission=MissionDefinition'GD_Episode13.M_Ep13_KillAngel',MinGameStage=(BaseValueConstant=46.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),MaxGameStage=(BaseValueConstant=48.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),AwesomeLevel=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(Mission=MissionDefinition'GD_Episode16.M_Ep16_LockAndLoad',MinGameStage=(BaseValueConstant=47.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),MaxGameStage=(BaseValueConstant=49.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),AwesomeLevel=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))))</code>
+						</hotfix>
+					</category>
+					<category name="Starting Point" MUT="true">
+						<category name="Start at 'The Once and Future Slab' (doesn't break canon)">
+							<category name="Breaking the Bank">
+								<code profiles="default">set GD_Z2_TheBankJob.M_TheBankJob Dependencies (MissionDefinition'GD_Episode10.M_Ep10_BirdISTheWord')</code>
+								<code profiles="default">set GD_Z2_TheBankJob.M_TheBankJob GameStageRegion WillowRegionDefinition'GD_GameStages.Zone2.Cliffs_A'</code>
+							</category>
+							<category name="3:10 to Kaboom">
+								<code profiles="default">set GD_Z2_BlowTheBridge.M_BlowTheBridge Dependencies (MissionDefinition'GD_Episode10.M_Ep10_BirdISTheWord')</code>
+								<code profiles="default">set GD_Z2_BlowTheBridge.M_BlowTheBridge GameStageRegion WillowRegionDefinition'GD_GameStages.Zone2.Cliffs_A'</code>
+							</category>
+							<category name="Showdown">
+								<code profiles="default">set GD_Z2_KillTheSheriff.M_KillTheSheriff GameStageRegion WillowRegionDefinition'GD_GameStages.Zone2.Cliffs_A'</code>
+							</category>
+							<category name="Demon Hunter - Starts immediately after 'Animal Rescue: Shelter'">
+								<code profiles="default">set GD_Z2_DemonHunter.M_DemonHunter Dependencies (MissionDefinition'GD_Z2_Skagzilla2.M_Skagzilla2_Den')</code>
+								<code profiles="default">set GD_Z2_DemonHunter.M_DemonHunter GameStageRegion WillowRegionDefinition'GD_GameStages.Zone2.Cliffs_A'</code>
+							</category>
+						</category>
+						<category name="Start at 'A Dam Fine Rescue' (breaks canon)">
+							<category name="Breaking the Bank">
+								<code profiles="">set GD_Z2_TheBankJob.M_TheBankJob Dependencies (MissionDefinition'GD_Episode05.M_Ep5_ThePhoenix')</code>
+								<code profiles="">set GD_Z2_TheBankJob.M_TheBankJob GameStageRegion WillowRegionDefinition'GD_GameStages.Zone1.Dam'</code>
+							</category>
+							<category name="3:10 to Kaboom">
+								<code profiles="">set GD_Z2_BlowTheBridge.M_BlowTheBridge Dependencies (MissionDefinition'GD_Episode05.M_Ep5_ThePhoenix')</code>
+								<code profiles="">set GD_Z2_BlowTheBridge.M_BlowTheBridge GameStageRegion WillowRegionDefinition'GD_GameStages.Zone1.Dam'</code>
+							</category>
+							<category name="Showdown">
+								<code profiles="">set GD_Z2_KillTheSheriff.M_KillTheSheriff GameStageRegion WillowRegionDefinition'GD_GameStages.Zone1.Dam'</code>
+							</category>
+							<category name="Animal Rescue: Medicine">
+								<code profiles="">set GD_Z2_Skagzilla2.M_Skagzilla2_Pup Dependencies (MissionDefinition'GD_Episode05.M_Ep5_ThePhoenix')</code>
+								<code profiles="">set GD_Z2_Skagzilla2.M_Skagzilla2_Pup GameStageRegion WillowRegionDefinition'GD_GameStages.Zone1.Dam'</code>
+							</category>
+							<category name="Animal Rescue: Food">
+								<code profiles="">set GD_Z2_Skagzilla2.M_Skagzilla2_Adult Dependencies (MissionDefinition'GD_Episode05.M_Ep5_ThePhoenix')</code>
+								<code profiles="">set GD_Z2_Skagzilla2.M_Skagzilla2_Adult GameStageRegion WillowRegionDefinition'GD_GameStages.Zone1.Dam'</code>
+							</category>
+							<category name="Animal Rescue: Shelter">
+								<code profiles="">set GD_Z2_Skagzilla2.M_Skagzilla2_Den Dependencies (MissionDefinition'GD_Episode05.M_Ep5_ThePhoenix',MissionDefinition'GD_Z2_Skagzilla2.M_Skagzilla2_Adult')</code>
+								<code profiles="">set GD_Z2_Skagzilla2.M_Skagzilla2_Den GameStageRegion WillowRegionDefinition'GD_GameStages.Zone1.Dam'</code>
+							</category>
+							<category name="Demon Hunter - Starts immediately after 'Animal Rescue: Shelter'">
+								<code profiles="">set GD_Z2_DemonHunter.M_DemonHunter Dependencies (MissionDefinition'GD_Episode05.M_Ep5_ThePhoenix',MissionDefinition'GD_Z2_Skagzilla2.M_Skagzilla2_Den')</code>
+								<code profiles="">set GD_Z2_DemonHunter.M_DemonHunter GameStageRegion WillowRegionDefinition'GD_GameStages.Zone1.Dam'</code>
+							</category>
+						</category>
+					</category>
+					<category name="The Bane - Starts at \"Wildlife Preservation\"">
+						<code profiles="default">set GD_Z3_Bane.M_Bane Dependencies (MissionDefinition'GD_Episode09.M_Ep9_GetBackToSanctuary')</code>
+						<code profiles="default">set GD_Z3_Bane.M_Bane GameStageRegion WillowRegionDefinition'GD_GameStages.Zone2.PandoraPark'</code>
+					</category>
+				</category>
+				<category name="Earlier Raid Bosses">
+					<category name="You. Will. Die. (Seriously.) - Startable at 'The Once and Future Slab'">
+						<code profiles="default">set GD_Z2_ThresherRaid.M_ThresherRaid Dependencies (MissionDefinition'GD_Episode10.M_Ep10_BirdISTheWord')</code>
+					</category>
+					<category name="Hyperius the Invincible - Startable at 'Whoops'">
+						<code profiles="default">set GD_Orchid_Raid.M_Orchid_Raid1 Dependencies (MissionDefinition'GD_Orchid_Plot_Mission06.M_Orchid_PlotMission06')</code>
+					</category>
+					<category name="Master Gee the Invincible - 'Startable at 'Two Easy Pieces'">
+						<code profiles="default">set GD_Orchid_Raid.M_Orchid_Raid3 Dependencies (MissionDefinition'GD_Orchid_Plot_Mission03.M_Orchid_PlotMission03')</code>
+					</category>
+					<category name="Pete the Invincible - Startable at 'Chop-Suey' after killing Pete the first time">
+						<code profiles="default">set GD_IrisRaidBoss.M_Iris_RaidPete Dependencies (MissionDefinition'GD_IrisEpisode02.M_IrisEp2_FindBattle')</code>
+						<code profiles="default">set GD_IrisRaidBoss.M_Iris_RaidPete ObjectiveDependency (Objective=MissionObjectiveDefinition'GD_IrisEpisode03.M_IrisEp3_ChopSuey:KillPete',Status=EODS_Complete)</code>
+					</category>
+					<category name="Voracidous the Invincible - Startable at 'The Fall of Nakayama'">
+						<code profiles="default">set GD_Sage_Raid.M_Sage_Raid Dependencies (MissionDefinition'GD_Sage_Ep4.M_Sage_Mission04')</code>
+					</category>
+				</category>
+			</category>
+		</category>
+	</body>
+</BLCMM>
+
+#Commands:
+set GD_Z1_Symbiosis.M_Symbiosis Dependencies ()
+set GD_Z1_IceManCometh.M_IceManCometh Dependencies (MissionDefinition'GD_Episode05.M_Ep5_ThePhoenix',MissionDefinition'GD_Z1_NoVacancy.BalanceDefs.M_NoVacancy')
+set GD_Z1_IceManCometh.M_IceManCometh GameStageRegion WillowRegionDefinition'GD_GameStages.Zone1.Canyon'
+set GD_Z2_SplinterGroup.M_SplinterGroup Dependencies (MissionDefinition'GD_Episode05.M_Ep5_ThePhoenix')
+set GD_Z2_SplinterGroup.M_SplinterGroup GameStageRegion WillowRegionDefinition'GD_GameStages.Zone1.Dam'
+set GD_Z2_SplinterGroup.M_SplinterGroup ObjectiveDependency (Objective=MissionObjectiveDefinition'GD_Episode06.M_Ep6_RescueRoland:UseBSGateKeyToLowerBridge',Status=EODS_Complete)
+set GD_Z3_SwallowedWhole.M_SwallowedWhole Dependencies (MissionDefinition'GD_Episode06.M_Ep6_RescueRoland')
+set GD_Z3_SwallowedWhole.M_SwallowedWhole GameStageRegion WillowRegionDefinition'GD_GameStages.Zone2.Fridge'
+set GD_Z3_SwallowedWhole.M_SwallowedWhole ObjectiveDependency (Objective=None,Status=EODS_Complete)
+set GD_Z3_ColdShoulder.M_ColdShoulder Dependencies (MissionDefinition'GD_Episode06.M_Ep6_RescueRoland')
+set GD_Z3_ColdShoulder.M_ColdShoulder GameStageRegion WillowRegionDefinition'GD_GameStages.Zone2.Fridge'
+set GD_Z3_ColdShoulder.M_ColdShoulder ObjectiveDependency (Objective=None,Status=EODS_Complete)
+set GD_Z2_SlapHappy.M_SlapHappy Dependencies (MissionDefinition'GD_Episode07.M_Ep7_ATrainToCatch')
+set GD_Z2_SlapHappy.M_SlapHappy GameStageRegion WillowRegionDefinition'GD_GameStages.Zone2.Fridge'
+set GD_Z2_SlapHappy.M_SlapHappy ObjectiveDependency (Objective=None,Status=EODS_Complete)
+set GD_Z1_MineAllMine.M_MineAllMine ObjectiveDependency (Objective=None,Status=EODS_Complete)
+set GD_Z1_TrainRobbery.M_TrainRobbery ObjectiveDependency (Objective=None,Status=EODS_Complete)
+set GD_Z3_HyperionContract873.M_HyperionContract873 Dependencies (MissionDefinition'GD_Episode09.M_Ep9_GetBackToSanctuary')
+set GD_Z3_HyperionContract873.M_HyperionContract873 GameStageRegion WillowRegionDefinition'GD_GameStages.Zone2.PandoraPark'
+set GD_Z3_MonsterMash1.M_MonsterMash1 Dependencies (MissionDefinition'GD_Episode05.M_Ep5_ThePhoenix'MissionDefinition'GD_Z1_Surgery.M_PerformSurgery')
+set GD_Z3_MonsterMash1.M_MonsterMash1 GameStageRegion WillowRegionDefinition'GD_GameStages.Zone1.Canyon'
+set GD_Z3_MonsterMash2.M_MonsterMash2 GameStageRegion WillowRegionDefinition'GD_GameStages.Zone1.Canyon'
+set GD_Z3_MonsterMash3.M_MonsterMash3 Dependencies (MissionDefinition'GD_Z3_MonsterMash2.M_MonsterMash2',MissionDefinition'GD_Episode16.M_Ep16_LockAndLoad')
+set GD_Z3_MonsterMash3.M_MonsterMash3 GameStageRegion WillowRegionDefinition'GD_GameStages.Zone3.OnFireStone'
+set GD_Orchid_SM_Grendel.M_Orchid_Grendel Dependencies (MissionDefinition'GD_Orchid_Plot_Mission02.M_Orchid_PlotMission02')
+set GD_Orchid_SM_Race.M_Orchid_Race Dependencies (MissionDefinition'GD_Orchid_Plot_Mission03.M_Orchid_PlotMission03')
+set GD_Orchid_SM_Race.M_Orchid_Race GameStageRegion WillowRegionDefinition'GD_Orchid_GameStages.Regions.Orchid_MissionGamestageB'
+set GD_Orchid_SM_Tetanus.M_Orchid_CatchRideTetanus Dependencies (MissionDefinition'GD_Orchid_Plot_Mission04.M_Orchid_PlotMission04')
+set GD_Orchid_SM_Tetanus.M_Orchid_CatchRideTetanus GameStageRegion WillowRegionDefinition'GD_Orchid_GameStages.Regions.Orchid_MissionGamestageC'
+set GD_Orchid_SM_FloppyCopy.M_Orchid_DontCopyThatFloppy Dependencies (MissionDefinition'GD_Orchid_Plot_Mission06.M_Orchid_PlotMission06')
+set GD_Orchid_SM_Freedom.M_Orchid_FreedomOfSpeech Dependencies (MissionDefinition'GD_Orchid_SM_KnowIt.M_Orchid_KnowItWhenSeeIt',MissionDefinition'GD_Orchid_SM_FloppyCopy.M_Orchid_DontCopyThatFloppy')
+set GD_IrisDL2_ProductRecall.M_IrisDL2_ProductRecall Dependencies (MissionDefinition'GD_IrisEpisode02.M_IrisEp2_CultOfPersonality')
+set GD_IrisDL2_ProductRecall.M_IrisDL2_ProductRecall GameStageRegion WillowRegionDefinition'GD_Iris_GameStages.Regions.Iris_MissionGamestageB'
+set GD_IrisDL2_DontTalkAbtMama.M_IrisDL2_DontTalkAbtMama Dependencies (MissionDefinition'GD_IrisEpisode02.M_IrisEp2_CultOfPersonality')
+set GD_IrisDL2_DontTalkAbtMama.M_IrisDL2_DontTalkAbtMama GameStageRegion WillowRegionDefinition'GD_Iris_GameStages.Regions.Iris_MissionGamestageB'
+set GD_IrisDL3_MySkag.M_IrisDL3_MySkag Dependencies (MissionDefinition'GD_IrisEpisode05.M_IrisEp5_CageMatch')
+set GD_IrisDL3_MySkag.M_IrisDL3_MySkag GameStageRegion WillowRegionDefinition'GD_Iris_GameStages.Regions.Iris_MissionGamestageD'
+set GD_IrisDL3_CommAppeal.M_IrisDL3_CommAppeal Dependencies (MissionDefinition'GD_IrisEpisode05.M_IrisEp5_CageMatch')
+set GD_IrisDL3_CommAppeal.M_IrisDL3_CommAppeal GameStageRegion WillowRegionDefinition'GD_Iris_GameStages.Regions.Iris_MissionGamestageD'
+set GD_Sage_SM_PallingAround.M_Sage_PallingAround Dependencies (MissionDefinition'GD_Sage_Ep1.M_Sage_Mission01')
+set GD_Sage_SM_PallingAround.M_Sage_PallingAround GameStageRegion WillowRegionDefinition'GD_Sage_GameStages.Regions.Sage_MissionGamestageA_Reward'
+set GD_Aster_TreeHugger.M_TreeHugger ObjectiveDependency (Objective=None,Status=EODS_Complete)
+set GD_Aster_RaidBoss.M_Aster_RaidBoss ObjectiveDependency (Objective=None,Status=EODS_Complete)
+set GD_Aster_RaidBoss.M_Aster_RaidBoss Dependencies (MissionDefinition'GD_Aster_Plot_Mission04.M_Aster_PlotMission03')
+set GD_Anemone_Side_Sirentology.M_Anemone_Sirentology Dependencies (MissionDefinition'GD_Anemone_Plot_Mission030.M_Anemone_PlotMission030')
+set GD_Anemone_Side_Sirentology.M_Anemone_Sirentology ObjectiveDependency (Objective=MissionObjectiveDefinition'GD_Anemone_Plot_Mission040.M_Anemone_PlotMission040:FollowTina',Status=EODS_Complete)
+set GD_Anemone_Side_Sirentology.M_Anemone_Sirentology GameStageRegion WillowRegionDefinition'GD_Anemone_GameStages.Regions.Anemone_Helios'
+set GD_Anemone_Side_MyBrittlePony.M_Anemone_MyBrittlePony Dependencies (MissionDefinition'GD_Anemone_Plot_Mission040.M_Anemone_PlotMission040')
+set GD_Anemone_Side_MyBrittlePony.M_Anemone_MyBrittlePony GameStageRegion WillowRegionDefinition'GD_Anemone_GameStages.Regions.Anemone_ResearchCenter'
+set GD_Anemone_Side_VaughnPart2.M_Anemone_VaughnPart2 Dependencies (MissionDefinition'GD_Anemone_Side_VaughnPart1.M_Anemone_VaughnPart1')
+set GD_Anemone_Side_VaughnPart3.M_Anemone_VaughnPart3 Dependencies (MissionDefinition'GD_Anemone_Side_VaughnPart2.M_Anemone_VaughnPart2',MissionDefinition'GD_Anemone_Plot_Mission030.M_Anemone_PlotMission040')
+set GD_FlaxMissions.M_TrickOrTreat Dependencies ()
+set GD_FlaxMissions.M_TrickOrTreat ObjectiveDependency (Objective=MissionObjectiveDefinition'GD_FlaxMissions.M_BloodHarvest:FindTKBaha',Status=EODS_Complete)
+set GD_Allium_GrandmaFlexington.M_ListenToGrandma Dependencies ()
+set GD_Allium_GrandmaFlexington.M_ListenToGrandma ObjectiveDependency (Objective=MissionObjectiveDefinition'GD_Allium_TG_Plot_Mission01.M_Allium_ThanksgivingMission01:TalkToTorgue',Status=EODS_Complete)
+set GD_Allium_Delivery.M_Delivery Dependencies ()
+set GD_Allium_Delivery.M_Delivery ObjectiveDependency (Objective=MissionObjectiveDefinition'GD_Allium_KillSnowman.M_KillSnowman:TalkToTim',Status=EODS_Complete)
+set GD_Z1_NameGame.M_NameGame Dependencies (MissionDefinition'GD_Episode02.M_Ep2_Henchman')
+set GD_Z1_NameGame.M_NameGame ObjectiveDependency (Objective=MissionObjectiveDefinition'GD_Episode02.M_Ep2a_MoreGuns:Waitforpower',Status=EODS_Complete)
+set GD_Z1_NameGame.M_NameGame GameStageRegion WillowRegionDefinition'GD_GameStages.Zone1.Waterfront_A'
+set GD_Z2_FreeWilly.M_FreeWilly Dependencies (MissionDefinition'GD_Episode09.M_Ep9_GetBackToSanctuary')
+set GD_Z2_FreeWilly.M_FreeWilly GameStageRegion WillowRegionDefinition'GD_GameStages.Zone2.PandoraPark'
+set GD_Z2_Rakkaholics.M_Rakkaholics Dependencies (MissionDefinition'GD_Episode09.M_Ep9_GetBackToSanctuary')
+set GD_Z2_Rakkaholics.M_Rakkaholics GameStageRegion WillowRegionDefinition'GD_GameStages.Zone2.PandoraPark'
+set GD_Z2_TheBankJob.M_TheBankJob Dependencies (MissionDefinition'GD_Episode10.M_Ep10_BirdISTheWord')
+set GD_Z2_TheBankJob.M_TheBankJob GameStageRegion WillowRegionDefinition'GD_GameStages.Zone2.Cliffs_A'
+set GD_Z2_BlowTheBridge.M_BlowTheBridge Dependencies (MissionDefinition'GD_Episode10.M_Ep10_BirdISTheWord')
+set GD_Z2_BlowTheBridge.M_BlowTheBridge GameStageRegion WillowRegionDefinition'GD_GameStages.Zone2.Cliffs_A'
+set GD_Z2_KillTheSheriff.M_KillTheSheriff GameStageRegion WillowRegionDefinition'GD_GameStages.Zone2.Cliffs_A'
+set GD_Z2_DemonHunter.M_DemonHunter Dependencies (MissionDefinition'GD_Z2_Skagzilla2.M_Skagzilla2_Den')
+set GD_Z2_DemonHunter.M_DemonHunter GameStageRegion WillowRegionDefinition'GD_GameStages.Zone2.Cliffs_A'
+set GD_Z3_Bane.M_Bane Dependencies (MissionDefinition'GD_Episode09.M_Ep9_GetBackToSanctuary')
+set GD_Z3_Bane.M_Bane GameStageRegion WillowRegionDefinition'GD_GameStages.Zone2.PandoraPark'
+set GD_Z2_ThresherRaid.M_ThresherRaid Dependencies (MissionDefinition'GD_Episode10.M_Ep10_BirdISTheWord')
+set GD_Orchid_Raid.M_Orchid_Raid1 Dependencies (MissionDefinition'GD_Orchid_Plot_Mission06.M_Orchid_PlotMission06')
+set GD_Orchid_Raid.M_Orchid_Raid3 Dependencies (MissionDefinition'GD_Orchid_Plot_Mission03.M_Orchid_PlotMission03')
+set GD_IrisRaidBoss.M_Iris_RaidPete Dependencies (MissionDefinition'GD_IrisEpisode02.M_IrisEp2_FindBattle')
+set GD_IrisRaidBoss.M_Iris_RaidPete ObjectiveDependency (Objective=MissionObjectiveDefinition'GD_IrisEpisode03.M_IrisEp3_ChopSuey:KillPete',Status=EODS_Complete)
+set GD_Sage_Raid.M_Sage_Raid Dependencies (MissionDefinition'GD_Sage_Ep4.M_Sage_Mission04')
+
+#Direct-Execute Warning:
+say WARNING: "Earlier Missions" must be imported into BLCMM to run properly with UCP or other mods.
+
+#Hotfixes:
+set Transient.SparkServiceConfiguration_6 Keys ("SparkLevelPatchEntry-GBX_fixes1","SparkLevelPatchEntry-GBX_fixes2","SparkLevelPatchEntry-GBX_fixes3","SparkLevelPatchEntry-GBX_fixes4","SparkLevelPatchEntry-GBX_fixes5","SparkLevelPatchEntry-GBX_Fixes6","SparkLevelPatchEntry-GBX_Fixes7","SparkLevelPatchEntry-GBX_Fixes8","SparkLevelPatchEntry-GBX_Fixes9","SparkLevelPatchEntry-GBX_fixes10","SparkLevelPatchEntry-GBX_fixes11","SparkLevelPatchEntry-GBX_fixes12","SparkLevelPatchEntry-GBX_fixes13","SparkLevelPatchEntry-GBX_fixes14","SparkOnDemandPatchEntry-GBX_fixes15","SparkOnDemandPatchEntry-GBX_fixes16","SparkOnDemandPatchEntry-GBX_fixes17","SparkOnDemandPatchEntry-GBX_fixes18","SparkOnDemandPatchEntry-GBX_fixes19","SparkPatchEntry-GBX_fixes20","SparkPatchEntry-GBX_fixes21","SparkPatchEntry-GBX_fixes22","SparkPatchEntry-GBX_fixes23","SparkLevelPatchEntry-Name1","SparkLevelPatchEntry-Name2")
+set Transient.SparkServiceConfiguration_6 Values (",GD_Balance.WeightingPlayerCount.BugmorphCocoon_PerPlayers_Phase1,ConditionalInitialization.ConditionalExpressionList[4].BaseValueIfTrue.BaseValueConstant,0.700000,.8",",GD_Balance.WeightingPlayerCount.BugmorphCocoon_PerPlayers_Phase2,ConditionalInitialization.ConditionalExpressionList[4].BaseValueIfTrue.BaseValueConstant,0.400000,.5",",GD_Balance.WeightingPlayerCount.BugmorphCocoon_PerPlayers_Phase3,ConditionalInitialization.ConditionalExpressionList[4].BaseValueIfTrue.BaseValueConstant,0.200000,.3",",GD_Balance.WeightingPlayerCount.BugmorphCocoon_PerPlayers_Phase4,ConditionalInitialization.ConditionalExpressionList[4].BaseValueIfTrue.BaseValueConstant,0.100000,.2",",GD_Balance.WeightingPlayerCount.BugmorphCocoon_PerPlayers_Phase5,ConditionalInitialization.ConditionalExpressionList[4].BaseValueIfTrue.BaseValueConstant,0.075000,.1","SouthpawFactory_P,GD_Population_Marauder.Balance.Unique.PawnBalance_Assassin1,DefaultItemPoolList[3].PoolProbability.BaseValueScaleConstant,0.250000,1","SouthpawFactory_P,GD_Population_Nomad.Balance.Unique.PawnBalance_Assassin2,DefaultItemPoolList[4].PoolProbability.BaseValueScaleConstant,0.250000,1","SouthpawFactory_P,GD_Population_Psycho.Balance.Unique.PawnBalance_Assassin3,DefaultItemPoolList[1].PoolProbability.BaseValueScaleConstant,0.250000,1","SouthpawFactory_P,GD_Population_Rat.Balance.Unique.PawnBalance_Assassin4,DefaultItemPoolList[3].PoolProbability.BaseValueScaleConstant,0.250000,1",",GD_Sage_Rare_Scaylion.Population.PawnBalance_Sage_Rare_Scaylion,DefaultItemPoolList[1].PoolProbability.BaseValueScaleConstant,1.000000,100",",GD_Sage_Rare_Drifter.Balance.PawnBalance_Sage_Rare_Drifter,DefaultItemPoolList[0].PoolProbability.BaseValueScaleConstant,1.000000,100",",GD_Sage_Rare_Rhino.Population.PawnBalance_Sage_Rare_Rhino,DefaultItemPoolList[1].PoolProbability.BaseValueScaleConstant,1.000000,100",",GD_Sage_Rare_Skag.Population.PawnBalance_Sage_Rare_Skag,DefaultItemPoolList[1].PoolProbability.BaseValueScaleConstant,1.000000,100",",GD_Sage_Rare_Spore.Population.PawnBalance_Sage_Rare_Spore,DefaultItemPoolList[0].PoolProbability.BaseValueScaleConstant,1.000000,100","GD_Assassin_Streaming,GD_Assassin_Skills.Sniping.Velocity,SkillEffectDefinitions[0].ModifierType,MT_PostAdd,MT_Scale","GD_Tulip_Mechro_Streaming,GD_Tulip_Mechromancer_Skills.LittleBigTrouble.WiresDontTalk,SkillEffectDefinitions,,((AttributeToModify=D_Attributes.DamageTypeModifers.InstigatedShockDamageModifier,bIncludeDuelingTargets=False,bIncludeSelfAsTarget=False,bOnlyEffectTargetsInRange=False,bExcludeNonPlayerCharacters=False,EffectTarget=TARGET_Self,TargetInstanceDataName=,TargetCriteria=CRITERIA_None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.030000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),GradeToStartApplyingEffect=1,PerGradeUpgradeInterval=1,PerGradeUpgrade=(BaseValueConstant=0.030000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),BonusUpgradeList=),(AttributeToModify=D_Attributes.DamageTypeModifers.InstigatedShockStatusDamageModifier,bIncludeDuelingTargets=False,bIncludeSelfAsTarget=False,bOnlyEffectTargetsInRange=False,bExcludeNonPlayerCharacters=False,EffectTarget=TARGET_Self,TargetInstanceDataName=,TargetCriteria=CRITERIA_None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.030000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),GradeToStartApplyingEffect=1,PerGradeUpgradeInterval=1,PerGradeUpgrade=(BaseValueConstant=0.030000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),BonusUpgradeList=))","GD_Siren_Streaming,GD_Siren_Skills.Misc.Init_BlightPhoenix_DamageCalc_Part2,ValueFormula.Level.InitializationDefinition,AttributeInitializationDefinition'GD_Balance_HealthAndDamage.HealthAndDamage.Init_PlayerMeleeDamage',AttributeInitializationDefinition'GD_Balance_HealthAndDamage.HealthAndDamage.Init_PlayerSkillDamage'","GD_Siren_Streaming,GD_Siren_Skills.Misc.Init_BlightPhoenix_DamageCalc_Part2,ValueFormula.Level.BaseValueScaleConstant,1.000000,3.5","GD_Assassin_Streaming,GD_Assassin_Skills.Misc.Att_DeathMark_BonusDamage,BaseValue.BaseValueConstant,0.200000,.8","GD_Itempools.Runnables.Pool_FourAssassins,BalancedItems[1].Probability.InitializationDefinition,None,GD_Balance.Weighting.Weight_1_Common","GD_Shields.Projectiles.Proj_LegendaryBoosterShield:BehaviorProviderDefinition_1.Behavior_Explode_140,BehaviorSequences[0].BehaviorData2[7].Behavior.StatusEffectDamage.BaseValueAttribute,None,D_Attributes.Projectile.ProjectileDamage","GD_Shields.Projectiles.Proj_LegendaryBoosterShield:BehaviorProviderDefinition_1.Behavior_Explode_140,BehaviorSequences[0].BehaviorData2[7].Behavior.StatusEffectDamage.BaseValueScaleConstant,1.000000,.25","GD_Shields.Projectiles.Proj_LegendaryBoosterShield:BehaviorProviderDefinition_1.Behavior_Explode_140,BehaviorSequences[0].BehaviorData2[7].Behavior.StatusEffectChance.BaseValueConstant,1.000000,20",",GD_GameStages.Balance.Balance_P1_Zone2,BalanceByRegion[7],,(Region=WillowRegionDefinition'GD_GameStages.Zone2.Lynchwood',MinDefaultGameStage=(BaseValueConstant=12.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),MaxDefaultGameStage=(BaseValueConstant=14.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),DefaultAwesomeLevel=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bSpecifyBoostAbovePlayer=False,GameStageIncreaseAbovePlayer=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),MissionOverrides=((Mission=MissionDefinition'GD_Episode09.M_Ep9_GetBackToSanctuary',MinGameStage=(BaseValueConstant=18.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),MaxGameStage=(BaseValueConstant=20.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),AwesomeLevel=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(Mission=MissionDefinition'GD_Episode11.M_Ep11_LikeATonOf',MinGameStage=(BaseValueConstant=21.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),MaxGameStage=(BaseValueConstant=23.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),AwesomeLevel=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(Mission=MissionDefinition'GD_Episode13.M_Ep13_KillAngel',MinGameStage=(BaseValueConstant=24.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),MaxGameStage=(BaseValueConstant=26.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),AwesomeLevel=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(Mission=MissionDefinition'GD_Episode16.M_Ep16_LockAndLoad',MinGameStage=(BaseValueConstant=28.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),MaxGameStage=(BaseValueConstant=30.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),AwesomeLevel=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))))",",GD_GameStages.Balance.Balance_P2_Zone2,BalanceByRegion[7],,(Region=WillowRegionDefinition'GD_GameStages.Zone2.Lynchwood',MinDefaultGameStage=(BaseValueConstant=36.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),MaxDefaultGameStage=(BaseValueConstant=19.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),DefaultAwesomeLevel=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bSpecifyBoostAbovePlayer=False,GameStageIncreaseAbovePlayer=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),MissionOverrides=((Mission=MissionDefinition'GD_Episode09.M_Ep9_GetBackToSanctuary',MinGameStage=(BaseValueConstant=40.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),MaxGameStage=(BaseValueConstant=42.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),AwesomeLevel=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(Mission=MissionDefinition'GD_Episode11.M_Ep11_LikeATonOf',MinGameStage=(BaseValueConstant=43.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),MaxGameStage=(BaseValueConstant=45.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),AwesomeLevel=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(Mission=MissionDefinition'GD_Episode13.M_Ep13_KillAngel',MinGameStage=(BaseValueConstant=46.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),MaxGameStage=(BaseValueConstant=48.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),AwesomeLevel=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(Mission=MissionDefinition'GD_Episode16.M_Ep16_LockAndLoad',MinGameStage=(BaseValueConstant=47.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),MaxGameStage=(BaseValueConstant=49.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),AwesomeLevel=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))))")
+
