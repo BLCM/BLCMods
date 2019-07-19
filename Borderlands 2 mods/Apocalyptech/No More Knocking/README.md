@@ -3,18 +3,20 @@ No More Knocking
 
 Prevents NPCs from banging/knocking on walls, mostly in Sanctuary, but
 it also does so in every other map where that behavior is found in the
-game.
+game, namely the Badass Crater Bar, and possibly Flamerock Refuge.
+(I'm not sure if the Perch in Flamerock Refuge which has knocking is
+actually accessible by any NPCs -- I suspect not.)
 
 By default, the behavior that's put in instead is mixed up a bit, so
 the various locations around town where NPCs would be banging on the
 wall is a bit different from place to place, but you can instead choose
 a single behavior to use across the board, from the following list:
 
-- Arms Crossed
-- Hands on Hips
-- Kick Ground
-- Look at Ground
-- Look Intently
+ * Arms Crossed
+ * Hands on Hips
+ * Kick Ground
+ * Look at Ground
+ * Look Intently
 
 Enjoy your more relaxing Sanctuary experience!
 
@@ -49,6 +51,12 @@ This mod itself is licensed under
 
 Changelog
 =========
+
+**v1.0.1**, July 19, 2019:
+ * Removed some maps because the knocking behavior was part of mission/storyline
+   definitions:
+   * Holy Spirits
+   * Southern Shelf
 
 **v1.0.0**, July 19, 2019:
  * Initial public release

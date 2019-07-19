@@ -44,7 +44,7 @@ except ModuleNotFoundError:
 
 # Control Vars
 mod_name = 'No More Knocking'
-mod_version = '1.0.0'
+mod_version = '1.0.1'
 output_filename = '{}.blcm'.format(mod_name)
 
 level_perches = {
@@ -53,9 +53,6 @@ level_perches = {
             ],
         ('Flamerock Refuge', 'Village_P'): [
             'Village_Dynamic.TheWorld:PersistentLevel.Perch_52',
-            ],
-        ('Holy Spirits', 'Luckys_P'): [
-            'Luckys_Dynamic.TheWorld:PersistentLevel.Perch_29',
             ],
         ('Sanctuary (Air)', 'SanctuaryAir_P'): [
             'SanctuaryAir_Combat.TheWorld:PersistentLevel.Perch_11',
@@ -80,10 +77,6 @@ level_perches = {
             'Sanctuary_Combat.TheWorld:PersistentLevel.Perch_66',
             'Sanctuary_Dynamic.TheWorld:PersistentLevel.Perch_73',
             ],
-        ('Southern Shelf', 'SouthernShelf_P'): [
-            'SouthernShelf_Dynamic.TheWorld:PersistentLevel.Perch_102',
-            'SouthernShelf_Dynamic.TheWorld:PersistentLevel.Perch_37',
-            ],
         }
 
 alternate_perchdefs = [
@@ -104,7 +97,8 @@ lines.append('    # by Apocalyptech')
 lines.append('    # Licensed under Public Domain / CC0 1.0 Universal')
 lines.append('    #')
 lines.append('    # Prevents NPCs from banging/knocking on walls, mostly in Sanctuary')
-lines.append('    # but also in every other map where this behavior is found in the game')
+lines.append('    # but also in every other map where this behavior is found in the')
+lines.append('    # game (namely the Badass Crater Bar, and possibly Flamerock Refuge)')
 lines.append('')
 lines.append('    #<Choose Alternate NPC Stance><mut>')
 lines.append('')
