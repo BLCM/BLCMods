@@ -310,6 +310,9 @@ Other Recommended Mods
 TODO
 ====
 
+* Looks like we've omitted Heart Breaker from the available loot?  Perhaps I did
+  that on purpose.  Take a look to see if there are other missing guns, and
+  perhaps add them in...
 * Configurable section for defining the rarity of loot in lockers?
 * Maybe decrease Moonstone chest cost in exchange for not doing guaranteed
   legendaries on it?
