@@ -42,7 +42,7 @@ except ModuleNotFoundError:
     sys.exit(1)
 
 # Control Vars
-mod_name = 'BL2 Enhanced Hyperion Stabilizers'
+mod_name = 'BL2 Improved Hyperion Stabilizers'
 mod_version = '1.0.0'
 output_filename = '{}.blcm'.format(mod_name)
 

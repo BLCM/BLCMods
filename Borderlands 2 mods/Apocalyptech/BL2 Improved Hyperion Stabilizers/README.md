@@ -1,4 +1,4 @@
-BL2 Enhanced Hyperion Stabilizers
+BL2 Improved Hyperion Stabilizers
 =================================
 
 This mod vastly improves the starting accuracy of all Hyperion weapons,
@@ -26,7 +26,7 @@ Usage
 =====
 
 This mod must be imported into BLCMM using `File -> Import single mod`.
-Choose the file `BL2 Enhanced Hyperion Stabilizers.blcm` and have at it!
+Choose the file `BL2 Improved Hyperion Stabilizers.blcm` and have at it!
 
 Mod Construction / Implementation Details
 =========================================
