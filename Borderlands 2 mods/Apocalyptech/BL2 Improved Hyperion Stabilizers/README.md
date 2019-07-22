@@ -11,8 +11,8 @@ buffs to accuracy, basically starts off as accurate as it can be.
 
 This mod obviously makes Hyperion weaponry rather OP -- it should really
 be paired with a mod to decrease damage or otherwise make up for the
-lack of a downside for Hyperion weapons, but I've never been one for
-worrying about using OP weapons.
+lack of a downside for Hyperion weapons, but I've never been one to
+worry about using OP weapons.
 
 There are two options to choose between, in the `Choose Improvement Level`
 folder.  The default option will apply the maximum improvement to all
