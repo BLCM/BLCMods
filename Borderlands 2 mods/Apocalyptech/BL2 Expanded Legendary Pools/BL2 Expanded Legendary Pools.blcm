@@ -5,7 +5,7 @@
 	</head>
 	<body>
 		<category name="BL2 Expanded Legendary Pools">
-			<comment># BL2 Expanded Legendary Pools v1.1.0</comment>
+			<comment># BL2 Expanded Legendary Pools v1.1.1</comment>
 			<comment># by Apocalyptech</comment>
 			<comment># Licensed under Public Domain / CC0 1.0 Universal</comment>
 			<comment>#</comment>
@@ -366,10 +366,13 @@
 					<category name="Fire Drill">
 						<comment># Fire Drill is actually a very good weapon, but it can't drop in the game</comment>
 						<comment># ordinarily, and isn't totally finished in the game (it's clearly supposed</comment>
-						<comment># to be an Effervescent but is in the Legendary rarity, etc).</comment>
+						<comment># to be an Effervescent but is in the Legendary rarity, etc).  The Fire</comment>
+						<comment># Drill also requires a small fix so that it doesn't get sanity-checked</comment>
+						<comment># inbetween runs, so we do that as well.</comment>
 						<hotfix name="ApocHotfix" level="None">
 							<code profiles="">set GD_Itempools.WeaponPools.Pool_Weapons_Pistols_06_Legendary BalancedItems[30] (ItmPoolDefinition=None,InvBalanceDefinition=WeaponBalanceDefinition'GD_Anemone_Weapons.A_Weapons_Legendary.Pistol_Vladof_5_Infinity_DD',Probability=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),bDropOnDeath=True)</code>
 						</hotfix>
+						<code profiles="">set GD_Anemone_Weapons.A_Weapons_Legendary.Pistol_Vladof_5_Infinity_DD DlcItemSet DownloadableItemSetDefinition'GD_AnemonePackageDef.ItemSetDef_Anemone'</code>
 					</category>
 					<category name="Vault Hunter's Relic">
 						<hotfix name="ApocHotfix" level="None">
