@@ -27,6 +27,7 @@ branches, so you can browse in `bl2betterloot`, `bl2colddeadhands`,
   * [Fragile Minecraft Blocks](#fragile-minecraft-blocks)
   * [Guaranteed Omnd-Omnd-Ohk](#guaranteed-omnd-omnd-ohk)
   * [Guaranteed Varkid Evolution](#guaranteed-varkid-evolution)
+  * [Happy Horizontal People Transporter](#happy-horizontal-people-transporter)
   * [More Muscles](#more-muscles)
   * [No Crushers in Lair of Infinite Agony](#no-crushers-in-lair-of-infinite-agony)
   * [Sorted Fast Travel](#sorted-fast-travel)
@@ -144,6 +145,11 @@ farm OOO without having to gamble on its spawn chances.
 Gives all Varkids a 100% chance of evolution, regardless of player count or
 playthrough.  Mostly just useful if you want to farm Vermivorous without
 having to gamble on its spawn chances.
+
+### Happy Horizontal People Transporter
+
+A replacement for the Mongol which can be used to transport your enemies
+(or yourself) across Pandora in style.  Order yours today!
 
 ### More Muscles
 
