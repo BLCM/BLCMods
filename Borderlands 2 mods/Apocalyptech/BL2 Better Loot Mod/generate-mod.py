@@ -52,7 +52,7 @@ except ModuleNotFoundError:
 ###
 
 mod_name = 'BL2 Better Loot Mod'
-mod_version = '1.3.4'
+mod_version = '1.3.5'
 output_filename = '{}.blcm'.format(mod_name)
 
 ###
