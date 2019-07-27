@@ -345,7 +345,10 @@ for the full text.
 Changelog
 =========
 
-**v1.1.4** - July 27, 2019:
+**v1.1.5** - unreleased:
+ * Nothing yet!
+
+**v1.1.4** - July 27, 2019 (commit `14f8d9ee75858a0f49d0c54fc38939cb37f022ba`):
  * Fixed the Fire Drill so that it doesn't disappear from your inventory
    between runs.
 
