@@ -345,8 +345,9 @@ for the full text.
 Changelog
 =========
 
-**v1.1.4** - unreleased:
- * Nothing yet!
+**v1.1.4** - July 27, 2019:
+ * Fixed the Fire Drill so that it doesn't disappear from your inventory
+   between runs.
 
 **v1.1.3** - July 16, 2019 (commit `ba99ab3e6b1883e476ad00128201ee5a9371596f`):
  * Support for DLC5 (Commander Lilith and the Fight for Sanctuary)
