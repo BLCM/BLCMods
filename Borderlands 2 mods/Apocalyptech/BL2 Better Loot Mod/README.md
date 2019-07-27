@@ -417,12 +417,14 @@ I've taken various ideas and snippets from a few other mods:
 * Lifting early-game loot restrictions came directly from UCP, though I since
   expanded that section quite a bit.
 * Setting guaranteed drops for the vast majority of bosses in-game, via
-  two nicely-concise statements, came from JimRaven's "FarmFest"
-* Orudeon's "Gemstone Loot Pools" clued me in that the main Gemstone pool in
+  two nicely-concise statements, came from JimRaven's `FarmFest`
+* Orudeon's `Gemstone Loot Pools` clued me in that the main Gemstone pool in
   the Tiny Tina DLC is heavily weighted towards Pistols.
-* FromDarkHell's "BL1Loot" provided a great index of gear for my own similar
+* FromDarkHell's `BL1Loot` provided a great index of gear for my own similar
   addition of uniques/pearls/seraphs into the legendary pool (though I went
   about it slightly differently)
+* Natsu235's `Fight_for_Sanctuary_Weapons` provided a fix so that dropped
+  Fire Drills will stay in your inventory between runs of the game.
 
 I'd also like to thank the fine folks in Shadow's Evil Hideout #bl-modding
 Discord channel for putting up with all my noobish questions when I was first getting
@@ -444,8 +446,9 @@ for the full text.
 Changelog
 =========
 
-**v1.3.5**, unreleased:
- * Nothing yet!
+**v1.3.5**, July 27, 2019:
+ * Fixed the Fire Drill so that it doesn't disappear from your inventory
+   between runs.
 
 **v1.3.4**, July 15, 2019 (commit `6f762b444cb42093dc79659939f278b24de0a943`):
  * Buffed Chubby/Tubby drops a bit more, will have a guaranteed drop from the
