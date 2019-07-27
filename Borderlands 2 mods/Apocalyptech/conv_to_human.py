@@ -80,7 +80,7 @@ def indent(indent_level):
     """
     return ' '*(4*indent_level)
 
-def process_line(line, df_out):
+def process_line(line, df_out, indices=False):
     """
     Takes a single line contianing some BL structural data and turn it into
     a nicely-human-formatted multiline statement, writing to df_out
@@ -90,6 +90,8 @@ def process_line(line, df_out):
     at_beginning = True
     cur_indent = ''
     extra_indent = 0
+
+    array_indicies = [0]
 
     for char in line:
 
@@ -102,13 +104,20 @@ def process_line(line, df_out):
                 at_beginning = False
 
         if char == '(':
+            this_index = array_indicies[-1]
+            array_indicies[-1] += 1
+            array_indicies.append(0)
             if on_first_line:
                 newline(df_out, cur_indent, extra_indent)
-            df_out.write(char)
+            if indices:
+                df_out.write('{} // {}'.format(char, this_index))
+            else:
+                df_out.write(char)
             extra_indent += 1
             newline(df_out, cur_indent, extra_indent)
             on_first_line = False
         elif char == ')':
+            array_indicies.pop()
             if extra_indent > 0:
                 extra_indent -= 1
             newline(df_out, cur_indent, extra_indent)
@@ -211,7 +220,7 @@ class Hotfix(object):
         else:
             return None
 
-def process_plain(df_in, df_out):
+def process_plain(df_in, df_out, indices=False):
     """
     Process what looks like a plain text file - could be some `obj dump` output
     from console logs, or whatever.
@@ -233,7 +242,7 @@ def process_plain(df_in, df_out):
 
         # Commented `set` or `set_cmp` commands should get processed
         elif stripped.startswith('#set ') or stripped.startswith('#set_cmp '):
-            process_line(line, df_out)
+            process_line(line, df_out, indices)
 
         # Ignore anything else commented
         elif stripped[0] == '#':
@@ -245,9 +254,9 @@ def process_plain(df_in, df_out):
 
         # Aaand finally, go ahead and try to process anything else we see.
         else:
-            process_line(line, df_out)
+            process_line(line, df_out, indices)
 
-def process_ft(df_in, df_out):
+def process_ft(df_in, df_out, indices=False):
     """
     Process what looks like a FT file.  Mostly this is identical to the plain
     processing, though we're going to add in an "unknown" file type at the top.
@@ -259,7 +268,7 @@ def process_ft(df_in, df_out):
     # Now just do the plain processing
     process_plain(df_in, df_out)
 
-def process_blcmm(df_in, df_out):
+def process_blcmm(df_in, df_out, indices=False):
     """
     Process a file which looks like a BLCMM file.
     """
@@ -373,7 +382,7 @@ def process_blcmm(df_in, df_out):
                         enabled_str,
                         in_hotfix,
                         match.group(2),
-                        ), df_out)
+                        ), df_out, indices)
                 print('', file=df_out)
             else:
                 raise Exception('Could not parse code line: {}'.format(line))
@@ -394,6 +403,9 @@ if __name__ == '__main__':
     parser.add_argument('-f', '--force',
         action='store_true',
         help='Force overwriting the output file')
+    parser.add_argument('-i', '--indices',
+        action='store_true',
+        help='Output indicies in arrays (useful in things like BPDs)')
     parser.add_argument('input',
         nargs='?',
         help='Input filename; specify "-" for STDIN',
@@ -459,11 +471,11 @@ if __name__ == '__main__':
     first_line = df_in.readline()
     df_in.seek(0)
     if '<BLCMM' in first_line:
-        process_blcmm(df_in, df_out)
+        process_blcmm(df_in, df_out, args.indices)
     elif '#<' in first_line:
-        process_ft(df_in, df_out)
+        process_ft(df_in, df_out, args.indices)
     else:
-        process_plain(df_in, df_out)
+        process_plain(df_in, df_out, args.indices)
 
     # Report, and close output filehandle if needed
     if using_std_output:

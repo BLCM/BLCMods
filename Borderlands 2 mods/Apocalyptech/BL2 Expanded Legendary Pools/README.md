@@ -97,6 +97,10 @@ for the full text.
 Changelog
 =========
 
+**v1.1.1**, July 27, 2019:
+ * Fixed the Fire Drill so that it doesn't disappear from your inventory
+   between runs, if you've chosen to include the Fire Drill in your drops.
+
 **v1.1.0**, July 15, 2019:
  * Moved Gemstone weapons from the E-Tech pools to the Purple pools
    * Medical Mystery will now always correctly reward an E-Tech

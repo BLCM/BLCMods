@@ -7604,6 +7604,16 @@ BL2
 
                 {mp:weapon_pool_clear_sniperrifles}
 
+                #<Fix Fire Drill>
+
+                    # We add the Fire Drill as a possible drop, but in order for the gun to not
+                    # disappear from your inventory between runs, it needs to be explicitly
+                    # assigned the Anemone DLC.  This fixes that up.  Thanks to Natsu235 for this!
+
+                    set GD_Anemone_Weapons.A_Weapons_Legendary.Pistol_Vladof_5_Infinity_DD DlcItemSet DownloadableItemSetDefinition'GD_AnemonePackageDef.ItemSetDef_Anemone'
+
+                #</Fix Fire Drill>
+
             #</Legendary Weapon Pools Setup>
 
             #<Legendary Shield Pools Setup>
