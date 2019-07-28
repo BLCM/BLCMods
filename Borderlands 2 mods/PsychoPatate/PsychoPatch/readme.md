@@ -42,7 +42,7 @@ Because the PsychoPatch is mainly visual changes, it's better to **look** at the
 - Orc is now Rare (Blue)
 - Ogre is now Very Rare (Purple)
 - Overcompensator is now sorted as Legendary (Orange)
-- Sincero Amigo is now sorted as Legendary (Orange)
+- Amigo Sincero is now sorted as Legendary (Orange)
 - Longbow is now E-Tech (Magenta)
 - Norfleet is now E-Tech (Magenta)
 - Love Thumper now has the Very Rare (Purple) material
