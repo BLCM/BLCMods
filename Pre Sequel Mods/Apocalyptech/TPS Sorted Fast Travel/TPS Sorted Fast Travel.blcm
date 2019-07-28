@@ -1,0 +1,31 @@
+<BLCMM v="1">
+#<!!!You opened a file saved with BLCMM in FilterTool. Please update to BLCMM to properly open this file!!!>
+	<head>
+		<type name="TPS" offline="false"/>
+	</head>
+	<body>
+		<category name="TPS Sorted Fast Travel">
+			<comment># TPS Sorted Fast Travel v1.0.0</comment>
+			<comment># by Apocalyptech</comment>
+			<comment># Licensed under Public Domain / CC0 1.0 Universal</comment>
+			<comment>#</comment>
+			<comment># Sorts the Fast Travel menu alphabetically by default, and removes</comment>
+			<comment># the prefix "The" from all fast travel names, so they also sort</comment>
+			<comment># *correctly.*</comment>
+			<category name="Alphabetical By Default">
+				<comment># Many thanks to Our Lord and Savior Gabe Newell for this!</comment>
+				<code profiles="default">set FastTravelStationGFxMovie SortMode 1</code>
+			</category>
+			<category name="Remove Level Prefixes">
+				<code profiles="default">set GD_Ma_FastTravelStations.Ma_Nexus_FT StationDisplayName Nexus</code>
+				<code profiles="default">set GD_Pet_FastTravelStations.EridianSlaughter StationDisplayName Holodome</code>
+			</category>
+		</category>
+	</body>
+</BLCMM>
+
+#Commands:
+set FastTravelStationGFxMovie SortMode 1
+set GD_Ma_FastTravelStations.Ma_Nexus_FT StationDisplayName Nexus
+set GD_Pet_FastTravelStations.EridianSlaughter StationDisplayName Holodome
+

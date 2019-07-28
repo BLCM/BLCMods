@@ -1,5 +1,5 @@
-Sorted Fast Travel
-==================
+TPS Sorted Fast Travel
+======================
 
 This mod does two things:
 
@@ -31,11 +31,8 @@ This mod is generated using a Python script named `generate-mod.py`,
 which makes use of some data classes from my [FT/BLCMM Explorer](https://github.com/apocalyptech/ft-explorer)
 project.  You'll need to copy (or symlink, if you're on Linux or OSX) that
 project's `resources` and `ftexplorer` dirs into this one, to run the
-generation script.  It also actually relies on some game data which is not
-yet bundled by default with FT/BLCMM Explorer (namely, data for the 
-`FastTravelStationDefinition` class), so, er, sorry about that.  The script
-also makes use of `modprocessor.py` from the parent directory, so copy (or
-symlink) that as well.
+generation script.  The script also makes use of `modprocessor.py` from
+the parent directory, so copy (or symlink) that as well.
 
 License
 =======
@@ -49,5 +46,5 @@ This mod itself is licensed under
 Changelog
 =========
 
-**v1.0.0**, July 16, 2019:
+**v1.0.0**, July 28, 2019:
  * Initial public release

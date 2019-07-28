@@ -57,8 +57,8 @@ except ModuleNotFoundError:
     sys.exit(1)
 
 # Control Vars
-mod_name = 'Sorted Fast Travel'
-mod_version = '1.0.0'
+mod_name = 'BL2 Sorted Fast Travel'
+mod_version = '1.0.1'
 output_filename = '{}.blcm'.format(mod_name)
 
 data = Data('BL2')
