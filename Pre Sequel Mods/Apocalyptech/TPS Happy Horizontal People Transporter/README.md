@@ -1,13 +1,13 @@
-Happy Horizontal People Transporter©®
-=====================================
+TPS Happy Horizontal People Transporter©®
+=========================================
 
 This mod converts the Mongol to be the **Happy Horizontal People
 Transporter©®**, a device which enables your enemies (and friends!)
-to travel around Pandora in style, with the best vantage points on
-the planet!  Despite the name, the **Happy Horizontal People Transporter©®**
+to travel around Elpis in style, with the best vantage points on
+the moon!  Despite the name, the **Happy Horizontal People Transporter©®**
 is pleased to transport your foes vertically as well as horizontally,
-returning them eventually back to the Pandoran surface with the knowledge
-of a job well done, all thanks to the patented *Integrated Transport
+returning them eventually back to the surface with the knowledge of a
+job well done, all thanks to the patented *Integrated Transport
 Solutions™* module!
 
 Perhaps once they've seen firsthand the fragility and beauty of the
@@ -18,11 +18,11 @@ might just be crankier and want to kill you even more.
 The **Happy Horizontal People Transporter©®** does *no* damage to enemies
 directly, and does not consume ammo like ordinary rocket launchers.
 Feel free to provide *Integrated Transport Solutions™* to the denizens
-of Pandora, free of charge!
+of Elpis, free of charge!
 
 By default, the **Happy Horizontal People Transporter©®** will only
-affect your foes on Pandora, but it can be configured to provide you and
-your co-op partners with a fast and easy way to navigate the Pandoran
+affect your foes on Elpis, but it can be configured to provide you and
+your co-op partners with a fast and easy way to navigate the crater-pocked
 landcape.  Note that due to fluctuations in the local digistruct firmament,
 this configuration option will cause singularity grenades to affect you and
 your teammates as well, so be careful out there!
@@ -36,7 +36,7 @@ optionally be configured to last up to 30 seconds, or as short as 2.5.
 The **Happy Horizontal People Transporter©®** is redeemable easily with
 the following Gibbed code:
 
-    `BL2(hwAAAACJ2gBCJ4M/ChEIVKIYQ2GKogDFGgoIFBwo/v+fovj/34ri)`
+    BLOZ(igAAAABYaQCEq4A8BBMITEASgaQAJQKSCiQLSAiQ/v9LQTpGEgHl)
 
 It can also be found wherever a Mongol might have otherwise been found.
 
@@ -44,7 +44,7 @@ Usage/Installation
 ==================
 
 This mod must be imported into BLCMM using `File -> Import single mod`.
-Choose the file `Happy Horizontal People Transporter.blcm` and have at it!
+Choose the file `TPS Happy Horizontal People Transporter.blcm` and have at it!
 
 More Technical Notes
 ====================
@@ -62,19 +62,14 @@ things to know about the gun:
   projectile speed or the like could potentially get in the way of the
   transport effectiveness.  I've not actually tested it out on anything
   other than the locked accessory.
-- The HHPT uses the same method that World Burn does, to prevent accessory
-  prefixes from showing up in the weapon name, and uses a DLC5-specific
-  object to do so.  AFAIK this gun should work fine without DLC5 installed,
-  though - the worst-case scenario should be that you'll wind up with an
-  accessory prefix mucking up your otherwise pristine weapon title.
-- Some "bigger" enemies (like some Adult Bullymongs) aren't really affected
-  by this.  Presumably I could increase the effectiveness, but that'd be
-  buffing singularity grenades too, so I don't really care to.
-- There's basically no difference between a level 1 HHPT and a level 90
+- Some "bigger" enemies may not be affected by this.  Presumably I could
+  increase the effectiveness, but that'd be buffing singularity grenades
+  too, so I don't really care to.
+- There's basically no difference between a level 1 HHPT and a level 70
   HHPT, so don't go looking for anything more effective at higher levels.
   The Gibbed code just gives you a level 1 weapon.
 - Unfortunately, singularities don't affect flying enemies.  No tossing
-  Rakk around, alas!
+  jetpack Scavs around, alas!
 
 TODO
 ====
@@ -100,5 +95,5 @@ See [COPYING-mods.txt](../COPYING-mods.txt) for the full text.
 Changelog
 =========
 
-**v1.0.0** - July 26, 2019
+**v1.0.0** - July 29, 2019
  * Initial Release

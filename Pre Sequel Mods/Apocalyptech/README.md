@@ -30,6 +30,7 @@ branches, so you can browse in `bl2betterloot`, `bl2colddeadhands`,
   * [TPS Container TimeSaver XL](#tps-container-timesaver-xl)
   * [TPS Early Bloomer](#tps-early-bloomer)
   * [TPS Expanded Legendary Pools](#tps-expanded-legendary-pools)
+  * [TPS Happy Horizontal People Transporter](#tps-happy-horizontal-people-transporter)
   * [TPS Movement Speed Cheats](#tps-movement-speed-cheats)
   * [TPS No Wasted COMs](#tps-no-wasted-coms)
   * [TPS Skinpool Reassignments](#tps-skinpool-reassignments)
@@ -180,6 +181,11 @@ you already have this.)
 This mod adds all legendary items across DLCs into the global legendary loot
 pools, and by default adds all uniques and glitch uniques into the
 legendary pools, too.
+
+### TPS Happy Horizontal People Transporter
+
+A replacement for the Mongol which can be used to transport your enemies
+(or yourself) across Elpis in style.  Order yours today!
 
 ### TPS Movement Speed Cheats
 

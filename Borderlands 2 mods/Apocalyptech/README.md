@@ -22,12 +22,12 @@ branches, so you can browse in `bl2betterloot`, `bl2colddeadhands`,
   * [BL2 Early Bloomer](#bl2-early-bloomer)
   * [BL2 Expanded Legendary Pools](#bl2-expanded-legendary-pools)
   * [BL2 Fast Travel TimeSaver XL](#bl2-fast-travel-timesaver-xl)
+  * [BL2 Happy Horizontal People Transporter](#bl2-happy-horizontal-people-transporter)
   * [BL2 Movement Speed Cheats](#bl2-movement-speed-cheats)
   * [BL2 No Wasted COMs](#bl2-no-wasted-coms)
   * [Fragile Minecraft Blocks](#fragile-minecraft-blocks)
   * [Guaranteed Omnd-Omnd-Ohk](#guaranteed-omnd-omnd-ohk)
   * [Guaranteed Varkid Evolution](#guaranteed-varkid-evolution)
-  * [Happy Horizontal People Transporter](#happy-horizontal-people-transporter)
   * [More Muscles](#more-muscles)
   * [No Crushers in Lair of Infinite Agony](#no-crushers-in-lair-of-infinite-agony)
   * [Sorted Fast Travel](#sorted-fast-travel)
@@ -114,6 +114,11 @@ which initially start closed, when the level loads -- if you start your game
 right outside one of these stations and want to warp away, you've got to
 wait for the animation to complete before doing so.
 
+### BL2 Happy Horizontal People Transporter
+
+A replacement for the Mongol which can be used to transport your enemies
+(or yourself) across Pandora in style.  Order yours today!
+
 ### BL2 Movement Speed Cheats
 
 This mod increases movement speed of all BL2 characters (including while
@@ -145,11 +150,6 @@ farm OOO without having to gamble on its spawn chances.
 Gives all Varkids a 100% chance of evolution, regardless of player count or
 playthrough.  Mostly just useful if you want to farm Vermivorous without
 having to gamble on its spawn chances.
-
-### Happy Horizontal People Transporter
-
-A replacement for the Mongol which can be used to transport your enemies
-(or yourself) across Pandora in style.  Order yours today!
 
 ### More Muscles
 
