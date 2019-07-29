@@ -38,6 +38,27 @@ TPS
 
     #</Guaranteed Enemy Loot Drop Chance>
 
+    #<Guaranteed "Nest" Drop Chance>
+
+        # Enemy nests (droppings, mostly) will also have a guaranteed drop.
+
+        level None set GD_Itempools.Treasure_NestPools.Pool_Nest_Items BalancedItems
+        (
+            (
+                ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.GeneralItemPools.Pool_GunsAndGear',
+                InvBalanceDefinition=None,
+                Probability=(
+                    BaseValueConstant=1.000000,
+                    BaseValueAttribute=None,
+                    InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',
+                    BaseValueScaleConstant=1.000000
+                ),
+                bDropOnDeath=True
+            )
+        )
+
+    #</Guaranteed "Nest" Drop Chance>
+
     #<Enemies Drop {loot_drop_quantity} Item{plural}>
 
         # Enemies drop {loot_drop_quantity} items instead of just one.
