@@ -95,5 +95,10 @@ See [COPYING-mods.txt](../COPYING-mods.txt) for the full text.
 Changelog
 =========
 
+**v1.0.1** - July 29, 2019
+ * Updated to use the E-Tech barrel, like the BL2 version.  Hadn't realized that
+   that model still existed in TPS.  Thanks to Nexus-Master for pointing it out
+   to me!
+
 **v1.0.0** - July 29, 2019
  * Initial Release
