@@ -54,24 +54,24 @@ output_filename = '{}.blcm'.format(mod_name)
 ###
 
 # Set `loot_drop_quantity` to the number of items each enemy will drop.
-loot_drop_quantity = 5
+loot_drop_quantity = 1
 
 # Force Pool_GunsAndGear to always drop the specified pool, if `force_gunsandgear_drop`
 # is True.  Useful for testing out how individual pools are behaving.
-force_gunsandgear_drop = True
+force_gunsandgear_drop = False
 force_gunsandgear_drop_type = 'GD_Itempools.MoonItemPools.Pool_MoonItem_All'
 
 # Force Pool_GunsAndGear to always drop the specified item, if
 # `force_gunsandgear_specific` is True.  Useful for seeing what exactly an
 # item is.  `force_gunsandgear_specific` will override `force_gunsandgear_drop`,
 # if both are set to True.
-force_gunsandgear_specific = False
+force_gunsandgear_specific = True
 # Types:
 #   'WeaponBalanceDefinition'
 #   'InventoryBalanceDefinition'
 force_gunsandgear_specific_items = [
-    ('GD_Petunia_Weapons.Pistols.Pistol_Hyperion_3_T4sr', 1, 'WeaponBalanceDefinition'),
-    ('GD_Petunia_Weapons.Snipers.Sniper_Jakobs_3_Plunkett', 1, 'InventoryBalanceDefinition'),
+    ('GD_Cork_Weap_Launchers.A_Weapons_Legendary.RL_Vladof_5_Mongol', 1, 'WeaponBalanceDefinition'),
+    #('GD_Petunia_Weapons.Snipers.Sniper_Jakobs_3_Plunkett', 1, 'InventoryBalanceDefinition'),
     ]
 
 

@@ -54,7 +54,7 @@ output_filename = '{}.blcm'.format(mod_name)
 ###
 
 # Set `loot_drop_quantity` to the number of items each enemy will drop.
-loot_drop_quantity = 5
+loot_drop_quantity = 1
 
 # Force Pool_GunsAndGear to always drop the specified pool, if `force_gunsandgear_drop`
 # is True.  Useful for testing out how individual pools are behaving.
@@ -65,10 +65,10 @@ force_gunsandgear_drop_type = 'GD_Anemone_ItemPools.WeaponPools.Pool_Weapons_Inf
 # `force_gunsandgear_specific` is True.  Useful for seeing what exactly an
 # item is.  `force_gunsandgear_specific` will override `force_gunsandgear_drop`,
 # if both are set to True.
-force_gunsandgear_specific = False
+force_gunsandgear_specific = True
 force_gunsandgear_specific_type = 'WeaponBalanceDefinition'
 #force_gunsandgear_specific_type = 'InventoryBalanceDefinition'
-force_gunsandgear_specific_name = 'GD_Orchid_BossWeapons.RPG.Ahab.Orchid_Boss_Ahab_Balance_NODROP'
+force_gunsandgear_specific_name = 'GD_Weap_Launchers.A_Weapons_Legendary.RL_Vladof_5_Mongol'
 
 ###
 ### Now generate the mod
