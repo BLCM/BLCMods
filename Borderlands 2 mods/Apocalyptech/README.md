@@ -33,6 +33,7 @@ branches, so you can browse in `bl2betterloot`, `bl2colddeadhands`,
   * [Sorted Fast Travel](#sorted-fast-travel)
   * [Speedier Sandskiffs](#speedier-sandskiffs)
   * [Stalkers Use Shields](#stalkers-use-shields)
+  * [Unlocked MMORPGFPS](#unlocked-mmorpgfps)
 * [Obsolete Mods](#obsolete-mods)
   * [Configurable Catch-A-Ride](#configurable-catch-a-ride)
   * [More Loot Midget Containers](#more-loot-midget-containers)
@@ -179,6 +180,10 @@ Improves the speed (and afterburner capability) of Sandskiffs.
 Stalkers already use shields, of course, but this mod equips them with "real"
 shields, of the sort your characters equip.  Optionally, you can have them
 only use Maylay shields, as well.
+
+### Unlocked MMORPGFPS
+
+Removes the kill requirements from the Dragon Keep mission "MMORPGFPS."
 
 Obsolete Mods
 =============
