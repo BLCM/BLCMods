@@ -35,6 +35,7 @@ branches, so you can browse in `bl2betterloot`, `bl2colddeadhands`,
   * [Sorted Fast Travel](#sorted-fast-travel)
   * [Speedier Sandskiffs](#speedier-sandskiffs)
   * [Stalkers Use Shields](#stalkers-use-shields)
+  * [Trailer Trashing Counts as Night](#trailer-trashing-counts-as-night)
   * [Unlocked MMORPGFPS](#unlocked-mmorpgfps)
 * [Obsolete Mods](#obsolete-mods)
   * [Configurable Catch-A-Ride](#configurable-catch-a-ride)
@@ -198,6 +199,12 @@ Improves the speed (and afterburner capability) of Sandskiffs.
 Stalkers already use shields, of course, but this mod equips them with "real"
 shields, of the sort your characters equip.  Optionally, you can have them
 only use Maylay shields, as well.
+
+### Trailer Trashing Counts as Night
+
+The mission "Clan War: Trailer Trashing" has an optional objective to arrive at
+the Hodunk Speedway at night.  Waiting is boring, so this mod makes it so the
+optional objective always completes regardless of time of day.
 
 ### Unlocked MMORPGFPS
 
