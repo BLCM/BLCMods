@@ -15,6 +15,7 @@ branches, so you can browse in `bl2betterloot`, `bl2colddeadhands`,
 
 * [Mod List](#mod-list)
   * [Aegrus Not-So-Rare Monsters](#aegrus-not-so-rare-monsters)
+  * [Always Active Friendship Gulag Searchlights](#always-active-friendship-gulag-searchlights)
   * [Always Visible Urine](#always-visible-urine)
   * [BL2 Better Loot Mod](#bl2-better-loot-mod)
   * [BL2 Cold Dead Hands](#bl2-cold-dead-hands)
@@ -53,6 +54,15 @@ creature types in Sir Hammerlock's Big Game Hunt.  This is really only
 useful if you're looking to complete the
 [I Like My Monsters Rare](http://borderlands.wikia.com/wiki/I_Like_My_Monsters_Rare)
 mission without having to do any extra farming.
+
+### Always Active Friendship Gulag Searchlights
+
+Makes the searchlights in Friendship Gulag be always active, regardless of time
+of day.  This makes the "In the Middle of the Night" challenge (now renamed
+"In the Middle of Whenever") achievable during the day.
+
+This will, of course, give you some extra things to shoot at while spending
+some time in the Friendship Gulag.
 
 ### Always Visible Urine
 
