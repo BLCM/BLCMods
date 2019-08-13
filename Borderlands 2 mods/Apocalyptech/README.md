@@ -15,6 +15,7 @@ branches, so you can browse in `bl2betterloot`, `bl2colddeadhands`,
 
 * [Mod List](#mod-list)
   * [Aegrus Not-So-Rare Monsters](#aegrus-not-so-rare-monsters)
+  * [Always Visible Urine](#always-visible-urine)
   * [BL2 Better Loot Mod](#bl2-better-loot-mod)
   * [BL2 Cold Dead Hands](#bl2-cold-dead-hands)
   * [BL2 Configurable Slot Machines](#bl2-configurable-slot-machines)
@@ -52,6 +53,13 @@ creature types in Sir Hammerlock's Big Game Hunt.  This is really only
 useful if you're looking to complete the
 [I Like My Monsters Rare](http://borderlands.wikia.com/wiki/I_Like_My_Monsters_Rare)
 mission without having to do any extra farming.
+
+### Always Visible Urine
+
+Makes the skag urine during the Hammerlock DLC quest "Urine, You're Out"
+always visible and clickable, regardless of whether it's night or day.
+(So long as the quest is active, anyway.)  No more wondering if you've
+missed the nighttime or not!
 
 ### BL2 Better Loot Mod
 
