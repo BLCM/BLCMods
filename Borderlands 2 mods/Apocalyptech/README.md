@@ -15,6 +15,7 @@ branches, so you can browse in `bl2betterloot`, `bl2colddeadhands`,
 
 * [Mod List](#mod-list)
   * [Aegrus Not-So-Rare Monsters](#aegrus-not-so-rare-monsters)
+  * [Always Active Friendship Gulag Searchlights](#always-active-friendship-gulag-searchlights)
   * [Always Visible Urine](#always-visible-urine)
   * [BL2 Better Loot Mod](#bl2-better-loot-mod)
   * [BL2 Cold Dead Hands](#bl2-cold-dead-hands)
@@ -34,6 +35,7 @@ branches, so you can browse in `bl2betterloot`, `bl2colddeadhands`,
   * [Sorted Fast Travel](#sorted-fast-travel)
   * [Speedier Sandskiffs](#speedier-sandskiffs)
   * [Stalkers Use Shields](#stalkers-use-shields)
+  * [Trailer Trashing Counts as Night](#trailer-trashing-counts-as-night)
   * [Unlocked MMORPGFPS](#unlocked-mmorpgfps)
 * [Obsolete Mods](#obsolete-mods)
   * [Configurable Catch-A-Ride](#configurable-catch-a-ride)
@@ -53,6 +55,15 @@ creature types in Sir Hammerlock's Big Game Hunt.  This is really only
 useful if you're looking to complete the
 [I Like My Monsters Rare](http://borderlands.wikia.com/wiki/I_Like_My_Monsters_Rare)
 mission without having to do any extra farming.
+
+### Always Active Friendship Gulag Searchlights
+
+Makes the searchlights in Friendship Gulag be always active, regardless of time
+of day.  This makes the "In the Middle of the Night" challenge (now renamed
+"In the Middle of Whenever") achievable during the day.
+
+This will, of course, give you some extra things to shoot at while spending
+some time in the Friendship Gulag.
 
 ### Always Visible Urine
 
@@ -188,6 +199,12 @@ Improves the speed (and afterburner capability) of Sandskiffs.
 Stalkers already use shields, of course, but this mod equips them with "real"
 shields, of the sort your characters equip.  Optionally, you can have them
 only use Maylay shields, as well.
+
+### Trailer Trashing Counts as Night
+
+The mission "Clan War: Trailer Trashing" has an optional objective to arrive at
+the Hodunk Speedway at night.  Waiting is boring, so this mod makes it so the
+optional objective always completes regardless of time of day.
 
 ### Unlocked MMORPGFPS
 
