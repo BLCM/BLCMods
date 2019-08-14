@@ -25,12 +25,12 @@ branches, so you can browse in `bl2betterloot`, `bl2colddeadhands`,
   * [BL2 Expanded Legendary Pools](#bl2-expanded-legendary-pools)
   * [BL2 Fast Travel TimeSaver XL](#bl2-fast-travel-timesaver-xl)
   * [BL2 Happy Horizontal People Transporter](#bl2-happy-horizontal-people-transporter)
+  * [BL2 Invulnerable Escortees](#bl2-invulnerable-escortees)
   * [BL2 Movement Speed Cheats](#bl2-movement-speed-cheats)
   * [BL2 No Wasted COMs](#bl2-no-wasted-coms)
   * [Fragile Minecraft Blocks](#fragile-minecraft-blocks)
   * [Guaranteed Omnd-Omnd-Ohk](#guaranteed-omnd-omnd-ohk)
   * [Guaranteed Varkid Evolution](#guaranteed-varkid-evolution)
-  * [Invulnerable Escortees](#invulnerable-escortees)
   * [More Muscles](#more-muscles)
   * [No Crushers in Lair of Infinite Agony](#no-crushers-in-lair-of-infinite-agony)
   * [Sorted Fast Travel](#sorted-fast-travel)
@@ -140,6 +140,16 @@ wait for the animation to complete before doing so.
 A replacement for the Mongol which can be used to transport your enemies
 (or yourself) across Pandora in style.  Order yours today!
 
+### BL2 Invulnerable Escortees
+
+There are a few missions in BL2 in which you must keep either an enemy or
+an ally alive, or else fail the mission.  This mod makes those escortees
+invulnerable (or at least effectively invulnerable), so you no longer
+have to worry about inadvertantly failing the mission.  This is most
+useful for the escort missions where your charge is hostile, because the
+player can no longer accidentally kill them while taking care of the
+other enemies in the area.
+
 ### BL2 Movement Speed Cheats
 
 This mod increases movement speed of all BL2 characters (including while
@@ -171,16 +181,6 @@ farm OOO without having to gamble on its spawn chances.
 Gives all Varkids a 100% chance of evolution, regardless of player count or
 playthrough.  Mostly just useful if you want to farm Vermivorous without
 having to gamble on its spawn chances.
-
-### Invulnerable Escortees
-
-There are a few missions in BL2 in which you must keep either an enemy or
-an ally alive, or else fail the mission.  This mod makes those escortees
-invulnerable (or at least effectively invulnerable), so you no longer
-have to worry about inadvertantly failing the mission.  This is most
-useful for the escort missions where your charge is hostile, because the
-player can no longer accidentally kill them while taking care of the
-other enemies in the area.
 
 ### More Muscles
 
