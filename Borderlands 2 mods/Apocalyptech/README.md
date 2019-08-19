@@ -38,6 +38,7 @@ branches, so you can browse in `bl2betterloot`, `bl2colddeadhands`,
   * [Stalkers Use Shields](#stalkers-use-shields)
   * [Trailer Trashing Counts as Night](#trailer-trashing-counts-as-night)
   * [Unlocked MMORPGFPS](#unlocked-mmorpgfps)
+  * [Wildlife Preservation Fewer Injured Loaders](#wildlife-preservation-fewer-injured-loaders)
 * [Obsolete Mods](#obsolete-mods)
   * [Configurable Catch-A-Ride](#configurable-catch-a-ride)
   * [More Loot Midget Containers](#more-loot-midget-containers)
@@ -220,6 +221,14 @@ optional objective always completes regardless of time of day.
 ### Unlocked MMORPGFPS
 
 Removes the kill requirements from the Dragon Keep mission "MMORPGFPS."
+
+### Wildlife Preservation Fewer Injured Loaders
+
+The story mission "Wildlife Preservation" requires you to injure at least
+three loaders without killing them, which can be difficult sometimes,
+especially in conjunction with skills like Maya's Cloud Kill.  This mod
+reduces the required-injured count to 1.  The doors should open once you've
+gotten a single loader to be in the "injured" status.
 
 Obsolete Mods
 =============
