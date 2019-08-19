@@ -43,8 +43,9 @@ except ModuleNotFoundError:
 
 # Control Vars
 mod_name = 'BL2 Invulnerable Escortees'
-mod_version = '1.0.0'
+mod_version = '1.1.0'
 output_filename = '{}.blcm'.format(mod_name)
+borok_scale = 25
 
 # Variables that we'll set for each char
 vars_to_set = []
@@ -57,17 +58,18 @@ for element in ['Normal', 'Explosive', 'Shock', 'Corrosive', 'Incendiary', 'Amp'
 
 # The characters to operate on
 chars = [
-        ('Der Monstrositat',
-            'The Borok Dietmar wants you to trap in the Hammerlock DLC mission "Still Just a Borok in a Cage"',
-            None,
-            'GD_Sage_SM_BorokCageData.Population.PawnBalance_Sage_BorokCage_Creature',
-            'Sage_Underground_P',
-            [],
-            [
-                [],
-            ],
-            [],
-            ),
+        # Eh, we probably shouldn't actually do this one.
+        #('Der Monstrositat',
+        #    'The Borok Dietmar wants you to trap in the Hammerlock DLC mission "Still Just a Borok in a Cage"',
+        #    None,
+        #    'GD_Sage_SM_BorokCageData.Population.PawnBalance_Sage_BorokCage_Creature',
+        #    'Sage_Underground_P',
+        #    [],
+        #    [
+        #        [],
+        #    ],
+        #    [],
+        #    ),
         ('Enrique',
             'Tina\'s pet in the Torgue DLC, during the mission "Walking the Dog"',
             'GD_IrisTinaSkag.Character.CharClass_Iris_SkagBadassFire',
@@ -160,6 +162,95 @@ lines.append('    # Makes any NPC you are required to "escort" be effectively in
 lines.append('    # to damage, so there\'s no chance of them accidentally being killed and')
 lines.append('    # causing you to have to restart the mission.')
 lines.append('')
+
+lines.append("""#<Der Monstrositat (only {borok_scale}x health by default)><mut>
+
+    #<{borok_scale}x Health Buff>
+
+        # The Borok Dietmar wants you to trap in the Hammerlock DLC mission "Still Just a Borok in a Cage"
+        # UCP makes Der Monstrositat respawnable, and an alternative source for the Chopper, so we don't
+        # want to buff Der Monstrositat *too* much.  This will just give it a {borok_scale}x health buff, which should
+        # make it pretty difficult to accidentally kill, so long as you're not too overlevelled, though
+        # watch out for area-effect damage sources like Maya's Cloud Kill, or the other Cataclysm
+        # phaselock buffs.  (Badass Boroks get a 16x buff, so this makes Der Monstrositat slightly more
+        # powerful than those.)
+
+        level Sage_Underground_P set GD_Sage_SM_BorokCageData.Population.PawnBalance_Sage_BorokCage_Creature PlayThroughs[0].AttributeStartingValues
+        (
+            (
+                Attribute=AttributeDefinition'GD_Balance_HealthAndDamage.AIParameters.Attribute_HealthMultiplier',
+                BaseValue=(
+                    BaseValueConstant={borok_scale},
+                    BaseValueAttribute=None,
+                    InitializationDefinition=None,
+                    BaseValueScaleConstant=1
+                )
+            ),
+            (
+                Attribute=AttributeDefinition'D_Attributes.DamageSourceModifiers.ReceivedGrenadeDamageModifier',
+                BaseValue=(
+                    BaseValueConstant=0,
+                    BaseValueAttribute=None,
+                    InitializationDefinition=None,
+                    BaseValueScaleConstant=1
+                )
+            ),
+            (
+                Attribute=AttributeDefinition'D_Attributes.DamageSourceModifiers.ReceivedMeleeDamageModifier',
+                BaseValue=(
+                    BaseValueConstant=0,
+                    BaseValueAttribute=None,
+                    InitializationDefinition=None,
+                    BaseValueScaleConstant=1
+                )
+            )
+        )
+
+    #</{borok_scale}x Health Buff>
+
+    #<99999999x Health Buff>
+
+        # The Borok Dietmar wants you to trap in the Hammerlock DLC mission "Still Just a Borok in a Cage"
+        # UCP makes Der Monstrositat respawnable, and an alternative source for the Chopper, so if you're
+        # using UCP then you probaly don't want to use this option, which makes Der Monstrositat effectively
+        # invulnerable.  If you're not using UCP, though, or don't care that a Borok with a health pool to
+        # put Dexiduous to shame is running around loose, go for it!
+
+        level Sage_Underground_P set GD_Sage_SM_BorokCageData.Population.PawnBalance_Sage_BorokCage_Creature PlayThroughs[0].AttributeStartingValues
+        (
+            (
+                Attribute=AttributeDefinition'GD_Balance_HealthAndDamage.AIParameters.Attribute_HealthMultiplier',
+                BaseValue=(
+                    BaseValueConstant=99999999,
+                    BaseValueAttribute=None,
+                    InitializationDefinition=None,
+                    BaseValueScaleConstant=1
+                )
+            ),
+            (
+                Attribute=AttributeDefinition'D_Attributes.DamageSourceModifiers.ReceivedGrenadeDamageModifier',
+                BaseValue=(
+                    BaseValueConstant=0,
+                    BaseValueAttribute=None,
+                    InitializationDefinition=None,
+                    BaseValueScaleConstant=1
+                )
+            ),
+            (
+                Attribute=AttributeDefinition'D_Attributes.DamageSourceModifiers.ReceivedMeleeDamageModifier',
+                BaseValue=(
+                    BaseValueConstant=0,
+                    BaseValueAttribute=None,
+                    InitializationDefinition=None,
+                    BaseValueScaleConstant=1
+                )
+            )
+        )
+
+    #</99999999x Health Buff>
+
+#</Der Monstrositat (only {borok_scale}x health by default)><mut>
+""".format(borok_scale=borok_scale))
 
 for (char_name, comment, char_class, pawn_class, level_name, asvs, pt_asvs, extras) in chars:
 
