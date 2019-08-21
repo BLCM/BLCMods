@@ -22,6 +22,8 @@
 					<comment>Hyperion Contract #873 - Startable at 'Wildlife Preservation'.</comment>
 					<comment>Monster Mash (Part 1 and Part 2) - Startable at 'Hunting the Firehawk' after 'Do No Harm'</comment>
 					<comment>Monster Mash (Part 3) - Startable at 'Data Mining'.</comment>
+					<comment>A Real Boy: Face Time - Startable alongside 'A Real Boy: Clothes Make the Man' instead of after.</comment>
+					<comment>A Real Boy: Human - Startable after completing the other two 'Real Boy' missions.</comment>
 					<comment>Grendel - Startable at 'A Study in Scarlett'.</comment>
 					<comment>Catch a Ride and Also Tetanus - Startable at 'The Hermit'.</comment>
 					<comment>Don't Copy That Cloppy - No longer requires finishing 'I Know It When I See It' to start.</comment>
@@ -35,7 +37,7 @@
 					<comment>Tree Hugger - Now longer requires handing Davlin the Blood Fruit the first time to appear.</comment>
 					<comment>Sirentology - Startable at 'Shooting the Moon' after following Tina to Fire Control Alpha.</comment>
 					<comment>My Brittle Pony - Startable at 'The Cost of Progress'.</comment>
-					<comment>The Hunt is Vaughn - Startableimmediately after finishing 'The Vaughnguard'.</comment>
+					<comment>The Hunt is Vaughn - Startable immediately after finishing 'The Vaughnguard'.</comment>
 					<comment>Chief Executive Overlord - Startable at 'The Cost of Progress' after finishing his other two missions.</comment>
 					<comment>Trick or Treat - Startable after talking to TK for the first time.</comment>
 					<comment>Grandma Flexington's Story - Startable after talking to Mr. Torgue for the first time.</comment>
@@ -111,6 +113,14 @@
 								<code profiles="default">set GD_Z3_MonsterMash3.M_MonsterMash3 GameStageRegion WillowRegionDefinition'GD_GameStages.Zone3.OnFireStone'</code>
 							</category>
 						</category>
+						<category name="A Real Boy">
+							<category name="Face Time - Startable at the same time as 'Clothes Make the Man'">
+								<code profiles="default">set GD_Z2_ARealBoy.M_ARealBoy_ArmLeg Dependencies (MissionDefinition'GD_Episode14.M_Ep14_SearchingTheWreckage')</code>
+							</category>
+							<category name="Human - Startable after completing both of the other two 'A Real Boy' missions">
+								<code profiles="default">set GD_Z2_ARealBoy.M_ARealBoy_Human Dependencies (MissionDefinition'GD_Z2_ARealBoy.M_ARealBoy_ArmLeg',MissionDefinition'GD_Z2_ARealBoy.M_ARealBoy_Clothes')</code>
+							</category>
+						</category>
 					</category>
 					<category name="Campaign DLC">
 						<category name="Captain Scarlett and her Pirate's Booty">
@@ -162,7 +172,7 @@
 							</category>
 							<category name="Raiders of the Last Boss - Startable at 'A Game of Games'">
 								<code profiles="default">set GD_Aster_RaidBoss.M_Aster_RaidBoss ObjectiveDependency (Objective=None,Status=EODS_Complete)</code>
-								<code profiles="default">set GD_Aster_RaidBoss.M_Aster_RaidBoss Dependencies (MissionDefinition'GD_Aster_Plot_Mission04.M_Aster_PlotMission03')</code>
+								<code profiles="default">set GD_Aster_RaidBoss.M_Aster_RaidBoss Dependencies (MissionDefinition'GD_Aster_Plot_Mission03.M_Aster_PlotMission03')</code>
 							</category>
 						</category>
 						<category name="Commander Lilith and the Fighter for Sanctuary">
@@ -327,6 +337,8 @@ set GD_Z3_MonsterMash1.M_MonsterMash1 GameStageRegion WillowRegionDefinition'GD_
 set GD_Z3_MonsterMash2.M_MonsterMash2 GameStageRegion WillowRegionDefinition'GD_GameStages.Zone1.Canyon'
 set GD_Z3_MonsterMash3.M_MonsterMash3 Dependencies (MissionDefinition'GD_Z3_MonsterMash2.M_MonsterMash2',MissionDefinition'GD_Episode16.M_Ep16_LockAndLoad')
 set GD_Z3_MonsterMash3.M_MonsterMash3 GameStageRegion WillowRegionDefinition'GD_GameStages.Zone3.OnFireStone'
+set GD_Z2_ARealBoy.M_ARealBoy_ArmLeg Dependencies (MissionDefinition'GD_Episode14.M_Ep14_SearchingTheWreckage')
+set GD_Z2_ARealBoy.M_ARealBoy_Human Dependencies (MissionDefinition'GD_Z2_ARealBoy.M_ARealBoy_ArmLeg',MissionDefinition'GD_Z2_ARealBoy.M_ARealBoy_Clothes')
 set GD_Orchid_SM_Grendel.M_Orchid_Grendel Dependencies (MissionDefinition'GD_Orchid_Plot_Mission02.M_Orchid_PlotMission02')
 set GD_Orchid_SM_Race.M_Orchid_Race Dependencies (MissionDefinition'GD_Orchid_Plot_Mission03.M_Orchid_PlotMission03')
 set GD_Orchid_SM_Race.M_Orchid_Race GameStageRegion WillowRegionDefinition'GD_Orchid_GameStages.Regions.Orchid_MissionGamestageB'
@@ -346,7 +358,7 @@ set GD_Sage_SM_PallingAround.M_Sage_PallingAround Dependencies (MissionDefinitio
 set GD_Sage_SM_PallingAround.M_Sage_PallingAround GameStageRegion WillowRegionDefinition'GD_Sage_GameStages.Regions.Sage_MissionGamestageA_Reward'
 set GD_Aster_TreeHugger.M_TreeHugger ObjectiveDependency (Objective=None,Status=EODS_Complete)
 set GD_Aster_RaidBoss.M_Aster_RaidBoss ObjectiveDependency (Objective=None,Status=EODS_Complete)
-set GD_Aster_RaidBoss.M_Aster_RaidBoss Dependencies (MissionDefinition'GD_Aster_Plot_Mission04.M_Aster_PlotMission03')
+set GD_Aster_RaidBoss.M_Aster_RaidBoss Dependencies (MissionDefinition'GD_Aster_Plot_Mission03.M_Aster_PlotMission03')
 set GD_Anemone_Side_Sirentology.M_Anemone_Sirentology Dependencies (MissionDefinition'GD_Anemone_Plot_Mission030.M_Anemone_PlotMission030')
 set GD_Anemone_Side_Sirentology.M_Anemone_Sirentology ObjectiveDependency (Objective=MissionObjectiveDefinition'GD_Anemone_Plot_Mission040.M_Anemone_PlotMission040:FollowTina',Status=EODS_Complete)
 set GD_Anemone_Side_Sirentology.M_Anemone_Sirentology GameStageRegion WillowRegionDefinition'GD_Anemone_GameStages.Regions.Anemone_Helios'

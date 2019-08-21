@@ -1,4 +1,4 @@
-### PsychoPatch V.1.1 (10/01/19) by PsychoPatate
+### PsychoPatch V.1.2 (28/07/19) by PsychoPatate
 ---
 
 #### Intro
@@ -41,6 +41,8 @@ Because the PsychoPatch is mainly visual changes, it's better to **look** at the
 - Good Touch is now Rare (Blue)
 - Orc is now Rare (Blue)
 - Ogre is now Very Rare (Purple)
+- Overcompensator is now sorted as Legendary (Orange)
+- Amigo Sincero is now sorted as Legendary (Orange)
 - Longbow is now E-Tech (Magenta)
 - Norfleet is now E-Tech (Magenta)
 - Love Thumper now has the Very Rare (Purple) material
@@ -68,8 +70,11 @@ Because the PsychoPatch is mainly visual changes, it's better to **look** at the
 - Added and Moved the logo on **Vladof Uncommon, Rare and Very Rare Rocket Launchers**
 
 #### Changelog
+V.1.2 (28/07/19)
+- Added rarity fixes for the Amigo Sincero and the Overcompensator so they are now sorted as Legendaries
+
 V.1.1 (10/01/19)
-- Added rarity fixes for the Chain lightning and the Fire Storm 
+- Added rarity fixes for the Chain lightning and the Fire Storm
 
 V.1.0 (17/12/18)
 - Initial release

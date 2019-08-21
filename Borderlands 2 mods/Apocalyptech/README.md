@@ -15,6 +15,8 @@ branches, so you can browse in `bl2betterloot`, `bl2colddeadhands`,
 
 * [Mod List](#mod-list)
   * [Aegrus Not-So-Rare Monsters](#aegrus-not-so-rare-monsters)
+  * [Always Active Friendship Gulag Searchlights](#always-active-friendship-gulag-searchlights)
+  * [Always Visible Urine](#always-visible-urine)
   * [BL2 Better Loot Mod](#bl2-better-loot-mod)
   * [BL2 Cold Dead Hands](#bl2-cold-dead-hands)
   * [BL2 Configurable Slot Machines](#bl2-configurable-slot-machines)
@@ -22,17 +24,21 @@ branches, so you can browse in `bl2betterloot`, `bl2colddeadhands`,
   * [BL2 Early Bloomer](#bl2-early-bloomer)
   * [BL2 Expanded Legendary Pools](#bl2-expanded-legendary-pools)
   * [BL2 Fast Travel TimeSaver XL](#bl2-fast-travel-timesaver-xl)
+  * [BL2 Happy Horizontal People Transporter](#bl2-happy-horizontal-people-transporter)
+  * [BL2 Invulnerable Escortees](#bl2-invulnerable-escortees)
   * [BL2 Movement Speed Cheats](#bl2-movement-speed-cheats)
   * [BL2 No Wasted COMs](#bl2-no-wasted-coms)
   * [Fragile Minecraft Blocks](#fragile-minecraft-blocks)
   * [Guaranteed Omnd-Omnd-Ohk](#guaranteed-omnd-omnd-ohk)
   * [Guaranteed Varkid Evolution](#guaranteed-varkid-evolution)
-  * [Happy Horizontal People Transporter](#happy-horizontal-people-transporter)
   * [More Muscles](#more-muscles)
   * [No Crushers in Lair of Infinite Agony](#no-crushers-in-lair-of-infinite-agony)
   * [Sorted Fast Travel](#sorted-fast-travel)
   * [Speedier Sandskiffs](#speedier-sandskiffs)
   * [Stalkers Use Shields](#stalkers-use-shields)
+  * [Trailer Trashing Counts as Night](#trailer-trashing-counts-as-night)
+  * [Unlocked MMORPGFPS](#unlocked-mmorpgfps)
+  * [Wildlife Preservation Fewer Injured Loaders](#wildlife-preservation-fewer-injured-loaders)
 * [Obsolete Mods](#obsolete-mods)
   * [Configurable Catch-A-Ride](#configurable-catch-a-ride)
   * [More Loot Midget Containers](#more-loot-midget-containers)
@@ -51,6 +57,22 @@ creature types in Sir Hammerlock's Big Game Hunt.  This is really only
 useful if you're looking to complete the
 [I Like My Monsters Rare](http://borderlands.wikia.com/wiki/I_Like_My_Monsters_Rare)
 mission without having to do any extra farming.
+
+### Always Active Friendship Gulag Searchlights
+
+Makes the searchlights in Friendship Gulag be always active, regardless of time
+of day.  This makes the "In the Middle of the Night" challenge (now renamed
+"In the Middle of Whenever") achievable during the day.
+
+This will, of course, give you some extra things to shoot at while spending
+some time in the Friendship Gulag.
+
+### Always Visible Urine
+
+Makes the skag urine during the Hammerlock DLC quest "Urine, You're Out"
+always visible and clickable, regardless of whether it's night or day.
+(So long as the quest is active, anyway.)  No more wondering if you've
+missed the nighttime or not!
 
 ### BL2 Better Loot Mod
 
@@ -114,6 +136,21 @@ which initially start closed, when the level loads -- if you start your game
 right outside one of these stations and want to warp away, you've got to
 wait for the animation to complete before doing so.
 
+### BL2 Happy Horizontal People Transporter
+
+A replacement for the Mongol which can be used to transport your enemies
+(or yourself) across Pandora in style.  Order yours today!
+
+### BL2 Invulnerable Escortees
+
+There are a few missions in BL2 in which you must keep either an enemy or
+an ally alive, or else fail the mission.  This mod makes those escortees
+invulnerable (or at least effectively invulnerable), so you no longer
+have to worry about inadvertantly failing the mission.  This is most
+useful for the escort missions where your charge is hostile, because the
+player can no longer accidentally kill them while taking care of the
+other enemies in the area.
+
 ### BL2 Movement Speed Cheats
 
 This mod increases movement speed of all BL2 characters (including while
@@ -146,11 +183,6 @@ Gives all Varkids a 100% chance of evolution, regardless of player count or
 playthrough.  Mostly just useful if you want to farm Vermivorous without
 having to gamble on its spawn chances.
 
-### Happy Horizontal People Transporter
-
-A replacement for the Mongol which can be used to transport your enemies
-(or yourself) across Pandora in style.  Order yours today!
-
 ### More Muscles
 
 This simple mod improves the spawn rate for Muscles, a unique Bruiser who
@@ -179,6 +211,24 @@ Improves the speed (and afterburner capability) of Sandskiffs.
 Stalkers already use shields, of course, but this mod equips them with "real"
 shields, of the sort your characters equip.  Optionally, you can have them
 only use Maylay shields, as well.
+
+### Trailer Trashing Counts as Night
+
+The mission "Clan War: Trailer Trashing" has an optional objective to arrive at
+the Hodunk Speedway at night.  Waiting is boring, so this mod makes it so the
+optional objective always completes regardless of time of day.
+
+### Unlocked MMORPGFPS
+
+Removes the kill requirements from the Dragon Keep mission "MMORPGFPS."
+
+### Wildlife Preservation Fewer Injured Loaders
+
+The story mission "Wildlife Preservation" requires you to injure at least
+three loaders without killing them, which can be difficult sometimes,
+especially in conjunction with skills like Maya's Cloud Kill.  This mod
+reduces the required-injured count to 1.  The doors should open once you've
+gotten a single loader to be in the "injured" status.
 
 Obsolete Mods
 =============
