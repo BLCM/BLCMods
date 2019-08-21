@@ -9,7 +9,7 @@
 	<body>
 		<category name="PsychoPatch">
 			<category name="Description">
-				<comment>PsychoPatch V.1.1 (10/01/19) by PsychoPatate</comment>
+				<comment>PsychoPatch V.1.2 (28/07/19) by PsychoPatate</comment>
 				<comment></comment>
 				<comment>DISCLAIMER : This mod is not meant to replace the Unofficial Community Patch.</comment>
 				<comment></comment>
@@ -180,12 +180,6 @@
 				<code profiles="default">set GD_Aster_Shields.Material.Aster_Seraph_Blockade_Shield_Material MaterialVectorParameterValues ((ParameterName="p_EmissiveColor",ParameterValue=(R=5.016907,G=0.947559,B=3.041008,A=1.000000),ExpressionGUID=(A=-500078987,B=1335605199,C=-1319117688,D=173232637)))</code>
 			</category>
 			<category name="Rarity Fixes">
-				<comment>How do I know which rarity is correct ?</comment>
-				<comment>I use these 3 simple rules :</comment>
-				<comment>- Purple/Very Rare weapons cannot spawn without any accessory (prefix bonus) and/or without sights</comment>
-				<comment>- Check the item pools (the Norfleet is not in the "Legendary pool")</comment>
-				<comment>- Check the ID name of the weapon, weapons IDs follows a certain logic (most of the time)</comment>
-				<comment>- Chech the inventory order when sorted by rarity</comment>
 				<category name="Bad Touch is actually Rare">
 					<code profiles="default">set GD_Weap_SMG.Barrel.SMG_Barrel_Maliwan_BadTouch rarity (BaseValueConstant=-1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)</code>
 				</category>
@@ -203,6 +197,12 @@
 				</category>
 				<category name="Ogre is actually Very Rare">
 					<code profiles="default">set GD_Aster_Weapons.AssaultRifles.AR_Barrel_Vladof_Ogre rarity (BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)</code>
+				</category>
+				<category name="Overcompensator is indeed Legendary">
+					<code profiles="default">set GD_Anemone_Weapons.Shotgun.Overcompensator.SG_Barrel_Torgue_Overcompensator Rarity (BaseValueConstant=2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)</code>
+				</category>
+				<category name="Amigo Sincero is indeed Legendary">
+					<code profiles="default">set GD_Anemone_Weap_SniperRifles.Barrel.SR_Barrel_Hyperion_Morde_Lt Rarity (BaseValueConstant=3.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)</code>
 				</category>
 				<category name="Longbow is actually E-Tech">
 					<code profiles="default">set GD_Weap_SniperRifles.Barrel.SR_Barrel_Alien_Longbow rarity (BaseValueConstant=3.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)</code>
@@ -335,6 +335,8 @@ set GD_Aster_Weapons.SMGs.SMG_Barrel_Hyperion_Crit rarity (BaseValueConstant=-1.
 set GD_Weap_SMG.Barrel.SMG_Barrel_Maliwan_GoodTouch rarity (BaseValueConstant=-1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
 set GD_Aster_Weapons.SMGs.SMG_Barrel_Dahl_Orc rarity (BaseValueConstant=-1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
 set GD_Aster_Weapons.AssaultRifles.AR_Barrel_Vladof_Ogre rarity (BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+set GD_Anemone_Weapons.Shotgun.Overcompensator.SG_Barrel_Torgue_Overcompensator Rarity (BaseValueConstant=2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+set GD_Anemone_Weap_SniperRifles.Barrel.SR_Barrel_Hyperion_Morde_Lt Rarity (BaseValueConstant=3.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
 set GD_Weap_SniperRifles.Barrel.SR_Barrel_Alien_Longbow rarity (BaseValueConstant=3.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
 set GD_Weap_Launchers.Barrel.L_Barrel_Alien_Maliwan_Norfleet rarity (BaseValueConstant=0.000000,BaseValueAttribute=InventoryAttributeDefinition'GD_Balance_Inventory.Rarity_Item.ItemRarity4_VeryRare_Alien',InitializationDefinition=None,BaseValueScaleConstant=1.000000)
 set GD_Shields.Material.Material4_VeryRare_Roid_LoveThumper Material Item_Shields.Materials.Mati_ShieldBanditEpic

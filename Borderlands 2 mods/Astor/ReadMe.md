@@ -57,6 +57,8 @@ This ReadMe is just here as a quick synopsis, for detailed informations, each Mo
 - ### *Gears & Brands Overhauls*:
 
   - __*Bandit Brand Tweaks by Orudeon* French Translation:__ a simple *Add-On Translation Mod* that allows you to obtain in French any text additions (in English) from the Mod *Orudeon's Bandit Brand Tweaks v1.21*.
+  
+  - __*BL1-Enhanced Legendary Gun Ports by Aaron0000* French Translation:__ a simple *Add-On Translation Mod* that allows you to obtain in French any text additions (in English) from the Mod *Aaron0000's BL1-Enhanced Legendary Gun Ports v1.0.0*.
 
   - __*Gears Overhaul by Orudeon* French Translation:__ a simple *Add-On Translation Mod* that allows you to obtain in French any text additions (in English) from the Mod *Orudeon's Gears Overhaul v1.36*.
 

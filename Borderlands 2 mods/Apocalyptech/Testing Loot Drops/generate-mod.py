@@ -65,10 +65,10 @@ force_gunsandgear_drop_type = 'GD_Anemone_ItemPools.WeaponPools.Pool_Weapons_Inf
 # `force_gunsandgear_specific` is True.  Useful for seeing what exactly an
 # item is.  `force_gunsandgear_specific` will override `force_gunsandgear_drop`,
 # if both are set to True.
-force_gunsandgear_specific = False
-force_gunsandgear_specific_type = 'WeaponBalanceDefinition'
-#force_gunsandgear_specific_type = 'InventoryBalanceDefinition'
-force_gunsandgear_specific_name = 'GD_Orchid_BossWeapons.RPG.Ahab.Orchid_Boss_Ahab_Balance_NODROP'
+force_gunsandgear_specific = True
+#force_gunsandgear_specific_type = 'WeaponBalanceDefinition'
+force_gunsandgear_specific_type = 'InventoryBalanceDefinition'
+force_gunsandgear_specific_name = 'GD_Anemone_GrenadeMods.A_Item.GM_Standard_3_Rare_Flamer'
 
 ###
 ### Now generate the mod
@@ -82,7 +82,7 @@ if force_gunsandgear_specific:
 
         # Forces the GunsAndGear drop pool to always drop {force_gunsandgear_specific_name}
 
-        set GD_Itempools.GeneralItemPools.Pool_GunsAndGear BalancedItems
+        level None set GD_Itempools.GeneralItemPools.Pool_GunsAndGear BalancedItems
         (
             (
                 ItmPoolDefinition=None,
@@ -108,7 +108,7 @@ elif force_gunsandgear_drop:
 
         # Forces the GunsAndGear drop pool to always drop {force_gunsandgear_drop_type}
 
-        set GD_Itempools.GeneralItemPools.Pool_GunsAndGear BalancedItems
+        level None set GD_Itempools.GeneralItemPools.Pool_GunsAndGear BalancedItems
         (
             (
                 ItmPoolDefinition=ItemPoolDefinition'{force_gunsandgear_drop_type}',

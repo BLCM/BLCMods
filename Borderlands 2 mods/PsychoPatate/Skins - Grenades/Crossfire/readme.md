@@ -1,5 +1,12 @@
-### Crossfire Skin V.1.0 (19/01/19) by PsychoPatate
+### Crossfire Skin V.2.0 (28/07/19) by PsychoPatate
 ---
 
 #### Gallery
-![Image](https://i.imgur.com/kezgXRQ.jpg)
+![Image](https://i.imgur.com/gXe5mNA.jpg)
+
+#### Changelog
+V.2.0 (28/07/19)
+- Remade the skin because I didn't like it
+
+V.1.0 (19/01/19)
+- Initial release

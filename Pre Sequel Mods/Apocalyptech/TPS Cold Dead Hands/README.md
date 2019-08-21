@@ -289,7 +289,10 @@ for the full text.
 Changelog
 =========
 
-**v1.1.0**, July 27, 2018:
+**v1.1.1**, August 21, 2019:
+ * Added the Heart Breaker as a potential legendary shotgun
+
+**v1.1.0**, July 27, 2018 (commit `889a322f5f4e370ad3ccbad14395355b590bda9d`):
  * Converted to BLCM format *(BLCMM is now required; FilterTool is not supported)*
  * Added more options for rocket launcher equip chances other than the binary
    choice from previous versions.
