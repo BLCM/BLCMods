@@ -31,6 +31,7 @@ branches, so you can browse in `bl2betterloot`, `bl2colddeadhands`,
   * [TPS Early Bloomer](#tps-early-bloomer)
   * [TPS Expanded Legendary Pools](#tps-expanded-legendary-pools)
   * [TPS Happy Horizontal People Transporter](#tps-happy-horizontal-people-transporter)
+  * [TPS Invulnerable Escortees](#tps-invulnerable-escortees)
   * [TPS Movement Speed Cheats](#tps-movement-speed-cheats)
   * [TPS No Wasted COMs](#tps-no-wasted-coms)
   * [TPS Skinpool Reassignments](#tps-skinpool-reassignments)
@@ -186,6 +187,15 @@ legendary pools, too.
 
 A replacement for the Mongol which can be used to transport your enemies
 (or yourself) across Elpis in style.  Order yours today!
+
+### TPS Invulnerable Escortees
+
+There are a few missions in TPS (nearly all in Lunar Launching Station,
+weirdly) in which you must keep either an enemy or an ally alive, or else fail
+the mission.  This mod makes those escortees invulnerable, so you no longer
+have to worry about inadvertantly failing the mission.  This mod is slightly
+less useful than its BL2 counterpart, since most of the escortees in TPS can't
+be damaged accidentally by the player, but here it is regardless.
 
 ### TPS Movement Speed Cheats
 
