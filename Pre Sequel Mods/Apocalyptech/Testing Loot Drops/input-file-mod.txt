@@ -13,7 +13,7 @@ TPS
 
         # Gives 100% chance to drop loot from enemies.
 
-        set GD_Itempools.DropWeights.DropODDS_GunsAndGear:ConditionalAttributeValueResolver_0 ValueExpressions
+        level None set GD_Itempools.DropWeights.DropODDS_GunsAndGear:ConditionalAttributeValueResolver_0 ValueExpressions
         (
             bEnabled=True,
             ConditionalExpressionList=(),
@@ -63,7 +63,7 @@ TPS
 
         # Enemies drop {loot_drop_quantity} items instead of just one.
 
-        set GD_Itempools.GeneralItemPools.Pool_GunsAndGear Quantity
+        level None set GD_Itempools.GeneralItemPools.Pool_GunsAndGear Quantity
         (
             BaseValueConstant={loot_drop_quantity},
             BaseValueAttribute=None,
@@ -71,7 +71,7 @@ TPS
             BaseValueScaleConstant=1
         )
 
-        set GD_Ma_ItemPools.GeneralItemPools.Pool_GunsAndGear_Marigold Quantity
+        level None set GD_Ma_ItemPools.GeneralItemPools.Pool_GunsAndGear_Marigold Quantity
         (
             BaseValueConstant={loot_drop_quantity},
             BaseValueAttribute=None,

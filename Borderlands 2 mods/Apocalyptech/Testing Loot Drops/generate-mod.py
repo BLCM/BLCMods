@@ -54,7 +54,7 @@ output_filename = '{}.blcm'.format(mod_name)
 ###
 
 # Set `loot_drop_quantity` to the number of items each enemy will drop.
-loot_drop_quantity = 1
+loot_drop_quantity = 5
 
 # Force Pool_GunsAndGear to always drop the specified pool, if `force_gunsandgear_drop`
 # is True.  Useful for testing out how individual pools are behaving.
@@ -66,9 +66,9 @@ force_gunsandgear_drop_type = 'GD_Anemone_ItemPools.WeaponPools.Pool_Weapons_Inf
 # item is.  `force_gunsandgear_specific` will override `force_gunsandgear_drop`,
 # if both are set to True.
 force_gunsandgear_specific = True
-force_gunsandgear_specific_type = 'WeaponBalanceDefinition'
-#force_gunsandgear_specific_type = 'InventoryBalanceDefinition'
-force_gunsandgear_specific_name = 'GD_Weap_Launchers.A_Weapons_Legendary.RL_Vladof_5_Mongol'
+#force_gunsandgear_specific_type = 'WeaponBalanceDefinition'
+force_gunsandgear_specific_type = 'InventoryBalanceDefinition'
+force_gunsandgear_specific_name = 'GD_Anemone_GrenadeMods.A_Item.GM_Standard_3_Rare_Flamer'
 
 ###
 ### Now generate the mod
@@ -82,7 +82,7 @@ if force_gunsandgear_specific:
 
         # Forces the GunsAndGear drop pool to always drop {force_gunsandgear_specific_name}
 
-        set GD_Itempools.GeneralItemPools.Pool_GunsAndGear BalancedItems
+        level None set GD_Itempools.GeneralItemPools.Pool_GunsAndGear BalancedItems
         (
             (
                 ItmPoolDefinition=None,
@@ -108,7 +108,7 @@ elif force_gunsandgear_drop:
 
         # Forces the GunsAndGear drop pool to always drop {force_gunsandgear_drop_type}
 
-        set GD_Itempools.GeneralItemPools.Pool_GunsAndGear BalancedItems
+        level None set GD_Itempools.GeneralItemPools.Pool_GunsAndGear BalancedItems
         (
             (
                 ItmPoolDefinition=ItemPoolDefinition'{force_gunsandgear_drop_type}',

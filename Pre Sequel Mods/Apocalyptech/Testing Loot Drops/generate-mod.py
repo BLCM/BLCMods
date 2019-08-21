@@ -54,18 +54,18 @@ output_filename = '{}.blcm'.format(mod_name)
 ###
 
 # Set `loot_drop_quantity` to the number of items each enemy will drop.
-loot_drop_quantity = 1
+loot_drop_quantity = 5
 
 # Force Pool_GunsAndGear to always drop the specified pool, if `force_gunsandgear_drop`
 # is True.  Useful for testing out how individual pools are behaving.
-force_gunsandgear_drop = False
-force_gunsandgear_drop_type = 'GD_Itempools.MoonItemPools.Pool_MoonItem_All'
+force_gunsandgear_drop = True
+force_gunsandgear_drop_type = 'GD_Itempools.WeaponPools.Pool_Weapons_Shotguns_06_Legendary'
 
 # Force Pool_GunsAndGear to always drop the specified item, if
 # `force_gunsandgear_specific` is True.  Useful for seeing what exactly an
 # item is.  `force_gunsandgear_specific` will override `force_gunsandgear_drop`,
 # if both are set to True.
-force_gunsandgear_specific = True
+force_gunsandgear_specific = False
 # Types:
 #   'WeaponBalanceDefinition'
 #   'InventoryBalanceDefinition'
@@ -90,7 +90,7 @@ if force_gunsandgear_specific:
 
         # Forces the GunsAndGear drop pool to always drop {drop_specific}
 
-        set GD_Itempools.GeneralItemPools.Pool_GunsAndGear BalancedItems
+        level None set GD_Itempools.GeneralItemPools.Pool_GunsAndGear BalancedItems
         {balanced}
 
     #</Force GunsAndGearDrop to {drop_specific}>
@@ -104,7 +104,7 @@ elif force_gunsandgear_drop:
 
         # Forces the GunsAndGear drop pool to always drop {force_gunsandgear_drop_type}
 
-        set GD_Itempools.GeneralItemPools.Pool_GunsAndGear BalancedItems
+        level None set GD_Itempools.GeneralItemPools.Pool_GunsAndGear BalancedItems
         (
             (
                 ItmPoolDefinition=ItemPoolDefinition'{force_gunsandgear_drop_type}',
