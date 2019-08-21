@@ -65,7 +65,7 @@ except ModuleNotFoundError:
 ###
 
 mod_name = 'TPS Better Loot Mod'
-mod_version = '1.1.1-prerelease'
+mod_version = '1.1.1'
 input_filename = 'input-file-mod.txt'
 output_filename = '{}.blcm'.format(mod_name)
 
@@ -909,6 +909,7 @@ weapons = [
     'GD_Cork_Weap_Shotgun.A_Weapons_Unique.SG_Torgue_3_JackOCannon',
     'GD_Cork_Weap_Shotgun.A_Weapons_Unique.SG_Torgue_3_Torguemada',
     'GD_Cork_Weap_Shotgun.A_Weapons_Unique.SG_Torgue_3_Wombat',
+    'GD_Cork_Weap_Shotgun.A_Weapons_Unique.SG_Hyperion_3_HeartBreaker',
     'GD_Cork_Weap_SniperRifles.A_Weapons_Legendary.Sniper_Dahl_5_Pitchfork',
     'GD_Cork_Weap_SniperRifles.A_Weapons_Legendary.Sniper_Hyperion_5_Invader',
     'GD_Cork_Weap_SniperRifles.A_Weapons_Legendary.Sniper_Jakobs_5_Skullmasher',
@@ -1536,6 +1537,7 @@ for (guntype, legendaries, uniques, uniqueglitches) in [
                 'GD_Cypressure_Weapons.A_Weapons_Unique.SG_Hyperion_3_CompanyMan',
                 'GD_Cypressure_Weapons.A_Weapons_Unique.SG_Torgue_3_Landscaper2',
                 'GD_Petunia_Weapons.Shotguns.SG_Tediore_3_PartyLine',
+                'GD_Cork_Weap_Shotgun.A_Weapons_Unique.SG_Hyperion_3_HeartBreaker',
             ],
             [
                 # Unique Glitches
