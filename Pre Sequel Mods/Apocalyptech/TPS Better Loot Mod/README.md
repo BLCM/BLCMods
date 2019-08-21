@@ -378,7 +378,10 @@ for the full text.
 Changelog
 =========
 
-**v1.1.1**, August 21, 2019:
+**v1.1.2**, *unreleased*:
+ * Nothing yet
+
+**v1.1.1**, August 21, 2019 (commit `9ce3e6822e7ef6b8e7031003062bd44eed9fc200`):
  * Added the Heart Breaker as a potential legendary shotgun
 
 **v1.1.0**, July 27, 2018 (commit `11073b0bfb839721a3a23cc6baff40b4ebf337ee`):
