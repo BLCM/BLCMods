@@ -32,6 +32,7 @@ branches, so you can browse in `bl2betterloot`, `bl2colddeadhands`,
   * [Guaranteed Omnd-Omnd-Ohk](#guaranteed-omnd-omnd-ohk)
   * [Guaranteed Varkid Evolution](#guaranteed-varkid-evolution)
   * [More Muscles](#more-muscles)
+  * [My Kingdom for a Wand Unlocker](#my-kingdom-for-a-wand-unlocker)
   * [No Crushers in Lair of Infinite Agony](#no-crushers-in-lair-of-infinite-agony)
   * [Sorted Fast Travel](#sorted-fast-travel)
   * [Speedier Sandskiffs](#speedier-sandskiffs)
@@ -188,6 +189,12 @@ having to gamble on its spawn chances.
 This simple mod improves the spawn rate for Muscles, a unique Bruiser who
 appears in Thousand Cuts.  He will be fairly likely to appear during a full
 playthrough of the level.
+
+### My Kingdom for a Wand Unlocker
+
+Removes the kill restrictions for your targets during the Dragon Keep DLC
+mission "My Kingdom for a Wand."  No more repeadedly trying to get that
+crit kill on the Orc and having Cloud Kill finish him off instead!
 
 ### No Crushers in Lair of Infinite Agony
 
