@@ -1,4 +1,4 @@
-My Kingdom for a Wand Unlocker
+Unlocked My Kingdom for a Wand
 ==============================
 
 Removes the kill restrictions for your targets during the Dragon Keep DLC
@@ -9,7 +9,7 @@ Usage/Installation
 ==================
 
 This mod must be imported into BLCMM using `File -> Import single mod`.
-Choose the file `My Kingdom for a Wand Unlocker.blcm` and have at it!
+Choose the file `Unlocked My Kingdom for a Wand.blcm` and have at it!
 
 License
 =======
@@ -21,6 +21,10 @@ See [COPYING-mods.txt](../COPYING-mods.txt) for the full text.
 
 Changelog
 =========
+
+**v1.0.1** - August 30, 2019
+ * Renamed from "My Kingdom for a Wand Unlocker" to "Unlocked My Kingdom
+   for a Wand," for consistency with another mod of mine.
 
 **v1.0.0** - August 29, 2019
  * Initial Release

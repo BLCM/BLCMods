@@ -32,13 +32,13 @@ branches, so you can browse in `bl2betterloot`, `bl2colddeadhands`,
   * [Guaranteed Omnd-Omnd-Ohk](#guaranteed-omnd-omnd-ohk)
   * [Guaranteed Varkid Evolution](#guaranteed-varkid-evolution)
   * [More Muscles](#more-muscles)
-  * [My Kingdom for a Wand Unlocker](#my-kingdom-for-a-wand-unlocker)
   * [No Crushers in Lair of Infinite Agony](#no-crushers-in-lair-of-infinite-agony)
   * [Sorted Fast Travel](#sorted-fast-travel)
   * [Speedier Sandskiffs](#speedier-sandskiffs)
   * [Stalkers Use Shields](#stalkers-use-shields)
   * [Trailer Trashing Counts as Night](#trailer-trashing-counts-as-night)
   * [Unlocked MMORPGFPS](#unlocked-mmorpgfps)
+  * [Unlocked My Kingdom for a Wand Unlocker](#unlocked-my-kingdom-for-a-wand)
   * [Wildlife Preservation Fewer Injured Loaders](#wildlife-preservation-fewer-injured-loaders)
 * [Obsolete Mods](#obsolete-mods)
   * [Configurable Catch-A-Ride](#configurable-catch-a-ride)
@@ -190,12 +190,6 @@ This simple mod improves the spawn rate for Muscles, a unique Bruiser who
 appears in Thousand Cuts.  He will be fairly likely to appear during a full
 playthrough of the level.
 
-### My Kingdom for a Wand Unlocker
-
-Removes the kill restrictions for your targets during the Dragon Keep DLC
-mission "My Kingdom for a Wand."  No more repeadedly trying to get that
-crit kill on the Orc and having Cloud Kill finish him off instead!
-
 ### No Crushers in Lair of Infinite Agony
 
 There is a little puzzle in Lair of Infinite Agony where the player
@@ -228,6 +222,12 @@ optional objective always completes regardless of time of day.
 ### Unlocked MMORPGFPS
 
 Removes the kill requirements from the Dragon Keep mission "MMORPGFPS."
+
+### Unlocked My Kingdom for a Wand
+
+Removes the kill restrictions for your targets during the Dragon Keep DLC
+mission "My Kingdom for a Wand."  No more repeadedly trying to get that
+crit kill on the Orc and having Cloud Kill finish him off instead!
 
 ### Wildlife Preservation Fewer Injured Loaders
 
