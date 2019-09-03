@@ -1,6 +1,10 @@
 BL2 Container TimeSaver XL
 ==========================
 
+**NOTE:** This mod is considered deprecated now, because all of its
+functionality has been folded into my "BL2 Mega TimeSaver XL" mod
+instead.  You'll probably be happier using that mod instead!
+
 Are you a busy, on-the-go Vault Hunter who just doesn't have the
 *time* for such luxuries as waiting for loot chests to open?  Are
 those Hyperion weapon crates leaving you tapping your watch and
@@ -56,6 +60,9 @@ See [COPYING-mods.txt](../COPYING-mods.txt) for the full text.
 
 Changelog
 =========
+
+**v1.0.5** - September 3, 2019
+ * Marked as deprecated, in favor of BL2 Mega TimeSaver XL
 
 **v1.0.4** - July 9, 2019
  * Added support for Commander Lilith & the Fight for Sanctuary containers.

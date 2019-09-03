@@ -20,12 +20,11 @@ branches, so you can browse in `bl2betterloot`, `bl2colddeadhands`,
   * [BL2 Better Loot Mod](#bl2-better-loot-mod)
   * [BL2 Cold Dead Hands](#bl2-cold-dead-hands)
   * [BL2 Configurable Slot Machines](#bl2-configurable-slot-machines)
-  * [BL2 Container TimeSaver XL](#bl2-container-timesaver-xl)
   * [BL2 Early Bloomer](#bl2-early-bloomer)
   * [BL2 Expanded Legendary Pools](#bl2-expanded-legendary-pools)
-  * [BL2 Fast Travel TimeSaver XL](#bl2-fast-travel-timesaver-xl)
   * [BL2 Happy Horizontal People Transporter](#bl2-happy-horizontal-people-transporter)
   * [BL2 Invulnerable Escortees](#bl2-invulnerable-escortees)
+  * [BL2 Mega TimeSaver XL](#bl2-mega-timesaver-xl)
   * [BL2 Movement Speed Cheats](#bl2-movement-speed-cheats)
   * [BL2 No Wasted COMs](#bl2-no-wasted-coms)
   * [Fragile Minecraft Blocks](#fragile-minecraft-blocks)
@@ -103,17 +102,6 @@ slot machines, of the sort found in Sanctuary (and, I believe, on One-Armed
 Bandits).  The default configuration leaves the slot machines exactly how
 they are in the base game -- you **must** configure the options you want.
 
-### BL2 Container TimeSaver XL
-
-Are you a busy, on-the-go Vault Hunter who just doesn't have the
-*time* for such luxuries as waiting for loot chests to open?  Are
-those Hyperion weapon crates leaving you tapping your watch and
-sneaking glances at your day calendar?  Is the hunt for more ammo
-filling you with near-terminal waves of impatience?
-
-Well, fret no longer!  This mod increases the opening animations
-of all containers in BL2 by 5x.
-
 ### BL2 Early Bloomer
 
 Unlocks all weapons/items to be able to spawn right at the beginning of the game.
@@ -129,14 +117,6 @@ legendary pools, too.  The mod will also by default add in gemstone weapons
 into the E-Tech pool, and add the Dragon Keep "Alignment" Class Mods to the
 global class mod drops.
 
-### BL2 Fast Travel TimeSaver
-
-This simple little mod speeds up the animations of Fast Travel stations
-becoming active.  This is mostly just useful for the handful of stations
-which initially start closed, when the level loads -- if you start your game
-right outside one of these stations and want to warp away, you've got to
-wait for the animation to complete before doing so.
-
 ### BL2 Happy Horizontal People Transporter
 
 A replacement for the Mongol which can be used to transport your enemies
@@ -151,6 +131,19 @@ have to worry about inadvertantly failing the mission.  This is most
 useful for the escort missions where your charge is hostile, because the
 player can no longer accidentally kill them while taking care of the
 other enemies in the area.
+
+### BL2 Mega TimeSaver XL
+
+This mod speeds up nearly all the noticeably-slow interactive objects
+that you use throughout BL2 by 5x (in general), most notably:
+
+ * Containers
+ * Doors / Gates
+ * Drawbridges
+ * Fast Travel Stations *(primarily for Three Horns Valley, Highlands, and Hunter's Grotto)*
+ * Lifts / Elevators / Transporters
+ * Slot Machines
+ * Vehicle Aimations
 
 ### BL2 Movement Speed Cheats
 

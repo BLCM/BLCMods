@@ -1,6 +1,10 @@
 BL2 Fast Travel TimeSaver XL
 ============================
 
+**NOTE:** This mod is considered deprecated now, because all of its
+functionality has been folded into my "BL2 Mega TimeSaver XL" mod
+instead.  You'll probably be happier using that mod instead!
+
 This simple little mod speeds up the animations of Fast Travel stations
 becoming active.  This is mostly just useful for the handful of stations
 which initially start closed, when the level loads -- if you start your game
@@ -29,6 +33,9 @@ See [COPYING-mods.txt](../COPYING-mods.txt) for the full text.
 
 Changelog
 =========
+
+**v1.0.1** - September 3, 2019
+ * Marked as deprecated, in favor of BL2 Mega TimeSaver XL
 
 **v1.0.0** - August 16, 2018
  * Initial Release
