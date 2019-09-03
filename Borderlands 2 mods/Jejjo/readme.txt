@@ -1,4 +1,4 @@
-You guys like pictures of guns right? - https://imgur.com/a/QAzxwEn
+You guys like pictures of guns right? - https://imgur.com/a/QAzxwEn (I forgot to get a pic of the Paradise)
 
 ---
 
