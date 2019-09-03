@@ -43,9 +43,12 @@ except ModuleNotFoundError:
 
 # Control Vars
 mod_name = 'BL2 Invulnerable Escortees'
-mod_version = '1.1.0'
+mod_version = '1.2.0'
 output_filename = '{}.blcm'.format(mod_name)
 borok_scale = 25
+
+done_murderlin = False
+done_monstrositat = False
 
 # Variables that we'll set for each char
 vars_to_set = []
@@ -58,18 +61,6 @@ for element in ['Normal', 'Explosive', 'Shock', 'Corrosive', 'Incendiary', 'Amp'
 
 # The characters to operate on
 chars = [
-        # Eh, we probably shouldn't actually do this one.
-        #('Der Monstrositat',
-        #    'The Borok Dietmar wants you to trap in the Hammerlock DLC mission "Still Just a Borok in a Cage"',
-        #    None,
-        #    'GD_Sage_SM_BorokCageData.Population.PawnBalance_Sage_BorokCage_Creature',
-        #    'Sage_Underground_P',
-        #    [],
-        #    [
-        #        [],
-        #    ],
-        #    [],
-        #    ),
         ('Enrique',
             'Tina\'s pet in the Torgue DLC, during the mission "Walking the Dog"',
             'GD_IrisTinaSkag.Character.CharClass_Iris_SkagBadassFire',
@@ -124,7 +115,44 @@ chars = [
                 'set GD_Aster_TreeHuggerData.IO_TreeHugger_SaplingPlanted bCanTakeRadiusDamage False',
             ],
             ),
-
+        ('Mr. Sparks',
+            'The generator in the base game mission "You Are Cordially Invited: Tea Party"',
+            None,
+            None,
+            'TundraExpress_P',
+            [],
+            [],
+            [
+                'set GD_Z1_CordiallyInvitedData.InteractiveObjects.IO_MO_Cordially_Generator bCanTakeDirectDamage False',
+                'set GD_Z1_CordiallyInvitedData.InteractiveObjects.IO_MO_Cordially_Generator bCanTakeRadiusDamage False',
+            ],
+            ),
+        ('Ol\' Pukey',
+            'The skag from the Hammerlock DLC quest "Ol\' Pukey"',
+            'GD_Sage_SM_OldPukeyData.Creature.CharClass_Sage_Skag_Mission_Pukey',
+            None,
+            'Sage_RockForest_P',
+            [
+                #('GD_Balance_HealthAndDamage.AIParameters.Attribute_HealthMultiplier', 18, None, None, 1),
+                ('GD_Balance_HealthAndDamage.AIParameters.Attribute_EnemyNonWeaponDamageMultiplier', 1.25, None, None, 1),
+                ('GD_Balance_Experience.Attributes.Attribute_ExperienceMultiplier', 0, 'None', "AttributeInitializationDefinition'GD_AI_Balance.XP.XPMultiplier_02_Normal'", 1),
+                ('GD_Balance_HealthAndDamage.AIParameters.Attribute_DamageToVehiclesOnCollisionMultiplier', 3, None, None, 1),
+            ],
+            [],
+            [],
+            ),
+        ('Supply Crate in Thousand Cuts',
+            'During the base game mission "Defend Slab Tower"',
+            None,
+            None,
+            'Grass_Cliffs_P',
+            [],
+            [],
+            [
+                'set GD_Z2_DefendSlabTowerData.InteractiveObjects.MO_DefendSlabTower_SupplyCrate bCanTakeDirectDamage False',
+                'set GD_Z2_DefendSlabTowerData.InteractiveObjects.MO_DefendSlabTower_SupplyCrate bCanTakeRadiusDamage False',
+            ],
+            ),
     ]
 
 def get_asv_full(asvs):
@@ -163,96 +191,143 @@ lines.append('    # to damage, so there\'s no chance of them accidentally being 
 lines.append('    # causing you to have to restart the mission.')
 lines.append('')
 
-lines.append("""#<Der Monstrositat (only {borok_scale}x health by default)><mut>
+def do_monstrositat(lines):
+    lines.append("""#<Der Monstrositat (only {borok_scale}x health by default)><mut>
 
-    #<{borok_scale}x Health Buff>
+        #<{borok_scale}x Health Buff>
 
-        # The Borok Dietmar wants you to trap in the Hammerlock DLC mission "Still Just a Borok in a Cage"
-        # UCP makes Der Monstrositat respawnable, and an alternative source for the Chopper, so we don't
-        # want to buff Der Monstrositat *too* much.  This will just give it a {borok_scale}x health buff, which should
-        # make it pretty difficult to accidentally kill, so long as you're not too overlevelled, though
-        # watch out for area-effect damage sources like Maya's Cloud Kill, or the other Cataclysm
-        # phaselock buffs.  (Badass Boroks get a 16x buff, so this makes Der Monstrositat slightly more
-        # powerful than those.)
+            # The Borok Dietmar wants you to trap in the Hammerlock DLC mission "Still Just a Borok in a Cage"
+            # UCP makes Der Monstrositat respawnable, and an alternative source for the Chopper, so we don't
+            # want to buff Der Monstrositat *too* much.  This will just give it a {borok_scale}x health buff, which should
+            # make it pretty difficult to accidentally kill, so long as you're not too overlevelled, though
+            # watch out for area-effect damage sources like Maya's Cloud Kill, or the other Cataclysm
+            # phaselock buffs.  (Badass Boroks get a 16x buff, so this makes Der Monstrositat slightly more
+            # powerful than those.)
 
-        level Sage_Underground_P set GD_Sage_SM_BorokCageData.Population.PawnBalance_Sage_BorokCage_Creature PlayThroughs[0].AttributeStartingValues
-        (
+            level Sage_Underground_P set GD_Sage_SM_BorokCageData.Population.PawnBalance_Sage_BorokCage_Creature PlayThroughs[0].AttributeStartingValues
             (
-                Attribute=AttributeDefinition'GD_Balance_HealthAndDamage.AIParameters.Attribute_HealthMultiplier',
-                BaseValue=(
-                    BaseValueConstant={borok_scale},
-                    BaseValueAttribute=None,
-                    InitializationDefinition=None,
-                    BaseValueScaleConstant=1
-                )
-            ),
-            (
-                Attribute=AttributeDefinition'D_Attributes.DamageSourceModifiers.ReceivedGrenadeDamageModifier',
-                BaseValue=(
-                    BaseValueConstant=0,
-                    BaseValueAttribute=None,
-                    InitializationDefinition=None,
-                    BaseValueScaleConstant=1
-                )
-            ),
-            (
-                Attribute=AttributeDefinition'D_Attributes.DamageSourceModifiers.ReceivedMeleeDamageModifier',
-                BaseValue=(
-                    BaseValueConstant=0,
-                    BaseValueAttribute=None,
-                    InitializationDefinition=None,
-                    BaseValueScaleConstant=1
-                )
-            )
-        )
-
-    #</{borok_scale}x Health Buff>
-
-    #<99999999x Health Buff>
-
-        # The Borok Dietmar wants you to trap in the Hammerlock DLC mission "Still Just a Borok in a Cage"
-        # UCP makes Der Monstrositat respawnable, and an alternative source for the Chopper, so if you're
-        # using UCP then you probaly don't want to use this option, which makes Der Monstrositat effectively
-        # invulnerable.  If you're not using UCP, though, or don't care that a Borok with a health pool to
-        # put Dexiduous to shame is running around loose, go for it!
-
-        level Sage_Underground_P set GD_Sage_SM_BorokCageData.Population.PawnBalance_Sage_BorokCage_Creature PlayThroughs[0].AttributeStartingValues
-        (
-            (
-                Attribute=AttributeDefinition'GD_Balance_HealthAndDamage.AIParameters.Attribute_HealthMultiplier',
-                BaseValue=(
-                    BaseValueConstant=99999999,
-                    BaseValueAttribute=None,
-                    InitializationDefinition=None,
-                    BaseValueScaleConstant=1
-                )
-            ),
-            (
-                Attribute=AttributeDefinition'D_Attributes.DamageSourceModifiers.ReceivedGrenadeDamageModifier',
-                BaseValue=(
-                    BaseValueConstant=0,
-                    BaseValueAttribute=None,
-                    InitializationDefinition=None,
-                    BaseValueScaleConstant=1
-                )
-            ),
-            (
-                Attribute=AttributeDefinition'D_Attributes.DamageSourceModifiers.ReceivedMeleeDamageModifier',
-                BaseValue=(
-                    BaseValueConstant=0,
-                    BaseValueAttribute=None,
-                    InitializationDefinition=None,
-                    BaseValueScaleConstant=1
+                (
+                    Attribute=AttributeDefinition'GD_Balance_HealthAndDamage.AIParameters.Attribute_HealthMultiplier',
+                    BaseValue=(
+                        BaseValueConstant={borok_scale},
+                        BaseValueAttribute=None,
+                        InitializationDefinition=None,
+                        BaseValueScaleConstant=1
+                    )
+                ),
+                (
+                    Attribute=AttributeDefinition'D_Attributes.DamageSourceModifiers.ReceivedGrenadeDamageModifier',
+                    BaseValue=(
+                        BaseValueConstant=0,
+                        BaseValueAttribute=None,
+                        InitializationDefinition=None,
+                        BaseValueScaleConstant=1
+                    )
+                ),
+                (
+                    Attribute=AttributeDefinition'D_Attributes.DamageSourceModifiers.ReceivedMeleeDamageModifier',
+                    BaseValue=(
+                        BaseValueConstant=0,
+                        BaseValueAttribute=None,
+                        InitializationDefinition=None,
+                        BaseValueScaleConstant=1
+                    )
                 )
             )
-        )
 
-    #</99999999x Health Buff>
+        #</{borok_scale}x Health Buff>
 
-#</Der Monstrositat (only {borok_scale}x health by default)><mut>
-""".format(borok_scale=borok_scale))
+        #<99999999x Health Buff>
+
+            # The Borok Dietmar wants you to trap in the Hammerlock DLC mission "Still Just a Borok in a Cage"
+            # UCP makes Der Monstrositat respawnable, and an alternative source for the Chopper, so if you're
+            # using UCP then you probaly don't want to use this option, which makes Der Monstrositat effectively
+            # invulnerable.  If you're not using UCP, though, or don't care that a Borok with a health pool to
+            # put Dexiduous to shame is running around loose, go for it!
+
+            level Sage_Underground_P set GD_Sage_SM_BorokCageData.Population.PawnBalance_Sage_BorokCage_Creature PlayThroughs[0].AttributeStartingValues
+            (
+                (
+                    Attribute=AttributeDefinition'GD_Balance_HealthAndDamage.AIParameters.Attribute_HealthMultiplier',
+                    BaseValue=(
+                        BaseValueConstant=99999999,
+                        BaseValueAttribute=None,
+                        InitializationDefinition=None,
+                        BaseValueScaleConstant=1
+                    )
+                ),
+                (
+                    Attribute=AttributeDefinition'D_Attributes.DamageSourceModifiers.ReceivedGrenadeDamageModifier',
+                    BaseValue=(
+                        BaseValueConstant=0,
+                        BaseValueAttribute=None,
+                        InitializationDefinition=None,
+                        BaseValueScaleConstant=1
+                    )
+                ),
+                (
+                    Attribute=AttributeDefinition'D_Attributes.DamageSourceModifiers.ReceivedMeleeDamageModifier',
+                    BaseValue=(
+                        BaseValueConstant=0,
+                        BaseValueAttribute=None,
+                        InitializationDefinition=None,
+                        BaseValueScaleConstant=1
+                    )
+                )
+            )
+
+        #</99999999x Health Buff>
+
+    #</Der Monstrositat (only {borok_scale}x health by default)><mut>
+    """.format(borok_scale=borok_scale))
+
+def do_murderlin(lines):
+    lines.append("""#<Murderlin's Son (disabled by default)><mut>
+
+        #<Let Murderlin's Son's Tower Get Damaged>
+
+            # Unlike the other "escort" quests, preventing the tower from
+            # being damaged here seems pretty ridiculous, so by default
+            # we keep it damageable.
+
+            level TempleSlaughter_P set GD_Aster_TempleTowerData.InteractiveObjects.IO_MO_TempleObjective bCanTakeDirectDamage True
+
+            level TempleSlaughter_P set GD_Aster_TempleTowerData.InteractiveObjects.IO_MO_TempleObjective bCanTakeRadiusDamage True
+
+        #</Let Murderlin's Son's Tower Get Damaged>
+
+        #<Disable Damage to Murderlin's Son's Tower>
+
+            # If you really want "The Magic of Childhood" to be utterly
+            # trivial, this option will let you finish the level literally
+            # without ever having to fire a shot.
+
+            level TempleSlaughter_P set GD_Aster_TempleTowerData.InteractiveObjects.IO_MO_TempleObjective bCanTakeDirectDamage False
+
+            level TempleSlaughter_P set GD_Aster_TempleTowerData.InteractiveObjects.IO_MO_TempleObjective bCanTakeRadiusDamage False
+
+        #</Disable Damage to Murderlin's Son's Tower>
+
+    #</Murderlin's Son (disabled by default)>
+    """)
+
+def check_done(lines, char_name=None):
+    global done_murderlin
+    global done_monstrositat
+
+    if not done_monstrositat:
+        if not char_name or 'der monstrositat' < char_name.lower():
+            do_monstrositat(lines)
+            done_monstrositat = True
+
+    if not done_murderlin:
+        if not char_name or 'murderlin\'s son' < char_name.lower():
+            do_murderlin(lines)
+            done_murderlin = True
 
 for (char_name, comment, char_class, pawn_class, level_name, asvs, pt_asvs, extras) in chars:
+
+    check_done(lines, char_name)
 
     lines.append('#<{}>'.format(char_name))
     lines.append('')
@@ -277,34 +352,7 @@ for (char_name, comment, char_class, pawn_class, level_name, asvs, pt_asvs, extr
     lines.append('#</{}>'.format(char_name))
     lines.append('')
 
-lines.append("""#<Murderlin's Son (disabled by default)><mut>
-
-#<Let Murderlin's Son's Tower Get Damaged>
-
-    # Unlike the other "escort" quests, preventing the tower from
-    # being damaged here seems pretty ridiculous, so by default
-    # we keep it damageable.
-
-    level TempleSlaughter_P set GD_Aster_TempleTowerData.InteractiveObjects.IO_MO_TempleObjective bCanTakeDirectDamage True
-
-    level TempleSlaughter_P set GD_Aster_TempleTowerData.InteractiveObjects.IO_MO_TempleObjective bCanTakeRadiusDamage True
-
-#</Let Murderlin's Son's Tower Get Damaged>
-
-#<Disable Damage to Murderlin's Son's Tower>
-
-    # If you really want "The Magic of Childhood" to be utterly
-    # trivial, this option will let you finish the level literally
-    # without ever having to fire a shot.
-
-    level TempleSlaughter_P set GD_Aster_TempleTowerData.InteractiveObjects.IO_MO_TempleObjective bCanTakeDirectDamage False
-
-    level TempleSlaughter_P set GD_Aster_TempleTowerData.InteractiveObjects.IO_MO_TempleObjective bCanTakeRadiusDamage False
-
-#</Disable Damage to Murderlin's Son's Tower>
-
-#</Murderlin's Son (disabled by default)>
-""")
+check_done(lines)
 
 lines.append('')
 lines.append('#</{}>'.format(mod_name))
