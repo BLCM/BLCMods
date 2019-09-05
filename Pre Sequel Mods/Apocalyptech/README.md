@@ -21,6 +21,7 @@ branches, so you can browse in `bl2betterloot`, `bl2colddeadhands`,
   * [Infinite Air Boosts](#infinite-air-boosts)
   * [Luneshine on Uniques](#luneshine-on-uniques)
   * [No Broken Chests Near Denial Subroutine](#no-broken-chests-near-denial-subroutine)
+  * [No Meathunks Required for Lost Legion Invasion](#no-meathunks-required-for-lost-legion-invasion)
   * [No SpyBugs in The Cortex](#no-spybugs-in-the-cortex)
   * [Speedier Moon Buggies](#speedier-moon-buggies)
   * [Speedier Stingrays](#speedier-stingrays)
@@ -99,6 +100,14 @@ The Denial Subroutine arena (in Cluster 99002 0V3RL00K) has six bandit
 "coolers" which don't actually work -- they open and spawn their items, but the
 items can't actually be picked up.  This mod changes them to be the round ammo
 chests instead, so at least they work.
+
+### No Meathunks Required for Lost Legion Invasion
+
+Early in the game, during the Lost Legion Invasion mission, you are required
+to melee four locks to open a door, to get to an Oz Kit.  I've always found
+the top two to be annoying to jump to, especially when using my movement
+speed cheats, so I've made it so they can be damaged by any damage source.
+No meathunks required!
 
 ### No SpyBugs in The Cortex
 
