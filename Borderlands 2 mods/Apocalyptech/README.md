@@ -47,6 +47,9 @@ branches, so you can browse in `bl2betterloot`, `bl2colddeadhands`,
   * [conv_to_human.py](#conv_to_humanpy)
 * [Licenses](#licenses)
 
+Check the `mods_for_testing_mods` directory for a few mods which I use while
+testing other mods, but which aren't suitable for everyday use.
+
 Mod List
 ========
 

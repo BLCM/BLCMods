@@ -39,6 +39,9 @@ branches, so you can browse in `bl2betterloot`, `bl2colddeadhands`,
 * [Utilities](#utilities)
 * [Licenses](#licenses)
 
+Check the `mods_for_testing_mods` directory for a few mods which I use while
+testing other mods, but which aren't suitable for everyday use.
+
 Mod List
 ========
 
@@ -234,6 +237,11 @@ frees up 624 skin/head pools for use by TPS mods.  This is possible because the
 default skin/head pool structure uses an effectively unnecessary intermediate
 pool inbetween the pool that's actually used for drops and the skins/heads
 themselves.
+
+Mods for Testing Mods
+=====================
+
+I've got a separate directory for 
 
 Utilities
 =========
