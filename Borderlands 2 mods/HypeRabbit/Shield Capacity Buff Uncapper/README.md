@@ -7,7 +7,7 @@ This mod aims to change that, allowing a buff to be accurate regardless of your 
 
 All it does is move a few numbers around, but be aware: this mod affects every shield that isn't Rough Rider. If you use any other mods that change shield stats, they might conflict with this.
 
-In fact, this mod overwrites some statements in the Unofficial Community Patch. I've merged conflicting statements into optional "compatibility" configurations for this mod.  
+In fact, this mod overwrites some statements in the Unofficial Community Patch. I've merged conflicting statements into optional "compatibility" configurations for this mod, that you may choose from by importing this mod in BLCMM.  
 These compatibility versions were made from UCP version 5.0.2.
 
 Many thanks to apple1417 for teaching me how to mod, and helping me figure out all of the math for this mod.
