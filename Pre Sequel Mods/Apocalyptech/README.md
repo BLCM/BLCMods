@@ -28,11 +28,11 @@ branches, so you can browse in `bl2betterloot`, `bl2colddeadhands`,
   * [TPS Better Loot Mod](#tps-better-loot-mod)
   * [TPS Cold Dead Hands](#tps-cold-dead-hands)
   * [TPS Configurable Slot Machines](#tps-configurable-slot-machines)
-  * [TPS Container TimeSaver XL](#tps-container-timesaver-xl)
   * [TPS Early Bloomer](#tps-early-bloomer)
   * [TPS Expanded Legendary Pools](#tps-expanded-legendary-pools)
   * [TPS Happy Horizontal People Transporter](#tps-happy-horizontal-people-transporter)
   * [TPS Invulnerable Escortees](#tps-invulnerable-escortees)
+  * [TPS Mega TimeSaver XL](#tps-mega-timesaver-xl)
   * [TPS Movement Speed Cheats](#tps-movement-speed-cheats)
   * [TPS No Wasted COMs](#tps-no-wasted-coms)
   * [TPS Skinpool Reassignments](#tps-skinpool-reassignments)
@@ -171,17 +171,6 @@ slot machines, of the sort found in Concordia.  The default configuration
 leaves the slot machines exactly how they are in the base game -- you **must**
 configure the options you want.
 
-### TPS Container TimeSaver XL
-
-Are you a busy, on-the-go Vault Hunter who just doesn't have the
-*time* for such luxuries as waiting for loot chests to open?  Are
-those Hyperion weapon crates leaving you tapping your watch and
-sneaking glances at your day calendar?  Is the hunt for more ammo
-filling you with near-terminal waves of impatience?
-
-Well, fret no longer!  This mod increases the opening animations
-of all containers in TPS by 5x.
-
 ### TPS Early Bloomer
 
 Unlocks all weapons/items to be able to spawn right at the beginning of the game.
@@ -208,6 +197,21 @@ the mission.  This mod makes those escortees invulnerable, so you no longer
 have to worry about inadvertantly failing the mission.  This mod is slightly
 less useful than its BL2 counterpart, since most of the escortees in TPS can't
 be damaged accidentally by the player, but here it is regardless.
+
+### TPS Mega TimeSaver XL
+
+This mod speeds up nearly all the noticeably-slow interactive objects
+that you use throughout TPS by 5x (in general), most notably:
+
+ * Computers / Switches
+ * Containers
+ * Doors / Gates
+ * Fast Travel Stations *(mostly just for after the Felicity Rampant fight)*
+ * Grinder
+ * Lifts / Elevators / Transporters
+ * Oxygen Generators
+ * Slot Machines
+ * Vehicle Aimations
 
 ### TPS Movement Speed Cheats
 

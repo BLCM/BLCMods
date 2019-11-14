@@ -1,6 +1,10 @@
 TPS Container TimeSaver XL
 ==========================
 
+**NOTE:** This mod is considered deprecated now, because all of its
+functionality has been folded into my "TPS Mega TimeSaver XL" mod
+instead.  You'll probably be happier using that mod instead!
+
 Are you a busy, on-the-go Vault Hunter who just doesn't have the
 *time* for such luxuries as waiting for loot chests to open?  Are
 those Hyperion weapon crates leaving you tapping your watch and
@@ -34,6 +38,9 @@ See [COPYING-mods.txt](../COPYING-mods.txt) for the full text.
 
 Changelog
 =========
+
+**v1.0.1** - November 14, 2019
+ * Marked as deprecated, in favor of TPS Mega TimeSaver XL
 
 **v1.0.0** - August 17, 2018
  * Initial Release
