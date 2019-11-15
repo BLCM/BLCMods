@@ -59,7 +59,7 @@ loot_drop_quantity = 5
 # Force Pool_GunsAndGear to always drop the specified pool, if `force_gunsandgear_drop`
 # is True.  Useful for testing out how individual pools are behaving.
 force_gunsandgear_drop = True
-force_gunsandgear_drop_type = 'GD_Itempools.WeaponPools.Pool_Weapons_Shotguns_06_Legendary'
+force_gunsandgear_drop_type = 'GD_Itempools.GrenadeModPools.Pool_GrenadeMods_06_Legendary'
 
 # Force Pool_GunsAndGear to always drop the specified item, if
 # `force_gunsandgear_specific` is True.  Useful for seeing what exactly an
@@ -70,8 +70,13 @@ force_gunsandgear_specific = False
 #   'WeaponBalanceDefinition'
 #   'InventoryBalanceDefinition'
 force_gunsandgear_specific_items = [
-    ('GD_Cork_Weap_Launchers.A_Weapons_Legendary.RL_Vladof_5_Mongol', 1, 'WeaponBalanceDefinition'),
+    #('GD_Cork_Weap_Launchers.A_Weapons_Legendary.RL_Vladof_5_Mongol', 1, 'WeaponBalanceDefinition'),
     #('GD_Petunia_Weapons.Snipers.Sniper_Jakobs_3_Plunkett', 1, 'InventoryBalanceDefinition'),
+    #('GD_Petunia_Weapons.AssaultRifles.AR_Bandit_3_CryBaby', 1, 'WeaponBalanceDefinition'),
+    #('GD_Cork_Weap_Pistol.A_Weapons_Unique.Pistol_Hyperion_3_Fibber', 1, 'WeaponBalanceDefinition'),
+    ('GD_Ma_Weapons.A_Weapons_Legendary.Laser_Maliwan_5_FusionBeam', 1, 'WeaponBalanceDefinition'),
+    ('GD_Cork_Weap_Lasers.A_Weapons_Legendary.Laser_Tediore_5_Tesla', 1, 'WeaponBalanceDefinition'),
+    ('GD_Ma_Weapons.A_Weapons_Unique.Laser_Dahl_6_Glitch_HeartfullSplodger', 1, 'WeaponBalanceDefinition'),
     ]
 
 

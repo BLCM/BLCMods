@@ -35,6 +35,7 @@ branches, so you can browse in `bl2betterloot`, `bl2colddeadhands`,
   * [TPS Mega TimeSaver XL](#tps-mega-timesaver-xl)
   * [TPS Movement Speed Cheats](#tps-movement-speed-cheats)
   * [TPS No Wasted COMs](#tps-no-wasted-coms)
+  * [TPS Red Text Explainer](#tps-red-text-explainer)
   * [TPS Skinpool Reassignments](#tps-skinpool-reassignments)
 * [Utilities](#utilities)
 * [Licenses](#licenses)
@@ -229,6 +230,14 @@ This mod changes the Class Mod drop pools such that the only COMs which drop
 are for characters who are actually playing the game.  For a singleplayer
 game, that means you'll only ever get COMs for your one character, for
 instance.
+
+### TPS Red Text Explainer
+
+Inspired by Ezeith's BL2 mod "Red text explainer"
+
+All weapons, grenades, and shields with red text will include text describing
+the extra effects.  Class Mods and Oz Kits have been left alone, since all
+those list their effects right on the card.
 
 ### TPS Skinpool Reassignments
 

@@ -59,16 +59,16 @@ loot_drop_quantity = 5
 # Force Pool_GunsAndGear to always drop the specified pool, if `force_gunsandgear_drop`
 # is True.  Useful for testing out how individual pools are behaving.
 force_gunsandgear_drop = True
-force_gunsandgear_drop_type = 'GD_Anemone_ItemPools.WeaponPools.Pool_Weapons_Infection_Cleaner'
+force_gunsandgear_drop_type = 'GD_Itempools.GrenadeModPools.Pool_GrenadeMods_06_Legendary'
 
 # Force Pool_GunsAndGear to always drop the specified item, if
 # `force_gunsandgear_specific` is True.  Useful for seeing what exactly an
 # item is.  `force_gunsandgear_specific` will override `force_gunsandgear_drop`,
 # if both are set to True.
-force_gunsandgear_specific = True
-#force_gunsandgear_specific_type = 'WeaponBalanceDefinition'
-force_gunsandgear_specific_type = 'InventoryBalanceDefinition'
-force_gunsandgear_specific_name = 'GD_Anemone_GrenadeMods.A_Item.GM_Standard_3_Rare_Flamer'
+force_gunsandgear_specific = False
+force_gunsandgear_specific_type = 'WeaponBalanceDefinition'
+#force_gunsandgear_specific_type = 'InventoryBalanceDefinition'
+force_gunsandgear_specific_name = 'GD_Weap_SniperRifles.A_Weapons_Unique.Sniper_Maliwan_3_ChereAmie'
 
 ###
 ### Now generate the mod
