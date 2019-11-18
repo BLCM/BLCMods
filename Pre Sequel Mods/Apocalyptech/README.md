@@ -30,6 +30,7 @@ branches, so you can browse in `bl2betterloot`, `bl2colddeadhands`,
   * [TPS Configurable Slot Machines](#tps-configurable-slot-machines)
   * [TPS Early Bloomer](#tps-early-bloomer)
   * [TPS Expanded Legendary Pools](#tps-expanded-legendary-pools)
+  * [TPS Faster Rockets and Gyrojets](#tps-faster-rockets-and-gyrojets)
   * [TPS Happy Horizontal People Transporter](#tps-happy-horizontal-people-transporter)
   * [TPS Invulnerable Escortees](#tps-invulnerable-escortees)
   * [TPS Mega TimeSaver XL](#tps-mega-timesaver-xl)
@@ -184,6 +185,14 @@ you already have this.)
 This mod adds all legendary items across DLCs into the global legendary loot
 pools, and by default adds all uniques and glitch uniques into the
 legendary pools, too.
+
+### TPS Faster Rockets and Gyrojets
+
+This mod improves the speed of all gyrojet-based projectiles by 3x,
+which also affects other Torgue-barrel-provided projectiles on ARs,
+like grenades on Jakobs and Dahl ARs.  Rocket speeds are also buffed
+by 3x, since I nearly always take Vladof launchers over other brands.
+Vladof launchers do get a buff, but only get a much-smaller 1.4x.
 
 ### TPS Happy Horizontal People Transporter
 

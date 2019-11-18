@@ -22,6 +22,7 @@ branches, so you can browse in `bl2betterloot`, `bl2colddeadhands`,
   * [BL2 Configurable Slot Machines](#bl2-configurable-slot-machines)
   * [BL2 Early Bloomer](#bl2-early-bloomer)
   * [BL2 Expanded Legendary Pools](#bl2-expanded-legendary-pools)
+  * [BL2 Faster Rockets and Gyrojets](#bl2-faster-rockets-and-gyrojets)
   * [BL2 Happy Horizontal People Transporter](#bl2-happy-horizontal-people-transporter)
   * [BL2 Invulnerable Escortees](#bl2-invulnerable-escortees)
   * [BL2 Mega TimeSaver XL](#bl2-mega-timesaver-xl)
@@ -119,6 +120,14 @@ pools, and by default adds all uniques, seraphs, and pearlescents into the
 legendary pools, too.  The mod will also by default add in gemstone weapons
 into the E-Tech pool, and add the Dragon Keep "Alignment" Class Mods to the
 global class mod drops.
+
+### BL2 Faster Rockets and Gyrojets
+
+This mod improves the speed of all gyrojet-based projectiles by 3x,
+which also affects other Torgue-barrel-provided projectiles on ARs,
+like grenades on Jakobs and Dahl ARs.  Rocket speeds are also buffed
+by 3x, since I nearly always take Vladof launchers over other brands.
+Vladof launchers do get a buff, but only get a much-smaller 1.4x.
 
 ### BL2 Happy Horizontal People Transporter
 
