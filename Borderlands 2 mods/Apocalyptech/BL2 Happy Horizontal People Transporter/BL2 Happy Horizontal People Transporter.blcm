@@ -5,7 +5,7 @@
 	</head>
 	<body>
 		<category name="BL2 Happy Horizontal People Transporter">
-			<comment># BL2 Happy Horizontal People Transporter v1.0.1</comment>
+			<comment># BL2 Happy Horizontal People Transporter v1.0.2</comment>
 			<comment># by Apocalyptech</comment>
 			<comment># Licensed under Public Domain / CC0 1.0 Universal</comment>
 			<comment>#</comment>
@@ -98,6 +98,12 @@
 						<code profiles="default">set GD_Weap_Launchers.Projectiles.Projectile_Rocket_Vladof_Mongol BodyComposition.Attachments[0].Data.ComponentData.Component None</code>
 					</hotfix>
 				</category>
+				<category name="Lock Projectile Speed">
+					<comment># This is just the default projectile speed for the Mongol, but it's in here in case the user</comment>
+					<comment># has a mod which alters it, such as my own Faster Rockets and Gyrojets mod.  This way, there</comment>
+					<comment># will at least be an alert inside BLCMM.</comment>
+					<code profiles="default">set GD_Weap_Launchers.Projectiles.Projectile_Rocket_Vladof_Mongol SpeedFormula (BaseValueConstant=1200.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)</code>
+				</category>
 			</category>
 			<category name="Branding">
 				<category name="Text">
@@ -174,6 +180,7 @@ set GD_Weap_Launchers.A_Weapons_Legendary.RL_Vladof_5_Mongol:WeaponPartListColle
 set GD_Weap_Launchers.A_Weapons_Legendary.RL_Vladof_5_Mongol:WeaponPartListCollectionDefinition_68 BodyPartData (bEnabled=True,WeightedParts=((Part=WeaponPartDefinition'GD_Weap_Launchers.Body.L_Body_Vladof_4',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=2),(Part=WeaponPartDefinition'GD_Weap_Launchers.Body.L_Body_Maliwan_4',Manufacturers=((Manufacturer=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=3)))
 set GD_Weap_Launchers.Barrel.L_Barrel_Vladof_Mongol GestaltModeSkeletalMeshName L_Barrel_Alien
 set GD_Weap_Launchers.Barrel.L_Barrel_Vladof_Mongol NumPhysicalBarrelsToFireFrom 1
+set GD_Weap_Launchers.Projectiles.Projectile_Rocket_Vladof_Mongol SpeedFormula (BaseValueConstant=1200.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
 set GD_Weap_Launchers.Name.Title_Vladof.Title_Legendary_Mongol PartName Happy Horizontal People Transporter
 set GD_Weap_Launchers.Name.Title_Vladof.Title_Legendary_Mongol:AttributePresentationDefinition_8 NoConstraintText Glad to be of service!
 set GD_Weap_Launchers.Name.Title_Vladof.Title_Legendary_Mongol Priority 100
