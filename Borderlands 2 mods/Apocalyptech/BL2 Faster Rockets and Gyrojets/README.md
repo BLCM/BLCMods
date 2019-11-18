@@ -26,6 +26,7 @@ that's been given a bit of a boost:
 * Bunny
 * Carnage
 * Hive
+* KerBlaster
 * Landscaper
 * Mongol
 * Norfleet
@@ -73,6 +74,10 @@ This mod itself is licensed under
 
 Changelog
 =========
+
+**v1.0.1**, November 18, 2019:
+ * Fixed an organizational error where the KerBlaster change wasn't in its
+   own category
 
 **v1.0.0**, November 17, 2019:
  * Initial public release

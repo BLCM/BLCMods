@@ -48,7 +48,7 @@ except ModuleNotFoundError:
 ###
 
 mod_name = 'BL2 Faster Rockets and Gyrojets'
-mod_version = '1.0.0'
+mod_version = '1.0.1'
 output_filename = '{}.blcm'.format(mod_name)
 
 # Main scaling for Gyrojets
@@ -82,9 +82,6 @@ modifications = [
         ('Standard Barrels', [
             ('GD_Weap_AssaultRifle.Projectiles.Projectile_Dahl_Grenade', 2300),
             ('GD_Weap_AssaultRifle.Projectiles.Projectile_Rocket_Bandit', 2700),
-            ('GD_Weap_AssaultRifle.Projectiles.Projectile_Rocket_KerBlaster', 3600),
-            # Eh, leave KerBlaster grenades alone
-            #('GD_Weap_AssaultRifle.Projectiles.Projectile_KerBlaster_Grenade', 260),
             ('GD_Weap_AssaultRifle.Projectiles.Projectile_Rocket_Torgue', 3400),
             ('GD_Weap_AssaultRifle.Projectiles.Projectile_Rocket_Vladof', 5000),
             ('GD_Weap_AssaultRifle.FiringModes.Bullets_Assault_Torgue_GyroJet', 1000, jet_scale, TYPE_FM),
@@ -93,6 +90,11 @@ modifications = [
             ]),
         ('Boom Puppy', [
             ('GD_Iris_Weapons.Projectiles.Projectile_Grenade_BoomPuppy', 2300, ar_scale_boompuppy),
+            ]),
+        ('KerBlaster', [
+            ('GD_Weap_AssaultRifle.Projectiles.Projectile_Rocket_KerBlaster', 3600),
+            # Eh, leave KerBlaster grenades alone
+            #('GD_Weap_AssaultRifle.Projectiles.Projectile_KerBlaster_Grenade', 260),
             ]),
         ('Seeker', [
             ('GD_Aster_RaidWeapons.AssaultRifles.Projectile_Seeker_Homing', 2000),
