@@ -1,0 +1,41 @@
+<BLCMM v="1">
+#<!!!You opened a file saved with BLCMM in FilterTool. Please update to BLCMM to properly open this file!!!>
+	<head>
+		<type name="BL2" offline="false"/>
+		<profiles>
+			<profile name="default" current="true"/>
+		</profiles>
+	</head>
+	<body>
+		<category name="Border Disputes">
+			<comment>Mod written by GitHub: Our Lord And Savior Gabe Newell / Nexus Mods: OB4MA</comment>
+			<comment></comment>
+			<comment>This mod allows you to change the allegiances of everything upon mod execution.</comment>
+			<comment>This also affects other players so be aware that you can suddenly be murdered by, or kill a player ally.</comment>
+			<category name="Options">
+				<category name="Enemies Are Neutral To You Until Attacked">
+					<code profiles="">set Engine.PawnAllegiance DefaultOpinion OPINION_Neutral</code>
+				</category>
+				<category name="Enemies Are Neutral To You Until Attacked - Enemies Attack Enemies Right Away (NPC Battles)">
+					<code profiles="">set Engine.PawnAllegiance DefaultOpinion OPINION_Neutral</code>
+					<code profiles="">set Engine.PawnAllegiance SelfOpinion OPINION_Enemy</code>
+				</category>
+				<category name="Peace Among Our Time">
+					<code profiles="">set Engine.PawnAllegiance DefaultOpinion OPINION_Friendly</code>
+					<code profiles="">set Engine.PawnAllegiance SelfOpinion OPINION_Friendly</code>
+				</category>
+				<category name="Everyone Hates You - Including Players">
+					<code profiles="">set Engine.PawnAllegiance DefaultOpinion OPINION_Enemy</code>
+					<code profiles="">set Engine.PawnAllegiance SelfOpinion OPINION_Enemy</code>
+				</category>
+				<category name="GOD-Liath Simulator - Everyone Is Neutral To Each Other Until One Of Them Attacks Another Which Causes A One vs One">
+					<code profiles="">set Engine.PawnAllegiance DefaultOpinion OPINION_Neutral</code>
+					<code profiles="">set Engine.PawnAllegiance SelfOpinion OPINION_Neutral</code>
+				</category>
+			</category>
+		</category>
+	</body>
+</BLCMM>
+
+#Commands:
+
