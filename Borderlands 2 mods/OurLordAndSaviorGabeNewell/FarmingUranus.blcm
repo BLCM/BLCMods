@@ -7,90 +7,246 @@
 		</profiles>
 	</head>
 	<body>
-		<category name="Farming Uranus">
+		<category name="Farming Uranus - Version 1.1">
 			<comment>Mod written by GitHub: Our Lord And Savior Gabe Newell / Nexus Mods: OB4MA</comment>
 			<comment></comment>
-			<comment>This mod makes Uranus respawn every 100 seconds, his body disappears right away so you can loot, when he respawns he is neutral so he doesn't kill you while looting.</comment>
+			<comment>This mod makes Uranus respawn every 100 seconds by default, his body disappears right away so you can loot, when he respawns he is neutral so he doesn't kill you while looting.</comment>
 			<comment>I added more vending machines around his arena and you can teleport directly to his arena from any available fast travel method.</comment>
 			<comment>The fast travel is listed as "Uranus" under the Fight For Sanctuary category.</comment>
-			<category name="Code">
-				<comment>I left this out of a folder for if you want to change how fast he respawns in seconds.</comment>
-				<hotfix name="Name" level="Helios_P">
-					<code profiles="default">set Helios_Mission_Main.TheWorld:PersistentLevel.PopulationOpportunityDen_3 RespawnDelay 100</code>
-				</hotfix>
-				<category name="Uranus Spawning">
+			<category name="Uranus Respawn Timers - Choose One" MUT="true">
+				<category name="25 Seconds">
 					<hotfix name="Name" level="Helios_P">
-						<code profiles="default">set Helios_Mission_Main.TheWorld:PersistentLevel.PopulationOpportunityDen_3 MaxTotalActors 999999</code>
-						<code profiles="default">set Helios_Mission_Main.TheWorld:PersistentLevel.PopulationOpportunityDen_3 MaxActiveActorsIsNormal 1</code>
-						<code profiles="default">set Helios_Mission_Main.TheWorld:PersistentLevel.PopulationOpportunityDen_3 bNeutral True</code>
-						<code profiles="default">set Helios_Mission_Main.TheWorld:PersistentLevel.PopulationOpportunityDen_3 MaxActiveActorsThreatened 1</code>
-						<code profiles="default">set Helios_Mission_Main.TheWorld:PersistentLevel.PopulationOpportunityDen_3 IsEnabled True</code>
-						<code profiles="default">set Helios_Mission_Main.TheWorld:PersistentLevel.PopulationOpportunityDen_3 SpawnData (PopulationDefName="PopDef_Uranus",MaxActiveActors=1,NumTotalActors=1,NumActiveActors=0,NextSpawnTime=0,NumTotalExternalActors=0,NumActiveExternalActors=0)</code>
-						<code profiles="default">set Helios_Mission_Main.TheWorld:PersistentLevel.PopulationOpportunityDen_3 bIsWaitingForRespawn True</code>
+						<code profiles="">set Helios_Mission_Main.TheWorld:PersistentLevel.PopulationOpportunityDen_3 RespawnDelay 25</code>
 					</hotfix>
+				</category>
+				<category name="50 Seconds">
+					<hotfix name="Name" level="Helios_P">
+						<code profiles="">set Helios_Mission_Main.TheWorld:PersistentLevel.PopulationOpportunityDen_3 RespawnDelay 50</code>
+					</hotfix>
+				</category>
+				<category name="100 Seconds">
+					<hotfix name="Name" level="Helios_P">
+						<code profiles="default">set Helios_Mission_Main.TheWorld:PersistentLevel.PopulationOpportunityDen_3 RespawnDelay 100</code>
+					</hotfix>
+				</category>
+				<category name="150 Seconds">
+					<hotfix name="Name" level="Helios_P">
+						<code profiles="">set Helios_Mission_Main.TheWorld:PersistentLevel.PopulationOpportunityDen_3 RespawnDelay 150</code>
+					</hotfix>
+				</category>
+				<category name="200 Seconds">
+					<hotfix name="Name" level="Helios_P">
+						<code profiles="">set Helios_Mission_Main.TheWorld:PersistentLevel.PopulationOpportunityDen_3 RespawnDelay 200</code>
+					</hotfix>
+				</category>
+				<category name="250 Seconds">
+					<hotfix name="Name" level="Helios_P">
+						<code profiles="">set Helios_Mission_Main.TheWorld:PersistentLevel.PopulationOpportunityDen_3 RespawnDelay 250</code>
+					</hotfix>
+				</category>
+				<category name="300 Seconds">
+					<hotfix name="Name" level="Helios_P">
+						<code profiles="">set Helios_Mission_Main.TheWorld:PersistentLevel.PopulationOpportunityDen_3 RespawnDelay 300</code>
+					</hotfix>
+				</category>
+				<category name="350 Seconds">
+					<hotfix name="Name" level="Helios_P">
+						<code profiles="">set Helios_Mission_Main.TheWorld:PersistentLevel.PopulationOpportunityDen_3 RespawnDelay 350</code>
+					</hotfix>
+				</category>
+			</category>
+			<category name="Optional - Make Uranus Suffer Damage Over Time">
+				<category name="Fire DoT">
+					<hotfix name="Name" level="Helios_P">
+						<code profiles="">set GD_Anemone_UranusBOT.Character.CharClass_Anemone_UranusBOT BaseIgniteChanceResistanceModifier (BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)</code>
+						<code profiles="">set GD_Anemone_UranusBOT.Character.CharClass_Anemone_UranusBOT BaseIgniteDurationResistanceModifier (BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)</code>
+						<code profiles="">set GD_Anemone_UranusBOT.Character.CharClass_Anemone_UranusBOT BaseIncendiaryDamageModifiers (ResistanceToImpact=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),ResistanceToStatusEffect=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1))</code>
+					</hotfix>
+				</category>
+				<category name="Shock DoT">
+					<hotfix name="Name" level="Helios_P">
+						<code profiles="">set GD_Anemone_UranusBOT.Character.CharClass_Anemone_UranusBOT BaseShockChanceResistanceModifier (BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)</code>
+						<code profiles="">set GD_Anemone_UranusBOT.Character.CharClass_Anemone_UranusBOT BaseShockDurationResistanceModifier (BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)</code>
+						<code profiles="">set GD_Anemone_UranusBOT.Character.CharClass_Anemone_UranusBOT BaseShockDamageModifiers (ResistanceToImpact=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),ResistanceToStatusEffect=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1))</code>
+					</hotfix>
+				</category>
+				<category name="Corrosive DoT">
+					<hotfix name="Name" level="Helios_P">
+						<code profiles="">set GD_Anemone_UranusBOT.Character.CharClass_Anemone_UranusBOT BaseCorrosiveChanceResistanceModifier (BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)</code>
+						<code profiles="">set GD_Anemone_UranusBOT.Character.CharClass_Anemone_UranusBOT BaseCorrosiveDurationResistanceModifier (BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1)</code>
+						<code profiles="">set GD_Anemone_UranusBOT.Character.CharClass_Anemone_UranusBOT BaseCorrosiveDamageModifiers (ResistanceToImpact=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),ResistanceToStatusEffect=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1))</code>
+					</hotfix>
+				</category>
+			</category>
+			<category name="Code">
+				<category name="Uranus Spawning">
+					<category name="Maximum Amount Of Respawns">
+						<hotfix name="Name" level="Helios_P">
+							<code profiles="default">set Helios_Mission_Main.TheWorld:PersistentLevel.PopulationOpportunityDen_3 MaxTotalActors 999999</code>
+						</hotfix>
+					</category>
+					<category name="Maximum Active At Once">
+						<hotfix name="Name" level="Helios_P">
+							<code profiles="default">set Helios_Mission_Main.TheWorld:PersistentLevel.PopulationOpportunityDen_3 MaxActiveActorsIsNormal 1</code>
+							<code profiles="default">set Helios_Mission_Main.TheWorld:PersistentLevel.PopulationOpportunityDen_3 MaxActiveActorsThreatened 1</code>
+							<code profiles="default">set Helios_Mission_Main.TheWorld:PersistentLevel.PopulationOpportunityDen_3 SpawnData (PopulationDefName="PopDef_Uranus",MaxActiveActors=1,NumTotalActors=1,NumActiveActors=0,NextSpawnTime=0,NumTotalExternalActors=0,NumActiveExternalActors=0)</code>
+						</hotfix>
+					</category>
+					<category name="Neutral Before Attacking - Neutral After Not Attacking For A While">
+						<hotfix name="Name" level="Helios_P">
+							<code profiles="default">set Helios_Mission_Main.TheWorld:PersistentLevel.PopulationOpportunityDen_3 bNeutral True</code>
+						</hotfix>
+					</category>
+					<category name="Respawning Enabled">
+						<hotfix name="Name" level="Helios_P">
+							<code profiles="default">set Helios_Mission_Main.TheWorld:PersistentLevel.PopulationOpportunityDen_3 IsEnabled True</code>
+							<code profiles="default">set Helios_Mission_Main.TheWorld:PersistentLevel.PopulationOpportunityDen_3 bIsWaitingForRespawn True</code>
+						</hotfix>
+					</category>
 				</category>
 				<category name="Uranus Changes">
-					<hotfix name="Name" level="Helios_P">
-						<code profiles="default">set GD_Anemone_UranusBOT.Death.DeathDef_Anemone_UranusBOT:BehaviorProviderDefinition_0.Behavior_SpawnProjectile_1 ProjectileDefinition None</code>
-						<code profiles="default">set GD_Anemone_UranusBOT.Death.DeathDef_Anemone_UranusBOT:BehaviorProviderDefinition_0.Behavior_SpawnProjectile_2 ProjectileDefinition None</code>
-						<code profiles="default">set GD_Anemone_UranusBOT.Death.DeathDef_Anemone_UranusBOT:BehaviorProviderDefinition_0.Behavior_SpawnProjectile_0 ProjectileDefinition None</code>
-						<code profiles="default">set GD_Anemone_UranusBOT.Character.Pawn_Anemone_UranusBOT SecondsBeforeConsideringRagdollRemoval 0.001</code>
-						<code profiles="default">set GD_Anemone_UranusBOT.Character.Pawn_Anemone_UranusBOT SecondsBetweenRagdollRemovalAttempts 0.001</code>
-						<code profiles="default">set GD_Anemone_UranusBOT.Character.Pawn_Anemone_UranusBOT SecondsBeforeVisibleRagdollRemoval 0.001</code>
-						<code profiles="default">set GD_CoordinatedEffects.FadeOut_ForCleanup EffectDuration 0.001</code>
-					</hotfix>
+					<category name="No Projectile Spawns On Death">
+						<hotfix name="Name" level="Helios_P">
+							<code profiles="default">set GD_Anemone_UranusBOT.Death.DeathDef_Anemone_UranusBOT:BehaviorProviderDefinition_0.Behavior_SpawnProjectile_1 ProjectileDefinition None</code>
+							<code profiles="default">set GD_Anemone_UranusBOT.Death.DeathDef_Anemone_UranusBOT:BehaviorProviderDefinition_0.Behavior_SpawnProjectile_2 ProjectileDefinition None</code>
+							<code profiles="default">set GD_Anemone_UranusBOT.Death.DeathDef_Anemone_UranusBOT:BehaviorProviderDefinition_0.Behavior_SpawnProjectile_0 ProjectileDefinition None</code>
+						</hotfix>
+					</category>
+					<category name="Super Fast Body Deletion">
+						<hotfix name="Name" level="Helios_P">
+							<code profiles="default">set GD_Anemone_UranusBOT.Character.Pawn_Anemone_UranusBOT SecondsBeforeConsideringRagdollRemoval 0.001</code>
+							<code profiles="default">set GD_Anemone_UranusBOT.Character.Pawn_Anemone_UranusBOT SecondsBetweenRagdollRemovalAttempts 0.001</code>
+							<code profiles="default">set GD_Anemone_UranusBOT.Character.Pawn_Anemone_UranusBOT SecondsBeforeVisibleRagdollRemoval 0.001</code>
+							<code profiles="default">set GD_CoordinatedEffects.FadeOut_ForCleanup EffectDuration 0.001</code>
+						</hotfix>
+					</category>
 				</category>
 				<category name="Vending Machines">
-					<hotfix name="Name" level="Helios_P">
-						<code profiles="default">set Helios_MoonshotCannon.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_0 Rotation (Pitch=0,Yaw=16384,Roll=0)</code>
-						<code profiles="default">set Helios_LD.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_3 Location (X=38027,Y=-107481,Z=17694)</code>
-						<code profiles="default">set Helios_LD.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_3 Rotation (Pitch=0,Yaw=20000,Roll=0)</code>
-						<code profiles="default">set Helios_LD.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_2 Location (X=38568,Y=-106654,Z=17697)</code>
-						<code profiles="default">set Helios_LD.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_2 Rotation (Pitch=0,Yaw=22000,Roll=0)</code>
-						<code profiles="default">set Helios_Interactive.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_165 Location (X=38864,Y=-109886,Z=18395)</code>
-						<code profiles="default">set Helios_Interactive.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_48 Location (X=39839,Y=-109898,Z=17622)</code>
-						<code profiles="default">set Helios_Interactive.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_65 Location (X=42540,Y=-108208,Z=17616)</code>
-						<code profiles="default">set Helios_Interactive.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_64 Location (X=40891,Y=-105975,Z=17782)</code>
-						<code profiles="default">set Helios_Interactive.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_43 Location (X=41890,Y=-108765,Z=17618)</code>
-						<code profiles="default">set Helios_Interactive.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_62 Location </code>
-						<code profiles="default">set Helios_Interactive.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_47 Location </code>
-						<code profiles="default">set Helios_Interactive.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_46 Location </code>
-						<code profiles="default">set Helios_Interactive.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_48 Rotation (Pitch=0,Yaw=0,Roll=0)</code>
-						<code profiles="default">set Helios_Interactive.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_65 Rotation (Pitch=0,Yaw=0,Roll=0)</code>
-						<code profiles="default">set Helios_Interactive.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_64 Rotation (Pitch=0,Yaw=-21632,Roll=0)</code>
-						<code profiles="default">set Helios_Interactive.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_43 Rotation (Pitch=0,Yaw=-21632,Roll=0)</code>
-						<code profiles="default">set Helios_Interactive.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_62 Rotation (Pitch=0,Yaw=-21632,Roll=0)</code>
-						<code profiles="default">set Helios_Interactive.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_47 Rotation (Pitch=0,Yaw=-21632,Roll=0)</code>
-						<code profiles="default">set Helios_Interactive.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_46 Rotation (Pitch=0,Yaw=-21632,Roll=0)</code>
-						<code profiles="default">set Helios_Interactive.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_48 PopulationDef PopulationDefinition'GD_Population_Shopping.VendingMachine.VendingMachine_GrenadesAndAmmo'</code>
-						<code profiles="default">set Helios_Interactive.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_65 PopulationDef PopulationDefinition'GD_Population_Shopping.VendingMachine.VendingMachine_GrenadesAndAmmo'</code>
-						<code profiles="default">set Helios_Interactive.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_64 PopulationDef PopulationDefinition'GD_Population_Shopping.VendingMachine.VendingMachine_GrenadesAndAmmo'</code>
-						<code profiles="default">set Helios_Interactive.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_43 PopulationDef PopulationDefinition'GD_Population_Shopping.VendingMachine.VendingMachine_GrenadesAndAmmo'</code>
-						<code profiles="default">set Helios_Interactive.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_62 PopulationDef PopulationDefinition'GD_Population_Shopping.VendingMachine.VendingMachine_GrenadesAndAmmo'</code>
-						<code profiles="default">set Helios_Interactive.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_47 PopulationDef PopulationDefinition'GD_Population_Shopping.VendingMachine.VendingMachine_GrenadesAndAmmo'</code>
-						<code profiles="default">set Helios_Interactive.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_46 PopulationDef PopulationDefinition'GD_Population_Shopping.VendingMachine.VendingMachine_GrenadesAndAmmo'</code>
-						<code profiles="default">set Helios_MoonshotCannon.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_0 Location (X=36993,Y=-106438,Z=18375)18417</code>
-						<code profiles="default">set Helios_MoonshotCannon.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_2 Location (X=37271,Y=-106081,Z=18375)</code>
-						<code profiles="default">set Helios_MoonshotCannon.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_2 Rotation (Pitch=0,Yaw=36000,Roll=0)</code>
-						<code profiles="default">set Helios_P.TheWorld:PersistentLevel.FastTravelStation_0 Location (X=41532,Y=-109054,Z=17618)</code>
-					</hotfix>
+					<category name="Ammo Vendor Right Before Jumping Down">
+						<hotfix name="Name" level="Helios_P">
+							<code profiles="default">set Helios_MoonshotCannon.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_0 Location (X=36993,Y=-106438,Z=18375)</code>
+							<code profiles="default">set Helios_MoonshotCannon.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_0 Rotation (Pitch=0,Yaw=92277,Roll=0)</code>
+						</hotfix>
+					</category>
+					<category name="Health Vendor Right Before Jumping Down">
+						<hotfix name="Name" level="Helios_P">
+							<code profiles="default">set Helios_MoonshotCannon.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_2 Location (X=37271,Y=-106081,Z=18375)</code>
+							<code profiles="default">set Helios_MoonshotCannon.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_2 Rotation (Pitch=0,Yaw=92277,Roll=0)</code>
+						</hotfix>
+					</category>
+					<category name="Ammo Vendor Right After Jumping Down">
+						<hotfix name="Name" level="Helios_P">
+							<code profiles="default">set Helios_LD.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_3 Location (X=38027,Y=-107481,Z=17694)</code>
+							<code profiles="default">set Helios_LD.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_3 Rotation (Pitch=0,Yaw=92277,Roll=0)</code>
+						</hotfix>
+					</category>
+					<category name="Health Vendor Right After Jumping Down">
+						<hotfix name="Name" level="Helios_P">
+							<code profiles="default">set Helios_LD.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_2 Location (X=38568,Y=-106654,Z=17697)</code>
+							<code profiles="default">set Helios_LD.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_2 Rotation (Pitch=0,Yaw=92277,Roll=0)</code>
+						</hotfix>
+					</category>
+					<category name="First Ammo Vendor On The Left">
+						<hotfix name="Name" level="Helios_P">
+							<code profiles="default">set Helios_Interactive.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_165 Location (X=38864,Y=-109886,Z=18395)</code>
+						</hotfix>
+					</category>
+					<category name="First Health Vendor On The Left">
+						<hotfix name="Name" level="Helios_P">
+							<code profiles="default">set Helios_Interactive.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_33 PopulationDef PopulationDefinition'GD_Population_Shopping.VendingMachine.VendingMachine_HealthItems'</code>
+							<code profiles="default">set Helios_Interactive.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_33 Rotation (Pitch=0,Yaw=239116,Roll=0)</code>
+							<code profiles="default">set Helios_Interactive.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_33 Location (X=39379,Y=-110295,Z=18397)</code>
+						</hotfix>
+					</category>
+					<category name="Second Ammo Vendor On The Left">
+						<hotfix name="Name" level="Helios_P">
+							<code profiles="default">set Helios_Interactive.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_48 PopulationDef PopulationDefinition'GD_Population_Shopping.VendingMachine.VendingMachine_GrenadesAndAmmo'</code>
+							<code profiles="default">set Helios_Interactive.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_48 Rotation (Pitch=0,Yaw=59110,Roll=0)</code>
+							<code profiles="default">set Helios_Interactive.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_48 Location (X=39839,Y=-109898,Z=17622)</code>
+						</hotfix>
+					</category>
+					<category name="Second Health Vendor On The Left">
+						<hotfix name="Name" level="Helios_P">
+							<code profiles="default">set Helios_Interactive.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_32 PopulationDef PopulationDefinition'GD_Population_Shopping.VendingMachine.VendingMachine_HealthItems'</code>
+							<code profiles="default">set Helios_Interactive.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_32 Rotation (Pitch=0,Yaw=42910,Roll=0)</code>
+							<code profiles="default">set Helios_Interactive.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_32 Location (X=39618,Y=-109866,Z=17621)</code>
+						</hotfix>
+					</category>
+					<category name="Second Ammo Vendor On The Right">
+						<hotfix name="Name" level="Helios_P">
+							<code profiles="default">set Helios_Interactive.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_65 PopulationDef PopulationDefinition'GD_Population_Shopping.VendingMachine.VendingMachine_GrenadesAndAmmo'</code>
+							<code profiles="default">set Helios_Interactive.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_65 Rotation (Pitch=0,Yaw=0,Roll=0)</code>
+							<code profiles="default">set Helios_Interactive.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_65 Location (X=42540,Y=-108208,Z=17616)</code>
+						</hotfix>
+					</category>
+					<category name="First Ammo Vendor On The Right">
+						<hotfix name="Name" level="Helios_P">
+							<code profiles="default">set Helios_Interactive.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_64 Location (X=40891,Y=-105975,Z=17782)</code>
+							<code profiles="default">set Helios_Interactive.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_64 Rotation (Pitch=0,Yaw=-55187,Roll=0)</code>
+							<code profiles="default">set Helios_Interactive.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_64 PopulationDef PopulationDefinition'GD_Population_Shopping.VendingMachine.VendingMachine_GrenadesAndAmmo'</code>
+						</hotfix>
+					</category>
+					<category name="First Health Vendor On the Right">
+						<hotfix name="Name" level="Helios_P">
+							<code profiles="default">set Helios_Interactive.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_35 PopulationDef PopulationDefinition'GD_Population_Shopping.VendingMachine.VendingMachine_HealthItems'</code>
+							<code profiles="default">set Helios_Interactive.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_35 Rotation (Pitch=0,Yaw=206605,Roll=0)</code>
+							<code profiles="default">set Helios_Interactive.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_35 Location (X=40657,Y=-105816,Z=17780)</code>
+						</hotfix>
+					</category>
+					<category name="Middle Ammo Vendor">
+						<hotfix name="Name" level="Helios_P">
+							<code profiles="default">set Helios_Interactive.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_43 Location (X=41890,Y=-108765,Z=17618)</code>
+							<code profiles="default">set Helios_Interactive.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_43 Rotation (Pitch=0,Yaw=92277,Roll=0)</code>
+							<code profiles="default">set Helios_Interactive.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_43 PopulationDef PopulationDefinition'GD_Population_Shopping.VendingMachine.VendingMachine_GrenadesAndAmmo'</code>
+						</hotfix>
+					</category>
+					<category name="Second Health Vendor On The Right">
+						<hotfix name="Name" level="Helios_P">
+							<code profiles="default">set Helios_Interactive.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_34 PopulationDef PopulationDefinition'GD_Population_Shopping.VendingMachine.VendingMachine_HealthItems'</code>
+							<code profiles="default">set Helios_Interactive.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_34 Rotation (Pitch=0,Yaw=262320,Roll=0)</code>
+							<code profiles="default">set Helios_Interactive.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_34 Location (X=42531,Y=-108058,Z=17616)</code>
+						</hotfix>
+					</category>
 				</category>
 				<category name="Fast Travel">
-					<code profiles="default">set GD_Anemone_FastTravel.Helios_OneWay StationDisplayName Uranus</code>
-					<code profiles="default">set GD_Anemone_FastTravel.Helios_OneWay bInitiallyActive True</code>
-					<code profiles="default">set GD_Anemone_FastTravel.Helios_OneWay bSendOnly False</code>
-					<code profiles="default">set GD_Anemone_FastTravel.Helios_OneWay StationSign Uranus</code>
-					<hotfix name="Name" level="Helios_P">
-						<code profiles="default">set Helios_P.TheWorld:PersistentLevel.FastTravelStation_0 Rotation (Pitch=0,Yaw=24576,Roll=0)</code>
-						<code profiles="default">set Helios_P.TheWorld:PersistentLevel.StationTeleporterExitPoint_4 Location (X=36715.914063,Y=-105973.687500,Z=18490.263672)</code>
-						<code profiles="default">set Helios_P.TheWorld:PersistentLevel.StationTeleporterExitPoint_4 Rotation (Pitch=65186,Yaw=59238,Roll=0)</code>
-						<code profiles="default">set Helios_P.TheWorld:PersistentLevel.StationTeleporterExitPoint_5 Location (X=36715.914063,Y=-105973.687500,Z=18490.263672)</code>
-						<code profiles="default">set Helios_P.TheWorld:PersistentLevel.StationTeleporterExitPoint_5 Rotation (Pitch=65186,Yaw=59238,Roll=0)</code>
-						<code profiles="default">set Helios_P.TheWorld:PersistentLevel.StationTeleporterExitPoint_6 Location (X=36715.914063,Y=-105973.687500,Z=18490.263672)</code>
-						<code profiles="default">set Helios_P.TheWorld:PersistentLevel.StationTeleporterExitPoint_6 Rotation (Pitch=65186,Yaw=59238,Roll=0)</code>
-						<code profiles="default">set Helios_P.TheWorld:PersistentLevel.StationTeleporterExitPoint_7 Location (X=36715.914063,Y=-105973.687500,Z=18490.263672)</code>
-						<code profiles="default">set Helios_P.TheWorld:PersistentLevel.StationTeleporterExitPoint_7 Rotation (Pitch=65186,Yaw=59238,Roll=0)</code>
-					</hotfix>
+					<category name="Fast Travel Station Name In UI">
+						<code profiles="default">set GD_Anemone_FastTravel.Helios_OneWay StationDisplayName Uranus</code>
+					</category>
+					<category name="Fast Travel Enabled Regardless Of Discovery">
+						<code profiles="default">set GD_Anemone_FastTravel.Helios_OneWay bInitiallyActive True</code>
+					</category>
+					<category name="Make The Fast Travel Able To Be Teleported To">
+						<code profiles="default">set GD_Anemone_FastTravel.Helios_OneWay bSendOnly False</code>
+					</category>
+					<category name="In-game Fast Travel Station Name Display">
+						<code profiles="default">set GD_Anemone_FastTravel.Helios_OneWay StationSign Uranus</code>
+					</category>
+					<category name="Station Location">
+						<hotfix name="Name" level="Helios_P">
+							<code profiles="default">set Helios_P.TheWorld:PersistentLevel.FastTravelStation_0 Location (X=41532,Y=-109054,Z=17618)</code>
+						</hotfix>
+					</category>
+					<category name="Station Rotation">
+						<hotfix name="Name" level="Helios_P">
+							<code profiles="default">set Helios_P.TheWorld:PersistentLevel.FastTravelStation_0 Rotation (Pitch=0,Yaw=24576,Roll=0)</code>
+						</hotfix>
+					</category>
+					<category name="Player Spawn Locations From Station">
+						<hotfix name="Name" level="Helios_P">
+							<code profiles="default">set Helios_P.TheWorld:PersistentLevel.StationTeleporterExitPoint_4 Location (X=36715.914063,Y=-105973.687500,Z=18490.263672)</code>
+							<code profiles="default">set Helios_P.TheWorld:PersistentLevel.StationTeleporterExitPoint_5 Location (X=36715.914063,Y=-105973.687500,Z=18490.263672)</code>
+							<code profiles="default">set Helios_P.TheWorld:PersistentLevel.StationTeleporterExitPoint_6 Location (X=36715.914063,Y=-105973.687500,Z=18490.263672)</code>
+							<code profiles="default">set Helios_P.TheWorld:PersistentLevel.StationTeleporterExitPoint_7 Location (X=36715.914063,Y=-105973.687500,Z=18490.263672)</code>
+						</hotfix>
+					</category>
+					<category name="Player Spawn Rotations From Station">
+						<hotfix name="Name" level="Helios_P">
+							<code profiles="default">set Helios_P.TheWorld:PersistentLevel.StationTeleporterExitPoint_4 Rotation (Pitch=65186,Yaw=59238,Roll=0)</code>
+							<code profiles="default">set Helios_P.TheWorld:PersistentLevel.StationTeleporterExitPoint_5 Rotation (Pitch=65186,Yaw=59238,Roll=0)</code>
+							<code profiles="default">set Helios_P.TheWorld:PersistentLevel.StationTeleporterExitPoint_6 Rotation (Pitch=65186,Yaw=59238,Roll=0)</code>
+							<code profiles="default">set Helios_P.TheWorld:PersistentLevel.StationTeleporterExitPoint_7 Rotation (Pitch=65186,Yaw=59238,Roll=0)</code>
+						</hotfix>
+					</category>
 				</category>
 			</category>
 		</category>
@@ -104,6 +260,6 @@ set GD_Anemone_FastTravel.Helios_OneWay bSendOnly False
 set GD_Anemone_FastTravel.Helios_OneWay StationSign Uranus
 
 #Hotfixes:
-set Transient.SparkServiceConfiguration_6 Keys ("SparkLevelPatchEntry-GBX_fixes1","SparkLevelPatchEntry-GBX_fixes2","SparkLevelPatchEntry-GBX_fixes3","SparkLevelPatchEntry-GBX_fixes4","SparkLevelPatchEntry-GBX_fixes5","SparkLevelPatchEntry-GBX_Fixes6","SparkLevelPatchEntry-GBX_Fixes7","SparkLevelPatchEntry-GBX_Fixes8","SparkLevelPatchEntry-GBX_Fixes9","SparkLevelPatchEntry-GBX_fixes10","SparkLevelPatchEntry-GBX_fixes11","SparkLevelPatchEntry-GBX_fixes12","SparkLevelPatchEntry-GBX_fixes13","SparkLevelPatchEntry-GBX_fixes14","SparkOnDemandPatchEntry-GBX_fixes15","SparkOnDemandPatchEntry-GBX_fixes16","SparkOnDemandPatchEntry-GBX_fixes17","SparkOnDemandPatchEntry-GBX_fixes18","SparkOnDemandPatchEntry-GBX_fixes19","SparkPatchEntry-GBX_fixes20","SparkPatchEntry-GBX_fixes21","SparkPatchEntry-GBX_fixes22","SparkPatchEntry-GBX_fixes23","SparkLevelPatchEntry-Name1","SparkLevelPatchEntry-Name2","SparkLevelPatchEntry-Name3","SparkLevelPatchEntry-Name4","SparkLevelPatchEntry-Name5","SparkLevelPatchEntry-Name6","SparkLevelPatchEntry-Name7","SparkLevelPatchEntry-Name8","SparkLevelPatchEntry-Name9","SparkLevelPatchEntry-Name10","SparkLevelPatchEntry-Name11","SparkLevelPatchEntry-Name12","SparkLevelPatchEntry-Name13","SparkLevelPatchEntry-Name14","SparkLevelPatchEntry-Name15","SparkLevelPatchEntry-Name16","SparkLevelPatchEntry-Name17","SparkLevelPatchEntry-Name18","SparkLevelPatchEntry-Name19","SparkLevelPatchEntry-Name20","SparkLevelPatchEntry-Name21","SparkLevelPatchEntry-Name22","SparkLevelPatchEntry-Name23","SparkLevelPatchEntry-Name24","SparkLevelPatchEntry-Name25","SparkLevelPatchEntry-Name26","SparkLevelPatchEntry-Name27","SparkLevelPatchEntry-Name28","SparkLevelPatchEntry-Name29","SparkLevelPatchEntry-Name30","SparkLevelPatchEntry-Name31","SparkLevelPatchEntry-Name32","SparkLevelPatchEntry-Name33","SparkLevelPatchEntry-Name34","SparkLevelPatchEntry-Name35","SparkLevelPatchEntry-Name36","SparkLevelPatchEntry-Name37","SparkLevelPatchEntry-Name38","SparkLevelPatchEntry-Name39","SparkLevelPatchEntry-Name40","SparkLevelPatchEntry-Name41","SparkLevelPatchEntry-Name42","SparkLevelPatchEntry-Name43","SparkLevelPatchEntry-Name44","SparkLevelPatchEntry-Name45","SparkLevelPatchEntry-Name46","SparkLevelPatchEntry-Name47","SparkLevelPatchEntry-Name48","SparkLevelPatchEntry-Name49","SparkLevelPatchEntry-Name50","SparkLevelPatchEntry-Name51","SparkLevelPatchEntry-Name52","SparkLevelPatchEntry-Name53","SparkLevelPatchEntry-Name54","SparkLevelPatchEntry-Name55")
-set Transient.SparkServiceConfiguration_6 Values (",GD_Balance.WeightingPlayerCount.BugmorphCocoon_PerPlayers_Phase1,ConditionalInitialization.ConditionalExpressionList[4].BaseValueIfTrue.BaseValueConstant,0.700000,.8",",GD_Balance.WeightingPlayerCount.BugmorphCocoon_PerPlayers_Phase2,ConditionalInitialization.ConditionalExpressionList[4].BaseValueIfTrue.BaseValueConstant,0.400000,.5",",GD_Balance.WeightingPlayerCount.BugmorphCocoon_PerPlayers_Phase3,ConditionalInitialization.ConditionalExpressionList[4].BaseValueIfTrue.BaseValueConstant,0.200000,.3",",GD_Balance.WeightingPlayerCount.BugmorphCocoon_PerPlayers_Phase4,ConditionalInitialization.ConditionalExpressionList[4].BaseValueIfTrue.BaseValueConstant,0.100000,.2",",GD_Balance.WeightingPlayerCount.BugmorphCocoon_PerPlayers_Phase5,ConditionalInitialization.ConditionalExpressionList[4].BaseValueIfTrue.BaseValueConstant,0.075000,.1","SouthpawFactory_P,GD_Population_Marauder.Balance.Unique.PawnBalance_Assassin1,DefaultItemPoolList[3].PoolProbability.BaseValueScaleConstant,0.250000,1","SouthpawFactory_P,GD_Population_Nomad.Balance.Unique.PawnBalance_Assassin2,DefaultItemPoolList[4].PoolProbability.BaseValueScaleConstant,0.250000,1","SouthpawFactory_P,GD_Population_Psycho.Balance.Unique.PawnBalance_Assassin3,DefaultItemPoolList[1].PoolProbability.BaseValueScaleConstant,0.250000,1","SouthpawFactory_P,GD_Population_Rat.Balance.Unique.PawnBalance_Assassin4,DefaultItemPoolList[3].PoolProbability.BaseValueScaleConstant,0.250000,1",",GD_Sage_Rare_Scaylion.Population.PawnBalance_Sage_Rare_Scaylion,DefaultItemPoolList[1].PoolProbability.BaseValueScaleConstant,1.000000,100",",GD_Sage_Rare_Drifter.Balance.PawnBalance_Sage_Rare_Drifter,DefaultItemPoolList[0].PoolProbability.BaseValueScaleConstant,1.000000,100",",GD_Sage_Rare_Rhino.Population.PawnBalance_Sage_Rare_Rhino,DefaultItemPoolList[1].PoolProbability.BaseValueScaleConstant,1.000000,100",",GD_Sage_Rare_Skag.Population.PawnBalance_Sage_Rare_Skag,DefaultItemPoolList[1].PoolProbability.BaseValueScaleConstant,1.000000,100",",GD_Sage_Rare_Spore.Population.PawnBalance_Sage_Rare_Spore,DefaultItemPoolList[0].PoolProbability.BaseValueScaleConstant,1.000000,100","GD_Assassin_Streaming,GD_Assassin_Skills.Sniping.Velocity,SkillEffectDefinitions[0].ModifierType,MT_PostAdd,MT_Scale","GD_Tulip_Mechro_Streaming,GD_Tulip_Mechromancer_Skills.LittleBigTrouble.WiresDontTalk,SkillEffectDefinitions,,((AttributeToModify=D_Attributes.DamageTypeModifers.InstigatedShockDamageModifier,bIncludeDuelingTargets=False,bIncludeSelfAsTarget=False,bOnlyEffectTargetsInRange=False,bExcludeNonPlayerCharacters=False,EffectTarget=TARGET_Self,TargetInstanceDataName=,TargetCriteria=CRITERIA_None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.030000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),GradeToStartApplyingEffect=1,PerGradeUpgradeInterval=1,PerGradeUpgrade=(BaseValueConstant=0.030000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),BonusUpgradeList=),(AttributeToModify=D_Attributes.DamageTypeModifers.InstigatedShockStatusDamageModifier,bIncludeDuelingTargets=False,bIncludeSelfAsTarget=False,bOnlyEffectTargetsInRange=False,bExcludeNonPlayerCharacters=False,EffectTarget=TARGET_Self,TargetInstanceDataName=,TargetCriteria=CRITERIA_None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.030000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),GradeToStartApplyingEffect=1,PerGradeUpgradeInterval=1,PerGradeUpgrade=(BaseValueConstant=0.030000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),BonusUpgradeList=))","GD_Siren_Streaming,GD_Siren_Skills.Misc.Init_BlightPhoenix_DamageCalc_Part2,ValueFormula.Level.InitializationDefinition,AttributeInitializationDefinition'GD_Balance_HealthAndDamage.HealthAndDamage.Init_PlayerMeleeDamage',AttributeInitializationDefinition'GD_Balance_HealthAndDamage.HealthAndDamage.Init_PlayerSkillDamage'","GD_Siren_Streaming,GD_Siren_Skills.Misc.Init_BlightPhoenix_DamageCalc_Part2,ValueFormula.Level.BaseValueScaleConstant,1.000000,3.5","GD_Assassin_Streaming,GD_Assassin_Skills.Misc.Att_DeathMark_BonusDamage,BaseValue.BaseValueConstant,0.200000,.8","GD_Itempools.Runnables.Pool_FourAssassins,BalancedItems[1].Probability.InitializationDefinition,None,GD_Balance.Weighting.Weight_1_Common","GD_Shields.Projectiles.Proj_LegendaryBoosterShield:BehaviorProviderDefinition_1.Behavior_Explode_140,BehaviorSequences[0].BehaviorData2[7].Behavior.StatusEffectDamage.BaseValueAttribute,None,D_Attributes.Projectile.ProjectileDamage","GD_Shields.Projectiles.Proj_LegendaryBoosterShield:BehaviorProviderDefinition_1.Behavior_Explode_140,BehaviorSequences[0].BehaviorData2[7].Behavior.StatusEffectDamage.BaseValueScaleConstant,1.000000,.25","GD_Shields.Projectiles.Proj_LegendaryBoosterShield:BehaviorProviderDefinition_1.Behavior_Explode_140,BehaviorSequences[0].BehaviorData2[7].Behavior.StatusEffectChance.BaseValueConstant,1.000000,20","Helios_P,Helios_Mission_Main.TheWorld:PersistentLevel.PopulationOpportunityDen_3,RespawnDelay,,100","Helios_P,Helios_Mission_Main.TheWorld:PersistentLevel.PopulationOpportunityDen_3,MaxTotalActors,,999999","Helios_P,Helios_Mission_Main.TheWorld:PersistentLevel.PopulationOpportunityDen_3,MaxActiveActorsIsNormal,,1","Helios_P,Helios_Mission_Main.TheWorld:PersistentLevel.PopulationOpportunityDen_3,bNeutral,,True","Helios_P,Helios_Mission_Main.TheWorld:PersistentLevel.PopulationOpportunityDen_3,MaxActiveActorsThreatened,,1","Helios_P,Helios_Mission_Main.TheWorld:PersistentLevel.PopulationOpportunityDen_3,IsEnabled,,True","Helios_P,Helios_Mission_Main.TheWorld:PersistentLevel.PopulationOpportunityDen_3,SpawnData,,(PopulationDefName=\"PopDef_Uranus\",MaxActiveActors=1,NumTotalActors=1,NumActiveActors=0,NextSpawnTime=0,NumTotalExternalActors=0,NumActiveExternalActors=0)","Helios_P,Helios_Mission_Main.TheWorld:PersistentLevel.PopulationOpportunityDen_3,bIsWaitingForRespawn,,True","Helios_P,GD_Anemone_UranusBOT.Death.DeathDef_Anemone_UranusBOT:BehaviorProviderDefinition_0.Behavior_SpawnProjectile_1,ProjectileDefinition,,None","Helios_P,GD_Anemone_UranusBOT.Death.DeathDef_Anemone_UranusBOT:BehaviorProviderDefinition_0.Behavior_SpawnProjectile_2,ProjectileDefinition,,None","Helios_P,GD_Anemone_UranusBOT.Death.DeathDef_Anemone_UranusBOT:BehaviorProviderDefinition_0.Behavior_SpawnProjectile_0,ProjectileDefinition,,None","Helios_P,GD_Anemone_UranusBOT.Character.Pawn_Anemone_UranusBOT,SecondsBeforeConsideringRagdollRemoval,,0.001","Helios_P,GD_Anemone_UranusBOT.Character.Pawn_Anemone_UranusBOT,SecondsBetweenRagdollRemovalAttempts,,0.001","Helios_P,GD_Anemone_UranusBOT.Character.Pawn_Anemone_UranusBOT,SecondsBeforeVisibleRagdollRemoval,,0.001","Helios_P,GD_CoordinatedEffects.FadeOut_ForCleanup,EffectDuration,,0.001","Helios_P,Helios_MoonshotCannon.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_0,Rotation,,(Pitch=0,Yaw=16384,Roll=0)","Helios_P,Helios_LD.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_3,Location,,(X=38027,Y=-107481,Z=17694)","Helios_P,Helios_LD.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_3,Rotation,,(Pitch=0,Yaw=20000,Roll=0)","Helios_P,Helios_LD.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_2,Location,,(X=38568,Y=-106654,Z=17697)","Helios_P,Helios_LD.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_2,Rotation,,(Pitch=0,Yaw=22000,Roll=0)","Helios_P,Helios_Interactive.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_165,Location,,(X=38864,Y=-109886,Z=18395)","Helios_P,Helios_Interactive.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_48,Location,,(X=39839,Y=-109898,Z=17622)","Helios_P,Helios_Interactive.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_65,Location,,(X=42540,Y=-108208,Z=17616)","Helios_P,Helios_Interactive.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_64,Location,,(X=40891,Y=-105975,Z=17782)","Helios_P,Helios_Interactive.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_43,Location,,(X=41890,Y=-108765,Z=17618)","Helios_P,Helios_Interactive.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_62,Location,,","Helios_P,Helios_Interactive.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_47,Location,,","Helios_P,Helios_Interactive.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_46,Location,,","Helios_P,Helios_Interactive.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_48,Rotation,,(Pitch=0,Yaw=0,Roll=0)","Helios_P,Helios_Interactive.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_65,Rotation,,(Pitch=0,Yaw=0,Roll=0)","Helios_P,Helios_Interactive.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_64,Rotation,,(Pitch=0,Yaw=-21632,Roll=0)","Helios_P,Helios_Interactive.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_43,Rotation,,(Pitch=0,Yaw=-21632,Roll=0)","Helios_P,Helios_Interactive.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_62,Rotation,,(Pitch=0,Yaw=-21632,Roll=0)","Helios_P,Helios_Interactive.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_47,Rotation,,(Pitch=0,Yaw=-21632,Roll=0)","Helios_P,Helios_Interactive.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_46,Rotation,,(Pitch=0,Yaw=-21632,Roll=0)","Helios_P,Helios_Interactive.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_48,PopulationDef,,PopulationDefinition'GD_Population_Shopping.VendingMachine.VendingMachine_GrenadesAndAmmo'","Helios_P,Helios_Interactive.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_65,PopulationDef,,PopulationDefinition'GD_Population_Shopping.VendingMachine.VendingMachine_GrenadesAndAmmo'","Helios_P,Helios_Interactive.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_64,PopulationDef,,PopulationDefinition'GD_Population_Shopping.VendingMachine.VendingMachine_GrenadesAndAmmo'","Helios_P,Helios_Interactive.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_43,PopulationDef,,PopulationDefinition'GD_Population_Shopping.VendingMachine.VendingMachine_GrenadesAndAmmo'","Helios_P,Helios_Interactive.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_62,PopulationDef,,PopulationDefinition'GD_Population_Shopping.VendingMachine.VendingMachine_GrenadesAndAmmo'","Helios_P,Helios_Interactive.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_47,PopulationDef,,PopulationDefinition'GD_Population_Shopping.VendingMachine.VendingMachine_GrenadesAndAmmo'","Helios_P,Helios_Interactive.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_46,PopulationDef,,PopulationDefinition'GD_Population_Shopping.VendingMachine.VendingMachine_GrenadesAndAmmo'","Helios_P,Helios_MoonshotCannon.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_0,Location,,(X=36993,Y=-106438,Z=18375)18417","Helios_P,Helios_MoonshotCannon.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_2,Location,,(X=37271,Y=-106081,Z=18375)","Helios_P,Helios_MoonshotCannon.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_2,Rotation,,(Pitch=0,Yaw=36000,Roll=0)","Helios_P,Helios_P.TheWorld:PersistentLevel.FastTravelStation_0,Location,,(X=41532,Y=-109054,Z=17618)","Helios_P,Helios_P.TheWorld:PersistentLevel.FastTravelStation_0,Rotation,,(Pitch=0,Yaw=24576,Roll=0)","Helios_P,Helios_P.TheWorld:PersistentLevel.StationTeleporterExitPoint_4,Location,,(X=36715.914063,Y=-105973.687500,Z=18490.263672)","Helios_P,Helios_P.TheWorld:PersistentLevel.StationTeleporterExitPoint_4,Rotation,,(Pitch=65186,Yaw=59238,Roll=0)","Helios_P,Helios_P.TheWorld:PersistentLevel.StationTeleporterExitPoint_5,Location,,(X=36715.914063,Y=-105973.687500,Z=18490.263672)","Helios_P,Helios_P.TheWorld:PersistentLevel.StationTeleporterExitPoint_5,Rotation,,(Pitch=65186,Yaw=59238,Roll=0)","Helios_P,Helios_P.TheWorld:PersistentLevel.StationTeleporterExitPoint_6,Location,,(X=36715.914063,Y=-105973.687500,Z=18490.263672)","Helios_P,Helios_P.TheWorld:PersistentLevel.StationTeleporterExitPoint_6,Rotation,,(Pitch=65186,Yaw=59238,Roll=0)","Helios_P,Helios_P.TheWorld:PersistentLevel.StationTeleporterExitPoint_7,Location,,(X=36715.914063,Y=-105973.687500,Z=18490.263672)","Helios_P,Helios_P.TheWorld:PersistentLevel.StationTeleporterExitPoint_7,Rotation,,(Pitch=65186,Yaw=59238,Roll=0)")
+set Transient.SparkServiceConfiguration_6 Keys ("SparkLevelPatchEntry-GBX_fixes1","SparkLevelPatchEntry-GBX_fixes2","SparkLevelPatchEntry-GBX_fixes3","SparkLevelPatchEntry-GBX_fixes4","SparkLevelPatchEntry-GBX_fixes5","SparkLevelPatchEntry-GBX_Fixes6","SparkLevelPatchEntry-GBX_Fixes7","SparkLevelPatchEntry-GBX_Fixes8","SparkLevelPatchEntry-GBX_Fixes9","SparkLevelPatchEntry-GBX_fixes10","SparkLevelPatchEntry-GBX_fixes11","SparkLevelPatchEntry-GBX_fixes12","SparkLevelPatchEntry-GBX_fixes13","SparkLevelPatchEntry-GBX_fixes14","SparkOnDemandPatchEntry-GBX_fixes15","SparkOnDemandPatchEntry-GBX_fixes16","SparkOnDemandPatchEntry-GBX_fixes17","SparkOnDemandPatchEntry-GBX_fixes18","SparkOnDemandPatchEntry-GBX_fixes19","SparkPatchEntry-GBX_fixes20","SparkPatchEntry-GBX_fixes21","SparkPatchEntry-GBX_fixes22","SparkPatchEntry-GBX_fixes23","SparkLevelPatchEntry-Name1","SparkLevelPatchEntry-Name2","SparkLevelPatchEntry-Name3","SparkLevelPatchEntry-Name4","SparkLevelPatchEntry-Name5","SparkLevelPatchEntry-Name6","SparkLevelPatchEntry-Name7","SparkLevelPatchEntry-Name8","SparkLevelPatchEntry-Name9","SparkLevelPatchEntry-Name10","SparkLevelPatchEntry-Name11","SparkLevelPatchEntry-Name12","SparkLevelPatchEntry-Name13","SparkLevelPatchEntry-Name14","SparkLevelPatchEntry-Name15","SparkLevelPatchEntry-Name16","SparkLevelPatchEntry-Name17","SparkLevelPatchEntry-Name18","SparkLevelPatchEntry-Name19","SparkLevelPatchEntry-Name20","SparkLevelPatchEntry-Name21","SparkLevelPatchEntry-Name22","SparkLevelPatchEntry-Name23","SparkLevelPatchEntry-Name24","SparkLevelPatchEntry-Name25","SparkLevelPatchEntry-Name26","SparkLevelPatchEntry-Name27","SparkLevelPatchEntry-Name28","SparkLevelPatchEntry-Name29","SparkLevelPatchEntry-Name30","SparkLevelPatchEntry-Name31","SparkLevelPatchEntry-Name32","SparkLevelPatchEntry-Name33","SparkLevelPatchEntry-Name34","SparkLevelPatchEntry-Name35","SparkLevelPatchEntry-Name36","SparkLevelPatchEntry-Name37","SparkLevelPatchEntry-Name38","SparkLevelPatchEntry-Name39","SparkLevelPatchEntry-Name40","SparkLevelPatchEntry-Name41","SparkLevelPatchEntry-Name42","SparkLevelPatchEntry-Name43","SparkLevelPatchEntry-Name44","SparkLevelPatchEntry-Name45","SparkLevelPatchEntry-Name46","SparkLevelPatchEntry-Name47","SparkLevelPatchEntry-Name48","SparkLevelPatchEntry-Name49","SparkLevelPatchEntry-Name50","SparkLevelPatchEntry-Name51","SparkLevelPatchEntry-Name52","SparkLevelPatchEntry-Name53","SparkLevelPatchEntry-Name54","SparkLevelPatchEntry-Name55","SparkLevelPatchEntry-Name56","SparkLevelPatchEntry-Name57","SparkLevelPatchEntry-Name58")
+set Transient.SparkServiceConfiguration_6 Values (",GD_Balance.WeightingPlayerCount.BugmorphCocoon_PerPlayers_Phase1,ConditionalInitialization.ConditionalExpressionList[4].BaseValueIfTrue.BaseValueConstant,0.700000,.8",",GD_Balance.WeightingPlayerCount.BugmorphCocoon_PerPlayers_Phase2,ConditionalInitialization.ConditionalExpressionList[4].BaseValueIfTrue.BaseValueConstant,0.400000,.5",",GD_Balance.WeightingPlayerCount.BugmorphCocoon_PerPlayers_Phase3,ConditionalInitialization.ConditionalExpressionList[4].BaseValueIfTrue.BaseValueConstant,0.200000,.3",",GD_Balance.WeightingPlayerCount.BugmorphCocoon_PerPlayers_Phase4,ConditionalInitialization.ConditionalExpressionList[4].BaseValueIfTrue.BaseValueConstant,0.100000,.2",",GD_Balance.WeightingPlayerCount.BugmorphCocoon_PerPlayers_Phase5,ConditionalInitialization.ConditionalExpressionList[4].BaseValueIfTrue.BaseValueConstant,0.075000,.1","SouthpawFactory_P,GD_Population_Marauder.Balance.Unique.PawnBalance_Assassin1,DefaultItemPoolList[3].PoolProbability.BaseValueScaleConstant,0.250000,1","SouthpawFactory_P,GD_Population_Nomad.Balance.Unique.PawnBalance_Assassin2,DefaultItemPoolList[4].PoolProbability.BaseValueScaleConstant,0.250000,1","SouthpawFactory_P,GD_Population_Psycho.Balance.Unique.PawnBalance_Assassin3,DefaultItemPoolList[1].PoolProbability.BaseValueScaleConstant,0.250000,1","SouthpawFactory_P,GD_Population_Rat.Balance.Unique.PawnBalance_Assassin4,DefaultItemPoolList[3].PoolProbability.BaseValueScaleConstant,0.250000,1",",GD_Sage_Rare_Scaylion.Population.PawnBalance_Sage_Rare_Scaylion,DefaultItemPoolList[1].PoolProbability.BaseValueScaleConstant,1.000000,100",",GD_Sage_Rare_Drifter.Balance.PawnBalance_Sage_Rare_Drifter,DefaultItemPoolList[0].PoolProbability.BaseValueScaleConstant,1.000000,100",",GD_Sage_Rare_Rhino.Population.PawnBalance_Sage_Rare_Rhino,DefaultItemPoolList[1].PoolProbability.BaseValueScaleConstant,1.000000,100",",GD_Sage_Rare_Skag.Population.PawnBalance_Sage_Rare_Skag,DefaultItemPoolList[1].PoolProbability.BaseValueScaleConstant,1.000000,100",",GD_Sage_Rare_Spore.Population.PawnBalance_Sage_Rare_Spore,DefaultItemPoolList[0].PoolProbability.BaseValueScaleConstant,1.000000,100","GD_Assassin_Streaming,GD_Assassin_Skills.Sniping.Velocity,SkillEffectDefinitions[0].ModifierType,MT_PostAdd,MT_Scale","GD_Tulip_Mechro_Streaming,GD_Tulip_Mechromancer_Skills.LittleBigTrouble.WiresDontTalk,SkillEffectDefinitions,,((AttributeToModify=D_Attributes.DamageTypeModifers.InstigatedShockDamageModifier,bIncludeDuelingTargets=False,bIncludeSelfAsTarget=False,bOnlyEffectTargetsInRange=False,bExcludeNonPlayerCharacters=False,EffectTarget=TARGET_Self,TargetInstanceDataName=,TargetCriteria=CRITERIA_None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.030000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),GradeToStartApplyingEffect=1,PerGradeUpgradeInterval=1,PerGradeUpgrade=(BaseValueConstant=0.030000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),BonusUpgradeList=),(AttributeToModify=D_Attributes.DamageTypeModifers.InstigatedShockStatusDamageModifier,bIncludeDuelingTargets=False,bIncludeSelfAsTarget=False,bOnlyEffectTargetsInRange=False,bExcludeNonPlayerCharacters=False,EffectTarget=TARGET_Self,TargetInstanceDataName=,TargetCriteria=CRITERIA_None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.030000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),GradeToStartApplyingEffect=1,PerGradeUpgradeInterval=1,PerGradeUpgrade=(BaseValueConstant=0.030000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),BonusUpgradeList=))","GD_Siren_Streaming,GD_Siren_Skills.Misc.Init_BlightPhoenix_DamageCalc_Part2,ValueFormula.Level.InitializationDefinition,AttributeInitializationDefinition'GD_Balance_HealthAndDamage.HealthAndDamage.Init_PlayerMeleeDamage',AttributeInitializationDefinition'GD_Balance_HealthAndDamage.HealthAndDamage.Init_PlayerSkillDamage'","GD_Siren_Streaming,GD_Siren_Skills.Misc.Init_BlightPhoenix_DamageCalc_Part2,ValueFormula.Level.BaseValueScaleConstant,1.000000,3.5","GD_Assassin_Streaming,GD_Assassin_Skills.Misc.Att_DeathMark_BonusDamage,BaseValue.BaseValueConstant,0.200000,.8","GD_Itempools.Runnables.Pool_FourAssassins,BalancedItems[1].Probability.InitializationDefinition,None,GD_Balance.Weighting.Weight_1_Common","GD_Shields.Projectiles.Proj_LegendaryBoosterShield:BehaviorProviderDefinition_1.Behavior_Explode_140,BehaviorSequences[0].BehaviorData2[7].Behavior.StatusEffectDamage.BaseValueAttribute,None,D_Attributes.Projectile.ProjectileDamage","GD_Shields.Projectiles.Proj_LegendaryBoosterShield:BehaviorProviderDefinition_1.Behavior_Explode_140,BehaviorSequences[0].BehaviorData2[7].Behavior.StatusEffectDamage.BaseValueScaleConstant,1.000000,.25","GD_Shields.Projectiles.Proj_LegendaryBoosterShield:BehaviorProviderDefinition_1.Behavior_Explode_140,BehaviorSequences[0].BehaviorData2[7].Behavior.StatusEffectChance.BaseValueConstant,1.000000,20","Helios_P,Helios_Mission_Main.TheWorld:PersistentLevel.PopulationOpportunityDen_3,RespawnDelay,,100","Helios_P,Helios_Mission_Main.TheWorld:PersistentLevel.PopulationOpportunityDen_3,MaxTotalActors,,999999","Helios_P,Helios_Mission_Main.TheWorld:PersistentLevel.PopulationOpportunityDen_3,MaxActiveActorsIsNormal,,1","Helios_P,Helios_Mission_Main.TheWorld:PersistentLevel.PopulationOpportunityDen_3,MaxActiveActorsThreatened,,1","Helios_P,Helios_Mission_Main.TheWorld:PersistentLevel.PopulationOpportunityDen_3,SpawnData,,(PopulationDefName=\"PopDef_Uranus\",MaxActiveActors=1,NumTotalActors=1,NumActiveActors=0,NextSpawnTime=0,NumTotalExternalActors=0,NumActiveExternalActors=0)","Helios_P,Helios_Mission_Main.TheWorld:PersistentLevel.PopulationOpportunityDen_3,bNeutral,,True","Helios_P,Helios_Mission_Main.TheWorld:PersistentLevel.PopulationOpportunityDen_3,IsEnabled,,True","Helios_P,Helios_Mission_Main.TheWorld:PersistentLevel.PopulationOpportunityDen_3,bIsWaitingForRespawn,,True","Helios_P,GD_Anemone_UranusBOT.Death.DeathDef_Anemone_UranusBOT:BehaviorProviderDefinition_0.Behavior_SpawnProjectile_1,ProjectileDefinition,,None","Helios_P,GD_Anemone_UranusBOT.Death.DeathDef_Anemone_UranusBOT:BehaviorProviderDefinition_0.Behavior_SpawnProjectile_2,ProjectileDefinition,,None","Helios_P,GD_Anemone_UranusBOT.Death.DeathDef_Anemone_UranusBOT:BehaviorProviderDefinition_0.Behavior_SpawnProjectile_0,ProjectileDefinition,,None","Helios_P,GD_Anemone_UranusBOT.Character.Pawn_Anemone_UranusBOT,SecondsBeforeConsideringRagdollRemoval,,0.001","Helios_P,GD_Anemone_UranusBOT.Character.Pawn_Anemone_UranusBOT,SecondsBetweenRagdollRemovalAttempts,,0.001","Helios_P,GD_Anemone_UranusBOT.Character.Pawn_Anemone_UranusBOT,SecondsBeforeVisibleRagdollRemoval,,0.001","Helios_P,GD_CoordinatedEffects.FadeOut_ForCleanup,EffectDuration,,0.001","Helios_P,Helios_MoonshotCannon.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_0,Location,,(X=36993,Y=-106438,Z=18375)18417","Helios_P,Helios_MoonshotCannon.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_0,Rotation,,(Pitch=0,Yaw=92277,Roll=0)","Helios_P,Helios_MoonshotCannon.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_2,Location,,(X=37271,Y=-106081,Z=18375)","Helios_P,Helios_MoonshotCannon.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_2,Rotation,,(Pitch=0,Yaw=92277,Roll=0)","Helios_P,Helios_LD.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_3,Location,,(X=38027,Y=-107481,Z=17694)","Helios_P,Helios_LD.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_3,Rotation,,(Pitch=0,Yaw=92277,Roll=0)","Helios_P,Helios_LD.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_2,Location,,(X=38568,Y=-106654,Z=17697)","Helios_P,Helios_LD.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_2,Rotation,,(Pitch=0,Yaw=92277,Roll=0)","Helios_P,Helios_Interactive.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_165,Location,,(X=38864,Y=-109886,Z=18395)","Helios_P,Helios_Interactive.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_33,PopulationDef,,PopulationDefinition'GD_Population_Shopping.VendingMachine.VendingMachine_HealthItems'","Helios_P,Helios_Interactive.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_33,Rotation,,(Pitch=0,Yaw=239116,Roll=0)","Helios_P,Helios_Interactive.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_33,Location,,(X=39379,Y=-110295,Z=18397)","Helios_P,Helios_Interactive.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_48,PopulationDef,,PopulationDefinition'GD_Population_Shopping.VendingMachine.VendingMachine_GrenadesAndAmmo'","Helios_P,Helios_Interactive.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_48,Rotation,,(Pitch=0,Yaw=59110,Roll=0)","Helios_P,Helios_Interactive.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_48,Location,,(X=39839,Y=-109898,Z=17622)","Helios_P,Helios_Interactive.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_32,PopulationDef,,PopulationDefinition'GD_Population_Shopping.VendingMachine.VendingMachine_HealthItems'","Helios_P,Helios_Interactive.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_32,Rotation,,(Pitch=0,Yaw=42910,Roll=0)","Helios_P,Helios_Interactive.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_32,Location,,(X=39618,Y=-109866,Z=17621)","Helios_P,Helios_Interactive.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_65,PopulationDef,,PopulationDefinition'GD_Population_Shopping.VendingMachine.VendingMachine_GrenadesAndAmmo'","Helios_P,Helios_Interactive.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_65,Rotation,,(Pitch=0,Yaw=0,Roll=0)","Helios_P,Helios_Interactive.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_65,Location,,(X=42540,Y=-108208,Z=17616)","Helios_P,Helios_Interactive.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_64,Location,,(X=40891,Y=-105975,Z=17782)","Helios_P,Helios_Interactive.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_64,Rotation,,(Pitch=0,Yaw=-55187,Roll=0)","Helios_P,Helios_Interactive.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_64,PopulationDef,,PopulationDefinition'GD_Population_Shopping.VendingMachine.VendingMachine_GrenadesAndAmmo'","Helios_P,Helios_Interactive.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_35,PopulationDef,,PopulationDefinition'GD_Population_Shopping.VendingMachine.VendingMachine_HealthItems'","Helios_P,Helios_Interactive.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_35,Rotation,,(Pitch=0,Yaw=206605,Roll=0)","Helios_P,Helios_Interactive.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_35,Location,,(X=40657,Y=-105816,Z=17780)","Helios_P,Helios_Interactive.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_43,Location,,(X=41890,Y=-108765,Z=17618)","Helios_P,Helios_Interactive.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_43,Rotation,,(Pitch=0,Yaw=92277,Roll=0)","Helios_P,Helios_Interactive.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_43,PopulationDef,,PopulationDefinition'GD_Population_Shopping.VendingMachine.VendingMachine_GrenadesAndAmmo'","Helios_P,Helios_Interactive.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_34,PopulationDef,,PopulationDefinition'GD_Population_Shopping.VendingMachine.VendingMachine_HealthItems'","Helios_P,Helios_Interactive.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_34,Rotation,,(Pitch=0,Yaw=262320,Roll=0)","Helios_P,Helios_Interactive.TheWorld:PersistentLevel.WillowPopulationOpportunityPoint_34,Location,,(X=42531,Y=-108058,Z=17616)","Helios_P,Helios_P.TheWorld:PersistentLevel.FastTravelStation_0,Location,,(X=41532,Y=-109054,Z=17618)","Helios_P,Helios_P.TheWorld:PersistentLevel.FastTravelStation_0,Rotation,,(Pitch=0,Yaw=24576,Roll=0)","Helios_P,Helios_P.TheWorld:PersistentLevel.StationTeleporterExitPoint_4,Location,,(X=36715.914063,Y=-105973.687500,Z=18490.263672)","Helios_P,Helios_P.TheWorld:PersistentLevel.StationTeleporterExitPoint_5,Location,,(X=36715.914063,Y=-105973.687500,Z=18490.263672)","Helios_P,Helios_P.TheWorld:PersistentLevel.StationTeleporterExitPoint_6,Location,,(X=36715.914063,Y=-105973.687500,Z=18490.263672)","Helios_P,Helios_P.TheWorld:PersistentLevel.StationTeleporterExitPoint_7,Location,,(X=36715.914063,Y=-105973.687500,Z=18490.263672)","Helios_P,Helios_P.TheWorld:PersistentLevel.StationTeleporterExitPoint_4,Rotation,,(Pitch=65186,Yaw=59238,Roll=0)","Helios_P,Helios_P.TheWorld:PersistentLevel.StationTeleporterExitPoint_5,Rotation,,(Pitch=65186,Yaw=59238,Roll=0)","Helios_P,Helios_P.TheWorld:PersistentLevel.StationTeleporterExitPoint_6,Rotation,,(Pitch=65186,Yaw=59238,Roll=0)","Helios_P,Helios_P.TheWorld:PersistentLevel.StationTeleporterExitPoint_7,Rotation,,(Pitch=65186,Yaw=59238,Roll=0)")
 
