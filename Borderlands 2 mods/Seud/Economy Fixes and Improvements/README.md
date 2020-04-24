@@ -2,6 +2,8 @@
 
 *A Borderlands 2 Economy mod*
 
+*(also available for Borderlands TPS)*
+
 Ever wished that vendors sold useful items ?
 
 Annoyed by the fact your legendary won't afford you more than two whites in the shop ?
