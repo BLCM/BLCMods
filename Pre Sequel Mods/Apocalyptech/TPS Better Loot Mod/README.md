@@ -310,6 +310,10 @@ Other Recommended Mods
 TODO
 ====
 
+* Looks like we've omitted Heart Breaker from the available loot?  Perhaps I did
+  that on purpose.  Take a look to see if there are other missing guns, and
+  perhaps add them in...
+* Configurable section for defining the rarity of loot in lockers?
 * Maybe decrease Moonstone chest cost in exchange for not doing guaranteed
   legendaries on it?
 * It probably wouldn't be difficult to nerf the drop rates while inside "slaughter"
@@ -374,7 +378,10 @@ for the full text.
 Changelog
 =========
 
-**v1.1.0**, July 27, 2018:
+**v1.1.1**, August 21, 2019:
+ * Added the Heart Breaker as a potential legendary shotgun
+
+**v1.1.0**, July 27, 2018 (commit `11073b0bfb839721a3a23cc6baff40b4ebf337ee`):
  * Converted to BLCM format *(BLCMM is now required; FilterTool is not supported)*
  * Merged all versions into a single master file
    * "Lootsplosion" and "Reasonable" variants are options in a mutually-exclusive

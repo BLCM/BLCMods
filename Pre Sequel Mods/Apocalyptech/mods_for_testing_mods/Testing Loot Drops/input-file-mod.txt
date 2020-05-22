@@ -1,0 +1,86 @@
+TPS
+#<{mod_name}>
+
+    # {mod_name}
+    # by Apocalyptech
+    # Licensed under Public Domain / CC0 1.0 Universal
+    #
+    # Guarantees the specified drops given in the generation file.  Not
+    # for general-purpose use -- to force some drops in the game, alter
+    # the parameters in generate-mod.py and regenerate.
+
+    #<Guaranteed Enemy Loot Drop Chance>
+
+        # Gives 100% chance to drop loot from enemies.
+
+        level None set GD_Itempools.DropWeights.DropODDS_GunsAndGear:ConditionalAttributeValueResolver_0 ValueExpressions
+        (
+            bEnabled=True,
+            ConditionalExpressionList=(),
+            DefaultBaseValue=(
+                BaseValueConstant=1,
+                BaseValueAttribute=None,
+                InitializationDefinition=None,
+                BaseValueScaleConstant=1
+            )
+        )
+
+        level None set GD_Itempools.ListDefs.StandardEnemyNoGunsOrGear ItemPools[0]
+        ( 
+            ItemPool=ItemPoolDefinition'GD_Itempools.GeneralItemPools.Pool_GunsAndGear', 
+            PoolProbability=( 
+                BaseValueConstant=0.000000, 
+                BaseValueAttribute=AttributeDefinition'GD_Itempools.DropWeights.DropODDS_GunsAndGear', 
+                InitializationDefinition=None, 
+                BaseValueScaleConstant=1.000000 
+            ) 
+        )
+
+    #</Guaranteed Enemy Loot Drop Chance>
+
+    #<Guaranteed "Nest" Drop Chance>
+
+        # Enemy nests (droppings, mostly) will also have a guaranteed drop.
+
+        level None set GD_Itempools.Treasure_NestPools.Pool_Nest_Items BalancedItems
+        (
+            (
+                ItmPoolDefinition=ItemPoolDefinition'GD_Itempools.GeneralItemPools.Pool_GunsAndGear',
+                InvBalanceDefinition=None,
+                Probability=(
+                    BaseValueConstant=1.000000,
+                    BaseValueAttribute=None,
+                    InitializationDefinition=AttributeInitializationDefinition'GD_Balance.Weighting.Weight_1_Common',
+                    BaseValueScaleConstant=1.000000
+                ),
+                bDropOnDeath=True
+            )
+        )
+
+    #</Guaranteed "Nest" Drop Chance>
+
+    #<Enemies Drop {loot_drop_quantity} Item{plural}>
+
+        # Enemies drop {loot_drop_quantity} items instead of just one.
+
+        level None set GD_Itempools.GeneralItemPools.Pool_GunsAndGear Quantity
+        (
+            BaseValueConstant={loot_drop_quantity},
+            BaseValueAttribute=None,
+            InitializationDefinition=None,
+            BaseValueScaleConstant=1
+        )
+
+        level None set GD_Ma_ItemPools.GeneralItemPools.Pool_GunsAndGear_Marigold Quantity
+        (
+            BaseValueConstant={loot_drop_quantity},
+            BaseValueAttribute=None,
+            InitializationDefinition=None,
+            BaseValueScaleConstant=1
+        )
+
+    #</Enemies Drop {loot_drop_quantity} Item{plural}>
+
+{gunsandgear_drop_str}
+
+#</{mod_name}>

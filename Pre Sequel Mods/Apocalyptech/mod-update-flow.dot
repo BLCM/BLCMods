@@ -1,0 +1,16 @@
+digraph mods {
+
+    bl [label="Better Loot"];
+    cdh [label="Cold Dead Hands"];
+    eb [label="Early Bloomer"];
+    expanded [label="Expanded Legendary Pools"];
+    luneshine [label="Luneshine on Uniques"];
+    skinpool [label="Skinpool Reassignments"];
+
+    skinpool -> cdh;
+    eb -> bl;
+    eb -> cdh;
+    bl -> expanded;
+    expanded -> bl;
+    bl -> luneshine;
+}

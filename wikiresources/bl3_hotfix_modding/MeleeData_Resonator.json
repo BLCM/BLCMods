@@ -1,0 +1,103 @@
+[
+  {
+    "_apoc_export_idx": 1,
+    "export_type": "BPClass_PlayerMeleeData_C",
+    "OverrideCondition": {
+      "_apoc_export_type": "GbxCondition_List",
+      "export": 5
+    },
+    "OverridePriority": 1000000,
+    "bOnlyOverrideOnSuccess": true,
+    "bCanHitUntargetables": true,
+    "ImpactDistance": 150,
+    "MaxPitchRate": 270,
+    "SuccessAction": [
+      "Action_Melee_Resonator_Success_C",
+      "/Game/Gear/Game/Resonator/_Design/Action_Melee_Resonator_Success"
+    ],
+    "DamageData": [
+      "DamageData_Melee_Resonator_Success_C",
+      "/Game/Gear/Game/Resonator/_Design/DamageData_Melee_Resonator_Success"
+    ],
+    "SuccessDamageData": [
+      "DamageData_Melee_Resonator_Success_C",
+      "/Game/Gear/Game/Resonator/_Design/DamageData_Melee_Resonator_Success"
+    ],
+    "MeleeCooldown": 0.75,
+    "MeleeMissCooldown": 0.75,
+    "MeleeImpact": [
+      "Impact_Melee_Resonator",
+      "/Game/GameData/Impacts/Melee/Impact_Melee_Resonator"
+    ],
+    "bReverseImpact": false,
+    "NativeClass": [
+      "BPClass_PlayerMeleeData_C",
+      "/Game/PlayerCharacters/_Shared/_Design/Melee/BPClass_PlayerMeleeData"
+    ]
+  },
+  {
+    "_apoc_export_idx": 2,
+    "export_type": "Condition_CanUseResonator_C"
+  },
+  {
+    "_apoc_export_idx": 3,
+    "export_type": "Condition_CompareDistance_C",
+    "Distance": 400,
+    "Compare": "ECompare::LT"
+  },
+  {
+    "_apoc_export_idx": 4,
+    "export_type": "Condition_IsChallengeComplete_C",
+    "Challenge": [
+      "Challenge_VaultReward_Resonator_C",
+      "/Game/GameData/Challenges/Account/Challenge_VaultReward_Resonator"
+    ],
+    "OptionalContext": false
+  },
+  {
+    "_apoc_export_idx": 5,
+    "export_type": "GbxCondition_List",
+    "Conditions": [
+      {
+        "_apoc_export_type": "GbxCondition_List",
+        "export": 6
+      },
+      {
+        "_apoc_export_type": "Condition_CompareDistance_C",
+        "export": 3
+      },
+      {
+        "_apoc_export_type": "Condition_CanUseResonator_C",
+        "export": 2
+      }
+    ]
+  },
+  {
+    "_apoc_export_idx": 6,
+    "export_type": "GbxCondition_List",
+    "Operator": "ECompoundConditionOperatorType::Or",
+    "Conditions": [
+      {
+        "_apoc_export_type": "MissionEnableConditionObjective",
+        "export": 7
+      },
+      {
+        "_apoc_export_type": "Condition_IsChallengeComplete_C",
+        "export": 4
+      }
+    ]
+  },
+  {
+    "_apoc_export_idx": 7,
+    "export_type": "MissionEnableConditionObjective",
+    "ObjectiveRef": {
+      "Mission": {
+        "asset_path_name": "/Game/Missions/Plot/Mission_Ep10_CityVault.Mission_Ep10_CityVault_C",
+        "sub_path_string": ""
+      },
+      "ObjectiveName": "OBJ_LootVault_Objective",
+      "ObjectiveGuid": "7e420a8743e76cc4501c91ad052028e1"
+    },
+    "ObjectiveStatus": "MOS_Complete"
+  }
+]

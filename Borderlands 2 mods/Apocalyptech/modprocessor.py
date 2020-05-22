@@ -575,7 +575,7 @@ class ModProcessor(object):
         a filename with a version which pretends to have been
         written by BLCMM.
         """
-        with open(output_filename, 'w') as odf:
+        with open(output_filename, 'w', encoding='latin1') as odf:
             self.human_to_blcm(io.StringIO(modstring), odf)
 
     def register_str(self, name, line):
