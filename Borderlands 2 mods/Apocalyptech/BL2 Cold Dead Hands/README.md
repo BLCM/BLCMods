@@ -264,16 +264,20 @@ against the increased enemy difficulty here, in fact.
 
 As of v1.1.5, Cold Dead Hands tweaks the Health vending machines' pools
 a bit to ensure that shields are always available in Southern Shelf for the
-mission Shielded Favors.  This is fully compatible with:
+mission Shielded Favors.  This section is fully compatible with:
  - Jim Raven's MakeVendorsGreatAgain (though we end up nerfing the COM population
    rate a bit)
  - theNocturni's Vendor+
-With a few other mods, this mod mostly works but won't *entirely* remove COMs
-from the Health machines, so you may end up with a shieldless machine after all:
+
+In conjunction With a few other mods, this Health vendor switcheroo in Southern
+Shelf mostly works but won't *entirely* remove COMs from those Health machines,
+so you may end up with a shieldless machine after all:
  - SirUmnei's COM Overhaul Pack
  - Koby's Vendors Enhanced
-This section is completely *incompatible* with a few more, in that it disables
-Health machine contents *other* than COMs:
+
+Finally, the Southern Shelf Health vendor tweaks here are completely
+*incompatible* with a few more, in that it disables Health machine contents
+*other* than COMs:
  - Jim Raven's BL1 Vendors
  - Seud's Economy Fixes & Improvements
 
