@@ -331,10 +331,10 @@ class ModProcessor(object):
         for (key, value) in self.gbx_hotfixes[self.patch_type] + self.hotfix_commands:
             keys.append(key)
             values.append(value)
-        self.line('set Transient.SparkServiceConfiguration_6 Keys ({})'.format(
+        self.line('set Transient.SparkServiceConfiguration_5 Keys ({})'.format(
             ','.join(['"{}"'.format(s) for s in keys])
             ), odf)
-        self.line('set Transient.SparkServiceConfiguration_6 Values ({})'.format(
+        self.line('set Transient.SparkServiceConfiguration_5 Values ({})'.format(
             ','.join(['"{}"'.format(s) for s in values])
             ), odf)
 
