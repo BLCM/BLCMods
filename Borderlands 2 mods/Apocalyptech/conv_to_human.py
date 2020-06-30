@@ -406,6 +406,9 @@ if __name__ == '__main__':
     parser.add_argument('-i', '--indices',
         action='store_true',
         help='Output indicies in arrays (useful in things like BPDs)')
+    parser.add_argument('-p', '--prompt',
+        action='store_true',
+        help='Prompt for text to format in a loop (everything will be STDIN/STDOUT)')
     parser.add_argument('input',
         nargs='?',
         help='Input filename; specify "-" for STDIN',
@@ -417,6 +420,20 @@ if __name__ == '__main__':
         default='-',
         )
     args = parser.parse_args()
+
+    # Process interactively, if told to
+    if args.prompt:
+        while True:
+            sys.stdout.write('input> ')
+            sys.stdout.flush()
+            idf = io.StringIO(sys.stdin.readline())
+            print('')
+            try:
+                process_plain(idf, sys.stdout, args.indices)
+            except Exception as e:
+                print('')
+                print('Exception: {}'.format(str(e)))
+            print('')
 
     # Check our input
     if args.input == '-':
