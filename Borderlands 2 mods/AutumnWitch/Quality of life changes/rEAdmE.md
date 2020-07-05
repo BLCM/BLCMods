@@ -1,4 +1,4 @@
- Hello again! Pat here to tell you about these Quality of life changes I found while digging in some Charactor data
+ Hello again! Autumn here to tell you about these Quality of life changes I found while digging in some Charactor data
  
  
   # Normal Versions
