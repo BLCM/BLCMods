@@ -1,4 +1,4 @@
- Hello again! Pat here highlighting a brief rundown of the changes the Prefix Rework. Thank you to Aaron0000 for letting me use his Sniper Regen Accessory as a part of this mod.
+ Hello again! Autumn here highlighting a brief rundown of the changes the Prefix Rework. Thank you to Aaron0000 for letting me use his Sniper Regen Accessory as a part of this mod.
  
  
  # Handguns
