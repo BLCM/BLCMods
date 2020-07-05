@@ -1,4 +1,4 @@
-Hia! Pat here to tell you about my Projects and Proofs of Concepts.
+Hia! Autumn here to tell you about my Projects and Proofs of Concepts.
 
     LaLonde
       The goal with this weapon was to understand how a gun that scales with your level would function.
