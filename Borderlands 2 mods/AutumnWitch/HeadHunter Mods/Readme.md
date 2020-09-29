@@ -1,4 +1,4 @@
-Hello! Pat here, if youre interested in my custom weapons/shields/relics youll need to have the Head Hunter packs for Borderlands 2.
+Hello! Autumn here, if youre interested in my custom weapons/shields/relics youll need to have the Head Hunter packs for Borderlands 2.
 If you do not have the Head Hunter packs, then you can disable the loot pool changes at the bottom of the files with a '#' before the 'set' command.
 If you do not farm for items in Borderlands 2 anymore, then feel free to use Gibbed save editor to give yourself the item that mod replaces.
 The intent behind these mods is to add value and flavor to the Head Hunter packs, because I believe that they are fun tidbits of content.
@@ -6,12 +6,12 @@ In anycase, enjoy my creations and have fun vault hunting!
 
 All of these Mods include Filter Tool support for your convenience!
 
-  "Pat, I dont understand your naming conventions." Well look no further for an explination!
+  "Autumn, I dont understand your naming conventions." Well look no further for an explination!
   More detailed descriptions in the mods themselves.
 
- #1. AngrierPat's HH Mod Pack
+ #1. AutumnWitch's HH Mod Pack
  
-	Its as you can see, a collection of my mods all sorted together, with support for the new UCP Filter Tool
+	Its as you can see, a collection of my mods all sorted together, with support for the new ~~UCP Filter Tool~~ BLCMM by LighChaosman
 	
  #2. Candy Bag
  
