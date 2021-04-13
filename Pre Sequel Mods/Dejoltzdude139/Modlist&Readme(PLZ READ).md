@@ -1,0 +1,1 @@
+PrePatch- Adds all UCP 2.2 Changes To the Pre-Sequel with other authors content, and a few helpful effects and hotfixes, and fixes most quality of life issues not fixed previously. With help from the other mod authors in the BLCM Community. If you Find any bugs report them to me on gmail (Dejoltzdude139@gmail.com).
