@@ -1,0 +1,88 @@
+###
+### Name: Consistent & Mitigated Element Influence on Damage
+### Version: 1.0.0
+### Author: Stygian Emperor (this edit), CZ47 (original mod author)
+### Contact: stygianemperor@gmail.com
+### Categories: element, gameplay, mode-balance
+###
+### License: Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)
+### License URL: https://creativecommons.org/licenses/by-sa/4.0/
+###
+### Based on the original mod, "No Elemental Penalties," by CZ47.
+### This mod reduces elemental penalties & bonuses vs, health, armor, and shields, but does not remove them
+### entirely. It primarily brings TVHM and Mayhem mode in-line with playthrough 1, but shifts the balance
+### subtly to generally make corrosive more useful throughout the game. I made this because I did not
+### enjoy swapping weapons constantly against every single non-boss enemy in Mayhem.
+### This .bl3hotfix file can be edited in a text editor such as Notepad++ to easily alter the influence
+### of elemental damage to your own liking.
+### The elemental damage values of the unmodded game can be found here:
+### https://borderlands.fandom.com/wiki/Elemental_damage#Borderlands_3
+### The following is a chart showing the values in this mod (all playthroughs and Mayhem levels):
+###
+###              ELEMENTAL DAMAGE CHART
+###            | FLESH | SHIELD | ARMOR |
+###       NONE |  100% |  100%  |  85%  |
+### INCENDIARY |  150% |   80%  |  75%  |
+###      SHOCK |   80% |  150%  |  75%  |
+###  CORROSIVE |   80% |   80%  | 150%  |
+###  CRYOGENIC |  100% |   80%  | 120%  |
+###  RADIATION |  100% |  120%  |  75%  |
+###
+### Feel free to adjust the last numbers on each line below (after ",,") to suit your own needs.
+###
+###
+
+
+##Flesh 
+#Mayhem/TVHM
+SparkPatchEntry,(1,2,0,),/Game/GameData/Balance/HealthAndDamage/DataTable_HealthTypeBalance.DataTable_HealthTypeBalance,Flesh_PT2,NonelementalModifier,0,,1.0
+SparkPatchEntry,(1,2,0,),/Game/GameData/Balance/HealthAndDamage/DataTable_HealthTypeBalance.DataTable_HealthTypeBalance,Flesh_PT2,CorrosiveModifier,0,,0.8
+SparkPatchEntry,(1,2,0,),/Game/GameData/Balance/HealthAndDamage/DataTable_HealthTypeBalance.DataTable_HealthTypeBalance,Flesh_PT2,CryoModifier,0,,1.0
+SparkPatchEntry,(1,2,0,),/Game/GameData/Balance/HealthAndDamage/DataTable_HealthTypeBalance.DataTable_HealthTypeBalance,Flesh_PT2,FireModifier,0,,1.5
+SparkPatchEntry,(1,2,0,),/Game/GameData/Balance/HealthAndDamage/DataTable_HealthTypeBalance.DataTable_HealthTypeBalance,Flesh_PT2,ShockModifier,0,,0.8
+SparkPatchEntry,(1,2,0,),/Game/GameData/Balance/HealthAndDamage/DataTable_HealthTypeBalance.DataTable_HealthTypeBalance,Flesh_PT2,RadiationModifier,0,,1.0
+
+#NVHM
+SparkPatchEntry,(1,2,0,),/Game/GameData/Balance/HealthAndDamage/DataTable_HealthTypeBalance.DataTable_HealthTypeBalance,Flesh,NonelementalModifier,0,,1.0
+SparkPatchEntry,(1,2,0,),/Game/GameData/Balance/HealthAndDamage/DataTable_HealthTypeBalance.DataTable_HealthTypeBalance,Flesh,CorrosiveModifier,0,,0.8
+SparkPatchEntry,(1,2,0,),/Game/GameData/Balance/HealthAndDamage/DataTable_HealthTypeBalance.DataTable_HealthTypeBalance,Flesh,CryoModifier,0,,1.0
+SparkPatchEntry,(1,2,0,),/Game/GameData/Balance/HealthAndDamage/DataTable_HealthTypeBalance.DataTable_HealthTypeBalance,Flesh,FireModifier,0,,1.5
+SparkPatchEntry,(1,2,0,),/Game/GameData/Balance/HealthAndDamage/DataTable_HealthTypeBalance.DataTable_HealthTypeBalance,Flesh,ShockModifier,0,,0.8
+SparkPatchEntry,(1,2,0,),/Game/GameData/Balance/HealthAndDamage/DataTable_HealthTypeBalance.DataTable_HealthTypeBalance,Flesh,RadiationModifier,0,,1.0
+
+
+##Shield
+#Mayhem/TVHM
+SparkPatchEntry,(1,2,0,),/Game/GameData/Balance/HealthAndDamage/DataTable_HealthTypeBalance.DataTable_HealthTypeBalance,Shield_PT2,NonelementalModifier,0,,1.0
+SparkPatchEntry,(1,2,0,),/Game/GameData/Balance/HealthAndDamage/DataTable_HealthTypeBalance.DataTable_HealthTypeBalance,Shield_PT2,CorrosiveModifier,0,,0.8
+SparkPatchEntry,(1,2,0,),/Game/GameData/Balance/HealthAndDamage/DataTable_HealthTypeBalance.DataTable_HealthTypeBalance,Shield_PT2,CryoModifier,0,,0.8
+SparkPatchEntry,(1,2,0,),/Game/GameData/Balance/HealthAndDamage/DataTable_HealthTypeBalance.DataTable_HealthTypeBalance,Shield_PT2,FireModifier,0,,0.8
+SparkPatchEntry,(1,2,0,),/Game/GameData/Balance/HealthAndDamage/DataTable_HealthTypeBalance.DataTable_HealthTypeBalance,Shield_PT2,ShockModifier,0,,1.5
+SparkPatchEntry,(1,2,0,),/Game/GameData/Balance/HealthAndDamage/DataTable_HealthTypeBalance.DataTable_HealthTypeBalance,Shield_PT2,RadiationModifier,0,,1.2
+
+#NVHM
+SparkPatchEntry,(1,2,0,),/Game/GameData/Balance/HealthAndDamage/DataTable_HealthTypeBalance.DataTable_HealthTypeBalance,Shield,NonelementalModifier,0,,1.0
+SparkPatchEntry,(1,2,0,),/Game/GameData/Balance/HealthAndDamage/DataTable_HealthTypeBalance.DataTable_HealthTypeBalance,Shield,CorrosiveModifier,0,,0.8
+SparkPatchEntry,(1,2,0,),/Game/GameData/Balance/HealthAndDamage/DataTable_HealthTypeBalance.DataTable_HealthTypeBalance,Shield,CryoModifier,0,,0.8
+SparkPatchEntry,(1,2,0,),/Game/GameData/Balance/HealthAndDamage/DataTable_HealthTypeBalance.DataTable_HealthTypeBalance,Shield,FireModifier,0,,0.8
+SparkPatchEntry,(1,2,0,),/Game/GameData/Balance/HealthAndDamage/DataTable_HealthTypeBalance.DataTable_HealthTypeBalance,Shield,ShockModifier,0,,1.5
+SparkPatchEntry,(1,2,0,),/Game/GameData/Balance/HealthAndDamage/DataTable_HealthTypeBalance.DataTable_HealthTypeBalance,Shield,RadiationModifier,0,,1.2
+
+
+##Armor
+#Mayhem/TVHM
+SparkPatchEntry,(1,2,0,),/Game/GameData/Balance/HealthAndDamage/DataTable_HealthTypeBalance.DataTable_HealthTypeBalance,Armor_PT2,NonelementalModifier,0,,0.85
+SparkPatchEntry,(1,2,0,),/Game/GameData/Balance/HealthAndDamage/DataTable_HealthTypeBalance.DataTable_HealthTypeBalance,Armor_PT2,CorrosiveModifier,0,,1.5
+SparkPatchEntry,(1,2,0,),/Game/GameData/Balance/HealthAndDamage/DataTable_HealthTypeBalance.DataTable_HealthTypeBalance,Armor_PT2,CryoModifier,0,,1.2
+SparkPatchEntry,(1,2,0,),/Game/GameData/Balance/HealthAndDamage/DataTable_HealthTypeBalance.DataTable_HealthTypeBalance,Armor_PT2,FireModifier,0,,0.75
+SparkPatchEntry,(1,2,0,),/Game/GameData/Balance/HealthAndDamage/DataTable_HealthTypeBalance.DataTable_HealthTypeBalance,Armor_PT2,ShockModifier,0,,0.75
+SparkPatchEntry,(1,2,0,),/Game/GameData/Balance/HealthAndDamage/DataTable_HealthTypeBalance.DataTable_HealthTypeBalance,Armor_PT2,RadiationModifier,0,,0.75
+
+#NVHM
+SparkPatchEntry,(1,2,0,),/Game/GameData/Balance/HealthAndDamage/DataTable_HealthTypeBalance.DataTable_HealthTypeBalance,Armor,NonelementalModifier,0,,0.85
+SparkPatchEntry,(1,2,0,),/Game/GameData/Balance/HealthAndDamage/DataTable_HealthTypeBalance.DataTable_HealthTypeBalance,Armor,CorrosiveModifier,0,,1.5
+SparkPatchEntry,(1,2,0,),/Game/GameData/Balance/HealthAndDamage/DataTable_HealthTypeBalance.DataTable_HealthTypeBalance,Armor,CryoModifier,0,,1.2
+SparkPatchEntry,(1,2,0,),/Game/GameData/Balance/HealthAndDamage/DataTable_HealthTypeBalance.DataTable_HealthTypeBalance,Armor,FireModifier,0,,0.75
+SparkPatchEntry,(1,2,0,),/Game/GameData/Balance/HealthAndDamage/DataTable_HealthTypeBalance.DataTable_HealthTypeBalance,Armor,ShockModifier,0,,0.75
+SparkPatchEntry,(1,2,0,),/Game/GameData/Balance/HealthAndDamage/DataTable_HealthTypeBalance.DataTable_HealthTypeBalance,Armor,RadiationModifier,0,,0.75
+
