@@ -1,7 +1,7 @@
 Consistent & Mitigated Element Influence on Damage
 --------------------------------------------------
 
-This edit by Stygian Emperor. Based on the original mod, "No Elemental Penalties," by CZ47.
+This edit was created by Stygian Emperor based on the original mod, "No Elemental Penalties," by CZ47.
 This reduces elemental penalties & bonuses vs, health, armor, and shields, but does not remove them entirely. It primarily brings TVHM and Mayhem mode in-line with playthrough 1, but shifts the balance subtly to generally make corrosive more useful throughout the game.
 
 I made this because I did not enjoy swapping weapons constantly against every single non-boss enemy in Mayhem.
