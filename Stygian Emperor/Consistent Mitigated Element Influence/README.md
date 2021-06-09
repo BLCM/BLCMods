@@ -10,6 +10,7 @@ Elemental Damage Chart
 ----------------------
 
 The elemental damage values of the *unmodded* game can be found here: https://borderlands.fandom.com/wiki/Elemental_damage#Borderlands_3
+
 The following is a chart showing the values in *this mod* (in all playthroughs and Mayhem levels):
 
 |            | FLESH | SHIELD | ARMOR |
