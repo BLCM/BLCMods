@@ -1,4 +1,5 @@
 # BLCMods
+[![Support Discord](https://img.shields.io/static/v1?label=&message=Support%20Discord&logo=discord&color=424)](https://discord.gg/bXeqV8Ef9R)
 
 This is a repository for Community Mods made for the Borderlands series (specifically BL2 and BLTPS).
 
