@@ -13,3 +13,4 @@ Various Sal Fixes
 
 Fixes up Monk, Raider, Titan and Legendary Titan COMs to now properly use the offhand bonuses, Amp Damage from Amp Shields now applies to both hands and the drunk effect from the grog now acts like a player skill and applies to both hands.
 The rationale behind the grog change is that the character is the one that gets drunk not the gun itself, as you can hear and see the character being drunk, so now the bonuses will actually apply to both hands of salvador, but if you don't like the change it can be toggled off in BLCMM.
+# Thanks to temmmmy for the info on the various things that needed fixing.
