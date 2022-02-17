@@ -5,4 +5,5 @@ This mod finally fixes Money Shot! Yes thats right it's fixed, but you will need
 
 Changelog
 =========
-V1.1 - Updated to be properly multiplicative to other gun damage bonuses like moneyshot is in vanilla
+**v1.1** -
+ * Updated to be properly multiplicative to other gun damage bonuses like moneyshot is in vanilla
