@@ -1,17 +1,18 @@
 No Space Cowboy
-============
+===============
 
 Removes the need for the space cowboy mission to be active for the loot midget to spawn in the toilet.
 
 Moneyshot Fix
-============
+=============
 
 This mod finally fixes Money Shot! Yes thats right it's fixed, but you will need to install [Python SDK](https://bl-sdk.github.io/) and [Command Extentions](https://bl-sdk.github.io/mods/CommandExtensions/). Moneyshot now correctly checks for the mag size being less than 10 meaning it now also has the proper damage per level, as well as the damage for each hand is only checking the magazine size for the weapon in that hand, no more abusing jakobs shotguns in the offhand by having the grog in the mainhand.
-#### Changelog:
+Changelog
+=========
 V1.1 - Updated to be properly multiplicative to other gun damage bonuses like moneyshot is in vanilla
 
 Various Sal Fixes
-============
+=================
 
 Fixes up Monk, Raider, Renegade, Titan, Legendary Titan and Legendary Berserker COMs to now properly use the offhand bonuses and check the correct hand for weapon type specific bonuses, Amp Damage from Amp Shields now applies to both hands and the drunk effect from the grog now acts like a player skill and applies to both hands.
 
