@@ -10,5 +10,6 @@ Changelog
 =========
 **v1.1** -
  * Removed "Bunch of ice holes" dialog skip.
+
 **v1.0** -
  * Uploaded
