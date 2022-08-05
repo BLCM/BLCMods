@@ -24,3 +24,5 @@ FAQ:
 * Does this mean a larval varkid can drop the norfleet? yes... (like 1 in 820 thousand or so, but yes)
 * Does this mean we can now get vermi in NVHM? no
 * But it still means an ultimate can drop a norfleet in NVHM, right? nope
+
+The source code for this plugin can be found [here](https://github.com/LightChaosman/BLCMM-Plugins/tree/master/BLCMM_P%20VarkidOverhaul) 

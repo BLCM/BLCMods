@@ -1,0 +1,1 @@
+removes the skin rewards from BAR challenges

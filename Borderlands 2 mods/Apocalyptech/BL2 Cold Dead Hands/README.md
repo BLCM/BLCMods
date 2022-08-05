@@ -262,6 +262,25 @@ this mod appears later in your patch file).  The "Better Loot" improvements
 to Class Mods, Grenades, Relics, Raid Boss drops, etc, should help out
 against the increased enemy difficulty here, in fact.
 
+As of v1.1.5, Cold Dead Hands tweaks the Health vending machines' pools
+a bit to ensure that shields are always available in Southern Shelf for the
+mission Shielded Favors.  This section is fully compatible with:
+ - Jim Raven's MakeVendorsGreatAgain (though we end up nerfing the COM population
+   rate a bit)
+ - theNocturni's Vendor+
+
+In conjunction With a few other mods, this Health vendor switcheroo in Southern
+Shelf mostly works but won't *entirely* remove COMs from those Health machines,
+so you may end up with a shieldless machine after all:
+ - SirUmnei's COM Overhaul Pack
+ - Koby's Vendors Enhanced
+
+Finally, the Southern Shelf Health vendor tweaks here are completely
+*incompatible* with a few more, in that it disables Health machine contents
+*other* than COMs:
+ - Jim Raven's BL1 Vendors
+ - Seud's Economy Fixes & Improvements
+
 Mod Construction / Implementation Details
 -----------------------------------------
 
@@ -345,7 +364,14 @@ for the full text.
 Changelog
 =========
 
-**v1.1.4** - July 27, 2019:
+**v1.1.5** - May 22, 2020:
+ * Ensure that health vending machines in Southern Shelf always contain a few
+   shields, for the mission "Shielded Favors."  (Fully compatible with Jim
+   Raven's MakeVendorsGreatAgain and theNocturni's Vendor+, mostly compatible
+   with SirUmnei's COM Overhaul Pack and Koby's Vendors Enhanced, incompatible
+   with Jim Raven's BL1 Vendors and Seud's Economy Fixes & Improvements.)
+
+**v1.1.4** - July 27, 2019 (commit `14f8d9ee75858a0f49d0c54fc38939cb37f022ba`):
  * Fixed the Fire Drill so that it doesn't disappear from your inventory
    between runs.
 

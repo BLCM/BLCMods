@@ -8,3 +8,5 @@ Many quests may work fine with the generated mods, but expect softlocks.
 This mod does *not* remove the spawn limit.
 That means that if you make a x50 spawns, you will still only fight approximately 20 enemies at any given time.
 If you want to fight all your spawns at the same time, (and die), also use the NoSpawnLimit mod in [my folder](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/LightChaosman).
+
+The source code for this plugin can be found [here](https://github.com/LightChaosman/BLCMM-Plugins/tree/master/BLCMM_P%20TimesXSpawns).

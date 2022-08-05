@@ -33,7 +33,7 @@ Reskins
 * Gave Bitch SMG an alternate weapon skin with fitting Hyperion weapon aesthetics.
 * DeBanditized Bitch reskin image sample: [**Link**](https://i.imgur.com/S44g7bP.jpg)
 
-### Proper Blue Rarity Vladof Shield Skin
+### Proper Blue Rarity Vladof Shield Skin (Already Implemented in UCP)
 * Gave Blue rarity Absorption Shield a proper Blue rarity Vladof item skin.
 * Proper Blue Rarity Vladof Shield reskin image sample: [**Link**](https://i.imgur.com/HPHpQUD.jpg)
 
@@ -41,3 +41,7 @@ Reskins
 * Created two unique weapon skin variants for the Interfacer shotgun: a Pristine Variant and a Worn Out Variant.
 * Made four barrel mesh options, **only** pick one barrel mesh from the given options. Untick all of the options if you prefer to keep the Hyperion barrel mesh.
 * Alternate interfacer reskin sample gallery: [**Link**](https://imgur.com/a/Df1wm)
+
+### Blue Rarity Vladof Gun Skin Tweaks
+* Made some minor changes on the blue rarity Vladof gun skins by changing the B shadow color and changing the logo's size and position.
+* Blue Rarity Vladof Gun skin tweaks image sample: [**Link**](https://i.imgur.com/99pXojL.png)

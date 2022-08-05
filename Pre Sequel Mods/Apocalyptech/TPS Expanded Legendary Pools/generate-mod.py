@@ -46,7 +46,7 @@ except ModuleNotFoundError:
 ###
 
 mod_name = 'TPS Expanded Legendary Pools'
-mod_version = '1.0.0'
+mod_version = '1.0.1'
 input_filename = 'input-file-mod.txt'
 output_filename = '{}.blcm'.format(mod_name)
 
@@ -158,6 +158,7 @@ for (guntype, legendaries, uniques, uniqueglitches, num_undesirables) in [
                 'GD_Cypressure_Weapons.A_Weapons_Unique.SG_Hyperion_3_CompanyMan',
                 'GD_Cypressure_Weapons.A_Weapons_Unique.SG_Torgue_3_Landscaper2',
                 'GD_Petunia_Weapons.Shotguns.SG_Tediore_3_PartyLine',
+                'GD_Cork_Weap_Shotgun.A_Weapons_Unique.SG_Hyperion_3_HeartBreaker',
             ],
             [
                 # Unique Glitches

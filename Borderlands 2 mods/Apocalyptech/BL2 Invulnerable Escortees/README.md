@@ -19,6 +19,13 @@ The full list of affected escortees is:
    "Statuesque" in Opportunity
  * **Mosstache**: Aubrey's instrument of vengeance in the Dragon
    Keep DLC mission "Tree Hugger"
+ * **Mr. Sparks**, the generator in *You Are Cordially Invited: Tea Party*.
+   It's pretty rare that the generator ever gets in real danger,
+   but technically it would fail the quest if it were to die.
+ * **Ol' Pukey**, from the Hammerlock DLC mission *Ol' Pukey*.
+ * **Supply Crate**, in Thousand Cuts during *Defend Slab Tower*.
+   I don't know that I've ever even seen this take damage during
+   normal gameplay, but here it is regardless.
 
 One enemy only receives a 25x health buff (bringing it a bit past
 "badass" level) rather than the usual buffs:
@@ -45,6 +52,12 @@ definition -- most likely a subtle bug in the game code, honestly --
 and the damage from Converge cannot by default be blocked by any
 enemy.  The increased health pools given to these escortees should
 protect them from casual Converging, though.
+
+There are a few instances where you're tasked with defending
+something but the mission doesn't fail when it receives too much
+damage; I opted not to make any changes to those missions.
+Specifically, the lunar supply beacon in *Bright Lights, Flying
+City*, and the flag generators in *Capture the Flags*.
 
 Usage
 =====
@@ -77,6 +90,12 @@ This mod itself is licensed under
 
 Changelog
 =========
+
+**v1.2.0**, September 3, 2019:
+ * Added a few escortees which were missed the first time around:
+   * Mr. Sparks
+   * Supply Crate in Thousand Cuts
+   * Ol' Pukey
 
 **v1.1.0**, August 18, 2019:
  * Changed Der Monstrositat to only have a 25x health boost by default, since

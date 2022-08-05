@@ -1,4 +1,8 @@
 ### Allegiance Forcer
+[This plugin is deprecated in favour of this SDK mod.](https://github.com/apple1417/bl-sdk-mods/wiki/Equip-Locker)
+
+&nbsp;
+
 This plugin generates a mod that forces allegiance towards one or more particular manufacturers. Weapons, shields, grenade modes, relics, and oz kits of incorrect manufacturers will be replaced with money drops, while class mods will still spawn but be unequippable.
 
 Optional settings include:

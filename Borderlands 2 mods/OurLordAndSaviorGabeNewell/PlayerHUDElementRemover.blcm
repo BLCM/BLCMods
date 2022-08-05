@@ -7,17 +7,17 @@
 		</profiles>
 	</head>
 	<body>
-		<category name="Player HUD Element Remover">
+		<category name="Player HUD Element Remover - Version 1.1">
 			<comment>Mod written by GitHub: Our Lord And Savior Gabe Newell / Nexus Mods: OB4MA</comment>
-			<comment>This mod simply allows you to toggle off various parts of your HUD.</comment>
+			<comment>This mod simply allows you to toggle off various parts of your HUD and now crosshairs.</comment>
 			<comment></comment>
 			<comment>Customize portions of your HUD that you would like to disable outright.</comment>
 			<comment></comment>
-			<comment>Don't want to see your level and class mod name either? No problem.</comment>
+			<comment>Tired of reload messages or fight for your life health bars?</comment>
+			<comment>Don't want to see your level and class mod name either?</comment>
 			<comment>If you are level 72 and don't care to see your XP Bar, no problem.</comment>
-			<comment>Tired of reload messages or fight for your life health bars? No problem.</comment>
 			<comment></comment>
-			<comment>This really can disable just about everything on your HUD without screwing functionality of anything like ToggleHUD.</comment>
+			<comment>This really can disable just about everything on your HUD without screwing functionality of anything like ToggleHUD does.</comment>
 			<comment></comment>
 			<category name="HUD Element Remover">
 				<category name="Remove HUD Features">
@@ -305,6 +305,244 @@
 							<hotfix name="HUD Elements" level="None">
 								<code profiles="">set UI_HUD.HUD_Definition ScaledElements[7] (ElementName="activeAbility",Anchor=HUDScalingAnchorDefinition'UI_HUD.Anchors.Anchor_TopRight')</code>
 							</hotfix>
+						</category>
+					</category>
+				</category>
+			</category>
+			<category name="Crosshair Remover">
+				<category name="All Crosshairs">
+					<category name="Code">
+						<code profiles="">set WeaponTypeDefinition CrosshairFrame None</code>
+						<code profiles="">set GD_Lilac_SkillsBase.Buzzaxe.WeaponType_Buzzaxe CrosshairFrame None</code>
+						<code profiles="">set VehicleWeaponTypeDefinition CrosshairFrame None</code>
+					</category>
+				</category>
+				<category name="Crosshair Only When Aiming">
+					<category name="Code">
+						<code profiles="">set HUDWidget_Crosshairs bScopeCrosshair True</code>
+					</category>
+				</category>
+				<comment>Each of following are categories that you can open to find more customization options.</comment>
+				<category name="Player Vehicles">
+					<comment>Disabling the crosshair for the turrets affects the front machine gun as well if you are driving it with no passengers.</comment>
+					<comment>I have not tested disabling the front machine gun and using a turret as not a driver, but these may conflict for all I know.</comment>
+					<category name="Bandit Technicals">
+						<category name="Bandit Technical Front Machine Gun">
+							<hotfix name="Name" package="GD_BTech_Streaming">
+								<code profiles="">set GD_BTech_Streaming.Weapon.WeaponTypes.WeaponType_FrontMachineGun CrosshairFrame None</code>
+							</hotfix>
+						</category>
+						<category name="Bandit Technical - Catapult">
+							<hotfix name="Name" package="GD_BTech_Streaming">
+								<code profiles="">set GD_BTech_Streaming.Weapon.WeaponTypes.WeaponType_Catapult CrosshairFrame None</code>
+							</hotfix>
+						</category>
+						<category name="Bandit Technical - Sawblade">
+							<hotfix name="Name" package="GD_BTech_Streaming">
+								<code profiles="">set GD_BTech_Streaming.Weapon.WeaponTypes.WeaponType_SawBlade CrosshairFrame None</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Sandskiffs">
+						<category name="Harpoon Sandskiff - Harpoon">
+							<hotfix name="Name" package="GD_Orchid_HarpoonHovercraft">
+								<code profiles="">set GD_Orchid_HarpoonHovercraft.Weapon.WeaponTypes.WeaponType_Harpoon CrosshairFrame None</code>
+							</hotfix>
+						</category>
+						<category name="Harpoon Sandskiff - Machine Gun">
+							<hotfix name="Name" package="GD_Orchid_HarpoonHovercraft">
+								<code profiles="">set GD_Orchid_Hovercraft.Weapon.WeaponTypes.WeaponType_MachineGun CrosshairFrame None</code>
+							</hotfix>
+						</category>
+						<category name="Rocket Sandskiff - Rockets">
+							<hotfix name="Name" package="GD_Orchid_RocketHovercraft">
+								<code profiles="">set GD_Orchid_RocketHovercraft.Weapon.WeaponTypes.WeaponType_DualRockets CrosshairFrame None</code>
+							</hotfix>
+						</category>
+						<category name="Rocket Sandskiff - Machine Gun">
+							<hotfix name="Name" package="GD_Orchid_RocketHovercraft">
+								<code profiles="">set GD_Orchid_Hovercraft.Weapon.WeaponTypes.WeaponType_MachineGun CrosshairFrame None</code>
+							</hotfix>
+						</category>
+						<category name="Sawblade Sandskiff - Sawblade">
+							<hotfix name="Name" package="GD_Orchid_SawHovercraft">
+								<code profiles="">set GD_Orchid_SawHovercraft.Weapon.WeaponTypes.WeaponType_SawBlade CrosshairFrame None</code>
+							</hotfix>
+						</category>
+						<category name="Sawblade Sandskiff - Machine Gun">
+							<hotfix name="Name" package="GD_Orchid_SawHovercraft">
+								<code profiles="">set GD_Orchid_Hovercraft.Weapon.WeaponTypes.WeaponType_MachineGun CrosshairFrame None</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Runners">
+						<category name="All Runner - Front Machine Gun">
+							<hotfix name="Name" package="GD_Runner_Streaming">
+								<code profiles="">set GD_Runner_Streaming.Weapon.WeaponTypes.WeaponType_FrontMachineGun CrosshairFrame None</code>
+							</hotfix>
+						</category>
+						<category name="Runner - Machine Gun">
+							<hotfix name="Name" package="GD_Runner_Streaming">
+								<code profiles="">set GD_Runner_Streaming.Weapon.WeaponTypes.WeaponType_MachineGun CrosshairFrame None</code>
+							</hotfix>
+						</category>
+						<category name="Rocket Runner - Rocket Launcher">
+							<hotfix name="Name" package="GD_Runner_Streaming">
+								<code profiles="">set GD_Runner_Streaming.Weapon.WeaponTypes.WeaponType_RocketLauncher CrosshairFrame None</code>
+							</hotfix>
+						</category>
+					</category>
+					<category name="Fanboats">
+						<category name="Corrosive Fanboat - Corrosive Turret">
+							<hotfix name="Name" package="GD_Sage_CorrosiveFanBoat">
+								<code profiles="">set GD_Sage_CorrosiveFanBoat.Weapons.WeaponTypes.WeaponType_CorrosiveSpew CrosshairFrame None</code>
+							</hotfix>
+						</category>
+						<category name="Corrosive Fanboat - Front Machine Gun">
+							<hotfix name="Name" package="GD_Sage_CorrosiveFanBoat">
+								<code profiles="">set GD_Sage_FanBoat.Weapons.WeaponTypes.WeaponType_FrontMachineGun CrosshairFrame None</code>
+							</hotfix>
+						</category>
+						<category name="Incendiary Fanboat - Flamethrower Turret">
+							<hotfix name="Name" package="GD_Sage_IncendiaryFanBoat">
+								<code profiles="">set GD_Sage_IncendiaryFanBoat.Weapons.WeaponTypes.WeaponType_Flamethrower CrosshairFrame None</code>
+							</hotfix>
+						</category>
+						<category name="Incendiary Fanboat - Front Machine Gun">
+							<hotfix name="Name" package="GD_Sage_IncendiaryFanBoat">
+								<code profiles="">set GD_Sage_FanBoat.Weapons.WeaponTypes.WeaponType_FrontMachineGun CrosshairFrame None</code>
+							</hotfix>
+						</category>
+						<category name="Shock Fanboat - Shock Turret">
+							<hotfix name="Name" package="GD_Sage_ShockFanBoat">
+								<code profiles="">set GD_Sage_ShockFanBoat.Weapons.WeaponTypes.WeaponType_StickyShock CrosshairFrame None</code>
+							</hotfix>
+						</category>
+						<category name="Shock Fanboat - Front Machine Gun">
+							<hotfix name="Name" package="GD_Sage_ShockFanBoat">
+								<code profiles="">set GD_Sage_FanBoat.Weapons.WeaponTypes.WeaponType_FrontMachineGun CrosshairFrame None</code>
+							</hotfix>
+						</category>
+					</category>
+				</category>
+				<category name="Other Vehicles">
+					<category name="Bandit Minigun Turret">
+						<code profiles="">set GD_BanditTurret.Weapon.WeaponType_BanditTurret CrosshairFrame None</code>
+					</category>
+					<category name="Bewm Boom Cannon Turret">
+						<code profiles="">set GD_CannonTurret.Weapon.WeaponType_CannonTurret CrosshairFrame None</code>
+					</category>
+				</category>
+				<category name="Guns">
+					<category name="Assault Rifles">
+						<category name="Bandit Assault Rifle">
+							<code profiles="">set GD_Weap_AssaultRifle.A_Weapons.WT_Bandit_AssaultRifle CrosshairFrame None</code>
+						</category>
+						<category name="Dahl Assault Rifle">
+							<code profiles="">set GD_Weap_AssaultRifle.A_Weapons.WT_Dahl_AssaultRifle CrosshairFrame None</code>
+						</category>
+						<category name="Jakobs Assault Rifle">
+							<code profiles="">set GD_Weap_AssaultRifle.A_Weapons.WT_Jakobs_AssaultRifle CrosshairFrame None</code>
+						</category>
+						<category name="Torgue Assault Rifle">
+							<code profiles="">set GD_Weap_AssaultRifle.A_Weapons.WT_Torgue_AssaultRifle CrosshairFrame None</code>
+						</category>
+						<category name="Vladof Assault Rifle">
+							<code profiles="">set GD_Weap_AssaultRifle.A_Weapons.WT_Vladof_AssaultRifle CrosshairFrame None</code>
+						</category>
+					</category>
+					<category name="Rocket Launchers">
+						<category name="Bandit Rocket Launcher">
+							<code profiles="">set GD_Weap_Launchers.A_Weapons.WT_Bandit_Launcher CrosshairFrame None</code>
+						</category>
+						<category name="Maliwan Rocket Launcher">
+							<code profiles="">set GD_Weap_Launchers.A_Weapons.WT_Maliwan_Launcher CrosshairFrame None</code>
+						</category>
+						<category name="Tediore Rocket Launcher">
+							<code profiles="">set GD_Weap_Launchers.A_Weapons.WT_Tediore_Launcher CrosshairFrame None</code>
+						</category>
+						<category name="Torgue Rocket Launcher">
+							<code profiles="">set GD_Weap_Launchers.A_Weapons.WT_Torgue_Launcher CrosshairFrame None</code>
+						</category>
+						<category name="Vladof Rocket Launcher">
+							<code profiles="">set GD_Weap_Launchers.A_Weapons.WT_Vladof_Launcher CrosshairFrame None</code>
+						</category>
+					</category>
+					<category name="Pistols">
+						<category name="Bandit Pistol">
+							<code profiles="">set GD_Weap_Pistol.A_Weapons.WeaponType_Bandit_Pistol CrosshairFrame None</code>
+						</category>
+						<category name="Dahl Pistol">
+							<code profiles="">set GD_Weap_Pistol.A_Weapons.WeaponType_Dahl_Pistol CrosshairFrame None</code>
+						</category>
+						<category name="Hyperion Pistol">
+							<code profiles="">set GD_Weap_Pistol.A_Weapons.WeaponType_Hyperion_Pistol CrosshairFrame None</code>
+						</category>
+						<category name="Jakobs Pistol">
+							<code profiles="">set GD_Weap_Pistol.A_Weapons.WeaponType_Jakobs_Pistol CrosshairFrame None</code>
+						</category>
+						<category name="Maliwan Pistol">
+							<code profiles="">set GD_Weap_Pistol.A_Weapons.WeaponType_Maliwan_Pistol CrosshairFrame None</code>
+						</category>
+						<category name="Tediore Pistol">
+							<code profiles="">set GD_Weap_Pistol.A_Weapons.WeaponType_Tediore_Pistol CrosshairFrame None</code>
+						</category>
+						<category name="Torgue Pistol">
+							<code profiles="">set GD_Weap_Pistol.A_Weapons.WeaponType_Torgue_Pistol CrosshairFrame None</code>
+						</category>
+						<category name="Vladof Pistol">
+							<code profiles="">set GD_Weap_Pistol.A_Weapons.WeaponType_Vladof_Pistol CrosshairFrame None</code>
+						</category>
+					</category>
+					<category name="SMGs">
+						<category name="Bandit SMG">
+							<code profiles="">set GD_Weap_SMG.A_Weapons.WT_SMG_Bandit CrosshairFrame None</code>
+						</category>
+						<category name="Dahl SMG">
+							<code profiles="">set GD_Weap_SMG.A_Weapons.WT_SMG_Dahl CrosshairFrame None</code>
+						</category>
+						<category name="Hyperion SMG">
+							<code profiles="">set GD_Weap_SMG.A_Weapons.WT_SMG_Hyperion CrosshairFrame None</code>
+						</category>
+						<category name="Maliwan SMG">
+							<code profiles="">set GD_Weap_SMG.A_Weapons.WT_SMG_Maliwan CrosshairFrame None</code>
+						</category>
+						<category name="Tediore SMG">
+							<code profiles="">set GD_Weap_SMG.A_Weapons.WT_SMG_Tediore CrosshairFrame None</code>
+						</category>
+					</category>
+					<category name="Shotguns">
+						<category name="Bandit Shotgun">
+							<code profiles="">set GD_Weap_Shotgun.A_Weapons.WT_Bandit_Shotgun CrosshairFrame None</code>
+						</category>
+						<category name="Hyperion Shotgun">
+							<code profiles="">set GD_Weap_Shotgun.A_Weapons.WT_Hyperion_Shotgun CrosshairFrame None</code>
+						</category>
+						<category name="Jakobs Shotgun">
+							<code profiles="">set GD_Weap_Shotgun.A_Weapons.WT_Jakobs_Shotgun CrosshairFrame None</code>
+						</category>
+						<category name="Tediore Shotgun">
+							<code profiles="">set GD_Weap_Shotgun.A_Weapons.WT_Tediore_Shotgun CrosshairFrame None</code>
+						</category>
+						<category name="Torgue Shotgun">
+							<code profiles="">set GD_Weap_Shotgun.A_Weapons.WT_Torgue_Shotgun CrosshairFrame None</code>
+						</category>
+					</category>
+					<category name="Snipers">
+						<category name="Dahl Sniper">
+							<code profiles="">set GD_Weap_SniperRifles.A_Weapons.WeaponType_Dahl_Sniper CrosshairFrame None</code>
+						</category>
+						<category name="Hyperion Sniper">
+							<code profiles="">set GD_Weap_SniperRifles.A_Weapons.WeaponType_Hyperion_Sniper CrosshairFrame None</code>
+						</category>
+						<category name="Jakobs Sniper">
+							<code profiles="">set GD_Weap_SniperRifles.A_Weapons.WeaponType_Jakobs_Sniper CrosshairFrame None</code>
+						</category>
+						<category name="Maliwan Sniper">
+							<code profiles="">set GD_Weap_SniperRifles.A_Weapons.WeaponType_Maliwan_Sniper CrosshairFrame None</code>
+						</category>
+						<category name="Vladof Sniper">
+							<code profiles="">set GD_Weap_SniperRifles.A_Weapons.WeaponType_Vladof_Sniper CrosshairFrame None</code>
 						</category>
 					</category>
 				</category>

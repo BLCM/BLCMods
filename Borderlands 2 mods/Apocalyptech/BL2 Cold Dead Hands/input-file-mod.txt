@@ -1782,25 +1782,67 @@ BL2
 
         #<Nerf Vending Machines>
 
-            # We're not completely removing weapons and shields from vending machines,
-            # partially because they'd become a bit pointless, and partially because of
-            # that early-game Hammerlock quest which requires you to buy a shield.
-            # Instead we're restricting the number of items in shield + weapon machines to
-            # 2, and removing the item of the day from the weapons machine.
+            #<Limit Item Counts>
 
-            level None set GD_ItemPools_Shop.Items.Shoppool_Weapons_FlatChance Quantity.BaseValueConstant 2
+                # We're not completely removing weapons and shields from vending machines,
+                # partially because they'd become a bit pointless, and partially because of
+                # that early-game Hammerlock quest which requires you to buy a shield.
+                # Instead we're restricting the number of items in shield + weapon machines to
+                # 2, and removing the item of the day from the weapons machine.
 
-            level None set GD_ItemPools_Shop.HealthShop.HealthShop_Items Quantity.BaseValueConstant 2
+                level None set GD_ItemPools_Shop.Items.Shoppool_Weapons_FlatChance Quantity.BaseValueConstant 2
 
-            level None set GD_ItemPools_Shop.WeaponPools.Shoppool_FeaturedItem_WeaponMachine Quantity.BaseValueConstant 0
+                level None set GD_ItemPools_Shop.HealthShop.HealthShop_Items Quantity.BaseValueConstant 2
 
-            {mp:vendor_nerf_0}
+                level None set GD_ItemPools_Shop.WeaponPools.Shoppool_FeaturedItem_WeaponMachine Quantity.BaseValueConstant 0
 
-            {mp:vendor_nerf_1}
+                {mp:vendor_nerf_0}
 
-            {mp:vendor_nerf_2}
+                {mp:vendor_nerf_1}
 
-            {mp:vendor_nerf_3}
+                {mp:vendor_nerf_2}
+
+                {mp:vendor_nerf_3}
+
+            #</Limit Item Counts>
+
+            #<Disable COMs in Health Machines in Southern Shelf>
+
+                # The early Hammerlock mission "Shielded Favors" requires you to buy a
+                # shield from a vending machine, but with our quantity nerfs, you can
+                # end up with a vending machine with only COMs in it.  So, in Southern
+                # Shelf only, we're getting rid of COMs in there entirely.  This is
+                # fully compatible with the following other mods:
+                #
+                #  - Jim Raven's MakeVendorsGreatAgain (though we end up nerfing the COM population rate)
+                #  - the_Nocturni's Vendor+
+                #
+                # This is mostly compatible with these other mods, though they also
+                # add in extra COM drops that we don't disable:
+                #
+                #  - SirUmnei's COM Overhaul Pack
+                #  - Koby's Vendors Enhanced
+                #
+                # This is *incompatible* with the following, in that we'll be cutting
+                # some non-COM stuff out of the pool instead, and probably messing with
+                # some population rates:
+                #
+                #  - Jim Raven's BL1 Vendors
+                #  - Seud's Economy Fixes & Improvements
+
+                # First, for most levels, set the stock drop scaling for COMs
+
+                level None set GD_ItemPools_Shop.HealthShop.HealthShop_Items BalancedItems[2].Probability.BaseValueScaleConstant 0.333
+
+                level None set GD_ItemPools_Shop.HealthShop.HealthShop_Items BalancedItems[3].Probability.BaseValueScaleConstant 0.333
+
+                # Then, just for Southern Shelf, set those to 0
+
+                level SouthernShelf_P set GD_ItemPools_Shop.HealthShop.HealthShop_Items BalancedItems[2].Probability.BaseValueScaleConstant 0
+
+                level SouthernShelf_P set GD_ItemPools_Shop.HealthShop.HealthShop_Items BalancedItems[3].Probability.BaseValueScaleConstant 0
+
+            #</Disable COMs in Health Machines in Southern Shelf>
 
         #</Nerf Vending Machines>
 

@@ -93,5 +93,8 @@ for the full text.
 Changelog
 =========
 
+**v1.0.1**, August 21, 2019:
+ * Added the Heart Breaker as a potential legendary shotgun
+
 **v1.0.0**, July 27, 2018:
  * Initial public release

@@ -46,6 +46,10 @@ Usage/Installation
 This mod must be imported into BLCMM using `File -> Import single mod`.
 Choose the file `BL2 Happy Horizontal People Transporter.blcm` and have at it!
 
+If you're using this mod along with my `BL2 Faster Rockets and Gyrojets`
+mod, make sure that HHPT is loaded *after* the Faster Rockets mod, so that
+the HHPT's projectile speed is set properly.
+
 More Technical Notes
 ====================
 
@@ -99,6 +103,11 @@ See [COPYING-mods.txt](../COPYING-mods.txt) for the full text.
 
 Changelog
 =========
+
+**v1.0.2** - November 18, 2019
+ * Explicitly lock the main projectile to its intended speed, in case the user has
+   a mod enabled which alters it (such as my Faster Rockets and Gyrojets mod).  That
+   way there'll at least be an overwrite alert in BLCMM.
 
 **v1.0.1** - July 29, 2019
  * Changed name to include `BL2`, so there's no confusion between this and

@@ -1,0 +1,1382 @@
+<BLCMM v="1">
+#<!!!You opened a file saved with BLCMM in FilterTool. Please update to BLCMM to properly open this file!!!>
+	<head>
+		<type name="TPS" offline="false"/>
+	</head>
+	<body>
+		<category name="Price Calculation Fixes">
+			<comment># Fixes a lot of weird quirks and arbitrary decisions in how some prices are calculated</comment>
+			<comment># Affects all launchers, many weapon parts, Legendary Grenade Mods and some Legendary Shields</comment>
+			<comment># Required for "Better Rarity Prices" to work properly, but does not require it</comment>
+			<comment># Heavily recommended either way</comment>
+			<category name="Fix Grenade mods">
+				<comment># By default, Grenade mods use their Damage and StatusDamage for their price modifications.</comment>
+				<comment># This means that Legendaries and Very Rare mods are worth the same.</comment>
+				<comment># Here, we change it so the Material holds the rarity mod instead, allowing proper scaling.</comment>
+				<category name="Add APR to Materials">
+					<code profiles="default">set GD_GrenadeMods.Material.Material_Bandit MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_01_Common'</code>
+					<code profiles="default">set GD_GrenadeMods.Material.Material_Bandit_2_Uncommon MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_02_Uncommon'</code>
+					<code profiles="default">set GD_GrenadeMods.Material.Material_Bandit_3_Rare MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'</code>
+					<code profiles="default">set GD_GrenadeMods.Material.Material_Bandit_4_VeryRare MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_04_VeryRare'</code>
+					<code profiles="default">set GD_GrenadeMods.Material.Material_Dahl MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_01_Common'</code>
+					<code profiles="default">set GD_GrenadeMods.Material.Material_Dahl_2_Uncommon MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_02_Uncommon'</code>
+					<code profiles="default">set GD_GrenadeMods.Material.Material_Dahl_3_Rare MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'</code>
+					<code profiles="default">set GD_GrenadeMods.Material.Material_Dahl_4_VeryRare MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_04_VeryRare'</code>
+					<code profiles="default">set GD_GrenadeMods.Material.Material_Dahl_5_Legendary MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'</code>
+					<code profiles="default">set GD_GrenadeMods.Material.Material_Hyperion MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_01_Common'</code>
+					<code profiles="default">set GD_GrenadeMods.Material.Material_Hyperion_2_Uncommon MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_02_Uncommon'</code>
+					<code profiles="default">set GD_GrenadeMods.Material.Material_Hyperion_3_Rare MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'</code>
+					<code profiles="default">set GD_GrenadeMods.Material.Material_Hyperion_4_VeryRare MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_04_VeryRare'</code>
+					<code profiles="default">set GD_GrenadeMods.Material.Material_Hyperion_5_Legendary MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'</code>
+					<code profiles="default">set GD_GrenadeMods.Material.Material_Maliwan MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_01_Common'</code>
+					<code profiles="default">set GD_GrenadeMods.Material.Material_Maliwan_2_Uncommon MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_02_Uncommon'</code>
+					<code profiles="default">set GD_GrenadeMods.Material.Material_Maliwan_3_Rare MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'</code>
+					<code profiles="default">set GD_GrenadeMods.Material.Material_Maliwan_4_VeryRare MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_04_VeryRare'</code>
+					<code profiles="default">set GD_GrenadeMods.Material.Material_Maliwan_5_Legendary MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'</code>
+					<code profiles="default">set GD_GrenadeMods.Material.Material_Tedior MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_01_Common'</code>
+					<code profiles="default">set GD_GrenadeMods.Material.Material_Tedior_2_Uncommon MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_02_Uncommon'</code>
+					<code profiles="default">set GD_GrenadeMods.Material.Material_Tedior_3_Rare MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'</code>
+					<code profiles="default">set GD_GrenadeMods.Material.Material_Tedior_4_VeryRare MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_04_VeryRare'</code>
+					<code profiles="default">set GD_GrenadeMods.Material.Material_Torgue MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_01_Common'</code>
+					<code profiles="default">set GD_GrenadeMods.Material.Material_Torgue_2_Uncommon MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_02_Uncommon'</code>
+					<code profiles="default">set GD_GrenadeMods.Material.Material_Torgue_3_Rare MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'</code>
+					<code profiles="default">set GD_GrenadeMods.Material.Material_Torgue_4_VeryRare MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_04_VeryRare'</code>
+					<code profiles="default">set GD_GrenadeMods.Material.Material_Torgue_5_Legendary MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'</code>
+					<code profiles="default">set GD_GrenadeMods.Material.Material_Vladof MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_01_Common'</code>
+					<code profiles="default">set GD_GrenadeMods.Material.Material_Vladof_2_Uncommon MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_02_Uncommon'</code>
+					<code profiles="default">set GD_GrenadeMods.Material.Material_Vladof_3_Rare MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'</code>
+					<code profiles="default">set GD_GrenadeMods.Material.Material_Vladof_4_VeryRare MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_04_VeryRare'</code>
+					<code profiles="default">set GD_GrenadeMods.Material.Material_Vladof_5_Legendary MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'</code>
+					<code profiles="default">set GD_Ma_GrenadeMods.Material.Material_Maliwan_3_DataScrubber MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'</code>
+					<code profiles="default">set GD_Ma_GrenadeMods.Material.Material_Maliwan_5_Meganade MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'</code>
+				</category>
+				<category name="Remove APR from Damage">
+					<code profiles="default">set GD_GrenadeMods.Damage.Damage_Grade0 MonetaryValueMod None</code>
+					<code profiles="default">set GD_GrenadeMods.Damage.Damage_Grade1 MonetaryValueMod None</code>
+					<code profiles="default">set GD_GrenadeMods.Damage.Damage_Grade2 MonetaryValueMod None</code>
+					<code profiles="default">set GD_GrenadeMods.Damage.Damage_Grade3 MonetaryValueMod None</code>
+					<code profiles="default">set GD_GrenadeMods.Damage.Damage_Grade4 MonetaryValueMod None</code>
+					<code profiles="default">set GD_GrenadeMods.Damage.Damage_Grade5 MonetaryValueMod None</code>
+					<code profiles="default">set GD_GrenadeMods.Damage.Damage_Grade6 MonetaryValueMod None</code>
+					<code profiles="default">set GD_GrenadeMods.Damage.Damage_Grade7 MonetaryValueMod None</code>
+					<code profiles="default">set GD_GrenadeMods.StatusDamage.StatusDamage_Grade0 MonetaryValueMod None</code>
+					<code profiles="default">set GD_GrenadeMods.StatusDamage.StatusDamage_Grade1 MonetaryValueMod None</code>
+					<code profiles="default">set GD_GrenadeMods.StatusDamage.StatusDamage_Grade2 MonetaryValueMod None</code>
+					<code profiles="default">set GD_GrenadeMods.StatusDamage.StatusDamage_Grade3 MonetaryValueMod None</code>
+					<code profiles="default">set GD_GrenadeMods.StatusDamage.StatusDamage_Grade4 MonetaryValueMod None</code>
+					<code profiles="default">set GD_GrenadeMods.StatusDamage.StatusDamage_Grade5 MonetaryValueMod None</code>
+				</category>
+			</category>
+			<category name="Fix Weapons">
+				<comment># In Vanilla, weapons use two types of MonetaryValueMod modifiers</comment>
+				<comment># APR (Att_Price_Rarity) is common to all items and apply a major modifier to price based on item rarity</comment>
+				<comment># WCM (WeaponCostModifier) is only present on weapon parts and apply a minor adjustment based on better/extra parts (e.g. accessories)</comment>
+				<comment># In theory, APR is used once and only once for every piece of equipment based on its rarity and WCM is used multiple times</comment>
+				<comment># In practice however, there are many inconsistencies in which either are used, leading to bizarre values for some weapons</comment>
+				<comment># This also means that changing the APR will affect some weapons multiple times and others not at all</comment>
+				<comment># Here, we focus APRs on Materials instead of Bodies/Barrels to make the calculation consistent with Relics/Shields and easily moddable</comment>
+				<comment># We also fix a few other minor inconsistencies</comment>
+				<category name="Transfer APR from Body/Barrel to Material">
+					<comment># By default, Common to Very Rare APR mults are managed on the weapon Body, and legendaries have their Barrel increase in price instead</comment>
+					<comment># This is not only inconsistent with the behavior of other items, it also means that legendaries apply APRs twice : From both body (incorrectly) and barrel</comment>
+					<comment># The consistent way of doing things is to manage APR on materials instead, which are always matched to rarity, the same way Shields work</comment>
+					<category name="Remove APR from Bodies & Barrels">
+						<code profiles="default">set gd_cork_weap_assaultrifle.Barrel.AR_Barrel_Dahl_HammerBreaker MonetaryValueMod None</code>
+						<code profiles="default">set gd_cork_weap_assaultrifle.Barrel.AR_Barrel_Dahl_MajorTom MonetaryValueMod None</code>
+						<code profiles="default">set gd_cork_weap_assaultrifle.Barrel.AR_Barrel_Torgue_KerBoom MonetaryValueMod None</code>
+						<code profiles="default">set gd_cork_weap_assaultrifle.Barrel.AR_Barrel_Vladof_IceScream MonetaryValueMod None</code>
+						<code profiles="default">set gd_cork_weap_assaultrifle.Barrel.AR_Barrel_Vladof_OldPainful MonetaryValueMod None</code>
+						<code profiles="default">set gd_cork_weap_assaultrifle.Barrel.AR_Barrel_Vladof_Shredifier MonetaryValueMod None</code>
+						<code profiles="default">set GD_Cork_Weap_Lasers.Body.Laser_Body_Dahl MonetaryValueMod None</code>
+						<code profiles="default">set GD_Cork_Weap_Lasers.Body.Laser_Body_Dahl_2 MonetaryValueMod None</code>
+						<code profiles="default">set GD_Cork_Weap_Lasers.Body.Laser_Body_Dahl_3 MonetaryValueMod None</code>
+						<code profiles="default">set GD_Cork_Weap_Lasers.Body.Laser_Body_Dahl_4 MonetaryValueMod None</code>
+						<code profiles="default">set GD_Cork_Weap_Lasers.Body.Laser_Body_Dahl_4_ZX1 MonetaryValueMod None</code>
+						<code profiles="default">set GD_Cork_Weap_Lasers.Body.Laser_Body_Hyperion MonetaryValueMod None</code>
+						<code profiles="default">set GD_Cork_Weap_Lasers.Body.Laser_Body_Hyperion_2 MonetaryValueMod None</code>
+						<code profiles="default">set GD_Cork_Weap_Lasers.Body.Laser_Body_Hyperion_3 MonetaryValueMod None</code>
+						<code profiles="default">set GD_Cork_Weap_Lasers.Body.Laser_Body_Hyperion_3_Mining MonetaryValueMod None</code>
+						<code profiles="default">set GD_Cork_Weap_Lasers.Body.Laser_Body_Hyperion_4 MonetaryValueMod None</code>
+						<code profiles="default">set GD_Cork_Weap_Lasers.Body.Laser_Body_Maliwan MonetaryValueMod None</code>
+						<code profiles="default">set GD_Cork_Weap_Lasers.Body.Laser_Body_Maliwan_2 MonetaryValueMod None</code>
+						<code profiles="default">set GD_Cork_Weap_Lasers.Body.Laser_Body_Maliwan_3 MonetaryValueMod None</code>
+						<code profiles="default">set GD_Cork_Weap_Lasers.Body.Laser_Body_Maliwan_3_Blizzard MonetaryValueMod None</code>
+						<code profiles="default">set GD_Cork_Weap_Lasers.Body.Laser_Body_Maliwan_4 MonetaryValueMod None</code>
+						<code profiles="default">set GD_Cork_Weap_Lasers.Body.Laser_Body_Maliwan_4_Egun MonetaryValueMod None</code>
+						<code profiles="default">set GD_Cork_Weap_Lasers.Body.Laser_Body_Maliwan_4_Rosie MonetaryValueMod None</code>
+						<code profiles="default">set GD_Cork_Weap_Lasers.Body.Laser_Body_Maliwan_4_SavorySideSaber MonetaryValueMod None</code>
+						<code profiles="default">set GD_Cork_Weap_Lasers.Body.Laser_Body_Tediore MonetaryValueMod None</code>
+						<code profiles="default">set GD_Cork_Weap_Lasers.Body.Laser_Body_Tediore_2 MonetaryValueMod None</code>
+						<code profiles="default">set GD_Cork_Weap_Lasers.Body.Laser_Body_Tediore_3 MonetaryValueMod None</code>
+						<code profiles="default">set GD_Cork_Weap_Lasers.Body.Laser_Body_Tediore_4 MonetaryValueMod None</code>
+						<code profiles="default">set GD_Cork_Weap_Launchers.Barrel.L_Barrel_Maliwan_Creamer MonetaryValueMod None</code>
+						<code profiles="default">set GD_Cork_Weap_Launchers.Barrel.L_Barrel_Tediore_Rocketeer MonetaryValueMod None</code>
+						<code profiles="default">set GD_Cork_Weap_Pistol.Barrel.Pistol_Barrel_Bandit_Zim MonetaryValueMod None</code>
+						<code profiles="default">set GD_Cork_Weap_Pistol.Barrel.Pistol_Barrel_Dahl_Blowfly MonetaryValueMod None</code>
+						<code profiles="default">set GD_Cork_Weap_Pistol.Barrel.Pistol_Barrel_Jakobs_Maggie MonetaryValueMod None</code>
+						<code profiles="default">set GD_Cork_Weap_Pistol.Barrel.Pistol_Barrel_Tediore_Shooterang MonetaryValueMod None</code>
+						<code profiles="default">set GD_Cork_Weap_Pistol.Barrel.Pistol_Barrel_Torgue_88Fragnum MonetaryValueMod None</code>
+						<code profiles="default">set GD_Cork_Weap_Pistol.Body.Pistol_Body_Jakobs_CyberColt MonetaryValueMod None</code>
+						<code profiles="default">set GD_Cork_Weap_Shotgun.Barrel.SG_Barrel_Hyperion_ConferenceCall MonetaryValueMod None</code>
+						<code profiles="default">set GD_Cork_Weap_Shotgun.Barrel.SG_Barrel_Hyperion_Striker MonetaryValueMod None</code>
+						<code profiles="default">set GD_Cork_Weap_Shotgun.Barrel.SG_Barrel_Jakobs_Sledges MonetaryValueMod None</code>
+						<code profiles="default">set GD_Cork_Weap_Shotgun.Barrel.SG_Barrel_Torgue_Flakker MonetaryValueMod None</code>
+						<code profiles="default">set GD_Cork_Weap_Shotgun.Body.SG_Body_Jakobs_3_Moonface MonetaryValueMod None</code>
+						<code profiles="default">set GD_Cork_Weap_Shotgun.Body.SG_Body_Jakobs_Boomacorn MonetaryValueMod None</code>
+						<code profiles="default">set GD_Cork_Weap_Shotgun.Body.SG_Body_Jakobs_TooScoops MonetaryValueMod None</code>
+						<code profiles="default">set GD_Cork_Weap_SMG.Barrel.SMG_Barrel_Dahl_Torrent MonetaryValueMod None</code>
+						<code profiles="default">set GD_Cork_Weap_SMG.Barrel.SMG_Barrel_Hyperion_Bitch MonetaryValueMod None</code>
+						<code profiles="default">set GD_Cork_Weap_SMG.Barrel.SMG_Barrel_Maliwan_HellFire MonetaryValueMod None</code>
+						<code profiles="default">set GD_Cork_Weap_SMG.Body.SMG_Body_Dahl_Torrent MonetaryValueMod None</code>
+						<code profiles="default">set GD_Cork_Weap_SMG.Body.SMG_Body_Hyperion_BlackSnake MonetaryValueMod None</code>
+						<code profiles="default">set GD_Cork_Weap_SniperRifles.Barrel.SR_Barrel_Dahl_Pitchfork MonetaryValueMod None</code>
+						<code profiles="default">set GD_Cork_Weap_SniperRifles.Barrel.SR_Barrel_Hyperion_Invader MonetaryValueMod None</code>
+						<code profiles="default">set GD_Cork_Weap_SniperRifles.Barrel.SR_Barrel_Jakobs_Skullmasher MonetaryValueMod None</code>
+						<code profiles="default">set GD_Cork_Weap_SniperRifles.Barrel.SR_Barrel_Maliwan_Magma MonetaryValueMod None</code>
+						<code profiles="default">set GD_Cork_Weap_SniperRifles.Barrel.SR_Barrel_Vladof_Longnail MonetaryValueMod None</code>
+						<code profiles="default">set GD_Ma_Weapons.Barrel.L_Barrel_Tediore_KanedasLaser MonetaryValueMod None</code>
+						<code profiles="default">set GD_Ma_Weapons.Barrel.SMG_Barrel_Hyperion_CheatCode MonetaryValueMod None</code>
+						<code profiles="default">set GD_Petunia_Weapons.AssaultRifles.AR_Barrel_CryBaby_Default MonetaryValueMod None</code>
+						<code profiles="default">set GD_Petunia_Weapons.AssaultRifles.AR_Barrel_CryBaby_Wiggle MonetaryValueMod None</code>
+						<code profiles="default">set GD_Petunia_Weapons.Launchers.RL_Barrel_Tediore_Menace MonetaryValueMod None</code>
+						<code profiles="default">set GD_Petunia_Weapons.Shotguns.SG_Barrel_Hyperion_PartyLine MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_AssaultRifle.Barrel.AR_Barrel_Torgue_Dahl MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_AssaultRifle.Barrel.AR_Barrel_Torgue_Jakobs MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_AssaultRifle.Body.AR_Body_Bandit MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_AssaultRifle.Body.AR_Body_Bandit_2 MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_AssaultRifle.Body.AR_Body_Bandit_3 MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_AssaultRifle.Body.AR_Body_Bandit_4 MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_AssaultRifle.Body.AR_Body_Dahl MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_AssaultRifle.Body.AR_Body_Dahl_2 MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_AssaultRifle.Body.AR_Body_Dahl_3 MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_AssaultRifle.Body.AR_Body_Dahl_4 MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_AssaultRifle.Body.AR_Body_Gearbox_1 MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_AssaultRifle.Body.AR_Body_Jakobs MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_AssaultRifle.Body.AR_Body_Jakobs_2 MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_AssaultRifle.Body.AR_Body_Jakobs_3 MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_AssaultRifle.Body.AR_Body_Jakobs_4 MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_AssaultRifle.Body.AR_Body_Torgue MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_AssaultRifle.Body.AR_Body_Torgue_2 MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_AssaultRifle.Body.AR_Body_Torgue_3 MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_AssaultRifle.Body.AR_Body_Torgue_4 MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_AssaultRifle.Body.AR_Body_Vladof MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_AssaultRifle.Body.AR_Body_Vladof_2 MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_AssaultRifle.Body.AR_Body_Vladof_3 MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_AssaultRifle.Body.AR_Body_Vladof_4 MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Launchers.Barrel.L_Barrel_Bandit MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Launchers.Barrel.L_Barrel_Maliwan MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Launchers.Barrel.L_Barrel_Tediore MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Launchers.Barrel.L_Barrel_Torgue MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Launchers.Barrel.L_Barrel_Vladof MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Launchers.Body.L_Body_Bandit MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Launchers.Body.L_Body_Bandit_2 MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Launchers.Body.L_Body_Bandit_3 MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Launchers.Body.L_Body_Bandit_4 MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Launchers.Body.L_Body_Maliwan MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Launchers.Body.L_Body_Maliwan_2 MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Launchers.Body.L_Body_Maliwan_3 MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Launchers.Body.L_Body_Maliwan_4 MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Launchers.Body.L_Body_Tediore MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Launchers.Body.L_Body_Tediore_2 MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Launchers.Body.L_Body_Tediore_3 MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Launchers.Body.L_Body_Tediore_4 MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Launchers.Body.L_Body_Torgue MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Launchers.Body.L_Body_Torgue_2 MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Launchers.Body.L_Body_Torgue_3 MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Launchers.Body.L_Body_Torgue_4 MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Launchers.Body.L_Body_Vladof MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Launchers.Body.L_Body_Vladof_2 MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Launchers.Body.L_Body_Vladof_3 MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Launchers.Body.L_Body_Vladof_4 MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Pistol.Barrel.Pistol_Barrel_Hyperion_LogansGun MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Pistol.Body.Pistol_Body_Bandit MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Pistol.Body.Pistol_Body_Bandit_2 MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Pistol.Body.Pistol_Body_Bandit_3 MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Pistol.Body.Pistol_Body_Bandit_4 MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Pistol.Body.Pistol_Body_Dahl MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Pistol.Body.Pistol_Body_Dahl_2 MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Pistol.Body.Pistol_Body_Dahl_3 MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Pistol.Body.Pistol_Body_Dahl_4 MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Pistol.Body.Pistol_Body_Hyperion MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Pistol.Body.Pistol_Body_Hyperion_2 MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Pistol.Body.Pistol_Body_Hyperion_3 MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Pistol.Body.Pistol_Body_Hyperion_4 MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Pistol.Body.Pistol_Body_Jakobs MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Pistol.Body.Pistol_Body_Jakobs_2 MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Pistol.Body.Pistol_Body_Jakobs_3 MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Pistol.Body.Pistol_Body_Jakobs_4 MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Pistol.Body.Pistol_Body_Maliwan MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Pistol.Body.Pistol_Body_Maliwan_2 MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Pistol.Body.Pistol_Body_Maliwan_3 MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Pistol.Body.Pistol_Body_Maliwan_4 MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Pistol.Body.Pistol_Body_Tediore MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Pistol.Body.Pistol_Body_Tediore_2 MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Pistol.Body.Pistol_Body_Tediore_3 MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Pistol.Body.Pistol_Body_Tediore_4 MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Pistol.Body.Pistol_Body_Torgue MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Pistol.Body.Pistol_Body_Torgue_2 MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Pistol.Body.Pistol_Body_Torgue_3 MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Pistol.Body.Pistol_Body_Torgue_4 MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Pistol.Body.Pistol_Body_Vladof MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Pistol.Body.Pistol_Body_Vladof_2 MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Pistol.Body.Pistol_Body_Vladof_3 MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Pistol.Body.Pistol_Body_Vladof_4 MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Shotgun.Body.SG_Body_Bandit MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Shotgun.Body.SG_Body_Bandit_2 MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Shotgun.Body.SG_Body_Bandit_3 MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Shotgun.Body.SG_Body_Bandit_4 MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Shotgun.Body.SG_Body_Hyperion MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Shotgun.Body.SG_Body_Hyperion_2 MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Shotgun.Body.SG_Body_Hyperion_3 MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Shotgun.Body.SG_Body_Hyperion_4 MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Shotgun.Body.SG_Body_Jakobs MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Shotgun.Body.SG_Body_Jakobs_2 MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Shotgun.Body.SG_Body_Jakobs_3 MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Shotgun.Body.SG_Body_Jakobs_4 MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Shotgun.Body.SG_Body_Tediore MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Shotgun.Body.SG_Body_Tediore_2 MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Shotgun.Body.SG_Body_Tediore_3 MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Shotgun.Body.SG_Body_Tediore_4 MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Shotgun.Body.SG_Body_Torgue MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Shotgun.Body.SG_Body_Torgue_2 MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Shotgun.Body.SG_Body_Torgue_3 MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Shotgun.Body.SG_Body_Torgue_4 MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_SMG.Body.SMG_Body_Bandit MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_SMG.Body.SMG_Body_Bandit_VarA MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_SMG.Body.SMG_Body_Bandit_VarB MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_SMG.Body.SMG_Body_Bandit_VarC MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_SMG.Body.SMG_Body_Dahl MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_SMG.Body.SMG_Body_Dahl_VarA MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_SMG.Body.SMG_Body_Dahl_VarB MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_SMG.Body.SMG_Body_Dahl_VarC MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_SMG.Body.SMG_Body_Gearbox_1 MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_SMG.Body.SMG_Body_Hyperion MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_SMG.Body.SMG_Body_Hyperion_VarA MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_SMG.Body.SMG_Body_Hyperion_VarB MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_SMG.Body.SMG_Body_Hyperion_VarC MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_SMG.Body.SMG_Body_Maliwan MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_SMG.Body.SMG_Body_Maliwan_VarA MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_SMG.Body.SMG_Body_Maliwan_VarB MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_SMG.Body.SMG_Body_Maliwan_VarC MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_SMG.Body.SMG_Body_Tediore MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_SMG.Body.SMG_Body_Tediore_VarA MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_SMG.Body.SMG_Body_Tediore_VarB MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_SMG.Body.SMG_Body_Tediore_VarC MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_SniperRifles.Body.SR_Body_Dahl MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_SniperRifles.Body.SR_Body_Dahl_2 MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_SniperRifles.Body.SR_Body_Dahl_3 MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_SniperRifles.Body.SR_Body_Dahl_4 MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_SniperRifles.Body.SR_Body_Gearbox MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_SniperRifles.Body.SR_Body_Hyperion MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_SniperRifles.Body.SR_Body_Hyperion_2 MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_SniperRifles.Body.SR_Body_Hyperion_3 MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_SniperRifles.Body.SR_Body_Hyperion_4 MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_SniperRifles.Body.SR_Body_Jakobs MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_SniperRifles.Body.SR_Body_Jakobs_2 MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_SniperRifles.Body.SR_Body_Jakobs_3 MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_SniperRifles.Body.SR_Body_Jakobs_4 MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_SniperRifles.Body.SR_Body_Maliwan MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_SniperRifles.Body.SR_Body_Maliwan_2 MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_SniperRifles.Body.SR_Body_Maliwan_3 MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_SniperRifles.Body.SR_Body_Maliwan_4 MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_SniperRifles.Body.SR_Body_Vladof MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_SniperRifles.Body.SR_Body_Vladof_2 MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_SniperRifles.Body.SR_Body_Vladof_3 MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_SniperRifles.Body.SR_Body_Vladof_4 MonetaryValueMod None</code>
+					</category>
+					<category name="Add APR to Materials">
+						<code profiles="default">set GD_Cork_Weap_Lasers.ManufacturerMaterials.Mat_Dahl_1 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_01_Common'</code>
+						<code profiles="default">set GD_Cork_Weap_Lasers.ManufacturerMaterials.Mat_Dahl_1_Zap1 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_01_Common'</code>
+						<code profiles="default">set GD_Cork_Weap_Lasers.ManufacturerMaterials.Mat_Dahl_2 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_02_Uncommon'</code>
+						<code profiles="default">set GD_Cork_Weap_Lasers.ManufacturerMaterials.Mat_Dahl_3 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'</code>
+						<code profiles="default">set GD_Cork_Weap_Lasers.ManufacturerMaterials.Mat_Dahl_3_Firestarta MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'</code>
+						<code profiles="default">set GD_Cork_Weap_Lasers.ManufacturerMaterials.Mat_Dahl_3_Zap4 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'</code>
+						<code profiles="default">set GD_Cork_Weap_Lasers.ManufacturerMaterials.Mat_Dahl_4 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_04_VeryRare'</code>
+						<code profiles="default">set GD_Cork_Weap_Lasers.ManufacturerMaterials.Mat_Dahl_5_Legendary MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'</code>
+						<code profiles="default">set GD_Cork_Weap_Lasers.ManufacturerMaterials.Mat_Dahl_5_Legendary_Ricochet MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'</code>
+						<code profiles="default">set GD_Cork_Weap_Lasers.ManufacturerMaterials.Mat_Dahl_5_Legendary_ZX1 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'</code>
+						<code profiles="default">set GD_Cork_Weap_Lasers.ManufacturerMaterials.Mat_Hyperion_1 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_01_Common'</code>
+						<code profiles="default">set GD_Cork_Weap_Lasers.ManufacturerMaterials.Mat_Hyperion_2 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_02_Uncommon'</code>
+						<code profiles="default">set GD_Cork_Weap_Lasers.ManufacturerMaterials.Mat_Hyperion_3 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'</code>
+						<code profiles="default">set GD_Cork_Weap_Lasers.ManufacturerMaterials.Mat_Hyperion_3_Unique_MiningLaser MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'</code>
+						<code profiles="default">set GD_Cork_Weap_Lasers.ManufacturerMaterials.Mat_Hyperion_4 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_04_VeryRare'</code>
+						<code profiles="default">set GD_Cork_Weap_Lasers.ManufacturerMaterials.Mat_Hyperion_5_Legendary MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'</code>
+						<code profiles="default">set GD_Cork_Weap_Lasers.ManufacturerMaterials.Mat_Maliwan_1 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_01_Common'</code>
+						<code profiles="default">set GD_Cork_Weap_Lasers.ManufacturerMaterials.Mat_Maliwan_2 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_02_Uncommon'</code>
+						<code profiles="default">set GD_Cork_Weap_Lasers.ManufacturerMaterials.Mat_Maliwan_3 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'</code>
+						<code profiles="default">set GD_Cork_Weap_Lasers.ManufacturerMaterials.Mat_Maliwan_3_Unique_Blizzard MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'</code>
+						<code profiles="default">set GD_Cork_Weap_Lasers.ManufacturerMaterials.Mat_Maliwan_3_Unique_Egun MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'</code>
+						<code profiles="default">set GD_Cork_Weap_Lasers.ManufacturerMaterials.Mat_Maliwan_3_Unique_SideSaber MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'</code>
+						<code profiles="default">set GD_Cork_Weap_Lasers.ManufacturerMaterials.Mat_Maliwan_3_Unique_Vandergraffen MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'</code>
+						<code profiles="default">set GD_Cork_Weap_Lasers.ManufacturerMaterials.Mat_Maliwan_3_Unique_Vibrapulse MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'</code>
+						<code profiles="default">set GD_Cork_Weap_Lasers.ManufacturerMaterials.Mat_Maliwan_4 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_04_VeryRare'</code>
+						<code profiles="default">set GD_Cork_Weap_Lasers.ManufacturerMaterials.Mat_Maliwan_4_Unique_Rosie MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_04_VeryRare'</code>
+						<code profiles="default">set GD_Cork_Weap_Lasers.ManufacturerMaterials.Mat_Maliwan_5_Legendary MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'</code>
+						<code profiles="default">set GD_Cork_Weap_Lasers.ManufacturerMaterials.Mat_Old_Hyperion_1 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_01_Common'</code>
+						<code profiles="default">set GD_Cork_Weap_Lasers.ManufacturerMaterials.Mat_Old_Hyperion_2 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_02_Uncommon'</code>
+						<code profiles="default">set GD_Cork_Weap_Lasers.ManufacturerMaterials.Mat_Old_Hyperion_3 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'</code>
+						<code profiles="default">set GD_Cork_Weap_Lasers.ManufacturerMaterials.Mat_Old_Hyperion_4 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_04_VeryRare'</code>
+						<code profiles="default">set GD_Cork_Weap_Lasers.ManufacturerMaterials.Mat_Old_Hyperion_5_Legendary MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'</code>
+						<code profiles="default">set GD_Cork_Weap_Lasers.ManufacturerMaterials.Mat_Tediore_1 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_01_Common'</code>
+						<code profiles="default">set GD_Cork_Weap_Lasers.ManufacturerMaterials.Mat_Tediore_2 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_02_Uncommon'</code>
+						<code profiles="default">set GD_Cork_Weap_Lasers.ManufacturerMaterials.Mat_Tediore_3 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'</code>
+						<code profiles="default">set GD_Cork_Weap_Lasers.ManufacturerMaterials.Mat_Tediore_4 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_04_VeryRare'</code>
+						<code profiles="default">set GD_Cork_Weap_Lasers.ManufacturerMaterials.Mat_Tediore_5_Legendary MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'</code>
+						<code profiles="default">set GD_Cork_Weap_Lasers.ManufacturerMaterials.Mat_Tediore_5_Legendary_Tesla MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'</code>
+						<code profiles="default">set GD_Cork_Weap_Launchers.ManufacturerMaterials.Mat_BanditMade_5_Thingy MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'</code>
+						<code profiles="default">set GD_Cork_Weap_Launchers.ManufacturerMaterials.Mat_Maliwan_5_Legendary_Cryophobia MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'</code>
+						<code profiles="default">set GD_Cork_Weap_Launchers.ManufacturerMaterials.Mat_Torgue_3_Creamer MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'</code>
+						<code profiles="default">set GD_Cork_Weap_Launchers.ManufacturerMaterials.Mat_Torgue_3_Rocketeer MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'</code>
+						<code profiles="default">set GD_Cork_Weap_Pistol.ManufacturerMaterials.Mat_Dahl_3_GwensOtherHead MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'</code>
+						<code profiles="default">set GD_Cork_Weap_Pistol.ManufacturerMaterials.Mat_Dahl_5_Legendary_Blowfly MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'</code>
+						<code profiles="default">set GD_Cork_Weap_Pistol.ManufacturerMaterials.Mat_Hyperion_3_Fibber MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'</code>
+						<code profiles="default">set GD_Cork_Weap_Pistol.ManufacturerMaterials.Mat_Hyperion_3_Globber MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'</code>
+						<code profiles="default">set GD_Cork_Weap_Pistol.ManufacturerMaterials.Mat_Hyperion_3_LadyFist MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'</code>
+						<code profiles="default">set GD_Cork_Weap_Pistol.ManufacturerMaterials.Mat_Jakobs_3_Smasher MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'</code>
+						<code profiles="default">set GD_Cork_Weap_Pistol.ManufacturerMaterials.Mat_Jakobs_4_CyberColt MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_04_VeryRare'</code>
+						<code profiles="default">set GD_Cork_Weap_Pistol.ManufacturerMaterials.Mat_Maliwan_3_Moxxis_Probe MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'</code>
+						<code profiles="default">set GD_Cork_Weap_Pistol.ManufacturerMaterials.Mat_Scav_5_Legendary_Zim MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'</code>
+						<code profiles="default">set GD_Cork_Weap_Pistol.ManufacturerMaterials.Mat_Starter_Dahl_1 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_01_Common'</code>
+						<code profiles="default">set GD_Cork_Weap_Pistol.ManufacturerMaterials.Mat_Tediore_5_Legendary_Shooterang MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'</code>
+						<code profiles="default">set GD_Cork_Weap_SMG.ManufacturerMaterials.Mat_Bandit_3_MeatGrinder MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'</code>
+						<code profiles="default">set GD_Cork_Weap_SMG.ManufacturerMaterials.Mat_Dahl_5_Legendary_Torrent MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'</code>
+						<code profiles="default">set GD_Cork_Weap_SMG.ManufacturerMaterials.Mat_Maliwan_3_BadTouch MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'</code>
+						<code profiles="default">set GD_Cork_Weap_SMG.ManufacturerMaterials.Mat_Maliwan_3_GoodTouch MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'</code>
+						<code profiles="default">set GD_Cork_Weap_SMG.ManufacturerMaterials.Mat_Old_Hyperion_3_BlackSnake MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'</code>
+						<code profiles="default">set GD_Cork_Weap_Shotgun.ManufacturerMaterials.Mat_Hyperion_3_HeartBreaker MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'</code>
+						<code profiles="default">set GD_Cork_Weap_Shotgun.ManufacturerMaterials.Mat_Jakobs_3_Boomacorn MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'</code>
+						<code profiles="default">set GD_Cork_Weap_Shotgun.ManufacturerMaterials.Mat_Jakobs_3_Moonface MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'</code>
+						<code profiles="default">set GD_Cork_Weap_Shotgun.ManufacturerMaterials.Mat_Jakobs_3_TooScoopz MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'</code>
+						<code profiles="default">set GD_Cork_Weap_Shotgun.ManufacturerMaterials.Mat_Tediore_3_Octo MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'</code>
+						<code profiles="default">set GD_Cork_Weap_Shotgun.ManufacturerMaterials.Mat_Torgue_3_JackOCannon MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'</code>
+						<code profiles="default">set GD_Cork_Weap_Shotgun.ManufacturerMaterials.Mat_Torgue_3_Torgemada MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'</code>
+						<code profiles="default">set GD_Cork_Weap_Shotgun.ManufacturerMaterials.Mat_Torgue_3_Wombat MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'</code>
+						<code profiles="default">set GD_Cork_Weap_SniperRifles.ManufacturerMaterials.Material_Dahl_3_WetWeek MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'</code>
+						<code profiles="default">set GD_Cork_Weap_SniperRifles.ManufacturerMaterials.Material_Jakobs_3_Razorback MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'</code>
+						<code profiles="default">set GD_Cork_Weap_SniperRifles.ManufacturerMaterials.Material_Maliwan_3_ChereAmie MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'</code>
+						<code profiles="default">set GD_Cork_Weap_SniperRifles.ManufacturerMaterials.Material_Vladof_3_TheMachine MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'</code>
+						<code profiles="default">set GD_Cork_Weap_SniperRifles.ManufacturerMaterials.Material_Vladof_5_Legendary_Longnail MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'</code>
+						<code profiles="default">set GD_Cypressure_Weapons.ManufacturerMaterials.AssaultRifle.Mat_BanditMade_BossNova MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'</code>
+						<code profiles="default">set GD_Cypressure_Weapons.ManufacturerMaterials.SMG.Mat_BanditMade_FastTalker MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'</code>
+						<code profiles="default">set GD_Cypressure_Weapons.ManufacturerMaterials.Shotgun.Mat_Hyperion_3_CompanyMan MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'</code>
+						<code profiles="default">set GD_Cypressure_Weapons.ManufacturerMaterials.Shotgun.Mat_Torgue_3_Landscaper2 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'</code>
+						<code profiles="default">set GD_Ma_Weapons.Materials.Mat_AR_Bandit_5_Fusilade MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'</code>
+						<code profiles="default">set GD_Ma_Weapons.Materials.Mat_AR_Bandit_6_Glitch MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'</code>
+						<code profiles="default">set GD_Ma_Weapons.Materials.Mat_AR_Dahl_6_Glitch MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'</code>
+						<code profiles="default">set GD_Ma_Weapons.Materials.Mat_AR_Jakobs_6_Glitch MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'</code>
+						<code profiles="default">set GD_Ma_Weapons.Materials.Mat_AR_Torgue_6_Glitch MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'</code>
+						<code profiles="default">set GD_Ma_Weapons.Materials.Mat_AR_Vladof_6_Glitch MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'</code>
+						<code profiles="default">set GD_Ma_Weapons.Materials.Mat_Hyperion_5_Legendary_CheatCode MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'</code>
+						<code profiles="default">set GD_Ma_Weapons.Materials.Mat_Jakobs_5_Legendary_Flayer MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'</code>
+						<code profiles="default">set GD_Ma_Weapons.Materials.Mat_Laser_Dahl_6_Glitch MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'</code>
+						<code profiles="default">set GD_Ma_Weapons.Materials.Mat_Laser_Dahl_6_Glitch_HeartfullSplodger MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'</code>
+						<code profiles="default">set GD_Ma_Weapons.Materials.Mat_Laser_Hyperion_5_LongestYard MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'</code>
+						<code profiles="default">set GD_Ma_Weapons.Materials.Mat_Laser_Hyperion_6_Glitch MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'</code>
+						<code profiles="default">set GD_Ma_Weapons.Materials.Mat_Laser_Maliwan_3_Enlightenment MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'</code>
+						<code profiles="default">set GD_Ma_Weapons.Materials.Mat_Laser_Maliwan_3_Minac MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'</code>
+						<code profiles="default">set GD_Ma_Weapons.Materials.Mat_Laser_Maliwan_5_FusionBeam MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'</code>
+						<code profiles="default">set GD_Ma_Weapons.Materials.Mat_Laser_Maliwan_5_Thunderfire MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'</code>
+						<code profiles="default">set GD_Ma_Weapons.Materials.Mat_Laser_Maliwan_6_Glitch MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'</code>
+						<code profiles="default">set GD_Ma_Weapons.Materials.Mat_Laser_Tediore_6_Glitch MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'</code>
+						<code profiles="default">set GD_Ma_Weapons.Materials.Mat_Pistol_Bandit_3_PartyPopper MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'</code>
+						<code profiles="default">set GD_Ma_Weapons.Materials.Mat_Pistol_Bandit_6_Glitch MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'</code>
+						<code profiles="default">set GD_Ma_Weapons.Materials.Mat_Pistol_Dahl_6_Glitch MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'</code>
+						<code profiles="default">set GD_Ma_Weapons.Materials.Mat_Pistol_Hyperion_6_Glitch MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'</code>
+						<code profiles="default">set GD_Ma_Weapons.Materials.Mat_Pistol_Jakobs_5_LuckCannon MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'</code>
+						<code profiles="default">set GD_Ma_Weapons.Materials.Mat_Pistol_Jakobs_6_Glitch MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'</code>
+						<code profiles="default">set GD_Ma_Weapons.Materials.Mat_Pistol_Maliwan_3_HardReboot MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'</code>
+						<code profiles="default">set GD_Ma_Weapons.Materials.Mat_Pistol_Maliwan_6_Glitch MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'</code>
+						<code profiles="default">set GD_Ma_Weapons.Materials.Mat_Pistol_Old_Hyperion_6_Glitch MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'</code>
+						<code profiles="default">set GD_Ma_Weapons.Materials.Mat_Pistol_Tediore_6_Glitch MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'</code>
+						<code profiles="default">set GD_Ma_Weapons.Materials.Mat_Pistol_Torgue_6_Glitch MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'</code>
+						<code profiles="default">set GD_Ma_Weapons.Materials.Mat_Pistol_Vladof_6_Glitch MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'</code>
+						<code profiles="default">set GD_Ma_Weapons.Materials.Mat_RL_Bandit_6_Glitch MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'</code>
+						<code profiles="default">set GD_Ma_Weapons.Materials.Mat_RL_Maliwan_6_Glitch MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'</code>
+						<code profiles="default">set GD_Ma_Weapons.Materials.Mat_RL_Tediore_5_KanedasLaser MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'</code>
+						<code profiles="default">set GD_Ma_Weapons.Materials.Mat_RL_Tediore_6_Glitch MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'</code>
+						<code profiles="default">set GD_Ma_Weapons.Materials.Mat_RL_Torgue_6_Glitch MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'</code>
+						<code profiles="default">set GD_Ma_Weapons.Materials.Mat_RL_Vladof_6_Glitch MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'</code>
+						<code profiles="default">set GD_Ma_Weapons.Materials.Mat_SG_Bandit_6_Glitch MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'</code>
+						<code profiles="default">set GD_Ma_Weapons.Materials.Mat_SG_Hyperion_6_Glitch MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'</code>
+						<code profiles="default">set GD_Ma_Weapons.Materials.Mat_SG_Jakobs_6_Glitch MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'</code>
+						<code profiles="default">set GD_Ma_Weapons.Materials.Mat_SG_Old_Hyperion_6_Glitch MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'</code>
+						<code profiles="default">set GD_Ma_Weapons.Materials.Mat_SG_Tediore_6_Glitch MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'</code>
+						<code profiles="default">set GD_Ma_Weapons.Materials.Mat_SG_Torgue_6_Glitch MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'</code>
+						<code profiles="default">set GD_Ma_Weapons.Materials.Mat_SMG_Bandit_6_Glitch MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'</code>
+						<code profiles="default">set GD_Ma_Weapons.Materials.Mat_SMG_Bandit_6_Glitch_CutieKiller MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'</code>
+						<code profiles="default">set GD_Ma_Weapons.Materials.Mat_SMG_Dahl_6_Glitch MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'</code>
+						<code profiles="default">set GD_Ma_Weapons.Materials.Mat_SMG_Hyperion_6_Glitch MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'</code>
+						<code profiles="default">set GD_Ma_Weapons.Materials.Mat_SMG_Maliwan_6_Glitch MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'</code>
+						<code profiles="default">set GD_Ma_Weapons.Materials.Mat_SMG_Old_Hyperion_6_Glitch MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'</code>
+						<code profiles="default">set GD_Ma_Weapons.Materials.Mat_SMG_Tediore_6_Glitch MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'</code>
+						<code profiles="default">set GD_Ma_Weapons.Materials.Mat_Sniper_Dahl_6_Glitch MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'</code>
+						<code profiles="default">set GD_Ma_Weapons.Materials.Mat_Sniper_Hyperion_6_Glitch MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'</code>
+						<code profiles="default">set GD_Ma_Weapons.Materials.Mat_Sniper_Jakobs_6_Glitch MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'</code>
+						<code profiles="default">set GD_Ma_Weapons.Materials.Mat_Sniper_Maliwan_6_Glitch MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'</code>
+						<code profiles="default">set GD_Ma_Weapons.Materials.Mat_Sniper_Old_Hyperion_5_OmniCannon MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'</code>
+						<code profiles="default">set GD_Ma_Weapons.Materials.Mat_Sniper_Vladof_6_Glitch MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'</code>
+						<code profiles="default">set GD_Ma_Weapons.Materials.Mat_Tediore_5_LaserDisker MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'</code>
+						<code profiles="default">set GD_Ma_Weapons.Materials.Mat_Vladof_5_Legendary_Expander MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'</code>
+						<code profiles="default">set GD_Petunia_Weapons.ManufacturerMaterials.AssaultRifle.Mat_Bandit_3_CryBaby MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'</code>
+						<code profiles="default">set GD_Petunia_Weapons.ManufacturerMaterials.Launcher.Mat_Vladof_3_Menace MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'</code>
+						<code profiles="default">set GD_Petunia_Weapons.ManufacturerMaterials.Mat_Tediore_3_PartyLine MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'</code>
+						<code profiles="default">set GD_Petunia_Weapons.ManufacturerMaterials.Pistol.Mat_Hyperion_3_T4sr MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'</code>
+						<code profiles="default">set GD_Petunia_Weapons.ManufacturerMaterials.SMG.Mat_Tediore_3_Boxxy MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'</code>
+						<code profiles="default">set GD_Petunia_Weapons.ManufacturerMaterials.sniper.Mat_Jakobs_3_Plunkett MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'</code>
+						<code profiles="default">set GD_Weap_AssaultRifle.ManufacturerMaterials.Mat_BanditMade_1 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_01_Common'</code>
+						<code profiles="default">set GD_Weap_AssaultRifle.ManufacturerMaterials.Mat_BanditMade_2 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_02_Uncommon'</code>
+						<code profiles="default">set GD_Weap_AssaultRifle.ManufacturerMaterials.Mat_BanditMade_3 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'</code>
+						<code profiles="default">set GD_Weap_AssaultRifle.ManufacturerMaterials.Mat_BanditMade_4 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_04_VeryRare'</code>
+						<code profiles="default">set GD_Weap_AssaultRifle.ManufacturerMaterials.Mat_Dahl_1 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_01_Common'</code>
+						<code profiles="default">set GD_Weap_AssaultRifle.ManufacturerMaterials.Mat_Dahl_2 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_02_Uncommon'</code>
+						<code profiles="default">set GD_Weap_AssaultRifle.ManufacturerMaterials.Mat_Dahl_3 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'</code>
+						<code profiles="default">set GD_Weap_AssaultRifle.ManufacturerMaterials.Mat_Dahl_4 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_04_VeryRare'</code>
+						<code profiles="default">set GD_Weap_AssaultRifle.ManufacturerMaterials.Mat_Gearbox_1 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_01_Common'</code>
+						<code profiles="default">set GD_Weap_AssaultRifle.ManufacturerMaterials.Mat_Jakobs_1 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_01_Common'</code>
+						<code profiles="default">set GD_Weap_AssaultRifle.ManufacturerMaterials.Mat_Jakobs_2 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_02_Uncommon'</code>
+						<code profiles="default">set GD_Weap_AssaultRifle.ManufacturerMaterials.Mat_Jakobs_3 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'</code>
+						<code profiles="default">set GD_Weap_AssaultRifle.ManufacturerMaterials.Mat_Jakobs_4 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_04_VeryRare'</code>
+						<code profiles="default">set GD_Weap_AssaultRifle.ManufacturerMaterials.Mat_Jakobs_5_Legendary MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'</code>
+						<code profiles="default">set GD_Weap_AssaultRifle.ManufacturerMaterials.Mat_Torgue_1 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_01_Common'</code>
+						<code profiles="default">set GD_Weap_AssaultRifle.ManufacturerMaterials.Mat_Torgue_2 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_02_Uncommon'</code>
+						<code profiles="default">set GD_Weap_AssaultRifle.ManufacturerMaterials.Mat_Torgue_3 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'</code>
+						<code profiles="default">set GD_Weap_AssaultRifle.ManufacturerMaterials.Mat_Torgue_4 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_04_VeryRare'</code>
+						<code profiles="default">set GD_Weap_AssaultRifle.ManufacturerMaterials.Mat_Torgue_5_Legendary MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'</code>
+						<code profiles="default">set GD_Weap_AssaultRifle.ManufacturerMaterials.Mat_Vladof_1 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_01_Common'</code>
+						<code profiles="default">set GD_Weap_AssaultRifle.ManufacturerMaterials.Mat_Vladof_2 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_02_Uncommon'</code>
+						<code profiles="default">set GD_Weap_AssaultRifle.ManufacturerMaterials.Mat_Vladof_3 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'</code>
+						<code profiles="default">set GD_Weap_AssaultRifle.ManufacturerMaterials.Mat_Vladof_4 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_04_VeryRare'</code>
+						<code profiles="default">set GD_Weap_Launchers.ManufacturerMaterials.Mat_BanditMade_1 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_01_Common'</code>
+						<code profiles="default">set GD_Weap_Launchers.ManufacturerMaterials.Mat_BanditMade_2 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_02_Uncommon'</code>
+						<code profiles="default">set GD_Weap_Launchers.ManufacturerMaterials.Mat_BanditMade_3 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'</code>
+						<code profiles="default">set GD_Weap_Launchers.ManufacturerMaterials.Mat_BanditMade_4 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_04_VeryRare'</code>
+						<code profiles="default">set GD_Weap_Launchers.ManufacturerMaterials.Mat_BanditMade_5_Legendary MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'</code>
+						<code profiles="default">set GD_Weap_Launchers.ManufacturerMaterials.Mat_Maliwan_1 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_01_Common'</code>
+						<code profiles="default">set GD_Weap_Launchers.ManufacturerMaterials.Mat_Maliwan_2 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_02_Uncommon'</code>
+						<code profiles="default">set GD_Weap_Launchers.ManufacturerMaterials.Mat_Maliwan_3 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'</code>
+						<code profiles="default">set GD_Weap_Launchers.ManufacturerMaterials.Mat_Maliwan_4 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_04_VeryRare'</code>
+						<code profiles="default">set GD_Weap_Launchers.ManufacturerMaterials.Mat_Tediore_1 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_01_Common'</code>
+						<code profiles="default">set GD_Weap_Launchers.ManufacturerMaterials.Mat_Tediore_2 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_02_Uncommon'</code>
+						<code profiles="default">set GD_Weap_Launchers.ManufacturerMaterials.Mat_Tediore_3 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'</code>
+						<code profiles="default">set GD_Weap_Launchers.ManufacturerMaterials.Mat_Tediore_4 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_04_VeryRare'</code>
+						<code profiles="default">set GD_Weap_Launchers.ManufacturerMaterials.Mat_Torgue_1 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_01_Common'</code>
+						<code profiles="default">set GD_Weap_Launchers.ManufacturerMaterials.Mat_Torgue_2 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_02_Uncommon'</code>
+						<code profiles="default">set GD_Weap_Launchers.ManufacturerMaterials.Mat_Torgue_3 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'</code>
+						<code profiles="default">set GD_Weap_Launchers.ManufacturerMaterials.Mat_Torgue_4 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_04_VeryRare'</code>
+						<code profiles="default">set GD_Weap_Launchers.ManufacturerMaterials.Mat_Torgue_5_Legendary MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'</code>
+						<code profiles="default">set GD_Weap_Launchers.ManufacturerMaterials.Mat_Vladof_1 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_01_Common'</code>
+						<code profiles="default">set GD_Weap_Launchers.ManufacturerMaterials.Mat_Vladof_2 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_02_Uncommon'</code>
+						<code profiles="default">set GD_Weap_Launchers.ManufacturerMaterials.Mat_Vladof_3 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'</code>
+						<code profiles="default">set GD_Weap_Launchers.ManufacturerMaterials.Mat_Vladof_4 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_04_VeryRare'</code>
+						<code profiles="default">set GD_Weap_Launchers.ManufacturerMaterials.Mat_Vladof_5_Legendary MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'</code>
+						<code profiles="default">set GD_Weap_Pistol.ManufacturerMaterials.Mat_Bandit_1 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_01_Common'</code>
+						<code profiles="default">set GD_Weap_Pistol.ManufacturerMaterials.Mat_Bandit_2 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_02_Uncommon'</code>
+						<code profiles="default">set GD_Weap_Pistol.ManufacturerMaterials.Mat_Bandit_3 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'</code>
+						<code profiles="default">set GD_Weap_Pistol.ManufacturerMaterials.Mat_Bandit_4 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_04_VeryRare'</code>
+						<code profiles="default">set GD_Weap_Pistol.ManufacturerMaterials.Mat_Dahl_1 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_01_Common'</code>
+						<code profiles="default">set GD_Weap_Pistol.ManufacturerMaterials.Mat_Dahl_1_Starter MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_01_Common'</code>
+						<code profiles="default">set GD_Weap_Pistol.ManufacturerMaterials.Mat_Dahl_2 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_02_Uncommon'</code>
+						<code profiles="default">set GD_Weap_Pistol.ManufacturerMaterials.Mat_Dahl_3 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'</code>
+						<code profiles="default">set GD_Weap_Pistol.ManufacturerMaterials.Mat_Dahl_4 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_04_VeryRare'</code>
+						<code profiles="default">set GD_Weap_Pistol.ManufacturerMaterials.Mat_Hyperion_1 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_01_Common'</code>
+						<code profiles="default">set GD_Weap_Pistol.ManufacturerMaterials.Mat_Hyperion_2 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_02_Uncommon'</code>
+						<code profiles="default">set GD_Weap_Pistol.ManufacturerMaterials.Mat_Hyperion_3 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'</code>
+						<code profiles="default">set GD_Weap_Pistol.ManufacturerMaterials.Mat_Hyperion_4 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_04_VeryRare'</code>
+						<code profiles="default">set GD_Weap_Pistol.ManufacturerMaterials.Mat_Hyperion_5_Legendary MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'</code>
+						<code profiles="default">set GD_Weap_Pistol.ManufacturerMaterials.Mat_Jakobs_1 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_01_Common'</code>
+						<code profiles="default">set GD_Weap_Pistol.ManufacturerMaterials.Mat_Jakobs_2 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_02_Uncommon'</code>
+						<code profiles="default">set GD_Weap_Pistol.ManufacturerMaterials.Mat_Jakobs_3 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'</code>
+						<code profiles="default">set GD_Weap_Pistol.ManufacturerMaterials.Mat_Jakobs_4 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_04_VeryRare'</code>
+						<code profiles="default">set GD_Weap_Pistol.ManufacturerMaterials.Mat_Jakobs_5_Legendary MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'</code>
+						<code profiles="default">set GD_Weap_Pistol.ManufacturerMaterials.Mat_Maliwan_1 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_01_Common'</code>
+						<code profiles="default">set GD_Weap_Pistol.ManufacturerMaterials.Mat_Maliwan_2 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_02_Uncommon'</code>
+						<code profiles="default">set GD_Weap_Pistol.ManufacturerMaterials.Mat_Maliwan_3 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'</code>
+						<code profiles="default">set GD_Weap_Pistol.ManufacturerMaterials.Mat_Maliwan_4 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_04_VeryRare'</code>
+						<code profiles="default">set GD_Weap_Pistol.ManufacturerMaterials.Mat_Old_Hyperion_1 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_01_Common'</code>
+						<code profiles="default">set GD_Weap_Pistol.ManufacturerMaterials.Mat_Old_Hyperion_2 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_02_Uncommon'</code>
+						<code profiles="default">set GD_Weap_Pistol.ManufacturerMaterials.Mat_Old_Hyperion_3 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'</code>
+						<code profiles="default">set GD_Weap_Pistol.ManufacturerMaterials.Mat_Old_Hyperion_4 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_04_VeryRare'</code>
+						<code profiles="default">set GD_Weap_Pistol.ManufacturerMaterials.Mat_Tediore_1 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_01_Common'</code>
+						<code profiles="default">set GD_Weap_Pistol.ManufacturerMaterials.Mat_Tediore_2 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_02_Uncommon'</code>
+						<code profiles="default">set GD_Weap_Pistol.ManufacturerMaterials.Mat_Tediore_3 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'</code>
+						<code profiles="default">set GD_Weap_Pistol.ManufacturerMaterials.Mat_Tediore_4 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_04_VeryRare'</code>
+						<code profiles="default">set GD_Weap_Pistol.ManufacturerMaterials.Mat_Torgue_1 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_01_Common'</code>
+						<code profiles="default">set GD_Weap_Pistol.ManufacturerMaterials.Mat_Torgue_2 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_02_Uncommon'</code>
+						<code profiles="default">set GD_Weap_Pistol.ManufacturerMaterials.Mat_Torgue_3 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'</code>
+						<code profiles="default">set GD_Weap_Pistol.ManufacturerMaterials.Mat_Torgue_4 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_04_VeryRare'</code>
+						<code profiles="default">set GD_Weap_Pistol.ManufacturerMaterials.Mat_Torgue_5_Legendary MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'</code>
+						<code profiles="default">set GD_Weap_Pistol.ManufacturerMaterials.Mat_Vladof_1 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_01_Common'</code>
+						<code profiles="default">set GD_Weap_Pistol.ManufacturerMaterials.Mat_Vladof_2 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_02_Uncommon'</code>
+						<code profiles="default">set GD_Weap_Pistol.ManufacturerMaterials.Mat_Vladof_3 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'</code>
+						<code profiles="default">set GD_Weap_Pistol.ManufacturerMaterials.Mat_Vladof_4 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_04_VeryRare'</code>
+						<code profiles="default">set GD_Weap_SMG.ManufacturerMaterials.Mat_Bandit_1 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_01_Common'</code>
+						<code profiles="default">set GD_Weap_SMG.ManufacturerMaterials.Mat_Bandit_2 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_02_Uncommon'</code>
+						<code profiles="default">set GD_Weap_SMG.ManufacturerMaterials.Mat_Bandit_3 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'</code>
+						<code profiles="default">set GD_Weap_SMG.ManufacturerMaterials.Mat_Bandit_4 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_04_VeryRare'</code>
+						<code profiles="default">set GD_Weap_SMG.ManufacturerMaterials.Mat_Dahl_1 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_01_Common'</code>
+						<code profiles="default">set GD_Weap_SMG.ManufacturerMaterials.Mat_Dahl_2 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_02_Uncommon'</code>
+						<code profiles="default">set GD_Weap_SMG.ManufacturerMaterials.Mat_Dahl_3 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'</code>
+						<code profiles="default">set GD_Weap_SMG.ManufacturerMaterials.Mat_Dahl_3_Fridgia MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'</code>
+						<code profiles="default">set GD_Weap_SMG.ManufacturerMaterials.Mat_Dahl_4 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_04_VeryRare'</code>
+						<code profiles="default">set GD_Weap_SMG.ManufacturerMaterials.Mat_Gearbox_1 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_01_Common'</code>
+						<code profiles="default">set GD_Weap_SMG.ManufacturerMaterials.Mat_Hyperion_1 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_01_Common'</code>
+						<code profiles="default">set GD_Weap_SMG.ManufacturerMaterials.Mat_Hyperion_2 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_02_Uncommon'</code>
+						<code profiles="default">set GD_Weap_SMG.ManufacturerMaterials.Mat_Hyperion_3 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'</code>
+						<code profiles="default">set GD_Weap_SMG.ManufacturerMaterials.Mat_Hyperion_4 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_04_VeryRare'</code>
+						<code profiles="default">set GD_Weap_SMG.ManufacturerMaterials.Mat_Hyperion_5_Legendary MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'</code>
+						<code profiles="default">set GD_Weap_SMG.ManufacturerMaterials.Mat_Maliwan_1 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_01_Common'</code>
+						<code profiles="default">set GD_Weap_SMG.ManufacturerMaterials.Mat_Maliwan_2 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_02_Uncommon'</code>
+						<code profiles="default">set GD_Weap_SMG.ManufacturerMaterials.Mat_Maliwan_3 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'</code>
+						<code profiles="default">set GD_Weap_SMG.ManufacturerMaterials.Mat_Maliwan_3_Frostfire MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'</code>
+						<code profiles="default">set GD_Weap_SMG.ManufacturerMaterials.Mat_Maliwan_4 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_04_VeryRare'</code>
+						<code profiles="default">set GD_Weap_SMG.ManufacturerMaterials.Mat_Maliwan_5_Legendary MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'</code>
+						<code profiles="default">set GD_Weap_SMG.ManufacturerMaterials.Mat_Old_Hyperion_1 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_01_Common'</code>
+						<code profiles="default">set GD_Weap_SMG.ManufacturerMaterials.Mat_Old_Hyperion_2 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_02_Uncommon'</code>
+						<code profiles="default">set GD_Weap_SMG.ManufacturerMaterials.Mat_Old_Hyperion_3 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'</code>
+						<code profiles="default">set GD_Weap_SMG.ManufacturerMaterials.Mat_Old_Hyperion_4 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_04_VeryRare'</code>
+						<code profiles="default">set GD_Weap_SMG.ManufacturerMaterials.Mat_Tedior_1 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_01_Common'</code>
+						<code profiles="default">set GD_Weap_SMG.ManufacturerMaterials.Mat_Tedior_2 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_02_Uncommon'</code>
+						<code profiles="default">set GD_Weap_SMG.ManufacturerMaterials.Mat_Tedior_3 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'</code>
+						<code profiles="default">set GD_Weap_SMG.ManufacturerMaterials.Mat_Tedior_4 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_04_VeryRare'</code>
+						<code profiles="default">set GD_Weap_SMG.ManufacturerMaterials.Mat_Tedior_5_Legendary MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'</code>
+						<code profiles="default">set GD_Weap_Shotgun.ManufacturerMaterials.Mat_Bandit_1 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_01_Common'</code>
+						<code profiles="default">set GD_Weap_Shotgun.ManufacturerMaterials.Mat_Bandit_2 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_02_Uncommon'</code>
+						<code profiles="default">set GD_Weap_Shotgun.ManufacturerMaterials.Mat_Bandit_3 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'</code>
+						<code profiles="default">set GD_Weap_Shotgun.ManufacturerMaterials.Mat_Bandit_4 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_04_VeryRare'</code>
+						<code profiles="default">set GD_Weap_Shotgun.ManufacturerMaterials.Mat_Bandit_5_Legendary MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'</code>
+						<code profiles="default">set GD_Weap_Shotgun.ManufacturerMaterials.Mat_Hyperion_1 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_01_Common'</code>
+						<code profiles="default">set GD_Weap_Shotgun.ManufacturerMaterials.Mat_Hyperion_2 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_02_Uncommon'</code>
+						<code profiles="default">set GD_Weap_Shotgun.ManufacturerMaterials.Mat_Hyperion_3 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'</code>
+						<code profiles="default">set GD_Weap_Shotgun.ManufacturerMaterials.Mat_Hyperion_4 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_04_VeryRare'</code>
+						<code profiles="default">set GD_Weap_Shotgun.ManufacturerMaterials.Mat_Hyperion_5_Legendary MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'</code>
+						<code profiles="default">set GD_Weap_Shotgun.ManufacturerMaterials.Mat_Jakobs_1 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_01_Common'</code>
+						<code profiles="default">set GD_Weap_Shotgun.ManufacturerMaterials.Mat_Jakobs_2 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_02_Uncommon'</code>
+						<code profiles="default">set GD_Weap_Shotgun.ManufacturerMaterials.Mat_Jakobs_3 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'</code>
+						<code profiles="default">set GD_Weap_Shotgun.ManufacturerMaterials.Mat_Jakobs_4 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_04_VeryRare'</code>
+						<code profiles="default">set GD_Weap_Shotgun.ManufacturerMaterials.Mat_Jakobs_5_Legendary MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'</code>
+						<code profiles="default">set GD_Weap_Shotgun.ManufacturerMaterials.Mat_Old_Hyperion_1 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_01_Common'</code>
+						<code profiles="default">set GD_Weap_Shotgun.ManufacturerMaterials.Mat_Old_Hyperion_2 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_02_Uncommon'</code>
+						<code profiles="default">set GD_Weap_Shotgun.ManufacturerMaterials.Mat_Old_Hyperion_3 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'</code>
+						<code profiles="default">set GD_Weap_Shotgun.ManufacturerMaterials.Mat_Old_Hyperion_4 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_04_VeryRare'</code>
+						<code profiles="default">set GD_Weap_Shotgun.ManufacturerMaterials.Mat_Tediore_1 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_01_Common'</code>
+						<code profiles="default">set GD_Weap_Shotgun.ManufacturerMaterials.Mat_Tediore_2 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_02_Uncommon'</code>
+						<code profiles="default">set GD_Weap_Shotgun.ManufacturerMaterials.Mat_Tediore_3 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'</code>
+						<code profiles="default">set GD_Weap_Shotgun.ManufacturerMaterials.Mat_Tediore_4 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_04_VeryRare'</code>
+						<code profiles="default">set GD_Weap_Shotgun.ManufacturerMaterials.Mat_Torgue_1 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_01_Common'</code>
+						<code profiles="default">set GD_Weap_Shotgun.ManufacturerMaterials.Mat_Torgue_2 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_02_Uncommon'</code>
+						<code profiles="default">set GD_Weap_Shotgun.ManufacturerMaterials.Mat_Torgue_3 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'</code>
+						<code profiles="default">set GD_Weap_Shotgun.ManufacturerMaterials.Mat_Torgue_4 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_04_VeryRare'</code>
+						<code profiles="default">set GD_Weap_Shotgun.ManufacturerMaterials.Mat_Torgue_5_Legendary MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'</code>
+						<code profiles="default">set GD_Weap_SniperRifles.ManufacturerMaterials.Mat_Gearbox_1 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_01_Common'</code>
+						<code profiles="default">set GD_Weap_SniperRifles.ManufacturerMaterials.Material_Dahl_1 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_01_Common'</code>
+						<code profiles="default">set GD_Weap_SniperRifles.ManufacturerMaterials.Material_Dahl_2 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_02_Uncommon'</code>
+						<code profiles="default">set GD_Weap_SniperRifles.ManufacturerMaterials.Material_Dahl_3 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'</code>
+						<code profiles="default">set GD_Weap_SniperRifles.ManufacturerMaterials.Material_Dahl_4 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_04_VeryRare'</code>
+						<code profiles="default">set GD_Weap_SniperRifles.ManufacturerMaterials.Material_Dahl_5_Legendary MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'</code>
+						<code profiles="default">set GD_Weap_SniperRifles.ManufacturerMaterials.Material_Hyperion_1 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_01_Common'</code>
+						<code profiles="default">set GD_Weap_SniperRifles.ManufacturerMaterials.Material_Hyperion_2 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_02_Uncommon'</code>
+						<code profiles="default">set GD_Weap_SniperRifles.ManufacturerMaterials.Material_Hyperion_3 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'</code>
+						<code profiles="default">set GD_Weap_SniperRifles.ManufacturerMaterials.Material_Hyperion_3_FremingtonsEdge MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'</code>
+						<code profiles="default">set GD_Weap_SniperRifles.ManufacturerMaterials.Material_Hyperion_4 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_04_VeryRare'</code>
+						<code profiles="default">set GD_Weap_SniperRifles.ManufacturerMaterials.Material_Hyperion_5_Legendary MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'</code>
+						<code profiles="default">set GD_Weap_SniperRifles.ManufacturerMaterials.Material_Jakobs_1 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_01_Common'</code>
+						<code profiles="default">set GD_Weap_SniperRifles.ManufacturerMaterials.Material_Jakobs_2 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_02_Uncommon'</code>
+						<code profiles="default">set GD_Weap_SniperRifles.ManufacturerMaterials.Material_Jakobs_3 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'</code>
+						<code profiles="default">set GD_Weap_SniperRifles.ManufacturerMaterials.Material_Jakobs_4 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_04_VeryRare'</code>
+						<code profiles="default">set GD_Weap_SniperRifles.ManufacturerMaterials.Material_Jakobs_5_Legendary MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'</code>
+						<code profiles="default">set GD_Weap_SniperRifles.ManufacturerMaterials.Material_Maliwan_1 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_01_Common'</code>
+						<code profiles="default">set GD_Weap_SniperRifles.ManufacturerMaterials.Material_Maliwan_2 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_02_Uncommon'</code>
+						<code profiles="default">set GD_Weap_SniperRifles.ManufacturerMaterials.Material_Maliwan_3 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'</code>
+						<code profiles="default">set GD_Weap_SniperRifles.ManufacturerMaterials.Material_Maliwan_4 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_04_VeryRare'</code>
+						<code profiles="default">set GD_Weap_SniperRifles.ManufacturerMaterials.Material_Maliwan_5_Legendary MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'</code>
+						<code profiles="default">set GD_Weap_SniperRifles.ManufacturerMaterials.Material_Old_Hyperion_1 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_01_Common'</code>
+						<code profiles="default">set GD_Weap_SniperRifles.ManufacturerMaterials.Material_Old_Hyperion_2 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_02_Uncommon'</code>
+						<code profiles="default">set GD_Weap_SniperRifles.ManufacturerMaterials.Material_Old_Hyperion_3 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'</code>
+						<code profiles="default">set GD_Weap_SniperRifles.ManufacturerMaterials.Material_Old_Hyperion_4 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_04_VeryRare'</code>
+						<code profiles="default">set GD_Weap_SniperRifles.ManufacturerMaterials.Material_Vladof_1 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_01_Common'</code>
+						<code profiles="default">set GD_Weap_SniperRifles.ManufacturerMaterials.Material_Vladof_2 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_02_Uncommon'</code>
+						<code profiles="default">set GD_Weap_SniperRifles.ManufacturerMaterials.Material_Vladof_3 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'</code>
+						<code profiles="default">set GD_Weap_SniperRifles.ManufacturerMaterials.Material_Vladof_4 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_04_VeryRare'</code>
+						<code profiles="default">set gd_cork_weap_assaultrifle.ManufacturerMaterials.Mat_Dahl_5_Legendary_MajorTom MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'</code>
+						<code profiles="default">set gd_cork_weap_assaultrifle.ManufacturerMaterials.Mat_Jakobs_3_Wallop MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'</code>
+						<code profiles="default">set gd_cork_weap_assaultrifle.ManufacturerMaterials.Mat_Vladof_3_Hail MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'</code>
+						<code profiles="default">set gd_cork_weap_assaultrifle.ManufacturerMaterials.Mat_Vladof_3_IceScream MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'</code>
+						<code profiles="default">set gd_cork_weap_assaultrifle.ManufacturerMaterials.Mat_Vladof_3_OlPainful MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'</code>
+						<code profiles="default">set gd_cork_weap_assaultrifle.ManufacturerMaterials.Mat_Vladof_5_Legendary_Shredifier MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'</code>
+					</category>
+				</category>
+				<category name="Fix Launcher names">
+					<comment># For some reason, most Launcher prefixes, some of their titles and many of their parts use a MonetaryValueMod where other weapons don't</comment>
+					<comment># This means that the value of Launchers is actually lower than intended, and changing the Common rarity value affects all launchers multiple times over.</comment>
+					<comment># Here, we remove it to make it consistent with non-Launcher weapons</comment>
+					<category name="Remove rarity mod from Launcher Names">
+						<code profiles="default">set GD_Weap_Launchers.Name.Prefix.Prefix__Rocket MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Launchers.Name.Prefix.Prefix_Elemental_Corrosive MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Launchers.Name.Prefix.Prefix_Elemental_Ice MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Launchers.Name.Prefix.Prefix_Elemental_Incendiary MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Launchers.Name.Prefix.Prefix_Elemental_Shock MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Launchers.Name.Prefix_Maliwan.Prefix_BodyMod1_Mag MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Launchers.Name.Prefix_Maliwan.Prefix_BodyMod2_Accuracy MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Launchers.Name.Prefix_Maliwan.Prefix_Elemental_Corrosive MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Launchers.Name.Prefix_Maliwan.Prefix_Elemental_Ice MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Launchers.Name.Prefix_Maliwan.Prefix_Elemental_Incendiary MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Launchers.Name.Prefix_Maliwan.Prefix_Elemental_Shock MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Launchers.Name.Prefix_Maliwan.Prefix_Grip1_Blade MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Launchers.Name.Prefix_Maliwan.Prefix_Gripper_Reload MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Launchers.Name.Prefix_Maliwan.Prefix_Handle_SwapSpeed MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Launchers.Name.Prefix_Maliwan.Prefix_StockCover_RocketSpeed MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Launchers.Name.Prefix_Maliwan.Prefix_StockTube_FireRate MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Launchers.Name.Prefix_Maliwan.Prefix_TipCover_Damage MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Launchers.Name.Prefix_Scav.Prefix_BodyMod1_Mag MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Launchers.Name.Prefix_Scav.Prefix_BodyMod2_Accuracy MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Launchers.Name.Prefix_Scav.Prefix_Elemental_Corrosive MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Launchers.Name.Prefix_Scav.Prefix_Elemental_Ice MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Launchers.Name.Prefix_Scav.Prefix_Elemental_Incendiary MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Launchers.Name.Prefix_Scav.Prefix_Elemental_Shock MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Launchers.Name.Prefix_Scav.Prefix_Grip1_Blade MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Launchers.Name.Prefix_Scav.Prefix_Gripper_Reload MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Launchers.Name.Prefix_Scav.Prefix_Handle_SwapSpeed MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Launchers.Name.Prefix_Scav.Prefix_Rocket MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Launchers.Name.Prefix_Scav.Prefix_StockCover_RocketSpeed MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Launchers.Name.Prefix_Scav.Prefix_StockTube_FireRate MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Launchers.Name.Prefix_Scav.Prefix_TipCover_Damage MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Launchers.Name.Prefix_Tediore.Prefix_BodyMod1_Mag MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Launchers.Name.Prefix_Tediore.Prefix_BodyMod2_Accuracy MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Launchers.Name.Prefix_Tediore.Prefix_Elemental_Corrosive MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Launchers.Name.Prefix_Tediore.Prefix_Elemental_Ice MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Launchers.Name.Prefix_Tediore.Prefix_Elemental_Incendiary MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Launchers.Name.Prefix_Tediore.Prefix_Elemental_Shock MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Launchers.Name.Prefix_Tediore.Prefix_Grip1_Blade MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Launchers.Name.Prefix_Tediore.Prefix_Gripper_Reload MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Launchers.Name.Prefix_Tediore.Prefix_Handle_SwapSpeed MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Launchers.Name.Prefix_Tediore.Prefix_StockCover_RocketSpeed MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Launchers.Name.Prefix_Tediore.Prefix_StockTube_FireRate MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Launchers.Name.Prefix_Tediore.Prefix_TipCover_Damage MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Launchers.Name.Prefix_Torgue.Prefix_BodyMod1_Mag MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Launchers.Name.Prefix_Torgue.Prefix_BodyMod2_Accuracy MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Launchers.Name.Prefix_Torgue.Prefix_Grip1_Blade MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Launchers.Name.Prefix_Torgue.Prefix_Gripper_Reload MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Launchers.Name.Prefix_Torgue.Prefix_Handle_SwapSpeed MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Launchers.Name.Prefix_Torgue.Prefix_Rocket MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Launchers.Name.Prefix_Torgue.Prefix_StockCover_RocketSpeed MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Launchers.Name.Prefix_Torgue.Prefix_StockTube_FireRate MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Launchers.Name.Prefix_Torgue.Prefix_TipCover_Damage MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Launchers.Name.Prefix_Vladof.Prefix_BodyMod1_Mag MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Launchers.Name.Prefix_Vladof.Prefix_BodyMod2_Accuracy MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Launchers.Name.Prefix_Vladof.Prefix_Elemental_Corrosive MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Launchers.Name.Prefix_Vladof.Prefix_Elemental_Ice MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Launchers.Name.Prefix_Vladof.Prefix_Elemental_Incendiary MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Launchers.Name.Prefix_Vladof.Prefix_Elemental_Shock MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Launchers.Name.Prefix_Vladof.Prefix_Grip1_Blade MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Launchers.Name.Prefix_Vladof.Prefix_Gripper_Reload MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Launchers.Name.Prefix_Vladof.Prefix_Handle_SwapSpeed MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Launchers.Name.Prefix_Vladof.Prefix_StockCover_RocketSpeed MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Launchers.Name.Prefix_Vladof.Prefix_StockTube_FireRate MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Launchers.Name.Prefix_Vladof.Prefix_TipCover_Damage MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Launchers.Name.Title.Title_Launcher MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Launchers.Name.Title_Maliwan.Title_Launcher MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Launchers.Name.Title_Torgue.Title_Launcher MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Launchers.Name.Title_Vladof.Title_Launcher MonetaryValueMod None</code>
+					</category>
+					<category name="Remove rarity mod from basic Launcher parts">
+						<code profiles="default">set GD_Cork_Weap_Launchers.Barrel.L_Barrel_Bandit_BadaBoom MonetaryValueMod None</code>
+						<code profiles="default">set GD_Cork_Weap_Launchers.Barrel.L_Barrel_Bandit_Thingy MonetaryValueMod None</code>
+						<code profiles="default">set GD_Cork_Weap_Launchers.Barrel.L_Barrel_Maliwan_Cryophobia MonetaryValueMod None</code>
+						<code profiles="default">set GD_Cork_Weap_Launchers.Barrel.L_Barrel_Torgue_Nukem MonetaryValueMod None</code>
+						<code profiles="default">set GD_Cork_Weap_Launchers.Barrel.L_Barrel_Vladof_Mongol MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Launchers.Exhaust.L_Exhaust_Bandit MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Launchers.Exhaust.L_Exhaust_Maliwan MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Launchers.Exhaust.L_Exhaust_Tediore MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Launchers.Exhaust.L_Exhaust_Torgue MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Launchers.Exhaust.L_Exhaust_Vladof MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Launchers.Grip.L_Grip_Bandit MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Launchers.Grip.L_Grip_Maliwan MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Launchers.Grip.L_Grip_Tediore MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Launchers.Grip.L_Grip_Torgue MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Launchers.Grip.L_Grip_Vladof MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Launchers.elemental.RL_Elemental_Corrosive MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Launchers.elemental.RL_Elemental_Fire MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Launchers.elemental.RL_Elemental_Ice MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Launchers.elemental.RL_Elemental_None MonetaryValueMod None</code>
+						<code profiles="default">set GD_Weap_Launchers.elemental.RL_Elemental_Shock MonetaryValueMod None</code>
+					</category>
+				</category>
+				<category name="Fix Vladof minigun barrel">
+					<code profiles="default">set GD_Weap_AssaultRifle.Barrel.AR_Barrel_Vladof_Minigun MonetaryValueMod AttributeDefinition'GD_Economy.WeaponCostModifiers.Att_Part_06_Invaluable'</code>
+				</category>
+			</category>
+			<category name="Fix Legendary Shields">
+				<comment># Some Legendary shields material are internally classified as the wrong rarity</comment>
+				<comment># UCP fixes their rarity, this fixes their value</comment>
+				<code profiles="default">set GD_Ma_Shields.Material.Material5_Legendary_Rerouter MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'</code>
+				<code profiles="default">set GD_Shields.Material.Material5_Legendary_AbsorptionNormal MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'</code>
+				<code profiles="default">set GD_Shields.Material.Material5_Legendary_AbsorptionShock MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'</code>
+				<code profiles="default">set GD_Shields.Material.Material5_Legendary_Nova_DeadlyBloom MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'</code>
+			</category>
+		</category>
+	</body>
+</BLCMM>
+
+#Commands:
+set GD_GrenadeMods.Material.Material_Bandit MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_01_Common'
+set GD_GrenadeMods.Material.Material_Bandit_2_Uncommon MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_02_Uncommon'
+set GD_GrenadeMods.Material.Material_Bandit_3_Rare MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'
+set GD_GrenadeMods.Material.Material_Bandit_4_VeryRare MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_04_VeryRare'
+set GD_GrenadeMods.Material.Material_Dahl MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_01_Common'
+set GD_GrenadeMods.Material.Material_Dahl_2_Uncommon MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_02_Uncommon'
+set GD_GrenadeMods.Material.Material_Dahl_3_Rare MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'
+set GD_GrenadeMods.Material.Material_Dahl_4_VeryRare MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_04_VeryRare'
+set GD_GrenadeMods.Material.Material_Dahl_5_Legendary MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'
+set GD_GrenadeMods.Material.Material_Hyperion MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_01_Common'
+set GD_GrenadeMods.Material.Material_Hyperion_2_Uncommon MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_02_Uncommon'
+set GD_GrenadeMods.Material.Material_Hyperion_3_Rare MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'
+set GD_GrenadeMods.Material.Material_Hyperion_4_VeryRare MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_04_VeryRare'
+set GD_GrenadeMods.Material.Material_Hyperion_5_Legendary MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'
+set GD_GrenadeMods.Material.Material_Maliwan MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_01_Common'
+set GD_GrenadeMods.Material.Material_Maliwan_2_Uncommon MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_02_Uncommon'
+set GD_GrenadeMods.Material.Material_Maliwan_3_Rare MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'
+set GD_GrenadeMods.Material.Material_Maliwan_4_VeryRare MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_04_VeryRare'
+set GD_GrenadeMods.Material.Material_Maliwan_5_Legendary MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'
+set GD_GrenadeMods.Material.Material_Tedior MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_01_Common'
+set GD_GrenadeMods.Material.Material_Tedior_2_Uncommon MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_02_Uncommon'
+set GD_GrenadeMods.Material.Material_Tedior_3_Rare MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'
+set GD_GrenadeMods.Material.Material_Tedior_4_VeryRare MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_04_VeryRare'
+set GD_GrenadeMods.Material.Material_Torgue MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_01_Common'
+set GD_GrenadeMods.Material.Material_Torgue_2_Uncommon MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_02_Uncommon'
+set GD_GrenadeMods.Material.Material_Torgue_3_Rare MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'
+set GD_GrenadeMods.Material.Material_Torgue_4_VeryRare MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_04_VeryRare'
+set GD_GrenadeMods.Material.Material_Torgue_5_Legendary MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'
+set GD_GrenadeMods.Material.Material_Vladof MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_01_Common'
+set GD_GrenadeMods.Material.Material_Vladof_2_Uncommon MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_02_Uncommon'
+set GD_GrenadeMods.Material.Material_Vladof_3_Rare MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'
+set GD_GrenadeMods.Material.Material_Vladof_4_VeryRare MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_04_VeryRare'
+set GD_GrenadeMods.Material.Material_Vladof_5_Legendary MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'
+set GD_Ma_GrenadeMods.Material.Material_Maliwan_3_DataScrubber MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'
+set GD_Ma_GrenadeMods.Material.Material_Maliwan_5_Meganade MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'
+set GD_GrenadeMods.Damage.Damage_Grade0 MonetaryValueMod None
+set GD_GrenadeMods.Damage.Damage_Grade1 MonetaryValueMod None
+set GD_GrenadeMods.Damage.Damage_Grade2 MonetaryValueMod None
+set GD_GrenadeMods.Damage.Damage_Grade3 MonetaryValueMod None
+set GD_GrenadeMods.Damage.Damage_Grade4 MonetaryValueMod None
+set GD_GrenadeMods.Damage.Damage_Grade5 MonetaryValueMod None
+set GD_GrenadeMods.Damage.Damage_Grade6 MonetaryValueMod None
+set GD_GrenadeMods.Damage.Damage_Grade7 MonetaryValueMod None
+set GD_GrenadeMods.StatusDamage.StatusDamage_Grade0 MonetaryValueMod None
+set GD_GrenadeMods.StatusDamage.StatusDamage_Grade1 MonetaryValueMod None
+set GD_GrenadeMods.StatusDamage.StatusDamage_Grade2 MonetaryValueMod None
+set GD_GrenadeMods.StatusDamage.StatusDamage_Grade3 MonetaryValueMod None
+set GD_GrenadeMods.StatusDamage.StatusDamage_Grade4 MonetaryValueMod None
+set GD_GrenadeMods.StatusDamage.StatusDamage_Grade5 MonetaryValueMod None
+set gd_cork_weap_assaultrifle.Barrel.AR_Barrel_Dahl_HammerBreaker MonetaryValueMod None
+set gd_cork_weap_assaultrifle.Barrel.AR_Barrel_Dahl_MajorTom MonetaryValueMod None
+set gd_cork_weap_assaultrifle.Barrel.AR_Barrel_Torgue_KerBoom MonetaryValueMod None
+set gd_cork_weap_assaultrifle.Barrel.AR_Barrel_Vladof_IceScream MonetaryValueMod None
+set gd_cork_weap_assaultrifle.Barrel.AR_Barrel_Vladof_OldPainful MonetaryValueMod None
+set gd_cork_weap_assaultrifle.Barrel.AR_Barrel_Vladof_Shredifier MonetaryValueMod None
+set GD_Cork_Weap_Lasers.Body.Laser_Body_Dahl MonetaryValueMod None
+set GD_Cork_Weap_Lasers.Body.Laser_Body_Dahl_2 MonetaryValueMod None
+set GD_Cork_Weap_Lasers.Body.Laser_Body_Dahl_3 MonetaryValueMod None
+set GD_Cork_Weap_Lasers.Body.Laser_Body_Dahl_4 MonetaryValueMod None
+set GD_Cork_Weap_Lasers.Body.Laser_Body_Dahl_4_ZX1 MonetaryValueMod None
+set GD_Cork_Weap_Lasers.Body.Laser_Body_Hyperion MonetaryValueMod None
+set GD_Cork_Weap_Lasers.Body.Laser_Body_Hyperion_2 MonetaryValueMod None
+set GD_Cork_Weap_Lasers.Body.Laser_Body_Hyperion_3 MonetaryValueMod None
+set GD_Cork_Weap_Lasers.Body.Laser_Body_Hyperion_3_Mining MonetaryValueMod None
+set GD_Cork_Weap_Lasers.Body.Laser_Body_Hyperion_4 MonetaryValueMod None
+set GD_Cork_Weap_Lasers.Body.Laser_Body_Maliwan MonetaryValueMod None
+set GD_Cork_Weap_Lasers.Body.Laser_Body_Maliwan_2 MonetaryValueMod None
+set GD_Cork_Weap_Lasers.Body.Laser_Body_Maliwan_3 MonetaryValueMod None
+set GD_Cork_Weap_Lasers.Body.Laser_Body_Maliwan_3_Blizzard MonetaryValueMod None
+set GD_Cork_Weap_Lasers.Body.Laser_Body_Maliwan_4 MonetaryValueMod None
+set GD_Cork_Weap_Lasers.Body.Laser_Body_Maliwan_4_Egun MonetaryValueMod None
+set GD_Cork_Weap_Lasers.Body.Laser_Body_Maliwan_4_Rosie MonetaryValueMod None
+set GD_Cork_Weap_Lasers.Body.Laser_Body_Maliwan_4_SavorySideSaber MonetaryValueMod None
+set GD_Cork_Weap_Lasers.Body.Laser_Body_Tediore MonetaryValueMod None
+set GD_Cork_Weap_Lasers.Body.Laser_Body_Tediore_2 MonetaryValueMod None
+set GD_Cork_Weap_Lasers.Body.Laser_Body_Tediore_3 MonetaryValueMod None
+set GD_Cork_Weap_Lasers.Body.Laser_Body_Tediore_4 MonetaryValueMod None
+set GD_Cork_Weap_Launchers.Barrel.L_Barrel_Maliwan_Creamer MonetaryValueMod None
+set GD_Cork_Weap_Launchers.Barrel.L_Barrel_Tediore_Rocketeer MonetaryValueMod None
+set GD_Cork_Weap_Pistol.Barrel.Pistol_Barrel_Bandit_Zim MonetaryValueMod None
+set GD_Cork_Weap_Pistol.Barrel.Pistol_Barrel_Dahl_Blowfly MonetaryValueMod None
+set GD_Cork_Weap_Pistol.Barrel.Pistol_Barrel_Jakobs_Maggie MonetaryValueMod None
+set GD_Cork_Weap_Pistol.Barrel.Pistol_Barrel_Tediore_Shooterang MonetaryValueMod None
+set GD_Cork_Weap_Pistol.Barrel.Pistol_Barrel_Torgue_88Fragnum MonetaryValueMod None
+set GD_Cork_Weap_Pistol.Body.Pistol_Body_Jakobs_CyberColt MonetaryValueMod None
+set GD_Cork_Weap_Shotgun.Barrel.SG_Barrel_Hyperion_ConferenceCall MonetaryValueMod None
+set GD_Cork_Weap_Shotgun.Barrel.SG_Barrel_Hyperion_Striker MonetaryValueMod None
+set GD_Cork_Weap_Shotgun.Barrel.SG_Barrel_Jakobs_Sledges MonetaryValueMod None
+set GD_Cork_Weap_Shotgun.Barrel.SG_Barrel_Torgue_Flakker MonetaryValueMod None
+set GD_Cork_Weap_Shotgun.Body.SG_Body_Jakobs_3_Moonface MonetaryValueMod None
+set GD_Cork_Weap_Shotgun.Body.SG_Body_Jakobs_Boomacorn MonetaryValueMod None
+set GD_Cork_Weap_Shotgun.Body.SG_Body_Jakobs_TooScoops MonetaryValueMod None
+set GD_Cork_Weap_SMG.Barrel.SMG_Barrel_Dahl_Torrent MonetaryValueMod None
+set GD_Cork_Weap_SMG.Barrel.SMG_Barrel_Hyperion_Bitch MonetaryValueMod None
+set GD_Cork_Weap_SMG.Barrel.SMG_Barrel_Maliwan_HellFire MonetaryValueMod None
+set GD_Cork_Weap_SMG.Body.SMG_Body_Dahl_Torrent MonetaryValueMod None
+set GD_Cork_Weap_SMG.Body.SMG_Body_Hyperion_BlackSnake MonetaryValueMod None
+set GD_Cork_Weap_SniperRifles.Barrel.SR_Barrel_Dahl_Pitchfork MonetaryValueMod None
+set GD_Cork_Weap_SniperRifles.Barrel.SR_Barrel_Hyperion_Invader MonetaryValueMod None
+set GD_Cork_Weap_SniperRifles.Barrel.SR_Barrel_Jakobs_Skullmasher MonetaryValueMod None
+set GD_Cork_Weap_SniperRifles.Barrel.SR_Barrel_Maliwan_Magma MonetaryValueMod None
+set GD_Cork_Weap_SniperRifles.Barrel.SR_Barrel_Vladof_Longnail MonetaryValueMod None
+set GD_Ma_Weapons.Barrel.L_Barrel_Tediore_KanedasLaser MonetaryValueMod None
+set GD_Ma_Weapons.Barrel.SMG_Barrel_Hyperion_CheatCode MonetaryValueMod None
+set GD_Petunia_Weapons.AssaultRifles.AR_Barrel_CryBaby_Default MonetaryValueMod None
+set GD_Petunia_Weapons.AssaultRifles.AR_Barrel_CryBaby_Wiggle MonetaryValueMod None
+set GD_Petunia_Weapons.Launchers.RL_Barrel_Tediore_Menace MonetaryValueMod None
+set GD_Petunia_Weapons.Shotguns.SG_Barrel_Hyperion_PartyLine MonetaryValueMod None
+set GD_Weap_AssaultRifle.Barrel.AR_Barrel_Torgue_Dahl MonetaryValueMod None
+set GD_Weap_AssaultRifle.Barrel.AR_Barrel_Torgue_Jakobs MonetaryValueMod None
+set GD_Weap_AssaultRifle.Body.AR_Body_Bandit MonetaryValueMod None
+set GD_Weap_AssaultRifle.Body.AR_Body_Bandit_2 MonetaryValueMod None
+set GD_Weap_AssaultRifle.Body.AR_Body_Bandit_3 MonetaryValueMod None
+set GD_Weap_AssaultRifle.Body.AR_Body_Bandit_4 MonetaryValueMod None
+set GD_Weap_AssaultRifle.Body.AR_Body_Dahl MonetaryValueMod None
+set GD_Weap_AssaultRifle.Body.AR_Body_Dahl_2 MonetaryValueMod None
+set GD_Weap_AssaultRifle.Body.AR_Body_Dahl_3 MonetaryValueMod None
+set GD_Weap_AssaultRifle.Body.AR_Body_Dahl_4 MonetaryValueMod None
+set GD_Weap_AssaultRifle.Body.AR_Body_Gearbox_1 MonetaryValueMod None
+set GD_Weap_AssaultRifle.Body.AR_Body_Jakobs MonetaryValueMod None
+set GD_Weap_AssaultRifle.Body.AR_Body_Jakobs_2 MonetaryValueMod None
+set GD_Weap_AssaultRifle.Body.AR_Body_Jakobs_3 MonetaryValueMod None
+set GD_Weap_AssaultRifle.Body.AR_Body_Jakobs_4 MonetaryValueMod None
+set GD_Weap_AssaultRifle.Body.AR_Body_Torgue MonetaryValueMod None
+set GD_Weap_AssaultRifle.Body.AR_Body_Torgue_2 MonetaryValueMod None
+set GD_Weap_AssaultRifle.Body.AR_Body_Torgue_3 MonetaryValueMod None
+set GD_Weap_AssaultRifle.Body.AR_Body_Torgue_4 MonetaryValueMod None
+set GD_Weap_AssaultRifle.Body.AR_Body_Vladof MonetaryValueMod None
+set GD_Weap_AssaultRifle.Body.AR_Body_Vladof_2 MonetaryValueMod None
+set GD_Weap_AssaultRifle.Body.AR_Body_Vladof_3 MonetaryValueMod None
+set GD_Weap_AssaultRifle.Body.AR_Body_Vladof_4 MonetaryValueMod None
+set GD_Weap_Launchers.Barrel.L_Barrel_Bandit MonetaryValueMod None
+set GD_Weap_Launchers.Barrel.L_Barrel_Maliwan MonetaryValueMod None
+set GD_Weap_Launchers.Barrel.L_Barrel_Tediore MonetaryValueMod None
+set GD_Weap_Launchers.Barrel.L_Barrel_Torgue MonetaryValueMod None
+set GD_Weap_Launchers.Barrel.L_Barrel_Vladof MonetaryValueMod None
+set GD_Weap_Launchers.Body.L_Body_Bandit MonetaryValueMod None
+set GD_Weap_Launchers.Body.L_Body_Bandit_2 MonetaryValueMod None
+set GD_Weap_Launchers.Body.L_Body_Bandit_3 MonetaryValueMod None
+set GD_Weap_Launchers.Body.L_Body_Bandit_4 MonetaryValueMod None
+set GD_Weap_Launchers.Body.L_Body_Maliwan MonetaryValueMod None
+set GD_Weap_Launchers.Body.L_Body_Maliwan_2 MonetaryValueMod None
+set GD_Weap_Launchers.Body.L_Body_Maliwan_3 MonetaryValueMod None
+set GD_Weap_Launchers.Body.L_Body_Maliwan_4 MonetaryValueMod None
+set GD_Weap_Launchers.Body.L_Body_Tediore MonetaryValueMod None
+set GD_Weap_Launchers.Body.L_Body_Tediore_2 MonetaryValueMod None
+set GD_Weap_Launchers.Body.L_Body_Tediore_3 MonetaryValueMod None
+set GD_Weap_Launchers.Body.L_Body_Tediore_4 MonetaryValueMod None
+set GD_Weap_Launchers.Body.L_Body_Torgue MonetaryValueMod None
+set GD_Weap_Launchers.Body.L_Body_Torgue_2 MonetaryValueMod None
+set GD_Weap_Launchers.Body.L_Body_Torgue_3 MonetaryValueMod None
+set GD_Weap_Launchers.Body.L_Body_Torgue_4 MonetaryValueMod None
+set GD_Weap_Launchers.Body.L_Body_Vladof MonetaryValueMod None
+set GD_Weap_Launchers.Body.L_Body_Vladof_2 MonetaryValueMod None
+set GD_Weap_Launchers.Body.L_Body_Vladof_3 MonetaryValueMod None
+set GD_Weap_Launchers.Body.L_Body_Vladof_4 MonetaryValueMod None
+set GD_Weap_Pistol.Barrel.Pistol_Barrel_Hyperion_LogansGun MonetaryValueMod None
+set GD_Weap_Pistol.Body.Pistol_Body_Bandit MonetaryValueMod None
+set GD_Weap_Pistol.Body.Pistol_Body_Bandit_2 MonetaryValueMod None
+set GD_Weap_Pistol.Body.Pistol_Body_Bandit_3 MonetaryValueMod None
+set GD_Weap_Pistol.Body.Pistol_Body_Bandit_4 MonetaryValueMod None
+set GD_Weap_Pistol.Body.Pistol_Body_Dahl MonetaryValueMod None
+set GD_Weap_Pistol.Body.Pistol_Body_Dahl_2 MonetaryValueMod None
+set GD_Weap_Pistol.Body.Pistol_Body_Dahl_3 MonetaryValueMod None
+set GD_Weap_Pistol.Body.Pistol_Body_Dahl_4 MonetaryValueMod None
+set GD_Weap_Pistol.Body.Pistol_Body_Hyperion MonetaryValueMod None
+set GD_Weap_Pistol.Body.Pistol_Body_Hyperion_2 MonetaryValueMod None
+set GD_Weap_Pistol.Body.Pistol_Body_Hyperion_3 MonetaryValueMod None
+set GD_Weap_Pistol.Body.Pistol_Body_Hyperion_4 MonetaryValueMod None
+set GD_Weap_Pistol.Body.Pistol_Body_Jakobs MonetaryValueMod None
+set GD_Weap_Pistol.Body.Pistol_Body_Jakobs_2 MonetaryValueMod None
+set GD_Weap_Pistol.Body.Pistol_Body_Jakobs_3 MonetaryValueMod None
+set GD_Weap_Pistol.Body.Pistol_Body_Jakobs_4 MonetaryValueMod None
+set GD_Weap_Pistol.Body.Pistol_Body_Maliwan MonetaryValueMod None
+set GD_Weap_Pistol.Body.Pistol_Body_Maliwan_2 MonetaryValueMod None
+set GD_Weap_Pistol.Body.Pistol_Body_Maliwan_3 MonetaryValueMod None
+set GD_Weap_Pistol.Body.Pistol_Body_Maliwan_4 MonetaryValueMod None
+set GD_Weap_Pistol.Body.Pistol_Body_Tediore MonetaryValueMod None
+set GD_Weap_Pistol.Body.Pistol_Body_Tediore_2 MonetaryValueMod None
+set GD_Weap_Pistol.Body.Pistol_Body_Tediore_3 MonetaryValueMod None
+set GD_Weap_Pistol.Body.Pistol_Body_Tediore_4 MonetaryValueMod None
+set GD_Weap_Pistol.Body.Pistol_Body_Torgue MonetaryValueMod None
+set GD_Weap_Pistol.Body.Pistol_Body_Torgue_2 MonetaryValueMod None
+set GD_Weap_Pistol.Body.Pistol_Body_Torgue_3 MonetaryValueMod None
+set GD_Weap_Pistol.Body.Pistol_Body_Torgue_4 MonetaryValueMod None
+set GD_Weap_Pistol.Body.Pistol_Body_Vladof MonetaryValueMod None
+set GD_Weap_Pistol.Body.Pistol_Body_Vladof_2 MonetaryValueMod None
+set GD_Weap_Pistol.Body.Pistol_Body_Vladof_3 MonetaryValueMod None
+set GD_Weap_Pistol.Body.Pistol_Body_Vladof_4 MonetaryValueMod None
+set GD_Weap_Shotgun.Body.SG_Body_Bandit MonetaryValueMod None
+set GD_Weap_Shotgun.Body.SG_Body_Bandit_2 MonetaryValueMod None
+set GD_Weap_Shotgun.Body.SG_Body_Bandit_3 MonetaryValueMod None
+set GD_Weap_Shotgun.Body.SG_Body_Bandit_4 MonetaryValueMod None
+set GD_Weap_Shotgun.Body.SG_Body_Hyperion MonetaryValueMod None
+set GD_Weap_Shotgun.Body.SG_Body_Hyperion_2 MonetaryValueMod None
+set GD_Weap_Shotgun.Body.SG_Body_Hyperion_3 MonetaryValueMod None
+set GD_Weap_Shotgun.Body.SG_Body_Hyperion_4 MonetaryValueMod None
+set GD_Weap_Shotgun.Body.SG_Body_Jakobs MonetaryValueMod None
+set GD_Weap_Shotgun.Body.SG_Body_Jakobs_2 MonetaryValueMod None
+set GD_Weap_Shotgun.Body.SG_Body_Jakobs_3 MonetaryValueMod None
+set GD_Weap_Shotgun.Body.SG_Body_Jakobs_4 MonetaryValueMod None
+set GD_Weap_Shotgun.Body.SG_Body_Tediore MonetaryValueMod None
+set GD_Weap_Shotgun.Body.SG_Body_Tediore_2 MonetaryValueMod None
+set GD_Weap_Shotgun.Body.SG_Body_Tediore_3 MonetaryValueMod None
+set GD_Weap_Shotgun.Body.SG_Body_Tediore_4 MonetaryValueMod None
+set GD_Weap_Shotgun.Body.SG_Body_Torgue MonetaryValueMod None
+set GD_Weap_Shotgun.Body.SG_Body_Torgue_2 MonetaryValueMod None
+set GD_Weap_Shotgun.Body.SG_Body_Torgue_3 MonetaryValueMod None
+set GD_Weap_Shotgun.Body.SG_Body_Torgue_4 MonetaryValueMod None
+set GD_Weap_SMG.Body.SMG_Body_Bandit MonetaryValueMod None
+set GD_Weap_SMG.Body.SMG_Body_Bandit_VarA MonetaryValueMod None
+set GD_Weap_SMG.Body.SMG_Body_Bandit_VarB MonetaryValueMod None
+set GD_Weap_SMG.Body.SMG_Body_Bandit_VarC MonetaryValueMod None
+set GD_Weap_SMG.Body.SMG_Body_Dahl MonetaryValueMod None
+set GD_Weap_SMG.Body.SMG_Body_Dahl_VarA MonetaryValueMod None
+set GD_Weap_SMG.Body.SMG_Body_Dahl_VarB MonetaryValueMod None
+set GD_Weap_SMG.Body.SMG_Body_Dahl_VarC MonetaryValueMod None
+set GD_Weap_SMG.Body.SMG_Body_Gearbox_1 MonetaryValueMod None
+set GD_Weap_SMG.Body.SMG_Body_Hyperion MonetaryValueMod None
+set GD_Weap_SMG.Body.SMG_Body_Hyperion_VarA MonetaryValueMod None
+set GD_Weap_SMG.Body.SMG_Body_Hyperion_VarB MonetaryValueMod None
+set GD_Weap_SMG.Body.SMG_Body_Hyperion_VarC MonetaryValueMod None
+set GD_Weap_SMG.Body.SMG_Body_Maliwan MonetaryValueMod None
+set GD_Weap_SMG.Body.SMG_Body_Maliwan_VarA MonetaryValueMod None
+set GD_Weap_SMG.Body.SMG_Body_Maliwan_VarB MonetaryValueMod None
+set GD_Weap_SMG.Body.SMG_Body_Maliwan_VarC MonetaryValueMod None
+set GD_Weap_SMG.Body.SMG_Body_Tediore MonetaryValueMod None
+set GD_Weap_SMG.Body.SMG_Body_Tediore_VarA MonetaryValueMod None
+set GD_Weap_SMG.Body.SMG_Body_Tediore_VarB MonetaryValueMod None
+set GD_Weap_SMG.Body.SMG_Body_Tediore_VarC MonetaryValueMod None
+set GD_Weap_SniperRifles.Body.SR_Body_Dahl MonetaryValueMod None
+set GD_Weap_SniperRifles.Body.SR_Body_Dahl_2 MonetaryValueMod None
+set GD_Weap_SniperRifles.Body.SR_Body_Dahl_3 MonetaryValueMod None
+set GD_Weap_SniperRifles.Body.SR_Body_Dahl_4 MonetaryValueMod None
+set GD_Weap_SniperRifles.Body.SR_Body_Gearbox MonetaryValueMod None
+set GD_Weap_SniperRifles.Body.SR_Body_Hyperion MonetaryValueMod None
+set GD_Weap_SniperRifles.Body.SR_Body_Hyperion_2 MonetaryValueMod None
+set GD_Weap_SniperRifles.Body.SR_Body_Hyperion_3 MonetaryValueMod None
+set GD_Weap_SniperRifles.Body.SR_Body_Hyperion_4 MonetaryValueMod None
+set GD_Weap_SniperRifles.Body.SR_Body_Jakobs MonetaryValueMod None
+set GD_Weap_SniperRifles.Body.SR_Body_Jakobs_2 MonetaryValueMod None
+set GD_Weap_SniperRifles.Body.SR_Body_Jakobs_3 MonetaryValueMod None
+set GD_Weap_SniperRifles.Body.SR_Body_Jakobs_4 MonetaryValueMod None
+set GD_Weap_SniperRifles.Body.SR_Body_Maliwan MonetaryValueMod None
+set GD_Weap_SniperRifles.Body.SR_Body_Maliwan_2 MonetaryValueMod None
+set GD_Weap_SniperRifles.Body.SR_Body_Maliwan_3 MonetaryValueMod None
+set GD_Weap_SniperRifles.Body.SR_Body_Maliwan_4 MonetaryValueMod None
+set GD_Weap_SniperRifles.Body.SR_Body_Vladof MonetaryValueMod None
+set GD_Weap_SniperRifles.Body.SR_Body_Vladof_2 MonetaryValueMod None
+set GD_Weap_SniperRifles.Body.SR_Body_Vladof_3 MonetaryValueMod None
+set GD_Weap_SniperRifles.Body.SR_Body_Vladof_4 MonetaryValueMod None
+set GD_Cork_Weap_Lasers.ManufacturerMaterials.Mat_Dahl_1 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_01_Common'
+set GD_Cork_Weap_Lasers.ManufacturerMaterials.Mat_Dahl_1_Zap1 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_01_Common'
+set GD_Cork_Weap_Lasers.ManufacturerMaterials.Mat_Dahl_2 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_02_Uncommon'
+set GD_Cork_Weap_Lasers.ManufacturerMaterials.Mat_Dahl_3 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'
+set GD_Cork_Weap_Lasers.ManufacturerMaterials.Mat_Dahl_3_Firestarta MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'
+set GD_Cork_Weap_Lasers.ManufacturerMaterials.Mat_Dahl_3_Zap4 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'
+set GD_Cork_Weap_Lasers.ManufacturerMaterials.Mat_Dahl_4 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_04_VeryRare'
+set GD_Cork_Weap_Lasers.ManufacturerMaterials.Mat_Dahl_5_Legendary MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'
+set GD_Cork_Weap_Lasers.ManufacturerMaterials.Mat_Dahl_5_Legendary_Ricochet MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'
+set GD_Cork_Weap_Lasers.ManufacturerMaterials.Mat_Dahl_5_Legendary_ZX1 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'
+set GD_Cork_Weap_Lasers.ManufacturerMaterials.Mat_Hyperion_1 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_01_Common'
+set GD_Cork_Weap_Lasers.ManufacturerMaterials.Mat_Hyperion_2 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_02_Uncommon'
+set GD_Cork_Weap_Lasers.ManufacturerMaterials.Mat_Hyperion_3 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'
+set GD_Cork_Weap_Lasers.ManufacturerMaterials.Mat_Hyperion_3_Unique_MiningLaser MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'
+set GD_Cork_Weap_Lasers.ManufacturerMaterials.Mat_Hyperion_4 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_04_VeryRare'
+set GD_Cork_Weap_Lasers.ManufacturerMaterials.Mat_Hyperion_5_Legendary MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'
+set GD_Cork_Weap_Lasers.ManufacturerMaterials.Mat_Maliwan_1 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_01_Common'
+set GD_Cork_Weap_Lasers.ManufacturerMaterials.Mat_Maliwan_2 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_02_Uncommon'
+set GD_Cork_Weap_Lasers.ManufacturerMaterials.Mat_Maliwan_3 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'
+set GD_Cork_Weap_Lasers.ManufacturerMaterials.Mat_Maliwan_3_Unique_Blizzard MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'
+set GD_Cork_Weap_Lasers.ManufacturerMaterials.Mat_Maliwan_3_Unique_Egun MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'
+set GD_Cork_Weap_Lasers.ManufacturerMaterials.Mat_Maliwan_3_Unique_SideSaber MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'
+set GD_Cork_Weap_Lasers.ManufacturerMaterials.Mat_Maliwan_3_Unique_Vandergraffen MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'
+set GD_Cork_Weap_Lasers.ManufacturerMaterials.Mat_Maliwan_3_Unique_Vibrapulse MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'
+set GD_Cork_Weap_Lasers.ManufacturerMaterials.Mat_Maliwan_4 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_04_VeryRare'
+set GD_Cork_Weap_Lasers.ManufacturerMaterials.Mat_Maliwan_4_Unique_Rosie MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_04_VeryRare'
+set GD_Cork_Weap_Lasers.ManufacturerMaterials.Mat_Maliwan_5_Legendary MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'
+set GD_Cork_Weap_Lasers.ManufacturerMaterials.Mat_Old_Hyperion_1 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_01_Common'
+set GD_Cork_Weap_Lasers.ManufacturerMaterials.Mat_Old_Hyperion_2 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_02_Uncommon'
+set GD_Cork_Weap_Lasers.ManufacturerMaterials.Mat_Old_Hyperion_3 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'
+set GD_Cork_Weap_Lasers.ManufacturerMaterials.Mat_Old_Hyperion_4 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_04_VeryRare'
+set GD_Cork_Weap_Lasers.ManufacturerMaterials.Mat_Old_Hyperion_5_Legendary MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'
+set GD_Cork_Weap_Lasers.ManufacturerMaterials.Mat_Tediore_1 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_01_Common'
+set GD_Cork_Weap_Lasers.ManufacturerMaterials.Mat_Tediore_2 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_02_Uncommon'
+set GD_Cork_Weap_Lasers.ManufacturerMaterials.Mat_Tediore_3 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'
+set GD_Cork_Weap_Lasers.ManufacturerMaterials.Mat_Tediore_4 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_04_VeryRare'
+set GD_Cork_Weap_Lasers.ManufacturerMaterials.Mat_Tediore_5_Legendary MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'
+set GD_Cork_Weap_Lasers.ManufacturerMaterials.Mat_Tediore_5_Legendary_Tesla MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'
+set GD_Cork_Weap_Launchers.ManufacturerMaterials.Mat_BanditMade_5_Thingy MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'
+set GD_Cork_Weap_Launchers.ManufacturerMaterials.Mat_Maliwan_5_Legendary_Cryophobia MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'
+set GD_Cork_Weap_Launchers.ManufacturerMaterials.Mat_Torgue_3_Creamer MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'
+set GD_Cork_Weap_Launchers.ManufacturerMaterials.Mat_Torgue_3_Rocketeer MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'
+set GD_Cork_Weap_Pistol.ManufacturerMaterials.Mat_Dahl_3_GwensOtherHead MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'
+set GD_Cork_Weap_Pistol.ManufacturerMaterials.Mat_Dahl_5_Legendary_Blowfly MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'
+set GD_Cork_Weap_Pistol.ManufacturerMaterials.Mat_Hyperion_3_Fibber MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'
+set GD_Cork_Weap_Pistol.ManufacturerMaterials.Mat_Hyperion_3_Globber MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'
+set GD_Cork_Weap_Pistol.ManufacturerMaterials.Mat_Hyperion_3_LadyFist MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'
+set GD_Cork_Weap_Pistol.ManufacturerMaterials.Mat_Jakobs_3_Smasher MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'
+set GD_Cork_Weap_Pistol.ManufacturerMaterials.Mat_Jakobs_4_CyberColt MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_04_VeryRare'
+set GD_Cork_Weap_Pistol.ManufacturerMaterials.Mat_Maliwan_3_Moxxis_Probe MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'
+set GD_Cork_Weap_Pistol.ManufacturerMaterials.Mat_Scav_5_Legendary_Zim MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'
+set GD_Cork_Weap_Pistol.ManufacturerMaterials.Mat_Starter_Dahl_1 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_01_Common'
+set GD_Cork_Weap_Pistol.ManufacturerMaterials.Mat_Tediore_5_Legendary_Shooterang MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'
+set GD_Cork_Weap_SMG.ManufacturerMaterials.Mat_Bandit_3_MeatGrinder MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'
+set GD_Cork_Weap_SMG.ManufacturerMaterials.Mat_Dahl_5_Legendary_Torrent MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'
+set GD_Cork_Weap_SMG.ManufacturerMaterials.Mat_Maliwan_3_BadTouch MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'
+set GD_Cork_Weap_SMG.ManufacturerMaterials.Mat_Maliwan_3_GoodTouch MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'
+set GD_Cork_Weap_SMG.ManufacturerMaterials.Mat_Old_Hyperion_3_BlackSnake MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'
+set GD_Cork_Weap_Shotgun.ManufacturerMaterials.Mat_Hyperion_3_HeartBreaker MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'
+set GD_Cork_Weap_Shotgun.ManufacturerMaterials.Mat_Jakobs_3_Boomacorn MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'
+set GD_Cork_Weap_Shotgun.ManufacturerMaterials.Mat_Jakobs_3_Moonface MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'
+set GD_Cork_Weap_Shotgun.ManufacturerMaterials.Mat_Jakobs_3_TooScoopz MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'
+set GD_Cork_Weap_Shotgun.ManufacturerMaterials.Mat_Tediore_3_Octo MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'
+set GD_Cork_Weap_Shotgun.ManufacturerMaterials.Mat_Torgue_3_JackOCannon MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'
+set GD_Cork_Weap_Shotgun.ManufacturerMaterials.Mat_Torgue_3_Torgemada MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'
+set GD_Cork_Weap_Shotgun.ManufacturerMaterials.Mat_Torgue_3_Wombat MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'
+set GD_Cork_Weap_SniperRifles.ManufacturerMaterials.Material_Dahl_3_WetWeek MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'
+set GD_Cork_Weap_SniperRifles.ManufacturerMaterials.Material_Jakobs_3_Razorback MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'
+set GD_Cork_Weap_SniperRifles.ManufacturerMaterials.Material_Maliwan_3_ChereAmie MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'
+set GD_Cork_Weap_SniperRifles.ManufacturerMaterials.Material_Vladof_3_TheMachine MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'
+set GD_Cork_Weap_SniperRifles.ManufacturerMaterials.Material_Vladof_5_Legendary_Longnail MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'
+set GD_Cypressure_Weapons.ManufacturerMaterials.AssaultRifle.Mat_BanditMade_BossNova MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'
+set GD_Cypressure_Weapons.ManufacturerMaterials.SMG.Mat_BanditMade_FastTalker MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'
+set GD_Cypressure_Weapons.ManufacturerMaterials.Shotgun.Mat_Hyperion_3_CompanyMan MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'
+set GD_Cypressure_Weapons.ManufacturerMaterials.Shotgun.Mat_Torgue_3_Landscaper2 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'
+set GD_Ma_Weapons.Materials.Mat_AR_Bandit_5_Fusilade MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'
+set GD_Ma_Weapons.Materials.Mat_AR_Bandit_6_Glitch MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'
+set GD_Ma_Weapons.Materials.Mat_AR_Dahl_6_Glitch MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'
+set GD_Ma_Weapons.Materials.Mat_AR_Jakobs_6_Glitch MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'
+set GD_Ma_Weapons.Materials.Mat_AR_Torgue_6_Glitch MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'
+set GD_Ma_Weapons.Materials.Mat_AR_Vladof_6_Glitch MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'
+set GD_Ma_Weapons.Materials.Mat_Hyperion_5_Legendary_CheatCode MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'
+set GD_Ma_Weapons.Materials.Mat_Jakobs_5_Legendary_Flayer MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'
+set GD_Ma_Weapons.Materials.Mat_Laser_Dahl_6_Glitch MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'
+set GD_Ma_Weapons.Materials.Mat_Laser_Dahl_6_Glitch_HeartfullSplodger MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'
+set GD_Ma_Weapons.Materials.Mat_Laser_Hyperion_5_LongestYard MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'
+set GD_Ma_Weapons.Materials.Mat_Laser_Hyperion_6_Glitch MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'
+set GD_Ma_Weapons.Materials.Mat_Laser_Maliwan_3_Enlightenment MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'
+set GD_Ma_Weapons.Materials.Mat_Laser_Maliwan_3_Minac MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'
+set GD_Ma_Weapons.Materials.Mat_Laser_Maliwan_5_FusionBeam MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'
+set GD_Ma_Weapons.Materials.Mat_Laser_Maliwan_5_Thunderfire MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'
+set GD_Ma_Weapons.Materials.Mat_Laser_Maliwan_6_Glitch MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'
+set GD_Ma_Weapons.Materials.Mat_Laser_Tediore_6_Glitch MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'
+set GD_Ma_Weapons.Materials.Mat_Pistol_Bandit_3_PartyPopper MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'
+set GD_Ma_Weapons.Materials.Mat_Pistol_Bandit_6_Glitch MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'
+set GD_Ma_Weapons.Materials.Mat_Pistol_Dahl_6_Glitch MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'
+set GD_Ma_Weapons.Materials.Mat_Pistol_Hyperion_6_Glitch MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'
+set GD_Ma_Weapons.Materials.Mat_Pistol_Jakobs_5_LuckCannon MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'
+set GD_Ma_Weapons.Materials.Mat_Pistol_Jakobs_6_Glitch MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'
+set GD_Ma_Weapons.Materials.Mat_Pistol_Maliwan_3_HardReboot MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'
+set GD_Ma_Weapons.Materials.Mat_Pistol_Maliwan_6_Glitch MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'
+set GD_Ma_Weapons.Materials.Mat_Pistol_Old_Hyperion_6_Glitch MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'
+set GD_Ma_Weapons.Materials.Mat_Pistol_Tediore_6_Glitch MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'
+set GD_Ma_Weapons.Materials.Mat_Pistol_Torgue_6_Glitch MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'
+set GD_Ma_Weapons.Materials.Mat_Pistol_Vladof_6_Glitch MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'
+set GD_Ma_Weapons.Materials.Mat_RL_Bandit_6_Glitch MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'
+set GD_Ma_Weapons.Materials.Mat_RL_Maliwan_6_Glitch MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'
+set GD_Ma_Weapons.Materials.Mat_RL_Tediore_5_KanedasLaser MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'
+set GD_Ma_Weapons.Materials.Mat_RL_Tediore_6_Glitch MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'
+set GD_Ma_Weapons.Materials.Mat_RL_Torgue_6_Glitch MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'
+set GD_Ma_Weapons.Materials.Mat_RL_Vladof_6_Glitch MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'
+set GD_Ma_Weapons.Materials.Mat_SG_Bandit_6_Glitch MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'
+set GD_Ma_Weapons.Materials.Mat_SG_Hyperion_6_Glitch MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'
+set GD_Ma_Weapons.Materials.Mat_SG_Jakobs_6_Glitch MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'
+set GD_Ma_Weapons.Materials.Mat_SG_Old_Hyperion_6_Glitch MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'
+set GD_Ma_Weapons.Materials.Mat_SG_Tediore_6_Glitch MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'
+set GD_Ma_Weapons.Materials.Mat_SG_Torgue_6_Glitch MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'
+set GD_Ma_Weapons.Materials.Mat_SMG_Bandit_6_Glitch MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'
+set GD_Ma_Weapons.Materials.Mat_SMG_Bandit_6_Glitch_CutieKiller MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'
+set GD_Ma_Weapons.Materials.Mat_SMG_Dahl_6_Glitch MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'
+set GD_Ma_Weapons.Materials.Mat_SMG_Hyperion_6_Glitch MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'
+set GD_Ma_Weapons.Materials.Mat_SMG_Maliwan_6_Glitch MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'
+set GD_Ma_Weapons.Materials.Mat_SMG_Old_Hyperion_6_Glitch MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'
+set GD_Ma_Weapons.Materials.Mat_SMG_Tediore_6_Glitch MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'
+set GD_Ma_Weapons.Materials.Mat_Sniper_Dahl_6_Glitch MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'
+set GD_Ma_Weapons.Materials.Mat_Sniper_Hyperion_6_Glitch MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'
+set GD_Ma_Weapons.Materials.Mat_Sniper_Jakobs_6_Glitch MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'
+set GD_Ma_Weapons.Materials.Mat_Sniper_Maliwan_6_Glitch MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'
+set GD_Ma_Weapons.Materials.Mat_Sniper_Old_Hyperion_5_OmniCannon MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'
+set GD_Ma_Weapons.Materials.Mat_Sniper_Vladof_6_Glitch MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'
+set GD_Ma_Weapons.Materials.Mat_Tediore_5_LaserDisker MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'
+set GD_Ma_Weapons.Materials.Mat_Vladof_5_Legendary_Expander MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'
+set GD_Petunia_Weapons.ManufacturerMaterials.AssaultRifle.Mat_Bandit_3_CryBaby MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'
+set GD_Petunia_Weapons.ManufacturerMaterials.Launcher.Mat_Vladof_3_Menace MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'
+set GD_Petunia_Weapons.ManufacturerMaterials.Mat_Tediore_3_PartyLine MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'
+set GD_Petunia_Weapons.ManufacturerMaterials.Pistol.Mat_Hyperion_3_T4sr MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'
+set GD_Petunia_Weapons.ManufacturerMaterials.SMG.Mat_Tediore_3_Boxxy MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'
+set GD_Petunia_Weapons.ManufacturerMaterials.sniper.Mat_Jakobs_3_Plunkett MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'
+set GD_Weap_AssaultRifle.ManufacturerMaterials.Mat_BanditMade_1 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_01_Common'
+set GD_Weap_AssaultRifle.ManufacturerMaterials.Mat_BanditMade_2 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_02_Uncommon'
+set GD_Weap_AssaultRifle.ManufacturerMaterials.Mat_BanditMade_3 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'
+set GD_Weap_AssaultRifle.ManufacturerMaterials.Mat_BanditMade_4 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_04_VeryRare'
+set GD_Weap_AssaultRifle.ManufacturerMaterials.Mat_Dahl_1 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_01_Common'
+set GD_Weap_AssaultRifle.ManufacturerMaterials.Mat_Dahl_2 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_02_Uncommon'
+set GD_Weap_AssaultRifle.ManufacturerMaterials.Mat_Dahl_3 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'
+set GD_Weap_AssaultRifle.ManufacturerMaterials.Mat_Dahl_4 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_04_VeryRare'
+set GD_Weap_AssaultRifle.ManufacturerMaterials.Mat_Gearbox_1 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_01_Common'
+set GD_Weap_AssaultRifle.ManufacturerMaterials.Mat_Jakobs_1 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_01_Common'
+set GD_Weap_AssaultRifle.ManufacturerMaterials.Mat_Jakobs_2 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_02_Uncommon'
+set GD_Weap_AssaultRifle.ManufacturerMaterials.Mat_Jakobs_3 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'
+set GD_Weap_AssaultRifle.ManufacturerMaterials.Mat_Jakobs_4 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_04_VeryRare'
+set GD_Weap_AssaultRifle.ManufacturerMaterials.Mat_Jakobs_5_Legendary MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'
+set GD_Weap_AssaultRifle.ManufacturerMaterials.Mat_Torgue_1 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_01_Common'
+set GD_Weap_AssaultRifle.ManufacturerMaterials.Mat_Torgue_2 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_02_Uncommon'
+set GD_Weap_AssaultRifle.ManufacturerMaterials.Mat_Torgue_3 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'
+set GD_Weap_AssaultRifle.ManufacturerMaterials.Mat_Torgue_4 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_04_VeryRare'
+set GD_Weap_AssaultRifle.ManufacturerMaterials.Mat_Torgue_5_Legendary MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'
+set GD_Weap_AssaultRifle.ManufacturerMaterials.Mat_Vladof_1 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_01_Common'
+set GD_Weap_AssaultRifle.ManufacturerMaterials.Mat_Vladof_2 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_02_Uncommon'
+set GD_Weap_AssaultRifle.ManufacturerMaterials.Mat_Vladof_3 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'
+set GD_Weap_AssaultRifle.ManufacturerMaterials.Mat_Vladof_4 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_04_VeryRare'
+set GD_Weap_Launchers.ManufacturerMaterials.Mat_BanditMade_1 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_01_Common'
+set GD_Weap_Launchers.ManufacturerMaterials.Mat_BanditMade_2 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_02_Uncommon'
+set GD_Weap_Launchers.ManufacturerMaterials.Mat_BanditMade_3 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'
+set GD_Weap_Launchers.ManufacturerMaterials.Mat_BanditMade_4 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_04_VeryRare'
+set GD_Weap_Launchers.ManufacturerMaterials.Mat_BanditMade_5_Legendary MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'
+set GD_Weap_Launchers.ManufacturerMaterials.Mat_Maliwan_1 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_01_Common'
+set GD_Weap_Launchers.ManufacturerMaterials.Mat_Maliwan_2 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_02_Uncommon'
+set GD_Weap_Launchers.ManufacturerMaterials.Mat_Maliwan_3 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'
+set GD_Weap_Launchers.ManufacturerMaterials.Mat_Maliwan_4 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_04_VeryRare'
+set GD_Weap_Launchers.ManufacturerMaterials.Mat_Tediore_1 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_01_Common'
+set GD_Weap_Launchers.ManufacturerMaterials.Mat_Tediore_2 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_02_Uncommon'
+set GD_Weap_Launchers.ManufacturerMaterials.Mat_Tediore_3 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'
+set GD_Weap_Launchers.ManufacturerMaterials.Mat_Tediore_4 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_04_VeryRare'
+set GD_Weap_Launchers.ManufacturerMaterials.Mat_Torgue_1 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_01_Common'
+set GD_Weap_Launchers.ManufacturerMaterials.Mat_Torgue_2 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_02_Uncommon'
+set GD_Weap_Launchers.ManufacturerMaterials.Mat_Torgue_3 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'
+set GD_Weap_Launchers.ManufacturerMaterials.Mat_Torgue_4 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_04_VeryRare'
+set GD_Weap_Launchers.ManufacturerMaterials.Mat_Torgue_5_Legendary MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'
+set GD_Weap_Launchers.ManufacturerMaterials.Mat_Vladof_1 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_01_Common'
+set GD_Weap_Launchers.ManufacturerMaterials.Mat_Vladof_2 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_02_Uncommon'
+set GD_Weap_Launchers.ManufacturerMaterials.Mat_Vladof_3 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'
+set GD_Weap_Launchers.ManufacturerMaterials.Mat_Vladof_4 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_04_VeryRare'
+set GD_Weap_Launchers.ManufacturerMaterials.Mat_Vladof_5_Legendary MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'
+set GD_Weap_Pistol.ManufacturerMaterials.Mat_Bandit_1 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_01_Common'
+set GD_Weap_Pistol.ManufacturerMaterials.Mat_Bandit_2 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_02_Uncommon'
+set GD_Weap_Pistol.ManufacturerMaterials.Mat_Bandit_3 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'
+set GD_Weap_Pistol.ManufacturerMaterials.Mat_Bandit_4 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_04_VeryRare'
+set GD_Weap_Pistol.ManufacturerMaterials.Mat_Dahl_1 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_01_Common'
+set GD_Weap_Pistol.ManufacturerMaterials.Mat_Dahl_1_Starter MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_01_Common'
+set GD_Weap_Pistol.ManufacturerMaterials.Mat_Dahl_2 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_02_Uncommon'
+set GD_Weap_Pistol.ManufacturerMaterials.Mat_Dahl_3 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'
+set GD_Weap_Pistol.ManufacturerMaterials.Mat_Dahl_4 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_04_VeryRare'
+set GD_Weap_Pistol.ManufacturerMaterials.Mat_Hyperion_1 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_01_Common'
+set GD_Weap_Pistol.ManufacturerMaterials.Mat_Hyperion_2 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_02_Uncommon'
+set GD_Weap_Pistol.ManufacturerMaterials.Mat_Hyperion_3 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'
+set GD_Weap_Pistol.ManufacturerMaterials.Mat_Hyperion_4 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_04_VeryRare'
+set GD_Weap_Pistol.ManufacturerMaterials.Mat_Hyperion_5_Legendary MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'
+set GD_Weap_Pistol.ManufacturerMaterials.Mat_Jakobs_1 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_01_Common'
+set GD_Weap_Pistol.ManufacturerMaterials.Mat_Jakobs_2 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_02_Uncommon'
+set GD_Weap_Pistol.ManufacturerMaterials.Mat_Jakobs_3 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'
+set GD_Weap_Pistol.ManufacturerMaterials.Mat_Jakobs_4 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_04_VeryRare'
+set GD_Weap_Pistol.ManufacturerMaterials.Mat_Jakobs_5_Legendary MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'
+set GD_Weap_Pistol.ManufacturerMaterials.Mat_Maliwan_1 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_01_Common'
+set GD_Weap_Pistol.ManufacturerMaterials.Mat_Maliwan_2 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_02_Uncommon'
+set GD_Weap_Pistol.ManufacturerMaterials.Mat_Maliwan_3 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'
+set GD_Weap_Pistol.ManufacturerMaterials.Mat_Maliwan_4 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_04_VeryRare'
+set GD_Weap_Pistol.ManufacturerMaterials.Mat_Old_Hyperion_1 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_01_Common'
+set GD_Weap_Pistol.ManufacturerMaterials.Mat_Old_Hyperion_2 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_02_Uncommon'
+set GD_Weap_Pistol.ManufacturerMaterials.Mat_Old_Hyperion_3 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'
+set GD_Weap_Pistol.ManufacturerMaterials.Mat_Old_Hyperion_4 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_04_VeryRare'
+set GD_Weap_Pistol.ManufacturerMaterials.Mat_Tediore_1 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_01_Common'
+set GD_Weap_Pistol.ManufacturerMaterials.Mat_Tediore_2 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_02_Uncommon'
+set GD_Weap_Pistol.ManufacturerMaterials.Mat_Tediore_3 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'
+set GD_Weap_Pistol.ManufacturerMaterials.Mat_Tediore_4 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_04_VeryRare'
+set GD_Weap_Pistol.ManufacturerMaterials.Mat_Torgue_1 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_01_Common'
+set GD_Weap_Pistol.ManufacturerMaterials.Mat_Torgue_2 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_02_Uncommon'
+set GD_Weap_Pistol.ManufacturerMaterials.Mat_Torgue_3 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'
+set GD_Weap_Pistol.ManufacturerMaterials.Mat_Torgue_4 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_04_VeryRare'
+set GD_Weap_Pistol.ManufacturerMaterials.Mat_Torgue_5_Legendary MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'
+set GD_Weap_Pistol.ManufacturerMaterials.Mat_Vladof_1 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_01_Common'
+set GD_Weap_Pistol.ManufacturerMaterials.Mat_Vladof_2 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_02_Uncommon'
+set GD_Weap_Pistol.ManufacturerMaterials.Mat_Vladof_3 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'
+set GD_Weap_Pistol.ManufacturerMaterials.Mat_Vladof_4 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_04_VeryRare'
+set GD_Weap_SMG.ManufacturerMaterials.Mat_Bandit_1 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_01_Common'
+set GD_Weap_SMG.ManufacturerMaterials.Mat_Bandit_2 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_02_Uncommon'
+set GD_Weap_SMG.ManufacturerMaterials.Mat_Bandit_3 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'
+set GD_Weap_SMG.ManufacturerMaterials.Mat_Bandit_4 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_04_VeryRare'
+set GD_Weap_SMG.ManufacturerMaterials.Mat_Dahl_1 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_01_Common'
+set GD_Weap_SMG.ManufacturerMaterials.Mat_Dahl_2 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_02_Uncommon'
+set GD_Weap_SMG.ManufacturerMaterials.Mat_Dahl_3 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'
+set GD_Weap_SMG.ManufacturerMaterials.Mat_Dahl_3_Fridgia MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'
+set GD_Weap_SMG.ManufacturerMaterials.Mat_Dahl_4 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_04_VeryRare'
+set GD_Weap_SMG.ManufacturerMaterials.Mat_Gearbox_1 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_01_Common'
+set GD_Weap_SMG.ManufacturerMaterials.Mat_Hyperion_1 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_01_Common'
+set GD_Weap_SMG.ManufacturerMaterials.Mat_Hyperion_2 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_02_Uncommon'
+set GD_Weap_SMG.ManufacturerMaterials.Mat_Hyperion_3 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'
+set GD_Weap_SMG.ManufacturerMaterials.Mat_Hyperion_4 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_04_VeryRare'
+set GD_Weap_SMG.ManufacturerMaterials.Mat_Hyperion_5_Legendary MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'
+set GD_Weap_SMG.ManufacturerMaterials.Mat_Maliwan_1 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_01_Common'
+set GD_Weap_SMG.ManufacturerMaterials.Mat_Maliwan_2 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_02_Uncommon'
+set GD_Weap_SMG.ManufacturerMaterials.Mat_Maliwan_3 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'
+set GD_Weap_SMG.ManufacturerMaterials.Mat_Maliwan_3_Frostfire MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'
+set GD_Weap_SMG.ManufacturerMaterials.Mat_Maliwan_4 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_04_VeryRare'
+set GD_Weap_SMG.ManufacturerMaterials.Mat_Maliwan_5_Legendary MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'
+set GD_Weap_SMG.ManufacturerMaterials.Mat_Old_Hyperion_1 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_01_Common'
+set GD_Weap_SMG.ManufacturerMaterials.Mat_Old_Hyperion_2 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_02_Uncommon'
+set GD_Weap_SMG.ManufacturerMaterials.Mat_Old_Hyperion_3 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'
+set GD_Weap_SMG.ManufacturerMaterials.Mat_Old_Hyperion_4 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_04_VeryRare'
+set GD_Weap_SMG.ManufacturerMaterials.Mat_Tedior_1 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_01_Common'
+set GD_Weap_SMG.ManufacturerMaterials.Mat_Tedior_2 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_02_Uncommon'
+set GD_Weap_SMG.ManufacturerMaterials.Mat_Tedior_3 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'
+set GD_Weap_SMG.ManufacturerMaterials.Mat_Tedior_4 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_04_VeryRare'
+set GD_Weap_SMG.ManufacturerMaterials.Mat_Tedior_5_Legendary MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'
+set GD_Weap_Shotgun.ManufacturerMaterials.Mat_Bandit_1 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_01_Common'
+set GD_Weap_Shotgun.ManufacturerMaterials.Mat_Bandit_2 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_02_Uncommon'
+set GD_Weap_Shotgun.ManufacturerMaterials.Mat_Bandit_3 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'
+set GD_Weap_Shotgun.ManufacturerMaterials.Mat_Bandit_4 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_04_VeryRare'
+set GD_Weap_Shotgun.ManufacturerMaterials.Mat_Bandit_5_Legendary MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'
+set GD_Weap_Shotgun.ManufacturerMaterials.Mat_Hyperion_1 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_01_Common'
+set GD_Weap_Shotgun.ManufacturerMaterials.Mat_Hyperion_2 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_02_Uncommon'
+set GD_Weap_Shotgun.ManufacturerMaterials.Mat_Hyperion_3 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'
+set GD_Weap_Shotgun.ManufacturerMaterials.Mat_Hyperion_4 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_04_VeryRare'
+set GD_Weap_Shotgun.ManufacturerMaterials.Mat_Hyperion_5_Legendary MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'
+set GD_Weap_Shotgun.ManufacturerMaterials.Mat_Jakobs_1 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_01_Common'
+set GD_Weap_Shotgun.ManufacturerMaterials.Mat_Jakobs_2 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_02_Uncommon'
+set GD_Weap_Shotgun.ManufacturerMaterials.Mat_Jakobs_3 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'
+set GD_Weap_Shotgun.ManufacturerMaterials.Mat_Jakobs_4 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_04_VeryRare'
+set GD_Weap_Shotgun.ManufacturerMaterials.Mat_Jakobs_5_Legendary MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'
+set GD_Weap_Shotgun.ManufacturerMaterials.Mat_Old_Hyperion_1 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_01_Common'
+set GD_Weap_Shotgun.ManufacturerMaterials.Mat_Old_Hyperion_2 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_02_Uncommon'
+set GD_Weap_Shotgun.ManufacturerMaterials.Mat_Old_Hyperion_3 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'
+set GD_Weap_Shotgun.ManufacturerMaterials.Mat_Old_Hyperion_4 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_04_VeryRare'
+set GD_Weap_Shotgun.ManufacturerMaterials.Mat_Tediore_1 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_01_Common'
+set GD_Weap_Shotgun.ManufacturerMaterials.Mat_Tediore_2 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_02_Uncommon'
+set GD_Weap_Shotgun.ManufacturerMaterials.Mat_Tediore_3 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'
+set GD_Weap_Shotgun.ManufacturerMaterials.Mat_Tediore_4 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_04_VeryRare'
+set GD_Weap_Shotgun.ManufacturerMaterials.Mat_Torgue_1 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_01_Common'
+set GD_Weap_Shotgun.ManufacturerMaterials.Mat_Torgue_2 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_02_Uncommon'
+set GD_Weap_Shotgun.ManufacturerMaterials.Mat_Torgue_3 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'
+set GD_Weap_Shotgun.ManufacturerMaterials.Mat_Torgue_4 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_04_VeryRare'
+set GD_Weap_Shotgun.ManufacturerMaterials.Mat_Torgue_5_Legendary MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'
+set GD_Weap_SniperRifles.ManufacturerMaterials.Mat_Gearbox_1 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_01_Common'
+set GD_Weap_SniperRifles.ManufacturerMaterials.Material_Dahl_1 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_01_Common'
+set GD_Weap_SniperRifles.ManufacturerMaterials.Material_Dahl_2 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_02_Uncommon'
+set GD_Weap_SniperRifles.ManufacturerMaterials.Material_Dahl_3 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'
+set GD_Weap_SniperRifles.ManufacturerMaterials.Material_Dahl_4 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_04_VeryRare'
+set GD_Weap_SniperRifles.ManufacturerMaterials.Material_Dahl_5_Legendary MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'
+set GD_Weap_SniperRifles.ManufacturerMaterials.Material_Hyperion_1 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_01_Common'
+set GD_Weap_SniperRifles.ManufacturerMaterials.Material_Hyperion_2 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_02_Uncommon'
+set GD_Weap_SniperRifles.ManufacturerMaterials.Material_Hyperion_3 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'
+set GD_Weap_SniperRifles.ManufacturerMaterials.Material_Hyperion_3_FremingtonsEdge MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'
+set GD_Weap_SniperRifles.ManufacturerMaterials.Material_Hyperion_4 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_04_VeryRare'
+set GD_Weap_SniperRifles.ManufacturerMaterials.Material_Hyperion_5_Legendary MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'
+set GD_Weap_SniperRifles.ManufacturerMaterials.Material_Jakobs_1 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_01_Common'
+set GD_Weap_SniperRifles.ManufacturerMaterials.Material_Jakobs_2 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_02_Uncommon'
+set GD_Weap_SniperRifles.ManufacturerMaterials.Material_Jakobs_3 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'
+set GD_Weap_SniperRifles.ManufacturerMaterials.Material_Jakobs_4 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_04_VeryRare'
+set GD_Weap_SniperRifles.ManufacturerMaterials.Material_Jakobs_5_Legendary MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'
+set GD_Weap_SniperRifles.ManufacturerMaterials.Material_Maliwan_1 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_01_Common'
+set GD_Weap_SniperRifles.ManufacturerMaterials.Material_Maliwan_2 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_02_Uncommon'
+set GD_Weap_SniperRifles.ManufacturerMaterials.Material_Maliwan_3 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'
+set GD_Weap_SniperRifles.ManufacturerMaterials.Material_Maliwan_4 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_04_VeryRare'
+set GD_Weap_SniperRifles.ManufacturerMaterials.Material_Maliwan_5_Legendary MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'
+set GD_Weap_SniperRifles.ManufacturerMaterials.Material_Old_Hyperion_1 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_01_Common'
+set GD_Weap_SniperRifles.ManufacturerMaterials.Material_Old_Hyperion_2 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_02_Uncommon'
+set GD_Weap_SniperRifles.ManufacturerMaterials.Material_Old_Hyperion_3 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'
+set GD_Weap_SniperRifles.ManufacturerMaterials.Material_Old_Hyperion_4 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_04_VeryRare'
+set GD_Weap_SniperRifles.ManufacturerMaterials.Material_Vladof_1 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_01_Common'
+set GD_Weap_SniperRifles.ManufacturerMaterials.Material_Vladof_2 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_02_Uncommon'
+set GD_Weap_SniperRifles.ManufacturerMaterials.Material_Vladof_3 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'
+set GD_Weap_SniperRifles.ManufacturerMaterials.Material_Vladof_4 MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_04_VeryRare'
+set gd_cork_weap_assaultrifle.ManufacturerMaterials.Mat_Dahl_5_Legendary_MajorTom MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'
+set gd_cork_weap_assaultrifle.ManufacturerMaterials.Mat_Jakobs_3_Wallop MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'
+set gd_cork_weap_assaultrifle.ManufacturerMaterials.Mat_Vladof_3_Hail MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'
+set gd_cork_weap_assaultrifle.ManufacturerMaterials.Mat_Vladof_3_IceScream MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'
+set gd_cork_weap_assaultrifle.ManufacturerMaterials.Mat_Vladof_3_OlPainful MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_03_Rare'
+set gd_cork_weap_assaultrifle.ManufacturerMaterials.Mat_Vladof_5_Legendary_Shredifier MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'
+set GD_Weap_Launchers.Name.Prefix.Prefix__Rocket MonetaryValueMod None
+set GD_Weap_Launchers.Name.Prefix.Prefix_Elemental_Corrosive MonetaryValueMod None
+set GD_Weap_Launchers.Name.Prefix.Prefix_Elemental_Ice MonetaryValueMod None
+set GD_Weap_Launchers.Name.Prefix.Prefix_Elemental_Incendiary MonetaryValueMod None
+set GD_Weap_Launchers.Name.Prefix.Prefix_Elemental_Shock MonetaryValueMod None
+set GD_Weap_Launchers.Name.Prefix_Maliwan.Prefix_BodyMod1_Mag MonetaryValueMod None
+set GD_Weap_Launchers.Name.Prefix_Maliwan.Prefix_BodyMod2_Accuracy MonetaryValueMod None
+set GD_Weap_Launchers.Name.Prefix_Maliwan.Prefix_Elemental_Corrosive MonetaryValueMod None
+set GD_Weap_Launchers.Name.Prefix_Maliwan.Prefix_Elemental_Ice MonetaryValueMod None
+set GD_Weap_Launchers.Name.Prefix_Maliwan.Prefix_Elemental_Incendiary MonetaryValueMod None
+set GD_Weap_Launchers.Name.Prefix_Maliwan.Prefix_Elemental_Shock MonetaryValueMod None
+set GD_Weap_Launchers.Name.Prefix_Maliwan.Prefix_Grip1_Blade MonetaryValueMod None
+set GD_Weap_Launchers.Name.Prefix_Maliwan.Prefix_Gripper_Reload MonetaryValueMod None
+set GD_Weap_Launchers.Name.Prefix_Maliwan.Prefix_Handle_SwapSpeed MonetaryValueMod None
+set GD_Weap_Launchers.Name.Prefix_Maliwan.Prefix_StockCover_RocketSpeed MonetaryValueMod None
+set GD_Weap_Launchers.Name.Prefix_Maliwan.Prefix_StockTube_FireRate MonetaryValueMod None
+set GD_Weap_Launchers.Name.Prefix_Maliwan.Prefix_TipCover_Damage MonetaryValueMod None
+set GD_Weap_Launchers.Name.Prefix_Scav.Prefix_BodyMod1_Mag MonetaryValueMod None
+set GD_Weap_Launchers.Name.Prefix_Scav.Prefix_BodyMod2_Accuracy MonetaryValueMod None
+set GD_Weap_Launchers.Name.Prefix_Scav.Prefix_Elemental_Corrosive MonetaryValueMod None
+set GD_Weap_Launchers.Name.Prefix_Scav.Prefix_Elemental_Ice MonetaryValueMod None
+set GD_Weap_Launchers.Name.Prefix_Scav.Prefix_Elemental_Incendiary MonetaryValueMod None
+set GD_Weap_Launchers.Name.Prefix_Scav.Prefix_Elemental_Shock MonetaryValueMod None
+set GD_Weap_Launchers.Name.Prefix_Scav.Prefix_Grip1_Blade MonetaryValueMod None
+set GD_Weap_Launchers.Name.Prefix_Scav.Prefix_Gripper_Reload MonetaryValueMod None
+set GD_Weap_Launchers.Name.Prefix_Scav.Prefix_Handle_SwapSpeed MonetaryValueMod None
+set GD_Weap_Launchers.Name.Prefix_Scav.Prefix_Rocket MonetaryValueMod None
+set GD_Weap_Launchers.Name.Prefix_Scav.Prefix_StockCover_RocketSpeed MonetaryValueMod None
+set GD_Weap_Launchers.Name.Prefix_Scav.Prefix_StockTube_FireRate MonetaryValueMod None
+set GD_Weap_Launchers.Name.Prefix_Scav.Prefix_TipCover_Damage MonetaryValueMod None
+set GD_Weap_Launchers.Name.Prefix_Tediore.Prefix_BodyMod1_Mag MonetaryValueMod None
+set GD_Weap_Launchers.Name.Prefix_Tediore.Prefix_BodyMod2_Accuracy MonetaryValueMod None
+set GD_Weap_Launchers.Name.Prefix_Tediore.Prefix_Elemental_Corrosive MonetaryValueMod None
+set GD_Weap_Launchers.Name.Prefix_Tediore.Prefix_Elemental_Ice MonetaryValueMod None
+set GD_Weap_Launchers.Name.Prefix_Tediore.Prefix_Elemental_Incendiary MonetaryValueMod None
+set GD_Weap_Launchers.Name.Prefix_Tediore.Prefix_Elemental_Shock MonetaryValueMod None
+set GD_Weap_Launchers.Name.Prefix_Tediore.Prefix_Grip1_Blade MonetaryValueMod None
+set GD_Weap_Launchers.Name.Prefix_Tediore.Prefix_Gripper_Reload MonetaryValueMod None
+set GD_Weap_Launchers.Name.Prefix_Tediore.Prefix_Handle_SwapSpeed MonetaryValueMod None
+set GD_Weap_Launchers.Name.Prefix_Tediore.Prefix_StockCover_RocketSpeed MonetaryValueMod None
+set GD_Weap_Launchers.Name.Prefix_Tediore.Prefix_StockTube_FireRate MonetaryValueMod None
+set GD_Weap_Launchers.Name.Prefix_Tediore.Prefix_TipCover_Damage MonetaryValueMod None
+set GD_Weap_Launchers.Name.Prefix_Torgue.Prefix_BodyMod1_Mag MonetaryValueMod None
+set GD_Weap_Launchers.Name.Prefix_Torgue.Prefix_BodyMod2_Accuracy MonetaryValueMod None
+set GD_Weap_Launchers.Name.Prefix_Torgue.Prefix_Grip1_Blade MonetaryValueMod None
+set GD_Weap_Launchers.Name.Prefix_Torgue.Prefix_Gripper_Reload MonetaryValueMod None
+set GD_Weap_Launchers.Name.Prefix_Torgue.Prefix_Handle_SwapSpeed MonetaryValueMod None
+set GD_Weap_Launchers.Name.Prefix_Torgue.Prefix_Rocket MonetaryValueMod None
+set GD_Weap_Launchers.Name.Prefix_Torgue.Prefix_StockCover_RocketSpeed MonetaryValueMod None
+set GD_Weap_Launchers.Name.Prefix_Torgue.Prefix_StockTube_FireRate MonetaryValueMod None
+set GD_Weap_Launchers.Name.Prefix_Torgue.Prefix_TipCover_Damage MonetaryValueMod None
+set GD_Weap_Launchers.Name.Prefix_Vladof.Prefix_BodyMod1_Mag MonetaryValueMod None
+set GD_Weap_Launchers.Name.Prefix_Vladof.Prefix_BodyMod2_Accuracy MonetaryValueMod None
+set GD_Weap_Launchers.Name.Prefix_Vladof.Prefix_Elemental_Corrosive MonetaryValueMod None
+set GD_Weap_Launchers.Name.Prefix_Vladof.Prefix_Elemental_Ice MonetaryValueMod None
+set GD_Weap_Launchers.Name.Prefix_Vladof.Prefix_Elemental_Incendiary MonetaryValueMod None
+set GD_Weap_Launchers.Name.Prefix_Vladof.Prefix_Elemental_Shock MonetaryValueMod None
+set GD_Weap_Launchers.Name.Prefix_Vladof.Prefix_Grip1_Blade MonetaryValueMod None
+set GD_Weap_Launchers.Name.Prefix_Vladof.Prefix_Gripper_Reload MonetaryValueMod None
+set GD_Weap_Launchers.Name.Prefix_Vladof.Prefix_Handle_SwapSpeed MonetaryValueMod None
+set GD_Weap_Launchers.Name.Prefix_Vladof.Prefix_StockCover_RocketSpeed MonetaryValueMod None
+set GD_Weap_Launchers.Name.Prefix_Vladof.Prefix_StockTube_FireRate MonetaryValueMod None
+set GD_Weap_Launchers.Name.Prefix_Vladof.Prefix_TipCover_Damage MonetaryValueMod None
+set GD_Weap_Launchers.Name.Title.Title_Launcher MonetaryValueMod None
+set GD_Weap_Launchers.Name.Title_Maliwan.Title_Launcher MonetaryValueMod None
+set GD_Weap_Launchers.Name.Title_Torgue.Title_Launcher MonetaryValueMod None
+set GD_Weap_Launchers.Name.Title_Vladof.Title_Launcher MonetaryValueMod None
+set GD_Cork_Weap_Launchers.Barrel.L_Barrel_Bandit_BadaBoom MonetaryValueMod None
+set GD_Cork_Weap_Launchers.Barrel.L_Barrel_Bandit_Thingy MonetaryValueMod None
+set GD_Cork_Weap_Launchers.Barrel.L_Barrel_Maliwan_Cryophobia MonetaryValueMod None
+set GD_Cork_Weap_Launchers.Barrel.L_Barrel_Torgue_Nukem MonetaryValueMod None
+set GD_Cork_Weap_Launchers.Barrel.L_Barrel_Vladof_Mongol MonetaryValueMod None
+set GD_Weap_Launchers.Exhaust.L_Exhaust_Bandit MonetaryValueMod None
+set GD_Weap_Launchers.Exhaust.L_Exhaust_Maliwan MonetaryValueMod None
+set GD_Weap_Launchers.Exhaust.L_Exhaust_Tediore MonetaryValueMod None
+set GD_Weap_Launchers.Exhaust.L_Exhaust_Torgue MonetaryValueMod None
+set GD_Weap_Launchers.Exhaust.L_Exhaust_Vladof MonetaryValueMod None
+set GD_Weap_Launchers.Grip.L_Grip_Bandit MonetaryValueMod None
+set GD_Weap_Launchers.Grip.L_Grip_Maliwan MonetaryValueMod None
+set GD_Weap_Launchers.Grip.L_Grip_Tediore MonetaryValueMod None
+set GD_Weap_Launchers.Grip.L_Grip_Torgue MonetaryValueMod None
+set GD_Weap_Launchers.Grip.L_Grip_Vladof MonetaryValueMod None
+set GD_Weap_Launchers.elemental.RL_Elemental_Corrosive MonetaryValueMod None
+set GD_Weap_Launchers.elemental.RL_Elemental_Fire MonetaryValueMod None
+set GD_Weap_Launchers.elemental.RL_Elemental_Ice MonetaryValueMod None
+set GD_Weap_Launchers.elemental.RL_Elemental_None MonetaryValueMod None
+set GD_Weap_Launchers.elemental.RL_Elemental_Shock MonetaryValueMod None
+set GD_Weap_AssaultRifle.Barrel.AR_Barrel_Vladof_Minigun MonetaryValueMod AttributeDefinition'GD_Economy.WeaponCostModifiers.Att_Part_06_Invaluable'
+set GD_Ma_Shields.Material.Material5_Legendary_Rerouter MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'
+set GD_Shields.Material.Material5_Legendary_AbsorptionNormal MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'
+set GD_Shields.Material.Material5_Legendary_AbsorptionShock MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'
+set GD_Shields.Material.Material5_Legendary_Nova_DeadlyBloom MonetaryValueMod AttributeDefinition'GD_Economy.Rarity.Att_Price_RarityMultiplier_05_Legendary'
+

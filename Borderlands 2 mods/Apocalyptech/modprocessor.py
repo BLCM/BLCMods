@@ -331,10 +331,10 @@ class ModProcessor(object):
         for (key, value) in self.gbx_hotfixes[self.patch_type] + self.hotfix_commands:
             keys.append(key)
             values.append(value)
-        self.line('set Transient.SparkServiceConfiguration_6 Keys ({})'.format(
+        self.line('set Transient.SparkServiceConfiguration_5 Keys ({})'.format(
             ','.join(['"{}"'.format(s) for s in keys])
             ), odf)
-        self.line('set Transient.SparkServiceConfiguration_6 Values ({})'.format(
+        self.line('set Transient.SparkServiceConfiguration_5 Values ({})'.format(
             ','.join(['"{}"'.format(s) for s in values])
             ), odf)
 
@@ -575,7 +575,7 @@ class ModProcessor(object):
         a filename with a version which pretends to have been
         written by BLCMM.
         """
-        with open(output_filename, 'w') as odf:
+        with open(output_filename, 'w', encoding='latin1') as odf:
             self.human_to_blcm(io.StringIO(modstring), odf)
 
     def register_str(self, name, line):
