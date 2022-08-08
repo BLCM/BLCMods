@@ -1,5 +1,26 @@
 # [ Oselands ]
 
+### How to install mod
+
+*This section will assume that you haven't installed a BL2 mod before. Feel free to skip steps if you have it set up already*
+
+**If you are completely new to modding**, please watch **[this video](https://www.youtube.com/watch?v=75NJ0G1sXmM)** done by Shadowevil to install the PythonSDK. This is required for both executing the mod in the game to apply its effects, and to make other mods work that Oselands requires to function.
+
+*You may also click [this link](https://bl-sdk.github.io/) for a written guide on how to install the SDK*
+
+**You then need to download the following PythonSDK mods if you have not already:**
+
+> **[Command Extensions](https://bl-sdk.github.io/mods/CommandExtensions/)** - Required in creation of new objects such as weapon parts
+
+> **[Sanity Saver](https://bl-sdk.github.io/mods/SanitySaver/)** - Required in saving new weapon parts onto your character
+
+*Credits to Apple1417 for these mods*
+
+
+---
+
+## Mod Content
+
 
 **Oselands** is a re-balance/overhaul of Borderlands 2 with the single goal of making the experience from start to finish more fun through polishing the gameplay experience and trying to make as many good options as possible. Obviously fun is subjective, but I've tried to cover as many bases as possible.
 
