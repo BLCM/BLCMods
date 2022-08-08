@@ -14,6 +14,8 @@
 
 > **[Sanity Saver](https://bl-sdk.github.io/mods/SanitySaver/)** - Required in saving new weapon parts onto your character
 
+Oselands **will not work** if you have not properly installed and enabled these 2 mods (mainly command extensions, but still)
+
 *Credits to Apple1417 for these mods*
 
 
