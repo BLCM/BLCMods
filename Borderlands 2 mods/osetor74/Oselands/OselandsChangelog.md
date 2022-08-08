@@ -10,9 +10,9 @@ Version 1.1.4.1 changelog
 
 Use CTRL+F to find a section easier.
 
-  #### Other mods included in Oselands
+  #### > Other mods included in Oselands
 
-  #### Global Changes
+  #### > Global Changes
 	> Stop scaling past 80
 	> Lower scaling
 	> Enemy health changes
@@ -24,19 +24,19 @@ Use CTRL+F to find a section easier.
 	> Miscellaneous
 
 
-  #### Relic Rework
+  #### > Relic Rework
 	> Randoms stats
 	> Uniques
 
 
-  #### Weapon Changes
+  #### > Weapon Changes
 	> Weapon types/Manufacturers
 	> Weapon Parts
 	> Effects of the changes (developer notes)
 	> Gun Additions / other changes
 	> Shield changes
 
-  #### Drop Changes
+  #### > Drop Changes
 	> Rarity odds
 	> Raid Boss Legendary Drops
 	> Dedicated legendary drop changes
@@ -50,14 +50,14 @@ Use CTRL+F to find a section easier.
 	> Haderax Chests
 	> Mimics
 
-  #### Enemy Changes
+  #### > Enemy Changes
 	> Raid Bosses
 
-  #### Vault Hunters
+  #### > Vault Hunters
 	> Overview
 	> Individual character changes (Search for the character's name)
 
-  #### Unique Items
+  #### > Unique Items
 	> *Completely new Legendary items*
 
 
