@@ -34,7 +34,7 @@ Things the mod includes to achieve that goal:
    - **A re-balance of guns**, both the base weapon types and a look at every unique gun, with the goal of making some individual items more unique compared to everything else. A few unique items have been replaced with new ones, a lot of them are redefined with new unique stats, and there's even a number of totally new legendary guns that don't replace anything. Try out items or weapon part combinations you would never use otherwise.
 
 
-   - **Refined/reworked character skill trees**. Not shying away from adding new stuff to characters, but also trying to keep the overall idea of the character the same wherever possible. More ways to build the same character is in 100% of situations a good thing. All of this also extends to every class mod.
+   - **Refined/reworked character skill trees**. Not shying away from adding new stuff to characters, but also trying to keep the overall idea of the character the same wherever possible; more ways to build the same character is in 100% of situations a good thing. All of this also extends to every class mod.
 
 *Gaige and Maya are the most changed ones, and i am the most proud of Maya. So that is what i would personally recommend playing the mod with if you're starting a new character. If you dislike Gaige then that is another thing you could try out and see if you like it more than vanilla.*
 
