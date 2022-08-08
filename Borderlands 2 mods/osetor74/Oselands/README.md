@@ -19,6 +19,9 @@ Oselands **will not work** if you have not properly installed and enabled these 
 *Credits to Apple1417 for these mods*
 
 
+**Once you have all this setup, you may download the Oselands.blcm file at the top of this page, and execute it in-game like any other text file mod**
+
+
 ---
 
 ## Mod Content
