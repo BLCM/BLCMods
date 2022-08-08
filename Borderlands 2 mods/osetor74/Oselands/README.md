@@ -65,3 +65,5 @@ Mods included:
   - More Chests on Pandora - Pretty self explanatory
   - Loot Midget World - Makes loot midgets be able to spawn basically anywhere
   - Catapult First - smaller mod that simply makes it so the bandit technical will always be set to the barrel catapult.
+
+*It goes without saying that all credits goes to each of the creators of these mods. I do not own any of it.*
