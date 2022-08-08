@@ -10,6 +10,8 @@ Version 1.1.4.1 changelog
 
 Use CTRL+F to find a section easier.
 
+---
+
   #### > Other mods included in Oselands
 
   #### > Global Changes
@@ -61,7 +63,7 @@ Use CTRL+F to find a section easier.
 	> *Completely new Legendary items*
 
 
-
+---
 
 
 ============= [ Other Mods Included ] =============
