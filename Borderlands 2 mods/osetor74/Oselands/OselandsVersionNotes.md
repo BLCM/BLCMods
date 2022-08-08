@@ -1,3 +1,43 @@
+=============== [ 1.1.4.2 ] ===============
+
+
+	- Released the mod on GitHub
+
+
+	- Integrated the No Space Cowboy mod by ZetaDaemon into oselands
+		- Much like No More Orders, makes it so you don't need to have the Space Cowboy side quest active to get the loot midget spawn in Dahl Abandon
+
+
+	- Made the player immune to being afflicted with slag status effects
+
+
+		== Unique item changes ==
+
+	- Changed the visual barrel of Mongol and World Piercer
+
+
+	- Avenger
+		-Added a new skin
+		-increased fire rate
+		-Made the reload stay in one place like standard bouncing betties rather than have it bounce forward.
+		-Increased the damage of the bouncing betty bullets
+
+	- Tweaked the skin of the Unforgiven
+
+	- Patience
+		-Rebalanced stats
+		-The duration of the damage penalty when you shoot the gun is now shown on your hud
+		-The damage penalty now gets reduced over time rather than a binary choice of if you have the penalty or not
+			This is linear; every 1/5th of the duration will reduce that penalty by 1/5th of the full value
+
+	- Reworked Gub
+		-Reduced from 3 pellets per shot to 1
+		-Reduce ammo cost from 3 per shot to 2
+		-Increased Base Damage and DoT Damage
+		-Highly increased splash radius, and made it have a guaranteed chance of applying a status effect
+
+
+
 =============== [ 1.1.4.1 ] ===============
 
 	- Added a thing in the last update to apply the slower enemy bullet stuff to No-Beard's stinkpot
