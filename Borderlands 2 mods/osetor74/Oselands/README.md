@@ -2,10 +2,6 @@
 
 **Oselands** is a re-balance/overhaul of Borderlands 2 with the single goal of making the experience from start to finish more fun through polishing the gameplay experience and trying to make as many good options as possible. Obviously fun is subjective, but I've tried to cover as many bases as possible.
 
-**Scroll down for a slightly more detailed summary of the mod**
-
-## ModCabinet info
-
 The following links are meant solely for if you are within the ModCabinet page for the mod:
 
 > **[Main Page](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/osetor74/Oselands)** - Full summary of the mod and **instructions on how to install it**. If you are already there, this link is useless.
@@ -13,6 +9,8 @@ The following links are meant solely for if you are within the ModCabinet page f
 > **[Full Changelog](https://github.com/BLCM/BLCMods/blob/master/Borderlands%202%20mods/osetor74/Oselands/OselandsChangelog.md)**
 
 > **[Version Notes](https://github.com/BLCM/BLCMods/blob/master/Borderlands%202%20mods/osetor74/Oselands/OselandsVersionNotes.md)** - Changes separated by the version they came in
+
+**If you are already on the main page, scroll down for a slightly more detailed summary of the mod**
 
 
 ### DISCLAIMER
