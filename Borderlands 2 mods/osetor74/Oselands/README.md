@@ -2,7 +2,7 @@
 
 The following links are meant solely for if you are within the ModCabinet page for the mod:
 
-> **[Main Page](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/osetor74/Oselands)** - Full summary of the mod and also has links into the other 2 things below. If you are already there, this link is useless.
+> **[Main Page](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/osetor74/Oselands)** - Full summary of the mod and **instructions on how to install it**. If you are already there, this link is useless.
 
 > **[Full Changelog](https://github.com/BLCM/BLCMods/blob/master/Borderlands%202%20mods/osetor74/Oselands/OselandsChangelog.md)**
 
