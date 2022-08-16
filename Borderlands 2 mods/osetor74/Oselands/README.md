@@ -1,4 +1,4 @@
-### ModCabinet info
+## ModCabinet info
 
 The following links are meant solely for if you are within the ModCabinet page for the mod:
 
