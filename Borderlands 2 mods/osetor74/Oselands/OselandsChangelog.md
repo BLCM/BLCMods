@@ -1,6 +1,6 @@
 ## ============= [ Oselands ] =============
 
-Version 1.1.4.1 changelog
+Version 1.1.5 changelog
 
 
  >**This is an extensive changelog with (most) changes within the mod.**
