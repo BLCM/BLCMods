@@ -1,6 +1,6 @@
 ## ============= [ Oselands ] =============
 
-Version 1.1.4.1 changelog
+Version 1.1.5 changelog
 
 
  >**This is an extensive changelog with (most) changes within the mod.**
@@ -27,7 +27,7 @@ Use CTRL+F to find a section easier.
 
 
   #### > Relic Rework
-	> Randoms stats
+	> Random stats
 	> Uniques
 
 
@@ -248,6 +248,11 @@ Use CTRL+F to find a section easier.
 		Blood of Terramorphous
 			-Only drops in UVHM
 			-Grants immunity to fire DoT, akin to a shield. Plus its normal health regen.
+
+
+		Deathless
+			-Massive boost to shield capacity and recharge rate
+			-Health is drained while you are above 10% HP
 
 		
 		Blood of the Ancients
@@ -1204,8 +1209,9 @@ Use CTRL+F to find a section easier.
 
 
 		> Beartrap (Bandit shotgun) - Der Monstrositat
-			-3 pellets, 3 ammo per shot.
-			-Essentially shoots a horizontal beam that continuously deals damage when passing through enemies
+			- 3 pellets, 3 ammo per shot.
+			- on hit, pellets create 7 additional pellets in a ring around the initial impact,
+			  which converge in the center and keep flying until hitting something
 
 
 		> Tigris (Jakobs shotgun) - Sheriff of Lynchwood
