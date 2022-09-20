@@ -27,7 +27,7 @@ Use CTRL+F to find a section easier.
 
 
   #### > Relic Rework
-	> Randoms stats
+	> Random stats
 	> Uniques
 
 
