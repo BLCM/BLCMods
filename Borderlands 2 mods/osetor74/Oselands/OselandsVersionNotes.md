@@ -1,3 +1,117 @@
+=============== [ 1.1.5 ] ===============
+
+	- Fixed Axton's Shock Trooper class mod not boosting electrocute damage properly
+		(it was boosting fire DoT instead of shock DoT, so it didnt show up in the card)
+
+
+	- Made it so you can accept Master Gee's quest immediately after the final story mission of the DLC
+	  instead of needing to kill Hyperius first
+
+	- Ported over a change from BL2.5 that makes it so Master Gee can not fit in the small cavern opening,
+	  meaning you can no longer gate crush him
+		(the fight is better by itself tho, trust me)
+
+		- The times i've talked with the people behind 2.5 they've been open to stuff from that mod being reused elsewhere.
+		  So, while i didn't directly ask for permission for this specific thing, they've given off the vibe that it would be cool.
+		  If any of them decide to ask me to remove it, i shall
+
+		- This also only includes the changes to the hitboxes of Gee, not any of the visual changes that BL2.5 does to him.
+
+
+	- Corrected the health of Haderax
+		- The health was massively lowered (to the point of one-shotting easily) for loot testing purposes.
+		  Those changes are now fixed and it will now have the intended amount of health.
+
+	- Greatly lowered burst interval on Hyperion SMGs
+		- The main thing this affects rn is Daedalus to make it feel a lot better, but this future-proofs it for the chance that i make another one
+
+
+	- Updated all the weights on vendors for both the standard slots and IOTD
+		- Weights, especially in early levels, are more in your favor now. Way less white/green items after maybe level 15.
+
+	- Reduced the gun damage penalty on all hyperion parts and critical damage accessories
+		-Exception being the shotgun critical accessory
+
+
+		== Unique item changes ==
+
+	- Added a 'new' legendary relic: Deathless (replaces what would be the sniper damage Heart of the Ancients, which is the last of the bunch that have been unused)
+		-Forces your health to be at 10% value or lower at all times
+		-Massive boost to shield capacity and recharge rate
+
+	- Added new dedicated loot sources for the various legendary relics in Oselands:
+		- Ranger Emblem - Uranus*
+		- Death Toll - Cassius
+		- Medusa's Eye - Unmotivated Golem
+		- Red Hellion - Badassasaurus Rex
+		- Deathless - Immortal Skeletaur*
+
+		*Ranger Emblem no longer drops from Ghost
+		*Skeletaurs' chance to drop the Deathless is 3% instead of the standard 10% as they are a more common enemy.
+		 Every other one is 10%
+
+
+	- Added a new trophy item: Proof of a Hero
+		- An effervescent rarity relic that barely does anything
+		- Has a small chance to drop whenever you kill a raid boss (inlcuding OMGWTH), and will list the boss you got it from in its description
+		- The chance to drop it is the same across every raid boss
+
+			- Like mentioned above, this is a trophy item. A token of 'you got a cool thing'
+
+
+	- Mesa
+		-Increased both the base fire rate and the buff you get for aiming down
+
+
+	- Tunguska
+		-Massively reduced the self damage (but did not remove completely)
+
+
+	- Infinity
+		-Corrected status chance. Was waaaay higher than intended
+		-Gave the gun its unique dva accessory back
+
+
+	- Fireball
+		-Massively increased blast radius (~ +200%)
+		-Made the blast always guarantee a status effect
+		-Increased DoT damage
+
+
+	- Heart of the Ancients (the actual real one)
+		-Made the critical damage bonus show up as a proper stat on the card
+		-Made the critical damage bonus scale up with level and parts like other normal relic stats
+
+
+	- Sigil
+		-Gave the gun gemstone guns' bullet deflection
+		-The health regen effect now shows its duration on your hud
+
+	- Rupture
+		-Increased reload explosion damage by ~33%
+
+	- Beartrap
+		-Fully reworked functionality:
+
+			- 3 pellets, 3 ammo per shot.
+			- on hit, pellets create 7 additional pellets in a ring around the initial impact,
+			  which converge in the center and keep flying until hitting something
+
+
+	- New Materials given to the following items:
+		-Daedalus, Orb of Storms, Tigris,
+		 Sigil, Patience, Fate, Rupture,
+		 Laser (Sub)Machinegun, Ankheg*,
+		 Swordfish, Volcano*, Gubber,
+		 Blitz, Beartrap
+
+		* For everything except the marked items, you need to get a new version of
+		  the item for these changes to apply
+
+
+	- Did some small visual tweaking on the Bulwark of Purity and Retainer
+
+
 =============== [ 1.1.4.2 ] ===============
 
 
