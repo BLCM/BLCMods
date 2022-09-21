@@ -16,7 +16,7 @@ This mod is incompatible with Co-Op. Your game will crash.
 
 *This section will assume that you haven't installed a BL2 mod before. Feel free to skip steps if you have it set up already*
 
-**If you are completely new to modding**, please watch **[this video](https://www.youtube.com/watch?v=57WxvASCX70&t=1s)** done by Apple1417 to install the PythonSDK. This is required for both executing the mod in the game to apply its effects, and to make other mods work that Oselands requires to function.
+**If you are completely new to modding**, please watch **[this video](https://www.youtube.com/watch?v=57WxvASCX70&t=1s)** done by Apple1417 to install the PythonSDK. This is required for both executing the mod in the game to apply its effects, and to make other mods work that Improved Vendors requires to function.
 
 *You may also click [this link](https://bl-sdk.github.io/) for a written guide on how to install the SDK. Also leads to the video guide listed above.*
 
