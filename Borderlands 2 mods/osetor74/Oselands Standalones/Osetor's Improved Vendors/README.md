@@ -1,1 +1,37 @@
-Test
+# [Osetor's Improved Vendors]
+
+Like the name suggests, this mod is an improvement on the quality of vendors in Borderlands 2. It makes the contents of vendors scale in rarity based on the level of the area you are in, and theend result quickly becomes massively more favorable than vanilla.
+
+Additionally, gives the ability for quest reward unique weapons (and Fight For Sanctuary legendaries) to appear in vendors as well.
+
+
+### DISCLAIMER
+
+This mod is incompatible with Co-Op. Your game will crash.
+
+
+
+
+## How to install mod
+
+*This section will assume that you haven't installed a BL2 mod before. Feel free to skip steps if you have it set up already*
+
+**If you are completely new to modding**, please watch **[this video](https://www.youtube.com/watch?v=57WxvASCX70&t=1s)** done by Apple1417 to install the PythonSDK. This is required for both executing the mod in the game to apply its effects, and to make other mods work that Oselands requires to function.
+
+*You may also click [this link](https://bl-sdk.github.io/) for a written guide on how to install the SDK. Also leads to the video guide listed above.*
+
+**You then need to download the following PythonSDK mods if you have not already:**
+
+> **[Command Extensions](https://bl-sdk.github.io/mods/CommandExtensions/)** - Required in creation of new objects such as weapon parts
+
+Oselands **will not work** if you have not properly installed and enabled Command Extensions.
+
+*Credits to Apple1417 for this mods*
+
+
+**Once you have all this setup, please right click [this link](https://raw.githubusercontent.com/BLCM/BLCMods/master/Borderlands%202%20mods/osetor74/Oselands/Oselands.blcm) and save the mod file as Oselands.blcm**
+
+
+---
+
+## [ Mod Content ]
