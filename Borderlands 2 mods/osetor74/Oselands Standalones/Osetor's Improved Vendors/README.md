@@ -22,7 +22,7 @@ This mod is incompatible with Co-Op. Your game will crash.
 
 **You then need to download the following PythonSDK mods if you have not already:**
 
-> **[Command Extensions](https://bl-sdk.github.io/mods/CommandExtensions/)** - Required in creation of new objects such as weapon parts
+> **[Command Extensions](https://bl-sdk.github.io/mods/CommandExtensions/)** - Required in creation of new objects that this mod relies on.
 
 Oselands **will not work** if you have not properly installed and enabled Command Extensions.
 
