@@ -6,7 +6,7 @@ Adds a system to the game that allows you to set a level threshold that makes no
 *By default this is set to follow the vanilla lvl 80op10 cap, so you need to manually open the mod file using BLCMM to change it to something lower.*
 
 
-Also gives you options to increase XP gain across the whole game (set to 1.2x for enemies and 1.4x for quests by default), as well as an additional multipler to XP gain once you are beyond the level threshold mentioned above (set to 3x by default).
+Also gives you options to increase XP gain across the whole game (set to 1.2x for enemies and 1.4x for quests by default), as well as an additional multipiler to XP gain once you are beyond the level threshold mentioned above (set to 3x by default).
 
 
 ### DISCLAIMER
