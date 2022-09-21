@@ -44,6 +44,18 @@ Oselands **will not work** if you have not properly installed and enabled these 
 **Once you have all this setup, please right click [this link](https://raw.githubusercontent.com/BLCM/BLCMods/master/Borderlands%202%20mods/osetor74/Oselands/Oselands.blcm) and save the mod file as Oselands.blcm**
 
 
+## How to make the mod work
+
+Assuming you have followed the steps in the last section, you then need to execute the mod while in the main menu of the game.
+
+Open your console
+*(tilde by default when installing the PythonSDK. If you do not have a key that naturally creates a tilde then you should also install the Hex Multitool to manually set the console key to somethting else)*
+
+Then type in "exec Oselands.blcm" (assuming you didn't rename the file)
+
+After that, it should show you a notification that it is working.
+
+
 ---
 
 ## [ Mod Content ]
