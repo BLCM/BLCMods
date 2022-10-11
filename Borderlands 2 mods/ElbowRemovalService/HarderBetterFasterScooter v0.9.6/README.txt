@@ -16,7 +16,7 @@ Obviously, this mod is not to be run with BL2Reborn, UCP, Blassic, Oselands, Bor
 All locked categories are dependencies for other code.
 
 Credits:
-Kumakobi, Ezeith, Coleby, TheSaltySpitoon, Exotek, Apocalyptech, apple1417, ZxUxBxExR, Natsu235, splitzle, Our Lord And Savior Gabe Newell, Dr. Bones, Koby, FromDarkHell, Gronp, LightChaosman, Mike, Juso, Orudeon, Aaron0000, LaryIsland, ZetaDawmon, and all the members of the community patch team.
+Kumakobi, Ezeith, Coleby, TheSaltySpitoon, Exotek, Apocalyptech, apple1417, ZxUxBxExR, Natsu235, splitzle, Our Lord And Savior Gabe Newell, Dr. Bones, Koby, FromDarkHell, Gronp, LightChaosman, Mike, Juso, Orudeon, Aaron0000, LaryIsland, ZetaDaemon, and all the members of the community patch team.
 Special thanks to Shadowevil, Exotek, and LightChaosman.
 
 Discord server for the mod: https://discord.gg/CZ6Rg65uqm
