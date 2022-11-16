@@ -1,6 +1,6 @@
 # [Osetor's Improved Vendors]
 
-Like the name suggests, this mod is an improvement on the quality of vendors in Borderlands 2. It makes the contents of vendors scale in rarity based on the level of the area you are in, and theend result quickly becomes massively more favorable than vanilla.
+Like the name suggests, this mod is an improvement on the quality of vendors in Borderlands 2. It makes the contents of vendors scale in rarity based on the level of the area you are in, and thus very quickly becomes massively more favorable than vanilla.
 
 Additionally, gives the ability for quest reward unique weapons (and Fight For Sanctuary legendaries) to appear in vendors as well.
 
@@ -26,7 +26,7 @@ This mod is incompatible with Co-Op. Your game will crash.
 
 Oselands **will not work** if you have not properly installed and enabled Command Extensions.
 
-*Credits to Apple1417 for this mods*
+*Credits to Apple1417 for this mod*
 
 
 **Once you have all this setup, please right click the "OselandsVendors.blcm" at the top of this page and save the file as new**
