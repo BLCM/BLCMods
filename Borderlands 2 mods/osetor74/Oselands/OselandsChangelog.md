@@ -15,14 +15,14 @@ Use CTRL+F to find a section easier.
   #### > Other mods included in Oselands
 
   #### > Global Changes
-	> Stop scaling past 72
-	> Lower scaling
-	> UVHM Rebalance
-	> Element changes
-	> Player scaling changes
-	> Slower enemy bullets
-	> Vendor changes
-	> Miscellaneous
+	* Stop scaling past 72
+	* Lower scaling
+	* UVHM Rebalance
+	* Element changes
+	* Player scaling changes
+	* Slower enemy bullets
+	* Vendor changes
+	* Miscellaneous
 
 
   #### > Relic Rework
@@ -84,7 +84,7 @@ Use CTRL+F to find a section easier.
 	- No More Orders
 		- Removes the need to have Doctor's Orders active to make loot midgets spawn in the Wildlife Exploitation Preserve
 
-	- Better Fast Travel 
+	- Better Fast Travel
 		- Opens all the one-way Fast Travel stations to work like all the other ones
 
 	- More Chests on Pandora
@@ -100,11 +100,12 @@ Use CTRL+F to find a section easier.
 
 	> Stop scaling past 72
 
-		- Added a system where nothing scales their stats past (by default) level 72. If you open the mod file with BLCMM, you can choose betwee
-		  level 60, level 72, level 80 and reverting it back to vanilla OP10.
+		- Added a system where nothing scales their stats past (by default) level 72. If you open the mod file with BLCMM,
+		  you can choose betwee level 60, level 72, level 80 and reverting it back to vanilla OP10.
 
 		- an OP7 gun or shield will have the exact same stats as an op0 variant, same with enemy base health and damage.
-		  This means that you do not have to refarm items in OP levels at all. The items you get at the set threshold will carry you through every level.
+		  This means that you do not have to refarm items in OP levels at all. The items you get at the set threshold
+		  will carry you through every level.
 
 
 
@@ -145,8 +146,8 @@ Use CTRL+F to find a section easier.
 		  and removed shock DoT's inability to stack multiple times on the same enemy
 			- This should make it so they are all much more consistent between each other
 
-		- There is no longer any change in elemental damage when moving between playthroughs, and enemy health has been adjusted for
-		  elemental damage being so much lower now
+		- There is no longer any change in elemental damage when moving between playthroughs, and enemy health has
+		  been adjusted for elemental damage being so much lower now
 
 
 
@@ -196,7 +197,8 @@ Use CTRL+F to find a section easier.
 			(the secondary stat can't be the same as the main stat of the relic, so max health on a vitality relic, for example)
 
 		  This makes relics much more interesting and exciting to find, and more impactful from the very start.
-		  The goal is that uniques(/ancients) would offer a new opportunity rather than just be better (this is a common theme with me)
+		  The goal is that uniques(/ancients) would offer a new opportunity rather than just be better
+		  (this is a common theme with me)
 
 
 
@@ -225,12 +227,14 @@ Use CTRL+F to find a section easier.
 
 		Sheriff's Badge
 			-Legendary Rarity
-			-A large global fire rate buff (around the same values as vanilla, but not locked to pistols), and additional swap speed
+			-A large global fire rate buff (around the same values as vanilla, but not locked to pistols), and additional
+			 swap speed
 
 
 		Otto Idol
 			-Retains its health recovery aspect and the curse.
-			 However, it is much more powerful (40-50% hp gained on kill at the highest levels) at the cost of a part of your max health
+			 However, it is much more powerful (40-50% hp gained on kill at the highest levels) at the cost of a part of your
+			 max health
 
 
 		Ranger Emblem (Replacing the Winter is Over relic)
@@ -318,18 +322,19 @@ Use CTRL+F to find a section easier.
 
 		- Weapons now list their final crit damage on the item card instead of a % bonus compared to the base 2.0x multiplier
 
-		- I won't list every change like damage or fire rate differences, those can be found in-game. Just try different guns and see
-		  how they feel.
+		- I won't list every change like damage or fire rate differences, those can be found in-game. Just try different guns and
+		  see how they feel.
 
 			- Rarity changes
 				- Mag size and accuracy buffs from rarities has been removed
 
-				- In vanilla, the damage buffs from item rarities stacked with those from parts, which made +damage% parts
-				  less effective. This has been changed so that it boosts *base* damage, which means it will be multiplicative
-				  with those from weapon parts
+				- In vanilla, the damage buffs from item rarities stacked with those from parts, which made +damage%
+				  parts less effective. This has been changed so that it boosts *base* damage, which means it will be
+				  multiplicative with those from weapon parts
 
 				- The rarity damage increase has been changed from 24/48/72% to 15/30/45% for green/blue/purple
-					(Guns are more consistently good, damage parts are a tiny bit more effective, and player power in general is a bit higher)
+					(Guns are more consistently good, damage parts are a tiny bit more effective, and player power in
+					general is a bit higher)
 
 
 			- All base mag sizes for guns have generally been increased to compensate both for the previous change, as well as
@@ -340,7 +345,8 @@ Use CTRL+F to find a section easier.
 
 
 			- All bandit assault rifles, pistols and SMGs have 15% Double shot chance.
-			- Removed the aspect from blue+ bandit ARs where they would get a damage and reload penalty in exchange for higher mag
+			- Removed the aspect from blue+ bandit ARs where they would get a damage and reload penalty in exchange for higher
+			  mag
 
 
 			- Dahl pistols now have a base burst count of 3 while aiming, instead of 2
@@ -358,8 +364,8 @@ Use CTRL+F to find a section easier.
 			  listed under Global Changes > Element Changes
 
 
-			- Jakobs pistols have a chance to spawn with a Borderlands 1 Revolver style body, lowering their fire rate massively, while
-			  increasing base damage, and base critical damage from 2.5x to 3x
+			- Jakobs pistols have a chance to spawn with a Borderlands 1 Revolver style body, lowering their fire rate massively,
+			  while increasing base damage, and base critical damage from 2.5x to 3x
 
 
 			- Jakobs snipers are now always bolt-action, rather than semi auto for blue and purple+
@@ -367,16 +373,17 @@ Use CTRL+F to find a section easier.
 
 			- Sniper rifle critical damage is calculated differently now, focusing more on base crit rather than increased crit
 				- 3x base critical damage, 3.3x for Hyperion(+10%), 3.75x for Jakobs(+25%).	
-					-These will show in game as +50%, +65% and +88% as the card value is comparing it to the base 2x multiplier.
+					-These will show in game as +50%, +65% and +88% as the card value is comparing it to the base 2x
+					 multiplier.
 
-			- Gemstone skins now increase something related to the manufacturer's special effects, intead of being a critical damage bonus for everything.
-				Bandit gets increased double shott chance, Dahl gets increased burst count, etc.
+			- Gemstone skins now increase something related to the manufacturer's special effects, intead of being a critical
+			  damage bonus for everything. Bandit gets increased double shott chance, Dahl gets increased burst count, etc.
 
 
 	> Weapon Parts
 
-		- Weapon parts and their manufacturers still keep their identity for the most part. Jakobs are still high damage, low fire rate,
-		  tediore is low mag, quick reload, etc.
+		- Weapon parts and their manufacturers still keep their identity for the most part. Jakobs are still high damage, low fire
+		  rate, tediore is low mag, quick reload, etc.
 
 			- General
 
@@ -385,10 +392,11 @@ Use CTRL+F to find a section easier.
 					  increased burst for dahl guns on dahl barrels and SMG/Sniper stocks
 
 				- All parts (besides Vladof) now have some kind of small change to either DoT chance or DoT damage.
-					- This is to create some small variety with the listed numbers on guns. Maliwan is still the king of DoT.
+					- This is to create some small variety with the listed numbers on guns. Maliwan is still the king
+					  of DoT.
 
-				- Some stocks have gained small stat buffs to hopefully allow for more diversity. These are supposed to be treated as
-				  small bonuses, rather than a main focus. A nice extra.
+				- Some stocks have gained small stat buffs to hopefully allow for more diversity. These are supposed to be
+				  treated as small bonuses, rather than a main focus. A nice extra.
 
 				- Bandit and Torgue barrels and grips provide +25% Melee Damage.
 
@@ -430,7 +438,8 @@ Use CTRL+F to find a section easier.
 
 			- Torgue
 				- Grips have a damage buff at the cost of reload speed and accuracy
-				- Barrels have a small amount of increased mag size (Does not apply to ARs, since they use unique torgue barrels)
+				- Barrels have a small amount of increased mag size (Does not apply to ARs, since they use unique torgue
+				  barrels)
 				- Stocks have a small damage buff
 				- Has a small DoT damage penalty
 
@@ -450,8 +459,8 @@ Use CTRL+F to find a section easier.
 			- Bayonets now function similarly to shotguns' "General Boost" accessory, and the original shotgun accessory
 			  was replaced with something else. They still retain the +50% Melee Damage boost.
 
-			- Bullet Speed and Accuracy accessories were generally combined into one, and they all have additional fire rate at the cost of
-			  a small amount of reload speed (i.e Flying for dahl SMGs or swift for vladof ARs)
+			- Bullet Speed and Accuracy accessories were generally combined into one, and they all have additional fire rate
+			  at the cost of a small amount of reload speed (i.e Flying for dahl SMGs or swift for vladof ARs)
 
 			- Stability prefixes now have additional critical damage
 
@@ -467,8 +476,8 @@ Use CTRL+F to find a section easier.
 
 				-(for some guns this can be a buff, mainly high pellet shotguns like a ravager)
 
-				- the accessory, alongside any other part that just wouldn't work on a particular gun (like crit on a splatgun)
-				  has been removed from the part lists of that gun
+				- the accessory, alongside any other part that just wouldn't work on a particular gun (like crit on a
+				  splatgun) has been removed from the part lists of that gun
 
 			- SMGs accuracy accessory was replaced with a mag size accessory
 				-Includes new prefixes
@@ -479,8 +488,8 @@ Use CTRL+F to find a section easier.
 	> Effects of the changes  (developer notes)
 
 		- The purpose of these changes have been to try to make the guns you find and pick up much more appealing, and  finding a
-		  "good gun" is much easier. There will naturally be something better, but the gap in power should be smaller. This also means
-		  that you, the player, is just naturally better regardless of what you pick
+		  "good gun" is much easier. There will naturally be something better, but the gap in power should be smaller. This also
+		  means that you, the player, is just naturally better regardless of what you pick
 
 
 
@@ -526,7 +535,8 @@ Use CTRL+F to find a section easier.
 			- Special penalties have been removed, and maliwan's increased special has been slightly lowered.
 			  However, it still has the highest +Special
 
-			- Dahl parts now serve as a general-use part, giving a nice boost to the main 3 stats while not affecting special in any way
+			- Dahl parts now serve as a general-use part, giving a nice boost to the main 3 stats while not affecting special
+			  in any way
 
 			- Vladof parts now give a passive 10% movement speed each
 
@@ -539,17 +549,20 @@ Use CTRL+F to find a section easier.
 			> [E-Tech Shields]
 
 				- This mod introduces new shields under the E-Tech rarity.
-				  The whole gimmick with all of these is that, much like Rough Rider, they have 0 shield capacity but grant other bonuses
-				  instead, either to compensate for that lack of shield, or just giving the risk of sacrificing survivability
-				  to gain something else instead
+				  The whole gimmick with all of these is that, much like Rough Rider, they have 0 shield capacity but grant
+				  other bonuses instead, either to compensate for that lack of shield, or just giving the risk of
+				  sacrificing survivability to gain something else instead
 
-				Each E-Tech shield type has a 5% chance of dropping from a particular badass enemy type in the game, listed below:
+				  Each E-Tech shield type has a 5% chance of dropping from a particular badass enemy type in the game, listed
+				  below:
 
 				- Berserker shield (Bandit) - Badass Psychos
-					-Dealing or taking damage causes you enter a rage, gaining movement speed and life steal while your health drains very 						 quickly.
+					-Dealing or taking damage causes you enter a rage, gaining movement speed and life steal while your
+					health drains very quickly.
 
 				- Titan Heart Shield (Hyperion) - Badass Loaders
-					-Grants increased max health, and adds 10% of your maximum health value as amp damage to all your shots
+					-Grants increased max health, and adds 10% of your maximum health value as amp damage to all your
+					 shots
 
 				- Shatter Tank Shield (Pangolin) - Spiderant Kings/Queens (/their renamed versions in higher difficulties)
 					-Reduces max health on top of the 0 capacity, but grants flat health regen
@@ -605,14 +618,16 @@ Use CTRL+F to find a section easier.
 
 		- Voracidous now has a 25% chance to drop a random Gen2 Legendary Class Mod
 
-		- Dexiduous now drops 5 guaranteed legendaries every time you kill it, and an additional 5 chances of ~13% each that scale with OP levels
+		- Dexiduous now drops 5 guaranteed legendaries every time you kill it, and an additional 5 chances of ~13% each that scale
+		  with OP levels
 
 
 	> Knuckledragger
 
 		- Now drops a random white rarity pistol instead of always dropping a jakobs pistol
 
-		- The chest after knuckledragger now gives a random white rarity shotgun, in addition to a random white rarity AR, SMG or sniper
+		- The chest after knuckledragger now gives a random white rarity shotgun, in addition to a random white rarity AR, SMG or
+		  sniper
 
 
 
@@ -621,7 +636,8 @@ Use CTRL+F to find a section easier.
 		- Made it cost 20 Eridium, instead of golden keys
 
 		- Now throws out 3 items in front of it, instead of spawning items within the chest itself
-			- This also had the side effect of bypassing the need of watching the entire chest opening/closing animation to re-open it
+			- This also had the side effect of bypassing the need of watching the entire chest opening/closing animation to
+			  re-open it
 
 		- Now also gives you gemstone guns, legendaries, and blue-rarity class mods (since they are actually good).
 
@@ -656,7 +672,8 @@ Use CTRL+F to find a section easier.
 
 	> Uranus / Cassius
 
-		- The overall chance to drop legendaries was heavily reduced, though it still exists in a small capacity to keep an essence of vanilla
+		- The overall chance to drop legendaries was heavily reduced, though it still exists in a small capacity to keep an essence
+		  of vanilla
 
 
 	> Jimmy Jenkins / Loot Goon Goliaths / Muscles
@@ -686,9 +703,11 @@ Use CTRL+F to find a section easier.
 	> Raid Bosses
 
 		> All raid boss health (except dexi) has been reduced. Some of them by *very* substantial amounts.
-			- Partially due to the nerfs to the Bee shield. But also to hopefully make it way more flexible to use different kinds of items.
+			- Partially due to the nerfs to the Bee shield. But also to hopefully make it way more flexible to use different
+			  kinds of items.
 
-			- Voracidous's shield is lowered, but only in UVHM. I have not figured out how to lower it in the other 2 difficulties yet.
+			- Voracidous's shield is lowered, but only in UVHM. I have not figured out how to lower it in the other 2
+			  difficulties yet.
 
 			(While not a raid boss, these changes also applies to Badassasaurus Rex because fuck that enemy lmao)
 
@@ -732,7 +751,8 @@ Use CTRL+F to find a section easier.
 
 	> Overview
 		- Overall, characters are just better in every single way, both damage and survivability. With some exceptions.
-		- An overarching goal has been to give more opportunities to give said damage and survivability, spreading the sources for each around
+		- An overarching goal has been to give more opportunities to give said damage and survivability, spreading the sources for
+		  each around
 
 		- Every character has a 'passive bonus' for each of the 3 branches in their skill trees;
 			Every time a skill reaches 5 points, you gain some buff that is shared across every skill in that branch
@@ -860,7 +880,8 @@ Use CTRL+F to find a section easier.
 			Reworked to give +3% elemental damage (excluding explosive)
 
 		- New skill: Dying Flame
-			3-point skill in tier 2 that just has the vanilla Immolate effect, with doubled effect per point (60% at 3/3 instead of 50% at 5/5)
+			3-point skill in tier 2 that just has the vanilla Immolate effect, with doubled effect per point (60% at 3/3 instead
+			of 50% at 5/5)
 
 		- Helios
 			Renamed to Smite and now deals shock damage
@@ -1194,7 +1215,8 @@ Use CTRL+F to find a section easier.
 			Status chance reduced to 10% per point
 
 		- Delusional Damage reworked: Flametongue
-			Each melee attack now always applies an additional fire DoT on enemies. This has a chance of also lighting yourself on fire
+			Each melee attack now always applies an additional fire DoT on enemies. This has a chance of also lighting yourself
+			on fire
 
 
 
@@ -1204,10 +1226,11 @@ Use CTRL+F to find a section easier.
 	  i still want to keep some semblance of discovery. This part is here more for what you can expect. Some examples.
 
 
-	  Every unique gun has been looked over in some way. Some guns did not change at all, or in very small ways. Some guns were nerfed/buffed, some guns were
-	  readjusted to be closer to what they were in vanilla after indirect changes like through weapon types. A lot of guns were given a new identity,
-	  such as the Patriot now being a very slow, but high damage and high-mag vladof sniper. Some guns were replaced, like Seraphim being replaced with
-	  the Destroyer from Borderlands 1, making it a Dahl assault rifle that functions like a chopper when aiming down the sight.
+	  Every unique gun has been looked over in some way. Some guns did not change at all, or in very small ways. Some guns were
+	  nerfed/buffed, some guns were readjusted to be closer to what they were in vanilla after indirect changes like through
+	  weapon types. A lot of guns were given a new identity,  such as the Patriot now being a very slow, but high damage and
+	  high-mag vladof sniper. Some guns were replaced, like Seraphim being replaced with the Destroyer from Borderlands 1, making
+	  it a Dahl assault rifle that functions like a chopper when aiming down the sight.
 
 	  The power of each gun was, of course, looked over, and hopefully more things are more powerful than what they used to be.
 	  Try things out, use things you wouldn't otherwise. I especially recommend trying the items that are basically memes in vanilla.
@@ -1223,7 +1246,8 @@ Use CTRL+F to find a section easier.
 
 	> *Completely new Legendary items* (1.1.0)
 
-		Completely new items in the mod i will say the description of simply so that you know how you can play with the new toys and know what to expect
+		Completely new items in the mod i will say the description of simply so that you know how you can play with the new toys
+		and know what to expect
 
 
 
@@ -1238,16 +1262,19 @@ Use CTRL+F to find a section easier.
 
 		> Swordfish (Jakobs AR) - Assassins
 			-Good hip-fire accuracy.
-			-Aiming causes you to deplete all remaining ammo in your mag and increases the shot's damage by 50% for each ammo consumed
+			-Aiming causes you to deplete all remaining ammo in your mag and increases the shot's damage by 50% for each
+			 ammo consumed
 
 
 		> Sigil (Tediore Launcher) - Hyperius the Invincible
 			-Much faster innate swap speed.
-			-Shooting the gun grants you a buff for 5 seconds that heals 8% of your max HP per second instead of dealing damage. Effect does not stack.
+			-Shooting the gun grants you a buff for 5 seconds that heals 8% of your max HP per second instead of dealing damage.
+			 Effect does not stack.
 
 
 		> Blitz (Vladof Launcher) - Bunker
-			-Does not have the standard vladof free ammo effect, instead has an extremely high chance to not consume ammo per shot.
+			-Does not have the standard vladof free ammo effect, instead has an extremely high chance to not consume ammo per
+			 shot.
 			-Extremely fast fire rate, heavily lowered base damage.
 			-Always 1 mag.
 
@@ -1305,11 +1332,13 @@ Use CTRL+F to find a section easier.
 
 
 		> Pocket Salvo (Tediore Shotgun) - Mortar
-			-Shoots arcing projectiles that ricochet multiple times and create a large explosion on each ricochet, dealing +100% grenade splash
+			-Shoots arcing projectiles that ricochet multiple times and create a large explosion on each ricochet,
+			  dealing +100% grenade splash
 
 
 		> Gladiator (Hyperion Sniper) - Terramorphous the Invincible
-			-Applies a new Bleed status effect, dealing DoT and increasing the enemy's damage taken by 15%. This status effect can not stack
+			-Applies a new Bleed status effect, dealing DoT and increasing the enemy's damage taken by 15%.
+			 This status effect can not stack
 
 
 		> Quicksilver (Tediore SMG) - World Drop Only
