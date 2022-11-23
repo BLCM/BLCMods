@@ -68,7 +68,7 @@ Use CTRL+F to find a section easier.
 ---
 
 
-============= [ Other Mods Included ] =============
+## Other Mods Included
 
 	- Most of these mods are QoL mods that i believe make the game more fun/comfortable to play
 	- Credits of those that made the mods can be found in the mod file if you open it with BLCMM
@@ -96,7 +96,7 @@ Use CTRL+F to find a section easier.
 
 
 
-============= [ Global Changes ] =============
+## Global Changes
 
 	> Stop scaling past 72
 
@@ -187,7 +187,7 @@ Use CTRL+F to find a section easier.
 
 
 
-============= [ Relic Rework] =============
+## Relic Rework
 
 	> Random stats
 
@@ -311,7 +311,7 @@ Use CTRL+F to find a section easier.
 
 
 
-============= [ Weapon Changes ] ============= 
+## Weapon Changes
 
 
 	> Weapon Types/Manufacturers
@@ -557,7 +557,7 @@ Use CTRL+F to find a section easier.
 
 
 
-============= [ Drop Changes ] ============= 
+## Drop Changes
 
 	> Rarity odds
 
@@ -681,7 +681,7 @@ Use CTRL+F to find a section easier.
 
 
 
-============= [ Enemy Changes ] ============= 
+## Enemy Changes
 
 	> Raid Bosses
 
@@ -728,7 +728,7 @@ Use CTRL+F to find a section easier.
  
 
 
-============= [ Vault Hunters ] =============
+## Vault Hunters
 
 	> Overview
 		- Overall, characters are just better in every single way, both damage and survivability. With some exceptions.
@@ -1198,7 +1198,7 @@ Use CTRL+F to find a section easier.
 
 
 
-============= [ Unique Items ] =============
+## Unique Items
 
 	> Now, this will not be a full list of all the changes to every unique item. That would be a really long list, and
 	  i still want to keep some semblance of discovery. This part is here more for what you can expect. Some examples.
