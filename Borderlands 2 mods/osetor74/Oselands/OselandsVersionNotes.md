@@ -1,3 +1,276 @@
+=============== [ 1.2.0 ] ===============
+
+	- Added a new message when executing the mod that gets printed in your console, instead of it being said in chat
+
+	- Revamped elemental damage multipliers and adjusted enemy health to compensate
+
+		New Multipliers:
+		Non-Elemental(NE)/Explosive/Slag vs all health types: 1x
+		Fire/Corrosive vs right health type: 1.2x
+		Fire/corrosive vs wrong health type: 0.6x
+		Shock vs shield: 1.5x
+		Shock vs other health types: 0.95x
+
+		-Enemy health is reduced to basically match how much damage you would've had to deal against them anyway;
+		 killing an enemy with 1x NE will be just as difficult now as it would've been with 1.4x NE previously
+
+		-Reduced elemental damage penalties on guns from -20% to -10%. This penalty was removed entirely from slag guns.
+			-Fire/Corrosive guns against their right health type will now deal ~15% increased damage when
+			 compared to NE
+
+
+		*Overall, this means that fire/corrosive against their respective health types will now be stronger than they were
+		 before. I did some tests and found that they weren't doing as much damage as i thought they were, which also lead to some
+		 items being incorrectly balanced.
+		 Normalizing damage multipliers to consider 1x as the base also makes calculating damage less of a nightmare
+
+
+	- Reduced enemy additional health scaling
+		(basically they have an additional multiplier to their health that is intended to match the player gaining skills with levels,
+		 and the multiplier scales with their level as well, so their health scaling is not truly linear)
+
+
+	*Player health and shield were increased by 20% in previous updates as a sort of compensation for elemental changes in oselands.
+	 Now that elements have been brought back, technically there isn't a reason to keep that 20% increase, but i'm still going to
+	 in hopes that it still improves the player experience through the mod.
+
+
+	- Critical Damage on weapons is now listed as the full multiplier of that gun (2.0x base + other modifiers) rather than a +% bonus
+	- Critical Damage on weapons is now a completely separate multiplier from other sources of crit damage
+
+		*critical damage above 2x still transfers when playing salvador
+
+
+	- Tweaks to the Southpaw Steam & Power
+
+		-The following enemy types were changed to be considered armored instead of flesh:
+			Standard and Badass Psychos
+			Standard and Shielded Nomads (excluding badass)
+
+		-Increased the health of the standard variants of the aformentioned enemy types by a considerable amount
+
+
+		- Massively increased legendary world drop chances of all 4 Assassins in Southpaw, with Rouf gaining an even higher boost
+
+		- Increased XP gain in Southpaw by 1.5x
+
+
+		*Why am i doing such big changes to this area specifically? i belive it to be the best designed area in the game after
+		 Digi Peak, so i want it to make it *even* better. I want to give you a reason to be there for not just having fun
+		 while mobbing. I want it to be actually worth it to run that area
+
+
+	- Made all flat Max Health and Shield Capacity boosts/penalties on class mods apply to your base stats
+	  rather than it adding on top after other % boosts. (basically just a buff/nerf respectively if you have both kinds of boosts at the same time)
+
+	- Made Salvador's Raider class mod's accuracy apply to all guns and not just assault rifles.
+
+
+	- Added a new rarity for unique guns and items (previously blue, purple and e-tech red text items)
+		-This rarity appears between E-Tech and Legendary, making it easier to separate those from the rest of the
+		 items in their previous rarity.
+
+		-The purple-rarity x4 version of the magic missile was turned into a legendary
+
+
+	- Brought back damage resistance as a secondary stat on relics
+		-Now is just a global damage resistance rather than reducing individual elemental resistances
+
+
+
+	- Made it so *all* Tediore guns retain their maximum reload damage until their magazines are at half. After that it scales the damage down
+	  as if you would be going from 100% mag to 0% mag previously
+
+	- Revamped the damage formula on Tediore shotgun reloads to make them a lot more consistent and comparable to the other weapon types.
+		the damage formula for them now is:
+
+		listed card damage * current ammo in the mag (retaining the change above this) * 5 * (1 + (0.05 * projectile count))
+
+
+		Tediore shotguns actually good for reloading now.
+
+
+	- Replaced the 35% increased pellet count buff i gave to non-unique tediore shotguns and the Deliverance with a flat +3 bonus
+	  This means that it is further increased by vertical grip
+
+
+	- Increased Dahl AR damage by 5%
+	- Increased Dahl AR ADS burst count to 4
+
+	- Removed the last remaining matching bonuses from dahl parts which i wasn't aware were there
+		(shorter bursts on dahl-barreled dahl guns, slightly smaller mag sizes on dahl ARs and SMGs)
+
+	- Nova shields now activate when you take damage instead of when shield breaks, with a 5 second cooldown instead of needing to recharge to full
+	- Nova shields now gain additional damage based on 30% of your maximum shield capacity
+
+	- Removed more irrelevant UI elements from various guns
+
+	- Made Krieg's Wound class mod's skill effect use Salvador's  Ain't Got Time To Bleed  skill icon while it is active and visible on the HUD
+
+
+	- Made King/Queen Spiderants and Mortar use the badass item drop pool rather than the standard enemy drop pool
+
+	- Adjusted the ratio between legendary and pearl drops from world drops slightly
+		-World Drops are now even more likely to be legendary instead of pearlescent.
+		
+		*This is mostly to compensate for the fact that there's more items now
+
+
+		== Unique item changes ==
+
+	- Added descriptive text to many unique guns that had effects that weren't apparent from just shooting the gun in the sky
+		*you could argue that them being mysterious is a feature that makes them more interesting, but to that i say "fuck y-
+
+
+	- Added a new legendary relic: Eternal Youth
+		-Reduces your max Shield Capacity to 10
+		-While shield is full, you gain health regeneration equal to the equipped shield's recharge rate
+
+
+	- Added new legendary guns:
+
+		> Pyrana (Vladof Pistol) - Rue, the Love Thresher
+			-Slow firing x3 vladof pistol with lower mag
+			-Killing an enemy grants the Pyrana highly increased fire rate and mag size for 5 seconds
+
+		> Pocket Salvo (Tediore Shotgun) - Mortar
+			-Shoots arcing projectiles that ricochet multiple times and create a large explosion on each ricochet, dealing +100% grenade splash
+
+		> Gladiator (Hyperion Sniper) - Terramorphous the Invincible (15% chance instead of 10%)
+			-Applies a new Bleed status effect, dealing DoT and increasing the enemy's damage taken by 15%. This status effect can not stack
+
+		> Quicksilver (Tediore SMG) - World Drop Only
+			-Increases movement speed while held slightly, has increased fire rate and a ridiculously fast reload speed.
+
+
+	- Added a set of E-Tech shields
+		*The whole gimmick with all of these is that, much like Rough Rider, they have 0 shield capacity but grant other bonuses instead, either to
+		 compensate for that lack of shield, or just giving the risk of sacrificing survivability to gain something else instead
+
+		 Each E-Tech shield type has a 5% chance of dropping from a particular badass enemy type in the game, listed below:
+
+			- Berserker shield (Bandit) - Badass Psychos
+				-Dealing or taking damage causes you enter a rage, gaining movement speed and life steal while your health drains very quickly.
+
+			- Titan Heart Shield (Hyperion) - Badass Loaders
+				-Grants increased max health, and adds 10% of your maximum health value as amp damage to all your shots
+
+			- Shatter Tank Shield (Pangolin) - Spiderant Kings/Queens (/their renamed versions in higher difficulties)
+				-Reduces max health on top of the 0 capacity, but grants flat health regen
+
+
+
+	- Terramorphous uniques
+		- All items in this category (Teeth-, Blood-, Hide- and Breath of Terramorphous)
+		  are now changed to Seraph rarity and will behave as such; all of these items now only start dropping
+		  once you enter UVHM and you are always guaranteed one per kill.
+
+		  Slayer of Terramorphous class mods are also changed to Seraph rarity and only drop in UVHM, but are held within a separate pool.
+
+
+	- Teeth of Terramorphous
+		-Improved spread; less points and narrower in general
+		-Reduced the speed of the projectiles, meaning the final explosion happens much closer to you (leaning into the idea of like short-range bite)
+		-Projectiles now pierce enemies, meaning you can hit both the impact splash and the final bite splash on the same enemy more effectively,
+		 meaning you will generally do a lot more damage while also being much easier to use
+		-Increased shot cost to 4, reduced pellet count from 12 to 8
+
+
+
+	- Shadow of the Seraphs
+		-Fixed the additional projectile not applying to salvador's off-hand
+
+	- Red Hellion
+		-Made it so the fire rate buff is not affected by if your movement speed is lower than the base. (i.e you went into FFYL)
+		 If it is, it will now just consider you as moving at standard walking speed and not affect your fire rate in any way.
+
+		-The fire rate buff is now capped at +100% movement speed, but also applies 75% of movement speed to fire rate instead of 50%
+			-very small nerf to the characters that could get it really high regardless, but allows other characters
+			 to use it much easier now as well
+
+	- Magic Missile
+		-Massively improved homing
+		-Increased projectile speed
+		-Massively lowered blast radius, but increased damage dealt
+
+	- Rolling Thunder
+		-Massively reduced self-damage on explosions created by contact with the world
+
+	- Nasty Suprise
+		-Massively improved damage and fuse time
+		-Slightly increased blast radius
+
+	- Blockhead
+		-Increased splash radius
+		-Splash now deals explosive damage (impact is still fire, making it a sort of hybrid damage gun)
+
+	- Deliverance
+		-Highly reduced the projectile speed of the reload
+			(thanks to BL2.5. i don't actually know why or how it works, but it let me do what i wanted. you should go play bl2.5)
+
+	- Destroyer
+		-Increased gun damage and gave it 10% increased base crit damage
+
+	- Tigris
+		-Reduced DoT damage
+
+	- World Piercer
+		-Improved Accuracy
+
+	- Hornet
+		-Lowered fire rate
+		-Reduced ADS burst count to 2
+		-Highly increased base damage
+
+	- Evil Smasher
+		-Slightly increased damage
+		-Activated buff no longer has a chance to activate at the start of a reload, and deactivates on the next reload.
+			Instead, you now have a chance to get it whenever you deal or take non-DoT damage or *finish* a reload, and lasts for 4 seconds.
+
+		-Buff's main weapon stats now applies to both hands while playing salvador, but only if you are holding the evil smasher in that hand.
+		-Buff no longer boosts mag size, but instead that is now part of the gun itself intrinsically
+
+
+	- Orc
+		-Activated buff's stats now apply to both mainhand and offhand on salvador
+
+	- Morningstar
+		-made the stacks of the weapon's special effect use the new weapon critical damage attribute, meaning it is now multiplicative
+		 with other critical damage bonuses from skills and other items
+		-Stacks now use the same icon as Zer0's Headshot in vanilla
+		-Reduced critical damage
+		-Massively reduced critical damage granted by the weapon's special effect (60% per stack > 10%)
+
+		*this item was really, really, really fucking strong, but is now more in-line with everything else
+
+	- Little Evie
+		-Increased weapon damage slightly
+		-Made the stacks of the weapon's special effect be shown on your HUD
+		-You now gain stacks on dealing bullet damage to enemies (4 second cooldown) and killing them
+
+	- Tattler
+		-Slightly increased damage
+
+	- Bearcat
+		-Reduced ammo cost from 4 to 2
+		-Reduced damage very slightly
+		-Reduced grenade AoE
+		-Made the gun unable to apply DoTs
+
+	- Unmaker (Peak Opener)
+		-Fixed the weapon using an incorrect pearl rarity
+
+	- Flame of the Firehawk
+		-No longer needs to recharge to full to be able to do novas again once it starts recharging
+		-Now only creates novas while you are doing DoT damage, as long as your shields are broken
+
+
+	- Revamped the skin of the Mesa and Destroyer, Tinderbox, Shotgun 1340
+	- Tweaked the skin of the Teeth of Terramorphous, Storm, Interfacer, Butcher, Retcher, Thunder
+
+	- Fixed Moxxi's Endowment not properly listing Max Health secondary stats
+
+
 =============== [ 1.1.5 ] ===============
 
 	- Fixed Axton's Shock Trooper class mod not boosting electrocute damage properly
@@ -103,7 +376,7 @@
 		 Sigil, Patience, Fate, Rupture,
 		 Laser (Sub)Machinegun, Ankheg*,
 		 Swordfish, Volcano*, Gubber,
-		 Blitz, Beartrap
+		 Blitz,
 
 		* For everything except the marked items, you need to get a new version of
 		  the item for these changes to apply
@@ -133,8 +406,6 @@
 	- Avenger
 		-Added a new skin
 		-increased fire rate
-		-Made the reload stay in one place like standard bouncing betties rather than have it bounce forward.
-		-Increased the damage of the bouncing betty bullets
 
 	- Tweaked the skin of the Unforgiven
 
@@ -149,7 +420,6 @@
 		-Reduce ammo cost from 3 per shot to 2
 		-Increased Base Damage and DoT Damage
 		-Highly increased splash radius, and made it have a guaranteed chance of applying a status effect
-
 
 
 =============== [ 1.1.4.1 ] ===============
