@@ -15,9 +15,8 @@ Use CTRL+F to find a section easier.
   #### > Other mods included in Oselands
 
   #### > Global Changes
-	> Stop scaling past 80
+	> Stop scaling past 72
 	> Lower scaling
-	> Enemy health changes
 	> UVHM Rebalance
 	> Element changes
 	> Player scaling changes
@@ -37,6 +36,7 @@ Use CTRL+F to find a section easier.
 	> Effects of the changes (developer notes)
 	> Gun Additions / other changes
 	> Shield changes
+		>E-Tech Shields
 
   #### > Drop Changes
 	> Rarity odds
@@ -54,12 +54,14 @@ Use CTRL+F to find a section easier.
 
   #### > Enemy Changes
 	> Raid Bosses
+	> Southpaw Steam & Power
 
   #### > Vault Hunters
 	> Overview
 	> Individual character changes (Search for the character's name)
 
   #### > Unique Items
+	> Unique Rarity
 	> *Completely new Legendary items*
 
 
@@ -114,13 +116,6 @@ Use CTRL+F to find a section easier.
 
 
 
-	> Enemy health changes
-
-		- All enemy health was increased by 20% or higher, especially at higher levels.
-		  (In compensation of changes to non-elemental, explosive and slag, and to generally make the game harder)
-
-
-
 	> UVHM Rebalance
 
 		- Enemy health was drastically reduced in UVHM, and slag is way less necessary.
@@ -137,26 +132,27 @@ Use CTRL+F to find a section easier.
 
 	> Element changes
 
-		- Non-Elemental, Explosive and Slag naturally gain a multiplicative 1.2x damage buff, which increases to 1.4x in TVHM,
-		  following the change to elements.
+		Elemental damage now follows the following modifiers:
 
-			- Shock's vs-Flesh and vs-Armor multipliers were also increased and follow a similar curve to NE/Explosive/Slag,
-			  although it is a little lower just because it also has a DoT, which is a bigger focus in Oselands.
+		Non-Elemental(NE)/Explosive/Slag vs all health types: 1x
+		Fire/Corrosive vs right health type: 1.2x
+		Fire/corrosive vs wrong health type: 0.6x
+		Shock vs shield: 1.5x
+		Shock vs other health types: 0.95x
 
 
 		- The duration of all fire/corrosive/shock status effects is now 5 seconds (instead of 5/8/2),
 		  and removed shock DoT's inability to stack multiple times on the same enemy
 			- This should make it so they are all much more consistent between each other
 
-
-		- Enemy elemental resistances have been lowered so that you aren't penalized as much for using an unfavorable element.
-		  However, there is still a noticable dip in damage, just not as big as before
+		- There is no longer any change in elemental damage when moving between playthroughs, and enemy health has been adjusted for
+		  elemental damage being so much lower now
 
 
 
 	> Player scaling changes
 
-		- Player health was increased by 20% to compensate for the NE damage changes
+		- Player health (and shield capacity of all shields) is increased by 20%
 
 		- Player skill DoT damage was 'fixed' and is now more heavily used as well.
 
@@ -187,6 +183,7 @@ Use CTRL+F to find a section easier.
 		- Respec costs no money
 		- Legendary rarity color was changed to be a bit darker
 		- Vehicles now have 20% more health to compensate for the NE/Explosive/Slag changes
+		- You move twice as fast in FFYL compared to vanilla
 
 
 
@@ -305,11 +302,21 @@ Use CTRL+F to find a section easier.
 			-No Longer has an interaction with Easy Mode (Which was reworked)
 
 
+		=== Completely New Relics ===
+
+		Eternal Youth  (Legendary)
+			-Reduces your max shield to 10
+			-While shield is full, you gain health regeneration equal to your equipped shield's recharge rate
+			-Halves life steal effects
+
+
 
 ============= [ Weapon Changes ] ============= 
 
 
 	> Weapon Types/Manufacturers
+
+		- Weapons now list their final crit damage on the item card instead of a % bonus compared to the base 2.0x multiplier
 
 		- I won't list every change like damage or fire rate differences, those can be found in-game. Just try different guns and see
 		  how they feel.
@@ -469,59 +476,83 @@ Use CTRL+F to find a section easier.
 
 
 
-		- Effects of the changes  (developer notes)
+	> Effects of the changes  (developer notes)
 
-			- The purpose of these changes have been to try to make the guns you find and pick up much more appealing, and  finding a
-			  "good gun" is much easier. There will naturally be something better, but the gap in power should be smaller. This also means
-			  that you, the player, is just naturally better regardless of what you pick
-
-
+		- The purpose of these changes have been to try to make the guns you find and pick up much more appealing, and  finding a
+		  "good gun" is much easier. There will naturally be something better, but the gap in power should be smaller. This also means
+		  that you, the player, is just naturally better regardless of what you pick
 
 
 
-		- Gun additions / other changes
-
-			- Jakobs and Torgue shotguns now have unique E-Tech barrels, creating the Tracer and Carnage (works like the pearlescent
-			  shotgun, with some tweaks, and said pearlescent shotgun was entirely reworked)
-
-			- E-Tech Dart pistols now have high fire rates, and don't consume 2 ammo per shot
-			- Torgue pistols now have a unique E-Tech barrel, creating the Carbuncle
-
-			- Snipers' E-Tech barrels are now divided into Splitters and Railguns, Vladof & Dahl / Maliwan & Hyperion respectively.
-				-Mimics the laser types from The Pre-Sequel with the same names
 
 
+	> Gun additions / other changes
 
-		- Shield changes
+		- Jakobs and Torgue shotguns now have unique E-Tech barrels, creating the Tracer and Carnage (works like the pearlescent
+		  shotgun, with some tweaks, and said pearlescent shotgun was entirely reworked)
 
-			- Non-Unique Amp shields were completely reworked
-				-No longer have a traditional Recharge Rate, instead recharges to full instantly when the Recharge Delay is over
-				-Capacity has been generally lowered to compensate due to this.
-				-The damage has been looked over to hpefully make them more appealing to use
+		- E-Tech Dart pistols now have high fire rates, and don't consume 2 ammo per shot
+		- Torgue pistols now have a unique E-Tech barrel, creating the Carbuncle
 
-				*- These changes were made to hopefully make amp shields a bit more unique compared to everything else,
-				   and give you an opportunity to use the amp damage more
+		- Snipers' E-Tech barrels are now divided into Splitters and Railguns, Vladof & Dahl / Maliwan & Hyperion respectively.
+			-Mimics the laser types from The Pre-Sequel with the same names
+
+
+
+	> Shield changes
+
+		- Non-Unique Amp shields were completely reworked
+			-No longer have a traditional Recharge Rate, instead recharges to full instantly when the Recharge Delay is over
+			-Capacity has been generally lowered to compensate due to this.
+			-The damage has been looked over to hpefully make them more appealing to use
+
+			*- These changes were made to hopefully make amp shields a bit more unique compared to everything else,
+			   and give you an opportunity to use the amp damage more
 			
-			- Absorb shields' base absorb chance was increased by 10%
+		- Absorb shields' base absorb chance was increased by 10%
 
-			- Non-Unique Roid shields now provide increased max health. these values are identical to adaptive shields.
+		- Non-Unique Roid shields now provide increased max health. these values are identical to adaptive shields.
 
-			- Non-Unique Spike shields' damage was tripled
+		- Non-Unique nova shields now activate when you take damage, regardless of how much shield you have (5 second cooldown)
+		  They also gain additional damage equal to 30% of your current max shield capacity
+
+		- Non-Unique Spike shields' damage was tripled
 
 			
-			- Shield parts have been completely rebalanced, TL;DR:
+		- Shield parts have been completely rebalanced, TL;DR:
 
-				- The shield parts generally keep their identity compared to vanilla, with exceptions
+			- The shield parts generally keep their identity compared to vanilla, with exceptions
 
-				- Special penalties have been removed, and maliwan's increased special has been slightly lowered.
-				  However, it still has the highest +Special
+			- Special penalties have been removed, and maliwan's increased special has been slightly lowered.
+			  However, it still has the highest +Special
 
-				- Dahl parts now serve as a general-use part, giving a nice boost to the main 3 stats while not affecting special in any way
+			- Dahl parts now serve as a general-use part, giving a nice boost to the main 3 stats while not affecting special in any way
 
-				- Vladof parts now give a passive 10% movement speed each
+			- Vladof parts now give a passive 10% movement speed each
 
-				- Maliwan capacitors were reworked to not share stats with other maliwan parts,
-				  so the main focus of those parts are the elemental immunities.
+			- Maliwan capacitors were reworked to not share stats with other maliwan parts,
+			  so the main focus of those parts are the elemental immunities.
+
+
+
+
+			> [E-Tech Shields]
+
+				- This mod introduces new shields under the E-Tech rarity.
+				  The whole gimmick with all of these is that, much like Rough Rider, they have 0 shield capacity but grant other bonuses
+				  instead, either to compensate for that lack of shield, or just giving the risk of sacrificing survivability
+				  to gain something else instead
+
+				Each E-Tech shield type has a 5% chance of dropping from a particular badass enemy type in the game, listed below:
+
+				- Berserker shield (Bandit) - Badass Psychos
+					-Dealing or taking damage causes you enter a rage, gaining movement speed and life steal while your health drains very 						 quickly.
+
+				- Titan Heart Shield (Hyperion) - Badass Loaders
+					-Grants increased max health, and adds 10% of your maximum health value as amp damage to all your shots
+
+				- Shatter Tank Shield (Pangolin) - Spiderant Kings/Queens (/their renamed versions in higher difficulties)
+					-Reduces max health on top of the 0 capacity, but grants flat health regen
 			
 
 
@@ -562,9 +593,6 @@ Use CTRL+F to find a section easier.
 
 		- Legendary shield pools not world dropping properly has been fixed
 		- The 6 "new" legendary relics added in the mod are now part of the world drop pool
-
-
-	> UCP quest
 
 
 	> Raid Boss Legendary Drops
@@ -671,6 +699,32 @@ Use CTRL+F to find a section easier.
 
 			- These changes should make it so you have way more flexibility in how you approach the fight by giving
 			   you the ability to deal damage as well, while keeping the gameplay of trying to lure him to the acid puddles
+
+
+		> Proof of a Hero
+
+			- All raid bosses now have a 1% chance of dropping a new "Proof of a Hero" relic.
+			  It only exists as a trophy, as it lists which raid boss you got it from in its description.
+
+
+	> Southpaw Steam & Power
+
+		- The following enemy types can now spawn anywhere in Southpaw
+			shielded nomads
+			shock nomads
+			heavy nomads
+
+		- Badass psychos and nomads are more common
+
+		- Changed some enemies to be considered armored instead of flesh:
+			Standard and Badass psychos
+			Standard and shielded nomads (excluding badass)
+			Assassin Oney
+			Assassin Reeth
+
+		- Increased the health of the following enemies:
+			Standard psychos
+			Standard nomads
  
 
 
@@ -1012,7 +1066,7 @@ Use CTRL+F to find a section easier.
 			now activates while your gun's magazine is half-full instead of needing it to be full.
 
 		- Fancy Mathematics
-			now has a consistent buff instead of relying on how much health you are
+			now has a consistent buff instead of relying on how much health you have
 
 		- Robot Rampage moved to tier 2
 			Now also gives 50% melee damage to Gaige.
@@ -1241,6 +1295,25 @@ Use CTRL+F to find a section easier.
 			-3 Projectiles per shot, 3 ammo per shot, high mag size.
 			-Fires slow, arcing projectiles that ricochet from surfaces and between enemies.
 			-No standard sniper crit bonus, but instead gets higher base damage.
+
+
+		 [1.2.0]
+
+		> Pyrana (Vladof Pistol) - Rue, the Love Thresher
+			-Slow firing x3 vladof pistol with lower mag
+			-Killing an enemy grants the Pyrana highly increased fire rate and mag size for 5 seconds
+
+
+		> Pocket Salvo (Tediore Shotgun) - Mortar
+			-Shoots arcing projectiles that ricochet multiple times and create a large explosion on each ricochet, dealing +100% grenade splash
+
+
+		> Gladiator (Hyperion Sniper) - Terramorphous the Invincible
+			-Applies a new Bleed status effect, dealing DoT and increasing the enemy's damage taken by 15%. This status effect can not stack
+
+
+		> Quicksilver (Tediore SMG) - World Drop Only
+			-Increases movement speed while held slightly, has increased fire rate and a ridiculously fast reload speed.
 
 
 
