@@ -1,3 +1,20 @@
+=============== [ 1.2.1 ] ===============
+
+	- Integrated the Less Dumb Visuals mod (by MikeyRay) into Oselands, and configured it so that it's not *that* far
+	  from vanilla, but still an improvement. All the options for the mod can be found in the main Oselands file
+
+		== Unique item changes ==
+
+	- Cursed Pirates now have a 7.5% chance to drop the Eternal Youth
+	- Chance for Immortal Skeletaurs to drop the Deathless has been increased from 4.5% to 7.5%
+		*Legendary dedicated drops are set to 15% by default, and the rate is halved for these enemies
+
+	- Orb of Storms
+		-Internally reworked how the weapon's projectile is handled, which fixes the ability to
+		 transfer other guns' base damage onto the explosions
+
+
+
 =============== [ 1.2.0 ] ===============
 
 	- Added a new message when executing the mod that gets printed in your console, instead of it being said in chat
