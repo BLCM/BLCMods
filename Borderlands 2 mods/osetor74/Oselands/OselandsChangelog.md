@@ -90,6 +90,9 @@ Use CTRL+F to find a section easier.
 	- More Chests on Pandora
 		- Pretty self explanatory
 
+	- Less Dumb Visuals
+		- Reduces and tweaks a lot of particle effects and UI elements to make them clutter the screen less while playing
+
 	- UHD Elemental Sniper Fix (TURNED OFF BY DEFAULT, ENABLE WITH BLCMM)
 		- fixes various problems with the UHD patch breaking skins
 
