@@ -1,5 +1,7 @@
 # BL2:Wonderlands
 
+***Scroll down to the bottom for the ability to convert Oselands to work with this mod***
+
 A complete rework of Borderlands 2 characters' skill trees to add functionality to **multiclass** similar to Wonderlands.
 
 In essence, there are 6 skill tree branches crafted specifically for this mod, each one representing a Borderlands 2 character. As if the unique aspects of that character were condensed into a single tree.
@@ -29,19 +31,25 @@ Also, the mod is incompatible with Co-Op. That also makes the game crash.
 
 *This section will assume that you haven't installed a BL2 mod before. Feel free to skip steps if you have it set up already*
 
-**If you are completely new to modding**, please watch **[this video](https://www.youtube.com/watch?v=57WxvASCX70&t=1s)** done by Apple1417 to install the PythonSDK. This is required for both executing the mod in the game to apply its effects, and to make other mods work that Oselands requires to function.
+**If you are completely new to modding**, please watch **[this video](https://www.youtube.com/watch?v=57WxvASCX70&t=1s)** done by Apple1417 to install the PythonSDK. This is required for both executing the mod in the game to apply its effects, and to make other mods work that BL2:Wonderlands requires to function.
 
 *You may also click [this link](https://bl-sdk.github.io/) for a written guide on how to install the SDK. Also leads to the video guide listed above.*
 
 **You then need to download the following PythonSDK mods if you have not already:**
 
-> **[Command Extensions](https://bl-sdk.github.io/mods/CommandExtensions/)** - Required in creation of new objects such as weapon parts
+> **[Command Extensions](https://bl-sdk.github.io/mods/CommandExtensions/)** - Required in the functionality of the entire mod
 
-> **[Sanity Saver](https://bl-sdk.github.io/mods/SanitySaver/)** - Required in saving new weapon parts onto your character
+This mod **will not work** if you have not properly installed and enabled these 2 mods (mainly command extensions, but still)
 
-Oselands **will not work** if you have not properly installed and enabled these 2 mods (mainly command extensions, but still)
-
-*Credits to Apple1417 for these mods*
+*Credits to Apple1417 for Comamnd Extensions*
 
 
-**Once you have all this setup, please right click [this link](https://raw.githubusercontent.com/BLCM/BLCMods/master/Borderlands%202%20mods/osetor74/Oselands/Oselands.blcm) and save the mod file as Oselands.blcm**
+**Once you have all this setup, please right click [this link](https://raw.githubusercontent.com/BLCM/BLCMods/master/Borderlands%202%20mods/osetor74/Oselands/Oselands.blcm) and save the mod file as bl2wl.blcm**
+
+
+# Oselands Conversion
+
+This mod is built with compatibility with Oselands in mind (for the most part), and below are the instructions on how to make it work.
+
+### Make sure you have "Structural Edits" turned on in BLCMM.  Tools > Settings
+![structural edits](https://i.imgur.com/GY64MHN.png)
