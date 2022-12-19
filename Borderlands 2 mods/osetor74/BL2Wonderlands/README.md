@@ -53,3 +53,18 @@ This mod is built with compatibility with Oselands in mind (for the most part), 
 
 ### Make sure you have "Structural Edits" turned on in BLCMM.  Tools > Settings
 ![structural edits](https://i.imgur.com/GY64MHN.png)
+
+### ***Make a copy of Oselands to be sure***, open the file and import your bl2wl.blcm
+![import mod](https://i.imgur.com/9377L5D.png)
+
+### Delete the "Vault Hunters" category from the Oselands file
+![delete VH category](https://i.imgur.com/EvXXb5Q.png)
+
+### Move the imported file below Enemy Changes (click & drag)
+![aaaaaaaaa](https://i.imgur.com/ylKyVtK.png)
+
+### Move the "Global" and "Relic Rework" categories below the imported file
+![bbbbbb?](https://i.imgur.com/w08Laj9.png)
+
+### Ta-daaa! it should now look something like this. Don't worry about all the overriding, it's meant to do that
+![ccccc!](https://i.imgur.com/RDMNnsJ.png)
