@@ -1,6 +1,9 @@
 # BL2:Wonderlands
+***Special thanks to playtesters: Vi, Rapoulas, Toto, Graimer***
 
-***Scroll down to the bottom for the ability to convert Oselands to work with this mod***
+### Scroll down to the bottom for the ability to convert Oselands to work with this mod
+
+## Mod Info
 
 A complete rework of Borderlands 2 characters' skill trees to add functionality to **multiclass** similar to Wonderlands.
 
