@@ -1,5 +1,5 @@
 # BL2:Wonderlands
-***Special thanks to playtesters: Vi, Rapoulas, Toto, Graimer***
+***Special thanks to playtesters: Vi, Rapoulas, Toto***
 
 ### Scroll down a little bit for instructions on mod installation, as well as being able to convert Oselands to work with this mod
 
@@ -10,6 +10,8 @@ A complete rework of Borderlands 2 characters' skill trees to add functionality 
 In essence, there are 6 skill tree branches crafted specifically for this mod, each one representing a Borderlands 2 character. As if the unique aspects of that character were condensed into a single tree.
 
 The character you are playing always comes with the tree dedicated to that character, and you can toggle your secondary class within the mod file using BLCMM. **By default this is set to no multiclass, so you need to use BLCMM**.
+
+**[Click this link to go install BLCMM if you have not already](https://www.nexusmods.com/borderlands2/mods/61?tab=description)**
 
 Much like Wonderlands, the order of your skill trees does not matter (i.e Siren/Commando and Commando/Siren). Both versions have the exact same potential within their trees. The thing that differs is the action skill you are able to use
 
@@ -71,5 +73,5 @@ This mod is built with compatibility with Oselands in mind (for the most part), 
 ### Move the "Global" and "Relic Rework" categories below the imported file
 ![bbbbbb?](https://i.imgur.com/w08Laj9.png)
 
-### Ta-daaa! it should now look something like this. Don't worry about all the overriding, it's meant to do that
+### Ta-daaa! it should now look something like this. Don't worry about all the overriding; it's meant to do that
 ![ccccc!](https://i.imgur.com/RDMNnsJ.png)
