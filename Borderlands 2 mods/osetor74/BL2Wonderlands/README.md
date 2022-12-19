@@ -52,7 +52,7 @@ This mod **will not work** if you do not have it properly installed and enabled.
 *Credits to Apple1417 for Command Extensions*
 
 
-**Once you have all this setup, please right click [this link](https://raw.githubusercontent.com/BLCM/BLCMods/master/Borderlands%202%20mods/osetor74/Oselands/Oselands.blcm) and save the mod file as bl2wl.blcm**
+**Once you have all this setup, please right click [this link](https://raw.githubusercontent.com/BLCM/BLCMods/master/Borderlands%202%20mods/osetor74/BL2Wonderlands/bl2wl.blcm) and save the mod file as bl2wl.blcm**
 
 
 # Oselands Conversion
