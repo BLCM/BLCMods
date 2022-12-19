@@ -1,5 +1,5 @@
 # BL2:Wonderlands
-***Special thanks to playtesters: Vi, Rapoulas, Toto***
+***Special thanks to playtesters: Vi, Rapoulas, Toto, and especially Florence***
 
 ### Scroll down a little bit for instructions on mod installation, as well as being able to convert Oselands to work with this mod
 
