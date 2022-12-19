@@ -19,7 +19,7 @@ Much like Wonderlands, the order of your skill trees does not matter (i.e Siren/
 ![Secondary Class Selection](https://i.imgur.com/F5nzQyK.png)
 
 
-Your green skill tree is the one determined by the character you are playing, and blue is your selected secondary class. Your action skill is also determned by the character you are playing
+Your green skill tree is the one determined by the character you are playing, and blue is your selected secondary class. Your action skill is also determined by the character you are playing
 
 The purpose of the red tree is for small stat bonuses after level 50 as you level up through UVHM, regardless of which classes you picked. The exact mechanics of it are explained in-game
 
