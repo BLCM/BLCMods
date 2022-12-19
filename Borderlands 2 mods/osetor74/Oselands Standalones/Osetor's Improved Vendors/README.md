@@ -24,7 +24,7 @@ This mod is incompatible with Co-Op. Your game will crash.
 
 > **[Command Extensions](https://bl-sdk.github.io/mods/CommandExtensions/)** - Required in creation of new objects that this mod relies on.
 
-Oselands **will not work** if you have not properly installed and enabled Command Extensions.
+This mod **will not work** if you have not properly installed and enabled Command Extensions.
 
 *Credits to Apple1417 for this mod*
 
