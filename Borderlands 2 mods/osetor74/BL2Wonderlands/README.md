@@ -42,9 +42,9 @@ Also, the mod is incompatible with Co-Op (sadly). That also makes the game crash
 
 > **[Command Extensions](https://bl-sdk.github.io/mods/CommandExtensions/)** - Required in the functionality of the entire mod
 
-This mod **will not work** if you have not properly installed and enabled these 2 mods (mainly command extensions, but still)
+This mod **will not work** if you do not have it properly installed and enabled.
 
-*Credits to Apple1417 for Comamnd Extensions*
+*Credits to Apple1417 for Command Extensions*
 
 
 **Once you have all this setup, please right click [this link](https://raw.githubusercontent.com/BLCM/BLCMods/master/Borderlands%202%20mods/osetor74/Oselands/Oselands.blcm) and save the mod file as bl2wl.blcm**
@@ -54,7 +54,7 @@ This mod **will not work** if you have not properly installed and enabled these 
 
 This mod is built with compatibility with Oselands in mind (for the most part), and below are the instructions on how to make it work.
 
-You can go to the Oselands mod page through this link
+**[You can go to the Oselands mod page through this link](https://github.com/BLCM/BLCMods/tree/master/Borderlands%202%20mods/osetor74/Oselands)**
 
 ### Make sure you have "Structural Edits" turned on in BLCMM.  Tools > Settings
 ![structural edits](https://i.imgur.com/GY64MHN.png)
