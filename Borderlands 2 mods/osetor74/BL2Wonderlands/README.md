@@ -1,7 +1,7 @@
 # BL2:Wonderlands
 ***Special thanks to playtesters: Vi, Rapoulas, Toto, Graimer***
 
-### Scroll down to the bottom for the ability to convert Oselands to work with this mod
+### Scroll down a little bit for instructions on mod installation, as well as being able to convert Oselands to work with this mod
 
 ## Mod Info
 
@@ -9,9 +9,9 @@ A complete rework of Borderlands 2 characters' skill trees to add functionality 
 
 In essence, there are 6 skill tree branches crafted specifically for this mod, each one representing a Borderlands 2 character. As if the unique aspects of that character were condensed into a single tree.
 
-The character you are playing always comes with the tree dedicated to that character, and you can toggle your secondary class within the mod file using BLCMM.
+The character you are playing always comes with the tree dedicated to that character, and you can toggle your secondary class within the mod file using BLCMM. **By default this is set to no multiclass, so you need to use BLCMM**.
 
-Much like Wonderlands, the order of your skill trees does not matter (i.e Siren/Commando and Commando/Siren). Both versions has the exact same potential within their trees. The thing that differs is the action skill you are able to use
+Much like Wonderlands, the order of your skill trees does not matter (i.e Siren/Commando and Commando/Siren). Both versions have the exact same potential within their trees. The thing that differs is the action skill you are able to use
 
 ![An example of what the skill trees look like](https://i.imgur.com/J874JxV.png)
 
@@ -23,9 +23,9 @@ The purpose of the red tree is for small stat bonuses after level 50 as you leve
 
 ### DISCLAIMER
 
-If you are going to play with this mod and start at level 1, you need to make the character and get to the first fast travel point *before* you turn the mod on. If you enter the character select screen with Oselands turned on, your game will crash.
+If you are going to play with this mod and start at level 1, you need to make the character and get to the first fast travel point *before* you turn the mod on. If you enter the character select screen with this mod turned on, your game will crash.
 
-Also, the mod is incompatible with Co-Op. That also makes the game crash.
+Also, the mod is incompatible with Co-Op (sadly). That also makes the game crash.
 
 
 
@@ -53,6 +53,8 @@ This mod **will not work** if you have not properly installed and enabled these 
 # Oselands Conversion
 
 This mod is built with compatibility with Oselands in mind (for the most part), and below are the instructions on how to make it work.
+
+You can go to the Oselands mod page through this link
 
 ### Make sure you have "Structural Edits" turned on in BLCMM.  Tools > Settings
 ![structural edits](https://i.imgur.com/GY64MHN.png)
