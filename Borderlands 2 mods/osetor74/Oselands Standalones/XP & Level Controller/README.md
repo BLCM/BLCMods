@@ -33,7 +33,7 @@ This mod **will not work** if you have not properly installed and enabled Comman
 *Credits to Apple1417 for this mod*
 
 
-**Once you have all this setup, please right click the "XPController.blcm" file at the top of this page and save the file as new within your Binaries folder to install the mod.**
+**Once you have all this setup, please right click [this link](https://raw.githubusercontent.com/osetor74/BLCMods/master/Borderlands%202%20mods/osetor74/Oselands%20Standalones/XP%20%26%20Level%20Controller/XPController.blcm) and save the file as new within your Binaries folder to install the mod.**
 
 
 ## How to make the mod work
