@@ -29,7 +29,7 @@ Oselands **will not work** if you have not properly installed and enabled Comman
 *Credits to Apple1417 for this mod*
 
 
-**Once you have all this setup, please right click the "OselandsVendors.blcm" at the top of this page and save the file as new**
+**Once you have all this setup, please right click [this link](https://raw.githubusercontent.com/osetor74/BLCMods/master/Borderlands%202%20mods/osetor74/Oselands%20Standalones/Osetor's%20Improved%20Vendors/OsetorVendors.blcm) at the top of this page and save the file as new**
 
 
 ## How to make the mod work
