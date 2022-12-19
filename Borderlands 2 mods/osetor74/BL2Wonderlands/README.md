@@ -13,12 +13,13 @@ The character you are playing always comes with the tree dedicated to that chara
 
 **[Click this link to go install BLCMM if you have not already](https://www.nexusmods.com/borderlands2/mods/61?tab=description)**
 
-Much like Wonderlands, the order of your skill trees does not matter (i.e Siren/Commando and Commando/Siren). Both versions have the exact same potential within their trees. The thing that differs is the action skill you are able to use
+Much like Wonderlands, the order of your skill trees does not matter (i.e Siren/Commando and Commando/Siren). Both versions have the exact same potential within their trees.
 
 ![An example of what the skill trees look like](https://i.imgur.com/J874JxV.png)
+![Secondary Class Selection](https://i.imgur.com/F5nzQyK.png)
 
 
-Your green skill tree is the one determined by the character you are playing, and blue is your selected secondary class.
+Your green skill tree is the one determined by the character you are playing, and blue is your selected secondary class. Your action skill is also determned by the character you are playing
 
 The purpose of the red tree is for small stat bonuses after level 50 as you level up through UVHM, regardless of which classes you picked. The exact mechanics of it are explained in-game
 
