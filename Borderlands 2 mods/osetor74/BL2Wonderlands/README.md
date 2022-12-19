@@ -3,6 +3,8 @@
 
 ### Scroll down a little bit for instructions on mod installation, as well as being able to convert Oselands to work with this mod
 
+### [BL2:Wonderlands wiki; skill tree and class mod spreadsheet](https://docs.google.com/spreadsheets/d/1arJpT_l0pu_0-sNd1I5JAk2IeWqWo3vgruCuRc1zWZo/edit?usp=sharing)
+
 ## Mod Info
 
 A complete rework of Borderlands 2 characters' skill trees to add functionality to **multiclass** similar to Wonderlands.
