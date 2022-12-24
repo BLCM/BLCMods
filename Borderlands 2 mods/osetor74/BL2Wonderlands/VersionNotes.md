@@ -1,7 +1,9 @@
 =============== [ 1.1 ] ===============
 
     - Improved compatibility with Oselands
-    - Added support for Oselands 1.2.2
+        -Melee Damage and Critical Damage bonuses on guns didn't apply in the correct way
+
+    - Added support for things added in Oselands 1.2.2
     
 
 
