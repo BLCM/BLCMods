@@ -1,3 +1,172 @@
+=============== [ 1.2.2 ] ===============
+
+	- Rocket launcher damage is now *massively* diminished when transfering it to other weapons (i.e pimperhabbing)
+
+	- Fixed the Damage Reduction on Resistance relics being massively lower than intended
+
+	- Most bullets fired by elemental shotguns now have the color of that element
+	- Reduced the speed of standard Hyperion shotgun bullets so that they are more in-line (but still faster than)
+	  other shotgun bullets
+
+
+	- Legendary Drop Changes
+
+		- Adjusted the weighting of each item category from legendary world drops. Previously the chances were all over
+		  the place, but now it should be more consistent
+
+			- In essence, you will now see more legendary guns compared to every other item category (since they have
+			  the most amount of items), as well as less legendary class mods and relics at lower levels, but more
+			  of them at higher levels.
+
+			*This does not directly affect the chances for drops themselves, just the distribution between the different
+			 item categories whenever you do get a world drop legendary
+
+
+	- Legendary Vendors
+
+		- Torgue tokens now drop everywhere in the game from enemies
+
+		- Torgue vendors have been reworked to now only sell random world drop legendaries.
+			-Different areas in Torgue DLC are assigned different items so it is easier to get an item you'd want:
+
+			arena - shotgun, launcher
+			moxxi's bar - SMG, pistol
+			beatdown - AR, sniper
+			beatdown bar - COM, relic
+			forge - grenade, shield
+			southern raceway - random
+			badass crater - random
+
+
+	- Player Melee Damage changes
+
+		- The base melee damage formula of pretty much all characters has been changed so that there is an additional
+		  boost per level, adding an additional multiplier to your overall damage that scales up over time.
+		  You can think of it as exponential scaling (it's not) instead of pure linear scaling like it was before, if
+		  that makes it easier to visualize
+
+		  	Krieg already had this buff, making his melee damage stronger by default before taking into account
+		  	Buzzaxe Rampage and his melee damage skills
+
+			This increased buff is equal to 2% * your player level, which means that at level 72 and above, your
+			melee damage (including added roid damage) will be 2.44x its previous value
+
+		- Krieg now shares the same base melee damage multiplier as every other character
+		  (2.5x instead of 2x with an additional multiplier that eventually ends up making it better than the rest)
+
+			This means that Krieg's basic melee attacks now deal 25% more damage than before, and combined
+			with the change above means that his base melee damage is identical to everyone else's base as well.
+
+
+	- Krieg skill changes
+
+		- Buzzaxe Rampage
+			-Now lists the melee damage as a multiplier rather than the total %
+			(it has always been a multiplier, in-game just listed the full melee damage % you would have when using it)
+			-Multiplier reduced from 3x to 2.5x to compensate for the global melee changes
+
+			*Overall, melee krieg will be dealing slightly more damage due to the earlier changes
+
+
+	- Zer0 skill changes
+
+		- Decepti0n
+			-Maximum Melee Damage reduced from 650% to 450%
+
+		- Death Bl0ss0m
+			-Now reduces Death Mark's bonus damage down from 80% to 30% when you spec into this skill
+
+		- New skill added to tier 5 of Bloodshed: C0nditi0n 0verl0ad
+			-Increases your damage dealt to enemies by 3% per point for each unique damaging status effect on them
+
+
+	- Axton skill changes
+
+		- Laser sight
+			-Now grants ammo regeneration for 3 seconds upon critically hitting an enemy
+
+		- Metal Storm
+			-Reduced fire rate per point from 12% to 8%
+			-Reduced recoil reduction per point from 15% to 10%
+			-Visually looks like a passive skill on the tree, but functionally has not changed
+
+		- Ranger
+			-Stat bonuses increased from 2% per point to 3%
+
+		- New skill added to tier 5 of Gunpowder: Overclocked
+			-Increases the damage dealt by shield damage abilities (nova, spike, etc)
+			-Maximum of 3 points, 20% at max
+
+			*Seems to not work for the Cradle's shield break effect, but i'll try to fix that for the next update
+
+		- New skill added to tier 6 of Gunpowder: Stormweaver
+			-Grants 15% fire rate, and +5% for every point you currently have in Metal Storm
+
+			*This is basically a secondary capstone and an incentive to go that far down the tree.
+			 A part of Metal Storm's power has been taken away, and this skill grants that power back
+			 even stronger, since it's a passive fire rate buff.
+
+		- Nuke
+			-Damage now scales with your grenade damage bonuses
+			-Damage now scales with your explosive damage bonuses
+			-Massively reduced damage of the fire DoT caused by the Nuke
+			-Cooldown Rate granted by the skill reduced from 50% to 30%
+
+
+	- Salvador skill changes
+
+		- Lay Waste
+			-Fixed on-kill effect not actually working
+			-On-kill effect now shows up as a kill skill, and benefits from increases to kill skill duration
+
+
+	- Pounder (Dahl AR)
+		- Fixed critical damage bonus not showing up properly on the card
+		- Increased fire rate
+
+
+	- - Fixed a few compatibility issues with BL2:Wonderlands
+
+
+		== Unique item changes ==
+
+	- Medusa's Eye
+		-Damage increase against slagged enemies is now replaced with a new "Blight" extension for slag
+
+			- Drains slagged enemies by 100% of your max health per second, increasing by your
+			  slag damage and status damage bonuses. Can not kill enemies; instead leaves them at
+			  5% of their HP
+
+			*Plan is to give this effect to multiple other items in other item slots
+
+	- Skin of the Ancients
+		-Now has the highest damage reduction buff on any relic
+		-Increases the damage dealt by shield damage abilities by 20%
+
+	- Maggie
+		-Now uses the shotgun crosshairs
+		-Separated the pellets in the shotgun spread more from each other, but made the minimum accuracy
+		 of the gun better.
+
+	- Florentine
+		-Now shoots 2 orbs every shot; one that deals fully shock damage and one that deals fully slag
+		 damage. Each one has +100% grenade splash of their according damage type
+		-Reduced base damage to compensate
+
+	- Evil Smasher
+		-Accuracy from the weapon's buff now also applies to main hand and offhand separately
+
+	- Grog Nozzle
+		-Drunk effect now applies to both your main hand and offhand equally while playing salvador
+
+	- Madhous
+		-Pellet count increase effect now applies only to the Madhous
+
+	- Deliverance
+		-Fixed throw reload not shooting
+
+
+
 =============== [ 1.2.1 ] ===============
 
 	- Integrated the Less Dumb Visuals mod (by MikeyRay) into Oselands, and configured it so that it's not *that* far
