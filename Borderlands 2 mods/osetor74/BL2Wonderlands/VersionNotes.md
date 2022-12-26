@@ -1,3 +1,8 @@
+=============== [ 1.1.1 ] ===============
+
+    - Fixed incorrect skill points boosts on the Arsonist class mod
+
+
 =============== [ 1.1 ] ===============
 
     - Improved compatibility with Oselands
@@ -5,7 +10,6 @@
 
     - Added support for things added in Oselands 1.2.2
     
-
 
 =============== [ 1.0 ] ===============
 
