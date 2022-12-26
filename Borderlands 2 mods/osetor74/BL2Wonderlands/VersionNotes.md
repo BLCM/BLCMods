@@ -1,4 +1,4 @@
-=============== [ 1.1 ] ===============
+=============== [ 1.1.1 ] ===============
 
     - Fixed incorrect skill points boosts on the Arsonist class mod
 
