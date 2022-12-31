@@ -11,3 +11,6 @@ This is an opportunity for you to pick and choose certain aspects of Oselands th
 
 # BL2:Wonderlands
 A rework of character skill trees to make them function more akin to Wonderlands's multiclassing system, while keeping them in-theme with each of the already existing characters
+
+# BL2 Lasers
+A recreation of the TPS Laser weapon category in BL2
