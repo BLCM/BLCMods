@@ -34,4 +34,4 @@ BL2 Lasers **will not work** if you have not properly installed and enabled thes
 *Credits to Apple1417 for these mods*
 
 
-**Once you have all this setup, please right click [this link](https://raw.githubusercontent.com/BLCM/BLCMods/master/Borderlands%202%20mods/osetor74/Oselands/Oselands.blcm) and save the mod file as BL2Lasers.blcm**
+**Once you have all this setup, please right click [this link](https://raw.githubusercontent.com/osetor74/BLCMods/master/Borderlands%202%20mods/osetor74/BL2%20Lasers/BL2Lasers.blcm) and save the mod file as BL2Lasers.blcm**
