@@ -8,7 +8,6 @@ All the stats and functionality are identical to those in TPS.
 
 ![Railgun](https://i.imgur.com/SlCVUeS.png)
 
-
 ### DISCLAIMER
 
 This mod is incompatible with Co-Op. It will make your game crash.
