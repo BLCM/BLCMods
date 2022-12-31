@@ -2,9 +2,15 @@
 
 **A mod that recreates the laser weapon category from The Pre-Sequel in BL2 as new SMGs**
 
+**Currently only includes non-uniques. Would like to make uniques as well, but don't know if i will.**
+
 As i can't actually bring the models and such from TPS, i chose SMGs as they shared the most similarities from the existing weapon types (shares all manufacturers and has the closest amount of ammo)
 
-All the stats and functionality are identical to those in TPS.
+
+
+All the stats and functionality are (almost) identical to those in TPS.
+
+*Continuous Damage Bonus is achieved a little differently but in gameplay will feel identical*
 
 ![Railgun](https://i.imgur.com/SlCVUeS.png)
 
