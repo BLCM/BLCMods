@@ -1,4 +1,5 @@
 # [Osetor's Improved Vendors]
+*V. 1.1*
 
 Like the name suggests, this mod is an improvement on the quality of vendors in Borderlands 2. It makes the contents of vendors scale in rarity based on the level of the area you are in, and thus very quickly becomes massively more favorable than vanilla.
 
