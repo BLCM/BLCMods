@@ -80,3 +80,5 @@ This mod is built with compatibility with Oselands in mind (for the most part), 
 
 ### Ta-daaa! it should now look something like this. Don't worry about all the overriding; it's meant to do that
 ![ccccc!](https://i.imgur.com/RDMNnsJ.png)
+
+**Make sure you also save the mod before executing it in-game. File > Save**
