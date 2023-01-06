@@ -38,7 +38,7 @@ This mod **will not work** if you have not properly installed and enabled Comman
 Assuming you have followed the steps in the last section, you then need to execute the mod while in the main menu of the game.
 
 Open your console
-*(tilde by default when installing the PythonSDK. If you do not have a key that naturally creates a tilde then you should also install the Hex Multitool to manually set the console key to somethting else)*
+*(tilde by default when installing the PythonSDK. If you do not have a key that naturally creates a tilde then you should also install the Hex Multitool to manually set the console key to something else)*
 
 Then type in "exec OsetorVendors.blcm" (assuming you didn't rename the file)
 
