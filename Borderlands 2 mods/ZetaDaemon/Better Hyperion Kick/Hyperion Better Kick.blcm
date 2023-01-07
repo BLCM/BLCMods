@@ -1,0 +1,39 @@
+<BLCMM v="1">
+#<!!!You opened a file saved with BLCMM in FilterTool. Please update to BLCMM to properly open this file!!!>
+	<head>
+		<type name="BL2" offline="true"/>
+		<profiles>
+			<profile name="default" current="true"/>
+		</profiles>
+	</head>
+	<body>
+		<category name="Hyperion Better Kick">
+			<comment># Licensed under Attribution 4.0 International (CC BY 4.0)</comment>
+			<comment># Changes Hyperion kick to be based on the accuracy impulse rather than the current accuracy, meaning the kick no longer changes while shooting but also no long bounces all over the place when you start shooting a Hyperion gun.</comment>
+			<category name="Kick Calc">
+				<comment>clone -x Engine.Default__AttributeInitializationDefinition D_Attributes.Weapon.HyperionKickCalc</comment>
+				<code profiles="default">set D_Attributes.Weapon.HyperionKickCalc ValueFormula (bEnabled=True,Multiplier=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),Level=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.Weapon.WeaponPerShotAccuracyImpulse',InitializationDefinition=None,BaseValueScaleConstant=-1.000000),Power=(BaseValueConstant=-1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),Offset=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))</code>
+			</category>
+			<category name="SMGs">
+				<code profiles="default">set GD_Weap_SMG.A_Weapons.WT_SMG_Hyperion AlternativeWeaponKick (BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=D_Attributes.Weapon.HyperionKickCalc,BaseValueScaleConstant=1.200000)</code>
+			</category>
+			<category name="Pistols">
+				<code profiles="default">set GD_Weap_Pistol.A_Weapons.WeaponType_Hyperion_Pistol AlternativeWeaponKick (BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=D_Attributes.Weapon.HyperionKickCalc,BaseValueScaleConstant=7.000000)</code>
+			</category>
+			<category name="Sniper">
+				<code profiles="default">set GD_Weap_SniperRifles.A_Weapons.WeaponType_Hyperion_Sniper AlternativeWeaponKick (BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=D_Attributes.Weapon.HyperionKickCalc,BaseValueScaleConstant=25.000000)</code>
+			</category>
+			<category name="Shotgun">
+				<code profiles="default">set GD_Weap_Shotgun.A_Weapons.WT_Hyperion_Shotgun AlternativeWeaponKick (BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=D_Attributes.Weapon.HyperionKickCalc,BaseValueScaleConstant=30.000000)</code>
+			</category>
+		</category>
+	</body>
+</BLCMM>
+
+#Commands:
+set D_Attributes.Weapon.HyperionKickCalc ValueFormula (bEnabled=True,Multiplier=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),Level=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.Weapon.WeaponPerShotAccuracyImpulse',InitializationDefinition=None,BaseValueScaleConstant=-1.000000),Power=(BaseValueConstant=-1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),Offset=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))
+set GD_Weap_SMG.A_Weapons.WT_SMG_Hyperion AlternativeWeaponKick (BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=D_Attributes.Weapon.HyperionKickCalc,BaseValueScaleConstant=1.200000)
+set GD_Weap_Pistol.A_Weapons.WeaponType_Hyperion_Pistol AlternativeWeaponKick (BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=D_Attributes.Weapon.HyperionKickCalc,BaseValueScaleConstant=7.000000)
+set GD_Weap_SniperRifles.A_Weapons.WeaponType_Hyperion_Sniper AlternativeWeaponKick (BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=D_Attributes.Weapon.HyperionKickCalc,BaseValueScaleConstant=25.000000)
+set GD_Weap_Shotgun.A_Weapons.WT_Hyperion_Shotgun AlternativeWeaponKick (BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=D_Attributes.Weapon.HyperionKickCalc,BaseValueScaleConstant=30.000000)
+
