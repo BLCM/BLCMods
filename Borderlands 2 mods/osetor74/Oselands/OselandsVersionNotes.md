@@ -1,3 +1,53 @@
+=============== [ 1.2.3 ] ===============
+
+	- Further improved compatibility with BL2:Wonderlands and made it easier for me to update Oselands without needing
+	  to update BL2:WL every time alongside it.
+		*Though, ironically for this to work you also need to update BL2:WL
+
+	- Adjusted legendary token drop rates
+		-While you are in UVHM, each token drop now drops either 1 or 2 tokens
+
+		-Fixed Badass drop pool torgue token drops not scaling with the legendary weight in OP levels
+		-Fixed SuperBadass and UltimateBadass drop pools not including torgue token drops
+
+
+	- Fixed some Nova shields still having their old functionality even though they said it creates a nova on taking damage
+
+
+	- Zer0 skill changes
+
+		- At 0ne With The Gun
+			-Maximum skill rank reduced to 4 points
+			-Skill now *only* grants +5% magazine size per point, as well as a flat amount after other calculation
+				The flat amount is +1 when you spec into the skill, and increases to +2 when you max the skill.
+			-Now applies to every weapon type
+				(Rocket launchers have a reduced effect; maximum bonus of +1 when the skill is maxed)
+
+		- Critical Ascensi0n
+			-Removed critical damage bonus from stacks
+			-Gun Damage bonus from stacks is now multiplicative with other gun damage bonuses
+
+
+	- Salvador skill changes
+
+		- Money Shot
+			-Skill description now mentions that the gun damage bonus is multiplicative
+
+		- No Kill Like Overkill
+			-Updated skill description to be more accurate to the actual function of the skill.
+
+	- Maya skill changes
+
+		- Reaper
+			-Now lists damage bonus as bullet damage as that is more accurate to how the skill functions
+
+
+
+
+	- Pretty drastically increased drop rates on general item drops from enemies across the board
+
+
+
 =============== [ 1.2.2 ] ===============
 
 	- Rocket launcher damage is now *massively* diminished when transfering it to other weapons (i.e pimperhabbing)
