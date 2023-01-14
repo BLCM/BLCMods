@@ -1,4 +1,5 @@
 # [Osetor's Improved Vendors]
+*V. 1.1*
 
 Like the name suggests, this mod is an improvement on the quality of vendors in Borderlands 2. It makes the contents of vendors scale in rarity based on the level of the area you are in, and thus very quickly becomes massively more favorable than vanilla.
 
@@ -37,7 +38,7 @@ This mod **will not work** if you have not properly installed and enabled Comman
 Assuming you have followed the steps in the last section, you then need to execute the mod while in the main menu of the game.
 
 Open your console
-*(tilde by default when installing the PythonSDK. If you do not have a key that naturally creates a tilde then you should also install the Hex Multitool to manually set the console key to somethting else)*
+*(tilde by default when installing the PythonSDK. If you do not have a key that naturally creates a tilde then you should also install the Hex Multitool to manually set the console key to something else)*
 
 Then type in "exec OsetorVendors.blcm" (assuming you didn't rename the file)
 

@@ -1,6 +1,6 @@
 # ============= [ Oselands ] =============
 
-Version 1.2 changelog
+Version 1.2.3 changelog
 
 
  >**This is an extensive changelog with (most) changes within the mod.**
@@ -42,6 +42,7 @@ Use CTRL+F to find a section easier.
 	> Rarity odds
 	> Raid Boss Legendary Drops
 	> Dedicated legendary drop changes
+	> Torgue Vendor Conversion to Legendary Vendors
 	> Knuckledragger
 	> Golden Chest
 	> Tubbies
@@ -611,6 +612,28 @@ Use CTRL+F to find a section easier.
 		- The 6 "new" legendary relics added in the mod are now part of the world drop pool
 
 
+	> Torgue Vendor Conversion to Legendary Vendors
+
+		- Torgue Vendors have been changed to now include a massive selection of legendaries every time you load the map it is in.
+		  These legendaries are not locked to just torgue items, as they now basically serve the function of a legendary vendor.
+			
+		- Torgue Tokens now drop everywhere in the game as random drops from enemies, so you end up accumulating them over time.
+			Torgue DLC activities still award you with tokens as well, so there is still a reason to farm them specifically.
+			
+		- Different vendors in the DLC are given different item pools, so it is easier to get the item you want out of them.
+			The item types are spread as follows:
+			
+			Arena 		- shotgun, launcher
+			Moxxi's Bar 	- SMG, pistol
+			Beatdown 	- AR, sniper
+			Pyro Pete's Bar - COM, relic
+			Forge 		- grenade, shield
+			Southern Raceway- random
+			Badass Crater 	- random
+			
+			(the vendors for the latter 2 are in an awkward spot compared to the rest, so they aren't really worth it to farm)
+
+
 	> Raid Boss Legendary Drops
 
 		- Legendary world drop weight is multiplied by 3 in Terramorphous's Peak and the Winged Storm (dragons of destruction map)
@@ -784,6 +807,7 @@ Use CTRL+F to find a section easier.
 
 		- Laser Sight
 			Now grants +5% accuracy to you, and +10% accuracy to the turret
+			Now grants a small amount of ammo regeneration for 3 seconds when you critically hit
 
 		- Able
 			0.5% max health regenerated per second instead of 0.4%
@@ -798,7 +822,13 @@ Use CTRL+F to find a section easier.
 
 	- Gunpowder
 
+		- Metal Storm
+			Fire Rate per point reduced to 8%
+			Recoil Reduction per point reduced to 10%
+			Visually looks like a passive skill on the tree, but functionally works the same
+
 		- Scorched Earth
+			Moved to tier 3, where longbow turret would be
 			No longer has a damage penalty to the turret
 
 		-Battlefront
@@ -808,10 +838,16 @@ Use CTRL+F to find a section easier.
 			Now a kill skill that boosts reload speed and crit damage by 4% per point
 
 		- Ranger
-			boosts each stat by 2% instead of 1% (UCP)
+			boosts each stat by 3% instead of 1%
+
+		- New alternate capstone: Stormweaver
+			You gain a passive +15% fire rate, and an additional 5% per point you have in Metal Storm
+			
+			(this does not make you unable to spec into Nuke)
 
 		- Nuke
-			+50% cooldown rate
+			+30% cooldown rate
+			Now benefits from your grenade damage and explosive damage bonuses
 
 	- Survival
 
@@ -926,7 +962,8 @@ Use CTRL+F to find a section easier.
 	- Gun Lust
 
 		- Lay Waste moved to tier 1
-			Now provides 3% fire rate per point, and doubles the effect on kill for 7 seconds
+			Now provides 3% fire rate per point passively
+				effect is doubled on kill for 7 seconds (scales with kill skill duration)
 			Removed crit damage
 
 		- Quick Draw
@@ -1015,8 +1052,15 @@ Use CTRL+F to find a section easier.
 			Each stack now also increases fire rate and aim steadiness
 
 		- At 0ne with the Gun
-			Flat sniper magazine buff replaced with +5% sniper magazine size per point
-			Sniper reload speed buff replaced with +5% increased sniper ammo capacity
+			Max skill point amount reduced from 5 to 4 (i am aware how cursed this is)
+			now grants +5% mag size per point, an additional flat bonus after other calculations
+			
+				This bonus is +1 when you spec into the skill, and increases to +2 when you max the skill.
+				(Reduced effect for rocket launchers; bonus only goes up to +1 after you've maxed the skill)
+				
+		- Critical Ascensi0n
+			Removed Critical Damage bonus from stacks
+			Gun Damage bonuses from stacks are now multiplicative with other gun damage bonuses
 
 
 	- Cunning

@@ -1,3 +1,96 @@
+=============== [ 1.2.3 ] ===============
+
+	- Further improved compatibility with BL2:Wonderlands and made it easier for me to update Oselands without needing
+	  to update BL2:WL every time alongside it.
+		*Though, ironically for this to work you also need to update BL2:WL
+
+	- Adjusted legendary token drop rates
+		-While you are in UVHM, each token drop now drops either 1 or 2 tokens
+
+		-Fixed Badass drop pool torgue token drops not scaling with the legendary weight in OP levels
+		-Fixed SuperBadass and UltimateBadass drop pools not including torgue token drops
+
+
+	- Fixed some Nova shields still having their old functionality even though they said it creates a nova on taking damage
+
+
+	- Axton skill and Class Mod changes
+
+		- Crisis Management
+			-Now is a spectrum based on how low your shield is rather than binary on/off for if your shield is broken or not
+				(linear bonus based on % empty, so 0 bonus at full shield, full bonus at 0 shield)
+			-Increased damage reduction per point to Sup to 7%
+
+		- Resourceful
+			-Now also grants 3% mag size per point
+
+
+		- Legendary Soldier class mod
+			-Removed mag size bonus
+
+		- Specialist class mod
+			-Now also boosts mag size
+
+
+	- Zer0 skill changes
+
+		- At 0ne With The Gun
+			-Maximum skill rank reduced to 4 points
+			-Skill now *only* grants +5% magazine size per point, as well as a flat amount after other calculation
+				The flat amount is +1 when you spec into the skill, and increases to +2 when you max the skill.
+			-Now applies to every weapon type
+				(Rocket launchers have a reduced effect; maximum bonus of +1 when the skill is maxed)
+
+		- Critical Ascensi0n
+			-Removed critical damage bonus from stacks
+			-Gun Damage bonus from stacks is now multiplicative with other gun damage bonuses
+
+
+	- Salvador skill changes
+
+		- Money Shot
+			-Skill description now mentions that the gun damage bonus is multiplicative
+
+		- No Kill Like Overkill
+			-Updated skill description to be more accurate to the actual function of the skill.
+
+	- Maya skill changes
+
+		- Reaper
+			-Now lists damage bonus as bullet damage as that is more accurate to how the skill functions
+
+
+
+
+	- Pretty drastically increased drop rates on general item drops from enemies across the board
+
+	- Added Gen2 legendary class mods to the world drop legendary class mod pools
+		-These still require you to be level 62 or above.
+		-The split between Gen1/Gen2 from world drops is now 40/60, meaning you will still get more of the gen1 class mods of your
+		 particular character than any one specific gen2 class mod of the same character
+
+	- Further increased the weighting on class mods dropping for whatever character you are playing at that time
+		-Every class mod drop now has a 75% chance to be for the character you are playing
+
+
+	- Added more legendary drops to raid bosses as a whole
+	- Replaced the tripled world drop chance of terramorphous and the ancient dragons with the same bonus legendary drops as other raids
+
+	- Added an additional 100% chance for Voracidous to drop a Gen2 legendary class mod on top of the 25% chance that i already gave it
+		-This means you can also get 2 in the same kill
+
+
+	- Fixed Pyro Pete and the Ancient Dragons of Destruction not being able to drop their Proof of a Hero relic
+	- Fixed some raid bosses having 2 chances of dropping their Proof of a Hero relic each kill
+
+
+		== Unique item changes ==
+
+	- Deathless
+		-Fixed the health drain effect breaking completely while you were afflicted with a DoT effect
+
+
+
 =============== [ 1.2.2 ] ===============
 
 	- Rocket launcher damage is now *massively* diminished when transfering it to other weapons (i.e pimperhabbing)
