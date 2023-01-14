@@ -42,6 +42,7 @@ Use CTRL+F to find a section easier.
 	> Rarity odds
 	> Raid Boss Legendary Drops
 	> Dedicated legendary drop changes
+	> Torgue Vendor Conversion to Legendary Vendors
 	> Knuckledragger
 	> Golden Chest
 	> Tubbies
@@ -609,6 +610,28 @@ Use CTRL+F to find a section easier.
 
 		- Legendary shield pools not world dropping properly has been fixed
 		- The 6 "new" legendary relics added in the mod are now part of the world drop pool
+
+
+	> Torgue Vendor Conversion to Legendary Vendors
+
+		- Torgue Vendors have been changed to now include a massive selection of legendaries every time you load the map it is in.
+		  These legendaries are not locked to just torgue items, as they now basically serve the function of a legendary vendor.
+			
+		- Torgue Tokens now drop everywhere in the game as random drops from enemies, so you end up accumulating them over time.
+			Torgue DLC activities still award you with tokens as well, so there is still a reason to farm them specifically.
+			
+		- Different vendors in the DLC are given different item pools, so it is easier to get the item you want out of them.
+			The item types are spread as follows:
+			
+			Arena 		- shotgun, launcher
+			Moxxi's Bar 	- SMG, pistol
+			Beatdown 	- AR, sniper
+			Pyro Pete's Bar - COM, relic
+			Forge 		- grenade, shield
+			Southern Raceway- random
+			Badass Crater 	- random
+			
+			(the vendors for the latter 2 are in an awkward spot compared to the rest, so they aren't really worth it to farm)
 
 
 	> Raid Boss Legendary Drops
