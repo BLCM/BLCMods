@@ -14,6 +14,24 @@
 	- Fixed some Nova shields still having their old functionality even though they said it creates a nova on taking damage
 
 
+	- Axton skill and Class Mod changes
+
+		- Crisis Management
+			-Now is a spectrum based on how low your shield is rather than binary on/off for if your shield is broken or not
+				(linear bonus based on % empty, so 0 bonus at full shield, full bonus at 0 shield)
+			-Increased damage reduction per point to Sup to 7%
+
+		- Resourceful
+			-Now also grants 3% mag size per point
+
+
+		- Legendary Soldier class mod
+			-Removed mag size bonus
+
+		- Specialist class mod
+			-Now also boosts mag size
+
+
 	- Zer0 skill changes
 
 		- At 0ne With The Gun
@@ -45,6 +63,31 @@
 
 
 	- Pretty drastically increased drop rates on general item drops from enemies across the board
+
+	- Added Gen2 legendary class mods to the world drop legendary class mod pools
+		-These still require you to be level 62 or above.
+		-The split between Gen1/Gen2 from world drops is now 40/60, meaning you will still get more of the gen1 class mods of your
+		 particular character than any one specific gen2 class mod of the same character
+
+	- Further increased the weighting on class mods dropping for whatever character you are playing at that time
+		-Every class mod drop now has a 75% chance to be for the character you are playing
+
+
+	- Added more legendary drops to raid bosses as a whole
+	- Replaced the tripled world drop chance of terramorphous and the ancient dragons with the same bonus legendary drops as other raids
+
+	- Added an additional 100% chance for Voracidous to drop a Gen2 legendary class mod on top of the 25% chance that i already gave it
+		-This means you can also get 2 in the same kill
+
+
+	- Fixed Pyro Pete and the Ancient Dragons of Destruction not being able to drop their Proof of a Hero relic
+	- Fixed some raid bosses having 2 chances of dropping their Proof of a Hero relic each kill
+
+
+		== Unique item changes ==
+
+	- Deathless
+		-Fixed the health drain effect breaking completely while you were afflicted with a DoT effect
 
 
 
