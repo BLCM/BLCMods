@@ -254,18 +254,14 @@ Use CTRL+F to find a section easier.
 			-Only drops in UVHM
 			-Grants immunity to fire DoT, akin to a shield. Plus its normal health regen.
 
-
-		Deathless
-			-Massive boost to shield capacity and recharge rate
-			-Health is drained while you are above 10% HP
-
 		
 		Blood of the Ancients
-			-Unchanged
+			-Unchanged, with exception of lowered numbers to match the changes to vitality relics
 
 
 		Skin of the Ancients
-			-Unchanged
+			-Highest damage reduction boost in the game
+			- +20% increased effectiveness of shield damage abilities
 
 
 		Bone of the Ancients
@@ -273,8 +269,8 @@ Use CTRL+F to find a section easier.
 			 elemental damage and cooldown rate, which can be useful.
 
 
-		Heart of the Ancients
-			-FFYL duration and life (vanilla), plus 30% increased critical damage.
+		Heart of the Ancients (specifically the AR version)
+			-FFYL duration and life (vanilla), plus increased critical damage.
 
 
 		Wings of the Ancients (New)
@@ -308,6 +304,30 @@ Use CTRL+F to find a section easier.
 			-Pearlescent Rarity
 			-A massive gun damage boost, but halves your health
 			-No Longer has an interaction with Easy Mode (Which was reworked)
+			
+		
+		Red Hellion (Replacing Heart of the Ancients - Pistol)
+			-Legendary Rarity
+			-Slightly increased reload speed
+			-Applies 75% of your movement speed bonuses to your gun's fire rate (with a maximum of +100% movement speed)
+			
+			
+		Medusa's Eye (Replacing Heart of the Ancients - Shotgun)
+			-Legendary Rarity
+			-Slagged enemies are rooted in place instead of slowed
+			-Enemies are Blighted, getting their health drained equal to 100% of your maximum health per second
+
+
+		Backup Magazine (Replacing Heart of the Ancients - SMG)
+			-Legendary Rarity
+			-Gain a small amount of ammo regen, akin to Salvador's Hoarder class mod
+			-Slightly increased mag size
+			
+			
+		Deathless (Replacing Heart of the Ancients - Sniper)
+			-Legendary Rarity
+			-Massive boost to shield capacity and recharge rate
+			-Health is drained while you are above 10% HP
 
 
 		=== Completely New Relics ===
