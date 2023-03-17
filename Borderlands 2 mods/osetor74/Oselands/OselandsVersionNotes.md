@@ -1,3 +1,127 @@
+=============== [ 1.2.4 ] ===============
+
+	- Further fixed elemental tracers (provided to me by ZetaDaemon)
+
+	- Pyro Pete (Raid)
+		-Further increased movement speed from 600 to 1000 (vanilla value = 400)
+		-Reduced shield capacity to ~1/10th of its previous value
+		-Increased max health by a little over 3x
+
+		*With these changes you'll be spending less time in phase 1 and more in phase 2 and makes him generally a more
+		 threatening presence since he can move around the arena easier
+
+
+	- Axton class mod changes
+
+		- Legendary Soldier
+			-Removed Impact and Healthy skill boosts
+
+		- Legendary Pointman
+			-Added Expertise and Resourceful skill boosts
+
+
+	- Maya class mod changes
+
+		- Legendary Siren
+			-Removed Mind's Eye skill boost
+
+
+	- Zer0 skill changes
+
+		- New skill added to tier 5 of Sniping: Arsenal
+			-Increases bullet damage, grenade damage, rocket damage and melee damage (multiplicative) by 2% per point
+
+		- At 0ne with the Gun
+			-Reduced % mag size boost from 5% to 3% per point
+
+		- Death Mark
+			-Fixed skill not applying to nova damage
+
+		- C0nditi0n 0verl0ad
+			-Fixed the skill not providing skill tree passive bonuses when fully specced
+			-Fixed skill not applying to nova damage
+
+
+	- Fixed Hyperius and Gee not being able to drop their Proof of a Hero relic
+
+
+	- Fixed E-Tech shield drop rates from badasses being much, much lower than intended
+		-Now they are properly around 5% chance from their respective drop source (0.35x of the standard dedicated
+		 legendary chance, which is increased to 15% by default in Oselands).
+		 As a refresher:
+
+			- Berserker shield (Bandit) - Badass Psychos
+				-Dealing or taking damage causes you enter a rage, gaining movement speed and life steal while your health drains quickly.
+
+			- Titan Heart Shield (Hyperion) - Badass Loaders
+				-Grants increased max health, and adds 10% of your maximum health value as amp damage to all your shots
+
+			- Shatter Tank Shield (Pangolin) - Spiderant Kings/Queens (/their renamed versions in higher difficulties)
+				-Reduces max health on top of the 0 capacity, but grants high flat health regen
+
+
+
+		== Unique item changes ==
+
+	- Added a new *E-Tech* class mod
+
+		*The idea for these is that each one will be shared across all characters rather than being character specific.
+		 Thus they do not boost skills but act more like secondary, powerful relics with activated effects and niche
+		 stats that you might not be able to get on a particular character otherwise
+
+		- Desperado
+			-Increased Crit damage
+			-Reduces base reload time of all of your guns by 0.5 seconds (i.e before reload speed boosts are taken into account)
+			-Critically killing an enemy with a bullet gives +10% bullet damage, stacking indefinitely and losing all stacks
+			 upon getting a bullet kill that is not a crit.
+
+			-5% chance to drop from any badass enemy within Fink's Slaughterhouse while you are in UVHM.
+
+
+	- Red Hellion
+		-Fixed fire rate buff being completely broken
+
+	- Eraser (Carnage replacement)
+		-Updated the firing mode of the weapon to be much closer to what i originally had in mind for it
+			much closer to the reference material as well, and just makes the gun way, way more manageable to use
+			(explaining exact change is difficult via text. Just use it for yourself)
+		-Removed crit bonus, highly increased base damage
+
+	- Shredifier
+		-Massively lowered fire rate and practically nullified the natural vladof barrel wind-up
+		-Now gains 5% increased fire rate for 5 seconds when you hit an enemy, stacking infinitely
+		-Now also has 50% chance to not consume ammo
+		-Reduced base damage
+
+	- Hellfire
+		-Now has a *chance* on impact to create a fire explosion, rather than always dealing splash damage
+			-Base damage is equal to 175% of the weapon's status damage
+			-Impact damage dealt is considered Status Damage, and benefits from boosts to Status Damage
+			-Benefits from 50% of your gun damage bonuses
+			-Always applies a fire DoT
+
+		-Increased damage
+		-Highly increased status damage
+		-Made the weapon's standard status chance pretty much nonexistant
+		-Slightly reduced fire rate
+
+	- World Piercer
+		-Fixed the weapon having unintentionally massively reduced damage
+
+	- Comically Large Blunderbuss
+		-Removed the weapon's ability to crit, now instead deals pure bullet splash damage when
+		 the bullets hit enemies
+			-Also fixed the weapon having unintentionally massively reduced damage
+
+		-Increased pellet count from 5 to 8 (so basically just a 60% damage increase)
+		-Increased damage by ~50%
+		-Reduced mag size down to 1
+		-Massively improved reload speed
+		-Increased recoil for comedic effect
+		-Increased bullet speed by 50%
+
+
+
 =============== [ 1.2.3 ] ===============
 
 	- Further improved compatibility with BL2:Wonderlands and made it easier for me to update Oselands without needing
