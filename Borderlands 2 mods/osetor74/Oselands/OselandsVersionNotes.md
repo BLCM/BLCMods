@@ -120,6 +120,10 @@
 		-Massively improved reload speed
 		-Increased recoil for comedic effect
 		-Increased bullet speed by 50%
+		
+		
+	- Swordfish
+		-Increased the damage gained per remaining ammo in the mag when ADS'ing from 50% to 75%
 
 
 
