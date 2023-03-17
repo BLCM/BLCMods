@@ -51,7 +51,8 @@
 		 As a refresher:
 
 			- Berserker shield (Bandit) - Badass Psychos
-				-Dealing or taking damage causes you enter a rage, gaining movement speed and life steal while your health drains quickly.
+				-Dealing or taking damage causes you enter a rage, gaining movement speed and life steal while your
+				 health drains quickly.
 
 			- Titan Heart Shield (Hyperion) - Badass Loaders
 				-Grants increased max health, and adds 10% of your maximum health value as amp damage to all your shots
