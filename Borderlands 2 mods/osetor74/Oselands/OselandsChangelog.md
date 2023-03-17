@@ -1,6 +1,6 @@
 # ============= [ Oselands ] =============
 
-Version 1.2.3 changelog
+Version 1.2.4 changelog
 
 
  >**This is an extensive changelog with (most) changes within the mod.**
@@ -1070,10 +1070,14 @@ Use CTRL+F to find a section easier.
 
 		- Kill C0nfirmed reworked: 0ptics
 			Each stack now also increases fire rate and aim steadiness
+			
+		- New Skill: Arsenal:
+			Increases your grenade, rocket and bullet damage by 2% per point
+			Also gives you a multiplicative 2% bonus to your melee damage per point
 
 		- At 0ne with the Gun
 			Max skill point amount reduced from 5 to 4 (i am aware how cursed this is)
-			now grants +5% mag size per point, an additional flat bonus after other calculations
+			now grants +3% mag size per point, an additional flat bonus after other calculations
 			
 				This bonus is +1 when you spec into the skill, and increases to +2 when you max the skill.
 				(Reduced effect for rocket launchers; bonus only goes up to +1 after you've maxed the skill)
@@ -1296,8 +1300,7 @@ Use CTRL+F to find a section easier.
 	  Every unique gun has been looked over in some way. Some guns did not change at all, or in very small ways. Some guns were
 	  nerfed/buffed, some guns were readjusted to be closer to what they were in vanilla after indirect changes like through
 	  weapon types. A lot of guns were given a new identity,  such as the Patriot now being a very slow, but high damage and
-	  high-mag vladof sniper. Some guns were replaced, like Seraphim being replaced with the Destroyer from Borderlands 1, making
-	  it a Dahl assault rifle that functions like a chopper when aiming down the sight.
+	  high-mag vladof sniper. Some guns were replaced, which is more detailed in the next part.
 
 	  The power of each gun was, of course, looked over, and hopefully more things are more powerful than what they used to be.
 	  Try things out, use things you wouldn't otherwise. I especially recommend trying the items that are basically memes in vanilla.
@@ -1308,6 +1311,26 @@ Use CTRL+F to find a section easier.
 
 
 	  Also, yes, the Grog is nerfed.
+	  
+	
+	> Replaced unique guns
+	
+		As stated before, there are some items that were completely replaced to allow them to be much cooler than they previously
+		were. None of the drop locations of any of the items listed here have been moved from where the original item drops in
+		vanilla.
+
+		> Hammer (Dog)
+			-Exceptionally high fire rate and shoots explosive gyrojets thatt have added grenade splash damage
+		
+		> Spy (Commerce)
+			-High crit damage hyperion SMG (basically like a smaller version of the Bitch)
+		
+		> Destroyer (Seraphim)
+			-Aiming down sights causes the gun to fire a continuous burst until its mag is empty
+			-Good base damage, slightly increased crit damage, lower mag.
+		
+		> Eraser (Carnage)
+			-Shoots 5 gyrojets in a straight line with varying speeds, much higher base damage
 
 
 
@@ -1329,7 +1352,7 @@ Use CTRL+F to find a section easier.
 
 		> Swordfish (Jakobs AR) - Assassins
 			-Good hip-fire accuracy.
-			-Aiming causes you to deplete all remaining ammo in your mag and increases the shot's damage by 50% for each
+			-Aiming causes you to deplete all remaining ammo in your mag and increases the shot's damage by 75% for each
 			 ammo consumed
 
 
@@ -1363,7 +1386,7 @@ Use CTRL+F to find a section easier.
 
 
 		> Tigris (Jakobs shotgun) - Sheriff of Lynchwood
-			-Always spawns as fire/corrosive/shock.
+			-Always spawns as fire, corrosive or shock.
 			-100% status chance, very high status damage
 			-Shots have a chance to also slag enemies.
 			- 2-shot burst
