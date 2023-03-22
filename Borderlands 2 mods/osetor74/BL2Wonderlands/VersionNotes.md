@@ -1,3 +1,11 @@
+=============== [ 1.2.1 ] ===============
+
+    - You now gain your first skill point at level 2 instead of 5
+
+	- You now stop gaining skill points after level 77. This grants you the same amount of skill points
+      as vanilla level 80, but compensates for getting the first few points earlier
+      
+
 =============== [ 1.2 ] ===============
 
     - Improved compatibility with Oselands
