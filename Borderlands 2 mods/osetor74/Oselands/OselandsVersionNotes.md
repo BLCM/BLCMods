@@ -1,3 +1,58 @@
+=============== [ 1.2.4.1 ] ===============
+
+	- You now gain your first skill point at level 2 instead of 5
+
+	- You now stop gaining skill points after level 69. This grants you a total of 68 skill points, which is equal
+	  to how much you would have had with the old level 72 cap.
+
+		*the reduction in total amount of skill points in theory means more decision making in your build,
+		 leading to more possible build diversity. In reality this is still a high amount of skill points,
+		 but at the very least it's not limiting.
+
+
+	- Salvador Skill Changes
+
+		- New skill added to tier 5 Brawn: Provoke
+			-Taking damage causes you to gain stacks that give you improved shield recharge delay
+			-This effect is further boosted by the amount of points you have spent in Incite
+			-No stack, no cooldown on being able to get stacks
+			-maximum of 3 points
+
+
+	- Krieg Skill Changes
+
+		- New skill added to tier 5 Mania: Bloodthirst Aegis
+			-Killing an enemy instantly refills 25% of your shield capacity
+			-maximum of 3 points
+
+
+
+	- Axton Skill Changes
+
+		- Laser Sight
+			-Maximum point cap has been reduced from 5 to 3
+			-Now gives 0.4 ammo regen per point instead of 0.25
+			-Now gives 10% accuracy per point instead of 5%
+
+		- Crisis Management
+			-Gun damage boost has been changed to 5% global damage per point
+			-Fixed damage reduction buff not working
+
+		- Resourceful
+			-Increased mag size per point from 3% to 4%
+
+		- Last Ditch Effort
+			-Gun damage boost has been changed to 4% global damage per point
+
+
+		== Unique item changes ==
+
+	- Cradle
+		-Fixed damage formula not working properly, causing the item to basically always deal level 1 damage
+		-Fixed the item not getting shield damage bonuses
+		-Massively increased base damage
+
+
 =============== [ 1.2.4 ] ===============
 
 	- Further fixed elemental tracers (provided to me by ZetaDaemon)
