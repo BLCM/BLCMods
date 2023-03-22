@@ -15,14 +15,15 @@ Use CTRL+F to find a section easier.
   #### > Other mods included in Oselands
 
   #### > Global Changes
-	* Stop scaling past 72
-	* Lower scaling
-	* UVHM Rebalance
-	* Element changes
-	* Player scaling changes
-	* Slower enemy bullets
-	* Vendor changes
-	* Miscellaneous
+	> Stop scaling past 72
+	> Lower scaling
+	> UVHM Rebalance
+	> Element changes
+	> Player scaling changes
+	> Slower enemy bullets
+	> Vendor changes
+	> Miscellaneous
+	> Player Skill Point Limiter
 
 
   #### > Relic Rework
@@ -189,6 +190,20 @@ Use CTRL+F to find a section easier.
 		- Legendary rarity color was changed to be a bit darker
 		- Vehicles now have 20% more health to compensate for the NE/Explosive/Slag changes
 		- You move twice as fast in FFYL compared to vanilla
+		
+		
+		
+	> Player Skill Point Limiter
+	
+		- You now gain your first skill point at level 2 instead of 5
+
+		- You now stop gaining skill points after level 69. This grants you a total of 68 skill points, which is equal
+		  to how much you would have had with the old level 72 cap.
+
+			*the reduction in total amount of skill points in theory means more decision making in your build,
+			 leading to more possible build diversity. In reality this is still a high amount of skill points,
+			 but at the very least it's not limiting.
+
 
 
 
@@ -835,7 +850,7 @@ Use CTRL+F to find a section easier.
 		- Longbow turret moved to tier 3, where Scorched Earth would be
 
 		- Crisis Management
-			+6% gun damage and +4% damage reduction while shields are down
+			+5% *all damage* (applies to both you and your turret) and +7% damage reduction while shields are down
 
 		- New Skill: Special Munitions
 			- +10% turret fire rate per point
@@ -852,13 +867,18 @@ Use CTRL+F to find a section easier.
 			No longer has a damage penalty to the turret
 
 		-Battlefront
-			Now also boosts the turrets' damage by 6% per point
+			Now also boosts the turrets' *gun damage* by 6% per point
 
 		- Duty Calls
 			Now a kill skill that boosts reload speed and crit damage by 4% per point
 
 		- Ranger
 			boosts each stat by 3% instead of 1%
+
+		- New Skill: Overclocked
+			Maximum of 3 points
+			Increases the damage of your currently equipped shield's abilities by 6.6% per pont (20% max)
+				This also applies to added damage such as amp and roid damage
 
 		- New alternate capstone: Stormweaver
 			You gain a passive +15% fire rate, and an additional 5% per point you have in Metal Storm
@@ -875,9 +895,11 @@ Use CTRL+F to find a section easier.
 
 		- Resourceful
 			+6% cooldown rate instead of 5%
+			Now also grants +4% mag size per point
 
 		- Last Ditch Effort
-			+6% gun damage and accuracy while below 50% health or in FFYL, and +15% increased FFYL duration per point
+			+4% *all damage* (applies to both you and your turret) and accuracy while below 50% health or in
+			FFYL, and +15% increased FFYL duration per point
 
 
 
@@ -1036,10 +1058,18 @@ Use CTRL+F to find a section easier.
 			HP regen increased to up to 1% of your hp per point (still based on how much hp you have)
 
 		- Just Got Real
-			Now increases gun damage and mag size passively by 3% per point
+			Now increases all damage and mag size passively by 3% per point
 
 		- Sexual Tyrannosaurus
 			HP regen increased to 0.7% per point
+
+		- New Skill: Provoke
+			Maximum of 3 points
+			Taking damage grants you a stack that lasts for 5 seconds which improves shield recharge delay by
+			2% at rank 1 and +4% for each level after that.
+			The stacks gain an additional 0.8% shield recharge delay for each point you have spent in the Incite
+			skill, not changing with additional points spent in Provoke.
+			No maximum cap on stacks, and no internal cooldown on getting stacks.
 
 
 
@@ -1270,6 +1300,10 @@ Use CTRL+F to find a section easier.
 
 		- Fuel the Rampage
 			Now gives a passive 0.6% health regen per point
+
+		- New Skill: Bloodthirst Aegis
+			Maximum of 3 points
+			You instantly refill 25% of your shield capacity on kill per point
 
 
 	- Hellborn
