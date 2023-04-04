@@ -1,4 +1,4 @@
-Better Assault Rifles
+Better SMGs
 =============
 
 Improves the quality of SMGs.  
