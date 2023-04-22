@@ -15,5 +15,8 @@ You will need to install [Python SDK](https://bl-sdk.github.io/) and [Command Ex
 
 Changelog
 =========
+**v1.1** -
+ * Fixed the lascaux pattern being extremely spread out, fixed actualizer being able to get the anarchy title, increased ammo count for smgs to better balance out the rest of the changes.
+
 **v1.0** -
  * Initial Upload
