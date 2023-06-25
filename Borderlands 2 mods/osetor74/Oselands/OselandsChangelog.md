@@ -675,7 +675,7 @@ Use CTRL+F to find a section easier.
 
 		- Hyperius, Master Gee, Pyro Pete and Voracidous now all have 4 individual pools with 6.67% drop chance each every kill which
 		  drop a random world drop item from the legendary pool of guns, shields, grenades and class mods respectively.
-			This chance increases by 20% for each OP level, up op to a tripled value
+			This chance increases by 20% for each OP level, up to a tripled value
 
 		- Voracidous now has a 25% chance to drop a random Gen2 Legendary Class Mod
 
