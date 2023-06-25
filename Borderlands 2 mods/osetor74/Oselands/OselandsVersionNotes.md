@@ -15,7 +15,7 @@
 		- New skill added to tier 5 Brawn: Provoke
 			-Taking damage causes you to gain stacks that give you improved shield recharge delay
 			-This effect is further boosted by the amount of points you have spent in Incite
-			-No stack, no cooldown on being able to get stacks
+			-No stack limit, no cooldown on being able to get stacks
 			-maximum of 3 points
 
 
