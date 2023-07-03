@@ -1,0 +1,20 @@
+#Piano Woman - Replaces the Lascaux#
+
+#Change#
+- 50% increased move speed
+- Shoots 4 projectiles 
+- Spawns with shock element only
+- Quicker burst when zoomed in
+
+#Name/Weapon Card#
+
+set GD_Weap_SMG.Name.Title.Title__Unique_Lascaux PartName Piano Woman
+set GD_Weap_SMG.Name.Title.Title__Unique_Lascaux:AttributePresentationDefinition_8 NoConstraintText <font color="#e63946">Too many people complained there should be a Piano Woman if there was a Piano Man.<font color="#ffffff"><br>- Fire 4 projectiles per shot<br>- Increase movespeed by 50%
+
+#Barrel#
+set GD_Weap_SMG.Barrel.SMG_Barrel_Bandit_Lascaux WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)), (AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=3.000000)))
+set GD_Weap_SMG.Barrel.SMG_Barrel_Bandit_Lascaux ExternalAttributeEffects ((AttributeToModify = AttributeDefinition'D_Attributes.GameplayAttributes.FootSpeed',ModifierType=MT_Scale,BaseModifierValue = (BaseValueConstant = 0.500000, BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+set GD_Weap_SMG.Barrel.SMG_Barrel_Bandit_Lascaux ZoomWeaponAttributeEffects (AttributeToModify = AttributeDefinition='D_Attributes.Weapon.WeaponAutomaticBurstCount',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=-5.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))
+
+#Shock#
+set GD_Weap_SMG.A_Weapons_Unique.SMG_Dahl_3_Lascaux:WeaponPartListCollectionDefinition_176 ElementalPartData (bEnabled=True,WeightedParts= ((Part = WeaponPartDefinition'GD_Weap_SMG.elemental.SMG_Elemental_None', Manufacturers = , MinGameStageIndex = 0, MaxGameStageIndex = 0, DefaultWeightIndex = 0), (Part = WeaponPartDefinition'GD_Weap_SMG.elemental.SMG_Elemental_Shock', Manufacturers = , MinGameStageIndex= 0, MaxGameStageIndex = 1, DefaultWeightIndex = 1)))
