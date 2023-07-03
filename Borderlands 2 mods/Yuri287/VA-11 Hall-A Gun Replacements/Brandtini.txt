@@ -1,0 +1,18 @@
+#Brandtini - replaces Good Touch#
+
+#Changes#
+- Increased Fire Chance
+- Increase Fire Damage
+- Increased Healing
+- Increase Move Speed
+
+
+
+#ID Card#
+set GD_Weap_SMG.Name.Title.Title__Unique_GoodTouch PartName Brandtini
+set GD_Weap_SMG.Name.Title.Title__Unique_GoodTouch:AttributePresentationDefinition_8 NoConstraintText 8 out of 10 smug assholes would recommend it but they're too busy being smug assholes.
+
+#Effects#
+set GD_Weap_SMG.Barrel.SMG_Barrel_Maliwan_GoodTouch ExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.GameplayAttributes.PlayerCriticalHitBonus',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.750000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.DamageEnhancementModifiers.PlayerConvertDamageToHealingPercent',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.025000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify = AttributeDefinition'D_Attributes.GameplayAttributes.FootSpeed',ModifierType=MT_Scale,BaseModifierValue = (BaseValueConstant = 0.500000, BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+
+set GD_Weap_SMG.Barrel.SMG_Barrel_Maliwan_GoodTouch WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponStatusEffectChanceModifier',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.750000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify = AttributeDefinition'D_Attributes.Weapon.WeaponStatusEffectDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.990000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
