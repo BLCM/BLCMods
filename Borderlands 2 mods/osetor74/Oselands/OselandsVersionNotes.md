@@ -65,7 +65,7 @@
 		 unique benefits of each damage type and giving you a more general multiplier instead)
 
 
-		- % drop chance from elemental badass skags
+		- 5% drop chance from elemental badass skags
 
 
 
