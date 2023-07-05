@@ -1,5 +1,5 @@
 # [Oselands]
-*V. 1.2.4.1*
+*V. 1.2.5*
 
 **Oselands** is a re-balance/overhaul of Borderlands 2 with the single goal of making the experience from start to finish more fun through polishing the gameplay experience and trying to make as many good options as possible. Obviously fun is subjective, but I've tried to cover as many bases as possible.
 
@@ -23,13 +23,21 @@ Also, the mod is incompatible with Co-Op. That also makes the game crash.
 
 
 
+
+
+
 ## How to install mod
 
-*This section will assume that you haven't installed a BL2 mod before. Feel free to skip steps if you have it set up already*
+### Installing the PythonSDK
 
 **If you are completely new to modding**, please watch **[this video](https://www.youtube.com/watch?v=57WxvASCX70&t=1s)** done by Apple1417 to install the PythonSDK. This is required for both executing the mod in the game to apply its effects, and to make other mods work that Oselands requires to function.
 
 *You may also click [this link](https://bl-sdk.github.io/) for a written guide on how to install the SDK. Also leads to the video guide listed above.*
+
+
+---
+
+### Installing required PythonSDK mods
 
 **You then need to download the following PythonSDK mods if you have not already:**
 
@@ -41,9 +49,12 @@ Oselands **will not work** if you have not properly installed and enabled these 
 
 *Credits to Apple1417 for these mods*
 
+---
 
-**Once you have all this setup, please right click [this link](https://raw.githubusercontent.com/BLCM/BLCMods/master/Borderlands%202%20mods/osetor74/Oselands/Oselands.blcm) and save the mod file as Oselands.blcm**
+### Saving the mod file
+**Once you have set up all of the above, please right click [this link](https://raw.githubusercontent.com/BLCM/BLCMods/master/Borderlands%202%20mods/osetor74/Oselands/Oselands.blcm) and save the mod file as Oselands.blcm**
 
+---
 
 ## How to make the mod work
 

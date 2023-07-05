@@ -1,3 +1,99 @@
+=============== [ 1.2.5 ] ===============
+
+	- Fixed standard enemy drop pool not being able to drop eridium and legendary tokens
+
+	- Reduced the drop chance of the Desperado class mod from badasses in Bandit Slaughter from 5% to 2%
+
+	
+		== Unique item changes ==
+
+	- Added a new legendary Hyperion pistol: Knell
+		-3 ammo per shot, reduced crit damage but much higher base damage, massively reduced mag size
+		-Scoring a critical hit activates a buff that grants infinite ammo to the Knell for 2 seconds
+
+
+		- 7.5% chance to drop from Gravedigger enemies (at the default option of 15% dedicated legendary drops).
+
+
+	- Added a new legendary Torgue shotgun: Obliterator
+		-5 pellets per shot, increased fire rate and mag size. Swapping to and from the weapon is also
+		 faster.
+		-Pellets activate a buff on hit that gives you +3% global damage. No stack limit and
+		 stacks persist after switching weapons.
+		-Pellets create a massive explosion when hitting an enemy (rocket damage) but deal no impact damage
+			-Also means it can not crit
+
+
+		-Dedicated drop from Saturn
+
+
+	- Added a new Seraph relic: Pearl of Power
+		-Rolls one of the 6 vault hunters and gives skill point bonuses to skills of that vault hunter
+			-Rolls a primary skill (+3) and a secondary skill (+2).
+			 If both rolls give the same skill, it instead gives +4
+
+			- Skills are chosen from a predetermined list of 6 skills per character:
+
+			Axton: Sentry, Crisis Management, Expertise, Steady, Resourceful, Quick Charge
+			Maya: Reaper, Elated, Fleet, Inertia, Blight Phoenix, Discharge
+			Salvador: Money Shot, Locked and Loaded, 5 Shots or 6, Yippe-Ki-Yay,
+				  I'm The Juggernaut, Just Got Real
+			Zer0: Weakness Expl0it, Fast Hands, Tw0 Fang, Fearless, Ambush, Unf0reseen
+			Gaige: The Better Half, Unstoppable Force, Strength of 5 Gorillas, Evil Enchantress,
+			       Blood-Soaked Shields, Radical
+			Krieg: Blood-Filled Guns, Boiling Blood, Feed the Meat, Strip the Flesh, Burn Baby Burn
+			       Fire Fiend
+
+		-Guaranteed to get one as a drop every time you kill *any* raid boss while in UVHM.
+		 The drop is more heavily weighted for the character you are currently playing.
+			
+
+
+	- Added a new legendary relic: Temporal Teardrop
+		-A small cooldown rate boost
+		-Your action skill cools down even while it is active, at half of its regular rate
+
+		-World drop only
+
+
+
+	- Added a new E-Tech Shield: Chromatic Hydra 
+		-0 capacity, like all E-Tech shields in this mod
+		-High adaptive shield effect value
+		-Overrides existing elemental damage multipliers towards all health types (health, shield, armor)
+		 when dealing damage to enemies with a new value (essentially nullifying both the penalties *and*
+		 unique benefits of each damage type and giving you a more general multiplier instead)
+
+
+		- % drop chance from elemental badass skags
+
+
+
+	- Added a new E-Tech Class Mod: Death Kiss
+		-Can be used by any class, like all E-Tech class mods in this mod
+		-Applies the Blight effect previously found on the Medusa's Eye relic
+			-Slagged enemies get a constant health drain equal to your max health per second
+
+
+		- 2% chance to drop from badasses in the Natural Selection Annex (creature slaughter)
+		 while you are in UVHM.
+
+
+	- Gub
+		-Reworked (again) to be a fast firing bandit pistol with heavily arcing bullets. No longer
+		 deals splash damage.
+
+
+
+	- Removed the Blight effect from Medusa's Eye. The rest of the item was unchanged
+
+	- Made the Titan Heart shield's amp damage effect apply to Salvador's left hand.
+
+
+	- Updated the Tracer shotgun bullet and massively improved the weapon's accuracy
+	- Gave a red text to the Loaded Dice relic
+
+
 =============== [ 1.2.4.1 ] ===============
 
 	- You now gain your first skill point at level 2 instead of 5
