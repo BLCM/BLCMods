@@ -365,6 +365,9 @@ Use CTRL+F to find a section easier.
    		Pearl of Power  (Seraph)
 			-Always rolls one of the 6 characters, and grants skill point bonuses to skills of that character.
 
+			-Rolls a primary skill (+3) and a secondary skill (+2).
+			 If both rolls give the same skill, it instead gives +4
+
    			- Skills are chosen from a predetermined list of 6 skills per character:
 
 			Axton: Sentry, Crisis Management, Expertise, Steady, Resourceful, Quick Charge
