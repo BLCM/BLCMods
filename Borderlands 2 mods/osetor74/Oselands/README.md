@@ -26,9 +26,9 @@ Also, the mod is incompatible with Co-Op. That also makes the game crash.
 
 
 
-## How to install mod
+## [ How to install mod ]
 
-### Installing the PythonSDK
+### --- Installing the PythonSDK ---
 
 **If you are completely new to modding**, please watch **[this video](https://www.youtube.com/watch?v=57WxvASCX70&t=1s)** done by Apple1417 to install the PythonSDK. This is required for both executing the mod in the game to apply its effects, and to make other mods work that Oselands requires to function.
 
@@ -37,7 +37,7 @@ Also, the mod is incompatible with Co-Op. That also makes the game crash.
 
 ---
 
-### Installing required PythonSDK mods
+### --- Installing required PythonSDK mods ---
 
 **You then need to download the following PythonSDK mods if you have not already:**
 
@@ -51,7 +51,7 @@ Oselands **will not work** if you have not properly installed and enabled these 
 
 ---
 
-### Saving the mod file
+### --- Saving the mod file ---
 **Once you have set up all of the above, please right click [this link](https://raw.githubusercontent.com/BLCM/BLCMods/master/Borderlands%202%20mods/osetor74/Oselands/Oselands.blcm) and save the mod file as Oselands.blcm**
 
 ---
