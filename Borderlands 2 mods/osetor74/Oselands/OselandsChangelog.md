@@ -1,6 +1,6 @@
 # ============= [ Oselands ] =============
 
-Version 1.2.4.1 changelog
+Version 1.2.5 changelog
 
 
  >**This is an extensive changelog with (most) changes within the mod.**
@@ -352,6 +352,33 @@ Use CTRL+F to find a section easier.
 			-While shield is full, you gain health regeneration equal to your equipped shield's recharge rate
 			-Halves life steal effects
 
+			-7.5% chance from Cursed Pirates
+
+
+		Temporal Teardrop  (Legendary)
+			-Small cooldown rate buff
+			-While your action skill is active, it continues to cool down at 50% of its regular rate.
+
+			-World Drop only
+
+
+   		Pearl of Power  (Seraph)
+			-Always rolls one of the 6 characters, and grants skill point bonuses to skills of that character.
+
+   			- Skills are chosen from a predetermined list of 6 skills per character:
+
+			Axton: Sentry, Crisis Management, Expertise, Steady, Resourceful, Quick Charge
+			Maya: Reaper, Elated, Fleet, Inertia, Blight Phoenix, Discharge
+			Salvador: Money Shot, Locked and Loaded, 5 Shots or 6, Yippe-Ki-Yay,
+				  I'm The Juggernaut, Just Got Real
+			Zer0: Weakness Expl0it, Fast Hands, Tw0 Fang, Fearless, Ambush, Unf0reseen
+			Gaige: The Better Half, Unstoppable Force, Strength of 5 Gorillas, Evil Enchantress,
+			       Blood-Soaked Shields, Radical
+			Krieg: Blood-Filled Guns, Boiling Blood, Feed the Meat, Strip the Flesh, Burn Baby Burn
+			       Fire Fiend
+
+
+			-Guaranteed drop whenever you kill *any* raid in UVHM.
 
 
 ## Weapon Changes
@@ -605,7 +632,12 @@ Use CTRL+F to find a section easier.
 
 				- Shatter Tank Shield (Pangolin) - Spiderant Kings/Queens (/their renamed versions in higher difficulties)
 					-Reduces max health on top of the 0 capacity, but grants flat health regen
-			
+
+     				- Chromatic Hydra Shield (Anshin) - Elemental Badass Skags
+					-High adaptive shield effect value
+     					-*Overrides* elemental damage multipliers when dealing damage against enemies with its own
+	  				 multiplier, negating the downsides of the elemental damage types but also the upsides in
+					 exchange for a good general multiplier.
 
 
 
@@ -1354,7 +1386,7 @@ Use CTRL+F to find a section easier.
 		vanilla.
 
 		> Hammer (Dog)
-			-Exceptionally high fire rate and shoots explosive gyrojets thatt have added grenade splash damage
+			-Exceptionally high fire rate and shoots explosive gyrojets that have added grenade splash damage
 		
 		> Spy (Commerce)
 			-High crit damage hyperion SMG (basically like a smaller version of the Bitch)
@@ -1469,6 +1501,21 @@ Use CTRL+F to find a section easier.
 			-Increases movement speed while held slightly, has increased fire rate and a ridiculously fast reload speed.
 
 
+   		 [1.2.5]
+
+      		> Knell (Hyperion Pistol) - Gravediggers
+			-High base damage, 1.5x base critical damage, 3 ammo per shot.
+			-Critically hitting an enemy causes the Knell to not consume ammo for 2 seconds.
+
+
+
+		> Obliterator (Torgue Shotgun) - Saturn
+			-5 pellets per shot, high fire rate and mag size
+			-Pellets create a large explosion on hit, but deal no impact damage
+			-Upon hitting an enemy, each pellet of the Obliterator grants you a 3% Global Damage buff, which persists
+   			 even after switching weapons.
+
+
 
 	==== [ Shields ] ====
 
@@ -1479,6 +1526,23 @@ Use CTRL+F to find a section easier.
 			- Doesn't have recharge rate/delay at all. Instead has a constant passive shield regeneration effect.
 				Shield parts that affect shield recharge rate also change the power of this effect.
 
+    	==== [ Class Mods ] ====
+
+	> E-Tech Class Mods
+
+		The point of these is that they can be equipped by any character, and have character independant boosts.
+
+  		> Desperado - Dropped by badasses in Bandit Slaughter in UVHM
+			- High passive critical damage
+			- Critically killing an enemy grants a stack of Desperado, granting you +10% Bullet Damage.
+			  Stacks persist and stack indefinitely until you get a bullet kill that is not made with
+			  a critical hit.
+
+     
+		> Death Kiss - Dropped by badasses in Creature Slaughter in UVHM
+			- Increased Slag Damage and Max Health
+   			- Slagged enemies are Blighted, draining their HP equal to your maximum health per second.
+				Blight drain value is increased by slag damage and status damage boosts.
 
 
 
