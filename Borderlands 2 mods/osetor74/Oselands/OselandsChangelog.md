@@ -441,12 +441,10 @@ Use CTRL+F to find a section easier.
 
 
 			- Sniper rifle critical damage is calculated differently now, focusing more on base crit rather than increased crit
-				- 3x base critical damage, 3.3x for Hyperion(+10%), 3.75x for Jakobs(+25%).	
-					-These will show in game as +50%, +65% and +88% as the card value is comparing it to the base 2x
-					 multiplier.
+				- 3x base critical damage, 3.3x for Hyperion(+10%), 3.75x for Jakobs(+25%).
 
 			- Gemstone skins now increase something related to the manufacturer's special effects, intead of being a critical
-			  damage bonus for everything. Bandit gets increased double shott chance, Dahl gets increased burst count, etc.
+			  damage bonus for everything. Bandit gets increased double shot chance, Dahl gets increased burst count, etc.
 
 
 	> Weapon Parts

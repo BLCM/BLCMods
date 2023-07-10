@@ -1,3 +1,25 @@
+=============== [ 1.2.5.1 ] ===============
+
+	- Fixed Voracidous not dropping their dedicated seraph items
+
+	- Fixed Pyro Pete dropping 3 seraph items from his pool every kill instead of 1, as well as some of
+	  those drops working regardless of playthrough
+
+	- Fixed Terramorphous, Master Gee, Pyro Pete, Voracidous, Dexiduous and the Ancient Dragons of Destruction
+	  not being able to drop the Pearl of Power
+
+
+	- The magazine of PBFGs have been increased by 1 to avoid them being able to appear with 0 magazine size
+
+
+	- Minor fixes to character skill descriptions
+
+
+	- Brought over improvements to Deathtrap's AI by Zazk0u27. It should make him a lot more consistent and
+	  effective.
+
+
+
 =============== [ 1.2.5 ] ===============
 
 	- Fixed standard enemy drop pool not being able to drop eridium and legendary tokens
