@@ -175,6 +175,21 @@
 				- Now also grants 2 points to Blood Barrage
 
 
+    	- Gaige
+
+		- Robot Rampage
+			- Melee Damage boost has been reduced down from +50% to +25%
+
+   		- Explosive Clap
+			- Melee Damage boost has been reduced down from +75% to +50%
+
+
+		- Hammer of (In)justice
+
+			- Effect is now active while Discord is active instead of being a Kill Skill
+			- Melee Damage boost has been reduced down from +400% to +200%
+
+
 
 
 		== Unique item changes ==
