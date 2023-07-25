@@ -1,6 +1,6 @@
 # ============= [ Oselands ] =============
 
-Version 1.2.5.1 changelog
+Version 1.2.6 changelog
 
 
  >**This is an extensive changelog with (most) changes within the mod.**
@@ -60,6 +60,7 @@ Use CTRL+F to find a section easier.
 
   #### > Vault Hunters
 	> Overview
+	> Base melee changes
 	> Individual character changes (Search for the character's name)
 
   #### > Unique Items
@@ -524,7 +525,8 @@ Use CTRL+F to find a section easier.
 			- Accessory_None can't spawn on Blue rarity Unique guns anymore (as well as the Longbow and the Infinity)
 
 			- Bayonets now function similarly to shotguns' "General Boost" accessory, and the original shotgun accessory
-			  was replaced with something else. They still retain the +50% Melee Damage boost.
+			  was replaced with something else. They still retain the +0.5x Melee Damage boost.
+			  Bayonets now also passively increase your movement speed by 15% while holding them.
 
 			- Bullet Speed and Accuracy accessories were generally combined into one, and they all have additional fire rate
 			  at the cost of a small amount of reload speed (i.e Flying for dahl SMGs or swift for vladof ARs)
@@ -1224,7 +1226,7 @@ Use CTRL+F to find a section easier.
 			now has a consistent buff instead of relying on how much health you have
 
 		- Robot Rampage moved to tier 2
-			Now also gives 50% melee damage to Gaige.
+			Now also gives 25% melee damage to Gaige.
 
 		- Upshot Robot
 			now increases Reload Speed, Fire Rate and Movement Speed by 1% for each stack,
@@ -1235,7 +1237,7 @@ Use CTRL+F to find a section easier.
 		  	was replaced with 7% of your shield being instantly regained on kill per point
 
 		- Explosive Clap
-			Now also gives 75% melee damage to Gaige.
+			Now also gives 50% melee damage to Gaige.
 
 		- Made of Sterner Stuff
 			damage resistance was increased to 2% per point, and the DT melee damage was removed.
@@ -1286,7 +1288,7 @@ Use CTRL+F to find a section easier.
 			Kill Skill. increases fire rate and swap speed by 6% per point
 
 		- New Skill and Capstone: Hammer of (In)Justice
-			Kill Skill. Increases melee damage by 400% and movement speed by 30%
+			While Discord is active, you gain +30% movement speed and +200% melee damage
 
 
 
@@ -1294,34 +1296,66 @@ Use CTRL+F to find a section easier.
 	> Krieg
 
 	- Passive Bonuses:
-		+0.8 seconds before bloodlust starts to decay
+		+0.5 seconds to base bloodlust stack duration
 		+5% Movement Speed
 		+10% Damage over Time duration
 
 
 	- Buzz Axe Rampage
 
-		- Cooldown reduced to 30 seconds
-		- Melee damage was reduced from 500% to 300%
+		- No longer has a cooldown, and has a practically infinite duration. Pressing the action skill
+		  button during the rampage ends it
+     
+		- Melee damage was reduced from 500x to 2.25x
 			(Melee as a whole gets a buff, so this compensates for it, as krieg already had *plenty* of damage)
 
 
 	- Bloodlust
 
-		- Blood-Filled Guns
-			Lowered to 0.4% mag size per bloodlust stack  per point
+ 		- Reworked Bloodlust
+   			Bloodlust is now a 1-point skill you opt into in the first tier of the tree
 
-		- Blood Trance moved to tier 2
+			There is no longer a cap on Bloodlust stacks, nor a delay between when you can gain stacks
+			Bloodlust stacks now last for 6 seconds by default, and gain reduced duration the more
+			stacks you have
+
+			Each stack of bloodlust by default grants you 0.4% global damage
+
+
+		- Taste of Blood
+			Moved to tier 1
+			Dealing melee damage gives stacks which increase your total Bloodlust stack count without
+			being affected by quicker decay rates at higher stack counts
+
+			+4 Bloodlust stacks per Taste of Blood stack, and an additional +2 per point
+   
+
+		- New(ish) skill: Endurance (reworked Blood Trance)
+			Moved to tier 2
+			Grants 0.1% damage reduction per bloodlust stack. Additional 0.06% bonus while in BXR
+
+   		- Blood Overdrive
+			Melee Damage has been reduced to +0.2% per bloodlust stack point
+			No longer reduces grenade fuse time
+			Now boosts fire rate by +0.1% per bloodlust stack per point
 
 		- Blood Bath
 			Lowered to 0.3% gun damage per bloodlust stack  per point
 
-		- New Skill: Blood Barrage
-			Increases Buzz Axe throw speed by 7% per point
-
+  		- Blood Twitch
+    			Moved to tier 4
+       			Now passively boosts swap speed by +4% per point and buzzaxe throw speed by +3% per point
+			Killing an enemy gives you +0.3% swap speed and +0.07% buzzaxe throw speed per bloodlust
+			stack per point (Does now show up on the skill tree as a kill skill but benefits from
+			kill skill duration boosts)
+			
 		- Boiling Blood
-			Now gives 5% movement speed per point
+			Now gives 4% movement speed per point
 
+		- New(ish) Skill: Blood Barrage (reworked Bloody Revival)
+			Moved to tier 5
+			Grants +5% chance to not consume ammo while firing a gun per point
+			Gains an additional +0.12% free ammo chance per stack of bloodlust per point
 	
 	- Mania
 
@@ -1333,6 +1367,11 @@ Use CTRL+F to find a section easier.
 
 		- Fuel the Rampage
 			Now gives a passive 0.6% health regen per point
+
+		- Silence the Voices
+			Melee Damage reduced down to +30% per point
+			Now drains a bit of your HP when you melee someone, instead of having a chance
+			to hit yourself with melee
 
 		- New Skill: Bloodthirst Aegis
 			Maximum of 3 points
@@ -1355,6 +1394,14 @@ Use CTRL+F to find a section easier.
 		- Delusional Damage reworked: Flametongue
 			Each melee attack now always applies an additional fire DoT on enemies. This has a chance of also lighting yourself
 			on fire
+
+   		- Flametongue, Hellfire Halitosis and Raving Retribution
+
+			Damage caused by these 3 skills have been changed so that they are unaffected by regular
+			fire damage health type modifiers.
+
+			They essentially now deal non-elemental damage that benefit from fire damage bonuses on gear
+
 
 
 
@@ -1515,6 +1562,22 @@ Use CTRL+F to find a section easier.
 			-Pellets create a large explosion on hit, but deal no impact damage
 			-Upon hitting an enemy, each pellet of the Obliterator grants you a 3% Global Damage buff, which persists
    			 even after switching weapons.
+
+
+		[1.2.6]
+
+	       	> Plaguebearer - Plague Rats
+			- 4 ammo per shot, 5 pellets per shot, reduced fire rate and accuracy
+			- Corroding enemies grants stacks which are expended on melee to create a corrosive nova, increasing
+			  damage of the nova per stack
+	
+	
+		> Sucker Punch - Foreman Jasper
+			- Full auto with reduced base fire rate and increased damage. Always comes without a sight, and a
+			  bayonet that adds +0.5x melee damage
+	
+			- Dealing melee damage causes you to gain highly increased cooldown rate, movement speed and reload
+			  speed for 7 seconds
 
 
 

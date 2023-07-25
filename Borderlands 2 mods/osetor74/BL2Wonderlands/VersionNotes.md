@@ -1,3 +1,8 @@
+=============== [ 1.2.2 ] ===============
+
+    - Updated compatibility with changes to bayoneted weapons in Oselands
+    
+
 =============== [ 1.2.1 ] ===============
 
     - You now gain your first skill point at level 2 instead of 5

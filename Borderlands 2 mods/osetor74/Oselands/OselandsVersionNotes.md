@@ -1,3 +1,240 @@
+=============== [ 1.2.6 ] ===============
+
+	- Improved the look of weapon card attributes
+
+		- Includes stuff like the weapon's critical damage, ammo cost, melee damage bonuses etc
+
+		- Melee damage bonuses on weapons are now shown as an addition to the base multiplier,
+		  because that is how they always function
+
+
+	- Adjusted the threshold when items and enemies stop benefiting from level increases from 72 to 69.
+
+		- Since i made it so that you stop gaining skill points at level 69, it makes sense that
+		  all level scaling stops at that point as well. Guns will have slightly lower damage, 
+		  in general most things will have slightly lower values, but the balance of the game has
+		  not changed at all.
+
+
+	- Fixed the player having a lower than intended amount of skill points if they had set the level scaling
+	  threshold below level 69	
+	
+
+	- Fixed Bandit SMGs doing 0 damage when hitting crit spots
+
+
+	- Fixed global damage modifiers not applying to instances of corrosive damage
+
+
+	- Sprinting now multiplies your speed by 1.3x instead of giving +30% movement speed
+		- Provided by ZetaDaemon
+
+
+
+	
+	- Global Melee Changes
+
+
+		- Increased base melee damage in general
+
+			- At level 1 you'll be doing about 12% more damage with melee attacks than before, and
+			  +77% more damage than before at level 69
+
+
+		- Increased all player base melee attacks to have a range of 360 (previously 330, now same as
+		  Buzzaxe Rampage)
+
+
+		- Increased the range of melee attacks made with bayoneted gun from 360 to 396 (10% longer)
+
+
+	- Weapons with bayonets now passively grant you +15% movement speed while holding them.
+	  This also applies to unique weapons that always come with one.
+
+
+
+
+
+	- Zer0
+
+		- Decepti0n
+
+			- Melee Damage bonus is now an additive modifier to your base melee damage multiplier,
+			  stacking additively with bayonets and being multiplicative with regular +% melee damage
+			  bonuses
+
+			- Maximum melee damage value has been reduced down from 4.5 to 2.5
+
+
+
+		- Ir0n Hand
+
+			- Increased melee damage bonus from 5% to 7%
+
+
+
+
+	- Krieg
+
+		- Reworked Buzzaxe Rampage
+
+			- No longer has a cooldown and has a practically infinite duration. Pressing the action skill
+			  button during the rampage ends it
+				- Provided by ZetaDaemon
+
+			- Melee damage multiplier reduced from 2.5x to 2.25x
+
+
+		- Release the Beast
+
+			- While in RtB, BXR's near-infinite duration gets reduced down to 15 seconds, and prevents you
+			  from ending the rampage early
+				- Also provided by ZetaDaemon
+
+
+
+
+		- Reworked Bloodlust
+		
+			- Bloodlust is now a 1-point skill you opt into in the first tier of the tree
+
+			- There is no longer a cap on Bloodlust stacks, nor a delay between when you can gain stacks
+			- Bloodlust stacks now last for 6 seconds by default, and gain reduced duration the more
+			  stacks you have
+
+			- Each stack of bloodlust by default grants you 0.4% global damage
+
+			- Passive bonus from reaching 5 points in a skill in the Bloodlust tree is replaced with
+			  +0.5 seconds to the base duration of Bloodlust stacks
+
+
+		- Blood Filled Guns
+
+			- Due to the lot more volatile nature of the new Bloodlust stacks, the mag size bonus per
+			  stack of bloodlust has been brought back from 0.4% per stack to 0.5%
+
+
+		- Taste of Blood
+
+			- Now located on the 1st tier of the Bloodlust tree, next to Blood-Filled Guns and Bloodlust
+
+			- Dealing melee damage gives stacks which increase your total Bloodlust stack count without
+			  being affected by quicker decay rates at higher stack counts
+
+
+		- Endurance (Replacing Blood Trance)
+
+			- You gain a damage reduction buff per stack of Bloodlust. Further increased in BXR
+
+
+		- Blood Overdrive
+
+			- Now can also proc from instances of status damage alongside bullet damage.
+			- Now also grants fire rate per stack of bloodlust
+			- No longer reduces grenade fuse time
+
+
+		- Blood Twitch
+
+			- now located on the 4th tier of the Bloodlust tree
+
+			- Grants a passive bonus to swap speed and buzzaxe throw speed. bonuses are further increased
+			  after a kill per stack of Bloodlust.
+
+
+		- Blood Barrage
+
+			- Now located on the 5th tier of the Bloodlust tree
+
+			- Reduceed down to a 3-point maximum
+			- Grants free ammo chance, and an additional bonus per stack of bloodlust
+
+
+
+
+		- Flametongue, Hellfire Halitosis and Raving Retribution
+
+			- Damage caused by these 3 skills have been changed so that they are unaffected by regular
+			  fire damage health type modifiers.
+
+			  They essentially now deal non-elemental damage that benefit from fire damage on gear
+
+
+
+		- Class Mods
+
+			- Barbarian
+				- Now boosts Blood Twitch instead of Blood Barrage, as it now has the same functionality
+				  as what Blood Barrage previously did
+
+			- Legendary Psycho
+				- Now boosts Taste of Blood instead of Blood Twitch, because it is now the other tier 1
+				  Bloodlust skill
+
+			- Slayer of Terramorphous
+				- Now also grants 2 points to Blood Barrage
+
+
+    	- Gaige
+
+		- Robot Rampage
+			- Melee Damage boost has been reduced down from +50% to +25%
+
+   		- Explosive Clap
+			- Melee Damage boost has been reduced down from +75% to +50%
+
+
+		- Hammer of (In)justice
+
+			- Effect is now active while Discord is active instead of being a Kill Skill
+			- Melee Damage boost has been reduced down from +400% to +200%
+
+
+
+
+		== Unique item changes ==
+
+
+	- Quicksilver
+
+		- Increased passive movement speed while holding the gun from 25% to 35%
+			- This is to make sure it still sticks out from the crowd as bayoneted guns now also boost
+			  movement speed. Quicksilver stays as a very noticable increase from them.
+
+
+
+	- Added a new legendary Bandit SMG: Plaguebearer
+		- 4 ammo per shot, 5 pellets per shot, reduced fire rate and accuracy
+		- Corroding enemies grants stacks which are expended on melee to create a corrosive nova, increasing
+		  damage of the nova per stack
+
+		- ~10% drop chance from Plague Rat enemies
+
+
+	- Added a new legendary Dahl Pistol: Sucker Punch
+		- Full auto with reduced base fire rate and increased damage. Always comes without a sight, and a
+		  bayonet that adds +0.5x melee damage
+
+		- Dealing melee damage causes you to gain highly increased cooldown rate, movement speed and reload
+		  speed for 7 seconds
+
+		- Dedicated drop from Foreman Jasper in Opportunity
+
+
+	- Rapier
+		- Reduced base melee damage bonus from +1.25x to +0.5x (can still get bandit/torgue grip for an
+		  additional +0.25x)
+
+		- Every 5 seconds grants a large boost to your melee damage multiplier, which is applied bayonets and
+		  other regular melee damage boosts. Multiplicative with boosts like backstab or execute.
+
+
+	- Law
+		- Dealing melee damage causes your shield to start recharging immediately
+
+
+
+
 =============== [ 1.2.5.1 ] ===============
 
 	- Fixed Voracidous not dropping their dedicated seraph items
