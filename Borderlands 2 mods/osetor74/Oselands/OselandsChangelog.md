@@ -1,6 +1,6 @@
 # ============= [ Oselands ] =============
 
-Version 1.2.5.1 changelog
+Version 1.2.6 changelog
 
 
  >**This is an extensive changelog with (most) changes within the mod.**
@@ -60,6 +60,7 @@ Use CTRL+F to find a section easier.
 
   #### > Vault Hunters
 	> Overview
+	> Base melee changes
 	> Individual character changes (Search for the character's name)
 
   #### > Unique Items
@@ -524,7 +525,8 @@ Use CTRL+F to find a section easier.
 			- Accessory_None can't spawn on Blue rarity Unique guns anymore (as well as the Longbow and the Infinity)
 
 			- Bayonets now function similarly to shotguns' "General Boost" accessory, and the original shotgun accessory
-			  was replaced with something else. They still retain the +50% Melee Damage boost.
+			  was replaced with something else. They still retain the +0.5x Melee Damage boost.
+			  Bayonets now also passively increase your movement speed by 15% while holding them.
 
 			- Bullet Speed and Accuracy accessories were generally combined into one, and they all have additional fire rate
 			  at the cost of a small amount of reload speed (i.e Flying for dahl SMGs or swift for vladof ARs)
@@ -1515,6 +1517,22 @@ Use CTRL+F to find a section easier.
 			-Pellets create a large explosion on hit, but deal no impact damage
 			-Upon hitting an enemy, each pellet of the Obliterator grants you a 3% Global Damage buff, which persists
    			 even after switching weapons.
+
+
+		[1.2.6]
+
+	       	> Plaguebearer - Plague Rats
+			- 4 ammo per shot, 5 pellets per shot, reduced fire rate and accuracy
+			- Corroding enemies grants stacks which are expended on melee to create a corrosive nova, increasing
+			  damage of the nova per stack
+	
+	
+		> Sucker Punch - Foreman Jasper
+			- Full auto with reduced base fire rate and increased damage. Always comes without a sight, and a
+			  bayonet that adds +0.5x melee damage
+	
+			- Dealing melee damage causes you to gain highly increased cooldown rate, movement speed and reload
+			  speed for 7 seconds
 
 
 
