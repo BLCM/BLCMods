@@ -1,5 +1,5 @@
 # BL2:Wonderlands
-*V. 1.2.2*
+*V. 1.2.3*
 
 ***Special thanks to playtesters: Vi, Rapoulas, Toto, and especially Florence***
 

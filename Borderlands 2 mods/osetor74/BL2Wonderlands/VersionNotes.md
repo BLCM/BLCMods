@@ -1,42 +1,54 @@
+=============== [ 1.2.3 ] ===============
+
+	- Fixed a crash that would happen on save quit
+
+	- Fixed the player having an incorrectly low amount of skill points
+
+	- Moved the +50% swap speed bonus from speccing into the first skill in the Myth Rank tree
+	  to instead be a passive bonus you have active at all times
+
+	- Added BL2:Wonderlands to the BLCM github ModCabinet
+
+
 =============== [ 1.2.2 ] ===============
 
-    - Updated compatibility with changes to bayoneted weapons in Oselands
+	- Updated compatibility with changes to bayoneted weapons in Oselands
     
 
 =============== [ 1.2.1 ] ===============
 
-    - You now gain your first skill point at level 2 instead of 5
-
+	- You now gain your first skill point at level 2 instead of 5
+	
 	- You now stop gaining skill points after level 77. This grants you the same amount of skill points
-      as vanilla level 80, but compensates for getting the first few points earlier
+	  as vanilla level 80, but compensates for getting the first few points earlier
       
 
 =============== [ 1.2 ] ===============
 
-    - Improved compatibility with Oselands
-        -Player passive bonuses have been adjusted so that i might not need to update BL2:WL
-         every time i update Oselands in the future.
-        -The Beatdown Bar, Badass Crater and Southern Raceway Torgue Vendor will no longer include legendary
-         class mods when playing the mod alongside Oselands.
-
-    - Fixed incorrect skill points boosts on the Techrager class mod
-    - Fixed the Goliath class mod not having the correct name
-    - Fixed the Assassin tree in the Gunzerker/Assassin multiclass being almost entirely nonexistant
+	- Improved compatibility with Oselands
+		-Player passive bonuses have been adjusted so that i might not need to update BL2:WL
+	 	 every time i update Oselands in the future.
+	- The Beatdown Bar, Badass Crater and Southern Raceway Torgue Vendor will no longer include legendary
+	  class mods when playing the mod alongside Oselands.
+	
+	- Fixed incorrect skill points boosts on the Techrager class mod
+	- Fixed the Goliath class mod not having the correct name
+	- Fixed the Assassin tree in the Gunzerker/Assassin multiclass being almost entirely nonexistant
 
 
 =============== [ 1.1.1 ] ===============
 
-    - Fixed incorrect skill points boosts on the Arsonist class mod
+	- Fixed incorrect skill points boosts on the Arsonist class mod
 
 
 =============== [ 1.1 ] ===============
 
-    - Improved compatibility with Oselands
-        -Melee Damage and Critical Damage bonuses on guns didn't apply in the correct way
+	- Improved compatibility with Oselands
+		-Melee Damage and Critical Damage bonuses on guns didn't apply in the correct way
 
-    - Added support for things added in Oselands 1.2.2
+	- Added support for things added in Oselands 1.2.2
     
 
 =============== [ 1.0 ] ===============
 
-    - Mod Released
+	- Mod Released
