@@ -15,5 +15,5 @@ This gun was inspired by the Gottschalk ("servant of God") from The Reckoners no
 
 Titanentöter means "Titan Slayer" in German, and refers to this gun's oneshot potential as well as its utility against raid bosses. Since the Amigo Sincero normally cannot have a prefix, I added one in the title. This also assumes you use the critical bipod with the gun.  The prefix "Entschlossener" is a German equivalant of Tumtum. It has many meanings in German, most of which are along the lines of "determined", "resolute" and "strong-willed". In some ways, the true gift of a close friend is the strength to knock down even the strongest adversary.
 
-! (https://imgur.com/OCTr4TM.png)
-! (https://imgur.com/Ge2ecsy.png)
+! [Angle 1. A pure white Jakobs sniper with a Dahl barrel, with a gold-plated body.] (https://imgur.com/OCTr4TM.png)
+! [Angle 2. A closer shot of the gold-plated body. It is glossy.] (https://imgur.com/Ge2ecsy.png)
