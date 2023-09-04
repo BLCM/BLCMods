@@ -1,0 +1,18 @@
+#Blue Fairy - replaces Crit#
+
+#Changes#
+- Increase Critical Hit Damage
+- Increase Shock Chance
+- Increase Shock Damage
+- Slower Projective Speed
+- Faster Reload Speed
+
+
+#ID Card#
+set GD_Aster_Weapons.Name.Title.Title__Unique_Crit PartName Blue Fairy
+set GD_Aster_Weapons.Name.Title.Title__Unique_Crit:AttributePresentationDefinition_8 NoConstraintText One of these will make all your teeth turn blue. Hope you brushed them well.
+
+#Effects#
+set GD_Aster_Weapons.SMGs.SMG_Barrel_Hyperion_Crit ExternalAttributeEffects ((AttributeToModify = AttributeDefinition'D_Attributes.GameplayAttributes.PlayerCriticalHitBonus',ModifierType = MT_Scale,BaseModifierValue =(BaseValueConstant = 5.500000,BaseValueAttribute = None,InitializationDefinition = None,BaseValueScaleConstant = 2.000000)))
+
+set GD_Aster_Weapons.SMGs.SMG_Barrel_Hyperion_Crit WeaponAttributeEffects ((AttributeToModify = AttributeDefinition'D_Attributes.WeapoWeaponProjectileSpeedMultiplier',ModifierType = MT_PreAdd,BaseModifierValue =(BaseValueConstant = 0.100000,BaseValueAttribute = None,InitializationDefinition = None,BaseValueScaleConstant = 1.000000)),(AttributeToModify = AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType = MT_Scale,BaseModifierValue =(BaseValueConstant = 0.500000,BaseValueAttribute = None,InitializationDefinition = None,BaseValueScaleConstant = 1.000000)),(AttributeToModify = AttributeDefinition'D_Attributes.Weapon.WeaponReloadSpeed',ModifierType = MT_Scale,BaseModifierValue =(BaseValueConstant = -0.900000,BaseValueAttribute = None,InitializationDefinition = None,BaseValueScaleConstant = 1.000000)),(AttributeToModify = AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType = MT_PreAdd,BaseModifierValue =(BaseValueConstant = -0.500000,BaseValueAttribute = None,InitializationDefinition = None,BaseValueScaleConstant = 1.000000)),(AttributeToModify = AttributeDefinition'D_Attributes.WeapoWeaponStatusEffectChanceModifier',ModifierType = MT_Scale,BaseModifierValue =(BaseValueConstant = 0.750000,BaseValueAttribute = None,InitializationDefinition = None,BaseValueScaleConstant = 1.000000)),(AttributeToModify = AttributeDefinition'D_Attributes.Weapon.WeaponStatusEffectDamage',ModifierType = MT_Scale,BaseModifierValue =(BaseValueConstant = 0.990000,BaseValueAttribute = None,InitializationDefinition = None,BaseValueScaleConstant = 1.000000)))

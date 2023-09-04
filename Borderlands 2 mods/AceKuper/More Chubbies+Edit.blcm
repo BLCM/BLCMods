@@ -1,0 +1,70 @@
+<BLCMM v="1">
+#<!!!You opened a file saved with BLCMM in FilterTool. Please update to BLCMM to properly open this file!!!>
+	<head>
+		<type name="BL2" offline="true"/>
+		<profiles>
+			<profile name="default" current="true"/>
+		</profiles>
+	</head>
+	<body>
+		<category name="More Chubbies+Edit">
+			<comment># ChubbySpawnRates+</comment>
+			<comment># Even this huge of an increase actually makes them spawn 1% of the time at best</comment>
+			<comment>#</comment>
+			<comment># Chubby Skeleton    +1575% aka *16.75 spawn chance</comment>
+			<hotfix name="SkeletonSpawnChance" level="None">
+				<code profiles="default">set GD_Aster_Pop_Skeletons.Population.PopDef_SkeletonsDen_CastleKeep ActorArchetypeList[12].Probability.BaseValueConstant 0.033500</code>
+				<code profiles="default">set GD_Aster_Pop_Skeletons.Population.PopDef_SkeletonsDen_Docks ActorArchetypeList[7].Probability.BaseValueConstant 0.033500</code>
+				<code profiles="default">set GD_Aster_Pop_Skeletons.Population.PopDef_SkeletonsDen_Regular ActorArchetypeList[12].Probability.BaseValueConstant 0.033500</code>
+			</hotfix>
+			<comment># Chubby Skeleton via Necromancer Enemy Summon</comment>
+			<hotfix name="Hotfix" level="None">
+				<code profiles="default">set GD_Aster_Pop_Skeletons.Population.PopDef_SkeletonsDen_Necro ActorArchetypeList[4].Probability.BaseValueConstant 0.033500</code>
+			</hotfix>
+			<comment># Chubby Skag | +1350% aka *14.5 spawn chance</comment>
+			<hotfix name="ParkSkagChubby" level="None">
+				<code profiles="default">set GD_Population_Skag.Population.PopDef_SkagMix_PandoraPark ActorArchetypeList[5].Probability.BaseValueConstant 0.029000</code>
+			</hotfix>
+			<hotfix name="SkagSpawn" level="None">
+				<code profiles="default">set GD_Population_Skag.Population.PopDef_SkagMix_Regular ActorArchetypeList[5].Probability.BaseValueConstant 0.029000</code>
+			</hotfix>
+			<comment># Chubby Skag during Bloodwing Fight | +1350% aka *14.5 spawn chance</comment>
+			<hotfix name="Hotfix" level="None">
+				<code profiles="default">set GD_BloodwingShared.Population.PopDef_SkagMix_Bloodwing_Corrosive ActorArchetypeList[3].Probability.BaseValueConstant 0.029000</code>
+				<code profiles="default">set GD_BloodwingShared.Population.PopDef_SkagMix_Bloodwing_Fire ActorArchetypeList[3].Probability.BaseValueConstant 0.029000</code>
+				<code profiles="default">set GD_BloodwingShared.Population.PopDef_SkagMix_Bloodwing_Shock ActorArchetypeList[3].Probability.BaseValueConstant 0.029000</code>
+			</hotfix>
+			<comment># Chubby Stalker | +1700% aka *18 spawn chance|</comment>
+			<hotfix name="StalkerSpawn" level="None">
+				<code profiles="default">set GD_Population_Stalker.Population.PopDef_StalkerMix_Ambush ActorArchetypeList[2].Probability.BaseValueConstant 0.018000</code>
+				<code profiles="default">set GD_Population_Stalker.Population.PopDef_StalkerMix_Cyclone ActorArchetypeList[2].Probability.BaseValueConstant 0.018000</code>
+				<code profiles="default">set GD_Population_Stalker.Population.PopDef_StalkerMix_Needle ActorArchetypeList[2].Probability.BaseValueConstant 0.018000</code>
+				<code profiles="default">set GD_Population_Stalker.Population.PopDef_StalkerMix_Spring ActorArchetypeList[2].Probability.BaseValueConstant 0.018000</code>
+			</hotfix>
+			<comment># Chubby Spiderant | + 1100% aka *12 spawn chance|</comment>
+			<hotfix name="SpiderantSpawn" level="None">
+				<code profiles="default">set GD_Population_SpiderAnt.Population.PopDef_SpiderantMix_IceCanyon ActorArchetypeList[5].Probability.BaseValueConstant 0.024000</code>
+				<code profiles="default">set GD_Population_SpiderAnt.Population.PopDef_SpiderantMix_Interlude ActorArchetypeList[5].Probability.BaseValueConstant 0.024000</code>
+				<code profiles="default">set GD_Population_SpiderAnt.Population.PopDef_SpiderantMix_Caverns ActorArchetypeList[6].Probability.BaseValueConstant 0.024000</code>
+				<code profiles="default">set GD_Population_SpiderAnt.Population.PopDef_SpiderantMix_Regular ActorArchetypeList[9].Probability.BaseValueConstant 0.024000</code>
+			</hotfix>
+			<comment># Chubby Rakk | +1500% aka *16 spawn chance</comment>
+			<hotfix name="ChubbyRakkChance" level="None">
+				<code profiles="default">set GD_Population_Rakk.Population.PopDef_RakkMix_Regular ActorArchetypeList[2].Probability.BaseValueConstant 0.032000</code>
+			</hotfix>
+		</category>
+	</body>
+</BLCMM>
+
+#Commands:
+
+#Hotfixes:
+set Transient.SparkServiceConfiguration_0 ServiceName Micropatch
+
+set Transient.SparkServiceConfiguration_0 ConfigurationGroup Default
+
+set Transient.SparkServiceConfiguration_0 Keys ("SparkLevelPatchEntry-BLCMM1","SparkLevelPatchEntry-BLCMM2","SparkLevelPatchEntry-BLCMM3","SparkLevelPatchEntry-BLCMM4","SparkLevelPatchEntry-BLCMM5","SparkLevelPatchEntry-BLCMM6","SparkLevelPatchEntry-BLCMM7","SparkLevelPatchEntry-BLCMM8","SparkLevelPatchEntry-BLCMM9","SparkLevelPatchEntry-BLCMM10","SparkLevelPatchEntry-BLCMM11","SparkLevelPatchEntry-BLCMM12","SparkLevelPatchEntry-BLCMM13","SparkLevelPatchEntry-BLCMM14","SparkOnDemandPatchEntry-BLCMM15","SparkOnDemandPatchEntry-BLCMM16","SparkOnDemandPatchEntry-BLCMM17","SparkOnDemandPatchEntry-BLCMM18","SparkOnDemandPatchEntry-BLCMM19","SparkPatchEntry-BLCMM20","SparkPatchEntry-BLCMM21","SparkPatchEntry-BLCMM22","SparkPatchEntry-BLCMM23","SparkLevelPatchEntry-BLCMM24","SparkLevelPatchEntry-BLCMM25","SparkLevelPatchEntry-BLCMM26","SparkLevelPatchEntry-BLCMM27","SparkLevelPatchEntry-BLCMM28","SparkLevelPatchEntry-BLCMM29","SparkLevelPatchEntry-BLCMM30","SparkLevelPatchEntry-BLCMM31","SparkLevelPatchEntry-BLCMM32","SparkLevelPatchEntry-BLCMM33","SparkLevelPatchEntry-BLCMM34","SparkLevelPatchEntry-BLCMM35","SparkLevelPatchEntry-BLCMM36","SparkLevelPatchEntry-BLCMM37","SparkLevelPatchEntry-BLCMM38","SparkLevelPatchEntry-BLCMM39","SparkLevelPatchEntry-BLCMM40","SparkLevelPatchEntry-BLCMM41")
+set Transient.SparkServiceConfiguration_0 Values (",GD_Balance.WeightingPlayerCount.BugmorphCocoon_PerPlayers_Phase1,ConditionalInitialization.ConditionalExpressionList[4].BaseValueIfTrue.BaseValueConstant,0.700000,.8",",GD_Balance.WeightingPlayerCount.BugmorphCocoon_PerPlayers_Phase2,ConditionalInitialization.ConditionalExpressionList[4].BaseValueIfTrue.BaseValueConstant,0.400000,.5",",GD_Balance.WeightingPlayerCount.BugmorphCocoon_PerPlayers_Phase3,ConditionalInitialization.ConditionalExpressionList[4].BaseValueIfTrue.BaseValueConstant,0.200000,.3",",GD_Balance.WeightingPlayerCount.BugmorphCocoon_PerPlayers_Phase4,ConditionalInitialization.ConditionalExpressionList[4].BaseValueIfTrue.BaseValueConstant,0.100000,.2",",GD_Balance.WeightingPlayerCount.BugmorphCocoon_PerPlayers_Phase5,ConditionalInitialization.ConditionalExpressionList[4].BaseValueIfTrue.BaseValueConstant,0.075000,.1","SouthpawFactory_P,GD_Population_Marauder.Balance.Unique.PawnBalance_Assassin1,DefaultItemPoolList[3].PoolProbability.BaseValueScaleConstant,0.250000,1","SouthpawFactory_P,GD_Population_Nomad.Balance.Unique.PawnBalance_Assassin2,DefaultItemPoolList[4].PoolProbability.BaseValueScaleConstant,0.250000,1","SouthpawFactory_P,GD_Population_Psycho.Balance.Unique.PawnBalance_Assassin3,DefaultItemPoolList[1].PoolProbability.BaseValueScaleConstant,0.250000,1","SouthpawFactory_P,GD_Population_Rat.Balance.Unique.PawnBalance_Assassin4,DefaultItemPoolList[3].PoolProbability.BaseValueScaleConstant,0.250000,1",",GD_Sage_Rare_Scaylion.Population.PawnBalance_Sage_Rare_Scaylion,DefaultItemPoolList[1].PoolProbability.BaseValueScaleConstant,1.000000,100",",GD_Sage_Rare_Drifter.Balance.PawnBalance_Sage_Rare_Drifter,DefaultItemPoolList[0].PoolProbability.BaseValueScaleConstant,1.000000,100",",GD_Sage_Rare_Rhino.Population.PawnBalance_Sage_Rare_Rhino,DefaultItemPoolList[1].PoolProbability.BaseValueScaleConstant,1.000000,100",",GD_Sage_Rare_Skag.Population.PawnBalance_Sage_Rare_Skag,DefaultItemPoolList[1].PoolProbability.BaseValueScaleConstant,1.000000,100",",GD_Sage_Rare_Spore.Population.PawnBalance_Sage_Rare_Spore,DefaultItemPoolList[0].PoolProbability.BaseValueScaleConstant,1.000000,100","GD_Assassin_Streaming,GD_Assassin_Skills.Sniping.Velocity,SkillEffectDefinitions[0].ModifierType,MT_PostAdd,MT_Scale","GD_Tulip_Mechro_Streaming,GD_Tulip_Mechromancer_Skills.LittleBigTrouble.WiresDontTalk,SkillEffectDefinitions,,((AttributeToModify=D_Attributes.DamageTypeModifers.InstigatedShockDamageModifier,bIncludeDuelingTargets=False,bIncludeSelfAsTarget=False,bOnlyEffectTargetsInRange=False,bExcludeNonPlayerCharacters=False,EffectTarget=TARGET_Self,TargetInstanceDataName=,TargetCriteria=CRITERIA_None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.030000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),GradeToStartApplyingEffect=1,PerGradeUpgradeInterval=1,PerGradeUpgrade=(BaseValueConstant=0.030000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),BonusUpgradeList=),(AttributeToModify=D_Attributes.DamageTypeModifers.InstigatedShockStatusDamageModifier,bIncludeDuelingTargets=False,bIncludeSelfAsTarget=False,bOnlyEffectTargetsInRange=False,bExcludeNonPlayerCharacters=False,EffectTarget=TARGET_Self,TargetInstanceDataName=,TargetCriteria=CRITERIA_None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.030000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),GradeToStartApplyingEffect=1,PerGradeUpgradeInterval=1,PerGradeUpgrade=(BaseValueConstant=0.030000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),BonusUpgradeList=))","GD_Siren_Streaming,GD_Siren_Skills.Misc.Init_BlightPhoenix_DamageCalc_Part2,ValueFormula.Level.InitializationDefinition,AttributeInitializationDefinition'GD_Balance_HealthAndDamage.HealthAndDamage.Init_PlayerMeleeDamage',AttributeInitializationDefinition'GD_Balance_HealthAndDamage.HealthAndDamage.Init_PlayerSkillDamage'","GD_Siren_Streaming,GD_Siren_Skills.Misc.Init_BlightPhoenix_DamageCalc_Part2,ValueFormula.Level.BaseValueScaleConstant,1.000000,3.5","GD_Assassin_Streaming,GD_Assassin_Skills.Misc.Att_DeathMark_BonusDamage,BaseValue.BaseValueConstant,0.200000,.8","GD_Itempools.Runnables.Pool_FourAssassins,BalancedItems[1].Probability.InitializationDefinition,None,GD_Balance.Weighting.Weight_1_Common","GD_Shields.Projectiles.Proj_LegendaryBoosterShield:BehaviorProviderDefinition_1.Behavior_Explode_140,BehaviorSequences[0].BehaviorData2[7].Behavior.StatusEffectDamage.BaseValueAttribute,None,D_Attributes.Projectile.ProjectileDamage","GD_Shields.Projectiles.Proj_LegendaryBoosterShield:BehaviorProviderDefinition_1.Behavior_Explode_140,BehaviorSequences[0].BehaviorData2[7].Behavior.StatusEffectDamage.BaseValueScaleConstant,1.000000,.25","GD_Shields.Projectiles.Proj_LegendaryBoosterShield:BehaviorProviderDefinition_1.Behavior_Explode_140,BehaviorSequences[0].BehaviorData2[7].Behavior.StatusEffectChance.BaseValueConstant,1.000000,20",",GD_Aster_Pop_Skeletons.Population.PopDef_SkeletonsDen_CastleKeep,ActorArchetypeList[12].Probability.BaseValueConstant,,0.033500",",GD_Aster_Pop_Skeletons.Population.PopDef_SkeletonsDen_Docks,ActorArchetypeList[7].Probability.BaseValueConstant,,0.033500",",GD_Aster_Pop_Skeletons.Population.PopDef_SkeletonsDen_Regular,ActorArchetypeList[12].Probability.BaseValueConstant,,0.033500",",GD_Aster_Pop_Skeletons.Population.PopDef_SkeletonsDen_Necro,ActorArchetypeList[4].Probability.BaseValueConstant,,0.033500",",GD_Population_Skag.Population.PopDef_SkagMix_PandoraPark,ActorArchetypeList[5].Probability.BaseValueConstant,,0.029000",",GD_Population_Skag.Population.PopDef_SkagMix_Regular,ActorArchetypeList[5].Probability.BaseValueConstant,,0.029000",",GD_BloodwingShared.Population.PopDef_SkagMix_Bloodwing_Corrosive,ActorArchetypeList[3].Probability.BaseValueConstant,,0.029000",",GD_BloodwingShared.Population.PopDef_SkagMix_Bloodwing_Fire,ActorArchetypeList[3].Probability.BaseValueConstant,,0.029000",",GD_BloodwingShared.Population.PopDef_SkagMix_Bloodwing_Shock,ActorArchetypeList[3].Probability.BaseValueConstant,,0.029000",",GD_Population_Stalker.Population.PopDef_StalkerMix_Ambush,ActorArchetypeList[2].Probability.BaseValueConstant,,0.018000",",GD_Population_Stalker.Population.PopDef_StalkerMix_Cyclone,ActorArchetypeList[2].Probability.BaseValueConstant,,0.018000",",GD_Population_Stalker.Population.PopDef_StalkerMix_Needle,ActorArchetypeList[2].Probability.BaseValueConstant,,0.018000",",GD_Population_Stalker.Population.PopDef_StalkerMix_Spring,ActorArchetypeList[2].Probability.BaseValueConstant,,0.018000",",GD_Population_SpiderAnt.Population.PopDef_SpiderantMix_IceCanyon,ActorArchetypeList[5].Probability.BaseValueConstant,,0.024000",",GD_Population_SpiderAnt.Population.PopDef_SpiderantMix_Interlude,ActorArchetypeList[5].Probability.BaseValueConstant,,0.024000",",GD_Population_SpiderAnt.Population.PopDef_SpiderantMix_Caverns,ActorArchetypeList[6].Probability.BaseValueConstant,,0.024000",",GD_Population_SpiderAnt.Population.PopDef_SpiderantMix_Regular,ActorArchetypeList[9].Probability.BaseValueConstant,,0.024000",",GD_Population_Rakk.Population.PopDef_RakkMix_Regular,ActorArchetypeList[2].Probability.BaseValueConstant,,0.032000")
+
+set Transient.GearboxAccountData_1 Services (Transient.SparkServiceConfiguration_0)
+
