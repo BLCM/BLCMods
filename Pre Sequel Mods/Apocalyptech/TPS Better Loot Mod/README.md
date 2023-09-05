@@ -378,7 +378,7 @@ for the full text.
 Changelog
 =========
 
-**v1.1.2**, September 5, 2023
+**v1.1.2**, September 5, 2023 (commit `e02680931686763dd612a8b444bb069cf395c0d8`)
  * Added in the non-legendary Holodome Onslaught class mods to the world drop pools
 
 **v1.1.1**, August 21, 2019 (commit `9ce3e6822e7ef6b8e7031003062bd44eed9fc200`):
