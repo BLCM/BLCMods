@@ -1,0 +1,224 @@
+<BLCMM v="1">
+#<!!!You opened a file saved with BLCMM in FilterTool. Please update to BLCMM to properly open this file!!!>
+	<head>
+		<type name="BL2" offline="true"/>
+		<profiles>
+			<profile name="default" current="true"/>
+		</profiles>
+	</head>
+	<body>
+		<category name="Siren QoL pack">
+			<comment>A collection of small mods made for my personal use as a Maya main. Should make playing Siren more enjoyable.</comment>
+			<comment>Includes many of standalone mods. Please disable those if you already have them installed.</comment>
+			<comment>Please enable/disable the options below to your liking before using the mod.</comment>
+			<comment>Feel free to do whatever you want with this mod, including using the whole of it elsewhere. Just give credit, thanks!</comment>
+			<comment>I'm still new to this so the code here is a bit janky but be assured, it hasn't broken my game. Yet.</comment>
+			<category name="Clear phaselock" MUT="true">
+				<comment>Removes the darkness that obscures phaselocked targets</comment>
+				<category name="Lite (RECOMMENDED)">
+					<category name="Blue Spikeys (inky black tendrils)">
+						<hotfix name="Hotfix" package="GD_Siren_Streaming">
+							<code profiles="default">set FX_CHAR_Siren.Particles.Part_SirenASEnemyOrb:ParticleSpriteEmitter_11 LODLevels ()</code>
+							<code profiles="default">set FX_CHAR_Siren.Particles.Part_SirenASEnemyOrb:ParticleSpriteEmitter_5 LODLevels ()</code>
+						</hotfix>
+					</category>
+					<category name="Modulate black (middle blackness)">
+						<hotfix name="Hotfix" package="GD_Siren_Streaming">
+							<code profiles="default">set FX_CHAR_Siren.Particles.Part_SirenASEnemyOrb:ParticleSpriteEmitter_4 LODLevels ()</code>
+						</hotfix>
+					</category>
+				</category>
+				<category name="Full (transparent)">
+					<category name="Blue Spikeys (inky black tendrils)">
+						<hotfix name="Hotfix" package="GD_Siren_Streaming">
+							<code profiles="">set FX_CHAR_Siren.Particles.Part_SirenASEnemyOrb:ParticleSpriteEmitter_11 LODLevels ()</code>
+							<code profiles="">set FX_CHAR_Siren.Particles.Part_SirenASEnemyOrb:ParticleSpriteEmitter_5 LODLevels ()</code>
+						</hotfix>
+					</category>
+					<category name="Modulate black (middle blackness)">
+						<hotfix name="Hotfix" package="GD_Siren_Streaming">
+							<code profiles="">set FX_CHAR_Siren.Particles.Part_SirenASEnemyOrb:ParticleSpriteEmitter_4 LODLevels ()</code>
+						</hotfix>
+					</category>
+					<category name="Inside orb color (mild translucent blue)">
+						<hotfix name="Hotfix" package="GD_Siren_Streaming">
+							<code profiles="">set FX_CHAR_Siren.Particles.Part_SirenASEnemyOrb:ParticleSpriteEmitter_8 LODLevels ()</code>
+						</hotfix>
+					</category>
+				</category>
+				<category name="Aggressive (everything)">
+					<category name="Blue Spikeys (inky black tendrils)">
+						<hotfix name="Hotfix" package="GD_Siren_Streaming">
+							<code profiles="">set FX_CHAR_Siren.Particles.Part_SirenASEnemyOrb:ParticleSpriteEmitter_11 LODLevels ()</code>
+							<code profiles="">set FX_CHAR_Siren.Particles.Part_SirenASEnemyOrb:ParticleSpriteEmitter_5 LODLevels ()</code>
+						</hotfix>
+					</category>
+					<category name="Modulate black (middle blackness)">
+						<hotfix name="Hotfix" package="GD_Siren_Streaming">
+							<code profiles="">set FX_CHAR_Siren.Particles.Part_SirenASEnemyOrb:ParticleSpriteEmitter_4 LODLevels ()</code>
+						</hotfix>
+					</category>
+					<category name="Inside orb color (mild translucent blue)">
+						<hotfix name="Hotfix" package="GD_Siren_Streaming">
+							<code profiles="">set FX_CHAR_Siren.Particles.Part_SirenASEnemyOrb:ParticleSpriteEmitter_8 LODLevels ()</code>
+						</hotfix>
+					</category>
+					<category name="Sphere">
+						<hotfix name="Hotfix" package="GD_Siren_Streaming">
+							<code profiles="">set FX_CHAR_Siren.Particles.Part_SirenASEnemyOrb:ParticleSpriteEmitter_12 LODLevels ()</code>
+						</hotfix>
+					</category>
+					<category name="Shock flash">
+						<hotfix name="Hotfix" package="GD_Siren_Streaming">
+							<code profiles="">set FX_CHAR_Siren.Particles.Part_SirenASEnemyOrb:ParticleSpriteEmitter_1 LODLevels ()</code>
+						</hotfix>
+					</category>
+				</category>
+			</category>
+			<category name="Flashless SMG muzzleflashes">
+				<comment>Removes the strobe-like flash effect when firing elemental SMGs</comment>
+				<category name="Shock">
+					<category name="Front Glow">
+						<code profiles="default">set FX_WEP_SMG.Particles.Part_SMG_MuzzleFlash_Shock:ParticleSpriteEmitter_21 LODLevels ()</code>
+					</category>
+					<category name="Side Glow">
+						<code profiles="default">set FX_WEP_SMG.Particles.Part_SMG_MuzzleFlash_Shock:ParticleSpriteEmitter_41 LODLevels ()</code>
+						<code profiles="default">set FX_WEP_SMG.Particles.Part_SMG_MuzzleFlash_Shock:ParticleSpriteEmitter_9 LODLevels ()</code>
+					</category>
+				</category>
+				<category name="Incendiary">
+					<category name="Front Glow">
+						<code profiles="default">set FX_WEP_SMG.Particles.Part_SMG_MuzzleFlash_Incendiary:ParticleSpriteEmitter_32 LODLevels ()</code>
+					</category>
+					<category name="Side Glow">
+						<code profiles="default">set FX_WEP_SMG.Particles.Part_SMG_MuzzleFlash_Incendiary:ParticleSpriteEmitter_31 LODLevels ()</code>
+					</category>
+					<category name="Top Glow">
+						<code profiles="default">set FX_WEP_SMG.Particles.Part_SMG_MuzzleFlash_Incendiary:ParticleSpriteEmitter_27 LODLevels ()</code>
+					</category>
+				</category>
+				<category name="Corrosive">
+					<category name="Front Glow">
+						<code profiles="default">set FX_WEP_SMG.Particles.Part_SMG_MuzzleFlash_Corrosive:ParticleSpriteEmitter_20 LODLevels ()</code>
+					</category>
+					<category name="Side Glow">
+						<code profiles="default">set FX_WEP_SMG.Particles.Part_SMG_MuzzleFlash_Corrosive:ParticleSpriteEmitter_38 LODLevels ()</code>
+						<code profiles="default">set FX_WEP_SMG.Particles.Part_SMG_MuzzleFlash_Corrosive:ParticleSpriteEmitter_7 LODLevels ()</code>
+					</category>
+				</category>
+			</category>
+			<category name="Dahl SMG scope perfect clarity">
+				<comment>Removes the misaligned glass from the Dahl scope to make it perfectly clear.</comment>
+				<comment>Makes completing the Crawmerax DLC bearable with a Dahl scope.</comment>
+				<comment>Credits to ZetaDæmon for this code! This bothered me for the longest time.</comment>
+				<code profiles="default">set FX_WEP_Scopes.Particles.Part_Dahl_SMG_Reticle Emitters (ParticleSpriteEmitter'FX_WEP_Scopes.Particles.Part_Dahl_SMG_Reticle:ParticleSpriteEmitter_2',ParticleSpriteEmitter'FX_WEP_Scopes.Particles.Part_Dahl_SMG_Reticle:ParticleSpriteEmitter_0')</code>
+			</category>
+			<category name="Give Maliwan SMG sight a dot reticle">
+				<comment>Credits to ZetaDæmon for this code! I've been wishing for this since forever ago.</comment>
+				<comment>Changes the Maliwan SMG sight to the Maliwan pistol sight, which has a dot.</comment>
+				<comment>Virtually 100% accurate, gun fires precisely where the dot is</comment>
+				<code profiles="default">set GD_Weap_SMG.Sight.SMG_Sight_Maliwan SightFXCrosshairMaterial MaterialInstanceConstant'FX_WEP_Scopes.Materials.Mati_Maliwan_Pistol_Scope'</code>
+			</category>
+			<category name="Give Maliwan SMG stock Dahl stats">
+				<comment>Does what it says. Now you don't have to choose between your Good Touch looking nice and being stable.</comment>
+				<code profiles="default">set GD_Weap_SMG.Stock.SMG_Stock_Maliwan ZoomWeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponAutomaticBurstCount',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Dahl',InitializationDefinition=None,BaseValueScaleConstant=1.000000)))</code>
+				<code profiles="default">set GD_Weap_SMG.Stock.SMG_Stock_Maliwan AttributeSlotUpgrades ((SlotName="AccuracyMin",GradeIncrease=-6,bActivateSlot=True),(SlotName="AccuracyMax",GradeIncrease=6,bActivateSlot=True),(SlotName="AccuracyRegen",GradeIncrease=4,bActivateSlot=True),(SlotName="WeaponAccuracyImpulse",GradeIncrease=4,bActivateSlot=True))</code>
+			</category>
+			<category name="Maliwan SMGs lightning gloss reskin">
+				<comment>Gives 4 notable Maliwan SMGs a glossy coat</comment>
+				<category name="Bad Touch reskin">
+					<code profiles="default">set Common_GunMaterials.Materials.SMG.Mati_MaliwanSMGUnique_BadTouch VectorParameterValues ((ParameterName="p_ReflectColor",ParameterValue=(R=30.000000,G=60.000000,B=0.010000,A=1.000000),ExpressionGUID=(A=295058103,B=1318551573,C=-2045449573,D=-547597976)),(ParameterName="p_ReflectionChannelScale",ParameterValue=(R=1.000000,G=1.000000,B=1.000000,A=1.000000),ExpressionGUID=(A=295058103,B=1318551573,C=-2045449573,D=-547597976)),)</code>
+					<code profiles="default">set Common_GunMaterials.Materials.SMG.Mati_MaliwanSMGUnique_BadTouch TextureParameterValues ((ParameterName="P_SimpleReflect",ParameterValue=Texture2D'Common_GunMaterials.Patterns.Pattern_Lightning',ExpressionGUID=(A=-858148940,B=1327945772,C=148462268,D=1899047224)),(ParameterName="p_NormalScopesEmissive",ParameterValue=Texture2D'Weap_SMG.Tex.Weap_SMG_Nrm',ExpressionGUID=(A=-1743872746,B=1126171774,C=119496871,D=-1952271718)),(ParameterName="p_Diffuse",ParameterValue=Texture2D'Common_GunMaterials.CompTextures.Weap_AssaultSubSniper_Comp',ExpressionGUID=(A=1757607260,B=1326539502,C=-317215581,D=-565807463)),(ParameterName="p_Masks",ParameterValue=Texture2D'Weap_SMG.Tex.Weap_SMG_Comp',ExpressionGUID=(A=-330624041,B=1167251458,C=-335191907,D=-166684394)),)</code>
+					<code profiles="default">set Common_GunMaterials.Materials.SMG.Mati_MaliwanSMGUnique_BadTouch ScalarParameterValues ((ParameterName="p_ReflectColorScale",ParameterValue=1.000000,ExpressionGUID=(A=1875785607,B=1186033550,C=-1822263113,D=-1465755701)),)</code>
+				</category>
+				<category name="Crit reskin">
+					<code profiles="default">set Aster_GunMaterials.Materials.SMG.Mati_MaliwanSMGUnique_Crit VectorParameterValues ((ParameterName="p_ReflectColor",ParameterValue=(R=0.010000,G=34.000000,B=40.000000,A=1.000000),ExpressionGUID=(A=295058103,B=1318551573,C=-2045449573,D=-547597976)),(ParameterName="p_ReflectionChannelScale",ParameterValue=(R=1.000000,G=1.000000,B=1.000000,A=1.000000),ExpressionGUID=(A=295058103,B=1318551573,C=-2045449573,D=-547597976)),)</code>
+					<code profiles="default">set Aster_GunMaterials.Materials.SMG.Mati_MaliwanSMGUnique_Crit TextureParameterValues ((ParameterName="P_SimpleReflect",ParameterValue=Texture2D'Common_GunMaterials.Patterns.Pattern_Lightning',ExpressionGUID=(A=-858148940,B=1327945772,C=148462268,D=1899047224)),(ParameterName="p_NormalScopesEmissive",ParameterValue=Texture2D'Weap_SMG.Tex.Weap_SMG_Nrm',ExpressionGUID=(A=-1743872746,B=1126171774,C=119496871,D=-1952271718)),(ParameterName="p_Diffuse",ParameterValue=Texture2D'Common_GunMaterials.CompTextures.Weap_AssaultSubSniper_Comp',ExpressionGUID=(A=1757607260,B=1326539502,C=-317215581,D=-565807463)),(ParameterName="p_Masks",ParameterValue=Texture2D'Weap_SMG.Tex.Weap_SMG_Comp',ExpressionGUID=(A=-330624041,B=1167251458,C=-335191907,D=-166684394)),)</code>
+					<code profiles="default">set Aster_GunMaterials.Materials.SMG.Mati_MaliwanSMGUnique_Crit ScalarParameterValues ((ParameterName="p_ReflectColorScale",ParameterValue=1.000000,ExpressionGUID=(A=1875785607,B=1186033550,C=-1822263113,D=-1465755701)),)</code>
+				</category>
+				<category name="Good Touch reskin">
+					<code profiles="default">set Common_GunMaterials.Materials.SMG.Mati_MaliwanSMGUnique_GoodTouch VectorParameterValues ((ParameterName="p_ReflectColor",ParameterValue=(R=40.000000,G=8.000000,B=0.010000,A=1.000000),ExpressionGUID=(A=295058103,B=1318551573,C=-2045449573,D=-547597976)),(ParameterName="p_ReflectionChannelScale",ParameterValue=(R=1.000000,G=1.000000,B=1.000000,A=1.000000),ExpressionGUID=(A=295058103,B=1318551573,C=-2045449573,D=-547597976)),)</code>
+					<code profiles="default">set Common_GunMaterials.Materials.SMG.Mati_MaliwanSMGUnique_GoodTouch TextureParameterValues ((ParameterName="P_SimpleReflect",ParameterValue=Texture2D'Common_GunMaterials.Patterns.Pattern_Lightning',ExpressionGUID=(A=-858148940,B=1327945772,C=148462268,D=1899047224)),(ParameterName="p_NormalScopesEmissive",ParameterValue=Texture2D'Weap_SMG.Tex.Weap_SMG_Nrm',ExpressionGUID=(A=-1743872746,B=1126171774,C=119496871,D=-1952271718)),(ParameterName="p_Diffuse",ParameterValue=Texture2D'Common_GunMaterials.CompTextures.Weap_AssaultSubSniper_Comp',ExpressionGUID=(A=1757607260,B=1326539502,C=-317215581,D=-565807463)),(ParameterName="p_Masks",ParameterValue=Texture2D'Weap_SMG.Tex.Weap_SMG_Comp',ExpressionGUID=(A=-330624041,B=1167251458,C=-335191907,D=-166684394)),)</code>
+					<code profiles="default">set Common_GunMaterials.Materials.SMG.Mati_MaliwanSMGUnique_GoodTouch ScalarParameterValues ((ParameterName="p_ReflectColorScale",ParameterValue=1.000000,ExpressionGUID=(A=1875785607,B=1186033550,C=-1822263113,D=-1465755701)),)</code>
+				</category>
+				<category name="Hellfire reskin">
+					<code profiles="default">set Common_GunMaterials.Materials.SMG.Mati_Maliwan_Legendary_Hellfire VectorParameterValues ((ParameterName="p_ReflectColor",ParameterValue=(R=60.000000,G=4.000000,B=0.010000,A=1.000000),ExpressionGUID=(A=295058103,B=1318551573,C=-2045449573,D=-547597976)),(ParameterName="p_ReflectionChannelScale",ParameterValue=(R=1.000000,G=1.000000,B=1.000000,A=1.000000),ExpressionGUID=(A=295058103,B=1318551573,C=-2045449573,D=-547597976)),)</code>
+					<code profiles="default">set Common_GunMaterials.Materials.SMG.Mati_Maliwan_Legendary_Hellfire TextureParameterValues ((ParameterName="P_SimpleReflect",ParameterValue=Texture2D'Common_GunMaterials.Patterns.Pattern_Lightning',ExpressionGUID=(A=-858148940,B=1327945772,C=148462268,D=1899047224)),(ParameterName="p_NormalScopesEmissive",ParameterValue=Texture2D'Weap_SMG.Tex.Weap_SMG_Nrm',ExpressionGUID=(A=-1743872746,B=1126171774,C=119496871,D=-1952271718)),(ParameterName="p_Diffuse",ParameterValue=Texture2D'Common_GunMaterials.CompTextures.Weap_AssaultSubSniper_Comp',ExpressionGUID=(A=1757607260,B=1326539502,C=-317215581,D=-565807463)),(ParameterName="p_Masks",ParameterValue=Texture2D'Weap_SMG.Tex.Weap_SMG_Comp',ExpressionGUID=(A=-330624041,B=1167251458,C=-335191907,D=-166684394)),)</code>
+					<code profiles="default">set Common_GunMaterials.Materials.SMG.Mati_Maliwan_Legendary_Hellfire ScalarParameterValues ((ParameterName="p_ReflectColorScale",ParameterValue=1.000000,ExpressionGUID=(A=1875785607,B=1186033550,C=-1822263113,D=-1465755701)),)</code>
+				</category>
+			</category>
+			<category name="Give the Crit perfect handling (CHEAT MOD) (affects all Maliwan SMGs)">
+				<comment>Because the Crit still wasn't OP enough.</comment>
+				<comment>Please only use this for "testing" purposes</comment>
+				<comment>Conflicts with "Give Maliwan SMG stock Dahl stats". Please disable that above.</comment>
+				<code profiles="">set GD_Aster_Weapons.ManufacturerMaterials.Mat_Maliwan_3_Crit AttributeSlotUpgrades ((SlotName="WeaponDamage",GradeIncrease=8,bActivateSlot=True),(SlotName="WeaponMagSize",GradeIncrease=3,bActivateSlot=True),(SlotName="WeaponSpread",GradeIncrease=10000,bActivateSlot=True))</code>
+				<code profiles="">set GD_Weap_SMG.Body.SMG_Body_Maliwan_VarC AttributeSlotUpgrades ((SlotName="WeaponDamage",GradeIncrease=24,bActivateSlot=True),(SlotName="WeaponMagSize",GradeIncrease=7,bActivateSlot=True),(SlotName="WeaponSpread",GradeIncrease=10000,bActivateSlot=True))</code>
+				<code profiles="">set GD_Weap_SMG.Grip.SMG_Grip_Maliwan AttributeSlotUpgrades ((SlotName="WeaponMagSize",GradeIncrease=0,bActivateSlot=True),(SlotName="WeaponAccuracyImpulse",GradeIncrease=10000,bActivateSlot=True))</code>
+				<code profiles="">set GD_Aster_Weapons.SMGs.SMG_Barrel_Hyperion_Crit AttributeSlotUpgrades ((SlotName="WeaponSpread",GradeIncrease=10000,bActivateSlot=True),(SlotName="AccuracyMin",GradeIncrease=10000,bActivateSlot=True),(SlotName="WeaponMagSize",GradeIncrease=4,bActivateSlot=True),(SlotName="WeaponDamage",GradeIncrease=3,bActivateSlot=True),(SlotName="WeaponAccuracyImpulse",GradeIncrease=10000,bActivateSlot=True),)</code>
+				<code profiles="">set GD_Weap_SMG.Stock.SMG_Stock_Maliwan AttributeSlotUpgrades ((SlotName="WeaponSpread",GradeIncrease=10000,bActivateSlot=True),(SlotName="AccuracyMin",GradeIncrease=10000,bActivateSlot=True),(SlotName="AccuracyMax",GradeIncrease=10000,bActivateSlot=True),(SlotName="AccuracyRegen",GradeIncrease=10000,bActivateSlot=True),(SlotName="WeaponAccuracyImpulse",GradeIncrease=10000,bActivateSlot=True))</code>
+				<code profiles="">set GD_Weap_SMG.Stock.SMG_Stock_Maliwan ZoomWeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponAutomaticBurstCount',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Dahl',InitializationDefinition=None,BaseValueScaleConstant=1.000000)))</code>
+				<code profiles="">set GD_Weap_SMG.Accessory.SMG_Accessory_Body1_Accurate AttributeSlotUpgrades (((SlotName="AccuracyMin",GradeIncrease=10000,bActivateSlot=True)),((SlotName="WeaponSpread",GradeIncrease=10000,bActivateSlot=True)))</code>
+			</category>
+			<category name="Miss Moxxi's Kiss of Fire (Hellfire OP CHEAT MOD) (UNTESTED)">
+				<comment>FUCK YOU VORA. When I get to you on OP10, you can rest assured that I will not be fighting you fairly. No. YOU'RE GOING TO BURN FOR YOUR SINS, BITCH.</comment>
+				<comment>Based on ThemostOPmodinexistence by Greem</comment>
+				<category name="Rename">
+					<code profiles="default">set GD_Weap_SMG.Name.Title_Maliwan.Title_Legendary_HellFire PartName Kiss of Fire</code>
+					<category name="Rename" MUT="true">
+						<category name="Default (vulgar)">
+							<code profiles="default">set GD_Weap_SMG.Name.Title_Maliwan.Title_Legendary_HellFire:AttributePresentationDefinition_8 NoConstraintText <font color="#e50026">BURN, MOTHERFUCKER, BURN</code>
+						</category>
+						<category name="Alternate (clean)">
+							<code profiles="">set GD_Weap_SMG.Name.Title_Maliwan.Title_Legendary_HellFire:AttributePresentationDefinition_8 NoConstraintText We don't need no water.</code>
+						</category>
+					</category>
+				</category>
+				<category name="Parts">
+					<comment>Tuned to 900 RPM. The firerate of FREEDOM comes to Pandora.</comment>
+					<code profiles="default">set GD_Weap_SMG.Barrel.SMG_Barrel_Maliwan_HellFire WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=200.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponStatusEffectChanceModifier',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=100.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponStatusEffectDamage',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=900000.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=300.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-0.880000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=-1.00000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueConstant=-1.000000)))</code>
+				</category>
+			</category>
+		</category>
+	</body>
+</BLCMM>
+
+#Commands:
+set FX_WEP_SMG.Particles.Part_SMG_MuzzleFlash_Shock:ParticleSpriteEmitter_21 LODLevels ()
+set FX_WEP_SMG.Particles.Part_SMG_MuzzleFlash_Shock:ParticleSpriteEmitter_41 LODLevels ()
+set FX_WEP_SMG.Particles.Part_SMG_MuzzleFlash_Shock:ParticleSpriteEmitter_9 LODLevels ()
+set FX_WEP_SMG.Particles.Part_SMG_MuzzleFlash_Incendiary:ParticleSpriteEmitter_32 LODLevels ()
+set FX_WEP_SMG.Particles.Part_SMG_MuzzleFlash_Incendiary:ParticleSpriteEmitter_31 LODLevels ()
+set FX_WEP_SMG.Particles.Part_SMG_MuzzleFlash_Incendiary:ParticleSpriteEmitter_27 LODLevels ()
+set FX_WEP_SMG.Particles.Part_SMG_MuzzleFlash_Corrosive:ParticleSpriteEmitter_20 LODLevels ()
+set FX_WEP_SMG.Particles.Part_SMG_MuzzleFlash_Corrosive:ParticleSpriteEmitter_38 LODLevels ()
+set FX_WEP_SMG.Particles.Part_SMG_MuzzleFlash_Corrosive:ParticleSpriteEmitter_7 LODLevels ()
+set FX_WEP_Scopes.Particles.Part_Dahl_SMG_Reticle Emitters (ParticleSpriteEmitter'FX_WEP_Scopes.Particles.Part_Dahl_SMG_Reticle:ParticleSpriteEmitter_2',ParticleSpriteEmitter'FX_WEP_Scopes.Particles.Part_Dahl_SMG_Reticle:ParticleSpriteEmitter_0')
+set GD_Weap_SMG.Sight.SMG_Sight_Maliwan SightFXCrosshairMaterial MaterialInstanceConstant'FX_WEP_Scopes.Materials.Mati_Maliwan_Pistol_Scope'
+set GD_Weap_SMG.Stock.SMG_Stock_Maliwan ZoomWeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponAutomaticBurstCount',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Dahl',InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+set GD_Weap_SMG.Stock.SMG_Stock_Maliwan AttributeSlotUpgrades ((SlotName="AccuracyMin",GradeIncrease=-6,bActivateSlot=True),(SlotName="AccuracyMax",GradeIncrease=6,bActivateSlot=True),(SlotName="AccuracyRegen",GradeIncrease=4,bActivateSlot=True),(SlotName="WeaponAccuracyImpulse",GradeIncrease=4,bActivateSlot=True))
+set Common_GunMaterials.Materials.SMG.Mati_MaliwanSMGUnique_BadTouch VectorParameterValues ((ParameterName="p_ReflectColor",ParameterValue=(R=30.000000,G=60.000000,B=0.010000,A=1.000000),ExpressionGUID=(A=295058103,B=1318551573,C=-2045449573,D=-547597976)),(ParameterName="p_ReflectionChannelScale",ParameterValue=(R=1.000000,G=1.000000,B=1.000000,A=1.000000),ExpressionGUID=(A=295058103,B=1318551573,C=-2045449573,D=-547597976)),)
+set Common_GunMaterials.Materials.SMG.Mati_MaliwanSMGUnique_BadTouch TextureParameterValues ((ParameterName="P_SimpleReflect",ParameterValue=Texture2D'Common_GunMaterials.Patterns.Pattern_Lightning',ExpressionGUID=(A=-858148940,B=1327945772,C=148462268,D=1899047224)),(ParameterName="p_NormalScopesEmissive",ParameterValue=Texture2D'Weap_SMG.Tex.Weap_SMG_Nrm',ExpressionGUID=(A=-1743872746,B=1126171774,C=119496871,D=-1952271718)),(ParameterName="p_Diffuse",ParameterValue=Texture2D'Common_GunMaterials.CompTextures.Weap_AssaultSubSniper_Comp',ExpressionGUID=(A=1757607260,B=1326539502,C=-317215581,D=-565807463)),(ParameterName="p_Masks",ParameterValue=Texture2D'Weap_SMG.Tex.Weap_SMG_Comp',ExpressionGUID=(A=-330624041,B=1167251458,C=-335191907,D=-166684394)),)
+set Common_GunMaterials.Materials.SMG.Mati_MaliwanSMGUnique_BadTouch ScalarParameterValues ((ParameterName="p_ReflectColorScale",ParameterValue=1.000000,ExpressionGUID=(A=1875785607,B=1186033550,C=-1822263113,D=-1465755701)),)
+set Aster_GunMaterials.Materials.SMG.Mati_MaliwanSMGUnique_Crit VectorParameterValues ((ParameterName="p_ReflectColor",ParameterValue=(R=0.010000,G=34.000000,B=40.000000,A=1.000000),ExpressionGUID=(A=295058103,B=1318551573,C=-2045449573,D=-547597976)),(ParameterName="p_ReflectionChannelScale",ParameterValue=(R=1.000000,G=1.000000,B=1.000000,A=1.000000),ExpressionGUID=(A=295058103,B=1318551573,C=-2045449573,D=-547597976)),)
+set Aster_GunMaterials.Materials.SMG.Mati_MaliwanSMGUnique_Crit TextureParameterValues ((ParameterName="P_SimpleReflect",ParameterValue=Texture2D'Common_GunMaterials.Patterns.Pattern_Lightning',ExpressionGUID=(A=-858148940,B=1327945772,C=148462268,D=1899047224)),(ParameterName="p_NormalScopesEmissive",ParameterValue=Texture2D'Weap_SMG.Tex.Weap_SMG_Nrm',ExpressionGUID=(A=-1743872746,B=1126171774,C=119496871,D=-1952271718)),(ParameterName="p_Diffuse",ParameterValue=Texture2D'Common_GunMaterials.CompTextures.Weap_AssaultSubSniper_Comp',ExpressionGUID=(A=1757607260,B=1326539502,C=-317215581,D=-565807463)),(ParameterName="p_Masks",ParameterValue=Texture2D'Weap_SMG.Tex.Weap_SMG_Comp',ExpressionGUID=(A=-330624041,B=1167251458,C=-335191907,D=-166684394)),)
+set Aster_GunMaterials.Materials.SMG.Mati_MaliwanSMGUnique_Crit ScalarParameterValues ((ParameterName="p_ReflectColorScale",ParameterValue=1.000000,ExpressionGUID=(A=1875785607,B=1186033550,C=-1822263113,D=-1465755701)),)
+set Common_GunMaterials.Materials.SMG.Mati_MaliwanSMGUnique_GoodTouch VectorParameterValues ((ParameterName="p_ReflectColor",ParameterValue=(R=40.000000,G=8.000000,B=0.010000,A=1.000000),ExpressionGUID=(A=295058103,B=1318551573,C=-2045449573,D=-547597976)),(ParameterName="p_ReflectionChannelScale",ParameterValue=(R=1.000000,G=1.000000,B=1.000000,A=1.000000),ExpressionGUID=(A=295058103,B=1318551573,C=-2045449573,D=-547597976)),)
+set Common_GunMaterials.Materials.SMG.Mati_MaliwanSMGUnique_GoodTouch TextureParameterValues ((ParameterName="P_SimpleReflect",ParameterValue=Texture2D'Common_GunMaterials.Patterns.Pattern_Lightning',ExpressionGUID=(A=-858148940,B=1327945772,C=148462268,D=1899047224)),(ParameterName="p_NormalScopesEmissive",ParameterValue=Texture2D'Weap_SMG.Tex.Weap_SMG_Nrm',ExpressionGUID=(A=-1743872746,B=1126171774,C=119496871,D=-1952271718)),(ParameterName="p_Diffuse",ParameterValue=Texture2D'Common_GunMaterials.CompTextures.Weap_AssaultSubSniper_Comp',ExpressionGUID=(A=1757607260,B=1326539502,C=-317215581,D=-565807463)),(ParameterName="p_Masks",ParameterValue=Texture2D'Weap_SMG.Tex.Weap_SMG_Comp',ExpressionGUID=(A=-330624041,B=1167251458,C=-335191907,D=-166684394)),)
+set Common_GunMaterials.Materials.SMG.Mati_MaliwanSMGUnique_GoodTouch ScalarParameterValues ((ParameterName="p_ReflectColorScale",ParameterValue=1.000000,ExpressionGUID=(A=1875785607,B=1186033550,C=-1822263113,D=-1465755701)),)
+set Common_GunMaterials.Materials.SMG.Mati_Maliwan_Legendary_Hellfire VectorParameterValues ((ParameterName="p_ReflectColor",ParameterValue=(R=60.000000,G=4.000000,B=0.010000,A=1.000000),ExpressionGUID=(A=295058103,B=1318551573,C=-2045449573,D=-547597976)),(ParameterName="p_ReflectionChannelScale",ParameterValue=(R=1.000000,G=1.000000,B=1.000000,A=1.000000),ExpressionGUID=(A=295058103,B=1318551573,C=-2045449573,D=-547597976)),)
+set Common_GunMaterials.Materials.SMG.Mati_Maliwan_Legendary_Hellfire TextureParameterValues ((ParameterName="P_SimpleReflect",ParameterValue=Texture2D'Common_GunMaterials.Patterns.Pattern_Lightning',ExpressionGUID=(A=-858148940,B=1327945772,C=148462268,D=1899047224)),(ParameterName="p_NormalScopesEmissive",ParameterValue=Texture2D'Weap_SMG.Tex.Weap_SMG_Nrm',ExpressionGUID=(A=-1743872746,B=1126171774,C=119496871,D=-1952271718)),(ParameterName="p_Diffuse",ParameterValue=Texture2D'Common_GunMaterials.CompTextures.Weap_AssaultSubSniper_Comp',ExpressionGUID=(A=1757607260,B=1326539502,C=-317215581,D=-565807463)),(ParameterName="p_Masks",ParameterValue=Texture2D'Weap_SMG.Tex.Weap_SMG_Comp',ExpressionGUID=(A=-330624041,B=1167251458,C=-335191907,D=-166684394)),)
+set Common_GunMaterials.Materials.SMG.Mati_Maliwan_Legendary_Hellfire ScalarParameterValues ((ParameterName="p_ReflectColorScale",ParameterValue=1.000000,ExpressionGUID=(A=1875785607,B=1186033550,C=-1822263113,D=-1465755701)),)
+set GD_Weap_SMG.Name.Title_Maliwan.Title_Legendary_HellFire PartName Kiss of Fire
+set GD_Weap_SMG.Name.Title_Maliwan.Title_Legendary_HellFire:AttributePresentationDefinition_8 NoConstraintText <font color="#e50026">BURN, MOTHERFUCKER, BURN
+set GD_Weap_SMG.Barrel.SMG_Barrel_Maliwan_HellFire WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=200.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponStatusEffectChanceModifier',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=100.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponStatusEffectDamage',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=900000.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=300.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-0.880000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=-1.00000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueConstant=-1.000000)))
+
+#Hotfixes:
+set Transient.SparkServiceConfiguration_0 ServiceName Micropatch
+
+set Transient.SparkServiceConfiguration_0 ConfigurationGroup Default
+
+set Transient.SparkServiceConfiguration_0 Keys ("SparkLevelPatchEntry-BLCMM1","SparkLevelPatchEntry-BLCMM2","SparkLevelPatchEntry-BLCMM3","SparkLevelPatchEntry-BLCMM4","SparkLevelPatchEntry-BLCMM5","SparkLevelPatchEntry-BLCMM6","SparkLevelPatchEntry-BLCMM7","SparkLevelPatchEntry-BLCMM8","SparkLevelPatchEntry-BLCMM9","SparkLevelPatchEntry-BLCMM10","SparkLevelPatchEntry-BLCMM11","SparkLevelPatchEntry-BLCMM12","SparkLevelPatchEntry-BLCMM13","SparkLevelPatchEntry-BLCMM14","SparkOnDemandPatchEntry-BLCMM15","SparkOnDemandPatchEntry-BLCMM16","SparkOnDemandPatchEntry-BLCMM17","SparkOnDemandPatchEntry-BLCMM18","SparkOnDemandPatchEntry-BLCMM19","SparkPatchEntry-BLCMM20","SparkPatchEntry-BLCMM21","SparkPatchEntry-BLCMM22","SparkPatchEntry-BLCMM23","SparkOnDemandPatchEntry-BLCMM24","SparkOnDemandPatchEntry-BLCMM25","SparkOnDemandPatchEntry-BLCMM26")
+set Transient.SparkServiceConfiguration_0 Values (",GD_Balance.WeightingPlayerCount.BugmorphCocoon_PerPlayers_Phase1,ConditionalInitialization.ConditionalExpressionList[4].BaseValueIfTrue.BaseValueConstant,0.700000,.8",",GD_Balance.WeightingPlayerCount.BugmorphCocoon_PerPlayers_Phase2,ConditionalInitialization.ConditionalExpressionList[4].BaseValueIfTrue.BaseValueConstant,0.400000,.5",",GD_Balance.WeightingPlayerCount.BugmorphCocoon_PerPlayers_Phase3,ConditionalInitialization.ConditionalExpressionList[4].BaseValueIfTrue.BaseValueConstant,0.200000,.3",",GD_Balance.WeightingPlayerCount.BugmorphCocoon_PerPlayers_Phase4,ConditionalInitialization.ConditionalExpressionList[4].BaseValueIfTrue.BaseValueConstant,0.100000,.2",",GD_Balance.WeightingPlayerCount.BugmorphCocoon_PerPlayers_Phase5,ConditionalInitialization.ConditionalExpressionList[4].BaseValueIfTrue.BaseValueConstant,0.075000,.1","SouthpawFactory_P,GD_Population_Marauder.Balance.Unique.PawnBalance_Assassin1,DefaultItemPoolList[3].PoolProbability.BaseValueScaleConstant,0.250000,1","SouthpawFactory_P,GD_Population_Nomad.Balance.Unique.PawnBalance_Assassin2,DefaultItemPoolList[4].PoolProbability.BaseValueScaleConstant,0.250000,1","SouthpawFactory_P,GD_Population_Psycho.Balance.Unique.PawnBalance_Assassin3,DefaultItemPoolList[1].PoolProbability.BaseValueScaleConstant,0.250000,1","SouthpawFactory_P,GD_Population_Rat.Balance.Unique.PawnBalance_Assassin4,DefaultItemPoolList[3].PoolProbability.BaseValueScaleConstant,0.250000,1",",GD_Sage_Rare_Scaylion.Population.PawnBalance_Sage_Rare_Scaylion,DefaultItemPoolList[1].PoolProbability.BaseValueScaleConstant,1.000000,100",",GD_Sage_Rare_Drifter.Balance.PawnBalance_Sage_Rare_Drifter,DefaultItemPoolList[0].PoolProbability.BaseValueScaleConstant,1.000000,100",",GD_Sage_Rare_Rhino.Population.PawnBalance_Sage_Rare_Rhino,DefaultItemPoolList[1].PoolProbability.BaseValueScaleConstant,1.000000,100",",GD_Sage_Rare_Skag.Population.PawnBalance_Sage_Rare_Skag,DefaultItemPoolList[1].PoolProbability.BaseValueScaleConstant,1.000000,100",",GD_Sage_Rare_Spore.Population.PawnBalance_Sage_Rare_Spore,DefaultItemPoolList[0].PoolProbability.BaseValueScaleConstant,1.000000,100","GD_Assassin_Streaming,GD_Assassin_Skills.Sniping.Velocity,SkillEffectDefinitions[0].ModifierType,MT_PostAdd,MT_Scale","GD_Tulip_Mechro_Streaming,GD_Tulip_Mechromancer_Skills.LittleBigTrouble.WiresDontTalk,SkillEffectDefinitions,,((AttributeToModify=D_Attributes.DamageTypeModifers.InstigatedShockDamageModifier,bIncludeDuelingTargets=False,bIncludeSelfAsTarget=False,bOnlyEffectTargetsInRange=False,bExcludeNonPlayerCharacters=False,EffectTarget=TARGET_Self,TargetInstanceDataName=,TargetCriteria=CRITERIA_None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.030000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),GradeToStartApplyingEffect=1,PerGradeUpgradeInterval=1,PerGradeUpgrade=(BaseValueConstant=0.030000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),BonusUpgradeList=),(AttributeToModify=D_Attributes.DamageTypeModifers.InstigatedShockStatusDamageModifier,bIncludeDuelingTargets=False,bIncludeSelfAsTarget=False,bOnlyEffectTargetsInRange=False,bExcludeNonPlayerCharacters=False,EffectTarget=TARGET_Self,TargetInstanceDataName=,TargetCriteria=CRITERIA_None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.030000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),GradeToStartApplyingEffect=1,PerGradeUpgradeInterval=1,PerGradeUpgrade=(BaseValueConstant=0.030000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),BonusUpgradeList=))","GD_Siren_Streaming,GD_Siren_Skills.Misc.Init_BlightPhoenix_DamageCalc_Part2,ValueFormula.Level.InitializationDefinition,AttributeInitializationDefinition'GD_Balance_HealthAndDamage.HealthAndDamage.Init_PlayerMeleeDamage',AttributeInitializationDefinition'GD_Balance_HealthAndDamage.HealthAndDamage.Init_PlayerSkillDamage'","GD_Siren_Streaming,GD_Siren_Skills.Misc.Init_BlightPhoenix_DamageCalc_Part2,ValueFormula.Level.BaseValueScaleConstant,1.000000,3.5","GD_Assassin_Streaming,GD_Assassin_Skills.Misc.Att_DeathMark_BonusDamage,BaseValue.BaseValueConstant,0.200000,.8","GD_Itempools.Runnables.Pool_FourAssassins,BalancedItems[1].Probability.InitializationDefinition,None,GD_Balance.Weighting.Weight_1_Common","GD_Shields.Projectiles.Proj_LegendaryBoosterShield:BehaviorProviderDefinition_1.Behavior_Explode_140,BehaviorSequences[0].BehaviorData2[7].Behavior.StatusEffectDamage.BaseValueAttribute,None,D_Attributes.Projectile.ProjectileDamage","GD_Shields.Projectiles.Proj_LegendaryBoosterShield:BehaviorProviderDefinition_1.Behavior_Explode_140,BehaviorSequences[0].BehaviorData2[7].Behavior.StatusEffectDamage.BaseValueScaleConstant,1.000000,.25","GD_Shields.Projectiles.Proj_LegendaryBoosterShield:BehaviorProviderDefinition_1.Behavior_Explode_140,BehaviorSequences[0].BehaviorData2[7].Behavior.StatusEffectChance.BaseValueConstant,1.000000,20","GD_Siren_Streaming,FX_CHAR_Siren.Particles.Part_SirenASEnemyOrb:ParticleSpriteEmitter_11,LODLevels,,()","GD_Siren_Streaming,FX_CHAR_Siren.Particles.Part_SirenASEnemyOrb:ParticleSpriteEmitter_5,LODLevels,,()","GD_Siren_Streaming,FX_CHAR_Siren.Particles.Part_SirenASEnemyOrb:ParticleSpriteEmitter_4,LODLevels,,()")
+
+set Transient.GearboxAccountData_1 Services (Transient.SparkServiceConfiguration_0)
+
