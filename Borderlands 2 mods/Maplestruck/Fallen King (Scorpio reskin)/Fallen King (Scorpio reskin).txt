@@ -2,6 +2,9 @@
 #<!!!You opened a file saved with BLCMM in FilterTool. Please update to BLCMM to properly open this file!!!>
 	<head>
 		<type name="BL2" offline="true"/>
+		<profiles>
+			<profile name="default" current="true"/>
+		</profiles>
 	</head>
 	<body>
 		<category name="Fallen King (Scorpio reskin)">
@@ -22,8 +25,8 @@
 			</category>
 			<category name="Change rarity to legendary (optional)">
 				<comment>Legendary rarity for a legendary soldier.</comment>
-				<code profiles="">set GD_Weap_AssaultRifle.Barrel.AR_Barrel_Jakobs_Scorpio rarity (basevalueattribute=none)</code>
-				<code profiles="">set GD_Weap_AssaultRifle.Barrel.AR_Barrel_Jakobs_Scorpio rarity (BaseValueConstant=5)</code>
+				<comment>Thanks apple1417 and ZetaDaemon for helping me with this!</comment>
+				<code profiles="default">set GD_Weap_AssaultRifle.Barrel.AR_Barrel_Jakobs_Scorpio rarity (BaseValueConstant=5.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)</code>
 			</category>
 		</category>
 	</body>
@@ -32,4 +35,5 @@
 #Commands:
 set GD_Weap_AssaultRifle.Name.Title.Title_Unique_Scorpio PartName Fallen King
 set GD_Weap_AssaultRifle.Name.Title.Title_Unique_Scorpio:AttributePresentationDefinition_8 NoConstraintText <font color="#FFA100">Say not in grief "he is no more", but honor his name by fighting for those who matter most.
+set GD_Weap_AssaultRifle.Barrel.AR_Barrel_Jakobs_Scorpio rarity (BaseValueConstant=5.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
 
