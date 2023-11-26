@@ -1,0 +1,21 @@
+#Bad Touch - replaces Moxxi's Bad Touch#
+
+#Changes#
+- Always spawns with Bayonet
+- Slag Elemental
+
+
+#ID Card#
+set GD_Weap_SMG.Name.Title.Title__Unique_BadTouch Partname Bad Touch
+set GD_Weap_SMG.Name.Title.Title__Unique_BadTouch:AttributePresentationDefinition_8 NoConstraintText We're nothing but mammals after all.
+
+
+#Effects#
+set GD_Weap_SMG.A_Weapons_Unique.SMG_Maliwan_3_BadTouch:WeaponPartListCollectionDefinition_180 ElementalPartData (bEnable=True,WeightedParts=((Part=WeaponPartDefinition'GD_Weap_SMG.elemental.SMG_Elemental_Slag',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=2)))
+
+#Accessories#
+set GD_Weap_SMG.A_Weapons_Unique.SMG_Maliwan_3_BadTouch:WeaponPartListCollectionDefinition_180 Accessory1PartData (bEnabled=True,WeightedParts=((Part=WeaponPartDefinition'GD_Weap_SMG.Accessory.SMG_Accessory_Bayonet_1',Manufacturers=((Manufacturers=None,DefaultWeightIndex=1)),MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=4)))
+
+#Bayonet#
+set GD_Weap_SMG.Accessory.SMG_Accessory_Bayonet_1 ExternalAttributeEffect ((AttributeToModify=AttributeDefinition'D_Attributes.DamageSourceModifiers.InstigatedMeleeDamageModifier',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=1.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+

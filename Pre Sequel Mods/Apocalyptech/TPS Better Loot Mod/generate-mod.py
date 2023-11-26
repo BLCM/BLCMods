@@ -65,7 +65,7 @@ except ModuleNotFoundError:
 ###
 
 mod_name = 'TPS Better Loot Mod'
-mod_version = '1.1.1'
+mod_version = '1.1.2'
 input_filename = 'input-file-mod.txt'
 output_filename = '{}.blcm'.format(mod_name)
 
@@ -994,6 +994,93 @@ for weapon_name in weapons:
 
 guaranteed_luneshine = "\n\n".join(['{}{}'.format(' '*(4*5), s) for s in guaranteed_luneshine_statements])
 
+# Adding (non-legendary) Holodome COMs to the world drop pools.  Fortunately, apart
+# from some varying object prefixes depending on DLC, these all end up following a
+# nicely-rigid pattern, so it's easy to construct.
+holodome_coms_lines = []
+for class_name, pool_prefix, vanilla_prefix, holodome_prefix, holodome_class_override in [
+        ('Enforcer',
+            'GD_Cork_Itempools.ClassModPools.Pool_ClassMod',
+            'GD_Cork_ItemGrades.ClassMods.BalDef_ClassMod',
+            'GD_Petunia_ItemGrades.ClassMods.BalDef_Pet_ClassMod',
+            None,
+            ),
+        ('Gladiator',
+            'GD_Cork_Itempools.ClassModPools.Pool_ClassMod',
+            'GD_Cork_ItemGrades.ClassMods.BalDef_ClassMod',
+            'GD_Petunia_ItemGrades.ClassMods.BalDef_Pet_ClassMod',
+            None,
+            ),
+        ('Lawbringer',
+            'GD_Cork_Itempools.ClassModPools.Pool_ClassMod',
+            'GD_Cork_ItemGrades.ClassMods.BalDef_ClassMod',
+            'GD_Petunia_ItemGrades.ClassMods.BalDef_Pet_ClassMod',
+            None,
+            ),
+        ('Prototype',
+            'GD_Cork_Itempools.ClassModPools.Pool_ClassMod',
+            'GD_Cork_ItemGrades.ClassMods.BalDef_ClassMod',
+            'GD_Petunia_ItemGrades.ClassMods.BalDef_Pet_ClassMod',
+            None,
+            ),
+        ('Baroness',
+            'GD_Crocus_Itempools.ClassModPools.Pool_ClassMod',
+            'GD_Crocus_ItemGrades.ClassMods.BalDef_ClassMod',
+            'GD_Crocus_ItemGrades.ClassMods.BalDef_Pet_ClassMod',
+            None,
+            ),
+        ('Doppelganger',
+            'GD_Quince_Itempools.ClassModPools.Pool_ClassMod',
+            'GD_Quince_ItemGrades.ClassMods.BalDef_ClassMod',
+            'GD_Petunia_ItemGrades.ClassMods.BalDef_Pet_ClassMod',
+            'Doppel',
+            ),
+        ]:
+
+    if holodome_class_override:
+        holodome_class_name = holodome_class_override
+    else:
+        holodome_class_name = class_name
+
+    holodome_coms_lines.append(f'# {class_name}')
+    for rarity, weight_obj in [
+            ('01_Common', 'GD_Balance.Weighting.Weight_1_Common'),
+            ('02_Uncommon', 'GD_Balance.Weighting.Weight_2_Uncommon'),
+            ('03_Rare', 'GD_Balance.Weighting.Weight_4_Rare'),
+            ('04_VeryRare', 'GD_Balance.Weighting.Weight_5_VeryRare'),
+            ]:
+        # Each of the vanilla pools points to a balance which can result in 10 COMs, so
+        # we're setting that balance's BVSC to 10, and leaving the Holodome COM entry at 1.
+        # It's a bit silly to be using the rarity IDs here, but that's what the original
+        # pools do, so I'm staying consistent with those.
+        holodome_coms_lines.append(
+                f"""set {pool_prefix}_{class_name}_{rarity} BalancedItems (
+                    (
+                        ItmPoolDefinition=None,
+                        InvBalanceDefinition=ClassModBalanceDefinition'{vanilla_prefix}_{class_name}_{rarity}',
+                        Probability=(
+                            BaseValueConstant=1.000000,
+                            BaseValueAttribute=None,
+                            InitializationDefinition=AttributeInitializationDefinition'{weight_obj}',
+                            BaseValueScaleConstant=10.000000
+                        ),
+                        bDropOnDeath = True
+                    ),
+                    (
+                        ItmPoolDefinition=None,
+                        InvBalanceDefinition=ClassModBalanceDefinition'{holodome_prefix}_{holodome_class_name}_{rarity}',
+                        Probability=(
+                            BaseValueConstant=1.000000,
+                            BaseValueAttribute=None,
+                            InitializationDefinition=AttributeInitializationDefinition'{weight_obj}',
+                            BaseValueScaleConstant=1.000000
+                        ),
+                        bDropOnDeath = True
+                    )
+                )""")
+
+holodome_coms = "\n\n".join(['{}{}'.format(' '*(4*4), s) for s in holodome_coms_lines])
+
 # Fix some container drop pools which reference an item (Pool_BuffDrinks_Euphoria)
 # which doesn't actually exist, causing that loot possibility to never actually
 # get chosen.  We'll replace with Pool_BuffDrinks_HealingRegen.  Most of these could
@@ -1915,6 +2002,7 @@ with open(input_filename, 'r') as df:
         boss_quantity_stock=boss_quantities['stock'],
         early_game_unlocks=early_game_unlocks,
         guaranteed_luneshine=guaranteed_luneshine,
+        holodome_coms=holodome_coms,
         )
 mp.human_str_to_blcm_filename(mod_str, output_filename)
 print('Wrote mod to: {}'.format(output_filename))

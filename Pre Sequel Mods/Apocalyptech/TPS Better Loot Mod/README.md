@@ -289,7 +289,7 @@ Some other stuff not done:
   the mod, and there are plenty of other mods out there which already
   do that.
 * Iwajira, Volcantis, and Odjurymir already had some extremely generous
-  loot drops just in the base game, and thsi mod improves those even more,
+  loot drops just in the base game, and this mod improves those even more,
   just on account of buffing the pools they drop from.  I've opted not to
   nerf those down.
 
@@ -378,7 +378,10 @@ for the full text.
 Changelog
 =========
 
-**v1.1.1**, August 21, 2019:
+**v1.1.2**, September 5, 2023 (commit `e02680931686763dd612a8b444bb069cf395c0d8`)
+ * Added in the non-legendary Holodome Onslaught class mods to the world drop pools
+
+**v1.1.1**, August 21, 2019 (commit `9ce3e6822e7ef6b8e7031003062bd44eed9fc200`):
  * Added the Heart Breaker as a potential legendary shotgun
 
 **v1.1.0**, July 27, 2018 (commit `11073b0bfb839721a3a23cc6baff40b4ebf337ee`):

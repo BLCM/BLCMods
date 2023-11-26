@@ -55,7 +55,7 @@ except ModuleNotFoundError:
 
 # Control Vars
 mod_name = 'BL2 Mega TimeSaver XL'
-mod_version = '1.0.0'
+mod_version = '1.0.1'
 output_filename = '{}.blcm'.format(mod_name)
 speed_scale = 5
 vehicle_anim_speed_scale = 2
@@ -413,7 +413,9 @@ dlcs = [
                     'Dam_Dynamic.TheWorld:PersistentLevel.Main_Sequence.PrisonCells.SeqAct_Interp_2',
                     'Dam_Dynamic.TheWorld:PersistentLevel.Main_Sequence.PrisonCells.SeqAct_Interp_3',
                     'Dam_Dynamic.TheWorld:PersistentLevel.Main_Sequence.PrisonCells.SeqAct_Interp_4',
-                    'Dam_Dynamic.TheWorld:PersistentLevel.Main_Sequence.SplinterGroup.SeqAct_Interp_0',
+                    # This is the main door to the Splinter Group lair; if we speed this up too
+                    # much it ends up not opening *at all* on subsequent playthroughs.
+                    ('Dam_Dynamic.TheWorld:PersistentLevel.Main_Sequence.SplinterGroup.SeqAct_Interp_0', 0.5),
                     'Dam_Dynamic.TheWorld:PersistentLevel.Main_Sequence.SplinterGroup.SeqAct_Interp_1',
                     'Dam_Dynamic.TheWorld:PersistentLevel.Main_Sequence.SplinterGroup.SeqAct_Interp_3',
                     ],

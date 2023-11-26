@@ -201,5 +201,10 @@ This mod itself is licensed under
 Changelog
 =========
 
+**v1.0.1**, September 4, 2023:
+ * Fixed a bug where the main door to the Splinter Group lair (in Bloodshot
+   Stronghold) doesn't open properly.
+
 **v1.0.0**, September 3, 2019:
  * Initial public release
+
