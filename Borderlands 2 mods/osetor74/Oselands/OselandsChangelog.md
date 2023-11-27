@@ -55,8 +55,10 @@ Use CTRL+F to find a section easier.
 	> Mimics
 
   #### > Enemy Changes
-	> Raid Bosses
+	> Base Enemy Stats
+ 	> Raid Bosses
 	> Southpaw Steam & Power
+	> Saturn, Uranus, Constructors
 
   #### > Vault Hunters
 	> Overview
@@ -141,11 +143,12 @@ Use CTRL+F to find a section easier.
 
 		Elemental damage now follows the following modifiers:
 
-		Non-Elemental(NE)/Explosive/Slag vs all health types: 1x
-		Fire/Corrosive vs right health type: 1.2x
-		Fire/corrosive vs wrong health type: 0.6x
-		Shock vs shield: 1.5x
-		Shock vs other health types: 0.95x
+		- Non-Elemental(NE)/Explosive vs all	-> 1x
+  		- Fire/Corrosive vs correct health type	-> 1.1x
+		- Fire/corrosive vs wrong health type 	-> 0.7x
+		- Shock vs shield 			-> 1.2x
+		- Shock vs non-shield			-> 0.9x
+		- Slag vs all health types		-> 0.95x
 
 
 		- The duration of all fire/corrosive/shock status effects is now 5 seconds (instead of 5/8/2),
@@ -796,7 +799,14 @@ Use CTRL+F to find a section easier.
 
 ## Enemy Changes
 
-	> Raid Bosses
+	> Base Enemy Stats
+
+		- Both base enemy health and damage have been adjusted so that they start off at a higher value than vanilla, while having
+		  a slower and/or more consistent scaling per level. This is to make early game slightly more difficult (to make it less
+		  boring), while not messing with very late game difficulty *too* much.
+  
+ 
+ 	> Raid Bosses
 
 		> All raid boss health (except dexi) has been reduced. Some of them by *very* substantial amounts.
 			- Partially due to the nerfs to the Bee shield. But also to hopefully make it way more flexible to use different
@@ -840,6 +850,12 @@ Use CTRL+F to find a section easier.
 		- Increased the health of the following enemies:
 			Standard psychos
 			Standard nomads
+
+
+
+	> Saturn, Uranus, Constructors
+
+		- Can now be afflicted with status effects
  
 
 
