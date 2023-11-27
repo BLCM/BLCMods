@@ -1,3 +1,36 @@
+=============== [ 1.2.7 ] ===============
+
+	- Fixed a bug where weapons that had higher than 2x critical damage added everything above 2x
+	  twice (i.e 2.3x weapon was actually being considered as 2.6x)
+
+	- Fixed slag damage double-dipping with global damage boosts
+
+	- Increased base enemy HP, reduced how fast it scales per level
+	- Increased base enemy damage, made enemy damage scaling far more consistent
+		- Early game is more difficult (and thus more exciting), but equalizes towards the later levels
+
+
+ 	- Elemental Damage Changes
+
+		- Removed damage penalties from elemental parts on guns (was already absent on slag guns)
+
+		- Fire/Corrosive vs correct health type	-> 1.1x damage (from 1.2x)
+		- Fire/corrosive vs wrong health type 	-> 0.7x (from 0.6x)
+		- Shock vs shield 			-> 1.2x damage (unchanged)
+		- Shock vs wrong health type 		-> 0.9x damage (from 0.95x)
+		- Slag vs all health types		-> 0.95x damage (from 1.0x)
+
+		*Overall should keep your damage output similar to before, but makes reading weapon cards easier,
+		 as you have one less wierd multiplier to worry about.
+
+
+	- Removed swap speed bonuses from UVHM
+	- Massively improved base swap speeds for all weapon types
+		*Swap-out time is now the same for every single weapon type, and while swap-in time still differs
+		 between weapon types, they are also quickened. No longer do you need to be in UVHM to have tolerable
+		 weapon swap times.
+
+
 =============== [ 1.2.6 ] ===============
 
 	- Improved the look of weapon card attributes
