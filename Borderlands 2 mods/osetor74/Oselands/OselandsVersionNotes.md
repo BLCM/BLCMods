@@ -14,6 +14,9 @@
 	- Removed white-rarity rocket launchers from the general world drop pool entirely
 	- Made white items no longer drop above level 12
 
+ 	- Fixed inconsistency with legendary relic world drop weights
+		- Now every single one is weighted equally
+
 
  	- Elemental Damage Changes
 
@@ -46,6 +49,46 @@
 
  	- Fixed Heavy Nomads sometimes not spawning with any weapons in Southpaw at very low levels in
 	  normal mode
+
+
+   		== Unique item changes ==
+
+	- Rapier
+		- Periodic melee damage bonus has been changed from +2.5 PostAdd to the melee modifier
+		  to instead increase the damage dealt by your next melee attack to have +50% increased
+		  damage
+
+			- Same modifier as what is used by Death Mark and Condition Overload, and
+			  the skill descriptions of those 2 skills have been slightly updated to
+			  hopefully make that clear
+			- Retains the 5 second cooldown
+
+			- This *is* an overall nerf to this effect, but it also makes it far easier to
+			  understand. This does now make regular melee bonuses more valuable again as it is
+			  a multiplier to them
+
+
+	- Daedalus
+		- Massively improved the accuracy
+			(Now you can actually use the gun)
+		- Improved material
+
+
+	- Pocket Salvo
+		- Increased explosion radius when impacting the environment by about 25%
+		  (this also makes it use a larger visual explosion, making the explosions
+		  look way stronger than previously)
+
+	- Thunder
+		- Significantly increased reload speed, and increased fire rate
+
+	- Rupture
+		- Increased how much the weapon's 2 bullets spread from each other each shot
+		 *looked wierd because both bullets were basically always going in the same direction
+
+
+	- Made 12 pounder not be able to drop with a tediore grip, to avoid it sometimes having 0 mag size
+
 
 =============== [ 1.2.6 ] ===============
 
