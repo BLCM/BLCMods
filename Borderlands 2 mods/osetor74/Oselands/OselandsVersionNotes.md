@@ -1,3 +1,95 @@
+=============== [ 1.2.7 ] ===============
+
+	- Fixed a bug where weapons that had higher than 2x critical damage added everything above 2x
+	  twice (i.e 2.3x weapon was actually being considered as 2.6x)
+
+	- Fixed slag damage double-dipping with global damage boosts
+
+	- Increased base enemy HP, reduced how fast it scales per level
+	- Increased base enemy damage, made enemy damage scaling far more consistent
+		- Early game is more difficult (and thus more exciting), but equalizes towards the later levels
+
+
+  	- Removed all minimum-level requirements from white-rarity items
+	- Removed white-rarity rocket launchers from the general world drop pool entirely
+	- Made white items no longer drop above level 12
+
+ 	- Fixed inconsistency with legendary relic world drop weights
+		- Now every single one is weighted equally
+
+
+ 	- Elemental Damage Changes
+
+		- Removed damage penalties from elemental parts on guns (was already absent on slag guns)
+
+		- Fire/Corrosive vs correct health type	-> 1.1x damage (from 1.2x)
+		- Fire/corrosive vs wrong health type 	-> 0.7x (from 0.6x)
+		- Shock vs shield 			-> 1.2x damage (unchanged)
+		- Shock vs wrong health type 		-> 0.9x damage (from 0.95x)
+		- Slag vs all health types		-> 0.95x damage (from 1.0x)
+
+		*Overall should keep your damage output similar to before, but makes reading weapon cards easier,
+		 as you have one less wierd multiplier to worry about.
+
+
+	- Removed swap speed bonuses from UVHM
+	- Massively improved base swap speeds for all weapon types
+		*Swap-out time is now the same for every single weapon type, and while swap-in time still differs
+		 between weapon types, they are also quickened. No longer do you need to be in UVHM to have tolerable
+		 weapon swap times.
+
+
+	- Spiker E-Tech pistols
+		- Reduced delay for the projectile to explode from 1.5 seconds to 0.25
+		- Tripled splash radius
+		- Further reduced fire rate and increased damage
+
+
+	- Made it possible to apply status effects to constructors, Saturn and Uranus
+
+ 	- Fixed Heavy Nomads sometimes not spawning with any weapons in Southpaw at very low levels in
+	  normal mode
+
+
+   		== Unique item changes ==
+
+	- Rapier
+		- Periodic melee damage bonus has been changed from +2.5 PostAdd to the melee modifier
+		  to instead increase the damage dealt by your next melee attack to have +50% increased
+		  damage
+
+			- Same modifier as what is used by Death Mark and Condition Overload, and
+			  the skill descriptions of those 2 skills have been slightly updated to
+			  hopefully make that clear
+			- Retains the 5 second cooldown
+
+			- This *is* an overall nerf to this effect, but it also makes it far easier to
+			  understand. This does now make regular melee bonuses more valuable again as it is
+			  a multiplier to them
+
+
+	- Daedalus
+		- Massively improved the accuracy
+			(Now you can actually use the gun)
+		- Improved material
+
+
+	- Pocket Salvo
+		- Increased explosion radius when impacting the environment by about 25%
+		  (this also makes it use a larger visual explosion, making the explosions
+		  look way stronger than previously)
+
+	- Thunder
+		- Significantly increased reload speed, and increased fire rate
+
+	- Rupture
+		- Increased how much the weapon's 2 bullets spread from each other each shot
+		 *looked wierd because both bullets were basically always going in the same direction
+
+
+	- Made 12 pounder not be able to drop with a tediore grip, to avoid it sometimes having 0 mag size
+
+
 =============== [ 1.2.6 ] ===============
 
 	- Improved the look of weapon card attributes
