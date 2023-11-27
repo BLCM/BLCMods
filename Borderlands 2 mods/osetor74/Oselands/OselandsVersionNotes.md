@@ -10,6 +10,11 @@
 		- Early game is more difficult (and thus more exciting), but equalizes towards the later levels
 
 
+  	- Removed all minimum-level requirements from white-rarity items
+	- Removed white-rarity rocket launchers from the general world drop pool entirely
+	- Made white items no longer drop above level 12
+
+
  	- Elemental Damage Changes
 
 		- Removed damage penalties from elemental parts on guns (was already absent on slag guns)
@@ -30,6 +35,17 @@
 		 between weapon types, they are also quickened. No longer do you need to be in UVHM to have tolerable
 		 weapon swap times.
 
+
+	- Spiker E-Tech pistols
+		- Reduced delay for the projectile to explode from 1.5 seconds to 0.25
+		- Tripled splash radius
+		- Further reduced fire rate and increased damage
+
+
+	- Made it possible to apply status effects to constructors, Saturn and Uranus
+
+ 	- Fixed Heavy Nomads sometimes not spawning with any weapons in Southpaw at very low levels in
+	  normal mode
 
 =============== [ 1.2.6 ] ===============
 
