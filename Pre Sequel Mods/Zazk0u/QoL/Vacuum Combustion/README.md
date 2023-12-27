@@ -9,7 +9,7 @@ If you need to use a
 * StatusEffectExpressionEvaluator 
 * OzBehavior_ForceSpreadStatusEffect
 * Behavior_StatusEffectSwitch
-* Functions with Python
+* Functions with Python using the status effect type as an argument
 
 For an incendiary effect in your mod, it will needs to use STATUS_EFFECT_Amp instead of STATUS_EFFECT_Ignite.
 
