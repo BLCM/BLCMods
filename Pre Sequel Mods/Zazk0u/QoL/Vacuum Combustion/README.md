@@ -5,11 +5,12 @@ This mod change the incendiary status type to slag from ignite to bypass the vac
 
 Burning status effects not applying in vacuum is hard coded in the game engine, it checks if it the dot use the Ignite status effect type somehow.
 
-If you need to use a:
+If you need to use a
 * StatusEffectExpressionEvaluator 
 * OzBehavior_ForceSpreadStatusEffect
 * Behavior_StatusEffectSwitch
-* Functions with Python 
+* Functions with Python
+
 For an incendiary effect in your mod, it will needs to use STATUS_EFFECT_Amp instead of STATUS_EFFECT_Ignite.
 
 Changelog
