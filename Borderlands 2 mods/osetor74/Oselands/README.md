@@ -1,5 +1,5 @@
 # [Oselands]
-*V. 1.2.7*
+*V. 1.2.7.1*
 
 **Oselands** is a re-balance/overhaul of Borderlands 2 with the single goal of making the experience from start to finish more fun through polishing the gameplay experience and trying to make as many good options as possible. Obviously fun is subjective, but I've tried to cover as many bases as possible.
 

@@ -1,3 +1,8 @@
+=============== [ 1.2.7.1 ] ===============
+
+	- Fixed a bug where Axton's Metal Storm would stop working after entering a vehicle
+
+
 =============== [ 1.2.7 ] ===============
 
 	- Fixed a bug where weapons that had higher than 2x critical damage added everything above 2x
