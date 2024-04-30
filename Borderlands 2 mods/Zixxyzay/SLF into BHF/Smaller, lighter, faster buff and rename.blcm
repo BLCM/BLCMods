@@ -9,27 +9,29 @@
 				<comment>By Zixxyzay</comment>
 				<comment>Changes Smaller, Lighter, Faster into Bigger, Heavier, Faster, increasing magazine slightly as well as reload, allowing weapons with a magazine of 1 to still properly function</comment>
 			</category>
-			<category name="Default">
-				<hotfix name="NotSoSmallerLighterFasterSmallerLighterFasterNoMagazinePenalty" package="GD_Tulip_Mechro_Streaming">
-					<code profiles="">set GD_Tulip_Mechromancer_Skills.EmbraceChaos.SmallerLighterFaster SkillDescription Increases your [skill]Reload Speed[-skill] and [skill]Clip size.[-skill]</code>
-				</hotfix>
-				<hotfix name="UCPGaige" package="GD_Tulip_Mechro_Streaming">
-					<code profiles="">set GD_Tulip_Mechromancer_Skills.EmbraceChaos.SmallerLighterFaster SkillEffectDefinitions ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponReloadSpeed',bIncludeDuelingTargets=False,bIncludeSelfAsTarget=False,bOnlyEffectTargetsInRange=False,bExcludeNonPlayerCharacters=False,EffectTarget=TARGET_Self,TargetInstanceDataName=,TargetCriteria=CRITERIA_None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-0.060000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),GradeToStartApplyingEffect=1,PerGradeUpgradeInterval=1,PerGradeUpgrade=(BaseValueConstant=-0.060000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),BonusUpgradeList=),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',bIncludeDuelingTargets=False,bIncludeSelfAsTarget=False,bOnlyEffectTargetsInRange=False,bExcludeNonPlayerCharacters=False,EffectTarget=TARGET_Self,TargetInstanceDataName=,TargetCriteria=CRITERIA_None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=+0.010000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),GradeToStartApplyingEffect=1,PerGradeUpgradeInterval=1,PerGradeUpgrade=(BaseValueConstant=+0.010000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),BonusUpgradeList=))</code>
-				</hotfix>
-				<hotfix name="ucpzero" package="GD_Tulip_Mechro_Streaming">
-					<code profiles="">set GD_Tulip_Mechromancer_Skills.EmbraceChaos.SmallerLighterFaster SkillName Bigger, Heavier, Faster</code>
-				</hotfix>
-			</category>
-			<category name="Buff/UCP">
-				<hotfix name="NotSoSmallerLighterFasterSmallerLighterFasterNoMagazinePenalty" package="GD_Tulip_Mechro_Streaming">
-					<code profiles="default">set GD_Tulip_Mechromancer_Skills.EmbraceChaos.SmallerLighterFaster SkillDescription Increases your [skill]Reload Speed[-skill] and [skill]Clip size.[-skill]</code>
-				</hotfix>
-				<hotfix name="UCPGaige" package="GD_Tulip_Mechro_Streaming">
-					<code profiles="default">set GD_Tulip_Mechromancer_Skills.EmbraceChaos.SmallerLighterFaster SkillEffectDefinitions ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponReloadSpeed',bIncludeDuelingTargets=False,bIncludeSelfAsTarget=False,bOnlyEffectTargetsInRange=False,bExcludeNonPlayerCharacters=False,EffectTarget=TARGET_Self,TargetInstanceDataName=,TargetCriteria=CRITERIA_None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-0.080000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),GradeToStartApplyingEffect=1,PerGradeUpgradeInterval=1,PerGradeUpgrade=(BaseValueConstant=-0.080000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),BonusUpgradeList=),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',bIncludeDuelingTargets=False,bIncludeSelfAsTarget=False,bOnlyEffectTargetsInRange=False,bExcludeNonPlayerCharacters=False,EffectTarget=TARGET_Self,TargetInstanceDataName=,TargetCriteria=CRITERIA_None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=+0.010000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),GradeToStartApplyingEffect=1,PerGradeUpgradeInterval=1,PerGradeUpgrade=(BaseValueConstant=+0.010000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),BonusUpgradeList=))</code>
-				</hotfix>
-				<hotfix name="ucpzero" package="GD_Tulip_Mechro_Streaming">
-					<code profiles="default">set GD_Tulip_Mechromancer_Skills.EmbraceChaos.SmallerLighterFaster SkillName Bigger, Heavier, Faster</code>
-				</hotfix>
+			<category name="Buff or Default" MUT="true">
+				<category name="Default">
+					<hotfix name="NotSoSmallerLighterFasterSmallerLighterFasterNoMagazinePenalty" package="GD_Tulip_Mechro_Streaming">
+						<code profiles="">set GD_Tulip_Mechromancer_Skills.EmbraceChaos.SmallerLighterFaster SkillDescription Increases your [skill]Reload Speed[-skill] and [skill]Clip size.[-skill]</code>
+					</hotfix>
+					<hotfix name="UCPGaige" package="GD_Tulip_Mechro_Streaming">
+						<code profiles="">set GD_Tulip_Mechromancer_Skills.EmbraceChaos.SmallerLighterFaster SkillEffectDefinitions ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponReloadSpeed',bIncludeDuelingTargets=False,bIncludeSelfAsTarget=False,bOnlyEffectTargetsInRange=False,bExcludeNonPlayerCharacters=False,EffectTarget=TARGET_Self,TargetInstanceDataName=,TargetCriteria=CRITERIA_None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-0.060000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),GradeToStartApplyingEffect=1,PerGradeUpgradeInterval=1,PerGradeUpgrade=(BaseValueConstant=-0.060000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),BonusUpgradeList=),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',bIncludeDuelingTargets=False,bIncludeSelfAsTarget=False,bOnlyEffectTargetsInRange=False,bExcludeNonPlayerCharacters=False,EffectTarget=TARGET_Self,TargetInstanceDataName=,TargetCriteria=CRITERIA_None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=+0.010000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),GradeToStartApplyingEffect=1,PerGradeUpgradeInterval=1,PerGradeUpgrade=(BaseValueConstant=+0.010000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),BonusUpgradeList=))</code>
+					</hotfix>
+					<hotfix name="ucpzero" package="GD_Tulip_Mechro_Streaming">
+						<code profiles="">set GD_Tulip_Mechromancer_Skills.EmbraceChaos.SmallerLighterFaster SkillName Bigger, Heavier, Faster</code>
+					</hotfix>
+				</category>
+				<category name="Buff/UCP">
+					<hotfix name="NotSoSmallerLighterFasterSmallerLighterFasterNoMagazinePenalty" package="GD_Tulip_Mechro_Streaming">
+						<code profiles="default">set GD_Tulip_Mechromancer_Skills.EmbraceChaos.SmallerLighterFaster SkillDescription Increases your [skill]Reload Speed[-skill] and [skill]Clip size.[-skill]</code>
+					</hotfix>
+					<hotfix name="UCPGaige" package="GD_Tulip_Mechro_Streaming">
+						<code profiles="default">set GD_Tulip_Mechromancer_Skills.EmbraceChaos.SmallerLighterFaster SkillEffectDefinitions ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponReloadSpeed',bIncludeDuelingTargets=False,bIncludeSelfAsTarget=False,bOnlyEffectTargetsInRange=False,bExcludeNonPlayerCharacters=False,EffectTarget=TARGET_Self,TargetInstanceDataName=,TargetCriteria=CRITERIA_None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-0.080000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),GradeToStartApplyingEffect=1,PerGradeUpgradeInterval=1,PerGradeUpgrade=(BaseValueConstant=-0.080000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),BonusUpgradeList=),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',bIncludeDuelingTargets=False,bIncludeSelfAsTarget=False,bOnlyEffectTargetsInRange=False,bExcludeNonPlayerCharacters=False,EffectTarget=TARGET_Self,TargetInstanceDataName=,TargetCriteria=CRITERIA_None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=+0.010000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),GradeToStartApplyingEffect=1,PerGradeUpgradeInterval=1,PerGradeUpgrade=(BaseValueConstant=+0.010000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),BonusUpgradeList=))</code>
+					</hotfix>
+					<hotfix name="ucpzero" package="GD_Tulip_Mechro_Streaming">
+						<code profiles="default">set GD_Tulip_Mechromancer_Skills.EmbraceChaos.SmallerLighterFaster SkillName Bigger, Heavier, Faster</code>
+					</hotfix>
+				</category>
 			</category>
 		</category>
 	</body>
