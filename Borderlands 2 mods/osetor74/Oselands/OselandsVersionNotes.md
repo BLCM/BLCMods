@@ -2,9 +2,9 @@
 =============== [ 1.2.8 ] ===============
 
 	- Previous Badass Rank difficulty toggle replaced with *Delirium*:
- 		- Killing an enemy with Delirium enabled grants a stack, giving other enemies increased
-   		  global damage, damage reduction, fire rate and movement speed, but improving quality of the items
-       		  they drop.
+		- Killing an enemy with Delirium enabled grants a stack, giving other enemies increased
+		  global damage, damage reduction, fire rate and movement speed, but improving quality of the items
+		  they drop.
 
 
 =============== [ 1.2.7.1 ] ===============
