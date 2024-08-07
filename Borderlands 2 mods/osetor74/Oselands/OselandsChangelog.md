@@ -1,6 +1,6 @@
 # ============= [ Oselands ] =============
 
-Version 1.2.6 changelog
+Version 1.2.8 changelog
 
 
  >**This is an extensive changelog with (most) changes within the mod.**
@@ -22,6 +22,7 @@ Use CTRL+F to find a section easier.
 	> Player scaling changes
 	> Slower enemy bullets
 	> Vendor changes
+ 	> Delirium
 	> Miscellaneous
 	> Player Skill Point Limiter
 
@@ -184,6 +185,15 @@ Use CTRL+F to find a section easier.
 
 		- Purple items in vending machines have a 20% chance to be replaced by a blue/purple unique of the same weapon type
 
+
+	> Delirium
+
+		- Regular Badass Rank behavior has been removed. You are still able to redeem points as per usual, and they will have the
+  		  correct effect outside of Oselands. However, while playing this mod, those stats will have no effect.
+
+      		- Badass Rank has been replaced with Delirium:
+			- Killing an enemy while Delirium is active grants a stacking bonus that increases other enemies' damage,
+   			  damage reduction, fire rate and movement speed, but improves the quality of the items they drop
 
 
 	> Miscellaneous
