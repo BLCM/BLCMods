@@ -23,3 +23,5 @@ Additionally now sprinting is multiplicative with other speed boosts.
 Provides options for changing sprint speed, FOV, removing the accuracy penalty.  
 Additionally you can improve the accelrate and change base walk speed.  
 All settings are defaulted to vanilla values, my reccomendation is 25% FOV, 30% sprint speed, increased accelrate and 550 movespeed.  
+
+This mod requires [Command Extensions](https://bl-sdk.github.io/mods/CommandExtensions/)
