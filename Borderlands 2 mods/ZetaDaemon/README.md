@@ -13,3 +13,13 @@ Also includes an option for the base game class mod fixes to include the UCP edi
 
 The rationale behind the grog change is that the character is the one that gets drunk not the gun itself, as you can hear and see the character being drunk, so now the bonuses will actually apply to both hands of salvador, but if you don't like the change it can be toggled off in BLCMM.
 ### Thanks to temmmmy for the info on the various things that needed fixing.
+
+
+Auto Sprint
+===============
+
+Makes it so you automatically sprint while walking and not shooting.  
+Additionally now sprinting is multiplicative with other speed boosts.  
+Provides options for changing sprint speed, FOV, removing the accuracy penalty.  
+Additionally you can improve the accelrate and change base walk speed.  
+All settings are defaulted to vanilla values, my reccomendation is 25% FOV, 30% sprint speed, increased accelrate and 550 movespeed.  

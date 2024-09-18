@@ -1,0 +1,143 @@
+<BLCMM v="1">
+#<!!!You opened a file saved with BLCMM in FilterTool. Please update to BLCMM to properly open this file!!!>
+	<head>
+		<type name="BL2" offline="true"/>
+		<profiles>
+			<profile name="default" current="true"/>
+		</profiles>
+	</head>
+	<body>
+		<category name="Auto Sprint">
+			<comment># Licensed under Attribution 4.0 International (CC BY 4.0)</comment>
+			<comment># Makes it so you automatically sprint while walking and not shooting.</comment>
+			<comment># Additionally now sprinting is multiplicative with other speed boosts.</comment>
+			<comment># Provides options for changing sprint speed, FOV, removing the accuracy penalty.</comment>
+			<comment># Additionally you can improve the accelrate and change base walk speed.</comment>
+			<comment># All settings are defaulted to vanilla values, my reccomendation is 25% FOV, 30% sprint speed, increased accelrate and 550 movespeed.</comment>
+			<category name="Create Objects">
+				<comment>load_package GD_Assassin_Streaming_SF</comment>
+				<comment>load_package GD_Mercenary_Streaming_SF</comment>
+				<comment>load_package GD_Lilac_Psycho_Streaming_SF</comment>
+				<comment>clone -x Engine.Default__AttributeDefinition D_Attributes.Movement.RawJoyUp</comment>
+				<comment>clone -x WillowGame.Default__PlayerControllerAttributeContextResolver D_Attributes.Movement.RawJoyUp:PlayerControllerAttributeContextResolver</comment>
+				<comment>clone -x GearboxFramework.Default__ObjectPropertyContextResolver D_Attributes.Movement.RawJoyUp:ObjectPropertyContextResolver</comment>
+				<comment>clone -x Engine.Default__ReadOnlyObjectPropertyAttributeValueResolver D_Attributes.Movement.RawJoyUp:ReadOnlyObjectPropertyAttributeValueResolver</comment>
+				<code profiles="default">set D_Attributes.Movement.RawJoyUp bIsSimpleAttribute True</code>
+				<code profiles="default">set D_Attributes.Movement.RawJoyUp ContextResolverChain (D_Attributes.Movement.RawJoyUp:PlayerControllerAttributeContextResolver,D_Attributes.Movement.RawJoyUp:ObjectPropertyContextResolver)</code>
+				<code profiles="default">set D_Attributes.Movement.RawJoyUp ValueResolverChain (D_Attributes.Movement.RawJoyUp:ReadOnlyObjectPropertyAttributeValueResolver)</code>
+				<code profiles="default">set D_Attributes.Movement.RawJoyUp:ObjectPropertyContextResolver PropertyName PlayerInput</code>
+				<code profiles="default">set D_Attributes.Movement.RawJoyUp:ReadOnlyObjectPropertyAttributeValueResolver PropertyName RawJoyUp</code>
+				<comment>clone -x Engine.Default__AttributeInitializationDefinition GD_PlayerShared.Sprint.SprintCondition</comment>
+				<code profiles="default">set GD_PlayerShared.Sprint.SprintCondition BaseValueMode BASEVALUE_InitializationDefScalesBaseValue</code>
+				<code profiles="default">set GD_PlayerShared.Sprint.SprintCondition ConditionalInitialization (bEnabled=True,ConditionalExpressionList=((BaseValueIfTrue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),Expressions=((AttributeOperand1=AttributeDefinition'D_Attributes.Movement.PawnSpeed',ComparisonOperator=OPERATOR_GreaterThan,Operand2Usage=OPERAND_Multiply,AttributeOperand2=AttributeDefinition'D_Attributes.GameplayAttributes.FootSpeed',ConstantOperand2=0.700000),(AttributeOperand1=AttributeDefinition'D_Attributes.Movement.OnGround',ComparisonOperator=OPERATOR_EqualTo,Operand2Usage=OPERAND_PreferAttribute,AttributeOperand2=None,ConstantOperand2=1.000000),(AttributeOperand1=AttributeDefinition'D_Attributes.Weapon.WeaponTotalAutomaticFiringTime',ComparisonOperator=OPERATOR_EqualTo,Operand2Usage=OPERAND_PreferAttribute,AttributeOperand2=None,ConstantOperand2=0.000000),(AttributeOperand1=D_Attributes.Movement.RawJoyUp,ComparisonOperator=OPERATOR_GreaterThan,Operand2Usage=OPERAND_PreferAttribute,AttributeOperand2=None,ConstantOperand2=0.000000)))),DefaultBaseValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))</code>
+				<comment>clone -x Engine.Default__AttributeDefinition GD_PlayerShared.Sprint.SprintFOV</comment>
+				<comment>clone -x GearboxFramework.Default__NoContextNeededAttributeContextResolver GD_PlayerShared.Sprint.SprintFOV:NoContextNeededAttributeContextResolver</comment>
+				<comment>clone -x GearboxFramework.Default__ConstantAttributeValueResolver GD_PlayerShared.Sprint.SprintFOV:ConstantAttributeValueResolver</comment>
+				<code profiles="default">set GD_PlayerShared.Sprint.SprintFOV ContextResolverChain (GD_PlayerShared.Sprint.SprintFOV:NoContextNeededAttributeContextResolver)</code>
+				<code profiles="default">set GD_PlayerShared.Sprint.SprintFOV ValueResolverChain (GD_PlayerShared.Sprint.SprintFOV:ConstantAttributeValueResolver)</code>
+				<comment>clone -x WillowGame.Default__SkillDefinition GD_PlayerShared.Player_SprintSkill</comment>
+				<code profiles="default">set GD_PlayerShared.Player_SprintSkill SkillEffectUpdateIterval 0.05</code>
+				<comment>pyb skill = unrealsdk.FindObject("SkillDefinition", "GD_PlayerShared.Player_SprintSkill")</comment>
+				<comment>pyb def activate_skill(this, function, params) -> bool:</comment>
+				<comment>pyb 	PC = unrealsdk.GetEngine().GamePlayers[0].Actor</comment>
+				<comment>pyb 	SM = PC.GetSkillManager()</comment>
+				<comment>pyb 	SM.ActivateSkill(PC, skill)</comment>
+				<comment>pyb 	return True</comment>
+				<comment>pyb unrealsdk.RegisterHook("Engine.GameInfo.PostCommitMapChange", "AutoSprint_TriggerSkill", activate_skill)</comment>
+				<comment>pyb -x</comment>
+			</category>
+			<category name="Disable Sprint Button" locked="true">
+				<code profiles="default">set GD_Input.Actions.InputAction_Sprint OnBegin ()</code>
+				<code profiles="default">set GD_Input.Actions.InputAction_Sprint OnEnd ()</code>
+			</category>
+			<category name="Remove Sprint Effects" locked="true">
+				<code profiles="default">set SprintDefinition'GD_PlayerShared.Sprint.SprintDefinition_Default' AttributeEffects ()</code>
+				<code profiles="default">set SprintDefinition'GD_PlayerShared.Sprint.SprintDefinition_Default' FOVModifier 0</code>
+				<code profiles="default">set SprintDefinition'GD_PlayerShared.Sprint.SprintDefinition_Default' EyeHeightModifier 0</code>
+				<code profiles="default">set SprintDefinition'GD_PlayerShared.Sprint.SprintDefinition_Default' BobScalar 0</code>
+			</category>
+			<category name="Sprint Speed" MUT="true" locked="true">
+				<category name="25%">
+					<code profiles="">set PlayerClassDefinition SprintingPct 1.25</code>
+				</category>
+				<category name="30%">
+					<code profiles="">set PlayerClassDefinition SprintingPct 1.3</code>
+				</category>
+				<category name="35% (Vanilla)">
+					<code profiles="default">set PlayerClassDefinition SprintingPct 1.35</code>
+				</category>
+				<category name="40%">
+					<code profiles="">set PlayerClassDefinition SprintingPct 1.4</code>
+				</category>
+				<category name="45%">
+					<code profiles="">set PlayerClassDefinition SprintingPct 1.45</code>
+				</category>
+			</category>
+			<category name="Sprint Accuraccy Penalty" MUT="true">
+				<category name="Vanilla">
+					<code profiles="default">set GD_PlayerShared.Player_SprintSkill SkillEffectDefinitions ((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AccuracyResourcePool.AccuracyMinValue',bIncludeDuelingTargets=False,bIncludeSelfAsTarget=False,bOnlyEffectTargetsInRange=False,bExcludeNonPlayerCharacters=False,EffectTarget=TARGET_Self,TargetInstanceDataName=,TargetCriteria=CRITERIA_None,ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=GD_PlayerShared.Sprint.SprintCondition,BaseValueScaleConstant=15.000000),GradeToStartApplyingEffect=1,PerGradeUpgradeInterval=1,PerGradeUpgrade=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),BonusUpgradeList=),(AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AccuracyResourcePool.AccuracyMaxValue',bIncludeDuelingTargets=False,bIncludeSelfAsTarget=False,bOnlyEffectTargetsInRange=False,bExcludeNonPlayerCharacters=False,EffectTarget=TARGET_Self,TargetInstanceDataName=,TargetCriteria=CRITERIA_None,ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=GD_PlayerShared.Sprint.SprintCondition,BaseValueScaleConstant=15.000000),GradeToStartApplyingEffect=1,PerGradeUpgradeInterval=1,PerGradeUpgrade=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),BonusUpgradeList=),(AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AccuracyResourcePool.AccuracyOnIdleRegenerationRate',bIncludeDuelingTargets=False,bIncludeSelfAsTarget=False,bOnlyEffectTargetsInRange=False,bExcludeNonPlayerCharacters=False,EffectTarget=TARGET_Self,TargetInstanceDataName=,TargetCriteria=CRITERIA_None,ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=GD_PlayerShared.Sprint.SprintCondition,BaseValueScaleConstant=3.000000),GradeToStartApplyingEffect=1,PerGradeUpgradeInterval=1,PerGradeUpgrade=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),BonusUpgradeList=),(AttributeToModify=AttributeDefinition'D_Attributes.GameplayAttributes.Sprinting',bIncludeDuelingTargets=False,bIncludeSelfAsTarget=False,bOnlyEffectTargetsInRange=False,bExcludeNonPlayerCharacters=False,EffectTarget=TARGET_Self,TargetInstanceDataName=,TargetCriteria=CRITERIA_None,ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=GD_PlayerShared.Sprint.SprintCondition,BaseValueScaleConstant=1.000000),GradeToStartApplyingEffect=1,PerGradeUpgradeInterval=1,PerGradeUpgrade=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),BonusUpgradeList=),(AttributeToModify=AttributeDefinition'D_Attributes.GameplayAttributes.FOV',bIncludeDuelingTargets=False,bIncludeSelfAsTarget=False,bOnlyEffectTargetsInRange=False,bExcludeNonPlayerCharacters=False,EffectTarget=TARGET_Self,TargetInstanceDataName=,TargetCriteria=CRITERIA_None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=GD_PlayerShared.Sprint.SprintFOV,InitializationDefinition=GD_PlayerShared.Sprint.SprintCondition,BaseValueScaleConstant=1.000000),GradeToStartApplyingEffect=1,PerGradeUpgradeInterval=1,PerGradeUpgrade=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),BonusUpgradeList=))</code>
+				</category>
+				<category name="No Accuracy Penalty">
+					<code profiles="">set GD_PlayerShared.Player_SprintSkill SkillEffectDefinitions ((AttributeToModify=AttributeDefinition'D_Attributes.GameplayAttributes.Sprinting',bIncludeDuelingTargets=False,bIncludeSelfAsTarget=False,bOnlyEffectTargetsInRange=False,bExcludeNonPlayerCharacters=False,EffectTarget=TARGET_Self,TargetInstanceDataName=,TargetCriteria=CRITERIA_None,ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=GD_PlayerShared.Sprint.SprintCondition,BaseValueScaleConstant=1.000000),GradeToStartApplyingEffect=1,PerGradeUpgradeInterval=1,PerGradeUpgrade=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),BonusUpgradeList=),(AttributeToModify=AttributeDefinition'D_Attributes.GameplayAttributes.FOV',bIncludeDuelingTargets=False,bIncludeSelfAsTarget=False,bOnlyEffectTargetsInRange=False,bExcludeNonPlayerCharacters=False,EffectTarget=TARGET_Self,TargetInstanceDataName=,TargetCriteria=CRITERIA_None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=GD_PlayerShared.Sprint.SprintFOV,InitializationDefinition=GD_PlayerShared.Sprint.SprintCondition,BaseValueScaleConstant=1.000000),GradeToStartApplyingEffect=1,PerGradeUpgradeInterval=1,PerGradeUpgrade=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),BonusUpgradeList=))</code>
+				</category>
+			</category>
+			<category name="Sprint FOV" MUT="true">
+				<category name="25%">
+					<code profiles="">set GD_PlayerShared.Sprint.SprintFOV:ConstantAttributeValueResolver ConstantValue 0.25</code>
+				</category>
+				<category name="35% (Vanilla)">
+					<code profiles="default">set GD_PlayerShared.Sprint.SprintFOV:ConstantAttributeValueResolver ConstantValue 0.35</code>
+				</category>
+				<category name="45%">
+					<code profiles="">set GD_PlayerShared.Sprint.SprintFOV:ConstantAttributeValueResolver ConstantValue 0.45</code>
+				</category>
+			</category>
+			<category name="Player Speed">
+				<category name="Boost Accel Rate">
+					<code profiles="">set WillowPlayerPawn AccelRate 7000.000000</code>
+					<code profiles="">set WillowPlayerPawn AccelRateBaseValue 7000.000000</code>
+				</category>
+				<category name="Walk Speed Options" MUT="true">
+					<category name="440 (Vanilla)">
+						<code profiles="">set WillowPlayerPawn GroundSpeed 440</code>
+						<code profiles="">set PlayerClassDefinition GroundSpeed 440</code>
+					</category>
+					<category name="500">
+						<code profiles="">set WillowPlayerPawn GroundSpeed 500</code>
+						<code profiles="">set PlayerClassDefinition GroundSpeed 500</code>
+					</category>
+					<category name="550">
+						<code profiles="">set WillowPlayerPawn GroundSpeed 550</code>
+						<code profiles="">set PlayerClassDefinition GroundSpeed 550</code>
+					</category>
+					<category name="600">
+						<code profiles="">set WillowPlayerPawn GroundSpeed 600</code>
+						<code profiles="">set PlayerClassDefinition GroundSpeed 600</code>
+					</category>
+				</category>
+			</category>
+		</category>
+	</body>
+</BLCMM>
+
+#Commands:
+set D_Attributes.Movement.RawJoyUp bIsSimpleAttribute True
+set D_Attributes.Movement.RawJoyUp ContextResolverChain (D_Attributes.Movement.RawJoyUp:PlayerControllerAttributeContextResolver,D_Attributes.Movement.RawJoyUp:ObjectPropertyContextResolver)
+set D_Attributes.Movement.RawJoyUp ValueResolverChain (D_Attributes.Movement.RawJoyUp:ReadOnlyObjectPropertyAttributeValueResolver)
+set D_Attributes.Movement.RawJoyUp:ObjectPropertyContextResolver PropertyName PlayerInput
+set D_Attributes.Movement.RawJoyUp:ReadOnlyObjectPropertyAttributeValueResolver PropertyName RawJoyUp
+set GD_PlayerShared.Sprint.SprintCondition BaseValueMode BASEVALUE_InitializationDefScalesBaseValue
+set GD_PlayerShared.Sprint.SprintCondition ConditionalInitialization (bEnabled=True,ConditionalExpressionList=((BaseValueIfTrue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),Expressions=((AttributeOperand1=AttributeDefinition'D_Attributes.Movement.PawnSpeed',ComparisonOperator=OPERATOR_GreaterThan,Operand2Usage=OPERAND_Multiply,AttributeOperand2=AttributeDefinition'D_Attributes.GameplayAttributes.FootSpeed',ConstantOperand2=0.700000),(AttributeOperand1=AttributeDefinition'D_Attributes.Movement.OnGround',ComparisonOperator=OPERATOR_EqualTo,Operand2Usage=OPERAND_PreferAttribute,AttributeOperand2=None,ConstantOperand2=1.000000),(AttributeOperand1=AttributeDefinition'D_Attributes.Weapon.WeaponTotalAutomaticFiringTime',ComparisonOperator=OPERATOR_EqualTo,Operand2Usage=OPERAND_PreferAttribute,AttributeOperand2=None,ConstantOperand2=0.000000),(AttributeOperand1=D_Attributes.Movement.RawJoyUp,ComparisonOperator=OPERATOR_GreaterThan,Operand2Usage=OPERAND_PreferAttribute,AttributeOperand2=None,ConstantOperand2=0.000000)))),DefaultBaseValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))
+set GD_PlayerShared.Sprint.SprintFOV ContextResolverChain (GD_PlayerShared.Sprint.SprintFOV:NoContextNeededAttributeContextResolver)
+set GD_PlayerShared.Sprint.SprintFOV ValueResolverChain (GD_PlayerShared.Sprint.SprintFOV:ConstantAttributeValueResolver)
+set GD_PlayerShared.Player_SprintSkill SkillEffectUpdateIterval 0.05
+set GD_Input.Actions.InputAction_Sprint OnBegin ()
+set GD_Input.Actions.InputAction_Sprint OnEnd ()
+set SprintDefinition'GD_PlayerShared.Sprint.SprintDefinition_Default' AttributeEffects ()
+set SprintDefinition'GD_PlayerShared.Sprint.SprintDefinition_Default' FOVModifier 0
+set SprintDefinition'GD_PlayerShared.Sprint.SprintDefinition_Default' EyeHeightModifier 0
+set SprintDefinition'GD_PlayerShared.Sprint.SprintDefinition_Default' BobScalar 0
+set PlayerClassDefinition SprintingPct 1.35
+set GD_PlayerShared.Player_SprintSkill SkillEffectDefinitions ((AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AccuracyResourcePool.AccuracyMinValue',bIncludeDuelingTargets=False,bIncludeSelfAsTarget=False,bOnlyEffectTargetsInRange=False,bExcludeNonPlayerCharacters=False,EffectTarget=TARGET_Self,TargetInstanceDataName=,TargetCriteria=CRITERIA_None,ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=GD_PlayerShared.Sprint.SprintCondition,BaseValueScaleConstant=15.000000),GradeToStartApplyingEffect=1,PerGradeUpgradeInterval=1,PerGradeUpgrade=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),BonusUpgradeList=),(AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AccuracyResourcePool.AccuracyMaxValue',bIncludeDuelingTargets=False,bIncludeSelfAsTarget=False,bOnlyEffectTargetsInRange=False,bExcludeNonPlayerCharacters=False,EffectTarget=TARGET_Self,TargetInstanceDataName=,TargetCriteria=CRITERIA_None,ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=GD_PlayerShared.Sprint.SprintCondition,BaseValueScaleConstant=15.000000),GradeToStartApplyingEffect=1,PerGradeUpgradeInterval=1,PerGradeUpgrade=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),BonusUpgradeList=),(AttributeToModify=ResourcePoolAttributeDefinition'D_Attributes.AccuracyResourcePool.AccuracyOnIdleRegenerationRate',bIncludeDuelingTargets=False,bIncludeSelfAsTarget=False,bOnlyEffectTargetsInRange=False,bExcludeNonPlayerCharacters=False,EffectTarget=TARGET_Self,TargetInstanceDataName=,TargetCriteria=CRITERIA_None,ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=GD_PlayerShared.Sprint.SprintCondition,BaseValueScaleConstant=3.000000),GradeToStartApplyingEffect=1,PerGradeUpgradeInterval=1,PerGradeUpgrade=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),BonusUpgradeList=),(AttributeToModify=AttributeDefinition'D_Attributes.GameplayAttributes.Sprinting',bIncludeDuelingTargets=False,bIncludeSelfAsTarget=False,bOnlyEffectTargetsInRange=False,bExcludeNonPlayerCharacters=False,EffectTarget=TARGET_Self,TargetInstanceDataName=,TargetCriteria=CRITERIA_None,ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=GD_PlayerShared.Sprint.SprintCondition,BaseValueScaleConstant=1.000000),GradeToStartApplyingEffect=1,PerGradeUpgradeInterval=1,PerGradeUpgrade=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),BonusUpgradeList=),(AttributeToModify=AttributeDefinition'D_Attributes.GameplayAttributes.FOV',bIncludeDuelingTargets=False,bIncludeSelfAsTarget=False,bOnlyEffectTargetsInRange=False,bExcludeNonPlayerCharacters=False,EffectTarget=TARGET_Self,TargetInstanceDataName=,TargetCriteria=CRITERIA_None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=GD_PlayerShared.Sprint.SprintFOV,InitializationDefinition=GD_PlayerShared.Sprint.SprintCondition,BaseValueScaleConstant=1.000000),GradeToStartApplyingEffect=1,PerGradeUpgradeInterval=1,PerGradeUpgrade=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),BonusUpgradeList=))
+set GD_PlayerShared.Sprint.SprintFOV:ConstantAttributeValueResolver ConstantValue 0.35
+
