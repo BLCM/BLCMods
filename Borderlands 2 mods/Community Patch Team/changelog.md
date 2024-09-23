@@ -1,16 +1,16 @@
 <!-- omit in toc -->
 # Full Borderlands 2 Unofficial Community Patch Changelog
 
+* [Weapons](#weapons)
+  * [Assault Rifles](#assault-rifles)
+  * [Snipers](#snipers)
+  * [Launchers](#launchers)
+  * [Shotguns](#shotguns)
+  * [Pistols](#pistols)
+  * [SMGs](#smgs)
 * [Items](#items)
-  * [Weapons](#weapons)
-    * [Assault Rifles](#assault-rifles)
-    * [Snipers](#snipers)
-    * [Launchers](#launchers)
-    * [Shotguns](#shotguns)
-    * [Pistols](#pistols)
-    * [SMGs](#smgs)
-    * [Shields](#shields)
   * [Grenades](#grenades)
+  * [Shields](#shields)
   * [Relics](#relics)
   * [Class Mods | COMs](#class-mods--coms)
     * [Axton COMs](#axton-coms)
@@ -31,27 +31,24 @@
   * [Spawns](#spawns)
   * [Loot and Drop Changes](#loot-and-drop-changes)
 * [Character Skills](#character-skills)
-  * [Axton](#axton)
-  * [Maya](#maya)
-  * [Salvador](#salvador)
-  * [Zer0](#zer0)
-  * [Gaige](#gaige)
-  * [Krieg](#krieg)
+  * [Axton Skills](#axton-skills)
+  * [Maya Skills](#maya-skills)
+  * [Salvador Skills](#salvador-skills)
+  * [Zer0 Skills](#zer0-skills)
+  * [Gaige Skills](#gaige-skills)
+  * [Krieg Skills](#krieg-skills)
 * [Optional](#optional)
   * [Nerfs](#nerfs)
   * [Other Optionals](#other-optionals)
 
-# Items
+# Weapons
 
 * Status Effect Chance not being added directly on top means its multiplied (Increase of 50% for 20% Status Effect Chance means 30% Status Effect Chance, not 70%.)
-
-## Weapons
-
 * Made Gemstone Weapons have their own Rarity, with the benefits of being one Rarity higher (increased Damage, Accuracy and Magazine Size).
 * Actual weapon and item buffs (Morningstar, Orc, Grog Nozzle, Ogre, Evil Smasher and Krieg's Wound COM) now have their buffs tracked in the buff bar.
 * Buffed Hyperion matching Grip bonus.
 
-### Assault Rifles
+## Assault Rifles
 
 * Removed the -20% Critical Hit Damage penalty on Assault Rifles.
 * Majorly buffed Bandit Assault Rifle's weapon type (increased Reload Speed, Fire Rate and Damage for less Magazine Size).
@@ -71,7 +68,7 @@
 * Buffed the Scorpio's Damage by 30% and Fire Rate by 50%, as well as its Burst while zoomed.
 * Fixed the Peak Opener using sounds and animations of a Vladof Assault Rifle.
 
-### Snipers
+## Snipers
 
 * Heavily buffed the Damage of Bolt Action Jakobs Sniper Rifles (blue rarity).
 * Lowered the ammo cost of E-Tech Sniper Rifles.
@@ -93,7 +90,7 @@
 * Buffed the Buffalo's Damage by 40%, it's Fire Rate by 40% and gave it 50% Critical Hit Damage.
 * Applied the Bolt-Action body buffs to the Hot Mama's gun body and buffed it similarly to other Effervescent gear.
 
-### Launchers
+## Launchers
 
 * Made Tediore Stocks on Rocket Launchers increase Reload Speed.
 * Made Bandit Sights on Rocket Launchers increase Magazine Size.
@@ -108,7 +105,7 @@
 * Buffed the Mongol's Damage by 10% and increased its Fire Rate.
 * Buffed the Pyrophobia's Status Effect Chance by 90% (not directly added on top), increased Status Effect Damage, increased the Nova's radius by 50% and their Damage by 25% and made them spawn more frequently.
 
-### Shotguns
+## Shotguns
 
 * Introduced the Flayer from Borderlands: The Pre-Sequel as an optional replacement for the Tidal Wave (can be enabled with BLCMM).
 * Removed the Critical Hit Damage Prefix from E-Tech shotguns and the Carnage because they can't Crit (existing E-Tech shotguns and Carnages' with Critical Hit Damage Prefix aren't affected by this).
@@ -134,7 +131,7 @@
 * Buffed the Unicornsplosion similarly to the SWORDSPLOSION!!! but slightly improved.
 * Made non-Rustler's Orphan Makers have three pellets instead of two.
 
-### Pistols
+## Pistols
 
 * Majorly buffed Bandit Pistol's weapon type. (Same as the Bandit Assault Rifle buff)
 * Indirectly buffed the Gub as part of the Bandit Pistol buff.
@@ -163,7 +160,7 @@
 * Buffed the Shotgun Fibber's Projectile Speed.
 * Buffed the Crit Fibber's Projectile Speed and halved its arc.
 
-### SMGs
+## SMGs
 
 * Introduced the Torrent from Borderlands: The Pre-Sequel as an optional replacement for the Emperor (can be enabled with BLCMM).
 * Fixed the Orc being treated as a Dahl weapon instead of a Bandit weapon.
@@ -183,7 +180,26 @@
 * Buffed the Nirvana similarly to the Hellfire but slightly improved.
 * Buffed the Infection Cleaner similarly to the Avenger (but slightly improved) and fixed the reload's bullets dealing Normal damage instead of Incendiary.
 
-### Shields
+# Items
+
+## Grenades
+
+* Doubled the Projectile Speed of Homing Grenades.
+* Increased Transfusion Grenade's healing Projectile Speed by 50%.
+* Made the O-Negative come in 0 seconds Fuse Time.
+* Buffed normal Tediore and Bandit Grenades' Damage by 33%.
+* Buffed MIRV Grenades.
+* Made Slag Grenades slag more reliably.
+* Halved the Contraband Sky Rocket's Self Damage and made it scale up to OP8.
+* Buffed Captain Blade's Midnight Star's damage by 200% and increased its Blast Radius by 68.75%.
+* Buffed the Rolling Thunder's Damage by 25%, made it not damage you and increased its Splash Radius by 100.
+* Buffed the Nasty Surprise.
+* Buffed the Breath of Terra.
+* Buffed the Kiss of Death.
+* Buffed the Leech.
+* Fixed the Crossfire displaying an incorrect fuse time on the item card.
+
+## Shields
 
 * Introduced the Naught from Borderlands: The Pre-Sequel as an optional replacement for the Cradle (can be enabled with BLCMM).
 * Introduced the Bigg Thumppr from Borderlands: The Pre-Sequel as an optional replacement for the Pot o' Gold (can be enabled with BLCMM). This replacer can spawn with all shield parts. (this Sanity Checks, meaning if you load into the game without having the Patch active, your Shield will be lost. You can disable this with BLCMM in the category or disable Sanity Checks with c0dycode's Hex Multitool).
@@ -211,23 +227,6 @@
 * Buffed the Pot o' Gold. Has a chance to drop Eridium now and a very rare chance to drop an Eridium Stack. No longer goes into negative booster chance with some part combinations.
 * Enabled the Easy Mode to produce novas outside of Digistruct Peak.
 * Removed Roid Damage from the Retainer's stat card. It never actually had any functional roid damage in the first place.
-
-## Grenades
-
-* Doubled the Projectile Speed of Homing Grenades.
-* Increased Transfusion Grenade's healing Projectile Speed by 50%.
-* Made the O-Negative come in 0 seconds Fuse Time.
-* Buffed normal Tediore and Bandit Grenades' Damage by 33%.
-* Buffed MIRV Grenades.
-* Made Slag Grenades slag more reliably.
-* Halved the Contraband Sky Rocket's Self Damage and made it scale up to OP8.
-* Buffed Captain Blade's Midnight Star's damage by 200% and increased its Blast Radius by 68.75%.
-* Buffed the Rolling Thunder's Damage by 25%, made it not damage you and increased its Splash Radius by 100.
-* Buffed the Nasty Surprise.
-* Buffed the Breath of Terra.
-* Buffed the Kiss of Death.
-* Buffed the Leech.
-* Fixed the Crossfire displaying an incorrect fuse time on the item card.
 
 ## Relics
 
@@ -580,7 +579,7 @@
 * Improved the Status Effect Damage calculation for several skills and made them scale to OP10.
 * Fixed lots of Skill Presentations and Descriptions.
 
-## Axton
+## Axton Skills
 
 * Increased Axton's Turret's Fire Rate by 20%.
 * Made the Turret's Damage and the Turret augmentations scale like an AI, making them have proper Damage throughout the game (similar to console versions of the game).
@@ -607,7 +606,7 @@
 * Crisis Management: Replaced Melee Damage with Damage Reduction, 6% per point.
 * Gemini: Now also gives the Turret 30% Fire Rate and 3 more shots per burst.
 
-## Maya
+## Maya Skills
 
 * Made Phaselock, Scorn, and Ruin scale like other skills and made Ruin scale to OP8.
   * Ruin: +60% at level 30, +100% at level 50, +144% at 72, +590% at OP8.
@@ -627,7 +626,7 @@
 * Backdraft: Doubled the Melee Damage, but reduced the Nova Radius slightly.
 * Blight Phoenix: Doubled the damage dealt.
 
-## Salvador
+## Salvador Skills
 
 * Fixed Lay Waste/Keep it Piping Hot/5 Shots or 6/Incite/Just Got Real/I'm your Huckleberry not giving off-hand weapons the bonuses.
 * Auto-Loader: Now also boosts Reload Speed by 15%.
@@ -636,7 +635,7 @@
 * Fixed Steady As She Goes working incorrectly with Hyperion weapons.
 * Fixed an issue where recoil reduction would not apply while gunzerking if your main hand's weapon was Hyperion.
 
-## Zer0
+## Zer0 Skills
 
 * Fixed 0ptics' Aim Steadiness not working properly.
 * Swapped Grim's and Fearless's position in the skill tree.
@@ -653,7 +652,7 @@
 * Resurgence: Increased Maximum Health restored, 6% instead of 4% per point.
 * Like The Wind (Reworked): No longer increases Gun / Melee damage, instead adds chance to avoid Elemental Status Effects and Bullets by 5% per point.
 
-## Gaige
+## Gaige Skills
 
 * Made Deathtrap's Damage scale like an AI, making it have proper Damage throughout the game (-29% at level 5, increase of +4% at level 30, +110% at level 50, +156% at level 72, +173% at OP8).
   * Made Deathtrap get a bonus to his Damage in co-op. The max bonus (4 players) should be about x1.9 in Normal, and about x1.3 in TVHM/UVHM.
@@ -676,7 +675,7 @@
 * Robot Rampage: Now also boosts Gun Damage by 20% now.
 * With Claws: Increased Melee Damage to 1.25% per Anarchy stack from 0.6% and now also boosts Swap Speed by 0.625% per Anarchy stack.
 
-## Krieg
+## Krieg Skills
 
 * Returned Krieg's Raving Retribution Rants.
 * Made Krieg's special Melee Damage scale to OP10 (+6.6% at OP8).
