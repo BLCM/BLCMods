@@ -666,7 +666,7 @@
 * Sharing is Caring: Now also boosts Shield Capacity/Recharge Rate by 20% and gives -20% Shield Recharge Delay.
 * More Pep: Doubled all stats, +8%/+4% instead of +4%/+2% per level.
 * Shock Storm: Doubled the Storm's Radius.
-* Strength of Five Gorillas: Now also boosts Melee Damage, 3% per level.
+* Strength of Five Gorillas: Now also boosts Gun Damage, 3% per level.
 * Shock and AAAGGGGHHH: Now also boosts Reload Speed by 10%.
 * One Two Boom: Sped up its animation and now also boosts Explosive Damage by 15%.
 * Wires Don't Talk: Increased Damage, 5% instead of 3% per point.
