@@ -16,7 +16,12 @@ Here's some of the Borderlands (Mods) videos I've made.
 You may come to find that you like my OP weapons, and I thank you. If you don't like them, don't use them. It's simple.
 
 Click [here](https://discord.gg/H8bcFr2) to join my Discord server.
-If you don't want to join that, you can add me on Discord @Greem#1337. I'm also in the Borderlands 3 modding Discord.
+
+~~If you don't want to join that, you can add me on Discord @Greem#1337~~.
+EDIT: 2025 Jan 09: I don't have my friend requests open anymore, if you want to contact me please join the Discord linked above and DM me.
+I am now running a large project and I'm tired of getting friend requests from people, sorry for any inconvenience.
+
+I'm also in the Borderlands 3 modding Discord.
 
 Anyways, have a good day!
 > -> Greem
