@@ -1,0 +1,71 @@
+<BLCMM v="1">
+#<!!!You opened a file saved with BLCMM in FilterTool. Please update to BLCMM to properly open this file!!!>
+	<head>
+		<type name="TPS" offline="true"/>
+	</head>
+	<body>
+		<category name="Faster Kraggon Splits">
+			<comment>Author: Siggles</comment>
+			<comment>This mod makes Kraggon children spawn after fewer bounces, from the parent splitting.</comment>
+			<category name="Number of Bounces" MUT="true">
+				<category name="First Bounce">
+					<hotfix name="Hotfix" level="None">
+						<code profiles="default">set GD_Kraggon_SpawnProxy.Gore.Gore_DeathSpawn_Adult:BehaviorProviderDefinition_0.Behavior_Gate_204 GateCount 0</code>
+						<code profiles="default">set GD_Kraggon_SpawnProxy.Gore.Gore_DeathSpawn_Charger:BehaviorProviderDefinition_0.Behavior_Gate_108 GateCount 0</code>
+						<code profiles="default">set GD_Kraggon_SpawnProxy.Gore.Gore_DeathSpawn_FrostBeastSm:BehaviorProviderDefinition_0.Behavior_Gate_109 GateCount 0</code>
+						<code profiles="default">set GD_Kraggon_SpawnProxy.Gore.Gore_DeathSpawn_Mamma:BehaviorProviderDefinition_0.Behavior_Gate_115 GateCount 0</code>
+						<code profiles="default">set GD_Kraggon_SpawnProxy.Gore.Gore_DeathSpawn_Pebble:BehaviorProviderDefinition_0.Behavior_Gate_101 GateCount 0</code>
+						<code profiles="default">set GD_Kraggon_SpawnProxy.Gore.Gore_DeathSpawn_Snowball:BehaviorProviderDefinition_0.Behavior_Gate_128 GateCount 0</code>
+						<code profiles="default">set GD_Kraggon_SpawnProxy.Gore.Gore_DeathSpawn_Spitter:BehaviorProviderDefinition_0.Behavior_Gate_134 GateCount 0</code>
+					</hotfix>
+				</category>
+				<category name="Second Bounce">
+					<hotfix name="Hotfix" level="None">
+						<code profiles="">set GD_Kraggon_SpawnProxy.Gore.Gore_DeathSpawn_Adult:BehaviorProviderDefinition_0.Behavior_Gate_204 GateCount 1</code>
+						<code profiles="">set GD_Kraggon_SpawnProxy.Gore.Gore_DeathSpawn_Charger:BehaviorProviderDefinition_0.Behavior_Gate_108 GateCount 1</code>
+						<code profiles="">set GD_Kraggon_SpawnProxy.Gore.Gore_DeathSpawn_FrostBeastSm:BehaviorProviderDefinition_0.Behavior_Gate_109 GateCount 1</code>
+						<code profiles="">set GD_Kraggon_SpawnProxy.Gore.Gore_DeathSpawn_Mamma:BehaviorProviderDefinition_0.Behavior_Gate_115 GateCount 1</code>
+						<code profiles="">set GD_Kraggon_SpawnProxy.Gore.Gore_DeathSpawn_Pebble:BehaviorProviderDefinition_0.Behavior_Gate_101 GateCount 1</code>
+						<code profiles="">set GD_Kraggon_SpawnProxy.Gore.Gore_DeathSpawn_Snowball:BehaviorProviderDefinition_0.Behavior_Gate_128 GateCount 1</code>
+						<code profiles="">set GD_Kraggon_SpawnProxy.Gore.Gore_DeathSpawn_Spitter:BehaviorProviderDefinition_0.Behavior_Gate_134 GateCount 1</code>
+					</hotfix>
+				</category>
+			</category>
+			<category name="Faster projectiles for greater distance">
+				<comment>Since fewer bounces reduces the distance spawned from the parent, I double the projectile speed to prevent "congestion"</comment>
+				<hotfix name="Hotfix" level="None">
+					<code profiles="default">set GD_Kraggon_SpawnProxy.Gore.Gore_DeathSpawn_Adult SpeedFormula.BaseValueConstant 1800</code>
+					<code profiles="default">set GD_Kraggon_SpawnProxy.Gore.Gore_DeathSpawn_Charger SpeedFormula.BaseValueConstant 2000</code>
+					<code profiles="default">set GD_Kraggon_SpawnProxy.Gore.Gore_DeathSpawn_FrostBeastSm SpeedFormula.BaseValueConstant 1800</code>
+					<code profiles="default">set GD_Kraggon_SpawnProxy.Gore.Gore_DeathSpawn_Mamma SpeedFormula.BaseValueConstant 2000</code>
+					<code profiles="default">set GD_Kraggon_SpawnProxy.Gore.Gore_DeathSpawn_Pebble SpeedFormula.BaseValueConstant 1400</code>
+					<code profiles="default">set GD_Kraggon_SpawnProxy.Gore.Gore_DeathSpawn_Snowball SpeedFormula.BaseValueConstant 1400</code>
+					<code profiles="default">set GD_Kraggon_SpawnProxy.Gore.Gore_DeathSpawn_Spitter SpeedFormula.BaseValueConstant 1800</code>
+					<code profiles="default">set GD_Kraggon_SpawnProxy.Gore.Gore_DeathSpawn_Adult GravityScaling 2</code>
+					<code profiles="default">set GD_Kraggon_SpawnProxy.Gore.Gore_DeathSpawn_Charger GravityScaling 2</code>
+					<code profiles="default">set GD_Kraggon_SpawnProxy.Gore.Gore_DeathSpawn_FrostBeastSm GravityScaling 2</code>
+					<code profiles="default">set GD_Kraggon_SpawnProxy.Gore.Gore_DeathSpawn_Mamma GravityScaling 2</code>
+					<code profiles="default">set GD_Kraggon_SpawnProxy.Gore.Gore_DeathSpawn_Pebble GravityScaling 2</code>
+					<code profiles="default">set GD_Kraggon_SpawnProxy.Gore.Gore_DeathSpawn_Snowball GravityScaling 2</code>
+					<code profiles="default">set GD_Kraggon_SpawnProxy.Gore.Gore_DeathSpawn_Spitter GravityScaling 2</code>
+				</hotfix>
+			</category>
+		</category>
+	</body>
+</BLCMM>
+
+#Commands:
+
+#Direct-Execute Warning:
+say WARNING: "Faster Kraggon Splits" must be imported into OpenBLCMM to run properly with UCP or other mods.
+
+#Hotfixes:
+set Transient.SparkServiceConfiguration_0 ServiceName Micropatch
+
+set Transient.SparkServiceConfiguration_0 ConfigurationGroup Default
+
+set Transient.SparkServiceConfiguration_0 Keys ("SparkOnDemandPatchEntry-BLCMM1","SparkOnDemandPatchEntry-BLCMM2","SparkOnDemandPatchEntry-BLCMM3","SparkPatchEntry-BLCMM4","SparkPatchEntry-BLCMM5","SparkPatchEntry-BLCMM6","SparkPatchEntry-BLCMM7","SparkPatchEntry-BLCMM8","SparkPatchEntry-BLCMM9","SparkPatchEntry-BLCMM10","SparkPatchEntry-BLCMM11","SparkPatchEntry-BLCMM12","SparkPatchEntry-BLCMM13","SparkPatchEntry-BLCMM14","SparkLevelPatchEntry-BLCMM15","SparkLevelPatchEntry-BLCMM16","SparkLevelPatchEntry-BLCMM17","SparkLevelPatchEntry-BLCMM18","SparkLevelPatchEntry-BLCMM19","SparkLevelPatchEntry-BLCMM20","SparkLevelPatchEntry-BLCMM21","SparkLevelPatchEntry-BLCMM22","SparkLevelPatchEntry-BLCMM23","SparkLevelPatchEntry-BLCMM24","SparkLevelPatchEntry-BLCMM25","SparkLevelPatchEntry-BLCMM26","SparkLevelPatchEntry-BLCMM27","SparkLevelPatchEntry-BLCMM28","SparkLevelPatchEntry-BLCMM29","SparkLevelPatchEntry-BLCMM30","SparkLevelPatchEntry-BLCMM31","SparkLevelPatchEntry-BLCMM32","SparkLevelPatchEntry-BLCMM33","SparkLevelPatchEntry-BLCMM34","SparkLevelPatchEntry-BLCMM35","SparkLevelPatchEntry-BLCMM36","SparkLevelPatchEntry-BLCMM37","SparkLevelPatchEntry-BLCMM38","SparkLevelPatchEntry-BLCMM39","SparkLevelPatchEntry-BLCMM40","SparkLevelPatchEntry-BLCMM41","SparkLevelPatchEntry-BLCMM42")
+set Transient.SparkServiceConfiguration_0 Values ("GD_Gladiator_Streaming,GD_Gladiator_Skills.Projectiles.ShieldProjectile:BehaviorProviderDefinition_0,BehaviorSequences[0].BehaviorData2[26].LinkedVariables.ArrayIndexAndLength,2686977,0","GD_Gladiator_Streaming,GD_Gladiator_Skills.Projectiles.ShieldProjectile:BehaviorProviderDefinition_0,BehaviorSequences[0].BehaviorData2[49].LinkedVariables.ArrayIndexAndLength,8323073,0","GD_Gladiator_Streaming,GD_Gladiator_Skills.Projectiles.ShieldProjectile:BehaviorProviderDefinition_0.OzBehavior_ActorList_1,BehaviorSequences[0].BehaviorData2[32].Behavior.SearchRadius,500.000000,2048","GD_Ma_Chapter03.M_Ma_Chapter03:Objset_cmp_Pt0_06_ReopenDataStream,Objectiveset_cmp.ObjectiveDefinitions,,(GD_Ma_Chapter03.M_Ma_Chapter03:Pt0_06_ReopenDataStream,GD_Ma_Chapter03.M_Ma_Chapter03:Pt0_04_GetToDataStream,GD_Ma_Chapter03.M_Ma_Chapter03:RetrieveHSource)","Weap_Pistol.GestaltDef_Pistol_GestaltSkeletalMesh:SkeletalMeshSocket_260,RelativeLocation,,(X=-0.05,Y=55.0,Z=13.7)","Weap_Pistol.GestaltDef_Pistol_GestaltSkeletalMesh:SkeletalMeshSocket_268,RelativeLocation,,(X=0.02,Y=36.0,Z=15.45)","Weap_Pistol.GestaltDef_Pistol_GestaltSkeletalMesh:SkeletalMeshSocket_270,RelativeLocation.Z,,14.2","GD_Shields.Projectiles.Proj_LegendaryBoosterShield:BehaviorProviderDefinition_1.Behavior_Explode_140,BehaviorSequences[0].BehaviorData2[7].Behavior.StatusEffectDamage.BaseValueAttribute,None,D_Attributes.Projectile.ProjectileDamage","GD_Shields.Projectiles.Proj_LegendaryBoosterShield:BehaviorProviderDefinition_1.Behavior_Explode_140,BehaviorSequences[0].BehaviorData2[7].Behavior.StatusEffectDamage.BaseValueScaleConstant,1.000000,.25","GD_Shields.Projectiles.Proj_LegendaryBoosterShield:BehaviorProviderDefinition_1.Behavior_Explode_140,BehaviorSequences[0].BehaviorData2[7].Behavior.StatusEffectChance.BaseValueConstant,1.000000,20","GD_Itempools.WeaponPools.Pool_Weapons_SniperRifles_04_Rare,BalancedItems,,+(ItmPoolDefinition=None,InvBalanceDefinition=GD_Cork_Weap_SniperRifles.A_Weapons_Unique.Sniper_Vladof_3_TheMachine,Probability=(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=GD_Balance.Weighting.Weight_2_Uncommon,BaseValueScaleConstant=1),bDropOnDeath=True)","GD_Itempools.WeaponPools.Pool_Weapons_AssaultRifles_04_Rare,BalancedItems,,+(ItmPoolDefinition=None,InvBalanceDefinition=gd_cork_weap_assaultrifle.A_Weapons_Unique.AR_Vladof_3_OldPainful,Probability=(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=GD_Balance.Weighting.Weight_2_Uncommon,BaseValueScaleConstant=1),bDropOnDeath=True)","GD_Itempools.WeaponPools.Pool_Weapons_Shotguns_04_Rare,BalancedItems,,+(ItmPoolDefinition=None,InvBalanceDefinition=GD_Cork_Weap_Shotgun.A_Weapons_Unique.SG_Jakobs_Boomacorn,Probability=(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=GD_Balance.Weighting.Weight_2_Uncommon,BaseValueScaleConstant=1),bDropOnDeath=True)","GD_Itempools.WeaponPools.Pool_Weapons_Shotguns_04_Rare,BalancedItems,,+(ItmPoolDefinition=None,InvBalanceDefinition=GD_Cork_Weap_Shotgun.A_Weapons_Unique.SG_Torgue_3_JackOCannon,Probability=(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=GD_Balance.Weighting.Weight_2_Uncommon,BaseValueScaleConstant=1),bDropOnDeath=True)",",GD_Population_Scavengers.Balance.Outlaws.PawnBalance_ScavWastelandWalker,PlayThroughs[0].CustomItemPoolList,,+(ItemPool=GD_Itempools.Runnables.Pool_ScavBadassSpacemanMidget,PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=GD_Itempools.DropWeights.DropODDS_BossUniqueRares,InitializationDefinition=None,BaseValueScaleConstant=1.000000))",",GD_Population_Scavengers.Balance.Outlaws.PawnBalance_ScavWastelandWalker,PlayThroughs[1].CustomItemPoolList,,+(ItemPool=GD_Itempools.Runnables.Pool_ScavBadassSpacemanMidget,PoolProbability=(BaseValueConstant=1.000000,BaseValueAttribute=GD_Itempools.DropWeights.DropODDS_BossUniqueRares,InitializationDefinition=None,BaseValueScaleConstant=1.000000))","Laser_P,GD_Challenges.Co_LevelChallenges.EyeOfHelios_TreadCarefully,ChallengeType,ECT_DesignerTriggered,ECT_LevelObject","Outlands_P,Outlands_SideMissions.TheWorld:PersistentLevel.Main_Sequence.WillowSeqEvent_MissionRemoteEvent_0,OutputLinks[0].Links[0].LinkedOp,GearboxSeqAct_TriggerDialogName'Outlands_SideMissions.TheWorld:PersistentLevel.Main_Sequence.GearboxSeqAct_TriggerDialogName_48',Outlands_SideMissions.TheWorld:PersistentLevel.Main_Sequence.WillowSeqAct_MissionCustomEvent_14","Outlands_P,Outlands_SideMissions.TheWorld:PersistentLevel.Main_Sequence.WillowSeqAct_MissionCustomEvent_14,OutputLinks[0].Links,,((LinkedOp=GearboxSeqAct_TriggerDialogName'Outlands_SideMissions.TheWorld:PersistentLevel.Main_Sequence.GearboxSeqAct_TriggerDialogName_48',InputLinkIdx=0))","Outlands_P,Outlands_SideMissions.TheWorld:PersistentLevel.Main_Sequence.GearboxSeqAct_TriggerDialogName_49,OutputLinks[0].Links,,()","Outlands_P,Outlands_SideMissions.TheWorld:PersistentLevel.WillowPopulationEncounter_0,Waves[2].MemberOpportunities,,(PopulationOpportunityDen'Outlands_SideMissions.TheWorld:PersistentLevel.PopulationOpportunityDen_2',PopulationOpportunityDen'Outlands_SideMissions.TheWorld:PersistentLevel.PopulationOpportunityDen_8',None)",",GD_Kraggon_SpawnProxy.Gore.Gore_DeathSpawn_Adult:BehaviorProviderDefinition_0.Behavior_Gate_204,GateCount,,0",",GD_Kraggon_SpawnProxy.Gore.Gore_DeathSpawn_Charger:BehaviorProviderDefinition_0.Behavior_Gate_108,GateCount,,0",",GD_Kraggon_SpawnProxy.Gore.Gore_DeathSpawn_FrostBeastSm:BehaviorProviderDefinition_0.Behavior_Gate_109,GateCount,,0",",GD_Kraggon_SpawnProxy.Gore.Gore_DeathSpawn_Mamma:BehaviorProviderDefinition_0.Behavior_Gate_115,GateCount,,0",",GD_Kraggon_SpawnProxy.Gore.Gore_DeathSpawn_Pebble:BehaviorProviderDefinition_0.Behavior_Gate_101,GateCount,,0",",GD_Kraggon_SpawnProxy.Gore.Gore_DeathSpawn_Snowball:BehaviorProviderDefinition_0.Behavior_Gate_128,GateCount,,0",",GD_Kraggon_SpawnProxy.Gore.Gore_DeathSpawn_Spitter:BehaviorProviderDefinition_0.Behavior_Gate_134,GateCount,,0",",GD_Kraggon_SpawnProxy.Gore.Gore_DeathSpawn_Adult,SpeedFormula.BaseValueConstant,,1800",",GD_Kraggon_SpawnProxy.Gore.Gore_DeathSpawn_Charger,SpeedFormula.BaseValueConstant,,2000",",GD_Kraggon_SpawnProxy.Gore.Gore_DeathSpawn_FrostBeastSm,SpeedFormula.BaseValueConstant,,1800",",GD_Kraggon_SpawnProxy.Gore.Gore_DeathSpawn_Mamma,SpeedFormula.BaseValueConstant,,2000",",GD_Kraggon_SpawnProxy.Gore.Gore_DeathSpawn_Pebble,SpeedFormula.BaseValueConstant,,1400",",GD_Kraggon_SpawnProxy.Gore.Gore_DeathSpawn_Snowball,SpeedFormula.BaseValueConstant,,1400",",GD_Kraggon_SpawnProxy.Gore.Gore_DeathSpawn_Spitter,SpeedFormula.BaseValueConstant,,1800",",GD_Kraggon_SpawnProxy.Gore.Gore_DeathSpawn_Adult,GravityScaling,,2",",GD_Kraggon_SpawnProxy.Gore.Gore_DeathSpawn_Charger,GravityScaling,,2",",GD_Kraggon_SpawnProxy.Gore.Gore_DeathSpawn_FrostBeastSm,GravityScaling,,2",",GD_Kraggon_SpawnProxy.Gore.Gore_DeathSpawn_Mamma,GravityScaling,,2",",GD_Kraggon_SpawnProxy.Gore.Gore_DeathSpawn_Pebble,GravityScaling,,2",",GD_Kraggon_SpawnProxy.Gore.Gore_DeathSpawn_Snowball,GravityScaling,,2",",GD_Kraggon_SpawnProxy.Gore.Gore_DeathSpawn_Spitter,GravityScaling,,2")
+
+set Transient.GearboxAccountData_1 Services (Transient.SparkServiceConfiguration_0)
+
