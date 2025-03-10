@@ -1,0 +1,37 @@
+<BLCMM v="1">
+#<!!!You opened a file saved with BLCMM in FilterTool. Please update to BLCMM to properly open this file!!!>
+	<head>
+		<type name="BL2" offline="false"/>
+	</head>
+	<body>
+		<category name="Cobra">
+			<category name="Rarity and barrel change">
+				<code profiles="default">set GD_Iris_Weapons.SniperRifles.SR_Barrel_Dahl_Cobra Rarity (BaseValueConstant=5.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)</code>
+				<code profiles="default">set GD_Iris_Weapons.SniperRifles.SR_Barrel_Dahl_Cobra GestaltModeSkeletalMeshName SR_Barrel_Maliwan</code>
+			</category>
+			<category name="Weapon buffs">
+				<code profiles="default">set GD_Iris_Weapons.SniperRifles.SR_Barrel_Dahl_Cobra WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.250000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-1.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponStatusEffectChanceModifier',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=50.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))</code>
+				<code profiles="default">set GD_Iris_Weapons.SniperRifles.SR_Barrel_Dahl_Cobra ExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.DamageEnhancementModifiers.PlayerConvertDamageToHealingPercent',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.010000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))</code>
+			</category>
+			<category name="Splash buffs">
+				<code profiles="default">set GD_Iris_Weapons.FiringModes.Bullet_Sniper_Cobra:Behavior_Explode_5 Definition ExplosionDefinition'GD_Explosions.slag.Explosion_SlagMaster'</code>
+				<code profiles="default">set GD_Iris_Weapons.FiringModes.Bullet_Sniper_Cobra:Behavior_Explode_5 DamageRadiusFormula (BaseValueConstant=300.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)</code>
+			</category>
+			<comment>Legendary rarity,</comment>
+			<comment>Maliwan barrel,</comment>
+			<comment>Same buff as UCP but more fire rate (about the same as a pimpernel),</comment>
+			<comment>1% health regen like a baby Moxi weapon,</comment>
+			<comment>Splash damage is now slag and is almost guaranted to slag,</comment>
+			<comment>Tiny radius buff (~10%).</comment>
+		</category>
+	</body>
+</BLCMM>
+
+#Commands:
+set GD_Iris_Weapons.SniperRifles.SR_Barrel_Dahl_Cobra Rarity (BaseValueConstant=5.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+set GD_Iris_Weapons.SniperRifles.SR_Barrel_Dahl_Cobra GestaltModeSkeletalMeshName SR_Barrel_Maliwan
+set GD_Iris_Weapons.SniperRifles.SR_Barrel_Dahl_Cobra WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.250000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=-1.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponStatusEffectChanceModifier',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=50.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+set GD_Iris_Weapons.SniperRifles.SR_Barrel_Dahl_Cobra ExternalAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.DamageEnhancementModifiers.PlayerConvertDamageToHealingPercent',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.010000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+set GD_Iris_Weapons.FiringModes.Bullet_Sniper_Cobra:Behavior_Explode_5 Definition ExplosionDefinition'GD_Explosions.slag.Explosion_SlagMaster'
+set GD_Iris_Weapons.FiringModes.Bullet_Sniper_Cobra:Behavior_Explode_5 DamageRadiusFormula (BaseValueConstant=300.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+
