@@ -1,0 +1,1 @@
+Fixing one of the more annoying bugs(?) in Borderlands 2. Being able to pick up all the Eridium at once in the FFS DLC just like in the base game.
