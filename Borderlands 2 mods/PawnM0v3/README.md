@@ -1,1 +1,1 @@
-Fixing one of the more annoying bugs(?) in Borderlands 2. Being able to pick up all the Eridium at once in the FFS DLC just like in the base game.
+Hello there. I'm Pawn. This github only contains one mod and I don't feel like dealing with the headache of putting some other mod on here. If you are looking for Azurelands 2 it is not here.
