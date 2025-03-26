@@ -1,0 +1,63 @@
+<BLCMM v="1">
+#<!!!You opened a file saved with BLCMM in FilterTool. Please update to BLCMM to properly open this file!!!>
+	<head>
+		<type name="BL2" offline="false"/>
+	</head>
+	<body>
+		<category name="Accelerate" MUT="true">
+			<category name="Replace Bullet Speed by Fire Rate">
+				<hotfix name="UCPMaya" package="GD_Siren_Streaming">
+					<code profiles="">set GD_Siren_Skills.Motion.Accelerate SkillDescription Augmente vos [skill]dégats[-skill] et votre [skill]cadence de tir[-skill].</code>
+					<code profiles="">set GD_Siren_Skills.Motion.Accelerate:AttributePresentationDefinition_2 Description Cadence de tir: $NUMBER$</code>
+					<code profiles="">set GD_Siren_Skills.Motion.Accelerate:AttributePresentationDefinition_2 Attribute AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval'</code>
+					<code profiles="">set GD_Siren_Skills.Motion.Accelerate SkillEffectDefinitions[1].AttributeToModify AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval'</code>
+					<code profiles="">set GD_Siren_Skills.Motion.Accelerate SkillEffectDefinitions[1].BaseModifierValue.BaseValueConstant -0.02</code>
+					<code profiles="">set GD_Siren_Skills.Motion.Accelerate SkillEffectDefinitions[1].PerGradeUpgrade.BaseValueConstant -0.02</code>
+				</hotfix>
+				<comment>Replace bullet speed by fire rate, 2% per point.</comment>
+			</category>
+			<category name="Replace Bullet Speed by Status Damage & Rename Skill">
+				<hotfix name="UCPMaya" package="GD_Siren_Streaming">
+					<code profiles="">set GD_Siren_Skills.Motion.Accelerate SkillName Instigate</code>
+					<code profiles="">set GD_Siren_Skills.Motion.Accelerate SkillDescription Increases [skill]Weapon Damage[-skill] and [skill]Status Damage[-skill].</code>
+					<code profiles="">set GD_Siren_Skills.Motion.Accelerate:AttributePresentationDefinition_2 Description Status Damage: $NUMBER$</code>
+					<code profiles="">set GD_Siren_Skills.Motion.Accelerate:AttributePresentationDefinition_2 Attribute AttributeDefinition'D_Attributes.DamageSourceModifiers.InstigatedStatusEffectDamageModifier'</code>
+					<code profiles="">set GD_Siren_Skills.Motion.Accelerate SkillEffectDefinitions[1].AttributeToModify AttributeDefinition'D_Attributes.DamageSourceModifiers.InstigatedStatusEffectDamageModifier'</code>
+					<code profiles="">set GD_Siren_Skills.Motion.Accelerate SkillEffectDefinitions[1].BaseModifierValue.BaseValueConstant 0.05</code>
+					<code profiles="">set GD_Siren_Skills.Motion.Accelerate SkillEffectDefinitions[1].PerGradeUpgrade.BaseValueConstant 0.05</code>
+				</hotfix>
+				<comment>Replace Bullet Speed by Status Damage, 5% per point.</comment>
+				<comment>The skill has been renamed "instigate".</comment>
+			</category>
+			<category name="Replace Bullet Speed by Swap Speed">
+				<hotfix name="UCPMaya" package="GD_Siren_Streaming">
+					<code profiles="">set GD_Siren_Skills.Motion.Accelerate SkillDescription Increases [skill]Weapon Damage[-skill] and [skill]Swap Speed[-skill].</code>
+					<code profiles="">set GD_Siren_Skills.Motion.Accelerate:AttributePresentationDefinition_2 Description Swap Speed: $NUMBER$</code>
+					<code profiles="">set GD_Siren_Skills.Motion.Accelerate:AttributePresentationDefinition_2 Attribute AttributeDefinition'D_Attributes.Weapon.WeaponSwapTimeMultiplier'</code>
+					<code profiles="">set GD_Siren_Skills.Motion.Accelerate SkillEffectDefinitions[1].AttributeToModify AttributeDefinition'D_Attributes.Weapon.WeaponSwapTimeMultiplier'</code>
+					<code profiles="">set GD_Siren_Skills.Motion.Accelerate:AttributePresentationDefinition_2 bIncludeSelfAsTarget True</code>
+					<code profiles="">set GD_Siren_Skills.Motion.Accelerate SkillEffectDefinitions[1].BaseModifierValue.BaseValueConstant -0.03</code>
+					<code profiles="">set GD_Siren_Skills.Motion.Accelerate SkillEffectDefinitions[1].PerGradeUpgrade.BaseValueConstant -0.03</code>
+				</hotfix>
+				<comment>Replace bullet speed by swap speed, 3% per point.</comment>
+			</category>
+			<category name="Remove Bullet Speed and buff damage">
+				<hotfix name="UCPMaya" package="GD_Siren_Streaming">
+					<code profiles="">set GD_Siren_Skills.Motion.Accelerate SkillDescription Increases [skill]Weapon Damage[-skill]</code>
+					<code profiles="">set GD_Siren_Skills.Motion.Accelerate SkillEffectDefinitions ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',bIncludeDuelingTargets=False,bIncludeSelfAsTarget=False,bOnlyEffectTargetsInRange=False,bExcludeNonPlayerCharacters=False,EffectTarget=TARGET_Self,TargetInstanceDataName=,TargetCriteria=CRITERIA_None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.050000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),GradeToStartApplyingEffect=1,PerGradeUpgradeInterval=1,PerGradeUpgrade=(BaseValueConstant=0.050000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),BonusUpgradeList=))</code>
+				</hotfix>
+				<comment>5% gun damage per point.</comment>
+			</category>
+		</category>
+	</body>
+</BLCMM>
+
+#Commands:
+
+#Direct-Execute Warning:
+say WARNING: "Accelerate" must be imported into BLCMM to run properly with UCP or other mods.
+
+#Hotfixes:
+set Transient.SparkServiceConfiguration_5 Keys ("SparkLevelPatchEntry-GBX_fixes1","SparkLevelPatchEntry-GBX_fixes2","SparkLevelPatchEntry-GBX_fixes3","SparkLevelPatchEntry-GBX_fixes4","SparkLevelPatchEntry-GBX_fixes5","SparkLevelPatchEntry-GBX_Fixes6","SparkLevelPatchEntry-GBX_Fixes7","SparkLevelPatchEntry-GBX_Fixes8","SparkLevelPatchEntry-GBX_Fixes9","SparkLevelPatchEntry-GBX_fixes10","SparkLevelPatchEntry-GBX_fixes11","SparkLevelPatchEntry-GBX_fixes12","SparkLevelPatchEntry-GBX_fixes13","SparkLevelPatchEntry-GBX_fixes14","SparkOnDemandPatchEntry-GBX_fixes15","SparkOnDemandPatchEntry-GBX_fixes16","SparkOnDemandPatchEntry-GBX_fixes17","SparkOnDemandPatchEntry-GBX_fixes18","SparkOnDemandPatchEntry-GBX_fixes19","SparkPatchEntry-GBX_fixes20","SparkPatchEntry-GBX_fixes21","SparkPatchEntry-GBX_fixes22","SparkPatchEntry-GBX_fixes23")
+set Transient.SparkServiceConfiguration_5 Values (",GD_Balance.WeightingPlayerCount.BugmorphCocoon_PerPlayers_Phase1,ConditionalInitialization.ConditionalExpressionList[4].BaseValueIfTrue.BaseValueConstant,0.700000,.8",",GD_Balance.WeightingPlayerCount.BugmorphCocoon_PerPlayers_Phase2,ConditionalInitialization.ConditionalExpressionList[4].BaseValueIfTrue.BaseValueConstant,0.400000,.5",",GD_Balance.WeightingPlayerCount.BugmorphCocoon_PerPlayers_Phase3,ConditionalInitialization.ConditionalExpressionList[4].BaseValueIfTrue.BaseValueConstant,0.200000,.3",",GD_Balance.WeightingPlayerCount.BugmorphCocoon_PerPlayers_Phase4,ConditionalInitialization.ConditionalExpressionList[4].BaseValueIfTrue.BaseValueConstant,0.100000,.2",",GD_Balance.WeightingPlayerCount.BugmorphCocoon_PerPlayers_Phase5,ConditionalInitialization.ConditionalExpressionList[4].BaseValueIfTrue.BaseValueConstant,0.075000,.1","SouthpawFactory_P,GD_Population_Marauder.Balance.Unique.PawnBalance_Assassin1,DefaultItemPoolList[3].PoolProbability.BaseValueScaleConstant,0.250000,1","SouthpawFactory_P,GD_Population_Nomad.Balance.Unique.PawnBalance_Assassin2,DefaultItemPoolList[4].PoolProbability.BaseValueScaleConstant,0.250000,1","SouthpawFactory_P,GD_Population_Psycho.Balance.Unique.PawnBalance_Assassin3,DefaultItemPoolList[1].PoolProbability.BaseValueScaleConstant,0.250000,1","SouthpawFactory_P,GD_Population_Rat.Balance.Unique.PawnBalance_Assassin4,DefaultItemPoolList[3].PoolProbability.BaseValueScaleConstant,0.250000,1",",GD_Sage_Rare_Scaylion.Population.PawnBalance_Sage_Rare_Scaylion,DefaultItemPoolList[1].PoolProbability.BaseValueScaleConstant,1.000000,100",",GD_Sage_Rare_Drifter.Balance.PawnBalance_Sage_Rare_Drifter,DefaultItemPoolList[0].PoolProbability.BaseValueScaleConstant,1.000000,100",",GD_Sage_Rare_Rhino.Population.PawnBalance_Sage_Rare_Rhino,DefaultItemPoolList[1].PoolProbability.BaseValueScaleConstant,1.000000,100",",GD_Sage_Rare_Skag.Population.PawnBalance_Sage_Rare_Skag,DefaultItemPoolList[1].PoolProbability.BaseValueScaleConstant,1.000000,100",",GD_Sage_Rare_Spore.Population.PawnBalance_Sage_Rare_Spore,DefaultItemPoolList[0].PoolProbability.BaseValueScaleConstant,1.000000,100","GD_Assassin_Streaming,GD_Assassin_Skills.Sniping.Velocity,SkillEffectDefinitions[0].ModifierType,MT_PostAdd,MT_Scale","GD_Tulip_Mechro_Streaming,GD_Tulip_Mechromancer_Skills.LittleBigTrouble.WiresDontTalk,SkillEffectDefinitions,,((AttributeToModify=D_Attributes.DamageTypeModifers.InstigatedShockDamageModifier,bIncludeDuelingTargets=False,bIncludeSelfAsTarget=False,bOnlyEffectTargetsInRange=False,bExcludeNonPlayerCharacters=False,EffectTarget=TARGET_Self,TargetInstanceDataName=,TargetCriteria=CRITERIA_None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.030000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),GradeToStartApplyingEffect=1,PerGradeUpgradeInterval=1,PerGradeUpgrade=(BaseValueConstant=0.030000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),BonusUpgradeList=),(AttributeToModify=D_Attributes.DamageTypeModifers.InstigatedShockStatusDamageModifier,bIncludeDuelingTargets=False,bIncludeSelfAsTarget=False,bOnlyEffectTargetsInRange=False,bExcludeNonPlayerCharacters=False,EffectTarget=TARGET_Self,TargetInstanceDataName=,TargetCriteria=CRITERIA_None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.030000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),GradeToStartApplyingEffect=1,PerGradeUpgradeInterval=1,PerGradeUpgrade=(BaseValueConstant=0.030000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),BonusUpgradeList=))","GD_Siren_Streaming,GD_Siren_Skills.Misc.Init_BlightPhoenix_DamageCalc_Part2,ValueFormula.Level.InitializationDefinition,AttributeInitializationDefinition'GD_Balance_HealthAndDamage.HealthAndDamage.Init_PlayerMeleeDamage',AttributeInitializationDefinition'GD_Balance_HealthAndDamage.HealthAndDamage.Init_PlayerSkillDamage'","GD_Siren_Streaming,GD_Siren_Skills.Misc.Init_BlightPhoenix_DamageCalc_Part2,ValueFormula.Level.BaseValueScaleConstant,1.000000,3.5","GD_Assassin_Streaming,GD_Assassin_Skills.Misc.Att_DeathMark_BonusDamage,BaseValue.BaseValueConstant,0.200000,.8","GD_Itempools.Runnables.Pool_FourAssassins,BalancedItems[1].Probability.InitializationDefinition,None,GD_Balance.Weighting.Weight_1_Common","GD_Shields.Projectiles.Proj_LegendaryBoosterShield:BehaviorProviderDefinition_1.Behavior_Explode_140,BehaviorSequences[0].BehaviorData2[7].Behavior.StatusEffectDamage.BaseValueAttribute,None,D_Attributes.Projectile.ProjectileDamage","GD_Shields.Projectiles.Proj_LegendaryBoosterShield:BehaviorProviderDefinition_1.Behavior_Explode_140,BehaviorSequences[0].BehaviorData2[7].Behavior.StatusEffectDamage.BaseValueScaleConstant,1.000000,.25","GD_Shields.Projectiles.Proj_LegendaryBoosterShield:BehaviorProviderDefinition_1.Behavior_Explode_140,BehaviorSequences[0].BehaviorData2[7].Behavior.StatusEffectChance.BaseValueConstant,1.000000,20")
+
