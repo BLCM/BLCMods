@@ -1,0 +1,143 @@
+<BLCMM v="1">
+#<!!!You opened a file saved with BLCMM in FilterTool. Please update to BLCMM to properly open this file!!!>
+	<head>
+		<type name="BL2" offline="true"/>
+		<profiles>
+			<profile name="default" current="true"/>
+		</profiles>
+	</head>
+	<body>
+		<category name="Multi-Elemental Effervescent Pimpernel">
+			<category name="Description">
+				<comment>By sage-72</comment>
+				<comment>!!!!!!!!! VERY IMPORTANT !!!!!!!!!!</comment>
+				<comment>You Need to Disable Sanity Check through Hex Multitool or SDK Mod Sanity Saver if you don't want your Pimpernel to get deleted and have to re-farm them or copy-pasted in</comment>
+				<comment>You need to install SDK Mod "Command Extensions" for it to work</comment>
+				<comment>If you dont know what an SDK Mod is, install "Willow2 SDK" first https://bl-sdk.github.io/willow2-mod-db/</comment>
+				<comment>###################################</comment>
+				<comment>After Installing</comment>
+				<comment>When you're using modpacks or other mods, be sure to load this last in the console or put it at the bottom of your modpack using BLCMM so it overwrites changes made by the Modpack</comment>
+				<comment>You can farm for the Pimpernel or Copy paste this code to add it in-game using SDK Mod "Vendor Edit" </comment>
+				<comment>BL2(hwAAAADxtwGDqIEDEaHVXoJhAPOB8AXMBBguMGBg/v/XINwDA4Lw)</comment>
+				<comment>If your Pimpernel has an element, I suggest re-farming or using Vendor Edit to change it back to "No Element" because this weapon already has all the elements and you're losing 20% damage for nothing.</comment>
+				<comment>###################################</comment>
+				<comment>ABOUT THE MOD:</comment>
+				<comment>Heavily Inspired by Aaron0000's Chroma</comment>
+				<comment>Makes the 5 pellets of Pimpernel be a different element each</comment>
+				<comment>Turned Rarity to Effervescent</comment>
+				<comment>Changed Texture to be Effervescent</comment>
+				<comment>Added E-Tech Barrel with Flaps</comment>
+				<comment>Changed Name to Prism-nel</comment>
+				<comment>Changed Red Text</comment>
+				<comment>##############</comment>
+				<comment>Special Thanks to:</comment>
+				<comment>Aaron0000 for giving me permission to use his Chroma code as a base/template for making the code for the Bullets as well as letting me use his code to change the barrel to be E-Tech with the flaps</comment>
+				<comment>EdamaneTv ZetaDaemon and PawnM0v3 for helping me understand how to code all of this in the first place.</comment>
+				<comment>apple1417 for the Command Extension mod to make this happen as well as their documentation to help me make sdk mods in text</comment>
+			</category>
+			<category name="Requirements Notification">
+				<comment>CE_EnableOn Force</comment>
+				<comment>pyb --exec</comment>
+				<comment>clone -x FiringModeDefinition'GD_Orchid_BossWeapons.FiringModes.Bullet_Sniper_Maliwan_Pimpernel_Child2' FiringModeDefinition'GD_Orchid_BossWeapons.FiringModes.Bullet_Sniper_Maliwan_Pimpernel_Child3'</comment>
+				<comment>clone -x FiringModeDefinition'GD_Orchid_BossWeapons.FiringModes.Bullet_Sniper_Maliwan_Pimpernel_Child2' FiringModeDefinition'GD_Orchid_BossWeapons.FiringModes.Bullet_Sniper_Maliwan_Pimpernel_Child4'</comment>
+				<comment>clone -x FiringModeDefinition'GD_Orchid_BossWeapons.FiringModes.Bullet_Sniper_Maliwan_Pimpernel_Child2' FiringModeDefinition'GD_Orchid_BossWeapons.FiringModes.Bullet_Sniper_Maliwan_Pimpernel_Child5'</comment>
+				<comment>clone -x FiringModeDefinition'GD_Orchid_BossWeapons.FiringModes.Bullet_Sniper_Maliwan_Pimpernel_Child2' FiringModeDefinition'GD_Orchid_BossWeapons.FiringModes.Bullet_Sniper_Maliwan_Pimpernel_Child6'</comment>
+				<comment>say RGB Pimpernel Added</comment>
+				<comment>say IMPORTANT: YOU NEED COMMAND EXTENSION SDK MOD FOR THIS TO WORK</comment>
+			</category>
+			<category name="Stats">
+				<category name="Keeps it Physical">
+					<code profiles="default">set GD_Orchid_BossWeapons.SniperRifles.SR_Barrel_Dahl_Pimpernel WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Dahl',InitializationDefinition=None,BaseValueScaleConstant=0.100000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Dahl',InitializationDefinition=None,BaseValueScaleConstant=-0.300000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponStatusEffectChanceModifier',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponStatusEffectDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.200000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))</code>
+					<code profiles="default">set GD_Orchid_BossWeapons.SniperRifles.Sniper_Maliwan_3_Pimpernel:WeaponPartListCollectionDefinition_314 ElementalPartData (bEnabled=True,WeightedParts=((Part=WeaponPartDefinition'GD_Weap_SniperRifles.elemental.SR_Elemental_None',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0)))</code>
+				</category>
+				<category name="CExt Magic - Editing Bullets">
+					<category name="Original - Explosive">
+						<code profiles="default">set GD_Orchid_BossWeapons.FiringModes.Bullet_Sniper_Maliwan_Pimpernel_Child ConditionalPartSysTemplate None</code>
+						<code profiles="default">set GD_Orchid_BossWeapons.FiringModes.Bullet_Sniper_Maliwan_Pimpernel_Child PartSysTemplate ParticleSystem'FX_WEP_Trails.Particles.Part_Wep_Tracer_Wavy_Explosive'</code>
+						<code profiles="default">set GD_Orchid_BossWeapons.FiringModes.Bullet_Sniper_Maliwan_Pimpernel_Child DamageTypeDefinition WillowDamageTypeDefinition'GD_Explosive.DamageType.DmgType_Explosive_Impact'</code>
+						<code profiles="default">set GD_Orchid_BossWeapons.FiringModes.Bullet_Sniper_Maliwan_Pimpernel_Child TimerEvents ((Time=0.10,Response=(SplitNum=1,SplitAngle=72.000000,SplitAngleOffset=0.000000,SplitDistance=00000,SplitFire=FiringModeDefinition'GD_Orchid_BossWeapons.FiringModes.Bullet_Sniper_Maliwan_Pimpernel_Child2',NewSpeed=0.000000,bDetonate=False,bRespawnTracer=False,bUpdateBeamSourceLocation=False,Behaviors=)),(Time=0.10,Response=(SplitNum=1,SplitAngle=72.000000,SplitAngleOffset=72.000000,SplitDistance=0,SplitFire=FiringModeDefinition'GD_Orchid_BossWeapons.FiringModes.Bullet_Sniper_Maliwan_Pimpernel_Child3',NewSpeed=0.000000,bDetonate=False,bRespawnTracer=False,bUpdateBeamSourceLocation=False,Behaviors=)),(Time=0.10,Response=(SplitNum=1,SplitAngle=72.000000,SplitAngleOffset=144.000000,SplitDistance=0,SplitFire=FiringModeDefinition'GD_Orchid_BossWeapons.FiringModes.Bullet_Sniper_Maliwan_Pimpernel_Child4',NewSpeed=0.000000,bDetonate=False,bRespawnTracer=False,bUpdateBeamSourceLocation=False,Behaviors=)),(Time=0.10,Response=(SplitNum=1,SplitAngle=72.000000,SplitAngleOffset=216.000000,SplitDistance=0,SplitFire=FiringModeDefinition'GD_Orchid_BossWeapons.FiringModes.Bullet_Sniper_Maliwan_Pimpernel_Child5',NewSpeed=0.000000,bDetonate=False,bRespawnTracer=False,bUpdateBeamSourceLocation=False,Behaviors=)),(Time=0.10,Response=(SplitNum=1,SplitAngle=72.000000,SplitAngleOffset=288.000000,SplitDistance=0,SplitFire=FiringModeDefinition'GD_Orchid_BossWeapons.FiringModes.Bullet_Sniper_Maliwan_Pimpernel_Child6',NewSpeed=0.000000,bDetonate=True,bRespawnTracer=False,bUpdateBeamSourceLocation=False,Behaviors=)))</code>
+					</category>
+					<category name="Incendiary">
+						<code profiles="default">set GD_Orchid_BossWeapons.FiringModes.Bullet_Sniper_Maliwan_Pimpernel_Child2 DamageTypeDefinition WillowDamageTypeDefinition'GD_Incendiary.DamageType.DmgType_Incendiary_Impact'</code>
+						<code profiles="default">set GD_Orchid_BossWeapons.FiringModes.Bullet_Sniper_Maliwan_Pimpernel_Child2 ConditionalPartSysTemplate None</code>
+						<code profiles="default">set GD_Orchid_BossWeapons.FiringModes.Bullet_Sniper_Maliwan_Pimpernel_Child2 PartSysTemplate ParticleSystem'FX_WEP_Trails.Particles.Part_Wep_Tracer_Wavy_Incendiary'</code>
+					</category>
+					<category name="Slag">
+						<code profiles="default">set GD_Orchid_BossWeapons.FiringModes.Bullet_Sniper_Maliwan_Pimpernel_Child3 DamageTypeDefinition WillowDamageTypeDefinition'GD_Amp.DamageType.DmgType_Amp_Impact'</code>
+						<code profiles="default">set GD_Orchid_BossWeapons.FiringModes.Bullet_Sniper_Maliwan_Pimpernel_Child3 ConditionalPartSysTemplate None</code>
+						<code profiles="default">set GD_Orchid_BossWeapons.FiringModes.Bullet_Sniper_Maliwan_Pimpernel_Child3 PartSysTemplate ParticleSystem'FX_WEP_Trails.Particles.Part_Wep_Tracer_Wavy_Slag'</code>
+					</category>
+					<category name="Shock">
+						<code profiles="default">set GD_Orchid_BossWeapons.FiringModes.Bullet_Sniper_Maliwan_Pimpernel_Child4 DamageTypeDefinition WillowDamageTypeDefinition'GD_Shock.DamageType.DmgType_Shock_Impact'</code>
+						<code profiles="default">set GD_Orchid_BossWeapons.FiringModes.Bullet_Sniper_Maliwan_Pimpernel_Child4 ConditionalPartSysTemplate None</code>
+						<code profiles="default">set GD_Orchid_BossWeapons.FiringModes.Bullet_Sniper_Maliwan_Pimpernel_Child4 PartSysTemplate ParticleSystem'FX_WEP_Trails.Particles.Part_Wep_Tracer_Wavy_Shock'</code>
+					</category>
+					<category name="Corrosive">
+						<code profiles="default">set GD_Orchid_BossWeapons.FiringModes.Bullet_Sniper_Maliwan_Pimpernel_Child5 DamageTypeDefinition WillowDamageTypeDefinition'GD_Corrosive.DamageType.DmgType_Corrosive_Impact'</code>
+						<code profiles="default">set GD_Orchid_BossWeapons.FiringModes.Bullet_Sniper_Maliwan_Pimpernel_Child5 ConditionalPartSysTemplate None</code>
+						<code profiles="default">set GD_Orchid_BossWeapons.FiringModes.Bullet_Sniper_Maliwan_Pimpernel_Child5 PartSysTemplate ParticleSystem'FX_WEP_Trails.Particles.Part_Wep_Tracer_Wavy_Corrosive'</code>
+					</category>
+					<category name="Explosive 2">
+						<code profiles="default">set GD_Orchid_BossWeapons.FiringModes.Bullet_Sniper_Maliwan_Pimpernel_Child6 DamageTypeDefinition WillowDamageTypeDefinition'GD_Explosive.DamageType.DmgType_Explosive_Impact'</code>
+						<code profiles="default">set GD_Orchid_BossWeapons.FiringModes.Bullet_Sniper_Maliwan_Pimpernel_Child6 ConditionalPartSysTemplate None</code>
+						<code profiles="default">set GD_Orchid_BossWeapons.FiringModes.Bullet_Sniper_Maliwan_Pimpernel_Child6 PartSysTemplate ParticleSystem'FX_WEP_Trails.Particles.Part_Wep_Tracer_Wavy_Explosive'</code>
+					</category>
+				</category>
+			</category>
+			<category name="UI Elements - Gives Rainbow Text and Rainbow Drop">
+				<code profiles="default">set GD_Orchid_BossWeapons.Name.Title.Title__Unique_Pimpernel PartName Prism-nel</code>
+				<code profiles="default">set GD_Orchid_BossWeapons.Name.Title.Title__Unique_Pimpernel rarity (BaseValueConstant=503.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)</code>
+				<code profiles="default">set GD_Orchid_BossWeapons.Name.Title.Title__Unique_Pimpernel:AttributePresentationDefinition_8 NoConstraintText Is he in heaven?—Is he in hell? That damned, elusive Pimpernel?</code>
+				<code profiles="default">set GD_Orchid_BossWeapons.Name.Title.Title__Unique_Pimpernel:AttributePresentationDefinition_8 TextColor (B=70,G=70,R=220,A=255)</code>
+			</category>
+			<category name="Skin">
+				<category name="Texture - gives it the RGB model look">
+					<code profiles="default">set GD_Orchid_BossWeapons.ManufacturerMaterials.Mat_Maliwan_3_Pimpernel Material Anemone_GunMaterials.Materials.sniper.Mati_Jakobs_Pearl_Godfinger</code>
+				</category>
+				<category name="E-Tech Barrel">
+					<code profiles="default">set GD_Orchid_BossWeapons.SniperRifles.SR_Barrel_Dahl_Pimpernel GestaltModeSkeletalMeshName SR_Barrel_Alien</code>
+					<code profiles="default">set GD_Orchid_BossWeapons.SniperRifles.SR_Barrel_Dahl_Pimpernel BoneControllers ((BoneName="Alien_Top_L_Flap",ControlType=WEAP_BONE_CONTROL_Flap,bUseInFirstPerson=True,bUseInThirdPerson=False,ControlTemplate=WillowSkelControl_RotateFlapFromFiring'GD_Weap_SniperRifles.Barrel.SR_Barrel_Alien_RailGun:WillowSkelControl_RotateFlapFromFiring_0'),,(BoneName="Alien_Top_R_Flap",ControlType=WEAP_BONE_CONTROL_Flap,bUseInFirstPerson=True,bUseInThirdPerson=False,ControlTemplate=WillowSkelControl_RotateFlapFromFiring'GD_Weap_SniperRifles.Barrel.SR_Barrel_Alien_RailGun:WillowSkelControl_RotateFlapFromFiring_1'),,(BoneName="Alien_Bottom_L_Flap",ControlType=WEAP_BONE_CONTROL_Flap,bUseInFirstPerson=True,bUseInThirdPerson=False,ControlTemplate=WillowSkelControl_RotateFlapFromFiring'GD_Weap_SniperRifles.Barrel.SR_Barrel_Alien_RailGun:WillowSkelControl_RotateFlapFromFiring_2'),,(BoneName="Alien_Bottom_R_Flap",ControlType=WEAP_BONE_CONTROL_Flap,bUseInFirstPerson=True,bUseInThirdPerson=False,ControlTemplate=WillowSkelControl_RotateFlapFromFiring'GD_Weap_SniperRifles.Barrel.SR_Barrel_Alien_RailGun:WillowSkelControl_RotateFlapFromFiring_3'))</code>
+					<code profiles="default">set GD_Orchid_BossWeapons.SniperRifles.SR_Barrel_Dahl_Pimpernel bFlapsEnabled True</code>
+					<code profiles="default">set GD_Orchid_BossWeapons.SniperRifles.SR_Barrel_Dahl_Pimpernel FlapsExpandDuration (BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)</code>
+					<code profiles="default">set GD_Orchid_BossWeapons.SniperRifles.SR_Barrel_Dahl_Pimpernel FlapsCollapseDuration (BaseValueConstant=2.00000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)</code>
+				</category>
+			</category>
+		</category>
+	</body>
+</BLCMM>
+
+#Commands:
+say RGB Pimpernel Added
+say IMPORTANT: YOU NEED COMMAND EXTENSION SDK MOD FOR THIS TO WORK
+set GD_Orchid_BossWeapons.SniperRifles.SR_Barrel_Dahl_Pimpernel WeaponAttributeEffects ((AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Dahl',InitializationDefinition=None,BaseValueScaleConstant=0.100000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponSpread',ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.WeaponManufacturer.Weapon_Is_Dahl',InitializationDefinition=None,BaseValueScaleConstant=-0.300000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponStatusEffectChanceModifier',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)),(AttributeToModify=AttributeDefinition'D_Attributes.Weapon.WeaponStatusEffectDamage',ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.200000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)))
+set GD_Orchid_BossWeapons.SniperRifles.Sniper_Maliwan_3_Pimpernel:WeaponPartListCollectionDefinition_314 ElementalPartData (bEnabled=True,WeightedParts=((Part=WeaponPartDefinition'GD_Weap_SniperRifles.elemental.SR_Elemental_None',Manufacturers=,MinGameStageIndex=0,MaxGameStageIndex=1,DefaultWeightIndex=0)))
+set GD_Orchid_BossWeapons.FiringModes.Bullet_Sniper_Maliwan_Pimpernel_Child ConditionalPartSysTemplate None
+set GD_Orchid_BossWeapons.FiringModes.Bullet_Sniper_Maliwan_Pimpernel_Child PartSysTemplate ParticleSystem'FX_WEP_Trails.Particles.Part_Wep_Tracer_Wavy_Explosive'
+set GD_Orchid_BossWeapons.FiringModes.Bullet_Sniper_Maliwan_Pimpernel_Child DamageTypeDefinition WillowDamageTypeDefinition'GD_Explosive.DamageType.DmgType_Explosive_Impact'
+set GD_Orchid_BossWeapons.FiringModes.Bullet_Sniper_Maliwan_Pimpernel_Child TimerEvents ((Time=0.10,Response=(SplitNum=1,SplitAngle=72.000000,SplitAngleOffset=0.000000,SplitDistance=00000,SplitFire=FiringModeDefinition'GD_Orchid_BossWeapons.FiringModes.Bullet_Sniper_Maliwan_Pimpernel_Child2',NewSpeed=0.000000,bDetonate=False,bRespawnTracer=False,bUpdateBeamSourceLocation=False,Behaviors=)),(Time=0.10,Response=(SplitNum=1,SplitAngle=72.000000,SplitAngleOffset=72.000000,SplitDistance=0,SplitFire=FiringModeDefinition'GD_Orchid_BossWeapons.FiringModes.Bullet_Sniper_Maliwan_Pimpernel_Child3',NewSpeed=0.000000,bDetonate=False,bRespawnTracer=False,bUpdateBeamSourceLocation=False,Behaviors=)),(Time=0.10,Response=(SplitNum=1,SplitAngle=72.000000,SplitAngleOffset=144.000000,SplitDistance=0,SplitFire=FiringModeDefinition'GD_Orchid_BossWeapons.FiringModes.Bullet_Sniper_Maliwan_Pimpernel_Child4',NewSpeed=0.000000,bDetonate=False,bRespawnTracer=False,bUpdateBeamSourceLocation=False,Behaviors=)),(Time=0.10,Response=(SplitNum=1,SplitAngle=72.000000,SplitAngleOffset=216.000000,SplitDistance=0,SplitFire=FiringModeDefinition'GD_Orchid_BossWeapons.FiringModes.Bullet_Sniper_Maliwan_Pimpernel_Child5',NewSpeed=0.000000,bDetonate=False,bRespawnTracer=False,bUpdateBeamSourceLocation=False,Behaviors=)),(Time=0.10,Response=(SplitNum=1,SplitAngle=72.000000,SplitAngleOffset=288.000000,SplitDistance=0,SplitFire=FiringModeDefinition'GD_Orchid_BossWeapons.FiringModes.Bullet_Sniper_Maliwan_Pimpernel_Child6',NewSpeed=0.000000,bDetonate=True,bRespawnTracer=False,bUpdateBeamSourceLocation=False,Behaviors=)))
+set GD_Orchid_BossWeapons.FiringModes.Bullet_Sniper_Maliwan_Pimpernel_Child2 DamageTypeDefinition WillowDamageTypeDefinition'GD_Incendiary.DamageType.DmgType_Incendiary_Impact'
+set GD_Orchid_BossWeapons.FiringModes.Bullet_Sniper_Maliwan_Pimpernel_Child2 ConditionalPartSysTemplate None
+set GD_Orchid_BossWeapons.FiringModes.Bullet_Sniper_Maliwan_Pimpernel_Child2 PartSysTemplate ParticleSystem'FX_WEP_Trails.Particles.Part_Wep_Tracer_Wavy_Incendiary'
+set GD_Orchid_BossWeapons.FiringModes.Bullet_Sniper_Maliwan_Pimpernel_Child3 DamageTypeDefinition WillowDamageTypeDefinition'GD_Amp.DamageType.DmgType_Amp_Impact'
+set GD_Orchid_BossWeapons.FiringModes.Bullet_Sniper_Maliwan_Pimpernel_Child3 ConditionalPartSysTemplate None
+set GD_Orchid_BossWeapons.FiringModes.Bullet_Sniper_Maliwan_Pimpernel_Child3 PartSysTemplate ParticleSystem'FX_WEP_Trails.Particles.Part_Wep_Tracer_Wavy_Slag'
+set GD_Orchid_BossWeapons.FiringModes.Bullet_Sniper_Maliwan_Pimpernel_Child4 DamageTypeDefinition WillowDamageTypeDefinition'GD_Shock.DamageType.DmgType_Shock_Impact'
+set GD_Orchid_BossWeapons.FiringModes.Bullet_Sniper_Maliwan_Pimpernel_Child4 ConditionalPartSysTemplate None
+set GD_Orchid_BossWeapons.FiringModes.Bullet_Sniper_Maliwan_Pimpernel_Child4 PartSysTemplate ParticleSystem'FX_WEP_Trails.Particles.Part_Wep_Tracer_Wavy_Shock'
+set GD_Orchid_BossWeapons.FiringModes.Bullet_Sniper_Maliwan_Pimpernel_Child5 DamageTypeDefinition WillowDamageTypeDefinition'GD_Corrosive.DamageType.DmgType_Corrosive_Impact'
+set GD_Orchid_BossWeapons.FiringModes.Bullet_Sniper_Maliwan_Pimpernel_Child5 ConditionalPartSysTemplate None
+set GD_Orchid_BossWeapons.FiringModes.Bullet_Sniper_Maliwan_Pimpernel_Child5 PartSysTemplate ParticleSystem'FX_WEP_Trails.Particles.Part_Wep_Tracer_Wavy_Corrosive'
+set GD_Orchid_BossWeapons.FiringModes.Bullet_Sniper_Maliwan_Pimpernel_Child6 DamageTypeDefinition WillowDamageTypeDefinition'GD_Explosive.DamageType.DmgType_Explosive_Impact'
+set GD_Orchid_BossWeapons.FiringModes.Bullet_Sniper_Maliwan_Pimpernel_Child6 ConditionalPartSysTemplate None
+set GD_Orchid_BossWeapons.FiringModes.Bullet_Sniper_Maliwan_Pimpernel_Child6 PartSysTemplate ParticleSystem'FX_WEP_Trails.Particles.Part_Wep_Tracer_Wavy_Explosive'
+set GD_Orchid_BossWeapons.Name.Title.Title__Unique_Pimpernel PartName Prism-nel
+set GD_Orchid_BossWeapons.Name.Title.Title__Unique_Pimpernel rarity (BaseValueConstant=503.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+set GD_Orchid_BossWeapons.Name.Title.Title__Unique_Pimpernel:AttributePresentationDefinition_8 NoConstraintText Is he in heaven?—Is he in hell? That damned, elusive Pimpernel?
+set GD_Orchid_BossWeapons.Name.Title.Title__Unique_Pimpernel:AttributePresentationDefinition_8 TextColor (B=70,G=70,R=220,A=255)
+set GD_Orchid_BossWeapons.ManufacturerMaterials.Mat_Maliwan_3_Pimpernel Material Anemone_GunMaterials.Materials.sniper.Mati_Jakobs_Pearl_Godfinger
+set GD_Orchid_BossWeapons.SniperRifles.SR_Barrel_Dahl_Pimpernel GestaltModeSkeletalMeshName SR_Barrel_Alien
+set GD_Orchid_BossWeapons.SniperRifles.SR_Barrel_Dahl_Pimpernel BoneControllers ((BoneName="Alien_Top_L_Flap",ControlType=WEAP_BONE_CONTROL_Flap,bUseInFirstPerson=True,bUseInThirdPerson=False,ControlTemplate=WillowSkelControl_RotateFlapFromFiring'GD_Weap_SniperRifles.Barrel.SR_Barrel_Alien_RailGun:WillowSkelControl_RotateFlapFromFiring_0'),,(BoneName="Alien_Top_R_Flap",ControlType=WEAP_BONE_CONTROL_Flap,bUseInFirstPerson=True,bUseInThirdPerson=False,ControlTemplate=WillowSkelControl_RotateFlapFromFiring'GD_Weap_SniperRifles.Barrel.SR_Barrel_Alien_RailGun:WillowSkelControl_RotateFlapFromFiring_1'),,(BoneName="Alien_Bottom_L_Flap",ControlType=WEAP_BONE_CONTROL_Flap,bUseInFirstPerson=True,bUseInThirdPerson=False,ControlTemplate=WillowSkelControl_RotateFlapFromFiring'GD_Weap_SniperRifles.Barrel.SR_Barrel_Alien_RailGun:WillowSkelControl_RotateFlapFromFiring_2'),,(BoneName="Alien_Bottom_R_Flap",ControlType=WEAP_BONE_CONTROL_Flap,bUseInFirstPerson=True,bUseInThirdPerson=False,ControlTemplate=WillowSkelControl_RotateFlapFromFiring'GD_Weap_SniperRifles.Barrel.SR_Barrel_Alien_RailGun:WillowSkelControl_RotateFlapFromFiring_3'))
+set GD_Orchid_BossWeapons.SniperRifles.SR_Barrel_Dahl_Pimpernel bFlapsEnabled True
+set GD_Orchid_BossWeapons.SniperRifles.SR_Barrel_Dahl_Pimpernel FlapsExpandDuration (BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+set GD_Orchid_BossWeapons.SniperRifles.SR_Barrel_Dahl_Pimpernel FlapsCollapseDuration (BaseValueConstant=2.00000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000)
+
