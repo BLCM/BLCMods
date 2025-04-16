@@ -3,12 +3,19 @@ Welcome to sage-72's mods
 1.)Multi-Elemental Effervescent Pimpernel
 
 ABOUT THE MOD:
+
 Heavily Inspired by Aaron0000's Chroma
+
 Makes the 5 pellets of Pimpernel be a different element each
+
 Turned Rarity to Effervescent
+
 Changed Texture to be Effervescent
+
 Added E-Tech Barrel with Flaps
+
 Changed Name to Prism-nel
+
 Changed Red Text
 
 
