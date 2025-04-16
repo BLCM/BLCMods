@@ -19,7 +19,7 @@ Changed Name to Prism-nel
 Changed Red Text
 
 
-PREREQUISITES: Command Extension SDK Mod and probably disable your Sanity Check too
+PREREQUISITES: Command Extension SDK Mod and Sanity Saver SDK Mod (to disable sanity check)
 
 If you dont know what an SDK Mod is, install "Willow2 SDK" first https://bl-sdk.github.io/willow2-mod-db/
 
