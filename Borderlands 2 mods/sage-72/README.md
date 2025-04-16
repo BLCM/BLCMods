@@ -20,9 +20,11 @@ Changed Red Text
 
 
 PREREQUISITES: Command Extension SDK Mod and probably disable your Sanity Check too
+
 If you dont know what an SDK Mod is, install "Willow2 SDK" first https://bl-sdk.github.io/willow2-mod-db/
 
-After Installing
+AFTER INSTALLING:
+
 When you're using modpacks or other mods, be sure to load this last in the console or put it at the bottom of your modpack using BLCMM so it overwrites changes made by the Modpack
 
 You can farm for the Pimpernel or Copy paste this code to add it in-game using SDK Mod "Vendor Edit" 
@@ -33,7 +35,9 @@ If your Pimpernel has an element, I suggest re-farming or using Vendor Edit to c
 
 
 
-Special Thanks to:
+SPECIAL THANKS
 Aaron0000 for giving me permission to use his Chroma code as a base/template for making the code for the Bullets as well as letting me use his code to change the barrel to be E-Tech with the flaps
+
 EdamaneTv ZetaDaemon and PawnM0v3 for helping me understand how to code all of this in the first place.
+
 apple1417 for the Command Extension mod to make this happen as well as their documentation to help me make sdk mods in text
