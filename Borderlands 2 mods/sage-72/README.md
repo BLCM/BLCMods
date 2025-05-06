@@ -1,6 +1,8 @@
 Welcome to sage-72's mods
 
 1.)Multi-Elemental Effervescent Pimpernel
+2.)Accurate Anarchy
+3.)Make it Sparkle Scales DoT with Anarchy Stacks
 
 ABOUT THE MOD:
 
