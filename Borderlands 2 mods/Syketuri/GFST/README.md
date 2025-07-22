@@ -1,6 +1,6 @@
 --- OVERVIEW ---
 * Deathtrap damage has been buffed significantly, across the board (all attacks).
-* * Several of Gaige's skills have been given 2x, 3x, or higher buffs.
+* Several of Gaige's skills have been given 2x, 3x, or higher buffs.
 * Several of Gaige's skills reworked to give some sort of bonus per anarchy stack.
 * On that note, per stack bonus to skills now is nonlinear at 5% scaling. Bonus = Rate * Stacks^1.05
 * Hence, all skills (except Anarchy) actually give a bonus per SCALED Anarchy stack. Anarchy itself does not do this,
