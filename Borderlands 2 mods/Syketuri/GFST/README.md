@@ -33,8 +33,8 @@
 * One Two Boom 16x buff to damage and DOT. Animation Doubletime.
 * Wires Don't Talk 4x buff.
 * Make It Sparkle now gives +0.5% Shock Damage per scaled Anarchy stack.
---- ORDERED CHAOS ---
 
+--- ORDERED CHAOS ---
 * Robot Rampage now gives +55% Melee Damage to you and Deathtrap.
 * Annoyed Android now gives +7% Melee Damage and both buffs apply to Gaige.
 * Discord now gives +65% Melee Damage while active.
