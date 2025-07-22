@@ -7,6 +7,7 @@
 * because it is not borrowing and scaling With Claws' calculation for the per stack bonus.
 * Some skills reworked to give cross tree synergy.
 * Damage is currently overtuned, slag is irrelevant on OP10. This is 1.0 version, so it's not much of a problem.
+
 --- BEST FRIENDS FOREVER ---
 * Close Enough ricochet damage reduction softens with skill level. 50%/45%/40%/35%/30%
 * Cooking up Trouble 2x buff, now applies to Deathtrap.
@@ -19,6 +20,7 @@
 * 20% Cooler +6% |-> +13%, now gives equivalent Elemental Damage
 * Sharing is Caring now gives Deathtrap Melee Damage per scaled Anarchy stack equivalent to With Claws
 * Sharing is Caring Deathtrap bonus gives PreAdd Melee Damage at 5% scaling. That is 0.05 * MeleeBonusPerScaledStack
+
 --- LITTLE BIG TROUBLE ---
 * More Pep 2x buff.
 * Myelin Shield Capacity +3% |-> +10% and now gives equivalent Deathtrap health.
@@ -32,6 +34,7 @@
 * Wires Don't Talk 4x buff.
 * Make It Sparkle now gives +0.5% Shock Damage per scaled Anarchy stack.
 --- ORDERED CHAOS ---
+
 * Robot Rampage now gives +55% Melee Damage to you and Deathtrap.
 * Annoyed Android now gives +7% Melee Damage and both buffs apply to Gaige.
 * Discord now gives +65% Melee Damage while active.
