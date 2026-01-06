@@ -1,0 +1,534 @@
+<BLCMM v="1">
+#<!!!You opened a file saved with BLCMM in FilterTool. Please update to BLCMM to properly open this file!!!>
+	<head>
+		<type name="BL2" offline="true"/>
+		<profiles>
+			<profile name="default" current="true"/>
+		</profiles>
+	</head>
+	<body>
+		<category name="Limitless_v1.5">
+			<category name="SP Options (Includes early SP)" MUT="true">
+				<category name="1 SP / level">
+					<code profiles="">set GD_Globals.Skills.INI_SkillPointsPerLevelUp ConditionalInitialization (bEnabled=True,ConditionalExpressionList=((BaseValueIfTrue=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),Expressions=((AttributeOperand1=AttributeDefinition'D_Attributes.ExperienceResourcePool.PlayerExperienceLevel',ComparisonOperator=OPERATOR_GreaterThanOrEqual,Operand2Usage=OPERAND_PreferAttribute,AttributeOperand2=None,ConstantOperand2=1)))),DefaultBaseValue=(BaseValueConstant=0,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1))</code>
+					<code profiles="">set GD_Globals.Skills.INI_TotalSkillPointsForCurrentLevel ConditionalInitialization (bEnabled=True,ConditionalExpressionList=((BaseValueIfTrue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Globals.Skills.INI_TotalSkillPointsForCurrentLevelFormula',BaseValueScaleConstant=1.000000),Expressions=((AttributeOperand1=AttributeDefinition'D_Attributes.ExperienceResourcePool.PlayerExperienceLevel',ComparisonOperator=OPERATOR_GreaterThanOrEqual,Operand2Usage=OPERAND_PreferAttribute,AttributeOperand2=None,ConstantOperand2=1.0000000)))),DefaultBaseValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))</code>
+					<code profiles="">set GD_Globals.Skills.INI_TotalSkillPointsForCurrentLevelFormula ValueFormula (bEnabled=True,Multiplier=(BaseValueConstant=1.0000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),Level=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.ExperienceResourcePool.PlayerExperienceLevel',InitializationDefinition=None,BaseValueScaleConstant=1.000000),Power=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),Offset=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))</code>
+					<code profiles="">set GD_Globals.Skills.INI_TotalSkillPointsForCurrentLevelFormula RangeRestriction (bEnableMinValueRestriction=False,MinValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bEnableMaxValueRestriction=False,MaxValue=(BaseValueConstant=900.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))</code>
+				</category>
+				<category name="2 SP / level">
+					<code profiles="">set GD_Globals.Skills.INI_SkillPointsPerLevelUp ConditionalInitialization (bEnabled=True,ConditionalExpressionList=((BaseValueIfTrue=(BaseValueConstant=2,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),Expressions=((AttributeOperand1=AttributeDefinition'D_Attributes.ExperienceResourcePool.PlayerExperienceLevel',ComparisonOperator=OPERATOR_GreaterThanOrEqual,Operand2Usage=OPERAND_PreferAttribute,AttributeOperand2=None,ConstantOperand2=1)))),DefaultBaseValue=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1))</code>
+					<code profiles="">set GD_Globals.Skills.INI_TotalSkillPointsForCurrentLevel ConditionalInitialization (bEnabled=True,ConditionalExpressionList=((BaseValueIfTrue=(BaseValueConstant=2.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Globals.Skills.INI_TotalSkillPointsForCurrentLevelFormula',BaseValueScaleConstant=1.000000),Expressions=((AttributeOperand1=AttributeDefinition'D_Attributes.ExperienceResourcePool.PlayerExperienceLevel',ComparisonOperator=OPERATOR_GreaterThanOrEqual,Operand2Usage=OPERAND_PreferAttribute,AttributeOperand2=None,ConstantOperand2=1.0000000)))),DefaultBaseValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))</code>
+					<code profiles="">set GD_Globals.Skills.INI_TotalSkillPointsForCurrentLevelFormula ValueFormula (bEnabled=True,Multiplier=(BaseValueConstant=2.0000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),Level=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.ExperienceResourcePool.PlayerExperienceLevel',InitializationDefinition=None,BaseValueScaleConstant=1.000000),Power=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),Offset=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))</code>
+					<code profiles="">set GD_Globals.Skills.INI_TotalSkillPointsForCurrentLevelFormula RangeRestriction (bEnableMinValueRestriction=False,MinValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bEnableMaxValueRestriction=False,MaxValue=(BaseValueConstant=900.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))</code>
+				</category>
+				<category name="5 SP / level">
+					<code profiles="">set GD_Globals.Skills.INI_SkillPointsPerLevelUp ConditionalInitialization (bEnabled=True,ConditionalExpressionList=((BaseValueIfTrue=(BaseValueConstant=5,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),Expressions=((AttributeOperand1=AttributeDefinition'D_Attributes.ExperienceResourcePool.PlayerExperienceLevel',ComparisonOperator=OPERATOR_GreaterThanOrEqual,Operand2Usage=OPERAND_PreferAttribute,AttributeOperand2=None,ConstantOperand2=1)))),DefaultBaseValue=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1))</code>
+					<code profiles="">set GD_Globals.Skills.INI_TotalSkillPointsForCurrentLevel ConditionalInitialization (bEnabled=True,ConditionalExpressionList=((BaseValueIfTrue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Globals.Skills.INI_TotalSkillPointsForCurrentLevelFormula',BaseValueScaleConstant=1.000000),Expressions=((AttributeOperand1=AttributeDefinition'D_Attributes.ExperienceResourcePool.PlayerExperienceLevel',ComparisonOperator=OPERATOR_GreaterThanOrEqual,Operand2Usage=OPERAND_PreferAttribute,AttributeOperand2=None,ConstantOperand2=1.0000000)))),DefaultBaseValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))</code>
+					<code profiles="">set GD_Globals.Skills.INI_TotalSkillPointsForCurrentLevelFormula ValueFormula (bEnabled=True,Multiplier=(BaseValueConstant=5.0000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),Level=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.ExperienceResourcePool.PlayerExperienceLevel',InitializationDefinition=None,BaseValueScaleConstant=1.000000),Power=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),Offset=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))</code>
+					<code profiles="">set GD_Globals.Skills.INI_TotalSkillPointsForCurrentLevelFormula RangeRestriction (bEnableMinValueRestriction=False,MinValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bEnableMaxValueRestriction=False,MaxValue=(BaseValueConstant=900.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))</code>
+				</category>
+				<category name="10 SP / level">
+					<code profiles="default">set GD_Globals.Skills.INI_SkillPointsPerLevelUp ConditionalInitialization (bEnabled=True,ConditionalExpressionList=((BaseValueIfTrue=(BaseValueConstant=10,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),Expressions=((AttributeOperand1=AttributeDefinition'D_Attributes.ExperienceResourcePool.PlayerExperienceLevel',ComparisonOperator=OPERATOR_GreaterThanOrEqual,Operand2Usage=OPERAND_PreferAttribute,AttributeOperand2=None,ConstantOperand2=1)))),DefaultBaseValue=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1))</code>
+					<code profiles="default">set GD_Globals.Skills.INI_TotalSkillPointsForCurrentLevel ConditionalInitialization (bEnabled=True,ConditionalExpressionList=((BaseValueIfTrue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Globals.Skills.INI_TotalSkillPointsForCurrentLevelFormula',BaseValueScaleConstant=1.000000),Expressions=((AttributeOperand1=AttributeDefinition'D_Attributes.ExperienceResourcePool.PlayerExperienceLevel',ComparisonOperator=OPERATOR_GreaterThanOrEqual,Operand2Usage=OPERAND_PreferAttribute,AttributeOperand2=None,ConstantOperand2=1.0000000)))),DefaultBaseValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))</code>
+					<code profiles="default">set GD_Globals.Skills.INI_TotalSkillPointsForCurrentLevelFormula ValueFormula (bEnabled=True,Multiplier=(BaseValueConstant=10.0000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),Level=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.ExperienceResourcePool.PlayerExperienceLevel',InitializationDefinition=None,BaseValueScaleConstant=1.000000),Power=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),Offset=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))</code>
+					<code profiles="default">set GD_Globals.Skills.INI_TotalSkillPointsForCurrentLevelFormula RangeRestriction (bEnableMinValueRestriction=False,MinValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bEnableMaxValueRestriction=False,MaxValue=(BaseValueConstant=900.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))</code>
+				</category>
+			</category>
+			<category name="Increased Skill Limits" MUT="true">
+				<category name="100 Point Skills">
+					<category name="Krieg">
+						<hotfix name="Hotfix" package="GD_Lilac_Psycho_Streaming">
+							<code profiles="default">set GD_Lilac_Skills_Bloodlust.Skills.BloodBath MaxGrade 100</code>
+							<code profiles="default">set GD_Lilac_Skills_Bloodlust.Skills.BloodBathChild MaxGrade 100</code>
+							<code profiles="default">set GD_Lilac_Skills_Bloodlust.Skills.BloodfilledGuns MaxGrade 100</code>
+							<code profiles="default">set GD_Lilac_Skills_Bloodlust.Skills.BloodOverdrive MaxGrade 100</code>
+							<code profiles="default">set GD_Lilac_Skills_Bloodlust.Skills.BloodOverdriveChild MaxGrade 100</code>
+							<code profiles="default">set GD_Lilac_Skills_Bloodlust.Skills.BloodyRevival MaxGrade 100</code>
+							<code profiles="default">set GD_Lilac_Skills_Bloodlust.Skills.BloodyTwitch MaxGrade 100</code>
+							<code profiles="default">set GD_Lilac_Skills_Bloodlust.Skills.BoilingBlood MaxGrade 100</code>
+							<code profiles="default">set GD_Lilac_Skills_Bloodlust.Skills.BloodTrance MaxGrade 100</code>
+							<code profiles="default">set GD_Lilac_Skills_Bloodlust.Skills.FuelTheBlood MaxGrade 100</code>
+							<code profiles="default">set GD_Lilac_Skills_Bloodlust.Skills.FuelTheBloodChild MaxGrade 100</code>
+							<code profiles="default">set GD_Lilac_Skills_Bloodlust.Skills.NervousBlood MaxGrade 100</code>
+							<code profiles="default">set GD_Lilac_Skills_Bloodlust.Skills.TasteOfBlood MaxGrade 100</code>
+							<code profiles="default">set GD_Lilac_Skills_Mania.Skills.EmbraceThePain MaxGrade 100</code>
+							<code profiles="default">set GD_Lilac_Skills_Mania.Skills.EmptyRage MaxGrade 100</code>
+							<code profiles="default">set GD_Lilac_Skills_Mania.Skills.FeedTheMeat MaxGrade 100</code>
+							<code profiles="default">set GD_Lilac_Skills_Mania.Skills.FuelTheRampage MaxGrade 100</code>
+							<code profiles="default">set GD_Lilac_Skills_Mania.Skills.SaltTheWound MaxGrade 100</code>
+							<code profiles="default">set GD_Lilac_Skills_Mania.Skills.SilenceTheVoices MaxGrade 100</code>
+							<code profiles="default">set GD_Lilac_Skills_Mania.Skills.StripTheFlesh MaxGrade 100</code>
+							<code profiles="default">set GD_Lilac_Skills_Mania.Skills.ThrillOfTheKill MaxGrade 100</code>
+							<code profiles="default">set GD_Lilac_Skills_Hellborn.Skills.BurnBabyBurn MaxGrade 100</code>
+							<code profiles="default">set GD_Lilac_Skills_Hellborn.Skills.BurnBabyBurnChild MaxGrade 100</code>
+							<code profiles="default">set GD_Lilac_Skills_Hellborn.Skills.ElementalElation MaxGrade 100</code>
+							<code profiles="default">set GD_Lilac_Skills_Hellborn.Skills.ElementalEmpathy MaxGrade 100</code>
+							<code profiles="default">set GD_Lilac_Skills_Hellborn.Skills.FireFiend MaxGrade 100</code>
+							<code profiles="default">set GD_Lilac_Skills_Hellborn.Skills.FlameFlare MaxGrade 100</code>
+							<code profiles="default">set GD_Lilac_Skills_Hellborn.Skills.FlameFlare_Reigniter MaxGrade 100</code>
+							<code profiles="default">set GD_Lilac_Skills_Hellborn.Skills.FuelTheFire MaxGrade 100</code>
+							<code profiles="default">set GD_Lilac_Skills_Hellborn.Skills.NumbedNerves MaxGrade 100</code>
+							<code profiles="default">set GD_Lilac_Skills_Hellborn.Skills.PainIsPower MaxGrade 100</code>
+						</hotfix>
+					</category>
+					<category name="Sal">
+						<hotfix name="Hotfix" package="GD_Mercenary_Streaming">
+							<code profiles="default">set GD_Mercenary_Skills.Brawn.AintGotTimeToBleed MaxGrade 100</code>
+							<code profiles="default">set GD_Mercenary_Skills.Brawn.Asbestos MaxGrade 100</code>
+							<code profiles="default">set GD_Mercenary_Skills.Brawn.BusThatCantSlowDown MaxGrade 100</code>
+							<code profiles="default">set GD_Mercenary_Skills.Brawn.Diehard MaxGrade 100</code>
+							<code profiles="default">set GD_Mercenary_Skills.Brawn.ImTheJuggernaut MaxGrade 100</code>
+							<code profiles="default">set GD_Mercenary_Skills.Brawn.Incite MaxGrade 100</code>
+							<code profiles="default">set GD_Mercenary_Skills.Brawn.Incite_Active MaxGrade 100</code>
+							<code profiles="default">set GD_Mercenary_Skills.Brawn.JustGotReal MaxGrade 100</code>
+							<code profiles="default">set GD_Mercenary_Skills.Brawn.OutOfBubblegum MaxGrade 100</code>
+							<code profiles="default">set GD_Mercenary_Skills.Brawn.SexualTyrannosaurus MaxGrade 100</code>
+							<code profiles="default">set GD_Mercenary_Skills.Brawn.SexualTyrannosaurus_Active MaxGrade 100</code>
+							<code profiles="default">set GD_Mercenary_Skills.Gun_Lust.AllIneedIsOne MaxGrade 100</code>
+							<code profiles="default">set GD_Mercenary_Skills.Gun_Lust.AllIneedIsOne_Active MaxGrade 100</code>
+							<code profiles="default">set GD_Mercenary_Skills.Gun_Lust.DivergentLikness MaxGrade 100</code>
+							<code profiles="default">set GD_Mercenary_Skills.Gun_Lust.ImYourHuckleberry MaxGrade 100</code>
+							<code profiles="default">set GD_Mercenary_Skills.Gun_Lust.ImYourHuckleberry_Offhand MaxGrade 100</code>
+							<code profiles="default">set GD_Mercenary_Skills.Gun_Lust.KeepItPipingHot MaxGrade 100</code>
+							<code profiles="default">set GD_Mercenary_Skills.Gun_Lust.LayWaste MaxGrade 100</code>
+							<code profiles="default">set GD_Mercenary_Skills.Gun_Lust.LockedandLoaded MaxGrade 100</code>
+							<code profiles="default">set GD_Mercenary_Skills.Gun_Lust.LockedAndLoaded_Active MaxGrade 100</code>
+							<code profiles="default">set GD_Mercenary_Skills.Gun_Lust.MoneyShot MaxGrade 100</code>
+							<code profiles="default">set GD_Mercenary_Skills.Gun_Lust.QuickDraw MaxGrade 100</code>
+							<code profiles="default">set GD_Mercenary_Skills.Rampage.5Shotsor6 MaxGrade 100</code>
+							<code profiles="default">set GD_Mercenary_Skills.Rampage.YippeeKiYay MaxGrade 100</code>
+							<code profiles="default">set GD_Mercenary_Skills.Rampage.AllInTheReflexes MaxGrade 100</code>
+							<code profiles="default">set GD_Mercenary_Skills.Rampage.FilledtotheBrim MaxGrade 100</code>
+							<code profiles="default">set GD_Mercenary_Skills.Rampage.GetSome MaxGrade 100</code>
+							<code profiles="default">set GD_Mercenary_Skills.Rampage.GetSome_Active MaxGrade 100</code>
+							<code profiles="default">set GD_Mercenary_Skills.Rampage.ImReadyAlready MaxGrade 100</code>
+							<code profiles="default">set GD_Mercenary_Skills.Rampage.Inconceivable MaxGrade 100</code>
+							<code profiles="default">set GD_Mercenary_Skills.Rampage.LastLonger MaxGrade 100</code>
+						</hotfix>
+					</category>
+					<category name="Maya">
+						<hotfix name="Hotfix" package="GD_Siren_Streaming">
+							<code profiles="default">set GD_Siren_Skills.Cataclysm.Backdraft MaxGrade 100</code>
+							<code profiles="default">set GD_Siren_Skills.Cataclysm.Backdraft_Feedback MaxGrade 100</code>
+							<code profiles="default">set GD_Siren_Skills.Cataclysm.BlightPhoenix MaxGrade 100</code>
+							<code profiles="default">set GD_Siren_Skills.Cataclysm.ChainReaction MaxGrade 100</code>
+							<code profiles="default">set GD_Siren_Skills.Cataclysm.Flicker MaxGrade 100</code>
+							<code profiles="default">set GD_Siren_Skills.Cataclysm.Foresight MaxGrade 100</code>
+							<code profiles="default">set GD_Siren_Skills.Cataclysm.Helios MaxGrade 100</code>
+							<code profiles="default">set GD_Siren_Skills.Cataclysm.Immolate MaxGrade 100</code>
+							<code profiles="default">set GD_Siren_Skills.Cataclysm.Reaper MaxGrade 100</code>
+							<code profiles="default">set GD_Siren_Skills.Harmony.Elated MaxGrade 100</code>
+							<code profiles="default">set GD_Siren_Skills.Harmony.LifeTap MaxGrade 100</code>
+							<code profiles="default">set GD_Siren_Skills.Harmony.MindsEye MaxGrade 100</code>
+							<code profiles="default">set GD_Siren_Skills.Harmony.Recompense MaxGrade 100</code>
+							<code profiles="default">set GD_Siren_Skills.Harmony.Recompense_Feedback MaxGrade 100</code>
+							<code profiles="default">set GD_Siren_Skills.Harmony.Restoration MaxGrade 100</code>
+							<code profiles="default">set GD_Siren_Skills.Harmony.Sustenance MaxGrade 100</code>
+							<code profiles="default">set GD_Siren_Skills.Harmony.SweetRelease MaxGrade 100</code>
+							<code profiles="default">set GD_Siren_Skills.Harmony.Wreck MaxGrade 100</code>
+							<code profiles="default">set GD_Siren_Skills.Motion.Accelerate MaxGrade 100</code>
+							<code profiles="default">set GD_Siren_Skills.Motion.Fleet MaxGrade 100</code>
+							<code profiles="default">set GD_Siren_Skills.Motion.Inertia MaxGrade 100</code>
+							<code profiles="default">set GD_Siren_Skills.Motion.KineticReflection MaxGrade 100</code>
+							<code profiles="default">set GD_Siren_Skills.Motion.Quicken MaxGrade 100</code>
+							<code profiles="default">set GD_Siren_Skills.Motion.SubSequence MaxGrade 100</code>
+							<code profiles="default">set GD_Siren_Skills.Motion.Subsequence_Feedback MaxGrade 100</code>
+							<code profiles="default">set GD_Siren_Skills.Motion.Suspension MaxGrade 100</code>
+							<code profiles="default">set GD_Siren_Skills.Motion.Ward MaxGrade 100</code>
+						</hotfix>
+					</category>
+					<category name="Zero">
+						<hotfix name="Hotfix" package="GD_Assassin_Streaming">
+							<code profiles="default">set GD_Assassin_Skills.Bloodshed.Backstab MaxGrade 100</code>
+							<code profiles="default">set GD_Assassin_Skills.Bloodshed.BeLikeWater MaxGrade 100</code>
+							<code profiles="default">set GD_Assassin_Skills.Bloodshed.BeLikeWater_Melee_Active MaxGrade 100</code>
+							<code profiles="default">set GD_Assassin_Skills.Bloodshed.BeLikeWater_Ranged_Active MaxGrade 100</code>
+							<code profiles="default">set GD_Assassin_Skills.Bloodshed.Followthrough MaxGrade 100</code>
+							<code profiles="default">set GD_Assassin_Skills.Bloodshed.Grim MaxGrade 100</code>
+							<code profiles="default">set GD_Assassin_Skills.Bloodshed.IronHand MaxGrade 100</code>
+							<code profiles="default">set GD_Assassin_Skills.Bloodshed.KillingBlow MaxGrade 100</code>
+							<code profiles="default">set GD_Assassin_Skills.Bloodshed.LikeTheWind MaxGrade 100</code>
+							<code profiles="default">set GD_Assassin_Skills.Bloodshed.LikeTheWind_Active MaxGrade 100</code>
+							<code profiles="default">set GD_Assassin_Skills.Bloodshed.Resurgence MaxGrade 100</code>
+							<code profiles="default">set GD_Assassin_Skills.Bloodshed.Resurgence_Active MaxGrade 100</code>
+							<code profiles="default">set GD_Assassin_Skills.Cunning.Ambush MaxGrade 100</code>
+							<code profiles="default">set GD_Assassin_Skills.Cunning.CounterStrike MaxGrade 100</code>
+							<code profiles="default">set GD_Assassin_Skills.Cunning.CounterStrike_Active MaxGrade 100</code>
+							<code profiles="default">set GD_Assassin_Skills.Cunning.FastHands MaxGrade 100</code>
+							<code profiles="default">set GD_Assassin_Skills.Cunning.Fearless MaxGrade 100</code>
+							<code profiles="default">set GD_Assassin_Skills.Cunning.Innervate MaxGrade 100</code>
+							<code profiles="default">set GD_Assassin_Skills.Cunning.RisingShot MaxGrade 100</code>
+							<code profiles="default">set GD_Assassin_Skills.Cunning.RisingShot_Active MaxGrade 100</code>
+							<code profiles="default">set GD_Assassin_Skills.Cunning.TwoFang MaxGrade 100</code>
+							<code profiles="default">set GD_Assassin_Skills.Cunning.Unforseen MaxGrade 100</code>
+							<code profiles="default">set GD_Assassin_Skills.Sniping.AtOneWithTheGun MaxGrade 100</code>
+							<code profiles="default">set GD_Assassin_Skills.Sniping.AtOneWithTheGun_IsNotIronsighting MaxGrade 100</code>
+							<code profiles="default">set GD_Assassin_Skills.Sniping.HeadShot MaxGrade 100</code>
+							<code profiles="default">set GD_Assassin_Skills.Sniping.KillConfirmed MaxGrade 100</code>
+							<code profiles="default">set GD_Assassin_Skills.Sniping.Killer MaxGrade 100</code>
+							<code profiles="default">set GD_Assassin_Skills.Sniping.OneShotOneKill MaxGrade 100</code>
+							<code profiles="default">set GD_Assassin_Skills.Sniping.Optics MaxGrade 100</code>
+							<code profiles="default">set GD_Assassin_Skills.Sniping.Precision MaxGrade 100</code>
+							<code profiles="default">set GD_Assassin_Skills.Sniping.Velocity MaxGrade 100</code>
+						</hotfix>
+					</category>
+					<category name="Axton">
+						<hotfix name="Hotfix" package="GD_Soldier_Streaming">
+							<code profiles="default">set GD_Soldier_Skills.Guerrilla.Able MaxGrade 100</code>
+							<code profiles="default">set GD_Soldier_Skills.Guerrilla.Able_Active MaxGrade 100</code>
+							<code profiles="default">set GD_Soldier_Skills.Guerrilla.CrisisManagement MaxGrade 100</code>
+							<code profiles="default">set GD_Soldier_Skills.Guerrilla.Grenadier MaxGrade 100</code>
+							<code profiles="default">set GD_Soldier_Skills.Guerrilla.LaserSight MaxGrade 100</code>
+							<code profiles="default">set GD_Soldier_Skills.Guerrilla.Onslaught MaxGrade 100</code>
+							<code profiles="default">set GD_Soldier_Skills.Guerrilla.Ready MaxGrade 100</code>
+							<code profiles="default">set GD_Soldier_Skills.Guerrilla.Sentry MaxGrade 100</code>
+							<code profiles="default">set GD_Soldier_Skills.Guerrilla.TacticalWithdrawal MaxGrade 100</code>
+							<code profiles="default">set GD_Soldier_Skills.Guerrilla.TacticalWithdrawal_Active MaxGrade 100</code>
+							<code profiles="default">set GD_Soldier_Skills.Guerrilla.TacticalWithdrawal_StopFiring MaxGrade 100</code>
+							<code profiles="default">set GD_Soldier_Skills.Guerrilla.Willing MaxGrade 100</code>
+							<code profiles="default">set GD_Soldier_Skills.Gunpowder.Battlefront MaxGrade 100</code>
+							<code profiles="default">set GD_Soldier_Skills.Gunpowder.DutyCalls MaxGrade 100</code>
+							<code profiles="default">set GD_Soldier_Skills.Gunpowder.Expertise MaxGrade 100</code>
+							<code profiles="default">set GD_Soldier_Skills.Gunpowder.Expertise_MovementSpeed MaxGrade 100</code>
+							<code profiles="default">set GD_Soldier_Skills.Gunpowder.Impact MaxGrade 100</code>
+							<code profiles="default">set GD_Soldier_Skills.Gunpowder.MetalStorm MaxGrade 100</code>
+							<code profiles="default">set GD_Soldier_Skills.Gunpowder.Overload MaxGrade 100</code>
+							<code profiles="default">set GD_Soldier_Skills.Gunpowder.Ranger MaxGrade 100</code>
+							<code profiles="default">set GD_Soldier_Skills.Gunpowder.Steady MaxGrade 100</code>
+							<code profiles="default">set GD_Soldier_Skills.Survival.Forbearance MaxGrade 100</code>
+							<code profiles="default">set GD_Soldier_Skills.Survival.Forbearance_Feedback MaxGrade 100</code>
+							<code profiles="default">set GD_Soldier_Skills.Survival.Grit MaxGrade 100</code>
+							<code profiles="default">set GD_Soldier_Skills.Survival.Grit_Feedback MaxGrade 100</code>
+							<code profiles="default">set GD_Soldier_Skills.Survival.HealthY MaxGrade 100</code>
+							<code profiles="default">set GD_Soldier_Skills.Survival.LastDitchEffort MaxGrade 100</code>
+							<code profiles="default">set GD_Soldier_Skills.Survival.Preparation MaxGrade 100</code>
+							<code profiles="default">set GD_Soldier_Skills.Survival.Preparation_Active MaxGrade 100</code>
+							<code profiles="default">set GD_Soldier_Skills.Survival.Pressure MaxGrade 100</code>
+							<code profiles="default">set GD_Soldier_Skills.Survival.QuickCharge MaxGrade 100</code>
+							<code profiles="default">set GD_Soldier_Skills.Survival.Resourceful MaxGrade 100</code>
+						</hotfix>
+					</category>
+					<category name="Gaige">
+						<hotfix name="Hotfix" package="GD_Tulip_Mechro_Streaming">
+							<code profiles="default">set GD_Tulip_Mechromancer_Skills.EmbraceChaos.AnnoyedAndroid MaxGrade 100</code>
+							<code profiles="default">set GD_Tulip_Mechromancer_Skills.EmbraceChaos.BloodSoakedShields MaxGrade 100</code>
+							<code profiles="default">set GD_Tulip_Mechromancer_Skills.EmbraceChaos.BloodSoakedShields_Feedback MaxGrade 100</code>
+							<code profiles="default">set GD_Tulip_Mechromancer_Skills.EmbraceChaos.DeathFromAbove MaxGrade 100</code>
+							<code profiles="default">set GD_Tulip_Mechromancer_Skills.EmbraceChaos.DeathFromAbove_Feedback MaxGrade 100</code>
+							<code profiles="default">set GD_Tulip_Mechromancer_Skills.EmbraceChaos.PreshrunkCyberpunk MaxGrade 100</code>
+							<code profiles="default">set GD_Tulip_Mechromancer_Skills.EmbraceChaos.SmallerLighterFaster MaxGrade 100</code>
+							<code profiles="default">set GD_Tulip_Mechromancer_Skills.EmbraceChaos.TheNthDegree MaxGrade 100</code>
+							<code profiles="default">set GD_Tulip_Mechromancer_Skills.EmbraceChaos.TheNthDegree_Active MaxGrade 100</code>
+							<code profiles="default">set GD_Tulip_Mechromancer_Skills.EmbraceChaos.TypecastIconoclast MaxGrade 100</code>
+							<code profiles="default">set GD_Tulip_Mechromancer_Skills.EmbraceChaos.TypecastIconoclast_Feedback MaxGrade 100</code>
+							<code profiles="default">set GD_Tulip_Mechromancer_Skills.BestFriendsForever.20PercentCooler MaxGrade 100</code>
+							<code profiles="default">set GD_Tulip_Mechromancer_Skills.BestFriendsForever.CloseEnough MaxGrade 100</code>
+							<code profiles="default">set GD_Tulip_Mechromancer_Skills.BestFriendsForever.CookingUpTrouble MaxGrade 100</code>
+							<code profiles="default">set GD_Tulip_Mechromancer_Skills.BestFriendsForever.FancyMathematics MaxGrade 100</code>
+							<code profiles="default">set GD_Tulip_Mechromancer_Skills.BestFriendsForever.MadeOfSternerStuff MaxGrade 100</code>
+							<code profiles="default">set GD_Tulip_Mechromancer_Skills.BestFriendsForever.PotentAsAPony MaxGrade 100</code>
+							<code profiles="default">set GD_Tulip_Mechromancer_Skills.BestFriendsForever.TheBetterHalf MaxGrade 100</code>
+							<code profiles="default">set GD_Tulip_Mechromancer_Skills.BestFriendsForever.UnstoppableForce MaxGrade 100</code>
+							<code profiles="default">set GD_Tulip_Mechromancer_Skills.LittleBigTrouble.ElectricalBurn MaxGrade 100</code>
+							<code profiles="default">set GD_Tulip_Mechromancer_Skills.LittleBigTrouble.ElectricalBurn_Feedback MaxGrade 100</code>
+							<code profiles="default">set GD_Tulip_Mechromancer_Skills.LittleBigTrouble.EvilEnchantress MaxGrade 100</code>
+							<code profiles="default">set GD_Tulip_Mechromancer_Skills.LittleBigTrouble.InterspersedOutburst MaxGrade 100</code>
+							<code profiles="default">set GD_Tulip_Mechromancer_Skills.LittleBigTrouble.InterspersedOutburst_Active MaxGrade 100</code>
+							<code profiles="default">set GD_Tulip_Mechromancer_Skills.LittleBigTrouble.MorePep MaxGrade 100</code>
+							<code profiles="default">set GD_Tulip_Mechromancer_Skills.LittleBigTrouble.Myelin MaxGrade 100</code>
+							<code profiles="default">set GD_Tulip_Mechromancer_Skills.LittleBigTrouble.ShockStorm MaxGrade 100</code>
+							<code profiles="default">set GD_Tulip_Mechromancer_Skills.LittleBigTrouble.ShockStorm_ActiveOnRobot MaxGrade 100</code>
+							<code profiles="default">set GD_Tulip_Mechromancer_Skills.LittleBigTrouble.StrengthOfFiveGorillas MaxGrade 100</code>
+							<code profiles="default">set GD_Tulip_Mechromancer_Skills.LittleBigTrouble.WiresDontTalk MaxGrade 100</code>
+						</hotfix>
+					</category>
+				</category>
+				<category name="10 Point Skills">
+					<category name="Krieg">
+						<hotfix name="Hotfix" package="GD_Lilac_Psycho_Streaming">
+							<code profiles="">set GD_Lilac_Skills_Bloodlust.Skills.BloodBath MaxGrade 10</code>
+							<code profiles="">set GD_Lilac_Skills_Bloodlust.Skills.BloodBathChild MaxGrade 10</code>
+							<code profiles="">set GD_Lilac_Skills_Bloodlust.Skills.BloodfilledGuns MaxGrade 10</code>
+							<code profiles="">set GD_Lilac_Skills_Bloodlust.Skills.BloodOverdrive MaxGrade 10</code>
+							<code profiles="">set GD_Lilac_Skills_Bloodlust.Skills.BloodOverdriveChild MaxGrade 10</code>
+							<code profiles="">set GD_Lilac_Skills_Bloodlust.Skills.BloodyRevival MaxGrade 10</code>
+							<code profiles="">set GD_Lilac_Skills_Bloodlust.Skills.BloodyTwitch MaxGrade 10</code>
+							<code profiles="">set GD_Lilac_Skills_Bloodlust.Skills.BoilingBlood MaxGrade 10</code>
+							<code profiles="">set GD_Lilac_Skills_Bloodlust.Skills.BloodTrance MaxGrade 10</code>
+							<code profiles="">set GD_Lilac_Skills_Bloodlust.Skills.FuelTheBlood MaxGrade 10</code>
+							<code profiles="">set GD_Lilac_Skills_Bloodlust.Skills.FuelTheBloodChild MaxGrade 10</code>
+							<code profiles="">set GD_Lilac_Skills_Bloodlust.Skills.NervousBlood MaxGrade 10</code>
+							<code profiles="">set GD_Lilac_Skills_Bloodlust.Skills.TasteOfBlood MaxGrade 10</code>
+							<code profiles="">set GD_Lilac_Skills_Mania.Skills.EmbraceThePain MaxGrade 10</code>
+							<code profiles="">set GD_Lilac_Skills_Mania.Skills.EmptyRage MaxGrade 10</code>
+							<code profiles="">set GD_Lilac_Skills_Mania.Skills.FeedTheMeat MaxGrade 10</code>
+							<code profiles="">set GD_Lilac_Skills_Mania.Skills.FuelTheRampage MaxGrade 10</code>
+							<code profiles="">set GD_Lilac_Skills_Mania.Skills.SaltTheWound MaxGrade 10</code>
+							<code profiles="">set GD_Lilac_Skills_Mania.Skills.SilenceTheVoices MaxGrade 10</code>
+							<code profiles="">set GD_Lilac_Skills_Mania.Skills.StripTheFlesh MaxGrade 10</code>
+							<code profiles="">set GD_Lilac_Skills_Mania.Skills.ThrillOfTheKill MaxGrade 10</code>
+							<code profiles="">set GD_Lilac_Skills_Hellborn.Skills.BurnBabyBurn MaxGrade 10</code>
+							<code profiles="">set GD_Lilac_Skills_Hellborn.Skills.BurnBabyBurnChild MaxGrade 10</code>
+							<code profiles="">set GD_Lilac_Skills_Hellborn.Skills.ElementalElation MaxGrade 10</code>
+							<code profiles="">set GD_Lilac_Skills_Hellborn.Skills.ElementalEmpathy MaxGrade 10</code>
+							<code profiles="">set GD_Lilac_Skills_Hellborn.Skills.FireFiend MaxGrade 10</code>
+							<code profiles="">set GD_Lilac_Skills_Hellborn.Skills.FlameFlare MaxGrade 10</code>
+							<code profiles="">set GD_Lilac_Skills_Hellborn.Skills.FlameFlare_Reigniter MaxGrade 10</code>
+							<code profiles="">set GD_Lilac_Skills_Hellborn.Skills.FuelTheFire MaxGrade 10</code>
+							<code profiles="">set GD_Lilac_Skills_Hellborn.Skills.NumbedNerves MaxGrade 10</code>
+							<code profiles="">set GD_Lilac_Skills_Hellborn.Skills.PainIsPower MaxGrade 10</code>
+						</hotfix>
+					</category>
+					<category name="Sal">
+						<hotfix name="Hotfix" package="GD_Mercenary_Streaming">
+							<code profiles="">set GD_Mercenary_Skills.Brawn.AintGotTimeToBleed MaxGrade 10</code>
+							<code profiles="">set GD_Mercenary_Skills.Brawn.Asbestos MaxGrade 10</code>
+							<code profiles="">set GD_Mercenary_Skills.Brawn.BusThatCantSlowDown MaxGrade 10</code>
+							<code profiles="">set GD_Mercenary_Skills.Brawn.Diehard MaxGrade 10</code>
+							<code profiles="">set GD_Mercenary_Skills.Brawn.ImTheJuggernaut MaxGrade 10</code>
+							<code profiles="">set GD_Mercenary_Skills.Brawn.Incite MaxGrade 10</code>
+							<code profiles="">set GD_Mercenary_Skills.Brawn.Incite_Active MaxGrade 10</code>
+							<code profiles="">set GD_Mercenary_Skills.Brawn.JustGotReal MaxGrade 10</code>
+							<code profiles="">set GD_Mercenary_Skills.Brawn.OutOfBubblegum MaxGrade 10</code>
+							<code profiles="">set GD_Mercenary_Skills.Brawn.SexualTyrannosaurus MaxGrade 10</code>
+							<code profiles="">set GD_Mercenary_Skills.Brawn.SexualTyrannosaurus_Active MaxGrade 10</code>
+							<code profiles="">set GD_Mercenary_Skills.Gun_Lust.AllIneedIsOne MaxGrade 10</code>
+							<code profiles="">set GD_Mercenary_Skills.Gun_Lust.AllIneedIsOne_Active MaxGrade 10</code>
+							<code profiles="">set GD_Mercenary_Skills.Gun_Lust.DivergentLikness MaxGrade 10</code>
+							<code profiles="">set GD_Mercenary_Skills.Gun_Lust.ImYourHuckleberry MaxGrade 10</code>
+							<code profiles="">set GD_Mercenary_Skills.Gun_Lust.ImYourHuckleberry_Offhand MaxGrade 10</code>
+							<code profiles="">set GD_Mercenary_Skills.Gun_Lust.KeepItPipingHot MaxGrade 10</code>
+							<code profiles="">set GD_Mercenary_Skills.Gun_Lust.LayWaste MaxGrade 10</code>
+							<code profiles="">set GD_Mercenary_Skills.Gun_Lust.LockedandLoaded MaxGrade 10</code>
+							<code profiles="">set GD_Mercenary_Skills.Gun_Lust.LockedAndLoaded_Active MaxGrade 10</code>
+							<code profiles="">set GD_Mercenary_Skills.Gun_Lust.MoneyShot MaxGrade 10</code>
+							<code profiles="">set GD_Mercenary_Skills.Gun_Lust.QuickDraw MaxGrade 10</code>
+							<code profiles="">set GD_Mercenary_Skills.Rampage.5Shotsor6 MaxGrade 10</code>
+							<code profiles="">set GD_Mercenary_Skills.Rampage.YippeeKiYay MaxGrade 10</code>
+							<code profiles="">set GD_Mercenary_Skills.Rampage.AllInTheReflexes MaxGrade 10</code>
+							<code profiles="">set GD_Mercenary_Skills.Rampage.FilledtotheBrim MaxGrade 10</code>
+							<code profiles="">set GD_Mercenary_Skills.Rampage.GetSome MaxGrade 10</code>
+							<code profiles="">set GD_Mercenary_Skills.Rampage.GetSome_Active MaxGrade 10</code>
+							<code profiles="">set GD_Mercenary_Skills.Rampage.ImReadyAlready MaxGrade 10</code>
+							<code profiles="">set GD_Mercenary_Skills.Rampage.Inconceivable MaxGrade 10</code>
+							<code profiles="">set GD_Mercenary_Skills.Rampage.LastLonger MaxGrade 10</code>
+						</hotfix>
+					</category>
+					<category name="Maya">
+						<hotfix name="Hotfix" package="GD_Siren_Streaming">
+							<code profiles="">set GD_Siren_Skills.Cataclysm.Backdraft MaxGrade 10</code>
+							<code profiles="">set GD_Siren_Skills.Cataclysm.Backdraft_Feedback MaxGrade 10</code>
+							<code profiles="">set GD_Siren_Skills.Cataclysm.BlightPhoenix MaxGrade 10</code>
+							<code profiles="">set GD_Siren_Skills.Cataclysm.ChainReaction MaxGrade 10</code>
+							<code profiles="">set GD_Siren_Skills.Cataclysm.Flicker MaxGrade 10</code>
+							<code profiles="">set GD_Siren_Skills.Cataclysm.Foresight MaxGrade 10</code>
+							<code profiles="">set GD_Siren_Skills.Cataclysm.Helios MaxGrade 10</code>
+							<code profiles="">set GD_Siren_Skills.Cataclysm.Immolate MaxGrade 10</code>
+							<code profiles="">set GD_Siren_Skills.Cataclysm.Reaper MaxGrade 10</code>
+							<code profiles="">set GD_Siren_Skills.Harmony.Elated MaxGrade 10</code>
+							<code profiles="">set GD_Siren_Skills.Harmony.LifeTap MaxGrade 10</code>
+							<code profiles="">set GD_Siren_Skills.Harmony.MindsEye MaxGrade 10</code>
+							<code profiles="">set GD_Siren_Skills.Harmony.Recompense MaxGrade 10</code>
+							<code profiles="">set GD_Siren_Skills.Harmony.Recompense_Feedback MaxGrade 10</code>
+							<code profiles="">set GD_Siren_Skills.Harmony.Restoration MaxGrade 10</code>
+							<code profiles="">set GD_Siren_Skills.Harmony.Sustenance MaxGrade 10</code>
+							<code profiles="">set GD_Siren_Skills.Harmony.SweetRelease MaxGrade 10</code>
+							<code profiles="">set GD_Siren_Skills.Harmony.Wreck MaxGrade 10</code>
+							<code profiles="">set GD_Siren_Skills.Motion.Accelerate MaxGrade 10</code>
+							<code profiles="">set GD_Siren_Skills.Motion.Fleet MaxGrade 10</code>
+							<code profiles="">set GD_Siren_Skills.Motion.Inertia MaxGrade 10</code>
+							<code profiles="">set GD_Siren_Skills.Motion.KineticReflection MaxGrade 10</code>
+							<code profiles="">set GD_Siren_Skills.Motion.Quicken MaxGrade 10</code>
+							<code profiles="">set GD_Siren_Skills.Motion.SubSequence MaxGrade 10</code>
+							<code profiles="">set GD_Siren_Skills.Motion.Subsequence_Feedback MaxGrade 10</code>
+							<code profiles="">set GD_Siren_Skills.Motion.Suspension MaxGrade 10</code>
+							<code profiles="">set GD_Siren_Skills.Motion.Ward MaxGrade 10</code>
+						</hotfix>
+					</category>
+					<category name="Zero">
+						<hotfix name="Hotfix" package="GD_Assassin_Streaming">
+							<code profiles="">set GD_Assassin_Skills.Bloodshed.Backstab MaxGrade 10</code>
+							<code profiles="">set GD_Assassin_Skills.Bloodshed.BeLikeWater MaxGrade 10</code>
+							<code profiles="">set GD_Assassin_Skills.Bloodshed.BeLikeWater_Melee_Active MaxGrade 10</code>
+							<code profiles="">set GD_Assassin_Skills.Bloodshed.BeLikeWater_Ranged_Active MaxGrade 10</code>
+							<code profiles="">set GD_Assassin_Skills.Bloodshed.Followthrough MaxGrade 10</code>
+							<code profiles="">set GD_Assassin_Skills.Bloodshed.Grim MaxGrade 10</code>
+							<code profiles="">set GD_Assassin_Skills.Bloodshed.IronHand MaxGrade 10</code>
+							<code profiles="">set GD_Assassin_Skills.Bloodshed.KillingBlow MaxGrade 10</code>
+							<code profiles="">set GD_Assassin_Skills.Bloodshed.LikeTheWind MaxGrade 10</code>
+							<code profiles="">set GD_Assassin_Skills.Bloodshed.LikeTheWind_Active MaxGrade 10</code>
+							<code profiles="">set GD_Assassin_Skills.Bloodshed.Resurgence MaxGrade 10</code>
+							<code profiles="">set GD_Assassin_Skills.Bloodshed.Resurgence_Active MaxGrade 10</code>
+							<code profiles="">set GD_Assassin_Skills.Cunning.Ambush MaxGrade 10</code>
+							<code profiles="">set GD_Assassin_Skills.Cunning.CounterStrike MaxGrade 10</code>
+							<code profiles="">set GD_Assassin_Skills.Cunning.CounterStrike_Active MaxGrade 10</code>
+							<code profiles="">set GD_Assassin_Skills.Cunning.FastHands MaxGrade 10</code>
+							<code profiles="">set GD_Assassin_Skills.Cunning.Fearless MaxGrade 10</code>
+							<code profiles="">set GD_Assassin_Skills.Cunning.Innervate MaxGrade 10</code>
+							<code profiles="">set GD_Assassin_Skills.Cunning.RisingShot MaxGrade 10</code>
+							<code profiles="">set GD_Assassin_Skills.Cunning.RisingShot_Active MaxGrade 10</code>
+							<code profiles="">set GD_Assassin_Skills.Cunning.TwoFang MaxGrade 10</code>
+							<code profiles="">set GD_Assassin_Skills.Cunning.Unforseen MaxGrade 10</code>
+							<code profiles="">set GD_Assassin_Skills.Sniping.AtOneWithTheGun MaxGrade 10</code>
+							<code profiles="">set GD_Assassin_Skills.Sniping.AtOneWithTheGun_IsNotIronsighting MaxGrade 10</code>
+							<code profiles="">set GD_Assassin_Skills.Sniping.HeadShot MaxGrade 10</code>
+							<code profiles="">set GD_Assassin_Skills.Sniping.KillConfirmed MaxGrade 10</code>
+							<code profiles="">set GD_Assassin_Skills.Sniping.Killer MaxGrade 10</code>
+							<code profiles="">set GD_Assassin_Skills.Sniping.OneShotOneKill MaxGrade 10</code>
+							<code profiles="">set GD_Assassin_Skills.Sniping.Optics MaxGrade 10</code>
+							<code profiles="">set GD_Assassin_Skills.Sniping.Precision MaxGrade 10</code>
+							<code profiles="">set GD_Assassin_Skills.Sniping.Velocity MaxGrade 10</code>
+						</hotfix>
+					</category>
+					<category name="Axton">
+						<hotfix name="Hotfix" package="GD_Soldier_Streaming">
+							<code profiles="">set GD_Soldier_Skills.Guerrilla.Able MaxGrade 10</code>
+							<code profiles="">set GD_Soldier_Skills.Guerrilla.Able_Active MaxGrade 10</code>
+							<code profiles="">set GD_Soldier_Skills.Guerrilla.CrisisManagement MaxGrade 10</code>
+							<code profiles="">set GD_Soldier_Skills.Guerrilla.Grenadier MaxGrade 10</code>
+							<code profiles="">set GD_Soldier_Skills.Guerrilla.LaserSight MaxGrade 10</code>
+							<code profiles="">set GD_Soldier_Skills.Guerrilla.Onslaught MaxGrade 10</code>
+							<code profiles="">set GD_Soldier_Skills.Guerrilla.Ready MaxGrade 10</code>
+							<code profiles="">set GD_Soldier_Skills.Guerrilla.Sentry MaxGrade 10</code>
+							<code profiles="">set GD_Soldier_Skills.Guerrilla.TacticalWithdrawal MaxGrade 10</code>
+							<code profiles="">set GD_Soldier_Skills.Guerrilla.TacticalWithdrawal_Active MaxGrade 10</code>
+							<code profiles="">set GD_Soldier_Skills.Guerrilla.TacticalWithdrawal_StopFiring MaxGrade 10</code>
+							<code profiles="">set GD_Soldier_Skills.Guerrilla.Willing MaxGrade 10</code>
+							<code profiles="">set GD_Soldier_Skills.Gunpowder.Battlefront MaxGrade 10</code>
+							<code profiles="">set GD_Soldier_Skills.Gunpowder.DutyCalls MaxGrade 10</code>
+							<code profiles="">set GD_Soldier_Skills.Gunpowder.Expertise MaxGrade 10</code>
+							<code profiles="">set GD_Soldier_Skills.Gunpowder.Expertise_MovementSpeed MaxGrade 10</code>
+							<code profiles="">set GD_Soldier_Skills.Gunpowder.Impact MaxGrade 10</code>
+							<code profiles="">set GD_Soldier_Skills.Gunpowder.MetalStorm MaxGrade 10</code>
+							<code profiles="">set GD_Soldier_Skills.Gunpowder.Overload MaxGrade 10</code>
+							<code profiles="">set GD_Soldier_Skills.Gunpowder.Ranger MaxGrade 10</code>
+							<code profiles="">set GD_Soldier_Skills.Gunpowder.Steady MaxGrade 10</code>
+							<code profiles="">set GD_Soldier_Skills.Survival.Forbearance MaxGrade 10</code>
+							<code profiles="">set GD_Soldier_Skills.Survival.Forbearance_Feedback MaxGrade 10</code>
+							<code profiles="">set GD_Soldier_Skills.Survival.Grit MaxGrade 10</code>
+							<code profiles="">set GD_Soldier_Skills.Survival.Grit_Feedback MaxGrade 10</code>
+							<code profiles="">set GD_Soldier_Skills.Survival.HealthY MaxGrade 10</code>
+							<code profiles="">set GD_Soldier_Skills.Survival.LastDitchEffort MaxGrade 10</code>
+							<code profiles="">set GD_Soldier_Skills.Survival.Preparation MaxGrade 10</code>
+							<code profiles="">set GD_Soldier_Skills.Survival.Preparation_Active MaxGrade 10</code>
+							<code profiles="">set GD_Soldier_Skills.Survival.Pressure MaxGrade 10</code>
+							<code profiles="">set GD_Soldier_Skills.Survival.QuickCharge MaxGrade 10</code>
+							<code profiles="">set GD_Soldier_Skills.Survival.Resourceful MaxGrade 10</code>
+						</hotfix>
+					</category>
+					<category name="Gaige">
+						<hotfix name="Hotfix" package="GD_Tulip_Mechro_Streaming">
+							<code profiles="">set GD_Tulip_Mechromancer_Skills.EmbraceChaos.AnnoyedAndroid MaxGrade 10</code>
+							<code profiles="">set GD_Tulip_Mechromancer_Skills.EmbraceChaos.BloodSoakedShields MaxGrade 10</code>
+							<code profiles="">set GD_Tulip_Mechromancer_Skills.EmbraceChaos.BloodSoakedShields_Feedback MaxGrade 10</code>
+							<code profiles="">set GD_Tulip_Mechromancer_Skills.EmbraceChaos.DeathFromAbove MaxGrade 10</code>
+							<code profiles="">set GD_Tulip_Mechromancer_Skills.EmbraceChaos.DeathFromAbove_Feedback MaxGrade 10</code>
+							<code profiles="">set GD_Tulip_Mechromancer_Skills.EmbraceChaos.PreshrunkCyberpunk MaxGrade 10</code>
+							<code profiles="">set GD_Tulip_Mechromancer_Skills.EmbraceChaos.SmallerLighterFaster MaxGrade 10</code>
+							<code profiles="">set GD_Tulip_Mechromancer_Skills.EmbraceChaos.TheNthDegree MaxGrade 10</code>
+							<code profiles="">set GD_Tulip_Mechromancer_Skills.EmbraceChaos.TheNthDegree_Active MaxGrade 10</code>
+							<code profiles="">set GD_Tulip_Mechromancer_Skills.EmbraceChaos.TypecastIconoclast MaxGrade 10</code>
+							<code profiles="">set GD_Tulip_Mechromancer_Skills.EmbraceChaos.TypecastIconoclast_Feedback MaxGrade 10</code>
+							<code profiles="">set GD_Tulip_Mechromancer_Skills.BestFriendsForever.20PercentCooler MaxGrade 10</code>
+							<code profiles="">set GD_Tulip_Mechromancer_Skills.BestFriendsForever.CloseEnough MaxGrade 10</code>
+							<code profiles="">set GD_Tulip_Mechromancer_Skills.BestFriendsForever.CookingUpTrouble MaxGrade 10</code>
+							<code profiles="">set GD_Tulip_Mechromancer_Skills.BestFriendsForever.FancyMathematics MaxGrade 10</code>
+							<code profiles="">set GD_Tulip_Mechromancer_Skills.BestFriendsForever.MadeOfSternerStuff MaxGrade 10</code>
+							<code profiles="">set GD_Tulip_Mechromancer_Skills.BestFriendsForever.PotentAsAPony MaxGrade 10</code>
+							<code profiles="">set GD_Tulip_Mechromancer_Skills.BestFriendsForever.TheBetterHalf MaxGrade 10</code>
+							<code profiles="">set GD_Tulip_Mechromancer_Skills.BestFriendsForever.UnstoppableForce MaxGrade 10</code>
+							<code profiles="">set GD_Tulip_Mechromancer_Skills.LittleBigTrouble.ElectricalBurn MaxGrade 10</code>
+							<code profiles="">set GD_Tulip_Mechromancer_Skills.LittleBigTrouble.ElectricalBurn_Feedback MaxGrade 10</code>
+							<code profiles="">set GD_Tulip_Mechromancer_Skills.LittleBigTrouble.EvilEnchantress MaxGrade 10</code>
+							<code profiles="">set GD_Tulip_Mechromancer_Skills.LittleBigTrouble.InterspersedOutburst MaxGrade 10</code>
+							<code profiles="">set GD_Tulip_Mechromancer_Skills.LittleBigTrouble.InterspersedOutburst_Active MaxGrade 10</code>
+							<code profiles="">set GD_Tulip_Mechromancer_Skills.LittleBigTrouble.MorePep MaxGrade 10</code>
+							<code profiles="">set GD_Tulip_Mechromancer_Skills.LittleBigTrouble.Myelin MaxGrade 10</code>
+							<code profiles="">set GD_Tulip_Mechromancer_Skills.LittleBigTrouble.ShockStorm MaxGrade 10</code>
+							<code profiles="">set GD_Tulip_Mechromancer_Skills.LittleBigTrouble.ShockStorm_ActiveOnRobot MaxGrade 10</code>
+							<code profiles="">set GD_Tulip_Mechromancer_Skills.LittleBigTrouble.StrengthOfFiveGorillas MaxGrade 10</code>
+							<code profiles="">set GD_Tulip_Mechromancer_Skills.LittleBigTrouble.WiresDontTalk MaxGrade 10</code>
+						</hotfix>
+					</category>
+				</category>
+			</category>
+			<category name="COM Skill Points Scaling" MUT="true">
+				<category name="100 Point Skills Scaling">
+					<code profiles="default">set GD_ClassMods.Misc.Init_BaseSkillPointCalculation ConditionalInitialization (bEnabled=True,ConditionalExpressionList=((BaseValueIfTrue=(BaseValueConstant=49.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),Expressions=((AttributeOperand1=AttributeDefinition'D_Attributes.Inventory.UnownedItemLevel',ComparisonOperator=OPERATOR_GreaterThanOrEqual,Operand2Usage=OPERAND_PreferAttribute,AttributeOperand2=None,ConstantOperand2=50.000000))),(BaseValueIfTrue=(BaseValueConstant=39.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),Expressions=((AttributeOperand1=AttributeDefinition'D_Attributes.Inventory.UnownedItemLevel',ComparisonOperator=OPERATOR_GreaterThanOrEqual,Operand2Usage=OPERAND_PreferAttribute,AttributeOperand2=None,ConstantOperand2=38.000000))),(BaseValueIfTrue=(BaseValueConstant=29.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),Expressions=((AttributeOperand1=AttributeDefinition'D_Attributes.Inventory.UnownedItemLevel',ComparisonOperator=OPERATOR_GreaterThanOrEqual,Operand2Usage=OPERAND_PreferAttribute,AttributeOperand2=None,ConstantOperand2=25.000000))),(BaseValueIfTrue=(BaseValueConstant=19.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),Expressions=((AttributeOperand1=AttributeDefinition'D_Attributes.Inventory.UnownedItemLevel',ComparisonOperator=OPERATOR_GreaterThanOrEqual,Operand2Usage=OPERAND_PreferAttribute,AttributeOperand2=AttributeDefinition'GD_Itempools.Scheduling.LootSchedule_ClassMod_02_Uncommon',ConstantOperand2=12.000000)))),DefaultBaseValue=(BaseValueConstant=9.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))</code>
+				</category>
+				<category name="10 Point Skills Scaling">
+					<code profiles="">set GD_ClassMods.Misc.Init_BaseSkillPointCalculation ConditionalInitialization (bEnabled=True,ConditionalExpressionList=((BaseValueIfTrue=(BaseValueConstant=8.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),Expressions=((AttributeOperand1=AttributeDefinition'D_Attributes.Inventory.UnownedItemLevel',ComparisonOperator=OPERATOR_GreaterThanOrEqual,Operand2Usage=OPERAND_PreferAttribute,AttributeOperand2=None,ConstantOperand2=50.000000))),(BaseValueIfTrue=(BaseValueConstant=6.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),Expressions=((AttributeOperand1=AttributeDefinition'D_Attributes.Inventory.UnownedItemLevel',ComparisonOperator=OPERATOR_GreaterThanOrEqual,Operand2Usage=OPERAND_PreferAttribute,AttributeOperand2=None,ConstantOperand2=38.000000))),(BaseValueIfTrue=(BaseValueConstant=4.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),Expressions=((AttributeOperand1=AttributeDefinition'D_Attributes.Inventory.UnownedItemLevel',ComparisonOperator=OPERATOR_GreaterThanOrEqual,Operand2Usage=OPERAND_PreferAttribute,AttributeOperand2=None,ConstantOperand2=25.000000))),(BaseValueIfTrue=(BaseValueConstant=2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),Expressions=((AttributeOperand1=AttributeDefinition'D_Attributes.Inventory.UnownedItemLevel',ComparisonOperator=OPERATOR_GreaterThanOrEqual,Operand2Usage=OPERAND_PreferAttribute,AttributeOperand2=AttributeDefinition'GD_Itempools.Scheduling.LootSchedule_ClassMod_02_Uncommon',ConstantOperand2=12.000000)))),DefaultBaseValue=(BaseValueConstant=2.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))</code>
+				</category>
+			</category>
+			<category name="Points to Unlock Skill Tree Layers (Disabled by default)" MUT="true">
+				<category name="50 / Layer">
+					<category name="Krieg">
+						<hotfix name="Hotfix" package="GD_Lilac_Psycho_Streaming">
+							<code profiles="">set GD_Lilac_SkillsBase.SkillTree.Branch_Mania Tiers ((Skills=(SkillDefinition'GD_Lilac_Skills_Mania.Skills.EmptyRage',SkillDefinition'GD_Lilac_Skills_Mania.Skills.PullThePin',SkillDefinition'GD_Lilac_Skills_Mania.Skills.FeedTheMeat'),PointsToUnlockNextTier=50),(Skills=(SkillDefinition'GD_Lilac_Skills_Mania.Skills.EmbraceThePain',SkillDefinition'GD_Lilac_Skills_Mania.Skills.FuelTheRampage'),PointsToUnlockNextTier=50),(Skills=(SkillDefinition'GD_Lilac_Skills_Mania.Skills.ThrillOfTheKill',SkillDefinition'GD_Lilac_Skills_Mania.Skills.LightTheFuse',SkillDefinition'GD_Lilac_Skills_Mania.Skills.StripTheFlesh'),PointsToUnlockNextTier=50),(Skills=(SkillDefinition'GD_Lilac_Skills_Mania.Skills.RedeemTheSoul',SkillDefinition'GD_Lilac_Skills_Mania.Skills.SaltTheWound'),PointsToUnlockNextTier=50),(Skills=(SkillDefinition'GD_Lilac_Skills_Mania.Skills.SilenceTheVoices'),PointsToUnlockNextTier=50),(Skills=(SkillDefinition'GD_Lilac_Skills_Mania.Skills.ReleaseTheBeast'),PointsToUnlockNextTier=1))</code>
+							<code profiles="">set GD_Lilac_SkillsBase.SkillTree.Branch_Hellborn Tiers ((Skills=(SkillDefinition'GD_Lilac_Skills_Hellborn.Skills.BurnBabyBurn',SkillDefinition'GD_Lilac_Skills_Hellborn.Skills.FuelTheFire'),PointsToUnlockNextTier=50),(Skills=(SkillDefinition'GD_Lilac_Skills_Hellborn.Skills.NumbedNerves',SkillDefinition'GD_Lilac_Skills_Hellborn.Skills.PainIsPower'),PointsToUnlockNextTier=50),(Skills=(SkillDefinition'GD_Lilac_Skills_Hellborn.Skills.ElementalElation',SkillDefinition'GD_Lilac_Skills_Hellborn.Skills.DelusionalDamage',SkillDefinition'GD_Lilac_Skills_Hellborn.Skills.FireFiend'),PointsToUnlockNextTier=50),(Skills=(SkillDefinition'GD_Lilac_Skills_Hellborn.Skills.FlameFlare',SkillDefinition'GD_Lilac_Skills_Hellborn.Skills.HellfireHalitosis'),PointsToUnlockNextTier=50),(Skills=(SkillDefinition'GD_Lilac_Skills_Hellborn.Skills.ElementalEmpathy'),PointsToUnlockNextTier=50),(Skills=(SkillDefinition'GD_Lilac_Skills_Hellborn.Skills.RavingRetribution',SkillDefinition'GD_Lilac_Skills_Hellborn.Skills.FireStatusDetector',SkillDefinition'GD_Lilac_Skills_Hellborn.Skills.AppliedStatusEffectListener'),PointsToUnlockNextTier=1))</code>
+							<code profiles="">set GD_Lilac_SkillsBase.SkillTree.Branch_Bloodlust Tiers ((Skills=(SkillDefinition'GD_Lilac_Skills_Bloodlust.Skills.BloodfilledGuns',SkillDefinition'GD_Lilac_Skills_Bloodlust.Skills.BloodyTwitch'),PointsToUnlockNextTier=50),(Skills=(SkillDefinition'GD_Lilac_Skills_Bloodlust.Skills.TasteOfBlood',SkillDefinition'GD_Lilac_Skills_Bloodlust.Skills.BloodyRevival',SkillDefinition'GD_Lilac_Skills_Bloodlust.Skills.BloodOverdrive'),PointsToUnlockNextTier=50),(Skills=(SkillDefinition'GD_Lilac_Skills_Bloodlust.Skills.BloodBath',SkillDefinition'GD_Lilac_Skills_Bloodlust.Skills.BuzzAxeBombadier',SkillDefinition'GD_Lilac_Skills_Bloodlust.Skills.FuelTheBlood'),PointsToUnlockNextTier=50),(Skills=(SkillDefinition'GD_Lilac_Skills_Bloodlust.Skills.BloodTrance',SkillDefinition'GD_Lilac_Skills_Bloodlust.Skills.BoilingBlood'),PointsToUnlockNextTier=50),(Skills=(SkillDefinition'GD_Lilac_Skills_Bloodlust.Skills.NervousBlood'),PointsToUnlockNextTier=50),(Skills=(SkillDefinition'GD_Lilac_Skills_Bloodlust.Skills.Bloodsplosion',SkillDefinition'GD_Lilac_Skills_Bloodlust.Skills._Bloodlust'),PointsToUnlockNextTier=1))</code>
+						</hotfix>
+					</category>
+					<category name="Sal">
+						<hotfix name="Hotfix" package="GD_Mercenary_Streaming">
+							<code profiles="">set GD_Mercenary_Skills.SkillTree.Branch_Brawn Tiers ((Skills=(SkillDefinition'GD_Mercenary_Skills.Brawn.Diehard',SkillDefinition'GD_Mercenary_Skills.Brawn.Incite'),PointsToUnlockNextTier=50),(Skills=(SkillDefinition'GD_Mercenary_Skills.Brawn.Asbestos',SkillDefinition'GD_Mercenary_Skills.Brawn.ImTheJuggernaut'),PointsToUnlockNextTier=50),(Skills=(SkillDefinition'GD_Mercenary_Skills.Brawn.AintGotTimeToBleed',SkillDefinition'GD_Mercenary_Skills.Brawn.FistfulOfHurt',SkillDefinition'GD_Mercenary_Skills.Brawn.OutOfBubblegum',None),PointsToUnlockNextTier=50),(Skills=(SkillDefinition'GD_Mercenary_Skills.Brawn.BusThatCantSlowDown',SkillDefinition'GD_Mercenary_Skills.Brawn.JustGotReal'),PointsToUnlockNextTier=50),(Skills=(SkillDefinition'GD_Mercenary_Skills.Brawn.SexualTyrannosaurus'),PointsToUnlockNextTier=50),(Skills=(SkillDefinition'GD_Mercenary_Skills.Brawn.ComeAtMeBro'),PointsToUnlockNextTier=1))</code>
+							<code profiles="">set GD_Mercenary_Skills.SkillTree.Branch_GunLust Tiers ((Skills=(SkillDefinition'GD_Mercenary_Skills.Gun_Lust.LockedandLoaded',SkillDefinition'GD_Mercenary_Skills.Gun_Lust.QuickDraw'),PointsToUnlockNextTier=50),(Skills=(SkillDefinition'GD_Mercenary_Skills.Gun_Lust.ImYourHuckleberry',SkillDefinition'GD_Mercenary_Skills.Gun_Lust.AllIneedIsOne'),PointsToUnlockNextTier=50),(Skills=(SkillDefinition'GD_Mercenary_Skills.Gun_Lust.DivergentLikness',SkillDefinition'GD_Mercenary_Skills.Gun_Lust.AutoLoader',SkillDefinition'GD_Mercenary_Skills.Gun_Lust.MoneyShot'),PointsToUnlockNextTier=50),(Skills=(SkillDefinition'GD_Mercenary_Skills.Gun_Lust.LayWaste',SkillDefinition'GD_Mercenary_Skills.Gun_Lust.DownNotOut'),PointsToUnlockNextTier=50),(Skills=(SkillDefinition'GD_Mercenary_Skills.Gun_Lust.KeepItPipingHot'),PointsToUnlockNextTier=50),(Skills=(SkillDefinition'GD_Mercenary_Skills.Gun_Lust.NoKillLikeOverkill'),PointsToUnlockNextTier=1))</code>
+							<code profiles="">set GD_Mercenary_Skills.SkillTree.Branch_Rampage Tiers ((Skills=(SkillDefinition'GD_Mercenary_Skills.Rampage.Inconceivable',SkillDefinition'GD_Mercenary_Skills.Rampage.FilledtotheBrim'),PointsToUnlockNextTier=50),(Skills=(SkillDefinition'GD_Mercenary_Skills.Rampage.AllInTheReflexes',SkillDefinition'GD_Mercenary_Skills.Rampage.LastLonger'),PointsToUnlockNextTier=50),(Skills=(SkillDefinition'GD_Mercenary_Skills.Rampage.ImReadyAlready',SkillDefinition'GD_Mercenary_Skills.Rampage.SteadyAsSheGoes',SkillDefinition'GD_Mercenary_Skills.Rampage.5Shotsor6'),PointsToUnlockNextTier=50),(Skills=(SkillDefinition'GD_Mercenary_Skills.Rampage.YippeeKiYay',SkillDefinition'GD_Mercenary_Skills.Rampage.DoubleYourFun'),PointsToUnlockNextTier=50),(Skills=(SkillDefinition'GD_Mercenary_Skills.Rampage.GetSome'),PointsToUnlockNextTier=50),(Skills=(SkillDefinition'GD_Mercenary_Skills.Rampage.KeepFiring'),PointsToUnlockNextTier=1))</code>
+						</hotfix>
+					</category>
+					<category name="Maya">
+						<hotfix name="Hotfix" package="GD_Siren_Streaming">
+							<code profiles="">set GD_Siren_Skills.SkillTree.Branch_Harmony Tiers ((Skills=(SkillDefinition'GD_Siren_Skills.Harmony.MindsEye',SkillDefinition'GD_Siren_Skills.Harmony.SweetRelease'),PointsToUnlockNextTier=50),(Skills=(SkillDefinition'GD_Siren_Skills.Harmony.Restoration',SkillDefinition'GD_Siren_Skills.Harmony.Wreck'),PointsToUnlockNextTier=50),(Skills=(SkillDefinition'GD_Siren_Skills.Harmony.Elated',SkillDefinition'GD_Siren_Skills.Harmony.Res',SkillDefinition'GD_Siren_Skills.Harmony.Recompense'),PointsToUnlockNextTier=50),(Skills=(SkillDefinition'GD_Siren_Skills.Harmony.Sustenance'),PointsToUnlockNextTier=50),(Skills=(SkillDefinition'GD_Siren_Skills.Harmony.LifeTap'),PointsToUnlockNextTier=50),(Skills=(SkillDefinition'GD_Siren_Skills.Harmony.Scorn'),PointsToUnlockNextTier=1))</code>
+							<code profiles="">set GD_Siren_Skills.SkillTree.Branch_Motion Tiers ((Skills=(SkillDefinition'GD_Siren_Skills.Motion.Ward',SkillDefinition'GD_Siren_Skills.Motion.Accelerate'),PointsToUnlockNextTier=50),(Skills=(SkillDefinition'GD_Siren_Skills.Motion.Suspension',SkillDefinition'GD_Siren_Skills.Motion.KineticReflection'),PointsToUnlockNextTier=50),(Skills=(SkillDefinition'GD_Siren_Skills.Motion.Fleet',SkillDefinition'GD_Siren_Skills.Motion.Converge',SkillDefinition'GD_Siren_Skills.Motion.Inertia'),PointsToUnlockNextTier=50),(Skills=(SkillDefinition'GD_Siren_Skills.Motion.Quicken'),PointsToUnlockNextTier=50),(Skills=(SkillDefinition'GD_Siren_Skills.Motion.SubSequence'),PointsToUnlockNextTier=50),(Skills=(SkillDefinition'GD_Siren_Skills.Motion.ThoughtLock'),PointsToUnlockNextTier=1))</code>
+							<code profiles="">set GD_Siren_Skills.SkillTree.Branch_Cataclysm Tiers ((Skills=(SkillDefinition'GD_Siren_Skills.Cataclysm.Flicker',SkillDefinition'GD_Siren_Skills.Cataclysm.Foresight'),PointsToUnlockNextTier=50),(Skills=(SkillDefinition'GD_Siren_Skills.Cataclysm.Immolate',SkillDefinition'GD_Siren_Skills.Cataclysm.Helios'),PointsToUnlockNextTier=50),(Skills=(SkillDefinition'GD_Siren_Skills.Cataclysm.ChainReaction',SkillDefinition'GD_Siren_Skills.Cataclysm.CloudKill',SkillDefinition'GD_Siren_Skills.Cataclysm.Backdraft'),PointsToUnlockNextTier=50),(Skills=(SkillDefinition'GD_Siren_Skills.Cataclysm.Reaper'),PointsToUnlockNextTier=50),(Skills=(SkillDefinition'GD_Siren_Skills.Cataclysm.BlightPhoenix'),PointsToUnlockNextTier=50),(Skills=(SkillDefinition'GD_Siren_Skills.Cataclysm.Ruin'),PointsToUnlockNextTier=1))</code>
+						</hotfix>
+					</category>
+					<category name="Zero">
+						<hotfix name="Hotfix" package="GD_Assassin_Streaming">
+							<code profiles="">set GD_Assassin_Skills.SkillTree.Branch_Bloodshed Tiers ((Skills=(SkillDefinition'GD_Assassin_Skills.Bloodshed.KillingBlow',SkillDefinition'GD_Assassin_Skills.Bloodshed.IronHand'),PointsToUnlockNextTier=50),(Skills=(SkillDefinition'GD_Assassin_Skills.Bloodshed.Grim',SkillDefinition'GD_Assassin_Skills.Bloodshed.BeLikeWater'),PointsToUnlockNextTier=50),(Skills=(SkillDefinition'GD_Assassin_Skills.Bloodshed.Followthrough',SkillDefinition'GD_Assassin_Skills.Bloodshed.Execute',SkillDefinition'GD_Assassin_Skills.Bloodshed.Backstab'),PointsToUnlockNextTier=50),(Skills=(SkillDefinition'GD_Assassin_Skills.Bloodshed.Resurgence'),PointsToUnlockNextTier=50),(Skills=(SkillDefinition'GD_Assassin_Skills.Bloodshed.LikeTheWind'),PointsToUnlockNextTier=50),(Skills=(SkillDefinition'GD_Assassin_Skills.Bloodshed.ManyMustFall'),PointsToUnlockNextTier=1))</code>
+							<code profiles="">set GD_Assassin_Skills.SkillTree.Branch_Cunning Tiers ((Skills=(SkillDefinition'GD_Assassin_Skills.Cunning.FastHands',SkillDefinition'GD_Assassin_Skills.Cunning.CounterStrike'),PointsToUnlockNextTier=50),(Skills=(SkillDefinition'GD_Assassin_Skills.Cunning.Fearless',SkillDefinition'GD_Assassin_Skills.Cunning.Ambush'),PointsToUnlockNextTier=50),(Skills=(SkillDefinition'GD_Assassin_Skills.Cunning.RisingShot',SkillDefinition'GD_Assassin_Skills.Cunning.DeathMark',SkillDefinition'GD_Assassin_Skills.Cunning.Unforseen'),PointsToUnlockNextTier=50),(Skills=(SkillDefinition'GD_Assassin_Skills.Cunning.Innervate'),PointsToUnlockNextTier=50),(Skills=(SkillDefinition'GD_Assassin_Skills.Cunning.TwoFang'),PointsToUnlockNextTier=50),(Skills=(SkillDefinition'GD_Assassin_Skills.Cunning.DeathBlossom'),PointsToUnlockNextTier=1))</code>
+							<code profiles="">set GD_Assassin_Skills.SkillTree.Branch_Sniping Tiers ((Skills=(SkillDefinition'GD_Assassin_Skills.Sniping.HeadShot',SkillDefinition'GD_Assassin_Skills.Sniping.Optics'),PointsToUnlockNextTier=50),(Skills=(SkillDefinition'GD_Assassin_Skills.Sniping.Killer',SkillDefinition'GD_Assassin_Skills.Sniping.Precision'),PointsToUnlockNextTier=50),(Skills=(SkillDefinition'GD_Assassin_Skills.Sniping.OneShotOneKill',SkillDefinition'GD_Assassin_Skills.Sniping.Bore',SkillDefinition'GD_Assassin_Skills.Sniping.Velocity'),PointsToUnlockNextTier=50),(Skills=(SkillDefinition'GD_Assassin_Skills.Sniping.KillConfirmed'),PointsToUnlockNextTier=50),(Skills=(SkillDefinition'GD_Assassin_Skills.Sniping.AtOneWithTheGun'),PointsToUnlockNextTier=50),(Skills=(SkillDefinition'GD_Assassin_Skills.Sniping.CriticalAscention'),PointsToUnlockNextTier=1))</code>
+						</hotfix>
+					</category>
+					<category name="Axton">
+						<hotfix name="Hotfix" package="GD_Soldier_Streaming">
+							<code profiles="">set GD_Soldier_Skills.SkillTree.Branch_Survival Tiers ((Skills=(SkillDefinition'GD_Soldier_Skills.Survival.HealthY',SkillDefinition'GD_Soldier_Skills.Survival.Preparation'),PointsToUnlockNextTier=50),(Skills=(SkillDefinition'GD_Soldier_Skills.Survival.LastDitchEffort',SkillDefinition'GD_Soldier_Skills.Survival.Pressure'),PointsToUnlockNextTier=50),(Skills=(SkillDefinition'GD_Soldier_Skills.Survival.Forbearance',SkillDefinition'GD_Soldier_Skills.Survival.PhalanxShield',SkillDefinition'GD_Soldier_Skills.Survival.QuickCharge'),PointsToUnlockNextTier=50),(Skills=(SkillDefinition'GD_Soldier_Skills.Survival.Resourceful',SkillDefinition'GD_Soldier_Skills.Survival.Mag-Lock'),PointsToUnlockNextTier=50),(Skills=(SkillDefinition'GD_Soldier_Skills.Survival.Grit'),PointsToUnlockNextTier=50),(Skills=(SkillDefinition'GD_Soldier_Skills.Survival.Gemini'),PointsToUnlockNextTier=1))</code>
+							<code profiles="">set GD_Soldier_Skills.SkillTree.Branch_Gunpowder Tiers ((Skills=(SkillDefinition'GD_Soldier_Skills.Gunpowder.Impact',SkillDefinition'GD_Soldier_Skills.Gunpowder.Expertise'),PointsToUnlockNextTier=50),(Skills=(SkillDefinition'GD_Soldier_Skills.Gunpowder.Overload',SkillDefinition'GD_Soldier_Skills.Gunpowder.MetalStorm'),PointsToUnlockNextTier=50),(Skills=(SkillDefinition'GD_Soldier_Skills.Gunpowder.Steady',SkillDefinition'GD_Soldier_Skills.Gunpowder.LongBowTurret',SkillDefinition'GD_Soldier_Skills.Gunpowder.Battlefront'),PointsToUnlockNextTier=50),(Skills=(SkillDefinition'GD_Soldier_Skills.Gunpowder.DutyCalls',SkillDefinition'GD_Soldier_Skills.Gunpowder.DoOrDie'),PointsToUnlockNextTier=50),(Skills=(SkillDefinition'GD_Soldier_Skills.Gunpowder.Ranger'),PointsToUnlockNextTier=50),(Skills=(SkillDefinition'GD_Soldier_Skills.Gunpowder.Nuke'),PointsToUnlockNextTier=1))</code>
+							<code profiles="">set GD_Soldier_Skills.SkillTree.Branch_Guerrilla Tiers ((Skills=(SkillDefinition'GD_Soldier_Skills.Guerrilla.Sentry',SkillDefinition'GD_Soldier_Skills.Guerrilla.Ready'),PointsToUnlockNextTier=50),(Skills=(SkillDefinition'GD_Soldier_Skills.Guerrilla.LaserSight',SkillDefinition'GD_Soldier_Skills.Guerrilla.Willing'),PointsToUnlockNextTier=50),(Skills=(SkillDefinition'GD_Soldier_Skills.Guerrilla.Onslaught',SkillDefinition'GD_Soldier_Skills.Guerrilla.ScorchedEarth',SkillDefinition'GD_Soldier_Skills.Guerrilla.Able'),PointsToUnlockNextTier=50),(Skills=(SkillDefinition'GD_Soldier_Skills.Guerrilla.Grenadier'),PointsToUnlockNextTier=50),(Skills=(SkillDefinition'GD_Soldier_Skills.Guerrilla.CrisisManagement'),PointsToUnlockNextTier=50),(Skills=(SkillDefinition'GD_Soldier_Skills.Guerrilla.DoubleUp'),PointsToUnlockNextTier=1))</code>
+						</hotfix>
+					</category>
+					<category name="Gaige">
+						<hotfix name="Hotfix" package="GD_Tulip_Mechro_Streaming">
+							<code profiles="">set GD_Tulip_Mechromancer_Skills.SkillTrees.Branch_LittleBigTrouble Tiers ((Skills=(SkillDefinition'GD_Tulip_Mechromancer_Skills.LittleBigTrouble.MorePep',SkillDefinition'GD_Tulip_Mechromancer_Skills.LittleBigTrouble.Myelin'),PointsToUnlockNextTier=50),(Skills=(SkillDefinition'GD_Tulip_Mechromancer_Skills.LittleBigTrouble.ShockStorm',SkillDefinition'GD_Tulip_Mechromancer_Skills.LittleBigTrouble.TheStare',SkillDefinition'GD_Tulip_Mechromancer_Skills.LittleBigTrouble.StrengthOfFiveGorillas'),PointsToUnlockNextTier=50),(Skills=(SkillDefinition'GD_Tulip_Mechromancer_Skills.LittleBigTrouble.ElectricalBurn',SkillDefinition'GD_Tulip_Mechromancer_Skills.LittleBigTrouble.ShockAndAAAGGGHHH',SkillDefinition'GD_Tulip_Mechromancer_Skills.LittleBigTrouble.EvilEnchantress'),PointsToUnlockNextTier=50),(Skills=(SkillDefinition'GD_Tulip_Mechromancer_Skills.LittleBigTrouble.OneTwoBoom',SkillDefinition'GD_Tulip_Mechromancer_Skills.LittleBigTrouble.WiresDontTalk'),PointsToUnlockNextTier=50),(Skills=(SkillDefinition'GD_Tulip_Mechromancer_Skills.LittleBigTrouble.InterspersedOutburst',SkillDefinition'GD_Tulip_Mechromancer_Skills.LittleBigTrouble.LightningStrike'),PointsToUnlockNextTier=50),(Skills=(SkillDefinition'GD_Tulip_Mechromancer_Skills.LittleBigTrouble.MakeItSparkle'),PointsToUnlockNextTier=1))</code>
+							<code profiles="">set GD_Tulip_Mechromancer_Skills.SkillTrees.Branch_BestFriendsForever Tiers ((Skills=(SkillDefinition'GD_Tulip_Mechromancer_Skills.BestFriendsForever.CloseEnough',SkillDefinition'GD_Tulip_Mechromancer_Skills.BestFriendsForever.CookingUpTrouble'),PointsToUnlockNextTier=50),(Skills=(SkillDefinition'GD_Tulip_Mechromancer_Skills.BestFriendsForever.FancyMathematics',SkillDefinition'GD_Tulip_Mechromancer_Skills.BestFriendsForever.BuckUp',SkillDefinition'GD_Tulip_Mechromancer_Skills.BestFriendsForever.TheBetterHalf'),PointsToUnlockNextTier=50),(Skills=(SkillDefinition'GD_Tulip_Mechromancer_Skills.BestFriendsForever.PotentAsAPony',SkillDefinition'GD_Tulip_Mechromancer_Skills.BestFriendsForever.UpshotRobot',SkillDefinition'GD_Tulip_Mechromancer_Skills.BestFriendsForever.UnstoppableForce'),PointsToUnlockNextTier=50),(Skills=(SkillDefinition'GD_Tulip_Mechromancer_Skills.BestFriendsForever.ExplosiveClap',SkillDefinition'GD_Tulip_Mechromancer_Skills.BestFriendsForever.MadeOfSternerStuff'),PointsToUnlockNextTier=50),(Skills=(SkillDefinition'GD_Tulip_Mechromancer_Skills.BestFriendsForever.20PercentCooler'),PointsToUnlockNextTier=50),(Skills=(SkillDefinition'GD_Tulip_Mechromancer_Skills.BestFriendsForever.SharingIsCaring'),PointsToUnlockNextTier=1))</code>
+							<code profiles="">set GD_Tulip_Mechromancer_Skills.SkillTrees.Branch_EmbracingChaos Tiers ((Skills=(SkillDefinition'GD_Tulip_Mechromancer_Skills.EmbraceChaos.SmallerLighterFaster',SkillDefinition'GD_Tulip_Mechromancer_Skills.EmbraceChaos.Anarchy'),PointsToUnlockNextTier=50),(Skills=(SkillDefinition'GD_Tulip_Mechromancer_Skills.EmbraceChaos.PreshrunkCyberpunk',SkillDefinition'GD_Tulip_Mechromancer_Skills.EmbraceChaos.RobotRampage',SkillDefinition'GD_Tulip_Mechromancer_Skills.EmbraceChaos.BloodSoakedShields'),PointsToUnlockNextTier=50),(Skills=(SkillDefinition'GD_Tulip_Mechromancer_Skills.EmbraceChaos.AnnoyedAndroid',SkillDefinition'GD_Tulip_Mechromancer_Skills.EmbraceChaos.Discord',SkillDefinition'GD_Tulip_Mechromancer_Skills.EmbraceChaos.TypecastIconoclast'),PointsToUnlockNextTier=50),(Skills=(SkillDefinition'GD_Tulip_Mechromancer_Skills.EmbraceChaos.RationalAnarchist',SkillDefinition'GD_Tulip_Mechromancer_Skills.EmbraceChaos.DeathFromAbove'),PointsToUnlockNextTier=50),(Skills=(SkillDefinition'GD_Tulip_Mechromancer_Skills.EmbraceChaos.TheNthDegree'),PointsToUnlockNextTier=50),(Skills=(SkillDefinition'GD_Tulip_Mechromancer_Skills.EmbraceChaos.WithClaws'),PointsToUnlockNextTier=1))</code>
+						</hotfix>
+					</category>
+				</category>
+			</category>
+			<category name="StV chance scales up (Memes) - Incompatible with mods affecting StV">
+				<hotfix name="Hotfix" package="GD_Lilac_Psycho_Streaming">
+					<code profiles="">set GD_Lilac_Skills_Mania.Skills.SilenceTheVoices SkillEffectDefinitions ((AttributeToModify=AttributeDefinition'GD_Lilac_Skills_Mania.Attributes.Att_MeleeSelfChance',bIncludeDuelingTargets=False,bIncludeSelfAsTarget=False,bOnlyEffectTargetsInRange=False,bExcludeNonPlayerCharacters=False,EffectTarget=TARGET_Self,TargetInstanceDataName=,TargetCriteria=CRITERIA_None,ModifierType=MT_PostAdd,BaseModifierValue=(BaseValueConstant=0.120000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),GradeToStartApplyingEffect=1,PerGradeUpgradeInterval=1,PerGradeUpgrade=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),BonusUpgradeList=),(AttributeToModify=AttributeDefinition'D_Attributes.DamageSourceModifiers.InstigatedMeleeDamageModifier',bIncludeDuelingTargets=False,bIncludeSelfAsTarget=False,bOnlyEffectTargetsInRange=False,bExcludeNonPlayerCharacters=False,EffectTarget=TARGET_Self,TargetInstanceDataName=,TargetCriteria=CRITERIA_None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),GradeToStartApplyingEffect=1,PerGradeUpgradeInterval=1,PerGradeUpgrade=(BaseValueConstant=0.500000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),BonusUpgradeList=),(AttributeToModify=AttributeDefinition'GD_Lilac_Skills_Mania.Attributes.Att_MeleeSelfChance',bIncludeDuelingTargets=False,bIncludeSelfAsTarget=False,bOnlyEffectTargetsInRange=False,bExcludeNonPlayerCharacters=False,EffectTarget=TARGET_Self,TargetInstanceDataName=,TargetCriteria=CRITERIA_None,ModifierType=MT_PreAdd,BaseModifierValue=(BaseValueConstant=8.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),GradeToStartApplyingEffect=11,PerGradeUpgradeInterval=1,PerGradeUpgrade=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),BonusUpgradeList=))</code>
+				</hotfix>
+			</category>
+		</category>
+	</body>
+</BLCMM>
+
+#Commands:
+set GD_Globals.Skills.INI_SkillPointsPerLevelUp ConditionalInitialization (bEnabled=True,ConditionalExpressionList=((BaseValueIfTrue=(BaseValueConstant=10,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1),Expressions=((AttributeOperand1=AttributeDefinition'D_Attributes.ExperienceResourcePool.PlayerExperienceLevel',ComparisonOperator=OPERATOR_GreaterThanOrEqual,Operand2Usage=OPERAND_PreferAttribute,AttributeOperand2=None,ConstantOperand2=1)))),DefaultBaseValue=(BaseValueConstant=1,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1))
+set GD_Globals.Skills.INI_TotalSkillPointsForCurrentLevel ConditionalInitialization (bEnabled=True,ConditionalExpressionList=((BaseValueIfTrue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=AttributeInitializationDefinition'GD_Globals.Skills.INI_TotalSkillPointsForCurrentLevelFormula',BaseValueScaleConstant=1.000000),Expressions=((AttributeOperand1=AttributeDefinition'D_Attributes.ExperienceResourcePool.PlayerExperienceLevel',ComparisonOperator=OPERATOR_GreaterThanOrEqual,Operand2Usage=OPERAND_PreferAttribute,AttributeOperand2=None,ConstantOperand2=1.0000000)))),DefaultBaseValue=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))
+set GD_Globals.Skills.INI_TotalSkillPointsForCurrentLevelFormula ValueFormula (bEnabled=True,Multiplier=(BaseValueConstant=10.0000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),Level=(BaseValueConstant=0.000000,BaseValueAttribute=AttributeDefinition'D_Attributes.ExperienceResourcePool.PlayerExperienceLevel',InitializationDefinition=None,BaseValueScaleConstant=1.000000),Power=(BaseValueConstant=1.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),Offset=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))
+set GD_Globals.Skills.INI_TotalSkillPointsForCurrentLevelFormula RangeRestriction (bEnableMinValueRestriction=False,MinValue=(BaseValueConstant=0.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),bEnableMaxValueRestriction=False,MaxValue=(BaseValueConstant=900.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))
+set GD_ClassMods.Misc.Init_BaseSkillPointCalculation ConditionalInitialization (bEnabled=True,ConditionalExpressionList=((BaseValueIfTrue=(BaseValueConstant=49.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),Expressions=((AttributeOperand1=AttributeDefinition'D_Attributes.Inventory.UnownedItemLevel',ComparisonOperator=OPERATOR_GreaterThanOrEqual,Operand2Usage=OPERAND_PreferAttribute,AttributeOperand2=None,ConstantOperand2=50.000000))),(BaseValueIfTrue=(BaseValueConstant=39.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),Expressions=((AttributeOperand1=AttributeDefinition'D_Attributes.Inventory.UnownedItemLevel',ComparisonOperator=OPERATOR_GreaterThanOrEqual,Operand2Usage=OPERAND_PreferAttribute,AttributeOperand2=None,ConstantOperand2=38.000000))),(BaseValueIfTrue=(BaseValueConstant=29.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),Expressions=((AttributeOperand1=AttributeDefinition'D_Attributes.Inventory.UnownedItemLevel',ComparisonOperator=OPERATOR_GreaterThanOrEqual,Operand2Usage=OPERAND_PreferAttribute,AttributeOperand2=None,ConstantOperand2=25.000000))),(BaseValueIfTrue=(BaseValueConstant=19.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),Expressions=((AttributeOperand1=AttributeDefinition'D_Attributes.Inventory.UnownedItemLevel',ComparisonOperator=OPERATOR_GreaterThanOrEqual,Operand2Usage=OPERAND_PreferAttribute,AttributeOperand2=AttributeDefinition'GD_Itempools.Scheduling.LootSchedule_ClassMod_02_Uncommon',ConstantOperand2=12.000000)))),DefaultBaseValue=(BaseValueConstant=9.000000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000))
+
+#Hotfixes:
+set Transient.SparkServiceConfiguration_0 ServiceName Micropatch
+
+set Transient.SparkServiceConfiguration_0 ConfigurationGroup Default
+
+set Transient.SparkServiceConfiguration_0 Keys ("SparkLevelPatchEntry-BLCMM1","SparkLevelPatchEntry-BLCMM2","SparkLevelPatchEntry-BLCMM3","SparkLevelPatchEntry-BLCMM4","SparkLevelPatchEntry-BLCMM5","SparkLevelPatchEntry-BLCMM6","SparkLevelPatchEntry-BLCMM7","SparkLevelPatchEntry-BLCMM8","SparkLevelPatchEntry-BLCMM9","SparkLevelPatchEntry-BLCMM10","SparkLevelPatchEntry-BLCMM11","SparkLevelPatchEntry-BLCMM12","SparkLevelPatchEntry-BLCMM13","SparkLevelPatchEntry-BLCMM14","SparkOnDemandPatchEntry-BLCMM15","SparkOnDemandPatchEntry-BLCMM16","SparkOnDemandPatchEntry-BLCMM17","SparkOnDemandPatchEntry-BLCMM18","SparkOnDemandPatchEntry-BLCMM19","SparkPatchEntry-BLCMM20","SparkPatchEntry-BLCMM21","SparkPatchEntry-BLCMM22","SparkPatchEntry-BLCMM23","SparkOnDemandPatchEntry-BLCMM24","SparkOnDemandPatchEntry-BLCMM25","SparkOnDemandPatchEntry-BLCMM26","SparkOnDemandPatchEntry-BLCMM27","SparkOnDemandPatchEntry-BLCMM28","SparkOnDemandPatchEntry-BLCMM29","SparkOnDemandPatchEntry-BLCMM30","SparkOnDemandPatchEntry-BLCMM31","SparkOnDemandPatchEntry-BLCMM32","SparkOnDemandPatchEntry-BLCMM33","SparkOnDemandPatchEntry-BLCMM34","SparkOnDemandPatchEntry-BLCMM35","SparkOnDemandPatchEntry-BLCMM36","SparkOnDemandPatchEntry-BLCMM37","SparkOnDemandPatchEntry-BLCMM38","SparkOnDemandPatchEntry-BLCMM39","SparkOnDemandPatchEntry-BLCMM40","SparkOnDemandPatchEntry-BLCMM41","SparkOnDemandPatchEntry-BLCMM42","SparkOnDemandPatchEntry-BLCMM43","SparkOnDemandPatchEntry-BLCMM44","SparkOnDemandPatchEntry-BLCMM45","SparkOnDemandPatchEntry-BLCMM46","SparkOnDemandPatchEntry-BLCMM47","SparkOnDemandPatchEntry-BLCMM48","SparkOnDemandPatchEntry-BLCMM49","SparkOnDemandPatchEntry-BLCMM50","SparkOnDemandPatchEntry-BLCMM51","SparkOnDemandPatchEntry-BLCMM52","SparkOnDemandPatchEntry-BLCMM53","SparkOnDemandPatchEntry-BLCMM54","SparkOnDemandPatchEntry-BLCMM55","SparkOnDemandPatchEntry-BLCMM56","SparkOnDemandPatchEntry-BLCMM57","SparkOnDemandPatchEntry-BLCMM58","SparkOnDemandPatchEntry-BLCMM59","SparkOnDemandPatchEntry-BLCMM60","SparkOnDemandPatchEntry-BLCMM61","SparkOnDemandPatchEntry-BLCMM62","SparkOnDemandPatchEntry-BLCMM63","SparkOnDemandPatchEntry-BLCMM64","SparkOnDemandPatchEntry-BLCMM65","SparkOnDemandPatchEntry-BLCMM66","SparkOnDemandPatchEntry-BLCMM67","SparkOnDemandPatchEntry-BLCMM68","SparkOnDemandPatchEntry-BLCMM69","SparkOnDemandPatchEntry-BLCMM70","SparkOnDemandPatchEntry-BLCMM71","SparkOnDemandPatchEntry-BLCMM72","SparkOnDemandPatchEntry-BLCMM73","SparkOnDemandPatchEntry-BLCMM74","SparkOnDemandPatchEntry-BLCMM75","SparkOnDemandPatchEntry-BLCMM76","SparkOnDemandPatchEntry-BLCMM77","SparkOnDemandPatchEntry-BLCMM78","SparkOnDemandPatchEntry-BLCMM79","SparkOnDemandPatchEntry-BLCMM80","SparkOnDemandPatchEntry-BLCMM81","SparkOnDemandPatchEntry-BLCMM82","SparkOnDemandPatchEntry-BLCMM83","SparkOnDemandPatchEntry-BLCMM84","SparkOnDemandPatchEntry-BLCMM85","SparkOnDemandPatchEntry-BLCMM86","SparkOnDemandPatchEntry-BLCMM87","SparkOnDemandPatchEntry-BLCMM88","SparkOnDemandPatchEntry-BLCMM89","SparkOnDemandPatchEntry-BLCMM90","SparkOnDemandPatchEntry-BLCMM91","SparkOnDemandPatchEntry-BLCMM92","SparkOnDemandPatchEntry-BLCMM93","SparkOnDemandPatchEntry-BLCMM94","SparkOnDemandPatchEntry-BLCMM95","SparkOnDemandPatchEntry-BLCMM96","SparkOnDemandPatchEntry-BLCMM97","SparkOnDemandPatchEntry-BLCMM98","SparkOnDemandPatchEntry-BLCMM99","SparkOnDemandPatchEntry-BLCMM100","SparkOnDemandPatchEntry-BLCMM101","SparkOnDemandPatchEntry-BLCMM102","SparkOnDemandPatchEntry-BLCMM103","SparkOnDemandPatchEntry-BLCMM104","SparkOnDemandPatchEntry-BLCMM105","SparkOnDemandPatchEntry-BLCMM106","SparkOnDemandPatchEntry-BLCMM107","SparkOnDemandPatchEntry-BLCMM108","SparkOnDemandPatchEntry-BLCMM109","SparkOnDemandPatchEntry-BLCMM110","SparkOnDemandPatchEntry-BLCMM111","SparkOnDemandPatchEntry-BLCMM112","SparkOnDemandPatchEntry-BLCMM113","SparkOnDemandPatchEntry-BLCMM114","SparkOnDemandPatchEntry-BLCMM115","SparkOnDemandPatchEntry-BLCMM116","SparkOnDemandPatchEntry-BLCMM117","SparkOnDemandPatchEntry-BLCMM118","SparkOnDemandPatchEntry-BLCMM119","SparkOnDemandPatchEntry-BLCMM120","SparkOnDemandPatchEntry-BLCMM121","SparkOnDemandPatchEntry-BLCMM122","SparkOnDemandPatchEntry-BLCMM123","SparkOnDemandPatchEntry-BLCMM124","SparkOnDemandPatchEntry-BLCMM125","SparkOnDemandPatchEntry-BLCMM126","SparkOnDemandPatchEntry-BLCMM127","SparkOnDemandPatchEntry-BLCMM128","SparkOnDemandPatchEntry-BLCMM129","SparkOnDemandPatchEntry-BLCMM130","SparkOnDemandPatchEntry-BLCMM131","SparkOnDemandPatchEntry-BLCMM132","SparkOnDemandPatchEntry-BLCMM133","SparkOnDemandPatchEntry-BLCMM134","SparkOnDemandPatchEntry-BLCMM135","SparkOnDemandPatchEntry-BLCMM136","SparkOnDemandPatchEntry-BLCMM137","SparkOnDemandPatchEntry-BLCMM138","SparkOnDemandPatchEntry-BLCMM139","SparkOnDemandPatchEntry-BLCMM140","SparkOnDemandPatchEntry-BLCMM141","SparkOnDemandPatchEntry-BLCMM142","SparkOnDemandPatchEntry-BLCMM143","SparkOnDemandPatchEntry-BLCMM144","SparkOnDemandPatchEntry-BLCMM145","SparkOnDemandPatchEntry-BLCMM146","SparkOnDemandPatchEntry-BLCMM147","SparkOnDemandPatchEntry-BLCMM148","SparkOnDemandPatchEntry-BLCMM149","SparkOnDemandPatchEntry-BLCMM150","SparkOnDemandPatchEntry-BLCMM151","SparkOnDemandPatchEntry-BLCMM152","SparkOnDemandPatchEntry-BLCMM153","SparkOnDemandPatchEntry-BLCMM154","SparkOnDemandPatchEntry-BLCMM155","SparkOnDemandPatchEntry-BLCMM156","SparkOnDemandPatchEntry-BLCMM157","SparkOnDemandPatchEntry-BLCMM158","SparkOnDemandPatchEntry-BLCMM159","SparkOnDemandPatchEntry-BLCMM160","SparkOnDemandPatchEntry-BLCMM161","SparkOnDemandPatchEntry-BLCMM162","SparkOnDemandPatchEntry-BLCMM163","SparkOnDemandPatchEntry-BLCMM164","SparkOnDemandPatchEntry-BLCMM165","SparkOnDemandPatchEntry-BLCMM166","SparkOnDemandPatchEntry-BLCMM167","SparkOnDemandPatchEntry-BLCMM168","SparkOnDemandPatchEntry-BLCMM169","SparkOnDemandPatchEntry-BLCMM170","SparkOnDemandPatchEntry-BLCMM171","SparkOnDemandPatchEntry-BLCMM172","SparkOnDemandPatchEntry-BLCMM173","SparkOnDemandPatchEntry-BLCMM174","SparkOnDemandPatchEntry-BLCMM175","SparkOnDemandPatchEntry-BLCMM176","SparkOnDemandPatchEntry-BLCMM177","SparkOnDemandPatchEntry-BLCMM178","SparkOnDemandPatchEntry-BLCMM179","SparkOnDemandPatchEntry-BLCMM180","SparkOnDemandPatchEntry-BLCMM181","SparkOnDemandPatchEntry-BLCMM182","SparkOnDemandPatchEntry-BLCMM183","SparkOnDemandPatchEntry-BLCMM184","SparkOnDemandPatchEntry-BLCMM185","SparkOnDemandPatchEntry-BLCMM186","SparkOnDemandPatchEntry-BLCMM187","SparkOnDemandPatchEntry-BLCMM188","SparkOnDemandPatchEntry-BLCMM189","SparkOnDemandPatchEntry-BLCMM190","SparkOnDemandPatchEntry-BLCMM191","SparkOnDemandPatchEntry-BLCMM192","SparkOnDemandPatchEntry-BLCMM193","SparkOnDemandPatchEntry-BLCMM194","SparkOnDemandPatchEntry-BLCMM195","SparkOnDemandPatchEntry-BLCMM196","SparkOnDemandPatchEntry-BLCMM197","SparkOnDemandPatchEntry-BLCMM198","SparkOnDemandPatchEntry-BLCMM199","SparkOnDemandPatchEntry-BLCMM200","SparkOnDemandPatchEntry-BLCMM201","SparkOnDemandPatchEntry-BLCMM202","SparkOnDemandPatchEntry-BLCMM203","SparkOnDemandPatchEntry-BLCMM204","SparkOnDemandPatchEntry-BLCMM205")
+set Transient.SparkServiceConfiguration_0 Values (",GD_Balance.WeightingPlayerCount.BugmorphCocoon_PerPlayers_Phase1,ConditionalInitialization.ConditionalExpressionList[4].BaseValueIfTrue.BaseValueConstant,0.700000,.8",",GD_Balance.WeightingPlayerCount.BugmorphCocoon_PerPlayers_Phase2,ConditionalInitialization.ConditionalExpressionList[4].BaseValueIfTrue.BaseValueConstant,0.400000,.5",",GD_Balance.WeightingPlayerCount.BugmorphCocoon_PerPlayers_Phase3,ConditionalInitialization.ConditionalExpressionList[4].BaseValueIfTrue.BaseValueConstant,0.200000,.3",",GD_Balance.WeightingPlayerCount.BugmorphCocoon_PerPlayers_Phase4,ConditionalInitialization.ConditionalExpressionList[4].BaseValueIfTrue.BaseValueConstant,0.100000,.2",",GD_Balance.WeightingPlayerCount.BugmorphCocoon_PerPlayers_Phase5,ConditionalInitialization.ConditionalExpressionList[4].BaseValueIfTrue.BaseValueConstant,0.075000,.1","SouthpawFactory_P,GD_Population_Marauder.Balance.Unique.PawnBalance_Assassin1,DefaultItemPoolList[3].PoolProbability.BaseValueScaleConstant,0.250000,1","SouthpawFactory_P,GD_Population_Nomad.Balance.Unique.PawnBalance_Assassin2,DefaultItemPoolList[4].PoolProbability.BaseValueScaleConstant,0.250000,1","SouthpawFactory_P,GD_Population_Psycho.Balance.Unique.PawnBalance_Assassin3,DefaultItemPoolList[1].PoolProbability.BaseValueScaleConstant,0.250000,1","SouthpawFactory_P,GD_Population_Rat.Balance.Unique.PawnBalance_Assassin4,DefaultItemPoolList[3].PoolProbability.BaseValueScaleConstant,0.250000,1",",GD_Sage_Rare_Scaylion.Population.PawnBalance_Sage_Rare_Scaylion,DefaultItemPoolList[1].PoolProbability.BaseValueScaleConstant,1.000000,100",",GD_Sage_Rare_Drifter.Balance.PawnBalance_Sage_Rare_Drifter,DefaultItemPoolList[0].PoolProbability.BaseValueScaleConstant,1.000000,100",",GD_Sage_Rare_Rhino.Population.PawnBalance_Sage_Rare_Rhino,DefaultItemPoolList[1].PoolProbability.BaseValueScaleConstant,1.000000,100",",GD_Sage_Rare_Skag.Population.PawnBalance_Sage_Rare_Skag,DefaultItemPoolList[1].PoolProbability.BaseValueScaleConstant,1.000000,100",",GD_Sage_Rare_Spore.Population.PawnBalance_Sage_Rare_Spore,DefaultItemPoolList[0].PoolProbability.BaseValueScaleConstant,1.000000,100","GD_Assassin_Streaming,GD_Assassin_Skills.Sniping.Velocity,SkillEffectDefinitions[0].ModifierType,MT_PostAdd,MT_Scale","GD_Tulip_Mechro_Streaming,GD_Tulip_Mechromancer_Skills.LittleBigTrouble.WiresDontTalk,SkillEffectDefinitions,,((AttributeToModify=D_Attributes.DamageTypeModifers.InstigatedShockDamageModifier,bIncludeDuelingTargets=False,bIncludeSelfAsTarget=False,bOnlyEffectTargetsInRange=False,bExcludeNonPlayerCharacters=False,EffectTarget=TARGET_Self,TargetInstanceDataName=,TargetCriteria=CRITERIA_None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.030000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),GradeToStartApplyingEffect=1,PerGradeUpgradeInterval=1,PerGradeUpgrade=(BaseValueConstant=0.030000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),BonusUpgradeList=),(AttributeToModify=D_Attributes.DamageTypeModifers.InstigatedShockStatusDamageModifier,bIncludeDuelingTargets=False,bIncludeSelfAsTarget=False,bOnlyEffectTargetsInRange=False,bExcludeNonPlayerCharacters=False,EffectTarget=TARGET_Self,TargetInstanceDataName=,TargetCriteria=CRITERIA_None,ModifierType=MT_Scale,BaseModifierValue=(BaseValueConstant=0.030000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),GradeToStartApplyingEffect=1,PerGradeUpgradeInterval=1,PerGradeUpgrade=(BaseValueConstant=0.030000,BaseValueAttribute=None,InitializationDefinition=None,BaseValueScaleConstant=1.000000),BonusUpgradeList=))","GD_Siren_Streaming,GD_Siren_Skills.Misc.Init_BlightPhoenix_DamageCalc_Part2,ValueFormula.Level.InitializationDefinition,AttributeInitializationDefinition'GD_Balance_HealthAndDamage.HealthAndDamage.Init_PlayerMeleeDamage',AttributeInitializationDefinition'GD_Balance_HealthAndDamage.HealthAndDamage.Init_PlayerSkillDamage'","GD_Siren_Streaming,GD_Siren_Skills.Misc.Init_BlightPhoenix_DamageCalc_Part2,ValueFormula.Level.BaseValueScaleConstant,1.000000,3.5","GD_Assassin_Streaming,GD_Assassin_Skills.Misc.Att_DeathMark_BonusDamage,BaseValue.BaseValueConstant,0.200000,.8","GD_Itempools.Runnables.Pool_FourAssassins,BalancedItems[1].Probability.InitializationDefinition,None,GD_Balance.Weighting.Weight_1_Common","GD_Shields.Projectiles.Proj_LegendaryBoosterShield:BehaviorProviderDefinition_1.Behavior_Explode_140,BehaviorSequences[0].BehaviorData2[7].Behavior.StatusEffectDamage.BaseValueAttribute,None,D_Attributes.Projectile.ProjectileDamage","GD_Shields.Projectiles.Proj_LegendaryBoosterShield:BehaviorProviderDefinition_1.Behavior_Explode_140,BehaviorSequences[0].BehaviorData2[7].Behavior.StatusEffectDamage.BaseValueScaleConstant,1.000000,.25","GD_Shields.Projectiles.Proj_LegendaryBoosterShield:BehaviorProviderDefinition_1.Behavior_Explode_140,BehaviorSequences[0].BehaviorData2[7].Behavior.StatusEffectChance.BaseValueConstant,1.000000,20","GD_Lilac_Psycho_Streaming,GD_Lilac_Skills_Bloodlust.Skills.BloodBath,MaxGrade,,100","GD_Lilac_Psycho_Streaming,GD_Lilac_Skills_Bloodlust.Skills.BloodBathChild,MaxGrade,,100","GD_Lilac_Psycho_Streaming,GD_Lilac_Skills_Bloodlust.Skills.BloodfilledGuns,MaxGrade,,100","GD_Lilac_Psycho_Streaming,GD_Lilac_Skills_Bloodlust.Skills.BloodOverdrive,MaxGrade,,100","GD_Lilac_Psycho_Streaming,GD_Lilac_Skills_Bloodlust.Skills.BloodOverdriveChild,MaxGrade,,100","GD_Lilac_Psycho_Streaming,GD_Lilac_Skills_Bloodlust.Skills.BloodyRevival,MaxGrade,,100","GD_Lilac_Psycho_Streaming,GD_Lilac_Skills_Bloodlust.Skills.BloodyTwitch,MaxGrade,,100","GD_Lilac_Psycho_Streaming,GD_Lilac_Skills_Bloodlust.Skills.BoilingBlood,MaxGrade,,100","GD_Lilac_Psycho_Streaming,GD_Lilac_Skills_Bloodlust.Skills.BloodTrance,MaxGrade,,100","GD_Lilac_Psycho_Streaming,GD_Lilac_Skills_Bloodlust.Skills.FuelTheBlood,MaxGrade,,100","GD_Lilac_Psycho_Streaming,GD_Lilac_Skills_Bloodlust.Skills.FuelTheBloodChild,MaxGrade,,100","GD_Lilac_Psycho_Streaming,GD_Lilac_Skills_Bloodlust.Skills.NervousBlood,MaxGrade,,100","GD_Lilac_Psycho_Streaming,GD_Lilac_Skills_Bloodlust.Skills.TasteOfBlood,MaxGrade,,100","GD_Lilac_Psycho_Streaming,GD_Lilac_Skills_Mania.Skills.EmbraceThePain,MaxGrade,,100","GD_Lilac_Psycho_Streaming,GD_Lilac_Skills_Mania.Skills.EmptyRage,MaxGrade,,100","GD_Lilac_Psycho_Streaming,GD_Lilac_Skills_Mania.Skills.FeedTheMeat,MaxGrade,,100","GD_Lilac_Psycho_Streaming,GD_Lilac_Skills_Mania.Skills.FuelTheRampage,MaxGrade,,100","GD_Lilac_Psycho_Streaming,GD_Lilac_Skills_Mania.Skills.SaltTheWound,MaxGrade,,100","GD_Lilac_Psycho_Streaming,GD_Lilac_Skills_Mania.Skills.SilenceTheVoices,MaxGrade,,100","GD_Lilac_Psycho_Streaming,GD_Lilac_Skills_Mania.Skills.StripTheFlesh,MaxGrade,,100","GD_Lilac_Psycho_Streaming,GD_Lilac_Skills_Mania.Skills.ThrillOfTheKill,MaxGrade,,100","GD_Lilac_Psycho_Streaming,GD_Lilac_Skills_Hellborn.Skills.BurnBabyBurn,MaxGrade,,100","GD_Lilac_Psycho_Streaming,GD_Lilac_Skills_Hellborn.Skills.BurnBabyBurnChild,MaxGrade,,100","GD_Lilac_Psycho_Streaming,GD_Lilac_Skills_Hellborn.Skills.ElementalElation,MaxGrade,,100","GD_Lilac_Psycho_Streaming,GD_Lilac_Skills_Hellborn.Skills.ElementalEmpathy,MaxGrade,,100","GD_Lilac_Psycho_Streaming,GD_Lilac_Skills_Hellborn.Skills.FireFiend,MaxGrade,,100","GD_Lilac_Psycho_Streaming,GD_Lilac_Skills_Hellborn.Skills.FlameFlare,MaxGrade,,100","GD_Lilac_Psycho_Streaming,GD_Lilac_Skills_Hellborn.Skills.FlameFlare_Reigniter,MaxGrade,,100","GD_Lilac_Psycho_Streaming,GD_Lilac_Skills_Hellborn.Skills.FuelTheFire,MaxGrade,,100","GD_Lilac_Psycho_Streaming,GD_Lilac_Skills_Hellborn.Skills.NumbedNerves,MaxGrade,,100","GD_Lilac_Psycho_Streaming,GD_Lilac_Skills_Hellborn.Skills.PainIsPower,MaxGrade,,100","GD_Mercenary_Streaming,GD_Mercenary_Skills.Brawn.AintGotTimeToBleed,MaxGrade,,100","GD_Mercenary_Streaming,GD_Mercenary_Skills.Brawn.Asbestos,MaxGrade,,100","GD_Mercenary_Streaming,GD_Mercenary_Skills.Brawn.BusThatCantSlowDown,MaxGrade,,100","GD_Mercenary_Streaming,GD_Mercenary_Skills.Brawn.Diehard,MaxGrade,,100","GD_Mercenary_Streaming,GD_Mercenary_Skills.Brawn.ImTheJuggernaut,MaxGrade,,100","GD_Mercenary_Streaming,GD_Mercenary_Skills.Brawn.Incite,MaxGrade,,100","GD_Mercenary_Streaming,GD_Mercenary_Skills.Brawn.Incite_Active,MaxGrade,,100","GD_Mercenary_Streaming,GD_Mercenary_Skills.Brawn.JustGotReal,MaxGrade,,100","GD_Mercenary_Streaming,GD_Mercenary_Skills.Brawn.OutOfBubblegum,MaxGrade,,100","GD_Mercenary_Streaming,GD_Mercenary_Skills.Brawn.SexualTyrannosaurus,MaxGrade,,100","GD_Mercenary_Streaming,GD_Mercenary_Skills.Brawn.SexualTyrannosaurus_Active,MaxGrade,,100","GD_Mercenary_Streaming,GD_Mercenary_Skills.Gun_Lust.AllIneedIsOne,MaxGrade,,100","GD_Mercenary_Streaming,GD_Mercenary_Skills.Gun_Lust.AllIneedIsOne_Active,MaxGrade,,100","GD_Mercenary_Streaming,GD_Mercenary_Skills.Gun_Lust.DivergentLikness,MaxGrade,,100","GD_Mercenary_Streaming,GD_Mercenary_Skills.Gun_Lust.ImYourHuckleberry,MaxGrade,,100","GD_Mercenary_Streaming,GD_Mercenary_Skills.Gun_Lust.ImYourHuckleberry_Offhand,MaxGrade,,100","GD_Mercenary_Streaming,GD_Mercenary_Skills.Gun_Lust.KeepItPipingHot,MaxGrade,,100","GD_Mercenary_Streaming,GD_Mercenary_Skills.Gun_Lust.LayWaste,MaxGrade,,100","GD_Mercenary_Streaming,GD_Mercenary_Skills.Gun_Lust.LockedandLoaded,MaxGrade,,100","GD_Mercenary_Streaming,GD_Mercenary_Skills.Gun_Lust.LockedAndLoaded_Active,MaxGrade,,100","GD_Mercenary_Streaming,GD_Mercenary_Skills.Gun_Lust.MoneyShot,MaxGrade,,100","GD_Mercenary_Streaming,GD_Mercenary_Skills.Gun_Lust.QuickDraw,MaxGrade,,100","GD_Mercenary_Streaming,GD_Mercenary_Skills.Rampage.5Shotsor6,MaxGrade,,100","GD_Mercenary_Streaming,GD_Mercenary_Skills.Rampage.YippeeKiYay,MaxGrade,,100","GD_Mercenary_Streaming,GD_Mercenary_Skills.Rampage.AllInTheReflexes,MaxGrade,,100","GD_Mercenary_Streaming,GD_Mercenary_Skills.Rampage.FilledtotheBrim,MaxGrade,,100","GD_Mercenary_Streaming,GD_Mercenary_Skills.Rampage.GetSome,MaxGrade,,100","GD_Mercenary_Streaming,GD_Mercenary_Skills.Rampage.GetSome_Active,MaxGrade,,100","GD_Mercenary_Streaming,GD_Mercenary_Skills.Rampage.ImReadyAlready,MaxGrade,,100","GD_Mercenary_Streaming,GD_Mercenary_Skills.Rampage.Inconceivable,MaxGrade,,100","GD_Mercenary_Streaming,GD_Mercenary_Skills.Rampage.LastLonger,MaxGrade,,100","GD_Siren_Streaming,GD_Siren_Skills.Cataclysm.Backdraft,MaxGrade,,100","GD_Siren_Streaming,GD_Siren_Skills.Cataclysm.Backdraft_Feedback,MaxGrade,,100","GD_Siren_Streaming,GD_Siren_Skills.Cataclysm.BlightPhoenix,MaxGrade,,100","GD_Siren_Streaming,GD_Siren_Skills.Cataclysm.ChainReaction,MaxGrade,,100","GD_Siren_Streaming,GD_Siren_Skills.Cataclysm.Flicker,MaxGrade,,100","GD_Siren_Streaming,GD_Siren_Skills.Cataclysm.Foresight,MaxGrade,,100","GD_Siren_Streaming,GD_Siren_Skills.Cataclysm.Helios,MaxGrade,,100","GD_Siren_Streaming,GD_Siren_Skills.Cataclysm.Immolate,MaxGrade,,100","GD_Siren_Streaming,GD_Siren_Skills.Cataclysm.Reaper,MaxGrade,,100","GD_Siren_Streaming,GD_Siren_Skills.Harmony.Elated,MaxGrade,,100","GD_Siren_Streaming,GD_Siren_Skills.Harmony.LifeTap,MaxGrade,,100","GD_Siren_Streaming,GD_Siren_Skills.Harmony.MindsEye,MaxGrade,,100","GD_Siren_Streaming,GD_Siren_Skills.Harmony.Recompense,MaxGrade,,100","GD_Siren_Streaming,GD_Siren_Skills.Harmony.Recompense_Feedback,MaxGrade,,100","GD_Siren_Streaming,GD_Siren_Skills.Harmony.Restoration,MaxGrade,,100","GD_Siren_Streaming,GD_Siren_Skills.Harmony.Sustenance,MaxGrade,,100","GD_Siren_Streaming,GD_Siren_Skills.Harmony.SweetRelease,MaxGrade,,100","GD_Siren_Streaming,GD_Siren_Skills.Harmony.Wreck,MaxGrade,,100","GD_Siren_Streaming,GD_Siren_Skills.Motion.Accelerate,MaxGrade,,100","GD_Siren_Streaming,GD_Siren_Skills.Motion.Fleet,MaxGrade,,100","GD_Siren_Streaming,GD_Siren_Skills.Motion.Inertia,MaxGrade,,100","GD_Siren_Streaming,GD_Siren_Skills.Motion.KineticReflection,MaxGrade,,100","GD_Siren_Streaming,GD_Siren_Skills.Motion.Quicken,MaxGrade,,100","GD_Siren_Streaming,GD_Siren_Skills.Motion.SubSequence,MaxGrade,,100","GD_Siren_Streaming,GD_Siren_Skills.Motion.Subsequence_Feedback,MaxGrade,,100","GD_Siren_Streaming,GD_Siren_Skills.Motion.Suspension,MaxGrade,,100","GD_Siren_Streaming,GD_Siren_Skills.Motion.Ward,MaxGrade,,100","GD_Assassin_Streaming,GD_Assassin_Skills.Bloodshed.Backstab,MaxGrade,,100","GD_Assassin_Streaming,GD_Assassin_Skills.Bloodshed.BeLikeWater,MaxGrade,,100","GD_Assassin_Streaming,GD_Assassin_Skills.Bloodshed.BeLikeWater_Melee_Active,MaxGrade,,100","GD_Assassin_Streaming,GD_Assassin_Skills.Bloodshed.BeLikeWater_Ranged_Active,MaxGrade,,100","GD_Assassin_Streaming,GD_Assassin_Skills.Bloodshed.Followthrough,MaxGrade,,100","GD_Assassin_Streaming,GD_Assassin_Skills.Bloodshed.Grim,MaxGrade,,100","GD_Assassin_Streaming,GD_Assassin_Skills.Bloodshed.IronHand,MaxGrade,,100","GD_Assassin_Streaming,GD_Assassin_Skills.Bloodshed.KillingBlow,MaxGrade,,100","GD_Assassin_Streaming,GD_Assassin_Skills.Bloodshed.LikeTheWind,MaxGrade,,100","GD_Assassin_Streaming,GD_Assassin_Skills.Bloodshed.LikeTheWind_Active,MaxGrade,,100","GD_Assassin_Streaming,GD_Assassin_Skills.Bloodshed.Resurgence,MaxGrade,,100","GD_Assassin_Streaming,GD_Assassin_Skills.Bloodshed.Resurgence_Active,MaxGrade,,100","GD_Assassin_Streaming,GD_Assassin_Skills.Cunning.Ambush,MaxGrade,,100","GD_Assassin_Streaming,GD_Assassin_Skills.Cunning.CounterStrike,MaxGrade,,100","GD_Assassin_Streaming,GD_Assassin_Skills.Cunning.CounterStrike_Active,MaxGrade,,100","GD_Assassin_Streaming,GD_Assassin_Skills.Cunning.FastHands,MaxGrade,,100","GD_Assassin_Streaming,GD_Assassin_Skills.Cunning.Fearless,MaxGrade,,100","GD_Assassin_Streaming,GD_Assassin_Skills.Cunning.Innervate,MaxGrade,,100","GD_Assassin_Streaming,GD_Assassin_Skills.Cunning.RisingShot,MaxGrade,,100","GD_Assassin_Streaming,GD_Assassin_Skills.Cunning.RisingShot_Active,MaxGrade,,100","GD_Assassin_Streaming,GD_Assassin_Skills.Cunning.TwoFang,MaxGrade,,100","GD_Assassin_Streaming,GD_Assassin_Skills.Cunning.Unforseen,MaxGrade,,100","GD_Assassin_Streaming,GD_Assassin_Skills.Sniping.AtOneWithTheGun,MaxGrade,,100","GD_Assassin_Streaming,GD_Assassin_Skills.Sniping.AtOneWithTheGun_IsNotIronsighting,MaxGrade,,100","GD_Assassin_Streaming,GD_Assassin_Skills.Sniping.HeadShot,MaxGrade,,100","GD_Assassin_Streaming,GD_Assassin_Skills.Sniping.KillConfirmed,MaxGrade,,100","GD_Assassin_Streaming,GD_Assassin_Skills.Sniping.Killer,MaxGrade,,100","GD_Assassin_Streaming,GD_Assassin_Skills.Sniping.OneShotOneKill,MaxGrade,,100","GD_Assassin_Streaming,GD_Assassin_Skills.Sniping.Optics,MaxGrade,,100","GD_Assassin_Streaming,GD_Assassin_Skills.Sniping.Precision,MaxGrade,,100","GD_Assassin_Streaming,GD_Assassin_Skills.Sniping.Velocity,MaxGrade,,100","GD_Soldier_Streaming,GD_Soldier_Skills.Guerrilla.Able,MaxGrade,,100","GD_Soldier_Streaming,GD_Soldier_Skills.Guerrilla.Able_Active,MaxGrade,,100","GD_Soldier_Streaming,GD_Soldier_Skills.Guerrilla.CrisisManagement,MaxGrade,,100","GD_Soldier_Streaming,GD_Soldier_Skills.Guerrilla.Grenadier,MaxGrade,,100","GD_Soldier_Streaming,GD_Soldier_Skills.Guerrilla.LaserSight,MaxGrade,,100","GD_Soldier_Streaming,GD_Soldier_Skills.Guerrilla.Onslaught,MaxGrade,,100","GD_Soldier_Streaming,GD_Soldier_Skills.Guerrilla.Ready,MaxGrade,,100","GD_Soldier_Streaming,GD_Soldier_Skills.Guerrilla.Sentry,MaxGrade,,100","GD_Soldier_Streaming,GD_Soldier_Skills.Guerrilla.TacticalWithdrawal,MaxGrade,,100","GD_Soldier_Streaming,GD_Soldier_Skills.Guerrilla.TacticalWithdrawal_Active,MaxGrade,,100","GD_Soldier_Streaming,GD_Soldier_Skills.Guerrilla.TacticalWithdrawal_StopFiring,MaxGrade,,100","GD_Soldier_Streaming,GD_Soldier_Skills.Guerrilla.Willing,MaxGrade,,100","GD_Soldier_Streaming,GD_Soldier_Skills.Gunpowder.Battlefront,MaxGrade,,100","GD_Soldier_Streaming,GD_Soldier_Skills.Gunpowder.DutyCalls,MaxGrade,,100","GD_Soldier_Streaming,GD_Soldier_Skills.Gunpowder.Expertise,MaxGrade,,100","GD_Soldier_Streaming,GD_Soldier_Skills.Gunpowder.Expertise_MovementSpeed,MaxGrade,,100","GD_Soldier_Streaming,GD_Soldier_Skills.Gunpowder.Impact,MaxGrade,,100","GD_Soldier_Streaming,GD_Soldier_Skills.Gunpowder.MetalStorm,MaxGrade,,100","GD_Soldier_Streaming,GD_Soldier_Skills.Gunpowder.Overload,MaxGrade,,100","GD_Soldier_Streaming,GD_Soldier_Skills.Gunpowder.Ranger,MaxGrade,,100","GD_Soldier_Streaming,GD_Soldier_Skills.Gunpowder.Steady,MaxGrade,,100","GD_Soldier_Streaming,GD_Soldier_Skills.Survival.Forbearance,MaxGrade,,100","GD_Soldier_Streaming,GD_Soldier_Skills.Survival.Forbearance_Feedback,MaxGrade,,100","GD_Soldier_Streaming,GD_Soldier_Skills.Survival.Grit,MaxGrade,,100","GD_Soldier_Streaming,GD_Soldier_Skills.Survival.Grit_Feedback,MaxGrade,,100","GD_Soldier_Streaming,GD_Soldier_Skills.Survival.HealthY,MaxGrade,,100","GD_Soldier_Streaming,GD_Soldier_Skills.Survival.LastDitchEffort,MaxGrade,,100","GD_Soldier_Streaming,GD_Soldier_Skills.Survival.Preparation,MaxGrade,,100","GD_Soldier_Streaming,GD_Soldier_Skills.Survival.Preparation_Active,MaxGrade,,100","GD_Soldier_Streaming,GD_Soldier_Skills.Survival.Pressure,MaxGrade,,100","GD_Soldier_Streaming,GD_Soldier_Skills.Survival.QuickCharge,MaxGrade,,100","GD_Soldier_Streaming,GD_Soldier_Skills.Survival.Resourceful,MaxGrade,,100","GD_Tulip_Mechro_Streaming,GD_Tulip_Mechromancer_Skills.EmbraceChaos.AnnoyedAndroid,MaxGrade,,100","GD_Tulip_Mechro_Streaming,GD_Tulip_Mechromancer_Skills.EmbraceChaos.BloodSoakedShields,MaxGrade,,100","GD_Tulip_Mechro_Streaming,GD_Tulip_Mechromancer_Skills.EmbraceChaos.BloodSoakedShields_Feedback,MaxGrade,,100","GD_Tulip_Mechro_Streaming,GD_Tulip_Mechromancer_Skills.EmbraceChaos.DeathFromAbove,MaxGrade,,100","GD_Tulip_Mechro_Streaming,GD_Tulip_Mechromancer_Skills.EmbraceChaos.DeathFromAbove_Feedback,MaxGrade,,100","GD_Tulip_Mechro_Streaming,GD_Tulip_Mechromancer_Skills.EmbraceChaos.PreshrunkCyberpunk,MaxGrade,,100","GD_Tulip_Mechro_Streaming,GD_Tulip_Mechromancer_Skills.EmbraceChaos.SmallerLighterFaster,MaxGrade,,100","GD_Tulip_Mechro_Streaming,GD_Tulip_Mechromancer_Skills.EmbraceChaos.TheNthDegree,MaxGrade,,100","GD_Tulip_Mechro_Streaming,GD_Tulip_Mechromancer_Skills.EmbraceChaos.TheNthDegree_Active,MaxGrade,,100","GD_Tulip_Mechro_Streaming,GD_Tulip_Mechromancer_Skills.EmbraceChaos.TypecastIconoclast,MaxGrade,,100","GD_Tulip_Mechro_Streaming,GD_Tulip_Mechromancer_Skills.EmbraceChaos.TypecastIconoclast_Feedback,MaxGrade,,100","GD_Tulip_Mechro_Streaming,GD_Tulip_Mechromancer_Skills.BestFriendsForever.20PercentCooler,MaxGrade,,100","GD_Tulip_Mechro_Streaming,GD_Tulip_Mechromancer_Skills.BestFriendsForever.CloseEnough,MaxGrade,,100","GD_Tulip_Mechro_Streaming,GD_Tulip_Mechromancer_Skills.BestFriendsForever.CookingUpTrouble,MaxGrade,,100","GD_Tulip_Mechro_Streaming,GD_Tulip_Mechromancer_Skills.BestFriendsForever.FancyMathematics,MaxGrade,,100","GD_Tulip_Mechro_Streaming,GD_Tulip_Mechromancer_Skills.BestFriendsForever.MadeOfSternerStuff,MaxGrade,,100","GD_Tulip_Mechro_Streaming,GD_Tulip_Mechromancer_Skills.BestFriendsForever.PotentAsAPony,MaxGrade,,100","GD_Tulip_Mechro_Streaming,GD_Tulip_Mechromancer_Skills.BestFriendsForever.TheBetterHalf,MaxGrade,,100","GD_Tulip_Mechro_Streaming,GD_Tulip_Mechromancer_Skills.BestFriendsForever.UnstoppableForce,MaxGrade,,100","GD_Tulip_Mechro_Streaming,GD_Tulip_Mechromancer_Skills.LittleBigTrouble.ElectricalBurn,MaxGrade,,100","GD_Tulip_Mechro_Streaming,GD_Tulip_Mechromancer_Skills.LittleBigTrouble.ElectricalBurn_Feedback,MaxGrade,,100","GD_Tulip_Mechro_Streaming,GD_Tulip_Mechromancer_Skills.LittleBigTrouble.EvilEnchantress,MaxGrade,,100","GD_Tulip_Mechro_Streaming,GD_Tulip_Mechromancer_Skills.LittleBigTrouble.InterspersedOutburst,MaxGrade,,100","GD_Tulip_Mechro_Streaming,GD_Tulip_Mechromancer_Skills.LittleBigTrouble.InterspersedOutburst_Active,MaxGrade,,100","GD_Tulip_Mechro_Streaming,GD_Tulip_Mechromancer_Skills.LittleBigTrouble.MorePep,MaxGrade,,100","GD_Tulip_Mechro_Streaming,GD_Tulip_Mechromancer_Skills.LittleBigTrouble.Myelin,MaxGrade,,100","GD_Tulip_Mechro_Streaming,GD_Tulip_Mechromancer_Skills.LittleBigTrouble.ShockStorm,MaxGrade,,100","GD_Tulip_Mechro_Streaming,GD_Tulip_Mechromancer_Skills.LittleBigTrouble.ShockStorm_ActiveOnRobot,MaxGrade,,100","GD_Tulip_Mechro_Streaming,GD_Tulip_Mechromancer_Skills.LittleBigTrouble.StrengthOfFiveGorillas,MaxGrade,,100","GD_Tulip_Mechro_Streaming,GD_Tulip_Mechromancer_Skills.LittleBigTrouble.WiresDontTalk,MaxGrade,,100")
+
+set Transient.GearboxAccountData_1 Services (Transient.SparkServiceConfiguration_0)
+
