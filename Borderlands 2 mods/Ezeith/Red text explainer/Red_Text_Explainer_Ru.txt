@@ -1,0 +1,922 @@
+<BLCMM v="1">
+#<!!!You opened a file saved with BLCMM in FilterTool. Please update to BLCMM to properly open this file!!!>
+	<head>
+		<type name="BL2" offline="false"/>
+	</head>
+	<body>
+		<category name="Red Text Explainer">
+			<comment># Red Text Explainer v1.1.0</comment>
+			<comment># By Ezeith</comment>
+			<comment># (with some additions by Apocalyptech)</comment>
+			<comment>#</comment>
+			<comment># The goal of this tool is mainly for players who don't know the game very well.</comment>
+			<comment># All weapons, grenades, and shields with red text will include extra text describing</comment>
+			<comment># the extra effects.  A lot of shields already have all their effects listed on the</comment>
+			<comment># card, so those will show up as "All effects listed."</comment>
+			<comment>#</comment>
+			<comment># Class Mods and Relics have been left alone, since all those list their effects</comment>
+			<comment># right on the card.</comment>
+			<category name="ARs">
+				<category name="Effervescent">
+					<category name="Peak opener">
+						<code profiles="default">set GD_Anemone_Weapons.AssaultRifle.PeakOpener.Title_Effervescent_PeakOpener:AttributePresentationDefinition_8 NoConstraintText Выбор высшей пробы для идеальной игры. <font color="#5ff5ff">[Стреляет ракетами, порождающими 3 мелкие гранаты при попадании. Дочерние гранаты наносят разрывной урон.]</font></code>
+					</category>
+					<category name="Toothpick">
+						<code profiles="default">set GD_Anemone_Weapons.AssaultRifle.Title_Effervescent_Worming:AttributePresentationDefinition_8 NoConstraintText Простое решение жуткой проблемы. <font color="#5ff5ff">[Всегда зажигательный. Выпускает 10 зарядов в 2 ряда по 5 штук.]</font></code>
+					</category>
+				</category>
+				<category name="Legendary">
+					<category name="Hammer Buster">
+						<code profiles="default">set GD_Weap_AssaultRifle.Name.Title_Jakobs.Title_Legendary_HammerBuster:AttributePresentationDefinition_8 NoConstraintText Аргх! Гррарр! Мой папа ученый! ГВАААРРРР!!!! <font color="#5ff5ff">[Повышенный урон и увеличенный бонус к критическому удару.]</font></code>
+					</category>
+					<category name="KerBlaster">
+						<code profiles="default">set GD_Weap_AssaultRifle.Name.Title_Torgue.Title_Legendary_KerBlaster:AttributePresentationDefinition_8 NoConstraintText Торрг даёт больше БУМА! <font color="#5ff5ff">[Жрёт 4 патрона за выстрел. Нет критического урона. Урон усиливается бонусами к гранатам.]</font></code>
+					</category>
+					<category name="M2828 Thompson">
+						<code profiles="default">set GD_Anemone_Weapons.AssaultRifle.Brothers.Title_Legendary_Brothers:AttributePresentationDefinition_8 NoConstraintText У каждого солдата две семьи: ту, что растишь ты, и та, с кем ты задаешь всем жару. <font color="#5ff5ff">[Повышенный урон, бонус к критическому удару и увеличенный магазин.]</font></code>
+					</category>
+					<category name="Madhous!">
+						<code profiles="default">set GD_Weap_AssaultRifle.Name.Title_Bandit.Title_Legendary_Madhouse:AttributePresentationDefinition_8 NoConstraintText Это дурдом! ДУРДОМ!!! <font color="#5ff5ff">[Пули летят по извилистой траектории, разделяются при попадании и рикошетят.]</font></code>
+					</category>
+					<category name="Ogre">
+						<code profiles="default">set GD_Aster_Weapons.Name.Title.Title_Unique_Ogre:AttributePresentationDefinition_8 NoConstraintText Огры пережевывают пищу. <font color="#5ff5ff">[+100% к стихийному сплеш-урону. Шанс получить бафф к скорострельности и перезарядке. При баффе пули рикошетят.]</font></code>
+					</category>
+					<category name="Shredifier">
+						<code profiles="default">set GD_Weap_AssaultRifle.Name.Title_Vladof.Title_Legendary_Shredifier:AttributePresentationDefinition_8 NoConstraintText Скорость убивает. <font color="#5ff5ff">[Почти мгновенная раскрутка ствола, дикая скорострельность и огромный магазин. Слегка снижен урон.]</font></code>
+					</category>
+					<category name="Veruc">
+						<code profiles="default">set GD_Weap_AssaultRifle.Name.Title_Dahl.Title_Legendary_Veruc:AttributePresentationDefinition_8 NoConstraintText Папочка, я хочу ту винтовку! <font color="#5ff5ff">[Выпускает 3 пули горизонтальным веером. При прицеливании — отсечка по 5 выстрелов с кучным разбросом.]</font></code>
+					</category>
+				</category>
+				<category name="Moxxi">
+					<category name="Hail">
+						<code profiles="default">set GD_Weap_AssaultRifle.Name.Title.Title_Unique_Hail:AttributePresentationDefinition_8 NoConstraintText Какую игрушку ты предложишь мне сегодня? <font color="#5ff5ff">[3% вампиризма, +200% к критическому урону. Всегда стихийный, снаряды летят по навесной дуге.]</font></code>
+					</category>
+					<category name="Kitten">
+						<code profiles="default">set GD_Iris_Weapons.Name.Title.Title_Unique_Kitten:AttributePresentationDefinition_8 NoConstraintText Мы все здесь безумны. Я безумен. Ты безумна. <font color="#5ff5ff">[4% вампиризма, 3 пули за выстрел. Рисунок разлета пуль образует смайлик.]</font></code>
+					</category>
+				</category>
+				<category name="Pearlescent">
+					<category name="Bearcat">
+						<code profiles="default">set GD_Gladiolus_Weapons.Name.Title.Title_Pearlescent_Bearcat:AttributePresentationDefinition_8 NoConstraintText Обожаю запах попкорна поутру. <font color="#5ff5ff">[Выпускает 3 гранаты за выстрел, есть шанс породить мелкие дочерние гранаты.]</font></code>
+					</category>
+					<category name="Bekah">
+						<code profiles="default">set GD_Lobelia_Weapons.Name.Title.Title_Pearlescent_Bekah:AttributePresentationDefinition_8 NoConstraintText Стреляй им прямо в лицо. Дважды. <font color="#5ff5ff">[Выпускает 1 снаряд, который затем делится на 4.]</font></code>
+					</category>
+					<category name="Sawbar">
+						<code profiles="default">set GD_Gladiolus_Weapons.Name.Title.Title_Pearlescent_Sawbar:AttributePresentationDefinition_8 NoConstraintText Подавляющий огонь! <font color="#5ff5ff">[Всегда огненный. На лету снаряды порождают три других снаряда, которые разлетаются под углом перед взрывом.]</font></code>
+					</category>
+				</category>
+				<category name="Seraph">
+					<category name="Lead storm">
+						<code profiles="default">set GD_Sage_RaidWeapons.Name.Title.Sage_Seraph_LeadStorm_Title:AttributePresentationDefinition_8 NoConstraintText Какое великолепное чувство! <font color="#5ff5ff">[Стреляет медленными снарядами по навесной дуге, которые в полете делятся на три части. Небольшой бонус к критическому урону.]</font></code>
+					</category>
+					<category name="Seeker">
+						<code profiles="default">set GD_Aster_RaidWeapons.AssaultRifles.Aster_Seraph_Seeker_Title:AttributePresentationDefinition_8 NoConstraintText О да, это честно... <font color="#5ff5ff">[Жрёт 2 патрона за выстрел, стреляет самонаводящимися пулями.]</font></code>
+					</category>
+					<category name="Seraphim">
+						<code profiles="default">set GD_Orchid_RaidWeapons.AssaultRifle.Seraphim.Orchid_Seraph_Seraphim_Title:AttributePresentationDefinition_8 NoConstraintText Священный? Святой? Дырявый! <font color="#5ff5ff">[Стреляет крупными медленными снарядами. Всегда зажигательный.]</font></code>
+					</category>
+				</category>
+				<category name="Uniques">
+					<category name="Boom Puppy">
+						<code profiles="default">set GD_Iris_Weapons.Name.Title.Title_Unique_BoomPuppy:AttributePresentationDefinition_8 NoConstraintText Бум! Бум! Бум! БУМ! БУУУМ! ХОРОШАЯ СОБАЧКА! <font color="#5ff5ff">[Стреляет медленной прыгучей резиновой гранатой, которая взрывается при каждом отскоке.]</font></code>
+					</category>
+					<category name="CHOPPER">
+						<code profiles="default">set GD_Sage_Weapons.Name.Title.Title_Unique_Chopper:AttributePresentationDefinition_8 NoConstraintText Живее к делу. <font color="#5ff5ff">[Дикая скорострельность и низкая точность. Выпускает весь магазин при одном нажатии на курок.]</font></code>
+					</category>
+					<category name="Damned Cowboy">
+						<code profiles="default">set GD_Sage_Weapons.Name.Title.Title_Unique_DamnedCowboy:AttributePresentationDefinition_8 NoConstraintText Говори мягко. И носи с собой это. <font color="#5ff5ff">[+55% к критическому урону.]</font></code>
+					</category>
+					<category name="Evil Smasher">
+						<code profiles="default">set GD_Weap_AssaultRifle.Name.Title.Title_Unique_EvilSmasher:AttributePresentationDefinition_8 NoConstraintText ''Зло будет РАЗБИТО!!! ВДРЕБЕЗГИ!!! ЗЛО!!! КРУШИТЬ!!!'' <font color="#5ff5ff">[При перезарядке есть шанс колоссально усилить характеристики оружия. Эффект длится до следующей перезарядки.]</font></code>
+					</category>
+					<category name="Rapier">
+						<code profiles="default">set GD_Orchid_BossWeapons.Name.Title.Title__Unique_Cutlass:AttributePresentationDefinition_0 NoConstraintText И завершая свой куплет, я наношу удар. <font color="#5ff5ff">[Персонаж получает повышенный урон от вражеских рукопашных атак.]</font></code>
+					</category>
+					<category name="Scorpio">
+						<code profiles="default">set GD_Weap_AssaultRifle.Name.Title.Title_Unique_Scorpio:AttributePresentationDefinition_8 NoConstraintText Не говори с тоской: ''Его уж нет'', но вспоминай с благодарением, что был. <font color="#5ff5ff">[При прицеливании — переменная длина очереди. При стрельбе от бедра — переменная скорострельность.]</font></code>
+					</category>
+					<category name="Stinkpot">
+						<code profiles="default">set GD_Orchid_BossWeapons.Name.Title.Title__Unique_Stinkpot:AttributePresentationDefinition_8 NoConstraintText Мы пираты. Правила не для нас. <font color="#5ff5ff">[Всегда кислотный. Огромный радиус сплеша. Коррозия перекидывается на соседних врагов.]</font></code>
+					</category>
+					<category name="Stomper">
+						<code profiles="default">set GD_Weap_AssaultRifle.Name.Title_Jakobs.Title_Unique_Stomper:AttributePresentationDefinition_8 NoConstraintText Ой, прости, это была твоя голова? <font color="#5ff5ff">[Очень высокий критический урон.]</font></code>
+					</category>
+				</category>
+			</category>
+			<category name="Grenade Mods">
+				<category name="Effervescent">
+					<category name="Antifection">
+						<code profiles="default">set GD_Anemone_GrenadeMods.Title.Title_ExterminatorIncendiary:AttributePresentationDefinition_0 Description Очиститесь огнём! <font color="#5ff5ff">[Разбрызгивает пламя по кругу, выпуская мелкие огненные ракеты.]</font></code>
+					</category>
+					<category name="Electric Chair">
+						<code profiles="default">set GD_Anemone_GrenadeMods.Title.Title_ExterminatorShock:AttributePresentationDefinition_0 Description Истина — зачастую лучший щит. <font color="#5ff5ff">[Выпускает липкие дочерние тесла-гранаты, завершая всё мощным электрическим взрывом.]</font></code>
+					</category>
+				</category>
+				<category name="Legendary">
+					<category name="Bonus Package">
+						<code profiles="default">set GD_GrenadeMods.Payload.Payload_BonusPackage:AttributePresentationDefinition_4 Description В 2 раза круче, экстремальный бонус! <font color="#5ff5ff">[Каждая дочерняя граната порождает ещё одну дополнительную.]</font></code>
+					</category>
+					<category name="Bouncing Bonny">
+						<code profiles="default">set GD_GrenadeMods.Payload.Payload_BouncingBonny:AttributePresentationDefinition_4 Description Ну и сука же твоя сестра. <font color="#5ff5ff">[Выпускает дочерние гранаты типа ''прыгающая бетти''.]</font></code>
+					</category>
+					<category name="Chain Lightning">
+						<code profiles="default">set GD_Aster_GrenadeMods.Delivery.Delivery_ChainLightning:AttributePresentationDefinition_4 Description Не возвращай долг, передай добро дальше. <font color="#5ff5ff">[Бьёт молнией, которая взрывается при ударе и перекидывается на соседние цели.]</font></code>
+					</category>
+					<category name="Fastball">
+						<code profiles="default">set GD_GrenadeMods.Delivery.Delivery_Fastball:AttributePresentationDefinition_4 Description Забудь про крученые, Рики, вжарь ему фастболом. <font color="#5ff5ff">[Сверхбыстрый бросок по прямой, рикошетит от поверхностей при ударе.]</font></code>
+					</category>
+					<category name="Fire Bee">
+						<code profiles="default">set GD_GrenadeMods.Title.Title_ExterminatorIncendiary:AttributePresentationDefinition_0 Description Пчёлы на подлёте! <font color="#5ff5ff">[Разбрызгивает пламя по кругу, выпуская мелкие огненные ракеты.]</font></code>
+					</category>
+					<category name="Fire Storm">
+						<code profiles="default">set GD_Aster_GrenadeMods.Delivery.Delivery_FireStorm:AttributePresentationDefinition_4 Description Что ты за человек такой, раз можешь призывать огонь без кремня и огнива? <font color="#5ff5ff">[Выпускает огненный шар, который взрывается при контакте и порождает ещё четыре шара.]</font></code>
+					</category>
+					<category name="Leech">
+						<code profiles="default">set GD_GrenadeMods.Payload.Payload_Leech:AttributePresentationDefinition_4 Description Один умелый лекарь стоит сотен воинов. <font color="#5ff5ff">[Эффект трансфузии: наносит урон и лечит персонажа.]</font></code>
+					</category>
+					<category name="Nasty Surprise">
+						<code profiles="default">set GD_GrenadeMods.Delivery.Delivery_NastySurprise:AttributePresentationDefinition_4 Description Сюрприз-посылка! <font color="#5ff5ff">[Телепортационный бросок; бросает четыре дочерние гранаты по пути или в финальной точке.]</font></code>
+					</category>
+					<category name="Pandemic">
+						<code profiles="default">set GD_GrenadeMods.Title.Title_ExterminatorCorrosive:AttributePresentationDefinition_0 Description Распространяй заразу. <font color="#5ff5ff">[При взрыве выпускает 3 самонаводящиеся гранаты с периодическим кислотным уроном.]</font></code>
+					</category>
+					<category name="Quasar">
+						<code profiles="default">set GD_GrenadeMods.Payload.Payload_Quasar:AttributePresentationDefinition_4 Description E = mc^[ОБОЖЕ]/wtf <font color="#5ff5ff">[Самая мощная сингулярная граната, бьёт постоянным шоковым уроном.]</font></code>
+					</category>
+					<category name="Rolling Thunder">
+						<code profiles="default">set GD_GrenadeMods.Delivery.Delivery_RollingThunder:AttributePresentationDefinition_4 Description Гром принесёт с собой боль! <font color="#5ff5ff">[Летит по низкой дуге, детонирует при каждом отскоке, в финале взрывается кассетным зарядом.]</font></code>
+					</category>
+					<category name="Storm Front">
+						<code profiles="default">set GD_GrenadeMods.Title.Title_ExterminatorShock:AttributePresentationDefinition_0 Description Иногда молния бьёт дважды. <font color="#5ff5ff">[Выпускает липкие дочерние тесла-гранаты.]</font></code>
+					</category>
+				</category>
+				<category name="Seraph">
+					<category name="Crossfire">
+						<code profiles="default">set GD_Iris_SeraphItems.Crossfire.Iris_Seraph_GrenadeMod_Crossfire:AttributePresentationDefinition_0 Description Найти, зажать, обойти с фланга, уничтожить! <font color="#5ff5ff">[Работает как ''прыгающая бетти'', но дополнительно разбрасывает дочерние гранаты.]</font></code>
+					</category>
+					<category name="Meteor Shower">
+						<code profiles="default">set GD_Iris_SeraphItems.MeteorShower.Iris_Seraph_GrenadeMod_MeteorShower_Title:AttributePresentationDefinition_0 Description Не только для загадывания желаний! <font color="#5ff5ff">[Дочерние гранаты летят по высокой дуге и каждая порождает ещё по одной навесной гранате.]</font></code>
+					</category>
+					<category name="O-Negative">
+						<code profiles="default">set GD_Iris_SeraphItems.ONegative.Iris_Seraph_GrenadeMod_ONegative:AttributePresentationDefinition_0 Description Универсальный донор! <font color="#5ff5ff">[Все эффекты указаны в описании.]</font></code>
+					</category>
+				</category>
+				<category name="Unique">
+					<category name="Breath of Terramorphous">
+						<code profiles="default">set GD_GrenadeMods.Payload.Payload_FlameSpurt:AttributePresentationDefinition_4 Description Дыхание его было пламенем... <font color="#5ff5ff">[Урон по площади. Порождает дочерние гранаты, выпускающие огненные гейзеры.]</font></code>
+					</category>
+					<category name="Captain Blade's Midnight Star">
+						<code profiles="default">set GD_Orchid_GrenadeMods.Delivery.Delivery_Blade:AttributePresentationDefinition_1 Description Проклятие хихикающего дизайнера! <font color="#5ff5ff">[Дочерние гранаты летят обратно в игрока.]</font></code>
+					</category>
+					<category name="Contraband Sky Rocket">
+						<code profiles="default">set GD_GrenadeMods.Delivery.Delivery_SkyRocket:AttributePresentationDefinition_0 Description ВНИМАНИЕ: Не для использования в помещениях. <font color="#5ff5ff">[Взлетает строго вверх и выдаёт мощный залп фейерверков. Повышенный урон.]</font></code>
+					</category>
+					<category name="Fireball">
+						<code profiles="default">set GD_Aster_GrenadeMods.Delivery.Delivery_Fireball:AttributePresentationDefinition_4 Description Бутерброды со свиными котлетами! <font color="#5ff5ff">[Выпускает медленно летящий огненный шар.]</font></code>
+					</category>
+					<category name="Fuster Cluck">
+						<code profiles="default">set GD_GrenadeMods.Payload.Payload_FusterCluck:AttributePresentationDefinition_4 Description Да начнется дождь! <font color="#5ff5ff">[Дочерние гранаты появляются прямо в воздухе сразу после броска.]</font></code>
+					</category>
+					<category name="Kiss of Death">
+						<code profiles="default">set GD_GrenadeMods.Payload.Payload_KissOfDeath:AttributePresentationDefinition_4 Description Чтобы вляпаться в неприятности, нужны двое. <font color="#5ff5ff">[Граната наводится и липнет к врагам, нанося периодический урон. При взрыве выпускает лечащие сферы.]</font></code>
+					</category>
+					<category name="Lightning Bolt">
+						<code profiles="default">set GD_Aster_GrenadeMods.Delivery.Delivery_LightningBolt:AttributePresentationDefinition_4 Description Что ещё за джигаватт? <font color="#5ff5ff">[Бьёт молнией строго по прямой и взрывается при попадании.]</font></code>
+					</category>
+					<category name="Magic Missile (ordinary)">
+						<code profiles="default">set GD_Aster_GrenadeMods.Delivery.Delivery_MagicMissile:AttributePresentationDefinition_4 Description Волшебная палочка не нужна. Просто целься и стреляй. <font color="#5ff5ff">[Дочерние гранаты сами наводятся на врагов.]</font></code>
+					</category>
+					<category name="Magic Missile (rare)">
+						<code profiles="default">set GD_Aster_GrenadeMods.Delivery.Delivery_MagicMissileRare:AttributePresentationDefinition_4 Description Волшебная палочка не нужна. Просто целься и стреляй. <font color="#5ff5ff">[Дочерние гранаты сами наводятся на врагов.]</font></code>
+					</category>
+				</category>
+			</category>
+			<category name="Pistols">
+				<category name="Effervescent">
+					<category name="Fire Drill">
+						<code profiles="default">set GD_Anemone_Weapons.Name.Title.Title_DroletDrill:AttributePresentationDefinition_8 NoConstraintText Она своё дело знает. <font color="#5ff5ff">[Не расходует патроны. Рисунок разлета пуль образует знак бесконечности. 100% шанс поджога, высокий урон.]</font></code>
+					</category>
+				</category>
+				<category name="Legendary">
+					<category name="Gub">
+						<code profiles="default">set GD_Weap_Pistol.Name.Title_Bandit.Title_Legendary_Gub:AttributePresentationDefinition_8 NoConstraintText Не подавай виду. <font color="#5ff5ff">[Огромный магазин, сильно увеличенный урон. Всегда кислотный.]</font></code>
+					</category>
+					<category name="Gunerang">
+						<code profiles="default">set GD_Weap_Pistol.Name.Title_Tediore.Title_Legendary_Gunerang:AttributePresentationDefinition_8 NoConstraintText А ну, зацени. <font color="#5ff5ff">[Уникальная перезарядка бумерангом с повышенным уроном при возвращении ствола.]</font></code>
+					</category>
+					<category name="Hector's Paradise">
+						<code profiles="default">set GD_Anemone_Weapons.Name.Title_Dahl.Title_Legendary_Hornet_Hector:AttributePresentationDefinition_8 NoConstraintText Кнут на спинах Новых Пандорцев. <font color="#5ff5ff">[Всегда шоковый. Наносит урон по площади. Очередь по 6 выстрелов при прицеливании. Всегда со штыком.]</font></code>
+					</category>
+					<category name="Hornet">
+						<code profiles="default">set GD_Weap_Pistol.Name.Title_Dahl.Title_Legendary_Hornet:AttributePresentationDefinition_8 NoConstraintText Бойся роя! <font color="#5ff5ff">[Всегда кислотный. Очередь по 6 выстрелов при прицеливании. Снаряды наносят небольшой урон по площади.]</font></code>
+					</category>
+					<category name="Infinity">
+						<code profiles="default">set GD_Weap_Pistol.Name.Title_Vladof.Title_Legendary_Infinity:AttributePresentationDefinition_8 NoConstraintText Она ближе, чем тебе кажется!                          [вовсе нет] <font color="#5ff5ff">[Не расходует боеприпасы. Рисунок разлета пуль образует знак бесконечности.]</font></code>
+					</category>
+					<category name="Logan's gun">
+						<code profiles="default">set GD_Weap_Pistol.Name.Title_Hyperion.Title_Legendary_LogansGun:AttributePresentationDefinition_8 NoConstraintText Пушка, пушкарь! <font color="#5ff5ff">[Всегда зажигательный. Пули взрываются при контакте, а затем ещё раз после небольшой задержки. Пули считаются ракетами.]</font></code>
+					</category>
+					<category name="Maggie">
+						<code profiles="default">set GD_Weap_Pistol.Name.Title_Jakobs.Title_Legendary_Maggie:AttributePresentationDefinition_8 NoConstraintText Жёнушка Монти спуску не даст. <font color="#5ff5ff">[Выпускает 6 пуль по цене 1 патрона. Снижены точность и урон каждого снаряда.]</font></code>
+					</category>
+					<category name="Thunderball Fists">
+						<code profiles="default">set GD_Weap_Pistol.Name.Title_Maliwan.Title_Legendary_ThunderballFists:AttributePresentationDefinition_8 NoConstraintText Мне правда можно такую штуку? <font color="#5ff5ff">[Всегда шоковый. Выпускает снаряд, который подлетает немного вверх и взрывается электрической сферой второй раз.]</font></code>
+					</category>
+					<category name="Unkempt Harold">
+						<code profiles="default">set GD_Weap_Pistol.Name.Title_Torgue.Title_Legendary_Calla:AttributePresentationDefinition_8 NoConstraintText Я шесть раз стрелял или только пять? Три? Семь. Да пофиг. <font color="#5ff5ff">[Выпускает 7 снарядов, расходящихся по горизонтали с ускорением. Жрёт 3 патрона за выстрел.]</font></code>
+					</category>
+					<category name="Veritas">
+						<code profiles="default">set GD_Weap_Pistol.Name.Title.Title__Unique_Veritas:AttributePresentationDefinition_8 NoConstraintText Надо было остановиться на одном. <font color="#5ff5ff">[+10% к времени «Борьбы за жизнь» за каждую Veritas или Aequitas у игроков в группе. Даёт +10% к критическому урону.]</font></code>
+					</category>
+				</category>
+				<category name="Moxxi">
+					<category name="Grog Nozzle">
+						<code profiles="default">set GD_Aster_Weapons.Name.Title.Title__Unique_GrogNozzle:AttributePresentationDefinition_8 NoConstraintText Гони ключи, сладенький... <font color="#5ff5ff">[65% вампиризма.]</font></code>
+					</category>
+					<category name="Rubi">
+						<code profiles="default">set GD_Weap_Pistol.Name.Title.Title__Unique_Rubi:AttributePresentationDefinition_8 NoConstraintText Из двух зол я всегда выбираю то, что ещё не пробовала. <font color="#5ff5ff">[12% вампиризма от любого источника урона.]</font></code>
+					</category>
+				</category>
+				<category name="Pearlescent">
+					<category name="Stalker">
+						<code profiles="default">set GD_Gladiolus_Weapons.Name.Title.Title_Pearlescent_Stalker:AttributePresentationDefinition_8 NoConstraintText Беги не беги, а не спрячешься. <font color="#5ff5ff">[Заметно повышены урон, скорость перезарядки, скорострельность и магазин ценой точности. Пули рикошетят до 5 раз.]</font></code>
+					</category>
+					<category name="Unforgiven">
+						<code profiles="default">set GD_Gladiolus_Weapons.Name.Title.Title_Pearlescent_Unforgiven:AttributePresentationDefinition_8 NoConstraintText Тяжкое это дело... <font color="#5ff5ff">[+100% к базовому критическому урону и +25% к общему множителю крита.]</font></code>
+					</category>
+					<category name="Wanderlust">
+						<code profiles="default">set GD_Lobelia_Weapons.Name.Title.Title_Pearlescent_Wanderlust:AttributePresentationDefinition_8 NoConstraintText Пока сам не пойдёшь — не узнаешь. <font color="#5ff5ff">[Стреляет рикошетящими самонаводящимися дротиками, повышает шанс стихийного эффекта ценой урона снаряда.]</font></code>
+					</category>
+				</category>
+				<category name="Seraph">
+					<category name="Devastator">
+						<code profiles="default">set GD_Orchid_RaidWeapons.Pistol.Devastator.Orchid_Seraph_Devastator_Title:AttributePresentationDefinition_8 NoConstraintText Наше вам с кисточкой. <font color="#5ff5ff">[Повышенный урон, отсечка по два выстрела. Снижена скорость полёта пули.]</font></code>
+					</category>
+					<category name="Infection">
+						<code profiles="default">set GD_Sage_RaidWeapons.Name.Title.Sage_Seraph_Infection_Title:AttributePresentationDefinition_8 NoConstraintText Чешется. Вкусненько. <font color="#5ff5ff">[Всегда кислотный. Экстремально высокие шанс и урон от стихийного эффекта коррозии.]</font></code>
+					</category>
+					<category name="Stinger">
+						<code profiles="default">set GD_Aster_RaidWeapons.Pistols.Aster_Seraph_Stinger_Title:AttributePresentationDefinition_8 NoConstraintText Идёт как по маслу, детка. <font color="#5ff5ff">[Рикошетящие пули. Дополнительный бонус +15% к критическому урону.]</font></code>
+					</category>
+				</category>
+				<category name="Unique">
+					<category name="Dahlminator">
+						<code profiles="default">set GD_Weap_Pistol.Name.Title.Title__Unique_Dahlminator:AttributePresentationDefinition_8 NoConstraintText От этого не увернёшься. <font color="#5ff5ff">[Всегда кислотный. Стреляет медленными самонаводящимися снарядами.]</font></code>
+					</category>
+					<category name="Fibber #1">
+						<code profiles="default">set GD_Weap_Pistol.Barrel.Fibber.Pistol_Barrel_Bandit_Fibber_1:AttributePresentationDefinition_1 BasePriority 20</code>
+						<code profiles="default">set GD_Weap_Pistol.Barrel.Fibber.Pistol_Barrel_Bandit_Fibber_1:AttributePresentationDefinition_1 NoConstraintText <font color="#DC4646">Стану ли я тебе врать?</font> <font color="#5ff5ff">[Медленные снаряды с разлетом как у дробовика.]</font></code>
+					</category>
+					<category name="Fibber #2">
+						<code profiles="default">set GD_Weap_Pistol.Barrel.Fibber.Pistol_Barrel_Bandit_Fibber_2:AttributePresentationDefinition_1 BasePriority 20</code>
+						<code profiles="default">set GD_Weap_Pistol.Barrel.Fibber.Pistol_Barrel_Bandit_Fibber_2:AttributePresentationDefinition_1 NoConstraintText <font color="#DC4646">Стану ли я тебе врать?</font> <font color="#5ff5ff">[Снаряды рикошетят от поверхностей и стен без потери скорости.]</font></code>
+					</category>
+					<category name="Fibber #3">
+						<code profiles="default">set GD_Weap_Pistol.Barrel.Fibber.Pistol_Barrel_Bandit_Fibber_3:AttributePresentationDefinition_1 BasePriority 20</code>
+						<code profiles="default">set GD_Weap_Pistol.Barrel.Fibber.Pistol_Barrel_Bandit_Fibber_3:AttributePresentationDefinition_1 NoConstraintText <font color="#DC4646">Стану ли я тебе врать?</font> <font color="#5ff5ff">[Снаряды летят по дуге, давая +700% к критическому урону.]</font></code>
+					</category>
+					<category name="Fibber (remove global red text)">
+						<code profiles="default">set GD_Weap_Pistol.Name.Title.Title__Unique_Fibber:AttributePresentationDefinition_8 BasePriority 0</code>
+					</category>
+					<category name="Greed">
+						<code profiles="default">set GD_Orchid_BossWeapons.Name.Title.Title__Unique_ScarletsGreed:AttributePresentationDefinition_8 NoConstraintText Ворюга. <font color="#5ff5ff">[Всегда огненный. Нет штрафа к скорости перемещения при прицеливании.]</font></code>
+					</category>
+					<category name="Gwen's Head">
+						<code profiles="default">set GD_Weap_Pistol.Name.Title.Title__Unique_GwensHead:AttributePresentationDefinition_8 NoConstraintText Нестандартное мышление. <font color="#5ff5ff">[Отсечка по 7 выстрелов при прицеливании.]</font></code>
+					</category>
+					<category name="Judge">
+						<code profiles="default">set GD_Weap_Pistol.Name.Title.Title__Unique_Judge:AttributePresentationDefinition_8 NoConstraintText Теперь я свободен. <font color="#5ff5ff">[Бонус к критическому урону: +30% к базовому и +15% к общему множителю.]</font></code>
+					</category>
+					<category name="Lady fist">
+						<code profiles="default">set GD_Weap_Pistol.Name.Title.Title__Unique_LadyFist:AttributePresentationDefinition_8 NoConstraintText Любовь — это Дамский Пальчик. Настоящая любовь — Дамский Кулак. <font color="#5ff5ff">[Снижен базовый урон. Повышены точность и магазин, но даёт чудовищные +800% к критическому урону.]</font></code>
+					</category>
+					<category name="Law">
+						<code profiles="default">set GD_Weap_Pistol.Name.Title.Title__Unique_Law:AttributePresentationDefinition_8 NoConstraintText Та-да. <font color="#5ff5ff">[Всегда +100% к урону штыком. Если экипирован щит Order, рукопашные атаки этим пистолетом лечат на 25% от нанесённого урона.]</font></code>
+					</category>
+					<category name="Little Evie">
+						<code profiles="default">set GD_Orchid_BossWeapons.Name.Title.Title__Unique_LittleEvie:AttributePresentationDefinition_8 NoConstraintText Шок и ми-ми-миии! Какая прелесть! <font color="#5ff5ff">[Всегда шоковый. Убийство врага ускоряет откат активного навыка на 12%.]</font></code>
+					</category>
+					<category name="Pocket Rocket">
+						<code profiles="default">set GD_Iris_Weapons.Name.Title.Title_Unique_PocketRocket:AttributePresentationDefinition_8 NoConstraintText Бывало ли у вас чувство... <font color="#5ff5ff">[Повышены все характеристики, жрёт 2 патрона за выстрел.]</font></code>
+					</category>
+					<category name="Rex">
+						<code profiles="default">set GD_Sage_Weapons.Name.Title.Title_Unique_Rex:AttributePresentationDefinition_8 NoConstraintText Проще говоря, это большая пушка. <font color="#5ff5ff">[+40% к критическому урону ценой крайне низкой скорострельности для пистолета Jakobs.]</font></code>
+					</category>
+					<category name="Teapot">
+						<code profiles="default">set GD_Weap_Pistol.Name.Title.Title__Unique_Teapot:AttributePresentationDefinition_8 NoConstraintText Устраиваю чаепитие, попиваю свой чааай! <font color="#5ff5ff">[Всегда кислотный. Повышены урон стихией и точность ценой базового урона, скорострельности, магазина и шанса поджога.]</font></code>
+					</category>
+					<category name="Tinderbox">
+						<code profiles="default">set GD_Weap_Pistol.Name.Title.Title__Unique_Tinderbox:AttributePresentationDefinition_8 NoConstraintText Хорошо подходит для разведения костров. <font color="#5ff5ff">[Отлично поджигает цели, +100% к урону по площади.]</font></code>
+					</category>
+				</category>
+			</category>
+			<category name="Rocket Launchers">
+				<category name="Effervesscent">
+					<category name="World Burn">
+						<code profiles="default">set GD_Anemone_Weapons.Rocket_Launcher.WorldBurn.Title_Effervescent_WorldBurn:AttributePresentationDefinition_8 NoConstraintText Война не поддаётся логике. <font color="#5ff5ff">[Всегда зажигательный. Ракеты летят по дуге и взрываются ядерным грибом.]</font></code>
+					</category>
+				</category>
+				<category name="Legendary">
+					<category name="Badaboom">
+						<code profiles="default">set GD_Weap_Launchers.Name.Title_Bandit.Title_Legendary_Badaboom:AttributePresentationDefinition_8 NoConstraintText Мульти-килл! <font color="#5ff5ff">[Выпускает 6 ракет по цене 1. Снижены урон и точность.]</font></code>
+					</category>
+					<category name="Bunny">
+						<code profiles="default">set GD_Weap_Launchers.Name.Title_Tediore.Title_Legendary_Bunny:AttributePresentationDefinition_8 NoConstraintText Прыг-скок! <font color="#5ff5ff">[При перезарядке скачет как безумный кролик и рандомно разбрасывает активные гранаты.]</font></code>
+					</category>
+					<category name="Mongol">
+						<code profiles="default">set GD_Weap_Launchers.Name.Title_Vladof.Title_Legendary_Mongol:AttributePresentationDefinition_8 NoConstraintText Орда всегда возвращается! <font color="#5ff5ff">[Выпускает одну большую ракету, которая на лету плодит кучу мелких ракет во все стороны.]</font></code>
+					</category>
+					<category name="Norfleet">
+						<code profiles="default">set GD_Weap_Launchers.Name.Title_Maliwan.Title_Barrel_Maliwan_Norfleet:AttributePresentationDefinition_8 NoConstraintText В труху! Вообще всё! <font color="#5ff5ff">[Выпускает три огромных фиолетовых шара веером. Траектория кривая, урон и радиус взрыва — лютейшие.]</font></code>
+					</category>
+					<category name="Nukem">
+						<code profiles="default">set GD_Weap_Launchers.Name.Title_Torgue.Title_Legendary_Nukem:AttributePresentationDefinition_8 NoConstraintText Громкое имя. <font color="#5ff5ff">[Ракеты летят по навесной дуге и взрываются ядерным грибом.]</font></code>
+					</category>
+					<category name="Pyrophobia">
+						<code profiles="default">set GD_Weap_Launchers.Name.Title_Maliwan.Title_Legendary_Pyrophobia:AttributePresentationDefinition_8 NoConstraintText В данном случае это вполне обоснованный страх. <font color="#5ff5ff">[Всегда зажигательный. Снаряд несколько раз взрывается в воздухе до подлёта к цели.]</font></code>
+					</category>
+				</category>
+				<category name="Moxxi">
+					<category name="Creamer">
+						<code profiles="default">set GD_Weap_Launchers.Name.Title.Title__Unique_Creamer:AttributePresentationDefinition_8 NoConstraintText Без консервантов. <font color="#5ff5ff">[2% вампиризма. Высокая скорость полёта. На определённой дистанции ракета делится надвое.]</font></code>
+					</category>
+				</category>
+				<category name="Pearlescent">
+					<category name="Tunguska">
+						<code profiles="default">set GD_Gladiolus_Weapons.Name.Title.Title_Pearlescent_Tunguska:AttributePresentationDefinition_8 NoConstraintText Оно раколет небосвод пополам. <font color="#5ff5ff">[Снаряд летит по миномётной дуге, после падения подпрыгивает в воздух и выдаёт гигантский взрыв.]</font></code>
+					</category>
+				</category>
+				<category name="Seraph">
+					<category name="Ahab">
+						<code profiles="default">set GD_Orchid_RaidWeapons.RPG.Ahab.Orchid_Seraph_Ahab_Title:AttributePresentationDefinition_8 NoConstraintText Из чистой ненависти. <font color="#5ff5ff">[Стреляет гарпуном, который втыкается в цель и взрывается. Наносит разрывной урон.]</font></code>
+					</category>
+				</category>
+				<category name="Uniques">
+					<category name="12 Pounder">
+						<code profiles="default">set GD_Orchid_BossWeapons.Name.Title.Title__Unique_12Pounder:AttributePresentationDefinition_8 NoConstraintText Супротив всех неслабо, сучки. <font color="#5ff5ff">[Стреляет пушечным ядром, которое может наносить критический урон и рикошетить.]</font></code>
+					</category>
+					<category name="Hive">
+						<code profiles="default">set GD_Weap_Launchers.Name.Title.Title__Unique_TheHive:AttributePresentationDefinition_8 NoConstraintText Полон пчёл. <font color="#5ff5ff">[Жрёт 4 патрона за выстрел. Выпускает улей, который зависает и спамит самонаводящимися кислотными ракетами.]</font></code>
+					</category>
+					<category name="Roaster">
+						<code profiles="default">set GD_Weap_Launchers.Name.Title.Title__Unique_Roaster:AttributePresentationDefinition_8 NoConstraintText Поджаричка! <font color="#5ff5ff">[Повышены шанс стихийного урона, урон от горения/кислоты и точность. Базовый урон слегка снижен.]</font></code>
+					</category>
+				</category>
+			</category>
+			<category name="SMGs">
+				<category name="Effervescent">
+					<category name="Infection cleaner">
+						<code profiles="default">set GD_Anemone_Weapons.Name.Title.Title_Infection_Cleaner:AttributePresentationDefinition_8 NoConstraintText Тссс... Я обо всем позабочусь, не волнуйся. <font color="#5ff5ff">[Всегда зажигательный. Повышены урон, магазин и критический урон. При перезарядке прыгает как граната ''прыгающая бетти'', восстанавливает патроны в руках.]</font></code>
+					</category>
+					<category name="Nirvana">
+						<code profiles="default">set GD_Anemone_Weapons.Name.Title.Title_LaTiteVierge:AttributePresentationDefinition_8 NoConstraintText Слушай, жизнь — сука. Смирись и сожги что-нибудь дотла. <font color="#5ff5ff">[Всегда зажигательный. +50% к стихийному сплеш-урону.]</font></code>
+					</category>
+				</category>
+				<category name="Legendary">
+					<category name="Baby Maker">
+						<code profiles="default">set GD_Weap_SMG.Name.Title_Tediore.Title_Legendary_BabyMaker:AttributePresentationDefinition_8 NoConstraintText Кто у нас тут ма-а-аленький пушегрех? <font color="#5ff5ff">[Брошенное оружие при взрыве порождает дочерние гранаты, а затем уменьшенную версию, которая снова взрывается, всего до 3 дочерних гранат.]</font></code>
+					</category>
+					<category name="Bitch">
+						<code profiles="default">set GD_Weap_SMG.Name.Title_Hyperion.Title_Legendary_Bitch:AttributePresentationDefinition_8 NoConstraintText Ага, вернулась. <font color="#5ff5ff">[Повышены точность, размер магазина и критический урон.]</font></code>
+					</category>
+					<category name="Emperor">
+						<code profiles="default">set GD_Weap_SMG.Name.Title.Title_Legendary_Dahl_Emperor:AttributePresentationDefinition_8 NoConstraintText Знаешь... специально для него. <font color="#5ff5ff">[Стреляет очередью по 6 выстрелов, или по 7, если приклад от Dahl.]</font></code>
+					</category>
+					<category name="HellFire">
+						<code profiles="default">set GD_Weap_SMG.Name.Title_Maliwan.Title_Legendary_HellFire:AttributePresentationDefinition_8 NoConstraintText Нам не нужен огонь... <font color="#5ff5ff">[Всегда зажигательный. Повышены шанс стихийного эффекта, урон от эффекта и размер магазина. +50% к сплеш-урону.]</font></code>
+					</category>
+					<category name="Slagga">
+						<code profiles="default">set GD_Weap_SMG.Name.Title_Bandit.Title_Legendary_Slagga:AttributePresentationDefinition_8 NoConstraintText благага <font color="#5ff5ff">[Повышен шанс шлакования. Не наносит урон уже зашлакованным врагам.]</font></code>
+					</category>
+				</category>
+				<category name="Moxxi">
+					<category name="Bad Touch">
+						<code profiles="default">set GD_Weap_SMG.Name.Title.Title__Unique_BadTouch:AttributePresentationDefinition_8 NoConstraintText Когда я хороша, я очень хороша... <font color="#5ff5ff">[2% вампиризма. Всегда кислотный. +70% к критическому урону.]</font></code>
+					</category>
+					<category name="Crit">
+						<code profiles="default">set GD_Aster_Weapons.Name.Title.Title__Unique_Crit:AttributePresentationDefinition_8 NoConstraintText Скользко, когда мокро. <font color="#5ff5ff">[12% шанс выпустить оружие из рук при перезарядке, 2.5% вампиризма. +150% к бонусному критическому урону.]</font></code>
+					</category>
+					<category name="Good Touch">
+						<code profiles="default">set GD_Weap_SMG.Name.Title.Title__Unique_GoodTouch:AttributePresentationDefinition_8 NoConstraintText ...но когда я плоха, я ещё лучше. <font color="#5ff5ff">[2.5% вампиризма. Всегда огненный. +70% к критическому урону.]</font></code>
+					</category>
+				</category>
+				<category name="Pearlescent">
+					<category name="Avenger">
+						<code profiles="default">set GD_Gladiolus_Weapons.Name.Title.Title_Pearlescent_Avenger:AttributePresentationDefinition_8 NoConstraintText Контр-возмездная вендетта. Час расплаты. <font color="#5ff5ff">[При перезарядке ведёт себя как граната ''прыгающая бетти''. Повышенная регенерация патронов.]</font></code>
+					</category>
+				</category>
+				<category name="Seraph">
+					<category name="Actualizer">
+						<code profiles="default">set GD_Orchid_RaidWeapons.SMG.Actualizer.Orchid_Seraph_Actualizer_Title:AttributePresentationDefinition_8 NoConstraintText Нам нужно поговорить о твоём отчёте по эффективности. <font color="#5ff5ff">[Повышен урон. Снижена скорость полета снаряда. Увеличен размер магазина. Увеличено время перезарядки.]</font></code>
+					</category>
+					<category name="Florentine">
+						<code profiles="default">set GD_Aster_RaidWeapons.SMGs.Aster_Seraph_Florentine_Title:AttributePresentationDefinition_8 NoConstraintText Двойные проблемы. <font color="#5ff5ff">[Шоковый снаряд, наносит бонусный шлаковый урон при попадании.]</font></code>
+					</category>
+					<category name="Tattler">
+						<code profiles="default">set GD_Orchid_RaidWeapons.SMG.Tattler.Orchid_Seraph_Tattler_Title:AttributePresentationDefinition_8 NoConstraintText Стукачу — по кумачу, я ни капли не шучу! <font color="#5ff5ff">[Всегда со штыком. Выпускает три медленных снаряда по цене одного патрона.]</font></code>
+					</category>
+				</category>
+				<category name="Uniques">
+					<category name="Bane">
+						<code profiles="default">set GD_Weap_SMG.Name.Title.Title__Unique_Bane:AttributePresentationDefinition_8 NoConstraintText В Испании дожди залили долы. <font color="#5ff5ff">[-500% к скорости перемещения. Заорёт тебя до смерти.]</font></code>
+					</category>
+					<category name="Bone Shredder">
+						<code profiles="default">set GD_Weap_SMG.Name.Title.Title__Unique_BoneShredder:AttributePresentationDefinition_8 NoConstraintText Дует свинцовый ветер! <font color="#5ff5ff">[Увеличены урон и размер магазина.]</font></code>
+					</category>
+					<category name="Chulainn">
+						<code profiles="default">set GD_Weap_SMG.Name.Title.Title__Unique_Chulainn:AttributePresentationDefinition_8 NoConstraintText Риастрад! <font color="#5ff5ff">[Стреляет шоковыми патронами, которые также наносят бонусный шлаковый урон. Шлакует владельца, пока оружие находится в руках.]</font></code>
+					</category>
+					<category name="Commerce">
+						<code profiles="default">set GD_Weap_SMG.Name.Title.Title__Unique_Commerce:AttributePresentationDefinition_8 NoConstraintText У меня есть Солдат, Сирена, два Скутера и Железяка. <font color="#5ff5ff">[Всегда шоковый.]</font></code>
+					</category>
+					<category name="Lascaux">
+						<code profiles="default">set GD_Weap_SMG.Name.Title.Title__Unique_Lascaux:AttributePresentationDefinition_8 NoConstraintText Оружие Быков. <font color="#5ff5ff">[Очень длинная переменная очередь. Форма разлёта пуль повторяет наскальные рисунки Ляско.]</font></code>
+					</category>
+					<category name="Orc">
+						<code profiles="default">set GD_Aster_Weapons.Name.Title.Title_Unique_Orc:AttributePresentationDefinition_8 NoConstraintText Доказал ли я уже свою ценность? <font color="#5ff5ff">[Шанс получить бафф. Во время баффа пули рикошетят и делятся на 3 части.]</font></code>
+					</category>
+					<category name="Sandhawk">
+						<code profiles="default">set GD_Orchid_BossWeapons.Name.Title.Title__Unique_SandHawk:AttributePresentationDefinition_8 NoConstraintText Внутри. Прямо как Эррол. <font color="#5ff5ff">[Потребляет 3 патрона за выстрел, выпуская 8 медленных снарядов в форме летящей птицы.]</font></code>
+					</category>
+					<category name="Yellow Jacket">
+						<code profiles="default">set GD_Sage_Weapons.Name.Title.Title_Unique_YellowJacket:AttributePresentationDefinition_8 NoConstraintText Создано народом. Для народа. <font color="#5ff5ff">[Всегда шоковый. Снаряды ускоряются в полёте, рикошетят от первой поверхности и имеют небольшой радиус взрыва.]</font></code>
+					</category>
+				</category>
+			</category>
+			<category name="Shields">
+				<category name="Effervescent">
+					<category name="Easy Mode">
+						<code profiles="default">set GD_Anemone_Shields.Titles.Title_ShockNova02_Singularity:AttributePresentationDefinition_0 Description Держи темп и не давай себя зажать. <font color="#5ff5ff">[Все эффекты указаны в описании.]</font></code>
+					</category>
+					<category name="Retainer">
+						<code profiles="default">set GD_Anemone_Shields.Titles.Title_Roid05_Order:AttributePresentationDefinition_0 Description Удерживает твои потроха внутри тела — там, где им и место. <font color="#5ff5ff">[Нет ройд-бонуса.]</font></code>
+					</category>
+				</category>
+				<category name="Legendary">
+					<category name="Black Hole">
+						<code profiles="default">set GD_Shields.Titles.Title_ShockNova02_Singularity:AttributePresentationDefinition_0 Description Ты — центр вселенной. <font color="#5ff5ff">[Шоковая нова при срабатывании дополнительно притягивает врагов.]</font></code>
+					</category>
+					<category name="Fabled Tortoise">
+						<code profiles="default">set GD_Shields.Titles.Title_Juggernaut04_JuggernautLegendary:AttributePresentationDefinition_0 Description Опережая черепашьим шагом. <font color="#5ff5ff">[Все эффекты указаны в описании.]</font></code>
+					</category>
+					<category name="Flame of the Firehawk">
+						<code profiles="default">set GD_Shields.Titles.Title_FireNova02_Phoenix:AttributePresentationDefinition_0 Description Из пепла она восстанет. <font color="#5ff5ff">[Все эффекты указаны в описании.]</font></code>
+					</category>
+					<category name="Hide of Terramorphous">
+						<code profiles="default">set GD_Shields.Titles.Title_Roid03_ThresherRaid:AttributePresentationDefinition_0 Description Его шкура смирила величайших... <font color="#5ff5ff">[Все эффекты указаны в описании.]</font></code>
+					</category>
+					<category name="Impaler">
+						<code profiles="default">set GD_Shields.Titles.Title_CorrosiveSpike02_Legendary:AttributePresentationDefinition_0 Description Влад бы гордился. <font color="#5ff5ff">[Все эффекты указаны в описании.]</font></code>
+					</category>
+					<category name="Neogenator">
+						<code profiles="default">set GD_Shields.Titles.Title_Chimera04_ChimeraShieldLegendary:AttributePresentationDefinition_0 Description Познай себя, дабы обрести несокрушимый щит. <font color="#5ff5ff">[Все эффекты указаны в описании.]</font></code>
+					</category>
+					<category name="Sham">
+						<code profiles="default">set GD_Shields.Titles.Title_Absorption04_AbsorptionShieldLegendaryNormal:AttributePresentationDefinition_0 Description Ого, я РЕАЛЬНО могу заниматься этим целый день. <font color="#5ff5ff">[Все эффекты указаны в описании.]</font></code>
+					</category>
+					<category name="The Bee">
+						<code profiles="default">set GD_Shields.Titles.Title_Impact05_Legendary:AttributePresentationDefinition_1 Description Порхай как бабочка... <font color="#5ff5ff">[Все эффекты указаны в описании.]</font></code>
+					</category>
+					<category name="The Cradle">
+						<code profiles="default">set GD_Shields.Titles.Title_Standard05_Legendary:AttributePresentationDefinition_1 Description ...до самой могилы. <font color="#5ff5ff">[Выброшенный при перезарядке щит взрывается мощной новой.]</font></code>
+					</category>
+					<category name="Transformer">
+						<code profiles="default">set GD_Shields.Titles.Title_Absorption04_AbsorptionShieldLegendaryShock:AttributePresentationDefinition_0 Description Здесь скрыто больше, чем кажется глазу. <font color="#5ff5ff">[Шоковый урон полностью перезаряжает щит.]</font></code>
+					</category>
+					<category name="Whisky Tango Foxtrot">
+						<code profiles="default">set GD_Shields.Titles.Title_Booster04_BoosterShieldLegendary:AttributePresentationDefinition_0 Description Обычная обстановка... <font color="#5ff5ff">[Усилители-фугасы порождают 3 залпа шоковых гранат, могут ранить владельца.]</font></code>
+					</category>
+				</category>
+				<category name="Seraph">
+					<category name="Antagonist">
+						<code profiles="default">set GD_Aster_Shields.Titles.Title_Antagonist:AttributePresentationDefinition_1 Description На чужой роток не накинешь платок. <font color="#5ff5ff">[Все эффекты указаны в описании.]</font></code>
+					</category>
+					<category name="Big Boom Blaster">
+						<code profiles="default">set GD_Iris_SeraphItems.BigBoomBlaster.Iris_Seraph_Shield_Booster:AttributePresentationDefinition_0 Description Для всех твоих нужд по взрывному бабаханью! <font color="#5ff5ff">[Усилители при подборе также восстанавливают 1 гранату и 1 ракету.]</font></code>
+					</category>
+					<category name="Blockade">
+						<code profiles="default">set GD_Aster_Shields.Titles.Title_Blockade:AttributePresentationDefinition_1 Description Я живу или умираю? <font color="#5ff5ff">[Все эффекты указаны в описании.]</font></code>
+					</category>
+					<category name="Evolution">
+						<code profiles="default">set GD_Orchid_RaidWeapons.Shield.Anshin.Orchid_Seraph_Anshin_Shield_Title:AttributePresentationDefinition_0 Description Сила через невзгоды. <font color="#5ff5ff">[Все эффекты указаны в описании.]</font></code>
+					</category>
+					<category name="Hoplite">
+						<code profiles="default">set GD_Iris_SeraphItems.Hoplite.Iris_Seraph_Shield_Juggernaut:AttributePresentationDefinition_0 Description Поодиночке — лишь солдаты, вместе — несокрушимая фаланга. <font color="#5ff5ff">[Все эффекты указаны в описании.]</font></code>
+					</category>
+					<category name="Pun-chee">
+						<code profiles="default">set GD_Iris_SeraphItems.Pun-chee.Iris_Seraph_Shield_Pun-chee_Title:AttributePresentationDefinition_0 Description Помахаться захотел, говнюк? <font color="#5ff5ff">[Все эффекты указаны в описании.]</font></code>
+					</category>
+					<category name="Sponge">
+						<code profiles="default">set GD_Iris_SeraphItems.Sponge.Iris_Seraph_Shield_Sponge_Title:AttributePresentationDefinition_0 Description Отличная впитываемость! <font color="#5ff5ff">[Все эффекты указаны в описании.]</font></code>
+					</category>
+				</category>
+				<category name="Unique">
+					<category name="1340 Shield">
+						<code profiles="default">set GD_Shields.Titles.Title_Absorption02_1340:AttributePresentationDefinition_0 Description Не можешь победить — примкни к ним. <font color="#5ff5ff">[Уникальный голосовой модуль.]</font></code>
+					</category>
+					<category name="Aequitas">
+						<code profiles="default">set GD_Shields.Accessory.Title_Absorption03_Aequitas:AttributePresentationDefinition_0 Description Второй-то получше будет. <font color="#5ff5ff">[Все эффекты указаны в описании.]</font></code>
+					</category>
+					<category name="Captain's Blade Manly Man">
+						<code profiles="default">set GD_Orchid_Shields.Accessory.Accessory_Blade:AttributePresentationDefinition_6 Description Проклятие стихий! <font color="#5ff5ff">[Владелец получает повышенный урон от любых стихийных источников.]</font></code>
+					</category>
+					<category name="Deadly Bloom">
+						<code profiles="default">set GD_Shields.Titles.Title_ExplosiveNova02_DeadlyBloom:AttributePresentationDefinition_1 Description Что значит... теоретически? <font color="#5ff5ff">[Все эффекты указаны в описании.]</font></code>
+					</category>
+					<category name="Love Thumper">
+						<code profiles="default">set GD_Shields.Titles.Title_Roid03_LoveThumper:AttributePresentationDefinition_1 Description Если любить тебя преступление, то я не хочу быть законопослушным. <font color="#5ff5ff">[При ударе штыком выдаёт взрывную нову, которая наносит урон по союзникам.]</font></code>
+					</category>
+					<category name="Order">
+						<code profiles="default">set GD_Shields.Titles.Title_Roid05_Order:AttributePresentationDefinition_0 Description Чих-пых! <font color="#5ff5ff">[Все эффекты указаны в описании.]</font></code>
+					</category>
+					<category name="Pot O' Gold">
+						<code profiles="default">set GD_Shields.Titles.Title_Booster04_BoosterShieldPotOGold:AttributePresentationDefinition_0 Description Ерунда, говорю я вам! Чушь собачья! <font color="#5ff5ff">[Все эффекты указаны в описании.]</font></code>
+					</category>
+					<category name="Rough Rider">
+						<code profiles="default">set GD_Sage_Shields.Accessory.Accessory_Buckler:AttributePresentationDefinition_5 Description Чтобы завалить Степного Лося, нужно нечто большее. <font color="#5ff5ff">[Все эффекты указаны в описании.]</font></code>
+					</category>
+				</category>
+			</category>
+			<category name="Shotguns">
+				<category name="Effervescent">
+					<category name="Unicornsplosion">
+						<code profiles="default">set GD_Anemone_Weapons.Name.Title.Title__Unique_Unicornplosion:AttributePresentationDefinition_8 NoConstraintText Великолепный подарок от дорогого друга, не забытого и не покинутого. <font color="#5ff5ff">[Стреляет Жожками, которые взрываются на 3 осколка.]</font></code>
+					</category>
+				</category>
+				<category name="Legendary">
+					<category name="Conference call">
+						<code profiles="default">set GD_Weap_Shotgun.Name.Title_Hyperion.Title_Legendary_ConferenceCall:AttributePresentationDefinition_8 NoConstraintText Давайте просто звякнем всем и сразу. <font color="#5ff5ff">[Выпускает 5 дробин за выстрел. Каждая дробина порождает дополнительные снаряды при попадании или на достаточной дистанции.]</font></code>
+					</category>
+					<category name="Deliverance">
+						<code profiles="default">set GD_Weap_Shotgun.Name.Title_Tediore.Title_Legendary_Deliverance:AttributePresentationDefinition_8 NoConstraintText У Кики появился дробовик! <font color="#5ff5ff">[При перезарядке выбрасывает летающий самонаводящийся дробовик, который сам стреляет во врагов.]</font></code>
+					</category>
+					<category name="Flakker">
+						<code profiles="default">set GD_Weap_Shotgun.Name.Title_Torgue.Title_Legendary_Flakker:AttributePresentationDefinition_8 NoConstraintText Накрой этот мир шрапнелью. <font color="#5ff5ff">[Огромный разброс. Заряды разрываются серией взрывов на определённой дистанции.]</font></code>
+					</category>
+					<category name="Overcompensator">
+						<code profiles="default">set GD_Anemone_Weapons.Shotgun.Overcompensator.Title_Legendary_Overcompensator:AttributePresentationDefinition_8 NoConstraintText Ты можешь либо серфить, либо воевать! <font color="#5ff5ff">[При стрельбе магазин может случайно пополниться патронами. Уменьшено количество дробин.]</font></code>
+					</category>
+					<category name="Sledge's Shotgun">
+						<code profiles="default">set GD_Weap_Shotgun.Name.Title_Bandit.Title_Legendary_Shotgun:AttributePresentationDefinition_8 NoConstraintText Легенда жива. <font color="#5ff5ff">[Отсечка по два выстрела, +2 к количеству дробин.]</font></code>
+					</category>
+					<category name="Striker">
+						<code profiles="default">set GD_Weap_Shotgun.Name.Title_Jakobs.Title_Legendary_Striker:AttributePresentationDefinition_8 NoConstraintText Фандир? Тринадцать. <font color="#5ff5ff">[+50% к базовому критическому урону и +15% к общему множителю крита.]</font></code>
+					</category>
+				</category>
+				<category name="Moxxi">
+					<category name="Heartbreaker">
+						<code profiles="default">set GD_Weap_Shotgun.Name.Title.Title__Unique_HeartBreaker:AttributePresentationDefinition_8 NoConstraintText Я не хочу устраивать пожар на всей планете... <font color="#5ff5ff">[Всегда огненный. Повышены число дробин, скорострельность и критический урон на 50%. 2% вампиризма.]</font></code>
+					</category>
+					<category name="Slow Hand">
+						<code profiles="default">set GD_Iris_Weapons.Name.Title.Title_Unique_SlowHand:AttributePresentationDefinition_8 NoConstraintText Не торопись, сладенький... <font color="#5ff5ff">[3.5% вампиризма. Нет критического урона.]</font></code>
+					</category>
+				</category>
+				<category name="Pearlescent">
+					<category name="Butcher">
+						<code profiles="default">set GD_Gladiolus_Weapons.Name.Title.Title_Pearlescent_Butcher:AttributePresentationDefinition_8 NoConstraintText Свежее мясо! <font color="#5ff5ff">[При стрельбе магазин может случайно пополниться патронами. Скорострельность растёт, пока зажат курок.]</font></code>
+					</category>
+					<category name="Carnage">
+						<code profiles="default">set GD_Lobelia_Weapons.Name.Title.Title_Pearlescent_Carnage:AttributePresentationDefinition_8 NoConstraintText Хм. Он стреляет ракетами. <font color="#5ff5ff">[Огромный базовый урон. Одна дробина вместо дроби. Увеличен радиус взрыва.]</font></code>
+					</category>
+				</category>
+				<category name="Seraph">
+					<category name="Interfacer">
+						<code profiles="default">set GD_Sage_RaidWeapons.Name.Title.Sage_Seraph_Interfacer_Title:AttributePresentationDefinition_8 NoConstraintText Потому что он входит тебе прямо в интерфейс. Понимаешь? ПРЯМО В МОРДУ! <font color="#5ff5ff">[Стреляет медленными снарядами, которые на лету порождают ещё 2 дробины по бокам.]</font></code>
+					</category>
+					<category name="Omen">
+						<code profiles="default">set GD_Aster_RaidWeapons.Shotguns.Aster_Seraph_Omen_Title:AttributePresentationDefinition_8 NoConstraintText Мне нужно, чтобы ты отошёл назад. <font color="#5ff5ff">[Уникальный рисунок разлёта пуль сужается и расширяется в процессе полёта.]</font></code>
+					</category>
+					<category name="Retcher">
+						<code profiles="default">set GD_Orchid_RaidWeapons.Shotgun.Spitter.Orchid_Seraph_Spitter_Title:AttributePresentationDefinition_8 NoConstraintText Фу-у-у, гадость. <font color="#5ff5ff">[Всегда кислотный. Снаряды летят по дуге. При перезарядке после взрыва оставляет 2 мелкие гранаты.]</font></code>
+					</category>
+				</category>
+				<category name="Uniques">
+					<category name="Blockhead">
+						<code profiles="default">set GD_Weap_Shotgun.Name.Title.Title__Unique_Blockhead:AttributePresentationDefinition_8 NoConstraintText Также попробуйте Minecraft! <font color="#5ff5ff">[Стреляет блоками 3х3, которые многократно рикошетят. +100% к сплеш-урону.]</font></code>
+					</category>
+					<category name="Dog">
+						<code profiles="default">set GD_Weap_Shotgun.Name.Title.Title__Unique_Dog:AttributePresentationDefinition_8 NoConstraintText Потому что одного ствола мало, а двух — недостаточно. <font color="#5ff5ff">[Увеличены урон, скорострельность и размер магазина.]</font></code>
+					</category>
+					<category name="Hydra">
+						<code profiles="default">set GD_Sage_Weapons.Name.Title.Title_Unique_Hydra:AttributePresentationDefinition_8 NoConstraintText Пять глав Смерти! <font color="#5ff5ff">[Дробины летят пятью отдельными группами в одну горизонтальную линию.]</font></code>
+					</category>
+					<category name="Jolly Roger">
+						<code profiles="default">set GD_Orchid_BossWeapons.Name.Title.Title__Unique_JollyRoger:AttributePresentationDefinition_8 NoConstraintText Йо-хо-хо, и бутылка рома! <font color="#5ff5ff">[Фиксированный рисунок разлёта пуль в виде черепа со скрещёнными костями.]</font></code>
+					</category>
+					<category name="Landscaper">
+						<code profiles="default">set GD_Weap_Shotgun.Name.Title.Title__Unique_Landscaper:AttributePresentationDefinition_8 NoConstraintText А ну, пошли вон с моего газона! <font color="#5ff5ff">[Выпускает четыре мелких снаряда-гранаты, которые липнут к поверхностям и взрываются через несколько секунд либо при контакте с врагом.]</font></code>
+					</category>
+					<category name="Octo">
+						<code profiles="default">set GD_Weap_Shotgun.Name.Title.Title__Unique_Octo:AttributePresentationDefinition_8 NoConstraintText Окто означает девять. <font color="#5ff5ff">[Выпускает 10 дробин сеткой 3х3 с отсутствующей точкой слева в центре. Летят медленно по синусоиде.]</font></code>
+					</category>
+					<category name="Orphan Maker">
+						<code profiles="default">set GD_Orchid_BossWeapons.Name.Title.Title__Unique_OrphanMaker:AttributePresentationDefinition_2 NoConstraintText Плодит сирот. Регулярно. <font color="#5ff5ff">[Повышенный урон, снижено число дробин в выстреле, наносит урон самому игроку при стрельбе.]</font></code>
+					</category>
+					<category name="RokSalt">
+						<code profiles="default">set GD_Weap_Shotgun.Name.Title.Title__Unique_RokSalt:AttributePresentationDefinition_8 NoConstraintText Отставить отступление. Лучше перезарядись! <font color="#5ff5ff">[Повышены скорость перезарядки, точность, урон и скорострельность.]</font></code>
+					</category>
+					<category name="SWORDSPLOSION!!!">
+						<code profiles="default">set GD_Aster_Weapons.Name.Title.Title__Unique_Swordsplosion:AttributePresentationDefinition_8 NoConstraintText Потому что мистер Торрг так сказал! <font color="#5ff5ff">[Выпущенный меч взрывается при попадании, порождая ещё 3 меча, которые тоже взрываются.]</font></code>
+					</category>
+					<category name="Shotgun 1340">
+						<code profiles="default">set GD_Weap_Shotgun.Name.Title.Title__Unique_Shotgun1340:AttributePresentationDefinition_8 NoConstraintText Мне нравится быть пушкой. <font color="#5ff5ff">[Обладает голосовым модулем грузчика №1340.]</font></code>
+					</category>
+					<category name="Teeth of Terra">
+						<code profiles="default">set GD_Weap_Shotgun.Name.Title.Title__Unique_Teeth:AttributePresentationDefinition_8 NoConstraintText От зубов его они бежали в позоре... <font color="#5ff5ff">[Всегда огненный. Выпускает два горизонтальных ряда по 6 зарядов в форме челюсти.]</font></code>
+					</category>
+					<category name="Tidal Wave">
+						<code profiles="default">set GD_Weap_Shotgun.Name.Title.Title__Unique_TidalWave:AttributePresentationDefinition_8 NoConstraintText Смывайся от волны, чувак! <font color="#5ff5ff">[Выпускает 13 медленных дробин горизонтальной волной, которая один раз рикошетит от поверхностей.]</font></code>
+					</category>
+					<category name="Triquetra">
+						<code profiles="default">set GD_Weap_Shotgun.Name.Title.Title__Unique_Triquetra:AttributePresentationDefinition_8 NoConstraintText Бог троицу любит, а эта пушка — убивает. <font color="#5ff5ff">[Увеличены урон и количество дробин. Дробины летят в форме трикветра.]</font></code>
+					</category>
+					<category name="Twister">
+						<code profiles="default">set GD_Sage_Weapons.Name.Title.Title_Unique_Twister:AttributePresentationDefinition_8 NoConstraintText Задаёт всем жару на ходу. <font color="#5ff5ff">[Только шоковый урон. Выпускает рой дробин, который закручивается в мощное торнадо.]</font></code>
+					</category>
+				</category>
+			</category>
+			<category name="Snipers">
+				<category name="Effervescent">
+					<category name="Hot Mama">
+						<code profiles="default">set GD_Anemone_Weapons.Name.Title.Title_Pearlescent_Chaude_Mama:AttributePresentationDefinition_8 NoConstraintText Снайпер — профессия одинокая. <font color="#5ff5ff">[Всегда огненная. Скорострельность продольно-скользящего затвора. Фиксированный штык.]</font></code>
+					</category>
+				</category>
+				<category name="Legendary">
+					<category name="Amigo Sincero">
+						<code profiles="default">set GD_Anemone_Weap_SniperRifles.Name.Title.Title__Unique_Morde_Lt:AttributePresentationDefinition_8 NoConstraintText Настоящий друг пробьёт любую преграду. <font color="#5ff5ff">[Урон полностью игнорирует щиты врагов. Имеет практически фиксированные детали.]</font></code>
+					</category>
+					<category name="Invader">
+						<code profiles="default">set GD_Weap_SniperRifles.Name.Title_Hyperion.Title_Legendary_Invader:AttributePresentationDefinition_8 NoConstraintText Палач явился. <font color="#5ff5ff">[Выдаёт отсечку по 5 выстрелов при прицеливании.]</font></code>
+					</category>
+					<category name="Lyuda">
+						<code profiles="default">set GD_Weap_SniperRifles.Name.Title_Vladof.Title_Legendary_Lyudmila:AttributePresentationDefinition_8 NoConstraintText Убийца мужчин. <font color="#5ff5ff">[Выпускает один снаряд, который через некоторое время делится на три по горизонтали с уроном 75% от карточки. Имеет +125% к базовому криту.]</font></code>
+					</category>
+					<category name="Pitchfork">
+						<code profiles="default">set GD_Weap_SniperRifles.Name.Title_Dahl.Title_Legendary_Pitchfork:AttributePresentationDefinition_8 NoConstraintText Попал в струю! <font color="#5ff5ff">[Выпускает 5 пуль в форме буквы V. Жрёт 2 патрона за выстрел.]</font></code>
+					</category>
+					<category name="Skullmasher">
+						<code profiles="default">set GD_Weap_SniperRifles.Name.Title_Jakobs.Title_Legendary_Skullmasher:AttributePresentationDefinition_8 NoConstraintText От этого голова пухнет. <font color="#5ff5ff">[Выпускает 5 дробин по цене 1 патрона.]</font></code>
+					</category>
+					<category name="Volcano">
+						<code profiles="default">set GD_Weap_SniperRifles.Name.Title_Maliwan.Title_Legendary_Volcano:AttributePresentationDefinition_8 NoConstraintText Пеле покорно просит принести жертву, если это не слишком вас затруднит. <font color="#5ff5ff">[+80% к стихийному сплеш-урону.]</font></code>
+					</category>
+				</category>
+				<category name="Moxxi">
+					<category name="Chere-Amie">
+						<code profiles="default">set GD_Weap_SniperRifles.Name.Title.Title__Unique_Chere-amie:AttributePresentationDefinition_8 NoConstraintText Очень рад знакомству. Где здесь библиотека? <font color="#5ff5ff">[Трансфузия при попадании и 2% вампиризма.]</font></code>
+					</category>
+				</category>
+				<category name="Pearlescent">
+					<category name="Godfinger">
+						<code profiles="default">set GD_Lobelia_Weapons.Name.Title.Title_Pearlescent_Godfinger:AttributePresentationDefinition_8 NoConstraintText Настоящий Божий Перст. <font color="#5ff5ff">[Порождает новые снаряды в полёте: чем дальше летит пуля, тем выше урон, вплоть до 14-кратного.]</font></code>
+					</category>
+					<category name="Storm">
+						<code profiles="default">set GD_Gladiolus_Weapons.Name.Title.Title_Pearlescent_Storm:AttributePresentationDefinition_8 NoConstraintText Кап-кап, кажется, дождь собирается. <font color="#5ff5ff">[Всегда шоковый. При попадании создаёт электрические сферы, бьющие током ближайших врагов.]</font></code>
+					</category>
+				</category>
+				<category name="Seraph">
+					<category name="Hawk Eye">
+						<code profiles="default">set GD_Sage_RaidWeapons.Name.Title.Sage_Seraph_HawkEye_Title:AttributePresentationDefinition_8 NoConstraintText Глаз зорок. Палец — молния. Прицел — смерть. <font color="#5ff5ff">[Экстремально высокий критический урон. Высокие зум, скорострельность, скорость перезарядки и магазин.]</font></code>
+					</category>
+					<category name="Patriot">
+						<code profiles="default">set GD_Orchid_RaidWeapons.sniper.Patriot.Orchid_Seraph_Patriot_Title:AttributePresentationDefinition_8 NoConstraintText Наш голос не заглушить! <font color="#5ff5ff">[Стреляет медленными снарядами с огромным разлётом пуль.]</font></code>
+					</category>
+				</category>
+				<category name="Unique">
+					<category name="Buffalo">
+						<code profiles="default">set GD_Weap_SniperRifles.Name.Title_Jakobs.Title_Jakobs_Buffalo:AttributePresentationDefinition_8 NoConstraintText Шёл хохол, козу вёл. Щи щи щи. <font color="#5ff5ff">[<br/> Не может появиться с оптическим прицелом.]</font></code>
+					</category>
+					<category name="Cobra">
+						<code profiles="default">set GD_Iris_Weapons.Name.Title.Title_Unique_Cobra:AttributePresentationDefinition_8 NoConstraintText Когда я узнал про эту штуку, я такой: ''ПРАВДА?! Ну всё, я возвращаю эту пушку НАЗАД!'' <font color="#5ff5ff">[Разрывной сплеш-урон.]</font></code>
+					</category>
+					<category name="Elephant Gun">
+						<code profiles="default">set GD_Sage_Weapons.Name.Title.Title_Unique_ElephantGun:AttributePresentationDefinition_8 NoConstraintText Куча народу его терпеть не может. <font color="#5ff5ff">[Повышены урон и скорострельность. Снижены точность, перезарядка и магазин. Всегда без оптического прицела.]</font></code>
+					</category>
+					<category name="Fremington's Edge">
+						<code profiles="default">set GD_Weap_SniperRifles.Name.Title.Title__Unique_FremingtonsEdge:AttributePresentationDefinition_8 NoConstraintText Я отсюда свой дом вижу. <font color="#5ff5ff">[Колоссальный зум, повышенные урон и точность. Бонус к критическому урону при прицеливании.]</font></code>
+					</category>
+					<category name="Longbow">
+						<code profiles="default">set GD_Weap_SniperRifles.Name.Title.Title__Unique_Longbow:AttributePresentationDefinition_8 NoConstraintText Вещь — не то, чем кажется! <font color="#5ff5ff">[Стреляет медленными стрелами. Всегда зажигательный, строго без прицела, +150% к критическому урону.]</font></code>
+					</category>
+					<category name="Morningstar">
+						<code profiles="default">set GD_Weap_SniperRifles.Name.Title.Title__Unique_Morningstar:AttributePresentationDefinition_8 NoConstraintText Роза пахнет розой... <font color="#5ff5ff">[Каждый крит даёт короткий бонус +20% к критическому урону. Комментирует все ваши действия.]</font></code>
+					</category>
+					<category name="Pimpernel">
+						<code profiles="default">set GD_Orchid_BossWeapons.Name.Title.Title__Unique_Pimpernel:AttributePresentationDefinition_8 NoConstraintText Разрази меня гром! <font color="#5ff5ff">[Снаряд разделяется на 5 частей при попадании в поверхность.]</font></code>
+					</category>
+					<category name="Sloth">
+						<code profiles="default">set GD_Weap_SniperRifles.Name.Title.Title__Unique_Sloth:AttributePresentationDefinition_8 NoConstraintText Да уж, синька она такая... <font color="#5ff5ff">[Повышенный урон и сниженная скорость полёта пули.]</font></code>
+					</category>
+					<category name="Trespasser">
+						<code profiles="default">set GD_Weap_SniperRifles.Name.Title.Title__Unique_Trespasser:AttributePresentationDefinition_8 NoConstraintText Я редко подыхаю. <font color="#5ff5ff">[Урон полностью игнорирует щиты врагов.]</font></code>
+					</category>
+				</category>
+			</category>
+		</category>
+	</body>
+</BLCMM>
+
+#Commands:
+set GD_Anemone_Weapons.AssaultRifle.PeakOpener.Title_Effervescent_PeakOpener:AttributePresentationDefinition_8 NoConstraintText Выбор высшей пробы для идеальной игры. <font color="#5ff5ff">[Стреляет ракетами, порождающими 3 мелкие гранаты при попадании. Дочерние гранаты наносят разрывной урон.]</font>
+set GD_Anemone_Weapons.AssaultRifle.Title_Effervescent_Worming:AttributePresentationDefinition_8 NoConstraintText Простое решение жуткой проблемы. <font color="#5ff5ff">[Всегда зажигательный. Выпускает 10 зарядов в 2 ряда по 5 штук.]</font>
+set GD_Weap_AssaultRifle.Name.Title_Jakobs.Title_Legendary_HammerBuster:AttributePresentationDefinition_8 NoConstraintText Аргх! Гррарр! Мой папа ученый! ГВАААРРРР!!!! <font color="#5ff5ff">[Повышенный урон и увеличенный бонус к критическому удару.]</font>
+set GD_Weap_AssaultRifle.Name.Title_Torgue.Title_Legendary_KerBlaster:AttributePresentationDefinition_8 NoConstraintText Торрг даёт больше БУМА! <font color="#5ff5ff">[Жрёт 4 патрона за выстрел. Нет критического урона. Урон усиливается бонусами к гранатам.]</font>
+set GD_Anemone_Weapons.AssaultRifle.Brothers.Title_Legendary_Brothers:AttributePresentationDefinition_8 NoConstraintText У каждого солдата две семьи: ту, что растишь ты, и та, с кем ты задаешь всем жару. <font color="#5ff5ff">[Повышенный урон, бонус к критическому удару и увеличенный магазин.]</font>
+set GD_Weap_AssaultRifle.Name.Title_Bandit.Title_Legendary_Madhouse:AttributePresentationDefinition_8 NoConstraintText Это дурдом! ДУРДОМ!!! <font color="#5ff5ff">[Пули летят по извилистой траектории, разделяются при попадании и рикошетят.]</font>
+set GD_Aster_Weapons.Name.Title.Title_Unique_Ogre:AttributePresentationDefinition_8 NoConstraintText Огры пережевывают пищу. <font color="#5ff5ff">[+100% к стихийному сплеш-урону. Шанс получить бафф к скорострельности и перезарядке. При баффе пули рикошетят.]</font>
+set GD_Weap_AssaultRifle.Name.Title_Vladof.Title_Legendary_Shredifier:AttributePresentationDefinition_8 NoConstraintText Speed kills. <font color="#5ff5ff">[Почти мгновенная раскрутка ствола, дикая скорострельность и огромный магазин. Слегка снижен урон.]</font>
+set GD_Weap_AssaultRifle.Name.Title_Dahl.Title_Legendary_Veruc:AttributePresentationDefinition_8 NoConstraintText Папочка, я хочу ту винтовку! <font color="#5ff5ff">[Выпускает 3 пули горизонтальным веером. При прицеливании — отсечка по 5 выстрелов с кучным разбросом.]</font>
+set GD_Weap_AssaultRifle.Name.Title.Title_Unique_Hail:AttributePresentationDefinition_8 NoConstraintText Какую игрушку ты предложишь мне сегодня? <font color="#5ff5ff">[3% вампиризма, +200% к критическому урону. Всегда стихийный, снаряды летят по навесной дуге.]</font>
+set GD_Iris_Weapons.Name.Title.Title_Unique_Kitten:AttributePresentationDefinition_8 NoConstraintText Мы все здесь безумны. Я безумен. Ты безумна. <font color="#5ff5ff">[4% вампиризма, 3 пули за выстрел. Рисунок разлета пуль образует смайлик.]</font>
+set GD_Gladiolus_Weapons.Name.Title.Title_Pearlescent_Bearcat:AttributePresentationDefinition_8 NoConstraintText Обожаю запах попкорна поутру. <font color="#5ff5ff">[Выпускает 3 гранаты за выстрел, есть шанс породить мелкие дочерние гранаты.]</font>
+set GD_Lobelia_Weapons.Name.Title.Title_Pearlescent_Bekah:AttributePresentationDefinition_8 NoConstraintText Стреляй им прямо в лицо. Дважды. <font color="#5ff5ff">[Выпускает 1 снаряд, который затем делится на 4.]</font>
+set GD_Gladiolus_Weapons.Name.Title.Title_Pearlescent_Sawbar:AttributePresentationDefinition_8 NoConstraintText Подавляющий огонь! <font color="#5ff5ff">[Всегда огненный. На лету снаряды порождают три других снаряда, которые разлетаются под углом перед взрывом.]</font>
+set GD_Sage_RaidWeapons.Name.Title.Sage_Seraph_LeadStorm_Title:AttributePresentationDefinition_8 NoConstraintText Какое великолепное чувство! <font color="#5ff5ff">[Стреляет медленными снарядами по навесной дуге, которые в полете делятся на три части. Небольшой бонус к критическому урону.]</font>
+set GD_Aster_RaidWeapons.AssaultRifles.Aster_Seraph_Seeker_Title:AttributePresentationDefinition_8 NoConstraintText О да, это честно... <font color="#5ff5ff">[Жрёт 2 патрона за выстрел, стреляет самонаводящимися пулями.]</font>
+set GD_Orchid_RaidWeapons.AssaultRifle.Seraphim.Orchid_Seraph_Seraphim_Title:AttributePresentationDefinition_8 NoConstraintText Священный? Святой? Дырявый! <font color="#5ff5ff">[Стреляет крупными медленными снарядами. Всегда зажигательный.]</font>
+set GD_Iris_Weapons.Name.Title.Title_Unique_BoomPuppy:AttributePresentationDefinition_8 NoConstraintText Бум! Бум! Бум! БУМ! БУУУМ! ХОРОШАЯ СОБАЧКА! <font color="#5ff5ff">[Стреляет медленной прыгучей резиновой гранатой, которая взрывается при каждом отскоке.]</font>
+set GD_Sage_Weapons.Name.Title.Title_Unique_Chopper:AttributePresentationDefinition_8 NoConstraintText Живее к делу. <font color="#5ff5ff">[Дикая скорострельность и низкая точность. Выпускает весь магазин при одном нажатии на курок.]</font>
+set GD_Sage_Weapons.Name.Title.Title_Unique_DamnedCowboy:AttributePresentationDefinition_8 NoConstraintText Говори мягко. И носи с собой это. <font color="#5ff5ff">[+55% к критическому урону.]</font>
+set GD_Weap_AssaultRifle.Name.Title.Title_Unique_EvilSmasher:AttributePresentationDefinition_8 NoConstraintText ''Зло будет РАЗБИТО!!! ВДРЕБЕЗГИ!!! ЗЛО!!! КРУШИТЬ!!!'' <font color="#5ff5ff">[При перезарядке есть шанс колоссально усилить характеристики оружия. Эффект длится до следующей перезарядки.]</font>
+set GD_Orchid_BossWeapons.Name.Title.Title__Unique_Cutlass:AttributePresentationDefinition_0 NoConstraintText И завершая свой куплет, я наношу удар. <font color="#5ff5ff">[Персонаж получает повышенный урон от вражеских рукопашных атак.]</font>
+set GD_Weap_AssaultRifle.Name.Title.Title_Unique_Scorpio:AttributePresentationDefinition_8 NoConstraintText Не говори с тоской: ''Его уж нет'', но вспоминай с благодарением, что был. <font color="#5ff5ff">[При прицеливании — переменная длина очереди. При стрельбе от бедра — переменная скорострельность.]</font>
+set GD_Orchid_BossWeapons.Name.Title.Title__Unique_Stinkpot:AttributePresentationDefinition_8 NoConstraintText Мы пираты. Правила не для нас. <font color="#5ff5ff">[Всегда кислотный. Огромный радиус сплеша. Коррозия перекидывается на соседних врагов.]</font>
+set GD_Weap_AssaultRifle.Name.Title_Jakobs.Title_Unique_Stomper:AttributePresentationDefinition_8 NoConstraintText Ой, прости, это была твоя голова? <font color="#5ff5ff">[Очень высокий критический урон.]</font>
+set GD_Anemone_GrenadeMods.Title.Title_ExterminatorIncendiary:AttributePresentationDefinition_0 Description Очиститесь огнём! <font color="#5ff5ff">[Разбрызгивает пламя по кругу, выпуская мелкие огненные ракеты.]</font>
+set GD_Anemone_GrenadeMods.Title.Title_ExterminatorShock:AttributePresentationDefinition_0 Description Истина — зачастую лучший щит. <font color="#5ff5ff">[Выпускает липкие дочерние тесла-гранаты, завершая всё мощным электрическим взрывом.]</font>
+set GD_GrenadeMods.Payload.Payload_BonusPackage:AttributePresentationDefinition_4 Description В 2 раза круче, экстремальный бонус! <font color="#5ff5ff">[Каждая дочерняя граната порождает ещё одну дополнительную.]</font>
+set GD_GrenadeMods.Payload.Payload_BouncingBonny:AttributePresentationDefinition_4 Description Ну и сука же твоя сестра. <font color="#5ff5ff">[Выпускает дочерние гранаты типа ''прыгающая бетти''.]</font>
+set GD_Aster_GrenadeMods.Delivery.Delivery_ChainLightning:AttributePresentationDefinition_4 Description Не возвращай долг, передай добро дальше. <font color="#5ff5ff">[Бьёт молнией, которая взрывается при ударе и перекидывается на соседние цели.]</font>
+set GD_GrenadeMods.Delivery.Delivery_Fastball:AttributePresentationDefinition_4 Description Забудь про крученые, Рики, вжарь ему фастболом. <font color="#5ff5ff">[Сверхбыстрый бросок по прямой, рикошетит от поверхностей при ударе.]</font>
+set GD_GrenadeMods.Title.Title_ExterminatorIncendiary:AttributePresentationDefinition_0 Description Пчёлы на подлёте! <font color="#5ff5ff">[Разбрызгивает пламя по кругу, выпуская мелкие огненные ракеты.]</font>
+set GD_Aster_GrenadeMods.Delivery.Delivery_FireStorm:AttributePresentationDefinition_4 Description Что ты за человек такой, раз можешь призывать огонь без кремня и огнива? <font color="#5ff5ff">[Выпускает огненный шар, который взрывается при контакте и порождает ещё четыре шара.]</font>
+set GD_GrenadeMods.Payload.Payload_Leech:AttributePresentationDefinition_4 Description Один умелый лекарь стоит сотен воинов. <font color="#5ff5ff">[Эффект трансфузии: наносит урон и лечит персонажа.]</font>
+set GD_GrenadeMods.Delivery.Delivery_NastySurprise:AttributePresentationDefinition_4 Description Сюрприз-посылка! <font color="#5ff5ff">[Телепортационный бросок; бросает четыре дочерние гранаты по пути или в финальной точке.]</font>
+set GD_GrenadeMods.Title.Title_ExterminatorCorrosive:AttributePresentationDefinition_0 Description Распространяй заразу. <font color="#5ff5ff">[При взрыве выпускает 3 самонаводящиеся гранаты с периодическим кислотным уроном.]</font>
+set GD_GrenadeMods.Payload.Payload_Quasar:AttributePresentationDefinition_4 Description E = mc^[ОБОЖЕ]/wtf <font color="#5ff5ff">[Самая мощная сингулярная граната, бьёт постоянным шоковым уроном.]</font>
+set GD_GrenadeMods.Delivery.Delivery_RollingThunder:AttributePresentationDefinition_4 Description Гром принесёт с собой боль! <font color="#5ff5ff">[Летит по низкой дуге, детонирует при каждом отскоке, в финале взрывается кассетным зарядом.]</font>
+set GD_GrenadeMods.Title.Title_ExterminatorShock:AttributePresentationDefinition_0 Description Иногда молния бьёт дважды. <font color="#5ff5ff">[Выпускает липкие дочерние тесла-гранаты.]</font>
+set GD_Iris_SeraphItems.Crossfire.Iris_Seraph_GrenadeMod_Crossfire:AttributePresentationDefinition_0 Description Найти, зажать, обойти с фланга, уничтожить! <font color="#5ff5ff">[Работает как ''прыгающая бетти'', но дополнительно разбрасывает дочерние гранаты.]</font>
+set GD_Iris_SeraphItems.MeteorShower.Iris_Seraph_GrenadeMod_MeteorShower_Title:AttributePresentationDefinition_0 Description Not just for wishing on! <font color="#5ff5ff">[Дочерние гранаты летят по высокой дуге и каждая порождает ещё по одной навесной гранате.]</font>
+set GD_Iris_SeraphItems.ONegative.Iris_Seraph_GrenadeMod_ONegative:AttributePresentationDefinition_0 Description Универсальный донор! <font color="#5ff5ff">[Все эффекты указаны в описании.]</font>
+set GD_GrenadeMods.Payload.Payload_FlameSpurt:AttributePresentationDefinition_4 Description Дыхание его было пламенем... <font color="#5ff5ff">[Урон по площади. Порождает дочерние гранаты, выпускающие огненные гейзеры.]</font>
+set GD_Orchid_GrenadeMods.Delivery.Delivery_Blade:AttributePresentationDefinition_1 Description Проклятие хихикающего дизайнера! <font color="#5ff5ff">[Дочерние гранаты летят обратно в игрока.]</font>
+set GD_GrenadeMods.Delivery.Delivery_SkyRocket:AttributePresentationDefinition_0 Description ВНИМАНИЕ: Не для использования в помещениях. <font color="#5ff5ff">[Взлетает строго вверх и выдаёт мощный залп фейерверков. Повышенный урон.]</font>
+set GD_Aster_GrenadeMods.Delivery.Delivery_Fireball:AttributePresentationDefinition_4 Description Бутерброды со свиными котлетами! <font color="#5ff5ff">[Выпускает медленно летящий огненный шар.]</font>
+set GD_GrenadeMods.Payload.Payload_FusterCluck:AttributePresentationDefinition_4 Description Да начнется дождь! <font color="#5ff5ff">[Дочерние гранаты появляются прямо в воздухе сразу после броска.]</font>
+set GD_GrenadeMods.Payload.Payload_KissOfDeath:AttributePresentationDefinition_4 Description Чтобы вляпаться в неприятности, нужны двое. <font color="#5ff5ff">[Граната наводится и липнет к врагам, нанося периодический урон. При взрыве выпускает лечащие сферы.]</font>
+set GD_Aster_GrenadeMods.Delivery.Delivery_LightningBolt:AttributePresentationDefinition_4 Description Что ещё за джигаватт? <font color="#5ff5ff">[Бьёт молнией строго по прямой и взрывается при попадании.]</font>
+set GD_Aster_GrenadeMods.Delivery.Delivery_MagicMissile:AttributePresentationDefinition_4 Description Волшебная палочка не нужна. Просто целься и стреляй. <font color="#5ff5ff">[Дочерние гранаты сами наводятся на врагов.]</font>
+set GD_Aster_GrenadeMods.Delivery.Delivery_MagicMissileRare:AttributePresentationDefinition_4 Description Волшебная палочка не нужна. Просто целься и стреляй. <font color="#5ff5ff">[Дочерние гранаты сами наводятся на врагов.]</font>
+set GD_Anemone_Weapons.Name.Title.Title_DroletDrill:AttributePresentationDefinition_8 NoConstraintText Она своё дело знает. <font color="#5ff5ff">[Не расходует патроны. Рисунок разлета пуль образует знак бесконечности. 100% шанс поджога, высокий урон.]</font>
+set GD_Weap_Pistol.Name.Title_Bandit.Title_Legendary_Gub:AttributePresentationDefinition_8 NoConstraintText Не подавай виду. <font color="#5ff5ff">[Огромный магазин, сильно увеличенный урон. Всегда кислотный.]</font>
+set GD_Weap_Pistol.Name.Title_Tediore.Title_Legendary_Gunerang:AttributePresentationDefinition_8 NoConstraintText А ну, зацени. <font color="#5ff5ff">[Уникальная перезарядка бумерангом с повышенным уроном при возвращении ствола.]</font>
+set GD_Anemone_Weapons.Name.Title_Dahl.Title_Legendary_Hornet_Hector:AttributePresentationDefinition_8 NoConstraintText Кнут на спинах Новых Пандорцев. <font color="#5ff5ff">[Всегда шоковый. Наносит урон по площади. Очередь по 6 выстрелов при прицеливании. Всегда со штыком.]</font>
+set GD_Weap_Pistol.Name.Title_Dahl.Title_Legendary_Hornet:AttributePresentationDefinition_8 NoConstraintText Бойся роя! <font color="#5ff5ff">[Всегда кислотный. Очередь по 6 выстрелов при прицеливании. Снаряды наносят небольшой урон по площади.]</font>
+set GD_Weap_Pistol.Name.Title_Vladof.Title_Legendary_Infinity:AttributePresentationDefinition_8 NoConstraintText Она ближе, чем тебе кажется!                          [вовсе нет] <font color="#5ff5ff">[Не расходует боеприпасы. Рисунок разлета пуль образует знак бесконечности.]</font>
+set GD_Weap_Pistol.Name.Title_Hyperion.Title_Legendary_LogansGun:AttributePresentationDefinition_8 NoConstraintText Пушка, пушкарь! <font color="#5ff5ff">[Всегда зажигательный. Пули взрываются при контакте, а затем ещё раз после небольшой задержки. Пули считаются ракетами.]</font>
+set GD_Weap_Pistol.Name.Title_Jakobs.Title_Legendary_Maggie:AttributePresentationDefinition_8 NoConstraintText Жёнушка Монти спуску не даст. <font color="#5ff5ff">[Выпускает 6 пуль по цене 1 патрона. Снижены точность и урон каждого снаряда.]</font>
+set GD_Weap_Pistol.Name.Title_Maliwan.Title_Legendary_ThunderballFists:AttributePresentationDefinition_8 NoConstraintText Мне правда можно такую штуку? <font color="#5ff5ff">[Всегда шоковый. Выпускает снаряд, который подлетает немного вверх и взрывается электрической сферой второй раз.]</font>
+set GD_Weap_Pistol.Name.Title_Torgue.Title_Legendary_Calla:AttributePresentationDefinition_8 NoConstraintText Я шесть раз стрелял или только пять? Три? Семь. Да пофиг. <font color="#5ff5ff">[Выпускает 7 снарядов, расходящихся по горизонтали с ускорением. Жрёт 3 патрона за выстрел.]</font>
+set GD_Weap_Pistol.Name.Title.Title__Unique_Veritas:AttributePresentationDefinition_8 NoConstraintText Надо было остановиться на одном. <font color="#5ff5ff">[+10% к времени «Борьбы за жизнь» за каждую Veritas или Aequitas у игроков в группе. Даёт +10% к критическому урону.]</font>
+set GD_Aster_Weapons.Name.Title.Title__Unique_GrogNozzle:AttributePresentationDefinition_8 NoConstraintText Гони ключи, сладенький... <font color="#5ff5ff">[65% вампиризма.]</font>
+set GD_Weap_Pistol.Name.Title.Title__Unique_Rubi:AttributePresentationDefinition_8 NoConstraintText Из двух зол я всегда выбираю то, что ещё не пробовала. <font color="#5ff5ff">[12% вампиризма от любого источника урона.]</font>
+set GD_Gladiolus_Weapons.Name.Title.Title_Pearlescent_Stalker:AttributePresentationDefinition_8 NoConstraintText Беги не беги, а не спрячешься. <font color="#5ff5ff">[Заметно повышены урон, скорость перезарядки, скорострельность и магазин ценой точности. Пули рикошетят до 5 раз.]</font>
+set GD_Gladiolus_Weapons.Name.Title.Title_Pearlescent_Unforgiven:AttributePresentationDefinition_8 NoConstraintText Тяжкое это дело... <font color="#5ff5ff">[+100% к базовому критическому урону и +25% к общему множителю крита.]</font>
+set GD_Lobelia_Weapons.Name.Title.Title_Pearlescent_Wanderlust:AttributePresentationDefinition_8 NoConstraintText Пока сам не пойдёшь — не узнаешь. <font color="#5ff5ff">[Стреляет рикошетящими самонаводящимися дротиками, повышает шанс стихийного эффекта ценой урона снаряда.]</font>
+set GD_Orchid_RaidWeapons.Pistol.Devastator.Orchid_Seraph_Devastator_Title:AttributePresentationDefinition_8 NoConstraintText Наше вам с кисточкой. <font color="#5ff5ff">[Повышенный урон, отсечка по два выстрела. Снижена скорость полёта пули.]</font>
+set GD_Sage_RaidWeapons.Name.Title.Sage_Seraph_Infection_Title:AttributePresentationDefinition_8 NoConstraintText Чешется. Вкусненько. <font color="#5ff5ff">[Всегда кислотный. Экстремально высокие шанс и урон от стихийного эффекта коррозии.]</font>
+set GD_Aster_RaidWeapons.Pistols.Aster_Seraph_Stinger_Title:AttributePresentationDefinition_8 NoConstraintText Идёт как по маслу, детка. <font color="#5ff5ff">[Ricocheting bullets. Дополнительный бонус +15% к критическому урону.]</font>
+set GD_Weap_Pistol.Name.Title.Title__Unique_Dahlminator:AttributePresentationDefinition_8 NoConstraintText От этого не увернёшься. <font color="#5ff5ff">[Всегда кислотный. Стреляет медленными самонаводящимися снарядами.]</font>
+set GD_Weap_Pistol.Barrel.Fibber.Pistol_Barrel_Bandit_Fibber_1:AttributePresentationDefinition_1 BasePriority 20
+set GD_Weap_Pistol.Barrel.Fibber.Pistol_Barrel_Bandit_Fibber_1:AttributePresentationDefinition_1 NoConstraintText <font color="#DC4646">Стану ли я тебе врать?</font> <font color="#5ff5ff">[Медленные снаряды с разлетом как у дробовика.]</font>
+set GD_Weap_Pistol.Barrel.Fibber.Pistol_Barrel_Bandit_Fibber_2:AttributePresentationDefinition_1 BasePriority 20
+set GD_Weap_Pistol.Barrel.Fibber.Pistol_Barrel_Bandit_Fibber_2:AttributePresentationDefinition_1 NoConstraintText <font color="#DC4646">Стану ли я тебе врать?</font> <font color="#5ff5ff">[Снаряды рикошетят от поверхностей и стен без потери скорости.]</font>
+set GD_Weap_Pistol.Barrel.Fibber.Pistol_Barrel_Bandit_Fibber_3:AttributePresentationDefinition_1 BasePriority 20
+set GD_Weap_Pistol.Barrel.Fibber.Pistol_Barrel_Bandit_Fibber_3:AttributePresentationDefinition_1 NoConstraintText <font color="#DC4646">Стану ли я тебе врать?</font> <font color="#5ff5ff">[Снаряды летят по дуге, давая +700% к критическому урону.]</font>
+set GD_Weap_Pistol.Name.Title.Title__Unique_Fibber:AttributePresentationDefinition_8 BasePriority 0
+set GD_Orchid_BossWeapons.Name.Title.Title__Unique_ScarletsGreed:AttributePresentationDefinition_8 NoConstraintText Ворюга. <font color="#5ff5ff">[Всегда огненный. Нет штрафа к скорости перемещения при прицеливании.]</font>
+set GD_Weap_Pistol.Name.Title.Title__Unique_GwensHead:AttributePresentationDefinition_8 NoConstraintText Нестандартное мышление. <font color="#5ff5ff">[Отсечка по 7 выстрелов при прицеливании.]</font>
+set GD_Weap_Pistol.Name.Title.Title__Unique_Judge:AttributePresentationDefinition_8 NoConstraintText Теперь я свободен. <font color="#5ff5ff">[Bonus critical hit damage: +30% additive and +15% multiplicative.]</font>
+set GD_Weap_Pistol.Name.Title.Title__Unique_LadyFist:AttributePresentationDefinition_8 NoConstraintText Любовь — это Дамский Пальчик. Настоящая любовь — Дамский Кулак. <font color="#5ff5ff">[Снижен базовый урон. Повышены точность и магазин, но даёт чудовищные +800% к критическому урону.]</font>
+set GD_Weap_Pistol.Name.Title.Title__Unique_Law:AttributePresentationDefinition_8 NoConstraintText Та-да. <font color="#5ff5ff">[Всегда +100% к урону штыком. Если экипирован щит Order, рукопашные атаки этим пистолетом лечат на 25% от нанесённого урона.]</font>
+set GD_Orchid_BossWeapons.Name.Title.Title__Unique_LittleEvie:AttributePresentationDefinition_8 NoConstraintText Шок и ми-ми-миии! Какая прелесть! <font color="#5ff5ff">[Всегда шоковый. Убийство врага ускоряет откат активного навыка на 12%.]</font>
+set GD_Iris_Weapons.Name.Title.Title_Unique_PocketRocket:AttributePresentationDefinition_8 NoConstraintText Бывало ли у вас чувство... <font color="#5ff5ff">[Повышены все характеристики, жрёт 2 патрона за выстрел.]</font>
+set GD_Sage_Weapons.Name.Title.Title_Unique_Rex:AttributePresentationDefinition_8 NoConstraintText Проще говоря, это большая пушка. <font color="#5ff5ff">[+40% к критическому урону ценой крайне низкой скорострельности для пистолета Jakobs.]</font>
+set GD_Weap_Pistol.Name.Title.Title__Unique_Teapot:AttributePresentationDefinition_8 NoConstraintText Устраиваю чаепитие, попиваю свой чааай! <font color="#5ff5ff">[Всегда кислотный. Повышены урон стихией и точность ценой базового урона, скорострельности, магазина и шанса поджога.]</font>
+set GD_Weap_Pistol.Name.Title.Title__Unique_Tinderbox:AttributePresentationDefinition_8 NoConstraintText Хорошо подходит для разведения костров. <font color="#5ff5ff">[Отлично поджигает цели, +100% к урону по площади.]</font>
+set GD_Anemone_Weapons.Rocket_Launcher.WorldBurn.Title_Effervescent_WorldBurn:AttributePresentationDefinition_8 NoConstraintText Война не поддаётся логике. <font color="#5ff5ff">[Всегда зажигательный. Ракеты летят по дуге и взрываются ядерным грибом.]</font>
+set GD_Weap_Launchers.Name.Title_Bandit.Title_Legendary_Badaboom:AttributePresentationDefinition_8 NoConstraintText Мульти-килл! <font color="#5ff5ff">[Выпускает 6 ракет по цене 1. Снижены урон и точность.]</font>
+set GD_Weap_Launchers.Name.Title_Tediore.Title_Legendary_Bunny:AttributePresentationDefinition_8 NoConstraintText Прыг-скок! <font color="#5ff5ff">[При перезарядке скачет как безумный кролик и рандомно разбрасывает активные гранаты.]</font>
+set GD_Weap_Launchers.Name.Title_Vladof.Title_Legendary_Mongol:AttributePresentationDefinition_8 NoConstraintText Орда всегда возвращается! <font color="#5ff5ff">[Выпускает одну большую ракету, которая на лету плодит кучу мелких ракет во все стороны.]</font>
+set GD_Weap_Launchers.Name.Title_Maliwan.Title_Barrel_Maliwan_Norfleet:AttributePresentationDefinition_8 NoConstraintText В труху! Вообще всё! <font color="#5ff5ff">[Выпускает три огромных фиолетовых шара веером. Траектория кривая, урон и радиус взрыва — лютейшие.]</font>
+set GD_Weap_Launchers.Name.Title_Torgue.Title_Legendary_Nukem:AttributePresentationDefinition_8 NoConstraintText Громкое имя. <font color="#5ff5ff">[Ракеты летят по навесной дуге и взрываются ядерным грибом.]</font>
+set GD_Weap_Launchers.Name.Title_Maliwan.Title_Legendary_Pyrophobia:AttributePresentationDefinition_8 NoConstraintText В данном случае это вполне обоснованный страх. <font color="#5ff5ff">[Всегда зажигательный. Снаряд несколько раз взрывается в воздухе до подлёта к цели.]</font>
+set GD_Weap_Launchers.Name.Title.Title__Unique_Creamer:AttributePresentationDefinition_8 NoConstraintText Без консервантов. <font color="#5ff5ff">[2% вампиризма. Высокая скорость полёта. На определённой дистанции ракета делится надвое.]</font>
+set GD_Gladiolus_Weapons.Name.Title.Title_Pearlescent_Tunguska:AttributePresentationDefinition_8 NoConstraintText Оно расколет небосвод пополам. <font color="#5ff5ff">[Снаряд летит по миномётной дуге, после падения подпрыгивает в воздух и выдаёт гигантский взрыв.]</font>
+set GD_Orchid_RaidWeapons.RPG.Ahab.Orchid_Seraph_Ahab_Title:AttributePresentationDefinition_8 NoConstraintText Из чистой ненависти. <font color="#5ff5ff">[Стреляет гарпуном, который втыкается в цель и взрывается. Наносит разрывной урон.]</font>
+set GD_Orchid_BossWeapons.Name.Title.Title__Unique_12Pounder:AttributePresentationDefinition_8 NoConstraintText Супротив всех неслабо, сучки. <font color="#5ff5ff">[Стреляет пушечным ядром, которое может наносить критический урон и рикошетить.]</font>
+set GD_Weap_Launchers.Name.Title.Title__Unique_TheHive:AttributePresentationDefinition_8 NoConstraintText Полон пчёл. <font color="#5ff5ff">[Жрёт 4 патрона за выстрел. Выпускает улей, который зависает и спамит самонаводящимися кислотными ракетами.]</font>
+set GD_Weap_Launchers.Name.Title.Title__Unique_Roaster:AttributePresentationDefinition_8 NoConstraintText Поджаричка! <font color="#5ff5ff">[Повышены шанс стихийного урона, урон от горения/кислоты и точность. Базовый урон слегка снижен.]</font>
+set GD_Anemone_Weapons.Name.Title.Title_Infection_Cleaner:AttributePresentationDefinition_8 NoConstraintText Тссс... Я обо всем позабочусь, не волнуйся. <font color="#5ff5ff">[Всегда зажигательный. Повышены урон, магазин и критический урон. При перезарядке прыгает как граната ''прыгающая бетти'', восстанавливает патроны в руках.]</font>
+set GD_Anemone_Weapons.Name.Title.Title_LaTiteVierge:AttributePresentationDefinition_8 NoConstraintText Слушай, жизнь — сука. Смирись и сожги что-нибудь дотла. <font color="#5ff5ff">[Всегда зажигательный. +50% к стихийному сплеш-урону.]</font>
+set GD_Weap_SMG.Name.Title_Tediore.Title_Legendary_BabyMaker:AttributePresentationDefinition_8 NoConstraintText Кто у нас тут ма-а-аленький пушегрех? <font color="#5ff5ff">[Брошенное оружие при взрыве порождает дочерние гранаты, а затем уменьшенную версию, которая снова взрывается, всего до 3 дочерних гранат.]</font>
+set GD_Weap_SMG.Name.Title_Hyperion.Title_Legendary_Bitch:AttributePresentationDefinition_8 NoConstraintText Ага, вернулась. <font color="#5ff5ff">[Повышены точность, размер магазина и критический урон.]</font>
+set GD_Weap_SMG.Name.Title.Title_Legendary_Dahl_Emperor:AttributePresentationDefinition_8 NoConstraintText Знаешь... специально для него. <font color="#5ff5ff">[Стреляет очередью по 6 выстрелов, или по 7, если приклад от Dahl.]</font>
+set GD_Weap_SMG.Name.Title_Maliwan.Title_Legendary_HellFire:AttributePresentationDefinition_8 NoConstraintText Нам не нужен огонь... <font color="#5ff5ff">[Всегда зажигательный. Повышены шанс стихийного эффекта, урон от эффекта и размер магазина. +50% к сплеш-урону.]</font>
+set GD_Weap_SMG.Name.Title_Bandit.Title_Legendary_Slagga:AttributePresentationDefinition_8 NoConstraintText благага <font color="#5ff5ff">[Повышен шанс шлакования. Не наносит урон уже зашлакованным врагам.]</font>
+set GD_Weap_SMG.Name.Title.Title__Unique_BadTouch:AttributePresentationDefinition_8 NoConstraintText Когда я хороша, я очень хороша... <font color="#5ff5ff">[2% вампиризма. Всегда кислотный. +70% к критическому урону.]</font>
+set GD_Aster_Weapons.Name.Title.Title__Unique_Crit:AttributePresentationDefinition_8 NoConstraintText Скользко, когда мокро. <font color="#5ff5ff">[12% шанс выпустить оружие из рук при перезарядке, 2.5% вампиризма. +150% к бонусному критическому урону.]</font>
+set GD_Weap_SMG.Name.Title.Title__Unique_GoodTouch:AttributePresentationDefinition_8 NoConstraintText ...но когда я плоха, я ещё лучше. <font color="#5ff5ff">[2.5% вампиризма. Всегда огненный. +70% к критическому урону.]</font>
+set GD_Gladiolus_Weapons.Name.Title.Title_Pearlescent_Avenger:AttributePresentationDefinition_8 NoConstraintText Контр-возмездная вендетта. Час расплаты. <font color="#5ff5ff">[При перезарядке ведёт себя как граната ''прыгающая бетти''. Повышенная регенерация патронов.]</font>
+set GD_Orchid_RaidWeapons.SMG.Actualizer.Orchid_Seraph_Actualizer_Title:AttributePresentationDefinition_8 NoConstraintText Нам нужно поговорить о твоём отчёте по эффективности. <font color="#5ff5ff">[Повышен урон. Снижена скорость полета снаряда. Увеличен размер магазина. Увеличено время перезарядки.]</font>
+set GD_Aster_RaidWeapons.SMGs.Aster_Seraph_Florentine_Title:AttributePresentationDefinition_8 NoConstraintText Двойные проблемы. <font color="#5ff5ff">[Шоковый снаряд, наносит бонусный шлаковый урон при попадании.]</font>
+set GD_Orchid_RaidWeapons.SMG.Tattler.Orchid_Seraph_Tattler_Title:AttributePresentationDefinition_8 NoConstraintText Стукачу — по кумачу, я ни капли не шучу! <font color="#5ff5ff">[Всегда со штыком. Выпускает три медленных снаряда по цене одного патрона.]</font>
+set GD_Weap_SMG.Name.Title.Title__Unique_Bane:AttributePresentationDefinition_8 NoConstraintText В Испании дожди залили долы. <font color="#5ff5ff">[-500% к скорости перемещения. Заорёт тебя до смерти.]</font>
+set GD_Weap_SMG.Name.Title.Title__Unique_BoneShredder:AttributePresentationDefinition_8 NoConstraintText Дует свинцовый ветер! <font color="#5ff5ff">[Увеличены урон и размер магазина.]</font>
+set GD_Weap_SMG.Name.Title.Title__Unique_Chulainn:AttributePresentationDefinition_8 NoConstraintText Риастрад! <font color="#5ff5ff">[Стреляет шоковыми патронами, которые также наносят бонусный шлаковый урон. Шлакует владельца, пока оружие находится в руках.]</font>
+set GD_Weap_SMG.Name.Title.Title__Unique_Commerce:AttributePresentationDefinition_8 NoConstraintText У меня есть Солдат, Сирена, два Скутера и Железяка. <font color="#5ff5ff">[Всегда шоковый.]</font>
+set GD_Weap_SMG.Name.Title.Title__Unique_Lascaux:AttributePresentationDefinition_8 NoConstraintText Оружие Быков. <font color="#5ff5ff">[Очень длинная переменная очередь. Форма разлёта пуль повторяет наскальные рисунки Ляско.]</font>
+set GD_Aster_Weapons.Name.Title.Title_Unique_Orc:AttributePresentationDefinition_8 NoConstraintText Доказал ли я уже свою ценность? <font color="#5ff5ff">[Шанс получить бафф. Во время баффа пули рикошетят и делятся на 3 части.]</font>
+set GD_Orchid_BossWeapons.Name.Title.Title__Unique_SandHawk:AttributePresentationDefinition_8 NoConstraintText Внутри. Прямо как Эррол. <font color="#5ff5ff">[Потребляет 3 патрона за выстрел, выпуская 8 медленных снарядов в форме летящей птицы.]</font>
+set GD_Sage_Weapons.Name.Title.Title_Unique_YellowJacket:AttributePresentationDefinition_8 NoConstraintText Создано народом. Для народа. <font color="#5ff5ff">[Всегда шоковый. Снаряды ускоряются в полёте, рикошетят от первой поверхности и имеют небольшой радиус взрыва.]</font>
+set GD_Anemone_Shields.Titles.Title_ShockNova02_Singularity:AttributePresentationDefinition_0 Description Держи темп и не давай себя зажать. <font color="#5ff5ff">[Все эффекты указаны в описании.]</font>
+set GD_Anemone_Shields.Titles.Title_Roid05_Order:AttributePresentationDefinition_0 Description Удерживает твои потроха внутри тела — там, где им и место. <font color="#5ff5ff">[Нет ройд-бонуса.]</font>
+set GD_Shields.Titles.Title_ShockNova02_Singularity:AttributePresentationDefinition_0 Description Ты — центр вселенной. <font color="#5ff5ff">[Шоковая нова при срабатывании дополнительно притягивает врагов.]</font>
+set GD_Shields.Titles.Title_Juggernaut04_JuggernautLegendary:AttributePresentationDefinition_0 Description Опережая черепашьим шагом. <font color="#5ff5ff">[Все эффекты указаны в описании.]</font>
+set GD_Shields.Titles.Title_FireNova02_Phoenix:AttributePresentationDefinition_0 Description Из пепла она восстанет. <font color="#5ff5ff">[Все эффекты указаны в описании.]</font>
+set GD_Shields.Titles.Title_Roid03_ThresherRaid:AttributePresentationDefinition_0 Description Его шкура смирила величайших... <font color="#5ff5ff">[Все эффекты указаны в описании.]</font>
+set GD_Shields.Titles.Title_CorrosiveSpike02_Legendary:AttributePresentationDefinition_0 Description Влад бы гордился. <font color="#5ff5ff">[Все эффекты указаны в описании.]</font>
+set GD_Shields.Titles.Title_Chimera04_ChimeraShieldLegendary:AttributePresentationDefinition_0 Description Познай себя, дабы обрести несокрушимый щит. <font color="#5ff5ff">[Все эффекты указаны в описании.]</font>
+set GD_Shields.Titles.Title_Absorption04_AbsorptionShieldLegendaryNormal:AttributePresentationDefinition_0 Description Ого, я РЕАЛЬНО могу заниматься этим целый день. <font color="#5ff5ff">[Все эффекты указаны в описании.]</font>
+set GD_Shields.Titles.Title_Impact05_Legendary:AttributePresentationDefinition_1 Description Порхай как бабочка... <font color="#5ff5ff">[Все эффекты указаны в описании.]</font>
+set GD_Shields.Titles.Title_Standard05_Legendary:AttributePresentationDefinition_1 Description ...до самой могилы. <font color="#5ff5ff">[Выброшенный при перезарядке щит взрывается мощной новой.]</font>
+set GD_Shields.Titles.Title_Absorption04_AbsorptionShieldLegendaryShock:AttributePresentationDefinition_0 Description Здесь скрыто больше, чем кажется глазу. <font color="#5ff5ff">[Шоковый урон полностью перезаряжает щит.]</font>
+set GD_Shields.Titles.Title_Booster04_BoosterShieldLegendary:AttributePresentationDefinition_0 Description Обычная обстановка... <font color="#5ff5ff">[Усилители-фугасы порождают 3 залпа шоковых гранат, могут ранить владельца.]</font>
+set GD_Aster_Shields.Titles.Title_Antagonist:AttributePresentationDefinition_1 Description На чужой роток не накинешь платок. <font color="#5ff5ff">[Все эффекты указаны в описании.]</font>
+set GD_Iris_SeraphItems.BigBoomBlaster.Iris_Seraph_Shield_Booster:AttributePresentationDefinition_0 Description Для всех твоих нужд по взрывному бабаханью! <font color="#5ff5ff">[Усилители при подборе также восстанавливают 1 гранату и 1 ракету.]</font>
+set GD_Aster_Shields.Titles.Title_Blockade:AttributePresentationDefinition_1 Description Я живу или умираю? <font color="#5ff5ff">[Все эффекты указаны в описании.]</font>
+set GD_Orchid_RaidWeapons.Shield.Anshin.Orchid_Seraph_Anshin_Shield_Title:AttributePresentationDefinition_0 Description Сила через невзгоды. <font color="#5ff5ff">[Все эффекты указаны в описании.]</font>
+set GD_Iris_SeraphItems.Hoplite.Iris_Seraph_Shield_Juggernaut:AttributePresentationDefinition_0 Description Поодиночке — лишь солдаты, вместе — несокрушимая фаланга. <font color="#5ff5ff">[Все эффекты указаны в описании.]</font>
+set GD_Iris_SeraphItems.Pun-chee.Iris_Seraph_Shield_Pun-chee_Title:AttributePresentationDefinition_0 Description Помахаться захотел, говнюк? <font color="#5ff5ff">[Все эффекты указаны в описании.]</font>
+set GD_Iris_SeraphItems.Sponge.Iris_Seraph_Shield_Sponge_Title:AttributePresentationDefinition_0 Description Отличная впитываемость! <font color="#5ff5ff">[Все эффекты указаны в описании.]</font>
+set GD_Shields.Titles.Title_Absorption02_1340:AttributePresentationDefinition_0 Description Не можешь победить — примкни к ним. <font color="#5ff5ff">[Уникальный голосовой модуль.]</font>
+set GD_Shields.Accessory.Title_Absorption03_Aequitas:AttributePresentationDefinition_0 Description Лучшее познаётся в сравнении. <font color="#5ff5ff">[Все эффекты указаны в описании.]</font>
+set GD_Orchid_Shields.Accessory.Accessory_Blade:AttributePresentationDefinition_6 Description Проклятие стихий! <font color="#5ff5ff">[Владелец получает повышенный урон от любых стихийных источников.]</font>
+set GD_Shields.Titles.Title_ExplosiveNova02_DeadlyBloom:AttributePresentationDefinition_1 Description Что значит... теоретически? <font color="#5ff5ff">[Все эффекты указаны в описании.]</font>
+set GD_Shields.Titles.Title_Roid03_LoveThumper:AttributePresentationDefinition_1 Description Если любить тебя преступление, то я не хочу быть законопослушным. <font color="#5ff5ff">[При ударе штыком выдаёт взрывную нову, которая наносит урон по союзникам.]</font>
+set GD_Shields.Titles.Title_Roid05_Order:AttributePresentationDefinition_0 Description Чих-пых! <font color="#5ff5ff">[Все эффекты указаны в описании.]</font>
+set GD_Shields.Titles.Title_Booster04_BoosterShieldPotOGold:AttributePresentationDefinition_0 Description Ерунда, говорю я вам! Чушь собачья! <font color="#5ff5ff">[Все эффекты указаны в описании.]</font>
+set GD_Sage_Shields.Accessory.Accessory_Buckler:AttributePresentationDefinition_5 Description Чтобы завалить Степного Лося, нужно нечто большее. <font color="#5ff5ff">[Все эффекты указаны в описании.]</font>
+set GD_Anemone_Weapons.Name.Title.Title__Unique_Unicornplosion:AttributePresentationDefinition_8 NoConstraintText Великолепный подарок от дорогого друга, не забытого и не покинутого. <font color="#5ff5ff">[Стреляет Жожками, которые взрываются на 3 осколка.]</font>
+set GD_Weap_Shotgun.Name.Title_Hyperion.Title_Legendary_ConferenceCall:AttributePresentationDefinition_8 NoConstraintText Давайте просто звякнем всем и сразу. <font color="#5ff5ff">[Выпускает 5 дробин за выстрел. Каждая дробина порождает дополнительные снаряды при попадании или на достаточной дистанции.]</font>
+set GD_Weap_Shotgun.Name.Title_Tediore.Title_Legendary_Deliverance:AttributePresentationDefinition_8 NoConstraintText У Кики появился дробовик! <font color="#5ff5ff">[При перезарядке выбрасывает летающий самонаводящийся дробовик, который сам стреляет во врагов.]</font>
+set GD_Weap_Shotgun.Name.Title_Torgue.Title_Legendary_Flakker:AttributePresentationDefinition_8 NoConstraintText Накрой этот мир шрапнелью. <font color="#5ff5ff">[Огромный разброс. Заряды разрываются серией взрывов на определённой дистанции.]</font>
+set GD_Anemone_Weapons.Shotgun.Overcompensator.Title_Legendary_Overcompensator:AttributePresentationDefinition_8 NoConstraintText Ты можешь либо серфить, либо воевать! <font color="#5ff5ff">[При стрельбе магазин может случайно пополниться патронами. Уменьшено количество дробин.]</font>
+set GD_Weap_Shotgun.Name.Title_Bandit.Title_Legendary_Shotgun:AttributePresentationDefinition_8 NoConstraintText Легенда жива. <font color="#5ff5ff">[Отсечка по два выстрела, +2 к количеству дробин.]</font>
+set GD_Weap_Shotgun.Name.Title_Jakobs.Title_Legendary_Striker:AttributePresentationDefinition_8 NoConstraintText Фандир? Тринадцать. <font color="#5ff5ff">[+50% к базовому критическому урону и +15% к общему множителю крита.]</font>
+set GD_Weap_Shotgun.Name.Title.Title__Unique_HeartBreaker:AttributePresentationDefinition_8 NoConstraintText Я не хочу устраивать пожар на всей планете... <font color="#5ff5ff">[Всегда огненный. Повышены число дробин, скорострельность и критический урон на 50%. 2% вампиризма.]</font>
+set GD_Iris_Weapons.Name.Title.Title_Unique_SlowHand:AttributePresentationDefinition_8 NoConstraintText Не торопись, сладенький... <font color="#5ff5ff">[3.5% вампиризма. Нет критического урона.]</font>
+set GD_Gladiolus_Weapons.Name.Title.Title_Pearlescent_Butcher:AttributePresentationDefinition_8 NoConstraintText Свежее мясо! <font color="#5ff5ff">[При стрельбе магазин может случайно пополниться патронами. Скорострельность растёт, пока зажат курок.]</font>
+set GD_Lobelia_Weapons.Name.Title.Title_Pearlescent_Carnage:AttributePresentationDefinition_8 NoConstraintText Хм. Он стреляет ракетами. <font color="#5ff5ff">[Огромный базовый урон. Одна дробина вместо дроби. Увеличен радиус взрыва.]</font>
+set GD_Sage_RaidWeapons.Name.Title.Sage_Seraph_Interfacer_Title:AttributePresentationDefinition_8 NoConstraintText Потому что он входит тебе прямо в интерфейс. Понимаешь? ПРЯМО В МОРДУ! <font color="#5ff5ff">[Стреляет медленными снарядами, которые на лету порождают ещё 2 дробины по бокам.]</font>
+set GD_Aster_RaidWeapons.Shotguns.Aster_Seraph_Omen_Title:AttributePresentationDefinition_8 NoConstraintText Мне нужно, чтобы ты отошёл назад. <font color="#5ff5ff">[Уникальный рисунок разлёта пуль сужается и расширяется в процессе полёта.]</font>
+set GD_Orchid_RaidWeapons.Shotgun.Spitter.Orchid_Seraph_Spitter_Title:AttributePresentationDefinition_8 NoConstraintText Фу-у-у, гадость. <font color="#5ff5ff">[Всегда кислотный. Снаряды летят по дуге. При перезарядке после взрыва оставляет 2 мелкие гранаты.]</font>
+set GD_Weap_Shotgun.Name.Title.Title__Unique_Blockhead:AttributePresentationDefinition_8 NoConstraintText Также попробуйте Minecraft! <font color="#5ff5ff">[Стреляет блоками 3х3, которые многократно рикошетят. +100% к сплеш-урону.]</font>
+set GD_Weap_Shotgun.Name.Title.Title__Unique_Dog:AttributePresentationDefinition_8 NoConstraintText Потому что одного ствола мало, а двух — недостаточно. <font color="#5ff5ff">[Увеличены урон, скорострельность и размер магазина.]</font>
+set GD_Sage_Weapons.Name.Title.Title_Unique_Hydra:AttributePresentationDefinition_8 NoConstraintText Пять глав Смерти! <font color="#5ff5ff">[Дробины летят пятью отдельными группами в одну горизонтальную линию.]</font>
+set GD_Orchid_BossWeapons.Name.Title.Title__Unique_JollyRoger:AttributePresentationDefinition_8 NoConstraintText Йо-хо-хо, и бутылка рома! <font color="#5ff5ff">[Фиксированный рисунок разлёта пуль в виде черепа со скрещёнными костями.]</font>
+set GD_Weap_Shotgun.Name.Title.Title__Unique_Landscaper:AttributePresentationDefinition_8 NoConstraintText А ну, пошли вон с моего газона! <font color="#5ff5ff">[Выпускает четыре мелких снаряда-гранаты, которые липнут к поверхностям и взрываются через несколько секунд либо при контакте с врагом.]</font>
+set GD_Weap_Shotgun.Name.Title.Title__Unique_Octo:AttributePresentationDefinition_8 NoConstraintText Окто означает девять. <font color="#5ff5ff">[Выпускает 10 дробин сеткой 3х3 с отсутствующей точкой слева в центре. Летят медленно по синусоиде.]</font>
+set GD_Orchid_BossWeapons.Name.Title.Title__Unique_OrphanMaker:AttributePresentationDefinition_2 NoConstraintText Плодит сирот. Регулярно. <font color="#5ff5ff">[Повышенный урон, снижено число дробин в выстреле, наносит урон самому игроку при стрельбе.]</font>
+set GD_Weap_Shotgun.Name.Title.Title__Unique_RokSalt:AttributePresentationDefinition_8 NoConstraintText Отставить отступление. Лучше перезарядись! <font color="#5ff5ff">[Повышены скорость перезарядки, точность, урон и скорострельность.]</font>
+set GD_Aster_Weapons.Name.Title.Title__Unique_Swordsplosion:AttributePresentationDefinition_8 NoConstraintText Потому что мистер Торрг так сказал! <font color="#5ff5ff">[Выпущенный меч взрывается при попадании, порождая ещё 3 меча, которые тоже взрываются.]</font>
+set GD_Weap_Shotgun.Name.Title.Title__Unique_Shotgun1340:AttributePresentationDefinition_8 NoConstraintText Мне нравится быть пушкой. <font color="#5ff5ff">[Обладает голосовым модулем грузчика №1340.]</font>
+set GD_Weap_Shotgun.Name.Title.Title__Unique_Teeth:AttributePresentationDefinition_8 NoConstraintText От зубов его они бежали в позоре... <font color="#5ff5ff">[Всегда огненный. Выпускает два горизонтальных ряда по 6 зарядов в форме челюсти.]</font>
+set GD_Weap_Shotgun.Name.Title.Title__Unique_TidalWave:AttributePresentationDefinition_8 NoConstraintText Смывайся от волны, чувак! <font color="#5ff5ff">[Выпускает 13 медленных дробин горизонтальной волной, которая один раз рикошетит от поверхностей.]</font>
+set GD_Weap_Shotgun.Name.Title.Title__Unique_Triquetra:AttributePresentationDefinition_8 NoConstraintText Бог троицу любит, а эта пушка — убивает. <font color="#5ff5ff">[Увеличены урон и количество дробин. Дробины летят в форме трикветра.]</font>
+set GD_Sage_Weapons.Name.Title.Title_Unique_Twister:AttributePresentationDefinition_8 NoConstraintText Задаёт всем жару на ходу. <font color="#5ff5ff">[Только шоковый урон. Выпускает рой дробин, который закручивается в мощное торнадо.]</font>
+set GD_Anemone_Weapons.Name.Title.Title_Pearlescent_Chaude_Mama:AttributePresentationDefinition_8 NoConstraintText Снайпер — профессия одинокая. <font color="#5ff5ff">[Всегда огненная. Скорострельность продольно-скользящего затвора. Фиксированный штык.]</font>
+set GD_Anemone_Weap_SniperRifles.Name.Title.Title__Unique_Morde_Lt:AttributePresentationDefinition_8 NoConstraintText Настоящий друг пробьёт любую преграду. <font color="#5ff5ff">[Урон полностью игнорирует щиты врагов. Имеет практически фиксированные детали.]</font>
+set GD_Weap_SniperRifles.Name.Title_Hyperion.Title_Legendary_Invader:AttributePresentationDefinition_8 NoConstraintText Палач явился. <font color="#5ff5ff">[Выдаёт отсечку по 5 выстрелов при прицеливании.]</font>
+set GD_Weap_SniperRifles.Name.Title_Vladof.Title_Legendary_Lyudmila:AttributePresentationDefinition_8 NoConstraintText Убийца мужчин. <font color="#5ff5ff">[Выпускает один снаряд, который через некоторое время делится на три по горизонтали с уроном 75% от карточки. Имеет +125% к базовому криту.]</font>
+set GD_Weap_SniperRifles.Name.Title_Dahl.Title_Legendary_Pitchfork:AttributePresentationDefinition_8 NoConstraintText Попал в струю! <font color="#5ff5ff">[Выпускает 5 пуль в форме буквы V. Жрёт 2 патрона за выстрел.]</font>
+set GD_Weap_SniperRifles.Name.Title_Jakobs.Title_Legendary_Skullmasher:AttributePresentationDefinition_8 NoConstraintText От этого голова пухнет. <font color="#5ff5ff">[Выпускает 5 дробин по цене 1 патрона.]</font>
+set GD_Weap_SniperRifles.Name.Title_Maliwan.Title_Legendary_Volcano:AttributePresentationDefinition_8 NoConstraintText Пеле покорно просит принести жертву, если это не слишком вас затруднит. <font color="#5ff5ff">[+80% к стихийному сплеш-урону.]</font>
+set GD_Weap_SniperRifles.Name.Title.Title__Unique_Chere-amie:AttributePresentationDefinition_8 NoConstraintText Очень рад знакомству. Где здесь библиотека? <font color="#5ff5ff">[Трансфузия при попадании и 2% вампиризма.]</font>
+set GD_Lobelia_Weapons.Name.Title.Title_Pearlescent_Godfinger:AttributePresentationDefinition_8 NoConstraintText Настоящий Божий Перст. <font color="#5ff5ff">[Порождает новые снаряды в полёте: чем дальше летит пуля, тем выше урон, вплоть до 14-кратного.]</font>
+set GD_Gladiolus_Weapons.Name.Title.Title_Pearlescent_Storm:AttributePresentationDefinition_8 NoConstraintText Кап-кап, кажется, дождь собирается. <font color="#5ff5ff">[Всегда шоковый. При попадании создаёт электрические сферы, бьющие током ближайших врагов.]</font>
+set GD_Sage_RaidWeapons.Name.Title.Sage_Seraph_HawkEye_Title:AttributePresentationDefinition_8 NoConstraintText Глаз зорок. Палец — молния. Прицел — смерть. <font color="#5ff5ff">[Экстремально высокий критический урон. Высокие зум, скорострельность, скорость перезарядки и магазин.]</font>
+set GD_Orchid_RaidWeapons.sniper.Patriot.Orchid_Seraph_Patriot_Title:AttributePresentationDefinition_8 NoConstraintText Наш голос не заглушить! <font color="#5ff5ff">[Стреляет медленными снарядами с огромным разлётом пуль.]</font>
+set GD_Weap_SniperRifles.Name.Title_Jakobs.Title_Jakobs_Buffalo:AttributePresentationDefinition_8 NoConstraintText Шёл хохол, козу вёл. Щи щи щи. <font color="#5ff5ff">[<br/> Не может появиться с оптическим прицелом.]</font>
+set GD_Iris_Weapons.Name.Title.Title_Unique_Cobra:AttributePresentationDefinition_8 NoConstraintText Когда я узнал про эту штуку, я такой: ''ПРАВДА?! Ну всё, я возвращаю эту пушку НАЗАД!'' <font color="#5ff5ff">[Разрывной сплеш-урон.]</font>
+set GD_Sage_Weapons.Name.Title.Title_Unique_ElephantGun:AttributePresentationDefinition_8 NoConstraintText Куча народу его терпеть не может. <font color="#5ff5ff">[Повышены урон и скорострельность. Снижены точность, перезарядка и магазин. Всегда без оптического прицела.]</font>
+set GD_Weap_SniperRifles.Name.Title.Title__Unique_FremingtonsEdge:AttributePresentationDefinition_8 NoConstraintText Я отсюда свой дом вижу. <font color="#5ff5ff">[Колоссальный зум, повышенные урон и точность. Бонус к критическому урону при прицеливании.]</font>
+set GD_Weap_SniperRifles.Name.Title.Title__Unique_Longbow:AttributePresentationDefinition_8 NoConstraintText Вещь — не то, чем кажется! <font color="#5ff5ff">[Стреляет медленными стрелами. Всегда зажигательный, строго без прицела, +150% к критическому урону.]</font>
+set GD_Weap_SniperRifles.Name.Title.Title__Unique_Morningstar:AttributePresentationDefinition_8 NoConstraintText Роза пахнет розой... <font color="#5ff5ff">[Каждый крит даёт короткий бонус +20% к критическому урону. Комментирует все ваши действия.]</font>
+set GD_Orchid_BossWeapons.Name.Title.Title__Unique_Pimpernel:AttributePresentationDefinition_8 NoConstraintText Разрази меня гром! <font color="#5ff5ff">[Снаряд разделяется на 5 частей при попадании в поверхность.]</font>
+set GD_Weap_SniperRifles.Name.Title.Title__Unique_Sloth:AttributePresentationDefinition_8 NoConstraintText Да уж, синька она такая... <font color="#5ff5ff">[Повышенный урон и сниженная скорость полёта пули.]</font>
+set GD_Weap_SniperRifles.Name.Title.Title__Unique_Trespasser:AttributePresentationDefinition_8 NoConstraintText Я редко подыхаю. <font color="#5ff5ff">[Урон полностью игнорирует щиты врагов.]</font>
+
