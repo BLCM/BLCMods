@@ -6,7 +6,112 @@ This mod serves to rebalance the game in many ways so it feels fundamentally fam
 
 Difficulty-wise, I would consider it slightly harder than vanilla TPS at base, but you have more potent options for builds such as pure Melee and Status Effects, so previously unviable or niche builds perform far better, even if generic gun builds do a tiny bit worse against the new scaling.
 
-I'll, uh, add more details here and on other platforms once I figure out how to upload the mod in the first place. Stay tuned! 
+Patch notes will be listed below, higher is more recent. 
+_______________________________________________________________________________________________________________
+
+**8/29 Patch: The One About Vendors, Two Very Special Rocket Launchers, and Torks **
+
+**Characters **
+
+Wilhelm
+
+Increased Wolf Damage scaling from 2.25 to 2.4 for both base bolts and Venom Bolts.
+
+Jack
+
+Increased Digi Jack base health drain from .075 to .0833 per second (13.33 to 12 seconds per clone).
+
+Increased Optimism damage scalar from 1.5 to 3.0.
+
+Increased Potential damage scalar from 1.75 to 3.25.
+
+Added correct decimal places to the Incentives skill.
+
+FR4G-TP
+
+Fixed an issue where Mag-nificence was reducing Grenade Damage per ammo rather than increasing it.
+
+**General Item Presentations **
+
+Fixed font size for Jakobs Gatling Gun and Dahl Double Tap barrel texts.
+
+**Vending Machines / Economy **
+
+Increased Cash pickup scalar from 1.75 to 2.0
+
+Reduced non-Item of the Day Very Rare item weighing from .5 to .33 for the Gun Vendor.
+
+Normalized Very Rare/Legendary odds for all weapon types.
+^Purple Lasers were less common as IOTD, while Purple Launchers were far more common as non-IOTD.
+
+Removed Uncommon and Rare items from spawning as the Item of the Day in Gun and Health Vendors.
+
+Improved Very Rare Class Mod Item of the Day weighing scalar from .5 to 1.5.
+
+Improved Legendary Class Mod Item of the Day weighing scalar from .5 to 1 (same as vanilla).
+
+**Unique Gear **
+
+Reinforcement and Thingy had their functionality completely replaced.
+
+Reinforcement is now the Deliverer, creating homing rockets on impact.
+
+Thingy is now the Destroy-G-BIV, releasing multi-Element flak after a set distance.
+
+The Destroy-G-BIV replaces Increment Weather in the Sentinel loot pool.
+
+Reduced Legionaire damage scalar from 1.75 to 1.66, further reduced by 10% while Aiming Down Sights.
+
+First Gift of Mercenary Day ammo consumed increased from 10 to 50.
+
+First Gift of Mercenary Day Fire Rate scalar changed from -250% to -350%.
+
+First Gift of Mercenary Day holster speed scalar improved, from -550% to -750%.
+
+It's still basically an infinite ammo printer, guys.
+
+Rail Liner laser now fires Hyperion Railgun beams and Mining Laser fires Dahl Blaster bolts.
+^Both items' base stats are unchanged otherwise.
+
+M0RQ had its non-functional Anshin Elemental Resistance removed.
+
+M0RQ had its "capacity" altered to prevent issues with Jack's Winning and Wilhelm's Divert Power skills.
+
+M0RQ's base Health bonus was increased from 80% to 100% 
+
+M0RQ's universal Damage Resistance was increased from 20% to 35%.
+
+Decreased Paradigm Shift Shield Capacity grade bonus from 35 to 33.
+
+Fixed an issue where Slammer would not properly spawn with the Very Rare Dahl Shield material.
+
+Bonus Package damage scalar reduced from .5 to .4. 
+
+Restored Kiss of Death's orange text. 
+
+Frontloaded XP gains from Fundamentalist XP Oz Kit, more at base and less per grade.
+^Previously 24.5% at LVL70, now 30%.
+
+** Enemies / Drops **
+
+Tork Dredger Health scalar increased from 6 to 7.5.
+
+Tork Dredger XP reward increased by 33%.
+
+Tork Dredger drop rates increased from 5% to 7.5% in all playthroughs.
+
+Even-More-Disgusting Tork Health scalar increased to 10 in NVHM, 15 in TVHM+.
+
+Even-More-Disgusting Tork's drops should occur more reliably(?)
+
+The M0RQ is now available from Denial Subroutine, instead of Rerouter.
+
+The Rerouter is now included in Eclipse's loot pool.
+
+Eclipse's two additional 15% DLC Legendary drop chances have been increased to 20%.
+
+Iwajira now has 4 20% chances to get a drop, previously was 2 20% chances and 1 10% chance.
+_______________________________________________________________________________________________________________
 
 8/25 Patch: The One About Wilhelm And Manufacturer Tuning
 
