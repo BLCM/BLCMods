@@ -8,7 +8,260 @@ Difficulty-wise, I would consider it slightly harder than vanilla TPS at base, b
 
 Patch notes will be listed below, higher is more recent. 
 _______________________________________________________________________________________________________________
+--9/1 Mega-Patch: The One About Rockets and Clean-Up--
 
+--Characters--
+
+Resolved an issue where Timothy and Wilhelm would crash at the character select screen.
+Maybe?
+
+I hope so!
+
+-Claptrap:-
+
+Fixed an issue where Mag-nificence was decreasing Grenade Damage rather than increasing it.
+
+Reduced passive Melee Damage bonus provided by Hyperion Punch from 8% to 6% per point.
+
+Fixed an issue where Living Near The Edge was decreasing Melee Damage rather than increasing it.
+
+Now, it correctly scales the lower your Health and Shields, up to 50% (previously stated to be 100%)
+
+^ Fun Fact! Not having a shield permanently grants half the maximum bonuses.
+
+The Fried Circuits skill now correctly reflects its secondary bonuses, at 3% Status/Explosive Damage per point
+
+Added 30% Gun Status Effect Chance while non-Explosive Elemental Subroutines are active.
+
+Added 30% Projectile Speed bonus while Explosive Subroutine is active.
+
+-Timothy-
+
+Changed Digi-Jack Nova Shield damage types so they match player-equipped Nova Shield damage types.
+
+Improved Compound Interest stack rate from one every 1.5 seconds to one every 1.2 seconds.
+
+-Wilhelm:-
+
+Reduced Melee attack knockback from ,35 to .3.
+
+Removed Grounded and Reroute Skills :(
+
+It's either he has some generic stat boosts or he doesn't work in co-op. The needs of the many...
+
+Venom Bolts activation chance increased from 6% to 8% per point.
+
+Divert Power Shield Regeneration per second increased from 5% to 7.5% per point.
+
+Divert Power's text order is now uglier to prevent crashes, SMH my head.
+
+First To Fight timed Status Effect Chance increased from 50% to 66%.
+
+Fusion Reactor Shield Recharge Delay improved, from 8% to 9% per point.
+
+Vengeance Cannon:
+
+Base Spread reduced from 2 to 1.
+
+Fire Rate increased from 1.43 to 1.6.
+
+Status Effect Damage increased from 30% of base damage per tick to 40%.
+
+Reduced Fortify base Gun Damage from 4% to 3% per point.
+
+Clarified that Overcharge does not regenerate Rocket Launcher ammo.
+
+--Vending Machines / Economy:--
+
+Reduced Legendary Gun Item of the Day chance from roughly 5% to 1.5%.
+
+Increased Legendary Class Mod Item of the Day chance from 1.5% to 2.0%.
+
+Reduced Badass loot pool's chance to drop Moonstone clusters from 25% to 20%.
+
+Increased Badass loot pool's chance to drop single Moonstones from 50% to 75%.
+
+--General Weapon Balance:--
+
+Rocket Launcher damage reduced by approximately 30% across the board.
+
+Rocket Launcher starting ammo increased from 9 to 12.
+
+Vladof Rocket Launchers:
+
+Base Reload Speed improved, from 4.15 to 4.0.
+
+Base Magazine Size increased from 5 to 6.
+
+Burst delay reduced from .5 seconds to .375 seconds.
+
+Tediore SMG base Reload Speed slowed, from 1.0 to 1.35.
+
+Tediore SMG base Magazine Size increased from 24 to 25.
+
+--General Gear Balance:--
+
+Explosive Spike Shields:
+
+Base Damage scalar increased from 7.5 to 9.0.
+
+Explosive Nova Shields:
+
+Base Damage scalar increased from 22.5 to 24.5.
+
+Base Radius increased from 800 to 850, and Radius per grade increased from 28 to 30.
+
+--Unique Gear--
+
+Rocket Launchers:
+
+Deliverer:
+
+Base explosion radius reduced from 400 to 375 units.
+
+Damage penalty increased from -50% to -66%
+
+Magazine Size reduced by 1.
+
+Additional explosives' damage scale reduced from 1.5 to 1.25.
+
+Additional explosives' travel speed increased from 1250 to 1500.
+
+Destroy-G-BIV:
+
+Damage penalty reduced from -250% to -25%.
+
+Spread penalty reduced from 6.5 to 2.5.
+
+Damage per flak explosion reduced from 50% of card damage to 5%.
+
+Locked several parts to ensure effect will work smoothly (not counting skills).
+
+Hailfire:
+
+Reduced maximum Continuous Fire Bonus from 100% to 75%.
+
+Increased damage bonus per shot from 10% to 15%.
+
+Increased Magazine Size bonus from 66% to 85%.
+
+Increment Weather:
+
+Damage penalty reduced from -450% to -400%.
+
+Sniper Rifles:
+
+Arbitrator:
+
+Reduced damage penalty from -25% to -20%.
+
+The Machine:
+
+Reduced damage bonus from 25% to 15%.
+
+Reduced Fire Rate grade bonus from 5 to 3.
+
+Nailer:
+
+Increased Melee splash damage from 20% to 25% of body shot damage.
+
+SMGs:
+
+Removed mysterious Fire Search Reload bonus.
+
+Reignstorm:
+
+Reduced Fire Rate Grade bonus from 18 to 15.
+
+Changed projectile effect timer from 10 times over 1 second to 9 times over 1 second.
+
+-Assault Rifles:-
+
+Perpetuation:
+
+
+Reduced damage bonus from 300% to 275%.
+Fire Rate penalty increased from 50% to 60%.
+
+Reduced Magazine Size by 5.
+
+Spawned rocket radius reduced from 275 to 170 units.
+
+-Lasers:-
+
+Min-Min Lighter:
+
+Increased damage penalty from 85% to 100%.
+
+Slowed Reload by 40%.
+
+Shields:
+
+Holdout:
+
+Increased FFYL Duration bonus from 50% to 75%.
+
+Added 750% Second Wind Health increase.
+
+Increased Capacity grade bonus from 10 to 11.
+
+Asteroid Belt:
+
+Increased base Asteroid spawn chance from 35% to 40%.
+
+Increased base Asteroid damage scalar from 13.0 to 14.0.
+
+--Enemies / Drops:--
+
+Empyrean Sentinel / Invincible Empyrean Sentinel:
+
+Dedicated drop volume reduced by about 25%.
+
+Iwajira:
+
+Increased health scalar from 115 to 125.
+
+Reduced XP reward by 33%.
+
+Now guarantees at least one from from its pool per kill.
+
+RedBelly (PT2+)
+
+Reduced additional health scalar from 21 to 15.
+
+Increased XP by 20%.
+
+Colonel Zarpedon (mech)
+
+Increased Health scalar from 35 to 40.
+
+Increased Shield scalar from 25 to 30.
+
+--General XP--
+
+"Tough" enemy XP scalar increased from 1.25 to 1.33.
+
+"Tough-High" enemy XP scalar increased from 1.5 to 1.66.
+
+"Badass" enemy XP scalar increased from 3.0 to 3.33.
+
+"Smallest" mission XP reward increased from 2.5% of XP bar to 5%.
+
+"Small" mission XP reward increased from 7.5% of XP bar to 10%.
+
+--Missions:--
+
+The Bestest Story Ever Told:
+
+Reduced XP by 33%.
+
+Added Impulse Grenade as a potential reward.
+
+To Arms:
+
+Change to white items needed reverted, preventing a softlock.
+
+_______________________________________________________________________________________________________________
 **8/29 Patch: The One About Vendors, Two Very Special Rocket Launchers, and Torks **
 
 **Characters **
@@ -26,10 +279,6 @@ Increased Optimism damage scalar from 1.5 to 3.0.
 Increased Potential damage scalar from 1.75 to 3.25.
 
 Added correct decimal places to the Incentives skill.
-
-FR4G-TP
-
-Fixed an issue where Mag-nificence was reducing Grenade Damage per ammo rather than increasing it.
 
 **General Item Presentations **
 
