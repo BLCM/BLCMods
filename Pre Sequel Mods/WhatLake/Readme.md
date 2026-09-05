@@ -8,6 +8,92 @@ Difficulty-wise, I would consider it slightly harder than vanilla TPS at base, b
 
 Patch notes will be listed below, higher is more recent. 
 _______________________________________________________________________________________________________________
+--9/4 Patch: The One About The Jump Patent--
+
+--Characters--
+
+Nisha
+
+Reduced font size on No Pain, No Gain skill to prevent the text from partially displaying.
+
+Properly added previously nonfunctional FFYL Duration bonus to No Pain, No Gain
+
+Wilhelm: 
+
+Readded the Reroute skill, crash free! Well, crash-free when I tested it. Fingers crossed...
+
+--General Gear-- 
+
+Added text clarifying that Bomber Oz Kits do not work with special Grenade skills.
+
+However, the very talented Zazk0u27 has released a CE mod that fixes this issue!
+
+--Unique Gear--
+
+Assault Rifles:
+
+Ogre:
+
+Increased damage penalty from 30% to 40%.
+
+Reduced Fire Rate bonus from 75% to 50%.
+
+Increased Magazine Size penalty from 50% to 60%.
+
+Shotguns:
+
+Boomacorn: 
+
+Reduced damage bonus from 250% to 200%.
+
+Increased ammo cost from 2 to 4, changing the barrel to reflect this.
+
+Increased Projectile Speed bonus from 25% to 50%.
+
+Rocket Launchers:
+
+Destroy-G-BIV:
+
+Removed Rocket Speed accessory from the accessory part data.
+
+Lasers: 
+
+Ol' Rosie:
+
+Changed description to more clearly reflect changes made in the 9/1 patch.
+
+Oz Kits: 
+
+Systems Purge:
+
+Systems Purge shockwave damage scalar reduced from 13.5 to 10.5
+
+Systems Purge Oz on kill stat increased by 5.
+
+--Scaling / XP--
+
+Base enemy health increased from 150.5 to 155.5.
+
+UVHM enemy health multiplier reduced by 2.5% at all levels.
+
+Increased UVHM quest XP multiplier from 1.25x to 1.5x
+
+Increased UVHM enemy XP multiplier from 1.0 x to 1.2x
+
+--Enemies / Drops:--
+
+Deadlift now finally drops the Jump Patent Tediore Laser.
+
+EOS has received special tuning based on playthrough:
+
+^ Health and Shield values are the same in UVHM as they were before, but PT1 and PT2 EOS are weaker.
+
+Colonel Zarpedon (powersuit) had her HP scalar increased from 40 to 50, and Shield scalar from 30 to 70.
+
+Reduced Rare weapon chance multiplier from Mutator Arena red chests from 1.0 x to .33x.
+
+Removed Rare Shield, Grenade, and Oz Kits from Mutator Arena red chests.
+_______________________________________________________________________________________________________________
 --9/1 Mega-Patch: The One About Rockets and Clean-Up--
 
 --Characters--
