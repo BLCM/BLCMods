@@ -39,6 +39,7 @@ Increased damage penalty from 30% to 40%.
 Reduced Fire Rate bonus from 75% to 50%.
 
 Increased Magazine Size penalty from 50% to 60%.
+
 Shotguns:
 
 Boomacorn: 
