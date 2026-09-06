@@ -8,6 +8,104 @@ Difficulty-wise, I would consider it slightly harder than vanilla TPS at base, b
 
 Patch notes will be listed below, higher is more recent. 
 _______________________________________________________________________________________________________________
+--9/6 Patch: The One About Pistol and SMG Tuning--
+
+--General Gear-- 
+
+Jakobs Snipers: 
+
+Increased damage scalar from 5.0 to 5.1
+
+Increased base Fire Rate from .7 to .8.
+
+Improved base Reload Speed, from 3.5 to 3.3.
+ 
+--Unique Gear--
+
+-Assault Rifles-
+
+Long-Distance:
+
+Increased Status Effect Damage by 30%.
+
+Reduced Projectile Speed bonus from 100% to 80%.
+
+Succubus:
+
+Now correctly deals 25% additional Critical Hit Damage like the card says, was previously 20%.
+
+-Lasers-
+
+Longest Yard
+
+Increased damage scalar from 5.0 to 5.5.
+
+Increased Magazine Size from 24 to 30.
+
+-Pistols-
+
+Closing Statement:
+
+Increased damage bonus from 12.5% to 20%.
+
+Improved Reload Speed by 15%.
+
+Globber: Projectiles now bounce up to 10 times, from 3.
+
+Transistor: 
+
+Removed text incorrectly stating Shock Status Effects were guaranteed.
+
+Pebble Pistol:
+
+Damage bonus reduced from 100% to 85%.
+
+Reduced Fire Rate penalty from 50% to 40%.
+
+Reduced base Reload Speed by ,25 seconds.
+
+Increased base Magazine Size by 2.
+
+Vortex Launcher:
+
+Reduced Fire Rate penalty from 75% to 20%.
+
+Increased Reload Speed bonus from 50% to 66%.
+
+Increased Swap Speed bonus from 35% to 50%.
+
+-SMGs-
+
+The Cog:
+
+Reduced base Magazine Size by 15. 
+
+Increased maximum Continuous Fire Bonus from 100% to 150%.
+
+Reduced damage bonus gained per shot from 4% to 2%.
+
+Full Cleanse:
+
+Increased Status Effect Damage bonus from 20% to 40%.
+
+Hailstone:
+
+Increased Grenade Damage radius from 125 to 150 units.
+
+Increased Status Effect Chance bonus from 25% to 37.5%.
+
+--Rocket Launchers--
+
+Removed incorrect text claiming the Nukem Forever could spawn as Elemental.
+
+--Enemies / Drops -- 
+
+Boomer now has two 25% chances to drop from his loot pool, up from one 20% chance.
+
+Boomer now properly drops the Baby Boomer.
+
+Teh Earworm now properly drops all three of its drops, previously would not drop any.
+_______________________________________________________________________________________________________________
 --9/4 Patch: The One About The Jump Patent--
 
 --Characters--
