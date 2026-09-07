@@ -8,6 +8,88 @@ Difficulty-wise, I would consider it slightly harder than vanilla TPS at base, b
 
 Patch notes will be listed below, higher is more recent. 
 _______________________________________________________________________________________________________________
+--9/7 Patch: The One About Boomacorn and Athena
+
+--Characters--
+
+-Athena-
+
+Increased Bloodlust healing per target from .8% to 1% per point.
+
+Maelstrom Elemental Damage per stack reduced from 5% to 3.75%. 
+
+Smite Status Effect Damage reduced by 33%.
+
+Reduced Zeus' Rage damage by 11%.
+
+Hades' Shackles no longer activates on non-Slam Rocket Damage, but now also activates from Melee Damage.
+
+Hades' Shackles Incendiary Status Effect Damage reduced by 25%.
+
+-Claptrap-
+
+Reduced Mechromagician damage bonus from 300% to 250% for you and allies.
+
+Removed Mechromagician self-applied 25% Fire Rate bonus.
+
+Improved Disco Inferno tick rate from once every .1 seconds to once every .0875 seconds,
+
+Increased Second Wind By Tediore clone damage by 33%.
+
+Increased Second Wind By Tediore clone explosion radius from 750 to 1000.
+
+Best Buds 4 Life FFYL Duration increased from 7% per point to 10% per point.
+
+Best Buds 4 Life FFYL Gun Damage increased from 7% per point to 8% per point.
+
+Reduced Madtrap COM Gun Damage by 3ish% at the high end, and reduced stat variation.
+
+-Wilhelm-
+
+Increased Power Fist damage bonus from 550% to 600%.
+
+Power Fist now correctly applies a guaranteed Corrosive Status Effect on hit.
+
+--General Gear Balance:--
+
+Maliwan Laser base Magazine Size increased from 18 to 21.
+
+--Unique Gear Balance--
+
+-Pistols-
+
+Increased Pebble Pistol Reload damage by 12.8%
+
+-Shotguns-
+
+Boomacorn
+
+Reduced Splash damage from 100% (or so it said?) to 12.5%.
+
+Splash damage now deals Status Effect Damage, rather than Rocket Damage. 
+
+Splash damage radius increased from 110 to 150.
+
+Increased the damage of Status Effects caused by splash by 33%.
+
+Removed Cryo and Explosive from random element pool.
+
+Increased damage bonus from 200% to 250%.
+
+Increased projectile count by 1.
+
+Increased Projectile Speed bonus from 50% to 100%.
+
+Improved Accuracy by roughly 33%, and now always rolls with a Hyperion scope.
+
+Now grants 20% Status Effect Damage while equipped, which DOES apply to its own splash damage.
+
+^All this should result in a more consistent experience, especially if building into Status Effects.
+
+-Rocket Launchers-
+
+Increased Wickedness damage penalty from 150% to 166%.
+_______________________________________________________________________________________________________________
 --9/6 Patch: The One About Pistol and SMG Tuning--
 
 --General Gear-- 
