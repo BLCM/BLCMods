@@ -9,234 +9,466 @@ Difficulty-wise, I would consider it slightly harder than vanilla TPS at base, b
 Patch notes will be listed below, higher is more recent. 
 _______________________________________________________________________________________________________________
 --9/28 Patch: The One About Jack Balance--
+
 -General Presentations-
+
 Added several icons for Class Mod stats I missed, primarily DLC stats and Ammo Regeneration.
+
 --Characters--
+
 -Jack-
+
 -Hero Of This Story Tree-
+
 Changed Damage Resistance presentation on Supply and Demand to be more accurate.
+
 Increased Supply and Demand's Reload Speed bonus from 4% to 5% per point.
+
 Changed Bolster's 2% Damage Dealt per point to 2.5% Elemental Damage per point.
+
 Increased Take Their Freedom's Max Health from 6% to 7% per point.
+
 Reduced Lean on Me's Elemental Damage bonus from 6% to 5% per point.
+
 Fixed an issue where Lean on Me was not providing Status Effect Damage, only Elemental impact damage.
+
 Increased Lean on Me's Status Effect Chance and Digi Jack Bonus Shot Chance from 7% to 9% per point.
+
 Persistence now activates when Expendable Assets is active, rather than cooling down.
+
 Persistence's Shield Capacity reduced from 12% to 7% per point.
+
 Persistence's Missing Health Regeneration reduced from 2% to 1.5% per point.
+
 Persistence's Damage Dealt reduced from 5% to 3% per point, but is doubled for Status Effect Damage.
+
 Badass Digi Jack missile barrage damage scalar increased from 1.5 to 1.66.
+
 -The Greater Good Tree-
+
 Added .66% Accuracy per point per stack to Commitment.
+
 Accountability and Commitment skills have been swapped in the tree.
+
 Accountability Max Stacks increased from 10 to 15.
+
 Accountability Critical Hit Damage per stack reduced from 5% to 4%.
+
 Accountability Magazine Size per stack reduced from 5% to 3%.
+
 Believe Fire Rate bonus increased from 6% to 7% per point.
+
 Commitment now provides 7.5% Gun Damage and Status Effect Damage instead of Fire Rate / Reload Speed.
 ^ Grenade Damage remains unchanged.
+
 Optimism damage scalar increased from 2.25 to 2.5.
+
 Winning Shield Restore reduced from 3% to 2.5% per point.
+
 Winning Shield Capacity bonus reduced from 7% to 6% per point.
+
 Removed unlisted .1 second delay between Delegation activations.
+
 -Free Enterprise Tree-
+
 Added 1% Magazine Size bonus per stack per point to Company Man.
+
 Swapped Jack's Cache and Volatile Income skills on the tree.
+
 Volatile Income Damage Dealt per stack reduced from .06 to .04.
+
 ^Previously, the Damage Dealt incorrectly displayed as .08.
+
 Fixed Jack's Cache incorrectly claiming 4 stacks were needed for the free grenade instead of 3.
+
 Reduced Just Compensation maximum Magazine Size bonus from 12% to 10% per point.
+
 Added up to 15% Swap Speed bonus per point to Just Compensation.
+
 -Nisha-
+
 Fixed text issue on the Quick Shot skill
+
 --Class Mods--
+
 -Jack-
+
 Improved Paragon Shield Capacity base value from .275 to .29.
+
 Improved Projection Shield Capacity base value from .2 to .285.
+
 Improved Role Model Max Health base value from .2785 to .3.
+
 Improved VIP Max Health base value from .3 to .33.
+
 Reduced Celestial Everyman Shield Capacity base value from 32 to 24.5.
+
 --Unique Gear--
+
 Shotguns:
+
 Increased Omen Projectile Count by 1, reduced damage bonus from 30% to 20%.
+
 ^ at 9 projectiles, the visual pattern was very OCD-inducing. Not an issue anymore though!
+
 Party Line Status Effect Damage increased by 35% to be in line with normal Tediore Shotguns.
+
 -SMGs-
+
 Ragebaiter Fire Rate increased from 8.3 to roughly 9.2 to be in line with normal Tediore SMGs.
+
 Ragebaiter Status Effect Damage increased by 32.5% to be in line with normal Tediore SMGs.
+
 -Snipers:-
+
 Nailer explosion Melee Damage reduced from 25% of body shot damage to 5% of body shot damage.
+
 Nailer explosion radius increased from 20 units to 75 units.
+
 Fixed an issue where the Most Wanted did not correctly increase Damage Taken.
+
 Reduced Most Wanted Fire Rate by 33%.
+
 -Shields-
-Reduced Cracked Mirror Deflection Resist scale from 1.75 to 1.0 (from 75ish to 44ish at LVL70).
+
+Reduced Cracked Mirror Deflection Resist scale from 1.75 to 
+
+1.0 (from 75ish to 44ish at LVL70).
+
 --Vehicles--
+
 -Moon Buggy-
+
 Increased Missile Barrage damage scale from 4.5 to 9.
+
 -Stingray-
+
 Increased Laser damage by 10% (based on last patch's value).
+
 Increased Flak damage by 66% (based on last patch's value).
 _______________________________________________________________________________________________________________
 --9/25: The Encore Patch--
+
 --General Presentations--
+
+
 Class Mod (COM) stats now all have matching icons, as Oz Kits do.
+
 Fixed decimal place errors and font colors for several DLC COM presentations.
+
 Normalized bullet reflection terms, now Ricochet Chance for outgoing, and Deflection Chance for incoming.
+
 --Characters--
+
 -Jack-
+
 Melee Speed scalar increased from 1.4166 to 1.5.
+
 Melee Damage scalar increased from 2.0 to 2.1.
+
 Promote The Ranks Badass Chance increased from 25% to 33%.
+
 Reduced all effects of the Leisurely Stroll skill from 60% to 50%.
+
 --Class Mods--
+
 All Eridian Vanquisher and Chronicler of Elpis class mods have been given unique names and flavor text.
+
 -Athena-
+
 Gladiatrix now additionally provides Movement Speed.
+
 Reduced Max Health stat variation on Gladiatrix.
+
 Increased base Team Action Skill Cooldown Rate on Protector by 11%.
+
 Celestial Gladiator is now Celestial Heroine, otherwise unchanged.
+
 Eridian Vanquisher is now Celestial Swordswoman, otherwise unchanged.
+
 Chronicler of Elpis is now Celestial Frostmancer, otherwise unchanged.
+
 -Aurelia-
+
 Master now additionally provides Projectile Speed.
+
 Increased base Action Skill Cooldown Rate on Gentry by 11%.
+
 Lady now provides Bullet Damage instead of Gun Damage.
+
 Celestial Baroness is now Celestial Technocrat, and Action Skill Cooldown Rate has been increased by 10%.
+
 Eridian Vanquisher is now Celestial Huntress, otherwise unchanged.
+
 Chronicler of Elpis is now Celestial Ice Witch, otherwise unchanged.
+
 -Claptrap-
+
 Claptrooper Magazine Size bonus increased by 25%.
+
 Factory Second COM now additionally provides Gun Damage.
+
 Factory Second COM Reload Speed bonus reduced by 25%.
+
 Icebox has been renamed Malware, also applying to its respective skill prefixes.
+
 Madtrap no longer provides Gun Damage, instead granting Bullet and Critical Hit Damage.
+
 Tanktrap's Max Health bonus has been increased by 10%.
+
+
 Tanktrap now additionally provides Second Wind Health.
+
 Celestial Fragtrap has been renamed Celestial Masochist and additionally grants FFYL Duration.
+
 Eridian Vanquisher is now Celestial Slugger, otherwise unchanged,
+
 Chronicler of Elpis is now Celestial Icebox, otherwise unchanged.
+
 -Jack-
+
 Antagonist now grants Movement Speed instead of Action Skill Cooldown Rate.
+
 Reduced Hero's Status Effect Damage bonus by 15%.
+
 VIP now grants Action Skill Cooldown Rate instead of Health Regeneration.
+
 Celestial Doppelganger is now Celestial Broker, otherwise unchanged,
+
+
 Eridian Vanquisher is now Celestial Hustler, and it additionally provides Movement Speed.
+
 Chronicler of Elpis is now Celestial Everyman, and it now additionally provides Gun Damage.
+
 -Nisha-
+
 Desperado Action Skill Cooldown Rate bonus increased by 11%.
+
 Illusion now additionally grants Accuracy, and the Snap Shot skill replaces No Pain, No Gain.
+
 Rustler now correctly grants its Accuracy bonus to your offhand Pistols.
+
 Six-Shooter now provides Bullet Damage instead of Gun Damage.
+
 Celestial Lawbringer is now Celestial Rider, and additionally grants Shield Capacity.
+
 Eridian Vanquisher is now Celestial Sadist, otherwise unchanged.
+
 Chronicler of Elpis is now Celestial Duelist. otherwise unchanged.
+
 -Wilhelm-
+
 Fighter Action Skill Cooldown Rate bonus increased by 13.33%.
+
 Fixed an issue where white-rarity Hazard Specialist class mods would use the wrong name.
+
 Hazard Specialist Status Effect Chance bonus reduced by 20%.
+
 Hazard Specialist now additionally provides Status Effect Damage.
+
 Terminator COM now additionally provides Movement Speed.
+
 Celestial Enforcer is now Celestial Overseer, otherwise unchanged.
+
 Eridian Vanquisher is now Celestial Tank, and now provides Shield Recharge Delay instead of Air Control.
+
 Chronicler of Elpis is now Celestial Cryogenist, otherwise unchanged.
+
 --General Gear--
+
 -Guns-
+
+
 All Torgue weapons had their base Status Effect Chance increased by 50% of their original value.
 ^ Because of how the calculation works, the card value may still be higher than in practice.
+
 Pistols:
+
 Scav Pistol damage scalar increased from 1.6 to 1.65.
+
 Scav Pistol base Magazine Sie increased from 40 to 45.
+
 Vladof Pistol base Magazine Size increased from 22 to 25.
+
 Vladof Pistol base Reload reduced from 2.2 to 2.1
+
 SMGs:
+
 Dahl SMG base Fire Rate increased from 7.0 to 7.5.
+
 Dahl SMG base Magazine Size increased from 20 to 22.
+
 Hyperion SMG base Fire Rate increased from 10.0 to 10.5.
+
 Maliwan SMG base Fire Rate increased from 8.0 to 8.5.
+
 Maliwan SMG recoil per shot reduced from 2.2 to 1.5.
+
 Maliwan SMG base Reload reduced from 2.4 to 2.2.
+
 Scav SMG base Fire Rate increased from 9.0 to 9.5.
+
 Scav SMG base Reload reduced from 3.1 to 2.7.
+
 Tediore SMG base Fire Rate increased from 8.7 to 9.2.
+
 Tediore SMG recoil per shot reduced from 1.5 to 1.25.
+
 Snipers:
+
 Jakobs Sniper base Fire Rate increased from .8 to 1.0.
+
 Jakobs Sniper base Reload reduced from 3.3 to 3.15.
+
+
 -Shields-
+
 Booster Shield Chance per stat grade increased from .2% to .33%.
+
 Non-unique Roid Damage base value increased from 33.5% to 37.5% Melee Damage.
+
 Non-unique Turtle Shield Capacity grade increased from 35 to 40.
+
 Non-unique Turtle Shield Health penalty scale increased from 27 to 29.
+
 -Grenades-
+
 Increased Standard Payload damage scale from 18/16 to 20/18 (regular vs Asphyxiator Augment)
+
 Reduced Standard Payload Blast Radius bonus from 25% to 20%.
+
 -Oz Kits-
+
 Capacity + Recharge Fundamentalist Kit Shield Capacity scale increased from .375 to .4.
+
 Capacity + Recharge Fundamentalist Kit Recharge Rate scale increased from .7 to .8.
+
 Reload Speed + Swap Speed Fundamentalist Kit stats are no longer fixed to share the same value.
+
 ^Now, Swap Speed rolls independently of Reload Speed, at approximately 1.35% its original values.
+
 --Unique Gear--
+
 -Guns-
+
 Assault Rifles:
+
 Boss Nova Damage bonus increased from 600% to 633%.
+
 Boss Nova explosion radius increased from 200 units to 300 units.
+
 Code-Switcher hip-fire Accuracy bonus increased from 100% to 125%.
+
 Code-Switcher Reload reduced by .2 seconds.
+
 Ice Scream spin-up bonus increased from .25 to .75.
+
 Lasers:
+
 ZX1 damage scalar increased from 1.2 to 1.33.
+
 Sniper Rifles:
+
 Re-Reloader 5% damage penalty removed.
+
 Re-Reloader Reload Speed bonus increased from 300% to 350%.
+
 Shotguns:
+
 Moonface Projectile Speed bonus increased from 33% to 50%.
+
 Omen Projectile Speed increased from 4400 to 5500.
+
 Wombat damage scalar increased from 1.35 to 1.45.
+
 -Shields-
+
 Action Hero now additionally provides 33% Swap Speed while not depleted.
+
 Asteroid Belt Meteors are now guaranteed regardless of grade.
+
 Asteroid Belt base Meteor damage scalar reduced from 14 to 13.33
+
 Asteroid Belt Meteor radius increased from 500 units to 600 units.
+
 Asteroid Belt Meteor Projectile Speed increased from 2500 to 3500.
+
 Defense Network Spike Projectile Speed increased from 3500 to 10000.
+
 Defense Network Spike base damage scalar increased from 15 to 16.
+
 Frozen Heart Status Effect increased from 33% of Nova Damage to 45% of Nova Damage per tick.
+
 Fixed an issue where the Rerouter's text displayed in the wrong order.
+
 Rerouter base Amp damage scalar increased from 7 to 7.5.
+
 Reduced Rerouter Amp drain from 33% of Max Shields to 30% of Max Shields.
+
 Slammer Boosters are now picked up nearly instantaneously after dropping.
+
 Supernova base Nova damage scalar increased from 22.5 to 25.
+
 Supernova Recharge Rate grade bonus increased from 0 to 15.
+
 Transformer now increases all Shock Damage dealt by 10% while equipped.
+
 -Grenades-
+
 Increased Leech Child Grenade Count by 3.
+
 -Oz Kits-
+
 Ack Ack Flak Damage increased by 100%.
+
 Ack Ack Flak radius increased from 300 units to 350 units.
+
 Ack Ack Flak/stack delay increased from once every .01 seconds to once every .25 seconds.
+
 Ack Ack Stack duration increased from 5 seconds to 7.5 seconds.
+
 Ack Ack Fire Rate and Reload per stack increased by 12.5%.
+
 3DDI3 base Shield Capacity bonus increased from .375 to .4.
+
 --Vehicles--
+
 Yeah, vehicle patch notes. Doesn't get more final than that.
+
 Collision/Stingray slam damage increased by 750%.
+
 -Moon Buggy-
+
 Generally increased speed and improved handling, especially while Boosting.
+
 Buggy Machine Gun damage increased by 33%.
+
 Buggy Laser damage increased by 33%.
+
 Buggy Laser Fire Rate increased from 13.3 to 20.
+
 Buggy Laser damage is now Explosive was previously Incendiary.
+
 Buggy Missile Barrage damage increased by 50%.
+
 Buggy Cryo Missile damage increased by 66%.
+
 -Stingray-
+
 Stingray Laser damage increased by 17%.
+
 Stingray Laser damage is now Explosive, was previously Incendiary.
+
 Stingray Laser Spread improved from 4.0 to 2.0.
+
 Stingray Laser Fire Rate increased from 6.66 to 10.
+
 Stingray Ice Rocket damage increased by 25%.
+
 Stingray Ice Rocket Fire Rate increased from 1.33 to 4.
+
 Stingray Flak damage increased by 250%.
+
 Hey, if you're still here at the end of this, thanks for reading!
 If you've played it at all, I'm insanely thankful for spending the time to try my mod out.
 For real. It's been a pretty fun time making and changing stuff. hopefully it's fun to play.
