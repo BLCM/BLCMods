@@ -8,6 +8,76 @@ Difficulty-wise, I would consider it slightly harder than vanilla TPS at base, b
 
 Patch notes will be listed below, higher is more recent. 
 _______________________________________________________________________________________________________________
+--9/28 Patch: The One About Jack Balance--
+-General Presentations-
+Added several icons for Class Mod stats I missed, primarily DLC stats and Ammo Regeneration.
+--Characters--
+-Jack-
+-Hero Of This Story Tree-
+Changed Damage Resistance presentation on Supply and Demand to be more accurate.
+Increased Supply and Demand's Reload Speed bonus from 4% to 5% per point.
+Changed Bolster's 2% Damage Dealt per point to 2.5% Elemental Damage per point.
+Increased Take Their Freedom's Max Health from 6% to 7% per point.
+Reduced Lean on Me's Elemental Damage bonus from 6% to 5% per point.
+Fixed an issue where Lean on Me was not providing Status Effect Damage, only Elemental impact damage.
+Increased Lean on Me's Status Effect Chance and Digi Jack Bonus Shot Chance from 7% to 9% per point.
+Persistence now activates when Expendable Assets is active, rather than cooling down.
+Persistence's Shield Capacity reduced from 12% to 7% per point.
+Persistence's Missing Health Regeneration reduced from 2% to 1.5% per point.
+Persistence's Damage Dealt reduced from 5% to 3% per point, but is doubled for Status Effect Damage.
+Badass Digi Jack missile barrage damage scalar increased from 1.5 to 1.66.
+-The Greater Good Tree-
+Added .66% Accuracy per point per stack to Commitment.
+Accountability and Commitment skills have been swapped in the tree.
+Accountability Max Stacks increased from 10 to 15.
+Accountability Critical Hit Damage per stack reduced from 5% to 4%.
+Accountability Magazine Size per stack reduced from 5% to 3%.
+Believe Fire Rate bonus increased from 6% to 7% per point.
+Commitment now provides 7.5% Gun Damage and Status Effect Damage instead of Fire Rate / Reload Speed.
+^ Grenade Damage remains unchanged.
+Optimism damage scalar increased from 2.25 to 2.5.
+Winning Shield Restore reduced from 3% to 2.5% per point.
+Winning Shield Capacity bonus reduced from 7% to 6% per point.
+Removed unlisted .1 second delay between Delegation activations.
+-Free Enterprise Tree-
+Added 1% Magazine Size bonus per stack per point to Company Man.
+Swapped Jack's Cache and Volatile Income skills on the tree.
+Volatile Income Damage Dealt per stack reduced from .06 to .04.
+^Previously, the Damage Dealt incorrectly displayed as .08.
+Fixed Jack's Cache incorrectly claiming 4 stacks were needed for the free grenade instead of 3.
+Reduced Just Compensation maximum Magazine Size bonus from 12% to 10% per point.
+Added up to 15% Swap Speed bonus per point to Just Compensation.
+-Nisha-
+Fixed text issue on the Quick Shot skill
+--Class Mods--
+-Jack-
+Improved Paragon Shield Capacity base value from .275 to .29.
+Improved Projection Shield Capacity base value from .2 to .285.
+Improved Role Model Max Health base value from .2785 to .3.
+Improved VIP Max Health base value from .3 to .33.
+Reduced Celestial Everyman Shield Capacity base value from 32 to 24.5.
+--Unique Gear--
+Shotguns:
+Increased Omen Projectile Count by 1, reduced damage bonus from 30% to 20%.
+^ at 9 projectiles, the visual pattern was very OCD-inducing. Not an issue anymore though!
+Party Line Status Effect Damage increased by 35% to be in line with normal Tediore Shotguns.
+-SMGs-
+Ragebaiter Fire Rate increased from 8.3 to roughly 9.2 to be in line with normal Tediore SMGs.
+Ragebaiter Status Effect Damage increased by 32.5% to be in line with normal Tediore SMGs.
+-Snipers:-
+Nailer explosion Melee Damage reduced from 25% of body shot damage to 5% of body shot damage.
+Nailer explosion radius increased from 20 units to 75 units.
+Fixed an issue where the Most Wanted did not correctly increase Damage Taken.
+Reduced Most Wanted Fire Rate by 33%.
+-Shields-
+Reduced Cracked Mirror Deflection Resist scale from 1.75 to 1.0 (from 75ish to 44ish at LVL70).
+--Vehicles--
+-Moon Buggy-
+Increased Missile Barrage damage scale from 4.5 to 9.
+-Stingray-
+Increased Laser damage by 10% (based on last patch's value).
+Increased Flak damage by 66% (based on last patch's value).
+_______________________________________________________________________________________________________________
 --9/25: The Encore Patch--
 --General Presentations--
 Class Mod (COM) stats now all have matching icons, as Oz Kits do.
