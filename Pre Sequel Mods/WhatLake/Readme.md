@@ -8,6 +8,110 @@ Difficulty-wise, I would consider it slightly harder than vanilla TPS at base, b
 
 Patch notes will be listed below, higher is more recent. 
 _______________________________________________________________________________________________________________
+--9/28 Patch: The One About Nisha Balance-- 
+
+--Characters--
+
+-Nisha- 
+
+Showdown duration increased from 6 to 9 seconds,
+
+Showdown cooldown increased from 18 to 21 seconds.
+
+Showdown Gun Damage bonus increased from 30% to 35%.
+
+Showdown Gun Damage now correctly applies to Sniper Rifles and newly applies to Rocket Launchers.
+^This is reflected in the description.
+
+Added 35% Grenade Damage bonus during Showdown.
+
+Law and Order Tree:
+
+Due Process now provides 4% Critical Hit Damage and 5% Accuracy per point at base. 
+Dealing Melee Damage now doubled these bonuses for 6 seconds. 
+
+Discipline Gun Damage bonus increased from 1.5% to 1.66% per Order stack.
+
+Fan The Hammer Tree:
+
+Snap Shot Bullet Damage increased from 1% to 3% per point, and added 3% Grenade Damage per point. 
+
+Ruthless duration extension per kill increased from .12 seconds to .2 seconds per point. 
+
+Saddle Up Movement Speed and Gun Damage increased from 5% to 6% per point.
+
+Saddle Up Melee Damage reduced from 10% to 9% per point. 
+
+Fixed Short Fused erroneously stating the Bonus Element dealt Rocket Damage; it is still Grenade Damage.
+
+Short Fused now additionally provides 30% Grenade Damage.
+
+Short Fused total Bonus Element damage increased from up to 25% to 30% of body shot damage.
+^The Grenade Damage bonus is already factored in: it's not 30% times the 1.3x.
+
+Quick Shot Gun Damage and Fire Rate increased from 6% to 7% per point.
+
+Pickpocket now additionally can activate on Slam Damage, cooldown unchanged.
+
+Jurisdiction Movement Speed increased from 8% to 10% per point.
+
+Jurisdiction now additionally provides 10% Grenade Damage Resistance per point.
+
+Hell's Coming With Me Burst-Fire chance increased from 9% to roughly 9.1% per point.
+
+Hell's Coming With Me now additionally grants 6% Critical Hit Damage per point when active.
+
+High Noon's maximum Gun and Melee Damage increased from 12% to 14% per point
+
+High Noon now additionally provides up to 14% Grenade Damage per point.
+Bullet Hell Tree:
+
+Crack Shot Gun Damage increased from 9% to 10% per point. 
+
+Crack Shot explosion damage scalar increased from 5.5 to 5.75.
+
+Silver Bullet Bullet Damage increased from 4% to 5% per point.
+
+Unchained duration increased from 10 seconds to 12 seconds.
+
+Unchained stack delay reduced from every 1 second to every .75 seconds.
+
+Rocket Damage no longer ignores the stack delay, now stacking naturally once every .75 seconds.
+
+Magnificent Six Bullet Damage increased from 7% to 9% per point. 
+
+Magnificent Six also grants 9% Grenade Damage while active.
+
+Trick Shot Ricochet Chance increased from 7% to 8% per point. 
+
+Trick Shot Ricochet Damage penalty reduced from 33% to 30%.
+
+Faster N' You Fire Rate and Reload Speed increased from 8% to 12% per point.
+
+Tombstone Ricochet Damage bonus increased from 7% to 10% per point.
+
+--General Gun Balance--
+
+Hyperion Shotgun Damage scalar increased from 1.05 to 1.075.
+
+Hyperion Shotgun base Reload reduced from 3.5 to 3 seconds. 
+
+--Unique Gear-- 
+
+-Pistols-
+
+Closing Statement damage bonus increased from 20% to 30%.
+
+Pebble Pistol reload projectile self damage reduced by 66%
+
+Proletariat Revolution damage increased by 7.5%.
+
+Proletariat Revolution ammo generation interval reduced from once every .085 to every .0825 seconds.
+
+Rejuvenator damage bonus increased from 12.5% to 17.5%.
+
+Rejuvenator Max Health Regeneration increased from 2.0% to 2.5% per second.
+_______________________________________________________________________________________________________________
 --9/28 Patch: The One About Jack Balance--
 
 -General Presentations-
