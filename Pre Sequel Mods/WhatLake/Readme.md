@@ -7,6 +7,97 @@ This mod serves to rebalance the game in many ways so it feels fundamentally fam
 Difficulty-wise, I would consider it slightly harder than vanilla TPS at base, but you have more potent options for builds such as pure Melee and Status Effects, so previously unviable or niche builds perform far better, even if generic gun builds do a tiny bit worse against the new scaling.
 
 Patch notes will be listed below, higher is more recent. 
+
+The 10/16 update is likely the final patch for the mod, barring any serious issues that arise.
+
+_______________________________________________________________________________________________________________
+--10/16 Patch: Goodbye (Probably)--
+
+--Elements-- 
+
+Removed Freeze Effect Explosive Damage vulnerability completely.
+
+Melee Damage vulnerability increased from 50% to 75%.
+^This keeps the total Melee Damage dealt on Claptrap the same, but is a massive buff for the others.
+
+--Playthrough Scaling-- 
+
+Reduced UVHM Melee Damage scalar from 1.25x to 1.10x
+
+--Characters-- 
+
+-Athena-
+
+Base melee scalar increased from 2.6 to 2.75.
+
+Phalanx Tree: 
+
+Doubled Prepare For Glory Melee Damage bonus from 10% to 20% per stack.
+
+Xiphos Tree:
+
+Clarity of Purpose Max Health bonus reduced from 8 to 7% per point.
+
+Clarity of Purpose Melee Damage bonus increased from 8% to 9% per point.
+
+Bleed damage scalar increased from 1.2 to 1.5. Includes tick damage and You've Got Red On You.
+
+Epicenter Melee Damage bonus increased from 10% to 15%.
+
+Blood Rush cooldown reduced from 7.5 to 5 seconds- previously this displayed as 8.
+
+Blood Rush lunge damage bonus increased from roughly 23% to 100%.
+
+Fixed incorrect Blood Rush passive Melee Damage presentation, accurately reflecting its 20% value.
+
+--Claptrap--
+
+Base melee scalar increased from 2 to 2.1.
+
+Meat Unicycle melee attack range increased from 500 to 800 units. 
+
+Boomtrap Tree:
+
+Killbot Missing Health on kill reverted back to 7% per point, was 6% per point.
+
+Killbot now removes Shield even if your Max Health is full.
+
+Load N' Splode Grenade Damage per stack reverted to 2.5%, was 2%.
+
+Repulsive cooldown reduced from 3.0 to 2.5 seconds.
+
+Added 10% Max Health bonus to Blast Processing.
+
+Hyperion Punch damage scalar increased from .6 to .75.
+
+Hyperion Punch Projectile Speed increased from 5000 to 6000.
+
+I Love You Guys Tree:
+
+Addressed a possible issue where Blue Shell was not correctly regenerating Ammo. Maybe I fixed something?
+
+-Aurelia-
+
+Base melee scalar increased from 2.3 to 2.5.
+
+-Jack- 
+
+Base melee scalar increased from 2.1 to 2.33
+
+-Nisha-
+
+Law and Order Tree:
+
+Thunder Crackdown damage scalar increased from 5 to 6.
+
+-Wilhelm-
+
+Base melee scalar increased from 2.5 to 2.65.
+
+Unique Gear:
+
+Fixed an issue where the Stat Stick was not working correctly with Claptrap's Cryogenic Exhaust Manifold.
+^This was HEALING ENEMIES. It was nuts.```
 _______________________________________________________________________________________________________________
 --10/4 Patch: The One About Claptrap (And The Others, Too!)--
 
