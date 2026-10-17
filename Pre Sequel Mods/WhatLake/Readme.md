@@ -7,6 +7,346 @@ This mod serves to rebalance the game in many ways so it feels fundamentally fam
 Difficulty-wise, I would consider it slightly harder than vanilla TPS at base, but you have more potent options for builds such as pure Melee and Status Effects, so previously unviable or niche builds perform far better, even if generic gun builds do a tiny bit worse against the new scaling.
 
 Patch notes will be listed below, higher is more recent. 
+
+The 10/16 update is likely the final patch for the mod, barring any serious issues that arise.
+
+_______________________________________________________________________________________________________________
+--10/16 Patch: Goodbye (Probably)--
+
+--Elements-- 
+
+Removed Freeze Effect Explosive Damage vulnerability completely.
+
+Melee Damage vulnerability increased from 50% to 75%.
+^This keeps the total Melee Damage dealt on Claptrap the same, but is a massive buff for the others.
+
+--Playthrough Scaling-- 
+
+Reduced UVHM Melee Damage scalar from 1.25x to 1.10x
+
+--Characters-- 
+
+-Athena-
+
+Base melee scalar increased from 2.6 to 2.75.
+
+Phalanx Tree: 
+
+Doubled Prepare For Glory Melee Damage bonus from 10% to 20% per stack.
+
+Xiphos Tree:
+
+Clarity of Purpose Max Health bonus reduced from 8 to 7% per point.
+
+Clarity of Purpose Melee Damage bonus increased from 8% to 9% per point.
+
+Bleed damage scalar increased from 1.2 to 1.5. Includes tick damage and You've Got Red On You.
+
+Epicenter Melee Damage bonus increased from 10% to 15%.
+
+Blood Rush cooldown reduced from 7.5 to 5 seconds- previously this displayed as 8.
+
+Blood Rush lunge damage bonus increased from roughly 23% to 100%.
+
+Fixed incorrect Blood Rush passive Melee Damage presentation, accurately reflecting its 20% value.
+
+--Claptrap--
+
+Base melee scalar increased from 2 to 2.1.
+
+Meat Unicycle melee attack range increased from 500 to 800 units. 
+
+Boomtrap Tree:
+
+Killbot Missing Health on kill reverted back to 7% per point, was 6% per point.
+
+Killbot now removes Shield even if your Max Health is full.
+
+Load N' Splode Grenade Damage per stack reverted to 2.5%, was 2%.
+
+Repulsive cooldown reduced from 3.0 to 2.5 seconds.
+
+Added 10% Max Health bonus to Blast Processing.
+
+Hyperion Punch damage scalar increased from .6 to .75.
+
+Hyperion Punch Projectile Speed increased from 5000 to 6000.
+
+I Love You Guys Tree:
+
+Addressed a possible issue where Blue Shell was not correctly regenerating Ammo. Maybe I fixed something?
+
+-Aurelia-
+
+Base melee scalar increased from 2.3 to 2.5.
+
+-Jack- 
+
+Base melee scalar increased from 2.1 to 2.33
+
+-Nisha-
+
+Law and Order Tree:
+
+Thunder Crackdown damage scalar increased from 5 to 6.
+
+-Wilhelm-
+
+Base melee scalar increased from 2.5 to 2.65.
+
+Unique Gear:
+
+Fixed an issue where the Stat Stick was not working correctly with Claptrap's Cryogenic Exhaust Manifold.
+^This was HEALING ENEMIES. It was nuts.```
+_______________________________________________________________________________________________________________
+--10/4 Patch: The One About Claptrap (And The Others, Too!)--
+
+--General Presentations--
+
+Added correct decimal places to several Holodome COM stats.
+
+Fixed font size on Torgue barrel Assault Rifle presentation.
+
+--Elements-- 
+
+Reduced Freeze Effect Explosive Damage bonus from 25% to 20%.
+
+-Characters-
+
+-Claptrap-
+
+Action Skill: 
+
+Clap In the Box now deals Grenade Damage, was previously untyped.
+
+Clap in the Box explosion damage reduced by 10%.
+
+One Shot One Kill Self-applied Critical Hit Damage bonus increased from 100% to 125%.
+
+Decreased Pirate Ship Mode cannonball damage scalar from 1.75 to 1.66.
+
+Decreased Pirate Ship Mode cannonball radius from 600 to 500.
+
+Increased Air Control during Rubber Mode by 300%.
+
+Boomtrap Tree:
+
+Fixed misspelling on Drop The Hammer text.
+
+Clarified trigger conditions for Killbot. Functionality unchanged.
+
+Killbot Health Restoration reduced from 7% to 6% of Missing Health per point.
+
+Load N' Splode Grenade Damage reduced from 2.5% to 2% per stack per point. 
+
+It's a Trap... Card has been reworked, and now is positioned at the third tier of the Boomtrap tree. 
+
+It's a Trap... Card has been renamed Blast Processing, and does the following:
+Every .5 seconds, reloading or dealing Explosive Damage will restore 7.5% Missing Health to you.
+
+Adjusted font size on Repulsive to avoid presentations getting cut off.  
+
+Adjusted font size on Coincidental Combustion to avoid presentations getting cut off. 
+
+Coincidental Combustion activation chance increased from 7% to 8% per point.
+
+Hyperion Punch Melee Damage bonus reduced from 6% to 5% per point.
+
+Hyperion Punch projectile damage base scalar increased from .5 to .6.
+
+Hyperion Punch Projectile Speed increased from 2000 to 5000.
+
+Hyperion Punch projectile explosion radius decreased from 850 to 500 units. 
+
+Significantly shortened internal delay between Hyperion Punch activations (essentially nonexistent).
+
+Added .1 second delay between gaining Hyperion Punch Stacks.
+
+I Love You Guys Tree
+
+Second Wind By Tediore is now in the second tier of the I Love You Guys Tree. 
+
+Second Wind By Tediore FFYL Duration bonus increased from 15% to 25%.
+
+Affable Armaments Magazine Size increased from 6% to 7% per point.
+
+Affable Armaments Ally Magazine Size increased from 3% to 3.5% per point.
+^The Gun Status Effect Chance was always 7% per point but incorrectly displayed as 6%.
+
+Best Buds 4 Life FFYL Duration bonus increased from 10% to 12% per point.
+
+Best Buds 4 Life FFYL Gun Damage bonus increased from 8% to 10% per point.
+
+My Main Goal FFYL Duration replaced with passive 5% Explosive Damage.
+^ Second Wind Health bonus is unchanged. 
+
+Through Thick And Thin Action Skill Cooldown Rate increased from 5% to 6% per point.
+
+Reduced High Fives, Guys! Max Health Regeneration from 1.5% to 1%.
+
+Fragmented Fragtrap Skill Tree:
+
+Fixed an issue where neither of Fuzzy Logic's effects were applying. Yeah, at all. 
+
+Added 7.5% Swap Speed per point to Fuzzy Logic.
+
+Fixed a visual issue where Safety First stated its Max Health Regen was 2.5% instead of 2.0%.
+
+^That's from base game, if you'd believe it!
+
+Float Like A Bee Melee Damage reduced from 7% to 6% per point.
+
+Added 5% Action Skill Cooldown Rate per point onto the kill effect of Float Like a Bee.
+
+Float Like a Bee Frag Stacks on kill altered: now provides 5 stacks regardless of points invested. 
+
+Float Like a Bee Max Health on kill reduced from 5% to 4% per point.
+
+Fried Circuits total Status Effect Damage increased from 7% per point to 8% per point. 
+
+Grenade Vent Grenade Resistance scaling changed: now 7% per point instead of 20% + 5% per point.
+
+Death Machine Movement Speed increased from 4% to 5% per point.
+
+Tripleclocked now additionally provides 35% Status Effect Damage, scaling up to 105% with Frag Stacks. 
+
+^ This applies regardless of your equipped Subroutine. 
+
+COMS:
+
+Increased Malware Status Effect Chance bonus by 20%.
+
+Added Grenade Damage bonus to Overclocker.
+
+Increased FFYL Duration bonus on Celestial Masochist by 20%.
+
+Reduced Freeze Chance on Celestial Icebox by 33%.
+
+-Nisha-
+
+Melee Damage scalar increased from 2.6 to 3.0.
+
+Melee range increased from 750 to 1000 units.
+
+Law and Order Tree:
+
+Law Melee Damage increased from 8.75% to 11.25% per point.
+
+Order stack Heal Chance increased from 1.25% to 1.35% per stack.
+
+Whiplash passive Melee Damage increased from 10% to 15%.
+
+Thunder Crackdown Damage scalar increased from 2.5 to 5.5.
+
+^The way Nisha melee is calculated, it was actually dealing less damage than her standard melee.
+
+Thunder Crackdown Status Effect Damage scalar increased from 25 to 27.5.
+
+Thunder Crackdown melee range increased from 1500 to 2000 units.
+
+Thunder Crackdown cone angle increased from 90 to 120 degrees.
+
+Thunder Crackdown bonus damage per Order Stack increased from 20% to 25%.
+
+No Pain No Gain Max Health reduction decreased from 5% to 4% per point. 
+
+No Pain No Gain FFYL Duration per stack increased from .3 to .5% per point.
+
+Wanted passive Melee Damage increased from 6% to 8% per point.
+
+Discipline Melee Damage per Order stack increased from 2% to 4%.
+
+Discipline Melee Life Steal per Order Stack increased from .5% to 2.5%. 
+
+Fan The Hammer Tree
+
+Snap Shot Grenade Damage removed, Bullet Damage increased from 3% to 3.5% per point.
+
+Bullet Hell Tree:
+
+Corrected Impatience stack count presentation: it is currently and always has been 21.
+
+Impatience Reload Speed and Melee Damage per stack increased from 5% to 7.5%.
+
+-Wilhelm-
+
+Hunter Killer Tree:
+
+Meatier Impact Grenade and Slam Radius increased from 10% to 14% per point.
+
+Meatier Impact Airborne Damage Bonus increased from 4% to 5% per point.
+
+Cold War Freeze Effect Damage increased by 20%.
+
+Cyber Commando Tree: 
+
+Targeting Scope Accuracy and Critical Hit Damage increased from 8% to 9%.
+
+Welcome To The Gun non-Fire Rate/Ricochet Chance stats increased from 3.5% to 4.5% per point.
+^ Includes Accuracy, Recoil Reduction, Reload Speed, Magazine Size and Rocket Capacity
+
+Fixed Divert Power skill text mostly being the wrong color.
+
+Reduced Divert Power cooldown From 18 to 15 seconds. 
+
+Increased Divert Power duration from 6 to 5 seconds.
+
+Divert Power Shield Regeneration increased from 7.5% to 10% per second per point.
+
+Vengeance Cannon damage scalar increased from 2.5 to 2.6.
+
+Dreadnaught Tree:
+
+Feedback Fence Max Health increased from 5% to 6% per point.
+
+Feedback Fence activation chance increased from up to 6% to 7% per point.
+
+Profusion Magazine Size, FFYL Duration, and Wolf Time increased from 7% to 8% per point. 
+
+Energize now additionally provides 5% Shock Damage per point.
+
+--General Gear-- 
+
+-Guns- 
+
+Increased Swap Speed for most Guns by 33%.
+
+Rocket Launchers instead gain around a 16% increase to Swap Speed.
+
+--Unique Gear--
+
+Pistols:
+
+Luck Cannon damage bonus increased from 225% to 250%.
+
+Luck Cannon recoil penalty removed.
+
+Luck Cannon Magazine Size decreased from 2 to 1. Ammo consumed is still 2.
+
+Luck Cannon Projectile Speed increased by 50%.
+
+Luck Cannon Reload Speed reduced by .5 seconds. 
+ 
+Luck Cannon Fire Rate roughly halved, and it fires in full auto.
+
+Stat Stick Status/Melee/Grenade Damage increased from 30% to 35%. 
+^The card incorrectly showed 40%.
+
+Stat Stick now has 1 ammo in the Magazine... but its Reload Speed is a little slower. Just a tiny bit.
+
+Shotguns:
+
+Boomacorn damage bonus increased from 250% to 266%.
+
+Boomacorn splash radius increased from 150 to 175 units. 
+
+Repeat Offender spread pattern adjusted to actually remain within the reticle.
+
+Torguemada flak radius increased from 90 to 150 units. 
+
+-Shields-
+
+Removed self-damage from Defense Network spikes.
 _______________________________________________________________________________________________________________
 --9/28 Patch: The One About Nisha Balance-- 
 
