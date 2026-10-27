@@ -8,8 +8,22 @@ Difficulty-wise, I would consider it slightly harder than vanilla TPS at base, b
 
 Patch notes will be listed below, higher is more recent. 
 
-The 10/16 update is likely the final patch for the mod, barring any serious issues that arise.
+_______________________________________________________________________________________________________________
+--10/25 Patch: Hopefully The Last Crash Fix--
 
+--Characters--
+
+-Aurelia-
+
+Fixed an issue causing the "Keep Your Chin Up" skill to crash the game when making a new Baroness.
+
+Replaced Keep Your Chin Up 3% Damage Resistance per point with 8% Shield Recharge Delay per point.
+
+Increased Glory Damage Dealt from 6% to 8% per stack.
+
+Increased Glory Cooldown Rate from 8% to 10% per stack.
+
+Glory now additionally grants +5 Max Duchess stacks. 
 _______________________________________________________________________________________________________________
 --10/16 Patch: Goodbye (Probably)--
 
