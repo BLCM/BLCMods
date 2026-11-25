@@ -7,7 +7,213 @@ This mod serves to rebalance the game in many ways so it feels fundamentally fam
 Difficulty-wise, I would consider it slightly harder than vanilla TPS at base, but you have more potent options for builds such as pure Melee and Status Effects, so previously unviable or niche builds perform far better, even if generic gun builds do a tiny bit worse against the new scaling.
 
 Patch notes will be listed below, higher is more recent. 
+_______________________________________________________________________________________________________________
+--11/25 Patch: Postmortem--
 
+--General Presentations--
+
+Green number text font color changed to closely resemble the color used for skill levels across the board.
+
+This includes a fix to the Explosive Capacitor presentation as well as numerous spacing errors.
+ 
+--Grinding/Loot Pools--
+
+Reconfigured Grinder Legendary Recipes so it is now possible to get formerly Unique items as rewards.
+^They always counted for ingredients, but practically never results. They are still a little less common, it seems
+
+Reconfigured weapon type pools so it should be possible to get formerly Unique guns as world/vendor drops.
+
+-Elements-
+
+Incendiary/Corrosive damage dealt against non-matching health types increased from 40% to 55% in PT2+
+
+--Characters--
+
+--Athena-- 
+
+Aspis explosion radius increased from 128 to 300 units. 
+
+-Phalanx Tree-
+
+Invictus Status Effect Damage increased from 6% to 8% per point.
+
+-Xiphos Tree-
+
+Bleed effect duration increased from 10 to 12 seconds.
+
+Bleed now activates on Shield Throw damage, regardless of if Zeus' Rage is specced.
+
+Tear Accuracy, Gun Damage, and bonus Gun Damage values increased from 3% to 4% per point.
+^This leads to the total Gun Damage value going from 6.09% to 8.16% against Bleeding targets.
+
+You've Got Red On You visuals adjusted to more accurately reflect explosion radius.
+
+You've Got Red On You now activates on kills with Rocket Damage (mostly for consistency)
+
+-Ceraunic Storm Tree-
+
+Smite cooldown reduced from 10 to 8 seconds. 
+
+--Aurelia--
+
+-Huntress Tree-
+
+Magic Bullet now activates on any Bullet Damage Critical Hit, regardless of weapon type. 
+
+Magic Bullet Maximum Max Health Regeneration reduced from 7.5% to 4.5% per second.
+
+Magic Bullet description cleaned up to more clearly reflect its function.
+
+-Cold Money Tree-
+
+Bitter Riposte Bullet Damage increased from 2% to 3% per point. 
+
+--Claptrap--
+
+-Boomtrap Tree-
+
+I'm Rubber, You're Glue Deflection Chance reduced from 33% to 30%.
+
+I'm Rubber, You're Glue now additionally provides 25% Melee and Grenade Damage Resist while active.
+
+I'm Rubber, You're Glue skill grades changed to allow it to be buffed by a Class Mod
+
+-Class Mods-
+
+Celestial Slugger Max Health base scalar increased from 27.5 to 35.
+
+Celestial Slugger no longer buffs Best Buds 4 Life, instead adding one point into I'm Rubber, You're Glue.
+^ This one point does not scale with levels.
+
+--Jack--
+
+-Hero of This Story Tree-
+
+Resolute now also activates when you kill an enemy. It is not activated by Leadership or Digi-Jack kills.
+
+-Greater Good Tree-
+
+Integrity did not work before! It may never have as long as this mod has been out.
+
+Integrity is now Opportunism, and now provides a Shock Status Effect Bonus Element on Bullet Critical Hits.
+
+This is unaffected by the enemy's health, but still only applies to the first pellet that hits.
+
+This Bonus Element is 4% per point, but deals 3x damage when you first Critically Hit a given enemy.
+
+--Nisha-- 
+
+-Fan The Hammer Tree-
+
+Pickpocket has been swapped with Short Fused, and received a partial rework and new name- "Speedloader"
+
+Speedloader passively provides 25% Swap Speed. Swapping refills the Magazine of the Gun you swap to.
+
+For .33 seconds after dealing Melee or Slam Damage or swapping, Ammo Cost is reduced by 1.
+
+This effect does not apply to Rocket Launchers, and cannot be reactivated until the .33 duration is over.
+
+Quick Shot now activates when swapping guns instead of on reload.
+
+Quick Shot Gun Damage and Fire Rate reduced from 7% to 6% per point.
+
+Quick Shot active duration increased from 6 seconds to 7.5 seconds. 
+
+Hell's Coming With Me now activates when swapping guns instead of on reload.
+
+Hell's Coming With Me active duration increased from 6 seconds to 7.5 seconds. 
+
+-Bullet Hell Skill Tree-
+
+Silver Bullet Bullet Damage reverted to 4% per point, from 5%.
+
+Impatience now additionally stacks on Critical Hits. 
+
+Impatience Reload/Melee Damage "reduced" to 5%, from 7.5%.
+^ While I intended to increase this value with the 10/4 patch, only the presentation was changed.
+
+--Wilhelm--
+
+-Cyber Commando Tree-
+
+Targeting Scope Critical Hit Damage and Accuracy reduced from 9% to 8% per point.
+
+Targeting Scope now additionally provides 5.5% Recoil Reduction per point. 
+
+Welcome To The Gun Show now correctly provides a bonus to Recoil Reduction as listed on the skill.
+
+Escalation now additionally activates when dealing Status Effect Tick Damage.
+
+Escalation Action Skill Cooldown removed per activation reduced from .3 to .25 seconds per point.
+
+Escalation effect cooldown increased from 2 to 2.5 seconds.
+
+--Weapon Types--
+
+-Assault Rifles-
+
+Vladof Assault Rifle damage scalar increased from 1.0 to 1.025.
+
+Vladof Assault Rifle base Fire Rate increased from 10.5 to 11.0.
+
+Vladof Assault Rifle base Reload Speed improved from 3.5 to 3.0.
+
+-Lasers-
+
+Splitter (Tediore) Laser barrel damage scalar increased from .6 to .65.
+
+--Unique Gear--
+
+-Assault Rifles-
+
+The Succubus has had its projectiles reworked.
+
+Now, its bullets fire additional bullets directly upwards after a short delay.
+
+The main bullets have 50% Ricochet Chance and create Transfusion orbs on hit, healing for 10% of dealt damage.
+
+It now has a Jakobs barrel, with a corresponding damage profile, but lost its 25% Critical Hit Damage bonus.
+
+-Lasers-
+
+Mining Laser Damage penalty reduced from 33% to 27.5%.
+
+Mining Laser base Fire Rate increased from 7.7 to 9.0.
+
+Mining Laser recoil slightly modified to be more predictable.
+
+Vibra Pulse chain effect delay properly reduced from 1 second to .5 seconds.
+^It said .5 for a while, but never went into effect.
+
+Vibra Pulse chain effect damage reduced from 350% to 250% of one damage tick.
+
+-Pistols
+
+Removed Semi-Auto lock from Sidearm. Why did I think the Halo Magnum wasn't full auto???
+
+-Shotguns-
+
+Jack O Cannon damage scalar increased from 6.5 to 8.75.
+
+Jack O Cannon Fire Rate bonus increased from 50% to 125%.
+
+Swarm Nest Projectile Speed penalty reduced from -200% to -150%.
+
+Swarm Nest Status Effect Chance penalty reduced from -40% to -20%.
+
+Too Scoops' damage bonus increased from 170% to 185%.
+
+-Sniper Rifles-
+
+Omni Cannon's main bullet now deals Explosive Damage rather than Kinetic.
+
+Omni Cannon's damage bonus increased from 30% to 35%.
+
+Omni Cannon's splash has been modified, from 100% Bullet to 60% Grenade Damage.
+
+Plunkett now rolls as Cryo instead of entirely Kinetic. 
+
+Plunkett damage bonus increased from 15% to 30%.
 _______________________________________________________________________________________________________________
 --10/25 Patch: Hopefully The Last Crash Fix--
 
