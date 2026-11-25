@@ -214,6 +214,10 @@ Omni Cannon's splash has been modified, from 100% Bullet to 60% Grenade Damage.
 Plunkett now rolls as Cryo instead of entirely Kinetic. 
 
 Plunkett damage bonus increased from 15% to 30%.
+
+--Loot Drops--
+
+Fixed an issue where the Ogre and Meganade would not drop from Despair in the Claptastic Voyage.
 _______________________________________________________________________________________________________________
 --10/25 Patch: Hopefully The Last Crash Fix--
 
